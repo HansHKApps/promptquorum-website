@@ -11,7 +11,7 @@ import { PROMPT_BITES_PUBLISHED_SLUGS, PROMPT_BITES_HUB_PUBLISHED } from '@/lib/
 import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 import { SMART_HOME_PUBLISHED_SLUGS, SMART_HOME_HUB_PUBLISHED } from '@/lib/smart-home/published'
-import { BALCONY_SOLAR_PUBLISHED_SLUGS, BALCONY_SOLAR_HUB_PUBLISHED } from '@/lib/balcony-solar/published'
+import { BALCONY_SOLAR_PUBLISHED_SLUGS, BALCONY_SOLAR_HUB_PUBLISHED, isBalconySolarLangPublished } from '@/lib/balcony-solar/published'
 import { SMART_HOME_SLUG_TO_KEY } from '@/lib/smart-home/slugs'
 import { smartHomeContent } from '@/lib/smart-home/content'
 import { BALCONY_SOLAR_SLUG_TO_KEY } from '@/lib/balcony-solar/slugs'
@@ -348,7 +348,13 @@ function availableLangsForPath(path: string): readonly string[] | null {
       const slug = path.slice(prefix.length)
       const key = slugMap[slug]
       if (!key || !contentMap[key]) return ['en']
-      const langs = LANGS.filter((l) => hasSections(contentMap[key][l]))
+      let langs = LANGS.filter((l) => hasSections(contentMap[key][l]))
+      if (prefix === '/balcony-solar/') {
+        // Balcony Solar rolls out languages one at a time (see LANG_ROLLOUT in
+        // published.ts) — don't sitemap/hreflang a language before it's cleared,
+        // even though its translated sections already exist in the content file.
+        langs = langs.filter((l) => isBalconySolarLangPublished(slug, l))
+      }
       return langs.length ? langs : ['en']
     }
   }
