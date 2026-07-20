@@ -1,0 +1,26 @@
+<svg viewBox="0 0 800 455" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="455" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">小説家のための実践ワークフロー</text>
+  <line x1="46" y1="78" x2="46" y2="350" stroke="#E8DEF8" stroke-width="2"/>
+  <circle cx="46" cy="78" r="16" fill="#6750A4"/>
+  <text x="46" y="83" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="78" y="74" font-size="14" font-weight="700" fill="#1C1B1F">標準モデルで下書き</text>
+  <text x="78" y="93" font-size="12" fill="#49454F">Llama 3.3 70BやQwen3 32Bはダークなテーマや道徳的複雑さを扱える。</text>
+  <circle cx="46" cy="146" r="16" fill="#6750A4"/>
+  <text x="46" y="151" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="78" y="142" font-size="14" font-weight="700" fill="#1C1B1F">特定シーンのみ無検閲に切り替え</text>
+  <text x="78" y="161" font-size="12" fill="#49454F">そのシーンのみHermes 3を実行 — セッション間でデータは共有されない。</text>
+  <circle cx="46" cy="214" r="16" fill="#6750A4"/>
+  <text x="46" y="219" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="78" y="210" font-size="14" font-weight="700" fill="#1C1B1F">同じプロンプトテンプレートを再利用</text>
+  <text x="78" y="229" font-size="12" fill="#49454F">シーン・サブテキスト・キャラクター矛盾のプロンプトは同様に機能する。</text>
+  <circle cx="46" cy="282" r="16" fill="#6750A4"/>
+  <text x="46" y="287" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="78" y="278" font-size="14" font-weight="700" fill="#1C1B1F">人間に出さない指示は与えない</text>
+  <text x="78" y="297" font-size="12" fill="#49454F">モデルはツールであり、許可構造ではない。</text>
+  <circle cx="46" cy="350" r="16" fill="#6750A4"/>
+  <text x="46" y="355" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="78" y="346" font-size="14" font-weight="700" fill="#1C1B1F">配布前にレビュー</text>
+  <text x="78" y="365" font-size="12" fill="#49454F">AI支援コンテンツにも通常の編集レビューを適用する。</text>
+  <text x="400" y="433" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">ほとんどの作家は無検閲モデルを特定のシーンにのみ使用し、標準の代替としては使わない。</text>
+<text x="792" y="450" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

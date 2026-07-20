@@ -1,0 +1,21 @@
+<svg viewBox="0 0 1000 330" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="1000" height="330" fill="#FFFFFF"/>
+  <text x="500" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Benötigte VRAM nach Modellgröße (Q4-Quantisierung)</text>
+  <line x1="290" y1="263" x2="980" y2="263" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="280" y="84" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">3B</text>
+  <rect x="290" y="65" width="28.714285714285715" height="24" fill="#34A853" rx="4"/>
+  <text x="326.7142857142857" y="82" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">3 GB</text>
+  <text x="280" y="126" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">7B</text>
+  <rect x="290" y="107" width="67" height="24" fill="#6750A4" rx="4"/>
+  <text x="365" y="124" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">7 GB</text>
+  <text x="280" y="168" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">13B</text>
+  <rect x="290" y="149" width="124.42857142857143" height="24" fill="#7D5260" rx="4"/>
+  <text x="422.42857142857144" y="166" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">13 GB</text>
+  <text x="280" y="210" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">22B</text>
+  <rect x="290" y="191" width="210.57142857142856" height="24" fill="#F4B400" rx="4"/>
+  <text x="508.57142857142856" y="208" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">22 GB</text>
+  <text x="280" y="252" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">70B</text>
+  <rect x="290" y="233" width="670" height="24" fill="#EA4335" rx="4"/>
+  <text x="968" y="250" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">70 GB</text>
+  <text x="500" y="308" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Faustregel: Modellgröße in Milliarden durch ~8 teilen, um Q4-VRAM in GB zu erhalten.</text>
+<text x="992" y="325" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

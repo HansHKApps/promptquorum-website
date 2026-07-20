@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">判断：あなたの作品に合うモデル</text>
+  <text x="40" y="54" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">状況</text>
+  <text x="400" y="54" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">選択</text>
+  <line x1="18" y1="63" x2="782" y2="63" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="18" y="59" width="764" height="46" fill="#F7F2FA" rx="4"/>
+  <text x="40" y="79" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6750A4">48GB以上のVRAM、全てを1モデルで</text>
+  <text x="400" y="79" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">Llama 3.3 70B + Hermes 3</text>
+  <text x="40" y="129" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">24GB GPUまたは32GB Mac、強力な標準</text>
+  <text x="400" y="129" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">Qwen3 32B</text>
+  <line x1="18" y1="141" x2="782" y2="141" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="40" y="179" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">小説執筆中 — 長編の一貫性が重要</text>
+  <text x="400" y="179" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">Mistral Large</text>
+  <line x1="18" y1="191" x2="782" y2="191" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="40" y="229" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">会話重視、キャラクターの声を区別</text>
+  <text x="400" y="229" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">Command A+</text>
+  <line x1="18" y1="241" x2="782" y2="241" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="40" y="279" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">詩、韻文、叙情的散文</text>
+  <text x="400" y="279" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">Yi-1.5 34B</text>
+  <line x1="18" y1="291" x2="782" y2="291" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="40" y="329" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">指示モデルが必要なシーンを拒否する</text>
+  <text x="400" y="329" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">Hermes 3またはDolphin 3.0</text>
+  <text x="400" y="398" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">迷ったらQwen3 32Bから — 一般的なコンシューマー機材のワークフローの大半をカバーする。</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

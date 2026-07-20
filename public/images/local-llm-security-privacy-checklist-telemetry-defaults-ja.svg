@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="320" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">テレメトリ既定値：Ollama、LM Studio、Jan AI、GPT4All</text>
+  <text x="40" y="54" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">ツール</text>
+  <text x="220" y="54" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">テレメトリ既定</text>
+  <text x="420" y="54" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">確認/無効化方法</text>
+  <line x1="18" y1="63" x2="782" y2="63" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="18" y="59" width="764" height="46" fill="#E6F4EA" rx="4"/>
+  <text x="40" y="79" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#34A853">Ollama ★</text>
+  <text x="220" y="79" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">収集なし</text>
+  <text x="420" y="79" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">オープンソース — 分析コードなし</text>
+  <rect x="18" y="109" width="764" height="46" fill="#FEF7E0" rx="4"/>
+  <text x="40" y="129" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">LM Studio</text>
+  <text x="220" y="129" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">匿名分析 ON</text>
+  <text x="420" y="129" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">設定 → プライバシー → 使用状況データを無効化</text>
+  <rect x="18" y="159" width="764" height="46" fill="#E6F4EA" rx="4"/>
+  <text x="40" y="179" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#34A853">Jan AI ★</text>
+  <text x="220" y="179" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">明示的に無効</text>
+  <text x="420" y="179" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">オープンソース — github.com/janhq/janで監査</text>
+  <rect x="18" y="209" width="764" height="46" fill="#FEF7E0" rx="4"/>
+  <text x="40" y="229" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">GPT4All</text>
+  <text x="220" y="229" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">初回起動時にオプトイン</text>
+  <text x="420" y="229" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">設定 → プライバシー → 分析を無効化</text>
+  <text x="400" y="298" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">OllamaとJan AIは既定で何も収集しない。LM StudioとGPT4Allは分析が有効出荷 — 設定を確認すること。</text>
+<text x="792" y="315" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

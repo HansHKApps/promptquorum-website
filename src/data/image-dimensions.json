@@ -1534,6 +1534,96 @@
     "width": 800,
     "height": 400
   },
+  "/images/best-local-llm-creative-writing-2026-decision-tree-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-decision-tree-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-decision-tree-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-decision-tree-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-decision-tree-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-decision-tree-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-decision-tree-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-decision-tree-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-decision-tree-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-model-comparison-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-model-comparison-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-model-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-model-comparison-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-model-comparison-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-model-comparison-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-model-comparison-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-model-comparison-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llm-creative-writing-2026-model-comparison-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
   "/images/best-local-llms-for-coding-benchmark-comparison-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -3469,6 +3559,96 @@
     "width": 800,
     "height": 400
   },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 320
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 330
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 330
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 330
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 330
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 330
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 330
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 330
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 330
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 330
+  },
   "/images/hoymiles-microinverter-balcony-solar-certification-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -4974,6 +5154,96 @@
     "width": 800,
     "height": 350
   },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 548
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 548
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 548
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 548
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 548
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 548
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 548
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 548
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 548
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 320
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
   "/images/local-llm-software-directory-2026-coding-patterns-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -6253,6 +6523,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 450
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 390
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 900,
+    "height": 390
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 390
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 390
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 390
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 390
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 390
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 390
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 390
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 420
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
   },
   "/images/mobile-llm-models-comparison-table-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -9003,6 +9363,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 340
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 370
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 370
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 370
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 370
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 370
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 370
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 370
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 370
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 370
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 455
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 455
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 455
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 455
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 455
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 455
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 455
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 455
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 455
   },
   "/images/vram-calculator-local-llm-accuracy-de.svg": {
     "encodingFormat": "image/svg+xml",

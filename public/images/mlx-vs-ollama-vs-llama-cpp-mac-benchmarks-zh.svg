@@ -1,0 +1,40 @@
+<svg viewBox="0 0 800 390" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="390" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">各框架推理速度（M5 Pro 64GB, tok/s）</text>
+  <line x1="60" y1="300" x2="760" y2="300" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="70" y="160" width="34" height="140" fill="#7D5260" rx="3"/>
+  <text x="87" y="154" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">48</text>
+  <rect x="110" y="119.16666666666666" width="34" height="180.83333333333334" fill="#6750A4" rx="3"/>
+  <text x="127" y="113.16666666666666" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">62</text>
+  <rect x="150" y="148.33333333333334" width="34" height="151.66666666666666" fill="#34A853" rx="3"/>
+  <text x="167" y="142.33333333333334" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">52</text>
+  <text x="127" y="320" font-size="11.5" font-weight="700" fill="#79747E" text-anchor="middle">Llama 3.3 8B Q4</text>
+  <rect x="245" y="148.33333333333334" width="34" height="151.66666666666666" fill="#7D5260" rx="3"/>
+  <text x="262" y="142.33333333333334" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">52</text>
+  <rect x="285" y="107.5" width="34" height="192.5" fill="#6750A4" rx="3"/>
+  <text x="302" y="101.5" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">66</text>
+  <rect x="325" y="139.58333333333334" width="34" height="160.41666666666666" fill="#34A853" rx="3"/>
+  <text x="342" y="133.58333333333334" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">55</text>
+  <text x="302" y="320" font-size="11.5" font-weight="700" fill="#79747E" text-anchor="middle">Mistral Small Q4</text>
+  <rect x="420" y="130.83333333333331" width="34" height="169.16666666666669" fill="#7D5260" rx="3"/>
+  <text x="437" y="124.83333333333331" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">58</text>
+  <rect x="460" y="90" width="34" height="210" fill="#6750A4" rx="3"/>
+  <text x="477" y="84" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">72</text>
+  <rect x="500" y="125" width="34" height="175" fill="#34A853" rx="3"/>
+  <text x="517" y="119" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">60</text>
+  <text x="477" y="320" font-size="11.5" font-weight="700" fill="#79747E" text-anchor="middle">Phi-4 Q4</text>
+  <rect x="595" y="270.8333333333333" width="34" height="29.166666666666668" fill="#7D5260" rx="3"/>
+  <text x="612" y="264.8333333333333" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">10</text>
+  <rect x="635" y="259.1666666666667" width="34" height="40.833333333333336" fill="#6750A4" rx="3"/>
+  <text x="652" y="253.16666666666669" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">14</text>
+  <rect x="675" y="267.9166666666667" width="34" height="32.083333333333336" fill="#34A853" rx="3"/>
+  <text x="692" y="261.9166666666667" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">11</text>
+  <text x="652" y="320" font-size="11.5" font-weight="700" fill="#79747E" text-anchor="middle">Llama 3.3 70B Q4</text>
+  <rect x="250" y="348" width="12" height="12" fill="#7D5260" rx="2"/>
+  <text x="268" y="358" font-size="12" fill="#49454F">Ollama</text>
+  <rect x="360" y="348" width="12" height="12" fill="#6750A4" rx="2"/>
+  <text x="378" y="358" font-size="12" fill="#49454F">MLX</text>
+  <rect x="470" y="348" width="12" height="12" fill="#34A853" rx="2"/>
+  <text x="488" y="358" font-size="12" fill="#49454F">llama.cpp</text>
+  <text x="400" y="378" font-size="11.5" fill="#49454F" text-anchor="middle">得益于原生Metal优化，MLX速度快15–25%。</text>
+<text x="792" y="385" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

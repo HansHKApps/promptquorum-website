@@ -212,7 +212,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Note: older uncensored fine-tunes — Midnight Miqu (Miqu-70B-based), Wizard-LM Uncensored, Mythomax — were leaders in 2024 but have been superseded by Hermes 3 and Dolphin 3.0 in 2026 on both quality and instruction-following metrics. If you find them recommended in older articles, the current equivalents are Hermes 3 (for selective uncensoring) and Dolphin 3.0 (for broader range).',
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-en.svg',
+          imageCaption: 'Hermes 3 balances instruction quality and uncensored range best — fully abliterated models drift faster and write worse prose.',
+        },
       setup: {
         id: 'setup',
         title: 'Setup: Ollama and LM Studio',
@@ -289,7 +291,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Keep a "model log" per writing project — a plain-text file that records which model generated which scenes. This is useful for revision (knowing which model produced a scene helps you know where to route revision requests), for attribution transparency if you disclose AI assistance, and for auditing if a scene raises questions later.',
           },
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-en.svg',
+          imageCaption: 'Most writers use the uncensored model for specific scenes only — not as a default replacement.',
+        },
       commonMistakes: {
         id: 'common-mistakes',
         title: 'Common Mistakes',
@@ -579,7 +583,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Hinweis: ältere Uncensored-Fine-Tunes — Midnight Miqu (Miqu-70B-basiert), Wizard-LM Uncensored, Mythomax — waren 2024 führend, wurden aber 2026 von Hermes 3 und Dolphin 3.0 in Qualitäts- und Anweisungsfolge-Metriken übertroffen. Falls du sie in älteren Artikeln empfohlen findest, sind die aktuellen Äquivalente Hermes 3 (für selektives Uncensoring) und Dolphin 3.0 (für breiteres Spektrum).',
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-de.svg',
+          imageCaption: 'Hermes 3 bietet die beste Balance aus Anweisungsqualität und unzensiertem Umfang — voll abliterierte Modelle driften schneller ab.',
+        },
       setup: {
         id: 'setup',
         title: 'Einrichtung: Ollama und LM Studio',
@@ -656,7 +662,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Führe ein „Modell-Log" pro Schreibprojekt — eine Klartext-Datei, die aufzeichnet, welches Modell welche Szenen generiert hat. Dies ist nützlich für die Überarbeitung, für Zuschreibungstransparenz, wenn du KI-Unterstützung offenlegst, und für die Überprüfung, wenn eine Szene später Fragen aufwirft.',
           },
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-de.svg',
+          imageCaption: 'Die meisten Autoren nutzen das unzensierte Modell nur für bestimmte Szenen — nicht als Standardersatz.',
+        },
       commonMistakes: {
         id: 'common-mistakes',
         title: 'Häufige Fehler',
@@ -946,7 +954,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Note : les anciens fine-tunes non censurés — Midnight Miqu (basé sur Miqu-70B), Wizard-LM Uncensored, Mythomax — étaient des références en 2024 mais ont été dépassés par Hermes 3 et Dolphin 3.0 en 2026 sur la qualité et les métriques de suivi d\'instructions. Si tu les trouves recommandés dans des articles plus anciens, les équivalents actuels sont Hermes 3 (pour la non-censure sélective) et Dolphin 3.0 (pour une plage plus large).',
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-fr.svg',
+          imageCaption: 'Hermes 3 offre le meilleur équilibre entre qualité d’instruction et étendue non censurée — les modèles totalement abliterés dérivent plus vite.',
+        },
       setup: {
         id: 'setup',
         title: 'Configuration : Ollama et LM Studio',
@@ -1023,7 +1033,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Tiens un « journal de modèles » par projet d\'écriture — un fichier texte brut qui enregistre quel modèle a généré quelles scènes. C\'est utile pour la révision (savoir quel modèle a produit une scène aide à savoir où envoyer les demandes de révision), pour la transparence d\'attribution si tu divulgues l\'assistance IA, et pour l\'audit si une scène soulève des questions ultérieurement.',
           },
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-fr.svg',
+          imageCaption: 'La plupart des auteurs utilisent le modèle non censuré seulement pour des scènes précises, pas par défaut.',
+        },
       commonMistakes: {
         id: 'common-mistakes',
         title: 'Erreurs courantes',
@@ -1321,7 +1333,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '注意：古い無検閲ファインチューン――Midnight Miqu（Miqu-70Bベース）、Wizard-LM Uncensored、Mythomax――は2024年にはリーダーでしたが、2026年には品質と指示追従性の指標でHermes 3とDolphin 3.0に追い抜かれています。古い記事で推奨されていても、現在の同等品はHermes 3（選択的無検閲向け）とDolphin 3.0（より広い範囲向け）です。',
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-ja.svg',
+          imageCaption: 'Hermes 3は指示品質と無検閲範囲のバランスが最良 — 完全abliterationモデルは逸脱が速く文章品質も落ちる。',
+        },
       setup: {
         id: 'setup',
         title: 'セットアップ：OllamaとLM Studio',
@@ -1399,7 +1413,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ライティングプロジェクトごとに「モデルログ」を保持してください――どのモデルがどの場面を生成したかを記録するプレーンテキストファイル。改訂に役立ち（どのモデルが場面を生成したかを知ることで、どこに改訂リクエストを向けるかがわかります）、AI支援を開示する場合の帰属の透明性のため、後で場面が問題になった場合の監査のために有用です。',
           },
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-ja.svg',
+          imageCaption: 'ほとんどの作家は無検閲モデルを特定のシーンにのみ使用し、標準の代替としては使わない。',
+        },
       commonMistakes: {
         id: 'common-mistakes',
         title: 'よくある間違い',
@@ -1689,7 +1705,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '注意：较旧的无审查微调——Midnight Miqu（基于Miqu-70B）、Wizard-LM Uncensored、Mythomax——在2024年曾是领先者，但2026年在质量和指令遵循指标上已被Hermes 3和Dolphin 3.0超越。如果在较旧文章中看到推荐，当前的同等选择是Hermes 3（选择性无审查）和Dolphin 3.0（更广范围）。',
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-zh.svg',
+          imageCaption: 'Hermes 3在指令质量和无审查范围之间平衡最佳 — 完全消融模型偏离更快，文笔质量更低。',
+        },
       setup: {
         id: 'setup',
         title: '配置：Ollama与LM Studio',
@@ -1767,7 +1785,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '为每个写作项目保留一份「模型日志」——记录哪个模型生成了哪些场景的纯文本文件。这对修改很有用（知道哪个模型生成了某个场景，有助于知道将修改请求发送到哪里），如果您公开AI辅助信息则有助于归属透明度，以及在场景日后引发问题时便于审查。',
           },
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-zh.svg',
+          imageCaption: '大多数作者仅在特定场景使用无审查模型 — 而非作为默认替代。',
+        },
       commonMistakes: {
         id: 'common-mistakes',
         title: '常见错误',
@@ -2057,7 +2077,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Nota: los fine-tunes sin censura más antiguos — Midnight Miqu (basado en Miqu-70B), Wizard-LM Uncensored, Mythomax — fueron líderes en 2024 pero han sido superados por Hermes 3 y Dolphin 3.0 en 2026 en métricas de calidad y seguimiento de instrucciones. Si los encuentras recomendados en artículos más antiguos, los equivalentes actuales son Hermes 3 (para descensurado selectivo) y Dolphin 3.0 (para un rango más amplio).',
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-es.svg',
+          imageCaption: 'Hermes 3 ofrece el mejor equilibrio entre calidad de instrucción y rango sin censura — los modelos totalmente abliterados derivan más rápido.',
+        },
       setup: {
         id: 'setup',
         title: 'Configuración: Ollama y LM Studio',
@@ -2134,7 +2156,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Mantén un "registro de modelos" por proyecto de escritura — un archivo de texto plano que registra qué modelo generó qué escenas. Esto es útil para la revisión (saber qué modelo produjo una escena ayuda a saber a dónde dirigir las solicitudes de revisión), para la transparencia de atribución si declaras asistencia de IA, y para auditoría si una escena plantea preguntas más adelante.',
           },
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-es.svg',
+          imageCaption: 'La mayoría de los escritores usan el modelo sin censura solo para escenas específicas, no como reemplazo por defecto.',
+        },
       commonMistakes: {
         id: 'common-mistakes',
         title: 'Errores comunes',
@@ -2435,7 +2459,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '참고: 이전 무검열 파인튜닝들 — Midnight Miqu(Miqu-70B 기반), Wizard-LM Uncensored, Mythomax — 은 2024년 선두였지만 품질 및 지시 따르기 메트릭에서 2026년에 Hermes 3와 Dolphin 3.0에 의해 추월되었습니다. 더 오래된 기사에서 추천된 것을 발견한다면, 현재 동등품은 Hermes 3(선택적 무검열용)와 Dolphin 3.0(더 넓은 범위용)입니다.',
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-ko.svg',
+          imageCaption: 'Hermes 3는 지시 품질과 무검열 범위의 균형이 가장 좋음 — 완전 절제 모델은 더 빨리 벗어나고 문장 품질도 낮음.',
+        },
       setup: {
         id: 'setup',
         title: '설정: Ollama와 LM Studio',
@@ -2512,7 +2538,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '글쓰기 프로젝트별 "모델 로그"를 유지하십시오 — 어떤 모델이 어떤 장면을 생성했는지 기록하는 평문 텍스트 파일. 이것은 검토에 유용합니다(어떤 모델이 장면을 생성했는지 알면 수정 요청을 어디로 보낼지 알 수 있음), AI 지원을 공개하는 경우 귀속 투명성을 위해, 그리고 나중에 장면이 질문을 제기하는 경우 감사를 위해 유용합니다.',
           },
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-ko.svg',
+          imageCaption: '대부분의 작가는 무검열 모델을 특정 장면에만 사용하며 기본 대체품으로 쓰지 않는다.',
+        },
       commonMistakes: {
         id: 'common-mistakes',
         title: '흔한 실수',
@@ -2813,7 +2841,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Nota: fine-tunes sem censura mais antigos — Midnight Miqu (baseado em Miqu-70B), Wizard-LM Uncensored, Mythomax — foram líderes em 2024 mas foram superados pelo Hermes 3 e pelo Dolphin 3.0 em 2026 em métricas de qualidade e de aderência a instruções. Se você os encontrar recomendados em artigos mais antigos, os equivalentes atuais são o Hermes 3 (para remoção de censura seletiva) e o Dolphin 3.0 (para alcance mais amplo).',
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-pt.svg',
+          imageCaption: 'Hermes 3 tem o melhor equilíbrio entre qualidade de instrução e alcance sem censura — modelos totalmente ablacionados desviam mais rápido.',
+        },
       setup: {
         id: 'setup',
         title: 'Configuração: Ollama e LM Studio',
@@ -2890,7 +2920,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Mantenha um "registro de modelos" por projeto de escrita — um arquivo de texto puro que registra qual modelo gerou quais cenas. Isso é útil para a revisão (saber qual modelo produziu uma cena ajuda a saber para onde direcionar os pedidos de revisão), para a transparência de atribuição se você declarar assistência de IA, e para auditoria se uma cena levantar perguntas mais adiante.',
           },
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-pt.svg',
+          imageCaption: 'A maioria dos escritores usa o modelo sem censura apenas para cenas específicas — não como substituto padrão.',
+        },
       commonMistakes: {
         id: 'common-mistakes',
         title: 'Erros comuns',
@@ -3192,7 +3224,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'ملاحظة: النسخ المعدَّلة القديمة — Midnight Miqu (مبنية على Miqu-70B)، Wizard-LM Uncensored، Mythomax — كانت رائدة في 2024 لكن تجاوزها Hermes 3 و Dolphin 3.0 في 2026 في مقاييس الجودة واتباع التعليمات. إذا وجدتها موصى بها في مقالات أقدم، المكافئات الحالية هي Hermes 3 (لإزالة القيود الانتقائية) و Dolphin 3.0 (لنطاق أوسع).',
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-ar.svg',
+          imageCaption: 'يوازن Hermes 3 بين جودة التعليمات والنطاق غير الخاضع للرقابة بشكل أفضل — النماذج المُستأصلة بالكامل تنحرف أسرع وتنتج نثرًا أضعف.',
+        },
       setup: {
         id: 'setup',
         title: 'الإعداد: Ollama و LM Studio',
@@ -3269,7 +3303,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'احتفظ بـ "سجل نماذج" لكل مشروع كتابة — ملف نص عادي يسجّل أي نموذج ولَّد أي مشاهد. هذا مفيد للمراجعة (معرفة أي نموذج أنتج مشهدًا يساعد في توجيه طلبات المراجعة)، لشفافية الإسناد إذا صرّحت بمساعدة الذكاء الاصطناعي، وللتدقيق إذا أثار مشهد تساؤلات لاحقًا.',
           },
         ],
-      },
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-ar.svg',
+          imageCaption: 'معظم الكتّاب يستخدمون النموذج غير الخاضع للرقابة لمشاهد محددة فقط — وليس كبديل افتراضي.',
+        },
       commonMistakes: {
         id: 'common-mistakes',
         title: 'الأخطاء الشائعة',
