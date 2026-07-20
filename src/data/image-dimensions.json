@@ -699,6 +699,51 @@
     "width": 800,
     "height": 420
   },
+  "/images/best-amd-gpus-local-llm-price-performance-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-amd-gpus-local-llm-price-performance-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -743,6 +788,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 380
+  },
+  "/images/best-amd-gpus-local-llm-software-support-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-software-support-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-software-support-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-software-support-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-software-support-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-software-support-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-software-support-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-software-support-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-gpus-local-llm-software-support-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/best-amd-gpus-local-llm-software-support-ja.svg": {
     "encodingFormat": "image/svg+xml",
@@ -904,6 +994,51 @@
     "width": 800,
     "height": 360
   },
+  "/images/best-beginner-local-llm-models-3b-vs-7b-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-3b-vs-7b-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-3b-vs-7b-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-3b-vs-7b-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-3b-vs-7b-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-3b-vs-7b-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-3b-vs-7b-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-3b-vs-7b-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-3b-vs-7b-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-beginner-local-llm-models-3b-vs-7b-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -933,6 +1068,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 305
+  },
+  "/images/best-beginner-local-llm-models-comparison-table-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-comparison-table-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-comparison-table-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-comparison-table-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-comparison-table-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-comparison-table-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-comparison-table-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-comparison-table-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-beginner-local-llm-models-comparison-table-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/best-beginner-local-llm-models-comparison-table-ja.svg": {
     "encodingFormat": "image/svg+xml",
@@ -999,6 +1179,51 @@
     "width": 800,
     "height": 420
   },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-gpu-comparison-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-budget-gpus-local-llm-gpu-comparison-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -1043,6 +1268,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 420
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-budget-gpus-local-llm-model-speeds-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-model-speeds-ja.svg": {
     "encodingFormat": "image/svg+xml",
