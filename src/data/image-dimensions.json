@@ -259,6 +259,51 @@
     "width": 800,
     "height": 350
   },
+  "/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/apple-mlx-vs-nvidia-cuda-benchmark-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -288,6 +333,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-cost-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-cost-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-cost-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-cost-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-cost-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-cost-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-cost-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-cost-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-mlx-vs-nvidia-cuda-cost-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/apple-mlx-vs-nvidia-cuda-cost-ja.svg": {
     "encodingFormat": "image/svg+xml",
@@ -1516,28 +1606,28 @@
   },
   "/images/best-budget-gpus-local-llm-gpu-comparison-ar.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-gpu-comparison-de.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 1000,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-gpu-comparison-en.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-gpu-comparison-es.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-gpu-comparison-fr.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-gpu-comparison-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -1586,48 +1676,48 @@
   },
   "/images/best-budget-gpus-local-llm-gpu-comparison-ja.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-gpu-comparison-ko.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-gpu-comparison-pt.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-gpu-comparison-zh.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-model-speeds-ar.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-model-speeds-de.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 1000,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-model-speeds-en.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-model-speeds-es.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-model-speeds-fr.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-model-speeds-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -1676,23 +1766,23 @@
   },
   "/images/best-budget-gpus-local-llm-model-speeds-ja.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-model-speeds-ko.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-model-speeds-pt.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-budget-gpus-local-llm-model-speeds-zh.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 420
+    "width": 1200,
+    "height": 675
   },
   "/images/best-cpu-only-llm-cpu-vs-gpu-ar.svg": {
     "encodingFormat": "image/svg+xml",
@@ -2346,28 +2436,28 @@
   },
   "/images/best-local-llm-apps-android-2026-chipset-npu-ar.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-chipset-npu-de.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 1000,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-chipset-npu-en.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-chipset-npu-es.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-chipset-npu-fr.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-chipset-npu-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -2416,48 +2506,48 @@
   },
   "/images/best-local-llm-apps-android-2026-chipset-npu-ja.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-chipset-npu-ko.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-chipset-npu-pt.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-chipset-npu-zh.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-speed-comparison-ar.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-speed-comparison-de.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 1000,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-speed-comparison-en.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-speed-comparison-es.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-speed-comparison-fr.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-speed-comparison-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -2506,23 +2596,23 @@
   },
   "/images/best-local-llm-apps-android-2026-speed-comparison-ja.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-speed-comparison-ko.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-speed-comparison-pt.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-android-2026-speed-comparison-zh.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-llm-apps-iphone-2026-comparison-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -3316,8 +3406,8 @@
   },
   "/images/best-local-llms-for-coding-humaneval-comparison-en.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 380
+    "width": 1200,
+    "height": 675
   },
   "/images/best-local-models-tool-calling-2026-comparison-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -8454,6 +8544,51 @@
     "width": 800,
     "height": 548
   },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-checklist-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-llm-security-privacy-checklist-checklist-overview-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -8498,6 +8633,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 320
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/local-llm-security-privacy-checklist-telemetry-defaults-ja.svg": {
     "encodingFormat": "image/svg+xml",
@@ -9316,28 +9496,28 @@
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-ar.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-de.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 1000,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-en.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-es.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-fr.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -9386,48 +9566,48 @@
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-ja.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-ko.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-pt.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-zh.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-ar.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 430
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-de.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 1000,
-    "height": 430
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-en.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 430
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-es.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 430
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-fr.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 430
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -9476,23 +9656,23 @@
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-ja.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 430
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-ko.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 430
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-pt.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 430
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-zh.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 430
+    "width": 1200,
+    "height": 675
   },
   "/images/local-vs-cloud-agents-capabilities-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -9656,28 +9836,28 @@
   },
   "/images/local-whisper-stt-comparison-2026-model-sizes-ar.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-model-sizes-de.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 1000,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-model-sizes-en.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-model-sizes-es.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-model-sizes-fr.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-model-sizes-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -9726,48 +9906,48 @@
   },
   "/images/local-whisper-stt-comparison-2026-model-sizes-ja.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-model-sizes-ko.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-model-sizes-pt.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-model-sizes-zh.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-platform-winner-ar.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-platform-winner-de.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 1000,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-platform-winner-en.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-platform-winner-es.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-platform-winner-fr.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-platform-winner-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -9816,23 +9996,23 @@
   },
   "/images/local-whisper-stt-comparison-2026-platform-winner-ja.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-platform-winner-ko.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-platform-winner-pt.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-stt-comparison-2026-platform-winner-zh.svg": {
     "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
+    "width": 1200,
+    "height": 675
   },
   "/images/long-context-local-llms-models-comparison-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -12054,6 +12234,51 @@
     "width": 800,
     "height": 360
   },
+  "/images/quantization-levels-comparison-quality-loss-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-quality-loss-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-quality-loss-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-quality-loss-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-quality-loss-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-quality-loss-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-quality-loss-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-quality-loss-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-quality-loss-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/quantization-levels-comparison-quality-loss-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -12083,6 +12308,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 360
+  },
+  "/images/quantization-levels-comparison-vram-savings-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-vram-savings-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-vram-savings-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-vram-savings-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-vram-savings-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-vram-savings-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-vram-savings-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-vram-savings-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/quantization-levels-comparison-vram-savings-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/quantization-levels-comparison-vram-savings-ja.svg": {
     "encodingFormat": "image/svg+xml",
