@@ -55,9 +55,16 @@ function readJpegDimensions(filePath) {
   return null
 }
 
+function readPngDimensions(filePath) {
+  const data = fs.readFileSync(filePath)
+  if (data.length < 24 || data.readUInt32BE(0) !== 0x89504e47) return null
+  return { width: data.readUInt32BE(16), height: data.readUInt32BE(20) }
+}
+
 function readDimensions(filePath, ext) {
   if (ext === 'svg') return readSvgDimensions(filePath)
   if (ext === 'jpg' || ext === 'jpeg') return readJpegDimensions(filePath)
+  if (ext === 'png') return readPngDimensions(filePath)
   return null
 }
 

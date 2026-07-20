@@ -26,6 +26,9 @@ geo-audit-report.csv
 
 # Screenshot / image artifacts dropped in the tree (e.g. Playwright captures)
 *.png
+# ...except real content assets (Discover-compliant hero PNGs, brand images)
+!public/images/*.png
+!public/*.png
 
 # Claude Code working directory (agent worktrees, session state)
 .claude/
