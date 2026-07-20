@@ -16,6 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '6 Local AI Apps That Just Work (No Terminal, 2026)',
     intro: 'GPT4All, Jan, Atomic Chat, Msty, AnythingLLM Desktop, and LM Studio are the six local AI apps a non-technical user can install and chat with in under 10 minutes — no terminal, no Python, no Docker. Each ranks first for a different beginner persona. Sit a non-technical person in front of GPT4All and they hit a working chat in 4 clicks; Jan adds zero telemetry; Atomic Chat adds native iPhone and Android apps that run the model on the phone itself; Msty adds the prettiest UI; AnythingLLM Desktop adds drag-and-drop document chat; LM Studio adds the smoothest Mac experience.',
     metaDescription: 'Zero terminal commands. No Python. No Docker. 6 local AI apps a non-technical user can install in 10 minutes. Tested with real beginners in 2026.',
+    heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-en.png',
     twitterDescription: 'Six local AI apps that work without ever opening a terminal — ranked by beginner persona. Tested in May 2026.',
     current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
@@ -127,7 +128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Install this if you are: a parent who wants a private ChatGPT, a journalist on a budget laptop, a teacher demoing AI to students, or anyone whose first reaction to "open the terminal" is "what terminal?".',
           },
         ],
-        image: '/images/local-ai-nontechnical-gpt4all-install-steps-en.svg',
+        image: '/images/local-ai-app-non-technical-users-which-app-hero-en.png',
         imageCaption: 'GPT4All 4-step install path: download ~290 MB from gpt4all.io, run installer, pick Llama 3.2 3B (2 GB download), start chatting — fully offline on any 8 GB laptop.',
       },
       jan: {
@@ -149,7 +150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Install this if you are: an EU resident worried about GDPR, a journalist handling sources, a lawyer who cannot send drafts to cloud APIs, or anyone whose threat model includes "what does this app phone home with?".',
           },
         ],
-        image: '/images/local-ai-nontechnical-jan-privacy-features-en.svg',
+        image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-en.png',
         imageCaption: 'Jan privacy comparison: cloud AI sends prompts to remote servers with analytics SDKs; Jan delivers zero telemetry, AGPL-auditable source, and fully offline operation after install.',
       },
       atomicChat: {
@@ -420,6 +421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '6 lokale KI-Apps ohne Terminal 2026: Einsteiger getestet',
     intro: 'GPT4All, Jan, Atomic Chat, Msty, AnythingLLM Desktop und LM Studio sind die sechs lokalen KI-Apps, mit denen nicht-technische Nutzer innerhalb von 10 Minuten chatten können — ohne Terminal, ohne Python, ohne Docker. Jede App ist am besten für eine andere Anfänger-Persona. Setzen Sie einen nicht-technischen Nutzer vor GPT4All, erreichen sie einen funktionsfähigen Chat in 4 Klicks; Jan bietet null Telemetrie; Atomic Chat bietet native iPhone- und Android-Apps, die das Modell auf dem Telefon selbst ausführen; Msty bietet die schönste Oberfläche; AnythingLLM Desktop bietet Drag-and-Drop-Dokument-Chat; LM Studio bietet das beste Erlebnis auf dem Mac.',
     metaDescription: 'Lokale KI-App für nicht-technische Nutzer 2026: einfache Installation, keine Befehlszeile. Die besten benutzerfreundlichen Apps für private KI ohne Vorwissen.',
+    heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-de.png',
     twitterDescription: 'Sechs lokale KI-Apps, die ohne Terminal funktionieren — bewertet nach Anfänger-Persona. Getestet im Mai 2026.',
     current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 Laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
@@ -520,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installieren Sie dies, wenn Sie: ein Elternteil sind, der ein privates ChatGPT möchte, ein Journalist mit einem Budget-Laptop, ein Lehrer, der KI Schülern zeigt, oder jemand, dessen erste Reaktion auf „öffne das Terminal" „welches Terminal?" ist.',
           },
         ],
-        image: '/images/local-ai-nontechnical-gpt4all-install-steps-de.svg',
+        image: '/images/local-ai-app-non-technical-users-which-app-hero-de.png',
         imageCaption: 'GPT4All 4-Schritte-Installation: ~290 MB Download von gpt4all.io, Installer ausführen, Llama 3.2 3B (2 GB) wählen, chatten — vollständig offline auf jedem 8-GB-Laptop.',
       },
       jan: {
@@ -542,7 +544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installieren Sie dies, wenn Sie: ein EU-Bewohner sind, der sich um DSGVO Sorgen macht, ein Journalist, der mit Quellen arbeitet, ein Anwalt, der Entwürfe nicht an Cloud-APIs senden kann, oder jemand, dessen Bedrohungsmodell „was telefoniert diese App nach Hause mit?" enthält.',
           },
         ],
-        image: '/images/local-ai-nontechnical-jan-privacy-features-de.svg',
+        image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-de.png',
         imageCaption: 'Jan Datenschutz-Vergleich: Cloud-KI sendet Eingaben an externe Server mit Analytics-SDK; Jan bietet null Telemetrie, überprüfbaren AGPL-Quellcode und vollständigen Offline-Betrieb nach der Installation.',
       },
       atomicChat: {
@@ -821,6 +823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '6 apps d\'IA locale pour débutants (sans terminal, 2026)',
     intro: 'GPT4All, Jan, Atomic Chat, Msty, AnythingLLM Desktop et LM Studio sont les six apps d\'IA locale qu\'un débutant peut installer et utiliser en moins de 10 minutes — zéro terminal, zéro Python, zéro Docker. Chacune excelle pour un profil de débutant différent. Placez un débutant face à GPT4All, il aura un chat fonctionnel en 4 clics ; Jan offre zéro télémétrie ; Atomic Chat ajoute des apps iPhone et Android natives qui exécutent le modèle sur le téléphone lui-même ; Msty offre l\'interface la plus élégante ; AnythingLLM Desktop offre du drag-and-drop pour les documents ; LM Studio offre la meilleure expérience Mac.',
     metaDescription: 'Application IA locale pour non-techniciens 2026 : installation simple, sans ligne de commande. Les meilleures apps conviviales pour une IA privée accessible.',
+    heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-fr.png',
     twitterDescription: 'Six apps d\'IA locale sans jamais ouvrir un terminal — classées par profil de débutant. Testées en mai 2026.',
     current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
@@ -921,7 +924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installez ceci si vous êtes : un parent qui veut un ChatGPT privé, un journaliste avec un portable budgétaire, un enseignant qui démontre l\'IA à des étudiants, ou quelqu\'un dont la première réaction à "ouvre le terminal" est "quel terminal ?".',
           },
         ],
-        image: '/images/local-ai-nontechnical-gpt4all-install-steps-fr.svg',
+        image: '/images/local-ai-app-non-technical-users-which-app-hero-fr.png',
         imageCaption: 'GPT4All installation en 4 étapes : télécharger ~290 MB depuis gpt4all.io, lancer l\'installeur, choisir Llama 3.2 3B (2 GB), commencer à chatter — entièrement hors ligne sur tout laptop 8 GB.',
       },
       jan: {
@@ -943,7 +946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installez ceci si vous êtes : un résident EU inquiet du RGPD, un journaliste travaillant avec des sources, un avocat qui ne peut pas envoyer des brouillons à des APIs cloud, ou quelqu\'un dont le modèle de menace inclut "que transmet cette app?".',
           },
         ],
-        image: '/images/local-ai-nontechnical-jan-privacy-features-fr.svg',
+        image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-fr.png',
         imageCaption: 'Comparaison de confidentialité Jan : l\'IA cloud envoie les requêtes à des serveurs distants avec SDK analytics ; Jan offre zéro télémétrie, source AGPL auditable, et fonctionnement offline après installation.',
       },
       atomicChat: {
@@ -1214,6 +1217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'ターミナル不要でローカルAIを始める方法（2026年版）：初心者が実際に10分で使えた6アプリ完全レビュー',
     intro: 'GPT4All、Jan、Atomic Chat、Msty、AnythingLLM Desktop、LM Studioは、技術に詳しくないユーザーが10分以内にインストールして使えるローカルAIアプリ6つです。ターミナルなし、Pythonなし、Dockerなし。それぞれ異なる初心者のペルソナに最適です。技術に詳しくないユーザーをGPT4Allの前に座らせると、4クリックで動作するチャットに到達します。Janはテレメトリーゼロ。Atomic Chatはモデルをスマホ自体で動かすiPhone・Androidネイティブアプリを追加。Mstyは最も美しいUI。AnythingLLM Desktopはドラッグ・アンド・ドロップでドキュメントチャット。LM Studioは最高のMac体験を提供します。',
     metaDescription: 'ターミナルコマンドなし、Pythonなし、Dockerなし。初心者が10分以内で導入できるローカルAIアプリを6つ厳選。実際の非技術ユーザーで動作検証。Windows・Mac・Linux対応。',
+    heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-ja.png',
     twitterDescription: 'ターミナルを開かずに動作するローカルAIアプリ6つ。初心者ペルソナ別に分類。2026年5月にテスト済み。',
     current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
@@ -1314,7 +1318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'インストールする対象：親としてプライベートなChatGPTが欲しい、予算ノートパソコンのジャーナリスト、学生にAIをデモする教師、「ターミナルを開いて」と言われて「何のターミナル？」と思う人。',
           },
         ],
-        image: '/images/local-ai-nontechnical-gpt4all-install-steps-ja.svg',
+        image: '/images/local-ai-app-non-technical-users-which-app-hero-ja.png',
         imageCaption: 'GPT4All 4ステップインストール：gpt4all.ioから約290 MBをダウンロード、インストーラ実行、Llama 3.2 3B（2 GB）選択、チャット開始 — 8 GBノートPCで完全オフライン動作。',
       },
       jan: {
@@ -1336,7 +1340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'インストールする対象：GDPRを心配するEU在住者、ソースを扱うジャーナリスト、ドキュメントをクラウドAPIに送信できない弁護士、「このアプリ何を外部に送信してる？」と気になる人。',
           },
         ],
-        image: '/images/local-ai-nontechnical-jan-privacy-features-ja.svg',
+        image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-ja.png',
         imageCaption: 'Janのプライバシー比較：クラウドAIはプロンプトをリモートサーバーに送信；Janはテレメトリゼロ、AGPL検証可能ソース、インストール後の完全オフライン動作を提供。',
       },
       atomicChat: {
@@ -1607,6 +1611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '无需终端的本地AI 2026：初学者零基础安装指南，精选6款应用实测，10分钟完成安装不接触命令行',
     intro: 'GPT4All、Jan、Atomic Chat、Msty、AnythingLLM Desktop和LM Studio是六个本地AI应用，非技术用户可在10分钟内安装并使用。零终端、零Python、零Docker。每个应用都最适合不同的初学者。让非技术用户坐在GPT4All前，4次点击即可获得可用的聊天；Jan提供零遥测；Atomic Chat提供在手机本机上运行模型的原生iPhone和Android应用；Msty提供最美观的界面；AnythingLLM Desktop提供拖放文档聊天；LM Studio提供最佳的Mac体验。',
     metaDescription: '零终端命令，无需Python，无需Docker。精选6款本地AI应用，零基础初学者可在10分钟内完成安装。已通过真实用户测试验证，兼容Windows、Mac和Linux。',
+    heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-zh.png',
     twitterDescription: '无需打开终端即可运行的六个本地AI应用——按初学者角色排序。2026年5月测试。',
     current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
@@ -1707,7 +1712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '安装此应用：想要私有ChatGPT的家长、预算笔记本电脑的记者、向学生演示AI的教师，或第一次反应"打开终端"时想到"什么终端？"的人。',
           },
         ],
-        image: '/images/local-ai-nontechnical-gpt4all-install-steps-zh.svg',
+        image: '/images/local-ai-app-non-technical-users-which-app-hero-zh.png',
         imageCaption: 'GPT4All 4步安装：从gpt4all.io下载约290 MB安装包，运行安装程序，选择Llama 3.2 3B（2 GB），开始聊天 — 在任何8 GB内存笔记本上完全离线运行。',
       },
       jan: {
@@ -1729,7 +1734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '安装此应用：担心GDPR的EU居民、处理来源的记者、无法将草稿发送到云API的律师、威胁模型包括"这个应用向外发送什么？"的人。',
           },
         ],
-        image: '/images/local-ai-nontechnical-jan-privacy-features-zh.svg',
+        image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-zh.png',
         imageCaption: 'Jan隐私对比：云端AI将提示词发送到远程服务器；Jan提供零遥测、AGPL可审计源代码和安装后完全离线运行。',
       },
       atomicChat: {
@@ -2000,6 +2005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '6 apps de IA local que funcionan sin terminal (2026)',
     intro: 'GPT4All, Jan, Atomic Chat, Msty, AnythingLLM Desktop y LM Studio son las seis apps de IA local que un usuario sin conocimientos técnicos puede instalar y usar en menos de 10 minutos — sin terminal, sin Python, sin Docker. Cada una lidera para un perfil de principiante diferente. Sienta a un usuario no técnico frente a GPT4All y tendrá un chat funcionando en 4 clics; Jan ofrece cero telemetría; Atomic Chat añade apps nativas de iPhone y Android que ejecutan el modelo en el propio teléfono; Msty ofrece la interfaz más bonita; AnythingLLM Desktop ofrece chat con documentos mediante arrastrar y soltar; LM Studio ofrece la mejor experiencia en Mac.',
     metaDescription: 'Cero terminal, sin Python ni Docker: 6 apps de IA local que cualquier usuario no técnico instala en 10 minutos. Probadas con principiantes reales en 2026.',
+    heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-es.png',
     twitterDescription: 'Seis apps de IA local que funcionan sin abrir jamás un terminal — ordenadas por perfil de principiante. Probadas en mayo de 2026.',
     current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
@@ -2100,7 +2106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instala esta si eres: un padre que quiere un ChatGPT privado, un periodista con un portátil económico, un profesor que demuestra IA a estudiantes, o cualquier persona cuya primera reacción a "abre el terminal" es "¿qué terminal?".',
           },
         ],
-        image: '/images/local-ai-nontechnical-gpt4all-install-steps-es.svg',
+        image: '/images/local-ai-app-non-technical-users-which-app-hero-es.png',
         imageCaption: 'Proceso de instalación de GPT4All en 4 pasos: descarga ~290 MB desde gpt4all.io, ejecuta el instalador, elige Llama 3.2 3B (2 GB de descarga), empieza a chatear — completamente sin conexión en cualquier portátil con 8 GB de RAM.',
       },
       jan: {
@@ -2122,7 +2128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instala esta si eres: un residente que se preocupa por su privacidad digital, un periodista que maneja fuentes confidenciales, un abogado que no puede enviar borradores a APIs en la nube, o cualquier persona cuyo modelo de amenaza incluye "¿qué envía esta app al exterior?".',
           },
         ],
-        image: '/images/local-ai-nontechnical-jan-privacy-features-es.svg',
+        image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-es.png',
         imageCaption: 'Comparativa de privacidad de Jan: la IA en la nube envía los prompts a servidores remotos con SDKs de análisis; Jan ofrece cero telemetría, código fuente auditable bajo AGPL y funcionamiento completamente sin conexión tras la instalación.',
       },
       atomicChat: {
@@ -2394,6 +2400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '6 apps de IA local que funcionam sem terminal (2026)',
     intro: 'GPT4All, Jan, Atomic Chat, Msty, AnythingLLM Desktop e LM Studio são os seis apps de IA local que um usuário não técnico consegue instalar e conversar em menos de 10 minutos — sem terminal, sem Python, sem Docker. Cada um lidera para um perfil de iniciante diferente. Sente um usuário não técnico na frente do GPT4All e ele chega a um chat funcionando em 4 cliques; o Jan adiciona zero telemetria; o Atomic Chat adiciona apps nativos para iPhone e Android que rodam o modelo no próprio celular; o Msty adiciona a interface mais bonita; o AnythingLLM Desktop adiciona chat com documentos por arrastar e soltar; o LM Studio adiciona a experiência mais fluida no Mac.',
     metaDescription: 'Zero comandos de terminal. Sem Python. Sem Docker. 6 apps de IA local que um usuário não técnico instala em 10 minutos. Testados com iniciantes reais em 2026.',
+    heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-pt.png',
     twitterDescription: 'Seis apps de IA local que funcionam sem nunca abrir um terminal — classificados por perfil de iniciante. Testados em maio de 2026.',
     current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
@@ -2494,7 +2501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instale este se você é: um pai que quer um ChatGPT privado, um jornalista com um notebook econômico, um professor demonstrando IA para alunos, ou qualquer pessoa cuja primeira reação a "abra o terminal" seja "que terminal?".',
           },
         ],
-        image: '/images/local-ai-nontechnical-gpt4all-install-steps-pt.svg',
+        image: '/images/local-ai-app-non-technical-users-which-app-hero-pt.png',
         imageCaption: 'Caminho de instalação do GPT4All em 4 passos: baixe ~290 MB de gpt4all.io, execute o instalador, escolha Llama 3.2 3B (2 GB de download), comece a conversar — totalmente offline em qualquer notebook com 8 GB.',
       },
       jan: {
@@ -2516,7 +2523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instale este se você é: um residente da UE preocupado com o GDPR, um jornalista lidando com fontes, um advogado que não pode enviar rascunhos a APIs na nuvem, ou qualquer pessoa cujo modelo de ameaça inclua "o que este app envia ao exterior?".',
           },
         ],
-        image: '/images/local-ai-nontechnical-jan-privacy-features-pt.svg',
+        image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-pt.png',
         imageCaption: 'Comparação de privacidade do Jan: a IA na nuvem envia prompts a servidores remotos com SDKs de analytics; o Jan entrega zero telemetria, código auditável sob AGPL e operação totalmente offline após a instalação.',
       },
       atomicChat: {
@@ -2790,6 +2797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تُعدّ تطبيقات GPT4All وJan وAtomic Chat وMsty وAnythingLLM Desktop وLM Studio الستة الأفضل للمستخدمين غير التقنيين الذين يريدون الذكاء الاصطناعي المحلي — بدون سطر أوامر، وبدون Python، وبدون Docker. كل تطبيق يتصدر لملف مستخدم مبتدئ مختلف. GPT4All يُحضر المستخدم إلى محادثة عاملة في 4 نقرات؛ Jan يضيف صفر بيانات مُرسَلة؛ Atomic Chat يضيف تطبيقات iPhone وAndroid أصلية تُشغّل النموذج على الهاتف نفسه؛ Msty يضيف الواجهة الأجمل؛ AnythingLLM Desktop يضيف الدردشة مع المستندات بالسحب والإسقاط؛ LM Studio يقدم أفضل تجربة على Mac.',
     metaDescription:
       '10 دقائق كافية لتثبيت أي من هذه التطبيقات الستة بدون Python أو Docker. GPT4All وJan وAtomic Chat وMsty وAnythingLLM وLM Studio — مُختبَرة في 2026.',
+    heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-ar.png',
     twitterDescription:
       'ستة تطبيقات ذكاء اصطناعي محلي تعمل دون فتح سطر أوامر قط — مُرتَّبة حسب ملف المبتدئ. مُختبَرة في مايو 2026.',
     current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
@@ -2899,7 +2907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ثبّت هذا إن كنت: أباً يريد ChatGPT خاصاً، أو صحفياً بحاسوب محمول اقتصادي، أو أستاذاً يُعرّف الطلاب بالذكاء الاصطناعي، أو أي شخص ردّه الأول على "افتح الـterminal" هو "أي terminal؟".',
           },
         ],
-        image: '/images/local-ai-nontechnical-gpt4all-install-steps-es.svg',
+        image: '/images/local-ai-app-non-technical-users-which-app-hero-ar.png',
         imageCaption: 'خطوات تثبيت GPT4All في 4 مراحل: نزّل ~290 ميجابايت من gpt4all.io، شغّل المثبّت، اختر Llama 3.2 3B (2 جيجابايت تنزيل)، ابدأ المحادثة — بدون اتصال بالكامل على أي حاسوب محمول بـ8 جيجابايت RAM.',
       },
       jan: {
@@ -2922,7 +2930,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ثبّت هذا إن كنت: مقيماً يهتم بخصوصيته الرقمية، أو صحفياً يتعامل مع مصادر سرية، أو محامياً لا يستطيع إرسال مسودات إلى APIs السحابية، أو أي شخص نموذج تهديداته يتضمن "ماذا يرسل هذا التطبيق إلى الخارج؟".',
           },
         ],
-        image: '/images/local-ai-nontechnical-jan-privacy-features-es.svg',
+        image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-ar.png',
         imageCaption: 'مقارنة خصوصية Jan: الذكاء الاصطناعي السحابي يرسل المطالبات إلى خوادم بعيدة مع SDKs التحليل؛ Jan يوفر صفر بيانات مُرسَلة وكوداً قابلاً للتدقيق تحت AGPL وعملاً كاملاً بدون اتصال بعد التثبيت.',
       },
       atomicChat: {
@@ -3198,6 +3206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '터미널 없이 작동하는 로컬 AI 앱 6가지 (2026)',
     intro: 'GPT4All, Jan, Atomic Chat, Msty, AnythingLLM Desktop, LM Studio는 비전문가도 10분 안에 설치하고 바로 사용할 수 있는 로컬 AI 앱 6종입니다 — 터미널, Python, Docker가 전혀 필요 없습니다. 각 앱은 서로 다른 초보자 프로필에서 가장 뛰어납니다. 비전문가가 GPT4All 앞에 앉으면 4번의 클릭으로 채팅을 시작할 수 있고, Jan은 완전 무텔레메트리를 제공하며, Atomic Chat은 모델을 휴대폰 자체에서 실행하는 네이티브 iPhone 및 Android 앱을 제공하고, Msty는 가장 세련된 인터페이스를 갖추고 있고, AnythingLLM Desktop은 문서 드래그 앤 드롭 채팅을, LM Studio는 Mac에서 최고의 경험을 제공합니다.',
     metaDescription: '터미널 없음, Python 없음, Docker 없음: 비전문가도 10분 안에 설치할 수 있는 로컬 AI 앱 6가지. 2026년 실제 초보자와 함께 테스트 완료.',
+    heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-ko.png',
     twitterDescription: '터미널을 한 번도 열지 않고 작동하는 로컬 AI 앱 6가지 — 초보자 프로필별 순위. 2026년 5월 테스트 완료.',
     current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
@@ -3308,7 +3317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '이 앱을 설치하세요: 개인 ChatGPT를 원하는 부모님, 저렴한 노트북을 가진 기자, 학생들에게 AI를 시연하는 교사, 또는 "터미널을 열어라"는 말에 "터미널이 뭔가요?"라고 반응하는 분.',
           },
         ],
-        image: '/images/local-ai-nontechnical-gpt4all-install-steps-ko.svg',
+        image: '/images/local-ai-app-non-technical-users-which-app-hero-ko.png',
         imageCaption: 'GPT4All 4단계 설치 과정: gpt4all.io에서 ~290 MB 다운로드, 설치 프로그램 실행, Llama 3.2 3B 선택(2 GB 다운로드), 채팅 시작 — 8 GB RAM 노트북에서 완전 오프라인 작동.',
       },
       jan: {
@@ -3330,7 +3339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '이 앱을 설치하세요: 디지털 프라이버시를 걱정하는 분, 기밀 출처를 다루는 기자, 클라우드 API에 초안을 보낼 수 없는 법률가, 또는 "이 앱이 외부로 무엇을 보내는가?"가 위협 모델에 포함된 분.',
           },
         ],
-        image: '/images/local-ai-nontechnical-jan-privacy-features-ko.svg',
+        image: '/images/local-ai-app-non-technical-users-privacy-comparison-hero-ko.png',
         imageCaption: 'Jan 프라이버시 비교: 클라우드 AI는 분석 SDK와 함께 원격 서버로 프롬프트를 전송하지만, Jan은 완전 무텔레메트리, AGPL 하에 감사 가능한 소스 코드, 설치 후 완전 오프라인 작동을 제공합니다.',
       },
       atomicChat: {
