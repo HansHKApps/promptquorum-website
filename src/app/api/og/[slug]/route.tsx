@@ -13,6 +13,7 @@ import { smartHomeContent } from '@/lib/smart-home/content'
 import { SMART_HOME_SLUG_TO_KEY } from '@/lib/smart-home/slugs'
 import { balconySolarContent } from '@/lib/balcony-solar/content'
 import { BALCONY_SOLAR_SLUG_TO_KEY } from '@/lib/balcony-solar/slugs'
+import { getFrameworkLocalized, FRAMEWORK_SLUGS } from '@/lib/frameworksData'
 import type { Language } from '@/lib/blog/blogContent'
 
 export const runtime = 'nodejs'
@@ -27,14 +28,15 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
   // Cluster lookup order: prompt-engineering → local-llms → power-local-llm →
-  // prompt-bites → smart-home → balcony-solar. First match wins. Watch for slug
-  // collisions across clusters when adding new articles.
+  // prompt-bites → smart-home → balcony-solar → frameworks. First match wins.
+  // Watch for slug collisions across clusters when adding new articles.
   const peKey = PE_SLUG_TO_KEY[slug]
   const llmKey = LLM_SLUG_TO_KEY[slug]
   const powerKey = POWER_LLM_SLUG_TO_KEY[slug]
   const bitesKey = PROMPT_BITES_SLUG_TO_KEY[slug]
   const smartHomeKey = SMART_HOME_SLUG_TO_KEY[slug]
   const balconySolarKey = BALCONY_SOLAR_SLUG_TO_KEY[slug]
+  const isFrameworkSlug = FRAMEWORK_SLUGS.includes(slug)
 
   let article: { title?: string; intro?: string } | undefined
 
@@ -56,6 +58,11 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
   } else if (balconySolarKey && balconySolarContent[balconySolarKey]) {
     const langContent = balconySolarContent[balconySolarKey]
     article = langContent[selectedLang] || langContent['en']
+  } else if (isFrameworkSlug) {
+    const fw = getFrameworkLocalized(slug, selectedLang)
+    if (fw) {
+      article = { title: `${fw.name} Prompt Framework`, intro: fw.tagline }
+    }
   }
 
   if (!article) {
