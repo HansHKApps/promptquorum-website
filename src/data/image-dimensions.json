@@ -294,6 +294,186 @@
     "width": 800,
     "height": 350
   },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 380
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 400
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 420
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 350
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
   "/images/apple-silicon-unified-memory.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -343,6 +523,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 500
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 420
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-amd-gpus-local-llm-price-performance-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-amd-gpus-local-llm-software-support-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/best-amd-gpus-local-llm-software-support-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 380
+  },
+  "/images/best-amd-gpus-local-llm-software-support-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/best-amd-gpus-local-llm-software-support-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/best-amd-gpus-local-llm-software-support-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/best-amd-gpus-local-llm-software-support-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/best-amd-gpus-local-llm-software-support-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/best-amd-gpus-local-llm-software-support-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/best-amd-gpus-local-llm-software-support-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
   },
   "/images/best-amd-mini-pc-amd-vs-apple-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -643,6 +913,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 420
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 420
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-cpu-only-llm-model-speeds-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-cpu-only-llm-model-speeds-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 400
+  },
+  "/images/best-cpu-only-llm-model-speeds-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-cpu-only-llm-model-speeds-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-cpu-only-llm-model-speeds-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-cpu-only-llm-model-speeds-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-cpu-only-llm-model-speeds-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-cpu-only-llm-model-speeds-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-cpu-only-llm-model-speeds-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
   },
   "/images/best-embedding-models-local-rag-2026-decision-tree-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -3973,6 +4333,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 360
+  },
+  "/images/local-llm-on-laptop-model-picks-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-llm-on-laptop-model-picks-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 400
+  },
+  "/images/local-llm-on-laptop-model-picks-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-llm-on-laptop-model-picks-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-llm-on-laptop-model-picks-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-llm-on-laptop-model-picks-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-llm-on-laptop-model-picks-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-llm-on-laptop-model-picks-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-llm-on-laptop-model-picks-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-llm-on-laptop-ram-tiers-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/local-llm-on-laptop-ram-tiers-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 380
+  },
+  "/images/local-llm-on-laptop-ram-tiers-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/local-llm-on-laptop-ram-tiers-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/local-llm-on-laptop-ram-tiers-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/local-llm-on-laptop-ram-tiers-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/local-llm-on-laptop-ram-tiers-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/local-llm-on-laptop-ram-tiers-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/local-llm-on-laptop-ram-tiers-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
   },
   "/images/local-llm-one-click-installers-comparison-table-de.svg": {
     "encodingFormat": "image/svg+xml",

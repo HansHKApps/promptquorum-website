@@ -178,6 +178,8 @@ schema: {
             { '0': 'RTX 4090', '1': '24GB', '2': '2,752', '3': '$1,000-1,300', '4': '--', '5': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Price Used', 'Perf/$ vs. RTX', 'Equivalent RTX'],
+          image: '/images/best-amd-gpus-local-llm-price-performance-en.svg',
+          imageCaption: 'RX 7900 XTX matches RTX 4090 speed and VRAM for roughly 60% of the price -- the trade-off is ROCm setup friction.',
         },
         'rocm-setup': {
           title: 'What\'s the ROCm Setup Friction for AMD?',
@@ -200,6 +202,8 @@ schema: {
             '**LM Studio:** NVIDIA only. No AMD support.',
             'As of April 2026: vLLM + llama.cpp are your AMD paths. Ollama is not reliable.',
           ],
+          image: '/images/best-amd-gpus-local-llm-software-support-en.svg',
+          imageCaption: 'llama.cpp and Text Generation WebUI are the reliable AMD paths in 2026 -- Ollama\'s ROCm support remains inconsistent.',
         },
         'when-buy-amd': {
           title: 'When Should You Actually Buy AMD Over NVIDIA?',
@@ -416,6 +420,9 @@ schema: {
             { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2,752', 'Precio (2ª mano)': '~$1,000-1,300', 'Rend./$ vs. RTX': '--', 'RTX equivalente': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Precio (2ª mano)', 'Rend./$ vs. RTX', 'RTX equivalente'],
+        
+          image: '/images/best-amd-gpus-local-llm-price-performance-es.svg',
+          imageCaption: 'La RX 7900 XTX iguala la velocidad y la VRAM de la RTX 4090 por aproximadamente el 60% del precio — la contrapartida es la fricción de configuración de ROCm.',
         },
         'rocm-setup': {
           title: '¿Cuál es la fricción de configuración de ROCm para AMD?',
@@ -438,6 +445,9 @@ schema: {
             '**LM Studio:** solo NVIDIA. Sin soporte para AMD.',
             'A partir de abril de 2026: vLLM + llama.cpp son tus opciones en AMD. Ollama no es fiable.',
           ],
+        
+          image: '/images/best-amd-gpus-local-llm-software-support-es.svg',
+          imageCaption: 'llama.cpp y Text Generation WebUI son las rutas fiables para AMD en 2026 — el soporte ROCm de Ollama sigue siendo inconsistente.',
         },
         'when-buy-amd': {
           title: '¿Cuándo deberías comprar AMD en lugar de NVIDIA?',
@@ -655,6 +665,9 @@ schema: {
             { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2,752', 'Precio (2ª mano)': 'نحو 1,000-1,300 دولار', 'Rend./$ vs. RTX': '--', 'RTX equivalente': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Precio (2ª mano)', 'Rend./$ vs. RTX', 'RTX equivalente'],
+        
+          image: '/images/best-amd-gpus-local-llm-price-performance-ar.svg',
+          imageCaption: 'تضاهي RX 7900 XTX سرعة وVRAM بطاقة RTX 4090 بنحو 60% من السعر — والمقابل هو صعوبة إعداد ROCm.',
         },
         'rocm-setup': {
           title: 'ما احتكاك إعداد ROCm لـ AMD؟',
@@ -677,6 +690,9 @@ schema: {
             '**LM Studio:** NVIDIA فقط. دون دعم لـ AMD.',
             'اعتبارًا من أبريل 2026: vLLM + llama.cpp هما خياراك على AMD. وOllama غير موثوق.',
           ],
+        
+          image: '/images/best-amd-gpus-local-llm-software-support-ar.svg',
+          imageCaption: 'يُعد llama.cpp وText Generation WebUI المسارين الموثوقين لـ AMD في 2026 — بينما يظل دعم ROCm في Ollama غير مستقر.',
         },
         'when-buy-amd': {
           title: 'متى ينبغي أن تشتري AMD بدلًا من NVIDIA؟',
@@ -893,6 +909,9 @@ schema: {
             { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2.752', 'Preço (2ª mão)': '~US$ 1.000-1.300', 'Desemp./$ vs. RTX': '--', 'RTX equivalente': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Preço (2ª mão)', 'Desemp./$ vs. RTX', 'RTX equivalente'],
+        
+          image: '/images/best-amd-gpus-local-llm-price-performance-pt.svg',
+          imageCaption: 'A RX 7900 XTX iguala a velocidade e a VRAM da RTX 4090 por cerca de 60% do preço — a contrapartida é o atrito de configuração do ROCm.',
         },
         'rocm-setup': {
           title: 'Qual é a fricção de configuração do ROCm para AMD?',
@@ -915,6 +934,9 @@ schema: {
             '**LM Studio:** só NVIDIA. Sem suporte para AMD.',
             'A partir de abril de 2026: vLLM + llama.cpp são suas opções em AMD. O Ollama não é confiável.',
           ],
+        
+          image: '/images/best-amd-gpus-local-llm-software-support-pt.svg',
+          imageCaption: 'llama.cpp e Text Generation WebUI são os caminhos confiáveis para AMD em 2026 — o suporte ROCm do Ollama continua inconsistente.',
         },
         'when-buy-amd': {
           title: 'Quando você deve comprar AMD em vez de NVIDIA?',
@@ -1054,6 +1076,9 @@ schema: {
             { 'GPU': 'RTX 4090', 'VRAM': '24 GB', 'TFLOPS': '2.752', 'Preis gebraucht': '1.000-1.300 €', 'Leistung/€ vs. RTX': '--', 'Equivalent RTX': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Preis gebraucht', 'Leistung/€ vs. RTX', 'Equivalent RTX'],
+        
+          image: '/images/best-amd-gpus-local-llm-price-performance-de.svg',
+          imageCaption: 'Die RX 7900 XTX erreicht Geschwindigkeit und VRAM der RTX 4090 für etwa 60 % des Preises — der Kompromiss ist der ROCm-Einrichtungsaufwand.',
         },
         'rocm-setup': {
           title: 'Welche ROCm-Einrichtungsherausforderungen gibt es?',
@@ -1076,6 +1101,9 @@ schema: {
             '**LM Studio:** Nur NVIDIA. Keine AMD-Unterstützung.',
             'Seit April 2026: vLLM + llama.cpp sind Ihre AMD-Pfade. Ollama ist nicht zuverlässig.',
           ],
+        
+          image: '/images/best-amd-gpus-local-llm-software-support-de.svg',
+          imageCaption: 'llama.cpp und Text Generation WebUI sind 2026 die zuverlässigen AMD-Pfade — Ollamas ROCm-Unterstützung bleibt inkonsistent.',
         },
         'when-buy-amd': {
           title: 'Wann sollten Sie AMD statt NVIDIA kaufen?',
@@ -1223,6 +1251,9 @@ schema: {
             { 'GPU': 'RTX 4090', 'VRAM': '24 Go', 'TFLOPS': '2.752', 'Prix occasion': '1.000-1.300 €', 'Perf/€ vs RTX': '--', 'RTX équivalent': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Prix occasion', 'Perf/€ vs RTX', 'RTX équivalent'],
+        
+          image: '/images/best-amd-gpus-local-llm-price-performance-fr.svg',
+          imageCaption: 'La RX 7900 XTX égale la vitesse et la VRAM de la RTX 4090 pour environ 60 % du prix — la contrepartie est la friction de configuration de ROCm.',
         },
         'rocm-setup': {
           title: 'Quelle friction de configuration ROCm?',
@@ -1245,6 +1276,9 @@ schema: {
             '**LM Studio** : NVIDIA uniquement. Pas de support AMD.',
             'Depuis avril 2026 : vLLM + llama.cpp sont vos chemins AMD. Ollama n\'est pas fiable.',
           ],
+        
+          image: '/images/best-amd-gpus-local-llm-software-support-fr.svg',
+          imageCaption: 'llama.cpp et Text Generation WebUI sont les voies fiables pour AMD en 2026 — le support ROCm d\'Ollama reste incohérent.',
         },
         'when-buy-amd': {
           title: 'Quand acheter AMD plutôt que NVIDIA?',
@@ -1393,6 +1427,9 @@ schema: {
             { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2.752', '中古価格': '¥120,000-150,000', '性能/円 vs RTX': '--', '等効 RTX': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', '中古価格', '性能/円 vs RTX', '等効 RTX'],
+        
+          image: '/images/best-amd-gpus-local-llm-price-performance-ja.svg',
+          imageCaption: 'RX 7900 XTXはRTX 4090と同等の速度とVRAMを、価格の約60%で実現します — その代償がROCmのセットアップの手間です。',
         },
         'rocm-setup': {
           title: 'ROCm セットアップの課題',
@@ -1415,6 +1452,9 @@ schema: {
             '**LM Studio：** NVIDIA のみ。AMD サポートなし。',
             '**2026 年 4 月起：** vLLM + llama.cpp があなたの AMD パスです。Ollama は信頼できません。',
           ],
+        
+          image: '/images/best-amd-gpus-local-llm-software-support-ja.svg',
+          imageCaption: '2026年時点でllama.cppとText Generation WebUIが信頼できるAMDの選択肢です — OllamaのROCmサポートは不安定なままです。',
         },
         'when-buy-amd': {
           title: 'AMD を NVIDIA の代わりに購入すべき場合',
@@ -1567,6 +1607,9 @@ schema: {
             { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2,752', '二手价格': '$1,000-1,300', '性价比 vs RTX': '--', '等效 RTX': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', '二手价格', '性价比 vs RTX', '等效 RTX'],
+        
+          image: '/images/best-amd-gpus-local-llm-price-performance-zh.svg',
+          imageCaption: 'RX 7900 XTX以约60%的价格实现与RTX 4090相当的速度和VRAM — 代价是ROCm配置的繁琐。',
         },
         'rocm-setup': {
           title: 'ROCm 设置的难点',
@@ -1590,6 +1633,9 @@ schema: {
             '**LM Studio：** 仅 NVIDIA。无 AMD 支持。',
             '**2026 年 4 月起：** vLLM + llama.cpp 是您的 AMD 路径。Ollama 不可靠。',
           ],
+        
+          image: '/images/best-amd-gpus-local-llm-software-support-zh.svg',
+          imageCaption: '截至2026年，llama.cpp和Text Generation WebUI是可靠的AMD方案 — Ollama的ROCm支持仍不稳定。',
         },
         'when-buy-amd': {
           title: '何时应购买 AMD 而非 NVIDIA？',
@@ -1852,6 +1898,9 @@ schema: {
           { '0': 'RTX 4090', '1': '24GB', '2': '2,752', '3': '$1,000-1,300', '4': '--', '5': '--' },
         ],
         columns: ['GPU', 'VRAM', 'TFLOPS', '중고 가격', '달러당 성능 vs. RTX', '동급 RTX'],
+      
+        image: '/images/best-amd-gpus-local-llm-price-performance-ko.svg',
+        imageCaption: 'RX 7900 XTX는 RTX 4090의 속도와 VRAM을 가격의 약 60%로 제공합니다 — 대가는 ROCm 설정의 번거로움입니다.',
       },
       'rocm-setup': {
         title: 'AMD ROCm 설정의 부담은?',
@@ -1874,6 +1923,9 @@ schema: {
           '**LM Studio:** NVIDIA 전용. AMD 지원 없음.',
           '2026년 4월 기준: vLLM + llama.cpp가 AMD에서의 선택지입니다. Ollama는 신뢰할 수 없습니다.',
         ],
+      
+        image: '/images/best-amd-gpus-local-llm-software-support-ko.svg',
+        imageCaption: '2026년 기준 llama.cpp와 Text Generation WebUI가 신뢰할 수 있는 AMD 경로입니다 — Ollama의 ROCm 지원은 여전히 불안정합니다.',
       },
       'when-buy-amd': {
         title: 'AMD를 NVIDIA 대신 선택해야 하는 경우',
