@@ -14,6 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'Small Local LLM Models 2026: Top 5 Sub-4B Ranked',
       intro: 'Small local LLMs (1B-4B parameters) run on machines with 4-8 GB RAM and produce 30-70 tokens/sec on CPU -- fast enough for real-time chat. The best small models in 2026 are Microsoft Phi-4 Mini 3.8B (best reasoning), Google Gemma 2 2B (fastest), Qwen3 3B (best coding), and Meta Llama 3.2 3B (best general use).',
       metaDescription: 'Best sub-4B local LLM models for 4-8 GB RAM: Phi-4 Mini (68% MMLU), Gemma 2 (fastest), Qwen3 (coding), Llama 3.2 (general). April 2026 rankings.',
+      heroImage: '/images/small-local-llm-models-performance-tier-hero-en.png',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Small local LLMs (1B-4B parameters) run on machines with 4-8 GB RAM and produce 30-70 tokens/sec on CPU -- fast enough for real-time chat.**',
       audience: 'Beginners running their first local LLM on consumer hardware',
@@ -179,7 +180,7 @@ schema: {
         },
         comparisonTable: {
           title: 'Full Comparison: Best Small Local LLMs Under 4B Parameters',
-          image: '/images/small-llm-performance-tier-mockup.svg',
+          image: '/images/small-local-llm-models-performance-tier-hero-en.png',
           imageCaption: 'Performance tiers: MMLU and HumanEval scores show Phi-4 Mini leads on reasoning and coding, Gemma 2 is fastest on CPU, Qwen3 excels at coding.',
           rows: [
             { 'Model': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2.5 GB', 'Context': '128K', 'Best For': 'Reasoning, coding' },
@@ -208,7 +209,7 @@ schema: {
         },
         quantizationGuide: {
           title: 'Understanding Quantization: RAM vs Quality Trade-off',
-          image: '/images/small-llm-quantization-tradeoff-mockup.svg',
+          image: '/images/small-local-llm-models-quantization-tradeoff-hero-en.png',
           imageCaption: 'Quantization trade-off: Q4_K_M (2.5 GB, -0.5% quality) is the recommended default. Q8_0 uses 3.8 GB with no quality gain. Q3_K_M (1.8 GB, -1.8% loss) for extreme RAM constraints.',
         },
         relatedReading: {
@@ -289,6 +290,7 @@ schema: {
       seoTitle: 'Modelos LLM locales pequeños 2026: top 5 sub-4B clasificados',
       intro: 'Los LLMs locales pequeños (1B-4B parámetros) funcionan en máquinas con 4-8 GB de RAM y producen 30-70 tokens/seg en CPU -- suficientemente rápido para chat en tiempo real. Los mejores modelos pequeños en 2026 son Microsoft Phi-4 Mini 3.8B (mejor razonamiento), Google Gemma 2 2B (el más rápido), Qwen3 3B (mejor para código) y Meta Llama 3.2 3B (mejor uso general).',
       metaDescription: 'Mejores modelos LLM locales sub-4B para 4–8 GB de RAM: Phi-4 Mini (68% MMLU), Gemma 2 (el más rápido), Qwen3 (código) y Llama 3.2 (general). 2026.',
+      heroImage: '/images/small-local-llm-models-performance-tier-hero-es.png',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Los LLMs locales pequeños (1B-4B parámetros) funcionan en máquinas con 4-8 GB de RAM y producen 30-70 tokens/seg en CPU -- suficientemente rápido para chat en tiempo real.**',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
@@ -454,7 +456,7 @@ schema: {
         },
         comparisonTable: {
           title: 'Comparativa completa: mejores LLMs locales pequeños de menos de 4B parámetros',
-          image: '/images/small-llm-performance-tier-mockup.svg',
+          image: '/images/small-local-llm-models-performance-tier-hero-es.png',
           imageCaption: 'Niveles de rendimiento: las puntuaciones de MMLU y HumanEval muestran que Phi-4 Mini lidera en razonamiento y código, Gemma 2 es el más rápido en CPU, Qwen3 destaca en código.',
           rows: [
             { 'Modelo': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2,5 GB', 'Contexto': '128K', 'Mejor para': 'Razonamiento, código' },
@@ -467,7 +469,7 @@ schema: {
         },
         quantizationGuide: {
           title: 'Entendiendo la cuantización: equilibrio entre RAM y calidad',
-          image: '/images/small-llm-quantization-tradeoff-mockup.svg',
+          image: '/images/small-local-llm-models-quantization-tradeoff-hero-es.png',
           imageCaption: 'Equilibrio de cuantización: Q4_K_M (2,5 GB, -0,5% de calidad) es el valor predeterminado recomendado. Q8_0 usa 3,8 GB sin ganancia de calidad. Q3_K_M (1,8 GB, -1,8% de pérdida) para restricciones extremas de RAM.',
         },
         regionalContext: {
@@ -564,6 +566,7 @@ schema: {
       seoTitle: 'نماذج ⁨LLM⁩ المحلية الصغيرة ⁨2026⁩: أفضل ⁨5⁩ نماذج دون ⁨4B⁩',
       intro: 'تعمل نماذج LLM المحلية الصغيرة (1B-4B معاملات) على أجهزة بذاكرة RAM سعة 4-8 GB وتنتج 30-70 token/ثانية على CPU -- سريعة بما يكفي للدردشة الفورية. أفضل النماذج الصغيرة في 2026 هي Microsoft Phi-4 Mini 3.8B (أفضل استدلال)، وGoogle Gemma 2 2B (الأسرع)، وQwen3 3B (الأفضل للبرمجة)، وMeta Llama 3.2 3B (الأفضل للاستخدام العام).',
       metaDescription: 'أفضل ⁨5⁩ نماذج ⁨LLM⁩ محلية أقل من ⁨4B⁩ في ⁨2026⁩: ⁨Phi-4 Mini⁩ (⁨68% MMLU⁩، ⁨2.5 GB⁩)، ⁨Gemma 2⁩ (الأسرع)، ⁨Qwen3⁩ (البرمجة)، ⁨Llama 3.2⁩ (عام).',
+      heroImage: '/images/small-local-llm-models-performance-tier-hero-ar.png',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**تعمل نماذج LLM المحلية الصغيرة (1B-4B معاملات) على أجهزة بذاكرة RAM سعة 4-8 GB وتنتج 30-70 token/ثانية على CPU -- سريعة بما يكفي للدردشة الفورية.**',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على عتاد استهلاكي',
@@ -731,7 +734,7 @@ schema: {
         },
         comparisonTable: {
           title: 'مقارنة كاملة: أفضل نماذج LLM المحلية الصغيرة أقل من 4B معاملات',
-          image: '/images/small-llm-performance-tier-mockup.svg',
+          image: '/images/small-local-llm-models-performance-tier-hero-ar.png',
           imageCaption: 'مستويات الأداء: تُظهر درجات MMLU وHumanEval أن Phi-4 Mini يتصدّر في الاستدلال والبرمجة، وGemma 2 الأسرع على CPU، وQwen3 يتفوق في البرمجة.',
           rows: [
             { 'Modelo': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2.5 GB', 'Contexto': '128K', 'Mejor para': 'الاستدلال، البرمجة' },
@@ -744,7 +747,7 @@ schema: {
         },
         quantizationGuide: {
           title: 'فهم التكميم: الموازنة بين RAM والجودة',
-          image: '/images/small-llm-quantization-tradeoff-mockup.svg',
+          image: '/images/small-local-llm-models-quantization-tradeoff-hero-ar.png',
           imageCaption: 'موازنة التكميم: Q4_K_M (2.5 GB، -0.5% جودة) هو الافتراضي الموصى به. يستخدم Q8_0 3.8 GB دون مكسب في الجودة. Q3_K_M (1.8 GB، -1.8% فقدان) لقيود RAM القصوى.',
         },
         regionalContext: {
@@ -841,6 +844,7 @@ schema: {
       seoTitle: 'Modelos LLM locais pequenos 2026: top 5 sub-4B classificados',
       intro: 'Os LLMs locais pequenos (1B-4B parâmetros) funcionam em máquinas com 4-8 GB de RAM e produzem 30-70 tokens/seg na CPU -- rápido o suficiente para chat em tempo real. Os melhores modelos pequenos em 2026 são Microsoft Phi-4 Mini 3.8B (melhor raciocínio), Google Gemma 2 2B (o mais rápido), Qwen3 3B (melhor para código) e Meta Llama 3.2 3B (melhor uso geral).',
       metaDescription: 'Melhores modelos LLM locais sub-4B para 4–8 GB de RAM: Phi-4 Mini (68% MMLU), Gemma 2 (o mais rápido), Qwen3 (código) e Llama 3.2 (geral). 2026.',
+      heroImage: '/images/small-local-llm-models-performance-tier-hero-pt.png',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Os LLMs locais pequenos (1B-4B parâmetros) funcionam em máquinas com 4-8 GB de RAM e produzem 30-70 tokens/seg na CPU -- rápido o suficiente para chat em tempo real.**',
       audience: 'Iniciantes rodando seu primeiro LLM local em hardware de consumo',
@@ -1006,7 +1010,7 @@ schema: {
         },
         comparisonTable: {
           title: 'Comparativo completo: melhores LLMs locais pequenos de menos de 4B parâmetros',
-          image: '/images/small-llm-performance-tier-mockup.svg',
+          image: '/images/small-local-llm-models-performance-tier-hero-pt.png',
           imageCaption: 'Níveis de desempenho: as pontuações de MMLU e HumanEval mostram que o Phi-4 Mini lidera em raciocínio e código, o Gemma 2 é o mais rápido na CPU, o Qwen3 se destaca em código.',
           rows: [
             { 'Modelo': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2,5 GB', 'Contexto': '128K', 'Melhor para': 'Raciocínio, código' },
@@ -1019,7 +1023,7 @@ schema: {
         },
         quantizationGuide: {
           title: 'Entendendo a quantização: equilíbrio entre RAM e qualidade',
-          image: '/images/small-llm-quantization-tradeoff-mockup.svg',
+          image: '/images/small-local-llm-models-quantization-tradeoff-hero-pt.png',
           imageCaption: 'Equilíbrio de quantização: Q4_K_M (2,5 GB, -0,5% de qualidade) é o padrão recomendado. O Q8_0 usa 3,8 GB sem ganho de qualidade. Q3_K_M (1,8 GB, -1,8% de perda) para restrições extremas de RAM.',
         },
         regionalContext: {
@@ -1114,6 +1118,7 @@ schema: {
       title: 'Beste kleine lokale LLMs 2026 : Sub-4B-Modelle für RAM-arme Maschinen',
       seoTitle: 'Beste kleine lokale LLMs 2026: Sub-4B Modelle Vergleich',
       metaDescription: 'Best Sub-4B Modelle für 4-8 GB RAM in 2026: Phi-4 Mini (68% MMLU), Gemma 2 (schnellste), Qwen3 (Codierung), Llama 3.2. Vollständiger Vergleich.',
+      heroImage: '/images/small-local-llm-models-performance-tier-hero-de.png',
       intro: 'Kleine lokale LLMs (1B-4B Parameter) laufen auf Maschinen mit 4-8 GB RAM und erzeugen 30-70 Token/Sek auf CPU -- schnell genug für Echtzeit-Chat. Die besten kleinen Modelle in 2026 sind Microsoft Phi-4 Mini 3.8B (bestes Reasoning), Google Gemma 2 2B (schnellste), Qwen3 3B (beste Codierung) und Meta Llama 3.2 3B (beste allgemeine Nutzung).',
       publishDate: '2026-04-04',
       readTime: '8 min',
@@ -1171,6 +1176,7 @@ schema: {
       title: 'Meilleurs petits LLMs locaux 2026 : modèles sub-4B pour machines à faible RAM',
       seoTitle: 'Meilleurs petits LLMs locaux 2026 : classement complet',
       metaDescription: 'Top 5 modèles sub-4B pour 4-8 GB RAM en 2026 : Phi-4 Mini (68% MMLU), Gemma 2 (plus rapide), Qwen3 (codage), Llama 3.2. Comparaison complète RGPD.',
+      heroImage: '/images/small-local-llm-models-performance-tier-hero-fr.png',
       intro: 'Les petits LLMs locaux (1B-4B paramètres) fonctionnent sur des machines avec 4-8 GB RAM et produisent 30-70 tokens/sec sur CPU -- assez rapide pour le chat en temps réel. Les meilleurs petits modèles en 2026 sont Microsoft Phi-4 Mini 3.8B (meilleur reasoning), Google Gemma 2 2B (plus rapide), Qwen3 3B (meilleur codage), et Meta Llama 3.2 3B (meilleur usage général).',
       publishDate: '2026-04-04',
       readTime: '8 min',
@@ -1217,7 +1223,7 @@ schema: {
         llama32_3b: { title: 'Llama 3.2 3B -- Meilleur petit modèle polyvalent', content: ["**Meta Llama 3.2 3B est le modèle 3B le plus documenté et le mieux supporté par la communauté.** Il obtient 58% sur MMLU et 60% sur HumanEval -- légèrement en dessous de Phi-4 Mini -- mais possède le support d'outils le plus large, le plus grand nombre de fine-tunings disponibles et la plus grande collection de guides communautaires.", "La fenêtre de contexte 128K est la même que les modèles Llama 3.x plus grands, ce qui le rend adapté à la synthèse de documents de longueur moyenne. Pour un premier petit modèle, Llama 3.2 3B reste le choix le plus sûr en raison de son comportement prévisible et de sa documentation exhaustive."], rows: [{ 'Spec': 'MMLU', 'Value': '58%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 Go' }, { 'Spec': 'Contexte', 'Value': '128K tokens' }, { 'Spec': 'Vitesse CPU', 'Value': '25-45 tok/sec' }, { 'Spec': 'Commande Ollama', 'Value': 'ollama run llama3.2:3b' }], columns: ['Spec', 'Value'] },
         llama32_1b: { title: 'Llama 3.2 1B -- Minimum absolu pour une sortie utile', content: "Llama 3.2 1B nécessite seulement 1,3 Go de RAM et génère 60-90 tok/sec sur CPU -- le modèle exécutable localement le plus rapide. La qualité de sortie est marginale : il gère la classification très simple et l'extraction de mots-clés, mais peine avec des réponses multi-phrases cohérentes. Depuis avril 2026, utilisez Llama 3.2 1B uniquement quand la RAM est véritablement la contrainte principale (moins de 3 Go disponibles) ou pour tester les intégrations d'outils." },
         comparisonTable: { title: 'Comparaison complète : Meilleurs petits LLMs locaux sous 4B paramètres', rows: [{ 'Modèle': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2,5 Go', 'Contexte': '128K', 'Meilleur pour': 'Raisonnement, codage' }, { 'Modèle': 'Qwen3 3B', 'MMLU': '62%', 'HumanEval': '65%', 'RAM': '2 Go', 'Contexte': '128K', 'Meilleur pour': 'Codage, multilingue' }, { 'Modèle': 'Llama 3.2 3B', 'MMLU': '58%', 'HumanEval': '60%', 'RAM': '2,5 Go', 'Contexte': '128K', 'Meilleur pour': 'Usage général, premier modèle' }, { 'Modèle': 'Gemma 2 2B', 'MMLU': '52%', 'HumanEval': '38%', 'RAM': '1,7 Go', 'Contexte': '8K', 'Meilleur pour': 'Vitesse, très faible RAM' }, { 'Modèle': 'Llama 3.2 1B', 'MMLU': '32%', 'HumanEval': '28%', 'RAM': '1,3 Go', 'Contexte': '128K', 'Meilleur pour': 'RAM minimum absolu' }], columns: ['Modèle', 'MMLU', 'HumanEval', 'RAM', 'Contexte', 'Meilleur pour'] },
-        quantizationGuide: { title: 'Comprendre la quantification : compromis RAM vs qualité', image: '/images/small-llm-quantization-tradeoff-mockup.svg', imageCaption: 'Compromis de quantification : Q4_K_M (2,5 Go, -0,5% qualité) est le défaut recommandé. Q8_0 utilise 3,8 Go sans gain de qualité. Q3_K_M (1,8 Go, -1,8% perte) pour les contraintes RAM extrêmes.' },
+        quantizationGuide: { title: 'Comprendre la quantification : compromis RAM vs qualité', image: '/images/small-local-llm-models-quantization-tradeoff-hero-fr.png', imageCaption: 'Compromis de quantification : Q4_K_M (2,5 Go, -0,5% qualité) est le défaut recommandé. Q8_0 utilise 3,8 Go sans gain de qualité. Q3_K_M (1,8 Go, -1,8% perte) pour les contraintes RAM extrêmes.' },
         regionalContext: { title: 'Petits LLMs locaux par région', content: ["**UE / RGPD :** Pour les professionnels européens sur du matériel contraint -- travail terrain, environnements air-gap, anciens ordinateurs portables d'entreprise -- les petits modèles locaux fournissent une inférence conforme RGPD sans sortie de données. Un Phi-4 Mini 3.8B fonctionnant sur un portable corporate standard (8 Go de RAM) maintient tous les textes traités sur l'appareil conformément à l'article 5 du RGPD (minimisation des données). Pour la documentation de conformité BSI : Phi-4 Mini (Microsoft, licence MIT) et Llama 3.2 3B (Meta, licence communautaire Llama) fournissent des identifiants de modèles versionnés via leurs tags Ollama. Mistral n'offre actuellement pas de modèle sub-4B. Pour les organisations préférant un modèle d'origine européenne, les options sont limitées jusqu'à ce que Mistral publie une variante sub-4B.", "**Japon (METI) :** Pour les tâches en langue japonaise au niveau des petits modèles, Qwen3 3B est le seul modèle de cette comparaison avec une tokenisation japonaise native. Llama 3.2 3B gère le japonais mais avec une efficacité de tokenisation inférieure. Pour la synthèse ou la traduction japonaise avec RAM contraint : `ollama run qwen2.5:3b`. La vitesse de 25-40 tok/sec sur CPU fournit une réponse en temps réel adéquate pour les interfaces de chat sur du matériel de bureau standard.", "**Chine :** Qwen3 3B (Alibaba, Apache 2.0) est le choix naturel pour le déploiement de petits modèles en langue chinoise. La tokenisation chinoise native traite le texte mandarin 30-40% plus efficacement que Llama pour un nombre de paramètres équivalent. Pour les déploiements IoT et edge sous la loi chinoise sur la sécurité des données (数据安全法) : `ollama run qwen2.5:3b` fonctionne sur n'importe quel appareil Linux avec 4 Go de RAM et traite tout le texte sur l'appareil sans appels API externes."] },
         commonMistakes: { title: 'Quelles sont les erreurs courantes lors de l\'exécution de petits LLMs locaux ?', items: ["**Utiliser la quantification Q8_0 au lieu de Q4_K_M :** Q8_0 nécessite presque le double de RAM de Q4_K_M pour une amélioration de qualité minimale à petite échelle. Un modèle Llama 3.2 3B en Q8_0 nécessite ~3,8 Go de RAM contre ~2,5 Go pour Q4_K_M. Sur une machine de 4 Go, Q8_0 peut déclencher l'utilisation du swap et ralentir l'inférence de 3-5×. Utilisez toujours Q4_K_M comme défaut pour les modèles sub-4B.", "**Exécuter un modèle de base au lieu de la variante instruct :** Les modèles de base (ex. `llama3.2:3b-text`) sont des points de contrôle pré-fine-tuning entraînés à prédire le prochain token dans le texte. Ils ne suivent pas les instructions. Quand vous demandez à un modèle de base «Combien font 2+2 ?», il peut compléter la phrase comme un quiz plutôt que répondre «4». Utilisez toujours la variante instruct : `llama3.2:3b` (Ollama utilise instruct par défaut pour les modèles nommés).", "**S'attendre à une qualité de modèle 7B d'un modèle 3B :** Un modèle 3B à 68% MMLU (Phi-4 Mini) performe comme un GPT-4o mini de l'ère 2023 sur les tâches générales. Les chaînes de raisonnement complexes, la rédaction longue et la génération de code nuancé produiront une qualité nettement inférieure à un modèle 7B. Si la qualité de sortie est insuffisante, passez à un modèle 7B -- la différence de RAM est ~2 Go (2,5 Go → 4,5 Go)."] },
         relatedReading: { id: 'related-reading', title: 'Lectures complémentaires', items: ['[Meilleurs modèles LLM locaux pour débutants](/fr/local-llms/best-beginner-local-llm-models) -- recommandations 7B quand 8 Go de RAM sont disponibles et que la qualité doit dépasser les 3B', '[Exécuter votre premier LLM local](/fr/local-llms/run-first-local-llm) -- guide étape par étape pour télécharger et exécuter n\'importe quel modèle de cette page avec Ollama en moins de 10 minutes', '[LLM local sur ordinateur portable](/fr/local-llms/local-llm-on-laptop) -- gestion thermique et batterie pour une inférence soutenue sur matériel contraint', '[Quantification LLM expliquée](/fr/local-llms/llm-quantization-explained) -- pourquoi Q4_K_M est le défaut et quand considérer Q3_K_M pour les contraintes RAM extrêmes', '[Meilleurs LLMs locaux pour le codage](/fr/local-llms/best-local-llms-for-coding) -- modèles spécifiques au codage à 7B+ quand Qwen3 3B ne suffit pas pour les tâches complexes', '[Dépannage de la configuration LLM local](/fr/local-llms/troubleshooting-local-llm-setup) -- corriger les erreurs OOM, l\'inférence lente et les échecs de chargement courants sur les machines à faible RAM', '[Meilleurs modèles 7B pour les GPU grand public](/fr/local-llms/best-7b-models-consumer-hardware) -- meilleurs modèles 7B pour hardware grand public'] },
@@ -1230,6 +1236,7 @@ schema: {
       title: '最高の小規模ローカルLLM 2026：低RAM向けSub-4Bモデル',
       seoTitle: '2026年最高の小型ローカルLLM：ベンチマーク完全ガイド',
       metaDescription: '4～8GB RAM向け最高5つの小型ローカルLLMモデル2026年完全比較：Phi-4 Mini（68% MMLU）、Gemma 2（最速）、Qwen3（コーディング）、Llama 3.2。',
+      heroImage: '/images/small-local-llm-models-performance-tier-hero-ja.png',
       intro: '小規模ローカルLLM（1B～4Bパラメータ）は4～8GB RAMのマシンで動作し、CPU上で30～70トークン/秒を生成します。リアルタイムチャットに十分な速度です。2026年の最高の小規模モデルはMicrosoft Phi-4 Mini 3.8B（最高の推論）、Google Gemma 2 2B（最速）、Qwen3 3B（最高のコーディング）、Meta Llama 3.2 3B（最高の汎用）です。',
       publishDate: '2026-04-04',
       readTime: '8分',
@@ -1453,6 +1460,7 @@ schema: {
       title: '2026年最佳小型本地LLM：低RAM机器的Sub-4B模型',
       seoTitle: '2026年最佳小型本地LLM：5大模型性能完整对比',
       metaDescription: '2026年4-8GB RAM最佳5大小型本地LLM完整对比：Phi-4 Mini（68% MMLU）、Gemma 2（最快速度）、Qwen3（编码最优）、Llama 3.2（通用推荐）。',
+      heroImage: '/images/small-local-llm-models-performance-tier-hero-zh.png',
       intro: '小型本地LLM（1B-4B参数）在4-8GB RAM的机器上运行，在CPU上生成30-70个令牌/秒----足够用于实时聊天。2026年最好的小型模型是Microsoft Phi-4 Mini 3.8B（最佳推理）、Google Gemma 2 2B（最快）、Qwen3 3B（最佳编码）和Meta Llama 3.2 3B（最佳通用用途）。',
       publishDate: '2026-04-04',
       readTime: '8分钟',
@@ -1678,6 +1686,7 @@ schema: {
       seoTitle: '소형 로컬 LLM 모델 2026: 상위 5개 4B 미만 순위',
       intro: '소형 로컬 LLM(1B~4B 파라미터)은 RAM 4~8GB 기기에서 실행되며 CPU에서 초당 30~70 토큰을 생성합니다 -- 실시간 채팅에 충분한 속도입니다. 2026년 최고의 소형 모델은 Microsoft Phi-4 Mini 3.8B(최고 추론 성능), Google Gemma 2 2B(가장 빠름), Qwen3 3B(최고 코딩 성능), Meta Llama 3.2 3B(최고 범용 성능)입니다.',
       metaDescription: 'RAM 4~8GB용 4B 미만 최고 로컬 LLM 모델: Phi-4 Mini(MMLU 68%), Gemma 2(가장 빠름), Qwen3(코딩), Llama 3.2(범용). 2026년 4월 순위.',
+      heroImage: '/images/small-local-llm-models-performance-tier-hero-ko.png',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**소형 로컬 LLM(1B~4B 파라미터)은 RAM 4~8GB 기기에서 실행되며 CPU에서 초당 30~70 토큰을 생성합니다 -- 실시간 채팅에 충분한 속도입니다.**',
       audience: '일반 소비자 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
@@ -1842,7 +1851,7 @@ schema: {
         },
         comparisonTable: {
           title: '전체 비교: 4B 미만 최고 소형 로컬 LLM',
-          image: '/images/small-llm-performance-tier-mockup.svg',
+          image: '/images/small-local-llm-models-performance-tier-hero-ko.png',
           imageCaption: '성능 등급: MMLU와 HumanEval 점수는 Phi-4 Mini가 추론과 코딩에서 선두임을 보여줍니다. Gemma 2는 CPU에서 가장 빠르며, Qwen3은 코딩에서 탁월합니다.',
           rows: [
             { '모델': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2.5 GB', '컨텍스트': '128K', '최적 용도': '추론, 코딩' },
@@ -1871,7 +1880,7 @@ schema: {
         },
         quantizationGuide: {
           title: '양자화 이해: RAM 대 품질 트레이드오프',
-          image: '/images/small-llm-quantization-tradeoff-mockup.svg',
+          image: '/images/small-local-llm-models-quantization-tradeoff-hero-ko.png',
           imageCaption: '양자화 트레이드오프: Q4_K_M(2.5 GB, 품질 -0.5%)이 권장 기본값입니다. Q8_0은 품질 향상 없이 3.8 GB를 사용합니다. 극도로 RAM이 제한된 경우 Q3_K_M(1.8 GB, 품질 손실 -1.8%)을 고려하십시오.',
         },
         relatedReading: {
