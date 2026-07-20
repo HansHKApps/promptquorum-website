@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Six small language models cover almost every mobile use case in 2026: Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.7B, and Llama 3.2 3B. They differ on tokens-per-second, memory footprint, and quality on chat, summarisation, translation, and short-form drafting. This guide ranks them on iPhone 17 Pro and Galaxy S25 Ultra, gives a per-tier verdict (flagship / mid-range / budget), and explains why Q4_K_M quantisation is the default for mobile.',
     metaDescription:
       'Six small LLMs run CPU-only on phones in 2026: Phi-4 Mini (3.8B), Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B compared on speed, RAM, quality.',
+    heroImage: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-en.png',
     twitterDescription:
       'Best mobile LLMs in 2026: Phi-4 Mini (smartest), SmolLM 2 (fastest), Qwen 3 (multilingual), Gemma 3 1B (older phones), Gemma 3 4B (balanced), Llama 3.2 3B (workhorse).',
     current_models_mentioned: [
@@ -189,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'iPhone 16 Pro tokens/sec is roughly 15–25% lower than iPhone 17 Pro for every model in this table — A18 Pro vs A19 Pro Neural Engine difference. Galaxy S25 Ultra (Snapdragon 8 Elite) is roughly 10–20% lower than iPhone 17 Pro on the same Q4_K_M GGUF, mostly because Termux+Ollama on Android does not yet leverage the Snapdragon Hexagon NPU the way MLC Chat leverages Apple Metal.',
           },
         ],
-        image: '/images/mobile-llm-models-comparison-table-en.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-en.png',
         imageCaption: 'Six mobile LLM models benchmarked at Q4_K_M on iPhone 17 Pro: Phi-4 Mini (3.8B, ~13–18 tok/sec) is the smartest; SmolLM 2 (1.7B, ~26–32 tok/sec) is the fastest; Qwen 3 (1.7B) is the best multilingual; Gemma 3 1B (~35–45 tok/sec) works on 4 GB phones.',
       },
       phi4Mini: {
@@ -271,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'SmolLM 2 1.7B is the strongest pairing for an offline voice assistant stack on mobile — see [Build a Local Voice Assistant on Your Phone](/power-local-llm/voice-assistant-local-mobile-offline) for the Whisper + LLM + TTS pipeline. The high tokens/sec keeps voice turn-taking under the ~1.5-second perceptual threshold even on mid-range hardware.',
           },
         ],
-        image: '/images/mobile-llm-models-speed-chart-en.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-speed-chart-hero-en.png',
         imageCaption: 'Tokens-per-second comparison for 6 mobile LLM models on 3 devices at Q4_K_M: Gemma 3 1B (~35–45 on iPhone 17 Pro) and SmolLM 2 1.7B (~26–32) lead on speed; Phi-4 Mini (~13–18) and Gemma 3 4B (~10–13) are slower but smarter.',
       },
       qwen25: {
@@ -483,6 +484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Seis modelos de lenguaje pequeños cubren casi todos los casos de uso móvil en 2026: Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.7B y Llama 3.2 3B. Difieren en tokens por segundo, consumo de memoria y calidad en chat, resumen, traducción y redacción breve. Esta guía los compara en iPhone 17 Pro y Galaxy S25 Ultra, ofrece un veredicto por gama (gama alta / gama media / económico) y explica por qué la cuantización Q4_K_M es el estándar para móviles.',
     metaDescription:
       'Seis LLMs pequeños evaluados en teléfonos en 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B comparados en velocidad, RAM y calidad.',
+    heroImage: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-es.png',
     twitterDescription:
       'Mejores LLMs móviles en 2026: Phi-4 Mini (el más inteligente), SmolLM 2 (el más rápido), Qwen 3 (multilingüe), Gemma 3 1B (teléfonos antiguos), Gemma 3 4B (equilibrado), Llama 3.2 3B (todoterreno).',
     current_models_mentioned: [
@@ -654,7 +656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Los tokens/seg del iPhone 16 Pro son aproximadamente un 15–25% menores que los del iPhone 17 Pro para todos los modelos de esta tabla — diferencia entre los Neural Engine A18 Pro y A19 Pro. El Galaxy S25 Ultra (Snapdragon 8 Elite) es aproximadamente un 10–20% menor que el iPhone 17 Pro con el mismo GGUF Q4_K_M, principalmente porque Termux+Ollama en Android aún no aprovecha el NPU Hexagon de Snapdragon del mismo modo que MLC Chat aprovecha Apple Metal.',
           },
         ],
-        image: '/images/mobile-llm-models-comparison-table-es.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-es.png',
         imageCaption: 'Seis modelos LLM móviles comparados con Q4_K_M en iPhone 17 Pro: Phi-4 Mini (3,8B, ~13–18 tok/seg) es el más inteligente; SmolLM 2 (1,7B, ~26–32 tok/seg) es el más rápido; Qwen 3 (1,7B) es el mejor multilingüe; Gemma 3 1B (~35–45 tok/seg) funciona en teléfonos de 4 GB.',
       },
       phi4Mini: {
@@ -736,7 +738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'SmolLM 2 1.7B es la mejor combinación para un asistente de voz sin conexión en móvil — consulta [Crea un asistente de voz local en tu teléfono](/es/power-local-llm/voice-assistant-local-mobile-offline) para el pipeline Whisper + LLM + TTS. Los altos tokens/seg mantienen el tiempo de respuesta de voz por debajo del umbral de percepción de ~1,5 segundos incluso en hardware de gama media.',
           },
         ],
-        image: '/images/mobile-llm-models-speed-chart-es.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-speed-chart-hero-es.png',
         imageCaption: 'Comparación de tokens por segundo para 6 modelos LLM móviles en 3 dispositivos con Q4_K_M: Gemma 3 1B (~35–45 en iPhone 17 Pro) y SmolLM 2 1.7B (~26–32) lideran en velocidad; Phi-4 Mini (~13–18) y Gemma 3 4B (~10–13) son más lentos pero más inteligentes.',
       },
       qwen25: {
@@ -961,6 +963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Seis modelos de linguagem pequenos cobrem quase todos os casos de uso em celular em 2026: Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.7B e Llama 3.2 3B. Eles diferem em tokens por segundo, consumo de memória e qualidade em chat, resumo, tradução e redação curta. Este guia os compara em iPhone 17 Pro e Galaxy S25 Ultra, oferece um veredicto por gama (premium / intermediária / econômica) e explica por que a quantização Q4_K_M é o padrão para celular.',
     metaDescription:
       'Seis LLMs pequenos avaliados em celulares em 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B comparados em velocidade, RAM e qualidade.',
+    heroImage: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-pt.png',
     twitterDescription:
       'Melhores LLMs de celular em 2026: Phi-4 Mini (o mais inteligente), SmolLM 2 (o mais rápido), Qwen 3 (multilíngue), Gemma 3 1B (celulares antigos), Gemma 3 4B (equilibrado), Llama 3.2 3B (todo-terreno).',
     current_models_mentioned: [
@@ -1132,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Os tokens/seg do iPhone 16 Pro são aproximadamente 15–25% menores que os do iPhone 17 Pro para todos os modelos desta tabela — diferença entre os Neural Engine A18 Pro e A19 Pro. O Galaxy S25 Ultra (Snapdragon 8 Elite) é aproximadamente 10–20% menor que o iPhone 17 Pro com o mesmo GGUF Q4_K_M, principalmente porque o Termux+Ollama no Android ainda não aproveita o NPU Hexagon do Snapdragon do mesmo modo que o MLC Chat aproveita o Apple Metal.',
           },
         ],
-        image: '/images/mobile-llm-models-comparison-table-en.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-pt.png',
         imageCaption: 'Seis modelos LLM de celular comparados com Q4_K_M no iPhone 17 Pro: Phi-4 Mini (3,8B, ~13–18 tok/seg) é o mais inteligente; SmolLM 2 (1,7B, ~26–32 tok/seg) é o mais rápido; Qwen 3 (1,7B) é o melhor multilíngue; Gemma 3 1B (~35–45 tok/seg) funciona em celulares de 4 GB.',
       },
       phi4Mini: {
@@ -1214,7 +1217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'O SmolLM 2 1.7B é a melhor combinação para um assistente de voz offline no celular — veja [Crie um assistente de voz local no seu celular](/pt/power-local-llm/voice-assistant-local-mobile-offline) para o pipeline Whisper + LLM + TTS. Os altos tokens/seg mantêm o tempo de resposta de voz abaixo do limiar de percepção de ~1,5 segundo mesmo em hardware intermediário.',
           },
         ],
-        image: '/images/mobile-llm-models-speed-chart-en.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-speed-chart-hero-pt.png',
         imageCaption: 'Comparação de tokens por segundo para 6 modelos LLM de celular em 3 dispositivos com Q4_K_M: Gemma 3 1B (~35–45 no iPhone 17 Pro) e SmolLM 2 1.7B (~26–32) lideram em velocidade; Phi-4 Mini (~13–18) e Gemma 3 4B (~10–13) são mais lentos, mas mais inteligentes.',
       },
       qwen25: {
@@ -1439,6 +1442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Sechs kleine Sprachmodelle decken 2026 nahezu jeden mobilen Anwendungsfall ab: Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.7B und Llama 3.2 3B. Sie unterscheiden sich in Tokens pro Sekunde, Speicherbedarf und Qualität bei Chat, Zusammenfassung, Übersetzung und kurzem Texterstellen. Dieser Leitfaden vergleicht die Modelle auf iPhone 17 Pro und Galaxy S25 Ultra, liefert ein Urteil je Geräteklasse (Flaggschiff / Mittelklasse / Budget) und erklärt, warum Q4_K_M-Quantisierung der Standard für Mobilgeräte ist.',
     metaDescription:
       'Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B und Llama 3.2 3B: Smartphone-Benchmark 2026. Geschwindigkeit, RAM und Qualität im Vergleich.',
+    heroImage: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-de.png',
     twitterDescription:
       'Beste mobile LLMs 2026: Phi-4 Mini (klügster), SmolLM 2 (schnellster), Qwen 3 (mehrsprachig), Gemma 3 1B (ältere Geräte), Gemma 3 4B (ausgewogen), Llama 3.2 3B (Allrounder).',
     current_models_mentioned: [
@@ -1610,7 +1614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Auf dem iPhone 16 Pro sind die Tokens/Sek.-Werte für jedes Modell in dieser Tabelle ca. 15–25 % niedriger als auf dem iPhone 17 Pro – Unterschied zwischen A18 Pro und A19 Pro Neural Engine. Das Galaxy S25 Ultra (Snapdragon 8 Elite) liegt ca. 10–20 % unter dem iPhone 17 Pro für dasselbe Q4_K_M GGUF, hauptsächlich weil Termux+Ollama auf Android den Snapdragon Hexagon NPU noch nicht so nutzt wie MLC Chat Apple Metal.',
           },
         ],
-        image: '/images/mobile-llm-models-comparison-table-de.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-de.png',
         imageCaption: 'Sechs mobile LLM-Modelle mit Q4_K_M auf dem iPhone 17 Pro verglichen: Phi-4 Mini (3,8B, ~13–18 Tok/Sek.) ist das klügste; SmolLM 2 (1,7B, ~26–32 Tok/Sek.) ist das schnellste; Qwen 3 (1,7B) ist das beste für Mehrsprachigkeit; Gemma 3 1B (~35–45 Tok/Sek.) läuft auf 4-GB-Geräten.',
       },
       phi4Mini: {
@@ -1692,7 +1696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'SmolLM 2 1.7B ist die beste Kombination für einen Offline-Sprachassistenten auf dem Smartphone – weitere Informationen finden Sie unter [Lokalen Sprachassistenten auf dem Smartphone erstellen](/de/power-local-llm/voice-assistant-local-mobile-offline) für die Whisper-+-LLM-+-TTS-Pipeline. Die hohen Tokens/Sek. halten die Sprachgesprächs-Wartezeit unter der ~1,5-Sekunden-Wahrnehmungsschwelle, selbst auf Mittelklasse-Hardware.',
           },
         ],
-        image: '/images/mobile-llm-models-speed-chart-de.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-speed-chart-hero-de.png',
         imageCaption: 'Tokens-pro-Sekunde-Vergleich für 6 mobile LLM-Modelle auf 3 Geräten mit Q4_K_M: Gemma 3 1B (~35–45 auf iPhone 17 Pro) und SmolLM 2 1,7B (~26–32) führen bei der Geschwindigkeit; Phi-4 Mini (~13–18) und Gemma 3 4B (~10–13) sind langsamer, aber klüger.',
       },
       qwen25: {
@@ -1912,6 +1916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Six petits modèles de langage couvrent presque tous les usages mobiles en 2026 : Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.7B et Llama 3.2 3B. Ils diffèrent par leur vitesse en tokens par seconde, leur empreinte mémoire et leur qualité en chat, résumé, traduction et rédaction. Ce guide les compare sur iPhone 17 Pro et Galaxy S25 Ultra, donne un verdict par gamme (haut de gamme / milieu de gamme / entrée de gamme) et explique pourquoi la quantisation Q4_K_M est le standard mobile.',
     metaDescription:
       'Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B et Llama 3.2 3B comparés sur smartphone en 2026 : vitesse, RAM et qualité en un seul tableau.',
+    heroImage: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-fr.png',
     twitterDescription:
       'Meilleurs LLMs mobiles 2026 : Phi-4 Mini (le plus intelligent), SmolLM 2 (le plus rapide), Qwen 3 (multilingue), Gemma 3 1B (anciens téléphones), Gemma 3 4B (équilibré), Llama 3.2 3B (polyvalent).',
     current_models_mentioned: [
@@ -2083,7 +2088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Les tokens/sec de l\'iPhone 16 Pro sont environ 15–25 % inférieurs à ceux de l\'iPhone 17 Pro pour chaque modèle — différence entre les Neural Engine A18 Pro et A19 Pro. Le Galaxy S25 Ultra (Snapdragon 8 Elite) est environ 10–20 % sous l\'iPhone 17 Pro sur le même Q4_K_M GGUF, principalement parce que Termux+Ollama sur Android n\'exploite pas encore le NPU Hexagon de Snapdragon comme MLC Chat exploite Apple Metal.',
           },
         ],
-        image: '/images/mobile-llm-models-comparison-table-fr.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-fr.png',
         imageCaption: 'Six modèles LLM mobiles benchmarkés en Q4_K_M sur iPhone 17 Pro : Phi-4 Mini (3.8B, ~13–18 tok/sec) est le plus intelligent ; SmolLM 2 (1.7B, ~26–32 tok/sec) est le plus rapide ; Qwen 3 (1.7B) est le meilleur multilingue ; Gemma 3 1B (~35–45 tok/sec) fonctionne sur 4 Go de RAM.',
       },
       phi4Mini: {
@@ -2165,7 +2170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'SmolLM 2 1.7B est le meilleur choix pour un assistant vocal hors ligne sur mobile — voir [Créer un assistant vocal local sur votre téléphone](/fr/power-local-llm/voice-assistant-local-mobile-offline) pour le pipeline Whisper + LLM + TTS. Les tokens/sec élevés maintiennent le temps de réponse vocale sous le seuil perceptif de ~1.5 seconde.',
           },
         ],
-        image: '/images/mobile-llm-models-speed-chart-fr.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-speed-chart-hero-fr.png',
         imageCaption: 'Comparaison tokens/sec pour 6 modèles LLM mobiles sur 3 appareils en Q4_K_M : Gemma 3 1B (~35–45 sur iPhone 17 Pro) et SmolLM 2 1.7B (~26–32) mènent en vitesse ; Phi-4 Mini (~13–18) et Gemma 3 4B (~10–13) sont plus lents mais plus intelligents.',
       },
       qwen25: {
@@ -2377,6 +2382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026年、6つの小型言語モデルがほぼすべてのモバイル用途をカバーします：Phi-4 Mini（3.8B）、Gemma 3 4B、Gemma 3 1B、SmolLM 2 1.7B、Qwen 3 1.7B、Llama 3.2 3B。これらはtokens/sec、メモリ使用量、チャット・要約・翻訳・短文作成の品質において異なります。このガイドではiPhone 17 ProとGalaxy S25 Ultraでの比較、端末クラス別（ハイエンド／ミッドレンジ／エントリー）の判定、そしてQ4_K_M量子化がモバイルの標準となった理由を解説します。',
     metaDescription:
       '2026年スマートフォン向けの6つの小型LLMベンチマーク。Phi-4 Mini、Gemma 3 4B/1B、SmolLM 2 1.7B、Qwen 3 1.7B、Llama 3.2 3Bをspeed・RAM・品質で比較。',
+    heroImage: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-ja.png',
     twitterDescription:
       '2026年モバイルLLM比較：Phi-4 Mini（最高精度）、SmolLM 2（最速）、Qwen 3（多言語）、Gemma 3 1B（旧端末向け）、Gemma 3 4B（バランス型）、Llama 3.2 3B（汎用）。',
     current_models_mentioned: [
@@ -2548,7 +2554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'iPhone 16 Proのtokens/secはこの表のすべてのモデルでiPhone 17 Proより約15〜25%低くなります — A18 ProとA19 ProのNeural Engineの差です。Galaxy S25 Ultra（Snapdragon 8 Elite）は同じQ4_K_M GGUFでiPhone 17 Proより約10〜20%低く、主にTermux+OllamaがAndroidでSnapdragon HexagonのNPUをMLC ChatがApple Metalを活用するほど利用できていないためです。',
           },
         ],
-        image: '/images/mobile-llm-models-comparison-table-ja.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-ja.png',
         imageCaption: 'iPhone 17 ProでQ4_K_Mにて6つのモバイルLLMモデルをベンチマーク：Phi-4 Mini（3.8B、~13–18トークン/秒）が最高精度；SmolLM 2（1.7B、~26–32トークン/秒）が最速；Qwen 3（1.7B）が多言語最強；Gemma 3 1B（~35–45トークン/秒）が4GBの旧端末で動作。',
       },
       phi4Mini: {
@@ -2630,7 +2636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'SmolLM 2 1.7Bはモバイルでのオフライン音声アシスタントスタック向けに最適です — Whisper + LLM + TTS パイプラインについては[スマートフォンでローカル音声アシスタントを構築する](/ja/power-local-llm/voice-assistant-local-mobile-offline)を参照してください。高いtokens/secにより、ミッドレンジハードウェアでも音声ターンテイキングが~1.5秒の知覚しきい値を下回ります。',
           },
         ],
-        image: '/images/mobile-llm-models-speed-chart-ja.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-speed-chart-hero-ja.png',
         imageCaption: 'Q4_K_Mでの3機種における6モバイルLLMモデルのトークン/秒比較：Gemma 3 1B（iPhone 17 Proで~35–45）とSmolLM 2 1.7B（~26–32）が速度で先行；Phi-4 Mini（~13–18）とGemma 3 4B（~10–13）は遅いが高精度。',
       },
       qwen25: {
@@ -2842,6 +2848,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026年，六款小型语言模型几乎覆盖了所有移动端使用场景：Phi-4 Mini（3.8B）、Gemma 3 4B、Gemma 3 1B、SmolLM 2 1.7B、Qwen 3 1.7B和Llama 3.2 3B。它们在tokens/sec速度、内存占用以及聊天、摘要、翻译和短文写作质量上各有不同。本指南在iPhone 17 Pro和Galaxy S25 Ultra上进行测试，按机型档次（旗舰/中端/入门）给出推荐，并解释为何Q4_K_M量化是移动端的标准选择。',
     metaDescription:
       '2026年六款手机端小型LLM基准测试：Phi-4 Mini、Gemma 3 4B/1B、SmolLM 2 1.7B、Qwen 3 1.7B、Llama 3.2 3B速度、RAM与质量全面对比。',
+    heroImage: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-zh.png',
     twitterDescription:
       '2026年移动LLM推荐：Phi-4 Mini（最智能）、SmolLM 2（最快）、Qwen 3（多语言）、Gemma 3 1B（旧机型）、Gemma 3 4B（均衡）、Llama 3.2 3B（全能）。',
     current_models_mentioned: [
@@ -3013,7 +3020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'iPhone 16 Pro的tokens/sec比此表中iPhone 17 Pro的数据约低15–25%——A18 Pro与A19 Pro Neural Engine的差距。Galaxy S25 Ultra（Snapdragon 8 Elite）在相同Q4_K_M GGUF下比iPhone 17 Pro约低10–20%，主要因为Termux+Ollama在Android上还未能像MLC Chat利用Apple Metal那样充分利用Snapdragon Hexagon NPU。',
           },
         ],
-        image: '/images/mobile-llm-models-comparison-table-zh.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-zh.png',
         imageCaption: '在iPhone 17 Pro上以Q4_K_M量化基准测试6款移动端LLM：Phi-4 Mini（3.8B，约13–18词元/秒）最智能；SmolLM 2（1.7B，约26–32词元/秒）最快；Qwen 3（1.7B）多语言最强；Gemma 3 1B（约35–45词元/秒）适用于4GB旧机。',
       },
       phi4Mini: {
@@ -3095,7 +3102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'SmolLM 2 1.7B是手机端离线语音助手的最佳搭档——Whisper + LLM + TTS完整流程请参考[在手机上构建本地语音助手](/zh/power-local-llm/voice-assistant-local-mobile-offline)。高tokens/sec让语音对话响应保持在约1.5秒的感知门槛以下，即便在中端硬件上也如此。',
           },
         ],
-        image: '/images/mobile-llm-models-speed-chart-zh.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-speed-chart-hero-zh.png',
         imageCaption: '6款移动端LLM在3设备上Q4_K_M量化的词元/秒对比：Gemma 3 1B（iPhone 17 Pro约35–45）和SmolLM 2 1.7B（约26–32）速度领先；Phi-4 Mini（约13–18）和Gemma 3 4B（约10–13）较慢但更智能。',
       },
       qwen25: {
@@ -3308,6 +3315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ستة نماذج لغوية صغيرة تغطي تقريبًا جميع حالات الاستخدام على الهاتف في 2026: Phi-4 Mini (3.8B) وGemma 3 4B وGemma 3 1B وSmolLM 2 1.7B وQwen 3 1.7B وLlama 3.2 3B. تتباين في الرموز في الثانية واستهلاك الذاكرة وجودة الدردشة والتلخيص والترجمة وكتابة النصوص القصيرة. يقارن هذا الدليل هذه النماذج على iPhone 17 Pro وGalaxy S25 Ultra، ويقدم حكمًا لكل فئة (راقية / متوسطة / اقتصادية)، ويشرح لماذا يُعد التكميم Q4_K_M هو المعيار على الهاتف.',
     metaDescription:
       'Phi-4 Mini وGemma 3 وSmolLM 2 مُختبرة على iPhone 17 Pro وGalaxy S25 Ultra. مقارنة السرعة والذاكرة RAM والجودة — وسبب هيمنة Q4_K_M على الهاتف.',
+    heroImage: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-ar.png',
     twitterDescription:
       'أفضل نماذج LLM للهاتف في 2026: Phi-4 Mini (الأذكى)، SmolLM 2 (الأسرع)، Qwen 3 (متعدد اللغات)، Gemma 3 1B (للهواتف القديمة)، Gemma 3 4B (متوازن)، Llama 3.2 3B (الأكثر تنوعًا).',
     current_models_mentioned: [
@@ -3680,6 +3688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026년 모바일 사용 사례 대부분을 커버하는 소형 언어 모델 6종을 소개합니다: Phi-4 Mini (3.8B), Gemma 3 4B, Gemma 3 1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B. 각 모델은 초당 토큰 수, 메모리 소모량, 채팅·요약·번역·단문 작성 품질에서 차이를 보입니다. 이 가이드에서는 iPhone 17 Pro와 Galaxy S25 Ultra에서 비교 테스트를 진행하고, 기기 등급별(고사양·중급·보급형) 추천 모델을 제시하며, 모바일 표준 양자화 방식인 Q4_K_M이 왜 최선인지 설명합니다.',
     metaDescription:
       '2026년 스마트폰에서 테스트한 소형 LLM 6종 비교. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B의 속도·RAM·품질을 비교합니다.',
+    heroImage: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-ko.png',
     twitterDescription:
       '2026년 최고 모바일 LLM: Phi-4 Mini(가장 스마트), SmolLM 2(가장 빠름), Qwen 3(다국어), Gemma 3 1B(구형 폰), Gemma 3 4B(균형형), Llama 3.2 3B(만능형).',
     current_models_mentioned: [
@@ -3853,7 +3862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'iPhone 16 Pro의 토큰/초는 모든 모델에서 iPhone 17 Pro보다 약 15–25% 낮습니다. Galaxy S25 Ultra (Snapdragon 8 Elite)는 동일 Q4_K_M GGUF에서 iPhone 17 Pro보다 약 10–20% 낮습니다.',
           },
         ],
-        image: '/images/mobile-llm-models-comparison-table-ko.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-ko.png',
         imageCaption: 'iPhone 17 Pro에서 Q4_K_M으로 비교한 모바일 LLM 6종: Phi-4 Mini (3.8B, ~13–18 토큰/초)가 가장 스마트; SmolLM 2 (1.7B, ~26–32 토큰/초)가 가장 빠름; Qwen 3 (1.7B)가 최고 다국어; Gemma 3 1B (~35–45 토큰/초)는 4GB 폰에서도 작동.',
       },
       phi4Mini: {
@@ -3935,7 +3944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'SmolLM 2 1.7B는 모바일 오프라인 음성 어시스턴트에 가장 적합한 조합입니다. 높은 토큰/초는 중급 하드웨어에서도 음성 응답 시간을 ~1.5초 지각 임계값 이하로 유지합니다.',
           },
         ],
-        image: '/images/mobile-llm-models-speed-chart-ko.svg',
+        image: '/images/mobile-llm-models-phi4-gemma-smollm-speed-chart-hero-ko.png',
         imageCaption: '3개 기기에서 Q4_K_M으로 비교한 모바일 LLM 6종의 초당 토큰 수: Gemma 3 1B (~35–45 iPhone 17 Pro)와 SmolLM 2 1.7B (~26–32)가 속도를 리드; Phi-4 Mini (~13–18)와 Gemma 3 4B (~10–13)는 느리지만 더 스마트합니다.',
       },
       qwen25: {
