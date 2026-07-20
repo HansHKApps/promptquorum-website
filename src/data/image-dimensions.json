@@ -1359,6 +1359,51 @@
     "width": 800,
     "height": 420
   },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-cpu-vs-gpu-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-cpu-only-llm-cpu-vs-gpu-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -1403,6 +1448,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/best-cpu-only-llm-model-speeds-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-model-speeds-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-model-speeds-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-model-speeds-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-model-speeds-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-model-speeds-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-model-speeds-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-model-speeds-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-cpu-only-llm-model-speeds-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/best-cpu-only-llm-model-speeds-ja.svg": {
     "encodingFormat": "image/svg+xml",
@@ -6049,6 +6139,96 @@
     "width": 800,
     "height": 310
   },
+  "/images/local-llm-openai-compatible-api-api-request-flow-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-api-request-flow-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-api-request-flow-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-api-request-flow-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-api-request-flow-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-api-request-flow-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-api-request-flow-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-api-request-flow-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-api-request-flow-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-one-line-change-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-one-line-change-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-one-line-change-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-one-line-change-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-one-line-change-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-one-line-change-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-one-line-change-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-one-line-change-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-openai-compatible-api-one-line-change-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-llm-power-consumption-apple-vs-nvidia-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -6909,6 +7089,51 @@
     "width": 800,
     "height": 350
   },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -6953,6 +7178,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 430
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-ja.svg": {
     "encodingFormat": "image/svg+xml",
