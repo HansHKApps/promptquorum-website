@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Qwen3 Local Deployment 2026: 8B, 14B, 32B + Docker API',
     metaDescription:
       'Deploy Qwen3 locally: 8B, 14B and 32B via Ollama/vLLM with a Docker API server, hardware picks, and multi-GPU. Note — Qwen3 has no 7B; use the 8B (qwen3:8b). 2026 guide.',
+    heroImage: '/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-en.png',
     twitterDescription:
       'Qwen3 8B runs at 25 tok/s on an RTX 3060. Qwen2.5-72B needs dual RTX 4090s or a cloud GPU. Full Docker, API server, and multi-GPU setup guide for 2026.',
     affiliateDisclosure: true,
@@ -550,6 +551,7 @@ docker run --gpus all \\
     seoTitle: 'Qwen3 Lokales Deployment 2026: 8B, 14B, 32B + Docker-API',
     metaDescription:
       'Qwen3 lokal betreiben: 8B, 14B und 32B via Ollama/vLLM mit Docker-API-Server, Hardware-Empfehlungen und Multi-GPU. Hinweis — Qwen3 hat kein 7B; nutze das 8B (qwen3:8b). Leitfaden 2026.',
+    heroImage: '/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-de.png',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience:
@@ -699,6 +701,7 @@ docker run --gpus all \\
     seoTitle: 'Qwen3 Déploiement Local 2026 : 8B, 14B, 32B + API Docker',
     metaDescription:
       'Déployez Qwen3 en local : 8B, 14B et 32B via Ollama/vLLM avec un serveur API Docker, choix matériel et multi-GPU. Note — Qwen3 n\'a pas de 7B ; utilisez le 8B (qwen3:8b). Guide 2026.',
+    heroImage: '/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-fr.png',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience:
@@ -816,6 +819,7 @@ docker run --gpus all \\
     seoTitle: 'Qwen3ローカルデプロイ2026：8B・14B・32B＋Docker API',
     metaDescription:
       'Qwen3をローカルにデプロイ：8B・14B・32BをOllama/vLLMとDocker APIサーバーで、ハードウェア選定とマルチGPUも解説。注記 — Qwen3に7Bはありません。8B（qwen3:8b）を使用。2026年版ガイド。',
+    heroImage: '/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-ja.png',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience:
@@ -938,6 +942,7 @@ docker run --gpus all \\
     seoTitle: 'Qwen3本地部署2026：8B、14B、32B + Docker API',
     metaDescription:
       'Qwen3本地部署：通过Ollama/vLLM运行8B、14B和32B，搭配Docker API服务器、硬件选型与多GPU方案。注意——Qwen3没有7B，请使用8B（qwen3:8b）。2026年指南。',
+    heroImage: '/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-zh.png',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience:
@@ -1078,6 +1083,7 @@ docker run --gpus all \\
     seoTitle: 'Qwen3 Despliegue Local 2026: 8B, 14B, 32B + API Docker',
     metaDescription:
       'Despliega Qwen3 en local: 8B, 14B y 32B con Ollama/vLLM y un servidor API Docker, elección de hardware y multi-GPU. Nota — Qwen3 no tiene 7B; usa el 8B (qwen3:8b). Guía 2026.',
+    heroImage: '/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-es.png',
     twitterDescription:
       'Qwen3 8B alcanza 25 tok/s en una RTX 3060. Qwen2.5-72B necesita dos RTX 4090 o una GPU en la nube. Guía completa de Docker, servidor API y multi-GPU para 2026.',
     affiliateDisclosure: true,
@@ -1612,6 +1618,7 @@ docker run --gpus all \\
     seoTitle: 'Qwen3 Implantação Local 2026: 8B, 14B, 32B + API Docker',
     metaDescription:
       'Implante o Qwen3 localmente: 8B, 14B e 32B via Ollama/vLLM com servidor API Docker, escolha de hardware e multi-GPU. Nota — o Qwen3 não tem 7B; use o 8B (qwen3:8b). Guia 2026.',
+    heroImage: '/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-pt.png',
     twitterDescription:
       'Qwen3 8B atinge 25 tok/s em uma RTX 3060. Qwen2.5-72B precisa de duas RTX 4090 ou uma GPU na nuvem. Guia completo de Docker, servidor API e multi-GPU para 2026.',
     affiliateDisclosure: true,
@@ -2147,6 +2154,7 @@ docker run --gpus all \\
     seoTitle: 'نشر ⁨Qwen3⁩ محليًا ⁨2026⁩: ⁨8B⁩ و⁨14B⁩ و⁨32B⁩ + واجهة ⁨Docker⁩ API',
     metaDescription:
       'انشر Qwen3 محليًا: نماذج 8B و14B و32B عبر Ollama/vLLM مع خادم Docker API، واختيار الأجهزة، وتعدد GPU. ملاحظة — لا يوجد Qwen3 بحجم 7B؛ استخدم 8B (qwen3:8b). دليل 2026.',
+    heroImage: '/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-ar.png',
     twitterDescription:
       'Qwen3 8B يصل إلى 25 رمز/ثانية على RTX 3060. Qwen2.5-72B يتطلب GPU مزدوج أو سحابة. دليل كامل لـ Docker وخادم API وتعدد GPU لعام 2026.',
     affiliateDisclosure: true,
@@ -2508,6 +2516,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
     seoTitle: 'Qwen3 로컬 배포 2026: 8B, 14B, 32B + Docker API',
     metaDescription:
       'Qwen3 로컬 배포: 8B, 14B, 32B를 Ollama/vLLM과 Docker API 서버로 실행, 하드웨어 선택과 Multi-GPU 포함. 참고 — Qwen3에는 7B가 없으니 8B(qwen3:8b)를 사용하세요. 2026년 가이드.',
+    heroImage: '/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-ko.png',
     twitterDescription:
       'Qwen3 8B는 RTX 3060에서 초당 25토큰 달성. Qwen2.5-72B는 RTX 4090 두 장 또는 클라우드 GPU 필요. Docker, API 서버, Multi-GPU 완전 가이드 2026.',
     affiliateDisclosure: true,
