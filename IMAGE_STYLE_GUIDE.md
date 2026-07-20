@@ -8,7 +8,7 @@
 
 ## Overview
 
-This guide documents the design system for SVG images embedded in PromptQuorum articles. All SVGs follow a consistent visual language: clean typography, Material Design 3 color palette, readable at 800×350px (default), and accessibility-compliant for all 5 languages.
+This guide documents the design system for SVG images embedded in PromptQuorum articles. All SVGs follow a consistent visual language: clean typography, Material Design 3 color palette, a 16:9 canvas sized for Google Discover's large-image-preview surface (`max-image-preview: large`), and accessibility-compliant for all 9 languages.
 
 ---
 
@@ -16,11 +16,13 @@ This guide documents the design system for SVG images embedded in PromptQuorum a
 
 | Property | Value |
 |---|---|
-| **Default viewBox** | `0 0 800 350` (landscape) |
-| **Alt viewBox** | `0 0 800 420` (tall tables) or `0 0 800 360` (5-step flows) |
+| **Default viewBox** | `0 0 1200 675` (16:9, Discover-eligible) |
+| **Alt viewBox** | `0 0 1200 630` (tall tables) or `0 0 1200 540` (5-step flows) |
 | **Background** | `#FFFFFF` (white) |
 | **Drop shadow** | `feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"` (optional, for depth) |
-| **Padding** | 18px left/right, variable top/bottom |
+| **Padding** | 27px left/right, variable top/bottom |
+
+**Scaling note:** This canvas replaced the prior `800×350` default (v1.x, see Changelog). All coordinate examples elsewhere in this document that still show 800-wide numbers are illustrative under the old canvas — scale every x/y coordinate and font size by **×1.5** to place it correctly on the new 1200-wide canvas. New SVGs should be authored directly at native 1200×675 (or the scaled alt sizes above), not stretched from an 800-wide draft.
 
 ---
 
@@ -163,16 +165,16 @@ code: "'SF Mono', Monaco, monospace"
 **YES/NO (and all language equivalents) label positioning — critical rule:**  
 Labels must be placed **off the line**, offset perpendicularly toward the outside of the branch. Labels placed at or near the midpoint of a diagonal line will visually sit ON the line and become unreadable.
 
-**Correct offsets** for the standard 2-level tree (viewBox `0 0 800 400`):
+**Correct offsets** for the standard 2-level tree (viewBox `0 0 1200 600`, i.e. the old 800×400 table below scaled ×1.5):
 
 | Position | Correct x / y | Wrong x / y (on-line) |
 |---|---|---|
-| Top-left YES branch | `x="265" y="118"` | `x="280" y="130"` |
-| Top-right NO branch | `x="518" y="118"` | `x="510" y="130"` |
-| Left sub-tree YES | `x="162" y="210"` | `x="180" y="220"` |
-| Left sub-tree NO | `x="264" y="210"` | `x="240" y="220"` |
-| Right sub-tree YES | `x="462" y="210"` | `x="475" y="220"` |
-| Right sub-tree NO | `x="622" y="210"` | `x="600" y="220"` |
+| Top-left YES branch | `x="398" y="177"` | `x="420" y="195"` |
+| Top-right NO branch | `x="777" y="177"` | `x="765" y="195"` |
+| Left sub-tree YES | `x="243" y="315"` | `x="270" y="330"` |
+| Left sub-tree NO | `x="396" y="315"` | `x="360" y="330"` |
+| Right sub-tree YES | `x="693" y="315"` | `x="713" y="330"` |
+| Right sub-tree NO | `x="933" y="315"` | `x="900" y="330"` |
 
 **Rule of thumb:** For a diagonal line, find the line's x position at the desired y — then shift the label ≥ 10 px **away** from that x (left for left-going branches, right for right-going branches) and raise y by ~10 px above the midpoint. Labels use class `"text-label"` (11 px, `#79747E`, `text-anchor: start`).
 
@@ -278,7 +280,7 @@ The `imageCaption` is used as the `alt` attribute. Ensure captions:
 
 ## GEO / SEO Considerations
 
-1. **File size:** Keep SVGs under 50 KB (compress with SVGO if needed)
+1. **File size:** Keep SVGs under 50 KB (compress with SVGO if needed) — same cap as before; the larger 1200×675 canvas has more headroom to use it
 2. **Descriptive filenames:** Include article slug + concept (improves image search)
 3. **Alt text (captions):** Must include primary keywords (e.g., "RAM", "GPU", "quantization", model names)
 4. **Image placement:** Early in article (after intro) for better GEO visibility
@@ -417,6 +419,7 @@ These fields enable:
 
 | Version | Date | Changes |
 |---|---|---|
+| 2.0 | 2026-07-20 | Canvas changed from `800×350` to `1200×675` (16:9) to be eligible for Google Discover's `max-image-preview: large` surface. All existing SVGs across batches 01-05 are being retrofitted to the new canvas in small follow-up PRs. |
 | 1.1 | 2026-05-29 | Added section 6: Decision Trees — branch label offset rule with correct coordinate table. |
 | 1.0 | 2026-04-16 | Initial style guide. Covers 4 image types: error tables, RAM charts, GPU comparisons, debug flows. |
 
