@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Uncensored local LLMs let fiction writers generate mature, morally complex, and dark content that cloud services refuse — with no data leaving your machine. This guide covers which models to use, how to set them up through Ollama or LM Studio, the genuine ethical responsibilities that apply even when there is no terms-of-service enforcement, and the specific use cases where uncensored models are appropriate versus where they are not.',
     metaDescription:
       'Uncensored local LLMs for creative writing: which models to use, Ollama setup, ethical responsibilities, appropriate use cases, and content guardrails writers should keep regardless.',
+    heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-en.png',
     twitterDescription:
       'Uncensored local LLMs for fiction writers — which models, Ollama setup, and the genuine ethics: when they\'re appropriate and what responsibilities writers still have.',
     current_models_mentioned: [
@@ -212,7 +213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Note: older uncensored fine-tunes — Midnight Miqu (Miqu-70B-based), Wizard-LM Uncensored, Mythomax — were leaders in 2024 but have been superseded by Hermes 3 and Dolphin 3.0 in 2026 on both quality and instruction-following metrics. If you find them recommended in older articles, the current equivalents are Hermes 3 (for selective uncensoring) and Dolphin 3.0 (for broader range).',
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-en.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-en.png',
           imageCaption: 'Hermes 3 balances instruction quality and uncensored range best — fully abliterated models drift faster and write worse prose.',
         },
       setup: {
@@ -291,7 +292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Keep a "model log" per writing project — a plain-text file that records which model generated which scenes. This is useful for revision (knowing which model produced a scene helps you know where to route revision requests), for attribution transparency if you disclose AI assistance, and for auditing if a scene raises questions later.',
           },
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-en.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-en.png',
           imageCaption: 'Most writers use the uncensored model for specific scenes only — not as a default replacement.',
         },
       commonMistakes: {
@@ -389,6 +390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Uncensored lokale LLMs ermöglichen Autoren, reife, moralisch komplexe und düstere Inhalte zu generieren, die Cloud-Dienste ablehnen — ohne dass Daten dein Gerät verlassen. Dieser Leitfaden behandelt die geeigneten Modelle, die Einrichtung über Ollama oder LM Studio, die ethischen Verantwortlichkeiten die auch ohne ToS-Durchsetzung gelten, und die spezifischen Anwendungsfälle, für die Uncensored-Modelle geeignet bzw. ungeeignet sind.',
     metaDescription:
       'Unzensierte lokale LLMs für kreatives Schreiben: welche Modelle, Ollama-Setup, ethische Pflichten, zulässige Anwendungsfälle und was Autoren beachten müssen.',
+    heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-de.png',
     twitterDescription:
       'Uncensored lokale LLMs für Belletristik-Autoren — welche Modelle, Ollama-Einrichtung und die echten Ethik-Fragen: Wann sie geeignet sind und welche Verantwortung Autoren trotzdem tragen.',
     current_models_mentioned: [
@@ -583,7 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Hinweis: ältere Uncensored-Fine-Tunes — Midnight Miqu (Miqu-70B-basiert), Wizard-LM Uncensored, Mythomax — waren 2024 führend, wurden aber 2026 von Hermes 3 und Dolphin 3.0 in Qualitäts- und Anweisungsfolge-Metriken übertroffen. Falls du sie in älteren Artikeln empfohlen findest, sind die aktuellen Äquivalente Hermes 3 (für selektives Uncensoring) und Dolphin 3.0 (für breiteres Spektrum).',
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-de.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-de.png',
           imageCaption: 'Hermes 3 bietet die beste Balance aus Anweisungsqualität und unzensiertem Umfang — voll abliterierte Modelle driften schneller ab.',
         },
       setup: {
@@ -662,7 +664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Führe ein „Modell-Log" pro Schreibprojekt — eine Klartext-Datei, die aufzeichnet, welches Modell welche Szenen generiert hat. Dies ist nützlich für die Überarbeitung, für Zuschreibungstransparenz, wenn du KI-Unterstützung offenlegst, und für die Überprüfung, wenn eine Szene später Fragen aufwirft.',
           },
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-de.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-de.png',
           imageCaption: 'Die meisten Autoren nutzen das unzensierte Modell nur für bestimmte Szenen — nicht als Standardersatz.',
         },
       commonMistakes: {
@@ -760,6 +762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Les LLM locaux non censurés permettent aux auteurs de fiction de générer des contenus matures, moralement complexes et sombres que les services cloud refusent — sans que les données quittent leur machine. Ce guide couvre les modèles à utiliser, leur configuration via Ollama ou LM Studio, les responsabilités éthiques qui s\'appliquent même en l\'absence de conditions d\'utilisation, et les cas d\'usage où les modèles non censurés sont appropriés ou non.',
     metaDescription:
       'LLM locaux non censurés pour l\'écriture créative : quels modèles utiliser, configuration Ollama, responsabilités éthiques et limites à respecter.',
+    heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-fr.png',
     twitterDescription:
       'LLM locaux non censurés pour les auteurs de fiction — quels modèles, configuration Ollama et l\'éthique réelle : quand ils sont appropriés et quelles responsabilités subsistent.',
     current_models_mentioned: [
@@ -954,7 +957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Note : les anciens fine-tunes non censurés — Midnight Miqu (basé sur Miqu-70B), Wizard-LM Uncensored, Mythomax — étaient des références en 2024 mais ont été dépassés par Hermes 3 et Dolphin 3.0 en 2026 sur la qualité et les métriques de suivi d\'instructions. Si tu les trouves recommandés dans des articles plus anciens, les équivalents actuels sont Hermes 3 (pour la non-censure sélective) et Dolphin 3.0 (pour une plage plus large).',
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-fr.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-fr.png',
           imageCaption: 'Hermes 3 offre le meilleur équilibre entre qualité d’instruction et étendue non censurée — les modèles totalement abliterés dérivent plus vite.',
         },
       setup: {
@@ -1033,7 +1036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Tiens un « journal de modèles » par projet d\'écriture — un fichier texte brut qui enregistre quel modèle a généré quelles scènes. C\'est utile pour la révision (savoir quel modèle a produit une scène aide à savoir où envoyer les demandes de révision), pour la transparence d\'attribution si tu divulgues l\'assistance IA, et pour l\'audit si une scène soulève des questions ultérieurement.',
           },
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-fr.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-fr.png',
           imageCaption: 'La plupart des auteurs utilisent le modèle non censuré seulement pour des scènes précises, pas par défaut.',
         },
       commonMistakes: {
@@ -1139,6 +1142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '無検閲ローカルLLMを使うと、クラウドサービスが拒否する成人向け・倫理的複雑性のある・ダークなコンテンツをフィクション作家が生成できます――データは一切機外に出ません。本ガイドでは、推奨モデル、OllamaまたはLM Studioでの設定手順、ToS執行がなくても適用される倫理的責任、そして無検閲モデルが適切な用途と不適切な用途を解説します。',
     metaDescription:
       '無検閲ローカルLLMと創作活動：推奨モデル、Ollama設定、倫理的責任、適切な用途、創作者が守るべきガイドラインを網羅。',
+    heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ja.png',
     twitterDescription:
       '小説家のための無検閲ローカルLLM―推奨モデル、Ollama設定、本当の倫理問題：適切な場面と創作者に残る責任を解説。',
     current_models_mentioned: [
@@ -1333,7 +1337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '注意：古い無検閲ファインチューン――Midnight Miqu（Miqu-70Bベース）、Wizard-LM Uncensored、Mythomax――は2024年にはリーダーでしたが、2026年には品質と指示追従性の指標でHermes 3とDolphin 3.0に追い抜かれています。古い記事で推奨されていても、現在の同等品はHermes 3（選択的無検閲向け）とDolphin 3.0（より広い範囲向け）です。',
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-ja.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ja.png',
           imageCaption: 'Hermes 3は指示品質と無検閲範囲のバランスが最良 — 完全abliterationモデルは逸脱が速く文章品質も落ちる。',
         },
       setup: {
@@ -1413,7 +1417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ライティングプロジェクトごとに「モデルログ」を保持してください――どのモデルがどの場面を生成したかを記録するプレーンテキストファイル。改訂に役立ち（どのモデルが場面を生成したかを知ることで、どこに改訂リクエストを向けるかがわかります）、AI支援を開示する場合の帰属の透明性のため、後で場面が問題になった場合の監査のために有用です。',
           },
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-ja.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-ja.png',
           imageCaption: 'ほとんどの作家は無検閲モデルを特定のシーンにのみ使用し、標準の代替としては使わない。',
         },
       commonMistakes: {
@@ -1511,6 +1515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '无审查本地LLM允许小说作家生成云服务拒绝的成人向、道德复杂或黑暗内容——数据完全不离开本机。本指南涵盖推荐模型、通过Ollama或LM Studio的配置方法、即使没有服务条款约束仍然适用的真实伦理责任，以及无审查模型适用和不适用的具体使用场景。',
     metaDescription:
       '无审查本地LLM创意写作：推荐模型、Ollama配置、伦理责任、适用场景，以及创作者应当保持的内容底线。',
+    heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-zh.png',
     twitterDescription:
       '小说作家的无审查本地LLM——推荐模型、Ollama配置和真实伦理：何时适用，创作者还负有哪些责任。',
     current_models_mentioned: [
@@ -1705,7 +1710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '注意：较旧的无审查微调——Midnight Miqu（基于Miqu-70B）、Wizard-LM Uncensored、Mythomax——在2024年曾是领先者，但2026年在质量和指令遵循指标上已被Hermes 3和Dolphin 3.0超越。如果在较旧文章中看到推荐，当前的同等选择是Hermes 3（选择性无审查）和Dolphin 3.0（更广范围）。',
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-zh.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-zh.png',
           imageCaption: 'Hermes 3在指令质量和无审查范围之间平衡最佳 — 完全消融模型偏离更快，文笔质量更低。',
         },
       setup: {
@@ -1785,7 +1790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '为每个写作项目保留一份「模型日志」——记录哪个模型生成了哪些场景的纯文本文件。这对修改很有用（知道哪个模型生成了某个场景，有助于知道将修改请求发送到哪里），如果您公开AI辅助信息则有助于归属透明度，以及在场景日后引发问题时便于审查。',
           },
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-zh.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-zh.png',
           imageCaption: '大多数作者仅在特定场景使用无审查模型 — 而非作为默认替代。',
         },
       commonMistakes: {
@@ -1883,6 +1888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Los LLMs locales sin censura permiten a los escritores de ficción generar contenido adulto, moralmente complejo y oscuro que los servicios en la nube rechazan, sin que los datos abandonen tu máquina. Esta guía cubre qué modelos usar, cómo configurarlos mediante Ollama o LM Studio, las responsabilidades éticas genuinas que aplican incluso cuando no hay aplicación de términos de servicio, y los casos de uso específicos donde los modelos sin censura son apropiados frente a donde no lo son.',
     metaDescription:
       'LLMs locales sin censura para escritura creativa: qué modelos usar, configuración en Ollama, ética, casos de uso y los límites que conviene mantener.',
+    heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-es.png',
     twitterDescription:
       'LLMs locales sin censura para escritores de ficción: qué modelos, configuración en Ollama y la ética real — cuándo son apropiados y qué responsabilidades siguen teniendo los escritores.',
     current_models_mentioned: [
@@ -2077,7 +2083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Nota: los fine-tunes sin censura más antiguos — Midnight Miqu (basado en Miqu-70B), Wizard-LM Uncensored, Mythomax — fueron líderes en 2024 pero han sido superados por Hermes 3 y Dolphin 3.0 en 2026 en métricas de calidad y seguimiento de instrucciones. Si los encuentras recomendados en artículos más antiguos, los equivalentes actuales son Hermes 3 (para descensurado selectivo) y Dolphin 3.0 (para un rango más amplio).',
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-es.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-es.png',
           imageCaption: 'Hermes 3 ofrece el mejor equilibrio entre calidad de instrucción y rango sin censura — los modelos totalmente abliterados derivan más rápido.',
         },
       setup: {
@@ -2156,7 +2162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Mantén un "registro de modelos" por proyecto de escritura — un archivo de texto plano que registra qué modelo generó qué escenas. Esto es útil para la revisión (saber qué modelo produjo una escena ayuda a saber a dónde dirigir las solicitudes de revisión), para la transparencia de atribución si declaras asistencia de IA, y para auditoría si una escena plantea preguntas más adelante.',
           },
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-es.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-es.png',
           imageCaption: 'La mayoría de los escritores usan el modelo sin censura solo para escenas específicas, no como reemplazo por defecto.',
         },
       commonMistakes: {
@@ -2265,6 +2271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '무검열 로컬 LLM은 픽션 작가가 클라우드 서비스가 거부하는 성인용, 도덕적으로 복잡한, 어두운 콘텐츠를 생성할 수 있게 합니다 — 데이터가 기기를 떠나지 않습니다. 이 가이드는 사용할 모델, Ollama나 LM Studio를 통한 설정 방법, 서비스 약관 적용이 없을 때도 적용되는 진정한 윤리적 책임, 그리고 무검열 모델이 적합한 특정 사용 사례와 그렇지 않은 경우를 다룹니다.',
     metaDescription:
       '창의적 글쓰기를 위한 무검열 로컬 LLM: 사용할 모델, Ollama 설정, 윤리, 사용 사례, 유지해야 할 한계.',
+    heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ko.png',
     twitterDescription:
       '픽션 작가를 위한 무검열 로컬 LLM — 어떤 모델, Ollama 설정, 실제 윤리: 언제 적합하며 작가가 여전히 갖는 책임.',
     current_models_mentioned: [
@@ -2459,7 +2466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '참고: 이전 무검열 파인튜닝들 — Midnight Miqu(Miqu-70B 기반), Wizard-LM Uncensored, Mythomax — 은 2024년 선두였지만 품질 및 지시 따르기 메트릭에서 2026년에 Hermes 3와 Dolphin 3.0에 의해 추월되었습니다. 더 오래된 기사에서 추천된 것을 발견한다면, 현재 동등품은 Hermes 3(선택적 무검열용)와 Dolphin 3.0(더 넓은 범위용)입니다.',
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-ko.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ko.png',
           imageCaption: 'Hermes 3는 지시 품질과 무검열 범위의 균형이 가장 좋음 — 완전 절제 모델은 더 빨리 벗어나고 문장 품질도 낮음.',
         },
       setup: {
@@ -2538,7 +2545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '글쓰기 프로젝트별 "모델 로그"를 유지하십시오 — 어떤 모델이 어떤 장면을 생성했는지 기록하는 평문 텍스트 파일. 이것은 검토에 유용합니다(어떤 모델이 장면을 생성했는지 알면 수정 요청을 어디로 보낼지 알 수 있음), AI 지원을 공개하는 경우 귀속 투명성을 위해, 그리고 나중에 장면이 질문을 제기하는 경우 감사를 위해 유용합니다.',
           },
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-ko.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-ko.png',
           imageCaption: '대부분의 작가는 무검열 모델을 특정 장면에만 사용하며 기본 대체품으로 쓰지 않는다.',
         },
       commonMistakes: {
@@ -2647,6 +2654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LLMs locais sem censura permitem que escritores de ficção gerem conteúdo adulto, moralmente complexo e sombrio que os serviços em nuvem recusam — sem que nenhum dado saia da sua máquina. Este guia cobre quais modelos usar, como configurá-los pelo Ollama ou LM Studio, as responsabilidades éticas genuínas que se aplicam mesmo quando não há aplicação de termos de serviço, e os casos de uso específicos em que modelos sem censura são apropriados frente àqueles em que não são.',
     metaDescription:
       'LLMs locais sem censura para escrita criativa: quais modelos usar, configuração no Ollama, responsabilidades éticas, casos de uso apropriados e os limites que escritores devem manter de qualquer forma.',
+    heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-pt.png',
     twitterDescription:
       'LLMs locais sem censura para escritores de ficção — quais modelos, configuração no Ollama e a ética real: quando são apropriados e quais responsabilidades os escritores ainda têm.',
     current_models_mentioned: [
@@ -2841,7 +2849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Nota: fine-tunes sem censura mais antigos — Midnight Miqu (baseado em Miqu-70B), Wizard-LM Uncensored, Mythomax — foram líderes em 2024 mas foram superados pelo Hermes 3 e pelo Dolphin 3.0 em 2026 em métricas de qualidade e de aderência a instruções. Se você os encontrar recomendados em artigos mais antigos, os equivalentes atuais são o Hermes 3 (para remoção de censura seletiva) e o Dolphin 3.0 (para alcance mais amplo).',
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-pt.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-pt.png',
           imageCaption: 'Hermes 3 tem o melhor equilíbrio entre qualidade de instrução e alcance sem censura — modelos totalmente ablacionados desviam mais rápido.',
         },
       setup: {
@@ -2920,7 +2928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Mantenha um "registro de modelos" por projeto de escrita — um arquivo de texto puro que registra qual modelo gerou quais cenas. Isso é útil para a revisão (saber qual modelo produziu uma cena ajuda a saber para onde direcionar os pedidos de revisão), para a transparência de atribuição se você declarar assistência de IA, e para auditoria se uma cena levantar perguntas mais adiante.',
           },
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-pt.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-pt.png',
           imageCaption: 'A maioria dos escritores usa o modelo sem censura apenas para cenas específicas — não como substituto padrão.',
         },
       commonMistakes: {
@@ -3030,6 +3038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'نماذج LLM المحلية بدون قيود تتيح لكتّاب الخيال توليد محتوى بالغ وأخلاقيًا معقدًا ومظلمًا ترفضه الخدمات السحابية، دون أن تغادر البيانات جهازك. يغطي هذا الدليل: أي النماذج تستخدم، وكيفية إعدادها عبر Ollama أو LM Studio، والمسؤوليات الأخلاقية الحقيقية التي تسري حتى دون تطبيق شروط الخدمة، وحالات الاستخدام المناسبة في مقابل غير المناسبة.',
     metaDescription:
       'نماذج LLM المحلية بدون قيود تُولّد محتوى خياليًا ناضجًا دون اتصال بالسحابة. إعداد Ollama أو LM Studio، نماذج موصى بها، ومسؤوليات أخلاقية للكتّاب.',
+    heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ar.png',
     twitterDescription:
       'نماذج LLM المحلية بدون قيود لكتّاب الخيال: أي النماذج، إعداد Ollama والأخلاقيات الحقيقية — متى تكون مناسبة وما المسؤوليات التي تبقى على الكتّاب.',
     current_models_mentioned: [
@@ -3224,7 +3233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'ملاحظة: النسخ المعدَّلة القديمة — Midnight Miqu (مبنية على Miqu-70B)، Wizard-LM Uncensored، Mythomax — كانت رائدة في 2024 لكن تجاوزها Hermes 3 و Dolphin 3.0 في 2026 في مقاييس الجودة واتباع التعليمات. إذا وجدتها موصى بها في مقالات أقدم، المكافئات الحالية هي Hermes 3 (لإزالة القيود الانتقائية) و Dolphin 3.0 (لنطاق أوسع).',
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-ar.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ar.png',
           imageCaption: 'يوازن Hermes 3 بين جودة التعليمات والنطاق غير الخاضع للرقابة بشكل أفضل — النماذج المُستأصلة بالكامل تنحرف أسرع وتنتج نثرًا أضعف.',
         },
       setup: {
@@ -3303,7 +3312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'احتفظ بـ "سجل نماذج" لكل مشروع كتابة — ملف نص عادي يسجّل أي نموذج ولَّد أي مشاهد. هذا مفيد للمراجعة (معرفة أي نموذج أنتج مشهدًا يساعد في توجيه طلبات المراجعة)، لشفافية الإسناد إذا صرّحت بمساعدة الذكاء الاصطناعي، وللتدقيق إذا أثار مشهد تساؤلات لاحقًا.',
           },
         ],
-          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-ar.svg',
+          image: '/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-ar.png',
           imageCaption: 'معظم الكتّاب يستخدمون النموذج غير الخاضع للرقابة لمشاهد محددة فقط — وليس كبديل افتراضي.',
         },
       commonMistakes: {

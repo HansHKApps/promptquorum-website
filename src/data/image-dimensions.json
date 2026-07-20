@@ -439,6 +439,51 @@
     "width": 800,
     "height": 420
   },
+  "/images/apple-silicon-m5-local-llm-config-comparison-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-config-comparison-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/apple-silicon-m5-local-llm-config-comparison-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -483,6 +528,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/apple-silicon-m5-local-llm-mac-vs-pc-ja.svg": {
     "encodingFormat": "image/svg+xml",
@@ -4429,6 +4519,51 @@
     "width": 800,
     "height": 320
   },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-quantization-tradeoff-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/how-much-vram-local-llm-quantization-tradeoff-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -4473,6 +4608,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 330
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-much-vram-local-llm-vram-by-size-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/how-much-vram-local-llm-vram-by-size-ja.svg": {
     "encodingFormat": "image/svg+xml",
@@ -11024,6 +11204,51 @@
     "width": 800,
     "height": 370
   },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -11068,6 +11293,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 455
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/uncensored-local-llm-creative-writing-ethics-workflow-ja.svg": {
     "encodingFormat": "image/svg+xml",
