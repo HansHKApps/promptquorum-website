@@ -179,6 +179,36 @@
     "width": 800,
     "height": 420
   },
+  "/images/anker-solix-balcony-solar-certification-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/anker-solix-balcony-solar-lineup-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/anker-solix-balcony-solar-markets-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/anker-solix-balcony-solar-position-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/anker-solix-balcony-solar-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/anker-solix-balcony-solar-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
   "/images/apple-mlx-vs-nvidia-cuda-architecture-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -299,10 +329,130 @@
     "width": 800,
     "height": 380
   },
+  "/images/apsystems-microinverter-balcony-solar-lineup-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/apsystems-microinverter-balcony-solar-markets-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/apsystems-microinverter-balcony-solar-position-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/apsystems-microinverter-balcony-solar-position-note-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/apsystems-microinverter-balcony-solar-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/apsystems-microinverter-balcony-solar-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balcony-solar-global-market-overview-drivers-headwinds-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balcony-solar-global-market-overview-germany-detail-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balcony-solar-global-market-overview-regional-status-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balcony-solar-global-market-overview-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balcony-solar-global-market-overview-uk-status-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balcony-solar-global-market-overview-us-states-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balcony-solar-industry-overview-germany-growth-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balcony-solar-industry-overview-players-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balcony-solar-industry-overview-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balcony-solar-industry-overview-supply-chain-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balcony-solar-industry-overview-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balcony-solar-industry-overview-us-entry-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
   "/images/balcony-solar-stack.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 960,
     "height": 480
+  },
+  "/images/balkonstrom-balcony-solar-lineup-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balkonstrom-balcony-solar-markets-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balkonstrom-balcony-solar-partners-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balkonstrom-balcony-solar-position-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balkonstrom-balcony-solar-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/balkonstrom-balcony-solar-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
   },
   "/images/best-ai-coding-assistant-local-llm-comparison-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -2184,6 +2334,36 @@
     "width": 800,
     "height": 350
   },
+  "/images/deye-microinverter-balcony-solar-certification-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/deye-microinverter-balcony-solar-lineup-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/deye-microinverter-balcony-solar-markets-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/deye-microinverter-balcony-solar-position-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/deye-microinverter-balcony-solar-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/deye-microinverter-balcony-solar-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
   "/images/easiest-local-ai-app-comparison-table-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -2333,6 +2513,66 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 310
+  },
+  "/images/ecoflow-balcony-solar-certification-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/ecoflow-balcony-solar-lineup-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/ecoflow-balcony-solar-markets-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/ecoflow-balcony-solar-position-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/ecoflow-balcony-solar-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/ecoflow-balcony-solar-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/enphase-microinverter-balcony-solar-lineup-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/enphase-microinverter-balcony-solar-markets-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/enphase-microinverter-balcony-solar-position-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/enphase-microinverter-balcony-solar-scale-context-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/enphase-microinverter-balcony-solar-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/enphase-microinverter-balcony-solar-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
   },
   "/images/fastest-local-llms-low-end-pcs-cpu-vs-gpu-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -2599,6 +2839,36 @@
     "width": 800,
     "height": 400
   },
+  "/images/goodwe-balcony-solar-certification-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/goodwe-balcony-solar-lineup-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/goodwe-balcony-solar-position-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/goodwe-balcony-solar-ranking-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/goodwe-balcony-solar-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/goodwe-balcony-solar-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
   "/images/gpu-tier-comparison-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -2699,6 +2969,66 @@
     "width": 800,
     "height": 420
   },
+  "/images/green-solar-pluginenergy-balcony-solar-lineup-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/green-solar-pluginenergy-balcony-solar-markets-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/green-solar-pluginenergy-balcony-solar-partners-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/green-solar-pluginenergy-balcony-solar-position-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/green-solar-pluginenergy-balcony-solar-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/green-solar-pluginenergy-balcony-solar-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/growatt-balcony-solar-lineup-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/growatt-balcony-solar-markets-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/growatt-balcony-solar-position-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/growatt-balcony-solar-position-note-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/growatt-balcony-solar-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/growatt-balcony-solar-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
   "/images/hans-kuepper.jpg": {
     "encodingFormat": "image/jpeg",
     "width": 267,
@@ -2778,6 +3108,36 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/hoymiles-microinverter-balcony-solar-certification-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/hoymiles-microinverter-balcony-solar-lineup-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/hoymiles-microinverter-balcony-solar-markets-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/hoymiles-microinverter-balcony-solar-position-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/hoymiles-microinverter-balcony-solar-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/hoymiles-microinverter-balcony-solar-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
   },
   "/images/ide-integration-workflow.svg": {
     "encodingFormat": "image/svg+xml",
@@ -3023,6 +3383,36 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
+  },
+  "/images/kleines-kraftwerk-balcony-solar-lineup-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/kleines-kraftwerk-balcony-solar-markets-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/kleines-kraftwerk-balcony-solar-partners-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/kleines-kraftwerk-balcony-solar-position-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/kleines-kraftwerk-balcony-solar-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/kleines-kraftwerk-balcony-solar-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
   },
   "/images/laptop-battery-performance-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -5384,6 +5774,36 @@
     "width": 800,
     "height": 360
   },
+  "/images/meyer-burger-solarwatt-heckert-balcony-solar-lineup-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/meyer-burger-solarwatt-heckert-balcony-solar-markets-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/meyer-burger-solarwatt-heckert-balcony-solar-position-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/meyer-burger-solarwatt-heckert-balcony-solar-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/meyer-burger-solarwatt-heckert-balcony-solar-status-note-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/meyer-burger-solarwatt-heckert-balcony-solar-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
   "/images/mobile-llm-models-comparison-table-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -6558,6 +6978,36 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/priwatt-balcony-solar-lineup-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/priwatt-balcony-solar-markets-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/priwatt-balcony-solar-partners-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/priwatt-balcony-solar-position-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/priwatt-balcony-solar-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/priwatt-balcony-solar-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
   },
   "/images/prompt-bites-gpu-vram-tier-guide-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -8343,5 +8793,65 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 420
+  },
+  "/images/yuma-balcony-solar-lineup-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/yuma-balcony-solar-markets-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/yuma-balcony-solar-partners-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/yuma-balcony-solar-position-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/yuma-balcony-solar-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/yuma-balcony-solar-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/zendure-balcony-solar-lineup-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/zendure-balcony-solar-local-control-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/zendure-balcony-solar-markets-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/zendure-balcony-solar-position-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/zendure-balcony-solar-snapshot-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/zendure-balcony-solar-timeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
   }
 }

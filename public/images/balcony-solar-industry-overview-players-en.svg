@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="450" fill="#FFFFFF"/>
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="700" fill="#1C1B1F" text-anchor="middle">Most-Cited Companies by Layer</text>
+  <rect x="50" y="130" width="107.2" height="34" rx="17" fill="#E6F4EA"/>
+  <text x="103.6" y="152" font-family="system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#1E7B37" text-anchor="middle">Anker SOLIX</text>
+  <rect x="169.2" y="130" width="78.4" height="34" rx="17" fill="#E6F4EA"/>
+  <text x="208.39999999999998" y="152" font-family="system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#1E7B37" text-anchor="middle">EcoFlow</text>
+  <rect x="259.6" y="130" width="85.6" height="34" rx="17" fill="#E6F4EA"/>
+  <text x="302.40000000000003" y="152" font-family="system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#1E7B37" text-anchor="middle">Hoymiles</text>
+  <rect x="357.20000000000005" y="130" width="56.8" height="34" rx="17" fill="#E6F4EA"/>
+  <text x="385.6" y="152" font-family="system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#1E7B37" text-anchor="middle">Deye</text>
+  <rect x="426.00000000000006" y="130" width="92.8" height="34" rx="17" fill="#E6F4EA"/>
+  <text x="472.40000000000003" y="152" font-family="system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#1E7B37" text-anchor="middle">APsystems</text>
+  <rect x="50" y="190" width="78.4" height="34" rx="17" fill="#EFE9F7"/>
+  <text x="89.2" y="212" font-family="system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#6750A4" text-anchor="middle">priwatt</text>
+  <rect x="140.4" y="190" width="56.8" height="34" rx="17" fill="#EFE9F7"/>
+  <text x="168.8" y="212" font-family="system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#6750A4" text-anchor="middle">Yuma</text>
+  <rect x="209.2" y="190" width="78.4" height="34" rx="17" fill="#EFE9F7"/>
+  <text x="248.39999999999998" y="212" font-family="system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#6750A4" text-anchor="middle">Zendure</text>
+  <rect x="299.6" y="190" width="78.4" height="34" rx="17" fill="#EFE9F7"/>
+  <text x="338.8" y="212" font-family="system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#6750A4" text-anchor="middle">Growatt</text>
+  <rect x="390" y="190" width="71.2" height="34" rx="17" fill="#EFE9F7"/>
+  <text x="425.6" y="212" font-family="system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#6750A4" text-anchor="middle">GoodWe</text>
+  <text x="400" y="425" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Company names most frequently cited across market comparisons — see individual company pages for verified specifics.</text>
+<text x="792" y="445" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

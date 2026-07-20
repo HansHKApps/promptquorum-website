@@ -1,0 +1,13 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="450" fill="#FFFFFF"/>
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="700" fill="#1C1B1F" text-anchor="middle">Where priwatt Sits</text>
+  <rect x="50" y="120" width="337" height="150" rx="8" fill="#F7F6F3" stroke="#79747E" stroke-width="1"/>
+  <text x="218.5" y="160" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Panel / Battery Makers</text>
+  <text x="218.5" y="185" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">GoodWe (confirmed storage partner)</text>
+  <text x="400" y="205" font-family="system-ui, sans-serif" font-size="18" fill="#79747E" text-anchor="middle">→</text>
+  <rect x="413" y="120" width="337" height="150" rx="8" fill="#E6F4EA" stroke="#34A853" stroke-width="2.5"/>
+  <text x="581.5" y="160" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1E7B37" text-anchor="middle">Kit Reseller / Assembler</text>
+  <text x="581.5" y="185" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">priwatt — sales, marketing, kit assembly</text>
+  <text x="581.5" y="245" font-family="system-ui, sans-serif" font-size="24" fill="#34A853" text-anchor="middle">●</text>
+  <text x="400" y="425" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Confirmed directly by the founder: priwatt sources modules and inverters externally and assembles/sells DIY kits.</text>
+<text x="792" y="445" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -1,0 +1,17 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="450" fill="#FFFFFF"/>
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="700" fill="#1C1B1F" text-anchor="middle">Three German Panel Makers, Three Different Situations</text>
+  <rect x="50" y="100" width="217.33333333333334" height="230" fill="#F7F6F3" stroke="#79747E" stroke-width="1" rx="6"/>
+  <text x="158.66666666666669" y="144" font-family="system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="0.06em" fill="#49454F" text-anchor="middle">MEYER BURGER</text>
+  <text x="158.66666666666669" y="200" font-family="system-ui, sans-serif" font-size="19" font-weight="700" fill="#34A853" text-anchor="middle">Insolvency</text>
+  <text x="158.66666666666669" y="300" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Chapter 11 closed Jun 2026</text>
+  <rect x="291.33333333333337" y="100" width="217.33333333333334" height="230" fill="#F7F6F3" stroke="#79747E" stroke-width="1" rx="6"/>
+  <text x="400.00000000000006" y="144" font-family="system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="0.06em" fill="#49454F" text-anchor="middle">SOLARWATT</text>
+  <text x="400.00000000000006" y="200" font-family="system-ui, sans-serif" font-size="19" font-weight="700" fill="#6750A4" text-anchor="middle">Private</text>
+  <text x="400.00000000000006" y="300" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">under Aqton SE (Quandt)</text>
+  <rect x="532.6666666666667" y="100" width="217.33333333333334" height="230" fill="#F7F6F3" stroke="#79747E" stroke-width="1" rx="6"/>
+  <text x="641.3333333333334" y="144" font-family="system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="0.06em" fill="#49454F" text-anchor="middle">HECKERT SOLAR</text>
+  <text x="641.3333333333334" y="200" font-family="system-ui, sans-serif" font-size="19" font-weight="700" fill="#F4B400" text-anchor="middle">Private</text>
+  <text x="641.3333333333334" y="300" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Chemnitz, Germany</text>
+  <text x="400" y="425" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Meyer Burger has a real balcony kit but is in active insolvency proceedings — the single most important fact on this page.</text>
+<text x="792" y="445" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
