@@ -1,0 +1,42 @@
+<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="380" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">El ancho de banda de memoria determina la velocidad de tokens</text>
+  <text x="400" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Llama 3.3 8B Q4 — la velocidad escala linealmente con el ancho de banda, no con el número de núcleos de GPU</text>
+
+  <!-- M5 base -->
+  <rect x="80" y="80" width="180" height="240" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+  <text x="170" y="110" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">M5 (base)</text>
+  <text x="170" y="150" font-family="'SF Mono', Monaco, monospace" font-size="18" font-weight="700" fill="#79747E" text-anchor="middle">150 GB/s</text>
+  <text x="170" y="175" font-size="11" fill="#79747E" text-anchor="middle">ancho de banda de memoria</text>
+  <line x1="100" y1="195" x2="240" y2="195" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="170" y="225" font-family="'SF Mono', Monaco, monospace" font-size="20" font-weight="700" fill="#6750A4" text-anchor="middle">25–30</text>
+  <text x="170" y="245" font-size="12" fill="#49454F" text-anchor="middle">tok/sec</text>
+
+  <text x="290" y="200" font-size="24" fill="#6750A4" text-anchor="middle">→</text>
+  <text x="290" y="222" font-size="10" fill="#79747E" text-anchor="middle">2&#215; ancho de banda</text>
+
+  <!-- M5 Pro -->
+  <rect x="310" y="60" width="180" height="260" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+  <text x="400" y="90" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">M5 Pro</text>
+  <text x="400" y="130" font-family="'SF Mono', Monaco, monospace" font-size="18" font-weight="700" fill="#6750A4" text-anchor="middle">307 GB/s</text>
+  <text x="400" y="155" font-size="11" fill="#79747E" text-anchor="middle">ancho de banda de memoria</text>
+  <line x1="330" y1="175" x2="470" y2="175" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="400" y="215" font-family="'SF Mono', Monaco, monospace" font-size="22" font-weight="700" fill="#6750A4" text-anchor="middle">45–55</text>
+  <text x="400" y="238" font-size="12" fill="#49454F" text-anchor="middle">tok/sec</text>
+  <text x="400" y="300" font-size="11" fill="#34A853" font-weight="700" text-anchor="middle">≈2&#215; la velocidad del M5 base</text>
+
+  <text x="520" y="200" font-size="24" fill="#6750A4" text-anchor="middle">→</text>
+  <text x="520" y="222" font-size="10" fill="#79747E" text-anchor="middle">2&#215; ancho de banda</text>
+
+  <!-- M5 Max -->
+  <rect x="540" y="40" width="180" height="280" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2"/>
+  <text x="630" y="70" font-size="15" font-weight="700" fill="#7D5260" text-anchor="middle">M5 Max</text>
+  <text x="630" y="110" font-family="'SF Mono', Monaco, monospace" font-size="18" font-weight="700" fill="#7D5260" text-anchor="middle">614 GB/s</text>
+  <text x="630" y="135" font-size="11" fill="#79747E" text-anchor="middle">ancho de banda de memoria</text>
+  <line x1="560" y1="155" x2="700" y2="155" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="630" y="200" font-family="'SF Mono', Monaco, monospace" font-size="24" font-weight="700" fill="#7D5260" text-anchor="middle">100–120</text>
+  <text x="630" y="223" font-size="12" fill="#49454F" text-anchor="middle">tok/sec</text>
+  <text x="630" y="290" font-size="11" fill="#79747E" text-anchor="middle">además usa una GPU diferente</text>
+
+  <text x="400" y="358" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Al comprar, prioriza el ancho de banda de memoria sobre el número de núcleos de GPU — es el verdadero cuello de botella en la inferencia de LLM.</text>
+<text x="792" y="375" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

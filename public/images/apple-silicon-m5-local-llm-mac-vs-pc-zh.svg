@@ -1,0 +1,36 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Mac Studio M5 Max对比RTX 5090 PC</text>
+
+  <!-- Left: Mac Studio M5 Max 128GB -->
+  <rect x="28" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="28" y="52" width="340" height="4" rx="0" fill="#6750A4"/>
+  <text x="198" y="80" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Mac Studio M5 Max 128GB</text>
+  <text x="198" y="98" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">在30B–70B本地推理中胜出</text>
+
+  <text x="48" y="128" font-size="12" fill="#1C1B1F">✓ 128GB统一内存，无VRAM上限</text>
+  <text x="48" y="152" font-size="12" fill="#1C1B1F">✓ 100W，而同等PC需600W以上</text>
+  <text x="48" y="176" font-size="12" fill="#1C1B1F">✓ 静音：满载时仅40分贝</text>
+  <text x="48" y="200" font-size="12" fill="#1C1B1F">✓ 集成MLX、Metal、Core ML</text>
+  <text x="48" y="224" font-size="12" fill="#1C1B1F">✓ 三年电费更低</text>
+  <line x1="48" y1="240" x2="348" y2="240" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="48" y="264" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#6750A4">$3,499</text>
+  <text x="48" y="284" font-size="11" fill="#49454F">70B Q4/Q5 — 可媲美4,500美元以上的PC配置</text>
+
+  <!-- Right: PC Workstation RTX 5090 -->
+  <rect x="432" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#7D5260" stroke-width="2"/>
+  <rect x="432" y="52" width="340" height="4" rx="0" fill="#7D5260"/>
+  <text x="602" y="80" font-size="15" font-weight="700" fill="#7D5260" text-anchor="middle">PC Workstation (RTX 5090)</text>
+  <text x="602" y="98" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">在7B–13B和微调方面胜出</text>
+
+  <text x="452" y="128" font-size="12" fill="#1C1B1F">✓ 7B–13B达90–120 tok/s（对比60–75）</text>
+  <text x="452" y="152" font-size="12" fill="#1C1B1F">✓ CUDA生态更广泛，工具更丰富</text>
+  <text x="452" y="176" font-size="12" fill="#1C1B1F">✓ 微调领域PyTorch + CUDA占主导</text>
+  <text x="452" y="200" font-size="12" fill="#1C1B1F">✓ 升级灵活：可更换GPU</text>
+  <text x="452" y="224" font-size="12" fill="#1C1B1F">✓ 非LLM AI（如Stable Diffusion）速度更快</text>
+  <line x1="452" y1="240" x2="752" y2="240" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="452" y="264" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#7D5260">$800–1,200</text>
+  <text x="452" y="284" font-size="11" fill="#49454F">在此预算级别RTX 4070 Ti优于M5 Pro</text>
+
+  <text x="400" y="335" font-family="system-ui, sans-serif" font-size="11.5" fill="#79747E" text-anchor="middle">模型越大，苹果的优势越明显；而NVIDIA的优势体现在原始速度和生态系统广度上。</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

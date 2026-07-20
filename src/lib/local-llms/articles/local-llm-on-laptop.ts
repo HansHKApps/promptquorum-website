@@ -173,6 +173,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Your laptop': 'Intel Iris Xe / AMD iGPU', 'Best model': '3B–7B (CPU only)', 'Speed (CPU)': '8–20 tok/s', 'Speed (Apple Silicon)': 'n/a' },
           ],
           columns: ['Your laptop', 'Best model', 'Speed (CPU)', 'Speed (Apple Silicon)'],
+          image: '/images/local-llm-on-laptop-ram-tiers-en.svg',
+          imageCaption: '8 GB RAM is the practical floor -- a 7B model at Q4_K_M runs on any laptop built after 2018.',
         },
         tldr: {
           id: 'key-takeaways',
@@ -278,6 +280,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Model': 'Llama 3.3 8B', 'RAM': '5.5 GB', 'Speed (CPU)': '8-15 tok/s', 'Quality': 'High+', 'Best For': '16 GB laptops, best quality at size' },
           ],
           columns: ['Model', 'RAM', 'Speed (CPU)', 'Quality', 'Best For'],
+          image: '/images/local-llm-on-laptop-model-picks-en.svg',
+          imageCaption: 'Llama 3.2 3B fits 8 GB laptops at 25-45 tok/s; Llama 3.3 8B needs 16 GB but gives the best quality at this size.',
         },
         bestSetup: {
           id: 'best-setup',
@@ -694,6 +698,9 @@ schema: {
             { 'Tu portátil': 'Intel Iris Xe / AMD iGPU', 'Mejor modelo': '3B–7B (solo CPU)', 'Velocidad (CPU)': '8–20 tok/s', 'Velocidad (Apple Silicon)': 'n/a' },
           ],
           columns: ['Tu portátil', 'Mejor modelo', 'Velocidad (CPU)', 'Velocidad (Apple Silicon)'],
+        
+          image: '/images/local-llm-on-laptop-ram-tiers-es.svg',
+          imageCaption: '8 GB de RAM es el mínimo práctico — un modelo de 7B en Q4_K_M funciona en cualquier portátil fabricado después de 2018.',
         },
         tldr: {
           id: 'key-takeaways',
@@ -799,6 +806,9 @@ schema: {
             { 'Modelo': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Velocidad (CPU)': '8–15 tok/s', 'Calidad': 'Alta+', 'Mejor para': 'Portátiles de 16 GB, mejor calidad en ese tamaño' },
           ],
           columns: ['Modelo', 'RAM', 'Velocidad (CPU)', 'Calidad', 'Mejor para'],
+        
+          image: '/images/local-llm-on-laptop-model-picks-es.svg',
+          imageCaption: 'Llama 3.2 3B cabe en portátiles de 8 GB a 25–45 tok/s; Llama 3.3 8B necesita 16 GB pero ofrece la mejor calidad en este tamaño.',
         },
         bestSetup: {
           id: 'best-setup',
@@ -1220,6 +1230,9 @@ schema: {
             { 'لابتوبك': 'Intel Iris Xe / iGPU من AMD', 'أفضل نموذج': '3B–7B (CPU فقط)', 'السرعة (CPU)': '8–20 tok/s', 'السرعة (Apple Silicon)': 'n/a' },
           ],
           columns: ['لابتوبك', 'أفضل نموذج', 'السرعة (CPU)', 'السرعة (Apple Silicon)'],
+        
+          image: '/images/local-llm-on-laptop-ram-tiers-ar.svg',
+          imageCaption: 'تُعد 8 جيجابايت من RAM الحد العملي الأدنى — يعمل نموذج 7B بصيغة Q4_K_M على أي حاسوب محمول صُنع بعد عام 2018.',
         },
         tldr: {
           id: 'key-takeaways',
@@ -1325,6 +1338,9 @@ schema: {
             { 'النموذج': 'Llama 3.3 8B', 'RAM': '5.5 GB', 'السرعة (CPU)': '8–15 tok/ث', 'الجودة': 'عالية+', 'الأفضل لـ': 'أجهزة لابتوب بسعة 16 GB، أفضل جودة في ذلك الحجم' },
           ],
           columns: ['النموذج', 'RAM', 'السرعة (CPU)', 'الجودة', 'الأفضل لـ'],
+        
+          image: '/images/local-llm-on-laptop-model-picks-ar.svg',
+          imageCaption: 'يعمل Llama 3.2 3B على أجهزة محمولة بذاكرة 8 جيجابايت بسرعة 25–45 رمزاً/ثانية؛ بينما يحتاج Llama 3.3 8B إلى 16 جيجابايت لكنه يقدم أفضل جودة بهذا الحجم.',
         },
         bestSetup: {
           id: 'best-setup',
@@ -1738,6 +1754,9 @@ schema: {
             { 'Ihr Laptop': 'Intel Iris Xe / AMD iGPU', 'Bestes Modell': '3B–7B (nur CPU)', 'Geschwindigkeit (CPU)': '8–20 Token/Sek.', 'Geschwindigkeit (Apple Silicon)': 'n/a' },
           ],
           columns: ['Ihr Laptop', 'Bestes Modell', 'Geschwindigkeit (CPU)', 'Geschwindigkeit (Apple Silicon)'],
+        
+          image: '/images/local-llm-on-laptop-ram-tiers-de.svg',
+          imageCaption: '8 GB RAM sind die praktische Untergrenze — ein 7B-Modell mit Q4_K_M läuft auf jedem Laptop, der nach 2018 gebaut wurde.',
         },
         tldr: {
           id: 'key-takeaways',
@@ -1841,6 +1860,9 @@ schema: {
             { 'Modell': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Geschwindigkeit (CPU)': '8-15 Token/s', 'Qualität': 'Hoch+', 'Beste für': '16 GB Laptops, beste Qualität bei dieser Größe' },
           ],
           columns: ['Modell', 'RAM', 'Geschwindigkeit (CPU)', 'Qualität', 'Beste für'],
+        
+          image: '/images/local-llm-on-laptop-model-picks-de.svg',
+          imageCaption: 'Llama 3.2 3B passt auf 8-GB-Laptops mit 25–45 Tok/s; Llama 3.3 8B benötigt 16 GB, liefert dafür die beste Qualität dieser Größe.',
         },
         bestSetup: {
           id: 'beste-einrichtung',
@@ -2194,6 +2216,9 @@ schema: {
             { 'Votre portable': 'Intel Iris Xe / iGPU AMD', 'Meilleur modèle': '3B–7B (CPU uniquement)', 'Vitesse (CPU)': '8–20 tok/s', 'Vitesse (Apple Silicon)': 'n/a' },
           ],
           columns: ['Votre portable', 'Meilleur modèle', 'Vitesse (CPU)', 'Vitesse (Apple Silicon)'],
+        
+          image: '/images/local-llm-on-laptop-ram-tiers-fr.svg',
+          imageCaption: '8 Go de RAM constituent le plancher pratique — un modèle 7B en Q4_K_M fonctionne sur tout ordinateur portable fabriqué après 2018.',
         },
         tldr: {
           id: 'key-takeaways',
@@ -2297,6 +2322,9 @@ schema: {
             { 'Modèle': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Vitesse (CPU)': '8-15 token/s', 'Qualité': 'Haute+', 'Meilleur pour': 'Ordinateurs portables 16 GB, meilleure qualité à cette taille' },
           ],
           columns: ['Modèle', 'RAM', 'Vitesse (CPU)', 'Qualité', 'Meilleur pour'],
+        
+          image: '/images/local-llm-on-laptop-model-picks-fr.svg',
+          imageCaption: 'Llama 3.2 3B convient aux portables de 8 Go à 25–45 tok/s ; Llama 3.3 8B nécessite 16 Go mais offre la meilleure qualité à cette taille.',
         },
         bestSetup: {
           id: 'meilleure-configuration',
@@ -2599,6 +2627,9 @@ schema: {
             { 'あなたのノートパソコン': 'Intel Iris Xe / AMD iGPU', '最適なモデル': '3B–7B（CPUのみ）', '速度（CPU）': '8–20トークン/秒', '速度（Apple Silicon）': 'n/a' },
           ],
           columns: ['あなたのノートパソコン', '最適なモデル', '速度（CPU）', '速度（Apple Silicon）'],
+        
+          image: '/images/local-llm-on-laptop-ram-tiers-ja.svg',
+          imageCaption: '8GB RAMが実用上の最低ラインです — Q4_K_Mの7Bモデルは2018年以降に製造されたどのノートPCでも動作します。',
         },
         tldr: {
           id: 'key-takeaways',
@@ -2702,6 +2733,9 @@ schema: {
             { 'モデル': 'Llama 3.3 8B', 'RAM': '5.5GB', 'Speed (CPU)': '8-15トークン/秒', '品質': '高+', '最適な用途': '16GBノートパソコン、最高の品質' },
           ],
           columns: ['モデル', 'RAM', 'Speed (CPU)', '品質', '最適な用途'],
+        
+          image: '/images/local-llm-on-laptop-model-picks-ja.svg',
+          imageCaption: 'Llama 3.2 3Bは8GBノートPCで25〜45 tok/s動作します。Llama 3.3 8Bは16GB必要ですが、このサイズで最高品質を提供します。',
         },
         bestSetup: {
           id: 'saiko-setup',
@@ -3004,6 +3038,9 @@ schema: {
             { '你的笔记本': 'Intel Iris Xe / AMD核显', '最佳模型': '3B–7B（仅CPU）', '速度（CPU）': '8–20 tok/s', '速度（Apple Silicon）': 'n/a' },
           ],
           columns: ['你的笔记本', '最佳模型', '速度（CPU）', '速度（Apple Silicon）'],
+        
+          image: '/images/local-llm-on-laptop-ram-tiers-zh.svg',
+          imageCaption: '8GB内存是实用下限 — Q4_K_M量化的7B模型可在2018年后制造的任何笔记本上运行。',
         },
         tldr: {
           id: 'key-takeaways',
@@ -3107,6 +3144,9 @@ schema: {
             { '模型': 'Llama 3.3 8B', 'RAM': '5.5GB', '速度（CPU）': '8-15令牌/秒', '质量': '高+', '最佳适配': '16GB笔记本电脑，这个大小最好的品质' },
           ],
           columns: ['模型', 'RAM', '速度（CPU）', '质量', '最佳适配'],
+        
+          image: '/images/local-llm-on-laptop-model-picks-zh.svg',
+          imageCaption: 'Llama 3.2 3B适合8GB笔记本，速度25–45 tok/s；Llama 3.3 8B需要16GB，但在此规模下质量最佳。',
         },
         bestSetup: {
           id: 'zuijia-setup',
@@ -3420,6 +3460,9 @@ schema: {
             { '내 노트북': 'Intel Iris Xe / AMD iGPU', '최적 모델': '3B~7B (CPU만)', '속도 (CPU)': '8~20토큰/초', '속도 (Apple Silicon)': 'n/a' },
           ],
           columns: ['내 노트북', '최적 모델', '속도 (CPU)', '속도 (Apple Silicon)'],
+        
+          image: '/images/local-llm-on-laptop-ram-tiers-ko.svg',
+          imageCaption: '8GB RAM이 실질적인 최소 기준입니다 — Q4_K_M 양자화된 7B 모델은 2018년 이후 제작된 모든 노트북에서 실행됩니다.',
         },
         tldr: {
           id: 'key-takeaways',
@@ -3525,6 +3568,9 @@ schema: {
             { 'Model': 'Llama 3.3 8B', 'RAM': '5.5GB', 'Speed (CPU)': '8~15토큰/초', 'Quality': '높음+', 'Best For': '16GB 노트북, 해당 크기에서 최고 품질' },
           ],
           columns: ['Model', 'RAM', 'Speed (CPU)', 'Quality', 'Best For'],
+        
+          image: '/images/local-llm-on-laptop-model-picks-ko.svg',
+          imageCaption: 'Llama 3.2 3B는 8GB 노트북에서 25–45 tok/s로 실행되며, Llama 3.3 8B는 16GB가 필요하지만 이 크기에서 최고 품질을 제공합니다.',
         },
         bestSetup: {
           id: 'best-setup',

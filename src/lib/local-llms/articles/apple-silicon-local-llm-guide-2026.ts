@@ -157,6 +157,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'M5 Max (614 GB/s) → ~100–120 tok/s on Llama 3.3 8B Q4 (but uses different GPU, so speed scales with architecture too)',
           'Lesson: M5 Pro is exactly 2× faster than M5 base on the same model because bandwidth doubled. When buying, prioritize bandwidth over GPU core count.',
         ],
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-en.svg',
+        imageCaption: 'When buying, prioritize memory bandwidth over GPU core count -- it is the real bottleneck for LLM inference.',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -172,6 +174,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Setup': 'Desktop RTX 3060', 'Power (idle)': '30W', 'Power (LLM load)': '170–200W', 'Noise': 'Moderate', 'Heat': 'Warm' },
         ],
         note: 'Annual electricity cost at $0.15/kWh, 24/7 AI server: Mac Mini M5 (~$35/year) vs Desktop RTX 4090 (~$400/year).',
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-en.svg',
+        imageCaption: '24/7 inference: ~$35/year on Mac Mini M5 vs. ~$400/year on a desktop RTX 4090 -- a 10x difference at $0.15/kWh.',
       },
       scenarios: {
         id: 'scenarios',
@@ -441,6 +445,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'M5 Max (614 GB/s) → ~100–120 tok/s en Llama 3.3 8B Q4',
           'Lección: M5 Pro es exactamente 2× más rápido que M5 base en el mismo modelo porque el ancho de banda se duplicó. Al comprar, prioriza el ancho de banda sobre el número de núcleos GPU.',
         ],
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-es.svg',
+        imageCaption: 'Al comprar, prioriza el ancho de banda de memoria sobre el número de núcleos de GPU — es el verdadero cuello de botella en la inferencia de LLM.',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -456,6 +463,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Configuración': 'RTX 3060 de escritorio', 'Consumo (reposo)': '30W', 'Consumo (LLM)': '170–200W', 'Ruido': 'Moderado', 'Calor': 'Tibio' },
         ],
         note: 'Costo anual de electricidad a $0,15/kWh, servidor IA 24/7: Mac Mini M5 (~$35/año) vs RTX 4090 de escritorio (~$400/año). Los precios pueden variar según tu país.',
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-es.svg',
+        imageCaption: 'Inferencia 24/7: ~35 $/año en Mac Mini M5 frente a ~400 $/año en una RTX 4090 de escritorio — una diferencia de 10x a 0,15 $/kWh.',
       },
       scenarios: {
         id: 'scenarios',
@@ -719,6 +729,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'M5 Max (614 GB/s) ← نحو 100–120 tok/s على Llama 3.3 8B Q4',
           'الدرس: M5 Pro أسرع بالضبط بمقدار ضعفين من M5 الأساسي على النموذج نفسه لأن عرض النطاق تضاعف. عند الشراء، رتّب عرض النطاق فوق عدد أنوية GPU.',
         ],
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-ar.svg',
+        imageCaption: 'عند الشراء، أعطِ الأولوية لعرض النطاق الترددي للذاكرة على عدد أنوية GPU — فهو عنق الزجاجة الحقيقي في استدلال LLM.',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -734,6 +747,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'التهيئة': 'RTX 3060 مكتبي', 'الاستهلاك (خمول)': '30W', 'الاستهلاك (LLM)': '170–200W', 'الضوضاء': 'متوسط', 'الحرارة': 'دافئ' },
         ],
         note: 'التكلفة السنوية للكهرباء بسعر 0.15 دولار/kWh، خادم ذكاء اصطناعي على مدار الساعة: Mac Mini M5 (نحو 35 دولارًا سنويًا) مقابل RTX 4090 المكتبي (نحو 400 دولار سنويًا). قد تتفاوت الأسعار حسب بلدك.',
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-ar.svg',
+        imageCaption: 'الاستدلال على مدار الساعة: نحو 35 دولاراً سنوياً لجهاز Mac Mini M5 مقابل نحو 400 دولار سنوياً لبطاقة RTX 4090 لسطح المكتب — فرق 10 أضعاف عند 0.15 دولار/kWh.',
       },
       scenarios: {
         id: 'scenarios',
@@ -1002,6 +1018,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'M5 Max (614 GB/s) → ~100-120 tok/s no Llama 3.3 8B Q4',
           'Lição: M5 Pro é exatamente 2× mais rápido que o M5 base no mesmo modelo porque a largura de banda dobrou. Ao comprar, priorize a largura de banda sobre o número de núcleos GPU.',
         ],
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-pt.svg',
+        imageCaption: 'Ao comprar, priorize a largura de banda de memória em vez do número de núcleos da GPU — esse é o verdadeiro gargalo da inferência de LLM.',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -1017,6 +1036,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Configuração': 'RTX 3060 de mesa', 'Consumo (repouso)': '30 W', 'Consumo (LLM)': '170-200 W', 'Ruído': 'Moderado', 'Calor': 'Morno' },
         ],
         note: 'Custo anual de eletricidade a US$ 0,15/kWh, servidor de IA 24/7: Mac Mini M5 (~US$ 35/ano) vs RTX 4090 de mesa (~US$ 400/ano).',
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-pt.svg',
+        imageCaption: 'Inferência 24/7: ~US$35/ano no Mac Mini M5 vs. ~US$400/ano em uma RTX 4090 de mesa — uma diferença de 10x a US$0,15/kWh.',
       },
       scenarios: {
         id: 'scenarios',
@@ -1316,6 +1338,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fazit: M5 Pro ist genau 2× schneller als M5 Basis beim gleichen Modell, da die Bandbreite verdoppelt wurde. Beim Kauf sollten Sie die Bandbreite gegenüber GPU-Kernzahl priorisieren.',
           'Lektion: Priorisieren Sie Bandbreite über GPU-Kernen beim Kauf.',
         ],
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-de.svg',
+        imageCaption: 'Priorisieren Sie beim Kauf die Speicherbandbreite über die Anzahl der GPU-Kerne — sie ist der eigentliche Engpass bei der LLM-Inferenz.',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -1331,6 +1356,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Setup': 'Desktop RTX 3060', 'Stromverbrauch (Idle)': '30W', 'Stromverbrauch (LLM)': '170–200W', 'Lautstärke': 'Moderat', 'Wärmestrahlung': 'Warm' },
         ],
         note: 'Jährliche Stromkosten bei 0,15€/kWh, 24/7 KI-Server: Mac mini M5 (~35€/Jahr) vs. Desktop RTX 4090 (~350€/Jahr).',
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-de.svg',
+        imageCaption: '24/7-Inferenz: ~35 $/Jahr bei Mac Mini M5 vs. ~400 $/Jahr bei einer Desktop-RTX 4090 — ein 10-facher Unterschied bei 0,15 $/kWh.',
       },
       scenarios: {
         id: 'scenarios',
@@ -1527,6 +1555,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'M5 Max (614 GB/s) → ~100–120 tok/s Llama 3.3 8B Q4',
           'Leçon : priorisez bande passante sur cœurs GPU lors de l\'achat.',
         ],
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-fr.svg',
+        imageCaption: 'Lors de l\'achat, privilégiez la bande passante mémoire au nombre de cœurs GPU — c\'est le véritable goulot d\'étranglement pour l\'inférence LLM.',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -1542,6 +1573,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Configuration': 'Desktop RTX 3060', 'Puissance (ralenti)': '30W', 'Puissance (LLM)': '170–200W', 'Bruit': 'Modéré', 'Chaleur': 'Tiède' },
         ],
         note: 'Coût électricité annuel à 0,15€/kWh, serveur IA 24/7 : Mac mini M5 (~35€/an) vs Desktop RTX 4090 (~350€/an).',
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-fr.svg',
+        imageCaption: 'Inférence 24/7 : ~35 $/an sur Mac Mini M5 contre ~400 $/an sur une RTX 4090 de bureau — un facteur 10 à 0,15 $/kWh.',
       },
       scenarios: {
         id: 'scenarios',
@@ -1720,6 +1754,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'M5 Max（614 GB/s）→ Llama 3.3 8B Q4で~100～120 tok/s',
           'レッスン：購入時に帯域幅をGPU coresより優先。',
         ],
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-ja.svg',
+        imageCaption: '購入時はGPUコア数よりもメモリ帯域幅を優先してください — それがLLM推論の真のボトルネックです。',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -1735,6 +1772,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'セットアップ': 'デスクトップRTX 3060', '消費電力（アイドル）': '30W', '消費電力（LLM）': '170–200W', 'ノイズ': '中程度', '熱': '暖かい' },
         ],
         note: '年間電力費用 ¥0.15/kWh、24/7 AIサーバー：Mac mini M5（~¥3,850/年）対デスクトップRTX 4090（~¥33,000/年）。',
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-ja.svg',
+        imageCaption: '24時間365日の推論：Mac Mini M5で年間約35ドル、デスクトップRTX 4090で年間約400ドル — 0.15ドル/kWhで10倍の差。',
       },
       scenarios: {
         id: 'scenarios',
@@ -1942,6 +1982,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'M5 Max（614 GB/s）→ Llama 3.3 8B Q4时~100-120 tok/s',
           '经验教训：购买时优先考虑带宽而非GPU核心。',
         ],
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-zh.svg',
+        imageCaption: '购买时应优先考虑内存带宽而非GPU核心数量 — 这才是LLM推理的真正瓶颈。',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -1957,6 +2000,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '配置': '台式RTX 3060', '功耗（空闲）': '30W', '功耗（LLM）': '170–200W', '噪声': '适中', '温度': '温暖' },
         ],
         note: '年度电力费用 ¥0.15/kWh，24/7 AI服务器：Mac mini M5（~¥245/年）对比台式RTX 4090（~¥2,100/年）。',
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-zh.svg',
+        imageCaption: '全天候推理：Mac Mini M5每年约35美元，台式RTX 4090每年约400美元 — 按0.15美元/kWh计算相差10倍。',
       },
       scenarios: {
         id: 'scenarios',
@@ -2203,6 +2249,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'M5 Max (614 GB/s) → Llama 3.3 8B Q4에서 ~100–120 tok/s',
           '교훈: M5 Pro는 대역폭이 두 배가 되었기 때문에 동일한 모델에서 M5 기본보다 정확히 2배 빠릅니다. 구매 시 GPU 코어 수보다 대역폭을 우선시하십시오.',
         ],
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-ko.svg',
+        imageCaption: '구매 시 GPU 코어 수보다 메모리 대역폭을 우선하세요 — 이것이 LLM 추론의 진짜 병목입니다.',
       },
       powerThermals: {
         id: 'power-thermals',
@@ -2218,6 +2267,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '구성': '데스크탑 RTX 3060', '소비 전력 (유휴)': '30W', '소비 전력 (LLM)': '170–200W', '소음': '보통', '발열': '따뜻함' },
         ],
         note: '$0.15/kWh 기준 연간 전기 요금, 24/7 AI 서버: Mac Mini M5(~$35/년) 대 데스크탑 RTX 4090(~$400/년).',
+      
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-ko.svg',
+        imageCaption: '24/7 추론: Mac Mini M5는 연간 약 $35, 데스크톱 RTX 4090은 연간 약 $400 — $0.15/kWh 기준 10배 차이.',
       },
       scenarios: {
         id: 'scenarios',

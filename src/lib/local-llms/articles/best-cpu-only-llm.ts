@@ -139,6 +139,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Model': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Params': '8B', 'GGUF Size': '~5 GB', 'RAM Needed': '7 GB', 'CPU Speed': '4 tok/sec', 'Best For': 'Coding, logic tasks' },
           ],
           columns: ['Model', 'Params', 'GGUF Size', 'RAM Needed', 'CPU Speed', 'Best For'],
+          image: '/images/best-cpu-only-llm-model-speeds-en.svg',
+          imageCaption: 'Phi-4 Mini balances speed and quality best -- Gemma 3 2B is faster but has less capability at 12 tok/s vs 15 tok/s.',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -152,6 +154,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Hardware': 'RTX 4090 (GPU, 24 GB)', 'Model': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Speed': '120 tokens/sec', 'Notes': 'GPU is 30× faster than CPU' },
           ],
           columns: ['Hardware', 'Model', 'Speed', 'Notes'],
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-en.svg',
+          imageCaption: 'CPU is 6-30x slower than GPU -- but costs $0 in dedicated hardware and works on any machine.',
         },
         ramRequirements: {
           id: 'ram-requirements',
@@ -433,6 +437,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Modelo': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Parámetros': '8B', 'Tamaño GGUF': '~5 GB', 'RAM necesaria': '7 GB', 'Velocidad CPU': '4 tok/seg', 'Mejor para': 'Programación, tareas lógicas' },
           ],
           columns: ['Modelo', 'Parámetros', 'Tamaño GGUF', 'RAM necesaria', 'Velocidad CPU', 'Mejor para'],
+        
+          image: '/images/best-cpu-only-llm-model-speeds-es.svg',
+          imageCaption: 'Phi-4 Mini ofrece el mejor equilibrio entre velocidad y calidad — Gemma 3 2B es más rápido pero menos capaz, con 15 tok/s frente a 12 tok/s.',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -446,6 +453,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Hardware': 'RTX 4090 (GPU, 24 GB)', 'Modelo': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Velocidad': '120 tokens/seg', 'Notas': 'GPU es 30× más rápida que CPU' },
           ],
           columns: ['Hardware', 'Modelo', 'Velocidad', 'Notas'],
+        
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-es.svg',
+          imageCaption: 'La CPU es de 6 a 30 veces más lenta que la GPU — pero cuesta 0 $ en hardware dedicado y funciona en cualquier equipo.',
         },
         ramRequirements: {
           id: 'ram-requirements',
@@ -669,6 +679,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Modelo': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Parámetros': '8B', 'Tamaño GGUF': '~5 GB', 'RAM necesaria': '7 GB', 'Velocidad CPU': '4 tok/ثانية', 'Mejor para': 'البرمجة، المهام المنطقية' },
           ],
           columns: ['Modelo', 'Parámetros', 'Tamaño GGUF', 'RAM necesaria', 'Velocidad CPU', 'Mejor para'],
+        
+          image: '/images/best-cpu-only-llm-model-speeds-ar.svg',
+          imageCaption: 'يوازن Phi-4 Mini بين السرعة والجودة بأفضل شكل — بينما يُعد Gemma 3 2B أسرع لكن أقل قدرة بمعدل 15 مقابل 12 رمزاً/ثانية.',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -682,6 +695,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Hardware': 'RTX 4090 (GPU, 24 GB)', 'Modelo': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Velocidad': '120 token/ثانية', 'Notas': 'GPU أسرع بمقدار 30× من CPU' },
           ],
           columns: ['Hardware', 'Modelo', 'Velocidad', 'Notas'],
+        
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-ar.svg',
+          imageCaption: 'يكون CPU أبطأ من GPU بمقدار 6 إلى 30 مرة — لكنه لا يُكلّف شيئاً من عتاد مخصص ويعمل على أي جهاز.',
         },
         ramRequirements: {
           id: 'ram-requirements',
@@ -917,6 +933,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Modelo': 'Llama 3.2 3B', 'Parâmetros': '3B', 'RAM necessária': '~2 GB', 'Velocidade CPU': '10 tok/s', 'Melhor para': 'Qualidade equilibrada' },
             { 'Modelo': 'Mistral Small Q4', 'Parâmetros': '7B', 'RAM necessária': '~4,5 GB', 'Velocidade CPU': '5-7 tok/s', 'Melhor para': 'Tarefas mais complexas sem GPU' },
           ],
+        
+          image: '/images/best-cpu-only-llm-model-speeds-pt.svg',
+          imageCaption: 'O Phi-4 Mini equilibra melhor velocidade e qualidade — o Gemma 3 2B é mais rápido, mas menos capaz, com 15 tok/s contra 12 tok/s.',
         },
         howToRun: {
           id: 'how-to-run',
@@ -1031,6 +1050,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Modell': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Parameter': '8B', 'GGUF-Größe': '~5 GB', 'RAM erforderlich': '7 GB', 'CPU-Geschwindigkeit': '4 Token/Sekunde', 'Beste für': 'Kodierung, Logik-Aufgaben' },
           ],
           columns: ['Modell', 'Parameter', 'GGUF-Größe', 'RAM erforderlich', 'CPU-Geschwindigkeit', 'Beste für'],
+        
+          image: '/images/best-cpu-only-llm-model-speeds-de.svg',
+          imageCaption: 'Phi-4 Mini bietet die beste Balance aus Geschwindigkeit und Qualität — Gemma 3 2B ist mit 15 statt 12 Tok/s schneller, aber weniger leistungsfähig.',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -1044,6 +1066,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Hardware': 'RTX 4090 (GPU, 24 GB)', 'Modell': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Geschwindigkeit': '120 Token/Sekunde', 'Notizen': 'GPU ist 30× schneller als CPU' },
           ],
           columns: ['Hardware', 'Modell', 'Geschwindigkeit', 'Notizen'],
+        
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-de.svg',
+          imageCaption: 'Die CPU ist 6- bis 30-mal langsamer als die GPU — kostet aber 0 $ an dedizierter Hardware und läuft auf jedem Rechner.',
         },
         ramRequirements: {
           id: 'ram-requirements',
@@ -1340,6 +1365,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Modèle': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Paramètres': '8B', 'Taille GGUF': '~5 GB', 'RAM Requise': '7 GB', 'Vitesse CPU': '4 tokens/sec', 'Meilleur Pour': 'Codage, tâches logiques' },
           ],
           columns: ['Modèle', 'Paramètres', 'Taille GGUF', 'RAM Requise', 'Vitesse CPU', 'Meilleur Pour'],
+        
+          image: '/images/best-cpu-only-llm-model-speeds-fr.svg',
+          imageCaption: 'Phi-4 Mini offre le meilleur équilibre entre vitesse et qualité — Gemma 3 2B est plus rapide mais moins performant, à 15 tok/s contre 12 tok/s.',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -1353,6 +1381,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Matériel': 'RTX 4090 (GPU, 24 GB)', 'Modèle': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Vitesse': '120 tokens/sec', 'Notes': 'GPU 30× plus rapide que CPU' },
           ],
           columns: ['Matériel', 'Modèle', 'Vitesse', 'Notes'],
+        
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-fr.svg',
+          imageCaption: 'Le CPU est 6 à 30 fois plus lent que le GPU — mais coûte 0 $ en matériel dédié et fonctionne sur n\'importe quelle machine.',
         },
         ramRequirements: {
           id: 'ram-requirements',
@@ -1645,6 +1676,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'モデル': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'パラメータ': '8B', 'GGUF サイズ': '~5 GB', 'RAM 要件': '7 GB', 'CPU 速度': '4 トークン/秒', '最適な用途': 'コーディング、ロジックタスク' },
           ],
           columns: ['モデル', 'パラメータ', 'GGUF サイズ', 'RAM 要件', 'CPU 速度', '最適な用途'],
+        
+          image: '/images/best-cpu-only-llm-model-speeds-ja.svg',
+          imageCaption: 'Phi-4 Miniは速度と品質のバランスが最良です — Gemma 3 2Bは15対12トークン/秒で高速ですが、能力は劣ります。',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -1658,6 +1692,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'ハードウェア': 'RTX 4090 (GPU、24 GB)', 'モデル': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', '速度': '120 トークン/秒', '注釈': 'GPU は CPU より 30× 高速' },
           ],
           columns: ['ハードウェア', 'モデル', '速度', '注釈'],
+        
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-ja.svg',
+          imageCaption: 'CPUはGPUより6〜30倍遅いですが、専用ハードウェアの費用は0ドルで、どのマシンでも動作します。',
         },
         ramRequirements: {
           id: 'ram-requirements',
@@ -1950,6 +1987,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { '模型': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', '参数': '8B', 'GGUF 大小': '~5 GB', 'RAM 需求': '7 GB', 'CPU 速度': '4 令牌/秒', '最适合': '编码、逻辑任务' },
           ],
           columns: ['模型', '参数', 'GGUF 大小', 'RAM 需求', 'CPU 速度', '最适合'],
+        
+          image: '/images/best-cpu-only-llm-model-speeds-zh.svg',
+          imageCaption: 'Phi-4 Mini在速度和质量之间取得最佳平衡 — Gemma 3 2B速度更快（15对12 tok/s）但能力较弱。',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -1963,6 +2003,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { '硬件': 'RTX 4090 (GPU、24 GB)', '模型': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', '速度': '120 令牌/秒', '备注': 'GPU 比 CPU 快 30 倍' },
           ],
           columns: ['硬件', '模型', '速度', '备注'],
+        
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-zh.svg',
+          imageCaption: 'CPU比GPU慢6–30倍 — 但专用硬件成本为0美元，且可在任何机器上运行。',
         },
         ramRequirements: {
           id: 'ram-requirements',
@@ -2269,6 +2312,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { '모델': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', '파라미터': '8B', 'GGUF 크기': '~5 GB', '필요 RAM': '7 GB', 'CPU 속도': '4토큰/초', '최적 용도': '코딩, 논리 작업' },
           ],
           columns: ['모델', '파라미터', 'GGUF 크기', '필요 RAM', 'CPU 속도', '최적 용도'],
+        
+          image: '/images/best-cpu-only-llm-model-speeds-ko.svg',
+          imageCaption: 'Phi-4 Mini는 속도와 품질의 균형이 가장 좋습니다 — Gemma 3 2B는 15 대 12 tok/s로 더 빠르지만 성능은 떨어집니다.',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -2282,6 +2328,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { '하드웨어': 'RTX 4090 (GPU, 24 GB)', '모델': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', '속도': '120토큰/초', '비고': 'GPU가 CPU보다 30배 빠름' },
           ],
           columns: ['하드웨어', '모델', '속도', '비고'],
+        
+          image: '/images/best-cpu-only-llm-cpu-vs-gpu-ko.svg',
+          imageCaption: 'CPU는 GPU보다 6–30배 느리지만 전용 하드웨어 비용이 $0이며 모든 기기에서 작동합니다.',
         },
         ramRequirements: {
           id: 'ram-requirements',

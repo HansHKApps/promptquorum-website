@@ -1,0 +1,42 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">CPU对比GPU：CPU推理慢多少？</text>
+
+  <text x="40" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">硬件</text>
+  <text x="300" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Model</text>
+  <text x="530" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">速度</text>
+  <text x="650" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">对比最快CPU</text>
+  <line x1="18" y1="74" x2="782" y2="74" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <rect x="18" y="90" width="764" height="46" fill="#F7F2FA" rx="4"/>
+  <text x="40" y="110" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6750A4">Apple M3 (CPU) &#9733;</text>
+  <text x="300" y="110" font-size="12" fill="#1C1B1F">Phi-4 Mini 3.8B</text>
+  <text x="530" y="110" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">14 tok/s</text>
+  <text x="650" y="110" font-size="11" fill="#34A853" font-weight="700">测试中最快的CPU</text>
+
+  <text x="40" y="158" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">Intel i7-12700 (CPU)</text>
+  <text x="300" y="158" font-size="12" fill="#49454F">Phi-4 Mini 3.8B</text>
+  <text x="530" y="158" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">12 tok/s</text>
+  <text x="650" y="158" font-size="11" fill="#49454F">已启用AVX-512</text>
+  <line x1="18" y1="170" x2="782" y2="170" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="198" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">AMD Ryzen 7 5700X (CPU)</text>
+  <text x="300" y="198" font-size="12" fill="#49454F">Phi-4 Mini 3.8B</text>
+  <text x="530" y="198" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">9 tok/s</text>
+  <text x="650" y="198" font-size="11" fill="#49454F">仅支持较旧的AVX2</text>
+  <line x1="18" y1="210" x2="782" y2="210" stroke="#F7F2FA" stroke-width="1"/>
+
+  <rect x="18" y="222" width="764" height="46" fill="#FEF7E0" rx="4"/>
+  <text x="40" y="242" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#7D5260">RTX 3060 (GPU, 12 GB)</text>
+  <text x="300" y="242" font-size="12" fill="#1C1B1F">Phi-4 Mini 3.8B</text>
+  <text x="530" y="242" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">80 tok/s</text>
+  <text x="650" y="242" font-size="11" fill="#7D5260" font-weight="700">比CPU快6.7倍</text>
+
+  <rect x="18" y="278" width="764" height="46" fill="#FCE8E6" rx="4"/>
+  <text x="40" y="298" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#EA4335">RTX 4090 (GPU, 24 GB)</text>
+  <text x="300" y="298" font-size="12" fill="#1C1B1F">Llama 3.3 8B Q4</text>
+  <text x="530" y="298" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">120 tok/s</text>
+  <text x="650" y="298" font-size="11" fill="#EA4335" font-weight="700">比CPU快30倍</text>
+
+  <text x="400" y="358" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">CPU比GPU慢6–30倍 — 但专用硬件成本为0美元，且可在任何机器上运行。</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

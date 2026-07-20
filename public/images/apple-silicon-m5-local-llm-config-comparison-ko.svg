@@ -1,0 +1,48 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Apple Silicon M5 구성 (2026년 5월)</text>
+
+  <text x="40" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">구성</text>
+  <text x="330" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">대역폭</text>
+  <text x="440" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Price</text>
+  <text x="530" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">최적 용도</text>
+  <line x1="18" y1="74" x2="782" y2="74" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="40" y="98" font-size="12" font-weight="600" fill="#1C1B1F">Mac Studio M5 Pro 32GB &#9888;</text>
+  <text x="330" y="98" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#49454F">307 GB/s</text>
+  <text x="440" y="98" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#49454F">$1,999</text>
+  <text x="530" y="98" font-size="11" fill="#49454F">테스트, 7B–13B</text>
+  <line x1="18" y1="110" x2="782" y2="110" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="134" font-size="12" font-weight="600" fill="#1C1B1F">Mac Studio M5 Pro 64GB &#9888;</text>
+  <text x="330" y="134" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#49454F">307 GB/s</text>
+  <text x="440" y="134" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#49454F">$2,599</text>
+  <text x="530" y="134" font-size="11" fill="#49454F">30B 모델</text>
+  <line x1="18" y1="146" x2="782" y2="146" stroke="#F7F2FA" stroke-width="1"/>
+
+  <rect x="18" y="158" width="764" height="36" fill="#F7F2FA" rx="4"/>
+  <text x="40" y="180" font-size="12" font-weight="700" fill="#6750A4">Mac Studio M5 Max 64GB &#9888; ★ 최고의 가성비</text>
+  <text x="330" y="180" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#1C1B1F">460 GB/s</text>
+  <text x="440" y="180" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#1C1B1F">$2,499</text>
+  <text x="530" y="180" font-size="11" fill="#1C1B1F">70B Q4</text>
+
+  <text x="40" y="218" font-size="12" font-weight="600" fill="#1C1B1F">Mac Studio M5 Max 128GB &#9888;</text>
+  <text x="330" y="218" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#49454F">614 GB/s</text>
+  <text x="440" y="218" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#49454F">$3,499</text>
+  <text x="530" y="218" font-size="11" fill="#49454F">70B Q5, 파워 유저</text>
+  <line x1="18" y1="230" x2="782" y2="230" stroke="#F7F2FA" stroke-width="1"/>
+
+  <rect x="18" y="242" width="764" height="36" fill="#F7F2FA" rx="4"/>
+  <text x="40" y="264" font-size="12" font-weight="700" fill="#34A853">MacBook Pro 16&quot; M5 Max 64GB ✓ 현재 출시 중</text>
+  <text x="330" y="264" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#1C1B1F">460 GB/s</text>
+  <text x="440" y="264" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#1C1B1F">$3,499</text>
+  <text x="530" y="264" font-size="11" fill="#1C1B1F">휴대용, 70B Q4</text>
+
+  <rect x="18" y="286" width="764" height="36" fill="#F7F2FA" rx="4"/>
+  <text x="40" y="308" font-size="12" font-weight="700" fill="#34A853">MacBook Pro 16&quot; M5 Max 128GB ✓ 현재 출시 중</text>
+  <text x="330" y="308" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#1C1B1F">614 GB/s</text>
+  <text x="440" y="308" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#1C1B1F">$4,499</text>
+  <text x="530" y="308" font-size="11" fill="#1C1B1F">휴대용, 70B Q5</text>
+
+  <text x="400" y="358" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">⚠️ Mac Studio M5 구성은 예상치입니다(2026년 10월 출시 예정) — 현재 출시된 것은 MacBook Pro 16인치 M5 Max뿐입니다.</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

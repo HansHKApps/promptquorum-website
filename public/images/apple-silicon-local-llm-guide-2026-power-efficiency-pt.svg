@@ -1,0 +1,31 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Consumo de Energia na Inferência de LLM</text>
+  <line x1="260" y1="345" x2="740" y2="345" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="250" y="94" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">MacBook Air M5</text>
+  <rect x="260" y="75" width="30" height="24" fill="#34A853" rx="4"/>
+  <text x="300" y="92" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">20–30W</text>
+
+  <text x="250" y="136" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Mac Mini M5</text>
+  <rect x="260" y="117" width="36" height="24" fill="#34A853" rx="4"/>
+  <text x="306" y="134" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">25–35W</text>
+
+  <text x="250" y="178" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">MacBook Pro M5 Pro</text>
+  <rect x="260" y="159" width="60" height="24" fill="#6750A4" rx="4"/>
+  <text x="330" y="176" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">40–60W</text>
+
+  <text x="250" y="220" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Mac Studio M5 Max</text>
+  <rect x="260" y="201" width="100" height="24" fill="#6750A4" rx="4"/>
+  <text x="370" y="218" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">60–100W</text>
+
+  <text x="250" y="262" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">RTX 3060 desktop</text>
+  <rect x="260" y="243" width="200" height="24" fill="#F4B400" rx="4"/>
+  <text x="470" y="260" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">170–200W</text>
+
+  <text x="250" y="304" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">RTX 4090 desktop</text>
+  <rect x="260" y="285" width="450" height="24" fill="#EA4335" rx="4"/>
+  <text x="700" y="302" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="end">350–450W</text>
+
+  <text x="400" y="378" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Inferência 24/7: ~$35/ano no Mac Mini M5 vs. ~$400/ano em um desktop com RTX 4090 — 10&#215; de diferença a $0,15/kWh.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
