@@ -3429,6 +3429,96 @@
     "width": 800,
     "height": 400
   },
+  "/images/build-local-voice-assistant-2026-hardware-tiers-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-hardware-tiers-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-hardware-tiers-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-hardware-tiers-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-hardware-tiers-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-hardware-tiers-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-hardware-tiers-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-hardware-tiers-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-hardware-tiers-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-stt-tts-stack-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-stt-tts-stack-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-stt-tts-stack-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-stt-tts-stack-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-stt-tts-stack-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-stt-tts-stack-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-stt-tts-stack-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-stt-tts-stack-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/build-local-voice-assistant-2026-stt-tts-stack-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/chat-with-1000-pdfs-locally-architecture-decision-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -4134,6 +4224,51 @@
     "width": 800,
     "height": 400
   },
+  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-ko.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -4158,6 +4293,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-ko.svg": {
     "encodingFormat": "image/svg+xml",
@@ -11773,6 +11953,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-comparison-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-comparison-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-comparison-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-comparison-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-comparison-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-comparison-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-comparison-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-comparison-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-comparison-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/sillytavern-vs-agnai-vs-risuai-setup-en.svg": {
     "encodingFormat": "image/svg+xml",

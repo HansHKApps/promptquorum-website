@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Qwen2.5-Coder vs DeepSeek-Coder Local: Which Wins',
     metaDescription:
       'Qwen2.5-Coder vs DeepSeek-Coder for local coding: Qwen wins HumanEval (88.4% vs 83.5%); DeepSeek edges repo-level FIM. Vs CodeLlama & Llama 3. July 2026.',
+    heroImage: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-en.png',
     twitterDescription:
       'DeepSeek-V3 wins Python and JavaScript completion. Qwen3-Coder 32B wins Rust and C++ refactoring. Hardware specs and speed benchmarks for both at every budget tier.',
     affiliateDisclosure: true,
@@ -154,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '4': 'Best local coding LLM: refactoring, Rust, C++',
           },
         ],
-        image: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-en.svg',
+        image: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-en.png',
         imageCaption: 'Qwen3-Coder 32B vs DeepSeek-R1-Distill-Qwen-32B on identical RTX 4090 24 GB hardware: Qwen scores 88.4% HumanEval at 10-14 tok/s and wins Rust/C++, DeepSeek-R1-Distill scores 72.6% at 8-12 tok/s and wins algorithmic reasoning.',
       },
       benchmarks: {
@@ -271,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Best API (algorithms): DeepSeek-R1',
           ],
         },
-        image: '/images/deepseek-vs-qwen-coding-local-2026-decision-tree-en.svg',
+        image: '/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-en.png',
         imageCaption: 'Decision tree for DeepSeek vs Qwen coding: code must stay local and language is Rust/C++ leads to Qwen3-Coder 32B, budget local leads to Qwen3-Coder 14B, algorithmic tasks leads to DeepSeek-R1 API, Python/JS with cloud allowed leads to DeepSeek-V3 API.',
       },
       internalLinks: {
@@ -412,6 +413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Qwen2.5-Coder vs DeepSeek-Coder Local: ¿Cuál Gana?',
     metaDescription:
       'Qwen2.5-Coder vs DeepSeek-Coder para coding local: Qwen gana HumanEval (88,4 % vs 83,5 %); DeepSeek destaca en FIM a nivel de repo. Vs CodeLlama y Llama 3. Julio 2026.',
+    heroImage: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-es.png',
     twitterDescription:
       'Qwen2.5-Coder / Qwen3-Coder 32B gana HumanEval y el coding local global (Rust, C++, refactoring). DeepSeek-Coder queda segundo con su ventaja en autocompletado a nivel de repo y fill-in-the-middle. Especificaciones de hardware y benchmarks de velocidad para ambos en cada nivel de presupuesto.',
     affiliateDisclosure: true,
@@ -548,7 +550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '4': 'Mejor LLM local de coding: refactoring, Rust, C++',
           },
         ],
-        image: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-es.svg',
+        image: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-es.png',
         imageCaption: 'Qwen3-Coder 32B frente a DeepSeek-R1-Distill-Qwen-32B en el mismo hardware RTX 4090 24 GB: Qwen obtiene 88,4 % en HumanEval a 10-14 tok/s y gana en Rust/C++, DeepSeek-R1-Distill obtiene 72,6 % a 8-12 tok/s y gana en razonamiento algorítmico.',
       },
       benchmarks: {
@@ -665,7 +667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mejor API (algoritmos): DeepSeek-R1',
           ],
         },
-        image: '/images/deepseek-vs-qwen-coding-local-2026-decision-tree-es.svg',
+        image: '/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-es.png',
         imageCaption: 'Árbol de decisión DeepSeek vs Qwen para coding: código que debe quedarse local y lenguaje Rust/C++ lleva a Qwen3-Coder 32B, opción económica local lleva a Qwen3-Coder 14B, tareas algorítmicas llevan a la API de DeepSeek-R1, Python/JS con cloud permitido lleva a la API de DeepSeek-V3.',
       },
       internalLinks: {
@@ -808,6 +810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Qwen2.5-Coder vs DeepSeek-Coder 로컬: 승자는?',
     metaDescription:
       'Qwen2.5-Coder vs DeepSeek-Coder 로컬 코딩: Qwen이 HumanEval 우세(88.4% vs 83.5%), DeepSeek은 repo-level·FIM에서 근소 우세. CodeLlama·Llama 3 대비. 2026년 7월 기준.',
+    heroImage: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-ko.png',
     twitterDescription:
       'Qwen2.5-Coder / Qwen3-Coder 32B가 HumanEval과 전체 로컬 코딩에서 승리합니다. DeepSeek-Coder는 준우승 — repo-level·fill-in-the-middle 자동 완성에서 근소 우세. 각 예산 등급별 하드웨어 사양과 속도 벤치마크.',
     affiliateDisclosure: true,
@@ -944,7 +947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '4': '최고 로컬 코딩 LLM: 리팩터링, Rust, C++',
           },
         ],
-        image: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-ko.svg',
+        image: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-ko.png',
         imageCaption: '동일한 RTX 4090 24 GB 하드웨어에서 Qwen3-Coder 32B와 DeepSeek-R1-Distill-Qwen-32B 비교: Qwen은 HumanEval 88.4%를 10~14 tok/s로 기록하며 Rust/C++에서 승리하고, DeepSeek-R1-Distill은 72.6%를 8~12 tok/s로 기록하며 알고리즘 추론에서 승리합니다.',
       },
       benchmarks: {
@@ -1061,7 +1064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '최고 API(알고리즘): DeepSeek-R1',
           ],
         },
-        image: '/images/deepseek-vs-qwen-coding-local-2026-decision-tree-ko.svg',
+        image: '/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-ko.png',
         imageCaption: 'DeepSeek vs Qwen 코딩 결정 트리: 코드가 로컬에 있어야 하고 언어가 Rust/C++이면 Qwen3-Coder 32B, 경제적 로컬 선택이면 Qwen3-Coder 14B, 알고리즘 작업이면 DeepSeek-R1 API, 클라우드 허용 시 Python/JS이면 DeepSeek-V3 API로 이어집니다.',
       },
       internalLinks: {
@@ -1204,6 +1207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'DeepSeek vs Qwen Coding 2026: Python & Rust Vergleich',
     metaDescription:
       'Qwen2.5-Coder vs DeepSeek-Coder für lokales Coding 2026: Qwen gewinnt HumanEval (88,4 % vs. 83,5 %); DeepSeek liegt bei Repo-Level-FIM vorn. Python, Rust, Refactoring.',
+    heroImage: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-de.png',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience:
@@ -1307,6 +1311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'DeepSeek vs Qwen 2026 : Benchmark Python, Rust, JS',
     metaDescription:
       'Qwen2.5-Coder vs DeepSeek-Coder pour le code local 2026 : Qwen gagne HumanEval (88,4 % vs 83,5 %) ; DeepSeek devance en repo-level FIM. Python, Rust, refactoring.',
+    heroImage: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-fr.png',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience: 'Développeurs choisissant un LLM de coding local pour Continue.dev, Cline ou Cursor en mode local.',
@@ -1407,6 +1412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'DeepSeek vs Qwen コーディング2026：Python・Rust・JSベンチマーク比較',
     metaDescription:
       'DeepSeek-Coder vs Qwen3-Coder：2026年ローカルコーディング比較。ベンチマーク、VRAM要件、実際のコード品質。Python、JavaScript、リファクタリングに最適なのは。',
+    heroImage: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-ja.png',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience: 'Continue.dev、Cline、Cursor Local ModeでローカルLLMを使用する開発者。',
@@ -1507,6 +1513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'DeepSeek vs Qwen编程对比2026：Python、Rust、JS基准测试',
     metaDescription:
       'DeepSeek-Coder vs Qwen3-Coder：2026年本地编程对比。基准测试、VRAM需求和真实代码质量。Python、JavaScript和重构任务中哪个模型更优，全面评测。',
+    heroImage: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-zh.png',
     affiliateDisclosure: true,
     educationalLevel: 'Advanced',
     audience: '使用Continue.dev、Cline或Cursor本地模式的开发者，寻找最佳本地编程LLM。',
@@ -1624,6 +1631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Qwen2.5-Coder vs DeepSeek-Coder Local: Qual Vence',
     metaDescription:
       'Qwen2.5-Coder vs DeepSeek-Coder para codificação local: Qwen vence no HumanEval (88,4% vs 83,5%); DeepSeek leva vantagem em repo-level e FIM. Vs CodeLlama e Llama 3. Julho de 2026.',
+    heroImage: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-pt.png',
     twitterDescription:
       'DeepSeek-V3 vence em completar Python e JavaScript. Qwen3-Coder 32B vence em refatoração de Rust e C++. Especificações de hardware e benchmarks de velocidade para ambos em todos os níveis de orçamento.',
     affiliateDisclosure: true,
@@ -1760,7 +1768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '4': 'Melhor LLM local de codificação: refatoração, Rust, C++',
           },
         ],
-        image: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-pt.svg',
+        image: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-pt.png',
         imageCaption: 'Qwen3-Coder 32B contra DeepSeek-R1-Distill-Qwen-32B no mesmo hardware RTX 4090 24 GB: o Qwen atinge 88,4% no HumanEval a 10-14 tok/s e vence em Rust/C++; o DeepSeek-R1-Distill atinge 72,6% a 8-12 tok/s e vence em raciocínio algorítmico.',
       },
       benchmarks: {
@@ -1877,7 +1885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Melhor API (algoritmos): DeepSeek-R1',
           ],
         },
-        image: '/images/deepseek-vs-qwen-coding-local-2026-decision-tree-pt.svg',
+        image: '/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-pt.png',
         imageCaption: 'Árvore de decisão DeepSeek vs Qwen para codificação: código que deve ficar local e linguagem Rust/C++ leva ao Qwen3-Coder 32B, opção econômica local leva ao Qwen3-Coder 14B, tarefas algorítmicas levam à API do DeepSeek-R1, Python/JS com nuvem permitida leva à API do DeepSeek-V3.',
       },
       internalLinks: {
@@ -2020,6 +2028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '⁨Qwen2.5-Coder⁩ مقابل ⁨DeepSeek-Coder⁩ محلياً: أيّهما يفوز',
     metaDescription:
       'Qwen2.5-Coder مقابل DeepSeek-Coder للبرمجة المحلية: يفوز Qwen في HumanEval (88.4% مقابل 83.5%)؛ يتقدّم DeepSeek في مستوى المستودع وFIM. مقابل CodeLlama وLlama 3. يوليو 2026.',
+    heroImage: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-ar.png',
     twitterDescription:
       'نموذج DeepSeek-V3 يفوز في إكمال Python وJavaScript. نموذج Qwen3-Coder 32B يفوز في إعادة هيكلة Rust وC++. مواصفات الأجهزة ومعايير السرعة لكليهما في كل مستوى من مستويات الميزانية.',
     affiliateDisclosure: true,
@@ -2156,7 +2165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '4': 'أفضل نموذج لغوي محلي للبرمجة: إعادة هيكلة وRust وC++',
           },
         ],
-        image: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-ar.svg',
+        image: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-ar.png',
         imageCaption: 'مقارنة Qwen3-Coder 32B وDeepSeek-R1-Distill-Qwen-32B على نفس عتاد RTX 4090 24 GB: يسجّل Qwen 88.4% في HumanEval بسرعة 10-14 tok/s ويفوز في Rust/C++، بينما يسجّل DeepSeek-R1-Distill 72.6% بسرعة 8-12 tok/s ويفوز في الاستدلال الخوارزمي.',
       },
       benchmarks: {
@@ -2273,7 +2282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الأفضل عبر الواجهة البرمجية (خوارزميات): DeepSeek-R1',
           ],
         },
-        image: '/images/deepseek-vs-qwen-coding-local-2026-decision-tree-ar.svg',
+        image: '/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-ar.png',
         imageCaption: 'شجرة قرار DeepSeek مقابل Qwen للبرمجة: إذا وجب أن يبقى الكود محلياً واللغة Rust أو C++ فالنتيجة Qwen3-Coder 32B، وخيار اقتصادي محلي يؤدي إلى Qwen3-Coder 14B، والمهام الخوارزمية تؤدي إلى واجهة DeepSeek-R1 البرمجية، وPython أو JavaScript مع السماح بالسحابة يؤدي إلى واجهة DeepSeek-V3 البرمجية.',
       },
       internalLinks: {
