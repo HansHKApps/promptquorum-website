@@ -25,6 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Most storage advice for local AI optimizes for one number — capacity — and misses that two storage jobs are involved. A fast NVMe SSD is where models load from at inference time; a NAS is where the model library lives, stays backed up, and is shared across machines. They are not interchangeable, and buying one when you need the other is the most common storage mistake. This guide compares Synology and QNAP NAS units for the library role, and Samsung and Western Digital SSDs for the loading role, on the figures that bind the purchase: capacity, redundancy, transfer speed, and price. One caveat on price: the 2026 memory-chip shortage pushed SSD prices well above prior levels, so every price here is a July 2026 snapshot — confirm current pricing before you buy.',
     metaDescription:
       'Best NAS for AI 2026: Synology and QNAP NAS units plus Samsung and WD NVMe SSDs compared for local AI models — RAID 6 redundancy, fast model loading, and July 2026 prices.',
+    heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-en.png',
     twitterDescription:
       'Best NAS for AI 2026: NAS for the model library, NVMe SSD for fast loading — two jobs, not one. Synology, QNAP, Samsung, WD compared with July 2026 prices.',
     affiliateDisclosure: true,
@@ -215,6 +216,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Best for': 'Solo developers, offsite copy',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-en.png',
+        imageCaption: 'NAS vs SSD for Local AI Storage -- Price snapshot, July 2026',
       },
       whichStorage: {
         id: 'which-storage',
@@ -379,6 +382,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Think of the NVMe SSD as the loading dock between your model library and your GPU. The faster the loading dock, the less you wait each time you switch models. Once the model is in GPU memory (VRAM), the SSD speed no longer matters — but you feel it on every model switch.',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-en.png',
+        imageCaption: 'Best NVMe SSDs for AI Inference -- Speed vs price, July 2026 (4TB)',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -561,6 +566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Die meisten Speicherempfehlungen für lokale KI optimieren eine einzige Kennzahl — die Kapazität — und übersehen, dass zwei verschiedene Speicheraufgaben im Spiel sind. Eine schnelle NVMe-SSD ist der Ort, von dem Modelle zur Inferenzzeit geladen werden; ein NAS ist der Ort, an dem die Modellbibliothek liegt, gesichert bleibt und über mehrere Rechner hinweg geteilt wird. Die beiden sind nicht austauschbar, und das eine zu kaufen, wenn man das andere braucht, ist der häufigste Speicherfehler. Diese Kaufberatung vergleicht Synology- und QNAP-NAS-Geräte für die Bibliotheksrolle sowie Samsung- und Western-Digital-SSDs für die Laderolle anhand der Kennzahlen, die die Kaufentscheidung bestimmen: Kapazität, Redundanz, Übertragungsgeschwindigkeit und Preis. Ein Vorbehalt zum Preis: Die Speicherchip-Knappheit von 2026 hat die SSD-Preise deutlich über das frühere Niveau getrieben, daher ist jeder Preis hier eine Momentaufnahme von Juli 2026 — prüfen Sie die aktuelle Preislage vor dem Kauf.',
     metaDescription:
       'Bestes NAS für lokale KI-Modelle 2026: Speicher für Modell-Bibliotheken, Netzwerkgeschwindigkeit und GPU-fähige NAS. Synology, QNAP und DIY im Vergleich.',
+    heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-de.png',
     twitterDescription:
       'NAS für die Modellbibliothek, NVMe-SSD für schnelles Laden — zwei Aufgaben, nicht eine. Synology, QNAP, Samsung, WD für lokalen KI-Speicher im Vergleich, mit Preisen von Juli 2026.',
     affiliateDisclosure: true,
@@ -737,6 +743,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Am besten für': 'Einzelne Entwickler, Kopie außer Haus',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-de.png',
+        imageCaption: 'NAS vs. SSD für lokalen KI-Speicher -- Preisstand Juli 2026',
       },
       whichStorage: {
         id: 'which-storage',
@@ -897,6 +905,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Stellen Sie sich die NVMe-SSD als die Verladerampe zwischen Ihrer Modellbibliothek und Ihrer GPU vor. Je schneller die Verladerampe, desto weniger warten Sie bei jedem Modellwechsel. Sobald das Modell im GPU-Speicher (VRAM) ist, spielt die SSD-Geschwindigkeit keine Rolle mehr — aber Sie spüren sie bei jedem Modellwechsel.',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-de.png',
+        imageCaption: 'Beste NVMe-SSDs für KI-Inferenz -- Geschwindigkeit vs. Preis, Juli 2026 (4TB)',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -1087,6 +1097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'La plupart des conseils de stockage pour l\'IA locale optimisent un seul chiffre — la capacité — et passent à côté du fait que deux tâches de stockage sont en jeu. Un SSD NVMe rapide est l\'endroit d\'où les modèles se chargent au moment de l\'inférence ; un NAS est l\'endroit où réside la bibliothèque de modèles, où elle reste sauvegardée et partagée entre plusieurs machines. Les deux ne sont pas interchangeables, et acheter l\'un alors que vous avez besoin de l\'autre est l\'erreur de stockage la plus courante. Ce guide compare les NAS Synology et QNAP pour le rôle de bibliothèque, et les SSD Samsung et Western Digital pour le rôle de chargement, sur les chiffres qui conditionnent l\'achat : capacité, redondance, vitesse de transfert et prix. Une réserve sur le prix : la pénurie de puces mémoire de 2026 a poussé les prix des SSD bien au-delà des niveaux antérieurs, donc chaque prix indiqué ici est un instantané de juillet 2026 — vérifiez les tarifs actuels avant d\'acheter.',
     metaDescription:
       'Meilleur NAS pour modèles IA locaux 2026 : stockage pour bibliothèques de modèles, vitesse réseau et NAS compatibles GPU. Synology, QNAP et DIY comparés.',
+    heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-fr.png',
     twitterDescription:
       'Le NAS pour la bibliothèque de modèles, le SSD NVMe pour un chargement rapide — deux tâches, pas une. Synology, QNAP, Samsung, WD comparés pour le stockage IA local avec les prix de juillet 2026.',
     affiliateDisclosure: true,
@@ -1263,6 +1274,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Idéal pour': 'Les développeurs seuls, la copie hors site',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-fr.png',
+        imageCaption: 'NAS vs SSD pour le Stockage IA Local -- Instantané des prix, juillet 2026',
       },
       whichStorage: {
         id: 'which-storage',
@@ -1423,6 +1436,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Pensez au SSD NVMe comme au quai de chargement entre votre bibliothèque de modèles et votre GPU. Plus le quai de chargement est rapide, moins vous attendez à chaque changement de modèle. Une fois le modèle dans la mémoire GPU (VRAM), la vitesse du SSD n\'a plus d\'importance — mais vous la ressentez à chaque changement de modèle.',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-fr.png',
+        imageCaption: 'Meilleurs SSD NVMe pour l\'Inférence IA -- Vitesse vs prix, juillet 2026 (4To)',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -1605,6 +1620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルAI向けのストレージに関するアドバイスの多くは、容量という1つの数値だけを最適化しており、2つのストレージの役割が関わっているという点を見落としています。高速なNVMe SSDは、推論時にモデルが読み込まれる場所です。NASは、モデルライブラリが保管され、バックアップされ、複数のマシン間で共有される場所です。この2つは交換可能ではなく、一方が必要なときにもう一方を買ってしまうのが最もよくあるストレージの失敗です。本ガイドでは、ライブラリの役割についてSynologyとQNAPのNAS機器を、読み込みの役割についてSamsungとWestern DigitalのSSDを、購入を左右する数値（容量、冗長性、転送速度、価格）で比較します。価格に関する注意点が1つあります。2026年のメモリチップ不足によりSSD価格は従来の水準を大きく上回ったため、本ガイドの価格はすべて2026年7月時点のスナップショットです。購入前に最新の価格を確認してください。',
     metaDescription:
       '2026年のローカルAIモデルに最適なNAS：モデルライブラリのストレージ、ネットワーク速度、GPU対応NASシステム。Synology、QNAP、DIYオプションを徹底比較。',
+    heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ja.png',
     twitterDescription:
       'モデルライブラリにはNAS、高速読み込みにはNVMe SSD — 役割は1つではなく2つ。Synology、QNAP、Samsung、WDをローカルAIストレージ向けに2026年7月の価格で比較。',
     affiliateDisclosure: true,
@@ -1781,6 +1797,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最適な用途': '1人の開発者、別の場所へのコピー',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ja.png',
+        imageCaption: 'ローカルAIストレージ：NAS対SSD -- 価格スナップショット（2026年7月）',
       },
       whichStorage: {
         id: 'which-storage',
@@ -1941,6 +1959,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'NVMe SSDをモデルライブラリとGPUの間の荷捌き場と考えてください。荷捌き場が速いほど、モデルスワッチごとの待ち時間が少なくなります。モデルがGPUメモリ（VRAM）に入れば、SSDの速度はもはや関係ありません — しかし、モデルスワッチのたびに体感できます。',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-ja.png',
+        imageCaption: 'AI推論に最適なNVMe SSD -- 速度対価格（2026年7月・4TB）',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -2123,6 +2143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '大多数针对本地 AI 的存储建议只优化一个数字——容量——却忽视了其中涉及两项存储任务。快速的 NVMe SSD 是推理时模型加载的来源；NAS 则是模型库的所在地，负责保持备份并在多台机器之间共享。两者不可互换，在需要其中一个时却买了另一个，是最常见的存储错误。本指南就左右购买决策的几项数据——容量、冗余、传输速度和价格——比较了承担模型库角色的 Synology 与 QNAP NAS 设备，以及承担加载角色的 Samsung 与 Western Digital SSD。关于价格有一点提醒：2026 年的内存芯片短缺把 SSD 价格推到了远高于以往的水平，因此本文每个价格都是 2026 年 7 月的快照——购买前请确认当前价格。',
     metaDescription:
       '面向本地 AI 模型比较 Synology 与 QNAP NAS 设备以及 Samsung 与 WD SSD：RAID 6 冗余、快速模型加载、容量和 2026 年 7 月价格。',
+    heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-zh.png',
     twitterDescription:
       'NAS 用于模型库，NVMe SSD 用于快速加载——两项任务，而非一项。就本地 AI 存储以 2026 年 7 月价格比较 Synology、QNAP、Samsung、WD。',
     affiliateDisclosure: true,
@@ -2299,6 +2320,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最适合': '单人开发者，异地副本',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-zh.png',
+        imageCaption: '本地AI存储：NAS对比SSD -- 价格速览（2026年7月）',
       },
       whichStorage: {
         id: 'which-storage',
@@ -2459,6 +2482,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '将NVMe SSD想象成模型库和GPU之间的装卸码头。装卸码头越快，每次切换模型时等待的时间就越少。一旦模型进入GPU内存（VRAM），SSD速度就不再重要——但每次切换模型时都能感受到它。',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-zh.png',
+        imageCaption: 'AI推理最佳NVMe SSD -- 速度对比价格（2026年7月，4TB）',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -2641,6 +2666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'La mayoría de los consejos de almacenamiento para IA local optimizan un único número —la capacidad— y pasan por alto que hay dos tareas de almacenamiento involucradas. Un SSD NVMe rápido es el lugar desde donde se cargan los modelos en el momento de la inferencia; un NAS es donde reside la biblioteca de modelos, se mantiene respaldada y se comparte entre varias máquinas. Ambos no son intercambiables, y comprar uno cuando se necesita el otro es el error de almacenamiento más común. Esta guía compara los NAS de Synology y QNAP para el rol de biblioteca, y los SSD de Samsung y Western Digital para el rol de carga, en las cifras que determinan la compra: capacidad, redundancia, velocidad de transferencia y precio. Una advertencia sobre el precio: la escasez de chips de memoria de 2026 elevó los precios de los SSD muy por encima de los niveles anteriores, por lo que cada precio aquí es una instantánea de julio de 2026 — confirma el precio actual antes de comprar.',
     metaDescription:
       'Compara NAS Synology y QNAP más SSD Samsung y WD para modelos de IA local: redundancia RAID 6, carga rápida, capacidad y precios de 2026.',
+    heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-es.png',
     twitterDescription:
       'NAS para la biblioteca de modelos, SSD NVMe para carga rápida — dos tareas, no una. Synology, QNAP, Samsung, WD comparados para almacenamiento de IA local con precios de julio de 2026.',
     affiliateDisclosure: true,
@@ -2817,6 +2843,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mejor para': 'Desarrolladores en solitario, copia fuera del sitio',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-es.png',
+        imageCaption: 'NAS vs SSD para Almacenamiento IA Local -- Precios de julio de 2026',
       },
       whichStorage: {
         id: 'which-storage',
@@ -2977,6 +3005,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Piensa en el SSD NVMe como el muelle de carga entre tu biblioteca de modelos y tu GPU. Cuanto más rápido sea el muelle de carga, menos esperas cada vez que cambias de modelo. Una vez que el modelo está en la memoria GPU (VRAM), la velocidad del SSD ya no importa — pero la sientes en cada cambio de modelo.',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-es.png',
+        imageCaption: 'Mejores SSD NVMe para Inferencia IA -- Velocidad vs precio, julio de 2026 (4TB)',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -3172,6 +3202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'A maioria dos conselhos de armazenamento para IA local otimiza um único número —a capacidade— e ignora que há duas tarefas de armazenamento envolvidas. Um SSD NVMe rápido é o lugar de onde os modelos são carregados no momento da inferência; um NAS é onde a biblioteca de modelos reside, se mantém com backup e é compartilhada entre várias máquinas. Os dois não são intercambiáveis, e comprar um quando você precisa do outro é o erro de armazenamento mais comum. Este guia compara os NAS da Synology e da QNAP para o papel de biblioteca, e os SSDs da Samsung e da Western Digital para o papel de carregamento, nos números que definem a compra: capacidade, redundância, velocidade de transferência e preço. Um aviso sobre o preço: a escassez de chips de memória de 2026 elevou os preços dos SSDs muito acima dos níveis anteriores, então cada preço aqui é um instantâneo de julho de 2026 — confirme o preço atual antes de comprar.',
     metaDescription:
       'Compare NAS Synology e QNAP mais SSDs Samsung e WD para modelos de IA local: redundância RAID 6, carregamento rápido, capacidade e preços de 2026.',
+    heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-pt.png',
     twitterDescription:
       'NAS para a biblioteca de modelos, SSD NVMe para carregamento rápido — duas tarefas, não uma. Synology, QNAP, Samsung, WD comparados para armazenamento de IA local com preços de julho de 2026.',
     affiliateDisclosure: true,
@@ -3348,6 +3379,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Melhor para': 'Desenvolvedores solo, cópia fora do local',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-pt.png',
+        imageCaption: 'NAS vs SSD para Armazenamento de IA Local -- Preços de julho de 2026',
       },
       whichStorage: {
         id: 'which-storage',
@@ -3508,6 +3541,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Pense no SSD NVMe como a doca de carregamento entre sua biblioteca de modelos e sua GPU. Quanto mais rápida a doca de carregamento, menos você espera a cada troca de modelo. Uma vez que o modelo está na memória GPU (VRAM), a velocidade do SSD não importa mais — mas você a sente a cada troca de modelo.',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-pt.png',
+        imageCaption: 'Melhores SSDs NVMe para Inferência de IA -- Velocidade vs preço, julho de 2026 (4TB)',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -3704,6 +3739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تُحسّن معظم نصائح التخزين للذكاء الاصطناعي المحلي رقماً واحداً — السعة — وتتجاهل أن هناك مهمتَي تخزين مختلفتَين. وحدة SSD NVMe سريعة هي المكان الذي تُحمَّل منه النماذج في وقت الاستدلال؛ وNAS هو المكان الذي تقيم فيه مكتبة النماذج، وتُحفظ نسخها الاحتياطية، وتُشارَك بين عدة أجهزة. الاثنان ليسا قابلَين للتبادل، وشراء أحدهما عندما تحتاج الآخر هو أكثر أخطاء التخزين شيوعاً. يقارن هذا الدليل أجهزة NAS من Synology وQNAP لدور المكتبة، وأقراص SSD من Samsung وWestern Digital لدور التحميل، في الأرقام التي تحدد الشراء: السعة والتكرار وسرعة النقل والسعر. تحذير بشأن السعر: أدى نقص رقائق الذاكرة في 2026 إلى رفع أسعار SSD بكثير فوق مستوياتها السابقة، لذا كل سعر هنا لقطة من يوليو 2026 — تحقق من السعر الحالي قبل الشراء.',
     metaDescription:
       'NAS من Synology وQNAP للمكتبة المشتركة، وSSD NVMe من Samsung وWD للتحميل السريع — مقارنة بالسعة والتكرار والسرعة وأسعار 2026.',
+    heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ar.png',
     twitterDescription:
       'NAS لمكتبة النماذج، SSD NVMe للتحميل السريع — مهمتان لا مهمة واحدة. Synology وQNAP وSamsung وWD مقارنةً لتخزين الذكاء الاصطناعي المحلي بأسعار يوليو 2026.',
     affiliateDisclosure: true,
@@ -3880,6 +3916,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الأفضل لـ': 'المطورون المنفردون، نسخة خارج الموقع',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ar.png',
+        imageCaption: 'NAS مقابل SSD لتخزين الذكاء الاصطناعي المحلي -- لمحة أسعار يوليو 2026',
       },
       whichStorage: {
         id: 'which-storage',
@@ -4040,6 +4078,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'فكّر في SSD NVMe كرصيف الشحن بين مكتبة النماذج ووحدة معالجة الرسومات. كلما كان رصيف الشحن أسرع، قلّت مدة انتظارك عند كل تبديل نموذج. بمجرد أن يكون النموذج في ذاكرة GPU (VRAM)، لا تهم سرعة SSD بعد الآن — لكنك تشعر بها عند كل تبديل نموذج.',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-ar.png',
+        imageCaption: 'أفضل أقراص NVMe SSD لاستدلال الذكاء الاصطناعي -- السرعة مقابل السعر، يوليو 2026 (4TB)',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -4235,6 +4275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 AI 스토리지 관련 조언의 대부분은 용량이라는 단일 수치에만 집중하며, 실제로는 두 가지 스토리지 작업이 존재한다는 사실을 간과합니다. 빠른 NVMe SSD는 추론 시점에 모델을 로드하는 장치이고, NAS는 모델 라이브러리가 저장되며 백업이 유지되고 여러 머신 간에 공유되는 장치입니다. 이 두 가지는 상호 대체가 불가능하며, 하나가 필요할 때 다른 하나를 구매하는 것이 가장 흔한 스토리지 실수입니다. 이 가이드는 라이브러리 역할을 위한 Synology와 QNAP의 NAS를, 로드 역할을 위한 Samsung과 Western Digital의 SSD를 구매 결정을 좌우하는 수치인 용량, 중복성, 전송 속도, 가격 기준으로 비교합니다. 가격에 대한 주의 사항: 2026년 메모리 칩 공급 부족으로 SSD 가격이 이전 수준보다 훨씬 높아졌으므로, 이 가이드의 모든 가격은 2026년 7월 기준 스냅샷입니다. 구매 전 반드시 현재 가격을 확인하십시오.',
     metaDescription:
       '로컬 AI 모델을 위한 Synology 및 QNAP NAS와 Samsung 및 WD SSD 비교: RAID 6 중복성, 빠른 로드, 용량 및 2026년 가격.',
+    heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ko.png',
     twitterDescription:
       '모델 라이브러리용 NAS, 빠른 로드용 NVMe SSD — 하나가 아닌 두 가지 작업. 로컬 AI 스토리지를 위한 Synology, QNAP, Samsung, WD 비교 (2026년 7월 가격 기준).',
     affiliateDisclosure: true,
@@ -4411,6 +4452,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '적합 대상': '단독 개발자, 외부 복사본',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ko.png',
+        imageCaption: '로컬 AI 스토리지: NAS 대 SSD -- 2026년 7월 가격 스냅샷',
       },
       whichStorage: {
         id: 'which-storage',
@@ -4571,6 +4614,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'NVMe SSD를 모델 라이브러리와 GPU 사이의 하역장이라고 생각하세요. 하역장이 빠를수록 모델 전환 시 대기 시간이 줄어듭니다. 모델이 GPU 메모리(VRAM)에 올라가면 SSD 속도는 더 이상 중요하지 않습니다 — 하지만 매번 모델 전환 시에는 확실히 체감됩니다.',
           },
         ],
+        image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-ko.png',
+        imageCaption: 'AI 추론에 가장 적합한 NVMe SSD -- 속도 대 가격, 2026년 7월 (4TB)',
       },
       raidBackup: {
         id: 'raid-backup',
