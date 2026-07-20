@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Bug Detection Rate by Local LLM Size</text>
+
+  <text x="250" y="94" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">7B models</text>
+  <rect x="260" y="75" width="245" height="24" fill="#EA4335" rx="4"/>
+  <text x="515" y="92" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">45% of bugs -- too weak</text>
+
+  <text x="250" y="146" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">13B-14B models</text>
+  <rect x="260" y="127" width="409" height="24" fill="#F4B400" rx="4"/>
+  <text x="679" y="144" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">75%</text>
+
+  <text x="250" y="198" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">32B models</text>
+  <rect x="260" y="179" width="480" height="24" fill="#34A853" rx="4"/>
+  <text x="490" y="196" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#FFFFFF">88% -- practical minimum</text>
+
+  <text x="250" y="250" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">70B+ models</text>
+  <rect x="260" y="231" width="464" height="24" fill="#6750A4" rx="4"/>
+  <text x="490" y="248" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#FFFFFF">85% -- best for security</text>
+
+  <line x1="260" y1="272" x2="740" y2="272" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="400" y="300" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Qwen3-Coder 32B (green) is the practical minimum for pre-merge review. Llama 3.3 70B (purple) trades a few</text>
+  <text x="400" y="318" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">points of raw bug detection for deeper multi-file security pattern recognition.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
