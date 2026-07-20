@@ -15,6 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'The best mini PC for Home Assistant plus a local LLM on one box in 2026 is the Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) at about $650, which runs the hub, Frigate, and a 7B model via Ollama. On a budget, an Intel N150 box like the Beelink EQ14 or GMKtec G3 Plus (about $180–230) runs Home Assistant and a small model. This buyer\'s guide compares the main mini PC classes, weighs budget against performance, and covers setup notes — cross-linking to the local-llms hardware guide for VRAM depth.',
     metaDescription:
       'Best mini PC for Home Assistant 2026: Beelink SER8 (Ryzen, ~$650) for Frigate + a 7B model on Ollama; Intel N150 boxes (~$180–230) for budget. RAM and iGPU matter most.',
+    heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-en.png',
     twitterDescription:
       'Best mini PC for Home Assistant 2026: Beelink SER8 (~$650) runs Frigate + a 7B model on Ollama; budget Intel N150 boxes (~$180–230). Prioritise RAM and a capable iGPU.',
     readTime: '8 min read',
@@ -115,6 +116,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'For VRAM and quantization depth, see the cross-cluster [best mini PCs for local LLMs](/local-llms/best-mini-pcs-local-llm).',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-en.png',
+        imageCaption: 'Mini PC Classes for Home Assistant AI -- RAM guidance and what each can run',
       },
       budgetPerformance: {
         id: 'budget-performance',
@@ -126,6 +129,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Balanced: a Ryzen/Core i mini PC with a strong iGPU for a 7B model.',
           'For the broader hardware decision (Pi vs mini PC vs NAS), see [best hardware for a local smart home](/smart-home/best-hardware-for-local-smart-home).',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-pick-guide-hero-en.png',
+        imageCaption: 'Budget vs Performance Pick -- Buy the cheapest box that fits your model',
       },
       setupNotes: {
         id: 'setup-notes',
@@ -215,6 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'أفضل mini PC لـ Home Assistant مع نموذج LLM محلي على صندوق واحد في 2026 هو Beelink SER8 (Ryzen 7 8845HS، Radeon 780M، 32 GB) بنحو ‎$650‎، إذ يشغّل المركز وFrigate ونموذج 7B عبر Ollama. وبميزانية محدودة، يشغّل صندوق Intel N150 مثل Beelink EQ14 أو GMKtec G3 Plus (نحو ‎$180–230‎) Home Assistant ونموذجًا صغيرًا. يقارن هذا الدليل الشرائي الفئات الرئيسية لـ mini PC، ويوازن الميزانية مقابل الأداء، ويغطي ملاحظات الإعداد — مع إحالات متقاطعة إلى دليل أجهزة local-llms لتفاصيل VRAM.',
     metaDescription:
       'أفضل mini PC لـ Home Assistant 2026: Beelink SER8 (Ryzen، نحو ‎$650‎) لـ Frigate + نموذج 7B على Ollama؛ صناديق Intel N150 (نحو ‎$180–230‎) للميزانية. RAM وiGPU الأهم.',
+    heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-ar.png',
     twitterDescription:
       'أفضل mini PC لـ Home Assistant 2026: Beelink SER8 (نحو ‎$650‎) يشغّل Frigate + نموذج 7B على Ollama؛ صناديق Intel N150 الاقتصادية (نحو ‎$180–230‎). أعطِ الأولوية لـ RAM وiGPU قادرة.',
     readTime: '8 دقائق للقراءة',
@@ -315,6 +321,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'لـ VRAM وعمق التكميم، راجع متعدد العناقيد [أفضل mini PCs للنماذج اللغوية المحلية](/ar/local-llms/best-mini-pcs-local-llm).',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-ar.png',
+        imageCaption: 'فئات الحاسوب المصغر لذكاء Home Assistant -- إرشادات الذاكرة وما يمكن تشغيله',
       },
       budgetPerformance: {
         id: 'budget-performance',
@@ -326,6 +334,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'متوازن: Ryzen/Core i mini PC مع iGPU قوية لنموذج 7B.',
           'لقرار الأجهزة الأوسع (Pi مقابل mini PC مقابل NAS)، راجع [أفضل أجهزة المنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home).',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-pick-guide-hero-ar.png',
+        imageCaption: 'اختيار الميزانية مقابل الأداء -- اشترِ أرخص جهاز يناسب نموذجك',
       },
       setupNotes: {
         id: 'setup-notes',
@@ -415,6 +425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Der beste Mini-PC für Home Assistant plus ein lokales LLM auf einem Gerät ist 2026 der Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) für rund 650 €, der den Hub, Frigate und ein 7B-Modell über Ollama betreibt. Mit knapperem Budget betreibt ein Intel-N150-Gerät wie der Beelink EQ14 oder GMKtec G3 Plus (rund 180–230 €) Home Assistant und ein kleines Modell. Diese Kaufberatung vergleicht die wichtigsten Mini-PC-Klassen, wägt Budget gegen Leistung ab und behandelt Einrichtungshinweise – mit Querverweis auf den local-llms-Hardware-Leitfaden für VRAM-Tiefe.',
     metaDescription:
       'Bester Mini-PC für Home Assistant 2026: Beelink SER8 (Ryzen, ca. 650 €) für Frigate + ein 7B-Modell auf Ollama; Intel-N150-Geräte (ca. 180–230 €) fürs Budget. RAM und iGPU zählen am meisten.',
+    heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-de.png',
     twitterDescription:
       'Bester Mini-PC für Home Assistant 2026: Beelink SER8 (ca. 650 €) betreibt Frigate + ein 7B-Modell auf Ollama; günstige Intel-N150-Geräte (ca. 180–230 €). RAM und eine starke iGPU priorisieren.',
     readTime: '8 Min. Lesezeit',
@@ -515,6 +526,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Für VRAM und Quantisierungs-Tiefe siehe clusterübergreifend [beste Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm).',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-de.png',
+        imageCaption: 'Mini-PC-Klassen für Home Assistant KI -- RAM-Empfehlung und Leistungsfähigkeit',
       },
       budgetPerformance: {
         id: 'budget-performance',
@@ -526,6 +539,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ausgewogen: ein Ryzen/Core-i-Mini-PC mit starker iGPU für ein 7B-Modell.',
           'Für die breitere Hardware-Entscheidung (Pi vs Mini-PC vs NAS) siehe [beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home).',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-pick-guide-hero-de.png',
+        imageCaption: 'Budget vs. Leistung: Die Wahl -- Kaufe die günstigste Box, die zu deinem Modell passt',
       },
       setupNotes: {
         id: 'setup-notes',
@@ -615,6 +630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'El mejor mini PC para ejecutar Home Assistant más un LLM local en un solo equipo en 2026 es el Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) por unos 650 €, que ejecuta el hub, Frigate y un modelo 7B con Ollama. Con menos presupuesto, un equipo Intel N150 como el Beelink EQ14 o el GMKtec G3 Plus (unos 180–230 €) ejecuta Home Assistant y un modelo pequeño. Esta guía de compra compara las principales clases de mini PC, sopesa presupuesto frente a rendimiento y cubre notas de configuración, con enlace cruzado a la guía de hardware de local-llms para la profundidad de VRAM.',
     metaDescription:
       'Mejor mini PC para Home Assistant 2026: Beelink SER8 (Ryzen, ~650 €) para Frigate + un modelo 7B con Ollama; equipos Intel N150 (~180–230 €) para presupuesto. La RAM y la iGPU importan más.',
+    heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-es.png',
     twitterDescription:
       'Mejor mini PC para Home Assistant 2026: el Beelink SER8 (~650 €) ejecuta Frigate + un modelo 7B con Ollama; equipos Intel N150 económicos (~180–230 €). Prioriza la RAM y una iGPU capaz.',
     readTime: '8 min de lectura',
@@ -715,6 +731,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Para VRAM y profundidad de cuantización, consulta entre clústeres [mejores mini PC para LLM locales](/es/local-llms/best-mini-pcs-local-llm).',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-es.png',
+        imageCaption: 'Clases de Mini PC para IA de Home Assistant -- Guía de RAM y capacidades',
       },
       budgetPerformance: {
         id: 'budget-performance',
@@ -726,6 +744,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Equilibrado: un mini PC Ryzen/Core i con una iGPU fuerte para un modelo 7B.',
           'Para la decisión de hardware más amplia (Pi vs mini PC vs NAS), consulta [mejor hardware para un smart home local](/es/smart-home/best-hardware-for-local-smart-home).',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-pick-guide-hero-es.png',
+        imageCaption: 'Presupuesto vs Rendimiento: la Elección -- Compra la caja más barata que se ajuste a tu modelo',
       },
       setupNotes: {
         id: 'setup-notes',
@@ -815,6 +835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026년 하나의 기기에서 Home Assistant와 로컬 LLM을 실행하기 위한 최고의 미니 PC는 Beelink SER8(Ryzen 7 8845HS, Radeon 780M, 32 GB, 약 $650)로, 허브와 Frigate, Ollama의 7B 모델을 함께 실행합니다. 예산이 빠듯하다면 Beelink EQ14 또는 GMKtec G3 Plus 같은 Intel N150 기기(약 $180–230)가 Home Assistant와 소형 모델을 실행합니다. 이 구매 가이드는 주요 미니 PC 클래스를 비교하고, 예산 대비 성능을 따지며, 설정 메모를 다룹니다. VRAM 심층 정보는 local-llms 하드웨어 가이드로 크로스 링크합니다.',
     metaDescription:
       '2026년 Home Assistant 최고의 미니 PC: Beelink SER8(Ryzen, 약 $650)로 Frigate + Ollama의 7B 모델; 예산용 Intel N150 기기(약 $180–230). RAM과 iGPU가 가장 중요합니다.',
+    heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-ko.png',
     twitterDescription:
       '2026년 Home Assistant 최고의 미니 PC: Beelink SER8(약 $650)가 Frigate + Ollama의 7B 모델을 실행; 예산용 Intel N150 기기(약 $180–230). RAM과 고성능 iGPU를 우선시하십시오.',
     readTime: '8분 분량',
@@ -915,6 +936,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'VRAM 및 양자화 심도는 크로스 클러스터 [로컬 LLM을 위한 최고의 미니 PC](/ko/local-llms/best-mini-pcs-local-llm)를 참조하십시오.',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-ko.png',
+        imageCaption: 'Home Assistant AI용 미니 PC 등급 -- RAM 가이드와 실행 가능 범위',
       },
       budgetPerformance: {
         id: 'budget-performance',
@@ -926,6 +949,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '균형적: 7B 모델을 위한 강력한 iGPU가 있는 Ryzen/Core i 미니 PC.',
           '더 넓은 하드웨어 결정(Pi 대 미니 PC 대 NAS)은 [로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home)를 참조하십시오.',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-pick-guide-hero-ko.png',
+        imageCaption: '예산 대 성능 선택 -- 모델에 맞는 가장 저렴한 기기 구매',
       },
       setupNotes: {
         id: 'setup-notes',
@@ -1015,6 +1040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Le meilleur mini-PC pour faire tourner Home Assistant plus un LLM local sur une seule machine en 2026 est le Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 Go) à environ 650 €, qui fait tourner le hub, Frigate et un modèle 7B via Ollama. Avec un budget serré, une machine Intel N150 comme le Beelink EQ14 ou le GMKtec G3 Plus (environ 180–230 €) fait tourner Home Assistant et un petit modèle. Ce guide d\'achat compare les principales classes de mini-PC, pèse le budget face aux performances et couvre des notes de configuration — avec lien croisé vers le guide matériel de local-llms pour la profondeur de VRAM.',
     metaDescription:
       'Meilleur mini-PC pour Home Assistant 2026 : Beelink SER8 (Ryzen, ~650 €) pour Frigate + un modèle 7B sur Ollama ; machines Intel N150 (~180–230 €) pour le budget. La RAM et l\'iGPU comptent le plus.',
+    heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-fr.png',
     twitterDescription:
       'Meilleur mini-PC pour Home Assistant 2026 : le Beelink SER8 (~650 €) fait tourner Frigate + un modèle 7B sur Ollama ; machines Intel N150 abordables (~180–230 €). Priorisez la RAM et un iGPU capable.',
     readTime: '8 min de lecture',
@@ -1115,6 +1141,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Pour la VRAM et la profondeur de quantification, voir inter-clusters [meilleurs mini-PC pour LLM locaux](/fr/local-llms/best-mini-pcs-local-llm).',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-fr.png',
+        imageCaption: 'Classes de Mini PC pour l\'IA Home Assistant -- Recommandations RAM et capacités',
       },
       budgetPerformance: {
         id: 'budget-performance',
@@ -1126,6 +1154,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Équilibré : un mini-PC Ryzen/Core i avec un iGPU puissant pour un modèle 7B.',
           'Pour la décision matérielle plus large (Pi vs mini-PC vs NAS), voir [meilleur matériel pour une maison connectée locale](/fr/smart-home/best-hardware-for-local-smart-home).',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-pick-guide-hero-fr.png',
+        imageCaption: 'Budget vs Performance : le Choix -- Achetez le boîtier le moins cher adapté à votre modèle',
       },
       setupNotes: {
         id: 'setup-notes',
@@ -1215,6 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026年、Home Assistant とローカル LLM を一台で動かすのに最適なミニPCは Beelink SER8（Ryzen 7 8845HS、Radeon 780M、32 GB、約¥94,800）で、ハブと Frigate、Ollama の 7B モデルを動かします。予算を抑えるなら、Beelink EQ14 や GMKtec G3 Plus といった Intel N150 機（約¥28,000〜35,000）が Home Assistant と小型モデルを動かします。本購入ガイドは主なミニPCのクラスを比較し、予算と性能を天秤にかけ、設定上の注意を扱います——VRAM の詳細は local-llms のハードウェアガイドへ相互リンクします。',
     metaDescription:
       'Home Assistant 向け最適ミニPC（2026年）：Beelink SER8（Ryzen、約¥94,800）で Frigate＋Ollama の 7B モデル、予算重視は Intel N150 機（約¥28,000〜35,000）。RAM と iGPU が最重要。',
+    heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-ja.png',
     twitterDescription:
       'Home Assistant 向け最適ミニPC（2026年）：Beelink SER8（約¥94,800）が Frigate＋Ollama の 7B モデルを動かす。予算重視は Intel N150 機（約¥28,000〜35,000）。RAM と高性能 iGPU を優先。',
     readTime: '8分で読める',
@@ -1315,6 +1346,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'VRAM と量子化の詳細は、クラスター横断で[ローカルLLMに最適なミニPC](/ja/local-llms/best-mini-pcs-local-llm)を参照。',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-ja.png',
+        imageCaption: 'Home Assistant AI向けミニPCクラス -- RAM目安とできること',
       },
       budgetPerformance: {
         id: 'budget-performance',
@@ -1326,6 +1359,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'バランス：7B モデル向けに強力な iGPU を備えた Ryzen/Core i のミニPC。',
           'より広いハードウェアの判断（Pi 対 ミニPC 対 NAS）は[ローカルスマートホームに最適なハードウェア](/ja/smart-home/best-hardware-for-local-smart-home)を参照。',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-pick-guide-hero-ja.png',
+        imageCaption: '予算対性能の選び方 -- モデルに合った最も安価なボックスを購入',
       },
       setupNotes: {
         id: 'setup-notes',
@@ -1415,6 +1450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'O melhor mini PC para rodar o Home Assistant mais um LLM local em uma só máquina em 2026 é o Beelink SER8 (Ryzen 7 8845HS, Radeon 780M, 32 GB) por cerca de R$ 5.000, que roda o hub, o Frigate e um modelo 7B via Ollama. Com orçamento apertado, uma máquina Intel N150 como o Beelink EQ14 ou o GMKtec G3 Plus (cerca de R$ 1.400–1.900) roda o Home Assistant e um modelo pequeno. Este guia de compra compara as principais classes de mini PC, pesa orçamento frente a desempenho e cobre notas de configuração — com link cruzado para o guia de hardware do local-llms para a profundidade de VRAM.',
     metaDescription:
       'Melhor mini PC para Home Assistant 2026: Beelink SER8 (Ryzen, ~R$ 5.000) para Frigate + um modelo 7B no Ollama; máquinas Intel N150 (~R$ 1.400–1.900) para orçamento. RAM e iGPU importam mais.',
+    heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-pt.png',
     twitterDescription:
       'Melhor mini PC para Home Assistant 2026: o Beelink SER8 (~R$ 5.000) roda Frigate + um modelo 7B no Ollama; máquinas Intel N150 acessíveis (~R$ 1.400–1.900). Priorize a RAM e uma iGPU capaz.',
     readTime: '8 min de leitura',
@@ -1515,6 +1551,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Para VRAM e profundidade de quantização, veja entre clusters [melhores mini PCs para LLMs locais](/pt/local-llms/best-mini-pcs-local-llm).',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-pt.png',
+        imageCaption: 'Classes de Mini PC para IA do Home Assistant -- Orientação de RAM e capacidades',
       },
       budgetPerformance: {
         id: 'budget-performance',
@@ -1526,6 +1564,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Equilibrado: um mini PC Ryzen/Core i com uma iGPU forte para um modelo 7B.',
           'Para a decisão de hardware mais ampla (Pi vs mini PC vs NAS), veja [melhor hardware para uma casa inteligente local](/pt/smart-home/best-hardware-for-local-smart-home).',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-pick-guide-hero-pt.png',
+        imageCaption: 'Orçamento vs Desempenho: a Escolha -- Compre a caixa mais barata que caiba no seu modelo',
       },
       setupNotes: {
         id: 'setup-notes',
@@ -1615,6 +1655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026年在一台机器上运行 Home Assistant 加本地 LLM 的最佳迷你 PC 是 Beelink SER8（Ryzen 7 8845HS、Radeon 780M、32 GB，约 $650），可运行中枢、Frigate 以及通过 Ollama 的 7B 模型。若预算有限，Beelink EQ14 或 GMKtec G3 Plus 这类 Intel N150 机器（约 $180–230）可运行 Home Assistant 和一个小型模型。本购买指南比较主要的迷你 PC 类别，权衡预算与性能，并涵盖配置注意事项——并交叉链接到 local-llms 硬件指南以了解 VRAM 细节。',
     metaDescription:
       '2026年 Home Assistant 最佳迷你 PC：Beelink SER8（Ryzen，约 $650）运行 Frigate + Ollama 的 7B 模型；预算型 Intel N150 机器（约 $180–230）。内存与 iGPU 最重要。',
+    heroImage: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-zh.png',
     twitterDescription:
       '2026年 Home Assistant 最佳迷你 PC：Beelink SER8（约 $650）运行 Frigate + Ollama 的 7B 模型；实惠的 Intel N150 机器（约 $180–230）。优先内存和一块强力 iGPU。',
     readTime: '阅读约8分钟',
@@ -1715,6 +1756,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '关于 VRAM 和量化细节，参见跨集群的[本地 LLM 的最佳迷你 PC](/zh/local-llms/best-mini-pcs-local-llm)。',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-zh.png',
+        imageCaption: 'Home Assistant AI用迷你主机分类 -- 内存建议与可运行内容',
       },
       budgetPerformance: {
         id: 'budget-performance',
@@ -1726,6 +1769,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '均衡型：为 7B 模型选配强力 iGPU 的 Ryzen/Core i 迷你 PC。',
           '关于更广泛的硬件决策（Pi 对迷你 PC 对 NAS），参见[本地智能家居的最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home)。',
         ],
+        image: '/images/best-mini-pc-home-assistant-local-ai-pick-guide-hero-zh.png',
+        imageCaption: '预算与性能的选择 -- 购买适合你模型的最便宜设备',
       },
       setupNotes: {
         id: 'setup-notes',
