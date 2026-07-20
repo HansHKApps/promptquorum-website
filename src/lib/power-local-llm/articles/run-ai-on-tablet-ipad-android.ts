@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Running a local LLM on a tablet in 2026 is practical on high-end iPads and Android devices with 8 GB+ RAM. The iPad Pro M5 (12 GB on base storage tiers, 16 GB on 1 TB/2 TB models) and iPad Air M4 (12 GB) both raised the on-device ceiling over their predecessors. This guide covers the options: on-device inference with Pocket Paladin and LLM Farm on iPad, Termux + Ollama on Android, and the remote-connection alternative (connecting a tablet to a Mac or PC running Ollama over local Wi-Fi) for devices that cannot run inference locally — including whether Ollama itself can run directly on an iPad (it cannot; iPadOS has no supported Ollama build).',
     metaDescription:
       'How to run a local LLM on an iPad or Android tablet in 2026. iPad Pro M5 and iPad Air M4 on-device inference, Termux + Ollama on Android, and remote connection to a home Mac or PC explained.',
+    heroImage: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-en.png',
     twitterDescription:
       'Run a local LLM on your iPad or Android tablet in 2026: on-device inference (Pocket Paladin, LLM Farm, Termux+Ollama), remote connection to a home Mac/PC running Ollama, and model picks per device — now updated for iPad Pro M5 and iPad Air M4.',
     current_models_mentioned: [
@@ -220,7 +221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Bookmark the home machine\'s Open WebUI URL on your tablet\'s home screen (in Safari: Share → Add to Home Screen; in Chrome: three-dot menu → Add to Home Screen). This makes it feel like a native app. On iPad, full-screen web apps in Safari hide the browser chrome for an app-like experience.',
           },
         ],
-        image: '/images/run-ai-on-tablet-remote-setup-en.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-remote-setup-hero-en.png',
         imageCaption: 'Remote AI from a tablet in 4 steps: install Ollama on your home machine, pull a model + Open WebUI, find your home IP address, then open http://[IP]:3000 in your tablet browser — no model stored on tablet, runs 70B models at 20–40 tok/sec.',
       },
       models: {
@@ -243,7 +244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'For most everyday tasks (drafting text, answering questions, summarising content), Phi-4 Mini (3.8B) on a tablet is adequately capable. Where it falls short compared to a 70B model: complex multi-step reasoning, nuanced creative writing, and long document analysis. For these tasks, use remote connection to a home machine running a larger model.',
           },
         ],
-        image: '/images/run-ai-on-tablet-model-by-device-en.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-en.png',
         imageCaption: 'Best model by tablet: iPad Pro M5 (12 GB / 16 GB) reaches 32–38 tok/sec on Llama 3.2 3B; iPad Air M4 runs Phi-4 Mini at 18–20 tok/sec; Android 8 GB reaches 10–15 tok/sec via Termux; Pixel Tablet requires remote connection due to slow Tensor G2 chip.',
       },
       frontends: {
@@ -387,6 +388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Die Ausführung einer lokalen KI auf einem Tablet ist 2026 auf High-End-iPads und Android-Geräten mit 8 GB+ RAM praktisch. Diese Anleitung behandelt die Optionen: lokale Inferenz auf iPad mit Pocket Paladin und LLM Farm, Termux + Ollama auf Android sowie die Remote-Verbindungsmöglichkeit (Verbindung eines Tablets mit einem Mac oder PC, auf dem Ollama über lokales Wi-Fi ausgeführt wird) für Geräte, die keine lokale Inferenz durchführen können.',
     metaDescription:
       'KI lokal auf iPad oder Android-Tablet ausführen 2026: lokale Inferenz-Apps, Termux + Ollama auf Android und Remote-Verbindung zu Mac oder PC.',
+    heroImage: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-de.png',
     twitterDescription:
       'KI auf Ihrem iPad oder Android-Tablet 2026 ausführen: lokale Inferenz (Pocket Paladin, LLM Farm, Termux+Ollama), Remote-Verbindung zu einem Home-Mac/PC und Modellauswahl pro Gerät.',
     current_models_mentioned: [
@@ -588,7 +590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Fügen Sie die Open WebUI-URL Ihres Home-Computers auf dem Startbildschirm Ihres Tablets als Lesezeichen hinzu (in Safari: Freigabe → Zum Startbildschirm hinzufügen; in Chrome: Drei-Punkt-Menü → Zum Startbildschirm hinzufügen). Dies fühlt sich wie eine native App an. Auf iPad verstecken Web-Apps im Vollbildmodus in Safari die Browser-Umgebung für ein App-ähnliches Erlebnis.',
           },
         ],
-        image: '/images/run-ai-on-tablet-remote-setup-de.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-remote-setup-hero-de.png',
         imageCaption: 'KI per Remote vom Tablet in 4 Schritten: Ollama auf dem Heimrechner installieren, Modell + Open WebUI laden, Heimnetz-IP herausfinden, dann http://[IP]:3000 im Tablet-Browser öffnen — kein Modell auf dem Tablet, 70B-Modelle mit 20–40 Token/Sek.',
       },
       models: {
@@ -611,7 +613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Für die meisten alltäglichen Aufgaben (Textentwurf, Fragen beantworten, Inhalte zusammenfassen) ist Phi-4 Mini (3.8B) auf einem Tablet ausreichend leistungsfähig. Wo es im Vergleich zu einem 70B-Modell schwach wird: komplexes mehrstufiges Denken, differenziertes kreatives Schreiben und lange Dokumentenanalyse. Für diese Aufgaben verwenden Sie die Remote-Verbindung zu einem Home-Computer, der ein größeres Modell ausführt.',
           },
         ],
-        image: '/images/run-ai-on-tablet-model-by-device-de.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-de.png',
         imageCaption: 'Bestes Modell pro Tablet: iPad Pro M5 (12 GB / 16 GB) erreicht 32–38 Token/Sek auf Llama 3.2 3B; iPad Air M4 läuft Phi-4 Mini mit 18–20 Token/Sek; Android 8 GB erreicht 10–15 Token/Sek über Termux; Pixel Tablet benötigt Remote-Verbindung wegen langsamem Tensor G2.',
       },
       frontends: {
@@ -825,6 +827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'L\'exécution d\'une IA locale sur une tablette est pratique en 2026 sur les iPad haut de gamme et les appareils Android disposant de 8 GB+ de RAM. Ce guide couvre les options : inférence sur appareil avec Pocket Paladin et LLM Farm sur iPad, Termux + Ollama sur Android, et l\'alternative de connexion à distance (connecter une tablette à un Mac ou PC exécutant Ollama via Wi-Fi local) pour les appareils ne pouvant pas exécuter l\'inférence localement.',
     metaDescription:
       'Exécutez l\'IA localement sur iPad ou Android en 2026. Applications d\'inférence locale, Termux + Ollama sur Android, connexion à distance vers Mac ou PC expliqués.',
+    heroImage: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-fr.png',
     twitterDescription:
       'Exécutez l\'IA sur votre iPad ou tablette Android en 2026 : inférence locale (Pocket Paladin, LLM Farm, Termux+Ollama), connexion à distance vers Mac/PC, sélection de modèles par appareil.',
     current_models_mentioned: [
@@ -1026,7 +1029,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Ajoutez URL Open WebUI écran d\'accueil tablette (Safari : Partage → Écran d\'accueil ; Chrome : Menu → Écran d\'accueil). Ressemble app native. iPad Safari fullscreen masque chrome navigateur.',
           },
         ],
-        image: '/images/run-ai-on-tablet-remote-setup-fr.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-remote-setup-hero-fr.png',
         imageCaption: 'IA distante depuis tablette en 4 étapes : installer Ollama sur la machine hôte, télécharger modèle + Open WebUI, trouver l\'IP locale, ouvrir http://[IP]:3000 dans le navigateur — aucun modèle sur tablette, modèles 70B à 20–40 tok/sec.',
       },
       models: {
@@ -1049,7 +1052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Tâches quotidiennes (brouillon, questions, résumé) : Phi-4 Mini (3.8B) tablette est adéquat. Échoue vs 70B : raisonnement multi-étapes, créativité nuancée, longs documents. Utilisez connexion à distance pour ces cas.',
           },
         ],
-        image: '/images/run-ai-on-tablet-model-by-device-fr.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-fr.png',
         imageCaption: 'Meilleur modèle par tablette : iPad Pro M5 (12 Go / 16 Go) atteint 32–38 tok/sec sur Llama 3.2 3B ; iPad Air M4 tourne Phi-4 Mini à 18–20 tok/sec ; Android 8 Go atteint 10–15 tok/sec via Termux ; Pixel Tablet nécessite connexion distante (Tensor G2 trop lent).',
       },
       frontends: {
@@ -1232,6 +1235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026年、タブレットでのローカルAI実行はRAM 8GB以上の高性能iPad・Androidデバイスで現実的です。このガイドでは、iPadでのPocket PaladinとLLM Farmによるオンデバイス推論、AndroidでのTermux + Ollama、そしてローカル推論ができないデバイス向けのリモート接続（ローカルWi-FiでOllamaを実行するMacまたはPCへの接続）を解説します。',
     metaDescription:
       '2026年のiPadとAndroidタブレットでのAIローカル実行方法。オンデバイス推論アプリ、Termux + Ollama、ホームMac・PCへのリモート接続を解説。',
+    heroImage: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-ja.png',
     twitterDescription:
       '2026年タブレットでAIをローカル実行：オンデバイス推論（Pocket Paladin・LLM Farm・Termux+Ollama）、ホームMac/PCへのリモート接続、デバイス別モデル選択。',
     current_models_mentioned: [
@@ -1433,7 +1437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ホームマシンのOpen WebUI URLをタブレットのホーム画面にブックマーク追加してください（Safariでは：共有 → ホーム画面に追加；Chromeでは：三点メニュー → ホーム画面に追加）。ネイティブアプリのような感覚になります。iPadでは、SafariのフルスクリーンWebアプリはブラウザのクロームを隠し、アプリのような体験が得られます。',
           },
         ],
-        image: '/images/run-ai-on-tablet-remote-setup-ja.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-remote-setup-hero-ja.png',
         imageCaption: 'タブレットからリモートAIを4ステップで設定：自宅PCにOllamaをインストール、モデル＋Open WebUIをダウンロード、自宅PCのIPアドレスを確認、タブレットブラウザでhttp://[IP]:3000を開く — タブレットにモデル不要、70Bモデルを20〜40トークン/秒で利用可能。',
       },
       models: {
@@ -1456,7 +1460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ほとんどの日常タスク（文章草稿、質問回答、内容要約）では、タブレット上のPhi-4 Mini（3.8B）は十分に実用的です。70Bモデルと比較して劣る点：複雑な多段階推論、ニュアンスのある創作、長文書分析。これらのタスクには大型モデルを実行するホームマシンへのリモート接続を使用してください。',
           },
         ],
-        image: '/images/run-ai-on-tablet-model-by-device-ja.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-ja.png',
         imageCaption: 'タブレット別おすすめモデル：iPad Pro M5（12GB / 16GB）はLlama 3.2 3Bで32〜38トークン/秒；iPad Air M4はPhi-4 Miniを18〜20トークン/秒で実行；Android 8GBはTermux経由で10〜15トークン/秒；Pixel TabletはTensor G2の低速のためリモート接続が必要。',
       },
       frontends: {
@@ -1650,6 +1654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026年，在高端iPad和内存8 GB以上的安卓设备上本地运行AI已切实可行。本指南涵盖所有方案：iPad上使用Pocket Paladin和LLM Farm进行本地推理、安卓上使用Termux + Ollama，以及针对无法本地推理设备的远程连接方案（通过局域网Wi-Fi将平板连接到运行Ollama的Mac或PC）。',
     metaDescription:
       '2026年如何在iPad或安卓平板上本地运行AI。本地推理应用、Termux + Ollama以及远程连接家用Mac或PC的方法详解。',
+    heroImage: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-zh.png',
     twitterDescription:
       '2026年在iPad或安卓平板上运行AI：本地推理（Pocket Paladin、LLM Farm、Termux+Ollama）、远程连接家用Mac/PC，以及各设备型号推荐。',
     current_models_mentioned: [
@@ -1851,7 +1856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '将家用机器的Open WebUI网址收藏到平板主屏幕（Safari：分享 → 添加到主屏幕；Chrome：三点菜单 → 添加到主屏幕）。这样使用体验接近原生应用。在iPad上，Safari中的全屏Web应用会隐藏浏览器地址栏，带来类应用体验。',
           },
         ],
-        image: '/images/run-ai-on-tablet-remote-setup-zh.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-remote-setup-hero-zh.png',
         imageCaption: '平板远程AI 4步设置：在家用电脑安装Ollama，下载模型和Open WebUI，查找家用电脑IP地址，在平板浏览器中打开http://[IP]:3000——平板无需存储模型，可使用70B模型，速度约20至40词元/秒。',
       },
       models: {
@@ -1874,7 +1879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '对于大多数日常任务（起草文本、回答问题、内容摘要），平板上的Phi-4 Mini（3.8B）已足够胜任。与70B模型相比的不足之处：复杂多步推理、细腻创意写作和长文档分析。这类任务请使用远程连接到运行更大模型的家用机器。',
           },
         ],
-        image: '/images/run-ai-on-tablet-model-by-device-zh.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-zh.png',
         imageCaption: '各平板推荐模型：iPad Pro M5（12 GB / 16 GB）在Llama 3.2 3B上达到32至38词元/秒；iPad Air M4以18至20词元/秒运行Phi-4 Mini；安卓8 GB通过Termux达到10至15词元/秒；Pixel Tablet因Tensor G2芯片速度过慢需使用远程连接。',
       },
       frontends: {
@@ -2061,6 +2066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Ejecutar una IA local en una tablet es práctico en 2026 en iPads de alta gama y dispositivos Android con 8 GB o más de RAM. Esta guía cubre las opciones: inferencia en el dispositivo con Pocket Paladin y LLM Farm en iPad, Termux + Ollama en Android, y la alternativa de conexión remota (conectar la tablet a un Mac o PC que ejecute Ollama por Wi-Fi local) para dispositivos que no pueden ejecutar inferencia localmente.',
     metaDescription:
       'Cómo ejecutar IA en local en un iPad o tablet Android en 2026: apps de inferencia en el dispositivo, Termux + Ollama y conexión remota a tu Mac o PC de casa.',
+    heroImage: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-es.png',
     twitterDescription:
       'Ejecuta IA en tu iPad o tablet Android en 2026: inferencia en el dispositivo (Pocket Paladin, LLM Farm, Termux+Ollama), conexión remota a Mac/PC de casa y selección de modelos por dispositivo.',
     current_models_mentioned: [
@@ -2262,7 +2268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Marca la URL de Open WebUI de tu máquina en casa en la pantalla de inicio de tu tablet (en Safari: Compartir → Añadir a la pantalla de inicio; en Chrome: menú de tres puntos → Añadir a la pantalla de inicio). Esto hace que se sienta como una aplicación nativa. En iPad, las aplicaciones web a pantalla completa en Safari ocultan la barra del navegador para una experiencia similar a una aplicación.',
           },
         ],
-        image: '/images/run-ai-on-tablet-remote-setup-es.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-remote-setup-hero-es.png',
         imageCaption: 'IA remota desde una tablet en 4 pasos: instala Ollama en tu máquina en casa, descarga un modelo y Open WebUI, encuentra la IP de tu máquina, luego abre http://[IP]:3000 en el navegador de tu tablet — sin modelo almacenado en la tablet, ejecuta modelos 70B a 20 a 40 tok/seg.',
       },
       models: {
@@ -2285,7 +2291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Para la mayoría de las tareas cotidianas (redactar texto, responder preguntas, resumir contenido), Phi-4 Mini (3.8B) en una tablet es suficientemente capaz. Donde queda corto comparado con un modelo de 70B: razonamiento complejo de múltiples pasos, escritura creativa con matices y análisis de documentos largos. Para estas tareas, usa la conexión remota a una máquina en casa que ejecute un modelo más grande.',
           },
         ],
-        image: '/images/run-ai-on-tablet-model-by-device-es.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-es.png',
         imageCaption: 'Mejor modelo por tablet: iPad Pro M5 (12 GB / 16 GB) alcanza de 32 a 38 tok/seg en Llama 3.2 3B; iPad Air M4 ejecuta Phi-4 Mini a 18 a 20 tok/seg; Android 8 GB alcanza de 10 a 15 tok/seg mediante Termux; el Pixel Tablet requiere conexión remota debido al lento chip Tensor G2.',
       },
       frontends: {
@@ -2474,6 +2480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026년에는 고급형 iPad와 RAM 8GB 이상의 안드로이드 기기에서 태블릿 로컬 AI 실행이 실용적입니다. 이 가이드는 iPad 온디바이스 추론(Pocket Paladin, LLM Farm), Android Termux + Ollama, 그리고 원격 연결(Wi-Fi를 통해 Ollama를 실행 중인 Mac이나 PC에 태블릿을 연결)을 포함한 모든 옵션을 다룹니다.',
     metaDescription:
       '2026년 iPad 및 안드로이드 태블릿에서 AI를 로컬로 실행하는 방법: 온디바이스 추론 앱, Termux + Ollama, 자택 Mac·PC 원격 연결 안내.',
+    heroImage: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-ko.png',
     twitterDescription:
       '2026년 iPad·안드로이드 태블릿에서 AI 실행: 온디바이스 추론(Pocket Paladin, LLM Farm, Termux+Ollama), 자택 Mac·PC 원격 연결 및 기기별 모델 선택.',
     current_models_mentioned: [
@@ -2675,7 +2682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '태블릿 홈 화면에 자택 기기의 Open WebUI URL을 북마크하십시오(Safari: 공유 → 홈 화면에 추가; Chrome: 점 세 개 메뉴 → 홈 화면에 추가). 이렇게 하면 네이티브 앱처럼 느껴집니다. iPad에서 Safari의 전체 화면 웹 앱은 앱과 유사한 경험을 위해 브라우저 바를 숨깁니다.',
           },
         ],
-        image: '/images/run-ai-on-tablet-remote-setup-es.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-remote-setup-hero-ko.png',
         imageCaption: '태블릿 원격 AI 4단계: 자택 기기에 Ollama 설치, 모델·Open WebUI 다운로드, 기기 IP 확인, 태블릿 브라우저에서 http://[IP]:3000 접속 — 태블릿에 모델 저장 없이 20~40 tok/초로 70B 모델 실행.',
       },
       models: {
@@ -2698,7 +2705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '일상적인 대부분의 작업(텍스트 작성, 질문 응답, 콘텐츠 요약)에서 태블릿의 Phi-4 Mini(3.8B)는 충분히 유능합니다. 70B 모델 대비 부족한 점: 복잡한 다단계 추론, 섬세한 창의적 글쓰기, 장문 문서 분석. 이러한 작업에는 더 큰 모델을 실행하는 자택 기기에 원격 연결하십시오.',
           },
         ],
-        image: '/images/run-ai-on-tablet-model-by-device-es.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-ko.png',
         imageCaption: '태블릿별 최적 모델: iPad Pro M5(12GB / 16GB)는 Llama 3.2 3B에서 32~38 tok/초 달성; iPad Air M4는 Phi-4 Mini를 18~20 tok/초로 실행; Android 8GB는 Termux를 통해 10~15 tok/초 달성; Pixel Tablet은 느린 Tensor G2 칩으로 원격 연결 필요.',
       },
       frontends: {
@@ -2887,6 +2894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Executar uma IA local em um tablet é prático em 2026 em iPads de alta gama e dispositivos Android com 8 GB ou mais de RAM. Este guia cobre as opções: inferência no dispositivo com Pocket Paladin e LLM Farm no iPad, Termux + Ollama no Android, e a alternativa de conexão remota (conectar o tablet a um Mac ou PC que executa Ollama pela rede Wi-Fi local) para dispositivos que não conseguem executar inferência localmente.',
     metaDescription:
       'Como executar IA localmente em um iPad ou tablet Android em 2026: apps de inferência no dispositivo, Termux + Ollama e conexão remota ao seu Mac ou PC de casa.',
+    heroImage: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-pt.png',
     twitterDescription:
       'Execute IA no seu iPad ou tablet Android em 2026: inferência no dispositivo (Pocket Paladin, LLM Farm, Termux+Ollama), conexão remota a Mac/PC de casa e seleção de modelos por dispositivo.',
     current_models_mentioned: [
@@ -3086,7 +3094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Marque a URL do Open WebUI da sua máquina em casa na tela inicial do seu tablet (no Safari: Compartilhar → Adicionar à tela inicial; no Chrome: menu de três pontos → Adicionar à tela inicial). Isso faz com que se pareça com um aplicativo nativo.',
           },
         ],
-        image: '/images/run-ai-on-tablet-remote-setup-es.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-remote-setup-hero-pt.png',
         imageCaption: 'IA remota de um tablet em 4 passos: instale Ollama na sua máquina em casa, baixe um modelo e Open WebUI, encontre o IP da sua máquina, depois abra http://[IP]:3000 no navegador do seu tablet — sem modelo armazenado no tablet, executa modelos 70B a 20 a 40 tok/s.',
       },
       models: {
@@ -3109,7 +3117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Para a maioria das tarefas cotidianas (redigir texto, responder perguntas, resumir conteúdo), Phi-4 Mini (3.8B) em um tablet é suficientemente capaz. Onde fica aquém em comparação com um modelo de 70B: raciocínio complexo de múltiplos passos, escrita criativa com nuances e análise de documentos longos. Para essas tarefas, use a conexão remota.',
           },
         ],
-        image: '/images/run-ai-on-tablet-model-by-device-es.svg',
+        image: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-pt.png',
         imageCaption: 'Melhor modelo por tablet: iPad Pro M5 (12 GB / 16 GB) alcança de 32 a 38 tok/s no Llama 3.2 3B; iPad Air M4 executa Phi-4 Mini a 18 a 20 tok/s; Android 8 GB alcança de 10 a 15 tok/s via Termux; o Pixel Tablet requer conexão remota devido ao lento chip Tensor G2.',
       },
       frontends: {
@@ -3298,6 +3306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تشغيل ذكاء اصطناعي محلي على لوحي أصبح عمليًا في 2026 على أجهزة iPad من الفئة الراقية وأجهزة Android بـ 8 جيجابايت RAM أو أكثر. يغطي هذا الدليل الخيارات: الاستدلال على الجهاز مع تطبيق Pocket Paladin وLLM Farm على iPad، وTermux + Ollama على Android، وبديل الاتصال عن بُعد (ربط اللوحي بـ Mac أو PC يشغّل Ollama عبر شبكة Wi-Fi المحلية) للأجهزة التي لا تستطيع تشغيل الاستدلال محليًا.',
     metaDescription:
       'Pocket Paladin وLLM Farm يُشغّلان نماذج محلية على iPad Pro M5؛ Android بـ 8 جيجابايت RAM يدعم Termux + Ollama أو الاتصال بـ Mac عبر Wi-Fi.',
+    heroImage: '/images/run-ai-on-tablet-ipad-android-model-by-device-hero-ar.png',
     twitterDescription:
       'شغّل ذكاءً اصطناعيًا على iPad أو تابلت Android في 2026: الاستدلال على الجهاز (Pocket Paladin وLLM Farm وTermux+Ollama) والاتصال عن بُعد بـ Mac/PC.',
     current_models_mentioned: [
