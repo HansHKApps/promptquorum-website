@@ -1,38 +1,38 @@
-<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
-  <rect width="800" height="350" fill="#FFFFFF"/>
-  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">NPU Access Decides the Speed Gap</text>
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="1200" height="675" fill="#FFFFFF"/>
+  <text x="600" y="57.86" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="700" fill="#1C1B1F" text-anchor="middle">NPU Access Decides the Speed Gap</text>
 
   <!-- Left: Snapdragon 8 Elite -->
-  <rect x="28" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
-  <rect x="28" y="52" width="340" height="4" rx="0" fill="#34A853"/>
-  <text x="198" y="80" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Snapdragon 8 Elite</text>
-  <text x="198" y="100" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Galaxy S25 Ultra, OnePlus 13</text>
+  <rect x="42" y="100.29" width="510" height="520.71" rx="11.57" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="42" y="100.29" width="510" height="7.71" rx="0" fill="#34A853"/>
+  <text x="297" y="154.29" font-size="24" font-weight="700" fill="#34A853" text-anchor="middle">Snapdragon 8 Elite</text>
+  <text x="297" y="192.86" font-size="18" font-weight="600" fill="#49454F" text-anchor="middle">Galaxy S25 Ultra, OnePlus 13</text>
 
-  <text x="48" y="135" font-size="12" font-weight="700" fill="#79747E">Hexagon NPU exposed to apps</text>
-  <text x="48" y="163" font-family="'SF Mono', Monaco, monospace" font-size="24" font-weight="700" fill="#34A853">~22 tok/sec</text>
-  <text x="48" y="182" font-size="11.5" fill="#49454F">MLC Chat, Phi-4 Mini, NPU path</text>
-  <line x1="48" y1="196" x2="348" y2="196" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="72" y="260.36" font-size="18" font-weight="700" fill="#79747E">Hexagon NPU exposed to apps</text>
+  <text x="72" y="314.36" font-family="'SF Mono', Monaco, monospace" font-size="36" font-weight="700" fill="#34A853">~22 tok/sec</text>
+  <text x="72" y="351" font-size="17.25" fill="#49454F">MLC Chat, Phi-4 Mini, NPU path</text>
+  <line x1="72" y1="378" x2="522" y2="378" stroke="#F7F2FA" stroke-width="1.4"/>
 
-  <text x="48" y="222" font-size="12" fill="#49454F">Also reaches ~40 tok/sec on the</text>
-  <text x="48" y="240" font-size="12" fill="#49454F">smaller Qwen3 1.7B model — 3–4&#215;</text>
-  <text x="48" y="258" font-size="12" fill="#49454F">faster than CPU-only apps on the</text>
-  <text x="48" y="276" font-size="12" fill="#49454F">same phone.</text>
+  <text x="72" y="428.14" font-size="18" fill="#49454F">Also reaches ~40 tok/sec on the</text>
+  <text x="72" y="462.86" font-size="18" fill="#49454F">smaller Qwen3 1.7B model — 3–4&#215;</text>
+  <text x="72" y="497.57" font-size="18" fill="#49454F">faster than CPU-only apps on the</text>
+  <text x="72" y="532.29" font-size="18" fill="#49454F">same phone.</text>
 
   <!-- Right: Tensor G5 -->
-  <rect x="432" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
-  <rect x="432" y="52" width="340" height="4" rx="0" fill="#EA4335"/>
-  <text x="602" y="80" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">Google Tensor G5</text>
-  <text x="602" y="100" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Pixel 9 Pro</text>
+  <rect x="648" y="100.29" width="510" height="520.71" rx="11.57" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="648" y="100.29" width="510" height="7.71" rx="0" fill="#EA4335"/>
+  <text x="903" y="154.29" font-size="24" font-weight="700" fill="#EA4335" text-anchor="middle">Google Tensor G5</text>
+  <text x="903" y="192.86" font-size="18" font-weight="600" fill="#49454F" text-anchor="middle">Pixel 9 Pro</text>
 
-  <text x="452" y="135" font-size="12" font-weight="700" fill="#79747E">NPU not exposed to third-party apps</text>
-  <text x="452" y="163" font-family="'SF Mono', Monaco, monospace" font-size="24" font-weight="700" fill="#EA4335">10–18 tok/sec</text>
-  <text x="452" y="182" font-size="11.5" fill="#49454F">All 6 apps, Phi-4 Mini, CPU-only</text>
-  <line x1="452" y1="196" x2="752" y2="196" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="678" y="260.36" font-size="18" font-weight="700" fill="#79747E">NPU not exposed to third-party apps</text>
+  <text x="678" y="314.36" font-family="'SF Mono', Monaco, monospace" font-size="36" font-weight="700" fill="#EA4335">10–18 tok/sec</text>
+  <text x="678" y="351" font-size="17.25" fill="#49454F">All 6 apps, Phi-4 Mini, CPU-only</text>
+  <line x1="678" y1="378" x2="1128" y2="378" stroke="#F7F2FA" stroke-width="1.4"/>
 
-  <text x="452" y="222" font-size="12" fill="#49454F">Every app tested falls back to</text>
-  <text x="452" y="240" font-size="12" fill="#49454F">CPU inference on Tensor G5 —</text>
-  <text x="452" y="258" font-size="12" fill="#49454F">no app currently unlocks Google's</text>
-  <text x="452" y="276" font-size="12" fill="#49454F">on-device NPU for third parties.</text>
+  <text x="678" y="428.14" font-size="18" fill="#49454F">Every app tested falls back to</text>
+  <text x="678" y="462.86" font-size="18" fill="#49454F">CPU inference on Tensor G5 —</text>
+  <text x="678" y="497.57" font-size="18" fill="#49454F">no app currently unlocks Google's</text>
+  <text x="678" y="532.29" font-size="18" fill="#49454F">on-device NPU for third parties.</text>
 
-  <text x="400" y="335" font-family="system-ui, sans-serif" font-size="11.5" fill="#79747E" text-anchor="middle">Same Phi-4 Mini model, same quantization — chipset NPU exposure is what separates the two results.</text>
-<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
+  <text x="600" y="646.07" font-family="system-ui, sans-serif" font-size="17.25" fill="#79747E" text-anchor="middle">Same Phi-4 Mini model, same quantization — chipset NPU exposure is what separates the two results.</text>
+<text x="1188" y="665.36" font-family="system-ui,sans-serif" font-size="13.5" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

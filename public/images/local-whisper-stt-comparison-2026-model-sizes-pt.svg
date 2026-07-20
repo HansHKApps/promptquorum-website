@@ -1,33 +1,33 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
-  <rect width="800" height="400" fill="#FFFFFF"/>
-  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Tamanhos de Modelo Whisper: Velocidade vs. Precisão</text>
-  <text x="400" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Fator de velocidade vs. tempo real na RTX 4070 — WER mais baixo é mais preciso</text>
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="1200" height="675" fill="#FFFFFF"/>
+  <text x="600" y="50.63" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="700" fill="#1C1B1F" text-anchor="middle">Tamanhos de Modelo Whisper: Velocidade vs. Precisão</text>
+  <text x="600" y="84.38" font-family="system-ui, sans-serif" font-size="18" fill="#79747E" text-anchor="middle">Fator de velocidade vs. tempo real na RTX 4070 — WER mais baixo é mais preciso</text>
 
-  <line x1="260" y1="345" x2="740" y2="345" stroke="#E8DEF8" stroke-width="1.5"/>
+  <line x1="390" y1="582.19" x2="1110" y2="582.19" stroke="#E8DEF8" stroke-width="2.1"/>
 
-  <text x="250" y="94" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">tiny (39M)</text>
-  <rect x="260" y="75" width="480" height="24" fill="#6750A4" rx="4"/>
-  <text x="730" y="92" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="end">32&#215; · 7.6% WER</text>
+  <text x="375" y="158.63" font-family="system-ui, sans-serif" font-size="19.5" font-weight="700" fill="#79747E" text-anchor="end">tiny (39M)</text>
+  <rect x="390" y="126.56" width="720" height="40.5" fill="#6750A4" rx="6.75"/>
+  <text x="1095" y="155.25" font-family="'SF Mono', Monaco, monospace" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="end">32&#215; · 7.6% WER</text>
 
-  <text x="250" y="139" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">base (74M)</text>
-  <rect x="260" y="120" width="240" height="24" fill="#6750A4" rx="4"/>
-  <text x="490" y="137" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="end">16&#215; · 5.0% WER</text>
+  <text x="375" y="234.56" font-family="system-ui, sans-serif" font-size="19.5" font-weight="700" fill="#79747E" text-anchor="end">base (74M)</text>
+  <rect x="390" y="202.5" width="360" height="40.5" fill="#6750A4" rx="6.75"/>
+  <text x="735" y="231.19" font-family="'SF Mono', Monaco, monospace" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="end">16&#215; · 5.0% WER</text>
 
-  <text x="250" y="184" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">small (244M)</text>
-  <rect x="260" y="165" width="90" height="24" fill="#34A853" rx="4"/>
-  <text x="360" y="182" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">6&#215; · 3.4% WER</text>
+  <text x="375" y="310.5" font-family="system-ui, sans-serif" font-size="19.5" font-weight="700" fill="#79747E" text-anchor="end">small (244M)</text>
+  <rect x="390" y="278.44" width="135" height="40.5" fill="#34A853" rx="6.75"/>
+  <text x="540" y="307.13" font-family="'SF Mono', Monaco, monospace" font-size="18" font-weight="700" fill="#1C1B1F">6&#215; · 3.4% WER</text>
 
-  <text x="250" y="229" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">distil-large-v3</text>
-  <rect x="260" y="210" width="90" height="24" fill="#F4B400" rx="4"/>
-  <text x="360" y="227" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">6&#215; · 2.6% WER</text>
+  <text x="375" y="386.44" font-family="system-ui, sans-serif" font-size="19.5" font-weight="700" fill="#79747E" text-anchor="end">distil-large-v3</text>
+  <rect x="390" y="354.38" width="135" height="40.5" fill="#F4B400" rx="6.75"/>
+  <text x="540" y="383.06" font-family="'SF Mono', Monaco, monospace" font-size="18" font-weight="700" fill="#1C1B1F">6&#215; · 2.6% WER</text>
 
-  <text x="250" y="274" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">medium (769M)</text>
-  <rect x="260" y="255" width="30" height="24" fill="#7D5260" rx="4"/>
-  <text x="300" y="272" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">2&#215; · 2.9% WER</text>
+  <text x="375" y="462.38" font-family="system-ui, sans-serif" font-size="19.5" font-weight="700" fill="#79747E" text-anchor="end">medium (769M)</text>
+  <rect x="390" y="430.31" width="45" height="40.5" fill="#7D5260" rx="6.75"/>
+  <text x="450" y="459" font-family="'SF Mono', Monaco, monospace" font-size="18" font-weight="700" fill="#1C1B1F">2&#215; · 2.9% WER</text>
 
-  <text x="250" y="319" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">large-v3 (1.55B)</text>
-  <rect x="260" y="300" width="15" height="24" fill="#7D5260" rx="4"/>
-  <text x="285" y="317" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">1&#215; (referência) · 2.5% WER</text>
+  <text x="375" y="538.31" font-family="system-ui, sans-serif" font-size="19.5" font-weight="700" fill="#79747E" text-anchor="end">large-v3 (1.55B)</text>
+  <rect x="390" y="506.25" width="22.5" height="40.5" fill="#7D5260" rx="6.75"/>
+  <text x="427.5" y="534.94" font-family="'SF Mono', Monaco, monospace" font-size="18" font-weight="700" fill="#1C1B1F">1&#215; (referência) · 2.5% WER</text>
 
-  <text x="400" y="378" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">O distil-large-v3 iguala a velocidade do medium com precisão próxima à do large-v3 — o melhor equilíbrio velocidade/qualidade para a maioria dos pipelines.</text>
-<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
+  <text x="600" y="637.88" font-family="system-ui, sans-serif" font-size="17.25" fill="#49454F" text-anchor="middle">O distil-large-v3 iguala a velocidade do medium com precisão próxima à do large-v3 — o melhor equilíbrio velocidade/qualidade para a maioria dos pipelines.</text>
+<text x="1188" y="666.56" font-family="system-ui,sans-serif" font-size="13.5" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
