@@ -15,6 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: '70B on Consumer Hardware 2026: RAM, GPU Setup Guide',
       intro: 'Running a 70B parameter model locally requires 40-48 GB of RAM at Q4_K_M quantization. This is achievable on: Apple Silicon Macs with 64 GB unified memory, workstations with 64 GB DDR5, or machines combining a 24 GB NVIDIA GPU with 32 GB system RAM using layer offloading. As of April 2026, Llama 3.3 70B and Qwen3 72B are the two primary 70B models available.',
       metaDescription: 'Run Llama 3.3 and Qwen3 70B models locally: RAM requirements, NVIDIA vs Apple Silicon, layer offloading, benchmarks. Complete hardware guide -- April 2026.',
+      heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-en.png',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Running a 70B parameter model locally requires 40-48 GB of RAM at Q4_K_M quantization. This is achievable on: Apple Silicon Macs with 64 GB unified memory, workstations with 64 GB DDR5, or machines combining a 24 GB NVIDIA GPU with 32 GB system RAM using layer offloading.**',
       audience: 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows',
@@ -54,7 +55,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**A 70B model at Q4_K_M quantization requires approximately 40-43 GB of memory that is accessible to the inference engine.** This can come from GPU VRAM, unified system memory (Apple Silicon), system RAM, or a combination via layer offloading.',
           ],
-          image: '/images/70b-hardware-comparison.svg',
+          image: '/images/70b-models-consumer-hardware-hardware-comparison-hero-en.png',
           imageCaption: 'Hardware comparison: Apple Silicon M5 Max achieves 25-35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10-18 tok/sec, and CPU-only 70B inference produces just 1-3 tok/sec.',
           rows: [
             { 'Hardware': 'Apple M5 Max (64 GB unified)', 'Can Run 70B?': 'Yes -- full GPU', 'Speed (70B Q4)': '20-30 tok/sec', 'Notes': 'Best consumer laptop option' },
@@ -69,7 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         ramByQuant: {
           title: 'How Much RAM Does a 70B Model Need at Each Quantization Level?',
-          image: '/images/70b-quantization-tradeoff.svg',
+          image: '/images/70b-models-consumer-hardware-quantization-tradeoff-hero-en.png',
           imageCaption: 'Quantization trade-off curve: Q4_K_M (recommended) requires 40-43 GB RAM with only 1-3% quality loss versus FP16, balancing practicality and performance for consumer hardware.',
           rows: [
             { 'Quantization': 'FP16 (full precision)', 'RAM Required': '~140 GB', 'Quality': 'Reference quality', 'Practical?': 'No -- server only' },
@@ -310,6 +311,7 @@ schema: {
       seoTitle: 'Llama 70B en PC 2026: 40 GB RAM, RTX 4090 o M5 Max',
       intro: 'Ejecutar un modelo de 70B parámetros localmente requiere 40-48 GB de RAM con cuantización Q4_K_M. Esto es posible en: Macs Apple Silicon con 64 GB de memoria unificada, estaciones de trabajo con 64 GB DDR5, o máquinas que combinan una GPU NVIDIA de 24 GB con 32 GB de RAM del sistema usando layer offloading. En abril de 2026, Llama 3.3 70B y Qwen3 72B son los dos modelos 70B principales disponibles.',
       metaDescription: 'Llama 3.3 70B necesita 40 GB RAM (Q4_K_M). M5 Max logra 30 tok/s; RTX 4090 llega a 18 tok/s. Guía NVIDIA vs Apple Silicon para modelos 70B en PC 2026.',
+      heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-es.png',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Ejecutar un modelo de 70B parámetros localmente requiere 40-48 GB de RAM con cuantización Q4_K_M. Esto es posible en: Macs Apple Silicon con 64 GB de memoria unificada, estaciones de trabajo con 64 GB DDR5, o máquinas que combinan una GPU NVIDIA de 24 GB con 32 GB de RAM del sistema usando layer offloading.**',
       audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo con LLMs locales',
@@ -348,7 +350,7 @@ schema: {
           content: [
             '**Un modelo 70B con cuantización Q4_K_M requiere aproximadamente 40-43 GB de memoria accesible para el motor de inferencia.** Esto puede provenir de VRAM de la GPU, memoria unificada del sistema (Apple Silicon), RAM del sistema, o una combinación mediante layer offloading.',
           ],
-          image: '/images/70b-hardware-comparison.svg',
+          image: '/images/70b-models-consumer-hardware-hardware-comparison-hero-es.png',
           imageCaption: 'Comparación de hardware: Apple Silicon M5 Max alcanza 25-35 tok/seg sin offloading, mientras que NVIDIA RTX 4090 con layer offloading llega a 10-18 tok/seg, y la inferencia 70B solo con CPU produce apenas 1-3 tok/seg.',
           rows: [
             { 'Hardware': 'Apple M5 Max (64 GB unificados)', '¿Puede ejecutar 70B?': 'Sí -- GPU completa', 'Velocidad (70B Q4)': '20-30 tok/seg', 'Notas': 'Mejor opción de laptop de consumo' },
@@ -363,7 +365,7 @@ schema: {
         },
         ramByQuant: {
           title: '¿Cuánta RAM necesita un modelo 70B en cada nivel de cuantización?',
-          image: '/images/70b-quantization-tradeoff.svg',
+          image: '/images/70b-models-consumer-hardware-quantization-tradeoff-hero-es.png',
           imageCaption: 'Curva de compromiso de cuantización: Q4_K_M (recomendado) requiere 40-43 GB de RAM con solo 1-3% de pérdida de calidad frente a FP16, equilibrando practicidad y rendimiento para hardware de consumo.',
           rows: [
             { 'Cuantización': 'FP16 (precisión completa)', 'RAM requerida': '~140 GB', 'Calidad': 'Calidad de referencia', '¿Práctico?': 'No -- solo servidores' },
@@ -604,6 +606,7 @@ schema: {
       seoTitle: 'نماذج ⁨70B⁩ محليًا: متطلبات ⁨RAM⁩ وإعداد ⁨GPU 2026⁩',
       intro: 'يتطلب تشغيل نموذج بـ 70B معامل محليًا من 40 إلى 48 GB من الذاكرة مع تكميم Q4_K_M. هذا ممكن على: أجهزة Mac بمعالج Apple Silicon مع 64 GB من الذاكرة الموحدة، أو محطات عمل بذاكرة 64 GB DDR5، أو أجهزة تجمع بين GPU من NVIDIA بسعة 24 GB و32 GB من ذاكرة النظام باستخدام layer offloading. في أبريل 2026، يُعد Llama 3.3 70B وQwen3 72B النموذجين الرئيسيين من فئة 70B المتاحين.',
       metaDescription: '⁨Llama 3.3 70B⁩ يحتاج ⁨40 GB RAM⁩ عند ⁨Q4⁩_⁨K⁩_⁨M. M5 Max⁩ يبلغ ⁨20⁩–⁨30 tok/s⁩؛ ⁨RTX 4090⁩ مع ⁨layer offloading⁩ يبلغ ⁨10⁩–⁨18 tok/s⁩. دليل عتاد المستهلك ⁨2026⁩.',
+      heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-ar.png',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**يتطلب تشغيل نموذج بـ 70B معامل محليًا من 40 إلى 48 GB من الذاكرة مع تكميم Q4_K_M. هذا ممكن على: أجهزة Mac بمعالج Apple Silicon مع 64 GB من الذاكرة الموحدة، أو محطات عمل بذاكرة 64 GB DDR5، أو أجهزة تجمع بين GPU من NVIDIA بسعة 24 GB و32 GB من ذاكرة النظام باستخدام layer offloading.**',
       audience: 'المطورون المعتادون على Ollama أو LM Studio الذين يحسّنون تدفقات العمل مع نماذج LLM المحلية',
@@ -642,7 +645,7 @@ schema: {
           content: [
             '**يتطلب نموذج 70B بتكميم Q4_K_M نحو 40-43 GB من الذاكرة المتاحة لمحرك الاستدلال.** يمكن أن تأتي هذه من VRAM الخاصة بكرت الرسوميات، أو الذاكرة الموحدة للنظام (Apple Silicon)، أو ذاكرة النظام، أو مزيج عبر layer offloading.',
           ],
-          image: '/images/70b-hardware-comparison.svg',
+          image: '/images/70b-models-consumer-hardware-hardware-comparison-hero-ar.png',
           imageCaption: 'مقارنة العتاد: يحقق Apple Silicon M5 Max من 25 إلى 35 token/ثانية دون offloading، بينما يصل NVIDIA RTX 4090 مع layer offloading إلى 10-18 token/ثانية، ولا ينتج الاستدلال بـ 70B على المعالج فقط سوى 1-3 token/ثانية.',
           rows: [
             { 'Hardware': 'Apple M5 Max (64 GB موحدة)', '¿Puede ejecutar 70B?': 'نعم -- GPU كاملة', 'Velocidad (70B Q4)': '20-30 token/ثانية', 'Notas': 'أفضل خيار لابتوب للمستهلك' },
@@ -657,7 +660,7 @@ schema: {
         },
         ramByQuant: {
           title: 'كم تحتاج ذاكرة لنموذج 70B في كل مستوى تكميم؟',
-          image: '/images/70b-quantization-tradeoff.svg',
+          image: '/images/70b-models-consumer-hardware-quantization-tradeoff-hero-ar.png',
           imageCaption: 'منحنى مفاضلة التكميم: يتطلب Q4_K_M (موصى به) من 40 إلى 43 GB من الذاكرة بفقدان جودة لا يتجاوز 1-3% مقابل FP16، موازنًا بين العملية والأداء لعتاد المستهلك.',
           rows: [
             { 'Cuantización': 'FP16 (دقة كاملة)', 'RAM requerida': 'نحو 140 GB', 'Calidad': 'جودة مرجعية', '¿Práctico?': 'لا -- خوادم فقط' },
@@ -901,6 +904,7 @@ schema: {
       seoTitle: '70B em hardware de consumo 2026: guia de RAM e GPU',
       intro: 'Rodar um modelo de 70B parâmetros localmente requer 40-48 GB de RAM com quantização Q4_K_M. Isso é possível em: Macs Apple Silicon com 64 GB de memória unificada, estações de trabalho com 64 GB DDR5, ou máquinas que combinam uma GPU NVIDIA de 24 GB com 32 GB de RAM do sistema usando layer offloading. Em abril de 2026, Llama 3.3 70B e Qwen3 72B são os dois principais modelos 70B disponíveis.',
       metaDescription: 'Rode Llama 3.3 e Qwen3 70B localmente: requisitos de RAM, NVIDIA vs Apple Silicon, layer offloading e benchmarks. Guia de hardware completo — abril 2026.',
+      heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-pt.png',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Rodar um modelo de 70B parâmetros localmente requer 40-48 GB de RAM com quantização Q4_K_M. Isso é possível em: Macs Apple Silicon com 64 GB de memória unificada, estações de trabalho com 64 GB DDR5, ou máquinas que combinam uma GPU NVIDIA de 24 GB com 32 GB de RAM do sistema usando layer offloading.**',
       audience: 'Desenvolvedores familiarizados com Ollama ou LM Studio que otimizam fluxos de trabalho com LLMs locais',
@@ -939,7 +943,7 @@ schema: {
           content: [
             '**Um modelo 70B com quantização Q4_K_M requer aproximadamente 40-43 GB de memória acessível ao mecanismo de inferência.** Isso pode vir de VRAM da GPU, memória unificada do sistema (Apple Silicon), RAM do sistema, ou uma combinação via layer offloading.',
           ],
-          image: '/images/70b-hardware-comparison.svg',
+          image: '/images/70b-models-consumer-hardware-hardware-comparison-hero-pt.png',
           imageCaption: 'Comparação de hardware: Apple Silicon M5 Max atinge 25-35 tok/s sem offloading, enquanto NVIDIA RTX 4090 com layer offloading chega a 10-18 tok/s, e a inferência 70B somente com CPU produz apenas 1-3 tok/s.',
           rows: [
             { 'Hardware': 'Apple M5 Max (64 GB unificados)', 'Pode rodar 70B?': 'Sim -- GPU completa', 'Velocidade (70B Q4)': '20-30 tok/s', 'Notas': 'Melhor opção de laptop de consumo' },
@@ -954,7 +958,7 @@ schema: {
         },
         ramByQuant: {
           title: 'Quanta RAM um modelo 70B precisa em cada nível de quantização?',
-          image: '/images/70b-quantization-tradeoff.svg',
+          image: '/images/70b-models-consumer-hardware-quantization-tradeoff-hero-pt.png',
           imageCaption: 'Curva de compromisso de quantização: Q4_K_M (recomendado) requer 40-43 GB de RAM com apenas 1-3% de perda de qualidade em relação ao FP16, equilibrando praticidade e desempenho para hardware de consumo.',
           rows: [
             { 'Quantização': 'FP16 (precisão completa)', 'RAM necessária': '~140 GB', 'Qualidade': 'Qualidade de referência', 'Prático?': 'Não -- apenas servidores' },
@@ -1135,6 +1139,7 @@ schema: {
   seoTitle: '70B Modelle auf Consumer-Hardware 2026: RAM & GPU',
   intro: 'Ein 70B Parameter Modell lokal auszuführen benötigt 40-48 GB RAM bei Q4_K_M Quantisierung. Dies ist erreichbar auf: Apple Silicon Macs mit 64 GB unified memory, Workstations mit 64 GB DDR5, oder Maschinen, die eine 24 GB NVIDIA GPU mit 32 GB System RAM kombinieren, unter Verwendung von Layer Offloading. Ab April 2026 sind Llama 3.3 70B und Qwen3 72B die beiden primären 70B Modelle verfügbar.',
   metaDescription: 'Betreibe Llama 3.3 und Qwen3 70B lokal: RAM-Anforderungen, NVIDIA vs Apple Silicon, Layer-Offloading, Benchmarks. Kompletter Hardware-Leitfaden -- April 2026.',
+  heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-de.png',
   publishDate: '2026-04-04',
   readTime: '9 Min. Lesezeit',
   educationalLevel: 'Intermediate',
@@ -1302,7 +1307,7 @@ schema: {
       content: [
         '**Ein 70B Modell bei Q4_K_M Quantisierung benötigt etwa 40-43 GB Speicher, der für die Inferenz-Engine zugänglich ist.** Dies kann von GPU VRAM, unified System Memory (Apple Silicon), System RAM oder einer Kombination über Layer Offloading stammen.',
       ],
-      image: '/images/70b-hardware-comparison.svg',
+      image: '/images/70b-models-consumer-hardware-hardware-comparison-hero-de.png',
       imageCaption: 'Hardware comparison: Apple Silicon M5 Max achieves 25-35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10-18 tok/sec, and CPU-only 70B inference produces just 1-3 tok/sec.',
       rows: [
         { 'Hardware': 'Apple M5 Max (64 GB unified)', 'Kann 70B ausführen?': 'Ja -- vollständig GPU', 'Speed (70B Q4)': '20-30 tok/sec', 'Notizen': 'Beste Consumer Laptop Option' },
@@ -1316,7 +1321,7 @@ schema: {
     },
     ramByQuant: {
       title: 'Wie viel RAM benötigt ein 70B Modell bei jedem Quantisierungs-Level?',
-      image: '/images/70b-quantization-tradeoff.svg',
+      image: '/images/70b-models-consumer-hardware-quantization-tradeoff-hero-de.png',
       imageCaption: 'Quantization trade-off curve: Q4_K_M (recommended) requires 40-43 GB RAM with only 1-3% quality loss versus FP16, balancing practicality and performance for consumer hardware.',
       rows: [
         { 'Quantisierung': 'FP16 (vollständige Präzision)', 'RAM erforderlich': 'etwa 140 GB', 'Qualität': 'Referenz-Qualität', 'Praktisch?': 'Nein -- nur Server' },
@@ -1432,6 +1437,7 @@ schema: {
   seoTitle: 'Modèles 70B sur Matériel Grand Public 2026: Guide',
   intro: 'Exécuter un modèle 70B localement nécessite 40-48 Go de RAM en quantification Q4_K_M. C\'est réalisable sur : les Mac Apple Silicon avec 64 Go de mémoire unifiée, les stations de travail avec 64 Go DDR5, ou les machines combinant un GPU NVIDIA 24 Go avec 32 Go de RAM système via déchargement de couches. En avril 2026, Llama 3.3 70B et Qwen3 72B sont les deux principaux modèles 70B disponibles.',
   metaDescription: 'Exécutez Llama 3.3 et Qwen3 70B localement : exigences RAM, NVIDIA vs Apple Silicon, déchargement de couches, benchmarks. Guide matériel complet -- avril 2026.',
+  heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-fr.png',
   publishDate: '2026-04-04',
   readTime: '8 min de lecture',
   educationalLevel: 'Intermediate',
@@ -1465,7 +1471,7 @@ schema: {
       content: [
         '**Un modèle 70B en quantification Q4_K_M nécessite environ 40-43 Go de mémoire accessible au moteur d\'inférence.** Cela peut provenir de VRAM GPU, de mémoire système unifiée (Apple Silicon), de RAM système, ou d\'une combinaison via déchargement de couches.',
       ],
-      image: '/images/70b-hardware-comparison.svg',
+      image: '/images/70b-models-consumer-hardware-hardware-comparison-hero-fr.png',
       imageCaption: 'Hardware comparison: Apple Silicon M5 Max achieves 25-35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10-18 tok/sec, and CPU-only 70B inference produces just 1-3 tok/sec.',
       rows: [
         { 'Matériel': 'Apple M5 Max (64 Go unifiée)', 'Peut exécuter 70B ?': 'Oui -- GPU complet', 'Vitesse (70B Q4)': '20-30 tok/sec', 'Notes': 'Meilleure option laptop grand public' },
@@ -1479,7 +1485,7 @@ schema: {
     },
     ramByQuant: {
       title: 'Combien de RAM un modèle 70B nécessite-t-il à chaque niveau de quantification ?',
-      image: '/images/70b-quantization-tradeoff.svg',
+      image: '/images/70b-models-consumer-hardware-quantization-tradeoff-hero-fr.png',
       imageCaption: 'Quantization trade-off curve: Q4_K_M (recommended) requires 40-43 GB RAM with only 1-3% quality loss versus FP16, balancing practicality and performance for consumer hardware.',
       rows: [
         { 'Quantification': 'FP16 (précision complète)', 'RAM requise': '~140 Go', 'Qualité': 'Qualité de référence', 'Pratique ?': 'Non -- serveurs uniquement' },
@@ -1631,6 +1637,7 @@ schema: {
   seoTitle: '2026年：コンシューマーハードで70B実行ガイド',
   intro: 'ローカルで70Bパラメータモデルを実行するには、Q4_K_M量化で40～48GBのRAMが必要です。これは以下のハードウェアで実現可能です：64GB統合メモリを持つApple Silicon Mac、64GB DDR5を搭載したワークステーション、またはレイヤーオフロードを使用して24GB NVIDIA GPUと32GB システムRAMを組み合わせたマシン。2026年4月時点では、Llama 3.3 70BとQwen3 72Bが利用可能な主要な70Bモデルです。',
   metaDescription: 'Llama 3.3とQwen3 70Bモデルをローカルで実行：RAM要件、NVIDIAとApple Siliconの比較、レイヤーオフロード、ベンチマーク。完全なハードウェアガイド -- 2026年4月。',
+  heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-ja.png',
   publishDate: '2026-04-04',
   readTime: '9分',
   educationalLevel: 'Intermediate',
@@ -1866,6 +1873,7 @@ schema: {
   seoTitle: '2026消费级硬件运行70B完整指南',
   intro: '在 Q4_K_M 量化下，运行 70B 参数模型需要 40-48 GB 内存。这可以通过以下方式实现：1) 配置 64 GB 统一内存的 Apple Silicon Mac；2) 配置 64 GB DDR5 的工作站；3) 通过层卸载技术结合 24 GB NVIDIA GPU 与 32 GB 系统内存的机器。截至 2026 年 4 月，Llama 3.3 70B 和 Qwen3 72B 是两款主要可用的 70B 模型。',
   metaDescription: '本地运行Llama 3.3和Qwen3 70B模型：RAM需求、NVIDIA与Apple Silicon对比、层卸载技术、基准测试。完整硬件部署指南 -- 2026年4月。',
+  heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-zh.png',
   publishDate: '2026-04-04',
   dateModified: '2026-04-10',
   readTime: '9 分钟阅读',
@@ -1900,7 +1908,7 @@ schema: {
       content: [
         '**Q4_K_M 量化的 70B 模型需要约 40-43 GB 的内存可供推理引擎访问。** 这些内存可以来自 GPU VRAM、统一系统内存 (Apple Silicon)、系统 RAM，或通过层卸载技术的组合。',
       ],
-      image: '/images/70b-hardware-comparison.svg',
+      image: '/images/70b-models-consumer-hardware-hardware-comparison-hero-zh.png',
       imageCaption: 'Hardware comparison: Apple Silicon M5 Max achieves 25-35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10-18 tok/sec, and CPU-only 70B inference produces just 1-3 tok/sec.',
       rows: [
         { '硬件': 'Apple M5 Max (64 GB 统一内存)', '能运行 70B？': '是 -- 完整 GPU', '速度 (70B Q4)': '20-30 tok/秒', '说明': '最佳消费级笔记本选项' },
@@ -1914,7 +1922,7 @@ schema: {
     },
     ramByQuant: {
       title: '70B 模型在各量化等级需要多少内存？',
-      image: '/images/70b-quantization-tradeoff.svg',
+      image: '/images/70b-models-consumer-hardware-quantization-tradeoff-hero-zh.png',
       imageCaption: 'Quantization trade-off curve: Q4_K_M (recommended) requires 40-43 GB RAM with only 1-3% quality loss versus FP16, balancing practicality and performance for consumer hardware.',
       rows: [
         { '量化等级': 'FP16 (完整精度)', '需要内存': '约 140 GB', '质量': '参考质量', '实用性': '否 -- 仅服务器' },
@@ -2198,6 +2206,7 @@ schema: {
     seoTitle: '2026년 소비자 하드웨어 70B 실행 가이드: RAM, GPU 설정',
     intro: '70B 파라미터 모델을 로컬에서 실행하려면 Q4_K_M 양자화 기준으로 40~48GB의 RAM이 필요합니다. 이는 다음 환경에서 가능합니다: 64GB 통합 메모리를 갖춘 Apple Silicon Mac, 64GB DDR5가 장착된 워크스테이션, 또는 레이어 오프로딩을 사용하여 24GB NVIDIA GPU와 32GB 시스템 RAM을 결합한 시스템. 2026년 4월 기준으로 Llama 3.3 70B와 Qwen3 72B가 사용 가능한 주요 70B 모델입니다.',
     metaDescription: 'Llama 3.3 및 Qwen3 70B 모델 로컬 실행: RAM 요구사항, NVIDIA vs Apple Silicon, 레이어 오프로딩, 벤치마크. 완전한 하드웨어 가이드 — 2026년 4월.',
+    heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-ko.png',
     publishDate: '2026-04-04',
     dateModified: '2026-04-18',
     lastFactChecked: '2026-04-18',
@@ -2239,7 +2248,7 @@ schema: {
         content: [
           '**Q4_K_M 양자화에서 70B 모델은 추론 엔진이 접근할 수 있는 약 40~43GB의 메모리가 필요합니다.** 이는 GPU VRAM, 통합 시스템 메모리 (Apple Silicon), 시스템 RAM, 또는 레이어 오프로딩을 통한 조합으로 제공될 수 있습니다.',
         ],
-        image: '/images/70b-hardware-comparison.svg',
+        image: '/images/70b-models-consumer-hardware-hardware-comparison-hero-ko.png',
         imageCaption: '하드웨어 비교: Apple Silicon M5 Max는 오프로딩 없이 25~35 tok/sec를 달성하는 반면, NVIDIA RTX 4090은 레이어 오프로딩으로 10~18 tok/sec에 도달하며, CPU 전용 70B 추론은 1~3 tok/sec에 불과합니다.',
         rows: [
           { '하드웨어': 'Apple M5 Max (64GB 통합)', '70B 실행 가능?': '가능 — 완전 GPU', '속도 (70B Q4)': '20~30 tok/sec', '비고': '최고의 소비자 노트북 옵션' },
@@ -2254,7 +2263,7 @@ schema: {
       },
       ramByQuant: {
         title: '각 양자화 수준에서 70B 모델에 필요한 RAM은 얼마나 되나?',
-        image: '/images/70b-quantization-tradeoff.svg',
+        image: '/images/70b-models-consumer-hardware-quantization-tradeoff-hero-ko.png',
         imageCaption: '양자화 트레이드오프 곡선: Q4_K_M (권장)은 40~43GB RAM이 필요하며 FP16 대비 1~3%의 품질 손실만 발생하여 소비자 하드웨어에서 실용성과 성능의 균형을 이룹니다.',
         rows: [
           { '양자화': 'FP16 (전체 정밀도)', '필요 RAM': '~140GB', '품질': '참조 품질', '실용성': '불가 — 서버 전용' },
