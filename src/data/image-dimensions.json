@@ -349,6 +349,51 @@
     "width": 800,
     "height": 380
   },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -393,6 +438,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/apple-silicon-local-llm-guide-2026-power-efficiency-ja.svg": {
     "encodingFormat": "image/svg+xml",
@@ -1153,6 +1243,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 1000,
     "height": 700
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-comparison-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-comparison-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-comparison-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-comparison-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-comparison-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-comparison-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-comparison-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-comparison-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-amd-mini-pc-local-llm-2026-comparison-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/best-beginner-local-llm-models-3b-vs-7b-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -11014,6 +11194,51 @@
     "width": 800,
     "height": 350
   },
+  "/images/run-qwen-locally-guide-2026-model-sizes-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/run-qwen-locally-guide-2026-model-sizes-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -11053,6 +11278,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 360
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/run-qwen-locally-guide-2026-setup-steps-ja.svg": {
     "encodingFormat": "image/svg+xml",
