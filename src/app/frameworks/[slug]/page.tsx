@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const fwTitle = (fw as any).seoTitle ?? `${fw.name} Prompt Framework — Fields, Examples & When To Use It | PromptQuorum`
   const fwDesc = (fw as any).metaDescription ?? `${fw.expansion}. ${fw.tagline} See all fields, a real example, and when to use ${fw.name} vs other prompt frameworks.`
+  const ogImageUrl = `https://www.promptquorum.com/api/og/${fw.slug}?lang=${selectedLang}`
   return {
     title: fwTitle,
     description: fwDesc,
@@ -31,14 +32,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       siteName: 'PromptQuorum',
       title: `${fw.name} Prompt Framework — Complete Guide`,
       description: `${fw.tagline}`,
-      images: [{ url: 'https://www.promptquorum.com/og-image.png', width: 1200, height: 675, alt: `${fw.name} Prompt Framework` }],
+      images: [{ url: ogImageUrl, width: 1200, height: 675, alt: `${fw.name} Prompt Framework` }],
     },
     twitter: {
       card: 'summary_large_image',
       site: '@promptquorum',
       title: `${fw.name} Prompt Framework — Complete Guide`,
       description: fw.tagline,
-      images: ['https://www.promptquorum.com/og-image.png'],
+      images: [ogImageUrl],
     },
   }
 }
