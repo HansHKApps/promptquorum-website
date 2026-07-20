@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'AnythingLLM, PrivateGPT, and Open WebUI are the three serious self-hosted RAG platforms in 2026. We loaded an identical 5,047-page corpus into each, ran 50 queries across 5 query types, and measured retrieval latency, hallucination rate, citation quality, and the hidden costs nobody talks about (re-embedding, vector DB storage, GPU spikes during indexing). The toy-demo champion is not the production champion.',
     metaDescription:
       '3 local RAG platforms tested on a 5,047-page corpus. AnythingLLM, PrivateGPT, Open WebUI benchmarked for accuracy, latency, citations. May 2026 verdict.',
+    heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-en.png',
     twitterDescription:
       'Local RAG showdown: AnythingLLM vs PrivateGPT vs Open WebUI on 5,047 pages. Different winners for accuracy, latency, scaling. Full benchmarks inside.',
     current_models_mentioned: [
@@ -164,8 +165,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Open WebUI': 'Multi-user chat front-end with optional RAG',
           },
         ],
-        image: '/images/rag-vs-platforms-comparison-table-en.svg',
-        imageCaption: 'AnythingLLM vs PrivateGPT vs Open WebUI on a 5,047-page corpus: AnythingLLM lowest hallucination rate (6%), PrivateGPT fastest retrieval (240 ms p50), Open WebUI best multi-user support — all three scale to ~8,000–12,000 pages on consumer hardware.',
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-en.png',
+        imageCaption: 'AnythingLLM vs PrivateGPT vs Open WebUI -- Tested on a 5,047-page corpus',
       },
       whichOne: {
         id: 'which-one',
@@ -183,6 +184,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your situation': 'I have 10,000+ pages and growing', 'Pick': 'Custom Ollama + Qdrant/Weaviate (none of the three)' },
         ],
         columns: ['Your situation', 'Pick'],
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-en.png',
+        imageCaption: 'Which RAG Platform Should You Choose? -- Decision shortcut by situation',
       },
       howWeTested: {
         id: 'how-we-tested',
@@ -498,6 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'AnythingLLM, PrivateGPT und Open WebUI sind die drei ernstzunehmenden lokalen RAG-Plattformen 2026. Wir haben ein identisches Korpus von 5.047 Seiten in jede Plattform geladen, 50 Abfragen über 5 Abfragetypen ausgeführt und Abruflatenz, Halluzinationsrate, Zitierqualität und die versteckten Kosten gemessen, über die niemand spricht (Neueinbettung, Vektor-DB-Speicher, GPU-Spitzen während der Indexierung). Der Toy-Demo-Champion ist nicht der Produktions-Champion.',
     metaDescription:
       '3 lokale RAG-Plattformen auf 5.047 Seiten getestet. AnythingLLM, PrivateGPT, Open WebUI: Genauigkeit, Latenz, Zitierqualität. Testergebnis Mai 2026.',
+    heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-de.png',
     twitterDescription:
       'Lokales RAG-Duell: AnythingLLM vs PrivateGPT vs Open WebUI auf 5.047 Seiten. Unterschiedliche Gewinner bei Genauigkeit, Latenz, Skalierung. Vollständige Benchmarks eingebunden.',
     current_models_mentioned: [
@@ -645,8 +649,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Open WebUI': 'Multi-User-Chat-Frontend mit optionalem RAG',
           },
         ],
-        image: '/images/rag-vs-platforms-comparison-table-de.svg',
-        imageCaption: 'AnythingLLM vs PrivateGPT vs Open WebUI auf 5.047-Seiten-Korpus: AnythingLLM niedrigste Halluzinationsrate (6%), PrivateGPT schnellster Abruf (240 ms p50), Open WebUI beste Multi-User-Unterstützung — alle drei skalieren bis ~8.000–12.000 Seiten auf Consumer-Hardware.',
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-de.png',
+        imageCaption: 'AnythingLLM vs. PrivateGPT vs. Open WebUI -- Getestet an einem 5.047-Seiten-Korpus',
       },
       whichOne: {
         id: 'which-one',
@@ -664,6 +668,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ihre Situation': 'Ich habe 10.000+ Seiten und wachse weiter', 'Wählen Sie': 'Custom Ollama + Qdrant/Weaviate (keine der drei)' },
         ],
         columns: ['Ihre Situation', 'Wählen Sie'],
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-de.png',
+        imageCaption: 'Welche RAG-Plattform Sollten Sie Wählen? -- Entscheidungshilfe nach Situation',
       },
       howWeTested: {
         id: 'how-we-tested',
@@ -935,6 +941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'AnythingLLM, PrivateGPT et Open WebUI sont les trois plateformes RAG locales sérieuses en 2026. Nous avons chargé un corpus identique de 5 047 pages dans chacune, lancé 50 requêtes sur 5 types, et mesuré la latence d\'extraction, le taux d\'hallucination, la qualité des citations et les coûts cachés (réindexation, stockage vectoriel, pics GPU). Le champion des démos jouet n\'est pas le champion de production.',
     metaDescription:
       '3 plateformes RAG locales testées sur 5 047 pages. AnythingLLM, PrivateGPT, Open WebUI : benchmarks de précision, latence, citations. Mai 2026.',
+    heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-fr.png',
     twitterDescription:
       'Duel RAG local : AnythingLLM vs PrivateGPT vs Open WebUI sur 5 047 pages. Gagnants différents en précision, latence, scalabilité. Benchmarks complets.',
     current_models_mentioned: [
@@ -1082,8 +1089,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Open WebUI': 'Frontend chat multi-utilisateurs avec RAG optionnel',
           },
         ],
-        image: '/images/rag-vs-platforms-comparison-table-fr.svg',
-        imageCaption: 'AnythingLLM vs PrivateGPT vs Open WebUI sur un corpus de 5 047 pages : AnythingLLM taux d\'hallucination le plus bas (6 %), PrivateGPT récupération la plus rapide (240 ms p50), Open WebUI meilleur support multi-utilisateurs — tous trois supportent ~8 000–12 000 pages sur matériel grand public.',
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-fr.png',
+        imageCaption: 'AnythingLLM vs PrivateGPT vs Open WebUI -- Testé sur un corpus de 5 047 pages',
       },
       whichOne: {
         id: 'which-one',
@@ -1101,6 +1108,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Votre situation': 'J\'ai 10 000+ pages et en augmentation', 'Choisissez': 'Stack personnalisé Ollama + Qdrant/Weaviate (aucune des trois)' },
         ],
         columns: ['Votre situation', 'Choisissez'],
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-fr.png',
+        imageCaption: 'Quelle Plateforme RAG Choisir ? -- Raccourci de décision selon la situation',
       },
       howWeTested: {
         id: 'how-we-tested',
@@ -1363,6 +1372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'AnythingLLM、PrivateGPT、Open WebUIは2026年における3つの本格的な自己ホスト型RAGプラットフォームです。同じ5,047ページのコーパスをそれぞれに読み込み、5つのクエリタイプにわたって50クエリを実行し、検索レイテンシ、ハルシネーション率、引用品質、および隠れたコスト（再埋め込み、ベクトルDB保存、インデックス作成時のGPUスパイク）を測定しました。デモの優勝者は本番運用の優勝者ではありません。',
     metaDescription:
       'AnythingLLM、PrivateGPT、Open WebUIを5,047ページのコーパスでテスト。精度、レイテンシ、引用、スケーリング性能を比較。2026年5月の検証結果。',
+    heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-ja.png',
     twitterDescription:
       'ローカルRAG対決：AnythingLLM vs PrivateGPT vs Open WebUI（5,047ページ）。精度、レイテンシ、スケーリングで異なる優勝者。完全ベンチマーク内蔵。',
     current_models_mentioned: [
@@ -1509,8 +1519,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Open WebUI': 'オプションのRAG付きマルチユーザーチャットフロントエンド',
           },
         ],
-        image: '/images/rag-vs-platforms-comparison-table-ja.svg',
-        imageCaption: '5,047ページのコーパスでテスト：AnythingLLMは幻覚率最低（6%）、PrivateGPTは検索速度最速（p50 240ms）、Open WebUIはマルチユーザー対応が最優秀。3つとも消費者向けハードウェアで約8,000〜12,000ページまでスケール可能。',
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-ja.png',
+        imageCaption: 'AnythingLLM対PrivateGPT対Open WebUI -- 5,047ページのコーパスでテスト',
       },
       whichOne: {
         id: 'which-one',
@@ -1528,6 +1538,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '状況': '10,000ページ以上で成長中', '選択': 'カスタムOllama + Qdrant/Weaviate（上記以外）' },
         ],
         columns: ['状況', '選択'],
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-ja.png',
+        imageCaption: 'どのRAGプラットフォームを選ぶべきか？ -- 状況別の判断ショートカット',
       },
       howWeTested: {
         id: 'how-we-tested',
@@ -1961,6 +1973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '本地RAG 2026：AnythingLLM vs PrivateGPT vs Open WebUI',
     intro: 'AnythingLLM、PrivateGPT和Open WebUI是2026年三个成熟的自托管RAG平台。我们将相同的5,047页语料库加载到每个平台，运行了50个跨5种查询类型的查询，测量了检索延迟、幻想率、引用质量和隐性成本（重新嵌入、向量DB存储、索引时GPU峰值）。演示冠军不是生产冠军。',
     metaDescription: '在5,047页语料库上测试AnythingLLM、PrivateGPT和Open WebUI。比较准确性、延迟、引用和扩展性能。2026年5月的测试结果。',
+    heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-zh.png',
     twitterDescription: '本地RAG对决：AnythingLLM vs PrivateGPT vs Open WebUI（5,047页）。在准确性、延迟和扩展方面有不同的获胜者。完整基准。',
     current_models_mentioned: ['Llama 3.3 8B', 'Qwen3 14B', 'nomic-embed-text v1.5', 'BAAI/bge-m3', 'BAAI/bge-small-en-v1.5', 'mxbai-embed-large'],
     current_hardware_mentioned: ['NVIDIA RTX 4070 12 GB', 'NVIDIA RTX 4090 24 GB', 'Apple M5 MacBook Pro 16 GB', 'Apple M5 Max 64 GB'],
@@ -1989,8 +2002,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: '如何比较 AnythingLLM、PrivateGPT 和 Open WebUI？',
-        image: '/images/rag-vs-platforms-comparison-table-zh.svg',
-        imageCaption: 'AnythingLLM vs PrivateGPT vs Open WebUI 在5,047页语料库上测试：AnythingLLM幻觉率最低（6%），PrivateGPT检索速度最快（p50 240ms），Open WebUI多用户支持最佳——三者均可在消费级硬件上扩展至约8,000–12,000页。',
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-zh.png',
+        imageCaption: 'AnythingLLM对比PrivateGPT对比Open WebUI -- 在5047页语料库上测试',
       },
       architecture: {
         id: 'architecture',
@@ -2031,6 +2044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'AnythingLLM, PrivateGPT y Open WebUI son las tres plataformas RAG autoalojadas más serias de 2026. Cargamos un corpus idéntico de 5.047 páginas en cada una, ejecutamos 50 consultas en 5 tipos de preguntas y medimos la latencia de recuperación, la tasa de alucinaciones, la calidad de las citas y los costos ocultos de los que nadie habla (re-embedding, almacenamiento en la base de datos vectorial, picos de GPU durante la indexación). El campeón de las demos no es el campeón en producción.',
     metaDescription:
       '3 plataformas RAG locales probadas en un corpus de 5.047 páginas. AnythingLLM, PrivateGPT y Open WebUI: precisión, latencia y citas. Veredicto de 2026.',
+    heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-es.png',
     twitterDescription:
       'Duelo RAG local: AnythingLLM vs PrivateGPT vs Open WebUI en 5.047 páginas. Distintos ganadores en precisión, latencia y escalabilidad. Benchmarks completos.',
     current_models_mentioned: [
@@ -2177,8 +2191,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Open WebUI': 'Frontend de chat multi-usuario con RAG opcional',
           },
         ],
-        image: '/images/rag-vs-platforms-comparison-table-es.svg',
-        imageCaption: 'AnythingLLM vs PrivateGPT vs Open WebUI en un corpus de 5.047 páginas: AnythingLLM con la tasa de alucinaciones más baja (6%), PrivateGPT con la recuperación más rápida (240 ms p50), Open WebUI con el mejor soporte multi-usuario — las tres escalan hasta ~8.000–12.000 páginas en hardware de consumo.',
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-es.png',
+        imageCaption: 'AnythingLLM vs PrivateGPT vs Open WebUI -- Probado en un corpus de 5.047 páginas',
       },
       whichOne: {
         id: 'which-one',
@@ -2196,6 +2210,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu situación': 'Tengo más de 10.000 páginas y seguirán creciendo', 'Elige': 'Stack personalizado con Ollama + Qdrant/Weaviate (ninguna de las tres)' },
         ],
         columns: ['Tu situación', 'Elige'],
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-es.png',
+        imageCaption: '¿Qué Plataforma RAG Deberías Elegir? -- Atajo de decisión según tu situación',
       },
       howWeTested: {
         id: 'how-we-tested',
@@ -2630,6 +2646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'AnythingLLM, PrivateGPT e Open WebUI são as três plataformas RAG auto-hospedadas mais sérias de 2026. Carregamos um corpus idêntico de 5.047 páginas em cada uma, executamos 50 consultas em 5 tipos de perguntas e medimos a latência de recuperação, a taxa de alucinações, a qualidade das citações e os custos ocultos dos quais ninguém fala (re-embedding, armazenamento no banco de dados vetorial, picos de GPU durante a indexação). O campeão das demos não é o campeão em produção.',
     metaDescription:
       '3 plataformas RAG locais testadas em um corpus de 5.047 páginas. AnythingLLM, PrivateGPT e Open WebUI: precisão, latência e citações. Veredito de 2026.',
+    heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-pt.png',
     twitterDescription:
       'Duelo RAG local: AnythingLLM vs PrivateGPT vs Open WebUI em 5.047 páginas. Vencedores diferentes em precisão, latência e escalabilidade. Benchmarks completos.',
     current_models_mentioned: [
@@ -2776,8 +2793,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Open WebUI': 'Frontend de chat multiusuário com RAG opcional',
           },
         ],
-        image: '/images/rag-vs-platforms-comparison-table-en.svg',
-        imageCaption: 'AnythingLLM vs PrivateGPT vs Open WebUI em um corpus de 5.047 páginas: AnythingLLM com a menor taxa de alucinações (6%), PrivateGPT com a recuperação mais rápida (240 ms p50), Open WebUI com o melhor suporte multiusuário — as três escalam até ~8.000–12.000 páginas em hardware de consumo.',
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-pt.png',
+        imageCaption: 'AnythingLLM vs PrivateGPT vs Open WebUI -- Testado em um corpus de 5.047 páginas',
       },
       whichOne: {
         id: 'which-one',
@@ -2795,6 +2812,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sua situação': 'Tenho mais de 10.000 páginas e vão continuar crescendo', 'Escolha': 'Stack personalizada com Ollama + Qdrant/Weaviate (nenhuma das três)' },
         ],
         columns: ['Sua situação', 'Escolha'],
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-pt.png',
+        imageCaption: 'Qual Plataforma RAG Você Deve Escolher? -- Atalho de decisão por situação',
       },
       howWeTested: {
         id: 'how-we-tested',
@@ -3229,6 +3248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تُعدّ AnythingLLM وPrivateGPT وOpen WebUI أبرز ثلاث منصات RAG ذاتية الاستضافة في عام 2026. قمنا بتحميل مجموعة نصوص متطابقة مؤلفة من 5.047 صفحة على كل منصة، ونفّذنا 50 استعلامًا موزعة على 5 أنواع من الأسئلة، وقسنا زمن الاسترجاع، ومعدل الهلوسة، وجودة الاستشهادات، إضافةً إلى التكاليف الخفية التي لا يتحدث عنها أحد (إعادة التضمين، والتخزين في قاعدة البيانات المتجهية، وذروات استهلاك GPU أثناء الفهرسة). البطل في العروض التجريبية ليس البطل في بيئات الإنتاج.',
     metaDescription:
       'اختُبرت 3 منصات RAG محلية على مجموعة 5,047 صفحة: AnythingLLM تتفوق في الدقة، وOpen WebUI في السرعة، وPrivateGPT في الاستشهادات. نتائج مايو 2026.',
+    heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-ar.png',
     twitterDescription:
       'مقارنة RAG المحلي: AnythingLLM مقابل PrivateGPT مقابل Open WebUI على 5.047 صفحة. فائزون مختلفون في الدقة والاستجابة وقابلية التوسع. معايير أداء كاملة.',
     current_models_mentioned: [
@@ -3375,8 +3395,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Open WebUI': 'واجهة محادثة متعددة المستخدمين مع RAG اختياري',
           },
         ],
-        image: '/images/rag-vs-platforms-comparison-table-en.svg',
-        imageCaption: 'AnythingLLM مقابل PrivateGPT مقابل Open WebUI على مجموعة نصوص من 5.047 صفحة: AnythingLLM بأدنى معدل هلوسة (6%)، وPrivateGPT بأسرع استرجاع (240 مللي ثانية p50)، وOpen WebUI بأفضل دعم لتعدد المستخدمين — تتوسع الثلاثة حتى ~8.000–12.000 صفحة على أجهزة المستهلكين.',
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-ar.png',
+        imageCaption: 'AnythingLLM مقابل PrivateGPT مقابل Open WebUI -- تم الاختبار على مجموعة نصوص من 5,047 صفحة',
       },
       whichOne: {
         id: 'which-one',
@@ -3394,6 +3414,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'حالتك': 'لديّ أكثر من 10.000 صفحة وستستمر في النمو', 'اختر': 'مكدّس مخصص مع Ollama + Qdrant/Weaviate (لا أيًا منها)' },
         ],
         columns: ['حالتك', 'اختر'],
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-ar.png',
+        imageCaption: 'أي منصة RAG يجب أن تختار؟ -- اختصار القرار حسب الحالة',
       },
       howWeTested: {
         id: 'how-we-tested',
@@ -3828,6 +3850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'AnythingLLM, PrivateGPT, Open WebUI는 2026년 현재 가장 진지하게 고려할 수 있는 셀프 호스팅 RAG 플랫폼 세 가지입니다. 동일한 5,047페이지 분량의 코퍼스를 각 플랫폼에 로드하고, 5가지 유형의 질의에서 50개의 쿼리를 실행했으며, 검색 지연 시간, 환각 발생률, 인용 품질, 그리고 아무도 언급하지 않는 숨겨진 비용(재임베딩, 벡터 데이터베이스 스토리지, 인덱싱 중 GPU 사용량 급등)을 측정했습니다. 데모에서 우승한 플랫폼이 프로덕션에서도 우승하지는 않습니다.',
     metaDescription:
       '5,047페이지 코퍼스에서 테스트한 로컬 RAG 플랫폼 3종 비교. AnythingLLM, PrivateGPT, Open WebUI의 정확도, 지연 시간, 인용 품질. 2026년 최종 평가.',
+    heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-ko.png',
     twitterDescription:
       '로컬 RAG 대결: 5,047페이지에서 AnythingLLM vs PrivateGPT vs Open WebUI. 정확도, 지연 시간, 확장성에서 각기 다른 승자. 전체 벤치마크 결과 공개.',
     current_models_mentioned: [
@@ -3974,8 +3997,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Open WebUI': '선택적 RAG가 포함된 멀티 사용자 채팅 프런트엔드',
           },
         ],
-        image: '/images/rag-vs-platforms-comparison-table-ko.svg',
-        imageCaption: '5,047페이지 코퍼스에서 AnythingLLM vs PrivateGPT vs Open WebUI: AnythingLLM이 가장 낮은 환각 발생률(6%), PrivateGPT가 가장 빠른 검색(240ms p50), Open WebUI가 최고의 멀티 사용자 지원 — 세 플랫폼 모두 소비자 하드웨어에서 ~8,000~12,000페이지까지 확장됩니다.',
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-ko.png',
+        imageCaption: 'AnythingLLM 대 PrivateGPT 대 Open WebUI -- 5,047페이지 코퍼스로 테스트',
       },
       whichOne: {
         id: 'which-one',
@@ -3993,6 +4016,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '상황': '10,000페이지 이상이 있고 계속 성장할 것입니다', '선택': 'Ollama + Qdrant/Weaviate를 활용한 맞춤 스택 (세 플랫폼 모두 해당 없음)' },
         ],
         columns: ['상황', '선택'],
+        image: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-ko.png',
+        imageCaption: '어떤 RAG 플랫폼을 선택해야 할까? -- 상황별 결정 지름길',
       },
       howWeTested: {
         id: 'how-we-tested',

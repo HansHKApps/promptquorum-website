@@ -389,6 +389,96 @@
     "width": 800,
     "height": 450
   },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/apple-mlx-vs-nvidia-cuda-architecture-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -3974,6 +4064,51 @@
     "width": 800,
     "height": 400
   },
+  "/images/best-mac-for-local-ai-2026-comparison-table-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-mac-for-local-ai-2026-comparison-table-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -4018,6 +4153,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/best-mac-for-local-ai-2026-memory-by-model-ja.svg": {
     "encodingFormat": "image/svg+xml",
@@ -4455,6 +4635,96 @@
     "height": 675
   },
   "/images/best-models-apple-silicon-2026-quality-benchmarks-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-model-comparison-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-model-comparison-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-model-comparison-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-model-comparison-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-model-comparison-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-model-comparison-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-model-comparison-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-model-comparison-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-model-comparison-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-speed-reality-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-speed-reality-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-speed-reality-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-speed-reality-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-speed-reality-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-speed-reality-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-speed-reality-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-speed-reality-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ollama-models-cpu-only-speed-reality-hero-zh.png": {
     "encodingFormat": "image/png",
     "width": 1200,
     "height": 675
