@@ -24,6 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Most laptop advice for local LLMs starts with the GPU and stops there. The number that actually decides which model fits is memory: VRAM on a Windows gaming laptop, or unified memory on Apple Silicon — and a model that does not fit in memory either fails to load or crawls on swap. This guide compares four laptop families across three buying styles: an Apple MacBook Pro for the most memory in a portable body, a Lenovo ThinkPad or ASUS ROG gaming laptop for NVIDIA GPU speed, and a Framework Laptop 16 for repairability and upgrades. Expect a portable machine to run 20-30% slower than a desktop with the same chip because of thermal limits. Prices here are a July 2026 snapshot — laptop pricing moves with model cycles and sales, so confirm the current price before you buy.',
     metaDescription:
       'Best laptops for running local LLMs in 2026: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. RAM, GPU VRAM, and real token speeds compared by price tier.',
+    heroImage: '/images/best-laptops-local-llm-2026-comparison-table-hero-en.png',
     twitterDescription:
       'MacBook Pro, ThinkPad, ASUS ROG, Framework 16 — four laptop families for local LLMs, one rule: buy for memory. VRAM or unified memory decides the model that fits, not the GPU name.',
     affiliateDisclosure: true,
@@ -187,6 +188,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Price (Jul 2026)': 'Mid range; check current price',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-comparison-table-hero-en.png',
+        imageCaption: 'Apple MacBook Pro, ThinkPad/ROG, and Framework Laptop 16 compared by memory model and best-fit buying style for local LLMs.',
       },
       whichLaptop: {
         id: 'which-laptop',
@@ -387,6 +390,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Start with whether you want to upgrade the laptop yourself — if so, get a Framework. If you need to run models unplugged or want the most memory, get a MacBook Pro. Otherwise pick a gaming or workstation laptop based on whether durability or price-to-speed matters more.',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-decision-flowchart-hero-en.png',
+        imageCaption: 'Three questions route most buyers to one laptop family: repairability, battery/memory need, then durability versus raw speed.',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -519,6 +524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Die meisten Laptop-Empfehlungen für lokale LLMs beginnen bei der GPU und hören dort auch wieder auf. Die Kennzahl, die tatsächlich darüber entscheidet, welches Modell passt, ist der Arbeitsspeicher: VRAM bei einem Windows-Gaming-Laptop oder Unified Memory bei Apple Silicon — und ein Modell, das nicht in den Speicher passt, lädt entweder gar nicht erst oder kriecht über Swap dahin. Dieser Leitfaden vergleicht vier Laptop-Familien anhand von drei Kaufstilen: ein Apple MacBook Pro für den meisten Arbeitsspeicher in einem portablen Gehäuse, ein Lenovo ThinkPad oder ein ASUS-ROG-Gaming-Laptop für NVIDIA-GPU-Geschwindigkeit und ein Framework Laptop 16 für Reparierbarkeit und Aufrüstbarkeit. Rechnen Sie damit, dass ein portables Gerät 20-30 % langsamer läuft als ein Desktop mit demselben Chip, weil thermische Grenzen es ausbremsen. Die Preise hier sind eine Momentaufnahme vom Juli 2026 — Laptop-Preise bewegen sich mit Modellzyklen und Aktionen, prüfen Sie also den aktuellen Preis, bevor Sie kaufen.',
     metaDescription:
       'Vier Laptop-Familien für lokale LLMs im Vergleich: MacBook Pro, ThinkPad, ASUS ROG und Framework 16. Erst nach Speicher kaufen – VRAM entscheidet.',
+    heroImage: '/images/best-laptops-local-llm-2026-comparison-table-hero-de.png',
     twitterDescription:
       'MacBook Pro, ThinkPad, ASUS ROG, Framework 16 — vier Laptop-Familien für lokale LLMs, eine Regel: nach Speicher kaufen. VRAM oder Unified Memory entscheidet über das passende Modell, nicht der GPU-Name.',
     affiliateDisclosure: true,
@@ -682,6 +688,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Preis (Jul. 2026)': 'Mittlere Preisklasse; aktuellen Preis prüfen',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-comparison-table-hero-de.png',
+        imageCaption: 'Apple MacBook Pro, ThinkPad/ROG und Framework Laptop 16 im Vergleich nach Speichermodell und Kaufstil fuer lokale LLMs.',
       },
       whichLaptop: {
         id: 'which-laptop',
@@ -873,6 +881,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Beginnen Sie damit, ob Sie den Laptop selbst aufrüsten möchten — falls ja, nehmen Sie ein Framework. Wenn Sie Modelle ohne Netzteil ausführen müssen oder den meisten Speicher wünschen, nehmen Sie ein MacBook Pro. Andernfalls wählen Sie einen Gaming- oder Workstation-Laptop danach, ob Robustheit oder Preis-Leistung wichtiger ist.',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-decision-flowchart-hero-de.png',
+        imageCaption: 'Drei Fragen fuehren die meisten Kaeufer zu einer Laptop-Familie: Reparierbarkeit, Akku-/Speicherbedarf, dann Robustheit versus reine Geschwindigkeit.',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -1013,6 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'La plupart des conseils sur les ordinateurs portables pour LLM locaux commencent par le GPU et s\'arrêtent là. Le chiffre qui décide réellement du modèle qui tient, c\'est la mémoire : la VRAM sur un portable de jeu Windows, ou la mémoire unifiée sur Apple Silicon — et un modèle qui ne tient pas en mémoire échoue à se charger ou rampe via le swap. Ce guide compare quatre familles de portables selon trois styles d\'achat : un Apple MacBook Pro pour le plus de mémoire dans un châssis portable, un Lenovo ThinkPad ou un portable de jeu ASUS ROG pour la vitesse du GPU NVIDIA, et un Framework Laptop 16 pour la réparabilité et les évolutions. Attendez-vous à ce qu\'une machine portable tourne 20-30 % plus lentement qu\'un poste fixe équipé de la même puce, en raison des limites thermiques. Les prix indiqués ici sont un instantané de juillet 2026 — la tarification des portables évolue avec les cycles de modèles et les promotions, vérifiez donc le prix actuel avant d\'acheter.',
     metaDescription:
       'Quatre familles de portables comparées pour les LLM locaux : MacBook Pro, Lenovo ThinkPad, ASUS ROG et Framework 16. Achetez d\'abord pour la mémoire — la VRAM ou la mémoire unifiée décide du modèle qui tient.',
+    heroImage: '/images/best-laptops-local-llm-2026-comparison-table-hero-fr.png',
     twitterDescription:
       'MacBook Pro, ThinkPad, ASUS ROG, Framework 16 — quatre familles de portables pour LLM locaux, une règle : acheter pour la mémoire. La VRAM ou la mémoire unifiée décide du modèle qui tient, pas le nom du GPU.',
     affiliateDisclosure: true,
@@ -1176,6 +1187,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Prix (juil. 2026)': 'Milieu de gamme ; vérifier le prix actuel',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-comparison-table-hero-fr.png',
+        imageCaption: 'Apple MacBook Pro, ThinkPad/ROG et Framework Laptop 16 compares selon le modele memoire et le style d\'achat pour les LLM locaux.',
       },
       whichLaptop: {
         id: 'which-laptop',
@@ -1367,6 +1380,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Commencez par savoir si vous voulez faire évoluer le portable vous-même — si oui, prenez un Framework. Si vous devez exécuter des modèles débranché ou voulez le plus de mémoire, prenez un MacBook Pro. Sinon, choisissez un portable de jeu ou station de travail selon que la durabilité ou le rapport prix-vitesse importe le plus.',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-decision-flowchart-hero-fr.png',
+        imageCaption: 'Trois questions orientent la plupart des acheteurs vers une famille : reparabilite, besoin de batterie/memoire, puis robustesse contre vitesse brute.',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -1499,6 +1514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルLLM向けのノートパソコン選びのアドバイスの多くは、GPUから始まってそこで終わってしまいます。どのモデルが収まるかを実際に決める数値はメモリです。WindowsゲーミングノートパソコンであればVRAM、Apple Siliconであればunified memoryであり、メモリに収まらないモデルは読み込みに失敗するか、スワップに頼って這うように遅くなります。本ガイドでは、3つの購入スタイルにわたって4つのノートパソコン系統を比較します。携帯できる筐体で最大のメモリを得るためのApple MacBook Pro、NVIDIA GPUの速度を求めるためのLenovo ThinkPadまたはASUS ROGゲーミングノートパソコン、修理性とアップグレード性のためのFramework Laptop 16です。携帯機は熱的な制約により、同じチップを搭載したデスクトップより20～30%遅く動作すると考えてください。ここに記載した価格は2026年7月時点のスナップショットです。ノートパソコンの価格はモデルサイクルやセールに伴って変動するため、購入前に現在の価格を確認してください。',
     metaDescription:
       'ローカルLLMの実行向けに4つのノートパソコン系統を比較：MacBook Pro、Lenovo ThinkPad、ASUS ROG、Framework 16。まずメモリで選ぶ — VRAMまたはunified memoryがどのモデルが収まるかを決めます。',
+    heroImage: '/images/best-laptops-local-llm-2026-comparison-table-hero-ja.png',
     twitterDescription:
       'MacBook Pro、ThinkPad、ASUS ROG、Framework 16 — ローカルLLM向けの4つのノートパソコン系統、ルールは1つ：メモリで選ぶ。どのモデルが収まるかを決めるのはGPU名ではなく、VRAMまたはunified memoryです。',
     affiliateDisclosure: true,
@@ -1662,6 +1678,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '価格（2026年7月）': '中位の価格帯。現在の価格を確認',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-comparison-table-hero-ja.png',
+        imageCaption: 'Apple MacBook Pro、ThinkPad/ROG、Framework Laptop 16をローカルLLM向けのメモリ方式と購入スタイルで比較。',
       },
       whichLaptop: {
         id: 'which-laptop',
@@ -1853,6 +1871,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'まず、ノートパソコンを自分でアップグレードしたいかどうかから始めてください — そうであればFrameworkを選びます。電源につながずにモデルを実行する必要がある、または最大のメモリがほしいなら、MacBook Proを選びます。それ以外の場合は、堅牢さと価格対速度のどちらが重要かに基づいて、ゲーミングノートパソコンかワークステーションノートパソコンを選んでください。',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-decision-flowchart-hero-ja.png',
+        imageCaption: '3つの質問でほとんどの購入者は最適なファミリーにたどり着きます：修理性、バッテリー/メモリの必要性、そして堅牢性か速度か。',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -1985,6 +2005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '大多数关于本地大语言模型笔记本的建议都从 GPU 说起，也止于 GPU。真正决定哪个模型能装下的数字是内存：Windows 游戏本上的 VRAM，或 Apple Silicon 上的统一内存——装不进内存的模型要么加载失败，要么靠交换分区慢得像爬。本指南按三种购买取向对比四个笔记本系列：追求便携机身中最大内存的 Apple MacBook Pro，追求 NVIDIA GPU 速度的 Lenovo ThinkPad 或 ASUS ROG 游戏本，以及追求可维修与可升级的 Framework Laptop 16。受散热限制，便携机型的运行速度通常比搭载同款芯片的台式机慢 20-30%。这里的价格是 2026 年 7 月的快照——笔记本定价会随机型周期和促销变动，请在购买前确认当前价格。',
     metaDescription:
       '对比四个笔记本系列运行本地大语言模型的表现：MacBook Pro、Lenovo ThinkPad、ASUS ROG 和 Framework 16。先按内存选购——VRAM 或统一内存决定哪个模型能装下。',
+    heroImage: '/images/best-laptops-local-llm-2026-comparison-table-hero-zh.png',
     twitterDescription:
       'MacBook Pro、ThinkPad、ASUS ROG、Framework 16——四个运行本地大语言模型的笔记本系列，一条准则：按内存选购。决定能装下哪个模型的是 VRAM 或统一内存，而非 GPU 名称。',
     affiliateDisclosure: true,
@@ -2148,6 +2169,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '价格（2026 年 7 月）': '中端价位；查看当前价格',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-comparison-table-hero-zh.png',
+        imageCaption: '按内存模式和最佳购买风格对比Apple MacBook Pro、ThinkPad/ROG与Framework Laptop 16，用于本地LLM。',
       },
       whichLaptop: {
         id: 'which-laptop',
@@ -2339,6 +2362,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '先从你是否想自行升级笔记本开始——若是，就选 Framework。如果你需要不接电源运行模型，或想要最多的内存，就选 MacBook Pro。否则，根据更看重耐用性还是性价比，在游戏本与工作站笔记本之间选择。',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-decision-flowchart-hero-zh.png',
+        imageCaption: '三个问题即可为多数买家指明方向：可维修性、电池/内存需求，然后是耐用性与纯速度。',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -2471,6 +2496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'La mayoría de los consejos sobre portátiles para LLMs locales empiezan por la GPU y terminan ahí. El número que realmente decide qué modelo cabe es la memoria: la VRAM en un portátil gaming de Windows, o la memoria unificada en Apple Silicon — y un modelo que no cabe en memoria no logra cargarse o va arrastrándose en swap. Esta guía compara cuatro familias de portátiles según tres estilos de compra: un Apple MacBook Pro para tener la mayor memoria en un cuerpo portátil, un Lenovo ThinkPad o un portátil gaming ASUS ROG para velocidad de GPU NVIDIA, y un Framework Laptop 16 para reparabilidad y actualizaciones. Espera que una máquina portátil funcione entre un 20 y un 30 % más lento que un escritorio con el mismo chip debido a los límites térmicos. Los precios aquí son una instantánea de julio de 2026 — los precios de los portátiles cambian con los ciclos de modelo y las ofertas, así que confirma el precio actual antes de comprar.',
     metaDescription:
       'Los mejores portátiles para LLMs locales en 2026: MacBook Pro M5 Max, Razer Blade, ThinkPad y ASUS ROG. RAM, VRAM y velocidades reales por rango de precio.',
+    heroImage: '/images/best-laptops-local-llm-2026-comparison-table-hero-es.png',
     twitterDescription:
       'MacBook Pro, ThinkPad, ASUS ROG, Framework 16 — cuatro familias de portátiles para LLMs locales, una regla: compra por memoria. La VRAM o la memoria unificada decide el modelo que cabe, no el nombre de la GPU.',
     affiliateDisclosure: true,
@@ -2634,6 +2660,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Precio (julio 2026)': 'Gama media; consultar precio actual',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-comparison-table-hero-es.png',
+        imageCaption: 'Apple MacBook Pro, ThinkPad/ROG y Framework Laptop 16 comparados por modelo de memoria y estilo de compra para LLMs locales.',
       },
       whichLaptop: {
         id: 'which-laptop',
@@ -2825,6 +2853,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Empieza por si quieres actualizar el portátil tú mismo — si es así, elige un Framework. Si necesitas ejecutar modelos sin enchufar o quieres la mayor memoria, elige un MacBook Pro. De lo contrario, elige un portátil gaming o workstation según si importa más la durabilidad o la relación precio-velocidad.',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-decision-flowchart-hero-es.png',
+        imageCaption: 'Tres preguntas orientan a la mayoria de compradores hacia una familia: reparabilidad, necesidad de bateria/memoria, luego durabilidad frente a velocidad pura.',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -2971,6 +3001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'A maioria dos conselhos sobre notebooks para LLMs locais começa pela GPU e para por aí. O número que realmente decide qual modelo cabe é a memória: a VRAM em um notebook gamer Windows, ou a memória unificada no Apple Silicon — e um modelo que não cabe na memória ou não consegue carregar ou se arrasta no swap. Este guia compara quatro famílias de notebooks por três estilos de compra: um Apple MacBook Pro para a maior memória em um corpo portátil, um Lenovo ThinkPad ou notebook gamer ASUS ROG para velocidade de GPU NVIDIA, e um Framework Laptop 16 para reparabilidade e upgrades. Espere que uma máquina portátil rode de 20 a 30% mais devagar que um desktop com o mesmo chip por causa dos limites térmicos. Os preços aqui são um retrato de julho de 2026 — os preços de notebooks mudam com os ciclos de modelo e as promoções, então confirme o preço atual antes de comprar.',
     metaDescription:
       'Os melhores notebooks para rodar LLMs locais em 2026: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. RAM, VRAM de GPU e velocidades reais de tokens comparadas por faixa de preço.',
+    heroImage: '/images/best-laptops-local-llm-2026-comparison-table-hero-pt.png',
     twitterDescription:
       'MacBook Pro, ThinkPad, ASUS ROG, Framework 16 — quatro famílias de notebooks para LLMs locais, uma regra: compre por memória. A VRAM ou a memória unificada decide o modelo que cabe, não o nome da GPU.',
     affiliateDisclosure: true,
@@ -3134,6 +3165,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Preço (julho de 2026)': 'Médio; verificar preço atual',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-comparison-table-hero-pt.png',
+        imageCaption: 'Apple MacBook Pro, ThinkPad/ROG e Framework Laptop 16 comparados por modelo de memoria e estilo de compra para LLMs locais.',
       },
       whichLaptop: {
         id: 'which-laptop',
@@ -3325,6 +3358,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Comece por se você quer atualizar o notebook você mesmo — se sim, pegue um Framework. Se você precisa rodar modelos fora da tomada ou quer a maior memória, pegue um MacBook Pro. Caso contrário, escolha um notebook gamer ou workstation com base em se a durabilidade ou a relação preço-velocidade importa mais.',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-decision-flowchart-hero-pt.png',
+        imageCaption: 'Tres perguntas orientam a maioria dos compradores para uma familia: capacidade de reparo, necessidade de bateria/memoria, depois durabilidade versus velocidade pura.',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -3470,6 +3505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'معظم النصائح المتعلقة بأجهزة الكمبيوتر المحمولة للنماذج اللغوية المحلية تبدأ بوحدة معالجة الرسومات وتتوقف عند ذلك. الرقم الذي يحدد حجم النموذج الذي يناسب الجهاز هو الذاكرة: VRAM في أجهزة Windows للألعاب، أو الذاكرة الموحدة في Apple Silicon — ونموذج لا يناسب الذاكرة إما لا يُحمَّل أو يفيض إلى swap ويصبح بطيئاً جداً للاستخدام التفاعلي. يقارن هذا الدليل أربع عائلات من أجهزة الكمبيوتر المحمولة بثلاثة أساليب شراء: Apple MacBook Pro للذاكرة الأكبر في جسم محمول، وLenovo ThinkPad أو ASUS ROG للألعاب لسرعة GPU من NVIDIA، وFramework Laptop 16 للقابلية للإصلاح والترقية. توقع أن يعمل الجهاز المحمول بسرعة أقل بنسبة 20-30% مقارنةً بسطح المكتب الذي يحمل نفس الرقاقة بسبب حدود الحرارة. ملاحظة: الأسعار هنا صورة من يوليو 2026 — أسعار أجهزة الكمبيوتر المحمولة تتغير مع دورات الطرازات والعروض، لذا تأكد من السعر الحالي قبل الشراء.',
     metaDescription:
       'MacBook Pro M5 Max وASUS ROG وThinkPad مقارَنة لتشغيل LLMs: VRAM والذاكرة الموحدة تحدد النموذج المناسب. سرعات الرموز الفعلية لكل فئة سعرية 2026.',
+    heroImage: '/images/best-laptops-local-llm-2026-comparison-table-hero-ar.png',
     twitterDescription:
       'MacBook Pro وThinkPad وASUS ROG وFramework 16 — أربع عائلات لابتوب للنماذج اللغوية المحلية، قاعدة واحدة: اشترِ بحسب الذاكرة. VRAM أو الذاكرة الموحدة تحدد النموذج الذي يناسب، لا اسم GPU.',
     affiliateDisclosure: true,
@@ -3633,6 +3669,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'السعر (يوليو 2026)': 'متوسط؛ تحقق من السعر الحالي',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-comparison-table-hero-ar.png',
+        imageCaption: 'مقارنة Apple MacBook Pro وThinkPad/ROG وFramework Laptop 16 حسب نموذج الذاكرة وأسلوب الشراء الأمثل للنماذج المحلية.',
       },
       whichLaptop: {
         id: 'which-laptop',
@@ -3824,6 +3862,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ابدأ بما إذا كنت تريد ترقية اللابتوب بنفسك — إذا نعم، خذ Framework. إذا احتجت تشغيل نماذج بعيداً عن الكهرباء أو أردت أكبر ذاكرة، خذ MacBook Pro. وإلا، اختر لابتوب الألعاب أو ورك ستيشن بحسب ما يهمك أكثر: المتانة أم نسبة السرعة إلى السعر.',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-decision-flowchart-hero-ar.png',
+        imageCaption: 'ثلاثة أسئلة توجه معظم المشترين إلى عائلة واحدة: قابلية الإصلاح، الحاجة إلى البطارية/الذاكرة، ثم المتانة مقابل السرعة الخام.',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -3969,6 +4009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 LLM을 위한 노트북 추천의 대부분은 GPU로 시작해서 거기서 끝납니다. 실제로 어떤 모델이 들어갈 수 있는지를 결정하는 수치는 메모리입니다. Windows 게이밍 노트북의 VRAM, 또는 Apple Silicon의 통합 메모리 — 메모리에 맞지 않는 모델은 로드되지 않거나 swap에서 느리게 실행됩니다. 이 가이드는 세 가지 구매 스타일에 따라 네 가지 노트북 제품군을 비교합니다: 휴대 가능한 폼팩터에서 가장 많은 메모리를 원하는 경우 Apple MacBook Pro, NVIDIA GPU 속도를 원하는 경우 Lenovo ThinkPad 또는 ASUS ROG 게이밍 노트북, 수리 및 업그레이드를 원하는 경우 Framework Laptop 16. 동일한 칩이 탑재된 데스크톱에 비해 노트북은 열 제한으로 인해 약 20~30% 느리게 동작합니다. 이 가이드의 가격은 2026년 7월 기준 스냅샷입니다 — 노트북 가격은 모델 사이클과 프로모션에 따라 변동하므로 구매 전에 현재 가격을 확인하십시오.',
     metaDescription:
       '2026년 로컬 LLM을 위한 최고의 노트북: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. 가격대별 RAM, VRAM, 실제 토큰 속도 비교.',
+    heroImage: '/images/best-laptops-local-llm-2026-comparison-table-hero-ko.png',
     twitterDescription:
       'MacBook Pro, ThinkPad, ASUS ROG, Framework 16 — 로컬 LLM을 위한 네 가지 노트북 제품군, 원칙은 하나: 메모리로 구매하십시오. VRAM 또는 통합 메모리가 어떤 모델이 들어가는지를 결정하며, GPU 이름이 아닙니다.',
     affiliateDisclosure: true,
@@ -4132,6 +4173,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '가격 (2026년 7월)': '중간 가격대, 현재 가격 확인 필요',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-comparison-table-hero-ko.png',
+        imageCaption: 'Apple MacBook Pro, ThinkPad/ROG, Framework Laptop 16을 메모리 방식과 최적 구매 스타일 기준으로 비교했습니다.',
       },
       whichLaptop: {
         id: 'which-laptop',
@@ -4323,6 +4366,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '노트북을 직접 업그레이드하고 싶은지부터 시작하십시오 — 그렇다면 Framework를 선택하십시오. 전원 없이 모델을 실행해야 하거나 가장 많은 메모리를 원한다면 MacBook Pro를 선택하십시오. 그렇지 않으면 내구성이 더 중요한지 가격 대비 속도가 더 중요한지에 따라 게이밍 노트북 또는 워크스테이션을 선택하십시오.',
           },
         ],
+        image: '/images/best-laptops-local-llm-2026-decision-flowchart-hero-ko.png',
+        imageCaption: '세 가지 질문으로 대부분의 구매자가 적합한 라인업을 찾습니다: 수리 가능성, 배터리/메모리 필요성, 그다음 내구성 대 순수 속도.',
       },
       whereToBuy: {
         id: 'where-to-buy',
