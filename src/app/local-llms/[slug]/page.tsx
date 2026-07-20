@@ -271,12 +271,9 @@ export default async function LocalLLMsArticlePage({ params }: PageProps) {
     .map(s => buildImageObject(s.image!, { caption: s.imageCaption }))
 
   if (!(articleSchema as any).image) {
-    const heroUrl = (article as any).heroImage
+    (articleSchema as any).image = (article as any).heroImage
       ? `https://www.promptquorum.com${(article as any).heroImage}`
       : ogImageUrl
-    ;(articleSchema as any).image = sectionImageObjects.length > 0
-      ? sectionImageObjects[0].url
-      : heroUrl
   }
 
   // Translate breadcrumb labels per language
