@@ -3604,6 +3604,96 @@
     "width": 1200,
     "height": 675
   },
+  "/images/best-local-llm-stack-use-case-hardware-tier-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-hardware-tier-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-hardware-tier-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-hardware-tier-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-hardware-tier-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-hardware-tier-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-hardware-tier-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-hardware-tier-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-hardware-tier-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-use-case-picker-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-use-case-picker-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-use-case-picker-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-use-case-picker-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-use-case-picker-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-use-case-picker-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-use-case-picker-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-use-case-picker-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-stack-use-case-use-case-picker-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-local-llms-2026-ram-tier-picker-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -11499,6 +11589,51 @@
     "width": 800,
     "height": 420
   },
+  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -11598,6 +11733,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-setup-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-setup-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-setup-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-setup-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-setup-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-setup-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-setup-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-setup-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mac-vs-windows-vs-linux-local-llm-setup-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/mac-vs-windows-vs-linux-local-llm-tco-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -13974,10 +14154,100 @@
     "width": 1200,
     "height": 675
   },
+  "/images/qwen-local-deployment-guide-2026-benchmarks-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-benchmarks-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-benchmarks-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-benchmarks-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-benchmarks-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-benchmarks-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-benchmarks-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-benchmarks-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-benchmarks-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/qwen-local-deployment-guide-2026-benchmarks.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 900,
     "height": 480
+  },
+  "/images/qwen-local-deployment-guide-2026-hardware-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-hardware-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-hardware-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-hardware-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-hardware-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-hardware-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-hardware-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-hardware-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-deployment-guide-2026-hardware-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/qwen-local-deployment-guide-2026-hardware.svg": {
     "encodingFormat": "image/svg+xml",
