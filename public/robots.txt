@@ -4,6 +4,7 @@
 # Default rules for all crawlers (Google, Bing, generic crawlers)
 User-Agent: *
 Allow: /
+Allow: /api/og/
 Disallow: /_next/static/
 Disallow: /api/
 Disallow: /presentations/
@@ -34,6 +35,7 @@ User-Agent: omgili
 User-Agent: ImagesiftBot
 User-Agent: Valerian
 Allow: /
+Allow: /api/og/
 Disallow: /_next/static/
 Disallow: /api/
 Disallow: /presentations/
@@ -42,6 +44,7 @@ Disallow: /download
 # Bingbot — explicit rules for clarity
 User-Agent: Bingbot
 Allow: /
+Allow: /api/og/
 Disallow: /_next/static/
 Disallow: /api/
 Disallow: /presentations/

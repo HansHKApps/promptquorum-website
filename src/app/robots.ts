@@ -36,21 +36,27 @@ export default function robots(): MetadataRoute.Robots {
     'Valerian',
   ];
 
+  // /api/og/ generates the per-article social-share images (og:image) and must
+  // stay crawlable for Discover/Images eligibility; every other /api/ route is
+  // an action or data endpoint (confirm, unsubscribe, waitlist, etc.) with no
+  // reason to be crawled. The more specific allow wins over the blanket disallow.
+  const ogAllow = ['/api/og/'];
+
   return {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
+        allow: ['/', ...ogAllow],
         disallow: baseDisallow,
       },
       {
         userAgent: aiBots,
-        allow: '/',
+        allow: ['/', ...ogAllow],
         disallow: baseDisallow,
       },
       {
         userAgent: 'Bingbot',
-        allow: '/',
+        allow: ['/', ...ogAllow],
         disallow: baseDisallow,
       },
     ],
