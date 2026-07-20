@@ -14,6 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'Best Ollama & Local LLM Frontends 2026: 8 Compared',
       intro: 'A frontend is the chat interface for your local LLM -- Ollama or LM Studio runs the model, but a frontend provides the polished UI. As of July 2026, Open WebUI leads with 140,000+ GitHub stars (RAG, multimodal, multi-user), Enchanted UI is the top native macOS/iOS/visionOS app, and Jan AI handles offline desktop use across Windows, macOS, and Linux. This guide compares 8 frontends by features, setup time, and use case.',
       metaDescription: 'Compare 8 Ollama frontends: Open WebUI (140k+ stars, RAG), Enchanted UI (native Mac/iOS app), Jan AI (offline desktop). 2026 feature table and setup guide.',
+      heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-en.png',
       publishDate: '2026-04-04',
       dateModified: '2026-07-14',
       next_refresh_due: '2027-01-14',
@@ -168,7 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         topFrontends: {
           id: 'top-8-frontends',
           title: 'Top 8 Local LLM Frontends: Feature Comparison',
-          image: '/images/frontend-selection-guide-en.svg',
+          image: '/images/best-local-llm-frontends-frontend-selection-hero-en.png',
           imageCaption: 'Choose your local LLM frontend by use case -- all options connect to the same Ollama API.',
           rows: [
             { 'Frontend': 'Open WebUI', 'Type': 'Web app (Docker)', 'Best For': 'Feature-rich, RAG, teams', 'Setup Time': '5 min (with Docker)', 'RAM Required': '12 GB+', 'Open Source': 'Yes' },
@@ -185,7 +186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         openWebUI: {
           id: 'best-overall-open-webui',
           title: 'What Makes Open WebUI the Most Popular Frontend?',
-          image: '/images/open-webui-architecture-en.svg',
+          image: '/images/best-local-llm-frontends-architecture-hero-en.png',
           imageCaption: 'Open WebUI sits between your browser and Ollama -- enabling multi-user access, RAG, and multimodal features via Docker.',
           content: [
             '**Open WebUI is the most downloaded local LLM frontend on GitHub with 140,000+ stars -- it packs RAG, multimodal, web search, and multi-user collaboration into a single Docker container.** It works with Ollama, LM Studio, or any OpenAI-compatible API.',
@@ -459,6 +460,7 @@ schema: {
       seoTitle: 'Beste lokale LLM-Frontends 2026: 8-Frontend-Vergleich',
       intro: 'Ein Frontend (oder Chat-Oberfläche) ist die Schnittstelle, mit der Sie mit Ihrem lokalen LLM interagieren. Ollama und LM Studio können Modelle ausführen, aber für ein poliertes Chat-Erlebnis verwenden die meisten Entwickler ein Frontend von Drittanbietern. Ab Juli 2026 ist Open WebUI die funktionsreichste Option (140.000+ GitHub-Sterne), Enchanted UI ist die beste native macOS/iOS/visionOS-App, und Jan AI bietet eine Offline-Desktop-Alternative für Windows, macOS und Linux. Dieser Leitfaden vergleicht 8 Frontends nach Funktionen, Einrichtungszeit und optimalen Anwendungsfällen.',
       metaDescription: 'Die besten lokalen LLM-Frontends 2026: Open WebUI (140k+ Sterne), Enchanted UI (native Apple-App), Jan AI, Continue.dev. Funktionen, Bedienung und Backends im Vergleich.',
+      heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-de.png',
       publishDate: '2026-04-04',
       dateModified: '2026-07-14',
       readTime: '11 Min. Lesezeit',
@@ -499,7 +501,7 @@ schema: {
         topFrontends: {
           id: 'top-8-frontends',
           title: 'Top 8 lokale LLM-Frontends: Funktionsvergleich',
-          image: '/images/frontend-selection-guide-de.svg',
+          image: '/images/best-local-llm-frontends-frontend-selection-hero-de.png',
           imageCaption: 'Das richtige LLM-Frontend nach Anwendungsfall wählen -- alle Optionen nutzen dieselbe Ollama API.',
           rows: [
             { 'Frontend': 'Open WebUI', 'Typ': 'Web-App (Docker)', 'Beste für': 'Funktionsreich, RAG, Teams', 'Setup-Zeit': '5 Min. (mit Docker)', 'RAM erforderlich': '12 GB+', 'Open Source': 'Ja' },
@@ -516,7 +518,7 @@ schema: {
         openWebUI: {
           id: 'best-overall-open-webui',
           title: 'Was macht Open WebUI zum beliebtesten Frontend?',
-          image: '/images/open-webui-architecture-de.svg',
+          image: '/images/best-local-llm-frontends-architecture-hero-de.png',
           imageCaption: 'Open WebUI als Docker-Container verbindet Browser über HTTP mit Ollama -- Multi-Benutzer, RAG und Multimodal inklusive.',
           content: [
             '**Open WebUI ist eine All-in-One-Schnittstelle für lokale Modelle.** Sie funktioniert mit Ollama, LM Studio oder einer beliebigen OpenAI-kompatiblen API. Ab Juli 2026 ist sie das am häufigsten heruntergeladene lokale LLM-Frontend auf GitHub (140.000+ Sterne), da sie die meisten Funktionen in einer einzigen Anwendung vereint.',
@@ -784,6 +786,7 @@ schema: {
       seoTitle: 'Meilleures interfaces LLM locales 2026 : Comparaison 8 outils',
       intro: 'Une interface (ou chat UI) est l\'interface avec laquelle vous interagissez avec votre LLM local. Ollama et LM Studio peuvent exécuter des modèles, mais pour une expérience de chat soignée, la plupart des développeurs utilisent une interface tierce. En juillet 2026, Open WebUI est l\'option la plus riche en fonctionnalités (140 000+ étoiles GitHub), Enchanted UI est la meilleure application native macOS/iOS/visionOS, et Jan AI fournit une alternative de bureau hors ligne pour Windows, macOS et Linux. Ce guide compare 8 interfaces selon les fonctionnalités, la facilité de configuration et les meilleurs cas d\'utilisation.',
       metaDescription: 'Comparez 8 interfaces LLM locales : Open WebUI (140k+ étoiles, RAG), Enchanted UI (app native Mac/iOS), Jan AI (bureau), Continue.dev (code). Comparaison et guide de configuration.',
+      heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-fr.png',
       publishDate: '2026-04-04',
       dateModified: '2026-07-14',
       readTime: '11 min de lecture',
@@ -824,7 +827,7 @@ schema: {
         topFrontends: {
           id: 'top-8-frontends',
           title: 'Top 8 interfaces LLM locales : Comparaison de fonctionnalités',
-          image: '/images/frontend-selection-guide-fr.svg',
+          image: '/images/best-local-llm-frontends-frontend-selection-hero-fr.png',
           imageCaption: 'Choisissez votre interface LLM locale selon l\'usage -- toutes partagent la même API Ollama.',
           rows: [
             { 'Interface': 'Open WebUI', 'Type': 'Application web (Docker)', 'Meilleur pour': 'Riche en fonctionnalités, RAG, équipes', 'Temps de configuration': '5 min (avec Docker)', 'RAM requis': '12 GB+', 'Open Source': 'Oui' },
@@ -841,7 +844,7 @@ schema: {
         openWebUI: {
           id: 'best-overall-open-webui',
           title: 'Qu\'est-ce qui rend Open WebUI l\'interface la plus populaire ?',
-          image: '/images/open-webui-architecture-fr.svg',
+          image: '/images/best-local-llm-frontends-architecture-hero-fr.png',
           imageCaption: 'Architecture d\'Open WebUI : le conteneur Docker connecte les navigateurs à Ollama via REST API, avec RAG et multi-utilisateurs.',
           content: [
             '**Open WebUI est une interface tout-en-un pour les modèles locaux.** Elle fonctionne avec Ollama, LM Studio ou n\'importe quelle API compatible OpenAI. En juillet 2026, c\'est l\'interface LLM locale la plus téléchargée sur GitHub (140 000+ étoiles) car elle combine la plupart des fonctionnalités en une seule application.',
@@ -1102,6 +1105,7 @@ schema: {
       seoTitle: '2026年最高ローカルLLMインターフェース：8ツール比較',
       intro: 'フロントエンド（チャットUI）はローカルLLMと対話するインターフェースです。OllamaとLM Studioはモデル実行可能ですが、より洗練されたチャット体験のため、ほとんどの開発者はサードパーティフロントエンド使用します。2026年7月現在、Open WebUIが最も機能豊富（GitHub 140,000+スター）、Enchanted UIが最高のmacOS/iOS/visionOSネイティブアプリ、Jan AIがWindows・macOS・Linux対応のオフラインデスクトップ代替案提供。本ガイドは8フロントエンドを機能・セットアップ時間・最適ユースケースで比較。',
       metaDescription: '8つのローカルLLMインターフェース比較：Open WebUI（140kスター、RAG）、Enchanted UI（ネイティブApple版）、Jan AI（デスクトップ）、Continue.dev（コード）など。機能比較＆セットアップ。',
+      heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-ja.png',
       publishDate: '2026-04-04',
       dateModified: '2026-07-14',
       readTime: '11分で読める',
@@ -1142,7 +1146,7 @@ schema: {
         topFrontends: {
           id: 'top-8-frontends',
           title: 'トップ8ローカルLLMフロントエンド：機能比較',
-          image: '/images/frontend-selection-guide-ja.svg',
+          image: '/images/best-local-llm-frontends-frontend-selection-hero-ja.png',
           imageCaption: 'ユースケースでローカルLLMフロントエンドを選択 -- 全オプションが同じOllama APIに接続します。',
           rows: [
             { 'インターフェース': 'Open WebUI', 'タイプ': 'Webアプリ（Docker）', 'ベスト用途': '機能豊富、RAG、チーム', 'セットアップ時間': '5分（Docker付き）', 'RAM必須': '12GB以上', 'オープンソース': 'はい' },
@@ -1159,7 +1163,7 @@ schema: {
         openWebUI: {
           id: 'best-overall-open-webui',
           title: 'Open WebUIが最も人気なフロントエンドな理由',
-          image: '/images/open-webui-architecture-ja.svg',
+          image: '/images/best-local-llm-frontends-architecture-hero-ja.png',
           imageCaption: 'Open WebUIのアーキテクチャ：DockerコンテナがREST APIでブラウザとOllamaを接続、RAG・マルチユーザー対応。',
           content: [
             '**Open WebUIはローカルモデル向けオールインワンインターフェース。** Ollama、LM Studio、またはOpenAI互換API動作。2026年7月現在、GitHub最ダウンロードローカルLLMフロントエンド（140,000+スター）。',
@@ -1421,6 +1425,7 @@ schema: {
       seoTitle: '2026年最佳本地LLM前端：8工具对比',
       intro: '前端（聊天UI）是与本地LLM互动的界面。Ollama和LM Studio可运行模型，但为获得精细的聊天体验，大多数开发者使用第三方前端。截至2026年7月，Open WebUI功能最丰富（GitHub 140,000+星），Enchanted UI是最佳macOS/iOS/visionOS原生应用，Jan AI提供支持Windows、macOS和Linux的离线桌面替代方案。本指南按功能、设置时间和最佳用例比较8个前端。',
       metaDescription: '8个本地LLM界面对比：Open WebUI（140k星、RAG）、Enchanted UI（原生Apple应用）、Jan AI（桌面）、Continue.dev（代码）等。功能对比和设置指南。',
+      heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-zh.png',
       publishDate: '2026-04-04',
       dateModified: '2026-07-14',
       readTime: '阅读约11分钟',
@@ -1461,7 +1466,7 @@ schema: {
         topFrontends: {
           id: 'top-8-frontends',
           title: '8大本地LLM前端：功能对比',
-          image: '/images/frontend-selection-guide-zh.svg',
+          image: '/images/best-local-llm-frontends-frontend-selection-hero-zh.png',
           imageCaption: '按使用场景选择本地LLM前端 -- 所有选项共享同一个Ollama API。',
           rows: [
             { '前端': 'Open WebUI', '类型': 'Web应用（Docker）', '最优用途': '功能丰富、RAG、团队', '设置时间': '5分钟（含Docker）', '所需RAM': '12GB+', '开源': '是' },
@@ -1478,7 +1483,7 @@ schema: {
         openWebUI: {
           id: 'best-overall-open-webui',
           title: 'Open WebUI为何是最受欢迎的前端',
-          image: '/images/open-webui-architecture-zh.svg',
+          image: '/images/best-local-llm-frontends-architecture-hero-zh.png',
           imageCaption: 'Open WebUI架构：Docker容器通过REST API将浏览器连接到Ollama，支持RAG、多模态和多用户。',
           content: [
             '**Open WebUI是本地模型的一体化界面。** 适用于Ollama、LM Studio或任何OpenAI兼容API。截至2026年7月，GitHub上最常下载的本地LLM前端（140,000+星）。',
@@ -1744,6 +1749,7 @@ schema: {
       seoTitle: 'Mejores frontends para LLMs locales 2026: 8 comparados',
       intro: 'Un frontend es la interfaz de chat con la que interactúas con tu LLM local. Ollama o LM Studio ejecutan el modelo, pero un frontend proporciona la interfaz visual. En julio de 2026, Open WebUI lidera con más de 140.000 estrellas en GitHub (RAG, multimodal, multi-usuario), Enchanted UI es la mejor app nativa de macOS/iOS/visionOS y Jan AI cubre el uso en escritorio sin conexión en Windows, macOS y Linux. Esta guía compara 8 frontends según sus características, tiempo de configuración y caso de uso.',
       metaDescription: 'Compara 8 frontends para LLMs locales: Open WebUI (140k+ estrellas, RAG), Enchanted (app nativa Mac/iOS), Jan AI (escritorio) y Continue.dev (código).',
+      heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-es.png',
       publishDate: '2026-04-04',
       dateModified: '2026-07-14',
       leadAnswerBlock: '**Un frontend es la interfaz de chat con la que interactúas con tu LLM local. Ollama o LM Studio ejecutan el modelo, pero un frontend proporciona la interfaz visual. En julio de 2026, Open WebUI lidera con más de 140.000 estrellas en GitHub (RAG, multimodal, multi-usuario), Enchanted UI es la mejor app nativa de macOS/iOS/visionOS y Jan AI cubre el uso en escritorio sin conexión en Windows, macOS y Linux.**',
@@ -1786,7 +1792,7 @@ schema: {
         topFrontends: {
           id: 'top-8-frontends',
           title: 'Los 8 mejores frontends para LLMs locales: comparativa de características',
-          image: '/images/frontend-selection-guide-es.svg',
+          image: '/images/best-local-llm-frontends-frontend-selection-hero-es.png',
           imageCaption: 'Elige tu frontend para LLM local según el caso de uso: todas las opciones se conectan a la misma API de Ollama.',
           rows: [
             { 'Frontend': 'Open WebUI', 'Tipo': 'App web (Docker)', 'Ideal para': 'Funciones avanzadas, RAG, equipos', 'Tiempo de config.': '5 min (con Docker)', 'RAM necesaria': '12 GB+', 'Código abierto': 'Sí' },
@@ -1803,7 +1809,7 @@ schema: {
         openWebUI: {
           id: 'best-overall-open-webui',
           title: '¿Por qué Open WebUI es el frontend más popular?',
-          image: '/images/open-webui-architecture-es.svg',
+          image: '/images/best-local-llm-frontends-architecture-hero-es.png',
           imageCaption: 'Open WebUI se sitúa entre tu navegador y Ollama, habilitando acceso multi-usuario, RAG y funciones multimodales mediante Docker.',
           content: [
             '**Open WebUI es el frontend para LLMs locales más descargado en GitHub con más de 140.000 estrellas: integra RAG, multimodal, búsqueda web y colaboración multi-usuario en un único contenedor Docker.** Funciona con Ollama, LM Studio o cualquier API compatible con OpenAI.',
@@ -2076,6 +2082,7 @@ schema: {
       seoTitle: 'واجهات ⁨LLM⁩ المحلية ⁨2026⁩: مقارنة ⁨8⁩ أدوات ⁨Open WebUI⁩',
       intro: 'الواجهة الأمامية هي واجهة الدردشة التي تتفاعل بها مع نموذج LLM المحلي. يشغّل Ollama أو LM Studio النموذج، لكن الواجهة الأمامية توفّر الواجهة المرئية. في أبريل 2026، تتصدّر Open WebUI بأكثر من 25,000 نجمة على GitHub (RAG، متعددة الوسائط، متعددة المستخدمين)، وEnchanted UI هي الخيار الأسرع (دون تهيئة)، وJan AI تغطي الاستخدام المكتبي دون اتصال. يقارن هذا الدليل 8 واجهات أمامية حسب ميزاتها، وزمن التهيئة، وحالة الاستخدام.',
       metaDescription: '⁨Open WebUI⁩ يتصدّر بـ ⁨25⁩,⁨000⁩ نجمة ⁨GitHub⁩ مع دعم ⁨RAG⁩ ومتعدد المستخدمين. قارن ⁨8⁩ واجهات: ⁨Enchanted UI⁩ الأسرع، ⁨Jan AI⁩ للمكتب، ⁨Continue.dev⁩ للبرمجة.',
+      heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-ar.png',
       publishDate: '2026-04-04',
       dateModified: '2026-06-14',
       leadAnswerBlock: '**الواجهة الأمامية هي واجهة الدردشة التي تتفاعل بها مع نموذج LLM المحلي. يشغّل Ollama أو LM Studio النموذج، لكن الواجهة الأمامية توفّر الواجهة المرئية. في أبريل 2026، تتصدّر Open WebUI بأكثر من 25,000 نجمة على GitHub (RAG، متعددة الوسائط، متعددة المستخدمين)، وEnchanted UI هي الخيار الأسرع (دون تهيئة)، وJan AI تغطي الاستخدام المكتبي دون اتصال.**',
@@ -2117,7 +2124,7 @@ schema: {
         },
         topFrontends: {
           title: 'أفضل 8 واجهات أمامية لنماذج LLM المحلية: مقارنة الميزات',
-          image: '/images/frontend-selection-guide-es.svg',
+          image: '/images/best-local-llm-frontends-frontend-selection-hero-ar.png',
           imageCaption: 'اختر واجهتك الأمامية لنموذج LLM المحلي حسب حالة الاستخدام: تتصل جميع الخيارات بنفس واجهة API من Ollama.',
           rows: [
             { 'Frontend': 'Open WebUI', 'Tipo': 'تطبيق ويب (Docker)', 'Ideal para': 'ميزات متقدمة، RAG، فرق', 'Tiempo de config.': '5 دقائق (مع Docker)', 'RAM necesaria': '12 GB+', 'Código abierto': 'نعم' },
@@ -2133,7 +2140,7 @@ schema: {
         },
         openWebUI: {
           title: 'لماذا Open WebUI هي الواجهة الأمامية الأكثر شيوعاً؟',
-          image: '/images/open-webui-architecture-es.svg',
+          image: '/images/best-local-llm-frontends-architecture-hero-ar.png',
           imageCaption: 'تقع Open WebUI بين متصفحك وOllama، مُتيحة الوصول متعدد المستخدمين، وRAG، والميزات متعددة الوسائط عبر Docker.',
           content: [
             '**Open WebUI هي الواجهة الأمامية لنماذج LLM المحلية الأكثر تنزيلاً على GitHub بأكثر من 25,000 نجمة: تدمج RAG، ومتعددة الوسائط، والبحث على الويب، والتعاون متعدد المستخدمين في حاوية Docker واحدة.** تعمل مع Ollama أو LM Studio أو أي API متوافق مع OpenAI.',
@@ -2400,6 +2407,7 @@ schema: {
       seoTitle: 'Melhores frontends para LLMs locais 2026: 8 comparados',
       intro: 'Um frontend é a interface de chat com a qual você interage com seu LLM local. Ollama ou LM Studio executam o modelo, mas um frontend fornece a interface visual. Em abril de 2026, Open WebUI lidera com mais de 25.000 estrelas no GitHub (RAG, multimodal, multi-usuário), Enchanted UI é a opção mais rápida (sem configuração) e Jan AI cobre o uso em desktop offline. Este guia compara 8 frontends por recursos, tempo de configuração e caso de uso.',
       metaDescription: 'Compare 8 frontends para LLMs locais: Open WebUI (25k estrelas, RAG), Enchanted (o mais rápido), Jan AI (desktop) e Continue.dev (código). Com guia.',
+      heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-pt.png',
       publishDate: '2026-04-04',
       dateModified: '2026-06-14',
       leadAnswerBlock: '**Um frontend é a interface de chat com a qual você interage com seu LLM local. Ollama ou LM Studio executam o modelo, mas um frontend fornece a interface visual. Em abril de 2026, Open WebUI lidera com mais de 25.000 estrelas no GitHub (RAG, multimodal, multi-usuário), Enchanted UI é a opção mais rápida (sem configuração) e Jan AI cobre o uso em desktop offline.**',
@@ -2439,7 +2447,7 @@ schema: {
         },
         topFrontends: {
           title: 'Os 8 melhores frontends para LLMs locais: comparativo de recursos',
-          image: '/images/frontend-selection-guide-es.svg',
+          image: '/images/best-local-llm-frontends-frontend-selection-hero-pt.png',
           imageCaption: 'Escolha seu frontend para LLM local de acordo com o caso de uso: todas as opções se conectam à mesma API do Ollama.',
           rows: [
             { 'Frontend': 'Open WebUI', 'Tipo': 'Aplicativo web (Docker)', 'Ideal para': 'Recursos avançados, RAG, equipes', 'Tempo de config.': '5 min (com Docker)', 'RAM necessária': '12 GB+', 'Código aberto': 'Sim' },
@@ -2510,6 +2518,7 @@ schema: {
   seoTitle: '최고의 로컬 LLM 프론트엔드 2026: 8가지 채팅 UI 비교',
   intro: '프론트엔드는 로컬 LLM을 위한 채팅 인터페이스입니다. Ollama 또는 LM Studio가 모델을 실행하며, 프론트엔드는 세련된 UI를 제공합니다. 2026년 4월 기준으로 Open WebUI가 GitHub 스타 25,000개 이상을 기록하며 선두를 달리고 있습니다(RAG, 멀티모달, 다중 사용자 지원). Enchanted UI는 가장 빠르며(제로 설정), Jan AI는 오프라인 데스크톱 사용에 최적화되어 있습니다. 이 가이드는 기능, 설정 시간, 사용 사례별로 8가지 프론트엔드를 비교합니다.',
   metaDescription: '로컬 LLM 프론트엔드 8종 비교: Open WebUI(2만 5천 스타, RAG), Enchanted UI(최고 속도), Jan AI(데스크톱), Continue.dev(코드). 기능 비교표 및 설정 가이드.',
+  heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-ko.png',
   publishDate: '2026-04-04',
   dateModified: '2026-06-14',
   leadAnswerBlock: '**프론트엔드는 로컬 LLM을 위한 채팅 인터페이스입니다. Ollama 또는 LM Studio가 모델을 실행하며, 프론트엔드는 세련된 UI를 제공합니다. 2026년 4월 기준으로 Open WebUI가 GitHub 스타 25,000개 이상을 기록하며 선두를 달리고 있습니다(RAG, 멀티모달, 다중 사용자 지원). Enchanted UI는 가장 빠르며(제로 설정), Jan AI는 오프라인 데스크톱 사용에 최적화되어 있습니다.**',
@@ -2550,7 +2559,7 @@ schema: {
     },
     topFrontends: {
       title: '상위 8가지 로컬 LLM 프론트엔드: 기능 비교',
-      image: '/images/frontend-selection-guide-en.svg',
+      image: '/images/best-local-llm-frontends-frontend-selection-hero-ko.png',
       imageCaption: '사용 사례별로 로컬 LLM 프론트엔드를 선택하십시오 — 모든 옵션이 동일한 Ollama API에 연결됩니다.',
       rows: [
         { 'Frontend': 'Open WebUI', 'Type': '웹 앱 (Docker)', 'Best For': '기능 풍부, RAG, 팀', 'Setup Time': '5분 (Docker 포함)', 'RAM Required': '12 GB+', 'Open Source': '예' },
@@ -2566,7 +2575,7 @@ schema: {
     },
     openWebUI: {
       title: 'Open WebUI가 가장 인기 있는 프론트엔드인 이유는 무엇입니까?',
-      image: '/images/open-webui-architecture-en.svg',
+      image: '/images/best-local-llm-frontends-architecture-hero-ko.png',
       imageCaption: 'Open WebUI는 브라우저와 Ollama 사이에 위치하여 Docker를 통해 다중 사용자 접근, RAG, 멀티모달 기능을 제공합니다.',
       content: [
         '**Open WebUI는 GitHub에서 25,000개 이상의 스타를 보유한 가장 많이 다운로드된 로컬 LLM 프론트엔드입니다 — RAG, 멀티모달, 웹 검색, 다중 사용자 협업을 단일 Docker 컨테이너에 담고 있습니다.** Ollama, LM Studio, 또는 OpenAI 호환 API와 함께 작동합니다.',
