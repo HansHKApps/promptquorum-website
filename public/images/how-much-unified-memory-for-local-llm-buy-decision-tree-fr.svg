@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="400" fill="#FFFFFF"/>
+<text x="400" y="20" font-size="17" font-weight="700" fill="#1C1B1F" text-anchor="middle">Combien de m&#233;moire unifi&#233;e faut-il acheter ?</text>
+
+<rect x="290" y="35" width="220" height="46" rx="8" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+<text x="400" y="54" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Plus grande taille de mod&#232;le</text>
+<text x="400" y="70" font-size="12" fill="#49454F" text-anchor="middle">utilis&#233;e r&#233;guli&#232;rement ?</text>
+
+<line x1="330" y1="81" x2="190" y2="140" stroke="#6750A4" stroke-width="2"/>
+<line x1="470" y1="81" x2="610" y2="140" stroke="#6750A4" stroke-width="2"/>
+<text x="225" y="98" font-size="11" fill="#79747E">&#8804;13B</text>
+<text x="554" y="98" font-size="11" fill="#79747E">34B+</text>
+
+<rect x="90" y="140" width="200" height="50" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+<text x="190" y="159" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">Vision/STT/TTS aussi</text>
+<text x="190" y="177" font-size="11" fill="#49454F" text-anchor="middle">n&#233;cessaires en parall&#232;le ?</text>
+
+<rect x="510" y="140" width="200" height="50" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+<text x="610" y="159" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">Mod&#232;les 70B requis</text>
+<text x="610" y="177" font-size="11" fill="#49454F" text-anchor="middle">sp&#233;cifiquement (pas que 34B) ?</text>
+
+<line x1="130" y1="190" x2="90" y2="250" stroke="#6750A4" stroke-width="2"/>
+<line x1="250" y1="190" x2="290" y2="250" stroke="#6750A4" stroke-width="2"/>
+<text x="62" y="208" font-size="11" fill="#79747E">OUI</text>
+<text x="280" y="208" font-size="11" fill="#79747E">NON</text>
+
+<line x1="550" y1="190" x2="520" y2="250" stroke="#6750A4" stroke-width="2"/>
+<line x1="670" y1="190" x2="720" y2="250" stroke="#6750A4" stroke-width="2"/>
+<text x="500" y="208" font-size="11" fill="#79747E">OUI</text>
+<text x="700" y="208" font-size="11" fill="#79747E">NON</text>
+
+<rect x="15" y="250" width="150" height="70" rx="8" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+<rect x="15" y="250" width="150" height="4" fill="#34A853"/>
+<text x="90" y="280" font-size="20" font-weight="700" fill="#34A853" text-anchor="middle">64 Go</text>
+<text x="90" y="300" font-size="11" fill="#49454F" text-anchor="middle">13B + stack multi-mod&#232;le</text>
+
+<rect x="215" y="250" width="150" height="70" rx="8" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+<rect x="215" y="250" width="150" height="4" fill="#34A853"/>
+<text x="290" y="280" font-size="20" font-weight="700" fill="#34A853" text-anchor="middle">36 Go</text>
+<text x="290" y="300" font-size="11" fill="#49454F" text-anchor="middle">13B seul, un mod&#232;le</text>
+
+<rect x="445" y="250" width="150" height="70" rx="8" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+<rect x="445" y="250" width="150" height="4" fill="#34A853"/>
+<text x="520" y="280" font-size="20" font-weight="700" fill="#34A853" text-anchor="middle">128 Go</text>
+<text x="520" y="300" font-size="11" fill="#49454F" text-anchor="middle">70B Q5 confortablement</text>
+
+<rect x="645" y="250" width="150" height="70" rx="8" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+<rect x="645" y="250" width="150" height="4" fill="#34A853"/>
+<text x="720" y="280" font-size="20" font-weight="700" fill="#34A853" text-anchor="middle">64 Go</text>
+<text x="720" y="300" font-size="11" fill="#49454F" text-anchor="middle">34B Q5, sans 70B</text>
+
+<text x="400" y="355" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">La m&#233;moire Apple Silicon est soud&#233;e &#8212; achetez le niveau maximum abordable ;</text>
+<text x="400" y="373" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">aucune mise &#224; niveau possible apr&#232;s l&#8217;achat.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

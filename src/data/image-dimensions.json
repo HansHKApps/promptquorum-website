@@ -1624,6 +1624,91 @@
     "width": 800,
     "height": 420
   },
+  "/images/best-local-llms-2026-ram-tier-picker-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-local-llms-2026-ram-tier-picker-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 350
+  },
+  "/images/best-local-llms-2026-ram-tier-picker-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-local-llms-2026-ram-tier-picker-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-local-llms-2026-ram-tier-picker-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-local-llms-2026-ram-tier-picker-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-local-llms-2026-ram-tier-picker-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-local-llms-2026-ram-tier-picker-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-local-llms-2026-ranked-comparison-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llms-2026-ranked-comparison-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 420
+  },
+  "/images/best-local-llms-2026-ranked-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llms-2026-ranked-comparison-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llms-2026-ranked-comparison-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llms-2026-ranked-comparison-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llms-2026-ranked-comparison-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llms-2026-ranked-comparison-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-local-llms-2026-ranked-comparison-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
   "/images/best-local-llms-for-coding-benchmark-comparison-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -1703,6 +1788,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 380
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 400
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-mac-for-local-ai-2026-comparison-table-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-mac-for-local-ai-2026-memory-by-model-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
   },
   "/images/best-mini-pcs-local-llm-cooling-guide-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -2774,6 +2949,56 @@
     "width": 800,
     "height": 400
   },
+  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
   "/images/developer-stack-performance.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -3558,6 +3783,86 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-much-unified-memory-for-local-llm-tier-fit-chart-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/how-much-unified-memory-for-local-llm-tier-fit-chart-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/how-much-unified-memory-for-local-llm-tier-fit-chart-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/how-much-unified-memory-for-local-llm-tier-fit-chart-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/how-much-unified-memory-for-local-llm-tier-fit-chart-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/how-much-unified-memory-for-local-llm-tier-fit-chart-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/how-much-unified-memory-for-local-llm-tier-fit-chart-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/how-much-unified-memory-for-local-llm-tier-fit-chart-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
   },
   "/images/how-much-vram-local-llm-quantization-tradeoff-ar.svg": {
     "encodingFormat": "image/svg+xml",
@@ -5408,6 +5713,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 420
+  },
+  "/images/local-llm-with-obsidian-2026-plugin-comparison-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-llm-with-obsidian-2026-plugin-comparison-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-llm-with-obsidian-2026-plugin-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-llm-with-obsidian-2026-plugin-comparison-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-llm-with-obsidian-2026-plugin-comparison-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-llm-with-obsidian-2026-plugin-comparison-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-llm-with-obsidian-2026-plugin-comparison-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-llm-with-obsidian-2026-plugin-comparison-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-llm-with-obsidian-2026-plugin-comparison-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-llm-with-obsidian-2026-setup-flow-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-llm-with-obsidian-2026-setup-flow-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-llm-with-obsidian-2026-setup-flow-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-llm-with-obsidian-2026-setup-flow-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-llm-with-obsidian-2026-setup-flow-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-llm-with-obsidian-2026-setup-flow-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-llm-with-obsidian-2026-setup-flow-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-llm-with-obsidian-2026-setup-flow-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-llm-with-obsidian-2026-setup-flow-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
   },
   "/images/local-llm-workstation-build-components-layout-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -8880,6 +9275,166 @@
     "height": 350
   },
   "/images/run-ai-on-tablet-two-modes-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/run-qwen-locally-guide-2026-model-sizes-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 360
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-qwen-locally-guide-2026-setup-steps-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-m5-max-vs-multigpu-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350

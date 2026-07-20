@@ -1,0 +1,49 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">ローカルAI向け Mac mini vs MacBook Pro vs Mac Studio</text>
+
+  <text x="30" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Mac</text>
+  <text x="300" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">メモリ</text>
+  <text x="400" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">帯域幅</text>
+  <text x="520" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">70B速度</text>
+  <text x="650" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">価格（2026年7月）</text>
+  <line x1="18" y1="72" x2="782" y2="72" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="30" y="98" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Mac mini M5 Pro 64GB</text>
+  <text x="300" y="98" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">64GB</text>
+  <text x="400" y="98" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">307GB/s</text>
+  <text x="520" y="98" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#EA4335">8-12 tok/s</text>
+  <text x="650" y="98" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#1C1B1F">約¥184,800</text>
+  <line x1="18" y1="110" x2="782" y2="110" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="30" y="140" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">MacBook Pro 16" M5 Max 64GB</text>
+  <text x="300" y="140" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">64GB</text>
+  <text x="400" y="140" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">460GB/s</text>
+  <text x="520" y="140" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#F4B400">7-11 tok/s</text>
+  <text x="650" y="140" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#1C1B1F">約¥554,800</text>
+  <line x1="18" y1="152" x2="782" y2="152" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="30" y="182" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">MacBook Pro 16" M5 Max 128GB</text>
+  <text x="300" y="182" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">128GB</text>
+  <text x="400" y="182" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">614GB/s</text>
+  <text x="520" y="182" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#34A853">12-16 tok/s</text>
+  <text x="650" y="182" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#1C1B1F">約¥718,800</text>
+  <line x1="18" y1="194" x2="782" y2="194" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="30" y="224" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Mac Studio M4 Max 128GB</text>
+  <text x="300" y="224" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">128GB</text>
+  <text x="400" y="224" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">約410-546GB/s</text>
+  <text x="520" y="224" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#79747E">現在入手可能</text>
+  <text x="650" y="224" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#1C1B1F">約¥599,800</text>
+  <line x1="18" y1="236" x2="782" y2="236" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="30" y="266" font-family="system-ui, sans-serif" font-size="12" fill="#79747E">Mac Studio M5 Max 128GB*</text>
+  <text x="300" y="266" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#79747E">128GB*</text>
+  <text x="400" y="266" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#79747E">614GB/s*</text>
+  <text x="520" y="266" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#79747E">まだ測定不可</text>
+  <text x="650" y="266" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#79747E">未発表</text>
+
+  <rect x="28" y="292" width="744" height="1" fill="#E8DEF8"/>
+  <text x="400" y="320" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">※ Mac Studio M5 Maxは2026年7月時点で未発売——仕様と価格は未確認の予測値です。</text>
+  <text x="400" y="342" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#6750A4" text-anchor="middle">まずunified memoryで選び、次に帯域幅を最適化してください——メモリがどのモデルが動くかを決めます。</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

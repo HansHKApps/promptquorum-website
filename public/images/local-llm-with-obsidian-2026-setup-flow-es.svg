@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="360" fill="#FFFFFF"/>
+<text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">5 pasos: configurar Smart Connections + Copilot</text>
+
+<circle cx="80" cy="110" r="22" fill="#6750A4"/>
+<text x="80" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="80" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Instalar</text>
+<text x="80" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ollama</text>
+<text x="80" y="187" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">brew install ollama</text>
+<text x="80" y="200" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">descargar llama3.2:3b</text>
+<text x="140" y="118" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+<circle cx="240" cy="110" r="22" fill="#6750A4"/>
+<text x="240" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="240" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Iniciar y</text>
+<text x="240" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">verificar</text>
+<text x="240" y="187" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">curl :11434/api/tags</text>
+<text x="300" y="118" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+<circle cx="400" cy="110" r="22" fill="#6750A4"/>
+<text x="400" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="400" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Smart</text>
+<text x="400" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Connections</text>
+<text x="400" y="187" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">nomic-embed-text</text>
+<text x="400" y="200" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">índice: 2–75 min</text>
+<text x="460" y="118" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+<circle cx="560" cy="110" r="22" fill="#6750A4"/>
+<text x="560" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="560" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Instalar</text>
+<text x="560" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Copilot</text>
+<text x="560" y="187" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">URL base :11434/v1</text>
+<text x="560" y="200" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">modelo llama3.2:3b</text>
+<text x="620" y="118" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+<circle cx="720" cy="110" r="22" fill="#6750A4"/>
+<text x="720" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<text x="720" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Probar el</text>
+<text x="720" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">vault</text>
+<text x="720" y="187" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">pregunta sobre un tema</text>
+<text x="720" y="200" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">verificar notas</text>
+
+<line x1="18" y1="230" x2="782" y2="230" stroke="#E8DEF8" stroke-width="1.5"/>
+<text x="400" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Paso 6 opcional: añade Text Generator para plantillas repetibles (notas diarias, MOCs).</text>
+<text x="400" y="284" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Usa el mismo modelo de chat en todos los plugins — Llama 3.2 3B para la mayoría de sistemas con 16 GB RAM.</text>
+<text x="792" y="355" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">M5 Max 128GB上70B量化权衡</text>
+
+  <text x="40" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">量化方式</text>
+  <text x="230" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">大小</text>
+  <text x="370" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">tok/s（M5 Max）</text>
+  <text x="530" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">质量损失</text>
+  <text x="670" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">兼容128GB？</text>
+  <line x1="18" y1="72" x2="782" y2="72" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="40" y="98" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">Q4_K_M</text>
+  <text x="230" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">42 GB</text>
+  <text x="370" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">15–20</text>
+  <text x="530" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">相比FP16约3–5%</text>
+  <text x="670" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853">✓ 是</text>
+  <line x1="18" y1="108" x2="782" y2="108" stroke="#F7F2FA" stroke-width="1"/>
+
+  <rect x="18" y="112" width="764" height="36" fill="#F7F2FA"/>
+  <text x="40" y="134" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#6750A4">Q5_K_M ★</text>
+  <text x="230" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">49 GB</text>
+  <text x="370" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">12–16</text>
+  <text x="530" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">相比FP16约0.5–1%</text>
+  <text x="670" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853">✓ 是</text>
+  <line x1="18" y1="148" x2="782" y2="148" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="170" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">Q8_0</text>
+  <text x="230" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">74 GB</text>
+  <text x="370" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">8–12</text>
+  <text x="530" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">无损</text>
+  <text x="670" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853">✓ 是</text>
+  <line x1="18" y1="180" x2="782" y2="180" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="202" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">FP16</text>
+  <text x="230" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">140 GB</text>
+  <text x="370" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">14–18*</text>
+  <text x="530" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F">无（全精度）</text>
+  <text x="670" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#EA4335">✗ 否</text>
+  <line x1="18" y1="212" x2="782" y2="212" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="40" y="245" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">★ Q5_K_M是推荐的平衡选择：49 GB可在128GB中留有余量，速度12–16 tok/s，质量几乎无损。</text>
+  <text x="40" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">70B上Q4与Q8的差距比8B模型更大——在复杂推理和代码审查中影响显著。</text>
+  <text x="40" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">* FP16（140 GB）无法装入M5 Max 128GB——需要M5 Ultra 256GB（预测14–18 tok/s）。</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

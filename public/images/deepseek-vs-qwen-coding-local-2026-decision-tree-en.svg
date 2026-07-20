@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="400" fill="#FFFFFF"/>
+<text x="400" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">DeepSeek vs Qwen: Which to Pick for Your Coding Task</text>
+
+<!-- Root -->
+<rect x="290" y="34" width="220" height="46" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+<text x="400" y="53" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Must code stay 100% local</text>
+<text x="400" y="69" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">(no cloud API)?</text>
+
+<!-- Root branches -->
+<line x1="360" y1="80" x2="250" y2="140" stroke="#6750A4" stroke-width="2"/>
+<text x="265" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">YES</text>
+<line x1="440" y1="80" x2="550" y2="140" stroke="#6750A4" stroke-width="2"/>
+<text x="518" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">NO</text>
+
+<!-- Left subtree root -->
+<rect x="170" y="140" width="160" height="46" rx="6" fill="#F7F2FA" stroke="#34A853" stroke-width="2"/>
+<text x="250" y="159" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">Primary language is</text>
+<text x="250" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">Rust or C++?</text>
+
+<!-- Right subtree root -->
+<rect x="470" y="140" width="160" height="46" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+<text x="550" y="159" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">Algorithmic or</text>
+<text x="550" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">competitive-programming task?</text>
+
+<!-- Left subtree branches -->
+<line x1="220" y1="186" x2="120" y2="245" stroke="#34A853" stroke-width="2"/>
+<text x="162" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">YES</text>
+<line x1="270" y1="186" x2="310" y2="245" stroke="#34A853" stroke-width="2"/>
+<text x="264" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">NO</text>
+
+<!-- Right subtree branches -->
+<line x1="520" y1="186" x2="470" y2="245" stroke="#6750A4" stroke-width="2"/>
+<text x="462" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">YES</text>
+<line x1="580" y1="186" x2="650" y2="245" stroke="#6750A4" stroke-width="2"/>
+<text x="622" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">NO</text>
+
+<!-- Leaf 1: Qwen3-Coder 32B -->
+<rect x="45" y="245" width="150" height="70" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+<text x="120" y="266" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">Qwen3-Coder 32B</text>
+<text x="120" y="282" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">RTX 4090 24 GB</text>
+<text x="120" y="298" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Rust / C++ winner</text>
+<text x="120" y="312" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">10-14 tok/s</text>
+
+<!-- Leaf 2: Qwen3-Coder 14B -->
+<rect x="235" y="245" width="150" height="70" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+<text x="310" y="266" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">Qwen3-Coder 14B</text>
+<text x="310" y="282" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">RTX 4060 Ti 16 GB</text>
+<text x="310" y="298" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Best budget local</text>
+<text x="310" y="312" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">14-18 tok/s</text>
+
+<!-- Leaf 3: DeepSeek-R1 API -->
+<rect x="395" y="245" width="150" height="70" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+<text x="470" y="266" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">DeepSeek-R1 (API)</text>
+<text x="470" y="282" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Cloud only</text>
+<text x="470" y="298" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Algorithm reasoning</text>
+<text x="470" y="312" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">SWE-bench 49.2%</text>
+
+<!-- Leaf 4: DeepSeek-V3 API -->
+<rect x="585" y="245" width="150" height="70" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+<text x="660" y="266" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">DeepSeek-V3 (API)</text>
+<text x="660" y="282" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">$0.27 / 1M in tok</text>
+<text x="660" y="298" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Python / JS winner</text>
+<text x="660" y="312" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">HumanEval 82.4%</text>
+
+<text x="400" y="345" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">Green = runs fully local on consumer GPU · Purple = cloud API required</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
