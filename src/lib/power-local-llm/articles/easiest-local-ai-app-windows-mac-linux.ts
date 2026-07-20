@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LM Studio is the easiest local AI app in 2026 for Windows, Mac, and Linux — download, install, pull a model, and start chatting in under 10 minutes with no terminal use. It runs fastest on Apple Silicon (M1 through M5), with full Intel Mac and Linux support too. This guide covers LM Studio, Jan, and GPT4All as the three no-code options, compares them by setup time, supported models, and system requirements, and explains which one to start with depending on your hardware and goals.',
     metaDescription:
       'LM Studio on Apple Silicon, Intel Mac, Windows, and Linux: supported models, system requirements, and setup time. No terminal. Ranked vs Jan and GPT4All, 2026.',
+    heroImage: '/images/easiest-local-ai-app-comparison-table-hero-en.png',
     twitterDescription:
       'LM Studio on Apple Silicon (M1–M5), Intel Mac, Windows, and Linux: supported models, system requirements, and setup time — ranked against Jan and GPT4All for 2026.',
     current_models_mentioned: [
@@ -138,7 +139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Start with LM Studio unless you have a specific reason not to. It has the best UI, the largest model library, and a clear upgrade path (Local Server tab) if you want to connect other tools later. If you strongly prefer open-source software, Jan is the equivalent choice.',
           },
         ],
-        image: '/images/easiest-local-ai-app-comparison-table-en.svg',
+        image: '/images/easiest-local-ai-app-comparison-table-hero-en.png',
         imageCaption: 'LM Studio vs Jan vs GPT4All feature comparison: LM Studio offers 50,000+ models, local API, multi-chat, and the best UI; Jan is the open-source alternative (AGPLv3); GPT4All is the simplest single-window option for pure beginners.',
       },
       lmStudio: {
@@ -161,7 +162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'On macOS, LM Studio detects your hardware automatically and recommends the best quantisation level for your available memory. Accept the recommendation unless you have a specific reason to override it. On Windows with an NVIDIA GPU, LM Studio automatically enables GPU acceleration — you do not need to configure CUDA.',
           },
         ],
-        image: '/images/easiest-local-ai-app-setup-steps-en.svg',
+        image: '/images/easiest-local-ai-app-setup-steps-hero-en.png',
         imageCaption: 'LM Studio 4-step setup: (1) download installer from lmstudio.ai, (2) install and open the app, (3) browse Discover tab and download Q4_K_M model (~2.7–5 GB), (4) open Chat, select model, and start chatting — no terminal required.',
       },
       jan: {
@@ -373,6 +374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LM Studio ist die einfachste lokale AI-App 2026 für Windows, Mac und Linux — Herunterladen, Installieren, ein Modell laden und in unter 10 Minuten chatten, ohne Terminal. Dieser Leitfaden behandelt LM Studio, Jan und GPT4All als die drei No-Code-Optionen, vergleicht sie nach Installationszeit und Funktionalität und erklärt, welche je nach Hardware und Zielen gewählt werden sollte.',
     metaDescription:
       'LM Studio auf Apple Silicon, Intel Mac, Windows und Linux: unterstützte Modelle, Systemanforderungen und Einrichtungszeit. Ohne Terminal. Im Vergleich zu Jan und GPT4All, 2026.',
+    heroImage: '/images/easiest-local-ai-app-comparison-table-hero-de.png',
     twitterDescription:
       'LM Studio auf Apple Silicon (M1–M5), Intel Mac, Windows und Linux: unterstützte Modelle, Systemanforderungen und Einrichtungszeit — im Vergleich zu Jan und GPT4All für 2026.',
     current_models_mentioned: [
@@ -477,7 +479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Funktion': 'Linux-Unterstützung', 'LM Studio': 'AppImage, .deb', 'Jan': 'AppImage', 'GPT4All': 'AppImage' },
           { 'Funktion': 'Am besten für', 'LM Studio': 'Benutzer, die die beste Benutzeroberfläche + Entwickler-API-Zugriff wünschen', 'Jan': 'Benutzer, die Open-Source-Software bevorzugen', 'GPT4All': 'Absolute Anfänger, die die einfachste Oberfläche wünschen' },
         ],
-        image: '/images/easiest-local-ai-app-comparison-table-de.svg',
+        image: '/images/easiest-local-ai-app-comparison-table-hero-de.png',
         imageCaption: 'LM Studio vs. Jan vs. GPT4All Funktionsvergleich: LM Studio bietet 50.000+ Modelle, lokale API, Multi-Chat und die beste Benutzeroberfläche; Jan ist die Open-Source-Alternative (AGPLv3); GPT4All ist die einfachste Einzelfenster-Option für absolute Anfänger.',
       },
       lmStudio: {
@@ -494,7 +496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Warten Sie, bis der Download abgeschlossen ist (2–5 GB je nach Modell). Der Fortschritt wird in der unteren Leiste angezeigt.',
           'Klicken Sie auf „Chat" in der Seitenleiste. Wählen Sie Ihr heruntergeladenes Modell aus dem Dropdown oben aus. Geben Sie Ihre erste Nachricht ein.',
         ],
-        image: '/images/easiest-local-ai-app-setup-steps-de.svg',
+        image: '/images/easiest-local-ai-app-setup-steps-hero-de.png',
         imageCaption: 'LM Studio 4-Schritte-Einrichtung: (1) Installationsprogramm von lmstudio.ai herunterladen, (2) App installieren und öffnen, (3) Discover-Tab durchsuchen und Q4_K_M-Modell (~2,7–5 GB) herunterladen, (4) Chat öffnen, Modell auswählen, chatten — kein Terminal erforderlich.',
       },
       jan: {
@@ -756,6 +758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LM Studio est l\'application IA locale la plus facile en 2026 pour Windows, Mac et Linux — téléchargez, installez, importez un modèle et commencez à discuter en moins de 10 minutes sans terminal. Ce guide couvre LM Studio, Jan et GPT4All comme trois options sans code, les compare par temps de configuration et capacité, et explique laquelle choisir selon votre matériel et objectifs.',
     metaDescription:
       'LM Studio sur Apple Silicon, Mac Intel, Windows et Linux : modèles supportés, configuration requise et temps d\'installation. Sans terminal. Face à Jan et GPT4All, 2026.',
+    heroImage: '/images/easiest-local-ai-app-comparison-table-hero-fr.png',
     twitterDescription:
       'LM Studio sur Apple Silicon (M1–M5), Mac Intel, Windows et Linux : modèles supportés, configuration requise et temps d\'installation — face à Jan et GPT4All pour 2026.',
     current_models_mentioned: [
@@ -859,7 +862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Critère': 'Taille téléchargement', 'LM Studio': '~450 MB', 'Jan': '~380 MB', 'GPT4All': '~290 MB' },
           { 'Critère': 'API OpenAI locale', 'LM Studio': 'Oui', 'Jan': 'Oui', 'GPT4All': 'Oui' },
         ],
-        image: '/images/easiest-local-ai-app-comparison-table-fr.svg',
+        image: '/images/easiest-local-ai-app-comparison-table-hero-fr.png',
         imageCaption: 'Comparaison des fonctionnalités LM Studio vs Jan vs GPT4All : LM Studio offre 50 000+ modèles, API locale, multi-chat et la meilleure UI ; Jan est l\'alternative open-source (AGPLv3) ; GPT4All est l\'option fenêtre unique la plus simple pour les débutants absolus.',
       },
       lmStudio: {
@@ -892,7 +895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Une fois chargé, vous pouvez commencer à discuter immédiatement. Aucune autre étape. La première génération de réponse peut prendre 10–30 secondes selon votre matériel.',
           },
         ],
-        image: '/images/easiest-local-ai-app-setup-steps-fr.svg',
+        image: '/images/easiest-local-ai-app-setup-steps-hero-fr.png',
         imageCaption: 'Configuration LM Studio en 4 étapes : (1) téléchargez l\'installateur depuis lmstudio.ai, (2) installez et ouvrez l\'application, (3) parcourez l\'onglet Discover et téléchargez le modèle Q4_K_M (~2,7–5 GB), (4) ouvrez Chat, sélectionnez le modèle et commencez à discuter — aucun terminal requis.',
       },
       jan: {
@@ -1168,6 +1171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026年、LM Studioは最も簡単なローカルAIアプリです — Windows、Mac、Linuxで使えます。ダウンロード、インストール、モデルをロード、わずか10分以内でチャットを開始できます。このガイドは、LM Studio、Jan、GPT4Allの3つのターミナル不要なオプションをカバーし、セットアップ時間と機能で比較して、ハードウェアと目標に基づいてどれを選ぶべきかを説明します。',
     metaDescription:
       'LM StudioのApple Silicon、Intel Mac、Windows、Linux対応：サポートモデル、システム要件、セットアップ時間。ターミナル不要。Jan・GPT4Allとの比較、2026年版。',
+    heroImage: '/images/easiest-local-ai-app-comparison-table-hero-ja.png',
     twitterDescription:
       'LM Studio on Apple Silicon（M1〜M5）、Intel Mac、Windows、Linux：サポートモデル、システム要件、セットアップ時間 — Jan・GPT4Allとの比較、2026年。',
     current_models_mentioned: [
@@ -1271,7 +1275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '基準': 'ダウンロードサイズ', 'LM Studio': '約450 MB', 'Jan': '約380 MB', 'GPT4All': '約290 MB' },
           { '基準': 'ローカルOpenAI API', 'LM Studio': 'あり', 'Jan': 'あり', 'GPT4All': 'あり' },
         ],
-        image: '/images/easiest-local-ai-app-comparison-table-ja.svg',
+        image: '/images/easiest-local-ai-app-comparison-table-hero-ja.png',
         imageCaption: 'LM Studio対Jan対GPT4All機能比較：LM Studioは50,000以上のモデル、ローカルAPI、マルチチャット、最高のUIを提供；JanはオープンソースのAGPLv3代替；GPT4Allは完全な初心者向けの最もシンプルな単一ウィンドウオプション。',
       },
       lmStudio: {
@@ -1304,7 +1308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'ロード後、すぐにチャット可能。追加ステップなし。ハードウェアに応じて最初の回答生成は10–30秒かかる。',
           },
         ],
-        image: '/images/easiest-local-ai-app-setup-steps-ja.svg',
+        image: '/images/easiest-local-ai-app-setup-steps-hero-ja.png',
         imageCaption: 'LM Studio 4ステップセットアップ：（1）lmstudio.aiからインストーラをダウンロード、（2）アプリをインストールして開く、（3）Discoverタブを閲覧してQ4_K_Mモデル（~2.7–5 GB）をダウンロード、（4）Chatを開き、モデルを選択してチャット開始 — ターミナル不要。',
       },
       jan: {
@@ -1584,6 +1588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026年，LM Studio是Windows、Mac、Linux上最简单的本地AI应用。下载、安装、加载模型，10分钟内开始聊天，无需终端。本指南涵盖LM Studio、Jan和GPT4All这三个无代码选项，按设置时间和功能比较它们，并根据你的硬件和目标解释选择哪一个。',
     metaDescription:
       'LM Studio在Apple Silicon、Intel Mac、Windows和Linux上的支持模型、系统要求与安装时间，无需终端。对比Jan和GPT4All，2026年版。',
+    heroImage: '/images/easiest-local-ai-app-comparison-table-hero-zh.png',
     twitterDescription:
       'LM Studio在Apple Silicon（M1–M5）、Intel Mac、Windows和Linux上的支持模型、系统要求与安装时间 — 对比Jan和GPT4All，2026年版。',
     current_models_mentioned: [
@@ -1687,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '标准': '下载大小', 'LM Studio': '约450 MB', 'Jan': '约380 MB', 'GPT4All': '约290 MB' },
           { '标准': '本地OpenAI API', 'LM Studio': '是', 'Jan': '是', 'GPT4All': '是' },
         ],
-        image: '/images/easiest-local-ai-app-comparison-table-zh.svg',
+        image: '/images/easiest-local-ai-app-comparison-table-hero-zh.png',
         imageCaption: 'LM Studio与Jan与GPT4All功能对比：LM Studio提供50,000+模型、本地API、多聊天和最佳UI；Jan是开源替代品（AGPLv3）；GPT4All是纯初学者最简单的单窗口选项。',
       },
       lmStudio: {
@@ -1720,7 +1725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '加载后，立即可以聊天。无需其他步骤。首次答案生成可能需要10–30秒，具体取决于你的硬件。',
           },
         ],
-        image: '/images/easiest-local-ai-app-setup-steps-zh.svg',
+        image: '/images/easiest-local-ai-app-setup-steps-hero-zh.png',
         imageCaption: 'LM Studio 4步设置：（1）从lmstudio.ai下载安装程序，（2）安装并打开应用，（3）浏览Discover选项卡并下载Q4_K_M模型（~2.7–5 GB），（4）打开Chat，选择模型，开始聊天 — 无需终端。',
       },
       jan: {
@@ -2000,6 +2005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LM Studio es la aplicación de IA local más fácil en 2026 para Windows, Mac y Linux — descárgala, instálala, carga un modelo y empieza a chatear en menos de 10 minutos sin usar la terminal. Esta guía cubre LM Studio, Jan y GPT4All como las tres opciones sin código, las compara por tiempo de configuración y capacidad, y explica cuál elegir según tu hardware y objetivos.',
     metaDescription:
       'LM Studio en Apple Silicon, Mac Intel, Windows y Linux: modelos compatibles, requisitos del sistema y tiempo de configuración. Sin terminal. Comparado con Jan y GPT4All, 2026.',
+    heroImage: '/images/easiest-local-ai-app-comparison-table-hero-es.png',
     twitterDescription:
       'LM Studio en Apple Silicon (M1–M5), Mac Intel, Windows y Linux: modelos compatibles, requisitos del sistema y tiempo de configuración — comparado con Jan y GPT4All para 2026.',
     current_models_mentioned: [
@@ -2120,7 +2126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Comienza con LM Studio a menos que tengas una razón específica para no hacerlo. Tiene la mejor interfaz, la biblioteca de modelos más grande y una ruta de actualización clara (pestaña Local Server) si quieres conectar otras herramientas más adelante. Si prefieres firmemente el software de código abierto, Jan es la opción equivalente.',
           },
         ],
-        image: '/images/easiest-local-ai-app-comparison-table-es.svg',
+        image: '/images/easiest-local-ai-app-comparison-table-hero-es.png',
         imageCaption: 'Comparación de características LM Studio vs Jan vs GPT4All: LM Studio ofrece 50.000+ modelos, API local, multi-chat y la mejor interfaz; Jan es la alternativa de código abierto (AGPLv3); GPT4All es la opción más sencilla de ventana única para principiantes absolutos.',
       },
       lmStudio: {
@@ -2143,7 +2149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'En macOS, LM Studio detecta tu hardware automáticamente y recomienda el mejor nivel de cuantización para tu memoria disponible. Acepta la recomendación a menos que tengas una razón específica para modificarla. En Windows con GPU NVIDIA, LM Studio habilita automáticamente la aceleración por GPU — no necesitas configurar CUDA.',
           },
         ],
-        image: '/images/easiest-local-ai-app-setup-steps-es.svg',
+        image: '/images/easiest-local-ai-app-setup-steps-hero-es.png',
         imageCaption: 'Configuración de LM Studio en 4 pasos: (1) descarga el instalador desde lmstudio.ai, (2) instala y abre la aplicación, (3) navega por la pestaña Discover y descarga el modelo Q4_K_M (~2,7–5 GB), (4) abre Chat, selecciona el modelo y empieza a chatear — no se requiere terminal.',
       },
       jan: {
@@ -2355,6 +2361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'O LM Studio é o aplicativo de IA local mais fácil em 2026 para Windows, Mac e Linux — baixe, instale, carregue um modelo e comece a conversar em menos de 10 minutos sem usar o terminal. Este guia cobre LM Studio, Jan e GPT4All como as três opções sem código, compara-os por tempo de configuração e capacidade, e explica qual escolher conforme o seu hardware e objetivos.',
     metaDescription:
       'LM Studio no Apple Silicon, Mac Intel, Windows e Linux: modelos compatíveis, requisitos de sistema e tempo de configuração. Sem terminal. Comparado com Jan e GPT4All, 2026.',
+    heroImage: '/images/easiest-local-ai-app-comparison-table-hero-pt.png',
     twitterDescription:
       'LM Studio no Apple Silicon (M1–M5), Mac Intel, Windows e Linux: modelos compatíveis, requisitos de sistema e tempo de configuração — comparado com Jan e GPT4All para 2026.',
     current_models_mentioned: [
@@ -2475,7 +2482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Comece com o LM Studio a menos que tenha um motivo específico para não fazer isso. Ele tem a melhor interface, a maior biblioteca de modelos e um caminho de atualização claro (aba Local Server) caso queira conectar outras ferramentas mais adiante. Se você prefere firmemente o software de código aberto, o Jan é a opção equivalente.',
           },
         ],
-        image: '/images/easiest-local-ai-app-comparison-table-pt.svg',
+        image: '/images/easiest-local-ai-app-comparison-table-hero-pt.png',
         imageCaption: 'Comparação de recursos LM Studio vs Jan vs GPT4All: o LM Studio oferece 50.000+ modelos, API local, multi-chat e a melhor interface; o Jan é a alternativa de código aberto (AGPLv3); o GPT4All é a opção mais simples de janela única para iniciantes absolutos.',
       },
       lmStudio: {
@@ -2498,7 +2505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'No macOS, o LM Studio detecta o seu hardware automaticamente e recomenda o melhor nível de quantização para a sua memória disponível. Aceite a recomendação a menos que tenha um motivo específico para alterá-la. No Windows com GPU NVIDIA, o LM Studio habilita automaticamente a aceleração por GPU — você não precisa configurar o CUDA.',
           },
         ],
-        image: '/images/easiest-local-ai-app-setup-steps-pt.svg',
+        image: '/images/easiest-local-ai-app-setup-steps-hero-pt.png',
         imageCaption: 'Configuração do LM Studio em 4 passos: (1) baixe o instalador em lmstudio.ai, (2) instale e abra o aplicativo, (3) navegue pela aba Discover e baixe o modelo Q4_K_M (~2,7–5 GB), (4) abra o Chat, selecione o modelo e comece a conversar — nenhum terminal é necessário.',
       },
       jan: {
@@ -2710,6 +2717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'يُعدّ تطبيق LM Studio أسهل تطبيق للذكاء الاصطناعي المحلي في 2026 لأنظمة Windows وMac وLinux — قم بتنزيله وتثبيته وتحميل نموذج والبدء بالدردشة في أقل من 10 دقائق دون الحاجة إلى أي طرفية. يغطي هذا الدليل تطبيقات LM Studio وJan وGPT4All بوصفها الخيارات الثلاثة التي لا تستلزم أي برمجة، ويقارنها من حيث وقت الإعداد والقدرات، ويوضح أيّها تختار بناءً على أجهزتك وأهدافك.',
     metaDescription:
       'LM Studio على Apple Silicon وMac Intel وWindows وLinux: النماذج المدعومة ومتطلبات النظام ووقت الإعداد. بلا طرفية. مقارنةً بـJan وGPT4All، 2026.',
+    heroImage: '/images/easiest-local-ai-app-comparison-table-hero-ar.png',
     twitterDescription:
       'LM Studio على Apple Silicon (M1–M5) وMac Intel وWindows وLinux: النماذج المدعومة ومتطلبات النظام ووقت الإعداد — مقارنةً بـJan وGPT4All لعام 2026.',
     current_models_mentioned: [
@@ -2830,7 +2838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ابدأ بتطبيق LM Studio ما لم يكن لديك سبب محدد لعدم ذلك. له أفضل واجهة ومكتبة النماذج الأكبر ومسار ترقية واضح (تبويب Local Server) إذا أردت ربط أدوات أخرى لاحقاً. إذا كنت تفضّل البرامج مفتوحة المصدر بشدة، فـJan هو الخيار المعادل.',
           },
         ],
-        image: '/images/easiest-local-ai-app-comparison-table-es.svg',
+        image: '/images/easiest-local-ai-app-comparison-table-hero-ar.png',
         imageCaption: 'مقارنة ميزات LM Studio مقابل Jan مقابل GPT4All: LM Studio يوفر أكثر من 50,000 نموذج، API محلية، دردشة متعددة وأفضل واجهة؛ Jan هو البديل مفتوح المصدر (AGPLv3)؛ GPT4All هو الخيار الأبسط ذو النافذة الواحدة للمبتدئين المطلقين.',
       },
       lmStudio: {
@@ -2853,7 +2861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'على macOS، يكتشف تطبيق LM Studio أجهزتك تلقائياً ويوصي بأفضل مستوى كمية لذاكرتك المتاحة. اقبل التوصية ما لم يكن لديك سبب محدد لتغييرها. على Windows مع GPU من NVIDIA، يُفعّل تطبيق LM Studio تسريع GPU تلقائياً — لا تحتاج إلى إعداد CUDA.',
           },
         ],
-        image: '/images/easiest-local-ai-app-setup-steps-es.svg',
+        image: '/images/easiest-local-ai-app-setup-steps-hero-ar.png',
         imageCaption: 'إعداد LM Studio في 4 خطوات: (1) نزّل المثبّت من lmstudio.ai، (2) ثبّت وافتح التطبيق، (3) تصفّح تبويب Discover ونزّل نموذج Q4_K_M (حوالي 2.7 إلى 5 جيجابايت)، (4) افتح Chat واختر النموذج وابدأ الدردشة — لا طرفية مطلوبة.',
       },
       jan: {
@@ -3065,6 +3073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LM Studio는 2026년 Windows, Mac, Linux에서 가장 쉬운 로컬 AI 앱입니다 — 다운로드하고, 설치하고, 모델을 불러와 터미널 없이 10분 이내에 채팅을 시작할 수 있습니다. 이 가이드에서는 코드 없이 사용할 수 있는 세 가지 옵션인 LM Studio, Jan, GPT4All을 다루며, 설정 시간과 기능을 비교하고 하드웨어와 목표에 따라 어떤 것을 선택할지 설명합니다.',
     metaDescription:
       'LM Studio의 Apple Silicon, Intel Mac, Windows, Linux 지원 모델과 시스템 요구 사항, 설정 시간. 터미널 불필요. Jan, GPT4All과 비교, 2026년.',
+    heroImage: '/images/easiest-local-ai-app-comparison-table-hero-ko.png',
     twitterDescription:
       'LM Studio의 Apple Silicon(M1–M5), Intel Mac, Windows, Linux 지원 모델과 시스템 요구 사항, 설정 시간 — Jan, GPT4All과 비교한 2026년판.',
     current_models_mentioned: [
@@ -3185,7 +3194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '특별한 이유가 없다면 LM Studio로 시작하십시오. 최고의 인터페이스, 가장 큰 모델 라이브러리, 나중에 다른 도구를 연결하고 싶을 때의 명확한 업그레이드 경로(Local Server 탭)를 갖추고 있습니다. 오픈소스 소프트웨어를 강하게 선호한다면 Jan이 동등한 선택지입니다.',
           },
         ],
-        image: '/images/easiest-local-ai-app-comparison-table-ko.svg',
+        image: '/images/easiest-local-ai-app-comparison-table-hero-ko.png',
         imageCaption: 'LM Studio vs Jan vs GPT4All 기능 비교: LM Studio는 50,000+ 모델, 로컬 API, 다중 채팅, 최고의 인터페이스를 제공합니다; Jan은 오픈소스 대안(AGPLv3)입니다; GPT4All은 완전 초보자를 위한 가장 단순한 단일 창 옵션입니다.',
       },
       lmStudio: {
@@ -3208,7 +3217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'macOS에서 LM Studio는 하드웨어를 자동으로 감지하여 가용 메모리에 맞는 최적의 양자화 수준을 추천합니다. 특별한 이유가 없다면 추천을 수락하십시오. NVIDIA GPU가 있는 Windows에서는 LM Studio가 자동으로 GPU 가속을 활성화합니다 — CUDA를 별도로 설정할 필요가 없습니다.',
           },
         ],
-        image: '/images/easiest-local-ai-app-setup-steps-ko.svg',
+        image: '/images/easiest-local-ai-app-setup-steps-hero-ko.png',
         imageCaption: 'LM Studio 4단계 설정: (1) lmstudio.ai에서 설치 프로그램 다운로드, (2) 설치 후 앱 실행, (3) Discover 탭에서 Q4_K_M 모델 다운로드 (~2.7–5 GB), (4) Chat 열기, 모델 선택, 채팅 시작 — 터미널 불필요.',
       },
       jan: {
