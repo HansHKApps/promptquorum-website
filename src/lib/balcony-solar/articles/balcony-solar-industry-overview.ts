@@ -47,7 +47,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Balcony Solar Money Pages',
     title: 'Aperçu de l\'industrie du solaire de balcon (2026) : histoire, chaîne d\'approvisionnement et acteurs du marché',
     seoTitle: 'Industrie du solaire de balcon : aperçu (2026)',
-    metaDescription: 'Comment l\'industrie du solaire de balcon s\'est formée, sa chaîne d\'approvisionnement à trois niveaux et les entreprises qui la portent, mise à jour pour 2026.',
+    metaDescription: 'Comment l\'industrie du solaire de balcon s\'est formée, sa chaîne d\'approvisionnement à trois niveaux et les entreprises qui la portent (2026).',
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Lecteurs qui recherchent des informations sur la structure de l\'industrie du solaire de balcon et ses principaux acteurs',
