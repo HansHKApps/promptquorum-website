@@ -9,6 +9,10 @@ import { powerLLMContent } from '@/lib/power-local-llm/content'
 import { POWER_LLM_SLUG_TO_KEY } from '@/lib/power-local-llm/slugs'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
+import { smartHomeContent } from '@/lib/smart-home/content'
+import { SMART_HOME_SLUG_TO_KEY } from '@/lib/smart-home/slugs'
+import { balconySolarContent } from '@/lib/balcony-solar/content'
+import { BALCONY_SOLAR_SLUG_TO_KEY } from '@/lib/balcony-solar/slugs'
 import type { Language } from '@/lib/blog/blogContent'
 
 export const runtime = 'nodejs'
@@ -22,12 +26,15 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
   const validLangs: Language[] = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
-  // Cluster lookup order: prompt-engineering → local-llms → power-local-llm → prompt-bites.
-  // First match wins. Watch for slug collisions across clusters when adding new articles.
+  // Cluster lookup order: prompt-engineering → local-llms → power-local-llm →
+  // prompt-bites → smart-home → balcony-solar. First match wins. Watch for slug
+  // collisions across clusters when adding new articles.
   const peKey = PE_SLUG_TO_KEY[slug]
   const llmKey = LLM_SLUG_TO_KEY[slug]
   const powerKey = POWER_LLM_SLUG_TO_KEY[slug]
   const bitesKey = PROMPT_BITES_SLUG_TO_KEY[slug]
+  const smartHomeKey = SMART_HOME_SLUG_TO_KEY[slug]
+  const balconySolarKey = BALCONY_SOLAR_SLUG_TO_KEY[slug]
 
   let article: { title?: string; intro?: string } | undefined
 
@@ -42,6 +49,12 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
     article = langContent[selectedLang] || langContent['en']
   } else if (bitesKey && promptBitesContent[bitesKey]) {
     const langContent = promptBitesContent[bitesKey]
+    article = langContent[selectedLang] || langContent['en']
+  } else if (smartHomeKey && smartHomeContent[smartHomeKey]) {
+    const langContent = smartHomeContent[smartHomeKey]
+    article = langContent[selectedLang] || langContent['en']
+  } else if (balconySolarKey && balconySolarContent[balconySolarKey]) {
+    const langContent = balconySolarContent[balconySolarKey]
     article = langContent[selectedLang] || langContent['en']
   }
 
