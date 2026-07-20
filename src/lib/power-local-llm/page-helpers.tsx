@@ -133,7 +133,7 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
       ? { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 }
       : { index: false, follow: true },
     openGraph: {
-      title: article?.title ?? fallbackTitle,
+      title: baseTitle,
       description: desc,
       url: `${BASE}${powerLLMArticlePath(lang, slug)}`,
       type: 'article',
@@ -145,7 +145,7 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
             : `${BASE}/api/og/${slug}?lang=${lang}`,
           width: 1200,
           height: 675,
-          alt: article?.title ?? fallbackTitle,
+          alt: baseTitle,
         },
       ],
       publishedTime: article?.publishDate,
@@ -154,7 +154,7 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
     twitter: {
       card: 'summary_large_image',
       site: '@promptquorum',
-      title: article?.title ?? fallbackTitle,
+      title: baseTitle,
       description: (article as any)?.twitterDescription ?? desc,
       images: [`${BASE}/api/og/${slug}?lang=${lang}`],
     },

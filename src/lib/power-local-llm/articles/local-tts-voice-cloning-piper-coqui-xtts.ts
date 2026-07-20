@@ -103,6 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'StyleTTS 2 — Highest Natural Quality', anchor: '#styletts' },
       { label: 'F5-TTS — Zero-Shot Voice Cloning, Fully Open', anchor: '#f5tts' },
       { label: 'Licenses & Commercial Use (CPML, MIT, CC-BY-NC)', anchor: '#licenses' },
+      { label: 'What Is the Coqui Public Model License (CPML)?', anchor: '#cpml-explained' },
       { label: 'Accept the CPML Non-Interactively (COQUI_TOS_AGREED)', anchor: '#cpml-noninteractive' },
       { label: 'How Local TTS Compares to ElevenLabs', anchor: '#local-vs-cloud' },
       { label: 'How to Choose', anchor: '#how-to-choose' },
@@ -513,6 +514,35 @@ snippetBlocks: [
           {
             type: 'warning',
             text: 'This is factual reference, not legal advice. Licenses change and edge cases (voice consent, dataset terms, per-voice model licenses) matter. Read each engine\'s license file yourself, and consult a lawyer, before relying on any of these terms for commercial deployment.',
+          },
+        ],
+      },
+      cpmlExplained: {
+        id: 'cpml-explained',
+        title: 'What Is the Coqui Public Model License (CPML)?',
+        content:
+          'The Coqui Public Model License (CPML) is the specific legal document that governs the XTTS v2 model weights — it is not the same license as the Coqui TTS toolkit code (MPL 2.0), and it is not an open-source license. Coqui AI published the CPML as a source-available, non-commercial license: the model weights are publicly downloadable, but the license text explicitly withholds commercial-use rights. There is currently no official commercial-use tier of the CPML for sale, because Coqui Inc shut down in January 2024 — no entity is issuing paid commercial licenses for XTTS v2 today, so treat CPML non-commercial as the only available status.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'The Coqui Public Model License (CPML) is Coqui AI\'s custom non-commercial license for the XTTS v2 model weights — it allows personal, research, and academic use but prohibits commercial use, and no official commercial-use license is currently for sale.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'CPML is a separate license from the Coqui TTS toolkit\'s MPL 2.0 code license — it applies specifically to the XTTS v2 model weights and their audio outputs. Read the CPML text yourself before using XTTS v2 in anything that generates revenue.',
+          },
+        ],
+        items: [
+          '**Full name:** Coqui Public Model License (CPML) — a source-available, non-commercial license written by Coqui AI specifically for the XTTS v2 model weights.',
+          '**Commercial use, official status:** Not permitted. The CPML text explicitly restricts commercial use, and there is no official commercial-use license currently for sale — Coqui Inc shut down in January 2024.',
+          '**CPML non-commercial scope:** Personal use, research, and academic work are allowed, including using the generated audio outputs — as long as no revenue is earned from the deployment.',
+          '**Not open source:** The Open Source Initiative (OSI) has not approved the CPML. It is source-available, not open source, despite the model weights being publicly downloadable.',
+          '**Applies to weights, not the toolkit:** The CPML governs the XTTS v2 model file itself. The surrounding Coqui TTS toolkit code is licensed separately under MPL 2.0, which is commercial-friendly with source-disclosure conditions.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'This is factual reference, not legal advice. Read the official CPML text yourself, and consult a lawyer, before relying on this summary for a commercial decision.',
           },
         ],
       },
@@ -932,6 +962,35 @@ snippetBlocks: [
           { type: 'warning', text: 'Dies ist eine sachliche Referenz, keine Rechtsberatung. Lizenzen ändern sich, und Sonderfälle (Stimm-Einwilligung, Datensatz-Bedingungen, Lizenzen einzelner Voice-Modelle) sind relevant. Lesen Sie die Lizenzdatei jeder Engine selbst und konsultieren Sie einen Anwalt, bevor Sie sich für einen kommerziellen Einsatz auf eine dieser Bedingungen verlassen.' },
         ],
       },
+      cpmlExplained: {
+        id: 'cpml-explained',
+        title: 'Was ist die Coqui Public Model License (CPML)?',
+        content:
+          'Die Coqui Public Model License (CPML) ist das konkrete Lizenzdokument, das die XTTS-v2-Modellgewichte regelt — sie ist nicht identisch mit der Lizenz des Coqui-TTS-Toolkit-Codes (MPL 2.0) und keine Open-Source-Lizenz. Coqui AI veröffentlichte die CPML als „source-available", nicht-kommerzielle Lizenz: Die Modellgewichte sind öffentlich herunterladbar, doch der Lizenztext schließt kommerzielle Nutzungsrechte ausdrücklich aus. Derzeit gibt es keine offizielle kommerzielle CPML-Stufe zu kaufen, da Coqui Inc im Januar 2024 geschlossen hat — niemand vergibt aktuell kostenpflichtige kommerzielle Lizenzen für XTTS v2, weshalb „CPML nicht-kommerziell" der einzig verfügbare Status ist.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Die Coqui Public Model License (CPML) ist Coqui AIs eigene nicht-kommerzielle Lizenz für die XTTS-v2-Modellgewichte — sie erlaubt private, Forschungs- und akademische Nutzung, verbietet aber kommerzielle Nutzung, und derzeit ist keine offizielle kommerzielle Lizenz erhältlich.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Die CPML ist eine eigenständige Lizenz, getrennt von der MPL-2.0-Codelizenz des Coqui-TTS-Toolkits — sie gilt speziell für die XTTS-v2-Modellgewichte und deren Audio-Ausgaben. Lesen Sie den CPML-Text selbst, bevor Sie XTTS v2 in irgendetwas einsetzen, das Umsatz erzeugt.',
+          },
+        ],
+        items: [
+          '**Vollständiger Name:** Coqui Public Model License (CPML) — eine „source-available", nicht-kommerzielle Lizenz, die Coqui AI eigens für die XTTS-v2-Modellgewichte verfasst hat.',
+          '**Kommerzielle Nutzung, offizieller Status:** Nicht erlaubt. Der CPML-Text schließt kommerzielle Nutzung ausdrücklich aus, und es gibt derzeit keine offizielle kommerzielle Lizenz zu kaufen — Coqui Inc hat im Januar 2024 geschlossen.',
+          '**Nicht-kommerzieller Umfang der CPML:** Private Nutzung, Forschung und akademische Arbeit sind erlaubt, einschließlich der Nutzung der generierten Audio-Ausgaben — solange mit dem Einsatz kein Umsatz erzielt wird.',
+          '**Keine Open-Source-Lizenz:** Die Open Source Initiative (OSI) hat die CPML nicht anerkannt. Sie ist „source-available", nicht Open Source, obwohl die Modellgewichte öffentlich herunterladbar sind.',
+          '**Gilt für die Gewichte, nicht das Toolkit:** Die CPML regelt die XTTS-v2-Modelldatei selbst. Der umgebende Coqui-TTS-Toolkit-Code ist separat unter MPL 2.0 lizenziert, was kommerzielle Nutzung mit Offenlegungspflichten für Änderungen erlaubt.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Dies ist eine sachliche Referenz, keine Rechtsberatung. Lesen Sie den offiziellen CPML-Text selbst und konsultieren Sie einen Anwalt, bevor Sie sich bei einer kommerziellen Entscheidung auf diese Zusammenfassung verlassen.',
+          },
+        ],
+      },
       cpmlNonInteractive: {
         id: 'cpml-noninteractive',
         title: 'Die CPML nicht-interaktiv akzeptieren (COQUI_TOS_AGREED)',
@@ -1313,6 +1372,35 @@ snippetBlocks: [
           { type: 'warning', text: 'Ceci est une référence factuelle, pas un conseil juridique. Les licences changent et les cas limites (consentement vocal, conditions des jeux de données, licences de modèle par voix) comptent. Lisez vous-même le fichier de licence de chaque moteur, et consultez un juriste, avant de vous appuyer sur ces conditions pour un déploiement commercial.' },
         ],
       },
+      cpmlExplained: {
+        id: 'cpml-explained',
+        title: 'Qu\'est-ce que la Coqui Public Model License (CPML) ?',
+        content:
+          'La Coqui Public Model License (CPML) est le document juridique précis qui régit les poids du modèle XTTS v2 — elle n\'est pas la même licence que le code du toolkit Coqui TTS (MPL 2.0), et ce n\'est pas une licence open source. Coqui AI a publié la CPML comme licence « source-available », non commerciale : les poids du modèle sont téléchargeables publiquement, mais le texte de la licence exclut explicitement les droits d\'usage commercial. Il n\'existe actuellement aucun palier commercial officiel de la CPML à vendre, car Coqui Inc a fermé en janvier 2024 — aucune entité ne délivre aujourd\'hui de licence commerciale payante pour XTTS v2, donc « CPML non commerciale » est le seul statut disponible.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'La Coqui Public Model License (CPML) est la licence non commerciale personnalisée de Coqui AI pour les poids du modèle XTTS v2 — elle autorise l\'usage personnel, la recherche et le cadre académique, mais interdit l\'usage commercial, et aucune licence commerciale officielle n\'est actuellement en vente.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'La CPML est une licence distincte de la licence de code MPL 2.0 du toolkit Coqui TTS — elle s\'applique spécifiquement aux poids du modèle XTTS v2 et à leurs sorties audio. Lisez vous-même le texte de la CPML avant d\'utiliser XTTS v2 dans quoi que ce soit qui génère des revenus.',
+          },
+        ],
+        items: [
+          '**Nom complet :** Coqui Public Model License (CPML) — une licence « source-available », non commerciale, rédigée par Coqui AI spécifiquement pour les poids du modèle XTTS v2.',
+          '**Usage commercial, statut officiel :** Non autorisé. Le texte de la CPML exclut explicitement l\'usage commercial, et aucune licence commerciale officielle n\'est actuellement en vente — Coqui Inc a fermé en janvier 2024.',
+          '**Périmètre non commercial de la CPML :** L\'usage personnel, la recherche et le travail académique sont autorisés, y compris l\'utilisation des sorties audio générées — tant qu\'aucun revenu n\'est tiré du déploiement.',
+          '**Pas open source :** L\'Open Source Initiative (OSI) n\'a pas approuvé la CPML. Elle est « source-available », pas open source, bien que les poids du modèle soient téléchargeables publiquement.',
+          '**S\'applique aux poids, pas au toolkit :** La CPML régit le fichier de modèle XTTS v2 lui-même. Le code du toolkit Coqui TTS qui l\'entoure est licencié séparément sous MPL 2.0, ce qui autorise un usage commercial sous conditions de divulgation des modifications.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Ceci est une référence factuelle, pas un conseil juridique. Lisez vous-même le texte officiel de la CPML, et consultez un juriste, avant de vous appuyer sur ce résumé pour une décision commerciale.',
+          },
+        ],
+      },
       cpmlNonInteractive: {
         id: 'cpml-noninteractive',
         title: 'Accepter la CPML de manière non interactive (COQUI_TOS_AGREED)',
@@ -1677,6 +1765,35 @@ snippetBlocks: [
         callouts: [
           { type: 'note', text: 'Coqui TTS（ツールキット、MPL 2.0）とXTTS v2（特定のモデル重み、CPML）はライセンスが異なります。商用製品でCoqui TTSツールキットをVITSまたはTacotron2バックエンドでMPL 2.0の下で出荷できます。CPMLの非商用制限はXTTS v2のモデル重みとその音声出力に特定して適用され、ツールキットのコードには適用されません。' },
           { type: 'warning', text: 'これは事実に基づく参考情報であり、法的助言ではありません。ライセンスは変更されることがあり、エッジケース（音声の同意、データセット条項、音声ごとのモデルライセンス）が問題になります。商用デプロイでこれらの条項に依拠する前に、各エンジンのライセンスファイルをご自身で読み、弁護士に相談してください。' },
+        ],
+      },
+      cpmlExplained: {
+        id: 'cpml-explained',
+        title: 'Coqui Public Model License（CPML）とは何か？',
+        content:
+          'Coqui Public Model License（CPML）は、XTTS v2のモデル重みを規定する具体的なライセンス文書です — Coqui TTSツールキットのコードライセンス（MPL 2.0）とは別物であり、オープンソースライセンスでもありません。Coqui AIはCPMLを「ソース公開型」の非商用ライセンスとして公開しました：モデル重みは一般に公開されダウンロード可能ですが、ライセンス文書は商用利用の権利を明確に除外しています。Coqui Incが2024年1月に閉鎖したため、現在CPMLの公式な商用利用枠は販売されていません — XTTS v2の有償商用ライセンスを発行している主体は存在せず、「CPML非商用」が唯一利用可能なステータスです。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Coqui Public Model License（CPML）は、XTTS v2のモデル重みに対するCoqui AI独自の非商用ライセンスです — 個人利用、研究、学術利用は許可されますが商用利用は禁止されており、現在公式な商用ライセンスは販売されていません。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'CPMLはCoqui TTSツールキットのMPL 2.0コードライセンスとは別のライセンスであり、XTTS v2のモデル重みとその音声出力に特定して適用されます。収益を生むものにXTTS v2を使用する前に、CPMLの本文をご自身で読んでください。',
+          },
+        ],
+        items: [
+          '**正式名称：** Coqui Public Model License（CPML）— Coqui AIがXTTS v2のモデル重みのために特別に作成した、ソース公開型の非商用ライセンス。',
+          '**商用利用・公式ステータス：** 許可されていません。CPML本文は商用利用を明確に制限しており、現在公式な商用ライセンスは販売されていません — Coqui Incは2024年1月に閉鎖しました。',
+          '**CPMLの非商用範囲：** 個人利用、研究、学術利用は許可されており、生成された音声出力の利用も含まれます — ただしその展開から収益を得ない場合に限ります。',
+          '**オープンソースではない：** Open Source Initiative（OSI）はCPMLを承認していません。モデル重みが一般公開・ダウンロード可能であっても、ソース公開型であってオープンソースではありません。',
+          '**モデル重みに適用され、ツールキットには適用されない：** CPMLはXTTS v2のモデルファイル自体を規定します。周辺のCoqui TTSツールキットのコードは別途MPL 2.0の下でライセンスされており、変更内容の開示を条件に商用利用が可能です。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'これは事実に基づく参考情報であり、法的助言ではありません。商用判断のためにこの要約に依拠する前に、公式のCPML本文をご自身で読み、弁護士に相談してください。',
+          },
         ],
       },
       cpmlNonInteractive: {
@@ -2061,6 +2178,35 @@ snippetBlocks: [
           { type: 'warning', text: '本文为事实参考，非法律意见。许可证会变更，边缘情形（声音同意、数据集条款、每个语音模型的许可证）也很重要。商业部署前请自行阅读每款引擎的许可证文件，并咨询律师。' },
         ],
       },
+      cpmlExplained: {
+        id: 'cpml-explained',
+        title: '什么是 Coqui Public Model License（CPML）？',
+        content:
+          'Coqui Public Model License（CPML）是专门规范 XTTS v2 模型权重的具体许可文件 —— 它与 Coqui TTS 工具包代码的许可证（MPL 2.0）不同，也不是开源许可证。Coqui AI 将 CPML 发布为「源代码可见」的非商用许可证：模型权重可公开下载，但许可证文本明确排除了商业使用权利。由于 Coqui Inc 已于 2024 年 1 月关闭，目前没有官方的 CPML 商用授权可供购买 —— 没有任何主体在出售 XTTS v2 的付费商业许可证，因此「CPML 非商用」是目前唯一可用的状态。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Coqui Public Model License（CPML）是 Coqui AI 为 XTTS v2 模型权重制定的专属非商用许可证 —— 允许个人、研究和学术用途，但禁止商业使用，且目前没有官方商用许可证在售。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'CPML 是独立于 Coqui TTS 工具包 MPL 2.0 代码许可证的另一份许可证 —— 专门适用于 XTTS v2 模型权重及其音频输出。在将 XTTS v2 用于任何产生收入的用途之前，请自行阅读 CPML 全文。',
+          },
+        ],
+        items: [
+          '**全称：** Coqui Public Model License（CPML）—— Coqui AI 专为 XTTS v2 模型权重撰写的源代码可见、非商用许可证。',
+          '**商业使用、官方状态：** 不允许。CPML 文本明确限制商业使用，且目前没有官方商用许可证在售 —— Coqui Inc 已于 2024 年 1 月关闭。',
+          '**CPML 的非商用范围：** 允许个人使用、研究和学术工作，包括使用生成的音频输出 —— 只要该部署不产生收入。',
+          '**并非开源：** 开放源代码促进会（OSI）未认证 CPML。尽管模型权重可公开下载，它仍是「源代码可见」而非开源。',
+          '**适用于模型权重，而非工具包：** CPML 规范的是 XTTS v2 模型文件本身。周边的 Coqui TTS 工具包代码单独以 MPL 2.0 许可，在披露修改内容的条件下允许商业使用。',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '本文为事实参考，非法律意见。在依据本摘要做出商业决策之前，请自行阅读官方 CPML 全文，并咨询律师。',
+          },
+        ],
+      },
       cpmlNonInteractive: {
         id: 'cpml-noninteractive',
         title: '非交互式接受CPML（COQUI_TOS_AGREED）',
@@ -2300,6 +2446,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
       { label: 'StyleTTS 2 — Máxima calidad natural', anchor: '#styletts' },
       { label: 'F5-TTS — Clonación de voz zero-shot, totalmente abierto', anchor: '#f5tts' },
       { label: 'Licencias y uso comercial (CPML, MIT, CC-BY-NC)', anchor: '#licenses' },
+      { label: '¿Qué es la Coqui Public Model License (CPML)?', anchor: '#cpml-explained' },
       { label: 'Aceptar la CPML de forma no interactiva (COQUI_TOS_AGREED)', anchor: '#cpml-noninteractive' },
       { label: 'TTS local vs ElevenLabs', anchor: '#local-vs-cloud' },
       { label: 'Cómo elegir', anchor: '#how-to-choose' },
@@ -2712,6 +2859,35 @@ snippetBlocks: [
           },
         ],
       },
+      cpmlExplained: {
+        id: 'cpml-explained',
+        title: '¿Qué es la Coqui Public Model License (CPML)?',
+        content:
+          'La Coqui Public Model License (CPML) es el documento legal específico que rige los pesos del modelo XTTS v2 — no es la misma licencia que el código del kit de herramientas Coqui TTS (MPL 2.0), y no es una licencia de código abierto. Coqui AI publicó la CPML como una licencia "source-available", no comercial: los pesos del modelo se pueden descargar públicamente, pero el texto de la licencia excluye explícitamente los derechos de uso comercial. Actualmente no existe ningún nivel comercial oficial de la CPML a la venta, porque Coqui Inc cerró en enero de 2024 — ninguna entidad emite hoy licencias comerciales de pago para XTTS v2, por lo que "CPML no comercial" es el único estado disponible.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'La Coqui Public Model License (CPML) es la licencia no comercial personalizada de Coqui AI para los pesos del modelo XTTS v2 — permite el uso personal, de investigación y académico, pero prohíbe el uso comercial, y actualmente no hay ninguna licencia comercial oficial a la venta.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'La CPML es una licencia separada de la licencia de código MPL 2.0 del kit Coqui TTS — se aplica específicamente a los pesos del modelo XTTS v2 y a sus salidas de audio. Lee tú mismo el texto de la CPML antes de usar XTTS v2 en cualquier cosa que genere ingresos.',
+          },
+        ],
+        items: [
+          '**Nombre completo:** Coqui Public Model License (CPML) — una licencia "source-available", no comercial, redactada por Coqui AI específicamente para los pesos del modelo XTTS v2.',
+          '**Uso comercial, estado oficial:** No permitido. El texto de la CPML restringe explícitamente el uso comercial, y actualmente no hay ninguna licencia comercial oficial a la venta — Coqui Inc cerró en enero de 2024.',
+          '**Alcance no comercial de la CPML:** Se permite el uso personal, la investigación y el trabajo académico, incluido el uso de los audios generados — siempre que el despliegue no genere ingresos.',
+          '**No es de código abierto:** La Open Source Initiative (OSI) no ha aprobado la CPML. Es "source-available", no de código abierto, aunque los pesos del modelo se puedan descargar públicamente.',
+          '**Se aplica a los pesos, no al kit de herramientas:** La CPML rige el propio archivo de modelo XTTS v2. El código del kit Coqui TTS que lo rodea está licenciado por separado bajo MPL 2.0, que permite el uso comercial con condiciones de divulgación de cambios.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Esto es referencia factual, no asesoramiento legal. Lee tú mismo el texto oficial de la CPML, y consulta a un abogado, antes de basarte en este resumen para una decisión comercial.',
+          },
+        ],
+      },
       cpmlNonInteractive: {
         id: 'cpml-noninteractive',
         title: 'Aceptar la CPML de forma no interactiva (COQUI_TOS_AGREED)',
@@ -2952,6 +3128,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
       { label: 'StyleTTS 2 — 최고의 자연스러운 품질', anchor: '#styletts' },
       { label: 'F5-TTS — Zero-shot 음성 복제', anchor: '#f5tts' },
       { label: '라이선스 및 상업적 사용 (CPML, MIT, CC-BY-NC)', anchor: '#licenses' },
+      { label: 'CPML(Coqui Public Model License)이란?', anchor: '#cpml-explained' },
       { label: 'CPML 비대화형 수락 (COQUI_TOS_AGREED)', anchor: '#cpml-noninteractive' },
       { label: '로컬 TTS vs ElevenLabs', anchor: '#local-vs-cloud' },
       { label: '선택 방법', anchor: '#how-to-choose' },
@@ -3176,6 +3353,35 @@ snippetBlocks: [
         callouts: [
           { type: 'note', text: 'Coqui TTS(툴킷, MPL 2.0)와 XTTS v2(특정 모델 가중치, CPML)는 서로 다른 라이선스를 가집니다. VITS 또는 Tacotron2 백엔드의 Coqui TTS 툴킷은 MPL 2.0 하에 상업용 제품에 출시할 수 있습니다. CPML 비상업용 제한은 특히 XTTS v2 모델 가중치와 그 오디오 출력에 적용되며 — 툴킷 코드에는 적용되지 않습니다.' },
           { type: 'warning', text: '이는 사실 참고 자료이며 법률 자문이 아닙니다. 라이선스는 변경되며 예외 사례(음성 동의, 데이터셋 조건, 음성별 모델 라이선스)가 중요합니다. 상업적 배포를 위해 이러한 조건에 의존하기 전에 각 엔진의 라이선스 파일을 직접 읽고 변호사와 상담하십시오.' },
+        ],
+      },
+      cpmlExplained: {
+        id: 'cpml-explained',
+        title: 'CPML(Coqui Public Model License)이란 무엇입니까?',
+        content:
+          'Coqui Public Model License(CPML)는 XTTS v2 모델 가중치를 규정하는 구체적인 법률 문서입니다 — Coqui TTS 툴킷 코드의 라이선스(MPL 2.0)와는 다르며, 오픈소스 라이선스도 아닙니다. Coqui AI는 CPML을 "소스 공개형" 비상업용 라이선스로 발행했습니다: 모델 가중치는 공개적으로 다운로드할 수 있지만, 라이선스 문서는 상업적 이용 권리를 명시적으로 배제합니다. Coqui Inc가 2024년 1월에 문을 닫았기 때문에 현재 공식 CPML 상업용 등급은 판매되지 않습니다 — 현재 XTTS v2에 대한 유료 상업용 라이선스를 발급하는 주체가 없으므로, "CPML 비상업용"이 유일하게 이용 가능한 상태입니다.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Coqui Public Model License(CPML)는 XTTS v2 모델 가중치에 대한 Coqui AI의 자체 비상업용 라이선스입니다 — 개인, 연구, 학술 용도는 허용하지만 상업적 이용은 금지하며, 현재 공식 상업용 라이선스는 판매되지 않습니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'CPML은 Coqui TTS 툴킷의 MPL 2.0 코드 라이선스와는 별개의 라이선스이며 — XTTS v2 모델 가중치와 그 오디오 출력에 특정하여 적용됩니다. 수익을 창출하는 용도로 XTTS v2를 사용하기 전에 CPML 전문을 직접 읽으십시오.',
+          },
+        ],
+        items: [
+          '**정식 명칭:** Coqui Public Model License(CPML) — Coqui AI가 XTTS v2 모델 가중치를 위해 특별히 작성한 소스 공개형 비상업용 라이선스.',
+          '**상업적 사용, 공식 상태:** 허용되지 않음. CPML 문서는 상업적 이용을 명시적으로 제한하며, 현재 공식 상업용 라이선스는 판매되지 않습니다 — Coqui Inc는 2024년 1월에 문을 닫았습니다.',
+          '**CPML의 비상업용 범위:** 개인 사용, 연구, 학술 작업은 허용되며 생성된 오디오 출력의 사용도 포함됩니다 — 단, 해당 배포에서 수익이 발생하지 않는 경우에 한합니다.',
+          '**오픈소스가 아님:** Open Source Initiative(OSI)는 CPML을 승인하지 않았습니다. 모델 가중치가 공개적으로 다운로드 가능하더라도, 이는 오픈소스가 아닌 소스 공개형입니다.',
+          '**모델 가중치에 적용되며 툴킷에는 적용되지 않음:** CPML은 XTTS v2 모델 파일 자체를 규정합니다. 이를 둘러싼 Coqui TTS 툴킷 코드는 별도로 MPL 2.0 하에 라이선스되어 있으며, 수정 사항 공개를 조건으로 상업적 이용이 허용됩니다.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '이는 사실 참고 자료이며 법률 자문이 아닙니다. 상업적 결정을 위해 이 요약에 의존하기 전에 공식 CPML 전문을 직접 읽고 변호사와 상담하십시오.',
+          },
         ],
       },
       cpmlNonInteractive: {
@@ -3456,6 +3662,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
       { label: 'StyleTTS 2 — Máxima qualidade natural', anchor: '#styletts' },
       { label: 'F5-TTS — Clonagem de voz zero-shot, totalmente aberto', anchor: '#f5tts' },
       { label: 'Licenças e uso comercial (CPML, MIT, CC-BY-NC)', anchor: '#licenses' },
+      { label: 'O que é a Coqui Public Model License (CPML)?', anchor: '#cpml-explained' },
       { label: 'Aceite a CPML de forma não interativa (COQUI_TOS_AGREED)', anchor: '#cpml-noninteractive' },
       { label: 'TTS local vs ElevenLabs', anchor: '#local-vs-cloud' },
       { label: 'Como escolher', anchor: '#how-to-choose' },
@@ -3867,6 +4074,35 @@ snippetBlocks: [
           },
         ],
       },
+      cpmlExplained: {
+        id: 'cpml-explained',
+        title: 'O que é a Coqui Public Model License (CPML)?',
+        content:
+          'A Coqui Public Model License (CPML) é o documento legal específico que rege os pesos do modelo XTTS v2 — não é a mesma licença do código do kit de ferramentas Coqui TTS (MPL 2.0), e não é uma licença de código aberto. A Coqui AI publicou a CPML como uma licença "source-available", não comercial: os pesos do modelo são publicamente disponíveis para download, mas o texto da licença exclui explicitamente os direitos de uso comercial. Atualmente não existe nenhum nível comercial oficial da CPML à venda, porque a Coqui Inc fechou em janeiro de 2024 — nenhuma entidade emite hoje licenças comerciais pagas para o XTTS v2, portanto "CPML não comercial" é o único status disponível.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'A Coqui Public Model License (CPML) é a licença não comercial personalizada da Coqui AI para os pesos do modelo XTTS v2 — permite uso pessoal, de pesquisa e acadêmico, mas proíbe o uso comercial, e atualmente não há nenhuma licença comercial oficial à venda.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'A CPML é uma licença separada da licença de código MPL 2.0 do kit Coqui TTS — aplica-se especificamente aos pesos do modelo XTTS v2 e às suas saídas de áudio. Leia o texto da CPML você mesmo antes de usar o XTTS v2 em qualquer coisa que gere receita.',
+          },
+        ],
+        items: [
+          '**Nome completo:** Coqui Public Model License (CPML) — uma licença "source-available", não comercial, redigida pela Coqui AI especificamente para os pesos do modelo XTTS v2.',
+          '**Uso comercial, status oficial:** Não permitido. O texto da CPML restringe explicitamente o uso comercial, e atualmente não há nenhuma licença comercial oficial à venda — a Coqui Inc fechou em janeiro de 2024.',
+          '**Escopo não comercial da CPML:** Uso pessoal, pesquisa e trabalho acadêmico são permitidos, incluindo o uso das saídas de áudio geradas — desde que a implantação não gere receita.',
+          '**Não é código aberto:** A Open Source Initiative (OSI) não aprovou a CPML. É "source-available", não código aberto, mesmo que os pesos do modelo estejam disponíveis publicamente para download.',
+          '**Aplica-se aos pesos, não ao kit de ferramentas:** A CPML rege o próprio arquivo de modelo XTTS v2. O código do kit Coqui TTS ao redor é licenciado separadamente sob MPL 2.0, que permite uso comercial mediante condições de divulgação de alterações.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Isto é referência factual, não aconselhamento jurídico. Leia o texto oficial da CPML você mesmo, e consulte um advogado, antes de se basear neste resumo para uma decisão comercial.',
+          },
+        ],
+      },
       cpmlNonInteractive: {
         id: 'cpml-noninteractive',
         title: 'Aceite a CPML de forma não interativa (COQUI_TOS_AGREED)',
@@ -4143,6 +4379,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
       { label: 'StyleTTS 2 — أقصى جودة طبيعية', anchor: '#styletts' },
       { label: 'F5-TTS — استنساخ صوت zero-shot، مفتوح كليًا', anchor: '#f5tts' },
       { label: 'التراخيص والاستخدام التجاري (CPML وMIT وCC-BY-NC)', anchor: '#licenses' },
+      { label: 'ما هي Coqui Public Model License (CPML)؟', anchor: '#cpml-explained' },
       { label: 'قبول CPML بشكل غير تفاعلي (COQUI_TOS_AGREED)', anchor: '#cpml-noninteractive' },
       { label: 'TTS محلي مقابل ElevenLabs', anchor: '#local-vs-cloud' },
       { label: 'كيفية الاختيار', anchor: '#how-to-choose' },
@@ -4550,6 +4787,35 @@ snippetBlocks: [
           {
             type: 'warning',
             text: 'هذا مرجع وقائعي وليس استشارة قانونية. تتغير التراخيص والحالات الحدّية (موافقة الصوت، شروط مجموعات البيانات، تراخيص نماذج كل صوت) مهمة. اقرأ ملف ترخيص كل محرك بنفسك، واستشر محاميًا، قبل الاعتماد على أيٍّ من هذه الشروط للنشر التجاري.',
+          },
+        ],
+      },
+      cpmlExplained: {
+        id: 'cpml-explained',
+        title: 'ما هي Coqui Public Model License (CPML)؟',
+        content:
+          'الـCoqui Public Model License (CPML) هي الوثيقة القانونية المحددة التي تحكم أوزان نموذج XTTS v2 — وهي ليست نفس ترخيص كود مجموعة أدوات Coqui TTS (MPL 2.0)، وليست ترخيص مفتوح المصدر. نشرت Coqui AI الـCPML كترخيص "source-available" غير تجاري: أوزان النموذج متاحة للتنزيل علنًا، لكن نص الترخيص يستبعد صراحةً حقوق الاستخدام التجاري. لا توجد حاليًا أي فئة تجارية رسمية من CPML للبيع، لأن Coqui Inc أغلقت في يناير 2024 — لا توجد جهة تُصدر اليوم تراخيص تجارية مدفوعة لـXTTS v2، لذا فإن "CPML غير تجاري" هو الحالة الوحيدة المتاحة.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'الـCoqui Public Model License (CPML) هو ترخيص Coqui AI الخاص غير التجاري لأوزان نموذج XTTS v2 — يسمح بالاستخدام الشخصي والبحثي والأكاديمي لكنه يحظر الاستخدام التجاري، ولا يوجد حاليًا أي ترخيص تجاري رسمي للبيع.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'الـCPML ترخيص منفصل عن ترخيص كود MPL 2.0 الخاص بمجموعة أدوات Coqui TTS — وينطبق تحديدًا على أوزان نموذج XTTS v2 ومخرجاته الصوتية. اقرأ نص الـCPML بنفسك قبل استخدام XTTS v2 في أي شيء يُدرّ إيرادًا.',
+          },
+        ],
+        items: [
+          '**الاسم الكامل:** Coqui Public Model License (CPML) — ترخيص "source-available" غير تجاري كتبته Coqui AI خصيصًا لأوزان نموذج XTTS v2.',
+          '**الاستخدام التجاري، الحالة الرسمية:** غير مسموح به. يقيّد نص الـCPML الاستخدام التجاري صراحةً، ولا يوجد حاليًا أي ترخيص تجاري رسمي للبيع — أغلقت Coqui Inc في يناير 2024.',
+          '**نطاق الـCPML غير التجاري:** يُسمح بالاستخدام الشخصي والبحث والعمل الأكاديمي، بما في ذلك استخدام المخرجات الصوتية المُولَّدة — طالما لا يُحقق النشر أي إيراد.',
+          '**ليس مفتوح المصدر:** لم تعتمد Open Source Initiative (OSI) الـCPML. فهو "source-available" وليس مفتوح المصدر، رغم أن أوزان النموذج متاحة للتنزيل علنًا.',
+          '**ينطبق على الأوزان، لا على مجموعة الأدوات:** ينظّم الـCPML ملف نموذج XTTS v2 نفسه. أما كود مجموعة أدوات Coqui TTS المحيط به فهو مرخّص بشكل منفصل تحت MPL 2.0، الذي يسمح بالاستخدام التجاري بشرط الإفصاح عن التعديلات.',
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'هذا مرجع وقائعي وليس استشارة قانونية. اقرأ نص الـCPML الرسمي بنفسك، واستشر محاميًا، قبل الاعتماد على هذا الملخص لاتخاذ قرار تجاري.',
           },
         ],
       },
