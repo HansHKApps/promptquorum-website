@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'A fully offline voice assistant in 2026 combines three components: whisper.cpp for speech-to-text, a local LLM (Llama 3.3 8B, Phi-4, or Mistral Small via Ollama) for reasoning, and Piper TTS for speech output. The end-to-end latency on a desktop GPU setup is 1–2 seconds, comparable to Alexa or Google Assistant. On a Mac Mini M5, it is under 1.5 seconds. On a Raspberry Pi 5, it is 5–8 seconds — usable for hands-free queries, not conversational. This guide walks through each layer step by step, with hardware tables, code for the Python orchestrator, wake word setup, and latency optimization techniques.',
     metaDescription:
       'whisper.cpp for STT, Ollama + Llama 3.3 8B for reasoning, Piper TTS for speech. 1–2 sec GPU latency. Python orchestrator + wake word setup. 2026.',
+    heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-en.png',
     twitterDescription:
       'DIY offline voice assistant in 2026: Whisper STT + local LLM + Piper TTS. No cloud, no subscription. Full build guide with hardware specs, Python code, and wake word setup.',
     audience:
@@ -446,6 +447,7 @@ if __name__ == "__main__":
       'Ein vollständig offline arbeitender Sprachassistent kombiniert 2026 drei Komponenten: whisper.cpp für die Spracherkennung, ein lokales LLM (Llama 3.3 8B, Phi-4 oder Mistral Small via Ollama) für die Verarbeitung und Piper TTS für die Sprachausgabe. Die End-to-End-Latenz auf einem Desktop-GPU-Setup beträgt 1–2 Sekunden – vergleichbar mit Alexa oder Google Assistant. Auf dem Mac Mini M5 liegt sie unter 1,5 Sekunden. Auf dem Raspberry Pi 5 beträgt sie 5–8 Sekunden – nutzbar für Anfragen ohne Bildschirm, nicht für natürliche Konversation. Dieser Leitfaden führt durch jeden Schritt mit Hardware-Tabellen, Python-Orchestrator-Code, Wake-Word-Setup und Latenzoptimierungsmaßnahmen.',
     metaDescription:
       'Offline-Sprachassistent bauen 2026: whisper.cpp (STT), Ollama + Llama 3.3 8B und Piper TTS. Anleitung mit Hardware, Python-Code und Wake-Word-Setup.',
+    heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-de.png',
     twitterDescription:
       'DIY offline Sprachassistent 2026: Whisper STT + lokales LLM + Piper TTS. Keine Cloud, kein Abonnement. Vollständige Bauanleitung mit Hardware-Spezifikationen, Python-Code und Wake-Word-Setup.',
     readTime: '14 Min. Lesezeit',
@@ -852,6 +854,7 @@ if __name__ == "__main__":
       'Un assistant vocal entièrement hors ligne en 2026 combine trois composants : whisper.cpp pour la reconnaissance vocale, un LLM local (Llama 3.3 8B, Phi-4 ou Mistral Small via Ollama) pour le raisonnement, et Piper TTS pour la synthèse vocale. La latence de bout en bout sur un PC de bureau avec GPU est de 1 à 2 secondes, comparable à Alexa ou Google Assistant. Sur Mac Mini M5, elle est inférieure à 1,5 seconde. Sur Raspberry Pi 5, elle est de 5 à 8 secondes. Ce guide détaille chaque étape avec des tableaux de matériel, le code de l\'orchestrateur Python, la configuration du mot de déclenchement et des techniques d\'optimisation de la latence.',
     metaDescription:
       'Construire un assistant vocal hors ligne en 2026 avec whisper.cpp pour la STT, Ollama + Llama 3.3 8B pour le raisonnement et Piper TTS pour la synthèse vocale. Guide étape par étape avec exigences matérielles, code Python, mot de déclenchement et optimisation de la latence.',
+    heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-fr.png',
     twitterDescription:
       'Assistant vocal DIY hors ligne 2026 : Whisper STT + LLM local + Piper TTS. Pas de cloud, pas d\'abonnement. Guide complet avec spécifications matérielles, code Python et mot de déclenchement.',
     readTime: '14 min de lecture',
@@ -1250,6 +1253,7 @@ if __name__ == "__main__":
       '2026年の完全オフライン音声アシスタントは、音声認識用のwhisper.cpp、推論用のローカルLLM（OllamaによるLlama 3.3 8B、Phi-4、またはMistral Small）、音声出力用のPiper TTSの3つのコンポーネントを組み合わせます。デスクトップGPUセットアップでのエンドツーエンドのレイテンシは1〜2秒で、AlexaやGoogleアシスタントに匹敵します。Mac Mini M5では1.5秒未満、Raspberry Pi 5では5〜8秒です。このガイドでは、ハードウェア一覧表、Pythonオーケストレーターコード、ウェイクワードの設定、レイテンシ最適化技術を含む各ステップを詳しく解説します。',
     metaDescription:
       '2026年版ローカル音声アシスタントの構築：Whisper、LLM、Piper TTSを組み合わせて完全オフラインの音声AIを作成。プライバシー保護と低遅延を実現する方法を解説。',
+    heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-ja.png',
     twitterDescription:
       'DIYオフライン音声アシスタント2026：Whisper STT + ローカルLLM + Piper TTS。クラウド不要、サブスクリプション不要。ハードウェア仕様、Pythonコード、ウェイクワード設定を含む完全構築ガイド。',
     readTime: '14分で読める',
@@ -1647,6 +1651,7 @@ if __name__ == "__main__":
       '2026年的完全离线语音助手由三个组件组成：用于语音识别的whisper.cpp、用于推理的本地LLM（通过Ollama运行Llama 3.3 8B、Phi-4或Mistral Small），以及用于语音输出的Piper TTS。桌面GPU配置的端到端延迟为1-2秒，与Alexa或Google Assistant相当。Mac Mini M5上低于1.5秒，Raspberry Pi 5上为5-8秒。本指南逐步讲解每个环节，包含硬件配置表、Python编排代码、唤醒词设置和延迟优化技术。',
     metaDescription:
       '2026年构建完全离线语音助手：使用whisper.cpp实现STT，Ollama + Llama 3.3 8B实现推理，Piper TTS实现语音合成。包含硬件要求、Python代码、唤醒词配置和延迟优化的逐步指南。',
+    heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-zh.png',
     twitterDescription:
       'DIY离线语音助手2026：Whisper STT + 本地LLM + Piper TTS。无需云服务，无需订阅。含硬件规格、Python代码和唤醒词配置的完整构建指南。',
     readTime: '阅读约14分钟',
@@ -2044,6 +2049,7 @@ if __name__ == "__main__":
       'Un asistente de voz completamente offline en 2026 combina tres componentes: whisper.cpp para el reconocimiento de voz, un LLM local (Llama 3.3 8B, Phi-4 o Mistral Small mediante Ollama) para el razonamiento, y Piper TTS para la salida de audio. La latencia de extremo a extremo en un equipo de escritorio con GPU es de 1 a 2 segundos, comparable a Alexa o Google Assistant. En un Mac Mini M5, es inferior a 1,5 segundos. En una Raspberry Pi 5, es de 5 a 8 segundos — suficiente para consultas manos libres, no para conversaciones fluidas. Esta guía recorre cada capa paso a paso, con tablas de hardware, código del orquestador Python, configuración de la palabra de activación y técnicas de optimización de latencia.',
     metaDescription:
       'whisper.cpp (STT), Ollama + Llama 3.3 8B (razonamiento) y Piper TTS (audio). Latencia 1–2 s en GPU. Orquestador Python y palabra de activación. 2026.',
+    heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-es.png',
     twitterDescription:
       'Asistente de voz offline DIY en 2026: Whisper STT + LLM local + Piper TTS. Sin nube, sin suscripción. Guía completa con especificaciones de hardware, código Python y configuración de palabra de activación.',
     audience:
@@ -2483,6 +2489,7 @@ if __name__ == "__main__":
     seoTitle: '2026년 로컬 음성 어시스턴트: Whisper + LLM + Piper TTS',
     intro: '2026년 완전 오프라인 음성 어시스턴트는 세 가지 구성요소를 결합합니다: 음성 인식을 위한 whisper.cpp, 추론을 위한 로컬 LLM(Ollama를 통한 Llama 3.3 8B, Phi-4 또는 Mistral Small), 오디오 출력을 위한 Piper TTS. GPU가 있는 데스크톱 PC에서의 엔드투엔드 지연시간은 1~2초로 Alexa나 Google Assistant와 비슷합니다. Mac Mini M5에서는 1.5초 미만입니다. Raspberry Pi 5에서는 5~8초입니다 — 핸즈프리 쿼리에는 충분하지만 유연한 대화에는 부족합니다. 이 가이드는 하드웨어 표, Python 오케스트레이터 코드, 웨이크 워드 설정, 지연시간 최적화 기법과 함께 각 레이어를 단계별로 설명합니다.',
     metaDescription: 'whisper.cpp (STT), Ollama + Llama 3.3 8B (추론), Piper TTS (오디오). GPU에서 지연시간 1–2초. Python 오케스트레이터와 웨이크 워드. 2026.',
+    heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-ko.png',
     twitterDescription: '2026년 DIY 오프라인 음성 어시스턴트: Whisper STT + 로컬 LLM + Piper TTS. 클라우드 없음, 구독 없음. 하드웨어 사양, Python 코드, 웨이크 워드 설정이 포함된 완전 가이드.',
     audience: '프라이빗하고 완전 오프라인인 음성 어시스턴트를 원하는 개발자와 열정가 — 클라우드 의존성 없이 자체 하드웨어에서 완전히 작동하는 Siri 또는 Alexa 대체품.',
     readTime: '14분 분량',
@@ -2910,6 +2917,7 @@ if __name__ == "__main__":
       'Um assistente de voz totalmente offline em 2026 combina três componentes: whisper.cpp para o reconhecimento de voz, um LLM local (Llama 3.3 8B, Phi-4 ou Mistral Small via Ollama) para o raciocínio, e Piper TTS para a saída de áudio. A latência de ponta a ponta em um equipamento de desktop com GPU é de 1 a 2 segundos, comparável à Alexa ou ao Google Assistant. Em um Mac Mini M5, é inferior a 1,5 segundo. Em um Raspberry Pi 5, é de 5 a 8 segundos — suficiente para consultas mãos livres, não para conversas fluidas. Este guia percorre cada camada passo a passo, com tabelas de hardware, código do orquestrador Python, configuração da palavra de ativação e técnicas de otimização de latência.',
     metaDescription:
       'whisper.cpp (STT), Ollama + Llama 3.3 8B (raciocínio) e Piper TTS (áudio). Latência 1–2 s em GPU. Orquestrador Python e palavra de ativação. 2026.',
+    heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-pt.png',
     twitterDescription:
       'Assistente de voz offline DIY em 2026: Whisper STT + LLM local + Piper TTS. Sem nuvem, sem assinatura. Guia completo com especificações de hardware, código Python e configuração de palavra de ativação.',
     audience:
@@ -3352,6 +3360,7 @@ if __name__ == "__main__":
       'يجمع المساعد الصوتي الذي يعمل دون اتصال بالكامل في 2026 بين ثلاثة مكونات: whisper.cpp للتعرف على الكلام، ونموذج لغة محلي (Llama 3.3 8B أو Phi-4 أو Mistral Small عبر Ollama) للاستدلال، وPiper TTS للإخراج الصوتي. يبلغ زمن الاستجابة الكامل على حاسوب مكتبي مزود ببطاقة رسومات 1 إلى 2 ثانية، مما يُضاهي Alexa أو Google Assistant. أما على جهاز Mac Mini M5 فيقل عن 1.5 ثانية. وعلى Raspberry Pi 5 يتراوح بين 5 و8 ثوانٍ — كافٍ للاستفسارات الحرّة اليدين، غير مناسب للمحادثات السلسة. يستعرض هذا الدليل كل طبقة خطوة بخطوة، مع جداول الأجهزة وكود منسّق Python للتنسيق وإعداد كلمة التنبيه وتقنيات تحسين زمن الاستجابة.',
     metaDescription:
       'whisper.cpp + Ollama + Piper TTS بدون سحابة. زمن استجابة 1–2 ثانية على RTX 3060، وأقل من 1.5 ثانية على Mac Mini M5. كود Python وكلمة التنبيه.',
+    heroImage: '/images/build-local-voice-assistant-2026-hardware-tiers-hero-ar.png',
     twitterDescription:
       'مساعد صوتي DIY دون اتصال 2026: Whisper STT + نموذج لغة محلي + Piper TTS. بدون سحابة، بدون اشتراك. دليل شامل مع مواصفات الأجهزة وكود Python وإعداد كلمة التنبيه.',
     audience:

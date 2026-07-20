@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'SillyTavern, Agnai, and RisuAI are the three credible roleplay frontends for local LLMs in 2026 — each pairs cleanly with Ollama, llama.cpp, or any OpenAI-compatible endpoint, and each takes a different position on feature density. SillyTavern is the deep customisation pick (the one most experienced users land on); Agnai is the multi-user pick (the only one with a real shared-server mode); RisuAI is the lighter alternative when SillyTavern feels overbuilt. This guide compares them on character cards, persona management, lore books, group chat, model support, privacy, and platform reach.',
     metaDescription:
       'Compare SillyTavern, Agnai, and RisuAI for local LLM roleplay and character chat. Features, model support, privacy, and community ecosystem compared.',
+    heroImage: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-en.png',
     twitterDescription:
       '3 local roleplay frontends compared: SillyTavern (deep customisation), Agnai (multi-user), RisuAI (lighter alternative). Character cards, lore books, group chat, privacy.',
     current_models_mentioned: [
@@ -98,7 +99,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         title: 'Quick Facts',
-        image: '/images/sillytavern-vs-agnai-vs-risuai-setup-en.svg',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-en.png',
         imageCaption: 'Setup time & installation: SillyTavern 15 minutes (git clone + npm), Agnai single-user 10 minutes (npm), Agnai shared server 30 minutes (+ MongoDB + authentication), RisuAI 5 minutes (download desktop app, no terminal needed). First-time users: RisuAI fastest.',
         items: [
           '**SillyTavern** — Node.js + browser UI, hosted locally. Deepest customisation, largest community.',
@@ -128,7 +129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Three-Frontend Comparison',
         content:
           '**Same character cards, same model backends — different feature density and target user.** The table below maps the decision-relevant differences.',
-        image: '/images/sillytavern-vs-agnai-vs-risuai-comparison-en.svg',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-comparison-hero-en.png',
         imageCaption: 'Feature comparison: SillyTavern offers deepest lore books and extensions, multi-character group chat (mature), no multi-user mode. Agnai adds credible multi-user/shared-server mode, simpler lore books. RisuAI simplest setup (5 min), mobile apps built-in, lighter feature set. All three load Tavern v2 character cards.',
         snippetBlocks: [
           {
@@ -422,6 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'SillyTavern, Agnai und RisuAI sind die drei ernstzunehmenden Roleplay-Oberflächen für lokale LLMs in 2026 — jede lässt sich problemlos mit Ollama, llama.cpp oder einem beliebigen OpenAI-kompatiblen Endpunkt verbinden und jede nimmt eine andere Position zur Feature-Dichte ein. SillyTavern ist die Wahl für tiefe Anpassung (bei der die meisten erfahrenen Nutzerinnen und Nutzer landen); Agnai ist die Multi-User-Wahl (die einzige mit echtem Shared-Server-Modus); RisuAI ist die leichtere Alternative, wenn SillyTavern zu umfangreich erscheint. Dieser Leitfaden vergleicht alle drei bei Character Cards, Persona-Verwaltung, Lore-Büchern, Gruppen-Chat, Modellunterstützung, Datenschutz und Plattformabdeckung.',
     metaDescription:
       'SillyTavern, Agnai und RisuAI im Vergleich für lokales LLM-Roleplay: Funktionen, Modellkompatibilität, Datenschutz und Community-Ökosystem auf einen Blick.',
+    heroImage: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-de.png',
     twitterDescription:
       '3 lokale Roleplay-Oberflächen im Vergleich: SillyTavern (tiefe Anpassung), Agnai (Multi-User), RisuAI (leichtere Alternative). Character Cards, Lore-Bücher, Gruppen-Chat, Datenschutz.',
     current_models_mentioned: [
@@ -824,6 +826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'SillyTavern, Agnai y RisuAI son las tres interfaces de roleplay más sólidas para LLM locales en 2026 — cada una se conecta fácilmente con Ollama, llama.cpp o cualquier endpoint compatible con OpenAI, y cada una adopta una posición diferente en cuanto a la densidad de funciones. SillyTavern es la opción de personalización profunda (en la que la mayoría de usuarios experimentados terminan); Agnai es la opción multiusuario (la única con un verdadero modo de servidor compartido); RisuAI es la alternativa más ligera cuando SillyTavern parece excesivo. Esta guía los compara en tarjetas de personaje, gestión de personas, libros de lore, chat grupal, compatibilidad de modelos, privacidad y alcance de plataformas.',
     metaDescription:
       'Comparativa de SillyTavern, Agnai y RisuAI para roleplay con LLM local. Funciones, compatibilidad de modelos, privacidad y ecosistema comunitario comparados.',
+    heroImage: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-es.png',
     twitterDescription:
       '3 interfaces de roleplay local comparadas: SillyTavern (personalización profunda), Agnai (multiusuario), RisuAI (alternativa ligera). Tarjetas de personaje, libros de lore, chat grupal, privacidad.',
     current_models_mentioned: [
@@ -904,7 +907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         title: 'Datos rápidos',
-        image: '/images/sillytavern-vs-agnai-vs-risuai-setup-es.svg',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-es.png',
         imageCaption: 'Tiempo de configuración e instalación: SillyTavern 15 minutos (git clone + npm), Agnai usuario único 10 minutos (npm), Agnai servidor compartido 30 minutos (+ MongoDB + autenticación), RisuAI 5 minutos (descarga la app de escritorio, sin terminal). Usuarios primerizos: RisuAI es el más rápido.',
         items: [
           '**SillyTavern** — Node.js + UI en navegador, alojado localmente. Personalización más profunda, comunidad más grande.',
@@ -934,7 +937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparativa de tres interfaces',
         content:
           '**Mismas tarjetas de personaje, mismos backends de modelos — diferente densidad de funciones y usuario objetivo.** La tabla siguiente mapea las diferencias relevantes para la decisión.',
-        image: '/images/sillytavern-vs-agnai-vs-risuai-comparison-es.svg',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-comparison-hero-es.png',
         imageCaption: 'Comparativa de funciones: SillyTavern ofrece libros de lore y extensiones más profundos, chat grupal multicarácter (maduro), sin modo multiusuario. Agnai añade modo multiusuario/servidor compartido real, libros de lore más simples. RisuAI configuración más sencilla (5 min), apps móviles integradas, conjunto de funciones más ligero. Las tres cargan tarjetas de personaje Tavern v2.',
         snippetBlocks: [
           {
@@ -1241,6 +1244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'SillyTavern, Agnai, RisuAI는 2026년 로컬 LLM을 위한 세 가지 가장 견고한 롤플레이 인터페이스입니다 — 각각 Ollama, llama.cpp 또는 OpenAI 호환 엔드포인트에 쉽게 연결되며, 기능 밀도에 대해 서로 다른 입장을 취합니다. SillyTavern은 깊은 커스터마이징 옵션(대부분의 경험 많은 사용자가 결국 정착하는 곳); Agnai는 멀티유저 옵션(진정한 공유 서버 모드를 갖춘 유일한 솔루션); RisuAI는 SillyTavern이 과하게 느껴질 때의 가벼운 대안입니다. 이 가이드는 캐릭터 카드, 페르소나 관리, 로어북, 그룹 채팅, 모델 호환성, 프라이버시, 플랫폼 지원 면에서 비교합니다.',
     metaDescription:
       '로컬 LLM 롤플레이를 위한 SillyTavern, Agnai, RisuAI 비교. 기능, 모델 호환성, 프라이버시, 커뮤니티 생태계 비교.',
+    heroImage: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-ko.png',
     twitterDescription:
       '3가지 로컬 롤플레이 인터페이스 비교: SillyTavern(깊은 커스터마이징), Agnai(멀티유저), RisuAI(가벼운 대안). 캐릭터 카드, 로어북, 그룹 채팅, 프라이버시.',
     current_models_mentioned: [
@@ -1321,7 +1325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         title: '빠른 사실',
-        image: '/images/sillytavern-vs-agnai-vs-risuai-setup-es.svg',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-ko.png',
         imageCaption: '설정 시간 및 설치: SillyTavern 15분(git clone + npm), Agnai 단일 사용자 10분(npm), Agnai 공유 서버 30분(+ MongoDB + 인증), RisuAI 5분(데스크톱 앱 다운로드, 터미널 없음). 첫 사용자: RisuAI가 가장 빠름.',
         items: [
           '**SillyTavern** — Node.js + 브라우저 UI, 로컬 호스팅. 가장 깊은 커스터마이징, 가장 큰 커뮤니티.',
@@ -1351,7 +1355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '세 인터페이스 비교',
         content:
           '**동일한 캐릭터 카드, 동일한 모델 백엔드 — 다른 기능 밀도와 대상 사용자.** 다음 표는 결정에 관련된 차이점을 매핑합니다.',
-        image: '/images/sillytavern-vs-agnai-vs-risuai-comparison-es.svg',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-comparison-hero-ko.png',
         imageCaption: '기능 비교: SillyTavern은 더 깊은 로어북·확장, 멀티캐릭터 그룹 채팅(성숙), 멀티유저 모드 없음. Agnai는 실제 멀티유저/공유 서버 모드 추가, 더 단순한 로어북. RisuAI 가장 쉬운 설정(5분), 통합 모바일 앱, 더 가벼운 기능 세트. 세 가지 모두 Tavern v2 캐릭터 카드 로드.',
         snippetBlocks: [
           {
@@ -1658,6 +1662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'SillyTavern, Agnai e RisuAI são as três interfaces de roleplay mais sólidas para LLMs locais em 2026 — cada uma se conecta facilmente com Ollama, llama.cpp ou qualquer endpoint compatível com OpenAI, e cada uma adota uma posição diferente quanto à densidade de recursos. SillyTavern é a opção de personalização profunda (onde a maioria dos usuários experientes acaba); Agnai é a opção multiusuário (a única com um verdadeiro modo de servidor compartilhado); RisuAI é a alternativa mais leve quando o SillyTavern parece excessivo. Este guia compara as três em cartões de personagens, gestão de personas, livros de lore, chat em grupo, compatibilidade de modelos, privacidade e alcance de plataformas.',
     metaDescription:
       'Comparativo de SillyTavern, Agnai e RisuAI para roleplay com LLM local. Recursos, compatibilidade de modelos, privacidade e ecossistema comunitário comparados.',
+    heroImage: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-pt.png',
     twitterDescription:
       '3 interfaces de roleplay local comparadas: SillyTavern (personalização profunda), Agnai (multiusuário), RisuAI (alternativa leve). Cartões de personagens, livros de lore, chat em grupo, privacidade.',
     current_models_mentioned: [
@@ -1738,7 +1743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickFacts: {
         id: 'quick-facts',
         title: 'Fatos rápidos',
-        image: '/images/sillytavern-vs-agnai-vs-risuai-setup-es.svg',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-pt.png',
         imageCaption: 'Tempo de configuração e instalação: SillyTavern 15 minutos (git clone + npm), Agnai usuário único 10 minutos (npm), Agnai servidor compartilhado 30 minutos (+ MongoDB + autenticação), RisuAI 5 minutos (baixe o app de desktop, sem terminal). Usuários iniciantes: RisuAI é o mais rápido.',
         items: [
           '**SillyTavern** — Node.js + UI no navegador, hospedado localmente. Personalização mais profunda, comunidade maior.',
@@ -1768,7 +1773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparativo das três interfaces',
         content:
           '**Mesmos cartões de personagens, mesmos backends de modelos — diferente densidade de recursos e usuário alvo.** A tabela a seguir mapeia as diferenças relevantes para a decisão.',
-        image: '/images/sillytavern-vs-agnai-vs-risuai-comparison-es.svg',
+        image: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-comparison-hero-pt.png',
         imageCaption: 'Comparativo de recursos: SillyTavern oferece livros de lore e extensões mais profundos, chat em grupo multi-personagem (maduro), sem modo multiusuário. Agnai adiciona modo multiusuário/servidor compartilhado real, livros de lore mais simples. RisuAI configuração mais simples (5 min), apps mobile integrados, conjunto de recursos mais leve. As três carregam cartões de personagens Tavern v2.',
         snippetBlocks: [
           {
@@ -2071,6 +2076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'SillyTavern, Agnai et RisuAI sont les trois interfaces roleplay crédibles pour les LLM locaux en 2026 — chacune se connecte proprement à Ollama, llama.cpp ou tout endpoint compatible OpenAI, et chacune adopte une position différente sur la densité de fonctionnalités. SillyTavern est le choix de personnalisation poussée (celui sur lequel la plupart des utilisateurs expérimentés finissent) ; Agnai est le choix multi-utilisateur (le seul avec un vrai mode serveur partagé) ; RisuAI est l\'alternative plus légère quand SillyTavern paraît surdimensionné. Ce guide les compare sur les cartes de personnages, la gestion des personas, les livres de lore, le chat de groupe, la compatibilité des modèles, la confidentialité et la disponibilité des plateformes.',
     metaDescription:
       'Comparatif SillyTavern, Agnai et RisuAI pour le roleplay LLM local : fonctionnalités, compatibilité des modèles, confidentialité et écosystème communautaire.',
+    heroImage: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-fr.png',
     twitterDescription:
       '3 interfaces roleplay locales comparées : SillyTavern (personnalisation poussée), Agnai (multi-utilisateur), RisuAI (alternative légère). Cartes personnages, livres de lore, chat de groupe, confidentialité.',
     current_models_mentioned: [
@@ -2465,6 +2471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'SillyTavern、Agnai、RisuAIは2026年におけるローカルLLM向けの三つの有力なロールプレイフロントエンドです。いずれもOllama、llama.cpp、またはOpenAI互換エンドポイントとシームレスに連携でき、それぞれ機能の密度において異なる立場を取ります。SillyTavernは深いカスタマイズを求めるユーザー向け（経験豊富なユーザーの多くが最終的に選ぶ選択肢）、Agnaiはマルチユーザー向け（本格的な共有サーバーモードを持つ唯一の選択肢）、RisuAIはSillyTavernが過剰に感じられるときの軽量な代替手段です。このガイドでは、キャラクターカード、ペルソナ管理、ロアブック、グループチャット、モデルサポート、プライバシー、プラットフォーム対応について三者を比較します。',
     metaDescription:
       'SillyTavern・Agnai・RisuAIをローカルLLMロールプレイ用に比較。機能、モデル対応、プライバシー、コミュニティエコシステムを詳細解説。',
+    heroImage: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-ja.png',
     twitterDescription:
       'ローカルロールプレイUI三択：SillyTavern（深いカスタマイズ）、Agnai（マルチユーザー）、RisuAI（軽量代替）。キャラクターカード・ロアブック・グループチャット・プライバシーを比較。',
     current_models_mentioned: [
@@ -2874,6 +2881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'SillyTavern、Agnai和RisuAI是2026年本地LLM领域三个可靠的角色扮演前端——每一个都可以与Ollama、llama.cpp或任何OpenAI兼容端点无缝配合，且各自在功能密度上采取了不同的定位。SillyTavern是深度自定义的选择（大多数有经验的用户最终会停留在这里）；Agnai是多用户的选择（唯一具备真正共享服务器模式的选项）；RisuAI是当SillyTavern显得过于繁复时的轻量替代。本指南在角色卡片、人格管理、知识库、群组聊天、模型支持、隐私保护和平台覆盖等方面对三者进行对比。',
     metaDescription:
       'SillyTavern vs Agnai vs RisuAI三款本地LLM角色扮演前端深度对比：SillyTavern自定义最强，Agnai独家支持多用户共享服务器，RisuAI最适合初学者。三款均兼容Ollama与llama.cpp，支持角色卡片和知识库，2026年最新实测。',
+    heroImage: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-zh.png',
     twitterDescription:
       '三款本地角色扮演前端对比：SillyTavern（深度自定义）、Agnai（多用户）、RisuAI（轻量替代）。角色卡片、知识库、群组聊天、隐私保护。',
     current_models_mentioned: [
@@ -3284,6 +3292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'SillyTavern وAgnai وRisuAI هي أقوى ثلاث واجهات للـ roleplay مع نماذج LLM المحلية في 2026 — كل منها يتصل بسهولة مع Ollama أو llama.cpp أو أي نقطة نهاية متوافقة مع OpenAI، وكل منها يتخذ موقفًا مختلفًا في كثافة الميزات. SillyTavern هو خيار التخصيص العميق (الذي ينتهي إليه معظم المستخدمين المتمرسين)؛ Agnai هو الخيار متعدد المستخدمين (الوحيد بوضع خادم مشترك حقيقي)؛ RisuAI هو البديل الأخف حين تبدو كثافة ميزات SillyTavern مبالغًا فيها.',
     metaDescription:
       'SillyTavern يتفوق في التخصيص العميق، Agnai الوحيد بوضع خادم مشترك، RisuAI الأخف وزنًا. مقارنة الميزات وتوافق LLM والخصوصية.',
+    heroImage: '/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-ar.png',
     twitterDescription:
       'مقارنة 3 واجهات roleplay محلية: SillyTavern (تخصيص عميق)، Agnai (متعدد المستخدمين)، RisuAI (بديل أخف). بطاقات الشخصيات وكتب العوالم ودردشة المجموعة والخصوصية.',
     current_models_mentioned: [
