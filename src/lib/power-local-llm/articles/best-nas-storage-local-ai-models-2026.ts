@@ -154,6 +154,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'How NAS and SSD Storage Compare for Local AI in 2026',
         content:
           'The table separates the two storage jobs. NAS rows cover the shared-library role; SSD rows cover the fast-loading role. Capacity and RAID figures are based on standard 4-bay configurations. Prices are a July 2026 snapshot — the 2026 memory-chip shortage pushed SSD pricing up, so confirm the current figure before buying. NAS prices are hardware-only and exclude drives.',
+        image: '/images/best-nas-storage-local-ai-models-2026-storage-comparison-en.svg',
+        imageCaption: 'Storage comparison table listing six options for local AI models: Synology and QNAP 4-bay NAS units, the Crucial T705, WD Black SN850X, and Samsung 990 Pro NVMe SSDs, and an external USB drive, with July 2026 prices and role. NAS hardware runs about $450-650 in RAID 6, while 4 TB NVMe SSD prices range from $304 to $950 depending on brand.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -408,6 +410,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Decision Flowchart: Pick Your Storage in Four Questions',
         content:
           '**Four questions, in order, route most buyers to the right storage.**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-en.svg',
+        imageCaption: 'Decision flowchart routing local AI storage buyers through four questions: shared library, Synology versus QNAP, Samsung 990 Pro versus WD Black SN850X, and offsite backup. A solo developer ends at an SSD plus an external drive, while a shared library ends at a RAID 6 NAS with the 3-2-1 backup rule applied.',
         items: [
           '**1. Do multiple machines or people share the model library?** No: a fast SSD plus an external backup drive is enough. Yes: you need a NAS — continue.',
           '**2. Synology or QNAP?** Easiest software for a non-specialist team: Synology. More CPU and ports per dollar: QNAP.',
@@ -684,6 +688,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wie NAS- und SSD-Speicher für lokale KI 2026 abschneiden',
         content:
           'Die Tabelle trennt die beiden Speicheraufgaben. Die NAS-Zeilen decken die Rolle der geteilten Bibliothek ab; die SSD-Zeilen die Rolle des schnellen Ladens. Kapazitäts- und RAID-Angaben beruhen auf üblichen Konfigurationen mit 4 Einschüben. Die Preise sind eine Momentaufnahme von Juli 2026 — die Speicherchip-Knappheit von 2026 hat die SSD-Preise nach oben getrieben, prüfen Sie also den aktuellen Wert vor dem Kauf. NAS-Preise verstehen sich nur als Hardware und ohne Laufwerke.',
+        image: '/images/best-nas-storage-local-ai-models-2026-storage-comparison-de.svg',
+        imageCaption: 'Speicher-Vergleichstabelle für lokale KI-Modelle mit fünf Optionen: Synology- und QNAP-NAS mit 4 Einschüben, Samsung 990 Pro und WD Black SN850X NVMe-SSDs sowie eine externe USB-Festplatte, mit Preisen von Juli 2026. Ein NAS in RAID 6 kostet etwa 700-1.150 € nur für die Hardware, während eine 2-TB-NVMe-SSD je nach Marke etwa 235-340 € kostet.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -926,6 +932,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Entscheidungsdiagramm: Wählen Sie Ihren Speicher in vier Fragen',
         content:
           '**Vier Fragen, der Reihe nach, leiten die meisten Käufer zum richtigen Speicher.**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-de.svg',
+        imageCaption: 'Entscheidungsdiagramm, das Käufer lokaler KI-Speicherlösungen durch vier Fragen führt: geteilte Bibliothek, Synology gegen QNAP, Samsung 990 Pro gegen WD Black SN850X und externes Backup. Ein einzelner Entwickler landet bei SSD plus externer Festplatte, eine geteilte Bibliothek bei einem RAID-6-NAS mit angewandter 3-2-1-Backup-Regel.',
         items: [
           '**1. Teilen mehrere Rechner oder Personen die Modellbibliothek?** Nein: eine schnelle SSD plus eine externe Sicherungsfestplatte genügt. Ja: Sie brauchen ein NAS — weiter.',
           '**2. Synology oder QNAP?** Einfachste Software für ein Team ohne Spezialisten: Synology. Mehr CPU und Anschlüsse pro Euro: QNAP.',
@@ -1210,6 +1218,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comment le stockage NAS et SSD se comparent pour l\'IA locale en 2026',
         content:
           'Le tableau sépare les deux tâches de stockage. Les lignes NAS couvrent le rôle de bibliothèque partagée ; les lignes SSD couvrent le rôle de chargement rapide. Les chiffres de capacité et de RAID reposent sur des configurations 4 baies standard. Les prix sont un instantané de juillet 2026 — la pénurie de puces mémoire de 2026 a fait monter les tarifs des SSD, vérifiez donc le chiffre actuel avant d\'acheter. Les prix des NAS portent sur le matériel seul et excluent les disques.',
+        image: '/images/best-nas-storage-local-ai-models-2026-storage-comparison-fr.svg',
+        imageCaption: 'Tableau comparatif de stockage pour l\'IA locale avec cinq options : NAS Synology et QNAP 4 baies, SSD NVMe Samsung 990 Pro et WD Black SN850X, et un disque USB externe, avec les prix de juillet 2026. Un NAS en RAID 6 coûte environ 750-800 € matériel seul, tandis qu\'un SSD NVMe de 2 To coûte environ 275-330 € selon la marque.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1452,6 +1462,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Organigramme de décision : choisissez votre stockage en quatre questions',
         content:
           '**Quatre questions, dans l\'ordre, orientent la plupart des acheteurs vers le bon stockage.**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-fr.svg',
+        imageCaption: 'Organigramme de décision guidant les acheteurs de stockage IA locale à travers quatre questions : bibliothèque partagée, Synology contre QNAP, Samsung 990 Pro contre WD Black SN850X, et sauvegarde hors site. Un développeur seul aboutit à un SSD plus un disque externe, une bibliothèque partagée aboutit à un NAS RAID 6 avec la règle de sauvegarde 3-2-1 appliquée.',
         items: [
           '**1. Plusieurs machines ou personnes partagent-elles la bibliothèque de modèles ?** Non : un SSD rapide plus un disque de sauvegarde externe suffit. Oui : il vous faut un NAS — continuez.',
           '**2. Synology ou QNAP ?** Logiciel le plus simple pour une équipe non spécialiste : Synology. Plus de processeur et de ports par euro : QNAP.',
@@ -1728,6 +1740,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2026年のローカルAIにおけるNASとSSDストレージの比較',
         content:
           'この表は2つのストレージの役割を分けています。NASの行は共有ライブラリの役割を、SSDの行は高速読み込みの役割を扱います。容量とRAIDの数値は標準的な4ベイ構成に基づいています。価格は2026年7月時点のスナップショットです — 2026年のメモリチップ不足によりSSDの価格が上昇したため、購入前に最新の数値を確認してください。NASの価格はハードウェアのみで、ドライブは含みません。',
+        image: '/images/best-nas-storage-local-ai-models-2026-storage-comparison-ja.svg',
+        imageCaption: 'ローカルAIモデル向けストレージ比較表。SynologyとQNAPの4ベイNAS、Samsung 990 ProとWD Black SN850X NVMe SSD、外付けUSBドライブの5種類を2026年7月時点の価格で掲載。RAID 6構成のNASはハードウェアのみで約8.8万〜9.8万円、2TBのNVMe SSDはブランドにより約3.5万〜5万円。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1970,6 +1984,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '意思決定フローチャート：4つの質問でストレージを選ぶ',
         content:
           '**順番に並んだ4つの質問が、ほとんどの購入者を適切なストレージへと導きます。**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-ja.svg',
+        imageCaption: 'ローカルAIストレージの購入者を4つの質問で導く意思決定フローチャート。共有ライブラリの有無、SynologyかQNAPか、Samsung 990 ProかWD Black SN850Xか、オフサイトバックアップの有無を順に判定する。1人の開発者はSSDと外付けドライブで完結し、共有ライブラリは3-2-1バックアップルールを適用したRAID 6 NASで完結する。',
         items: [
           '**1. 複数のマシンや人がモデルライブラリを共有しますか？** いいえ：高速なSSDと外付けバックアップドライブで十分です。はい：NASが必要です — 次へ進んでください。',
           '**2. SynologyかQNAPか？** 専門家のいないチームに最も簡単なソフトウェア：Synology。価格あたりのCPUとポートの多さ：QNAP。',
@@ -2246,6 +2262,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2026 年 NAS 与 SSD 存储在本地 AI 上的对比',
         content:
           '本表将两项存储任务分开。NAS 各行涵盖共享模型库角色；SSD 各行涵盖快速加载角色。容量和 RAID 数据基于标准的 4 盘位配置。价格为 2026 年 7 月的快照——2026 年的内存芯片短缺推高了 SSD 定价，因此购买前请确认当前数字。NAS 价格仅含硬件，不含硬盘。',
+        image: '/images/best-nas-storage-local-ai-models-2026-storage-comparison-zh.svg',
+        imageCaption: '本地 AI 模型存储对比表，列出五个选项：Synology 和 QNAP 4 盘位 NAS、Samsung 990 Pro 与 WD Black SN850X NVMe SSD，以及外置 USB 硬盘，附 2026 年 7 月价格。RAID 6 配置的 NAS 仅硬件约 450-650 美元，2TB NVMe SSD 视品牌约 150-250 美元。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2488,6 +2506,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '决策流程图：用四个问题选定你的存储',
         content:
           '**按顺序排列的四个问题，把大多数购买者引向正确的存储。**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-zh.svg',
+        imageCaption: '决策流程图，通过四个问题引导本地 AI 存储买家：模型库是否共享、Synology 还是 QNAP、Samsung 990 Pro 还是 WD Black SN850X、是否有异地备份。单人开发者最终选择 SSD 加外置硬盘，共享模型库最终选择应用 3-2-1 备份规则的 RAID 6 NAS。',
         items: [
           '**1. 是否有多台机器或多人共享模型库？** 否：一块快速 SSD 加一块外置备份硬盘就够了。是：你需要 NAS——继续。',
           '**2. Synology 还是 QNAP？** 非专业团队的最简单软件：Synology。每美元更多 CPU 和端口：QNAP。',
@@ -2764,6 +2784,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cómo se comparan el NAS y el SSD para IA local en 2026',
         content:
           'La tabla separa las dos tareas de almacenamiento. Las filas de NAS cubren el rol de biblioteca compartida; las filas de SSD cubren el rol de carga rápida. Las cifras de capacidad y RAID se basan en configuraciones estándar de 4 bahías. Los precios son una instantánea de julio de 2026 — la escasez de chips de memoria de 2026 elevó los precios de los SSD, así que confirma la cifra actual antes de comprar. Los precios de los NAS son solo de hardware y excluyen los discos.',
+        image: '/images/best-nas-storage-local-ai-models-2026-storage-comparison-es.svg',
+        imageCaption: 'Tabla comparativa de almacenamiento para IA local con cinco opciones: NAS Synology y QNAP de 4 bahías, SSD NVMe Samsung 990 Pro y WD Black SN850X, y un disco USB externo, con precios de julio de 2026. Un NAS en RAID 6 cuesta unos 700-1.150 € solo hardware, mientras que un SSD NVMe de 2 TB cuesta unos 235-340 € según la marca.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3006,6 +3028,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Diagrama de decisión: elige tu almacenamiento en cuatro preguntas',
         content:
           '**Cuatro preguntas, en orden, guían a la mayoría de los compradores hacia el almacenamiento correcto.**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-es.svg',
+        imageCaption: 'Diagrama de decisión que guía a los compradores de almacenamiento para IA local por cuatro preguntas: biblioteca compartida, Synology contra QNAP, Samsung 990 Pro contra WD Black SN850X, y respaldo fuera del sitio. Un desarrollador solo termina con un SSD más un disco externo; una biblioteca compartida termina con un NAS en RAID 6 aplicando la regla de respaldo 3-2-1.',
         items: [
           '**1. ¿Varias máquinas o personas comparten la biblioteca de modelos?** No: un SSD rápido más una unidad de respaldo externa es suficiente. Sí: necesitas un NAS — continúa.',
           '**2. ¿Synology o QNAP?** Software más sencillo para un equipo sin especialistas: Synology. Más CPU y puertos por euro: QNAP.',
@@ -3295,6 +3319,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como o NAS e o SSD se comparam para IA local em 2026',
         content:
           'A tabela separa as duas tarefas de armazenamento. As linhas de NAS cobrem o papel de biblioteca compartilhada; as linhas de SSD cobrem o papel de carregamento rápido. Os números de capacidade e RAID baseiam-se em configurações padrão de 4 baias. Os preços são um instantâneo de julho de 2026 — a escassez de chips de memória de 2026 elevou os preços dos SSDs, então confirme o número atual antes de comprar. Os preços dos NAS são apenas de hardware e excluem os discos.',
+        image: '/images/best-nas-storage-local-ai-models-2026-storage-comparison-pt.svg',
+        imageCaption: 'Tabela comparativa de armazenamento para IA local com cinco opções: NAS Synology e QNAP de 4 baias, SSDs NVMe Samsung 990 Pro e WD Black SN850X, e um disco USB externo, com preços de julho de 2026. Um NAS em RAID 6 custa cerca de R$ 5.500-8.500 só hardware, enquanto um SSD NVMe de 2 TB custa cerca de R$ 2.900-4.000 conforme a marca.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3537,6 +3563,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fluxograma de decisão: escolha o seu armazenamento em quatro perguntas',
         content:
           '**Quatro perguntas, em ordem, guiam a maioria dos compradores para o armazenamento correto.**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-pt.svg',
+        imageCaption: 'Fluxograma de decisão que guia compradores de armazenamento para IA local por quatro perguntas: biblioteca compartilhada, Synology versus QNAP, Samsung 990 Pro versus WD Black SN850X, e backup fora do local. Um desenvolvedor solo termina com um SSD mais um disco externo; uma biblioteca compartilhada termina com um NAS em RAID 6 aplicando a regra de backup 3-2-1.',
         items: [
           '**1. Várias máquinas ou pessoas compartilham a biblioteca de modelos?** Não: um SSD rápido mais uma unidade de backup externa é suficiente. Sim: você precisa de um NAS — continue.',
           '**2. Synology ou QNAP?** Software mais simples para um time sem especialistas: Synology. Mais CPU e portas por real: QNAP.',
@@ -3827,6 +3855,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'مقارنة NAS وSSD للذكاء الاصطناعي المحلي في 2026',
         content:
           'يفصل الجدول بين مهمتَي التخزين. صفوف NAS تغطي دور المكتبة المشتركة؛ صفوف SSD تغطي دور التحميل السريع. أرقام السعة وRAID مبنية على تهيئات 4 حجرات قياسية. الأسعار لقطة من يوليو 2026 — أدى نقص رقائق الذاكرة إلى رفع أسعار SSD، لذا تحقق من الرقم الحالي قبل الشراء. أسعار NAS للأجهزة فقط ولا تشمل الأقراص.',
+        image: '/images/best-nas-storage-local-ai-models-2026-storage-comparison-ar.svg',
+        imageCaption: 'جدول مقارنة التخزين لنماذج الذكاء الاصطناعي المحلي بخمسة خيارات: NAS من Synology وQNAP بـ4 حجرات، أقراص Samsung 990 Pro وWD Black SN850X NVMe SSD، ومحرك USB خارجي، بأسعار يوليو 2026. يكلف NAS بإعداد RAID 6 نحو 450-650 دولاراً للأجهزة فقط، بينما يكلف قرص NVMe SSD بسعة 2 تيرابايت نحو 150-250 دولاراً حسب الماركة.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4069,6 +4099,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'مخطط القرار: اختر تخزينك في أربعة أسئلة',
         content:
           '**أربعة أسئلة بالترتيب توجّه معظم المشترين نحو التخزين الصحيح.**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-ar.svg',
+        imageCaption: 'مخطط قرار يوجّه مشتري تخزين الذكاء الاصطناعي المحلي عبر أربعة أسئلة: المكتبة المشتركة، Synology مقابل QNAP، Samsung 990 Pro مقابل WD Black SN850X، والنسخ الاحتياطي خارج الموقع. ينتهي المطوّر المنفرد بقرص SSD مع محرك خارجي، بينما تنتهي المكتبة المشتركة بـNAS على RAID 6 مع تطبيق قاعدة النسخ الاحتياطي 3-2-1.',
         items: [
           '**1. هل تشترك أجهزة أو أشخاص متعددون في مكتبة النماذج؟** لا: SSD سريعة بالإضافة إلى محرك نسخ احتياطي خارجي كافٍ. نعم: تحتاج NAS — تابع.',
           '**2. Synology أم QNAP؟** برنامج أبسط لفريق بدون متخصصين: Synology. معالج أقوى وموانئ أكثر مقابل الدولار: QNAP.',
@@ -4358,6 +4390,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2026년 로컬 AI를 위한 NAS와 SSD 비교',
         content:
           '표는 두 가지 스토리지 작업을 구분합니다. NAS 행은 공유 라이브러리 역할을 다루고, SSD 행은 빠른 로드 역할을 다룹니다. 용량 및 RAID 수치는 표준 4베이 구성을 기반으로 합니다. 가격은 2026년 7월 스냅샷입니다. 2026년 메모리 칩 공급 부족으로 SSD 가격이 상승했으므로 구매 전 현재 수치를 확인하십시오. NAS 가격은 하드웨어만이며 드라이브는 포함되지 않습니다.',
+        image: '/images/best-nas-storage-local-ai-models-2026-storage-comparison-ko.svg',
+        imageCaption: '로컬 AI 모델을 위한 스토리지 비교표로 5가지 옵션 수록: 4베이 Synology 및 QNAP NAS, Samsung 990 Pro 및 WD Black SN850X NVMe SSD, 외장 USB 드라이브를 2026년 7월 가격으로 비교. RAID 6 구성 NAS는 하드웨어만 약 $450-650이며, 2TB NVMe SSD는 브랜드에 따라 약 $150-250이다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4600,6 +4634,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '의사결정 흐름도: 네 가지 질문으로 스토리지 선택',
         content:
           '**네 가지 질문이 순서대로 대부분의 구매자를 올바른 스토리지로 안내합니다.**',
+        image: '/images/best-nas-storage-local-ai-models-2026-decision-flowchart-ko.svg',
+        imageCaption: '로컬 AI 스토리지 구매자를 네 가지 질문으로 안내하는 의사결정 흐름도: 공유 라이브러리 여부, Synology 대 QNAP, Samsung 990 Pro 대 WD Black SN850X, 외부 백업 여부. 단독 개발자는 SSD와 외장 드라이브로 끝나고, 공유 라이브러리는 3-2-1 백업 규칙을 적용한 RAID 6 NAS로 끝난다.',
         items: [
           '**1. 여러 머신 또는 사람이 모델 라이브러리를 공유합니까?** 아니오: 빠른 SSD와 외장 백업 드라이브로 충분합니다. 예: NAS가 필요합니다. 계속 진행하십시오.',
           '**2. Synology 또는 QNAP?** 전문가 없는 팀을 위한 더 간단한 소프트웨어: Synology. 달러당 더 많은 CPU와 포트: QNAP.',

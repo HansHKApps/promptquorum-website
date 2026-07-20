@@ -2404,6 +2404,186 @@
     "width": 1200,
     "height": 675
   },
+  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-gpus-for-local-llms-tier-speed-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpus-for-local-llms-tier-speed-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpus-for-local-llms-tier-speed-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpus-for-local-llms-tier-speed-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpus-for-local-llms-tier-speed-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpus-for-local-llms-tier-speed-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpus-for-local-llms-tier-speed-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpus-for-local-llms-tier-speed-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpus-for-local-llms-tier-speed-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-gpus-for-local-llms-vram-fit-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-gpus-for-local-llms-vram-fit-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-gpus-for-local-llms-vram-fit-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-gpus-for-local-llms-vram-fit-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-gpus-for-local-llms-vram-fit-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-gpus-for-local-llms-vram-fit-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-gpus-for-local-llms-vram-fit-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-gpus-for-local-llms-vram-fit-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-gpus-for-local-llms-vram-fit-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
   "/images/best-laptops-local-llm-2026-comparison-table-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -2493,6 +2673,96 @@
     "encodingFormat": "image/png",
     "width": 1200,
     "height": 675
+  },
+  "/images/best-laptops-local-llm-comparison-table-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/best-laptops-local-llm-comparison-table-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/best-laptops-local-llm-comparison-table-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/best-laptops-local-llm-comparison-table-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/best-laptops-local-llm-comparison-table-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/best-laptops-local-llm-comparison-table-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/best-laptops-local-llm-comparison-table-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/best-laptops-local-llm-comparison-table-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/best-laptops-local-llm-comparison-table-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/best-laptops-local-llm-vram-fit-chart-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-laptops-local-llm-vram-fit-chart-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-laptops-local-llm-vram-fit-chart-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-laptops-local-llm-vram-fit-chart-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-laptops-local-llm-vram-fit-chart-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-laptops-local-llm-vram-fit-chart-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-laptops-local-llm-vram-fit-chart-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-laptops-local-llm-vram-fit-chart-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/best-laptops-local-llm-vram-fit-chart-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
   },
   "/images/best-local-coding-models-2026-common-mistakes-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -4819,6 +5089,96 @@
     "width": 1200,
     "height": 675
   },
+  "/images/best-nas-storage-local-ai-models-2026-decision-flowchart-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 590
+  },
+  "/images/best-nas-storage-local-ai-models-2026-decision-flowchart-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 590
+  },
+  "/images/best-nas-storage-local-ai-models-2026-decision-flowchart-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 590
+  },
+  "/images/best-nas-storage-local-ai-models-2026-decision-flowchart-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 590
+  },
+  "/images/best-nas-storage-local-ai-models-2026-decision-flowchart-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 590
+  },
+  "/images/best-nas-storage-local-ai-models-2026-decision-flowchart-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 590
+  },
+  "/images/best-nas-storage-local-ai-models-2026-decision-flowchart-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 590
+  },
+  "/images/best-nas-storage-local-ai-models-2026-decision-flowchart-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 590
+  },
+  "/images/best-nas-storage-local-ai-models-2026-decision-flowchart-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 590
+  },
+  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 310
+  },
+  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 310
+  },
+  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 346
+  },
+  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 310
+  },
+  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 310
+  },
+  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 310
+  },
+  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 310
+  },
+  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 310
+  },
+  "/images/best-nas-storage-local-ai-models-2026-storage-comparison-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 310
+  },
   "/images/best-ollama-models-cpu-only-model-comparison-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -5184,6 +5544,96 @@
     "width": 1200,
     "height": 675
   },
+  "/images/build-local-voice-assistant-2026-latency-by-hardware-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-latency-by-hardware-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-latency-by-hardware-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-latency-by-hardware-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-latency-by-hardware-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-latency-by-hardware-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-latency-by-hardware-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-latency-by-hardware-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-latency-by-hardware-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-pipeline-architecture-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-pipeline-architecture-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-pipeline-architecture-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-pipeline-architecture-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-pipeline-architecture-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-pipeline-architecture-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-pipeline-architecture-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-pipeline-architecture-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/build-local-voice-assistant-2026-pipeline-architecture-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/build-local-voice-assistant-2026-stt-tts-stack-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -5253,6 +5703,91 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 360
+  },
+  "/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 465
+  },
+  "/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 465
+  },
+  "/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 465
+  },
+  "/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 465
+  },
+  "/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 465
+  },
+  "/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 465
+  },
+  "/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 465
+  },
+  "/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 465
+  },
+  "/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
+  "/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
   },
   "/images/cloud-gpu-rental-guide-2026-comparison-table-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -7643,6 +8178,86 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 330
+  },
+  "/images/how-to-install-ollama-linux-systemd-flow-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-to-install-ollama-linux-systemd-flow-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-to-install-ollama-linux-systemd-flow-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-to-install-ollama-linux-systemd-flow-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-to-install-ollama-linux-systemd-flow-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-to-install-ollama-linux-systemd-flow-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-to-install-ollama-linux-systemd-flow-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-to-install-ollama-linux-systemd-flow-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-to-install-ollama-troubleshooting-table-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/how-to-install-ollama-troubleshooting-table-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/how-to-install-ollama-troubleshooting-table-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/how-to-install-ollama-troubleshooting-table-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/how-to-install-ollama-troubleshooting-table-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/how-to-install-ollama-troubleshooting-table-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/how-to-install-ollama-troubleshooting-table-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/how-to-install-ollama-troubleshooting-table-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
   },
   "/images/hoymiles-microinverter-balcony-solar-certification-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -10574,6 +11189,96 @@
     "width": 800,
     "height": 350
   },
+  "/images/local-llms-with-vscode-cursor-best-coding-models-table-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 340
+  },
+  "/images/local-llms-with-vscode-cursor-best-coding-models-table-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 340
+  },
+  "/images/local-llms-with-vscode-cursor-best-coding-models-table-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 340
+  },
+  "/images/local-llms-with-vscode-cursor-best-coding-models-table-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 340
+  },
+  "/images/local-llms-with-vscode-cursor-best-coding-models-table-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 340
+  },
+  "/images/local-llms-with-vscode-cursor-best-coding-models-table-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 340
+  },
+  "/images/local-llms-with-vscode-cursor-best-coding-models-table-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 340
+  },
+  "/images/local-llms-with-vscode-cursor-best-coding-models-table-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 340
+  },
+  "/images/local-llms-with-vscode-cursor-best-coding-models-table-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 340
+  },
+  "/images/local-llms-with-vscode-cursor-continue-setup-flow-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/local-llms-with-vscode-cursor-continue-setup-flow-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/local-llms-with-vscode-cursor-continue-setup-flow-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/local-llms-with-vscode-cursor-continue-setup-flow-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/local-llms-with-vscode-cursor-continue-setup-flow-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/local-llms-with-vscode-cursor-continue-setup-flow-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/local-llms-with-vscode-cursor-continue-setup-flow-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/local-llms-with-vscode-cursor-continue-setup-flow-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/local-llms-with-vscode-cursor-continue-setup-flow-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
   "/images/local-rag-on-your-pdfs-step-by-step-chunk-settings-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -11023,6 +11728,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 430
+  },
+  "/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/local-vision-models-llava-ollama-2026-vram-comparison-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-vision-models-llava-ollama-2026-vram-comparison-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-vision-models-llava-ollama-2026-vram-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-vision-models-llava-ollama-2026-vram-comparison-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-vision-models-llava-ollama-2026-vram-comparison-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-vision-models-llava-ollama-2026-vram-comparison-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-vision-models-llava-ollama-2026-vram-comparison-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-vision-models-llava-ollama-2026-vram-comparison-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/local-vision-models-llava-ollama-2026-vram-comparison-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
   },
   "/images/local-vs-cloud-agents-capabilities-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -11543,6 +12338,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-tokens-per-sec-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-tokens-per-sec-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-tokens-per-sec-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-tokens-per-sec-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-tokens-per-sec-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-tokens-per-sec-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-tokens-per-sec-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-tokens-per-sec-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-tokens-per-sec-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-which-to-buy-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-which-to-buy-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-which-to-buy-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-which-to-buy-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-which-to-buy-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-which-to-buy-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-which-to-buy-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-which-to-buy-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/m5-pro-max-llm-benchmarks-2026-which-to-buy-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
   },
   "/images/mac-hardware-comparison-en.svg": {
     "encodingFormat": "image/svg+xml",

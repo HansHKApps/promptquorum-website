@@ -49,6 +49,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         vscodeContinue: {
           title: 'How to Set Up Continue.dev in VS Code?',
           content: 'Continue.dev is a VS Code extension for local and cloud code completions.',
+          image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-en.svg',
+          imageCaption: 'Five-step setup flow for Continue.dev in VS Code, from installing the extension and running ollama serve to configuring qwen2.5-coder:7b and triggering completions with Tab.',
           codeBlock: '# 1. Install Continue from VS Code marketplace\n# Search "Continue" and click Install\n\n# 2. Make sure Ollama is running\nollama serve\n\n# 3. Open Continue settings (Ctrl+Shift+P → Continue: Open Settings)\n# config.json opens\n\n# 4. Configure for your local model:\n# Replace the default settings with:\n{\n  "models": [{\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b",\n    "apiBase": "http://localhost:11434"\n  }],\n  "tabAutocompleteModel": {\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b"\n  }\n}\n\n# 5. Start typing code and press Tab for completions\n# Or Ctrl+Shift+\\ to manually trigger completions',
           codeLanguage: 'json',
         },
@@ -62,6 +64,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         bestModels: {
           title: 'Which Models Are Best for Code?',
+          image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-en.svg',
+          imageCaption: 'Comparison table of five local coding models -- Qwen3-Coder 7B, Llama Code 7B/13B, Mistral Small, and DeepSeek-Coder 6.7B -- showing HumanEval scores, VRAM requirements, and speed for use in VS Code and Cursor.',
           rows: [
             { 'Model': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Speed': 'Fast', 'Best For': 'Best balance, fastest' },
             { 'Model': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', 'Speed': 'Fast', 'Best For': 'General coding' },
@@ -288,6 +292,8 @@ schema: {
         vscodeContinue: {
           title: 'Wie richten Sie Continue.dev in VS Code ein?',
           content: 'Continue.dev ist eine VS Code-Erweiterung für lokale und Cloud-Code-Vervollständigung.',
+          image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-de.svg',
+          imageCaption: 'Fünfstufiger Einrichtungsablauf für Continue.dev in VS Code, von der Installation der Erweiterung über ollama serve bis zur Konfiguration von qwen2.5-coder:7b und der Auslösung von Vervollständigungen mit Tab.',
           codeBlock: '# 1. Installieren Sie Continue aus dem VS Code Marketplace\n# Suchen Sie nach "Continue" und klicken Sie auf "Installieren"\n\n# 2. Stellen Sie sicher, dass Ollama läuft\nollama serve\n\n# 3. Öffnen Sie Continue-Einstellungen (Strg+Umschalt+P → Continue: Einstellungen öffnen)\n# config.json wird geöffnet\n\n# 4. Konfigurieren Sie für Ihr lokales Modell:\n# Ersetzen Sie die Standard-Einstellungen durch:\n{\n  "models": [{\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b",\n    "apiBase": "http://localhost:11434"\n  }],\n  "tabAutocompleteModel": {\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b"\n  }\n}\n\n# 5. Beginnen Sie zu tippen und drücken Sie Tab für Vervollständigungen\n# Oder Strg+Umschalt+\\ zur manuellen Auslösung von Vervollständigungen',
           codeLanguage: 'json',
         },
@@ -301,6 +307,8 @@ schema: {
         },
         bestModels: {
           title: 'Welche Modelle eignen sich am besten für Code?',
+          image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-de.svg',
+          imageCaption: 'Vergleichstabelle von fünf lokalen Coding-Modellen -- Qwen3-Coder 7B, Llama Code 7B/13B, Mistral Small und DeepSeek-Coder 6,7B -- mit HumanEval-Werten, VRAM-Bedarf und Geschwindigkeit für VS Code und Cursor.',
           content: [
             '⚠️ **VRAM-Regel**: Haben Sie immer 2-3 GB mehr freien VRAM als das Modell benötigt. Ein 7B-Modell bei Q4 (4,7 GB) benötigt insgesamt 8 GB VRAM bei Ausführung in VS Code oder Cursor.',
           ],
@@ -478,6 +486,8 @@ schema: {
         vscodeContinue: {
           title: 'Comment configurer Continue.dev dans VS Code ?',
           content: 'Continue.dev est une extension VS Code pour les complétions de code locales et cloud.',
+          image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-fr.svg',
+          imageCaption: 'Flux de configuration en cinq étapes pour Continue.dev dans VS Code, de l\'installation de l\'extension à ollama serve jusqu\'à la configuration de qwen2.5-coder:7b et au déclenchement des complétions avec Tab.',
           codeBlock: '# 1. Installez Continue depuis la marketplace VS Code\n# Recherchez "Continue" et cliquez sur Installer\n\n# 2. Assurez-vous qu\'Ollama fonctionne\nollama serve\n\n# 3. Ouvrez les paramètres de Continue (Ctrl+Maj+P → Continue: Ouvrir les paramètres)\n# config.json s\'ouvre\n\n# 4. Configurez pour votre modèle local :\n# Remplacez les paramètres par défaut :\n{\n  "models": [{\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b",\n    "apiBase": "http://localhost:11434"\n  }],\n  "tabAutocompleteModel": {\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b"\n  }\n}\n\n# 5. Commencez à coder et appuyez sur Tab pour les complétions\n# Ou Ctrl+Maj+\\ pour déclencher manuellement les complétions',
           codeLanguage: 'json',
         },
@@ -491,6 +501,8 @@ schema: {
         },
         bestModels: {
           title: 'Quels modèles conviennent le mieux au code ?',
+          image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-fr.svg',
+          imageCaption: 'Tableau comparatif de cinq modèles de codage locaux -- Qwen3-Coder 7B, Llama Code 7B/13B, Mistral Small et DeepSeek-Coder 6,7B -- avec scores HumanEval, besoins en RAM et vitesse pour VS Code et Cursor.',
           content: [
             '⚠️ **Règle RAM** : Ayez toujours 2-3 Go de RAM libre de plus que ce que le modèle nécessite. Un modèle 7B en Q4 (4,7 Go) nécessite 8 Go de RAM totale lors de l\'exécution dans VS Code ou Cursor.',
           ],
@@ -652,6 +664,8 @@ schema: {
         vscodeContinue: {
           title: 'VS CodeでContinue.devをセットアップするにはどうすればよいですか？',
           content: 'Continue.devはローカルおよびクラウドコード補完用のVS Code拡張機能です。',
+          image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-ja.svg',
+          imageCaption: 'VS CodeでContinue.devをセットアップする5ステップのフロー。拡張機能のインストールからollama serveの実行、qwen2.5-coder:7bの設定、Tabキーでの補完トリガーまでを示す。',
           codeBlock: '# 1. VS Code Marketplaceからcontinueをインストール\n# 「Continue」を検索してインストールをクリック\n\n# 2. Ollamaが実行されていることを確認\nollama serve\n\n# 3. Continue設定を開く（Ctrl+Shift+P → Continue：設定を開く）\n# config.jsonが開きます\n\n# 4. ローカルモデルのために設定：\n# デフォルト設定を以下で置き換え：\n{\n  "models": [{\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b",\n    "apiBase": "http://localhost:11434"\n  }],\n  "tabAutocompleteModel": {\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b"\n  }\n}\n\n# 5. コード入力を開始し、Tabキーで補完\n# または Ctrl+Shift+\\ 補完を手動トリガー',
           codeLanguage: 'json',
         },
@@ -665,6 +679,8 @@ schema: {
         },
         bestModels: {
           title: 'コードに最適なモデルはどれですか？',
+          image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-ja.svg',
+          imageCaption: 'Qwen3-Coder 7B、Llama Code 7B/13B、Mistral Small、DeepSeek-Coder 6.7Bという5つのローカルコーディングモデルを、HumanEvalスコア、VRAM要件、速度で比較した表（VS CodeとCursor向け）。',
           content: [
             '⚠️ **VRAM規則**：モデルが必要とするVRAMより2〜3 GB多い空きVRAMを常に持つ。Q4のときの7Bモデル（4.7 GB）はVS CodeまたはCursorで実行するときに合計8 GBのVRAMを必要とします。',
           ],
@@ -841,6 +857,8 @@ schema: {
         vscodeContinue: {
           title: '如何在VS Code中设置Continue.dev？',
           content: 'Continue.dev是VS Code扩展，用于本地和云代码补全。',
+          image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-zh.svg',
+          imageCaption: '在VS Code中设置Continue.dev的五步流程，从安装扩展、运行ollama serve，到配置qwen2.5-coder:7b并按Tab键触发补全。',
           codeBlock: '# 1. 从VS Code市场安装Continue\n# 搜索"Continue"并单击安装\n\n# 2. 确保Ollama正在运行\nollama serve\n\n# 3. 打开Continue设置（Ctrl+Shift+P → Continue：打开设置）\n# config.json将打开\n\n# 4. 为您的本地模型配置：\n# 用以下内容替换默认设置：\n{\n  "models": [{\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b",\n    "apiBase": "http://localhost:11434"\n  }],\n  "tabAutocompleteModel": {\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b"\n  }\n}\n\n# 5. 开始键入代码并按Tab获得补全\n# 或Ctrl+Shift+\\ 手动触发补全',
           codeLanguage: 'json',
         },
@@ -854,6 +872,8 @@ schema: {
         },
         bestModels: {
           title: '哪些模型最适合代码？',
+          image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-zh.svg',
+          imageCaption: '五个本地编码模型的对比表——Qwen3-Coder 7B、Llama Code 7B/13B、Mistral Small和DeepSeek-Coder 6.7B——展示了在VS Code和Cursor中使用的HumanEval分数、显存需求和速度。',
           content: [
             '⚠️ **显存规则**：始终拥有比模型需求多2-3 GB的空闲显存。Q4时的7B模型（4.7 GB）在VS Code或Cursor中运行时需要总计8 GB显存。',
           ],
@@ -1017,6 +1037,8 @@ schema: {
         vscodeContinue: {
           title: '¿Cómo configurar Continue.dev en VS Code?',
           content: 'Continue.dev es una extensión de VS Code para completaciones de código locales y en la nube.',
+          image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-es.svg',
+          imageCaption: 'Flujo de configuración en cinco pasos para Continue.dev en VS Code, desde instalar la extensión y ejecutar ollama serve hasta configurar qwen2.5-coder:7b y activar completaciones con Tab.',
           codeBlock: '# 1. Install Continue from VS Code marketplace\n# Search "Continue" and click Install\n\n# 2. Make sure Ollama is running\nollama serve\n\n# 3. Open Continue settings (Ctrl+Shift+P → Continue: Open Settings)\n# config.json opens\n\n# 4. Configure for your local model:\n# Replace the default settings with:\n{\n  "models": [{\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b",\n    "apiBase": "http://localhost:11434"\n  }],\n  "tabAutocompleteModel": {\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b"\n  }\n}\n\n# 5. Start typing code and press Tab for completions\n# Or Ctrl+Shift+\\ to manually trigger completions',
           codeLanguage: 'json',
         },
@@ -1030,6 +1052,8 @@ schema: {
         },
         bestModels: {
           title: '¿Qué modelos son los mejores para código?',
+          image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-es.svg',
+          imageCaption: 'Tabla comparativa de cinco modelos de código locales -- Qwen3-Coder 7B, Llama Code 7B/13B, Mistral Small y DeepSeek-Coder 6.7B -- con puntuaciones HumanEval, requisitos de VRAM y velocidad para VS Code y Cursor.',
           content: [
             '⚠️ **Regla de VRAM**: Ten siempre 2-3 GB de VRAM libre por encima de lo que requiere el modelo. Un modelo 7B en Q4 (4,7 GB) necesita 8 GB de VRAM en total al ejecutarse en VS Code o Cursor.',
           ],
@@ -1193,6 +1217,8 @@ schema: {
         vscodeContinue: {
           title: 'كيف تُعِدّ Continue.dev في VS Code؟',
           content: 'Continue.dev إضافة لـVS Code لإكمالات الشيفرة المحلية والسحابية.',
+          image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-ar.svg',
+          imageCaption: 'تدفق إعداد من خمس خطوات لـ Continue.dev في VS Code، من تثبيت الإضافة وتشغيل ollama serve إلى ضبط qwen2.5-coder:7b وتشغيل الإكمالات بمفتاح Tab.',
           codeBlock: '# 1. Install Continue from VS Code marketplace\n# Search "Continue" and click Install\n\n# 2. Make sure Ollama is running\nollama serve\n\n# 3. Open Continue settings (Ctrl+Shift+P → Continue: Open Settings)\n# config.json opens\n\n# 4. Configure for your local model:\n# Replace the default settings with:\n{\n  "models": [{\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b",\n    "apiBase": "http://localhost:11434"\n  }],\n  "tabAutocompleteModel": {\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b"\n  }\n}\n\n# 5. Start typing code and press Tab for completions\n# Or Ctrl+Shift+\\ to manually trigger completions',
           codeLanguage: 'json',
         },
@@ -1206,6 +1232,8 @@ schema: {
         },
         bestModels: {
           title: 'أي النماذج الأفضل للشيفرة؟',
+          image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-ar.svg',
+          imageCaption: 'جدول مقارنة لخمسة نماذج برمجة محلية -- Qwen3-Coder 7B وLlama Code 7B/13B وMistral Small وDeepSeek-Coder 6.7B -- يوضح درجات HumanEval ومتطلبات VRAM والسرعة للاستخدام في VS Code وCursor.',
           content: [
             '⚠️ **قاعدة VRAM**: احتفظ دائمًا بـ2-3 GB من VRAM متاحة فوق ما يتطلبه النموذج. نموذج 7B في Q4 (4.7 GB) يحتاج 8 GB من VRAM إجمالًا عند التشغيل في VS Code أو Cursor.',
           ],
@@ -1369,6 +1397,8 @@ schema: {
         vscodeContinue: {
           title: 'Como configurar o Continue.dev no VS Code?',
           content: 'O Continue.dev é uma extensão do VS Code para completamentos de código locais e em nuvem.',
+          image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-pt.svg',
+          imageCaption: 'Fluxo de configuração em cinco etapas do Continue.dev no VS Code, desde a instalação da extensão e execução do ollama serve até a configuração do qwen2.5-coder:7b e o acionamento de completamentos com Tab.',
           codeBlock: '# 1. Install Continue from VS Code marketplace\n# Search "Continue" and click Install\n\n# 2. Make sure Ollama is running\nollama serve\n\n# 3. Open Continue settings (Ctrl+Shift+P → Continue: Open Settings)\n# config.json opens\n\n# 4. Configure for your local model:\n# Replace the default settings with:\n{\n  "models": [{\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b",\n    "apiBase": "http://localhost:11434"\n  }],\n  "tabAutocompleteModel": {\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b"\n  }\n}\n\n# 5. Start typing code and press Tab for completions\n# Or Ctrl+Shift+\\ to manually trigger completions',
           codeLanguage: 'json',
         },
@@ -1382,6 +1412,8 @@ schema: {
         },
         bestModels: {
           title: 'Quais modelos são os melhores para código?',
+          image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-pt.svg',
+          imageCaption: 'Tabela comparativa de cinco modelos de codificação locais -- Qwen3-Coder 7B, Llama Code 7B/13B, Mistral Small e DeepSeek-Coder 6.7B -- com pontuações HumanEval, requisitos de VRAM e velocidade para VS Code e Cursor.',
           content: [
             '⚠️ **Regra de VRAM**: Tenha sempre 2-3 GB de VRAM livre acima do que o modelo exige. Um modelo 7B em Q4 (4,7 GB) precisa de 8 GB de VRAM no total ao rodar no VS Code ou no Cursor.',
           ],
@@ -1548,6 +1580,8 @@ schema: {
         vscodeContinue: {
           title: 'VS Code에서 Continue.dev를 설정하는 방법은 무엇입니까?',
           content: 'Continue.dev는 로컬 및 클라우드 코드 자동 완성을 위한 VS Code 확장입니다.',
+          image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-ko.svg',
+          imageCaption: 'VS Code에서 Continue.dev를 설정하는 5단계 흐름으로, 확장 설치부터 ollama serve 실행, qwen2.5-coder:7b 구성, Tab 키로 자동 완성 트리거까지 다룬다.',
           codeBlock: '# 1. Install Continue from VS Code marketplace\n# Search "Continue" and click Install\n\n# 2. Make sure Ollama is running\nollama serve\n\n# 3. Open Continue settings (Ctrl+Shift+P → Continue: Open Settings)\n# config.json opens\n\n# 4. Configure for your local model:\n# Replace the default settings with:\n{\n  "models": [{\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b",\n    "apiBase": "http://localhost:11434"\n  }],\n  "tabAutocompleteModel": {\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b"\n  }\n}\n\n# 5. Start typing code and press Tab for completions\n# Or Ctrl+Shift+\\ to manually trigger completions',
           codeLanguage: 'json',
         },
@@ -1561,6 +1595,8 @@ schema: {
         },
         bestModels: {
           title: '코드용으로 가장 적합한 모델은 무엇입니까?',
+          image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-ko.svg',
+          imageCaption: '다섯 개의 로컬 코딩 모델 비교표 — Qwen3-Coder 7B, Llama Code 7B/13B, Mistral Small, DeepSeek-Coder 6.7B — VS Code와 Cursor에서 사용할 HumanEval 점수, VRAM 요구 사항, 속도를 보여준다.',
           rows: [
             { 'Model': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Speed': '빠름', 'Best For': '최상의 균형, 가장 빠름' },
             { 'Model': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', 'Speed': '빠름', 'Best For': '일반 코딩' },

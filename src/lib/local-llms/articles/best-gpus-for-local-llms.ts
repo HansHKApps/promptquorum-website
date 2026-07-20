@@ -50,6 +50,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         gpuTiers: {
           id: 'gpu-tiers',
           title: 'GPU Tiers by Price and Performance',
+          image: '/images/best-gpus-for-local-llms-tier-speed-en.svg',
+          imageCaption: 'GPU speed by tier for 7B model inference: RTX 4070 Ti hits 80 tok/sec at $600 for the best price-to-performance, while the RTX 5090 tops out at 160 tok/sec for $1,999.',
           rows: [
             { 'Tier': 'Budget', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', 'Speed (7B)': '80 tok/sec', 'Price': '$600-700' },
             { 'Tier': 'Mid-budget', 'GPU': 'RTX 5070', 'VRAM': '12 GB', 'Speed (7B)': '85 tok/sec', 'Price': '$550' },
@@ -89,6 +91,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         modelVramMapping: {
           id: 'model-vram-mapping',
           title: 'Which Local LLM Model Fits Your GPU',
+          image: '/images/best-gpus-for-local-llms-vram-fit-en.svg',
+          imageCaption: "VRAM-to-model fit chart: a single 24 GB RTX 4090 handles dense 32-34B models at Q5, but Llama 3.3 70B needs 48 GB combined across two GPUs.",
           content: [
             'GPU tier decides which model size runs — not the other way around. The table below maps each GPU\'s VRAM to the largest model that fits comfortably at Q4_K_M, using the same model families referenced across our GPU guides (Qwen3, Gemma 4, DeepSeek, Llama).',
           ],
@@ -303,6 +307,8 @@ schema: {
         gpuTiers: {
           id: 'gpu-tiers',
           title: 'Comparativa de GPUs por precio y rendimiento',
+          image: '/images/best-gpus-for-local-llms-tier-speed-es.svg',
+          imageCaption: 'Velocidad de GPU por nivel en inferencia de modelos de 7B: la RTX 4070 Ti alcanza 80 tok/seg por $600, la mejor relación precio-rendimiento, mientras la RTX 5090 llega a 160 tok/seg por $1999.',
           rows: [
             { 'Nivel': 'Presupuesto', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', 'Velocidad (7B)': '80 tok/seg', 'Precio': '$600-700' },
             { 'Nivel': 'Presupuesto medio', 'GPU': 'RTX 5070', 'VRAM': '12 GB', 'Velocidad (7B)': '85 tok/seg', 'Precio': '$550' },
@@ -342,6 +348,8 @@ schema: {
         modelVramMapping: {
           id: 'model-vram-mapping',
           title: 'Qué modelo de LLM local se adapta a tu GPU',
+          image: '/images/best-gpus-for-local-llms-vram-fit-es.svg',
+          imageCaption: 'Tabla de ajuste VRAM-modelo: una sola RTX 4090 de 24 GB ejecuta modelos densos de 32-34B en Q5, pero Llama 3.3 70B necesita 48 GB combinados en dos GPUs.',
           content: [
             'El nivel de GPU determina qué tamaño de modelo puedes ejecutar — no al revés. La siguiente tabla mapea la VRAM de cada GPU con el modelo más grande que cabe cómodamente en Q4_K_M, usando las mismas familias de modelos referenciadas en nuestras guías de GPU (Qwen3, Gemma 4, DeepSeek, Llama).',
           ],
@@ -569,6 +577,8 @@ schema: {
         gpuTiers: {
           id: 'gpu-tiers',
           title: 'مقارنة بطاقات GPU حسب السعر والأداء',
+          image: '/images/best-gpus-for-local-llms-tier-speed-ar.svg',
+          imageCaption: 'سرعة GPU حسب الفئة في استدلال نموذج 7B: تحقق RTX 4070 Ti سرعة 80 tok/ثانية مقابل 600$، الأفضل من حيث القيمة، بينما تصل RTX 5090 إلى 160 tok/ثانية مقابل 1999$.',
           rows: [
             { 'Nivel': 'ميزانية محدودة', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', 'Velocidad (7B)': '80 tok/ثانية', 'Precio': '$600-700' },
             { 'Nivel': 'ميزانية متوسطة', 'GPU': 'RTX 5070', 'VRAM': '12 GB', 'Velocidad (7B)': '85 tok/ثانية', 'Precio': '$550' },
@@ -608,6 +618,8 @@ schema: {
         modelVramMapping: {
           id: 'model-vram-mapping',
           title: 'أي نموذج LLM محلي يناسب بطاقة GPU لديك',
+          image: '/images/best-gpus-for-local-llms-vram-fit-ar.svg',
+          imageCaption: 'جدول توافق VRAM مع النموذج: بطاقة RTX 4090 واحدة بسعة 24 GB تشغّل نماذج كثيفة بحجم 32-34B عند Q5، لكن Llama 3.3 70B يحتاج 48 GB مجتمعة عبر بطاقتين.',
           content: [
             'مستوى بطاقة GPU يحدد حجم النموذج الذي يمكنك تشغيله — وليس العكس. يربط الجدول أدناه سعة VRAM لكل بطاقة GPU بأكبر نموذج يناسبها بشكل مريح بتكميم Q4_K_M، باستخدام نفس عائلات النماذج المُشار إليها في أدلة GPU لدينا (Qwen3، وGemma 4، وDeepSeek، وLlama).',
           ],
@@ -835,6 +847,8 @@ schema: {
         gpuTiers: {
           id: 'gpu-tiers',
           title: 'Comparativo de GPUs por preço e desempenho',
+          image: '/images/best-gpus-for-local-llms-tier-speed-pt.svg',
+          imageCaption: 'Velocidade da GPU por faixa na inferência de modelos 7B: a RTX 4070 Ti atinge 80 tok/s por US$ 600, a melhor relação custo-benefício, enquanto a RTX 5090 chega a 160 tok/s por US$ 1.999.',
           rows: [
             { 'Nível': 'Econômico', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', 'Velocidade (7B)': '80 tok/s', 'Preço': 'US$ 600-700' },
             { 'Nível': 'Econômico-intermediário', 'GPU': 'RTX 5070', 'VRAM': '12 GB', 'Velocidade (7B)': '85 tok/s', 'Preço': 'US$ 550' },
@@ -874,6 +888,8 @@ schema: {
         modelVramMapping: {
           id: 'model-vram-mapping',
           title: 'Qual modelo de LLM local cabe na sua GPU',
+          image: '/images/best-gpus-for-local-llms-vram-fit-pt.svg',
+          imageCaption: 'Tabela de compatibilidade VRAM-modelo: uma única RTX 4090 de 24 GB roda modelos densos de 32-34B em Q5, mas o Llama 3.3 70B exige 48 GB combinados em duas GPUs.',
           content: [
             'O nível da GPU determina qual tamanho de modelo você consegue rodar — não o contrário. A tabela abaixo mapeia a VRAM de cada GPU para o maior modelo que cabe confortavelmente em Q4_K_M, usando as mesmas famílias de modelos referenciadas em nossos guias de GPU (Qwen3, Gemma 4, DeepSeek, Llama).',
           ],
@@ -1047,6 +1063,8 @@ schema: {
         gpuTiers: {
           id: 'gpu-tiers',
           title: 'GPU-Stufen nach Preis und Leistung',
+          image: '/images/best-gpus-for-local-llms-tier-speed-de.svg',
+          imageCaption: 'GPU-Geschwindigkeit nach Stufe bei 7B-Modell-Inferenz: Die RTX 4070 Ti erreicht 80 Token/Sek. für €580, das beste Preis-Leistungs-Verhältnis, während die RTX 5090 mit 160 Token/Sek. für €1.899 am schnellsten ist.',
           rows: [
             { 'Stufe': 'Budget', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', 'Geschwindigkeit (7B)': '80 Token/Sek.', 'Preis': '€580–680' },
             { 'Stufe': 'Budget-Mittel', 'GPU': 'RTX 5070', 'VRAM': '12 GB', 'Geschwindigkeit (7B)': '85 Token/Sek.', 'Preis': '€520' },
@@ -1086,6 +1104,8 @@ schema: {
         modelVramMapping: {
           id: 'model-vram-mapping',
           title: 'Welches lokale LLM-Modell passt zu Ihrer GPU',
+          image: '/images/best-gpus-for-local-llms-vram-fit-de.svg',
+          imageCaption: 'VRAM-zu-Modell-Fit-Tabelle: Eine einzelne 24-GB-RTX-4090 läuft dichte 32-34B-Modelle bei Q5, aber Llama 3.3 70B benötigt 48 GB kombiniert über zwei GPUs.',
           content: [
             'Die GPU-Stufe bestimmt, welche Modellgröße läuft — nicht umgekehrt. Die folgende Tabelle ordnet den VRAM jeder GPU dem größten Modell zu, das bei Q4_K_M komfortabel passt, unter Verwendung derselben Modellfamilien, auf die in unseren GPU-Leitfäden verwiesen wird (Qwen3, Gemma 4, DeepSeek, Llama).',
           ],
@@ -1299,6 +1319,8 @@ schema: {
         gpuTiers: {
           id: 'gpu-tiers',
           title: 'Comparaison des GPU par prix et performance',
+          image: '/images/best-gpus-for-local-llms-tier-speed-fr.svg',
+          imageCaption: 'Vitesse des GPU par catégorie pour l\'inférence de modèles 7B : la RTX 4070 Ti atteint 80 tokens/sec pour 550 €, le meilleur rapport qualité-prix, tandis que la RTX 5090 culmine à 160 tokens/sec pour 1 899 €.',
           rows: [
             { 'Catégorie': 'Budget', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', 'Vitesse (7B)': '80 tokens/sec', 'Prix': '550–680 €' },
             { 'Catégorie': 'Budget-moyen', 'GPU': 'RTX 5070', 'VRAM': '12 GB', 'Vitesse (7B)': '85 tokens/sec', 'Prix': '520 €' },
@@ -1338,6 +1360,8 @@ schema: {
         modelVramMapping: {
           id: 'model-vram-mapping',
           title: 'Quel modèle de LLM local convient à votre GPU',
+          image: '/images/best-gpus-for-local-llms-vram-fit-fr.svg',
+          imageCaption: 'Tableau d\'adéquation VRAM-modèle : une seule RTX 4090 de 24 Go exécute des modèles denses de 32-34B en Q5, mais Llama 3.3 70B nécessite 48 Go combinés sur deux GPU.',
           content: [
             'Le niveau de GPU détermine la taille de modèle exécutable — pas l\'inverse. Le tableau ci-dessous associe le VRAM de chaque GPU au plus grand modèle qui y tient confortablement en Q4_K_M, en utilisant les mêmes familles de modèles référencées dans nos guides GPU (Qwen3, Gemma 4, DeepSeek, Llama).',
           ],
@@ -1551,6 +1575,8 @@ schema: {
         gpuTiers: {
           id: 'gpu-tiers',
           title: 'GPU比較表（価格別、性能別）',
+          image: '/images/best-gpus-for-local-llms-tier-speed-ja.svg',
+          imageCaption: '7Bモデル推論におけるGPU速度（等級別）: RTX 4070 Tiは¥99,000で80トークン/秒を実現し最もコストパフォーマンスに優れ、RTX 5090は¥310,000で160トークン/秒に達する。',
           rows: [
             { 'カテゴリ': '予算層', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', '速度（7B）': '80トークン/秒', '価格': '¥99,000–110,000' },
             { 'カテゴリ': '予算中級', 'GPU': 'RTX 5070', 'VRAM': '12 GB', '速度（7B）': '85トークン/秒', '価格': '¥90,000' },
@@ -1590,6 +1616,8 @@ schema: {
         modelVramMapping: {
           id: 'model-vram-mapping',
           title: 'あなたのGPUに最適なローカルLLMモデル',
+          image: '/images/best-gpus-for-local-llms-vram-fit-ja.svg',
+          imageCaption: 'VRAMとモデルの適合表: 24GBのRTX 4090単体で32-34B密モデルをQ5で動かせるが、Llama 3.3 70BはGPU2基で合計48GBが必要になる。',
           content: [
             'GPUのVRAM層が実行できるモデルサイズを決めます — 逆ではありません。以下の表は、GPU各機種のVRAMガイド全体で参照している同じモデルファミリー（Qwen3、Gemma 4、DeepSeek、Llama）を使い、Q4_K_Mで快適に収まる最大モデルを対応付けたものです。',
           ],
@@ -1813,6 +1841,8 @@ schema: {
         gpuTiers: {
           id: 'gpu-tiers',
           title: 'GPU对比表（按价格和性能）',
+          image: '/images/best-gpus-for-local-llms-tier-speed-zh.svg',
+          imageCaption: '7B模型推理下按等级划分的GPU速度:RTX 4070 Ti以600美元提供80 token/秒,是性价比最高的选择;RTX 5090以1999美元达到160 token/秒的最快速度。',
           rows: [
             { '等级': '预算', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', '速度（7B）': '80 token/秒', '价格': '$600–700' },
             { '等级': '预算-中档', 'GPU': 'RTX 5070', 'VRAM': '12 GB', '速度（7B）': '85 token/秒', '价格': '$550' },
@@ -1852,6 +1882,8 @@ schema: {
         modelVramMapping: {
           id: 'model-vram-mapping',
           title: '哪款本地LLM模型适合你的GPU',
+          image: '/images/best-gpus-for-local-llms-vram-fit-zh.svg',
+          imageCaption: 'VRAM与模型适配表:单张24GB的RTX 4090可在Q5下运行32-34B稠密模型,但Llama 3.3 70B需要两张GPU共48GB显存。',
           content: [
             'GPU等级决定了能运行的模型规模——而不是反过来。下表将每款GPU的VRAM映射到在Q4_K_M量化下能舒适运行的最大模型，使用的模型系列与我们GPU指南中引用的一致（Qwen3、Gemma 4、DeepSeek、Llama）。',
           ],
@@ -2075,6 +2107,8 @@ schema: {
       gpuTiers: {
         id: 'gpu-tiers',
         title: '가격 및 성능별 GPU 등급 비교',
+        image: '/images/best-gpus-for-local-llms-tier-speed-ko.svg',
+        imageCaption: '7B 모델 추론 기준 등급별 GPU 속도: RTX 4070 Ti는 $600에 80 tok/초로 최고의 가성비를 제공하며, RTX 5090은 $1999에 160 tok/초로 가장 빠르다.',
         rows: [
           { '등급': '보급형', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', '속도 (7B)': '80 tok/초', '가격': '$600-700' },
           { '등급': '보급-중급형', 'GPU': 'RTX 5070', 'VRAM': '12 GB', '속도 (7B)': '85 tok/초', '가격': '$550' },
@@ -2114,6 +2148,8 @@ schema: {
       modelVramMapping: {
         id: 'model-vram-mapping',
         title: '내 GPU에 맞는 로컬 LLM 모델',
+        image: '/images/best-gpus-for-local-llms-vram-fit-ko.svg',
+        imageCaption: 'VRAM-모델 적합성 표: 24 GB RTX 4090 한 대로 Q5에서 32-34B 덴스 모델을 실행할 수 있지만, Llama 3.3 70B는 GPU 2대에 걸쳐 총 48 GB가 필요하다.',
         content: [
           'GPU 등급이 실행 가능한 모델 크기를 결정합니다 — 그 반대가 아닙니다. 아래 표는 각 GPU의 VRAM을 Q4_K_M에서 편안하게 실행되는 가장 큰 모델과 매칭한 것으로, 다른 GPU 가이드에서 참조하는 것과 동일한 모델 계열(Qwen3, Gemma 4, DeepSeek, Llama)을 사용합니다.',
         ],

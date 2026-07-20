@@ -1,0 +1,49 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="360" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ollamaビジョンセットアップ: 画像入力からテキスト出力まで5ステップ</text>
+
+  <circle cx="90" cy="110" r="22" fill="#6750A4"/>
+  <text x="90" y="117" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="90" y="152" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ollamaをインストール</text>
+  <text x="90" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">ollama.com</text>
+  <text x="90" y="185" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">2分未満</text>
+
+  <text x="147" y="117" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+  <circle cx="230" cy="110" r="22" fill="#6750A4"/>
+  <text x="230" y="117" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="230" y="152" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">ビジョンモデルを取得</text>
+  <text x="230" y="170" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">ollama pull</text>
+  <text x="230" y="184" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">llama3.2-vision</text>
+
+  <text x="287" y="117" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+  <circle cx="370" cy="110" r="22" fill="#6750A4"/>
+  <text x="370" y="117" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="370" y="152" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">CLIで実行</text>
+  <text x="370" y="170" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">ollama run ...</text>
+  <text x="370" y="184" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">--image photo.jpg</text>
+
+  <text x="427" y="117" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+  <circle cx="510" cy="110" r="22" fill="#6750A4"/>
+  <text x="510" y="117" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="510" y="152" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">HTTP APIを呼び出す</text>
+  <text x="510" y="170" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">POST :11434</text>
+  <text x="510" y="184" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">base64画像</text>
+
+  <text x="567" y="117" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+  <circle cx="650" cy="110" r="22" fill="#34A853"/>
+  <text x="650" y="117" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="650" y="152" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">テキスト出力を取得</text>
+  <text x="650" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">OCR / Q&amp;A /</text>
+  <text x="650" y="184" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">説明</text>
+
+  <rect x="40" y="230" width="720" height="70" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="60" y="252" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="600" fill="#1C1B1F">requests.post("http://localhost:11434/api/generate",</text>
+  <text x="80" y="268" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#49454F">json={"model": "llama3.2-vision", "prompt": prompt, "images": [image_b64]})</text>
+  <text x="60" y="286" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#6750A4">→ response.json()["response"]</text>
+
+  <text x="400" y="330" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">この比較のすべてのモデルは`ollama pull`一つでインストール可能。HTTP APIはbase64画像を受け取りテキストを返す — `requests`以外のPython設定は不要。</text>
+<text x="792" y="355" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

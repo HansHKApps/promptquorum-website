@@ -67,6 +67,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'gpu-specs',
           title: 'What GPU Do You Need in a Laptop?',
           content: 'Laptop GPUs are mobile variants with lower TDP and less VRAM than desktop counterparts. June 2026 recommendation: RTX 5070 Ti (12 GB) minimum for Windows; MacBook Pro M5 Pro for Apple.',
+          image: '/images/best-laptops-local-llm-vram-fit-chart-en.svg',
+          imageCaption: 'VRAM and unified memory tiers mapped to local LLM model sizes: 8 GB (RTX 5070) fits 7B only, 12–16 GB (RTX 5070 Ti, RTX 5080) comfortably runs 7B–14B, 24 GB and 36 GB+ (Apple M5 Pro, M5 Max) handle 30B and 70B models at Q4.',
           items: [
             '**MacBook Pro M5 Pro (24 GB unified):** Best overall. Unified memory = GPU and CPU share the same pool. 45–60 tok/s on Qwen3 14B. Silent. $2,199.',
             '**RTX 5080 laptop (16 GB GDDR7):** Best Windows GPU for LLMs. ~70 tok/s on Llama 3.3 8B Q4. ~$2,799 in laptops.',
@@ -80,6 +82,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'best-models',
           title: 'Best Laptops for Local LLMs (June 2026)',
           content: 'Prices verified June 2026. All run Ollama, LM Studio, and llama.cpp out of the box. Affiliate disclosure: no commission links on this page.',
+          image: '/images/best-laptops-local-llm-comparison-table-en.svg',
+          imageCaption: 'Laptop comparison for local LLMs: MacBook Pro M5 Pro ($2,199, 24 GB unified memory, 45–60 tok/s) vs. RTX 5080 laptop (~$2,799, 16 GB VRAM, ~70 tok/s) vs. RTX 5070 Ti laptop (~$2,499, 12 GB VRAM), tested with Ollama and LM Studio.',
           items: [
             '**MacBook Pro M5 Pro 14" ($2,199, 24 GB unified):** Best overall laptop for local LLMs. 45–60 tok/s on Qwen3 14B Q4. Completely silent. 10–12 hr battery under normal use (3–4 hr under LLM load). See also: [Apple Silicon vs GPU vs CPU for Local LLMs](/local-llms/gpu-vs-cpu-vs-apple-silicon).',
             '**MacBook Pro M5 Pro 16" ($2,499, 24 GB unified):** Same chip as 14" with larger screen and bigger battery. Add 36 GB ($2,999) for comfortable 30B model headroom. See also: [Running 70B Models on Apple Silicon M5 Max](/local-llms/running-70b-models-apple-silicon-m5-max).',
@@ -343,6 +347,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'gpu-specs',
           title: '¿Qué GPU necesitas en una laptop?',
           content: 'Las GPU para laptop son versiones móviles con menor TDP y menos VRAM que sus equivalentes de escritorio. Recomendación de junio de 2026: RTX 5070 Ti (12 GB) como mínimo para Windows; MacBook Pro M5 Pro para Apple.',
+          image: '/images/best-laptops-local-llm-vram-fit-chart-es.svg',
+          imageCaption: 'Niveles de VRAM y memoria unificada según el tamaño de modelo LLM local: 8 GB (RTX 5070) solo para 7B, 12–16 GB (RTX 5070 Ti, RTX 5080) ejecuta cómodamente 7B–14B, 24 GB y 36 GB+ (Apple M5 Pro, M5 Max) soportan modelos de 30B y 70B en Q4.',
           items: [
             '**MacBook Pro M5 Pro (24 GB unificada):** La mejor en general. La memoria unificada implica que GPU y CPU comparten el mismo pool. 45–60 tok/s en Qwen3 14B. Silenciosa. $2,199.',
             '**Laptop RTX 5080 (16 GB GDDR7):** La mejor GPU de Windows para LLMs. ~70 tok/s en Llama 3.3 8B Q4. ~$2,799 en laptops.',
@@ -356,6 +362,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'best-models',
           title: 'Mejores laptops para LLMs locales (junio de 2026)',
           content: 'Precios verificados en junio de 2026. Todas ejecutan Ollama, LM Studio y llama.cpp de fábrica. Aviso de afiliados: esta página no contiene enlaces con comisión.',
+          image: '/images/best-laptops-local-llm-comparison-table-es.svg',
+          imageCaption: 'Comparativa de laptops para LLMs locales: MacBook Pro M5 Pro ($2,199, 24 GB de memoria unificada, 45–60 tok/s) frente a la laptop RTX 5080 (~$2,799, 16 GB VRAM, ~70 tok/s) y la RTX 5070 Ti (~$2,499, 12 GB VRAM), probadas con Ollama y LM Studio.',
           items: [
             '**MacBook Pro M5 Pro 14" ($2,199, 24 GB unificada):** La mejor laptop en general para LLMs locales. 45–60 tok/s en Qwen3 14B Q4. Completamente silenciosa. 10–12 h de batería con uso normal (3–4 h bajo carga LLM). Ver también: [Apple Silicon vs GPU vs CPU para LLMs locales](/es/local-llms/gpu-vs-cpu-vs-apple-silicon).',
             '**MacBook Pro M5 Pro 16" ($2,499, 24 GB unificada):** Mismo chip que la de 14" con pantalla más grande y mayor batería. Agrega 36 GB ($2,999) para margen cómodo en modelos de 30B. Ver también: [Ejecutar modelos 70B en Apple Silicon M5 Max](/es/local-llms/running-70b-models-apple-silicon-m5-max).',
@@ -554,6 +562,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'gpu-specs',
           title: 'ما GPU التي تحتاجها في اللابتوب؟',
           content: 'بطاقات GPU للابتوب هي إصدارات محمولة بطاقة TDP أقل وVRAM أقل من نظيراتها لسطح المكتب. توصية يونيو 2026: RTX 5070 Ti (12 GB) كحد أدنى لنظام Windows؛ وMacBook Pro M5 Pro لنظام Apple.',
+          image: '/images/best-laptops-local-llm-vram-fit-chart-ar.svg',
+          imageCaption: 'مستويات VRAM والذاكرة الموحدة مقابل حجم نماذج LLM المحلية: 8 GB (RTX 5070) لـ7B فقط، 12–16 GB (RTX 5070 Ti، RTX 5080) تشغّل 7B–14B بأريحية، 24 GB و36 GB+ (Apple M5 Pro، M5 Max) تدعم نماذج 30B و70B بتكميم Q4.',
           items: [
             '**MacBook Pro M5 Pro (ذاكرة موحدة 24 GB):** الأفضل عموماً. الذاكرة الموحدة = يتشارك GPU وCPU المجمّع نفسه. 45–60 tok/s على Qwen3 14B. صامت. $2,199.',
             '**لابتوب RTX 5080 (16 GB GDDR7):** أفضل GPU من Windows لنماذج LLM. ~70 tok/s على Llama 3.3 8B بتكميم Q4. ~$2,799 في أجهزة اللابتوب.',
@@ -567,6 +577,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'best-models',
           title: 'أفضل أجهزة لابتوب لنماذج LLM المحلية (يونيو 2026)',
           content: 'الأسعار مُتحقَّق منها في يونيو 2026. كلها تشغّل Ollama وLM Studio وllama.cpp جاهزة. إفصاح تابع: لا توجد روابط عمولة على هذه الصفحة.',
+          image: '/images/best-laptops-local-llm-comparison-table-ar.svg',
+          imageCaption: 'مقارنة أجهزة لابتوب لنماذج LLM المحلية: MacBook Pro M5 Pro ($2,199، ذاكرة موحدة 24 GB، 45–60 tok/s) مقابل لابتوب RTX 5080 (~$2,799، 16 GB VRAM، ~70 tok/s) ولابتوب RTX 5070 Ti (~$2,499، 12 GB VRAM)، تم اختبارها باستخدام Ollama وLM Studio.',
           items: [
             '**MacBook Pro M5 Pro 14" ($2,199، ذاكرة موحدة 24 GB):** أفضل لابتوب عموماً لنماذج LLM المحلية. 45–60 tok/s على Qwen3 14B بتكميم Q4. صامت تماماً. بطارية 10–12 ساعة في الاستخدام العادي (3–4 ساعات تحت حمل LLM). راجع أيضاً: [Apple Silicon مقابل GPU مقابل CPU لنماذج LLM المحلية](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon).',
             '**MacBook Pro M5 Pro 16" ($2,499، ذاكرة موحدة 24 GB):** الشريحة نفسها كنسخة 14" مع شاشة أكبر وبطارية أكبر. أضف 36 GB ($2,999) لمساحة مريحة لنماذج 30B. راجع أيضاً: [تشغيل نماذج 70B على Apple Silicon M5 Max](/ar/local-llms/running-70b-models-apple-silicon-m5-max).',
@@ -766,6 +778,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'gpu-specs',
           title: 'Qual GPU você precisa em um notebook?',
           content: 'As GPUs de notebook são versões móveis com menor TDP e menos VRAM que as equivalentes de desktop. Recomendação de junho de 2026: RTX 5070 Ti (12 GB) no mínimo para Windows; MacBook Pro M5 Pro para Apple.',
+          image: '/images/best-laptops-local-llm-vram-fit-chart-pt.svg',
+          imageCaption: 'Níveis de VRAM e memória unificada mapeados por tamanho de modelo de LLM local: 8 GB (RTX 5070) só para 7B, 12–16 GB (RTX 5070 Ti, RTX 5080) roda 7B–14B com folga, 24 GB e 36 GB+ (Apple M5 Pro, M5 Max) suportam modelos 30B e 70B em Q4.',
           items: [
             '**MacBook Pro M5 Pro (24 GB unificados):** A melhor no geral. Memória unificada = GPU e CPU compartilham o mesmo pool. 45–60 tok/s no Qwen3 14B. Silencioso. US$ 2.199.',
             '**Notebook RTX 5080 (16 GB GDDR7):** A melhor GPU Windows para LLMs. ~70 tok/s no Llama 3.3 8B Q4. ~US$ 2.799 em notebooks.',
@@ -779,6 +793,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'best-models',
           title: 'Melhores notebooks para LLMs locais (junho de 2026)',
           content: 'Preços verificados em junho de 2026. Todos rodam Ollama, LM Studio e llama.cpp de imediato. Aviso de afiliados: esta página não tem links de comissão.',
+          image: '/images/best-laptops-local-llm-comparison-table-pt.svg',
+          imageCaption: 'Comparativo de notebooks para LLMs locais: MacBook Pro M5 Pro (US$ 2.199, 24 GB de memória unificada, 45–60 tok/s) contra o notebook RTX 5080 (~US$ 2.799, 16 GB de VRAM, ~70 tok/s) e o RTX 5070 Ti (~US$ 2.499, 12 GB de VRAM), testados com Ollama e LM Studio.',
           items: [
             '**MacBook Pro M5 Pro 14" (US$ 2.199, 24 GB unificados):** Melhor notebook no geral para LLMs locais. 45–60 tok/s no Qwen3 14B Q4. Totalmente silencioso. 10–12 h de bateria em uso normal (3–4 h sob carga de LLM). Veja também: [Apple Silicon vs GPU vs CPU para LLMs locais](/pt/local-llms/gpu-vs-cpu-vs-apple-silicon).',
             '**MacBook Pro M5 Pro 16" (US$ 2.499, 24 GB unificados):** Mesmo chip do 14", com tela maior e bateria maior. Adicione 36 GB (US$ 2.999) para folga confortável em modelos 30B. Veja também: [Rodando modelos 70B em Apple Silicon M5 Max](/pt/local-llms/running-70b-models-apple-silicon-m5-max).',
@@ -977,6 +993,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'gpu-specs',
           title: 'Welche GPU benötigen Sie in einem Laptop?',
           content: 'Laptop-GPUs sind mobile Varianten mit niedrigerer TDP und weniger VRAM als ihre Desktop-Gegenstücke. Empfehlung für Juni 2026: RTX 5070 Ti (12 GB) als Minimum für Windows; MacBook Pro M5 Pro für Apple.',
+          image: '/images/best-laptops-local-llm-vram-fit-chart-de.svg',
+          imageCaption: 'VRAM- und Unified-Memory-Stufen im Verhältnis zur lokalen LLM-Modellgröße: 8 GB (RTX 5070) nur für 7B, 12–16 GB (RTX 5070 Ti, RTX 5080) laufen komfortabel mit 7B–14B, 24 GB und 36 GB+ (Apple M5 Pro, M5 Max) bewältigen 30B- und 70B-Modelle bei Q4.',
           items: [
             '**MacBook Pro M5 Pro (24 GB Unified):** Insgesamt am besten. Unified Memory = GPU und CPU teilen sich denselben Speicherpool. 45–60 tok/s bei Qwen3 14B. Lautlos. $2,199.',
             '**RTX 5080 Laptop (16 GB GDDR7):** Beste Windows-GPU für LLMs. ~70 tok/s bei Llama 3.3 8B Q4. ~$2,799 in Laptops.',
@@ -990,6 +1008,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'best-models',
           title: 'Beste Laptops für lokale LLMs (Juni 2026)',
           content: 'Preise im Juni 2026 verifiziert. Alle führen Ollama, LM Studio und llama.cpp ab Werk aus. Affiliate-Hinweis: keine Provisionslinks auf dieser Seite.',
+          image: '/images/best-laptops-local-llm-comparison-table-de.svg',
+          imageCaption: 'Laptop-Vergleich für lokale LLMs: MacBook Pro M5 Pro ($2,199, 24 GB Unified Memory, 45–60 tok/s) gegen RTX-5080-Laptop (~$2,799, 16 GB VRAM, ~70 tok/s) und RTX-5070-Ti-Laptop (~$2,499, 12 GB VRAM), getestet mit Ollama und LM Studio.',
           items: [
             '**MacBook Pro M5 Pro 14" ($2,199, 24 GB Unified):** Insgesamt bester Laptop für lokale LLMs. 45–60 tok/s bei Qwen3 14B Q4. Vollständig lautlos. 10–12 Std. Akku im normalen Betrieb (3–4 Std. unter LLM-Last). Siehe auch: [Apple Silicon vs. GPU vs. CPU für lokale LLMs](/de/local-llms/gpu-vs-cpu-vs-apple-silicon).',
             '**MacBook Pro M5 Pro 16" ($2,499, 24 GB Unified):** Gleicher Chip wie das 14" mit größerem Bildschirm und größerem Akku. Mit 36 GB ($2,999) für komfortablen Spielraum bei 30B-Modellen aufrüsten. Siehe auch: [70B-Modelle auf Apple Silicon M5 Max ausführen](/de/local-llms/running-70b-models-apple-silicon-m5-max).',
@@ -1187,6 +1207,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'gpu-specs',
           title: 'Quel GPU Avez-Vous Besoin dans un Ordinateur Portable?',
           content: 'Les GPU d\'ordinateur portable sont des variantes mobiles avec un TDP plus faible et moins de VRAM que les équivalents de bureau. Recommandation de juin 2026 : RTX 5070 Ti (12 GB) minimum pour Windows ; MacBook Pro M5 Pro pour Apple.',
+          image: '/images/best-laptops-local-llm-vram-fit-chart-fr.svg',
+          imageCaption: 'Niveaux de VRAM et de mémoire unifiée selon la taille des modèles de LLM locaux : 8 GB (RTX 5070) pour 7B uniquement, 12–16 GB (RTX 5070 Ti, RTX 5080) exécute confortablement 7B–14B, 24 GB et 36 GB+ (Apple M5 Pro, M5 Max) gèrent les modèles 30B et 70B en Q4.',
           items: [
             '**MacBook Pro M5 Pro (24 GB unifiée) :** Le meilleur globalement. La mémoire unifiée = le GPU et le CPU partagent le même pool. 45–60 tok/s sur Qwen3 14B. Silencieux. $2,199.',
             '**Ordinateur portable RTX 5080 (16 GB GDDR7) :** Meilleur GPU Windows pour les LLM. ~70 tok/s sur Llama 3.3 8B Q4. ~$2,799 en ordinateur portable.',
@@ -1200,6 +1222,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'best-models',
           title: 'Meilleurs Ordinateurs Portables pour LLM Locaux (Juin 2026)',
           content: 'Prix vérifiés en juin 2026. Tous exécutent Ollama, LM Studio et llama.cpp d\'emblée. Divulgation d\'affiliation : aucun lien de commission sur cette page.',
+          image: '/images/best-laptops-local-llm-comparison-table-fr.svg',
+          imageCaption: 'Comparatif d\'ordinateurs portables pour LLM locaux : MacBook Pro M5 Pro ($2,199, 24 GB de mémoire unifiée, 45–60 tok/s) contre l\'ordinateur portable RTX 5080 (~$2,799, 16 GB VRAM, ~70 tok/s) et le RTX 5070 Ti (~$2,499, 12 GB VRAM), testés avec Ollama et LM Studio.',
           items: [
             '**MacBook Pro M5 Pro 14" ($2,199, 24 GB unifiée) :** Meilleur ordinateur portable global pour les LLM locaux. 45–60 tok/s sur Qwen3 14B Q4. Totalement silencieux. 10–12 h d\'autonomie en usage normal (3–4 h sous charge LLM). Voir aussi : [Apple Silicon vs GPU vs CPU pour LLM Locaux](/fr/local-llms/gpu-vs-cpu-vs-apple-silicon).',
             '**MacBook Pro M5 Pro 16" ($2,499, 24 GB unifiée) :** Même puce que le 14" avec un écran plus grand et une batterie plus grande. Ajoutez 36 GB ($2,999) pour une marge confortable sur les modèles 30B. Voir aussi : [Exécuter des Modèles 70B sur Apple Silicon M5 Max](/fr/local-llms/running-70b-models-apple-silicon-m5-max).',
@@ -1397,6 +1421,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'gpu-specs',
           title: 'ノートパソコンに必要なGPUは?',
           content: 'ノートパソコン用GPUはモバイル版で、デスクトップ同等品よりTDPもVRAMも少なくなります。2026年6月の推奨: WindowsはRTX 5070 Ti(12 GB)以上、AppleはMacBook Pro M5 Pro。',
+          image: '/images/best-laptops-local-llm-vram-fit-chart-ja.svg',
+          imageCaption: 'ローカルLLMのモデルサイズに対応するVRAM/統合メモリの階層: 8 GB(RTX 5070)は7B専用、12～16 GB(RTX 5070 Ti、RTX 5080)は7B～14Bを快適に実行、24 GBと36 GB+(Apple M5 Pro、M5 Max)はQ4で30B・70Bモデルに対応。',
           items: [
             '**MacBook Pro M5 Pro(24 GB統合):** 総合最良。統合メモリでGPUとCPUが同一プールを共有。Qwen3 14Bで45～60 tok/s。静音。$2,199。',
             '**RTX 5080ノート(16 GB GDDR7):** LLM向けWindows最良GPU。Llama 3.3 8B Q4で～70 tok/s。ノートで～$2,799。',
@@ -1410,6 +1436,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'best-models',
           title: 'ローカルLLM向けベストノートパソコン（2026年6月）',
           content: '価格は2026年6月時点で確認済み。すべてOllama、LM Studio、llama.cppを標準で実行できます。アフィリエイト開示: 本ページにコミッションリンクはありません。',
+          image: '/images/best-laptops-local-llm-comparison-table-ja.svg',
+          imageCaption: 'ローカルLLM向けノートパソコン比較: MacBook Pro M5 Pro($2,199、24 GB統合メモリ、45～60 tok/s)とRTX 5080ノート(~$2,799、16 GB VRAM、~70 tok/s)、RTX 5070 Tiノート(~$2,499、12 GB VRAM)をOllamaとLM Studioで検証。',
           items: [
             '**MacBook Pro M5 Pro 14"($2,199、24 GB統合):** ローカルLLM向け総合最良ノート。Qwen3 14B Q4で45～60 tok/s。完全に静音。通常使用で10～12時間のバッテリー(LLM負荷下で3～4時間)。関連: [ローカルLLMのApple Silicon vs GPU vs CPU](/ja/local-llms/gpu-vs-cpu-vs-apple-silicon)。',
             '**MacBook Pro M5 Pro 16"($2,499、24 GB統合):** 14"と同じチップで画面とバッテリーが大型。36 GB($2,999)を追加すれば30Bモデルに余裕。関連: [Apple Silicon M5 Maxで70Bモデルを実行](/ja/local-llms/running-70b-models-apple-silicon-m5-max)。',
@@ -1607,6 +1635,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'gpu-specs',
           title: '笔记本电脑需要什么GPU?',
           content: '笔记本GPU是移动版本，TDP更低、VRAM比台式机同等产品更少。2026年6月推荐: Windows最低RTX 5070 Ti (12 GB)；Apple选MacBook Pro M5 Pro。',
+          image: '/images/best-laptops-local-llm-vram-fit-chart-zh.svg',
+          imageCaption: 'VRAM与统一内存层级对应本地LLM模型大小：8 GB（RTX 5070）仅适用7B，12–16 GB（RTX 5070 Ti、RTX 5080）可宽裕运行7B–14B，24 GB与36 GB+（Apple M5 Pro、M5 Max）在Q4下支持30B与70B模型。',
           items: [
             '**MacBook Pro M5 Pro (24 GB统一内存):** 综合最佳。统一内存=GPU与CPU共享同一内存池。Qwen3 14B上45–60 tok/s。静音。$2,199。',
             '**RTX 5080笔记本 (16 GB GDDR7):** 最佳Windows LLM GPU。在Q4量化的Llama 3.3 8B上~70 tok/s。笔记本中~$2,799。',
@@ -1620,6 +1650,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'best-models',
           title: '本地LLM最佳笔记本电脑（2026年6月）',
           content: '价格于2026年6月核实。全部开箱即用支持Ollama、LM Studio和llama.cpp。联盟声明: 本页无佣金链接。',
+          image: '/images/best-laptops-local-llm-comparison-table-zh.svg',
+          imageCaption: '本地LLM笔记本电脑对比：MacBook Pro M5 Pro（$2,199，24 GB统一内存，45–60 tok/s）对比RTX 5080笔记本（约$2,799，16 GB VRAM，约70 tok/s）与RTX 5070 Ti笔记本（约$2,499，12 GB VRAM），均使用Ollama和LM Studio测试。',
           items: [
             '**MacBook Pro M5 Pro 14" ($2,199, 24 GB统一内存):** 本地LLM综合最佳笔记本。在Q4量化的Qwen3 14B上45–60 tok/s。完全静音。正常使用续航10–12小时（LLM负荷下3–4小时）。另见: [Apple Silicon vs GPU vs CPU运行本地LLM](/local-llms/gpu-vs-cpu-vs-apple-silicon)。',
             '**MacBook Pro M5 Pro 16" ($2,499, 24 GB统一内存):** 与14"同芯片，屏幕更大、电池更大。加配36 GB ($2,999) 可从容运行30B模型。另见: [在Apple Silicon M5 Max上运行70B模型](/local-llms/running-70b-models-apple-silicon-m5-max)。',
@@ -1817,6 +1849,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'gpu-specs',
       title: '노트북에 필요한 GPU는?',
       content: '노트북 GPU는 데스크톱 대비 TDP가 낮고 VRAM이 적은 모바일 변형입니다. 2026년 6월 권장: Windows는 RTX 5070 Ti (12 GB) 최소, Apple은 MacBook Pro M5 Pro.',
+      image: '/images/best-laptops-local-llm-vram-fit-chart-ko.svg',
+      imageCaption: '로컬 LLM 모델 크기별 VRAM 및 통합 메모리 단계: 8 GB(RTX 5070)는 7B에만 적합, 12~16 GB(RTX 5070 Ti, RTX 5080)는 7B~14B를 여유롭게 실행, 24 GB와 36 GB+(Apple M5 Pro, M5 Max)는 Q4에서 30B와 70B 모델을 처리.',
       items: [
         '**MacBook Pro M5 Pro (24 GB 통합):** 전체 최고. 통합 메모리 = GPU와 CPU가 동일한 풀을 공유. Qwen3 14B에서 45~60 tok/s. 무소음. $2,199.',
         '**RTX 5080 노트북 (16 GB GDDR7):** LLM용 최고의 Windows GPU. Llama 3.3 8B Q4에서 ~70 tok/s. 노트북에서 ~$2,799.',
@@ -1830,6 +1864,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'best-models',
       title: '로컬 LLM 최고 노트북 (2026년 6월)',
       content: '가격은 2026년 6월 기준 확인됨. 모두 Ollama, LM Studio, llama.cpp를 기본으로 실행합니다. 제휴 고지: 이 페이지에는 커미션 링크가 없습니다.',
+      image: '/images/best-laptops-local-llm-comparison-table-ko.svg',
+      imageCaption: '로컬 LLM 노트북 비교: MacBook Pro M5 Pro($2,199, 24 GB 통합 메모리, 45~60 tok/s) 대 RTX 5080 노트북(~$2,799, 16 GB VRAM, ~70 tok/s) 대 RTX 5070 Ti 노트북(~$2,499, 12 GB VRAM), Ollama와 LM Studio로 테스트.',
       items: [
         '**MacBook Pro M5 Pro 14" ($2,199, 24 GB 통합):** 로컬 LLM에 가장 적합한 전체 최고 노트북. Qwen3 14B Q4에서 45~60 tok/s. 완전 무소음. 일반 사용 시 배터리 10~12시간 (LLM 부하 시 3~4시간). 참고: [로컬 LLM을 위한 Apple Silicon vs GPU vs CPU](/local-llms/gpu-vs-cpu-vs-apple-silicon).',
         '**MacBook Pro M5 Pro 16" ($2,499, 24 GB 통합):** 14"와 동일한 칩에 더 큰 화면과 더 큰 배터리. 30B 모델 여유를 위해 36 GB ($2,999) 추가. 참고: [Apple Silicon M5 Max에서 70B 모델 실행](/local-llms/running-70b-models-apple-silicon-m5-max).',

@@ -1,0 +1,39 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="450" fill="#FFFFFF"/>
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">모델 크기별 초당 토큰 수: M5 Pro vs M5 Max vs RTX 4090</text>
+
+  <rect x="200" y="48" width="14" height="14" rx="3" fill="#6750A4"/>
+  <text x="218" y="59" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">M5 Pro (64GB, 307 GB/s)</text>
+  <rect x="420" y="48" width="14" height="14" rx="3" fill="#34A853"/>
+  <text x="438" y="59" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">M5 Max (128GB, 614 GB/s)</text>
+  <rect x="640" y="48" width="14" height="14" rx="3" fill="#F4B400"/>
+  <text x="658" y="59" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">RTX 4090 (24GB)</text>
+
+  <line x1="60" y1="380" x2="760" y2="380" stroke="#79747E" stroke-width="1.5"/>
+
+  <rect x="125" y="261" width="45" height="119" fill="#6750A4" rx="3"/>
+  <text x="147" y="251" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">55</text>
+  <rect x="178" y="142" width="45" height="238" fill="#34A853" rx="3"/>
+  <text x="200" y="132" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">110</text>
+  <rect x="231" y="185" width="45" height="195" fill="#F4B400" rx="3"/>
+  <text x="253" y="175" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">90</text>
+  <text x="200" y="402" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Llama 3.3 8B Q4</text>
+
+  <rect x="355" y="337" width="45" height="43" fill="#6750A4" rx="3"/>
+  <text x="377" y="327" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">20</text>
+  <rect x="408" y="299" width="45" height="81" fill="#34A853" rx="3"/>
+  <text x="430" y="289" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">37</text>
+  <rect x="461" y="350" width="45" height="30" fill="none" stroke="#EA4335" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
+  <text x="483" y="368" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#EA4335" text-anchor="middle">OOM</text>
+  <text x="430" y="402" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Llama 3.3 34B Q4</text>
+
+  <rect x="585" y="358" width="45" height="22" fill="#6750A4" rx="3"/>
+  <text x="607" y="348" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">10</text>
+  <rect x="638" y="339" width="45" height="41" fill="#34A853" rx="3"/>
+  <text x="660" y="329" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">19</text>
+  <rect x="691" y="350" width="45" height="30" fill="none" stroke="#EA4335" stroke-width="1.5" stroke-dasharray="4,3" rx="3"/>
+  <text x="713" y="368" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#EA4335" text-anchor="middle">OOM</text>
+  <text x="660" y="402" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Llama 3.3 70B Q4</text>
+
+  <text x="400" y="428" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">M5 Max는 2배의 메모리 대역폭 덕분에 M5 Pro 대비 약 2배의 처리량을 제공합니다. RTX 4090의 24GB VRAM으로는 34B 또는 70B 모델을 실행할 수 없습니다.</text>
+<text x="792" y="445" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

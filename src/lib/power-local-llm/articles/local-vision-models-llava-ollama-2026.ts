@@ -244,6 +244,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Via Ollama?': 'Community',
           },
         ],
+        image: '/images/local-vision-models-llava-ollama-2026-vram-comparison-en.svg',
+        imageCaption:
+          'Local vision model comparison by VRAM and OCR quality: Moondream 2 runs in 2 GB, MiniCPM-V 4.5 and Qwen3-VL 8B lead document OCR at 6 GB, and Llama 3.2 Vision 11B delivers the best general quality at 8 GB via Ollama.',
       },
       invoiceAccuracyTest: {
         id: 'invoice-accuracy-test',
@@ -323,6 +326,9 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llama3.2-vision
 result = ask_vision_model("invoice.png", "Extract all line items and totals from this invoice.")
 print(result)`,
         codeLanguage: 'python',
+        image: '/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-en.svg',
+        imageCaption:
+          'Ollama vision model setup pipeline: install Ollama, pull llama3.2-vision (~8 GB download), run via CLI with --image or POST to the HTTP API at localhost:11434, and receive text output for OCR, Q&A, or image description.',
       },
       useCaseOcr: {
         id: 'use-case-ocr',
@@ -752,6 +758,9 @@ print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
           { 'Modell': 'PaliGemma 2 3B', 'Parameter': '3B', 'VRAM (Q4)': '~3 GB', 'Bildtypen': 'Fotos, Dokumente', 'Qualität': 'Gut', 'Via Ollama?': 'Community' },
           { 'Modell': 'SmolVLM 2,2B', 'Parameter': '2,2B', 'VRAM (Q4)': '~2 GB', 'Bildtypen': 'Einfache Fotos, Beschriftungen', 'Qualität': 'Grundlegend+', 'Via Ollama?': 'Community' },
         ],
+        image: '/images/local-vision-models-llava-ollama-2026-vram-comparison-de.svg',
+        imageCaption:
+          'Vergleich lokaler Vision-Modelle nach VRAM und OCR-Qualität: Moondream 2 läuft mit 2 GB, MiniCPM-V 4.5 und Qwen3-VL 8B führen bei Dokument-OCR mit 6 GB, und Llama 3.2 Vision 11B liefert mit 8 GB via Ollama die beste Gesamtqualität.',
       },
       invoiceAccuracyTest: {
         id: 'invoice-accuracy-test',
@@ -828,6 +837,9 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llama3.2-vision
 result = ask_vision_model("rechnung.png", "Extrahiere alle Positionen und Gesamtbeträge aus dieser Rechnung.")
 print(result)`,
         codeLanguage: 'python',
+        image: '/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-de.svg',
+        imageCaption:
+          'Ollama-Setup-Pipeline für Vision-Modelle: Ollama installieren, llama3.2-vision (~8 GB Download) laden, per CLI mit --image oder per HTTP-API unter localhost:11434 ausführen und Textausgabe für OCR, Q&A oder Bildbeschreibung erhalten.',
       },
       useCaseOcr: {
         id: 'use-case-ocr',
@@ -1219,6 +1231,9 @@ print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
           { 'Modèle': 'PaliGemma 2 3B', 'Paramètres': '3B', 'VRAM (Q4)': '~3 Go', 'Types d\'images': 'Photos, documents', 'Qualité': 'Bon', 'Via Ollama ?': 'Communauté' },
           { 'Modèle': 'SmolVLM 2,2B', 'Paramètres': '2,2B', 'VRAM (Q4)': '~2 Go', 'Types d\'images': 'Photos simples, légendes', 'Qualité': 'Basique+', 'Via Ollama ?': 'Communauté' },
         ],
+        image: '/images/local-vision-models-llava-ollama-2026-vram-comparison-fr.svg',
+        imageCaption:
+          'Comparaison des modèles de vision locaux par VRAM et qualité OCR : Moondream 2 fonctionne avec 2 Go, MiniCPM-V 4.5 et Qwen3-VL 8B dominent l\'OCR documentaire à 6 Go, et Llama 3.2 Vision 11B offre la meilleure qualité générale à 8 Go via Ollama.',
       },
       invoiceAccuracyTest: {
         id: 'invoice-accuracy-test',
@@ -1295,6 +1310,9 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llama3.2-vision
 result = ask_vision_model("facture.png", "Extraire toutes les lignes et les montants totaux de cette facture.")
 print(result)`,
         codeLanguage: 'python',
+        image: '/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-fr.svg',
+        imageCaption:
+          'Pipeline de configuration Ollama Vision : installer Ollama, télécharger llama3.2-vision (~8 Go), exécuter via CLI avec --image ou via l\'API HTTP sur localhost:11434, et obtenir du texte pour l\'OCR, les questions-réponses ou la description d\'image.',
       },
       useCaseOcr: {
         id: 'use-case-ocr',
@@ -1678,6 +1696,9 @@ print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
           { 'モデル': 'PaliGemma 2 3B', 'パラメータ': '3B', 'VRAM (Q4)': '〜3GB', '画像タイプ': '写真・ドキュメント', '品質': '良好', 'Ollama対応？': 'コミュニティ' },
           { 'モデル': 'SmolVLM 2.2B', 'パラメータ': '2.2B', 'VRAM (Q4)': '〜2GB', '画像タイプ': 'シンプルな写真・キャプション', '品質': '基本的＋', 'Ollama対応？': 'コミュニティ' },
         ],
+        image: '/images/local-vision-models-llava-ollama-2026-vram-comparison-ja.svg',
+        imageCaption:
+          'VRAMとOCR品質によるローカルビジョンモデル比較: Moondream 2は2GBで動作し、MiniCPM-V 4.5とQwen3-VL 8Bは6GBで文書OCRをリードし、Llama 3.2 Vision 11BはOllama経由の8GBで最良の総合品質を発揮する。',
       },
       invoiceAccuracyTest: {
         id: 'invoice-accuracy-test',
@@ -1754,6 +1775,9 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llama3.2-vision
 result = ask_vision_model("invoice.png", "この請求書からすべての行項目と合計金額を抽出してください。")
 print(result)`,
         codeLanguage: 'python',
+        image: '/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-ja.svg',
+        imageCaption:
+          'Ollamaビジョンモデルのセットアップパイプライン: Ollamaをインストールし、llama3.2-vision（約8GBダウンロード）を取得し、--imageオプション付きCLIまたはlocalhost:11434のHTTP API経由で実行し、OCR・Q&A・画像説明用のテキスト出力を得る。',
       },
       useCaseOcr: {
         id: 'use-case-ocr',
@@ -2137,6 +2161,9 @@ print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
           { '模型': 'PaliGemma 2 3B', '参数量': '3B', 'VRAM (Q4)': '约3 GB', '图像类型': '照片、文档', '质量': '良好', '支持Ollama？': '社区支持' },
           { '模型': 'SmolVLM 2.2B', '参数量': '2.2B', 'VRAM (Q4)': '约2 GB', '图像类型': '简单照片、图注', '质量': '基础+', '支持Ollama？': '社区支持' },
         ],
+        image: '/images/local-vision-models-llava-ollama-2026-vram-comparison-zh.svg',
+        imageCaption:
+          '按VRAM和OCR质量对比本地视觉模型：Moondream 2在2GB下运行，MiniCPM-V 4.5和Qwen3-VL 8B在6GB下引领文档OCR，Llama 3.2 Vision 11B通过Ollama在8GB下提供最佳综合质量。',
       },
       invoiceAccuracyTest: {
         id: 'invoice-accuracy-test',
@@ -2213,6 +2240,9 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llama3.2-vision
 result = ask_vision_model("invoice.png", "从这张发票中提取所有行项目和总金额。")
 print(result)`,
         codeLanguage: 'python',
+        image: '/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-zh.svg',
+        imageCaption:
+          'Ollama视觉模型设置流程：安装Ollama，拉取llama3.2-vision（约8GB下载），通过CLI搭配--image参数或通过localhost:11434的HTTP API运行，获得用于OCR、问答或图像描述的文本输出。',
       },
       useCaseOcr: {
         id: 'use-case-ocr',
@@ -2710,6 +2740,9 @@ print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
             '¿Vía Ollama?': 'Comunidad',
           },
         ],
+        image: '/images/local-vision-models-llava-ollama-2026-vram-comparison-es.svg',
+        imageCaption:
+          'Comparación de modelos de visión locales por VRAM y calidad OCR: Moondream 2 funciona con 2 GB, MiniCPM-V 4.5 y Qwen3-VL 8B lideran el OCR de documentos con 6 GB, y Llama 3.2 Vision 11B ofrece la mejor calidad general con 8 GB vía Ollama.',
       },
       invoiceAccuracyTest: {
         id: 'invoice-accuracy-test',
@@ -2789,6 +2822,9 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llama3.2-vision
 result = ask_vision_model("factura.png", "Extrae todas las líneas de artículos y totales de esta factura.")
 print(result)`,
         codeLanguage: 'python',
+        image: '/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-es.svg',
+        imageCaption:
+          'Pipeline de configuración de Ollama Vision: instalar Ollama, descargar llama3.2-vision (~8 GB), ejecutar vía CLI con --image o vía la API HTTP en localhost:11434, y obtener texto para OCR, preguntas y respuestas o descripción de imágenes.',
       },
       useCaseOcr: {
         id: 'use-case-ocr',
@@ -3344,6 +3380,9 @@ print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
             'Via Ollama?': 'Comunidade',
           },
         ],
+        image: '/images/local-vision-models-llava-ollama-2026-vram-comparison-pt.svg',
+        imageCaption:
+          'Comparação de modelos de visão locais por VRAM e qualidade de OCR: o Moondream 2 funciona com 2 GB, o MiniCPM-V 4.5 e o Qwen3-VL 8B lideram o OCR de documentos com 6 GB, e o Llama 3.2 Vision 11B oferece a melhor qualidade geral com 8 GB via Ollama.',
       },
       invoiceAccuracyTest: {
         id: 'invoice-accuracy-test',
@@ -3423,6 +3462,9 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llama3.2-vision
 result = ask_vision_model("fatura.png", "Extraia todas as linhas de itens e totais desta fatura.")
 print(result)`,
         codeLanguage: 'python',
+        image: '/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-pt.svg',
+        imageCaption:
+          'Pipeline de configuração do Ollama Vision: instalar o Ollama, baixar o llama3.2-vision (~8 GB), executar via CLI com --image ou via API HTTP em localhost:11434, e obter texto para OCR, perguntas e respostas ou descrição de imagem.',
       },
       useCaseOcr: {
         id: 'use-case-ocr',
@@ -3978,6 +4020,9 @@ print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
             'عبر Ollama؟': 'مجتمعي',
           },
         ],
+        image: '/images/local-vision-models-llava-ollama-2026-vram-comparison-ar.svg',
+        imageCaption:
+          'مقارنة نماذج الرؤية المحلية حسب VRAM وجودة OCR: يعمل Moondream 2 بذاكرة 2 جيجابايت، ويتصدر MiniCPM-V 4.5 وQwen3-VL 8B في OCR المستندات بذاكرة 6 جيجابايت، بينما يقدم Llama 3.2 Vision 11B أفضل جودة عامة بذاكرة 8 جيجابايت عبر Ollama.',
       },
       invoiceAccuracyTest: {
         id: 'invoice-accuracy-test',
@@ -4057,6 +4102,9 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llama3.2-vision
 result = ask_vision_model("invoice.png", "استخرج جميع بنود الفاتورة والمجاميع.")
 print(result)`,
         codeLanguage: 'python',
+        image: '/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-ar.svg',
+        imageCaption:
+          'خط سير إعداد Ollama للرؤية: تثبيت Ollama، تنزيل llama3.2-vision (تنزيل ~8 جيجابايت)، التشغيل عبر CLI باستخدام --image أو عبر واجهة HTTP على localhost:11434، والحصول على نص لـ OCR أو الأسئلة والأجوبة أو وصف الصورة.',
       },
       useCaseOcr: {
         id: 'use-case-ocr',
@@ -4599,6 +4647,9 @@ print("\\n".join(f"[{i+1}s] {d}" for i, d in enumerate(descriptions)))`,
             'Ollama 지원?': '커뮤니티',
           },
         ],
+        image: '/images/local-vision-models-llava-ollama-2026-vram-comparison-ko.svg',
+        imageCaption:
+          'VRAM 및 OCR 품질 기준 로컬 비전 모델 비교: Moondream 2는 2GB에서 실행되고, MiniCPM-V 4.5와 Qwen3-VL 8B는 6GB에서 문서 OCR을 선도하며, Llama 3.2 Vision 11B는 Ollama를 통해 8GB에서 최고의 전반적 품질을 제공한다.',
       },
       invoiceAccuracyTest: {
         id: 'invoice-accuracy-test',
@@ -4678,6 +4729,9 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llama3.2-vision
 result = ask_vision_model("청구서.png", "이 청구서에서 모든 항목과 합계를 추출하십시오.")
 print(result)`,
         codeLanguage: 'python',
+        image: '/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-ko.svg',
+        imageCaption:
+          'Ollama 비전 모델 설정 파이프라인: Ollama 설치, llama3.2-vision(약 8GB 다운로드) 다운로드, --image 옵션과 함께 CLI로 실행하거나 localhost:11434의 HTTP API 호출, OCR·Q&A·이미지 설명을 위한 텍스트 출력 획득.',
       },
       useCaseOcr: {
         id: 'use-case-ocr',

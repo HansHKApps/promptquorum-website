@@ -1,0 +1,63 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">GPUのVRAMに合うローカルLLMモデル</text>
+
+  <text x="58" y="60" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">GPU (VRAM)</text>
+  <text x="245" y="60" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">最適モデル</text>
+  <text x="478" y="60" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">量子化</text>
+  <text x="578" y="60" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">速度</text>
+  <line x1="18" y1="68" x2="782" y2="68" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <circle cx="34" cy="93" r="14" fill="#34A853"/>
+  <text x="34" y="97" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="56" y="90" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">RTX 4070 Ti / 5070</text>
+  <text x="56" y="103" font-family="system-ui, sans-serif" font-size="10" fill="#79747E">12 GB VRAM</text>
+  <text x="245" y="97" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Qwen3 14B 密モデル</text>
+  <text x="478" y="97" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">Q4_K_M</text>
+  <text x="578" y="97" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#6750A4" font-weight="700">35-45 tok/秒</text>
+  <line x1="18" y1="118" x2="782" y2="118" stroke="#F7F2FA" stroke-width="1"/>
+
+  <circle cx="34" cy="147" r="14" fill="#34A853"/>
+  <text x="34" y="151" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="56" y="144" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">RTX 4080 / 5080</text>
+  <text x="56" y="157" font-family="system-ui, sans-serif" font-size="10" fill="#79747E">16 GB VRAM</text>
+  <text x="245" y="151" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">gpt-oss:20b / Gemma 4 E12B</text>
+  <text x="478" y="151" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">Q4_K_M</text>
+  <text x="578" y="151" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#6750A4" font-weight="700">55-65 tok/秒</text>
+  <line x1="18" y1="172" x2="782" y2="172" stroke="#F7F2FA" stroke-width="1"/>
+
+  <circle cx="34" cy="201" r="14" fill="#34A853"/>
+  <text x="34" y="205" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="56" y="198" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">RTX 4090</text>
+  <text x="56" y="211" font-family="system-ui, sans-serif" font-size="10" fill="#79747E">24 GB VRAM</text>
+  <text x="245" y="205" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">32-34B 密（Q5）</text>
+  <text x="478" y="205" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">Q5_K_M</text>
+  <text x="578" y="205" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#6750A4" font-weight="700">90-100 tok/秒</text>
+  <line x1="18" y1="226" x2="782" y2="226" stroke="#F7F2FA" stroke-width="1"/>
+
+  <circle cx="34" cy="255" r="14" fill="#34A853"/>
+  <text x="34" y="259" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="56" y="252" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">RTX 5090</text>
+  <text x="56" y="265" font-family="system-ui, sans-serif" font-size="10" fill="#79747E">32 GB VRAM</text>
+  <text x="245" y="259" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">34B 密（Q8）</text>
+  <text x="478" y="259" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">Q8_0</text>
+  <text x="578" y="259" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#6750A4" font-weight="700">130-150 tok/秒</text>
+  <line x1="18" y1="280" x2="782" y2="280" stroke="#F7F2FA" stroke-width="1"/>
+
+  <circle cx="34" cy="309" r="14" fill="#F4B400"/>
+  <text x="34" y="313" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="56" y="306" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">2× RTX 4090</text>
+  <text x="56" y="319" font-family="system-ui, sans-serif" font-size="10" fill="#79747E">合計48 GB VRAM</text>
+  <text x="245" y="313" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Llama 3.3 70B</text>
+  <text x="478" y="313" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">Q5_K_M</text>
+  <text x="578" y="313" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#6750A4" font-weight="700">~100 tok/秒</text>
+  <line x1="18" y1="334" x2="782" y2="334" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <circle cx="34" cy="360" r="6" fill="#34A853"/>
+  <text x="46" y="364" font-family="system-ui, sans-serif" font-size="10" fill="#79747E">= GPU 1基</text>
+  <circle cx="150" cy="360" r="6" fill="#F4B400"/>
+  <text x="162" y="364" font-family="system-ui, sans-serif" font-size="10" fill="#79747E">= GPU 2基が必要</text>
+
+  <text x="400" y="390" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">モデルクラスを決めるのはVRAM容量であり、GPU速度ではない。24GBのRTX 4090単体で</text>
+  <text x="400" y="406" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">32-34B密モデルをQ5で動かせるが、Llama 3.3 70BはGPU2基で合計48GBが必要になる。</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

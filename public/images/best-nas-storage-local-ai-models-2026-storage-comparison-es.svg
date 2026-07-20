@@ -1,0 +1,35 @@
+<svg viewBox="0 0 800 310" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="310" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Comparativa de almacenamiento NAS vs SSD (julio 2026)</text>
+  <text x="20" y="68" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#79747E">Almacenamiento</text>
+  <text x="245" y="68" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#79747E">Rol</text>
+  <text x="405" y="68" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#79747E">Precio (jul. 2026)</text>
+  <text x="575" y="68" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#79747E">Mejor para</text>
+  <line x1="18" y1="78" x2="782" y2="78" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="20" y="100" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">NAS Synology 4 bahías</text>
+  <text x="245" y="100" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F">Biblioteca compartida</text>
+  <text x="405" y="100" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#6750A4">~850-1.150€, HW</text>
+  <text x="575" y="100" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F">Software más sencillo</text>
+  <line x1="18" y1="114" x2="782" y2="114" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="20" y="136" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">NAS QNAP 4 bahías</text>
+  <text x="245" y="136" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F">Biblioteca compartida</text>
+  <text x="405" y="136" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#6750A4">~700-870€, HW</text>
+  <text x="575" y="136" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F">Más CPU y puertos</text>
+  <line x1="18" y1="150" x2="782" y2="150" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="20" y="172" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">SSD Samsung 990 Pro</text>
+  <text x="245" y="172" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F">Carga rápida</text>
+  <text x="405" y="172" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#6750A4">~290-340€ (2 TB)</text>
+  <text x="575" y="172" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F">Carga más rápida</text>
+  <line x1="18" y1="186" x2="782" y2="186" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="20" y="208" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">SSD WD Black SN850X</text>
+  <text x="245" y="208" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F">Carga rápida</text>
+  <text x="405" y="208" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#6750A4">~235-300€ (2 TB)</text>
+  <text x="575" y="208" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F">Alternativa de valor</text>
+  <line x1="18" y1="222" x2="782" y2="222" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="20" y="244" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F">Disco USB externo</text>
+  <text x="245" y="244" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F">Respaldo sin conexión</text>
+  <text x="405" y="244" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="700" fill="#6750A4">~120-200€</text>
+  <text x="575" y="244" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F">Copia fuera de sitio</text>
+  <line x1="18" y1="264" x2="782" y2="264" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="290" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">El NAS gestiona la biblioteca compartida en RAID 6; los SSD NVMe gestionan la carga rápida — elige cada uno para su tarea.</text>
+<text x="792" y="305" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

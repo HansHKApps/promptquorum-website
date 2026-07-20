@@ -1,0 +1,38 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Pipeline de l'assistant vocal hors ligne : du micro au haut-parleur en 5 étapes</text>
+  <circle cx="90" cy="95" r="20" fill="#6750A4"/>
+  <text x="90" y="101" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="162" y="103" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+  <text x="90" y="140" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Microphone</text>
+  <text x="90" y="158" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Capture audio</text>
+  <circle cx="235" cy="95" r="20" fill="#6750A4"/>
+  <text x="235" y="101" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="307" y="103" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+  <text x="235" y="140" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">whisper.cpp</text>
+  <text x="235" y="158" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">Reconnaissance vocale (STT)</text>
+  <text x="235" y="176" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">0,2–0,5 s</text>
+  <circle cx="380" cy="95" r="20" fill="#6750A4"/>
+  <text x="380" y="101" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="452" y="103" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+  <text x="380" y="140" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ollama LLM</text>
+  <text x="380" y="158" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">Llama 3.3 8B</text>
+  <text x="380" y="176" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">0,5–1,5 s</text>
+  <circle cx="525" cy="95" r="20" fill="#6750A4"/>
+  <text x="525" y="101" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="597" y="103" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+  <text x="525" y="140" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Piper TTS</text>
+  <text x="525" y="158" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">Synthèse vocale</text>
+  <text x="525" y="176" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">0,1–0,3 s</text>
+  <circle cx="670" cy="95" r="20" fill="#6750A4"/>
+  <text x="670" y="101" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="670" y="140" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Haut-parleur</text>
+  <text x="670" y="158" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Lecture</text>
+  <line x1="40" y1="200" x2="760" y2="200" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="60" y="220" width="680" height="72" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <rect x="60" y="220" width="4" height="72" fill="#6750A4"/>
+  <text x="80" y="245" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6750A4">Optionnel : détecteur de mot de réveil</text>
+  <text x="80" y="265" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F">OpenWakeWord (open source) ou Porcupine écoute en continu à ~2–5 % CPU.</text>
+  <text x="80" y="282" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F">Déclenche Whisper + LLM + Piper seulement au mot de réveil détecté.</text>
+  <text x="400" y="335" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Whisper → Ollama → Piper : l'audio devient texte, le LLM répond, Piper parle — 1 à 2 s au total sur GPU de bureau.</text>
+  <text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
