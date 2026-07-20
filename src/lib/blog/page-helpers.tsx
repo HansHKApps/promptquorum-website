@@ -110,7 +110,9 @@ export async function buildArticlePageElement(slug: string, lang: Language) {
     headline: post.title,
     description: post.intro,
     articleBody: post.sections ? Object.values(post.sections).map((section: any) => section.content).join(' ') : '',
-    image: 'https://www.promptquorum.com/logo.svg',
+    image: post.heroImage
+      ? (post.heroImage.startsWith('http') ? post.heroImage : `https://www.promptquorum.com${post.heroImage}`)
+      : `https://www.promptquorum.com/api/og/blog/${slug}?lang=${lang}`,
     url: `https://www.promptquorum.com/blog/${slug}`,
     inLanguage: toOutputLocale(lang),
     datePublished: isoDate,
