@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">결정: 작업에 맞는 모델</text>
+  <text x="40" y="54" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">상황</text>
+  <text x="400" y="54" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">선택</text>
+  <line x1="18" y1="63" x2="782" y2="63" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="18" y="59" width="764" height="46" fill="#F7F2FA" rx="4"/>
+  <text x="40" y="79" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6750A4">48GB+ VRAM, 모든 것을 한 모델로</text>
+  <text x="400" y="79" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">Llama 3.3 70B + Hermes 3</text>
+  <text x="40" y="129" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">24GB GPU 또는 32GB Mac, 강력한 기본값 필요</text>
+  <text x="400" y="129" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">Qwen3 32B</text>
+  <line x1="18" y1="141" x2="782" y2="141" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="40" y="179" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">소설 집필 중 — 장편 연속성이 중요</text>
+  <text x="400" y="179" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">Mistral Large</text>
+  <line x1="18" y1="191" x2="782" y2="191" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="40" y="229" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">대화 중심 작업, 뚜렷한 캐릭터 목소리</text>
+  <text x="400" y="229" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">Command A+</text>
+  <line x1="18" y1="241" x2="782" y2="241" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="40" y="279" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">시, 운문, 서정적 산문</text>
+  <text x="400" y="279" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">Yi-1.5 34B</text>
+  <line x1="18" y1="291" x2="782" y2="291" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="40" y="329" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">지시 모델이 필요한 장면을 거부함</text>
+  <text x="400" y="329" font-family="system-ui, sans-serif" font-size="12" font-weight="400" fill="#49454F">Hermes 3 또는 Dolphin 3.0</text>
+  <text x="400" y="398" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">확신이 없다면 Qwen3 32B로 시작 — 소비자 하드웨어의 대부분 워크플로우를 커버함.</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

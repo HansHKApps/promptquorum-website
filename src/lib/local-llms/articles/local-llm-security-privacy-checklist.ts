@@ -147,6 +147,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { title: 'Keep inference tools updated', whyItMatters: 'Patches known security vulnerabilities in Ollama, LM Studio, and related tools.' },
             { title: 'For air-gapped or regulated environments: document approved model versions', whyItMatters: 'Ensures compliance with regulatory requirements for data handling and infrastructure isolation.' },
           ],
+          image: '/images/local-llm-security-privacy-checklist-checklist-overview-en.svg',
+          imageCaption: 'Verify every item before working with sensitive or regulated data.',
         },
         modelProvenance: {
           title: 'Where should you download local LLM models safely?',
@@ -175,6 +177,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Tool': 'GPT4All', 'Telemetry Default': 'Opt-in only at first launch', 'How to Change': 'Settings → Privacy → disable usage analytics' },
           ],
           columns: ['Tool', 'Telemetry Default', 'How to Confirm/Disable'],
+          image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-en.svg',
+          imageCaption: 'Ollama and Jan AI collect nothing by default; LM Studio and GPT4All ship analytics on — check settings.',
         },
         threatModel: {
           id: 'threat-model',
@@ -482,7 +486,9 @@ schema: {
           { title: 'Mantén actualizadas las herramientas de inferencia', whyItMatters: 'Parchea vulnerabilidades de seguridad conocidas en Ollama, LM Studio y herramientas relacionadas.' },
           { title: 'Para entornos air-gapped o regulados: documenta las versiones de modelo aprobadas', whyItMatters: 'Garantiza el cumplimiento de los requisitos regulatorios para el manejo de datos y el aislamiento de infraestructura.' },
         ],
-      },
+          image: '/images/local-llm-security-privacy-checklist-checklist-overview-es.svg',
+          imageCaption: 'Verifica cada punto antes de trabajar con datos sensibles o regulados.',
+        },
       modelProvenance: {
         title: '¿Dónde descargar los modelos de LLMs locales de forma segura?',
         content: [
@@ -510,7 +516,9 @@ schema: {
           { 'Herramienta': 'GPT4All', 'Telemetría por defecto': 'Solo opt-in en el primer lanzamiento', 'Cómo cambiar': 'Configuración → Privacidad → deshabilita análisis de uso' },
         ],
         columns: ['Herramienta', 'Telemetría por defecto', 'Cómo confirmar/deshabilitar'],
-      },
+          image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-es.svg',
+          imageCaption: 'Ollama y Jan AI no recopilan nada por defecto; LM Studio y GPT4All traen analítica activada — revisa la configuración.',
+        },
       threatModel: {
         id: 'threat-model',
         title: '¿Qué modelo de amenazas debes asumir?',
@@ -817,7 +825,9 @@ schema: {
           { title: 'حافظ على تحديث أدوات الاستدلال', whyItMatters: 'يصلح الثغرات الأمنية المعروفة في Ollama وLM Studio والأدوات ذات الصلة.' },
           { title: 'للبيئات المعزولة أو الخاضعة للتنظيم: وثّق إصدارات النماذج المعتمدة', whyItMatters: 'يضمن الامتثال للمتطلبات التنظيمية لمعالجة البيانات وعزل البنية التحتية.' },
         ],
-      },
+          image: '/images/local-llm-security-privacy-checklist-checklist-overview-ar.svg',
+          imageCaption: 'تحقق من كل عنصر قبل العمل مع بيانات حساسة أو خاضعة للتنظيم.',
+        },
       modelProvenance: {
         title: 'من أين تُنزّل نماذج LLM المحلية بأمان؟',
         content: [
@@ -845,7 +855,9 @@ schema: {
           { 'Herramienta': 'GPT4All', 'Telemetría por defecto': 'اشتراك اختياري فقط عند الإطلاق الأول', 'Cómo cambiar': 'الإعدادات → الخصوصية → عطّل تحليلات الاستخدام' },
         ],
         columns: ['Herramienta', 'Telemetría por defecto', 'Cómo confirmar/deshabilitar'],
-      },
+          image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-ar.svg',
+          imageCaption: 'لا يجمع Ollama وJan AI أي شيء افتراضيًا؛ يأتي LM Studio وGPT4All بتحليلات مفعّلة — تحقق من الإعدادات.',
+        },
       threatModel: {
         id: 'threat-model',
         title: 'ما نموذج التهديد الذي يجب أن تفترضه؟',
@@ -1209,7 +1221,9 @@ schema: {
           { title: 'Halten Sie Inferenz-Tools aktuell', whyItMatters: 'Behebt bekannte Sicherheitslücken in Ollama, LM Studio und verwandten Tools.' },
           { title: 'Für isolierte oder regulierte Umgebungen: Dokumentieren Sie genehmigte Modellversionen', whyItMatters: 'Stellt sicher, dass regulatorische Anforderungen für Datenbehandlung und Infrastruktur-Isolation erfüllt werden.' },
         ],
-      },
+          image: '/images/local-llm-security-privacy-checklist-checklist-overview-de.svg',
+          imageCaption: 'Jeden Punkt vor der Arbeit mit sensiblen oder regulierten Daten prüfen.',
+        },
       zusammenfassung: {
         title: 'Was sind die Kernpunkte für DSGVO-Compliance?',
         items: [
@@ -1245,7 +1259,9 @@ schema: {
           { 'Tool': 'GPT4All', 'Telemetrie Standard': 'Nur Opt-in beim ersten Start', 'Ändern': 'Einstellungen → Datenschutz → Nutzungs-Analytics deaktivieren' },
         ],
         columns: ['Tool', 'Telemetrie Standard', 'Überprüfung/Deaktivieren'],
-      },
+          image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-de.svg',
+          imageCaption: 'Ollama und Jan AI erfassen standardmäßig nichts; LM Studio und GPT4All liefern Analytics aktiviert aus — Einstellungen prüfen.',
+        },
       threatModel: {
         id: 'threat-model',
         title: 'Welches Threat Model sollten Sie annehmen?',
@@ -1454,7 +1470,9 @@ schema: {
           { title: 'Maintenez à jour', whyItMatters: 'Corrige les failles de sécurité connues dans Ollama, LM Studio et outils associés.' },
           { title: 'Environnements air-gapped : documentez les versions approuvées', whyItMatters: 'Assure la conformité aux exigences réglementaires pour les données sensibles.' },
         ],
-      },
+          image: '/images/local-llm-security-privacy-checklist-checklist-overview-fr.svg',
+          imageCaption: 'Vérifiez chaque point avant de traiter des données sensibles ou réglementées.',
+        },
       modelProvenance: {
         title: 'Où télécharger les poids de modèles de manière fiable ?',
         content: [
@@ -1482,7 +1500,9 @@ schema: {
           { 'Outil': 'GPT4All', 'Télémétrie Défaut': 'Opt-in au premier lancement', 'Modifier': 'Paramètres → Confidentialité → désactiver analytics' },
         ],
         columns: ['Outil', 'Télémétrie Défaut', 'Vérification/Désactiver'],
-      },
+          image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-fr.svg',
+          imageCaption: 'Ollama et Jan AI ne collectent rien par défaut ; LM Studio et GPT4All livrent l’analytique activée — vérifiez les paramètres.',
+        },
       threatModel: {
         id: 'threat-model',
         title: 'Quel modèle de menace devez-vous supposer ?',
@@ -1656,7 +1676,9 @@ schema: {
           { title: '推論ツールを最新の状態に保つ', whyItMatters: 'Ollama、LM Studio、および関連ツールの既知のセキュリティ脆弱性を修正します。' },
           { title: 'ネットワーク分離環境：承認されたモデルバージョンを文書化', whyItMatters: 'データ処理および基盤構造分離の規制要件への準拠を確保します。' },
         ],
-      },
+          image: '/images/local-llm-security-privacy-checklist-checklist-overview-ja.svg',
+          imageCaption: '機密または規制対象データを扱う前に各項目を確認する。',
+        },
       jikkoTips: {
         title: '注意点と実践的なセキュリティ設定のおすすめ',
         content: '以下の実装を行うことで、セキュリティをさらに強化できます：',
@@ -1693,7 +1715,9 @@ schema: {
           { 'ツール': 'GPT4All', 'テレメトリデフォルト': '初回起動時のオプトインのみ', '変更方法': '設定 → プライバシー → 使用分析を無効化' },
         ],
         columns: ['ツール', 'テレメトリデフォルト', '確認/無効化方法'],
-      },
+          image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-ja.svg',
+          imageCaption: 'OllamaとJan AIは既定で何も収集しない。LM StudioとGPT4Allは分析が有効出荷 — 設定を確認すること。',
+        },
       threatModel: {
         id: 'threat-model',
         title: 'どのような脅威モデルを想定すべきですか？',
@@ -1880,7 +1904,9 @@ schema: {
           { title: '保持推理工具最新', whyItMatters: '修复Ollama、LM Studio等工具中的已知安全漏洞。' },
           { title: '网络隔离环境：文档化批准的模型版本', whyItMatters: '确保数据处理和基础设施隔离的监管要求合规。' },
         ],
-      },
+          image: '/images/local-llm-security-privacy-checklist-checklist-overview-zh.svg',
+          imageCaption: '处理敏感或受监管数据前，请核对每一项。',
+        },
       shijianBuildao: {
         title: '实用建议：数据安全合规部署',
         content: '中国企业和政府机构需要满足《数据安全法》（DSL）和《个人信息保护法》（PIPL）。以下建议可帮助您实现合规：',
@@ -1917,7 +1943,9 @@ schema: {
           { '工具': 'GPT4All', '遥测默认': '首次启动时仅选择性加入', '修改方式': '设置 → 隐私 → 禁用使用分析' },
         ],
         columns: ['工具', '遥测默认', '验证/禁用方式'],
-      },
+          image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-zh.svg',
+          imageCaption: 'Ollama和Jan AI默认不收集任何数据；LM Studio和GPT4All出厂即开启分析 — 请检查设置。',
+        },
       threatModel: {
         id: 'threat-model',
         title: '您应该假设什么样的威胁模型？',
@@ -2139,6 +2167,8 @@ schema: {
             { title: '추론 도구를 최신 상태로 유지하십시오', whyItMatters: 'Ollama, LM Studio 및 관련 도구의 알려진 보안 취약점을 패치합니다.' },
             { title: '에어갭 또는 규제 환경의 경우: 승인된 모델 버전을 문서화하십시오', whyItMatters: '데이터 처리 및 인프라 격리에 대한 규제 요구사항 준수를 보장합니다.' },
           ],
+          image: '/images/local-llm-security-privacy-checklist-checklist-overview-ko.svg',
+          imageCaption: '민감하거나 규제 대상 데이터를 다루기 전 모든 항목을 확인하세요.',
         },
         modelProvenance: {
           title: '로컬 LLM 모델을 어디에서 안전하게 다운로드해야 합니까?',
@@ -2167,6 +2197,8 @@ schema: {
             { 'Tool': 'GPT4All', 'Telemetry Default': '첫 실행 시 옵트인만', 'How to Change': '설정 → 개인정보 → 사용 분석 비활성화' },
           ],
           columns: ['Tool', 'Telemetry Default', 'How to Confirm/Disable'],
+          image: '/images/local-llm-security-privacy-checklist-telemetry-defaults-ko.svg',
+          imageCaption: 'Ollama와 Jan AI는 기본적으로 아무것도 수집하지 않음; LM Studio와 GPT4All는 분석 기능이 켜진 채로 출시됨 — 설정 확인 필요.',
         },
         threatModel: {
           id: 'threat-model',
