@@ -61,6 +61,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**The interface** is where you interact with the model -- a terminal, a web UI, or an API endpoint. Many tools like Ollama expose a REST API at `http://localhost:11434` so you can connect any OpenAI-compatible application to your local model.',
           ],
           youtubeUrl: 'https://www.youtube.com/watch?v=2p2xMKpz7wM',
+          image: '/images/what-are-local-llms-how-it-works-en.svg',
+          imageCaption: 'Three layers of a local LLM setup: the model file (GGUF or safetensors, ~4.5 GB at Q4_K_M for a 7B model) loaded by an inference engine (Ollama, LM Studio, llama.cpp), exposed through an interface such as the localhost:11434 REST API.',
         },
         hardware: {
           id: 'what-hardware-do-you-need',
@@ -92,6 +94,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Factor': 'Offline use', 'Local LLM': 'Yes -- works without internet', 'Cloud API': 'No -- requires active connection' },
           ],
           columns: ['Factor', 'Local LLM', 'Cloud API'],
+          image: '/images/what-are-local-llms-vs-cloud-api-en.svg',
+          imageCaption: 'Local LLM vs Cloud API comparison: local runs at $0 per token with data never leaving the machine at 10-120 tok/sec, while Cloud API costs $0.15-$15 per 1M tokens at 50-200 tok/sec and requires an active internet connection.',
         },
         modelFormats: {
           id: 'which-model-formats-are-used',
@@ -313,6 +317,8 @@ schema: {
             '**La interfaz** es donde interactúas con el modelo: un terminal, una interfaz web o un endpoint de API. Muchas herramientas como Ollama exponen una API REST en `http://localhost:11434` para que puedas conectar cualquier aplicación compatible con OpenAI a tu modelo local.',
           ],
           youtubeUrl: 'https://www.youtube.com/watch?v=2p2xMKpz7wM',
+          image: '/images/what-are-local-llms-how-it-works-en.svg',
+          imageCaption: 'Las tres capas de un LLM local: el archivo del modelo (GGUF o safetensors, ~4,5 GB en Q4_K_M para un modelo de 7B) cargado por un motor de inferencia (Ollama, LM Studio, llama.cpp), expuesto mediante una interfaz como la API REST de localhost:11434.',
         },
         hardware: {
           id: 'what-hardware-do-you-need',
@@ -344,6 +350,8 @@ schema: {
             { 'Factor': 'Uso sin conexión', 'LLM local': 'Sí: funciona sin internet', 'API en la nube': 'No: requiere conexión activa' },
           ],
           columns: ['Factor', 'LLM local', 'API en la nube'],
+          image: '/images/what-are-local-llms-vs-cloud-api-en.svg',
+          imageCaption: 'Comparación LLM local vs API en la nube: el local funciona a $0 por token con datos que nunca salen de la máquina a 10-120 tok/seg, mientras que la API en la nube cuesta $0,15-$15 por 1M de tokens a 50-200 tok/seg y requiere conexión activa a internet.',
         },
         modelFormats: {
           id: 'which-model-formats-are-used',
@@ -564,6 +572,8 @@ schema: {
             '**الواجهة** هي حيث تتفاعل مع النموذج: طرفية، أو واجهة ويب، أو نقطة نهاية API. تعرض أدوات كثيرة مثل Ollama واجهة REST API على `http://localhost:11434` لتتمكن من توصيل أي تطبيق متوافق مع OpenAI بنموذجك المحلي.',
           ],
           youtubeUrl: 'https://www.youtube.com/watch?v=2p2xMKpz7wM',
+          image: '/images/what-are-local-llms-how-it-works-en.svg',
+          imageCaption: 'الطبقات الثلاث لإعداد LLM محلي: ملف النموذج (GGUF أو safetensors، نحو 4.5 GB بتكميم Q4_K_M لنموذج 7B) يحمّله محرك استدلال (Ollama، LM Studio، llama.cpp)، ويُعرض عبر واجهة مثل REST API على localhost:11434.',
         },
         hardware: {
           id: 'what-hardware-do-you-need',
@@ -595,6 +605,8 @@ schema: {
             { 'Factor': 'الاستخدام دون اتصال', 'LLM local': 'نعم: يعمل بلا إنترنت', 'API en la nube': 'لا: يتطلب اتصالًا نشطًا' },
           ],
           columns: ['العامل', 'LLM محلي', 'API سحابية'],
+          image: '/images/what-are-local-llms-vs-cloud-api-en.svg',
+          imageCaption: 'مقارنة LLM محلي مقابل API سحابية: يعمل النموذج المحلي بتكلفة $0 لكل token دون أن تغادر البيانات الجهاز بسرعة 10-120 tok/ثانية، بينما تكلّف API السحابية $0.15-$15 لكل مليون token بسرعة 50-200 tok/ثانية وتتطلب اتصالًا نشطًا بالإنترنت.',
         },
         modelFormats: {
           id: 'which-model-formats-are-used',
@@ -817,6 +829,8 @@ schema: {
             '**A interface** é onde você interage com o modelo: um terminal, uma interface web ou um endpoint de API. Muitas ferramentas como o Ollama expõem uma API REST em `http://localhost:11434` para que você conecte qualquer aplicação compatível com a OpenAI ao seu modelo local.',
           ],
           youtubeUrl: 'https://www.youtube.com/watch?v=2p2xMKpz7wM',
+          image: '/images/what-are-local-llms-how-it-works-en.svg',
+          imageCaption: 'As três camadas de um LLM local: o arquivo do modelo (GGUF ou safetensors, ~4,5 GB em Q4_K_M para um modelo de 7B) carregado por um motor de inferência (Ollama, LM Studio, llama.cpp), exposto por uma interface como a API REST em localhost:11434.',
         },
         hardware: {
           id: 'what-hardware-do-you-need',
@@ -848,6 +862,8 @@ schema: {
             { 'Fator': 'Uso offline', 'LLM local': 'Sim: funciona sem internet', 'API em nuvem': 'Não: exige conexão ativa' },
           ],
           columns: ['Fator', 'LLM local', 'API em nuvem'],
+          image: '/images/what-are-local-llms-vs-cloud-api-en.svg',
+          imageCaption: 'Comparação LLM local vs API em nuvem: o local roda a US$ 0 por token sem que os dados saiam da máquina a 10-120 tok/seg, enquanto a API em nuvem custa US$ 0,15-15 por 1M de tokens a 50-200 tok/seg e exige conexão ativa com a internet.',
         },
         modelFormats: {
           id: 'which-model-formats-are-used',
@@ -1077,6 +1093,8 @@ schema: {
             '**Moteur d\'inférence** : lit le fichier et effectue calculs matriciels. Principaux : [Ollama](/fr/local-llms/how-to-install-ollama) (service API compatible OpenAI), [LM Studio](/fr/local-llms/how-to-install-lm-studio) (interface desktop), llama.cpp (librairie C++ sous-jacente).',
             '**Interface** : terminal, web UI, ou API. Ollama expose une API REST sur `http://localhost:11434` compatible OpenAI.',
           ],
+          image: '/images/what-are-local-llms-how-it-works-en.svg',
+          imageCaption: 'Les trois couches d\'un LLM local : le fichier modèle (GGUF ou safetensors, ~4,5 GB en Q4_K_M pour un modèle 7B) chargé par un moteur d\'inférence (Ollama, LM Studio, llama.cpp), exposé via une interface comme l\'API REST sur localhost:11434.',
         },
         hardware: {
           title: 'Quel matériel pour un LLM local ?',
@@ -1106,6 +1124,8 @@ schema: {
             { 'Aspect': 'Hors ligne', 'LLM local': 'Oui', 'API cloud': 'Non' },
           ],
           columns: ['Aspect', 'LLM local', 'API cloud'],
+          image: '/images/what-are-local-llms-vs-cloud-api-en.svg',
+          imageCaption: 'Comparaison LLM local vs API cloud : le local tourne à 0€ par token sans que les données ne quittent la machine à 10-120 tok/sec, tandis que l\'API cloud coûte 0,15-15€ par million de tokens à 50-200 tok/sec et nécessite une connexion internet active.',
         },
         modelFormats: {
           title: 'Formats de modèles pour LLMs locaux ?',
@@ -1228,6 +1248,8 @@ schema: {
             '**推論エンジン**：モデルファイルを読み込み、トークン生成に必要な行列計算を実行します。最も人気のあるエンジン：[Ollama](/ja/local-llms/how-to-install-ollama)（バックグラウンドサービス、OpenAI互換API）、[LM Studio](/ja/local-llms/how-to-install-lm-studio)（デスクトップアプリ、統合チャットUI）、llama.cpp（多くのツールの基礎となるC++ライブラリ）。',
             '**インターフェース**：モデルとやり取りする場所です。ターミナル、ウェブUI、APIエンドポイント。Ollama などは `http://localhost:11434` に REST API を公開するため、OpenAI互換のアプリケーションをローカルモデルに接続できます。',
           ],
+          image: '/images/what-are-local-llms-how-it-works-en.svg',
+          imageCaption: 'ローカルLLMの3層構造：モデルファイル（GGUFまたはsafetensors、7BモデルのQ4_K_Mで約4.5GB）を推論エンジン（Ollama、LM Studio、llama.cpp）が読み込み、localhost:11434のREST APIなどのインターフェースを通じて公開する。',
         },
         hardware: {
           title: 'ローカルLLM実行に必要なハードウェア',
@@ -1257,6 +1279,8 @@ schema: {
             { '項目': 'オフライン', 'ローカルLLM': 'はい--インターネット不要', 'クラウドAPI': 'いいえ--接続が必須' },
           ],
           columns: ['項目', 'ローカルLLM', 'クラウドAPI'],
+          image: '/images/what-are-local-llms-vs-cloud-api-en.svg',
+          imageCaption: 'ローカルLLMとクラウドAPIの比較：ローカルはデータが端末を出ることなく$0/トークン、10～120 tok/secで動作し、クラウドAPIは$0.15～15/100万トークン、50～200 tok/secでインターネット接続が必須。',
         },
         modelFormats: {
           title: 'ローカルLLMのモデル形式は？',
@@ -1379,6 +1403,8 @@ schema: {
             '**推理引擎**：读取模型文件、执行token生成所需的矩阵计算。最受欢迎的引擎：[Ollama](/zh/local-llms/how-to-install-ollama)（后台服务、OpenAI兼容API）、[LM Studio](/zh/local-llms/how-to-install-lm-studio)（桌面应用、内置聊天UI）、llama.cpp（大多数工具的基础C++库）。',
             '**界面**：与模型交互的地方。终端、网页UI或API端点。Ollama在`http://localhost:11434`公开REST API，连接任何OpenAI兼容应用到本地模型。',
           ],
+          image: '/images/what-are-local-llms-how-it-works-en.svg',
+          imageCaption: '本地LLM的三层结构：模型文件（GGUF或safetensors，7B模型在Q4_K_M量化下约4.5GB）由推理引擎（Ollama、LM Studio、llama.cpp）加载，通过localhost:11434的REST API等界面对外提供访问。',
         },
         hardware: {
           title: '运行本地LLM需要什么硬件',
@@ -1408,6 +1434,8 @@ schema: {
             { '因素': '离线使用', '本地LLM': '是--无需互联网', '云API': '否--需要活跃连接' },
           ],
           columns: ['因素', '本地LLM', '云API'],
+          image: '/images/what-are-local-llms-vs-cloud-api-en.svg',
+          imageCaption: '本地LLM与云API对比：本地以每token $0的成本运行，数据永不离开设备，速度10-120 tokens/秒；云API每100万tokens收费$0.15-15，速度50-200 tokens/秒，且需要持续联网。',
         },
         modelFormats: {
           title: '本地LLM使用什么模型格式',
@@ -1530,6 +1558,8 @@ schema: {
             '**Die Inferenz-Engine** liest die Modelldatei und führt die erforderlichen Matrixberechnungen durch, um Tokens zu generieren. Die beliebtesten Engines sind [Ollama](/de/local-llms/how-to-install-ollama) (wird als Hintergrunddienst mit OpenAI-kompatibler API ausgeführt), [LM Studio](/de/local-llms/how-to-install-lm-studio) (eine Desktop-Anwendung mit integrierter Chat-UI) und llama.cpp (die zugrunde liegende C++-Bibliothek, auf der die meisten anderen Tools aufgebaut sind).',
             '**Die Schnittstelle** ist der Ort, an dem Sie mit dem Modell interagieren -- ein Terminal, eine Web-UI oder ein API-Endpunkt. Viele Tools wie Ollama stellen eine REST-API auf `http://localhost:11434` bereit, damit Sie jede OpenAI-kompatible Anwendung mit Ihrem lokalen Modell verbinden können.',
           ],
+          image: '/images/what-are-local-llms-how-it-works-en.svg',
+          imageCaption: 'Die drei Schichten eines lokalen LLM: die Modelldatei (GGUF oder safetensors, ~4,5 GB bei Q4_K_M für ein 7B-Modell), geladen von einer Inferenz-Engine (Ollama, LM Studio, llama.cpp), bereitgestellt über eine Schnittstelle wie die REST-API unter localhost:11434.',
         },
         hardware: {
           title: 'Welche Hardware benötigen Sie zum Ausführen eines lokalen LLM?',
@@ -1559,6 +1589,8 @@ schema: {
             { 'Faktor': 'Offline-Nutzung', 'Lokales LLM': 'Ja -- funktioniert ohne Internet', 'Cloud-API': 'Nein -- erfordert aktive Verbindung' },
           ],
           columns: ['Faktor', 'Lokales LLM', 'Cloud-API'],
+          image: '/images/what-are-local-llms-vs-cloud-api-en.svg',
+          imageCaption: 'Vergleich lokales LLM vs. Cloud-API: Lokal läuft es für 0 € pro Token, ohne dass Daten das Gerät verlassen, bei 10-120 Tokens/Sek., während die Cloud-API 0,15-15 € pro 1 Mio. Tokens kostet, 50-200 Tokens/Sek. erreicht und eine aktive Internetverbindung benötigt.',
         },
         modelFormats: {
           title: 'Welche Modellformate werden für lokale LLMs verwendet?',
@@ -1686,6 +1718,8 @@ schema: {
             '**인터페이스**는 터미널, 웹 UI, 또는 API 엔드포인트 등 모델과 상호작용하는 곳입니다. Ollama와 같은 많은 도구들은 `http://localhost:11434`에 REST API를 노출하여 OpenAI 호환 애플리케이션을 로컬 모델에 연결할 수 있습니다.',
           ],
           youtubeUrl: 'https://www.youtube.com/watch?v=2p2xMKpz7wM',
+          image: '/images/what-are-local-llms-how-it-works-en.svg',
+          imageCaption: '로컬 LLM의 3가지 계층: 모델 파일(GGUF 또는 safetensors, 7B 모델 기준 Q4_K_M에서 약 4.5GB)을 추론 엔진(Ollama, LM Studio, llama.cpp)이 불러오고, localhost:11434의 REST API와 같은 인터페이스를 통해 제공됩니다.',
         },
         hardware: {
           id: 'what-hardware-do-you-need',
@@ -1717,6 +1751,8 @@ schema: {
             { 'Factor': '오프라인 사용', 'Local LLM': '가능 — 인터넷 없이 작동', 'Cloud API': '불가 — 활성 연결 필요' },
           ],
           columns: ['Factor', 'Local LLM', 'Cloud API'],
+          image: '/images/what-are-local-llms-vs-cloud-api-en.svg',
+          imageCaption: '로컬 LLM과 클라우드 API 비교: 로컬은 데이터가 기기를 벗어나지 않고 토큰당 $0으로 초당 10~120 토큰을 처리하며, 클라우드 API는 100만 토큰당 $0.15~$15의 비용으로 초당 50~200 토큰을 처리하지만 활성 인터넷 연결이 필요합니다.',
         },
         modelFormats: {
           id: 'which-model-formats-are-used',

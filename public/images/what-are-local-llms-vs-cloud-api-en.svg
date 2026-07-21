@@ -1,0 +1,46 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Local LLM vs Cloud API</text>
+
+  <!-- Left Panel: Local LLM -->
+  <rect x="40" y="55" width="340" height="290" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="40" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="210" y="82" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Local LLM</text>
+
+  <text x="60" y="112" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Privacy:</text>
+  <text x="60" y="130" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="600" fill="#1C1B1F">Data never leaves your machine</text>
+
+  <text x="60" y="160" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Cost:</text>
+  <text x="60" y="178" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="600" fill="#1C1B1F">$0 per token after hardware</text>
+
+  <text x="60" y="208" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Speed:</text>
+  <text x="60" y="226" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="600" fill="#1C1B1F">10-120 tok/sec on consumer hardware</text>
+
+  <text x="60" y="256" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Offline use:</text>
+  <text x="60" y="274" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="600" fill="#1C1B1F">Yes — works without internet</text>
+
+  <text x="60" y="316" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F">Best for: sensitive data, zero recurring</text>
+  <text x="60" y="332" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F">cost, offline or air-gapped work.</text>
+
+  <!-- Right Panel: Cloud API -->
+  <rect x="420" y="55" width="340" height="290" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="420" y="55" width="340" height="4" rx="0" fill="#6750A4"/>
+  <text x="590" y="82" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">Cloud API</text>
+
+  <text x="440" y="112" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Privacy:</text>
+  <text x="440" y="130" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="600" fill="#1C1B1F">Data processed on provider servers</text>
+
+  <text x="440" y="160" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Cost:</text>
+  <text x="440" y="178" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="600" fill="#1C1B1F">$0.15-$15 per 1M tokens</text>
+
+  <text x="440" y="208" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Speed:</text>
+  <text x="440" y="226" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="600" fill="#1C1B1F">50-200 tok/sec, varies by load</text>
+
+  <text x="440" y="256" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Offline use:</text>
+  <text x="440" y="274" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="600" fill="#1C1B1F">No — requires active connection</text>
+
+  <text x="440" y="316" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F">Best for: highest model quality,</text>
+  <text x="440" y="332" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F">minimal setup, no hardware limits.</text>
+
+  <text x="400" y="378" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Local LLMs trade peak model quality for privacy and zero token cost — Cloud APIs trade cost and privacy for speed.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
