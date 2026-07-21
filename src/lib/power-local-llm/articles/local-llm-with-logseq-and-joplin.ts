@@ -173,6 +173,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '[Joplin](https://joplinapp.org)', 'AI plugins': 'Jarvis (chat, summarise, embedding-backed Q&A), [Ollama](https://ollama.com)-aware integrations', 'Sync (no cloud)': 'Joplin Cloud (paid E2EE), self-hosted Joplin Server, WebDAV, Nextcloud, Dropbox, OneDrive (all E2EE-capable)', 'Mobile': 'Mobile app available; plugins not supported on mobile (2026)', 'Best for': 'Markdown notebook + E2EE sync' },
           { 'Tool': '[Obsidian](https://obsidian.md) (reference)', 'AI plugins': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot', 'Sync (no cloud)': 'Git, Syncthing, iCloud Drive, Obsidian Sync (paid E2EE)', 'Mobile': 'Mobile app supports most plugins; LAN access to Ollama required', 'Best for': 'Power users with paid plugins / paid sync' },
         ],
+        image: '/images/local-llm-logseq-joplin-tool-comparison-en.svg',
+        imageCaption: 'Logseq + logseq-copilot vs Joplin + Jarvis: Joplin is the only one with RAG-backed embedding search (nomic-embed-text, mxbai-embed-large), while both lack mobile AI plugin support in 2026.',
         callouts: [
           {
             type: 'tip',
@@ -235,6 +237,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Audit trail:** with local LLMs, you can run a packet capture (Wireshark, Little Snitch, etc.) once after install and verify that the plugins make zero outbound calls during AI use. With Notion AI, outbound calls are inherent — there is nothing to verify.',
           '**Subprocessor risk:** Notion AI inherits all of OpenAI\'s subprocessors (Microsoft Azure as primary infrastructure, plus support vendors). Logseq and Joplin + Ollama have zero subprocessors for the AI layer.',
         ],
+        image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
+        imageCaption: 'Notion AI ships note content to OpenAI Cloud (US) on every request; Logseq + logseq-copilot and Joplin + Jarvis route the same request to Ollama at localhost:11434/v1, so content never leaves the device.',
         callouts: [
           {
             type: 'tip',
@@ -599,6 +603,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': '[Joplin](https://joplinapp.org)', 'Plugins de IA': 'Jarvis (chat, resumen, Q&A respaldada por embeddings), integraciones compatibles con [Ollama](https://ollama.com)', 'Sync (sin nube)': 'Joplin Cloud (de pago E2EE), Joplin Server auto-alojado, WebDAV, Nextcloud, Dropbox, OneDrive (todos compatibles con E2EE)', 'Móvil': 'App móvil disponible; plugins no admitidos en móvil (2026)', 'Ideal para': 'Cuaderno Markdown + sync E2EE' },
           { 'Herramienta': '[Obsidian](https://obsidian.md) (referencia)', 'Plugins de IA': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot', 'Sync (sin nube)': 'Git, Syncthing, iCloud Drive, Obsidian Sync (de pago E2EE)', 'Móvil': 'La app móvil admite la mayoría de plugins; se requiere acceso LAN a Ollama', 'Ideal para': 'Usuarios avanzados con plugins de pago / sync de pago' },
         ],
+        image: '/images/local-llm-logseq-joplin-tool-comparison-en.svg',
+        imageCaption: 'Logseq + logseq-copilot frente a Joplin + Jarvis: Joplin es el único con búsqueda semántica respaldada por embeddings (nomic-embed-text, mxbai-embed-large), mientras que ninguno de los dos admite plugins de IA en móvil en 2026.',
         callouts: [
           {
             type: 'tip',
@@ -661,6 +667,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pista de auditoría:** con LLMs locales, puedes ejecutar una captura de paquetes (Wireshark, Little Snitch, etc.) una vez después de la instalación y verificar que los plugins realizan cero llamadas salientes durante el uso de IA. Con Notion AI, las llamadas salientes son inherentes — no hay nada que verificar.',
           '**Riesgo de subprocesadores:** Notion AI hereda todos los subprocesadores de OpenAI (Microsoft Azure como infraestructura principal, más proveedores de soporte). Logseq y Joplin + Ollama tienen cero subprocesadores para la capa de IA.',
         ],
+        image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
+        imageCaption: 'Notion AI envía el contenido de las notas a OpenAI Cloud (EE. UU.) en cada solicitud; Logseq + logseq-copilot y Joplin + Jarvis dirigen la misma solicitud a Ollama en localhost:11434/v1, por lo que el contenido nunca sale del dispositivo.',
         callouts: [
           {
             type: 'tip',
@@ -1039,6 +1047,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '[Joplin](https://joplinapp.org)', 'Plugins de IA': 'Jarvis (chat, resumo, Q&A respaldada por embeddings), integrações compatíveis com [Ollama](https://ollama.com)', 'Sync (sem nuvem)': 'Joplin Cloud (pago E2EE), Joplin Server auto-hospedado, WebDAV, Nextcloud, Dropbox, OneDrive (todos compatíveis com E2EE)', 'Móvel': 'App móvel disponível; plugins não suportados no celular (2026)', 'Ideal para': 'Caderno Markdown + sync E2EE' },
           { 'Ferramenta': '[Obsidian](https://obsidian.md) (referência)', 'Plugins de IA': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot', 'Sync (sem nuvem)': 'Git, Syncthing, iCloud Drive, Obsidian Sync (pago E2EE)', 'Móvel': 'O app móvel suporta a maioria dos plugins; acesso LAN ao Ollama necessário', 'Ideal para': 'Usuários avançados com plugins pagos / sync paga' },
         ],
+        image: '/images/local-llm-logseq-joplin-tool-comparison-en.svg',
+        imageCaption: 'Logseq + logseq-copilot vs. Joplin + Jarvis: o Joplin é o único com busca semântica baseada em embeddings (nomic-embed-text, mxbai-embed-large), enquanto nenhum dos dois tem suporte a plugins de IA no celular em 2026.',
         callouts: [
           {
             type: 'tip',
@@ -1101,6 +1111,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Trilha de auditoria:** com LLMs locais, você pode executar uma captura de pacotes (Wireshark, Little Snitch, etc.) uma vez após a instalação e verificar que os plugins fazem zero chamadas de saída durante o uso de IA. Com o Notion AI, as chamadas de saída são inerentes — não há nada a verificar.',
           '**Risco de subprocessadores:** o Notion AI herda todos os subprocessadores da OpenAI (Microsoft Azure como infraestrutura principal, mais fornecedores de suporte). O Logseq e o Joplin + Ollama têm zero subprocessadores para a camada de IA.',
         ],
+        image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
+        imageCaption: 'O Notion AI envia o conteúdo das notas para a OpenAI Cloud (EUA) em cada solicitação; Logseq + logseq-copilot e Joplin + Jarvis direcionam a mesma solicitação para o Ollama em localhost:11434/v1, então o conteúdo nunca sai do dispositivo.',
         callouts: [
           {
             type: 'tip',
@@ -1478,6 +1490,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '[Joplin](https://joplinapp.org)', 'KI-Plugins': 'Jarvis (Chat, Zusammenfassung, Embedding-gestützte Q&A), [Ollama](https://ollama.com)-fähige Integrationen', 'Sync (ohne Cloud)': 'Joplin Cloud (kostenpflichtig E2EE), selbstgehosteter Joplin Server, WebDAV, Nextcloud, Dropbox, OneDrive (alle E2EE-fähig)', 'Mobile': 'Mobile App verfügbar; Plugins auf Mobile nicht unterstützt (2026)', 'Optimal für': 'Markdown-Notizbuch + E2EE-Sync' },
           { 'Tool': '[Obsidian](https://obsidian.md) (Referenz)', 'KI-Plugins': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot', 'Sync (ohne Cloud)': 'Git, Syncthing, iCloud Drive, Obsidian Sync (kostenpflichtig E2EE)', 'Mobile': 'Mobile App unterstützt die meisten Plugins; LAN-Zugriff auf Ollama erforderlich', 'Optimal für': 'Power-User mit kostenpflichtigen Plugins / kostenpflichtiger Synchronisierung' },
         ],
+        image: '/images/local-llm-logseq-joplin-tool-comparison-en.svg',
+        imageCaption: 'Logseq + logseq-copilot vs. Joplin + Jarvis: Nur Joplin bietet RAG-gestützte Embedding-Suche (nomic-embed-text, mxbai-embed-large); mobile KI-Plugins fehlen 2026 bei beiden.',
         callouts: [
           {
             type: 'tip',
@@ -1540,6 +1554,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Audit-Spur:** Mit lokalen LLMs können Sie nach der Installation einmalig eine Paketmitschnitt-Aufnahme (Wireshark, Little Snitch, etc.) durchführen und verifizieren, dass die Plugins während der KI-Nutzung null ausgehende Anfragen machen. Bei Notion AI sind ausgehende Anfragen inhärent — es gibt nichts zu verifizieren.',
           '**Unterauftragsverarbeiter-Risiko:** Notion AI erbt alle Unterauftragsverarbeiter von OpenAI (Microsoft Azure als primäre Infrastruktur plus Support-Anbieter). Logseq und Joplin + Ollama haben null Unterauftragsverarbeiter für die KI-Schicht.',
         ],
+        image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
+        imageCaption: 'Notion AI sendet Notizinhalte bei jeder Anfrage an die OpenAI Cloud (USA); Logseq + logseq-copilot und Joplin + Jarvis leiten dieselbe Anfrage an Ollama unter localhost:11434/v1 — der Inhalt verlässt das Gerät nie.',
         callouts: [
           {
             type: 'tip',
@@ -1912,6 +1928,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': '[Joplin](https://joplinapp.org)', 'Plugins IA': 'Jarvis (chat, résumé, Q&R basée sur les embeddings), intégrations [Ollama](https://ollama.com)-compatibles', 'Sync (sans cloud)': 'Joplin Cloud (payant E2EE), Joplin Server auto-hébergé, WebDAV, Nextcloud, Dropbox, OneDrive (tous compatibles E2EE)', 'Mobile': 'App mobile disponible ; plugins non pris en charge sur mobile (2026)', 'Idéal pour': 'Carnet Markdown + sync E2EE' },
           { 'Outil': '[Obsidian](https://obsidian.md) (référence)', 'Plugins IA': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot', 'Sync (sans cloud)': 'Git, Syncthing, iCloud Drive, Obsidian Sync (payant E2EE)', 'Mobile': 'L\'app mobile prend en charge la plupart des plugins ; accès LAN à Ollama requis', 'Idéal pour': 'Power-users avec plugins payants / sync payante' },
         ],
+        image: '/images/local-llm-logseq-joplin-tool-comparison-en.svg',
+        imageCaption: 'Logseq + logseq-copilot vs Joplin + Jarvis : seul Joplin propose une recherche sémantique par embeddings (nomic-embed-text, mxbai-embed-large) ; aucun des deux ne prend en charge les plugins IA mobiles en 2026.',
         callouts: [
           {
             type: 'tip',
@@ -1974,6 +1992,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Piste d\'audit :** avec les LLM locaux, vous pouvez exécuter une capture de paquets (Wireshark, Little Snitch, etc.) une fois après installation et vérifier que les plugins ne font aucun appel sortant pendant l\'usage IA. Avec Notion AI, les appels sortants sont inhérents — il n\'y a rien à vérifier.',
           '**Risque sous-traitant :** Notion AI hérite de tous les sous-traitants d\'OpenAI (Microsoft Azure comme infrastructure principale, plus fournisseurs de support). Logseq et Joplin + Ollama n\'ont aucun sous-traitant pour la couche IA.',
         ],
+        image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
+        imageCaption: 'Notion AI envoie le contenu des notes vers OpenAI Cloud (États-Unis) à chaque requête ; Logseq + logseq-copilot et Joplin + Jarvis acheminent la même requête vers Ollama sur localhost:11434/v1, si bien que le contenu ne quitte jamais l\'appareil.',
         callouts: [
           {
             type: 'tip',
@@ -2338,6 +2358,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': '[Joplin](https://joplinapp.org)', 'AI プラグイン': 'Jarvis（チャット、要約、埋め込みベース Q&A）、[Ollama](https://ollama.com) 対応統合', '同期（クラウドなし）': 'Joplin Cloud（有料 E2EE）、自己ホスト型 Joplin Server、WebDAV、Nextcloud、Dropbox、OneDrive（全て E2EE 対応可能）', 'モバイル': 'モバイルアプリあり。モバイルではプラグイン未サポート（2026）', '最適な用途': 'Markdown ノートブック + E2EE 同期' },
           { 'ツール': '[Obsidian](https://obsidian.md)（参照）', 'AI プラグイン': 'Smart Connections、Copilot、Text Generator、Local GPT、BMO Chatbot', '同期（クラウドなし）': 'Git、Syncthing、iCloud Drive、Obsidian Sync（有料 E2EE）', 'モバイル': 'モバイルアプリはほとんどのプラグインをサポート。Ollama への LAN アクセスが必要', '最適な用途': '有料プラグイン / 有料同期を使うパワーユーザー' },
         ],
+        image: '/images/local-llm-logseq-joplin-tool-comparison-en.svg',
+        imageCaption: 'Logseq + logseq-copilot と Joplin + Jarvis の比較：RAGベースのエンベディング検索（nomic-embed-text、mxbai-embed-large）に対応するのは Joplin のみ。両者とも2026年時点でモバイルAIプラグインには非対応。',
         callouts: [
           {
             type: 'tip',
@@ -2400,6 +2422,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**監査証跡：** ローカル LLM では、インストール後にパケットキャプチャ（Wireshark、Little Snitch 等）を一度実行し、AI 使用中にプラグインがアウトバウンド通信ゼロであることを検証できます。Notion AI ではアウトバウンド通信が本質的に発生 — 検証する対象がありません。',
           '**副処理者リスク：** Notion AI は OpenAI のすべての副処理者（主要インフラとして Microsoft Azure、加えてサポートベンダー）を継承します。Logseq と Joplin + Ollama は、AI 層に副処理者がゼロ。',
         ],
+        image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
+        imageCaption: 'Notion AI はリクエストのたびにノート内容を OpenAI Cloud（米国）へ送信する。Logseq + logseq-copilot と Joplin + Jarvis は同じリクエストを localhost:11434/v1 の Ollama へ送るため、内容が端末の外に出ることはない。',
         callouts: [
           {
             type: 'tip',
@@ -2766,6 +2790,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': '[Joplin](https://joplinapp.org)', 'AI 插件': 'Jarvis（聊天、摘要、基于嵌入的问答）、[Ollama](https://ollama.com) 兼容集成', '同步（无云）': 'Joplin Cloud（付费 E2EE）、自托管 Joplin Server、WebDAV、Nextcloud、Dropbox、OneDrive（全部支持 E2EE）', '移动端': '提供移动应用；移动端不支持插件（2026）', '最适合': 'Markdown 笔记本 + E2EE 同步' },
           { '工具': '[Obsidian](https://obsidian.md)（参照）', 'AI 插件': 'Smart Connections、Copilot、Text Generator、Local GPT、BMO Chatbot', '同步（无云）': 'Git、Syncthing、iCloud Drive、Obsidian Sync（付费 E2EE）', '移动端': '移动应用支持大多数插件；需 LAN 访问 Ollama', '最适合': '使用付费插件 / 付费同步的高级用户' },
         ],
+        image: '/images/local-llm-logseq-joplin-tool-comparison-en.svg',
+        imageCaption: 'Logseq + logseq-copilot 与 Joplin + Jarvis 对比：只有 Joplin 支持基于嵌入的 RAG 语义搜索（nomic-embed-text、mxbai-embed-large）；两者在 2026 年均不支持移动端 AI 插件。',
         callouts: [
           {
             type: 'tip',
@@ -2828,6 +2854,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**审计跟踪：** 使用本地 LLM，您可以在安装后运行一次抓包（Wireshark、Little Snitch 等）并验证插件在 AI 使用期间零出站调用。使用 Notion AI 时，出站调用是必然的——没什么可验证的。',
           '**子处理方风险：** Notion AI 继承 OpenAI 的所有子处理方（Microsoft Azure 作为主要基础设施，加上支持供应商）。Logseq 和 Joplin + Ollama 在 AI 层有零子处理方。',
         ],
+        image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
+        imageCaption: 'Notion AI 在每次请求时都会将笔记内容发送到 OpenAI 云端（美国）；Logseq + logseq-copilot 和 Joplin + Jarvis 将同样的请求发送到 localhost:11434/v1 上的 Ollama，内容永远不会离开设备。',
         callouts: [
           {
             type: 'tip',
@@ -3193,6 +3221,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '[Joplin](https://joplinapp.org)', 'ملحقات الذكاء الاصطناعي': 'Jarvis (دردشة، تلخيص، إجابات مدعومة بالتضمينات)، تكاملات متوافقة مع [Ollama](https://ollama.com)', 'المزامنة (بدون سحابة)': 'Joplin Cloud (مدفوع E2EE)، Joplin Server ذاتي الاستضافة، WebDAV، Nextcloud، Dropbox، OneDrive (جميعها متوافقة مع E2EE)', 'الجوّال': 'تطبيق جوّال متاح؛ الملحقات غير مدعومة على الجوّال (2026)', 'الأنسب لـ': 'دفتر Markdown + مزامنة E2EE' },
           { 'الأداة': '[Obsidian](https://obsidian.md) (مرجع)', 'ملحقات الذكاء الاصطناعي': 'Smart Connections، Copilot، Text Generator، Local GPT، BMO Chatbot', 'المزامنة (بدون سحابة)': 'Git، Syncthing، iCloud Drive، Obsidian Sync (مدفوع E2EE)', 'الجوّال': 'تطبيق الجوّال يدعم معظم الملحقات؛ يُطلب وصول LAN إلى Ollama', 'الأنسب لـ': 'المستخدمون المتقدمون مع ملحقات مدفوعة / مزامنة مدفوعة' },
         ],
+        image: '/images/local-llm-logseq-joplin-tool-comparison-en.svg',
+        imageCaption: 'Logseq + logseq-copilot مقابل Joplin + Jarvis: Joplin هو الوحيد الذي يدعم البحث الدلالي القائم على التضمين (RAG) عبر nomic-embed-text أو mxbai-embed-large، ولا تدعم أي منهما إضافات الذكاء الاصطناعي على الجوال في 2026.',
         callouts: [
           {
             type: 'tip',
@@ -3255,6 +3285,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**مسار التدقيق:** مع نماذج اللغة المحلية، يمكنك تشغيل التقاط حزم (Wireshark، Little Snitch، إلخ) مرةً واحدة بعد التثبيت والتحقق من صفر مكالمات صادرة أثناء استخدام الذكاء الاصطناعي. مع Notion AI، المكالمات الصادرة متأصلة — لا شيء للتحقق منه.',
           '**مخاطر المعالجين الفرعيين:** يرث Notion AI جميع المعالجين الفرعيين لـ OpenAI (Microsoft Azure كبنية تحتية رئيسية، بالإضافة إلى موردي الدعم). لدى Logseq وJoplin + Ollama صفر معالجين فرعيين لطبقة الذكاء الاصطناعي.',
         ],
+        image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
+        imageCaption: 'يرسل Notion AI محتوى الملاحظات إلى OpenAI Cloud (الولايات المتحدة) مع كل طلب؛ بينما يوجّه Logseq + logseq-copilot وJoplin + Jarvis الطلب نفسه إلى Ollama على localhost:11434/v1، بحيث لا يغادر المحتوى الجهاز أبدًا.',
         callouts: [
           {
             type: 'tip',
@@ -3631,6 +3663,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '[Joplin](https://joplinapp.org)', 'AI 플러그인': 'Jarvis(채팅, 요약, 임베딩 기반 Q&A), [Ollama](https://ollama.com) 호환 통합', '동기화(클라우드 없음)': 'Joplin Cloud(유료 E2EE), 자체 호스팅 Joplin Server, WebDAV, Nextcloud, Dropbox, OneDrive(모두 E2EE 지원)', '모바일': '모바일 앱 제공; 모바일에서 플러그인 미지원(2026)', '이상적인 용도': 'Markdown 노트북 + E2EE 동기화' },
           { '도구': '[Obsidian](https://obsidian.md)(참조)', 'AI 플러그인': 'Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot (주요 AI 플러그인)', '동기화(클라우드 없음)': 'Git, Syncthing, iCloud Drive, Obsidian Sync(유료 E2EE)', '모바일': '모바일 앱이 대부분의 플러그인 지원; Ollama에 대한 LAN 접근 필요', '이상적인 용도': '유료 플러그인 / 유료 동기화를 갖춘 고급 사용자' },
         ],
+        image: '/images/local-llm-logseq-joplin-tool-comparison-en.svg',
+        imageCaption: 'Logseq + logseq-copilot 대 Joplin + Jarvis 비교: RAG 기반 임베딩 검색(nomic-embed-text, mxbai-embed-large)을 지원하는 것은 Joplin뿐이며, 2026년 기준 두 도구 모두 모바일 AI 플러그인을 지원하지 않습니다.',
         callouts: [
           {
             type: 'tip',
@@ -3693,6 +3727,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**감사 추적:** 로컬 LLM을 사용하면 설치 후 한 번 패킷 캡처(Wireshark, Little Snitch 등)를 실행하여 AI 사용 중 플러그인이 발신 호출을 전혀 하지 않는지 확인할 수 있습니다. Notion AI의 경우 발신 호출이 본질적입니다 — 확인할 것이 없습니다.',
           '**하위 처리자 위험:** Notion AI는 OpenAI의 모든 하위 처리자(주요 인프라로서 Microsoft Azure, 추가 지원 공급자)를 상속합니다. Logseq와 Joplin + Ollama는 AI 계층에 대한 하위 처리자가 없습니다.',
         ],
+        image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
+        imageCaption: 'Notion AI는 요청마다 노트 내용을 OpenAI 클라우드(미국)로 전송합니다. Logseq + logseq-copilot과 Joplin + Jarvis는 동일한 요청을 localhost:11434/v1의 Ollama로 전달하므로 콘텐츠가 기기를 벗어나지 않습니다.',
         callouts: [
           {
             type: 'tip',
