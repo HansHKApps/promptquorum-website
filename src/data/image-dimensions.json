@@ -16114,6 +16114,16 @@
     "width": 1200,
     "height": 675
   },
+  "/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 430
+  },
+  "/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/qwen-local-deployment-guide-2026-benchmarks-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
