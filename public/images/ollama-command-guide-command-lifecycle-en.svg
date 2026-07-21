@@ -1,0 +1,46 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ollama Command Lifecycle</text>
+  <line x1="60" y1="52" x2="740" y2="52" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Step 1: Pull -->
+  <circle cx="110" cy="150" r="22" fill="#EA4335"/>
+  <text x="110" y="157" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="110" y="196" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Pull Model</text>
+  <text x="110" y="216" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">ollama pull</text>
+  <text x="110" y="230" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">llama3.2:3b</text>
+  <text x="110" y="252" font-family="system-ui, sans-serif" font-size="10" fill="#79747E" text-anchor="middle">~2.5 GB download</text>
+
+  <text x="200" y="158" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle">&#8594;</text>
+
+  <!-- Step 2: Run -->
+  <circle cx="300" cy="150" r="22" fill="#6750A4"/>
+  <text x="300" y="157" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="300" y="196" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Run / Chat</text>
+  <text x="300" y="216" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">ollama run</text>
+  <text x="300" y="230" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">llama3.2:3b</text>
+  <text x="300" y="252" font-family="system-ui, sans-serif" font-size="10" fill="#79747E" text-anchor="middle">interactive CLI session</text>
+
+  <text x="390" y="158" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle">&#8594;</text>
+
+  <!-- Step 3: List -->
+  <circle cx="490" cy="150" r="22" fill="#34A853"/>
+  <text x="490" y="157" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="490" y="196" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">List Models</text>
+  <text x="490" y="216" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">ollama list</text>
+  <text x="490" y="252" font-family="system-ui, sans-serif" font-size="10" fill="#79747E" text-anchor="middle">shows size + modified date</text>
+
+  <text x="580" y="158" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle">&#8594;</text>
+
+  <!-- Step 4: Remove -->
+  <circle cx="680" cy="150" r="22" fill="#F4B400"/>
+  <text x="680" y="157" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="680" y="196" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Remove Model</text>
+  <text x="680" y="216" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">ollama rm</text>
+  <text x="680" y="230" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">llama3.2:3b</text>
+  <text x="680" y="252" font-family="system-ui, sans-serif" font-size="10" fill="#79747E" text-anchor="middle">frees disk space instantly</text>
+
+  <line x1="60" y1="300" x2="740" y2="300" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="400" y="330" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Four Ollama commands cover the full model lifecycle: pull downloads once, run starts a chat, list shows disk usage, rm frees space.</text>
+  <text x="400" y="352" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">`ollama serve` runs automatically on Mac and Windows and exposes an OpenAI-compatible API at localhost:11434.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
