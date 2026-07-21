@@ -150,6 +150,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'How the Three Build Tiers Compare in 2026',
         content:
           'GPU VRAM and power figures are manufacturer specifications. Inference speeds are family-level estimates from PromptQuorum GPU testing for the tier\'s GPU. Build totals are July 2026 US snapshots — the 2026 GPU price surge pushed cards 1.5-2x above MSRP, so the GPU line dominates each total and moves week to week. Buying the GPU used lowers every total.',
+        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
+        imageCaption: 'Local AI PC build tiers compared: RTX 4060 Ti 16GB budget build (~$1,100) runs 7B-13B models, RTX 4070 Ti Super 16GB mid build (~$2,400) runs 14B-33B models, RTX 5090 32GB enthusiast build (~$5,000) runs 33B-70B models.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -376,6 +378,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Decision Flowchart: Pick Your Build in Four Questions',
         content:
           '**Four questions, in order, route most builders to one tier.**',
+        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
+        imageCaption: 'Decision tree for choosing a local-AI PC build by largest model size: 7B-13B models route to the ~$1,100 budget build, 14B-33B models to the ~$2,400 mid build, and 70B models to the ~$5,000 enthusiast build.',
         items: [
           '**1. What is the largest model you want to run?** 7B-13B: budget build. 14B-33B: mid build. 70B: enthusiast build.',
           '**2. What is your hard budget ceiling?** Around $1,100: budget build. Around $2,400: mid build. Around $5,000: enthusiast build.',
@@ -659,6 +663,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wie die drei Build-Stufen 2026 abschneiden',
         content:
           'GPU-VRAM- und Leistungsangaben sind Herstellerspezifikationen. Inferenzgeschwindigkeiten sind Schätzungen auf Modellfamilien-Ebene aus PromptQuorum-GPU-Tests für die GPU der jeweiligen Stufe. Die Build-Summen sind US-Momentaufnahmen vom Juli 2026 — der GPU-Preisanstieg 2026 hat die Karten auf das 1,5- bis 2-Fache der UVP getrieben, sodass die GPU-Zeile jede Summe dominiert und sich von Woche zu Woche bewegt. Der Gebrauchtkauf der GPU senkt jede Summe.',
+        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
+        imageCaption: 'Vergleich der Local-AI-PC-Build-Stufen 2026: RTX 4060 Ti 16 GB Budget-Build (~1.100 $) für 7B-13B-Modelle, RTX 4070 Ti Super 16 GB Mittelklasse-Build (~2.400 $) für 14B-33B-Modelle, RTX 5090 32 GB Enthusiasten-Build (~5.000 $) für 33B-70B-Modelle.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -885,6 +891,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Entscheidungsdiagramm: Wählen Sie Ihren Build in vier Fragen',
         content:
           '**Vier Fragen, der Reihe nach, leiten die meisten Bauenden zu einer Stufe.**',
+        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
+        imageCaption: 'Entscheidungsbaum für den Local-AI-PC-Build nach Modellgröße: 7B-13B-Modelle führen zum Budget-Build (~1.100 $), 14B-33B-Modelle zum Mittelklasse-Build (~2.400 $), 70B-Modelle zum Enthusiasten-Build (~5.000 $).',
         items: [
           '**1. Was ist das größte Modell, das Sie ausführen möchten?** 7B-13B: Budget-Build. 14B-33B: Mittelklasse-Build. 70B: Enthusiasten-Build.',
           '**2. Was ist Ihre harte Budget-Obergrenze?** Rund 1.250 €: Budget-Build. Rund 2.500 €: Mittelklasse-Build. Rund 5.200 €: Enthusiasten-Build.',
@@ -1176,6 +1184,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comment se comparent les trois niveaux en 2026',
         content:
           'Les chiffres de VRAM et de puissance du GPU sont des spécifications constructeur. Les vitesses d\'inférence sont des estimations au niveau de la famille de modèles, issues des tests GPU de PromptQuorum pour le GPU du niveau concerné. Les totaux sont des instantanés américains de juillet 2026 — la hausse des prix des GPU en 2026 a poussé les cartes à 1,5-2 fois le tarif conseillé, si bien que la ligne GPU domine chaque total et bouge d\'une semaine à l\'autre. Acheter le GPU d\'occasion abaisse chaque total.',
+        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
+        imageCaption: 'Comparatif des configurations PC IA locale 2026 : configuration économique RTX 4060 Ti 16 Go (~1 100 $) pour modèles 7B-13B, configuration intermédiaire RTX 4070 Ti Super 16 Go (~2 400 $) pour modèles 14B-33B, configuration enthousiaste RTX 5090 32 Go (~5 000 $) pour modèles 33B-70B.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1402,6 +1412,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Logigramme de décision : choisissez votre configuration en quatre questions',
         content:
           '**Quatre questions, dans l\'ordre, orientent la plupart des monteurs vers un niveau.**',
+        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
+        imageCaption: 'Arbre de décision pour choisir une configuration PC IA locale selon la taille du modèle : les modèles 7B-13B orientent vers la configuration économique (~1 100 $), les modèles 14B-33B vers la configuration intermédiaire (~2 400 $), les modèles 70B vers la configuration enthousiaste (~5 000 $).',
         items: [
           '**1. Quel est le plus grand modèle que vous voulez exécuter ?** 7B-13B : configuration budget. 14B-33B : configuration intermédiaire. 70B : configuration enthousiaste.',
           '**2. Quel est votre plafond de budget ferme ?** Environ 1 250 € : configuration budget. Environ 2 550 € : configuration intermédiaire. Environ 5 300 € : configuration enthousiaste.',
@@ -1685,6 +1697,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2026年の3構成ティアの比較',
         content:
           'GPUのVRAMと電力の数値はメーカー仕様です。推論速度は、各ティアのGPUに対するPromptQuorumのGPUテストに基づくモデルファミリーレベルの推定値です。構成合計は2026年7月時点の米国のスナップショットです——2026年のGPU価格高騰によりカード価格は希望小売価格の1.5〜2倍に上昇したため、GPUの行が各合計を支配し、週ごとに変動します。GPUを中古で購入すると、いずれの合計も下がります。',
+        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
+        imageCaption: '2026年ローカルAI PC構成比較:RTX 4060 Ti 16GB予算構成(約1,100ドル)は7B-13Bモデル、RTX 4070 Ti Super 16GBミドル構成(約2,400ドル)は14B-33Bモデル、RTX 5090 32GBエンスージアスト構成(約5,000ドル)は33B-70Bモデルに対応。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1911,6 +1925,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '判断フローチャート：4つの質問で構成を選ぶ',
         content:
           '**順を追った4つの質問が、ほとんどの自作者を1つのティアへ導きます。**',
+        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
+        imageCaption: 'モデルサイズで選ぶローカルAI PC構成の決定木:7B-13Bモデルは予算構成(約1,100ドル)、14B-33Bモデルはミドル構成(約2,400ドル)、70Bモデルはエンスージアスト構成(約5,000ドル)に対応。',
         items: [
           '**1. 実行したい最大のモデルは何ですか？** 7B〜13B：エントリー構成。14B〜33B：ミドル構成。70B：ハイエンド構成。',
           '**2. 譲れない予算の上限は？** 約¥185,000：エントリー構成。約¥400,000：ミドル構成。約¥850,000：ハイエンド構成。',
@@ -2194,6 +2210,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2026 年三档配置如何对比',
         content:
           'GPU 显存和功耗数字为厂商规格。推理速度是基于 PromptQuorum 对各档 GPU 的测试所得的模型族级别估计值。配置总价为 2026 年 7 月的美国快照——2026 年 GPU 价格上涨把显卡推高至建议零售价的 1.5-2 倍,因此 GPU 这一项主导每套总价,且逐周变动。买二手 GPU 会拉低每套总价。',
+        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
+        imageCaption: '2026年本地AI主机配置对比:RTX 4060 Ti 16GB入门配置(约1,100美元)运行7B-13B模型,RTX 4070 Ti Super 16GB中端配置(约2,400美元)运行14B-33B模型,RTX 5090 32GB发烧级配置(约5,000美元)运行33B-70B模型。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2420,6 +2438,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '决策流程图:用四个问题选定你的配置',
         content:
           '**按顺序回答的四个问题,会把大多数装机者引向某一档。**',
+        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
+        imageCaption: '按模型规模选择本地AI主机配置的决策树:7B-13B模型对应入门配置(约1,100美元),14B-33B模型对应中端配置(约2,400美元),70B模型对应发烧级配置(约5,000美元)。',
         items: [
           '**1. 你想运行的最大模型是多大？** 7B-13B:入门配置。14B-33B:中端配置。70B:发烧配置。',
           '**2. 你的硬性预算上限是多少？** 约 1,100 美元:入门配置。约 2,400 美元:中端配置。约 5,000 美元:发烧配置。',
@@ -2703,6 +2723,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cómo se comparan los tres niveles de configuración en 2026',
         content:
           'Las cifras de VRAM y potencia de la GPU son especificaciones del fabricante. Las velocidades de inferencia son estimaciones a nivel de familia de modelos de las pruebas de GPU de PromptQuorum para la GPU del nivel correspondiente. Los totales de configuración son instantáneas de venta minorista en España (Amazon.es, PcComponentes) de julio de 2026 — el aumento de precios de GPU de 2026 empujó las tarjetas a 1,5-2 veces el precio de lista, por lo que la línea de GPU domina cada total y varía semana a semana. Comprar la GPU usada reduce cada total. En Latinoamérica, los precios pueden variar según impuestos locales.',
+        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
+        imageCaption: 'Comparativa de niveles de PC para IA local 2026: configuración económica RTX 4060 Ti 16 GB (~1.100 $) para modelos 7B-13B, configuración media RTX 4070 Ti Super 16 GB (~2.400 $) para modelos 14B-33B, configuración entusiasta RTX 5090 32 GB (~5.000 $) para modelos 33B-70B.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2929,6 +2951,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Diagrama de decisión: elige tu configuración en cuatro preguntas',
         content:
           '**Cuatro preguntas, en orden, llevan a la mayoría de los armadores a un nivel.**',
+        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
+        imageCaption: 'Árbol de decisión para elegir una configuración de PC para IA local según el tamaño del modelo: los modelos 7B-13B llevan a la configuración económica (~1.100 $), los modelos 14B-33B a la configuración media (~2.400 $), los modelos 70B a la configuración entusiasta (~5.000 $).',
         items: [
           '**1. ¿Cuál es el modelo más grande que quieres ejecutar?** 7B-13B: configuración económica. 14B-33B: configuración media. 70B: configuración entusiasta.',
           '**2. ¿Cuál es tu techo de presupuesto estricto?** Alrededor de €1.250: configuración económica. Alrededor de €2.500: configuración media. Alrededor de €5.200: configuración entusiasta.',
@@ -3225,6 +3249,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como os três níveis de configuração se comparam em 2026',
         content:
           'As cifras de VRAM e potência da GPU são especificações do fabricante. As velocidades de inferência são estimativas a nível de família de modelos dos testes de GPU do PromptQuorum para a GPU do nível correspondente. Os totais de configuração são capturas de varejo no Brasil (KaBuM!, Pichau, Mercado Livre) de julho de 2026 — o aumento de preços de GPU de 2026 empurrou as placas para 1,5–2 vezes o preço de lista, então a linha de GPU domina cada total e varia semana a semana. Comprar a GPU usada reduz cada total. Os preços no Brasil podem variar bastante devido a impostos de importação.',
+        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
+        imageCaption: 'Comparação dos níveis de PC para IA local em 2026: configuração econômica RTX 4060 Ti 16 GB (~US$ 1.100) para modelos 7B-13B, configuração intermediária RTX 4070 Ti Super 16 GB (~US$ 2.400) para modelos 14B-33B, configuração entusiasta RTX 5090 32 GB (~US$ 5.000) para modelos 33B-70B.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3451,6 +3477,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fluxograma de decisão: escolha sua configuração em quatro perguntas',
         content:
           '**Quatro perguntas, em ordem, levam a maioria dos montadores a um nível.**',
+        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
+        imageCaption: 'Árvore de decisão para escolher uma configuração de PC para IA local pelo tamanho do modelo: modelos 7B-13B levam à configuração econômica (~US$ 1.100), modelos 14B-33B à configuração intermediária (~US$ 2.400), modelos 70B à configuração entusiasta (~US$ 5.000).',
         items: [
           '**1. Qual é o maior modelo que você quer executar?** 7B–13B: configuração econômica. 14B–33B: configuração intermediária. 70B: configuração entusiasta.',
           '**2. Qual é o seu teto de orçamento estrito?** Em torno de R$ 11.500: configuração econômica. Em torno de R$ 15.000: configuração intermediária. Em torno de R$ 32.000: configuração entusiasta.',
@@ -3748,6 +3776,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كيف تتقاطع المستويات الثلاثة في 2026',
         content:
           'أرقام VRAM وطاقة الـGPU هي مواصفات الشركة المصنّعة. سرعات الاستدلال تقديرات على مستوى عائلة النماذج من اختبارات PromptQuorum للـGPU. الإجماليات لقطات بالدولار الأمريكي من يوليو 2026.',
+        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
+        imageCaption: 'مقارنة مستويات أجهزة الذكاء الاصطناعي المحلي لعام 2026: الإعداد الاقتصادي RTX 4060 Ti بذاكرة 16 جيجابايت (~1,100 دولار) لنماذج 7B-13B، الإعداد المتوسط RTX 4070 Ti Super بذاكرة 16 جيجابايت (~2,400 دولار) لنماذج 14B-33B، إعداد الهواة RTX 5090 بذاكرة 32 جيجابايت (~5,000 دولار) لنماذج 33B-70B.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3974,6 +4004,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'مخطط قرار الاختيار: اختر إعدادك في أربعة أسئلة',
         content:
           '**أربعة أسئلة بالترتيب تقود معظم من يبنون إلى مستوى.**',
+        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
+        imageCaption: 'شجرة قرار لاختيار إعداد جهاز الذكاء الاصطناعي المحلي حسب حجم النموذج: نماذج 7B-13B تقود إلى الإعداد الاقتصادي (~1,100 دولار)، نماذج 14B-33B إلى الإعداد المتوسط (~2,400 دولار)، نماذج 70B إلى إعداد الهواة (~5,000 دولار).',
         items: [
           '**1. ما أكبر نموذج تريد تشغيله؟** 7B–13B: الاقتصادي. 14B–33B: المتوسط. 70B: المتحمس.',
           '**2. ما سقف ميزانيتك الصارم؟** حوالي 1100 دولار: الاقتصادي. حوالي 2400 دولار: المتوسط. حوالي 5000 دولار: المتحمس.',
@@ -4270,6 +4302,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2026년 세 가지 구성 단계 비교',
         content:
           'VRAM 및 GPU 전력 수치는 제조사 사양입니다. 추론 속도는 해당 단계 GPU에 대한 PromptQuorum GPU 테스트의 모델 패밀리 수준 추정치입니다. 구성 총액은 2026년 7월 기준 USD 스냅샷입니다. 2026년 GPU 가격 급등으로 카드 가격이 정가의 1.5~2배까지 상승했으므로 GPU 항목이 각 총액을 주도하며 주간 단위로 변동합니다. 중고 GPU를 구입하면 각 총액을 줄일 수 있습니다.',
+        image: '/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg',
+        imageCaption: '2026년 로컬 AI PC 구성 단계 비교: RTX 4060 Ti 16GB 보급형 구성(~$1,100)은 7B-13B 모델, RTX 4070 Ti Super 16GB 중급형 구성(~$2,400)은 14B-33B 모델, RTX 5090 32GB 고급형 구성(~$5,000)은 33B-70B 모델을 실행합니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4496,6 +4530,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '결정 순서도: 네 가지 질문으로 구성 선택',
         content:
           '**네 가지 질문에 순서대로 답하면 대부분의 구성자가 단계에 도달합니다.**',
+        image: '/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg',
+        imageCaption: '모델 크기별 로컬 AI PC 구성 선택 결정 트리: 7B-13B 모델은 보급형 구성(~$1,100), 14B-33B 모델은 중급형 구성(~$2,400), 70B 모델은 고급형 구성(~$5,000)으로 연결됩니다.',
         items: [
           '**1. 실행하려는 가장 큰 모델은 무엇입니까?** 7B–13B: 보급형 구성. 14B–33B: 중급형 구성. 70B: 고급형 구성.',
           '**2. 엄격한 예산 상한은 얼마입니까?** 약 $1,100: 보급형 구성. 약 $2,400: 중급형 구성. 약 $5,000: 고급형 구성.',
