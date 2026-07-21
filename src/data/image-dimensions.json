@@ -14704,6 +14704,16 @@
     "width": 800,
     "height": 400
   },
+  "/images/ollama-mac-multi-model-memory-budget-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/ollama-mac-quick-setup-flow-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/ollama-model-by-use-case-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 900,

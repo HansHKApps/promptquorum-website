@@ -61,6 +61,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Pull a model', whyItMatters: '`ollama pull llama2` — downloads Llama 3.3 7B.' },
           { title: 'Start chatting', whyItMatters: '`ollama run llama2` — interactive chat interface.' },
         ],
+        image: '/images/ollama-mac-quick-setup-flow-en.svg',
+        imageCaption: 'Ollama quick setup flow on Apple Silicon: brew install ollama, then ollama pull llama2 (Llama 3.3 7B, ~4 GB), then ollama run llama2 — Metal GPU acceleration is automatic, no configuration needed.',
       },
       metalVerify: {
         id: 'metal-verify',
@@ -99,6 +101,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         codeBlock: 'export OLLAMA_MAX_LOADED_MODELS=3\nexport OLLAMA_KEEP_ALIVE=1h\nbrew services restart ollama\n\n# Now pull all models you need\nollama pull llama3.1:8b\nollama pull llava:7b\n\n# Send requests to each — they stay loaded\ncurl http://localhost:11434/api/chat -d \'{"model": "llama3.1:8b", "messages": [{"role": "user", "content": "Hello"}]}\'\ncurl http://localhost:11434/api/chat -d \'{"model": "llava:7b", "messages": [{"role": "user", "content": "Describe this image"}]}\'',
         codeLanguage: 'bash',
         note: 'Memory required: 8B + 7B vision + macOS overhead ≈ 19 GB. Comfortable on 36 GB+ Macs.',
+        image: '/images/ollama-mac-multi-model-memory-budget-en.svg',
+        imageCaption: 'Multi-model memory budget on a 36 GB Mac: Llama 3.3 8B (8 GB) + LLaVA 7B Vision (7 GB) + macOS overhead (4 GB) = 19 GB used, leaving 17 GB free with OLLAMA_MAX_LOADED_MODELS=3.',
       },
       autoStart: {
         id: 'auto-start',
@@ -228,6 +232,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Ein Modell herunterladen', whyItMatters: '`ollama pull llama2` — Lädt Llama 3.3 7B herunter.' },
           { title: 'Chatten beginnen', whyItMatters: '`ollama run llama2` — Interaktive Chat-Oberfläche.' },
         ],
+        image: '/images/ollama-mac-quick-setup-flow-en.svg',
+        imageCaption: 'Ollama-Schnellsetup auf Apple Silicon: brew install ollama, dann ollama pull llama2 (Llama 3.3 7B, ca. 4 GB), dann ollama run llama2 — Metal GPU-Beschleunigung läuft automatisch, keine Konfiguration nötig.',
       },
       metalVerify: {
         id: 'metal-verify',
@@ -266,6 +272,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         codeBlock: 'export OLLAMA_MAX_LOADED_MODELS=3\nexport OLLAMA_KEEP_ALIVE=1h\nbrew services restart ollama\n\n# Now pull all models you need\nollama pull llama3.1:8b\nollama pull llava:7b\n\n# Send requests to each — they stay loaded\ncurl http://localhost:11434/api/chat -d \'{"model": "llama3.1:8b", "messages": [{"role": "user", "content": "Hello"}]}\'\ncurl http://localhost:11434/api/chat -d \'{"model": "llava:7b", "messages": [{"role": "user", "content": "Describe this image"}]}\'',
         codeLanguage: 'bash',
         note: 'Benötigter Speicher: 8B + 7B Vision + macOS-Overhead ≈ 19 GB. Komfortabel auf Macs mit 36 GB oder mehr.',
+        image: '/images/ollama-mac-multi-model-memory-budget-en.svg',
+        imageCaption: 'Speicherbudget für mehrere Modelle auf einem 36-GB-Mac: Llama 3.3 8B (8 GB) + LLaVA 7B Vision (7 GB) + macOS-Overhead (4 GB) = 19 GB belegt, 17 GB frei bei OLLAMA_MAX_LOADED_MODELS=3.',
       },
       autoStart: {
         id: 'auto-start',
@@ -395,6 +403,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Télécharger un modèle', whyItMatters: '`ollama pull llama2` — télécharge Llama 3.3 7B.' },
           { title: 'Commencer à chatter', whyItMatters: '`ollama run llama2` — interface de chat interactive.' },
         ],
+        image: '/images/ollama-mac-quick-setup-flow-en.svg',
+        imageCaption: 'Flux d\'installation rapide d\'Ollama sur Apple Silicon : brew install ollama, puis ollama pull llama2 (Llama 3.3 7B, ~4 Go), puis ollama run llama2 — l\'accélération GPU Metal est automatique, aucune configuration requise.',
       },
       metalVerify: {
         id: 'metal-verify',
@@ -433,6 +443,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         codeBlock: 'export OLLAMA_MAX_LOADED_MODELS=3\nexport OLLAMA_KEEP_ALIVE=1h\nbrew services restart ollama\n\n# Now pull all models you need\nollama pull llama3.1:8b\nollama pull llava:7b\n\n# Send requests to each — they stay loaded\ncurl http://localhost:11434/api/chat -d \'{"model": "llama3.1:8b", "messages": [{"role": "user", "content": "Hello"}]}\'\ncurl http://localhost:11434/api/chat -d \'{"model": "llava:7b", "messages": [{"role": "user", "content": "Describe this image"}]}\'',
         codeLanguage: 'bash',
         note: 'Mémoire requise : 8B + 7B vision + surcharge macOS ≈ 19 Go. Confortable sur les Mac avec 36 Go ou plus.',
+        image: '/images/ollama-mac-multi-model-memory-budget-en.svg',
+        imageCaption: 'Budget mémoire multi-modèles sur un Mac de 36 Go : Llama 3.3 8B (8 Go) + LLaVA 7B Vision (7 Go) + surcharge macOS (4 Go) = 19 Go utilisés, 17 Go libres avec OLLAMA_MAX_LOADED_MODELS=3.',
       },
       autoStart: {
         id: 'auto-start',
@@ -562,6 +574,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'モデルをダウンロード', whyItMatters: '`ollama pull llama2` — Llama 3.3 7Bをダウンロードします。' },
           { title: 'チャットを開始', whyItMatters: '`ollama run llama2` — 対話型チャットインターフェース。' },
         ],
+        image: '/images/ollama-mac-quick-setup-flow-en.svg',
+        imageCaption: 'Apple SiliconでのOllamaクイックセットアップ：brew install ollama、次にollama pull llama2（Llama 3.3 7B、約4GB）、そしてollama run llama2 — Metal GPUアクセラレーションは自動で設定不要。',
       },
       metalVerify: {
         id: 'metal-verify',
@@ -600,6 +614,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         codeBlock: 'export OLLAMA_MAX_LOADED_MODELS=3\nexport OLLAMA_KEEP_ALIVE=1h\nbrew services restart ollama\n\n# Now pull all models you need\nollama pull llama3.1:8b\nollama pull llava:7b\n\n# Send requests to each — they stay loaded\ncurl http://localhost:11434/api/chat -d \'{"model": "llama3.1:8b", "messages": [{"role": "user", "content": "Hello"}]}\'\ncurl http://localhost:11434/api/chat -d \'{"model": "llava:7b", "messages": [{"role": "user", "content": "Describe this image"}]}\'',
         codeLanguage: 'bash',
         note: '必要なメモリ：8B + 7B Vision + macOSオーバーヘッド ≈ 19 GB。36 GB以上のMacで快適に動作。',
+        image: '/images/ollama-mac-multi-model-memory-budget-en.svg',
+        imageCaption: '36GB Macでのマルチモデルメモリ予算：Llama 3.3 8B（8GB）+ LLaVA 7B Vision（7GB）+ macOSオーバーヘッド（4GB）= 19GB使用、OLLAMA_MAX_LOADED_MODELS=3で17GBの空きを維持。',
       },
       autoStart: {
         id: 'auto-start',
@@ -729,6 +745,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: '下载模型', whyItMatters: '`ollama pull llama2` — 下载Llama 3.3 7B。' },
           { title: '开始聊天', whyItMatters: '`ollama run llama2` — 交互式聊天界面。' },
         ],
+        image: '/images/ollama-mac-quick-setup-flow-en.svg',
+        imageCaption: 'Apple Silicon上的Ollama快速安装流程：brew install ollama，然后ollama pull llama2（Llama 3.3 7B，约4GB），再ollama run llama2 — Metal GPU加速自动启用，无需配置。',
       },
       metalVerify: {
         id: 'metal-verify',
@@ -767,6 +785,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         codeBlock: 'export OLLAMA_MAX_LOADED_MODELS=3\nexport OLLAMA_KEEP_ALIVE=1h\nbrew services restart ollama\n\n# Now pull all models you need\nollama pull llama3.1:8b\nollama pull llava:7b\n\n# Send requests to each — they stay loaded\ncurl http://localhost:11434/api/chat -d \'{"model": "llama3.1:8b", "messages": [{"role": "user", "content": "Hello"}]}\'\ncurl http://localhost:11434/api/chat -d \'{"model": "llava:7b", "messages": [{"role": "user", "content": "Describe this image"}]}\'',
         codeLanguage: 'bash',
         note: '所需内存：8B + 7B视觉 + macOS开销 ≈ 19 GB。36 GB以上的Mac可舒适运行。',
+        image: '/images/ollama-mac-multi-model-memory-budget-en.svg',
+        imageCaption: '36GB Mac上的多模型内存预算：Llama 3.3 8B（8GB）+ LLaVA 7B视觉模型（7GB）+ macOS开销（4GB）= 共占用19GB，通过OLLAMA_MAX_LOADED_MODELS=3保留17GB空闲。',
       },
       autoStart: {
         id: 'auto-start',
@@ -891,6 +911,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Descargar un modelo', whyItMatters: '`ollama pull llama2` — descarga Llama 3.3 7B.' },
           { title: 'Comenzar a chatear', whyItMatters: '`ollama run llama2` — interfaz de chat interactiva.' },
         ],
+        image: '/images/ollama-mac-quick-setup-flow-en.svg',
+        imageCaption: 'Flujo de configuración rápida de Ollama en Apple Silicon: brew install ollama, luego ollama pull llama2 (Llama 3.3 7B, ~4 GB), luego ollama run llama2 — la aceleración GPU Metal es automática, sin configuración necesaria.',
       },
       metalVerify: {
         id: 'metal-verify',
@@ -929,6 +951,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         codeBlock: 'export OLLAMA_MAX_LOADED_MODELS=3\nexport OLLAMA_KEEP_ALIVE=1h\nbrew services restart ollama\n\n# Now pull all models you need\nollama pull llama3.1:8b\nollama pull llava:7b\n\n# Send requests to each — they stay loaded\ncurl http://localhost:11434/api/chat -d \'{"model": "llama3.1:8b", "messages": [{"role": "user", "content": "Hello"}]}\'\ncurl http://localhost:11434/api/chat -d \'{"model": "llava:7b", "messages": [{"role": "user", "content": "Describe this image"}]}\'',
         codeLanguage: 'bash',
         note: 'Memoria requerida: 8B + 7B visión + overhead macOS ≈ 19 GB. Cómodo en Macs con 36 GB o más.',
+        image: '/images/ollama-mac-multi-model-memory-budget-en.svg',
+        imageCaption: 'Presupuesto de memoria multimodelo en un Mac de 36 GB: Llama 3.3 8B (8 GB) + LLaVA 7B visión (7 GB) + overhead macOS (4 GB) = 19 GB usados, quedan 17 GB libres con OLLAMA_MAX_LOADED_MODELS=3.',
       },
       autoStart: {
         id: 'auto-start',
@@ -1073,6 +1097,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'تنزيل نموذج', whyItMatters: '`ollama pull llama2` — ينزّل Llama 3.3 7B.' },
           { title: 'بدء المحادثة', whyItMatters: '`ollama run llama2` — واجهة محادثة تفاعلية.' },
         ],
+        image: '/images/ollama-mac-quick-setup-flow-en.svg',
+        imageCaption: 'تدفق إعداد Ollama السريع على Apple Silicon: brew install ollama، ثم ollama pull llama2 (Llama 3.3 7B، حوالي 4 GB)، ثم ollama run llama2 — تسريع GPU Metal تلقائي دون أي تهيئة.',
       },
       metalVerify: {
         id: 'metal-verify',
@@ -1111,6 +1137,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         codeBlock: 'export OLLAMA_MAX_LOADED_MODELS=3\nexport OLLAMA_KEEP_ALIVE=1h\nbrew services restart ollama\n\n# Now pull all models you need\nollama pull llama3.1:8b\nollama pull llava:7b\n\n# Send requests to each — they stay loaded\ncurl http://localhost:11434/api/chat -d \'{"model": "llama3.1:8b", "messages": [{"role": "user", "content": "Hello"}]}\'\ncurl http://localhost:11434/api/chat -d \'{"model": "llava:7b", "messages": [{"role": "user", "content": "Describe this image"}]}\'',
         codeLanguage: 'bash',
         note: 'الذاكرة المطلوبة: 8B + 7B رؤية + عبء macOS ≈ 19 GB. مريح على أجهزة Mac بـ 36 GB أو أكثر.',
+        image: '/images/ollama-mac-multi-model-memory-budget-en.svg',
+        imageCaption: 'ميزانية الذاكرة لعدة نماذج على جهاز Mac بسعة 36 GB: Llama 3.3 8B (8 GB) + LLaVA 7B رؤية (7 GB) + عبء macOS (4 GB) = 19 GB مستخدمة، مع 17 GB متاحة عبر OLLAMA_MAX_LOADED_MODELS=3.',
       },
       autoStart: {
         id: 'auto-start',
@@ -1254,6 +1282,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Baixar um modelo', whyItMatters: '`ollama pull llama2` — baixa o Llama 3.3 7B.' },
           { title: 'Começar a conversar', whyItMatters: '`ollama run llama2` — interface de chat interativa.' },
         ],
+        image: '/images/ollama-mac-quick-setup-flow-en.svg',
+        imageCaption: 'Fluxo de configuração rápida do Ollama no Apple Silicon: brew install ollama, depois ollama pull llama2 (Llama 3.3 7B, ~4 GB), depois ollama run llama2 — a aceleração da GPU Metal é automática, sem configuração necessária.',
       },
       metalVerify: {
         id: 'metal-verify',
@@ -1292,6 +1322,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         codeBlock: 'export OLLAMA_MAX_LOADED_MODELS=3\nexport OLLAMA_KEEP_ALIVE=1h\nbrew services restart ollama\n\n# Now pull all models you need\nollama pull llama3.1:8b\nollama pull llava:7b\n\n# Send requests to each — they stay loaded\ncurl http://localhost:11434/api/chat -d \'{"model": "llama3.1:8b", "messages": [{"role": "user", "content": "Hello"}]}\'\ncurl http://localhost:11434/api/chat -d \'{"model": "llava:7b", "messages": [{"role": "user", "content": "Describe this image"}]}\'',
         codeLanguage: 'bash',
         note: 'Memória necessária: 8B + 7B de visão + overhead do macOS ≈ 19 GB. Confortável em Macs com 36 GB ou mais.',
+        image: '/images/ollama-mac-multi-model-memory-budget-en.svg',
+        imageCaption: 'Orçamento de memória multi-modelo em um Mac de 36 GB: Llama 3.3 8B (8 GB) + LLaVA 7B de visão (7 GB) + overhead do macOS (4 GB) = 19 GB usados, restando 17 GB livres com OLLAMA_MAX_LOADED_MODELS=3.',
       },
       autoStart: {
         id: 'auto-start',
@@ -1430,6 +1462,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: '모델 다운로드', whyItMatters: '`ollama pull llama2` — Llama 3.3 7B를 다운로드합니다.' },
           { title: '채팅 시작', whyItMatters: '`ollama run llama2` — 대화형 채팅 인터페이스를 시작합니다.' },
         ],
+        image: '/images/ollama-mac-quick-setup-flow-en.svg',
+        imageCaption: 'Apple Silicon에서 Ollama 빠른 설정 흐름: brew install ollama 실행 후 ollama pull llama2(Llama 3.3 7B, 약 4GB) 다운로드, 이어서 ollama run llama2 실행 — Metal GPU 가속은 자동이며 별도 설정이 필요 없습니다.',
       },
       metalVerify: {
         id: 'metal-verify',
@@ -1468,6 +1502,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         codeBlock: 'export OLLAMA_MAX_LOADED_MODELS=3\nexport OLLAMA_KEEP_ALIVE=1h\nbrew services restart ollama\n\n# Now pull all models you need\nollama pull llama3.1:8b\nollama pull llava:7b\n\n# Send requests to each — they stay loaded\ncurl http://localhost:11434/api/chat -d \'{"model": "llama3.1:8b", "messages": [{"role": "user", "content": "Hello"}]}\'\ncurl http://localhost:11434/api/chat -d \'{"model": "llava:7b", "messages": [{"role": "user", "content": "Describe this image"}]}\'',
         codeLanguage: 'bash',
         note: '필요한 메모리: 8B + 7B 비전 + macOS 오버헤드 ≈ 19GB. 36GB 이상 Mac에서 원활히 사용 가능합니다.',
+        image: '/images/ollama-mac-multi-model-memory-budget-en.svg',
+        imageCaption: '36GB Mac에서의 다중 모델 메모리 예산: Llama 3.3 8B(8GB) + LLaVA 7B Vision(7GB) + macOS 오버헤드(4GB) = 총 19GB 사용, OLLAMA_MAX_LOADED_MODELS=3 설정 시 17GB 여유 공간 확보.',
       },
       autoStart: {
         id: 'auto-start',
