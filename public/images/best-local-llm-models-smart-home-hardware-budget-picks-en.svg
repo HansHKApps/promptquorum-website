@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Match the Model to Your Hardware</text>
+
+  <rect x="280" y="46" width="240" height="34" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="400" y="68" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">What hardware do you have?</text>
+
+  <line x1="340" y1="80" x2="140" y2="120" stroke="#6750A4" stroke-width="2"/>
+  <line x1="400" y1="80" x2="400" y2="120" stroke="#6750A4" stroke-width="2"/>
+  <line x1="460" y1="80" x2="660" y2="120" stroke="#6750A4" stroke-width="2"/>
+
+  <!-- Panel 1: Raspberry Pi / low power -->
+  <rect x="20" y="120" width="240" height="240" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+  <rect x="20" y="120" width="240" height="4" rx="0" fill="#F4B400"/>
+  <text x="140" y="150" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Raspberry Pi /</text>
+  <text x="140" y="168" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Low-Power</text>
+  <line x1="40" y1="182" x2="240" y2="182" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="140" y="210" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#F4B400" text-anchor="middle">Gemma 3 4B</text>
+  <text x="140" y="228" font-size="11" fill="#49454F" text-anchor="middle">or</text>
+  <text x="140" y="246" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#F4B400" text-anchor="middle">Qwen3 4B</text>
+  <text x="140" y="278" font-size="11" fill="#79747E" text-anchor="middle">Accept slower</text>
+  <text x="140" y="294" font-size="11" fill="#79747E" text-anchor="middle">responses</text>
+
+  <!-- Panel 2: Mini PC CPU only -->
+  <rect x="280" y="120" width="240" height="240" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="280" y="120" width="240" height="4" rx="0" fill="#6750A4"/>
+  <text x="400" y="150" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Mini PC</text>
+  <text x="400" y="168" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">(CPU Only)</text>
+  <line x1="300" y1="182" x2="500" y2="182" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="400" y="210" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Qwen3 4B</text>
+  <text x="400" y="228" font-size="11" fill="#49454F" text-anchor="middle">or</text>
+  <text x="400" y="246" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Phi-4-mini</text>
+  <text x="400" y="278" font-size="11" fill="#79747E" text-anchor="middle">Responsive</text>
+  <text x="400" y="294" font-size="11" fill="#79747E" text-anchor="middle">default</text>
+
+  <!-- Panel 3: Mini PC GPU/NPU -->
+  <rect x="540" y="120" width="240" height="240" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="540" y="120" width="240" height="4" rx="0" fill="#34A853"/>
+  <text x="660" y="150" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Mini PC</text>
+  <text x="660" y="168" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">+ GPU / NPU</text>
+  <line x1="560" y1="182" x2="760" y2="182" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="660" y="220" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">Qwen3 8B</text>
+  <text x="660" y="278" font-size="11" fill="#79747E" text-anchor="middle">Best quality,</text>
+  <text x="660" y="294" font-size="11" fill="#79747E" text-anchor="middle">low latency</text>
+
+  <text x="400" y="382" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Pi and CPU-only hosts run 4B models (Gemma 3 4B, Qwen3 4B, Phi-4-mini); a GPU or NPU unlocks Qwen3 8B at low latency.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
