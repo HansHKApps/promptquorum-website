@@ -111,6 +111,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Footprints are approximate and depend on quantization — for VRAM and quantization depth, link out to the local-llms cluster.',
         ],
+        image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
+        imageCaption: 'Local LLM RAM footprint for smart home control at Q4 quantization: Gemma 3 4B, Qwen3 4B, and Phi-4-mini need 2.5-3 GB, while Qwen3 8B needs about 5 GB.',
       },
       byBudget: {
         id: 'by-budget',
@@ -122,6 +124,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mini PC (CPU only):** Qwen3 4B or Phi-4-mini as a responsive default.',
           '**Mini PC with GPU/NPU:** Qwen3 8B for the best quality at acceptable latency — see [best mini PCs for Home Assistant + local AI](/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
+        image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
+        imageCaption: 'Model picks by hardware budget: Raspberry Pi or low-power hosts run Gemma 3 4B or Qwen3 4B, CPU-only mini PCs run Qwen3 4B or Phi-4-mini, and a GPU or NPU mini PC unlocks Qwen3 8B.',
       },
       howToPick: {
         id: 'how-to-pick',
@@ -294,6 +298,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'البصمات تقريبية وتعتمد على التكميم — لعمق VRAM والتكميم، أحل إلى عنقود local-llms.',
         ],
+        image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
+        imageCaption: 'بصمة ذاكرة RAM لنماذج LLM المحلية للتحكم في المنزل الذكي عند تكميم Q4: Gemma 3 4B وQwen3 4B وPhi-4-mini تحتاج 2.5-3 GB، بينما يحتاج Qwen3 8B نحو 5 GB.',
       },
       byBudget: {
         id: 'by-budget',
@@ -305,6 +311,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mini PC (CPU فقط):** Qwen3 4B أو Phi-4-mini كخيار افتراضي سريع الاستجابة.',
           '**Mini PC مع GPU/NPU:** Qwen3 8B لأفضل جودة بزمن استجابة مقبول — راجع [أفضل mini PCs لـ Home Assistant + ذكاء اصطناعي محلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
+        image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
+        imageCaption: 'اختيارات النماذج حسب ميزانية الأجهزة: Raspberry Pi أو الأجهزة منخفضة الطاقة تشغّل Gemma 3 4B أو Qwen3 4B، وmini PC بـ CPU فقط يشغّل Qwen3 4B أو Phi-4-mini، وmini PC بـ GPU أو NPU يفتح المجال لتشغيل Qwen3 8B.',
       },
       howToPick: {
         id: 'how-to-pick',
@@ -477,6 +485,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Die Bedarfe sind ungefähr und hängen von der Quantisierung ab – für VRAM und Quantisierungs-Tiefe verlinken Sie auf den local-llms-Cluster.',
         ],
+        image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
+        imageCaption: 'RAM-Bedarf lokaler LLMs für die Smart-Home-Steuerung bei Q4-Quantisierung: Gemma 3 4B, Qwen3 4B und Phi-4-mini benötigen 2,5-3 GB, Qwen3 8B rund 5 GB.',
       },
       byBudget: {
         id: 'by-budget',
@@ -488,6 +498,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mini-PC (nur CPU):** Qwen3 4B oder Phi-4-mini als reaktionsschneller Standard.',
           '**Mini-PC mit GPU/NPU:** Qwen3 8B für die beste Qualität bei akzeptabler Latenz – siehe [beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
+        image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
+        imageCaption: 'Modellauswahl nach Hardware-Budget: Raspberry Pi oder stromsparende Hosts nutzen Gemma 3 4B oder Qwen3 4B, reine CPU-Mini-PCs nutzen Qwen3 4B oder Phi-4-mini, und ein Mini-PC mit GPU oder NPU ermöglicht Qwen3 8B.',
       },
       howToPick: {
         id: 'how-to-pick',
@@ -660,6 +672,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Las huellas son aproximadas y dependen de la cuantización — para VRAM y profundidad de cuantización, enlaza al clúster local-llms.',
         ],
+        image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
+        imageCaption: 'Huella de RAM de LLMs locales para el control del smart home con cuantización Q4: Gemma 3 4B, Qwen3 4B y Phi-4-mini necesitan 2,5-3 GB, y Qwen3 8B necesita unos 5 GB.',
       },
       byBudget: {
         id: 'by-budget',
@@ -671,6 +685,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mini PC (solo CPU):** Qwen3 4B o Phi-4-mini como predeterminado con buena respuesta.',
           '**Mini PC con GPU/NPU:** Qwen3 8B para la mejor calidad con latencia aceptable — consulta [mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
+        image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
+        imageCaption: 'Elecciones de modelo por presupuesto de hardware: Raspberry Pi o hosts de bajo consumo ejecutan Gemma 3 4B o Qwen3 4B, los mini PC solo-CPU ejecutan Qwen3 4B o Phi-4-mini, y un mini PC con GPU o NPU habilita Qwen3 8B.',
       },
       howToPick: {
         id: 'how-to-pick',
@@ -843,6 +859,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '풋프린트는 근사치이며 양자화에 따라 달라집니다. VRAM 및 양자화 심도는 local-llms 클러스터로 연결하십시오.',
         ],
+        image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
+        imageCaption: 'Q4 양자화 기준 스마트 홈 제어용 로컬 LLM RAM 사용량: Gemma 3 4B, Qwen3 4B, Phi-4-mini는 2.5-3GB, Qwen3 8B는 약 5GB가 필요합니다.',
       },
       byBudget: {
         id: 'by-budget',
@@ -854,6 +872,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**미니 PC (CPU 전용):** 반응이 빠른 기본값으로 Qwen3 4B 또는 Phi-4-mini.',
           '**GPU/NPU 탑재 미니 PC:** 허용 가능한 지연 시간으로 최고의 품질을 위해 Qwen3 8B — [Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai)를 참조하십시오.',
         ],
+        image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
+        imageCaption: '하드웨어 예산별 모델 선택: Raspberry Pi 또는 저전력 호스트는 Gemma 3 4B 또는 Qwen3 4B를, CPU 전용 미니 PC는 Qwen3 4B 또는 Phi-4-mini를, GPU 또는 NPU가 있는 미니 PC는 Qwen3 8B를 실행합니다.',
       },
       howToPick: {
         id: 'how-to-pick',
@@ -1026,6 +1046,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Les empreintes sont approximatives et dépendent de la quantification — pour la VRAM et la profondeur de quantification, renvoyez vers le cluster local-llms.',
         ],
+        image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
+        imageCaption: 'Empreinte RAM des LLM locaux pour le contrôle de la maison connectée en quantification Q4 : Gemma 3 4B, Qwen3 4B et Phi-4-mini nécessitent 2,5-3 Go, Qwen3 8B environ 5 Go.',
       },
       byBudget: {
         id: 'by-budget',
@@ -1037,6 +1059,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mini-PC (CPU seul) :** Qwen3 4B ou Phi-4-mini comme choix par défaut réactif.',
           '**Mini-PC avec GPU/NPU :** Qwen3 8B pour la meilleure qualité à une latence acceptable — voir [meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
+        image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
+        imageCaption: 'Choix de modèle par budget matériel : Raspberry Pi ou hôtes basse consommation utilisent Gemma 3 4B ou Qwen3 4B, les mini-PC CPU seul utilisent Qwen3 4B ou Phi-4-mini, et un mini-PC avec GPU ou NPU permet Qwen3 8B.',
       },
       howToPick: {
         id: 'how-to-pick',
@@ -1209,6 +1233,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'サイズは概算で、量子化に依存します——VRAM と量子化の詳細は local-llms クラスターへ外部リンク。',
         ],
+        image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
+        imageCaption: 'Q4量子化でのスマートホーム制御向けローカルLLMのRAM使用量：Gemma 3 4B、Qwen3 4B、Phi-4-miniは2.5〜3GB、Qwen3 8Bは約5GBが必要です。',
       },
       byBudget: {
         id: 'by-budget',
@@ -1220,6 +1246,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ミニPC（CPU のみ）：** 反応の良い既定として Qwen3 4B または Phi-4-mini。',
           '**GPU/NPU 付きミニPC：** 許容できるレイテンシで最高品質なら Qwen3 8B——[Home Assistant＋ローカルAIに最適なミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai)を参照。',
         ],
+        image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
+        imageCaption: 'ハードウェア予算別のモデル選択：Raspberry Piや低消費電力ホストはGemma 3 4BかQwen3 4Bを、CPUのみのミニPCはQwen3 4BかPhi-4-miniを、GPUまたはNPU付きミニPCはQwen3 8Bを動かせます。',
       },
       howToPick: {
         id: 'how-to-pick',
@@ -1392,6 +1420,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Os tamanhos são aproximados e dependem da quantização — para VRAM e profundidade de quantização, faça link externo para o cluster local-llms.',
         ],
+        image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
+        imageCaption: 'Uso de RAM de LLMs locais para o controle da casa inteligente com quantização Q4: Gemma 3 4B, Qwen3 4B e Phi-4-mini precisam de 2,5-3 GB, e o Qwen3 8B precisa de cerca de 5 GB.',
       },
       byBudget: {
         id: 'by-budget',
@@ -1403,6 +1433,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mini PC (só CPU):** Qwen3 4B ou Phi-4-mini como padrão responsivo.',
           '**Mini PC com GPU/NPU:** Qwen3 8B para a melhor qualidade com latência aceitável — veja [melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
+        image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
+        imageCaption: 'Escolhas de modelo por orçamento de hardware: Raspberry Pi ou hosts de baixo consumo rodam Gemma 3 4B ou Qwen3 4B, mini PCs só-CPU rodam Qwen3 4B ou Phi-4-mini, e um mini PC com GPU ou NPU permite rodar o Qwen3 8B.',
       },
       howToPick: {
         id: 'how-to-pick',
@@ -1575,6 +1607,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '占用为近似值，取决于量化——关于 VRAM 和量化细节，以外链指向 local-llms 集群。',
         ],
+        image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
+        imageCaption: '在 Q4 量化下用于智能家居控制的本地 LLM 内存占用：Gemma 3 4B、Qwen3 4B 和 Phi-4-mini 需要 2.5-3 GB，Qwen3 8B 约需 5 GB。',
       },
       byBudget: {
         id: 'by-budget',
@@ -1586,6 +1620,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**迷你 PC（仅 CPU）：** 以 Qwen3 4B 或 Phi-4-mini 作为响应良好的默认。',
           '**带 GPU/NPU 的迷你 PC：** 要在可接受延迟下获得最佳质量就用 Qwen3 8B——参见[Home Assistant + 本地 AI 的最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai)。',
         ],
+        image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
+        imageCaption: '按硬件预算的模型选择：Raspberry Pi 或低功耗主机运行 Gemma 3 4B 或 Qwen3 4B，仅 CPU 的迷你 PC 运行 Qwen3 4B 或 Phi-4-mini，带 GPU 或 NPU 的迷你 PC 可运行 Qwen3 8B。',
       },
       howToPick: {
         id: 'how-to-pick',
