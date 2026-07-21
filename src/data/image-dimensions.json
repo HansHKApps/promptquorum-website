@@ -8584,6 +8584,16 @@
     "width": 1200,
     "height": 675
   },
+  "/images/home-assistant-vs-alexa-vs-google-criteria-scorecard-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/home-assistant-vs-alexa-vs-google-decision-tree-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 430
+  },
   "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,

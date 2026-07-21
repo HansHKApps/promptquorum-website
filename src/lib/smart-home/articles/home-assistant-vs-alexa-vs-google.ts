@@ -98,6 +98,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Criterion': 'Cost', 'Home Assistant': 'Hardware + effort', 'Amazon Alexa': 'Low hardware', 'Google Home': 'Low hardware' },
           { 'Criterion': 'Effort', 'Home Assistant': 'Higher', 'Amazon Alexa': 'Low', 'Google Home': 'Low' },
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-criteria-scorecard-en.svg',
+        imageCaption: '7-criteria scorecard comparing Home Assistant, Amazon Alexa, and Google Home on privacy, local control, device support, voice, AI, cost, and effort — Home Assistant leads privacy, local control, and AI; Alexa and Google Home lead cost and effort.',
       },
       privacyWinner: {
         id: 'privacy-winner',
@@ -143,6 +145,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Best private AI:** Home Assistant with a local LLM.',
           '**Want the full platform comparison?** See [smart home ecosystems compared](/smart-home/smart-home-ecosystems-compared).',
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-decision-tree-en.svg',
+        imageCaption: 'Decision tree for choosing Home Assistant, Amazon Alexa, or Google Home: privacy-first users pick Home Assistant, convenience-first users pick Google Home or Amazon Alexa based on ecosystem preference.',
       },
       faqSection: {
         id: 'faq',
@@ -289,6 +293,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'المعيار': 'التكلفة', 'Home Assistant': 'جهاز + جهد', 'Amazon Alexa': 'جهاز رخيص', 'Google Home': 'جهاز رخيص' },
           { 'المعيار': 'الجهد', 'Home Assistant': 'أعلى', 'Amazon Alexa': 'منخفض', 'Google Home': 'منخفض' },
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-criteria-scorecard-en.svg',
+        imageCaption: 'بطاقة تقييم من 7 معايير تقارن Home Assistant وAmazon Alexa وGoogle Home في الخصوصية والتحكم المحلي ودعم الأجهزة والصوت والذكاء الاصطناعي والتكلفة والجهد — يتصدر Home Assistant الخصوصية والتحكم المحلي والذكاء الاصطناعي، بينما يتصدر Alexa وGoogle Home التكلفة والجهد.',
       },
       privacyWinner: {
         id: 'privacy-winner',
@@ -334,6 +340,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**أفضل ذكاء اصطناعي خاص:** Home Assistant مع نموذج LLM محلي.',
           '**تريد المقارنة الكاملة للمنصات؟** راجع [مقارنة أنظمة المنزل الذكي](/ar/smart-home/smart-home-ecosystems-compared).',
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-decision-tree-en.svg',
+        imageCaption: 'شجرة قرار لاختيار Home Assistant أو Amazon Alexa أو Google Home: من يهتم بالخصوصية يختار Home Assistant، ومن يهتم بالسهولة يختار Google Home أو Amazon Alexa حسب تفضيل النظام البيئي.',
       },
       faqSection: {
         id: 'faq',
@@ -480,6 +488,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Kriterium': 'Kosten', 'Home Assistant': 'Hardware + Aufwand', 'Amazon Alexa': 'Günstige Hardware', 'Google Home': 'Günstige Hardware' },
           { 'Kriterium': 'Aufwand', 'Home Assistant': 'Höher', 'Amazon Alexa': 'Niedrig', 'Google Home': 'Niedrig' },
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-criteria-scorecard-en.svg',
+        imageCaption: 'Scorecard mit 7 Kriterien für Home Assistant, Amazon Alexa und Google Home: Datenschutz, lokale Steuerung, Geräteunterstützung, Sprache, KI, Kosten und Aufwand — Home Assistant führt bei Datenschutz, lokaler Steuerung und KI, Alexa und Google Home führen bei Kosten und Aufwand.',
       },
       privacyWinner: {
         id: 'privacy-winner',
@@ -525,6 +535,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Beste private KI:** Home Assistant mit einem lokalen LLM.',
           '**Wollen Sie den vollständigen Plattformvergleich?** Siehe [Smart-Home-Ökosysteme im Vergleich](/de/smart-home/smart-home-ecosystems-compared).',
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-decision-tree-en.svg',
+        imageCaption: 'Entscheidungsbaum für die Wahl zwischen Home Assistant, Amazon Alexa und Google Home: Datenschutzorientierte wählen Home Assistant, komfortorientierte Nutzer wählen Google Home oder Amazon Alexa je nach bevorzugtem Ökosystem.',
       },
       faqSection: {
         id: 'faq',
@@ -671,6 +683,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Criterio': 'Coste', 'Home Assistant': 'Hardware + esfuerzo', 'Amazon Alexa': 'Hardware barato', 'Google Home': 'Hardware barato' },
           { 'Criterio': 'Esfuerzo', 'Home Assistant': 'Mayor', 'Amazon Alexa': 'Bajo', 'Google Home': 'Bajo' },
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-criteria-scorecard-en.svg',
+        imageCaption: 'Ficha de puntuación de 7 criterios que compara Home Assistant, Amazon Alexa y Google Home en privacidad, control local, soporte de dispositivos, voz, IA, coste y esfuerzo — Home Assistant lidera en privacidad, control local e IA; Alexa y Google Home lideran en coste y esfuerzo.',
       },
       privacyWinner: {
         id: 'privacy-winner',
@@ -716,6 +730,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mejor IA privada:** Home Assistant con un LLM local.',
           '**¿Quieres la comparación completa de plataformas?** Consulta [ecosistemas de smart home comparados](/es/smart-home/smart-home-ecosystems-compared).',
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-decision-tree-en.svg',
+        imageCaption: 'Árbol de decisión para elegir entre Home Assistant, Amazon Alexa y Google Home: quienes priorizan la privacidad eligen Home Assistant, quienes priorizan la comodidad eligen Google Home o Amazon Alexa según su ecosistema preferido.',
       },
       faqSection: {
         id: 'faq',
@@ -862,6 +878,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '기준': '비용', 'Home Assistant': '하드웨어 + 노력', 'Amazon Alexa': '저렴한 하드웨어', 'Google Home': '저렴한 하드웨어' },
           { '기준': '노력', 'Home Assistant': '높음', 'Amazon Alexa': '낮음', 'Google Home': '낮음' },
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-criteria-scorecard-en.svg',
+        imageCaption: 'Home Assistant, Amazon Alexa, Google Home을 개인정보 보호, 로컬 제어, 기기 지원, 음성, AI, 비용, 노력 등 7가지 기준으로 비교한 점수표 — Home Assistant는 개인정보 보호, 로컬 제어, AI에서 앞서고 Alexa와 Google Home은 비용과 노력에서 앞섭니다.',
       },
       privacyWinner: {
         id: 'privacy-winner',
@@ -907,6 +925,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**최고의 사적 AI:** 로컬 LLM을 갖춘 Home Assistant.',
           '**전체 플랫폼 비교를 원합니까?** [스마트 홈 생태계 비교](/ko/smart-home/smart-home-ecosystems-compared)를 참조하십시오.',
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-decision-tree-en.svg',
+        imageCaption: 'Home Assistant, Amazon Alexa, Google Home 중 선택하는 의사 결정 트리: 개인정보 보호를 우선하면 Home Assistant, 편의성을 우선하면 선호하는 생태계에 따라 Google Home 또는 Amazon Alexa를 선택합니다.',
       },
       faqSection: {
         id: 'faq',
@@ -1053,6 +1073,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Critère': 'Coût', 'Home Assistant': 'Matériel + effort', 'Amazon Alexa': 'Matériel bon marché', 'Google Home': 'Matériel bon marché' },
           { 'Critère': 'Effort', 'Home Assistant': 'Plus élevé', 'Amazon Alexa': 'Faible', 'Google Home': 'Faible' },
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-criteria-scorecard-en.svg',
+        imageCaption: 'Grille d\'évaluation sur 7 critères comparant Home Assistant, Amazon Alexa et Google Home : confidentialité, contrôle local, prise en charge des appareils, voix, IA, coût et effort — Home Assistant mène sur la confidentialité, le contrôle local et l\'IA ; Alexa et Google Home mènent sur le coût et l\'effort.',
       },
       privacyWinner: {
         id: 'privacy-winner',
@@ -1098,6 +1120,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Meilleure IA privée :** Home Assistant avec un LLM local.',
           '**Vous voulez la comparaison complète des plateformes ?** Voir [écosystèmes de maison connectée comparés](/fr/smart-home/smart-home-ecosystems-compared).',
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-decision-tree-en.svg',
+        imageCaption: 'Arbre de décision pour choisir entre Home Assistant, Amazon Alexa et Google Home : les utilisateurs axés confidentialité choisissent Home Assistant, ceux qui privilégient la commodité choisissent Google Home ou Amazon Alexa selon l\'écosystème préféré.',
       },
       faqSection: {
         id: 'faq',
@@ -1244,6 +1268,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '基準': 'コスト', 'Home Assistant': 'ハードウェア＋手間', 'Amazon Alexa': '安価なハードウェア', 'Google Home': '安価なハードウェア' },
           { '基準': '手間', 'Home Assistant': '多い', 'Amazon Alexa': '少ない', 'Google Home': '少ない' },
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-criteria-scorecard-en.svg',
+        imageCaption: 'Home Assistant、Amazon Alexa、Google Home をプライバシー、ローカル制御、機器対応、音声、AI、コスト、手間の7基準で比較したスコアカード——Home Assistant はプライバシー・ローカル制御・AI で先行し、Alexa と Google Home はコストと手間で先行します。',
       },
       privacyWinner: {
         id: 'privacy-winner',
@@ -1289,6 +1315,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**最良のプライベートAI：** ローカルLLM 付きの Home Assistant。',
           '**プラットフォームの完全比較が欲しい？** [スマートホームのエコシステム比較](/ja/smart-home/smart-home-ecosystems-compared)を参照。',
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-decision-tree-en.svg',
+        imageCaption: 'Home Assistant、Amazon Alexa、Google Home のどれを選ぶかの決定木——プライバシー重視なら Home Assistant、利便性重視なら好みのエコシステムに応じて Google Home か Amazon Alexa を選びます。',
       },
       faqSection: {
         id: 'faq',
@@ -1435,6 +1463,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Critério': 'Custo', 'Home Assistant': 'Hardware + esforço', 'Amazon Alexa': 'Hardware barato', 'Google Home': 'Hardware barato' },
           { 'Critério': 'Esforço', 'Home Assistant': 'Maior', 'Amazon Alexa': 'Baixo', 'Google Home': 'Baixo' },
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-criteria-scorecard-en.svg',
+        imageCaption: 'Placar com 7 critérios comparando Home Assistant, Amazon Alexa e Google Home em privacidade, controle local, suporte a dispositivos, voz, IA, custo e esforço — o Home Assistant lidera em privacidade, controle local e IA; Alexa e Google Home lideram em custo e esforço.',
       },
       privacyWinner: {
         id: 'privacy-winner',
@@ -1480,6 +1510,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Melhor IA privada:** Home Assistant com um LLM local.',
           '**Quer a comparação completa de plataformas?** Veja [ecossistemas de casa inteligente comparados](/pt/smart-home/smart-home-ecosystems-compared).',
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-decision-tree-en.svg',
+        imageCaption: 'Árvore de decisão para escolher entre Home Assistant, Amazon Alexa e Google Home: quem prioriza privacidade escolhe Home Assistant, quem prioriza comodidade escolhe Google Home ou Amazon Alexa conforme o ecossistema preferido.',
       },
       faqSection: {
         id: 'faq',
@@ -1626,6 +1658,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '标准': '成本', 'Home Assistant': '硬件 + 投入', 'Amazon Alexa': '硬件便宜', 'Google Home': '硬件便宜' },
           { '标准': '投入', 'Home Assistant': '更多', 'Amazon Alexa': '低', 'Google Home': '低' },
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-criteria-scorecard-en.svg',
+        imageCaption: '涵盖隐私、本地控制、设备支持、语音、AI、成本和投入这 7 项标准的评分卡，对比 Home Assistant、Amazon Alexa 和 Google Home——Home Assistant 在隐私、本地控制和 AI 上领先，Alexa 和 Google Home 在成本和投入上领先。',
       },
       privacyWinner: {
         id: 'privacy-winner',
@@ -1671,6 +1705,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**最佳私密 AI：** 带本地 LLM 的 Home Assistant。',
           '**想要完整的平台对比？** 参见[智能家居生态系统对比](/zh/smart-home/smart-home-ecosystems-compared)。',
         ],
+        image: '/images/home-assistant-vs-alexa-vs-google-decision-tree-en.svg',
+        imageCaption: '在 Home Assistant、Amazon Alexa 和 Google Home 之间做选择的决策树：注重隐私的用户选择 Home Assistant，注重便利的用户根据偏好的生态系统选择 Google Home 或 Amazon Alexa。',
       },
       faqSection: {
         id: 'faq',
