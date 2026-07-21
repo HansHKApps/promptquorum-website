@@ -15654,15 +15654,80 @@
     "width": 800,
     "height": 420
   },
-  "/images/qwen-coder-deepseek-mistral-dispatch-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 460
+  "/images/qwen-coder-deepseek-mistral-dispatch-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
-  "/images/qwen-coder-deepseek-mistral-swe-bench-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
+  "/images/qwen-coder-deepseek-mistral-dispatch-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-coder-deepseek-mistral-dispatch-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-coder-deepseek-mistral-dispatch-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-coder-deepseek-mistral-dispatch-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-coder-deepseek-mistral-dispatch-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-coder-deepseek-mistral-swe-bench-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-coder-deepseek-mistral-swe-bench-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-coder-deepseek-mistral-swe-bench-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-coder-deepseek-mistral-swe-bench-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-coder-deepseek-mistral-swe-bench-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-coder-deepseek-mistral-swe-bench-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-coder-deepseek-mistral-swe-bench-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-coder-deepseek-mistral-swe-bench-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-coder-deepseek-mistral-swe-bench-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/qwen-llama-mistral-benchmarks-de.svg": {
     "encodingFormat": "image/svg+xml",
