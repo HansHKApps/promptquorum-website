@@ -1,0 +1,59 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">WeChat Bot Architecture: Message to Reply</text>
+
+  <line x1="18" y1="40" x2="782" y2="40" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Step 1 -->
+  <circle cx="72" cy="100" r="22" fill="#6750A4"/>
+  <text x="72" y="108" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="72" y="145" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">WeChat message</text>
+  <text x="72" y="163" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">"@ai" trigger</text>
+
+  <text x="126" y="108" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4">→</text>
+
+  <!-- Step 2 -->
+  <circle cx="212" cy="100" r="22" fill="#6750A4"/>
+  <text x="212" y="108" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="212" y="145" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">WeChatFerry hook</text>
+  <text x="212" y="163" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">DLL injection (Windows)</text>
+
+  <text x="266" y="108" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4">→</text>
+
+  <!-- Step 3 -->
+  <circle cx="352" cy="100" r="22" fill="#6750A4"/>
+  <text x="352" y="108" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="352" y="145" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Python bridge</text>
+  <text x="352" y="163" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">wechat_bot.py routes msg</text>
+
+  <text x="406" y="108" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4">→</text>
+
+  <!-- Step 4 -->
+  <circle cx="492" cy="100" r="22" fill="#6750A4"/>
+  <text x="492" y="108" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="492" y="145" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ollama / Qwen3:8b</text>
+  <text x="492" y="163" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">localhost:11434/api/chat</text>
+
+  <text x="546" y="108" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4">→</text>
+
+  <!-- Step 5 -->
+  <circle cx="632" cy="100" r="22" fill="#34A853"/>
+  <text x="632" y="108" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="632" y="145" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Reply sent</text>
+  <text x="632" y="163" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">wcf.send_text() — 3–10s</text>
+
+  <text x="686" y="108" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#34A853">✓</text>
+
+  <line x1="18" y1="195" x2="782" y2="195" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Privacy boundary box -->
+  <rect x="30" y="215" width="740" height="80" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="400" y="240" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Everything inside this box runs on one Windows PC</text>
+  <text x="400" y="262" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">WeChat client, WeChatFerry, the Python bridge, and Ollama all run locally.</text>
+  <text x="400" y="280" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">No message text or conversation history is sent to any cloud API.</text>
+
+  <!-- Footer -->
+  <line x1="18" y1="320" x2="782" y2="320" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="345" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Five-stage local pipeline: WeChat client to WeChatFerry to Python bridge to Ollama (Qwen3:8b) and back — 3–10 second round trip on GPU.</text>
+<text x="792" y="355" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

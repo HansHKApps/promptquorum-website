@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Best Local Models for Chinese WeChat Replies (CPU Speed)</text>
+  <line x1="230" y1="300" x2="740" y2="300" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="220" y="79" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Qwen3:3b</text>
+  <rect x="230" y="60" width="400" height="24" fill="#34A853" rx="4"/>
+  <text x="638" y="77" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">8–12 tok/s — fastest</text>
+
+  <text x="220" y="129" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Qwen3:8b</text>
+  <rect x="230" y="110" width="160" height="24" fill="#6750A4" rx="4"/>
+  <text x="398" y="127" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">3–5 tok/s — recommended</text>
+
+  <text x="220" y="179" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Llama3.1:8b</text>
+  <rect x="230" y="160" width="160" height="24" fill="#7D5260" rx="4"/>
+  <text x="398" y="177" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">3–5 tok/s — moderate Chinese</text>
+
+  <text x="220" y="229" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Qwen3:14b</text>
+  <rect x="230" y="210" width="60" height="24" fill="#F4B400" rx="4"/>
+  <text x="298" y="227" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">1–2 tok/s — best quality</text>
+
+  <text x="400" y="333" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Qwen3:8b balances Chinese comprehension and CPU speed best for a WeChat bot; Qwen3:3b is faster but less</text>
+  <text x="400" y="349" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">capable, and Qwen3:14b is highest quality but too slow for real-time replies without a GPU.</text>
+<text x="792" y="355" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
