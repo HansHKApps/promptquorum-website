@@ -59,6 +59,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         heading: 'What This Guide Builds',
         body: 'This guide walks through building a personal AI assistant inside WeChat that:\n\n1. Monitors your WeChat messages in real-time\n2. Passes incoming messages to a local Ollama model\n3. Returns AI-generated replies within 3–10 seconds\n4. Maintains conversation context across multiple turns\n5. Can be triggered by a keyword (e.g., "@ai") to avoid responding to all messages\n\nThe setup runs on a Windows PC or Windows virtual machine. macOS is not supported by WeChatFerry. The local LLM runs via Ollama — no cloud API keys required.',
+        image: '/images/wechat-bot-architecture-flow-en.svg',
+        imageCaption: 'WeChat bot architecture: WeChat message triggers WeChatFerry (Windows DLL injection), routed through a Python bridge to Ollama running Qwen3:8b, with a 3–10 second reply — all five stages run locally with no cloud API call.',
       },
       requirements: {
         heading: 'Requirements',
@@ -104,6 +106,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       modelChoice: {
         heading: 'Best Local Models for Chinese WeChat Conversations',
         body: 'Model choice significantly affects response quality for Chinese-language messages.',
+        image: '/images/wechat-bot-model-speed-chinese-en.svg',
+        imageCaption: 'CPU speed by model for Chinese WeChat replies: Qwen3:3b runs fastest at 8–12 tok/s, Qwen3:8b balances quality and speed at 3–5 tok/s, Llama3.1:8b matches that speed with weaker Chinese, and Qwen3:14b is highest quality at 1–2 tok/s.',
         columns: ['Model', 'Size', 'Chinese Quality', 'Speed (CPU)', 'Speed (8GB VRAM)'],
         rows: [
           { 'Model': 'Qwen3:8b', 'Size': '4.7 GB', 'Chinese Quality': 'Excellent', 'Speed (CPU)': '3–5 tok/s', 'Speed (8GB VRAM)': '30–45 tok/s' },
@@ -244,6 +248,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         heading: 'Was diese Anleitung baut',
         body: 'Diese Anleitung zeigt Schritt für Schritt, wie ein persönlicher KI-Assistent innerhalb von WeChat entsteht, der:\n\n1. WeChat-Nachrichten in Echtzeit überwacht\n2. Eingehende Nachrichten an ein lokales Ollama-Modell weiterleitet\n3. KI-generierte Antworten innerhalb von 3–10 Sekunden zurückgibt\n4. Den Gesprächskontext über mehrere Runden hinweg beibehält\n5. Durch ein Schlüsselwort (z. B. "@ai") ausgelöst werden kann, um nicht auf jede Nachricht zu antworten\n\nDas Setup läuft auf einem Windows-PC oder einer Windows-VM. macOS wird von WeChatFerry nicht unterstützt. Das lokale LLM läuft über Ollama — keine Cloud-API-Schlüssel erforderlich.',
+        image: '/images/wechat-bot-architecture-flow-en.svg',
+        imageCaption: 'WeChat-Bot-Architektur: WeChat-Nachricht löst WeChatFerry (Windows-DLL-Injektion) aus, geleitet über eine Python-Brücke an Ollama mit Qwen3:8b, Antwort in 3–10 Sekunden — alle fünf Stufen laufen lokal ohne Cloud-API-Aufruf.',
       },
       requirements: {
         heading: 'Voraussetzungen',
@@ -289,6 +295,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       modelChoice: {
         heading: 'Beste lokale Modelle für chinesische WeChat-Gespräche',
         body: 'Die Modellwahl beeinflusst die Antwortqualität bei chinesischsprachigen Nachrichten erheblich.',
+        image: '/images/wechat-bot-model-speed-chinese-en.svg',
+        imageCaption: 'CPU-Geschwindigkeit je Modell für chinesische WeChat-Antworten: Qwen3:3b am schnellsten mit 8–12 Tok/s, Qwen3:8b balanciert Qualität und Geschwindigkeit mit 3–5 Tok/s, Llama3.1:8b gleich schnell mit schwächerem Chinesisch, Qwen3:14b beste Qualität mit 1–2 Tok/s.',
         columns: ['Modell', 'Größe', 'Chinesisch-Qualität', 'Geschwindigkeit (CPU)', 'Geschwindigkeit (8 GB VRAM)'],
         rows: [
           { 'Modell': 'Qwen3:8b', 'Größe': '4,7 GB', 'Chinesisch-Qualität': 'Ausgezeichnet', 'Geschwindigkeit (CPU)': '3–5 Tok/s', 'Geschwindigkeit (8 GB VRAM)': '30–45 Tok/s' },
@@ -396,6 +404,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         heading: 'Ce que construit ce guide',
         body: 'Ce guide explique étape par étape comment créer un assistant IA personnel dans WeChat qui :\n\n1. Surveille vos messages WeChat en temps réel\n2. Transmet les messages entrants à un modèle Ollama local\n3. Renvoie des réponses générées par IA en 3–10 secondes\n4. Maintient le contexte de la conversation sur plusieurs tours\n5. Peut être déclenché par un mot-clé (par exemple "@ai") pour éviter de répondre à tous les messages\n\nLa configuration s\'exécute sur un PC Windows ou une machine virtuelle Windows. macOS n\'est pas pris en charge par WeChatFerry. Le LLM local s\'exécute via Ollama — aucune clé API cloud n\'est nécessaire.',
+        image: '/images/wechat-bot-architecture-flow-en.svg',
+        imageCaption: 'Architecture du bot WeChat : le message WeChat déclenche WeChatFerry (injection DLL Windows), routé via un pont Python vers Ollama exécutant Qwen3:8b, réponse en 3–10 secondes — les cinq étapes tournent localement sans appel API cloud.',
       },
       requirements: {
         heading: 'Prérequis',
@@ -441,6 +451,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       modelChoice: {
         heading: 'Meilleurs modèles locaux pour les conversations WeChat en chinois',
         body: 'Le choix du modèle affecte considérablement la qualité des réponses aux messages en chinois.',
+        image: '/images/wechat-bot-model-speed-chinese-en.svg',
+        imageCaption: 'Vitesse CPU par modèle pour les réponses WeChat en chinois : Qwen3:3b le plus rapide à 8–12 tok/s, Qwen3:8b équilibre qualité et vitesse à 3–5 tok/s, Llama3.1:8b même vitesse avec un chinois plus faible, Qwen3:14b meilleure qualité à 1–2 tok/s.',
         columns: ['Modèle', 'Taille', 'Qualité en chinois', 'Vitesse (CPU)', 'Vitesse (8 Go VRAM)'],
         rows: [
           { 'Modèle': 'Qwen3:8b', 'Taille': '4,7 Go', 'Qualité en chinois': 'Excellente', 'Vitesse (CPU)': '3–5 tok/s', 'Vitesse (8 Go VRAM)': '30–45 tok/s' },
@@ -548,6 +560,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         heading: '本ガイドで構築するもの',
         body: '本ガイドでは、WeChat内に以下を行う個人AIアシスタントを構築する手順を説明します：\n\n1. WeChatメッセージをリアルタイムで監視\n2. 受信メッセージをローカルOllamaモデルに送信\n3. 3〜10秒以内にAI生成の返信を返す\n4. 複数ターンにわたって会話コンテキストを維持\n5. キーワード（例："@ai"）でトリガーし、すべてのメッセージへの応答を回避\n\nセットアップはWindows PCまたはWindows仮想マシン上で動作します。macOSはWeChatFerryでサポートされていません。ローカルLLMはOllama経由で動作します——クラウドAPIキーは不要です。',
+        image: '/images/wechat-bot-architecture-flow-en.svg',
+        imageCaption: 'WeChatボットのアーキテクチャ：WeChatメッセージがWeChatFerry（WindowsのDLLインジェクション）をトリガーし、Pythonブリッジ経由でQwen3:8bを実行するOllamaにルーティング、3〜10秒で返信——5段階すべてがローカルで完結しクラウドAPI呼び出しはありません。',
       },
       requirements: {
         heading: '必要条件',
@@ -593,6 +607,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       modelChoice: {
         heading: '中国語WeChat会話向けの最良ローカルモデル',
         body: 'モデル選択は中国語メッセージの応答品質に大きく影響します。',
+        image: '/images/wechat-bot-model-speed-chinese-en.svg',
+        imageCaption: '中国語WeChat応答のモデル別CPU速度：Qwen3:3bが最速で8〜12 tok/s、Qwen3:8bは品質と速度のバランスが良く3〜5 tok/s、Llama3.1:8bは同速度で中国語品質はやや劣り、Qwen3:14bは最高品質で1〜2 tok/s。',
         columns: ['モデル', 'サイズ', '中国語品質', '速度（CPU）', '速度（8GB VRAM）'],
         rows: [
           { 'モデル': 'Qwen3:8b', 'サイズ': '4.7GB', '中国語品質': '優秀', '速度（CPU）': '3–5 tok/s', '速度（8GB VRAM）': '30–45 tok/s' },
@@ -706,6 +722,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         heading: '本教程搭建的功能',
         body: '本教程将帮助你在微信内搭建一个AI私人助理，功能如下：\n\n1. 实时监控你的微信消息\n2. 将传入消息发送给本地Ollama模型\n3. 在3–10秒内返回AI生成的回复\n4. 跨多轮对话保持上下文\n5. 通过关键词触发（如"@ai"），避免对所有消息自动回复',
+        image: '/images/wechat-bot-architecture-flow-en.svg',
+        imageCaption: '微信机器人架构：微信消息触发WeChatFerry（Windows DLL注入），通过Python桥接路由至运行Qwen3:8b的Ollama，3–10秒内返回回复——全部五个环节均在本地运行，无需调用云端API。',
       },
       requirements: {
         heading: '前置要求',
@@ -751,6 +769,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       modelChoice: {
         heading: '微信中文对话的最佳本地模型',
         body: '模型选择对中文消息的回复质量影响显著。',
+        image: '/images/wechat-bot-model-speed-chinese-en.svg',
+        imageCaption: '微信中文回复各模型CPU速度对比：Qwen3:3b最快达8–12 tok/s，Qwen3:8b在质量与速度间取得最佳平衡为3–5 tok/s，Llama3.1:8b速度相同但中文能力较弱，Qwen3:14b质量最佳但仅1–2 tok/s。',
         columns: ['模型', '大小', '中文质量', 'CPU速度', '8GB显存速度'],
         rows: [
           { '模型': 'Qwen3:8b', '大小': '4.7 GB', '中文质量': '优秀', 'CPU速度': '3–5 tok/s', '8GB显存速度': '30–45 tok/s' },
@@ -883,6 +903,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         heading: 'Qué construye esta guía',
         body: 'Esta guía explica paso a paso cómo crear un asistente de IA personal dentro de WeChat que:\n\n1. Monitorea tus mensajes de WeChat en tiempo real\n2. Envía los mensajes entrantes a un modelo Ollama local\n3. Devuelve respuestas generadas por IA en 3–10 segundos\n4. Mantiene el contexto de la conversación a lo largo de varios turnos\n5. Puede activarse con una palabra clave (por ejemplo, "@ai") para evitar responder a todos los mensajes\n\nLa configuración se ejecuta en un PC con Windows o en una máquina virtual Windows. macOS no es compatible con WeChatFerry. El LLM local se ejecuta a través de Ollama — no se necesitan claves de API en la nube.',
+        image: '/images/wechat-bot-architecture-flow-en.svg',
+        imageCaption: 'Arquitectura del bot de WeChat: el mensaje de WeChat activa WeChatFerry (inyección de DLL en Windows), se enruta mediante un puente en Python a Ollama ejecutando Qwen3:8b, con respuesta en 3–10 segundos — las cinco etapas se ejecutan localmente sin llamadas a API en la nube.',
       },
       requirements: {
         heading: 'Requisitos',
@@ -928,6 +950,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       modelChoice: {
         heading: 'Mejores modelos locales para conversaciones de WeChat en chino',
         body: 'La elección del modelo afecta significativamente la calidad de las respuestas a mensajes en chino.',
+        image: '/images/wechat-bot-model-speed-chinese-en.svg',
+        imageCaption: 'Velocidad de CPU por modelo para respuestas de WeChat en chino: Qwen3:3b es el más rápido con 8–12 tok/s, Qwen3:8b equilibra calidad y velocidad con 3–5 tok/s, Llama3.1:8b iguala la velocidad con peor chino, y Qwen3:14b ofrece la mejor calidad a 1–2 tok/s.',
         columns: ['Modelo', 'Tamaño', 'Calidad en chino', 'Velocidad (CPU)', 'Velocidad (8 GB VRAM)'],
         rows: [
           { 'Modelo': 'Qwen3:8b', 'Tamaño': '4,7 GB', 'Calidad en chino': 'Excelente', 'Velocidad (CPU)': '3–5 tok/s', 'Velocidad (8 GB VRAM)': '30–45 tok/s' },
@@ -1084,6 +1108,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         heading: '이 가이드가 만드는 것',
         body: '이 가이드는 WeChat 내에서 개인 AI 비서를 만드는 방법을 단계별로 설명합니다:\n\n1. 실시간으로 WeChat 메시지를 모니터링\n2. 들어오는 메시지를 로컬 Ollama 모델로 전송\n3. 3–10초 내에 AI 생성 응답 반환\n4. 여러 턴에 걸쳐 대화 컨텍스트 유지\n5. 모든 메시지에 응답하지 않도록 키워드(예: "@ai")로 활성화 가능\n\n설정은 Windows PC 또는 Windows 가상 머신에서 실행됩니다. macOS는 WeChatFerry와 호환되지 않습니다. 로컬 LLM은 Ollama를 통해 실행됩니다 — 클라우드 API 키가 필요하지 않습니다.',
+        image: '/images/wechat-bot-architecture-flow-en.svg',
+        imageCaption: 'WeChat 봇 아키텍처: WeChat 메시지가 WeChatFerry(Windows DLL 주입)를 트리거하고, Python 브리지를 거쳐 Qwen3:8b를 실행하는 Ollama로 라우팅되며, 3–10초 내에 응답합니다 — 5단계 모두 클라우드 API 호출 없이 로컬에서 실행됩니다.',
       },
       requirements: {
         heading: '요구 사항',
@@ -1129,6 +1155,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       modelChoice: {
         heading: '중국어 WeChat 대화를 위한 최고의 로컬 모델',
         body: '모델 선택이 중국어 메시지 응답 품질에 크게 영향을 미칩니다.',
+        image: '/images/wechat-bot-model-speed-chinese-en.svg',
+        imageCaption: '중국어 WeChat 응답을 위한 모델별 CPU 속도: Qwen3:3b가 8–12 tok/s로 가장 빠르고, Qwen3:8b는 3–5 tok/s로 품질과 속도의 균형이 좋으며, Llama3.1:8b는 같은 속도지만 중국어 품질이 낮고, Qwen3:14b는 1–2 tok/s로 품질이 가장 우수합니다.',
         columns: ['모델', '크기', '중국어 품질', '속도 (CPU)', '속도 (8 GB VRAM)'],
         rows: [
           { '모델': 'Qwen3:8b', '크기': '4.7 GB', '중국어 품질': '우수', '속도 (CPU)': '3–5 tok/s', '속도 (8 GB VRAM)': '30–45 tok/s' },
@@ -1285,6 +1313,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         heading: 'O que este guia constrói',
         body: 'Este guia explica passo a passo como criar um assistente de IA pessoal dentro do WeChat que:\n\n1. Monitora suas mensagens do WeChat em tempo real\n2. Envia as mensagens recebidas para um modelo Ollama local\n3. Retorna respostas geradas por IA em 3–10 segundos\n4. Mantém o contexto da conversa ao longo de vários turnos\n5. Pode ser ativado por uma palavra-chave (por exemplo, "@ai") para evitar responder a todas as mensagens\n\nA configuração é executada em um PC com Windows ou em uma máquina virtual Windows. macOS não é compatível com o WeChatFerry. O LLM local é executado por meio do Ollama — não são necessárias chaves de API na nuvem.',
+        image: '/images/wechat-bot-architecture-flow-en.svg',
+        imageCaption: 'Arquitetura do bot de WeChat: a mensagem do WeChat aciona o WeChatFerry (injeção de DLL no Windows), roteada por uma ponte em Python até o Ollama executando o Qwen3:8b, com resposta em 3–10 segundos — as cinco etapas rodam localmente, sem chamadas a API na nuvem.',
       },
       requirements: {
         heading: 'Requisitos',
@@ -1330,6 +1360,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       modelChoice: {
         heading: 'Melhores modelos locais para conversas de WeChat em chinês',
         body: 'A escolha do modelo afeta significativamente a qualidade das respostas a mensagens em chinês.',
+        image: '/images/wechat-bot-model-speed-chinese-en.svg',
+        imageCaption: 'Velocidade de CPU por modelo para respostas de WeChat em chinês: o Qwen3:3b é o mais rápido com 8–12 tok/s, o Qwen3:8b equilibra qualidade e velocidade com 3–5 tok/s, o Llama3.1:8b iguala a velocidade com chinês mais fraco, e o Qwen3:14b tem a melhor qualidade a 1–2 tok/s.',
         columns: ['Modelo', 'Tamanho', 'Qualidade em chinês', 'Velocidade (CPU)', 'Velocidade (8 GB VRAM)'],
         rows: [
           { 'Modelo': 'Qwen3:8b', 'Tamanho': '4,7 GB', 'Qualidade em chinês': 'Excelente', 'Velocidade (CPU)': '3–5 tok/s', 'Velocidade (8 GB VRAM)': '30–45 tok/s' },
@@ -1487,6 +1519,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       overview: {
         heading: 'ما الذي يبنيه هذا الدليل',
         body: 'يشرح هذا الدليل خطوة بخطوة كيفية إنشاء مساعد ذكاء اصطناعي شخصي داخل WeChat يقوم بما يلي:\n\n1. مراقبة رسائل WeChat في الوقت الفعلي\n2. إرسال الرسائل الواردة إلى نموذج Ollama المحلي\n3. إعادة الردود التي يولدها الذكاء الاصطناعي في غضون 3–10 ثوانٍ\n4. الحفاظ على سياق المحادثة عبر أدوار متعددة\n5. التفعيل بكلمة مفتاحية (مثل "@ai") لتجنب الرد على جميع الرسائل\n\nيعمل الإعداد على حاسوب يعمل بنظام Windows أو آلة افتراضية بـ Windows. لا يتوافق WeChatFerry مع macOS. يعمل النموذج اللغوي المحلي عبر Ollama — لا حاجة لمفاتيح API سحابية.',
+        image: '/images/wechat-bot-architecture-flow-en.svg',
+        imageCaption: 'بنية بوت WeChat: تُشغّل رسالة WeChat أداة WeChatFerry (حقن DLL على Windows)، ثم يُوجَّه الطلب عبر جسر Python إلى Ollama الذي يُشغّل Qwen3:8b، مع رد خلال 3–10 ثوانٍ — تعمل جميع المراحل الخمس محليًا دون أي استدعاء API سحابي.',
       },
       requirements: {
         heading: 'المتطلبات',
@@ -1532,6 +1566,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       modelChoice: {
         heading: 'أفضل النماذج المحلية لمحادثات WeChat باللغة الصينية',
         body: 'يؤثر اختيار النموذج بشكل كبير على جودة الردود على الرسائل باللغة الصينية.',
+        image: '/images/wechat-bot-model-speed-chinese-en.svg',
+        imageCaption: 'سرعة المعالج لكل نموذج في ردود WeChat باللغة الصينية: Qwen3:3b الأسرع بمعدل 8–12 رمز/ثانية، وQwen3:8b يوازن الجودة والسرعة بمعدل 3–5 رمز/ثانية، وLlama3.1:8b بنفس السرعة مع جودة صينية أضعف، وQwen3:14b الأفضل جودة بمعدل 1–2 رمز/ثانية.',
         columns: ['النموذج', 'الحجم', 'جودة اللغة الصينية', 'السرعة (CPU)', 'السرعة (8 GB VRAM)'],
         rows: [
           { 'النموذج': 'Qwen3:8b', 'الحجم': '4.7 GB', 'جودة اللغة الصينية': 'ممتازة', 'السرعة (CPU)': '3–5 رمز/ثانية', 'السرعة (8 GB VRAM)': '30–45 رمز/ثانية' },
