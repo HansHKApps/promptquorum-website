@@ -185,6 +185,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Best for': 'Cheapest for unlimited devices',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-vpn-comparison-en.svg',
+        imageCaption: 'VPN comparison for AI privacy: ProtonVPN (Switzerland, free–$5/month), NordVPN (Panama, $4-6/month), Mullvad (Sweden, €5/month flat, Cure53-audited), and Surfshark (Netherlands, $2-4/month) — all four pass independent no-logs audits, July 2026 pricing.',
       },
       whichVpn: {
         id: 'which-vpn',
@@ -340,6 +342,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Start with the hard requirement. If you must sign up without giving an email, Mullvad is the answer. If you must cover many devices, Surfshark is. If speed is everything, NordVPN is. If none of those is a hard rule, ProtonVPN is the safe balanced default.',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-decision-flow-en.svg',
+        imageCaption: 'Decision flowchart for choosing a VPN for AI privacy: anonymous signup routes to Mullvad, unlimited devices to Surfshark, lowest latency to NordVPN, and a balanced audited free tier to ProtonVPN.',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -637,6 +641,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mejor para': 'Más barata para dispositivos ilimitados',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-vpn-comparison-es.svg',
+        imageCaption: 'Comparativa de VPN para privacidad con IA: ProtonVPN (Suiza, gratis–5 $/mes), NordVPN (Panamá, 4-6 $/mes), Mullvad (Suecia, 5 €/mes fijo, auditado por Cure53) y Surfshark (Países Bajos, 2-4 $/mes) — las cuatro superan auditorías independientes sin registros, precios de julio 2026.',
       },
       whichVpn: {
         id: 'which-vpn',
@@ -792,6 +798,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Empieza con el requisito inflexible. Si debes registrarte sin dar un correo electrónico, la respuesta es Mullvad. Si debes cubrir muchos dispositivos, es Surfshark. Si la velocidad lo es todo, es NordVPN. Si ninguna de esas es una regla inflexible, ProtonVPN es la opción predeterminada segura y equilibrada.',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-decision-flow-es.svg',
+        imageCaption: 'Diagrama de decisión para elegir una VPN para privacidad con IA: registro anónimo lleva a Mullvad, dispositivos ilimitados a Surfshark, menor latencia a NordVPN, y equilibrio con nivel gratis a ProtonVPN.',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -1094,6 +1102,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '가장 적합': '무제한 기기에 가장 저렴',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-vpn-comparison-ko.svg',
+        imageCaption: 'AI 프라이버시를 위한 VPN 비교: ProtonVPN(스위스, 무료–$5/월), NordVPN(파나마, $4-6/월), Mullvad(스웨덴, €5/월 고정, Cure53 감사), Surfshark(네덜란드, $2-4/월) — 네 곳 모두 독립적인 무로그 감사를 통과했으며 2026년 7월 가격 기준입니다.',
       },
       whichVpn: {
         id: 'which-vpn',
@@ -1243,6 +1253,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '비타협적 요구사항에서 시작하십시오. 이메일 없이 등록해야 한다면 Mullvad가 답입니다. 많은 기기를 커버해야 한다면 Surfshark입니다. 속도가 전부라면 NordVPN입니다. 그것들이 비타협적 규칙이 아니라면 ProtonVPN이 안전하고 균형 잡힌 기본 옵션입니다.',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-decision-flow-ko.svg',
+        imageCaption: 'AI 프라이버시를 위한 VPN 선택 흐름도: 익명 가입은 Mullvad로, 무제한 기기는 Surfshark로, 최저 지연시간은 NordVPN으로, 균형 잡히고 감사된 무료 티어는 ProtonVPN으로 연결됩니다.',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -1552,6 +1564,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Melhor para': 'Mais barata para dispositivos ilimitados',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-vpn-comparison-pt.svg',
+        imageCaption: 'Comparação de VPN para privacidade com IA: ProtonVPN (Suíça, grátis–US$5/mês), NordVPN (Panamá, US$4-6/mês), Mullvad (Suécia, €5/mês fixo, auditado pela Cure53) e Surfshark (Países Baixos, US$2-4/mês) — as quatro passam em auditorias independentes de não registro, preços de julho de 2026.',
       },
       whichVpn: {
         id: 'which-vpn',
@@ -1707,6 +1721,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Comece pelo requisito inflexível. Se você precisa se cadastrar sem dar um e-mail, o Mullvad é a resposta. Se você precisa cobrir muitos dispositivos, é a Surfshark. Se a velocidade é tudo, é a NordVPN. Se nenhuma dessas é uma regra inflexível, a ProtonVPN é o padrão seguro e equilibrado.',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-decision-flow-pt.svg',
+        imageCaption: 'Fluxograma de decisão para escolher uma VPN para privacidade com IA: cadastro anônimo leva a Mullvad, dispositivos ilimitados a Surfshark, menor latência a NordVPN, e equilíbrio com nível grátis a ProtonVPN.',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -2017,6 +2033,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Am besten für': 'Günstigste für unbegrenzt viele Geräte',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-vpn-comparison-de.svg',
+        imageCaption: 'VPN-Vergleich für KI-Datenschutz: ProtonVPN (Schweiz, kostenlos–3 €/Monat), NordVPN (Panama, 4-6 €/Monat), Mullvad (Schweden, 5 €/Monat pauschal, von Cure53 geprüft) und Surfshark (Niederlande, 2-4 €/Monat) — alle vier bestehen unabhängige No-Logs-Audits, Preise Stand Juli 2026.',
       },
       whichVpn: {
         id: 'which-vpn',
@@ -2172,6 +2190,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Beginnen Sie mit der harten Anforderung. Wenn Sie sich ohne Angabe einer E-Mail registrieren müssen, ist Mullvad die Antwort. Wenn Sie viele Geräte abdecken müssen, ist es Surfshark. Wenn Geschwindigkeit alles ist, ist es NordVPN. Wenn keine davon eine harte Regel ist, ist ProtonVPN die sichere, ausgewogene Standardwahl.',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-decision-flow-de.svg',
+        imageCaption: 'Entscheidungsdiagramm zur Wahl eines VPNs für KI-Datenschutz: anonyme Anmeldung führt zu Mullvad, unbegrenzte Geräte zu Surfshark, geringste Latenz zu NordVPN, und eine ausgewogene, geprüfte Gratis-Option zu ProtonVPN.',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -2476,6 +2496,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Idéal pour': 'Le moins cher pour des appareils illimités',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-vpn-comparison-fr.svg',
+        imageCaption: 'Comparatif VPN pour la confidentialité de l\'IA : ProtonVPN (Suisse, gratuit–3 €/mois), NordVPN (Panama, 4-6 €/mois), Mullvad (Suède, 5 €/mois fixe, audité par Cure53) et Surfshark (Pays-Bas, 2-4 €/mois) — les quatre passent des audits indépendants sans journaux, prix de juillet 2026.',
       },
       whichVpn: {
         id: 'which-vpn',
@@ -2631,6 +2653,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Commencez par l\'exigence ferme. Si vous devez vous inscrire sans donner d\'e-mail, Mullvad est la réponse. Si vous devez couvrir de nombreux appareils, c\'est Surfshark. Si la vitesse prime sur tout, c\'est NordVPN. Si aucune de ces règles n\'est ferme, ProtonVPN est la valeur sûre et équilibrée par défaut.',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-decision-flow-fr.svg',
+        imageCaption: 'Diagramme de décision pour choisir une VPN pour la confidentialité de l\'IA : inscription anonyme mène à Mullvad, appareils illimités à Surfshark, latence la plus faible à NordVPN, et équilibre avec offre gratuite à ProtonVPN.',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -2927,6 +2951,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最適な用途': '無制限の端末数で最も安価',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-vpn-comparison-ja.svg',
+        imageCaption: 'AIプライバシー向けVPN比較：ProtonVPN（スイス、無料〜374円/月）、NordVPN（パナマ、490〜520円/月）、Mullvad（スウェーデン、5ユーロ/月固定、Cure53監査済み）、Surfshark（オランダ、310〜360円/月）— 4社とも独立したノーログ監査に合格、2026年7月時点の価格。',
       },
       whichVpn: {
         id: 'which-vpn',
@@ -3082,6 +3108,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '譲れない要件から始めてください。メールアドレスを出さずにサインアップしなければならないなら、答えはMullvadです。多数の端末をカバーしなければならないなら、Surfsharkです。速度がすべてなら、NordVPNです。いずれも厳格なルールでないなら、ProtonVPNが安全でバランスの取れた既定の選択肢です。',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-decision-flow-ja.svg',
+        imageCaption: 'AIプライバシー向けVPN選択フローチャート：匿名登録はMullvadへ、無制限端末はSurfsharkへ、最低遅延はNordVPNへ、バランス型の監査済み無料プランはProtonVPNへ。',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -3378,6 +3406,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最适合': '无限设备最便宜',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-vpn-comparison-zh.svg',
+        imageCaption: 'AI 隐私 VPN 对比：ProtonVPN（瑞士，免费–5 美元/月）、NordVPN（巴拿马，4-6 美元/月）、Mullvad（瑞典，5 欧元/月固定，经 Cure53 审计）、Surfshark（荷兰，2-4 美元/月）——四家均通过独立无日志审计，价格为 2026 年 7 月数据。',
       },
       whichVpn: {
         id: 'which-vpn',
@@ -3533,6 +3563,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '从硬性要求开始。如果你必须在不提供邮箱的情况下注册，答案就是 Mullvad。如果你必须覆盖许多设备，答案是 Surfshark。如果速度压倒一切，答案是 NordVPN。如果这些都不是硬性规定，ProtonVPN 就是稳妥而均衡的默认选择。',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-decision-flow-zh.svg',
+        imageCaption: '选择 AI 隐私 VPN 的决策流程图：匿名注册指向 Mullvad，无限设备指向 Surfshark，最低延迟指向 NordVPN，均衡且经审计的免费套餐指向 ProtonVPN。',
       },
       whereToBuy: {
         id: 'where-to-buy',
@@ -3830,6 +3862,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الأفضل لـ': 'الأرخص للأجهزة غير المحدودة',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-vpn-comparison-ar.svg',
+        imageCaption: 'مقارنة VPN لخصوصية الذكاء الاصطناعي: ProtonVPN (سويسرا، مجاني–5$/شهر)، NordVPN (بنما، 4-6$/شهر)، Mullvad (السويد، 5€/شهر ثابت، مُدقّق من Cure53)، وSurfshark (هولندا، 2-4$/شهر) — الأربع تجتاز تدقيقات مستقلة لعدم الاحتفاظ بالسجلات، أسعار يوليو 2026.',
       },
       whichVpn: {
         id: 'which-vpn',
@@ -3985,6 +4019,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ابدأ بالمتطلب غير المرن. إذا وجب التسجيل بدون بريد إلكتروني، فالإجابة Mullvad. إذا وجب تغطية أجهزة كثيرة، فهي Surfshark. إذا كانت السرعة هي كل شيء، فهي NordVPN. إذا لم يكن أي منها قاعدةً صارمة، ProtonVPN هي الخيار الافتراضي الآمن المتوازن.',
           },
         ],
+        image: '/images/best-vpn-ai-privacy-local-llm-2026-decision-flow-ar.svg',
+        imageCaption: 'مخطط قرار لاختيار VPN لخصوصية الذكاء الاصطناعي: التسجيل المجهول يقود إلى Mullvad، الأجهزة غير المحدودة إلى Surfshark، أقل زمن استجابة إلى NordVPN، والتوازن مع مستوى مجاني إلى ProtonVPN.',
       },
       whereToBuy: {
         id: 'where-to-buy',

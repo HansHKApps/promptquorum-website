@@ -1,0 +1,41 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>&#169; 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<defs><marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#6750A4"/></marker></defs>
+<rect width="800" height="460" fill="#FFFFFF"/>
+<text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#1C1B1F" text-anchor="middle">用四个问题选出你的 AI 隐私 VPN</text>
+<rect x="30" y="55" width="380" height="60" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="1.5"/>
+<text x="220.0" y="89.0" font-family="system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#1C1B1F" text-anchor="middle">需要无邮箱的匿名注册吗？</text>
+<rect x="460" y="55" width="310" height="60" rx="6" fill="#E8DEF8"/>
+<text x="615.0" y="80" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">Mullvad</text>
+<text x="615.0" y="98" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">最强匿名，现金/Monero</text>
+<path d="M 410 85.0 L 458 85.0" stroke="#6750A4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+<text x="418" y="77.0" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6750A4">是</text>
+<path d="M 220.0 115 L 220.0 148" stroke="#79747E" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+<text x="230.0" y="136.5" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#79747E">否</text>
+<rect x="30" y="150" width="380" height="60" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="1.5"/>
+<text x="220.0" y="184.0" font-family="system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#1C1B1F" text-anchor="middle">一份套餐需要无限设备吗？</text>
+<rect x="460" y="150" width="310" height="60" rx="6" fill="#E8DEF8"/>
+<text x="615.0" y="175" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">Surfshark</text>
+<text x="615.0" y="193" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">无限设备，最便宜</text>
+<path d="M 410 180.0 L 458 180.0" stroke="#6750A4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+<text x="418" y="172.0" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6750A4">是</text>
+<path d="M 220.0 210 L 220.0 243" stroke="#79747E" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+<text x="230.0" y="231.5" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#79747E">否</text>
+<rect x="30" y="245" width="380" height="60" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="1.5"/>
+<text x="220.0" y="279.0" font-family="system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#1C1B1F" text-anchor="middle">需要最低的远程访问延迟吗？</text>
+<rect x="460" y="245" width="310" height="60" rx="6" fill="#E8DEF8"/>
+<text x="615.0" y="270" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">NordVPN</text>
+<text x="615.0" y="288" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">最快的远程访问</text>
+<path d="M 410 275.0 L 458 275.0" stroke="#6750A4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+<text x="418" y="267.0" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6750A4">是</text>
+<path d="M 220.0 305 L 220.0 338" stroke="#79747E" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+<text x="230.0" y="326.5" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#79747E">否</text>
+<rect x="30" y="340" width="380" height="60" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="1.5"/>
+<text x="220.0" y="374.0" font-family="system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#1C1B1F" text-anchor="middle">想要均衡、经审计的免费套餐 VPN 吗？</text>
+<rect x="460" y="340" width="310" height="60" rx="6" fill="#E8DEF8"/>
+<text x="615.0" y="365" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">ProtonVPN</text>
+<text x="615.0" y="383" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">均衡之选，免费套餐</text>
+<path d="M 410 370.0 L 458 370.0" stroke="#6750A4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+<text x="418" y="362.0" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6750A4">是</text>
+<text x="400" y="432" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">都不符合？默认选择 ProtonVPN——安全均衡之选。</text>
+<text x="792" y="452" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>
