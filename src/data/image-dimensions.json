@@ -13679,6 +13679,16 @@
     "width": 800,
     "height": 450
   },
+  "/images/minisforum-um890-pro-local-llm-ram-fit-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/minisforum-um890-pro-vs-beelink-ser8-specs-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 630
+  },
   "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
