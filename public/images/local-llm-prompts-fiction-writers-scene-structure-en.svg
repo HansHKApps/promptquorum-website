@@ -1,0 +1,41 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Scene Prompt: 5 Load-Bearing Constraints</text>
+
+  <!-- Row 1: Genre -->
+  <circle cx="45" cy="76" r="16" fill="#6750A4"/>
+  <text x="45" y="81" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="75" y="71" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F">Genre</text>
+  <text x="75" y="88" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F">Single word/phrase (gothic horror, hard sci-fi) — anchors prose register.</text>
+  <line x1="18" y1="106" x2="782" y2="106" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: POV -->
+  <circle cx="45" cy="138" r="16" fill="#6750A4"/>
+  <text x="45" y="143" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="75" y="133" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F">POV</text>
+  <text x="75" y="150" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F">"Close third, [Name]" or first person — filters all observations through one mind.</text>
+  <line x1="18" y1="168" x2="782" y2="168" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: Sensory anchor -->
+  <circle cx="45" cy="200" r="16" fill="#6750A4"/>
+  <text x="45" y="205" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="75" y="195" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F">Sensory anchor</text>
+  <text x="75" y="212" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F">One specific detail (smell, sound, texture) — grounds the scene, prevents abstraction.</text>
+  <line x1="18" y1="230" x2="782" y2="230" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Emotional beat -->
+  <circle cx="45" cy="262" r="16" fill="#6750A4"/>
+  <text x="45" y="267" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="75" y="257" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F">Emotional beat</text>
+  <text x="75" y="274" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F">Name the feeling, then "show it without stating it" — activates show-don't-tell.</text>
+  <line x1="18" y1="292" x2="782" y2="292" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: Word ceiling -->
+  <circle cx="45" cy="324" r="16" fill="#6750A4"/>
+  <text x="45" y="329" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="75" y="319" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F">Word ceiling</text>
+  <text x="75" y="336" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F">150–400 words — forces precision and compression; prevents the model from padding.</text>
+
+  <rect x="18" y="352" width="764" height="1.5" fill="#E8DEF8"/>
+  <text x="400" y="376" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Remove any one element and output quality drops measurably — all five are load-bearing.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
