@@ -149,6 +149,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Think of a monitor as a desk surface for text. A bigger, sharper surface lets you keep your editor, terminal, and documentation all visible without shuffling windows. Refresh rate is how fast the surface refreshes — it matters for fast games, not for reading model output.',
           },
         ],
+        image: '/images/best-monitors-ai-development-2026-category-comparison-en.svg',
+        imageCaption:
+          'Four monitor categories for AI development compared: 4K 27-inch at ~163 ppi (editor plus terminal), 34-inch ultrawide at 3440 x 1440 (side-by-side comparison), 40-inch 5K2K super-ultrawide at ~140 ppi (dual-monitor replacement), and budget 1440p 27-inch at ~109 ppi (entry point).',
         columns: ['Category', 'Resolution', 'Pixel density', 'Best for', 'Price (July 2026)'],
         rows: [
           {
@@ -357,6 +360,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Decision Flowchart: Pick Your Monitor in Three Questions',
         content:
           '**Three questions, in order, route most buyers to one category.**',
+        image: '/images/best-monitors-ai-development-2026-decision-flowchart-en.svg',
+        imageCaption:
+          'Decision flowchart for choosing an AI development monitor: side-by-side comparison need routes to a 34-inch ultrawide, dual-monitor replacement routes to a 40-inch 5K2K super-ultrawide, and remaining buyers split between a 4K 27-inch IPS monitor (163 ppi) or a 1440p 27-inch budget monitor (109 ppi) by budget.',
         items: [
           '**1. Do you compare two outputs side by side most of the day?** Yes: a 34-inch ultrawide. No: continue.',
           '**2. Do you currently run two monitors and want one screen instead?** Yes: a 40-inch 5K2K super-ultrawide. No: continue.',
@@ -628,6 +634,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Piensa en un monitor como una superficie de escritorio para texto. Una superficie más grande y nítida te permite mantener tu editor, terminal y documentación todos visibles sin cambiar ventanas. La frecuencia de actualización es la rapidez con la que se actualiza la superficie: importa para juegos rápidos, no para leer salidas de modelos.',
           },
         ],
+        image: '/images/best-monitors-ai-development-2026-category-comparison-en.svg',
+        imageCaption:
+          'Cuatro categorías de monitores para desarrollo de IA comparadas: 4K de 27 pulgadas a ~163 ppi (editor más terminal), ultrawide de 34 pulgadas a 3440 x 1440 (comparación en paralelo), super-ultrawide 5K2K de 40 pulgadas a ~140 ppi (reemplazo de doble monitor) y 1440p de 27 pulgadas económico a ~109 ppi (punto de entrada).',
         columns: ['Categoría', 'Resolución', 'Densidad de píxeles', 'Ideal para', 'Precio (julio 2026)'],
         rows: [
           {
@@ -836,6 +845,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Diagrama de decisión: elige tu monitor en tres preguntas',
         content:
           '**Tres preguntas, en orden, dirigen a la mayoría de los compradores a una categoría.**',
+        image: '/images/best-monitors-ai-development-2026-decision-flowchart-en.svg',
+        imageCaption:
+          'Diagrama de decisión para elegir un monitor de desarrollo de IA: la necesidad de comparación en paralelo dirige a un ultrawide de 34 pulgadas, el reemplazo de doble monitor dirige a un super-ultrawide 5K2K de 40 pulgadas, y el resto se divide entre un monitor IPS 4K de 27 pulgadas (163 ppi) o un monitor económico 1440p de 27 pulgadas (109 ppi) según el presupuesto.',
         items: [
           '**1. ¿Comparas dos salidas en paralelo la mayor parte del día?** Sí: un ultrawide de 34 pulgadas. No: continúa.',
           '**2. ¿Actualmente usas dos monitores y quieres una sola pantalla?** Sí: un super-ultrawide 5K2K de 40 pulgadas. No: continúa.',
@@ -1120,6 +1132,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Stellen Sie sich einen Monitor als eine Schreibtischfläche für Text vor. Eine größere, schärfere Fläche lässt Sie Editor, Terminal und Dokumentation alle sichtbar halten, ohne Fenster zu verschieben. Die Bildwiederholrate ist, wie schnell sich die Fläche aktualisiert — sie zählt für schnelle Spiele, nicht für das Lesen von Modellausgaben.',
           },
         ],
+        image: '/images/best-monitors-ai-development-2026-category-comparison-en.svg',
+        imageCaption:
+          'Vier Monitorkategorien für KI-Entwicklung im Vergleich: 4K 27 Zoll mit ~163 ppi (Editor plus Terminal), 34-Zoll-Ultrawide mit 3440 x 1440 (Vergleich nebeneinander), 40-Zoll-5K2K-Super-Ultrawide mit ~140 ppi (Ersatz für zwei Monitore) und günstiger 1440p-27-Zoll-Monitor mit ~109 ppi (Einstiegspunkt).',
         columns: ['Kategorie', 'Auflösung', 'Pixeldichte', 'Am besten für', 'Preis (Juli 2026)'],
         rows: [
           {
@@ -1328,6 +1343,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Entscheidungsdiagramm: Wählen Sie Ihren Monitor in drei Fragen',
         content:
           '**Drei Fragen, in dieser Reihenfolge, lotsen die meisten Käufer zu einer Kategorie.**',
+        image: '/images/best-monitors-ai-development-2026-decision-flowchart-en.svg',
+        imageCaption:
+          'Entscheidungsdiagramm für die Wahl eines KI-Entwicklungsmonitors: Vergleichsbedarf nebeneinander führt zu einem 34-Zoll-Ultrawide, Ersatz für zwei Monitore führt zu einem 40-Zoll-5K2K-Super-Ultrawide, und der Rest teilt sich je nach Budget zwischen einem 4K-27-Zoll-IPS-Monitor (163 ppi) oder einem günstigen 1440p-27-Zoll-Monitor (109 ppi).',
         items: [
           '**1. Vergleichen Sie den größten Teil des Tages zwei Ausgaben nebeneinander?** Ja: ein 34-Zoll-Ultrawide. Nein: weiter.',
           '**2. Betreiben Sie derzeit zwei Monitore und möchten stattdessen einen Bildschirm?** Ja: ein 40-Zoll-5K2K-Super-Ultrawide. Nein: weiter.',
@@ -1607,6 +1625,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: "Voyez un moniteur comme une surface de bureau pour du texte. Une surface plus grande et plus nette vous permet de garder éditeur, terminal et documentation tous visibles sans déplacer de fenêtres. La fréquence de rafraîchissement est la vitesse à laquelle la surface se rafraîchit — elle compte pour les jeux rapides, pas pour la lecture de sorties de modèles.",
           },
         ],
+        image: '/images/best-monitors-ai-development-2026-category-comparison-en.svg',
+        imageCaption:
+          "Quatre catégories de moniteurs pour le développement IA comparées : 4K 27 pouces à ~163 ppi (éditeur plus terminal), ultrawide 34 pouces à 3440 x 1440 (comparaison côte à côte), super-ultrawide 5K2K 40 pouces à ~140 ppi (remplacement de deux moniteurs), et 1440p 27 pouces économique à ~109 ppi (point d'entrée).",
         columns: ['Catégorie', 'Résolution', 'Densité de pixels', 'Idéal pour', 'Prix (juillet 2026)'],
         rows: [
           {
@@ -1815,6 +1836,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Organigramme de décision : choisissez votre moniteur en trois questions',
         content:
           "**Trois questions, dans l'ordre, orientent la plupart des acheteurs vers une catégorie.**",
+        image: '/images/best-monitors-ai-development-2026-decision-flowchart-en.svg',
+        imageCaption:
+          "Organigramme de décision pour choisir un moniteur de développement IA : le besoin de comparaison côte à côte oriente vers un ultrawide 34 pouces, le remplacement de deux moniteurs oriente vers un super-ultrawide 5K2K 40 pouces, et le reste se partage entre un moniteur IPS 4K 27 pouces (163 ppi) ou un moniteur économique 1440p 27 pouces (109 ppi) selon le budget.",
         items: [
           "**1. Comparez-vous deux sorties côte à côte la plupart de la journée ?** Oui : un ultrawide 34 pouces. Non : continuez.",
           "**2. Utilisez-vous actuellement deux moniteurs et voulez un seul écran à la place ?** Oui : un super-ultrawide 5K2K 40 pouces. Non : continuez.",
@@ -2086,6 +2110,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'モニターはテキストのためのデスク表面だと考えてください。より大きく鮮明な表面なら、ウィンドウを動かさずにエディター、ターミナル、ドキュメントをすべて表示し続けられます。リフレッシュレートは表面が更新される速さで — 速いゲームには重要ですが、モデル出力を読むことには重要ではありません。',
           },
         ],
+        image: '/images/best-monitors-ai-development-2026-category-comparison-en.svg',
+        imageCaption:
+          'AI開発向けモニター4カテゴリーの比較: 4K 27インチは約163 ppi(エディタとターミナル向け)、34インチウルトラワイドは3440 x 1440(横並び比較向け)、40インチ5K2Kスーパーウルトラワイドは約140 ppi(2台構成の置き換え)、予算重視の1440p 27インチは約109 ppi(入門用)。',
         columns: ['カテゴリー', '解像度', 'ピクセル密度', '最適な用途', '価格 (2026年7月)'],
         rows: [
           {
@@ -2294,6 +2321,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '判断フローチャート: 3つの質問でモニターを選ぶ',
         content:
           '**順番に3つの質問をすれば、ほとんどの購入者は1つのカテゴリーへ導かれます。**',
+        image: '/images/best-monitors-ai-development-2026-decision-flowchart-en.svg',
+        imageCaption:
+          'AI開発向けモニター選定の判断フローチャート: 横並び比較の必要性は34インチウルトラワイドへ、2台構成の置き換えは40インチ5K2Kスーパーウルトラワイドへ、それ以外は予算に応じて4K 27インチIPSモニター(163 ppi)か予算重視の1440p 27インチモニター(109 ppi)に分かれます。',
         items: [
           '**1. 一日の大半、2つの出力を横並びで比較しますか?** はい: 34インチウルトラワイド。いいえ: 続けます。',
           '**2. 現在2台のモニターを使っており、代わりに1画面にしたいですか?** はい: 40インチ5K2Kスーパーウルトラワイド。いいえ: 続けます。',
@@ -2565,6 +2595,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '把显示器想象成放文字的桌面。更大、更清晰的桌面让你能让编辑器、终端和文档全部保持可见而无需切换窗口。刷新率是这个桌面刷新的速度——它对快速游戏重要，对阅读模型输出不重要。',
           },
         ],
+        image: '/images/best-monitors-ai-development-2026-category-comparison-en.svg',
+        imageCaption:
+          '面向 AI 开发的四类显示器对比：4K 27 英寸约 163 ppi（编辑器加终端）、34 英寸带鱼屏 3440 x 1440（并排比较）、40 英寸 5K2K 超宽带鱼屏约 140 ppi（替代双显示器）、入门级 1440p 27 英寸约 109 ppi（预算之选）。',
         columns: ['类别', '分辨率', '像素密度', '最适合', '价格（2026 年 7 月）'],
         rows: [
           {
@@ -2773,6 +2806,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '决策流程图：三个问题选定你的显示器',
         content:
           '**按顺序回答三个问题，就能把大多数购买者引导到某一类别。**',
+        image: '/images/best-monitors-ai-development-2026-decision-flowchart-en.svg',
+        imageCaption:
+          '选择 AI 开发显示器的决策流程图：并排比较需求指向 34 英寸带鱼屏，替代双显示器指向 40 英寸 5K2K 超宽带鱼屏，其余买家则根据预算在 4K 27 英寸 IPS 显示器（163 ppi）和入门级 1440p 27 英寸显示器（109 ppi）之间选择。',
         items: [
           '**1. 你一天中大部分时间都在并排比较两个输出吗？** 是：34 英寸带鱼屏。否：继续。',
           '**2. 你目前使用两台显示器，想换成一块屏幕吗？** 是：40 英寸 5K2K 超宽带鱼屏。否：继续。',
@@ -3044,6 +3080,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Pense em um monitor como uma superfície de mesa para texto. Uma superfície maior e mais nítida permite manter o seu editor, terminal e documentação todos visíveis sem trocar janelas. A taxa de atualização é a rapidez com que a superfície se atualiza: importa para jogos rápidos, não para ler saídas de modelos.',
           },
         ],
+        image: '/images/best-monitors-ai-development-2026-category-comparison-en.svg',
+        imageCaption:
+          'Quatro categorias de monitores para desenvolvimento de IA comparadas: 4K de 27 polegadas a ~163 ppi (editor mais terminal), ultrawide de 34 polegadas a 3440 x 1440 (comparação lado a lado), super-ultrawide 5K2K de 40 polegadas a ~140 ppi (substituição de dois monitores) e 1440p de 27 polegadas econômico a ~109 ppi (ponto de entrada).',
         columns: ['Categoría', 'Resolución', 'Densidad de píxeles', 'Ideal para', 'Precio (julio 2026)'],
         rows: [
           {
@@ -3252,6 +3291,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Diagrama de decisão: escolha o seu monitor em três perguntas',
         content:
           '**Três perguntas, em ordem, direcionam a maioria dos compradores a uma categoria.**',
+        image: '/images/best-monitors-ai-development-2026-decision-flowchart-en.svg',
+        imageCaption:
+          'Fluxograma de decisão para escolher um monitor de desenvolvimento de IA: a necessidade de comparação lado a lado direciona para um ultrawide de 34 polegadas, a substituição de dois monitores direciona para um super-ultrawide 5K2K de 40 polegadas, e o restante se divide entre um monitor IPS 4K de 27 polegadas (163 ppi) ou um monitor econômico 1440p de 27 polegadas (109 ppi) conforme o orçamento.',
         items: [
           '**1. Você compara duas saídas lado a lado a maior parte do dia?** Sim: um ultrawide de 34 polegadas. Não: continue.',
           '**2. Você atualmente usa dois monitores e quer uma única tela?** Sim: um super-ultrawide 5K2K de 40 polegadas. Não: continue.',
@@ -3537,6 +3579,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'فكّر في الشاشة كسطح مكتب للنص. سطح أكبر وأوضح يتيح إبقاء المحرر والطرفية والتوثيق مرئية جميعاً دون تبديل النوافذ. معدل التحديث هو سرعة تحديث السطح: يهم للألعاب السريعة، لا لقراءة مخرجات النماذج.',
           },
         ],
+        image: '/images/best-monitors-ai-development-2026-category-comparison-en.svg',
+        imageCaption:
+          'مقارنة أربع فئات شاشات لتطوير الذكاء الاصطناعي: 4K بـ27 بوصة بكثافة ~163 ppi (محرر وطرفية)، شاشة عريضة بـ34 بوصة بدقة 3440 x 1440 (مقارنة جنباً إلى جنب)، شاشة فائقة العرض 5K2K بـ40 بوصة بكثافة ~140 ppi (بديل شاشتين)، وشاشة اقتصادية 1440p بـ27 بوصة بكثافة ~109 ppi (نقطة البداية).',
         columns: ['الفئة', 'الدقة', 'كثافة البكسل', 'الأنسب لـ', 'السعر (يوليو 2026)'],
         rows: [
           {
@@ -3745,6 +3790,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'مخطط القرار: اختر شاشتك في ثلاثة أسئلة',
         content:
           '**ثلاثة أسئلة بالترتيب توجّه معظم المشترين إلى فئة.**',
+        image: '/images/best-monitors-ai-development-2026-decision-flowchart-en.svg',
+        imageCaption:
+          'مخطط قرار لاختيار شاشة تطوير الذكاء الاصطناعي: الحاجة إلى مقارنة جنباً إلى جنب توجّه إلى شاشة عريضة بـ34 بوصة، وبديل الشاشتين يوجّه إلى شاشة فائقة العرض 5K2K بـ40 بوصة، والباقي ينقسم حسب الميزانية بين شاشة IPS بدقة 4K و27 بوصة (163 ppi) أو شاشة اقتصادية 1440p بـ27 بوصة (109 ppi).',
         items: [
           '**1. هل تقارن مخرجين جنباً إلى جنب معظم اليوم؟** نعم: شاشة عريضة بـ34 بوصة. لا: تابع.',
           '**2. هل تستخدم حالياً شاشتين وتريد شاشة واحدة؟** نعم: شاشة فائقة العرض 5K2K بـ40 بوصة. لا: تابع.',
@@ -4029,6 +4077,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '모니터를 텍스트를 위한 책상 표면으로 생각하십시오. 더 크고 선명한 표면은 창 전환 없이 편집기, 터미널, 문서를 모두 볼 수 있게 해줍니다. 주사율은 표면이 얼마나 빨리 새로고침되는지입니다. 빠른 게임에는 중요하지만 모델 출력을 읽는 데는 그렇지 않습니다.',
           },
         ],
+        image: '/images/best-monitors-ai-development-2026-category-comparison-en.svg',
+        imageCaption:
+          'AI 개발용 모니터 4가지 카테고리 비교: 4K 27인치 약 163ppi(편집기와 터미널), 34인치 울트라와이드 3440 x 1440(나란히 비교), 40인치 5K2K 슈퍼 울트라와이드 약 140ppi(듀얼 모니터 대체), 예산형 1440p 27인치 약 109ppi(입문용).',
         columns: ['카테고리', '해상도', '픽셀 밀도', '적합한 용도', '가격 (2026년 7월)'],
         rows: [
           {
@@ -4237,6 +4288,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '의사결정 순서도: 세 가지 질문으로 모니터 선택하기',
         content:
           '**세 가지 질문이 순서대로 대부분의 구매자를 한 카테고리로 안내합니다.**',
+        image: '/images/best-monitors-ai-development-2026-decision-flowchart-en.svg',
+        imageCaption:
+          'AI 개발용 모니터를 선택하는 의사결정 순서도: 나란히 비교가 필요하면 34인치 울트라와이드로, 듀얼 모니터 대체가 필요하면 40인치 5K2K 슈퍼 울트라와이드로 안내되며, 나머지는 예산에 따라 4K 27인치 IPS 모니터(163ppi) 또는 예산형 1440p 27인치 모니터(109ppi)로 나뉩니다.',
         items: [
           '**1. 하루의 대부분을 두 개의 출력을 병렬로 비교합니까?** 예: 34인치 울트라와이드. 아니오: 계속.',
           '**2. 현재 두 개의 모니터를 사용하며 단일 화면을 원합니까?** 예: 40인치 5K2K 슈퍼 울트라와이드. 아니오: 계속.',

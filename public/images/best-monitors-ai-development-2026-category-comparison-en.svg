@@ -1,0 +1,58 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="1200" height="675" fill="#FFFFFF"/>
+  <text x="600" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Monitor Categories for AI Development — At a Glance</text>
+
+  <!-- Header row -->
+  <text x="40" y="98" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#79747E">Category</text>
+  <text x="290" y="98" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#79747E">Resolution</text>
+  <text x="530" y="98" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#79747E">Pixel density</text>
+  <text x="730" y="98" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#79747E">Best for</text>
+  <line x1="30" y1="112" x2="1170" y2="112" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: 4K 27-inch -->
+  <circle cx="46" cy="150" r="14" fill="#6750A4"/>
+  <text x="46" y="155" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="70" y="147" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#1C1B1F">4K 27-inch</text>
+  <text x="70" y="167" font-family="system-ui, sans-serif" font-size="12" fill="#79747E">All-round pick</text>
+  <text x="290" y="155" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="600" fill="#1C1B1F">3840 x 2160</text>
+  <text x="530" y="155" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#6750A4">~163 ppi</text>
+  <text x="730" y="150" font-family="system-ui, sans-serif" font-size="13" fill="#49454F">Editor plus terminal,</text>
+  <text x="730" y="167" font-family="system-ui, sans-serif" font-size="13" fill="#49454F">general AI development</text>
+  <line x1="30" y1="185" x2="1170" y2="185" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: 34-inch ultrawide -->
+  <circle cx="46" cy="222" r="14" fill="#6750A4"/>
+  <text x="46" y="227" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="70" y="219" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#1C1B1F">34-inch ultrawide</text>
+  <text x="70" y="239" font-family="system-ui, sans-serif" font-size="12" fill="#79747E">Comparison pick</text>
+  <text x="290" y="227" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="600" fill="#1C1B1F">3440 x 1440</text>
+  <text x="530" y="227" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#6750A4">~110 ppi</text>
+  <text x="730" y="222" font-family="system-ui, sans-serif" font-size="13" fill="#49454F">Two full-width panes,</text>
+  <text x="730" y="239" font-family="system-ui, sans-serif" font-size="13" fill="#49454F">no bezel between them</text>
+  <line x1="30" y1="257" x2="1170" y2="257" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: 40-inch super-ultrawide -->
+  <circle cx="46" cy="294" r="14" fill="#6750A4"/>
+  <text x="46" y="299" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="70" y="291" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#1C1B1F">40-inch super-ultrawide</text>
+  <text x="70" y="311" font-family="system-ui, sans-serif" font-size="12" fill="#79747E">Dual-monitor replacement</text>
+  <text x="290" y="299" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="600" fill="#1C1B1F">5120 x 2160 (5K2K)</text>
+  <text x="530" y="299" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#6750A4">~140 ppi</text>
+  <text x="730" y="294" font-family="system-ui, sans-serif" font-size="13" fill="#49454F">Replaces a two-monitor</text>
+  <text x="730" y="311" font-family="system-ui, sans-serif" font-size="13" fill="#49454F">setup in one curved screen</text>
+  <line x1="30" y1="329" x2="1170" y2="329" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Budget 1440p -->
+  <circle cx="46" cy="366" r="14" fill="#6750A4"/>
+  <text x="46" y="371" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="70" y="363" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#1C1B1F">Budget 1440p 27-inch</text>
+  <text x="70" y="383" font-family="system-ui, sans-serif" font-size="12" fill="#79747E">Entry point</text>
+  <text x="290" y="371" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="600" fill="#1C1B1F">2560 x 1440</text>
+  <text x="530" y="371" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#6750A4">~109 ppi</text>
+  <text x="730" y="366" font-family="system-ui, sans-serif" font-size="13" fill="#49454F">Cheapest screen still</text>
+  <text x="730" y="383" font-family="system-ui, sans-serif" font-size="13" fill="#49454F">sharp enough for code</text>
+
+  <rect x="30" y="415" width="1140" height="1.5" fill="#E8DEF8"/>
+  <text x="600" y="450" font-family="system-ui, sans-serif" font-size="13.5" fill="#49454F" text-anchor="middle">Pixel density and usable pixel area decide readability for AI work — refresh rate above 120 Hz is a gaming spec that does not apply.</text>
+  <text x="600" y="475" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Prices are a July 2026 snapshot and move with sale cycles — confirm the current price before buying.</text>
+<text x="1192" y="670" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
