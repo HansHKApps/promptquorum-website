@@ -108,6 +108,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contextWindow: {
         id: 'context-window',
         title: 'The Context Window Problem for Long-Form Writing',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
+        imageCaption:
+          "Context window reliability for local LLMs: the practical attention ceiling is 32K tokens (~24,000 words) versus the 128K technical limit, covering Llama 3.3 70B, Qwen3 32B, Mistral Large, and Kimi-K2.6's 1M-token context requiring ~480 GB VRAM.",
         content:
           '**The practical context limit for most local models is 32K tokens — not the 128K advertised.** Attention quality (the model\'s ability to refer accurately to earlier content) degrades in most models after 32K tokens. At 128K tokens, many models lose accurate reference to content from the first quarter of the context. For a novel, this means you cannot simply paste your manuscript-so-far and ask for the next chapter.\n\nKimi-K2.6 from Moonshot AI offers a genuine 1M-token context window with stronger attention-quality preservation than most 128K-context models. Running Kimi-K2.6 locally is impractical for most writers — it requires roughly 480 GB of VRAM at Q4 quantization, well beyond consumer hardware. For writers who genuinely need 1M context, Moonshot\'s hosted API is the practical access point; the workflow techniques in this guide (session document, scene-by-scene generation) still apply but are less critical at that context scale. For writers using locally-runnable models (Llama 3.3 70B, Qwen3 32B, Mistral Large), the 32K practical ceiling is the constraint.',
         snippetBlocks: [
@@ -161,6 +164,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       novelWorkflow: {
         id: 'novel-workflow',
         title: 'Novel Drafting Workflow',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
+        imageCaption:
+          'Four-phase novel drafting workflow with local LLMs: outline (10–30 chapters), beat sheets (3–8 scenes per chapter), scene generation (200–600 words per session), and revision passes, built around a session document under 4,000 tokens.',
         content:
           '**The novel drafting workflow with a local LLM has four phases: outline, chapter beat sheets, scene generation, and revision passes.** Each phase uses a different prompt structure.',
         items: [
@@ -465,6 +471,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contextWindow: {
         id: 'context-window',
         title: 'El problema de la ventana de contexto para escritura de formato largo',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
+        imageCaption:
+          'Fiabilidad de la ventana de contexto en LLMs locales: el techo práctico de atención es de 32K tokens (~24.000 palabras) frente al límite técnico de 128K, para Llama 3.3 70B, Qwen3 32B y Mistral Large; la ventana de 1M de tokens de Kimi-K2.6 requiere ~480 GB de VRAM en Q4.',
         content:
           '**El límite de contexto práctico para la mayoría de los modelos locales es 32.000 tokens — no los 128K anunciados.** La calidad de atención (la capacidad del modelo para hacer referencia con precisión al contenido anterior) se degrada en la mayoría de los modelos después de 32.000 tokens. Con 128K tokens, muchos modelos pierden la referencia precisa al contenido del primer cuarto del contexto. Para una novela, esto significa que no puedes simplemente pegar el manuscrito hasta el momento y pedir el siguiente capítulo.\n\nKimi-K2.6 de Moonshot AI ofrece una ventana de contexto genuina de 1 millón de tokens con mayor preservación de la calidad de atención que la mayoría de los modelos con contexto de 128K. Ejecutar Kimi-K2.6 localmente es impractical para la mayoría de los escritores — requiere aproximadamente 480 GB de VRAM en cuantización Q4, muy por encima del hardware de consumo. Para escritores que genuinamente necesitan 1M de contexto, la API alojada de Moonshot es el punto de acceso práctico. Para escritores que usan modelos ejecutables localmente (Llama 3.3 70B, Qwen3 32B, Mistral Large), el techo práctico de 32K es la restricción.',
         snippetBlocks: [
@@ -518,6 +527,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       novelWorkflow: {
         id: 'novel-workflow',
         title: 'Flujo de trabajo para redacción de novelas',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
+        imageCaption:
+          'Flujo de trabajo de redacción de novelas en 4 fases con LLMs locales: esquema (10–30 capítulos), beat sheets (3–8 escenas por capítulo), generación de escenas (200–600 palabras por sesión) y pasadas de revisión, con un documento de sesión de menos de 4.000 tokens.',
         content:
           '**El flujo de trabajo de redacción de novelas con un LLM local tiene cuatro fases: esquema, beat sheets por capítulo, generación de escenas y pasadas de revisión.** Cada fase usa una estructura de prompt diferente.',
         items: [
@@ -836,6 +848,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contextWindow: {
         id: 'context-window',
         title: 'Das Kontextfensterproblem beim Langformschreiben',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
+        imageCaption:
+          'Kontextfenster-Zuverlässigkeit bei lokalen LLMs: Die praktische Aufmerksamkeitsgrenze liegt bei 32K Tokens (~24.000 Wörter) gegenüber dem technischen Limit von 128K, für Llama 3.3 70B, Qwen3 32B und Mistral Large; das 1-Mio.-Token-Fenster von Kimi-K2.6 benötigt ~480 GB VRAM bei Q4.',
         content:
           '**Das praktische Kontextlimit der meisten lokalen Modelle beträgt 32.000 Token — nicht die beworbenen 128K.** Die Aufmerksamkeitsqualität nimmt bei den meisten Modellen nach 32.000 Token ab. Bei 128K Token verlieren viele Modelle die korrekte Referenz auf Inhalte aus dem ersten Viertel des Kontextfensters. Bei einem Roman bedeutet das: Der bisherige Entwurf kann nicht einfach eingefügt und nach dem nächsten Kapitel gefragt werden.\n\nKimi-K2.6 von Moonshot AI bietet ein echtes 1-Millionen-Token-Kontextfenster mit stärkerer Aufmerksamkeitsqualitätserhaltung. Kimi-K2.6 lokal auszuführen ist für die meisten Autoren unpraktisch — es erfordert etwa 480 GB VRAM bei Q4-Quantisierung. Für Autoren, die tatsächlich 1M Kontext benötigen, ist Moonshots gehostete API die praktische Zugangsmöglichkeit. Für lokal ausführbare Modelle (Llama 3.3 70B, Qwen3 32B, Mistral Large) ist die 32K-Praxisgrenze die relevante Einschränkung.',
         snippetBlocks: [
@@ -889,6 +904,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       novelWorkflow: {
         id: 'novel-workflow',
         title: 'Roman-Drafting-Workflow',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
+        imageCaption:
+          'Vierphasiger Roman-Drafting-Workflow mit lokalen LLMs: Gliederung (10–30 Kapitel), Beat Sheets (3–8 Szenen pro Kapitel), Szenengenerierung (200–600 Wörter pro Sitzung) und Überarbeitungsdurchgänge, aufgebaut um ein Session-Dokument unter 4.000 Tokens.',
         content:
           '**Der Roman-Drafting-Workflow mit einem lokalen LLM hat vier Phasen: Outline, Kapitel-Beat-Sheets, Szenengenerierung und Überarbeitungsdurchläufe.** Jede Phase verwendet eine andere Prompt-Struktur.',
         items: [
@@ -1197,6 +1215,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contextWindow: {
         id: 'context-window',
         title: 'Le problème de la fenêtre de contexte pour l\'écriture longue',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
+        imageCaption:
+          "Fiabilité de la fenêtre de contexte pour les LLM locaux : le plafond pratique d'attention est de 32K tokens (~24 000 mots) contre la limite technique de 128K, pour Llama 3.3 70B, Qwen3 32B et Mistral Large ; la fenêtre de 1M de tokens de Kimi-K2.6 nécessite ~480 Go de VRAM en Q4.",
         content:
           '**La limite pratique de contexte de la plupart des modèles locaux est de 32 000 tokens — pas les 128K annoncés.** La qualité d\'attention se dégrade après 32 000 tokens. À 128K tokens, beaucoup de modèles perdent la référence précise au contenu du premier quart de la fenêtre. Pour un roman, cela signifie qu\'on ne peut pas simplement coller le manuscrit en cours et demander le chapitre suivant.\n\nKimi-K2.6 de Moonshot AI offre une véritable fenêtre de 1 million de tokens avec une meilleure préservation de la qualité d\'attention. Exécuter Kimi-K2.6 localement est impraticable pour la plupart des auteurs — il requiert environ 480 Go de VRAM en quantisation Q4. Pour les auteurs ayant besoin de 1M de contexte, l\'API hébergée de Moonshot est l\'option pratique. Pour les modèles exécutables localement (Llama 3.3 70B, Qwen3 32B, Mistral Large), le plafond pratique de 32K est la contrainte pertinente.',
         snippetBlocks: [
@@ -1250,6 +1271,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       novelWorkflow: {
         id: 'novel-workflow',
         title: 'Workflow d\'écriture de roman',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
+        imageCaption:
+          "Workflow de rédaction de roman en 4 phases avec des LLM locaux : plan (10 à 30 chapitres), beat sheets (3 à 8 scènes par chapitre), génération de scènes (200 à 600 mots par session) et passes de révision, organisé autour d'un document de session de moins de 4 000 tokens.",
         content:
           '**Le workflow d\'écriture de roman avec un LLM local comporte quatre phases : outline, beat sheets de chapitres, génération de scènes et passes de révision.** Chaque phase utilise une structure de prompt différente.',
         items: [
@@ -1558,6 +1582,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contextWindow: {
         id: 'context-window',
         title: '長編執筆のコンテキストウィンドウ問題',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
+        imageCaption:
+          'ローカルLLMのコンテキストウィンドウの信頼性:実用的な注意力の上限は32Kトークン(約24,000語)で、Llama 3.3 70B、Qwen3 32B、Mistral Largeの技術的上限128Kと対照的。Kimi-K2.6の100万トークンウィンドウはQ4量子化で約480GBのVRAMが必要。',
         content:
           '**ほとんどのローカルモデルの実用的なコンテキスト上限は32,000トークン——広告されている128Kではありません。** 注意品質はほとんどのモデルで32,000トークンを超えると低下します。128Kトークンでは、多くのモデルがコンテキストウィンドウの最初の4分の1のコンテンツへの正確な参照を失います。小説では、原稿をそのまま貼り付けて次の章を求めることはできません。\n\nMoonshot AIのKimi-K2.6は真の100万トークンのコンテキストウィンドウを提供します。Kimi-K2.6をローカルで実行することはほとんどのライターにとって非現実的です——Q4量子化で約480GBのVRAMが必要です。ローカルで実行可能なモデル（Llama 3.3 70B、Qwen3 32B、Mistral Large）を使うライターには、32Kの実用的上限が制約です。',
         snippetBlocks: [
@@ -1611,6 +1638,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       novelWorkflow: {
         id: 'novel-workflow',
         title: '小説執筆ワークフロー',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
+        imageCaption:
+          'ローカルLLMによる4段階の小説執筆ワークフロー:アウトライン(10〜30章)、ビートシート(章あたり3〜8シーン)、シーン生成(セッションあたり200〜600語)、修正パス。4,000トークン未満のセッションドキュメントを中心に構成。',
         content:
           '**ローカルLLMを使った小説執筆ワークフローには4つのフェーズがあります：アウトライン、章ビートシート、シーン生成、リビジョンパス。** 各フェーズは異なるプロンプト構造を使います。',
         items: [
@@ -1919,6 +1949,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contextWindow: {
         id: 'context-window',
         title: '长篇写作的上下文窗口问题',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
+        imageCaption:
+          '本地LLM上下文窗口可靠性:实际注意力上限为32K tokens(约24,000词),而Llama 3.3 70B、Qwen3 32B和Mistral Large的技术上限为128K;Kimi-K2.6的100万token窗口在Q4量化下需要约480GB显存。',
         content:
           '**大多数本地模型的实用上下文上限是32,000 token——而非宣传的128K。** 注意力质量（模型准确引用早期内容的能力）在大多数模型超过32,000 token后下降。在128K token时，许多模型会失去对上下文窗口前四分之一内容的准确引用。对于小说而言，这意味着无法简单地粘贴目前的手稿并要求下一章。\n\nMoonshot AI的Kimi-K2.6提供真正的百万token上下文窗口，注意力质量保持优于大多数128K上下文模型。在本地运行Kimi-K2.6对大多数作者而言不切实际——在Q4量化下需要约480GB VRAM，远超消费级硬件。对于真正需要1M上下文的作者，Moonshot的托管API是实际的访问方式。对于使用本地可运行模型（Llama 3.3 70B、Qwen3 32B、Mistral Large）的作者，32K实用上限是制约因素。',
         snippetBlocks: [
@@ -1972,6 +2005,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       novelWorkflow: {
         id: 'novel-workflow',
         title: '小说写作工作流',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
+        imageCaption:
+          '本地LLM四阶段小说写作工作流:大纲(10-30章)、节拍表(每章3-8个场景)、场景生成(每次会话200-600字)和修订环节,围绕不超过4,000 token的会话文档展开。',
         content:
           '**使用本地LLM的小说写作工作流有四个阶段：大纲、章节节拍表、场景生成和修改轮次。** 每个阶段使用不同的提示词结构。',
         items: [
@@ -2280,6 +2316,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contextWindow: {
         id: 'context-window',
         title: 'O problema da janela de contexto para escrita de formato longo',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
+        imageCaption:
+          'Confiabilidade da janela de contexto em LLMs locais: o teto prático de atenção é de 32K tokens (~24.000 palavras) contra o limite técnico de 128K, para Llama 3.3 70B, Qwen3 32B e Mistral Large; a janela de 1M de tokens do Kimi-K2.6 exige ~480 GB de VRAM em Q4.',
         content:
           '**O limite de contexto prático para a maioria dos modelos locais é 32.000 tokens — não os 128K anunciados.** A qualidade de atenção (a capacidade do modelo de fazer referência com precisão ao conteúdo anterior) se degrada na maioria dos modelos após 32.000 tokens. Com 128K tokens, muitos modelos perdem a referência precisa ao conteúdo do primeiro quarto do contexto. Para um romance, isso significa que você não pode simplesmente colar o manuscrito até o momento e pedir o próximo capítulo.\n\nO Kimi-K2.6 da Moonshot AI oferece uma janela de contexto genuína de 1 milhão de tokens com maior preservação da qualidade de atenção que a maioria dos modelos com contexto de 128K. Executar o Kimi-K2.6 localmente é impraticável para a maioria dos escritores — requer aproximadamente 480 GB de VRAM em quantização Q4, muito acima do hardware de consumidor. Para escritores que genuinamente precisam de 1M de contexto, a API hospedada da Moonshot é o ponto de acesso prático. Para escritores que usam modelos executáveis localmente (Llama 3.3 70B, Qwen3 32B, Mistral Large), o teto prático de 32K é a restrição.',
         snippetBlocks: [
@@ -2333,6 +2372,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       novelWorkflow: {
         id: 'novel-workflow',
         title: 'Fluxo de trabalho para redação de romances',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
+        imageCaption:
+          'Fluxo de trabalho de redação de romances em 4 fases com LLMs locais: esboço (10–30 capítulos), beat sheets (3–8 cenas por capítulo), geração de cenas (200–600 palavras por sessão) e passes de revisão, estruturado em torno de um documento de sessão com menos de 4.000 tokens.',
         content:
           '**O fluxo de trabalho de redação de romances com um LLM local tem quatro fases: esboço, beat sheets por capítulo, geração de cenas e passagens de revisão.** Cada fase usa uma estrutura de prompt diferente.',
         items: [
@@ -2650,6 +2692,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contextWindow: {
         id: 'context-window',
         title: 'مشكلة نافذة السياق للكتابة الطويلة',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
+        imageCaption:
+          'موثوقية نافذة السياق في النماذج اللغوية المحلية: السقف العملي للانتباه هو 32 ألف رمز (نحو 24,000 كلمة) مقابل الحد التقني البالغ 128 ألف رمز، لنماذج Llama 3.3 70B وQwen3 32B وMistral Large؛ نافذة المليون رمز في Kimi-K2.6 تتطلب نحو 480 غيغابايت من ذاكرة VRAM بدقة Q4.',
         content:
           '**الحد العملي للسياق لمعظم النماذج المحلية هو 32,000 رمز — ليس 128K المُعلن عنه.** تتدهور جودة الانتباه (قدرة النموذج على الإشارة بدقة إلى المحتوى السابق) في معظم النماذج بعد 32,000 رمز. عند 128K رمز، تفقد كثير من النماذج الإشارة الدقيقة إلى محتوى الربع الأول من السياق. بالنسبة للرواية، هذا يعني أنك لا تستطيع ببساطة لصق المسودة حتى الآن وطلب الفصل التالي.\n\nيوفر Kimi-K2.6 من Moonshot AI نافذة سياق حقيقية بمليون رمز مع حفاظ أقوى على جودة الانتباه. تشغيل Kimi-K2.6 محلياً غير عملي لمعظم الكتّاب — يتطلب ~480 GB من VRAM بتكميم Q4. للكتّاب الذين يستخدمون نماذج قابلة للتشغيل محلياً (Llama 3.3 70B وQwen3 32B وMistral Large)، فإن السقف العملي البالغ 32K هو القيد ذو الصلة.',
         snippetBlocks: [
@@ -2703,6 +2748,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       novelWorkflow: {
         id: 'novel-workflow',
         title: 'سير عمل صياغة الروايات',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
+        imageCaption:
+          'سير عمل صياغة الرواية بأربع مراحل باستخدام النماذج اللغوية المحلية: المخطط العام (10-30 فصلاً)، أوراق الإيقاع (3-8 مشاهد لكل فصل)، توليد المشاهد (200-600 كلمة لكل جلسة)، وجلسات المراجعة، وكل ذلك حول مستند جلسة أقل من 4,000 رمز.',
         content:
           '**سير عمل صياغة الروايات مع نموذج لغوي محلي له أربع مراحل: المخطط والبيت شيت الفصلية وتوليد المشاهد وجولات المراجعة.** كل مرحلة تستخدم هيكل أمر مختلفاً.',
         items: [
@@ -3020,6 +3068,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contextWindow: {
         id: 'context-window',
         title: '장문 집필을 위한 컨텍스트 윈도 문제',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg',
+        imageCaption:
+          '로컬 LLM의 컨텍스트 윈도 신뢰성: 실질적인 주의력 한계는 32K 토큰(약 24,000단어)으로, Llama 3.3 70B, Qwen3 32B, Mistral Large의 기술적 한계인 128K와 대조된다. Kimi-K2.6의 100만 토큰 윈도는 Q4 양자화 기준 약 480GB VRAM이 필요하다.',
         content:
           '**대부분의 로컬 모델에서 실질적인 컨텍스트 한계는 32,000 토큰입니다 — 광고된 128K가 아닙니다.** 어텐션 품질(모델이 이전 콘텐츠를 정확하게 참조하는 능력)은 대부분의 모델에서 32,000 토큰 이후 저하됩니다. 128K 토큰에서는 많은 모델이 컨텍스트 첫 번째 사분위의 콘텐츠에 대한 정확한 참조를 잃습니다. 소설의 경우, 이는 지금까지의 원고를 단순히 붙여넣고 다음 챕터를 요청할 수 없다는 것을 의미합니다.\n\nMoonshot AI의 Kimi-K2.6은 128K 컨텍스트를 가진 대부분의 모델보다 어텐션 품질 보존이 뛰어난 진정한 100만 토큰 컨텍스트 윈도를 제공합니다. 대부분의 작가들에게 Kimi-K2.6을 로컬에서 실행하는 것은 비실용적입니다 — Q4 양자화에서 약 480 GB의 VRAM이 필요하여 소비자 하드웨어를 훨씬 초과합니다. 1M 컨텍스트가 실제로 필요한 작가들에게는 Moonshot의 호스팅 API가 실용적인 접근 지점입니다. 로컬에서 실행 가능한 모델(Llama 3.3 70B, Qwen3 32B, Mistral Large)을 사용하는 작가들에게는 32K 실질 상한이 제약입니다.',
         snippetBlocks: [
@@ -3073,6 +3124,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       novelWorkflow: {
         id: 'novel-workflow',
         title: '소설 집필 워크플로',
+        image: '/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg',
+        imageCaption:
+          '로컬 LLM을 활용한 4단계 소설 집필 워크플로: 개요(10~30장), 비트 시트(장당 3~8개 장면), 장면 생성(세션당 200~600단어), 수정 단계로 구성되며 4,000토큰 미만의 세션 문서를 중심으로 한다.',
         content:
           '**로컬 LLM을 사용한 소설 집필 워크플로는 네 단계로 구성됩니다: 개요 작성, 챕터별 beat sheet, 장면 생성, 수정 검토.** 각 단계는 서로 다른 프롬프트 구조를 사용합니다.',
         items: [
