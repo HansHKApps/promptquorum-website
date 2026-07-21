@@ -1,0 +1,36 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>&#169; 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="400" fill="#FFFFFF"/>
+<text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Comparatif VPN pour la confidentialité de l'IA (juillet 2026)</text>
+<text x="40" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">VPN</text>
+<text x="200" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Sans journaux</text>
+<text x="340" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Juridiction</text>
+<text x="460" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Prix</text>
+<text x="620" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Idéal pour</text>
+<line x1="18" y1="74" x2="782" y2="74" stroke="#E8DEF8" stroke-width="1.5"/>
+<rect x="18" y="90" width="764" height="52" fill="#F7F2FA" rx="4"/>
+<text x="40" y="112" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6750A4">ProtonVPN</text>
+<text x="200" y="112" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#34A853">Audité ✓</text>
+<text x="340" y="112" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Suisse</text>
+<text x="460" y="112" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#49454F">Gratuit–3€/mois</text>
+<text x="620" y="112" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F">Équilibre optimal</text>
+<line x1="18" y1="150" x2="782" y2="150" stroke="#F7F2FA" stroke-width="1"/>
+<text x="40" y="176" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">NordVPN</text>
+<text x="200" y="176" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#34A853">Audité ✓</text>
+<text x="340" y="176" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Panama</text>
+<text x="460" y="176" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#49454F">4–6€/mois</text>
+<text x="620" y="176" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F">La plus rapide</text>
+<line x1="18" y1="214" x2="782" y2="214" stroke="#F7F2FA" stroke-width="1"/>
+<text x="40" y="230" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">Mullvad</text>
+<text x="200" y="230" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#34A853">Audité ✓ Cure53×4</text>
+<text x="340" y="230" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Suède</text>
+<text x="460" y="230" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#49454F">5€/mois fixe</text>
+<text x="620" y="230" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F">Anonymat maximal</text>
+<line x1="18" y1="268" x2="782" y2="268" stroke="#F7F2FA" stroke-width="1"/>
+<text x="40" y="284" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">Surfshark</text>
+<text x="200" y="284" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#34A853">Audité ✓</text>
+<text x="340" y="284" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Pays-Bas</text>
+<text x="460" y="284" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#49454F">2–4€/mois</text>
+<text x="620" y="284" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F">Moins chère, illimité</text>
+<text x="400" y="358" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Les quatre passent des audits indépendants sans journaux — juridiction, prix et limite d'appareils font la différence.</text>
+<text x="792" y="393" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>
