@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">GLM-5.2 at Home: Full Model vs Quantized GGUF</text>
+
+  <!-- Left Panel: Full model -->
+  <rect x="28" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#EA4335"/>
+  <text x="198" y="82" font-size="15" font-weight="700" fill="#EA4335" text-anchor="middle">Full ~744B Model</text>
+
+  <text x="48" y="112" font-size="12" font-weight="700" fill="#1C1B1F">Hardware needed:</text>
+  <text x="48" y="130" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="600" fill="#EA4335">Multi-GPU server / rented GPU</text>
+
+  <text x="48" y="158" font-size="12" font-weight="700" fill="#1C1B1F">Active params (MoE):</text>
+  <text x="48" y="176" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">~40B active of ~744B total</text>
+
+  <text x="48" y="204" font-size="12" font-weight="700" fill="#1C1B1F">Avg output per task:</text>
+  <text x="48" y="222" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">~43,000 tokens</text>
+
+  <text x="48" y="250" font-size="12" font-weight="700" fill="#1C1B1F">Quality:</text>
+  <text x="48" y="268" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">Full fidelity</text>
+
+  <circle cx="198" cy="305" r="14" fill="#EA4335"/>
+  <text x="198" y="310" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">NO</text>
+  <text x="222" y="310" font-size="12" font-weight="700" fill="#1C1B1F">Runs at home</text>
+
+  <!-- Right Panel: Quantized -->
+  <rect x="432" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="602" y="82" font-size="15" font-weight="700" fill="#34A853" text-anchor="middle">1-bit GGUF (Quantized)</text>
+
+  <text x="452" y="112" font-size="12" font-weight="700" fill="#1C1B1F">Hardware needed:</text>
+  <text x="452" y="130" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="600" fill="#34A853">Single consumer GPU or CPU</text>
+
+  <text x="452" y="158" font-size="12" font-weight="700" fill="#1C1B1F">Compression:</text>
+  <text x="452" y="176" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">1-bit weight quantization</text>
+
+  <text x="452" y="204" font-size="12" font-weight="700" fill="#1C1B1F">Trade-off:</text>
+  <text x="452" y="222" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">Lower quality, slower tok/s</text>
+
+  <text x="452" y="250" font-size="12" font-weight="700" fill="#1C1B1F">Quality:</text>
+  <text x="452" y="268" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">Reduced vs full model</text>
+
+  <circle cx="602" cy="305" r="14" fill="#34A853"/>
+  <text x="602" y="310" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">YES</text>
+  <text x="628" y="310" font-size="12" font-weight="700" fill="#1C1B1F">Runs at home</text>
+
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
