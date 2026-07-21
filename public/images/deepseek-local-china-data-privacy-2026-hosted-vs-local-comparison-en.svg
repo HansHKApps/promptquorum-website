@@ -1,0 +1,54 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">Hosted DeepSeek App vs. Self-Hosted Open Weights: Data Flow</text>
+
+  <rect x="28" y="52" width="340" height="304" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="28" y="52" width="340" height="4" fill="#EA4335"/>
+  <text x="198" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#EA4335" text-anchor="middle">Hosted App / API (→ China)</text>
+
+  <rect x="432" y="52" width="340" height="304" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="432" y="52" width="340" height="4" fill="#34A853"/>
+  <text x="602" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#34A853" text-anchor="middle">Self-Hosted Open Weights</text>
+
+  <text x="48" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">Data storage location</text>
+  <text x="48" y="114" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335">People's Republic of China</text>
+  <text x="452" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">Data storage location</text>
+  <text x="452" y="114" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853">Your own machine — never leaves</text>
+  <line x1="48" y1="122" x2="348" y2="122" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="452" y1="122" x2="752" y2="122" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="142" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">Cross-border data transfer</text>
+  <text x="48" y="158" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335">Yes — triggers GDPR transfer rules</text>
+  <text x="452" y="142" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">Cross-border data transfer</text>
+  <text x="452" y="158" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853">None — no transfer occurs</text>
+  <line x1="48" y1="166" x2="348" y2="166" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="452" y1="166" x2="752" y2="166" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="186" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">EU regulatory investigations</text>
+  <text x="48" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335">Italy blocked it; 5 EU DPAs investigating</text>
+  <text x="452" y="186" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">EU regulatory investigations</text>
+  <text x="452" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853">None — no hosted service involved</text>
+  <line x1="48" y1="210" x2="348" y2="210" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="452" y1="210" x2="752" y2="210" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">Network telemetry</text>
+  <text x="48" y="246" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335">App/API calls DeepSeek servers</text>
+  <text x="452" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">Network telemetry</text>
+  <text x="452" y="246" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853">None — weights have no networking code</text>
+  <line x1="48" y1="254" x2="348" y2="254" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="452" y1="254" x2="752" y2="254" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="274" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">Verifiable no-egress</text>
+  <text x="48" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335">No — relies on the vendor's policy</text>
+  <text x="452" y="274" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">Verifiable no-egress</text>
+  <text x="452" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853">Yes — confirm via traffic monitoring</text>
+  <line x1="48" y1="298" x2="348" y2="298" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="452" y1="298" x2="752" y2="298" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="318" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">GDPR transfer mechanism needed</text>
+  <text x="48" y="334" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335">Yes — SCC or adequacy required</text>
+  <text x="452" y="318" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">GDPR transfer mechanism needed</text>
+  <text x="452" y="334" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853">No — data stays in your environment</text>
+
+  <text x="400" y="382" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Self-hosting the open weights removes all 6 China-data-flow risk factors of the hosted app and API.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
