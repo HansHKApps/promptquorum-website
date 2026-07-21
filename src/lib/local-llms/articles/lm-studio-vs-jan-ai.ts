@@ -126,6 +126,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Feature': 'AMD GPU (ROCm)', 'LM Studio': '✓ (Linux)', 'Jan AI': '✓ (via llama.cpp HIP)' },
           ],
           columns: ['Feature', 'LM Studio', 'Jan AI'],
+          image: '/images/lm-studio-vs-jan-ai-decision-tree-en.svg',
+          imageCaption: 'Decision tree: choose LM Studio 0.4.16 for first-time setup and built-in HuggingFace search, or Jan AI 0.8.2 for plugins, multi-port API endpoints, and no-telemetry MIT open-source.',
         },
         'ui': {
           title: 'User Interface & Ease of Use',
@@ -144,6 +146,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Real difference: If you need 50+ tok/s, neither app is optimal. Use vLLM or Ollama for performance.',
             'Winner: **Tie.** Speed is backend-dependent (llama.cpp), not app-dependent.',
           ],
+          image: '/images/lm-studio-vs-jan-ai-shared-backend-en.svg',
+          imageCaption: 'LM Studio 0.4.16 (500MB–1GB base RAM, port 1234) and Jan AI 0.8.2 (1GB+ base RAM, port 1337) both run on the same llama.cpp inference engine, so tokens-per-second output is tied between the two apps.',
         },
         'models': {
           title: 'Model Library & Download Management',
@@ -373,6 +377,8 @@ schema: {
             { 'Feature': 'AMD GPU (ROCm)', 'LM Studio': '✓ (Linux)', 'Jan AI': '✓ (via llama.cpp HIP)' },
           ],
           columns: ['Feature', 'LM Studio', 'Jan AI'],
+          image: '/images/lm-studio-vs-jan-ai-decision-tree-en.svg',
+          imageCaption: 'Entscheidungsbaum: LM Studio 0.4.16 für den ersten Einstieg und integrierte HuggingFace-Suche, oder Jan AI 0.8.2 für Plugins, Multi-Port-API-Endpunkte und telemetriefreies MIT-Open-Source.',
         },
         'ui': {
           title: 'Welches hat eine bessere Benutzeroberfläche?',
@@ -397,6 +403,8 @@ schema: {
           callouts: [
             { type: '🔍 Wussten Sie schon?', text: 'Beide Apps verwenden die gleichen Quantisierungsformate (GGUF, Q4_K_M usw.). Geschwindigkeitssteigerungen stammen von GPU-Beschleunigung (NVIDIA CUDA, Apple M1+) oder Modellgröße, nicht von der App selbst.' },
           ],
+          image: '/images/lm-studio-vs-jan-ai-shared-backend-en.svg',
+          imageCaption: 'LM Studio 0.4.16 (500 MB–1 GB Basis-RAM, Port 1234) und Jan AI 0.8.2 (1 GB+ Basis-RAM, Port 1337) laufen beide auf derselben llama.cpp-Inferenz-Engine, daher ist die Token-pro-Sekunde-Leistung bei beiden Apps gleich.',
         },
         'models': {
           title: 'Welches bietet bessere Modellverwaltung?',
@@ -633,6 +641,8 @@ schema: {
             { 'Feature': 'AMD GPU (ROCm)', 'LM Studio': '✓ (Linux)', 'Jan AI': '✓ (via llama.cpp HIP)' },
           ],
           columns: ['Feature', 'LM Studio', 'Jan AI'],
+          image: '/images/lm-studio-vs-jan-ai-decision-tree-en.svg',
+          imageCaption: 'Arbre de décision : LM Studio 0.4.16 pour une première prise en main et la recherche HuggingFace intégrée, ou Jan AI 0.8.2 pour les plugins, les endpoints API multi-ports et l\'open-source MIT sans télémétrie.',
         },
         'ui': {
           title: 'Quelle interface est meilleure ?',
@@ -657,6 +667,8 @@ schema: {
           callouts: [
             { type: '🔍 Le saviez-vous ?', text: 'Tous deux utilisent les mêmes formats de quantification (GGUF, Q4_K_M). Les gains de vitesse viennent de l\'accélération GPU (NVIDIA CUDA, Apple M1+) ou de la taille du modèle, pas de l\'app.' },
           ],
+          image: '/images/lm-studio-vs-jan-ai-shared-backend-en.svg',
+          imageCaption: 'LM Studio 0.4.16 (500 Mo–1 Go de RAM de base, port 1234) et Jan AI 0.8.2 (1 Go+ de RAM de base, port 1337) tournent tous deux sur le même moteur d\'inférence llama.cpp, donc la vitesse en tokens/seconde est identique entre les deux apps.',
         },
         'models': {
           title: 'Laquelle offre meilleure gestion de modèles ?',
@@ -890,6 +902,8 @@ schema: {
             { 'Feature': 'AMD GPU (ROCm)', 'LM Studio': '✓ (Linux)', 'Jan AI': '✓ (via llama.cpp HIP)' },
           ],
           columns: ['Feature', 'LM Studio', 'Jan AI'],
+          image: '/images/lm-studio-vs-jan-ai-decision-tree-en.svg',
+          imageCaption: '意思決定ツリー：初めての導入と内蔵HuggingFace検索にはLM Studio 0.4.16を、プラグイン・マルチポートAPIエンドポイント・テレメトリなしのMITオープンソースにはJan AI 0.8.2を選択。',
         },
         'ui': {
           title: 'どちらがより良いユーザーインターフェースを持っていますか？',
@@ -914,6 +928,8 @@ schema: {
           callouts: [
             { type: '🔍 ご存知でしたか？', text: 'どちらのアプリも同じ量子化フォーマット（GGUF、Q4_K_M など）を使用しています。速度の向上はGPUアクセラレーション（NVIDIA CUDA、Apple M1+）またはモデルサイズから来ており、アプリ自体からではありません。' },
           ],
+          image: '/images/lm-studio-vs-jan-ai-shared-backend-en.svg',
+          imageCaption: 'LM Studio 0.4.16（基本RAM 500MB～1GB、ポート1234）とJan AI 0.8.2（基本RAM 1GB以上、ポート1337）はどちらも同じllama.cppエンジン上で動作するため、トークン/秒の速度は両アプリで同等。',
         },
         'models': {
           title: 'どちらがより優れたモデル管理を提供していますか？',
@@ -1156,6 +1172,8 @@ schema: {
             { 'Feature': 'AMD GPU (ROCm)', 'LM Studio': '✓ (Linux)', 'Jan AI': '✓ (via llama.cpp HIP)' },
           ],
           columns: ['Feature', 'LM Studio', 'Jan AI'],
+          image: '/images/lm-studio-vs-jan-ai-decision-tree-en.svg',
+          imageCaption: '决策树：初次使用和内置HuggingFace搜索选LM Studio 0.4.16；插件、多端口API和无遥测MIT开源选Jan AI 0.8.2。',
         },
         'ui': {
           title: '哪款界面更好用？',
@@ -1180,6 +1198,8 @@ schema: {
           callouts: [
             { type: '🔍 你知道吗？', text: '两者使用相同的量化格式（GGUF、Q4_K_M等）。速度提升来自GPU加速（NVIDIA CUDA、Apple M1+）或模型大小，不是应用本身。' },
           ],
+          image: '/images/lm-studio-vs-jan-ai-shared-backend-en.svg',
+          imageCaption: 'LM Studio 0.4.16（基础内存500MB–1GB，端口1234）与Jan AI 0.8.2（基础内存1GB以上，端口1337）都运行在同一个llama.cpp推理引擎上，因此两款应用的每秒token数速度相同。',
         },
         'models': {
           title: '模型管理哪个更好？',
@@ -1445,6 +1465,8 @@ schema: {
           callouts: [
             { type: '🔍 ¿Sabías que?', text: 'Ambas apps usan los mismos formatos de cuantización (GGUF, Q4_K_M, etc.). Las ganancias de velocidad provienen de la aceleración GPU (NVIDIA CUDA, Apple M1+) o del tamaño del modelo, no de la app en sí.' },
           ],
+          image: '/images/lm-studio-vs-jan-ai-shared-backend-en.svg',
+          imageCaption: 'LM Studio 0.4.16 (500MB–1GB de RAM base, puerto 1234) y Jan AI 0.8.2 (1GB+ de RAM base, puerto 1337) funcionan sobre el mismo motor de inferencia llama.cpp, por lo que la velocidad en tokens por segundo es igual entre ambas apps.',
         },
         'models': {
           title: '¿Cuál ofrece mejor gestión de modelos?',
@@ -1698,6 +1720,8 @@ schema: {
           callouts: [
             { type: '🔍 ¿Sabías que?', text: 'يستخدم التطبيقان صيغ التكميم نفسها (GGUF وQ4_K_M وغيرها). تأتي مكاسب السرعة من تسريع GPU (NVIDIA CUDA أو Apple M1+) أو حجم النموذج، لا من التطبيق نفسه.' },
           ],
+          image: '/images/lm-studio-vs-jan-ai-shared-backend-en.svg',
+          imageCaption: 'يعمل كل من LM Studio 0.4.16 (500 ميجابايت–1 جيجابايت رام أساسية، المنفذ 1234) وJan AI 0.8.2 (1 جيجابايت+ رام أساسية، المنفذ 1337) على محرك الاستدلال llama.cpp نفسه، لذا فإن سرعة الرموز في الثانية متطابقة بين التطبيقين.',
         },
         'models': {
           title: 'أيهما يقدم إدارة نماذج أفضل؟',
@@ -2005,6 +2029,8 @@ schema: {
             '실제 차이: 50+ tok/s가 필요하다면 어느 앱도 최적이 아닙니다. 성능을 위해 vLLM 또는 Ollama를 사용하십시오.',
             '승자: **무승부.** 속도는 앱이 아닌 백엔드(llama.cpp)에 따라 결정됩니다.',
           ],
+          image: '/images/lm-studio-vs-jan-ai-shared-backend-en.svg',
+          imageCaption: 'LM Studio 0.4.16(기본 RAM 500MB–1GB, 포트 1234)와 Jan AI 0.8.2(기본 RAM 1GB 이상, 포트 1337)는 모두 동일한 llama.cpp 추론 엔진에서 실행되므로 두 앱의 초당 토큰 속도는 동일합니다.',
         },
         'models': {
           title: '모델 라이브러리 및 다운로드 관리',

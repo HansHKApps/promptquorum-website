@@ -1,0 +1,56 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Jan AI vs LM Studio — Which Should You Pick?</text>
+
+  <!-- Root node -->
+  <rect x="290" y="50" width="220" height="46" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+  <text x="400" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">New to local LLMs?</text>
+  <text x="400" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">(first desktop app)</text>
+
+  <!-- Branch lines from root -->
+  <line x1="340" y1="96" x2="180" y2="150" stroke="#6750A4" stroke-width="2"/>
+  <line x1="460" y1="96" x2="560" y2="150" stroke="#6750A4" stroke-width="2"/>
+
+  <text x="200" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">YES</text>
+  <text x="565" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">NO</text>
+
+  <!-- Left leaf: LM Studio -->
+  <rect x="60" y="150" width="240" height="90" rx="6" fill="#FFFFFF" stroke="#7D5260" stroke-width="2"/>
+  <rect x="60" y="150" width="240" height="4" rx="0" fill="#7D5260"/>
+  <text x="180" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#7D5260" text-anchor="middle">LM Studio</text>
+  <text x="180" y="196" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Built-in HuggingFace search</text>
+  <text x="180" y="212" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">3-pane UI, 2-min first model</text>
+  <text x="180" y="228" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">3-year stability track record</text>
+
+  <!-- Right sub-question -->
+  <rect x="460" y="150" width="240" height="46" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+  <text x="580" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Need plugins, multi-port API,</text>
+  <text x="580" y="186" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">or zero telemetry proof?</text>
+
+  <!-- Sub-branch lines -->
+  <line x1="520" y1="196" x2="440" y2="260" stroke="#6750A4" stroke-width="2"/>
+  <line x1="640" y1="196" x2="700" y2="260" stroke="#6750A4" stroke-width="2"/>
+
+  <text x="452" y="232" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">YES</text>
+  <text x="705" y="232" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#79747E">NO</text>
+
+  <!-- Sub-leaf: Jan AI -->
+  <rect x="320" y="260" width="240" height="106" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="320" y="260" width="240" height="4" rx="0" fill="#6750A4"/>
+  <text x="440" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Jan AI</text>
+  <text x="440" y="306" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">MIT open-source, no telemetry</text>
+  <text x="440" y="322" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Plugin extensions + RAG</text>
+  <text x="440" y="338" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Multiple model servers</text>
+  <text x="440" y="354" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">(one port per model)</text>
+
+  <!-- Sub-leaf: LM Studio (default) -->
+  <rect x="600" y="260" width="180" height="90" rx="6" fill="#FFFFFF" stroke="#7D5260" stroke-width="2"/>
+  <rect x="600" y="260" width="180" height="4" rx="0" fill="#7D5260"/>
+  <text x="690" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#7D5260" text-anchor="middle">LM Studio</text>
+  <text x="690" y="306" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Simplest default</text>
+  <text x="690" y="322" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">choice — fewer</text>
+  <text x="690" y="338" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">moving parts</text>
+
+  <line x1="18" y1="385" x2="782" y2="385" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="400" y="398" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">Both run on llama.cpp — the choice is about UI and features, not speed</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
