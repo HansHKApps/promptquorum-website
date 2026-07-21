@@ -171,6 +171,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'arabic-models-ranked',
         title: 'Best Arabic Local LLMs: Ranked for On-Premise Deployment',
         content: 'Ranked by Arabic-language capability and suitability for local/on-premise deployment.',
+        image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
+        imageCaption: 'Decision tree for choosing an Arabic local LLM: Jais 30B for best Arabic quality (~19-20 GB VRAM), Falcon Arabic 7B for consumer GPUs (~5 GB), Qwen3-8B for multilingual use (~5-6 GB), or Llama 3.1-8B as a broad multilingual baseline.',
         items: [
           '**1. Jais 30B — Best Arabic Quality (Apache 2.0, On-Premise Ready).** Developer: Core42 / Inception AI (G42 group, Abu Dhabi) + MBZUAI research + Cerebras training. Training: 126B Arabic tokens + 251B English tokens + 50B code tokens. Human evaluation shows Jais 30B outperforms Jais 13B in Arabic 96% of evaluations. License: Apache 2.0 (fully open, commercial use allowed). Hugging Face: inceptionai/jais-30b-v3. VRAM: ~18-20 GB Q4 estimate (enterprise GPU or multi-GPU for FP16). Best for: highest Arabic quality in enterprise document processing, customer support, and government deployments where Arabic is primary.',
           '**2. Falcon Arabic 7B — Best for Consumer Hardware (TII Abu Dhabi).** Developer: Technology Innovation Institute (TII), Abu Dhabi (under the Advanced Technology Research Council). Base: Falcon 3-7B architecture (released December 17, 2024). Training: native (non-translated) Arabic datasets, MSA and regional dialects. License: Falcon LLM License — permissive, commercial use allowed. VRAM: Q4_K_M ~5 GB — runs on RTX 4060 8GB, RTX 3060 12GB, and equivalent. Best for: consumer and prosumer hardware deployments; a UAE-native model from an Abu Dhabi institution.',
@@ -184,6 +186,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vram-table',
         title: 'VRAM Requirements for Arabic Local LLMs',
         content: 'Required VRAM by model and quantization. Rows marked * are parameter-scaling estimates (no official benchmark found). Always verify with your specific hardware before deployment.',
+        image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
+        imageCaption: 'VRAM requirements for Arabic local LLMs at Q4_K_M quantization: Gemma 3 4B needs ~3 GB, Falcon Arabic 7B and ALLaM 7B need ~5 GB, Qwen3-8B needs 5-6 GB, Jais 13B needs 8-10 GB, and Jais 30B needs 19-20 GB VRAM.',
         columns: ['Model', 'Params', 'Q4_K_M VRAM', 'FP16 VRAM', 'Min Hardware'],
         rows: [
           { 'Model': 'Falcon Arabic', 'Params': '7B', 'Q4_K_M VRAM': '~5 GB', 'FP16 VRAM': '~16.7 GB', 'Min Hardware': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -518,6 +522,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'arabic-models-ranked',
         title: 'أفضل نماذج LLM العربية المحلية: مرتبة للنشر داخل المؤسسة',
         content: 'مرتبة حسب القدرة على اللغة العربية والملاءمة للنشر المحلي/داخل المؤسسة.',
+        image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
+        imageCaption: 'شجرة قرار لاختيار نموذج LLM عربي محلي: Jais 30B لأفضل جودة عربية (~19-20 GB VRAM)، وFalcon Arabic 7B لبطاقات GPU الاستهلاكية (~5 GB)، وQwen3-8B للاستخدام متعدد اللغات (~5-6 GB)، أو Llama 3.1-8B كخيار أساسي متعدد اللغات.',
         items: [
           '**1. Jais 30B — أفضل جودة عربية (Apache 2.0، جاهز داخل المؤسسة).** المطوّر: Core42 / Inception AI (مجموعة G42، أبوظبي) + أبحاث MBZUAI + تدريب Cerebras. التدريب: 126B رمز عربي + 251B رمز إنجليزي + 50B رمز برمجي. يُظهر التقييم البشري أن Jais 30B يتفوق على Jais 13B في العربية في 96% من التقييمات. الترخيص: Apache 2.0 (مفتوح بالكامل، الاستخدام التجاري مسموح). Hugging Face: inceptionai/jais-30b-v3. VRAM: تقدير ~18-20 GB عند Q4 (GPU مؤسسي أو متعدد لدقة FP16). الأفضل لـ: أعلى جودة عربية في معالجة المستندات المؤسسية ودعم العملاء والنشر الحكومي حيث تكون العربية لغة أساسية.',
           '**2. Falcon Arabic 7B — الأفضل لأجهزة المستهلكين (TII أبوظبي).** المطوّر: مؤسسة الابتكار التقني (TII)، أبوظبي (تحت مجلس أبحاث التكنولوجيا المتقدمة). الأساس: معمارية Falcon 3-7B (صدرت في December 17, 2024). التدريب: مجموعات بيانات عربية أصيلة (غير مترجمة)، الفصحى واللهجات الإقليمية. الترخيص: Falcon LLM License — متساهل، الاستخدام التجاري مسموح. VRAM: Q4_K_M ~5 GB — يعمل على RTX 4060 8GB وRTX 3060 12GB وما يعادلها. الأفضل لـ: عمليات النشر على أجهزة المستهلكين والمستخدمين المتقدمين؛ نموذج إماراتي أصيل من مؤسسة في أبوظبي.',
@@ -531,6 +537,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vram-table',
         title: 'متطلبات VRAM لنماذج LLM العربية المحلية',
         content: 'متطلبات VRAM حسب النموذج والتكميم. الصفوف المميزة بـ * هي تقديرات قائمة على تحجيم المعاملات (لم يُعثر على معيار رسمي). تحقّق دائمًا من أجهزتك المحددة قبل النشر.',
+        image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
+        imageCaption: 'متطلبات VRAM لنماذج LLM العربية المحلية عند تكميم Q4_K_M: يحتاج Gemma 3 4B نحو 3 GB، ويحتاج Falcon Arabic 7B وALLaM 7B نحو 5 GB، ويحتاج Qwen3-8B من 5 إلى 6 GB، ويحتاج Jais 13B من 8 إلى 10 GB، بينما يحتاج Jais 30B من 19 إلى 20 GB VRAM.',
         columns: ['النموذج', 'المعاملات', 'VRAM عند Q4_K_M', 'VRAM عند FP16', 'الحد الأدنى للأجهزة'],
         rows: [
           { 'النموذج': 'Falcon Arabic', 'المعاملات': '7B', 'VRAM عند Q4_K_M': '~5 GB', 'VRAM عند FP16': '~16.7 GB', 'الحد الأدنى للأجهزة': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -865,6 +873,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'arabic-models-ranked',
         title: 'Beste arabische lokale LLMs: im Ranking für On-Premise-Bereitstellung',
         content: 'Geordnet nach arabischer Sprachfähigkeit und Eignung für lokale/On-Premise-Bereitstellung.',
+        image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
+        imageCaption: 'Entscheidungsbaum zur Wahl eines arabischen lokalen LLM: Jais 30B für beste arabische Qualität (~19-20 GB VRAM), Falcon Arabic 7B für Consumer-GPUs (~5 GB), Qwen3-8B für mehrsprachige Nutzung (~5-6 GB) oder Llama 3.1-8B als breite mehrsprachige Basisoption.',
         items: [
           '**1. Jais 30B — Beste arabische Qualität (Apache 2.0, On-Premise-bereit).** Entwickler: Core42 / Inception AI (G42-Gruppe, Abu Dhabi) + MBZUAI-Forschung + Cerebras-Training. Training: 126B arabische Tokens + 251B englische Tokens + 50B Code-Tokens. Die menschliche Bewertung zeigt, dass Jais 30B in 96 % der Bewertungen besser im Arabischen abschneidet als Jais 13B. Lizenz: Apache 2.0 (vollständig offen, kommerzielle Nutzung erlaubt). Hugging Face: inceptionai/jais-30b-v3. VRAM: ~18-20 GB Q4-Schätzung (Enterprise-GPU oder Multi-GPU für FP16). Am besten geeignet für: höchste arabische Qualität bei der Verarbeitung von Unternehmensdokumenten, im Kundensupport und bei Behördeneinsätzen, in denen Arabisch die Hauptsprache ist.',
           '**2. Falcon Arabic 7B — Am besten für Consumer-Hardware (TII Abu Dhabi).** Entwickler: Technology Innovation Institute (TII), Abu Dhabi (unter dem Advanced Technology Research Council). Basis: Falcon 3-7B-Architektur (veröffentlicht am December 17, 2024). Training: native (nicht übersetzte) arabische Datensätze, MSA und regionale Dialekte. Lizenz: Falcon LLM License — permissiv, kommerzielle Nutzung erlaubt. VRAM: Q4_K_M ~5 GB — läuft auf RTX 4060 8GB, RTX 3060 12GB und gleichwertigen Karten. Am besten geeignet für: Bereitstellungen auf Consumer- und Prosumer-Hardware; ein VAE-natives Modell einer Institution aus Abu Dhabi.',
@@ -878,6 +888,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vram-table',
         title: 'VRAM-Anforderungen für arabische lokale LLMs',
         content: 'Erforderlicher VRAM nach Modell und Quantisierung. Mit * markierte Zeilen sind Schätzungen auf Basis der Parameterskalierung (kein offizieller Benchmark gefunden). Überprüfen Sie vor der Bereitstellung stets mit Ihrer konkreten Hardware.',
+        image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
+        imageCaption: 'VRAM-Bedarf arabischer lokaler LLMs bei Q4_K_M-Quantisierung: Gemma 3 4B benötigt ~3 GB, Falcon Arabic 7B und ALLaM 7B benötigen ~5 GB, Qwen3-8B benötigt 5-6 GB, Jais 13B benötigt 8-10 GB und Jais 30B benötigt 19-20 GB VRAM.',
         columns: ['Modell', 'Parameter', 'Q4_K_M VRAM', 'FP16 VRAM', 'Mindesthardware'],
         rows: [
           { 'Modell': 'Falcon Arabic', 'Parameter': '7B', 'Q4_K_M VRAM': '~5 GB', 'FP16 VRAM': '~16.7 GB', 'Mindesthardware': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -1212,6 +1224,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'arabic-models-ranked',
         title: 'Mejores LLM locales en árabe: clasificación para despliegue on-premise',
         content: 'Clasificados por capacidad en lengua árabe e idoneidad para despliegue local/on-premise.',
+        image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
+        imageCaption: 'Árbol de decisión para elegir un LLM local en árabe: Jais 30B para la mejor calidad en árabe (~19-20 GB de VRAM), Falcon Arabic 7B para GPU de consumo (~5 GB), Qwen3-8B para uso multilingüe (~5-6 GB) o Llama 3.1-8B como opción base multilingüe.',
         items: [
           '**1. Jais 30B — Mejor calidad en árabe (Apache 2.0, listo para on-premise).** Desarrollador: Core42 / Inception AI (grupo G42, Abu Dabi) + investigación de MBZUAI + entrenamiento de Cerebras. Entrenamiento: 126B tokens en árabe + 251B tokens en inglés + 50B tokens de código. La evaluación humana muestra que Jais 30B supera a Jais 13B en árabe en el 96% de las evaluaciones. Licencia: Apache 2.0 (totalmente abierta, uso comercial permitido). Hugging Face: inceptionai/jais-30b-v3. VRAM: estimación ~18-20 GB Q4 (GPU empresarial o multi-GPU para FP16). Mejor para: la más alta calidad en árabe en procesamiento de documentos empresariales, atención al cliente y despliegues gubernamentales donde el árabe es primario.',
           '**2. Falcon Arabic 7B — Mejor para hardware de consumidor (TII Abu Dabi).** Desarrollador: Technology Innovation Institute (TII), Abu Dabi (bajo el Advanced Technology Research Council). Base: arquitectura Falcon 3-7B (lanzada el December 17, 2024). Entrenamiento: datasets de árabe nativo (no traducido), MSA y dialectos regionales. Licencia: Falcon LLM License — permisiva, uso comercial permitido. VRAM: Q4_K_M ~5 GB — funciona en RTX 4060 8GB, RTX 3060 12GB y equivalentes. Mejor para: despliegues en hardware de consumidor y prosumidor; un modelo nativo de EAU de una institución de Abu Dabi.',
@@ -1225,6 +1239,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vram-table',
         title: 'Requisitos de VRAM para LLM locales en árabe',
         content: 'VRAM requerida por modelo y cuantización. Las filas marcadas con * son estimaciones por escalado de parámetros (no se encontró benchmark oficial). Verifica siempre con tu hardware específico antes del despliegue.',
+        image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
+        imageCaption: 'Requisitos de VRAM de los LLM locales en árabe con cuantización Q4_K_M: Gemma 3 4B necesita ~3 GB, Falcon Arabic 7B y ALLaM 7B necesitan ~5 GB, Qwen3-8B necesita 5-6 GB, Jais 13B necesita 8-10 GB y Jais 30B necesita 19-20 GB de VRAM.',
         columns: ['Modelo', 'Parámetros', 'VRAM Q4_K_M', 'VRAM FP16', 'Hardware mínimo'],
         rows: [
           { 'Modelo': 'Falcon Arabic', 'Parámetros': '7B', 'VRAM Q4_K_M': '~5 GB', 'VRAM FP16': '~16.7 GB', 'Hardware mínimo': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -1560,6 +1576,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'arabic-models-ranked',
         title: 'Meilleurs LLM locaux arabophones : classés pour le déploiement sur site',
         content: 'Classés par capacité en langue arabe et adéquation au déploiement local/sur site.',
+        image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
+        imageCaption: 'Arbre de décision pour choisir un LLM local arabophone : Jais 30B pour la meilleure qualité en arabe (~19-20 Go de VRAM), Falcon Arabic 7B pour GPU grand public (~5 Go), Qwen3-8B pour un usage multilingue (~5-6 Go), ou Llama 3.1-8B comme base multilingue polyvalente.',
         items: [
           '**1. Jais 30B — Meilleure qualité arabe (Apache 2.0, prêt pour le sur site).** Développeur : Core42 / Inception AI (groupe G42, Abu Dhabi) + recherche MBZUAI + entraînement Cerebras. Entraînement : 126B tokens arabes + 251B tokens anglais + 50B tokens de code. L\'évaluation humaine montre que Jais 30B surpasse Jais 13B en arabe dans 96% des évaluations. Licence : Apache 2.0 (entièrement ouverte, usage commercial autorisé). Hugging Face : inceptionai/jais-30b-v3. VRAM : estimation ~18-20 GB Q4 (GPU entreprise ou multi-GPU pour le FP16). Idéal pour : la plus haute qualité arabe dans le traitement documentaire d\'entreprise, le support client et les déploiements gouvernementaux où l\'arabe est primordial.',
           '**2. Falcon Arabic 7B — Idéal pour le matériel grand public (TII Abu Dhabi).** Développeur : Technology Innovation Institute (TII), Abu Dhabi (sous l\'Advanced Technology Research Council). Base : architecture Falcon 3-7B (publiée le December 17, 2024). Entraînement : jeux de données arabes natifs (non traduits), MSA et dialectes régionaux. Licence : Falcon LLM License — permissive, usage commercial autorisé. VRAM : Q4_K_M ~5 GB — fonctionne sur RTX 4060 8GB, RTX 3060 12GB et équivalents. Idéal pour : les déploiements sur matériel grand public et prosommateur ; un modèle natif des Émirats issu d\'une institution d\'Abu Dhabi.',
@@ -1573,6 +1591,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vram-table',
         title: 'Besoins en VRAM des LLM locaux arabophones',
         content: 'VRAM requise par modèle et quantification. Les lignes marquées * sont des estimations basées sur la mise à l\'échelle des paramètres (aucun benchmark officiel trouvé). Vérifiez toujours avec votre matériel spécifique avant le déploiement.',
+        image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
+        imageCaption: 'Besoins en VRAM des LLM locaux arabophones en quantification Q4_K_M : Gemma 3 4B nécessite ~3 Go, Falcon Arabic 7B et ALLaM 7B nécessitent ~5 Go, Qwen3-8B nécessite 5-6 Go, Jais 13B nécessite 8-10 Go et Jais 30B nécessite 19-20 Go de VRAM.',
         columns: ['Modèle', 'Paramètres', 'VRAM Q4_K_M', 'VRAM FP16', 'Matériel minimal'],
         rows: [
           { 'Modèle': 'Falcon Arabic', 'Paramètres': '7B', 'VRAM Q4_K_M': '~5 GB', 'VRAM FP16': '~16.7 GB', 'Matériel minimal': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -1907,6 +1927,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'arabic-models-ranked',
         title: 'ベストなアラビア語ローカルLLM：オンプレミスデプロイ向けランキング',
         content: 'アラビア語能力とローカル/オンプレミスデプロイへの適性でランク付けしています。',
+        image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
+        imageCaption: 'アラビア語対応ローカルLLMの選び方の決定木: 最高のアラビア語品質にはJais 30B（~19-20 GB VRAM）、コンシューマーGPUにはFalcon Arabic 7B（~5 GB）、多言語用途にはQwen3-8B（~5-6 GB）、幅広い多言語ベースラインにはLlama 3.1-8B。',
         items: [
           '**1. Jais 30B — ベストなアラビア語品質（Apache 2.0、オンプレミス対応）。** 開発元：Core42 / Inception AI（G42グループ、アブダビ）+ MBZUAIの研究 + Cerebrasの訓練。訓練：126B アラビア語トークン + 251B 英語トークン + 50B コードトークン。人による評価では、Jais 30Bは評価の96%でアラビア語においてJais 13Bを上回ります。ライセンス：Apache 2.0（完全オープン、商用利用可）。Hugging Face：inceptionai/jais-30b-v3。VRAM：Q4で ~18-20 GB の見積もり（FP16にはエンタープライズGPUまたはマルチGPU）。最適な用途：アラビア語が主となるエンタープライズの文書処理、カスタマーサポート、政府向けデプロイでの最高のアラビア語品質。',
           '**2. Falcon Arabic 7B — コンシューマーハードウェアに最適（TII アブダビ）。** 開発元：Technology Innovation Institute（TII）、アブダビ（Advanced Technology Research Council傘下）。ベース：Falcon 3-7Bアーキテクチャ（2024年12月17日リリース）。訓練：ネイティブ（非翻訳）のアラビア語データセット、MSAおよび地域方言。ライセンス：Falcon LLM License — 寛容で商用利用可。VRAM：Q4_K_M ~5 GB — RTX 4060 8GB、RTX 3060 12GB、同等品で動作。最適な用途：コンシューマーおよびプロシューマー向けハードウェアでのデプロイ；アブダビの機関によるUAEネイティブモデル。',
@@ -1920,6 +1942,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vram-table',
         title: 'アラビア語ローカルLLMのVRAM要件',
         content: 'モデルと量子化別の必要VRAM。*印の行はパラメータスケーリングによる見積もり（公式ベンチマークなし）です。デプロイ前に必ず自分の具体的なハードウェアで確認してください。',
+        image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
+        imageCaption: 'Q4_K_M量子化におけるアラビア語ローカルLLMのVRAM要件: Gemma 3 4Bは約3 GB、Falcon Arabic 7BとALLaM 7Bは約5 GB、Qwen3-8Bは5-6 GB、Jais 13Bは8-10 GB、Jais 30Bは19-20 GBのVRAMが必要。',
         columns: ['モデル', 'パラメータ', 'Q4_K_M VRAM', 'FP16 VRAM', '最小ハードウェア'],
         rows: [
           { 'モデル': 'Falcon Arabic', 'パラメータ': '7B', 'Q4_K_M VRAM': '~5 GB', 'FP16 VRAM': '~16.7 GB', '最小ハードウェア': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -2254,6 +2278,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'arabic-models-ranked',
         title: 'Melhores LLMs locais em árabe: classificados para implantação on-premise',
         content: 'Classificados por capacidade em árabe e adequação para implantação local/on-premise.',
+        image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
+        imageCaption: 'Árvore de decisão para escolher um LLM local em árabe: Jais 30B para a melhor qualidade em árabe (~19-20 GB de VRAM), Falcon Arabic 7B para GPUs de consumidor (~5 GB), Qwen3-8B para uso multilíngue (~5-6 GB) ou Llama 3.1-8B como base multilíngue ampla.',
         items: [
           '**1. Jais 30B — Melhor qualidade em árabe (Apache 2.0, pronto para on-premise).** Desenvolvedor: Core42 / Inception AI (grupo G42, Abu Dhabi) + pesquisa MBZUAI + treinamento Cerebras. Treinamento: 126B tokens em árabe + 251B tokens em inglês + 50B tokens de código. A avaliação humana mostra que o Jais 30B supera o Jais 13B em árabe em 96% das avaliações. Licença: Apache 2.0 (totalmente aberta, uso comercial permitido). Hugging Face: inceptionai/jais-30b-v3. VRAM: estimativa de ~18-20 GB Q4 (GPU enterprise ou multi-GPU para FP16). Melhor para: máxima qualidade em árabe em processamento de documentos empresariais, suporte ao cliente e implantações governamentais onde o árabe é primário.',
           '**2. Falcon Arabic 7B — Melhor para hardware de consumidor (TII Abu Dhabi).** Desenvolvedor: Technology Innovation Institute (TII), Abu Dhabi (sob o Advanced Technology Research Council). Base: arquitetura Falcon 3-7B (lançada em December 17, 2024). Treinamento: datasets em árabe nativo (não traduzidos), MSA e dialetos regionais. Licença: Falcon LLM License — permissiva, uso comercial permitido. VRAM: Q4_K_M ~5 GB — roda em RTX 4060 8GB, RTX 3060 12GB e equivalentes. Melhor para: implantações em hardware de consumidor e prosumer; um modelo nativo dos Emirados de uma instituição de Abu Dhabi.',
@@ -2267,6 +2293,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vram-table',
         title: 'Requisitos de VRAM para LLMs locais em árabe',
         content: 'VRAM necessária por modelo e quantização. As linhas marcadas com * são estimativas baseadas no escalonamento de parâmetros (nenhum benchmark oficial encontrado). Sempre verifique com seu hardware específico antes da implantação.',
+        image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
+        imageCaption: 'Requisitos de VRAM dos LLMs locais em árabe com quantização Q4_K_M: Gemma 3 4B precisa de ~3 GB, Falcon Arabic 7B e ALLaM 7B precisam de ~5 GB, Qwen3-8B precisa de 5-6 GB, Jais 13B precisa de 8-10 GB e Jais 30B precisa de 19-20 GB de VRAM.',
         columns: ['Modelo', 'Parâmetros', 'Q4_K_M VRAM', 'FP16 VRAM', 'Hardware mínimo'],
         rows: [
           { 'Modelo': 'Falcon Arabic', 'Parâmetros': '7B', 'Q4_K_M VRAM': '~5 GB', 'FP16 VRAM': '~16.7 GB', 'Hardware mínimo': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -2602,6 +2630,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'arabic-models-ranked',
         title: '最佳阿拉伯语本地 LLM：本地部署排名',
         content: '按阿拉伯语能力和本地/本地部署适用性排名。',
+        image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
+        imageCaption: '选择阿拉伯语本地LLM的决策树:追求最佳阿拉伯语质量选Jais 30B(约19-20 GB VRAM),消费级GPU选Falcon Arabic 7B(约5 GB),多语言场景选Qwen3-8B(约5-6 GB),或选择Llama 3.1-8B作为广泛的多语言基线模型。',
         items: [
           '**1. Jais 30B — 最佳阿拉伯语质量（Apache 2.0，可本地部署）。** 开发者：Core42 / Inception AI（G42 集团，阿布扎比）+ MBZUAI 研究 + Cerebras 训练。训练：126B 阿拉伯语 token + 251B 英语 token + 50B 代码 token。人工评估显示 Jais 30B 在 96% 的阿拉伯语评估中优于 Jais 13B。许可证：Apache 2.0（完全开放，允许商业使用）。Hugging Face：inceptionai/jais-30b-v3。VRAM：Q4 估计约 18-20 GB（FP16 需企业级 GPU 或多 GPU）。最适合：以阿拉伯语为主的企业文档处理、客户支持和政府部署中追求最高阿拉伯语质量的场景。',
           '**2. Falcon Arabic 7B — 最适合消费级硬件（TII 阿布扎比）。** 开发者：Technology Innovation Institute（TII），阿布扎比（隶属 Advanced Technology Research Council）。基础：Falcon 3-7B 架构（发布于 December 17, 2024）。训练：原生（非翻译）阿拉伯语数据集，含 MSA 和地区方言。许可证：Falcon LLM License——宽松，允许商业使用。VRAM：Q4_K_M 约 5 GB——可在 RTX 4060 8GB、RTX 3060 12GB 及同等硬件上运行。最适合：消费级和专业消费级硬件部署；来自阿布扎比机构的阿联酋原生模型。',
@@ -2615,6 +2645,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vram-table',
         title: '阿拉伯语本地 LLM 的 VRAM 需求',
         content: '按模型和量化方式列出所需 VRAM。标注 * 的行为参数缩放估算（未找到官方基准）。部署前请务必用你的具体硬件验证。',
+        image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
+        imageCaption: 'Q4_K_M量化下阿拉伯语本地LLM的VRAM需求:Gemma 3 4B约需3 GB,Falcon Arabic 7B与ALLaM 7B约需5 GB,Qwen3-8B需5-6 GB,Jais 13B需8-10 GB,Jais 30B需19-20 GB VRAM。',
         columns: ['模型', '参数量', 'Q4_K_M VRAM', 'FP16 VRAM', '最低硬件'],
         rows: [
           { '模型': 'Falcon Arabic', '参数量': '7B', 'Q4_K_M VRAM': '~5 GB', 'FP16 VRAM': '~16.7 GB', '最低硬件': 'RTX 4060 8 GB / RTX 3060 12 GB' },
@@ -2950,6 +2982,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'arabic-models-ranked',
         title: '최고의 아랍어 로컬 LLM: 온프레미스 배포를 위한 순위',
         content: '아랍어 능력 및 로컬/온프레미스 배포 적합성에 따라 순위를 매겼습니다.',
+        image: '/images/best-arabic-local-llms-2026-decision-tree-en.svg',
+        imageCaption: '아랍어 로컬 LLM 선택을 위한 의사결정 트리: 최고의 아랍어 품질을 원하면 Jais 30B(~19-20 GB VRAM), 소비자용 GPU에는 Falcon Arabic 7B(~5 GB), 다국어 활용에는 Qwen3-8B(~5-6 GB), 폭넓은 다국어 기본 모델로는 Llama 3.1-8B.',
         items: [
           '**1. Jais 30B — 최고의 아랍어 품질 (Apache 2.0, 온프레미스 준비 완료).** 개발사: Core42 / Inception AI (G42 그룹, 아부다비) + MBZUAI 연구 + Cerebras 훈련. 훈련: 126B 아랍어 토큰 + 251B 영어 토큰 + 50B 코드 토큰. 인간 평가에서 Jais 30B는 평가의 96%에서 아랍어로 Jais 13B를 능가합니다. 라이선스: Apache 2.0(완전 공개, 상업적 사용 허용). Hugging Face: inceptionai/jais-30b-v3. VRAM: ~18-20 GB Q4 추정치(FP16의 경우 엔터프라이즈 GPU 또는 멀티 GPU). 최적 용도: 아랍어가 주된 엔터프라이즈 문서 처리, 고객 지원, 정부 배포에서 최고의 아랍어 품질.',
           '**2. Falcon Arabic 7B — 소비자 하드웨어에 최적 (TII 아부다비).** 개발사: Technology Innovation Institute (TII), 아부다비(Advanced Technology Research Council 산하). 기반: Falcon 3-7B 아키텍처(December 17, 2024 출시). 훈련: 네이티브(비번역) 아랍어 데이터셋, MSA 및 지역 방언. 라이선스: Falcon LLM License — 허용적, 상업적 사용 허용. VRAM: Q4_K_M ~5 GB — RTX 4060 8GB, RTX 3060 12GB 및 동급에서 실행. 최적 용도: 소비자 및 프로슈머 하드웨어 배포; 아부다비 기관의 UAE 네이티브 모델.',
@@ -2963,6 +2997,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vram-table',
         title: '아랍어 로컬 LLM의 VRAM 요구 사항',
         content: '모델 및 양자화별 필요 VRAM입니다. *로 표시된 행은 파라미터 스케일링 추정치입니다(공식 벤치마크 없음). 배포 전에 항상 특정 하드웨어로 확인하십시오.',
+        image: '/images/best-arabic-local-llms-2026-vram-by-model-en.svg',
+        imageCaption: 'Q4_K_M 양자화 기준 아랍어 로컬 LLM의 VRAM 요구 사항: Gemma 3 4B는 약 3 GB, Falcon Arabic 7B와 ALLaM 7B는 약 5 GB, Qwen3-8B는 5-6 GB, Jais 13B는 8-10 GB, Jais 30B는 19-20 GB VRAM이 필요합니다.',
         columns: ['모델', '파라미터', 'Q4_K_M VRAM', 'FP16 VRAM', '최소 하드웨어'],
         rows: [
           { '모델': 'Falcon Arabic', '파라미터': '7B', 'Q4_K_M VRAM': '~5 GB', 'FP16 VRAM': '~16.7 GB', '최소 하드웨어': 'RTX 4060 8 GB / RTX 3060 12 GB' },
