@@ -1,0 +1,79 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="460" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Which Local Agent Stack Should You Pick?</text>
+
+  <!-- Root -->
+  <rect x="250" y="40" width="300" height="50" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Coding agent inside one editor?</text>
+
+  <!-- Root to level-1 branch -->
+  <line x1="400" y1="90" x2="400" y2="105" stroke="#6750A4" stroke-width="2"/>
+  <line x1="200" y1="105" x2="560" y2="105" stroke="#6750A4" stroke-width="2"/>
+  <line x1="200" y1="105" x2="200" y2="130" stroke="#6750A4" stroke-width="2"/>
+  <line x1="560" y1="105" x2="560" y2="130" stroke="#6750A4" stroke-width="2"/>
+  <text x="155" y="122" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#79747E" text-anchor="end">YES — IDE, coding</text>
+  <text x="605" y="122" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#79747E" text-anchor="start">NO — cross-tool / pipeline</text>
+
+  <!-- Node 1 -->
+  <rect x="60" y="130" width="280" height="50" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="200" y="160" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">8+ files or deep refactor?</text>
+
+  <!-- Node 2 -->
+  <rect x="420" y="130" width="280" height="50" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="560" y="160" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Fixed steps + test suite?</text>
+
+  <!-- Node 1 to leaves -->
+  <line x1="200" y1="180" x2="200" y2="195" stroke="#6750A4" stroke-width="2"/>
+  <line x1="110" y1="195" x2="290" y2="195" stroke="#6750A4" stroke-width="2"/>
+  <line x1="110" y1="195" x2="110" y2="215" stroke="#6750A4" stroke-width="2"/>
+  <line x1="290" y1="195" x2="290" y2="215" stroke="#6750A4" stroke-width="2"/>
+  <text x="70" y="210" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#79747E" text-anchor="end">YES</text>
+  <text x="330" y="210" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#79747E" text-anchor="start">NO</text>
+
+  <!-- Node 2 to leaves -->
+  <line x1="560" y1="180" x2="560" y2="195" stroke="#6750A4" stroke-width="2"/>
+  <line x1="470" y1="195" x2="650" y2="195" stroke="#6750A4" stroke-width="2"/>
+  <line x1="470" y1="195" x2="470" y2="215" stroke="#6750A4" stroke-width="2"/>
+  <line x1="650" y1="195" x2="650" y2="215" stroke="#6750A4" stroke-width="2"/>
+  <text x="430" y="210" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#79747E" text-anchor="end">YES</text>
+  <text x="690" y="210" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#79747E" text-anchor="start">NO</text>
+
+  <!-- Leaf A: Cline + Ollama -->
+  <rect x="25" y="215" width="170" height="95" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="25" y="215" width="170" height="4" fill="#34A853"/>
+  <text x="110" y="233" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Cline + Ollama</text>
+  <text x="110" y="248" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Qwen3-Coder 30B, VS Code</text>
+  <text x="110" y="266" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">13–15 of 15 runs</text>
+  <rect x="70" y="274" width="80" height="18" rx="9" fill="#34A853"/>
+  <text x="110" y="287" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">WORKS</text>
+
+  <!-- Leaf B: Continue.dev Agent -->
+  <rect x="205" y="215" width="170" height="95" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="205" y="215" width="170" height="4" fill="#34A853"/>
+  <text x="290" y="233" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Continue.dev Agent</text>
+  <text x="290" y="248" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Lighter, single/two-file</text>
+  <text x="290" y="266" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">12–14 of 15 runs</text>
+  <rect x="250" y="274" width="80" height="18" rx="9" fill="#34A853"/>
+  <text x="290" y="287" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">WORKS</text>
+
+  <!-- Leaf C: LangGraph / CrewAI / AutoGen -->
+  <rect x="385" y="215" width="170" height="95" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+  <rect x="385" y="215" width="170" height="4" fill="#F4B400"/>
+  <text x="470" y="233" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">LangGraph / CrewAI /</text>
+  <text x="470" y="248" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">AutoGen-AG2 (scripted)</text>
+  <text x="470" y="266" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">4–7 of 15 unattended</text>
+  <rect x="430" y="274" width="80" height="18" rx="9" fill="#F4B400"/>
+  <text x="470" y="287" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">SCRIPTED</text>
+
+  <!-- Leaf D: Fully autonomous -->
+  <rect x="565" y="215" width="170" height="95" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="565" y="215" width="170" height="4" fill="#EA4335"/>
+  <text x="650" y="233" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Fully autonomous,</text>
+  <text x="650" y="248" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">no human review</text>
+  <text x="650" y="266" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">Not available in 2026</text>
+  <rect x="610" y="274" width="80" height="18" rx="9" fill="#EA4335"/>
+  <text x="650" y="287" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">WAIT</text>
+
+  <line x1="60" y1="335" x2="740" y2="335" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="360" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Most users should install Cline + Ollama; scripted pipelines need typed steps; unsupervised autonomy is not shipping in 2026.</text>
+<text x="792" y="455" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

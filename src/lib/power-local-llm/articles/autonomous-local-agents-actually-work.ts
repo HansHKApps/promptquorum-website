@@ -194,6 +194,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Failed. The multi-agent abstraction is the problem, not the implementation.',
           },
         ],
+        image: '/images/autonomous-local-agents-actually-work-success-rate-en.svg',
+        imageCaption: 'Local AI agent stack success rates out of 15 test runs: Cline + Ollama and Continue.dev Agent land 12–15 runs, LangGraph, OpenInterpreter, and MetaGPT local land 3–9, and AutoGPT-local completes only 0–2.',
       },
       clineOllama: {
         id: 'cline-ollama',
@@ -371,6 +373,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your situation': 'I want autonomous unsupervised agents that ship work overnight', 'Pick': 'Wait. The 2026 stack does not deliver this. Use supervised stacks instead.' },
           { 'Your situation': 'I want to evaluate AutoGPT or MetaGPT for real work', 'Pick': 'Skip both. AutoGPT is unmaintained; MetaGPT\'s multi-agent abstraction does not hold up.' },
         ],
+        image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
+        imageCaption: 'Decision flow for picking a local AI agent stack: Cline + Ollama for multi-file coding, Continue.dev Agent for lighter tasks, LangGraph/CrewAI Flows/AutoGen-AG2 for scripted production pipelines, and no stack yet for fully unsupervised autonomy.',
       },
       outlook: {
         id: 'outlook',
@@ -665,6 +669,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredicto': 'Falla. La abstracción multiagente es el problema, no la implementación.',
           },
         ],
+        image: '/images/autonomous-local-agents-actually-work-success-rate-en.svg',
+        imageCaption: 'Tasas de éxito de los stacks de agentes de IA local en 15 ejecuciones de prueba: Cline + Ollama y Continue.dev Agent completan entre 12 y 15 ejecuciones, LangGraph, OpenInterpreter y MetaGPT local completan entre 3 y 9, y AutoGPT-local solo completa 0–2.',
       },
       clineOllama: {
         id: 'cline-ollama',
@@ -842,6 +848,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu situación': 'Quiero agentes autónomos sin supervisión que entreguen trabajo de noche', 'Elige': 'Espera. El stack de 2026 no ofrece esto. Usa stacks supervisados en su lugar.' },
           { 'Tu situación': 'Quiero evaluar AutoGPT o MetaGPT para trabajo real', 'Elige': 'Descarta ambos. AutoGPT no tiene mantenimiento; la abstracción multiagente de MetaGPT no se sostiene.' },
         ],
+        image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
+        imageCaption: 'Flujo de decisión para elegir un stack de agente de IA local: Cline + Ollama para codificación multiarchivo, Continue.dev Agent para tareas más ligeras, LangGraph/CrewAI Flows/AutoGen-AG2 para pipelines de producción con pasos guionados, y ningún stack todavía para autonomía totalmente no supervisada.',
       },
       outlook: {
         id: 'outlook',
@@ -1149,6 +1157,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Échoué. L\'abstraction multi-agents est le problème, pas l\'implémentation.',
           },
         ],
+        image: '/images/autonomous-local-agents-actually-work-success-rate-en.svg',
+        imageCaption: 'Taux de réussite des stacks d\'agents IA locaux sur 15 essais : Cline + Ollama et Continue.dev Agent réussissent 12 à 15 essais, LangGraph, OpenInterpreter et MetaGPT local réussissent 3 à 9, et AutoGPT-local n\'en réussit que 0 à 2.',
       },
       clineOllama: {
         id: 'cline-ollama',
@@ -1326,6 +1336,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Votre situation': 'Je veux des agents autonomes sans surveillance qui livrent le travail pendant la nuit', 'Choisir': 'Attendre. Le stack 2026 ne livre pas ça. Utilisez plutôt des stacks supervisés.' },
           { 'Votre situation': 'Je veux évaluer AutoGPT ou MetaGPT pour du travail réel', 'Choisir': 'Sauter les deux. AutoGPT n\'est pas maintenu ; l\'abstraction multi-agents de MetaGPT ne se tient pas.' },
         ],
+        image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
+        imageCaption: 'Arbre de décision pour choisir un stack d\'agent IA local : Cline + Ollama pour le codage multi-fichiers, Continue.dev Agent pour les tâches plus légères, LangGraph/CrewAI Flows/AutoGen-AG2 pour les pipelines de production scriptés, et aucun stack encore pour l\'autonomie totalement non supervisée.',
       },
       outlook: {
         id: 'outlook',
@@ -1569,6 +1581,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '信頼性': '低（30%）',
           },
         ],
+        image: '/images/autonomous-local-agents-actually-work-success-rate-en.svg',
+        imageCaption: 'ローカルAIエージェントスタックの成功率（15回のテスト実行中）：Cline + OllamaとContinue.dev Agentは12〜15回成功、LangGraph、OpenInterpreter、MetaGPT localは3〜9回、AutoGPT-localはわずか0〜2回のみ成功。',
       },
       clineOllama: {
         title: 'Cline + Ollama: 最も信頼性の高いローカルスタック',
@@ -1675,6 +1689,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '3. **セキュリティと責任が不透明です**：規制環境（GDPR、METI、中国のデータセキュリティ法）では、エージェントの行動を証明可能な方法で監査する必要があります。現在のツールはその能力を持たないか、監視コストが禁止的に高い。',
           '4. **監視コストが隠れています**：デモでは自動化に見えますが、現実には、人間の監視なしで 2 時間以上の実行は予測不可能です。',
         ],
+        image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
+        imageCaption: 'ローカルAIエージェントスタックを選ぶための意思決定フロー：複数ファイルのコーディングにはCline + Ollama、軽いタスクにはContinue.dev Agent、スクリプト化された本番パイプラインにはLangGraph/CrewAI Flows/AutoGen-AG2、完全に監視なしの自律性にはまだ対応するスタックはない。',
       },
       outlook: {
         title: '今後の見通し（2026年下半期）',
@@ -2039,6 +2055,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Fehlgeschlagen. Die Multi-Agent-Abstraktion ist das Problem, nicht die Implementierung.',
           },
         ],
+        image: '/images/autonomous-local-agents-actually-work-success-rate-en.svg',
+        imageCaption: 'Erfolgsraten lokaler KI-Agenten-Stacks bei 15 Testläufen: Cline + Ollama und Continue.dev Agent bestehen 12–15 Läufe, LangGraph, OpenInterpreter und MetaGPT local bestehen 3–9, und AutoGPT-local schafft nur 0–2.',
       },
       clineOllama: {
         id: 'cline-ollama',
@@ -2216,6 +2234,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your situation': 'I want autonomous unsupervised agents that ship work overnight', 'Pick': 'Wait. The 2026 stack does not deliver this. Use supervised stacks instead.' },
           { 'Your situation': 'I want to evaluate AutoGPT or MetaGPT for real work', 'Pick': 'Skip both. AutoGPT is unmaintained; MetaGPT\'s multi-agent abstraction does not hold up.' },
         ],
+        image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
+        imageCaption: 'Entscheidungsbaum zur Wahl eines lokalen KI-Agenten-Stacks: Cline + Ollama für Multi-Datei-Coding, Continue.dev Agent für leichtere Aufgaben, LangGraph/CrewAI Flows/AutoGen-AG2 für skriptbasierte Produktions-Pipelines, und noch kein Stack für vollständig unbeaufsichtigte Autonomie.',
       },
       outlook: {
         id: 'outlook',
@@ -2467,6 +2487,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '可靠性': '低（30%）',
           },
         ],
+        image: '/images/autonomous-local-agents-actually-work-success-rate-en.svg',
+        imageCaption: '本地AI代理堆栈在15次测试运行中的成功率：Cline + Ollama和Continue.dev Agent完成12–15次，LangGraph、OpenInterpreter和MetaGPT local完成3–9次，AutoGPT-local仅完成0–2次。',
       },
       clineOllama: {
         title: 'Cline + Ollama：最可靠的本地堆栈',
@@ -2573,6 +2595,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '3. **安全和责任不透明：** 在监管环境（GDPR、METI、中国数据法）中，需要以可证明方式审计代理行为。现有工具缺乏这种能力或监督成本禁止性高。',
           '4. **监督成本被隐藏：** 演示中看起来自动化，现实中无监督运行超过2小时变得不可预测。',
         ],
+        image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
+        imageCaption: '选择本地AI代理堆栈的决策流程：多文件编码选Cline + Ollama，较轻任务选Continue.dev Agent，脚本化生产流水线选LangGraph/CrewAI Flows/AutoGen-AG2，完全无监督自主目前尚无可用堆栈。',
       },
       outlook: {
         title: '2026年下半期展望',
@@ -2939,6 +2963,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredito': 'Falhou. A abstração multiagente é o problema, não a implementação.',
           },
         ],
+        image: '/images/autonomous-local-agents-actually-work-success-rate-en.svg',
+        imageCaption: 'Taxas de sucesso dos stacks de agentes de IA local em 15 execuções de teste: Cline + Ollama e Continue.dev Agent completam 12–15 execuções, LangGraph, OpenInterpreter e MetaGPT local completam 3–9, e AutoGPT-local completa apenas 0–2.',
       },
       clineOllama: {
         id: 'cline-ollama',
@@ -3116,6 +3142,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sua situação': 'Quero agentes autônomos sem supervisão que entreguem trabalho durante a noite', 'Escolha': 'Espere. O stack de 2026 não entrega isso. Use stacks supervisionados em vez disso.' },
           { 'Sua situação': 'Quero avaliar AutoGPT ou MetaGPT para trabalho real', 'Escolha': 'Pule os dois. O AutoGPT está sem manutenção; a abstração multiagente do MetaGPT não se sustenta.' },
         ],
+        image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
+        imageCaption: 'Fluxo de decisão para escolher um stack de agente de IA local: Cline + Ollama para codificação multiarquivo, Continue.dev Agent para tarefas mais leves, LangGraph/CrewAI Flows/AutoGen-AG2 para pipelines de produção com etapas roteirizadas, e nenhum stack ainda para autonomia totalmente não supervisionada.',
       },
       outlook: {
         id: 'outlook',
@@ -3423,6 +3451,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الحكم': 'فاشل. التجريد متعدد الوكلاء هو المشكلة لا التنفيذ.',
           },
         ],
+        image: '/images/autonomous-local-agents-actually-work-success-rate-en.svg',
+        imageCaption: 'معدلات نجاح حزم وكلاء الذكاء الاصطناعي المحلي عبر 15 عملية اختبار: يحقق Cline + Ollama وContinue.dev Agent نجاحًا في 12–15 عملية، بينما تحقق LangGraph وOpenInterpreter وMetaGPT local نجاحًا في 3–9 فقط، ولا يكمل AutoGPT-local سوى 0–2.',
       },
       clineOllama: {
         id: 'cline-ollama',
@@ -3600,6 +3630,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'وضعك': 'أريد وكلاء مستقلين بلا إشراف يُسلّمون عملاً ليلاً', 'الاختيار': 'انتظر. إطار 2026 لا يوفّر هذا. استخدم أطراً خاضعة للإشراف بدلاً.' },
           { 'وضعك': 'أريد تقييم AutoGPT أو MetaGPT للعمل الحقيقي', 'الاختيار': 'تجاهل الاثنين. AutoGPT بلا صيانة؛ تجريد MetaGPT متعدد الوكلاء لا يصمد.' },
         ],
+        image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
+        imageCaption: 'مخطط القرار لاختيار حزمة وكيل ذكاء اصطناعي محلي: Cline + Ollama للبرمجة متعددة الملفات، وContinue.dev Agent للمهام الأخف، وLangGraph/CrewAI Flows/AutoGen-AG2 لخطوط الإنتاج المُبرمجة، ولا توجد حزمة بعد للاستقلالية الكاملة غير الخاضعة للإشراف.',
       },
       outlook: {
         id: 'outlook',
@@ -3907,6 +3939,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '평가': '실패. 멀티에이전트 추상화가 구현이 아닌 문제.',
           },
         ],
+        image: '/images/autonomous-local-agents-actually-work-success-rate-en.svg',
+        imageCaption: '15회 테스트 실행에서 로컬 AI 에이전트 스택 성공률: Cline + Ollama와 Continue.dev Agent는 12–15회 성공, LangGraph, OpenInterpreter, MetaGPT local은 3–9회, AutoGPT-local은 단 0–2회만 성공.',
       },
       clineOllama: {
         id: 'cline-ollama',
@@ -4084,6 +4118,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '상황': '밤새 작업을 제공하는 무감독 자율 에이전트가 필요함', '선택': '기다리십시오. 2026년 스택은 이것을 제공하지 않습니다. 대신 감독받는 스택을 사용하십시오.' },
           { '상황': '실제 작업을 위해 AutoGPT나 MetaGPT를 평가하고 싶음', '선택': '두 가지 모두 건너뛰십시오. AutoGPT는 유지 관리되지 않으며, MetaGPT의 멀티에이전트 추상화는 지속되지 않습니다.' },
         ],
+        image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
+        imageCaption: '로컬 AI 에이전트 스택 선택을 위한 의사 결정 흐름: 다중 파일 코딩에는 Cline + Ollama, 가벼운 작업에는 Continue.dev Agent, 스크립트화된 프로덕션 파이프라인에는 LangGraph/CrewAI Flows/AutoGen-AG2, 완전 무감독 자율성에는 아직 지원 스택 없음.',
       },
       outlook: {
         id: 'outlook',
