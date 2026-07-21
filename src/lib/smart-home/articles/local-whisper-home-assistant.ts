@@ -99,6 +99,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Use small as the default on a mini PC CPU; move to medium/large only if accuracy is lacking.',
           'Use tiny/base on a Raspberry Pi to keep latency usable.',
         ],
+        image: '/images/local-whisper-home-assistant-model-sizes-speed-en.svg',
+        imageCaption: 'Whisper model sizes by relative speed on Home Assistant: tiny and base are fastest on a Raspberry Pi, small is the mini PC CPU default, medium needs a GPU or strong CPU, and large is slowest but most accurate on accents and noise.',
       },
       wyomingSetup: {
         id: 'wyoming-setup',
@@ -124,6 +126,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'With a GPU/NPU: medium and large become practical for high accuracy.',
           'You can run Whisper on a separate, more powerful machine via Wyoming if your hub is a Pi.',
         ],
+        image: '/images/local-whisper-home-assistant-hardware-decision-tree-en.svg',
+        imageCaption: 'Decision tree for matching Whisper model size to hardware: no GPU means a Raspberry Pi runs tiny/base while a mini PC CPU runs small; a GPU or NPU makes medium practical and large for accents or noisy rooms.',
       },
       tuning: {
         id: 'tuning',
@@ -283,6 +287,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'استخدم small كإعداد افتراضي على معالج جهاز كمبيوتر مصغر؛ انتقل إلى medium/large فقط إذا كانت الدقة غير كافية.',
           'استخدم tiny/base على Raspberry Pi لإبقاء الكمون مقبولًا.',
         ],
+        image: '/images/local-whisper-home-assistant-model-sizes-speed-ar.svg',
+        imageCaption: 'أحجام نماذج Whisper حسب السرعة النسبية في Home Assistant: tiny وbase الأسرع على Raspberry Pi، وsmall الافتراضي لمعالج كمبيوتر مصغر، وmedium يحتاج GPU أو معالجًا قويًا، وlarge الأبطأ لكن الأدق مع اللهجات والضوضاء.',
       },
       wyomingSetup: {
         id: 'wyoming-setup',
@@ -308,6 +314,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مع GPU/NPU: يصبح medium وlarge عمليًا للدقة العالية.',
           'يمكنك تشغيل Whisper على جهاز أقوى منفصل عبر Wyoming إذا كان مركزك Raspberry Pi.',
         ],
+        image: '/images/local-whisper-home-assistant-hardware-decision-tree-ar.svg',
+        imageCaption: 'شجرة قرار لمطابقة حجم نموذج Whisper مع الجهاز: بدون GPU يشغّل Raspberry Pi نموذج tiny/base بينما يشغّل الكمبيوتر المصغر نموذج small؛ ووجود GPU أو NPU يجعل medium عمليًا وlarge مناسبًا للهجات أو الغرف الصاخبة.',
       },
       tuning: {
         id: 'tuning',
@@ -467,6 +475,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nutzen Sie small als Standard auf einer Mini-PC-CPU; wechseln Sie nur zu medium/large, wenn die Genauigkeit fehlt.',
           'Nutzen Sie tiny/base auf einem Raspberry Pi, um die Latenz nutzbar zu halten.',
         ],
+        image: '/images/local-whisper-home-assistant-model-sizes-speed-de.svg',
+        imageCaption: 'Whisper-Modellgrößen nach relativer Geschwindigkeit in Home Assistant: tiny und base sind auf einem Raspberry Pi am schnellsten, small ist der Standard für Mini-PC-CPUs, medium braucht eine GPU oder starke CPU, und large ist am langsamsten, aber am genauesten bei Akzenten und Störgeräuschen.',
       },
       wyomingSetup: {
         id: 'wyoming-setup',
@@ -492,6 +502,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mit einer GPU/NPU: medium und large werden für hohe Genauigkeit praktikabel.',
           'Sie können Whisper über Wyoming auf einer separaten, leistungsfähigeren Maschine betreiben, wenn Ihr Hub ein Pi ist.',
         ],
+        image: '/images/local-whisper-home-assistant-hardware-decision-tree-de.svg',
+        imageCaption: 'Entscheidungsbaum zur Zuordnung der Whisper-Modellgröße zur Hardware: ohne GPU läuft auf einem Raspberry Pi tiny/base, während ein Mini-PC small ausführt; eine GPU oder NPU macht medium praktikabel und large geeignet für Akzente oder laute Räume.',
       },
       tuning: {
         id: 'tuning',
@@ -651,6 +663,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Usa small como predeterminado en una CPU de mini PC; pasa a medium/large solo si falta precisión.',
           'Usa tiny/base en una Raspberry Pi para mantener la latencia usable.',
         ],
+        image: '/images/local-whisper-home-assistant-model-sizes-speed-es.svg',
+        imageCaption: 'Tamaños del modelo Whisper por velocidad relativa en Home Assistant: tiny y base son los más rápidos en una Raspberry Pi, small es el valor predeterminado en la CPU de una mini PC, medium necesita una GPU o CPU potente, y large es el más lento pero el más preciso con acentos y ruido.',
       },
       wyomingSetup: {
         id: 'wyoming-setup',
@@ -676,6 +690,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Con una GPU/NPU: medium y large se vuelven prácticos para alta precisión.',
           'Puedes ejecutar Whisper en una máquina separada más potente vía Wyoming si tu hub es una Pi.',
         ],
+        image: '/images/local-whisper-home-assistant-hardware-decision-tree-es.svg',
+        imageCaption: 'Árbol de decisión para adaptar el tamaño del modelo Whisper al hardware: sin GPU, una Raspberry Pi ejecuta tiny/base mientras una mini PC ejecuta small; una GPU o NPU hace que medium sea práctico y large adecuado para acentos o salas ruidosas.',
       },
       tuning: {
         id: 'tuning',
@@ -835,6 +851,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '미니 PC CPU에서는 small을 기본값으로 사용하십시오. 정확도가 부족할 때만 medium/large로 전환하십시오.',
           'Raspberry Pi에서는 사용 가능한 지연 시간을 유지하기 위해 tiny/base를 사용하십시오.',
         ],
+        image: '/images/local-whisper-home-assistant-model-sizes-speed-ko.svg',
+        imageCaption: 'Home Assistant에서 상대 속도별 Whisper 모델 크기: tiny와 base는 Raspberry Pi에서 가장 빠르고, small은 미니 PC CPU의 기본값이며, medium은 GPU나 강력한 CPU가 필요하고, large는 가장 느리지만 억양과 소음에 가장 정확합니다.',
       },
       wyomingSetup: {
         id: 'wyoming-setup',
@@ -860,6 +878,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPU/NPU가 있을 때: 높은 정확도를 위해 medium과 large가 실용적이 됩니다.',
           '허브가 Pi인 경우 Wyoming를 통해 더 강력한 별도 기기에서 Whisper를 실행할 수 있습니다.',
         ],
+        image: '/images/local-whisper-home-assistant-hardware-decision-tree-ko.svg',
+        imageCaption: 'Whisper 모델 크기를 하드웨어에 맞추는 결정 트리: GPU가 없으면 Raspberry Pi는 tiny/base를, 미니 PC는 small을 실행하며, GPU나 NPU가 있으면 medium이 실용적이고 large는 억양이나 소음이 있는 공간에 적합합니다.',
       },
       tuning: {
         id: 'tuning',
@@ -1019,6 +1039,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Utilisez small par défaut sur un CPU de mini-PC ; passez à medium/large seulement si la précision manque.',
           'Utilisez tiny/base sur une Raspberry Pi pour garder une latence utilisable.',
         ],
+        image: '/images/local-whisper-home-assistant-model-sizes-speed-fr.svg',
+        imageCaption: 'Tailles de modèle Whisper par vitesse relative sur Home Assistant : tiny et base sont les plus rapides sur un Raspberry Pi, small est la valeur par défaut sur un CPU de mini-PC, medium nécessite un GPU ou un CPU puissant, et large est le plus lent mais le plus précis avec les accents et le bruit.',
       },
       wyomingSetup: {
         id: 'wyoming-setup',
@@ -1044,6 +1066,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Avec un GPU/NPU : medium et large deviennent pratiques pour une haute précision.',
           'Vous pouvez exécuter Whisper sur une machine séparée plus puissante via Wyoming si votre hub est une Pi.',
         ],
+        image: '/images/local-whisper-home-assistant-hardware-decision-tree-fr.svg',
+        imageCaption: 'Arbre de décision pour adapter la taille du modèle Whisper au matériel : sans GPU, un Raspberry Pi exécute tiny/base tandis qu\'un mini-PC exécute small ; un GPU ou NPU rend medium pratique et large adapté aux accents ou aux pièces bruyantes.',
       },
       tuning: {
         id: 'tuning',
@@ -1203,6 +1227,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ミニPCのCPUでは small を既定にし、精度が足りない場合のみ medium/large へ移ります。',
           'Raspberry Pi ではレイテンシを使える範囲に保つため tiny/base を使います。',
         ],
+        image: '/images/local-whisper-home-assistant-model-sizes-speed-ja.svg',
+        imageCaption: 'Home AssistantにおけるWhisperモデルサイズ別の相対速度: tinyとbaseはRaspberry Piで最速、smallはミニPCのCPUの既定値、mediumはGPUまたは強力なCPUが必要、largeは最も遅いがアクセントやノイズに最も正確です。',
       },
       wyomingSetup: {
         id: 'wyoming-setup',
@@ -1228,6 +1254,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPU/NPU があれば：medium と large が高精度に実用的になります。',
           'ハブが Pi なら、Wyoming 経由で Whisper を別のより強力なマシンで動かせます。',
         ],
+        image: '/images/local-whisper-home-assistant-hardware-decision-tree-ja.svg',
+        imageCaption: 'Whisperのモデルサイズをハードウェアに合わせる決定木: GPUがない場合、Raspberry Piはtiny/baseを、ミニPCはsmallを実行します。GPUまたはNPUがあればmediumが実用的になり、largeはアクセントや騒がしい部屋に適しています。',
       },
       tuning: {
         id: 'tuning',
@@ -1387,6 +1415,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Use small como padrão em uma CPU de mini PC; passe para medium/large só se faltar precisão.',
           'Use tiny/base em uma Raspberry Pi para manter a latência utilizável.',
         ],
+        image: '/images/local-whisper-home-assistant-model-sizes-speed-pt.svg',
+        imageCaption: 'Tamanhos do modelo Whisper por velocidade relativa no Home Assistant: tiny e base são os mais rápidos em um Raspberry Pi, small é o padrão na CPU de um mini PC, medium precisa de uma GPU ou CPU forte, e large é o mais lento, mas o mais preciso com sotaques e ruído.',
       },
       wyomingSetup: {
         id: 'wyoming-setup',
@@ -1412,6 +1442,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Com uma GPU/NPU: medium e large se tornam práticos para alta precisão.',
           'Você pode rodar o Whisper em uma máquina separada mais potente via Wyoming se o seu hub for uma Pi.',
         ],
+        image: '/images/local-whisper-home-assistant-hardware-decision-tree-pt.svg',
+        imageCaption: 'Árvore de decisão para combinar o tamanho do modelo Whisper com o hardware: sem GPU, um Raspberry Pi roda tiny/base enquanto um mini PC roda small; uma GPU ou NPU torna medium prático e large adequado para sotaques ou salas ruidosas.',
       },
       tuning: {
         id: 'tuning',
@@ -1571,6 +1603,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '在迷你 PC 的 CPU 上以 small 为默认；仅在精度不足时才换到 medium/large。',
           '在 Raspberry Pi 上用 tiny/base 以保持延迟可用。',
         ],
+        image: '/images/local-whisper-home-assistant-model-sizes-speed-zh.svg',
+        imageCaption: 'Home Assistant 中按相对速度划分的 Whisper 模型大小：tiny 和 base 在 Raspberry Pi 上最快，small 是迷你 PC CPU 的默认选择，medium 需要 GPU 或强力 CPU，large 最慢但在口音和噪音场景下最准确。',
       },
       wyomingSetup: {
         id: 'wyoming-setup',
@@ -1596,6 +1630,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '配 GPU/NPU 时：medium 和 large 在高精度下变得实用。',
           '若你的中枢是 Pi，可经由 Wyoming 在一台更强的独立机器上运行 Whisper。',
         ],
+        image: '/images/local-whisper-home-assistant-hardware-decision-tree-zh.svg',
+        imageCaption: '将 Whisper 模型大小与硬件匹配的决策树：没有 GPU 时，Raspberry Pi 运行 tiny/base，迷你 PC 运行 small；有 GPU 或 NPU 时 medium 变得实用，large 适合口音或嘈杂房间。',
       },
       tuning: {
         id: 'tuning',

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Whisper Model Sizes: Relative Speed on Home Assistant</text>
+  <line x1="248" y1="345" x2="740" y2="345" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="238" y="94" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">tiny</text>
+  <rect x="248" y="75" width="360" height="24" fill="#34A853" rx="4"/>
+  <text x="618" y="92" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">Fastest — Raspberry Pi</text>
+
+  <text x="238" y="136" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">base</text>
+  <rect x="248" y="117" width="300" height="24" fill="#34A853" rx="4"/>
+  <text x="558" y="134" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">Very fast — Raspberry Pi</text>
+
+  <text x="238" y="178" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">small</text>
+  <rect x="248" y="159" width="220" height="24" fill="#6750A4" rx="4"/>
+  <text x="478" y="176" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">Fast — mini PC CPU default</text>
+
+  <text x="238" y="220" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">medium</text>
+  <rect x="248" y="201" width="130" height="24" fill="#F4B400" rx="4"/>
+  <text x="388" y="218" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">Moderate — GPU or strong CPU</text>
+
+  <text x="238" y="262" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">large</text>
+  <rect x="248" y="243" width="60" height="24" fill="#EA4335" rx="4"/>
+  <text x="318" y="260" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">Slowest — GPU, accents/noise</text>
+
+  <text x="400" y="378" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Use small as the mini PC default; step up one size at a time toward large only if accuracy is lacking.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
