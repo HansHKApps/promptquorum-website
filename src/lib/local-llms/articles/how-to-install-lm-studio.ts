@@ -74,6 +74,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Linux: Download the .AppImage file. Make it executable with `chmod +x LM-Studio-*.AppImage` and run it. No system installation required.',
             'On first launch, LM Studio shows a welcome screen and prompts you to download a model.',
           ],
+          image: '/images/how-to-install-lm-studio-quick-start-flow-en.svg',
+          imageCaption: 'LM Studio installation flow: download from lmstudio.ai, install on macOS, Windows, or Linux, search Hugging Face for a GGUF model, pick Q4_K_M quantization (~4.5 GB), and start chatting in 5-30 seconds.',
         },
         findModel: {
           id: 'find-and-download-a-model',
@@ -86,6 +88,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Select a quantization level. For 8 GB RAM: choose Q4_K_M (~4.5 GB for a 7B model). For 16 GB RAM: Q5_K_M or Q6_K offer better quality.',
             'Click the download arrow. Progress shows in the Downloads tab.',
           ],
+          image: '/images/how-to-install-lm-studio-ram-quantization-guide-en.svg',
+          imageCaption: 'RAM-based quantization guide for LM Studio: 8 GB RAM fits Q4_K_M (~4.5 GB, ~1% quality loss); 16 GB RAM fits Q5_K_M or Q6_K (~5.7-6.5 GB, near-lossless) with headroom for 8K+ token context.',
         },
         firstChat: {
           id: 'start-chatting',
@@ -337,6 +341,8 @@ schema: {
             'Linux: Descarga el archivo .AppImage. Hazlo ejecutable con `chmod +x LM-Studio-*.AppImage` y ejecútalo. No se requiere instalación en el sistema.',
             'En el primer inicio, LM Studio muestra una pantalla de bienvenida y te pide descargar un modelo.',
           ],
+          image: '/images/how-to-install-lm-studio-quick-start-flow-en.svg',
+          imageCaption: 'Flujo de instalación de LM Studio: descarga desde lmstudio.ai, instala en macOS, Windows o Linux, busca un modelo GGUF en Hugging Face, elige la cuantización Q4_K_M (~4,5 GB) y empieza a chatear en 5-30 segundos.',
         },
         findModel: {
           id: 'find-and-download-a-model',
@@ -349,6 +355,8 @@ schema: {
             'Selecciona un nivel de cuantización. Para 8 GB de RAM: elige Q4_K_M (~4,5 GB para un modelo 7B). Para 16 GB de RAM: Q5_K_M o Q6_K ofrecen mejor calidad.',
             'Haz clic en la flecha de descarga. El progreso se muestra en la pestaña Downloads.',
           ],
+          image: '/images/how-to-install-lm-studio-ram-quantization-guide-en.svg',
+          imageCaption: 'Guía de cuantización según la RAM en LM Studio: 8 GB de RAM admite Q4_K_M (~4,5 GB, ~1% de pérdida de calidad); 16 GB de RAM admite Q5_K_M o Q6_K (~5,7-6,5 GB, casi sin pérdida) con margen para contexto de 8K+ tokens.',
         },
         firstChat: {
           id: 'start-chatting',
@@ -600,6 +608,8 @@ schema: {
             'Linux: نزّل ملف .AppImage. اجعله قابلًا للتنفيذ بـ `chmod +x LM-Studio-*.AppImage` وشغّله. لا حاجة لتثبيت على النظام.',
             'عند أول تشغيل، يعرض LM Studio شاشة ترحيب ويطلب منك تنزيل نموذج.',
           ],
+          image: '/images/how-to-install-lm-studio-quick-start-flow-en.svg',
+          imageCaption: 'مسار تثبيت LM Studio: التنزيل من lmstudio.ai، والتثبيت على macOS أو Windows أو Linux، والبحث عن نموذج GGUF في Hugging Face، واختيار تكميم Q4_K_M (~4.5 GB)، وبدء المحادثة خلال 5-30 ثانية.',
         },
         findModel: {
           id: 'find-and-download-a-model',
@@ -612,6 +622,8 @@ schema: {
             'اختر مستوى تكميم. لـ 8 GB من RAM: اختر Q4_K_M (~4.5 GB لنموذج 7B). لـ 16 GB من RAM: يقدّم Q5_K_M أو Q6_K جودة أفضل.',
             'انقر سهم التنزيل. يظهر التقدم في تبويب Downloads.',
           ],
+          image: '/images/how-to-install-lm-studio-ram-quantization-guide-en.svg',
+          imageCaption: 'دليل التكميم حسب سعة RAM في LM Studio: 8 GB من RAM تناسب Q4_K_M (~4.5 GB، فقدان جودة ~1%)؛ و16 GB من RAM تناسب Q5_K_M أو Q6_K (~5.7-6.5 GB، فقدان شبه معدوم) مع مساحة إضافية لسياق 8K+ من الرموز.',
         },
         firstChat: {
           id: 'start-chatting',
@@ -862,6 +874,8 @@ schema: {
             'Abra o arquivo baixado e siga as instruções de instalação.',
             'Inicie o LM Studio — a janela principal aparece com a barra de pesquisa de modelos.',
           ],
+          image: '/images/how-to-install-lm-studio-quick-start-flow-en.svg',
+          imageCaption: 'Fluxo de instalação do LM Studio: baixe em lmstudio.ai, instale no macOS, Windows ou Linux, procure um modelo GGUF no Hugging Face, escolha a quantização Q4_K_M (~4,5 GB) e comece a conversar em 5-30 segundos.',
         },
         startChatting: {
           id: 'start-chatting',
@@ -980,6 +994,8 @@ schema: {
             'Linux: Laden Sie die .AppImage-Datei herunter. Machen Sie sie mit `chmod +x LM-Studio-*.AppImage` ausführbar und starten Sie sie. Keine Systeminstallation erforderlich.',
             'Beim ersten Start zeigt LM Studio einen Willkommensbildschirm und fordert Sie auf, ein Modell herunterzuladen.',
           ],
+          image: '/images/how-to-install-lm-studio-quick-start-flow-en.svg',
+          imageCaption: 'LM Studio Installationsablauf: Download von lmstudio.ai, Installation unter macOS, Windows oder Linux, Suche eines GGUF-Modells auf Hugging Face, Wahl der Q4_K_M-Quantisierung (~4,5 GB) und Chat-Start in 5-30 Sekunden.',
         },
         findModel: {
           title: 'Wie finden und laden Sie ein Modell in LM Studio herunter',
@@ -991,6 +1007,8 @@ schema: {
             'Wählen Sie ein Quantisierungsniveau. Für 8 GB RAM: Q4_K_M (~4,5 GB für ein 7B-Modell) wählen. Für 16 GB RAM: Q5_K_M oder Q6_K bieten bessere Qualität.',
             'Klicken Sie auf den Download-Pfeil. Der Fortschritt wird auf der Registerkarte „Downloads" angezeigt.',
           ],
+          image: '/images/how-to-install-lm-studio-ram-quantization-guide-en.svg',
+          imageCaption: 'RAM-basierter Quantisierungsleitfaden für LM Studio: 8 GB RAM eignen sich für Q4_K_M (~4,5 GB, ~1% Qualitätsverlust); 16 GB RAM eignen sich für Q5_K_M oder Q6_K (~5,7-6,5 GB, nahezu verlustfrei) mit Spielraum für 8K+ Token Kontext.',
         },
         firstChat: {
           title: 'Wie beginnen Sie zu chatten mit einem Modell in LM Studio',
@@ -1345,6 +1363,8 @@ schema: {
             'Linux : Téléchargez le fichier .AppImage. Rendez-le exécutable avec `chmod +x LM-Studio-*.AppImage` et lancez-le. Aucune installation système requise.',
             'Au premier lancement, LM Studio affiche un écran d\'accueil et vous invite à télécharger un modèle.',
           ],
+          image: '/images/how-to-install-lm-studio-quick-start-flow-en.svg',
+          imageCaption: 'Flux d\'installation de LM Studio : téléchargement depuis lmstudio.ai, installation sur macOS, Windows ou Linux, recherche d\'un modèle GGUF sur Hugging Face, choix de la quantification Q4_K_M (~4,5 Go), et démarrage du chat en 5-30 secondes.',
         },
         findModel: {
           title: 'Comment trouver et télécharger un modèle dans LM Studio ?',
@@ -1356,6 +1376,8 @@ schema: {
             'Sélectionnez un niveau de quantification. Pour 8 GB de RAM : choisissez Q4_K_M (~4,5 GB pour un modèle 7B). Pour 16 GB de RAM : Q5_K_M ou Q6_K offrent une meilleure qualité.',
             'Cliquez sur la flèche de téléchargement. La progression s\'affiche dans l\'onglet Téléchargements.',
           ],
+          image: '/images/how-to-install-lm-studio-ram-quantization-guide-en.svg',
+          imageCaption: 'Guide de quantification selon la RAM pour LM Studio : 8 Go de RAM conviennent à Q4_K_M (~4,5 Go, ~1% de perte de qualité) ; 16 Go de RAM conviennent à Q5_K_M ou Q6_K (~5,7-6,5 Go, quasi sans perte) avec marge pour un contexte de 8K+ tokens.',
         },
         firstChat: {
           title: 'Comment commencer à discuter avec un modèle dans LM Studio ?',
@@ -1653,6 +1675,8 @@ schema: {
             'Linux：.AppImageファイルをダウンロード。`chmod +x LM-Studio-*.AppImage`で実行可能にして実行。システムインストール不要。',
             '初回起動時に、LM Studioはウェルカムスクリーンを表示し、モデルのダウンロードをお願い。',
           ],
+          image: '/images/how-to-install-lm-studio-quick-start-flow-en.svg',
+          imageCaption: 'LM Studioのインストールの流れ: lmstudio.aiからダウンロード、macOS・Windows・Linuxへのインストール、Hugging FaceでのGGUFモデル検索、Q4_K_M量子化（約4.5GB）の選択、5〜30秒でのチャット開始。',
         },
         findModel: {
           title: 'LM StudioでモデルをNative検索してダウンロードする方法',
@@ -1664,6 +1688,8 @@ schema: {
             '量子化レベルを選択。8GBのRAM用：Q4_K_M（7Bモデルの場合～4.5GB）を選択。16GBのRAM用：Q5_K_MまたはQ6_Kの方が品質が良い。',
             'ダウンロード矢印をクリック。プログレスはダウンロードタブに表示。',
           ],
+          image: '/images/how-to-install-lm-studio-ram-quantization-guide-en.svg',
+          imageCaption: 'LM StudioのRAM別量子化ガイド: 8GBのRAMにはQ4_K_M（約4.5GB、品質低下約1%）が適し、16GBのRAMにはQ5_K_MまたはQ6_K（約5.7〜6.5GB、ほぼ無損失）が適し、8K以上のコンテキストに余裕がある。',
         },
         firstChat: {
           title: 'LM StudioでモデルとのチャットをNative開始する方法',
@@ -1914,6 +1940,8 @@ schema: {
             'Linux：下载 .AppImage 文件。用 `chmod +x LM-Studio-*.AppImage` 使其可执行并运行。不需要系统安装。',
             '首次启动时，LM Studio 会显示欢迎屏幕并提示您下载模型。',
           ],
+          image: '/images/how-to-install-lm-studio-quick-start-flow-en.svg',
+          imageCaption: 'LM Studio 安装流程：从 lmstudio.ai 下载，在 macOS、Windows 或 Linux 上安装，在 Hugging Face 搜索 GGUF 模型，选择 Q4_K_M 量化（约 4.5GB），5-30 秒内开始聊天。',
         },
         findModel: {
           title: '如何在 LM Studio 中查找和下载模型',
@@ -1925,6 +1953,8 @@ schema: {
             '选择量化级别。对于 8GB RAM：选择 Q4_K_M（7B 模型约 4.5GB）。对于 16GB RAM：Q5_K_M 或 Q6_K 提供更好的质量。',
             '单击下载箭头。进度显示在下载选项卡中。',
           ],
+          image: '/images/how-to-install-lm-studio-ram-quantization-guide-en.svg',
+          imageCaption: 'LM Studio 按 RAM 选择量化指南：8GB RAM 适合 Q4_K_M（约 4.5GB，质量损失约 1%）；16GB RAM 适合 Q5_K_M 或 Q6_K（约 5.7-6.5GB，几乎无损），并为 8K+ token 上下文留有余量。',
         },
         firstChat: {
           title: '如何在 LM Studio 中开始与模型聊天',
@@ -2170,6 +2200,8 @@ schema: {
             'Linux: .AppImage 파일을 다운로드하십시오. `chmod +x LM-Studio-*.AppImage`로 실행 권한을 부여하고 실행하십시오. 시스템 설치가 필요하지 않습니다.',
             '처음 실행 시 LM Studio는 환영 화면을 표시하고 모델 다운로드를 안내합니다.',
           ],
+          image: '/images/how-to-install-lm-studio-quick-start-flow-en.svg',
+          imageCaption: 'LM Studio 설치 흐름: lmstudio.ai에서 다운로드, macOS/Windows/Linux에 설치, Hugging Face에서 GGUF 모델 검색, Q4_K_M 양자화(약 4.5GB) 선택, 5-30초 내 채팅 시작.',
         },
         findModel: {
           id: 'find-and-download-a-model',
@@ -2182,6 +2214,8 @@ schema: {
             '양자화 수준을 선택하십시오. RAM 8 GB: Q4_K_M 선택(7B 모델 기준 약 4.5 GB). RAM 16 GB: Q5_K_M 또는 Q6_K가 더 높은 품질을 제공합니다.',
             '다운로드 화살표를 클릭하십시오. 진행 상황은 다운로드 탭에서 확인할 수 있습니다.',
           ],
+          image: '/images/how-to-install-lm-studio-ram-quantization-guide-en.svg',
+          imageCaption: 'RAM별 LM Studio 양자화 가이드: RAM 8GB는 Q4_K_M(약 4.5GB, 품질 손실 약 1%)에 적합하고, RAM 16GB는 Q5_K_M 또는 Q6_K(약 5.7-6.5GB, 거의 무손실)에 적합하며 8K+ 토큰 컨텍스트에 여유가 있습니다.',
         },
         firstChat: {
           id: 'start-chatting',

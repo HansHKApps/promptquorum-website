@@ -8804,6 +8804,16 @@
     "width": 800,
     "height": 330
   },
+  "/images/how-to-install-lm-studio-quick-start-flow-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/how-to-install-lm-studio-ram-quantization-guide-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/how-to-install-ollama-linux-systemd-flow-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
