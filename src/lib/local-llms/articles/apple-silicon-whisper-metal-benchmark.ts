@@ -70,7 +70,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { chip: 'M5 Pro', tiny: '55×', base: '40×', small: '30×', medium: '14×', large: '10–12×' },
           { chip: 'M5 Max', tiny: '65×', base: '48×', small: '38×', medium: '18×', large: '12–14×' },
         ],
-        note: '×N real-time = N seconds of audio transcribed in 1 second. Benchmarks via whisper.cpp with Metal acceleration. All M1 Pro+ can run large-v3 in real-time or faster.'
+        note: '×N real-time = N seconds of audio transcribed in 1 second. Benchmarks via whisper.cpp with Metal acceleration. All M1 Pro+ can run large-v3 in real-time or faster.',
+        image: '/images/apple-silicon-whisper-metal-benchmark-large-v3-speed-by-chip-en.svg',
+        imageCaption: 'Whisper large-v3 real-time speed by Apple Silicon chip: M1 runs 2–3×, M5 Pro 10–12×, M5 Max 12–14× real-time via Metal GPU acceleration in whisper.cpp.',
       },
       modelSizes: {
         id: 'model-sizes',
@@ -245,7 +247,9 @@ while True:
           { metric: 'Languages', local: '99', google: '125+', openai: '99', assembly: '50+' },
           { metric: 'Setup', local: '5 minutes', google: 'API key', openai: 'API key', assembly: 'API key' },
         ],
-        note: 'Monthly cost (8 hours/day): Whisper local $3, Google $345, OpenAI $86, AssemblyAI $156. For privacy-sensitive work (medical, legal, journalism), local Whisper is the only option. For high-volume transcription ($100+/month cloud), local Mac pays for itself in 12 months.'
+        note: 'Monthly cost (8 hours/day): Whisper local $3, Google $345, OpenAI $86, AssemblyAI $156. For privacy-sensitive work (medical, legal, journalism), local Whisper is the only option. For high-volume transcription ($100+/month cloud), local Mac pays for itself in 12 months.',
+        image: '/images/apple-silicon-whisper-metal-benchmark-local-vs-cloud-stt-en.svg',
+        imageCaption: 'Local Whisper on M5 Pro vs cloud speech-to-text APIs: $0 vs $0.36–$1.44 per hour, 100–300ms vs 300–2000ms latency, and 100% local privacy vs cloud data transfer.',
       },
       faq: {
         id: 'faq',
@@ -339,7 +343,9 @@ while True:
           { chip: 'M5 Pro', tiny: '55×', base: '40×', small: '30×', medium: '14×', large: '10–12×' },
           { chip: 'M5 Max', tiny: '65×', base: '48×', small: '38×', medium: '18×', large: '12–14×' },
         ],
-        note: '×N tiempo real = N segundos de audio transcritos en 1 segundo. Benchmarks vía whisper.cpp con aceleración Metal. Todos los M1 Pro+ pueden ejecutar large-v3 en tiempo real o más rápido.'
+        note: '×N tiempo real = N segundos de audio transcritos en 1 segundo. Benchmarks vía whisper.cpp con aceleración Metal. Todos los M1 Pro+ pueden ejecutar large-v3 en tiempo real o más rápido.',
+        image: '/images/apple-silicon-whisper-metal-benchmark-large-v3-speed-by-chip-en.svg',
+        imageCaption: 'Velocidad de Whisper large-v3 en tiempo real según el chip Apple Silicon: M1 alcanza 2–3×, M5 Pro 10–12×, M5 Max 12–14× tiempo real mediante aceleración GPU Metal en whisper.cpp.',
       },
       modelSizes: {
         id: 'model-sizes',
@@ -514,7 +520,9 @@ while True:
           { metric: 'Idiomas', local: '99', google: '125+', openai: '99', assembly: '50+' },
           { metric: 'Configuración', local: '5 minutos', google: 'Clave API', openai: 'Clave API', assembly: 'Clave API' },
         ],
-        note: 'Costo mensual (8 horas/día): Whisper local $0, Google $345, OpenAI $86, AssemblyAI $156. Los precios pueden variar según tu país. Para trabajo sensible a la privacidad (médico, legal, periodismo), Whisper local es la única opción. Para transcripción de alto volumen (más de $100/mes en la nube), un Mac local se amortiza en 12 meses.'
+        note: 'Costo mensual (8 horas/día): Whisper local $0, Google $345, OpenAI $86, AssemblyAI $156. Los precios pueden variar según tu país. Para trabajo sensible a la privacidad (médico, legal, periodismo), Whisper local es la única opción. Para transcripción de alto volumen (más de $100/mes en la nube), un Mac local se amortiza en 12 meses.',
+        image: '/images/apple-silicon-whisper-metal-benchmark-local-vs-cloud-stt-en.svg',
+        imageCaption: 'Whisper local en M5 Pro frente a las API de voz en la nube: $0 frente a $0.36–$1.44 por hora, 100–300 ms frente a 300–2000 ms de latencia, y privacidad 100% local frente al envío de datos a la nube.',
       },
       faq: {
         id: 'faq',
@@ -626,7 +634,9 @@ while True:
           { chip: 'M5 Pro', tiny: '55×', base: '40×', small: '30×', medium: '14×', large: '10–12×' },
           { chip: 'M5 Max', tiny: '65×', base: '48×', small: '38×', medium: '18×', large: '12–14×' },
         ],
-        note: '×N الوقت الفعلي = N ثانية من الصوت تُنسَخ في ثانية واحدة. اختبارات مرجعية عبر whisper.cpp بتسريع Metal. كل أجهزة M1 Pro فأحدث قادرة على تشغيل large-v3 في الوقت الفعلي أو أسرع.'
+        note: '×N الوقت الفعلي = N ثانية من الصوت تُنسَخ في ثانية واحدة. اختبارات مرجعية عبر whisper.cpp بتسريع Metal. كل أجهزة M1 Pro فأحدث قادرة على تشغيل large-v3 في الوقت الفعلي أو أسرع.',
+        image: '/images/apple-silicon-whisper-metal-benchmark-large-v3-speed-by-chip-en.svg',
+        imageCaption: 'سرعة Whisper large-v3 في الوقت الفعلي حسب شريحة Apple Silicon: يصل M1 إلى 2–3×، وM5 Pro إلى 10–12×، وM5 Max إلى 12–14× في الوقت الفعلي بفضل تسريع GPU من Metal في whisper.cpp.',
       },
       modelSizes: {
         id: 'model-sizes',
@@ -801,7 +811,9 @@ while True:
           { metric: 'اللغات', local: '99', google: '125+', openai: '99', assembly: '50+' },
           { metric: 'الإعداد', local: '5 دقائق', google: 'مفتاح API', openai: 'مفتاح API', assembly: 'مفتاح API' },
         ],
-        note: 'التكلفة الشهرية (8 ساعات/يوم): Whisper المحلي 0 دولار، Google 345 دولارًا، OpenAI 86 دولارًا، AssemblyAI 156 دولارًا. قد تتفاوت الأسعار حسب بلدك. للعمل الحساس للخصوصية (طبي، قانوني، صحافة)، يُعد Whisper المحلي الخيار الوحيد. للنسخ عالي الحجم (أكثر من 100 دولار/شهر في السحابة)، يسدّد جهاز Mac محلي تكلفته خلال 12 شهرًا.'
+        note: 'التكلفة الشهرية (8 ساعات/يوم): Whisper المحلي 0 دولار، Google 345 دولارًا، OpenAI 86 دولارًا، AssemblyAI 156 دولارًا. قد تتفاوت الأسعار حسب بلدك. للعمل الحساس للخصوصية (طبي، قانوني، صحافة)، يُعد Whisper المحلي الخيار الوحيد. للنسخ عالي الحجم (أكثر من 100 دولار/شهر في السحابة)، يسدّد جهاز Mac محلي تكلفته خلال 12 شهرًا.',
+        image: '/images/apple-silicon-whisper-metal-benchmark-local-vs-cloud-stt-en.svg',
+        imageCaption: 'Whisper المحلي على M5 Pro مقابل واجهات برمجة تطبيقات تحويل الكلام السحابية: 0 دولار مقابل 0.36–1.44 دولار في الساعة، وزمن استجابة 100–300 مللي ثانية مقابل 300–2000 مللي ثانية، وخصوصية محلية بنسبة 100% مقابل إرسال البيانات إلى السحابة.',
       },
       faq: {
         id: 'faq',
@@ -905,6 +917,8 @@ while True:
           { chip: 'M5 Max', tiny: '65×', base: '48×', small: '38×', medium: '18×', large: '12-14×' },
         ],
         note: '×N tempo real = N segundos de áudio transcritos em 1 segundo. Benchmarks via whisper.cpp com aceleração Metal.',
+        image: '/images/apple-silicon-whisper-metal-benchmark-large-v3-speed-by-chip-en.svg',
+        imageCaption: 'Velocidade do Whisper large-v3 em tempo real por chip Apple Silicon: o M1 atinge 2–3×, o M5 Pro 10–12× e o M5 Max 12–14× em tempo real graças à aceleração de GPU Metal no whisper.cpp.',
       },
       modelSizes: {
         id: 'model-sizes',
@@ -966,6 +980,8 @@ while True:
           { metric: 'Idiomas', local: '99', google: '125+', openai: '99' },
         ],
         note: 'Para conformidade com a LGPD e proteção de dados sensíveis (médico, jurídico, financeiro), o Whisper local é a única opção que garante que os dados de áudio nunca saiam da organização.',
+        image: '/images/apple-silicon-whisper-metal-benchmark-local-vs-cloud-stt-en.svg',
+        imageCaption: 'Whisper local no M5 Pro comparado a APIs de voz em nuvem: US$ 0 vs. US$ 0,36–US$ 1,44 por hora, latência de 100–300 ms vs. 300–2000 ms, e privacidade 100% local vs. envio de dados para a nuvem.',
       },
       faq: {
         id: 'faq',
@@ -1073,7 +1089,9 @@ while True:
           { chip: 'M5 Pro', tiny: '55×', base: '40×', small: '30×', medium: '14×', large: '10–12×' },
           { chip: 'M5 Max', tiny: '65×', base: '48×', small: '38×', medium: '18×', large: '12–14×' },
         ],
-        note: '×N Realzeit = N Sekunden Audio in 1 Sekunde transkribiert. Benchmarks via whisper.cpp mit Metal-Beschleunigung. Alle M1 Pro+ können large-v3 in Realzeit oder schneller ausführen.'
+        note: '×N Realzeit = N Sekunden Audio in 1 Sekunde transkribiert. Benchmarks via whisper.cpp mit Metal-Beschleunigung. Alle M1 Pro+ können large-v3 in Realzeit oder schneller ausführen.',
+        image: '/images/apple-silicon-whisper-metal-benchmark-large-v3-speed-by-chip-en.svg',
+        imageCaption: 'Whisper-large-v3-Geschwindigkeit nach Apple-Silicon-Chip in Echtzeit: M1 erreicht 2–3×, M5 Pro 10–12×, M5 Max 12–14× Echtzeit dank Metal-GPU-Beschleunigung in whisper.cpp.',
       },
       modelSizes: {
         id: 'model-sizes',
@@ -1248,7 +1266,9 @@ while True:
           { metric: 'Sprachen', local: '99', google: '125+', openai: '99', assembly: '50+' },
           { metric: 'Setup', local: '5 Minuten', google: 'API-Schlüssel', openai: 'API-Schlüssel', assembly: 'API-Schlüssel' },
         ],
-        note: 'Monatliche Kosten (8 Stunden/Tag): Whisper lokal 0 €, Google 259 €, OpenAI 65 €, AssemblyAI 117 €. Für datenschutzsensible Arbeit (medizinisch, legal, Journalismus) ist lokal Whisper die einzige Option. Für hochvolumige Transkription (>75 €/Monat Cloud) amortisiert sich ein lokaler Mac in 12 Monaten.'
+        note: 'Monatliche Kosten (8 Stunden/Tag): Whisper lokal 0 €, Google 259 €, OpenAI 65 €, AssemblyAI 117 €. Für datenschutzsensible Arbeit (medizinisch, legal, Journalismus) ist lokal Whisper die einzige Option. Für hochvolumige Transkription (>75 €/Monat Cloud) amortisiert sich ein lokaler Mac in 12 Monaten.',
+        image: '/images/apple-silicon-whisper-metal-benchmark-local-vs-cloud-stt-en.svg',
+        imageCaption: 'Lokales Whisper auf dem M5 Pro im Vergleich zu Cloud-Spracherkennungs-APIs: 0 $ gegenüber 0,36–1,44 $ pro Stunde, 100–300 ms gegenüber 300–2000 ms Latenz und 100% lokale Privatsphäre statt Cloud-Datenübertragung.',
       },
       faq: {
         id: 'faq',
@@ -1347,7 +1367,9 @@ while True:
           { chip: 'M5 Pro', tiny: '55×', base: '40×', small: '30×', medium: '14×', large: '10–12×' },
           { chip: 'M5 Max', tiny: '65×', base: '48×', small: '38×', medium: '18×', large: '12–14×' },
         ],
-        note: '×N temps réel = N secondes d\'audio transcrites en 1 seconde. Benchmarks via whisper.cpp avec accélération Metal. Tous les M1 Pro+ peuvent exécuter large-v3 en temps réel ou plus vite.'
+        note: '×N temps réel = N secondes d\'audio transcrites en 1 seconde. Benchmarks via whisper.cpp avec accélération Metal. Tous les M1 Pro+ peuvent exécuter large-v3 en temps réel ou plus vite.',
+        image: '/images/apple-silicon-whisper-metal-benchmark-large-v3-speed-by-chip-en.svg',
+        imageCaption: 'Vitesse de Whisper large-v3 en temps réel selon la puce Apple Silicon : M1 atteint 2–3×, M5 Pro 10–12×, M5 Max 12–14× temps réel grâce à l\'accélération GPU Metal dans whisper.cpp.',
       },
       modelSizes: {
         id: 'model-sizes',
@@ -1522,7 +1544,9 @@ while True:
           { metric: 'Langues', local: '99', google: '125+', openai: '99', assembly: '50+' },
           { metric: 'Configuration', local: '5 minutes', google: 'Clé API', openai: 'Clé API', assembly: 'Clé API' },
         ],
-        note: 'Coût mensuel (8 heures/jour) : Whisper local 0 €, Google env. 325 €, OpenAI env. 82 €, AssemblyAI env. 147 €. Pour les travaux sensibles (médical, juridique, journalisme), Whisper local est la seule option. Pour une transcription à fort volume (plus de 80 €/mois en cloud), un Mac local est rentabilisé en 12 mois.'
+        note: 'Coût mensuel (8 heures/jour) : Whisper local 0 €, Google env. 325 €, OpenAI env. 82 €, AssemblyAI env. 147 €. Pour les travaux sensibles (médical, juridique, journalisme), Whisper local est la seule option. Pour une transcription à fort volume (plus de 80 €/mois en cloud), un Mac local est rentabilisé en 12 mois.',
+        image: '/images/apple-silicon-whisper-metal-benchmark-local-vs-cloud-stt-en.svg',
+        imageCaption: 'Whisper local sur M5 Pro face aux API de reconnaissance vocale cloud : 0 $ contre 0,36–1,44 $ par heure, 100–300 ms contre 300–2000 ms de latence, et confidentialité 100% locale contre transfert de données vers le cloud.',
       },
       faq: {
         id: 'faq',
@@ -1621,7 +1645,9 @@ while True:
           { chip: 'M5 Pro', tiny: '55×', base: '40×', small: '30×', medium: '14×', large: '10–12×' },
           { chip: 'M5 Max', tiny: '65×', base: '48×', small: '38×', medium: '18×', large: '12–14×' },
         ],
-        note: '×Nリアルタイム = 1秒でN秒分の音声を文字起こし。Metal加速付きwhisper.cppによるベンチマーク。M1 Pro以降のすべてのモデルでlarge-v3をリアルタイム以上で実行可能。'
+        note: '×Nリアルタイム = 1秒でN秒分の音声を文字起こし。Metal加速付きwhisper.cppによるベンチマーク。M1 Pro以降のすべてのモデルでlarge-v3をリアルタイム以上で実行可能。',
+        image: '/images/apple-silicon-whisper-metal-benchmark-large-v3-speed-by-chip-en.svg',
+        imageCaption: 'Apple SiliconチップごとのWhisper large-v3のリアルタイム速度: M1は2〜3倍、M5 Proは10〜12倍、M5 Maxはwhisper.cppでのMetal GPUアクセラレーションにより12〜14倍のリアルタイム速度を実現。',
       },
       modelSizes: {
         id: 'model-sizes',
@@ -1796,7 +1822,9 @@ while True:
           { metric: '対応言語数', local: '99', google: '125+', openai: '99', assembly: '50+' },
           { metric: 'セットアップ', local: '5分', google: 'APIキー', openai: 'APIキー', assembly: 'APIキー' },
         ],
-        note: '月額コスト（1日8時間）：Whisperローカル 0円、Google 約52,000円、OpenAI 約13,000円、AssemblyAI 約23,000円。機密性の高い作業（医療、法律、ジャーナリズム）では、ローカルWhisperが唯一の選択肢。高ボリュームの文字起こし（クラウドで月10,000円以上）の場合、ローカルMacは12ヶ月で元が取れます。'
+        note: '月額コスト（1日8時間）：Whisperローカル 0円、Google 約52,000円、OpenAI 約13,000円、AssemblyAI 約23,000円。機密性の高い作業（医療、法律、ジャーナリズム）では、ローカルWhisperが唯一の選択肢。高ボリュームの文字起こし（クラウドで月10,000円以上）の場合、ローカルMacは12ヶ月で元が取れます。',
+        image: '/images/apple-silicon-whisper-metal-benchmark-local-vs-cloud-stt-en.svg',
+        imageCaption: 'M5 ProでのローカルWhisperとクラウド音声認識APIの比較: 1時間あたり0ドル対0.36〜1.44ドル、レイテンシ100〜300ミリ秒対300〜2000ミリ秒、そして100%ローカルのプライバシー対クラウドへのデータ送信。',
       },
       faq: {
         id: 'faq',
@@ -1895,7 +1923,9 @@ while True:
           { chip: 'M5 Pro', tiny: '55×', base: '40×', small: '30×', medium: '14×', large: '10–12×' },
           { chip: 'M5 Max', tiny: '65×', base: '48×', small: '38×', medium: '18×', large: '12–14×' },
         ],
-        note: '×N实时 = 1秒内转录N秒音频。通过Metal加速的whisper.cpp基准测试。所有M1 Pro+均可实时或更快运行large-v3。'
+        note: '×N实时 = 1秒内转录N秒音频。通过Metal加速的whisper.cpp基准测试。所有M1 Pro+均可实时或更快运行large-v3。',
+        image: '/images/apple-silicon-whisper-metal-benchmark-large-v3-speed-by-chip-en.svg',
+        imageCaption: '不同Apple Silicon芯片上Whisper large-v3的实时速度：M1为2–3倍，M5 Pro为10–12倍，M5 Max通过whisper.cpp中的Metal GPU加速达到12–14倍实时速度。',
       },
       modelSizes: {
         id: 'model-sizes',
@@ -2070,7 +2100,9 @@ while True:
           { metric: '语言数量', local: '99', google: '125+', openai: '99', assembly: '50+' },
           { metric: '设置', local: '5分钟', google: 'API密钥', openai: 'API密钥', assembly: 'API密钥' },
         ],
-        note: '月度成本（每天8小时）：Whisper本地$0，Google $345，OpenAI $86，AssemblyAI $156。对于隐私敏感工作（医疗、法律、新闻），本地Whisper是唯一选择。对于高容量转录（云端每月$100+），本地Mac在12个月内收回成本。'
+        note: '月度成本（每天8小时）：Whisper本地$0，Google $345，OpenAI $86，AssemblyAI $156。对于隐私敏感工作（医疗、法律、新闻），本地Whisper是唯一选择。对于高容量转录（云端每月$100+），本地Mac在12个月内收回成本。',
+        image: '/images/apple-silicon-whisper-metal-benchmark-local-vs-cloud-stt-en.svg',
+        imageCaption: 'M5 Pro上的本地Whisper与云端语音转文字API对比：每小时成本0美元对比0.36–1.44美元，延迟100–300毫秒对比300–2000毫秒，以及100%本地隐私对比云端数据传输。',
       },
       faq: {
         id: 'faq',
@@ -2164,7 +2196,9 @@ while True:
           { chip: 'M5 Pro', tiny: '55×', base: '40×', small: '30×', medium: '14×', large: '10–12×' },
           { chip: 'M5 Max', tiny: '65×', base: '48×', small: '38×', medium: '18×', large: '12–14×' },
         ],
-        note: '×N 실시간 = 1초 안에 N초 분량의 오디오를 전사함. Metal 가속을 사용한 whisper.cpp 벤치마크. M1 Pro 이상 모든 모델에서 large-v3를 실시간 이상의 속도로 실행할 수 있습니다.'
+        note: '×N 실시간 = 1초 안에 N초 분량의 오디오를 전사함. Metal 가속을 사용한 whisper.cpp 벤치마크. M1 Pro 이상 모든 모델에서 large-v3를 실시간 이상의 속도로 실행할 수 있습니다.',
+        image: '/images/apple-silicon-whisper-metal-benchmark-large-v3-speed-by-chip-en.svg',
+        imageCaption: 'Apple Silicon 칩별 Whisper large-v3 실시간 속도: M1은 2–3배, M5 Pro는 10–12배, M5 Max는 whisper.cpp의 Metal GPU 가속을 통해 12–14배의 실시간 속도를 냅니다.',
       },
       modelSizes: {
         id: 'model-sizes',
@@ -2339,7 +2373,9 @@ while True:
           { metric: '지원 언어', local: '99개', google: '125개 이상', openai: '99개', assembly: '50개 이상' },
           { metric: '설정', local: '5분', google: 'API 키', openai: 'API 키', assembly: 'API 키' },
         ],
-        note: '월 비용(하루 8시간): Whisper 로컬 $0, Google $345, OpenAI $86, AssemblyAI $156. 개인정보에 민감한 작업(의료, 법률, 저널리즘)의 경우 로컬 Whisper가 유일한 선택입니다. 대량 전사(클라우드 월 $100 이상)의 경우 로컬 Mac이 12개월 내에 비용을 회수합니다.'
+        note: '월 비용(하루 8시간): Whisper 로컬 $0, Google $345, OpenAI $86, AssemblyAI $156. 개인정보에 민감한 작업(의료, 법률, 저널리즘)의 경우 로컬 Whisper가 유일한 선택입니다. 대량 전사(클라우드 월 $100 이상)의 경우 로컬 Mac이 12개월 내에 비용을 회수합니다.',
+        image: '/images/apple-silicon-whisper-metal-benchmark-local-vs-cloud-stt-en.svg',
+        imageCaption: 'M5 Pro의 로컬 Whisper와 클라우드 음성 인식 API 비교: 시간당 $0 대 $0.36–$1.44, 지연 시간 100–300ms 대 300–2000ms, 100% 로컬 개인정보 보호 대 클라우드 데이터 전송.',
       },
       faq: {
         id: 'faq',
