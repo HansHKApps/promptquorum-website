@@ -1,0 +1,57 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="460" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Coding Task Dispatch: Which Model Handles It?</text>
+
+  <!-- Root -->
+  <rect x="310" y="48" width="180" height="42" rx="8" fill="#FFFFFF" stroke="#1C1B1F" stroke-width="2"/>
+  <text x="400" y="74" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Coding Task</text>
+
+  <!-- Line: root -> GDPR decision -->
+  <line x1="400" y1="90" x2="400" y2="128" stroke="#6750A4" stroke-width="2"/>
+
+  <!-- Decision 1: GDPR -->
+  <rect x="270" y="128" width="260" height="50" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="400" y="149" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Contains private /</text>
+  <text x="400" y="166" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">GDPR-relevant code?</text>
+
+  <!-- YES branch: down-left to Qwen leaf -->
+  <line x1="330" y1="178" x2="170" y2="255" stroke="#6750A4" stroke-width="2"/>
+  <text x="225" y="203" font-size="11" font-weight="700" fill="#79747E">YES</text>
+
+  <!-- NO branch: down-right to Task type decision -->
+  <line x1="470" y1="178" x2="630" y2="255" stroke="#6750A4" stroke-width="2"/>
+  <text x="560" y="203" font-size="11" font-weight="700" fill="#79747E">NO</text>
+
+  <!-- Leaf: local Qwen -->
+  <rect x="60" y="255" width="220" height="72" rx="8" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="60" y="255" width="220" height="4" rx="0" fill="#34A853"/>
+  <text x="170" y="282" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">Local Qwen 3.6 27B</text>
+  <text x="170" y="300" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">GDPR-safe by design</text>
+  <text x="170" y="315" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">16 GB VRAM · 77.2% SWE-bench</text>
+
+  <!-- Decision 2: Task type -->
+  <rect x="530" y="255" width="200" height="50" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="630" y="285" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">What task type?</text>
+
+  <!-- Branch: autocomplete -->
+  <line x1="590" y1="305" x2="492" y2="368" stroke="#6750A4" stroke-width="2"/>
+  <text x="500" y="335" font-size="11" font-weight="700" fill="#79747E">Autocomplete</text>
+
+  <!-- Branch: batch / review -->
+  <line x1="670" y1="305" x2="693" y2="368" stroke="#6750A4" stroke-width="2"/>
+  <text x="665" y="335" font-size="11" font-weight="700" fill="#79747E">Batch / review</text>
+
+  <!-- Leaf: Devstral -->
+  <rect x="395" y="368" width="195" height="72" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="395" y="368" width="195" height="4" rx="0" fill="#6750A4"/>
+  <text x="492" y="395" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">Local Devstral 24B</text>
+  <text x="492" y="413" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">Interactive · 40 tok/sec</text>
+  <text x="492" y="428" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">14 GB VRAM · agentic tasks</text>
+
+  <!-- Leaf: DeepSeek -->
+  <rect x="600" y="368" width="195" height="72" rx="8" fill="#FFFFFF" stroke="#7D5260" stroke-width="2"/>
+  <rect x="600" y="368" width="195" height="4" rx="0" fill="#7D5260"/>
+  <text x="697" y="395" font-size="14" font-weight="700" fill="#7D5260" text-anchor="middle">DeepSeek Coder API</text>
+  <text x="697" y="413" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">Non-sensitive, high-volume</text>
+  <text x="697" y="428" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">$0.14/1M tokens · cloud</text>
+<text x="792" y="455" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
