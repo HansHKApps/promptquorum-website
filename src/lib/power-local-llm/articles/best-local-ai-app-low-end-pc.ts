@@ -140,6 +140,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Fastest if you compile',
           },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageCaption:
+          'Tokens/sec on 8 GB RAM, no GPU: llama.cpp 5–18 tok/s (fastest, requires compile), Ollama 4–14 tok/s (best balance), Jan 3–11 tok/s (best on Apple Silicon), GPT4All 3–10 tok/s (easiest install, 4 GB floor).',
       },
       whichOne: {
         id: 'which-one',
@@ -269,6 +272,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Do not load any 7B model on 8 GB RAM, even at Q2. Q2 7B is ≈ 2.5 GB on disk but the working set plus 2048 context lands at ≈ 5.5 GB, which crosses into swap on most Windows / Linux systems. The result is a 5–10× speed drop and frozen UI.',
           },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageCaption:
+          '8 GB RAM budget compared: Phi-4 Mini 3.8B Q4 uses ~3 GB OS + ~3.5 GB model/KV cache, leaving ~1.5 GB free, while a 7B Q4 model needs ~9 GB total — 1 GB past the 8 GB ceiling — which forces swap and cuts tokens/sec by 5–10×.',
       },
       bestModels: {
         id: 'best-models',
@@ -634,6 +640,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdikt': 'Am schnellsten bei eigener Kompilierung',
           },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageCaption:
+          'Tokens/Sek. auf 8 GB RAM ohne GPU: llama.cpp 5–18 Tok/Sek. (am schnellsten, erfordert Kompilierung), Ollama 4–14 Tok/Sek. (beste Balance), Jan 3–11 Tok/Sek. (beste Wahl auf Apple Silicon), GPT4All 3–10 Tok/Sek. (einfachste Installation, 4 GB Minimum).',
       },
       whichOne: {
         id: 'which-one',
@@ -697,6 +706,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Laden Sie kein 7B-Modell auf 8 GB RAM, auch nicht bei Q2. Q2 7B sind ≈ 2,5 GB auf der Festplatte, aber Working Set plus 2048 Kontext landen bei ≈ 5,5 GB, was auf den meisten Windows-/Linux-Systemen in den Swap führt. Das Ergebnis ist ein 5–10× Geschwindigkeitsverlust und eine eingefrorene Benutzeroberfläche.',
           },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageCaption:
+          'Vergleich des 8-GB-RAM-Budgets: Phi-4 Mini 3.8B Q4 nutzt ~3 GB OS + ~3,5 GB Modell/KV-Cache und lässt ~1,5 GB frei, während ein 7B-Q4-Modell ~9 GB insgesamt benötigt — 1 GB über der 8-GB-Grenze — was Swap erzwingt und Tokens/Sek. um 5–10× senkt.',
       },
       bestModels: {
         id: 'best-models',
@@ -979,6 +991,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Application': 'Jan', 'RAM min.': '6 Go', 'Meilleur modèle (contrainte 8 Go)': 'Gemma 3 4B Q4_K_M', 'Tokens/s (CPU seul)': '3–11 t/s', 'Chaleur': 'Moyenne', 'Verdict': 'Meilleure GUI sur Apple Silicon 8 Go' },
           { 'Application': 'llama.cpp', 'RAM min.': '4 Go', 'Meilleur modèle (contrainte 8 Go)': 'SmolLM 2 1.7B Q4_K_M', 'Tokens/s (CPU seul)': '5–18 t/s', 'Chaleur': 'Faible', 'Verdict': 'Plus rapide si vous compilez' },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageCaption:
+          'Tokens/s sur 8 Go RAM sans GPU : llama.cpp 5–18 t/s (le plus rapide, nécessite compilation), Ollama 4–14 t/s (meilleur équilibre), Jan 3–11 t/s (meilleur choix sur Apple Silicon), GPT4All 3–10 t/s (installation la plus simple, plancher 4 Go).',
       },
       whichOne: {
         id: 'which-one',
@@ -1030,6 +1045,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: 'Ne chargez aucun modèle 7B sur 8 Go RAM, même en Q2. Q2 7B fait ≈ 2.5 Go sur disque mais l\'empreinte plus 2048 de contexte atterrit à ≈ 5.5 Go, ce qui fait basculer en swap sur la plupart des systèmes Windows / Linux. Résultat : chute de vitesse 5–10× et interface gelée.' },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageCaption:
+          'Budget RAM 8 Go comparé : Phi-4 Mini 3.8B Q4 utilise ~3 Go OS + ~3,5 Go modèle/cache KV, laissant ~1,5 Go libre, tandis qu\'un modèle 7B Q4 nécessite ~9 Go au total — 1 Go au-delà du plafond de 8 Go — ce qui force le swap et réduit les tokens/s de 5–10×.',
       },
       bestModels: {
         id: 'best-models',
@@ -1249,6 +1267,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'アプリ': 'Jan', '最低RAM': '6 GB', 'ベストモデル（8GB制約）': 'Gemma 3 4B Q4_K_M', 'tok/秒（CPU専用）': '3〜11 tok/秒', '発熱': '中', '評価': 'Apple Silicon 8GBで最良GUI' },
           { 'アプリ': 'llama.cpp', '最低RAM': '4 GB', 'ベストモデル（8GB制約）': 'SmolLM 2 1.7B Q4_K_M', 'tok/秒（CPU専用）': '5〜18 tok/秒', '発熱': '低', '評価': 'コンパイルできるなら最速' },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageCaption:
+          '8GB RAM・GPUなしでのtok/秒：llama.cppは5〜18 tok/秒（最速、コンパイルが必要）、Ollamaは4〜14 tok/秒（バランス最良）、Janは3〜11 tok/秒（Apple Siliconで最良）、GPT4Allは3〜10 tok/秒（最も簡単なインストール、最低4GB）。',
       },
       whichOne: {
         id: 'which-one',
@@ -1301,6 +1322,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: '8GB RAMでは、Q2であっても7Bモデルを一切ロードしないでください。Q2 7Bはディスク上で ≈ 2.5 GBですが、ワーキングセット＋2048コンテキストでは ≈ 5.5 GBに達し、ほとんどのWindows / Linuxシステムでスワップに移行します。結果は5〜10倍の速度低下とフリーズしたUIです。' },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageCaption:
+          '8GB RAM予算の比較：Phi-4 Mini 3.8B Q4はOS約3GB＋モデル/KVキャッシュ約3.5GBを使用し約1.5GBが空きますが、7B Q4モデルは合計約9GBが必要で、8GBの上限を1GB超え、スワップを引き起こしてtok/秒を5〜10倍低下させます。',
       },
       bestModels: {
         id: 'best-models',
@@ -1523,6 +1547,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '应用': 'Jan', '最低内存': '6 GB', '最佳模型（8GB限制）': 'Gemma 3 4B Q4_K_M', 'tokens/秒（CPU专用）': '3–11 tok/s', '发热': '中', '评判': 'Apple Silicon 8GB最佳GUI' },
           { '应用': 'llama.cpp', '最低内存': '4 GB', '最佳模型（8GB限制）': 'SmolLM 2 1.7B Q4_K_M', 'tokens/秒（CPU专用）': '5–18 tok/s', '发热': '低', '评判': '能编译则最快' },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageCaption:
+          '8GB内存、无GPU下的tokens/秒：llama.cpp为5–18 tok/s（最快，需要编译），Ollama为4–14 tok/s（最佳平衡），Jan为3–11 tok/s（Apple Silicon上最佳），GPT4All为3–10 tok/s（安装最简单，最低4GB）。',
       },
       whichOne: {
         id: 'which-one',
@@ -1575,6 +1602,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: '在8GB内存上不要加载任何7B模型，即使是Q2。Q2 7B在磁盘上 ≈ 2.5 GB，但工作集加2048上下文达到 ≈ 5.5 GB，在大多数Windows / Linux系统上越界进入交换。结果是5–10倍速度下降和UI冻结。' },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageCaption:
+          '8GB内存预算对比：Phi-4 Mini 3.8B Q4使用约3GB操作系统+约3.5GB模型/KV缓存，剩余约1.5GB空闲，而7B Q4模型总共需要约9GB — 超出8GB上限1GB — 这会触发交换并使tokens/秒下降5–10倍。',
       },
       bestModels: {
         id: 'best-models',
@@ -1847,6 +1877,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredicto': 'La más rápida si compilas',
           },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageCaption:
+          'Tokens/s en 8 GB RAM sin GPU: llama.cpp 5–18 tok/s (la más rápida, requiere compilar), Ollama 4–14 tok/s (mejor equilibrio), Jan 3–11 tok/s (mejor en Apple Silicon), GPT4All 3–10 tok/s (instalación más fácil, mínimo 4 GB).',
       },
       whichOne: {
         id: 'which-one',
@@ -1976,6 +2009,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'No cargues ningún modelo de 7B en 8 GB RAM, ni siquiera en Q2. Q2 7B ocupa ≈ 2,5 GB en disco, pero el conjunto de trabajo más 2048 de contexto llega a ≈ 5,5 GB, lo que cruza al swap en la mayoría de sistemas Windows / Linux. El resultado es una caída de velocidad de 5–10× y una interfaz congelada.',
           },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageCaption:
+          'Presupuesto de RAM de 8 GB comparado: Phi-4 Mini 3.8B Q4 usa ~3 GB de SO + ~3,5 GB de modelo/caché KV, dejando ~1,5 GB libres, mientras que un modelo 7B Q4 necesita ~9 GB en total — 1 GB por encima del límite de 8 GB — lo que fuerza el swap y reduce los tokens/s en 5–10×.',
       },
       bestModels: {
         id: 'best-models',
@@ -2324,6 +2360,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredicto': 'O mais rápido se você compilar',
           },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageCaption:
+          'Tokens/s em 8 GB RAM sem GPU: llama.cpp 5–18 tok/s (o mais rápido, exige compilação), Ollama 4–14 tok/s (melhor equilíbrio), Jan 3–11 tok/s (melhor em Apple Silicon), GPT4All 3–10 tok/s (instalação mais fácil, mínimo de 4 GB).',
       },
       whichOne: {
         id: 'which-one',
@@ -2453,6 +2492,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Não carregue nenhum modelo de 7B em 8 GB RAM, nem mesmo em Q2. O Q2 7B ocupa ≈ 2,5 GB em disco, mas o conjunto de trabalho mais 2048 de contexto chega a ≈ 5,5 GB, o que cruza para o swap na maioria dos sistemas Windows / Linux. O resultado é uma queda de velocidade de 5–10× e uma interface congelada.',
           },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageCaption:
+          'Orçamento de RAM de 8 GB comparado: o Phi-4 Mini 3.8B Q4 usa ~3 GB de SO + ~3,5 GB de modelo/cache KV, deixando ~1,5 GB livres, enquanto um modelo 7B Q4 precisa de ~9 GB no total — 1 GB acima do teto de 8 GB — o que força o swap e reduz os tokens/s em 5–10×.',
       },
       bestModels: {
         id: 'best-models',
@@ -2801,6 +2843,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الحكم': 'الأسرع إذا جمّعت',
           },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageCaption:
+          'الرموز في الثانية على 8 GB RAM بدون GPU: llama.cpp من 5 إلى 18 رمز/ثانية (الأسرع، يتطلب التجميع)، Ollama من 4 إلى 14 رمز/ثانية (أفضل توازن)، Jan من 3 إلى 11 رمز/ثانية (الأفضل على Apple Silicon)، GPT4All من 3 إلى 10 رمز/ثانية (أسهل تثبيت، الحد الأدنى 4 GB).',
       },
       whichOne: {
         id: 'which-one',
@@ -2930,6 +2975,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'لا تُحمِّل أي نموذج 7B على 8 GB RAM، حتى بـQ2. نموذج 7B بـQ2 يشغل ≈ 2.5 GB على القرص، لكن مجموعة العمل مع سياق 2048 تصل إلى ≈ 5.5 GB، مما يتجاوز حد 8 GB في معظم أنظمة Windows / Linux. النتيجة انخفاض سرعة 5-10× وواجهة مجمّدة.',
           },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageCaption:
+          'مقارنة ميزانية 8 GB RAM: يستخدم Phi-4 Mini 3.8B Q4 نحو 3 GB لنظام التشغيل + نحو 3.5 GB للنموذج وcache KV، تاركاً نحو 1.5 GB حرة، بينما يحتاج نموذج 7B Q4 إلى نحو 9 GB إجمالاً — أي 1 GB فوق حد 8 GB — مما يجبر النظام على الـswap ويخفض الرموز/ثانية بمقدار 5-10×.',
       },
       bestModels: {
         id: 'best-models',
@@ -3225,6 +3273,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '앱': 'Jan', '최소 RAM': '6 GB', '최적 모델 (8 GB 한도)': 'Gemma 3 4B Q4_K_M', '토큰/초 (CPU 전용)': '3~11 토큰/초', '발열': '보통', '평가': 'Apple Silicon 8 GB 최고 GUI' },
           { '앱': 'llama.cpp', '최소 RAM': '4 GB', '최적 모델 (8 GB 한도)': 'SmolLM 2 1.7B Q4_K_M', '토큰/초 (CPU 전용)': '5~18 토큰/초', '발열': '낮음', '평가': '빌드하면 가장 빠름' },
         ],
+        image: '/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg',
+        imageCaption:
+          '8 GB RAM, GPU 없음 기준 토큰/초: llama.cpp 5~18 토큰/초(가장 빠름, 빌드 필요), Ollama 4~14 토큰/초(최고 균형), Jan 3~11 토큰/초(Apple Silicon에서 최적), GPT4All 3~10 토큰/초(가장 쉬운 설치, 최소 4 GB).',
       },
       whichOne: {
         id: 'which-one',
@@ -3270,6 +3321,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**배경 앱이 더 큰 영향:** Chrome 탭 20개는 1~2 GB, Slack은 400~600 MB를 차지합니다.',
         ],
         callouts: [{ type: 'warning', text: '8 GB RAM에서는 Q2로도 7B 모델을 로드하지 마세요. 7B Q2는 2048 컨텍스트에서 ≈ 5.5 GB에 달해 8 GB 한도를 초과합니다.' }],
+        image: '/images/best-local-ai-app-low-end-pc-ram-budget-en.svg',
+        imageCaption:
+          '8 GB RAM 예산 비교: Phi-4 Mini 3.8B Q4는 OS ~3 GB + 모델/KV 캐시 ~3.5 GB를 사용해 ~1.5 GB가 남지만, 7B Q4 모델은 총 ~9 GB가 필요해 8 GB 한도를 1 GB 초과하여 스왑을 유발하고 토큰/초를 5~10배 떨어뜨립니다.',
       },
       bestModels: {
         id: 'best-models',
