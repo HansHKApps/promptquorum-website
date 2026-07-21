@@ -9719,6 +9719,16 @@
     "width": 1200,
     "height": 675
   },
+  "/images/lm-studio-advanced-features-context-window-vram-scaling-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/lm-studio-advanced-features-gpu-allocation-tradeoff-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/lm-studio-jan-gpt4all-comparison-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
