@@ -101,6 +101,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               text: 'Llama 3.3 70B matches Claude Sonnet 5 on 80% of real-world tasks, but Claude edges ahead on nuanced reasoning and creative writing edge cases.',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-quality-specs-en.svg',
+          imageCaption: 'Claude Sonnet 5 vs Llama 3.3 70B quality specs: 97% vs 96% MMLU, 200K vs 128K token context, Claude native multimodal vs Llama adapter-only, Llama full fine-tuning (LoRA) vs no fine-tuning on Claude, and Llama +2% ahead on HumanEval coding.',
         },
         'context': {
           id: 'context',
@@ -132,6 +134,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               text: 'Over 5 years, both options cost roughly $1,200–1,300 if you use a second-hand GPU. The real difference is $20/month subscription vs paying $1,000 upfront and owning the hardware forever.',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-5-year-cost-en.svg',
+          imageCaption: '5-year total cost: Claude Pro $1,200, local Llama 3.3 70B on a used GPU $1,300 (breaks even around month 50), local Llama 3.3 70B on a new GPU $1,900.',
         },
         'faqSection': {
           id: 'faq',
@@ -348,6 +352,8 @@ schema: {
               text: 'Llama 3.3 70B iguala a Claude Sonnet 5 en el 80% de las tareas del mundo real, pero Claude lleva ventaja en razonamiento matizado y casos límite de escritura creativa.',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-quality-specs-en.svg',
+          imageCaption: 'Especificaciones de calidad Claude Sonnet 5 vs Llama 3.3 70B: 97% vs 96% en MMLU, ventana de contexto de 200K vs 128K tokens, Claude con comprensión de imágenes nativa vs Llama solo mediante adaptador, Llama con fine-tuning completo (LoRA) vs ninguno en Claude, y Llama +2% por delante en HumanEval.',
         },
         'context': {
           id: 'context',
@@ -379,6 +385,8 @@ schema: {
               text: 'En 5 años, ambas opciones cuestan aproximadamente $1,200–1,300 si usas una GPU de segunda mano. La diferencia real es $20/mes de suscripción vs pagar $1,000 al inicio y ser dueño del hardware para siempre.',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-5-year-cost-en.svg',
+          imageCaption: 'Costo total a 5 años: Claude Pro $1,200, Llama 3.3 70B local con GPU usada $1,300 (punto de equilibrio alrededor del mes 50), Llama 3.3 70B local con GPU nueva $1,900.',
         },
         'faqSection': {
           id: 'faq',
@@ -595,6 +603,8 @@ schema: {
               text: 'يضاهي Llama 3.3 70B نموذج Claude Sonnet 5 في 80% من المهام الواقعية، لكن Claude يتقدّم في الاستدلال الدقيق والحالات الحدّية للكتابة الإبداعية.',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-quality-specs-en.svg',
+          imageCaption: 'مواصفات الجودة: Claude Sonnet 5 مقابل Llama 3.3 70B — 97% مقابل 96% في MMLU، نافذة سياق 200K مقابل 128K رمز، فهم صور أصلي لدى Claude مقابل عبر محوّل فقط لدى Llama، ضبط دقيق كامل (LoRA) لدى Llama مقابل غير متاح لدى Claude، وتفوّق Llama بنسبة +2% في HumanEval.',
         },
         'context': {
           id: 'context',
@@ -626,6 +636,8 @@ schema: {
               text: 'في 5 سنوات، يكلّف كلا الخيارين قرابة 1,200–1,300$ إذا استخدمت GPU مستعملة. الفرق الحقيقي هو 20$/شهر اشتراك مقابل دفع 1,000$ أوليًا وامتلاك العتاد للأبد.',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-5-year-cost-en.svg',
+          imageCaption: 'التكلفة الإجمالية لـ5 سنوات: Claude Pro 1,200$، Llama 3.3 70B محلي بـGPU مستعملة 1,300$ (نقطة تعادل حوالي الشهر 50)، Llama 3.3 70B محلي بـGPU جديدة 1,900$.',
         },
         'faqSection': {
           id: 'faq',
@@ -842,6 +854,8 @@ schema: {
               text: 'O Llama 3.3 70B iguala o Claude Sonnet 5 em 80% das tarefas do mundo real, mas o Claude leva vantagem em raciocínio matizado e casos extremos de escrita criativa.',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-quality-specs-en.svg',
+          imageCaption: 'Especificações de qualidade: Claude Sonnet 5 vs Llama 3.3 70B — 97% vs 96% no MMLU, janela de contexto de 200K vs 128K tokens, Claude com compreensão de imagem nativa vs Llama apenas via adaptador, Llama com fine-tuning completo (LoRA) vs indisponível no Claude, e Llama +2% à frente no HumanEval.',
         },
         'context': {
           id: 'context',
@@ -873,6 +887,8 @@ schema: {
               text: 'Em 5 anos, ambas as opções custam aproximadamente $1.200–1.300 se você usar uma GPU de segunda mão. A diferença real é $20/mês de assinatura vs pagar $1.000 de início e ser dono do hardware para sempre.',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-5-year-cost-en.svg',
+          imageCaption: 'Custo total em 5 anos: Claude Pro $1.200, Llama 3.3 70B local com GPU usada $1.300 (ponto de equilíbrio por volta do mês 50), Llama 3.3 70B local com GPU nova $1.900.',
         },
         'faqSection': {
           id: 'faq',
@@ -1057,6 +1073,8 @@ schema: {
               text: 'Llama 3.3 70B matched Claude Sonnet 5 bei 80% der Real-World-Aufgaben, aber Claude ist bei nuanciertem Reasoning und kreativem Schreiben Edge Cases leicht überlegen.',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-quality-specs-en.svg',
+          imageCaption: 'Qualitätsspezifikationen: Claude Sonnet 5 vs. Llama 3.3 70B — 97% vs. 96% MMLU, Kontextfenster 200K vs. 128K Tokens, Claude mit nativer Bilderkennung vs. Llama nur via Adapter, Llama mit vollständigem Fine-Tuning (LoRA) vs. keinem bei Claude, und Llama +2% vorn bei HumanEval.',
         },
         'context': {
           id: 'context',
@@ -1088,6 +1106,8 @@ schema: {
               text: 'Über 5 Jahre kosten beide Optionen grob 1.200–1.700€ bei Verwendung einer Second-Hand-GPU. Der echte Unterschied ist 20€/Monat Abonnement vs 1.400€ Auffront zahlen und die Hardware für immer besitzen.',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-5-year-cost-de.svg',
+          imageCaption: 'Gesamtkosten über 5 Jahre: Claude Pro 1.200 €, lokales Llama 3.3 70B mit gebrauchter GPU 1.700 € (Amortisation nach etwa 50 Monaten), lokales Llama 3.3 70B mit neuer GPU 2.260 €.',
         },
         'faqSection': {
           id: 'faq',
@@ -1314,6 +1334,8 @@ schema: {
               text: 'Llama 3.3 70B égale Claude Sonnet 5 sur 80 % des tâches réelles, mais Claude se distingue sur raisonnement nuancé et cas limites rédaction créative.',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-quality-specs-en.svg',
+          imageCaption: 'Spécifications qualité : Claude Sonnet 5 vs Llama 3.3 70B — 97 % vs 96 % en MMLU, fenêtre de contexte 200K vs 128K tokens, Claude avec compréhension d\'image native vs Llama via adaptateur seulement, Llama avec fine-tuning complet (LoRA) vs indisponible chez Claude, et Llama +2 % devant sur HumanEval.',
         },
         'context': {
           id: 'context',
@@ -1345,6 +1367,8 @@ schema: {
               text: 'Sur 5 ans, les deux options coûtent approximativement 1 200–1 500€ si vous utilisez un GPU d\'occasion. La vraie différence: abonnement 20€/mois vs payer 1 200€ d\'avance et posséder le matériel pour toujours.',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-5-year-cost-fr.svg',
+          imageCaption: 'Coût total sur 5 ans : Claude Pro 1 200 €, Llama 3.3 70B local avec GPU d\'occasion 1 500 € (seuil de rentabilité vers le mois 50), Llama 3.3 70B local avec GPU neuf 2 400 €.',
         },
         'faqSection': {
           id: 'faq',
@@ -1561,6 +1585,8 @@ schema: {
               text: 'Llama 3.3 70Bは現実タスク80%でClaude Sonnet 5に並びますが、Claudeは微妙な推論と創造的執筆エッジケースで優位です。',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-quality-specs-en.svg',
+          imageCaption: '品質仕様：Claude Sonnet 5 vs Llama 3.3 70B — MMLU 97% vs 96%、コンテキストウィンドウ200K vs 128Kトークン、画像理解はClaudeがネイティブ・Llamaはアダプター経由のみ、ファインチューニングはLlamaが完全対応（LoRA）・Claudeは不可、HumanEvalではLlamaが+2%優位。',
         },
         'context': {
           id: 'context',
@@ -1592,6 +1618,8 @@ schema: {
               text: '5年で、両オプションはほぼ¥192,000～237,000かかります（中古GPU使用の場合）。本当の違いは月¥3,200サブスク対¥189,000先払いしてハードウェアを永遠に所有することです。',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-5-year-cost-ja.svg',
+          imageCaption: '5年間の総コスト：Claude Pro ¥192,000、中古GPUのローカルLlama 3.3 70Bが¥237,000（約50ヶ月で採算）、新品GPUのローカルLlama 3.3 70Bが¥350,400。',
         },
         'faqSection': {
           id: 'faq',
@@ -1808,6 +1836,8 @@ schema: {
               text: 'Llama 3.3 70B在80%现实任务上与Claude Sonnet 5相当，但Claude在细微推理和创意写作边界情况上占优。',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-quality-specs-en.svg',
+          imageCaption: '质量规格：Claude Sonnet 5 vs Llama 3.3 70B — MMLU 97% vs 96%，上下文窗口200K vs 128K令牌，Claude原生图像理解 vs Llama仅通过适配器，Llama完整微调支持（LoRA） vs Claude不可用，HumanEval上Llama领先+2%。',
         },
         'context': {
           id: 'context',
@@ -1839,6 +1869,8 @@ schema: {
               text: '5年内，使用二手GPU两个选项成本约$1,200-1,300。真正区别是月$20订阅 vs 先付$1,000并永久拥有硬件。',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-5-year-cost-en.svg',
+          imageCaption: '5年总成本：Claude Pro $1,200，本地Llama 3.3 70B使用二手GPU $1,300（约50个月损益平衡），本地Llama 3.3 70B使用新GPU $1,900。',
         },
         'faqSection': {
           id: 'faq',
@@ -2055,6 +2087,8 @@ schema: {
               text: 'Llama 3.3 70B는 실제 업무의 80%에서 Claude Sonnet 5과 동등하지만, 미묘한 추론과 창작 엣지 케이스에서는 Claude가 앞섭니다.',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-quality-specs-en.svg',
+          imageCaption: '품질 스펙: Claude Sonnet 5 vs Llama 3.3 70B — MMLU 97% vs 96%, 컨텍스트 창 200K vs 128K 토큰, 이미지 이해는 Claude가 네이티브·Llama는 어댑터로만 가능, 파인튜닝은 Llama가 완전 지원(LoRA)·Claude는 불가, HumanEval에서는 Llama가 +2% 우위.',
         },
         'context': {
           id: 'context',
@@ -2086,6 +2120,8 @@ schema: {
               text: '5년 기준으로 중고 GPU를 사용할 경우 두 옵션 모두 약 $1,200~1,300의 비용이 발생합니다. 진정한 차이는 월 $20 구독료 대 초기 $1,000 지출 후 하드웨어를 영구 소유하는 것입니다.',
             },
           ],
+          image: '/images/local-llms-vs-claude-pro-5-year-cost-en.svg',
+          imageCaption: '5년 총 비용: Claude Pro $1,200, 중고 GPU를 사용한 로컬 Llama 3.3 70B $1,300(약 50개월차 손익분기점), 신품 GPU를 사용한 로컬 Llama 3.3 70B $1,900.',
         },
         'faqSection': {
           id: 'faq',
