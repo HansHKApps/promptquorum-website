@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 470" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="470" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Exynos 2600 vs. Snapdragon 8 Elite Gen 5: Galaxy S26 NPU</text>
+
+  <!-- Left Panel: Exynos 2600 (winner) -->
+  <rect x="28" y="55" width="350" height="360" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="28" y="55" width="350" height="4" rx="0" fill="#34A853"/>
+  <text x="203" y="82" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Exynos 2600</text>
+  <text x="203" y="99" font-size="11" fill="#79747E" text-anchor="middle">Galaxy S26 / S26+ (global)</text>
+
+  <text x="48" y="130" font-size="12" font-weight="700" fill="#1C1B1F">Fab / Node:</text>
+  <text x="48" y="148" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#34A853">2nm GAA (Samsung SF2)</text>
+
+  <text x="48" y="182" font-size="12" font-weight="700" fill="#1C1B1F">AI Perf Gen-over-Gen:</text>
+  <text x="48" y="200" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#34A853">+113% vs Exynos 2500</text>
+
+  <text x="48" y="234" font-size="12" font-weight="700" fill="#1C1B1F">Stable Diffusion Speed:</text>
+  <text x="48" y="252" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#34A853">2.4x faster than Exynos 2500</text>
+
+  <text x="48" y="286" font-size="12" font-weight="700" fill="#1C1B1F">Memory Bandwidth:</text>
+  <text x="48" y="304" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">LPDDR5X 85.6 GB/s</text>
+
+  <text x="48" y="338" font-size="12" font-weight="700" fill="#1C1B1F">Availability:</text>
+  <text x="48" y="356" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">S26 / S26+ (global)</text>
+
+  <text x="203" y="395" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">Best for on-device LLM &amp; image gen</text>
+
+  <!-- Right Panel: Snapdragon 8 Elite Gen 5 -->
+  <rect x="422" y="55" width="350" height="360" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+  <rect x="422" y="55" width="350" height="4" rx="0" fill="#F4B400"/>
+  <text x="597" y="82" font-size="16" font-weight="700" fill="#B08500" text-anchor="middle">Snapdragon 8 Elite Gen 5</text>
+  <text x="597" y="99" font-size="11" fill="#79747E" text-anchor="middle">Galaxy S26 (US/China/Japan)</text>
+
+  <text x="442" y="130" font-size="12" font-weight="700" fill="#1C1B1F">Fab / Node:</text>
+  <text x="442" y="148" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#49454F">3nm FinFET (TSMC)</text>
+
+  <text x="442" y="182" font-size="12" font-weight="700" fill="#1C1B1F">AI Perf Gen-over-Gen:</text>
+  <text x="442" y="200" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#49454F">+39% NPU vs S25</text>
+
+  <text x="442" y="234" font-size="12" font-weight="700" fill="#1C1B1F">Stable Diffusion Speed:</text>
+  <text x="442" y="252" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#49454F">No published benchmark</text>
+
+  <text x="442" y="286" font-size="12" font-weight="700" fill="#1C1B1F">Memory Bandwidth:</text>
+  <text x="442" y="304" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">LPDDR5X 84.8 GB/s</text>
+
+  <text x="442" y="338" font-size="12" font-weight="700" fill="#1C1B1F">Availability:</text>
+  <text x="442" y="356" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#1C1B1F">S26 Ultra (all regions)</text>
+
+  <text x="597" y="395" font-size="12" font-weight="700" fill="#B08500" text-anchor="middle">Competitive, EdgeFusion status unclear</text>
+
+  <text x="400" y="440" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Exynos 2600 leads on AI gen-over-gen gains (+113% vs +39%) and Stable Diffusion (2.4x faster) — choose global S26/S26+ for local LLM inference.</text>
+<text x="792" y="455" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
