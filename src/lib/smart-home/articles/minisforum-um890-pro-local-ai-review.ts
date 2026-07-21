@@ -88,6 +88,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Specifications',
         content:
           '**All specs below were verified against Minisforum and independent review sources in July 2026.** The RAM ceiling is 96 GB on the official page (some retailers still list 64 GB). It ships barebones or pre-built by SKU.',
+        image: '/images/minisforum-um890-pro-vs-beelink-ser8-specs-en.svg',
+        imageCaption: 'Minisforum UM890 Pro vs Beelink SER8 spec comparison: same Ryzen 8945HS/8845HS + Radeon 780M 12 CU tier, but the UM890 Pro adds a 96 GB RAM ceiling, dual 2.5GbE, Wi-Fi 6E, and an OCuLink PCIe 4.0 x4 eGPU port for about $439–649 vs ~$650.',
         columns: ['Spec', 'Minisforum UM890 Pro (8945HS)'],
         rows: [
           { Spec: 'CPU', 'Minisforum UM890 Pro (8945HS)': 'AMD Ryzen 9 8945HS (Zen 4)' },
@@ -113,6 +115,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Local AI & LLM Performance',
         content:
           '**On the iGPU the UM890 Pro comfortably runs a 7B model and fits 13B–14B with more RAM; its real advantage is the OCuLink port, which connects an external GPU for genuinely fast large-model inference — all figures estimated from the verified hardware, not a measured benchmark.** Without an external GPU, large models are limited by memory bandwidth like any shared-memory box.',
+        image: '/images/minisforum-um890-pro-local-llm-ram-fit-en.svg',
+        imageCaption: 'Local LLM fit by RAM tier on the UM890 Pro Radeon 780M iGPU: 32 GB runs a 7B model comfortably, 64–96 GB adds 13B–14B comfortably plus a 30B model at low throughput, and an OCuLink external GPU removes the RAM/iGPU ceiling for fast 13B–30B+ inference.',
         items: [
           'With 32 GB, a 7B model is comfortable; 64–96 GB opens 13B–14B comfortably and a 30B model at low throughput.',
           'OCuLink adds an external desktop GPU for large-model speed the iGPU cannot reach — a differentiator over USB4-only boxes.',
@@ -320,6 +324,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Spezifikationen',
         content:
           '**Alle nachstehenden Spezifikationen wurden im Juli 2026 gegen Minisforum und unabhängige Testquellen geprüft.** Die RAM-Obergrenze liegt laut offizieller Seite bei 96 GB (manche Händler nennen noch 64 GB). Ausgeliefert wird je nach SKU als Barebone oder vorkonfiguriert.',
+        image: '/images/minisforum-um890-pro-vs-beelink-ser8-specs-en.svg',
+        imageCaption: 'Minisforum UM890 Pro vs. Beelink SER8: gleiche CPU-/iGPU-Klasse (Ryzen 8945HS/8845HS, Radeon 780M 12 CU), aber der UM890 Pro bietet eine 96-GB-RAM-Obergrenze, zwei 2,5GbE-Ports, Wi-Fi 6E und einen OCuLink-PCIe-4.0-×4-Anschluss für eine externe GPU.',
         columns: ['Spezifikation', 'Minisforum UM890 Pro (8945HS)'],
         rows: [
           { Spezifikation: 'CPU', 'Minisforum UM890 Pro (8945HS)': 'AMD Ryzen 9 8945HS (Zen 4)' },
@@ -345,6 +351,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lokale KI & LLM-Leistung',
         content:
           '**Auf der iGPU betreibt der UM890 Pro bequem ein 7B-Modell und fasst 13B–14B mit mehr RAM; sein echter Vorteil ist der OCuLink-Anschluss, der eine externe GPU für wirklich schnelle Inferenz großer Modelle anbindet — alle Angaben aus der geprüften Hardware geschätzt, kein gemessener Benchmark.** Ohne externe GPU sind große Modelle wie bei jeder Shared-Memory-Box durch die Speicherbandbreite begrenzt.',
+        image: '/images/minisforum-um890-pro-local-llm-ram-fit-en.svg',
+        imageCaption: 'Lokale-LLM-Eignung nach RAM-Stufe auf der Radeon-780M-iGPU: 32 GB betreiben ein 7B-Modell bequem, 64–96 GB ermöglichen 13B–14B bequem plus ein 30B-Modell bei geringem Durchsatz, und eine externe GPU über OCuLink hebt die RAM-/iGPU-Grenze für schnelle 13B–30B+-Inferenz auf.',
         items: [
           'Mit 32 GB läuft ein 7B-Modell bequem; 64–96 GB eröffnen 13B–14B bequem und ein 30B-Modell bei geringem Durchsatz.',
           'OCuLink ergänzt eine externe Desktop-GPU für eine Modellgeschwindigkeit, die die iGPU nicht erreicht — ein Unterscheidungsmerkmal gegenüber reinen USB4-Boxen.',
@@ -554,6 +562,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Caractéristiques',
         content:
           '**Toutes les caractéristiques ci-dessous ont été vérifiées face aux sources Minisforum et à des tests indépendants en juillet 2026.** Le plafond RAM est de 96 GB sur la page officielle (certains revendeurs indiquent encore 64 GB). Livré en barebone ou préassemblé selon la SKU.',
+        image: '/images/minisforum-um890-pro-vs-beelink-ser8-specs-en.svg',
+        imageCaption: 'Minisforum UM890 Pro vs Beelink SER8 : même gamme CPU/iGPU (Ryzen 8945HS/8845HS, Radeon 780M 12 CU), mais le UM890 Pro ajoute un plafond RAM de 96 GB, deux ports 2.5GbE, le Wi-Fi 6E et un port OCuLink PCIe 4.0 ×4 pour un GPU externe.',
         columns: ['Caractéristique', 'Minisforum UM890 Pro (8945HS)'],
         rows: [
           { 'Caractéristique': 'CPU', 'Minisforum UM890 Pro (8945HS)': 'AMD Ryzen 9 8945HS (Zen 4)' },
@@ -579,6 +589,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'IA locale & performances LLM',
         content:
           '**Sur l\'iGPU, le UM890 Pro fait confortablement tourner un modèle 7B et accueille 13B–14B avec plus de RAM ; son vrai atout est le port OCuLink, qui connecte un GPU externe pour une inférence des grands modèles vraiment rapide — tous les chiffres sont estimés d\'après le matériel vérifié, pas un benchmark mesuré.** Sans GPU externe, les grands modèles sont limités par la bande passante mémoire, comme toute box à mémoire partagée.',
+        image: '/images/minisforum-um890-pro-local-llm-ram-fit-en.svg',
+        imageCaption: 'Adéquation LLM local par palier de RAM sur l\'iGPU Radeon 780M : 32 GB font tourner un modèle 7B confortablement, 64–96 GB permettent 13B–14B confortablement plus un modèle 30B à faible débit, et un GPU externe via OCuLink supprime le plafond RAM/iGPU pour une inférence rapide de 13B–30B+.',
         items: [
           'Avec 32 GB, un modèle 7B est confortable ; 64–96 GB ouvrent 13B–14B confortablement et un modèle 30B à faible débit.',
           'OCuLink ajoute un GPU de bureau externe pour une vitesse que l\'iGPU ne peut atteindre — un différenciateur face aux box USB4 seules.',
@@ -786,6 +798,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Especificaciones',
         content:
           '**Todas las especificaciones siguientes se verificaron frente a Minisforum y fuentes de análisis independientes en julio de 2026.** El máximo de RAM es 96 GB en la página oficial (algunos vendedores aún indican 64 GB). Se envía barebones o preconfigurado según la SKU.',
+        image: '/images/minisforum-um890-pro-vs-beelink-ser8-specs-en.svg',
+        imageCaption: 'Minisforum UM890 Pro frente a Beelink SER8: misma gama de CPU/iGPU (Ryzen 8945HS/8845HS, Radeon 780M 12 CU), pero el UM890 Pro añade un techo de 96 GB de RAM, dos puertos 2.5GbE, Wi-Fi 6E y un puerto OCuLink PCIe 4.0 ×4 para una GPU externa.',
         columns: ['Especificación', 'Minisforum UM890 Pro (8945HS)'],
         rows: [
           { 'Especificación': 'CPU', 'Minisforum UM890 Pro (8945HS)': 'AMD Ryzen 9 8945HS (Zen 4)' },
@@ -811,6 +825,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'IA local y rendimiento LLM',
         content:
           '**En la iGPU, el UM890 Pro ejecuta con comodidad un modelo 7B y admite 13B–14B con más RAM; su verdadera ventaja es el puerto OCuLink, que conecta una GPU externa para una inferencia de modelos grandes realmente rápida — todas las cifras están estimadas a partir del hardware verificado, no de un benchmark medido.** Sin una GPU externa, los modelos grandes están limitados por el ancho de banda de memoria, como cualquier caja de memoria compartida.',
+        image: '/images/minisforum-um890-pro-local-llm-ram-fit-en.svg',
+        imageCaption: 'Ajuste de LLM local por nivel de RAM en la iGPU Radeon 780M: 32 GB ejecutan un modelo 7B con comodidad, 64–96 GB permiten 13B–14B con comodidad más un modelo 30B a bajo rendimiento, y una GPU externa por OCuLink elimina el límite de RAM/iGPU para una inferencia rápida de 13B–30B+.',
         items: [
           'Con 32 GB, un modelo 7B va cómodo; 64–96 GB abren 13B–14B con comodidad y un modelo 30B a bajo rendimiento.',
           'OCuLink añade una GPU de escritorio externa para una velocidad que la iGPU no alcanza — un diferenciador frente a las cajas solo con USB4.',
@@ -1018,6 +1034,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '仕様',
         content:
           '**以下の仕様はすべて、2026年7月にMinisforumおよび独立系レビュー情報と照合して検証しました。** RAMの上限は公式ページで96 GBです（一部の販売店は依然として64 GBと表記）。SKUによりベアボーンまたはプリインストール済みで出荷されます。',
+        image: '/images/minisforum-um890-pro-vs-beelink-ser8-specs-en.svg',
+        imageCaption: 'Minisforum UM890 Pro と Beelink SER8 の仕様比較: CPU/iGPUは同クラス(Ryzen 8945HS/8845HS、Radeon 780M 12 CU)だが、UM890 Proは96GBのRAM上限、2基の2.5GbE、Wi-Fi 6E、外付けGPU用のOCuLink(PCIe 4.0 ×4)ポートを追加する。',
         columns: ['仕様', 'Minisforum UM890 Pro (8945HS)'],
         rows: [
           { '仕様': 'CPU', 'Minisforum UM890 Pro (8945HS)': 'AMD Ryzen 9 8945HS (Zen 4)' },
@@ -1043,6 +1061,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ローカルAIとLLM性能',
         content:
           '**iGPUではUM890 Proは7Bモデルを快適に実行し、RAMを増やせば13B–14Bも収まります。真の強みはOCuLinkポートで、外付けGPUを接続して大規模モデルの推論を本当に高速化します — すべての数値は検証済みハードウェアからの推定であり、実測ベンチマークではありません。** 外付けGPUがない場合、大規模モデルは共有メモリ機と同様にメモリ帯域幅に制約されます。',
+        image: '/images/minisforum-um890-pro-local-llm-ram-fit-en.svg',
+        imageCaption: 'Radeon 780M iGPUでのRAM容量別ローカルLLM適合度: 32GBは7Bモデルが快適、64–96GBは13B–14Bが快適かつ30Bモデルも低スループットで動作、OCuLink外付けGPUはRAM/iGPUの上限を取り払い13B–30B超の高速推論を可能にする。',
         items: [
           '32 GBなら7Bモデルが快適です。64–96 GBで13B–14Bが快適になり、30Bモデルも低スループットで動きます。',
           'OCuLinkは、iGPUが到達できない速度のために外付けデスクトップGPUを追加します — USB4のみの機種との差別化点です。',
@@ -1250,6 +1270,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '规格',
         content:
           '**以下所有规格均于 2026 年 7 月对照 Minisforum 及独立评测来源核实。** 官方页面的内存上限为 96 GB（部分零售商仍标注 64 GB）。按 SKU 以准系统或预装形式出货。',
+        image: '/images/minisforum-um890-pro-vs-beelink-ser8-specs-en.svg',
+        imageCaption: 'Minisforum UM890 Pro 与 Beelink SER8 规格对比:CPU/核显同级(Ryzen 8945HS/8845HS、Radeon 780M 12 CU),但 UM890 Pro 增加了 96 GB 内存上限、双 2.5GbE、Wi-Fi 6E 以及用于外接 GPU 的 OCuLink(PCIe 4.0 ×4)接口。',
         columns: ['规格', 'Minisforum UM890 Pro (8945HS)'],
         rows: [
           { '规格': 'CPU', 'Minisforum UM890 Pro (8945HS)': 'AMD Ryzen 9 8945HS (Zen 4)' },
@@ -1275,6 +1297,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '本地 AI 与 LLM 性能',
         content:
           '**在核显上，UM890 Pro 可从容运行 7B 模型，增加内存后可容纳 13B–14B；它真正的优势是 OCuLink 接口，可接入外接 GPU 实现真正快速的大模型推理——所有数字均据核实过的硬件估算，而非实测跑分。** 没有外接 GPU 时，大模型会像任何共享内存的机器一样受内存带宽限制。',
+        image: '/images/minisforum-um890-pro-local-llm-ram-fit-en.svg',
+        imageCaption: 'Radeon 780M 核显上按内存档位划分的本地 LLM 适配情况:32 GB 可从容运行 7B 模型,64–96 GB 可从容容纳 13B–14B 并以低吞吐运行 30B 模型,通过 OCuLink 外接 GPU 可突破内存/核显上限,实现 13B–30B 以上模型的快速推理。',
         items: [
           '有 32 GB 时，7B 模型运行从容；64–96 GB 可从容容纳 13B–14B，并以低吞吐运行 30B 模型。',
           'OCuLink 增加一块外接台式 GPU，实现核显无法达到的速度——相较仅有 USB4 的机器是差异化优势。',
@@ -1482,6 +1506,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '사양',
         content:
           '**아래 모든 사양은 2026년 7월에 Minisforum 및 독립 리뷰 출처와 대조해 검증했습니다.** RAM 상한은 공식 페이지 기준 96 GB입니다(일부 판매점은 여전히 64 GB로 표기). SKU에 따라 베어본 또는 사전 구성 상태로 출고됩니다.',
+        image: '/images/minisforum-um890-pro-vs-beelink-ser8-specs-en.svg',
+        imageCaption: 'Minisforum UM890 Pro와 Beelink SER8 사양 비교: CPU/iGPU는 동급(Ryzen 8945HS/8845HS, Radeon 780M 12 CU)이지만, UM890 Pro는 96 GB RAM 상한, 2.5GbE 2개, Wi-Fi 6E, 외장 GPU용 OCuLink(PCIe 4.0 ×4) 포트를 추가로 제공한다.',
         columns: ['사양', 'Minisforum UM890 Pro (8945HS)'],
         rows: [
           { '사양': 'CPU', 'Minisforum UM890 Pro (8945HS)': 'AMD Ryzen 9 8945HS (Zen 4)' },
@@ -1507,6 +1533,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '로컬 AI 및 LLM 성능',
         content:
           '**iGPU에서 UM890 Pro는 7B 모델을 여유롭게 실행하고 RAM을 늘리면 13B–14B도 수용합니다. 진정한 강점은 OCuLink 포트로, 외장 GPU를 연결해 대형 모델 추론을 진정으로 빠르게 합니다 — 모든 수치는 검증된 하드웨어에서 추정한 것이며 실측 벤치마크가 아닙니다.** 외장 GPU가 없으면 대형 모델은 다른 공유 메모리 기기와 마찬가지로 메모리 대역폭에 제약됩니다.',
+        image: '/images/minisforum-um890-pro-local-llm-ram-fit-en.svg',
+        imageCaption: 'Radeon 780M iGPU에서 RAM 등급별 로컬 LLM 적합도: 32 GB는 7B 모델을 여유롭게 실행하고, 64–96 GB는 13B–14B를 여유롭게 수용하며 30B 모델도 낮은 처리량으로 실행되고, OCuLink 외장 GPU는 RAM/iGPU 한계를 없애 13B–30B+ 모델의 빠른 추론을 가능하게 한다.',
         items: [
           '32 GB에서는 7B 모델이 여유롭습니다. 64–96 GB는 13B–14B를 여유롭게 수용하고 30B 모델도 낮은 처리량으로 돌립니다.',
           'OCuLink는 iGPU가 도달할 수 없는 속도를 위해 외장 데스크톱 GPU를 더합니다 — USB4만 있는 기기와의 차별점입니다.',
@@ -1714,6 +1742,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Especificações',
         content:
           '**Todas as especificações abaixo foram verificadas junto à Minisforum e a fontes de análise independentes em julho de 2026.** O teto de RAM é 96 GB na página oficial (algumas lojas ainda indicam 64 GB). É enviado em versão barebone ou pré-montado conforme a SKU.',
+        image: '/images/minisforum-um890-pro-vs-beelink-ser8-specs-en.svg',
+        imageCaption: 'Minisforum UM890 Pro vs. Beelink SER8: mesma classe de CPU/iGPU (Ryzen 8945HS/8845HS, Radeon 780M 12 CU), mas o UM890 Pro acrescenta um teto de 96 GB de RAM, duas portas 2.5GbE, Wi-Fi 6E e uma porta OCuLink PCIe 4.0 ×4 para uma GPU externa.',
         columns: ['Especificação', 'Minisforum UM890 Pro (8945HS)'],
         rows: [
           { 'Especificação': 'CPU', 'Minisforum UM890 Pro (8945HS)': 'AMD Ryzen 9 8945HS (Zen 4)' },
@@ -1739,6 +1769,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'IA local e desempenho de LLM',
         content:
           '**Na iGPU, o UM890 Pro roda confortavelmente um modelo 7B e comporta 13B–14B com mais RAM; sua real vantagem é a porta OCuLink, que conecta uma GPU externa para uma inferência de modelos grandes realmente rápida — todos os números são estimados a partir do hardware verificado, não um benchmark medido.** Sem uma GPU externa, os modelos grandes são limitados pela largura de banda da memória, como qualquer caixa de memória compartilhada.',
+        image: '/images/minisforum-um890-pro-local-llm-ram-fit-en.svg',
+        imageCaption: 'Adequação de LLM local por nível de RAM na iGPU Radeon 780M: 32 GB executam um modelo 7B com conforto, 64–96 GB comportam 13B–14B com conforto além de um modelo 30B com baixa taxa de transferência, e uma GPU externa via OCuLink remove o teto de RAM/iGPU para inferência rápida de 13B–30B+.',
         items: [
           'Com 32 GB, um modelo 7B fica confortável; 64–96 GB abrem 13B–14B com conforto e um modelo 30B com baixa taxa de transferência.',
           'A OCuLink adiciona uma GPU de desktop externa para uma velocidade que a iGPU não alcança — um diferencial em relação a caixas só com USB4.',
@@ -1946,6 +1978,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'المواصفات',
         content:
           '**جرى التحقق من جميع المواصفات أدناه مقابل Minisforum ومصادر مراجعة مستقلة في يوليو 2026.** الحد الأقصى للذاكرة هو 96 GB في الصفحة الرسمية (لا يزال بعض البائعين يذكرون 64 GB). يُشحن بنسخة barebones أو مُعدّاً مسبقاً حسب الطراز.',
+        image: '/images/minisforum-um890-pro-vs-beelink-ser8-specs-en.svg',
+        imageCaption: 'مقارنة مواصفات Minisforum UM890 Pro مقابل Beelink SER8: نفس فئة المعالج/الكرت المدمج (Ryzen 8945HS/8845HS، Radeon 780M بـ12 CU)، لكن UM890 Pro يضيف حداً أقصى للذاكرة 96 GB، ومنفذي 2.5GbE، وWi-Fi 6E، ومنفذ OCuLink (PCIe 4.0 ×4) لبطاقة رسوميات خارجية.',
         columns: ['المواصفة', 'Minisforum UM890 Pro (8945HS)'],
         rows: [
           { 'المواصفة': 'المعالج', 'Minisforum UM890 Pro (8945HS)': 'AMD Ryzen 9 8945HS (Zen 4)' },
@@ -1971,6 +2005,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الذكاء الاصطناعي المحلي وأداء LLM',
         content:
           '**على الكرت المدمج يشغّل UM890 Pro نموذج 7B بأريحية ويتّسع لـ 13B–14B مع مزيد من الذاكرة؛ وميزته الحقيقية منفذ OCuLink الذي يوصّل بطاقة رسوميات خارجية لاستدلال سريع فعلاً للنماذج الكبيرة — وكل الأرقام مقدَّرة من العتاد الذي جرى التحقق منه، لا اختباراً مقاساً.** بدون بطاقة رسوميات خارجية، تبقى النماذج الكبيرة مقيّدة بعرض نطاق الذاكرة كأي جهاز يتشارك الذاكرة.',
+        image: '/images/minisforum-um890-pro-local-llm-ram-fit-en.svg',
+        imageCaption: 'ملاءمة نماذج LLM المحلية حسب سعة الذاكرة على الكرت المدمج Radeon 780M: 32 GB تشغّل نموذج 7B بأريحية، و64–96 GB تتيح 13B–14B بأريحية بالإضافة إلى نموذج 30B بإنتاجية منخفضة، وبطاقة رسوميات خارجية عبر OCuLink تُزيل حد الذاكرة/الكرت المدمج لاستدلال سريع لنماذج 13B–30B وأكبر.',
         items: [
           'مع 32 GB، يعمل نموذج 7B بأريحية؛ و64–96 GB تفتح 13B–14B بأريحية ونموذجاً بحجم 30B بإنتاجية منخفضة.',
           'يضيف OCuLink بطاقة رسوميات مكتبية خارجية لسرعة لا يبلغها الكرت المدمج — ميزة مقابل الأجهزة ذات USB4 فقط.',
