@@ -5119,6 +5119,16 @@
     "width": 1200,
     "height": 675
   },
+  "/images/best-local-reasoning-model-deepseek-r1-2026-gpu-tier-match-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-local-reasoning-model-deepseek-r1-2026-vram-by-tier-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/best-mac-for-local-ai-2026-comparison-table-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,

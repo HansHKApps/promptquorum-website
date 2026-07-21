@@ -1,0 +1,31 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">DeepSeek-R1 Distills: Minimum VRAM by Tier</text>
+  <line x1="260" y1="332" x2="740" y2="332" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="250" y="84" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">R1-Distill-Qwen-1.5B</text>
+  <rect x="260" y="68" width="38" height="22" fill="#34A853" rx="4"/>
+  <text x="306" y="84" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">4 GB (CPU)</text>
+
+  <text x="250" y="124" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">R1-Distill-Qwen-7B</text>
+  <rect x="260" y="108" width="77" height="22" fill="#34A853" rx="4"/>
+  <text x="345" y="124" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">8 GB</text>
+
+  <text x="250" y="164" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">R1-Distill-Llama-8B</text>
+  <rect x="260" y="148" width="77" height="22" fill="#7D5260" rx="4"/>
+  <text x="345" y="164" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">8 GB</text>
+
+  <text x="250" y="204" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">R1-Distill-Qwen-14B</text>
+  <rect x="260" y="188" width="153" height="22" fill="#6750A4" rx="4"/>
+  <text x="421" y="204" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">16 GB — recommended</text>
+
+  <text x="250" y="244" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">R1-Distill-Qwen-32B</text>
+  <rect x="260" y="228" width="230" height="22" fill="#F4B400" rx="4"/>
+  <text x="498" y="244" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">24 GB — beats o1-mini</text>
+
+  <text x="250" y="284" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">R1-Distill-Llama-70B</text>
+  <rect x="260" y="268" width="460" height="22" fill="#EA4335" rx="4"/>
+  <text x="400" y="284" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">48 GB — dual-GPU</text>
+
+  <text x="400" y="362" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">1.5B fits 4 GB or CPU; 7B and 8B need 8 GB; 14B needs 16 GB; 32B needs 24 GB; 70B needs 48 GB across dual GPUs.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
