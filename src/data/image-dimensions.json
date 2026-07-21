@@ -9894,6 +9894,16 @@
     "width": 800,
     "height": 350
   },
+  "/images/lm-studio-vs-jan-ai-decision-tree-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/lm-studio-vs-jan-ai-shared-backend-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/local-ai-agents-langgraph-ollama-agent-loop-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
