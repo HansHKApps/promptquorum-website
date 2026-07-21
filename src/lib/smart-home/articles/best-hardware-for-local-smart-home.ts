@@ -142,12 +142,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Best for many cameras, a larger LLM, and multiple users. Higher power draw and cost than a mini PC.',
           'Overkill for a basic smart home — reserve for heavy local-AI use, and keep the Home Assistant hub on a separate low-power box for reliability.',
         ],
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        imageCaption: 'Local LLM capacity by hardware tier: Raspberry Pi 5 runs only tiny models, an Intel N100/N150 Mini PC handles small models, a Ryzen Mini PC (32GB RAM) runs 7B–8B models, and a used RTX 3090 (24GB VRAM) scales to about 70B at Q4 quantization.',
       },
       picking: {
         id: 'picking',
         title: 'Picking for HA-only vs HA + AI',
         content:
           '**Choose a Pi for HA-only, and a mini PC for HA plus local AI — that single decision drives the right hardware.** Match the box to the workload.',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        imageCaption: 'Decision tree for smart home hardware: adding Frigate cameras and a local LLM lead to four builds — Raspberry Pi 5, Intel N100/N150 Mini PC, Ryzen Mini PC (32GB RAM), or an RTX 3090 server (24GB VRAM).',
         columns: ['Hardware', 'Relative price', 'HA-only', 'Can run a local LLM', 'Frigate acceleration'],
         rows: [
           { 'Hardware': 'Raspberry Pi 5', 'Relative price': 'Low', 'HA-only': 'Yes', 'Can run a local LLM': 'Very small only, slow', 'Frigate acceleration': 'Hailo-8L M.2 HAT' },
@@ -352,12 +356,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الأفضل لكاميرات كثيرة ونموذج LLM أكبر ومستخدمين متعددين. استهلاك طاقة وتكلفة أعلى من mini PC.',
           'مبالغة لمنزل ذكي أساسي — احتفظ به للاستخدام الكثيف للذكاء الاصطناعي المحلي، وأبقِ مركز Home Assistant على صندوق منفصل منخفض الطاقة للموثوقية.',
         ],
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        imageCaption: 'سعة نموذج LLM محلي حسب فئة الأجهزة: يشغّل Raspberry Pi 5 نماذج صغيرة جدًا فقط، ويتعامل mini PC بمعالج Intel N100/N150 مع نماذج صغيرة، ويشغّل mini PC بمعالج Ryzen (32GB RAM) نماذج 7B–8B، ويصل RTX 3090 مستعمل (24GB VRAM) إلى نحو 70B بترميز Q4.',
       },
       picking: {
         id: 'picking',
         title: 'الاختيار بين HA فقط أم HA + ذكاء اصطناعي',
         content:
           '**اختر Pi لـ HA فقط، وmini PC لـ HA مع الذكاء الاصطناعي المحلي — هذا القرار الواحد يحدد الأجهزة المناسبة.** طابق الصندوق مع حمل العمل.',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        imageCaption: 'شجرة قرار لأجهزة المنزل الذكي: تؤدي إضافة كاميرات Frigate ونموذج LLM محلي إلى أربعة تجميعات — Raspberry Pi 5، أو mini PC بمعالج Intel N100/N150، أو mini PC بمعالج Ryzen (32GB RAM)، أو خادم RTX 3090 (24GB VRAM).',
         columns: ['الأجهزة', 'السعر النسبي', 'HA فقط', 'يمكنه تشغيل نموذج LLM محلي', 'تسريع Frigate'],
         rows: [
           { 'الأجهزة': 'Raspberry Pi 5', 'السعر النسبي': 'منخفض', 'HA فقط': 'نعم', 'يمكنه تشغيل نموذج LLM محلي': 'نماذج صغيرة جدًا فقط، بطيء', 'تسريع Frigate': 'Hailo-8L M.2 HAT' },
@@ -562,12 +570,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Am besten für viele Kameras, ein größeres LLM und mehrere Nutzer. Höherer Stromverbrauch und höhere Kosten als ein Mini-PC.',
           'Überdimensioniert für ein einfaches Smart Home – reservieren Sie ihn für intensive lokale KI-Nutzung und halten Sie den Home-Assistant-Hub für Zuverlässigkeit auf einem separaten, stromsparenden Gerät.',
         ],
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        imageCaption: 'Lokale LLM-Kapazität je Hardware-Stufe: Ein Raspberry Pi 5 läuft nur mit winzigen Modellen, ein Intel-N100/N150-Mini-PC bewältigt kleine Modelle, ein Ryzen-Mini-PC (32 GB RAM) läuft mit 7B–8B-Modellen, und eine gebrauchte RTX 3090 (24 GB VRAM) skaliert auf etwa 70B bei Q4-Quantisierung.',
       },
       picking: {
         id: 'picking',
         title: 'Wählen für nur-HA vs HA + KI',
         content:
           '**Wählen Sie einen Pi für nur-HA und einen Mini-PC für HA plus lokale KI – diese eine Entscheidung bestimmt die richtige Hardware.** Passen Sie das Gerät an den Workload an.',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        imageCaption: 'Entscheidungsbaum für Smart-Home-Hardware: Frigate-Kameras und ein lokales LLM hinzuzufügen führt zu vier Builds – Raspberry Pi 5, Intel-N100/N150-Mini-PC, Ryzen-Mini-PC (32 GB RAM) oder ein RTX-3090-Server (24 GB VRAM).',
         columns: ['Hardware', 'Relativer Preis', 'Nur-HA', 'Kann ein lokales LLM betreiben', 'Frigate-Beschleunigung'],
         rows: [
           { 'Hardware': 'Raspberry Pi 5', 'Relativer Preis': 'Niedrig', 'Nur-HA': 'Ja', 'Kann ein lokales LLM betreiben': 'Nur sehr klein, langsam', 'Frigate-Beschleunigung': 'Hailo-8L M.2 HAT' },
@@ -772,12 +784,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mejor para muchas cámaras, un LLM más grande y varios usuarios. Mayor consumo y coste que un mini PC.',
           'Excesivo para un smart home básico — resérvalo para uso intensivo de IA local, y mantén el hub de Home Assistant en un equipo aparte de bajo consumo por fiabilidad.',
         ],
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        imageCaption: 'Capacidad de LLM local por nivel de hardware: una Raspberry Pi 5 solo ejecuta modelos diminutos, un mini PC Intel N100/N150 gestiona modelos pequeños, un mini PC Ryzen (32 GB de RAM) ejecuta modelos de 7B–8B, y una RTX 3090 usada (24 GB de VRAM) escala hasta unos 70B en cuantización Q4.',
       },
       picking: {
         id: 'picking',
         title: 'Elegir para solo-HA vs HA + IA',
         content:
           '**Elige una Pi para solo-HA y un mini PC para HA más IA local: esa única decisión determina el hardware adecuado.** Ajusta el equipo a la carga de trabajo.',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        imageCaption: 'Árbol de decisión para el hardware de smart home: añadir cámaras de Frigate y un LLM local lleva a cuatro configuraciones — Raspberry Pi 5, mini PC Intel N100/N150, mini PC Ryzen (32 GB de RAM) o un servidor RTX 3090 (24 GB de VRAM).',
         columns: ['Hardware', 'Precio relativo', 'Solo-HA', 'Puede ejecutar un LLM local', 'Aceleración de Frigate'],
         rows: [
           { 'Hardware': 'Raspberry Pi 5', 'Precio relativo': 'Bajo', 'Solo-HA': 'Sí', 'Puede ejecutar un LLM local': 'Solo muy pequeños, lento', 'Aceleración de Frigate': 'HAT Hailo-8L M.2' },
@@ -982,12 +998,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '카메라가 많거나, 대형 LLM을 실행하거나, 여러 사용자가 있는 경우에 가장 적합합니다. 미니 PC보다 전력 소비와 비용이 높습니다.',
           '기본적인 스마트 홈에는 과도합니다. 대용량 로컬 AI 사용에 예약하고, 안정성을 위해 Home Assistant 허브는 별도의 저전력 기기에 유지하십시오.',
         ],
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        imageCaption: '하드웨어 등급별 로컬 LLM 용량: Raspberry Pi 5는 아주 작은 모델만 실행하고, Intel N100/N150 미니 PC는 소형 모델을 처리하며, Ryzen 미니 PC(RAM 32GB)는 7B–8B 모델을 실행하고, 중고 RTX 3090(VRAM 24GB)은 Q4 양자화 기준 최대 약 70B까지 확장됩니다.',
       },
       picking: {
         id: 'picking',
         title: 'HA 단독 대 HA + AI 선택',
         content:
           '**HA 단독에는 Pi, HA + 로컬 AI에는 미니 PC를 선택하십시오. 이 단일 결정이 올바른 하드웨어를 결정합니다.** 워크로드에 맞게 기기를 선택하십시오.',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        imageCaption: '스마트 홈 하드웨어 결정 트리: Frigate 카메라 추가 여부와 로컬 LLM 추가 여부에 따라 Raspberry Pi 5, Intel N100/N150 미니 PC, Ryzen 미니 PC(RAM 32GB), RTX 3090 서버(VRAM 24GB) 중 하나로 이어집니다.',
         columns: ['하드웨어', '상대적 가격', 'HA 단독', '로컬 LLM 실행 가능', 'Frigate 가속'],
         rows: [
           { '하드웨어': 'Raspberry Pi 5', '상대적 가격': '저가', 'HA 단독': '가능', '로컬 LLM 실행 가능': '매우 소형만, 느림', 'Frigate 가속': 'Hailo-8L M.2 HAT' },
@@ -1192,12 +1212,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Idéal pour de nombreuses caméras, un LLM plus grand et plusieurs utilisateurs. Consommation et coût supérieurs à un mini-PC.',
           'Surdimensionné pour une maison connectée basique — réservez-le à un usage intensif d\'IA locale, et gardez le hub Home Assistant sur une machine séparée à faible consommation pour la fiabilité.',
         ],
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        imageCaption: 'Capacité de LLM local par niveau de matériel : une Raspberry Pi 5 ne fait tourner que des modèles minuscules, un mini-PC Intel N100/N150 gère de petits modèles, un mini-PC Ryzen (32 Go de RAM) fait tourner des modèles de 7B à 8B, et une RTX 3090 d\'occasion (24 Go de VRAM) monte jusqu\'à environ 70B en quantification Q4.',
       },
       picking: {
         id: 'picking',
         title: 'Choisir pour HA-seul vs HA + IA',
         content:
           '**Choisissez une Pi pour HA-seul et un mini-PC pour HA plus IA locale — cette seule décision détermine le bon matériel.** Adaptez la machine à la charge de travail.',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        imageCaption: 'Arbre de décision pour le matériel de maison connectée : ajouter des caméras Frigate et un LLM local mène à quatre configurations — Raspberry Pi 5, mini-PC Intel N100/N150, mini-PC Ryzen (32 Go de RAM) ou un serveur RTX 3090 (24 Go de VRAM).',
         columns: ['Matériel', 'Prix relatif', 'HA-seul', 'Peut exécuter un LLM local', 'Accélération Frigate'],
         rows: [
           { 'Matériel': 'Raspberry Pi 5', 'Prix relatif': 'Faible', 'HA-seul': 'Oui', 'Peut exécuter un LLM local': 'Très petits seulement, lent', 'Accélération Frigate': 'HAT Hailo-8L M.2' },
@@ -1402,12 +1426,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '多数のカメラ、より大きな LLM、複数ユーザーに最適。ミニPCより消費電力もコストも高くなります。',
           '基本的なスマートホームには過剰——重いローカルAI用途に取っておき、信頼性のために Home Assistant のハブは別の低消費電力機に分けましょう。',
         ],
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        imageCaption: 'ハードウェア階層別のローカルLLM容量：Raspberry Pi 5 は極小モデルのみ、Intel N100/N150 ミニPC は小型モデルを処理、Ryzen ミニPC（RAM 32GB）は 7B〜8B モデルを実行、中古 RTX 3090（VRAM 24GB）は Q4 量子化で約70Bまで対応します。',
       },
       picking: {
         id: 'picking',
         title: 'HAのみ 対 HA＋AI で選ぶ',
         content:
           '**HAのみなら Raspberry Pi 5、HA＋ローカルAIならミニPCを選びましょう——この一つの判断が適切なハードウェアを決めます。** 機器をワークロードに合わせます。',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        imageCaption: 'スマートホーム機器の決定木：Frigate カメラの追加とローカルLLMの追加という2つの分岐から、Raspberry Pi 5、Intel N100/N150 ミニPC、Ryzen ミニPC（RAM 32GB）、RTX 3090 サーバー（VRAM 24GB）の4通りの構成に分かれます。',
         columns: ['ハードウェア', '相対価格', 'HAのみ', 'ローカルLLMを動かせるか', 'Frigate 加速'],
         rows: [
           { 'ハードウェア': 'Raspberry Pi 5', '相対価格': '低', 'HAのみ': '可', 'ローカルLLMを動かせるか': '非常に小型のみ、遅い', 'Frigate 加速': 'Hailo-8L M.2 HAT' },
@@ -1611,12 +1639,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Melhor para muitas câmeras, um LLM maior e vários usuários. Maior consumo e custo que um mini PC.',
           'Exagero para uma casa inteligente básica — reserve para uso intenso de IA local, e mantenha o hub do Home Assistant em um equipamento separado de baixo consumo para mais confiabilidade.',
         ],
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        imageCaption: 'Capacidade de LLM local por nível de hardware: um Raspberry Pi 5 só roda modelos minúsculos, um mini PC Intel N100/N150 lida com modelos pequenos, um mini PC Ryzen (32GB de RAM) roda modelos de 7B–8B, e uma RTX 3090 usada (24GB de VRAM) chega a cerca de 70B em quantização Q4.',
       },
       picking: {
         id: 'picking',
         title: 'Escolher para só-HA vs HA + IA',
         content:
           '**Escolha uma Pi para só-HA e um mini PC para HA mais IA local — essa única decisão define o hardware certo.** Ajuste o equipamento à carga de trabalho.',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        imageCaption: 'Árvore de decisão para hardware de casa inteligente: adicionar câmeras Frigate e um LLM local leva a quatro montagens — Raspberry Pi 5, mini PC Intel N100/N150, mini PC Ryzen (32GB de RAM) ou um servidor RTX 3090 (24GB de VRAM).',
         columns: ['Hardware', 'Preço relativo', 'Só-HA', 'Pode rodar um LLM local', 'Aceleração do Frigate'],
         rows: [
           { 'Hardware': 'Raspberry Pi 5', 'Preço relativo': 'Baixo', 'Só-HA': 'Sim', 'Pode rodar um LLM local': 'Só muito pequenos, lento', 'Aceleração do Frigate': 'HAT Hailo-8L M.2' },
@@ -1820,12 +1852,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '最适合大量摄像头、更大的 LLM 和多个用户的场景。功耗和成本都高于迷你 PC。',
           '对基础智能家居而言过于强大——留给繁重的本地 AI 用途，并把 Home Assistant 中枢放在单独的低功耗设备上以保证可靠性。',
         ],
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        imageCaption: '各硬件等级的本地 LLM 容量：Raspberry Pi 5 只能运行极小模型，Intel N100/N150 迷你 PC 可处理小型模型，Ryzen 迷你 PC（32GB 内存）可运行 7B–8B 模型，二手 RTX 3090（24GB 显存）在 Q4 量化下可扩展到约 70B。',
       },
       picking: {
         id: 'picking',
         title: '为仅-HA 对 HA + AI 选择',
         content:
           '**仅-HA 选 Pi，HA 加本地 AI 选迷你 PC——这一个决定就能确定合适的硬件。** 让设备匹配工作负载。',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        imageCaption: '智能家居硬件决策树：是否添加 Frigate 摄像头和是否添加本地 LLM，这两个问题决定四种搭配——Raspberry Pi 5、Intel N100/N150 迷你 PC、Ryzen 迷你 PC（32GB 内存）或 RTX 3090 服务器（24GB 显存）。',
         columns: ['硬件', '相对价格', '仅-HA', '能否运行本地 LLM', 'Frigate 加速'],
         rows: [
           { '硬件': 'Raspberry Pi 5', '相对价格': '低', '仅-HA': '可', '能否运行本地 LLM': '仅非常小，缓慢', 'Frigate 加速': 'Hailo-8L M.2 HAT' },
