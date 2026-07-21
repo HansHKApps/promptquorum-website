@@ -18529,6 +18529,16 @@
     "width": 800,
     "height": 420
   },
+  "/images/what-are-local-llms-how-it-works-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/what-are-local-llms-vs-cloud-api-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/what-is-q4-k-m-quantization-letter-breakdown-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,

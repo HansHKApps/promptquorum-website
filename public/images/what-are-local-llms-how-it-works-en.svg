@@ -1,0 +1,44 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">How a Local LLM Works: 3 Layers</text>
+
+  <!-- Step 1: Model File -->
+  <circle cx="130" cy="130" r="30" fill="#6750A4"/>
+  <text x="130" y="139" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="130" y="190" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">Model File</text>
+  <text x="130" y="212" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">GGUF or safetensors</text>
+  <text x="130" y="230" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">~4.5 GB at Q4_K_M (7B)</text>
+  <rect x="55" y="250" width="150" height="70" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="130" y="272" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Stored on your disk.</text>
+  <text x="130" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Learned weights only —</text>
+  <text x="130" y="308" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">no network access needed.</text>
+
+  <text x="245" y="139" font-size="26" fill="#6750A4" text-anchor="middle">→</text>
+
+  <!-- Step 2: Inference Engine -->
+  <circle cx="400" cy="130" r="30" fill="#6750A4"/>
+  <text x="400" y="139" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="400" y="190" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">Inference Engine</text>
+  <text x="400" y="212" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">Ollama, LM Studio, llama.cpp</text>
+  <text x="400" y="230" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">runs on your CPU or GPU</text>
+  <rect x="325" y="250" width="150" height="70" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="272" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Loads the weights and runs</text>
+  <text x="400" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">the matrix math that turns</text>
+  <text x="400" y="308" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">a prompt into tokens.</text>
+
+  <text x="515" y="139" font-size="26" fill="#6750A4" text-anchor="middle">→</text>
+
+  <!-- Step 3: Interface -->
+  <circle cx="670" cy="130" r="30" fill="#6750A4"/>
+  <text x="670" y="139" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="670" y="190" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">Interface</text>
+  <text x="670" y="212" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">localhost:11434 (REST API)</text>
+  <text x="670" y="230" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">terminal, web UI, or app</text>
+  <rect x="595" y="250" width="150" height="70" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="670" y="272" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Where you type a prompt</text>
+  <text x="670" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">and read the response —</text>
+  <text x="670" y="308" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">no data leaves the device.</text>
+
+  <line x1="60" y1="345" x2="740" y2="345" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="372" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">All three layers run on your own hardware — no internet connection is required at any step.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
