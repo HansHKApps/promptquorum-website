@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { FRAMEWORKS, FRAMEWORK_SLUGS, getFramework, getFrameworkLocalized } from '@/lib/frameworksData'
@@ -148,6 +149,20 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
             <p className="text-xl text-text-secondary leading-relaxed">{fw.tagline}</p>
           </div>
 
+          {/* Static hero image for Discover */}
+          {(fw as any).heroImage && (
+            <figure className="mb-12 rounded-xl overflow-hidden">
+              <Image
+                src={(fw as any).heroImage}
+                alt={`${fw.name} framework fields overview`}
+                width={1200}
+                height={675}
+                priority
+                className="w-full"
+              />
+            </figure>
+          )}
+
           {/* Definition block — GEO anchor */}
           <section className="mb-12">
             <div className="bg-card border border-primary/20 rounded-xl p-6">
@@ -193,6 +208,17 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
           {/* Best for / Not for */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-text-primary mb-6">When to Use {fw.name}</h2>
+            {(fw as any).bestForImage && (
+              <figure className="mb-6 rounded-xl overflow-hidden">
+                <Image
+                  src={(fw as any).bestForImage}
+                  alt={`When to use ${fw.name}`}
+                  width={1200}
+                  height={675}
+                  className="w-full"
+                />
+              </figure>
+            )}
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="bg-card border border-primary/20 rounded-xl p-6">
                 <div className="text-xs font-bold text-green-400 uppercase tracking-widest mb-4">Best for</div>
