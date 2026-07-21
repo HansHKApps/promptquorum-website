@@ -1,0 +1,35 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Memory Bandwidth: LPDDR5X vs HBM (GB/s)</text>
+  <text x="400" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">7B model tokens/sec ≈ bandwidth ÷ model size in bytes</text>
+
+  <!-- Row 1: LPDDR5X -->
+  <text x="250" y="89" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">LPDDR5X (phone)</text>
+  <rect x="260" y="70" width="21" height="24" fill="#EA4335" rx="4"/>
+  <text x="291" y="88" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">85.6 GB/s — 8–15 tok/s (7B Q4)</text>
+
+  <!-- Row 2: HBM2E -->
+  <text x="250" y="131" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">HBM2E (pre-2020 GPUs)</text>
+  <rect x="260" y="112" width="110" height="24" fill="#F4B400" rx="4"/>
+  <text x="380" y="130" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">460 GB/s</text>
+
+  <!-- Row 3: HBM3 -->
+  <text x="250" y="173" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">HBM3 (A100)</text>
+  <rect x="260" y="154" width="197" height="24" fill="#7D5260" rx="4"/>
+  <text x="467" y="172" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">819 GB/s</text>
+
+  <!-- Row 4: HBM3E -->
+  <text x="250" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">HBM3E (H100/H200/B200)</text>
+  <rect x="260" y="196" width="295" height="24" fill="#6750A4" rx="4"/>
+  <text x="565" y="214" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#FFFFFF">1.229 TB/s — ~200+ tok/s (7B Q4)</text>
+
+  <!-- Row 5: HBM4 -->
+  <text x="250" y="257" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">HBM4 (2026–2027)</text>
+  <rect x="260" y="238" width="480" height="24" fill="#34A853" rx="4"/>
+  <text x="700" y="256" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="end">&gt;2 TB/s</text>
+
+  <line x1="260" y1="280" x2="740" y2="280" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="260" y="308" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">SK Hynix supplies 62% of HBM (H100/H200/B200); Samsung leads LPDDR5X for phones.</text>
+  <text x="260" y="328" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">LPDDR5X to HBM3E is a 14x bandwidth gap — the direct driver of the phone-vs-datacenter speed gap.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

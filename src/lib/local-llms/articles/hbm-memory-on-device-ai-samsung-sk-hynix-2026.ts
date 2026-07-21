@@ -181,6 +181,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'bandwidth-table': {
         id: 'bandwidth-table',
         title: 'Memory Bandwidth Comparison: LPDDR5X vs HBM',
+        image: '/images/hbm-bandwidth-comparison-en.svg',
+        imageCaption: 'Memory bandwidth by type: LPDDR5X 85.6 GB/s (phones) vs HBM2E 460 GB/s, HBM3 819 GB/s, HBM3E 1.229 TB/s (Nvidia H100/H200/B200), and HBM4 above 2 TB/s. SK Hynix supplies 62% of HBM.',
         columns: ['Memory Type', 'Bandwidth', 'Used In', 'Tokens/sec (7B FP16)', 'Tokens/sec (7B Q4)'],
         rows: [
           {
@@ -268,6 +270,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datacenter-vs-phone': {
         id: 'datacenter-vs-phone',
         title: 'Data Center vs. Phone: The 14x Bandwidth Gap',
+        image: '/images/hbm-datacenter-vs-phone-gap-en.svg',
+        imageCaption: 'Phone (LPDDR5X 85.6 GB/s) vs data-center GPU (HBM3E 1.229 TB/s) for the same 7B Q4 model (3.5 GB): ~8-15 tok/s real-world on-device vs ~200+ tok/s in the data center, a 14x bandwidth gap.',
         content: [
           'A Nvidia H100 GPU with HBM3E (1.229 TB/s) is 14x faster at inference throughput than a Galaxy S26 (LPDDR5X 85.6 GB/s). This gap is not due to compute FLOPS (both are fast), but pure memory bandwidth. The H100 can do 100+ tokens/sec; the S26 does 8–15 tokens/sec for the same 7B Q4 model.',
           'Why the gap exists: HBM is physically different. LPDDR5X is a thin film sitting next to the CPU (power-efficient for phones). HBM is a stack of memory chips directly bonded to the GPU using through-silicon vias (TSVs), creating massive bandwidth. HBM stacks are 2+ inches tall; impossible to fit in a phone.',
@@ -441,6 +445,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'bandwidth-table': {
         id: 'bandwidth-table',
         title: '메모리 대역폭 비교: LPDDR5X vs HBM',
+        image: '/images/hbm-bandwidth-comparison-ko.svg',
+        imageCaption: '메모리 유형별 대역폭: LPDDR5X 85.6 GB/s(폰) vs HBM2E 460 GB/s, HBM3 819 GB/s, HBM3E 1.229 TB/s(Nvidia H100/H200/B200), HBM4 2 TB/s 이상. SK하이닉스가 HBM의 62%를 공급합니다.',
         columns: ['메모리 유형', '대역폭', '사용처', 'Tokens/sec(7B FP16)', 'Tokens/sec(7B Q4)'],
         rows: [
           { '메모리 유형': 'LPDDR5X 10.7 Gbps', '대역폭': '85.6 GB/s(x64 버스)', '사용처': 'Galaxy S26, Snapdragon 8 Elite Gen 5, 대부분 폰', 'Tokens/sec(7B FP16)': '~6 tokens/sec(이론); ~3–5 현실', 'Tokens/sec(7B Q4)': '~24 tokens/sec(이론); ~8–15 현실' },
@@ -482,6 +488,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datacenter-vs-phone': {
         id: 'datacenter-vs-phone',
         title: '데이터 센터 vs 폰: 14배 대역폭 간격',
+        image: '/images/hbm-datacenter-vs-phone-gap-ko.svg',
+        imageCaption: '폰(LPDDR5X 85.6 GB/s) vs 데이터센터 GPU(HBM3E 1.229 TB/s), 동일한 7B Q4 모델(3.5 GB) 기준: 온디바이스 실제 ~8-15 tok/s vs 데이터센터 ~200+ tok/s, 14배 대역폭 차이.',
         content: [
           'HBM3E(1.229 TB/s)를 가진 Nvidia H100 GPU는 Galaxy S26(LPDDR5X 85.6 GB/s)보다 추론 처리량에서 14배 빠릅니다. 이 간격은 계산 FLOPS 때문이 아니라(둘 다 빠름), 순수 메모리 대역폭입니다. H100은 100+ tokens/sec을 할 수 있습니다; S26은 같은 7B Q4 모델에 대해 8–15 tokens/sec을 합니다.',
           '간격이 존재하는 이유: HBM은 물리적으로 다릅니다. LPDDR5X는 CPU 옆에 있는 얇은 필름(폰의 전력 효율). HBM은 through-silicon via(TSV)를 사용하여 GPU에 직접 본딩된 메모리 칩의 스택입니다. HBM 스택은 2+ 인치 높음; 폰에 맞출 수 없습니다.',

@@ -8474,6 +8474,26 @@
     "width": 800,
     "height": 400
   },
+  "/images/hbm-bandwidth-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/hbm-bandwidth-comparison-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/hbm-datacenter-vs-phone-gap-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/hbm-datacenter-vs-phone-gap-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/home-assistant-ollama-integration-setup-steps-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
