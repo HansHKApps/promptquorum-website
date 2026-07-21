@@ -1,0 +1,61 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Where Your Note Content Goes</text>
+
+  <!-- Row 1: Notion AI -->
+  <text x="40" y="66" font-size="14" font-weight="700" fill="#EA4335">Notion AI — data leaves your device</text>
+
+  <rect x="40" y="80" width="140" height="58" rx="6" fill="#FFFFFF" stroke="#79747E" stroke-width="1.5"/>
+  <text x="110" y="105" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Your Note</text>
+  <text x="110" y="122" font-size="10" fill="#49454F" text-anchor="middle">on your machine</text>
+
+  <text x="192" y="115" font-size="18" fill="#EA4335" text-anchor="middle">→</text>
+
+  <rect x="212" y="80" width="140" height="58" rx="6" fill="#FFFFFF" stroke="#79747E" stroke-width="1.5"/>
+  <text x="282" y="105" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Notion</text>
+  <text x="282" y="122" font-size="10" fill="#49454F" text-anchor="middle">sends page content</text>
+
+  <text x="364" y="115" font-size="18" fill="#EA4335" text-anchor="middle">→</text>
+
+  <rect x="384" y="80" width="190" height="58" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="384" y="80" width="190" height="4" rx="0" fill="#EA4335"/>
+  <text x="479" y="107" font-size="12" font-weight="700" fill="#EA4335" text-anchor="middle">OpenAI Cloud (US)</text>
+  <text x="479" y="124" font-size="10" fill="#49454F" text-anchor="middle">processes note content</text>
+
+  <text x="586" y="115" font-size="18" fill="#EA4335" text-anchor="middle">→</text>
+
+  <rect x="606" y="80" width="150" height="58" rx="6" fill="#FFFFFF" stroke="#79747E" stroke-width="1.5"/>
+  <text x="681" y="105" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">AI Response</text>
+  <text x="681" y="122" font-size="10" fill="#49454F" text-anchor="middle">returns via Notion</text>
+
+  <!-- Divider -->
+  <line x1="24" y1="180" x2="776" y2="180" stroke="#F7F2FA" stroke-width="1.5"/>
+
+  <!-- Row 2: Local stack -->
+  <text x="40" y="216" font-size="14" font-weight="700" fill="#34A853">Logseq / Joplin + Ollama — data never leaves your device</text>
+
+  <rect x="40" y="230" width="140" height="58" rx="6" fill="#FFFFFF" stroke="#79747E" stroke-width="1.5"/>
+  <text x="110" y="255" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Your Note</text>
+  <text x="110" y="272" font-size="10" fill="#49454F" text-anchor="middle">on your machine</text>
+
+  <text x="192" y="265" font-size="18" fill="#34A853" text-anchor="middle">→</text>
+
+  <rect x="212" y="230" width="140" height="58" rx="6" fill="#FFFFFF" stroke="#79747E" stroke-width="1.5"/>
+  <text x="282" y="255" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">logseq-copilot /</text>
+  <text x="282" y="270" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Jarvis</text>
+
+  <text x="364" y="265" font-size="18" fill="#34A853" text-anchor="middle">→</text>
+
+  <rect x="384" y="230" width="190" height="58" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="384" y="230" width="190" height="4" rx="0" fill="#34A853"/>
+  <text x="479" y="257" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">Ollama</text>
+  <text x="479" y="274" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">localhost:11434/v1</text>
+
+  <text x="586" y="265" font-size="18" fill="#34A853" text-anchor="middle">→</text>
+
+  <rect x="606" y="230" width="150" height="58" rx="6" fill="#FFFFFF" stroke="#79747E" stroke-width="1.5"/>
+  <text x="681" y="255" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">AI Response</text>
+  <text x="681" y="272" font-size="10" fill="#49454F" text-anchor="middle">stays on device</text>
+
+  <text x="400" y="330" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Notion AI ships note content to OpenAI servers by design; Logseq + Ollama and Joplin + Jarvis + Ollama send nothing unless you configure a cloud provider.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
