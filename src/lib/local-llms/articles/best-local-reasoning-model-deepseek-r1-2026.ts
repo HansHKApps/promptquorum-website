@@ -103,6 +103,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Distill': 'DeepSeek-R1-Distill-Llama-70B', 'Base Model': 'Llama 3 70B', 'File Size (Q4_K_M)': '~40 GB', 'Min VRAM': 'Dual-GPU / 48 GB', 'Best For': 'Strongest distill, max accuracy' },
         ],
         note: 'The DeepSeek-R1-Distill-Llama-8B carries both the Llama 3 license and the MIT license. The Qwen-based distills inherit Qwen licensing. Always check the license for commercial use.',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-vram-by-tier-en.svg',
+        imageCaption: 'DeepSeek-R1 distill VRAM requirements: 1.5B fits 4 GB or CPU, 7B and 8B need 8 GB, 14B needs 16 GB, 32B needs 24 GB, and 70B needs 48 GB across dual GPUs.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -128,6 +130,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ranked-tiers',
         title: 'DeepSeek-R1 Distills Ranked by Hardware Tier',
         content: 'Pick the highest tier your VRAM supports. More parameters means better reasoning, but only if the model fits without spilling to system RAM (which collapses speed). Use this ranking to match a distill to the GPU you own or plan to buy.',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-gpu-tier-match-en.svg',
+        imageCaption: 'GPU tier to DeepSeek-R1 distill match: 8 GB (RTX 3060 12GB) runs the 7B at 55.5% AIME 2024, 16 GB (RTX 4060 Ti) runs the 14B, 24 GB (RTX 4090) runs the 32B beating OpenAI o1-mini, and 48 GB dual-GPU runs the 70B.',
         rankedItems: [
           {
             rank: 1,
@@ -388,6 +392,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Distill': 'DeepSeek-R1-Distill-Llama-70B', 'Basismodell': 'Llama 3 70B', 'Dateigröße (Q4_K_M)': '~40 GB', 'Min. VRAM': 'Dual-GPU / 48 GB', 'Am besten für': 'Stärkster Distill, max. Genauigkeit' },
         ],
         note: 'Der DeepSeek-R1-Distill-Llama-8B trägt sowohl die Llama-3-Lizenz als auch die MIT-Lizenz. Die Qwen-basierten Distills erben die Qwen-Lizenzierung. Prüfen Sie für die kommerzielle Nutzung immer die Lizenz.',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-vram-by-tier-en.svg',
+        imageCaption: 'VRAM-Anforderungen der DeepSeek-R1-Distills: 1.5B passt in 4 GB oder CPU, 7B und 8B benötigen 8 GB, 14B benötigt 16 GB, 32B benötigt 24 GB, und 70B benötigt 48 GB über zwei GPUs.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -413,6 +419,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ranked-tiers',
         title: 'DeepSeek-R1-Distills nach Hardware-Stufe geordnet',
         content: 'Wählen Sie die höchste Stufe, die Ihr VRAM unterstützt. Mehr Parameter bedeuten besseres Reasoning, aber nur, wenn das Modell passt, ohne in den System-RAM auszulagern (was die Geschwindigkeit einbrechen lässt). Nutzen Sie dieses Ranking, um einen Distill an die GPU anzupassen, die Sie besitzen oder kaufen möchten.',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-gpu-tier-match-en.svg',
+        imageCaption: 'GPU-Stufe zu DeepSeek-R1-Distill-Zuordnung: 8 GB (RTX 3060 12GB) läuft mit dem 7B bei 55.5% AIME 2024, 16 GB (RTX 4060 Ti) läuft mit dem 14B, 24 GB (RTX 4090) läuft mit dem 32B, der o1-mini von OpenAI schlägt, und 48 GB Dual-GPU läuft mit dem 70B.',
         rankedItems: [
           {
             rank: 1,
@@ -673,6 +681,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Distillé': 'DeepSeek-R1-Distill-Llama-70B', 'Modèle de base': 'Llama 3 70B', 'Taille du fichier (Q4_K_M)': '~40 GB', 'VRAM min.': 'Bi-GPU / 48 GB', 'Idéal pour': 'Distillé le plus puissant, précision max.' },
         ],
         note: "Le DeepSeek-R1-Distill-Llama-8B porte à la fois la licence Llama 3 et la licence MIT. Les distillés basés sur Qwen héritent de la licence Qwen. Vérifiez toujours la licence avant un usage commercial.",
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-vram-by-tier-en.svg',
+        imageCaption: "Besoins en VRAM des distillés DeepSeek-R1 : le 1.5B tient dans 4 Go ou sur CPU, les 7B et 8B ont besoin de 8 Go, le 14B de 16 Go, le 32B de 24 Go, et le 70B de 48 Go sur deux GPU.",
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -698,6 +708,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ranked-tiers',
         title: 'Distillés DeepSeek-R1 classés par palier matériel',
         content: "Choisissez le palier le plus élevé que votre VRAM permet. Plus de paramètres signifie un meilleur raisonnement, mais uniquement si le modèle tient sans déborder vers la RAM système (ce qui effondre la vitesse). Utilisez ce classement pour associer un distillé au GPU que vous possédez ou comptez acheter.",
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-gpu-tier-match-en.svg',
+        imageCaption: "Correspondance palier GPU / distillé DeepSeek-R1 : 8 Go (RTX 3060 12GB) fait tourner le 7B à 55,5 % sur AIME 2024, 16 Go (RTX 4060 Ti) fait tourner le 14B, 24 Go (RTX 4090) fait tourner le 32B qui dépasse OpenAI o1-mini, et 48 Go en bi-GPU fait tourner le 70B.",
         rankedItems: [
           {
             rank: 1,
@@ -958,6 +970,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Distill': 'DeepSeek-R1-Distill-Llama-70B', 'ベースモデル': 'Llama 3 70B', 'File Size (Q4_K_M)': '~40 GB', 'Min VRAM': 'デュアルGPU / 48 GB', '最適用途': '最強のディスティル、最高精度' },
         ],
         note: 'DeepSeek-R1-Distill-Llama-8BはLlama 3ライセンスとMITライセンスの両方を持ちます。QwenベースのディスティルはQwenのライセンスを継承します。商用利用の前には必ずライセンスを確認してください。',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-vram-by-tier-en.svg',
+        imageCaption: 'DeepSeek-R1ディスティルのVRAM要件: 1.5Bは4GBまたはCPUで動作、7Bと8Bは8GB、14Bは16GB、32Bは24GB、70Bはデュアルの48GBが必要。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -983,6 +997,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ranked-tiers',
         title: 'ハードウェアティア別DeepSeek-R1ディスティルランキング',
         content: 'VRAMが対応する最も高いティアを選んでください。パラメータが多いほど推論は良くなりますが、それはモデルがシステムRAMにあふれ出さずに収まる場合に限ります(あふれると速度が崩壊します)。このランキングを使って、所有しているか購入予定のGPUにディスティルを合わせてください。',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-gpu-tier-match-en.svg',
+        imageCaption: 'GPUティアとDeepSeek-R1ディスティルの対応: 8GB(RTX 3060 12GB)は7BでAIME 2024 55.5%、16GB(RTX 4060 Ti)は14B、24GB(RTX 4090)はOpenAI o1-miniを上回る32B、デュアルGPUの48GBは70Bを動かす。',
         rankedItems: [
           {
             rank: 1,
@@ -1243,6 +1259,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '蒸馏版': 'DeepSeek-R1-Distill-Llama-70B', '基座模型': 'Llama 3 70B', '文件大小（Q4_K_M）': '~40 GB', '最低 VRAM': '双 GPU / 48 GB', '最适合': '最强蒸馏版，最高精度' },
         ],
         note: 'DeepSeek-R1-Distill-Llama-8B 同时受 Llama 3 许可证和 MIT 许可证约束。基于 Qwen 的蒸馏版继承 Qwen 许可。商用前请务必查看许可证。',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-vram-by-tier-en.svg',
+        imageCaption: 'DeepSeek-R1 蒸馏版的 VRAM 需求：1.5B 适合 4 GB 或 CPU，7B 和 8B 需要 8 GB，14B 需要 16 GB，32B 需要 24 GB，70B 需要双 GPU 共 48 GB。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1268,6 +1286,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ranked-tiers',
         title: 'DeepSeek-R1 蒸馏版按硬件档位排名',
         content: '选择你的 VRAM 所能支持的最高档位。参数越多意味着推理越好，但前提是模型能装下而不溢出到系统内存（那会让速度崩溃）。用这个排名把蒸馏版与你拥有或打算购买的 GPU 匹配起来。',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-gpu-tier-match-en.svg',
+        imageCaption: 'GPU 档位与 DeepSeek-R1 蒸馏版对应：8 GB（RTX 3060 12GB）运行 7B，AIME 2024 得分 55.5%；16 GB（RTX 4060 Ti）运行 14B；24 GB（RTX 4090）运行超越 OpenAI o1-mini 的 32B；双 GPU 48 GB 运行 70B。',
         rankedItems: [
           {
             rank: 1,
@@ -1528,6 +1548,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Destilado': 'DeepSeek-R1-Distill-Llama-70B', 'Modelo base': 'Llama 3 70B', 'Tamaño de archivo (Q4_K_M)': '~40 GB', 'VRAM mín.': 'GPU dual / 48 GB', 'Mejor para': 'Destilado más potente, máxima precisión' },
         ],
         note: 'El DeepSeek-R1-Distill-Llama-8B lleva tanto la licencia Llama 3 como la licencia MIT. Los destilados basados en Qwen heredan la licencia de Qwen. Comprueba siempre la licencia para uso comercial.',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-vram-by-tier-en.svg',
+        imageCaption: 'Requisitos de VRAM de los destilados DeepSeek-R1: el 1.5B cabe en 4 GB o CPU, el 7B y el 8B necesitan 8 GB, el 14B necesita 16 GB, el 32B necesita 24 GB, y el 70B necesita 48 GB en dos GPU.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1553,6 +1575,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ranked-tiers',
         title: 'Destilados de DeepSeek-R1 clasificados por nivel de hardware',
         content: 'Elige el nivel más alto que tu VRAM admita. Más parámetros significa mejor razonamiento, pero solo si el modelo encaja sin desbordarse a la RAM del sistema (lo que hunde la velocidad). Usa esta clasificación para emparejar un destilado con la GPU que tienes o planeas comprar.',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-gpu-tier-match-en.svg',
+        imageCaption: 'Correspondencia entre nivel de GPU y destilado DeepSeek-R1: 8 GB (RTX 3060 12GB) ejecuta el 7B con 55,5% en AIME 2024, 16 GB (RTX 4060 Ti) ejecuta el 14B, 24 GB (RTX 4090) ejecuta el 32B que supera a OpenAI o1-mini, y 48 GB en dos GPU ejecuta el 70B.',
         rankedItems: [
           {
             rank: 1,
@@ -1813,6 +1837,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Destilado': 'DeepSeek-R1-Distill-Llama-70B', 'Modelo Base': 'Llama 3 70B', 'Tamanho do Arquivo (Q4_K_M)': '~40 GB', 'VRAM Mín.': 'Dual-GPU / 48 GB', 'Melhor Para': 'Destilado mais forte, precisão máxima' },
         ],
         note: 'O DeepSeek-R1-Distill-Llama-8B carrega tanto a licença Llama 3 quanto a licença MIT. Os destilados baseados em Qwen herdam o licenciamento Qwen. Sempre verifique a licença para uso comercial.',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-vram-by-tier-en.svg',
+        imageCaption: 'Requisitos de VRAM dos destilados DeepSeek-R1: o 1.5B cabe em 4 GB ou CPU, o 7B e o 8B precisam de 8 GB, o 14B precisa de 16 GB, o 32B precisa de 24 GB, e o 70B precisa de 48 GB em duas GPUs.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1838,6 +1864,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ranked-tiers',
         title: 'Destilados do DeepSeek-R1 Classificados por Nível de Hardware',
         content: 'Escolha o nível mais alto que a sua VRAM suporta. Mais parâmetros significa melhor raciocínio, mas só se o modelo couber sem transbordar para a RAM do sistema (o que destrói a velocidade). Use esta classificação para combinar um destilado com a GPU que você tem ou planeja comprar.',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-gpu-tier-match-en.svg',
+        imageCaption: 'Correspondência entre nível de GPU e destilado DeepSeek-R1: 8 GB (RTX 3060 12GB) executa o 7B com 55,5% no AIME 2024, 16 GB (RTX 4060 Ti) executa o 14B, 24 GB (RTX 4090) executa o 32B que supera o OpenAI o1-mini, e 48 GB em duas GPUs executa o 70B.',
         rankedItems: [
           {
             rank: 1,
@@ -2098,6 +2126,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Distill': 'DeepSeek-R1-Distill-Llama-70B', 'Base Model': 'Llama 3 70B', 'File Size (Q4_K_M)': '~40 GB', 'Min VRAM': 'Dual-GPU / 48 GB', 'Best For': 'أقوى نموذج مُقطّر، أقصى دقة' },
         ],
         note: 'يحمل DeepSeek-R1-Distill-Llama-8B ترخيص Llama 3 وترخيص MIT معًا. أما النماذج المُقطّرة القائمة على Qwen فترث ترخيص Qwen. تحقّق دائمًا من الترخيص قبل الاستخدام التجاري.',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-vram-by-tier-en.svg',
+        imageCaption: 'متطلبات VRAM لنماذج DeepSeek-R1 المُقطّرة: يعمل 1.5B على 4 GB أو المعالج، ويحتاج 7B و8B إلى 8 GB، ويحتاج 14B إلى 16 GB، ويحتاج 32B إلى 24 GB، ويحتاج 70B إلى 48 GB عبر معالجين رسوميين.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2123,6 +2153,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ranked-tiers',
         title: 'نماذج DeepSeek-R1 المُقطّرة مُصنّفة حسب فئة العتاد',
         content: 'اختر أعلى فئة يدعمها VRAM لديك. مزيد من المعاملات يعني استدلالًا أفضل، لكن فقط إذا كان النموذج يناسب دون تسرّب إلى ذاكرة النظام (ما يُسقط السرعة). استخدم هذا التصنيف لمطابقة نموذج مُقطّر مع GPU التي تملكها أو تخطّط لشرائها.',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-gpu-tier-match-en.svg',
+        imageCaption: 'مطابقة فئة GPU مع نموذج DeepSeek-R1 المُقطّر: 8 GB (RTX 3060 12GB) يشغّل 7B بنسبة 55.5% على AIME 2024، و16 GB (RTX 4060 Ti) يشغّل 14B، و24 GB (RTX 4090) يشغّل 32B الذي يتفوّق على OpenAI o1-mini، و48 GB بمعالجين رسوميين يشغّل 70B.',
         rankedItems: [
           {
             rank: 1,
@@ -2383,6 +2415,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Distill': 'DeepSeek-R1-Distill-Llama-70B', 'Base Model': 'Llama 3 70B', 'File Size (Q4_K_M)': '~40 GB', 'Min VRAM': 'Dual-GPU / 48 GB', 'Best For': '가장 강력한 증류 모델, 최대 정확도' },
         ],
         note: 'DeepSeek-R1-Distill-Llama-8B는 Llama 3 라이선스와 MIT 라이선스를 모두 가집니다. Qwen 기반 증류 모델은 Qwen 라이선스를 상속합니다. 상업적 사용 전에는 항상 라이선스를 확인하십시오.',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-vram-by-tier-en.svg',
+        imageCaption: 'DeepSeek-R1 증류 모델의 VRAM 요구 사항: 1.5B는 4GB 또는 CPU에서 실행되고, 7B와 8B는 8GB, 14B는 16GB, 32B는 24GB, 70B는 듀얼 GPU로 48GB가 필요합니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2408,6 +2442,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ranked-tiers',
         title: '하드웨어 등급별로 순위를 매긴 DeepSeek-R1 증류 모델',
         content: 'VRAM이 지원하는 가장 높은 등급을 선택하십시오. 파라미터가 많을수록 추론이 좋아지지만, 모델이 시스템 RAM으로 넘치지 않고 들어맞을 때만 그렇습니다(넘치면 속도가 무너집니다). 이 순위를 사용해 보유하거나 구매하려는 GPU에 증류 모델을 맞추십시오.',
+        image: '/images/best-local-reasoning-model-deepseek-r1-2026-gpu-tier-match-en.svg',
+        imageCaption: 'GPU 등급과 DeepSeek-R1 증류 모델 매칭: 8GB(RTX 3060 12GB)는 AIME 2024에서 55.5%를 기록한 7B를 실행하고, 16GB(RTX 4060 Ti)는 14B를, 24GB(RTX 4090)는 OpenAI o1-mini를 능가하는 32B를, 듀얼 GPU 48GB는 70B를 실행합니다.',
         rankedItems: [
           {
             rank: 1,
