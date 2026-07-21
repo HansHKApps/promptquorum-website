@@ -1,0 +1,70 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">MRAM for AI: Confirmed Milestones vs Speculative Timeline</text>
+  <text x="400" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#79747E" text-anchor="middle">2019 mass production to 2029–2031 speculative consumer deployment</text>
+
+  <line x1="60" y1="118" x2="740" y2="118" stroke="#E8DEF8" stroke-width="3"/>
+
+  <!-- Node 1: 2019 Done -->
+  <text x="80" y="80" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">2019</text>
+  <circle cx="80" cy="118" r="20" fill="#34A853"/>
+  <text x="80" y="124" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="80" y="158" font-size="10.5" font-weight="700" fill="#34A853" text-anchor="middle">Done</text>
+  <text x="80" y="176" font-size="9.5" fill="#49454F" text-anchor="middle">
+    <tspan x="80" dy="0">28nm eMRAM</tspan>
+    <tspan x="80" dy="12">mass production</tspan>
+  </text>
+
+  <!-- Node 2: 2024 Done -->
+  <text x="214" y="80" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">2024</text>
+  <circle cx="214" cy="118" r="20" fill="#34A853"/>
+  <text x="214" y="124" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="214" y="158" font-size="10.5" font-weight="700" fill="#34A853" text-anchor="middle">Done</text>
+  <text x="214" y="176" font-size="9.5" fill="#49454F" text-anchor="middle">
+    <tspan x="214" dy="0">14nm eMRAM</tspan>
+    <tspan x="214" dy="12">production</tspan>
+  </text>
+
+  <!-- Node 3: 2026 Done -->
+  <text x="348" y="80" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">2026</text>
+  <circle cx="348" cy="118" r="20" fill="#34A853"/>
+  <text x="348" y="124" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="348" y="158" font-size="10.5" font-weight="700" fill="#34A853" text-anchor="middle">Done (June)</text>
+  <text x="348" y="176" font-size="9.5" fill="#49454F" text-anchor="middle">
+    <tspan x="348" dy="0">8nm eMRAM;</tspan>
+    <tspan x="348" dy="12">SemiFive tape-out</tspan>
+  </text>
+
+  <!-- Node 4: 2027 On track -->
+  <text x="482" y="80" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">2027</text>
+  <circle cx="482" cy="118" r="20" fill="#6750A4"/>
+  <text x="482" y="123" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">~</text>
+  <text x="482" y="158" font-size="10.5" font-weight="700" fill="#6750A4" text-anchor="middle">On track</text>
+  <text x="482" y="176" font-size="9.5" fill="#49454F" text-anchor="middle">
+    <tspan x="482" dy="0">5nm eMRAM</tspan>
+    <tspan x="482" dy="12">process (roadmap)</tspan>
+  </text>
+
+  <!-- Node 5: 2028-2029 Plausible -->
+  <text x="616" y="80" font-size="12.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">2028–2029</text>
+  <circle cx="616" cy="118" r="20" fill="#F4B400"/>
+  <text x="616" y="124" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">?</text>
+  <text x="616" y="158" font-size="10.5" font-weight="700" fill="#F4B400" text-anchor="middle">Plausible</text>
+  <text x="616" y="176" font-size="9.5" fill="#49454F" text-anchor="middle">
+    <tspan x="616" dy="0">First edge AI SoCs</tspan>
+    <tspan x="616" dy="12">w/ MRAM compute</tspan>
+  </text>
+
+  <!-- Node 6: 2029-2031 Speculative -->
+  <text x="740" y="80" font-size="12.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">2029–2031</text>
+  <circle cx="740" cy="118" r="20" fill="#EA4335"/>
+  <text x="740" y="124" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">?</text>
+  <text x="740" y="158" font-size="10.5" font-weight="700" fill="#EA4335" text-anchor="middle">Speculative</text>
+  <text x="740" y="176" font-size="9.5" fill="#49454F" text-anchor="middle">
+    <tspan x="740" dy="0">Consumer phone</tspan>
+    <tspan x="740" dy="12">MRAM integration</tspan>
+  </text>
+
+  <line x1="60" y1="345" x2="740" y2="345" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="378" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Only 28nm–8nm eMRAM production and the May 2026 SemiFive/ICYTech tape-out are confirmed; consumer smartphone MRAM is not on any published OEM roadmap.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -75,6 +75,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Operation: '32-bit floating-point multiply-accumulate (MAC)', 'Energy cost': '~0.9 pJ', Relative: 'baseline (1×)' },
         ],
         columns: ['Operation', 'Energy cost', 'Relative'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-energy-cost-comparison-en.svg',
+        imageCaption: 'Energy cost per 32-bit operation: DRAM access costs ~640 pJ (~200x a MAC op), SRAM access ~5 pJ, and the multiply-accumulate itself only ~0.9 pJ — up to 90% of local LLM inference energy goes to data movement.',
       },
       'in-memory-computing': {
         id: 'in-memory-computing',
@@ -215,6 +217,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Year: '2029–2031', Milestone: 'Possible consumer smartphone MRAM integration (non-volatile cache or specialized AI die)', Status: 'Speculative' },
         ],
         columns: ['Year', 'Milestone', 'Status'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-mram-timeline-roadmap-en.svg',
+        imageCaption: 'MRAM roadmap for AI: 28nm eMRAM (2019) and 14nm (2024) production are done; 8nm eMRAM and the SemiFive/ICYTech tape-out (June 2026) are confirmed; 5nm eMRAM (2027) is on track; edge AI SoCs (2028-2029) and consumer smartphone MRAM (2029-2031) remain plausible but unconfirmed.',
         items: [
           '**What is NOT confirmed:**',
           'No major smartphone OEM (Apple, Qualcomm, MediaTek) has announced MRAM integration.',
@@ -324,6 +328,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { Operation: '32-Bit-Gleitkomma-Multiply-Accumulate (MAC)', 'Energy cost': '~0,9 pJ', Relative: 'Basiswert (1×)' },
       ],
       columns: ['Operation', 'Energy cost', 'Relative'],
+      image: '/images/mram-in-memory-computing-local-ai-2026-energy-cost-comparison-en.svg',
+      imageCaption: 'Energiekosten pro 32-Bit-Operation: DRAM-Zugriff kostet ~640 pJ (~200x eine MAC-Operation), SRAM-Zugriff ~5 pJ, und die Multiply-Accumulate-Operation selbst nur ~0,9 pJ — bis zu 90 % der Energie bei lokaler LLM-Inferenz entfallen auf Datentransport.',
     },
     'in-memory-computing': {
       id: 'in-memory-computing',
@@ -464,6 +470,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { Year: '2029–2031', Milestone: 'Mögliche MRAM-Integration in Consumer-Smartphones (nicht-flüchtiger Cache oder spezialisierter KI-Die)', Status: 'Spekulativ' },
       ],
       columns: ['Year', 'Milestone', 'Status'],
+      image: '/images/mram-in-memory-computing-local-ai-2026-mram-timeline-roadmap-en.svg',
+      imageCaption: 'MRAM-Roadmap für KI: 28nm-eMRAM (2019) und 14nm (2024) sind in Produktion; 8nm-eMRAM und der SemiFive/ICYTech-Tape-Out (Juni 2026) sind bestätigt; 5nm-eMRAM (2027) liegt im Plan; Edge-KI-SoCs (2028–2029) und Consumer-Smartphone-MRAM (2029–2031) bleiben plausibel, aber unbestätigt.',
       items: [
         '**Was NICHT bestätigt ist:**',
         'Kein großer Smartphone-OEM (Apple, Qualcomm, MediaTek) hat eine MRAM-Integration angekündigt.',
@@ -573,6 +581,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Operation: 'Multiplication-accumulation (MAC) flottante 32 bits', 'Energy cost': '~0.9 pJ', Relative: 'référence (1×)' },
         ],
         columns: ['Operation', 'Energy cost', 'Relative'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-energy-cost-comparison-en.svg',
+        imageCaption: 'Coût énergétique par opération 32 bits : l\'accès DRAM coûte ~640 pJ (~200x une opération MAC), l\'accès SRAM ~5 pJ, et le multiply-accumulate lui-même seulement ~0,9 pJ — jusqu\'à 90 % de l\'énergie d\'inférence LLM locale est consacrée au déplacement des données.',
       },
       'in-memory-computing': {
         id: 'in-memory-computing',
@@ -713,6 +723,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Year: '2029–2031', Milestone: 'Possible intégration MRAM dans smartphones grand public (cache non-volatile ou puce IA spécialisée)', Status: 'Spéculatif' },
         ],
         columns: ['Year', 'Milestone', 'Status'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-mram-timeline-roadmap-en.svg',
+        imageCaption: 'Feuille de route MRAM pour l\'IA : la production eMRAM 28nm (2019) et 14nm (2024) est acquise ; l\'eMRAM 8nm et le tape-out SemiFive/ICYTech (juin 2026) sont confirmés ; le procédé eMRAM 5nm (2027) est en bonne voie ; les SoC IA en périphérie (2028-2029) et le MRAM pour smartphones grand public (2029-2031) restent plausibles mais non confirmés.',
         items: [
           '**Ce qui n\'est PAS confirmé:**',
           'Aucun grand OEM de smartphones (Apple, Qualcomm, MediaTek) n\'a annoncé d\'intégration MRAM.',
@@ -823,6 +835,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Operation: '32-bit floating-point multiply-accumulate (MAC)', 'Energy cost': '~0.9 pJ', Relative: '基準(1×)' },
         ],
         columns: ['Operation', 'Energy cost', 'Relative'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-energy-cost-comparison-en.svg',
+        imageCaption: '32ビット演算あたりのエネルギーコスト: DRAMアクセスは約640pJ(MAC演算の約200倍)、SRAMアクセスは約5pJ、乗算加算(MAC)自体はわずか約0.9pJ — ローカルLLM推論のエネルギーの最大90%がデータ移動に費やされる。',
       },
       'in-memory-computing': {
         id: 'in-memory-computing',
@@ -963,6 +977,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Year: '2029–2031', Milestone: '消費者向けスマートフォンへのMRAM統合の可能性(不揮発性キャッシュまたは特化型AIダイ)', Status: '推測的' },
         ],
         columns: ['Year', 'Milestone', 'Status'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-mram-timeline-roadmap-en.svg',
+        imageCaption: 'AI向けMRAMロードマップ: 28nm eMRAM(2019年)と14nm(2024年)の量産は完了、8nm eMRAMとSemiFive/ICYTechのテープアウト(2026年6月)は確定済み、5nm eMRAM(2027年)は予定通り、エッジAI SoC(2028〜2029年)とコンシューマースマートフォン向けMRAM(2029〜2031年)は可能性があるが未確定。',
         items: [
           '**確定していないこと:**',
           '主要なスマートフォンOEM(Apple、Qualcomm、MediaTek)はMRAM統合を発表していません。',
@@ -1088,6 +1104,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Operation: '32-bit floating-point multiply-accumulate (MAC)', 'Energy cost': '~0.9 pJ', Relative: 'baseline (1×)' },
         ],
         columns: ['Operation', 'Energy cost', 'Relative'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-energy-cost-comparison-en.svg',
+        imageCaption: '每次32位操作的能耗成本:DRAM访问约640 pJ(约为一次MAC操作的200倍),SRAM访问约5 pJ,而乘加运算(MAC)本身仅约0.9 pJ——本地LLM推理高达90%的能耗用于数据搬运。',
       },
       'in-memory-computing': {
         id: 'in-memory-computing',
@@ -1228,6 +1246,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Year: '2029–2031', Milestone: '消费级智能手机可能集成MRAM(非易失性缓存或专用AI晶圆)', Status: '推测性' },
         ],
         columns: ['Year', 'Milestone', 'Status'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-mram-timeline-roadmap-en.svg',
+        imageCaption: '面向AI的MRAM路线图:28nm eMRAM(2019年)和14nm(2024年)量产已完成;8nm eMRAM及SemiFive/ICYTech流片(2026年6月)已确认;5nm eMRAM(2027年)按计划推进;边缘AI SoC(2028–2029年)和消费级智能手机MRAM(2029–2031年)仍属推测,尚未确认。',
         items: [
           '**尚未确认的内容：**',
           '尚无主要智能手机OEM厂商(Apple、Qualcomm、MediaTek)宣布集成MRAM。',
@@ -1353,6 +1373,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Operation: 'Multiplicación-acumulación (MAC) en coma flotante de 32 bits', 'Energy cost': '~0.9 pJ', Relative: 'referencia (1×)' },
         ],
         columns: ['Operation', 'Energy cost', 'Relative'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-energy-cost-comparison-en.svg',
+        imageCaption: 'Coste energético por operación de 32 bits: el acceso a DRAM cuesta ~640 pJ (~200x una operación MAC), el acceso a SRAM ~5 pJ, y la multiplicación-acumulación en sí solo ~0,9 pJ — hasta el 90% de la energía de inferencia de LLM local se destina al movimiento de datos.',
       },
       'in-memory-computing': {
         id: 'in-memory-computing',
@@ -1493,6 +1515,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Year: '2029–2031', Milestone: 'Posible integración de MRAM en smartphones de consumo (caché no volátil o die de IA especializado)', Status: 'Especulativo' },
         ],
         columns: ['Year', 'Milestone', 'Status'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-mram-timeline-roadmap-en.svg',
+        imageCaption: 'Hoja de ruta de MRAM para IA: la producción de eMRAM de 28nm (2019) y 14nm (2024) está lista; el eMRAM de 8nm y el tape-out de SemiFive/ICYTech (junio de 2026) están confirmados; el proceso eMRAM de 5nm (2027) va según lo previsto; los SoC de IA en el borde (2028-2029) y el MRAM para smartphones de consumo (2029-2031) siguen siendo plausibles pero no confirmados.',
         items: [
           '**Lo que NO está confirmado:**',
           'Ningún gran fabricante de smartphones (Apple, Qualcomm, MediaTek) ha anunciado integración de MRAM.',
@@ -1618,6 +1642,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Operation: 'Multiplicação-acumulação (MAC) de ponto flutuante de 32 bits', 'Energy cost': '~0,9 pJ', Relative: 'referência (1×)' },
         ],
         columns: ['Operation', 'Energy cost', 'Relative'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-energy-cost-comparison-en.svg',
+        imageCaption: 'Custo energético por operação de 32 bits: o acesso à DRAM custa ~640 pJ (~200x uma operação MAC), o acesso à SRAM ~5 pJ, e a própria multiplicação-acumulação apenas ~0,9 pJ — até 90% da energia de inferência de LLM local vai para a movimentação de dados.',
       },
       'in-memory-computing': {
         id: 'in-memory-computing',
@@ -1758,6 +1784,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Year: '2029–2031', Milestone: 'Possível integração de MRAM em smartphones de consumo (cache não-volátil ou die de IA especializado)', Status: 'Especulativo' },
         ],
         columns: ['Year', 'Milestone', 'Status'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-mram-timeline-roadmap-en.svg',
+        imageCaption: 'Roteiro de MRAM para IA: a produção de eMRAM de 28nm (2019) e 14nm (2024) está concluída; o eMRAM de 8nm e o tape-out da SemiFive/ICYTech (junho de 2026) estão confirmados; o processo eMRAM de 5nm (2027) está no cronograma; SoCs de IA de borda (2028-2029) e MRAM para smartphones de consumo (2029-2031) permanecem plausíveis, mas não confirmados.',
         items: [
           '**O que NÃO está confirmado:**',
           'Nenhum grande fabricante de smartphones (Apple, Qualcomm, MediaTek) anunciou integração de MRAM.',
@@ -1868,6 +1896,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Operation: 'ضرب-وتجميع بفاصلة عائمة 32-bit (MAC)', 'Energy cost': '~0.9 pJ', Relative: 'الأساس (1×)' },
         ],
         columns: ['Operation', 'Energy cost', 'Relative'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-energy-cost-comparison-en.svg',
+        imageCaption: 'تكلفة الطاقة لكل عملية 32 بت: الوصول إلى DRAM يكلف ~640 بيكوجول (~200 ضعف عملية MAC واحدة)، والوصول إلى SRAM ~5 بيكوجول، بينما عملية الضرب والتراكم (MAC) نفسها ~0.9 بيكوجول فقط — حتى 90% من طاقة استدلال نماذج اللغة المحلية تُستهلك في نقل البيانات.',
       },
       'in-memory-computing': {
         id: 'in-memory-computing',
@@ -2008,6 +2038,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Year: '2029–2031', Milestone: 'إمكانية دمج MRAM في الهواتف الذكية الاستهلاكية (ذاكرة مؤقتة غير متطايرة أو شريحة ذكاء اصطناعي متخصصة)', Status: 'تكهّني' },
         ],
         columns: ['Year', 'Milestone', 'Status'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-mram-timeline-roadmap-en.svg',
+        imageCaption: 'خارطة طريق MRAM للذكاء الاصطناعي: اكتمل إنتاج eMRAM بتقنية 28 نانومتر (2019) و14 نانومتر (2024)؛ تم تأكيد eMRAM بتقنية 8 نانومتر وعملية Tape-Out لشركتي SemiFive وICYTech (يونيو 2026)؛ عملية 5 نانومتر (2027) تسير وفق الجدول؛ تبقى شرائح الذكاء الاصطناعي الطرفية (2028-2029) وMRAM للهواتف الاستهلاكية (2029-2031) محتملة لكن غير مؤكدة.',
         items: [
           '**ما هو غير مؤكَّد:**',
           'لم يعلن أي مصنّع هواتف ذكية كبير (Apple، Qualcomm، MediaTek) عن دمج MRAM.',
@@ -2118,6 +2150,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Operation: '32-bit floating-point multiply-accumulate (MAC)', 'Energy cost': '~0.9 pJ', Relative: '기준값 (1×)' },
         ],
         columns: ['Operation', 'Energy cost', 'Relative'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-energy-cost-comparison-en.svg',
+        imageCaption: '32비트 연산당 에너지 비용: DRAM 액세스는 약 640pJ(MAC 연산의 약 200배), SRAM 액세스는 약 5pJ, 곱셈-누산(MAC) 연산 자체는 약 0.9pJ에 불과 — 로컬 LLM 추론 에너지의 최대 90%가 데이터 이동에 소모된다.',
       },
       'in-memory-computing': {
         id: 'in-memory-computing',
@@ -2258,6 +2292,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Year: '2029–2031', Milestone: '소비자용 스마트폰 MRAM 통합 가능성 (비휘발성 캐시 또는 특수 AI 다이)', Status: '추측성' },
         ],
         columns: ['Year', 'Milestone', 'Status'],
+        image: '/images/mram-in-memory-computing-local-ai-2026-mram-timeline-roadmap-en.svg',
+        imageCaption: 'AI용 MRAM 로드맵: 28nm eMRAM(2019년)과 14nm(2024년) 양산은 완료; 8nm eMRAM과 SemiFive/ICYTech 테이프아웃(2026년 6월)은 확정; 5nm eMRAM(2027년)은 계획대로 진행 중; 엣지 AI SoC(2028~2029년)와 소비자 스마트폰용 MRAM(2029~2031년)은 가능성은 있으나 미확정.',
         items: [
           '**확정되지 않은 사항:**',
           '주요 스마트폰 OEM(Apple, Qualcomm, MediaTek) 중 MRAM 통합을 발표한 곳은 없습니다.',
