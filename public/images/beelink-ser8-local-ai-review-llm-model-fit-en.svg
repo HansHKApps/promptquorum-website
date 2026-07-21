@@ -1,0 +1,23 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Local LLM model fit on the Beelink SER8 with 32 GB RAM: 7B comfortable, 13B to 14B usable, 32B tight and slow"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Local LLM Fit on the SER8 (32 GB RAM, Radeon 780M)</text>
+  <line x1="260" y1="345" x2="740" y2="345" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="250" y="104" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">7B (Q4)</text>
+  <rect x="260" y="85" width="450" height="30" fill="#34A853" rx="4"/>
+  <text x="678" y="106" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Comfortable</text>
+
+  <text x="250" y="164" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">13B–14B (Q4)</text>
+  <rect x="260" y="145" width="310" height="30" fill="#6750A4" rx="4"/>
+  <text x="538" y="166" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">Usable, slower</text>
+
+  <text x="250" y="224" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">32B (Q4)</text>
+  <rect x="260" y="205" width="150" height="30" fill="#F4B400" rx="4"/>
+  <text x="378" y="226" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">Tight, slow</text>
+
+  <text x="250" y="284" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">70B (Q4)</text>
+  <rect x="260" y="265" width="60" height="30" fill="#EA4335" rx="4"/>
+  <text x="338" y="286" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#EA4335">Does not fit</text>
+
+  <text x="400" y="378" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Estimated from verified hardware, not a measured benchmark — bandwidth, not capacity, limits the 13B–32B range.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

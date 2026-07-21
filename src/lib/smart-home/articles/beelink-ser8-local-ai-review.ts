@@ -107,12 +107,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No discrete GPU: all AI inference runs on the CPU and Radeon 780M iGPU sharing system RAM.',
           'Dual SO-DIMM slots are user-replaceable; the practical DDR5 ceiling on this platform is around 96 GB.',
         ],
+        image: '/images/beelink-ser8-local-ai-review-key-specs-en.svg',
+        imageCaption: 'Beelink SER8 key specs: Ryzen 7 8845HS (8 cores/16 threads), Radeon 780M iGPU, 32 GB DDR5-5600, 1 TB NVMe, 2.5GbE, 65 W TDP, ~$650.',
       },
       localAi: {
         id: 'local-ai',
         title: 'Local AI & LLM Performance',
         content:
           '**With 32 GB of RAM the SER8 comfortably runs a 7B model on Ollama and can load a 13B–14B model at 4-bit, though larger models are limited by memory bandwidth rather than capacity — all figures estimated from the verified hardware, not a measured benchmark.** The Radeon 780M is the key part: on dual-channel DDR5-5600 it keeps a 7B assistant responsive next to Home Assistant.',
+        image: '/images/beelink-ser8-local-ai-review-llm-model-fit-en.svg',
+        imageCaption: 'Local LLM model fit on the Beelink SER8 with 32 GB RAM: 7B (Q4) is comfortable, 13B–14B (Q4) is usable but slower, 32B (Q4) is tight and slow, and 70B does not fit.',
         items: [
           'Ollama, LM Studio, and llama.cpp run well; the 780M is used through Vulkan or ROCm backends.',
           'A 7B model is the comfortable sweet spot; 13B–14B works for non-interactive use but feels slower.',
@@ -339,12 +343,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Keine dedizierte GPU: die gesamte KI-Inferenz läuft auf der CPU und der Radeon-780M-iGPU, die sich den System-RAM teilen.',
           'Die dualen SO-DIMM-Steckplätze sind vom Nutzer austauschbar; die praktische DDR5-Obergrenze auf dieser Plattform liegt bei rund 96 GB.',
         ],
+        image: '/images/beelink-ser8-local-ai-review-key-specs-en.svg',
+        imageCaption: 'Beelink-SER8-Kernspezifikationen: Ryzen 7 8845HS (8 Kerne/16 Threads), Radeon-780M-iGPU, 32 GB DDR5-5600, 1 TB NVMe, 2.5GbE, 65 W TDP, ca. 549 €.',
       },
       localAi: {
         id: 'local-ai',
         title: 'Lokale KI & LLM-Leistung',
         content:
           '**Mit 32 GB RAM betreibt der SER8 komfortabel ein 7B-Modell auf Ollama und kann ein 13B–14B-Modell in 4-Bit laden, wobei größere Modelle eher durch die Speicherbandbreite als durch die Kapazität begrenzt sind — alle Angaben sind aus der geprüften Hardware geschätzt, kein gemessener Benchmark.** Die Radeon 780M ist der entscheidende Teil: auf Dual-Channel-DDR5-5600 hält sie einen 7B-Assistenten neben Home Assistant reaktionsschnell.',
+        image: '/images/beelink-ser8-local-ai-review-llm-model-fit-en.svg',
+        imageCaption: 'Lokale LLM-Modellgröße auf dem Beelink SER8 mit 32 GB RAM: 7B (Q4) läuft komfortabel, 13B–14B (Q4) ist nutzbar, aber langsamer, 32B (Q4) ist knapp und langsam, 70B passt nicht.',
         items: [
           'Ollama, LM Studio und llama.cpp laufen gut; die 780M wird über die Vulkan- oder ROCm-Backends genutzt.',
           'Ein 7B-Modell ist der komfortable Sweetspot; 13B–14B funktioniert für nicht-interaktive Nutzung, wirkt aber langsamer.',
@@ -573,12 +581,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pas de GPU dédié : toute l\'inférence IA tourne sur le CPU et l\'iGPU Radeon 780M qui partagent la RAM système.',
           'Les deux emplacements SO-DIMM sont remplaçables par l\'utilisateur ; le plafond DDR5 pratique sur cette plateforme est d\'environ 96 Go.',
         ],
+        image: '/images/beelink-ser8-local-ai-review-key-specs-en.svg',
+        imageCaption: "Specs clés du Beelink SER8 : Ryzen 7 8845HS (8 cœurs/16 threads), iGPU Radeon 780M, 32 Go DDR5-5600, 1 To NVMe, 2.5GbE, TDP 65 W, env. 549 €.",
       },
       localAi: {
         id: 'local-ai',
         title: 'IA locale et performances LLM',
         content:
           "**Avec 32 Go de RAM, le SER8 fait tourner sans peine un modèle 7B sur Ollama et peut charger un modèle 13B–14B en 4 bits, même si les modèles plus grands sont limités par la bande passante mémoire plutôt que par la capacité — tous les chiffres sont estimés d'après le matériel vérifié, pas un benchmark mesuré.** La Radeon 780M est l'élément clé : sur du DDR5-5600 double canal, elle garde un assistant 7B réactif à côté de Home Assistant.",
+        image: '/images/beelink-ser8-local-ai-review-llm-model-fit-en.svg',
+        imageCaption: "Adéquation des modèles LLM locaux sur le Beelink SER8 avec 32 Go de RAM : 7B (Q4) à l'aise, 13B–14B (Q4) utilisable mais plus lent, 32B (Q4) juste et lent, 70B ne tient pas.",
         items: [
           'Ollama, LM Studio et llama.cpp tournent bien ; la 780M est exploitée via les backends Vulkan ou ROCm.',
           'Un modèle 7B est le point d\'équilibre confortable ; un 13B–14B fonctionne en usage non interactif mais paraît plus lent.',
@@ -805,12 +817,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sin GPU dedicada: toda la inferencia de IA corre en la CPU y la iGPU Radeon 780M compartiendo la RAM del sistema.',
           'Las dos ranuras SO-DIMM son reemplazables por el usuario; el techo práctico de DDR5 en esta plataforma ronda los 96 GB.',
         ],
+        image: '/images/beelink-ser8-local-ai-review-key-specs-en.svg',
+        imageCaption: 'Especificaciones clave del Beelink SER8: Ryzen 7 8845HS (8 núcleos/16 hilos), iGPU Radeon 780M, 32 GB DDR5-5600, 1 TB NVMe, 2.5GbE, 65 W de TDP, ~549 €.',
       },
       localAi: {
         id: 'local-ai',
         title: 'IA local y rendimiento LLM',
         content:
           '**Con 32 GB de RAM, el SER8 ejecuta con comodidad un modelo 7B en Ollama y puede cargar un modelo 13B–14B a 4 bits, aunque los modelos más grandes están limitados por el ancho de banda de memoria más que por la capacidad — todas las cifras se estiman a partir del hardware verificado, no de un benchmark medido.** La Radeon 780M es la pieza clave: con DDR5-5600 de doble canal mantiene ágil un asistente 7B junto a Home Assistant.',
+        image: '/images/beelink-ser8-local-ai-review-llm-model-fit-en.svg',
+        imageCaption: 'Ajuste de modelos LLM locales en el Beelink SER8 con 32 GB de RAM: 7B (Q4) cómodo, 13B–14B (Q4) usable pero más lento, 32B (Q4) justo y lento, 70B no cabe.',
         items: [
           'Ollama, LM Studio y llama.cpp funcionan bien; la 780M se usa a través de los backends Vulkan o ROCm.',
           'Un modelo 7B es el punto óptimo cómodo; un 13B–14B sirve para uso no interactivo pero se siente más lento.',
@@ -1037,12 +1053,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '専用GPUなし: すべてのAI推論は、システムRAMを共有するCPUとRadeon 780M iGPUで動作します。',
           'デュアルSO-DIMMスロットはユーザー交換可能で、このプラットフォームの実用的なDDR5上限は約96 GBです。',
         ],
+        image: '/images/beelink-ser8-local-ai-review-key-specs-en.svg',
+        imageCaption: 'Beelink SER8の主要スペック: Ryzen 7 8845HS（8コア/16スレッド）、Radeon 780M iGPU、32 GB DDR5-5600、1 TB NVMe、2.5GbE、TDP 65 W、約¥99,800。',
       },
       localAi: {
         id: 'local-ai',
         title: 'ローカルAIとLLM性能',
         content:
           '**32 GBのRAMがあれば、SER8はOllama上で7Bモデルを快適に動かし、13B〜14Bモデルを4bitで読み込めますが、より大きなモデルは容量よりもメモリ帯域に制約されます。すべての数値は検証済みハードウェアからの推定であり、実測ベンチマークではありません。** 鍵となるのはRadeon 780Mで、デュアルチャネルDDR5-5600上でHome Assistantと並行して7Bアシスタントを軽快に保ちます。',
+        image: '/images/beelink-ser8-local-ai-review-llm-model-fit-en.svg',
+        imageCaption: 'Beelink SER8（32 GB RAM）でのローカルLLMモデル適合: 7B（Q4）は快適、13B〜14B（Q4）は使えるが遅い、32B（Q4）はぎりぎりで遅い、70Bは収まらない。',
         items: [
           'Ollama、LM Studio、llama.cppは良好に動作し、780MはVulkanまたはROCmバックエンド経由で使われます。',
           '7Bモデルが快適なスイートスポットで、13B〜14Bは非対話用途では使えますが遅く感じます。',
@@ -1269,12 +1289,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '无独立 GPU：所有 AI 推理都在共享系统内存的 CPU 和 Radeon 780M 核显上运行。',
           '双 SO-DIMM 插槽用户可更换；该平台的实际 DDR5 上限约为 96 GB。',
         ],
+        image: '/images/beelink-ser8-local-ai-review-key-specs-en.svg',
+        imageCaption: 'Beelink SER8 核心规格：Ryzen 7 8845HS（8 核/16 线程）、Radeon 780M 核显、32 GB DDR5-5600、1 TB NVMe、2.5GbE、65 W TDP，约 $650。',
       },
       localAi: {
         id: 'local-ai',
         title: '本地 AI 与 LLM 性能',
         content:
           '**凭借 32 GB 内存，SER8 可在 Ollama 上从容运行 7B 模型，并能以 4-bit 加载 13B–14B 模型，不过更大的模型受限于内存带宽而非容量——所有数据均据已验证硬件估算，并非实测基准。** Radeon 780M 是关键部件：在双通道 DDR5-5600 上，它让 7B 助手在 Home Assistant 旁保持响应迅速。',
+        image: '/images/beelink-ser8-local-ai-review-llm-model-fit-en.svg',
+        imageCaption: 'Beelink SER8（32 GB 内存）本地 LLM 模型适配情况：7B（Q4）从容，13B–14B（Q4）可用但较慢，32B（Q4）勉强且缓慢，70B 无法容纳。',
         items: [
           'Ollama、LM Studio 和 llama.cpp 运行良好；780M 通过 Vulkan 或 ROCm 后端使用。',
           '7B 模型是从容的甜蜜点；13B–14B 适合非交互用途，但感觉较慢。',
@@ -1501,12 +1525,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '전용 GPU 없음: 모든 AI 추론은 시스템 RAM을 공유하는 CPU와 Radeon 780M iGPU에서 실행됩니다.',
           '듀얼 SO-DIMM 슬롯은 사용자가 교체할 수 있으며, 이 플랫폼의 실용적인 DDR5 상한은 약 96 GB입니다.',
         ],
+        image: '/images/beelink-ser8-local-ai-review-key-specs-en.svg',
+        imageCaption: 'Beelink SER8 핵심 사양: Ryzen 7 8845HS(8코어/16스레드), Radeon 780M iGPU, 32 GB DDR5-5600, 1 TB NVMe, 2.5GbE, 65 W TDP, 약 $650.',
       },
       localAi: {
         id: 'local-ai',
         title: '로컬 AI와 LLM 성능',
         content:
           '**32 GB RAM이면 SER8은 Ollama에서 7B 모델을 여유롭게 실행하고 13B–14B 모델을 4비트로 로드할 수 있으나, 더 큰 모델은 용량보다 메모리 대역폭에 제약을 받습니다. 모든 수치는 검증된 하드웨어에서 추정한 것이며 측정된 벤치마크가 아닙니다.** 핵심은 Radeon 780M입니다. 듀얼 채널 DDR5-5600에서 Home Assistant와 함께 7B 어시스턴트를 반응성 있게 유지합니다.',
+        image: '/images/beelink-ser8-local-ai-review-llm-model-fit-en.svg',
+        imageCaption: 'Beelink SER8(32 GB RAM)의 로컬 LLM 모델 적합도: 7B(Q4)는 여유롭고, 13B–14B(Q4)는 사용 가능하지만 느리며, 32B(Q4)는 빠듯하고 느리고, 70B는 들어가지 않습니다.',
         items: [
           'Ollama, LM Studio, llama.cpp가 잘 실행되며, 780M은 Vulkan 또는 ROCm 백엔드를 통해 사용됩니다.',
           '7B 모델이 편안한 스위트 스폿이며, 13B–14B는 비대화형 용도에서는 작동하지만 더 느리게 느껴집니다.',
@@ -1733,12 +1761,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sem GPU dedicada: toda a inferência de IA roda na CPU e na iGPU Radeon 780M, que compartilham a RAM do sistema.',
           'Os dois slots SO-DIMM são substituíveis pelo usuário; o teto prático de DDR5 nesta plataforma é de cerca de 96 GB.',
         ],
+        image: '/images/beelink-ser8-local-ai-review-key-specs-en.svg',
+        imageCaption: 'Especificações principais do Beelink SER8: Ryzen 7 8845HS (8 núcleos/16 threads), iGPU Radeon 780M, 32 GB DDR5-5600, 1 TB NVMe, 2.5GbE, TDP de 65 W, ~R$ 6.500.',
       },
       localAi: {
         id: 'local-ai',
         title: 'IA local e desempenho de LLM',
         content:
           '**Com 32 GB de RAM, o SER8 roda com conforto um modelo 7B no Ollama e consegue carregar um modelo 13B–14B em 4 bits, embora modelos maiores sejam limitados pela largura de banda da memória em vez da capacidade — todos os números são estimados a partir do hardware verificado, não de um benchmark medido.** A Radeon 780M é a peça-chave: em DDR5-5600 de canal duplo, ela mantém um assistente 7B responsivo ao lado do Home Assistant.',
+        image: '/images/beelink-ser8-local-ai-review-llm-model-fit-en.svg',
+        imageCaption: 'Adequação de modelos de LLM local no Beelink SER8 com 32 GB de RAM: 7B (Q4) confortável, 13B–14B (Q4) utilizável mas mais lento, 32B (Q4) apertado e lento, 70B não cabe.',
         items: [
           'Ollama, LM Studio e llama.cpp rodam bem; a 780M é usada pelos backends Vulkan ou ROCm.',
           'Um modelo 7B é o ponto de equilíbrio confortável; um 13B–14B funciona para uso não interativo, mas parece mais lento.',
@@ -1965,12 +1997,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لا توجد بطاقة رسوميات منفصلة: يعمل كل استدلال الذكاء الاصطناعي على المعالج ومعالج الرسوميات المدمج Radeon 780M اللذين يتشاركان ذاكرة النظام.',
           'منفذا SO-DIMM المزدوجان قابلان للاستبدال من المستخدم؛ والحد الأقصى العملي لـ DDR5 على هذه المنصة نحو 96 GB.',
         ],
+        image: '/images/beelink-ser8-local-ai-review-key-specs-en.svg',
+        imageCaption: 'أبرز مواصفات Beelink SER8: معالج Ryzen 7 8845HS (8 أنوية/16 خيطًا)، ومعالج رسوميات مدمج Radeon 780M، وذاكرة 32 GB DDR5-5600، وتخزين 1 TB NVMe، ومنفذ 2.5GbE، وTDP بقدرة 65 W، بسعر نحو $650.',
       },
       localAi: {
         id: 'local-ai',
         title: 'الذكاء الاصطناعي المحلي وأداء LLM',
         content:
           '**بذاكرة 32 GB، يُشغّل SER8 نموذج 7B على Ollama بأريحية ويمكنه تحميل نموذج 13B–14B بدقة 4 بت، مع أن النماذج الأكبر مقيّدة بعرض نطاق الذاكرة أكثر من السعة — وجميع الأرقام مقدَّرة من العتاد المتحقق منه، وليست قياسًا مرجعيًا فعليًا.** إن Radeon 780M هو الجزء الأساسي: فعلى DDR5-5600 ثنائية القناة، يُبقي مساعد 7B سريع الاستجابة إلى جانب Home Assistant.',
+        image: '/images/beelink-ser8-local-ai-review-llm-model-fit-en.svg',
+        imageCaption: 'مدى ملاءمة نماذج LLM المحلية على Beelink SER8 بذاكرة 32 GB: نموذج 7B (Q4) مريح، و13B–14B (Q4) قابل للاستخدام لكنه أبطأ، و32B (Q4) ضيق وبطيء، و70B لا يتسع.',
         items: [
           'يعمل Ollama وLM Studio وllama.cpp بشكل جيد؛ ويُستخدم 780M عبر خلفيات Vulkan أو ROCm.',
           'نموذج 7B هو نقطة التوازن المريحة؛ ونموذج 13B–14B يصلح للاستخدام غير التفاعلي لكنه يبدو أبطأ.',
