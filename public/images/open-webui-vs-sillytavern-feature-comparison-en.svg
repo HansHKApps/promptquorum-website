@@ -1,0 +1,49 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Open WebUI vs SillyTavern: Feature Comparison</text>
+
+  <!-- Header row -->
+  <text x="30" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">Feature</text>
+  <text x="290" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#6750A4">Open WebUI</text>
+  <text x="550" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#7D5260">SillyTavern</text>
+  <line x1="18" y1="74" x2="782" y2="74" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Installation -->
+  <text x="30" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Installation</text>
+  <text x="290" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#49454F">Docker or pip (5 min)</text>
+  <text x="550" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#49454F">Node.js + browser (10 min)</text>
+  <line x1="18" y1="110" x2="782" y2="110" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Multi-User -->
+  <text x="30" y="136" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Multi-User Support</text>
+  <text x="290" y="136" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#34A853">✓ Built-in</text>
+  <text x="550" y="136" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#EA4335">✗ Single-user only</text>
+  <line x1="18" y1="146" x2="782" y2="146" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: Character Cards -->
+  <text x="30" y="172" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Character Cards</text>
+  <text x="290" y="172" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#49454F">Basic system prompts</text>
+  <text x="550" y="172" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#34A853">✓ Full JSON cards</text>
+  <line x1="18" y1="182" x2="782" y2="182" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Team Deployment -->
+  <text x="30" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Team Deployment</text>
+  <text x="290" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#34A853">✓ Server mode, API keys</text>
+  <text x="550" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#EA4335">✗ Requires workarounds</text>
+  <line x1="18" y1="218" x2="782" y2="218" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: Customization -->
+  <text x="30" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Customization</text>
+  <text x="290" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#49454F">Plugins, basic theming</text>
+  <text x="550" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#7D5260">✓✓ Deep UI/layout</text>
+  <line x1="18" y1="254" x2="782" y2="254" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 6: Backend Support -->
+  <text x="30" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Backend Support</text>
+  <text x="290" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#49454F">Ollama, vLLM, llama.cpp</text>
+  <text x="550" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#49454F">Ollama, vLLM, llama.cpp</text>
+  <line x1="18" y1="290" x2="782" y2="290" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="400" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Open WebUI wins on multi-user access and team deployment; SillyTavern wins on character cards and</text>
+  <text x="400" y="343" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">customization depth. Backend support (Ollama, vLLM, llama.cpp) and inference speed are identical.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
