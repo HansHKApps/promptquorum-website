@@ -6169,6 +6169,26 @@
     "width": 800,
     "height": 420
   },
+  "/images/best-saudi-arabic-local-llms-allam-2026-aralingbench-score-gap-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-saudi-arabic-local-llms-allam-2026-aralingbench-score-gap-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-saudi-arabic-local-llms-allam-2026-vram-by-model-size-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-saudi-arabic-local-llms-allam-2026-vram-by-model-size-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/budget-builds-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,

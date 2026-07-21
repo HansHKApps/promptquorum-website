@@ -1,0 +1,37 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Local LLM VRAM Requirements by Model Size (Q4_K_M)</text>
+
+  <text x="155" y="97" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="end">7B</text>
+  <rect x="238.4" y="78" width="22.8" height="28" rx="4" fill="#34A853"/>
+  <text x="271.2" y="97" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">6–8 GB</text>
+
+  <text x="155" y="149" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="end">13B</text>
+  <rect x="284" y="130" width="45.6" height="28" rx="4" fill="#34A853"/>
+  <text x="339.6" y="149" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">10–14 GB</text>
+
+  <text x="155" y="201" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="end">34B</text>
+  <rect x="398" y="182" width="45.6" height="28" rx="4" fill="#F4B400"/>
+  <text x="453.6" y="201" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">20–24 GB</text>
+
+  <text x="155" y="253" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="end">70B</text>
+  <rect x="626" y="234" width="91.2" height="28" rx="4" fill="#EA4335"/>
+  <text x="727.2" y="253" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">40–48 GB</text>
+
+  <line x1="170" y1="290" x2="740" y2="290" stroke="#E8DEF8" stroke-width="1.5"/>
+  <line x1="170" y1="285" x2="170" y2="295" stroke="#79747E" stroke-width="1"/>
+  <line x1="284" y1="285" x2="284" y2="295" stroke="#79747E" stroke-width="1"/>
+  <line x1="398" y1="285" x2="398" y2="295" stroke="#79747E" stroke-width="1"/>
+  <line x1="512" y1="285" x2="512" y2="295" stroke="#79747E" stroke-width="1"/>
+  <line x1="626" y1="285" x2="626" y2="295" stroke="#79747E" stroke-width="1"/>
+  <line x1="740" y1="285" x2="740" y2="295" stroke="#79747E" stroke-width="1"/>
+  <text x="170" y="312" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">0</text>
+  <text x="284" y="312" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">10</text>
+  <text x="398" y="312" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">20</text>
+  <text x="512" y="312" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">30</text>
+  <text x="626" y="312" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">40</text>
+  <text x="740" y="312" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">50 GB</text>
+
+  <text x="400" y="345" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">ALLaM ships only a 7B model publicly (6–8 GB) — comparable 34B/70B-class Arabic-capable</text>
+  <text x="400" y="363" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">models need workstation-class or multi-GPU hardware to run locally at Q4_K_M.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
