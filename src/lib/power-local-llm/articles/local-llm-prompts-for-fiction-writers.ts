@@ -188,6 +188,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Scene-Writing Templates (Templates 1–2)',
         content:
           '**The 5-part scene template is the foundation: genre + POV + sensory anchor + emotional beat + word ceiling.** Every element does specific work — remove any one and output quality drops measurably.',
+        image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
+        imageCaption:
+          '5-part scene prompt structure for local LLM fiction: genre, POV, sensory anchor, emotional beat, and a 150–400 word ceiling — each constraint is load-bearing.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -337,6 +340,9 @@ Character 3: [Name — background and relationship to the news in one sentence]`
         title: 'Worldbuilding Templates (Templates 8–9)',
         content:
           '**Worldbuilding prompts work best with the concentric ring structure: anchor to one sensory detail, expand outward.** Starting with "describe my fantasy city" produces a catalogue. Starting with "the smell of the market at dawn" produces a world the reader inhabits.',
+        image: '/images/local-llm-prompts-fiction-writers-worldbuilding-rings-en.svg',
+        imageCaption:
+          'Concentric ring expansion for worldbuilding prompts: anchor, room, building, street, district — naming a stop ring prevents the model from summarising the entire world.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -807,6 +813,9 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: 'Szenen-Vorlagen (Vorlagen 1–2)',
         content:
           '**Die 5-teilige Szenen-Vorlage ist die Grundlage: Genre + POV + Sinnes-Anker + emotionaler Beat + Wort-Obergrenze.** Jedes Element leistet spezifische Arbeit — entferne eines davon und die Ausgabequalität sinkt messbar.',
+        image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
+        imageCaption:
+          '5-teilige Szenen-Prompt-Struktur für lokale LLM-Fiction: Genre, POV, Sinnes-Anker, emotionaler Beat und eine Wort-Obergrenze von 150–400 Wörtern — jede Einschränkung ist tragend.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -956,6 +965,9 @@ Character 3: [Name — background and relationship to the news in one sentence]`
         title: 'Weltenbau-Vorlagen (Vorlagen 8–9)',
         content:
           '**Weltenbau-Prompts funktionieren am besten mit der konzentrischen Ring-Struktur: An einem Sinnesdetail verankern und nach außen expandieren.** Mit „Beschreibe meine Fantasy-Stadt" beginnen erzeugt einen Katalog. Mit „der Geruch des Marktes bei Morgengrauen" beginnen erzeugt eine Welt, die der Leser bewohnt.',
+        image: '/images/local-llm-prompts-fiction-writers-worldbuilding-rings-en.svg',
+        imageCaption:
+          'Konzentrische Ring-Erweiterung für Worldbuilding-Prompts: Anker, Raum, Gebäude, Straße, Bezirk — ein benannter Stopp-Ring verhindert, dass das Modell die gesamte Welt zusammenfasst.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1435,6 +1447,9 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: 'Modèles pour l\'écriture de scènes (Modèles 1–2)',
         content:
           '**Le modèle de scène en 5 parties est le fondement : genre + PDV + ancre sensorielle + beat émotionnel + plafond de mots.** Chaque élément fait un travail spécifique — enlever n\'importe lequel et la qualité de sortie chute de façon mesurable.',
+        image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
+        imageCaption:
+          'Structure de prompt de scène en 5 parties pour la fiction en LLM local : genre, point de vue, ancrage sensoriel, beat émotionnel et un plafond de 150 à 400 mots — chaque contrainte est essentielle.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1584,6 +1599,9 @@ Character 3: [Name — background and relationship to the news in one sentence]`
         title: 'Modèles de construction de monde (Modèles 8–9)',
         content:
           '**Les prompts de construction de monde fonctionnent mieux avec la structure en anneaux concentriques : ancrer à un détail sensoriel, élargir vers l\'extérieur.** Commencer par "décris ma ville fantastique" produit un catalogue. Commencer par "l\'odeur du marché à l\'aube" produit un monde que le lecteur habite.',
+        image: '/images/local-llm-prompts-fiction-writers-worldbuilding-rings-en.svg',
+        imageCaption:
+          'Expansion en anneaux concentriques pour les prompts de worldbuilding : ancrage, pièce, bâtiment, rue, quartier — nommer un anneau d\'arrêt empêche le modèle de résumer le monde entier.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2063,6 +2081,9 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: 'シーン執筆テンプレート（テンプレート1〜2）',
         content:
           '**5パートのシーンテンプレートが基盤です：ジャンル＋POV＋感覚的アンカー＋感情的ビート＋語数上限。** 各要素は特定の働きをします——どれか1つを取り除くと出力品質は測定可能なほど低下します。',
+        image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
+        imageCaption:
+          'ローカルLLMフィクション向けの5要素シーン・プロンプト構造:ジャンル、視点(POV)、感覚アンカー、感情のビート、150〜400語の上限—各要素が不可欠。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2212,6 +2233,9 @@ Character 3: [Name — background and relationship to the news in one sentence]`
         title: '世界構築テンプレート（テンプレート8〜9）',
         content:
           '**世界構築プロンプトは同心円状リング構造で最もよく機能します：1つの感覚的詳細に固定し、外側に広げます。** 「私のファンタジー都市を描写して」で始めるとカタログになります。「夜明けの市場の臭い」で始めると、読者が住む世界になります。',
+        image: '/images/local-llm-prompts-fiction-writers-worldbuilding-rings-en.svg',
+        imageCaption:
+          'ワールドビルディング・プロンプトのための同心円拡張:アンカー、部屋、建物、通り、地区—停止リングを指定することで、モデルが世界全体を要約してしまうのを防ぐ。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2691,6 +2715,9 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: '场景写作模板（模板1–2）',
         content:
           '**5部分场景模板是基础：类型+POV+感官锚点+情感节拍+字数上限。** 每个元素都承担着具体的工作——去掉任何一个，输出质量都会明显下降。',
+        image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
+        imageCaption:
+          '本地LLM小说写作的5要素场景提示结构:类型、视角(POV)、感官锚点、情感节点、150–400字上限——每个要素都不可或缺。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2840,6 +2867,9 @@ Character 3: [Name — background and relationship to the news in one sentence]`
         title: '世界构建模板（模板8–9）',
         content:
           '**世界构建提示词用同心圆结构效果最好：锚定一个感官细节，向外展开。** 从"描述我的奇幻城市"开始会产出目录。从"黎明市场的气味"开始会产出读者所栖居的世界。',
+        image: '/images/local-llm-prompts-fiction-writers-worldbuilding-rings-en.svg',
+        imageCaption:
+          '世界观构建提示的同心圆扩展法:锚点、房间、建筑、街道、地区——明确指定停止环可防止模型对整个世界进行概括总结。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3319,6 +3349,9 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: 'Plantillas de escritura de escenas (Plantillas 1–2)',
         content:
           '**La plantilla de escena de 5 partes es el fundamento: género + POV + ancla sensorial + beat emocional + límite de palabras.** Cada elemento realiza un trabajo específico — elimina cualquiera y la calidad del resultado cae de forma medible.',
+        image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
+        imageCaption:
+          'Estructura de prompt de escena en 5 partes para ficción con LLM local: género, punto de vista, ancla sensorial, beat emocional y un límite de 150–400 palabras — cada restricción es esencial.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3468,6 +3501,9 @@ Character 3: [Name — background and relationship to the news in one sentence]`
         title: 'Plantillas de construcción de mundos (Plantillas 8–9)',
         content:
           '**Los prompts de construcción de mundos funcionan mejor con la estructura de anillos concéntricos: ancla a un detalle sensorial y expándete hacia afuera.** Empezar con "describe mi ciudad de fantasía" produce un catálogo. Empezar con "el olor del mercado al amanecer" produce un mundo que el lector habita.',
+        image: '/images/local-llm-prompts-fiction-writers-worldbuilding-rings-en.svg',
+        imageCaption:
+          'Expansión en anillos concéntricos para prompts de worldbuilding: ancla, habitación, edificio, calle, distrito — nombrar un anillo de parada evita que el modelo resuma el mundo entero.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3953,6 +3989,9 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: 'Modelos de escrita de cenas (Modelos 1–2)',
         content:
           '**O modelo de cena de 5 partes é o fundamento: gênero + POV + âncora sensorial + beat emocional + limite de palavras.** Cada elemento realiza um trabalho específico — remova qualquer um e a qualidade do resultado cai de forma mensurável.',
+        image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
+        imageCaption:
+          'Estrutura de prompt de cena em 5 partes para ficção com LLM local: gênero, ponto de vista, âncora sensorial, beat emocional e um limite de 150–400 palavras — cada restrição é essencial.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4102,6 +4141,9 @@ Character 3: [Name — background and relationship to the news in one sentence]`
         title: 'Modelos de construção de mundos (Modelos 8–9)',
         content:
           '**Os prompts de construção de mundos funcionam melhor com a estrutura de anéis concêntricos: ancore em um detalhe sensorial e expanda para fora.** Começar com "descreva minha cidade de fantasia" produz um catálogo. Começar com "o cheiro do mercado ao amanhecer" produz um mundo que o leitor habita.',
+        image: '/images/local-llm-prompts-fiction-writers-worldbuilding-rings-en.svg',
+        imageCaption:
+          'Expansão em anéis concêntricos para prompts de worldbuilding: âncora, cômodo, edifício, rua, distrito — nomear um anel de parada evita que o modelo resuma o mundo inteiro.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4586,6 +4628,9 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: 'قوالب كتابة المشاهد (القوالب 1–2)',
         content:
           '**قالب المشهد من 5 أجزاء هو الأساس: النوع الأدبي + زاوية الرؤية + المرساة الحسية + النبضة العاطفية + سقف الكلمات.** كل عنصر يؤدي دوراً محدداً — احذف أياً منها وتنخفض جودة المخرج بشكل قابل للقياس.',
+        image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
+        imageCaption:
+          'بنية موجه المشهد المكونة من 5 أجزاء للخيال بنماذج اللغة المحلية: النوع الأدبي، وجهة النظر، المرساة الحسية، اللحظة العاطفية، وسقف كلمات من 150–400 كلمة — كل قيد أساسي.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4735,6 +4780,9 @@ Character 3: [Name — background and relationship to the news in one sentence]`
         title: 'قوالب بناء العوالم (القوالب 8–9)',
         content:
           '**أوامر بناء العوالم تعمل بشكل أفضل مع هيكل الحلقات المتحدة المركز: أرسِّخ في تفصيل حسي وتوسَّع للخارج.** البدء بـ"صف مدينتي الخيالية" يُنتج فهرساً. البدء بـ"رائحة السوق عند الفجر" يُنتج عالماً يسكنه القارئ.',
+        image: '/images/local-llm-prompts-fiction-writers-worldbuilding-rings-en.svg',
+        imageCaption:
+          'توسع الحلقات المتحدة المركز لموجهات بناء العالم: المرساة، الغرفة، المبنى، الشارع، الحي — تسمية حلقة التوقف يمنع النموذج من تلخيص العالم بأكمله.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -5219,6 +5267,9 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         title: '장면 쓰기 템플릿 (템플릿 1–2)',
         content:
           '**5부 장면 템플릿이 기초입니다: 장르 + 시점 + 감각적 앵커 + 감정 비트 + 단어 제한.** 각 요소는 특정 역할을 하며 — 어느 것이든 제거하면 출력 품질이 측정 가능하게 떨어집니다.',
+        image: '/images/local-llm-prompts-fiction-writers-scene-structure-en.svg',
+        imageCaption:
+          '로컬 LLM 픽션을 위한 5부 장면 프롬프트 구조: 장르, 시점(POV), 감각적 앵커, 감정적 비트, 150–400단어 상한선—각 제약 조건은 필수적이다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -5368,6 +5419,9 @@ Character 3: [Name — background and relationship to the news in one sentence]`
         title: '세계관 구축 템플릿 (템플릿 8–9)',
         content:
           '**세계관 구축 프롬프트는 동심원 고리 구조로 가장 잘 작동합니다: 감각적 세부 사항에 고정하고 바깥쪽으로 확장합니다.** "내 판타지 도시를 묘사해줘"로 시작하면 목록이 만들어집니다. "새벽 시장의 냄새"로 시작하면 독자가 살아가는 세계가 만들어집니다.',
+        image: '/images/local-llm-prompts-fiction-writers-worldbuilding-rings-en.svg',
+        imageCaption:
+          '월드빌딩 프롬프트를 위한 동심원 확장: 앵커, 방, 건물, 거리, 지구—정지 링을 지정하면 모델이 전체 세계를 요약해버리는 것을 방지한다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
