@@ -16964,6 +16964,26 @@
     "width": 900,
     "height": 500
   },
+  "/images/replace-github-copilot-with-local-llm-cost-comparison-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/replace-github-copilot-with-local-llm-cost-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/replace-github-copilot-with-local-llm-cost-comparison-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/replace-github-copilot-with-local-llm-setup-flow-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 380
+  },
   "/images/rtx-5090-vs-rtx-4090-local-llm-cost-per-token-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,

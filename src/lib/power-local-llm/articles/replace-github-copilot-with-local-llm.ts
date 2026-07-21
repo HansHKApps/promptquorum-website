@@ -133,6 +133,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       costMath: {
         id: 'cost-math',
         title: 'Cost Math (24 Months)',
+        image: '/images/replace-github-copilot-with-local-llm-cost-comparison-en.svg',
+        imageCaption: "Local stack costs $0/month vs GitHub Copilot Pro's $20/month; on an existing RTX 3060 12 GB, the 24-month total is $45 versus $480 — a $435 saving.",
         content: '**On a 24-month horizon, local wins if you already own qualifying hardware or build a new PC under ~$1,500.** Numbers below assume $20/month Copilot Pro and US electricity at $0.16/kWh.',
         rows: [
           { 'Scenario': 'You already own RTX 3060 12 GB', 'Hardware cost': '$0', 'Electricity (24 mo, 2 hr/day)': '~$45', 'Total local cost': '$45', 'Copilot 24-month cost': '$480', 'Savings': '$435' },
@@ -155,6 +157,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       setup: {
         id: 'setup',
         title: 'Setup Walkthrough',
+        image: '/images/replace-github-copilot-with-local-llm-setup-flow-en.svg',
+        imageCaption: '5-step local coding assistant setup: install Ollama, pull Qwen3-Coder 30B (~18 GB), install Continue.dev, connect to localhost:11434, then test autocomplete and chat — 20-30 minutes total.',
         content: 'Total time: 20-30 minutes the first time, including model download. Steps below assume macOS or Linux; Windows is identical except for the Ollama installer.',
         numberedItems: [
           'Install Ollama from ollama.com (one installer; supports macOS, Linux, Windows).',
@@ -432,6 +436,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       costMath: {
         id: 'cost-math',
         title: 'Kostenrechnung (24 Monate)',
+        image: '/images/replace-github-copilot-with-local-llm-cost-comparison-de.svg',
+        imageCaption: 'Der lokale Stack kostet 0 €/Monat gegenüber 20 €/Monat bei GitHub Copilot Pro; mit einer vorhandenen RTX 3060 12 GB betragen die Gesamtkosten über 24 Monate 90 € gegenüber 480 € — eine Ersparnis von 390 €.',
         content: '**Über einen 24-Monats-Zeitraum gewinnt lokal, wenn Sie bereits geeignete Hardware besitzen oder einen neuen PC für ca. 1.100 € bauen.** Die nachfolgenden Zahlen setzen 20 €/Monat Copilot Pro und deutsche Strompreise bei 0,32 €/kWh voraus.',
         rows: [
           { 'Szenario': 'Sie besitzen bereits RTX 3060 12 GB', 'Hardware-Kosten': '0 €', 'Strom (24 Mo., 2 Std./Tag)': 'Ca. 90 €', 'Gesamtkosten lokal': '90 €', 'Copilot 24-Monats-Kosten': '480 €', 'Einsparung': '390 €' },
@@ -454,6 +460,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       setup: {
         id: 'setup',
         title: 'Installations-Anleitung',
+        image: '/images/replace-github-copilot-with-local-llm-setup-flow-en.svg',
+        imageCaption: '5-Schritte-Setup für den lokalen Code-Assistenten: Ollama installieren, Qwen3-Coder 30B (ca. 18 GB) laden, Continue.dev installieren, mit localhost:11434 verbinden, dann Autovervollständigung und Chat testen — insgesamt 20-30 Minuten.',
         content: 'Gesamtzeit: 20–30 Minuten beim ersten Mal, einschließlich Modell-Download. Die folgenden Schritte setzen macOS oder Linux voraus; Windows ist identisch, außer beim Ollama-Installer.',
         numberedItems: [
           'Installieren Sie Ollama von ollama.com (ein Installer; unterstützt macOS, Linux, Windows).',
@@ -738,6 +746,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       costMath: {
         id: 'cost-math',
         title: 'Calcul des coûts (24 mois)',
+        image: '/images/replace-github-copilot-with-local-llm-cost-comparison-fr.svg',
+        imageCaption: "La pile locale coûte 0 €/mois contre 20 €/mois pour GitHub Copilot Pro ; avec une RTX 3060 12 Go déjà possédée, le coût total sur 24 mois est de 66 € contre 480 € — une économie de 414 €.",
         content: '**Sur un horizon de 24 mois, le local gagne si vous possédez déjà du matériel approprié ou construisez un nouveau PC en env. 1 100 €.** Les chiffres ci-dessous supposent 20 €/mois Copilot Pro et l\'électricité française à 0,22 €/kWh.',
         rows: [
           { 'Scénario': 'Vous possédez déjà RTX 3060 12 Go', 'Coût matériel': '0 €', 'Électricité (24 mo., 2 h/jour)': 'env. 66 €', 'Coût total local': '66 €', 'Coût Copilot 24 mois': '480 €', 'Économies': '414 €' },
@@ -760,6 +770,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       setup: {
         id: 'setup',
         title: 'Guide d\'installation',
+        image: '/images/replace-github-copilot-with-local-llm-setup-flow-en.svg',
+        imageCaption: "Configuration en 5 étapes de l'assistant de code local : installer Ollama, télécharger Qwen3-Coder 30B (environ 18 Go), installer Continue.dev, se connecter à localhost:11434, puis tester l'autocomplétion et le chat — 20-30 minutes au total.",
         content: 'Temps total : 20–30 minutes la première fois, incluant le téléchargement du modèle. Les étapes ci-dessous supposent macOS ou Linux ; Windows est identique sauf pour l\'installateur Ollama.',
         numberedItems: [
           'Installez Ollama depuis ollama.com (un installateur ; supporte macOS, Linux, Windows).',
@@ -1036,6 +1048,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       costMath: {
         id: 'cost-math',
         title: 'コスト計算（24 ヶ月）',
+        image: '/images/replace-github-copilot-with-local-llm-cost-comparison-en.svg',
+        imageCaption: 'ローカルスタックは月額 $0、GitHub Copilot Pro は月額 $20。既に所有する RTX 3060 12GB では、24 ヶ月の総費用は $45 対 $480 — $435 の節約。',
         content: '**24 ヶ月の範囲では、既に適格なハードウェアを所有しているか、約 200,000 円の新しい PC を構築する場合、ローカルが勝ちます。** 以下の数字は月額 20 ドル Copilot Pro と日本の電気代 30 円/kWh を想定しています。',
         rows: [
           { 'シナリオ': '既に RTX 3060 12GB を所有', 'ハードウェア費用': '0 円', '電気代（24 ヶ月、1 日 2 時間）': '約 3,300 円', 'ローカル合計費用': '3,300 円', 'Copilot 24 ヶ月費用': '480 ドル', '節約': '約 450 ドル' },
@@ -1058,6 +1072,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       setup: {
         id: 'setup',
         title: 'セットアップガイド',
+        image: '/images/replace-github-copilot-with-local-llm-setup-flow-en.svg',
+        imageCaption: 'ローカルコーディングアシスタントの5ステップセットアップ：Ollamaをインストール、Qwen3-Coder 30B（約18GB）を取得、Continue.devをインストール、localhost:11434に接続、オートコンプリートとチャットをテスト — 合計20〜30分。',
         content: '総時間：初回 20～30 分（モデルダウンロード含む）。以下の手順は macOS または Linux を想定しています；Windows は Ollama インストーラーを除き同じです。',
         numberedItems: [
           'ollama.com から Ollama をインストールします（1 つのインストーラー；macOS、Linux、Windows をサポート）。',
@@ -1334,6 +1350,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       costMath: {
         id: 'cost-math',
         title: '成本计算（24 个月）',
+        image: '/images/replace-github-copilot-with-local-llm-cost-comparison-en.svg',
+        imageCaption: '本地方案每月 $0，对比 GitHub Copilot Pro 每月 $20；若已拥有 RTX 3060 12GB，24 个月总成本为 $45 对比 $480，节省 $435。',
         content: '**在 24 个月周期上，如果你已经拥有合格硬件或在约 1,500 美元以内构建新 PC，本地方案赢。** 下面的数字假设 20 美元/月 Copilot Pro 和美国电费 0.16 美元/kWh。',
         rows: [
           { '场景': '你已拥有 RTX 3060 12GB', '硬件成本': '0 美元', '电费（24 月，日 2 小时）': '约 45 美元', '本地总成本': '45 美元', 'Copilot 24 月成本': '480 美元', '节省': '435 美元' },
@@ -1356,6 +1374,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       setup: {
         id: 'setup',
         title: '设置步骤',
+        image: '/images/replace-github-copilot-with-local-llm-setup-flow-en.svg',
+        imageCaption: '本地编码助手 5 步设置：安装 Ollama、拉取 Qwen3-Coder 30B（约 18 GB）、安装 Continue.dev、连接到 localhost:11434，然后测试自动补全和聊天——总计 20-30 分钟。',
         content: '总时间：首次 20-30 分钟，包括模型下载。下列步骤假设 macOS 或 Linux；Windows 除 Ollama 安装器外相同。',
         numberedItems: [
           '从 ollama.com 安装 Ollama（单个安装器；支持 macOS、Linux、Windows）。',
@@ -1632,6 +1652,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       costMath: {
         id: 'cost-math',
         title: 'Cálculo de costos (24 meses)',
+        image: '/images/replace-github-copilot-with-local-llm-cost-comparison-en.svg',
+        imageCaption: 'El stack local cuesta $0/mes frente a los $20/mes de GitHub Copilot Pro; con una RTX 3060 12 GB ya existente, el costo total en 24 meses es de $45 frente a $480 — un ahorro de $435.',
         content: '**En un horizonte de 24 meses, el stack local gana si ya tienes hardware adecuado o construyes un PC nuevo por menos de ~$1,500.** Las cifras a continuación asumen $20/mes de Copilot Pro y electricidad en EE. UU. a $0.16/kWh.',
         rows: [
           { 'Escenario': 'Ya tienes RTX 3060 12 GB', 'Costo de hardware': '$0', 'Electricidad (24 meses, 2 h/día)': '~$45', 'Costo local total': '$45', 'Costo Copilot 24 meses': '$480', 'Ahorro': '$435' },
@@ -1654,6 +1676,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       setup: {
         id: 'setup',
         title: 'Guía de configuración',
+        image: '/images/replace-github-copilot-with-local-llm-setup-flow-en.svg',
+        imageCaption: 'Configuración en 5 pasos del asistente de código local: instalar Ollama, descargar Qwen3-Coder 30B (~18 GB), instalar Continue.dev, conectar a localhost:11434, luego probar autocompletado y chat — 20-30 minutos en total.',
         content: 'Tiempo total: 20–30 minutos la primera vez, incluyendo la descarga del modelo. Los pasos a continuación asumen macOS o Linux; Windows es idéntico excepto por el instalador de Ollama.',
         numberedItems: [
           'Instala Ollama desde ollama.com (un instalador; soporta macOS, Linux, Windows).',
@@ -1943,6 +1967,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       costMath: {
         id: 'cost-math',
         title: 'Cálculo de custos (24 meses)',
+        image: '/images/replace-github-copilot-with-local-llm-cost-comparison-en.svg',
+        imageCaption: 'O stack local custa $0/mês contra $20/mês do GitHub Copilot Pro; com uma RTX 3060 12GB já existente, o custo total em 24 meses é de $45 contra $480 — uma economia de $435.',
         content: '**Em um horizonte de 24 meses, o stack local vence se você já tem hardware adequado ou monta um PC novo por menos de ~$1.500.** Os números abaixo assumem $20/mês de Copilot Pro e eletricidade nos EUA a $0,16/kWh.',
         rows: [
           { 'Scenario': 'Você já tem uma RTX 3060 12 GB', 'Hardware cost': '$0', 'Electricity (24 mo, 2 hr/day)': '~$45', 'Total local cost': '$45', 'Copilot 24-month cost': '$480', 'Savings': '$435' },
@@ -1965,6 +1991,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       setup: {
         id: 'setup',
         title: 'Guia de configuração',
+        image: '/images/replace-github-copilot-with-local-llm-setup-flow-en.svg',
+        imageCaption: 'Configuração em 5 passos do assistente de código local: instalar o Ollama, baixar o Qwen3-Coder 30B (~18 GB), instalar o Continue.dev, conectar a localhost:11434, depois testar o autocompletar e o chat — 20-30 minutos no total.',
         content: 'Tempo total: 20–30 minutos na primeira vez, incluindo o download do modelo. Os passos abaixo assumem macOS ou Linux; o Windows é idêntico, exceto pelo instalador do Ollama.',
         numberedItems: [
           'Instale o Ollama em ollama.com (um instalador; suporta macOS, Linux, Windows).',
@@ -2255,6 +2283,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       costMath: {
         id: 'cost-math',
         title: 'حساب التكاليف على 24 شهرًا',
+        image: '/images/replace-github-copilot-with-local-llm-cost-comparison-en.svg',
+        imageCaption: 'تكلف الحزمة المحلية $0 شهريًا مقابل $20 شهريًا لـ GitHub Copilot Pro؛ مع امتلاك RTX 3060 12GB مسبقًا، تبلغ التكلفة الإجمالية على 24 شهرًا $45 مقابل $480 — توفير $435.',
         content: [
           'Copilot Pro: $20/شهر × 24 شهرًا = $480.',
           'الحزمة المحلية مع الجهاز الحالي (RTX 3060 بالفعل): تكلفة إضافية $0. التعادل: الشهر 0.',
@@ -2280,6 +2310,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       setup: {
         id: 'setup',
         title: 'دليل الإعداد',
+        image: '/images/replace-github-copilot-with-local-llm-setup-flow-en.svg',
+        imageCaption: 'إعداد مساعد الترميز المحلي بـ 5 خطوات: تثبيت Ollama، سحب Qwen3-Coder 30B (~18 جيجابايت)، تثبيت Continue.dev، الاتصال بـ localhost:11434، ثم اختبار الإكمال التلقائي والمحادثة — 20-30 دقيقة إجمالاً.',
         numberedItems: [
           'ثبّت Ollama من [ollama.ai](https://ollama.ai) على نظام Mac أو Linux أو Windows',
           'نزّل نموذج الكود: `ollama pull qwen3-coder:30b` (18 جيجابايت) أو `ollama pull qwen3-coder:7b` (5 جيجابايت)',
@@ -2576,6 +2608,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       costMath: {
         id: 'cost-math',
         title: '비용 계산(24개월)',
+        image: '/images/replace-github-copilot-with-local-llm-cost-comparison-en.svg',
+        imageCaption: '로컬 스택은 월 $0, GitHub Copilot Pro는 월 $20; 이미 보유한 RTX 3060 12GB 기준 24개월 총비용은 $45 대 $480 — $435 절감.',
         content: '**24개월 기준으로, 적합한 하드웨어를 이미 보유하거나 ~$1,500 이하의 신규 PC를 구성한다면 로컬 스택이 유리합니다.** 아래 수치는 Copilot Pro $20/월 및 미국 전기요금 $0.16/kWh를 가정합니다.',
         rows: [
           { '시나리오': '이미 RTX 3060 12 GB 보유', '하드웨어 비용': '$0', '전기료(24개월, 2시간/일)': '~$45', '로컬 총 비용': '$45', 'Copilot 24개월 비용': '$480', '절감액': '$435' },
@@ -2598,6 +2632,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       setup: {
         id: 'setup',
         title: '설정 가이드',
+        image: '/images/replace-github-copilot-with-local-llm-setup-flow-en.svg',
+        imageCaption: '로컬 코딩 어시스턴트 5단계 설정: Ollama 설치, Qwen3-Coder 30B(~18GB) 다운로드, Continue.dev 설치, localhost:11434 연결, 이후 자동완성과 채팅 테스트 — 총 20-30분 소요.',
         content: '총 소요 시간: 모델 다운로드 포함 첫 번째 20–30분. 아래 단계는 macOS 또는 Linux를 기준으로 하며, Windows는 Ollama 설치 프로그램을 제외하고 동일합니다.',
         numberedItems: [
           'ollama.com에서 Ollama를 설치하십시오(단일 설치 프로그램; macOS, Linux, Windows 지원).',
