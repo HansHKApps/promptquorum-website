@@ -153,6 +153,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         note: 'Speeds measured on PCIe Gen 4 systems. NVLink improves dual-GPU throughput by ~15% on supported cards. Qwen2.5-72B at Q4_K_M with single A100 80 GB on RunPod: 18–22 tok/s.',
+        image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
+        imageCaption:
+          'Qwen model VRAM requirements at Q4_K_M quantization: Qwen3 8B needs 5.2 GB (RTX 3060 12 GB), Qwen3 32B needs 20.1 GB (RTX 4090 24 GB), and Qwen2.5-72B needs 43.5 GB (dual RTX 4090s).',
       },
       dockerSetup: {
         id: 'docker-setup',
@@ -386,6 +389,9 @@ docker run --gpus all \\
             'Qwen2.5-72B occasional: RunPod A40 48 GB ($0.44/hr)',
           ],
         },
+        image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
+        imageCaption:
+          'Self-hosted vs cloud decision tree for Qwen: self-host if using 4+ hours/day (Minisforum UM890 Pro $429 for Qwen3 8B, RTX 4090 build ~$2,800 for Qwen3 32B); use cloud like RunPod A40 48 GB at $0.44/hr for occasional Qwen2.5-72B runs under 4 hours/day.',
       },
       internalLinks: {
         id: 'see-also',
@@ -612,6 +618,9 @@ docker run --gpus all \\
           { '0': 'Qwen3 32B', '1': '20,1 GB', '2': 'RTX 4090 24 GB', '3': '10–14 tok/s', '4': 'Grenzwertig (128 GB RAM)', '5': 'Ja — Single GPU' },
           { '0': 'Qwen2.5-72B', '1': '43,5 GB', '2': 'Dual RTX 4090 (48 GB)', '3': '5–8 tok/s', '4': 'Langsam (128 GB RAM)', '5': 'Nur Multi-GPU oder Cloud' },
         ],
+        image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
+        imageCaption:
+          'Qwen-VRAM-Anforderungen bei Q4_K_M-Quantisierung: Qwen3 8B benötigt 5,2 GB (RTX 3060 12 GB), Qwen3 32B benötigt 20,1 GB (RTX 4090 24 GB), Qwen2.5-72B benötigt 43,5 GB (zwei RTX 4090).',
       },
       dockerSetup: {
         id: 'docker-setup',
@@ -1004,6 +1013,9 @@ docker run --gpus all \\
           { '0': 'Qwen3 32B', '1': '20.1 GB', '2': 'RTX 4090 24GB', '3': '10–14 tok/s', '4': '勉强（128GB RAM）', '5': '是——单GPU' },
           { '0': 'Qwen2.5-72B', '1': '43.5 GB', '2': '双RTX 4090（合计48GB）', '3': '5–8 tok/s', '4': '慢（128GB RAM）', '5': '仅多GPU或云端' },
         ],
+        image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
+        imageCaption:
+          'Qwen模型在Q4_K_M量化下的显存需求：Qwen3 8B需要5.2 GB（RTX 3060 12GB），Qwen3 32B需要20.1 GB（RTX 4090 24GB），Qwen2.5-72B需要43.5 GB（双RTX 4090）。',
       },
       faq: {
         id: 'faq',
@@ -1218,6 +1230,9 @@ docker run --gpus all \\
           },
         ],
         note: 'Velocidades medidas en sistemas PCIe Gen 4. NVLink mejora el rendimiento en configuraciones dual-GPU ~15% en tarjetas compatibles. Qwen2.5-72B con Q4_K_M en un A100 80 GB único en RunPod: 18–22 tok/s.',
+        image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
+        imageCaption:
+          'Requisitos de VRAM de los modelos Qwen con cuantización Q4_K_M: Qwen3 8B necesita 5,2 GB (RTX 3060 12 GB), Qwen3 32B necesita 20,1 GB (RTX 4090 24 GB) y Qwen2.5-72B necesita 43,5 GB (dos RTX 4090).',
       },
       dockerSetup: {
         id: 'docker-setup',
@@ -1451,6 +1466,9 @@ docker run --gpus all \\
             'Qwen2.5-72B ocasional: RunPod A40 48 GB ($0,44/hr)',
           ],
         },
+        image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
+        imageCaption:
+          'Árbol de decisión autoalojado vs nube para Qwen: autoaloja si usas 4+ horas/día (Minisforum UM890 Pro $429 para Qwen3 8B, build RTX 4090 ~$2.800 para Qwen3 32B); usa la nube como RunPod A40 48 GB a $0,44/hr para Qwen2.5-72B ocasional, menos de 4 horas/día.',
       },
       internalLinks: {
         id: 'see-also',
@@ -1753,6 +1771,9 @@ docker run --gpus all \\
           },
         ],
         note: 'Velocidades medidas em sistemas PCIe Gen 4. O NVLink melhora a vazão em configurações dual-GPU em ~15% nas placas compatíveis. Qwen2.5-72B com Q4_K_M em um A100 80 GB único na RunPod: 18–22 tok/s.',
+        image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
+        imageCaption:
+          'Requisitos de VRAM dos modelos Qwen com quantização Q4_K_M: Qwen3 8B precisa de 5,2 GB (RTX 3060 12 GB), Qwen3 32B precisa de 20,1 GB (RTX 4090 24 GB) e Qwen2.5-72B precisa de 43,5 GB (duas RTX 4090).',
       },
       dockerSetup: {
         id: 'docker-setup',
@@ -1986,6 +2007,9 @@ docker run --gpus all \\
             'Qwen2.5-72B ocasional: RunPod A40 48 GB (US$ 0,44/h)',
           ],
         },
+        image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
+        imageCaption:
+          'Árvore de decisão auto-hospedado vs nuvem para o Qwen: auto-hospede se usar 4+ horas/dia (Minisforum UM890 Pro US$ 429 para o Qwen3 8B, build RTX 4090 ~US$ 2.800 para o Qwen3 32B); use a nuvem como a RunPod A40 48 GB a US$ 0,44/h para o Qwen2.5-72B ocasional, abaixo de 4 horas/dia.',
       },
       internalLinks: {
         id: 'see-also',
@@ -2253,6 +2277,9 @@ docker run --gpus all \\
           { 'النموذج': 'Qwen2.5-72B', 'VRAM المطلوبة': '48+ جيجابايت', 'الجهاز الموصى به': 'RTX 4090 × 2 أو GPU سحابي', 'السرعة (Q4_K_M)': '~5–8 رمز/ثانية', 'تكلفة GPU (USD)': '$3,800+ أو $0.44/ساعة' },
         ],
         note: 'أرقام السرعة من إعدادات Ollama + Docker الفعلية على نظام Linux مع تشغيل حاوية واحدة للاستدلال.',
+        image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
+        imageCaption:
+          'متطلبات VRAM لنماذج Qwen بتكميم Q4_K_M: يحتاج Qwen3 8B إلى 5.2 جيجابايت (RTX 3060 12 جيجابايت)، ويحتاج Qwen3 32B إلى 20.1 جيجابايت (RTX 4090 24 جيجابايت)، ويحتاج Qwen2.5-72B إلى 43.5 جيجابايت (RTX 4090 × 2).',
       },
       dockerSetup: {
         id: 'docker-setup',
@@ -2384,6 +2411,9 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
             'أفضل نسبة قيمة/أداء: RTX 4060 Ti 16 جيجابايت + Qwen3 14B',
           ],
         },
+        image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
+        imageCaption:
+          'شجرة قرار الاستضافة الذاتية مقابل السحابة لـQwen: استضف محليًا إذا كان الاستخدام 4+ ساعات/يوم (Minisforum UM890 Pro بسعر 429 دولارًا لـQwen3 8B، أو جهاز RTX 4090 بحوالي 2,800 دولار لـQwen3 32B)؛ استخدم السحابة مثل RunPod A40 48 جيجابايت بسعر 0.44 دولار/ساعة لاستخدام Qwen2.5-72B العرضي أقل من 4 ساعات يوميًا.',
       },
       internalLinks: {
         id: 'internal-links',
@@ -2651,6 +2681,9 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
           },
         ],
         note: 'PCIe Gen 4 시스템 측정 기준. NVLink는 지원 카드의 듀얼 GPU 구성에서 성능을 약 15% 향상시킵니다. RunPod A100 80 GB 단일 카드에서 Qwen2.5-72B Q4_K_M: 18–22 tok/s.',
+        image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
+        imageCaption:
+          'Q4_K_M 양자화 기준 Qwen 모델 VRAM 요구량: Qwen3 8B는 5.2GB(RTX 3060 12GB), Qwen3 32B는 20.1GB(RTX 4090 24GB), Qwen2.5-72B는 43.5GB(RTX 4090 두 장)가 필요합니다.',
       },
       dockerSetup: {
         id: 'docker-setup',
@@ -2884,6 +2917,9 @@ docker run --gpus all \
             '비정기 Qwen2.5-72B: RunPod A40 48 GB ($0.44/시간)',
           ],
         },
+        image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
+        imageCaption:
+          'Qwen 자체 호스팅 vs 클라우드 결정 트리: 하루 4시간 이상 사용 시 자체 호스팅(Qwen3 8B는 Minisforum UM890 Pro $429, Qwen3 32B는 RTX 4090 빌드 약 $2,800); 하루 4시간 미만의 간헐적 Qwen2.5-72B 사용은 RunPod A40 48GB($0.44/시간) 같은 클라우드를 사용하세요.',
       },
       internalLinks: {
         id: 'see-also',
