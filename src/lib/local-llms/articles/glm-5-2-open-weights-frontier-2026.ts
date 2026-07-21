@@ -103,6 +103,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Model', 'Index v4.1', 'Tier'],
         note: 'Independent coding results: Terminal-Bench 2.1 — GLM-5.2 scores 81.0 vs Claude Opus 4.8 at 85.0. SWE-bench Pro — GLM-5.2 at 62.1 (Z.ai-reported point value) lands ahead of GPT-5.5\'s 58.6; independent coverage corroborates that ordering. FrontierSWE — GLM-5.2 at 74.4 (Z.ai-reported point value) beats GPT-5.5 (72.6) and trails Opus 4.8 (75.1) by about one point, an ordering independent reporting confirms. Net independent verdict: GLM-5.2 is the strongest open-source coding model available as of June 2026, but it still trails Claude Opus 4.8 in most head-to-head comparisons (VentureBeat; letsdatascience, June 2026).',
+        image: '/images/glm-5-2-intelligence-index-en.svg',
+        imageCaption: 'Artificial Analysis Intelligence Index v4.1 (June 2026): Claude Fable 5 scores 56, GLM-5.2 scores 51 (#1 open weights, 4th overall), MiniMax-M3 and DeepSeek V4 Pro both score 44, GLM-5.1 scores 40.',
       },
       claimedNumbers: {
         id: 'claimed-numbers',
@@ -128,6 +130,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**The high ~43,000-tokens-per-task output further raises local time and cost.**',
           'For the hardware reality of large local models, see [Running 70B Models on Consumer Hardware](/local-llms/70b-models-consumer-hardware), [Used GPUs for Local LLMs](/local-llms/used-gpus-for-local-llms), the [Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026), and [Apple Silicon M5 for Local LLMs](/local-llms/apple-silicon-m5-local-llm).',
         ],
+        image: '/images/glm-5-2-home-vs-quantized-en.svg',
+        imageCaption: 'Full GLM-5.2 (~744B parameters, ~40B active) needs a multi-GPU server or rented cloud GPU; only 1-bit GGUF quantized builds run on a single consumer GPU or CPU at home, with reduced quality.',
       },
       dataPath: {
         id: 'data-path',
@@ -463,6 +467,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['النموذج', 'Index v4.1', 'الفئة'],
         note: 'نتائج البرمجة المستقلة: Terminal-Bench 2.1 — يسجل GLM-5.2 81.0 مقابل 85.0 لـ Claude Opus 4.8. SWE-bench Pro — يأتي GLM-5.2 بـ 62.1 (قيمة مُبلَّغ عنها من Z.ai) متقدمًا على 58.6 لـ GPT-5.5؛ وتؤكد التغطية المستقلة هذا الترتيب. FrontierSWE — يتفوق GLM-5.2 بـ 74.4 (قيمة مُبلَّغ عنها من Z.ai) على GPT-5.5 (72.6) ويتأخر عن Opus 4.8 (75.1) بنحو نقطة واحدة، وهو ترتيب تؤكده التقارير المستقلة. الحكم المستقل الإجمالي: GLM-5.2 هو أقوى نموذج برمجة مفتوح المصدر متاح اعتبارًا من يونيو 2026، لكنه لا يزال متأخرًا عن Claude Opus 4.8 في معظم المقارنات المباشرة (VentureBeat؛ letsdatascience، يونيو 2026).',
+        image: '/images/glm-5-2-intelligence-index-en.svg',
+        imageCaption: 'مؤشر Artificial Analysis Intelligence Index v4.1 (يونيو 2026): يسجل Claude Fable 5 56 نقطة، ويسجل GLM-5.2 51 نقطة (الأول بين الأوزان المفتوحة، الرابع إجمالًا)، بينما يسجل كل من MiniMax-M3 وDeepSeek V4 Pro 44 نقطة، ويسجل GLM-5.1 40 نقطة.',
       },
       claimedNumbers: {
         id: 'claimed-numbers',
@@ -488,6 +494,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**يرفع الإخراج المرتفع البالغ ~43,000 رمز لكل مهمة الزمن والتكلفة المحليين أكثر.**',
           'للاطلاع على واقع العتاد للنماذج المحلية الكبيرة، راجع [تشغيل نماذج 70B على العتاد الاستهلاكي](/ar/local-llms/70b-models-consumer-hardware)، و[وحدات GPU المستعملة للنماذج المحلية](/ar/local-llms/used-gpus-for-local-llms)، و[دليل عتاد النماذج المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026)، و[Apple Silicon M5 للنماذج المحلية](/ar/local-llms/apple-silicon-m5-local-llm).',
         ],
+        image: '/images/glm-5-2-home-vs-quantized-en.svg',
+        imageCaption: 'النموذج الكامل GLM-5.2 (~744B معامل، ~40B نشط) يحتاج إلى خادم متعدد GPU أو GPU مستأجر؛ فقط نسخ GGUF المكمّمة بمعدل 1-bit تعمل على GPU أو CPU استهلاكي واحد في المنزل، مع جودة أقل.',
       },
       dataPath: {
         id: 'data-path',
@@ -823,6 +831,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Modell', 'Index v4.1', 'Kategorie'],
         note: 'Unabhängige Coding-Ergebnisse: Terminal-Bench 2.1 — GLM-5.2 erreicht 81,0 gegenüber Claude Opus 4.8 mit 85,0. SWE-bench Pro — GLM-5.2 mit 62,1 (von Z.ai gemeldeter Punktwert) liegt vor GPT-5.5 mit 58,6; unabhängige Berichterstattung bestätigt diese Reihenfolge. FrontierSWE — GLM-5.2 mit 74,4 (von Z.ai gemeldeter Punktwert) schlägt GPT-5.5 (72,6) und liegt etwa einen Punkt hinter Opus 4.8 (75,1), eine Reihenfolge, die unabhängige Berichterstattung bestätigt. Unabhängiges Fazit: GLM-5.2 ist das stärkste verfügbare Open-Source-Coding-Modell zum Stand Juni 2026, liegt aber in den meisten Direktvergleichen weiterhin hinter Claude Opus 4.8 (VentureBeat; letsdatascience, Juni 2026).',
+        image: '/images/glm-5-2-intelligence-index-en.svg',
+        imageCaption: 'Artificial Analysis Intelligence Index v4.1 (Juni 2026): Claude Fable 5 erreicht 56 Punkte, GLM-5.2 erreicht 51 Punkte (Platz 1 bei offenen Gewichten, Platz 4 insgesamt), MiniMax-M3 und DeepSeek V4 Pro erreichen je 44 Punkte, GLM-5.1 erreicht 40 Punkte.',
       },
       claimedNumbers: {
         id: 'claimed-numbers',
@@ -848,6 +858,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Die hohe Ausgabe von ~43.000 Token pro Aufgabe erhöht zusätzlich die lokale Zeit und Kosten.**',
           'Zur Hardware-Realität großer lokaler Modelle siehe [70B-Modelle auf Consumer-Hardware ausführen](/de/local-llms/70b-models-consumer-hardware), [Gebrauchte GPUs für lokale LLMs](/de/local-llms/used-gpus-for-local-llms), den [Hardware-Leitfaden für lokale LLMs 2026](/de/local-llms/local-llm-hardware-guide-2026) und [Apple Silicon M5 für lokale LLMs](/de/local-llms/apple-silicon-m5-local-llm).',
         ],
+        image: '/images/glm-5-2-home-vs-quantized-en.svg',
+        imageCaption: 'Das vollständige GLM-5.2 (~744B Parameter, ~40B aktiv) benötigt einen Multi-GPU-Server oder eine gemietete Cloud-GPU; nur 1-Bit-GGUF-quantisierte Builds laufen zu Hause auf einer einzelnen Consumer-GPU oder CPU, mit geringerer Qualität.',
       },
       dataPath: {
         id: 'data-path',
@@ -1207,6 +1219,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Modelo', 'Index v4.1', 'Categoría'],
         note: 'Resultados de programación independientes: Terminal-Bench 2.1 — GLM-5.2 puntúa 81.0 frente a Claude Opus 4.8 con 85.0. SWE-bench Pro — GLM-5.2 con 62.1 (valor reportado por Z.ai) se sitúa por delante del 58.6 de GPT-5.5; la cobertura independiente corrobora ese orden. FrontierSWE — GLM-5.2 con 74.4 (valor reportado por Z.ai) supera a GPT-5.5 (72.6) y queda por detrás de Opus 4.8 (75.1) por cerca de un punto, un orden que la cobertura independiente confirma. Veredicto independiente neto: GLM-5.2 es el modelo de programación de código abierto más fuerte disponible a junio de 2026, pero aún queda por detrás de Claude Opus 4.8 en la mayoría de comparativas directas (VentureBeat; letsdatascience, junio de 2026).',
+        image: '/images/glm-5-2-intelligence-index-en.svg',
+        imageCaption: 'Artificial Analysis Intelligence Index v4.1 (junio de 2026): Claude Fable 5 obtiene 56 puntos, GLM-5.2 obtiene 51 puntos (#1 en pesos abiertos, 4.º en general), MiniMax-M3 y DeepSeek V4 Pro obtienen 44 puntos cada uno, GLM-5.1 obtiene 40 puntos.',
       },
       claimedNumbers: {
         id: 'claimed-numbers',
@@ -1232,6 +1246,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La alta salida de ~43,000 tokens por tarea aumenta aún más el tiempo y el coste locales.**',
           'Para la realidad de hardware de los modelos locales grandes, consulta [Ejecutar modelos de 70B en hardware de consumo](/es/local-llms/70b-models-consumer-hardware), [GPUs usadas para LLMs locales](/es/local-llms/used-gpus-for-local-llms), la [Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026) y [Apple Silicon M5 para LLMs locales](/es/local-llms/apple-silicon-m5-local-llm).',
         ],
+        image: '/images/glm-5-2-home-vs-quantized-en.svg',
+        imageCaption: 'El modelo completo GLM-5.2 (~744B parámetros, ~40B activos) requiere un servidor multi-GPU o una GPU en la nube alquilada; solo las compilaciones GGUF cuantizadas a 1 bit funcionan en una sola GPU o CPU de consumo en casa, con menor calidad.',
       },
       dataPath: {
         id: 'data-path',
@@ -1567,6 +1583,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Modèle', 'Index v4.1', 'Niveau'],
         note: 'Résultats de code indépendants : Terminal-Bench 2.1 — GLM-5.2 obtient 81.0 contre 85.0 pour Claude Opus 4.8. SWE-bench Pro — GLM-5.2 à 62.1 (valeur déclarée par Z.ai) devance GPT-5.5 à 58.6 ; la couverture indépendante confirme cet ordre. FrontierSWE — GLM-5.2 à 74.4 (valeur déclarée par Z.ai) bat GPT-5.5 (72.6) et reste derrière Opus 4.8 (75.1) d\'environ un point, un ordre confirmé par la couverture indépendante. Verdict indépendant net : GLM-5.2 est le modèle de code open-source le plus solide disponible en juin 2026, mais il reste derrière Claude Opus 4.8 dans la plupart des comparaisons directes (VentureBeat ; letsdatascience, juin 2026).',
+        image: '/images/glm-5-2-intelligence-index-en.svg',
+        imageCaption: 'Artificial Analysis Intelligence Index v4.1 (juin 2026) : Claude Fable 5 obtient 56 points, GLM-5.2 obtient 51 points (n°1 en poids ouverts, 4e au global), MiniMax-M3 et DeepSeek V4 Pro obtiennent chacun 44 points, GLM-5.1 obtient 40 points.',
       },
       claimedNumbers: {
         id: 'claimed-numbers',
@@ -1592,6 +1610,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La sortie élevée de ~43 000 tokens par tâche augmente encore le temps et le coût en local.**',
           'Pour la réalité matérielle des grands modèles locaux, voir [Exécuter des modèles 70B sur du matériel grand public](/fr/local-llms/70b-models-consumer-hardware), [GPU d\'occasion pour LLM locaux](/fr/local-llms/used-gpus-for-local-llms), le [Guide du matériel pour LLM locaux 2026](/fr/local-llms/local-llm-hardware-guide-2026) et [Apple Silicon M5 pour LLM locaux](/fr/local-llms/apple-silicon-m5-local-llm).',
         ],
+        image: '/images/glm-5-2-home-vs-quantized-en.svg',
+        imageCaption: 'Le modèle complet GLM-5.2 (~744B de paramètres, ~40B actifs) nécessite un serveur multi-GPU ou un GPU cloud loué ; seules les versions GGUF quantifiées en 1 bit tournent sur un seul GPU ou CPU grand public à la maison, avec une qualité réduite.',
       },
       dataPath: {
         id: 'data-path',
@@ -1927,6 +1947,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['モデル', 'Index v4.1', 'ティア'],
         note: '独立系のコーディング結果：Terminal-Bench 2.1ではGLM-5.2が81.0、Claude Opus 4.8が85.0。SWE-bench ProではGLM-5.2が62.1（Z.ai申告値）でGPT-5.5の58.6を上回り、独立系の報道もその順序を裏付けています。FrontierSWEではGLM-5.2が74.4（Z.ai申告値）でGPT-5.5（72.6）を上回り、Opus 4.8（75.1）に約1ポイント及びません。この順序も独立系の報道で確認されています。独立系の総合的な評価：GLM-5.2は2026年6月時点で利用可能な最も強力なオープンソースのコーディングモデルですが、ほとんどの直接対決ではなおClaude Opus 4.8に及びません（VentureBeat、letsdatascience、2026年6月）。',
+        image: '/images/glm-5-2-intelligence-index-en.svg',
+        imageCaption: 'Artificial Analysis Intelligence Index v4.1（2026年6月）：Claude Fable 5は56点、GLM-5.2は51点（オープンウェイト1位、総合4位）、MiniMax-M3とDeepSeek V4 Proはともに44点、GLM-5.1は40点。',
       },
       claimedNumbers: {
         id: 'claimed-numbers',
@@ -1952,6 +1974,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**タスクあたり約43,000トークンという高い出力**が、ローカルでの時間とコストをさらに押し上げます。',
           '大規模ローカルモデルのハードウェアの現実については、[コンシューマー向けハードウェアで70Bモデルを動かす](/ja/local-llms/70b-models-consumer-hardware)、[ローカルLLM向け中古GPU](/ja/local-llms/used-gpus-for-local-llms)、[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026)、[ローカルLLM向けApple Silicon M5](/ja/local-llms/apple-silicon-m5-local-llm)を参照してください。',
         ],
+        image: '/images/glm-5-2-home-vs-quantized-en.svg',
+        imageCaption: 'GLM-5.2のフル版（総パラメータ約744B、アクティブ約40B）はマルチGPUサーバーかレンタルクラウドGPUが必要。1ビット量子化GGUFビルドのみが家庭用の単一コンシューマーGPUまたはCPUで動作するが、品質は低下する。',
       },
       dataPath: {
         id: 'data-path',
@@ -2287,6 +2311,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['모델', 'Index v4.1', '등급'],
         note: '독립 코딩 결과: Terminal-Bench 2.1 — GLM-5.2는 81.0점, Claude Opus 4.8은 85.0점입니다. SWE-bench Pro — GLM-5.2는 62.1점(Z.ai 보고치)으로 GPT-5.5의 58.6점을 앞서며, 독립 보도도 그 순서를 뒷받침합니다. FrontierSWE — GLM-5.2는 74.4점(Z.ai 보고치)으로 GPT-5.5(72.6점)를 이기고 Opus 4.8(75.1점)에 약 1점 차로 뒤지며, 이 순서는 독립 보도가 확인합니다. 종합 독립 평가: GLM-5.2는 2026년 6월 기준 가장 강력한 오픈 소스 코딩 모델이지만, 대부분의 1대1 비교에서 여전히 Claude Opus 4.8에 뒤집니다(VentureBeat; letsdatascience, 2026년 6월).',
+        image: '/images/glm-5-2-intelligence-index-en.svg',
+        imageCaption: 'Artificial Analysis Intelligence Index v4.1(2026년 6월): Claude Fable 5는 56점, GLM-5.2는 51점(오픈 웨이트 1위, 종합 4위), MiniMax-M3와 DeepSeek V4 Pro는 각각 44점, GLM-5.1은 40점을 기록했다.',
       },
       claimedNumbers: {
         id: 'claimed-numbers',
@@ -2312,6 +2338,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**작업당 약 43,000 토큰의 높은 출력량은 로컬 시간과 비용을 더욱 높입니다.**',
           '대형 로컬 모델의 하드웨어 현실은 [소비자용 하드웨어에서 70B 모델 돌리기](/ko/local-llms/70b-models-consumer-hardware), [로컬 LLM용 중고 GPU](/ko/local-llms/used-gpus-for-local-llms), [로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026), [로컬 LLM용 Apple Silicon M5](/ko/local-llms/apple-silicon-m5-local-llm)를 참고하세요.',
         ],
+        image: '/images/glm-5-2-home-vs-quantized-en.svg',
+        imageCaption: 'GLM-5.2 전체 모델(~744B 파라미터, ~40B 활성)은 멀티 GPU 서버 또는 임대 클라우드 GPU가 필요하다. 1비트 GGUF 양자화 빌드만 가정용 단일 소비자 GPU 또는 CPU에서 실행되며, 품질은 낮아진다.',
       },
       dataPath: {
         id: 'data-path',
@@ -2647,6 +2675,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Modelo', 'Index v4.1', 'Categoria'],
         note: 'Resultados independentes de programação: Terminal-Bench 2.1 — o GLM-5.2 pontua 81.0 contra 85.0 do Claude Opus 4.8. SWE-bench Pro — o GLM-5.2 com 62.1 (valor reportado pela Z.ai) fica à frente dos 58.6 do GPT-5.5; a cobertura independente corrobora essa ordenação. FrontierSWE — o GLM-5.2 com 74.4 (valor reportado pela Z.ai) supera o GPT-5.5 (72.6) e fica atrás do Opus 4.8 (75.1) por cerca de um ponto, uma ordenação que a cobertura independente confirma. Veredito independente líquido: o GLM-5.2 é o modelo de programação de código aberto mais forte disponível em junho de 2026, mas ainda fica atrás do Claude Opus 4.8 na maioria das comparações diretas (VentureBeat; letsdatascience, junho de 2026).',
+        image: '/images/glm-5-2-intelligence-index-en.svg',
+        imageCaption: 'Artificial Analysis Intelligence Index v4.1 (junho de 2026): Claude Fable 5 obtém 56 pontos, GLM-5.2 obtém 51 pontos (#1 em pesos abertos, 4º no geral), MiniMax-M3 e DeepSeek V4 Pro obtêm 44 pontos cada, GLM-5.1 obtém 40 pontos.',
       },
       claimedNumbers: {
         id: 'claimed-numbers',
@@ -2672,6 +2702,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A alta saída de ~43.000 tokens por tarefa eleva ainda mais o tempo e o custo local.**',
           'Para a realidade de hardware dos grandes modelos locais, veja [Rodando modelos 70B em hardware de consumo](/pt/local-llms/70b-models-consumer-hardware), [GPUs usadas para LLMs locais](/pt/local-llms/used-gpus-for-local-llms), o [Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) e [Apple Silicon M5 para LLMs locais](/pt/local-llms/apple-silicon-m5-local-llm).',
         ],
+        image: '/images/glm-5-2-home-vs-quantized-en.svg',
+        imageCaption: 'O modelo completo GLM-5.2 (~744B parâmetros, ~40B ativos) exige um servidor multi-GPU ou uma GPU de nuvem alugada; apenas builds GGUF quantizados em 1 bit rodam em uma única GPU ou CPU de consumo em casa, com qualidade reduzida.',
       },
       dataPath: {
         id: 'data-path',
@@ -3007,6 +3039,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['模型', 'Index v4.1', '梯队'],
         note: '独立编程测评结果：Terminal-Bench 2.1——GLM-5.2 得 81.0，Claude Opus 4.8 为 85.0。SWE-bench Pro——GLM-5.2 为 62.1（Z.ai 自报分值）领先于 GPT-5.5 的 58.6；独立报道印证了这一排序。FrontierSWE——GLM-5.2 为 74.4（Z.ai 自报分值），击败 GPT-5.5（72.6），并以约一分之差落后于 Opus 4.8（75.1），这一排序也得到了独立报道的确认。综合独立结论：GLM-5.2 是截至 2026 年 6 月可获得的最强开源编程模型，但在大多数正面对比中仍落后于 Claude Opus 4.8（VentureBeat；letsdatascience，2026 年 6 月）。',
+        image: '/images/glm-5-2-intelligence-index-en.svg',
+        imageCaption: 'Artificial Analysis Intelligence Index v4.1（2026年6月）：Claude Fable 5得分56，GLM-5.2得分51（开源权重第一，综合第四），MiniMax-M3和DeepSeek V4 Pro均为44分，GLM-5.1为40分。',
       },
       claimedNumbers: {
         id: 'claimed-numbers',
@@ -3032,6 +3066,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**每项任务约 43,000 token 的高输出量进一步推高了本地的时间与成本。**',
           '关于大型本地模型的硬件现实，参见 [在消费级硬件上运行 70B 模型](/zh/local-llms/70b-models-consumer-hardware)、[本地 LLM 二手 GPU](/zh/local-llms/used-gpus-for-local-llms)、[本地 LLM 硬件指南 2026](/zh/local-llms/local-llm-hardware-guide-2026)，以及 [Apple Silicon M5 本地 LLM](/zh/local-llms/apple-silicon-m5-local-llm)。',
         ],
+        image: '/images/glm-5-2-home-vs-quantized-en.svg',
+        imageCaption: '完整版GLM-5.2（约744B参数，约40B激活参数）需要多GPU服务器或租用云GPU；只有1比特量化的GGUF版本才能在家用单张消费级GPU或CPU上运行，但质量会降低。',
       },
       dataPath: {
         id: 'data-path',
