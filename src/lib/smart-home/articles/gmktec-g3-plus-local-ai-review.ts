@@ -107,12 +107,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Two storage slots — one NVMe (PCIe 3.0) and one SATA (M.2 2242) — allow a fast OS drive plus bulk storage.',
           'USB-A port speed varies by source and SKU (5–10 Gbps); confirm on the listing you buy.',
         ],
+        image: '/images/gmktec-g3-plus-spec-comparison-en.svg',
+        imageCaption: 'GMKtec G3 Plus vs Beelink EQ14 spec comparison: 32 GB RAM ceiling and one 2.5GbE port on the G3 Plus versus 16 GB and two 2.5GbE ports on the EQ14, both at roughly $180–230.',
       },
       localAi: {
         id: 'local-ai',
         title: 'Local AI & LLM Performance',
         content:
           '**A 1B–8B model at 4-bit fits on the G3 Plus; a 7–8B model is usable but slow, and the 32 GB RAM option allows a larger context or a ~13B model at low throughput — all figures estimated from the verified hardware, not a measured benchmark.** As with any N150 box, single-channel DDR4 bandwidth and the lack of an NPU are the limits.',
+        image: '/images/gmktec-g3-plus-model-fit-by-ram-en.svg',
+        imageCaption: 'Local model fit on the GMKtec G3 Plus by RAM: 1B–3B models need about 4 GB and run fast, 7B–8B need about 8 GB and run slow on the 16 GB base, and a ~13B model needs about 15 GB and requires the 32 GB upgrade.',
         items: [
           'Good for lightweight local assistants, summarization, and automations on small models.',
           'Upgrading to 32 GB helps context length more than raw speed — the memory bandwidth is unchanged.',
@@ -339,12 +343,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Zwei Speichersteckplätze — ein NVMe (PCIe 3.0) und ein SATA (M.2 2242) — erlauben eine schnelle Systemplatte plus Massenspeicher.',
           'Die USB-A-Geschwindigkeit variiert je nach Quelle und SKU (5–10 Gbit/s); prüfen Sie das Angebot, das Sie kaufen.',
         ],
+        image: '/images/gmktec-g3-plus-spec-comparison-en.svg',
+        imageCaption: 'GMKtec G3 Plus im Vergleich zum Beelink EQ14: 32 GB RAM-Obergrenze und ein 2,5GbE-Port beim G3 Plus gegenüber 16 GB und zwei 2,5GbE-Ports beim EQ14, beide für etwa 180–230 $ (Richtwert Juli 2026).',
       },
       localAi: {
         id: 'local-ai',
         title: 'Lokale KI & LLM-Leistung',
         content:
           '**Ein 1B–8B-Modell in 4-Bit passt auf den G3 Plus; ein 7–8B-Modell ist nutzbar, aber langsam, und die 32-GB-RAM-Option erlaubt einen größeren Kontext oder ein ~13B-Modell mit geringem Durchsatz — alle Werte sind aus der geprüften Hardware geschätzt, kein gemessener Benchmark.** Wie bei jeder N150-Box sind die Single-Channel-DDR4-Bandbreite und das fehlende NPU die Grenzen.',
+        image: '/images/gmktec-g3-plus-model-fit-by-ram-en.svg',
+        imageCaption: 'Lokale Modellgröße nach RAM auf dem G3 Plus: 1B–3B-Modelle benötigen etwa 4 GB und laufen schnell, 7B–8B benötigen etwa 8 GB und laufen mit der 16-GB-Basis langsam, ein ~13B-Modell benötigt etwa 15 GB und erfordert das 32-GB-Upgrade.',
         items: [
           'Gut für schlanke lokale Assistenten, Zusammenfassungen und Automatisierungen mit kleinen Modellen.',
           'Die Aufrüstung auf 32 GB hilft der Kontextlänge mehr als der reinen Geschwindigkeit — die Speicherbandbreite bleibt unverändert.',
@@ -573,12 +581,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Deux emplacements de stockage — un NVMe (PCIe 3.0) et un SATA (M.2 2242) — permettent un disque système rapide plus du stockage de masse.',
           'La vitesse des ports USB-A varie selon la source et la référence (5–10 Gbit/s) ; vérifiez sur l\'annonce que vous achetez.',
         ],
+        image: '/images/gmktec-g3-plus-spec-comparison-en.svg',
+        imageCaption: 'GMKtec G3 Plus face au Beelink EQ14 : plafond de 32 Go de RAM et un port 2,5GbE sur le G3 Plus contre 16 Go et deux ports 2,5GbE sur l\'EQ14, tous deux autour de 180–230 $ (indicatif, juillet 2026).',
       },
       localAi: {
         id: 'local-ai',
         title: 'IA locale et performances LLM',
         content:
           '**Un modèle 1B–8B en 4-bit tient sur le G3 Plus ; un modèle 7–8B est utilisable mais lent, et l\'option 32 Go de RAM autorise un contexte plus large ou un modèle ~13B à faible débit — tous ces chiffres sont estimés d\'après le matériel vérifié, pas un benchmark mesuré.** Comme pour tout boîtier N150, la bande passante DDR4 mono-canal et l\'absence de NPU sont les limites.',
+        image: '/images/gmktec-g3-plus-model-fit-by-ram-en.svg',
+        imageCaption: 'Taille de modèle local selon la RAM sur le G3 Plus : les modèles 1B–3B nécessitent environ 4 Go et tournent vite, les 7B–8B nécessitent environ 8 Go et tournent lentement sur la base 16 Go, et un modèle ~13B nécessite environ 15 Go et exige la mise à niveau à 32 Go.',
         items: [
           'Bon pour des assistants locaux légers, la synthèse et les automatisations sur de petits modèles.',
           'Passer à 32 Go aide davantage la longueur de contexte que la vitesse brute — la bande passante mémoire reste inchangée.',
@@ -805,12 +817,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Dos ranuras de almacenamiento — una NVMe (PCIe 3.0) y una SATA (M.2 2242) — permiten un disco de sistema rápido más almacenamiento masivo.',
           'La velocidad de los puertos USB-A varía según la fuente y la referencia (5–10 Gbps); confírmalo en el anuncio que compres.',
         ],
+        image: '/images/gmktec-g3-plus-spec-comparison-en.svg',
+        imageCaption: 'GMKtec G3 Plus frente al Beelink EQ14: techo de 32 GB de RAM y un puerto 2.5GbE en el G3 Plus frente a 16 GB y dos puertos 2.5GbE en el EQ14, ambos por unos 180–230 $ (indicativo, julio 2026).',
       },
       localAi: {
         id: 'local-ai',
         title: 'IA local y rendimiento LLM',
         content:
           '**Un modelo de 1B–8B en 4-bit entra en el G3 Plus; un modelo de 7–8B es usable pero lento, y la opción de 32 GB de RAM permite un contexto mayor o un modelo ~13B con bajo rendimiento — todas las cifras están estimadas a partir del hardware verificado, no son un benchmark medido.** Como en cualquier caja N150, el ancho de banda DDR4 de un solo canal y la falta de NPU son los límites.',
+        image: '/images/gmktec-g3-plus-model-fit-by-ram-en.svg',
+        imageCaption: 'Ajuste de modelo local según la RAM en el G3 Plus: los modelos 1B–3B necesitan unos 4 GB y van rápido, los 7B–8B necesitan unos 8 GB y van lentos con la base de 16 GB, y un modelo ~13B necesita unos 15 GB y requiere la ampliación a 32 GB.',
         items: [
           'Bueno para asistentes locales ligeros, resúmenes y automatizaciones con modelos pequeños.',
           'Subir a 32 GB ayuda más a la longitud de contexto que a la velocidad bruta — el ancho de banda de memoria no cambia.',
@@ -1037,12 +1053,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ストレージスロットは2つ — NVMe（PCIe 3.0）と SATA（M.2 2242）— で、高速な OS ドライブと大容量ストレージを両立できます。',
           'USB-A ポートの速度はソースや SKU により異なります（5〜10 Gbps）。購入する商品ページで確認してください。',
         ],
+        image: '/images/gmktec-g3-plus-spec-comparison-en.svg',
+        imageCaption: 'GMKtec G3 Plus と Beelink EQ14 の仕様比較：G3 Plus は32 GBのRAM上限と2.5GbEポート1つ、EQ14は16 GBと2.5GbEポート2つ、価格はどちらも約$180〜230（2026年7月目安）。',
       },
       localAi: {
         id: 'local-ai',
         title: 'ローカルAI・LLM 性能',
         content:
           '**1B〜8B の 4-bit モデルは G3 Plus に収まり、7〜8B モデルは使えるが低速です。32 GB の RAM オプションでは、より長いコンテキストや低スループットの ~13B モデルが可能になります — いずれの数値も検証済みハードウェアからの推定であり、実測ベンチマークではありません。** どの N150 機とも同様に、シングルチャネル DDR4 の帯域幅と NPU の非搭載が限界となります。',
+        image: '/images/gmktec-g3-plus-model-fit-by-ram-en.svg',
+        imageCaption: 'G3 Plus における RAM 別のローカルモデル適合性：1B〜3B モデルは約4 GBで高速動作、7B〜8B は約8 GBで16 GBベース構成では低速、〜13B モデルは約15 GBで32 GBへの増設が必要。',
         items: [
           '軽量なローカルアシスタント、要約、小型モデルでの自動化に適しています。',
           '32 GB への増設は、生の速度よりコンテキスト長に効きます — メモリ帯域幅は変わりません。',
@@ -1269,12 +1289,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '两个存储插槽——一个 NVMe（PCIe 3.0）和一个 SATA（M.2 2242）——可实现高速系统盘加大容量存储。',
           'USB-A 端口速度因来源和 SKU 而异（5–10 Gbps）；请在你购买的商品页确认。',
         ],
+        image: '/images/gmktec-g3-plus-spec-comparison-en.svg',
+        imageCaption: 'GMKtec G3 Plus 与 Beelink EQ14 规格对比：G3 Plus 拥有 32 GB 内存上限和单个 2.5GbE 端口，EQ14 为 16 GB 和两个 2.5GbE 端口，两者价格均约 $180–230。',
       },
       localAi: {
         id: 'local-ai',
         title: '本地 AI 与 LLM 性能',
         content:
           '**1B–8B 的 4-bit 模型可装入 G3 Plus；7–8B 模型可用但慢，32 GB 内存选项可支持更长上下文或以低吞吐运行约 13B 模型——所有数字均据核实过的硬件估算，并非实测基准。** 与任何 N150 主机一样，单通道 DDR4 带宽和缺少 NPU 是瓶颈。',
+        image: '/images/gmktec-g3-plus-model-fit-by-ram-en.svg',
+        imageCaption: 'G3 Plus 按内存配置的本地模型适配情况：1B–3B 模型约需 4 GB 且运行快速，7B–8B 约需 8 GB 在 16 GB 基础配置下运行较慢，约 13B 模型约需 15 GB 且需要升级到 32 GB。',
         items: [
           '适合轻量本地助手、摘要以及基于小型模型的自动化。',
           '升级到 32 GB 对上下文长度的帮助大于原始速度——内存带宽不变。',
@@ -1501,12 +1525,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '저장장치 슬롯 두 개 — NVMe(PCIe 3.0)와 SATA(M.2 2242) — 로 빠른 OS 드라이브와 대용량 저장을 함께 구성할 수 있습니다.',
           'USB-A 포트 속도는 출처와 SKU에 따라 다릅니다(5–10 Gbps). 구매하는 상품 페이지에서 확인하십시오.',
         ],
+        image: '/images/gmktec-g3-plus-spec-comparison-en.svg',
+        imageCaption: 'GMKtec G3 Plus와 Beelink EQ14 사양 비교: G3 Plus는 32 GB RAM 상한과 2.5GbE 포트 1개, EQ14는 16 GB와 2.5GbE 포트 2개이며 가격은 둘 다 약 $180–230입니다.',
       },
       localAi: {
         id: 'local-ai',
         title: '로컬 AI 및 LLM 성능',
         content:
           '**1B–8B 4-bit 모델은 G3 Plus에 적재되며, 7–8B 모델은 쓸 만하지만 느립니다. 32 GB RAM 옵션은 더 긴 컨텍스트나 낮은 처리량의 약 13B 모델을 가능하게 합니다 — 모든 수치는 검증된 하드웨어에서 추정한 값이며 실측 벤치마크가 아닙니다.** 모든 N150 제품과 마찬가지로 싱글 채널 DDR4 대역폭과 NPU 부재가 한계입니다.',
+        image: '/images/gmktec-g3-plus-model-fit-by-ram-en.svg',
+        imageCaption: 'G3 Plus의 RAM 구성별 로컬 모델 적합도: 1B–3B 모델은 약 4 GB로 빠르게 실행되고, 7B–8B는 약 8 GB로 16 GB 기본 구성에서 느리게 실행되며, 약 13B 모델은 약 15 GB로 32 GB 업그레이드가 필요합니다.',
         items: [
           '경량 로컬 어시스턴트, 요약, 소형 모델 기반 자동화에 적합합니다.',
           '32 GB로 업그레이드하면 원시 속도보다 컨텍스트 길이에 더 도움이 됩니다 — 메모리 대역폭은 변하지 않습니다.',
@@ -1733,12 +1761,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Dois slots de armazenamento — um NVMe (PCIe 3.0) e um SATA (M.2 2242) — permitem um disco de sistema rápido mais armazenamento em massa.',
           'A velocidade das portas USB-A varia por fonte e SKU (5–10 Gbps); confirme no anúncio que você comprar.',
         ],
+        image: '/images/gmktec-g3-plus-spec-comparison-en.svg',
+        imageCaption: 'GMKtec G3 Plus comparado ao Beelink EQ14: teto de 32 GB de RAM e uma porta 2.5GbE no G3 Plus contra 16 GB e duas portas 2.5GbE no EQ14, ambos por cerca de US$ 180–230 (indicativo, julho de 2026).',
       },
       localAi: {
         id: 'local-ai',
         title: 'IA local e desempenho de LLM',
         content:
           '**Um modelo de 1B–8B em 4-bit cabe no G3 Plus; um modelo de 7–8B é usável mas lento, e a opção de 32 GB de RAM permite um contexto maior ou um modelo ~13B com baixa vazão — todos os números são estimados a partir do hardware verificado, não um benchmark medido.** Como em qualquer caixa N150, a largura de banda DDR4 de canal único e a falta de NPU são os limites.',
+        image: '/images/gmktec-g3-plus-model-fit-by-ram-en.svg',
+        imageCaption: 'Ajuste de modelo local por configuração de RAM no G3 Plus: modelos de 1B–3B precisam de cerca de 4 GB e rodam rápido, 7B–8B precisam de cerca de 8 GB e rodam devagar na base de 16 GB, e um modelo de ~13B precisa de cerca de 15 GB e exige o upgrade para 32 GB.',
         items: [
           'Bom para assistentes locais leves, resumos e automações em modelos pequenos.',
           'Subir para 32 GB ajuda mais no comprimento de contexto do que na velocidade bruta — a largura de banda de memória não muda.',
@@ -1965,12 +1997,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'منفذا تخزين — أحدهما NVMe (PCIe 3.0) والآخر SATA (M.2 2242) — يتيحان قرص نظام سريعاً إضافةً إلى تخزين كبير.',
           'تختلف سرعة منافذ USB-A حسب المصدر والطراز (5–10 Gbps)؛ تأكد من ذلك في الإعلان الذي تشتريه.',
         ],
+        image: '/images/gmktec-g3-plus-spec-comparison-en.svg',
+        imageCaption: 'مقارنة مواصفات GMKtec G3 Plus مع Beelink EQ14: سقف ذاكرة 32 GB ومنفذ 2.5GbE واحد في G3 Plus مقابل 16 GB ومنفذَي 2.5GbE في EQ14، وكلاهما بسعر يقارب $180–230 (استرشادي، يوليو 2026).',
       },
       localAi: {
         id: 'local-ai',
         title: 'أداء الذكاء الاصطناعي المحلي و LLM',
         content:
           '**نموذج بحجم 1B–8B بترميز 4-bit يعمل على G3 Plus؛ ونموذج 7–8B قابل للاستخدام لكنه بطيء، وخيار 32 GB من الذاكرة يتيح سياقاً أكبر أو نموذجاً بحجم ~13B بإنتاجية منخفضة — وكل الأرقام مقدَّرة من العتاد الذي جرى التحقق منه، لا اختباراً مقاساً.** كما هي الحال في أي جهاز N150، فإن عرض نطاق DDR4 بقناة واحدة وغياب الـ NPU هما الحد.',
+        image: '/images/gmktec-g3-plus-model-fit-by-ram-en.svg',
+        imageCaption: 'ملاءمة النموذج المحلي على G3 Plus حسب سعة الذاكرة: نماذج 1B–8B تحتاج نحو 4 GB وتعمل بسرعة، ونماذج 7B–8B تحتاج نحو 8 GB وتعمل ببطء مع سعة 16 GB الأساسية، ونموذج ~13B يحتاج نحو 15 GB ويتطلب الترقية إلى 32 GB.',
         items: [
           'جيد للمساعدين المحليين خفيفي الوزن، والتلخيص، والأتمتة على النماذج الصغيرة.',
           'الترقية إلى 32 GB تفيد طول السياق أكثر من السرعة الخام — فعرض نطاق الذاكرة لا يتغير.',
