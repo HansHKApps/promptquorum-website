@@ -61,6 +61,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**`ollama serve`** -- Start the REST API server (typically runs automatically).',
             '**`ollama help`** -- Show all available commands.',
           ],
+          image: '/images/ollama-command-guide-command-lifecycle-en.svg',
+          imageCaption: 'Ollama command lifecycle: pull downloads a model (~2.5 GB), run starts an interactive chat, list shows disk usage, and rm frees disk space instantly.',
         },
         managingModels: {
           id: 'managing-models',
@@ -100,6 +102,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Quantization': 'Q3_K_M (3-bit)', 'Size (7B)': '3.3 GB', 'VRAM': '4 GB', 'Quality': 'Fair', 'Speed': 'Fastest' },
           ],
           columns: ['Quantization', 'Size (7B)', 'VRAM', 'Quality', 'Speed'],
+          image: '/images/ollama-command-guide-quantization-vram-en.svg',
+          imageCaption: 'Ollama GGUF quantization VRAM by level for a 7B model: FP16 needs 16 GB, Q8_0 needs 8 GB, Q4_K_M (recommended default) needs 5 GB, and Q3_K_M needs 4 GB.',
         },
         embeddings: {
           id: 'embedding-models',
@@ -309,6 +313,8 @@ schema: {
             '**`ollama serve`** — Inicia o servidor API REST (normalmente executa automaticamente).',
             '**`ollama help`** — Mostra todos os comandos disponíveis.',
           ],
+          image: '/images/ollama-command-guide-command-lifecycle-en.svg',
+          imageCaption: 'Ciclo de vida dos comandos Ollama: pull baixa um modelo (~2,5 GB), run inicia um chat interativo, list mostra o uso de disco e rm libera espaço instantaneamente.',
         },
         managingModels: {
           id: 'managing-models',
@@ -344,6 +350,8 @@ schema: {
             '**Q8 (8-bit):** ~90% do tamanho do modelo, ~0,5% de perda de qualidade. Recomendado quando há VRAM suficiente.',
             '**FP16 (full precision):** 100% do tamanho, sem perda. Apenas se você tiver VRAM/RAM abundante.',
           ],
+          image: '/images/ollama-command-guide-quantization-vram-en.svg',
+          imageCaption: 'VRAM por nível de quantização GGUF do Ollama para um modelo de 7B: FP16 precisa de 16 GB, Q8_0 precisa de 8 GB, Q4_K_M (padrão recomendado) precisa de 5 GB, e Q3_K_M precisa de 4 GB.',
         },
         embeddingModels: {
           id: 'embedding-models',
@@ -493,6 +501,8 @@ schema: {
             '**`ollama serve`** -- REST API-Server starten (läuft normalerweise automatisch).',
             '**`ollama help`** -- Alle verfügbaren Befehle anzeigen.',
           ],
+          image: '/images/ollama-command-guide-command-lifecycle-en.svg',
+          imageCaption: 'Ollama-Befehlszyklus: pull lädt ein Modell herunter (~2,5 GB), run startet einen interaktiven Chat, list zeigt die Speichernutzung, und rm gibt sofort Speicherplatz frei.',
         },
         managingModels: {
           id: 'managing-models',
@@ -532,6 +542,8 @@ schema: {
             { 'Quantisierung': 'Q4_K_M (4-Bit)', 'Größe (7B)': '4,7 GB', 'VRAM': '5 GB', 'Qualität': 'Gut', 'Geschwindigkeit': 'Sehr schnell' },
             { 'Quantisierung': 'Q3_K_M (3-Bit)', 'Größe (7B)': '3,3 GB', 'VRAM': '4 GB', 'Qualität': 'Annehmbar', 'Geschwindigkeit': 'Schnellste' },
           ],
+          image: '/images/ollama-command-guide-quantization-vram-en.svg',
+          imageCaption: 'Ollama GGUF-Quantisierung: VRAM pro Stufe für ein 7B-Modell: FP16 benötigt 16 GB, Q8_0 benötigt 8 GB, Q4_K_M (empfohlener Standard) benötigt 5 GB, Q3_K_M benötigt 4 GB.',
         },
         embeddingModels: {
           id: 'embedding-models',
@@ -726,6 +738,8 @@ schema: {
             '**`ollama serve`** -- Démarrer le serveur API REST (s\'exécute généralement automatiquement).',
             '**`ollama help`** -- Afficher toutes les commandes disponibles.',
           ],
+          image: '/images/ollama-command-guide-command-lifecycle-en.svg',
+          imageCaption: 'Cycle de vie des commandes Ollama : pull télécharge un modèle (~2,5 Go), run démarre une session de chat interactive, list affiche l\'utilisation du disque, et rm libère l\'espace instantanément.',
         },
         managingModels: {
           id: 'managing-models',
@@ -765,6 +779,8 @@ schema: {
             { 'Quantification': 'Q4_K_M (4 bits)', 'Taille (7B)': '4.7 GB', 'VRAM': '5 GB', 'Qualité': 'Bonne', 'Vitesse': 'Très rapide' },
             { 'Quantification': 'Q3_K_M (3 bits)', 'Taille (7B)': '3.3 GB', 'VRAM': '4 GB', 'Qualité': 'Acceptable', 'Vitesse': 'Plus rapide' },
           ],
+          image: '/images/ollama-command-guide-quantization-vram-en.svg',
+          imageCaption: 'Quantification GGUF Ollama : VRAM par niveau pour un modèle de 7B — FP16 nécessite 16 Go, Q8_0 nécessite 8 Go, Q4_K_M (par défaut recommandé) nécessite 5 Go, Q3_K_M nécessite 4 Go.',
         },
         embeddingModels: {
           id: 'embedding-models',
@@ -949,6 +965,8 @@ schema: {
             '**`ollama serve`** -- REST API サーバーを開始（通常は自動）。',
             '**`ollama help`** -- 利用可能なすべてのコマンドを表示。',
           ],
+          image: '/images/ollama-command-guide-command-lifecycle-en.svg',
+          imageCaption: 'Ollama コマンドのライフサイクル: pull はモデルをダウンロード（約2.5 GB）、run は対話型チャットを開始、list はディスク使用量を表示、rm は即座にディスク容量を解放する。',
         },
         managingModels: {
           id: 'managing-models',
@@ -988,6 +1006,8 @@ schema: {
             { '量子化': 'Q4_K_M (4-bit)', 'サイズ (7B)': '4.7 GB', 'VRAM': '5 GB', '品質': '良い', '速度': '非常に速い' },
             { '量子化': 'Q3_K_M (3-bit)', 'サイズ (7B)': '3.3 GB', 'VRAM': '4 GB', '品質': 'まあまあ', '速度': '最も速い' },
           ],
+          image: '/images/ollama-command-guide-quantization-vram-en.svg',
+          imageCaption: 'Ollama GGUF 量子化: 7B モデルのレベル別 VRAM — FP16 は 16 GB、Q8_0 は 8 GB、Q4_K_M（推奨デフォルト）は 5 GB、Q3_K_M は 4 GB。',
         },
         embeddingModels: {
           id: 'embedding-models',
@@ -1172,6 +1192,8 @@ schema: {
             '**`ollama serve`** -- Inicia el servidor API REST (normalmente se ejecuta automáticamente).',
             '**`ollama help`** -- Muestra todos los comandos disponibles.',
           ],
+          image: '/images/ollama-command-guide-command-lifecycle-en.svg',
+          imageCaption: 'Ciclo de vida de los comandos Ollama: pull descarga un modelo (~2,5 GB), run inicia un chat interactivo, list muestra el uso de disco y rm libera espacio al instante.',
         },
         managingModels: {
           id: 'managing-models',
@@ -1211,6 +1233,8 @@ schema: {
             { 'Cuantización': 'Q3_K_M (3-bit)', 'Tamaño (7B)': '3.3 GB', 'VRAM': '4 GB', 'Calidad': 'Aceptable', 'Velocidad': 'Más rápida' },
           ],
           columns: ['Cuantización', 'Tamaño (7B)', 'VRAM', 'Calidad', 'Velocidad'],
+          image: '/images/ollama-command-guide-quantization-vram-en.svg',
+          imageCaption: 'Cuantización GGUF de Ollama: VRAM por nivel para un modelo de 7B — FP16 necesita 16 GB, Q8_0 necesita 8 GB, Q4_K_M (recomendado por defecto) necesita 5 GB, Q3_K_M necesita 4 GB.',
         },
         embeddings: {
           id: 'embedding-models',
@@ -1420,6 +1444,8 @@ schema: {
             '**`ollama serve`** -- يبدأ خادم API REST (عادةً يعمل تلقائيًا).',
             '**`ollama help`** -- يعرض جميع الأوامر المتاحة.',
           ],
+          image: '/images/ollama-command-guide-command-lifecycle-en.svg',
+          imageCaption: 'دورة حياة أوامر Ollama: pull يُنزّل نموذجًا (~2.5 جيجابايت)، run يبدأ محادثة تفاعلية، list يعرض استخدام القرص، وrm يحرّر مساحة القرص فورًا.',
         },
         managingModels: {
           id: 'managing-models',
@@ -1459,6 +1485,8 @@ schema: {
             { 'Cuantización': 'Q3_K_M (3-bit)', 'Tamaño (7B)': '3.3 GB', 'VRAM': '4 GB', 'Calidad': 'مقبولة', 'Velocidad': 'الأسرع' },
           ],
           columns: ['Cuantización', 'Tamaño (7B)', 'VRAM', 'Calidad', 'Velocidad'],
+          image: '/images/ollama-command-guide-quantization-vram-en.svg',
+          imageCaption: 'تكميم GGUF في Ollama: VRAM حسب المستوى لنموذج 7B — يحتاج FP16 إلى 16 جيجابايت، وQ8_0 إلى 8 جيجابايت، وQ4_K_M (الافتراضي الموصى به) إلى 5 جيجابايت، وQ3_K_M إلى 4 جيجابايت.',
         },
         embeddings: {
           id: 'embedding-models',
@@ -1668,6 +1696,8 @@ schema: {
             '**`ollama serve`** -- 启动 REST API 服务器（通常自动运行）。',
             '**`ollama help`** -- 显示所有可用命令。',
           ],
+          image: '/images/ollama-command-guide-command-lifecycle-en.svg',
+          imageCaption: 'Ollama 命令生命周期：pull 下载模型（约 2.5 GB），run 启动交互式聊天，list 显示磁盘使用情况，rm 立即释放磁盘空间。',
         },
         managingModels: {
           id: 'managing-models',
@@ -1707,6 +1737,8 @@ schema: {
             { '量化': 'Q3_K_M（3 位）', '大小（7B）': '3.3 GB', 'VRAM': '4 GB', '质量': '可接受', '速度': '最快' },
           ],
           columns: ['量化', '大小（7B）', 'VRAM', '质量', '速度'],
+          image: '/images/ollama-command-guide-quantization-vram-en.svg',
+          imageCaption: 'Ollama GGUF 量化：7B 模型每个级别的 VRAM 需求——FP16 需要 16 GB，Q8_0 需要 8 GB，Q4_K_M（推荐默认值）需要 5 GB，Q3_K_M 需要 4 GB。',
         },
         embeddings: {
           id: 'embedding-models',
@@ -1882,6 +1914,8 @@ schema: {
             '**`ollama serve`** -- REST API 서버를 시작합니다 (일반적으로 자동 실행됩니다).',
             '**`ollama help`** -- 사용 가능한 모든 명령어를 표시합니다.',
           ],
+          image: '/images/ollama-command-guide-command-lifecycle-en.svg',
+          imageCaption: 'Ollama 명령어 라이프사이클: pull은 모델을 다운로드하고(약 2.5GB), run은 대화형 채팅을 시작하며, list는 디스크 사용량을 표시하고, rm은 즉시 디스크 공간을 확보합니다.',
         },
         managingModels: {
           id: 'managing-models',
@@ -1921,6 +1955,8 @@ schema: {
             { 'Quantization': 'Q3_K_M (3비트)', 'Size (7B)': '3.3 GB', 'VRAM': '4 GB', 'Quality': '보통', 'Speed': '가장 빠름' },
           ],
           columns: ['Quantization', 'Size (7B)', 'VRAM', 'Quality', 'Speed'],
+          image: '/images/ollama-command-guide-quantization-vram-en.svg',
+          imageCaption: 'Ollama GGUF 양자화: 7B 모델 기준 레벨별 VRAM — FP16은 16GB, Q8_0은 8GB, Q4_K_M(권장 기본값)은 5GB, Q3_K_M은 4GB가 필요합니다.',
         },
         embeddings: {
           id: 'embedding-models',
