@@ -14,6 +14,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: 'The 5 Essential Parts of Any AI Prompt (With Template)',
       intro: '**Every effective AI prompt needs five building blocks: Role & Context, Task / Instruction, Input & Examples, Constraints, and Output Format — miss any one and outputs become inconsistent, off-format, or hallucinated.**',
       metaDescription: 'Role, Task, Input, Constraints, Output Format — the 5 prompt parts that work on every LLM. Miss one and quality drops. Copy-paste template included.',
+      heroImage: '/images/prompt-building-blocks-5-blocks-overview-hero-en.png',
       ogTitle: 'Miss One of These 5 Prompt Blocks and AI Output Goes Off-Track',
       ogDescription: 'Role, Task, Input, Constraints, Output Format. One template that works on every model. Copy-paste ready.',
       twitterTitle: '5 Building Blocks Every AI Prompt Needs',
@@ -145,6 +146,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**The 5 building blocks every prompt needs are: Role & Context, Task / Instruction, Input & Examples, Constraints, and Output Format.** These five components are the minimum structure that separates a reliable, repeatable prompt from a vague question that produces inconsistent results.',
             'Each block solves a different failure mode. Role & Context tells the model who it is and what situation it is in. Task / Instruction tells it exactly what to do. Input & Examples give it the raw material and teaching signal. Constraints set the rules. Output Format specifies the shape of the answer. Together, they leave the model with nothing left to guess.',
           ],
+          image: '/images/prompt-building-blocks-5-blocks-overview-hero-en.png',
+          imageCaption: 'The 5 Building Blocks of a Prompt -- What each block does',
         },
 
         badVsGood: {
@@ -179,6 +182,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Works on:** All major language models, frontier models, and all local LLMs via Ollama, LM Studio, or similar',
             '**Maps to:** CRAFT, CO-STAR, SPECS, RTF, and every other major framework — different names, same blocks',
           ],
+          image: '/images/prompt-building-blocks-quick-reference-hero-en.png',
+          imageCaption: '5 Building Blocks: Quick Reference -- When to use what',
         },
 
         whyMatters: {
@@ -462,6 +467,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: '5 Bausteine für jeden KI-Prompt mit Vorlage',
       intro: '**Jeder effektive KI-Prompt benötigt fünf Bausteine: Rolle & Kontext, Aufgabe / Anweisung, Eingabe & Beispiele, Einschränkungen und Ausgabeformat — fehlt einer, werden Ergebnisse inkonsistent, falsch formatiert oder halluziniert.**',
       metaDescription: 'Jeder gute KI-Prompt braucht 5 Teile: Rolle, Aufgabe, Input, Einschränkungen, Ausgabeformat. Fehlt einer, sinkt die Qualität. Mit kopierfertiger Vorlage.',
+      heroImage: '/images/prompt-building-blocks-5-blocks-overview-hero-de.png',
       ogTitle: 'Fehlt einer dieser 5 Prompt-Bausteine, wird die KI-Antwort unbrauchbar',
       ogDescription: 'Rolle, Aufgabe, Input, Einschränkungen, Ausgabeformat. Eine Vorlage für alle Modelle. Sofort einsetzbar.',
       twitterTitle: '5 Bausteine für jeden KI-Prompt',
@@ -603,6 +609,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Die 5 Bausteine, die jeder Prompt benötigt, sind: Rolle & Kontext, Aufgabe / Anweisung, Eingabe & Beispiele, Einschränkungen und Ausgabeformat.** Diese fünf Komponenten sind die Mindeststruktur, die einen zuverlässigen, wiederholbaren Prompt von einer vagen Frage unterscheidet, die inkonsistente Ergebnisse liefert.',
             'Jeder Baustein löst einen anderen Fehlertyp. Rolle & Kontext sagt dem Modell, wer es ist und in welcher Situation es sich befindet. Aufgabe / Anweisung sagt ihm genau, was zu tun ist. Eingabe & Beispiele geben ihm das Rohmaterial und das Lernmuster. Einschränkungen setzen die Regeln. Ausgabeformat legt die Form der Antwort fest. Zusammen lassen sie dem Modell nichts mehr zum Raten übrig.',
           ],
+          image: '/images/prompt-building-blocks-5-blocks-overview-hero-de.png',
+          imageCaption: 'Die 5 Bausteine eines Prompts -- Was jeder Baustein bewirkt',
         },
 
         badVsGood: {
@@ -637,6 +645,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Funktioniert auf:** Allen führenden Sprachmodellen und allen lokalen LLMs über Ollama, LM Studio oder ähnliches',
             '**Entspricht:** CRAFT, CO-STAR, SPECS, RTF und jedem anderen wichtigen Framework — unterschiedliche Namen, gleiche Bausteine',
           ],
+          image: '/images/prompt-building-blocks-quick-reference-hero-de.png',
+          imageCaption: '5 Bausteine: Schnellreferenz -- Wann was verwenden',
         },
 
         whyMatters: {
@@ -928,6 +938,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: '5 bloques de construcción para cada prompt de IA',
       intro: '**Todo prompt de IA efectivo necesita cinco bloques de construcción: rol y contexto, tarea/instrucción, input y ejemplos, restricciones y formato de output — si falta uno, los resultados serán inconsistentes, mal formateados o alucinados.**',
       metaDescription: 'Todo buen prompt de IA necesita 5 partes: rol, tarea, input, restricciones y formato. Si falta una, la calidad cae. Plantilla lista para copiar.',
+      heroImage: '/images/prompt-building-blocks-5-blocks-overview-hero-es.png',
       publishDate: '2026-03-01',
       readTime: '8 min de lectura',
       educationalLevel: 'Beginner',
@@ -1270,6 +1281,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: '⁨5⁩ مكونات البرومبت الأساسية لكل نموذج ⁨LLM⁩',
       intro: '**كل برومبت ذكاء اصطناعي فعّال يحتاج إلى خمسة مكونات: الدور والسياق، والمهمة/التعليمات، والمدخلات والأمثلة، والقيود، وتنسيق المخرجات — إذا غاب أحدها، ستكون النتائج غير متسقة أو منسّقة بشكل سيئ أو مُهلوسة.**',
       metaDescription: 'كل برومبت فعّال يحتاج ⁨5⁩ أجزاء: الدور، المهمة، المدخلات، القيود، وتنسيق المخرجات. غياب أي منها يخفض الجودة. قالب جاهز للنسخ على أي ⁨LLM⁩.',
+      heroImage: '/images/prompt-building-blocks-5-blocks-overview-hero-ar.png',
       publishDate: '2026-03-01',
       readTime: '٨ دقائق للقراءة',
       educationalLevel: 'مبتدئ',
@@ -1611,6 +1623,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: '5 blocos de construção para cada prompt de IA',
       intro: '**Todo prompt de IA eficaz precisa de cinco blocos de construção: papel e contexto, tarefa/instrução, entrada e exemplos, restrições e formato de saída — se um faltar, os resultados serão inconsistentes, mal formatados ou alucinados.**',
       metaDescription: 'Todo bom prompt de IA precisa de 5 partes: papel, tarefa, entrada, restrições e formato. Se faltar um, a qualidade cai. Modelo pronto para copiar.',
+      heroImage: '/images/prompt-building-blocks-5-blocks-overview-hero-pt.png',
       publishDate: '2026-03-01',
       readTime: '8 min de leitura',
       educationalLevel: 'Beginner',
@@ -1932,6 +1945,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: '5 éléments essentiels de tout prompt IA',
       intro: '**Tout prompt IA efficace nécessite cinq éléments : Rôle & Contexte, Tâche / Instruction, Entrée & Exemples, Contraintes et Format de sortie — en oublier un seul, et les résultats deviennent incohérents, mal formatés ou hallucinations.**',
       metaDescription: 'Tout bon prompt IA compte 5 parties : Rôle, Tâche, Input, Contraintes, Format de sortie. En oublier un dégrade la réponse. Modèle prêt à copier pour tous.',
+      heroImage: '/images/prompt-building-blocks-5-blocks-overview-hero-fr.png',
       ogTitle: 'Oubliez un seul de ces 5 blocs et la réponse IA déraille',
       ogDescription: 'Rôle, Tâche, Input, Contraintes, Format de sortie. Un modèle universel, prêt à copier-coller.',
       twitterTitle: '5 éléments essentiels de tout prompt IA',
@@ -2083,6 +2097,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Les 5 éléments que chaque prompt nécessite sont : Rôle & Contexte, Tâche / Instruction, Entrée & Exemples, Contraintes et Format de sortie.** Ces cinq composantes constituent la structure minimale qui distingue un prompt fiable et reproductible d\'une question vague qui produit des résultats incohérents.',
             'Chaque élément résout un type d\'erreur différent. Rôle & Contexte dit au modèle qui il est et dans quelle situation il se trouve. Tâche / Instruction lui dit exactement ce qu\'il faut faire. Entrée & Exemples lui donnent la matière première et le motif d\'apprentissage. Contraintes fixent les règles. Format de sortie définit la forme de la réponse. Ensemble, ils ne laissent plus rien au hasard pour le modèle.',
           ],
+          image: '/images/prompt-building-blocks-5-blocks-overview-hero-fr.png',
+          imageCaption: 'Les 5 Blocs d\'un Prompt -- Ce que fait chaque bloc',
         },
 
         badVsGood: {
@@ -2117,6 +2133,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Fonctionne sur :** Tous les modèles de langage majeurs et tous les LLM locaux via Ollama, LM Studio ou similaire',
             '**Correspond à :** CRAFT, CO-STAR, SPECS, RTF et tous les autres cadres majeurs — noms différents, mêmes éléments',
           ],
+          image: '/images/prompt-building-blocks-quick-reference-hero-fr.png',
+          imageCaption: '5 Blocs : Référence Rapide -- Quand utiliser quoi',
         },
 
         whyMatters: {
@@ -2370,6 +2388,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: 'AIプロンプトに必要な5つの基本要素と実装テンプレート',
       intro: '**効果的なAIプロンプトには5つの構成要素が必須です：役割とコンテキスト、タスク/指示、入力と例、制約、出力形式。これらのいずれかを欠くと、AIの出力は一貫性を失い、形式が崩れ、幻覚が発生します。**',
       metaDescription: '効果的なAIプロンプトには5つの要素が必須です：役割、タスク、入力、制約、出力形式。1つ欠けるだけで出力品質が低下します。すべてのモデルに対応したテンプレート付き。',
+      heroImage: '/images/prompt-building-blocks-5-blocks-overview-hero-ja.png',
       ogTitle: 'この5要素のうち1つでも欠けるとAIの出力が不安定に',
       ogDescription: '役割、タスク、入力、制約、出力形式。全モデル対応のテンプレート。すぐにコピペで使える。',
       twitterTitle: 'AIプロンプトに必要な5つの構成要素',
@@ -2521,6 +2540,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**すべてのプロンプトに必要な5つの構成要素は、役割とコンテキスト、タスク/指示、入力と例、制約、出力形式です。** この5つのコンポーネントは、信頼性が高く再現可能なプロンプトと、一貫性を欠く結果を生むぼんやりした質問を区別する最小限の構造です。',
             '各要素は異なる障害モードを解決します。役割とコンテキストはモデルに自分が何であるか、どんな状況にあるかを伝えます。タスク/指示は正確に何をすべきかを伝えます。入力と例は素材と学習シグナルを提供します。制約はルールを設定します。出力形式は答えの形を指定します。合わせることで、モデルが推測すべきことを残しません。',
           ],
+          image: '/images/prompt-building-blocks-5-blocks-overview-hero-ja.png',
+          imageCaption: 'プロンプトの5つの構成要素 -- 各要素の役割',
         },
 
         badVsGood: {
@@ -2794,6 +2815,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: '每个AI提示词需要的5个构建模块（附模板）',
       intro: '每个提示词必需的5个构建模块：角色与上下文、任务、输入与示例、约束条件和输出格式。',
       metaDescription: '高效的AI提示词需要5个部分：角色、任务、输入、约束条件和输出格式。缺少任何一个都会降低输出质量。包含所有模型通用的可复制模板。',
+      heroImage: '/images/prompt-building-blocks-5-blocks-overview-hero-zh.png',
       ogTitle: '缺少这5个提示词构建块中的任何一个，AI输出就会跑偏',
       ogDescription: '角色、任务、输入、约束、输出格式。一套模板适用所有模型。直接复制使用。',
       twitterTitle: '每个AI提示词必备的5个构建块',
@@ -3024,6 +3046,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: 'AI 프롬프트의 5가지 핵심 구성 요소 (템플릿 포함)',
       intro: '**효과적인 AI 프롬프트에는 다섯 가지 구성 요소가 필요합니다: 역할 및 맥락, 작업/지시, 입력 및 예시, 제약 조건, 출력 형식 — 하나라도 빠지면 결과가 일관성을 잃거나 형식에서 벗어나거나 환각이 발생합니다.**',
       metaDescription: '역할, 작업, 입력, 제약 조건, 출력 형식 — 모든 LLM에서 통하는 5가지 프롬프트 구성 요소. 하나라도 빠지면 품질이 저하됩니다. 복사·붙여넣기용 템플릿 포함.',
+      heroImage: '/images/prompt-building-blocks-5-blocks-overview-hero-ko.png',
       ogTitle: '이 5가지 프롬프트 블록 중 하나를 빠뜨리면 AI 결과가 엉망이 됩니다',
       ogDescription: '역할, 작업, 입력, 제약 조건, 출력 형식. 모든 모델에서 통하는 하나의 템플릿. 바로 사용할 수 있습니다.',
       twitterTitle: 'AI 프롬프트에 필요한 5가지 구성 요소',
@@ -3156,6 +3179,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**프롬프트에 필요한 5가지 구성 요소는 역할 및 맥락, 작업/지시, 입력 및 예시, 제약 조건, 출력 형식입니다.** 이 다섯 가지 구성 요소는 신뢰할 수 있고 반복 가능한 프롬프트를 일관성 없는 결과를 생성하는 모호한 질문과 구별하는 최소한의 구조입니다.',
             '각 블록은 서로 다른 실패 원인을 해결합니다. 역할 및 맥락은 모델에게 자신이 누구이고 어떤 상황에 있는지를 알립니다. 작업/지시는 정확히 무엇을 해야 하는지를 알립니다. 입력 및 예시는 원자재와 학습 신호를 제공합니다. 제약 조건은 규칙을 설정합니다. 출력 형식은 답변의 형태를 지정합니다. 이 다섯 가지를 함께 사용하면 모델이 추측해야 할 것이 없어집니다.',
           ],
+          image: '/images/prompt-building-blocks-5-blocks-overview-hero-ko.png',
+          imageCaption: '프롬프트의 5가지 구성 요소 -- 각 요소가 하는 일',
         },
 
         badVsGood: {
@@ -3190,6 +3215,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**적용 가능 대상:** 모든 주요 언어 모델, 프론티어 모델, Ollama, LM Studio 또는 유사 도구를 통한 모든 로컬 LLM',
             '**매핑 대상:** CRAFT, CO-STAR, SPECS, RTF 및 기타 모든 주요 프레임워크 — 이름은 다르지만 블록은 동일',
           ],
+          image: '/images/prompt-building-blocks-quick-reference-hero-ko.png',
+          imageCaption: '5가지 구성 요소: 빠른 참조 -- 언제 무엇을 사용할지',
         },
 
         whyMatters: {
