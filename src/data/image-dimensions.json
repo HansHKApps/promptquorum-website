@@ -15029,6 +15029,16 @@
     "width": 800,
     "height": 360
   },
+  "/images/open-webui-vs-sillytavern-decision-tree-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 450
+  },
+  "/images/open-webui-vs-sillytavern-feature-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/openai-api-compatibility-diagram-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
