@@ -1,0 +1,45 @@
+<svg viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="430" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">Which Smart Home Platform Should You Choose?</text>
+
+  <!-- Root question -->
+  <rect x="290" y="40" width="220" height="50" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+  <text x="400" y="61" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">What matters most</text>
+  <text x="400" y="79" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">to you?</text>
+
+  <!-- Level 1 branches -->
+  <line x1="400" y1="90" x2="150" y2="175" stroke="#6750A4" stroke-width="2"/>
+  <line x1="400" y1="90" x2="600" y2="175" stroke="#6750A4" stroke-width="2"/>
+  <text x="270" y="115" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#79747E" text-anchor="end">YES — privacy first</text>
+  <text x="495" y="115" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#79747E" text-anchor="start">NO — convenience first</text>
+
+  <!-- Leaf: Home Assistant -->
+  <rect x="55" y="175" width="190" height="85" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="55" y="175" width="190" height="4" rx="0" fill="#34A853"/>
+  <text x="150" y="205" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Home Assistant</text>
+  <text x="150" y="226" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Local control, full privacy</text>
+  <text x="150" y="242" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">More setup effort</text>
+
+  <!-- Node 2: convenience follow-up -->
+  <rect x="505" y="175" width="190" height="70" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+  <text x="600" y="203" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Prefer Google</text>
+  <text x="600" y="221" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">services &amp; ecosystem?</text>
+
+  <!-- Level 2 branches -->
+  <line x1="600" y1="245" x2="470" y2="335" stroke="#6750A4" stroke-width="2"/>
+  <line x1="600" y1="245" x2="725" y2="335" stroke="#6750A4" stroke-width="2"/>
+  <text x="529" y="277" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#79747E" text-anchor="end">YES</text>
+  <text x="669" y="277" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#79747E" text-anchor="start">NO</text>
+
+  <!-- Leaf: Google Home -->
+  <rect x="395" y="335" width="150" height="75" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="395" y="335" width="150" height="4" rx="0" fill="#34A853"/>
+  <text x="470" y="363" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">Google Home</text>
+  <text x="470" y="382" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Broad support, strong voice</text>
+
+  <!-- Leaf: Amazon Alexa -->
+  <rect x="655" y="335" width="140" height="75" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="655" y="335" width="140" height="4" rx="0" fill="#34A853"/>
+  <text x="725" y="363" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">Amazon Alexa</text>
+  <text x="725" y="382" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Widest voice-skill support</text>
+<text x="792" y="425" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

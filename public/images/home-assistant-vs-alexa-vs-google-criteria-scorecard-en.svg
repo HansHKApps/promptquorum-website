@@ -1,0 +1,82 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">Home Assistant vs Alexa vs Google Home: 7-Criteria Scorecard</text>
+
+  <!-- Header -->
+  <text x="30" y="58" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Criterion</text>
+  <text x="230" y="58" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Home Assistant</text>
+  <text x="460" y="58" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Amazon Alexa</text>
+  <text x="640" y="58" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Google Home</text>
+  <line x1="20" y1="66" x2="780" y2="66" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Privacy -->
+  <text x="30" y="95" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Privacy</text>
+  <circle cx="230" cy="91" r="5" fill="#34A853"/>
+  <text x="248" y="95" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#34A853">Local</text>
+  <circle cx="440" cy="91" r="5" fill="#EA4335"/>
+  <text x="458" y="95" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#EA4335">Cloud data</text>
+  <circle cx="620" cy="91" r="5" fill="#EA4335"/>
+  <text x="638" y="95" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#EA4335">Cloud data</text>
+  <line x1="20" y1="107" x2="780" y2="107" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Local Control -->
+  <text x="30" y="133" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Local control</text>
+  <circle cx="230" cy="129" r="5" fill="#34A853"/>
+  <text x="248" y="133" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#34A853">Full</text>
+  <circle cx="440" cy="129" r="5" fill="#F4B400"/>
+  <text x="458" y="133" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#F4B400">Limited</text>
+  <circle cx="620" cy="129" r="5" fill="#F4B400"/>
+  <text x="638" y="133" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#F4B400">Limited</text>
+  <line x1="20" y1="145" x2="780" y2="145" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: Device Support -->
+  <text x="30" y="171" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Device support</text>
+  <circle cx="230" cy="167" r="5" fill="#34A853"/>
+  <text x="248" y="171" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#34A853">Widest (integrations)</text>
+  <circle cx="440" cy="167" r="5" fill="#34A853"/>
+  <text x="458" y="171" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#34A853">Widest (voice)</text>
+  <circle cx="620" cy="167" r="5" fill="#F4B400"/>
+  <text x="638" y="171" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#F4B400">Broad</text>
+  <line x1="20" y1="183" x2="780" y2="183" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Voice -->
+  <text x="30" y="209" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Voice</text>
+  <circle cx="230" cy="205" r="5" fill="#F4B400"/>
+  <text x="248" y="209" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#F4B400">Local (Assist)</text>
+  <circle cx="440" cy="205" r="5" fill="#34A853"/>
+  <text x="458" y="209" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#34A853">Strong (cloud)</text>
+  <circle cx="620" cy="205" r="5" fill="#34A853"/>
+  <text x="638" y="209" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#34A853">Strong (cloud)</text>
+  <line x1="20" y1="221" x2="780" y2="221" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: AI -->
+  <text x="30" y="247" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">AI</text>
+  <circle cx="230" cy="243" r="5" fill="#34A853"/>
+  <text x="248" y="247" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#34A853">Local LLM</text>
+  <circle cx="440" cy="243" r="5" fill="#F4B400"/>
+  <text x="458" y="247" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#F4B400">Cloud assistant</text>
+  <circle cx="620" cy="243" r="5" fill="#F4B400"/>
+  <text x="638" y="247" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#F4B400">Cloud assistant</text>
+  <line x1="20" y1="259" x2="780" y2="259" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 6: Cost -->
+  <text x="30" y="285" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Cost</text>
+  <circle cx="230" cy="281" r="5" fill="#F4B400"/>
+  <text x="248" y="285" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#F4B400">Hardware + effort</text>
+  <circle cx="440" cy="281" r="5" fill="#34A853"/>
+  <text x="458" y="285" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#34A853">Low hardware</text>
+  <circle cx="620" cy="281" r="5" fill="#34A853"/>
+  <text x="638" y="285" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#34A853">Low hardware</text>
+  <line x1="20" y1="297" x2="780" y2="297" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 7: Effort -->
+  <text x="30" y="323" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">Effort</text>
+  <circle cx="230" cy="319" r="5" fill="#EA4335"/>
+  <text x="248" y="323" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#EA4335">Higher</text>
+  <circle cx="440" cy="319" r="5" fill="#34A853"/>
+  <text x="458" y="323" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#34A853">Low</text>
+  <circle cx="620" cy="319" r="5" fill="#34A853"/>
+  <text x="638" y="323" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#34A853">Low</text>
+
+  <text x="400" y="358" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Home Assistant leads privacy, local control, and AI across all 7 criteria; Alexa and Google Home lead on cost and setup effort.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
