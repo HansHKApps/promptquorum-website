@@ -1,0 +1,26 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Context Window Scaling: VRAM Roughly Doubles Each Step</text>
+  <line x1="220" y1="345" x2="740" y2="345" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="210" y="94" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">4K tokens</text>
+  <rect x="220" y="75" width="60" height="24" fill="#34A853" rx="4"/>
+  <text x="290" y="92" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">~2 GB KV cache</text>
+
+  <text x="210" y="146" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">8K tokens</text>
+  <rect x="220" y="127" width="120" height="24" fill="#6750A4" rx="4"/>
+  <text x="350" y="144" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">~4 GB KV cache</text>
+
+  <text x="210" y="198" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">16K tokens</text>
+  <rect x="220" y="179" width="240" height="24" fill="#F4B400" rx="4"/>
+  <text x="470" y="196" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">~8 GB KV cache</text>
+
+  <text x="210" y="250" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">32K tokens</text>
+  <rect x="220" y="231" width="480" height="24" fill="#EA4335" rx="4"/>
+  <text x="710" y="248" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="end">~16 GB KV cache</text>
+
+  <text x="400" y="285" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Illustrative KV cache overhead for a 7B model, on top of the base model's own VRAM footprint.</text>
+
+  <text x="400" y="378" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">4K–8K fits on 8–12 GB GPUs; 16K needs 16 GB+; going past 16K typically requires a 24 GB+ card.</text>
+  <text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>

@@ -151,6 +151,8 @@ schema: {
             '4. Lower GPU allocation = slower inference speed, but more headroom for simultaneous apps.',
             '5. Click **Restart** to apply changes.',
           ],
+          image: '/images/lm-studio-advanced-features-gpu-allocation-tradeoff-en.svg',
+          imageCaption: 'LM Studio GPU allocation tradeoff: 100% and 80% run at near-baseline speed, 50% is 2-5x slower, and 10% is 5-10x slower -- 80% is the recommended starting point.',
         },
         contextWindow: {
           title: 'How Do You Extend Context Window?',
@@ -162,6 +164,8 @@ schema: {
             '4. Each doubling of context length roughly doubles VRAM usage.',
             '5. Test your extended context by starting a chat and providing long prompts.',
           ],
+          image: '/images/lm-studio-advanced-features-context-window-vram-scaling-en.svg',
+          imageCaption: 'Context window VRAM scaling in LM Studio: 4K tokens uses ~2 GB KV cache, 8K ~4 GB, 16K ~8 GB, and 32K ~16 GB, so context past 16K typically needs a 24 GB+ GPU.',
         },
         localAPI: {
           title: 'How Do You Enable LM Studio\'s Local API (Beta)?',
@@ -391,6 +395,8 @@ schema: {
             '4. Niedrigere GPU-Zuweisung = langsamere Inferenzgeschwindigkeit, aber mehr Kopfraum für gleichzeitige Apps.',
             '5. Klicken Sie auf **Neu starten**, um die Änderungen zu übernehmen.',
           ],
+          image: '/images/lm-studio-advanced-features-gpu-allocation-tradeoff-en.svg',
+          imageCaption: 'LM Studio GPU-Zuweisung im Vergleich: 100 % und 80 % laufen nahe der Basisgeschwindigkeit, 50 % ist 2-5× langsamer, 10 % ist 5-10× langsamer -- 80 % ist der empfohlene Startwert.',
         },
         kontextFenster: {
           title: 'Wie erweitern Sie das Kontextfenster?',
@@ -402,6 +408,8 @@ schema: {
             '4. Eine Verdoppelung der Kontextlänge verdoppelt ungefähr die VRAM-Nutzung.',
             '5. Testen Sie Ihr erweitertes Kontextfenster, indem Sie einen Chat starten und lange Aufforderungen bereitstellen.',
           ],
+          image: '/images/lm-studio-advanced-features-context-window-vram-scaling-en.svg',
+          imageCaption: 'VRAM-Skalierung des Kontextfensters in LM Studio: 4k Token benötigen ca. 2 GB KV-Cache, 8k ca. 4 GB, 16k ca. 8 GB und 32k ca. 16 GB -- ab 16k Token wird meist eine GPU mit 24 GB+ benötigt.',
         },
         lokaleAPI: {
           title: 'Wie aktivieren Sie die lokale API von LM Studio (Beta)?',
@@ -765,6 +773,8 @@ schema: {
             '4. Allocation GPU basse = inférence lente, mais plus de marge pour apps simultanées.',
             '5. Cliquez **Redémarrer** pour appliquer changements.',
           ],
+          image: '/images/lm-studio-advanced-features-gpu-allocation-tradeoff-en.svg',
+          imageCaption: 'Compromis d\'allocation GPU dans LM Studio : 100 % et 80 % tournent près de la vitesse de base, 50 % est 2 à 5× plus lent, 10 % est 5 à 10× plus lent -- 80 % est le point de départ recommandé.',
         },
         fenetrContexte: {
           title: 'Comment étendre la fenêtre de contexte ?',
@@ -776,6 +786,8 @@ schema: {
             '4. Doubler contexte double approximativement VRAM utilisé.',
             '5. Testez contexte étendu : démarrez chat et fournissez prompts longs.',
           ],
+          image: '/images/lm-studio-advanced-features-context-window-vram-scaling-en.svg',
+          imageCaption: 'Mise à l\'échelle VRAM de la fenêtre de contexte dans LM Studio : 4K tokens utilise ~2 Go de cache KV, 8K ~4 Go, 16K ~8 Go, 32K ~16 Go -- au-delà de 16K, un GPU de 24 Go+ est généralement nécessaire.',
         },
         apiLocale: {
           title: 'Comment activer l\'API locale LM Studio (Beta) ?',
@@ -1023,6 +1035,8 @@ schema: {
             '4. GPU割り当て低下 = 推論速度が遅くなるが、同時実行アプリのヘッドルームが増える。',
             '5. **再起動**をクリックして変更を適用します。',
           ],
+          image: '/images/lm-studio-advanced-features-gpu-allocation-tradeoff-en.svg',
+          imageCaption: 'LM StudioのGPU割り当てトレードオフ：100%と80%はほぼベースライン速度、50%は2〜5倍遅く、10%は5〜10倍遅くなる。80%が推奨される開始点。',
         },
         contextWindow: {
           title: 'コンテキストウィンドウを拡張する方法',
@@ -1034,6 +1048,8 @@ schema: {
             '4. コンテキスト長を2倍にするとVRAM使用量が約2倍になります。',
             '5. 長いプロンプトでチャットを開始して拡張コンテキストをテストします。',
           ],
+          image: '/images/lm-studio-advanced-features-context-window-vram-scaling-en.svg',
+          imageCaption: 'LM Studioのコンテキストウィンドウ VRAMスケーリング：4kトークンで約2GBのKVキャッシュ、8kで約4GB、16kで約8GB、32kで約16GB。16kを超えると通常24GB以上のGPUが必要。',
         },
         localAPI: {
           title: 'LM Studioのローカルリローカルオルバースト（ベータ）を有効にする方法',
@@ -1175,6 +1191,8 @@ schema: {
             '4. GPU分配越低 = 推理速度越慢，但为同时运行的应用留出更多余量。',
             '5. 点击**重启**以应用更改。',
           ],
+          image: '/images/lm-studio-advanced-features-gpu-allocation-tradeoff-en.svg',
+          imageCaption: 'LM Studio GPU分配权衡：100%和80%接近基线速度，50%慢2-5倍，10%慢5-10倍——推荐从80%开始。',
         },
         contextWindow: {
           title: '如何扩展上下文窗口',
@@ -1186,6 +1204,8 @@ schema: {
             '4. 上下文长度每翻倍，VRAM使用量大约也翻倍。',
             '5. 通过开始聊天并提供长提示来测试您的扩展上下文。',
           ],
+          image: '/images/lm-studio-advanced-features-context-window-vram-scaling-en.svg',
+          imageCaption: 'LM Studio上下文窗口VRAM扩展：4K令牌约需2GB KV缓存，8K约4GB，16K约8GB，32K约16GB——超过16K通常需要24GB以上的GPU。',
         },
         localAPI: {
           title: '如何启用LM Studio的本地API（测试版）',
@@ -1424,6 +1444,8 @@ schema: {
             '4. Menor asignación de GPU = menor velocidad de inferencia, pero más margen para apps simultáneas.',
             '5. Haz clic en **Reiniciar** para aplicar los cambios.',
           ],
+          image: '/images/lm-studio-advanced-features-gpu-allocation-tradeoff-en.svg',
+          imageCaption: 'Compensación de asignación de GPU en LM Studio: 100% y 80% funcionan casi a velocidad base, 50% es 2-5x más lento, 10% es 5-10x más lento -- 80% es el punto de partida recomendado.',
         },
         contextWindow: {
           title: '¿Cómo extiendes la ventana de contexto?',
@@ -1435,6 +1457,8 @@ schema: {
             '4. Cada duplicación de la longitud de contexto duplica aproximadamente el uso de VRAM.',
             '5. Prueba tu contexto extendido iniciando un chat y proporcionando prompts largos.',
           ],
+          image: '/images/lm-studio-advanced-features-context-window-vram-scaling-en.svg',
+          imageCaption: 'Escalado de VRAM de la ventana de contexto en LM Studio: 4K tokens usa ~2 GB de caché KV, 8K ~4 GB, 16K ~8 GB, y 32K ~16 GB -- superar 16K normalmente requiere una GPU de 24 GB+.',
         },
         localAPI: {
           title: '¿Cómo activas la API local de LM Studio (Beta)?',
@@ -1675,6 +1699,8 @@ schema: {
             '4. تخصيص أقل لـ GPU = سرعة استدلال أقل، لكن هامش أكبر للتطبيقات المتزامنة.',
             '5. انقر على **إعادة التحميل** لتطبيق التغييرات.',
           ],
+          image: '/images/lm-studio-advanced-features-gpu-allocation-tradeoff-en.svg',
+          imageCaption: 'مفاضلة تخصيص GPU في LM Studio: تعمل نسبتا 100% و80% بسرعة قريبة من الأساس، بينما 50% أبطأ بـ 2-5 مرات، و10% أبطأ بـ 5-10 مرات -- 80% هي نقطة البداية الموصى بها.',
         },
         contextWindow: {
           title: 'كيف تُمدِّد نافذة السياق؟',
@@ -1686,6 +1712,8 @@ schema: {
             '4. كل مضاعفة لطول السياق تُضاعف تقريبًا استخدام VRAM.',
             '5. اختبر سياقك الممدَّد ببدء محادثة وتقديم مطالبات طويلة.',
           ],
+          image: '/images/lm-studio-advanced-features-context-window-vram-scaling-en.svg',
+          imageCaption: 'توسّع استخدام VRAM لنافذة السياق في LM Studio: تستهلك 4K توكن حوالي 2 جيجابايت من ذاكرة KV المؤقتة، و8K حوالي 4 جيجابايت، و16K حوالي 8 جيجابايت، و32K حوالي 16 جيجابايت -- تجاوز 16K يتطلب عادةً بطاقة GPU بسعة 24 جيجابايت أو أكثر.',
         },
         localAPI: {
           title: 'كيف تُفعِّل واجهة API المحلية لـ LM Studio (تجريبية)؟',
@@ -1846,6 +1874,8 @@ schema: {
             '4. Menor alocação de GPU = inferência mais lenta, mas mais espaço para aplicativos simultâneos.',
             '5. Clique em **Reiniciar** para aplicar as alterações.',
           ],
+          image: '/images/lm-studio-advanced-features-gpu-allocation-tradeoff-en.svg',
+          imageCaption: 'Tradeoff de alocação de GPU no LM Studio: 100% e 80% rodam perto da velocidade base, 50% é 2-5x mais lento, 10% é 5-10x mais lento -- 80% é o ponto de partida recomendado.',
         },
         contextWindow: {
           title: 'Como estender a janela de contexto?',
@@ -1857,6 +1887,8 @@ schema: {
             '4. Dobrar o comprimento do contexto aproximadamente dobra o uso de VRAM.',
             '5. Teste seu contexto estendido iniciando um chat e fornecendo prompts longos.',
           ],
+          image: '/images/lm-studio-advanced-features-context-window-vram-scaling-en.svg',
+          imageCaption: 'Escalonamento de VRAM da janela de contexto no LM Studio: 4K tokens usa ~2 GB de cache KV, 8K ~4 GB, 16K ~8 GB, e 32K ~16 GB -- ultrapassar 16K geralmente exige uma GPU de 24 GB+.',
         },
         localAPI: {
           title: 'Como habilitar a API local do LM Studio (Beta)?',
