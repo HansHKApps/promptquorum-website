@@ -116,6 +116,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whichStack: {
         id: 'which-stack',
         title: 'Which Voice Assistant Stack Should You Build?',
+        image: '/images/voice-assistant-local-mobile-offline-decision-tree-en.svg',
+        imageCaption:
+          'Decision tree for choosing a voice assistant path: fully on-device (iPhone WhisperKit + LLM Farm at ~0.9–1.4 sec, or Android Layla / Termux at ~1.0–2.0 sec) for privacy, versus hybrid (phone STT + home Ollama 70B, ~1.5–2.5 sec) or cloud assistant for 70B-class quality and live data.',
         content:
           '**For most users on flagship phones: the on-device path is the right call.** It is fully private, works offline, and produces usable results in under 1.5 seconds. Use the hybrid path only if you specifically need 70B-class quality and accept the home-Wi-Fi dependency.',
         snippetBlocks: [
@@ -276,6 +279,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       latencyBudget: {
         id: 'latency-budget',
         title: 'Latency Budget: Where the Seconds Go',
+        image: '/images/voice-assistant-local-mobile-offline-latency-budget-en.svg',
+        imageCaption:
+          'Speech-to-first-audio latency budget on iPhone 16 Pro: VAD detection 250 ms, Whisper STT 200 ms, LLM time-to-first-token 700 ms (54% of total, the biggest lever), TTS first audio 150 ms — total ≈1.3 seconds.',
         content:
           '**On flagship phones in 2026, the LLM time-to-first-token dominates total latency — typically 50–60% of the speech-to-first-audio time.** Optimising the LLM step has more impact than tuning Whisper or TTS.',
         columns: ['Step', 'Typical Time (iPhone 16 Pro, on-device)', 'Notes'],
@@ -544,6 +550,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whichStack: {
         id: 'which-stack',
         title: 'Welcher Sprachassistenten-Stack soll erstellt werden?',
+        image: '/images/voice-assistant-local-mobile-offline-decision-tree-en.svg',
+        imageCaption:
+          'Entscheidungsbaum für die Wahl des Sprachassistenten-Pfads: vollständig auf dem Gerät (iPhone WhisperKit + LLM Farm bei ca. 0,9–1,4 Sek. oder Android Layla / Termux bei ca. 1,0–2,0 Sek.) für Datenschutz, versus Hybrid (Telefon-STT + Home-Ollama 70B, ca. 1,5–2,5 Sek.) oder Cloud-Assistent für 70B-Klassenqualität und Live-Daten.',
         content:
           '**Für die meisten Nutzer auf Flaggschiff-Telefonen: Der Weg auf dem Gerät ist die richtige Wahl.** Es ist vollständig privat, funktioniert offline und liefert nutzbare Ergebnisse unter 1,5 Sekunden. Verwenden Sie den Hybrid-Weg nur, wenn Sie speziell 70B-Klassenqualität benötigen und die Home-Wi-Fi-Abhängigkeit akzeptieren.',
         snippetBlocks: [
@@ -704,6 +713,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       latencyBudget: {
         id: 'latency-budget',
         title: 'Latenz-Budget: Wohin gehen die Sekunden',
+        image: '/images/voice-assistant-local-mobile-offline-latency-budget-en.svg',
+        imageCaption:
+          'Sprache-zu-erstem-Audio-Latenzbudget auf dem iPhone 16 Pro: VAD-Erkennung 250 ms, Whisper-STT 200 ms, LLM-Zeit-bis-zum-ersten-Token 700 ms (54% der Gesamtzeit, der größte Hebel), TTS-erstes-Audio 150 ms — Gesamt ≈1,3 Sekunden.',
         content:
           '**Auf Flaggschiff-Telefonen 2026 dominiert die LLM Zeit-zum-ersten-Token die Gesamtlatenz — typischerweise 50–60% der Sprache-zu-erstem-Audio-Zeit.** Die Optimierung des LLM-Schritts hat mehr Auswirkungen als die Optimierung von Whisper oder TTS.',
         columns: ['Schritt', 'Typische Zeit (iPhone 16 Pro, auf dem Gerät)', 'Notizen'],
@@ -1021,6 +1033,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whichStack: {
         id: 'which-stack',
         title: 'Quelle pile d\'assistant vocal construire ?',
+        image: '/images/voice-assistant-local-mobile-offline-decision-tree-en.svg',
+        imageCaption:
+          'Arbre de décision pour choisir un chemin d\'assistant vocal : entièrement sur l\'appareil (iPhone WhisperKit + LLM Farm à ~0,9–1,4 s, ou Android Layla / Termux à ~1,0–2,0 s) pour la confidentialité, contre hybride (STT sur le téléphone + Ollama 70B à domicile, ~1,5–2,5 s) ou assistant cloud pour une qualité de classe 70B et des données en direct.',
         content:
           '**Pour la plupart des utilisateurs sur téléphones phares : le chemin sur l\'appareil est le bon choix.** Il est entièrement privé, fonctionne hors ligne et produit des résultats utilisables en moins de 1,5 secondes. Utilisez le chemin hybride uniquement si vous avez spécifiquement besoin de qualité classe 70B et acceptez la dépendance Wi-Fi à la maison.',
         snippetBlocks: [
@@ -1181,6 +1196,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       latencyBudget: {
         id: 'latency-budget',
         title: 'Budget de latence : où vont les secondes',
+        image: '/images/voice-assistant-local-mobile-offline-latency-budget-en.svg',
+        imageCaption:
+          'Budget de latence parole vers premier audio sur iPhone 16 Pro : détection VAD 250 ms, STT Whisper 200 ms, temps LLM jusqu\'au premier token 700 ms (54% du total, le levier le plus important), premier audio TTS 150 ms — total ≈1,3 seconde.',
         content:
           '**Sur les téléphones phares en 2026, le temps LLM jusqu\'au premier token domine la latence totale — typiquement 50–60% du temps parole vers premier audio.** L\'optimisation de l\'étape LLM a plus d\'impact que l\'accord de Whisper ou TTS.',
         columns: ['Étape', 'Temps typique (iPhone 16 Pro, sur l\'appareil)', 'Remarques'],
@@ -1498,6 +1516,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whichStack: {
         id: 'which-stack',
         title: 'どの音声アシスタントスタックを構築すべきか？',
+        image: '/images/voice-assistant-local-mobile-offline-decision-tree-en.svg',
+        imageCaption:
+          '音声アシスタントの選択肢を示す決定木：プライバシー重視ならフルオンデバイス（iPhoneのWhisperKit + LLM Farmで約0.9〜1.4秒、またはAndroidのLaylaかTermuxで約1.0〜2.0秒）、70Bクラスの品質やライブデータが必要ならハイブリッド（フォンSTT + 自宅のOllama 70B、約1.5〜2.5秒）またはクラウドアシスタント。',
         content:
           '**フラッグシップスマートフォン上のほとんどのユーザーの場合：デバイス上のパスが正しい選択です。** それは完全にプライベート、オフラインで動作、および1.5秒以内に使用可能な結果を生成します。特に70Bクラスの品質が必要で、ホームWi-Fi依存性を受け入れる場合にのみ、ハイブリッドパスを使用します。',
         snippetBlocks: [
@@ -1658,6 +1679,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       latencyBudget: {
         id: 'latency-budget',
         title: 'レイテンシバジェット：秒はどこへ行くのか',
+        image: '/images/voice-assistant-local-mobile-offline-latency-budget-en.svg',
+        imageCaption:
+          'iPhone 16 Proにおける発話終了から最初の音声までのレイテンシ内訳：VAD検出250ms、Whisper STT 200ms、LLM初回トークン生成700ms（全体の54%、最大の改善余地）、TTS初回音声150ms — 合計約1.3秒。',
         content:
           '**2026年のフラッグシップスマートフォンでは、LLM最初のトークンまでの時間が総レイテンシを支配します—通常、音声から最初のオーディオ時間の50～60%。** LLMステップを最適化するには、WhisperまたはTTSの調整よりも多くの影響があります。',
         columns: ['ステップ', '典型的な時間（iPhone 16 Pro、デバイス上）', '備考'],
@@ -1975,6 +1999,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whichStack: {
         id: 'which-stack',
         title: '应该构建哪种语音助手堆栈？',
+        image: '/images/voice-assistant-local-mobile-offline-decision-tree-en.svg',
+        imageCaption:
+          '语音助手路径选择决策树：追求隐私选择完全设备端方案（iPhone上的WhisperKit + LLM Farm约0.9-1.4秒，或Android上的Layla或Termux约1.0-2.0秒），需要70B级质量或实时数据则选择混合方案（手机端STT + 家庭Ollama 70B，约1.5-2.5秒）或云端助手。',
         content:
           '**对于大多数旗舰手机用户：设备上路径是正确的选择。** 它完全私密、离线工作并在1.5秒内产生可用的结果。仅当您特别需要70B级质量并接受家庭Wi-Fi依赖时才使用混合路径。',
         snippetBlocks: [
@@ -2135,6 +2162,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       latencyBudget: {
         id: 'latency-budget',
         title: '延迟预算：秒去哪里了',
+        image: '/images/voice-assistant-local-mobile-offline-latency-budget-en.svg',
+        imageCaption:
+          'iPhone 16 Pro上语音到首次音频的延迟预算：VAD检测250毫秒、Whisper语音转文本200毫秒、LLM首个token生成700毫秒（占总时长54%，是最大的优化点）、TTS首次发声150毫秒——总计约1.3秒。',
         content:
           '**在2026年的旗舰手机上，LLM首令牌时间主导总延迟—通常为语音到首个音频时间的50-60%。** 优化LLM步骤比调整Whisper或TTS有更多影响。',
         columns: ['步骤', '典型时间（iPhone 16 Pro、设备上）', '笔记'],
@@ -2452,6 +2482,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whichStack: {
         id: 'which-stack',
         title: '¿Qué stack de asistente de voz deberías crear?',
+        image: '/images/voice-assistant-local-mobile-offline-decision-tree-en.svg',
+        imageCaption:
+          'Árbol de decisión para elegir el camino del asistente de voz: totalmente en el dispositivo (iPhone con WhisperKit + LLM Farm en ~0,9–1,4 s, o Android con Layla / Termux en ~1,0–2,0 s) para privacidad, frente a híbrido (STT en el teléfono + Ollama 70B en casa, ~1,5–2,5 s) o asistente en la nube para calidad de clase 70B y datos en vivo.',
         content:
           '**Para la mayoría de usuarios en teléfonos de gama alta: el camino completamente en el dispositivo es la opción correcta.** Es totalmente privado, funciona offline y produce resultados usables en menos de 1,5 segundos. Usa el camino híbrido solo si específicamente necesitas calidad de clase 70B y aceptas la dependencia del Wi-Fi doméstico.',
         snippetBlocks: [
@@ -2612,6 +2645,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       latencyBudget: {
         id: 'latency-budget',
         title: 'Presupuesto de latencia: dónde van los segundos',
+        image: '/images/voice-assistant-local-mobile-offline-latency-budget-en.svg',
+        imageCaption:
+          'Presupuesto de latencia de voz a primer audio en iPhone 16 Pro: detección VAD 250 ms, STT de Whisper 200 ms, tiempo hasta el primer token del LLM 700 ms (54% del total, la mayor palanca), primer audio TTS 150 ms — total ≈1,3 segundos.',
         content:
           '**En teléfonos de gama alta en 2026, el tiempo hasta el primer token del LLM domina la latencia total — generalmente el 50–60% del tiempo de voz al primer audio.** Optimizar el paso del LLM tiene más impacto que ajustar Whisper o el TTS.',
         columns: ['Paso', 'Tiempo típico (iPhone 16 Pro, en el dispositivo)', 'Notas'],
@@ -2929,6 +2965,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whichStack: {
         id: 'which-stack',
         title: '어떤 음성 비서 스택을 구축해야 합니까?',
+        image: '/images/voice-assistant-local-mobile-offline-decision-tree-en.svg',
+        imageCaption:
+          '음성 비서 경로 선택을 위한 결정 트리: 개인정보 보호를 원하면 완전 온디바이스(iPhone WhisperKit + LLM Farm 약 0.9–1.4초, 또는 Android Layla / Termux 약 1.0–2.0초), 70B급 품질이나 실시간 데이터가 필요하면 하이브리드(휴대폰 STT + 홈 Ollama 70B, 약 1.5–2.5초) 또는 클라우드 비서.',
         content:
           '**고급 전화기를 가진 대부분의 사용자에게: 완전히 기기 내 경로가 올바른 선택입니다.** 완전히 개인 정보 보호가 되고, 오프라인으로 작동하며, 1.5초 미만에 사용 가능한 결과를 생성합니다. 구체적으로 70B급 품질이 필요하고 홈 Wi-Fi 의존성을 수용하는 경우에만 하이브리드 경로를 사용하십시오.',
         snippetBlocks: [
@@ -3089,6 +3128,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       latencyBudget: {
         id: 'latency-budget',
         title: '지연 예산: 초가 어디로 가는가',
+        image: '/images/voice-assistant-local-mobile-offline-latency-budget-en.svg',
+        imageCaption:
+          'iPhone 16 Pro에서 음성 종료부터 첫 오디오까지의 지연 예산: VAD 감지 250ms, Whisper STT 200ms, LLM 첫 토큰 생성 700ms(전체의 54%, 가장 큰 개선 지점), TTS 첫 오디오 150ms — 총 약 1.3초.',
         content:
           '**2026년 고급 전화기에서 LLM 첫 번째 토큰 시간이 전체 지연을 지배합니다 — 일반적으로 음성에서 첫 오디오 시간의 50–60%.** LLM 단계를 최적화하면 Whisper나 TTS를 조정하는 것보다 더 큰 영향을 줍니다.',
         columns: ['단계', '일반적인 시간 (iPhone 16 Pro, 기기 내)', '참고'],
@@ -3406,6 +3448,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whichStack: {
         id: 'which-stack',
         title: 'Qual stack de assistente de voz você deve criar?',
+        image: '/images/voice-assistant-local-mobile-offline-decision-tree-en.svg',
+        imageCaption:
+          'Árvore de decisão para escolher o caminho do assistente de voz: totalmente no dispositivo (iPhone com WhisperKit + LLM Farm em ~0,9–1,4 s, ou Android com Layla / Termux em ~1,0–2,0 s) para privacidade, versus híbrido (STT no telefone + Ollama 70B em casa, ~1,5–2,5 s) ou assistente em nuvem para qualidade de classe 70B e dados em tempo real.',
         content:
           '**Para a maioria dos usuários em telefones de ponta: o caminho totalmente no dispositivo é a opção certa.** Ele é totalmente privado, funciona offline e produz resultados utilizáveis em menos de 1,5 segundo. Use o caminho híbrido apenas se você precisar especificamente de qualidade de classe 70B e aceitar a dependência do Wi-Fi doméstico.',
         snippetBlocks: [
@@ -3566,6 +3611,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       latencyBudget: {
         id: 'latency-budget',
         title: 'Orçamento de latência: para onde vão os segundos',
+        image: '/images/voice-assistant-local-mobile-offline-latency-budget-en.svg',
+        imageCaption:
+          'Orçamento de latência de voz até o primeiro áudio no iPhone 16 Pro: detecção VAD 250 ms, STT do Whisper 200 ms, tempo até o primeiro token do LLM 700 ms (54% do total, a maior alavanca), primeiro áudio do TTS 150 ms — total ≈1,3 segundo.',
         content:
           '**Em telefones de ponta em 2026, o tempo até o primeiro token do LLM domina a latência total — geralmente 50–60% do tempo de voz ao primeiro áudio.** Otimizar o passo do LLM tem mais impacto do que ajustar o Whisper ou o TTS.',
         columns: ['Passo', 'Tempo típico (iPhone 16 Pro, no dispositivo)', 'Notas'],
@@ -3884,6 +3932,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whichStack: {
         id: 'which-stack',
         title: 'أي حزمة مساعد صوتي يجب أن تبنيها؟',
+        image: '/images/voice-assistant-local-mobile-offline-decision-tree-en.svg',
+        imageCaption:
+          'شجرة قرار لاختيار مسار المساعد الصوتي: بالكامل على الجهاز (iPhone مع WhisperKit + LLM Farm بزمن ~0.9–1.4 ثانية، أو Android مع Layla / Termux بزمن ~1.0–2.0 ثانية) من أجل الخصوصية، مقابل الهجين (تحويل الصوت على الهاتف + Ollama 70B في المنزل، ~1.5–2.5 ثانية) أو مساعد سحابي لجودة فئة 70B والبيانات المباشرة.',
         content:
           '**لمعظم المستخدمين على الهواتف المتميزة: المسار المحلي بالكامل على الجهاز هو الخيار الصحيح.** خاص تمامًا، يعمل دون اتصال، وينتج نتائج قابلة للاستخدام في أقل من 1.5 ثانية. استخدم المسار الهجين فقط إذا كنت تحتاج تحديدًا جودة نموذج 70B وتقبل الاعتماد على Wi-Fi المنزل.',
         snippetBlocks: [
@@ -4044,6 +4095,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       latencyBudget: {
         id: 'latency-budget',
         title: 'ميزانية الكمون: أين تذهب الثواني',
+        image: '/images/voice-assistant-local-mobile-offline-latency-budget-en.svg',
+        imageCaption:
+          'ميزانية الكمون من انتهاء الكلام إلى أول صوت على iPhone 16 Pro: كشف VAD 250 مللي ثانية، تحويل الصوت بواسطة Whisper 200 مللي ثانية، وقت أول رمز من LLM 700 مللي ثانية (54% من الإجمالي، أكبر عامل للتحسين)، أول صوت من TTS 150 مللي ثانية — الإجمالي ≈1.3 ثانية.',
         content:
           '**على الهواتف المتميزة في 2026، وقت أول رمز LLM يهيمن على الكمون الكلي — عادةً 50–60% من وقت الصوت إلى أول صوت.** تحسين خطوة LLM له أكبر أثر من ضبط Whisper أو TTS.',
         columns: ['الخطوة', 'الوقت النموذجي ‏(iPhone 16 Pro، على الجهاز)‏', 'ملاحظات'],
