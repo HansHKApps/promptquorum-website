@@ -258,6 +258,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'npu-comparison': {
         id: 'npu-comparison',
         title: 'Exynos 2600 vs. Snapdragon 8 Elite Gen 5 NPU',
+        image: '/images/galaxy-s26-npu-comparison-en.svg',
+        imageCaption: 'Exynos 2600 vs. Snapdragon 8 Elite Gen 5 on the Galaxy S26: 2nm GAA vs 3nm FinFET, +113% vs +39% AI gen-over-gen, 2.4x faster Stable Diffusion, and 85.6 GB/s vs 84.8 GB/s LPDDR5X memory bandwidth.',
         columns: ['Metric', 'Exynos 2600', 'Snapdragon 8 Elite Gen 5', 'Winner for Local AI?'],
         rows: [
           {
@@ -301,6 +303,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'run-own-llm': {
         id: 'run-own-llm',
         title: 'Running Your Own LLM on the Galaxy S26',
+        image: '/images/galaxy-s26-7b-model-throughput-en.svg',
+        imageCaption: 'Galaxy S26 7B model decode speed by quantization on LPDDR5X 85.6 GB/s: FP16 (~14 GB) caps at 6 tokens/sec, Q4 4-bit (~3.5 GB) reaches a 24 tokens/sec theoretical ceiling, with 8-15 tokens/sec realistic in practice.',
         content: [
           'The Galaxy S26\'s memory bandwidth is the limiting factor. LPDDR5X at 85.6 GB/s means token generation (the "decode phase" of LLM inference) maxes out at roughly memory_bandwidth / model_size_in_bytes tokens per second.',
           'Math: A 7B parameter model in FP16 (16-bit floats) weighs ~14 GB. At 85.6 GB/s ÷ 14 GB ≈ 6 tokens/sec theoretical maximum. But quantization changes this dramatically.',
@@ -573,6 +577,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'npu-comparison': {
         id: 'npu-comparison',
         title: 'Exynos 2600 vs Snapdragon 8 Elite Gen 5 NPU',
+        image: '/images/galaxy-s26-npu-comparison-en.svg',
+        imageCaption: '갤럭시 S26의 Exynos 2600 vs Snapdragon 8 Elite Gen 5: 2nm GAA vs 3nm FinFET, AI 세대별 성능 +113% vs +39%, Stable Diffusion 2.4배 속도, LPDDR5X 메모리 대역폭 85.6 GB/s vs 84.8 GB/s.',
         columns: ['지표', 'Exynos 2600', 'Snapdragon 8 Elite Gen 5', '온디바이스 AI의 승자?'],
         rows: [
           {
@@ -616,6 +622,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'run-own-llm': {
         id: 'run-own-llm',
         title: '갤럭시 S26에서 자신의 LLM 실행',
+        image: '/images/galaxy-s26-7b-model-throughput-en.svg',
+        imageCaption: 'LPDDR5X 85.6 GB/s 기준 갤럭시 S26의 양자화별 7B 모델 디코드 속도: FP16(~14 GB)은 6 tokens/sec에 그치고, Q4 4비트(~3.5 GB)는 이론상 24 tokens/sec, 실제로는 8–15 tokens/sec에 도달합니다.',
         content: [
           '갤럭시 S26의 메모리 대역폭은 제한 요소입니다. LPDDR5X 85.6 GB/s는 토큰 생성("디코드 단계")을 대략 memory_bandwidth / model_size_in_bytes tokens/sec로 제한합니다.',
           '계산: 7B 매개변수 모델(FP16, 16비트 부동소수점)은 ~14 GB입니다. 85.6 GB/s ÷ 14 GB ≈ 6 tokens/sec 이론적 최대치. 하지만 양자화는 이를 급격하게 변경합니다.',
@@ -878,6 +886,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'npu-comparison': {
         id: 'npu-comparison',
         title: 'Exynos 2600 vs Snapdragon 8 Elite Gen 5 NPU',
+        image: '/images/galaxy-s26-npu-comparison-en.svg',
+        imageCaption: 'Exynos 2600 vs. Snapdragon 8 Elite Gen 5 im Galaxy S26: 2nm GAA vs 3nm FinFET, +113% vs +39% KI-Leistung Gen-über-Gen, 2,4x schnelleres Stable Diffusion, 85,6 GB/s vs 84,8 GB/s LPDDR5X-Speicherbandbreite.',
         columns: ['Metrik', 'Exynos 2600', 'Snapdragon 8 Elite Gen 5', 'Gewinner für Lokale KI?'],
         rows: [
           {
@@ -921,6 +931,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'run-own-llm': {
         id: 'run-own-llm',
         title: 'Ihre eigenen LLMs auf dem Galaxy S26 ausführen',
+        image: '/images/galaxy-s26-7b-model-throughput-en.svg',
+        imageCaption: 'Decodier-Geschwindigkeit eines 7B-Modells nach Quantisierung auf dem Galaxy S26 (LPDDR5X 85,6 GB/s): FP16 (~14 GB) erreicht nur 6 tokens/sec, Q4 4-Bit (~3,5 GB) theoretisch 24 tokens/sec, real 8–15 tokens/sec.',
         content: [
           'Die Speicherbandbreite des Galaxy S26 ist der begrenzende Faktor. LPDDR5X bei 85,6 GB/s bedeutet Token-Generierung (die "Dekodier-Phase" der LLM-Inferenz) maxes rund memory_bandwidth / model_size_in_bytes tokens pro Sekunde aus.',
           'Mathematik: Ein 7B-Parameter-Modell in FP16 (16-Bit Floats) wiegt ~14 GB. Bei 85,6 GB/s ÷ 14 GB ≈ 6 tokens/sec theoretisches Maximum. Aber Quantisierung ändert das dramatisch.',
@@ -1184,6 +1196,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'npu-comparison': {
         id: 'npu-comparison',
         title: 'Exynos 2600 vs Snapdragon 8 Elite Gen 5 NPU',
+        image: '/images/galaxy-s26-npu-comparison-en.svg',
+        imageCaption: 'Exynos 2600 vs Snapdragon 8 Elite Gen 5 sur le Galaxy S26: 2nm GAA vs 3nm FinFET, +113% vs +39% de performance IA générationnelle, Stable Diffusion 2,4x plus rapide, bande passante LPDDR5X 85,6 GB/s vs 84,8 GB/s.',
         columns: ['Métrique', 'Exynos 2600', 'Snapdragon 8 Elite Gen 5', 'Gagnant pour IA Locale?'],
         rows: [
           {
@@ -1227,6 +1241,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'run-own-llm': {
         id: 'run-own-llm',
         title: 'Exécuter Vos Propres LLM sur le Galaxy S26',
+        image: '/images/galaxy-s26-7b-model-throughput-en.svg',
+        imageCaption: 'Vitesse de décodage d\'un modèle 7B par quantification sur Galaxy S26 (LPDDR5X 85,6 GB/s) : FP16 (~14 GB) plafonne à 6 tokens/sec, Q4 4-bit (~3,5 GB) atteint 24 tokens/sec en théorie, 8–15 tokens/sec en pratique.',
         content: [
           'La bande passante mémoire du Galaxy S26 est le facteur limitant. LPDDR5X à 85,6 GB/s signifie génération de tokens (la "phase de décodage" de l\'inférence LLM) plafonne à environ memory_bandwidth / model_size_in_bytes tokens par seconde.',
           'Mathématiques: Un modèle 7B paramètres en FP16 (floats 16-bit) pèse ~14 GB. À 85,6 GB/s ÷ 14 GB ≈ 6 tokens/sec maximum théorique. Mais la quantification change cela drastiquement.',
