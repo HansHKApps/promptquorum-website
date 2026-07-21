@@ -101,6 +101,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tier': 'Cloud Pro', 'Where it runs': 'Nvidia GPUs in Google Cloud (AFM 3 Cloud Pro)', 'What it handles': 'Heaviest world-knowledge tasks and complex reasoning', 'Touches Google?': 'Yes — Google Cloud infrastructure; model refined using Gemini outputs' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-three-tier-architecture-en.svg',
+        imageCaption: "Apple Intelligence routes tasks through three tiers: on-device AFM Core (never touches Google), Private Cloud Compute on Apple's own servers (also no Google), and AFM 3 Cloud Pro running on Nvidia GPUs inside Google Cloud.",
       },
       geminiRole: {
         id: 'gemini-role',
@@ -130,6 +132,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': 'Model cutoff / updates', 'Apple AFM 3 Core Advanced (on-device)': 'Apple controls release schedule', 'Self-hosted local LLM (Qwen / Llama / Gemma)': 'You choose when to update or swap' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-afm-vs-selfhosted-comparison-en.svg',
+        imageCaption: 'Apple AFM 3 Core Advanced is a 20B sparse model activating 1–4B parameters per prompt with closed weights, versus self-hosted local LLMs (Qwen, Llama, Gemma) at 3B–70B+ with open weights and full control.',
       },
       forUsers: {
         id: 'for-users',
@@ -334,6 +338,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tier': 'Cloud Pro', 'Where it runs': 'Nvidia-GPUs in Google Cloud (AFM 3 Cloud Pro)', 'What it handles': 'Schwerste Weltwissen-Aufgaben und komplexes Reasoning', 'Touches Google?': 'Ja — Google Cloud Infrastruktur; Modell mit Gemini-Ausgaben verfeinert' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-three-tier-architecture-en.svg',
+        imageCaption: "Apple Intelligence leitet Aufgaben durch drei Stufen: On-Device AFM Core (kein Google-Kontakt), Private Cloud Compute auf Apples eigenen Servern (ebenfalls kein Google) und AFM 3 Cloud Pro auf Nvidia-GPUs in Google Cloud.",
       },
       geminiRole: {
         id: 'gemini-role',
@@ -363,6 +369,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': 'Modell-Update / Wechsel', 'Apple AFM 3 Core Advanced (on-device)': 'Apple kontrolliert den Release-Zeitplan', 'Self-hosted local LLM (Qwen / Llama / Gemma)': 'Sie entscheiden, wann Sie aktualisieren oder wechseln' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-afm-vs-selfhosted-comparison-en.svg',
+        imageCaption: 'Apple AFM 3 Core Advanced ist ein 20B-Sparse-Modell mit 1–4B aktivierten Parametern pro Prompt und geschlossenen Gewichten, im Vergleich zu selbst gehosteten lokalen LLMs (Qwen, Llama, Gemma) mit 3B–70B+ und offenen Gewichten.',
       },
       forUsers: {
         id: 'for-users',
@@ -567,6 +575,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tier': 'Cloud Pro', 'Where it runs': 'GPU Nvidia dans Google Cloud (AFM 3 Cloud Pro)', 'What it handles': 'Tâches de connaissance du monde les plus lourdes et raisonnement complexe', 'Touches Google?': 'Oui — infrastructure Google Cloud ; modèle affiné avec sorties Gemini' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-three-tier-architecture-en.svg',
+        imageCaption: "Apple Intelligence route les tâches à travers trois niveaux : AFM Core on-device (aucun contact avec Google), Private Cloud Compute sur les serveurs d'Apple (aucun Google non plus) et AFM 3 Cloud Pro sur des GPU Nvidia dans Google Cloud.",
       },
       geminiRole: {
         id: 'gemini-role',
@@ -596,6 +606,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': 'Mise à jour / changement de modèle', 'Apple AFM 3 Core Advanced (on-device)': 'Apple contrôle le calendrier de sortie', 'Self-hosted local LLM (Qwen / Llama / Gemma)': 'Vous choisissez quand mettre à jour ou changer' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-afm-vs-selfhosted-comparison-en.svg',
+        imageCaption: 'Apple AFM 3 Core Advanced est un modèle sparse de 20B activant 1–4B paramètres par invite avec des poids fermés, contre des LLM locaux auto-hébergés (Qwen, Llama, Gemma) de 3B à 70B+ avec des poids ouverts et un contrôle total.',
       },
       forUsers: {
         id: 'for-users',
@@ -800,6 +812,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tier': 'Cloud Pro', 'Where it runs': 'Google Cloud上のNvidia GPU（AFM 3 Cloud Pro）', 'What it handles': '最も重い世界知識タスクと複雑な推論', 'Touches Google?': 'はい——Google Cloudインフラ使用；Gemini出力でモデル精錬' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-three-tier-architecture-en.svg',
+        imageCaption: 'Apple Intelligenceはタスクを3層に振り分けます：オンデバイスAFM Core（Googleに一切触れない）、AppleのサーバーによるPrivate Cloud Compute（同じくGoogle非関与）、そしてGoogle Cloud上のNvidia GPUで動くAFM 3 Cloud Pro。',
       },
       geminiRole: {
         id: 'gemini-role',
@@ -829,6 +843,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': 'モデル更新/切り替え', 'Apple AFM 3 Core Advanced (on-device)': 'Appleがリリーススケジュールを管理', 'Self-hosted local LLM (Qwen / Llama / Gemma)': '更新や切り替えのタイミングをユーザーが決定' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-afm-vs-selfhosted-comparison-en.svg',
+        imageCaption: 'Apple AFM 3 Core Advancedは20Bスパースモデルで1プロンプトあたり1〜4Bパラメータをクローズドウェイトで活性化するのに対し、セルフホストのローカルLLM（Qwen、Llama、Gemma）は3B〜70B+でオープンウェイト・完全な制御を提供します。',
       },
       forUsers: {
         id: 'for-users',
@@ -1033,6 +1049,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tier': 'Cloud Pro', 'Where it runs': 'Google Cloud上的Nvidia GPU（AFM 3 Cloud Pro）', 'What it handles': '最重型的世界知识任务和复杂推理', 'Touches Google?': '是——Google Cloud基础设施；模型通过Gemini输出精炼' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-three-tier-architecture-en.svg',
+        imageCaption: 'Apple Intelligence将任务路由到三层：设备端AFM Core（不接触Google）、Apple自有服务器上的Private Cloud Compute（同样不接触Google），以及运行在Google Cloud Nvidia GPU上的AFM 3 Cloud Pro。',
       },
       geminiRole: {
         id: 'gemini-role',
@@ -1062,6 +1080,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': '模型更新/切换', 'Apple AFM 3 Core Advanced (on-device)': 'Apple控制发布时间表', 'Self-hosted local LLM (Qwen / Llama / Gemma)': '用户决定何时更新或切换' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-afm-vs-selfhosted-comparison-en.svg',
+        imageCaption: 'Apple AFM 3 Core Advanced是20B稀疏模型，每次提示激活1–4B参数且权重封闭；相比之下，自托管本地LLM（Qwen、Llama、Gemma）为3B–70B+，权重开放且完全可控。',
       },
       forUsers: {
         id: 'for-users',
@@ -1266,6 +1286,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tier': 'Cloud Pro', 'Where it runs': 'GPUs Nvidia en Google Cloud (AFM 3 Cloud Pro)', 'What it handles': 'Tareas de conocimiento del mundo más pesadas y razonamiento complejo', 'Touches Google?': 'Sí — infraestructura Google Cloud; modelo refinado con outputs de Gemini' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-three-tier-architecture-en.svg',
+        imageCaption: "Apple Intelligence enruta las tareas a través de tres niveles: AFM Core on-device (sin contacto con Google), Private Cloud Compute en servidores propios de Apple (tampoco Google) y AFM 3 Cloud Pro en GPUs Nvidia dentro de Google Cloud.",
       },
       geminiRole: {
         id: 'gemini-role',
@@ -1295,6 +1317,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': 'Actualización/cambio de modelo', 'Apple AFM 3 Core Advanced (on-device)': 'Apple controla el calendario de lanzamiento', 'Self-hosted local LLM (Qwen / Llama / Gemma)': 'Tú decides cuándo actualizar o cambiar' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-afm-vs-selfhosted-comparison-en.svg',
+        imageCaption: 'Apple AFM 3 Core Advanced es un modelo disperso de 20B que activa 1–4B parámetros por prompt con pesos cerrados, frente a los LLM locales auto-alojados (Qwen, Llama, Gemma) de 3B a 70B+ con pesos abiertos y control total.',
       },
       forUsers: {
         id: 'for-users',
@@ -1499,6 +1523,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tier': 'Cloud Pro', 'Where it runs': 'GPUs Nvidia no Google Cloud (AFM 3 Cloud Pro)', 'What it handles': 'Tarefas mais pesadas de conhecimento do mundo e raciocínio complexo', 'Touches Google?': 'Sim — infraestrutura Google Cloud; modelo refinado com outputs do Gemini' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-three-tier-architecture-en.svg',
+        imageCaption: "O Apple Intelligence roteia as tarefas por três camadas: AFM Core no dispositivo (sem contato com o Google), Private Cloud Compute em servidores próprios da Apple (também sem Google) e AFM 3 Cloud Pro em GPUs Nvidia dentro do Google Cloud.",
       },
       geminiRole: {
         id: 'gemini-role',
@@ -1528,6 +1554,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': 'Atualização/troca de modelo', 'Apple AFM 3 Core Advanced (on-device)': 'Apple controla o calendário de lançamentos', 'Self-hosted local LLM (Qwen / Llama / Gemma)': 'Você decide quando atualizar ou trocar' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-afm-vs-selfhosted-comparison-en.svg',
+        imageCaption: 'O Apple AFM 3 Core Advanced é um modelo esparso de 20B que ativa 1–4B parâmetros por prompt com pesos fechados, contra LLMs locais auto-hospedados (Qwen, Llama, Gemma) de 3B a 70B+ com pesos abertos e controle total.',
       },
       forUsers: {
         id: 'for-users',
@@ -1732,6 +1760,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tier': 'Cloud Pro', 'Where it runs': 'وحدات GPU من Nvidia في Google Cloud (AFM 3 Cloud Pro)', 'What it handles': 'أثقل مهام المعرفة العالمية والاستدلال المعقد', 'Touches Google?': 'نعم — بنية تحتية Google Cloud؛ النموذج مُحسَّن بمخرجات Gemini' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-three-tier-architecture-en.svg',
+        imageCaption: 'يوجّه Apple Intelligence المهام عبر ثلاثة مستويات: AFM Core على الجهاز (بلا اتصال بـ Google)، وPrivate Cloud Compute على خوادم Apple نفسها (أيضاً بلا Google)، وAFM 3 Cloud Pro الذي يعمل على وحدات GPU من Nvidia داخل Google Cloud.',
       },
       geminiRole: {
         id: 'gemini-role',
@@ -1761,6 +1791,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': 'تحديث/تغيير النموذج', 'Apple AFM 3 Core Advanced (on-device)': 'Apple تتحكم في جدول الإصدارات', 'Self-hosted local LLM (Qwen / Llama / Gemma)': 'أنت تُقرر متى تُحدِّث أو تُغيِّر' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-afm-vs-selfhosted-comparison-en.svg',
+        imageCaption: 'نموذج Apple AFM 3 Core Advanced هو نموذج متفرق بحجم 20B يُفعّل 1–4B معامل لكل طلب بأوزان مغلقة، مقابل نماذج LLM المحلية المستضافة ذاتياً (Qwen وLlama وGemma) بحجم 3B إلى 70B+ بأوزان مفتوحة وتحكم كامل.',
       },
       forUsers: {
         id: 'for-users',
@@ -1966,6 +1998,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '계층': 'Cloud Pro', '실행 위치': 'Google Cloud의 Nvidia GPU(AFM 3 Cloud Pro)', '처리 작업': '고난도 세계 지식 작업 및 복잡한 추론', 'Google 관여 여부': '있음 — Google Cloud 인프라; 모델은 Gemini 출력을 활용하여 정제' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-three-tier-architecture-en.svg',
+        imageCaption: 'Apple Intelligence는 작업을 3계층으로 라우팅합니다: 온디바이스 AFM Core(Google 관여 없음), Apple 자체 서버의 Private Cloud Compute(마찬가지로 Google 관여 없음), Google Cloud의 Nvidia GPU에서 실행되는 AFM 3 Cloud Pro.',
       },
       geminiRole: {
         id: 'gemini-role',
@@ -1995,6 +2029,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '': '모델 컷오프 / 업데이트', 'Apple AFM 3 Core Advanced(온디바이스)': 'Apple이 출시 일정 제어', '자체 호스팅 로컬 LLM(Qwen / Llama / Gemma)': '업데이트 또는 교체 시점을 직접 결정' },
         ],
         tableFormat: true,
+        image: '/images/apple-on-device-ai-vs-local-llms-afm-vs-selfhosted-comparison-en.svg',
+        imageCaption: 'Apple AFM 3 Core Advanced는 프롬프트당 1–4B 파라미터를 활성화하는 20B 스파스 모델로 가중치가 폐쇄적인 반면, 자체 호스팅 로컬 LLM(Qwen, Llama, Gemma)은 3B–70B+ 규모로 가중치가 개방되어 있고 완전한 제어가 가능합니다.',
       },
       forUsers: {
         id: 'for-users',

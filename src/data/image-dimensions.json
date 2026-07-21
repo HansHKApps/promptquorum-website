@@ -824,6 +824,16 @@
     "width": 800,
     "height": 350
   },
+  "/images/apple-on-device-ai-vs-local-llms-afm-vs-selfhosted-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/apple-on-device-ai-vs-local-llms-three-tier-architecture-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
