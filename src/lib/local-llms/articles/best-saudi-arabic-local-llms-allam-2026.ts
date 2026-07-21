@@ -78,6 +78,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model': 'Qwen2.5 72B', 'Parameters': '72B', 'VRAM (Q4_K_M)': '40–48 GB', 'License': 'Apache 2.0', 'Ollama': 'Yes', 'Arabic Score': 'Higher, but cultural gaps remain' },
           { 'Model': 'Jais 13B (UAE)', 'Parameters': '13B', 'VRAM (Q4_K_M)': '10–14 GB', 'License': 'Apache 2.0', 'Ollama': 'Limited', 'Arabic Score': 'Competitive on dialect' },
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-aralingbench-score-gap-en.svg',
+        imageCaption: 'AraLingBench score comparison: ALLaM 7B scores 72–74% versus 40–62% for Qwen2.5 7B, a gap of up to 32 percentage points on Arabic linguistic tasks.',
       },
       runAllam: {
         id: 'run-allam',
@@ -98,6 +100,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**AceGPT via community port:** ollama run salmatrafi/acegpt pulls the community-maintained AceGPT port if you want to compare.',
           '**Minimum hardware:** an 8 GB VRAM GPU (RTX 3070/4060 or better) or Apple Silicon with 16 GB unified memory. Size larger models with the [VRAM Calculator](/local-llms/vram-calculator-local-llm).',
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-vram-by-model-size-en.svg',
+        imageCaption: 'Local LLM VRAM needs by size at Q4_K_M quantization: 7B models need 6–8 GB, 13B need 10–14 GB, 34B need 20–24 GB, and 70B need 40–48 GB.',
       },
       evaluateArabic: {
         id: 'evaluate-arabic',
@@ -297,6 +301,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'النموذج': 'Qwen2.5 72B', 'المعاملات': '72B', 'VRAM (Q4_K_M)': '40–48 GB', 'الرخصة': 'Apache 2.0', 'Ollama': 'نعم', 'الدرجة العربية': 'أعلى، لكن تبقى فجوات ثقافية' },
           { 'النموذج': 'Jais 13B (الإمارات)', 'المعاملات': '13B', 'VRAM (Q4_K_M)': '10–14 GB', 'الرخصة': 'Apache 2.0', 'Ollama': 'محدود', 'الدرجة العربية': 'منافس في اللهجة' },
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-aralingbench-score-gap-ar.svg',
+        imageCaption: 'مقارنة نتائج AraLingBench: يسجّل ALLaM 7B نسبة 72–74% مقابل 40–62% لـ Qwen2.5 7B — فجوة تصل إلى 32 نقطة مئوية في المهام اللغوية العربية.',
       },
       runAllam: {
         id: 'run-allam',
@@ -317,6 +323,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**AceGPT عبر منفذ مجتمعي:** ollama run salmatrafi/acegpt يسحب منفذ AceGPT المُصان مجتمعياً إن أردت المقارنة.',
           '**الحد الأدنى للأجهزة:** وحدة GPU بسعة 8 GB من VRAM (RTX 3070/4060 أو أفضل) أو Apple Silicon بذاكرة موحَّدة 16 GB. حجِّم النماذج الأكبر بـ [حاسبة VRAM](/ar/local-llms/vram-calculator-local-llm).',
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-vram-by-model-size-ar.svg',
+        imageCaption: 'احتياجات VRAM لنماذج LLM المحلية حسب الحجم عند تكميم Q4_K_M: نماذج 7B تحتاج 6–8 GB، و13B تحتاج 10–14 GB، و34B تحتاج 20–24 GB، و70B تحتاج 40–48 GB.',
       },
       evaluateArabic: {
         id: 'evaluate-arabic',
@@ -519,6 +527,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modell': 'Qwen2.5 72B', 'Parameter': '72B', 'VRAM (Q4_K_M)': '40–48 GB', 'Lizenz': 'Apache 2.0', 'Ollama': 'Ja', 'Arabische Bewertung': 'Höher, aber kulturelle Lücken bleiben' },
           { 'Modell': 'Jais 13B (VAE)', 'Parameter': '13B', 'VRAM (Q4_K_M)': '10–14 GB', 'Lizenz': 'Apache 2.0', 'Ollama': 'Eingeschränkt', 'Arabische Bewertung': 'Konkurrenzfähig beim Dialekt' },
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-aralingbench-score-gap-en.svg',
+        imageCaption: 'AraLingBench-Vergleich: ALLaM 7B erzielt 72–74 % gegenüber 40–62 % bei Qwen2.5 7B – eine Lücke von bis zu 32 Prozentpunkten bei arabischen Sprachaufgaben.',
       },
       runAllam: {
         id: 'run-allam',
@@ -539,6 +549,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**AceGPT über Community-Port:** ollama run salmatrafi/acegpt ruft den von der Community gepflegten AceGPT-Port ab, falls Sie vergleichen möchten.',
           '**Mindesthardware:** eine GPU mit 8 GB VRAM (RTX 3070/4060 oder besser) oder Apple Silicon mit 16 GB Unified Memory. Dimensionieren Sie größere Modelle mit dem [VRAM-Rechner](/de/local-llms/vram-calculator-local-llm).',
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-vram-by-model-size-en.svg',
+        imageCaption: 'VRAM-Bedarf lokaler LLMs nach Größe bei Q4_K_M-Quantisierung: 7B-Modelle benötigen 6–8 GB, 13B 10–14 GB, 34B 20–24 GB und 70B 40–48 GB.',
       },
       evaluateArabic: {
         id: 'evaluate-arabic',
@@ -745,6 +757,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Qwen2.5 72B', 'Parámetros': '72B', 'VRAM (Q4_K_M)': '40–48 GB', 'Licencia': 'Apache 2.0', 'Ollama': 'Sí', 'Puntuación en árabe': 'Mayor, pero persisten brechas culturales' },
           { 'Modelo': 'Jais 13B (EAU)', 'Parámetros': '13B', 'VRAM (Q4_K_M)': '10–14 GB', 'Licencia': 'Apache 2.0', 'Ollama': 'Limitado', 'Puntuación en árabe': 'Competitivo en dialecto' },
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-aralingbench-score-gap-en.svg',
+        imageCaption: 'Comparación de puntuaciones AraLingBench: ALLaM 7B obtiene 72–74 % frente al 40–62 % de Qwen2.5 7B, una brecha de hasta 32 puntos porcentuales en tareas lingüísticas árabes.',
       },
       runAllam: {
         id: 'run-allam',
@@ -765,6 +779,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**AceGPT vía port de la comunidad:** ollama run salmatrafi/acegpt descarga el port de AceGPT mantenido por la comunidad si quieres comparar.',
           '**Hardware mínimo:** una GPU con 8 GB de VRAM (RTX 3070/4060 o superior) o Apple Silicon con 16 GB de memoria unificada. Dimensiona modelos más grandes con la [Calculadora de VRAM](/es/local-llms/vram-calculator-local-llm).',
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-vram-by-model-size-en.svg',
+        imageCaption: 'Necesidades de VRAM de los LLM locales por tamaño con cuantización Q4_K_M: los modelos de 7B necesitan 6–8 GB, los de 13B 10–14 GB, los de 34B 20–24 GB y los de 70B 40–48 GB.',
       },
       evaluateArabic: {
         id: 'evaluate-arabic',
@@ -971,6 +987,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modèle': 'Qwen2.5 72B', 'Paramètres': '72B', 'VRAM (Q4_K_M)': '40–48 GB', 'Licence': 'Apache 2.0', 'Ollama': 'Oui', 'Score arabe': 'Plus élevé, mais des écarts culturels subsistent' },
           { 'Modèle': 'Jais 13B (EAU)', 'Paramètres': '13B', 'VRAM (Q4_K_M)': '10–14 GB', 'Licence': 'Apache 2.0', 'Ollama': 'Limité', 'Score arabe': 'Compétitif sur le dialecte' },
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-aralingbench-score-gap-en.svg',
+        imageCaption: 'Comparaison des scores AraLingBench : ALLaM 7B obtient 72–74 % contre 40–62 % pour Qwen2.5 7B, un écart pouvant atteindre 32 points de pourcentage sur les tâches linguistiques arabes.',
       },
       runAllam: {
         id: 'run-allam',
@@ -991,6 +1009,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**AceGPT via port communautaire :** ollama run salmatrafi/acegpt récupère le port AceGPT maintenu par la communauté si vous souhaitez comparer.',
           '**Matériel minimal :** un GPU avec 8 GB de VRAM (RTX 3070/4060 ou mieux) ou Apple Silicon avec 16 GB de mémoire unifiée. Dimensionnez les modèles plus grands avec le [Calculateur de VRAM](/fr/local-llms/vram-calculator-local-llm).',
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-vram-by-model-size-en.svg',
+        imageCaption: 'Besoins en VRAM des LLM locaux par taille en quantisation Q4_K_M : les modèles 7B nécessitent 6–8 Go, les 13B 10–14 Go, les 34B 20–24 Go et les 70B 40–48 Go.',
       },
       evaluateArabic: {
         id: 'evaluate-arabic',
@@ -1197,6 +1217,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'モデル': 'Qwen2.5 72B', 'パラメータ': '72B', 'VRAM (Q4_K_M)': '40–48 GB', 'ライセンス': 'Apache 2.0', 'Ollama': 'はい', 'アラビア語スコア': 'より高いが、文化的なギャップは残る' },
           { 'モデル': 'Jais 13B (UAE)', 'パラメータ': '13B', 'VRAM (Q4_K_M)': '10–14 GB', 'ライセンス': 'Apache 2.0', 'Ollama': '限定的', 'アラビア語スコア': '方言で競争力あり' },
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-aralingbench-score-gap-en.svg',
+        imageCaption: 'AraLingBenchスコア比較: ALLaM 7Bは72–74%、Qwen2.5 7Bは40–62%を記録 — アラビア語言語タスクで最大32ポイントの差。',
       },
       runAllam: {
         id: 'run-allam',
@@ -1217,6 +1239,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**コミュニティ移植版経由のAceGPT:** 比較したい場合は、ollama run salmatrafi/acegpt でコミュニティがメンテナンスするAceGPT移植版を取得します。',
           '**最小ハードウェア:** 8 GB VRAMのGPU (RTX 3070/4060以上) またはApple Siliconで16 GBの統合メモリ。より大きなモデルのサイズは[VRAM計算ツール](/ja/local-llms/vram-calculator-local-llm)で見積もってください。',
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-vram-by-model-size-en.svg',
+        imageCaption: 'Q4_K_M量子化におけるサイズ別ローカルLLMのVRAM要件: 7Bモデルは6–8 GB、13Bは10–14 GB、34Bは20–24 GB、70Bは40–48 GBが必要。',
       },
       evaluateArabic: {
         id: 'evaluate-arabic',
@@ -1423,6 +1447,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Qwen2.5 72B', 'Parâmetros': '72B', 'VRAM (Q4_K_M)': '40–48 GB', 'Licença': 'Apache 2.0', 'Ollama': 'Sim', 'Pontuação em árabe': 'Maior, mas lacunas culturais permanecem' },
           { 'Modelo': 'Jais 13B (EAU)', 'Parâmetros': '13B', 'VRAM (Q4_K_M)': '10–14 GB', 'Licença': 'Apache 2.0', 'Ollama': 'Limitado', 'Pontuação em árabe': 'Competitivo em dialeto' },
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-aralingbench-score-gap-en.svg',
+        imageCaption: 'Comparação de pontuação no AraLingBench: o ALLaM 7B atinge 72–74% contra 40–62% do Qwen2.5 7B, uma diferença de até 32 pontos percentuais em tarefas linguísticas em árabe.',
       },
       runAllam: {
         id: 'run-allam',
@@ -1443,6 +1469,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**AceGPT via port da comunidade:** ollama run salmatrafi/acegpt baixa o port do AceGPT mantido pela comunidade, caso você queira comparar.',
           '**Hardware mínimo:** uma GPU com 8 GB de VRAM (RTX 3070/4060 ou melhor) ou Apple Silicon com 16 GB de memória unificada. Dimensione modelos maiores com a [Calculadora de VRAM](/pt/local-llms/vram-calculator-local-llm).',
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-vram-by-model-size-en.svg',
+        imageCaption: 'Necessidades de VRAM de LLMs locais por tamanho na quantização Q4_K_M: modelos de 7B precisam de 6–8 GB, 13B de 10–14 GB, 34B de 20–24 GB e 70B de 40–48 GB.',
       },
       evaluateArabic: {
         id: 'evaluate-arabic',
@@ -1649,6 +1677,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '模型': 'Qwen2.5 72B', '参数': '72B', 'VRAM (Q4_K_M)': '40–48 GB', '许可证': 'Apache 2.0', 'Ollama': '是', '阿拉伯语得分': '更高，但文化差距仍存在' },
           { '模型': 'Jais 13B (阿联酋)', '参数': '13B', 'VRAM (Q4_K_M)': '10–14 GB', '许可证': 'Apache 2.0', 'Ollama': '有限', '阿拉伯语得分': '方言上有竞争力' },
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-aralingbench-score-gap-en.svg',
+        imageCaption: 'AraLingBench 得分对比：ALLaM 7B 得分 72–74%，而 Qwen2.5 7B 为 40–62%——在阿拉伯语语言任务上差距最高达 32 个百分点。',
       },
       runAllam: {
         id: 'run-allam',
@@ -1669,6 +1699,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**通过社区移植版使用 AceGPT：** ollama run salmatrafi/acegpt 会拉取社区维护的 AceGPT 移植版，供你进行比较。',
           '**最低硬件要求：** 8 GB VRAM 的 GPU (RTX 3070/4060 或更高) 或配备 16 GB 统一内存的 Apple Silicon。使用 [VRAM 计算器](/zh/local-llms/vram-calculator-local-llm) 来评估更大模型的需求。',
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-vram-by-model-size-en.svg',
+        imageCaption: '按规模划分的本地 LLM 在 Q4_K_M 量化下的 VRAM 需求：7B 模型需要 6–8 GB，13B 需要 10–14 GB，34B 需要 20–24 GB，70B 需要 40–48 GB。',
       },
       evaluateArabic: {
         id: 'evaluate-arabic',
@@ -1875,6 +1907,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '모델': 'Qwen2.5 72B', '파라미터': '72B', 'VRAM (Q4_K_M)': '40–48 GB', '라이선스': 'Apache 2.0', 'Ollama': '예', '아랍어 점수': '더 높지만 문화적 격차는 남아 있음' },
           { '모델': 'Jais 13B (UAE)', '파라미터': '13B', 'VRAM (Q4_K_M)': '10–14 GB', '라이선스': 'Apache 2.0', 'Ollama': '제한적', '아랍어 점수': '방언에서 경쟁력 있음' },
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-aralingbench-score-gap-en.svg',
+        imageCaption: 'AraLingBench 점수 비교: ALLaM 7B는 72–74%, Qwen2.5 7B는 40–62%를 기록해 아랍어 언어 과제에서 최대 32퍼센트포인트 차이를 보입니다.',
       },
       runAllam: {
         id: 'run-allam',
@@ -1895,6 +1929,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**커뮤니티 포팅을 통한 AceGPT:** ollama run salmatrafi/acegpt 는 비교하고 싶다면 커뮤니티가 유지 관리하는 AceGPT 포팅을 가져옵니다.',
           '**최소 하드웨어:** 8 GB VRAM GPU (RTX 3070/4060 이상) 또는 16 GB 통합 메모리를 갖춘 Apple Silicon. 더 큰 모델의 크기는 [VRAM 계산기](/ko/local-llms/vram-calculator-local-llm)로 측정하십시오.',
         ],
+        image: '/images/best-saudi-arabic-local-llms-allam-2026-vram-by-model-size-en.svg',
+        imageCaption: 'Q4_K_M 양자화 기준 크기별 로컬 LLM VRAM 요구량: 7B 모델은 6–8GB, 13B는 10–14GB, 34B는 20–24GB, 70B는 40–48GB가 필요합니다.',
       },
       evaluateArabic: {
         id: 'evaluate-arabic',
