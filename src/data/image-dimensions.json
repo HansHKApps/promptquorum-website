@@ -18379,6 +18379,16 @@
     "width": 800,
     "height": 455
   },
+  "/images/voice-assistant-local-mobile-offline-decision-tree-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/voice-assistant-local-mobile-offline-latency-budget-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/vram-calculator-local-llm-accuracy-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
