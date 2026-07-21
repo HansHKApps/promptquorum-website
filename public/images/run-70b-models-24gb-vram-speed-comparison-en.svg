@@ -1,0 +1,23 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Inference Speed: Constrained 70B vs. 13B Reference Model</text>
+  <line x1="260" y1="345" x2="740" y2="345" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="250" y="94" font-size="12.5" font-weight="700" fill="#79747E" text-anchor="end">13B @ Q5 (reference)</text>
+  <rect x="260" y="75" width="480" height="24" fill="#34A853" rx="4"/>
+  <text x="558" y="92" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">80–100 tok/s</text>
+
+  <text x="250" y="146" font-size="12.5" font-weight="700" fill="#79747E" text-anchor="end">70B Q2 (17.5 GB, fits VRAM)</text>
+  <rect x="260" y="127" width="38" height="24" fill="#F4B400" rx="4"/>
+  <text x="308" y="144" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">5–8 tok/s</text>
+
+  <text x="250" y="198" font-size="12.5" font-weight="700" fill="#79747E" text-anchor="end">70B Q3 + 2 GB offload</text>
+  <rect x="260" y="179" width="24" height="24" fill="#EA4335" rx="4"/>
+  <text x="294" y="196" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">3–5 tok/s</text>
+
+  <text x="250" y="250" font-size="12.5" font-weight="700" fill="#79747E" text-anchor="end">70B Q4 + 11 GB offload</text>
+  <rect x="260" y="231" width="14" height="24" fill="#EA4335" rx="4"/>
+  <text x="284" y="248" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">1–3 tok/s</text>
+
+  <text x="400" y="378" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">A 13B model at Q5 runs 10–20× faster (80–100 tok/s) than any 70B setup squeezed into 24 GB VRAM.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

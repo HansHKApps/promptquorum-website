@@ -17104,6 +17104,16 @@
     "width": 800,
     "height": 420
   },
+  "/images/run-70b-models-24gb-vram-quantization-fit-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/run-70b-models-24gb-vram-speed-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/run-ai-on-tablet-ipad-android-model-by-device-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
