@@ -65,6 +65,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       twoSurfaces: {
         id: 'two-surfaces',
         title: 'Two Surfaces: The Hosted Service vs the Open Weights',
+        image: '/images/deepseek-local-china-data-privacy-2026-hosted-vs-local-comparison-en.svg',
+        imageCaption: 'Hosted DeepSeek app/API versus self-hosted open weights compared across 6 GDPR-relevant factors: data storage location, cross-border transfer, EU regulatory investigations in Italy, France, Ireland, Germany, Belgium, and Portugal, network telemetry, and verifiable no-egress.',
         content: [
           '**DeepSeek exists as two separable things: a hosted service (app, web, API) operated from China, and a set of open-weight models you can download and run anywhere.** Almost every "DeepSeek privacy" debate collapses these two, which is why the answers get muddled. Keep them apart and the picture is clear.',
           'The hosted service is where the data concern lives. When you type into the DeepSeek app or call its API, your input travels to DeepSeek\'s servers, and the company\'s privacy policy states that data is stored in the People\'s Republic of China. That is a cross-border data flow with real regulatory consequences in the EU.',
@@ -145,6 +147,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whoShould: {
         id: 'who-should',
         title: 'Who Should Self-Host DeepSeek and Who Should Avoid It?',
+        image: '/images/deepseek-local-china-data-privacy-2026-self-host-decision-tree-en.svg',
+        imageCaption: 'Decision tree for choosing between the hosted DeepSeek API and self-hosted open weights, based on whether EU personal data is involved and whether local inference infrastructure is available.',
         content: '**Self-host when you want DeepSeek\'s reasoning without the hosted service\'s data path; avoid DeepSeek entirely only if model-weight concerns outweigh its strengths for your specific work.**',
         decisionBlock: {
           title: 'Self-host, or avoid?',
@@ -263,6 +267,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       twoSurfaces: {
         id: 'two-surfaces',
         title: 'Zwei Oberflächen: Der gehostete Dienst vs. die offenen Gewichte',
+        image: '/images/deepseek-local-china-data-privacy-2026-hosted-vs-local-comparison-en.svg',
+        imageCaption: 'Gehostete DeepSeek-App/API im Vergleich zu selbst gehosteten offenen Gewichten anhand von 6 DSGVO-relevanten Faktoren: Datenspeicherort, grenzüberschreitende Übermittlung, EU-Untersuchungen in Italien, Frankreich, Irland, Deutschland, Belgien und Portugal, Netzwerktelemetrie und überprüfbare Datenabflussfreiheit.',
         content: [
           '**DeepSeek existiert als zwei trennbare Dinge: ein aus China betriebener gehosteter Dienst (App, Web, API) und ein Satz offener Modellgewichte, die Sie überall herunterladen und betreiben können.** Fast jede „DeepSeek-Datenschutz"-Debatte wirft diese beiden zusammen, weshalb die Antworten unklar werden. Halten Sie sie auseinander, und das Bild ist eindeutig.',
           'Beim gehosteten Dienst liegt das Datenschutzproblem. Wenn Sie in die DeepSeek-App tippen oder ihre API aufrufen, gelangt Ihre Eingabe an die Server von DeepSeek, und die Datenschutzrichtlinie des Unternehmens gibt an, dass Daten in der Volksrepublik China gespeichert werden. Das ist ein grenzüberschreitender Datenfluss mit realen regulatorischen Folgen in der EU.',
@@ -343,6 +349,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whoShould: {
         id: 'who-should',
         title: 'Wer sollte DeepSeek selbst betreiben und wer sollte es meiden?',
+        image: '/images/deepseek-local-china-data-privacy-2026-self-host-decision-tree-en.svg',
+        imageCaption: 'Entscheidungsbaum für die Wahl zwischen der gehosteten DeepSeek-API und selbst gehosteten offenen Gewichten, je nachdem, ob EU-personenbezogene Daten betroffen sind und ob lokale Inferenz-Infrastruktur verfügbar ist.',
         content: '**Betreiben Sie es selbst, wenn Sie das Reasoning von DeepSeek ohne den Datenpfad des gehosteten Dienstes möchten; meiden Sie DeepSeek nur dann ganz, wenn die Bedenken zu den Modellgewichten seine Stärken für Ihre konkrete Arbeit überwiegen.**',
         decisionBlock: {
           title: 'Selbst betreiben oder meiden?',
@@ -461,6 +469,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       twoSurfaces: {
         id: 'two-surfaces',
         title: 'Deux surfaces : le service hébergé vs les poids ouverts',
+        image: '/images/deepseek-local-china-data-privacy-2026-hosted-vs-local-comparison-en.svg',
+        imageCaption: 'Application/API DeepSeek hébergée comparée aux poids ouverts auto-hébergés sur 6 facteurs pertinents pour le RGPD : lieu de stockage des données, transfert transfrontalier, enquêtes de l\'UE en Italie, France, Irlande, Allemagne, Belgique et Portugal, télémétrie réseau, et absence de fuite vérifiable.',
         content: [
           '**DeepSeek existe comme deux choses séparables : un service hébergé (application, web, API) exploité depuis la Chine, et un ensemble de modèles à poids ouverts que vous pouvez télécharger et exécuter partout.** Presque tout débat sur « la confidentialité de DeepSeek » confond ces deux choses, d\'où des réponses brouillées. Gardez-les distinctes et l\'image devient claire.',
           'C\'est dans le service hébergé que réside la préoccupation. Lorsque vous saisissez du texte dans l\'application DeepSeek ou appelez son API, votre saisie voyage jusqu\'aux serveurs de DeepSeek, et la politique de confidentialité de l\'entreprise indique que les données sont stockées en République populaire de Chine. C\'est un flux de données transfrontalier aux conséquences réglementaires réelles dans l\'UE.',
@@ -541,6 +551,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whoShould: {
         id: 'who-should',
         title: 'Qui devrait auto-héberger DeepSeek et qui devrait l\'éviter ?',
+        image: '/images/deepseek-local-china-data-privacy-2026-self-host-decision-tree-en.svg',
+        imageCaption: 'Arbre de décision pour choisir entre l\'API DeepSeek hébergée et les poids ouverts auto-hébergés, selon que le prompt contient des données personnelles de l\'UE et qu\'une infrastructure d\'inférence locale est disponible.',
         content: '**Auto-hébergez lorsque vous voulez le raisonnement de DeepSeek sans le chemin de données du service hébergé ; n\'évitez entièrement DeepSeek que si les préoccupations sur les poids du modèle l\'emportent sur ses forces pour votre travail spécifique.**',
         decisionBlock: {
           title: 'Auto-héberger ou éviter ?',
@@ -659,6 +671,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       twoSurfaces: {
         id: 'two-surfaces',
         title: '2つの側面：ホスト型サービス対オープンウェイト',
+        image: '/images/deepseek-local-china-data-privacy-2026-hosted-vs-local-comparison-en.svg',
+        imageCaption: 'ホスト型DeepSeekアプリ／APIと自己ホストのオープンウェイトを、データ保存場所、越境データ移転、イタリア・フランス・アイルランド・ドイツ・ベルギー・ポルトガルにおけるEU調査、ネットワークテレメトリ、検証可能な非流出性というGDPR関連6項目で比較。',
         content: [
           '**DeepSeekは分離可能な2つのものとして存在します。中国から運営されるホスト型サービス（アプリ、ウェブ、API）と、どこででもダウンロードして動かせるオープンウェイトのモデル群です。** ほぼすべての「DeepSeekのプライバシー」論争はこの2つを混同しており、それが答えを曖昧にしています。分けて考えれば、全体像は明確です。',
           'このセクションでは、まずホスト型サービスを見ていきます。データ上の懸念はここにあります。DeepSeekアプリに入力したりAPIを呼び出したりすると、入力はDeepSeekのサーバーへ送られ、同社のプライバシーポリシーはデータが中華人民共和国に保存されると述べています。これは、EUにおいて実際の規制上の影響をもつ、国境を越えるデータの流れです。',
@@ -739,6 +753,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whoShould: {
         id: 'who-should',
         title: '誰がDeepSeekを自己ホストすべきで、誰が避けるべきか？',
+        image: '/images/deepseek-local-china-data-privacy-2026-self-host-decision-tree-en.svg',
+        imageCaption: 'EU個人データの有無とローカル推論インフラの有無に基づき、ホスト型DeepSeek APIと自己ホストのオープンウェイトのどちらを選ぶべきかを示す意思決定ツリー。',
         content: '**ホスト型サービスのデータ経路なしにDeepSeekの推論が欲しいなら自己ホストしましょう。DeepSeekを完全に避けるべきなのは、モデルウェイトの懸念が、あなたの具体的な作業における強みを上回る場合のみです。**',
         decisionBlock: {
           title: '自己ホストか、回避か？',
@@ -857,6 +873,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       twoSurfaces: {
         id: 'two-surfaces',
         title: '两个层面：托管服务对比开放权重',
+        image: '/images/deepseek-local-china-data-privacy-2026-hosted-vs-local-comparison-zh.svg',
+        imageCaption: '托管版 DeepSeek 应用/API 与自托管开放权重按 6 项 GDPR 相关因素对比：数据存储位置、跨境传输、意大利、法国、爱尔兰、德国、比利时和葡萄牙的欧盟监管调查、网络遥测、可验证的零外传。',
         content: [
           '**DeepSeek 以两个可分离的事物存在：一个从中国运营的托管服务（应用、网页、API），以及一套可在任何地方下载并运行的开放权重模型。** 几乎所有关于「DeepSeek 隐私」的争论都把这两者混为一谈，因此答案变得含糊。把它们分开，画面就清晰了。',
           '数据顾虑在于托管服务。当你在 DeepSeek 应用中输入或调用其 API 时，你的输入会传到 DeepSeek 的服务器，而该公司的隐私政策声明数据存储在中华人民共和国。这是一种在欧盟具有真实监管后果的跨境数据流动。',
@@ -937,6 +955,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whoShould: {
         id: 'who-should',
         title: '谁该自托管 DeepSeek，谁该回避？',
+        image: '/images/deepseek-local-china-data-privacy-2026-self-host-decision-tree-zh.svg',
+        imageCaption: '根据提示词是否包含欧盟个人数据、以及是否具备本地推理基础设施，判断应选择托管版 DeepSeek API 还是自托管开放权重的决策树。',
         content: '**当你想要 DeepSeek 的推理能力而不要托管服务的数据路径时，就自托管；只有当模型权重层面的顾虑对你的具体工作而言盖过了它的优势时，才完全回避 DeepSeek。**',
         decisionBlock: {
           title: '自托管，还是回避？',
@@ -1055,6 +1075,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       twoSurfaces: {
         id: 'two-surfaces',
         title: 'Dos superficies: el servicio alojado vs los pesos abiertos',
+        image: '/images/deepseek-local-china-data-privacy-2026-hosted-vs-local-comparison-en.svg',
+        imageCaption: 'App/API alojada de DeepSeek frente a pesos abiertos autohospedados, comparados en 6 factores relevantes para el RGPD: ubicación de almacenamiento de datos, transferencia transfronteriza, investigaciones de la UE en Italia, Francia, Irlanda, Alemania, Bélgica y Portugal, telemetría de red y ausencia de fuga verificable.',
         content: [
           '**DeepSeek existe como dos cosas separables: un servicio alojado (app, web, API) operado desde China, y un conjunto de modelos de pesos abiertos que puedes descargar y ejecutar en cualquier lugar.** Casi todo debate sobre «la privacidad de DeepSeek» mezcla estas dos cosas, y por eso las respuestas se enturbian. Mantenlas separadas y la imagen queda clara.',
           'En el servicio alojado es donde vive la preocupación por los datos. Cuando escribes en la app de DeepSeek o llamas a su API, tu entrada viaja a los servidores de DeepSeek, y la política de privacidad de la empresa indica que los datos se almacenan en la República Popular China. Es un flujo de datos transfronterizo con consecuencias regulatorias reales en la UE.',
@@ -1135,6 +1157,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whoShould: {
         id: 'who-should',
         title: '¿Quién debería autohospedar DeepSeek y quién debería evitarlo?',
+        image: '/images/deepseek-local-china-data-privacy-2026-self-host-decision-tree-en.svg',
+        imageCaption: 'Árbol de decisión para elegir entre la API alojada de DeepSeek y los pesos abiertos autohospedados, según si el prompt contiene datos personales de la UE y si hay infraestructura de inferencia local disponible.',
         content: '**Autohospeda cuando quieras el razonamiento de DeepSeek sin la ruta de datos del servicio alojado; evita DeepSeek por completo solo si las preocupaciones sobre los pesos del modelo superan sus puntos fuertes para tu trabajo concreto.**',
         decisionBlock: {
           title: '¿Autohospedar o evitar?',
@@ -1253,6 +1277,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       twoSurfaces: {
         id: 'two-surfaces',
         title: 'Duas superfícies: o serviço hospedado vs. os pesos abertos',
+        image: '/images/deepseek-local-china-data-privacy-2026-hosted-vs-local-comparison-en.svg',
+        imageCaption: 'App/API hospedado do DeepSeek comparado a pesos abertos auto-hospedados em 6 fatores relevantes para privacidade: local de armazenamento dos dados, transferência transfronteiriça, investigações na Itália, França, Irlanda, Alemanha, Bélgica e Portugal, telemetria de rede e ausência de saída de dados verificável.',
         content: [
           '**O DeepSeek existe como duas coisas separáveis: um serviço hospedado (app, web, API) operado a partir da China, e um conjunto de modelos de pesos abertos que você pode baixar e rodar em qualquer lugar.** Quase todo debate sobre "privacidade do DeepSeek" mistura essas duas coisas, e é por isso que as respostas ficam confusas. Mantenha-as separadas e o quadro fica claro.',
           'O serviço hospedado é onde mora a preocupação com dados. Quando você digita no app DeepSeek ou chama sua API, sua entrada viaja até os servidores do DeepSeek, e a política de privacidade da empresa afirma que os dados são armazenados na República Popular da China. Esse é um fluxo de dados transfronteiriço com consequências regulatórias reais na Europa.',
@@ -1333,6 +1359,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whoShould: {
         id: 'who-should',
         title: 'Quem deve auto-hospedar o DeepSeek e quem deve evitá-lo?',
+        image: '/images/deepseek-local-china-data-privacy-2026-self-host-decision-tree-en.svg',
+        imageCaption: 'Árvore de decisão para escolher entre a API hospedada do DeepSeek e os pesos abertos auto-hospedados, com base na presença de dados pessoais e na disponibilidade de infraestrutura de inferência local.',
         content: '**Auto-hospede quando você quer o raciocínio do DeepSeek sem o caminho de dados do serviço hospedado; evite o DeepSeek por completo apenas se as preocupações com os pesos do modelo superarem seus pontos fortes para o seu trabalho específico.**',
         decisionBlock: {
           title: 'Auto-hospedar ou evitar?',
@@ -1451,6 +1479,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       twoSurfaces: {
         id: 'two-surfaces',
         title: 'سطحان: الخدمة المستضافة مقابل الأوزان المفتوحة',
+        image: '/images/deepseek-local-china-data-privacy-2026-hosted-vs-local-comparison-en.svg',
+        imageCaption: 'مقارنة بين تطبيق/واجهة DeepSeek المستضافة والأوزان المفتوحة ذاتية الاستضافة عبر 6 عوامل تتعلق بحماية البيانات: موقع تخزين البيانات، النقل عبر الحدود، التحقيقات الأوروبية في إيطاليا وفرنسا وأيرلندا وألمانيا وبلجيكا والبرتغال، القياس عن بُعد، وإمكانية التحقق من عدم تسرب البيانات.',
         content: [
           '**يوجد DeepSeek كشيئين قابلين للفصل: خدمة مستضافة (تطبيق وويب وAPI) تُدار من الصين، ومجموعة من نماذج الأوزان المفتوحة التي يمكنك تنزيلها وتشغيلها في أي مكان.** يكاد كل نقاش حول "خصوصية DeepSeek" يخلط بين هذين الأمرين، ولهذا تصبح الإجابات مشوشة. افصل بينهما تتضح الصورة.',
           'الخدمة المستضافة هي حيث يكمن القلق بشأن البيانات. عندما تكتب في تطبيق DeepSeek أو تستدعي واجهة API الخاصة به، ينتقل مُدخلك إلى خوادم DeepSeek، وتنص سياسة خصوصية الشركة على أن البيانات تُخزَّن في جمهورية الصين الشعبية. هذا تدفق للبيانات عبر الحدود له عواقب تنظيمية حقيقية.',
@@ -1531,6 +1561,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whoShould: {
         id: 'who-should',
         title: 'من ينبغي له استضافة DeepSeek ذاتيًا ومن ينبغي له تجنبه؟',
+        image: '/images/deepseek-local-china-data-privacy-2026-self-host-decision-tree-en.svg',
+        imageCaption: 'شجرة قرار لاختيار ما بين واجهة DeepSeek المستضافة والأوزان المفتوحة ذاتية الاستضافة، بناءً على وجود بيانات شخصية أوروبية وتوافر بنية تحتية للاستدلال المحلي.',
         content: '**استضِف ذاتيًا عندما تريد استدلال DeepSeek دون مسار بيانات الخدمة المستضافة؛ وتجنّب DeepSeek تمامًا فقط إذا كانت مخاوف أوزان النموذج تفوق نقاط قوته لعملك المحدد.**',
         decisionBlock: {
           title: 'استضافة ذاتية أم تجنّب؟',
@@ -1649,6 +1681,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       twoSurfaces: {
         id: 'two-surfaces',
         title: '두 표면: 호스팅 서비스 vs 오픈 가중치',
+        image: '/images/deepseek-local-china-data-privacy-2026-hosted-vs-local-comparison-en.svg',
+        imageCaption: '호스팅형 DeepSeek 앱/API와 자체 호스팅 오픈 가중치를 데이터 저장 위치, 국경 간 전송, 이탈리아·프랑스·아일랜드·독일·벨기에·포르투갈의 EU 조사, 네트워크 텔레메트리, 검증 가능한 무유출 등 6가지 요소로 비교합니다.',
         content: [
           '**DeepSeek는 분리 가능한 두 가지로 존재합니다: 중국에서 운영되는 호스팅 서비스(앱, 웹, API)와, 어디서든 다운로드해 실행할 수 있는 오픈 가중치 모델 집합입니다.** 거의 모든 "DeepSeek 개인정보" 논쟁은 이 둘을 뭉뚱그리며, 그래서 답이 흐려집니다. 둘을 구분하면 그림이 분명해집니다.',
           '데이터 우려가 자리 잡은 곳은 호스팅 서비스입니다. DeepSeek 앱에 입력하거나 API를 호출하면 입력이 DeepSeek 서버로 이동하며, 회사의 개인정보 처리방침은 데이터가 중화인민공화국에 저장된다고 명시합니다. 이는 실제 규제 결과를 동반하는 국경 간 데이터 흐름입니다.',
@@ -1729,6 +1763,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whoShould: {
         id: 'who-should',
         title: '누가 DeepSeek를 자체 호스팅해야 하고 누가 피해야 합니까?',
+        image: '/images/deepseek-local-china-data-privacy-2026-self-host-decision-tree-en.svg',
+        imageCaption: '프롬프트에 EU 개인정보가 포함되는지와 로컬 추론 인프라를 사용할 수 있는지에 따라 호스팅형 DeepSeek API와 자체 호스팅 오픈 가중치 중 선택하는 의사결정 트리입니다.',
         content: '**호스팅 서비스의 데이터 경로 없이 DeepSeek의 추론을 원할 때 자체 호스팅하십시오; 모델 가중치 우려가 특정 작업에 대한 강점을 능가할 때만 DeepSeek를 완전히 피하십시오.**',
         decisionBlock: {
           title: '자체 호스팅 또는 회피?',

@@ -7449,6 +7449,26 @@
     "width": 800,
     "height": 400
   },
+  "/images/deepseek-local-china-data-privacy-2026-hosted-vs-local-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/deepseek-local-china-data-privacy-2026-hosted-vs-local-comparison-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/deepseek-local-china-data-privacy-2026-self-host-decision-tree-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/deepseek-local-china-data-privacy-2026-self-host-decision-tree-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
   "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
