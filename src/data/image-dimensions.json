@@ -10214,6 +10214,16 @@
     "width": 1200,
     "height": 675
   },
+  "/images/local-ai-app-with-built-in-rag-capacity-scorecard-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/local-ai-nontechnical-anythingllm-workspace-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,

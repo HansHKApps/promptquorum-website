@@ -1,0 +1,54 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">Sample Query Accuracy: 5 Test Questions Across 3 Apps</text>
+
+  <text x="20" y="53" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Query</text>
+  <text x="460" y="53" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">AnythingLLM</text>
+  <text x="590" y="53" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#7D5260" text-anchor="middle">LM Studio</text>
+  <text x="720" y="53" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#34A853" text-anchor="middle">Jan + Docs</text>
+  <line x1="18" y1="62" x2="782" y2="62" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Lease termination -->
+  <text x="20" y="86" font-family="system-ui, sans-serif" font-size="11.5" fill="#1C1B1F">Lease termination notice period</text>
+  <circle cx="460" cy="82" r="13" fill="#34A853"/><text x="460" y="87" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="590" cy="82" r="13" fill="#34A853"/><text x="590" y="87" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="720" cy="82" r="13" fill="#34A853"/><text x="720" y="87" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="98" x2="782" y2="98" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Token-mixing quote -->
+  <text x="20" y="120" font-family="system-ui, sans-serif" font-size="11.5" fill="#1C1B1F">Token-mixing exact quote (verbatim)</text>
+  <circle cx="460" cy="116" r="13" fill="#34A853"/><text x="460" y="121" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="590" cy="116" r="13" fill="#34A853"/><text x="590" y="121" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="720" cy="116" r="13" fill="#F4B400"/><text x="720" y="121" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">!</text>
+  <line x1="18" y1="132" x2="782" y2="132" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: Multi-hop -->
+  <text x="20" y="154" font-family="system-ui, sans-serif" font-size="11.5" fill="#1C1B1F">Multi-hop: interlocks + emergency stop</text>
+  <circle cx="460" cy="150" r="13" fill="#34A853"/><text x="460" y="155" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="590" cy="150" r="13" fill="#F4B400"/><text x="590" y="155" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">!</text>
+  <circle cx="720" cy="150" r="13" fill="#F4B400"/><text x="720" y="155" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">!</text>
+  <line x1="18" y1="166" x2="782" y2="166" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Summarize -->
+  <text x="20" y="188" font-family="system-ui, sans-serif" font-size="11.5" fill="#1C1B1F">Summarize chapter 4 in 5 bullets</text>
+  <circle cx="460" cy="184" r="13" fill="#34A853"/><text x="460" y="189" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="590" cy="184" r="13" fill="#34A853"/><text x="590" y="189" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="720" cy="184" r="13" fill="#34A853"/><text x="720" y="189" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <line x1="18" y1="200" x2="782" y2="200" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: Contract conflict -->
+  <text x="20" y="222" font-family="system-ui, sans-serif" font-size="11.5" fill="#1C1B1F">Rent-escalation conflict detection</text>
+  <circle cx="460" cy="218" r="13" fill="#34A853"/><text x="460" y="223" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="590" cy="218" r="13" fill="#34A853"/><text x="590" y="223" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <circle cx="720" cy="218" r="13" fill="#F4B400"/><text x="720" y="223" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">!</text>
+  <line x1="18" y1="236" x2="782" y2="236" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Score row -->
+  <text x="20" y="260" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Score (out of 5)</text>
+  <text x="460" y="264" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">5/5</text>
+  <text x="590" y="264" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">4/5</text>
+  <text x="720" y="264" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">2/5</text>
+
+  <text x="400" y="310" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">AnythingLLM answered all 5 test queries correctly; LM Studio and Jan + Documents each missed</text>
+  <text x="400" y="327" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">multi-hop or verbatim-quote questions, scoring 4/5 and 2/5 (Llama 3.3 8B chat model).</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

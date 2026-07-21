@@ -117,6 +117,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Most private — pick for AGPL / compliance',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-capacity-scorecard-en.svg',
+        imageCaption:
+          'AnythingLLM handles up to 5,000 documents (~50,000 pages) across 10+ file formats; LM Studio supports about 30 documents per chat with 4 formats; Jan + Documents handles about 200 documents with 4 formats and AGPL open-source code.',
       },
       whichOne: {
         id: 'which-one',
@@ -289,6 +292,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM led on multi-hop and contradiction queries because its retrieval defaults pull more chunks (top-K = 6) than LM Studio (top-K = 4) and Jan (top-K = 4). On simpler factual lookups, all three were essentially equivalent.',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
+        imageCaption:
+          'Query accuracy across 5 test questions on a 1,047-page manual and 412-page paper: AnythingLLM answered 5 of 5 correctly, LM Studio 4 of 5, Jan + Documents 2 of 5, using Llama 3.3 8B as the chat model.',
       },
       citations: {
         id: 'citations',
@@ -615,6 +621,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Am privatesten — wählen Sie für AGPL / Compliance',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-capacity-scorecard-en.svg',
+        imageCaption:
+          'AnythingLLM verarbeitet bis zu 5.000 Dokumente (~50.000 Seiten) in 10+ Dateiformaten; LM Studio unterstützt etwa 30 Dokumente pro Chat in 4 Formaten; Jan + Documents verarbeitet etwa 200 Dokumente in 4 Formaten mit AGPL-Open-Source-Code.',
       },
       whichOne: {
         id: 'which-one',
@@ -787,6 +796,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM führte Multi-Hop- und Widerspruchs-Abfragen an, da seine Abruf-Standards mehr Chunks abrufen (Top-K = 6) als LM Studio (Top-K = 4) und Jan (Top-K = 4). Bei einfacheren Faktenlookups waren alle drei im Wesentlichen gleichwertig.',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
+        imageCaption:
+          'Antwortgenauigkeit bei 5 Testfragen zu einem 1.047-seitigen Handbuch und einem 412-seitigen Paper: AnythingLLM beantwortete 5 von 5 korrekt, LM Studio 4 von 5, Jan + Documents 2 von 5, mit Llama 3.3 8B als Chat-Modell.',
       },
       citations: {
         id: 'citations',
@@ -1121,6 +1133,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Verdict': 'Plus privé — choix AGPL',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-capacity-scorecard-en.svg',
+        imageCaption:
+          "AnythingLLM traite jusqu'à 5 000 documents (~50 000 pages) sur 10+ formats de fichiers ; LM Studio prend en charge environ 30 documents par conversation avec 4 formats ; Jan + Documents traite environ 200 documents avec 4 formats et un code open source AGPL.",
       },
       whichOne: {
         id: 'which-one',
@@ -1293,6 +1308,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM excelle sur multi-hop car retrieval par défaut top-K=6 vs LM Studio/Jan top-K=4. Lookup factuel simple : les trois équivalents.',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
+        imageCaption:
+          'Précision des réponses sur 5 questions de test portant sur un manuel de 1 047 pages et un article de 412 pages : AnythingLLM a répondu correctement à 5 questions sur 5, LM Studio à 4 sur 5, Jan + Documents à 2 sur 5, avec Llama 3.3 8B comme modèle de conversation.',
       },
       citations: {
         id: 'citations',
@@ -1619,6 +1637,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '判定': '最もプライベート — AGPL / コンプライアンス向け',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-capacity-scorecard-en.svg',
+        imageCaption:
+          'AnythingLLMは10以上のファイル形式で最大5,000文書（約50,000ページ）に対応、LM Studioは4形式でチャットごとに約30文書、Jan + Documentsは4形式で約200文書に対応し、AGPLオープンソースコードを採用。',
       },
       whichOne: {
         id: 'which-one',
@@ -1791,6 +1812,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM は複数ホップと矛盾クエリで lead、デフォルト検索でもっとチャンク pull（top-K = 6）LM Studio/Jan より（top-K = 4）。シンプルファクト検索：3つすべてほぼ同等。',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
+        imageCaption:
+          '1,047ページのマニュアルと412ページの論文を使った5つのテスト質問での正答率：AnythingLLMは5問中5問正解、LM Studioは5問中4問、Jan + Documentsは5問中2問正解（チャットモデルはLlama 3.3 8B）。',
       },
       citations: {
         id: 'citations',
@@ -2121,6 +2145,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '结论': '最私密 — AGPL/合规选择',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-capacity-scorecard-en.svg',
+        imageCaption:
+          'AnythingLLM 支持 10 种以上文件格式，最多可处理约 5,000 份文档（约 50,000 页）；LM Studio 支持 4 种格式，每次对话约 30 份文档；Jan + Documents 支持 4 种格式，约 200 份文档，并采用 AGPL 开源代码。',
       },
       whichOne: {
         id: 'which-one',
@@ -2293,6 +2320,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM在多跳和矛盾查询上领先，因为其检索默认值拉取更多块（top-K = 6）比LM Studio（top-K = 4）和Jan（top-K = 4）。在简单的事实查询上，三个基本相当。',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
+        imageCaption:
+          '在一份 1,047 页手册和一篇 412 页论文上进行的 5 道测试题准确率：AnythingLLM 答对 5/5，LM Studio 答对 4/5，Jan + Documents 答对 2/5，聊天模型为 Llama 3.3 8B。',
       },
       citations: {
         id: 'citations',
@@ -2641,6 +2671,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredicto': 'La más privada — elige para AGPL / cumplimiento',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-capacity-scorecard-en.svg',
+        imageCaption:
+          'AnythingLLM procesa hasta 5.000 documentos (~50.000 páginas) en más de 10 formatos de archivo; LM Studio admite unos 30 documentos por chat con 4 formatos; Jan + Documents gestiona unos 200 documentos con 4 formatos y código abierto AGPL.',
       },
       whichOne: {
         id: 'which-one',
@@ -2813,6 +2846,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM lideró en las consultas multi-salto y de contradicción porque su configuración de recuperación extrae más fragmentos por defecto (top-K = 6) que LM Studio (top-K = 4) y Jan (top-K = 4). En búsquedas factuales simples, las tres fueron prácticamente equivalentes.',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
+        imageCaption:
+          'Precisión de respuestas en 5 preguntas de prueba sobre un manual de 1.047 páginas y un artículo de 412 páginas: AnythingLLM acertó 5 de 5, LM Studio 4 de 5, Jan + Documents 2 de 5, usando Llama 3.3 8B como modelo de chat.',
       },
       citations: {
         id: 'citations',
@@ -3157,6 +3193,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Veredicto': 'O mais privado — escolha para AGPL / conformidade',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-capacity-scorecard-en.svg',
+        imageCaption:
+          'O AnythingLLM processa até 5.000 documentos (~50.000 páginas) em mais de 10 formatos de arquivo; o LM Studio suporta cerca de 30 documentos por chat com 4 formatos; o Jan + Documents processa cerca de 200 documentos com 4 formatos e código aberto AGPL.',
       },
       whichOne: {
         id: 'which-one',
@@ -3329,6 +3368,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'O AnythingLLM liderou nas consultas multi-salto e de contradição porque sua configuração de recuperação extrai mais fragmentos por padrão (top-K = 6) do que o LM Studio (top-K = 4) e o Jan (top-K = 4). Em buscas factuais simples, os três foram praticamente equivalentes.',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
+        imageCaption:
+          'Precisão de respostas em 5 perguntas de teste sobre um manual de 1.047 páginas e um artigo de 412 páginas: o AnythingLLM acertou 5 de 5, o LM Studio 4 de 5, o Jan + Documents 2 de 5, usando o Llama 3.3 8B como modelo de chat.',
       },
       citations: {
         id: 'citations',
@@ -3674,6 +3716,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الحكم': 'الأكثر خصوصية — اختره لـAGPL / الامتثال',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-capacity-scorecard-en.svg',
+        imageCaption:
+          'يتعامل AnythingLLM مع ما يصل إلى 5,000 مستند (~50,000 صفحة) عبر أكثر من 10 صيغ ملفات؛ يدعم LM Studio نحو 30 مستندًا لكل محادثة بـ4 صيغ؛ يتعامل Jan + Documents مع نحو 200 مستند بـ4 صيغ وشفرة مصدر مفتوحة بترخيص AGPL.',
       },
       whichOne: {
         id: 'which-one',
@@ -3819,6 +3864,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'تقدّم AnythingLLM في الاستعلامات متعددة الخطوات والتناقضات لأن إعداده يسترجع مقاطع أكثر افتراضياً (top-K = 6) من LM Studio (top-K = 4) وJan (top-K = 4). في البحث الواقعي البسيط، الثلاثة متكافئة تقريباً.',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
+        imageCaption:
+          'دقة الإجابة عبر 5 أسئلة اختبار على دليل من 1,047 صفحة وورقة بحثية من 412 صفحة: أجاب AnythingLLM بشكل صحيح على 5 من 5، وLM Studio على 4 من 5، وJan + Documents على 2 من 5، باستخدام Llama 3.3 8B كنموذج للمحادثة.',
       },
       citations: {
         id: 'citations',
@@ -4164,6 +4212,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '평가': '가장 개인적 — AGPL / 규정 준수에 선택',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-capacity-scorecard-en.svg',
+        imageCaption:
+          'AnythingLLM은 10개 이상의 파일 형식으로 최대 5,000개 문서(~50,000페이지)를 처리하고, LM Studio는 4개 형식으로 채팅당 약 30개 문서를 지원하며, Jan + Documents는 4개 형식으로 약 200개 문서를 처리하고 AGPL 오픈소스 코드를 사용합니다.',
       },
       whichOne: {
         id: 'which-one',
@@ -4346,6 +4397,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'AnythingLLM이 다중 홉 및 모순 쿼리에서 앞섰습니다. 이는 검색 구성이 기본적으로 LM Studio(top-K = 4) 및 Jan(top-K = 4)보다 더 많은 청크를 추출하기 때문입니다(top-K = 6). 단순한 사실 검색에서는 세 가지 모두 실질적으로 동등했습니다.',
           },
         ],
+        image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
+        imageCaption:
+          '1,047페이지 매뉴얼과 412페이지 논문을 대상으로 한 5개 테스트 질문의 정확도: AnythingLLM은 5개 중 5개 정답, LM Studio는 5개 중 4개, Jan + Documents는 5개 중 2개 정답이며, 채팅 모델은 Llama 3.3 8B입니다.',
       },
       citations: {
         id: 'citations',
