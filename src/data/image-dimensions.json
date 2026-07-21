@@ -18329,6 +18329,26 @@
     "width": 800,
     "height": 340
   },
+  "/images/uae-pdpl-cloud-vs-onprem-compliance-comparison-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/uae-pdpl-cloud-vs-onprem-compliance-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/uae-pdpl-cross-border-transfer-decision-tree-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/uae-pdpl-cross-border-transfer-decision-tree-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
   "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,

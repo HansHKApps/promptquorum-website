@@ -182,6 +182,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudAiRisk: {
         id: 'cloud-ai-risk',
         title: 'How Cloud AI APIs Create Cross-Border Transfer Risk Under the PDPL',
+        image: '/images/uae-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: 'UAE PDPL cross-border transfer decision tree: a prompt with personal data of a UAE resident only triggers transfer rules if inference runs outside UAE-based infrastructure — on-premise or UAE cloud avoids adequacy decisions, SCCs, and BCRs.',
         content: [
           '**When you call a cloud AI API, personal data leaves the UAE.** A typical enterprise workflow — sending a customer query to an API endpoint hosted in the US or EU — is a cross-border transfer under the PDPL, even if the data is transient.',
           '**The PDPL restricts cross-border transfers.** Data may only flow to a destination country if it provides an adequate level of protection recognised by the UAE Data Office, or if specific contractual safeguards are in place (SCCs or BCRs). As of 2026, the UAE Data Office had not published a formal adequacy list.',
@@ -219,6 +221,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       riskTable: {
         id: 'risk-table',
         title: 'Cloud AI vs. On-Premise: PDPL Cross-Border Risk Comparison',
+        image: '/images/uae-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: 'Cloud AI API vs. on-premise local AI compared across 6 UAE PDPL factors: border crossing, adequacy decision, SCC/BCR requirement, audit log jurisdiction, UAEDO enforcement reach, and AI Strategy 2031 alignment.',
         content: 'This table compares the PDPL compliance posture of cloud AI APIs versus on-premise local AI inference. Not legal advice — consult your DPO.',
         columns: ['Factor', 'Cloud AI API', 'On-Premise Local AI'],
         rows: [
@@ -574,6 +578,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudAiRisk: {
         id: 'cloud-ai-risk',
         title: 'كيف تُنشئ واجهات برمجة الذكاء الاصطناعي السحابية مخاطر النقل عبر الحدود بموجب PDPL',
+        image: '/images/uae-pdpl-cross-border-transfer-decision-tree-ar.svg',
+        imageCaption: 'شجرة قرار حول النقل عبر الحدود بموجب قانون حماية البيانات الشخصية الإماراتي (PDPL): لا تنطبق قواعد النقل إلا إذا كان الاستدلال يعمل خارج البنية التحتية الإماراتية — التشغيل المحلي أو السحابة الإماراتية يُغني عن قرار الملاءمة وSCC وBCR.',
         content: [
           '**عندما تستدعي واجهة برمجة ذكاء اصطناعي سحابية، تغادر البيانات الشخصية الإمارات.** سير عمل مؤسسي نموذجي — إرسال استعلام عميل إلى نقطة نهاية واجهة برمجة مستضافة في الولايات المتحدة أو الاتحاد الأوروبي — هو نقل عبر الحدود بموجب PDPL، حتى لو كانت البيانات عابرة.',
           '**يُقيِّد PDPL النقل عبر الحدود.** لا يجوز تدفق البيانات إلى دولة مستقبِلة إلا إذا كانت توفر مستوى كافيًا من الحماية المعترف به من مكتب البيانات في الإمارات، أو إذا كانت هناك ضمانات تعاقدية محددة (SCCs أو BCRs). وحتى عام 2026، لم يكن مكتب البيانات في الإمارات قد نشر قائمة ملاءمة رسمية.',
@@ -611,6 +617,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       riskTable: {
         id: 'risk-table',
         title: 'الذكاء الاصطناعي السحابي مقابل المحلي: مقارنة مخاطر النقل عبر الحدود بموجب PDPL',
+        image: '/images/uae-pdpl-cloud-vs-onprem-compliance-comparison-ar.svg',
+        imageCaption: 'مقارنة بين الذكاء الاصطناعي السحابي والمحلي عبر 6 عوامل من PDPL الإماراتي: نقل البيانات عبر الحدود، قرار الملاءمة، متطلبات SCC/BCR، اختصاص سجلات التدقيق، مدى إنفاذ UAEDO، وتوافق استراتيجية الذكاء الاصطناعي 2031.',
         content: 'يقارن هذا الجدول وضع الامتثال لـ PDPL بين واجهات برمجة الذكاء الاصطناعي السحابية والاستدلال المحلي للذكاء الاصطناعي. ليست استشارة قانونية — راجع مسؤول حماية البيانات (DPO) لديك.',
         columns: ['العامل', 'واجهة برمجة الذكاء الاصطناعي السحابية', 'الذكاء الاصطناعي المحلي'],
         rows: [
@@ -967,6 +975,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudAiRisk: {
         id: 'cloud-ai-risk',
         title: 'Wie Cloud-KI-APIs grenzüberschreitende Übermittlungsrisiken unter dem PDPL erzeugen',
+        image: '/images/uae-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: 'Entscheidungsbaum zur grenzüberschreitenden Übermittlung nach der VAE-PDPL: Übermittlungsregeln greifen nur, wenn die Inferenz außerhalb VAE-basierter Infrastruktur läuft — On-Premise oder VAE-Cloud macht Angemessenheitsbeschluss, SCC und BCR überflüssig.',
         content: [
           '**Wenn Sie eine Cloud-KI-API aufrufen, verlassen personenbezogene Daten die UAE.** Ein typischer Unternehmens-Workflow — eine Kundenanfrage an einen in den USA oder der EU gehosteten API-Endpunkt zu senden — ist unter dem PDPL eine grenzüberschreitende Übermittlung, selbst wenn die Daten nur vorübergehend sind.',
           '**Das PDPL schränkt grenzüberschreitende Übermittlungen ein.** Daten dürfen nur in ein Zielland fließen, wenn es ein vom UAE Data Office anerkanntes angemessenes Schutzniveau bietet oder wenn spezifische vertragliche Schutzmaßnahmen vorhanden sind (SCCs oder BCRs). Bis 2026 hatte das UAE Data Office keine formelle Angemessenheitsliste veröffentlicht.',
@@ -1004,6 +1014,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       riskTable: {
         id: 'risk-table',
         title: 'Cloud-KI vs. On-Premise: Vergleich des grenzüberschreitenden PDPL-Risikos',
+        image: '/images/uae-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: 'Cloud-KI-API vs. On-Premise-KI im Vergleich anhand von 6 VAE-PDPL-Faktoren: Grenzüberschreitung, Angemessenheitsbeschluss, SCC/BCR-Pflicht, Zuständigkeit der Audit-Logs, UAEDO-Durchsetzungsreichweite und Ausrichtung an der KI-Strategie 2031.',
         content: 'Diese Tabelle vergleicht die PDPL-Compliance-Haltung von Cloud-KI-APIs gegenüber On-Premise-KI-Inferenz vor Ort. Keine Rechtsberatung — konsultieren Sie Ihren DPO.',
         columns: ['Faktor', 'Cloud-KI-API', 'On-Premise lokale KI'],
         rows: [
@@ -1359,6 +1371,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudAiRisk: {
         id: 'cloud-ai-risk',
         title: 'Cómo las APIs de IA en la nube generan riesgo de transferencia transfronteriza bajo la PDPL',
+        image: '/images/uae-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: 'Árbol de decisión de transferencia transfronteriza bajo la PDPL de EAU: las reglas de transferencia solo se activan si la inferencia se ejecuta fuera de infraestructura con base en EAU — on-premise o nube en EAU evita la decisión de adecuación, las SCC y las BCR.',
         content: [
           '**Cuando llamas a una API de IA en la nube, los datos personales salen de los EAU.** Un flujo de trabajo empresarial típico — enviar una consulta de cliente a un endpoint de API alojado en EE. UU. o la UE — es una transferencia transfronteriza bajo la PDPL, incluso si los datos son transitorios.',
           '**La PDPL restringe las transferencias transfronterizas.** Los datos solo pueden fluir a un país de destino si este proporciona un nivel adecuado de protección reconocido por la UAE Data Office, o si existen salvaguardas contractuales específicas (SCCs o BCRs). Hasta 2026, la UAE Data Office no había publicado una lista formal de adecuación.',
@@ -1396,6 +1410,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       riskTable: {
         id: 'risk-table',
         title: 'IA en la nube vs. on-premise: comparación de riesgo transfronterizo de la PDPL',
+        image: '/images/uae-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: 'Comparación de IA en la nube frente a IA local on-premise en 6 factores de la PDPL de EAU: cruce de frontera, decisión de adecuación, requisito de SCC/BCR, jurisdicción de los registros de auditoría, alcance de aplicación de UAEDO y alineación con la Estrategia de IA 2031.',
         content: 'Esta tabla compara la postura de cumplimiento de la PDPL de las APIs de IA en la nube frente a la inferencia de IA local on-premise. No es asesoramiento legal — consulta a tu DPO.',
         columns: ['Factor', 'API de IA en la nube', 'IA local on-premise'],
         rows: [
@@ -1752,6 +1768,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudAiRisk: {
         id: 'cloud-ai-risk',
         title: 'Comment les APIs IA cloud créent un risque de transfert transfrontalier sous le PDPL',
+        image: '/images/uae-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: 'Arbre de décision du transfert transfrontalier sous le PDPL des EAU : les règles de transfert ne s\'appliquent que si l\'inférence s\'exécute hors d\'une infrastructure basée aux EAU — l\'on-premise ou le cloud émirati évite la décision d\'adéquation, les SCC et les BCR.',
         content: [
           '**Lorsque vous appelez une API IA cloud, des données personnelles quittent les EAU.** Un flux de travail d\'entreprise typique — envoyer une requête client vers un point de terminaison d\'API hébergé aux États-Unis ou dans l\'UE — constitue un transfert transfrontalier sous le PDPL, même si les données sont transitoires.',
           '**Le PDPL restreint les transferts transfrontaliers.** Les données ne peuvent circuler vers un pays de destination que s\'il offre un niveau de protection adéquat reconnu par le UAE Data Office, ou si des garanties contractuelles spécifiques sont en place (SCCs ou BCRs). En 2026, le UAE Data Office n\'avait pas publié de liste d\'adéquation formelle.',
@@ -1789,6 +1807,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       riskTable: {
         id: 'risk-table',
         title: 'IA cloud vs on-premise : comparaison du risque transfrontalier PDPL',
+        image: '/images/uae-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: 'Comparaison entre IA cloud et IA locale on-premise sur 6 facteurs du PDPL des EAU : franchissement de frontière, décision d\'adéquation, exigence SCC/BCR, juridiction des journaux d\'audit, portée d\'application de l\'UAEDO et alignement avec la Stratégie IA 2031.',
         content: 'Ce tableau compare la posture de conformité PDPL des APIs IA cloud par rapport à l\'inférence IA locale on-premise. Ne constitue pas un conseil juridique — consultez votre DPO.',
         columns: ['Facteur', 'API IA cloud', 'IA locale on-premise'],
         rows: [
@@ -2145,6 +2165,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudAiRisk: {
         id: 'cloud-ai-risk',
         title: 'クラウドAI APIがPDPL下で越境移転リスクを生む仕組み',
+        image: '/images/uae-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: 'UAE PDPLにおける越境移転の判定フロー：推論がUAE国内インフラの外で実行される場合にのみ移転ルールが適用される — オンプレミスまたはUAEクラウドなら適切性認定、SCC、BCRは不要。',
         content: [
           '**クラウドAI APIを呼び出すと、個人データはUAEを離れます。** 一般的なエンタープライズワークフロー — 顧客のクエリを米国やEUにホストされたAPIエンドポイントに送信すること — は、たとえデータが一時的であってもPDPL下の越境移転に該当します。',
           '**PDPLは越境移転を制限します。** データは、UAE Data Officeが認める適切な水準の保護を移転先国が提供する場合、または特定の契約上の保護措置（SCCsまたはBCRs）が整っている場合にのみ移転できます。2026年時点で、UAE Data Officeは正式な適切性リストを公表していませんでした。',
@@ -2182,6 +2204,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       riskTable: {
         id: 'risk-table',
         title: 'クラウドAI vs オンプレミス：PDPL越境リスク比較',
+        image: '/images/uae-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: 'クラウドAI APIとオンプレミスのローカルAIを、UAE PDPLの6つの要素（国境越え、適切性認定、SCC/BCR要否、監査ログの管轄、UAEDOの執行範囲、AI戦略2031との整合性）で比較。',
         content: 'この表は、クラウドAI APIとオンプレミスのローカルAI推論のPDPLコンプライアンス上の姿勢を比較します。法的助言ではありません — DPOにご相談ください。',
         columns: ['要素', 'クラウドAI API', 'オンプレミスのローカルAI'],
         rows: [
@@ -2537,6 +2561,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudAiRisk: {
         id: 'cloud-ai-risk',
         title: 'Como as APIs de IA em nuvem criam risco de transferência transfronteiriça sob o PDPL',
+        image: '/images/uae-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: 'Árvore de decisão de transferência transfronteiriça sob o PDPL dos EAU: as regras de transferência só se aplicam se a inferência rodar fora de infraestrutura baseada nos EAU — on-premise ou nuvem nos EAU dispensa decisão de adequação, SCCs e BCRs.',
         content: [
           '**Quando você chama uma API de IA em nuvem, dados pessoais deixam os EAU.** Um fluxo de trabalho corporativo típico — enviar uma consulta de cliente a um endpoint de API hospedado nos EUA ou na UE — é uma transferência transfronteiriça sob o PDPL, mesmo que os dados sejam transitórios.',
           '**O PDPL restringe transferências transfronteiriças.** Os dados só podem fluir para um país de destino se este fornecer um nível adequado de proteção reconhecido pelo UAE Data Office, ou se houver salvaguardas contratuais específicas (SCCs ou BCRs). Em 2026, o UAE Data Office não havia publicado uma lista formal de adequação.',
@@ -2574,6 +2600,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       riskTable: {
         id: 'risk-table',
         title: 'IA em nuvem vs. on-premise: comparação de risco transfronteiriço do PDPL',
+        image: '/images/uae-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: 'IA em nuvem vs. IA local on-premise comparadas em 6 fatores do PDPL dos EAU: cruzamento de fronteira, decisão de adequação, exigência de SCC/BCR, jurisdição dos registros de auditoria, alcance de execução da UAEDO e alinhamento com a Estratégia de IA 2031.',
         content: 'Esta tabela compara a postura de conformidade com o PDPL das APIs de IA em nuvem versus a inferência de IA local on-premise. Não é aconselhamento jurídico — consulte o seu DPO.',
         columns: ['Fator', 'API de IA em nuvem', 'IA local on-premise'],
         rows: [
@@ -2930,6 +2958,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudAiRisk: {
         id: 'cloud-ai-risk',
         title: '云端AI API如何在PDPL下产生跨境传输风险',
+        image: '/images/uae-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: 'UAE PDPL跨境传输判定流程图：只有当推理在阿联酋境内基础设施之外运行时才触发传输规则——本地部署或阿联酋云可免除充分性决定、SCC和BCR。',
         content: [
           '**当您调用云端AI API时，个人数据会离开阿联酋。** 典型的企业工作流程——将客户查询发送到托管在美国或欧盟的API端点——即构成PDPL下的跨境传输，即使数据是临时的。',
           '**PDPL限制跨境传输。** 数据只有在目的地国家提供经UAE Data Office认可的充分保护水平，或具备特定的合同保障措施（SCCs或BCRs）时，才可流向该国。截至2026年，UAE Data Office尚未发布正式的充分性名单。',
@@ -2967,6 +2997,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       riskTable: {
         id: 'risk-table',
         title: '云端AI与本地AI：PDPL跨境风险对比',
+        image: '/images/uae-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: '云端AI API与本地AI在UAE PDPL的6项因素上的对比：是否跨境、是否需要充分性决定、SCC/BCR要求、审计日志管辖权、UAEDO执法覆盖范围，以及与AI战略2031的契合度。',
         content: '本表对比云端AI API与本地AI推理在PDPL合规方面的状况。本文不构成法律意见——请咨询您的DPO。',
         columns: ['因素', '云端AI API', '本地AI'],
         rows: [
@@ -3322,6 +3354,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudAiRisk: {
         id: 'cloud-ai-risk',
         title: '클라우드 AI API가 PDPL 하에서 국경 간 이전 위험을 발생시키는 방식',
+        image: '/images/uae-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: 'UAE PDPL 국경 간 이전 결정 트리: 추론이 UAE 내 인프라 밖에서 실행되는 경우에만 이전 규칙이 적용됩니다 — 온프레미스 또는 UAE 클라우드를 사용하면 적정성 결정, SCC, BCR이 필요 없습니다.',
         content: [
           '**클라우드 AI API를 호출하면 개인 데이터가 UAE를 벗어납니다.** 일반적인 엔터프라이즈 워크플로우 — 미국 또는 EU에 호스팅된 API 엔드포인트로 고객 쿼리를 전송하는 것 — 은 데이터가 일시적이더라도 PDPL 하의 국경 간 이전입니다.',
           '**PDPL은 국경 간 이전을 제한합니다.** 데이터는 UAE Data Office가 인정하는 적절한 수준의 보호를 제공하는 목적지 국가로만, 또는 특정 계약적 보호 조치(SCCs 또는 BCRs)가 마련된 경우에만 흐를 수 있습니다. 2026년 현재 UAE Data Office는 공식 적절성 목록을 발표하지 않았습니다.',
@@ -3359,6 +3393,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       riskTable: {
         id: 'risk-table',
         title: '클라우드 AI vs. 온프레미스: PDPL 국경 간 위험 비교',
+        image: '/images/uae-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: '클라우드 AI API와 온프레미스 로컬 AI를 UAE PDPL 6가지 요소(국경 통과 여부, 적정성 결정, SCC/BCR 요건, 감사 로그 관할권, UAEDO 집행 범위, AI 전략 2031 부합도)로 비교.',
         content: '이 표는 클라우드 AI API와 온프레미스 로컬 AI 추론의 PDPL 준수 상태를 비교합니다. 법률 자문이 아닙니다 — DPO와 상담하십시오.',
         columns: ['요소', '클라우드 AI API', '온프레미스 로컬 AI'],
         rows: [

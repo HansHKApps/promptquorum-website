@@ -1,0 +1,54 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Cloud AI API vs. On-Premise: UAE PDPL Compliance Factors</text>
+
+  <rect x="28" y="52" width="340" height="304" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="28" y="52" width="340" height="4" fill="#EA4335"/>
+  <text x="198" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#EA4335" text-anchor="middle">Cloud AI API (Risk)</text>
+
+  <rect x="432" y="52" width="340" height="304" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="432" y="52" width="340" height="4" fill="#34A853"/>
+  <text x="602" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#34A853" text-anchor="middle">On-Premise Local AI (Compliant)</text>
+
+  <text x="48" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">UAE border crossed?</text>
+  <text x="48" y="114" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335">Yes — sent to US/EU servers</text>
+  <text x="452" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">UAE border crossed?</text>
+  <text x="452" y="114" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853">No — processed locally</text>
+  <line x1="48" y1="122" x2="348" y2="122" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="452" y1="122" x2="752" y2="122" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="142" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">Adequacy decision required?</text>
+  <text x="48" y="158" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335">Yes (list not yet published)</text>
+  <text x="452" y="142" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">Adequacy decision required?</text>
+  <text x="452" y="158" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853">No</text>
+  <line x1="48" y1="166" x2="348" y2="166" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="452" y1="166" x2="752" y2="166" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="186" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">SCC / BCR required?</text>
+  <text x="48" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335">Yes, per 2026 regulations</text>
+  <text x="452" y="186" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">SCC / BCR required?</text>
+  <text x="452" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853">No</text>
+  <line x1="48" y1="210" x2="348" y2="210" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="452" y1="210" x2="752" y2="210" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">Audit log jurisdiction</text>
+  <text x="48" y="246" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335">Foreign jurisdiction</text>
+  <text x="452" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">Audit log jurisdiction</text>
+  <text x="452" y="246" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853">UAE jurisdiction</text>
+  <line x1="48" y1="254" x2="348" y2="254" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="452" y1="254" x2="752" y2="254" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="274" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">UAEDO enforcement reach</text>
+  <text x="48" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335">Uncertain for foreign vendors</text>
+  <text x="452" y="274" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">UAEDO enforcement reach</text>
+  <text x="452" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853">Clear UAE jurisdiction</text>
+  <line x1="48" y1="298" x2="348" y2="298" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="452" y1="298" x2="752" y2="298" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="318" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">AI Strategy 2031 alignment</text>
+  <text x="48" y="334" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335">Partial — foreign infrastructure</text>
+  <text x="452" y="318" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E">AI Strategy 2031 alignment</text>
+  <text x="452" y="334" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853">Full — domestic governance</text>
+
+  <text x="400" y="382" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">On-premise inference resolves all 6 PDPL cross-border risk factors shown above versus cloud AI APIs.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
