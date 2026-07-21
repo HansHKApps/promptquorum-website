@@ -1,0 +1,58 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Lokaler Stack vs GitHub Copilot: Kosten über 24 Monate</text>
+
+  <!-- Left Panel: Local Stack -->
+  <rect x="28" y="55" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="198" y="82" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Lokaler Stack (Ziel)</text>
+  <text x="198" y="100" font-size="10.5" fill="#79747E" text-anchor="middle">Continue.dev + Ollama + Qwen3-Coder</text>
+
+  <text x="48" y="132" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif" font-size="12">Monatliche Kosten:</text>
+  <text x="348" y="132" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="700" fill="#34A853" text-anchor="end">0 €</text>
+  <line x1="48" y1="142" x2="348" y2="142" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="168" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif" font-size="12">24-Mo. Kosten (RTX 3060 Besitzer):</text>
+  <text x="348" y="188" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="700" fill="#34A853" text-anchor="end">90 €</text>
+  <text x="348" y="172" font-family="system-ui, sans-serif" font-size="9.5" fill="#79747E" text-anchor="end">nur Stromkosten</text>
+  <line x1="48" y1="198" x2="348" y2="198" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="224" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif" font-size="12">Code-Datenschutz:</text>
+  <text x="348" y="224" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="end">Vollständig lokal</text>
+  <line x1="48" y1="234" x2="348" y2="234" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="260" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif" font-size="12">Funktioniert offline:</text>
+  <text x="348" y="260" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="end">Ja</text>
+  <line x1="48" y1="270" x2="348" y2="270" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="48" y="296" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif" font-size="12">Autovervollständigung:</text>
+  <text x="348" y="296" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="end">90-95 % von Copilot</text>
+
+  <!-- Right Panel: Copilot -->
+  <rect x="432" y="55" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#79747E" stroke-width="2"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#79747E"/>
+  <text x="602" y="82" font-size="16" font-weight="700" fill="#49454F" text-anchor="middle">GitHub Copilot Pro</text>
+  <text x="602" y="100" font-size="10.5" fill="#79747E" text-anchor="middle">Cloud-Abonnement</text>
+
+  <text x="452" y="132" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif" font-size="12">Monatliche Kosten:</text>
+  <text x="752" y="132" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="700" fill="#EA4335" text-anchor="end">20 €</text>
+  <line x1="452" y1="142" x2="752" y2="142" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="452" y="168" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif" font-size="12">24-Monats-Kosten:</text>
+  <text x="752" y="168" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="700" fill="#EA4335" text-anchor="end">480 €</text>
+  <line x1="452" y1="178" x2="752" y2="178" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="452" y="204" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif" font-size="12">Code-Datenschutz:</text>
+  <text x="752" y="204" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#49454F" text-anchor="end">An Cloud gesendet</text>
+  <line x1="452" y1="214" x2="752" y2="214" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="452" y="240" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif" font-size="12">Funktioniert offline:</text>
+  <text x="752" y="240" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#49454F" text-anchor="end">Nein</text>
+  <line x1="452" y1="250" x2="752" y2="250" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="452" y="276" font-weight="700" fill="#1C1B1F" font-family="system-ui, sans-serif" font-size="12">Autovervollständigung:</text>
+  <text x="752" y="276" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="end">Baseline (bei seltenen Libs besser)</text>
+
+  <line x1="28" y1="350" x2="772" y2="350" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="374" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">390 € gespart in 24 Monaten bei vorhandener RTX 3060 12 GB — Amortisation in 8-14 Monaten bei neuer Hardware.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
