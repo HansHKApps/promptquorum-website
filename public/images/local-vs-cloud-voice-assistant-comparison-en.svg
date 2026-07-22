@@ -1,0 +1,68 @@
+<svg viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="430" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Local vs Cloud Voice Assistant — Head-to-Head</text>
+
+  <text x="40" y="62" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Criterion</text>
+  <text x="220" y="62" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">Local (Assist + Whisper + LLM)</text>
+  <text x="530" y="62" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Cloud (Alexa / Google)</text>
+  <text x="756" y="62" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#79747E" text-anchor="middle">Wins</text>
+  <line x1="24" y1="72" x2="776" y2="72" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Privacy -->
+  <rect x="24" y="80" width="752" height="42" fill="#F7F2FA"/>
+  <text x="40" y="106" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#1C1B1F">Privacy</text>
+  <text x="220" y="106" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">On-device, private</text>
+  <text x="530" y="106" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">Voice processed in cloud</text>
+  <circle cx="756" cy="101" r="11" fill="#34A853"/>
+  <text x="756" y="105" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">L</text>
+  <line x1="24" y1="122" x2="776" y2="122" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Cost -->
+  <text x="40" y="148" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#1C1B1F">Cost</text>
+  <text x="220" y="148" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">One-time hardware</text>
+  <text x="530" y="148" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">Cheap hardware, possible fees</text>
+  <circle cx="756" cy="143" r="11" fill="#34A853"/>
+  <text x="756" y="147" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">L</text>
+  <line x1="24" y1="164" x2="776" y2="164" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: Accuracy -->
+  <rect x="24" y="172" width="752" height="42" fill="#F7F2FA"/>
+  <text x="40" y="198" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#1C1B1F">Accuracy</text>
+  <text x="220" y="198" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Depends on model/hardware</text>
+  <text x="530" y="198" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">Polished, consistent</text>
+  <circle cx="756" cy="193" r="11" fill="#F4B400"/>
+  <text x="756" y="197" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">C</text>
+  <line x1="24" y1="214" x2="776" y2="214" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Skills -->
+  <text x="40" y="240" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#1C1B1F">Skills</text>
+  <text x="220" y="240" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Home control focus</text>
+  <text x="530" y="240" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">Broad third-party skills</text>
+  <circle cx="756" cy="235" r="11" fill="#F4B400"/>
+  <text x="756" y="239" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">C</text>
+  <line x1="24" y1="256" x2="776" y2="256" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: Offline -->
+  <rect x="24" y="264" width="752" height="42" fill="#F7F2FA"/>
+  <text x="40" y="290" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#1C1B1F">Offline</text>
+  <text x="220" y="290" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Works offline</text>
+  <text x="530" y="290" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">Needs internet</text>
+  <circle cx="756" cy="285" r="11" fill="#34A853"/>
+  <text x="756" y="289" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">L</text>
+  <line x1="24" y1="306" x2="776" y2="306" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 6: Effort -->
+  <text x="40" y="332" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#1C1B1F">Effort</text>
+  <text x="220" y="332" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">Higher setup</text>
+  <text x="530" y="332" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">Plug-and-play</text>
+  <circle cx="756" cy="327" r="11" fill="#F4B400"/>
+  <text x="756" y="331" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">C</text>
+  <line x1="24" y1="344" x2="776" y2="344" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <circle cx="230" cy="374" r="6" fill="#34A853"/>
+  <text x="244" y="378" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">L = Local wins</text>
+  <circle cx="380" cy="374" r="6" fill="#F4B400"/>
+  <text x="394" y="378" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">C = Cloud wins</text>
+
+  <text x="400" y="404" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Local wins privacy, cost, and offline operation; cloud wins accuracy consistency, skills, and effort.</text>
+<text x="792" y="422" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
