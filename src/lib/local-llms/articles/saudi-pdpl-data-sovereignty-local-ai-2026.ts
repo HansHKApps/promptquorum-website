@@ -62,6 +62,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       crossBorderRisks: {
         id: 'cross-border-risks',
         title: 'Cloud AI Cross-Border Risks: Article 29, CLOUD Act, and SDAIA Adequacy',
+        image: '/images/saudi-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: 'Saudi PDPL Article 29 decision tree: cross-border transfer rules only apply if a prompt contains personal data of a Saudi resident and inference runs outside Saudi-based infrastructure — on-premises deployment avoids SDAIA adequacy review, SCCs, and CLOUD Act exposure entirely.',
         content: [
           '**Sending a prompt to a cloud AI API is a cross-border data transfer the moment that prompt contains personal data and the inference server sits outside the Kingdom.** PDPL Article 29 governs exactly this scenario.',
           '**Article 29 imposes three cumulative conditions on any cross-border transfer:** (1) the transfer must not prejudice national security or the vital interests of the Kingdom; (2) the recipient jurisdiction must provide a level of data protection at least equivalent to the PDPL, as assessed by SDAIA; and (3) only the minimum necessary personal data may be transferred (data minimization).',
@@ -82,6 +84,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localAiSolution: {
         id: 'local-ai-solution',
         title: 'How In-Kingdom Local AI Solves the Compliance Challenge',
+        image: '/images/saudi-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: 'Cloud AI API vs. on-premises local AI compared across 6 Saudi PDPL, SAMA, and CLOUD Act factors: border crossing, SDAIA adequacy, SCC/BCR requirements, CLOUD Act exposure, SAMA in-Kingdom mandate, and audit log jurisdiction.',
         content: [
           '**Running AI on hardware physically located inside Saudi Arabia eliminates the cross-border transfer entirely — and with it, the hardest parts of PDPL compliance.**',
           '**Article 29 simply does not apply.** If a prompt and its inference never leave your premises, there is no transfer to assess, no adequacy determination to wait for, no SCCs to execute, and no transfer risk assessment to file. The single most complex obligation in the PDPL is removed at the architecture level.',
@@ -305,6 +309,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       crossBorderRisks: {
         id: 'cross-border-risks',
         title: 'مخاطر الذكاء الاصطناعي السحابي عبر الحدود: المادة 29 وCLOUD Act وملاءمة SDAIA',
+        image: '/images/saudi-pdpl-cross-border-transfer-decision-tree-ar.svg',
+        imageCaption: 'شجرة قرار بشأن المادة 29 من نظام PDPL السعودي: تنطبق قواعد النقل عبر الحدود فقط إذا كان الطلب يحتوي على بيانات شخصية لمقيم سعودي وكان الاستدلال يعمل خارج البنية التحتية السعودية — النشر المحلي يتجنب تمامًا تقييم ملاءمة SDAIA والبنود التعاقدية القياسية وخطر CLOUD Act.',
         content: [
           '**إرسال موجّه (prompt) إلى واجهة برمجة سحابية للذكاء الاصطناعي يُعدّ نقل بيانات عبر الحدود في اللحظة التي يحتوي فيها الموجّه على بيانات شخصية ويقع خادم الاستدلال خارج المملكة.** تحكم المادة 29 من PDPL هذا السيناريو بالضبط.',
           '**تفرض المادة 29 ثلاثة شروط تراكمية على أي نقل عبر الحدود:** (1) ألا يضر النقل بالأمن الوطني أو المصالح الحيوية للمملكة؛ (2) أن توفر الجهة المستقبِلة مستوى حماية بيانات لا يقل عن PDPL، وفقاً لتقييم SDAIA؛ (3) ألا تُنقل سوى الحد الأدنى الضروري من البيانات الشخصية (تقليل البيانات).',
@@ -325,6 +331,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localAiSolution: {
         id: 'local-ai-solution',
         title: 'كيف يحل الذكاء الاصطناعي المحلي داخل المملكة تحدي الامتثال',
+        image: '/images/saudi-pdpl-cloud-vs-onprem-compliance-comparison-ar.svg',
+        imageCaption: 'مقارنة بين واجهة الذكاء الاصطناعي السحابية والذكاء الاصطناعي المحلي داخل المملكة عبر 6 عوامل من نظام PDPL وساما وCLOUD Act: تجاوز الحدود، ملاءمة SDAIA، متطلبات SCC/BCR، خطر CLOUD Act، إلزام ساما بالبقاء داخل المملكة، والولاية القضائية لسجلات التدقيق.',
         content: [
           '**تشغيل الذكاء الاصطناعي على أجهزة موجودة فيزيائياً داخل السعودية يلغي النقل عبر الحدود كلياً — ومعه أصعب أجزاء امتثال PDPL.**',
           '**المادة 29 لا تنطبق ببساطة.** إذا لم يغادر الموجّه واستدلاله منشأتك أبداً، فلا يوجد نقل لتقييمه، ولا تحديد ملاءمة لانتظاره، ولا SCCs لتنفيذها، ولا تقييم مخاطر نقل لتقديمه. يُزال أعقد التزام في النظام على مستوى البنية المعمارية.',
@@ -521,6 +529,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       crossBorderRisks: {
         id: 'cross-border-risks',
         title: 'Grenzüberschreitende Risiken von Cloud-KI: Artikel 29, CLOUD Act und SDAIA-Angemessenheit',
+        image: '/images/saudi-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: 'Entscheidungsbaum zu Artikel 29 der saudischen PDPL: Die Regeln für grenzüberschreitende Übermittlungen gelten nur, wenn ein Prompt personenbezogene Daten eines saudischen Einwohners enthält und die Inferenz außerhalb saudischer Infrastruktur läuft — On-Premises-Einsatz vermeidet SDAIA-Angemessenheitsprüfung, SCCs und CLOUD-Act-Risiken vollständig.',
         content: [
           '**Das Senden eines Prompts an eine Cloud-KI-API ist eine grenzüberschreitende Datenübermittlung in dem Moment, in dem dieser Prompt personenbezogene Daten enthält und der Inferenzserver außerhalb des Königreichs steht.** Artikel 29 des PDPL regelt genau dieses Szenario.',
           '**Artikel 29 stellt drei kumulative Bedingungen an jede grenzüberschreitende Übermittlung:** (1) Die Übermittlung darf die nationale Sicherheit oder die vitalen Interessen des Königreichs nicht beeinträchtigen; (2) die Empfängerjurisdiktion muss ein Datenschutzniveau bieten, das mindestens dem PDPL gleichwertig ist, wie von der SDAIA beurteilt; und (3) es dürfen nur die mindestens erforderlichen personenbezogenen Daten übermittelt werden (Datenminimierung).',
@@ -541,6 +551,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localAiSolution: {
         id: 'local-ai-solution',
         title: 'Wie lokale KI im Königreich die Compliance-Herausforderung löst',
+        image: '/images/saudi-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: 'Cloud-KI-API vs. lokale KI im Vergleich anhand von 6 Faktoren der saudischen PDPL, SAMA und des CLOUD Act: Grenzüberschreitung, SDAIA-Angemessenheit, SCC/BCR-Pflicht, CLOUD-Act-Risiko, SAMA-Vorgabe zum Verbleib im Königreich und Zuständigkeit der Audit-Logs.',
         content: [
           '**Der Betrieb von KI auf Hardware, die physisch innerhalb Saudi-Arabiens steht, eliminiert die grenzüberschreitende Übermittlung vollständig — und damit die schwierigsten Teile der PDPL-Compliance.**',
           '**Artikel 29 ist schlicht nicht anwendbar.** Verlassen ein Prompt und seine Inferenz niemals Ihre Räumlichkeiten, gibt es keine zu bewertende Übermittlung, keine Angemessenheitsfeststellung, auf die zu warten wäre, keine auszuführenden SCCs und keine einzureichende Übermittlungs-Risikobewertung. Die einzige komplexeste Pflicht des PDPL wird auf Architekturebene beseitigt.',
@@ -777,6 +789,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       crossBorderRisks: {
         id: 'cross-border-risks',
         title: 'Riesgos transfronterizos de la IA en la nube: Artículo 29, CLOUD Act y adecuación de la SDAIA',
+        image: '/images/saudi-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: 'Árbol de decisión del Artículo 29 de la PDPL saudí: las reglas de transferencia transfronteriza solo se aplican si un prompt contiene datos personales de un residente saudí y la inferencia se ejecuta fuera de infraestructura saudí — el despliegue on-premise evita por completo la revisión de adecuación de la SDAIA, las SCC y la exposición a la CLOUD Act.',
         content: [
           '**Enviar un prompt a una API de IA en la nube es una transferencia de datos transfronteriza en el momento en que ese prompt contiene datos personales y el servidor de inferencia se encuentra fuera del Reino.** El Artículo 29 de la PDPL rige exactamente este escenario.',
           '**El Artículo 29 impone tres condiciones acumulativas a cualquier transferencia transfronteriza:** (1) la transferencia no debe perjudicar la seguridad nacional ni los intereses vitales del Reino; (2) la jurisdicción receptora debe ofrecer un nivel de protección de datos al menos equivalente al de la PDPL, según evalúe la SDAIA; y (3) solo pueden transferirse los datos personales mínimos necesarios (minimización de datos).',
@@ -797,6 +811,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localAiSolution: {
         id: 'local-ai-solution',
         title: 'Cómo la IA local dentro del Reino resuelve el desafío de cumplimiento',
+        image: '/images/saudi-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: 'API de IA en la nube frente a IA local on-premise comparadas en 6 factores de la PDPL saudí, la SAMA y la CLOUD Act: cruce de frontera, adecuación de la SDAIA, requisito de SCC/BCR, exposición a la CLOUD Act, mandato de la SAMA de permanencia en el Reino y jurisdicción de los registros de auditoría.',
         content: [
           '**Ejecutar la IA en hardware ubicado físicamente dentro de Arabia Saudí elimina por completo la transferencia transfronteriza y, con ella, las partes más difíciles del cumplimiento de la PDPL.**',
           '**El Artículo 29 simplemente no se aplica.** Si un prompt y su inferencia nunca salen de tus instalaciones, no hay transferencia que evaluar, ni determinación de adecuación que esperar, ni SCCs que ejecutar, ni evaluación de riesgo de transferencia que presentar. La obligación más compleja de la PDPL se elimina a nivel de arquitectura.',
@@ -1023,6 +1039,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       crossBorderRisks: {
         id: 'cross-border-risks',
         title: 'Risques transfrontaliers de l\'IA en nuage : article 29, CLOUD Act et adéquation SDAIA',
+        image: '/images/saudi-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: 'Arbre de décision de l\'article 29 de la PDPL saoudienne : les règles de transfert transfrontalier ne s\'appliquent que si un prompt contient des données personnelles d\'un résident saoudien et que l\'inférence s\'exécute hors d\'une infrastructure saoudienne — le déploiement on-premise évite entièrement l\'examen d\'adéquation de la SDAIA, les SCC et l\'exposition au CLOUD Act.',
         content: [
           '**Envoyer un prompt à une API d\'IA en nuage est un transfert transfrontalier de données dès lors que ce prompt contient des données personnelles et que le serveur d\'inférence se situe hors du Royaume.** L\'article 29 de la PDPL régit exactement ce scénario.',
           '**L\'article 29 impose trois conditions cumulatives à tout transfert transfrontalier :** (1) le transfert ne doit pas porter atteinte à la sécurité nationale ni aux intérêts vitaux du Royaume ; (2) la juridiction destinataire doit offrir un niveau de protection des données au moins équivalent à la PDPL, tel qu\'évalué par la SDAIA ; et (3) seules les données personnelles strictement nécessaires peuvent être transférées (minimisation des données).',
@@ -1043,6 +1061,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localAiSolution: {
         id: 'local-ai-solution',
         title: 'Comment l\'IA locale dans le Royaume résout le défi de conformité',
+        image: '/images/saudi-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: 'API d\'IA en nuage vs IA locale on-premise comparées sur 6 facteurs de la PDPL saoudienne, de la SAMA et du CLOUD Act : franchissement de frontière, adéquation SDAIA, exigence SCC/BCR, exposition au CLOUD Act, mandat SAMA de maintien dans le Royaume et juridiction des journaux d\'audit.',
         content: [
           '**Exécuter l\'IA sur du matériel physiquement situé en Arabie saoudite élimine entièrement le transfert transfrontalier — et avec lui les parties les plus ardues de la conformité PDPL.**',
           '**L\'article 29 ne s\'applique tout simplement pas.** Si un prompt et son inférence ne quittent jamais vos locaux, il n\'y a aucun transfert à évaluer, aucune détermination d\'adéquation à attendre, aucun SCCs à exécuter et aucune évaluation des risques de transfert à déposer. L\'obligation la plus complexe de la PDPL est supprimée au niveau de l\'architecture.',
@@ -1269,6 +1289,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       crossBorderRisks: {
         id: 'cross-border-risks',
         title: 'クラウドAIの国境を越えるリスク：第29条、CLOUD Act、SDAIA十分性',
+        image: '/images/saudi-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: 'サウジPDPL第29条の判定フロー：プロンプトがサウジ居住者の個人データを含み、推論がサウジ国内インフラの外で実行される場合にのみ越境移転規則が適用される——オンプレミス展開はSDAIAの十分性審査、SCC、CLOUD Actのリスクを完全に回避する。',
         content: [
           '**プロンプトをクラウドAIのAPIに送信することは、そのプロンプトが個人データを含み、推論サーバーが王国外にある時点で、国境を越えたデータ移転となります。** PDPL第29条はまさにこのシナリオを規律します。',
           '**第29条は、あらゆる国境を越えた移転に3つの累積的条件を課します：** (1) 移転が王国の国家安全保障または重要な利益を害さないこと、(2) 受領管轄区域がSDAIAの評価により、少なくともPDPLと同等のデータ保護水準を提供すること、(3) 必要最小限の個人データのみが移転されること（データ最小化）。',
@@ -1289,6 +1311,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localAiSolution: {
         id: 'local-ai-solution',
         title: '王国内のローカルAIがコンプライアンス課題をどう解決するか',
+        image: '/images/saudi-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: 'クラウドAI APIとオンプレミスのローカルAIを、サウジPDPL・SAMA・CLOUD Actの6項目（国境越え、SDAIA十分性、SCC/BCR要件、CLOUD Actリスク、SAMAの王国内保持義務、監査ログの管轄)で比較。',
         content: [
           '**サウジアラビア国内に物理的に設置されたハードウェア上でAIを稼働させることは、国境を越えた移転を完全に排除し、それとともにPDPLコンプライアンスの最も困難な部分を排除します。**',
           '**第29条は単純に適用されません。** プロンプトとその推論がオンプレミスから一切外に出なければ、評価すべき移転も、待つべき十分性判断も、締結すべきSCCsも、提出すべき移転リスクアセスメントもありません。PDPLで最も複雑な義務がアーキテクチャレベルで取り除かれます。',
@@ -1515,6 +1539,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       crossBorderRisks: {
         id: 'cross-border-risks',
         title: 'Riscos internacionais da IA em nuvem: Artigo 29, CLOUD Act e adequação da SDAIA',
+        image: '/images/saudi-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: 'Árvore de decisão do Artigo 29 da PDPL saudita: as regras de transferência internacional só se aplicam se um prompt contiver dados pessoais de um residente saudita e a inferência rodar fora de infraestrutura saudita — a implantação on-premises evita totalmente a revisão de adequação da SDAIA, as SCCs e a exposição ao CLOUD Act.',
         content: [
           '**Enviar um prompt a uma API de IA em nuvem é uma transferência internacional de dados no momento em que esse prompt contém dados pessoais e o servidor de inferência está fora do Reino.** O Artigo 29 da PDPL rege exatamente esse cenário.',
           '**O Artigo 29 impõe três condições cumulativas a qualquer transferência internacional:** (1) a transferência não deve prejudicar a segurança nacional nem os interesses vitais do Reino; (2) a jurisdição receptora deve oferecer um nível de proteção de dados pelo menos equivalente ao da PDPL, conforme avaliado pela SDAIA; e (3) apenas os dados pessoais mínimos necessários podem ser transferidos (minimização de dados).',
@@ -1535,6 +1561,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localAiSolution: {
         id: 'local-ai-solution',
         title: 'Como a IA local dentro do Reino resolve o desafio de conformidade',
+        image: '/images/saudi-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: 'API de IA em nuvem vs. IA local on-premises comparadas em 6 fatores da PDPL saudita, da SAMA e do CLOUD Act: cruzamento de fronteira, adequação da SDAIA, exigência de SCC/BCR, exposição ao CLOUD Act, mandato da SAMA de permanência no Reino e jurisdição dos registros de auditoria.',
         content: [
           '**Rodar a IA em hardware fisicamente localizado dentro da Arábia Saudita elimina por completo a transferência internacional — e, com ela, as partes mais difíceis da conformidade com a PDPL.**',
           '**O Artigo 29 simplesmente não se aplica.** Se um prompt e sua inferência nunca saem das suas instalações, não há transferência a avaliar, nenhuma determinação de adequação a aguardar, nenhuma SCCs a executar e nenhuma avaliação de risco de transferência a apresentar. A obrigação mais complexa da PDPL é removida no nível da arquitetura.',
@@ -1761,6 +1789,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       crossBorderRisks: {
         id: 'cross-border-risks',
         title: '云端 AI 的跨境风险：第 29 条、CLOUD Act 与 SDAIA 充分性',
+        image: '/images/saudi-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: '沙特 PDPL 第 29 条判定流程图：仅当提示词包含沙特居民的个人数据且推理在沙特境外基础设施上运行时，跨境传输规则才适用——本地部署可完全避免 SDAIA 充分性审查、SCC 和 CLOUD Act 风险。',
         content: [
           '**当提示词包含个人数据且推理服务器位于王国境外时，向云端 AI API 发送提示词便构成跨境数据传输。** PDPL 第 29 条恰好规范这一情形。',
           '**第 29 条对任何跨境传输施加三项累积性条件：** (1) 传输不得损害王国的国家安全或重大利益；(2) 接收方司法管辖区须经 SDAIA 评估，提供至少与 PDPL 同等的数据保护水平；(3) 仅可传输必要的最少个人数据（数据最小化）。',
@@ -1781,6 +1811,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localAiSolution: {
         id: 'local-ai-solution',
         title: '王国境内的本地 AI 如何解决合规挑战',
+        image: '/images/saudi-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: '云端 AI API 与本地部署 AI 在沙特 PDPL、SAMA 和 CLOUD Act 六项因素上的对比：是否跨境、SDAIA 充分性、SCC/BCR 要求、CLOUD Act 风险、SAMA 境内留存要求，以及审计日志管辖权。',
         content: [
           '**在实际位于沙特阿拉伯境内的硬件上运行 AI，可完全消除跨境传输——以及随之而来的 PDPL 合规中最棘手的部分。**',
           '**第 29 条根本不适用。** 如果提示词及其推理始终不离开您的场所，就没有需要评估的传输、没有需要等待的充分性认定、没有需要签署的 SCCs，也没有需要提交的传输风险评估。PDPL 中最复杂的义务在架构层面被消除。',
@@ -2007,6 +2039,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       crossBorderRisks: {
         id: 'cross-border-risks',
         title: '클라우드 AI의 국경 간 위험: 제29조, CLOUD Act, SDAIA 적정성',
+        image: '/images/saudi-pdpl-cross-border-transfer-decision-tree-en.svg',
+        imageCaption: '사우디 PDPL 제29조 결정 트리: 프롬프트에 사우디 거주자의 개인정보가 포함되고 추론이 사우디 국내 인프라 밖에서 실행되는 경우에만 국경 간 이전 규칙이 적용됩니다 — 온프레미스 배포는 SDAIA 적정성 심사, SCC, CLOUD Act 위험을 완전히 피합니다.',
         content: [
           '**프롬프트가 개인정보를 포함하고 추론 서버가 왕국 밖에 있는 순간, 클라우드 AI API로 프롬프트를 보내는 것은 국경 간 데이터 이전이 됩니다.** PDPL 제29조가 바로 이 시나리오를 규율합니다.',
           '**제29조는 모든 국경 간 이전에 세 가지 누적 조건을 부과합니다:** (1) 이전이 왕국의 국가 안보나 핵심 이익을 침해해서는 안 됩니다; (2) 수령 관할권은 SDAIA의 평가에 따라 최소한 PDPL과 동등한 데이터 보호 수준을 제공해야 합니다; (3) 필요한 최소한의 개인정보만 이전될 수 있습니다(데이터 최소화).',
@@ -2027,6 +2061,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       localAiSolution: {
         id: 'local-ai-solution',
         title: '왕국 내 로컬 AI가 컴플라이언스 과제를 해결하는 방법',
+        image: '/images/saudi-pdpl-cloud-vs-onprem-compliance-comparison-en.svg',
+        imageCaption: '클라우드 AI API와 온프레미스 로컬 AI를 사우디 PDPL, SAMA, CLOUD Act의 6가지 요소(국경 통과 여부, SDAIA 적정성, SCC/BCR 요건, CLOUD Act 위험, SAMA의 왕국 내 보관 의무, 감사 로그 관할권)로 비교합니다.',
         content: [
           '**사우디아라비아 내에 물리적으로 위치한 하드웨어에서 AI를 실행하면 국경 간 이전이 완전히 제거되며, 그와 함께 PDPL 컴플라이언스에서 가장 어려운 부분도 제거됩니다.**',
           '**제29조는 단순히 적용되지 않습니다.** 프롬프트와 그 추론이 시설을 벗어나지 않으면 평가할 이전도, 기다릴 적정성 판단도, 체결할 SCCs도, 제출할 이전 위험 평가도 없습니다. PDPL에서 가장 복잡한 의무가 아키텍처 수준에서 제거됩니다.',
