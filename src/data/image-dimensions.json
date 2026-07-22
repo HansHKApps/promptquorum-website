@@ -1444,6 +1444,16 @@
     "width": 1200,
     "height": 675
   },
+  "/images/best-7b-models-consumer-hardware-math-benchmark-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/best-7b-models-consumer-hardware-speed-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/best-ai-coding-assistant-local-llm-comparison-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
