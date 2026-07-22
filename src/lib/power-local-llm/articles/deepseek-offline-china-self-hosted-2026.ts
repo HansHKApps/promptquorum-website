@@ -72,6 +72,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Three motivations dominate: data sovereignty (prompts and outputs never leave your environment), reliability (no outage or rate limit on a hosted endpoint), and independence from network restrictions. The last point is concrete for users behind the Great Firewall: an offline model has no foreign endpoint to reach, so connectivity to overseas services is irrelevant.',
           'This is the practical counterpart to the privacy analysis in [Does Local DeepSeek Solve the China Data Problem?](/local-llms/deepseek-local-china-data-privacy-2026) — that page explains why local self-hosting removes the data-flow concern; this one shows how to build it.',
         ],
+        image: '/images/deepseek-offline-china-self-hosted-2026-sovereignty-comparison-en.svg',
+        imageCaption: 'Hosted API vs. offline self-hosted DeepSeek: the cloud API sends prompts to a foreign endpoint and depends on network uptime, while offline self-hosting keeps every prompt and output on local hardware with no data leaving the machine.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -128,6 +130,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         codeBlock: 'ollama pull deepseek-r1:14b    # one-time, online\n# then disconnect / block network\nollama run deepseek-r1:14b     # fully offline inference',
         codeLanguage: 'bash',
+        image: '/images/deepseek-offline-china-self-hosted-2026-offline-setup-steps-en.svg',
+        imageCaption: '5 steps to run DeepSeek offline: install Ollama or LM Studio, pull the distill once online, block network access, set temperature 0.6 with no system prompt, then run inference fully offline.',
       },
       network: {
         id: 'network',
@@ -260,6 +264,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Drei Motive dominieren: Datensouveränität (Prompts und Ausgaben verlassen Ihre Umgebung nie), Zuverlässigkeit (kein Ausfall oder Rate-Limit eines gehosteten Endpunkts) und Unabhängigkeit von Netzwerkbeschränkungen. Der letzte Punkt ist für Nutzer hinter der Great Firewall konkret: Ein Offline-Modell hat keinen ausländischen Endpunkt zu erreichen, daher ist die Konnektivität zu Diensten im Ausland irrelevant.',
           'Dies ist das praktische Gegenstück zur Datenschutzanalyse in [Löst lokales DeepSeek das China-Datenproblem?](/local-llms/deepseek-local-china-data-privacy-2026) — jene Seite erklärt, warum lokales Self-Hosting das Datenfluss-Problem beseitigt; diese zeigt, wie man es aufbaut.',
         ],
+        image: '/images/deepseek-offline-china-self-hosted-2026-sovereignty-comparison-de.svg',
+        imageCaption: 'Gehostete API vs. Offline Self-Hosted DeepSeek: Die Cloud-API sendet Prompts an einen ausländischen Endpunkt und hängt von der Netzwerkverfügbarkeit ab, während Offline-Self-Hosting jeden Prompt und jede Ausgabe auf lokaler Hardware hält, ohne dass Daten das Gerät verlassen.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -316,6 +322,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         codeBlock: 'ollama pull deepseek-r1:14b    # einmalig, online\n# dann Netzwerk trennen / blockieren\nollama run deepseek-r1:14b     # vollständig offline Inferenz',
         codeLanguage: 'bash',
+        image: '/images/deepseek-offline-china-self-hosted-2026-offline-setup-steps-de.svg',
+        imageCaption: '5 Schritte, um DeepSeek offline zu betreiben: Ollama oder LM Studio installieren, den Distill einmal online laden, den Netzwerkzugriff blockieren, Temperatur 0.6 ohne System-Prompt setzen und dann vollständig offline Inferenz ausführen.',
       },
       network: {
         id: 'network',
@@ -448,6 +456,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Trois motivations dominent : la souveraineté des données (les prompts et sorties ne quittent jamais votre environnement), la fiabilité (aucune panne ni limite de débit sur un point de terminaison hébergé) et l\'indépendance vis-à-vis des restrictions réseau. Ce dernier point est concret pour les utilisateurs derrière le Grand Pare-feu : un modèle hors ligne n\'a aucun point de terminaison étranger à atteindre, donc la connectivité aux services étrangers est sans importance.',
           'C\'est le pendant pratique de l\'analyse de confidentialité dans [DeepSeek local résout-il le problème des données en Chine ?](/local-llms/deepseek-local-china-data-privacy-2026) — cette page explique pourquoi l\'auto-hébergement local supprime la préoccupation du flux de données ; celle-ci montre comment le construire.',
         ],
+        image: '/images/deepseek-offline-china-self-hosted-2026-sovereignty-comparison-fr.svg',
+        imageCaption: 'API hébergée vs DeepSeek auto-hébergé hors ligne : l\'API cloud envoie les prompts à un point de terminaison étranger et dépend de la disponibilité du réseau, tandis que l\'auto-hébergement hors ligne garde chaque prompt et sortie sur du matériel local sans que rien ne quitte la machine.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -504,6 +514,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         codeBlock: 'ollama pull deepseek-r1:14b    # une seule fois, en ligne\n# puis déconnecter / bloquer le réseau\nollama run deepseek-r1:14b     # inférence entièrement hors ligne',
         codeLanguage: 'bash',
+        image: '/images/deepseek-offline-china-self-hosted-2026-offline-setup-steps-fr.svg',
+        imageCaption: '5 étapes pour exécuter DeepSeek hors ligne : installer Ollama ou LM Studio, télécharger le distill une fois en ligne, bloquer l\'accès réseau, régler la température à 0.6 sans prompt système, puis exécuter l\'inférence entièrement hors ligne.',
       },
       network: {
         id: 'network',
@@ -636,6 +648,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'このセクションでは主な動機を3つ挙げます：データ主権（プロンプトと出力が環境外に出ない）、信頼性（ホスト型エンドポイントの障害やレート制限がない）、ネットワーク制限からの独立です。最後の点はグレートファイアウォールの背後にいるユーザーにとって具体的です：オフラインモデルには到達すべき海外エンドポイントがないため、海外サービスへの接続性は無関係です。',
           'これは[ローカルDeepSeekは中国のデータ問題を解決するか？](/local-llms/deepseek-local-china-data-privacy-2026)のプライバシー分析の実践的な対になります — あちらのページはローカルのセルフホストがなぜデータフローの懸念を取り除くかを説明し、こちらはその構築方法を示します。',
         ],
+        image: '/images/deepseek-offline-china-self-hosted-2026-sovereignty-comparison-ja.svg',
+        imageCaption: 'ホスト型API対オフライン自己ホストDeepSeek：クラウドAPIはプロンプトを海外エンドポイントへ送りネットワーク稼働に依存する一方、オフライン自己ホストはすべてのプロンプトと出力をローカルハードウェアにとどめ、マシン外へ何も出しません。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -692,6 +706,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         codeBlock: 'ollama pull deepseek-r1:14b    # 一度だけ、オンライン\n# その後ネットワークを切断 / ブロック\nollama run deepseek-r1:14b     # 完全オフライン推論',
         codeLanguage: 'bash',
+        image: '/images/deepseek-offline-china-self-hosted-2026-offline-setup-steps-ja.svg',
+        imageCaption: 'DeepSeekをオフライン実行する5ステップ：OllamaまたはLM Studioをインストールし、オンラインでdistillを一度プルし、ネットワークアクセスを遮断し、temperature 0.6・システムプロンプトなしに設定し、完全オフラインで推論を実行します。',
       },
       network: {
         id: 'network',
@@ -824,6 +840,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '三大动因占主导：数据主权（提示词与输出永不离开你的环境）、可靠性（托管端点无宕机或限流）、以及摆脱网络限制。最后一点对防火长城后的用户很具体：离线模型没有要访问的境外端点，因此与海外服务的连通性无关紧要。',
           '这是[本地 DeepSeek 能解决中国数据问题吗？](/local-llms/deepseek-local-china-data-privacy-2026)中隐私分析的实践对应——那篇解释了本地私有化部署为何消除数据流动顾虑；本篇展示如何搭建。',
         ],
+        image: '/images/deepseek-offline-china-self-hosted-2026-sovereignty-comparison-zh.svg',
+        imageCaption: '托管 API 与离线私有化部署 DeepSeek 对比：云端 API 将提示词发送到境外端点并依赖网络正常运行，而离线私有化部署让每个提示词和输出都留在本地硬件上，数据不出本机。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -880,6 +898,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         codeBlock: 'ollama pull deepseek-r1:14b    # 一次性，联网\n# 然后断开 / 阻断网络\nollama run deepseek-r1:14b     # 完全离线推理',
         codeLanguage: 'bash',
+        image: '/images/deepseek-offline-china-self-hosted-2026-offline-setup-steps-zh.svg',
+        imageCaption: '离线运行 DeepSeek 的 5 个步骤：安装 Ollama 或 LM Studio，联网时一次性拉取蒸馏版，阻断网络访问，设置 temperature 0.6 且不使用系统提示词，然后完全离线运行推理。',
       },
       network: {
         id: 'network',
@@ -1012,6 +1032,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Predominan tres motivaciones: soberanía de datos (los prompts y las salidas nunca dejan tu entorno), fiabilidad (sin caídas ni límites de tasa en un endpoint alojado) e independencia de las restricciones de red. El último punto es concreto para usuarios tras el Gran Cortafuegos: un modelo sin conexión no tiene ningún endpoint extranjero que alcanzar, así que la conectividad a servicios del exterior es irrelevante.',
           'Esta es la contraparte práctica del análisis de privacidad en [¿Resuelve DeepSeek local el problema de datos de China?](/local-llms/deepseek-local-china-data-privacy-2026) — esa página explica por qué el autoalojamiento local elimina la preocupación por el flujo de datos; esta muestra cómo construirlo.',
         ],
+        image: '/images/deepseek-offline-china-self-hosted-2026-sovereignty-comparison-es.svg',
+        imageCaption: 'API hospedada vs. DeepSeek autoalojado sin conexión: la API en la nube envía los prompts a un endpoint extranjero y depende de la disponibilidad de la red, mientras que el autoalojamiento sin conexión mantiene cada prompt y salida en hardware local sin que nada salga de la máquina.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1068,6 +1090,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         codeBlock: 'ollama pull deepseek-r1:14b    # una vez, en línea\n# luego desconecta / bloquea la red\nollama run deepseek-r1:14b     # inferencia totalmente sin conexión',
         codeLanguage: 'bash',
+        image: '/images/deepseek-offline-china-self-hosted-2026-offline-setup-steps-es.svg',
+        imageCaption: '5 pasos para ejecutar DeepSeek sin conexión: instala Ollama o LM Studio, descarga el distill una vez en línea, bloquea el acceso a la red, configura la temperatura en 0.6 sin prompt de sistema y luego ejecuta la inferencia totalmente sin conexión.',
       },
       network: {
         id: 'network',
@@ -1200,6 +1224,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Três motivações dominam: soberania de dados (prompts e saídas nunca deixam seu ambiente), confiabilidade (sem indisponibilidade ou limite de taxa em um endpoint hospedado) e independência de restrições de rede. O último ponto é concreto para usuários atrás do Grande Firewall: um modelo offline não tem nenhum endpoint estrangeiro a alcançar, então a conectividade com serviços do exterior é irrelevante.',
           'Esta é a contrapartida prática da análise de privacidade em [O DeepSeek local resolve o problema de dados da China?](/local-llms/deepseek-local-china-data-privacy-2026) — aquela página explica por que a auto-hospedagem local remove a preocupação com o fluxo de dados; esta mostra como construí-la.',
         ],
+        image: '/images/deepseek-offline-china-self-hosted-2026-sovereignty-comparison-pt.svg',
+        imageCaption: 'API hospedada vs. DeepSeek auto-hospedado offline: a API em nuvem envia os prompts a um endpoint estrangeiro e depende da disponibilidade da rede, enquanto a auto-hospedagem offline mantém cada prompt e saída em hardware local sem que nada saia da máquina.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1256,6 +1282,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         codeBlock: 'ollama pull deepseek-r1:14b    # uma vez, online\n# depois desconecte / bloqueie a rede\nollama run deepseek-r1:14b     # inferência totalmente offline',
         codeLanguage: 'bash',
+        image: '/images/deepseek-offline-china-self-hosted-2026-offline-setup-steps-pt.svg',
+        imageCaption: '5 passos para rodar o DeepSeek offline: instale o Ollama ou o LM Studio, baixe o distill uma vez online, bloqueie o acesso à rede, defina a temperatura em 0.6 sem prompt de sistema e depois rode a inferência totalmente offline.',
       },
       network: {
         id: 'network',
@@ -1388,6 +1416,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ثلاثة دوافع تسود: سيادة البيانات (المُوجِّهات والمخرجات لا تغادر بيئتك أبدًا)، والموثوقية (لا انقطاع ولا حد للمعدل على نقطة نهاية مستضافة)، والاستقلال عن قيود الشبكة. النقطة الأخيرة ملموسة للمستخدمين خلف الجدار الناري العظيم: لا يملك النموذج دون اتصال أي نقطة نهاية أجنبية للوصول إليها، فالاتصال بالخدمات الخارجية غير ذي صلة.',
           'هذا هو النظير العملي لتحليل الخصوصية في [هل يحل DeepSeek المحلي مشكلة بيانات الصين؟](/local-llms/deepseek-local-china-data-privacy-2026) — تشرح تلك الصفحة لماذا تزيل الاستضافة الذاتية المحلية القلق بشأن تدفق البيانات؛ وهذه توضّح كيفية بنائها.',
         ],
+        image: '/images/deepseek-offline-china-self-hosted-2026-sovereignty-comparison-ar.svg',
+        imageCaption: 'API مستضاف مقابل DeepSeek بالاستضافة الذاتية دون اتصال: يرسل API السحابي المُوجِّهات إلى نقطة نهاية أجنبية ويعتمد على استمرارية الشبكة، بينما تُبقي الاستضافة الذاتية دون اتصال كل مُوجِّه ومخرج على عتاد محلي دون أن يغادر الجهاز شيء.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1444,6 +1474,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         codeBlock: 'ollama pull deepseek-r1:14b    # مرة واحدة، متصل\n# ثم افصل / احجب الشبكة\nollama run deepseek-r1:14b     # استدلال دون اتصال بالكامل',
         codeLanguage: 'bash',
+        image: '/images/deepseek-offline-china-self-hosted-2026-offline-setup-steps-ar.svg',
+        imageCaption: '5 خطوات لتشغيل DeepSeek دون اتصال: ثبّت Ollama أو LM Studio، نزّل الـ distill مرة واحدة وأنت متصل، احجب الوصول إلى الشبكة، اضبط درجة الحرارة على 0.6 بلا موجِّه نظام، ثم شغّل الاستدلال دون اتصال بالكامل.',
       },
       network: {
         id: 'network',
@@ -1576,6 +1608,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '세 가지 동기가 주를 이룹니다: 데이터 주권(프롬프트와 출력이 환경을 절대 벗어나지 않음), 신뢰성(호스팅 엔드포인트의 장애나 속도 제한이 없음), 그리고 네트워크 제한으로부터의 독립입니다. 마지막 항목은 만리방화벽 뒤의 사용자에게 구체적입니다: 오프라인 모델은 도달할 해외 엔드포인트가 없으므로 해외 서비스 연결성은 무관합니다.',
           '이는 [로컬 DeepSeek가 중국 데이터 문제를 해결하는가?](/local-llms/deepseek-local-china-data-privacy-2026)의 개인정보 분석에 대한 실무적 대응입니다 — 그 페이지는 로컬 자체 호스팅이 왜 데이터 흐름 우려를 없애는지 설명하고, 이 페이지는 그것을 어떻게 구축하는지 보여줍니다.',
         ],
+        image: '/images/deepseek-offline-china-self-hosted-2026-sovereignty-comparison-ko.svg',
+        imageCaption: '호스팅 API vs. 오프라인 자체 호스팅 DeepSeek: 클라우드 API는 프롬프트를 해외 엔드포인트로 보내고 네트워크 가동에 의존하지만, 오프라인 자체 호스팅은 모든 프롬프트와 출력을 로컬 하드웨어에 두고 머신 밖으로 아무것도 내보내지 않습니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1632,6 +1666,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         codeBlock: 'ollama pull deepseek-r1:14b    # 일회성, 온라인\n# 그다음 네트워크 분리 / 차단\nollama run deepseek-r1:14b     # 완전 오프라인 추론',
         codeLanguage: 'bash',
+        image: '/images/deepseek-offline-china-self-hosted-2026-offline-setup-steps-ko.svg',
+        imageCaption: 'DeepSeek를 오프라인으로 실행하는 5단계: Ollama 또는 LM Studio를 설치하고, 온라인 상태에서 distill을 한 번 풀(pull)한 뒤, 네트워크 접근을 차단하고, temperature 0.6에 시스템 프롬프트 없이 설정한 다음, 완전히 오프라인으로 추론을 실행합니다.',
       },
       network: {
         id: 'network',
