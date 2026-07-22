@@ -7759,6 +7759,16 @@
     "width": 800,
     "height": 450
   },
+  "/images/double-local-llm-speed-baseline-to-vllm-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/double-local-llm-speed-optimization-tiers-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/easiest-local-ai-app-comparison-table-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
