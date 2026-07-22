@@ -91,6 +91,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Dimension': 'Setup effort', 'Cloud smart home': 'Low — app-guided', 'Local smart home': 'Higher — you run the hub' },
           { 'Dimension': 'AI capability', 'Cloud smart home': 'Cloud assistant (Alexa, Google)', 'Local smart home': 'Local voice + optional local LLM' },
         ],
+        image: '/images/local-smart-home-complete-guide-cloud-vs-local-en.svg',
+        imageCaption: 'Cloud smart home vs. local smart home compared across 5 dimensions — privacy, offline reliability, subscriptions, data location, and AI capability — local keeps every layer, including Home Assistant and an optional local LLM, on your own hardware.',
       },
       whyLocal: {
         id: 'why-local',
@@ -116,6 +118,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Local voice — Assist + Whisper + Piper', whyItMatters: 'Replaces Alexa and Google. Home Assistant Assist handles intent, Whisper does speech-to-text, and Piper does text-to-speech, all offline — see [build a fully local voice assistant](/smart-home/local-voice-assistant-smart-home).' },
           { title: 'AI brain — a local LLM via Ollama', whyItMatters: 'Optional top layer. A local model turns rigid rules into natural-language control and context-aware automations, running on the same hardware with no cloud.' },
         ],
+        image: '/images/local-smart-home-complete-guide-stack-layers-en.svg',
+        imageCaption: 'The local-first smart home stack in four layers: a Home Assistant hub, Matter/Thread, Zigbee, and Z-Wave protocols, local voice via Whisper and Piper, and an optional local LLM via Ollama as the automation brain — built bottom-up.',
       },
       whatYouCanRun: {
         id: 'what-you-can-run',
@@ -304,6 +308,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'البُعد': 'جهد الإعداد', 'المنزل الذكي السحابي': 'منخفض — يُوجِّهك التطبيق', 'المنزل الذكي المحلي': 'أعلى — تُشغِّل المركز بنفسك' },
           { 'البُعد': 'قدرة الذكاء الاصطناعي', 'المنزل الذكي السحابي': 'مساعد سحابي (Alexa، Google)', 'المنزل الذكي المحلي': 'صوت محلي + نموذج لغوي محلي اختياري' },
         ],
+        image: '/images/local-smart-home-complete-guide-cloud-vs-local-en.svg',
+        imageCaption: 'مقارنة بين المنزل الذكي السحابي والمنزل الذكي المحلي عبر 5 أبعاد: الخصوصية، والعمل دون إنترنت، والاشتراكات، وموقع البيانات، وقدرة الذكاء الاصطناعي — في النهج المحلي تعمل كل طبقة، بما فيها Home Assistant ونموذج لغوي محلي اختياري، على أجهزتك الخاصة.',
       },
       whyLocal: {
         id: 'why-local',
@@ -329,6 +335,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'الصوت المحلي — Assist + Whisper + Piper', whyItMatters: 'يحل محل Alexa وGoogle. يتعامل Home Assistant Assist مع النوايا، ويحوِّل Whisper الكلام إلى نص، ويحوِّل Piper النص إلى كلام، جميعها دون إنترنت — راجع [بناء مساعد صوتي محلي كامل](/ar/smart-home/local-voice-assistant-smart-home).' },
           { title: 'عقل الذكاء الاصطناعي — نموذج لغوي محلي عبر Ollama', whyItMatters: 'طبقة علوية اختيارية. يحوِّل نموذج محلي القواعد الجامدة إلى تحكم بلغة طبيعية وأتمتة واعية بالسياق، يعمل على نفس الأجهزة بدون سحابة.' },
         ],
+        image: '/images/local-smart-home-complete-guide-stack-layers-en.svg',
+        imageCaption: 'بنية المنزل الذكي المحلي أولًا في أربع طبقات: مركز Home Assistant، وبروتوكولات Matter/Thread وZigbee وZ-Wave، وصوت محلي عبر Whisper وPiper، ونموذج لغوي محلي اختياري عبر Ollama كعقل للأتمتة — تُبنى من الأسفل إلى الأعلى.',
       },
       whatYouCanRun: {
         id: 'what-you-can-run',
@@ -517,6 +525,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Dimension': 'Einrichtungsaufwand', 'Cloud-Smart-Home': 'Gering – per App geführt', 'Lokales Smart Home': 'Höher – Sie betreiben den Hub' },
           { 'Dimension': 'KI-Fähigkeit', 'Cloud-Smart-Home': 'Cloud-Assistent (Alexa, Google)', 'Lokales Smart Home': 'Lokale Sprache + optionales lokales LLM' },
         ],
+        image: '/images/local-smart-home-complete-guide-cloud-vs-local-en.svg',
+        imageCaption: 'Cloud-Smart-Home vs. lokales Smart Home im Vergleich über 5 Dimensionen – Datenschutz, Offline-Zuverlässigkeit, Abonnements, Datenstandort und KI-Fähigkeit – lokal bleibt jede Schicht, inklusive Home Assistant und optionalem lokalem LLM, auf eigener Hardware.',
       },
       whyLocal: {
         id: 'why-local',
@@ -542,6 +552,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Lokale Sprache – Assist + Whisper + Piper', whyItMatters: 'Ersetzt Alexa und Google. Home Assistant Assist verarbeitet die Absicht, Whisper macht Sprache-zu-Text und Piper Text-zu-Sprache, alles offline – siehe [einen vollständig lokalen Sprachassistenten bauen](/de/smart-home/local-voice-assistant-smart-home).' },
           { title: 'KI-Gehirn – ein lokales LLM via Ollama', whyItMatters: 'Optionale oberste Schicht. Ein lokales Modell macht aus starren Regeln natürlichsprachliche Steuerung und kontextbewusste Automatisierungen, auf derselben Hardware und ohne Cloud.' },
         ],
+        image: '/images/local-smart-home-complete-guide-stack-layers-en.svg',
+        imageCaption: 'Der Local-First-Smart-Home-Stack in vier Schichten: ein Home-Assistant-Hub, Matter/Thread-, Zigbee- und Z-Wave-Protokolle, lokale Sprache über Whisper und Piper sowie optional ein lokales LLM via Ollama als Automatisierungs-Gehirn – von unten nach oben aufgebaut.',
       },
       whatYouCanRun: {
         id: 'what-you-can-run',
@@ -730,6 +742,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Dimensión': 'Esfuerzo de configuración', 'Smart home en la nube': 'Bajo: guiado por app', 'Smart home local': 'Mayor: tú gestionas el hub' },
           { 'Dimensión': 'Capacidad de IA', 'Smart home en la nube': 'Asistente en la nube (Alexa, Google)', 'Smart home local': 'Voz local + LLM local opcional' },
         ],
+        image: '/images/local-smart-home-complete-guide-cloud-vs-local-en.svg',
+        imageCaption: 'Smart home en la nube frente a smart home local comparados en 5 dimensiones — privacidad, fiabilidad sin conexión, suscripciones, ubicación de los datos y capacidad de IA — en local, cada capa, incluido Home Assistant y un LLM local opcional, corre en tu propio hardware.',
       },
       whyLocal: {
         id: 'why-local',
@@ -755,6 +769,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Voz local — Assist + Whisper + Piper', whyItMatters: 'Reemplaza a Alexa y Google. Home Assistant Assist gestiona la intención, Whisper hace voz a texto y Piper texto a voz, todo sin conexión: consulta [montar un asistente de voz totalmente local](/es/smart-home/local-voice-assistant-smart-home).' },
           { title: 'Cerebro de IA — un LLM local vía Ollama', whyItMatters: 'Capa superior opcional. Un modelo local convierte reglas rígidas en control en lenguaje natural y automatizaciones contextuales, en el mismo equipo y sin nube.' },
         ],
+        image: '/images/local-smart-home-complete-guide-stack-layers-en.svg',
+        imageCaption: 'La arquitectura local-first del smart home en cuatro capas: un hub Home Assistant, protocolos Matter/Thread, Zigbee y Z-Wave, voz local con Whisper y Piper, y un LLM local opcional vía Ollama como cerebro de automatización — construida de abajo hacia arriba.',
       },
       whatYouCanRun: {
         id: 'what-you-can-run',
@@ -943,6 +959,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '항목': '설정 노력', '클라우드 스마트 홈': '낮음: 앱 안내', '로컬 스마트 홈': '높음: 허브를 직접 관리' },
           { '항목': 'AI 기능', '클라우드 스마트 홈': '클라우드 어시스턴트(Alexa, Google)', '로컬 스마트 홈': '로컬 음성 + 선택적 로컬 LLM' },
         ],
+        image: '/images/local-smart-home-complete-guide-cloud-vs-local-en.svg',
+        imageCaption: '클라우드 스마트 홈과 로컬 스마트 홈을 프라이버시, 오프라인 작동, 구독료, 데이터 위치, AI 기능 등 5가지 기준으로 비교. 로컬 스마트 홈은 Home Assistant와 선택적 로컬 LLM을 포함한 모든 계층이 자신의 하드웨어에서 실행된다.',
       },
       whyLocal: {
         id: 'why-local',
@@ -968,6 +986,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: '로컬 음성 — Assist + Whisper + Piper', whyItMatters: 'Alexa와 Google을 대체합니다. Home Assistant Assist가 의도를 처리하고 Whisper가 음성→텍스트, Piper가 텍스트→음성을 담당하며 모두 오프라인으로 동작합니다: [완전 로컬 음성 어시스턴트 구축하기](/ko/smart-home/local-voice-assistant-smart-home)를 참조하십시오.' },
           { title: 'AI 두뇌 — Ollama를 통한 로컬 LLM', whyItMatters: '선택적인 상위 계층입니다. 로컬 모델이 경직된 규칙을 자연어 제어와 문맥 인식 자동화로 변환하며 동일한 기기에서 클라우드 없이 실행됩니다.' },
         ],
+        image: '/images/local-smart-home-complete-guide-stack-layers-en.svg',
+        imageCaption: '로컬 퍼스트 스마트 홈 스택을 4계층으로 도식화: Home Assistant 허브, Matter/Thread·Zigbee·Z-Wave 프로토콜, Whisper와 Piper 기반 로컬 음성, 그리고 자동화 두뇌로 선택적인 Ollama 기반 로컬 LLM — 아래에서 위로 구축한다.',
       },
       whatYouCanRun: {
         id: 'what-you-can-run',
@@ -1156,6 +1176,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Dimension': 'Effort de configuration', 'Maison connectée cloud': 'Faible : guidé par l\'app', 'Maison connectée locale': 'Plus élevé : vous gérez le hub' },
           { 'Dimension': 'Capacité IA', 'Maison connectée cloud': 'Assistant cloud (Alexa, Google)', 'Maison connectée locale': 'Voix locale + LLM local optionnel' },
         ],
+        image: '/images/local-smart-home-complete-guide-cloud-vs-local-en.svg',
+        imageCaption: 'Maison connectée cloud vs maison connectée locale comparées sur 5 dimensions — confidentialité, fiabilité hors ligne, abonnements, localisation des données et capacité IA — en local, chaque couche, y compris Home Assistant et un LLM local optionnel, tourne sur votre propre matériel.',
       },
       whyLocal: {
         id: 'why-local',
@@ -1181,6 +1203,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Voix locale — Assist + Whisper + Piper', whyItMatters: 'Remplace Alexa et Google. Home Assistant Assist gère l\'intention, Whisper fait la parole vers texte et Piper le texte vers parole, le tout hors ligne : voir [construire un assistant vocal entièrement local](/fr/smart-home/local-voice-assistant-smart-home).' },
           { title: 'Cerveau IA — un LLM local via Ollama', whyItMatters: 'Couche supérieure optionnelle. Un modèle local transforme des règles rigides en commande en langage naturel et en automatisations contextuelles, sur le même matériel et sans cloud.' },
         ],
+        image: '/images/local-smart-home-complete-guide-stack-layers-en.svg',
+        imageCaption: 'L\'architecture local-first de la maison connectée en quatre couches : un hub Home Assistant, les protocoles Matter/Thread, Zigbee et Z-Wave, la voix locale via Whisper et Piper, et un LLM local optionnel via Ollama comme cerveau d\'automatisation — construite du bas vers le haut.',
       },
       whatYouCanRun: {
         id: 'what-you-can-run',
@@ -1369,6 +1393,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '観点': '設定の手間', 'クラウド型スマートホーム': '少ない——アプリ案内式', 'ローカル型スマートホーム': '多い——ハブを自分で運用' },
           { '観点': 'AI 能力', 'クラウド型スマートホーム': 'クラウドアシスタント（Alexa、Google）', 'ローカル型スマートホーム': 'ローカル音声 + 任意のローカルLLM' },
         ],
+        image: '/images/local-smart-home-complete-guide-cloud-vs-local-en.svg',
+        imageCaption: 'クラウド型スマートホームとローカル型スマートホームを5つの観点(プライバシー、オフライン動作、サブスクリプション、データの保管場所、AI機能)で比較。ローカル型はHome Assistantと任意のローカルLLMを含むすべての層を自分のハードウェア上で実行する。',
       },
       whyLocal: {
         id: 'why-local',
@@ -1394,6 +1420,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'ローカル音声 — Assist + Whisper + Piper', whyItMatters: 'Alexa と Google を置き換えます。Home Assistant Assist が意図を処理し、Whisper が音声→テキスト、Piper がテキスト→音声を、すべてオフラインで行います——[完全ローカルの音声アシスタントを作る](/ja/smart-home/local-voice-assistant-smart-home)を参照。' },
           { title: 'AIの頭脳 — Ollama 経由のローカルLLM', whyItMatters: '任意の最上層です。ローカルモデルは硬直したルールを自然言語制御と文脈に応じた自動化に変え、同じ機器上でクラウドなしに動きます。' },
         ],
+        image: '/images/local-smart-home-complete-guide-stack-layers-en.svg',
+        imageCaption: 'ローカルファースト・スマートホーム構成の4層図:Home Assistantハブ、Matter/Thread・Zigbee・Z-Waveプロトコル、WhisperとPiperによるローカル音声、そして自動化ブレインとして任意のOllama経由ローカルLLM——下から順に構築する。',
       },
       whatYouCanRun: {
         id: 'what-you-can-run',
@@ -1582,6 +1610,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Dimensão': 'Esforço de configuração', 'Casa inteligente na nuvem': 'Baixo: guiado por app', 'Casa inteligente local': 'Maior: você cuida do hub' },
           { 'Dimensão': 'Capacidade de IA', 'Casa inteligente na nuvem': 'Assistente na nuvem (Alexa, Google)', 'Casa inteligente local': 'Voz local + LLM local opcional' },
         ],
+        image: '/images/local-smart-home-complete-guide-cloud-vs-local-en.svg',
+        imageCaption: 'Casa inteligente na nuvem vs. casa inteligente local comparadas em 5 dimensões — privacidade, confiabilidade offline, assinaturas, localização dos dados e capacidade de IA — no modelo local, cada camada, incluindo o Home Assistant e um LLM local opcional, roda no seu próprio hardware.',
       },
       whyLocal: {
         id: 'why-local',
@@ -1607,6 +1637,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Voz local — Assist + Whisper + Piper', whyItMatters: 'Substitui Alexa e Google. O Home Assistant Assist trata a intenção, o Whisper faz voz para texto e o Piper texto para voz, tudo offline: veja [montar um assistente de voz totalmente local](/pt/smart-home/local-voice-assistant-smart-home).' },
           { title: 'Cérebro de IA — um LLM local via Ollama', whyItMatters: 'Camada superior opcional. Um modelo local transforma regras rígidas em controle por linguagem natural e automações contextuais, na mesma máquina e sem nuvem.' },
         ],
+        image: '/images/local-smart-home-complete-guide-stack-layers-en.svg',
+        imageCaption: 'A stack local-first da casa inteligente em quatro camadas: um hub Home Assistant, protocolos Matter/Thread, Zigbee e Z-Wave, voz local via Whisper e Piper, e um LLM local opcional via Ollama como cérebro de automação — construída de baixo para cima.',
       },
       whatYouCanRun: {
         id: 'what-you-can-run',
@@ -1795,6 +1827,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '维度': '配置投入', '云端智能家居': '低——应用引导', '本地智能家居': '较高——你来运维中枢' },
           { '维度': 'AI 能力', '云端智能家居': '云端助手（Alexa、Google）', '本地智能家居': '本地语音 + 可选本地LLM' },
         ],
+        image: '/images/local-smart-home-complete-guide-cloud-vs-local-en.svg',
+        imageCaption: '云端智能家居与本地智能家居在隐私、离线可用性、订阅费用、数据存放位置和 AI 能力这 5 个维度上的对比:本地方案的每一层——包括 Home Assistant 和可选的本地 LLM——都运行在你自己的硬件上。',
       },
       whyLocal: {
         id: 'why-local',
@@ -1820,6 +1854,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: '本地语音 — Assist + Whisper + Piper', whyItMatters: '取代 Alexa 和 Google。Home Assistant Assist 处理意图，Whisper 做语音转文字，Piper 做文字转语音，全部离线——参见[搭建完全本地的语音助手](/zh/smart-home/local-voice-assistant-smart-home)。' },
           { title: 'AI 大脑 — 通过 Ollama 的本地LLM', whyItMatters: '可选的最上层。本地模型把僵硬的规则变成自然语言控制和情境化自动化，在同一台机器上运行且无需云端。' },
         ],
+        image: '/images/local-smart-home-complete-guide-stack-layers-en.svg',
+        imageCaption: '本地优先智能家居架构分为四层:Home Assistant 中枢、Matter/Thread、Zigbee 和 Z-Wave 协议、基于 Whisper 与 Piper 的本地语音,以及作为可选自动化大脑的 Ollama 本地 LLM——自下而上搭建。',
       },
       whatYouCanRun: {
         id: 'what-you-can-run',
