@@ -81,6 +81,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'why': {
+          image: '/images/private-local-llm-sensitive-data-cloud-vs-local-dataflow-en.svg',
+          imageCaption: 'Cloud API data flow versus local LLM: cloud transmits data to vendor servers with breach liability of $50K–5M+, while a local LLM keeps data on-device with zero egress and $0 breach liability.',
           title: 'Why Local LLMs for Compliance?',
           content: [
             '**Cloud APIs (ChatGPT, Claude, Gemini) cannot be used with regulated data:**',
@@ -122,6 +124,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'airgap': {
+          image: '/images/private-local-llm-sensitive-data-airgap-5step-flow-en.svg',
+          imageCaption: '5-step air-gapped deployment flow: physical isolation, model loading via USB, encrypted USB data transfer in, offline inference with Ollama or vLLM, and encrypted USB data transfer out.',
           title: 'Air-Gapped Deployment',
           content: 'Most secure option: machine has zero network connection (Faraday cage-level isolation).',
           numberedItems: [
@@ -313,6 +317,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'why': {
+          image: '/images/private-local-llm-sensitive-data-cloud-vs-local-dataflow-es.svg',
+          imageCaption: 'Flujo de datos: API en la nube frente a LLM local. La nube transmite datos a servidores del proveedor (responsabilidad de brecha 50.000-5.000.000 USD+), mientras que el LLM local mantiene los datos en el dispositivo con cero egreso y 0 USD de responsabilidad.',
           title: '¿Por qué LLM locales para el cumplimiento?',
           content: [
             '**Las APIs en la nube (ChatGPT, Claude, Gemini) no pueden usarse con datos regulados:**',
@@ -354,6 +360,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'airgap': {
+          image: '/images/private-local-llm-sensitive-data-airgap-5step-flow-es.svg',
+          imageCaption: 'Flujo de despliegue air-gapped en 5 pasos: aislamiento físico, carga del modelo por USB, transferencia de datos entrante mediante USB cifrado, inferencia offline con Ollama o vLLM, y transferencia de datos saliente mediante USB cifrado.',
           title: 'Despliegue air-gapped',
           content: 'La opción más segura: la máquina no tiene ninguna conexión de red (aislamiento a nivel de jaula de Faraday).',
           numberedItems: [
@@ -542,6 +550,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'why': {
+          image: '/images/private-local-llm-sensitive-data-cloud-vs-local-dataflow-ar.svg',
+          imageCaption: 'تدفق البيانات: API سحابي مقابل LLM محلي. تُرسل السحابة البيانات لخوادم المزوّد (مسؤولية اختراق 50,000-5,000,000 دولار+)، بينما يحتفظ LLM المحلي بالبيانات على الجهاز بصفر تسريب وصفر دولار مسؤولية.',
           title: 'لماذا نماذج LLM المحلية للامتثال؟',
           content: [
             '**واجهات API السحابية (ChatGPT، Claude، Gemini) لا يمكن استخدامها مع البيانات المنظّمة:**',
@@ -583,6 +593,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'airgap': {
+          image: '/images/private-local-llm-sensitive-data-airgap-5step-flow-ar.svg',
+          imageCaption: 'تدفق النشر المعزول بخمس خطوات: العزل المادي، تحميل النموذج عبر USB، نقل البيانات الوارد عبر USB مشفّر، الاستدلال دون اتصال باستخدام Ollama أو vLLM، ونقل البيانات الصادر عبر USB مشفّر.',
           title: 'النشر المعزول',
           content: 'الخيار الأكثر أمانًا: الجهاز بلا أي اتصال شبكي (عزل على مستوى قفص فاراداي).',
           numberedItems: [
@@ -772,6 +784,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'why': {
+          image: '/images/private-local-llm-sensitive-data-cloud-vs-local-dataflow-pt.svg',
+          imageCaption: 'Fluxo de dados: API em nuvem versus LLM local. A nuvem transmite dados aos servidores do provedor (responsabilidade por violação US$ 50.000-5.000.000+), enquanto o LLM local mantém os dados no dispositivo com zero saída e US$ 0 de responsabilidade.',
           title: 'Por que LLMs locais para conformidade?',
           content: [
             '**As APIs em nuvem (ChatGPT, Claude, Gemini) não podem ser usadas com dados regulados:**',
@@ -813,6 +827,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'airgap': {
+          image: '/images/private-local-llm-sensitive-data-airgap-5step-flow-pt.svg',
+          imageCaption: 'Fluxo de implantação air-gapped em 5 etapas: isolamento físico, carga do modelo via USB, transferência de dados de entrada via USB criptografado, inferência offline com Ollama ou vLLM, e transferência de dados de saída via USB criptografado.',
           title: 'Implantação air-gapped',
           content: 'A opção mais segura: a máquina não tem nenhuma conexão de rede (isolamento em nível de gaiola de Faraday).',
           numberedItems: [
@@ -983,6 +999,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'why': {
+          image: '/images/private-local-llm-sensitive-data-cloud-vs-local-dataflow-fr.svg',
+          imageCaption: 'Flux de données : API cloud contre LLM local. Le cloud transmet les données aux serveurs du fournisseur (responsabilité de violation 50 000-5 000 000 €+), tandis que le LLM local conserve les données sur l\'appareil avec zéro exfiltration et 0 € de responsabilité.',
           title: 'Pourquoi les LLM locaux pour la conformité ?',
           content: [
             '**Les APIs cloud (ChatGPT, Claude, Gemini) ne peuvent pas être utilisées avec des données régulées :**',
@@ -1024,6 +1042,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'airgap': {
+          image: '/images/private-local-llm-sensitive-data-airgap-5step-flow-fr.svg',
+          imageCaption: 'Flux de déploiement isolé du réseau en 5 étapes : isolation physique, chargement du modèle par clé USB, transfert de données entrantes via USB chiffré, inférence hors ligne avec Ollama ou vLLM, et transfert de données sortantes via USB chiffré.',
           title: 'Déploiement isolé du réseau',
           content: 'Option la plus sécurisée : la machine n\'a aucune connexion réseau (isolation au niveau cage de Faraday).',
           numberedItems: [
@@ -1192,6 +1212,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'why': {
+          image: '/images/private-local-llm-sensitive-data-cloud-vs-local-dataflow-ja.svg',
+          imageCaption: 'クラウドAPIとローカルLLMのデータフロー比較：クラウドはベンダーサーバーにデータを送信（違反責任5万～500万USD以上）し、ローカルLLMはデバイス上にデータを保持してゼロ流出で責任は0 USD。',
           title: 'コンプライアンスのためのローカルLLMが必要な理由',
           content: [
             '**クラウドAPI（ChatGPT、Claude、Gemini）は規制データでは使用できません：**',
@@ -1233,6 +1255,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'airgap': {
+          image: '/images/private-local-llm-sensitive-data-airgap-5step-flow-ja.svg',
+          imageCaption: 'エアギャップ導入の5ステップフロー：物理的分離、USB経由のモデルロード、暗号化USBによるデータ入力、Ollama/vLLMによるオフライン推論、暗号化USBによるデータ出力。',
           title: 'ネットワーク分離デプロイメント',
           content: '最も安全なオプション：マシンはネットワーク接続がありません（Faraday cage レベルの分離）。',
           numberedItems: [
@@ -1382,6 +1406,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'why': {
+          image: '/images/private-local-llm-sensitive-data-cloud-vs-local-dataflow-zh.svg',
+          imageCaption: '云API与本地LLM数据流对比：云端将数据传输至供应商服务器（违规责任5万-500万美元以上），本地LLM则将数据保留在设备上，零流出，责任0美元。',
           title: '为什么本地LLM用于合规性',
           content: [
             '**云API（ChatGPT、Claude、Gemini）无法用于受监管数据：**',
@@ -1423,6 +1449,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'airgap': {
+          image: '/images/private-local-llm-sensitive-data-airgap-5step-flow-zh.svg',
+          imageCaption: '网络隔离部署的5步数据流程：物理隔离、通过USB加载模型、加密USB传入数据、使用Ollama或vLLM离线推理、加密USB传出数据。',
           title: '网络隔离部署',
           content: '最安全的选项：机器没有网络连接（Faraday笼级隔离）。',
           numberedItems: [
@@ -1580,10 +1608,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       sections: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['**Persönliche Daten (Medizin, Finanzen):** Daten können Ihre Kontrolle nicht verlassen. Lokales LLM auf isoliertem Netzwerk, verschlüsselte Speicherung, Zugriffsprotokolle.', '**Zahlungskartendaten:** Niemals Kartennummern in LLM eingeben. PCI-DSS verbietet dies. Nur zu Analysezwecken, nur letzte 4 Ziffern.', '**Anwaltsgeheimnis:** Vertrauliche Dateien können nicht das Anwaltzimmer verlassen. Netzwerk-isolierte Maschine, nur Papierausdruck.', '**Einrichtung:** Ollama oder vLLM auf Linux-Server, isoliert, verschlüsselte Dateisysteme (LUKS), Audit-Logs (ELK), kein Internet. Kosten: 3.000–5.000 € Hardware + 2.000 €/Jahr Updates.', '**DSGVO-konform:** Rechtsgrundlage Art. 6 Abs. 1 f) DSGVO (berechtigtes Interesse); Datenschutzmaßnahmen gemäß Art. 32 DSGVO; DPIA erforderlich (Art. 35).', '**vs Cloud-API:** Cloud = Anbieter kontrolliert Daten + Verantwortungsbruch. Lokal = Sie kontrollieren + Null-Risiko.'] },
-        why: { title: 'Warum lokale LLMs für Konformität erforderlich sind', content: ['**Cloud-APIs (ChatGPT, Claude, Gemini) sind für regulierte Daten nicht zulässig:**', '- Datenübertragung in die Cloud = Vertraulichkeitsverletzung (DSGVO, Anwaltsgeheimnis).', '- Kein "Privatmodus". Daten trainiert letztendlich das Modell (Anbieter ToS erlauben es).', '- Anbietersperre: Wenn Anbieter verletzt oder heruntergefahren wird, verlieren Sie Daten + Konformität.', '', '**Lokales LLM garantiert:**', '- Null Datenfluss (Netzwerk-Isolation = keine Cloud).', '- Audit-Trail (jeder Zugriff wird protokolliert, kryptografisch signiert, unveränderbar).', '- Kontrolle (Sie besitzen Daten, Verschlüsselungsschlüssel und den gesamten Stack).', '- Vorhersehbare Kosten (nach 5.000 € anfänglicher Hardwareinvestition keine Pro-Token-Gebühren).'] },
+        why: { image: '/images/private-local-llm-sensitive-data-cloud-vs-local-dataflow-de.svg', imageCaption: 'Datenfluss: Cloud-API im Vergleich zu lokalem LLM. Die Cloud überträgt Daten an Anbieter-Server (Haftung bei Verstoß 50.000-5.000.000 €+), während das lokale LLM Daten auf dem Gerät hält – null Datenfluss und 0 € Haftung.', title: 'Warum lokale LLMs für Konformität erforderlich sind', content: ['**Cloud-APIs (ChatGPT, Claude, Gemini) sind für regulierte Daten nicht zulässig:**', '- Datenübertragung in die Cloud = Vertraulichkeitsverletzung (DSGVO, Anwaltsgeheimnis).', '- Kein "Privatmodus". Daten trainiert letztendlich das Modell (Anbieter ToS erlauben es).', '- Anbietersperre: Wenn Anbieter verletzt oder heruntergefahren wird, verlieren Sie Daten + Konformität.', '', '**Lokales LLM garantiert:**', '- Null Datenfluss (Netzwerk-Isolation = keine Cloud).', '- Audit-Trail (jeder Zugriff wird protokolliert, kryptografisch signiert, unveränderbar).', '- Kontrolle (Sie besitzen Daten, Verschlüsselungsschlüssel und den gesamten Stack).', '- Vorhersehbare Kosten (nach 5.000 € anfänglicher Hardwareinvestition keine Pro-Token-Gebühren).'] },
         hipaa: { title: 'HIPAA / DSGVO: Datenschutz-Anforderungen', content: 'Persönliche Daten dürfen nicht von untauglichen Systemen verarbeitet werden. DSGVO und das Bundesdatenschutzgesetz (BDSG) verlangen angemessene Sicherheitsmaßnahmen.', numberedItems: ['**Isolierter Server:** Linux-Maschine, nicht geteilt, kein Internet, verschlüsselter USB für Datentransfer.', '**Verschlüsselte Speicherung:** Vollplatten-Verschlüsselung (LUKS), AES-256, Passwortschutz. Schutz vor Datensicherung bei Hardware-Diebstahl.', '**Netzwerk-Isolation:** Dediziertes VLAN oder völlige Netzwerk-Isolation. Zugriff nur via MFA-VPN oder physischem Terminal.', '**Audit-Logs:** Jede LLM-Anfrage protokolliert: Zeitstempel, Benutzer-ID, Dokument-Hash (kein Klartext), Antwort-Länge, verwendetes Modell. Logs auf separatem verschlüsseltem Syslog-Server gespeichert.', '**Zugriffskontrolle:** Rollenbasiert (Ärzte vs. Administrator vs. Forscher). MFA-Anmeldung. Keine geteilten Passwörter. Konten bei Kündigungsdisabled.', '**Aufbewahrungsrichtlinie:** Inference-Logs nach 6 Jahren löschen (DSGVO Art. 5, BDSG § 31). Automatisiertes Lösch-Skript.', '**Datenverarbeitungsvertrag (DPA):** Nur für Drittanbieter erforderlich. Open-Source-Modelle (Llama, Mistral) benötigen interne Konformitätsdokumentation.', '**Jährliche Penetrationstests:** Drittanbieter-Sicherheitsprüfung validiert Null-Datenleaks, keine Standard-Credentials, keine ungepatchten Schwachstellen.'] },
         pci: { title: 'PCI-DSS: Finanzielle Datensicherheit', content: 'Zahlungskartendaten (PAN) dürfen nicht von LLMs verarbeitet werden. PCI-DSS v4.0 erfordert 12 Kernmandate.', numberedItems: ['**Niemals vollständige Kartennummern eingeben.** PCI-DSS verbietet dies absolut. Nur letzte 4 Ziffern, kein Verfallsdatum.', '**Hashing und Maskierung:** Kartennummern → SHA-256-Hash für Analysen. Logs maskieren vollständige Nummern, zeigen nur Hashes.', '**Netzwerk-Segmentierung:** LLM-Server auf eigenes VLAN. Firewall blockiert Zugriff von äußeren Netzen. NUR interne Zugriffe erlaubt.', '**Verschlüsselte Kommunikation:** TLS 1.3 für alle API-Aufrufe. Datenspeicherung mit AES-256.', '**Protokollierung & Überwachung:** Alle Abfragen protokollieren (Benutzer, Zeit, eingegeben Token-Länge, Modell). Tägliche Loganalysemit automatischen Warnungen.', '**Vendor-Audit:** Falls verwaltete Dienste (z. B. Cloud-gehostetes LLM), Vendor-Compliance-Zertifikat verlangen (SOC 2 Type II oder gleichwertig).', '**Personal-Schulung:** Jährliches PCI-DSS-Training für technische Teams. Verstehen Sie: „Kartendaten hinter den Kulissen, Logs nur Hashes".'] },
-        airgap: { title: 'Air-Gapped Networks: Maximale Sicherheit', content: 'Für ultrasensible Arbeitsabläufe (nationale Sicherheit, Geheimdienstforschung, Konzern-Geisteswerke) sind Air-Gapped-Netzwerke (vollständig offline) der Standard.', numberedItems: ['**Was ist Air-Gapped?** Eine Maschine mit null Netzwerkverbindung (nicht verbunden mit Internet, LAN oder WLAN). Daten nur via physische USB oder Papierkopie rein/raus.', '**Ollama oder llama.cpp Standalone:** Modellgewichte lokal vorladen. Keine Remote-Modell-Downloads. Alle Inferenz läuft offline.', '**Physische Sicherheit:** Maschine in gesperrtem Schrank, begrenzte Zugriffe (z. B. zwei Personen erforderlich, um zugreifen). Überwachungskamera optional.', '**USB-Übergabe:** Eingehende Daten: verschlüsselter USB (BitLocker, LUKS), nur Daten-MD5-Prüfsumme, in Quarantäne gescannt vor dem Laden in LLM.', '**Ergebnisse:** Nur Schreibzugriff auf unterschiedliche USB (keine Rückkopplung). Logs auf optischen Medien (WORM-CDs) archiviert, dauerhaft offline.', '**Für Normalunternehmen zu viel:** Air-Gapped passt nur zu Regierungslabors oder Banken mit Tier-1-Geheimnissen. Für Arztpraxen / KMU: Netzwerk-Isolation (VLAN + Firewall) ist ausreichend.', '**Kosten:** Hardware 5.000–15.000 €, monatliche Überwachung 500–2.000 €. Lohnt sich nur für Daten im Wert von Millionen.'] },
+        airgap: { image: '/images/private-local-llm-sensitive-data-airgap-5step-flow-de.svg', imageCaption: 'Air-Gapped-Bereitstellung in 5 Schritten: physische Isolation, lokal vorgeladenes Modell, verschlüsselter USB-Dateneingang, Offline-Inferenz mit Ollama oder llama.cpp und verschlüsselter USB-Datenausgang.', title: 'Air-Gapped Networks: Maximale Sicherheit', content: 'Für ultrasensible Arbeitsabläufe (nationale Sicherheit, Geheimdienstforschung, Konzern-Geisteswerke) sind Air-Gapped-Netzwerke (vollständig offline) der Standard.', numberedItems: ['**Was ist Air-Gapped?** Eine Maschine mit null Netzwerkverbindung (nicht verbunden mit Internet, LAN oder WLAN). Daten nur via physische USB oder Papierkopie rein/raus.', '**Ollama oder llama.cpp Standalone:** Modellgewichte lokal vorladen. Keine Remote-Modell-Downloads. Alle Inferenz läuft offline.', '**Physische Sicherheit:** Maschine in gesperrtem Schrank, begrenzte Zugriffe (z. B. zwei Personen erforderlich, um zugreifen). Überwachungskamera optional.', '**USB-Übergabe:** Eingehende Daten: verschlüsselter USB (BitLocker, LUKS), nur Daten-MD5-Prüfsumme, in Quarantäne gescannt vor dem Laden in LLM.', '**Ergebnisse:** Nur Schreibzugriff auf unterschiedliche USB (keine Rückkopplung). Logs auf optischen Medien (WORM-CDs) archiviert, dauerhaft offline.', '**Für Normalunternehmen zu viel:** Air-Gapped passt nur zu Regierungslabors oder Banken mit Tier-1-Geheimnissen. Für Arztpraxen / KMU: Netzwerk-Isolation (VLAN + Firewall) ist ausreichend.', '**Kosten:** Hardware 5.000–15.000 €, monatliche Überwachung 500–2.000 €. Lohnt sich nur für Daten im Wert von Millionen.'] },
         eu: { title: 'EU / DSGVO / BDSG / AI-Gesetze', content: 'Europäische Datenschutzgesetze verlangen Kontrolle über sensible Daten und ihre Verarbeitung.', numberedItems: ['**DSGVO Artikel 32 (Sicherheit):** „Geeignete technische und organisatorische Maßnahmen" → Lokale Inferenz erfüllt dies besser als Cloud (Sie, nicht Anbieter, tragen Risiko).', '**DSGVO Artikel 35 (DPIA):** Für hochriskante Verarbeitung (Gesundheit, Finanzielle) ist eine Datenschutz-Folgenabschätzung erforderlich. Lokale Deployment reduziert Risiken, vereinfacht DPIA.', '**BDSG (Deutschland):** § 31 BDSG erfordert Verschlüsselung sensibler Daten. § 67 verlangt Benachrichtigung bei Datenpannen innerhalb von 72 Stunden.', '**EU AI-Gesetze (Mai 2024):** High-Risk-AI-Systeme (sensible Personendaten) erfordern: Transparenzdokumentation, Menschliches Overshight, Audit-Logs. Lokale Systeme unterstützen diese.', '**Grenzüberschreitung:** DSGVO Artikel 44-49 verbieten Datentransfers außerhalb des EWR ohne Vereinbarung. Lokale Speicherung = automatisch konform.', '**Verantwortlicher vs. Auftragsverarbeiter:** Wenn Sie lokales LLM betreiben, sind Sie der Datenverantwortliche (Sie tragen Verantwortung); Open-Source-Modelle haben keine separaten AV (Auftragsverarbeitungsverträge).'] },
         models: { title: 'Empfohlene Modelle und Hardware-Größenbestimmung', columns: ['Anwendungsfall', 'Empfohlenes Modell', 'Min. VRAM', 'Kosten-Überschlag'], rows: [{ 'Anwendungsfall': 'Dokumentprüfung / Rechtsanalyse', 'Empfohlenes Modell': 'Llama 3.3 8B oder Mistral 8B', 'Min. VRAM': '8 GB', 'Kosten-Überschlag': '2.500 € (RTX 4070, Ollama)' }, { 'Anwendungsfall': 'Krankenakten / Patientendaten (HIPAA)', 'Empfohlenes Modell': 'Llama 3.3 70B oder Qwen3 72B', 'Min. VRAM': '48 GB', 'Kosten-Überschlag': '6.500 € (RTX 6000 Ada)' }, { 'Anwendungsfall': 'Finanzanalyse / PCI-DSS', 'Empfohlenes Modell': 'Mistral Medium oder Llama 3.3 70B', 'Min. VRAM': '32–48 GB', 'Kosten-Überschlag': '5.500 € (RTX 5880 oder A6000)' }, { 'Anwendungsfall': 'KMU / Multi-Use', 'Empfohlenes Modell': 'Ollama + Llama 3.3 8B', 'Min. VRAM': '<8 GB', 'Kosten-Überschlag': '1.500–3.000 € (gebrauchter GPU oder Mac Studio M2)' }] },
         comparison: { title: 'Lokales LLM vs. Cloud-API: Vergleich', columns: ['Faktor', 'Lokales LLM', 'Cloud-API (GPT, Claude)'], rows: [{ 'Faktor': 'Datenspeicherort', 'Lokales LLM': 'Auf Ihrem Server', 'Cloud-API (GPT, Claude)': 'Anbieter-Rechenzentrum (USA/EU)' }, { 'Faktor': 'DSGVO-Konformität', 'Lokales LLM': '✓ Volle Kontrolle', 'Cloud-API (GPT, Claude)': '⚠ Erfordert DPA, Auftragsverarbeiter-Vereinbarung' }, { 'Faktor': 'Kosten-Struktur', 'Lokales LLM': '5.000 € kapital, dann null laufend', 'Cloud-API (GPT, Claude)': '$15–100/Monat pro Benutzer' }, { 'Faktor': 'Latenz', 'Lokales LLM': 'Abhängig von GPU (1–10s für 70B)', 'Cloud-API (GPT, Claude)': '2–5s (API-Anruf + Netzwerk)' }] },
@@ -1707,6 +1735,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'why': {
+          image: '/images/private-local-llm-sensitive-data-cloud-vs-local-dataflow-ko.svg',
+          imageCaption: '클라우드 API와 로컬 LLM의 데이터 흐름 비교: 클라우드는 벤더 서버로 데이터를 전송하고(침해 책임 $5만-500만+), 로컬 LLM은 기기 내에 데이터를 유지하여 유출 제로, 책임 $0입니다.',
           title: '컴플라이언스를 위한 로컬 LLM의 필요성',
           content: [
             '**클라우드 API(ChatGPT, Claude, Gemini)는 규제 데이터와 함께 사용할 수 없습니다:**',
@@ -1748,6 +1778,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         'airgap': {
+          image: '/images/private-local-llm-sensitive-data-airgap-5step-flow-ko.svg',
+          imageCaption: '에어갭 배포의 5단계 데이터 흐름: 물리적 격리, USB를 통한 모델 로딩, 암호화된 USB를 통한 데이터 입력, Ollama 또는 vLLM을 이용한 오프라인 추론, 암호화된 USB를 통한 데이터 출력.',
           title: '에어갭 배포',
           content: '가장 안전한 옵션: 기기가 네트워크에 전혀 연결되지 않습니다(페러데이 케이지 수준의 격리).',
           numberedItems: [
