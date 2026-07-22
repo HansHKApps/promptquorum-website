@@ -61,6 +61,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Quantization': 'Q2 (2-bit)', 'Size': '17.5 GB', 'Fits 24GB?': 'Yes' },
           ],
           columns: ['Quantization', 'Model Size', 'Fits 24GB?'],
+          image: '/images/run-70b-models-24gb-vram-quantization-fit-en.svg',
+          imageCaption: 'Llama 3.3 70B VRAM size by quantization vs. the 24 GB limit: FP16 140 GB, Q8 70 GB, Q5 43.75 GB, and Q4 35 GB all exceed 24 GB; Q3 26 GB needs 2 GB offload; only Q2 at 17.5 GB fits fully.',
         },
         quantization: {
           id: 'quantization',
@@ -104,6 +106,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Quantization': 'Q4 + offload (24GB)', 'Speed': '1-3 tok/sec', 'Latency': '5-10 sec per token', 'Use Case': 'Overnight batch only' },
           ],
           columns: ['Quantization', 'Speed', 'Latency', 'Use Case'],
+          image: '/images/run-70b-models-24gb-vram-speed-comparison-en.svg',
+          imageCaption: 'Inference speed comparison: a 13B model at Q5 runs 80–100 tok/s, while 70B on 24 GB VRAM manages only 5–8 tok/s at Q2, 3–5 tok/s at Q3, and 1–3 tok/s at Q4 with offloading.',
         },
         alternatives: {
           id: 'alternatives',
@@ -277,6 +281,8 @@ schema: {
             { 'Quantisierung': 'Q2 (2-Bit)', 'Größe': '17,5 GB', 'Passt in 24GB?': 'Ja' },
           ],
           columns: ['Quantisierung', 'Modellgröße', 'Passt in 24GB?'],
+          image: '/images/run-70b-models-24gb-vram-quantization-fit-en.svg',
+          imageCaption: 'Llama 3.3 70B VRAM-Größe nach Quantisierung im Vergleich zum 24-GB-Limit: FP16 140 GB, Q8 70 GB, Q5 43,75 GB und Q4 35 GB übersteigen alle 24 GB; Q3 26 GB benötigt 2 GB Offloading; nur Q2 mit 17,5 GB passt vollständig.',
         },
         quantization: {
           id: 'quantization',
@@ -320,6 +326,8 @@ schema: {
             { 'Quantisierung': 'Q4 + Offload (24GB)', 'Geschwindigkeit': '1-3 Token/Sek.', 'Latenz': '5-10 Sek. pro Token', 'Anwendungsfall': 'Nur Overnight-Batch' },
           ],
           columns: ['Quantisierung', 'Geschwindigkeit', 'Latenz', 'Anwendungsfall'],
+          image: '/images/run-70b-models-24gb-vram-speed-comparison-en.svg',
+          imageCaption: 'Vergleich der Inferenzgeschwindigkeit: Ein 13B-Modell bei Q5 läuft mit 80-100 Token/Sek., während 70B auf 24 GB VRAM nur 5-8 Token/Sek. bei Q2, 3-5 Token/Sek. bei Q3 und 1-3 Token/Sek. bei Q4 mit Offloading erreicht.',
         },
         alternatives: {
           id: 'alternatives',
@@ -489,6 +497,8 @@ schema: {
             { 'Quantification': 'Q2 (2-bit)', 'Taille': '17.5 Go', 'Convient en 24 Go?': 'Oui' },
           ],
           columns: ['Quantification', 'Taille du modèle', 'Convient en 24 Go?'],
+          image: '/images/run-70b-models-24gb-vram-quantization-fit-en.svg',
+          imageCaption: 'Taille VRAM de Llama 3.3 70B par quantification face à la limite de 24 Go : FP16 140 Go, Q8 70 Go, Q5 43,75 Go et Q4 35 Go dépassent tous 24 Go ; Q3 26 Go nécessite 2 Go de déchargement ; seul Q2 à 17,5 Go convient entièrement.',
         },
         quantization: {
           id: 'quantization',
@@ -532,6 +542,8 @@ schema: {
             { 'Quantification': 'Q4 + déchargement (24 Go)', 'Vitesse': '1-3 tok/sec', 'Latence': '5-10 sec par token', 'Cas d\'usage': 'Uniquement batch nocturne' },
           ],
           columns: ['Quantification', 'Vitesse', 'Latence', 'Cas d\'usage'],
+          image: '/images/run-70b-models-24gb-vram-speed-comparison-en.svg',
+          imageCaption: 'Comparaison de la vitesse d\'inférence : un modèle 13B en Q5 atteint 80-100 tokens/sec, tandis qu\'un 70B sur 24 Go de VRAM ne gère que 5-8 tokens/sec en Q2, 3-5 tokens/sec en Q3 et 1-3 tokens/sec en Q4 avec déchargement.',
         },
         alternatives: {
           id: 'alternatives',
@@ -701,6 +713,8 @@ schema: {
             { '量子化': 'Q2（2ビット）', 'サイズ': '17.5GB', '24GBに適合？': 'はい' },
           ],
           columns: ['量子化', 'モデルサイズ', '24GBに適合？'],
+          image: '/images/run-70b-models-24gb-vram-quantization-fit-en.svg',
+          imageCaption: '量子化レベル別のLlama 3.3 70B VRAMサイズと24GB制限の比較：FP16（140GB）、Q8（70GB）、Q5（43.75GB）、Q4（35GB）はすべて24GBを超過。Q3（26GB）は2GBのオフロードが必要、Q2（17.5GB）のみ完全に収まる。',
         },
         quantization: {
           id: 'quantization',
@@ -744,6 +758,8 @@ schema: {
             { '量子化': 'Q4 + オフロード（24GB）', '速度': '1-3 tok/秒', 'レイテンシ': 'トークンあたり5-10秒', 'ユースケース': '深夜バッチのみ' },
           ],
           columns: ['量子化', '速度', 'レイテンシ', 'ユースケース'],
+          image: '/images/run-70b-models-24gb-vram-speed-comparison-en.svg',
+          imageCaption: '推論速度の比較：Q5の13Bモデルは80-100 tokens/秒で実行される一方、24GB VRAM上の70BはQ2で5-8 tokens/秒、Q3で3-5 tokens/秒、オフロード付きQ4で1-3 tokens/秒にとどまる。',
         },
         alternatives: {
           id: 'alternatives',
@@ -922,6 +938,8 @@ schema: {
             { '量化': 'Q2（2位）', '大小': '17.5GB', '适合24GB？': '是' },
           ],
           columns: ['量化', '模型大小', '适合24GB？'],
+          image: '/images/run-70b-models-24gb-vram-quantization-fit-en.svg',
+          imageCaption: '按量化级别划分的Llama 3.3 70B VRAM大小与24GB限制对比：FP16（140GB）、Q8（70GB）、Q5（43.75GB）、Q4（35GB）均超过24GB；Q3（26GB）需要2GB卸载；仅Q2（17.5GB）完全适合。',
         },
         quantization: {
           id: 'quantization',
@@ -965,6 +983,8 @@ schema: {
             { '量化': 'Q4 + 卸载（24GB）', '速度': '1-3 tok/秒', '延迟': '每token 5-10秒', '用例': '仅深夜批处理' },
           ],
           columns: ['量化', '速度', '延迟', '用例'],
+          image: '/images/run-70b-models-24gb-vram-speed-comparison-en.svg',
+          imageCaption: '推理速度对比：Q5的13B模型以80-100 tokens/秒运行，而24GB VRAM上的70B模型在Q2时仅为5-8 tokens/秒，Q3为3-5 tokens/秒，带卸载的Q4为1-3 tokens/秒。',
         },
         alternatives: {
           id: 'alternatives',
@@ -1143,6 +1163,8 @@ schema: {
             { 'Cuantización': 'Q2 (2 bits)', 'Tamaño': '17,5 GB', '¿Cabe en 24 GB?': 'Sí' },
           ],
           columns: ['Cuantización', 'Tamaño del modelo', '¿Cabe en 24 GB?'],
+          image: '/images/run-70b-models-24gb-vram-quantization-fit-en.svg',
+          imageCaption: 'Tamaño de VRAM de Llama 3.3 70B por cuantización frente al límite de 24 GB: FP16 140 GB, Q8 70 GB, Q5 43,75 GB y Q4 35 GB superan los 24 GB; Q3 26 GB necesita 2 GB de offloading; solo Q2 con 17,5 GB cabe completamente.',
         },
         quantization: {
           id: 'quantization',
@@ -1186,6 +1208,8 @@ schema: {
             { 'Cuantización': 'Q4 + offload (24 GB)', 'Velocidad': '1-3 tok/seg', 'Latencia': '5-10 seg por token', 'Caso de uso': 'Solo lotes nocturnos' },
           ],
           columns: ['Cuantización', 'Velocidad', 'Latencia', 'Caso de uso'],
+          image: '/images/run-70b-models-24gb-vram-speed-comparison-en.svg',
+          imageCaption: 'Comparación de velocidad de inferencia: un modelo 13B en Q5 alcanza 80-100 tokens/seg, mientras que un 70B en 24 GB de VRAM solo logra 5-8 tokens/seg en Q2, 3-5 tokens/seg en Q3 y 1-3 tokens/seg en Q4 con offloading.',
         },
         alternatives: {
           id: 'alternatives',
@@ -1376,6 +1400,8 @@ schema: {
             { 'Cuantización': 'Q2 (2 بت)', 'Tamaño': '17.5 GB', '¿Cabe en 24 GB?': 'نعم' },
           ],
           columns: ['Cuantización', 'Tamaño del modelo', '¿Cabe en 24 GB?'],
+          image: '/images/run-70b-models-24gb-vram-quantization-fit-en.svg',
+          imageCaption: 'حجم VRAM لنموذج Llama 3.3 70B حسب التكميم مقابل حد 24 GB: FP16 (140 GB)، Q8 (70 GB)، Q5 (43.75 GB) وQ4 (35 GB) جميعها تتجاوز 24 GB؛ Q3 (26 GB) يحتاج تفريغ 2 GB؛ فقط Q2 بحجم 17.5 GB يتسع بالكامل.',
         },
         quantization: {
           id: 'quantization',
@@ -1419,6 +1445,8 @@ schema: {
             { 'Cuantización': 'Q4 + تفريغ (24 GB)', 'Velocidad': '1-3 token/ثانية', 'Latencia': '5-10 ثوانٍ لكل token', 'Caso de uso': 'دُفعات ليلية فقط' },
           ],
           columns: ['Cuantización', 'Velocidad', 'Latencia', 'Caso de uso'],
+          image: '/images/run-70b-models-24gb-vram-speed-comparison-en.svg',
+          imageCaption: 'مقارنة سرعة الاستدلال: نموذج 13B بتكميم Q5 يعمل بـ 80-100 token/ثانية، بينما يصل 70B على 24 GB من VRAM إلى 5-8 token/ثانية فقط بتكميم Q2، وـ 3-5 بتكميم Q3، وـ 1-3 بتكميم Q4 مع التفريغ.',
         },
         alternatives: {
           id: 'alternatives',
@@ -1608,6 +1636,8 @@ schema: {
             { 'Quantização': 'Q2 (2 bits)', 'Tamanho': '17,5 GB', 'Cabe em 24 GB?': 'Sim' },
           ],
           columns: ['Quantização', 'Tamanho do modelo', 'Cabe em 24 GB?'],
+          image: '/images/run-70b-models-24gb-vram-quantization-fit-en.svg',
+          imageCaption: 'Tamanho de VRAM do Llama 3.3 70B por quantização em relação ao limite de 24 GB: FP16 140 GB, Q8 70 GB, Q5 43,75 GB e Q4 35 GB excedem 24 GB; Q3 26 GB precisa de 2 GB de offloading; apenas Q2 com 17,5 GB cabe totalmente.',
         },
         quantization: {
           id: 'quantization',
@@ -1651,6 +1681,8 @@ schema: {
             { 'Quantização': 'Q4 + offload (24 GB)', 'Velocidade': '1-3 tok/seg', 'Latência': '5-10 seg por token', 'Caso de uso': 'Apenas lotes noturnos' },
           ],
           columns: ['Quantização', 'Velocidade', 'Latência', 'Caso de uso'],
+          image: '/images/run-70b-models-24gb-vram-speed-comparison-en.svg',
+          imageCaption: 'Comparação de velocidade de inferência: um modelo 13B em Q5 atinge 80-100 tokens/seg, enquanto um 70B em 24 GB de VRAM alcança apenas 5-8 tokens/seg em Q2, 3-5 tokens/seg em Q3 e 1-3 tokens/seg em Q4 com offloading.',
         },
         alternatives: {
           id: 'alternatives',
@@ -1801,6 +1833,8 @@ schema: {
             { 'Quantization': 'Q2 (2비트)', 'Size': '17.5 GB', 'Fits 24GB?': '가능' },
           ],
           columns: ['Quantization', 'Model Size', 'Fits 24GB?'],
+          image: '/images/run-70b-models-24gb-vram-quantization-fit-en.svg',
+          imageCaption: 'Llama 3.3 70B 양자화별 VRAM 크기와 24GB 한계 비교: FP16(140GB), Q8(70GB), Q5(43.75GB), Q4(35GB)는 모두 24GB를 초과합니다. Q3(26GB)는 2GB 오프로딩이 필요하며, Q2(17.5GB)만 완전히 들어갑니다.',
         },
         quantization: {
           id: 'quantization',
@@ -1844,6 +1878,8 @@ schema: {
             { 'Quantization': 'Q4 + 오프로드 (24GB)', 'Speed': '1-3 tok/초', 'Latency': '토큰당 5-10초', 'Use Case': '야간 배치 전용' },
           ],
           columns: ['Quantization', 'Speed', 'Latency', 'Use Case'],
+          image: '/images/run-70b-models-24gb-vram-speed-comparison-en.svg',
+          imageCaption: '추론 속도 비교: Q5의 13B 모델은 80-100 토큰/초로 실행되지만, 24GB VRAM에서의 70B는 Q2에서 5-8 토큰/초, Q3에서 3-5 토큰/초, 오프로드하는 Q4에서 1-3 토큰/초에 그칩니다.',
         },
         alternatives: {
           id: 'alternatives',
