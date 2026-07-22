@@ -78,6 +78,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'The Fully-Local Voice Stack',
         content:
           '**A local voice assistant is four roles on your own hardware: capture and transcribe (Whisper), understand (Assist intents or a local LLM), respond (Piper), and trigger (wake word).** Each runs offline; the Wyoming protocol wires them together.',
+        image: '/images/local-voice-assistant-smart-home-architecture-en.svg',
+        imageCaption: 'The local voice assistant architecture: wake word triggers Whisper (speech-to-text), Assist routes the request through an optional local LLM, and Piper (text-to-speech) speaks the reply — all connected over the Wyoming protocol on your own hardware.',
         columns: ['Component', 'Role', 'Local?', 'Notes'],
         rows: [
           { 'Component': 'Assist', 'Role': 'Pipeline + intent', 'Local?': 'Yes', 'Notes': 'Built into Home Assistant' },
@@ -125,6 +127,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'The Wyoming Protocol',
         content:
           '**Wyoming is the protocol Home Assistant uses to connect Assist to local voice services like Whisper and Piper.** It lets the speech services run as separate add-ons or on separate machines.',
+        image: '/images/local-voice-assistant-smart-home-setup-steps-en.svg',
+        imageCaption: 'Six steps to a local voice setup: enable Assist, add Whisper, add Piper, connect via Wyoming, and add a wake word for a working intent-only assistant offline; an optional sixth step adds a local LLM as the conversation agent.',
         items: [
           'Each service (Whisper, Piper, wake word) runs as a Wyoming endpoint.',
           'Assist discovers and uses them through the Wyoming integration.',
@@ -283,6 +287,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'البنية الصوتية المحلية الكاملة',
         content:
           '**المساعد الصوتي المحلي أربعة أدوار على أجهزتك الخاصة: الالتقاط والنسخ (Whisper)، والفهم (نوايا Assist أو نموذج لغوي محلي)، والاستجابة (Piper)، والتشغيل (كلمة التنبيه).** كل واحدة تعمل دون إنترنت؛ بروتوكول Wyoming يوصلها معًا.',
+        image: '/images/local-voice-assistant-smart-home-architecture-en.svg',
+        imageCaption: 'بنية المساعد الصوتي المحلي: كلمة التنبيه تُفعِّل Whisper (كلام إلى نص)، ويوجِّه Assist الطلب عبر نموذج لغوي محلي اختياري، ثم ينطق Piper (نص إلى كلام) الرد — كل ذلك عبر بروتوكول Wyoming على أجهزتك الخاصة.',
         columns: ['المكوّن', 'الدور', 'محلي؟', 'ملاحظات'],
         rows: [
           { 'المكوّن': 'Assist', 'الدور': 'خط أنابيب + النوايا', 'محلي؟': 'نعم', 'ملاحظات': 'مدمج في Home Assistant' },
@@ -330,6 +336,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'بروتوكول Wyoming',
         content:
           '**Wyoming هو البروتوكول الذي يستخدمه Home Assistant لربط Assist بخدمات الصوت المحلية مثل Whisper وPiper.** يتيح تشغيل خدمات الكلام كإضافات منفصلة أو على أجهزة منفصلة.',
+        image: '/images/local-voice-assistant-smart-home-setup-steps-en.svg',
+        imageCaption: 'ست خطوات لإعداد صوتي محلي: فعِّل Assist، وأضف Whisper، وأضف Piper، واربط عبر Wyoming، وأضف كلمة تنبيه للحصول على مساعد قائم على النوايا يعمل دون إنترنت؛ الخطوة السادسة الاختيارية تضيف نموذجًا لغويًا محليًا كعميل محادثة.',
         items: [
           'كل خدمة (Whisper، Piper، كلمة التنبيه) تعمل كنقطة نهاية Wyoming.',
           'يكتشفها Assist ويستخدمها عبر تكامل Wyoming.',
@@ -488,6 +496,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Der vollständig lokale Sprach-Stack',
         content:
           '**Ein lokaler Sprachassistent sind vier Rollen auf Ihrer eigenen Hardware: erfassen und transkribieren (Whisper), verstehen (Assist-Intents oder ein lokales LLM), antworten (Piper) und auslösen (Aktivierungswort).** Jede läuft offline; das Wyoming-Protokoll verdrahtet sie.',
+        image: '/images/local-voice-assistant-smart-home-architecture-en.svg',
+        imageCaption: 'Die Architektur des lokalen Sprachassistenten: Das Aktivierungswort löst Whisper (Sprache-zu-Text) aus, Assist leitet die Anfrage über ein optionales lokales LLM, und Piper (Text-zu-Sprache) spricht die Antwort – alles über das Wyoming-Protokoll auf Ihrer eigenen Hardware verbunden.',
         columns: ['Komponente', 'Rolle', 'Lokal?', 'Hinweise'],
         rows: [
           { 'Komponente': 'Assist', 'Rolle': 'Pipeline + Intent', 'Lokal?': 'Ja', 'Hinweise': 'In Home Assistant eingebaut' },
@@ -535,6 +545,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Das Wyoming-Protokoll',
         content:
           '**Wyoming ist das Protokoll, das Home Assistant nutzt, um Assist mit lokalen Sprachdiensten wie Whisper und Piper zu verbinden.** Es lässt die Sprachdienste als separate Add-ons oder auf separaten Maschinen laufen.',
+        image: '/images/local-voice-assistant-smart-home-setup-steps-en.svg',
+        imageCaption: 'Sechs Schritte zu einer lokalen Sprach-Einrichtung: Assist aktivieren, Whisper hinzufügen, Piper hinzufügen, über Wyoming verbinden und ein Aktivierungswort hinzufügen für einen offline funktionierenden Intent-Only-Assistenten; ein optionaler sechster Schritt fügt ein lokales LLM als Konversations-Agenten hinzu.',
         items: [
           'Jeder Dienst (Whisper, Piper, Aktivierungswort) läuft als Wyoming-Endpunkt.',
           'Assist erkennt und nutzt sie über die Wyoming-Integration.',
@@ -693,6 +705,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'El stack de voz totalmente local',
         content:
           '**Un asistente de voz local son cuatro roles en tu propio hardware: capturar y transcribir (Whisper), entender (intenciones de Assist o un LLM local), responder (Piper) y disparar (palabra de activación).** Cada uno corre offline; el protocolo Wyoming los enlaza.',
+        image: '/images/local-voice-assistant-smart-home-architecture-en.svg',
+        imageCaption: 'La arquitectura del asistente de voz local: la palabra de activación dispara Whisper (voz a texto), Assist enruta la solicitud a través de un LLM local opcional, y Piper (texto a voz) pronuncia la respuesta, todo conectado sobre el protocolo Wyoming en tu propio hardware.',
         columns: ['Componente', 'Rol', '¿Local?', 'Notas'],
         rows: [
           { 'Componente': 'Assist', 'Rol': 'Pipeline + intención', '¿Local?': 'Sí', 'Notas': 'Incorporado en Home Assistant' },
@@ -740,6 +754,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'El protocolo Wyoming',
         content:
           '**Wyoming es el protocolo que Home Assistant usa para conectar Assist con servicios de voz locales como Whisper y Piper.** Permite que los servicios de voz corran como add-ons separados o en máquinas separadas.',
+        image: '/images/local-voice-assistant-smart-home-setup-steps-en.svg',
+        imageCaption: 'Seis pasos para una configuración de voz local: activa Assist, añade Whisper, añade Piper, conecta vía Wyoming y añade una palabra de activación para un asistente basado en intenciones que funciona offline; un sexto paso opcional añade un LLM local como agente de conversación.',
         items: [
           'Cada servicio (Whisper, Piper, palabra de activación) corre como un endpoint Wyoming.',
           'Assist los descubre y usa mediante la integración Wyoming.',
@@ -898,6 +914,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '완전 로컬 음성 스택',
         content:
           '**로컬 음성 어시스턴트는 직접 소유한 하드웨어에서 네 가지 역할을 수행합니다. 캡처 및 변환(Whisper), 이해(Assist 의도 또는 로컬 LLM), 응답(Piper), 트리거(웨이크 워드)입니다.** 각각은 오프라인으로 실행되며 Wyoming 프로토콜이 이들을 연결합니다.',
+        image: '/images/local-voice-assistant-smart-home-architecture-en.svg',
+        imageCaption: '로컬 음성 어시스턴트 아키텍처: 웨이크 워드가 Whisper(음성-텍스트 변환)를 트리거하고, Assist가 선택적 로컬 LLM을 거쳐 요청을 라우팅하며, Piper(텍스트-음성 변환)가 응답을 말합니다 — 이 모든 과정이 직접 소유한 하드웨어에서 Wyoming 프로토콜로 연결됩니다.',
         columns: ['구성 요소', '역할', '로컬?', '비고'],
         rows: [
           { '구성 요소': 'Assist', '역할': '파이프라인 + 의도', '로컬?': '예', '비고': 'Home Assistant에 내장됨' },
@@ -945,6 +963,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wyoming 프로토콜',
         content:
           '**Wyoming는 Home Assistant가 Assist를 Whisper 및 Piper와 같은 로컬 음성 서비스에 연결하는 데 사용하는 프로토콜입니다.** 음성 서비스가 별도 애드온 또는 별도 기기에서 실행될 수 있게 합니다.',
+        image: '/images/local-voice-assistant-smart-home-setup-steps-en.svg',
+        imageCaption: '로컬 음성 설정을 위한 6단계: Assist 활성화, Whisper 추가, Piper 추가, Wyoming으로 연결, 오프라인에서 작동하는 의도 기반 어시스턴트를 위한 웨이크 워드 추가 — 선택적인 6번째 단계는 로컬 LLM을 대화 에이전트로 추가합니다.',
         items: [
           '각 서비스(Whisper, Piper, 웨이크 워드)는 Wyoming 엔드포인트로 실행됩니다.',
           'Assist는 Wyoming 통합을 통해 이들을 감지하고 사용합니다.',
@@ -1103,6 +1123,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'La pile vocale entièrement locale',
         content:
           '**Un assistant vocal local, ce sont quatre rôles sur votre propre matériel : capturer et transcrire (Whisper), comprendre (intentions Assist ou un LLM local), répondre (Piper) et déclencher (mot d\'activation).** Chacun tourne hors ligne ; le protocole Wyoming les relie.',
+        image: '/images/local-voice-assistant-smart-home-architecture-en.svg',
+        imageCaption: 'L\'architecture de l\'assistant vocal local : le mot d\'activation déclenche Whisper (reconnaissance vocale), Assist route la demande via un LLM local optionnel, et Piper (synthèse vocale) prononce la réponse — le tout relié par le protocole Wyoming sur votre propre matériel.',
         columns: ['Composant', 'Rôle', 'Local ?', 'Notes'],
         rows: [
           { 'Composant': 'Assist', 'Rôle': 'Pipeline + intention', 'Local ?': 'Oui', 'Notes': 'Intégré à Home Assistant' },
@@ -1150,6 +1172,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Le protocole Wyoming',
         content:
           '**Wyoming est le protocole que Home Assistant utilise pour relier Assist aux services vocaux locaux comme Whisper et Piper.** Il permet aux services vocaux de tourner comme add-ons séparés ou sur des machines séparées.',
+        image: '/images/local-voice-assistant-smart-home-setup-steps-en.svg',
+        imageCaption: 'Six étapes pour une installation vocale locale : activer Assist, ajouter Whisper, ajouter Piper, connecter via Wyoming et ajouter un mot d\'activation pour un assistant à intentions fonctionnant hors ligne ; une sixième étape optionnelle ajoute un LLM local comme agent conversationnel.',
         items: [
           'Chaque service (Whisper, Piper, mot d\'activation) tourne comme un point d\'accès Wyoming.',
           'Assist les découvre et les utilise via l\'intégration Wyoming.',
@@ -1308,6 +1332,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '完全ローカルな音声スタック',
         content:
           '**ローカル音声アシスタントは、自分のハードウェア上の四つの役割です：取り込んで文字起こし（Whisper）、理解（Assist のインテントまたはローカル LLM）、応答（Piper）、起動（ウェイクワード）。** いずれもオフラインで動き、Wyoming プロトコルがそれらを配線します。',
+        image: '/images/local-voice-assistant-smart-home-architecture-en.svg',
+        imageCaption: 'ローカル音声アシスタントのアーキテクチャ：ウェイクワードが Whisper（音声からテキスト）を起動し、Assist がオプションのローカル LLM を経由してリクエストをルーティングし、Piper（テキストから音声）が応答を発話します — すべて自分のハードウェア上で Wyoming プロトコルにより接続されます。',
         columns: ['コンポーネント', '役割', 'ローカル？', '備考'],
         rows: [
           { 'コンポーネント': 'Assist', '役割': 'パイプライン＋インテント', 'ローカル？': 'はい', '備考': 'Home Assistant に内蔵' },
@@ -1355,6 +1381,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wyoming プロトコル',
         content:
           '**Wyoming は、Home Assistant が Assist を Whisper や Piper のようなローカル音声サービスにつなぐために使うプロトコルです。** 音声サービスを別々のアドオンや別マシンで動かせます。',
+        image: '/images/local-voice-assistant-smart-home-setup-steps-en.svg',
+        imageCaption: 'ローカル音声セットアップの6ステップ：Assist を有効化、Whisper を追加、Piper を追加、Wyoming で接続し、オフラインで動くインテントのみのアシスタントのためにウェイクワードを追加します。オプションの6番目のステップでは、ローカル LLM を会話エージェントとして追加します。',
         items: [
           '各サービス（Whisper、Piper、ウェイクワード）は Wyoming エンドポイントとして動きます。',
           'Assist は Wyoming 統合を通じてそれらを検出し利用します。',
@@ -1513,6 +1541,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O stack de voz totalmente local',
         content:
           '**Um assistente de voz local são quatro papéis no seu próprio hardware: capturar e transcrever (Whisper), entender (intenções do Assist ou um LLM local), responder (Piper) e disparar (palavra de ativação).** Cada um roda offline; o protocolo Wyoming os liga.',
+        image: '/images/local-voice-assistant-smart-home-architecture-en.svg',
+        imageCaption: 'A arquitetura do assistente de voz local: a palavra de ativação dispara o Whisper (voz para texto), o Assist roteia a solicitação por um LLM local opcional, e o Piper (texto para voz) fala a resposta — tudo conectado pelo protocolo Wyoming no seu próprio hardware.',
         columns: ['Componente', 'Papel', 'Local?', 'Notas'],
         rows: [
           { 'Componente': 'Assist', 'Papel': 'Pipeline + intenção', 'Local?': 'Sim', 'Notas': 'Embutido no Home Assistant' },
@@ -1560,6 +1590,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O protocolo Wyoming',
         content:
           '**O Wyoming é o protocolo que o Home Assistant usa para conectar o Assist a serviços de voz locais como Whisper e Piper.** Ele permite que os serviços de voz rodem como add-ons separados ou em máquinas separadas.',
+        image: '/images/local-voice-assistant-smart-home-setup-steps-en.svg',
+        imageCaption: 'Seis passos para uma configuração de voz local: ative o Assist, adicione o Whisper, adicione o Piper, conecte via Wyoming e adicione uma palavra de ativação para um assistente baseado em intenções que funciona offline; um sexto passo opcional adiciona um LLM local como agente de conversação.',
         items: [
           'Cada serviço (Whisper, Piper, palavra de ativação) roda como um endpoint Wyoming.',
           'O Assist os descobre e usa por meio da integração Wyoming.',
@@ -1718,6 +1750,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '完全本地的语音堆栈',
         content:
           '**一个本地语音助手就是你自己硬件上的四个角色：采集并转写（Whisper）、理解（Assist 意图或本地 LLM）、回应（Piper）、触发（唤醒词）。** 每一个都离线运行；Wyoming 协议把它们连起来。',
+        image: '/images/local-voice-assistant-smart-home-architecture-en.svg',
+        imageCaption: '本地语音助手的架构：唤醒词触发 Whisper（语音转文本），Assist 将请求通过可选的本地 LLM 路由，Piper（文本转语音）说出回应——全部通过 Wyoming 协议在你自己的硬件上连接。',
         columns: ['组件', '角色', '本地？', '备注'],
         rows: [
           { '组件': 'Assist', '角色': '流水线 + 意图', '本地？': '是', '备注': '内置于 Home Assistant' },
@@ -1765,6 +1799,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wyoming 协议',
         content:
           '**Wyoming 是 Home Assistant 用来把 Assist 与 Whisper、Piper 等本地语音服务连接起来的协议。** 它让语音服务能作为独立的加载项或在独立的机器上运行。',
+        image: '/images/local-voice-assistant-smart-home-setup-steps-en.svg',
+        imageCaption: '本地语音配置的六个步骤：启用 Assist、添加 Whisper、添加 Piper、通过 Wyoming 连接、添加唤醒词，即可获得离线运行的纯意图助手；可选的第六步是添加本地 LLM 作为对话代理。',
         items: [
           '每个服务（Whisper、Piper、唤醒词）都作为一个 Wyoming 端点运行。',
           'Assist 通过 Wyoming 集成发现并使用它们。',
