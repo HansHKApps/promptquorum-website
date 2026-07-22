@@ -174,6 +174,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Replacing Notion AI: Document Drafting and Notes',
         content:
           '**Obsidian with a local Ollama backend is the closest functional equivalent to Notion AI for note-takers and knowledge workers.** It does not replicate the Notion database structure, but for document drafting and AI Q&A over your notes, the capability is equivalent — with all processing local.',
+        image: '/images/replace-grammarly-notion-ai-with-local-notion-ai-setup-flow-en.svg',
+        imageCaption: 'Notion AI replacement setup in Obsidian: install Ollama and pull Qwen3 14B, install Obsidian, add the Copilot plugin pointed at localhost:11434, add Smart Connections for full-vault Q&A, then draft documents and query notes entirely locally.',
         items: [
           '**Install Obsidian** from obsidian.md. Free for personal use. Create a vault for your notes — this is the directory that the AI plugins will index.',
           '**Install the Copilot plugin** (Community Plugins → search "Copilot"). In plugin settings, select "Ollama" as the LLM provider, enter `http://localhost:11434` as the base URL, and select your model. Copilot adds a chat sidebar to Obsidian where you can ask questions and generate content in context of the current note.',
@@ -243,6 +245,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacy Comparison',
         content:
           '**The privacy difference between cloud writing assistants and local LLMs is structural.** Cloud services cannot process your text without receiving it; local LLMs cannot send your text anywhere without an explicit outbound connection.',
+        image: '/images/replace-grammarly-notion-ai-with-local-cost-privacy-overview-en.svg',
+        imageCaption: 'Cloud writing tools versus local LLM: Grammarly and Notion AI run as 2 separate paid subscriptions and send text to cloud servers, while Ollama and Obsidian keep all writing and notes on-device with zero recurring software cost.',
         items: [
           '**Grammarly data licence:** Grammarly\'s Terms of Service (Section 5) grant them "a worldwide, non-exclusive, royalty-free licence [...] to use, reproduce, modify, adapt, publish, translate, distribute" submitted text for product improvement and safety. This is not hidden, but it means every sentence you correct in Grammarly is potentially in their training pipeline.',
           '**Notion AI data flow:** Notion sends document content to OpenAI\'s API for AI features. Covered by Notion\'s Data Processing Addendum, which provides contractual protections — but the data still leaves Notion\'s servers and enters OpenAI\'s infrastructure.',
@@ -523,6 +527,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Reemplazar Notion AI: redacción de documentos y notas',
         content:
           '**Obsidian con un backend local de Ollama es el equivalente funcional más cercano a Notion AI para tomadores de notas y trabajadores del conocimiento.** No replica la estructura de base de datos de Notion, pero para la redacción de documentos y las preguntas y respuestas sobre tus notas con IA, la capacidad es equivalente — con todo el procesamiento local.',
+        image: '/images/replace-grammarly-notion-ai-with-local-notion-ai-setup-flow-en.svg',
+        imageCaption: 'Configuración del reemplazo de Notion AI en Obsidian: instala Ollama y descarga Qwen3 14B, instala Obsidian, añade el plugin Copilot apuntando a localhost:11434, añade Smart Connections para preguntas y respuestas sobre todo el vault, y luego redacta documentos y consulta tus notas completamente en local.',
         items: [
           '**Instala Obsidian** desde obsidian.md. Gratuito para uso personal. Crea un vault para tus notas — este es el directorio que los plugins de IA indexarán.',
           '**Instala el plugin Copilot** (Plugins de la comunidad → busca "Copilot"). En la configuración del plugin, selecciona "Ollama" como proveedor de LLM, introduce `http://localhost:11434` como URL base y selecciona tu modelo. Copilot añade una barra lateral de chat a Obsidian donde puedes hacer preguntas y generar contenido en el contexto de la nota actual.',
@@ -592,6 +598,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparativa de privacidad',
         content:
           '**La diferencia de privacidad entre asistentes de escritura en la nube y LLM locales es estructural.** Los servicios en la nube no pueden procesar tu texto sin recibirlo; los LLM locales no pueden enviar tu texto a ningún lugar sin una conexión saliente explícita.',
+        image: '/images/replace-grammarly-notion-ai-with-local-cost-privacy-overview-en.svg',
+        imageCaption: 'Herramientas de escritura en la nube frente a un LLM local: Grammarly y Notion AI funcionan como 2 suscripciones de pago independientes y envían el texto a servidores en la nube, mientras que Ollama y Obsidian mantienen toda la escritura y las notas en tu dispositivo sin coste de software recurrente.',
         items: [
           '**Licencia de datos de Grammarly:** Los Términos de Servicio de Grammarly (Sección 5) les otorgan "una licencia mundial, no exclusiva, libre de regalías [...] para usar, reproducir, modificar, adaptar, publicar, traducir, distribuir" el texto enviado para la mejora del producto y la seguridad. Esto no está oculto, pero significa que cada oración que corriges en Grammarly está potencialmente en su pipeline de entrenamiento.',
           '**Flujo de datos de Notion AI:** Notion envía el contenido de los documentos a la API de OpenAI para las funciones de IA. Cubierto por el Anexo de Procesamiento de Datos de Notion, que proporciona protecciones contractuales — pero los datos aún salen de los servidores de Notion y entran en la infraestructura de OpenAI.',
@@ -885,6 +893,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Substituir Notion AI: redação de documentos e anotações',
         content:
           '**Obsidian com um backend local do Ollama é o equivalente funcional mais próximo do Notion AI para tomadores de anotações e trabalhadores do conhecimento.**',
+        image: '/images/replace-grammarly-notion-ai-with-local-notion-ai-setup-flow-en.svg',
+        imageCaption: 'Configuração da substituição do Notion AI no Obsidian: instale o Ollama e baixe o Qwen3 14B, instale o Obsidian, adicione o plugin Copilot apontando para localhost:11434, adicione o Smart Connections para perguntas e respostas sobre todo o vault, e depois redija documentos e consulte suas anotações totalmente em local.',
         items: [
           '**Instale o Obsidian** em obsidian.md. Gratuito para uso pessoal. Crie um vault para suas anotações — este é o diretório que os plugins de IA vão indexar.',
           '**Instale o plugin Copilot** (Plugins da comunidade → busque "Copilot"). Nas configurações do plugin, selecione "Ollama" como provedor de LLM, insira `http://localhost:11434` como URL base e selecione seu modelo.',
@@ -954,6 +964,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparativo de privacidade',
         content:
           '**A diferença de privacidade entre assistentes de escrita na nuvem e LLMs locais é estrutural.**',
+        image: '/images/replace-grammarly-notion-ai-with-local-cost-privacy-overview-en.svg',
+        imageCaption: 'Ferramentas de escrita na nuvem versus LLM local: Grammarly e Notion AI funcionam como 2 assinaturas pagas separadas e enviam o texto para servidores na nuvem, enquanto Ollama e Obsidian mantêm toda a escrita e as anotações no dispositivo, sem custo recorrente de software.',
         items: [
           '**Licença de dados do Grammarly:** Os Termos de Serviço do Grammarly (Seção 5) concedem-lhe "uma licença mundial, não exclusiva, isenta de royalties [...] para usar, reproduzir, modificar, adaptar, publicar, traduzir, distribuir" o texto enviado para melhoria do produto e segurança.',
           '**Fluxo de dados do Notion AI:** O Notion envia o conteúdo dos documentos para a API do OpenAI para as funções de IA. Coberto pelo Adendo de Processamento de Dados do Notion.',
@@ -1247,6 +1259,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Notion AI ersetzen: Dokumente und Notizen',
         content:
           '**Obsidian mit lokalem Ollama-Backend ist das nächste funktionale Äquivalent zu Notion AI für Notiz- und Wissensarbeiter.** Die Notion-Datenbankstruktur lässt sich nicht 1:1 abbilden, aber für Dokumentenentwurf und KI-Q&A über Ihre Notizen ist die Funktionalität gleichwertig — bei vollständig lokaler Verarbeitung.',
+        image: '/images/replace-grammarly-notion-ai-with-local-notion-ai-setup-flow-en.svg',
+        imageCaption: 'Notion-AI-Ersatz-Setup in Obsidian: Ollama installieren und Qwen3 14B herunterladen, Obsidian installieren, das Copilot-Plugin hinzufügen und auf localhost:11434 zeigen, Smart Connections für Q&A über den gesamten Vault hinzufügen, dann Dokumente entwerfen und Notizen vollständig lokal abfragen.',
         items: [
           '**Obsidian installieren** von obsidian.md. Kostenlos für den privaten Gebrauch. Erstellen Sie einen Vault für Ihre Notizen — das ist das Verzeichnis, das die KI-Plugins indexieren.',
           '**Copilot-Plugin installieren** (Community-Plugins → "Copilot" suchen). Wählen Sie in den Plugin-Einstellungen "Ollama" als LLM-Anbieter, geben Sie `http://localhost:11434` als Basis-URL an und wählen Sie Ihr Modell. Copilot fügt eine Chat-Seitenleiste in Obsidian hinzu, in der Sie Fragen stellen und Inhalte im Kontext der aktuellen Notiz erzeugen.',
@@ -1316,6 +1330,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Datenschutz-Vergleich',
         content:
           '**Der Datenschutzunterschied zwischen Cloud-Schreibassistenten und lokalen LLMs ist strukturell.** Cloud-Dienste können Ihren Text nicht verarbeiten, ohne ihn zu erhalten; lokale LLMs können Ihren Text nicht versenden, ohne eine ausdrückliche ausgehende Verbindung.',
+        image: '/images/replace-grammarly-notion-ai-with-local-cost-privacy-overview-en.svg',
+        imageCaption: 'Cloud-Schreibtools versus lokales LLM: Grammarly und Notion AI laufen als 2 separate kostenpflichtige Abos und senden Text an Cloud-Server, während Ollama und Obsidian sämtliches Schreiben und alle Notizen ohne laufende Softwarekosten lokal auf dem Gerät halten.',
         items: [
           '**Grammarly-Datenlizenz:** Grammarlys Nutzungsbedingungen (Abschnitt 5) räumen "eine weltweite, nicht-exklusive, gebührenfreie Lizenz [...] zur Nutzung, Vervielfältigung, Bearbeitung, Anpassung, Veröffentlichung, Übersetzung und Verbreitung" eingereichter Texte zur Produktverbesserung und Sicherheit ein. Das ist nicht versteckt, bedeutet aber, dass jeder in Grammarly korrigierte Satz potenziell in deren Trainings-Pipeline landet.',
           '**Notion-AI-Datenfluss:** Notion sendet Dokumentinhalte für KI-Funktionen an die OpenAI-API. Abgedeckt durch Notions Auftragsverarbeitungs-Anhang, der vertragliche Schutzmaßnahmen vorsieht — die Daten verlassen jedoch Notions Server und gelangen in die OpenAI-Infrastruktur.',
@@ -1604,6 +1620,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Remplacer Notion AI : documents et notes',
         content:
           '**Obsidian avec un backend Ollama local est l\'équivalent fonctionnel le plus proche de Notion AI pour les preneurs de notes et travailleurs du savoir.** Il ne reproduit pas la structure de bases de Notion, mais pour la rédaction et les Q&R sur les notes, la capacité est équivalente — avec tout le traitement local.',
+        image: '/images/replace-grammarly-notion-ai-with-local-notion-ai-setup-flow-en.svg',
+        imageCaption: 'Configuration du remplacement de Notion AI dans Obsidian : installez Ollama et téléchargez Qwen3 14B, installez Obsidian, ajoutez le plugin Copilot pointant vers localhost:11434, ajoutez Smart Connections pour les questions-réponses sur tout le coffre, puis rédigez des documents et interrogez vos notes entièrement en local.',
         items: [
           '**Installer Obsidian** depuis obsidian.md. Gratuit pour un usage personnel. Créez un coffre pour vos notes — c\'est le répertoire que les plugins IA indexeront.',
           '**Installer le plugin Copilot** (Plugins communautaires → rechercher "Copilot"). Dans les paramètres du plugin, sélectionnez "Ollama" comme fournisseur LLM, indiquez `http://localhost:11434` comme URL de base et choisissez votre modèle. Copilot ajoute une barre latérale de chat dans Obsidian où vous pouvez poser des questions et générer du contenu dans le contexte de la note courante.',
@@ -1673,6 +1691,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparatif confidentialité',
         content:
           '**La différence de confidentialité entre les assistants cloud et les LLM locaux est structurelle.** Les services cloud ne peuvent pas traiter votre texte sans le recevoir ; les LLM locaux ne peuvent pas l\'envoyer sans une connexion sortante explicite.',
+        image: '/images/replace-grammarly-notion-ai-with-local-cost-privacy-overview-en.svg',
+        imageCaption: 'Outils d\'écriture cloud contre LLM local : Grammarly et Notion AI fonctionnent comme 2 abonnements payants distincts et envoient le texte à des serveurs cloud, tandis qu\'Ollama et Obsidian conservent toute l\'écriture et les notes sur l\'appareil, sans coût logiciel récurrent.',
         items: [
           '**Licence de données Grammarly :** les conditions de Grammarly (section 5) leur accordent "une licence mondiale, non exclusive, libre de redevance [...] pour utiliser, reproduire, modifier, adapter, publier, traduire, distribuer" les textes soumis pour l\'amélioration produit et la sécurité. Ce n\'est pas caché, mais cela signifie que chaque phrase corrigée dans Grammarly entre potentiellement dans leur pipeline d\'entraînement.',
           '**Flux de données Notion AI :** Notion envoie le contenu des documents à l\'API d\'OpenAI pour les fonctions IA. Couvert par l\'addendum de traitement de données de Notion, qui prévoit des protections contractuelles — mais les données quittent les serveurs de Notion et entrent dans l\'infrastructure d\'OpenAI.',
@@ -1953,6 +1973,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Notion AIを置き換える：文書ドラフトとメモ',
         content:
           '**ローカルOllamaバックエンドのObsidianは、メモ取りやナレッジワーカー向けにNotion AIに最も近い機能等価物です。** Notionのデータベース構造は再現しませんが、ドラフト作成とメモへのAI Q&Aは同等の能力で、すべての処理がローカルです。',
+        image: '/images/replace-grammarly-notion-ai-with-local-notion-ai-setup-flow-en.svg',
+        imageCaption: 'ObsidianでのNotion AI代替セットアップ：OllamaをインストールしてQwen3 14Bをダウンロード、Obsidianをインストール、localhost:11434を指すCopilotプラグインを追加、Vault全体のQ&A用にSmart Connectionsを追加し、その後は完全にローカルで文書を作成しメモを検索します。',
         items: [
           '**Obsidianをインストール**：obsidian.mdから。個人利用は無料です。メモ用のVault（保管庫）を作成します — AIプラグインがインデックスする対象ディレクトリです。',
           '**Copilotプラグインをインストール**：（Community Plugins → 「Copilot」を検索）。プラグイン設定でLLMプロバイダに「Ollama」を選び、ベースURLに`http://localhost:11434`を入力、モデルを選択します。Copilotは、現在のメモ文脈で質問や生成ができるチャットサイドバーをObsidianに追加します。',
@@ -2022,6 +2044,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'プライバシー比較',
         content:
           '**クラウドのライティングアシスタントとローカルLLMのプライバシー差は構造的です。** クラウドサービスはテキストを受信せずに処理できず、ローカルLLMは明示的な送信接続なしにテキストを外部に送れません。',
+        image: '/images/replace-grammarly-notion-ai-with-local-cost-privacy-overview-en.svg',
+        imageCaption: 'クラウド型ライティングツール対ローカルLLM：GrammarlyとNotion AIは2つの独立した有料サブスクリプションとして動作し、テキストをクラウドサーバーに送信します。一方、OllamaとObsidianはすべての文章作成とメモをデバイス上に保持し、継続的なソフトウェア費用はかかりません。',
         items: [
           '**Grammarlyのデータライセンス：** Grammarly利用規約（第5条）は、製品改善とセキュリティ目的で、送信テキストを「使用、複製、改変、翻案、公開、翻訳、配布する全世界・非独占・無償のライセンス」を付与します。隠されてはいませんが、Grammarlyで修正した文はすべて、彼らのトレーニングパイプラインに入る可能性があるという意味です。',
           '**Notion AIのデータフロー：** NotionはAI機能のために文書内容をOpenAIのAPIに送信します。契約的保護を提供するNotionのデータ処理付帯条項の対象ですが、データはNotionのサーバーを離れOpenAIのインフラに入ります。',
@@ -2303,6 +2327,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '替代 Notion AI：文档与笔记',
         content:
           '**搭配本地 Ollama 后端的 Obsidian，是面向笔记与知识工作者最接近 Notion AI 的功能等价方案。** 它不复刻 Notion 的数据库结构，但在文档起草和笔记 AI 问答上能力相当 — 而且完全本地处理。',
+        image: '/images/replace-grammarly-notion-ai-with-local-notion-ai-setup-flow-en.svg',
+        imageCaption: '在 Obsidian 中配置 Notion AI 替代方案:安装 Ollama 并拉取 Qwen3 14B,安装 Obsidian,添加指向 localhost:11434 的 Copilot 插件,添加 Smart Connections 以支持全仓库问答,然后完全在本地起草文档并查询笔记。',
         items: [
           '**安装 Obsidian**：从 obsidian.md 下载，个人使用免费。为笔记新建一个仓库（Vault） — 这是 AI 插件将索引的目录。',
           '**安装 Copilot 插件**（社区插件 → 搜索 "Copilot"）。在插件设置中将 LLM 提供方选择为 "Ollama"，把基础 URL 设为 `http://localhost:11434` 并选择模型。Copilot 会在 Obsidian 中加入聊天侧栏，可在当前笔记上下文中提问与生成内容。',
@@ -2372,6 +2398,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '隐私对比',
         content:
           '**云端写作助手与本地 LLM 的隐私差异是结构性的。** 云服务不收到文本就无法处理；本地 LLM 不主动建立外部连接就无法把文本发出去。',
+        image: '/images/replace-grammarly-notion-ai-with-local-cost-privacy-overview-en.svg',
+        imageCaption: '云端写作工具与本地 LLM 对比:Grammarly 和 Notion AI 以 2 个独立付费订阅的形式运行,并将文本发送到云端服务器;而 Ollama 与 Obsidian 则将所有写作和笔记保留在本地设备上,没有持续的软件费用。',
         items: [
           '**Grammarly 数据许可：** Grammarly 服务条款（第 5 条）授予其"全球范围、非排他、免许可费的[...]使用、复制、修改、改编、发布、翻译、分发"提交文本的权利，用于产品改进与安全。这并不隐藏，但意味着您在 Grammarly 中修改的每一句话都可能进入其训练管线。',
           '**Notion AI 数据流：** Notion 把文档内容发往 OpenAI API 用于 AI 功能。受 Notion 数据处理附录约束，提供合同层面的保护 — 但数据仍然离开了 Notion 服务器并进入 OpenAI 基础设施。',
@@ -2680,6 +2708,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       privacy: {
         id: 'privacy',
         title: 'مقارنة الخصوصية',
+        image: '/images/replace-grammarly-notion-ai-with-local-cost-privacy-overview-en.svg',
+        imageCaption: 'أدوات الكتابة السحابية مقابل نموذج LLM محلي: يعمل Grammarly وNotion AI كاشتراكين مدفوعين منفصلين ويرسلان النص إلى خوادم سحابية، بينما يُبقي Ollama وObsidian كل الكتابة والملاحظات على جهازك دون أي تكلفة برمجية متكررة.',
         items: [
           '**شروط خدمة Grammarly (الفقرة 5):** تمنح Grammarly ترخيصًا واسعًا لاستخدام المحتوى المُرسَل في تطوير وتحسين الخدمة. يُطبَّق على طلبات المعالجة كلها بما فيها المحتوى المهني والسري.',
           '**ملحق معالجة بيانات Notion AI:** يُرسل Notion AI مدخلات الوثائق إلى API لـ OpenAI بموجب عقد معالجة البيانات. لا يُوفر مستوى المؤسسات استثناءً من المعالجة — يُوفر ضمانات أقوى للبيانات فقط.',
@@ -2958,6 +2988,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Notion AI 대체: 문서 작성 및 메모',
         content:
           '**로컬 Ollama 백엔드가 있는 Obsidian은 메모 작성자와 지식 노동자를 위한 Notion AI의 가장 가까운 기능적 동등품입니다.** Notion의 데이터베이스 구조를 복제하지는 않지만, AI 기반 문서 작성과 메모 Q&A의 경우 기능이 동등합니다 — 모든 처리가 로컬에서 이루어집니다.',
+        image: '/images/replace-grammarly-notion-ai-with-local-notion-ai-setup-flow-en.svg',
+        imageCaption: 'Obsidian에서 Notion AI 대체 설정: Ollama를 설치하고 Qwen3 14B를 받고, Obsidian을 설치하고, localhost:11434를 가리키는 Copilot 플러그인을 추가하고, 전체 vault Q&A를 위해 Smart Connections를 추가한 다음, 완전히 로컬에서 문서를 작성하고 메모를 조회합니다.',
         items: [
           '**Obsidian을 설치하세요** (obsidian.md). 개인 사용은 무료입니다. 메모를 위한 vault를 만드세요 — 이것이 AI 플러그인이 인덱싱할 디렉토리입니다.',
           '**Copilot 플러그인을 설치하세요** (커뮤니티 플러그인 → "Copilot" 검색). 플러그인 설정에서 LLM 제공자로 "Ollama"를 선택하고, 기본 URL로 `http://localhost:11434`를 입력하고, 모델을 선택하세요. Copilot은 현재 메모의 컨텍스트에서 질문하고 콘텐츠를 생성할 수 있는 채팅 사이드바를 Obsidian에 추가합니다.',
@@ -3027,6 +3059,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '프라이버시 비교',
         content:
           '**클라우드 글쓰기 도우미와 로컬 LLM 간의 프라이버시 차이는 구조적입니다.** 클라우드 서비스는 텍스트를 받지 않고는 처리할 수 없으며, 로컬 LLM은 명시적인 아웃바운드 연결 없이는 텍스트를 어디에도 보낼 수 없습니다.',
+        image: '/images/replace-grammarly-notion-ai-with-local-cost-privacy-overview-en.svg',
+        imageCaption: '클라우드 글쓰기 도구 대 로컬 LLM: Grammarly와 Notion AI는 2개의 별도 유료 구독으로 작동하며 텍스트를 클라우드 서버로 전송하지만, Ollama와 Obsidian은 모든 글쓰기와 메모를 기기에 보관하며 반복되는 소프트웨어 비용이 없습니다.',
         items: [
           '**Grammarly 데이터 라이선스:** Grammarly의 서비스 약관(제5조)은 제품 개선 및 보안을 위해 제출된 텍스트를 "사용, 복제, 수정, 조정, 출판, 번역, 배포"할 수 있는 "전 세계적, 비독점적, 로열티 없는 [...] 라이선스"를 부여합니다. 이것은 숨겨져 있지 않지만 Grammarly에서 교정하는 모든 문장이 잠재적으로 그들의 훈련 파이프라인에 있을 수 있음을 의미합니다.',
           '**Notion AI 데이터 흐름:** Notion은 AI 기능을 위해 문서 콘텐츠를 OpenAI API로 전송합니다. Notion 데이터 처리 부칙의 적용을 받으며, 계약적 보호를 제공하지만 데이터는 여전히 Notion 서버를 떠나 OpenAI 인프라로 들어갑니다.',
