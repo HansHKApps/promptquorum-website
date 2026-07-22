@@ -87,6 +87,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'The Comparison',
         content:
           '**Local wins privacy, cost, and offline; cloud wins skills and effort.** Use the table to match your priority.',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        imageCaption: 'Local vs cloud voice assistant comparison across privacy, cost, accuracy, skills, offline, and effort: local wins 3 criteria, cloud wins 3.',
         columns: ['Criterion', 'Local (Assist + Whisper + LLM)', 'Cloud (Alexa / Google)'],
         rows: [
           { 'Criterion': 'Privacy', 'Local (Assist + Whisper + LLM)': 'On-device, private', 'Cloud (Alexa / Google)': 'Voice processed in cloud' },
@@ -124,6 +126,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Recommendation',
         content:
           '**Choose local if privacy, cost, or offline operation matter; choose cloud if you want zero setup and the widest skills.** If unsure and you value privacy, start local with a mini PC.',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        imageCaption: 'Local vs cloud voice assistant decision tree: privacy, cost, or offline priority leads to local; zero setup and the widest skills leads to cloud; unsure but privacy-leaning users start local on a GPU-equipped mini PC.',
         items: [
           '**Privacy / offline / no fees:** local stack.',
           '**Zero setup / broadest skills:** Alexa or Google.',
@@ -264,6 +268,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'المقارنة',
         content:
           '**المحلي يفوز في الخصوصية والتكلفة ودون إنترنت؛ السحابي يفوز في المهارات والجهد.** استخدم الجدول لمطابقة أولويتك.',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        imageCaption: 'مقارنة المساعد الصوتي المحلي والسحابي عبر الخصوصية والتكلفة والدقة والمهارات والعمل دون إنترنت والجهد: يفوز المحلي في 3 معايير، ويفوز السحابي في 3.',
         columns: ['المعيار', 'محلي (Assist + Whisper + نموذج لغوي)', 'سحابي (Alexa / Google)'],
         rows: [
           { 'المعيار': 'الخصوصية', 'محلي (Assist + Whisper + نموذج لغوي)': 'على الجهاز، خاص', 'سحابي (Alexa / Google)': 'الصوت يُعالَج في السحابة' },
@@ -301,6 +307,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'التوصية',
         content:
           '**اختر المحلي إذا كانت الخصوصية أو التكلفة أو العمل دون إنترنت مهمة؛ اختر السحابي إذا أردت إعدادًا صفريًا وأوسع المهارات.** إذا لم تكن متأكدًا وتُقدِّر الخصوصية، ابدأ محليًا بجهاز كمبيوتر مصغر.',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        imageCaption: 'شجرة قرار المساعد الصوتي المحلي مقابل السحابي: الخصوصية/التكلفة/دون إنترنت تؤدي إلى المحلي، وإعداد صفري وأوسع المهارات يؤدي إلى السحابي، وغير المتأكدين المائلين للخصوصية يبدؤون محليًا بجهاز كمبيوتر مصغر مزود بـ GPU.',
         items: [
           '**خصوصية / دون إنترنت / بدون رسوم:** البنية المحلية.',
           '**إعداد صفري / المهارات الأوسع:** Alexa أو Google.',
@@ -441,6 +449,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Der Vergleich',
         content:
           '**Lokal gewinnt Datenschutz, Kosten und Offline; Cloud gewinnt Skills und Aufwand.** Nutzen Sie die Tabelle, um Ihre Priorität zuzuordnen.',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        imageCaption: 'Vergleich lokaler und Cloud-Sprachassistenten bei Datenschutz, Kosten, Genauigkeit, Skills, Offline und Aufwand: lokal gewinnt 3 Kriterien, Cloud gewinnt 3.',
         columns: ['Kriterium', 'Lokal (Assist + Whisper + LLM)', 'Cloud (Alexa / Google)'],
         rows: [
           { 'Kriterium': 'Datenschutz', 'Lokal (Assist + Whisper + LLM)': 'Auf dem Gerät, privat', 'Cloud (Alexa / Google)': 'Stimme in der Cloud verarbeitet' },
@@ -478,6 +488,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Empfehlung',
         content:
           '**Wählen Sie lokal, wenn Datenschutz, Kosten oder Offline-Betrieb zählen; wählen Sie Cloud, wenn Sie null Einrichtung und die breitesten Skills wollen.** Wenn unsicher und Sie Datenschutz schätzen, starten Sie lokal mit einem Mini-PC.',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        imageCaption: 'Entscheidungsbaum lokal vs Cloud-Sprachassistent: Datenschutz/Kosten/Offline führt zu lokal, null Einrichtung und breiteste Skills führt zu Cloud, Unentschlossene mit Datenschutzneigung starten lokal auf einem Mini-PC mit GPU.',
         items: [
           '**Datenschutz / offline / keine Gebühren:** lokaler Stack.',
           '**Null Einrichtung / breiteste Skills:** Alexa oder Google.',
@@ -618,6 +630,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'La comparación',
         content:
           '**Local gana privacidad, coste y sin conexión; la nube gana skills y esfuerzo.** Usa la tabla para asignar tu prioridad.',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        imageCaption: 'Comparación de asistente de voz local vs nube en privacidad, coste, precisión, skills, offline y esfuerzo: local gana 3 criterios, la nube gana 3.',
         columns: ['Criterio', 'Local (Assist + Whisper + LLM)', 'Nube (Alexa / Google)'],
         rows: [
           { 'Criterio': 'Privacidad', 'Local (Assist + Whisper + LLM)': 'En el dispositivo, privada', 'Nube (Alexa / Google)': 'Voz procesada en la nube' },
@@ -655,6 +669,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Recomendación',
         content:
           '**Elige local si la privacidad, el coste o la operación sin conexión importan; elige la nube si quieres cero configuración y las skills más amplias.** Si dudas y valoras la privacidad, empieza local con un mini PC.',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        imageCaption: 'Árbol de decisión local vs nube para asistente de voz: privacidad/coste/offline lleva a local, cero configuración y skills más amplias lleva a la nube, e indecisos con tendencia a la privacidad empiezan local en un mini PC con GPU.',
         items: [
           '**Privacidad / sin conexión / sin cuotas:** stack local.',
           '**Cero configuración / skills más amplias:** Alexa o Google.',
@@ -795,6 +811,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '비교',
         content:
           '**로컬이 프라이버시, 비용, 오프라인에서 우세합니다. 클라우드가 스킬과 노력에서 우세합니다.** 표를 사용해 우선순위를 매핑하십시오.',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        imageCaption: '프라이버시, 비용, 정확도, 스킬, 오프라인, 노력 기준으로 본 로컬 vs 클라우드 음성 비서 비교: 로컬이 3개 기준, 클라우드가 3개 기준에서 우세합니다.',
         columns: ['기준', '로컬(Assist + Whisper + LLM)', '클라우드(Alexa / Google)'],
         rows: [
           { '기준': '프라이버시', '로컬(Assist + Whisper + LLM)': '기기 내, 비공개', '클라우드(Alexa / Google)': '클라우드에서 처리된 음성' },
@@ -832,6 +850,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '권장 사항',
         content:
           '**프라이버시, 비용, 오프라인 동작이 중요하다면 로컬을 선택하십시오. 제로 설정과 가장 광범위한 스킬을 원한다면 클라우드를 선택하십시오.** 확신이 없지만 프라이버시를 중시한다면 미니 PC로 로컬부터 시작하십시오.',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        imageCaption: '로컬 vs 클라우드 음성 비서 결정 트리: 프라이버시/비용/오프라인은 로컬로, 제로 설정과 가장 광범위한 스킬은 클라우드로, 프라이버시 성향이지만 미결정인 경우 GPU 장착 미니 PC로 로컬부터 시작합니다.',
         items: [
           '**프라이버시 / 오프라인 / 구독 없음:** 로컬 스택.',
           '**제로 설정 / 더 광범위한 스킬:** Alexa 또는 Google.',
@@ -972,6 +992,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'La comparaison',
         content:
           '**Le local gagne confidentialité, coût et hors ligne ; le cloud gagne skills et effort.** Utilisez le tableau pour associer votre priorité.',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        imageCaption: 'Comparaison assistant vocal local vs cloud sur confidentialité, coût, précision, skills, hors ligne et effort : le local gagne 3 critères, le cloud gagne 3.',
         columns: ['Critère', 'Local (Assist + Whisper + LLM)', 'Cloud (Alexa / Google)'],
         rows: [
           { 'Critère': 'Confidentialité', 'Local (Assist + Whisper + LLM)': 'Sur l\'appareil, privée', 'Cloud (Alexa / Google)': 'Voix traitée dans le cloud' },
@@ -1009,6 +1031,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Recommandation',
         content:
           '**Choisissez le local si la confidentialité, le coût ou le fonctionnement hors ligne comptent ; choisissez le cloud si vous voulez zéro configuration et les skills les plus larges.** En cas de doute et si vous valorisez la confidentialité, commencez en local avec un mini-PC.',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        imageCaption: 'Arbre de décision local vs cloud pour l\'assistant vocal : confidentialité/coût/hors ligne mène au local, zéro configuration et skills les plus larges mène au cloud, les indécis penchant pour la confidentialité commencent en local sur un mini-PC équipé d\'un GPU.',
         items: [
           '**Confidentialité / hors ligne / sans frais :** pile locale.',
           '**Zéro configuration / skills les plus larges :** Alexa ou Google.',
@@ -1149,6 +1173,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '比較',
         content:
           '**ローカルはプライバシー・コスト・オフラインで勝り、クラウドはスキルと手間で勝ります。** 表で自分の優先事項を対応づけましょう。',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        imageCaption: 'プライバシー・コスト・精度・スキル・オフライン・手間で見るローカル対クラウド音声アシスタント比較。ローカルが3項目、クラウドが3項目で優位。',
         columns: ['基準', 'ローカル (Assist + Whisper + LLM)', 'クラウド (Alexa / Google)'],
         rows: [
           { '基準': 'プライバシー', 'ローカル (Assist + Whisper + LLM)': '機器上、プライベート', 'クラウド (Alexa / Google)': '音声をクラウドで処理' },
@@ -1186,6 +1212,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '推奨',
         content:
           '**プライバシー・コスト・オフライン動作が重要ならローカル、ゼロ設定と最も幅広いスキルが欲しいならクラウドを選びましょう。** 迷っていてプライバシーを重んじるなら、ミニPCでローカルから始めましょう。',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        imageCaption: 'ローカル対クラウド音声アシスタントの決定木。プライバシー・コスト・オフラインはローカルへ、ゼロ設定と最も幅広いスキルはクラウドへ、迷うがプライバシー寄りの場合はGPU搭載ミニPCでローカルから始めます。',
         items: [
           '**プライバシー / オフライン / 料金なし：** ローカルスタック。',
           '**ゼロ設定 / 最も幅広いスキル：** Alexa か Google。',
@@ -1326,6 +1354,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'A comparação',
         content:
           '**O local ganha privacidade, custo e offline; a nuvem ganha skills e esforço.** Use a tabela para associar a sua prioridade.',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        imageCaption: 'Comparação de assistente de voz local vs nuvem em privacidade, custo, precisão, skills, offline e esforço: o local vence 3 critérios, a nuvem vence 3.',
         columns: ['Critério', 'Local (Assist + Whisper + LLM)', 'Nuvem (Alexa / Google)'],
         rows: [
           { 'Critério': 'Privacidade', 'Local (Assist + Whisper + LLM)': 'No dispositivo, privada', 'Nuvem (Alexa / Google)': 'Voz processada na nuvem' },
@@ -1363,6 +1393,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Recomendação',
         content:
           '**Escolha local se privacidade, custo ou operação offline importam; escolha nuvem se você quer zero configuração e as skills mais amplas.** Na dúvida e se você valoriza a privacidade, comece local com um mini PC.',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        imageCaption: 'Árvore de decisão local vs nuvem para assistente de voz: privacidade/custo/offline leva ao local, zero configuração e skills mais amplas leva à nuvem, e indecisos tendendo à privacidade começam local em um mini PC com GPU.',
         items: [
           '**Privacidade / offline / sem taxas:** stack local.',
           '**Zero configuração / skills mais amplas:** Alexa ou Google.',
@@ -1503,6 +1535,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '对比',
         content:
           '**本地在隐私、成本和离线上胜出；云端在技能和投入上胜出。** 用下表对应你的优先事项。',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        imageCaption: '本地与云端语音助手在隐私、成本、准确度、技能、离线和投入上的对比：本地在3项标准中胜出，云端在3项中胜出。',
         columns: ['标准', '本地 (Assist + Whisper + LLM)', '云端 (Alexa / Google)'],
         rows: [
           { '标准': '隐私', '本地 (Assist + Whisper + LLM)': '设备本地，私密', '云端 (Alexa / Google)': '语音在云端处理' },
@@ -1540,6 +1574,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '推荐',
         content:
           '**若看重隐私、成本或离线运行就选本地；若想要零配置和最广技能就选云端。** 若拿不定主意且看重隐私，就用一台迷你 PC 从本地起步。',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        imageCaption: '本地与云端语音助手决策树：隐私/成本/离线指向本地，零配置和最广技能指向云端，拿不定主意但偏向隐私的用户从配 GPU 的迷你 PC 本地起步。',
         items: [
           '**隐私 / 离线 / 无费用：** 本地堆栈。',
           '**零配置 / 技能最广：** Alexa 或 Google。',
