@@ -152,6 +152,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Setup 1: IMAP + Python + Ollama',
         content:
           '**The most scriptable setup: a Python script fetches unread emails via IMAP, strips headers and HTML, passes the plain-text body to Ollama\'s local API, and saves the draft reply.** Runs on a schedule with cron or Task Scheduler. Fifty lines of Python, no external dependencies beyond the Ollama Python client.',
+        image: '/images/local-llm-email-and-calendar-automation-imap-pipeline-en.svg',
+        imageCaption: 'IMAP + Python + Ollama local email draft pipeline: 4 steps from fetching an unread email to saving the draft, using Qwen3 14B (9 GB VRAM) via Ollama\'s local API — no cloud API calls.',
         promptExamples: [
           {
             label: 'IMAP Email Fetch + Ollama Draft (Python skeleton)',
@@ -197,6 +199,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Setup 3: n8n Self-Hosted + Ollama Node',
         content:
           '**n8n self-hosted with a local Ollama node is the right choice for conditional automation: filter emails by sender domain, summarise daily, generate follow-ups when calendar events end, or route different email types to different model prompts — all without writing code.**',
+        image: '/images/local-llm-email-and-calendar-automation-n8n-workflow-en.svg',
+        imageCaption: 'n8n self-hosted workflow for email and calendar automation: an IMAP trigger and domain filter route emails to a local Ollama node, while a parallel calendar branch turns ICS or Google Calendar events into meeting agendas — one Ollama instance, no cloud API.',
         items: [
           '**Install n8n self-hosted:** `npm install -g n8n && n8n start` or `docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n`. The workflow editor runs at `http://localhost:5678`.',
           '**Add Ollama node:** in the n8n workflow editor, search for the "Ollama" node (built-in as of n8n v1.2+). Point it at `http://localhost:11434` and select your model.',
@@ -540,6 +544,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Setup 1: IMAP + Python + Ollama',
         content:
           '**Das skriptierbarste Setup: Ein Python-Script ruft ungelesene E-Mails über IMAP ab, entfernt Header und HTML, übergibt den reinen Text an die lokale API von Ollama und speichert den Antwortentwurf.** Läuft nach einem Zeitplan mit Cron oder Task Scheduler. Fünfzig Zeilen Python, keine externen Abhängigkeiten außer dem Ollama-Python-Client.',
+        image: '/images/local-llm-email-and-calendar-automation-imap-pipeline-en.svg',
+        imageCaption: 'IMAP + Python + Ollama lokale E-Mail-Entwurfs-Pipeline: 4 Schritte vom Abrufen einer ungelesenen E-Mail bis zum Speichern des Entwurfs, mit Qwen3 14B (9 GB VRAM) über die lokale API von Ollama — keine Cloud-API-Aufrufe.',
         promptExamples: [
           {
             label: 'IMAP-E-Mail-Abruf + Ollama-Entwurf (Python-Skelett)',
@@ -585,6 +591,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Setup 3: n8n Self-Hosted + Ollama-Knoten',
         content:
           '**n8n selbst gehostet mit einem lokalen Ollama-Knoten ist die richtige Wahl für bedingte Automatisierung: E-Mails nach Absender-Domain filtern, täglich zusammenfassen, Folge-Entwürfe generieren, wenn Kalenderereignisse enden, oder verschiedene E-Mail-Typen zu verschiedenen Modell-Prompts leiten — alles ohne Code zu schreiben.**',
+        image: '/images/local-llm-email-and-calendar-automation-n8n-workflow-en.svg',
+        imageCaption: 'n8n-Self-Hosted-Workflow für E-Mail- und Kalenderautomatisierung: Ein IMAP-Trigger und ein Domain-Filter leiten E-Mails an einen lokalen Ollama-Knoten weiter, während ein paralleler Kalenderzweig ICS- oder Google-Kalender-Ereignisse in Besprechungsagenden umwandelt — eine Ollama-Instanz, keine Cloud-API.',
         items: [
           '**n8n selbst gehostet installieren:** `npm install -g n8n && n8n start` oder `docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n`. Der Workflow-Editor läuft unter `http://localhost:5678`.',
           '**Ollama-Knoten hinzufügen:** Suchen Sie im n8n-Workflow-Editor nach dem Knoten "Ollama" (ab n8n v1.2+ eingebaut). Zeigen Sie auf `http://localhost:11434` und wählen Sie Ihr Modell.',
@@ -954,6 +962,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Configuration 1 : IMAP + Python + Ollama',
         content:
           '**La configuration la plus scriptable : un script Python récupère les e-mails non lus via IMAP, supprime les en-têtes et HTML, transmet le texte pur à l\'API locale d\'Ollama et enregistre le brouillon de réponse.** S\'exécute selon un calendrier avec Cron ou Task Scheduler. Cinquante lignes de Python, aucune dépendance externe au-delà du client Ollama Python.',
+        image: '/images/local-llm-email-and-calendar-automation-imap-pipeline-en.svg',
+        imageCaption: 'Pipeline locale de brouillons d\'e-mails IMAP + Python + Ollama : 4 étapes de la récupération d\'un e-mail non lu à l\'enregistrement du brouillon, avec Qwen3 14B (9 Go de VRAM) via l\'API locale d\'Ollama — aucun appel API cloud.',
         promptExamples: [
           {
             label: 'Récupération e-mail IMAP + brouillon Ollama (squelette Python)',
@@ -999,6 +1009,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Configuration 3 : n8n Self-Hosted + Ollama',
         content:
           '**n8n self-hébergé avec un nœud Ollama local est le bon choix pour l\'automatisation conditionnelle : filtrer les e-mails par domaine d\'expéditeur, résumer quotidiennement, générer des brouillons de suivi quand les événements calendaires se terminent, ou acheminer différents types d\'e-mails vers différents prompts de modèle — tout sans écrire de code.**',
+        image: '/images/local-llm-email-and-calendar-automation-n8n-workflow-en.svg',
+        imageCaption: 'Workflow n8n self-hébergé pour l\'automatisation des e-mails et du calendrier : un déclencheur IMAP et un filtre de domaine acheminent les e-mails vers un nœud Ollama local, tandis qu\'une branche calendrier parallèle transforme les événements ICS ou Google Agenda en ordres du jour de réunion — une seule instance Ollama, aucune API cloud.',
         items: [
           '**Installer n8n self-hébergé :** `npm install -g n8n && n8n start` ou `docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n`. L\'éditeur de workflow s\'exécute sur `http://localhost:5678`.',
           '**Ajouter le nœud Ollama :** dans l\'éditeur de workflow n8n, recherchez le nœud "Ollama" (intégré à partir de n8n v1.2+). Pointez vers `http://localhost:11434` et sélectionnez votre modèle.',
@@ -1341,6 +1353,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Configuración 1: IMAP + Python + Ollama',
         content:
           '**La configuración más scriptable: un script Python obtiene emails no leídos vía IMAP, elimina encabezados y HTML, pasa el texto plano a la API local de Ollama y guarda el borrador de respuesta.** Se ejecuta según un horario con cron o el Programador de tareas. Cincuenta líneas de Python, sin dependencias externas más allá del cliente Python de Ollama.',
+        image: '/images/local-llm-email-and-calendar-automation-imap-pipeline-en.svg',
+        imageCaption: 'Pipeline local de borradores de email IMAP + Python + Ollama: 4 pasos desde obtener un email no leído hasta guardar el borrador, usando Qwen3 14B (9 GB de VRAM) a través de la API local de Ollama — sin llamadas a APIs en la nube.',
         promptExamples: [
           {
             label: 'Obtención de email IMAP + borrador Ollama (esqueleto Python)',
@@ -1386,6 +1400,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Configuración 3: n8n autoalojado + nodo Ollama',
         content:
           '**n8n autoalojado con un nodo Ollama local es la elección correcta para la automatización condicional: filtra emails por dominio del remitente, resume diariamente, genera seguimientos cuando terminan los eventos del calendario, o enruta diferentes tipos de emails a diferentes prompts de modelo — todo sin escribir código.**',
+        image: '/images/local-llm-email-and-calendar-automation-n8n-workflow-en.svg',
+        imageCaption: 'Flujo de trabajo n8n autoalojado para automatización de email y calendario: un disparador IMAP y un filtro de dominio enrutan los emails a un nodo Ollama local, mientras una rama paralela de calendario convierte eventos ICS o de Google Calendar en agendas de reunión — una sola instancia de Ollama, sin API en la nube.',
         items: [
           '**Instala n8n autoalojado:** `npm install -g n8n && n8n start` o `docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n`. El editor de flujos de trabajo se ejecuta en `http://localhost:5678`.',
           '**Añade el nodo Ollama:** en el editor de flujos de trabajo de n8n, busca el nodo "Ollama" (integrado a partir de n8n v1.2+). Apúntalo a `http://localhost:11434` y selecciona tu modelo.',
@@ -1744,6 +1760,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Configuração 1: IMAP + Python + Ollama',
         content:
           '**A configuração mais scriptável: um script Python busca e-mails não lidos via IMAP, remove cabeçalhos e HTML, passa o corpo em texto plano para a API local do Ollama e salva o rascunho de resposta.** Roda em um agendamento com cron ou o Agendador de Tarefas. Cinquenta linhas de Python, sem dependências externas além do cliente Python do Ollama.',
+        image: '/images/local-llm-email-and-calendar-automation-imap-pipeline-en.svg',
+        imageCaption: 'Pipeline local de rascunhos de e-mail IMAP + Python + Ollama: 4 etapas desde buscar um e-mail não lido até salvar o rascunho, usando Qwen3 14B (9 GB de VRAM) via API local do Ollama — sem chamadas a APIs na nuvem.',
         promptExamples: [
           {
             label: 'Busca de e-mail IMAP + rascunho Ollama (esqueleto Python)',
@@ -1789,6 +1807,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Configuração 3: n8n auto-hospedado + nó Ollama',
         content:
           '**n8n auto-hospedado com um nó Ollama local é a escolha certa para automação condicional: filtre e-mails por domínio do remetente, resuma diariamente, gere acompanhamentos quando os eventos do calendário terminam, ou encaminhe diferentes tipos de e-mail para diferentes prompts de modelo — tudo sem escrever código.**',
+        image: '/images/local-llm-email-and-calendar-automation-n8n-workflow-en.svg',
+        imageCaption: 'Fluxo de trabalho n8n auto-hospedado para automação de e-mail e calendário: um gatilho IMAP e um filtro de domínio direcionam e-mails para um nó Ollama local, enquanto um ramo paralelo de calendário transforma eventos ICS ou do Google Calendar em pautas de reunião — uma única instância do Ollama, sem API na nuvem.',
         items: [
           '**Instale o n8n auto-hospedado:** `npm install -g n8n && n8n start` ou `docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n`. O editor de fluxos de trabalho roda em `http://localhost:5678`.',
           '**Adicione o nó Ollama:** no editor de fluxos de trabalho do n8n, busque o nó "Ollama" (integrado a partir do n8n v1.2+). Aponte-o para `http://localhost:11434` e selecione o seu modelo.',
@@ -2146,6 +2166,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'セットアップ1：IMAP + Python + Ollama',
         content:
           '**最も自動化スクリプト可能なセットアップ：Python スクリプトが IMAP 経由で未読メールを取得し、ヘッダーと HTML を削除し、プレーンテキストを Ollama のローカル API に渡し、返信ドラフトを保存します。** Cron または Task Scheduler を使用してスケジュール通り実行。Python 50行、Ollama Python クライアント以外の外部依存なし。',
+        image: '/images/local-llm-email-and-calendar-automation-imap-pipeline-en.svg',
+        imageCaption: 'IMAP + Python + Ollama ローカルメール下書きパイプライン：未読メールの取得から下書き保存までの4ステップ、Qwen3 14B（VRAM 9GB）を Ollama のローカル API 経由で使用——クラウド API 呼び出しなし。',
         promptExamples: [
           {
             label: 'IMAP メール取得 + Ollama ドラフト (Python スケルトン)',
@@ -2191,6 +2213,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'セットアップ3：n8n Self-Hosted + Ollama',
         content:
           '**ローカル Ollama ノード付き n8n 自己ホストは条件付き自動化の正しい選択：送信者ドメインでメールをフィルタ、毎日要約、カレンダーイベント終了時にフォローアップ生成、異なるメールタイプを異なるモデルプロンプトにルーティング——コード作成なし。**',
+        image: '/images/local-llm-email-and-calendar-automation-n8n-workflow-en.svg',
+        imageCaption: 'n8n セルフホストによるメールとカレンダー自動化ワークフロー：IMAP トリガーとドメインフィルターがメールをローカル Ollama ノードにルーティングし、並行するカレンダーブランチが ICS または Google カレンダーのイベントを会議アジェンダに変換——単一の Ollama インスタンス、クラウド API なし。',
         items: [
           '**n8n 自己ホストをインストール：** `npm install -g n8n && n8n start` または `docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n`。ワークフロー編集は `http://localhost:5678` で実行。',
           '**Ollama ノードを追加：** n8n ワークフロー編集で「Ollama」ノードを検索 (n8n v1.2+ 組込)。`http://localhost:11434` を指し、モデルを選択。',
@@ -2560,6 +2584,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '设置1：IMAP + Python + Ollama',
         content:
           '**最可脚本化的设置：Python脚本通过IMAP获取未读电子邮件、删除标题和HTML、将纯文本正文传递到Ollama的本地API并保存草稿回复。** 使用cron或Task Scheduler按计划运行。50行Python代码，除了Ollama Python客户端外没有外部依赖。',
+        image: '/images/local-llm-email-and-calendar-automation-imap-pipeline-en.svg',
+        imageCaption: 'IMAP + Python + Ollama 本地邮件草稿流程：从获取未读邮件到保存草稿共4个步骤，通过Ollama本地API使用Qwen3 14B（9 GB显存）——无需调用云端API。',
         promptExamples: [
           {
             label: 'IMAP电子邮件获取 + Ollama草稿 (Python骨架)',
@@ -2605,6 +2631,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '设置3：n8n自托管 + Ollama',
         content:
           '**n8n自托管配合本地Ollama节点是条件自动化的正确选择：按发件人域筛选电子邮件、每日汇总、在日历事件结束时生成后续、或将不同电子邮件类型路由到不同的模型提示——所有这些都无需编写代码。**',
+        image: '/images/local-llm-email-and-calendar-automation-n8n-workflow-en.svg',
+        imageCaption: '用于邮件和日历自动化的n8n自托管工作流：IMAP触发器和域名过滤器将邮件路由到本地Ollama节点，同时并行的日历分支将ICS或谷歌日历事件转换为会议议程——单一Ollama实例，无云端API。',
         items: [
           '**安装n8n自托管：** `npm install -g n8n && n8n start`或`docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n`。工作流编辑器在`http://localhost:5678`运行。',
           '**添加Ollama节点：** 在n8n工作流编辑器中，搜索"Ollama"节点（从n8n v1.2+开始内置）。指向`http://localhost:11434`并选择您的模型。',
@@ -2947,6 +2975,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الإعداد 1: IMAP + Python + Ollama',
         content:
           '**الإعداد الأكثر قابلية للسكرتة: سكريبت Python يجلب الرسائل غير المقروءة عبر IMAP، ويحذف الرؤوس والـ HTML، ويمرر النص العادي إلى Ollama API المحلي، ويحفظ مسودة الرد.** يعمل وفق جدول مع cron أو Task Scheduler. خمسون سطراً من Python، بدون تبعيات خارجية إلى جانب عميل Ollama لـ Python.',
+        image: '/images/local-llm-email-and-calendar-automation-imap-pipeline-en.svg',
+        imageCaption: 'خط أنابيب محلي لمسودات البريد الإلكتروني عبر IMAP + Python + Ollama: 4 خطوات من جلب رسالة غير مقروءة إلى حفظ المسودة، باستخدام Qwen3 14B (9 GB VRAM) عبر واجهة Ollama المحلية — بدون أي استدعاءات لواجهة برمجة سحابية.',
         promptExamples: [
           {
             label: 'جلب بريد IMAP + مسودة Ollama (هيكل Python)',
@@ -2992,6 +3022,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الإعداد 3: n8n مستضاف ذاتياً + عقدة Ollama',
         content:
           '**أداة n8n المستضافة ذاتياً مع عقدة Ollama المحلية هي الخيار الصحيح للأتمتة الشرطية: فلترة الرسائل حسب نطاق المرسل، والتلخيص اليومي، وإنشاء المتابعات عند انتهاء أحداث التقويم، أو توجيه أنواع مختلفة من الرسائل إلى موجّهات نموذج مختلفة — كل ذلك دون كتابة كود.**',
+        image: '/images/local-llm-email-and-calendar-automation-n8n-workflow-en.svg',
+        imageCaption: 'سير عمل n8n مستضاف ذاتياً لأتمتة البريد الإلكتروني والتقويم: يوجّه مشغّل IMAP وفلتر النطاق الرسائل إلى عقدة Ollama محلية، بينما يحوّل فرع تقويم موازٍ أحداث ICS أو تقويم جوجل إلى جداول أعمال الاجتماعات — نسخة واحدة من Ollama، بدون واجهة برمجة سحابية.',
         items: [
           '**ثبّت n8n مستضافاً ذاتياً:** `npm install -g n8n && n8n start` أو `docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n`. محرر سير العمل يعمل على `http://localhost:5678`.',
           '**أضف عقدة Ollama:** في محرر سير عمل n8n، ابحث عن عقدة "Ollama" (مدمجة منذ n8n الإصدار 1.2+). أشر إليها على `http://localhost:11434` واختر نموذجك.',
@@ -3347,6 +3379,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '설정 1: IMAP + Python + Ollama',
         content:
           '**가장 스크립팅 가능한 설정입니다. Python 스크립트가 IMAP을 통해 읽지 않은 이메일을 가져오고, 헤더와 HTML을 제거하고, 일반 텍스트 본문을 Ollama 로컬 API에 전달하고, 답장 초안을 저장합니다.** cron 또는 작업 스케줄러를 사용하여 일정에 따라 실행됩니다. Python 50줄, Ollama Python 클라이언트 외 외부 의존성 없음.',
+        image: '/images/local-llm-email-and-calendar-automation-imap-pipeline-en.svg',
+        imageCaption: 'IMAP + Python + Ollama 로컬 이메일 초안 파이프라인: 읽지 않은 이메일 가져오기부터 초안 저장까지 4단계, Ollama 로컬 API를 통해 Qwen3 14B(VRAM 9GB) 사용 — 클라우드 API 호출 없음.',
         promptExamples: [
           {
             label: 'IMAP 이메일 가져오기 + Ollama 초안 (Python 골격)',
@@ -3392,6 +3426,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '설정 3: 자체 호스팅 n8n + Ollama 노드',
         content:
           '**로컬 Ollama 노드가 있는 자체 호스팅 n8n은 조건부 자동화에 적합한 선택입니다. 발신자 도메인별 이메일 필터링, 매일 요약, 캘린더 이벤트 종료 시 후속 메일 생성, 또는 다른 이메일 유형을 다른 모델 프롬프트로 라우팅 — 모두 코드 작성 없이 가능합니다.**',
+        image: '/images/local-llm-email-and-calendar-automation-n8n-workflow-en.svg',
+        imageCaption: '이메일 및 캘린더 자동화를 위한 자체 호스팅 n8n 워크플로우: IMAP 트리거와 도메인 필터가 이메일을 로컬 Ollama 노드로 라우팅하고, 병렬 캘린더 브랜치가 ICS 또는 Google 캘린더 이벤트를 회의 안건으로 변환합니다 — 단일 Ollama 인스턴스, 클라우드 API 없음.',
         items: [
           '**자체 호스팅 n8n 설치:** `npm install -g n8n && n8n start` 또는 `docker run -it --rm --name n8n -p 5678:5678 n8nio/n8n`. 워크플로우 편집기는 `http://localhost:5678`에서 실행됩니다.',
           '**Ollama 노드 추가:** n8n 워크플로우 편집기에서 "Ollama" 노드를 검색하십시오 (n8n v1.2+ 내장). `http://localhost:11434`를 가리키도록 설정하고 모델을 선택하십시오.',

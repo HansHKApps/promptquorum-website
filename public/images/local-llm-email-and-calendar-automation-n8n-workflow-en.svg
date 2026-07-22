@@ -1,0 +1,58 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="460" fill="#FFFFFF"/>
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">n8n Self-Hosted: Email + Calendar Automation Workflow</text>
+
+  <text x="30" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6750A4">EMAIL WORKFLOW</text>
+
+  <rect x="30" y="85" width="150" height="50" rx="8" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="105" y="107" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">IMAP Trigger</text>
+  <text x="105" y="124" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">polls 1–5 min</text>
+
+  <text x="197" y="114" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+  <rect x="215" y="85" width="150" height="50" rx="8" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="290" y="107" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Filter by Domain</text>
+  <text x="290" y="124" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">sender / keyword</text>
+
+  <text x="382" y="114" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+  <rect x="400" y="85" width="150" height="50" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="475" y="107" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Ollama Node</text>
+  <text x="475" y="124" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">localhost:11434</text>
+
+  <text x="567" y="114" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+  <rect x="585" y="85" width="185" height="50" rx="8" fill="#F7F2FA" stroke="#34A853" stroke-width="1.5"/>
+  <text x="677" y="107" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Save Draft</text>
+  <text x="677" y="124" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">IMAP · Slack · Notion</text>
+
+  <text x="30" y="190" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6750A4">CALENDAR WORKFLOW</text>
+
+  <rect x="30" y="205" width="150" height="50" rx="8" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="105" y="227" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Calendar Trigger</text>
+  <text x="105" y="244" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">ICS / Google API</text>
+
+  <text x="197" y="234" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+  <rect x="215" y="205" width="150" height="50" rx="8" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="290" y="227" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Extract Details</text>
+  <text x="290" y="244" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">title, attendees, time</text>
+
+  <text x="382" y="234" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+  <rect x="400" y="205" width="150" height="50" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="475" y="227" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Ollama Node</text>
+  <text x="475" y="244" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">same local model</text>
+
+  <text x="567" y="234" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+  <rect x="585" y="205" width="185" height="50" rx="8" fill="#F7F2FA" stroke="#34A853" stroke-width="1.5"/>
+  <text x="677" y="227" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Generate Agenda</text>
+  <text x="677" y="244" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">meeting prep / follow-up</text>
+
+  <line x1="475" y1="135" x2="475" y2="205" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="488" y="172" font-family="system-ui, sans-serif" font-size="10" fill="#79747E">same Ollama instance</text>
+
+  <text x="400" y="310" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle">One local Ollama instance powers both email drafting and calendar agenda generation.</text>
+  <text x="400" y="350" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">n8n self-hosted binds to localhost:5678 by default — add authentication before exposing it to your network.</text>
+<text x="792" y="455" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
