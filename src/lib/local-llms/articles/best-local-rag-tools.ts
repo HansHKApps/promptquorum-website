@@ -56,6 +56,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'The process: (1) Upload your documents (PDFs, text files), (2) split them into chunks, (3) convert chunks to embeddings (numerical vectors), (4) store embeddings in a vector database, (5) when you ask a question, retrieve relevant chunks from the database, (6) pass the chunks + question to the LLM, (7) the LLM answers based on the chunks.',
             'RAG is preferred over fine-tuning when your documents change frequently (fine-tuning is one-time training), and you need source attribution (RAG shows which documents were used).',
           ],
+          image: '/images/best-local-rag-tools-pipeline-flow-en.svg',
+          imageCaption: 'RAG pipeline: documents are uploaded, split into chunks, converted to embeddings, and stored in a vector database, then matching chunks are retrieved to generate a sourced answer.',
         },
         top8Tools: {
           title: 'Top 8 Local RAG Tools in 2026',
@@ -70,6 +72,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Tool': 'Text-Generation-WebUI RAG', 'Type': 'Extension', 'Best For': 'Integrated with model', 'Vector DB': 'Built-in', 'Learning Curve': 'Low' },
           ],
           columns: ['Tool', 'Type', 'Best For', 'Vector DB', 'Learning Curve'],
+          image: '/images/best-local-rag-tools-framework-comparison-en.svg',
+          imageCaption: 'Open WebUI, LlamaIndex, and LangChain compared by setup type, best use case, vector database support, and learning curve (zero to medium).',
         },
         openWebUIRAG: {
           title: 'How Do You Use Open WebUI RAG (Easiest)?',
@@ -246,6 +250,8 @@ schema: {
             'El proceso: (1) Sube tus documentos (PDFs, archivos de texto), (2) divídelos en chunks, (3) convierte los chunks en embeddings (vectores numéricos), (4) almacena los embeddings en una base de datos vectorial, (5) cuando hagas una pregunta, recupera los chunks relevantes de la base de datos, (6) pasa los chunks + la pregunta al LLM, (7) el LLM responde basándose en los chunks.',
             'RAG es preferible al fine-tuning cuando tus documentos cambian con frecuencia (el fine-tuning es un entrenamiento único) y necesitas atribución de fuentes (RAG muestra qué documentos se usaron).',
           ],
+          image: '/images/best-local-rag-tools-pipeline-flow-en.svg',
+          imageCaption: 'Flujo de RAG: los documentos se suben, se dividen en chunks, se convierten en embeddings y se almacenan en una base de datos vectorial; después se recuperan los chunks relevantes para generar una respuesta con fuentes.',
         },
         top8Tools: {
           title: 'Las 8 mejores herramientas RAG locales en 2026',
@@ -260,6 +266,8 @@ schema: {
             { 'Herramienta': 'Text-Generation-WebUI RAG', 'Tipo': 'Extensión', 'Ideal para': 'Integrado con el modelo', 'Base de datos vectorial': 'Integrada', 'Curva de aprendizaje': 'Baja' },
           ],
           columns: ['Herramienta', 'Tipo', 'Ideal para', 'Base de datos vectorial', 'Curva de aprendizaje'],
+          image: '/images/best-local-rag-tools-framework-comparison-en.svg',
+          imageCaption: 'Comparativa de Open WebUI, LlamaIndex y LangChain por tipo de configuración, mejor caso de uso, soporte de base de datos vectorial y curva de aprendizaje (nula a media).',
         },
         openWebUIRAG: {
           title: '¿Cómo usar Open WebUI RAG (la opción más sencilla)?',
@@ -453,6 +461,8 @@ schema: {
             'العملية: (1) ارفع مستنداتك (ملفات PDF، ملفات نصية)، (2) قسّمها إلى أجزاء، (3) حوّل الأجزاء إلى تضمينات (متجهات رقمية)، (4) خزّن التضمينات في قاعدة بيانات متجهية، (5) عند طرح سؤال، استرجع الأجزاء ذات الصلة من قاعدة البيانات، (6) مرّر الأجزاء + السؤال إلى LLM، (7) يجيب LLM بناءً على الأجزاء.',
             'RAG مفضّل على الضبط الدقيق عندما تتغير مستنداتك بشكل متكرر (الضبط الدقيق تدريب لمرة واحدة) وتحتاج إلى نسب المصادر (يعرض RAG المستندات المستخدمة).',
           ],
+          image: '/images/best-local-rag-tools-pipeline-flow-en.svg',
+          imageCaption: 'مخطط RAG: تُرفع المستندات وتُقسَّم إلى أجزاء وتُحوَّل إلى تضمينات وتُخزَّن في قاعدة بيانات متجهية، ثم تُسترجع الأجزاء المطابقة لتوليد إجابة موثّقة بالمصادر.',
         },
         top8Tools: {
           title: 'أفضل 8 أدوات RAG محلية في 2026',
@@ -467,6 +477,8 @@ schema: {
             { 'الأداة': 'Text-Generation-WebUI RAG', 'النوع': 'امتداد', 'مثالية لـ': 'مدمج مع النموذج', 'قاعدة البيانات المتجهية': 'مدمجة', 'منحنى التعلّم': 'منخفض' },
           ],
           columns: ['الأداة', 'النوع', 'مثالية لـ', 'قاعدة البيانات المتجهية', 'منحنى التعلّم'],
+          image: '/images/best-local-rag-tools-framework-comparison-en.svg',
+          imageCaption: 'مقارنة بين Open WebUI وLlamaIndex وLangChain من حيث نوع الإعداد وأفضل حالة استخدام ودعم قاعدة البيانات المتجهية ومنحنى التعلّم (من معدوم إلى متوسط).',
         },
         openWebUIRAG: {
           title: 'كيف تستخدم Open WebUI RAG (الخيار الأبسط)؟',
@@ -660,6 +672,8 @@ schema: {
             'O processo: (1) Carregue seus documentos (PDFs, arquivos de texto), (2) divida-os em chunks, (3) converta os chunks em embeddings (vetores numéricos), (4) armazene os embeddings em um banco de dados vetorial, (5) quando fizer uma pergunta, recupere os chunks relevantes do banco de dados, (6) passe os chunks + pergunta ao LLM, (7) o LLM responde com base nos chunks.',
             'RAG é preferível ao fine-tuning quando seus documentos mudam com frequência (o fine-tuning é um treinamento único) e você precisa de atribuição de fontes (RAG mostra quais documentos foram usados).',
           ],
+          image: '/images/best-local-rag-tools-pipeline-flow-en.svg',
+          imageCaption: 'Fluxo do RAG: os documentos são enviados, divididos em chunks, convertidos em embeddings e armazenados em um banco de dados vetorial; depois os chunks relevantes são recuperados para gerar uma resposta com fontes.',
         },
         top8Tools: {
           title: 'As 8 melhores ferramentas RAG locais em 2026',
@@ -674,6 +688,8 @@ schema: {
             { 'Ferramenta': 'Text-Generation-WebUI RAG', 'Tipo': 'Extensão', 'Ideal para': 'Integrado com o modelo', 'Banco de dados vetorial': 'Integrado', 'Curva de aprendizado': 'Baixa' },
           ],
           columns: ['Ferramenta', 'Tipo', 'Ideal para', 'Banco de dados vetorial', 'Curva de aprendizado'],
+          image: '/images/best-local-rag-tools-framework-comparison-en.svg',
+          imageCaption: 'Comparativo entre Open WebUI, LlamaIndex e LangChain por tipo de configuração, melhor caso de uso, suporte a banco de dados vetorial e curva de aprendizado (nula a média).',
         },
         openWebUIRAG: {
           title: 'Como usar o Open WebUI RAG (a opção mais fácil)?',
@@ -867,6 +883,8 @@ schema: {
             'Der Prozess: (1) Ihre Dokumente hochladen (PDFs, Textdateien), (2) in Chunks aufteilen, (3) Chunks in Embeddings (numerische Vektoren) konvertieren, (4) Embeddings in einer Vektordatenbank speichern, (5) bei einer Frage relevante Chunks aus der Datenbank abrufen, (6) Chunks + Frage an das LLM übergeben, (7) das LLM antwortet auf Basis der Chunks.',
             'RAG ist gegenüber der Feinabstimmung vorzuziehen, wenn sich Ihre Dokumente häufig ändern (Feinabstimmung ist einmalig), und Sie Quellenangaben benötigen (RAG zeigt, welche Dokumente verwendet wurden).',
           ],
+          image: '/images/best-local-rag-tools-pipeline-flow-en.svg',
+          imageCaption: 'RAG-Ablauf: Dokumente werden hochgeladen, in Chunks aufgeteilt, in Embeddings umgewandelt und in einer Vektordatenbank gespeichert; passende Chunks werden anschließend abgerufen, um eine quellenbasierte Antwort zu erzeugen.',
         },
         top8Tools: {
           title: 'Beste 8 lokale RAG-Tools im 2026',
@@ -881,6 +899,8 @@ schema: {
             { 'Werkzeug': 'Text-Generation-WebUI RAG', 'Typ': 'Erweiterung', 'Am besten für': 'Integriert mit Modell', 'Vektor DB': 'Integriert', 'Lernkurve': 'Niedrig' },
           ],
           columns: ['Werkzeug', 'Typ', 'Am besten für', 'Vektor DB', 'Lernkurve'],
+          image: '/images/best-local-rag-tools-framework-comparison-en.svg',
+          imageCaption: 'Vergleich von Open WebUI, LlamaIndex und LangChain nach Setup-Typ, bestem Anwendungsfall, Unterstützung von Vektordatenbanken und Lernkurve (keine bis mittel).',
         },
         openWebUIRAG: {
           title: 'Wie verwendet man Open WebUI RAG (am einfachsten)?',
@@ -1071,6 +1091,8 @@ schema: {
             'Le processus: (1) Téléchargez vos documents (PDFs, fichiers texte), (2) divisez-les en chunks, (3) convertissez les chunks en embeddings (vecteurs numériques), (4) stockez les embeddings dans une base de données vectorielle, (5) quand vous posez une question, récupérez les chunks pertinents de la base de données, (6) passez les chunks + question au LLM, (7) le LLM répond en fonction des chunks.',
             'RAG est préféré à l\'affinage quand vos documents changent fréquemment (l\'affinage est un entraînement ponctuel), et vous avez besoin d\'attribution de source (RAG montre quels documents ont été utilisés).',
           ],
+          image: '/images/best-local-rag-tools-pipeline-flow-en.svg',
+          imageCaption: 'Flux RAG : les documents sont téléchargés, divisés en chunks, convertis en embeddings et stockés dans une base de données vectorielle, puis les chunks pertinents sont récupérés pour générer une réponse sourcée.',
         },
         top8Tools: {
           title: 'Meilleurs 8 outils RAG locaux en 2026',
@@ -1085,6 +1107,8 @@ schema: {
             { 'Outil': 'Text-Generation-WebUI RAG', 'Type': 'Extension', 'Idéal pour': 'Intégré avec le modèle', 'Base de données vectorielle': 'Intégrée', 'Courbe d\'apprentissage': 'Faible' },
           ],
           columns: ['Outil', 'Type', 'Idéal pour', 'Base de données vectorielle', 'Courbe d\'apprentissage'],
+          image: '/images/best-local-rag-tools-framework-comparison-en.svg',
+          imageCaption: 'Comparaison d\'Open WebUI, LlamaIndex et LangChain selon le type de configuration, le meilleur cas d\'usage, le support de base de données vectorielle et la courbe d\'apprentissage (nulle à moyenne).',
         },
         openWebUIRAG: {
           title: 'Comment utiliser Open WebUI RAG (le plus facile)?',
@@ -1265,6 +1289,8 @@ schema: {
             'プロセス：(1)ドキュメント（PDF、テキストファイル）をアップロード、(2)チャンク（小片）に分割、(3)チャンクを埋め込み（数値ベクトル）に変換、(4)埋め込みをベクトルデータベースに保存、(5)質問に対して関連チャンクをデータベースから検索、(6)チャンク＋質問をLLMに渡す、(7)LLMがチャンクに基づいて回答。',
             'RAGはドキュメントが頻繁に変更される場合（ファインチューニングは1回限りのトレーニング）や、出典の表示が必要な場合（どのドキュメントが使用されたかを示す）に、ファインチューニングより好ましいです。',
           ],
+          image: '/images/best-local-rag-tools-pipeline-flow-en.svg',
+          imageCaption: 'RAGの流れ：ドキュメントをアップロードしてチャンクに分割し、埋め込みに変換してベクトルデータベースに保存、質問時に関連チャンクを検索して出典付きの回答を生成する。',
         },
         top8Tools: {
           title: '2026年のトップ8つのローカルRAGツール',
@@ -1279,6 +1305,8 @@ schema: {
             { 'ツール': 'Text-Generation-WebUI RAG', 'タイプ': '拡張機能', '最適な用途': 'モデルとの統合', 'ベクトルDB': '組み込み', '学習曲線': '低' },
           ],
           columns: ['ツール', 'タイプ', '最適な用途', 'ベクトルDB', '学習曲線'],
+          image: '/images/best-local-rag-tools-framework-comparison-en.svg',
+          imageCaption: 'Open WebUI、LlamaIndex、LangChainをセットアップ方法、最適な用途、対応ベクトルデータベース、学習曲線（なし〜中程度）で比較。',
         },
         openWebUIRAG: {
           title: 'Open WebUI RAG の使い方（最も簡単）',
@@ -1507,6 +1535,8 @@ schema: {
             '流程：(1)上传文档（PDF、文本文件），(2)将其分割成块，(3)将块转换为嵌入（数值向量），(4)将嵌入存储在向量数据库中，(5)当提出问题时，从数据库检索相关块，(6)将块+问题传递给LLM，(7)LLM基于块提供答案。',
             'RAG优于微调的场景：文档频繁变化（微调是一次性训练），需要来源归属（显示使用了哪些文档）。',
           ],
+          image: '/images/best-local-rag-tools-pipeline-flow-en.svg',
+          imageCaption: 'RAG流程：上传文档、分割成块、转换为嵌入并存储在向量数据库中，随后检索匹配的块以生成带来源的答案。',
         },
         top8Tools: {
           title: '2026年排名前8的本地RAG工具',
@@ -1521,6 +1551,8 @@ schema: {
             { '工具': 'Text-Generation-WebUI RAG', '类型': '扩展', '最适合': '与模型集成', '向量数据库': '内置', '学习曲线': '低' },
           ],
           columns: ['工具', '类型', '最适合', '向量数据库', '学习曲线'],
+          image: '/images/best-local-rag-tools-framework-comparison-en.svg',
+          imageCaption: '按设置类型、最佳使用场景、向量数据库支持和学习曲线（从无到中等）比较Open WebUI、LlamaIndex和LangChain。',
         },
         openWebUIRAG: {
           title: '如何使用Open WebUI RAG（最简单）',
@@ -1749,6 +1781,8 @@ schema: {
         '처리 과정: (1) 문서(PDF, 텍스트 파일) 업로드, (2) 청크로 분할, (3) 청크를 임베딩(수치 벡터)으로 변환, (4) 벡터 데이터베이스에 임베딩 저장, (5) 질문 시 데이터베이스에서 관련 청크 검색, (6) 청크와 질문을 LLM에 전달, (7) LLM이 청크를 기반으로 답변.',
         'RAG는 문서가 자주 변경되는 경우(파인튜닝은 일회성 훈련)와 출처 표시가 필요한 경우(RAG는 사용된 문서를 표시) 파인튜닝보다 선호됩니다.',
       ],
+      image: '/images/best-local-rag-tools-pipeline-flow-en.svg',
+      imageCaption: 'RAG 파이프라인: 문서를 업로드하고 청크로 분할한 뒤 임베딩으로 변환하여 벡터 데이터베이스에 저장하고, 이후 일치하는 청크를 검색해 출처가 포함된 답변을 생성합니다.',
     },
     top8Tools: {
       title: '2026년 상위 8개 로컬 RAG 도구',
@@ -1763,6 +1797,8 @@ schema: {
         { 'Tool': 'Text-Generation-WebUI RAG', 'Type': '확장 기능', 'Best For': '모델과의 통합', 'Vector DB': '내장', 'Learning Curve': '낮음' },
       ],
       columns: ['Tool', 'Type', 'Best For', 'Vector DB', 'Learning Curve'],
+      image: '/images/best-local-rag-tools-framework-comparison-en.svg',
+      imageCaption: 'Open WebUI, LlamaIndex, LangChain을 설정 방식, 최적 사용 사례, 벡터 데이터베이스 지원, 학습 곡선(없음~중간) 기준으로 비교합니다.',
     },
     openWebUIRAG: {
       title: 'Open WebUI RAG는 어떻게 사용합니까? (가장 쉬운 방법)',
