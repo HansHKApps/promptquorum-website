@@ -83,6 +83,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**No mandatory cloud account:** the device must function through a local hub.',
           '**No subscription for core features:** recording or automation should not require a fee.',
         ],
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        imageCaption: 'Local-capable devices — Zigbee, Z-Wave, Matter, or a local API — compared against cloud-only devices across 5 factors including subscriptions and offline reliability.',
       },
       hub: {
         id: 'hub',
@@ -166,6 +168,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Category': 'Camera', 'Local-capable pick': 'Local RTSP camera + Frigate', 'Why': 'Private AI detection, no fees' },
           { 'Category': 'Plug', 'Local-capable pick': 'Zigbee or local-Wi-Fi plug', 'Why': 'Local control, no cloud account' },
         ],
+        image: '/images/best-smart-home-devices-2026-category-picks-en.svg',
+        imageCaption: 'Best local-capable pick for each of 6 smart home categories: hub, lighting, locks, sensors, cameras, and plugs, mapped to Zigbee, Z-Wave, Matter, or local Wi-Fi.',
       },
       faqSection: {
         id: 'faq',
@@ -298,6 +302,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**لا حساب سحابي إلزامي:** يجب أن يعمل الجهاز عبر مركز محلي.',
           '**لا اشتراك للميزات الأساسية:** يجب ألا يتطلب التسجيل أو الأتمتة رسومًا.',
         ],
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        imageCaption: 'مقارنة الأجهزة القادرة على العمل محليًا (Zigbee أو Z-Wave أو Matter أو واجهة برمجية محلية) بالأجهزة التي تعمل بالسحابة فقط عبر 5 معايير، منها الاشتراكات والموثوقية دون إنترنت.',
       },
       hub: {
         id: 'hub',
@@ -381,6 +387,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الفئة': 'الكاميرا', 'الاختيار المحلي القادر': 'كاميرا RTSP محلية + Frigate', 'لماذا': 'كشف ذكاء اصطناعي خاص، بلا رسوم' },
           { 'الفئة': 'المقبس', 'الاختيار المحلي القادر': 'مقبس Zigbee أو Wi-Fi محلي', 'لماذا': 'تحكم محلي، لا حساب سحابي' },
         ],
+        image: '/images/best-smart-home-devices-2026-category-picks-en.svg',
+        imageCaption: 'أفضل اختيار قادر على العمل محليًا لكل فئة من فئات المنزل الذكي الست: المركز والإضاءة والأقفال والمستشعرات والكاميرات والمقابس، مرتبطة بـ Zigbee أو Z-Wave أو Matter أو Wi-Fi محلي.',
       },
       faqSection: {
         id: 'faq',
@@ -513,6 +521,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Kein verpflichtendes Cloud-Konto:** Das Gerät muss über einen lokalen Hub funktionieren.',
           '**Kein Abonnement für Kernfunktionen:** Aufzeichnung oder Automatisierung sollten keine Gebühr erfordern.',
         ],
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        imageCaption: 'Lokal-fähige Geräte — Zigbee, Z-Wave, Matter oder eine lokale API — im Vergleich zu Cloud-only-Geräten anhand von 5 Kriterien, darunter Abonnements und Offline-Zuverlässigkeit.',
       },
       hub: {
         id: 'hub',
@@ -596,6 +606,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Kategorie': 'Kamera', 'Lokal-fähige Wahl': 'Lokale RTSP-Kamera + Frigate', 'Warum': 'Private KI-Erkennung, keine Gebühren' },
           { 'Kategorie': 'Steckdose', 'Lokal-fähige Wahl': 'Zigbee- oder lokale-WLAN-Steckdose', 'Warum': 'Lokale Steuerung, kein Cloud-Konto' },
         ],
+        image: '/images/best-smart-home-devices-2026-category-picks-en.svg',
+        imageCaption: 'Die beste lokal-fähige Wahl für jede der 6 Smart-Home-Kategorien: Hub, Beleuchtung, Schlösser, Sensoren, Kameras und Steckdosen, zugeordnet zu Zigbee, Z-Wave, Matter oder lokalem WLAN.',
       },
       faqSection: {
         id: 'faq',
@@ -728,6 +740,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sin cuenta en la nube obligatoria:** el dispositivo debe funcionar mediante un hub local.',
           '**Sin suscripción para funciones clave:** la grabación o la automatización no deberían requerir una cuota.',
         ],
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        imageCaption: 'Dispositivos con capacidad local — Zigbee, Z-Wave, Matter o una API local — comparados con dispositivos solo en la nube en 5 factores, incluidas las suscripciones y la fiabilidad sin conexión.',
       },
       hub: {
         id: 'hub',
@@ -811,6 +825,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Categoría': 'Cámara', 'Opción con capacidad local': 'Cámara RTSP local + Frigate', 'Por qué': 'Detección por IA privada, sin cuotas' },
           { 'Categoría': 'Enchufe', 'Opción con capacidad local': 'Enchufe Zigbee o de Wi-Fi local', 'Por qué': 'Control local, sin cuenta en la nube' },
         ],
+        image: '/images/best-smart-home-devices-2026-category-picks-en.svg',
+        imageCaption: 'La mejor opción con capacidad local para cada una de las 6 categorías de smart home: hub, iluminación, cerraduras, sensores, cámaras y enchufes, asociadas a Zigbee, Z-Wave, Matter o Wi-Fi local.',
       },
       faqSection: {
         id: 'faq',
@@ -943,6 +959,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**필수 클라우드 계정 없음:** 기기가 로컬 허브를 통해 작동해야 합니다.',
           '**핵심 기능에 구독 없음:** 녹화나 자동화에 월정액이 필요하지 않아야 합니다.',
         ],
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        imageCaption: '로컬 제어 가능 기기(Zigbee, Z-Wave, Matter 또는 로컬 API)와 클라우드 전용 기기를 구독 여부, 오프라인 신뢰성 등 5가지 기준으로 비교합니다.',
       },
       hub: {
         id: 'hub',
@@ -1026,6 +1044,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '카테고리': '카메라', '로컬 제어 가능 선택': '로컬 RTSP 카메라 + Frigate', '이유': '프라이빗 AI 감지, 구독 없음' },
           { '카테고리': '플러그', '로컬 제어 가능 선택': 'Zigbee 또는 로컬 Wi-Fi 플러그', '이유': '로컬 제어, 클라우드 계정 없음' },
         ],
+        image: '/images/best-smart-home-devices-2026-category-picks-en.svg',
+        imageCaption: '허브, 조명, 잠금장치, 센서, 카메라, 플러그 등 스마트 홈 6개 카테고리별 최고의 로컬 제어 가능 선택을 Zigbee, Z-Wave, Matter, 로컬 Wi-Fi에 매핑했습니다.',
       },
       faqSection: {
         id: 'faq',
@@ -1158,6 +1178,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pas de compte cloud obligatoire :** l\'appareil doit fonctionner via un hub local.',
           '**Pas d\'abonnement pour les fonctions clés :** l\'enregistrement ou l\'automatisation ne devraient pas exiger de frais.',
         ],
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        imageCaption: 'Appareils à capacité locale — Zigbee, Z-Wave, Matter ou une API locale — comparés aux appareils cloud uniquement selon 5 critères, dont les abonnements et la fiabilité hors ligne.',
       },
       hub: {
         id: 'hub',
@@ -1241,6 +1263,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Catégorie': 'Caméra', 'Choix à capacité locale': 'Caméra RTSP locale + Frigate', 'Pourquoi': 'Détection IA privée, sans frais' },
           { 'Catégorie': 'Prise', 'Choix à capacité locale': 'Prise Zigbee ou Wi-Fi local', 'Pourquoi': 'Contrôle local, sans compte cloud' },
         ],
+        image: '/images/best-smart-home-devices-2026-category-picks-en.svg',
+        imageCaption: 'Meilleur choix à capacité locale pour chacune des 6 catégories de maison connectée : hub, éclairage, serrures, capteurs, caméras et prises, associées à Zigbee, Z-Wave, Matter ou au Wi-Fi local.',
       },
       faqSection: {
         id: 'faq',
@@ -1373,6 +1397,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**必須のクラウドアカウントなし：** 機器はローカルハブ経由で機能すること。',
           '**コア機能にサブスクなし：** 録画や自動化に料金を要しないこと。',
         ],
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        imageCaption: 'ローカル対応機器（Zigbee、Z-Wave、Matter、ローカルAPI）とクラウド専用機器を、サブスクやオフライン時の信頼性など5つの観点で比較。',
       },
       hub: {
         id: 'hub',
@@ -1456,6 +1482,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'カテゴリー': 'カメラ', 'ローカル対応の選択': 'ローカル RTSP カメラ + Frigate', '理由': 'プライベートな AI 検出、料金なし' },
           { 'カテゴリー': 'プラグ', 'ローカル対応の選択': 'Zigbee またはローカル Wi-Fi プラグ', '理由': 'ローカル制御、クラウドアカウント不要' },
         ],
+        image: '/images/best-smart-home-devices-2026-category-picks-en.svg',
+        imageCaption: 'ハブ、照明、ロック、センサー、カメラ、プラグというスマートホーム6カテゴリーそれぞれで最適なローカル対応の選択肢を、Zigbee・Z-Wave・Matter・ローカルWi-Fiに対応付け。',
       },
       faqSection: {
         id: 'faq',
@@ -1588,6 +1616,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sem conta na nuvem obrigatória:** o dispositivo deve funcionar por meio de um hub local.',
           '**Sem assinatura para funções principais:** gravação ou automação não deveriam exigir uma taxa.',
         ],
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        imageCaption: 'Dispositivos com capacidade local — Zigbee, Z-Wave, Matter ou uma API local — comparados a dispositivos somente em nuvem em 5 critérios, incluindo assinaturas e confiabilidade offline.',
       },
       hub: {
         id: 'hub',
@@ -1671,6 +1701,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Categoria': 'Câmera', 'Opção com capacidade local': 'Câmera RTSP local + Frigate', 'Por quê': 'Detecção por IA privada, sem taxas' },
           { 'Categoria': 'Tomada', 'Opção com capacidade local': 'Tomada Zigbee ou de Wi-Fi local', 'Por quê': 'Controle local, sem conta na nuvem' },
         ],
+        image: '/images/best-smart-home-devices-2026-category-picks-en.svg',
+        imageCaption: 'A melhor opção com capacidade local para cada uma das 6 categorias de casa inteligente: hub, iluminação, fechaduras, sensores, câmeras e tomadas, associadas a Zigbee, Z-Wave, Matter ou Wi-Fi local.',
       },
       faqSection: {
         id: 'faq',
@@ -1803,6 +1835,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**无强制云端账户：** 设备必须能经由本地中枢工作。',
           '**核心功能无订阅：** 录制或自动化不应要求费用。',
         ],
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        imageCaption: '支持本地的设备(Zigbee、Z-Wave、Matter 或本地 API)与仅云端设备在订阅、离线可靠性等 5 项因素上的对比。',
       },
       hub: {
         id: 'hub',
@@ -1886,6 +1920,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '类别': '摄像头', '支持本地的选择': '本地 RTSP 摄像头 + Frigate', '原因': '私密 AI 检测，无费用' },
           { '类别': '插座', '支持本地的选择': 'Zigbee 或本地 Wi-Fi 插座', '原因': '本地控制，无云端账户' },
         ],
+        image: '/images/best-smart-home-devices-2026-category-picks-en.svg',
+        imageCaption: '智能家居 6 个类别(中枢、照明、门锁、传感器、摄像头、插座)各自最佳的本地能力选择，对应 Zigbee、Z-Wave、Matter 或本地 Wi-Fi。',
       },
       faqSection: {
         id: 'faq',
