@@ -17394,6 +17394,16 @@
     "width": 800,
     "height": 350
   },
+  "/images/run-first-local-llm-ram-model-picker-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 330
+  },
+  "/images/run-first-local-llm-setup-flow-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
   "/images/run-qwen-locally-guide-2026-model-sizes-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,

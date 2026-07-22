@@ -1,0 +1,48 @@
+<svg viewBox="0 0 800 330" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="330" fill="#FFFFFF"/>
+
+  <text x="400" y="30" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Pick Your First Model by RAM</text>
+
+  <!-- Header row -->
+  <text x="30" y="65" font-size="12" font-weight="700" fill="#79747E">Your RAM</text>
+  <text x="180" y="65" font-size="12" font-weight="700" fill="#79747E">Model</text>
+  <text x="420" y="65" font-size="12" font-weight="700" fill="#79747E">Download</text>
+  <text x="560" y="65" font-size="12" font-weight="700" fill="#79747E">Best For</text>
+  <line x1="18" y1="74" x2="782" y2="74" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: 4 GB -->
+  <circle cx="45" cy="100" r="16" fill="#F4B400"/>
+  <text x="45" y="105" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">4GB</text>
+  <text x="180" y="105" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">llama3.2:1b</text>
+  <text x="420" y="105" font-size="12" fill="#49454F">~1.3 GB</text>
+  <text x="560" y="105" font-size="11" fill="#49454F">Smallest usable Llama model</text>
+  <line x1="18" y1="120" x2="782" y2="120" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: 8 GB -- recommended, highlighted -->
+  <rect x="18" y="128" width="764" height="44" fill="#E8DEF8" rx="4"/>
+  <circle cx="45" cy="150" r="16" fill="#34A853"/>
+  <text x="45" y="155" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">8GB</text>
+  <text x="180" y="150" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#6750A4">Llama 3.2 3B</text>
+  <text x="180" y="166" font-size="10" font-weight="700" fill="#6750A4">&#9733; recommended start</text>
+  <text x="420" y="155" font-size="12" fill="#1C1B1F">~2 GB</text>
+  <text x="560" y="155" font-size="11" fill="#1C1B1F">Best quality/size for beginners</text>
+  <line x1="18" y1="180" x2="782" y2="180" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: 8-16 GB -->
+  <circle cx="45" cy="206" r="16" fill="#6750A4"/>
+  <text x="45" y="210" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">8-16</text>
+  <text x="180" y="210" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">Llama 3.3 8B</text>
+  <text x="420" y="210" font-size="12" fill="#49454F">~4.7 GB</text>
+  <text x="560" y="210" font-size="11" fill="#49454F">Strong general-purpose model</text>
+  <line x1="18" y1="226" x2="782" y2="226" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: 16+ GB -->
+  <circle cx="45" cy="252" r="16" fill="#79747E"/>
+  <text x="45" y="256" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">16+</text>
+  <text x="180" y="256" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">mistral:7b / qwen2.5:7b</text>
+  <text x="420" y="256" font-size="12" fill="#49454F">~4-5 GB</text>
+  <text x="560" y="256" font-size="11" fill="#49454F">Competitive quality, fast inference</text>
+
+  <line x1="18" y1="278" x2="782" y2="278" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="302" font-size="11.5" font-weight="600" fill="#49454F" text-anchor="middle">When in doubt, start with llama3.2:3b -- it runs on any machine with 4 GB of RAM and produces useful output.</text>
+<text x="792" y="325" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
