@@ -95,6 +95,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Install method': 'HAOS on mini PC', 'Difficulty': 'Easy', 'Best for': 'Basics + local AI' },
           { 'Install method': 'Container (Docker)', 'Difficulty': 'Moderate', 'Best for': 'Existing home servers/NAS' },
         ],
+        image: '/images/home-assistant-getting-started-pi-vs-mini-pc-en.svg',
+        imageCaption: 'Raspberry Pi vs mini PC for Home Assistant: a Pi handles dashboards, automations, and Zigbee/Z-Wave at low power; a mini PC adds headroom for a local LLM via Ollama, larger Whisper voice models, and Frigate camera detection on the same box.',
         items: [
           'For hardware sizing including a local LLM, see [best hardware for a local smart home](/smart-home/best-hardware-for-local-smart-home).',
         ],
@@ -133,6 +135,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Save and test it, then refine.',
           'For context-aware rules later, see [AI automations with a local LLM](/smart-home/ai-automations-local-llm).',
         ],
+        image: '/images/home-assistant-getting-started-automation-steps-en.svg',
+        imageCaption: 'The 4 steps to your first Home Assistant automation: create the automation, choose a trigger (time, sunset, or sensor state), choose an action (turn on a light or send a notification), then save and test — all in the visual editor with no coding required.',
       },
       aiLater: {
         id: 'ai-later',
@@ -289,6 +293,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'طريقة التثبيت': 'HAOS على mini PC', 'الصعوبة': 'سهل', 'الأفضل لـ': 'الأساسيات + ذكاء اصطناعي محلي' },
           { 'طريقة التثبيت': 'حاوية (Docker)', 'الصعوبة': 'متوسط', 'الأفضل لـ': 'الخوادم المنزلية/NAS الموجودة' },
         ],
+        image: '/images/home-assistant-getting-started-pi-vs-mini-pc-en.svg',
+        imageCaption: 'Raspberry Pi مقابل mini PC لـ Home Assistant: يتولى الـ Pi لوحات التحكم والأتمتة وZigbee/Z-Wave بطاقة منخفضة؛ يضيف mini PC القدرة على تشغيل نموذج LLM محلي عبر Ollama، ونماذج Whisper صوتية أكبر، وكشف كاميرا Frigate على نفس الجهاز.',
         items: [
           'لتحديد حجم الأجهزة بما في ذلك نموذج LLM محلي، راجع [أفضل أجهزة المنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home).',
         ],
@@ -327,6 +333,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'احفظها واختبرها، ثم حسّنها.',
           'لقواعد واعية بالسياق لاحقًا، راجع [أتمتة الذكاء الاصطناعي بنموذج LLM محلي](/ar/smart-home/ai-automations-local-llm).',
         ],
+        image: '/images/home-assistant-getting-started-automation-steps-en.svg',
+        imageCaption: 'الخطوات الأربع لأول أتمتة في Home Assistant: إنشاء الأتمتة، اختيار محفّز (وقت أو غروب أو حالة مستشعر)، اختيار إجراء (تشغيل ضوء أو إرسال إشعار)، ثم الحفظ والاختبار — كل ذلك في المحرر المرئي دون الحاجة إلى برمجة.',
       },
       aiLater: {
         id: 'ai-later',
@@ -483,6 +491,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Installationsmethode': 'HAOS auf Mini-PC', 'Schwierigkeit': 'Einfach', 'Am besten für': 'Grundlagen + lokale KI' },
           { 'Installationsmethode': 'Container (Docker)', 'Schwierigkeit': 'Mittel', 'Am besten für': 'Vorhandene Heimserver/NAS' },
         ],
+        image: '/images/home-assistant-getting-started-pi-vs-mini-pc-en.svg',
+        imageCaption: 'Raspberry Pi vs. Mini-PC für Home Assistant: Ein Pi bewältigt Dashboards, Automatisierungen und Zigbee/Z-Wave bei niedrigem Stromverbrauch; ein Mini-PC bietet zusätzlich Reserven für ein lokales LLM über Ollama, größere Whisper-Sprachmodelle und Frigate-Kameraerkennung auf demselben Gerät.',
         items: [
           'Für die Hardware-Dimensionierung inklusive eines lokalen LLM siehe [beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home).',
         ],
@@ -521,6 +531,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Speichern und testen Sie sie, dann verfeinern.',
           'Für kontextbewusste Regeln später siehe [KI-Automatisierungen mit einem lokalen LLM](/de/smart-home/ai-automations-local-llm).',
         ],
+        image: '/images/home-assistant-getting-started-automation-steps-en.svg',
+        imageCaption: 'Die 4 Schritte zu Ihrer ersten Home-Assistant-Automatisierung: Automatisierung erstellen, einen Auslöser wählen (Zeit, Sonnenuntergang oder Sensorzustand), eine Aktion wählen (Licht einschalten oder Benachrichtigung senden), dann speichern und testen – alles im visuellen Editor ohne Programmierung.',
       },
       aiLater: {
         id: 'ai-later',
@@ -677,6 +689,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Método de instalación': 'HAOS en mini PC', 'Dificultad': 'Fácil', 'Mejor para': 'Lo básico + IA local' },
           { 'Método de instalación': 'Contenedor (Docker)', 'Dificultad': 'Moderada', 'Mejor para': 'Servidores domésticos/NAS existentes' },
         ],
+        image: '/images/home-assistant-getting-started-pi-vs-mini-pc-en.svg',
+        imageCaption: 'Raspberry Pi frente a mini PC para Home Assistant: una Pi maneja paneles, automatizaciones y Zigbee/Z-Wave con bajo consumo; un mini PC añade margen para un LLM local vía Ollama, modelos de voz Whisper más grandes y detección de cámara Frigate en el mismo equipo.',
         items: [
           'Para el dimensionado de hardware incluyendo un LLM local, consulta [mejor hardware para un smart home local](/es/smart-home/best-hardware-for-local-smart-home).',
         ],
@@ -715,6 +729,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Guárdala y pruébala, luego refínala.',
           'Para reglas contextuales más adelante, consulta [automatizaciones con IA con un LLM local](/es/smart-home/ai-automations-local-llm).',
         ],
+        image: '/images/home-assistant-getting-started-automation-steps-en.svg',
+        imageCaption: 'Los 4 pasos para tu primera automatización de Home Assistant: crear la automatización, elegir un disparador (hora, atardecer o estado de un sensor), elegir una acción (encender una luz o enviar una notificación), y luego guardar y probar — todo en el editor visual sin necesidad de programar.',
       },
       aiLater: {
         id: 'ai-later',
@@ -871,6 +887,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '설치 방법': '미니 PC에 HAOS', '난이도': '쉬움', '최적 용도': '기본 기능 + 로컬 AI' },
           { '설치 방법': '컨테이너(Docker)', '난이도': '보통', '최적 용도': '기존 홈 서버/NAS' },
         ],
+        image: '/images/home-assistant-getting-started-pi-vs-mini-pc-en.svg',
+        imageCaption: 'Home Assistant용 Raspberry Pi와 미니 PC 비교: Pi는 저전력으로 대시보드, 자동화, Zigbee/Z-Wave를 처리하고, 미니 PC는 같은 기기에서 Ollama를 통한 로컬 LLM, 더 큰 Whisper 음성 모델, Frigate 카메라 감지까지 여유롭게 처리합니다.',
         items: [
           '로컬 LLM을 포함한 하드웨어 규모 산정은 [로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home)를 참조하십시오.',
         ],
@@ -909,6 +927,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '저장하고 테스트한 후 개선하십시오.',
           '나중에 컨텍스트 인식 규칙을 위해 [로컬 LLM으로 AI 자동화](/ko/smart-home/ai-automations-local-llm)를 참조하십시오.',
         ],
+        image: '/images/home-assistant-getting-started-automation-steps-en.svg',
+        imageCaption: 'Home Assistant 첫 자동화의 4단계: 자동화 만들기, 트리거 선택(시간, 일몰 또는 센서 상태), 작업 선택(조명 켜기 또는 알림 보내기), 그리고 저장 및 테스트 — 모두 코딩 없이 시각적 편집기에서 진행됩니다.',
       },
       aiLater: {
         id: 'ai-later',
@@ -1065,6 +1085,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Méthode d\'installation': 'HAOS sur mini-PC', 'Difficulté': 'Facile', 'Idéal pour': 'Les bases + IA locale' },
           { 'Méthode d\'installation': 'Conteneur (Docker)', 'Difficulté': 'Modérée', 'Idéal pour': 'Serveurs domestiques/NAS existants' },
         ],
+        image: '/images/home-assistant-getting-started-pi-vs-mini-pc-en.svg',
+        imageCaption: 'Raspberry Pi contre mini-PC pour Home Assistant : un Pi gère les tableaux de bord, les automatisations et Zigbee/Z-Wave à faible consommation ; un mini-PC ajoute la marge nécessaire pour un LLM local via Ollama, des modèles vocaux Whisper plus grands et la détection caméra Frigate sur le même appareil.',
         items: [
           'Pour le dimensionnement matériel incluant un LLM local, voir [meilleur matériel pour une maison connectée locale](/fr/smart-home/best-hardware-for-local-smart-home).',
         ],
@@ -1103,6 +1125,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Enregistrez-la et testez-la, puis affinez.',
           'Pour des règles contextuelles plus tard, voir [automatisations IA avec un LLM local](/fr/smart-home/ai-automations-local-llm).',
         ],
+        image: '/images/home-assistant-getting-started-automation-steps-en.svg',
+        imageCaption: 'Les 4 étapes de votre première automatisation Home Assistant : créer l\'automatisation, choisir un déclencheur (heure, coucher du soleil ou état de capteur), choisir une action (allumer une lumière ou envoyer une notification), puis enregistrer et tester — le tout dans l\'éditeur visuel, sans programmation.',
       },
       aiLater: {
         id: 'ai-later',
@@ -1259,6 +1283,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'インストール方法': 'ミニPC 上の HAOS', '難易度': '簡単', '最適な用途': '基本＋ローカルAI' },
           { 'インストール方法': 'コンテナ（Docker）', '難易度': '中程度', '最適な用途': '既存のホームサーバー/NAS' },
         ],
+        image: '/images/home-assistant-getting-started-pi-vs-mini-pc-en.svg',
+        imageCaption: 'Home Assistant 向け Raspberry Pi とミニPC の比較：Pi は低消費電力でダッシュボード、自動化、Zigbee/Z-Wave を処理し、ミニPC は同じ機器上で Ollama によるローカルLLM、より大きな Whisper 音声モデル、Frigate カメラ検出まで余裕を持って扱えます。',
         items: [
           'ローカルLLMを含むハードウェアのサイズ選びは[ローカルスマートホームに最適なハードウェア](/ja/smart-home/best-hardware-for-local-smart-home)を参照。',
         ],
@@ -1297,6 +1323,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '保存してテストし、それから調整する。',
           '後の文脈対応ルールは[ローカルLLMによるAI自動化](/ja/smart-home/ai-automations-local-llm)を参照。',
         ],
+        image: '/images/home-assistant-getting-started-automation-steps-en.svg',
+        imageCaption: '初めての Home Assistant 自動化、4つのステップ：自動化を作成し、トリガー（時間、日没、またはセンサーの状態）を選び、アクション（照明を点ける、通知を送る）を選び、保存してテストする——すべてビジュアルエディターで行い、プログラミングは不要です。',
       },
       aiLater: {
         id: 'ai-later',
@@ -1453,6 +1481,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Método de instalação': 'HAOS em mini PC', 'Dificuldade': 'Fácil', 'Melhor para': 'O básico + IA local' },
           { 'Método de instalação': 'Contêiner (Docker)', 'Dificuldade': 'Moderada', 'Melhor para': 'Servidores domésticos/NAS existentes' },
         ],
+        image: '/images/home-assistant-getting-started-pi-vs-mini-pc-en.svg',
+        imageCaption: 'Raspberry Pi vs. mini PC para o Home Assistant: um Pi cuida de painéis, automações e Zigbee/Z-Wave com baixo consumo; um mini PC acrescenta folga para um LLM local via Ollama, modelos de voz Whisper maiores e detecção de câmera Frigate na mesma máquina.',
         items: [
           'Para o dimensionamento de hardware incluindo um LLM local, veja [melhor hardware para uma casa inteligente local](/pt/smart-home/best-hardware-for-local-smart-home).',
         ],
@@ -1491,6 +1521,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Salve e teste, depois refine.',
           'Para regras contextuais depois, veja [automações de IA com um LLM local](/pt/smart-home/ai-automations-local-llm).',
         ],
+        image: '/images/home-assistant-getting-started-automation-steps-en.svg',
+        imageCaption: 'As 4 etapas da sua primeira automação no Home Assistant: criar a automação, escolher um gatilho (horário, pôr do sol ou estado de sensor), escolher uma ação (acender uma luz ou enviar uma notificação) e depois salvar e testar — tudo no editor visual, sem programação.',
       },
       aiLater: {
         id: 'ai-later',
@@ -1647,6 +1679,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '安装方式': '迷你 PC 上的 HAOS', '难度': '简单', '最适合': '基础 + 本地 AI' },
           { '安装方式': '容器（Docker）', '难度': '中等', '最适合': '既有的家庭服务器/NAS' },
         ],
+        image: '/images/home-assistant-getting-started-pi-vs-mini-pc-en.svg',
+        imageCaption: 'Home Assistant 的 Raspberry Pi 与迷你 PC 对比：Pi 以低功耗处理仪表盘、自动化和 Zigbee/Z-Wave；迷你 PC 则为通过 Ollama 运行本地 LLM、更大的 Whisper 语音模型以及 Frigate 摄像头检测预留了余量，且可在同一台设备上运行。',
         items: [
           '关于含本地 LLM 的硬件规模选择，参见[本地智能家居的最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home)。',
         ],
@@ -1685,6 +1719,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '保存并测试，然后再打磨。',
           '关于以后基于情境的规则，参见[用本地LLM实现AI自动化](/zh/smart-home/ai-automations-local-llm)。',
         ],
+        image: '/images/home-assistant-getting-started-automation-steps-en.svg',
+        imageCaption: 'Home Assistant 首条自动化的 4 个步骤：创建自动化、选择触发器（时间、日落或传感器状态）、选择动作（开灯或发送通知），然后保存并测试——全程在可视化编辑器中完成，无需编程。',
       },
       aiLater: {
         id: 'ai-later',
