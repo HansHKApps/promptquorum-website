@@ -17764,6 +17764,96 @@
     "width": 800,
     "height": 360
   },
+  "/images/run-qwen-vl-locally-2026-ollama-setup-steps-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-qwen-vl-locally-2026-ollama-setup-steps-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-qwen-vl-locally-2026-ollama-setup-steps-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-qwen-vl-locally-2026-ollama-setup-steps-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-qwen-vl-locally-2026-ollama-setup-steps-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-qwen-vl-locally-2026-ollama-setup-steps-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-qwen-vl-locally-2026-ollama-setup-steps-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-qwen-vl-locally-2026-ollama-setup-steps-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-qwen-vl-locally-2026-ollama-setup-steps-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-qwen-vl-locally-2026-vision-pipeline-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/run-qwen-vl-locally-2026-vision-pipeline-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/run-qwen-vl-locally-2026-vision-pipeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/run-qwen-vl-locally-2026-vision-pipeline-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/run-qwen-vl-locally-2026-vision-pipeline-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/run-qwen-vl-locally-2026-vision-pipeline-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/run-qwen-vl-locally-2026-vision-pipeline-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/run-qwen-vl-locally-2026-vision-pipeline-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/run-qwen-vl-locally-2026-vision-pipeline-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
   "/images/running-70b-models-apple-silicon-m5-max-hardware-comparison-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
