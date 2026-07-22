@@ -1,0 +1,55 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">微信 + 本地LLM：消息流转架构</text>
+
+  <!-- Step 1 -->
+  <circle cx="70" cy="110" r="20" fill="#6750A4"/>
+  <text x="70" y="116" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="70" y="147" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">微信客户端</text>
+  <text x="70" y="163" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">weixin.qq.com</text>
+  <text x="70" y="176" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">(Windows PC)</text>
+  <text x="152" y="116" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+  <!-- Step 2 -->
+  <circle cx="235" cy="110" r="20" fill="#6750A4"/>
+  <text x="235" y="116" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="235" y="147" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">WeChatFerry钩子</text>
+  <text x="235" y="163" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">pip install wcferry</text>
+  <text x="235" y="176" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">msg.is_at 检测</text>
+  <text x="317" y="116" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+  <!-- Step 3 -->
+  <circle cx="400" cy="110" r="20" fill="#6750A4"/>
+  <text x="400" y="116" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="400" y="147" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Python桥接脚本</text>
+  <text x="400" y="163" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">wcf.get_msg()</text>
+  <text x="400" y="176" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">requests.post()</text>
+  <text x="482" y="116" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+  <!-- Step 4 -->
+  <circle cx="565" cy="110" r="20" fill="#6750A4"/>
+  <text x="565" y="116" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="565" y="147" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ollama API</text>
+  <text x="565" y="163" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">localhost:11434</text>
+  <text x="565" y="176" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">/api/generate</text>
+  <text x="647" y="116" font-size="18" fill="#6750A4" text-anchor="middle">→</text>
+
+  <!-- Step 5 -->
+  <circle cx="730" cy="110" r="20" fill="#34A853"/>
+  <text x="730" y="116" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="730" y="147" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Qwen3 7B回复</text>
+  <text x="730" y="163" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">8–15 tok/s</text>
+  <text x="730" y="176" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">Q4_K_M，5.5 GB显存</text>
+
+  <!-- Return path -->
+  <path d="M730,130 C730,235 70,235 70,130" fill="none" stroke="#6750A4" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="70,132 63,146 78,146" fill="#6750A4"/>
+  <text x="400" y="255" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">回复被送回微信聊天窗口</text>
+
+  <rect x="130" y="278" width="540" height="46" rx="6" fill="#F7F2FA"/>
+  <text x="400" y="297" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">完整往返耗时：每条消息2–5秒</text>
+  <text x="400" y="314" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">全程在本地硬件运行——零云端API调用，数据不出设备</text>
+
+  <line x1="60" y1="345" x2="740" y2="345" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="378" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">WeChatFerry钩入Windows微信PC客户端；Python桥接脚本将消息转发至Ollama本地HTTP API并返回模型回复。</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

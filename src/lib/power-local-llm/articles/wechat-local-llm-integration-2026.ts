@@ -137,6 +137,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pattern 3 — Ollama + Open WebUI forwarding:** Use Open WebUI\'s built-in WeChat notification feature (where available) to push summaries or responses back to a personal WeChat account. Lightweight and no hook required, but only supports one-way notifications.',
           'For most users — especially in China on personal accounts — Pattern 1 (WeChatFerry + Ollama) is the right choice for 2026.',
         ],
+        image: '/images/wechat-local-llm-integration-2026-architecture-flow-en.svg',
+        imageCaption: 'WeChat + local LLM message flow: WeChatFerry hooks the WeChat PC client, a Python bridge forwards messages to Ollama at localhost:11434, and Qwen3 7B Q4_K_M returns a reply in 2–5 seconds — entirely on local hardware with zero cloud API calls.',
       },
       wechatferry: {
         id: 'wechatferry',
@@ -204,6 +206,8 @@ while True:
           '**DeepSeek-R1-Distill-Qwen-7B:** Good for question-answering and step-by-step explanations in Chinese. Slightly weaker at casual conversation than Qwen3 7B.',
           '**Avoid:** Llama 3 and Mistral — Western-first tokenisers use 2–3× more tokens for Chinese text, leading to slower responses and truncation on long messages.',
         ],
+        image: '/images/wechat-local-llm-integration-2026-cjk-tokenization-efficiency-en.svg',
+        imageCaption: 'Chinese text tokenization by model: Qwen3 7B needs 42 tokens for a 50-character sentence versus 98 for Llama 3 and 115 for Mistral — native CJK tokenisation cuts token count by 2.3–2.7×.',
       },
       groupChat: {
         id: 'group-chat',
@@ -380,6 +384,8 @@ while True:
           '**Muster 3 – Ollama + Open WebUI:** Einfachste Option für einseitige Benachrichtigungen. Kein Hook erforderlich, aber kein interaktiver Chat.',
           'Für die meisten Nutzer – besonders in China mit persönlichen Konten – ist Muster 1 (WeChatFerry + Ollama) die richtige Wahl für 2026.',
         ],
+        image: '/images/wechat-local-llm-integration-2026-architecture-flow-en.svg',
+        imageCaption: 'WeChat + lokales LLM Nachrichtenfluss: WeChatFerry hakt in den WeChat-PC-Client ein, eine Python-Brücke leitet Nachrichten an Ollama unter localhost:11434 weiter, und Qwen3 7B Q4_K_M liefert die Antwort in 2–5 Sekunden – vollständig auf lokaler Hardware, ohne Cloud-API-Aufrufe.',
       },
       wechatferry: {
         id: 'wechatferry',
@@ -443,6 +449,8 @@ while True:
           '**Qwen3 14B Q4_K_M:** Für komplexere Unterhaltungen mit 12–16 GB RAM. 9,5 GB VRAM, 4–8 tok/s.',
           '**Vermeiden:** Llama 3 und Mistral – westliche Tokenizer verwenden 2–3× mehr Token für chinesischen Text.',
         ],
+        image: '/images/wechat-local-llm-integration-2026-cjk-tokenization-efficiency-en.svg',
+        imageCaption: 'Chinesische Texttokenisierung nach Modell: Qwen3 7B benötigt 42 Token für einen 50-Zeichen-Satz gegenüber 98 bei Llama 3 und 115 bei Mistral – native CJK-Tokenisierung senkt die Tokenanzahl um 2,3–2,7×.',
       },
       groupChat: {
         id: 'group-chat',
@@ -577,6 +585,8 @@ while True:
           '**Pattern 2 — Pont HTTP webhook :** Multiplateforme, plus complexe. Adapté aux entreprises avec infrastructure WeChat Official Account.',
           '**Pattern 3 — Ollama + Open WebUI :** Option la plus simple pour des notifications unidirectionnelles. Aucun hook requis.',
         ],
+        image: '/images/wechat-local-llm-integration-2026-architecture-flow-en.svg',
+        imageCaption: 'Flux de message WeChat + LLM local : WeChatFerry intercepte le client WeChat PC, un pont Python transmet les messages à Ollama sur localhost:11434, et Qwen3 7B Q4_K_M renvoie une réponse en 2–5 secondes — entièrement sur matériel local, sans appel API cloud.',
       },
       wechatferry: {
         id: 'wechatferry',
@@ -636,6 +646,8 @@ while True:
           '**Qwen3 14B Q4_K_M :** Pour des conversations plus riches avec 12–16 Go de RAM disponible.',
           '**À éviter :** Llama 3 et Mistral — tokeniseurs occidentaux, 2–3× plus de tokens pour le texte chinois.',
         ],
+        image: '/images/wechat-local-llm-integration-2026-cjk-tokenization-efficiency-en.svg',
+        imageCaption: 'Tokenisation du texte chinois par modèle : Qwen3 7B a besoin de 42 tokens pour une phrase de 50 caractères contre 98 pour Llama 3 et 115 pour Mistral — la tokenisation CJK native réduit le nombre de tokens de 2,3–2,7×.',
       },
       groupChat: {
         id: 'group-chat',
@@ -772,6 +784,8 @@ while True:
           '**パターン2 — HTTPウェブフックブリッジ：** クロスプラットフォーム対応だがセットアップが複雑。WeChat公式アカウントインフラを持つ企業向け。',
           '**パターン3 — Ollama + Open WebUI：** 最もシンプルな一方向通知オプション。フック不要。',
         ],
+        image: '/images/wechat-local-llm-integration-2026-architecture-flow-en.svg',
+        imageCaption: 'WeChat + ローカルLLMのメッセージフロー：WeChatFerryがWeChat PCクライアントをフックし、PythonブリッジがlocalhostのOllama（11434）にメッセージを転送、Qwen3 7B Q4_K_Mが2〜5秒で応答を返します——すべてローカルハードウェア上で、クラウドAPI呼び出しは一切なし。',
       },
       wechatferry: {
         id: 'wechatferry',
@@ -832,6 +846,8 @@ while True:
           '**Qwen3 14B Q4_K_M：** 12–16 GB RAM環境での充実した会話向け。',
           '**避けるべき：** Llama 3とMistral——中国語テキストに2〜3倍多くのトークンを使用。',
         ],
+        image: '/images/wechat-local-llm-integration-2026-cjk-tokenization-efficiency-en.svg',
+        imageCaption: 'モデル別の中国語テキストのトークン化：Qwen3 7Bは50文字の文に42トークンで済むのに対し、Llama 3は98トークン、Mistralは115トークンが必要——ネイティブCJKトークン化によりトークン数を2.3〜2.7倍削減。',
       },
       groupChat: {
         id: 'group-chat',
@@ -972,6 +988,8 @@ while True:
           '**方案三——Ollama + Open WebUI通知转发：** 最简单的单向通知选项，无需任何钩子。',
           '对大多数用户——尤其是中国个人账户用户——2026年推荐方案一（WeChatFerry + Ollama）。',
         ],
+        image: '/images/wechat-local-llm-integration-2026-architecture-flow-zh.svg',
+        imageCaption: '微信+本地LLM消息流转：WeChatFerry钩入微信PC客户端，Python桥接脚本将消息转发至localhost:11434的Ollama，Qwen3 7B Q4_K_M在2–5秒内返回回复——全程在本地硬件运行，零云端API调用。',
       },
       wechatferry: {
         id: 'wechatferry',
@@ -1037,6 +1055,8 @@ while True:
           '**DeepSeek-R1-Distill-Qwen-7B：** 中文问答和推理表现良好，日常对话略弱于Qwen3 7B。',
           '**避免使用：** Llama 3和Mistral——西方优先分词器处理中文需要多2–3倍的token，导致速度慢且长消息截断。',
         ],
+        image: '/images/wechat-local-llm-integration-2026-cjk-tokenization-efficiency-zh.svg',
+        imageCaption: '各模型中文文本分词对比：Qwen3 7B处理50字句子仅需42个token，而Llama 3需要98个、Mistral需要115个——原生中文分词将token数量减少2.3–2.7倍。',
       },
       groupChat: {
         id: 'group-chat',
@@ -1215,6 +1235,8 @@ while True:
           '**Patrón 3 — Ollama + reenvío Open WebUI:** Usa la función de notificación de WeChat de Open WebUI (cuando está disponible) para enviar resúmenes o respuestas a una cuenta personal de WeChat. Ligero y sin necesidad de hook, pero solo admite notificaciones en un sentido.',
           'Para la mayoría de los usuarios — especialmente en China con cuentas personales — el Patrón 1 (WeChatFerry + Ollama) es la opción correcta para 2026.',
         ],
+        image: '/images/wechat-local-llm-integration-2026-architecture-flow-en.svg',
+        imageCaption: 'Flujo de mensajes WeChat + LLM local: WeChatFerry intercepta el cliente WeChat PC, un puente Python reenvía los mensajes a Ollama en localhost:11434, y Qwen3 7B Q4_K_M devuelve una respuesta en 2–5 segundos — todo en hardware local, sin llamadas a APIs en la nube.',
       },
       wechatferry: {
         id: 'wechatferry',
@@ -1282,6 +1304,8 @@ while True:
           '**DeepSeek-R1-Distill-Qwen-7B:** Bueno para responder preguntas y explicaciones paso a paso en chino. Ligeramente más débil en conversación casual que Qwen3 7B.',
           '**Evitar:** Llama 3 y Mistral — los tokenizadores centrados en Occidente usan 2–3× más tokens para texto en chino, lo que genera respuestas más lentas y truncamiento en mensajes largos.',
         ],
+        image: '/images/wechat-local-llm-integration-2026-cjk-tokenization-efficiency-en.svg',
+        imageCaption: 'Tokenización de texto en chino por modelo: Qwen3 7B necesita 42 tokens para una frase de 50 caracteres frente a 98 de Llama 3 y 115 de Mistral — la tokenización CJK nativa reduce el recuento de tokens 2,3–2,7×.',
       },
       groupChat: {
         id: 'group-chat',
@@ -1463,6 +1487,8 @@ while True:
           '**패턴 3 — Ollama + Open WebUI 포워딩:** Open WebUI의 WeChat 알림 기능을 사용하여(사용 가능한 경우) 개인 WeChat 계정으로 요약이나 응답을 전송합니다. 가볍고 훅 없이 작동하지만 단방향 알림만 지원합니다.',
           '대부분의 사용자에게 — 특히 개인 계정을 가진 중국 사용자에게 — 패턴 1(WeChatFerry + Ollama)이 2026년을 위한 올바른 선택입니다.',
         ],
+        image: '/images/wechat-local-llm-integration-2026-architecture-flow-en.svg',
+        imageCaption: 'WeChat + 로컬 LLM 메시지 흐름: WeChatFerry가 WeChat PC 클라이언트를 인터셉트하고, Python 브리지가 localhost:11434의 Ollama로 메시지를 전달하며, Qwen3 7B Q4_K_M이 2–5초 만에 응답을 반환합니다 — 전부 로컬 하드웨어에서, 클라우드 API 호출 없이.',
       },
       wechatferry: {
         id: 'wechatferry',
@@ -1530,6 +1556,8 @@ while True:
           '**DeepSeek-R1-Distill-Qwen-7B:** 중국어 질문 답변 및 단계별 설명에 좋음. 캐주얼 대화에서 Qwen3 7B보다 약간 약함.',
           '**피해야 할 것:** Llama 3과 Mistral — 서구 중심 토크나이저가 중국어 텍스트에 2–3배 더 많은 토큰을 사용하여 더 느린 응답과 긴 메시지에서 잘림이 발생합니다.',
         ],
+        image: '/images/wechat-local-llm-integration-2026-cjk-tokenization-efficiency-en.svg',
+        imageCaption: '모델별 중국어 텍스트 토큰화: Qwen3 7B는 50자 문장에 42개 토큰이 필요한 반면 Llama 3는 98개, Mistral은 115개가 필요합니다 — 네이티브 CJK 토큰화로 토큰 수를 2.3–2.7배 줄입니다.',
       },
       groupChat: {
         id: 'group-chat',
@@ -1711,6 +1739,8 @@ while True:
           '**Padrão 3 — Ollama + encaminhamento Open WebUI:** Use o recurso de notificação do WeChat do Open WebUI (quando disponível) para enviar resumos ou respostas a uma conta pessoal do WeChat. Leve e sem necessidade de hook, mas só suporta notificações em um sentido.',
           'Para a maioria dos usuários — especialmente na China com contas pessoais — o Padrão 1 (WeChatFerry + Ollama) é a opção certa para 2026.',
         ],
+        image: '/images/wechat-local-llm-integration-2026-architecture-flow-en.svg',
+        imageCaption: 'Fluxo de mensagens WeChat + LLM local: o WeChatFerry intercepta o cliente WeChat PC, uma ponte Python encaminha as mensagens ao Ollama em localhost:11434, e o Qwen3 7B Q4_K_M devolve uma resposta em 2–5 segundos — tudo em hardware local, sem chamadas a APIs de nuvem.',
       },
       wechatferry: {
         id: 'wechatferry',
@@ -1778,6 +1808,8 @@ while True:
           '**DeepSeek-R1-Distill-Qwen-7B:** Bom para responder perguntas e explicações passo a passo em chinês. Ligeiramente mais fraco em conversa casual que o Qwen3 7B.',
           '**Evitar:** Llama 3 e Mistral — os tokenizadores centrados no Ocidente usam 2–3× mais tokens para texto em chinês, o que gera respostas mais lentas e truncamento em mensagens longas.',
         ],
+        image: '/images/wechat-local-llm-integration-2026-cjk-tokenization-efficiency-en.svg',
+        imageCaption: 'Tokenização de texto chinês por modelo: o Qwen3 7B precisa de 42 tokens para uma frase de 50 caracteres, contra 98 do Llama 3 e 115 do Mistral — a tokenização CJK nativa reduz a contagem de tokens em 2,3–2,7×.',
       },
       groupChat: {
         id: 'group-chat',
@@ -1960,6 +1992,8 @@ while True:
           '**النمط 3 — Ollama + إعادة توجيه Open WebUI:** يستخدم ميزة إشعارات WeChat في Open WebUI (عند توفرها) لإرسال ملخصات أو ردود إلى حساب WeChat شخصي. خفيف ولا يحتاج ربطًا، لكنه يدعم الإشعارات أحادية الاتجاه فقط.',
           'بالنسبة لمعظم المستخدمين — خاصة في الصين بحسابات شخصية — النمط 1 (WeChatFerry + Ollama) هو الخيار الصحيح لعام 2026.',
         ],
+        image: '/images/wechat-local-llm-integration-2026-architecture-flow-en.svg',
+        imageCaption: 'مسار الرسائل بين WeChat ونموذج لغة محلي: يعترض WeChatFerry عميل WeChat PC، ويُعيد جسر Python توجيه الرسائل إلى Ollama على localhost:11434، ويُعيد Qwen3 7B Q4_K_M الرد خلال 2–5 ثوانٍ — كل ذلك على أجهزة محلية دون أي استدعاءات API سحابية.',
       },
       wechatferry: {
         id: 'wechatferry',
@@ -2027,6 +2061,8 @@ while True:
           '**DeepSeek-R1-Distill-Qwen-7B:** جيد للإجابة عن الأسئلة والشروحات خطوة بخطوة باللغة الصينية. أضعف قليلًا في المحادثة العادية مقارنةً بـ Qwen3 7B.',
           '**تجنّب:** Llama 3 وMistral — تستخدم المرمّزات ذات التوجه الغربي 2–3× رموز أكثر للنص الصيني، مما يولّد ردودًا أبطأ وقطعًا في الرسائل الطويلة.',
         ],
+        image: '/images/wechat-local-llm-integration-2026-cjk-tokenization-efficiency-en.svg',
+        imageCaption: 'ترميز النص الصيني حسب النموذج: يحتاج Qwen3 7B إلى 42 رمزًا لجملة من 50 حرفًا مقابل 98 لـ Llama 3 و115 لـ Mistral — يقلّل الترميز الأصلي لـ CJK عدد الرموز بمقدار 2.3–2.7×.',
       },
       groupChat: {
         id: 'group-chat',

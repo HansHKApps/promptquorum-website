@@ -1,0 +1,23 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">中文分词效率对比：同一50字句子所需Token数</text>
+  <line x1="260" y1="345" x2="740" y2="345" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="250" y="94" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Qwen3 7B</text>
+  <rect x="260" y="75" width="105" height="24" fill="#34A853" rx="4"/>
+  <text x="373" y="92" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">42 tokens — 最优</text>
+
+  <text x="250" y="136" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Llama 3</text>
+  <rect x="260" y="117" width="245" height="24" fill="#F4B400" rx="4"/>
+  <text x="513" y="134" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">98 tokens</text>
+
+  <text x="250" y="178" font-size="13" font-weight="700" fill="#79747E" text-anchor="end">Mistral</text>
+  <rect x="260" y="159" width="288" height="24" fill="#EA4335" rx="4"/>
+  <text x="556" y="176" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F">115 tokens</text>
+
+  <rect x="130" y="215" width="540" height="46" rx="6" fill="#F7F2FA"/>
+  <text x="400" y="234" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Qwen3 7B采用原生中文分词</text>
+  <text x="400" y="251" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">同一中文句子所需token比Llama 3或Mistral少2.3–2.7倍</text>
+
+  <text x="400" y="378" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">每句所需token更少，意味着微信回复更快，长消息被截断的风险也更低。</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
