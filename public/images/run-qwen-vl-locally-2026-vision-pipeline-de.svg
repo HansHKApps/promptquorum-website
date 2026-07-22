@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="320" fill="#FFFFFF"/>
+<text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">So liest Qwen2-VL ein Bild: Vision-Pipeline</text>
+<rect x="20" y="60" width="160" height="100" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+<rect x="20" y="60" width="160" height="4" rx="0" fill="#6750A4"/>
+<text x="100" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Eingabebild</text>
+<text x="100" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#49454F" text-anchor="middle">bis zu 4096×4096</text>
+<text x="200" y="117" font-size="20" fill="#6750A4">→</text>
+<rect x="220" y="60" width="160" height="100" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+<rect x="220" y="60" width="160" height="4" rx="0" fill="#6750A4"/>
+<text x="300" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Vision-Encoder</text>
+<text x="300" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#49454F" text-anchor="middle">native Aufl.</text>
+<text x="400" y="117" font-size="20" fill="#6750A4">→</text>
+<rect x="420" y="60" width="160" height="100" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+<rect x="420" y="60" width="160" height="4" rx="0" fill="#6750A4"/>
+<text x="500" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Sprachmodell</text>
+<text x="500" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#49454F" text-anchor="middle">7B · ~6 GB VRAM</text>
+<text x="600" y="117" font-size="20" fill="#6750A4">→</text>
+<rect x="620" y="60" width="160" height="100" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+<rect x="620" y="60" width="160" height="4" rx="0" fill="#6750A4"/>
+<text x="700" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Textausgabe</text>
+<text x="700" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#49454F" text-anchor="middle">OCR · Q&amp;A · JSON</text>
+<line x1="18" y1="190" x2="782" y2="190" stroke="#E8DEF8" stroke-width="1.5"/>
+<text x="30" y="214" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#49454F">Native 4096×4096-Eingabeauflösung liest dichten CJK-Text, den LLaVA 1.6 (672×672) und Llama 3.2 Vision (1120×1120) verkleinern und verpassen.</text>
+<text x="30" y="236" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#49454F">Jedes Bild wird auf Ihrem Rechner verarbeitet — kein Cloud-Upload, kein API-Schlüssel nötig.</text>
+<text x="792" y="305" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>

@@ -93,6 +93,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       whyQwenVl: {
         id: 'why-qwen-vl',
         title: 'Why Qwen2-VL Leads Local Vision Models for Multilingual OCR',
+        image: '/images/run-qwen-vl-locally-2026-vision-pipeline-en.svg',
+        imageCaption: 'Qwen2-VL vision pipeline: a 4096×4096 image passes through the vision encoder into the 7B language model (~6 GB VRAM) and returns OCR or Q&A text — fully offline, no cloud upload.',
         content: [
           '**Qwen2-VL is the strongest local vision model for multilingual document OCR — it matches or beats every other model that runs on consumer hardware at reading Chinese, Japanese, Korean, and English text.** Alibaba trained it on large-scale multilingual document corpora, which is why it outperforms LLaVA 1.6 and Llama 3.2 Vision 11B on non-English text extraction.',
           'Qwen2-VL supports dynamic input resolution up to 4096×4096 pixels. LLaVA 1.6 caps at 672×672 and Llama 3.2 Vision at 1120×1120, so both downsample high-DPI scans before reading them. Qwen2-VL reads a 300-DPI A4 scan at native resolution — the main reason its OCR accuracy is higher on dense documents and small CJK characters.',
@@ -137,6 +139,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ollamaSetup: {
         id: 'ollama-setup',
         title: 'Setting Up Qwen2-VL with Ollama',
+        image: '/images/run-qwen-vl-locally-2026-ollama-setup-steps-en.svg',
+        imageCaption: 'Ollama setup for Qwen2-VL in 5 steps: install Ollama, pull qwen2-vl:7b (~6 GB), run and attach an image, send via the API, then verify CJK OCR — under 10 minutes on an 8 GB VRAM GPU.',
         content: [
           'Ollama is the fastest way to run Qwen2-VL locally. It downloads the model, manages quantization, and exposes an API at localhost:11434. Install it from [ollama.com](https://ollama.com/download) — or, if you are new to it, start with [how to install Ollama](/local-llms/how-to-install-ollama).',
         ],
@@ -436,6 +440,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       whyQwenVl: {
         id: 'why-qwen-vl',
         title: 'Por qué Qwen2-VL lidera los modelos de visión locales en OCR multilingüe',
+        image: '/images/run-qwen-vl-locally-2026-vision-pipeline-es.svg',
+        imageCaption: 'Pipeline de visión de Qwen2-VL: una imagen de hasta 4096×4096 pasa por el encoder de visión al modelo de lenguaje de 7B (~6 GB VRAM) y devuelve texto de OCR o preguntas — totalmente offline, sin subida a la nube.',
         content: [
           '**Qwen2-VL es el modelo de visión local más potente para OCR de documentos multilingüe — iguala o supera a cualquier otro modelo que se ejecuta en hardware de consumo al leer texto en chino, japonés, coreano e inglés.** Alibaba lo entrenó con corpus de documentos multilingüe a gran escala, lo que explica que supere a LLaVA 1.6 y Llama 3.2 Vision 11B en extracción de texto no inglés.',
           'Qwen2-VL admite una resolución de entrada dinámica de hasta 4096×4096 píxeles. LLaVA 1.6 tiene un límite de 672×672 y Llama 3.2 Vision de 1120×1120, por lo que ambos reducen los escaneos de alta resolución antes de leerlos. Qwen2-VL lee un escaneo A4 a 300 DPI en resolución nativa — la principal razón por la que su precisión de OCR es mayor en documentos densos y caracteres CJK pequeños.',
@@ -480,6 +486,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       ollamaSetup: {
         id: 'ollama-setup',
         title: 'Configurar Qwen2-VL con Ollama',
+        image: '/images/run-qwen-vl-locally-2026-ollama-setup-steps-es.svg',
+        imageCaption: 'Configuración de Qwen2-VL con Ollama en 5 pasos: instalar Ollama, descargar qwen2-vl:7b (~6 GB), ejecutar y adjuntar una imagen, enviar vía API y verificar el OCR CJK — en menos de 10 minutos con una GPU de 8 GB VRAM.',
         content: [
           'Ollama es la forma más rápida de ejecutar Qwen2-VL en local. Descarga el modelo, gestiona la cuantización y expone una API en localhost:11434. Instálalo desde [ollama.com](https://ollama.com/download) — o, si eres nuevo en esto, empieza con [cómo instalar Ollama](/es/local-llms/how-to-install-ollama).',
         ],
@@ -792,6 +800,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       whyQwenVl: {
         id: 'why-qwen-vl',
         title: 'لماذا يتصدر Qwen2-VL نماذج الرؤية المحلية في OCR متعدد اللغات',
+        image: '/images/run-qwen-vl-locally-2026-vision-pipeline-ar.svg',
+        imageCaption: 'مسار رؤية Qwen2-VL: تمر صورة تصل إلى 4096×4096 عبر مشفّر الرؤية إلى نموذج اللغة 7B (~6 GB VRAM) وتعيد نص OCR أو إجابات — دون اتصال بالكامل، بلا رفع إلى السحابة.',
         content: [
           '**Qwen2-VL هو أقوى نموذج رؤية محلي لـ OCR المستندات متعدد اللغات — يساوي أو يتفوق على أي نموذج آخر يعمل على أجهزة استهلاكية عند قراءة النص بالصينية واليابانية والكورية والإنجليزية.** درّبته Alibaba على مجموعات نصية ضخمة من المستندات متعددة اللغات، مما يفسّر تفوّقه على LLaVA 1.6 وLlama 3.2 Vision 11B في استخراج النص غير الإنجليزي.',
           'يدعم Qwen2-VL دقة إدخال ديناميكية تصل إلى 4096×4096 بكسل. لدى LLaVA 1.6 حد 672×672 وLlama 3.2 Vision حد 1120×1120، لذا يصغّر كلاهما المسوحات عالية الدقة قبل قراءتها. يقرأ Qwen2-VL مسحًا A4 بدقة 300 DPI بالدقة الأصلية — السبب الرئيسي لأن دقة OCR لديه أعلى في المستندات الكثيفة والأحرف CJK الصغيرة.',
@@ -836,6 +846,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       ollamaSetup: {
         id: 'ollama-setup',
         title: 'إعداد Qwen2-VL مع Ollama',
+        image: '/images/run-qwen-vl-locally-2026-ollama-setup-steps-ar.svg',
+        imageCaption: 'إعداد Qwen2-VL عبر Ollama في 5 خطوات: تثبيت Ollama، تنزيل qwen2-vl:7b (~6 GB)، تشغيل النموذج وإرفاق صورة، الإرسال عبر API، ثم التحقق من OCR لـ CJK — في أقل من 10 دقائق على بطاقة رسوم بسعة 8 GB VRAM.',
         content: [
           'Ollama هو أسرع طريقة لتشغيل Qwen2-VL محليًا. ينزّل النموذج، ويدير التكميم، ويكشف واجهة API على localhost:11434. ثبّته من [ollama.com](https://ollama.com/download) — أو، إن كنت جديدًا على هذا، ابدأ بـ [كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama).',
         ],
@@ -1103,6 +1115,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        image: '/images/run-qwen-vl-locally-2026-vision-pipeline-pt.svg',
+        imageCaption: 'Pipeline de visão do Qwen2-VL: uma imagem de até 4096×4096 passa pelo encoder de visão até o modelo de linguagem de 7B (~6 GB de VRAM) e retorna texto de OCR ou perguntas — totalmente offline, sem upload para a nuvem.',
         items: [
           '**Qwen2-VL 7B requer ~6 GB de VRAM** — executa em uma RTX 3060 8 GB ou qualquer chip Apple M com 16 GB de memória unificada.',
           '**Melhor OCR CJK local**: o Qwen2-VL supera o LLaVA e o Llama 3.2 Vision em extração de texto em chinês, japonês e coreano.',
@@ -1114,6 +1128,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       faqSection: {
         id: 'faq',
         title: 'Perguntas frequentes',
+        image: '/images/run-qwen-vl-locally-2026-ollama-setup-steps-pt.svg',
+        imageCaption: 'Configuração do Qwen2-VL com Ollama em 5 passos: instalar o Ollama, baixar qwen2-vl:7b (~6 GB), executar e anexar uma imagem, enviar via API e verificar o OCR CJK — em menos de 10 minutos em uma GPU com 8 GB de VRAM.',
         faqs: [
           { q: 'Como executo o Qwen2-VL localmente em 2026?', a: 'Instale o Ollama, execute `ollama pull qwen2-vl:7b`, depois `ollama run qwen2-vl:7b` e escreva um caminho de arquivo de imagem no seu prompt. Para interface gráfica, use o LM Studio: pesquise "Qwen2-VL 7B", baixe a variante GGUF Q4_K_M e anexe imagens com o ícone de imagem.' },
           { q: 'Qual hardware preciso para o Qwen2-VL 7B?', a: 'Mínimo: 8 GB de VRAM (RTX 4060, RTX 3060 12 GB) ou Apple Silicon com 16 GB de memória unificada. O modelo Q4_K_M usa ~6,2 GB de VRAM.' },
@@ -1227,6 +1243,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       whyQwenVl: {
         id: 'why-qwen-vl',
         title: 'Warum Qwen2-VL unter den lokalen Vision-Modellen bei mehrsprachiger OCR führt',
+        image: '/images/run-qwen-vl-locally-2026-vision-pipeline-de.svg',
+        imageCaption: 'Qwen2-VL-Vision-Pipeline: Ein Bild mit bis zu 4096×4096 durchläuft den Vision-Encoder zum 7B-Sprachmodell (~6 GB VRAM) und liefert OCR- oder Q&A-Text zurück — vollständig offline, kein Cloud-Upload.',
         content: [
           '**Qwen2-VL ist das stärkste lokale Vision-Modell für mehrsprachige Dokumenten-OCR — es liegt beim Lesen von chinesischem, japanischem, koreanischem und englischem Text gleichauf mit jedem anderen Modell auf Consumer-Hardware oder darüber.** Alibaba hat es mit umfangreichen mehrsprachigen Dokumentkorpora trainiert, weshalb es LLaVA 1.6 und Llama 3.2 Vision 11B bei der Textextraktion außerhalb des Englischen übertrifft.',
           'Qwen2-VL unterstützt eine dynamische Eingabeauflösung von bis zu 4096×4096 Pixeln. LLaVA 1.6 ist auf 672×672 begrenzt und Llama 3.2 Vision auf 1120×1120, sodass beide hochauflösende Scans vor dem Lesen verkleinern. Qwen2-VL liest einen A4-Scan mit 300 DPI in nativer Auflösung — der Hauptgrund für die höhere OCR-Genauigkeit bei dichten Dokumenten und kleinen CJK-Schriftzeichen.',
@@ -1271,6 +1289,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       ollamaSetup: {
         id: 'ollama-setup',
         title: 'Einrichtung von Qwen2-VL mit Ollama',
+        image: '/images/run-qwen-vl-locally-2026-ollama-setup-steps-de.svg',
+        imageCaption: 'Ollama-Einrichtung für Qwen2-VL in 5 Schritten: Ollama installieren, qwen2-vl:7b laden (~6 GB), ausführen und ein Bild anhängen, über die API senden, dann CJK-OCR prüfen — in unter 10 Minuten auf einer GPU mit 8 GB VRAM.',
         content: [
           'Ollama ist der schnellste Weg, Qwen2-VL lokal auszuführen. Es lädt das Modell herunter, verwaltet die Quantisierung und stellt eine API unter localhost:11434 bereit. Installieren Sie es von [ollama.com](https://ollama.com/download) — oder beginnen Sie, falls Sie neu damit sind, mit [So installieren Sie Ollama](/de/local-llms/how-to-install-ollama).',
         ],
@@ -1572,6 +1592,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       whyQwenVl: {
         id: 'why-qwen-vl',
         title: "Pourquoi Qwen2-VL domine les modèles de vision locaux pour l'OCR multilingue",
+        image: '/images/run-qwen-vl-locally-2026-vision-pipeline-fr.svg',
+        imageCaption: "Pipeline de vision Qwen2-VL : une image jusqu'à 4096×4096 traverse l'encodeur de vision vers le modèle de langage 7B (~6 GB de VRAM) et renvoie du texte OCR ou des réponses — entièrement hors ligne, sans envoi vers le cloud.",
         content: [
           "**Qwen2-VL est le modèle de vision local le plus performant pour l'OCR de documents multilingues — il égale ou dépasse tout autre modèle fonctionnant sur du matériel grand public pour lire le chinois, le japonais, le coréen et l'anglais.** Alibaba l'a entraîné sur de vastes corpus de documents multilingues, ce qui explique qu'il surpasse LLaVA 1.6 et Llama 3.2 Vision 11B pour l'extraction de texte non anglophone.",
           "Qwen2-VL prend en charge une résolution d'entrée dynamique jusqu'à 4096×4096 pixels. LLaVA 1.6 plafonne à 672×672 et Llama 3.2 Vision à 1120×1120 : tous deux réduisent les scans haute résolution avant lecture. Qwen2-VL lit un scan A4 à 300 DPI en résolution native — la principale raison de sa meilleure précision d'OCR sur les documents denses et les petits caractères CJK.",
@@ -1616,6 +1638,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       ollamaSetup: {
         id: 'ollama-setup',
         title: "Installer Qwen2-VL avec Ollama",
+        image: '/images/run-qwen-vl-locally-2026-ollama-setup-steps-fr.svg',
+        imageCaption: "Installation de Qwen2-VL avec Ollama en 5 étapes : installer Ollama, télécharger qwen2-vl:7b (~6 GB), exécuter et joindre une image, envoyer via l'API, puis vérifier l'OCR CJK — en moins de 10 minutes sur un GPU de 8 GB de VRAM.",
         content: [
           "Ollama est le moyen le plus rapide d'exécuter Qwen2-VL en local. Il télécharge le modèle, gère la quantification et expose une API sur localhost:11434. Installez-le depuis [ollama.com](https://ollama.com/download) — ou, si vous débutez, commencez par [installer Ollama](/fr/local-llms/how-to-install-ollama).",
         ],
@@ -1915,6 +1939,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       whyQwenVl: {
         id: 'why-qwen-vl',
         title: 'なぜQwen2-VLは多言語OCRでローカルvisionモデルの中で優れているのか',
+        image: '/images/run-qwen-vl-locally-2026-vision-pipeline-ja.svg',
+        imageCaption: 'Qwen2-VLのvisionパイプライン：最大4096×4096の画像がvisionエンコーダを通過し、7Bの言語モデル（約6 GB VRAM）に渡され、OCRやQ&Aのテキストとして返されます — 完全オフラインでクラウドへのアップロードなし。',
         content: [
           '**Qwen2-VLは多言語ドキュメントOCRに最も優れたローカルvisionモデルです。中国語・日本語・韓国語・英語のテキスト読み取りにおいて、コンシューマー向けハードウェアで動作する他のどのモデルと同等か、それ以上です。** Alibabaはこれを大規模な多言語ドキュメントコーパスで学習させており、そのため英語以外のテキスト抽出でLLaVA 1.6やLlama 3.2 Vision 11Bを上回ります。',
           'Qwen2-VLは最大4096×4096ピクセルの動的な入力解像度に対応します。LLaVA 1.6は672×672、Llama 3.2 Visionは1120×1120が上限のため、どちらも高解像度スキャンを読み取り前に縮小します。Qwen2-VLは300 DPIのA4スキャンをネイティブ解像度で読み取ります — これが、密度の高いドキュメントや小さなCJK文字でOCR精度が高い主な理由です。',
@@ -1959,6 +1985,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       ollamaSetup: {
         id: 'ollama-setup',
         title: 'Qwen2-VLをOllamaでセットアップする',
+        image: '/images/run-qwen-vl-locally-2026-ollama-setup-steps-ja.svg',
+        imageCaption: 'Qwen2-VLをOllamaでセットアップする5ステップ：Ollamaをインストール、qwen2-vl:7b（約6 GB）を取得、実行して画像を添付、APIで送信、CJK OCRを検証 — 8 GB VRAMのGPUで10分未満。',
         content: [
           'Ollamaは、Qwen2-VLをローカルで実行する最も速い方法です。モデルのダウンロード、量子化の管理を行い、localhost:11434でAPIを公開します。[ollama.com](https://ollama.com/download) からインストールしてください。初めての方は [Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama) から始めてください。',
         ],
@@ -2258,6 +2286,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       whyQwenVl: {
         id: 'why-qwen-vl',
         title: '为什么 Qwen2-VL 在本地视觉模型中领先于多语言 OCR',
+        image: '/images/run-qwen-vl-locally-2026-vision-pipeline-zh.svg',
+        imageCaption: 'Qwen2-VL 视觉处理流程：最高 4096×4096 的图像经过视觉编码器进入 7B 语言模型（约 6 GB VRAM），返回 OCR 或问答文本——完全离线，无需上传云端。',
         content: [
           '**Qwen2-VL 是多语言文档 OCR 最强的本地视觉模型——在读取中文、日文、韩文和英文文本方面，它与任何可在消费级硬件上运行的模型持平或更优。** 阿里巴巴使用大规模多语言文档语料库对其进行训练，因此它在非英文文本提取上优于 LLaVA 1.6 和 Llama 3.2 Vision 11B。',
           'Qwen2-VL 支持高达 4096×4096 像素的动态输入分辨率。LLaVA 1.6 上限为 672×672，Llama 3.2 Vision 为 1120×1120，因此两者在读取前都会缩小高分辨率扫描件。Qwen2-VL 以原生分辨率读取 300 DPI 的 A4 扫描件——这是它在密集文档和小号 CJK 字符上 OCR 精度更高的主要原因。',
@@ -2302,6 +2332,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       ollamaSetup: {
         id: 'ollama-setup',
         title: '使用 Ollama 设置 Qwen2-VL',
+        image: '/images/run-qwen-vl-locally-2026-ollama-setup-steps-zh.svg',
+        imageCaption: '通过 Ollama 设置 Qwen2-VL 的 5 个步骤：安装 Ollama、拉取 qwen2-vl:7b（约 6 GB）、运行并附加图像、通过 API 发送、验证 CJK OCR——在 8 GB VRAM 的 GPU 上不到 10 分钟。',
         content: [
           'Ollama 是本地运行 Qwen2-VL 最快的方式。它会下载模型、管理量化，并在 localhost:11434 上提供 API。请从 [ollama.com](https://ollama.com/download) 安装——如果你是新手，可先从 [如何安装 Ollama](/zh/local-llms/how-to-install-ollama) 开始。',
         ],
@@ -2600,6 +2632,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       whyQwenVl: {
         id: 'why-qwen-vl',
         title: 'Qwen2-VL이 다국어 OCR에서 로컬 비전 모델을 선도하는 이유',
+        image: '/images/run-qwen-vl-locally-2026-vision-pipeline-ko.svg',
+        imageCaption: 'Qwen2-VL 비전 파이프라인: 최대 4096×4096 이미지가 비전 인코더를 거쳐 7B 언어 모델(~6 GB VRAM)로 전달되고 OCR 또는 Q&A 텍스트를 반환합니다 — 완전 오프라인, 클라우드 업로드 없음.',
         content: [
           '**Qwen2-VL은 다국어 문서 OCR을 위한 가장 강력한 로컬 비전 모델로, 소비자 하드웨어에서 실행되는 다른 모든 모델과 동등하거나 능가하여 중국어, 일본어, 한국어, 영어 텍스트를 읽습니다.** Alibaba는 대규모 다국어 문서 코퍼스로 이 모델을 훈련했기 때문에 비영어 텍스트 추출에서 LLaVA 1.6 및 Llama 3.2 Vision 11B를 능가합니다.',
           'Qwen2-VL은 최대 4096×4096 픽셀의 동적 입력 해상도를 지원합니다. LLaVA 1.6은 672×672, Llama 3.2 Vision은 1120×1120으로 제한되어 고해상도 스캔을 읽기 전에 다운샘플링합니다. Qwen2-VL은 300 DPI A4 스캔을 네이티브 해상도로 읽어냅니다 — 이것이 고밀도 문서와 작은 CJK 문자에서 OCR 정확도가 더 높은 주된 이유입니다.',
@@ -2644,6 +2678,8 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       ollamaSetup: {
         id: 'ollama-setup',
         title: 'Ollama로 Qwen2-VL 설정',
+        image: '/images/run-qwen-vl-locally-2026-ollama-setup-steps-ko.svg',
+        imageCaption: 'Ollama로 Qwen2-VL을 설정하는 5단계: Ollama 설치, qwen2-vl:7b(~6 GB) 다운로드, 실행 및 이미지 첨부, API로 전송, CJK OCR 확인 — 8 GB VRAM GPU에서 10분 미만.',
         content: [
           'Ollama는 Qwen2-VL을 로컬로 실행하는 가장 빠른 방법입니다. 모델을 다운로드하고, 양자화를 관리하며, localhost:11434에 API를 노출합니다. [ollama.com](https://ollama.com/download)에서 설치하거나, 처음 사용하시는 경우 [Ollama 설치 방법](/local-llms/how-to-install-ollama)에서 시작하십시오.',
         ],
