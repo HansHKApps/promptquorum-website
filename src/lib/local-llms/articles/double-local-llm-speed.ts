@@ -53,6 +53,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           codeBlock: '# vLLM: increase GPU memory utilization\nvllm serve meta-llama/Llama-2-7b-hf \\\n  --gpu-memory-utilization 0.95\n\n# Ollama: environment variable\nexport OLLAMA_GPU_THRESHOLD=0.95  # Use 95% of GPU\nollama run llama3.2:3b\n\n# LM Studio: Settings → GPU acceleration slider (move to 100%)',
           codeLanguage: 'bash',
+          image: '/images/double-local-llm-speed-optimization-tiers-en.svg',
+          imageCaption: 'Local LLM speed optimization techniques by difficulty: disabling debug logging (easy, +10%), GPU memory utilization 90-95% (medium, +15-20%) and batch size 1 to 32 (medium, 2-4× throughput), switching Ollama to vLLM (hard, 5-10× on concurrent requests).',
         },
         batchSize: {
           id: 'batch-size',
@@ -105,6 +107,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Change': 'All optimizations combined', 'Speed': '300 tok/sec', 'Cumulative Gain': '+2.5× throughput' },
           ],
           columns: ['Change', 'Speed', 'Cumulative Gain'],
+          image: '/images/double-local-llm-speed-baseline-to-vllm-en.svg',
+          imageCaption: '7B model speed optimization on RTX 4090: baseline Ollama at 120 tok/sec, 132 tok/sec after disabling debug logging, 150 tok/sec after GPU memory tuning to 95%, and 300 tok/sec after switching to vLLM — a 2.5× cumulative gain.',
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -339,6 +343,8 @@ schema: {
           ],
           codeBlock: '# vLLM: increase GPU memory utilization\nvllm serve meta-llama/Llama-2-7b-hf \\\n  --gpu-memory-utilization 0.95\n\n# Ollama: environment variable\nexport OLLAMA_GPU_THRESHOLD=0.95  # Use 95% of GPU\nollama run llama3.2:3b\n\n# LM Studio: Settings → GPU acceleration slider (move to 100%)',
           codeLanguage: 'bash',
+          image: '/images/double-local-llm-speed-optimization-tiers-en.svg',
+          imageCaption: 'Técnicas de optimización de velocidad para LLMs locales por dificultad: deshabilitar el logging de debug (fácil, +10%), uso de memoria GPU 90–95% (medio, +15–20%) y batch size de 1 a 32 (medio, 2–4× de throughput), cambiar de Ollama a vLLM (difícil, 5–10× en solicitudes concurrentes).',
         },
         batchSize: {
           id: 'batch-size',
@@ -391,6 +397,8 @@ schema: {
             { 'Cambio': 'Todas las optimizaciones combinadas', 'Velocidad': '300 tok/seg', 'Ganancia acumulada': '+2.5× throughput' },
           ],
           columns: ['Cambio', 'Velocidad', 'Ganancia acumulada'],
+          image: '/images/double-local-llm-speed-baseline-to-vllm-en.svg',
+          imageCaption: 'Optimización de velocidad de un modelo 7B en RTX 4090: Ollama base a 120 tok/seg, 132 tok/seg tras deshabilitar el logging de debug, 150 tok/seg tras ajustar la memoria GPU al 95%, y 300 tok/seg tras cambiar a vLLM — una ganancia acumulada de 2.5×.',
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -626,6 +634,8 @@ schema: {
           ],
           codeBlock: '# vLLM: increase GPU memory utilization\nvllm serve meta-llama/Llama-2-7b-hf \\\n  --gpu-memory-utilization 0.95\n\n# Ollama: environment variable\nexport OLLAMA_GPU_THRESHOLD=0.95  # Use 95% of GPU\nollama run llama3.2:3b\n\n# LM Studio: Settings → GPU acceleration slider (move to 100%)',
           codeLanguage: 'bash',
+          image: '/images/double-local-llm-speed-optimization-tiers-en.svg',
+          imageCaption: 'تقنيات تحسين سرعة LLM المحلي حسب الصعوبة: تعطيل تسجيل التصحيح (سهل، +10%)، استخدام ذاكرة GPU بنسبة 90–95% (متوسط، +15–20%) وحجم دفعة من 1 إلى 32 (متوسط، 2–4× إنتاجية)، التبديل من Ollama إلى vLLM (صعب، 5–10× في الطلبات المتزامنة).',
         },
         batchSize: {
           id: 'batch-size',
@@ -678,6 +688,8 @@ schema: {
             { 'التغيير': 'جميع التحسينات مجتمعة', 'السرعة': '300 رمز/ثانية', 'المكسب التراكمي': '+2.5× إنتاجية' },
           ],
           columns: ['التغيير', 'السرعة', 'المكسب التراكمي'],
+          image: '/images/double-local-llm-speed-baseline-to-vllm-en.svg',
+          imageCaption: 'تحسين سرعة نموذج 7B على RTX 4090: Ollama الأساسي عند 120 رمز/ثانية، 132 رمز/ثانية بعد تعطيل تسجيل التصحيح، 150 رمز/ثانية بعد ضبط ذاكرة GPU إلى 95%، و300 رمز/ثانية بعد التبديل إلى vLLM — مكسب تراكمي 2.5×.',
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -1055,6 +1067,8 @@ schema: {
           ],
           codeBlock: '# vLLM: increase GPU memory utilization\nvllm serve meta-llama/Llama-2-7b-hf \\\n  --gpu-memory-utilization 0.95\n\n# Ollama: environment variable\nexport OLLAMA_GPU_THRESHOLD=0.95  # Use 95% of GPU\nollama run llama3.2:3b\n\n# LM Studio: Settings → GPU acceleration slider (move to 100%)',
           codeLanguage: 'bash',
+          image: '/images/double-local-llm-speed-optimization-tiers-en.svg',
+          imageCaption: 'Geschwindigkeitsoptimierungen für lokale LLMs nach Schwierigkeitsgrad: Debug-Logging deaktivieren (einfach, +10%), GPU-Speicher-Auslastung 90–95% (mittel, +15–20%) und Batch-Größe 1 bis 32 (mittel, 2–4× Durchsatz), Wechsel von Ollama zu vLLM (aufwendig, 5–10× bei gleichzeitigen Anfragen).',
         },
         batchSize: {
           id: 'batch-size',
@@ -1107,6 +1121,8 @@ schema: {
             { 'Änderung': 'Alle Optimierungen kombiniert', 'Geschwindigkeit': '300 Tok/Sek', 'Kumulativer Gewinn': '+2,5× Durchsatz' },
           ],
           columns: ['Änderung', 'Geschwindigkeit', 'Kumulativer Gewinn'],
+          image: '/images/double-local-llm-speed-baseline-to-vllm-en.svg',
+          imageCaption: 'Geschwindigkeitsoptimierung eines 7B-Modells auf der RTX 4090: Standard-Ollama bei 120 Tok/Sek, 132 Tok/Sek nach Deaktivieren des Debug-Loggings, 150 Tok/Sek nach GPU-Speicher-Tuning auf 95%, und 300 Tok/Sek nach Wechsel zu vLLM — ein kumulativer Gewinn von 2,5×.',
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -1272,6 +1288,8 @@ schema: {
           ],
           codeBlock: '# vLLM: increase GPU memory utilization\nvllm serve meta-llama/Llama-2-7b-hf \\\n  --gpu-memory-utilization 0.95\n\n# Ollama: environment variable\nexport OLLAMA_GPU_THRESHOLD=0.95  # Use 95% of GPU\nollama run llama3.2:3b\n\n# LM Studio: Settings → GPU acceleration slider (move to 100%)',
           codeLanguage: 'bash',
+          image: '/images/double-local-llm-speed-optimization-tiers-en.svg',
+          imageCaption: 'Techniques d\'optimisation de vitesse pour LLM local par niveau de difficulté : désactiver la journalisation de débogage (facile, +10%), utilisation mémoire GPU 90–95% (moyen, +15–20%) et taille de lot de 1 à 32 (moyen, 2–4× de débit), passer d\'Ollama à vLLM (avancé, 5–10× sur les requêtes concurrentes).',
         },
         batchSize: {
           id: 'batch-size',
@@ -1324,6 +1342,8 @@ schema: {
             { 'Modification': 'Toutes optimisations combinées', 'Vitesse': '300 tok/sec', 'Gain cumulatif': '+2.5× débit' },
           ],
           columns: ['Modification', 'Vitesse', 'Gain cumulatif'],
+          image: '/images/double-local-llm-speed-baseline-to-vllm-en.svg',
+          imageCaption: 'Optimisation de vitesse d\'un modèle 7B sur RTX 4090 : Ollama par défaut à 120 tok/sec, 132 tok/sec après désactivation de la journalisation de débogage, 150 tok/sec après ajustement de la mémoire GPU à 95%, et 300 tok/sec après passage à vLLM — un gain cumulatif de 2,5×.',
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -1486,6 +1506,8 @@ schema: {
           ],
           codeBlock: '# vLLM: increase GPU memory utilization\nvllm serve meta-llama/Llama-2-7b-hf \\\n  --gpu-memory-utilization 0.95\n\n# Ollama: environment variable\nexport OLLAMA_GPU_THRESHOLD=0.95  # Use 95% of GPU\nollama run llama3.2:3b\n\n# LM Studio: Settings → GPU acceleration slider (move to 100%)',
           codeLanguage: 'bash',
+          image: '/images/double-local-llm-speed-optimization-tiers-en.svg',
+          imageCaption: '難易度別のローカルLLM速度最適化手法：デバッグログの無効化（簡単、+10%）、GPUメモリ使用率90–95%（中級、+15–20%）とバッチサイズ1から32（中級、スループット2–4×）、OllamaからvLLMへの切り替え（上級、並行リクエストで5–10×）。',
         },
         batchSize: {
           id: 'batch-size',
@@ -1538,6 +1560,8 @@ schema: {
             { '変更': '全最適化組み合わせ', '速度': '300 tok/sec', '累計ゲイン': '+2.5×スループット' },
           ],
           columns: ['変更', '速度', '累計ゲイン'],
+          image: '/images/double-local-llm-speed-baseline-to-vllm-en.svg',
+          imageCaption: 'RTX 4090上の7Bモデルの速度最適化：デフォルトのOllamaは120 tok/sec、デバッグログ無効化後は132 tok/sec、GPUメモリを95%に調整後は150 tok/sec、vLLMへ切り替え後は300 tok/sec — 累計2.5×の向上。',
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -1699,6 +1723,8 @@ schema: {
           ],
           codeBlock: '# vLLM: increase GPU memory utilization\nvllm serve meta-llama/Llama-2-7b-hf \\\n  --gpu-memory-utilization 0.95\n\n# Ollama: environment variable\nexport OLLAMA_GPU_THRESHOLD=0.95  # Use 95% of GPU\nollama run llama3.2:3b\n\n# LM Studio: Settings → GPU acceleration slider (move to 100%)',
           codeLanguage: 'bash',
+          image: '/images/double-local-llm-speed-optimization-tiers-en.svg',
+          imageCaption: '按难度划分的本地LLM速度优化技术：禁用调试日志（简单，+10%）、GPU显存使用率90–95%（中等，+15–20%）和批处理大小从1到32（中等，吞吐量2–4倍）、从Ollama切换到vLLM（难，并发请求5–10倍）。',
         },
         batchSize: {
           id: 'batch-size',
@@ -1751,6 +1777,8 @@ schema: {
             { '变更': '综合所有优化', '速度': '300 tok/sec', '累计提升': '+2.5×吞吐量' },
           ],
           columns: ['变更', '速度', '累计提升'],
+          image: '/images/double-local-llm-speed-baseline-to-vllm-en.svg',
+          imageCaption: 'RTX 4090上7B模型的速度优化：默认Ollama为120 tok/sec，禁用调试日志后为132 tok/sec，GPU显存调至95%后为150 tok/sec，切换到vLLM后为300 tok/sec — 累计提升2.5倍。',
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -1942,6 +1970,8 @@ schema: {
           ],
           codeBlock: '# vLLM: increase GPU memory utilization\nvllm serve meta-llama/Llama-2-7b-hf \\\n  --gpu-memory-utilization 0.95\n\n# Ollama: environment variable\nexport OLLAMA_GPU_THRESHOLD=0.95  # Use 95% of GPU\nollama run llama3.2:3b\n\n# LM Studio: Settings → GPU acceleration slider (move to 100%)',
           codeLanguage: 'bash',
+          image: '/images/double-local-llm-speed-optimization-tiers-en.svg',
+          imageCaption: '난이도별 로컬 LLM 속도 최적화 기법: 디버그 로깅 비활성화(쉬움, +10%), GPU 메모리 활용률 90–95%(중간, +15–20%)와 배치 크기 1에서 32(중간, 처리량 2–4배), Ollama에서 vLLM으로 전환(어려움, 동시 요청 시 5–10배).',
         },
         batchSize: {
           id: 'batch-size',
@@ -1994,6 +2024,8 @@ schema: {
             { 'Change': '모든 최적화 적용', 'Speed': '300 tok/sec', 'Cumulative Gain': '+2.5× 처리량' },
           ],
           columns: ['Change', 'Speed', 'Cumulative Gain'],
+          image: '/images/double-local-llm-speed-baseline-to-vllm-en.svg',
+          imageCaption: 'RTX 4090에서 7B 모델 속도 최적화: 기본 Ollama 120 tok/sec, 디버그 로깅 비활성화 후 132 tok/sec, GPU 메모리 95% 조정 후 150 tok/sec, vLLM 전환 후 300 tok/sec — 누적 2.5배 향상.',
         },
         commonMistakes: {
           id: 'common-mistakes',
