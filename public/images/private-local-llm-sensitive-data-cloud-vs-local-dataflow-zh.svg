@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="420" fill="#FFFFFF"/>
+<text x="400" y="34" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">云API vs 本地LLM：数据流向对比</text>
+<rect x="24" y="60" width="352" height="330" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+<rect x="24" y="60" width="352" height="4" rx="0" fill="#EA4335"/>
+<text x="200" y="92" font-size="15" font-weight="700" fill="#EA4335" text-anchor="middle">云API（风险）</text>
+<circle cx="46" cy="125" r="4" fill="#EA4335"/>
+<text x="60" y="130" font-size="13" fill="#49454F">数据离开您的设备</text>
+<circle cx="46" cy="169" r="4" fill="#EA4335"/>
+<text x="60" y="174" font-size="13" fill="#49454F">传输至供应商服务器</text>
+<circle cx="46" cy="213" r="4" fill="#EA4335"/>
+<text x="60" y="218" font-size="13" fill="#49454F">供应商可能用数据训练模型</text>
+<circle cx="46" cy="257" r="4" fill="#EA4335"/>
+<text x="60" y="262" font-size="13" fill="#49454F">违规责任：5万-500万美元以上</text>
+<rect x="424" y="60" width="352" height="330" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+<rect x="424" y="60" width="352" height="4" rx="0" fill="#34A853"/>
+<text x="600" y="92" font-size="15" font-weight="700" fill="#34A853" text-anchor="middle">本地LLM（零流出）</text>
+<circle cx="446" cy="125" r="4" fill="#34A853"/>
+<text x="460" y="130" font-size="13" fill="#49454F">数据永不离开设备</text>
+<circle cx="446" cy="169" r="4" fill="#34A853"/>
+<text x="460" y="174" font-size="13" fill="#49454F">零网络传输</text>
+<circle cx="446" cy="213" r="4" fill="#34A853"/>
+<text x="460" y="218" font-size="13" fill="#49454F">您掌握加密密钥</text>
+<circle cx="446" cy="257" r="4" fill="#34A853"/>
+<text x="460" y="262" font-size="13" fill="#49454F">违规责任：0美元</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
