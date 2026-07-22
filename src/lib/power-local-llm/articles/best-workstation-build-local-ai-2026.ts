@@ -62,6 +62,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Power draw:** ~450 W peak (GPU 350 W + CPU 65 W + rest)',
           '**Recommended PSU:** Corsair RM850x or equivalent 80+ Gold',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        imageCaption: 'Three local-AI workstation tiers compared by hardware: Budget uses an RTX 3090 (24 GB VRAM) running 70B models at 5-8 tok/s via CPU offload, Recommended uses an RTX 4090 (24 GB VRAM) at 10-15 tok/s, and Professional uses dual RTX 3090 GPUs (48 GB VRAM) at 25-40 tok/s on GPU.',
       },
       tier2: {
         title: 'Tier 2: $2500 Recommended AI Workstation',
@@ -121,6 +123,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Power draw:** ~900 W peak (2× GPU 700 W + CPU 350 W + rest)',
           '**Recommended PSU:** Seasonic PRIME TX-1600W or equivalent',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        imageCaption: 'Decision tree for choosing a local-AI workstation tier by largest model size: builds up to 30B route to the Budget (RTX 3090) or Recommended (RTX 4090) tier, while 70B builds route to Recommended via CPU offload (10-15 tok/s) or Professional with dual RTX 3090 GPUs at full GPU speed (25-40 tok/s).',
       },
       softwareSetup: {
         title: 'Software Stack for Any Build',
@@ -294,6 +298,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**70B-Unterstützung:** CPU-Offloading nötig — ~5–8 Tok/s',
           '**Stromaufnahme Peak:** ~450 W',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        imageCaption: 'Vergleich der drei lokalen KI-Workstation-Stufen nach Hardware: Budget nutzt eine RTX 3090 (24 GB VRAM) mit 70B-Modellen bei 5-8 Tok/s per CPU-Offloading, Empfohlen nutzt eine RTX 4090 (24 GB VRAM) mit 10-15 Tok/s, und Profi nutzt zwei RTX 3090 GPUs (48 GB VRAM) mit 25-40 Tok/s auf der GPU.',
       },
       tier2: {
         title: 'Stufe 2: ~2500 € Empfohlene KI-Workstation',
@@ -346,6 +352,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**CPU-Offloading mit 256 GB RAM:** 140B+ Modelle mit 4–6 Tok/s',
           '**Stromaufnahme Peak:** ~900 W',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        imageCaption: 'Entscheidungsbaum zur Wahl der lokalen KI-Workstation-Stufe nach maximaler Modellgröße: Builds bis 30B führen zur Budget-Stufe (RTX 3090) oder Empfohlenen Stufe (RTX 4090), während 70B-Builds entweder über CPU-Offloading zur Empfohlenen Stufe (10-15 Tok/s) oder zur Profi-Stufe mit zwei RTX 3090 GPUs bei voller GPU-Geschwindigkeit (25-40 Tok/s) führen.',
       },
       faq: {
         id: 'faq',
@@ -457,6 +465,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Support 70B :** déchargement CPU nécessaire — ~5–8 tok/s',
           '**Consommation crête :** ~450 W',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        imageCaption: 'Comparaison des trois niveaux de workstation IA locale par matériel : Budget utilise une RTX 3090 (24 Go VRAM) pour les modèles 70B à 5-8 tok/s via déchargement CPU, Recommandé utilise une RTX 4090 (24 Go VRAM) à 10-15 tok/s, et Professionnel utilise deux RTX 3090 (48 Go VRAM) à 25-40 tok/s sur GPU.',
       },
       tier2: {
         title: 'Niveau 2 : ~2500 € Workstation IA recommandée',
@@ -508,6 +518,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Déchargement CPU 256 Go :** modèles 140B+ à 4–6 tok/s',
           '**Consommation crête :** ~900 W',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        imageCaption: 'Arbre de décision pour choisir un niveau de workstation IA locale selon la taille maximale du modèle : les builds jusqu\'à 30B mènent au niveau Budget (RTX 3090) ou Recommandé (RTX 4090), tandis que les builds 70B mènent au niveau Recommandé via déchargement CPU (10-15 tok/s) ou Professionnel avec deux RTX 3090 à pleine vitesse GPU (25-40 tok/s).',
       },
       faq: {
         id: 'faq',
@@ -615,6 +627,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**70Bサポート：** CPUオフロード必要 — 約5〜8 tok/s',
           '**最大消費電力：** 約450W',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        imageCaption: 'ハードウェアで比較する3段階のローカルAIワークステーション:予算重視はRTX 3090(24GB VRAM)でCPUオフロードにより70Bモデルを5〜8 tok/sで実行、推奨構成はRTX 4090(24GB VRAM)で10〜15 tok/s、プロフェッショナル構成はRTX 3090を2基(合計48GB VRAM)搭載しGPU上で25〜40 tok/sを実現。',
       },
       tier2: {
         title: '第2段階：約33万円推奨AIワークステーション',
@@ -667,6 +681,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**256GB RAM CPUオフロード：** 140B以上を4〜6 tok/sで実行',
           '**最大消費電力：** 約900W',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        imageCaption: '最大モデルサイズでローカルAIワークステーションの段階を選ぶ決定木:30B以下の構成は予算重視(RTX 3090)または推奨構成(RTX 4090)へ、70B構成はCPUオフロードで推奨構成(10〜15 tok/s)か、RTX 3090を2基搭載しフルGPU速度(25〜40 tok/s)を実現するプロフェッショナル構成へ分岐する。',
       },
       faq: {
         id: 'faq',
@@ -778,6 +794,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**70B支持：** 需要CPU卸载 — 约5–8 tok/s',
           '**峰值功耗：** 约450W',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        imageCaption: '按硬件对比三种本地AI主机配置:入门级使用RTX 3090(24GB显存),通过CPU卸载以5-8 tok/s运行70B模型;推荐级使用RTX 4090(24GB显存),速度为10-15 tok/s;专业级使用双RTX 3090(共48GB显存),在GPU上达到25-40 tok/s。',
       },
       tier2: {
         title: '第二档：约17000元推荐AI工作站',
@@ -830,6 +848,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**256GB内存CPU卸载：** 140B以上模型4–6 tok/s运行',
           '**峰值功耗：** 约900W',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        imageCaption: '按最大模型规模选择本地AI主机配置等级的决策树:30B及以下配置对应入门级(RTX 3090)或推荐级(RTX 4090),70B配置则通过CPU卸载对应推荐级(10-15 tok/s),或使用双RTX 3090以GPU全速运行(25-40 tok/s)对应专业级。',
       },
       faq: {
         id: 'faq',
@@ -953,6 +973,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Consumo eléctrico:** ~450 W en pico (GPU 350 W + CPU 65 W + resto)',
           '**Fuente de poder recomendada:** Corsair RM850x o equivalente 80+ Gold',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        imageCaption: 'Comparación de las tres configuraciones de estación de trabajo de IA local por hardware: la económica usa una RTX 3090 (24 GB VRAM) que ejecuta modelos 70B a 5-8 tok/s mediante descarga a CPU, la recomendada usa una RTX 4090 (24 GB VRAM) a 10-15 tok/s, y la profesional usa dos RTX 3090 (48 GB VRAM) a 25-40 tok/s en GPU.',
       },
       tier2: {
         title: 'Nivel 2: workstation de IA recomendada por $2500',
@@ -1012,6 +1034,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Consumo eléctrico:** ~900 W en pico (2× GPU 700 W + CPU 350 W + resto)',
           '**Fuente de poder recomendada:** Seasonic PRIME TX-1600W o equivalente',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        imageCaption: 'Árbol de decisión para elegir el nivel de estación de trabajo de IA local según el tamaño máximo del modelo: las configuraciones de hasta 30B llevan al nivel Económico (RTX 3090) o Recomendado (RTX 4090), mientras que las de 70B llevan al nivel Recomendado mediante descarga a CPU (10-15 tok/s) o al Profesional con dos RTX 3090 a velocidad total de GPU (25-40 tok/s).',
       },
       softwareSetup: {
         title: 'Stack de software para cualquier build',
@@ -1188,6 +1212,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**전력 소비:** ~450 W 최대 (GPU 350 W + CPU 65 W + 나머지)',
           '**권장 파워 서플라이:** Corsair RM850x 또는 동급 80+ Gold',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        imageCaption: '하드웨어 기준 3단계 로컬 AI 워크스테이션 비교: 경제형은 RTX 3090(24GB VRAM)으로 CPU 오프로딩을 통해 70B 모델을 5-8 tok/s로 실행하고, 추천형은 RTX 4090(24GB VRAM)으로 10-15 tok/s, 전문가형은 RTX 3090 2개(총 48GB VRAM)로 GPU에서 25-40 tok/s를 달성합니다.',
       },
       tier2: {
         title: '2단계: $2,500 추천형 AI 워크스테이션',
@@ -1247,6 +1273,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**전력 소비:** ~900 W 최대 (GPU 2× 700 W + CPU 350 W + 나머지)',
           '**권장 파워 서플라이:** Seasonic PRIME TX-1600W 또는 동급',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        imageCaption: '최대 모델 크기 기준 로컬 AI 워크스테이션 등급 선택 결정 트리: 30B 이하 구성은 경제형(RTX 3090) 또는 추천형(RTX 4090)으로, 70B 구성은 CPU 오프로딩을 사용하는 추천형(10-15 tok/s) 또는 RTX 3090 2개로 GPU 전체 속도(25-40 tok/s)를 내는 전문가형으로 연결됩니다.',
       },
       softwareSetup: {
         title: '모든 빌드를 위한 소프트웨어 스택',
@@ -1423,6 +1451,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Consumo elétrico:** ~450 W em pico (GPU 350 W + CPU 65 W + restante)',
           '**Fonte recomendada:** Corsair RM850x ou equivalente 80+ Gold',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        imageCaption: 'Comparação das três configurações de workstation de IA local por hardware: a econômica usa uma RTX 3090 (24 GB VRAM) executando modelos 70B a 5-8 tok/s via offload de CPU, a recomendada usa uma RTX 4090 (24 GB VRAM) a 10-15 tok/s, e a profissional usa duas RTX 3090 (48 GB VRAM) a 25-40 tok/s na GPU.',
       },
       tier2: {
         title: 'Nível 2: workstation de IA recomendada por $2500',
@@ -1482,6 +1512,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Consumo elétrico:** ~900 W em pico (2× GPU 700 W + CPU 350 W + restante)',
           '**Fonte recomendada:** Seasonic PRIME TX-1600W ou equivalente',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        imageCaption: 'Árvore de decisão para escolher o nível de workstation de IA local pelo tamanho máximo do modelo: configurações até 30B levam ao nível Econômico (RTX 3090) ou Recomendado (RTX 4090), enquanto configurações de 70B levam ao Recomendado via offload de CPU (10-15 tok/s) ou ao Profissional com duas RTX 3090 em velocidade total de GPU (25-40 tok/s).',
       },
       softwareSetup: {
         title: 'Stack de software para qualquer build',
@@ -1661,6 +1693,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**استهلاك الطاقة:** ~450 واط في الذروة (GPU 350 واط + CPU 65 واط + الباقي)',
           '**مزود الطاقة الموصى به:** Corsair RM850x أو ما يعادله 80+ Gold',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        imageCaption: 'مقارنة بين ثلاث فئات من محطات عمل الذكاء الاصطناعي المحلي حسب العتاد: الفئة الاقتصادية تستخدم RTX 3090 (24 جيجابايت VRAM) لتشغيل نماذج 70B بسرعة 5-8 tok/s عبر تفريغ المعالج، الفئة الموصى بها تستخدم RTX 4090 (24 جيجابايت VRAM) بسرعة 10-15 tok/s، والفئة الاحترافية تستخدم بطاقتي RTX 3090 (48 جيجابايت VRAM إجمالاً) بسرعة 25-40 tok/s على المعالج الرسومي.',
       },
       tier2: {
         title: 'المستوى 2: محطة عمل ذكاء اصطناعي موصى بها بـ2500 دولار',
@@ -1720,6 +1754,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**استهلاك الطاقة:** ~900 واط في الذروة (2× GPU 700 واط + CPU 350 واط + الباقي)',
           '**مزود الطاقة الموصى به:** Seasonic PRIME TX-1600W أو ما يعادله',
         ],
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        imageCaption: 'شجرة قرار لاختيار فئة محطة عمل الذكاء الاصطناعي المحلي حسب أكبر حجم نموذج: الإعدادات حتى 30B تقود إلى الفئة الاقتصادية (RTX 3090) أو الموصى بها (RTX 4090)، بينما إعدادات 70B تقود إلى الفئة الموصى بها عبر تفريغ المعالج (10-15 tok/s) أو إلى الفئة الاحترافية ببطاقتي RTX 3090 بسرعة كاملة للمعالج الرسومي (25-40 tok/s).',
       },
       softwareSetup: {
         title: 'مكدس البرامج لأي إعداد',
