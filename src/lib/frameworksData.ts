@@ -9,6 +9,8 @@ export type FrameworkTranslation = {
   faq: { q: string; a: string }[]
   seoTitle: string
   metaDescription: string
+  heroImage?: string
+  bestForImage?: string
 }
 
 export type Framework = {
@@ -28,6 +30,8 @@ export type Framework = {
   metaDescription?: string
   publishDate?: string
   dateModified?: string
+  heroImage?: string
+  bestForImage?: string
   /** Per-language overrides. Field `name` values (e.g. "Context", "Role") stay in
    *  English everywhere — they're the mnemonic letters (C-R-A-F-T) and translating
    *  them would break the acronym. Only descriptions/prose are localized. */
@@ -42,6 +46,8 @@ export const FRAMEWORKS: Framework[] = [
     tagline: 'The Singapore GPT-4 competition winner. Maximum control over voice, audience, and output format.',
     seoTitle: 'CO-STAR Framework: 6 Fields That Won a GPT-4 Contest',
     metaDescription: 'CO-STAR beat every entry in Singapore\'s GPT-4 contest by splitting Style from Tone. See all 6 fields, a real example, and CRAFT comparison.',
+    heroImage: '/images/frameworks-co-star-fields-overview-hero-en.png',
+    bestForImage: '/images/frameworks-co-star-best-for-hero-en.png',
     publishDate: '2026-03-16',
     dateModified: '2026-07-16',
     complexity: 'Medium',
@@ -80,6 +86,8 @@ export const FRAMEWORKS: Framework[] = [
         tagline: 'Der Gewinner des Singapur-GPT-4-Wettbewerbs. Maximale Kontrolle über Stimme, Zielgruppe und Ausgabeformat.',
         seoTitle: 'CO-STAR Framework: 6 Felder, die einen GPT-4-Contest gewannen',
         metaDescription: 'CO-STAR schlug jeden Beitrag im GPT-4-Wettbewerb aus Singapur, weil es Style von Tone trennt. Alle 6 Felder, ein echtes Beispiel und der Vergleich mit CRAFT.',
+        heroImage: '/images/frameworks-co-star-fields-overview-hero-de.png',
+        bestForImage: '/images/frameworks-co-star-best-for-hero-de.png',
         fields: [
           { name: 'Context', description: 'Hintergrundinformationen, die die KI braucht, um Aufgabe und Situation zu verstehen.' },
           { name: 'Objective', description: 'Das konkrete Ziel bzw. Ergebnis, das die KI erreichen soll.' },
@@ -113,6 +121,8 @@ export const FRAMEWORKS: Framework[] = [
         tagline: 'Le grand gagnant du concours GPT-4 de Singapour. Un contrôle maximal sur la voix, le public et le format de sortie.',
         seoTitle: 'Framework CO-STAR : les 6 champs qui ont gagné un concours GPT-4',
         metaDescription: 'CO-STAR a battu toutes les autres méthodes au concours GPT-4 de Singapour en séparant Style et Tone. Découvrez les 6 champs, un exemple concret et la comparaison avec CRAFT.',
+        heroImage: '/images/frameworks-co-star-fields-overview-hero-fr.png',
+        bestForImage: '/images/frameworks-co-star-best-for-hero-fr.png',
         fields: [
           { name: 'Context', description: 'Les informations de fond dont l\'IA a besoin pour comprendre la tâche et la situation.' },
           { name: 'Objective', description: 'L\'objectif précis ou le résultat que vous attendez de l\'IA.' },
@@ -146,6 +156,8 @@ export const FRAMEWORKS: Framework[] = [
         tagline: 'El ganador del concurso GPT-4 de Singapur. Control máximo sobre la voz, el público y el formato de salida.',
         seoTitle: 'Framework CO-STAR: los 6 campos que ganaron un concurso GPT-4',
         metaDescription: 'CO-STAR venció a todos los rivales en el concurso GPT-4 de Singapur al separar Style de Tone. Descubre los 6 campos, un ejemplo real y la comparación con CRAFT.',
+        heroImage: '/images/frameworks-co-star-fields-overview-hero-es.png',
+        bestForImage: '/images/frameworks-co-star-best-for-hero-es.png',
         fields: [
           { name: 'Context', description: 'La información de fondo que la IA necesita para entender la tarea y la situación.' },
           { name: 'Objective', description: 'El objetivo concreto o resultado que quieres que la IA logre.' },
@@ -179,6 +191,8 @@ export const FRAMEWORKS: Framework[] = [
         tagline: 'O vencedor do concurso GPT-4 de Singapura. Controle máximo sobre voz, público e formato de saída.',
         seoTitle: 'Framework CO-STAR: os 6 campos que venceram um concurso GPT-4',
         metaDescription: 'O CO-STAR venceu todos os concorrentes no concurso GPT-4 de Singapura ao separar Style de Tone. Veja os 6 campos, um exemplo real e a comparação com o CRAFT.',
+        heroImage: '/images/frameworks-co-star-fields-overview-hero-pt.png',
+        bestForImage: '/images/frameworks-co-star-best-for-hero-pt.png',
         fields: [
           { name: 'Context', description: 'As informações de contexto que a IA precisa para entender a tarefa e a situação.' },
           { name: 'Objective', description: 'O objetivo específico ou resultado que você quer que a IA alcance.' },
@@ -212,6 +226,8 @@ export const FRAMEWORKS: Framework[] = [
         tagline: 'シンガポールのGPT-4コンテスト優勝フレームワーク。声のトーン・読者・出力形式を最大限にコントロールできる。',
         seoTitle: 'CO-STARフレームワーク:GPT-4コンテストを制した6要素',
         metaDescription: 'CO-STARはStyleとToneを分離することで、シンガポールのGPT-4コンテストの全出場作を上回った。6つの要素、実例、CRAFTとの比較を解説。',
+        heroImage: '/images/frameworks-co-star-fields-overview-hero-ja.png',
+        bestForImage: '/images/frameworks-co-star-best-for-hero-ja.png',
         fields: [
           { name: 'Context', description: 'AIがタスクと状況を理解するために必要な背景情報。' },
           { name: 'Objective', description: 'AIに達成してほしい具体的なゴールや成果。' },
@@ -245,6 +261,8 @@ export const FRAMEWORKS: Framework[] = [
         tagline: '新加坡GPT-4大赛冠军框架。对语气、受众和输出格式拥有最大程度的控制力。',
         seoTitle: 'CO-STAR框架:赢得GPT-4大赛的6个字段',
         metaDescription: 'CO-STAR通过将Style与Tone分离,击败了新加坡GPT-4大赛的所有对手。了解全部6个字段、真实案例,以及与CRAFT的对比。',
+        heroImage: '/images/frameworks-co-star-fields-overview-hero-zh.png',
+        bestForImage: '/images/frameworks-co-star-best-for-hero-zh.png',
         fields: [
           { name: 'Context', description: 'AI理解任务和情境所需的背景信息。' },
           { name: 'Objective', description: '你希望AI实现的具体目标或结果。' },
@@ -278,6 +296,8 @@ export const FRAMEWORKS: Framework[] = [
         tagline: 'الإطار الفائز في مسابقة GPT-4 بسنغافورة. أقصى قدر من التحكم في نبرة الصوت والجمهور وصيغة المخرجات.',
         seoTitle: 'إطار CO-STAR: 6 حقول فازت بمسابقة GPT-4',
         metaDescription: 'تفوّق CO-STAR على كل المتسابقين في مسابقة GPT-4 بسنغافورة بفصله بين Style وTone. تعرّف على الحقول الـ6 كافة، ومثال حقيقي، ومقارنة مع CRAFT.',
+        heroImage: '/images/frameworks-co-star-fields-overview-hero-ar.png',
+        bestForImage: '/images/frameworks-co-star-best-for-hero-ar.png',
         fields: [
           { name: 'Context', description: 'المعلومات الخلفية التي يحتاجها الذكاء الاصطناعي لفهم المهمة والموقف.' },
           { name: 'Objective', description: 'الهدف أو النتيجة المحددة التي تريد أن يحققها الذكاء الاصطناعي.' },
@@ -311,6 +331,8 @@ export const FRAMEWORKS: Framework[] = [
         tagline: '싱가포르 GPT-4 대회 우승 프레임워크. 어조와 독자, 출력 형식을 최대한으로 제어할 수 있다.',
         seoTitle: 'CO-STAR 프레임워크: GPT-4 대회를 제패한 6가지 요소',
         metaDescription: 'CO-STAR는 Style과 Tone을 분리해 싱가포르 GPT-4 대회의 모든 참가작을 이겼다. 6가지 요소와 실제 예시, CRAFT와의 비교를 확인해 보세요.',
+        heroImage: '/images/frameworks-co-star-fields-overview-hero-ko.png',
+        bestForImage: '/images/frameworks-co-star-best-for-hero-ko.png',
         fields: [
           { name: 'Context', description: 'AI가 과제와 상황을 이해하는 데 필요한 배경 정보.' },
           { name: 'Objective', description: 'AI가 달성하기를 원하는 구체적인 목표나 결과.' },
@@ -2657,6 +2679,8 @@ export function getFrameworkLocalized(slug: string, lang: FrameworkLang | 'en'):
     bestFor: t.bestFor,
     notFor: t.notFor,
     example: t.example,
+    heroImage: t.heroImage ?? fw.heroImage,
+    bestForImage: t.bestForImage ?? fw.bestForImage,
     faq: t.faq,
   }
 }
