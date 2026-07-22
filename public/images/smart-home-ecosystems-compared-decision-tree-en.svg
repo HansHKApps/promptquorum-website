@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="460" fill="#FFFFFF"/>
+  <text x="400" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Which Smart Home Ecosystem Fits You?</text>
+
+  <!-- Connector lines (drawn first, under boxes) -->
+  <line x1="400" y1="81" x2="195" y2="150" stroke="#6750A4" stroke-width="2"/>
+  <line x1="400" y1="81" x2="595" y2="150" stroke="#6750A4" stroke-width="2"/>
+  <line x1="195" y1="196" x2="100" y2="260" stroke="#6750A4" stroke-width="2"/>
+  <line x1="195" y1="196" x2="290" y2="260" stroke="#6750A4" stroke-width="2"/>
+  <line x1="595" y1="196" x2="500" y2="260" stroke="#6750A4" stroke-width="2"/>
+  <line x1="595" y1="196" x2="690" y2="260" stroke="#6750A4" stroke-width="2"/>
+
+  <!-- Branch labels -->
+  <text x="267" y="100" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#79747E">YES</text>
+  <text x="527" y="100" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#79747E">NO</text>
+  <text x="127" y="216" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#79747E">YES</text>
+  <text x="262" y="216" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#79747E">NO</text>
+  <text x="527" y="216" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#79747E">YES</text>
+  <text x="662" y="216" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#79747E">NO</text>
+
+  <!-- Root -->
+  <rect x="260" y="35" width="280" height="46" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="400" y="63" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Is privacy your top priority?</text>
+
+  <!-- Level 1 -->
+  <rect x="65" y="150" width="260" height="46" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="195" y="169" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">Willing to self-host &amp;</text>
+  <text x="195" y="185" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">maintain it?</text>
+
+  <rect x="465" y="150" width="260" height="46" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="595" y="169" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">In the Apple ecosystem</text>
+  <text x="595" y="185" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">already?</text>
+
+  <!-- Leaves -->
+  <rect x="15" y="260" width="170" height="50" rx="8" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <text x="100" y="282" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#34A853" text-anchor="middle">Home Assistant</text>
+  <text x="100" y="298" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Most private &amp; local</text>
+
+  <rect x="205" y="260" width="170" height="50" rx="8" fill="#FFFFFF" stroke="#7D5260" stroke-width="2"/>
+  <text x="290" y="282" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#7D5260" text-anchor="middle">Apple Home</text>
+  <text x="290" y="298" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Privacy-leaning, easier</text>
+
+  <rect x="415" y="260" width="170" height="50" rx="8" fill="#FFFFFF" stroke="#7D5260" stroke-width="2"/>
+  <text x="500" y="282" font-family="system-ui, sans-serif" font-size="12.5" font-weight="700" fill="#7D5260" text-anchor="middle">Apple Home</text>
+  <text x="500" y="298" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Stay within Apple devices</text>
+
+  <rect x="605" y="260" width="170" height="50" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="690" y="282" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Alexa or Google Home</text>
+  <text x="690" y="298" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">Easiest, cloud-first</text>
+
+  <text x="400" y="400" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Two decision points — privacy priority and willingness to self-host — determine the best-fit platform.</text>
+<text x="792" y="455" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
