@@ -1,0 +1,54 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="16.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">الذكاء الاصطناعي السحابي مقابل المحلي: عوامل الامتثال لنظام PDPL السعودي</text>
+
+  <rect x="28" y="52" width="340" height="304" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="28" y="52" width="340" height="4" fill="#EA4335"/>
+  <text x="198" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#EA4335" text-anchor="middle">واجهة الذكاء الاصطناعي السحابية (خطر)</text>
+
+  <rect x="432" y="52" width="340" height="304" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="432" y="52" width="340" height="4" fill="#34A853"/>
+  <text x="602" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">الذكاء الاصطناعي المحلي (متوافق)</text>
+
+  <text x="348" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E" text-anchor="end">تجاوز حدود المملكة؟</text>
+  <text x="348" y="114" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335" text-anchor="end">نعم — يُرسل إلى خوادم خارجية</text>
+  <text x="752" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E" text-anchor="end">تجاوز حدود المملكة؟</text>
+  <text x="752" y="114" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853" text-anchor="end">لا — يُعالج داخل المملكة</text>
+  <line x1="48" y1="122" x2="348" y2="122" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="452" y1="122" x2="752" y2="122" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="348" y="142" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E" text-anchor="end">مطلوب تقييم ملاءمة SDAIA؟</text>
+  <text x="348" y="158" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335" text-anchor="end">نعم (القائمة لم تُنشر بعد)</text>
+  <text x="752" y="142" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E" text-anchor="end">مطلوب تقييم ملاءمة SDAIA؟</text>
+  <text x="752" y="158" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853" text-anchor="end">لا</text>
+  <line x1="48" y1="166" x2="348" y2="166" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="452" y1="166" x2="752" y2="166" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="348" y="186" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E" text-anchor="end">مطلوب بنود تعاقدية (SCC/BCR)؟</text>
+  <text x="348" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335" text-anchor="end">نعم، بموجب لائحة النقل</text>
+  <text x="752" y="186" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E" text-anchor="end">مطلوب بنود تعاقدية (SCC/BCR)؟</text>
+  <text x="752" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853" text-anchor="end">لا</text>
+  <line x1="48" y1="210" x2="348" y2="210" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="452" y1="210" x2="752" y2="210" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="348" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E" text-anchor="end">خطر CLOUD Act (مزود أمريكي)؟</text>
+  <text x="348" y="246" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335" text-anchor="end">نعم — يمكن الوصول إليه بأمر أمريكي</text>
+  <text x="752" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E" text-anchor="end">خطر CLOUD Act (مزود أمريكي)؟</text>
+  <text x="752" y="246" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853" text-anchor="end">لا — خارج الولاية الأمريكية</text>
+  <line x1="48" y1="254" x2="348" y2="254" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="452" y1="254" x2="752" y2="254" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="348" y="274" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E" text-anchor="end">إلزام ساما بالبقاء داخل المملكة</text>
+  <text x="348" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335" text-anchor="end">غير متوافق دون موافقة</text>
+  <text x="752" y="274" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E" text-anchor="end">إلزام ساما بالبقاء داخل المملكة</text>
+  <text x="752" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853" text-anchor="end">متوافق بالكامل</text>
+  <line x1="48" y1="298" x2="348" y2="298" stroke="#F7F2FA" stroke-width="1"/>
+  <line x1="452" y1="298" x2="752" y2="298" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="348" y="318" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E" text-anchor="end">الولاية القضائية لسجلات التدقيق</text>
+  <text x="348" y="334" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#EA4335" text-anchor="end">ولاية قضائية خارجية</text>
+  <text x="752" y="318" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#79747E" text-anchor="end">الولاية القضائية لسجلات التدقيق</text>
+  <text x="752" y="334" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853" text-anchor="end">ولاية قضائية سعودية</text>
+
+  <text x="400" y="382" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">الذكاء الاصطناعي المحلي يحل جميع عوامل الخطر الستة الموضحة أعلاه.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

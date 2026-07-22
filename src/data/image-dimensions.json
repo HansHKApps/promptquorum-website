@@ -17724,6 +17724,26 @@
     "width": 800,
     "height": 350
   },
+  "/images/saudi-pdpl-cloud-vs-onprem-compliance-comparison-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/saudi-pdpl-cloud-vs-onprem-compliance-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/saudi-pdpl-cross-border-transfer-decision-tree-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
+  "/images/saudi-pdpl-cross-border-transfer-decision-tree-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 480
+  },
   "/images/server-vs-consumer-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
