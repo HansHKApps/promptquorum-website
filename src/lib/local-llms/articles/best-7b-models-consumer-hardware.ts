@@ -164,6 +164,8 @@ schema: {
             { 'Metric': 'License', 'Llama 3.3 7B': 'Open (Meta)', 'Mistral Small': 'Apache 2.0', 'Qwen3 7B': 'Open (Alibaba)', 'Phi 2.7B': 'MIT' },
           ],
           columns: ['Metric', 'Llama 3.3 7B', 'Mistral Small', 'Qwen3 7B', 'Phi 2.7B'],
+          image: '/images/best-7b-models-consumer-hardware-speed-comparison-en.svg',
+          imageCaption: '7B model speed comparison on RTX 3060 12GB: Phi 2.7B reaches 20 tok/s, Mistral Small 16 tok/s, Llama 3.3 7B and Qwen3 7B tie at 15 tok/s.',
         },
         'comparison': {
           id: 'comparison',
@@ -192,6 +194,8 @@ schema: {
             '**For coding interviews and code generation:** Llama 3.3 7B > Qwen3 > Mistral.',
             '**For chatbots and assistant applications:** Mistral > Llama 3.3 > Qwen3.',
           ],
+          image: '/images/best-7b-models-consumer-hardware-math-benchmark-en.svg',
+          imageCaption: 'MATH benchmark scores for 7B models: Llama 3.3 7B leads at 82%, Qwen3 7B scores 79%, Mistral Small 75%, and budget pick Phi 2.7B scores 45%.',
         },
         'specialized': {
           id: 'specialized',
@@ -428,6 +432,8 @@ schema: {
             { 'Métrica': 'Licencia', 'Llama 3.3 7B': 'Abierta (Meta)', 'Mistral Small': 'Apache 2.0', 'Qwen3 7B': 'Abierta (Alibaba)', 'Phi 2.7B': 'MIT' },
           ],
           columns: ['Métrica', 'Llama 3.3 7B', 'Mistral Small', 'Qwen3 7B', 'Phi 2.7B'],
+          image: '/images/best-7b-models-consumer-hardware-speed-comparison-en.svg',
+          imageCaption: 'Comparación de velocidad de modelos 7B en RTX 3060 12GB: Phi 2.7B alcanza 20 tok/s, Mistral Small 16 tok/s, Llama 3.3 7B y Qwen3 7B empatan en 15 tok/s.',
         },
         'comparison': {
           id: 'comparison',
@@ -456,6 +462,8 @@ schema: {
             '**Para entrevistas de código y generación de código:** Llama 3.3 7B > Qwen3 > Mistral.',
             '**Para chatbots y aplicaciones de asistente:** Mistral > Llama 3.3 > Qwen3.',
           ],
+          image: '/images/best-7b-models-consumer-hardware-math-benchmark-en.svg',
+          imageCaption: 'Puntuaciones del benchmark MATH para modelos 7B: Llama 3.3 7B lidera con 82%, Qwen3 7B obtiene 79%, Mistral Small 75%, y la opción económica Phi 2.7B obtiene 45%.',
         },
         'specialized': {
           id: 'specialized',
@@ -695,6 +703,8 @@ schema: {
             { 'Métrica': 'الترخيص', 'Llama 3.3 7B': 'مفتوح (Meta)', 'Mistral Small': 'Apache 2.0', 'Qwen3 7B': 'مفتوح (Alibaba)', 'Phi 2.7B': 'MIT' },
           ],
           columns: ['Métrica', 'Llama 3.3 7B', 'Mistral Small', 'Qwen3 7B', 'Phi 2.7B'],
+          image: '/images/best-7b-models-consumer-hardware-speed-comparison-en.svg',
+          imageCaption: 'مقارنة سرعة نماذج 7B على RTX 3060 12 GB: يصل Phi 2.7B إلى 20 tok/ثانية، وMistral Small إلى 16 tok/ثانية، بينما يتعادل Llama 3.3 7B وQwen3 7B عند 15 tok/ثانية.',
         },
         'comparison': {
           id: 'comparison',
@@ -723,6 +733,8 @@ schema: {
             '**لمقابلات الكود وتوليد الكود:** Llama 3.3 7B > Qwen3 > Mistral.',
             '**لروبوتات الدردشة وتطبيقات المساعد:** Mistral > Llama 3.3 > Qwen3.',
           ],
+          image: '/images/best-7b-models-consumer-hardware-math-benchmark-en.svg',
+          imageCaption: 'درجات اختبار MATH لنماذج 7B: يتصدّر Llama 3.3 7B بنسبة 82%، ويحقق Qwen3 7B نسبة 79%، وMistral Small نسبة 75%، بينما يحقق الخيار الاقتصادي Phi 2.7B نسبة 45%.',
         },
         'specialized': {
           id: 'specialized',
@@ -877,6 +889,8 @@ schema: {
             { 'Métrica': 'Licença', 'Llama 3.3 7B': 'Aberta (Meta)', 'Mistral Small': 'Apache 2.0', 'Qwen3 7B': 'Aberta (Alibaba)', 'Phi 2.7B': 'MIT' },
           ],
           columns: ['Métrica', 'Llama 3.3 7B', 'Mistral Small', 'Qwen3 7B', 'Phi 2.7B'],
+          image: '/images/best-7b-models-consumer-hardware-speed-comparison-en.svg',
+          imageCaption: 'Comparação de velocidade dos modelos 7B na RTX 3060 12 GB: Phi 2.7B atinge 20 tok/s, Mistral Small 16 tok/s, Llama 3.3 7B e Qwen3 7B empatam em 15 tok/s.',
         },
         comparison: {
           id: 'comparison',
@@ -899,6 +913,8 @@ schema: {
             '**Para entrevistas de código e geração de código:** Llama 3.3 7B > Qwen3 > Mistral.',
             '**Para chatbots e aplicações de assistente:** Mistral > Llama 3.3 > Qwen3.',
           ],
+          image: '/images/best-7b-models-consumer-hardware-math-benchmark-en.svg',
+          imageCaption: 'Pontuações do benchmark MATH para modelos 7B: Llama 3.3 7B lidera com 82%, Qwen3 7B obtém 79%, Mistral Small 75%, e a opção econômica Phi 2.7B obtém 45%.',
         },
         specialized: {
           id: 'specialized',
@@ -1135,6 +1151,8 @@ schema: {
             { 'Kenngröße': 'Lizenz', 'Llama 3.3 7B': 'Offen (Meta)', 'Mistral Small': 'Apache 2.0', 'Qwen3 7B': 'Offen (Alibaba)', 'Phi 2.7B': 'MIT' },
           ],
           columns: ['Kenngröße', 'Llama 3.3 7B', 'Mistral Small', 'Qwen3 7B', 'Phi 2.7B'],
+          image: '/images/best-7b-models-consumer-hardware-speed-comparison-en.svg',
+          imageCaption: 'Geschwindigkeitsvergleich der 7B-Modelle auf RTX 3060 12 GB: Phi 2.7B erreicht 20 Tokens/Sek., Mistral Small 16 Tokens/Sek., Llama 3.3 7B und Qwen3 7B liegen gleichauf bei 15 Tokens/Sek.',
         },
         'comparison': {
           id: 'comparison',
@@ -1163,6 +1181,8 @@ schema: {
             '**Für Coding-Interviews und Code-Generierung:** Llama 3.3 7B > Qwen2,5 > Mistral.',
             '**Für Chatbots und Assistenzanwendungen:** Mistral > Llama 3.3 > Qwen2,5.',
           ],
+          image: '/images/best-7b-models-consumer-hardware-math-benchmark-en.svg',
+          imageCaption: 'MATH-Benchmark-Werte für 7B-Modelle: Llama 3.3 7B führt mit 82 %, Qwen3 7B erreicht 79 %, Mistral Small 75 %, und die Budgetoption Phi 2.7B erreicht 45 %.',
         },
         'specialized': {
           id: 'specialized',
@@ -1401,6 +1421,8 @@ schema: {
             { 'Métrique': 'Licence', 'Llama 3.3 7B': 'Ouvert (Meta)', 'Mistral Small': 'Apache 2.0', 'Qwen3 7B': 'Ouvert (Alibaba)', 'Phi 2.7B': 'MIT' },
           ],
           columns: ['Métrique', 'Llama 3.3 7B', 'Mistral Small', 'Qwen3 7B', 'Phi 2.7B'],
+          image: '/images/best-7b-models-consumer-hardware-speed-comparison-en.svg',
+          imageCaption: 'Comparaison de vitesse des modèles 7B sur RTX 3060 12 Go : Phi 2.7B atteint 20 tokens/s, Mistral Small 16 tokens/s, Llama 3.3 7B et Qwen3 7B sont à égalité à 15 tokens/s.',
         },
         'comparison': {
           id: 'comparison',
@@ -1429,6 +1451,8 @@ schema: {
             '**Pour les entretiens de code et la génération de code :** Llama 3.3 7B > Qwen3 > Mistral.',
             '**Pour les chatbots et les applications d\'assistance :** Mistral > Llama 3.3 > Qwen3.',
           ],
+          image: '/images/best-7b-models-consumer-hardware-math-benchmark-en.svg',
+          imageCaption: 'Scores du benchmark MATH par modèle 7B : Llama 3.3 7B est en tête avec 82 %, Qwen3 7B obtient 79 %, Mistral Small 75 %, et l\'option économique Phi 2.7B obtient 45 %.',
         },
         'specialized': {
           id: 'specialized',
@@ -1664,6 +1688,8 @@ schema: {
             { '指標': 'ライセンス', 'Llama 3.3 7B': 'オープン（Meta）', 'Mistral Small': 'Apache 2.0', 'Qwen3 7B': 'オープン（Alibaba）', 'Phi 2.7B': 'MIT' },
           ],
           columns: ['指標', 'Llama 3.3 7B', 'Mistral Small', 'Qwen3 7B', 'Phi 2.7B'],
+          image: '/images/best-7b-models-consumer-hardware-speed-comparison-en.svg',
+          imageCaption: 'RTX 3060 12GBでの7Bモデル速度比較：Phi 2.7Bは20 tok/秒、Mistral Smallは16 tok/秒、Llama 3.3 7BとQwen3 7Bは15 tok/秒で同着。',
         },
         'comparison': {
           id: 'comparison',
@@ -1692,6 +1718,8 @@ schema: {
             '**コーディングインタビュー・コード生成向け：** Llama 3.3 7B > Qwen3 > Mistral。',
             '**チャットボット・アシスタントアプリ向け：** Mistral > Llama 3.3 > Qwen3。',
           ],
+          image: '/images/best-7b-models-consumer-hardware-math-benchmark-en.svg',
+          imageCaption: '7BモデルのMATHベンチマークスコア：Llama 3.3 7Bが82%でトップ、Qwen3 7Bは79%、Mistral Smallは75%、予算重視のPhi 2.7Bは45%。',
         },
         'specialized': {
           id: 'specialized',
@@ -1927,6 +1955,8 @@ schema: {
             { '指标': '许可证', 'Llama 3.3 7B': '开源（Meta）', 'Mistral Small': 'Apache 2.0', 'Qwen3 7B': '开源（阿里巴巴）', 'Phi 2.7B': 'MIT' },
           ],
           columns: ['指标', 'Llama 3.3 7B', 'Mistral Small', 'Qwen3 7B', 'Phi 2.7B'],
+          image: '/images/best-7b-models-consumer-hardware-speed-comparison-en.svg',
+          imageCaption: 'RTX 3060 12GB上的7B模型速度对比：Phi 2.7B达到20 tok/秒，Mistral Small为16 tok/秒，Llama 3.3 7B与Qwen3 7B并列15 tok/秒。',
         },
         'comparison': {
           id: 'comparison',
@@ -1955,6 +1985,8 @@ schema: {
             '**编程面试和代码生成：** Llama 3.3 7B > Qwen3 > Mistral。',
             '**聊天机器人和助手应用：** Mistral > Llama 3.3 > Qwen3。',
           ],
+          image: '/images/best-7b-models-consumer-hardware-math-benchmark-en.svg',
+          imageCaption: '7B模型MATH基准得分：Llama 3.3 7B以82%领先，Qwen3 7B为79%，Mistral Small为75%，预算之选Phi 2.7B为45%。',
         },
         'specialized': {
           id: 'specialized',
