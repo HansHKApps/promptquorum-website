@@ -1,0 +1,61 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="460" fill="#FFFFFF"/>
+
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Best Local-Capable Pick by Category</text>
+
+  <!-- Header Row -->
+  <text x="30" y="66" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Category</text>
+  <text x="190" y="66" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Local Protocol</text>
+  <text x="430" y="66" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Example</text>
+  <line x1="30" y1="76" x2="770" y2="76" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Hub -->
+  <circle cx="42" cy="103" r="12" fill="#6750A4"/>
+  <text x="42" y="107" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="66" y="107" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">Hub</text>
+  <text x="190" y="107" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">Zigbee + Z-Wave + Matter + Thread</text>
+  <text x="430" y="107" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#6750A4">Home Assistant</text>
+  <line x1="30" y1="122" x2="770" y2="122" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Lighting -->
+  <circle cx="42" cy="149" r="12" fill="#6750A4"/>
+  <text x="42" y="153" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="66" y="153" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">Lighting</text>
+  <text x="190" y="153" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">Zigbee or Matter</text>
+  <text x="430" y="153" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#6750A4">Philips Hue, IKEA TRÅDFRI</text>
+  <line x1="30" y1="168" x2="770" y2="168" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: Locks -->
+  <circle cx="42" cy="195" r="12" fill="#6750A4"/>
+  <text x="42" y="199" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="66" y="199" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">Locks</text>
+  <text x="190" y="199" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">Z-Wave or Matter</text>
+  <text x="430" y="199" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#6750A4">Yale Assure Lock</text>
+  <line x1="30" y1="214" x2="770" y2="214" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Sensors -->
+  <circle cx="42" cy="241" r="12" fill="#6750A4"/>
+  <text x="42" y="245" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="66" y="245" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">Sensors</text>
+  <text x="190" y="245" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">Zigbee or Z-Wave</text>
+  <text x="430" y="245" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#6750A4">Aqara P1, SONOFF SNZB-04P</text>
+  <line x1="30" y1="260" x2="770" y2="260" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: Cameras -->
+  <circle cx="42" cy="287" r="12" fill="#6750A4"/>
+  <text x="42" y="291" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="66" y="291" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">Cameras</text>
+  <text x="190" y="291" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">Local RTSP + Frigate</text>
+  <text x="430" y="291" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#6750A4">Reolink RLC-810A</text>
+  <line x1="30" y1="306" x2="770" y2="306" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 6: Plugs -->
+  <circle cx="42" cy="333" r="12" fill="#6750A4"/>
+  <text x="42" y="337" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <text x="66" y="337" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">Plugs</text>
+  <text x="190" y="337" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">Zigbee or local Wi-Fi</text>
+  <text x="430" y="337" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#6750A4">SONOFF, ThirdReality</text>
+  <line x1="30" y1="352" x2="770" y2="352" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="400" y="400" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">6 categories, each mapped to a local protocol — no cloud account required for core control.</text>
+<text x="792" y="455" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
