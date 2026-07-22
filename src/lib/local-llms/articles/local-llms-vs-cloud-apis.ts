@@ -57,6 +57,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'A **cloud API** means your prompt is sent over the internet to a provider\'s server (OpenAI, Anthropic, Google), processed by their model, and the response is returned to you. You pay per token and never touch the model weights.',
             'Both approaches use the same underlying transformer architecture. The practical differences are in where the compute happens, who controls the data, and what quality/speed tradeoff you get.',
           ],
+          image: '/images/local-llms-vs-cloud-apis-architecture-en.svg',
+          imageCaption: 'Local LLM vs cloud API request flow: local inference keeps the prompt, compute, and response entirely on-device, while a cloud API call sends the prompt to the provider\'s remote server and back.',
         },
         fullComparison: {
           id: 'full-comparison',
@@ -125,6 +127,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Choose a cloud API if:** you need the highest available output quality, you want zero setup friction, you are prototyping and don\'t want to manage infrastructure, or your usage is low-volume.',
             '**Use both in parallel:** Tools like [PromptQuorum](/) let you dispatch one prompt to your local Ollama model alongside 25+ cloud models simultaneously, so you can compare local vs. cloud results in one view and route tasks to the right model for each job.',
           ],
+          image: '/images/local-llms-vs-cloud-apis-decision-en.svg',
+          imageCaption: 'Decision framework for local LLM vs cloud API: choose local for sensitive data, high-volume use, offline access, or learning; choose a cloud API for maximum quality, zero setup, prototyping, or low-volume use.',
         },
         regionalContext: {
           id: 'regional-context',
@@ -283,6 +287,8 @@ schema: {
             'Una **API en la nube** significa que tu prompt se envía por internet al servidor de un proveedor (OpenAI, Anthropic, Google), es procesado por su modelo y la respuesta te es devuelta. Pagas por token y nunca tienes acceso a los pesos del modelo.',
             'Ambos enfoques usan la misma arquitectura transformer subyacente. Las diferencias prácticas están en dónde ocurre el cómputo, quién controla los datos y el equilibrio entre calidad y velocidad que obtienes.',
           ],
+          image: '/images/local-llms-vs-cloud-apis-architecture-es.svg',
+          imageCaption: 'Flujo de solicitud LLM local vs API en la nube: la inferencia local mantiene el prompt, el cómputo y la respuesta totalmente en el dispositivo, mientras que una API en la nube envía el prompt al servidor remoto del proveedor y devuelve la respuesta.',
         },
         fullComparison: {
           id: 'full-comparison',
@@ -351,6 +357,8 @@ schema: {
             '**Elige una API en la nube si:** necesitas la mayor calidad de salida disponible, quieres cero fricción en la configuración, estás prototipando y no quieres gestionar infraestructura, o tu uso es de bajo volumen.',
             '**Usa ambos en paralelo:** Herramientas como [PromptQuorum](/) te permiten enviar un prompt a tu modelo local de Ollama y a más de 25 modelos en la nube simultáneamente, para comparar resultados locales vs. en la nube en una sola vista y enrutar tareas al modelo correcto para cada trabajo.',
           ],
+          image: '/images/local-llms-vs-cloud-apis-decision-es.svg',
+          imageCaption: 'Marco de decisión LLM local vs API en la nube: local para datos sensibles, uso de alto volumen, acceso sin conexión o aprendizaje; API en la nube para la máxima calidad, cero fricción de configuración, prototipado o uso de bajo volumen.',
         },
         regionalContext: {
           id: 'regional-context',
@@ -514,6 +522,8 @@ schema: {
             'تعني **واجهة API سحابية** أن مطالبتك تُرسَل عبر الإنترنت إلى خادم مزوّد (OpenAI، Anthropic، Google)، ويُعالجها نموذجه، وتُعاد إليك الاستجابة. تدفع لكل رمز ولا تحصل أبدًا على وصول إلى أوزان النموذج.',
             'يستخدم كلا النهجين معمارية transformer الأساسية نفسها. تكمن الفروق العملية في أين تحدث الحوسبة، ومن يتحكم في البيانات، والموازنة بين الجودة والسرعة التي تحصل عليها.',
           ],
+          image: '/images/local-llms-vs-cloud-apis-architecture-ar.svg',
+          imageCaption: 'تدفق الطلب: LLM محلي مقابل API سحابية — يُبقي الاستدلال المحلي الطلب والحوسبة والاستجابة بالكامل على الجهاز، بينما يرسل استدعاء API السحابية الطلب إلى خادم المزوّد البعيد ثم يعيد الاستجابة.',
         },
         fullComparison: {
           id: 'full-comparison',
@@ -582,6 +592,8 @@ schema: {
             '**اختر واجهة API سحابية إذا:** احتجت أعلى جودة مخرجات متاحة، أو أردت صفر احتكاك في الإعداد، أو كنت تُنشئ نموذجًا أوليًا ولا تريد إدارة بنية تحتية، أو كان استخدامك منخفض الحجم.',
             '**استخدم كليهما بالتوازي:** أدوات مثل [PromptQuorum](/) تتيح لك إرسال مطالبة إلى نموذج Ollama المحلي وأكثر من 25 نموذجًا سحابيًا في آن واحد، لمقارنة النتائج المحلية مقابل السحابية في عرض واحد وتوجيه المهام إلى النموذج الصحيح لكل عمل.',
           ],
+          image: '/images/local-llms-vs-cloud-apis-decision-ar.svg',
+          imageCaption: 'إطار قرار LLM محلي مقابل API سحابية: اختر المحلي للبيانات الحساسة والاستخدام عالي الحجم والوصول دون اتصال أو التعلم؛ واختر API السحابية لأعلى جودة وصفر احتكاك إعداد والنمذجة الأولية أو الاستخدام منخفض الحجم.',
         },
         regionalContext: {
           id: 'regional-context',
@@ -745,6 +757,8 @@ schema: {
             'Uma **API na nuvem** significa que seu prompt é enviado pela internet ao servidor de um provedor (OpenAI, Anthropic, Google), processado pelo modelo deles e a resposta é retornada. Você paga por token e nunca tem acesso aos pesos do modelo.',
             'Ambas as abordagens usam a mesma arquitetura transformer subjacente. As diferenças práticas estão em onde o processamento ocorre, quem controla os dados e o equilíbrio entre qualidade e velocidade.',
           ],
+          image: '/images/local-llms-vs-cloud-apis-architecture-pt.svg',
+          imageCaption: 'Fluxo de solicitação LLM local vs API na nuvem: a inferência local mantém o prompt, o processamento e a resposta totalmente no dispositivo, enquanto uma API na nuvem envia o prompt ao servidor remoto do provedor e retorna a resposta.',
         },
         fullComparison: {
           id: 'full-comparison',
@@ -812,6 +826,8 @@ schema: {
             '**Escolha uma API na nuvem se:** você precisa da maior qualidade de saída disponível, quer zero fricção na configuração, está prototipando e não quer gerenciar infraestrutura, ou seu uso é de baixo volume.',
             '**Use ambos em paralelo:** Ferramentas como [PromptQuorum](/) permitem enviar um prompt ao seu modelo local do Ollama e a mais de 25 modelos na nuvem simultaneamente, para comparar resultados locais vs. nuvem em uma única visualização e rotear tarefas para o modelo certo para cada trabalho.',
           ],
+          image: '/images/local-llms-vs-cloud-apis-decision-pt.svg',
+          imageCaption: 'Framework de decisão LLM local vs API na nuvem: local para dados sensíveis, uso de alto volume, acesso offline ou aprendizado; API na nuvem para máxima qualidade, zero fricção de configuração, prototipagem ou uso de baixo volume.',
         },
         regionalContext: {
           id: 'regional-context',
@@ -930,6 +946,8 @@ schema: {
             'Eine **Cloud-API** bedeutet, dass Ihr Prompt über das Internet an den Server eines Anbieters (OpenAI, Anthropic, Google) gesendet, von dessen Modell verarbeitet und die Antwort an Sie zurückgegeben wird. Sie zahlen pro Token und haben keinen Zugriff auf die Modellgewichte.',
             'Beide Ansätze verwenden dieselbe zugrunde liegende Transformer-Architektur. Die praktischen Unterschiede liegen darin, wo die Berechnung stattfindet, wer die Daten kontrolliert und welchen Qualitäts-/Geschwindigkeitskompromiss Sie erhalten.',
           ],
+          image: '/images/local-llms-vs-cloud-apis-architecture-de.svg',
+          imageCaption: 'Anfragefluss lokales LLM vs. Cloud-API: Bei lokaler Inferenz bleiben Prompt, Berechnung und Antwort vollständig auf dem Gerät, während eine Cloud-API den Prompt an den Remote-Server des Anbieters sendet und zurückschickt.',
         },
         fullComparison: {
           id: 'full-comparison',
@@ -998,6 +1016,8 @@ schema: {
             '**Wählen Sie eine Cloud-API, wenn:** Sie die höchste verfügbare Ausgabequalität benötigen, Sie keinen Einrichtungsaufwand möchten, Sie prototypisieren und keine Infrastruktur verwalten möchten oder Ihre Nutzung geringvolumig ist.',
             '**Verwenden Sie beides parallel:** Tools wie [PromptQuorum](/de) ermöglichen es Ihnen, einen Prompt gleichzeitig an Ihr lokales Ollama-Modell und 25+ Cloud-Modelle zu senden, lokale vs. Cloud-Ergebnisse in einer Ansicht zu vergleichen und Aufgaben an das richtige Modell weiterzuleiten.',
           ],
+          image: '/images/local-llms-vs-cloud-apis-decision-de.svg',
+          imageCaption: 'Entscheidungsrahmen lokales LLM vs. Cloud-API: lokal bei sensiblen Daten, hohem Volumen, Offline-Bedarf oder Lernzweck; Cloud-API bei maximaler Qualität, ohne Einrichtungsaufwand, für Prototyping oder geringes Volumen.',
         },
         regionalContext: {
           id: 'regional-context',
@@ -1179,6 +1199,8 @@ schema: {
             'Une **API cloud** signifie que votre prompt est envoyé via Internet au serveur d\'un fournisseur (OpenAI, Anthropic, Google), traité par leur modèle, et la réponse vous est retournée. Vous payez par token et n\'avez jamais accès aux poids du modèle.',
             'Les deux approches utilisent la même architecture transformer sous-jacente. Les différences pratiques résident dans le lieu d\'exécution des calculs, le contrôle des données et le compromis qualité/vitesse obtenu.',
           ],
+          image: '/images/local-llms-vs-cloud-apis-architecture-fr.svg',
+          imageCaption: 'Flux de requête LLM local vs API cloud : l\'inférence locale conserve le prompt, le calcul et la réponse entièrement sur l\'appareil, tandis qu\'une API cloud envoie le prompt au serveur distant du fournisseur puis renvoie la réponse.',
         },
         fullComparison: {
           title: 'Comment les LLMs locaux et les APIs cloud se comparent-ils sur 8 facteurs ?',
@@ -1241,6 +1263,8 @@ schema: {
             '**Choisissez une API cloud si :** vous avez besoin de la meilleure qualité de sortie disponible, vous souhaitez une configuration sans friction, vous faites du prototypage sans gérer d\'infrastructure, ou votre utilisation est à faible volume.',
             '**Utilisez les deux en parallèle :** Des outils comme [PromptQuorum](/fr) vous permettent d\'envoyer un prompt simultanément à votre modèle Ollama local et à plus de 25 modèles cloud, de comparer les résultats locaux vs cloud en une seule vue et de router les tâches vers le bon modèle.',
           ],
+          image: '/images/local-llms-vs-cloud-apis-decision-fr.svg',
+          imageCaption: 'Cadre de décision LLM local vs API cloud : local pour les données sensibles, un usage à volume élevé, l\'accès hors ligne ou l\'apprentissage ; API cloud pour la qualité maximale, une configuration sans friction, le prototypage ou un usage à faible volume.',
         },
         regionalContext: {
           id: 'regional-context',
@@ -1422,6 +1446,8 @@ schema: {
             '**クラウドAPI**とはプロンプトがインターネット経由でプロバイダーのサーバー（OpenAI、Anthropic、Google）に送信され、そのモデルで処理され、応答が返される仕組みです。トークンごとに料金が発生し、モデルの重みには一切アクセスできません。',
             '両方のアプローチは同じTransformerアーキテクチャを使用しています。実際の違いは計算が行われる場所、データを誰が管理するか、そして品質と速度のトレードオフにあります。',
           ],
+          image: '/images/local-llms-vs-cloud-apis-architecture-ja.svg',
+          imageCaption: 'ローカルLLM vs クラウドAPIのリクエストフロー：ローカル推論はプロンプト・計算・応答をすべてデバイス上に保持するが、クラウドAPI呼び出しはプロンプトをプロバイダーのリモートサーバーへ送信し応答を返す。',
         },
         fullComparison: {
           title: 'ローカルLLMとクラウドAPIを8つの要素で比較すると？',
@@ -1484,6 +1510,8 @@ schema: {
             '**クラウドAPIを選ぶ場合：** 最高の出力品質が必要な場合、セットアップの手間をかけたくない場合、インフラ管理なしでプロトタイピングする場合、または使用量が少量の場合。',
             '**両方を並行して使用する：** [PromptQuorum](/ja)などのツールを使えば、1つのプロンプトをローカルOllamaモデルと25以上のクラウドモデルに同時に送信し、ローカル vs クラウドの結果を1つの画面で比較して、各タスクに最適なモデルにルーティングできます。',
           ],
+          image: '/images/local-llms-vs-cloud-apis-decision-ja.svg',
+          imageCaption: 'ローカルLLMとクラウドAPIの選択フレームワーク：機密データ・大量利用・オフライン要件・学習目的ならローカルLLM、最高品質・ゼロセットアップ・プロトタイピング・少量利用ならクラウドAPIを選ぶ。',
         },
         regionalContext: {
           id: 'regional-context',
@@ -1665,6 +1693,8 @@ schema: {
             '**云端API**意味着您的提示词通过互联网发送到提供商的服务器（OpenAI、Anthropic、Google），由其模型处理，响应返回给您。按token收费，永远无法访问模型权重。',
             '两种方法使用相同的底层Transformer架构。实际差异在于计算发生的位置、谁控制数据以及获得的质量/速度权衡。',
           ],
+          image: '/images/local-llms-vs-cloud-apis-architecture-zh.svg',
+          imageCaption: '本地LLM与云端API的请求流程对比：本地推理将提示词、计算和响应完全保留在设备上，而云端API调用会将提示词发送到提供商的远程服务器并返回响应。',
         },
         fullComparison: {
           title: '本地LLM和云端API在8大因素上如何对比？',
@@ -1727,6 +1757,8 @@ schema: {
             '**选择云端API的情形：** 需要最高可用输出质量、希望零配置摩擦、正在原型开发且不想管理基础设施，或使用量较低。',
             '**并行使用两者：** [PromptQuorum](/zh)等工具让您同时向本地Ollama模型和25+云端模型发送提示词，在一个界面中比较本地与云端结果，并将任务路由到每项工作的最佳模型。',
           ],
+          image: '/images/local-llms-vs-cloud-apis-decision-zh.svg',
+          imageCaption: '本地LLM与云端API选择框架：敏感数据、高频使用、离线需求或学习目的选择本地LLM；追求最高质量、零配置、原型开发或低频使用选择云端API。',
         },
         regionalContext: {
           id: 'regional-context',
@@ -1909,6 +1941,8 @@ schema: {
             '**클라우드 API**에서는 프롬프트가 인터넷을 통해 공급자 서버(OpenAI, Anthropic, Google)로 전송되고, 해당 모델에 의해 처리된 후 응답이 반환됩니다. 토큰당 비용을 지불하며 모델 가중치에는 접근할 수 없습니다.',
             '두 접근 방식은 동일한 트랜스포머 아키텍처를 사용합니다. 실질적인 차이는 연산이 어디서 이루어지는지, 데이터를 누가 제어하는지, 그리고 어떤 품질/속도 트레이드오프를 갖는지에 있습니다.',
           ],
+          image: '/images/local-llms-vs-cloud-apis-architecture-ko.svg',
+          imageCaption: '로컬 LLM과 클라우드 API의 요청 흐름 비교: 로컬 추론은 프롬프트, 연산, 응답을 모두 기기 내에 유지하지만, 클라우드 API 호출은 프롬프트를 공급자의 원격 서버로 전송한 뒤 응답을 반환받습니다.',
         },
         fullComparison: {
           id: 'full-comparison',
@@ -1977,6 +2011,8 @@ schema: {
             '**클라우드 API 선택 권장 상황:** 가능한 최고의 출력 품질이 필요한 경우, 설정 없이 즉시 시작하고 싶은 경우, 인프라 관리 없이 프로토타이핑하는 경우, 또는 사용량이 적은 경우.',
             '**두 가지를 병행 사용:** [PromptQuorum](/)와 같은 도구를 사용하면 하나의 프롬프트를 로컬 Ollama 모델과 25개 이상의 클라우드 모델에 동시에 전송하여 로컬 vs 클라우드 결과를 한 화면에서 비교하고 각 작업에 적합한 모델로 라우팅할 수 있습니다.',
           ],
+          image: '/images/local-llms-vs-cloud-apis-decision-ko.svg',
+          imageCaption: '로컬 LLM과 클라우드 API 선택 프레임워크: 민감한 데이터, 높은 사용량, 오프라인 필요성, 학습 목적이라면 로컬 LLM을, 최고 품질, 제로 설정, 프로토타이핑, 낮은 사용량이라면 클라우드 API를 선택하세요.',
         },
         regionalContext: {
           id: 'regional-context',
