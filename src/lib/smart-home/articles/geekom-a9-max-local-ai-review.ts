@@ -113,6 +113,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Local AI & LLM Performance',
         content:
           '**With 32 GB of RAM the A9 Max comfortably runs a 7B–8B model on Ollama and fits a 13B–14B model at 4-bit with room for context — all figures estimated from the verified hardware, not a measured benchmark.** Moving to 64 GB opens 30B-class models, and the 128 GB ceiling lets a 70B model load at 4-bit, though large models are limited by memory bandwidth (dual-channel DDR5-5600, no dedicated VRAM) and are usable for experimentation rather than fast serving.',
+        image: '/images/geekom-a9-max-local-ai-review-ram-model-fit-en.svg',
+        imageCaption: 'GEEKOM A9 Max local LLM model fit by RAM: 32 GB runs 7B–8B comfortably and fits a 13B–14B model at Q4; 64 GB opens 30B-class models; the 128 GB ceiling loads a 70B model at Q4, but slowly.',
         items: [
           'Ollama, LM Studio, and llama.cpp all run well; the Radeon 890M is used through Vulkan or ROCm backends.',
           'The 50-TOPS NPU accelerates vision workloads such as Frigate object detection — it does not speed up local LLMs, which the runtimes place on the CPU/iGPU.',
@@ -170,6 +172,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'Alternatives to Consider',
         content: '**If the A9 Max is more than you need, three cheaper boxes cover most of the same jobs.**',
+        image: '/images/geekom-a9-max-local-ai-review-vs-ser8-specs-en.svg',
+        imageCaption: 'GEEKOM A9 Max vs. Beelink SER8 spec comparison: Ryzen AI 9 HX 370 (12c/24t) with a 128 GB RAM ceiling and 7B–70B model fit versus Ryzen 7 8845HS (8c/16t) with a 64 GB ceiling and 7B–14B comfortable fit.',
         items: [
           '[Beelink SER8](/smart-home/beelink-ser8-local-ai-review) — the value pick: Ryzen 7 8845HS, 32 GB, ~$650, runs a 7B model comfortably',
           '[Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review) — adds an OCuLink port for an external GPU if you want faster large-model inference later',
@@ -345,6 +349,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lokale KI & LLM-Leistung',
         content:
           '**Mit 32 GB RAM betreibt der A9 Max bequem ein 7B–8B-Modell auf Ollama und fasst ein 13B–14B-Modell in 4-Bit mit Platz für Kontext — alle Angaben aus der geprüften Hardware geschätzt, kein gemessener Benchmark.** Der Umstieg auf 64 GB ermöglicht Modelle der 30B-Klasse, und die 128-GB-Obergrenze lässt ein 70B-Modell in 4-Bit laden, wobei große Modelle durch die Speicherbandbreite (Dual-Channel DDR5-5600, kein dediziertes VRAM) begrenzt sind und eher zum Experimentieren als zum schnellen Betrieb taugen.',
+        image: '/images/geekom-a9-max-local-ai-review-ram-model-fit-en.svg',
+        imageCaption: 'Lokale LLM-Modellgröße auf dem GEEKOM A9 Max nach RAM: 32 GB betreiben 7B–8B bequem und fassen ein 13B–14B-Modell in Q4; 64 GB öffnen Modelle der 30B-Klasse; die 128-GB-Obergrenze lädt ein 70B-Modell in Q4, aber langsam.',
         items: [
           'Ollama, LM Studio und llama.cpp laufen alle gut; die Radeon 890M wird über Vulkan- oder ROCm-Backends genutzt.',
           'Die 50-TOPS-NPU beschleunigt Bildverarbeitung wie die Frigate-Objekterkennung — sie beschleunigt keine lokalen LLMs, die die Laufzeiten auf CPU/iGPU legen.',
@@ -402,6 +408,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'Alternativen zum Vergleich',
         content: '**Wenn der A9 Max mehr ist, als Sie brauchen, decken drei günstigere Boxen die meisten gleichen Aufgaben ab.**',
+        image: '/images/geekom-a9-max-local-ai-review-vs-ser8-specs-en.svg',
+        imageCaption: 'GEEKOM A9 Max vs. Beelink SER8 im Spec-Vergleich: Ryzen AI 9 HX 370 (12 Kerne/24 Threads) mit 128-GB-RAM-Obergrenze und 7B–70B-Modellpassung gegenüber Ryzen 7 8845HS (8 Kerne/16 Threads) mit 64-GB-Obergrenze und komfortabler 7B–14B-Passung.',
         items: [
           '[Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review) — der Preis-Leistungs-Tipp: Ryzen 7 8845HS, 32 GB, rund 600 €, betreibt ein 7B-Modell bequem',
           '[Minisforum UM890 Pro](/de/smart-home/minisforum-um890-pro-local-ai-review) — ergänzt einen OCuLink-Port für eine externe GPU, falls Sie später schnellere Inferenz großer Modelle wollen',
@@ -579,6 +587,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'IA locale & performances LLM',
         content:
           '**Avec 32 Go de RAM, l’A9 Max fait tourner sans peine un modèle 7B–8B sur Ollama et accueille un 13B–14B en 4 bits avec de la place pour le contexte — toutes ces valeurs sont estimées d’après le matériel vérifié, pas mesurées.** Passer à 64 Go ouvre les modèles de classe 30B, et le plafond de 128 Go permet de charger un 70B en 4 bits, même si les gros modèles sont limités par la bande passante mémoire (DDR5-5600 double canal, pas de VRAM dédiée) et restent utilisables pour l’expérimentation plutôt que pour un service rapide.',
+        image: '/images/geekom-a9-max-local-ai-review-ram-model-fit-en.svg',
+        imageCaption: 'Adéquation des modèles LLM locaux sur le GEEKOM A9 Max selon la RAM : 32 Go font tourner un 7B–8B sans peine et accueillent un 13B–14B en Q4 ; 64 Go ouvrent les modèles de classe 30B ; le plafond de 128 Go charge un 70B en Q4, mais lentement.',
         items: [
           'Ollama, LM Studio et llama.cpp tournent tous bien ; la Radeon 890M est exploitée via les back-ends Vulkan ou ROCm.',
           'Le NPU de 50 TOPS accélère les charges de vision comme la détection d’objets Frigate — il n’accélère pas les LLM locaux, que les runtimes placent sur le CPU/iGPU.',
@@ -636,6 +646,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'Alternatives à envisager',
         content: '**Si l’A9 Max est plus que nécessaire, trois box moins chères couvrent l’essentiel des mêmes tâches.**',
+        image: '/images/geekom-a9-max-local-ai-review-vs-ser8-specs-en.svg',
+        imageCaption: 'Comparaison des caractéristiques GEEKOM A9 Max vs Beelink SER8 : Ryzen AI 9 HX 370 (12 cœurs/24 threads) avec un plafond de 128 Go de RAM et des modèles 7B–70B, contre Ryzen 7 8845HS (8 cœurs/16 threads) avec un plafond de 64 Go et un confort 7B–14B.',
         items: [
           '[Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) — le choix rapport qualité-prix : Ryzen 7 8845HS, 32 Go, environ 600 €, fait tourner un modèle 7B sans peine',
           '[Minisforum UM890 Pro](/fr/smart-home/minisforum-um890-pro-local-ai-review) — ajoute un port OCuLink pour un GPU externe si vous voulez une inférence plus rapide de gros modèles plus tard',
@@ -811,6 +823,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'IA local y rendimiento LLM',
         content:
           '**Con 32 GB de RAM, el A9 Max ejecuta con soltura un modelo 7B–8B en Ollama y aloja un 13B–14B en 4 bits con sitio para el contexto — todas las cifras estimadas a partir del hardware verificado, no de un benchmark medido.** Pasar a 64 GB abre modelos de clase 30B, y el techo de 128 GB permite cargar un 70B en 4 bits, aunque los modelos grandes están limitados por el ancho de banda de memoria (DDR5-5600 de doble canal, sin VRAM dedicada) y sirven para experimentar más que para un servicio rápido.',
+        image: '/images/geekom-a9-max-local-ai-review-ram-model-fit-en.svg',
+        imageCaption: 'Ajuste de modelos LLM locales en el GEEKOM A9 Max según la RAM: 32 GB ejecutan un 7B–8B con soltura y alojan un 13B–14B en Q4; 64 GB abren modelos de clase 30B; el techo de 128 GB carga un 70B en Q4, pero lento.',
         items: [
           'Ollama, LM Studio y llama.cpp funcionan todos bien; la Radeon 890M se usa a través de los backends Vulkan o ROCm.',
           'La NPU de 50 TOPS acelera cargas de visión como la detección de objetos de Frigate — no acelera los LLM locales, que los runtimes colocan en la CPU/iGPU.',
@@ -868,6 +882,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'Alternativas a considerar',
         content: '**Si el A9 Max es más de lo que necesitas, tres equipos más baratos cubren casi las mismas tareas.**',
+        image: '/images/geekom-a9-max-local-ai-review-vs-ser8-specs-en.svg',
+        imageCaption: 'Comparación de especificaciones GEEKOM A9 Max frente a Beelink SER8: Ryzen AI 9 HX 370 (12 núcleos/24 hilos) con techo de 128 GB de RAM y ajuste de modelos 7B–70B, frente a Ryzen 7 8845HS (8 núcleos/16 hilos) con techo de 64 GB y ajuste cómodo de 7B–14B.',
         items: [
           '[Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review) — la opción calidad-precio: Ryzen 7 8845HS, 32 GB, unos 600 €, ejecuta un modelo 7B con soltura',
           '[Minisforum UM890 Pro](/es/smart-home/minisforum-um890-pro-local-ai-review) — añade un puerto OCuLink para una GPU externa si quieres inferencia más rápida de modelos grandes más adelante',
@@ -1043,6 +1059,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ローカルAIとLLM性能',
         content:
           '**32GB の RAM で、A9 Max は Ollama 上の 7B〜8B モデルを快適に動かし、13B〜14B を 4-bit でコンテキスト用の余地を残して収めます — いずれも検証済みハードウェアからの推定であり、実測ベンチマークではありません。** 64GB にすれば 30B クラスが視野に入り、128GB 上限なら 70B を 4-bit でロードできます。ただし大型モデルはメモリ帯域（デュアルチャネル DDR5-5600、専用VRAMなし）に制約され、高速なサービングというより実験用途に向きます。',
+        image: '/images/geekom-a9-max-local-ai-review-ram-model-fit-en.svg',
+        imageCaption: 'GEEKOM A9 Max のRAM別ローカルLLMモデル適合: 32GBは7B〜8Bを快適に動かしQ4の13B〜14Bも収容、64GBは30Bクラスを開放、128GB上限はQ4で70Bをロードできるが低速。',
         items: [
           'Ollama、LM Studio、llama.cpp はいずれも良好に動作します。Radeon 890M は Vulkan または ROCm バックエンド経由で使われます。',
           '50 TOPS の NPU は Frigate の物体検出などビジョン処理を高速化します — ローカルLLMは高速化しません。ランタイムは LLM を CPU/iGPU に配置します。',
@@ -1100,6 +1118,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: '検討したい代替候補',
         content: '**A9 Max が必要以上なら、より安価な3台が同じ仕事の大半をこなします。**',
+        image: '/images/geekom-a9-max-local-ai-review-vs-ser8-specs-en.svg',
+        imageCaption: 'GEEKOM A9 Max と Beelink SER8 のスペック比較: Ryzen AI 9 HX 370（12コア/24スレッド）は128GB RAM上限で7B〜70Bモデルに対応、Ryzen 7 8845HS（8コア/16スレッド）は64GB上限で7B〜14Bを快適に動作。',
         items: [
           '[Beelink SER8](/ja/smart-home/beelink-ser8-local-ai-review) — コスパ重視：Ryzen 7 8845HS、32GB、約90,000円、7B モデルを快適に動作',
           '[Minisforum UM890 Pro](/ja/smart-home/minisforum-um890-pro-local-ai-review) — 後で大型モデルの高速推論が欲しい場合に外付けGPU用の OCuLink ポートを追加',
@@ -1275,6 +1295,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '本地 AI 与 LLM 性能',
         content:
           '**在 32 GB 内存下，A9 Max 可从容运行 Ollama 上的 7B–8B 模型，并以 4-bit 装下 13B–14B 模型且留有上下文空间——所有数字均根据已核验硬件估算，而非实测基准。** 升级到 64 GB 可运行 30B 级模型，128 GB 上限可让 70B 模型以 4-bit 加载，但大模型受内存带宽限制（双通道 DDR5-5600，无独立显存），更适合实验而非快速服务。',
+        image: '/images/geekom-a9-max-local-ai-review-ram-model-fit-en.svg',
+        imageCaption: 'GEEKOM A9 Max 按内存划分的本地 LLM 模型适配：32 GB 可从容运行 7B–8B 并以 Q4 装下 13B–14B；64 GB 开启 30B 级模型；128 GB 上限可在 Q4 下加载 70B 模型，但速度较慢。',
         items: [
           'Ollama、LM Studio 与 llama.cpp 都运行良好；Radeon 890M 通过 Vulkan 或 ROCm 后端使用。',
           '50 TOPS 的 NPU 加速诸如 Frigate 物体检测的视觉负载——它不加速本地 LLM，运行时会将模型放在 CPU/iGPU 上。',
@@ -1332,6 +1354,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: '值得考虑的替代方案',
         content: '**如果 A9 Max 超出你的需要，三台更便宜的机器可覆盖大部分相同任务。**',
+        image: '/images/geekom-a9-max-local-ai-review-vs-ser8-specs-en.svg',
+        imageCaption: 'GEEKOM A9 Max 与 Beelink SER8 规格对比：Ryzen AI 9 HX 370（12核/24线程）配备 128 GB 内存上限，可适配 7B–70B 模型；Ryzen 7 8845HS（8核/16线程）配备 64 GB 上限，可从容适配 7B–14B 模型。',
         items: [
           '[Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review) — 性价比之选：Ryzen 7 8845HS、32 GB、约 $650，可从容运行 7B 模型',
           '[Minisforum UM890 Pro](/zh/smart-home/minisforum-um890-pro-local-ai-review) — 增加 OCuLink 接口，日后若想更快地推理大模型可外接 GPU',
@@ -1507,6 +1531,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '로컬 AI와 LLM 성능',
         content:
           '**32GB RAM에서 A9 Max는 Ollama의 7B~8B 모델을 편안하게 구동하고 13B~14B를 4-bit로 컨텍스트 여유를 남기고 수용합니다 — 모든 수치는 검증된 하드웨어에서 추정한 것이며 실측 벤치마크가 아닙니다.** 64GB로 올리면 30B급 모델이 열리고, 128GB 상한이면 70B 모델을 4-bit로 로드할 수 있지만, 대형 모델은 메모리 대역폭(듀얼 채널 DDR5-5600, 전용 VRAM 없음)에 제약되어 빠른 서빙보다는 실험 용도에 적합합니다.',
+        image: '/images/geekom-a9-max-local-ai-review-ram-model-fit-en.svg',
+        imageCaption: 'RAM별 GEEKOM A9 Max 로컬 LLM 모델 적합도: 32GB는 7B~8B를 편안하게 구동하고 Q4로 13B~14B를 수용하며, 64GB는 30B급 모델을 열고, 128GB 상한은 Q4로 70B 모델을 로드하지만 느립니다.',
         items: [
           'Ollama, LM Studio, llama.cpp 모두 잘 작동하며, Radeon 890M은 Vulkan 또는 ROCm 백엔드를 통해 사용됩니다.',
           '50 TOPS NPU는 Frigate 객체 감지 같은 비전 작업을 가속합니다 — 로컬 LLM은 가속하지 않으며, 런타임은 모델을 CPU/iGPU에 배치합니다.',
@@ -1564,6 +1590,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: '고려할 만한 대안',
         content: '**A9 Max가 필요 이상이라면, 더 저렴한 세 기기가 같은 작업의 대부분을 감당합니다.**',
+        image: '/images/geekom-a9-max-local-ai-review-vs-ser8-specs-en.svg',
+        imageCaption: 'GEEKOM A9 Max와 Beelink SER8 사양 비교: Ryzen AI 9 HX 370(12코어/24스레드)은 128GB RAM 상한으로 7B~70B 모델에 대응하고, Ryzen 7 8845HS(8코어/16스레드)는 64GB 상한으로 7B~14B를 편안하게 구동합니다.',
         items: [
           '[Beelink SER8](/ko/smart-home/beelink-ser8-local-ai-review) — 가성비 선택: Ryzen 7 8845HS, 32GB, 약 $650, 7B 모델을 편안하게 구동',
           '[Minisforum UM890 Pro](/ko/smart-home/minisforum-um890-pro-local-ai-review) — 나중에 대형 모델 추론을 더 빠르게 하고 싶다면 외장 GPU용 OCuLink 포트 추가',
@@ -1739,6 +1767,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'IA local e desempenho de LLM',
         content:
           '**Com 32 GB de RAM, o A9 Max roda com soltura um modelo 7B–8B no Ollama e comporta um 13B–14B em 4-bit com espaço para o contexto — todos os números são estimados a partir do hardware verificado, não um benchmark medido.** Passar para 64 GB abre modelos de classe 30B, e o teto de 128 GB permite carregar um 70B em 4-bit, embora os modelos grandes sejam limitados pela largura de banda da memória (DDR5-5600 de dois canais, sem VRAM dedicada) e sirvam mais para experimentar do que para um serviço rápido.',
+        image: '/images/geekom-a9-max-local-ai-review-ram-model-fit-en.svg',
+        imageCaption: 'Ajuste de modelos LLM locais no GEEKOM A9 Max por RAM: 32 GB rodam um 7B–8B com soltura e comportam um 13B–14B em Q4; 64 GB abrem modelos de classe 30B; o teto de 128 GB carrega um 70B em Q4, porém devagar.',
         items: [
           'Ollama, LM Studio e llama.cpp funcionam bem; a Radeon 890M é usada pelos backends Vulkan ou ROCm.',
           'A NPU de 50 TOPS acelera cargas de visão como a detecção de objetos do Frigate — não acelera os LLM locais, que os runtimes colocam na CPU/iGPU.',
@@ -1796,6 +1826,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'Alternativas a considerar',
         content: '**Se o A9 Max é mais do que você precisa, três equipamentos mais baratos cobrem quase as mesmas tarefas.**',
+        image: '/images/geekom-a9-max-local-ai-review-vs-ser8-specs-en.svg',
+        imageCaption: 'Comparação de especificações GEEKOM A9 Max vs. Beelink SER8: Ryzen AI 9 HX 370 (12 núcleos/24 threads) com teto de 128 GB de RAM e ajuste de modelos 7B–70B, contra Ryzen 7 8845HS (8 núcleos/16 threads) com teto de 64 GB e ajuste confortável de 7B–14B.',
         items: [
           '[Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) — a opção de custo-benefício: Ryzen 7 8845HS, 32 GB, roda um modelo 7B com soltura',
           '[Minisforum UM890 Pro](/pt/smart-home/minisforum-um890-pro-local-ai-review) — adiciona uma porta OCuLink para uma GPU externa se você quiser inferência mais rápida de modelos grandes mais adiante',
@@ -1970,6 +2002,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الذكاء الاصطناعي المحلي وأداء LLM',
         content:
           '**بذاكرة 32 GB، يُشغّل A9 Max نموذج 7B–8B على Ollama بأريحية ويستوعب نموذج 13B–14B بدقة 4 بت مع متسع للسياق — وجميع الأرقام مقدَّرة من العتاد المتحقق منه، وليست قياسًا مرجعيًا فعليًا.** يفتح الانتقال إلى 64 GB نماذج فئة 30B، ويتيح سقف 128 GB تحميل نموذج 70B بدقة 4 بت، مع أن النماذج الكبيرة مقيّدة بعرض نطاق الذاكرة (DDR5-5600 ثنائية القناة، دون VRAM مخصصة) وتصلح للتجربة أكثر من الخدمة السريعة.',
+        image: '/images/geekom-a9-max-local-ai-review-ram-model-fit-en.svg',
+        imageCaption: 'ملاءمة نماذج LLM المحلية على GEEKOM A9 Max بحسب الذاكرة: تُشغّل 32 GB نموذج 7B–8B بأريحية وتستوعب 13B–14B بدقة Q4؛ وتفتح 64 GB نماذج فئة 30B؛ ويحمّل سقف 128 GB نموذج 70B بدقة Q4 لكن ببطء.',
         items: [
           'يعمل Ollama وLM Studio وllama.cpp جميعها بشكل جيد؛ ويُستخدم Radeon 890M عبر خلفيات Vulkan أو ROCm.',
           'تُسرّع وحدة NPU بقدرة 50 TOPS أحمال الرؤية مثل كشف الأجسام في Frigate — وهي لا تُسرّع النماذج اللغوية المحلية التي تضعها أطر التشغيل على المعالج/معالج الرسوميات المدمج.',
@@ -2027,6 +2061,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'alternatives',
         title: 'بدائل جديرة بالنظر',
         content: '**إذا كان A9 Max أكثر مما تحتاج، فثلاثة أجهزة أرخص تغطي معظم المهام نفسها.**',
+        image: '/images/geekom-a9-max-local-ai-review-vs-ser8-specs-en.svg',
+        imageCaption: 'مقارنة مواصفات GEEKOM A9 Max وBeelink SER8: يأتي Ryzen AI 9 HX 370 (12 نواة/24 خيطًا) بسقف ذاكرة 128 GB ويلائم نماذج 7B–70B، مقابل Ryzen 7 8845HS (8 أنوية/16 خيطًا) بسقف 64 GB وملاءمة مريحة لـ 7B–14B.',
         items: [
           '[Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review) — الخيار القيمي: Ryzen 7 8845HS، و32 GB، بنحو $650، يُشغّل نموذج 7B بأريحية',
           '[Minisforum UM890 Pro](/ar/smart-home/minisforum-um890-pro-local-ai-review) — يضيف منفذ OCuLink لبطاقة رسوميات خارجية إذا أردت استدلالًا أسرع للنماذج الكبيرة لاحقًا',
