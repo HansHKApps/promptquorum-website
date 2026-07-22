@@ -134,6 +134,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'How the Four AI Learning Categories Compare in 2026',
         content:
           'The "best for" column reflects learning goal, not a single course. Pricing is a July 2026 snapshot expressed qualitatively — course platform pricing changes with promotions and subscription tiers, so confirm the current price on the platform before enrolling.',
+        image: '/images/best-ai-courses-certifications-2026-category-comparison-en.svg',
+        imageCaption: 'Comparison of four AI course categories in 2026 by learning goal and outcome: free courses for orientation, paid structured courses for hands-on skill, certifications for a verifiable credential, and prompt engineering courses for better model output.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -354,6 +356,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Decision Flowchart: Pick Your AI Course in Three Questions',
         content:
           '**Three questions, in order, route most learners to one category.**',
+        image: '/images/best-ai-courses-certifications-2026-decision-flowchart-en.svg',
+        imageCaption: 'Three-question flowchart for choosing an AI course in 2026: a required credential routes to a certification track, a prompt-writing need routes to a prompt engineering course, and existing AI knowledge routes to a paid structured course or a free fundamentals course.',
         items: [
           '**1. Does a job or employer require a named credential?** Yes: a certification track. No: continue.',
           '**2. Is your main need writing prompts for existing models?** Yes: a prompt engineering course. No: continue.',
@@ -612,6 +616,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wie sich die vier KI-Lernkategorien 2026 vergleichen',
         content:
           'Die Spalte „Am besten geeignet für” spiegelt das Lernziel wider, nicht einen einzelnen Kurs. Die Preisangabe ist eine qualitativ ausgedrückte Momentaufnahme vom Juli 2026 – die Preisgestaltung von Kursplattformen ändert sich mit Aktionen und Abostufen, bestätigen Sie daher den aktuellen Preis auf der Plattform vor der Einschreibung.',
+        image: '/images/best-ai-courses-certifications-2026-category-comparison-de.svg',
+        imageCaption: 'Vergleich von vier KI-Kurskategorien 2026 nach Lernziel und Ergebnis: kostenlose Kurse zur Orientierung, kostenpflichtige strukturierte Kurse für praktische Kompetenz, Zertifizierungen für einen überprüfbaren Nachweis und Prompt-Engineering-Kurse für bessere Modellausgaben.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -832,6 +838,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Entscheidungsdiagramm: Wählen Sie Ihren KI-Kurs in drei Fragen',
         content:
           '**Drei Fragen, in dieser Reihenfolge, leiten die meisten Lernenden zu einer Kategorie.**',
+        image: '/images/best-ai-courses-certifications-2026-decision-flowchart-de.svg',
+        imageCaption: 'Dreistufiges Entscheidungsdiagramm für die Wahl eines KI-Kurses 2026: ein geforderter Nachweis führt zu einem Zertifizierungspfad, der Bedarf am Schreiben von Prompts zu einem Prompt-Engineering-Kurs und vorhandenes KI-Grundlagenwissen zu einem kostenpflichtigen strukturierten Kurs oder einem kostenlosen Grundlagenkurs.',
         items: [
           '**1. Verlangt eine Stelle oder ein Arbeitgeber einen benannten Nachweis?** Ja: ein Zertifizierungspfad. Nein: weiter.',
           '**2. Ist Ihr Hauptbedarf das Schreiben von Prompts für bestehende Modelle?** Ja: ein Prompt-Engineering-Kurs. Nein: weiter.',
@@ -1098,6 +1106,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparaison des quatre catégories d\'apprentissage de l\'IA en 2026',
         content:
           'La colonne « Idéal pour » reflète l\'objectif d\'apprentissage, pas un cours unique. Le prix est un instantané de juillet 2026 exprimé qualitativement — la tarification des plateformes de cours évolue avec les promotions et les formules d\'abonnement, confirmez donc le prix actuel sur la plateforme avant de vous inscrire.',
+        image: '/images/best-ai-courses-certifications-2026-category-comparison-fr.svg',
+        imageCaption: 'Comparaison de quatre catégories de cours d\'IA en 2026 selon l\'objectif d\'apprentissage et le résultat : cours gratuits pour se repérer, cours structurés payants pour une compétence pratique, certifications pour un titre vérifiable, et cours de prompt engineering pour de meilleures sorties de modèle.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1318,6 +1328,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Logigramme de décision : choisissez votre cours d\'IA en trois questions',
         content:
           '**Trois questions, dans l\'ordre, orientent la plupart des apprenants vers une catégorie.**',
+        image: '/images/best-ai-courses-certifications-2026-decision-flowchart-fr.svg',
+        imageCaption: 'Logigramme en trois questions pour choisir un cours d\'IA en 2026 : un titre exigé oriente vers un parcours de certification, un besoin de rédaction de prompts vers un cours de prompt engineering, et la connaissance des bases de l\'IA vers un cours structuré payant ou un cours gratuit de fondamentaux.',
         items: [
           '**1. Un emploi ou un employeur exige-t-il un titre nommé ?** Oui : un parcours de certification. Non : continuez.',
           '**2. Votre besoin principal est-il de rédiger des prompts pour des modèles existants ?** Oui : un cours de prompt engineering. Non : continuez.',
@@ -1576,6 +1588,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '4つのAI学習カテゴリーは2026年にどう比較されるか',
         content:
           '「最適な対象」の列は、単一のコースではなく学習目標を反映しています。価格は2026年7月時点のスナップショットで、定性的に表現しています。コースプラットフォームの価格はキャンペーンやサブスクリプションの段階によって変動するため、登録前にプラットフォームで現在の価格を確認してください。',
+        image: '/images/best-ai-courses-certifications-2026-category-comparison-ja.svg',
+        imageCaption: '学習目標と成果による2026年の4つのAIコースカテゴリーの比較:全体像をつかむ無料コース、実践スキルを育てる有料の体系的コース、検証可能な資格を得る資格認定、そしてより良いモデル出力のためのプロンプトエンジニアリングコース。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1796,6 +1810,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '意思決定フローチャート：3つの質問でAIコースを選ぶ',
         content:
           '**3つの質問を順に進めれば、大半の学習者が一つのカテゴリーへ導かれます。**',
+        image: '/images/best-ai-courses-certifications-2026-decision-flowchart-ja.svg',
+        imageCaption: '2026年にAIコースを選ぶための3つの質問によるフローチャート。指定資格の要求は資格認定の経路へ、プロンプト作成の必要はプロンプトエンジニアリングコースへ、AIの基礎知識の有無は有料の体系的コースか無料の基礎コースへとつながる。',
         items: [
           '**1. 仕事や雇用主が指定された資格を求めていますか？** はい：資格認定の経路。いいえ：次へ。',
           '**2. あなたの主な必要は、既存のモデル向けにプロンプトを書くことですか？** はい：prompt engineeringコース。いいえ：次へ。',
@@ -2054,6 +2070,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '四类 AI 学习类别在 2026 年如何对比',
         content:
           '”最适合”一列反映的是学习目标,而不是某一门具体课程。价格是 2026 年 7 月的快照,以定性方式表述——课程平台的定价会随促销和订阅档位变化,因此报名前请在平台上确认当前价格。',
+        image: '/images/best-ai-courses-certifications-2026-category-comparison-zh.svg',
+        imageCaption: '按学习目标和结果对比 2026 年四类 AI 课程:用于打基础的免费课程、培养动手技能的付费体系化课程、获得可验证凭证的认证,以及提升模型输出质量的提示词工程课程。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2274,6 +2292,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '决策流程图:用三个问题选出你的 AI 课程',
         content:
           '**按顺序回答三个问题,就能把大多数学习者导向某一个类别。**',
+        image: '/images/best-ai-courses-certifications-2026-decision-flowchart-zh.svg',
+        imageCaption: '2026 年选择 AI 课程的三问题流程图:是否要求指定凭证决定是否走认证路径,是否需要写提示词决定是否上提示词工程课程,是否已懂 AI 基础决定选付费体系化课程还是免费基础课程。',
         items: [
           '**1. 某个工作或雇主是否要求指定的凭证？** 是:认证路径。否:继续。',
           '**2. 你的主要需求是否是为现有模型写提示词？** 是:prompt engineering 课程。否:继续。',
@@ -2532,6 +2552,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cómo se comparan las cuatro categorías de aprendizaje de IA en 2026',
         content:
           'La columna "Ideal para" refleja el objetivo de aprendizaje, no un curso concreto. El precio es un snapshot de julio de 2026 expresado cualitativamente — los precios de las plataformas de cursos cambian con las promociones y los niveles de suscripción, así que confirma el precio actual en la plataforma antes de inscribirte.',
+        image: '/images/best-ai-courses-certifications-2026-category-comparison-es.svg',
+        imageCaption: 'Comparación de cuatro categorías de cursos de IA en 2026 según el objetivo de aprendizaje y el resultado: cursos gratuitos para orientarse, cursos estructurados de pago para habilidad práctica, certificaciones para una credencial verificable y cursos de prompt engineering para mejores salidas de modelo.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2752,6 +2774,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Diagrama de decisión: elige tu curso de IA en tres preguntas',
         content:
           '**Tres preguntas, en orden, llevan a la mayoría de los estudiantes a una categoría.**',
+        image: '/images/best-ai-courses-certifications-2026-decision-flowchart-es.svg',
+        imageCaption: 'Diagrama de decisión de tres preguntas para elegir un curso de IA en 2026: una credencial exigida lleva a un itinerario de certificación, la necesidad de escribir prompts lleva a un curso de prompt engineering, y el conocimiento de los fundamentos de IA lleva a un curso estructurado de pago o a un curso gratuito de fundamentos.',
         items: [
           '**1. ¿Un trabajo o empleador exige una credencial con nombre?** Sí: un itinerario de certificación. No: continúa.',
           '**2. ¿Tu principal necesidad es escribir prompts para modelos existentes?** Sí: un curso de prompt engineering. No: continúa.',
@@ -3023,6 +3047,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como as quatro categorias de aprendizado de IA se comparam em 2026',
         content:
           'A coluna "Ideal para" reflete o objetivo de aprendizado, não um curso específico. O preço é um snapshot de julho de 2026 expresso qualitativamente — os preços das plataformas de cursos mudam com as promoções e os níveis de assinatura, então confirme o preço atual na plataforma antes de se inscrever.',
+        image: '/images/best-ai-courses-certifications-2026-category-comparison-pt.svg',
+        imageCaption: 'Comparação de quatro categorias de cursos de IA em 2026 por objetivo de aprendizado e resultado: cursos gratuitos para se orientar, cursos estruturados pagos para habilidade prática, certificações para uma credencial verificável e cursos de prompt engineering para melhores saídas de modelo.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3243,6 +3269,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Diagrama de decisão: escolha o seu curso de IA em três perguntas',
         content:
           '**Três perguntas, em ordem, levam a maioria dos estudantes a uma categoria.**',
+        image: '/images/best-ai-courses-certifications-2026-decision-flowchart-pt.svg',
+        imageCaption: 'Diagrama de decisão de três perguntas para escolher um curso de IA em 2026: uma credencial exigida leva a uma trilha de certificação, a necessidade de escrever prompts leva a um curso de prompt engineering, e o conhecimento dos fundamentos de IA leva a um curso estruturado pago ou a um curso gratuito de fundamentos.',
         items: [
           '**1. Um trabalho ou empregador exige uma credencial nomeada?** Sim: uma trilha de certificação. Não: continue.',
           '**2. A sua principal necessidade é escrever prompts para modelos existentes?** Sim: um curso de prompt engineering. Não: continue.',
@@ -3514,6 +3542,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كيف تتقارن فئات تعلّم الذكاء الاصطناعي الأربع في 2026',
         content:
           'عمود "الأنسب لـ" يعكس هدف التعلّم لا دورة بعينها. السعر صورة نوعية من يوليو 2026 — أسعار منصات الدورات تتغير بالعروض الترويجية ومستويات الاشتراك، لذا تأكد من السعر الحالي على المنصة قبل التسجيل.',
+        image: '/images/best-ai-courses-certifications-2026-category-comparison-ar.svg',
+        imageCaption: 'مقارنة بين أربع فئات لدورات الذكاء الاصطناعي في 2026 حسب هدف التعلّم والنتيجة: دورات مجانية للتوجّه، دورات مدفوعة منظَّمة لمهارة عملية، شهادات لبيانات اعتماد قابلة للتحقق، ودورات هندسة الأوامر لمخرجات أفضل من النماذج.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3734,6 +3764,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'مخطط قرار: اختر دورة الذكاء الاصطناعي في ثلاثة أسئلة',
         content:
           '**ثلاثة أسئلة بالترتيب تقود معظم الطلاب إلى فئة محددة.**',
+        image: '/images/best-ai-courses-certifications-2026-decision-flowchart-ar.svg',
+        imageCaption: 'مخطط قرار من ثلاثة أسئلة لاختيار دورة ذكاء اصطناعي في 2026: بيانات اعتماد مطلوبة تقود إلى مسار شهادة، والحاجة لكتابة الأوامر تقود إلى دورة هندسة الأوامر، ومعرفة أساسيات الذكاء الاصطناعي تقود إلى دورة مدفوعة منظمة أو دورة مجانية في الأساسيات.',
         items: [
           '**1. هل تطلب وظيفة أو صاحب عمل بيانات اعتماد محددة الاسم؟** نعم: مسار شهادة. لا: تابع.',
           '**2. هل حاجتك الرئيسية هي كتابة أوامر للنماذج الموجودة؟** نعم: دورة هندسة أوامر. لا: تابع.',
@@ -4005,6 +4037,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2026년 네 가지 AI 학습 범주 비교',
         content:
           '"이상적인 대상" 열은 특정 강좌가 아닌 학습 목표를 반영합니다. 가격은 2026년 7월 기준 정성적 스냅샷입니다 — 강좌 플랫폼 가격은 프로모션과 구독 수준에 따라 변동하므로 등록 전에 플랫폼에서 현재 가격을 확인하십시오.',
+        image: '/images/best-ai-courses-certifications-2026-category-comparison-ko.svg',
+        imageCaption: '2026년 학습 목표와 결과에 따른 네 가지 AI 강좌 범주 비교: 방향을 잡는 무료 강좌, 실용 기술을 기르는 구조화된 유료 강좌, 검증 가능한 자격증을 얻는 자격증 과정, 더 나은 모델 출력을 위한 prompt engineering 강좌.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4225,6 +4259,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '결정 흐름도: 세 가지 질문으로 AI 강좌 선택',
         content:
           '**순서대로 세 가지 질문을 하면 대부분의 학습자가 범주에 도달합니다.**',
+        image: '/images/best-ai-courses-certifications-2026-decision-flowchart-ko.svg',
+        imageCaption: '2026년 AI 강좌 선택을 위한 세 가지 질문 흐름도: 요구되는 자격증은 자격증 과정으로, prompt 작성 필요는 prompt engineering 강좌로, AI 기초 지식 여부는 구조화된 유료 강좌 또는 무료 기초 강좌로 이어진다.',
         items: [
           '**1. 직업이나 고용주가 명시된 자격증을 요구합니까?** 예: 자격증 과정. 아니오: 계속하십시오.',
           '**2. 주된 필요가 기존 모델을 위한 prompt 작성입니까?** 예: prompt engineering 강좌. 아니오: 계속하십시오.',

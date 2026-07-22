@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect x="0" y="0" width="800" height="400" fill="#FFFFFF"/>
+<text x="400" y="28" font-size="17" font-weight="700" fill="#1C1B1F" text-anchor="middle">Como as quatro categorias de IA se comparam</text>
+<text x="40" y="55" font-size="12" font-weight="700" fill="#79747E">Categoria</text>
+<text x="250" y="55" font-size="12" font-weight="700" fill="#79747E">Ideal para</text>
+<text x="500" y="55" font-size="12" font-weight="700" fill="#79747E">Resultado</text>
+<line x1="24" y1="64" x2="776" y2="64" stroke="#E8DEF8" stroke-width="1.5"/>
+<circle cx="26" cy="92" r="10" fill="#6750A4"/>
+<text x="26" y="96" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="48" y="88" font-size="12.5" font-weight="700" fill="#6750A4" text-anchor="start">Cursos gratuitos</text>
+<text x="250" y="88" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">Orientar-se, decidir se a IA</text>
+<text x="250" y="103" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">é para você</text>
+<text x="500" y="88" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">Compreensão básica,</text>
+<text x="500" y="103" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">sem credencial formal</text>
+<line x1="24" y1="140" x2="776" y2="140" stroke="#F7F2FA" stroke-width="1"/>
+<circle cx="26" cy="164" r="10" fill="#6750A4"/>
+<text x="26" y="168" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="48" y="160" font-size="12.5" font-weight="700" fill="#6750A4" text-anchor="start">Cursos estruturados pagos</text>
+<text x="250" y="160" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">Desenvolver habilidade</text>
+<text x="250" y="175" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">prática e aplicada</text>
+<text x="500" y="160" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">Habilidade aplicável e,</text>
+<text x="500" y="175" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">frequentemente, certificado</text>
+<line x1="24" y1="212" x2="776" y2="212" stroke="#F7F2FA" stroke-width="1"/>
+<circle cx="26" cy="236" r="10" fill="#6750A4"/>
+<text x="26" y="240" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="48" y="232" font-size="12.5" font-weight="700" fill="#6750A4" text-anchor="start">Certificações</text>
+<text x="250" y="232" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">Obter uma credencial que um</text>
+<text x="250" y="247" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">cargo pede</text>
+<text x="500" y="232" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">Certificado verificável para</text>
+<text x="500" y="247" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">currículos e perfis</text>
+<line x1="24" y1="284" x2="776" y2="284" stroke="#F7F2FA" stroke-width="1"/>
+<circle cx="26" cy="308" r="10" fill="#6750A4"/>
+<text x="26" y="312" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="48" y="304" font-size="12.5" font-weight="700" fill="#6750A4" text-anchor="start">Cursos de prompt engineering</text>
+<text x="250" y="304" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">Obter boas saídas de</text>
+<text x="250" y="319" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">modelos existentes</text>
+<text x="500" y="304" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">Habilidade prática de</text>
+<text x="500" y="319" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">escrita de prompts</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

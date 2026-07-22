@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect x="0" y="0" width="800" height="400" fill="#FFFFFF"/>
+<text x="400" y="28" font-size="17" font-weight="700" fill="#1C1B1F" text-anchor="middle">네 가지 AI 학습 범주 비교</text>
+<text x="40" y="55" font-size="12" font-weight="700" fill="#79747E">범주</text>
+<text x="250" y="55" font-size="12" font-weight="700" fill="#79747E">이상적인 대상</text>
+<text x="500" y="55" font-size="12" font-weight="700" fill="#79747E">결과</text>
+<line x1="24" y1="64" x2="776" y2="64" stroke="#E8DEF8" stroke-width="1.5"/>
+<circle cx="26" cy="92" r="10" fill="#6750A4"/>
+<text x="26" y="96" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="48" y="88" font-size="12.5" font-weight="700" fill="#6750A4" text-anchor="start">무료 강좌</text>
+<text x="250" y="88" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">방향 잡기,</text>
+<text x="250" y="103" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">AI가 자신에게 맞는지 결정</text>
+<text x="500" y="88" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">기본 이해,</text>
+<text x="500" y="103" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">공식 자격 없음</text>
+<line x1="24" y1="140" x2="776" y2="140" stroke="#F7F2FA" stroke-width="1"/>
+<circle cx="26" cy="164" r="10" fill="#6750A4"/>
+<text x="26" y="168" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="48" y="160" font-size="12.5" font-weight="700" fill="#6750A4" text-anchor="start">구조화된 유료 강좌</text>
+<text x="250" y="160" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">실용적이고 응용</text>
+<text x="250" y="175" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">가능한 기술 개발</text>
+<text x="500" y="160" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">적용 가능한 기술,</text>
+<text x="500" y="175" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">종종 검증 가능한 수료증</text>
+<line x1="24" y1="212" x2="776" y2="212" stroke="#F7F2FA" stroke-width="1"/>
+<circle cx="26" cy="236" r="10" fill="#6750A4"/>
+<text x="26" y="240" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="48" y="232" font-size="12.5" font-weight="700" fill="#6750A4" text-anchor="start">자격증</text>
+<text x="250" y="232" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">직책이나 고용주가</text>
+<text x="250" y="247" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">요구하는 자격 취득</text>
+<text x="500" y="232" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">이력서 및 프로필용</text>
+<text x="500" y="247" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">검증 가능한 수료증</text>
+<line x1="24" y1="284" x2="776" y2="284" stroke="#F7F2FA" stroke-width="1"/>
+<circle cx="26" cy="308" r="10" fill="#6750A4"/>
+<text x="26" y="312" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="48" y="304" font-size="12.5" font-weight="700" fill="#6750A4" text-anchor="start">prompt engineering 강좌</text>
+<text x="250" y="304" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">기존 모델에서</text>
+<text x="250" y="319" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="start">좋은 결과 얻기</text>
+<text x="500" y="304" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">실용적인</text>
+<text x="500" y="319" font-size="11.5" font-weight="400" fill="#49454F" text-anchor="start">prompt 작성 기술</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
