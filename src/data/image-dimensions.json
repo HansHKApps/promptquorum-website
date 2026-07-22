@@ -13684,6 +13684,16 @@
     "width": 800,
     "height": 400
   },
+  "/images/mac-mini-m5-local-ai-server-memory-tier-capacity-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/mac-mini-m5-local-ai-server-power-draw-by-workload-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
   "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
