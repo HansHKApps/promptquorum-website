@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect x="0" y="0" width="800" height="380" fill="#FFFFFF"/>
+<text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">데스크톱 앱 vs 웹 UI: 작동 방식 비교</text>
+<rect x="24" y="50" width="350" height="300" rx="6" fill="#FFFFFF" stroke="#7D5260" stroke-width="2"/>
+<rect x="24" y="50" width="350" height="4" rx="0" fill="#7D5260"/>
+<text x="199.0" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#7D5260" text-anchor="middle">데스크톱 앱</text>
+<rect x="426" y="50" width="350" height="300" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+<rect x="426" y="50" width="350" height="4" rx="0" fill="#6750A4"/>
+<text x="601.0" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">웹 UI</text>
+<text x="44" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">설치 방식</text>
+<text x="44" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">설치 프로그램 다운로드 및 실행</text>
+<text x="446" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">설치 방식</text>
+<text x="446" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Docker 컨테이너</text>
+<line x1="42" y1="142" x2="360" y2="142" stroke="#F7F2FA" stroke-width="1"/>
+<line x1="444" y1="142" x2="762" y2="142" stroke="#F7F2FA" stroke-width="1"/>
+<text x="44" y="158" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">실행 방식</text>
+<text x="44" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">네이티브 OS 프로세스</text>
+<text x="446" y="158" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">실행 방식</text>
+<text x="446" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">웹 서버 + 브라우저</text>
+<line x1="42" y1="192" x2="360" y2="192" stroke="#F7F2FA" stroke-width="1"/>
+<line x1="444" y1="192" x2="762" y2="192" stroke="#F7F2FA" stroke-width="1"/>
+<text x="44" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">네트워크 필요 여부</text>
+<text x="44" y="228" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">불필요</text>
+<text x="446" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">네트워크 필요 여부</text>
+<text x="446" y="228" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">필요(Docker 포트)</text>
+<line x1="42" y1="242" x2="360" y2="242" stroke="#F7F2FA" stroke-width="1"/>
+<line x1="444" y1="242" x2="762" y2="242" stroke="#F7F2FA" stroke-width="1"/>
+<text x="44" y="258" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">다중 기기 접근</text>
+<text x="44" y="278" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">단일 기기만</text>
+<text x="446" y="258" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">다중 기기 접근</text>
+<text x="446" y="278" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">URL로 모든 기기</text>
+<text x="400" y="368" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">두 방식 모두 동일한 Ollama 또는 vLLM 백엔드에 연결됩니다.</text>
+<text x="792" y="375" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

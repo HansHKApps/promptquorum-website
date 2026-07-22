@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect x="0" y="0" width="800" height="460" fill="#FFFFFF"/>
+<text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">¿Cuál deberías elegir?</text>
+<rect x="240.0" y="48" width="320" height="46" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+<text x="400" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">¿Necesitas acceso desde varios dispositivos o usuarios?</text>
+<line x1="400" y1="94" x2="190" y2="168" stroke="#6750A4" stroke-width="2"/>
+<line x1="400" y1="94" x2="610" y2="168" stroke="#6750A4" stroke-width="2"/>
+<text x="220" y="146" font-size="11" fill="#79747E" text-anchor="start">NO</text>
+<text x="560" y="146" font-size="11" fill="#79747E" text-anchor="end">SÍ</text>
+<rect x="40.0" y="168" width="300" height="46" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="1.5"/>
+<text x="190" y="188" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">¿Quieres la configuración más simple con integración nativa del SO?</text>
+<rect x="460.0" y="168" width="300" height="46" rx="8" fill="#FFFFFF" stroke="#6750A4" stroke-width="1.5"/>
+<text x="610" y="188" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#1C1B1F" text-anchor="middle">¿Necesitas también RAG o acceso API?</text>
+<line x1="190" y1="214" x2="95" y2="340" stroke="#6750A4" stroke-width="2"/>
+<text x="113" y="283.3" font-size="11" fill="#79747E" text-anchor="start">SÍ</text>
+<rect x="0.0" y="340" width="190" height="56" rx="8" fill="#7D5260"/>
+<text x="95" y="364" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">App de escritorio</text>
+<text x="95" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">(LM Studio, Jan AI)</text>
+<line x1="190" y1="214" x2="300" y2="340" stroke="#6750A4" stroke-width="2"/>
+<text x="282" y="283.3" font-size="11" fill="#79747E" text-anchor="end">NO</text>
+<rect x="205.0" y="340" width="190" height="56" rx="8" fill="#6750A4"/>
+<text x="300" y="372" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Web UI (Open WebUI)</text>
+<line x1="610" y1="214" x2="505" y2="340" stroke="#6750A4" stroke-width="2"/>
+<text x="523" y="283.3" font-size="11" fill="#79747E" text-anchor="start">SÍ</text>
+<rect x="410.0" y="340" width="190" height="56" rx="8" fill="#6750A4"/>
+<text x="505" y="364" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Web UI (Open</text>
+<text x="505" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">WebUI, RAG completo)</text>
+<line x1="610" y1="214" x2="705" y2="340" stroke="#6750A4" stroke-width="2"/>
+<text x="687" y="283.3" font-size="11" fill="#79747E" text-anchor="end">NO</text>
+<rect x="610.0" y="340" width="190" height="56" rx="8" fill="#6750A4"/>
+<text x="705" y="372" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Web UI (Enchanted UI)</text>
+<text x="792" y="455" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

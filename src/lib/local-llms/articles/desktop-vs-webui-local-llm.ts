@@ -61,6 +61,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Advantages:** Browser-based (work on any OS), shareable via URL, multi-user capable, access from other devices on network, more powerful features.',
             '**Disadvantages:** Requires understanding of Docker or ports, slightly more setup, requires a running web server.',
           ],
+          image: '/images/desktop-vs-webui-local-llm-architecture-en.svg',
+          imageCaption: 'Desktop app vs Web UI architecture: desktop apps install as a native process on one device with no network required, while Web UI runs in Docker and is reachable from any device via URL.',
         },
         featureComp: {
           title: 'Feature Comparison: Desktop vs Web UI',
@@ -87,6 +89,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'You want native OS integration (notifications, system menu).',
             'You are on macOS or Windows.',
           ],
+          image: '/images/desktop-vs-webui-local-llm-decision-tree-en.svg',
+          imageCaption: 'Decision tree for choosing a local LLM interface: pick a desktop app like LM Studio for single-device simplicity, or Web UI such as Open WebUI for multi-user access, RAG, and API support.',
         },
         choosWebUI: {
           title: 'When Should You Choose Web UI?',
@@ -233,6 +237,8 @@ schema: {
             '**Ventajas:** Basadas en navegador (funcionan en cualquier sistema operativo), compartibles por URL, con soporte multiusuario, acceso desde otros dispositivos en la red, funciones más potentes.',
             '**Desventajas:** Requieren comprensión de Docker o puertos, configuración ligeramente más compleja, necesitan un servidor web en ejecución.',
           ],
+          image: '/images/desktop-vs-webui-local-llm-architecture-es.svg',
+          imageCaption: 'Arquitectura de app de escritorio vs Web UI: las apps de escritorio se ejecutan como proceso nativo en un dispositivo sin red, mientras que la Web UI se ejecuta en Docker y es accesible desde cualquier dispositivo vía URL.',
         },
         featureComp: {
           title: 'Comparación de funciones: Desktop vs Web UI',
@@ -259,6 +265,8 @@ schema: {
             'Quieres integración nativa con el sistema operativo (notificaciones, menú del sistema).',
             'Usas macOS o Windows.',
           ],
+          image: '/images/desktop-vs-webui-local-llm-decision-tree-es.svg',
+          imageCaption: 'Árbol de decisión para elegir una interfaz de LLM local: app de escritorio como LM Studio para simplicidad en un solo dispositivo, o Web UI como Open WebUI para acceso multiusuario, RAG y soporte API.',
         },
         choosWebUI: {
           title: '¿Cuándo debes elegir una interfaz web?',
@@ -406,6 +414,8 @@ schema: {
             '**المزايا:** قائمة على المتصفح (تعمل على أي نظام تشغيل)، قابلة للمشاركة عبر URL، بدعم متعدد المستخدمين، وصول من أجهزة أخرى على الشبكة، ميزات أقوى.',
             '**العيوب:** تتطلب فهماً لـ Docker أو المنافذ، إعداد أكثر تعقيداً قليلاً، تحتاج خادم ويب قيد التشغيل.',
           ],
+          image: '/images/desktop-vs-webui-local-llm-architecture-ar.svg',
+          imageCaption: 'بنية تطبيق سطح المكتب مقابل واجهة الويب: يعمل تطبيق سطح المكتب كعملية أصلية على جهاز واحد دون شبكة، بينما تعمل واجهة الويب في Docker ويمكن الوصول إليها من أي جهاز عبر URL.',
         },
         featureComp: {
           title: 'مقارنة الميزات: سطح المكتب مقابل واجهة الويب',
@@ -432,6 +442,8 @@ schema: {
             'أردت تكاملاً أصلياً مع نظام التشغيل (الإشعارات، قائمة النظام).',
             'استخدمت macOS أو Windows.',
           ],
+          image: '/images/desktop-vs-webui-local-llm-decision-tree-ar.svg',
+          imageCaption: 'شجرة قرار لاختيار واجهة LLM محلية: تطبيق سطح مكتب مثل LM Studio لبساطة الجهاز الواحد، أو واجهة ويب مثل Open WebUI للوصول متعدد المستخدمين وRAG ودعم API.',
         },
         choosWebUI: {
           title: 'متى ينبغي أن تختار واجهة ويب؟',
@@ -581,6 +593,8 @@ schema: {
             '**Vantagens:** Baseadas no navegador (funcionam em qualquer sistema operacional), compartilháveis por URL, com suporte multiusuário, acesso de outros dispositivos na rede, recursos mais poderosos.',
             '**Desvantagens:** Exigem entendimento de Docker ou portas, configuração um pouco mais complexa, precisam de um servidor web em execução.',
           ],
+          image: '/images/desktop-vs-webui-local-llm-architecture-pt.svg',
+          imageCaption: 'Arquitetura de app de desktop vs Web UI: apps de desktop rodam como processo nativo em um dispositivo sem necessidade de rede, enquanto a Web UI roda no Docker e é acessível de qualquer dispositivo via URL.',
         },
         featureComp: {
           title: 'Comparação de recursos: Desktop vs Web UI',
@@ -607,6 +621,8 @@ schema: {
             'Você quer integração nativa com o sistema operacional (notificações, menu do sistema).',
             'Você usa macOS ou Windows.',
           ],
+          image: '/images/desktop-vs-webui-local-llm-decision-tree-pt.svg',
+          imageCaption: 'Árvore de decisão para escolher uma interface de LLM local: app de desktop como LM Studio para simplicidade em um único dispositivo, ou Web UI como Open WebUI para acesso multiusuário, RAG e suporte a API.',
         },
         choosWebUI: {
           title: 'Quando você deve escolher uma interface web?',
@@ -755,6 +771,8 @@ schema: {
             '**Vorteile:** Browser-basiert (funktioniert auf jedem Betriebssystem), teilbar per URL, Multi-User-fähig, Zugriff von anderen Geräten im Netzwerk, leistungsstärkere Funktionen.',
             '**Nachteile:** Erfordert Docker- oder Port-Verständnis, etwas mehr Setup, erfordert einen laufenden Webserver.',
           ],
+          image: '/images/desktop-vs-webui-local-llm-architecture-de.svg',
+          imageCaption: 'Desktop-App vs Web-UI Architektur: Desktop-Apps laufen als nativer Prozess auf einem Gerät ohne Netzwerk, Web-UI läuft in Docker und ist von jedem Gerät über eine URL erreichbar.',
         },
         featureComp: {
           title: 'Funktionsvergleich: Desktop vs Web-UI',
@@ -781,6 +799,8 @@ schema: {
             'Sie native Betriebssystem-Integration mögen (Benachrichtigungen, Systemmenü).',
             'Sie auf macOS oder Windows sind.',
           ],
+          image: '/images/desktop-vs-webui-local-llm-decision-tree-de.svg',
+          imageCaption: 'Entscheidungsbaum für die Wahl einer lokalen LLM-Oberfläche: Desktop-App wie LM Studio für Einzelgerät-Einfachheit, oder Web-UI wie Open WebUI für Multi-User-Zugriff, RAG und API-Unterstützung.',
         },
         choosWebUI: {
           title: 'Wann sollten Sie Web-UI wählen?',
@@ -928,6 +948,8 @@ schema: {
             '**Avantages:** Basées sur navigateur (fonctionnent sur n\'importe quel système d\'exploitation), partageables par URL, multi-utilisateur, accès depuis autres appareils sur le réseau, fonctionnalités plus puissantes.',
             '**Inconvénients:** Exige compréhension Docker ou ports, configuration un peu plus complexe, nécessite serveur Web actif.',
           ],
+          image: '/images/desktop-vs-webui-local-llm-architecture-fr.svg',
+          imageCaption: 'Architecture app de bureau vs interface Web : les apps de bureau s\'exécutent comme processus natif sur un appareil sans réseau requis, tandis que l\'interface Web s\'exécute dans Docker et est accessible depuis n\'importe quel appareil via URL.',
         },
         featureComp: {
           title: 'Comparaison des fonctionnalités : Bureau vs Interface Web',
@@ -954,6 +976,8 @@ schema: {
             'Vous voulez intégration native au système d\'exploitation (notifications, menu système).',
             'Vous êtes sur macOS ou Windows.',
           ],
+          image: '/images/desktop-vs-webui-local-llm-decision-tree-fr.svg',
+          imageCaption: 'Arbre de décision pour choisir une interface LLM locale : app de bureau comme LM Studio pour la simplicité mono-appareil, ou interface Web comme Open WebUI pour l\'accès multi-utilisateur, RAG et support API.',
         },
         choosWebUI: {
           title: 'Quand choisir une interface Web ?',
@@ -1101,6 +1125,8 @@ schema: {
             '**利点:** ブラウザベース (あらゆるOS上で動作)、URLで共有可能、マルチユーザー対応、ネットワーク内の他デバイスからアクセス、より強力な機能。',
             '**欠点:** DockerまたはPort理解が必要、セットアップやや複雑、実行中のWebサーバー必要。',
           ],
+          image: '/images/desktop-vs-webui-local-llm-architecture-ja.svg',
+          imageCaption: 'デスクトップアプリ対Web UIのアーキテクチャ: デスクトップアプリはネットワーク不要で単一デバイス上のネイティブプロセスとして動作し、Web UIはDockerで実行されURLで任意のデバイスからアクセス可能。',
         },
         featureComp: {
           title: '機能比較: デスクトップ対Webインターフェース',
@@ -1127,6 +1153,8 @@ schema: {
             'ネイティブOS統合 (通知、システムメニュー) を望む。',
             'macOSまたはWindows上にいる。',
           ],
+          image: '/images/desktop-vs-webui-local-llm-decision-tree-ja.svg',
+          imageCaption: 'ローカルLLMインターフェース選択のための決定木: 単一デバイスのシンプルさにはLM Studioなどのデスクトップアプリを、マルチユーザーアクセス・RAG・API対応にはOpen WebUIなどのWeb UIを選択。',
         },
         choosWebUI: {
           title: 'Web UIをいつ選ぶか?',
@@ -1274,6 +1302,8 @@ schema: {
             '**优势：** 基于浏览器（在任何OS上工作），可通过URL共享，多用户支持，从网络上的其他设备访问，更强大的功能。',
             '**劣势：** 需要Docker或端口知识，设置略复杂，需要运行Web服务器。',
           ],
+          image: '/images/desktop-vs-webui-local-llm-architecture-zh.svg',
+          imageCaption: '桌面应用对Web UI架构对比：桌面应用作为本机进程在单一设备上运行且无需网络，而Web UI在Docker中运行，可通过URL从任意设备访问。',
         },
         featureComp: {
           title: '功能比较：桌面应用对Web UI',
@@ -1300,6 +1330,8 @@ schema: {
             '您希望本机操作系统集成（通知、系统菜单）。',
             '您使用macOS或Windows。',
           ],
+          image: '/images/desktop-vs-webui-local-llm-decision-tree-zh.svg',
+          imageCaption: '选择本地LLM界面的决策树：单一设备追求简单可选择LM Studio等桌面应用，需要多用户访问、RAG和API支持则选择Open WebUI等Web UI。',
         },
         choosWebUI: {
           title: '何时选择Web UI？',
@@ -1446,6 +1478,8 @@ schema: {
             '**장점:** 브라우저 기반(모든 OS에서 작동), URL로 공유 가능, 다중 사용자 지원, 네트워크 내 다른 기기에서 접근 가능, 더 강력한 기능 제공.',
             '**단점:** Docker 또는 포트에 대한 이해 필요, 설정이 다소 복잡, 실행 중인 웹 서버 필요.',
           ],
+          image: '/images/desktop-vs-webui-local-llm-architecture-ko.svg',
+          imageCaption: '데스크톱 앱과 웹 UI의 아키텍처 비교: 데스크톱 앱은 네트워크 없이 단일 기기에서 네이티브 프로세스로 실행되며, 웹 UI는 Docker에서 실행되어 URL로 모든 기기에서 접근할 수 있습니다.',
         },
         featureComp: {
           title: '기능 비교: 데스크톱 vs 웹 UI',
@@ -1472,6 +1506,8 @@ schema: {
             '네이티브 OS 통합(알림, 시스템 메뉴)이 필요한 경우.',
             'macOS 또는 Windows를 사용하는 경우.',
           ],
+          image: '/images/desktop-vs-webui-local-llm-decision-tree-ko.svg',
+          imageCaption: '로컬 LLM 인터페이스 선택을 위한 결정 트리: 단일 기기의 간편함을 원하면 LM Studio와 같은 데스크톱 앱을, 다중 사용자 접근·RAG·API 지원이 필요하면 Open WebUI와 같은 웹 UI를 선택하십시오.',
         },
         choosWebUI: {
           title: '웹 UI를 언제 선택해야 합니까?',
