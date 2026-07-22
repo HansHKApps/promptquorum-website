@@ -82,6 +82,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Insteon:** later combined powerline and wireless signalling to improve reliability.',
           '**Local by default:** everything ran in the home, foreshadowing today\'s local-first revival.',
         ],
+        image: '/images/history-of-smart-home-technology-timeline-en.svg',
+        imageCaption: 'Five eras of smart home technology from 1975 to 2026: X10 powerline control, Z-Wave and Zigbee wireless mesh, the Nest and Amazon Echo cloud era, the 2022 Matter standard, and 2026 local AI control.',
       },
       wireless: {
         id: 'wireless',
@@ -127,6 +129,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Privacy awareness grew as the scope of cloud data collection became clear — see [smart home privacy risks](/smart-home/smart-home-privacy-risks).',
           'On-device AI lets a local LLM run home control — see [the complete local smart home guide](/smart-home/local-smart-home-complete-guide).',
         ],
+        image: '/images/history-of-smart-home-technology-pendulum-en.svg',
+        imageCaption: 'The 50-year smart home pendulum: local X10 and Z-Wave control from 1975–2010, the Nest and Amazon Echo cloud era from 2011–2021, and a swing back to local AI control with Matter in 2026.',
       },
       whatsNext: {
         id: 'whats-next',
@@ -271,6 +275,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Insteon:** جمع لاحقًا إشارات الأسلاك الكهربائية واللاسلكية لتحسين الموثوقية.',
           '**محلي افتراضيًا:** كل شيء عمل في المنزل، مُبشّرًا بانتعاش المحلي أولًا اليوم.',
         ],
+        image: '/images/history-of-smart-home-technology-timeline-en.svg',
+        imageCaption: 'خمس حقب في تقنية المنزل الذكي من 1975 إلى 2026: التحكم الكهربائي X10، الشبكة اللاسلكية Z-Wave وZigbee، حقبة السحابة مع Nest وAmazon Echo، معيار Matter لعام 2022، والتحكم بالذكاء الاصطناعي المحلي في 2026.',
       },
       wireless: {
         id: 'wireless',
@@ -316,6 +322,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'نما الوعي بالخصوصية مع وضوح نطاق جمع بيانات السحابة — راجع [مخاطر خصوصية المنزل الذكي](/ar/smart-home/smart-home-privacy-risks).',
           'الذكاء الاصطناعي على الجهاز يتيح لنموذج LLM محلي تشغيل التحكم المنزلي — راجع [الدليل الشامل للمنزل الذكي المحلي](/ar/smart-home/local-smart-home-complete-guide).',
         ],
+        image: '/images/history-of-smart-home-technology-pendulum-en.svg',
+        imageCaption: 'بندول المنزل الذكي على مدى 50 عامًا: تحكم محلي بـ X10 وZ-Wave من 1975 إلى 2010، حقبة السحابة مع Nest وAmazon Echo من 2011 إلى 2021، وعودة إلى التحكم بالذكاء الاصطناعي المحلي مع Matter في 2026.',
       },
       whatsNext: {
         id: 'whats-next',
@@ -460,6 +468,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Insteon:** kombinierte später Powerline- und Funksignale für mehr Zuverlässigkeit.',
           '**Standardmäßig lokal:** alles lief im Haus und nahm die heutige Local-First-Wiederbelebung vorweg.',
         ],
+        image: '/images/history-of-smart-home-technology-timeline-en.svg',
+        imageCaption: 'Fünf Epochen der Smart-Home-Technik von 1975 bis 2026: X10-Powerline-Steuerung, Z-Wave- und Zigbee-Funknetz, die Cloud-Ära von Nest und Amazon Echo, der Matter-Standard von 2022 und die lokale KI-Steuerung ab 2026.',
       },
       wireless: {
         id: 'wireless',
@@ -505,6 +515,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das Datenschutzbewusstsein wuchs, als der Umfang der Cloud-Datensammlung klar wurde – siehe [Smart-Home-Datenschutzrisiken](/de/smart-home/smart-home-privacy-risks).',
           'On-Device-KI lässt ein lokales LLM die Heimsteuerung übernehmen – siehe [der komplette Leitfaden zum lokalen Smart Home](/de/smart-home/local-smart-home-complete-guide).',
         ],
+        image: '/images/history-of-smart-home-technology-pendulum-en.svg',
+        imageCaption: 'Das 50-jährige Smart-Home-Pendel: lokale X10- und Z-Wave-Steuerung von 1975–2010, die Cloud-Ära von Nest und Amazon Echo von 2011–2021, und die Rückkehr zur lokalen KI-Steuerung mit Matter im Jahr 2026.',
       },
       whatsNext: {
         id: 'whats-next',
@@ -649,6 +661,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Insteon:** más tarde combinó señalización por línea eléctrica e inalámbrica para mejorar la fiabilidad.',
           '**Local por defecto:** todo funcionaba en la casa, anticipando el resurgir local-first de hoy.',
         ],
+        image: '/images/history-of-smart-home-technology-timeline-en.svg',
+        imageCaption: 'Cinco eras de la tecnología del smart home de 1975 a 2026: control por línea eléctrica X10, mesh inalámbrico Z-Wave y Zigbee, la era de la nube de Nest y Amazon Echo, el estándar Matter de 2022 y el control con IA local en 2026.',
       },
       wireless: {
         id: 'wireless',
@@ -694,6 +708,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La conciencia sobre la privacidad creció al hacerse claro el alcance de la recopilación de datos en la nube: consulta [riesgos de privacidad del smart home](/es/smart-home/smart-home-privacy-risks).',
           'La IA en el dispositivo deja que un LLM local ejecute el control del hogar: consulta [la guía completa del smart home local](/es/smart-home/local-smart-home-complete-guide).',
         ],
+        image: '/images/history-of-smart-home-technology-pendulum-en.svg',
+        imageCaption: 'El péndulo de 50 años del smart home: control local con X10 y Z-Wave de 1975 a 2010, la era de la nube de Nest y Amazon Echo de 2011 a 2021, y el giro de vuelta al control con IA local con Matter en 2026.',
       },
       whatsNext: {
         id: 'whats-next',
@@ -838,6 +854,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Insteon:** 이후 전력선과 무선 신호를 결합하여 신뢰성을 향상하였습니다.',
           '**기본적으로 로컬:** 모든 것이 집 안에서 실행되었으며, 오늘날의 로컬 우선 부활을 예고하였습니다.',
         ],
+        image: '/images/history-of-smart-home-technology-timeline-en.svg',
+        imageCaption: '1975년부터 2026년까지 스마트홈 기술의 다섯 시대: X10 전력선 제어, Z-Wave 및 Zigbee 무선 메시, Nest와 Amazon Echo의 클라우드 시대, 2022년 Matter 표준, 그리고 2026년 로컬 AI 제어.',
       },
       wireless: {
         id: 'wireless',
@@ -883,6 +901,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '클라우드 데이터 수집 범위가 명확해지면서 개인정보 보호 인식이 높아졌습니다 — [스마트 홈 개인정보 보호 위험](/ko/smart-home/smart-home-privacy-risks)을 참조하십시오.',
           '온디바이스 AI를 통해 로컬 LLM이 홈 제어를 실행할 수 있습니다 — [완전한 로컬 스마트 홈 가이드](/ko/smart-home/local-smart-home-complete-guide)를 참조하십시오.',
         ],
+        image: '/images/history-of-smart-home-technology-pendulum-en.svg',
+        imageCaption: '스마트홈의 50년 진자 운동: 1975~2010년 X10과 Z-Wave의 로컬 제어, 2011~2021년 Nest와 Amazon Echo의 클라우드 시대, 그리고 2026년 Matter와 함께 로컬 AI 제어로의 복귀.',
       },
       whatsNext: {
         id: 'whats-next',
@@ -1027,6 +1047,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Insteon :** a ensuite combiné signalisation par courant porteur et sans fil pour améliorer la fiabilité.',
           '**Local par défaut :** tout fonctionnait dans la maison, préfigurant le renouveau local-first d\'aujourd\'hui.',
         ],
+        image: '/images/history-of-smart-home-technology-timeline-en.svg',
+        imageCaption: 'Cinq ères de la technologie smart home de 1975 à 2026 : contrôle par courants porteurs X10, maillage sans fil Z-Wave et Zigbee, l\'ère du cloud avec Nest et Amazon Echo, la norme Matter de 2022, et le contrôle par IA locale en 2026.',
       },
       wireless: {
         id: 'wireless',
@@ -1072,6 +1094,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La sensibilité à la confidentialité a grandi à mesure que l\'ampleur de la collecte de données par le cloud devenait claire — voir [risques de confidentialité de la maison connectée](/fr/smart-home/smart-home-privacy-risks).',
           'L\'IA embarquée permet à un LLM local d\'assurer le contrôle domestique — voir [le guide complet de la maison connectée locale](/fr/smart-home/local-smart-home-complete-guide).',
         ],
+        image: '/images/history-of-smart-home-technology-pendulum-en.svg',
+        imageCaption: 'Le pendule de 50 ans de la maison connectée : contrôle local avec X10 et Z-Wave de 1975 à 2010, l\'ère du cloud avec Nest et Amazon Echo de 2011 à 2021, puis le retour au contrôle par IA locale avec Matter en 2026.',
       },
       whatsNext: {
         id: 'whats-next',
@@ -1216,6 +1240,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Insteon：** のちに電力線と無線の信号を組み合わせて信頼性を高めた。',
           '**標準でローカル：** すべてが家の中で動き、今日のローカルファースト復興を先取りしていた。',
         ],
+        image: '/images/history-of-smart-home-technology-timeline-en.svg',
+        imageCaption: 'スマートホーム技術の5つの時代(1975年〜2026年): X10電力線制御、Z-WaveとZigbeeの無線メッシュ、NestとAmazon Echoによるクラウド時代、2022年のMatter標準、そして2026年のローカルAI制御。',
       },
       wireless: {
         id: 'wireless',
@@ -1261,6 +1287,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'クラウドのデータ収集の範囲が明らかになるにつれ、プライバシー意識が高まった——[スマートホームのプライバシーリスク](/ja/smart-home/smart-home-privacy-risks)を参照。',
           'オンデバイスAIにより、ローカルLLMが家庭制御を担える——[ローカルスマートホーム完全ガイド](/ja/smart-home/local-smart-home-complete-guide)を参照。',
         ],
+        image: '/images/history-of-smart-home-technology-pendulum-en.svg',
+        imageCaption: 'スマートホームの50年にわたる振り子: 1975〜2010年のX10とZ-Waveによるローカル制御、2011〜2021年のNestとAmazon Echoによるクラウド時代、そして2026年にMatterとローカルAI制御へ回帰。',
       },
       whatsNext: {
         id: 'whats-next',
@@ -1405,6 +1433,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Insteon:** mais tarde combinou sinalização por linha elétrica e sem fio para melhorar a confiabilidade.',
           '**Local por padrão:** tudo funcionava na casa, antecipando o ressurgimento local-first de hoje.',
         ],
+        image: '/images/history-of-smart-home-technology-timeline-en.svg',
+        imageCaption: 'Cinco eras da tecnologia de casa inteligente de 1975 a 2026: controle por linha elétrica X10, malha sem fio Z-Wave e Zigbee, a era da nuvem com Nest e Amazon Echo, o padrão Matter de 2022 e o controle por IA local em 2026.',
       },
       wireless: {
         id: 'wireless',
@@ -1450,6 +1480,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A consciência sobre privacidade cresceu à medida que o alcance da coleta de dados na nuvem ficou claro — veja [riscos de privacidade da casa inteligente](/pt/smart-home/smart-home-privacy-risks).',
           'A IA no dispositivo permite que um LLM local execute o controle da casa — veja [o guia completo da casa inteligente local](/pt/smart-home/local-smart-home-complete-guide).',
         ],
+        image: '/images/history-of-smart-home-technology-pendulum-en.svg',
+        imageCaption: 'O pêndulo de 50 anos da casa inteligente: controle local com X10 e Z-Wave de 1975 a 2010, a era da nuvem com Nest e Amazon Echo de 2011 a 2021, e o retorno ao controle por IA local com Matter em 2026.',
       },
       whatsNext: {
         id: 'whats-next',
@@ -1594,6 +1626,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Insteon：** 后来结合电力线与无线信号以提升可靠性。',
           '**默认本地：** 一切都在家中运行，预示了今天的本地优先复兴。',
         ],
+        image: '/images/history-of-smart-home-technology-timeline-en.svg',
+        imageCaption: '智能家居技术的五个时代(1975年至2026年):X10电力线控制、Z-Wave与Zigbee无线网状网络、Nest与Amazon Echo的云端时代、2022年的Matter标准,以及2026年的本地AI控制。',
       },
       wireless: {
         id: 'wireless',
@@ -1639,6 +1673,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '随着云端数据收集的范围变得清晰，隐私意识上升——参见[智能家居隐私风险](/zh/smart-home/smart-home-privacy-risks)。',
           '设备端AI让本地LLM可以承担家庭控制——参见[本地智能家居完整指南](/zh/smart-home/local-smart-home-complete-guide)。',
         ],
+        image: '/images/history-of-smart-home-technology-pendulum-en.svg',
+        imageCaption: '智能家居50年的钟摆:1975至2010年X10与Z-Wave的本地控制、2011至2021年Nest与Amazon Echo的云端时代,以及2026年借助Matter回归本地AI控制。',
       },
       whatsNext: {
         id: 'whats-next',
