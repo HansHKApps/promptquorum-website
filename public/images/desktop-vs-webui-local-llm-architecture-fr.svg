@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect x="0" y="0" width="800" height="380" fill="#FFFFFF"/>
+<text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">App de bureau vs Interface Web : fonctionnement</text>
+<rect x="24" y="50" width="350" height="300" rx="6" fill="#FFFFFF" stroke="#7D5260" stroke-width="2"/>
+<rect x="24" y="50" width="350" height="4" rx="0" fill="#7D5260"/>
+<text x="199.0" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#7D5260" text-anchor="middle">App de bureau</text>
+<rect x="426" y="50" width="350" height="300" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+<rect x="426" y="50" width="350" height="4" rx="0" fill="#6750A4"/>
+<text x="601.0" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Interface Web</text>
+<text x="44" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">Méthode d'installation</text>
+<text x="44" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Télécharger &amp; lancer l'installeur</text>
+<text x="446" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">Méthode d'installation</text>
+<text x="446" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Conteneur Docker</text>
+<line x1="42" y1="142" x2="360" y2="142" stroke="#F7F2FA" stroke-width="1"/>
+<line x1="444" y1="142" x2="762" y2="142" stroke="#F7F2FA" stroke-width="1"/>
+<text x="44" y="158" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">S'exécute comme</text>
+<text x="44" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Processus OS natif</text>
+<text x="446" y="158" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">S'exécute comme</text>
+<text x="446" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Serveur Web + navigateur</text>
+<line x1="42" y1="192" x2="360" y2="192" stroke="#F7F2FA" stroke-width="1"/>
+<line x1="444" y1="192" x2="762" y2="192" stroke="#F7F2FA" stroke-width="1"/>
+<text x="44" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">Réseau requis</text>
+<text x="44" y="228" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Non</text>
+<text x="446" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">Réseau requis</text>
+<text x="446" y="228" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Oui (port Docker)</text>
+<line x1="42" y1="242" x2="360" y2="242" stroke="#F7F2FA" stroke-width="1"/>
+<line x1="444" y1="242" x2="762" y2="242" stroke="#F7F2FA" stroke-width="1"/>
+<text x="44" y="258" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">Accès multi-appareils</text>
+<text x="44" y="278" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Un seul appareil</text>
+<text x="446" y="258" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E">Accès multi-appareils</text>
+<text x="446" y="278" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Tout appareil via URL</text>
+<text x="400" y="368" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Les deux se connectent au même backend Ollama ou vLLM.</text>
+<text x="792" y="375" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
