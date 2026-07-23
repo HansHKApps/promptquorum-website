@@ -93,6 +93,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Records event clips and snapshots locally; you control retention.',
           'Zones and object filters reduce noise — for example, alert only on people in the driveway.',
         ],
+        image: '/images/local-ai-security-camera-architecture-en.svg',
+        imageCaption: 'Local AI camera architecture: an RTSP camera feed goes to Frigate, which runs AI detection on a Coral TPU or GPU, then saves clips locally and sends alerts to Home Assistant — no cloud round-trip.',
       },
       hardware: {
         id: 'hardware',
@@ -117,6 +119,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Add the Frigate integration in Home Assistant to expose camera and detection entities.',
           'Use the detection entities in automations and dashboards.',
         ],
+        image: '/images/local-ai-security-camera-setup-flow-en.svg',
+        imageCaption: 'Four-step Frigate setup: run Frigate, configure a Coral TPU or GPU detector with zones, add the Home Assistant integration, then automate alerts and dashboards.',
       },
       notifications: {
         id: 'notifications',
@@ -285,6 +289,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُسجِّل مقاطع الأحداث واللقطات محليًا؛ أنت من يتحكم في فترة الاحتفاظ.',
           'تُقلِّل المناطق ومرشحات الأشياء الضوضاء — مثلًا، إنذار عند وجود أشخاص في المدخل فقط.',
         ],
+        image: '/images/local-ai-security-camera-architecture-en.svg',
+        imageCaption: 'بنية كاميرا الذكاء الاصطناعي المحلي: يذهب تدفق كاميرا RTSP إلى Frigate الذي يُشغِّل الكشف بالذكاء الاصطناعي على Coral TPU أو GPU، ثم يحفظ المقاطع محليًا ويرسل التنبيهات إلى Home Assistant — دون المرور عبر السحابة.',
       },
       hardware: {
         id: 'hardware',
@@ -309,6 +315,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أضف تكامل Frigate في Home Assistant لكشف كيانات الكاميرا والكشف.',
           'استخدم كيانات الكشف في الأتمتة ولوحات التحكم.',
         ],
+        image: '/images/local-ai-security-camera-setup-flow-en.svg',
+        imageCaption: 'إعداد Frigate بأربع خطوات: تشغيل Frigate، ضبط كاشف Coral TPU أو GPU مع المناطق، إضافة تكامل Home Assistant، ثم أتمتة التنبيهات ولوحات التحكم.',
       },
       notifications: {
         id: 'notifications',
@@ -477,6 +485,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Zeichnet Ereignis-Clips und Schnappschüsse lokal auf; Sie steuern die Aufbewahrung.',
           'Zonen und Objektfilter reduzieren Rauschen – etwa nur bei Personen in der Einfahrt alarmieren.',
         ],
+        image: '/images/local-ai-security-camera-architecture-en.svg',
+        imageCaption: 'Lokale KI-Kamera-Architektur: Ein RTSP-Kamera-Feed geht an Frigate, das KI-Erkennung auf einer Coral-TPU oder GPU ausführt, Clips lokal speichert und Alarme an Home Assistant sendet — ohne Cloud-Umweg.',
       },
       hardware: {
         id: 'hardware',
@@ -501,6 +511,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fügen Sie die Frigate-Integration in Home Assistant hinzu, um Kamera- und Erkennungs-Entitäten bereitzustellen.',
           'Nutzen Sie die Erkennungs-Entitäten in Automatisierungen und Dashboards.',
         ],
+        image: '/images/local-ai-security-camera-setup-flow-en.svg',
+        imageCaption: 'Vierstufige Frigate-Einrichtung: Frigate starten, einen Coral-TPU- oder GPU-Detektor mit Zonen konfigurieren, die Home-Assistant-Integration hinzufügen, dann Alarme und Dashboards automatisieren.',
       },
       notifications: {
         id: 'notifications',
@@ -669,6 +681,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Graba clips de eventos y capturas localmente; tú controlas la retención.',
           'Las zonas y los filtros de objetos reducen el ruido — por ejemplo, alertar solo de personas en la entrada.',
         ],
+        image: '/images/local-ai-security-camera-architecture-en.svg',
+        imageCaption: 'Arquitectura de cámara con IA local: un stream de cámara RTSP va a Frigate, que ejecuta detección con IA en una Coral TPU o GPU, guarda los clips localmente y envía alertas a Home Assistant — sin ida y vuelta a la nube.',
       },
       hardware: {
         id: 'hardware',
@@ -693,6 +707,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Añade la integración de Frigate en Home Assistant para exponer las entidades de cámara y detección.',
           'Usa las entidades de detección en automatizaciones y paneles.',
         ],
+        image: '/images/local-ai-security-camera-setup-flow-en.svg',
+        imageCaption: 'Configuración de Frigate en cuatro pasos: ejecuta Frigate, configura un detector Coral TPU o GPU con zonas, añade la integración de Home Assistant y luego automatiza alertas y paneles.',
       },
       notifications: {
         id: 'notifications',
@@ -861,6 +877,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이벤트 클립과 스냅샷을 로컬로 녹화합니다. 보존 기간을 직접 제어합니다.',
           '영역과 객체 필터가 노이즈를 줄입니다 — 예를 들어 진입로의 사람에게만 알림.',
         ],
+        image: '/images/local-ai-security-camera-architecture-en.svg',
+        imageCaption: '로컬 AI 카메라 아키텍처: RTSP 카메라 스트림이 Frigate로 전달되고, Coral TPU 또는 GPU에서 AI 감지를 수행한 뒤 클립을 로컬에 저장하고 Home Assistant로 알림을 보냅니다 — 클라우드 왕복 없음.',
       },
       hardware: {
         id: 'hardware',
@@ -885,6 +903,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Home Assistant에서 Frigate 통합을 추가하여 카메라 및 감지 엔티티를 노출하십시오.',
           '자동화와 대시보드에서 감지 엔티티를 사용하십시오.',
         ],
+        image: '/images/local-ai-security-camera-setup-flow-en.svg',
+        imageCaption: '4단계 Frigate 설정: Frigate 실행, 영역이 포함된 Coral TPU 또는 GPU 감지기 구성, Home Assistant 통합 추가, 그런 다음 알림과 대시보드 자동화.',
       },
       notifications: {
         id: 'notifications',
@@ -1053,6 +1073,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Enregistre clips d\'événements et captures localement ; vous contrôlez la rétention.',
           'Les zones et filtres d\'objets réduisent le bruit — par exemple, n\'alerter que sur les personnes dans l\'allée.',
         ],
+        image: '/images/local-ai-security-camera-architecture-en.svg',
+        imageCaption: 'Architecture de caméra IA locale : un flux de caméra RTSP va vers Frigate, qui exécute la détection IA sur un Coral TPU ou un GPU, enregistre les clips localement et envoie des alertes à Home Assistant — sans aller-retour cloud.',
       },
       hardware: {
         id: 'hardware',
@@ -1077,6 +1099,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ajoutez l\'intégration Frigate dans Home Assistant pour exposer les entités de caméra et de détection.',
           'Utilisez les entités de détection dans les automatisations et tableaux de bord.',
         ],
+        image: '/images/local-ai-security-camera-setup-flow-en.svg',
+        imageCaption: 'Configuration de Frigate en quatre étapes : exécuter Frigate, configurer un détecteur Coral TPU ou GPU avec des zones, ajouter l\'intégration Home Assistant, puis automatiser alertes et tableaux de bord.',
       },
       notifications: {
         id: 'notifications',
@@ -1245,6 +1269,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'イベントクリップとスナップショットをローカルに録画；保持期間はあなたが管理します。',
           'ゾーンと物体フィルターがノイズを減らします——例：私道にいる人物のみ通知。',
         ],
+        image: '/images/local-ai-security-camera-architecture-en.svg',
+        imageCaption: 'ローカルAIカメラのアーキテクチャ：RTSPカメラ映像はFrigateに送られ、Coral TPUまたはGPUでAI検出を実行し、クリップをローカルに保存してHome Assistantへ通知を送る——クラウドを経由しない。',
       },
       hardware: {
         id: 'hardware',
@@ -1269,6 +1295,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Home Assistant で Frigate 統合を追加し、カメラと検出のエンティティを公開します。',
           '検出エンティティを自動化やダッシュボードで使います。',
         ],
+        image: '/images/local-ai-security-camera-setup-flow-en.svg',
+        imageCaption: 'Frigateの4ステップセットアップ：Frigateを実行し、ゾーン付きのCoral TPUまたはGPU検出器を設定し、Home Assistant統合を追加し、通知とダッシュボードを自動化する。',
       },
       notifications: {
         id: 'notifications',
@@ -1437,6 +1465,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Grava clipes de eventos e capturas localmente; você controla a retenção.',
           'Zonas e filtros de objetos reduzem o ruído — por exemplo, alertar só sobre pessoas na garagem.',
         ],
+        image: '/images/local-ai-security-camera-architecture-en.svg',
+        imageCaption: 'Arquitetura de câmera com IA local: um stream de câmera RTSP vai para o Frigate, que executa detecção com IA em uma Coral TPU ou GPU, salva clipes localmente e envia alertas ao Home Assistant — sem ida e volta à nuvem.',
       },
       hardware: {
         id: 'hardware',
@@ -1461,6 +1491,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Adicione a integração do Frigate no Home Assistant para expor as entidades de câmera e detecção.',
           'Use as entidades de detecção em automações e painéis.',
         ],
+        image: '/images/local-ai-security-camera-setup-flow-en.svg',
+        imageCaption: 'Configuração do Frigate em quatro passos: execute o Frigate, configure um detector Coral TPU ou GPU com zonas, adicione a integração do Home Assistant e depois automatize alertas e painéis.',
       },
       notifications: {
         id: 'notifications',
@@ -1629,6 +1661,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '在本地录制事件片段和快照；保留时长由你控制。',
           '区域和物体过滤器可减少噪声——例如，只对车道上的人物告警。',
         ],
+        image: '/images/local-ai-security-camera-architecture-en.svg',
+        imageCaption: '本地 AI 摄像头架构：RTSP 摄像头画面传给 Frigate，Frigate 在 Coral TPU 或 GPU 上运行 AI 检测，将片段保存在本地并向 Home Assistant 发送告警——无需往返云端。',
       },
       hardware: {
         id: 'hardware',
@@ -1653,6 +1687,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '在 Home Assistant 中添加 Frigate 集成，以暴露摄像头和检测实体。',
           '在自动化和仪表盘中使用这些检测实体。',
         ],
+        image: '/images/local-ai-security-camera-setup-flow-en.svg',
+        imageCaption: 'Frigate 四步配置：运行 Frigate，配置带区域的 Coral TPU 或 GPU 检测器，添加 Home Assistant 集成，然后自动化告警与仪表盘。',
       },
       notifications: {
         id: 'notifications',
