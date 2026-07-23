@@ -144,6 +144,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'tip', text: 'Qwen 3.6 27B outperforms Claude Sonnet 5 on HumanEval (+2.7 pp) and SWE-bench (+5.2 pp). Claude leads on MMLU (+1.7 pp) and MATH (+2.5 pp). For EU coding teams, the local advantage is clearest in software engineering tasks.' },
           { type: 'tip', text: 'DeepSeek\'s model lineup evolves frequently. Verify the current model name and pricing at platform.deepseek.com before deployment. Figures reflect publicly available data as of May 2026.' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-benchmark-comparison-en.svg',
+        imageCaption: 'Coding benchmark comparison: Qwen 3.6 27B scores 92.1% HumanEval and 77.2% SWE-bench, ahead of Claude Sonnet 5 (89.4%, ~72%) and DeepSeek R2 (91.6%, ~75%).',
       },
       hardware: {
         id: 'hardware-reality',
@@ -242,6 +244,8 @@ dispatch_rules:
         callouts: [
           { type: 'tip', text: 'Start with task classification: identify which 20% of your prompts require frontier quality, and route the other 80% to local Qwen. Most dev teams find that routine code completion, documentation, and data transformation tasks run well on Qwen 3.6 27B locally.' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-model-decision-tree-en.svg',
+        imageCaption: 'Decision tree for choosing Qwen 3.6 27B, Claude Sonnet 5, or DeepSeek R2 based on EU personal data sensitivity and task volume, per GDPR Article 44.',
       },
       verdict: {
         id: 'verdict',
@@ -358,6 +362,8 @@ dispatch_rules:
           { type: 'tip', text: 'Qwen 3.6 27B supera a Claude Sonnet 5 en HumanEval (+2,7 pp) y SWE-bench (+5,2 pp). Claude lidera en MMLU (+1,7 pp) y MATH (+2,5 pp). Para equipos de desarrollo de la UE, la ventaja local es más clara en tareas de ingeniería de software.' },
           { type: 'tip', text: 'La línea de modelos de DeepSeek evoluciona con frecuencia. Verifica el nombre actual del modelo y el precio en platform.deepseek.com antes del despliegue. Las cifras reflejan datos públicamente disponibles a mayo de 2026.' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-benchmark-comparison-es.svg',
+        imageCaption: 'Comparativa de benchmarks de código: Qwen 3.6 27B obtiene 92,1% HumanEval y 77,2% SWE-bench, por delante de Claude Sonnet 5 (89,4%, ~72%) y DeepSeek R2 (91,6%, ~75%).',
       },
       hardware: {
         id: 'hardware-reality',
@@ -456,6 +462,8 @@ dispatch_rules:
         callouts: [
           { type: 'tip', text: 'Comienza con la clasificación de tareas: identifica qué 20% de tus prompts requieren calidad frontier, y enruta el otro 80% a Qwen local. La mayoría de equipos de desarrollo descubre que la completación rutinaria de código, la documentación y las tareas de transformación de datos funcionan bien en Qwen 3.6 27B localmente.' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-model-decision-tree-es.svg',
+        imageCaption: 'Árbol de decisión para elegir entre Qwen 3.6 27B, Claude Sonnet 5 o DeepSeek R2 según la sensibilidad de los datos personales de la UE y el volumen de tareas, conforme al Artículo 44 del GDPR.',
       },
       verdict: {
         id: 'verdict',
@@ -600,6 +608,8 @@ dispatch_rules:
           { type: 'tip', text: 'يتفوق Qwen 3.6 27B على Claude Sonnet 5 في HumanEval (+2.7 نقطة مئوية) وSWE-bench (+5.2 نقطة مئوية). يتصدر Claude في MMLU (+1.7 نقطة مئوية) وMATH (+2.5 نقطة مئوية). لفرق التطوير في الاتحاد الأوروبي، الأفضلية المحلية أوضح في مهام هندسة البرمجيات.' },
           { type: 'tip', text: 'تتطور سلسلة نماذج DeepSeek بشكل متكرر. تحقق من اسم النموذج الحالي والسعر على platform.deepseek.com قبل النشر. تعكس الأرقام بيانات متاحة علنًا حتى مايو 2026.' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-benchmark-comparison-ar.svg',
+        imageCaption: 'مقارنة معايير الكود: يحقق Qwen 3.6 27B نسبة 92.1% HumanEval و77.2% SWE-bench، متفوقًا على Claude Sonnet 5 (89.4%، ~72%) وDeepSeek R2 (91.6%، ~75%).',
       },
       hardware: {
         id: 'hardware-reality',
@@ -698,6 +708,8 @@ dispatch_rules:
         callouts: [
           { type: 'tip', text: 'ابدأ بتصنيف المهام: حدّد أي 20% من أوامرك تتطلب جودة حدودية، ووجّه الـ 80% الأخرى إلى Qwen المحلي. تكتشف معظم فرق التطوير أن إكمال الكود الروتيني والتوثيق ومهام تحويل البيانات تعمل جيدًا على Qwen 3.6 27B محليًا.' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-model-decision-tree-ar.svg',
+        imageCaption: 'شجرة قرار لاختيار Qwen 3.6 27B أو Claude Sonnet 5 أو DeepSeek R2 بناءً على حساسية البيانات الشخصية للاتحاد الأوروبي وحجم المهام، وفقًا للمادة 44 من GDPR.',
       },
       verdict: {
         id: 'verdict',
@@ -849,6 +861,8 @@ dispatch_rules:
         ],
         columns: ['Benchmark', 'Qwen 3.6 27B', 'Claude Sonnet 5', 'DeepSeek R2'],
         tableFormat: true,
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-benchmark-comparison-pt.svg',
+        imageCaption: 'Comparação de benchmarks de código: Qwen 3.6 27B atinge 92,1% HumanEval e 77,2% SWE-bench, à frente de Claude Sonnet 5 (89,4%, ~72%) e DeepSeek R2 (91,6%, ~75%).',
       },
       hardware: {
         id: 'hardware-reality',
@@ -929,6 +943,8 @@ dispatch_rules:
     primary_model: qwen_local
     fallback_chain: [claude_sonnet_46, deepseek_r2]`,
         codeLanguage: 'YAML',
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-model-decision-tree-pt.svg',
+        imageCaption: 'Árvore de decisão para escolher entre Qwen 3.6 27B, Claude Sonnet 5 ou DeepSeek R2 com base na sensibilidade de dados pessoais da UE e no volume da tarefa, conforme o Artigo 44 do GDPR.',
       },
       verdict: {
         id: 'verdict',
@@ -1057,6 +1073,8 @@ dispatch_rules:
         callouts: [
           { type: 'tip', text: 'Qwen 3.6 27B übertrifft Claude Sonnet 5 bei HumanEval (+2,7 pp) und SWE-bench (+5,2 pp). Claude führt bei MMLU (+1,7 pp) und MATH (+2,5 pp). Für EU-Coding-Teams ist der lokale Vorteil bei Software-Engineering-Aufgaben am deutlichsten.' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-benchmark-comparison-de.svg',
+        imageCaption: 'Coding-Benchmark-Vergleich: Qwen 3.6 27B erreicht 92,1% HumanEval und 77,2% SWE-bench und liegt damit vor Claude Sonnet 5 (89,4%, ~72%) und DeepSeek R2 (91,6%, ~75%).',
       },
       hardware: {
         id: 'hardware-reality',
@@ -1155,6 +1173,8 @@ dispatch_rules:
         callouts: [
           { type: 'tip', text: 'Beginnen Sie mit Task-Klassifikation: Identifizieren Sie, welche 20% Ihrer Prompts Frontier-Qualität erfordern, und routet die anderen 80% zu lokalem Qwen. Die meisten Dev-Teams stellen fest, dass Routine-Code-Completion, Dokumentation und Data-Transformation-Aufgaben gut auf Qwen 3.6 27B lokal laufen.' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-model-decision-tree-de.svg',
+        imageCaption: 'Entscheidungsbaum zur Wahl zwischen Qwen 3.6 27B, Claude Sonnet 5 oder DeepSeek R2 basierend auf der Sensibilität personenbezogener EU-Daten und dem Aufgabenvolumen, gemäß DSGVO Artikel 44.',
       },
       verdict: {
         id: 'verdict',
@@ -1274,6 +1294,8 @@ dispatch_rules:
         callouts: [
           { type: 'tip', text: 'Qwen 3.6 27B dépasse Claude Sonnet 5 sur HumanEval (+2.7 pp) et SWE-bench (+5.2 pp). Claude mène sur MMLU (+1.7 pp) et MATH (+2.5 pp). Pour les équipes UE en code, l\'avantage local est maximal en engineering logiciel.' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-benchmark-comparison-fr.svg',
+        imageCaption: 'Comparaison des benchmarks de code : Qwen 3.6 27B atteint 92.1% HumanEval et 77.2% SWE-bench, devant Claude Sonnet 5 (89.4%, ~72%) et DeepSeek R2 (91.6%, ~75%).',
       },
       hardware: {
         id: 'hardware-reality',
@@ -1372,6 +1394,8 @@ dispatch_rules:
         callouts: [
           { type: 'tip', text: 'Commencez par classification tâches : identifiez quels 20% de vos requêtes exigent qualité frontier, routez les 80% autres vers Qwen local. La plupart des équipes dev trouvent que code completion routinier, docs, et transformation données fonctionnent bien sur Qwen 3.6 27B local.' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-model-decision-tree-fr.svg',
+        imageCaption: 'Arbre de décision pour choisir entre Qwen 3.6 27B, Claude Sonnet 5 ou DeepSeek R2 selon la sensibilité des données personnelles UE et le volume de la tâche, conformément à l\'Article 44 du RGPD.',
       },
       verdict: {
         id: 'verdict',
@@ -1488,6 +1512,8 @@ dispatch_rules:
         callouts: [
           { type: 'tip', text: 'Qwen 3.6 27B在HumanEval上超过Claude Sonnet 5 (+2.7个百分点)，在SWE-bench上超过(+5.2个百分点)。Claude在MMLU (+1.7pp)和MATH (+2.5pp)上领先。对于中国编程团队，本地优势在软件工程任务上最明显。' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-benchmark-comparison-zh.svg',
+        imageCaption: '编码基准对比：Qwen 3.6 27B 达到 92.1% HumanEval 和 77.2% SWE-bench，领先于 Claude Sonnet 5（89.4%，~72%）和 DeepSeek R2（91.6%，~75%）。',
       },
       hardware: {
         id: 'hardware-reality',
@@ -1590,6 +1616,8 @@ dispatch_rules:
         callouts: [
           { type: 'tip', text: '从任务分类开始：识别需要前沿质量的20%提示词，将其他80%路由到本地Qwen。大多数开发团队发现常规代码完成、文档和数据转换任务在Qwen 3.6 27B上运行良好。' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-model-decision-tree-zh.svg',
+        imageCaption: '根据欧盟个人数据敏感度和任务量选择 Qwen 3.6 27B、Claude Sonnet 5 或 DeepSeek R2 的决策树，依据 GDPR 第44条。',
       },
       verdict: {
         id: 'verdict',
@@ -1746,6 +1774,8 @@ dispatch_rules:
         callouts: [
           { type: 'tip', text: 'Qwen 3.6 27BはHumanEvalで+2.7ポイント、SWE-benchで+5.2ポイントでClaude Sonnet 5を上回る。日本のコーディングチームにとってローカル優位性はソフトウェアエンジニアリングタスクで最も明確。' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-benchmark-comparison-ja.svg',
+        imageCaption: 'コーディングベンチマーク比較：Qwen 3.6 27Bは92.1% HumanEvalと77.2% SWE-benchを達成し、Claude Sonnet 5（89.4%、~72%）とDeepSeek R2（91.6%、~75%）を上回る。',
       },
       hardware: {
         id: 'hardware-reality',
@@ -1853,6 +1883,8 @@ dispatchers:
         callouts: [
           { type: 'tip', text: 'ディスパッチレイヤーで月 100M トークン × 混合ワークロードの場合、マルチモデル戦略は最大 60～80% コスト削減可能。' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-model-decision-tree-ja.svg',
+        imageCaption: 'GDPR第44条に基づき、EU個人データの機密性とタスク量からQwen 3.6 27B、Claude Sonnet 5、DeepSeek R2のいずれかを選ぶ意思決定ツリー。',
       },
       verdict: {
         id: 'verdict',
@@ -2071,6 +2103,8 @@ dispatchers:
           { type: 'tip', text: 'Qwen 3.6 27B는 HumanEval(+2.7 pp)과 SWE-bench(+5.2 pp)에서 Claude Sonnet 5를 능가합니다. Claude는 MMLU(+1.7 pp)와 MATH(+2.5 pp)에서 앞섭니다. EU 코딩 팀에게 로컬의 우위는 소프트웨어 엔지니어링 작업에서 가장 명확합니다.' },
           { type: 'tip', text: 'DeepSeek의 모델 라인업은 자주 변경됩니다. 배포 전에 platform.deepseek.com에서 현재 모델명과 가격을 반드시 확인하십시오. 수치는 2026년 5월 기준 공개 데이터를 반영합니다.' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-benchmark-comparison-ko.svg',
+        imageCaption: '코딩 벤치마크 비교: Qwen 3.6 27B는 92.1% HumanEval과 77.2% SWE-bench를 기록해 Claude Sonnet 5(89.4%, ~72%)와 DeepSeek R2(91.6%, ~75%)를 앞선다.',
       },
       hardware: {
         id: 'hardware-reality',
@@ -2169,6 +2203,8 @@ dispatch_rules:
         callouts: [
           { type: 'tip', text: '작업 분류부터 시작하십시오: 최전선 품질이 필요한 프롬프트 상위 20%를 파악하고, 나머지 80%를 로컬 Qwen으로 라우팅하십시오. 대부분의 개발팀은 일상적인 코드 완성, 문서 작성, 데이터 변환 작업이 Qwen 3.6 27B 로컬에서 원활히 실행된다는 것을 확인합니다.' },
         ],
+        image: '/images/qwen-vs-claude-vs-deepseek-local-2026-model-decision-tree-ko.svg',
+        imageCaption: 'GDPR 제44조에 따라 EU 개인 데이터 민감도와 작업량을 기준으로 Qwen 3.6 27B, Claude Sonnet 5, DeepSeek R2 중 선택하는 의사결정 트리.',
       },
       verdict: {
         id: 'verdict',
