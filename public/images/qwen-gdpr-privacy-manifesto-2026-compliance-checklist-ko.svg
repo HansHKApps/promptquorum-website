@@ -1,0 +1,30 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">GDPR 조항별 컴플라이언스 체크리스트: 로컬 LLM vs 클라우드 API</text>
+
+  <text x="40" y="60" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">GDPR 조항</text>
+  <text x="330" y="60" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">로컬 LLM</text>
+  <text x="565" y="60" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">클라우드 API</text>
+  <line x1="18" y1="68" x2="782" y2="68" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <rect x="18" y="70" width="764" height="48" fill="#F7F2FA" rx="4"/>
+  <text x="40" y="100" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">제5조 — 데이터 최소화</text>
+  <text x="330" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✅ 인프라를 벗어나지 않음</text>
+  <text x="565" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#F4B400">⚠️ 공급자에게 이전됨</text>
+  <rect x="18" y="122" width="764" height="48" fill="#FFFFFF" rx="4"/>
+  <text x="40" y="152" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">제25조 — 설계에 의한 데이터 보호</text>
+  <text x="330" y="152" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✅ 설계상 방지</text>
+  <text x="565" y="152" font-family="system-ui, sans-serif" font-size="11" fill="#F4B400">⚠️ 계약적 통제 필요</text>
+  <rect x="18" y="174" width="764" height="48" fill="#F7F2FA" rx="4"/>
+  <text x="40" y="204" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">제32조 — 기술적 조치</text>
+  <text x="330" y="204" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✅ 조직 통제 암호화</text>
+  <text x="565" y="204" font-family="system-ui, sans-serif" font-size="11" fill="#F4B400">⚠️ 공급자가 구현</text>
+  <rect x="18" y="226" width="764" height="48" fill="#FFFFFF" rx="4"/>
+  <text x="40" y="256" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">제44조 — 국경 간 이전</text>
+  <text x="330" y="256" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✅ 이전 없음</text>
+  <text x="565" y="256" font-family="system-ui, sans-serif" font-size="11" fill="#EA4335">❌ 이전 발생</text>
+  <rect x="18" y="278" width="764" height="48" fill="#F7F2FA" rx="4"/>
+  <text x="40" y="308" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">제28조 — 처리자 의무</text>
+  <text x="330" y="308" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✅ 처리자 없음</text>
+  <text x="565" y="308" font-family="system-ui, sans-serif" font-size="11" fill="#F4B400">⚠️ DPA 필요</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -135,6 +135,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'one-sentence', text: 'Closed cloud AI models create structural GDPR transfer obligations. [Standard Contractual Clauses](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0046#d1e1789) legitimize transfers and create accountability under Article 46, but must be supplemented by [Transfer Impact Assessment](https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer-tools_en) post-Schrems II. Local deployment prevents the transfer entirely.' },
           { type: 'plain-terms', text: 'When you type a prompt into a cloud AI tool, that text is sent to the provider\'s server in another country. Legal contracts (SCCs) mean you can hold the provider accountable if something goes wrong and create a legal basis for the transfer — but your data still travels there. After the Schrems II ruling, these contracts must be backed by a Transfer Impact Assessment confirming the recipient country provides equivalent privacy protection. Local LLMs mean the data never travels at all.' },
         ],
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-data-flow-en.svg',
+        imageCaption: 'GDPR data flow comparison: cloud AI transfers prompts to non-EU servers (US/China), triggering an Article 44 transfer obligation, while a local LLM such as Qwen 3.6 27B keeps data on EU hardware with no transfer and no Article 44 obligation.',
       },
       openWeights: {
         id: 'open-weights',
@@ -178,6 +180,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           { type: 'one-sentence', text: 'Local LLM deployment satisfies [GDPR Article 25](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0046#d1e1383) (data protection by design) and eliminates [Article 44](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0046#d1e1790) (cross-border transfer) obligations because data never leaves EU-controlled infrastructure.' },
         ],
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-en.svg',
+        imageCaption: 'GDPR Article compliance checklist comparing local LLM and cloud API posture across Article 5 (data minimisation), Article 25 (data protection by design), Article 32 (technical measures), Article 44 (cross-border transfers), and Article 28 (processor obligations).',
       },
       euAiAct: {
         id: 'eu-ai-act',
@@ -356,6 +360,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'one-sentence', text: 'Los modelos de IA en la nube cerrados crean obligaciones estructurales de transferencia según el RGPD. Las [Cláusulas Contractuales Estándar](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0046#d1e1789) legitiman las transferencias y crean responsabilidad según el Artículo 46, pero deben complementarse con una [Evaluación de Impacto de la Transferencia](https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer-tools_en) tras Schrems II. El despliegue local previene la transferencia por completo.' },
           { type: 'plain-terms', text: 'Cuando escribes un prompt en una herramienta de IA en la nube, ese texto se envía al servidor del proveedor en otro país. Los contratos legales (SCCs) significan que puedes responsabilizar al proveedor si algo va mal y crear una base legal para la transferencia — pero tus datos siguen viajando hasta allí. Tras la sentencia Schrems II, estos contratos deben estar respaldados por una Evaluación de Impacto de la Transferencia que confirme que el país receptor proporciona una protección de privacidad equivalente. Los LLMs locales significan que los datos no viajan en absoluto.' },
         ],
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-data-flow-es.svg',
+        imageCaption: 'Comparación del flujo de datos del RGPD: la IA en la nube transfiere los prompts a servidores fuera de la UE (EE. UU./China), lo que activa una obligación de transferencia del Artículo 44, mientras que un LLM local como Qwen 3.6 27B mantiene los datos en hardware de la UE sin transferencia ni obligación del Artículo 44.',
       },
       openWeights: {
         id: 'open-weights',
@@ -399,6 +405,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           { type: 'one-sentence', text: 'El despliegue local de LLM satisface el [Artículo 25 del RGPD](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0046#d1e1383) (protección de datos por diseño) y elimina las obligaciones del [Artículo 44](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0046#d1e1790) (transferencia transfronteriza) porque los datos nunca salen de la infraestructura controlada por la UE.' },
         ],
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-es.svg',
+        imageCaption: 'Lista de cumplimiento del RGPD por artículo: comparación de la postura de LLM local frente a API en la nube en los Artículos 5 (minimización de datos), 25 (protección de datos por diseño), 32 (medidas técnicas), 44 (transferencias transfronterizas) y 28 (obligaciones del encargado).',
       },
       euAiAct: {
         id: 'eu-ai-act',
@@ -542,6 +550,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'one-sentence', text: 'تخلق نماذج الذكاء الاصطناعي السحابية المغلقة التزامات نقل هيكلية بموجب GDPR. تُضفي [البنود التعاقدية القياسية](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0046#d1e1789) الشرعية على عمليات النقل وتنشئ مسؤولية بموجب المادة 46، لكن يجب استكمالها بـ [تقييم أثر النقل](https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer-tools_en) بعد Schrems II. يمنع النشر المحلي النقل بالكامل.' },
           { type: 'plain-terms', text: 'عندما تكتب أمرًا في أداة ذكاء اصطناعي سحابية، يُرسَل ذلك النص إلى خادم المزوّد في بلد آخر. العقود القانونية (SCCs) تعني أنه يمكنك محاسبة المزوّد إذا حدث خطأ ما وإنشاء أساس قانوني للنقل — لكن بياناتك لا تزال تنتقل إلى هناك. بعد حكم Schrems II، يجب أن تُدعَم هذه العقود بتقييم أثر النقل يؤكد أن البلد المستقبِل يوفّر حماية خصوصية مكافئة. نماذج LLM المحلية تعني أن البيانات لا تنتقل على الإطلاق.' },
         ],
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-data-flow-ar.svg',
+        imageCaption: 'مقارنة تدفق بيانات GDPR: ينقل الذكاء الاصطناعي السحابي الأوامر إلى خوادم خارج الاتحاد الأوروبي (الولايات المتحدة/الصين) مما يستدعي التزامًا بموجب المادة 44، بينما يُبقي نموذج LLM محلي مثل Qwen 3.6 27B البيانات على أجهزة الاتحاد الأوروبي دون نقل ودون التزام بالمادة 44.',
       },
       openWeights: {
         id: 'open-weights',
@@ -585,6 +595,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           { type: 'one-sentence', text: 'يُلبّي النشر المحلي لنموذج LLM [المادة 25 من GDPR](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0046#d1e1383) (حماية البيانات بالتصميم) ويلغي التزامات [المادة 44](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0046#d1e1790) (النقل عبر الحدود) لأن البيانات لا تغادر البنية التحتية الخاضعة لتحكم الاتحاد الأوروبي.' },
         ],
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-ar.svg',
+        imageCaption: 'قائمة تدقيق الامتثال لمواد GDPR: مقارنة موقف LLM المحلي مقابل API السحابي عبر المادة 5 (تقليل البيانات)، والمادة 25 (حماية البيانات بالتصميم)، والمادة 32 (التدابير التقنية)، والمادة 44 (النقل عبر الحدود)، والمادة 28 (التزامات المعالج).',
       },
       euAiAct: {
         id: 'eu-ai-act',
@@ -668,6 +680,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Open Weights = pruefbares Modellverhalten — im Gegensatz zu Blackbox-Cloud-APIs.',
         ],
       },
+      dataFlowDiagram: {
+        id: 'data-flow',
+        title: 'DSGVO-Datenfluss: Lokal vs. Cloud',
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-data-flow-de.svg',
+        imageCaption: 'DSGVO-Datenfluss-Vergleich: Cloud-KI übertraegt Anfragen an Nicht-EU-Server (USA/China) und löst eine Art.-44-Übertragungspflicht aus, waehrend ein lokales LLM wie Qwen 3.6 27B die Daten ohne Übertragung und ohne Art.-44-Verpflichtung auf EU-Hardware haelt.',
+      },
+      gdprChecklist: {
+        id: 'gdpr-checklist',
+        title: 'DSGVO-Konformitaets-Checkliste',
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-de.svg',
+        imageCaption: 'DSGVO-Konformitaets-Checkliste fuer lokale LLM-Deployments: Art. 25 (Datenschutz durch Design), Art. 32 (angemessene technische Massnahmen) und Art. 44 (keine grenzueberschreitende Übertragungspflicht).',
+      },
     },
   },
   fr: {
@@ -692,6 +716,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Loi IA UE 2026 : les obligations des fournisseurs GPAI favorisent les déploiements locaux auditables.',
           'Open weights = comportement de modèle auditable — contrairement aux APIs cloud boîtes noires.',
         ],
+      },
+      dataFlowDiagram: {
+        id: 'data-flow',
+        title: 'Flux de Données RGPD : Local vs Cloud',
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-data-flow-fr.svg',
+        imageCaption: 'Comparaison du flux de données RGPD : l\'IA cloud transfère les prompts vers des serveurs hors UE (US/Chine), déclenchant une obligation de transfert au titre de l\'Article 44, tandis qu\'un LLM local comme Qwen 3.6 27B conserve les données sur du matériel UE sans transfert ni obligation Article 44.',
+      },
+      gdprChecklist: {
+        id: 'gdpr-checklist',
+        title: 'Liste de Conformité RGPD',
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-fr.svg',
+        imageCaption: 'Liste de conformité RGPD pour les déploiements de LLM locaux : Article 25 (protection des données dès la conception), Article 32 (mesures techniques appropriées) et Article 44 (aucune obligation de transfert transfrontalier).',
       },
     },
   },
@@ -718,6 +754,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'オープンウェイト = 監査可能なモデル動作 — ブラックボックスAPIとは対照的。',
         ],
       },
+      dataFlowDiagram: {
+        id: 'data-flow',
+        title: 'GDPRデータフロー：ローカル vs クラウド',
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-data-flow-ja.svg',
+        imageCaption: 'GDPRデータフローの比較：クラウドAIはプロンプトをEU域外サーバー（米国／中国）に転送し第44条の転送義務が発生するが、Qwen 3.6 27BのようなローカルLLMはデータをEUハードウェア上に留め、転送も第44条の義務もない。',
+      },
+      gdprChecklist: {
+        id: 'gdpr-checklist',
+        title: 'GDPR準拠チェックリスト',
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-ja.svg',
+        imageCaption: 'ローカルLLM展開のためのGDPR準拠チェックリスト：第25条（設計によるデータ保護）、第32条（適切な技術的措置）、第44条（越境転送義務なし）。',
+      },
     },
   },
   zh: {
@@ -742,6 +790,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EU AI法2026：GPAI提供者要求有利于可审计的本地部署。',
           '开放权重 = 可审计的模型行为 — 与黑盒云API相反。',
         ],
+      },
+      dataFlowDiagram: {
+        id: 'data-flow',
+        title: 'GDPR数据流：本地对比云端',
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-data-flow-zh.svg',
+        imageCaption: 'GDPR数据流对比：云AI将提示词传输至非欧盟服务器（美国/中国），触发第44条传输义务，而Qwen 3.6 27B等本地LLM将数据保留在EU硬件上，无传输、无第44条义务。',
+      },
+      gdprChecklist: {
+        id: 'gdpr-checklist',
+        title: 'GDPR合规检查清单',
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-zh.svg',
+        imageCaption: '本地LLM部署的GDPR合规检查清单：第25条（设计保护数据）、第32条（适当技术措施）、第44条（无跨境传输义务）。',
       },
     },
   },
@@ -889,6 +949,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'one-sentence', text: 'Os modelos de IA na nuvem fechados criam obrigações estruturais de transferência segundo o GDPR. As [Cláusulas Contratuais Padrão](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0046#d1e1789) legitimam as transferências e criam responsabilidade segundo o Artigo 46, mas devem ser complementadas por uma [Avaliação de Impacto da Transferência](https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer-tools_en) após Schrems II. A implantação local previne a transferência por completo.' },
           { type: 'plain-terms', text: 'Quando você digita um prompt em uma ferramenta de IA na nuvem, esse texto é enviado ao servidor do provedor em outro país. Contratos legais (SCCs) significam que você pode responsabilizar o provedor se algo der errado e criam uma base legal para a transferência — mas seus dados ainda viajam até lá. Após a decisão Schrems II, esses contratos devem ser respaldados por uma Avaliação de Impacto da Transferência que confirme que o país receptor oferece proteção de privacidade equivalente. Os LLMs locais significam que os dados não viajam de forma alguma.' },
         ],
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-data-flow-pt.svg',
+        imageCaption: 'Comparação do fluxo de dados do GDPR: a IA na nuvem transfere prompts para servidores fora da UE (EUA/China), acionando uma obrigação de transferência do Artigo 44, enquanto um LLM local como o Qwen 3.6 27B mantém os dados em hardware da UE sem transferência e sem obrigação do Artigo 44.',
       },
       openWeights: {
         id: 'open-weights',
@@ -932,6 +994,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           { type: 'one-sentence', text: 'A implantação local de LLM satisfaz o [Artigo 25 do GDPR](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0046#d1e1383) (proteção de dados desde a concepção) e elimina as obrigações do [Artigo 44](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0046#d1e1790) (transferência internacional) porque os dados nunca saem da infraestrutura controlada pela UE.' },
         ],
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-pt.svg',
+        imageCaption: 'Lista de verificação de conformidade do GDPR por artigo: comparação da postura de LLM local versus API na nuvem nos Artigos 5 (minimização de dados), 25 (proteção de dados desde a concepção), 32 (medidas técnicas), 44 (transferências internacionais) e 28 (obrigações do operador).',
       },
       euAiAct: {
         id: 'eu-ai-act',
@@ -1075,6 +1139,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'one-sentence', text: '폐쇄형 클라우드 AI 모델은 구조적 GDPR 이전 의무를 형성합니다. [표준 계약 조항(SCC)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0046#d1e1789)은 제46조에 따라 이전을 정당화하고 책임을 형성합니다만, Schrems II 이후에는 [이전 영향 평가](https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer-tools_en)로 보완되어야 합니다. 로컬 배포는 이전 자체를 완전히 방지합니다.' },
           { type: 'plain-terms', text: '클라우드 AI 도구에 프롬프트를 입력하면 해당 텍스트가 다른 국가의 공급자 서버로 전송됩니다. 법적 계약(SCC)은 문제가 발생할 경우 공급자에게 책임을 묻고 이전에 대한 법적 근거를 형성할 수 있음을 의미합니다 — 그러나 데이터는 여전히 그곳으로 이동합니다. Schrems II 판결 이후, 이러한 계약은 수신국이 동등한 개인정보 보호를 제공하는지 확인하는 이전 영향 평가로 뒷받침되어야 합니다. 로컬 LLM은 데이터가 전혀 이동하지 않음을 의미합니다.' },
         ],
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-data-flow-ko.svg',
+        imageCaption: 'GDPR 데이터 흐름 비교: 클라우드 AI는 프롬프트를 EU 외부 서버(미국/중국)로 이전하여 제44조 이전 의무를 유발하지만, Qwen 3.6 27B와 같은 로컬 LLM은 데이터를 EU 하드웨어에 유지하여 이전과 제44조 의무가 없습니다.',
       },
       openWeights: {
         id: 'open-weights',
@@ -1118,6 +1184,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           { type: 'one-sentence', text: '로컬 LLM 배포는 [GDPR 제25조](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0046#d1e1383)(설계에 의한 데이터 보호)를 충족하며, 데이터가 EU 통제 인프라를 벗어나지 않기 때문에 [제44조](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0046#d1e1790)(국경 간 이전) 의무를 제거합니다.' },
         ],
+        image: '/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-ko.svg',
+        imageCaption: 'GDPR 조항별 컴플라이언스 체크리스트: 제5조(데이터 최소화), 제25조(설계에 의한 데이터 보호), 제32조(기술적 조치), 제44조(국경 간 이전), 제28조(처리자 의무)에서 로컬 LLM과 클라우드 API의 입장을 비교합니다.',
       },
       euAiAct: {
         id: 'eu-ai-act',
