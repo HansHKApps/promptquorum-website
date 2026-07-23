@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
-import { buildArticleMetadata, buildArticlePageElement, getArticleStaticParams } from '@/lib/prompt-bites/page-helpers'
+import { buildArticleMetadata, buildArticlePageElement } from '@/lib/prompt-bites/page-helpers'
 
-export const dynamic = 'force-static'
 export const revalidate = 86400
 
 export function generateStaticParams() {
-  return getArticleStaticParams()
+  return []
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

@@ -2,10 +2,12 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { FRAMEWORKS, FRAMEWORK_SLUGS, getFrameworkLocalized } from '@/lib/frameworksData'
+import { FRAMEWORKS, getFrameworkLocalized } from '@/lib/frameworksData'
 import { getFrameworkUiLabels } from '@/lib/frameworksUiLabels'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+
+export const revalidate = 86400
 
 const LANG = 'ar' as const
 
@@ -16,7 +18,7 @@ const COMPLEXITY_COLOR: Record<string, string> = {
 }
 
 export function generateStaticParams() {
-  return FRAMEWORK_SLUGS.map(slug => ({ slug }))
+  return []
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

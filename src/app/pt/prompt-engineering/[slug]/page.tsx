@@ -7,12 +7,14 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { PEArticleJsonLd } from '@/lib/prompt-engineering/jsonld'
 
+export const revalidate = 86400
+
 interface PageProps {
   params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
-  return Object.keys(PE_SLUG_TO_KEY).map((slug) => ({ slug }))
+  return []
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

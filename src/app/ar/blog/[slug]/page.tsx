@@ -1,16 +1,17 @@
 import type { Metadata } from 'next'
 import {
-  getArticleStaticParams,
   buildArticleMetadata,
   buildArticlePageElement,
 } from '@/lib/blog/page-helpers'
+
+export const revalidate = 86400
 
 interface PageProps {
   params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
-  return getArticleStaticParams()
+  return []
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

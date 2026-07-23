@@ -7,6 +7,8 @@ import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
+export const revalidate = 86400
+
 const SLUG_ACRONYMS: Record<string, string> = {
   llms: 'LLMs',
   llm: 'LLM',
@@ -34,7 +36,7 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return Object.keys(LLM_SLUG_TO_KEY).map((slug) => ({ slug }))
+  return []
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
