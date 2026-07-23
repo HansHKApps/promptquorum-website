@@ -558,44 +558,185 @@ schema: {
       },
     },
     de: {
+      freshness_tier: 'annual',
       theme: 'Privacy & Business',
-      seoTitle: 'NAS-Speicher für lokale LLMs: RAID 6, Sicherung & Redundanz',
-      metaDescription: 'Bestes NAS für lokale LLM-Modellspeicherung 2026: Kapazität, Geschwindigkeit und Netzwerk. Synology, QNAP und DIY-Optionen im Vergleich.',
-schema: {
+      title: 'Bestes NAS und Speicher für lokale KI-Modelle',
+      dateModified: '2026-07-23',
+      seoTitle: 'NAS-Speicher für lokale LLMs: RAID 6, Backup & Redundanz',
+      intro: '**Ein NAS (Network-Attached Storage) hält Ihre Modellbibliothek organisiert, gesichert und über mehrere Rechner hinweg zugänglich.** Seit April 2026 ist RAID-6-Speicher (Ausfalltoleranz für 2 Laufwerke) mit automatisierten Backups für produktive lokale LLM-Teams unverzichtbar. Budget: 1.400–2.800 € für 4-8TB nutzbare Kapazität.',
+      metaDescription: 'Bestes NAS für lokale LLMs: RAID-6-Redundanz, Backup-Strategie und Organisation der Modellbibliothek. Vergleich: Synology, QNAP und TrueNAS.',
+      publishDate: '2026-04-05',
+      leadAnswerBlock: '**Ein NAS (Network-Attached Storage) hält Ihre Modellbibliothek organisiert, gesichert und über mehrere Rechner hinweg zugänglich. Seit April 2026 ist RAID-6-Speicher (Ausfalltoleranz für 2 Laufwerke) mit automatisierten Backups für produktive lokale LLM-Teams unverzichtbar.**',
+      audience: 'Entwickler mit Ollama- oder LM-Studio-Erfahrung, die lokale LLM-Workflows optimieren',
+      readTime: '8 Min. Lesezeit',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'NAS-Speicher',
+      schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
+        'headline': 'NAS-Speicher für lokale LLMs: RAID 6, Backup & Redundanz',
+        'description': 'Bestes NAS für lokale LLMs: RAID-6-Redundanz, Backup-Strategie und Organisation der Modellbibliothek. Vergleich: Synology, QNAP und TrueNAS.',
         'url': 'https://www.promptquorum.com/de/local-llms/best-nas-storage-local-llm',
-        'headline': 'NAS-Speicher für lokale LLMs: RAID 6, Sicherung & Redundanz',
-        'description': 'Beste NAS für lokale LLMs: RAID-6-Redundanz, Sicherungsstrategie und Organisation der Modellbibliothek. Vergleich: Synology, QNAP und TrueNAS. Kostenlos -- April 2026.',
         'datePublished': '2026-04-05',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] }
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Bestes NAS für lokale LLMs',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Lokale SSD', 'description': '2TB Kapazität, schneller Zugriff, keine Redundanz. Am besten für einen einzelnen Rechner.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'NAS mit RAID 6', 'description': '8TB Kapazität, gemeinsamer Zugriff, Ausfalltoleranz für 2 Laufwerke. Am besten für Teams.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Cloud-Speicher (AWS S3)', 'description': 'Unbegrenzte Kapazität, Fernzugriff, exzellente Redundanz. Am besten für archivierte Modelle.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Externe USB-Festplatte', 'description': '4TB Kapazität, portabel, Offline-Backup. Am besten für offline-sicheren Speicher.' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Was ist ein NAS und warum brauche ich eines für lokale LLMs?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ein NAS (Network-Attached Storage) hält Ihre Modellbibliothek organisiert, gesichert und über mehrere Rechner hinweg zugänglich. Es ist unverzichtbar für produktive lokale LLM-Teams, die mehrere Modelle und Nutzer verwalten.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist RAID 6 und warum wird es für NAS empfohlen?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'RAID 6 bietet Redundanz, bei der 2 Laufwerke gleichzeitig ausfallen können, ohne dass Daten verloren gehen. Es ist für produktive Systeme unverzichtbar, um sich gegen Laufwerksausfälle abzusichern.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Bestes NAS für lokale LLMs: Synology, QNAP oder TrueNAS?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Synology DS420+ eignet sich am besten für Teams mit begrenztem Budget (ca. 1.000 € inklusive Festplatten). QNAP TS-464C2U für höhere Leistungsanforderungen. TrueNAS SCALE für erweiterte ZFS-Funktionen und Open-Source-Deployment.' }
+          }
+        ]
+      },
+      toc: [
+        { label: 'Zusammenfassung', anchor: '#tldr' },
+        { label: 'NAS vs. lokale SSD vs. Cloud-Speicher', anchor: '#comparison' },
+        { label: 'NAS-Empfehlungen nach Einsatzzweck', anchor: '#recommendations' },
+        { label: 'RAID-Konfiguration & Redundanz', anchor: '#raid' },
+        { label: 'Backup-Strategie', anchor: '#backup' },
+        { label: 'Organisation der Modellbibliothek', anchor: '#organization' },
+        { label: 'Häufige NAS-Fehler', anchor: '#mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
       sections: {
-        tldr: { id: 'key-takeaways',
- isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B -- 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B -- 40-60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen3 3B -- 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B -- beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
-        whatIsSmall: { title: 'Was ist ein „kleines" lokales LLM und wann sollten Sie eines verwenden?', content: ['Ein kleines lokales LLM ist typischerweise definiert als ein Modell mit weniger als 4 Milliarden Parametern. Bei Q4_K_M-Quantisierung benötigen diese Modelle 1,5-3 GB RAM -- gut innerhalb der Einschränkungen von Einstiegs-Laptops mit 4-8 GB Gesamtspeicher.', 'Seit April 2026 sind kleine Modelle geeignet für: schnelle Zusammenfassung, einfache F&A, Erklärung von Code-Snippets, Übersetzung kurzer Texte und Klassifizierungsaufgaben. Sie sind nicht geeignet für mehrstufiges Reasoning, komplexe Code-Generierung oder das Verfassen langer kohärenter Dokumente.', 'Die Qualitätslücke zwischen einem 3B- und 7B-Modell ist erheblich -- ungefähr der Lücke zwischen GPT-4o mini und GPT-5.5 entsprechend. Für Benutzer mit 8 GB RAM ist ein 7B-Modell bei Q4_K_M fast immer die bessere Wahl. Siehe [Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) für 7B-Empfehlungen.'] },
-        phi4mini: { title: 'Phi-4 Mini 3.8B -- Beste Reasoning-Leistung in der Sub-4B-Klasse', content: ['Microsoft Phi-4 Mini erreicht 68% bei MMLU und 70% bei HumanEval -- Werte, die viele vor 2025 veröffentlichte 7B-Modelle übertreffen. Dies ist möglich, weil Phi-4 Mini auf einem kuratierten synthetischen Datensatz trainiert wurde, der auf Reasoning und Problemlösung fokussiert ist.', 'Seit April 2026 ist Phi-4 Mini die empfohlene Wahl für Benutzer, die hauptsächlich Reasoning oder Code-Unterstützung auf Hardware mit 4-6 GB RAM benötigen.'], rows: [{ 'Spec': 'MMLU', 'Value': '68%' }, { 'Spec': 'HumanEval', 'Value': '70%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '30-50 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run phi4-mini' }], columns: ['Spec', 'Value'] },
-        gemma2: { title: 'Gemma 2 2B -- Schnellstes kleines lokales LLM auf CPU', content: ['Google Gemma 2 2B generiert 40-60 Token/Sek auf einer modernen Laptop-CPU -- das schnellste Modell in dieser Qualitätsklasse. Sein 1,7-GB-RAM-Footprint lässt viel Speicher für Betriebssystem und andere Anwendungen auf einer 4-GB-Maschine.', 'Die Qualität ist niedriger als Phi-4 Mini bei Reasoning. Das 8K-Kontextfenster ist eine praktische Einschränkung für längere Dokumente. Gemma 2 2B ist die richtige Wahl, wenn Antwortgeschwindigkeit wichtiger ist als Ausgabetiefe.'], rows: [{ 'Spec': 'MMLU', 'Value': '52%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~1,7 GB' }, { 'Spec': 'Kontext', 'Value': '8K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '40-60 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run gemma2:2b' }], columns: ['Spec', 'Value'] },
-        qwen25_3b: { title: 'Qwen3 3B -- Bestes kleines Modell für Codierungsaufgaben', content: ['Qwen3 3B erreicht 65% bei HumanEval -- 5 Prozentpunkte über Llama 3.2 3B -- und ist beste Wahl für Codierungsaufgaben im 3B-Format. Es umfasst JSON-Modus und Funktionsaufruf-Unterstützung und verarbeitet nativ 29 Sprachen.', 'Für nicht-Codierungs-Aufgaben im Englischen erzeugen Llama 3.2 3B und Phi-4 Mini natürlichere Prosa. Wählen Sie Qwen3 3B speziell für Codierung oder mehrsprachige Aufgaben.'], rows: [{ 'Spec': 'MMLU', 'Value': '62%' }, { 'Spec': 'HumanEval', 'Value': '65%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '25-40 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run qwen2.5:3b' }], columns: ['Spec', 'Value'] },
-        llama32_3b: { title: 'Llama 3.2 3B -- Bestes Universal-Kleinmodell', content: ['Meta Llama 3.2 3B ist das am weitesten dokumentierte und von der Community unterstützte 3B-Modell. Es erreicht 58% bei MMLU und 60% bei HumanEval, aber hat breiteste Werkzeugunterstützung, die meisten Fine-Tunes und größte Sammlung von Community-Guides.', 'Das 128K-Kontextfenster eignet sich für Zusammenfassung von Dokumenten mittlerer Länge. Für ein erstes kleines Modell bleibt Llama 3.2 3B die sicherste Wahl aufgrund vorhersehbaren Verhaltens und umfangreicher Dokumentation.'], rows: [{ 'Spec': 'MMLU', 'Value': '58%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '25-45 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run llama3.2:3b' }], columns: ['Spec', 'Value'] },
-        llama32_1b: { title: 'Llama 3.2 1B -- Absolute Mindestanforderung für nützliche Ausgabe', content: 'Llama 3.2 1B benötigt nur 1,3 GB RAM und generiert 60-90 tok/sek auf CPU. Die Ausgabequalität ist marginal: es bewältigt sehr einfache Klassifizierung, kämpft aber mit kohärenten mehrsätzigen Antworten. Seit April 2026 verwenden Sie Llama 3.2 1B nur, wenn RAM die bindende Einschränkung ist oder zum Testen von Tool-Integrationen.' },
-        comparisonTable: { title: 'Vollständiger Vergleich: Beste kleine lokale LLMs unter 4B Parametern', rows: [{ 'Modell': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2,5 GB', 'Kontext': '128K', 'Beste für': 'Reasoning, Codierung' }, { 'Modell': 'Qwen3 3B', 'MMLU': '62%', 'HumanEval': '65%', 'RAM': '2 GB', 'Kontext': '128K', 'Beste für': 'Codierung, mehrsprachig' }, { 'Modell': 'Llama 3.2 3B', 'MMLU': '58%', 'HumanEval': '60%', 'RAM': '2,5 GB', 'Kontext': '128K', 'Beste für': 'Allgemein, erstes Modell' }, { 'Modell': 'Gemma 2 2B', 'MMLU': '52%', 'HumanEval': '38%', 'RAM': '1,7 GB', 'Kontext': '8K', 'Beste für': 'Geschwindigkeit, niedriges RAM' }, { 'Modell': 'Llama 3.2 1B', 'MMLU': '32%', 'HumanEval': '28%', 'RAM': '1,3 GB', 'Kontext': '128K', 'Beste für': 'Minimales RAM' }], columns: ['Modell', 'MMLU', 'HumanEval', 'RAM', 'Kontext', 'Beste für'] },
-        regionalContext: { title: 'Kleine lokale LLMs nach Region', content: ['**EU / DSGVO:** Für EU-Profis auf begrenzter Hardware -- Feldarbeit, air-gapped Umgebungen, ältere Enterprise-Laptops -- bieten kleine lokale Modelle DSGVO-konforme Inferenz ohne Datengress. Ein Phi-4 Mini 3.8B auf Standard-Corporate-Laptop (8 GB RAM) behält alle Texte auf Gerät unter DSGVO-Artikel 5. Für BSI-Compliance: Phi-4 Mini (Microsoft, MIT-Lizenz) und Llama 3.2 3B (Meta, Llama Community-Lizenz) bieten versionierte Modell-Identifikatoren via Ollama-Tags. Mistral bietet derzeit kein Sub-4B-Modell. Für EU-Organisationen mit EU-Präferenz sind Optionen begrenzt, bis Mistral Sub-4B freigibt.', '**Japan (METI):** Für japanischsprachige Aufgaben ist Qwen3 3B das einzige Modell mit nativer japanischer Tokenisierung. Llama 3.2 3B verarbeitet Japanisch mit niedrigerer Token-Effizienz. Für japanische Zusammenfassung oder Übersetzung: `ollama run qwen2.5:3b`. Der Geschwindigkeitsvorteil ist relevant für japanischen Enterprise-Einsatz: 25-40 tok/sek auf CPU bietet angemessene Echtzeit-Antwort auf Standard-Office-Hardware.', '**China:** Qwen3 3B (Alibaba, Apache 2.0) ist natürliche Wahl für chinesischsprachige Bereitstellung. Native chinesische Tokenisierung verarbeitet Mandarin-Text 30-40% effizienter als Llama. Für IoT und Edge unter Chinas Datensicherheitsgesetz: `ollama run qwen2.5:3b` läuft auf jedem Linux-Gerät mit 4 GB RAM ohne externe API-Aufrufe.'] },
-        commonMistakes: { title: 'Häufige Fehler beim Ausführen kleiner lokaler LLMs', items: ['**Verwendung von Q8_0 statt Q4_K_M:** Q8_0 benötigt fast doppelt so viel RAM mit minimaler Qualitätsverbesserung. Ein Llama 3.2 3B mit Q8_0 benötigt ~3,8 GB RAM vs ~2,5 GB für Q4_K_M. Auf 4 GB Maschinen kann Q8_0 Swap-Nutzung und 3-5× langsamere Inferenz auslösen. Verwenden Sie immer Q4_K_M für Sub-4B-Modelle.', '**Ausführung eines Basis-Modells statt Instruct-Variante:** Basis-Modelle (z. B. `llama3.2:3b-text`) folgen keine Anweisungen. Wenn Sie ein Basis-Modell „Was ist 2+2?" fragen, kann es den Satz als Quiz vervollständigen statt „4" zu antworten. Verwenden Sie immer: `llama3.2:3b` (Ollama greift standardmäßig zu Instruct).', '**Erwartung von 7B-Qualität aus 3B-Modell:** Ein 3B-Modell mit 68% MMLU (Phi-4 Mini) funktioniert ähnlich wie GPT-4o mini aus 2023. Komplexe Reasoning, lange Texte und differenzierter Code haben niedrigere Qualität. Für bessere Qualität: aktualisieren Sie auf 7B (RAM-Unterschied: ~2 GB mehr).'] },
-        relatedReading: { title: 'Weiterführende Lektüre', items: ['[Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) -- 7B-Empfehlungen wenn 8 GB RAM verfügbar', '[Ihr erstes lokales LLM ausführen](/local-llms/run-first-local-llm) -- Schritt-für-Schritt-Anleitung mit Ollama unter 10 Minuten', '[Lokales LLM auf Laptop](/local-llms/local-llm-on-laptop) -- Wärmeverwaltung und Batterielebensdauer auf begrenzter Hardware', '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained) -- warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen', '[Beste lokale LLMs zum Codieren](/local-llms/best-local-llms-for-coding) -- Codierungs-Modelle bei 7B+ wenn Qwen3 3B nicht ausreicht', '[Lokales LLM-Setup beheben](/local-llms/troubleshooting-local-llm-setup) -- OOM-Fehler, langsame Inferenz und Ladefehler auf RAM-armen Maschinen'] },
-        faqSection: { title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das kleinste lokale LLM mit nützlicher Ausgabe?', a: 'Seit April 2026 ist 3B bei Q4_K_M praktisches Minimum. Modelle unter 2B (Llama 3.2 1B, Gemma 2 2B) erzeugen kohärente einzelne Sätze, kämpfen aber mit mehrstufigen Anweisungen und Reasoning. Für Zusammenfassung und F&A ist Gemma 2 2B brauchbar. Für komplexere Aufgaben: beginnen Sie mit 3B.' }, { q: 'Kann ein 3B-Modell auf einem Telefon laufen?', a: 'Ja -- Llama 3.2 1B und 3B sind für mobile Bereitstellung konzipiert. Meta bietet optimierte Builds für iOS und Android. Inferenz auf modernem Telefon erzeugt 15-30 tok/sek für 1B. LM Studio und Ollama laufen nicht auf iOS/Android -- mobil erfordert separate Frameworks.' }, { q: 'Sind kleine Modelle für Zusammenfassung geeignet?', a: 'Ja -- Zusammenfassung ist stärkster Anwendungsfall für kleine Modelle. Gemma 2 2B und Llama 3.2 3B produzieren zuverlässig genaue Zusammenfassungen von Texten bis zu ~4.000 Wörtern. Für längere Dokumente verwenden Sie Modell mit großem Kontext wie Phi-4 Mini oder Llama 3.2 3B (beide 128K).' }, { q: 'Wie viel schneller ist 2B als 7B auf gleicher Hardware?', a: 'Ungefähr 2-3× schneller auf CPU. Gemma 2 2B generiert 40-60 tok/sek vs 10-20 tok/sek für Mistral Small. Auf GPU verengt sich Vorteil, da GPU-Durchsatz weniger durch Modellgröße begrenzt ist. Unterschied ist auf reinen CPU-Maschinen deutlichst.' }, { q: 'Unterstützen kleine Modelle Funktionsaufrufe?', a: 'Einige tun dies. Qwen3 3B unterstützt Funktionsaufrufe und JSON. Llama 3.2 3B hat grundlegende Werkzeugunterstützung. Gemma 2 2B unterstützt keine Funktionsaufrufe. Überprüfen Sie Modelldokumentation vor Pipeline-Aufbau.' }, { q: 'Welches kleine Modell ist beste für nicht-englische Sprachen?', a: 'Qwen3 3B unterstützt nativ 29 Sprachen (Chinesisch, Japanisch, Koreanisch, Arabisch). Gemma 2 2B und Phi-4 Mini sind hauptsächlich auf Englisch optimiert. Für nicht-englische Aufgaben bei kleinen Modellen ist Qwen3 3B klare Wahl.' }, { q: 'Unterschied zwischen Phi-4 Mini und Llama 3.2 3B?', a: 'Phi-4 Mini übertrifft bei Reasoning, Mathematik, Codierung (68% vs 58% MMLU, 70% vs 60% HumanEval) bei fast identischem RAM (2,5 GB). Für Alltags-Aufgaben ist Lücke spürbar aber nicht dramatisch. Llama 3.2 3B hat breitere Support. Wählen Sie Phi-4 Mini für Reasoning; Llama für Chat.' }, { q: 'Kann ich zwei kleine Modelle gleichzeitig laufen lassen?', a: 'Ja, wenn RAM zulässt. Zwei 3B-Modelle bei Q4_K_M verwenden ~5 GB kombiniert -- auf 8 GB Maschine mit schlankem OS möglich. Ollama lädt standardmäßig ein Modell pro Prozess. Laufen Sie zwei Ollama-Instanzen auf verschiedenen Ports (OLLAMA_HOST=:11434 und :11435) parallel.' }, { q: 'Funktionieren kleine Modelle für RAG?', a: 'Ja für einfaches RAG. Llama 3.2 3B und Phi-4 Mini beantworten Fragen über abgerufene Dokumentchunks zuverlässig. Für RAG über große Wissensdatenbanken mit Multi-Hop-Reasoning sind 7B+-Modelle konsistenter. GPT4All LocalDocs nutzt 3B für Dokument-Q&A.' }, { q: 'Ist Phi-4 Mini besser als Llama 3.2 3B für Codierung?', a: 'Ja. Phi-4 Mini erreicht 70% auf HumanEval vs 60% für Llama 3.2 3B -- aussagekräftige 10-Punkte-Lücke. Für Code-Hilfe auf 4-6 GB RAM ist Phi-4 Mini empfohlen. Für mehrsprachige Codierung (nicht-Python) ist Qwen3 3B mit 65% HumanEval wettbewerbsfähig und unterstützt Funktionsaufrufe.' }] },
-        sources: { title: 'Quellen', items: ['Hugging Face Open LLM Leaderboard -- open-llm-leaderboard.hf.space (MMLU und HumanEval Werte)', 'Microsoft Phi-4 Technical Report -- microsoft.com/en-us/research/publication/phi-4-technical-report/', 'Meta Llama 3.2 Model Card -- huggingface.co/meta-llama/Llama-3.2-3B-Instruct', 'Google Gemma 2 Technical Report -- storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf'] },
-        nasArchitecture: {
-          title: 'NAS-Architektur für lokale LLM-Speicherung',
-          content: ['Ein Inferenzserver verbindet sich über das lokale Netzwerk (LAN, unter 10ms Latenz) mit einem NAS im RAID-6-Verbund. Das NAS speichert alle .gguf-Modelldateien zentral mit 8TB nutzbarer Kapazität und wird zusätzlich in die Backblaze-B2-Cloud sowie auf eine externe USB-Festplatte gesichert.'],
-          image: '/images/best-nas-storage-local-llm-architecture-de.svg',
-          imageCaption: 'NAS-Architektur für lokale LLM-Speicherung: Der Inferenzserver verbindet sich über LAN (unter 10ms Latenz) mit einem RAID-6-NAS mit 8TB nutzbarer Kapazität, das .gguf-Modelle speichert und in die Backblaze-B2-Cloud sowie auf eine externe USB-Festplatte gesichert wird.',
+        tldr: {
+          id: 'key-takeaways',
+          isTldr: true,
+          items: [
+            '**NAS (Network-Attached Storage):** Zentraler Speicher, über das Netzwerk zugänglich. RAID 6 (2 Laufwerke können gleichzeitig ausfallen).',
+            '**Bestes Budget:** Synology DS420+ mit 4 Einschüben, ca. 400 € (nur Hardware). 4× 4TB WD Red Pro Festplatten = ca. 600 €. Gesamt ca. 1.000 € für 8TB nutzbar.',
+            '**Beste Leistung:** QNAP TS-464C2U oder TrueNAS SCALE mit 10-Gbps-Netzwerk. Kosten: 2.000 €+.',
+            '**Modellspeicherung:** Bewahren Sie alle quantisierten Modelle (.gguf-Dateien) auf dem NAS auf. Ein 70B-Modell = 35GB; speichern Sie 10 oder mehr Modelle.',
+            '**Backup:** Tägliches Backup in die Cloud (Backblaze B2 = 6 $/Monat unbegrenzt, in US-Dollar abgerechnet). Oder externe USB-Festplatten (offline, ausfallsicher).',
+            '**Netzwerklatenz:** NAS im selben LAN wie der Inferenzserver = unter 10ms Latenz (akzeptabel). Über das Internet = zu langsam.',
+            '**Redundanz:** RAID 6 schützt vor 2 Laufwerksausfällen. Führen Sie dennoch externe Backups durch (Ransomware, Diebstahl).',
+            '**Kostenvergleich:** 8TB NAS = 1.000 € einmalig, 6 $/Monat Backup. Cloud-Speicher = 50-100 $/Monat auf Dauer.',
+          ],
         },
-        nasComparison: {
-          title: 'NAS im Vergleich: lokale SSD, Cloud und externe USB-Festplatte',
-          content: ['Lokale SSD, NAS mit RAID 6, Cloud-Speicher (AWS S3) und externe USB-Festplatte unterscheiden sich deutlich in Kapazität, Geschwindigkeit und Redundanz. Ein RAID-6-NAS bietet 8TB nutzbare Kapazität mit guter Redundanz für gemeinsamen Team-Zugriff, während Cloud-Speicher unbegrenzte Kapazität mit ausgezeichneter Redundanz für archivierte Modelle bereitstellt.'],
+        'comparison': {
+          title: 'NAS vs. lokale SSD vs. Cloud-Speicher',
+          rows: [
+            { '0': 'Option', '1': 'Kapazität', '2': 'Kosten', '3': 'Geschwindigkeit', '4': 'Redundanz', '5': 'Am besten für' },
+            { '0': 'Lokale SSD', '1': '2TB', '2': '200 €', '3': 'Schnell', '4': 'Keine', '5': 'Einzelner Rechner, schneller Zugriff' },
+            { '0': 'NAS (RAID 6)', '1': '8TB', '2': '1.000 €', '3': 'Mittel', '4': 'Gut', '5': 'Team, gemeinsamer Zugriff' },
+            { '0': 'Cloud (AWS S3)', '1': 'Unbegrenzt', '2': '50+ $/Monat', '3': 'Langsam', '4': 'Exzellent', '5': 'Fernzugriff, archivierte Modelle' },
+            { '0': 'Externe USB', '1': '4TB', '2': '150 €', '3': 'Langsam', '4': 'Keine', '5': 'Offline-Backup, portabel' },
+          ],
+          columns: ['Option', 'Kapazität', 'Kosten', 'Geschwindigkeit', 'Redundanz', 'Am besten für'],
           image: '/images/best-nas-storage-local-llm-comparison-de.svg',
-          imageCaption: 'Vergleich von lokaler SSD, NAS mit RAID 6, Cloud-Speicher (AWS S3) und externer USB-Festplatte nach Kapazität, Geschwindigkeit und Redundanz: Das NAS bietet 8TB mit guter Redundanz für gemeinsamen Team-Zugriff, die Cloud bietet unbegrenzte Kapazität mit ausgezeichneter Redundanz für archivierte Modelle.',
+          imageCaption: 'Vergleich von lokaler SSD, NAS mit RAID 6, Cloud-Speicher (AWS S3) und externer USB-Festplatte nach Kapazität, Geschwindigkeit und Redundanz: Das NAS bietet 8TB mit guter Redundanz für gemeinsamen Team-Zugriff, die Cloud bietet unbegrenzte Kapazität mit exzellenter Redundanz für archivierte Modelle.',
+        },
+        'recommendations': {
+          title: 'NAS-Empfehlungen nach Einsatzzweck',
+          content: [
+            '**Solo-Entwickler (1-5 Rechner):** Verzichten Sie auf ein NAS. Nutzen Sie lokale SSD + externes USB-Backup.',
+            '**Kleines Team (5-10 Nutzer):** Synology DS420+ oder QNAP TS-432PX. 4 Einschübe, 10 Gbps optional. 1.000-1.500 €.',
+            '**Mittleres Team (10-50):** Synology DS720+ oder QNAP TS-464C2U. Doppeltes 10 Gbps, SSD-Cache. 1.500-2.500 €.',
+            '**Großes Team (50+):** TrueNAS SCALE auf Enterprise-Hardware. Individueller Aufbau. 3.000 €+.',
+            '**Für Teams mit Compliance-Anforderungen (Gesundheitswesen, Finanzwesen):** TrueNAS (Open-Source, auditierbar). Synology/QNAP sind proprietär.',
+          ],
+        },
+        'raid': {
+          title: 'RAID-Konfiguration & Redundanz',
+          content: [
+            '**RAID 1 (Spiegelung):** 2 Laufwerke, Daten werden kopiert. Fällt eines aus, nutzen Sie das andere. Nutzbar = 50 % (2× 4TB = 4TB nutzbar).',
+            '**RAID 5 (Striping + Parität):** 3+ Laufwerke. Fällt eines aus, Wiederherstellung aus der Parität. Nutzbar = 67 % (3× 4TB = 8TB nutzbar). Langsame Wiederherstellung.',
+            '**RAID 6 (doppelte Parität):** 4+ Laufwerke. Fallen 2 aus, sind die Daten sicher. Nutzbar = 50 % (4× 4TB = 8TB nutzbar). Empfohlen für Produktivsysteme.',
+            '**RAID 10 (Spiegel + Striping):** 4 Laufwerke, paarweise gespiegelt. Schnell, teuer. 50 % nutzbar.',
+            '**Empfehlung:** RAID 6 für Teams. Bietet die beste Balance aus Redundanz, Kosten und Geschwindigkeit.',
+          ],
+          image: '/images/best-nas-storage-local-llm-architecture-de.svg',
+          imageCaption: 'NAS-Architektur für lokale LLM-Speicherung: Der Inferenzserver verbindet sich über LAN (unter 10ms Latenz) mit einem RAID-6-NAS mit 8TB nutzbarer Kapazität, das .gguf-Modelle speichert und täglich in die Backblaze-B2-Cloud sowie auf eine externe USB-Festplatte gesichert wird.',
+        },
+        'backup': {
+          title: 'Backup-Strategie',
+          content: [
+            '**Backup-Regel:** 3-2-1 (3 Kopien, 2 Medientypen, 1 externer Standort).',
+            '- NAS = primär (vor Ort).',
+            '- Externe USB-Festplatte = sekundär (vor Ort, aber physisch getrennt).',
+            '- Cloud (Backblaze B2) = externes Backup.',
+            '**Häufigkeit:** Tägliches inkrementelles Backup, wöchentliches Vollbackup. Automatisiert über rsync + Cron-Job.',
+            '**Wiederherstellungstest:** Monatliche Wiederherstellungsübung. Ein Beispielmodell aus dem Backup wiederherstellen und die Integrität prüfen.',
+          ],
+        },
+        'organization': {
+          title: 'Organisation der Modellbibliothek',
+          content: [
+            '/models/',
+            '  /llama3/',
+            '    /llama3-7b-instruct-q4.gguf',
+            '    /llama3-13b-instruct-q4.gguf',
+            '    /llama3-70b-instruct-q4.gguf',
+            '  /mistral/',
+            '    /mistral-7b-instruct-q4.gguf',
+            '  /quantization-sources/',
+            '    /llama3-70b-f32.safetensors (Backup in voller Präzision)',
+            '**Namenskonvention:** [Modell]-[Parameter]-[Format]-[Quantisierung].gguf',
+            '**Prüfsummen:** Speichern Sie SHA256-Hashes für jedes Modell. Beim Download prüfen, um Beschädigungen zu erkennen.',
+          ],
+        },
+        'mistakes': {
+          title: 'Häufige NAS-Fehler',
+          items: [
+            'RAID 5 auf großen Laufwerken. Die Wiederherstellung dauert 24-48 Stunden; hohe Wahrscheinlichkeit eines zweiten Laufwerksausfalls während der Wiederherstellung. Verwenden Sie RAID 6.',
+            'Keine Backups. Ein NAS-Hardwareausfall bedeutet den Verlust aller Modelle. Externe Backups sind Pflicht.',
+            'Zu klein dimensioniertes RAID. Kaufen Sie 8TB, auch wenn Sie glauben, 4TB seien ausreichend. Modelle wachsen schnell.',
+          ],
+        },
+        'faqSection': {
+          id: 'faq',
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            { q: 'Sollte ich das NAS für die Inferenz nutzen oder nur zur Speicherung?', a: 'Nur zur Speicherung. Behalten Sie die Inferenz auf der lokalen GPU. Ein NAS über das Netzwerk ist für Echtzeit-Inferenz zu langsam.' },
+            { q: 'Kann ich einen alten Laptop als NAS nutzen?', a: 'Ja, aber der Stromverbrauch ist hoch (20W+). Ein speziell dafür gebautes NAS benötigt 10-15W. Über 3+ Jahre kostengünstiger.' },
+            { q: 'Ist Cloud-Backup (Backblaze) sicher für Modelldateien?', a: 'Ja, mit Verschlüsselung. Backblaze verwendet AES-256 bei ruhenden Daten. Die Daten sind privat (Backblaze kann sie nicht lesen).' },
+            { q: 'Wie lange dauert die Wiederherstellung von RAID 6?', a: 'Ca. 24 Stunden für 8TB. Fällt während der Wiederherstellung ein zweites Laufwerk aus, gehen Daten verloren. Selten, aber möglich; aktiv überwachen.' },
+            { q: 'Kann ich Synology und TrueNAS zusammen nutzen?', a: 'Ja. Synology für Geschwindigkeit/Einfachheit, TrueNAS für Compliance/Auditing. Aber überdimensioniert, wenn Sie nicht beides benötigen.' },
+            { q: 'Brauche ich ein 10-Gbps-Netzwerk für das NAS?', a: 'Nein. Gigabit (1 Gbps) genügt für Modellübertragungen (1 Stunde für ein 35GB großes 70B-Modell). 10 Gbps ist für Teams mit mehr als 20 Nutzern gedacht.' },
+          ],
+        },
+        'relatedReading': {
+          title: 'Weiterführende Lektüre',
+          items: [
+            '[Lokales LLM-Setup für Teams](/de/local-llms/local-llm-setup-for-teams)',
+            '[Sicherer Offline-Workflow für lokale LLMs](/de/local-llms/secure-offline-local-llm-workflow)',
+            '[Privates lokales LLM für sensible Daten](/de/local-llms/private-local-llm-sensitive-data)',
+          ],
+        },
+        'sources': {
+          title: 'Quellen',
+          items: [
+            'Offizielle Synology- und QNAP-Dokumentation: RAID-Konfiguration und Wiederherstellungszeiten',
+            'TrueNAS-Dokumentation: ZFS-Redundanz und Backup-Strategien',
+            'Backblaze B2 Preisangaben und Verschlüsselungsspezifikationen',
+          ],
         },
       },
     },
