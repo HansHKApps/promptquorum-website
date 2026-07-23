@@ -1,0 +1,34 @@
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="300" fill="#FFFFFF"/>
+<text x="400.0" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">NAS مقابل SSD محلي مقابل سحابة مقابل USB خارجي</text>
+<text x="774.0" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#79747E" text-anchor="end">الخيار</text>
+<text x="622.0" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#79747E" text-anchor="end">السعة</text>
+<text x="515.6" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#79747E" text-anchor="end">السرعة</text>
+<text x="409.2" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#79747E" text-anchor="end">التكرار</text>
+<text x="287.59999999999997" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#79747E" text-anchor="end">مثالي لـ</text>
+<line x1="20" y1="80" x2="780" y2="80" stroke="#E8DEF8" stroke-width="1.5"/>
+<text x="774.0" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="end">SSD محلي</text>
+<text x="622.0" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="end">2TB</text>
+<text x="515.6" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="end">سريع</text>
+<text x="409.2" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="end">لا يوجد</text>
+<text x="287.59999999999997" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="end">جهاز واحد، وصول سريع</text>
+<line x1="20" y1="126" x2="780" y2="126" stroke="#F7F2FA" stroke-width="1"/>
+<rect x="14" y="130" width="772" height="38" rx="4" fill="#F7F2FA"/>
+<text x="774.0" y="156" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="end">NAS (RAID 6)</text>
+<text x="622.0" y="156" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="end">8TB</text>
+<text x="515.6" y="156" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="end">متوسط</text>
+<text x="409.2" y="156" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="end">جيد</text>
+<text x="287.59999999999997" y="156" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="end">الفرق، وصول مشترك</text>
+<line x1="20" y1="170" x2="780" y2="170" stroke="#F7F2FA" stroke-width="1"/>
+<text x="774.0" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="end">سحابة (AWS S3)</text>
+<text x="622.0" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="end">غير محدود</text>
+<text x="515.6" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="end">بطيء</text>
+<text x="409.2" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="end">ممتاز</text>
+<text x="287.59999999999997" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="end">وصول عن بُعد، نماذج مؤرشفة</text>
+<line x1="20" y1="214" x2="780" y2="214" stroke="#F7F2FA" stroke-width="1"/>
+<text x="774.0" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="end">USB خارجي</text>
+<text x="622.0" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="end">4TB</text>
+<text x="515.6" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="end">بطيء</text>
+<text x="409.2" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="end">لا يوجد</text>
+<text x="287.59999999999997" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="400" fill="#1C1B1F" text-anchor="end">نسخ احتياطي دون اتصال، محمول</text>
+<text x="792" y="295" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

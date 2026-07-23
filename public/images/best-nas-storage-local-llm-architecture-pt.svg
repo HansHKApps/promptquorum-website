@@ -1,0 +1,35 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="400" fill="#FFFFFF"/>
+<text x="400.0" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">Arquitetura de NAS para Armazenamento de LLM Local</text>
+<rect x="40" y="150" width="170" height="90" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+<text x="125.0" y="188" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#1C1B1F" text-anchor="middle">Servidor de Inferência</text>
+<text x="125.0" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">(GPU local)</text>
+<rect x="310" y="110" width="200" height="170" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2.5"/>
+<rect x="310" y="110" width="200" height="5" rx="0" fill="#6750A4"/>
+<text x="410.0" y="144" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#6750A4" text-anchor="middle">NAS</text>
+<text x="410.0" y="166" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F" text-anchor="middle">RAID 6 — 8TB utilizáveis</text>
+<text x="410.0" y="186" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#49454F" text-anchor="middle">biblioteca de modelos .gguf</text>
+<rect x="331.0" y="206" width="32" height="46" rx="3" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+<circle cx="347.0" cy="242" r="4" fill="#6750A4"/>
+<rect x="373.0" y="206" width="32" height="46" rx="3" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+<circle cx="389.0" cy="242" r="4" fill="#6750A4"/>
+<rect x="415.0" y="206" width="32" height="46" rx="3" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+<circle cx="431.0" cy="242" r="4" fill="#6750A4"/>
+<rect x="457.0" y="206" width="32" height="46" rx="3" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+<circle cx="473.0" cy="242" r="4" fill="#6750A4"/>
+<rect x="590" y="60" width="170" height="90" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+<text x="675.0" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Backup na Nuvem</text>
+<text x="675.0" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#79747E" text-anchor="middle">(Backblaze B2)</text>
+<rect x="590" y="250" width="170" height="90" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+<text x="675.0" y="288" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">USB externo</text>
+<text x="675.0" y="308" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#79747E" text-anchor="middle">(Offline)</text>
+<line x1="210" y1="195.0" x2="310" y2="195.0" stroke="#6750A4" stroke-width="2"/>
+<polygon points="301,189.0 301,201.0 310,195.0" fill="#6750A4"/>
+<text x="260.0" y="173.0" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#6750A4" text-anchor="middle">Rede (LAN)</text>
+<text x="260.0" y="187.0" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#79747E" text-anchor="middle">&lt;10 ms</text>
+<line x1="510" y1="150" x2="590" y2="105.0" stroke="#34A853" stroke-width="1.75"/>
+<polygon points="582,100.0 582,110.0 590,105.0" fill="#34A853"/>
+<line x1="510" y1="240" x2="590" y2="295.0" stroke="#34A853" stroke-width="1.75"/>
+<polygon points="582,290.0 582,300.0 590,295.0" fill="#34A853"/>
+<text x="550.0" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#34A853" text-anchor="middle">Backup</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
