@@ -1,0 +1,38 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="400" fill="#FFFFFF"/>
+<text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Configuração: Ollama + Goose em 15 minutos</text>
+<line x1="18" y1="45" x2="782" y2="45" stroke="#E8DEF8" stroke-width="1.5"/>
+<circle cx="140" cy="115" r="24" fill="#6750A4"/>
+<text x="140" y="122" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="140" y="163" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Instalar o Ollama</text>
+<text x="140" y="181" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#49454F" text-anchor="middle">ollama.com</text>
+<circle cx="400" cy="115" r="24" fill="#6750A4"/>
+<text x="400" y="122" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="400" y="163" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Baixar o modelo</text>
+<text x="400" y="181" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#49454F" text-anchor="middle">gemma4:27b</text>
+<circle cx="660" cy="115" r="24" fill="#6750A4"/>
+<text x="660" y="122" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="660" y="163" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Instalar o Goose</text>
+<text x="660" y="181" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#49454F" text-anchor="middle">pipx install goose-ai</text>
+<circle cx="660" cy="260" r="24" fill="#6750A4"/>
+<text x="660" y="267" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="660" y="308" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Configurar o provedor</text>
+<text x="660" y="326" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#49454F" text-anchor="middle">goose configure</text>
+<circle cx="400" cy="260" r="24" fill="#6750A4"/>
+<text x="400" y="267" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<text x="400" y="308" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Adicionar servidor de arquivos</text>
+<text x="400" y="326" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#49454F" text-anchor="middle">mcpServers: filesystem</text>
+<circle cx="140" cy="260" r="24" fill="#34A853"/>
+<text x="140" y="267" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+<text x="140" y="308" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Verificar com uma tarefa</text>
+<text x="140" y="326" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#49454F" text-anchor="middle">goose session</text>
+<text x="174" y="267" font-size="16" font-weight="700" fill="#34A853">✓</text>
+<text x="270" y="122" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+<text x="530" y="122" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
+<text x="660" y="197" font-size="20" fill="#6750A4" text-anchor="middle">↓</text>
+<text x="530" y="267" font-size="20" fill="#6750A4" text-anchor="middle">←</text>
+<text x="270" y="267" font-size="20" fill="#6750A4" text-anchor="middle">←</text>
+<line x1="18" y1="355" x2="782" y2="355" stroke="#E8DEF8" stroke-width="1.5"/>
+<text x="400" y="380" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Seis passos de uma máquina vazia até um agente MCP local funcional: instalar o Ollama, baixar um modelo com suporte a ferramentas, instalar o Goose, configurar o provedor, adicionar o servidor de arquivos e verificar com uma tarefa real.</text>
+<text x="792" y="392" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>
