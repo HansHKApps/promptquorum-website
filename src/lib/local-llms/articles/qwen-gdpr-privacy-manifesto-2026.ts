@@ -218,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       faq: {
         id: 'faq',
-        title: '常见问题',
+        title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Does GDPR ban cloud AI for EU organisations?', a: 'No. GDPR does not ban cloud AI. It requires that cross-border data transfers have a legal basis (Article 44). Standard Contractual Clauses (SCCs) are the most common legal basis for EU organisations using US-based cloud AI APIs. Cloud AI is legally usable with appropriate SCCs, Data Processing Agreements (DPAs), and data minimisation practices. Local LLMs offer a structurally simpler compliance posture by eliminating the transfer entirely.' },
           { q: 'Is DeepSeek R2 compliant with GDPR for EU personal data?', a: 'Using DeepSeek R2 for EU personal data is high-risk from a GDPR perspective. DeepSeek AI operates from China. The EU Commission has not issued a China adequacy decision. Without an adequacy decision, international transfers require SCCs or Binding Corporate Rules (BCRs). DeepSeek does not currently offer EU-standard SCCs. Consult your DPO before using DeepSeek R2 for any personal data.' },
