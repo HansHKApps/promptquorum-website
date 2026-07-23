@@ -1,0 +1,27 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="360" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">DeepSeek vs Qwen : comparaison des benchmarks à 32B</text>
+  <rect x="28" y="55" width="350" height="220" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="28" y="55" width="350" height="4" fill="#6750A4"/>
+  <text x="203.0" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Qwen3 32B</text>
+  <text x="48" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="start">MMLU</text>
+  <text x="358" y="118" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="700" fill="#34A853" text-anchor="end">83,4%</text>
+  <line x1="44" y1="132" x2="362" y2="132" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="48" y="161" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="start">MATH-500</text>
+  <text x="358" y="161" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="600" fill="#49454F" text-anchor="end">90,3%</text>
+  <line x1="44" y1="175" x2="362" y2="175" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="48" y="204" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="start">HumanEval</text>
+  <text x="358" y="204" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="700" fill="#34A853" text-anchor="end">91,5%</text>
+  <rect x="422" y="55" width="350" height="220" rx="6" fill="#FFFFFF" stroke="#1C1B1F" stroke-width="2"/>
+  <rect x="422" y="55" width="350" height="4" fill="#1C1B1F"/>
+  <text x="597.0" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">DS-R1-Distill-Qwen 32B</text>
+  <text x="442" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="start">MMLU</text>
+  <text x="752" y="118" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="600" fill="#49454F" text-anchor="end">80,6%</text>
+  <line x1="438" y1="132" x2="756" y2="132" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="442" y="161" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="start">MATH-500</text>
+  <text x="752" y="161" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="700" fill="#34A853" text-anchor="end">94,0%</text>
+  <line x1="438" y1="175" x2="756" y2="175" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="442" y="204" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="start">HumanEval</text>
+  <text x="752" y="204" font-family="'SF Mono', Monaco, monospace" font-size="14" font-weight="600" fill="#49454F" text-anchor="end">83,2%</text>
+  <text x="400" y="335" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Score plus élevé = meilleure performance</text>
+<text x="792" y="355" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
