@@ -13559,6 +13559,16 @@
     "width": 800,
     "height": 320
   },
+  "/images/local-rag-2026-pipeline-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/local-rag-2026-vector-db-comparison-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 330
+  },
   "/images/local-rag-on-your-pdfs-step-by-step-chunk-settings-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,

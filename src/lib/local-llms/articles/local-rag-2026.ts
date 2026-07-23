@@ -50,6 +50,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         howRag: {
           title: 'How Does RAG Work Step-by-Step?',
+          image: '/images/local-rag-2026-pipeline-en.svg',
+          imageCaption: 'Local RAG architecture split into two pipelines: indexing converts documents into 500-1000 token chunks and 768-1536 dimension embeddings stored in a vector database, while query time retrieves the top 5-10 matching chunks for the local LLM to generate a sourced answer.',
           numberedItems: [
             '**Document ingestion:** Load PDFs, text files, or web pages.',
             '**Chunking:** Split documents into 500-1000 token chunks (overlap 20% to prevent context breaks).',
@@ -75,6 +77,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         vectorDatabases: {
           title: 'Which Vector Database Should You Use?',
+          image: '/images/local-rag-2026-vector-db-comparison-en.svg',
+          imageCaption: 'Five vector databases compared for local RAG: Chroma (embedded, under 1M documents), Qdrant and Milvus (distributed, unlimited capacity), Weaviate (graph plus vector), and Pinecone (managed cloud).',
           rows: [
             { 'Database': 'Chroma', 'Type': 'Embedded', 'Capacity': '<1M docs', 'Setup': 'pip install', 'Best For': 'Prototyping, small RAG' },
             { 'Database': 'Qdrant', 'Type': 'Distributed', 'Capacity': 'Unlimited', 'Setup': 'Docker or cloud', 'Best For': 'Production, scalable' },
@@ -260,6 +264,8 @@ schema: {
         },
         howRag: {
           title: '¿Cómo funciona RAG paso a paso?',
+          image: '/images/local-rag-2026-pipeline-en.svg',
+          imageCaption: 'Arquitectura de RAG local dividida en dos pipelines: la indexación convierte documentos en fragmentos de 500-1000 tokens y vectores de 768-1536 dimensiones almacenados en una base de datos vectorial, mientras que en tiempo de consulta se recuperan los 5-10 fragmentos más similares para que el LLM local genere una respuesta con fuentes.',
           numberedItems: [
             '**Ingesta de documentos:** Cargar PDFs, archivos de texto o páginas web.',
             '**Chunking:** Dividir los documentos en fragmentos de 500-1000 tokens (superposición del 20% para evitar cortes de contexto).',
@@ -285,6 +291,8 @@ schema: {
         },
         vectorDatabases: {
           title: '¿Qué base de datos vectorial deberías usar?',
+          image: '/images/local-rag-2026-vector-db-comparison-en.svg',
+          imageCaption: 'Cinco bases de datos vectoriales comparadas para RAG local: Chroma (integrada, menos de 1M de documentos), Qdrant y Milvus (distribuidas, capacidad ilimitada), Weaviate (grafo más vector) y Pinecone (gestionada en la nube).',
           rows: [
             { 'Base de datos': 'Chroma', 'Tipo': 'Integrada', 'Capacidad': '<1M docs', 'Esfuerzo de configuración': 'pip install', 'Ideal para': 'Prototipado, RAG pequeño' },
             { 'Base de datos': 'Qdrant', 'Tipo': 'Distribuida', 'Capacidad': 'Ilimitada', 'Esfuerzo de configuración': 'Docker o cloud', 'Ideal para': 'Producción, escalable' },
@@ -484,6 +492,8 @@ schema: {
         },
         howRag: {
           title: 'كيف يعمل RAG خطوة بخطوة؟',
+          image: '/images/local-rag-2026-pipeline-en.svg',
+          imageCaption: 'بنية RAG المحلي مقسّمة إلى خط أنابيب فهرسة وخط أنابيب استعلام: تحوّل الفهرسة المستندات إلى أجزاء 500-1000 رمز ومتجهات بـ768-1536 بُعدًا تُخزَّن في قاعدة بيانات متجهية، بينما يسترجع الاستعلام أفضل 5-10 أجزاء مطابقة ليولّد LLM المحلي إجابة موثّقة بالمصادر.',
           numberedItems: [
             '**استيعاب المستندات:** تحميل ملفات PDF أو نصية أو صفحات ويب.',
             '**التقسيم:** تقسيم المستندات إلى أجزاء 500-1000 رمز (تداخل 20% لتجنّب قطع السياق).',
@@ -509,6 +519,8 @@ schema: {
         },
         vectorDatabases: {
           title: 'أي قاعدة بيانات متجهية يجب أن تستخدم؟',
+          image: '/images/local-rag-2026-vector-db-comparison-en.svg',
+          imageCaption: 'مقارنة بين خمس قواعد بيانات متجهية لـ RAG المحلي: Chroma (مدمجة، أقل من مليون مستند)، Qdrant وMilvus (موزّعة، سعة غير محدودة)، Weaviate (رسم بياني مع متجه)، وPinecone (مُدارة سحابيًا).',
           rows: [
             { 'Base de datos': 'Chroma', 'Tipo': 'مدمجة', 'Capacidad': '<مليون مستند', 'Esfuerzo de configuración': 'pip install', 'Ideal para': 'النماذج الأولية، RAG صغير' },
             { 'Base de datos': 'Qdrant', 'Tipo': 'موزّعة', 'Capacidad': 'غير محدودة', 'Esfuerzo de configuración': 'Docker أو سحابة', 'Ideal para': 'الإنتاج، قابلة للتوسّع' },
@@ -708,6 +720,8 @@ schema: {
         },
         howRag: {
           title: 'Como o RAG funciona passo a passo?',
+          image: '/images/local-rag-2026-pipeline-en.svg',
+          imageCaption: 'Arquitetura de RAG local dividida em dois pipelines: a indexação converte documentos em fragmentos de 500-1.000 tokens e vetores de 768-1.536 dimensões armazenados em um banco de dados vetorial, enquanto a consulta recupera os 5-10 fragmentos mais similares para o LLM local gerar uma resposta com fontes.',
           numberedItems: [
             '**Ingestão de documentos:** Carregar PDFs, arquivos de texto ou páginas web.',
             '**Chunking:** Dividir os documentos em fragmentos de 500–1.000 tokens (sobreposição de 20% para evitar cortes de contexto).',
@@ -733,6 +747,8 @@ schema: {
         },
         vectorDatabases: {
           title: 'Qual banco de dados vetorial usar?',
+          image: '/images/local-rag-2026-vector-db-comparison-en.svg',
+          imageCaption: 'Cinco bancos de dados vetoriais comparados para RAG local: Chroma (integrado, menos de 1M de documentos), Qdrant e Milvus (distribuídos, capacidade ilimitada), Weaviate (grafo mais vetor) e Pinecone (gerenciado na nuvem).',
           rows: [
             { 'Banco de dados': 'Chroma', 'Tipo': 'Integrado', 'Capacidade': '<1M docs', 'Esforço de configuração': 'pip install', 'Ideal para': 'Prototipagem, RAG pequeno' },
             { 'Banco de dados': 'Qdrant', 'Tipo': 'Distribuído', 'Capacidade': 'Ilimitada', 'Esforço de configuração': 'Docker ou nuvem', 'Ideal para': 'Produção, escalável' },
@@ -913,6 +929,8 @@ schema: {
         },
         howRag: {
           title: 'Wie funktioniert RAG Schritt für Schritt?',
+          image: '/images/local-rag-2026-pipeline-en.svg',
+          imageCaption: 'Lokale RAG-Architektur, aufgeteilt in zwei Pipelines: Die Indexierung wandelt Dokumente in 500-1000-Token-Chunks und 768-1536-dimensionale Embeddings um, die in einer Vektordatenbank gespeichert werden, während zur Abfragezeit die 5-10 ähnlichsten Chunks abgerufen werden, damit das lokale LLM eine quellenbasierte Antwort generiert.',
           numberedItems: [
             '**Dokumentaufnahme:** PDFs, Textdateien oder Webseiten laden.',
             '**Chunking:** Dokumente in 500-1000-Token-Chunks aufteilen (20% Überlappung, um Kontextbrüche zu verhindern).',
@@ -938,6 +956,8 @@ schema: {
         },
         vectorDatabases: {
           title: 'Welche Vektordatenbank sollten Sie verwenden?',
+          image: '/images/local-rag-2026-vector-db-comparison-en.svg',
+          imageCaption: 'Fünf Vektordatenbanken für lokales RAG im Vergleich: Chroma (eingebettet, unter 1 Mio. Dokumente), Qdrant und Milvus (verteilt, unbegrenzte Kapazität), Weaviate (Graph plus Vektor) und Pinecone (verwaltete Cloud-Lösung).',
           rows: [
             { 'Datenbank': 'Chroma', 'Typ': 'Eingebettet', 'Kapazität': '<1M Dokumente', 'Einrichtungsaufwand': 'pip install', 'Am besten für': 'Prototyping, kleine RAG' },
             { 'Datenbank': 'Qdrant', 'Typ': 'Verteilt', 'Kapazität': 'Unbegrenzt', 'Einrichtungsaufwand': 'Docker oder Cloud', 'Am besten für': 'Produktion, skalierbar' },
@@ -1123,6 +1143,8 @@ schema: {
         },
         howRag: {
           title: 'Comment fonctionne RAG étape par étape ?',
+          image: '/images/local-rag-2026-pipeline-en.svg',
+          imageCaption: 'Architecture RAG locale divisée en deux pipelines : l\'indexation convertit les documents en chunks de 500-1000 tokens et en embeddings de 768-1536 dimensions stockés dans une base vectorielle, tandis qu\'au moment de la requête, les 5-10 chunks les plus similaires sont récupérés pour que le LLM local génère une réponse sourcée.',
           numberedItems: [
             '**Ingestion de documents :** charger des fichiers PDF, texte ou pages Web.',
             '**Chunking :** diviser documents en chunks 500-1000 tokens (chevauchement 20% pour éviter ruptures contexte).',
@@ -1148,6 +1170,8 @@ schema: {
         },
         vectorDatabases: {
           title: 'Quelle base de données vectorielle devriez-vous utiliser ?',
+          image: '/images/local-rag-2026-vector-db-comparison-en.svg',
+          imageCaption: 'Cinq bases de données vectorielles comparées pour le RAG local : Chroma (intégrée, moins d\'1M de documents), Qdrant et Milvus (distribuées, capacité illimitée), Weaviate (graphe plus vecteur) et Pinecone (gérée dans le cloud).',
           rows: [
             { 'Base de données': 'Chroma', 'Type': 'Intégrée', 'Capacité': '<1M docs', 'Effort installation': 'pip install', 'Idéal pour': 'Prototypage, petit RAG' },
             { 'Base de données': 'Qdrant', 'Type': 'Distribuée', 'Capacité': 'Illimitée', 'Effort installation': 'Docker ou cloud', 'Idéal pour': 'Production, scalable' },
@@ -1332,6 +1356,8 @@ schema: {
         },
         howRag: {
           title: 'RAGはどのように段階的に機能しますか？',
+          image: '/images/local-rag-2026-pipeline-en.svg',
+          imageCaption: 'ローカルRAGアーキテクチャはインデックス作成とクエリの2つのパイプラインに分かれる。インデックス作成では文書を500〜1000トークンのチャンクと768〜1536次元の埋め込みに変換してベクターデータベースに保存し、クエリ時には上位5〜10個の類似チャンクを検索してローカルLLMが出典付きの回答を生成する。',
           numberedItems: [
             '**文書取り込み：** PDFs、テキストファイル、またはウェブページを読み込みます。',
             '**チャンキング：** 文書を500～1000トークンのチャンクに分割します（コンテキストブレークを防ぐため20%オーバーラップ）。',
@@ -1357,6 +1383,8 @@ schema: {
         },
         vectorDatabases: {
           title: 'どのベクターデータベースを使うべきですか？',
+          image: '/images/local-rag-2026-vector-db-comparison-en.svg',
+          imageCaption: 'ローカルRAG向けに5つのベクターデータベースを比較。Chroma（組み込み、100万文書未満）、QdrantとMilvus（分散、無制限の容量）、Weaviate（グラフ＋ベクトル）、Pinecone（マネージドクラウド）。',
           rows: [
             { 'データベース': 'Chroma', 'タイプ': '組み込み', '容量': '<100万ドキュメント', 'セットアップの手間': 'pip install', '推奨用途': 'プロトタイピング、小規模RAG' },
             { 'データベース': 'Qdrant', 'タイプ': '分散', '容量': '無制限', 'セットアップの手間': 'Dockerまたはクラウド', '推奨用途': '本番環境、スケーラブル' },
@@ -1600,6 +1628,8 @@ schema: {
         },
         howRag: {
           title: 'RAG 如何分步骤工作？',
+          image: '/images/local-rag-2026-pipeline-en.svg',
+          imageCaption: '本地RAG架构分为索引和查询两条流程：索引阶段将文档转换为500-1000个令牌的片段和768-1536维的嵌入向量存储到向量数据库；查询阶段检索最相似的5-10个片段，由本地大语言模型生成带来源的答案。',
           numberedItems: [
             '**文档导入：** 加载PDF、文本文件或网页。',
             '**分块：** 将文档分割为500-1000个令牌的片段（重叠20%以防止上下文破裂）。',
@@ -1625,6 +1655,8 @@ schema: {
         },
         vectorDatabases: {
           title: '应该使用哪个向量数据库？',
+          image: '/images/local-rag-2026-vector-db-comparison-en.svg',
+          imageCaption: '针对本地RAG比较五种向量数据库：Chroma（内置，少于100万文档）、Qdrant和Milvus（分布式，容量无限制）、Weaviate（图+向量）、Pinecone（托管云服务）。',
           rows: [
             { '数据库': 'Chroma', '类型': '内置', '容量': '<100万文档', '设置难度': 'pip install', '最适合': '原型设计、小规模RAG' },
             { '数据库': 'Qdrant', '类型': '分布式', '容量': '无限制', '设置难度': 'Docker或云', '最适合': '生产环境、可扩展' },
@@ -1868,6 +1900,8 @@ schema: {
         },
         howRag: {
           title: 'RAG는 단계별로 어떻게 작동합니까?',
+          image: '/images/local-rag-2026-pipeline-en.svg',
+          imageCaption: '로컬 RAG 아키텍처는 인덱싱과 쿼리라는 두 개의 파이프라인으로 나뉩니다. 인덱싱은 문서를 500~1000 토큰 청크와 768~1536차원 임베딩으로 변환해 벡터 데이터베이스에 저장하고, 쿼리 시에는 가장 유사한 상위 5~10개 청크를 검색해 로컬 LLM이 출처가 포함된 답변을 생성합니다.',
           numberedItems: [
             '**문서 수집:** PDF, 텍스트 파일 또는 웹 페이지를 로드합니다.',
             '**청킹:** 문서를 500~1000 토큰 청크로 분할합니다 (문맥 단절 방지를 위해 20% 오버랩 적용).',
@@ -1893,6 +1927,8 @@ schema: {
         },
         vectorDatabases: {
           title: '어떤 벡터 데이터베이스를 사용해야 합니까?',
+          image: '/images/local-rag-2026-vector-db-comparison-en.svg',
+          imageCaption: '로컬 RAG를 위한 5개 벡터 데이터베이스 비교: Chroma(내장형, 100만 건 미만), Qdrant와 Milvus(분산형, 무제한 용량), Weaviate(그래프 + 벡터), Pinecone(관리형 클라우드).',
           rows: [
             { 'Database': 'Chroma', 'Type': '내장형', 'Capacity': '100만 건 미만', 'Setup': 'pip install', 'Best For': '프로토타이핑, 소규모 RAG' },
             { 'Database': 'Qdrant', 'Type': '분산형', 'Capacity': '무제한', 'Setup': 'Docker 또는 클라우드', 'Best For': '프로덕션, 확장 가능' },

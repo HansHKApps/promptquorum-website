@@ -1,0 +1,54 @@
+<svg viewBox="0 0 800 330" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="330" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">Vector Databases for Local RAG at a Glance</text>
+
+  <!-- Header -->
+  <text x="40" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Database</text>
+  <text x="230" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Type</text>
+  <text x="350" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Capacity</text>
+  <text x="480" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Setup Effort</text>
+  <text x="610" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Best For</text>
+  <line x1="18" y1="72" x2="782" y2="72" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: Chroma -->
+  <text x="40" y="98" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">Chroma</text>
+  <text x="230" y="98" font-family="system-ui, sans-serif" font-size="11.5" fill="#1C1B1F">Embedded</text>
+  <text x="350" y="98" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">&lt;1M docs</text>
+  <text x="480" y="98" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">pip install</text>
+  <text x="610" y="98" font-family="system-ui, sans-serif" font-size="11.5" fill="#1C1B1F">Prototyping, small RAG</text>
+  <line x1="18" y1="112" x2="782" y2="112" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: Qdrant -->
+  <text x="40" y="138" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">Qdrant</text>
+  <text x="230" y="138" font-family="system-ui, sans-serif" font-size="11.5" fill="#1C1B1F">Distributed</text>
+  <text x="350" y="138" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">Unlimited</text>
+  <text x="480" y="138" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">Docker or cloud</text>
+  <text x="610" y="138" font-family="system-ui, sans-serif" font-size="11.5" fill="#1C1B1F">Production, scalable</text>
+  <line x1="18" y1="152" x2="782" y2="152" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: Milvus -->
+  <text x="40" y="178" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">Milvus</text>
+  <text x="230" y="178" font-family="system-ui, sans-serif" font-size="11.5" fill="#1C1B1F">Distributed</text>
+  <text x="350" y="178" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">Unlimited</text>
+  <text x="480" y="178" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">Complex</text>
+  <text x="610" y="178" font-family="system-ui, sans-serif" font-size="11.5" fill="#1C1B1F">Enterprise, massive scale</text>
+  <line x1="18" y1="192" x2="782" y2="192" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: Weaviate -->
+  <text x="40" y="218" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">Weaviate</text>
+  <text x="230" y="218" font-family="system-ui, sans-serif" font-size="11.5" fill="#1C1B1F">Graph + Vector</text>
+  <text x="350" y="218" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">Unlimited</text>
+  <text x="480" y="218" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">Docker</text>
+  <text x="610" y="218" font-family="system-ui, sans-serif" font-size="11.5" fill="#1C1B1F">Complex queries, relations</text>
+  <line x1="18" y1="232" x2="782" y2="232" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: Pinecone -->
+  <text x="40" y="258" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">Pinecone (cloud)</text>
+  <text x="230" y="258" font-family="system-ui, sans-serif" font-size="11.5" fill="#1C1B1F">Managed</text>
+  <text x="350" y="258" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">Unlimited</text>
+  <text x="480" y="258" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">API key</text>
+  <text x="610" y="258" font-family="system-ui, sans-serif" font-size="11.5" fill="#1C1B1F">Serverless, hands-off</text>
+  <line x1="18" y1="272" x2="782" y2="272" stroke="#F7F2FA" stroke-width="1"/>
+
+  <text x="400" y="300" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Chroma fits under 1M documents on consumer hardware; Qdrant and Milvus scale to unlimited documents in production.</text>
+<text x="792" y="325" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
