@@ -57,6 +57,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Trend': '4. Fine-Tuning Tools', 'What Is Changing': 'GUI-based no-code fine-tuning arriving; training times trending down', 'Timeline': 'Late 2026–2027', 'Impact': 'Developers skip command-line' },
             { 'Trend': '5. Enterprise Adoption', 'What Is Changing': 'Hybrid local/cloud architecture and data-residency rules drive on-prem adoption', 'Timeline': 'By 2027', 'Impact': 'Banking, healthcare, legal leading' },
           ],
+          image: '/images/future-of-local-llms-trends-timeline-en.svg',
+          imageCaption: 'Five local LLM trends for 2026–2027: smaller models, on-device AI, reasoning models, fine-tuning tools, and enterprise adoption, each with its expected timeline.',
         },
         smallerModels: {
           id: 'smaller-models',
@@ -66,6 +68,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Implication: 1–3B models are increasingly practical for summarization, Q&A, and code completion on 4 GB RAM hardware.',
             'For the deployment-pattern angle — which use cases actually benefit from a smaller model versus when parameter count still matters — see [Are Small Language Models the Right Choice for Your Use Case?](/prompt-bites/local-ai-trend-2027-small-language-models).',
           ],
+          image: '/images/future-of-local-llms-model-efficiency-en.svg',
+          imageCaption: 'Model efficiency comparison: a larger generic 7B model needing 16 GB+ RAM versus a smaller optimized 1–3B model running on 4 GB RAM at comparable quality.',
         },
         onDevice: {
           id: 'on-device',
@@ -329,6 +333,8 @@ schema: {
             { 'Tendencia': '4. Herramientas de fine-tuning', 'Qué está cambiando': 'Llega el fine-tuning sin código con interfaz GUI; los tiempos de entrenamiento tienden a bajar', 'Cronograma': 'Finales 2026–2027', 'Impacto': 'Los desarrolladores omiten la línea de comandos' },
             { 'Tendencia': '5. Adopción empresarial', 'Qué está cambiando': 'La arquitectura híbrida local/nube y las normas de residencia de datos impulsan la adopción local', 'Cronograma': 'Para 2027', 'Impacto': 'Banca, salud y sector legal son pioneros' },
           ],
+          image: '/images/future-of-local-llms-trends-timeline-es.svg',
+          imageCaption: 'Cinco tendencias de LLM local para 2026–2027: modelos más pequeños, IA en dispositivo, modelos de razonamiento, herramientas de fine-tuning y adopción empresarial, cada una con su cronograma esperado.',
         },
         smallerModels: {
           id: 'smaller-models',
@@ -338,6 +344,8 @@ schema: {
             'Implicación: los modelos 1–3B son cada vez más prácticos para resumen, preguntas y respuestas, y completado de código en hardware con 4 GB de RAM.',
             'Para el ángulo de los patrones de despliegue — qué casos de uso realmente se benefician de un modelo más pequeño frente a cuándo el número de parámetros sigue importando — consulta [¿Son los modelos de lenguaje pequeños la opción correcta para tu caso de uso?](/es/prompt-bites/local-ai-trend-2027-small-language-models).',
           ],
+          image: '/images/future-of-local-llms-model-efficiency-es.svg',
+          imageCaption: 'Comparación de eficiencia de modelos: un modelo genérico más grande de 7B que necesita 16 GB+ de RAM frente a un modelo optimizado de 1–3B que corre con 4 GB de RAM con calidad comparable.',
         },
         onDevice: {
           id: 'on-device',
@@ -607,6 +615,8 @@ schema: {
             { 'الاتجاه': '4. أدوات fine-tuning', 'ما الذي يتغير': 'وصول fine-tuning بدون برمجة بواجهة GUI؛ زمن التدريب يتجه للانخفاض', 'الجدول الزمني': 'أواخر 2026–2027', 'الأثر': 'يتجاوز المطورون سطر الأوامر' },
             { 'الاتجاه': '5. تبني المؤسسات', 'ما الذي يتغير': 'البنية الهجينة المحلية/السحابية وقوانين إقامة البيانات تدفع التبني المحلي', 'الجدول الزمني': 'بحلول 2027', 'الأثر': 'القطاع المصرفي والصحي والقانوني روّاد' },
           ],
+          image: '/images/future-of-local-llms-trends-timeline-ar.svg',
+          imageCaption: 'خمسة اتجاهات لنماذج LLM المحلية لعامي 2026–2027: نماذج أصغر، ذكاء اصطناعي على الجهاز، نماذج الاستدلال، أدوات fine-tuning، وتبني المؤسسات، مع الجدول الزمني المتوقع لكل منها.',
         },
         smallerModels: {
           id: 'smaller-models',
@@ -616,6 +626,8 @@ schema: {
             'الأثر: أصبحت النماذج 1–3B عملية بشكل متزايد للتلخيص والأسئلة والأجوبة وإكمال الكود على أجهزة بسعة 4 GB من RAM.',
             'لمعرفة زاوية أنماط النشر — أي حالات الاستخدام تستفيد فعلاً من نموذج أصغر مقابل الحالات التي لا يزال فيها عدد المعاملات مهماً — راجع [هل النماذج اللغوية الصغيرة هي الخيار الصحيح لحالة استخدامك؟](/ar/prompt-bites/local-ai-trend-2027-small-language-models).',
           ],
+          image: '/images/future-of-local-llms-model-efficiency-ar.svg',
+          imageCaption: 'مقارنة كفاءة النماذج: نموذج عام أكبر بحجم 7B يحتاج +16 GB من RAM مقابل نموذج محسّن أصغر بحجم 1–3B يعمل بـ 4 GB من RAM بجودة مماثلة.',
         },
         onDevice: {
           id: 'on-device',
@@ -882,6 +894,8 @@ schema: {
             { 'Tendência': 'Ferramentas de fine-tuning', 'Cronograma': 'Já disponível (2026)', 'Impacto': 'LoRA em 8 GB VRAM; tempos de treinamento em queda' },
           ],
           columns: ['Tendência', 'Cronograma', 'Impacto'],
+          image: '/images/future-of-local-llms-trends-timeline-pt.svg',
+          imageCaption: 'Cinco tendências de LLM local para 2026–2027: modelos menores, inferência em dispositivo, modelos de raciocínio, adoção empresarial e ferramentas de fine-tuning, cada uma com seu cronograma esperado.',
         },
         smallerModels: {
           id: 'smaller-models',
@@ -892,6 +906,8 @@ schema: {
             'Gemma 3 2B com fine-tuning em domínio legal supera Llama 3.3 7B genérico em Q&A jurídica.',
             'A chave é o fine-tuning específico do domínio — modelos menores genéricos ainda ficam atrás dos 7B. Para o panorama completo de quando um modelo menor realmente compensa, veja [Modelos de linguagem pequenos são a escolha certa para o seu caso de uso?](/pt/prompt-bites/local-ai-trend-2027-small-language-models).',
           ],
+          image: '/images/future-of-local-llms-model-efficiency-pt.svg',
+          imageCaption: 'Comparação de eficiência de modelos: um modelo genérico maior de 7B que precisa de 16 GB+ de RAM versus um modelo otimizado menor de 1–3B rodando com 4 GB de RAM em qualidade comparável.',
         },
         onDevice: {
           id: 'on-device',
@@ -997,6 +1013,8 @@ schema: {
             { 'Trend': '4. Fine-Tuning-Tools', 'Was ändert sich': 'GUI-basiertes No-Code-Fine-Tuning ankommend; Trainingszeiten sinken tendenziell', 'Zeitplan': 'Ende 2026–2027', 'Auswirkung': 'Entwickler überspringen Kommandozeile' },
             { 'Trend': '5. Enterprise-Adoption', 'Was ändert sich': 'Hybride Local/Cloud-Architektur und Datenresidenz-Vorgaben treiben On-Prem-Adoption', 'Zeitplan': 'Bis 2027', 'Auswirkung': 'Banking, Healthcare, Legal anführend' },
           ],
+          image: '/images/future-of-local-llms-trends-timeline-de.svg',
+          imageCaption: 'Fünf lokale LLM-Trends für 2026–2027: kleinere Modelle, On-Device-KI, Reasoning-Modelle, Fine-Tuning-Tools und Enterprise-Adoption, jeweils mit erwartetem Zeitplan.',
         },
         smallerModels: {
           id: 'smaller-models',
@@ -1006,6 +1024,8 @@ schema: {
             'Implikation: 1–3B-Modelle werden zunehmend praktisch für Zusammenfassung, Q&A und Code-Vervollständigung auf 4 GB RAM Hardware.',
             'Zum Deployment-Aspekt — welche Anwendungsfälle wirklich von einem kleineren Modell profitieren und wann die Parameterzahl weiterhin zählt — siehe [Sind kleine Sprachmodelle die richtige Wahl für Ihren Anwendungsfall?](/de/prompt-bites/local-ai-trend-2027-small-language-models).',
           ],
+          image: '/images/future-of-local-llms-model-efficiency-de.svg',
+          imageCaption: 'Effizienzvergleich von Modellen: ein größeres generisches 7B-Modell mit 16 GB+ RAM-Bedarf gegenüber einem kleineren optimierten 1–3B-Modell mit 4 GB RAM bei vergleichbarer Qualität.',
         },
         onDevice: {
           id: 'on-device',
@@ -1293,6 +1313,8 @@ schema: {
             { 'Tendance': '4. Outils de fine-tuning', 'Ce qui change': 'Arrivée du fine-tuning sans code basé sur GUI ; les temps d\'entraînement tendent à baisser', 'Calendrier': 'Fin 2026–2027', 'Impact': 'Les développeurs ignorent la ligne de commande' },
             { 'Tendance': '5. Adoption entreprise', 'Ce qui change': 'L\'architecture hybride locale/cloud et les règles de résidence des données stimulent l\'adoption locale', 'Calendrier': 'D\'ici 2027', 'Impact': 'Banque, santé, droit en tête' },
           ],
+          image: '/images/future-of-local-llms-trends-timeline-fr.svg',
+          imageCaption: 'Cinq tendances LLM local pour 2026–2027 : modèles plus petits, IA sur appareil, modèles de raisonnement, outils de fine-tuning et adoption entreprise, chacune avec son calendrier prévu.',
         },
         smallerModels: {
           id: 'smaller-models',
@@ -1302,6 +1324,8 @@ schema: {
             'Implication : Les modèles 1–3B deviennent de plus en plus pratiques pour la synthèse, Q&A et la complétion de code sur du matériel 4 GB.',
             'Pour l\'angle des schémas de déploiement — quels cas d\'usage bénéficient réellement d\'un modèle plus petit et quand le nombre de paramètres compte encore — voir [Les petits modèles de langage sont-ils le bon choix pour votre cas d\'usage ?](/fr/prompt-bites/local-ai-trend-2027-small-language-models).',
           ],
+          image: '/images/future-of-local-llms-model-efficiency-fr.svg',
+          imageCaption: 'Comparaison d\'efficacité des modèles : un modèle générique plus grand de 7B nécessitant 16 Go+ de RAM contre un modèle optimisé de 1–3B fonctionnant avec 4 GB de RAM pour une qualité comparable.',
         },
         onDevice: {
           id: 'on-device',
@@ -1571,6 +1595,8 @@ schema: {
             { 'トレンド': '4. ファインチューニングツール', '変化': 'GUI型ノーコード到来、学習時間は短縮傾向', 'タイムライン': '2026年末–2027年', '影響': 'コマンドライン不要' },
             { 'トレンド': '5. エンタープライズ採用', '変化': 'ハイブリッド構成とデータ所在地規制がオンプレミス採用を後押し', 'タイムライン': '2027年までに', '影響': '金融・医療・法務が先行' },
           ],
+          image: '/images/future-of-local-llms-trends-timeline-ja.svg',
+          imageCaption: '2026–2027年の5つのローカルLLMトレンド:小型モデル、端末AI、推論モデル、ファインチューニングツール、エンタープライズ採用と、それぞれのタイムライン。',
         },
         smallerModels: {
           id: 'smaller-models',
@@ -1580,6 +1606,8 @@ schema: {
             '意味：1–3Bモデルは4GB RAM硬体で要約・Q&A・コード補完への実用性を増している。',
             '「どのユースケースが実際に小型モデルの恩恵を受けるか、逆にパラメータ数がなお重要なケースはどこか」という展開パターンの詳細は[小型言語モデルはあなたのユースケースに適した選択か？](/ja/prompt-bites/local-ai-trend-2027-small-language-models)を参照。',
           ],
+          image: '/images/future-of-local-llms-model-efficiency-ja.svg',
+          imageCaption: 'モデル効率比較:16GB以上のRAMが必要な大型汎用7Bモデルと、4GB RAMで同等品質を実現する小型最適化1–3Bモデル。',
         },
         onDevice: {
           id: 'on-device',
@@ -1849,6 +1877,8 @@ schema: {
             { '趋势': '4. 微调工具', '变化': 'GUI型无代码微调到来；训练时间呈下降趋势', '时间表': '2026年末–2027年', '影响': '开发者跳过命令行' },
             { '趋势': '5. 企业采用', '变化': '混合本地/云架构与数据驻留规则推动本地采用', '时间表': '2027年前', '影响': '银行、医疗、法律领先' },
           ],
+          image: '/images/future-of-local-llms-trends-timeline-zh.svg',
+          imageCaption: '2026–2027年五大本地LLM趋势:小型模型、端设备AI、推理模型、微调工具与企业采用,附各自的时间表。',
         },
         smallerModels: {
           id: 'smaller-models',
@@ -1858,6 +1888,8 @@ schema: {
             '意义：1–3B模型在4GB RAM硬件上对摘要、问答、代码完成越来越实用。',
             '关于部署模式的深入分析——哪些用例真正受益于更小的模型，以及何时参数量仍然重要——见[小型语言模型是否适合你的用例？](/zh/prompt-bites/local-ai-trend-2027-small-language-models)。',
           ],
+          image: '/images/future-of-local-llms-model-efficiency-zh.svg',
+          imageCaption: '模型效率对比:需要16GB以上RAM的更大通用7B模型,与仅需4GB RAM即可达到相当品质的更小优化1–3B模型。',
         },
         onDevice: {
           id: 'on-device',
@@ -2127,6 +2159,8 @@ schema: {
             { '트렌드': '4. 파인튜닝 도구', '변화 내용': 'GUI 기반 노코드 파인튜닝 도착', '일정': '2026년 말–2027년', '영향': '개발자가 커맨드라인 불필요' },
             { '트렌드': '5. 기업 도입', '변화 내용': '하이브리드 아키텍처와 데이터 상주 규정이 온프레미스 도입을 촉진', '일정': '2027년까지', '영향': '금융, 의료, 법률 분야가 선도' },
           ],
+          image: '/images/future-of-local-llms-trends-timeline-ko.svg',
+          imageCaption: '2026–2027년 5가지 로컬 LLM 트렌드: 소형 모델, 온디바이스 AI, 추론 모델, 파인튜닝 도구, 기업 도입과 각각의 예상 일정.',
         },
         smallerModels: {
           id: 'smaller-models',
@@ -2136,6 +2170,8 @@ schema: {
             '시사점: 1–3B 모델은 4 GB RAM 하드웨어에서 요약, Q&A, 코드 자동완성에 점점 더 실용적으로 쓰이고 있습니다.',
             '실제로 어떤 사용 사례가 소형 모델의 이점을 누리는지, 반대로 파라미터 수가 여전히 중요한 경우는 언제인지에 대한 배포 패턴 관점은 [소형 언어 모델이 당신의 사용 사례에 적합한 선택인가?](/ko/prompt-bites/local-ai-trend-2027-small-language-models)를 참고하세요.',
           ],
+          image: '/images/future-of-local-llms-model-efficiency-ko.svg',
+          imageCaption: '모델 효율성 비교: 16GB 이상의 RAM이 필요한 더 큰 범용 7B 모델과 4GB RAM에서 비슷한 품질을 내는 더 작은 최적화 1–3B 모델.',
         },
         onDevice: {
           id: 'on-device',
