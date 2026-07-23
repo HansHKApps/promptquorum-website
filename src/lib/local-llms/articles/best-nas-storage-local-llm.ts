@@ -100,6 +100,8 @@ schema: {
             { '0': 'External USB', '1': '4TB', '2': '$150', '3': 'Slow', '4': 'None', '5': 'Offline backup, portable' },
           ],
           columns: ['Option', 'Capacity', 'Cost', 'Speed', 'Redundancy', 'Best For'],
+          image: '/images/best-nas-storage-local-llm-comparison-en.svg',
+          imageCaption: 'Local SSD, NAS with RAID 6, cloud storage (AWS S3), and external USB compared across capacity, speed, and redundancy: NAS offers 8TB with good redundancy for shared team access, cloud offers unlimited capacity with excellent redundancy for archived models.',
         },
         'recommendations': {
           title: 'NAS Recommendations by Use Case',
@@ -120,6 +122,8 @@ schema: {
             '**RAID 10 (mirror + stripe):** 4 drives mirrored in pairs. Fast, expensive. 50% usable.',
             '**Recommendation:** RAID 6 for teams. Balances redundancy, cost, and speed.',
           ],
+          image: '/images/best-nas-storage-local-llm-architecture-en.svg',
+          imageCaption: 'NAS architecture for local LLM storage: an inference server connects over the LAN (under 10ms latency) to a RAID 6 NAS with 8TB usable capacity storing .gguf models, backed up daily to Backblaze B2 cloud and an external USB drive.',
         },
         'backup': {
           title: 'Backup Strategy',
@@ -278,6 +282,8 @@ schema: {
             { '0': 'USB externo', '1': '4TB', '2': '$150', '3': 'Lenta', '4': 'Ninguna', '5': 'Backup offline, portátil' },
           ],
           columns: ['Opción', 'Capacidad', 'Coste', 'Velocidad', 'Redundancia', 'Ideal para'],
+          image: '/images/best-nas-storage-local-llm-comparison-es.svg',
+          imageCaption: 'Comparación de SSD local, NAS con RAID 6, almacenamiento en la nube (AWS S3) y USB externo por capacidad, velocidad y redundancia: el NAS ofrece 8TB con buena redundancia para acceso compartido en equipo, la nube ofrece capacidad ilimitada con excelente redundancia para modelos archivados.',
         },
         'recommendations': {
           title: 'Recomendaciones de NAS según caso de uso',
@@ -298,6 +304,8 @@ schema: {
             '**RAID 10 (espejo + stripe):** 4 discos en espejo por pares. Rápido, costoso. 50% utilizable.',
             '**Recomendación:** RAID 6 para equipos. Equilibra redundancia, coste y velocidad.',
           ],
+          image: '/images/best-nas-storage-local-llm-architecture-es.svg',
+          imageCaption: 'Arquitectura NAS para almacenamiento de LLM local: el servidor de inferencia se conecta por LAN (menos de 10ms de latencia) a un NAS RAID 6 con 8TB utilizables que almacena modelos .gguf, respaldado en Backblaze B2 y en un disco USB externo.',
         },
         'backup': {
           title: 'Estrategia de Backup',
@@ -459,6 +467,8 @@ schema: {
             { '0': 'USB خارجي', '1': '4TB', '2': '$150', '3': 'بطيء', '4': 'لا يوجد', '5': 'نسخ احتياطي دون اتصال، محمول' },
           ],
           columns: ['الخيار', 'السعة', 'التكلفة', 'السرعة', 'التكرار', 'مثالي لـ'],
+          image: '/images/best-nas-storage-local-llm-comparison-ar.svg',
+          imageCaption: 'مقارنة بين SSD محلي وNAS بنظام RAID 6 وتخزين سحابي (AWS S3) وUSB خارجي من حيث السعة والسرعة والتكرار: يوفر NAS سعة 8TB بتكرار جيد للوصول المشترك ضمن الفريق، بينما توفر السحابة سعة غير محدودة بتكرار ممتاز للنماذج المؤرشفة.',
         },
         'recommendations': {
           title: 'توصيات NAS حسب حالة الاستخدام',
@@ -479,6 +489,8 @@ schema: {
             '**RAID 10 (مرآة + تقسيم):** 4 أقراص منعكسة أزواجاً. سريع، مكلف. 50% قابل للاستخدام.',
             '**التوصية:** RAID 6 للفرق. يوازن بين التكرار والتكلفة والسرعة.',
           ],
+          image: '/images/best-nas-storage-local-llm-architecture-ar.svg',
+          imageCaption: 'بنية NAS لتخزين نماذج LLM المحلية: يتصل خادم الاستدلال عبر الشبكة المحلية (زمن استجابة أقل من 10 مللي ثانية) بـ NAS بنظام RAID 6 بسعة 8TB قابلة للاستخدام يخزّن نماذج .gguf، مع نسخ احتياطي يومي إلى سحابة Backblaze B2 وقرص USB خارجي.',
         },
         'backup': {
           title: 'استراتيجية النسخ الاحتياطي',
@@ -573,6 +585,18 @@ schema: {
         relatedReading: { title: 'Weiterführende Lektüre', items: ['[Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) -- 7B-Empfehlungen wenn 8 GB RAM verfügbar', '[Ihr erstes lokales LLM ausführen](/local-llms/run-first-local-llm) -- Schritt-für-Schritt-Anleitung mit Ollama unter 10 Minuten', '[Lokales LLM auf Laptop](/local-llms/local-llm-on-laptop) -- Wärmeverwaltung und Batterielebensdauer auf begrenzter Hardware', '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained) -- warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen', '[Beste lokale LLMs zum Codieren](/local-llms/best-local-llms-for-coding) -- Codierungs-Modelle bei 7B+ wenn Qwen3 3B nicht ausreicht', '[Lokales LLM-Setup beheben](/local-llms/troubleshooting-local-llm-setup) -- OOM-Fehler, langsame Inferenz und Ladefehler auf RAM-armen Maschinen'] },
         faqSection: { title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das kleinste lokale LLM mit nützlicher Ausgabe?', a: 'Seit April 2026 ist 3B bei Q4_K_M praktisches Minimum. Modelle unter 2B (Llama 3.2 1B, Gemma 2 2B) erzeugen kohärente einzelne Sätze, kämpfen aber mit mehrstufigen Anweisungen und Reasoning. Für Zusammenfassung und F&A ist Gemma 2 2B brauchbar. Für komplexere Aufgaben: beginnen Sie mit 3B.' }, { q: 'Kann ein 3B-Modell auf einem Telefon laufen?', a: 'Ja -- Llama 3.2 1B und 3B sind für mobile Bereitstellung konzipiert. Meta bietet optimierte Builds für iOS und Android. Inferenz auf modernem Telefon erzeugt 15-30 tok/sek für 1B. LM Studio und Ollama laufen nicht auf iOS/Android -- mobil erfordert separate Frameworks.' }, { q: 'Sind kleine Modelle für Zusammenfassung geeignet?', a: 'Ja -- Zusammenfassung ist stärkster Anwendungsfall für kleine Modelle. Gemma 2 2B und Llama 3.2 3B produzieren zuverlässig genaue Zusammenfassungen von Texten bis zu ~4.000 Wörtern. Für längere Dokumente verwenden Sie Modell mit großem Kontext wie Phi-4 Mini oder Llama 3.2 3B (beide 128K).' }, { q: 'Wie viel schneller ist 2B als 7B auf gleicher Hardware?', a: 'Ungefähr 2-3× schneller auf CPU. Gemma 2 2B generiert 40-60 tok/sek vs 10-20 tok/sek für Mistral Small. Auf GPU verengt sich Vorteil, da GPU-Durchsatz weniger durch Modellgröße begrenzt ist. Unterschied ist auf reinen CPU-Maschinen deutlichst.' }, { q: 'Unterstützen kleine Modelle Funktionsaufrufe?', a: 'Einige tun dies. Qwen3 3B unterstützt Funktionsaufrufe und JSON. Llama 3.2 3B hat grundlegende Werkzeugunterstützung. Gemma 2 2B unterstützt keine Funktionsaufrufe. Überprüfen Sie Modelldokumentation vor Pipeline-Aufbau.' }, { q: 'Welches kleine Modell ist beste für nicht-englische Sprachen?', a: 'Qwen3 3B unterstützt nativ 29 Sprachen (Chinesisch, Japanisch, Koreanisch, Arabisch). Gemma 2 2B und Phi-4 Mini sind hauptsächlich auf Englisch optimiert. Für nicht-englische Aufgaben bei kleinen Modellen ist Qwen3 3B klare Wahl.' }, { q: 'Unterschied zwischen Phi-4 Mini und Llama 3.2 3B?', a: 'Phi-4 Mini übertrifft bei Reasoning, Mathematik, Codierung (68% vs 58% MMLU, 70% vs 60% HumanEval) bei fast identischem RAM (2,5 GB). Für Alltags-Aufgaben ist Lücke spürbar aber nicht dramatisch. Llama 3.2 3B hat breitere Support. Wählen Sie Phi-4 Mini für Reasoning; Llama für Chat.' }, { q: 'Kann ich zwei kleine Modelle gleichzeitig laufen lassen?', a: 'Ja, wenn RAM zulässt. Zwei 3B-Modelle bei Q4_K_M verwenden ~5 GB kombiniert -- auf 8 GB Maschine mit schlankem OS möglich. Ollama lädt standardmäßig ein Modell pro Prozess. Laufen Sie zwei Ollama-Instanzen auf verschiedenen Ports (OLLAMA_HOST=:11434 und :11435) parallel.' }, { q: 'Funktionieren kleine Modelle für RAG?', a: 'Ja für einfaches RAG. Llama 3.2 3B und Phi-4 Mini beantworten Fragen über abgerufene Dokumentchunks zuverlässig. Für RAG über große Wissensdatenbanken mit Multi-Hop-Reasoning sind 7B+-Modelle konsistenter. GPT4All LocalDocs nutzt 3B für Dokument-Q&A.' }, { q: 'Ist Phi-4 Mini besser als Llama 3.2 3B für Codierung?', a: 'Ja. Phi-4 Mini erreicht 70% auf HumanEval vs 60% für Llama 3.2 3B -- aussagekräftige 10-Punkte-Lücke. Für Code-Hilfe auf 4-6 GB RAM ist Phi-4 Mini empfohlen. Für mehrsprachige Codierung (nicht-Python) ist Qwen3 3B mit 65% HumanEval wettbewerbsfähig und unterstützt Funktionsaufrufe.' }] },
         sources: { title: 'Quellen', items: ['Hugging Face Open LLM Leaderboard -- open-llm-leaderboard.hf.space (MMLU und HumanEval Werte)', 'Microsoft Phi-4 Technical Report -- microsoft.com/en-us/research/publication/phi-4-technical-report/', 'Meta Llama 3.2 Model Card -- huggingface.co/meta-llama/Llama-3.2-3B-Instruct', 'Google Gemma 2 Technical Report -- storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf'] },
+        nasArchitecture: {
+          title: 'NAS-Architektur für lokale LLM-Speicherung',
+          content: ['Ein Inferenzserver verbindet sich über das lokale Netzwerk (LAN, unter 10ms Latenz) mit einem NAS im RAID-6-Verbund. Das NAS speichert alle .gguf-Modelldateien zentral mit 8TB nutzbarer Kapazität und wird zusätzlich in die Backblaze-B2-Cloud sowie auf eine externe USB-Festplatte gesichert.'],
+          image: '/images/best-nas-storage-local-llm-architecture-de.svg',
+          imageCaption: 'NAS-Architektur für lokale LLM-Speicherung: Der Inferenzserver verbindet sich über LAN (unter 10ms Latenz) mit einem RAID-6-NAS mit 8TB nutzbarer Kapazität, das .gguf-Modelle speichert und in die Backblaze-B2-Cloud sowie auf eine externe USB-Festplatte gesichert wird.',
+        },
+        nasComparison: {
+          title: 'NAS im Vergleich: lokale SSD, Cloud und externe USB-Festplatte',
+          content: ['Lokale SSD, NAS mit RAID 6, Cloud-Speicher (AWS S3) und externe USB-Festplatte unterscheiden sich deutlich in Kapazität, Geschwindigkeit und Redundanz. Ein RAID-6-NAS bietet 8TB nutzbare Kapazität mit guter Redundanz für gemeinsamen Team-Zugriff, während Cloud-Speicher unbegrenzte Kapazität mit ausgezeichneter Redundanz für archivierte Modelle bereitstellt.'],
+          image: '/images/best-nas-storage-local-llm-comparison-de.svg',
+          imageCaption: 'Vergleich von lokaler SSD, NAS mit RAID 6, Cloud-Speicher (AWS S3) und externer USB-Festplatte nach Kapazität, Geschwindigkeit und Redundanz: Das NAS bietet 8TB mit guter Redundanz für gemeinsamen Team-Zugriff, die Cloud bietet unbegrenzte Kapazität mit ausgezeichneter Redundanz für archivierte Modelle.',
+        },
       },
     },
     fr: {
@@ -590,9 +614,9 @@ schema: {
       },
       sections: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['**NAS (Stockage en réseau) :** Stockage centralisé accessible en réseau. RAID 6 (2 disques peuvent tomber en panne simultanément).', '**Meilleur budget :** Synology DS420+ 4 baies, ~400 € (matériel seul). 4× 4To WD Red Pro = ~600 €. Total ~1 000 € pour 8To utilisables.', '**Meilleures performances :** QNAP TS-464C2U ou TrueNAS SCALE sur réseau 10Gbps. Coût : 2 000 €+.', '**Stockage modèles :** Conservez tous les modèles quantifiés (.gguf) sur le NAS. Un modèle 70B = 35 Go, stockez 10+ modèles.', '**Sauvegarde :** Sauvegarde quotidienne vers le cloud (Backblaze B2 = 6 $/mois illimité). Ou disques USB externes (hors ligne, sécurisé).', '**Latence réseau :** NAS sur même LAN que serveur d\'inférence = <10ms (acceptable). Via internet = trop lent.', '**Redondance :** RAID 6 protège contre 2 défaillances de disques. Faites quand même des sauvegardes externes (ransomware, vol).', '**Comparaison des coûts :** 8To NAS = ~1 000 € une fois + ~6 $/mois sauvegarde. Stockage cloud = 50-100 $/mois indéfiniment.'] },
-        comparison: { title: 'NAS vs SSD local vs Stockage cloud', rows: [{ '0': 'Option', '1': 'Capacité', '2': 'Coût', '3': 'Vitesse', '4': 'Redondance', '5': 'Idéal pour' }, { '0': 'SSD local', '1': '2To', '2': '200 €', '3': 'Rapide', '4': 'Aucune', '5': 'Machine unique, accès rapide' }, { '0': 'NAS (RAID 6)', '1': '8To', '2': '1 000 €', '3': 'Moyen', '4': 'Bonne', '5': 'Équipe, accès partagé' }, { '0': 'Cloud (AWS S3)', '1': 'Illimité', '2': '50 €+/mois', '3': 'Lent', '4': 'Excellente', '5': 'Accès distant, modèles archivés' }, { '0': 'USB externe', '1': '4To', '2': '150 €', '3': 'Lent', '4': 'Aucune', '5': 'Sauvegarde hors ligne, portable' }], columns: ['Option', 'Capacité', 'Coût', 'Vitesse', 'Redondance', 'Idéal pour'] },
+        comparison: { title: 'NAS vs SSD local vs Stockage cloud', rows: [{ '0': 'Option', '1': 'Capacité', '2': 'Coût', '3': 'Vitesse', '4': 'Redondance', '5': 'Idéal pour' }, { '0': 'SSD local', '1': '2To', '2': '200 €', '3': 'Rapide', '4': 'Aucune', '5': 'Machine unique, accès rapide' }, { '0': 'NAS (RAID 6)', '1': '8To', '2': '1 000 €', '3': 'Moyen', '4': 'Bonne', '5': 'Équipe, accès partagé' }, { '0': 'Cloud (AWS S3)', '1': 'Illimité', '2': '50 €+/mois', '3': 'Lent', '4': 'Excellente', '5': 'Accès distant, modèles archivés' }, { '0': 'USB externe', '1': '4To', '2': '150 €', '3': 'Lent', '4': 'Aucune', '5': 'Sauvegarde hors ligne, portable' }], columns: ['Option', 'Capacité', 'Coût', 'Vitesse', 'Redondance', 'Idéal pour'], image: '/images/best-nas-storage-local-llm-comparison-fr.svg', imageCaption: 'Comparaison entre SSD local, NAS avec RAID 6, stockage cloud (AWS S3) et USB externe selon la capacité, la vitesse et la redondance : le NAS offre 8To avec une bonne redondance pour un accès partagé en équipe, le cloud offre une capacité illimitée avec une excellente redondance pour les modèles archivés.' },
         recommendations: { title: 'Recommandations NAS par cas d\'usage', content: ['**Développeur solo (1-5 machines) :** Évitez le NAS. Utilisez SSD local + sauvegarde USB externe.', '**Petite équipe (5-10 utilisateurs) :** Synology DS420+ ou QNAP TS-432PX. 4 baies, 10Gbps en option. 1 000-1 500 €.', '**Équipe moyenne (10-50) :** Synology DS720+ ou QNAP TS-464C2U. Double 10Gbps, cache SSD. 1 500-2 500 €.', '**Grande équipe (50+) :** TrueNAS SCALE sur matériel entreprise. Build personnalisé. 3 000 €+.', '**Pour équipes avec besoins conformité (santé, finance) :** TrueNAS (open-source, auditable). Synology/QNAP sont propriétaires.'] },
-        raid: { title: 'Configuration RAID et Redondance', content: ['**RAID 1 (miroir) :** 2 disques, données copiées. Si 1 tombe en panne, utilisez l\'autre. Utilisable = 50% (2× 4To = 4To utilisables).', '**RAID 5 (entrelacement + parité) :** 3+ disques. Si 1 tombe en panne, reconstruction depuis parité. Utilisable = 67% (3× 4To = 8To utilisables). Reconstruction lente.', '**RAID 6 (double parité) :** 4+ disques. Si 2 tombent en panne, données sûres. Utilisable = 50% (4× 4To = 8To utilisables). Recommandé pour la production.', '**RAID 10 (miroir + entrelacement) :** 4 disques miroirs par paires. Rapide, coûteux. 50% utilisable.', '**Recommandation :** RAID 6 pour les équipes. Équilibre redondance, coût et vitesse.'] },
+        raid: { title: 'Configuration RAID et Redondance', content: ['**RAID 1 (miroir) :** 2 disques, données copiées. Si 1 tombe en panne, utilisez l\'autre. Utilisable = 50% (2× 4To = 4To utilisables).', '**RAID 5 (entrelacement + parité) :** 3+ disques. Si 1 tombe en panne, reconstruction depuis parité. Utilisable = 67% (3× 4To = 8To utilisables). Reconstruction lente.', '**RAID 6 (double parité) :** 4+ disques. Si 2 tombent en panne, données sûres. Utilisable = 50% (4× 4To = 8To utilisables). Recommandé pour la production.', '**RAID 10 (miroir + entrelacement) :** 4 disques miroirs par paires. Rapide, coûteux. 50% utilisable.', '**Recommandation :** RAID 6 pour les équipes. Équilibre redondance, coût et vitesse.'], image: '/images/best-nas-storage-local-llm-architecture-fr.svg', imageCaption: 'Architecture NAS pour le stockage LLM local : le serveur d\'inférence se connecte via LAN (latence inférieure à 10ms) à un NAS RAID 6 de 8To utilisables stockant les modèles .gguf, sauvegardé sur Backblaze B2 et sur un disque USB externe.' },
         backup: { title: 'Stratégie de sauvegarde', content: ['**Règle de sauvegarde :** 3-2-1 (3 copies, 2 types de médias, 1 hors site).', '- NAS = primaire (sur site).', '- USB externe = secondaire (sur site, mais physiquement séparé).', '- Cloud (Backblaze B2) = sauvegarde hors site.', '**Fréquence :** Incrémentielle quotidienne, complète hebdomadaire. Automatisée via rsync + cron.', '**Test de récupération :** Exercice mensuel de récupération. Restaurez un modèle exemple depuis la sauvegarde, vérifiez l\'intégrité.'] },
         organization: { title: 'Organisation de la bibliothèque de modèles', content: ['/models/', '  /llama3/', '    /llama3-7b-instruct-q4.gguf', '    /llama3-13b-instruct-q4.gguf', '    /llama3-70b-instruct-q4.gguf', '  /mistral/', '    /mistral-7b-instruct-q4.gguf', '  /quantization-sources/', '    /llama3-70b-f32.safetensors (sauvegarde pleine précision)', '**Convention de nommage :** [modèle]-[params]-[format]-[quantification].gguf', '**Checksums :** Stockez les hachages SHA256 pour chaque modèle. Vérifiez au téléchargement pour détecter les corruptions.'] },
         mistakes: { title: 'Erreurs courantes NAS', items: ['RAID 5 sur grands disques. La reconstruction dure 24-48h ; risque élevé de panne du 2e disque pendant la reconstruction. Utilisez RAID 6.', 'Pas de sauvegardes. Défaillance matérielle NAS = perte de tous les modèles. Les sauvegardes externes sont obligatoires.', 'RAID sous-dimensionné. Achetez 8To quand vous pensez avoir besoin de 4To. Les modèles grossissent vite.'] },
@@ -616,9 +640,9 @@ schema: {
       },
       sections: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['**NAS（ネットワーク接続ストレージ）：** ネットワーク経由でアクセス可能な中央集権ストレージ。RAID 6（2台のドライブが同時に障害を起こしてもデータ安全）。', '**最良バジェット：** Synology DS420+ 4ベイ、約6万円（ハードウェアのみ）。4× 4TB WD Red Proドライブ = 約9万円。合計約15万円で8TB使用可能。', '**最良パフォーマンス：** QNAP TS-464C2UまたはTrueNAS SCALEを10Gbpsネットワークで。費用：30万円以上。', '**モデルストレージ：** すべての量子化モデル（.ggufファイル）をNASに保存。70Bモデル1つ = 35GB、10以上のモデルを保存可能。', '**バックアップ：** クラウドへの毎日バックアップ（Backblaze B2 = 月額900円で無制限）。またはUSB外付けドライブ（オフライン、安全）。', '**ネットワーク遅延：** 推論サーバーと同じLANのNAS = <10ms（許容範囲）。インターネット経由 = 遅すぎ。', '**冗長性：** RAID 6は2台のドライブ障害から保護。ランサムウェアや盗難に備えて外部バックアップも実施。', '**コスト比較：** 8TB NAS = 約15万円の初期費用 + 月額900円バックアップ。クラウドストレージ = 月額7,500-15,000円が無期限。'] },
-        comparison: { title: 'NAS vs ローカルSSD vs クラウドストレージ', rows: [{ '0': 'オプション', '1': '容量', '2': 'コスト', '3': '速度', '4': '冗長性', '5': '最適用途' }, { '0': 'ローカルSSD', '1': '2TB', '2': '約3万円', '3': '高速', '4': 'なし', '5': '単一マシン、高速アクセス' }, { '0': 'NAS（RAID 6）', '1': '8TB', '2': '約15万円', '3': '中程度', '4': '良好', '5': 'チーム、共有アクセス' }, { '0': 'クラウド（AWS S3）', '1': '無制限', '2': '月額7,500円以上', '3': '遅い', '4': '優秀', '5': 'リモートアクセス、アーカイブモデル' }, { '0': 'USB外付け', '1': '4TB', '2': '約2.5万円', '3': '遅い', '4': 'なし', '5': 'オフラインバックアップ、ポータブル' }], columns: ['オプション', '容量', 'コスト', '速度', '冗長性', '最適用途'] },
+        comparison: { title: 'NAS vs ローカルSSD vs クラウドストレージ', rows: [{ '0': 'オプション', '1': '容量', '2': 'コスト', '3': '速度', '4': '冗長性', '5': '最適用途' }, { '0': 'ローカルSSD', '1': '2TB', '2': '約3万円', '3': '高速', '4': 'なし', '5': '単一マシン、高速アクセス' }, { '0': 'NAS（RAID 6）', '1': '8TB', '2': '約15万円', '3': '中程度', '4': '良好', '5': 'チーム、共有アクセス' }, { '0': 'クラウド（AWS S3）', '1': '無制限', '2': '月額7,500円以上', '3': '遅い', '4': '優秀', '5': 'リモートアクセス、アーカイブモデル' }, { '0': 'USB外付け', '1': '4TB', '2': '約2.5万円', '3': '遅い', '4': 'なし', '5': 'オフラインバックアップ、ポータブル' }], columns: ['オプション', '容量', 'コスト', '速度', '冗長性', '最適用途'], image: '/images/best-nas-storage-local-llm-comparison-ja.svg', imageCaption: '容量・速度・冗長性でローカルSSD、RAID 6搭載NAS、クラウドストレージ（AWS S3）、USB外付けを比較：NASは8TBでチーム共有アクセスに適した良好な冗長性を提供し、クラウドは無制限の容量とアーカイブモデル向けの優秀な冗長性を提供する。' },
         recommendations: { title: '用途別NAS推奨', content: ['**ソロ開発者（1-5台）：** NASは不要。ローカルSSD + USB外付けバックアップを使用。', '**小規模チーム（5-10ユーザー）：** Synology DS420+またはQNAP TS-432PX。4ベイ、10Gbpsオプション。15万-22万円。', '**中規模チーム（10-50名）：** Synology DS720+またはQNAP TS-464C2U。デュアル10Gbps、SSDキャッシュ。22万-37万円。', '**大規模チーム（50名以上）：** エンタープライズハードウェアでTrueNAS SCALE。カスタムビルド。45万円以上。', '**コンプライアンス要件のあるチーム（医療、金融）：** TrueNAS（オープンソース、監査可能）。Synology/QNAPは独自製品。'] },
-        raid: { title: 'RAID設定と冗長性', content: ['**RAID 1（ミラーリング）：** 2台のドライブ、データがコピーされる。1台が故障しても、もう1台を使用可能。使用可能 = 50%（2× 4TB = 4TB使用可能）。', '**RAID 5（ストライピング + パリティ）：** 3台以上。1台が故障した場合、パリティから再構築。使用可能 = 67%（3× 4TB = 8TB使用可能）。再構築が遅い。', '**RAID 6（デュアルパリティ）：** 4台以上。2台が故障してもデータ安全。使用可能 = 50%（4× 4TB = 8TB使用可能）。本番環境に推奨。', '**RAID 10（ミラー + ストライプ）：** 4台のドライブをペアでミラーリング。高速、高コスト。50%使用可能。', '**推奨：** チームにはRAID 6。冗長性、コスト、速度のバランスが取れている。'] },
+        raid: { title: 'RAID設定と冗長性', content: ['**RAID 1（ミラーリング）：** 2台のドライブ、データがコピーされる。1台が故障しても、もう1台を使用可能。使用可能 = 50%（2× 4TB = 4TB使用可能）。', '**RAID 5（ストライピング + パリティ）：** 3台以上。1台が故障した場合、パリティから再構築。使用可能 = 67%（3× 4TB = 8TB使用可能）。再構築が遅い。', '**RAID 6（デュアルパリティ）：** 4台以上。2台が故障してもデータ安全。使用可能 = 50%（4× 4TB = 8TB使用可能）。本番環境に推奨。', '**RAID 10（ミラー + ストライプ）：** 4台のドライブをペアでミラーリング。高速、高コスト。50%使用可能。', '**推奨：** チームにはRAID 6。冗長性、コスト、速度のバランスが取れている。'], image: '/images/best-nas-storage-local-llm-architecture-ja.svg', imageCaption: 'ローカルLLMストレージのNASアーキテクチャ：推論サーバーはLAN経由（遅延10ms未満）で8TB使用可能なRAID 6 NASに接続し、.ggufモデルを保存、Backblaze B2クラウドと外付けUSBドライブにバックアップされる。' },
         backup: { title: 'バックアップ戦略', content: ['**バックアップルール：** 3-2-1（3つのコピー、2種類のメディア、1つはオフサイト）。', '- NAS = プライマリ（オンサイト）。', '- USB外付け = セカンダリ（オンサイトだが物理的に分離）。', '- クラウド（Backblaze B2）= オフサイトバックアップ。', '**頻度：** 毎日増分、毎週フル。rsync + cronでの自動化。', '**復元テスト：** 毎月復元演習。バックアップからサンプルモデルを復元し、整合性を確認。'] },
         organization: { title: 'モデルライブラリの整理', content: ['/models/', '  /llama3/', '    /llama3-7b-instruct-q4.gguf', '    /llama3-13b-instruct-q4.gguf', '    /llama3-70b-instruct-q4.gguf', '  /mistral/', '    /mistral-7b-instruct-q4.gguf', '  /quantization-sources/', '    /llama3-70b-f32.safetensors（フル精度バックアップ）', '**命名規則：** [モデル]-[パラメータ]-[フォーマット]-[量子化].gguf', '**チェックサム：** 各モデルのSHA256ハッシュを保存。ダウンロード時に検証して破損を検出。'] },
         mistakes: { title: 'よくあるNASの間違い', items: ['大容量ドライブでのRAID 5。再構築に24-48時間かかり、再構築中に2台目のドライブが故障するリスクが高い。RAID 6を使用してください。', 'バックアップなし。NASハードウェア障害 = すべてのモデルを失う。外部バックアップは必須。', 'RAIDの容量不足。4TBで十分と思ってもm 8TBを購入する。モデルはすぐに増える。'] },
@@ -642,9 +666,9 @@ schema: {
       },
       sections: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['**NAS（网络附加存储）：** 可通过网络访问的集中存储。RAID 6（两块硬盘同时故障数据仍然安全）。', '**预算之选：** Synology DS420+ 4盘位，约$500（仅硬件）。4× 4TB WD Red Pro硬盘 = 约$600。合计约$1,100，8TB可用空间。', '**性能之选：** QNAP TS-464C2U或TrueNAS SCALE搭配10Gbps网络。费用：$2,000以上。', '**模型存储：** 将所有量化模型（.gguf文件）存放在NAS上。一个70B模型 = 35GB，可存储10个以上模型。', '**备份：** 每日云端备份（Backblaze B2 = 每月$7，接近无限容量）。或USB外置硬盘（离线、安全）。', '**网络延迟：** 推理服务器与NAS在同一局域网 = <10ms（可接受）。通过互联网 = 太慢。', '**冗余性：** RAID 6可防护2块硬盘故障。针对勒索软件和盗窃，还需外部备份。', '**成本对比：** 8TB NAS = 约$1,100初始投入 + 每月$7备份费。云存储 = 每月$60-120无限期持续。'] },
-        comparison: { title: 'NAS vs 本地SSD vs 云存储', rows: [{ '0': '选项', '1': '容量', '2': '成本', '3': '速度', '4': '冗余性', '5': '适用场景' }, { '0': '本地SSD', '1': '2TB', '2': '约$200', '3': '高速', '4': '无', '5': '单机、高速访问' }, { '0': 'NAS（RAID 6）', '1': '8TB', '2': '约$1,100', '3': '中等', '4': '良好', '5': '团队、共享访问' }, { '0': '云端（AWS S3）', '1': '无限', '2': '每月$60+', '3': '慢', '4': '优秀', '5': '远程访问、模型归档' }, { '0': 'USB外置硬盘', '1': '4TB', '2': '约$100', '3': '慢', '4': '无', '5': '离线备份、便携' }], columns: ['选项', '容量', '成本', '速度', '冗余性', '适用场景'] },
+        comparison: { title: 'NAS vs 本地SSD vs 云存储', rows: [{ '0': '选项', '1': '容量', '2': '成本', '3': '速度', '4': '冗余性', '5': '适用场景' }, { '0': '本地SSD', '1': '2TB', '2': '约$200', '3': '高速', '4': '无', '5': '单机、高速访问' }, { '0': 'NAS（RAID 6）', '1': '8TB', '2': '约$1,100', '3': '中等', '4': '良好', '5': '团队、共享访问' }, { '0': '云端（AWS S3）', '1': '无限', '2': '每月$60+', '3': '慢', '4': '优秀', '5': '远程访问、模型归档' }, { '0': 'USB外置硬盘', '1': '4TB', '2': '约$100', '3': '慢', '4': '无', '5': '离线备份、便携' }], columns: ['选项', '容量', '成本', '速度', '冗余性', '适用场景'], image: '/images/best-nas-storage-local-llm-comparison-zh.svg', imageCaption: '按容量、速度和冗余性对比本地SSD、RAID 6 NAS、云存储（AWS S3）和USB外置硬盘：NAS提供8TB容量和适合团队共享访问的良好冗余性，云存储提供无限容量和适合归档模型的优秀冗余性。' },
         recommendations: { title: '按用途推荐NAS方案', content: ['**个人开发者（1-5台）：** 无需NAS。使用本地SSD + USB外置硬盘备份。', '**小型团队（5-10人）：** Synology DS420+或QNAP TS-432PX。4盘位，支持10Gbps选项。$1,300-1,800。', '**中型团队（10-50人）：** Synology DS720+或QNAP TS-464C2U。双10Gbps，SSD缓存。$1,800-3,000。', '**大型团队（50人以上）：** 使用企业级硬件运行TrueNAS SCALE。定制构建，$3,500以上。', '**有合规要求的团队（医疗、金融）：** TrueNAS（开源、可审计）。Synology/QNAP为专有产品。'] },
-        raid: { title: 'RAID配置与冗余性', content: ['**RAID 1（镜像）：** 2块硬盘，数据完全复制。一块故障，另一块继续使用。可用容量 = 50%（2× 4TB = 4TB可用）。', '**RAID 5（条带+奇偶校验）：** 3块以上。一块故障可从奇偶校验重建。可用容量 = 67%（3× 4TB = 8TB可用）。重建速度慢。', '**RAID 6（双奇偶校验）：** 4块以上。两块硬盘同时故障数据仍然安全。可用容量 = 50%（4× 4TB = 8TB可用）。生产环境推荐选择。', '**RAID 10（镜像+条带）：** 4块硬盘成对镜像。速度快、成本高。50%可用容量。', '**推荐：** 团队使用RAID 6。冗余性、成本与速度的最佳平衡。'] },
+        raid: { title: 'RAID配置与冗余性', content: ['**RAID 1（镜像）：** 2块硬盘，数据完全复制。一块故障，另一块继续使用。可用容量 = 50%（2× 4TB = 4TB可用）。', '**RAID 5（条带+奇偶校验）：** 3块以上。一块故障可从奇偶校验重建。可用容量 = 67%（3× 4TB = 8TB可用）。重建速度慢。', '**RAID 6（双奇偶校验）：** 4块以上。两块硬盘同时故障数据仍然安全。可用容量 = 50%（4× 4TB = 8TB可用）。生产环境推荐选择。', '**RAID 10（镜像+条带）：** 4块硬盘成对镜像。速度快、成本高。50%可用容量。', '**推荐：** 团队使用RAID 6。冗余性、成本与速度的最佳平衡。'], image: '/images/best-nas-storage-local-llm-architecture-zh.svg', imageCaption: '本地LLM存储的NAS架构：推理服务器通过局域网（延迟低于10ms）连接到8TB可用容量的RAID 6 NAS，存储.gguf模型，并备份到Backblaze B2云端和USB外置硬盘。' },
         backup: { title: '备份策略', content: ['**备份规则：** 3-2-1（3份副本、2种介质、1份异地）。', '- NAS = 主备份（本地）。', '- USB外置硬盘 = 次要备份（本地但物理隔离）。', '- 云端（Backblaze B2）= 异地备份。', '**频率：** 每日增量备份，每周全量备份。使用rsync + cron自动化。', '**恢复测试：** 每月进行恢复演练。从备份恢复示例模型，验证数据完整性。'] },
         organization: { title: '模型库整理', content: ['/models/', '  /llama3/', '    /llama3-7b-instruct-q4.gguf', '    /llama3-13b-instruct-q4.gguf', '    /llama3-70b-instruct-q4.gguf', '  /mistral/', '    /mistral-7b-instruct-q4.gguf', '  /quantization-sources/', '    /llama3-70b-f32.safetensors（全精度备份）', '**命名规范：** [模型]-[参数]-[格式]-[量化].gguf', '**校验和：** 为每个模型保存SHA256哈希值。下载时验证以检测损坏。'] },
         mistakes: { title: '常见NAS错误', items: ['在大容量硬盘上使用RAID 5。重建需要24-48小时，重建期间第二块硬盘故障的风险极高。请改用RAID 6。', '没有备份。NAS硬件故障 = 丢失所有模型。外部备份是必须的。', '存储容量规划不足。即使认为4TB够用，也要买8TB。模型数量会快速增长。'] },
@@ -746,6 +770,8 @@ schema: {
             { '0': 'USB externo', '1': '4TB', '2': 'R$ 900', '3': 'Lenta', '4': 'Nenhuma', '5': 'Backup offline, portátil' },
           ],
           columns: ['Opção', 'Capacidade', 'Custo', 'Velocidade', 'Redundância', 'Ideal para'],
+          image: '/images/best-nas-storage-local-llm-comparison-pt.svg',
+          imageCaption: 'Comparação entre SSD local, NAS com RAID 6, armazenamento em nuvem (AWS S3) e USB externo por capacidade, velocidade e redundância: o NAS oferece 8TB com boa redundância para acesso compartilhado em equipe, a nuvem oferece capacidade ilimitada com excelente redundância para modelos arquivados.',
         },
         'recommendations': {
           title: 'Recomendações de NAS por caso de uso',
@@ -766,6 +792,8 @@ schema: {
             '**RAID 10 (espelho + stripe):** 4 discos espelhados em pares. Rápido, caro. 50% utilizável.',
             '**Recomendação:** RAID 6 para equipes. Equilibra redundância, custo e velocidade.',
           ],
+          image: '/images/best-nas-storage-local-llm-architecture-pt.svg',
+          imageCaption: 'Arquitetura de NAS para armazenamento de LLM local: o servidor de inferência se conecta pela LAN (latência abaixo de 10ms) a um NAS RAID 6 com 8TB utilizáveis armazenando modelos .gguf, com backup diário no Backblaze B2 e em um disco USB externo.',
         },
         'backup': {
           title: 'Estratégia de Backup',
@@ -923,6 +951,8 @@ schema: {
             { '0': '외장 USB', '1': '4TB', '2': '$150', '3': '느림', '4': '없음', '5': '오프라인 백업, 휴대용' },
           ],
           columns: ['옵션', '용량', '비용', '속도', '이중화', '최적 용도'],
+          image: '/images/best-nas-storage-local-llm-comparison-ko.svg',
+          imageCaption: '용량, 속도, 이중화 기준으로 로컬 SSD, RAID 6 NAS, 클라우드 스토리지(AWS S3), 외장 USB를 비교: NAS는 팀 공유 접근에 적합한 양호한 이중화와 함께 8TB를 제공하며, 클라우드는 보관용 모델에 적합한 우수한 이중화와 함께 무제한 용량을 제공합니다.',
         },
         'recommendations': {
           title: '사용 사례별 NAS 추천',
@@ -943,6 +973,8 @@ schema: {
             '**RAID 10(미러 + 스트라이프):** 드라이브 4개를 쌍으로 미러링. 빠르지만 비용이 높음. 사용 가능 용량 50%.',
             '**권장 사항:** 팀 환경에는 RAID 6을 사용하십시오. 이중화, 비용, 속도의 균형이 우수합니다.',
           ],
+          image: '/images/best-nas-storage-local-llm-architecture-ko.svg',
+          imageCaption: '로컬 LLM 스토리지를 위한 NAS 아키텍처: 인퍼런스 서버는 LAN(지연 10ms 미만)을 통해 8TB 사용 가능한 RAID 6 NAS에 연결되어 .gguf 모델을 저장하며, Backblaze B2 클라우드와 외장 USB 드라이브로 백업됩니다.',
         },
         'backup': {
           title: '백업 전략',
