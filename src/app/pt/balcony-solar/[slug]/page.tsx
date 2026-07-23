@@ -2,15 +2,16 @@ import type { Metadata } from 'next'
 import {
   buildArticleMetadata,
   buildArticlePageElement,
-  getArticleStaticParams,
 } from '@/lib/balcony-solar/page-helpers'
+
+export const revalidate = 86400
 
 interface PageProps {
   params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
-  return getArticleStaticParams()
+  return []
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
