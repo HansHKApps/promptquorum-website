@@ -1,0 +1,26 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="400" fill="#FFFFFF"/>
+<text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">通向无订阅堆栈的三个步骤</text>
+<circle cx="130" cy="120" r="28" fill="#6750A4"/>
+<text x="130" y="127" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="130" y="182" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">本地中枢</text>
+<text x="130" y="200" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">Home Assistant</text>
+<text x="235" y="127" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4" text-anchor="middle">&#8594;</text>
+<circle cx="340" cy="120" r="28" fill="#6750A4"/>
+<text x="340" y="127" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="340" y="182" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">本地设备</text>
+<text x="340" y="200" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">Zigbee / Z-Wave / Matter</text>
+<text x="445" y="127" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4" text-anchor="middle">&#8594;</text>
+<circle cx="550" cy="120" r="28" fill="#6750A4"/>
+<text x="550" y="127" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="550" y="182" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">本地摄像头</text>
+<text x="550" y="200" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">Frigate</text>
+<text x="645" y="127" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4" text-anchor="middle">&#8594;</text>
+<circle cx="740" cy="120" r="28" fill="#34A853"/>
+<text x="740" y="127" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#10003;</text>
+<text x="740" y="182" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">无订阅</text>
+<text x="740" y="200" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">一次性硬件</text>
+<line x1="30" y1="240" x2="770" y2="240" stroke="#F7F2FA" stroke-width="1.5"/>
+<text x="400" y="280" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">三个本地组件取代了智能家居的每一项经常性订阅。</text>
+<text x="400" y="308" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">硬件只是一次性成本——Home Assistant、你的设备和 Frigate 无需月费即可持续运行。</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

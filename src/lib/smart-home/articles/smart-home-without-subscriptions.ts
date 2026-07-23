@@ -81,6 +81,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**AI detection:** person/object alerts are often gated behind a plan.',
           '**Premium features:** some ecosystems lock automations or extras behind subscriptions.',
         ],
+        image: '/images/smart-home-without-subscriptions-subscription-vs-local-en.svg',
+        imageCaption: 'Subscription vs. local comparison across four functions — camera storage, AI detection, control and automations, and voice/AI — each recurring cloud plan replaced by a one-time local option: Frigate, Home Assistant, or a local LLM.',
       },
       noSubStack: {
         id: 'no-sub-stack',
@@ -92,6 +94,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Local devices: Zigbee, Z-Wave, Matter, or local Wi-Fi with no cloud account.',
           'Local cameras: Frigate for recording and AI detection — see [local AI security cameras](/smart-home/local-ai-security-camera).',
         ],
+        image: '/images/smart-home-without-subscriptions-no-sub-setup-steps-en.svg',
+        imageCaption: 'Three-step path to a subscription-free smart home: local hub (Home Assistant), local devices (Zigbee, Z-Wave, Matter), and local cameras (Frigate) — ending with zero recurring subscription fees.',
       },
       noFeeDevices: {
         id: 'no-fee-devices',
@@ -260,6 +264,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الكشف بالذكاء الاصطناعي:** تنبيهات الأشخاص/الأشياء غالبًا محجوبة خلف خطة.',
           '**الميزات المتميزة:** بعض المنظومات تحجب الأتمتات أو الإضافات خلف اشتراكات.',
         ],
+        image: '/images/smart-home-without-subscriptions-subscription-vs-local-ar.svg',
+        imageCaption: 'مقارنة بين الاشتراك والخيار المحلي عبر أربع وظائف: تخزين الكاميرا، الكشف بالذكاء الاصطناعي، التحكم والأتمتات، والصوت/الذكاء الاصطناعي. كل خطة سحابية متكررة تُستبدل بخيار محلي لمرة واحدة: Frigate أو Home Assistant أو نموذج لغوي محلي.',
       },
       noSubStack: {
         id: 'no-sub-stack',
@@ -271,6 +277,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الأجهزة المحلية: Zigbee وZ-Wave وMatter أو Wi-Fi محلي بدون حساب سحابي.',
           'الكاميرات المحلية: Frigate للتسجيل والكشف بالذكاء الاصطناعي — راجع [كاميرات الأمان المحلية بالذكاء الاصطناعي](/ar/smart-home/local-ai-security-camera).',
         ],
+        image: '/images/smart-home-without-subscriptions-no-sub-setup-steps-ar.svg',
+        imageCaption: 'مسار من ثلاث خطوات إلى منزل ذكي بلا اشتراكات: مركز محلي (Home Assistant)، أجهزة محلية (Zigbee وZ-Wave وMatter)، وكاميرات محلية (Frigate) — لينتهي بلا رسوم اشتراك متكررة.',
       },
       noFeeDevices: {
         id: 'no-fee-devices',
@@ -439,6 +447,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**KI-Erkennung:** Personen-/Objektalarme sind oft hinter einem Tarif gesperrt.',
           '**Premium-Funktionen:** manche Ökosysteme sperren Automatisierungen oder Extras hinter Abonnements.',
         ],
+        image: '/images/smart-home-without-subscriptions-subscription-vs-local-de.svg',
+        imageCaption: 'Abonnement- vs. lokaler Vergleich über vier Funktionen – Kameraspeicher, KI-Erkennung, Steuerung und Automatisierungen sowie Sprache/KI – jeder wiederkehrende Cloud-Tarif wird durch eine einmalige lokale Option ersetzt: Frigate, Home Assistant oder ein lokales LLM.',
       },
       noSubStack: {
         id: 'no-sub-stack',
@@ -450,6 +460,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Lokale Geräte: Zigbee, Z-Wave, Matter oder lokales WLAN ohne Cloud-Konto.',
           'Lokale Kameras: Frigate für Aufzeichnung und KI-Erkennung – siehe [lokale KI-Sicherheitskameras](/de/smart-home/local-ai-security-camera).',
         ],
+        image: '/images/smart-home-without-subscriptions-no-sub-setup-steps-de.svg',
+        imageCaption: 'Dreistufiger Weg zu einem abofreien Smart Home: lokaler Hub (Home Assistant), lokale Geräte (Zigbee, Z-Wave, Matter) und lokale Kameras (Frigate) – am Ende keine wiederkehrenden Abo-Gebühren.',
       },
       noFeeDevices: {
         id: 'no-fee-devices',
@@ -618,6 +630,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Detección con IA:** las alertas de persona/objeto suelen estar tras un plan.',
           '**Funciones premium:** algunos ecosistemas bloquean automatizaciones o extras tras suscripciones.',
         ],
+        image: '/images/smart-home-without-subscriptions-subscription-vs-local-es.svg',
+        imageCaption: 'Comparación entre suscripción y opción local en cuatro funciones: almacenamiento de cámara, detección con IA, control y automatizaciones, y voz/IA. Cada plan de nube recurrente se sustituye por una opción local única: Frigate, Home Assistant o un LLM local.',
       },
       noSubStack: {
         id: 'no-sub-stack',
@@ -629,6 +643,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Dispositivos locales: Zigbee, Z-Wave, Matter o Wi-Fi local sin cuenta en la nube.',
           'Cámaras locales: Frigate para grabación y detección con IA — consulta [cámaras de seguridad con IA local](/es/smart-home/local-ai-security-camera).',
         ],
+        image: '/images/smart-home-without-subscriptions-no-sub-setup-steps-es.svg',
+        imageCaption: 'Camino de tres pasos hacia un smart home sin suscripciones: hub local (Home Assistant), dispositivos locales (Zigbee, Z-Wave, Matter) y cámaras locales (Frigate), terminando sin cuotas de suscripción recurrentes.',
       },
       noFeeDevices: {
         id: 'no-fee-devices',
@@ -797,6 +813,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**AI 감지:** 사람/사물 알림은 종종 요금제 뒤에 잠겨 있습니다.',
           '**프리미엄 기능:** 일부 생태계는 자동화나 추가 기능을 구독 뒤에 잠급니다.',
         ],
+        image: '/images/smart-home-without-subscriptions-subscription-vs-local-ko.svg',
+        imageCaption: '카메라 저장, AI 감지, 제어 및 자동화, 음성/AI 네 가지 기능에서 구독과 로컬을 비교한다. 각 클라우드 요금제는 Frigate, Home Assistant, 로컬 LLM이라는 일회성 로컬 옵션으로 대체된다.',
       },
       noSubStack: {
         id: 'no-sub-stack',
@@ -808,6 +826,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '로컬 기기: 클라우드 계정 없는 Zigbee, Z-Wave, Matter, 또는 로컬 Wi-Fi.',
           '로컬 카메라: 녹화와 AI 감지를 위한 Frigate — [로컬 AI 보안 카메라](/ko/smart-home/local-ai-security-camera)를 참조하십시오.',
         ],
+        image: '/images/smart-home-without-subscriptions-no-sub-setup-steps-ko.svg',
+        imageCaption: '구독료 없는 스마트홈으로 가는 3단계: 로컬 허브(Home Assistant), 로컬 기기(Zigbee, Z-Wave, Matter), 로컬 카메라(Frigate) — 결과적으로 반복되는 구독료가 전혀 없다.',
       },
       noFeeDevices: {
         id: 'no-fee-devices',
@@ -976,6 +996,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Détection IA :** les alertes de personne/objet sont souvent derrière un forfait.',
           '**Fonctions premium :** certains écosystèmes verrouillent les automatisations ou les extras derrière des abonnements.',
         ],
+        image: '/images/smart-home-without-subscriptions-subscription-vs-local-fr.svg',
+        imageCaption: 'Comparaison abonnement vs local sur quatre fonctions : stockage des caméras, détection IA, contrôle et automatisations, et voix/IA. Chaque forfait cloud récurrent est remplacé par une option locale unique : Frigate, Home Assistant ou un LLM local.',
       },
       noSubStack: {
         id: 'no-sub-stack',
@@ -987,6 +1009,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Appareils locaux : Zigbee, Z-Wave, Matter ou Wi-Fi local sans compte cloud.',
           'Caméras locales : Frigate pour l\'enregistrement et la détection IA — voir [caméras de sécurité à IA locale](/fr/smart-home/local-ai-security-camera).',
         ],
+        image: '/images/smart-home-without-subscriptions-no-sub-setup-steps-fr.svg',
+        imageCaption: 'Parcours en trois étapes vers une maison connectée sans abonnement : hub local (Home Assistant), appareils locaux (Zigbee, Z-Wave, Matter) et caméras locales (Frigate) — pour finir sans aucun frais d\'abonnement récurrent.',
       },
       noFeeDevices: {
         id: 'no-fee-devices',
@@ -1155,6 +1179,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**AI 検出：** 人物/物体の通知はしばしばプランの背後に閉じ込められます。',
           '**プレミアム機能：** 一部のエコシステムは自動化や追加機能をサブスクの背後にロックします。',
         ],
+        image: '/images/smart-home-without-subscriptions-subscription-vs-local-ja.svg',
+        imageCaption: 'カメラ保存、AI検出、制御と自動化、音声/AIという4つの機能でサブスクとローカルを比較。各クラウドプランは、Frigate、Home Assistant、ローカルLLMという一度きりのローカルの選択肢に置き換わる。',
       },
       noSubStack: {
         id: 'no-sub-stack',
@@ -1166,6 +1192,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ローカル機器：クラウドアカウントなしの Zigbee、Z-Wave、Matter、ローカル Wi-Fi。',
           'ローカルカメラ：録画と AI 検出に Frigate——[ローカルAIセキュリティカメラ](/ja/smart-home/local-ai-security-camera)を参照。',
         ],
+        image: '/images/smart-home-without-subscriptions-no-sub-setup-steps-ja.svg',
+        imageCaption: 'サブスクなしのスマートホームへの3ステップ：ローカルハブ（Home Assistant）、ローカル機器（Zigbee、Z-Wave、Matter）、ローカルカメラ（Frigate）——最終的に月額のサブスク料金はゼロになる。',
       },
       noFeeDevices: {
         id: 'no-fee-devices',
@@ -1334,6 +1362,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Detecção com IA:** os alertas de pessoa/objeto costumam ficar atrás de um plano.',
           '**Recursos premium:** alguns ecossistemas bloqueiam automações ou extras atrás de assinaturas.',
         ],
+        image: '/images/smart-home-without-subscriptions-subscription-vs-local-pt.svg',
+        imageCaption: 'Comparação entre assinatura e opção local em quatro funções: armazenamento de câmera, detecção com IA, controle e automações, e voz/IA. Cada plano de nuvem recorrente é substituído por uma opção local única: Frigate, Home Assistant ou um LLM local.',
       },
       noSubStack: {
         id: 'no-sub-stack',
@@ -1345,6 +1375,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Dispositivos locais: Zigbee, Z-Wave, Matter ou Wi-Fi local sem conta na nuvem.',
           'Câmeras locais: o Frigate para gravação e detecção com IA — veja [câmeras de segurança com IA local](/pt/smart-home/local-ai-security-camera).',
         ],
+        image: '/images/smart-home-without-subscriptions-no-sub-setup-steps-pt.svg',
+        imageCaption: 'Caminho de três passos para uma casa inteligente sem assinaturas: hub local (Home Assistant), dispositivos locais (Zigbee, Z-Wave, Matter) e câmeras locais (Frigate), terminando sem taxas de assinatura recorrentes.',
       },
       noFeeDevices: {
         id: 'no-fee-devices',
@@ -1513,6 +1545,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**AI 检测：** 人/物告警常被置于套餐之后。',
           '**高级功能：** 某些生态把自动化或附加功能锁在订阅之后。',
         ],
+        image: '/images/smart-home-without-subscriptions-subscription-vs-local-zh.svg',
+        imageCaption: '在摄像头存储、AI 检测、控制与自动化、语音/AI 四项功能上对比订阅方案与本地方案。每一项云端套餐都被 Frigate、Home Assistant 或本地 LLM 等一次性本地方案取代。',
       },
       noSubStack: {
         id: 'no-sub-stack',
@@ -1524,6 +1558,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '本地设备：无云端账户的 Zigbee、Z-Wave、Matter 或本地 Wi-Fi。',
           '本地摄像头：用 Frigate 录制并进行 AI 检测——参见[本地 AI 安防摄像头](/zh/smart-home/local-ai-security-camera)。',
         ],
+        image: '/images/smart-home-without-subscriptions-no-sub-setup-steps-zh.svg',
+        imageCaption: '通向无订阅智能家居的三步路径：本地中枢（Home Assistant）、本地设备（Zigbee、Z-Wave、Matter）、本地摄像头（Frigate）——最终实现零经常性订阅费用。',
       },
       noFeeDevices: {
         id: 'no-fee-devices',
