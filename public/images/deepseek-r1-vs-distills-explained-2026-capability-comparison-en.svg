@@ -1,0 +1,48 @@
+<svg viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="430" fill="#FFFFFF"/>
+<text x="400.0" y="28" font-size="17" font-weight="700" fill="#1C1B1F" text-anchor="middle">What Does Distillation Lose?</text>
+<text x="40" y="58" font-size="12" font-weight="700" fill="#79747E">Capability</text>
+<text x="430" y="58" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">Full 671B R1</text>
+<text x="600" y="58" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">32B Distill</text>
+<text x="740" y="58" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">7B Distill</text>
+<line x1="24" y1="70" x2="776" y2="70" stroke="#E8DEF8" stroke-width="1.5"/>
+<text x="40" y="92" font-size="12" font-weight="600" fill="#1C1B1F"><tspan x="40" dy="0">Reasoning structure (CoT,</tspan><tspan x="40" dy="15">reflection)</tspan></text>
+<rect x="370.5" y="78" width="119" height="24" rx="12" fill="#6750A4"/>
+<text x="430" y="94" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Reference</text>
+<rect x="535.0" y="78" width="130" height="24" rx="12" fill="#34A853"/>
+<text x="600" y="94" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Very close</text>
+<rect x="702.5" y="78" width="75" height="24" rx="12" fill="#F4B400"/>
+<text x="740" y="94" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Close</text>
+<line x1="24" y1="134" x2="776" y2="134" stroke="#F7F2FA" stroke-width="1"/>
+<text x="40" y="160" font-size="12" font-weight="600" fill="#1C1B1F"><tspan x="40" dy="0">Hardest-problem reliability</tspan></text>
+<rect x="381.5" y="146" width="97" height="24" rx="12" fill="#6750A4"/>
+<text x="430" y="162" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Highest</text>
+<rect x="557.0" y="146" width="86" height="24" rx="12" fill="#34A853"/>
+<text x="600" y="162" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Strong</text>
+<rect x="686.0" y="146" width="108" height="24" rx="12" fill="#F4B400"/>
+<text x="740" y="162" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Moderate</text>
+<line x1="24" y1="202" x2="776" y2="202" stroke="#F7F2FA" stroke-width="1"/>
+<text x="40" y="228" font-size="12" font-weight="600" fill="#1C1B1F"><tspan x="40" dy="0">Breadth of world knowledge</tspan></text>
+<rect x="381.5" y="214" width="97" height="24" rx="12" fill="#6750A4"/>
+<text x="430" y="230" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Highest</text>
+<rect x="568.0" y="214" width="64" height="24" rx="12" fill="#34A853"/>
+<text x="600" y="230" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Good</text>
+<rect x="691.5" y="214" width="97" height="24" rx="12" fill="#F4B400"/>
+<text x="740" y="230" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Limited</text>
+<line x1="24" y1="270" x2="776" y2="270" stroke="#F7F2FA" stroke-width="1"/>
+<text x="40" y="296" font-size="12" font-weight="600" fill="#1C1B1F"><tspan x="40" dy="0">Long, multi-constraint problems</tspan></text>
+<rect x="398.0" y="282" width="64" height="24" rx="12" fill="#6750A4"/>
+<text x="430" y="298" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Best</text>
+<rect x="568.0" y="282" width="64" height="24" rx="12" fill="#34A853"/>
+<text x="600" y="298" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Good</text>
+<rect x="686.0" y="282" width="108" height="24" rx="12" fill="#F4B400"/>
+<text x="740" y="298" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Degrades</text>
+<line x1="24" y1="338" x2="776" y2="338" stroke="#F7F2FA" stroke-width="1"/>
+<text x="40" y="364" font-size="12" font-weight="600" fill="#1C1B1F"><tspan x="40" dy="0">Runs on consumer hardware</tspan></text>
+<rect x="398.0" y="350" width="64" height="24" rx="12" fill="#EA4335"/>
+<text x="430" y="366" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">No</text>
+<rect x="529.5" y="350" width="141" height="24" rx="12" fill="#34A853"/>
+<text x="600" y="366" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Yes (24 GB)</text>
+<rect x="675.0" y="350" width="130" height="24" rx="12" fill="#F4B400"/>
+<text x="740" y="366" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Yes (8 GB)</text>
+<text x="792" y="425" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

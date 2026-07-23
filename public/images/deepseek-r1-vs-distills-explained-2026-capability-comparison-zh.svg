@@ -1,0 +1,48 @@
+<svg viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="430" fill="#FFFFFF"/>
+<text x="400.0" y="28" font-size="17" font-weight="700" fill="#1C1B1F" text-anchor="middle">蒸馏失去了什么？</text>
+<text x="40" y="58" font-size="12" font-weight="700" fill="#79747E">能力</text>
+<text x="430" y="58" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">完整 671B R1</text>
+<text x="600" y="58" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">32B 蒸馏版</text>
+<text x="740" y="58" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">7B 蒸馏版</text>
+<line x1="24" y1="70" x2="776" y2="70" stroke="#E8DEF8" stroke-width="1.5"/>
+<text x="40" y="92" font-size="12" font-weight="600" fill="#1C1B1F"><tspan x="40" dy="0">推理结构（CoT、反思）</tspan></text>
+<rect x="398.0" y="78" width="64" height="24" rx="12" fill="#6750A4"/>
+<text x="430" y="94" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">基准</text>
+<rect x="568.0" y="78" width="64" height="24" rx="12" fill="#34A853"/>
+<text x="600" y="94" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">非常接近</text>
+<rect x="708.0" y="78" width="64" height="24" rx="12" fill="#F4B400"/>
+<text x="740" y="94" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">接近</text>
+<line x1="24" y1="134" x2="776" y2="134" stroke="#F7F2FA" stroke-width="1"/>
+<text x="40" y="160" font-size="12" font-weight="600" fill="#1C1B1F"><tspan x="40" dy="0">最难问题上的可靠性</tspan></text>
+<rect x="398.0" y="146" width="64" height="24" rx="12" fill="#6750A4"/>
+<text x="430" y="162" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">最高</text>
+<rect x="568.0" y="146" width="64" height="24" rx="12" fill="#34A853"/>
+<text x="600" y="162" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">强</text>
+<rect x="708.0" y="146" width="64" height="24" rx="12" fill="#F4B400"/>
+<text x="740" y="162" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">中等</text>
+<line x1="24" y1="202" x2="776" y2="202" stroke="#F7F2FA" stroke-width="1"/>
+<text x="40" y="228" font-size="12" font-weight="600" fill="#1C1B1F"><tspan x="40" dy="0">世界知识广度</tspan></text>
+<rect x="398.0" y="214" width="64" height="24" rx="12" fill="#6750A4"/>
+<text x="430" y="230" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">最高</text>
+<rect x="568.0" y="214" width="64" height="24" rx="12" fill="#34A853"/>
+<text x="600" y="230" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">良好</text>
+<rect x="708.0" y="214" width="64" height="24" rx="12" fill="#F4B400"/>
+<text x="740" y="230" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">有限</text>
+<line x1="24" y1="270" x2="776" y2="270" stroke="#F7F2FA" stroke-width="1"/>
+<text x="40" y="296" font-size="12" font-weight="600" fill="#1C1B1F"><tspan x="40" dy="0">长且多约束的问题</tspan></text>
+<rect x="398.0" y="282" width="64" height="24" rx="12" fill="#6750A4"/>
+<text x="430" y="298" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">最佳</text>
+<rect x="568.0" y="282" width="64" height="24" rx="12" fill="#34A853"/>
+<text x="600" y="298" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">良好</text>
+<rect x="708.0" y="282" width="64" height="24" rx="12" fill="#F4B400"/>
+<text x="740" y="298" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">会下降</text>
+<line x1="24" y1="338" x2="776" y2="338" stroke="#F7F2FA" stroke-width="1"/>
+<text x="40" y="364" font-size="12" font-weight="600" fill="#1C1B1F"><tspan x="40" dy="0">可在消费级硬件运行</tspan></text>
+<rect x="398.0" y="350" width="64" height="24" rx="12" fill="#EA4335"/>
+<text x="430" y="366" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">否</text>
+<rect x="546.0" y="350" width="108" height="24" rx="12" fill="#34A853"/>
+<text x="600" y="366" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">是（24 GB）</text>
+<rect x="691.5" y="350" width="97" height="24" rx="12" fill="#F4B400"/>
+<text x="740" y="366" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">是（8 GB）</text>
+<text x="792" y="425" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
