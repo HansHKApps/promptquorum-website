@@ -170,6 +170,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'The architecture is identical to Claude Desktop\'s. The differences are the model (a local Ollama model instead of Claude) and the client (Goose/Cline/Continue.dev/LM Studio instead of Claude Desktop). The MCP servers are the same servers — you can run the filesystem server underneath Claude Desktop today and it will still run unchanged underneath Goose tomorrow.',
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-mcp-architecture-en.svg',
+        imageCaption:
+          'MCP architecture diagram: Ollama serves the local model, an MCP client (Goose, Cline, Continue.dev, or LM Studio) bridges to MCP servers over stdio using JSON-RPC 2.0, and four reference servers — filesystem, SQLite/Postgres, browser, and GitHub — expose the actual tools.',
       },
       setup: {
         id: 'setup',
@@ -193,6 +196,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'If you already use Cline or Continue.dev, skip Goose and use those — both added MCP server support in their early-2026 releases. Cline\'s "MCP Servers" panel installs reference servers with one click; Continue.dev reads `mcpServers` from `~/.continue/config.json` (same shape as the Goose config block below). The model and the servers are the same; only the host application changes.',
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-setup-flow-en.svg',
+        imageCaption:
+          'Six-step Ollama and Goose setup flow: install Ollama, pull a tool-calling model like gemma4:27b, install Goose via pipx, configure the provider, add the filesystem MCP server, and verify with a real task in about 15 minutes.',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -594,6 +600,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Die Architektur ist identisch zu der von Claude Desktop. Die Unterschiede sind das Modell (ein lokales Ollama-Modell statt Claude) und der Client (Goose/Cline/Continue.dev/LM Studio statt Claude Desktop). Die MCP-Server sind dieselben Server — Sie können den Filesystem-Server heute unter Claude Desktop laufen lassen und er wird morgen unverändert unter Goose laufen.',
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-mcp-architecture-de.svg',
+        imageCaption:
+          'MCP-Architekturdiagramm: Ollama liefert das lokale Modell, ein MCP-Client (Goose, Cline, Continue.dev oder LM Studio) verbindet sich über stdio per JSON-RPC 2.0 mit MCP-Servern, und vier Referenzserver — Dateisystem, SQLite/Postgres, Browser und GitHub — stellen die eigentlichen Tools bereit.',
       },
       setup: {
         id: 'setup',
@@ -617,6 +626,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Wenn Sie bereits Cline oder Continue.dev nutzen, überspringen Sie Goose und verwenden Sie diese — beide haben in ihren Anfang-2026-Releases MCP-Server-Unterstützung erhalten. Das „MCP Servers"-Panel von Cline installiert Referenz-Server mit einem Klick; Continue.dev liest `mcpServers` aus `~/.continue/config.json` (gleiche Form wie der Goose-Config-Block unten). Modell und Server sind dieselben; nur die Host-Anwendung ändert sich.',
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-setup-flow-de.svg',
+        imageCaption:
+          'Sechsstufiger Einrichtungsablauf für Ollama und Goose: Ollama installieren, ein toolfähiges Modell wie gemma4:27b laden, Goose per pipx installieren, den Provider konfigurieren, den Dateisystem-MCP-Server hinzufügen und mit einer echten Aufgabe in rund 15 Minuten prüfen.',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -1040,6 +1052,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: "L'architecture est identique à celle de Claude Desktop. Les différences sont le modèle (Ollama local au lieu de Claude) et le client (Goose/Cline/Continue.dev/LM Studio au lieu de Claude Desktop). Les serveurs MCP sont les mêmes — vous pouvez faire tourner le serveur filesystem sous Claude Desktop aujourd'hui et il fonctionnera demain sans modification sous Goose.",
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-mcp-architecture-fr.svg',
+        imageCaption:
+          'Diagramme d\'architecture MCP : Ollama fournit le modèle local, un client MCP (Goose, Cline, Continue.dev ou LM Studio) fait le pont vers des serveurs MCP via stdio en JSON-RPC 2.0, et quatre serveurs de référence — système de fichiers, SQLite/Postgres, navigateur et GitHub — exposent les outils réels.',
       },
       setup: {
         id: 'setup',
@@ -1063,6 +1078,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: "Si vous utilisez déjà Cline ou Continue.dev, sautez Goose et utilisez-les — les deux ont ajouté le support des serveurs MCP dans leurs versions de début 2026. Le panneau « MCP Servers » de Cline installe les serveurs de référence en un clic ; Continue.dev lit `mcpServers` depuis `~/.continue/config.json` (même forme que le bloc Goose ci-dessous). Le modèle et les serveurs sont les mêmes ; seule l'application hôte change.",
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-setup-flow-fr.svg',
+        imageCaption:
+          'Flux d\'installation en six étapes pour Ollama et Goose : installer Ollama, télécharger un modèle compatible outils comme gemma4:27b, installer Goose via pipx, configurer le fournisseur, ajouter le serveur MCP fichiers et vérifier avec une tâche réelle en environ 15 minutes.',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -1478,6 +1496,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'アーキテクチャは Claude Desktop と同一です。違いはモデル（Claude の代わりにローカル Ollama モデル）とクライアント（Claude Desktop の代わりに Goose/Cline/Continue.dev/LM Studio）です。MCP サーバーは同じサーバー — 今日 Claude Desktop で動かしている filesystem サーバーは、明日 Goose 配下で変更なく動作します。',
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-mcp-architecture-ja.svg',
+        imageCaption:
+          'MCPアーキテクチャ図：Ollamaがローカルモデルを提供し、MCPクライアント（Goose、Cline、Continue.dev、LM Studio）がstdio経由のJSON-RPC 2.0でMCPサーバーに接続し、ファイルシステム・SQLite/Postgres・ブラウザ・GitHubの4つのリファレンスサーバーが実際のツールを公開する。',
       },
       setup: {
         id: 'setup',
@@ -1501,6 +1522,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'すでに Cline や Continue.dev を使っているなら Goose をスキップしてそちらを使ってください — どちらも 2026 年初頭のリリースで MCP サーバー対応を追加しました。Cline の「MCP Servers」パネルはリファレンスサーバーをワンクリックでインストール、Continue.dev は `~/.continue/config.json` の `mcpServers` を読みます（下記 Goose 設定ブロックと同形式）。モデルとサーバーは同じ；ホストアプリだけが変わります。',
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-setup-flow-ja.svg',
+        imageCaption:
+          'OllamaとGooseの6ステップセットアップフロー：Ollamaをインストールし、gemma4:27bなどツール呼び出し対応モデルを取得し、pipxでGooseをインストールし、プロバイダーを設定し、ファイルシステムMCPサーバーを追加し、約15分で実タスクにより確認する。',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -1924,6 +1948,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '架构与 Claude Desktop 完全相同。区别在于模型（本地 Ollama 模型替代 Claude）与客户端（Goose/Cline/Continue.dev/LM Studio 替代 Claude Desktop）。MCP 服务器是同一套——你今天在 Claude Desktop 下跑的 filesystem 服务器，明天在 Goose 下也能不加修改地继续跑。',
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-mcp-architecture-zh.svg',
+        imageCaption:
+          'MCP 架构图：Ollama 提供本地模型，MCP 客户端（Goose、Cline、Continue.dev 或 LM Studio）通过 stdio 上的 JSON-RPC 2.0 与 MCP 服务器桥接，文件系统、SQLite/Postgres、浏览器和 GitHub 四个参考服务器负责暴露实际工具。',
       },
       setup: {
         id: 'setup',
@@ -1947,6 +1974,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '若你已使用 Cline 或 Continue.dev，可跳过 Goose 直接使用——两者都在 2026 年初的版本中加入了 MCP 服务器支持。Cline 的「MCP Servers」面板一键安装参考服务器；Continue.dev 从 `~/.continue/config.json` 读取 `mcpServers`（与下面的 Goose 配置块同形）。模型与服务器都相同；变化的只是宿主应用。',
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-setup-flow-zh.svg',
+        imageCaption:
+          'Ollama 与 Goose 的六步配置流程：安装 Ollama，拉取如 gemma4:27b 的支持工具调用的模型，通过 pipx 安装 Goose，配置提供方，添加文件系统 MCP 服务器，并在约 15 分钟内用真实任务验证。',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -2369,6 +2399,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'La arquitectura es idéntica a la de Claude Desktop. Las diferencias son el modelo (un modelo Ollama local en lugar de Claude) y el cliente (Goose/Cline/Continue.dev/LM Studio en lugar de Claude Desktop). Los servidores MCP son los mismos servidores — puedes ejecutar el servidor filesystem bajo Claude Desktop hoy y seguirá funcionando sin cambios bajo Goose mañana.',
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-mcp-architecture-es.svg',
+        imageCaption:
+          'Diagrama de arquitectura MCP: Ollama sirve el modelo local, un cliente MCP (Goose, Cline, Continue.dev o LM Studio) conecta con servidores MCP vía stdio usando JSON-RPC 2.0, y cuatro servidores de referencia — sistema de archivos, SQLite/Postgres, navegador y GitHub — exponen las herramientas reales.',
       },
       setup: {
         id: 'setup',
@@ -2392,6 +2425,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Si ya usas Cline o Continue.dev, omite Goose y úsalos — ambos añadieron soporte de servidor MCP en sus versiones de principios de 2026. El panel "MCP Servers" de Cline instala los servidores de referencia con un clic; Continue.dev lee `mcpServers` desde `~/.continue/config.json` (misma estructura que el bloque de configuración de Goose a continuación). El modelo y los servidores son los mismos; solo cambia la aplicación host.',
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-setup-flow-es.svg',
+        imageCaption:
+          'Flujo de configuración en seis pasos para Ollama y Goose: instalar Ollama, descargar un modelo con llamadas a herramientas como gemma4:27b, instalar Goose con pipx, configurar el proveedor, añadir el servidor MCP de archivos y verificar con una tarea real en unos 15 minutos.',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -2805,6 +2841,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'A arquitetura é idêntica à do Claude Desktop. As diferenças são o modelo (um modelo Ollama local em vez do Claude) e o cliente (Goose/Cline/Continue.dev/LM Studio em vez do Claude Desktop). Os servidores MCP são os mesmos servidores.',
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-mcp-architecture-pt.svg',
+        imageCaption:
+          'Diagrama de arquitetura MCP: o Ollama fornece o modelo local, um cliente MCP (Goose, Cline, Continue.dev ou LM Studio) faz a ponte com servidores MCP via stdio usando JSON-RPC 2.0, e quatro servidores de referência — sistema de arquivos, SQLite/Postgres, navegador e GitHub — expõem as ferramentas reais.',
       },
       setup: {
         id: 'setup',
@@ -2828,6 +2867,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Se você já usa Cline ou Continue.dev, pule o Goose e use-os — ambos adicionaram suporte a servidor MCP em suas versões do início de 2026. O painel "MCP Servers" do Cline instala os servidores de referência com um clique; o Continue.dev lê `mcpServers` de `~/.continue/config.json` (mesma estrutura que o bloco de configuração do Goose abaixo). O modelo e os servidores são os mesmos; apenas o aplicativo host muda.',
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-setup-flow-pt.svg',
+        imageCaption:
+          'Fluxo de configuração em seis passos para Ollama e Goose: instalar o Ollama, baixar um modelo com suporte a ferramentas como o gemma4:27b, instalar o Goose via pipx, configurar o provedor, adicionar o servidor MCP de arquivos e verificar com uma tarefa real em cerca de 15 minutos.',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -3227,6 +3269,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**خوادم MCP** تعمل كعمليات فرعية محلية تتواصل عبر stdio. لكل خادم قدراته: filesystem يعرض أدوات قراءة_ملف وكتابة_ملف وسرد_الدليل؛ sqlite يعرض أداة استعلام_قاعدة_البيانات؛ وهكذا.',
           '**دفق البيانات:** المستخدم → العميل → Ollama → استدعاء أداة (JSON) → العميل → خادم MCP → نتيجة → العميل → Ollama → رد → المستخدم. لا شيء يغادر جهازك.',
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-mcp-architecture-ar.svg',
+        imageCaption:
+          'مخطط معمارية MCP: يوفر Ollama النموذج المحلي، ويربط عميل MCP (مثل Goose أو Cline أو Continue.dev أو LM Studio) بخوادم MCP عبر stdio باستخدام JSON-RPC 2.0، وتعرض أربعة خوادم مرجعية — نظام الملفات وSQLite/Postgres والمتصفح وGitHub — الأدوات الفعلية.',
       },
       setup: {
         id: 'setup',
@@ -3240,6 +3285,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أنشئ `~/.config/goose/mcp.json` بمحتوى الإعداد (filesystem يُقيَّد بـ`~/agent-workspace`, sqlite يُشير إلى قاعدة بياناتك).',
           'شغّل Goose: `goose session` — النموذج الآن يرى الأدوات ويستطيع استخدامها.',
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-setup-flow-ar.svg',
+        imageCaption:
+          'تدفق إعداد من ست خطوات لـ Ollama وGoose: تثبيت Ollama، تنزيل نموذج يدعم استدعاء الأدوات مثل gemma4:27b، تثبيت Goose عبر pipx، تهيئة المزوّد، إضافة خادم الملفات MCP، والتحقق بمهمة حقيقية خلال نحو 15 دقيقة.',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -3588,6 +3636,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '아키텍처는 Claude Desktop과 동일합니다. 차이점은 모델(Claude 대신 로컬 Ollama 모델)과 클라이언트(Claude Desktop 대신 Goose/Cline/Continue.dev/LM Studio)입니다. MCP 서버는 동일한 서버입니다 — 오늘 Claude Desktop에서 filesystem 서버를 실행할 수 있고, 내일 Goose에서도 변경 없이 계속 작동합니다.',
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-mcp-architecture-ko.svg',
+        imageCaption:
+          'MCP 아키텍처 다이어그램: Ollama가 로컬 모델을 제공하고, MCP 클라이언트(Goose, Cline, Continue.dev, LM Studio)가 stdio 기반 JSON-RPC 2.0으로 MCP 서버와 연결되며, 파일 시스템·SQLite/Postgres·브라우저·GitHub 네 개의 참조 서버가 실제 도구를 제공한다.',
       },
       setup: {
         id: 'setup',
@@ -3611,6 +3662,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Cline 또는 Continue.dev를 이미 사용하고 있다면 Goose를 건너뛰고 그것들을 사용하십시오 — 둘 다 2026년 초 릴리스에 MCP 서버 지원을 추가했습니다. Cline의 "MCP Servers" 패널은 클릭 한 번으로 참조 서버를 설치합니다; Continue.dev는 `~/.continue/config.json`의 `mcpServers`를 읽습니다(아래 Goose 설정 블록과 동일한 구조). 모델과 서버는 동일합니다; 호스트 앱만 바뀝니다.',
           },
         ],
+        image: '/images/local-ai-agents-with-mcp-2026-setup-flow-ko.svg',
+        imageCaption:
+          'Ollama와 Goose의 6단계 설정 흐름: Ollama 설치, gemma4:27b 같은 도구 호출 모델 다운로드, pipx로 Goose 설치, 제공자 구성, 파일 시스템 MCP 서버 추가, 약 15분 내 실제 작업으로 검증.',
       },
       filesystemServer: {
         id: 'filesystem-server',

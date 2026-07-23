@@ -1,0 +1,33 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<rect width="800" height="400" fill="#FFFFFF"/>
+<text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">MCP 아키텍처: 로컬 모델에서 도구까지</text>
+<rect x="28" y="65" width="230" height="95" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+<text x="143.0" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ollama (로컬 모델)</text>
+<text x="143.0" y="123" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">127.0.0.1:11434 · OpenAI 호환 API</text>
+<rect x="285" y="65" width="230" height="95" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+<text x="400.0" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">MCP 클라이언트</text>
+<text x="400.0" y="123" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">Goose · Cline · Continue.dev · LM Studio</text>
+<rect x="542" y="65" width="230" height="95" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+<text x="657.0" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">MCP 서버</text>
+<text x="657.0" y="123" font-family="system-ui, sans-serif" font-size="10.5" fill="#49454F" text-anchor="middle">stdio를 통한 JSON-RPC 2.0</text>
+<text x="258" y="106.5" font-size="16" fill="#6750A4" text-anchor="middle">⇄</text>
+<text x="515" y="106.5" font-size="16" fill="#6750A4" text-anchor="middle">⇄</text>
+<text x="258" y="126.5" font-family="system-ui, sans-serif" font-size="9" fill="#79747E" text-anchor="middle">도구 호출</text>
+<text x="515" y="126.5" font-family="system-ui, sans-serif" font-size="9" fill="#79747E" text-anchor="middle">결과</text>
+<line x1="657.0" y1="160" x2="657.0" y2="235" stroke="#6750A4" stroke-width="1.5"/>
+<line x1="657.0" y1="170" x2="116.0" y2="250" stroke="#E8DEF8" stroke-width="1.5"/>
+<rect x="40" y="250" width="152" height="56" rx="8" fill="#FFFFFF" stroke="#79747E" stroke-width="1.5"/>
+<text x="116.0" y="283" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">파일 시스템</text>
+<line x1="657.0" y1="170" x2="308.0" y2="250" stroke="#E8DEF8" stroke-width="1.5"/>
+<rect x="232" y="250" width="152" height="56" rx="8" fill="#FFFFFF" stroke="#79747E" stroke-width="1.5"/>
+<text x="308.0" y="283" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">SQLite / Postgres</text>
+<line x1="657.0" y1="170" x2="500.0" y2="250" stroke="#E8DEF8" stroke-width="1.5"/>
+<rect x="424" y="250" width="152" height="56" rx="8" fill="#FFFFFF" stroke="#79747E" stroke-width="1.5"/>
+<text x="500.0" y="283" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">브라우저</text>
+<line x1="657.0" y1="170" x2="692.0" y2="250" stroke="#E8DEF8" stroke-width="1.5"/>
+<rect x="616" y="250" width="152" height="56" rx="8" fill="#FFFFFF" stroke="#79747E" stroke-width="1.5"/>
+<text x="692.0" y="283" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">GitHub</text>
+<line x1="18" y1="326" x2="782" y2="326" stroke="#E8DEF8" stroke-width="1.5"/>
+<text x="400" y="351" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Ollama가 모델을 제공하고, MCP 클라이언트는 도구 호출을 stdio를 통해 로컬 MCP 서버로 전달한다. 각 서버는 파일, 데이터베이스, 브라우저, GitHub 중 하나의 기능에 대한 도구를 제공한다.</text>
+<text x="792" y="392" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>
