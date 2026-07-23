@@ -1,0 +1,29 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Por que as empresas adotam LLMs locais</text>
+  
+  <rect x="34" y="90" width="232" height="220" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="34" y="90" width="232" height="4" rx="0" fill="#6750A4"/>
+  <circle cx="150" cy="134" r="20" fill="#E8DEF8"/>
+  <text x="150" y="141" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#6750A4" text-anchor="middle">1</text>
+  <text x="150" y="182" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Controle de custos</text>
+  <text x="150" y="212" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Elimina tarifas de</text>
+  <text x="150" y="232" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">API por token</text>
+
+  <rect x="284" y="90" width="232" height="220" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="284" y="90" width="232" height="4" rx="0" fill="#6750A4"/>
+  <circle cx="400" cy="134" r="20" fill="#E8DEF8"/>
+  <text x="400" y="141" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#6750A4" text-anchor="middle">2</text>
+  <text x="400" y="182" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Conformidade</text>
+  <text x="400" y="212" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">LGPD, GDPR, HIPAA</text>
+  <text x="400" y="232" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">residência de dados</text>
+
+  <rect x="534" y="90" width="232" height="220" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="534" y="90" width="232" height="4" rx="0" fill="#6750A4"/>
+  <circle cx="650" cy="134" r="20" fill="#E8DEF8"/>
+  <text x="650" y="141" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#6750A4" text-anchor="middle">3</text>
+  <text x="650" y="182" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Soberania de dados</text>
+  <text x="650" y="212" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Controle total da</text>
+  <text x="650" y="232" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">infraestrutura</text>
+
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

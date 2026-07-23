@@ -64,6 +64,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         compliance: {
           title: 'What Compliance Requirements Drive Local AI?',
+          image: '/images/why-enterprises-use-local-llms-adoption-motivations-en.svg',
+          imageCaption: 'Three enterprise drivers for local LLM adoption: cost control, compliance with GDPR, HIPAA, and SOC2, and full data sovereignty over infrastructure.',
           content: [
             '**GDPR (EU):** Article 32 requires data processing within the EU. Cloud APIs to US servers violate GDPR. EU options include [Hetzner Cloud GPU](https://www.hetzner.com/cloud/gpu/), Scaleway, and OVHcloud.',
             '**HIPAA (Healthcare):** 164.306 requires patient data stored and processed on secure, audited infrastructure. No third-party API access.',
@@ -74,6 +76,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         dataSovereignty: {
           title: 'Why Do Enterprises Need Data Sovereignty?',
+          image: '/images/why-enterprises-use-local-llms-deployment-architecture-en.svg',
+          imageCaption: 'Enterprise local LLM deployment architecture: employees and internal apps route through an internal API gateway to on-premises LLM servers behind a firewall/VPN boundary, with external cloud APIs blocked.',
           content: [
             '**Data sovereignty means data stays under the organization\'s physical and legal control.** No third-party access, no government subpoena risk.',
             '**Sensitive use cases:** Financial models, drug formulations, trade secrets, customer personal information.',
@@ -325,6 +329,8 @@ schema: {
         },
         compliance: {
           title: '¿Qué requisitos de cumplimiento impulsan la IA local?',
+          image: '/images/why-enterprises-use-local-llms-adoption-motivations-es.svg',
+          imageCaption: 'Tres motores empresariales para adoptar LLMs locales: control de costos, cumplimiento de GDPR, HIPAA y SOC2, y soberanía total de datos sobre la infraestructura.',
           content: [
             '**GDPR (UE):** El artículo 32 exige el procesamiento de datos dentro de la UE. Las APIs en la nube hacia servidores en EE. UU. violan el GDPR. Las opciones en la UE incluyen [Hetzner Cloud GPU](https://www.hetzner.com/cloud/gpu/), Scaleway y OVHcloud.',
             '**HIPAA (Salud):** La sección 164.306 requiere que los datos de pacientes se almacenen y procesen en infraestructura segura y auditada. Sin acceso de terceros a la API.',
@@ -335,6 +341,8 @@ schema: {
         },
         dataSovereignty: {
           title: '¿Por qué las empresas necesitan soberanía de datos?',
+          image: '/images/why-enterprises-use-local-llms-deployment-architecture-es.svg',
+          imageCaption: 'Arquitectura de despliegue empresarial de LLM local: los empleados y las apps internas pasan por una puerta de enlace de API interna hacia los servidores LLM en local, protegidos por un perímetro de firewall/VPN, con las APIs en la nube externas bloqueadas.',
           content: [
             '**La soberanía de datos significa que los datos permanecen bajo el control físico y legal de la organización.** Sin acceso de terceros, sin riesgo de citación gubernamental.',
             '**Casos de uso sensibles:** Modelos financieros, formulaciones de medicamentos, secretos comerciales, información personal de clientes.',
@@ -586,6 +594,8 @@ schema: {
         },
         compliance: {
           title: 'أي متطلبات امتثال تدفع نحو الذكاء الاصطناعي المحلي؟',
+          image: '/images/why-enterprises-use-local-llms-adoption-motivations-ar.svg',
+          imageCaption: 'ثلاثة دوافع مؤسسية لتبني نماذج LLM المحلية: التحكم بالتكلفة، والامتثال لـ GDPR وHIPAA وSOC2، وسيادة كاملة على البيانات والبنية التحتية.',
           content: [
             '**GDPR (الاتحاد الأوروبي):** تفرض المادة 32 معالجة البيانات داخل الاتحاد الأوروبي. واجهات API السحابية نحو خوادم في الولايات المتحدة تنتهك GDPR. تشمل الخيارات في الاتحاد الأوروبي [Hetzner Cloud GPU](https://www.hetzner.com/cloud/gpu/) وScaleway وOVHcloud.',
             '**PDPL (السعودية) وأطر الخليج:** يفرض نظام حماية البيانات الشخصية (PDPL) في السعودية، إلى جانب أطر السيادة على الذكاء الاصطناعي في الإمارات، إقامة البيانات الشخصية ومعالجتها داخل الحدود الوطنية. يضمن الذكاء الاصطناعي المحلي الامتثال، ويمكّن من استخدام نماذج عربية المنشأ مثل Jais (G42) وALLaM وFalcon (TII، الإمارات) على عتاد سيادي.',
@@ -597,6 +607,8 @@ schema: {
         },
         dataSovereignty: {
           title: 'لماذا تحتاج المؤسسات إلى سيادة البيانات؟',
+          image: '/images/why-enterprises-use-local-llms-deployment-architecture-ar.svg',
+          imageCaption: 'بنية نشر نماذج LLM المحلية في المؤسسات: يمر الموظفون والتطبيقات الداخلية عبر بوابة API داخلية إلى خوادم LLM محلية خلف حدود جدار حماية/VPN، مع حظر واجهات API السحابية الخارجية.',
           content: [
             '**تعني سيادة البيانات بقاء البيانات تحت السيطرة المادية والقانونية للمؤسسة.** بلا وصول طرف ثالث، وبلا خطر أمر استدعاء حكومي.',
             '**حالات استخدام حساسة:** النماذج المالية، وتركيبات الأدوية، والأسرار التجارية، والمعلومات الشخصية للعملاء.',
@@ -847,6 +859,8 @@ schema: {
         compliance: {
           id: 'compliance',
           title: 'Requisitos de conformidade: LGPD, GDPR, HIPAA',
+          image: '/images/why-enterprises-use-local-llms-adoption-motivations-pt.svg',
+          imageCaption: 'Três motivadores empresariais para adotar LLMs locais: controle de custos, conformidade com LGPD, GDPR e HIPAA, e soberania total sobre dados e infraestrutura.',
           content: [
             '**LGPD (Brasil)**: A Lei Geral de Proteção de Dados (Lei 13.709/2018) e as diretrizes da ANPD exigem que operadores de dados pessoais adotem medidas técnicas adequadas. Enviar dados pessoais de clientes brasileiros para APIs de LLM na nuvem pode constituir transferência internacional sem as salvaguardas adequadas. LLMs locais eliminam esse risco — os dados nunca saem do hardware da organização.',
             '**GDPR (UE)**: O Artigo 44 proíbe transferências de dados pessoais para países sem nível adequado de proteção sem salvaguardas específicas. Implantações locais eliminam completamente essa categoria de risco.',
@@ -859,6 +873,8 @@ schema: {
         dataSovereignty: {
           id: 'data-sovereignty',
           title: 'Controle e soberania de dados',
+          image: '/images/why-enterprises-use-local-llms-deployment-architecture-pt.svg',
+          imageCaption: 'Arquitetura de implantação de LLM local empresarial: funcionários e apps internos passam por um gateway de API interno até servidores LLM on-premises, protegidos por um perímetro de firewall/VPN, com APIs de nuvem externas bloqueadas.',
           content: [
             '**Implantações locais de LLM oferecem controle total sobre o modelo, os dados e a infraestrutura.** Isso inclui: modelos fine-tuned com dados proprietários, log de auditoria completo de todos os prompts e respostas, sem risco de mudanças de termos de serviço ou interrupções de API de fornecedor, e capacidade de executar completamente offline.',
           ],
@@ -970,6 +986,8 @@ schema: {
         },
         compliance: {
           title: 'Welche Compliance-Anforderungen treiben lokale KI an?',
+          image: '/images/why-enterprises-use-local-llms-adoption-motivations-de.svg',
+          imageCaption: 'Drei Unternehmensgründe für lokale LLMs: Kostenkontrolle, Compliance mit DSGVO, HIPAA und SOC2, sowie vollständige Datenhoheit über die Infrastruktur.',
           content: [
             '**DSGVO (EU):** Artikel 32 verlangt Datenverarbeitung in der EU. Cloud-APIs auf US-Servern verletzen DSGVO.',
             '**BSI-Grundschutz (Deutschland):** Verlangt sichere, auditierte Infrastruktur. Kein Zugriff durch Dritte.',
@@ -980,6 +998,8 @@ schema: {
         },
         dataSovereignty: {
           title: 'Warum brauchen Unternehmen Datenschutz?',
+          image: '/images/why-enterprises-use-local-llms-deployment-architecture-de.svg',
+          imageCaption: 'Architektur für die lokale Unternehmens-LLM-Bereitstellung: Mitarbeiter und interne Apps laufen über ein internes API-Gateway zu On-Premises-LLM-Servern hinter einer Firewall-/VPN-Grenze, externe Cloud-APIs sind blockiert.',
           content: [
             '**Datenschutz bedeutet, dass Daten unter der physischen und rechtlichen Kontrolle der Organisation bleiben.** Kein Zugriff durch Dritte, kein Risiko durch Regierungssubpoena.',
             '**Empfindliche Anwendungsfälle:** Finanzmodelle, Arzneimittelformulierungen, Geschäftsgeheimnisse, persönliche Kundeninformationen.',
@@ -1209,6 +1229,8 @@ schema: {
         },
         compliance: {
           title: 'Quelles exigences de conformité conduisent l\'IA locale ?',
+          image: '/images/why-enterprises-use-local-llms-adoption-motivations-fr.svg',
+          imageCaption: 'Trois moteurs d\'adoption des LLM locaux en entreprise : maîtrise des coûts, conformité au RGPD, à HIPAA et à SOC2, et souveraineté totale sur les données et l\'infrastructure.',
           content: [
             '**RGPD (UE) :** Article 32 exige le traitement des données dans l\'UE. Les API cloud vers les serveurs américains violent le RGPD.',
             '**CNIL (France) :** Recommande les solutions locales pour les données sensibles. Les API cloud US posent risque de conformité.',
@@ -1219,6 +1241,8 @@ schema: {
         },
         dataSovereignty: {
           title: 'Pourquoi les entreprises ont-elles besoin de souveraineté des données ?',
+          image: '/images/why-enterprises-use-local-llms-deployment-architecture-fr.svg',
+          imageCaption: 'Architecture de déploiement de LLM local en entreprise : les employés et applications internes passent par une passerelle API interne vers des serveurs LLM sur site, protégés par un périmètre pare-feu/VPN, avec les API cloud externes bloquées.',
           content: [
             '**La souveraineté des données signifie que les données restent sous le contrôle physique et juridique de l\'organisation.** Pas d\'accès tiers, pas de risque de subpoena gouvernementale.',
             '**Cas d\'usage sensibles :** Modèles financiers, formulations de médicaments, secrets commerciaux, informations personnelles des clients.',
@@ -1448,6 +1472,8 @@ schema: {
         },
         compliance: {
           title: 'どのコンプライアンス要件がローカルAIを駆動しますか？',
+          image: '/images/why-enterprises-use-local-llms-adoption-motivations-ja.svg',
+          imageCaption: '企業がローカルLLMを採用する3つの理由:コスト管理、GDPR・HIPAA・SOC2への準拠、インフラとデータの完全な主権。',
           content: [
             '**METI AI統治2024（日本）：** エンタープライズAI導入のための政府ガイドライン。オンプレミスデプロイを推奨します。',
             '**中国データセキュリティ法（2021）：** データは中国内に留まる必要があります。クラウドAPIは違反です。',
@@ -1458,6 +1484,8 @@ schema: {
         },
         dataSovereignty: {
           title: 'エンタープライズがなぜデータ主権を必要とするのですか？',
+          image: '/images/why-enterprises-use-local-llms-deployment-architecture-ja.svg',
+          imageCaption: '企業向けローカルLLM導入アーキテクチャ:従業員と社内アプリは社内APIゲートウェイを経由してオンプレミスLLMサーバーに接続し、ファイアウォール/VPN境界で保護され、外部クラウドAPIへのアクセスは遮断される。',
           content: [
             '**データ主権とは、データが組織の物理的および法的管理下に留まることを意味します。** サードパーティのアクセスなし、政府召喚状リスクなし。',
             '**機密使用例：** 金融モデル、医薬品製剤、営業秘密、顧客の個人情報。',
@@ -1687,6 +1715,8 @@ schema: {
         },
         compliance: {
           title: '哪些合规性要求促进本地AI？',
+          image: '/images/why-enterprises-use-local-llms-adoption-motivations-zh.svg',
+          imageCaption: '企业采用本地LLM的三大驱动因素:成本控制、符合GDPR、HIPAA和SOC2合规要求,以及对数据和基础设施的完全主权。',
           content: [
             '**数据安全法（中国）：** 2021年法律要求数据保留在中国境内。云API违反法律。',
             '**国家数据安全法（各国不同）：** 许多国家都有类似的数据居住要求。本地AI确保合规。',
@@ -1697,6 +1727,8 @@ schema: {
         },
         dataSovereignty: {
           title: '企业为什么需要数据主权？',
+          image: '/images/why-enterprises-use-local-llms-deployment-architecture-zh.svg',
+          imageCaption: '企业本地LLM部署架构:员工与内部应用通过内部API网关连接到本地部署的LLM服务器,由防火墙/VPN边界保护,外部云API被阻断。',
           content: [
             '**数据主权意味着数据保持在组织的物理和法律控制下。** 没有第三方访问，没有政府传票风险。',
             '**敏感用例：** 财务模型、药物制剂、商业机密、客户个人信息。',
@@ -1926,6 +1958,8 @@ schema: {
         },
         compliance: {
           title: '로컬 AI를 요구하는 컴플라이언스 요건은 무엇입니까?',
+          image: '/images/why-enterprises-use-local-llms-adoption-motivations-ko.svg',
+          imageCaption: '로컬 LLM 도입을 이끄는 세 가지 기업 동인: 비용 통제, GDPR·HIPAA·SOC2 컴플라이언스 준수, 인프라와 데이터에 대한 완전한 주권.',
           content: [
             '**GDPR (EU):** 제32조는 EU 내 데이터 처리를 요구합니다. 미국 서버로의 클라우드 API는 GDPR을 위반합니다. EU 옵션으로는 [Hetzner Cloud GPU](https://www.hetzner.com/cloud/gpu/), Scaleway, OVHcloud 등이 있습니다.',
             '**HIPAA (의료):** 164.306조는 환자 데이터를 안전하고 감사된 인프라에서 저장 및 처리하도록 요구합니다. 제3자 API 접근은 허용되지 않습니다.',
@@ -1936,6 +1970,8 @@ schema: {
         },
         dataSovereignty: {
           title: '기업에 데이터 주권이 필요한 이유는 무엇입니까?',
+          image: '/images/why-enterprises-use-local-llms-deployment-architecture-ko.svg',
+          imageCaption: '기업용 로컬 LLM 배포 아키텍처: 직원과 내부 앱은 내부 API 게이트웨이를 거쳐 온프레미스 LLM 서버에 연결되며, 방화벽/VPN 경계로 보호되고 외부 클라우드 API 접근은 차단된다.',
           content: [
             '**데이터 주권은 데이터가 조직의 물리적·법적 통제 하에 유지됨을 의미합니다.** 제3자 접근 없음, 정부 소환장 위험 없음.',
             '**민감한 사용 사례:** 금융 모델, 신약 성분, 영업 비밀, 고객 개인정보.',
