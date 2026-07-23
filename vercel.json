@@ -4,7 +4,8 @@
   "framework": "nextjs",
   "build": {
     "env": {
-      "NODE_OPTIONS": "--max-old-space-size=6144"
+      "NODE_OPTIONS": "--max-old-space-size=6144",
+      "VERCEL_BUILD_SYSTEM_REPORT": "1"
     }
   }
 }
