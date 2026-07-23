@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Flux de données RGPD : LLM local vs IA cloud</text>
+
+  <!-- Left Panel: Cloud AI (Problem) -->
+  <rect x="28" y="55" width="340" height="230" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#EA4335"/>
+  <text x="198" y="82" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#EA4335" text-anchor="middle">API d’IA cloud</text>
+
+  <circle cx="80" cy="125" r="20" fill="#EA4335"/>
+  <text x="80" y="131" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="115" y="121" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Prompt envoyé</text>
+
+  <text x="80" y="163" font-family="system-ui, sans-serif" font-size="20" fill="#EA4335" text-anchor="middle">&#8595;</text>
+
+  <circle cx="80" cy="200" r="20" fill="#EA4335"/>
+  <text x="80" y="206" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="115" y="190" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Transféré vers un serveur hors UE</text>
+  <text x="115" y="207" font-family="system-ui, sans-serif" font-size="12" fill="#49454F">(US / Chine)</text>
+
+  <rect x="48" y="240" width="300" height="34" rx="17" fill="#EA4335"/>
+  <text x="198" y="262" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Transfert Article 44 requis</text>
+
+  <!-- Right Panel: Local LLM (Goal) -->
+  <rect x="432" y="55" width="340" height="230" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="602" y="82" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#34A853" text-anchor="middle">LLM local (Qwen 3.6 27B)</text>
+
+  <circle cx="484" cy="125" r="20" fill="#34A853"/>
+  <text x="484" y="131" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="519" y="121" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Prompt traité</text>
+
+  <text x="484" y="163" font-family="system-ui, sans-serif" font-size="20" fill="#34A853" text-anchor="middle">&#8595;</text>
+
+  <circle cx="484" cy="200" r="20" fill="#34A853"/>
+  <text x="484" y="206" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="519" y="190" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Reste sur matériel UE</text>
+  <text x="519" y="207" font-family="system-ui, sans-serif" font-size="12" fill="#49454F"></text>
+
+  <rect x="452" y="240" width="300" height="34" rx="17" fill="#34A853"/>
+  <text x="602" y="262" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Pas d’obligation Article 44</text>
+
+  <!-- Footer -->
+  <line x1="28" y1="305" x2="772" y2="305" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="328" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">IA cloud = transfert de données transfrontalier nécessitant une justification RGPD Article 44.</text>
+  <text x="400" y="348" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">LLM local = données sur matériel UE, pas de transfert, pas d’obligation Article 44.</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

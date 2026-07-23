@@ -1,0 +1,30 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">قائمة تدقيق الامتثال لمواد GDPR: LLM محلي مقابل API سحابي</text>
+
+  <text x="40" y="60" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">مادة GDPR</text>
+  <text x="330" y="60" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">LLM محلي</text>
+  <text x="565" y="60" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">API سحابي</text>
+  <line x1="18" y1="68" x2="782" y2="68" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <rect x="18" y="70" width="764" height="48" fill="#F7F2FA" rx="4"/>
+  <text x="40" y="100" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">المادة 5 — تقليل البيانات</text>
+  <text x="330" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✅ لا تغادر البنية التحتية أبدًا</text>
+  <text x="565" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#F4B400">⚠️ تُنقل إلى المزوّد</text>
+  <rect x="18" y="122" width="764" height="48" fill="#FFFFFF" rx="4"/>
+  <text x="40" y="152" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">المادة 25 — حماية البيانات بالتصميم</text>
+  <text x="330" y="152" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✅ مَنع بالتصميم</text>
+  <text x="565" y="152" font-family="system-ui, sans-serif" font-size="11" fill="#F4B400">⚠️ تتطلب ضوابط تعاقدية</text>
+  <rect x="18" y="174" width="764" height="48" fill="#F7F2FA" rx="4"/>
+  <text x="40" y="204" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">المادة 32 — التدابير التقنية</text>
+  <text x="330" y="204" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✅ تشفير بتحكم المؤسسة</text>
+  <text x="565" y="204" font-family="system-ui, sans-serif" font-size="11" fill="#F4B400">⚠️ ينفذها المزوّد</text>
+  <rect x="18" y="226" width="764" height="48" fill="#FFFFFF" rx="4"/>
+  <text x="40" y="256" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">المادة 44 — النقل عبر الحدود</text>
+  <text x="330" y="256" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✅ لا نقل</text>
+  <text x="565" y="256" font-family="system-ui, sans-serif" font-size="11" fill="#EA4335">❌ يحدث النقل</text>
+  <rect x="18" y="278" width="764" height="48" fill="#F7F2FA" rx="4"/>
+  <text x="40" y="308" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">المادة 28 — التزامات المعالج</text>
+  <text x="330" y="308" font-family="system-ui, sans-serif" font-size="11" fill="#34A853">✅ لا معالج ضمن النطاق</text>
+  <text x="565" y="308" font-family="system-ui, sans-serif" font-size="11" fill="#F4B400">⚠️ يتطلب DPA</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

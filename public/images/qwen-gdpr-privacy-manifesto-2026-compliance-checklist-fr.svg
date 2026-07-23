@@ -1,0 +1,14 @@
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="300" fill="#FFFFFF"/>
+  <text x="400" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">Liste de Conformité RGPD : LLM Local</text>
+  <rect x="28" y="55" width="744" height="4" rx="0" fill="#6750A4"/>
+  <circle cx="55" cy="84" r="16" fill="#34A853"/>
+  <text x="55" y="89" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#10003;</text>
+  <text x="90" y="89" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">Art. 25 — Protection des données dès la conception (satisfait par le déploiement local)</text>
+  <circle cx="55" cy="146" r="16" fill="#34A853"/>
+  <text x="55" y="151" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#10003;</text>
+  <text x="90" y="151" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">Art. 32 — Mesures techniques appropriées (satisfait par le déploiement local)</text>
+  <circle cx="55" cy="208" r="16" fill="#34A853"/>
+  <text x="55" y="213" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">&#10003;</text>
+  <text x="90" y="213" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">Art. 44 — Aucune obligation de transfert transfrontalier (éliminée)</text>
+<text x="792" y="295" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

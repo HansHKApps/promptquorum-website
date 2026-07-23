@@ -16844,6 +16844,96 @@
     "width": 1200,
     "height": 675
   },
+  "/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 300
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 300
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 300
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 400
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 300
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-data-flow-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-data-flow-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-data-flow-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-data-flow-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-data-flow-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-data-flow-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-data-flow-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-data-flow-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-data-flow-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
   "/images/qwen-llama-mistral-benchmarks-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
