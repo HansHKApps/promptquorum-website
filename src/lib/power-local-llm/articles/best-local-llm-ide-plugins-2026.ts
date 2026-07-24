@@ -1478,7 +1478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       rankedList: {
-        heading: '2026년 최고의 로컬 LLM IDE 플러그인 상세 리뷰',
+        title: '2026년 최고의 로컬 LLM IDE 플러그인 상세 리뷰',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1561,7 +1561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: '로컬 LLM을 위한 최고의 IDE 플러그인 순위 -- 2026년 순위',
       },
       setupGuide: {
-        heading: '빠른 설정: VS Code에서 Cline + Ollama',
+        title: '빠른 설정: VS Code에서 Cline + Ollama',
         content: '현재 1위 픽으로 로컬 LLM 코딩을 가장 빠르게 시작하는 방법입니다:',
         numberedItems: [
           'ollama.com에서 Ollama를 설치합니다.',
@@ -1574,7 +1574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       aiderSetupGuide: {
-        heading: '빠른 설정: Aider + Ollama (터미널)',
+        title: '빠른 설정: Aider + Ollama (터미널)',
         content: '터미널 기반의 git 인식 AI 코딩을 위한 설정입니다 — Aider 공식 문서: aider.chat/docs/llms/ollama.html',
         numberedItems: [
           'Ollama를 설치하고 모델을 다운로드합니다: `ollama pull qwen2.5-coder:32b`',
@@ -1586,20 +1586,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       modelRecommendations: {
-        heading: '로컬 코딩 어시스턴트를 위한 최적 모델',
-        columns: ['모델', '크기', '자동완성', '채팅', '최소 VRAM'],
+        title: '플러그인과 작업별 최적 로컬 모델',
+        columns: ['플러그인', '최고의 코딩 모델 (로컬)', '최고의 채팅 모델 (로컬)', '최소 VRAM'],
         rows: [
-          { '모델': 'Qwen2.5-Coder 14B', '크기': '14B', '자동완성': '우수', '채팅': '우수', '최소 VRAM': '12 GB' },
-          { '모델': 'Qwen2.5-Coder 7B', '크기': '7B', '자동완성': '양호', '채팅': '양호', '최소 VRAM': '8 GB' },
-          { '모델': 'DeepSeek Coder V2 Lite', '크기': '16B', '자동완성': '우수', '채팅': '우수', '최소 VRAM': '12 GB' },
-          { '모델': 'Llama 3.3 8B', '크기': '8B', '자동완성': '양호', '채팅': '우수', '최소 VRAM': '8 GB' },
-          { '모델': 'Phi-4', '크기': '14B', '자동완성': '보통', '채팅': '우수', '최소 VRAM': '10 GB' },
+          { '플러그인': 'Cline', '최고의 코딩 모델 (로컬)': 'Qwen3-Coder 32B Q4', '최고의 채팅 모델 (로컬)': 'Qwen3 32B Q4', '최소 VRAM': '24 GB' },
+          { '플러그인': 'Bodega One Code', '최고의 코딩 모델 (로컬)': '임의의 로컬 모델 (BYOL)', '최고의 채팅 모델 (로컬)': '임의의 로컬 모델 (BYOL)', '최소 VRAM': '선택한 모델에 따라 다름' },
+          { '플러그인': 'Continue (레거시)', '최고의 코딩 모델 (로컬)': 'Qwen3-Coder 14B Q8', '최고의 채팅 모델 (로컬)': 'Llama 3.3 8B Q4', '최소 VRAM': '16 GB' },
+          { '플러그인': 'Tabby', '최고의 코딩 모델 (로컬)': 'StarCoder2-7B (내장)', '최고의 채팅 모델 (로컬)': 'N/A (코드 전용)', '최소 VRAM': '8 GB' },
+          { '플러그인': 'Aider', '최고의 코딩 모델 (로컬)': 'Qwen3-Coder 14B (에디터)', '최고의 채팅 모델 (로컬)': 'Qwen3-Coder 32B (아키텍트)', '최소 VRAM': '16–24 GB' },
+          { '플러그인': 'Cursor', '최고의 코딩 모델 (로컬)': 'DeepSeek-Coder-V2 (Ollama 경유)', '최고의 채팅 모델 (로컬)': 'Qwen3 14B', '최소 VRAM': '16 GB' },
         ],
         image: '/images/best-local-llm-ide-plugins-2026-model-recommendations-hero-ko.png',
         imageCaption: 'IDE 플러그인별 최고의 로컬 모델 -- 코딩 모델과 최소 VRAM',
       },
       lmStudioPlugins: {
-        heading: 'LM Studio 플러그인 (IDE 플러그인과는 다릅니다)',
+        title: 'LM Studio 플러그인 (IDE 플러그인과는 다릅니다)',
         content: '이는 앞서 다룬 "어떤 IDE 확장이 LM Studio와 연동되는가"와는 다른 질문입니다. LM Studio는 2024년 말부터 자체 플러그인 시스템을 갖추고 있습니다: 플러그인은 LM Studio 내부에서 — 샌드박스 처리된 워커에서 TypeScript 또는 Python 코드로 — 실행되며, 추론 요청을 가로채거나 프롬프트 프로세서를 추가하거나 도구 호출 백엔드를 연결하거나 새 UI 패널을 추가할 수 있습니다. lmstudio.ai/plugins의 큐레이션된 마켓플레이스에서 설치할 수 있으며, 각 플러그인은 필요한 권한(네트워크 접근, 파일 시스템 읽기)을 사전에 명시하고, 이후 설정에서 제거 없이 권한을 취소할 수 있습니다. 2026년 기준 주요 카테고리: 웹 검색 플러그인, RAG/문서 검색 전처리기, OCR 전처리기, 에이전트 도구 세트 플러그인, 셸/파일 접근 도구, 메모리 플러그인입니다.',
         items: [
           '**웹 검색 플러그인**: LM Studio의 로컬 모델이 실시간 웹 검색 결과를 컨텍스트에 가져올 수 있게 합니다 — 로컬 모델은 기본적으로 인터넷에 접근할 수 없으므로 유용합니다.',
