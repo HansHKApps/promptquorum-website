@@ -39,31 +39,10 @@ export const BALCONY_SOLAR_HUB_PUBLISHED = true
 // published", the default for every slug outside the BSOL-35..51 batch).
 //
 // Company profiles + market pillars (BSOL-35..51) — body content + FAQ/TL;DR were
-// authored and translated to all 9 languages starting 2026-07-20, but languages are
-// rolled out to search engines one at a time (English first) rather than all at once,
-// per explicit instruction after prior issues with big-bang publishes. Add a language
-// to a slug's set once that language's translation has been separately reviewed.
-// Remove the slug from this map entirely once all 9 languages are cleared — at that
-// point it behaves like every other fully-published slug (indexed in every language).
-const LANG_ROLLOUT: Readonly<Record<string, ReadonlySet<string>>> = {
-  'balcony-solar-industry-overview': new Set(['en']),
-  'balcony-solar-global-market-overview': new Set(['en']),
-  'anker-solix-balcony-solar': new Set(['en']),
-  'ecoflow-balcony-solar': new Set(['en']),
-  'zendure-balcony-solar': new Set(['en']),
-  'growatt-balcony-solar': new Set(['en']),
-  'hoymiles-microinverter-balcony-solar': new Set(['en']),
-  'deye-microinverter-balcony-solar': new Set(['en']),
-  'apsystems-microinverter-balcony-solar': new Set(['en']),
-  'goodwe-balcony-solar': new Set(['en']),
-  'enphase-microinverter-balcony-solar': new Set(['en']),
-  'yuma-balcony-solar': new Set(['en']),
-  'priwatt-balcony-solar': new Set(['en']),
-  'kleines-kraftwerk-balcony-solar': new Set(['en']),
-  'balkonstrom-balcony-solar': new Set(['en']),
-  'green-solar-pluginenergy-balcony-solar': new Set(['en']),
-  'meyer-burger-solarwatt-heckert-balcony-solar': new Set(['en']),
-}
+// authored and translated to all 9 languages starting 2026-07-20. All languages
+// cleared review on 2026-07-24 (owner authorized indexing every language at once),
+// so the rollout gate is empty — every slug behaves as fully published.
+const LANG_ROLLOUT: Readonly<Record<string, ReadonlySet<string>>> = {}
 
 export function isBalconySolarLangPublished(slug: string, lang: string): boolean {
   const rollout = LANG_ROLLOUT[slug]
