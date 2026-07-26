@@ -1,6 +1,10 @@
 import type { Language } from '@/lib/blog/blogContent'
 import type { PEArticle } from '@/lib/prompt-engineering/types'
 import { CLOUD_MODELS, LOCAL_MODELS, CUTOFF_DATA_LAST_VERIFIED } from '@/lib/shared/cutoff-data'
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('knowledge-cutoffs-and-geo');
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
@@ -72,12 +76,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/knowledge-cutoffs-and-geo',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'en'),
       url: 'https://www.promptquorum.com/prompt-engineering/knowledge-cutoffs-and-geo',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -475,12 +474,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/knowledge-cutoffs-and-geo',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'ko'),
       url: 'https://www.promptquorum.com/ko/prompt-engineering/knowledge-cutoffs-and-geo',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -878,12 +872,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/knowledge-cutoffs-and-geo',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'pt'),
       url: 'https://www.promptquorum.com/pt/prompt-engineering/knowledge-cutoffs-and-geo',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -1281,12 +1270,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/knowledge-cutoffs-and-geo',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'ja'),
       url: 'https://www.promptquorum.com/ja/prompt-engineering/knowledge-cutoffs-and-geo',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -1684,12 +1668,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/knowledge-cutoffs-and-geo',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'ar'),
       url: 'https://www.promptquorum.com/ar/prompt-engineering/knowledge-cutoffs-and-geo',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -2087,12 +2066,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/knowledge-cutoffs-and-geo',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'fr'),
       url: 'https://www.promptquorum.com/fr/prompt-engineering/knowledge-cutoffs-and-geo',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -2490,12 +2464,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/knowledge-cutoffs-and-geo',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'de'),
       url: 'https://www.promptquorum.com/de/prompt-engineering/knowledge-cutoffs-and-geo',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -2893,12 +2862,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/knowledge-cutoffs-and-geo',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'zh'),
       url: 'https://www.promptquorum.com/zh/prompt-engineering/knowledge-cutoffs-and-geo',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -3296,12 +3260,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/knowledge-cutoffs-and-geo',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'es'),
       url: 'https://www.promptquorum.com/es/prompt-engineering/knowledge-cutoffs-and-geo',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },

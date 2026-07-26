@@ -1,5 +1,9 @@
 import type { Language } from "@/lib/blog/blogContent";
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('prompt-review-workflow-for-teams');
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
@@ -42,7 +46,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/prompt-engineering/prompt-review-workflow-for-teams',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-review-workflow-for-teams', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'en'),
       keywords: ['prompt review', 'team workflow', 'quality assurance', 'CI/CD gates', 'prompt governance', 'LLM testing', 'hallucination prevention'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
@@ -438,7 +442,7 @@ require_code_owner_reviews: true`,
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/de/prompt-engineering/prompt-review-workflow-for-teams',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-review-workflow-for-teams?lang=de', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'de'),
       keywords: ['Prompt-Review', 'Team-Workflow', 'Qualitätssicherung', 'CI/CD-Gates', 'Prompt-Governance', 'LLM-Testing', 'Halluzination-Prävention'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
@@ -844,7 +848,7 @@ require_code_owner_reviews: true`,
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/es/prompt-engineering/prompt-review-workflow-for-teams',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-review-workflow-for-teams?lang=es', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'es'),
       keywords: ['revisión de prompts', 'flujo de trabajo en equipo', 'control de calidad', 'gates CI/CD', 'gobernanza de prompts', 'pruebas de LLMs', 'prevención de alucinaciones'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
@@ -1240,7 +1244,7 @@ require_code_owner_reviews: true`,
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       url: 'https://www.promptquorum.com/ar/prompt-engineering/prompt-review-workflow-for-teams',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-review-workflow-for-teams?lang=ar', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'ar'),
       keywords: ['مراجعة التعليمات', 'سير عمل الفريق', 'ضبط الجودة', 'بوابات CI/CD', 'حوكمة التعليمات', 'اختبار LLM', 'منع الهلوسة'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
@@ -1634,7 +1638,7 @@ require_code_owner_reviews: true`,
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/pt/prompt-engineering/prompt-review-workflow-for-teams',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-review-workflow-for-teams?lang=pt', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'pt'),
       keywords: ['revisão de prompts', 'fluxo de trabalho em equipe', 'controle de qualidade', 'gates CI/CD', 'governança de prompts', 'testes de LLMs', 'prevenção de alucinações'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
@@ -2030,7 +2034,7 @@ require_code_owner_reviews: true`,
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/fr/prompt-engineering/prompt-review-workflow-for-teams',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-review-workflow-for-teams?lang=fr', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'fr'),
       keywords: ['revue de prompts', 'workflow équipe', 'assurance qualité', 'gates CI/CD', 'gouvernance prompts', 'test LLM', 'prévention hallucinations'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
@@ -2426,7 +2430,7 @@ require_code_owner_reviews: true`,
       author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com/about' },
       url: 'https://www.promptquorum.com/ja/prompt-engineering/prompt-review-workflow-for-teams',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-review-workflow-for-teams?lang=ja', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'ja'),
       keywords: ['プロンプトレビュー', 'チームワークフロー', '品質保証', 'CI/CDゲート', 'プロンプトガバナンス', 'LLMテスト', '幻覚防止'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
@@ -2821,7 +2825,7 @@ require_code_owner_reviews: true`,
       author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com/about' },
       url: 'https://www.promptquorum.com/zh/prompt-engineering/prompt-review-workflow-for-teams',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-review-workflow-for-teams?lang=zh', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'zh'),
       keywords: ['Prompt 审查', '团队工作流', '质量保证', 'CI/CD 门控', 'Prompt 治理', 'LLM 测试', '幻觉防止', '数据安全'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
@@ -3130,7 +3134,7 @@ require_code_owner_reviews: true`,
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       url: 'https://www.promptquorum.com/ko/prompt-engineering/prompt-review-workflow-for-teams',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-review-workflow-for-teams?lang=ko', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'ko'),
       keywords: ['프롬프트 검토', '팀 워크플로', '품질 관리', 'CI/CD 게이트', '프롬프트 거버넌스', 'LLM 테스트', '환각 방지'],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum' },

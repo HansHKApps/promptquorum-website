@@ -5,6 +5,10 @@
 import type { Language } from "@/lib/blog/blogContent";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('control-the-output');
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
@@ -53,7 +57,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'en'),
         keywords: ['output control', 'constrained decoding', 'JSON schema', 'structured output', 'temperature', 'top-p', 'sampling parameters', 'prompt engineering'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
@@ -414,7 +418,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output?lang=de', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'de'),
         keywords: ['Ausgabekontrolle', 'Constrained Decoding', 'JSON-Schema', 'Strukturierter Output', 'Temperature', 'Top-P', 'Sampling-Parameter', 'Prompt Engineering'],
         about: [
           { '@type': 'Thing', name: 'Constrained Decoding' },
@@ -798,7 +802,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output?lang=es', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'es'),
         keywords: ['control de salida', 'constrained decoding', 'JSON schema', 'salida estructurada', 'temperature', 'top-p', 'parámetros de muestreo', 'prompt engineering'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
@@ -1135,7 +1139,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output?lang=ar', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ar'),
         keywords: ['التحكم في المخرجات', 'الفك المقيّد', 'مخطط JSON', 'المخرجات المنظّمة', 'درجة الحرارة', 'top-p', 'معاملات أخذ العينات', 'هندسة الموجّهات'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
@@ -1470,7 +1474,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output?lang=pt', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'pt'),
         keywords: ['controle de saída', 'constrained decoding', 'JSON schema', 'saída estruturada', 'temperatura', 'top-p', 'parâmetros de amostragem', 'prompt engineering'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
@@ -1804,7 +1808,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output?lang=fr', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'fr'),
         keywords: ['contrôle des sorties', 'decoding contraint', 'schéma JSON', 'sortie structurée', 'temperature', 'top-p', 'paramètres d\'échantillonnage', 'prompt engineering'],
         about: [
           { '@type': 'Thing', name: 'Decoding contraint' },
@@ -2173,7 +2177,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-29',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output?lang=ja', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ja'),
         keywords: ['出力制御', '制約デコード', 'JSONスキーマ', '構造化出力', 'Temperature', 'Top-P', 'サンプリングパラメータ', 'プロンプトエンジニアリング'],
         about: [
           { '@type': 'Thing', name: '制約デコード' },
@@ -2542,7 +2546,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-29',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'zh'),
         keywords: ['输出控制', '受限解码', 'JSON Schema', '结构化输出', 'Temperature', 'Top-P', '采样参数', 'Prompt工程'],
         about: [
           { '@type': 'Thing', name: '受限解码' },
@@ -2911,7 +2915,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/control-the-output?lang=ko', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ko'),
         keywords: ['출력 제어', '제약 디코딩', 'JSON 스키마', '구조화 출력', 'Temperature', 'Top-P', '샘플링 파라미터', '프롬프트 엔지니어링'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-5.5' },

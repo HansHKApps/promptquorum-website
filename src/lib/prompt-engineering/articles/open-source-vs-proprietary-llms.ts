@@ -5,6 +5,10 @@
 import type { Language } from "@/lib/blog/blogContent";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('open-source-vs-proprietary-llms');
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
@@ -65,7 +69,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'en'),
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -668,7 +672,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'de'),
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1209,7 +1213,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms?lang=es', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'es'),
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1470,7 +1474,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms?lang=ar', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ar'),
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1729,7 +1733,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms?lang=pt', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'pt'),
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1991,7 +1995,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'fr'),
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -2530,7 +2534,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ja'),
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -3084,7 +3088,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'zh'),
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -3622,7 +3626,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms?lang=ko', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ko'),
       },
       itemListSchema: {
         '@context': 'https://schema.org',

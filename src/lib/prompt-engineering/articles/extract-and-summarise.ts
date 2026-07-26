@@ -5,6 +5,10 @@
 import type { Language } from "@/lib/blog/blogContent";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('extract-and-summarise');
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
@@ -73,12 +77,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             url: 'https://www.promptquorum.com/logo.svg',
           },
         },
-        image: {
-          '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
-          width: 1200,
-          height: 675,
-        },
+        image: buildOgImageObject(OG_SLUG, 'en'),
         proficiencyLevel: 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Document Summarisation' },
@@ -661,12 +660,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             url: 'https://www.promptquorum.com/logo.svg',
           },
         },
-        image: {
-          '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
-          width: 1200,
-          height: 675,
-        },
+        image: buildOgImageObject(OG_SLUG, 'de'),
         proficiencyLevel: 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Dokumentenzusammenfassung' },
@@ -1184,12 +1178,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             url: 'https://www.promptquorum.com/logo.svg',
           },
         },
-        image: {
-          '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/extract-and-summarise?lang=es',
-          width: 1200,
-          height: 675,
-        },
+        image: buildOgImageObject(OG_SLUG, 'es'),
         proficiencyLevel: 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Resumen de Documentos' },
@@ -1707,12 +1696,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             url: 'https://www.promptquorum.com/logo.svg',
           },
         },
-        image: {
-          '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/extract-and-summarise?lang=ar',
-          width: 1200,
-          height: 675,
-        },
+        image: buildOgImageObject(OG_SLUG, 'ar'),
         proficiencyLevel: 'متوسط',
         about: [
           { '@type': 'Thing', name: 'تلخيص الوثائق' },
@@ -2229,12 +2213,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             url: 'https://www.promptquorum.com/logo.svg',
           },
         },
-        image: {
-          '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/extract-and-summarise?lang=pt',
-          width: 1200,
-          height: 675,
-        },
+        image: buildOgImageObject(OG_SLUG, 'pt'),
         proficiencyLevel: 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Resumo de Documentos' },
@@ -2741,12 +2720,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             url: 'https://www.promptquorum.com/logo.svg',
           },
         },
-        image: {
-          '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
-          width: 1200,
-          height: 675,
-        },
+        image: buildOgImageObject(OG_SLUG, 'fr'),
         proficiencyLevel: 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'Résumé de documents' },
@@ -3266,12 +3240,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             url: 'https://www.promptquorum.com/logo.svg',
           },
         },
-        image: {
-          '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
-          width: 1200,
-          height: 675,
-        },
+        image: buildOgImageObject(OG_SLUG, 'ja'),
         proficiencyLevel: 'Intermediate',
         about: [
           { '@type': 'Thing', name: 'ドキュメント要約' },
@@ -3793,12 +3762,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             url: 'https://www.promptquorum.com/logo.svg',
           },
         },
-        image: {
-          '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
-          width: 1200,
-          height: 675,
-        },
+        image: buildOgImageObject(OG_SLUG, 'zh'),
         proficiencyLevel: 'Intermediate',
         about: [
           { '@type': 'Thing', name: '文档总结' },
@@ -4331,12 +4295,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           url: 'https://www.promptquorum.com/logo.svg',
         },
       },
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/extract-and-summarise?lang=ko',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'ko'),
       proficiencyLevel: 'Intermediate',
       about: [
         { '@type': 'Thing', name: '문서 요약' },
