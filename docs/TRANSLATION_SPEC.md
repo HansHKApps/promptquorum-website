@@ -291,15 +291,15 @@ rows: [
 
 ---
 
-## 4. Internal Links: Must Include Language Parameter
+## 4. Internal Links: Must Use the Path-Prefix Locale
 
-**This rule was violated in all past translations.** Every internal link in translated content must point to the same language version.
+**Corrected — this section previously prescribed `?lang=XX` query-param links.** That was the site's routing scheme before the migration in commits `d29c661b5`/`248c877f8`. The site now uses **path-prefix routing** for every cluster (`/de/...`, `/fr/...`, `/ja/...`, `/zh/...`, `/es/...`, `/pt/...`, `/ar/...`, `/ko/...`); EN stays unprefixed at the root. The `?lang=XX` query-param scheme has been fully migrated away from — see `CLAUDE.md`'s i18n section, which explicitly says not to reintroduce it in new code. The existing translations in this codebase already follow path-prefix (check any locale block in `src/lib/prompt-engineering/contextWindowsTranslations.ts`, for example) — this doc had simply never been updated to match.
 
-### Rule: Append `?lang=XX` to Internal URLs
+### Rule: Prefix Internal URLs with the Target Locale
 
-For all `/prompt-engineering/...` links:
+For all `/prompt-engineering/...`, `/local-llms/...`, `/power-local-llm/...`, `/blog/...`, `/balcony-solar/...`, `/smart-home/...`, `/prompt-bites/...` links:
 1. Translate the **link text** (inside `[...]`)
-2. Append `?lang=XX` to the **URL** (inside `(...)`)
+2. Prepend `/<lang>` to the **URL** (inside `(...)`) — EN gets no prefix
 
 ### Example (German)
 
@@ -308,35 +308,44 @@ For all `/prompt-engineering/...` links:
 '[Systemanweisung](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)'
 ```
 
-**Correct ✅** (links to German)
+**Wrong ❌** (the old, now-migrated-away-from query-param scheme)
 ```typescript
 '[Systemanweisung](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=de)'
 ```
 
-### Language Suffixes (All 5 Languages)
+**Correct ✅** (path-prefix, links to German)
+```typescript
+'[Systemanweisung](/de/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)'
+```
 
-| Language | Code | Suffix |
+### Path Prefixes (All 9 Languages)
+
+| Language | Code | Prefix |
 |----------|------|--------|
-| English | `en` | no suffix (or `?lang=en`) |
-| German | `de` | `?lang=de` |
-| French | `fr` | `?lang=fr` |
-| Japanese | `ja` | `?lang=ja` |
-| Chinese | `zh` | `?lang=zh` |
+| English | `en` | none — unprefixed at root |
+| German | `de` | `/de/...` |
+| French | `fr` | `/fr/...` |
+| Japanese | `ja` | `/ja/...` |
+| Chinese | `zh` | `/zh/...` |
+| Spanish | `es` | `/es/...` |
+| Portuguese (Brazilian) | `pt` | `/pt/...` |
+| Arabic | `ar` | `/ar/...` |
+| Korean | `ko` | `/ko/...` |
 
 ### Important Notes
 
 - **External URLs** (https://arxiv.org, https://docs.anthropic.com, etc.) are **never modified**
-- **All pages exist in all 5 languages** — do not assume a page is missing. If a linked article's translation stub is empty (no content in the target language block), **flag it to the reviewer** rather than silently falling back to English
-- Use `?lang=XX` **only for internal `/prompt-engineering/...` links**
+- **All pages exist in all 9 languages** — do not assume a page is missing. If a linked article's translation stub is empty (no content in the target language block), **flag it to the reviewer** rather than silently falling back to English
+- Use the path prefix **only for internal links**, never for external URLs
 
 ### Pattern Example (Full Markdown String)
 
 ```typescript
 // German translation
-'Siehe auch [Systemanweisung und Benutzeranweisung](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=de) für Architekturrichtlinien.'
+'Siehe auch [Systemanweisung und Benutzeranweisung](/de/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) für Architekturrichtlinien.'
 
 // French translation
-'Consultez également [Invite système et invite utilisateur](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=fr) pour les directives architecturales.'
+'Consultez également [Invite système et invite utilisateur](/fr/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) pour les directives architecturales.'
 ```
 
 ---
@@ -825,53 +834,37 @@ Every non-EN page MUST contain ONE section with market-specific context, placed 
 
 ## Section 13 — Internal Link and Hreflang Rules
 
-**Internal links in translated pages must use cluster-specific patterns:**
+**Corrected — this section's "query-string until June 5 migration" branch described a transition that already happened.** Every cluster now uses path-prefix locale routing, the same pattern this section already described as correct for Power Local LLM. There is no longer a cluster-specific split.
 
-### For Power Local LLM Cluster (path-based locale routing)
-Use subdirectory pattern for links AND hreflang:
+**All clusters use the path-prefix pattern for links AND hreflang:**
 ```
 CORRECT: /de/power-local-llm/best-local-llm-apps-iphone-2026
-CORRECT hreflang: https://www.promptquorum.com/de/power-local-llm/[slug]
+CORRECT: /de/prompt-engineering/risen-framework
+CORRECT: /de/local-llms/how-to-install-ollama
+CORRECT: /de/blog/slug
+WRONG:   /prompt-engineering/risen-framework?lang=de (the old, migrated-away-from query-param scheme)
+WRONG:   /prompt-engineering/risen-framework (missing locale prefix entirely)
 ```
 
-### For All Other Clusters (query-string locale routing until June 5 migration)
-Use query-string pattern:
-```
-CORRECT: /prompt-engineering/risen-framework?lang=de
-CORRECT: /local-llms/how-to-install-ollama?lang=de
-CORRECT: /blog/slug?lang=de
-WRONG:   /de/prompt-engineering/risen-framework (reserved for June 5 migration)
-WRONG:   /prompt-engineering/risen-framework (missing lang param)
-```
-
-**Hreflang — every translated page must include all 6 tags:**
-
-For **Power Local LLM** (subdirectory):
-```
-hreflang="en"        → https://www.promptquorum.com/power-local-llm/[slug]
-hreflang="de"        → https://www.promptquorum.com/de/power-local-llm/[slug]
-hreflang="fr"        → https://www.promptquorum.com/fr/power-local-llm/[slug]
-hreflang="ja"        → https://www.promptquorum.com/ja/power-local-llm/[slug]
-hreflang="zh"        → https://www.promptquorum.com/zh/power-local-llm/[slug]
-hreflang="x-default" → https://www.promptquorum.com/power-local-llm/[slug]
-```
-
-For **All other clusters** (query-string, until June 5):
+**Hreflang — every translated page must include all 9 language tags plus `x-default`:**
 ```
 hreflang="en"        → https://www.promptquorum.com/[cluster]/[slug]
-hreflang="de"        → https://www.promptquorum.com/[cluster]/[slug]?lang=de
-hreflang="fr"        → https://www.promptquorum.com/[cluster]/[slug]?lang=fr
-hreflang="ja"        → https://www.promptquorum.com/[cluster]/[slug]?lang=ja
-hreflang="zh"        → https://www.promptquorum.com/[cluster]/[slug]?lang=zh
+hreflang="de"        → https://www.promptquorum.com/de/[cluster]/[slug]
+hreflang="fr"        → https://www.promptquorum.com/fr/[cluster]/[slug]
+hreflang="ja"        → https://www.promptquorum.com/ja/[cluster]/[slug]
+hreflang="zh"        → https://www.promptquorum.com/zh/[cluster]/[slug]
+hreflang="es"        → https://www.promptquorum.com/es/[cluster]/[slug]
+hreflang="pt-BR"     → https://www.promptquorum.com/pt/[cluster]/[slug]
+hreflang="ar"        → https://www.promptquorum.com/ar/[cluster]/[slug]
+hreflang="ko"        → https://www.promptquorum.com/ko/[cluster]/[slug]
 hreflang="x-default" → https://www.promptquorum.com/[cluster]/[slug]
 ```
+(`pt` emits `pt-BR` per `toOutputLocale()` in `src/lib/i18n/constants.ts` — Brazilian Portuguese, not generic `pt`.)
 
-All URLs must be absolute. Relative URLs in hreflang are invalid.
+All URLs must be absolute. Relative URLs in hreflang are invalid. This is generated automatically by `generateAlternates()` in `src/lib/hreflang.ts` for every `generateMetadata` — a human translator should not need to hand-write it, but should recognize it in review.
 
 **Implementation Note (for /geo-translation skill):**
-When translating articles, detect the cluster path:
-- If translating `/power-local-llm/...`: append `/[LANG]/power-local-llm/[slug]` to all internal power-local-llm links
-- If translating `/prompt-engineering/...`, `/local-llms/...`, `/blog/...`, `/frameworks/...`: append `?lang=[CODE]` to all internal links
+When translating articles, prepend `/[LANG]/` to every internal cluster link (`power-local-llm`, `prompt-engineering`, `local-llms`, `blog`, `balcony-solar`, `smart-home`, `prompt-bites`) — EN stays unprefixed.
 
 ---
 
@@ -1035,29 +1028,33 @@ Every translated article MUST include:
 
 ### 14.6 — Internal Link Convention (All Languages)
 
-**Rule:** Every `/local-llms/`, `/prompt-engineering/`, `/blog/` markdown link in translated content must include `?lang=XX`.
+**Corrected — same fix as section 4 and Section 13.** This was the third copy of the pre-migration query-param rule in this document; all three said the same wrong thing.
+
+**Rule:** Every `/local-llms/`, `/prompt-engineering/`, `/blog/`, `/power-local-llm/`, `/balcony-solar/`, `/smart-home/`, `/prompt-bites/` markdown link in translated content must be prefixed with the target locale.
 
 **Pattern:**
 ```typescript
-// EN (no lang param needed)
+// EN (no prefix needed)
 '[Link text](/prompt-engineering/example)'
 
-// DE (append ?lang=de)
-'[Link text](/prompt-engineering/example?lang=de)'
+// DE (prefix /de/)
+'[Link text](/de/prompt-engineering/example)'
 
-// FR (append ?lang=fr)
-'[Link text](/prompt-engineering/example?lang=fr)'
+// FR (prefix /fr/)
+'[Link text](/fr/prompt-engineering/example)'
 
-// JA (append ?lang=ja)
-'[Link text](/prompt-engineering/example?lang=ja)'
+// JA (prefix /ja/)
+'[Link text](/ja/prompt-engineering/example)'
 
-// ZH (append ?lang=zh)
-'[Link text](/prompt-engineering/example?lang=zh)'
+// ZH (prefix /zh/)
+'[Link text](/zh/prompt-engineering/example)'
+
+// ES/PT/AR/KO follow the same pattern: /es/, /pt/, /ar/, /ko/
 ```
 
 **Validation:**
 - Search translated block for `[` to find all markdown links
-- Each link should have `?lang=XX` appended
+- Each non-EN link should start with `/<lang>/`
 - External URLs (https://) are unchanged
 
 ### 14.7 — File Insertion Strategy (Size-Based Decision)
