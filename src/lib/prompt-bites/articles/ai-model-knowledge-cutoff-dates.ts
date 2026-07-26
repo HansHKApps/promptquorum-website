@@ -251,7 +251,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
-      image: buildOgImageObject(OG_SLUG, 'ar'),
+      image: buildOgImageObject(OG_SLUG, 'en'),
       url: 'https://www.promptquorum.com/prompt-bites/ai-model-knowledge-cutoff-dates',
     },
     faqSchema: {
