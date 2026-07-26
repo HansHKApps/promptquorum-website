@@ -205,7 +205,7 @@ schema: {
         inLanguage: 'en',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/local-llm-trends-2026.jpg', width: 1200, height: 675 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/future-of-local-llms-trends-timeline-en.svg', width: 800, height: 400 },
         about: [
           { '@type': 'Thing', name: 'Local LLM trends 2026' },
           { '@type': 'Thing', name: 'Enterprise local LLM adoption' },
@@ -481,7 +481,7 @@ schema: {
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/local-llm-trends-2026.jpg', width: 1200, height: 675 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/future-of-local-llms-trends-timeline-es.svg', width: 800, height: 400 },
         about: [
           { '@type': 'Thing', name: 'Tendencias de LLM local 2026' },
           { '@type': 'Thing', name: 'Adopción empresarial de LLMs locales' },
@@ -763,7 +763,7 @@ schema: {
         inLanguage: 'ar',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/local-llm-trends-2026.jpg', width: 1200, height: 675 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/future-of-local-llms-trends-timeline-ar.svg', width: 800, height: 400 },
         about: [
           { '@type': 'Thing', name: 'اتجاهات LLM المحلية 2026' },
           { '@type': 'Thing', name: 'تبني المؤسسات لنماذج LLM المحلية' },
@@ -1169,7 +1169,7 @@ schema: {
         inLanguage: 'de',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/local-llm-trends-2026.jpg', width: 1200, height: 675 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/future-of-local-llms-trends-timeline-de.svg', width: 800, height: 400 },
         about: [
           { '@type': 'Thing', name: 'Lokale LLM-Trends 2026' },
           { '@type': 'Thing', name: 'Enterprise lokale LLM-Adoption' },
@@ -1461,7 +1461,7 @@ schema: {
         inLanguage: 'fr',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/local-llm-trends-2026.jpg', width: 1200, height: 675 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/future-of-local-llms-trends-timeline-fr.svg', width: 800, height: 400 },
         about: [
           { '@type': 'Thing', name: 'Tendances LLM local 2026' },
           { '@type': 'Thing', name: 'Adoption LLM locale entreprise' },
@@ -1743,7 +1743,7 @@ schema: {
         inLanguage: 'ja',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/local-llm-trends-2026.jpg', width: 1200, height: 675 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/future-of-local-llms-trends-timeline-ja.svg', width: 800, height: 400 },
         about: [
           { '@type': 'Thing', name: 'ローカルLLMトレンド2026' },
           { '@type': 'Thing', name: 'エンタープライズローカルLLM採用' },
@@ -2025,7 +2025,7 @@ schema: {
         inLanguage: 'zh',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/local-llm-trends-2026.jpg', width: 1200, height: 675 },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/images/future-of-local-llms-trends-timeline-zh.svg', width: 800, height: 400 },
         about: [
           { '@type': 'Thing', name: '本地LLM趋势2026' },
           { '@type': 'Thing', name: '企业本地LLM采用' },

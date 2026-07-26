@@ -104,3 +104,12 @@ export const PE_SLUG_TO_KEY: Record<string, string> = {
   // Knowledge & GEO Sprint 2026-06-12
   'knowledge-cutoffs-and-geo': 'knowledge-cutoffs-and-geo',
 }
+
+// Reverse lookup: article key -> its registered public URL slug. Article files
+// must derive OG/schema image URLs through this rather than hard-coding the
+// slug string — a hard-coded slug silently 404s the moment PE_SLUG_TO_KEY's
+// mapping for that key changes (see Issue #65).
+export function keyToSlug(key: string): string {
+  const entry = Object.entries(PE_SLUG_TO_KEY).find(([, k]) => k === key)
+  return entry ? entry[0] : key
+}

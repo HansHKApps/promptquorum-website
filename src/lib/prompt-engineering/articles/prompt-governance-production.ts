@@ -1,5 +1,8 @@
 import type { Language } from "@/lib/blog/blogContent";
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+
+const OG_SLUG = keyToSlug('prompt-governance-production');
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
@@ -56,7 +59,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-governance-production', width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
       'proficiencyLevel': 'Advanced',
     },
     sections: {
@@ -268,7 +271,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-governance-production', width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
       'proficiencyLevel': 'Advanced',
     },
     sections: {
@@ -461,7 +464,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-governance-production', width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
       'proficiencyLevel': 'Advanced',
     },
     sections: {
@@ -671,7 +674,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-governance-production', width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
       'proficiencyLevel': 'Advanced',
     },
     sections: {
@@ -884,7 +887,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-governance-production', width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
       'proficiencyLevel': 'Advanced',
     },
     sections: {
@@ -1077,7 +1080,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-governance-production', width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
       'proficiencyLevel': 'Advanced',
     },
     sections: {
@@ -1270,7 +1273,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-governance-production', width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
       'proficiencyLevel': 'Advanced',
     },
     sections: {
@@ -1482,7 +1485,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-governance-production', width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
       'proficiencyLevel': 'Advanced',
     },
     sections: {
@@ -1676,7 +1679,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-governance-production', width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
       'proficiencyLevel': 'Advanced',
     },
     sections: {
