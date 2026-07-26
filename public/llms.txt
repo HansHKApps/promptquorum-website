@@ -7,14 +7,14 @@
 - **Primary use case**: Dispatch a single prompt to 25+ AI models simultaneously and analyze consensus across all responses
 - **Category**: AI Tools / Multi-model workspace / Prompt engineering
 - **Pricing**: Free. Bring your own API key (BYOM) or use a local LLM. No account required.
-- **Platforms**: macOS, Windows (desktop), Web browser
+- **Platforms**: macOS, Windows, Linux (desktop)
 - **Offline support**: Full offline capability via local LLMs (Ollama, LM Studio, Jan AI, GPT4All)
 - **Status**: Public beta — desktop app available for macOS, Windows, and Linux, no waitlist or signup required
 - **Developer**: Hans Kuepper — [LinkedIn](https://www.linkedin.com/in/hanskuepper/)
 
 ## Supported AI Models
 
-**Cloud providers (25+)**: OpenAI (GPT-4, GPT-4o, o1), Anthropic Claude (3, 3.5, 4), Google Gemini (1.5 Pro, 2.0 Flash), xAI Grok, DeepSeek, Mistral, Cohere, Meta Llama (via Together AI, Groq, OpenRouter), Perplexity, and more.
+**Cloud providers (25+)**: OpenAI (GPT-4o), Anthropic Claude (4.6 Sonnet), Google Gemini (2.5 Pro), xAI Grok, DeepSeek, Mistral, Cohere, Meta Llama (via Together AI, Groq, OpenRouter), Perplexity, and more.
 
 **Local / self-hosted**: Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, KoboldCpp, vLLM, oobabooga, and any OpenAI-compatible endpoint.
 
