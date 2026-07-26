@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}?lang=en`, width: 1200, height: 675 },
       inLanguage: 'en',
       keywords: ['prompt regression testing', 'prompt audit', 'golden test set', 'Promptfoo', 'Braintrust', 'LLM quality gates', 'prompt testing'],
       proficiencyLevel: 'Advanced',
@@ -315,7 +315,7 @@ tests:
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}?lang=de`, width: 1200, height: 675 },
       inLanguage: 'de',
     },
     sections: {
@@ -568,7 +568,7 @@ tests:
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}?lang=es`, width: 1200, height: 675 },
       inLanguage: 'es',
     },
     sections: {
@@ -824,7 +824,7 @@ tests:
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}?lang=pt`, width: 1200, height: 675 },
       inLanguage: 'pt-BR',
     },
     sections: {
@@ -1082,7 +1082,7 @@ tests:
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}?lang=fr`, width: 1200, height: 675 },
       inLanguage: 'fr',
     },
     sections: {
@@ -1336,7 +1336,7 @@ tests:
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}?lang=ja`, width: 1200, height: 675 },
       inLanguage: 'ja',
     },
     sections: {
@@ -1590,7 +1590,7 @@ tests:
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}?lang=zh`, width: 1200, height: 675 },
       inLanguage: 'zh',
     },
     sections: {
@@ -1843,7 +1843,7 @@ tests:
       datePublished: '2026-05-02',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}?lang=ar`, width: 1200, height: 675 },
       inLanguage: 'ar',
     },
     sections: {
@@ -2099,7 +2099,7 @@ tests:
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}?lang=ko`, width: 1200, height: 675 },
       inLanguage: 'ko',
       keywords: ['프롬프트 회귀 테스트', '프롬프트 감사', '골든 테스트 세트', 'Promptfoo', 'Braintrust', 'LLM 품질 게이트', '프롬프트 테스트'],
       proficiencyLevel: 'Advanced',
