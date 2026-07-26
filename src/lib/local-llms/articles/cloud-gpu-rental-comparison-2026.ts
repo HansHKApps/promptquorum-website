@@ -2113,6 +2113,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EU-Regionen: Ja (Niederlande, Rumänien)',
           'Kostenlose Gemeinschaft: Starkes Discord-Ökosystem',
         ],
+        faqs: [
+          { q: 'Ist RunPod Secure Cloud zuverlässig?', a: 'Ja. Secure-Cloud-Instanzen haben eine SLA von 99% Verfügbarkeit und werden nicht unterbrochen, außer der Anbieter storniert die Instanz (sehr selten). On-Demand-Instanzen können mit 5 Minuten Vorlaufzeit unterbrochen werden.' },
+          { q: 'Kann ich benutzerdefinierte Docker-Images verwenden?', a: 'Ja. RunPod erlaubt benutzerdefinierte Docker-Images; laden Sie sie auf Docker Hub oder eine Registry hoch und referenzieren Sie sie per URL. Auch eine One-Click-Bereitstellung von Vorlagen mit vorinstallierten ML-Frameworks ist verfügbar.' },
+          { q: 'Wie pausiere ich eine Instanz?', a: 'Über die Pause-Schaltfläche im Dashboard. Ein Snapshot wird gespeichert. Während der Pause zahlen Sie nur für Speicherplatz (vernachlässigbare Kosten).' },
+          { q: 'Kann ich auf mehrere GPUs skalieren?', a: 'Ja. RunPod unterstützt Multi-GPU-Instanzen und verteiltes Training über die API.' },
+        ],
       },
       vastaiDetailed: {
         id: 'vastai-provider',
@@ -2129,6 +2135,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Setup-Zeit: 10 Minuten (technischer)',
           'AVV: Fall für Fall (Peer-to-Peer, nicht universell verfügbar)',
           'EU-Regionen: Pro Host (hängt vom Standort des einzelnen Hosts ab)',
+        ],
+        faqs: [
+          { q: 'Was passiert, wenn meine Spot-Instanz unterbrochen wird?', a: 'Spot-Instanzen können mit 15 Sekunden Vorlaufzeit unterbrochen werden, wenn der Anbieter die GPU zurückfordert. Verwenden Sie den Filter „Interruptible: Off" für stabile Instanzen (höhere Preise, stabiler).' },
+          { q: 'Habe ich Root-/Sudo-Zugriff?', a: 'Die meisten Anbieter gewähren Sudo-Zugriff; einige nicht. Prüfen Sie die Instanzdetails vor der Miete. Von Vast.ai nicht garantiert.' },
+          { q: 'Wie lade ich Daten hoch?', a: 'Verwenden Sie rsync oder scp über SSH. Für große Datensätze (>100 GB) speichern Sie auf einem angehängten /mnt/-Laufwerk (geringer Aufpreis) oder nutzen Sie eine Cloud-Storage-Brücke (S3, Google Drive).' },
+          { q: 'Sind die Preise wirklich so viel günstiger?', a: 'Ja, aber Spot-Preise schwanken. $0,08/h sind real, aber selten (Spitzenauslastung). Median $0,21/h ist typischer. Beobachten Sie die Preise, bevor Sie sich für den Produktivbetrieb auf Spot-Instanzen festlegen.' },
+          { q: 'Funktionieren die Vast.ai-Preise für Stable Diffusion genauso wie für LLM-Inferenz?', a: 'Ja — dieselben RTX-4090- und RTX-5090-Spot-Instanzen, die für LLM-Inferenz genutzt werden, führen auch Stable Diffusion und andere Bildgenerierungs-Workloads aus. Bildgenerierung ist in der Regel stärker VRAM-limitiert und weniger latenzempfindlich als Chat-Inferenz, weshalb Spot-/unterbrechbare Instanzen (günstiger, können zurückgefordert werden) meist gut für Batch-Bildgenerierung geeignet sind; reservieren Sie stabile „Interruptible: Off"-Instanzen nur, wenn Sie eine ununterbrochene lange Render-Warteschlange benötigen.' },
         ],
       },
       lambdalabsDetailed: {
@@ -2147,6 +2160,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Team-Funktionen: Mehrere Benutzer pro Konto',
           'Support: Slack, E-Mail, Telefon (echte Menschen)',
           'AVV: Ja, aber nur US-Infrastruktur (nicht DSGVO für EU-Personendaten)',
+        ],
+        faqs: [
+          { q: 'Lohnt sich der Aufpreis bei Lambda Labs?', a: 'Ja, wenn Sie eine SLA von 99,9% Verfügbarkeit benötigen, US-Infrastruktur akzeptabel ist und Sie Wert auf persönlichen Support legen. Für Experimente sind RunPod oder Vast.ai günstiger. Für den Produktivbetrieb rechtfertigt die SLA von Lambda Labs die Kosten.' },
+          { q: 'Kann ich auf mehrere GPUs skalieren?', a: 'Ja. Lambda Labs erlaubt Multi-GPU-Instanzen und verteiltes Training. Die Jupyter-Umgebung übernimmt die Einrichtung.' },
+          { q: 'Wie sieht Ihre Rückerstattungsrichtlinie aus?', a: '30 Tage Rückerstattung bei Unzufriedenheit. Die meisten Nutzer benötigen dies nicht, nachdem sie das kostenlose Guthaben von $15 ausprobiert haben.' },
+          { q: 'Warum keine RTX 4090 oder RTX 5090?', a: 'Lambda Labs konzentriert sich auf den Enterprise-Markt mit A100/H100, nicht auf die Consumer-GPU-Stufe. Das ist eine bewusste Strategie.' },
+        ],
+      },
+      quickstart: {
+        id: 'quickstart-guide',
+        title: 'Schnellstart: Mieten Sie Ihre erste GPU in 10 Minuten',
+        content: 'Folgen Sie dieser Schritt-für-Schritt-Anleitung, um auf jeder Plattform eine GPU zum Laufen zu bringen.',
+        numberedItems: [
+          'Registrieren Sie sich mit E-Mail + Kreditkarte (RunPod) oder GitHub (Vast.ai)',
+          'Wählen Sie einen GPU-Typ und eine Region (nach Verfügbarkeit und Preis filtern)',
+          'Wählen Sie das Betriebssystem-Image (Ubuntu 22.04 + CUDA ist Standard)',
+          'Legen Sie die Festplattengröße fest (mindestens 50 GB für die meisten ML-Workloads)',
+          'Klicken Sie auf „Start" und warten Sie 30–60 Sekunden, bis die Instanz hochfährt',
+          'Verbinden Sie sich per SSH mit der bereitgestellten IP (Zugangsdaten in Ihrem Dashboard)',
+          'Installieren Sie Abhängigkeiten: apt update && apt install -y python3-pip',
+          'Klonen Sie Ihr Repository und starten Sie Ihren Workload',
+          'Überwachen Sie die Nutzung im Anbieter-Dashboard (behalten Sie die Zeit im Blick)',
+          'Stoppen Sie die Instanz, wenn Sie fertig sind (die Abrechnung endet sofort)',
         ],
       },
       internalLinks: {
