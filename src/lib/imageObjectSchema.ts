@@ -1,4 +1,5 @@
 import imageDimensions from '@/data/image-dimensions.json'
+import type { Lang } from '@/lib/i18n/constants'
 
 const BASE_URL = 'https://www.promptquorum.com'
 
@@ -53,9 +54,17 @@ export function buildImageObject(
  * registered public URL slug (its SLUG_TO_KEY key), not its internal
  * filename/key — the two differ whenever an article was renamed after
  * publish, and the OG route 404s on anything else (see Issue #65).
+ *
+ * `lang` is required and always emitted as `?lang=<lang>`, including for
+ * `en` — every page.tsx's own og:image meta tag already does this
+ * unconditionally (verified: /api/og/<slug> and /api/og/<slug>?lang=en
+ * return byte-identical PNGs, since the route defaults to 'en' anyway).
+ * A bare URL for English only was the wrong call; this makes schema.image
+ * and og:image resolve to the same URL on all 9 locales instead of two
+ * different ones on English articles.
  */
-export function buildOgImageObject(slug: string): Record<string, unknown> {
-  const url = `${BASE_URL}/api/og/${slug}`
+export function buildOgImageObject(slug: string, lang: Lang): Record<string, unknown> {
+  const url = `${BASE_URL}/api/og/${slug}?lang=${lang}`
 
   return {
     '@type': 'ImageObject',
@@ -76,18 +85,20 @@ export function buildOgImageObject(slug: string): Record<string, unknown> {
 /**
  * Single entry point for an article's schema.image: resolves to a stored
  * file via buildImageObject() when the article sets heroImage, otherwise
- * falls back to the generated OG route via buildOgImageObject(slug). Callers
- * (page-helpers, article files) should never branch on heroImage themselves —
- * that ternary duplicated across 6 files is what let the OG-route case go
+ * falls back to the generated OG route via buildOgImageObject(slug, lang).
+ * Callers (page-helpers, article files) should never branch on heroImage
+ * themselves — that ternary duplicated across the balcony-solar/
+ * power-local-llm/smart-home page-helpers is what let the OG-route case go
  * unrepresented in JSON-LD entirely for articles without a heroImage.
  */
 export function buildArticleImageObject(
   article: { heroImage?: string },
   slug: string,
+  lang: Lang,
   opts: { caption?: string } = {}
 ): Record<string, unknown> {
   if (article.heroImage) {
     return buildImageObject(article.heroImage, opts)
   }
-  return buildOgImageObject(slug)
+  return buildOgImageObject(slug, lang)
 }
