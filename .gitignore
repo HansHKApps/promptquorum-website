@@ -39,3 +39,6 @@ freshness-data/input.txt
 # Competitor sweep: generated cache/report, not source
 tools/competitor-sweep/sweep-cache.json
 tools/competitor-sweep/sweep-report.md
+
+# Validator disk caches (e.g. sameAs link-check results) — regenerated per run
+.cache/
