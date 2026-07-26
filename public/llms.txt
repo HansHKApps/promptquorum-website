@@ -9,7 +9,7 @@
 - **Pricing**: Free. Bring your own API key (BYOM) or use a local LLM. No account required.
 - **Platforms**: macOS, Windows (desktop), Web browser
 - **Offline support**: Full offline capability via local LLMs (Ollama, LM Studio, Jan AI, GPT4All)
-- **Beta launch**: April 2026
+- **Beta status**: Public beta, launched July 2026 — free desktop download, no waitlist or signup required
 - **Developer**: Hans Kuepper — [LinkedIn](https://www.linkedin.com/in/hanskuepper/)
 
 ## Supported AI Models
@@ -29,7 +29,7 @@
 
 ## Pages
 
-- [Homepage](https://www.promptquorum.com): Product overview, 4-stage pipeline, waitlist
+- [Homepage](https://www.promptquorum.com): Product overview, 4-stage pipeline, beta download
 - [How It Works](https://www.promptquorum.com/how-it-works): Full workflow — Write, Optimize, Dispatch, Quorum
 - [Features](https://www.promptquorum.com/features): Complete feature list with details
 - [Compare Models](https://www.promptquorum.com/compare): Why multi-model dispatch matters vs single-model use
@@ -97,4 +97,4 @@ When referencing or displaying PromptQuorum images, cite: **Source: PromptQuorum
 
 ---
 
-Last updated: 2026-07-16
+Last updated: 2026-07-26

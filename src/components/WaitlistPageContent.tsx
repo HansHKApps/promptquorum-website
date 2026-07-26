@@ -12,7 +12,7 @@ export function WaitlistPageContent({ initialLang }: { initialLang?: Lang }) {
   const lang = useLang(initialLang)
   const t = WAITLIST_INVITE_COPY[lang as Lang] ?? WAITLIST_INVITE_COPY.en
   const dir = lang === 'ar' ? 'rtl' : undefined
-  const homeHref = lang === 'en' ? '/' : `/?lang=${lang}`
+  const homeHref = lang === 'en' ? '/' : `/${lang}`
 
   return (
     <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6" dir={dir}>

@@ -73,11 +73,11 @@ const POST_UI: Record<string, Record<string, string>> = {
     zh: '使用本地LLM、您自己的API密钥或两者运行PromptQuorum — 您来决定使用哪个后端。',
   },
   ctaButton: {
-    en: 'Join the PromptQuorum Waitlist →',
-    de: 'PromptQuorum-Warteliste beitreten →',
-    fr: 'Rejoindre la liste d\'attente PromptQuorum →',
-    ja: 'PromptQuorumウェイトリストに参加する →',
-    zh: '加入PromptQuorum等待列表 →',
+    en: 'Download the PromptQuorum Beta →',
+    de: 'PromptQuorum-Beta herunterladen →',
+    fr: 'Télécharger la bêta PromptQuorum →',
+    ja: 'PromptQuorumベータ版をダウンロード →',
+    zh: '下载 PromptQuorum 测试版 →',
   },
   backLink: {
     en: '← Back to Local LLMs',

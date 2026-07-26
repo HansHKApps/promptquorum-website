@@ -289,7 +289,7 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
               href={lang === 'en' ? '/waitlist' : `/${lang}/waitlist`}
               className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
-              Join the PromptQuorum Waitlist
+              Download the PromptQuorum Beta
             </a>
           </div>
         </div>
