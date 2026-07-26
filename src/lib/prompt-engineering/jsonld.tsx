@@ -78,7 +78,6 @@ export function buildPEArticleSchemas(slug: string, key: string, lang: PELang) {
         'https://www.linkedin.com/in/hanskuepper/',
         'https://x.com/HansKuepperAPPs',
         'https://github.com/HansHKApps',
-        'https://bsky.app/profile/hhkbluesky.bsky.social',
       ],
     },
     publisher: {
