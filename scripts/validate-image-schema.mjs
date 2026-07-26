@@ -27,15 +27,6 @@
 //
 // Run: node scripts/validate-image-schema.mjs   (wired into npm "prebuild")
 
-// NOT wired into prebuild yet — same reason as validate-registry-freshness.mjs.
-// local-llms/articles/local-llm-vs-cloud-gpu-cost.ts still hand-rolls its
-// image node (correct slug, correct ?lang=, not broken — just not migrated).
-// local-llms was deliberately held out of this migration pass pending a
-// separate follow-up. Wiring this into prebuild now would block every build
-// on a known, intentional gap rather than a real defect. Wire it in once
-// that file (and any other pre-existing hand-rolled node found later) is
-// migrated — run `node scripts/validate-image-schema.mjs` manually until then.
-
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
