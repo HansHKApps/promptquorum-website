@@ -173,7 +173,8 @@ export default function RootLayout({
                     "https://github.com/HansHKApps",
                     "https://x.com/HansKuepperAPPs",
                     "https://www.linkedin.com/company/promptquorum",
-                    "https://www.youtube.com/channel/UC5PL_1lU5pdV1d1EC1XeLhA"
+                    "https://www.youtube.com/channel/UC5PL_1lU5pdV1d1EC1XeLhA",
+                    "https://substack.com/@promptquorum"
                   ]
                 },
                 {
