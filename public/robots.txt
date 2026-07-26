@@ -5,10 +5,8 @@
 User-Agent: *
 Allow: /
 Allow: /api/og/
-Disallow: /_next/static/
 Disallow: /api/
 Disallow: /presentations/
-Disallow: /download
 
 # AI crawlers — same access as Googlebot (full site access)
 User-Agent: GPTBot
@@ -36,19 +34,15 @@ User-Agent: ImagesiftBot
 User-Agent: Valerian
 Allow: /
 Allow: /api/og/
-Disallow: /_next/static/
 Disallow: /api/
 Disallow: /presentations/
-Disallow: /download
 
 # Bingbot — explicit rules for clarity
 User-Agent: Bingbot
 Allow: /
 Allow: /api/og/
-Disallow: /_next/static/
 Disallow: /api/
 Disallow: /presentations/
-Disallow: /download
 
 # Sitemaps
 Sitemap: https://www.promptquorum.com/sitemap.xml
