@@ -1,4 +1,9 @@
-export type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko';
+import type { Lang } from '@/lib/i18n/constants';
+
+// Alias, not a parallel definition — Lang in i18n/constants.ts is the single
+// source of truth for the language union. This file used to redeclare it
+// independently, which let the two silently drift out of sync.
+export type Language = Lang;
 
 const GEO_ENTITIES = {
   llm: {
