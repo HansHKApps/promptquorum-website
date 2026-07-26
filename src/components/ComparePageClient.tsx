@@ -239,9 +239,9 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
     ],
 
-    ctaH2: 'Join the PromptQuorum waitlist',
-    ctaSubtext: 'Beta launching July 2026. Early access users get priority onboarding, direct access to the developer, and a free power tool!',
-    ctaButton: 'Join the waitlist →',
+    ctaH2: 'Try PromptQuorum today',
+    ctaSubtext: 'PromptQuorum is in free public beta — download the desktop app now. No waitlist, no signup required.',
+    ctaButton: 'Get the Beta →',
   },
 
   de: {
@@ -384,9 +384,9 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
     ],
 
-    ctaH2: 'Jetzt auf die PromptQuorum-Warteliste eintragen',
-    ctaSubtext: 'Beta-Start July 2026. Frühzugangnutzer erhalten bevorzugtes Onboarding, direkten Zugang zum Entwickler und ein kostenloses Power-Tool!',
-    ctaButton: 'Zur Warteliste →',
+    ctaH2: 'PromptQuorum jetzt ausprobieren',
+    ctaSubtext: 'PromptQuorum befindet sich in der öffentlichen Beta — laden Sie die Desktop-App jetzt herunter. Keine Warteliste, keine Anmeldung nötig.',
+    ctaButton: 'Beta herunterladen →',
   },
 
   fr: {
@@ -529,9 +529,9 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
     ],
 
-    ctaH2: 'Rejoignez la liste d\'attente PromptQuorum',
-    ctaSubtext: 'Lancement bêta avril 2026. Les utilisateurs en accès anticipé bénéficient d\'un onboarding prioritaire, d\'un accès direct au développeur et d\'un outil power gratuit !',
-    ctaButton: 'Rejoindre la liste d\'attente →',
+    ctaH2: 'Essayez PromptQuorum dès aujourd\'hui',
+    ctaSubtext: 'PromptQuorum est en bêta publique — téléchargez l\'application de bureau dès maintenant. Sans liste d\'attente, sans inscription.',
+    ctaButton: 'Télécharger la bêta →',
   },
 
   ja: {
@@ -674,9 +674,9 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
     ],
 
-    ctaH2: 'PromptQuorumウェイトリストに参加する',
-    ctaSubtext: 'ベータ版は2026年4月リリース。早期アクセスユーザーは優先オンボーディング、開発者への直接アクセス、無料パワーツールを取得できます！',
-    ctaButton: 'ウェイトリストに参加 →',
+    ctaH2: '今すぐPromptQuorumを試す',
+    ctaSubtext: 'PromptQuorumはパブリックベータ公開中です。今すぐデスクトップアプリをダウンロードできます。ウェイトリストや登録は不要です。',
+    ctaButton: 'ベータ版をダウンロード →',
   },
 
   zh: {
@@ -819,9 +819,9 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
     ],
 
-    ctaH2: '加入PromptQuorum候补名单',
-    ctaSubtext: '测试版将于2026年4月发布。早期访问用户将获得优先入门指导、与开发者的直接联系以及免费高级工具！',
-    ctaButton: '加入候补名单 →',
+    ctaH2: '立即体验 PromptQuorum',
+    ctaSubtext: 'PromptQuorum 现已开放公开测试——立即下载桌面应用。无需候补名单，无需注册。',
+    ctaButton: '下载测试版 →',
   },
 
   es: {
@@ -963,9 +963,9 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
     ],
 
-    ctaH2: 'Únete a la lista de espera de PromptQuorum',
-    ctaSubtext: 'Beta lanzando en julio de 2026. Los usuarios de acceso anticipado obtienen incorporación prioritaria, acceso directo al desarrollador y ¡una herramienta de poder gratuita!',
-    ctaButton: 'Únete a la lista de espera →',
+    ctaH2: 'Prueba PromptQuorum hoy',
+    ctaSubtext: 'PromptQuorum está en beta pública — descarga la app de escritorio ahora. Sin lista de espera, sin registro.',
+    ctaButton: 'Descargar la beta →',
   },
   pt: {
     breadcrumbHome: 'Início', // VERIFY
@@ -1106,9 +1106,9 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
     ],
 
-    ctaH2: 'Entre na lista de espera do PromptQuorum', // VERIFY
-    ctaSubtext: 'Beta lançando em julho de 2026. Os usuários de acesso antecipado obtêm integração prioritária, acesso direto ao desenvolvedor e uma ferramenta de poder gratuita!', // VERIFY
-    ctaButton: 'Entre na lista de espera →', // VERIFY
+    ctaH2: 'Experimente o PromptQuorum hoje',
+    ctaSubtext: 'O PromptQuorum está em beta pública — baixe o aplicativo desktop agora. Sem lista de espera, sem cadastro.',
+    ctaButton: 'Baixar o Beta →',
   },
 
   ko: {
@@ -1250,9 +1250,9 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
     ],
 
-    ctaH2: 'PromptQuorum 대기자 명단 등록',
-    ctaSubtext: '베타 출시 2026년 7월. 얼리 액세스 사용자는 우선 온보딩, 개발자 직접 접근, 무료 파워 도구를 받습니다!',
-    ctaButton: '대기자 명단 등록 →',
+    ctaH2: '지금 PromptQuorum 사용해보기',
+    ctaSubtext: 'PromptQuorum은 퍼블릭 베타 단계입니다 — 지금 데스크톱 앱을 다운로드하세요. 대기자 명단이나 가입이 필요하지 않습니다.',
+    ctaButton: '베타 다운로드 →',
   },
 
   ar: {
@@ -1394,9 +1394,9 @@ const content: Partial<Record<Lang, CompareText>> = {
       },
     ],
 
-    ctaH2: 'انضم إلى قائمة انتظار PromptQuorum',
-    ctaSubtext: 'إطلاق البيتا في يوليو 2026. يحصل مستخدمو الوصول المبكر على تأهيل تفضيلي ووصول مباشر للمطور وأداة احترافية مجانية!',
-    ctaButton: 'انضم إلى قائمة الانتظار ←',
+    ctaH2: 'جرّب PromptQuorum اليوم',
+    ctaSubtext: 'يتوفر PromptQuorum الآن في النسخة التجريبية العامة — نزّل تطبيق سطح المكتب الآن. دون قائمة انتظار ودون تسجيل.',
+    ctaButton: 'تنزيل النسخة التجريبية ←',
   },
 }
 

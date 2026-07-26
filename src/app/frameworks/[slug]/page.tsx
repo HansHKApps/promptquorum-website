@@ -289,7 +289,7 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
               href="/#waitlist"
               className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors"
             >
-              Join the Waitlist
+              Download the Beta
             </Link>
           </div>
 

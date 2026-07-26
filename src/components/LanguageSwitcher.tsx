@@ -58,6 +58,8 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
       'faq',
       'about',
       'privacy',
+      'waitlist',
+      'download',
     ]
 
     const pathname = window.location.pathname

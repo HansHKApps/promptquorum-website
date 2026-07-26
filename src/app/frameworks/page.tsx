@@ -154,7 +154,7 @@ export default async function FrameworksIndexPage({ searchParams }: PageProps) {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/#waitlist" className="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">
-                Join the Waitlist
+                Download the Beta
               </Link>
               <Link href="/blog/prompt-frameworks" className="px-8 py-3 border border-primary/30 text-primary rounded-lg font-semibold hover:bg-primary/5 transition-colors">
                 Framework Comparison Guide

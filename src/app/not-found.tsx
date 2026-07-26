@@ -58,16 +58,16 @@ export default function NotFound() {
         <section className="mb-16">
           <div className="bg-card border border-primary/20 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-text-primary mb-3">
-              Waiting for PromptQuorum?
+              Looking for PromptQuorum?
             </h2>
             <p className="text-text-secondary mb-6">
-              Beta launches July 2026. Join the waitlist and be the first to know.
+              PromptQuorum is in free public beta. Download it now — no waitlist, no signup required.
             </p>
             <Link
-              href="/waitlist"
+              href="/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 transition-colors"
             >
-              Join the Waitlist
+              Download the Beta
             </Link>
           </div>
         </section>

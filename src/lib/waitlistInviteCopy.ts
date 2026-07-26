@@ -110,7 +110,7 @@ export const WAITLIST_INVITE_COPY: Record<Lang, WaitlistInviteCopy> = {
 }
 
 export function waitlistDownloadHref(lang: string) {
-  return lang === 'en' ? '/download' : `/download?lang=${lang}`
+  return lang === 'en' ? '/download' : `/${lang}/download`
 }
 
 export function waitlistGuideHref(lang: string) {

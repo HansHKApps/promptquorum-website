@@ -6,6 +6,7 @@ import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { LocalLLMArticleJsonLd } from '@/lib/local-llms/jsonld'
 
 export const revalidate = 86400
 
@@ -127,24 +128,11 @@ export default async function EsLocalLLMsArticlePage({ params }: PageProps) {
     )
   }
 
-  const article = llmContent[key]['es'] ?? llmContent[key]['en']
-  if (!article) notFound()
-
-  const canonicalUrl = `https://www.promptquorum.com/es/local-llms/${slug}`
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    inLanguage: 'es',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://www.promptquorum.com' },
-      { '@type': 'ListItem', position: 2, name: 'LLMs Locales', item: 'https://www.promptquorum.com/es/local-llms' },
-      { '@type': 'ListItem', position: 3, name: article.title ?? (article as any).seoTitle ?? slug, item: canonicalUrl },
-    ],
-  }
+  if (!llmContent[key]['es'] && !llmContent[key]['en']) notFound()
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <LocalLLMArticleJsonLd slug={slug} articleKey={key} lang="es" />
       <LocalLLMsPostClient
         slug={slug}
         initialLang="es"
