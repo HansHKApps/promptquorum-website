@@ -1,5 +1,9 @@
 import type { Language } from "@/lib/blog/blogContent";
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('pe-for-support-operations');
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
@@ -44,7 +48,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-support-operations', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'en'),
       inLanguage: 'en',
       keywords: ['prompt engineering', 'support operations', 'customer support', 'triage templates', 'escalation logic', 'policy compliance'],
       proficiencyLevel: 'Intermediate',
@@ -238,7 +242,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-support-operations?lang=de', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'de'),
       keywords: ['Prompt Engineering', 'Support-Operationen', 'Kundensupport', 'Triage-Templates', 'Eskalationslogik', 'Richtlinien-Compliance'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -412,7 +416,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-support-operations?lang=es', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'es'),
       keywords: ['prompt engineering', 'operaciones de soporte', 'atención al cliente', 'plantillas de triage', 'lógica de escalación', 'cumplimiento de políticas'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -581,7 +585,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-support-operations?lang=pt', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'pt'),
       keywords: ['prompt engineering', 'operações de suporte', 'atendimento ao cliente', 'modelos de triagem', 'lógica de escalada', 'conformidade de políticas'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -751,7 +755,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-support-operations?lang=fr', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'fr'),
       keywords: ['prompt engineering', 'opérations support', 'service client', 'templates de triage', "logique d'escalade", 'conformité politique'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -916,7 +920,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'ja',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-support-operations?lang=ja', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'ja'),
       keywords: ['プロンプトエンジニアリング', 'サポートオペレーション', 'カスタマーサポート', 'トリアージテンプレート', 'エスカレーションロジック'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1102,7 +1106,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'zh',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-support-operations?lang=zh', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'zh'),
       keywords: ['提示词工程', '支持运营', '客户支持', '分诊模板', '升级逻辑', '策略合规'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1248,7 +1252,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'ar',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-support-operations?lang=ar', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'ar'),
       keywords: ['هندسة البرومبت', 'عمليات الدعم', 'خدمة العملاء', 'قوالب الفرز', 'منطق التصعيد', 'الامتثال للسياسات'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1434,7 +1438,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-support-operations', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'ko'),
       inLanguage: 'ko',
       keywords: ['프롬프트 엔지니어링', '지원 운영', '고객 지원', '분류 템플릿', '에스컬레이션 로직', '정책 준수'],
       proficiencyLevel: 'Intermediate',

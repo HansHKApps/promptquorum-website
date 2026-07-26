@@ -5,6 +5,10 @@
 import type { Language } from "@/lib/blog/blogContent";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('geopolitics-and-ai');
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
@@ -74,7 +78,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'en'),
         educationalLevel: 'Intermediate',
       },
       supplementalSchema: {
@@ -850,7 +854,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-06-01',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai?lang=de', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'de'),
         'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -1427,7 +1431,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-06-01',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai?lang=es', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'es'),
         'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -2072,7 +2076,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'ar',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai?lang=ar', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ar'),
         'proficiencyLevel': 'متوسط',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -2758,7 +2762,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'fr'),
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -3481,7 +3485,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ja'),
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -3645,7 +3649,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai?lang=zh', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'zh'),
       },
       supplementalSchema: {
         '@context': 'https://schema.org',
@@ -4261,7 +4265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-04-01',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai?lang=pt', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'pt'),
         inLanguage: 'pt-BR',
         'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },

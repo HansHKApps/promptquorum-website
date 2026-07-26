@@ -5,6 +5,10 @@
 import type { Language } from "@/lib/blog/blogContent";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('your-brand-voice-ai');
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
@@ -53,7 +57,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-06-14',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/your-brand-voice-ai', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'en'),
         keywords: ['brand voice', 'brand consistency', 'tone of voice', 'content generation', 'prompt engineering', 'brand guidelines', 'AI-generated content'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Jasper' },
@@ -391,7 +395,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'de',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/your-brand-voice-ai?lang=de', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'de'),
         keywords: ['Brand-Voice-AI', 'Markenkonsistenz', 'Sprachton', 'Content-Generierung', 'Prompt Engineering', 'Markenrichtlinien', 'KI-generierter Inhalt'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Jasper' },
@@ -724,7 +728,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/your-brand-voice-ai?lang=es', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'es'),
         keywords: ['IA de voz de marca', 'coherencia de marca', 'tono de voz', 'generación de contenido', 'prompt engineering', 'directrices de marca', 'contenido generado por IA'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Jasper' },
@@ -1055,7 +1059,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'ar',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/your-brand-voice-ai?lang=ar', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ar'),
         keywords: ['ذكاء اصطناعي لصوت العلامة', 'تماسك العلامة', 'نبرة الصوت', 'توليد المحتوى', 'هندسة الطلبات', 'إرشادات العلامة', 'محتوى مُولَّد بالذكاء الاصطناعي'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Jasper' },
@@ -1676,7 +1680,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'fr',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/your-brand-voice-ai?lang=fr', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'fr'),
         keywords: ['voix de marque', 'cohérence de marque', 'ton de voix', 'génération de contenu', 'ingénierie des prompts', 'directives de marque', 'contenu généré par l\'IA'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Jasper' },
@@ -2007,7 +2011,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'ja',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/your-brand-voice-ai?lang=ja', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ja'),
         keywords: ['ブランドボイス', 'ブランド一貫性', 'トーン', 'コンテンツ生成', 'プロンプトエンジニアリング', 'ブランドガイドライン', 'AI生成コンテンツ'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Jasper' },
@@ -2342,7 +2346,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'zh',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/your-brand-voice-ai?lang=zh', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'zh'),
         keywords: ['品牌声音', '品牌一致性', '语调', '内容生成', '提示工程', '品牌指南', 'AI生成内容'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Jasper' },
@@ -2675,7 +2679,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-06-14',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/your-brand-voice-ai', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ko'),
         keywords: ['브랜드 보이스', '브랜드 일관성', '톤 오브 보이스', '콘텐츠 생성', '프롬프트 엔지니어링', '브랜드 가이드라인', 'AI 생성 콘텐츠'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Jasper' },

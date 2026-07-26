@@ -6,6 +6,10 @@ import type { Language } from "@/lib/blog/blogContent";
 import { contextWindowsDe, contextWindowsFr, contextWindowsJa, contextWindowsZh, contextWindowsEs, contextWindowsPt, contextWindowsAr, contextWindowsKo } from "@/lib/prompt-engineering/contextWindowsTranslations";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('context-windows-explained');
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
@@ -83,7 +87,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'en'),
         'proficiencyLevel': 'Beginner',
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -199,7 +203,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['Kontextfenster', 'Tokens', 'LLM-Speicher', 'Prompt-Design', 'KI vergisst', 'Kontextlimits'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=de', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'de'),
         'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -273,7 +277,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['context window', 'tokens', 'memoria LLM', 'diseño de prompts', 'la IA olvida', 'límites de contexto'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=es', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'es'),
         'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -390,7 +394,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=ar', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ar'),
         'proficiencyLevel': 'مبتدئ',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -464,7 +468,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['janela de contexto', 'tokens', 'memória LLM', 'design de prompts', 'a IA esquece', 'limites de contexto'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=pt', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'pt'),
         'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -537,7 +541,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['fenêtre de contexte', 'tokens', 'mémoire LLM', 'conception de prompts', 'l\'IA oublie', 'limites de contexte'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=fr', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'fr'),
         'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -610,7 +614,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['コンテキストウィンドウ', 'トークン', 'LLMメモリ', 'プロンプト設計', 'AIが忘れる', 'コンテキスト制限'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=ja', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ja'),
         'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -683,7 +687,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['上下文窗口', '令牌', 'LLM内存', '提示设计', 'AI忘记', '上下文限制'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=zh', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'zh'),
         'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
@@ -800,7 +804,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/context-windows-explained-why-ai-forgets?lang=ko', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ko'),
         'proficiencyLevel': 'Beginner',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },

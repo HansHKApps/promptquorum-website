@@ -6,6 +6,10 @@ import type { Language } from "@/lib/blog/blogContent";
 import { imagesWithTextDe, imagesWithTextFr, imagesWithTextJa, imagesWithTextZh, imagesWithTextEs, imagesWithTextPt, imagesWithTextAr, imagesWithTextKo } from "@/lib/prompt-engineering/imagesWithTextTranslations";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('prompt-with-images');
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
@@ -27,7 +31,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-03-25',
         url: 'https://www.promptquorum.com/prompt-engineering/beyond-text-how-to-prompt-with-images',
         inLanguage: 'en',
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/beyond-text-how-to-prompt-with-images', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'en'),
         keywords: ['multimodal prompting', 'vision-language models', 'image prompting', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.5 Pro', 'prompt engineering', 'image analysis', 'text-to-image generation', 'image editing'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },

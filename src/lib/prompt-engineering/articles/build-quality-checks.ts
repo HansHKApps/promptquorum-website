@@ -5,6 +5,10 @@
 import type { Language } from "@/lib/blog/blogContent";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('build-quality-checks');
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
@@ -51,7 +55,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-quality-checks', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'en'),
         keywords: ['quality gates', 'CI/CD', 'AI hallucinations', 'code review', 'security scanning', 'dependency validation', 'build checks'],
         proficiencyLevel: 'Intermediate',
         audience: { '@type': 'Audience', audienceType: 'Development team leads and DevOps engineers integrating AI coding assistants' },
@@ -545,7 +549,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-quality-checks?lang=de', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'de'),
         keywords: ['Qualitätsgates', 'CI/CD', 'KI-Halluzinationen', 'Code-Review', 'Sicherheitsscanning', 'Abhängigkeitsvalidierung', 'Build-Prüfungen'],
         proficiencyLevel: 'Intermediate',
         audience: { '@type': 'Audience', audienceType: 'Entwicklungsleiter und DevOps-Ingenieure, die KI-Coding-Assistenten integrieren' },
@@ -1964,7 +1968,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-quality-checks?lang=fr', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'fr'),
         keywords: ['gates qualité', 'CI/CD', 'hallucinations IA', 'revue de code', 'analyse statique', 'validation des dépendances', 'checks de build'],
         proficiencyLevel: 'Intermediate',
         audience: { '@type': 'Audience', audienceType: 'Responsables d\'équipes de développement et ingénieurs DevOps intégrant des assistants IA' },
@@ -2296,7 +2300,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'ja',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-quality-checks?lang=ja', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ja'),
         keywords: ['品質ゲート', 'CI/CD', 'AIハルシネーション', 'コードレビュー', 'セキュリティスキャン', '依存関係バリデーション', 'ビルドチェック'],
         proficiencyLevel: 'Intermediate',
         audience: { '@type': 'Audience', audienceType: 'AI coding assistantを統合する開発チームリードとDevOpsエンジニア' },
@@ -2811,7 +2815,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'zh',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-quality-checks?lang=zh', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'zh'),
         keywords: ['质量门控', 'CI/CD', 'AI幻觉', '代码审查', '安全扫描', '依赖项验证', '构建检查'],
         proficiencyLevel: 'Intermediate',
         audience: { '@type': 'Audience', audienceType: '将AI编码助手集成到生产流水线的开发团队负责人和DevOps工程师' },

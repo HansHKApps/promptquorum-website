@@ -1,5 +1,9 @@
 import type { Language } from "@/lib/blog/blogContent";
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('pe-for-content-teams');
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
@@ -43,7 +47,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-content-teams', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'en'),
       inLanguage: 'en',
       keywords: ['prompt engineering', 'content teams', 'brand voice', 'content templates', 'editorial workflow', 'quality scoring'],
       proficiencyLevel: 'Intermediate',
@@ -225,7 +229,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-content-teams?lang=de', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'de'),
       keywords: ['Prompt Engineering', 'Content-Teams', 'Brand Voice', 'Content-Templates', 'Redaktionsworkflow'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -341,7 +345,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-content-teams?lang=es', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'es'),
       keywords: ['prompt engineering', 'equipos de contenido', 'voz de marca', 'plantillas de contenido', 'flujo de trabajo editorial'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -493,7 +497,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-content-teams?lang=pt', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'pt'),
       keywords: ['prompt engineering', 'equipes de conteúdo', 'voz da marca', 'modelos de conteúdo', 'fluxo de trabalho editorial'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -646,7 +650,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-content-teams?lang=fr', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'fr'),
       keywords: ['prompt engineering', 'équipes contenu', 'voix de marque', 'templates contenu', 'workflow éditorial'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -791,7 +795,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'ja',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-content-teams?lang=ja', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'ja'),
       keywords: ['プロンプトエンジニアリング', 'コンテンツチーム', 'ブランドボイス', 'コンテンツテンプレート', '編集ワークフロー'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -936,7 +940,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'zh',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-content-teams?lang=zh', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'zh'),
       keywords: ['提示词工程', '内容团队', '品牌声音', '内容模板', '编辑工作流'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1081,7 +1085,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'ar',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-content-teams?lang=ar', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'ar'),
       keywords: ['هندسة البرومبت', 'فرق المحتوى', 'صوت العلامة التجارية', 'قوالب المحتوى', 'سير العمل التحريري'],
       proficiencyLevel: 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1264,7 +1268,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/prompt-engineering-for-content-teams', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'ko'),
       inLanguage: 'ko',
       keywords: ['프롬프트 엔지니어링', '콘텐츠 팀', '브랜드 보이스', '콘텐츠 템플릿', '편집 워크플로우', '품질 점수화'],
       proficiencyLevel: 'Intermediate',
