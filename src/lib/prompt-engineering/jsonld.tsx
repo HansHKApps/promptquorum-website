@@ -292,8 +292,12 @@ export function buildPEArticleSchemas(slug: string, key: string, lang: PELang) {
       : null
 
   const educationalLevel = peEdLevel
+  // Locale-own field only — never fall back to peEnArticle.audience. That would
+  // emit the EN string as LearningResource.audience.audienceType on a non-EN
+  // page. There's no section-level translated equivalent to fall back to here
+  // (unlike howToName), so if the locale doesn't have its own audience, the
+  // `audience &&` guard below omits the property entirely rather than emit English.
   const audience = (article as PEArticle & { audience?: string }).audience
-    ?? (peEnArticle as PEArticle & { audience?: string })?.audience
 
   const learningResourceSchema = educationalLevel ? {
     '@context': 'https://schema.org',
@@ -315,8 +319,11 @@ export function buildPEArticleSchemas(slug: string, key: string, lang: PELang) {
     },
   } : null
 
+  // Locale-own field only — never fall back to peEnArticle.primaryTerm. That would
+  // emit the EN string as DefinedTerm.name on a non-EN page. No section-level
+  // translated equivalent exists here either; the `primaryTerm ?` ternary below
+  // omits the whole definedTermSchema node rather than emit English.
   const primaryTerm = (article as PEArticle & { primaryTerm?: string }).primaryTerm
-    ?? (peEnArticle as PEArticle & { primaryTerm?: string })?.primaryTerm
 
   const definedTermSchema = primaryTerm ? {
     '@context': 'https://schema.org',
