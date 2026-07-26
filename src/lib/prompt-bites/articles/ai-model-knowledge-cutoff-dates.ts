@@ -1,6 +1,9 @@
 import type { Language } from '@/lib/blog/blogContent'
 import type { PromptBiteArticle } from '../types'
 import { CLOUD_MODELS, LOCAL_MODELS, CUTOFF_DATA_LAST_VERIFIED } from '@/lib/shared/cutoff-data'
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = 'ai-model-knowledge-cutoff-dates';
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
@@ -248,12 +251,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         url: 'https://www.promptquorum.com',
         logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
       },
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/ai-model-knowledge-cutoff-dates',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'en'),
       url: 'https://www.promptquorum.com/prompt-bites/ai-model-knowledge-cutoff-dates',
     },
     faqSchema: {

@@ -1,6 +1,7 @@
 import type { Language } from "@/lib/blog/blogContent";
 import type { PEArticle } from "@/lib/prompt-engineering/types";
 import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
 
 const OG_SLUG = keyToSlug('prompt-security-tools');
 
@@ -47,7 +48,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'en'),
       inLanguage: 'en',
       keywords: ['prompt injection', 'prompt security', 'Garak', 'PyRIT', 'OWASP LLM Top 10', 'LLM security', 'red teaming'],
       proficiencyLevel: 'Advanced',
@@ -227,7 +228,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'de'),
       inLanguage: 'de',
     },
     sections: {
@@ -394,7 +395,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'es'),
       inLanguage: 'es',
     },
     sections: {
@@ -566,7 +567,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'pt'),
       inLanguage: 'pt-BR',
     },
     sections: {
@@ -738,7 +739,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'fr'),
       inLanguage: 'fr',
     },
     sections: {
@@ -906,7 +907,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'ja'),
       inLanguage: 'ja',
     },
     sections: {
@@ -1074,7 +1075,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'zh'),
       inLanguage: 'zh',
     },
     sections: {
@@ -1241,7 +1242,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'ko'),
       inLanguage: 'ko',
     },
     sections: {
@@ -1414,7 +1415,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: `https://www.promptquorum.com/api/og/${OG_SLUG}`, width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'ar'),
       inLanguage: 'ar',
     },
     sections: {

@@ -1,5 +1,9 @@
 import type { Language } from "@/lib/blog/blogContent";
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('multi-model-prompt-testing');
 
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
@@ -43,7 +47,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       datePublished: '2026-05-02',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/multi-model-prompt-testing-workflows', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'en'),
       inLanguage: 'en',
       keywords: ['multi-model prompt testing', 'GPT-5.6', 'Claude Sonnet 5', 'Gemini 2.5 Flash', 'Promptfoo', 'PromptQuorum', 'LLM evaluation'],
       proficiencyLevel: 'Advanced',
@@ -297,7 +301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/multi-model-prompt-testing-workflows?lang=de', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'de'),
       keywords: ['Multi-Modell-Prompt-Testing', 'GPT-5.6', 'Claude Sonnet 5', 'Gemini 2.5 Flash', 'PromptQuorum', 'Promptfoo'],
       proficiencyLevel: 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -469,7 +473,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/multi-model-prompt-testing-workflows?lang=es', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'es'),
       keywords: ['pruebas multi-modelo', 'GPT-5.6', 'Claude Sonnet 5', 'Gemini 2.5 Flash', 'PromptQuorum', 'Promptfoo'],
       proficiencyLevel: 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -711,7 +715,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/multi-model-prompt-testing-workflows?lang=pt', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'pt'),
       keywords: ['multi-model prompt testing', 'GPT-5.6', 'Claude Sonnet 5', 'Gemini 2.5 Flash', 'PromptQuorum', 'Promptfoo'],
       proficiencyLevel: 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -954,7 +958,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/multi-model-prompt-testing-workflows?lang=fr', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'fr'),
       keywords: ['test multi-modèles', 'GPT-5.6', 'Claude Sonnet 5', 'Gemini 2.5 Flash', 'PromptQuorum', 'Promptfoo'],
       proficiencyLevel: 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1126,7 +1130,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'ja',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/multi-model-prompt-testing-workflows?lang=ja', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'ja'),
       keywords: ['マルチモデルプロンプトテスト', 'GPT-5.6', 'Claude Sonnet 5', 'Gemini 2.5 Flash', 'PromptQuorum', 'Promptfoo'],
       proficiencyLevel: 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1280,7 +1284,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'zh',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/multi-model-prompt-testing-workflows?lang=zh', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'zh'),
       keywords: ['多模型提示词测试', 'GPT-5.6', 'Claude Sonnet 5', 'Gemini 2.5 Flash', 'PromptQuorum', 'Promptfoo'],
       proficiencyLevel: 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1471,7 +1475,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'ar',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/multi-model-prompt-testing-workflows?lang=ar', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'ar'),
       keywords: ['اختبار متعدد النماذج', 'GPT-5.6', 'Claude Sonnet 5', 'Gemini 2.5 Flash', 'PromptQuorum', 'Promptfoo'],
       proficiencyLevel: 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1714,7 +1718,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'ko',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/multi-model-prompt-testing-workflows?lang=ko', width: 1200, height: 675 },
+      image: buildOgImageObject(OG_SLUG, 'ko'),
       keywords: ['멀티모델 프롬프트 테스트', 'GPT-5.6', 'Claude Sonnet 5', 'Gemini 2.5 Flash', 'PromptQuorum', 'Promptfoo'],
       proficiencyLevel: 'Advanced',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },

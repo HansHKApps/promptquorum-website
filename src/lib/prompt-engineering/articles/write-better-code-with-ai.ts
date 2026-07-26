@@ -5,6 +5,9 @@
 import type { Language } from "@/lib/blog/blogContent";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { buildOgImageObject } from '@/lib/imageObjectSchema';
+
+const OG_SLUG = 'write-better-code-with-ai';
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
@@ -62,7 +65,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Temperature' },
         ],
-        image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai',
+        image: buildOgImageObject(OG_SLUG, 'en'),
         'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -542,7 +545,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Temperature' },
         ],
-        image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai?lang=de',
+        image: buildOgImageObject(OG_SLUG, 'de'),
         url: 'https://www.promptquorum.com/de/prompt-engineering/write-better-code-with-ai',
         'proficiencyLevel': 'Intermediate',
         speakable: {
@@ -1052,7 +1055,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Prompt engineering' },
           { '@type': 'Thing', name: 'Seguridad del código' },
         ],
-        image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai?lang=es',
+        image: buildOgImageObject(OG_SLUG, 'es'),
         url: 'https://www.promptquorum.com/es/prompt-engineering/write-better-code-with-ai',
         'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1334,7 +1337,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'هندسة الطلبات' },
           { '@type': 'Thing', name: 'أمان الكود' },
         ],
-        image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai?lang=ar',
+        image: buildOgImageObject(OG_SLUG, 'ar'),
         url: 'https://www.promptquorum.com/ar/prompt-engineering/write-better-code-with-ai',
         'proficiencyLevel': 'متوسط',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1611,7 +1614,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Prompt engineering' },
           { '@type': 'Thing', name: 'Segurança de código' },
         ],
-        image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai?lang=pt',
+        image: buildOgImageObject(OG_SLUG, 'pt'),
         url: 'https://www.promptquorum.com/pt/prompt-engineering/write-better-code-with-ai',
         'proficiencyLevel': 'Intermediate',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1860,7 +1863,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Température' },
         ],
-        image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai',
+        image: buildOgImageObject(OG_SLUG, 'en'),
         'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -2365,7 +2368,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Temperature' },
         ],
-        image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai?lang=ja',
+        image: buildOgImageObject(OG_SLUG, 'ja'),
         inLanguage: 'ja',
         url: 'https://www.promptquorum.com/ja/prompt-engineering/write-better-code-with-ai',
         'proficiencyLevel': 'Intermediate',
@@ -2808,7 +2811,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Temperature' },
         ],
-        image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai?lang=zh',
+        image: buildOgImageObject(OG_SLUG, 'zh'),
         'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',
@@ -3300,7 +3303,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Temperature' },
         ],
-        image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai',
+        image: buildOgImageObject(OG_SLUG, 'en'),
         'proficiencyLevel': 'Intermediate',
         speakable: {
           '@type': 'SpeakableSpecification',

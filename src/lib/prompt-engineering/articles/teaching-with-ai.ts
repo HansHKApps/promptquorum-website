@@ -5,6 +5,10 @@
 import type { Language } from "@/lib/blog/blogContent";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('teaching-with-ai');
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
@@ -79,12 +83,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             url: 'https://www.promptquorum.com/logo.svg',
           },
         },
-        image: {
-          '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/teaching-with-ai',
-          width: 1200,
-          height: 675,
-        },
+        image: buildOgImageObject(OG_SLUG, 'en'),
         keywords: ['AI tutoring', 'AI in education', 'Khanmigo', 'lesson planning', 'ChatGPT for teachers', 'Claude education', 'prompt engineering teaching'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Khanmigo' },
@@ -658,12 +657,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             url: 'https://www.promptquorum.com/logo.svg',
           },
         },
-        image: {
-          '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/teaching-with-ai?lang=de',
-          width: 1200,
-          height: 675,
-        },
+        image: buildOgImageObject(OG_SLUG, 'de'),
         keywords: ['KI-Nachhilfe', 'KI im Bildungswesen', 'Khanmigo', 'Unterrichtsplanung', 'ChatGPT für Lehrkräfte', 'Claude Bildung', 'Prompt-Engineering Unterricht'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Khanmigo' },
@@ -2253,12 +2247,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/logo.svg',
       },
     },
-    image: {
-      '@type': 'ImageObject',
-      url: 'https://www.promptquorum.com/api/og/teaching-with-ai?lang=fr',
-      width: 1200,
-      height: 675,
-    },
+    image: buildOgImageObject(OG_SLUG, 'fr'),
     keywords: ['IA tutoring', 'IA en éducation', 'Khanmigo', 'planification pédagogique', 'ChatGPT enseignants', 'Claude éducation', 'engineering des prompts enseignement'],
     mentions: [
       { '@type': 'SoftwareApplication', name: 'Khanmigo' },
@@ -2833,12 +2822,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/logo.svg',
       },
     },
-    image: {
-      '@type': 'ImageObject',
-      url: 'https://www.promptquorum.com/api/og/teaching-with-ai?lang=ja',
-      width: 1200,
-      height: 675,
-    },
+    image: buildOgImageObject(OG_SLUG, 'ja'),
     keywords: ['AIチューター', '教育とAI', 'Khanmigo', '教育計画', 'ChatGPT教師', 'Claude教育', 'プロンプト工学教育'],
     mentions: [
       { '@type': 'SoftwareApplication', name: 'Khanmigo' },
@@ -3225,12 +3209,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             url: 'https://www.promptquorum.com/logo.svg',
           },
         },
-        image: {
-          '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/teaching-with-ai',
-          width: 1200,
-          height: 675,
-        },
+        image: buildOgImageObject(OG_SLUG, 'zh'),
         keywords: ['AI辅导', '教育中的AI', 'Khanmigo', '课程规划', '教师ChatGPT', 'Claude教育', '提示词工程教学'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'Khanmigo' },

@@ -4,6 +4,9 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = 'easiest-local-ai-app-windows-mac-linux';
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -355,6 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'LM Studio on Apple Silicon, Intel Mac, Windows, and Linux: supported models, system requirements, and setup time. No terminal. Ranked vs Jan and GPT4All, 2026.',
       url: 'https://www.promptquorum.com/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'en',
+      image: buildOgImageObject(OG_SLUG, 'en'),
       datePublished: '2026-05-07',
       dateModified: '2026-07-14',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
@@ -683,12 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'LM Studio auf Apple Silicon, Intel Mac, Windows und Linux: unterstützte Modelle, Systemanforderungen und Einrichtungszeit. Ohne Terminal. Im Vergleich zu Jan und GPT4All, 2026.',
       url: 'https://www.promptquorum.com/de/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'de',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/easiest-local-ai-app-windows-mac-linux?lang=de',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'de'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1100,12 +1099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'LM Studio sur Apple Silicon, Mac Intel, Windows et Linux : modèles supportés, configuration requise et temps d\'installation. Sans terminal. Face à Jan et GPT4All, 2026.',
       url: 'https://www.promptquorum.com/fr/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'fr',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/easiest-local-ai-app-windows-mac-linux?lang=fr',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'fr'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1513,12 +1507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'LM StudioのApple Silicon、Intel Mac、Windows、Linux対応：サポートモデル、システム要件、セットアップ時間。ターミナル不要。Jan・GPT4Allとの比較、2026年版。',
       url: 'https://www.promptquorum.com/ja/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'ja',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/easiest-local-ai-app-windows-mac-linux?lang=ja',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'ja'),
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -1930,12 +1919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'LM Studio在Apple Silicon、Intel Mac、Windows和Linux上的支持模型、系统要求与安装时间，无需终端。对比Jan和GPT4All，2026年版。',
       url: 'https://www.promptquorum.com/zh/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'zh',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/easiest-local-ai-app-windows-mac-linux?lang=zh',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'zh'),
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -2342,6 +2326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'LM Studio en Apple Silicon, Mac Intel, Windows y Linux: modelos compatibles, requisitos del sistema y tiempo de configuración. Sin terminal. Comparado con Jan y GPT4All, 2026.',
       url: 'https://www.promptquorum.com/es/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'es',
+      image: buildOgImageObject(OG_SLUG, 'es'),
       datePublished: '2026-05-07',
       dateModified: '2026-07-14',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2698,6 +2683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'LM Studio no Apple Silicon, Mac Intel, Windows e Linux: modelos compatíveis, requisitos de sistema e tempo de configuração. Sem terminal. Comparado com Jan e GPT4All, 2026.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'pt-BR',
+      image: buildOgImageObject(OG_SLUG, 'pt'),
       datePublished: '2026-05-07',
       dateModified: '2026-07-14',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
@@ -3054,6 +3040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'LM Studio على Apple Silicon وMac Intel وWindows وLinux: النماذج المدعومة ومتطلبات النظام ووقت الإعداد. بلا طرفية. مقارنةً بـJan وGPT4All، 2026.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'ar',
+      image: buildOgImageObject(OG_SLUG, 'ar'),
       datePublished: '2026-05-07',
       dateModified: '2026-07-14',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
@@ -3410,6 +3397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'LM Studio의 Apple Silicon, Intel Mac, Windows, Linux 지원 모델과 시스템 요구 사항, 설정 시간. 터미널 불필요. Jan, GPT4All과 비교, 2026년.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'ko',
+      image: buildOgImageObject(OG_SLUG, 'ko'),
       datePublished: '2026-05-07',
       dateModified: '2026-07-14',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },

@@ -13,6 +13,7 @@ import { isPromptBitePublished, isPromptBitesHubPublished, PROMPT_BITES_PUBLISHE
 import { promptBitesAlternates, promptBitesHubPath, promptBitesArticlePath } from './metadata-helpers'
 import { getHubMetadata } from './hub-metadata'
 import { toOutputLocale } from '@/lib/i18n/constants'
+import { buildArticleImageObject } from '@/lib/imageObjectSchema'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -119,6 +120,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
     dateModified: (article as any).dateModified ?? article.publishDate,
     inLanguage: toOutputLocale(lang),
     url: canonicalUrl,
+    image: buildArticleImageObject(article as { heroImage?: string }, slug, lang),
     ...(proficiencyLevel && { proficiencyLevel }),
     author: {
       '@type': 'Person',

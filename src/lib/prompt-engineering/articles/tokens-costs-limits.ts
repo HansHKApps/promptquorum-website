@@ -5,6 +5,10 @@
 import type { Language } from "@/lib/blog/blogContent";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('tokens-costs-limits');
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
@@ -42,7 +46,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-12',
         proficiencyLevel: 'Intermediate',
         url: 'https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting',
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/tokens-costs-limits-economics-of-ai-prompting', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'en'),
         keywords: ['tokens', 'API costs', 'rate limits', 'prompt engineering', 'GPT-5.5', 'Claude', 'Gemini', 'cost optimization', 'local LLMs'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -965,7 +969,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         dateModified: '2026-04-12',
         proficiencyLevel: 'Intermediate',
         url: 'https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting',
-        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/tokens-costs-limits-economics-of-ai-prompting', width: 1200, height: 675 },
+        image: buildOgImageObject(OG_SLUG, 'ko'),
         keywords: ['토큰', 'API 비용', '요청 속도 제한', '프롬프트 엔지니어링', 'GPT-5.5', 'Claude', 'Gemini', '비용 최적화', '로컬 LLM'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },

@@ -5,6 +5,9 @@
 import type { Language } from "@/lib/blog/blogContent";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { buildOgImageObject } from '@/lib/imageObjectSchema';
+
+const OG_SLUG = 'how-llms-actually-work';
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
@@ -33,7 +36,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         technicalAudience: 'Developers, AI practitioners, prompt engineers',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: 'https://www.promptquorum.com/api/og/how-llms-actually-work',
+        image: buildOgImageObject(OG_SLUG, 'en'),
         keywords: ['large language models', 'LLM architecture', 'transformer', 'tokenization', 'attention mechanism', 'RLHF', 'temperature', 'context window', 'prompt engineering', 'GPT-5.5', 'Claude'],
         about: [
           { '@type': 'Thing', name: 'Large Language Models' },

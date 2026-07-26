@@ -5,6 +5,10 @@
 import type { Language } from "@/lib/blog/blogContent";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { keyToSlug } from "@/lib/prompt-engineering/slugs";
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = keyToSlug('seo-meets-ai');
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
@@ -60,12 +64,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             url: 'https://www.promptquorum.com/logo.svg',
           },
         },
-        image: {
-          '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/seo-meets-ai',
-          width: 1200,
-          height: 675,
-        },
+        image: buildOgImageObject(OG_SLUG, 'en'),
         keywords: ['GEO', 'SEO', 'generative engine optimization', 'AI search', 'ChatGPT search', 'Perplexity', 'Google AI Overviews', 'JSON-LD schema', 'AI citations'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'ChatGPT' },
@@ -3158,12 +3157,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             url: 'https://www.promptquorum.com/logo.svg',
           },
         },
-        image: {
-          '@type': 'ImageObject',
-          url: 'https://www.promptquorum.com/api/og/seo-meets-ai',
-          width: 1200,
-          height: 675,
-        },
+        image: buildOgImageObject(OG_SLUG, 'ko'),
         keywords: ['GEO', 'SEO', '생성형 엔진 최적화', 'AI 검색', 'ChatGPT 검색', 'Perplexity', 'Google AI Overviews', 'JSON-LD 스키마', 'AI 인용'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'ChatGPT' },
