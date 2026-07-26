@@ -7,9 +7,8 @@ import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { llmThemes } from '@/lib/local-llms/themes'
 import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS, toOutputLocale } from '@/lib/i18n/constants'
-import { getLocalLLMGeoEntities, type Language } from '@/lib/geo-schema'
-import { buildImageObject } from '@/lib/imageObjectSchema'
+import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { LocalLLMArticleJsonLd } from '@/lib/local-llms/jsonld'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -35,24 +34,6 @@ function getTitleForSlug(slug: string): string {
     .split('-')
     .map(word => SLUG_ACRONYMS[word.toLowerCase()] ?? word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(' ')
-}
-
-// Validate and fix itemListSchema to ensure all ListItems have a 'name' property
-function ensureItemListSchemaValid(schema: any): any {
-  if (!schema || schema['@type'] !== 'ItemList' || !Array.isArray(schema.itemListElement)) {
-    return schema
-  }
-
-  const fixed = { ...schema }
-  fixed.itemListElement = schema.itemListElement.map((item: any) => {
-    // If item has nested item.name but no top-level name, copy it up
-    if (!item.name && item.item?.name) {
-      return { ...item, name: item.item.name }
-    }
-    return item
-  })
-
-  return fixed
 }
 
 interface PageProps {
@@ -201,156 +182,9 @@ export default async function LocalLLMsArticlePage({ params }: PageProps) {
 
   const selectedLang = 'en' as 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
-  const article = (llmContent[key][selectedLang] ?? llmContent[key]['en'])!
-  const translationObj = llmContent[key][selectedLang] as any
-  const hasTranslation = Boolean(translationObj) && Object.keys(translationObj.sections ?? {}).length > 0
-  const canonicalUrl = `https://www.promptquorum.com/local-llms/${slug}`
-  const ogImageUrl = `https://www.promptquorum.com/api/og/${slug}?lang=${selectedLang}`
-
-  // Map educationalLevel → TechArticle proficiencyLevel
-  const llmEdLevel = (article as any).educationalLevel ?? (llmContent[key]['en'] as any)?.educationalLevel
-  const llmLevelMap: Record<string, string> = { Beginner: 'Beginner', Intermediate: 'Intermediate', Advanced: 'Expert', Technical: 'Expert' }
-  const llmProficiencyLevel = llmEdLevel ? (llmLevelMap[llmEdLevel] ?? llmEdLevel) : undefined
-  const llmAboutTopics = ((article as any).aboutTopics ?? (llmContent[key]['en'] as any)?.aboutTopics) as string[] | undefined
-  const llmHowToName = ((article as any).howToName ?? (llmContent[key]['en'] as any)?.howToName) as string | undefined
-
-  // Use article.schema if defined; otherwise fallback to generic TechArticle schema
-  const articleSchema = (article as any).schema || {
-    '@context': 'https://schema.org',
-    '@type': 'TechArticle',
-    headline: article.title,
-    description: article.intro,
-    datePublished: article.publishDate,
-    dateModified: (article as any).dateModified ?? ((article as any).lastFactChecked as string | undefined)?.substring(0, 10) ?? article.publishDate,
-    inLanguage: toOutputLocale(selectedLang),
-    url: canonicalUrl,
-    ...(llmProficiencyLevel && { proficiencyLevel: llmProficiencyLevel }),
-    ...(llmAboutTopics?.length && { about: llmAboutTopics.map((t: string) => ({ '@type': 'Thing', name: t })) }),
-    author: {
-      '@type': 'Person',
-      name: 'Hans Kuepper',
-      sameAs: [
-        'https://www.linkedin.com/in/hanskuepper/',
-        'https://x.com/HansKuepperAPPs',
-        'https://github.com/HansHKApps',
-      ],
-      url: 'https://www.promptquorum.com/about',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'PromptQuorum',
-      url: 'https://www.promptquorum.com',
-      logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
-    },
-    speakable: {
-      '@type': 'SpeakableSpecification',
-      cssSelector: ['.article-intro', '.key-takeaways'],
-    },
-    isPartOf: {
-      '@type': 'WebPage',
-      name: 'Local LLMs Guide',
-      url: 'https://www.promptquorum.com/local-llms',
-    },
-  }
-
-  // Ensure inLanguage is always set (covers pre-built article.schema with missing or EN block)
-  if (!(articleSchema as any).inLanguage) {
-    (articleSchema as any).inLanguage = toOutputLocale(selectedLang)
-  }
-
-  // Inject GEO Schema Matrix entities
-  const geoAbout = getLocalLLMGeoEntities(article.theme ?? '', selectedLang as Language, slug)
-  if (geoAbout.length > 0) {
-    (articleSchema as any).about = [...(Array.isArray((articleSchema as any).about) ? (articleSchema as any).about : []), ...geoAbout]
-  }
-
-  // Collect section images for ImageObject JSON-LD attribution
-  const sectionImageObjects = Object.values(article.sections ?? {})
-    .filter(s => !!s.image)
-    .map(s => buildImageObject(s.image!, { caption: s.imageCaption }))
-
-  if (!(articleSchema as any).image) {
-    (articleSchema as any).image = (article as any).heroImage
-      ? `https://www.promptquorum.com${(article as any).heroImage}`
-      : ogImageUrl
-  }
-
-  // Translate breadcrumb labels per language
-  const breadcrumbLabels: Record<string, { home: string; hub: string }> = {
-    en: { home: 'Home', hub: 'Local LLMs' },
-    de: { home: 'Startseite', hub: 'Lokale LLMs' },
-    fr: { home: 'Accueil', hub: 'LLMs locaux' },
-    ja: { home: 'ホーム', hub: 'ローカルLLM' },
-    zh: { home: '首页', hub: '本地LLM' },
-  }
-  const labels = breadcrumbLabels[selectedLang] || breadcrumbLabels['en']
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    inLanguage: toOutputLocale(selectedLang),
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: labels.home, item: 'https://www.promptquorum.com' },
-      { '@type': 'ListItem', position: 2, name: labels.hub, item: 'https://www.promptquorum.com/local-llms' },
-      { '@type': 'ListItem', position: 3, name: article.title ?? (article as any).seoTitle ?? slug, item: canonicalUrl },
-    ],
-  }
-
-  // Auto-generate FAQPage schema from sections with faqs, plus quickAnswerTop if present
-  // Only collect FAQ entries if there's no explicit faqSchema (single source of truth)
-  const faqEntries = !article.faqSchema ? Object.values(article.sections).flatMap(s => s.faqs ?? []) : []
-  const quickAnswerTopEntry = !article.faqSchema ? (article as any).quickAnswerTop?.[selectedLang] : undefined
-  const allFaqEntries = [
-    ...(quickAnswerTopEntry ? [{ q: quickAnswerTopEntry.question, a: quickAnswerTopEntry.answer }] : []),
-    ...faqEntries,
-  ]
-  const faqSchema = article.faqSchema ?? (allFaqEntries.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: allFaqEntries.map(f => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  } : null)
-
-  // Auto-generate HowTo schema from first numberedItems section
-  const howToSection = Object.values(article.sections).find(s => s.numberedItems && s.numberedItems.length > 0)
-  const howToSchema = article.howToSchema ?? (howToSection ? {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: llmHowToName ?? article.title,
-    description: article.intro,
-    step: howToSection.numberedItems!.map((step, i) => {
-      const rawText = typeof step === 'string' ? step : `${step.title}: ${step.whyItMatters}`
-      const cleanText = rawText.replace(/\*\*/g, '')
-      const colonIdx = cleanText.indexOf(':')
-      const name = typeof step !== 'string'
-        ? step.title
-        : colonIdx > 0 && colonIdx < 80
-          ? cleanText.slice(0, colonIdx).trim()
-          : cleanText.slice(0, 80).trim()
-      return {
-        '@type': 'HowToStep',
-        position: i + 1,
-        name,
-        text: cleanText,
-      }
-    }),
-  } : null)
-
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
-      {howToSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />}
-      {article.supplementalSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.supplementalSchema) }} />}
-      {article.tableSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.tableSchema) }} />}
-      {article.itemListSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ensureItemListSchemaValid(article.itemListSchema)) }} />}
-      {sectionImageObjects.length > 0 && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': sectionImageObjects }) }} />
-      )}
+      <LocalLLMArticleJsonLd slug={slug} articleKey={key} lang={selectedLang} />
       <LocalLLMsPostClient slug={slug} initialLang={selectedLang} />
     </>
   )
