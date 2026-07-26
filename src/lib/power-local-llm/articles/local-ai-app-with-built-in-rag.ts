@@ -4,6 +4,9 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { buildOgImageObject } from '@/lib/imageObjectSchema';
+
+const OG_SLUG = 'local-ai-app-with-built-in-rag';
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -4021,7 +4024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-07',
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-ai-app-with-built-in-rag',
-      image: 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=ar',
+      image: buildOgImageObject(OG_SLUG, 'ar'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',

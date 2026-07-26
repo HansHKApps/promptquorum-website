@@ -5,6 +5,9 @@
 import type { Language } from "@/lib/blog/blogContent";
 
 import type { PEArticle } from "@/lib/prompt-engineering/types";
+import { buildOgImageObject } from '@/lib/imageObjectSchema';
+
+const OG_SLUG = 'prompt-injection-and-security';
 
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
@@ -32,7 +35,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         articleSection: 'Techniques',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: 'https://www.promptquorum.com/api/og/prompt-injection-and-security',
+        image: buildOgImageObject(OG_SLUG, 'en'),
         keywords: ['prompt injection', 'LLM security', 'indirect prompt injection', 'jailbreak', 'AI security', 'OWASP LLM Top 10', 'system prompt protection', 'input validation', 'RAG security', 'prompt injection defense', 'adversarial machine learning', 'model robustness'],
         teaches: [
           'How to identify and classify prompt injection attack types (direct, indirect, stored, multimodal)',
@@ -436,7 +439,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         articleSection: 'Techniques',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: 'https://www.promptquorum.com/api/og/prompt-injection-and-security?lang=de',
+        image: buildOgImageObject(OG_SLUG, 'de'),
         keywords: ['Prompt Injection', 'LLM-Sicherheit', 'Indirekte Prompt Injection', 'Jailbreak', 'KI-Sicherheit', 'OWASP LLM Top 10', 'System-Prompt-Schutz', 'Eingabevalidierung', 'RAG-Sicherheit', 'Prompt-Injection-Abwehr', 'Adversarial Machine Learning', 'Modellrobustheit'],
         teaches: [
           'Identifikation und Klassifikation von Prompt-Injection-Angriffstypen (direkt, indirekt, gespeichert, multimodal)',
@@ -837,7 +840,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         articleSection: 'Techniques',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: 'https://www.promptquorum.com/api/og/prompt-injection-and-security?lang=es',
+        image: buildOgImageObject(OG_SLUG, 'es'),
         keywords: ['prompt injection', 'seguridad LLM', 'prompt injection indirecta', 'jailbreak', 'seguridad IA', 'OWASP LLM Top 10', 'protección del system prompt', 'validación de entrada', 'seguridad RAG', 'defensa contra prompt injection', 'machine learning adversarial', 'robustez del modelo'],
         teaches: [
           'Cómo identificar y clasificar los tipos de ataque de prompt injection (directa, indirecta, almacenada, multimodal)',
@@ -1169,7 +1172,7 @@ def is_injection_attempt(text: str) -> bool:`,
         articleSection: 'Techniques',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: 'https://www.promptquorum.com/api/og/prompt-injection-and-security?lang=ar',
+        image: buildOgImageObject(OG_SLUG, 'ar'),
         keywords: ['prompt injection', 'أمان LLM', 'حقن البرومبت غير المباشر', 'jailbreak', 'أمان الذكاء الاصطناعي', 'OWASP LLM Top 10', 'حماية system prompt', 'التحقق من المدخلات', 'أمان RAG', 'الدفاع ضد حقن البرومبت', 'التعلم الآلي المعادي', 'متانة النموذج'],
         teaches: [
           'كيفية تحديد وتصنيف أنواع هجمات حقن البرومبت (المباشر، غير المباشر، المخزّن، متعدد الوسائط)',
@@ -1498,7 +1501,7 @@ def is_injection_attempt(text: str) -> bool:`,
         articleSection: 'Techniques',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: 'https://www.promptquorum.com/api/og/prompt-injection-and-security?lang=pt',
+        image: buildOgImageObject(OG_SLUG, 'pt'),
         keywords: ['prompt injection', 'segurança LLM', 'prompt injection indireta', 'jailbreak', 'segurança IA', 'OWASP LLM Top 10', 'proteção do system prompt', 'validação de entrada', 'segurança RAG', 'defesa contra prompt injection', 'machine learning adversarial', 'robustez do modelo'],
         teaches: [
           'Como identificar e classificar os tipos de ataque de prompt injection (direta, indireta, armazenada, multimodal)',
@@ -1825,7 +1828,7 @@ def is_injection_attempt(text: str) -> bool:`,
         articleSection: 'Techniques',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: 'https://www.promptquorum.com/api/og/prompt-injection-and-security?lang=fr',
+        image: buildOgImageObject(OG_SLUG, 'fr'),
         keywords: ['injection de prompt', 'sécurité LLM', 'injection de prompt indirecte', 'jailbreak', 'sécurité IA', 'OWASP LLM Top 10', 'protection du system prompt', 'validation des entrées', 'sécurité RAG', 'défense contre l\'injection de prompt', 'apprentissage automatique adversarial', 'robustesse des modèles'],
         teaches: [
           'Comment identifier et classer les types d\'attaques par injection de prompt (directe, indirecte, stockée, multimodale)',
@@ -2219,7 +2222,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         articleSection: 'Techniques',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: 'https://www.promptquorum.com/api/og/prompt-injection-and-security?lang=ja',
+        image: buildOgImageObject(OG_SLUG, 'ja'),
         keywords: ['プロンプトインジェクション', 'LLMセキュリティ', '間接プロンプトインジェクション', 'ジェイルブレーク', 'AIセキュリティ', 'OWASP LLM Top 10', 'システムプロンプト保護', '入力検証', 'RAGセキュリティ', 'プロンプトインジェクション対策', '敵対的機械学習', 'モデル堅牢性'],
         teaches: [
           'プロンプトインジェクション攻撃の種類の識別と分類（直接、間接、保存済み、マルチモーダル）',
@@ -2613,7 +2616,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         articleSection: 'Techniques',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        image: 'https://www.promptquorum.com/api/og/prompt-injection-and-security?lang=zh',
+        image: buildOgImageObject(OG_SLUG, 'zh'),
         keywords: ['提示词注入', 'LLM安全', '间接提示词注入', '越狱', 'AI安全', 'OWASP LLM Top 10', '系统提示词保护', '输入验证', 'RAG安全', '提示词注入防御', '对抗性机器学习', '模型鲁棒性'],
         teaches: [
           '如何识别和分类提示词注入攻击类型（直接、间接、存储型、多模态）',
@@ -3015,7 +3018,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       articleSection: 'Techniques',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-      image: 'https://www.promptquorum.com/api/og/prompt-injection-and-security?lang=ko',
+      image: buildOgImageObject(OG_SLUG, 'ko'),
       keywords: ['프롬프트 인젝션', 'LLM 보안', '간접 프롬프트 인젝션', '탈옥', 'AI 보안', 'OWASP LLM Top 10', '시스템 프롬프트 보호', '입력 유효성 검사', 'RAG 보안', '프롬프트 인젝션 방어', '적대적 머신러닝', '모델 견고성'],
       teaches: [
         '프롬프트 인젝션 공격 유형(직접·간접·저장형·멀티모달) 식별 및 분류 방법',
@@ -3211,6 +3214,8 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
 # LLM 입력 유효성 검사 파이프라인에 복사하십시오
 
 import re
+
+const OG_SLUG = 'prompt-injection-and-security';
 
 INJECTION_PATTERNS = [
     r"ignore\\s+(all\\s+|previous\\s+|above\\s+|prior\\s+)?(instructions|directives|rules|prompt)",

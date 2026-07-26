@@ -4,6 +4,9 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { buildOgImageObject } from '@/lib/imageObjectSchema';
+
+const OG_SLUG = 'best-local-coding-models-2026';
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -822,7 +825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Beste lokale Coding-Modelle 2026: Qwen3-Coder vs DeepSeek vs Codestral',
       description: 'Sechs lokale Coding-Modelle im Vergleich: Größe, Kontext, Lizenz, VRAM und HumanEval+-Richtung. Qwen3-Coder 30B ist die Standard-Wahl für Mai 2026; vollständige Analyse im Beitrag.',
-      image: 'https://www.promptquorum.com/api/og/best-local-coding-models-2026?lang=de/best-local-coding-models-2026',
+      image: buildOgImageObject(OG_SLUG, 'de'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1248,7 +1251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Meilleurs modèles de codage local 2026 : Qwen3-Coder vs DeepSeek vs Codestral',
       description: 'Six modèles de codage local comparés : taille, contexte, licence, VRAM et direction HumanEval+. Qwen3-Coder 30B est le meilleur choix pour mai 2026 ; analyse complète incluse.',
-      image: 'https://www.promptquorum.com/api/og/best-local-coding-models-2026?lang=fr/best-local-coding-models-2026',
+      image: buildOgImageObject(OG_SLUG, 'fr'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -2934,7 +2937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Mejores modelos de código local en 2026: Qwen3-Coder vs DeepSeek vs Codestral',
       description: 'Seis modelos de código local comparados en tamaño, contexto, licencia, VRAM y dirección de HumanEval+. Qwen3-Coder 30B es la opción recomendada para mayo de 2026; análisis completo en el artículo.',
-      image: 'https://www.promptquorum.com/api/og/best-local-coding-models-2026?lang=es/best-local-coding-models-2026',
+      image: buildOgImageObject(OG_SLUG, 'es'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -3581,7 +3584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Melhores modelos de código local em 2026: Qwen3-Coder vs DeepSeek vs Codestral',
       description: 'Seis modelos de código local comparados em tamanho, contexto, licença, VRAM e direção de HumanEval+. O Qwen3-Coder 30B é a opção recomendada para maio de 2026; análise completa no artigo.',
-      image: 'https://www.promptquorum.com/api/og/best-local-coding-models-2026?lang=pt/best-local-coding-models-2026',
+      image: buildOgImageObject(OG_SLUG, 'pt'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -4228,7 +4231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'أفضل نماذج البرمجة المحلية في 2026: Qwen3-Coder مقابل DeepSeek مقابل Codestral',
       description: 'ستة نماذج برمجة محلية مقارنةً في الحجم والسياق والترخيص وVRAM واتجاه HumanEval+. Qwen3-Coder 30B هو الخيار الموصى به لمايو 2026؛ تحليل كامل في المقالة.',
-      image: 'https://www.promptquorum.com/api/og/best-local-coding-models-2026?lang=ar/best-local-coding-models-2026',
+      image: buildOgImageObject(OG_SLUG, 'ar'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -4875,7 +4878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '2026년 최고의 로컬 코딩 모델: Qwen3-Coder vs DeepSeek vs Codestral',
       description: '6개의 로컬 코딩 모델을 크기, 컨텍스트, 라이선스, VRAM, HumanEval+ 방향성 기준으로 비교합니다. Qwen3-Coder 30B는 2026년 5월 권장 선택지입니다. 전체 분석은 기사 내에 있습니다.',
-      image: 'https://www.promptquorum.com/api/og/best-local-coding-models-2026?lang=ko/best-local-coding-models-2026',
+      image: buildOgImageObject(OG_SLUG, 'ko'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
