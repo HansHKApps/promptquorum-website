@@ -3,21 +3,29 @@
 //
 // Locale schema-parity validator — see LOCALE_PARITY_VALIDATOR_SPEC.md.
 //
-// WHAT THIS CHECKS:
-//   For every (cluster, slug), all locales must emit the same MULTISET of
-//   top-level JSON-LD @type values as the EN baseline. "Top-level" means the
-//   node types that appear directly as a <script type="application/ld+json">
-//   payload or as a direct entry of a top-level @graph array — e.g.
-//   TechArticle, FAQPage, HowTo, BreadcrumbList, Organization, WebSite,
-//   SoftwareApplication, ImageObject.
+// WHAT THIS CHECKS — two severities, not one:
+//   MISSING (blocks): presence/absence of an ARTICLE_LEVEL_TYPE (see below)
+//     must match EN exactly. If EN emits TechArticle/FAQPage/HowTo and a
+//     locale emits only BreadcrumbList, that's structural drift.
+//   COUNT (report-only, never blocks): multiplicity of any type — including
+//     repeatable top-level graph nodes like ImageObject, and any type outside
+//     ARTICLE_LEVEL_TYPES — differing between EN and a locale. A German
+//     article can legitimately have a different number of HowTo steps, FAQ
+//     questions, or embedded images than the Korean one; that's article
+//     length, not a schema-shape defect. Originally this script compared the
+//     full multiset (all types, count-aware) as a single severity, which
+//     conflated the two and flagged legitimate length variation as drift —
+//     corrected per spec addendum.
+//
+// ARTICLE_LEVEL_TYPES (the only types whose PRESENCE is checked):
+//   TechArticle, FAQPage, HowTo, WebPage, ItemList, BreadcrumbList,
+//   LearningResource, DefinedTerm, Article, BlogPosting
 //
 // WHAT THIS DOES NOT CHECK:
 //   - Content/translation correctness. That's validate-translation-integrity.mjs.
 //   - Nested @type nodes (Question inside FAQPage.mainEntity, HowToStep inside
 //     HowTo.step, Person/ImageObject nested inside another node's properties,
-//     etc). Those legitimately vary in count per locale — a German article can
-//     have a different number of FAQ questions or HowTo steps than the Korean
-//     one. Only the shape of the top-level graph must match, not its depth.
+//     etc). These aren't collected at all — only top-level graph nodes are.
 //   - Whether a locale renders at all. A 404 (page not found for that locale)
 //     is reported separately as "not applicable," not as a parity mismatch —
 //     that's a translation-coverage decision, not a schema-shape defect.
@@ -46,8 +54,8 @@
 //
 // STATUS: report-only. Not wired into postbuild. See "Rollout" in the spec —
 // this only becomes a BLOCK-mode postbuild gate once a run against merged
-// `main` comes back clean or every finding has a merged fix or a declared
-// PARITY_EXCEPTIONS entry.
+// `main` comes back clean on MISSING (COUNT never gates) or every MISSING
+// finding has a merged fix or a declared PARITY_EXCEPTIONS entry.
 
 import { spawn } from 'node:child_process'
 import { readFileSync, existsSync } from 'node:fs'
@@ -196,17 +204,45 @@ async function runPool(items, worker, concurrency) {
   return results
 }
 
+// Presence of these types must match EN exactly (MISSING severity, blocks).
+// Everything else is multiplicity-only (COUNT severity, report-only) — that
+// covers repeatable top-level graph nodes like ImageObject as well as any
+// type not in this list, regardless of whether it's 0-vs-N or N-vs-M.
+const ARTICLE_LEVEL_TYPES = new Set([
+  'TechArticle', 'FAQPage', 'HowTo', 'WebPage', 'ItemList', 'BreadcrumbList',
+  'LearningResource', 'DefinedTerm', 'Article', 'BlogPosting',
+])
+
 function diffMultisets(enSet, locSet) {
-  const missing = [] // in EN, not in locale (or fewer)
-  const extra = [] // in locale, not in EN (or more)
+  const missing = [] // article-level type present in EN, absent in locale
+  const extraType = [] // article-level type present in locale, absent in EN
+  const countDiffs = [] // any type, same presence, different multiplicity (or non-article-level type differing at all)
   const allTypes = new Set([...enSet.keys(), ...locSet.keys()])
   for (const t of allTypes) {
     const enCount = enSet.get(t) || 0
     const locCount = locSet.get(t) || 0
-    if (locCount < enCount) missing.push(`${t} (EN:${enCount} vs locale:${locCount})`)
-    if (locCount > enCount) extra.push(`${t} (EN:${enCount} vs locale:${locCount})`)
+    if (enCount === locCount) continue
+
+    if (ARTICLE_LEVEL_TYPES.has(t)) {
+      const enHas = enCount > 0
+      const locHas = locCount > 0
+      if (enHas && !locHas) {
+        missing.push(`${t} (EN:${enCount} vs locale:${locCount})`)
+        continue
+      }
+      if (!enHas && locHas) {
+        extraType.push(`${t} (EN:${enCount} vs locale:${locCount})`)
+        continue
+      }
+      // Both present, different count (e.g. two BreadcrumbList nodes) —
+      // that's still a count difference on an article-level type, not a
+      // presence mismatch.
+      countDiffs.push(`${t} (EN:${enCount} vs locale:${locCount})`)
+    } else {
+      countDiffs.push(`${t} (EN:${enCount} vs locale:${locCount})`)
+    }
   }
-  return { missing, extra }
+  return { missing, extraType, countDiffs }
 }
 
 async function main() {
@@ -280,7 +316,8 @@ async function main() {
   }
   console.log('✓ Server ready\n')
 
-  const mismatches = []
+  const missingFindings = [] // blocking severity
+  const countFindings = [] // report-only severity
   const notApplicable = []
   const errors = []
   let checked = 0
@@ -337,9 +374,12 @@ async function main() {
           continue
         }
 
-        const { missing, extra } = diffMultisets(enEntry.result.multiset, result.multiset)
-        if (missing.length > 0 || extra.length > 0) {
-          mismatches.push({ cluster: cluster.name, slug, locale, missing, extra })
+        const { missing, extraType, countDiffs } = diffMultisets(enEntry.result.multiset, result.multiset)
+        if (missing.length > 0 || extraType.length > 0) {
+          missingFindings.push({ cluster: cluster.name, slug, locale, missing, extraType })
+        }
+        if (countDiffs.length > 0) {
+          countFindings.push({ cluster: cluster.name, slug, locale, countDiffs })
         }
       }
     }
@@ -371,19 +411,40 @@ async function main() {
     }
   }
 
-  if (mismatches.length === 0) {
-    console.log('\n✅ No schema-shape drift found. Every locale emits the same top-level @type multiset as EN.')
+  if (countFindings.length > 0) {
+    const byCluster = new Map()
+    for (const f of countFindings) byCluster.set(f.cluster, (byCluster.get(f.cluster) || 0) + 1)
+    console.log(`\nℹ️  ${countFindings.length} COUNT-severity difference(s) (report-only, never blocks — article-length variation):`)
+    for (const [cluster, n] of byCluster) console.log(`  ${cluster}: ${n}`)
+    console.log('  (per-finding detail omitted from default output — these don\'t gate anything;')
+    console.log('   rerun with PARITY_VERBOSE=1 to see every one.)')
+    if (process.env.PARITY_VERBOSE) {
+      for (const f of countFindings) {
+        console.log(`    ${f.cluster}/${f.slug} [${f.locale}] — ${f.countDiffs.join(', ')}`)
+      }
+    }
+  }
+
+  if (missingFindings.length === 0) {
+    console.log('\n✅ No MISSING-severity drift found. Every locale matches EN on article-level type presence')
+    console.log('   (TechArticle/FAQPage/HowTo/WebPage/ItemList/BreadcrumbList/LearningResource/DefinedTerm/Article/BlogPosting).')
     process.exit(0)
   }
 
-  console.log(`\n❌ ${mismatches.length} schema-shape mismatch(es):\n`)
-  for (const m of mismatches) {
+  const byClusterMissing = new Map()
+  for (const f of missingFindings) byClusterMissing.set(f.cluster, (byClusterMissing.get(f.cluster) || 0) + 1)
+
+  console.log(`\n❌ ${missingFindings.length} MISSING-severity mismatch(es) (blocking):\n`)
+  console.log('  By cluster:')
+  for (const [cluster, n] of byClusterMissing) console.log(`    ${cluster}: ${n}`)
+  console.log('')
+  for (const m of missingFindings) {
     console.log(`  ${m.cluster}/${m.slug} [${m.locale}]`)
     if (m.missing.length > 0) console.log(`    missing (in EN, not here): ${m.missing.join(', ')}`)
-    if (m.extra.length > 0) console.log(`    extra (here, not in EN):   ${m.extra.join(', ')}`)
+    if (m.extraType.length > 0) console.log(`    extra (here, not in EN):   ${m.extraType.join(', ')}`)
   }
 
-  console.log('\n❌ Build blocked: schema-shape drift found above. Fix the locale page or add a')
+  console.log('\n❌ Build blocked: MISSING-severity schema-shape drift found above. Fix the locale page or add a')
   console.log('   justified PARITY_EXCEPTIONS entry — an undeclared asymmetry is a bug, not a variant.')
   process.exit(1)
 }
