@@ -4,6 +4,9 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = 'voice-assistant-local-mobile-offline';
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -878,12 +881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Einen lokalen Sprachassistenten auf Ihrem Telefon erstellen: Whisper + lokales LLM (keine Cloud) — 2026',
       url: 'https://www.promptquorum.com/de/power-local-llm/voice-assistant-local-mobile-offline',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/og-image.png',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'de'),
       description: 'Vollständig offline funktionierender Sprachassistenten auf iPhone und Android in 2026. Whisper lokales STT + lokales LLM + Piper TTS. iPhone-, Android- und Hybrid-Setup; Latenz, Akku, Datenschutz.',
       inLanguage: 'de',
       author: {
@@ -1361,12 +1359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Construire un assistant vocal local sur votre téléphone : Whisper + LLM local (sans cloud) — 2026',
       url: 'https://www.promptquorum.com/fr/power-local-llm/voice-assistant-local-mobile-offline',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/og-image.png',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'fr'),
       description: 'Assistant vocal entièrement hors ligne sur iPhone et Android en 2026. Whisper STT local + LLM local + Piper TTS. Configuration iPhone, Android et hybride ; latence, batterie, confidentialité.',
       inLanguage: 'fr',
       author: {
@@ -1844,12 +1837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'スマートフォンで完全オフラインの音声アシスタントを構築する：Whisper + ローカルLLM（クラウドなし）— 2026',
       url: 'https://www.promptquorum.com/ja/power-local-llm/voice-assistant-local-mobile-offline',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/og-image.png',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'ja'),
       description: '2026年のiPhoneおよびAndroidで完全にオフラインで動作する音声アシスタント。Whisper ローカルSTT + ローカルLLM + Piper TTS。iPhone、Android、ハイブリッド設定；レイテンシ、バッテリー、プライバシー。',
       inLanguage: 'ja',
       author: {
@@ -2327,12 +2315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '在您的手机上构建完全离线语音助手：Whisper + 本地LLM（无云）— 2026',
       url: 'https://www.promptquorum.com/zh/power-local-llm/voice-assistant-local-mobile-offline',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/og-image.png',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'zh'),
       description: '2026年在iPhone和Android上完全离线的语音助手。Whisper本地STT +本地LLM + Piper TTS。iPhone、Android和混合设置；延迟、电池、隐私。',
       inLanguage: 'zh',
       author: {
@@ -2810,12 +2793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Crea un asistente de voz local en tu teléfono: Whisper + LLM local (sin nube) — 2026',
       url: 'https://www.promptquorum.com/es/power-local-llm/voice-assistant-local-mobile-offline',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/og-image.png',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'es'),
       description: 'IA de voz completamente offline en iPhone y Android en 2026. Whisper STT local + LLM local + Piper TTS. Configuración en iPhone, Android e híbrida; latencia, batería, privacidad.',
       inLanguage: 'es',
       author: {
@@ -3293,12 +3271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '전화기에서 로컬 음성 비서 만들기: Whisper + 로컬 LLM (클라우드 없음) — 2026',
       url: 'https://www.promptquorum.com/ko/power-local-llm/voice-assistant-local-mobile-offline',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/og-image.png',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'ko'),
       description: '2026년 iPhone 및 Android에서 완전히 오프라인 AI 음성. 로컬 Whisper STT + 로컬 LLM + Piper TTS. iPhone, Android, 하이브리드 설정; 지연, 배터리, 개인 정보 보호.',
       inLanguage: 'ko',
       author: {
@@ -3776,12 +3749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Crie um assistente de voz local no seu telefone: Whisper + LLM local (sem nuvem) — 2026',
       url: 'https://www.promptquorum.com/pt/power-local-llm/voice-assistant-local-mobile-offline',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/og-image.png',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'pt'),
       description: 'IA de voz totalmente offline no iPhone e Android em 2026. Whisper STT local + LLM local + Piper TTS. Configuração no iPhone, Android e híbrida; latência, bateria, privacidade.',
       inLanguage: 'pt-BR',
       author: {
@@ -4260,12 +4228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'أنشئ مساعدًا صوتيًا محليًا على هاتفك: Whisper + LLM محلي ‏(بدون سحابة)‏ — 2026',
       url: 'https://www.promptquorum.com/ar/power-local-llm/voice-assistant-local-mobile-offline',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/og-image.png',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'ar'),
       description: 'ذكاء اصطناعي صوتي محلي بالكامل على iPhone وAndroid في 2026. Whisper STT محلي + LLM محلي + Piper TTS. إعداد iPhone وAndroid وهجين؛ الكمون والبطارية والخصوصية.',
       inLanguage: 'ar',
       author: {

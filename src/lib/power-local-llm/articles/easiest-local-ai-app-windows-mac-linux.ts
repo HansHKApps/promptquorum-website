@@ -4,6 +4,9 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { buildOgImageObject } from "@/lib/imageObjectSchema";
+
+const OG_SLUG = 'easiest-local-ai-app-windows-mac-linux';
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -683,12 +686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'LM Studio auf Apple Silicon, Intel Mac, Windows und Linux: unterstützte Modelle, Systemanforderungen und Einrichtungszeit. Ohne Terminal. Im Vergleich zu Jan und GPT4All, 2026.',
       url: 'https://www.promptquorum.com/de/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'de',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/easiest-local-ai-app-windows-mac-linux?lang=de',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'de'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1100,12 +1098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'LM Studio sur Apple Silicon, Mac Intel, Windows et Linux : modèles supportés, configuration requise et temps d\'installation. Sans terminal. Face à Jan et GPT4All, 2026.',
       url: 'https://www.promptquorum.com/fr/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'fr',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/easiest-local-ai-app-windows-mac-linux?lang=fr',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'fr'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1513,12 +1506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'LM StudioのApple Silicon、Intel Mac、Windows、Linux対応：サポートモデル、システム要件、セットアップ時間。ターミナル不要。Jan・GPT4Allとの比較、2026年版。',
       url: 'https://www.promptquorum.com/ja/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'ja',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/easiest-local-ai-app-windows-mac-linux?lang=ja',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'ja'),
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -1930,12 +1918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'LM Studio在Apple Silicon、Intel Mac、Windows和Linux上的支持模型、系统要求与安装时间，无需终端。对比Jan和GPT4All，2026年版。',
       url: 'https://www.promptquorum.com/zh/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'zh',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://www.promptquorum.com/api/og/easiest-local-ai-app-windows-mac-linux?lang=zh',
-        width: 1200,
-        height: 675,
-      },
+      image: buildOgImageObject(OG_SLUG, 'zh'),
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
