@@ -44,3 +44,50 @@ export function buildImageObject(
     copyrightNotice: '© 2026 PromptQuorum. All rights reserved.',
   }
 }
+
+/**
+ * Builds a schema.org ImageObject for a dynamically generated OG image
+ * (src/app/api/og/[slug]/route.tsx) rather than a stored file. These aren't
+ * in the image-dimensions registry because nothing is on disk to measure —
+ * the route renders a 1200x675 PNG on request. `slug` must be the article's
+ * registered public URL slug (its SLUG_TO_KEY key), not its internal
+ * filename/key — the two differ whenever an article was renamed after
+ * publish, and the OG route 404s on anything else (see Issue #65).
+ */
+export function buildOgImageObject(slug: string): Record<string, unknown> {
+  const url = `${BASE_URL}/api/og/${slug}`
+
+  return {
+    '@type': 'ImageObject',
+    url,
+    contentUrl: url,
+    width: 1200,
+    height: 675,
+    encodingFormat: 'image/png',
+    creator: { '@type': 'Person', name: 'Hans Kuepper' },
+    copyrightHolder: { '@type': 'Organization', name: 'PromptQuorum', url: BASE_URL },
+    license: 'https://www.promptquorum.com/image-license',
+    acquireLicensePage: 'https://www.promptquorum.com/image-license',
+    creditText: 'PromptQuorum',
+    copyrightNotice: '© 2026 PromptQuorum. All rights reserved.',
+  }
+}
+
+/**
+ * Single entry point for an article's schema.image: resolves to a stored
+ * file via buildImageObject() when the article sets heroImage, otherwise
+ * falls back to the generated OG route via buildOgImageObject(slug). Callers
+ * (page-helpers, article files) should never branch on heroImage themselves —
+ * that ternary duplicated across 6 files is what let the OG-route case go
+ * unrepresented in JSON-LD entirely for articles without a heroImage.
+ */
+export function buildArticleImageObject(
+  article: { heroImage?: string },
+  slug: string,
+  opts: { caption?: string } = {}
+): Record<string, unknown> {
+  if (article.heroImage) {
+    return buildImageObject(article.heroImage, opts)
+  }
+  return buildOgImageObject(slug)
+}
