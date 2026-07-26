@@ -9,7 +9,7 @@
 - **Pricing**: Free. Bring your own API key (BYOM) or use a local LLM. No account required.
 - **Platforms**: macOS, Windows (desktop), Web browser
 - **Offline support**: Full offline capability via local LLMs (Ollama, LM Studio, Jan AI, GPT4All)
-- **Beta status**: Public beta, launched July 2026 — free desktop download, no waitlist or signup required
+- **Status**: Public beta — desktop app available for macOS, Windows, and Linux, no waitlist or signup required
 - **Developer**: Hans Kuepper — [LinkedIn](https://www.linkedin.com/in/hanskuepper/)
 
 ## Supported AI Models
@@ -34,7 +34,7 @@
 - [Features](https://www.promptquorum.com/features): Complete feature list with details
 - [Compare Models](https://www.promptquorum.com/compare): Why multi-model dispatch matters vs single-model use
 - [FAQ](https://www.promptquorum.com/faq): 26 answers covering pricing, privacy, frameworks, hallucination detection, local LLMs
-- [Download](https://www.promptquorum.com/download): Desktop app for macOS and Windows
+- [Download](https://www.promptquorum.com/download): Desktop app for macOS, Windows, and Linux
 
 ## Prompt Engineering Guides (Core Content)
 
