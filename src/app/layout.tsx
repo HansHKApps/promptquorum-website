@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
-import { Plus_Jakarta_Sans, JetBrains_Mono, Noto_Sans_Arabic, Noto_Sans_KR } from 'next/font/google'
+import { Plus_Jakarta_Sans, JetBrains_Mono, Noto_Sans_Arabic } from 'next/font/google'
 import './globals.css'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -21,12 +21,6 @@ const notoSansArabic = Noto_Sans_Arabic({
   subsets: ['arabic'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-arabic',
-  display: 'swap',
-})
-const notoSansKR = Noto_Sans_KR({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-korean',
   display: 'swap',
 })
 
@@ -120,7 +114,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" dir="ltr" className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${notoSansArabic.variable} ${notoSansKR.variable}`} suppressHydrationWarning>
+    <html lang="en" dir="ltr" className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${notoSansArabic.variable}`} suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#6750A4" />
 
