@@ -57,7 +57,12 @@ export function buildPEArticleSchemas(slug: string, key: string, lang: PELang) {
   const peLevelMap: Record<string, string> = { Beginner: 'Beginner', Intermediate: 'Intermediate', Advanced: 'Expert', Technical: 'Expert' }
   const peProficiencyLevel = peEdLevel ? (peLevelMap[peEdLevel] ?? peEdLevel) : undefined
   const peAboutTopics = ((article as any).aboutTopics ?? (peEnArticle as any)?.aboutTopics) as string[] | undefined
-  const peHowToName = ((article as any).howToName ?? (peEnArticle as any)?.howToName) as string | undefined
+  // Locale-own field only — never fall back to peEnArticle.howToName. Falling back
+  // cross-locale would emit the EN string as the HowTo schema `name` on a non-EN
+  // page (a Zero-English-Rule violation in the schema layer). howToSectionData.title
+  // and article.title below are the locale's own already-translated fields, so the
+  // full fallback chain never surfaces English on a non-English page.
+  const peHowToName = (article as any).howToName as string | undefined
 
   const articleSchema: any = article.schema || {
     '@context': 'https://schema.org',
