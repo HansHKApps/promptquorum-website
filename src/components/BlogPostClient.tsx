@@ -50,6 +50,50 @@ const BLOG_UI = {
     ar: 'المدونة',
     ko: '블로그',
   },
+  ctaHeading: {
+    en: 'Your backend, your choice — local LLM or API keys',
+    de: 'Ihr Backend, Ihre Wahl — lokales LLM oder API-Schlüssel',
+    fr: 'Votre backend, votre choix — LLM local ou clés API',
+    ja: 'バックエンドはあなた次第 — ローカルLLMまたはAPIキー',
+    zh: '后端由你决定 — 本地LLM或API密钥',
+    es: 'Tu backend, tu elección — LLM local o claves API',
+    pt: 'Seu backend, sua escolha — LLM local ou chaves de API',
+    ar: 'الخلفية من اختيارك — نموذج لغوي محلي أو مفاتيح API',
+    ko: '백엔드는 당신의 선택 — 로컬 LLM 또는 API 키',
+  },
+  ctaDescription: {
+    en: "PromptQuorum works with local models and cloud API keys alike. Bring your own Ollama setup or connect any provider's API key — you decide which LLM runs your prompts.",
+    de: 'PromptQuorum funktioniert sowohl mit lokalen Modellen als auch mit Cloud-API-Schlüsseln. Nutzen Sie Ihr eigenes Ollama-Setup oder verbinden Sie den API-Schlüssel eines beliebigen Anbieters — Sie entscheiden, welches LLM Ihre Prompts ausführt.',
+    fr: "PromptQuorum fonctionne aussi bien avec des modèles locaux qu'avec des clés API cloud. Utilisez votre propre configuration Ollama ou connectez la clé API de n'importe quel fournisseur — vous décidez quel LLM exécute vos prompts.",
+    ja: 'PromptQuorumはローカルモデルとクラウドAPIキーの両方に対応しています。独自のOllama環境を使用するか、任意のプロバイダーのAPIキーを接続してください — どのLLMでプロンプトを実行するかはあなたが決められます。',
+    zh: 'PromptQuorum既支持本地模型，也支持云端API密钥。使用你自己的Ollama配置，或连接任意服务商的API密钥——由你决定哪个LLM来运行你的提示词。',
+    es: 'PromptQuorum funciona tanto con modelos locales como con claves API en la nube. Usa tu propia configuración de Ollama o conecta la clave API de cualquier proveedor — tú decides qué LLM ejecuta tus prompts.',
+    pt: 'O PromptQuorum funciona tanto com modelos locais quanto com chaves de API na nuvem. Use sua própria configuração do Ollama ou conecte a chave de API de qualquer provedor — você decide qual LLM executa seus prompts.',
+    ar: 'يعمل PromptQuorum مع النماذج المحلية ومفاتيح API السحابية على حد سواء. استخدم إعداد Ollama الخاص بك أو اربط مفتاح API لأي مزود — أنت من يقرر أي نموذج لغوي يشغّل موجّهاتك.',
+    ko: 'PromptQuorum은 로컬 모델과 클라우드 API 키 모두와 함께 작동합니다. 자체 Ollama 설정을 사용하거나 원하는 제공업체의 API 키를 연결하세요 — 어떤 LLM이 프롬프트를 실행할지는 당신이 결정합니다.',
+  },
+  ctaButton: {
+    en: 'Download the PromptQuorum Beta',
+    de: 'PromptQuorum-Beta herunterladen',
+    fr: 'Télécharger la bêta PromptQuorum',
+    ja: 'PromptQuorumベータ版をダウンロード',
+    zh: '下载PromptQuorum测试版',
+    es: 'Descargar la beta de PromptQuorum',
+    pt: 'Baixar o beta do PromptQuorum',
+    ar: 'تنزيل نسخة PromptQuorum التجريبية',
+    ko: 'PromptQuorum 베타 다운로드',
+  },
+  backToBlog: {
+    en: '← Back to Blog',
+    de: '← Zurück zum Blog',
+    fr: '← Retour au blog',
+    ja: '← ブログに戻る',
+    zh: '← 返回博客',
+    es: '← Volver al blog',
+    pt: '← Voltar ao blog',
+    ar: '← العودة إلى المدونة',
+    ko: '← 블로그로 돌아가기',
+  },
 }
 
 function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps) {
@@ -279,17 +323,17 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
         {/* Footer CTA */}
         <div className="mt-16 pt-8 border-t border-text-tertiary">
           <h3 className="text-center text-2xl font-bold text-text-primary mb-2">
-            Your backend, your choice — local LLM or API keys
+            {BLOG_UI.ctaHeading[lang] ?? BLOG_UI.ctaHeading.en}
           </h3>
           <p className="text-center text-text-secondary mb-6 max-w-2xl mx-auto">
-            PromptQuorum works with local models and cloud API keys alike. Bring your own Ollama setup or connect any provider's API key — you decide which LLM runs your prompts.
+            {BLOG_UI.ctaDescription[lang] ?? BLOG_UI.ctaDescription.en}
           </p>
           <div className="text-center">
             <a
               href={lang === 'en' ? '/waitlist' : `/${lang}/waitlist`}
               className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
-              Download the PromptQuorum Beta
+              {BLOG_UI.ctaButton[lang] ?? BLOG_UI.ctaButton.en}
             </a>
           </div>
         </div>
@@ -297,7 +341,7 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
         {/* Back to blog */}
         <p className="text-center mt-8">
           <a href={lang === 'en' ? '/blog' : `/${lang}/blog`} className="text-primary hover:text-primary/80">
-            ← Back to Blog
+            {BLOG_UI.backToBlog[lang] ?? BLOG_UI.backToBlog.en}
           </a>
         </p>
       </div>
