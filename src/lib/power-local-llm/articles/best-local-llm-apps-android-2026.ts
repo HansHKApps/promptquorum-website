@@ -4,6 +4,9 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { buildOgImageObject } from '@/lib/imageObjectSchema';
+
+const OG_SLUG = 'best-local-llm-apps-android-2026';
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -572,7 +575,7 @@ snippetBlocks: [
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'en',
-      image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026',
+      image: buildOgImageObject(OG_SLUG, 'en'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1179,7 +1182,7 @@ snippetBlocks: [
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/de/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'de',
-      image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=de',
+      image: buildOgImageObject(OG_SLUG, 'de'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1767,7 +1770,7 @@ snippetBlocks: [
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/fr/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'fr',
-      image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=fr',
+      image: buildOgImageObject(OG_SLUG, 'fr'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -2370,7 +2373,7 @@ snippetBlocks: [
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/ja/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'ja',
-      image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=ja',
+      image: buildOgImageObject(OG_SLUG, 'ja'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -2987,7 +2990,7 @@ snippetBlocks: [
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'es',
-      image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=es',
+      image: buildOgImageObject(OG_SLUG, 'es'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -3571,7 +3574,7 @@ snippetBlocks: [
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'pt-BR',
-      image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=pt',
+      image: buildOgImageObject(OG_SLUG, 'pt'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -4155,7 +4158,7 @@ snippetBlocks: [
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'ar',
-      image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=ar',
+      image: buildOgImageObject(OG_SLUG, 'ar'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -4743,7 +4746,7 @@ snippetBlocks: [
       dateModified: '2026-06-14',
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-local-llm-apps-android-2026',
       inLanguage: 'ko',
-      image: 'https://www.promptquorum.com/api/og/best-local-llm-apps-android-2026?lang=ko',
+      image: buildOgImageObject(OG_SLUG, 'ko'),
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
