@@ -1,6 +1,6 @@
 # Translation Spec: Content.ts Article Translations
 
-**Purpose:** Universal reference for translating all articles in `src/lib/prompt-engineering/content.ts` to 5 languages (EN, DE, FR, JA, ZH).
+**Purpose:** Universal reference for translating all articles in `src/lib/prompt-engineering/content.ts` to 9 languages (EN, DE, FR, JA, ZH, ES, PT, AR, KO).
 
 Load this file as your primary reference when translating. It eliminates the need to re-learn rules from scratch.
 
@@ -53,39 +53,49 @@ Quick-reference table. Use these exact codes, templates, and section titles.
 | `de` | German | `"10 min Lesezeit"` | `"Weiterführende Literatur"` |
 | `fr` | French | `"10 min de lecture"` | `"Lectures complémentaires"` |
 | `ja` | Japanese | `"10分で読める"` | `"関連資料"` |
-| `zh` | Chinese (Simplified) | `"阅读约10分钟"` | `"延伸阅读"` |
+| `zh` | Chinese (Simplified) | `"10分钟阅读"` | `"延伸阅读"` |
+| `es` | Spanish | `"10 min de lectura"` | `"Lecturas relacionadas"` |
+| `pt` | Portuguese (Brazilian) | `"10 min de leitura"` | `"Leituras relacionadas"` |
+| `ar` | Arabic | `"10 دقائق للقراءة"` | `"قراءات ذات صلة"` |
+| `ko` | Korean | `"10분 읽기"` | `"관련 읽기"` |
+
+`pt` targets Brazilian Portuguese (BR vocabulary/spelling) per `toOutputLocale()` in `src/lib/i18n/constants.ts`. `ar` is RTL — see `getLangDir()` in the same file; verify tables and numbered lists don't assume LTR ordering in their content.
 
 ---
 
 ## 1b. Recommended Translation Order
 
-**When translating a full article to all 4 languages, always work in this order:**
+**When translating a full article to all 8 non-EN languages, work in this order:**
 
 1. **German (de)** — First. Most localization complexity: DSGVO/BSI context, +2 FAQs, decimal notation (`.` → `,`), EUR currency conversion, longer prose (+15–20%).
 2. **French (fr)** — Second. Moderate complexity: CNIL context (1 sentence), concise 10–15% shorter, EUR currency conversion, elegance/flow adjustments.
 3. **Japanese (ja)** — Third. High complexity: METI governance, regional restructuring (East Asia), +0 FAQ additions, JPY currency conversion, telegraphic style.
 4. **Chinese (zh)** — Fourth. High complexity: Data Security Law 2021, regional complete rewrite (not translation), +0 FAQ additions, USD kept, benefit-first tone.
+5. **Spanish (es)**, **Portuguese (pt)**, **Arabic (ar)**, **Korean (ko)** — Last four. Follow the general GEO/formality rules in sections 2, 2b (General Rule for All Languages), and the Formality Rules table below. These four languages do not yet have documented per-language deviation rules (DACH-style regional context requirements, etc.) the way de/fr/ja/zh do in section 2b — if you're asked to add that depth for es/pt/ar/ko, treat it as a new editorial decision to confirm, not an omission to silently fill in from assumption.
 
 **Why this order:**
-- DE has the most schema/FAQ additions → patterns established for FR/JA/ZH
+- DE has the most schema/FAQ additions → patterns established for the rest
 - FR currency/tone conversions are simpler → faster iteration
-- JA/ZH regional rewrites come last → require less back-and-forth
+- JA/ZH regional rewrites require more back-and-forth → do them once the pattern is proven
+- ES/PT/AR/KO lack documented deviation rules → do them last, general-rule-only, until/unless that gap is addressed
 - Each commit is atomic and deployable
 
 **Process:**
 ```bash
-# Translation session for article [slug]
-/geo-translation https://www.promptquorum.com/prompt-engineering/[slug]?lang=de
+# Translation session for article [slug] — one PR-bound branch, one commit per locale
+# Path-prefix URLs, not query params — see section 4
+https://www.promptquorum.com/de/prompt-engineering/[slug]
 # → Review → Commit
-/geo-translation https://www.promptquorum.com/prompt-engineering/[slug]?lang=fr
+https://www.promptquorum.com/fr/prompt-engineering/[slug]
 # → Review → Commit
-/geo-translation https://www.promptquorum.com/prompt-engineering/[slug]?lang=ja
+https://www.promptquorum.com/ja/prompt-engineering/[slug]
 # → Review → Commit
-/geo-translation https://www.promptquorum.com/prompt-engineering/[slug]?lang=zh
+https://www.promptquorum.com/zh/prompt-engineering/[slug]
 # → Review → Commit
+# ...es/pt/ar/ko following the same pattern
 ```
 
-After all 4 languages: `git push origin main`
+After all languages: open a PR. **Do not push directly to `main`** — PR #39's CI gate (build, translation-integrity, locale-coverage, and other prebuild validators) only runs against PRs, and a direct push bypasses it along with the Vercel preview deployment.
 
 ---
 
@@ -124,9 +134,9 @@ After all 4 languages: `git push origin main`
 
 ### Always Keep in English / Unchanged
 
-- **URL paths:** All internal links `/prompt-engineering/...` — only update the link text; append `?lang=XX` to the URL (see section 4). Never translate slug paths.
-  - ✅ Correct: `/prompt-engineering/risen-framework?lang=de`
-  - ❌ Wrong: `/de/prompt-engineering/risen-framework` or `/prompt-engineering/risen-framework-de`
+- **URL paths:** All internal links `/prompt-engineering/...` — only update the link text; prefix the URL with the target locale (see section 4). Never translate slug paths.
+  - ✅ Correct: `/de/prompt-engineering/risen-framework`
+  - ❌ Wrong: `/prompt-engineering/risen-framework?lang=de` (migrated away from) or `/prompt-engineering/risen-framework-de`
 - **Product/model names:** `GPT-4o`, `Claude 4.6 Sonnet`, `Gemini 2.5 Pro`, `Ollama`, `DeepSeek`, `Mistral`, `LLaMA`, `Qwen 2.5`, `Phi-4`, `DALL-E`, `Anthropic Claude`
 - **Framework names (proper nouns):** `RISEN`, `TRACE`, `SPECS`, `RTF`, `CO-STAR`, `CRAFT`, `APE`, `Single Step Prompt Method` — never translate these
 - **Org/standard names:** `OWASP`, `NIST`, `BSI`, `Google DeepMind`, `Anthropic`, `OpenAI`, `PromptQuorum`, `Google`, `Meta`, `Cohere`
@@ -357,7 +367,7 @@ Preserve all markdown syntax. Translate only the text content.
 | Element | Rule | Example |
 |---------|------|---------|
 | Bold | Keep `**...**` markers | `**this is bold**` → `**ceci est gras**` |
-| Links | Translate text, append `?lang=XX` to internal URLs | `[See details](/path?lang=de)` |
+| Links | Translate text, prefix internal URLs with the target locale | `[See details](/de/path)` |
 | Inline code | Keep backticks `` ` `` unchanged | `` `token_count` `` (not translated) |
 | Lists | Preserve `- ` and numbering | `1. Point one` → `1. Premier point` |
 | Emphasis | Keep `_..._` markers | `_important_` → `_important_` (in target language context) |
@@ -390,7 +400,7 @@ Translate the `en:` block for article slug [ARTICLE_SLUG] to language code [LANG
 Apply EVERY rule in the spec exactly:
 - ZERO ENGLISH RULE: translate metaDescription, primaryTerm, blockquote fields — no exceptions
 - Every H1/H2/H3/H4 heading, paragraph, bullet, table cell, FAQ, and schema text field must be in target language
-- Append ?lang=[LANG_CODE] to all internal /prompt-engineering/... links
+- Prefix all internal /prompt-engineering/... (and other cluster) links with /[LANG_CODE]/
 - Match table row keys to translated column headers (critical!)
 - Use the readTime template for [LANG_CODE]
 - Keep all product names, acronyms, URLs unchanged
@@ -483,7 +493,7 @@ ja: {
 
 After each checkpoint build (`npm run build`):
 - Check that TypeScript compiles with no errors
-- Confirm the article renders at `http://localhost:3000/prompt-engineering/[slug]?lang=XX`
+- Confirm the article renders at `http://localhost:3000/[lang]/prompt-engineering/[slug]` (no prefix for `en`)
 - Spot-check that new sections appear in the rendered HTML
 
 ### Commits
@@ -491,7 +501,7 @@ After each checkpoint build (`npm run build`):
 - **Batches 1–4:** Single commit with message `feat: Add [language] translation for [article-slug] (Batches 1–4)`
 - **Batches 5–10:** Single commit with message `feat: Complete [language] translation for [article-slug] (Batches 5–10)`
 
-After final build passes, push to `origin/main`.
+After final build passes, push the feature branch and open a PR — **do not push to `origin/main` directly**. PR #39's CI gate needs to run, and a direct push skips both it and the Vercel preview.
 
 ### Anti-Pattern: Do NOT Combine Batches
 
@@ -520,7 +530,7 @@ new_string: "... qaWhatIsAIGeopolitics: { ... }, qaWhoIsWinning: { ... }, ... }"
 After the agent completes the translation, verify:
 
 - [ ] `npm run build` succeeds (no TypeScript errors)
-- [ ] All internal links have `?lang=XX` appended
+- [ ] All internal links are prefixed with the target locale (`/de/...`, not `?lang=de`)
 - [ ] Table row keys **exactly** match translated column headers (case-sensitive)
 - [ ] `readTime` uses the template from section 1
 - [ ] No product names translated (GPT-4o, Claude, OWASP, etc. stayed in English)
@@ -531,8 +541,8 @@ After the agent completes the translation, verify:
 - [ ] `metaDescription` translated (not English version copied over)
 - [ ] `primaryTerm` translated
 - [ ] `blockquote` fields translated — no English blockquotes on non-English pages
-- [ ] Open the translated article in browser at `?lang=XX` and spot-check: H1, first H2, meta description in dev tools, any blockquotes all in target language
-- [ ] **View page source** (Ctrl+U) at `?lang=XX` — the raw HTML (before JavaScript) must contain the translated H1 and first paragraph, not English. If it shows English, `initialLang` is not being passed from the server component to `PromptEngineeringPostClient`.
+- [ ] Open the translated article in browser at `/<lang>/prompt-engineering/[slug]` and spot-check: H1, first H2, meta description in dev tools, any blockquotes all in target language
+- [ ] **View page source** (Ctrl+U) at `/<lang>/prompt-engineering/[slug]` — the raw HTML (before JavaScript) must contain the translated H1 and first paragraph, not English. If it shows English, `initialLang` is not being passed from the server component to `PromptEngineeringPostClient`.
 
 ---
 
@@ -548,15 +558,15 @@ In `src/app/prompt-engineering/[slug]/page.tsx`, the `PromptEngineeringPostClien
 // Correct ✅
 <PromptEngineeringPostClient slug={slug} initialLang={selectedLang} />
 
-// Wrong ❌ — crawlers see English on all ?lang=XX URLs
+// Wrong ❌ — crawlers see English on all /de/, /fr/, /ja/, /zh/... URLs
 <PromptEngineeringPostClient slug={slug} />
 ```
 
 ### Why This Matters
 
-`PromptEngineeringPostClient` is a `'use client'` component. Its `useLang()` hook reads `window.location.search` — which is only available after JavaScript hydrates in the browser. The initial server-rendered HTML always contains the default `useState('en')` value.
+`PromptEngineeringPostClient` is a `'use client'` component. Its `useLang()` hook (`src/hooks/useLang.ts`) reads `window.location.pathname` for the path-prefix locale (falling back to the legacy `?lang=` query param only if no path prefix matches) — either way, this is only available after JavaScript hydrates in the browser. The initial server-rendered HTML always contains the default `useState('en')` value.
 
-Result without `initialLang`: Googlebot, Perplexity, ChatGPT Browse, and other crawlers that read the initial HTML see English content on `?lang=de`, `?lang=fr`, `?lang=ja`, and `?lang=zh` URLs — even if full translations exist in `content.ts`.
+Result without `initialLang`: Googlebot, Perplexity, ChatGPT Browse, and other crawlers that read the initial HTML see English content on every `/de/...`, `/fr/...`, `/ja/...`, `/zh/...` (and `/es/`, `/pt/`, `/ar/`, `/ko/`) URL — even if full translations exist in `content.ts`.
 
 ### If You Add a New Client-Rendered Article Component
 
@@ -628,7 +638,7 @@ Run this checklist on every translated article before committing:
 ### Issue 3: Table & TOC Completeness
 - [ ] **Table of Contents (`toc` array):** ≥ 19 entries, all with valid anchor slugs
 - [ ] **All table rows match column headers:** `rows[].keys === columns[]` (case-sensitive)
-- [ ] **No broken anchor links in body:** every internal link to `[...](...?lang=XX)` should have matching ToC anchor
+- [ ] **No broken anchor links in body:** every internal link to `[...](/<lang>/...)` should have matching ToC anchor
 
 ### Issue 4: Source Attribution
 - [ ] **4+ sources present** (Schulhoff 2024, Wei et al. 2022, OpenAI 2024, Brown et al. 2020 for optimization articles)
@@ -995,15 +1005,15 @@ Every translated article MUST include:
 
 #### Required Schemas
 - **TechArticle** (or LearningResource if educationalLevel set): 
-  - `url: "https://www.promptquorum.com/[path]?lang=XX"` (append ?lang parameter)
-  - `inLanguage: 'XX'` (e.g., 'de', 'fr', 'ja', 'zh')
+  - `url: "https://www.promptquorum.com/<lang>/[path]"` (path-prefixed; no prefix for `en`)
+  - `inLanguage: 'XX'` (e.g., 'de', 'fr', 'ja', 'zh', 'es', 'pt' → emits `pt-BR`, 'ar', 'ko')
   - `author: { '@type': 'Person', 'name': 'Hans Kuepper' }` (normalize: DE/ZH use Organization convention)
   - `datePublished` and `dateModified`: match EN source (ISO format, unchanged)
 
 - **HowToSchema** (if present in EN):
   - `inLanguage: 'XX'`
   - All `step[].name` and `step[].text` translated
-  - `url` with `?lang=XX`
+  - `url` path-prefixed with `<lang>`
 
 - **FAQSchema** (if present in EN or new for locale-specific FAQs):
   - `inLanguage: 'XX'`
@@ -1014,17 +1024,17 @@ Every translated article MUST include:
 - **ItemListSchema** (if present in EN):
   - `inLanguage: 'XX'`
   - `itemListElement[].name` and `.description` translated
-  - `url` with `?lang=XX`
+  - `url` path-prefixed with `<lang>`
 
 #### Schema Fixes by Language
 
-| Schema | DE | FR | JA | ZH | Fix |
-|--------|----|----|----|----|-----|
-| author | ✓ Normalize | ✓ Normalize | Organization | Organization | Ensure Person (EN/DE/FR) or Organization (JA/ZH) |
-| inLanguage | ✅ Add | ✅ Add | ✅ Add | ✅ Add | Always present |
-| url params | ✅ Add ?lang= | ✅ Add ?lang= | ✅ Add ?lang= | ✅ Add ?lang= | Internal links only |
-| about[] | ✓ Exist | ✓ Exist | **Add if missing** | **Add if missing** | Structured { '@type': 'Thing', 'name' } objects |
-| speakable | ✓ Exist | ✓ Exist | **Add if missing** | **Add if missing** | For voice search |
+| Schema | DE | FR | JA | ZH | ES/PT/AR/KO | Fix |
+|--------|----|----|----|----|----|-----|
+| author | ✓ Normalize | ✓ Normalize | Organization | Organization | ✓ Normalize | Ensure Person (EN/DE/FR/ES/PT/AR/KO) or Organization (JA/ZH) |
+| inLanguage | ✅ Add | ✅ Add | ✅ Add | ✅ Add | ✅ Add | Always present |
+| url params | ✅ Path-prefix | ✅ Path-prefix | ✅ Path-prefix | ✅ Path-prefix | ✅ Path-prefix | Internal links only — never `?lang=` |
+| about[] | ✓ Exist | ✓ Exist | **Add if missing** | **Add if missing** | ✓ Exist | Structured { '@type': 'Thing', 'name' } objects |
+| speakable | ✓ Exist | ✓ Exist | **Add if missing** | **Add if missing** | ✓ Exist | For voice search |
 
 ### 14.6 — Internal Link Convention (All Languages)
 
@@ -1108,10 +1118,10 @@ Run this checklist for every translated language:
 - [ ] faqSchema updated with all FAQ entries + inLanguage: XX
 - [ ] howToSchema present if EN has it, all steps translated, inLanguage: XX
 - [ ] itemListSchema present if EN has it, all items translated, inLanguage: XX
-- [ ] All schema URLs include ?lang=XX (internal links only)
+- [ ] All schema URLs are path-prefixed with the locale (internal links only, never `?lang=XX`)
 
 ### Links & References
-- [ ] All internal links have ?lang=XX appended
+- [ ] All internal links are path-prefixed with the target locale (`/de/...`)
 - [ ] All external links unchanged (https://...)
 - [ ] All markdown formatting preserved (**bold**, `code`, etc.)
 - [ ] Product names kept in English (GPT-4o, Claude, Ollama, etc.)
@@ -1126,19 +1136,19 @@ Run this checklist for every translated language:
 
 ### Build & Browser Check
 - [ ] `npm run build` returns 0 errors
-- [ ] Article renders at `[slug]?lang=XX` URL
+- [ ] Article renders at `/<lang>/[slug]` URL (no prefix for `en`)
 - [ ] Page title (H1) shows in target language in browser
 - [ ] Meta description in DevTools shows target language
-- [ ] Internal links click through to `?lang=XX` versions
+- [ ] Internal links click through to their `/<lang>/...` versions
 ```
 
 **Before committing:**
 ```bash
 npm run build                    # Must pass with 0 errors
 npm run dev                      # Start server
-# Visit: http://localhost:3000/[article-path]?lang=XX
+# Visit: http://localhost:3000/<lang>/[article-path]
 # Check: H1, first paragraph, meta tags all in target language
-# Check: Click internal link → URL includes ?lang=XX
+# Check: Click internal link → URL is path-prefixed with the same locale
 ```
 
 ### 14.9 — Commit Message Convention (All Languages)
