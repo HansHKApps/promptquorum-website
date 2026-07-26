@@ -6,6 +6,7 @@ import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { LocalLLMArticleJsonLd } from '@/lib/local-llms/jsonld'
 
 export const revalidate = 86400
 
@@ -127,26 +128,11 @@ export default async function JaLocalLLMsArticlePage({ params }: PageProps) {
     )
   }
 
-  const article = llmContent[key]['ja'] ?? llmContent[key]['en']
-  if (!article) notFound()
-
-  const canonicalUrl = `https://www.promptquorum.com/ja/local-llms/${slug}`
-
-  // Schema for Japanese breadcrumbs
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    inLanguage: 'ja',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://www.promptquorum.com' },
-      { '@type': 'ListItem', position: 2, name: 'ローカルLLM', item: 'https://www.promptquorum.com/ja/local-llms' },
-      { '@type': 'ListItem', position: 3, name: article.title ?? (article as any).seoTitle ?? slug, item: canonicalUrl },
-    ],
-  }
+  if (!llmContent[key]['ja'] && !llmContent[key]['en']) notFound()
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <LocalLLMArticleJsonLd slug={slug} articleKey={key} lang="ja" />
       <LocalLLMsPostClient
         slug={slug}
         initialLang="ja"
