@@ -374,6 +374,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
       url: `${BASE}${smartHomeHubPath(lang)}`,
       type: 'website',
       siteName: 'PromptQuorum',
+      images: [{ url: `${BASE}/images/smart-home-hub-overview-hero-${lang}.png`, width: 1200, height: 675, alt: title }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -797,10 +798,10 @@ function renderHub(lang: Lang) {
         )}
 
         <img
-          src="/images/smart-home-local-llm-stack.svg"
-          alt=""
-          width={960}
-          height={480}
+          src={`/images/smart-home-hub-overview-hero-${lang}.png`}
+          alt={hubTitle}
+          width={1200}
+          height={675}
           className="w-full h-auto rounded-2xl border border-primary/10 mb-10"
         />
 
