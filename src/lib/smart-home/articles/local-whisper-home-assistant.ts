@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'Local Speech-to-Text for Smart Homes: Whisper + HA (2026)',
+    heroImage: '/images/local-whisper-home-assistant-overview-hero-en.png',
     seoTitle: 'Whisper + Home Assistant 2026: Local STT Guide',
     intro:
       'Local Whisper gives Home Assistant private speech-to-text with no cloud: you pick a Whisper model size for your accuracy, speed, and hardware trade-off, then connect it to Assist over the Wyoming protocol. This guide covers why local STT matters, the Whisper model sizes, Wyoming setup, hardware needs, and how to tune accuracy.',
@@ -197,6 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'تحويل الكلام إلى نص محليًا للمنازل الذكية: ⁨Whisper + HA⁩ (⁨2026⁩)',
+    heroImage: '/images/local-whisper-home-assistant-overview-hero-ar.png',
     seoTitle: '⁨Whisper + Home Assistant 2026⁩: تحويل الكلام محليًا',
     intro:
       'يمنح Whisper المحلي Home Assistant خاصية تحويل الكلام إلى نص بشكل خاص دون سحابة: تختار حجم نموذج Whisper لتحقيق التوازن بين الدقة والسرعة والأجهزة، ثم تربطه بـ Assist عبر بروتوكول Wyoming. يتناول هذا الدليل سبب أهمية تحويل الكلام إلى نص المحلي، وأحجام نماذج Whisper، وإعداد Wyoming، ومتطلبات الأجهزة، وكيفية ضبط الدقة.',
@@ -385,6 +387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'Lokales Sprache-zu-Text fürs Smart Home: Whisper + HA (2026)',
+    heroImage: '/images/local-whisper-home-assistant-overview-hero-de.png',
     seoTitle: 'Whisper + Home Assistant 2026: Lokales-STT-Leitfaden',
     intro:
       'Lokales Whisper gibt Home Assistant privates Sprache-zu-Text ohne Cloud: Sie wählen eine Whisper-Modellgröße für Ihren Kompromiss aus Genauigkeit, Tempo und Hardware und verbinden es dann über das Wyoming-Protokoll mit Assist. Dieser Leitfaden behandelt, warum lokales STT wichtig ist, die Whisper-Modellgrößen, die Wyoming-Einrichtung, den Hardware-Bedarf und wie Sie die Genauigkeit abstimmen.',
@@ -573,6 +576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'Voz-a-Texto Local para Smart Homes: Whisper + HA (2026)',
+    heroImage: '/images/local-whisper-home-assistant-overview-hero-es.png',
     seoTitle: 'Whisper + Home Assistant 2026: Guía de STT Local',
     intro:
       'Whisper local da a Home Assistant voz-a-texto privado sin nube: eliges un tamaño de modelo Whisper para tu equilibrio de precisión, velocidad y hardware, y luego lo conectas a Assist sobre el protocolo Wyoming. Esta guía cubre por qué importa el STT local, los tamaños de modelo Whisper, la configuración de Wyoming, las necesidades de hardware y cómo ajustar la precisión.',
@@ -761,6 +765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
     title: '스마트 홈용 로컬 음성→텍스트: Whisper + HA (2026)',
+    heroImage: '/images/local-whisper-home-assistant-overview-hero-ko.png',
     seoTitle: 'Whisper + Home Assistant 2026: 로컬 STT 가이드',
     intro:
       '로컬 Whisper는 Home Assistant에 클라우드 없는 비공개 음성→텍스트를 제공합니다. 정확도, 속도, 하드웨어의 균형에 맞는 Whisper 모델 크기를 선택한 후 Wyoming 프로토콜을 통해 Assist에 연결합니다. 이 가이드는 로컬 STT가 중요한 이유, Whisper 모델 크기, Wyoming 설정, 하드웨어 요구 사항, 정확도 조정 방법을 다룹니다.',
@@ -949,6 +954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'Reconnaissance Vocale Locale pour la Maison Connectée : Whisper + HA (2026)',
+    heroImage: '/images/local-whisper-home-assistant-overview-hero-fr.png',
     seoTitle: 'Whisper + Home Assistant 2026 : Guide STT Local',
     intro:
       'Whisper local donne à Home Assistant une reconnaissance vocale privée sans cloud : vous choisissez une taille de modèle Whisper selon votre compromis précision, vitesse et matériel, puis vous le reliez à Assist via le protocole Wyoming. Ce guide couvre pourquoi la STT locale compte, les tailles de modèle Whisper, la configuration Wyoming, les besoins matériels et comment régler la précision.',
@@ -1137,6 +1143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'スマートホーム向けのローカル音声認識：Whisper + HA（2026）',
+    heroImage: '/images/local-whisper-home-assistant-overview-hero-ja.png',
     seoTitle: 'Whisper + Home Assistant 2026：ローカルSTTガイド',
     intro:
       'ローカル Whisper は、Home Assistant にクラウドなしのプライベートな音声認識を与えます：精度・速度・ハードウェアの兼ね合いで Whisper のモデルサイズを選び、Wyoming プロトコルで Assist につなぎます。本ガイドは、ローカル STT がなぜ重要か、Whisper のモデルサイズ、Wyoming の設定、ハードウェア要件、そして精度の調整方法を扱います。',
@@ -1325,6 +1332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'Voz-para-Texto Local para Casas Inteligentes: Whisper + HA (2026)',
+    heroImage: '/images/local-whisper-home-assistant-overview-hero-pt.png',
     seoTitle: 'Whisper + Home Assistant 2026: Guia de STT Local',
     intro:
       'O Whisper local dá ao Home Assistant voz-para-texto privado sem nuvem: você escolhe um tamanho de modelo Whisper para o seu equilíbrio de precisão, velocidade e hardware, e depois o conecta ao Assist sobre o protocolo Wyoming. Este guia cobre por que o STT local importa, os tamanhos de modelo Whisper, a configuração do Wyoming, as necessidades de hardware e como ajustar a precisão.',
@@ -1513,6 +1521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
     title: '智能家居的本地语音转文字：Whisper + HA（2026）',
+    heroImage: '/images/local-whisper-home-assistant-overview-hero-zh.png',
     seoTitle: 'Whisper + Home Assistant 2026：本地 STT 指南',
     intro:
       '本地 Whisper 为 Home Assistant 提供无云端的私密语音转文字：你按精度、速度和硬件的取舍选择一个 Whisper 模型大小，然后经由 Wyoming 协议把它连接到 Assist。本指南讲解本地 STT 为何重要、Whisper 的模型大小、Wyoming 配置、硬件需求，以及如何调优精度。',
