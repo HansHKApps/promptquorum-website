@@ -1854,5 +1854,16 @@ schema: {
           ],
         },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'url': 'https://www.promptquorum.com/ko/local-llms/used-gpus-for-local-llms',
+        'name': '로컬 LLM용 중고 GPU: 비용 비교 및 신뢰성',
+        'itemListElement': [
+          { '@type': 'ListItem', position: 1, name: '비용 비교: 중고 RTX 3060($200~250) vs RTX 3080($350~400) vs RTX 4090($1,000~1,300)—신품 대비 30~50% 절감.' },
+          { '@type': 'ListItem', position: 2, name: '신뢰성 데이터: RTX 3060 12GB와 RTX 3080 10GB는 재판매 물량이 많고 VRAM 상태가 검증되어 있습니다. 채굴용 카드는 10~20%의 고장 위험이 있습니다.' },
+          { '@type': 'ListItem', position: 3, name: '추천 중고 GPU 모델: RTX 3060 12GB(가장 안전한 입문용), RTX 3080 10GB(안정적인 VRAM), RTX 4090 24GB(프리미엄, 고장 사례 드묾).' },
+        ],
+      },
     },
   };

@@ -986,6 +986,17 @@ schema: {
           { '@type': 'Thing', 'name': 'Apple M5 Silicon inferência' },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'macOS vs Windows vs Linux para LLMs Locais Abril 2026',
+        'numberOfItems': 3,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'macOS (Apple M5 Silicon)', 'description': 'Configuração: 6 min. M5 Max 128GB: 70B a 25–35 tok/s. M5 Pro 64GB: 70B a 15–20 tok/s. $0 adicional se já tiver um Mac. Silencioso, pronto para uso.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Windows (NVIDIA RTX série 50)', 'description': 'Configuração: 15–20 min. RTX 5090: 70B a 40–50 tok/s. $2.000–2.500. Opção mais rápida. Ecossistema CUDA.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Linux (GPU NVIDIA ou AMD)', 'description': 'Configuração: 40–70 min. 1–5% mais rápido que Windows. TCO 3 anos: $810–1.500. Melhor para servidores 24/7, menor custo.' },
+        ],
+      },
     },
     de: {
       theme: 'Betriebssystem-Vergleich',
@@ -2177,6 +2188,17 @@ schema: {
             '오프라인 운영은 데이터를 안전하게 유지하지만, 신뢰할 수 없는 입력은 여전히 문제를 일으킬 수 있습니다. 프롬프트 인젝션 위험과 방어에 대해 알아보십시오: [프롬프트 인젝션 및 보안](https://www.promptquorum.com/prompt-engineering/prompt-injection-and-security)은 공격 패턴과 완화 방법을 다룹니다.',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'macOS vs Windows vs Linux 로컬 LLM 2026년 4월',
+        'numberOfItems': 3,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'macOS(Apple M5 Silicon)', 'description': '설정: 6분. M5 Max 128GB: 70B를 초당 25~35 토큰으로 실행. M5 Pro 64GB: 70B를 초당 15~20 토큰으로 실행. 기존 Mac 보유 시 추가 비용 $0. 조용하고 바로 사용 가능.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Windows(NVIDIA RTX 50 시리즈)', 'description': '설정: 15~20분. RTX 5090: 70B를 초당 40~50 토큰으로 실행. $2,000~2,500. 가장 빠른 옵션. CUDA 생태계.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Linux(NVIDIA 또는 AMD GPU)', 'description': '설정: 40~70분. Windows보다 1~5% 빠름. 3년 총소유비용: $810~1,500. 24/7 서버에 최적, 최저 비용.' },
+        ],
       },
     },
   };

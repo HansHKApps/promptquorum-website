@@ -1811,6 +1811,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: 'Lambda Labs', description: 'SLA de uptime de 99,9%, suporte dedicado (Slack/email/telefone), focado em A100/H100. Preços premium justificados para cargas de trabalho de IA em produção.' },
       ],
     },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Como alugar sua primeira GPU na nuvem em 10 minutos',
+      description: 'Guia passo a passo para se cadastrar e executar sua primeira instância de GPU em qualquer provedor de nuvem.',
+      inLanguage: 'pt-BR',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Cadastre-se', text: 'Crie uma conta com e-mail e cartão de crédito (RunPod) ou GitHub (Vast.ai)' },
+        { '@type': 'HowToStep', position: 2, name: 'Selecione a GPU', text: 'Escolha o tipo de GPU (RTX 4090, RTX 5090, A100, H100) e a região conforme disponibilidade e preço' },
+        { '@type': 'HowToStep', position: 3, name: 'Escolha a imagem', text: 'Selecione o sistema operacional (Ubuntu 22.04 com CUDA é o padrão)' },
+        { '@type': 'HowToStep', position: 4, name: 'Configure o armazenamento', text: 'Configure o tamanho do disco (mínimo recomendado de 50 GB)' },
+        { '@type': 'HowToStep', position: 5, name: 'Inicie a instância', text: 'Clique em Start e aguarde de 30 a 60 segundos para a instância inicializar' },
+        { '@type': 'HowToStep', position: 6, name: 'Acesso SSH', text: 'Conecte via SSH ao IP fornecido usando as credenciais do painel' },
+        { '@type': 'HowToStep', position: 7, name: 'Instale as ferramentas', text: 'Execute: apt update && apt install -y python3-pip' },
+        { '@type': 'HowToStep', position: 8, name: 'Execute a carga de trabalho', text: 'Clone seu repositório e execute seu script de treinamento ou inferência' },
+        { '@type': 'HowToStep', position: 9, name: 'Monitore o uso', text: 'Acompanhe o relógio no painel do provedor para rastrear custos em tempo real' },
+        { '@type': 'HowToStep', position: 10, name: 'Pare a instância', text: 'Pare quando terminar; a cobrança cessa imediatamente' },
+      ],
+    },
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -3908,6 +3927,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { q: '정확히 1시간 렌탈 시 가격은 얼마입니까?', a: 'RunPod: 60분 최소 (올림). Lambda Labs: 전체 시간 청구. Vast.ai: 초 단위 청구 (정확히 1시간분만 청구, 추가 없음).' },
       ],
     },
+  },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'RunPod',
+        description: '가격($0.34–0.69/시간, RTX 4090), 신뢰성(99% 가동률), 사용 편의성의 균형이 가장 우수한 LLM 추론용 공급업체. 프로덕션에는 Secure Cloud 티어를 권장합니다. EU 지역 이용 가능.',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Vast.ai',
+        description: '스팟 중단을 감수할 수 있다면 경쟁사보다 30~50% 저렴합니다. RTX 4090이 $0.08/시간부터 시작합니다. 가장 큰 GPU 카탈로그를 보유하고 있습니다. 피어투피어 방식(품질이 일정하지 않음).',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Lambda Labs',
+        description: '99.9% 가동률 SLA, 전담 지원(Slack/이메일/전화), A100/H100 중심. 프리미엄 가격($1.29–$2.99/시간)이 프로덕션 AI 워크로드에 정당화됩니다.',
+      },
+    ],
   },
 },
 }

@@ -447,6 +447,20 @@ schema: {
           { '@type': 'Thing', 'name': 'Inferência de LLM local' },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Guia de Comandos Ollama: Todos os Comandos Explicados (2026)',
+        'itemListElement': [
+          { '@type': 'ListItem', position: 1, name: '`ollama pull <model>` — Baixa um modelo (ex: `ollama pull llama3.2:3b`).' },
+          { '@type': 'ListItem', position: 2, name: '`ollama run <model>` — Inicia um chat com um modelo.' },
+          { '@type': 'ListItem', position: 3, name: '`ollama list` — Mostra todos os modelos baixados e seus tamanhos.' },
+          { '@type': 'ListItem', position: 4, name: '`ollama rm <model>` — Remove um modelo baixado.' },
+          { '@type': 'ListItem', position: 5, name: '`ollama serve` — Inicia o servidor API do Ollama (executa automaticamente no Mac/Windows).' },
+          { '@type': 'ListItem', position: 6, name: '`ollama create <name> -f <modelfile>` — Cria um modelo personalizado a partir de um Modelfile.' },
+          { '@type': 'ListItem', position: 7, name: 'Em abril de 2026, esses comandos são estáveis e cobrem todos os casos de uso comuns.' },
+        ],
+      },
     },
     de: {
       freshness_tier: 'semi_annual',
@@ -2038,6 +2052,20 @@ schema: {
             'Ollama 모델 라이브러리 -- ollama.ai/library',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Ollama 명령어 가이드: 모든 명령어 완전 해설 (2026)',
+        'itemListElement': [
+          { '@type': 'ListItem', position: 1, name: '`ollama pull <모델>` -- 모델을 다운로드합니다 (예: `ollama pull llama3.2:3b`).' },
+          { '@type': 'ListItem', position: 2, name: '`ollama run <모델>` -- 모델과 채팅을 시작합니다.' },
+          { '@type': 'ListItem', position: 3, name: '`ollama list` -- 다운로드된 모든 모델과 크기를 표시합니다.' },
+          { '@type': 'ListItem', position: 4, name: '`ollama rm <모델>` -- 다운로드된 모델을 삭제합니다.' },
+          { '@type': 'ListItem', position: 5, name: '`ollama serve` -- Ollama API 서버를 시작합니다 (Mac/Windows에서는 자동으로 실행됩니다).' },
+          { '@type': 'ListItem', position: 6, name: '`ollama create <이름> -f <modelfile>` -- Modelfile로 커스텀 모델을 빌드합니다.' },
+          { '@type': 'ListItem', position: 7, name: '2026년 4월 기준으로 이 명령어들은 안정적이며 모든 일반적인 사용 사례를 커버합니다.' },
+        ],
       },
     },
   };

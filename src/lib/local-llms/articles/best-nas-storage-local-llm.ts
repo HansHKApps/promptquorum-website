@@ -753,6 +753,17 @@ schema: {
         'datePublished': '2026-04-05',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Meilleur NAS pour LLM locaux',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'SSD local', 'description': 'Capacité de 2 To, accès rapide, aucune redondance. Idéal pour une machine unique.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'NAS avec RAID 6', 'description': 'Capacité de 8 To, accès partagé, tolérance de panne de 2 disques. Idéal pour les équipes.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Stockage cloud (AWS S3)', 'description': 'Capacité illimitée, accès à distance, excellente redondance. Idéal pour les modèles archivés.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Disque USB externe', 'description': 'Capacité de 4 To, portable, sauvegarde hors ligne. Idéal pour un stockage sécurisé hors ligne.' }
+        ]
+      },
       sections: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['**NAS (Stockage en réseau) :** Stockage centralisé accessible en réseau. RAID 6 (2 disques peuvent tomber en panne simultanément).', '**Meilleur budget :** Synology DS420+ 4 baies, ~400 € (matériel seul). 4× 4To WD Red Pro = ~600 €. Total ~1 000 € pour 8To utilisables.', '**Meilleures performances :** QNAP TS-464C2U ou TrueNAS SCALE sur réseau 10Gbps. Coût : 2 000 €+.', '**Stockage modèles :** Conservez tous les modèles quantifiés (.gguf) sur le NAS. Un modèle 70B = 35 Go, stockez 10+ modèles.', '**Sauvegarde :** Sauvegarde quotidienne vers le cloud (Backblaze B2 = 6 $/mois illimité). Ou disques USB externes (hors ligne, sécurisé).', '**Latence réseau :** NAS sur même LAN que serveur d\'inférence = <10ms (acceptable). Via internet = trop lent.', '**Redondance :** RAID 6 protège contre 2 défaillances de disques. Faites quand même des sauvegardes externes (ransomware, vol).', '**Comparaison des coûts :** 8To NAS = ~1 000 € une fois + ~6 $/mois sauvegarde. Stockage cloud = 50-100 $/mois indéfiniment.'] },
         comparison: { title: 'NAS vs SSD local vs Stockage cloud', rows: [{ '0': 'Option', '1': 'Capacité', '2': 'Coût', '3': 'Vitesse', '4': 'Redondance', '5': 'Idéal pour' }, { '0': 'SSD local', '1': '2To', '2': '200 €', '3': 'Rapide', '4': 'Aucune', '5': 'Machine unique, accès rapide' }, { '0': 'NAS (RAID 6)', '1': '8To', '2': '1 000 €', '3': 'Moyen', '4': 'Bonne', '5': 'Équipe, accès partagé' }, { '0': 'Cloud (AWS S3)', '1': 'Illimité', '2': '50 €+/mois', '3': 'Lent', '4': 'Excellente', '5': 'Accès distant, modèles archivés' }, { '0': 'USB externe', '1': '4To', '2': '150 €', '3': 'Lent', '4': 'Aucune', '5': 'Sauvegarde hors ligne, portable' }], columns: ['Option', 'Capacité', 'Coût', 'Vitesse', 'Redondance', 'Idéal pour'], image: '/images/best-nas-storage-local-llm-comparison-fr.svg', imageCaption: 'Comparaison entre SSD local, NAS avec RAID 6, stockage cloud (AWS S3) et USB externe selon la capacité, la vitesse et la redondance : le NAS offre 8To avec une bonne redondance pour un accès partagé en équipe, le cloud offre une capacité illimitée avec une excellente redondance pour les modèles archivés.' },
@@ -779,6 +790,17 @@ schema: {
         'datePublished': '2026-04-05',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'ローカルLLM向けベストNAS',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'ローカルSSD', 'description': '容量2TB、高速アクセス、冗長性なし。単一マシンに最適。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'NAS（RAID 6）', 'description': '容量8TB、共有アクセス、2台のドライブ障害耐性。チームに最適。' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'クラウド（AWS S3）', 'description': '容量無制限、リモートアクセス、優れた冗長性。アーカイブモデルに最適。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'USB外付け', 'description': '容量4TB、ポータブル、オフラインバックアップ。オフライン安全ストレージに最適。' }
+        ]
+      },
       sections: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['**NAS（ネットワーク接続ストレージ）：** ネットワーク経由でアクセス可能な中央集権ストレージ。RAID 6（2台のドライブが同時に障害を起こしてもデータ安全）。', '**最良バジェット：** Synology DS420+ 4ベイ、約6万円（ハードウェアのみ）。4× 4TB WD Red Proドライブ = 約9万円。合計約15万円で8TB使用可能。', '**最良パフォーマンス：** QNAP TS-464C2UまたはTrueNAS SCALEを10Gbpsネットワークで。費用：30万円以上。', '**モデルストレージ：** すべての量子化モデル（.ggufファイル）をNASに保存。70Bモデル1つ = 35GB、10以上のモデルを保存可能。', '**バックアップ：** クラウドへの毎日バックアップ（Backblaze B2 = 月額900円で無制限）。またはUSB外付けドライブ（オフライン、安全）。', '**ネットワーク遅延：** 推論サーバーと同じLANのNAS = <10ms（許容範囲）。インターネット経由 = 遅すぎ。', '**冗長性：** RAID 6は2台のドライブ障害から保護。ランサムウェアや盗難に備えて外部バックアップも実施。', '**コスト比較：** 8TB NAS = 約15万円の初期費用 + 月額900円バックアップ。クラウドストレージ = 月額7,500-15,000円が無期限。'] },
         comparison: { title: 'NAS vs ローカルSSD vs クラウドストレージ', rows: [{ '0': 'オプション', '1': '容量', '2': 'コスト', '3': '速度', '4': '冗長性', '5': '最適用途' }, { '0': 'ローカルSSD', '1': '2TB', '2': '約3万円', '3': '高速', '4': 'なし', '5': '単一マシン、高速アクセス' }, { '0': 'NAS（RAID 6）', '1': '8TB', '2': '約15万円', '3': '中程度', '4': '良好', '5': 'チーム、共有アクセス' }, { '0': 'クラウド（AWS S3）', '1': '無制限', '2': '月額7,500円以上', '3': '遅い', '4': '優秀', '5': 'リモートアクセス、アーカイブモデル' }, { '0': 'USB外付け', '1': '4TB', '2': '約2.5万円', '3': '遅い', '4': 'なし', '5': 'オフラインバックアップ、ポータブル' }], columns: ['オプション', '容量', 'コスト', '速度', '冗長性', '最適用途'], image: '/images/best-nas-storage-local-llm-comparison-ja.svg', imageCaption: '容量・速度・冗長性でローカルSSD、RAID 6搭載NAS、クラウドストレージ（AWS S3）、USB外付けを比較：NASは8TBでチーム共有アクセスに適した良好な冗長性を提供し、クラウドは無制限の容量とアーカイブモデル向けの優秀な冗長性を提供する。' },
@@ -804,6 +826,17 @@ schema: {
         'description': '本地LLM最佳NAS：RAID 6冗余、备份策略和模型库组织。对比Synology、QNAP和TrueNAS。免费--2026年4月。',
         'datePublished': '2026-04-05',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '本地LLM最佳NAS',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '本地SSD', 'description': '2TB容量，访问速度快，无冗余。适合单机使用。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'NAS（RAID 6）', 'description': '8TB容量，共享访问，可容忍2块硬盘故障。适合团队使用。' },
+          { '@type': 'ListItem', 'position': 3, 'name': '云端（AWS S3）', 'description': '容量无限，远程访问，冗余性优秀。适合归档模型。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'USB外置硬盘', 'description': '4TB容量，便携，离线备份。适合离线安全存储。' }
+        ]
       },
       sections: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['**NAS（网络附加存储）：** 可通过网络访问的集中存储。RAID 6（两块硬盘同时故障数据仍然安全）。', '**预算之选：** Synology DS420+ 4盘位，约$500（仅硬件）。4× 4TB WD Red Pro硬盘 = 约$600。合计约$1,100，8TB可用空间。', '**性能之选：** QNAP TS-464C2U或TrueNAS SCALE搭配10Gbps网络。费用：$2,000以上。', '**模型存储：** 将所有量化模型（.gguf文件）存放在NAS上。一个70B模型 = 35GB，可存储10个以上模型。', '**备份：** 每日云端备份（Backblaze B2 = 每月$7，接近无限容量）。或USB外置硬盘（离线、安全）。', '**网络延迟：** 推理服务器与NAS在同一局域网 = <10ms（可接受）。通过互联网 = 太慢。', '**冗余性：** RAID 6可防护2块硬盘故障。针对勒索软件和盗窃，还需外部备份。', '**成本对比：** 8TB NAS = 约$1,100初始投入 + 每月$7备份费。云存储 = 每月$60-120无限期持续。'] },

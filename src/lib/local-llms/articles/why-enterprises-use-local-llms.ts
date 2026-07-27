@@ -2082,5 +2082,31 @@ schema: {
           ],
         },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '기업이 로컬 LLM을 선택하는 이유',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': '비용 절감',
+            'description': '월 10억 토큰 이상을 처리하는 기업은 토큰당 API 요금을 없애 연간 10만~50만 달러를 절감합니다.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': '컴플라이언스 요건',
+            'description': 'GDPR(데이터 거주지), HIPAA(환자 개인정보 보호), SOC2(감사 추적)는 온프레미스 AI를 요구합니다.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': '데이터 주권 및 통제권',
+            'description': '독점 데이터와 알고리즘을 완전히 온프레미스에 유지하여 유출 위험과 규제 노출을 줄입니다.',
+          },
+        ],
+      },
     },
   };

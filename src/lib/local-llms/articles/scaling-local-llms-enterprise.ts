@@ -883,6 +883,31 @@ schema: {
         proficiencyLevel: 'Advanced',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'pt-BR',
+        mainEntity: [
+          { '@type': 'Question', name: 'Quantas GPUs precisamos para implantação empresarial?', acceptedAnswer: { '@type': 'Answer', text: 'Depende da concorrência e dos requisitos de latência. 100 usuários simultâneos em modelo 7B: ~5-8 GPUs. 500 usuários simultâneos: 20-30 GPUs. Fórmula: (usuários simultâneos × latência esperada) / (tokens/seg por GPU).' } },
+          { '@type': 'Question', name: 'Qual a diferença entre balanceamento de carga e auto-scaling?', acceptedAnswer: { '@type': 'Answer', text: 'O balanceamento de carga distribui requisições entre pods existentes. O auto-scaling adiciona/remove pods com base na carga. Ambos são necessários: o balanceamento distribui o trabalho agora, o auto-scaling ajusta a capacidade.' } },
+          { '@type': 'Question', name: 'Como lidamos com falhas de GPU?', acceptedAnswer: { '@type': 'Answer', text: 'O Kubernetes reagenda automaticamente os pods para GPUs saudáveis. Se uma GPU falhar, o Kubernetes a marca como indisponível e redireciona o tráfego para as demais. Mantenha redundância: se precisar de 8 GPUs, provisione 10.' } },
+          { '@type': 'Question', name: 'Qual SLA de latência devemos almejar?', acceptedAnswer: { '@type': 'Answer', text: 'p99 de latência <2 segundos é padrão para chatbots. p99 <500ms para autocompletar em tempo real. Defina o SLA com base na experiência do usuário e escolha hardware/tamanho de lote para atingi-lo.' } },
+          { '@type': 'Question', name: 'Como monitoramos um cluster de inferência distribuído?', acceptedAnswer: { '@type': 'Answer', text: 'Monitore por pod e no nível do cluster: utilização de GPU, profundidade da fila, latência (p50/p95/p99), taxa de erro, throughput e uptime. Use Prometheus + Grafana ou equivalente.' } },
+          { '@type': 'Question', name: 'A escala on-premises é mais barata que a nuvem?', acceptedAnswer: { '@type': 'Answer', text: 'Sim, em escala. O ponto de equilíbrio é de ~500 mil tokens/mês. On-premises: alto custo inicial ($500 mil-2 milhões em hardware), depois baixo custo por requisição. Nuvem: sem custo inicial, alto custo por requisição ($0,15-60/1M tokens).' } },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'pt-BR',
+        name: 'LLMs Locais em Escala Empresarial',
+        numberOfItems: 3,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Orquestração Multi-GPU', description: 'Implantações empresariais usam Kubernetes para orquestrar 5-50 GPUs entre pods de inferência, atendendo 50-500 usuários simultâneos.' },
+          { '@type': 'ListItem', position: 2, name: 'Balanceamento de Carga e Failover', description: 'Distribua requisições entre pods e implemente redundância com failover automático para alta disponibilidade.' },
+          { '@type': 'ListItem', position: 3, name: 'Monitoramento e Otimização de Custos', description: 'Monitore métricas por pod, otimize a utilização de GPU e implemente auto-scaling para reduzir custos.' },
+        ],
+      },
     },
     de: {
       freshness_tier: 'semi_annual',
@@ -1955,6 +1980,18 @@ schema: {
         { label: '관련 자료', anchor: '#related-reading' },
         { label: '출처', anchor: '#sources' },
       ],
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'ko',
+        name: '엔터프라이즈 규모 로컬 LLM',
+        numberOfItems: 3,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '다중 GPU 오케스트레이션', description: '엔터프라이즈 배포는 Kubernetes를 사용하여 인퍼런스 파드 전반에 걸쳐 5~50개의 GPU를 오케스트레이션하며, 50~500명의 동시 사용자에게 서비스를 제공합니다.' },
+          { '@type': 'ListItem', position: 2, name: '로드 밸런싱과 페일오버', description: '파드 전반에 요청을 분산시키고 고가용성을 위한 자동 페일오버 이중화를 구현합니다.' },
+          { '@type': 'ListItem', position: 3, name: '모니터링과 비용 최적화', description: '파드별 지표를 모니터링하고, GPU 사용률을 최적화하며, 비용 절감을 위한 오토스케일링을 구현합니다.' },
+        ],
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',

@@ -192,6 +192,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/context-windows-explained-why-forgets-hero-de.png',
       readTime: '11 Min. Lesezeit',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Kontextfenster',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -265,6 +266,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/context-windows-explained-why-forgets-hero-es.png',
       readTime: '11 min de lectura',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Ventana de contexto',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -456,6 +458,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/context-windows-explained-why-forgets-hero-pt.png',
       readTime: '11 min de leitura',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Janela de Contexto',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -530,6 +533,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/context-windows-explained-why-forgets-hero-fr.png',
       readTime: '11 min de lecture',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Fenêtre de contexte',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -603,6 +607,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/context-windows-explained-why-forgets-hero-ja.png',
       readTime: '11分で読める',
       educationalLevel: 'Beginner',
+      primaryTerm: 'コンテキストウィンドウ',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -676,6 +681,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/context-windows-explained-why-forgets-hero-zh.png',
       readTime: '阅读约11分钟',
       educationalLevel: 'Beginner',
+      primaryTerm: '上下文窗口',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',

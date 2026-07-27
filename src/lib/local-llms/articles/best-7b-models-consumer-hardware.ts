@@ -838,6 +838,39 @@ schema: {
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'inLanguage': 'pt-BR',
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Melhores modelos 7B para hardware de consumo 2026',
+        'description': 'LLMs 7B com melhor desempenho para GPUs de consumo com 8 GB de VRAM, classificados por caso de uso.',
+        'numberOfItems': 4,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Llama 3.3 7B',
+            'description': 'Melhor raciocínio e programação. 82% MATH, 73% HumanEval. Requer 8 GB de VRAM. Licença aberta da Meta.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Mistral Small',
+            'description': 'Melhor seguimento de instruções com 92%. 16 tok/s. Forte em escrita criativa e chat. 8 GB de VRAM.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Qwen3 7B',
+            'description': 'Melhor suporte multilíngue em 27 idiomas, incluindo chinês, japonês e árabe. 8 GB de VRAM.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 4,
+            'name': 'Phi 2.7B',
+            'description': 'Alternativa econômica para 4 GB de VRAM. 20 tok/s. Apenas inglês. Modelo de pesquisa da Microsoft.',
+          },
+        ],
+      },
       toc: [
         { label: 'Dados rápidos', anchor: '#quick-facts' },
         { label: 'Pontos-chave', anchor: '#tldr' },

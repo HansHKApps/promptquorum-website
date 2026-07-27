@@ -1582,6 +1582,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'IA reduz o tempo de codificação em 30–75% com prompts estruturados. Compare Claude, GPT-5.5 e Gemini para tarefas de código. 45% do código de IA tem falhas de segurança — aprenda fluxos de trabalho seguros.',
       educationalLevel: 'Intermediate',
       aboutTopics: ['Codificação assistida por IA', 'Geração de código', 'Prompt engineering'],
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'pt-BR',
+        'name': 'Comparação de Ferramentas de Codificação com IA 2026',
+        'description': 'Comparação de taxas de alucinação, consciência de arquitetura e melhores casos de uso para assistentes de codificação com IA',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'GitHub Copilot', 'description': 'Taxa de alucinação de ~15–20%. Contexto de nível de arquivo. Melhor para desenvolvedores individuais e código repetitivo.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Cursor', 'description': 'Taxa de alucinação de ~10–15%. Indexação RAG de nível de projeto. Melhor para equipes que querem um IDE nativo de IA.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Claude Code', 'description': 'Alucinação mais baixa em tarefas estruturadas. Contexto completo da base de código. Melhor para backend e refatoração de múltiplos arquivos.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Devin', 'description': 'Alucinação variável. Execução autônoma de tarefas. Melhor para pipelines autônomos de ticket para PR.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Qwen Code', 'description': 'Alucinação variável. Compatível com implantação local. Melhor para pesquisa e controle total da infraestrutura.' },
+        ],
+      },
       howToName: 'Como escrever prompts que produzem código melhor',
       toc: [
         { label: 'A resposta direta: a qualidade do prompt determina a qualidade do código', anchor: '#the-direct-answer-prompt-quality-determines-code-quality' },

@@ -1052,6 +1052,31 @@ schema: {
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
       },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'So führen Sie Ihr erstes lokales LLM in 10 Minuten aus',
+        'totalTime': 'PT10M',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Ollama installieren', 'text': 'Laden Sie Ollama von ollama.ai herunter und installieren Sie es. Überprüfen Sie die Installation mit `ollama --version`.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Erstes Modell auswählen', 'text': 'Wählen Sie ein Einsteigermodell passend zu Ihrer Hardware: Llama 3.2 3B (4 GB RAM), Phi 2.5 (8 GB) oder Mistral Small (16 GB).' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Modell herunterladen', 'text': 'Führen Sie `ollama pull llama3.2:3b` aus, um das Modell herunterzuladen. Warten Sie, bis der Download abgeschlossen ist.' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Ausführen und chatten', 'text': 'Führen Sie `ollama run llama3.2:3b` aus, um das Modell zu starten und im Terminal zu chatten.' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'Mit dem ersten Prompt testen', 'text': 'Geben Sie Ihren ersten Prompt ein (z. B. „Hallo, was ist ein LLM?") und drücken Sie Enter. Beobachten Sie Antwortzeit und Qualität.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Beste erste lokale LLM-Modelle nach RAM',
+        'numberOfItems': 4,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': '4 GB RAM. 1,3 GB Download. Kleinstes brauchbares Llama-Modell.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': '8 GB RAM. 2 GB Download. Bestes Verhältnis von Qualität zu Größe für Einsteiger.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': '8-16 GB RAM. 4,7 GB Download. Starkes Allzweckmodell.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b oder qwen2.5:7b', 'description': '16+ GB RAM. 4-5 GB Download. Wettbewerbsfähige Qualität.' },
+        ]
+      },
       sections: {
         tldr: { id: 'key-takeaways',
  isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B -- 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B -- 40-60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen3 3B -- 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B -- beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
@@ -1088,6 +1113,31 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/run-first-local-llm',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Comment exécuter votre premier LLM local en 10 minutes',
+        'totalTime': 'PT10M',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Installer Ollama', 'text': 'Téléchargez et installez Ollama depuis ollama.ai. Vérifiez l\'installation avec `ollama --version`.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Choisir votre premier modèle', 'text': 'Sélectionnez un modèle débutant selon votre matériel : Llama 3.2 3B (4 Go de RAM), Phi 2.5 (8 Go) ou Mistral Small (16 Go).' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Télécharger le modèle', 'text': 'Exécutez `ollama pull llama3.2:3b` pour télécharger le modèle. Attendez la fin du téléchargement.' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Exécuter et discuter', 'text': 'Exécutez `ollama run llama3.2:3b` pour démarrer le modèle et commencer à discuter dans votre terminal.' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'Tester avec votre premier prompt', 'text': 'Tapez votre premier prompt (par ex. « Bonjour, qu\'est-ce qu\'un LLM ? ») et appuyez sur Entrée. Observez le temps de réponse et la qualité.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Meilleurs premiers modèles de LLM local par RAM',
+        'numberOfItems': 4,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': '4 Go de RAM. Téléchargement de 1,3 Go. Plus petit modèle Llama utilisable.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': '8 Go de RAM. Téléchargement de 2 Go. Meilleur rapport qualité/taille pour débutants.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': '8-16 Go de RAM. Téléchargement de 4,7 Go. Modèle polyvalent performant.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b ou qwen2.5:7b', 'description': '16+ Go de RAM. Téléchargement de 4-5 Go. Qualité compétitive.' },
+        ]
       },
       sections: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['Le chemin le plus rapide : installez Ollama → exécutez `ollama run llama3.2` → discutez dans votre terminal. Durée totale : moins de 5 minutes avec une connexion rapide.', 'Pour les machines avec 8 Go de RAM : commencez avec `llama3.2:3b` (2 Go de téléchargement) ou `phi4-mini` (2,3 Go). Les deux fonctionnent sur n\'importe quel laptop moderne.', 'Attendez 15-40 tokens/sec sur CPU, 60-120 tokens/sec sur un GPU milieu de gamme ou Apple Silicon.', 'Les premières réponses peuvent sembler plus lentes que les APIs cloud -- les modèles locaux échangent vitesse contre confidentialité et coût zéro.', 'Après le téléchargement initial du modèle, tout fonctionne hors ligne. Aucune connexion Internet requise pour les sessions suivantes.'] },
@@ -1128,6 +1178,31 @@ schema: {
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
       },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '初めてのローカルLLMを10分で実行する方法',
+        'totalTime': 'PT10M',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Ollamaをインストール', 'text': 'ollama.aiからOllamaをダウンロードしてインストールします。`ollama --version`でインストールを確認します。' },
+          { '@type': 'HowToStep', 'position': 2, 'name': '最初のモデルを選択', 'text': 'ハードウェアに応じて初心者向けモデルを選択します：Llama 3.2 3B（4 GB RAM）、Phi 2.5（8 GB）、またはMistral Small（16 GB）。' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'モデルをダウンロード', 'text': '`ollama pull llama3.2:3b`を実行してモデルをダウンロードします。完了するまで待ちます。' },
+          { '@type': 'HowToStep', 'position': 4, 'name': '実行してチャット', 'text': '`ollama run llama3.2:3b`を実行してモデルを起動し、ターミナルでチャットを開始します。' },
+          { '@type': 'HowToStep', 'position': 5, 'name': '最初のプロンプトでテスト', 'text': '最初のプロンプト（例：「こんにちは、LLMとは何ですか？」）を入力してEnterキーを押します。応答時間と品質を確認します。' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'RAM別のおすすめ最初のローカルLLMモデル',
+        'numberOfItems': 4,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': '4 GB RAM。1.3 GBダウンロード。使用可能な最小のLlamaモデル。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': '8 GB RAM。2 GBダウンロード。初心者に最適な品質とサイズのバランス。' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': '8-16 GB RAM。4.7 GBダウンロード。強力な汎用モデル。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b または qwen2.5:7b', 'description': '16 GB以上のRAM。4-5 GBダウンロード。競争力のある品質。' },
+        ]
+      },
       sections: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['最速の手順：Ollamaをインストール → `ollama run llama3.2`を実行 → ターミナルでチャット。高速接続なら合計5分以内。', '8 GBのRAMマシン：`llama3.2:3b`（2 GBのダウンロード）または`phi4-mini`（2.3 GB）から始めてください。どちらも最新のノートパソコンで動作します。', 'CPUで15-40トークン/秒、ミッドレンジGPUまたはApple Siliconで60-120トークン/秒が期待できます。', '最初のレスポンスはクラウドAPIより遅く感じる場合があります。ローカルモデルは速度をプライバシーとゼロコストと交換します。', '初期モデルのダウンロード後は、すべてオフラインで動作します。次回以降のセッションにインターネット接続は不要です。'] },
         step1: { title: 'ステップ1：Ollamaをインストール', content: 'Ollamaはローカルで動作するLLMを実行する最速の方法です。1つのコマンドまたは2分のダウンロードでインストールできます：', codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download', codeLanguage: 'bash', image: '/images/run-first-local-llm-setup-flow-en.svg', imageCaption: 'インストールから最初の応答まで4ステップ：Ollamaをインストール（約2分）、llama3.2:3bをダウンロード（約2 GB、2〜5分）、実行してチャット、モデル読み込み5〜30秒後に最初の応答。合計10分未満、ダウンロード後は完全オフラインで動作。' },
@@ -1166,6 +1241,31 @@ schema: {
         'url': 'https://www.promptquorum.com/zh/local-llms/run-first-local-llm',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '如何在10分钟内运行您的第一个本地LLM',
+        'totalTime': 'PT10M',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': '安装Ollama', 'text': '从ollama.ai下载并安装Ollama。使用`ollama --version`验证安装。' },
+          { '@type': 'HowToStep', 'position': 2, 'name': '选择您的第一个模型', 'text': '根据您的硬件选择初学者模型：Llama 3.2 3B（4 GB RAM）、Phi 2.5（8 GB）或Mistral Small（16 GB）。' },
+          { '@type': 'HowToStep', 'position': 3, 'name': '下载模型', 'text': '运行`ollama pull llama3.2:3b`下载模型。等待下载完成。' },
+          { '@type': 'HowToStep', 'position': 4, 'name': '运行并聊天', 'text': '运行`ollama run llama3.2:3b`启动模型，在终端中开始聊天。' },
+          { '@type': 'HowToStep', 'position': 5, 'name': '用第一个提示词测试', 'text': '输入您的第一个提示词（例如"你好，什么是LLM？"）并按Enter键。观察响应时间和质量。' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '按RAM划分的最佳首选本地LLM模型',
+        'numberOfItems': 4,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': '4 GB RAM。1.3 GB下载。最小的可用Llama模型。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': '8 GB RAM。2 GB下载。初学者最佳质量与体积比。' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': '8-16 GB RAM。4.7 GB下载。强大的通用模型。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b 或 qwen2.5:7b', 'description': '16+ GB RAM。4-5 GB下载。有竞争力的质量。' },
+        ]
       },
       sections: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['最快路径：安装Ollama → 运行`ollama run llama3.2` → 在终端开始聊天。网速较快时全程不超过5分钟。', '8 GB RAM机器：从`llama3.2:3b`（2 GB下载）或`phi4-mini`（2.3 GB）开始。两者均可在任何现代笔记本电脑上运行。', 'CPU上预计15-40个令牌/秒，中端GPU或Apple Silicon上预计60-120个令牌/秒。', '首次响应可能比云API慢——本地模型以速度换取隐私和零成本。', '初始模型下载后，一切都在离线状态运行。后续会话无需互联网连接。'] },
@@ -1555,6 +1655,31 @@ schema: {
         { label: '관련 읽기', anchor: '#related-reading' },
         { label: '출처', anchor: '#sources' },
       ],
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '10분 만에 첫 로컬 LLM 실행하는 방법',
+        'totalTime': 'PT10M',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Ollama 설치', 'text': 'ollama.ai에서 Ollama를 다운로드하여 설치하십시오. `ollama --version`으로 설치를 확인하십시오.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': '첫 모델 선택', 'text': '하드웨어에 맞는 입문 모델을 선택하십시오: Llama 3.2 3B(RAM 4GB), Phi 2.5(8GB), 또는 Mistral Small(16GB).' },
+          { '@type': 'HowToStep', 'position': 3, 'name': '모델 다운로드', 'text': '`ollama pull llama3.2:3b`를 실행하여 모델을 다운로드하십시오. 완료될 때까지 기다리십시오.' },
+          { '@type': 'HowToStep', 'position': 4, 'name': '실행 및 대화', 'text': '`ollama run llama3.2:3b`를 실행하여 모델을 시작하고 터미널에서 대화를 시작하십시오.' },
+          { '@type': 'HowToStep', 'position': 5, 'name': '첫 프롬프트로 테스트', 'text': '첫 프롬프트(예: "안녕하세요, LLM이란 무엇인가요?")를 입력하고 Enter 키를 누르십시오. 응답 시간과 품질을 확인하십시오.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'RAM별 최적의 첫 로컬 LLM 모델',
+        'numberOfItems': 4,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': 'RAM 4GB. 다운로드 1.3GB. 사용 가능한 가장 작은 Llama 모델.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': 'RAM 8GB. 다운로드 2GB. 초보자를 위한 최적의 품질 대비 크기 비율.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': 'RAM 8~16GB. 다운로드 4.7GB. 강력한 범용 모델.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b 또는 qwen2.5:7b', 'description': 'RAM 16GB 이상. 다운로드 4~5GB. 경쟁력 있는 품질.' },
+        ]
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',

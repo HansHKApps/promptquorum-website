@@ -972,6 +972,108 @@ schema: {
           ],
         },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Principais lançamentos de LLM local no T1 2026',
+        'numberOfItems': 4,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Gemma 3 (todos os tamanhos)',
+            'description': 'Lançado em fevereiro de 2026 pelo Google. Visão em todos os tamanhos. Contexto de 128K. Apache 2.0. ollama run gemma3:9b',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Llama 4 Scout (preview)',
+            'description': 'Lançado em março de 2026 pela Meta. Arquitetura MoE. Contexto de 10M de tokens anunciado. Ainda não disponível no Ollama.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Mistral Small 3.2',
+            'description': 'Lançado em fevereiro de 2026 pela Mistral AI. Melhora no seguimento de instruções em relação ao Small 3.1. ollama run mistral-small3.2',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 4,
+            'name': 'Phi-4 Mini',
+            'description': 'Lançado em janeiro de 2026 pela Microsoft. 3,8B parâmetros. 70% no HumanEval. Contexto de 128K. ollama run phi4-mini',
+          },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Com que rapidez os novos modelos aparecem no Ollama após o lançamento?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Normalmente de 1 a 7 dias para grandes lançamentos da Meta, Google, Mistral e Alibaba. O Llama 3.3 70B apareceu na biblioteca do Ollama 3 dias após o lançamento open-weight da Meta. Modelos menores ou da comunidade podem levar de 2 a 4 semanas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Devo migrar do Llama 3.3 8B para um modelo mais novo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A atualização é opcional se você estiver satisfeito com a qualidade atual. O Qwen3 7B pontua ligeiramente mais alto em benchmarks, com melhor suporte multilíngue e de código. Para uso geral com foco em inglês, a diferença prática de qualidade é pequena.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Os modelos locais algum dia igualarão a qualidade dos modelos de nuvem de ponta atuais?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A tendência sugere que sim -- com um atraso de 18 a 24 meses. O GPT-4 (2023) é igualado pelo Llama 3.3 70B (2025, executável localmente). O GPT-5.5 (2024) provavelmente terá um equivalente executável localmente até o final de 2026 ou 2027.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que aconteceu com o DeepSeek e por que isso foi significativo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O DeepSeek-R1 (janeiro de 2025) demonstrou que um laboratório de IA chinês conseguia produzir modelos com capacidade de raciocínio competitivos com o OpenAI o1 a um custo de treinamento menor. O lançamento open-weight tornou um modelo de raciocínio de ponta disponível localmente. O DeepSeek-R1 7B atinge 52% no MATH contra 28% do Mistral Small, graças ao treinamento com cadeia de raciocínio.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é o Llama 4 e ele já está disponível localmente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A partir de abril de 2026, a Meta lançou uma prévia do Llama 4 Scout -- um modelo de mistura de especialistas (MoE) que alega suportar até 10M de tokens de contexto. O lançamento open-weight completo ainda não está disponível para inferência local. A biblioteca do Ollama ainda não inclui variantes do Llama 4.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Existem modelos locais para empresas ou setores regulados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A Mistral AI oferece suporte de nível empresarial para os modelos Mistral. Sua origem europeia é relevante para conformidade com o GDPR sob o EU AI Act (em vigor desde fevereiro de 2025). Qualquer modelo implantado localmente pode atender a requisitos de residência de dados -- o trabalho de conformidade está na infraestrutura de implantação, não na escolha do modelo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Com qual modelo um iniciante completo deve começar em 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Llama 3.2 3B ou Gemma 3 4B. Ambos rodam em hardware modesto (4-6 GB de VRAM), têm documentação extensa e têm bom desempenho em tarefas gerais. O Llama 3.2 3B tem mais guias da comunidade. O Gemma 3 4B é mais novo, um pouco mais rápido e suporta visão. Para usuários não técnicos, o LM Studio facilita o uso de ambos sem linha de comando.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Vale a pena atualizar para novos modelos se o meu modelo atual funciona bem?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Somente se você encontrar limitações específicas de qualidade. Se seu modelo de 7B ou 8B atende aos seus casos de uso, a atualização é opcional. Atualize se notar erros de raciocínio, suporte multilíngue fraco ou baixa capacidade de programação. O Qwen3 7B supera o Llama 3.3 8B na maioria dos benchmarks e é uma opção segura de atualização.',
+            },
+          },
+        ],
+      },
     },
     ja: {
       theme: 'ベストモデル',
@@ -2089,6 +2191,38 @@ schema: {
             'DeepSeek AI. (2025). "DeepSeek-R1 Technical Paper." https://arxiv.org/abs/2501.12948 -- DeepSeek-R1의 연쇄 사고 아키텍처 및 MATH 벤치마크 결과.',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '2026년 1분기 주요 로컬 LLM 출시 모델',
+        'numberOfItems': 4,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Gemma 3 (전 크기)',
+            'description': '2026년 2월 Google에서 출시. 모든 크기에서 비전 지원. 128K 컨텍스트. Apache 2.0. ollama run gemma3:9b',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Llama 4 Scout (프리뷰)',
+            'description': '2026년 3월 Meta에서 출시. MoE 아키텍처. 1000만 토큰 컨텍스트 주장. 아직 Ollama에서 사용 불가.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Mistral Small 3.2',
+            'description': '2026년 2월 Mistral AI에서 출시. Small 3.1 대비 향상된 명령어 수행 능력. ollama run mistral-small3.2',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 4,
+            'name': 'Phi-4 Mini',
+            'description': '2026년 1월 Microsoft에서 출시. 38억 파라미터. HumanEval 70%. 128K 컨텍스트. ollama run phi4-mini',
+          },
+        ],
       },
     },
   };

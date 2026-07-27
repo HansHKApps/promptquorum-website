@@ -6003,5 +6003,32 @@ schema: {
           ],
         },
       },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '로컬 LLM 하드웨어 요구 사항 계산 방법',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'VRAM 필요량 계산', 'text': '공식 사용: VRAM (GB) = (모델 크기 × 양자화 비트 수) ÷ 8. 예: Q4의 70B 모델 = (70 × 4) ÷ 8 = 35GB.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'GPU 티어 선택', 'text': 'VRAM 필요량에 맞는 GPU 선택: 8GB(RTX 4070 Ti), 16GB(RTX 4080), 24GB(RTX 4090), 48GB 이상(서버용 GPU).' },
+          { '@type': 'HowToStep', 'position': 3, 'name': '스토리지 계획', 'text': '7B 모델당 4~5GB를 예산으로 잡으십시오. 모델 10개를 저장하려면 1TB SSD가 필요합니다.' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'KV 캐시 오버헤드 반영', 'text': '8K 컨텍스트에는 VRAM을 25% 추가하고, 32K 컨텍스트에는 100% 추가하십시오. Q4_K_M의 7B 모델(가중치 4.7GB) + 32K 컨텍스트(KV 캐시 4GB) = 총 8.7GB.' },
+          { '@type': 'HowToStep', 'position': 5, 'name': '전원 공급 장치 확인', 'text': 'RTX 4090은 최소 1200W PSU가 필요합니다. RTX 4070 Ti는 850W가 필요합니다.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '로컬 LLM을 위한 GPU 하드웨어 티어',
+        'numberOfItems': 7,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '예산형(~$394)', 'description': '16GB VRAM의 RTX 5060 Ti. 7~13B 모델을 ~60 tok/sec로 실행. 가성비가 가장 좋은 신제품 카드.' },
+          { '@type': 'ListItem', 'position': 2, 'name': '메인스트림(~$609)', 'description': '12GB VRAM의 RTX 5070. 7~14B 모델을 ~90 tok/sec로 실행. 최고의 가격 대비 성능.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '중급(~$979)', 'description': '16GB VRAM의 RTX 5070 Ti. 14~32B 모델을 ~110 tok/sec로 실행. 안정적인 성능.' },
+          { '@type': 'ListItem', 'position': 4, 'name': '고급(~$1,249)', 'description': '16GB VRAM의 RTX 5080. 14~32B 모델을 ~130 tok/sec로 실행. 추천.' },
+          { '@type': 'ListItem', 'position': 5, 'name': '최상급(~$4,300~5,000+ 실거래가)', 'description': '32GB VRAM의 RTX 5090. 경량 오프로드로 Q4_K_M에서 70B를 실행. ~200 tok/sec. 공급 부족 심화로 가격이 MSRP $1,999의 두 배 이상 유지되고 있습니다.' },
+          { '@type': 'ListItem', 'position': 6, 'name': '서버($7,000+)', 'description': '48~80GB VRAM의 RTX 6000 Ada / A100. 다중 사용자, 24/7 운영. 엔터프라이즈급.' },
+          { '@type': 'ListItem', 'position': 7, 'name': '데스크톱 AI($4,699)', 'description': '128GB 통합 메모리의 NVIDIA DGX Spark. 대형 MoE 모델을 수용하지만, 밀집형 70B는 ~273GB/s 대역폭 제약으로 인해 ~3 tok/sec에 그칩니다.' },
+        ],
+      },
     },
   };

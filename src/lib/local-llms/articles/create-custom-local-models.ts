@@ -1234,6 +1234,33 @@ schema: {
         proficiencyLevel: 'Advanced',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'pt-BR',
+        name: 'Abordagens de LLM Personalizado: Matriz de Decisão',
+        numberOfItems: 3,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Fine-Tuning (Recomendado)',
+            description: 'Faça fine-tuning de um modelo existente com 500–5.000 exemplos específicos do domínio. Custo: $100–500, Tempo: 1–4 horas, VRAM: 8 GB. A abordagem mais prática para a maioria das organizações com dados específicos do domínio.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'RAG (Gratuito)',
+            description: 'Retrieval-Augmented Generation: sem necessidade de treinamento. Custo: $0, Tempo: imediato, VRAM: mínima. Ideal para iteração rápida e organizações sem dados de treinamento rotulados.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Pré-Treinamento (Raro)',
+            description: 'Treine do zero com mais de 100 bilhões de tokens de dados brutos. Custo: $50K–500K, Tempo: semanas–meses, VRAM: 100+ GB. Justificável apenas para modelos proprietários com orçamentos massivos.',
+          },
+        ],
+      },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',

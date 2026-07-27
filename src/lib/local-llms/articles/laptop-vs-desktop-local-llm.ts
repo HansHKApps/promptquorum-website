@@ -1124,6 +1124,18 @@ schema: {
             'Futuras atualizações de GPU são importantes para você.',
           ],
         },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Erros comuns ao escolher uma plataforma para LLMs locais',
+          numberedItems: [
+            '**Comprar um laptop esperando desempenho de desktop.** Laptops sofrem throttling térmico após 15–20 minutos. Para inferência sustentada (APIs, jobs em lote), um desktop é a única escolha prática.',
+            '**Assumir que Apple Silicon vence tudo.** O MacBook Pro M5 Max alcança 55–70 tok/s (estimado) no Llama 4 Scout. Um desktop RTX 4070 Ti de $1.500 executa 80 tok/s no mesmo modelo — comparável ou mais rápido a um custo menor. Uma RTX 5090 alcança 120–180 tok/s — muito superior para trabalho com 70B.',
+            '**Comparar M5 Max com M4 Max usando o mesmo modelo.** O M5 Max tem processamento de prompt 4× mais rápido (segundo a Apple) e maior largura de banda de memória (460–614 GB/s vs 410 GB/s do M4 Max). Benchmarks usando Llama 3.2 8B no M4 Max não preveem o desempenho do M5 Max — use o mesmo modelo em ambos para comparar, ou ajuste as estimativas de acordo.',
+            '**Assumir que 70B agora é prático em laptops.** O M5 Max consegue carregar 70B em Q4 (~40 GB de 128 GB), mas o throttling térmico limita o uso sustentado a 15–18 minutos. Para workflows reais com 70B, uma GPU de desktop ou um Mac Studio é essencial.',
+            '**Ignorar o throttling térmico nos benchmarks de desempenho.** Muitos benchmarks medem a velocidade de pico, não a velocidade sustentada. Verifique sempre o desempenho sustentado de 30 minutos, não picos de 1 minuto.',
+            '**Usar um desktop para trabalho em trânsito.** Se você viaja com frequência ou trabalha em vários locais, um laptop de ponta (MacBook Pro M5 Max ou um laptop gamer com 16+ GB de memória unificada/dedicada) é a escolha correta.',
+          ],
+        },
         faqSection: {
           id: 'faq',
           title: 'Perguntas frequentes sobre laptop vs desktop para LLMs locais',
@@ -1163,6 +1175,19 @@ schema: {
         mainEntity: [
           { '@type': 'Question', name: 'Posso executar LLMs locais no meu laptop?', acceptedAnswer: { '@type': 'Answer', text: 'Sim, mas com limitações. Laptops com GPU discreta (RTX 4060 Mobile) executam modelos 7B–13B a 15–25 tok/s. Laptops sem GPU dedicada executam via CPU a 5–10 tok/s. O throttling térmico pode desacelerar após 15–20 min de uso intenso.' } },
           { '@type': 'Question', name: 'Um desktop é muito melhor que um laptop para LLMs locais?', acceptedAnswer: { '@type': 'Answer', text: 'Para desempenho sustentado, sim — 4–6× mais rápido e sem throttling. Desktop RTX 4070 Ti: $19/tok/s. MacBook M5 Max: $100+/tok/s. Para uso portátil ocasional, um laptop bom (MacBook Pro M5) é suficiente.' } },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Comparativo de custo entre laptop e desktop para LLMs locais 2026',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'MacBook Pro 16" M5 Max', 'description': '$3.500-4.000 · 55-70 tok/s (est.) · $50-70/tok/s · Primeiro laptop a carregar 70B; geração M5 com processamento de LLM 4× mais rápido.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'MacBook Pro 16" M4 Max', 'description': '$3.500+ · 35 tok/s · ~$100/tok/s · Geração anterior de laptop Mac; janela sustentada de 18 minutos.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Desktop RTX 4070 Ti', 'description': '$1.500 · 80 tok/s · $19/tok/s · Melhor custo-benefício para LLMs locais em desktop.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Desktop RTX 5090', 'description': '$2.500-3.000 · 120-180 tok/s (est.) · $17-25/tok/s · Nova opção: 32 GB VRAM, comporta 70B em uma única GPU.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Mac Studio M2 Ultra', 'description': '$4.000 · 50–60 tok/s · ~$67/tok/s · Único Mac de consumo que executa 70B nativamente sem throttling.' },
         ],
       },
     },

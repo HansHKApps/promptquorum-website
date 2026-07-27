@@ -1500,5 +1500,15 @@ schema: {
           ],
         },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '헤드리스 로컬 LLM 배포',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Ollama를 헤드리스 모드로 시작', 'description': 'ollama serve를 실행하여 localhost:11434에서 REST API를 노출합니다. 사용자 지정 포트에는 OLLAMA_HOST 환경 변수를 사용하십시오.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'REST API를 통해 상호작용', 'description': 'Python, Node.js 또는 curl에서 API를 호출합니다. Ollama는 손쉬운 통합을 위해 OpenAI와 호환됩니다.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '일괄 처리 및 프로덕션', 'description': '헤드리스 배포는 UI 기반 방식보다 확장성이 뛰어납니다. 동시 요청 처리에는 vLLM 또는 Ollama를 사용하십시오.' },
+        ]
+      },
     },
   };

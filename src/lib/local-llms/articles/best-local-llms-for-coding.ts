@@ -1975,6 +1975,20 @@ schema: {
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'url': 'https://www.promptquorum.com/pt/local-llms/best-local-llms-for-coding',
+        'name': 'Melhores LLMs Locais para Programação 2026 -- Classificação HumanEval',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Kimi K2.6', 'description': '58,6 SWE-Bench Pro. MoE (32B ativo / 1T total). Licença MIT modificada. Melhor geral. ollama run kimi-k2.6', 'url': 'https://www.promptquorum.com/pt/local-llms/best-local-llms-for-coding#qwen25-coder-32b' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Qwen 3.6 27B', 'description': '77,2% SWE-bench. 22 GB de VRAM. Melhor modelo denso. Suporte a FIM. ollama run qwen3.6:27b', 'url': 'https://www.promptquorum.com/pt/local-llms/best-local-llms-for-coding#deepseek-coder-v2' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': '72% HumanEval. 4,7 GB de RAM. Melhor para máquinas com 8 GB. FIM. ollama run qwen2.5-coder:7b', 'url': 'https://www.promptquorum.com/pt/local-llms/best-local-llms-for-coding#qwen25-coder-7b' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Codestral 22B', 'description': '67% HumanEval. Melhor autocompletado FIM. 9 GB de RAM. Mais de 600 linguagens.', 'url': 'https://www.promptquorum.com/pt/local-llms/best-local-llms-for-coding#starcoder2-15b' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '72% HumanEval. 5,5 GB de RAM. Alternativa geral. ollama run llama3.2', 'url': 'https://www.promptquorum.com/pt/local-llms/best-local-llms-for-coding#llama-31-8b' },
+        ],
+      },
     },
     de: {
       freshness_tier: 'monthly',
@@ -2182,6 +2196,19 @@ schema: {
           imageCaption: 'Benchmark-Ergebnisse nach Modell (Juni 2026): Qwen3-Coder 32B führt mit 87% HumanEval, DeepSeek V4 Flash erreicht 78/100 im unabhängigen Praxistest, Qwen 3.6 27B liegt bei 77,2% SWE-bench, Qwen3 8B bei ca. 76% HumanEval, und Kimi K2.6 erzielt 58,6 im schwereren SWE-Bench Pro.',
           callouts: [
             { type: 'note', text: 'HumanEval misst die Generierung einzelner Python-Funktionen. SWE-bench misst reale Multi-Datei-Codeänderungen. „Praxistest"-Werte stammen aus unabhängigen Multi-Task-Coding-Benchmarks. Beide Kennzahlen sind relevant; SWE-bench sagt die Produktions-Coding-Leistung besser voraus.' },
+          ],
+        },
+        codingExamples: {
+          id: 'coding-examples',
+          title: 'Wie schneiden diese Modelle bei echten Programmieraufgaben ab?',
+          numberedItems: [
+            '**Python-Funktions-Debugging** -- Kimi K2.6 (58,6 SWE-Bench Pro) identifiziert den Bug (Off-by-One-Schleifenbedingung) in 1–2 Antworten. Qwen 3.6 27B (77,2% SWE-bench) löst ihn in 2–3 Durchgängen. Codestral 22B benötigt eine Umformulierung für eine genaue Erkennung. **Gewinner:** Kimi K2.6 für Debugging-Genauigkeit und -Geschwindigkeit.',
+            '**Multi-Datei-Code-Refactoring** -- Qwen 3.6 27B glänzt bei Multi-Datei-Änderungen, da alle 27B Parameter aktiv sind (dichtes Modell). Kimi K2.6 (MoE) routet pro Token unterschiedlich, erzielt aber schneller ähnliche Ergebnisse. Devstral Small 24B ist speziell für Multi-Datei-Workflows über Tool-Aufrufe konzipiert. **Gewinner:** Qwen 3.6 27B für konsistentes Multi-Datei-Reasoning.',
+            '**FIM / IDE-Autovervollständigung (VS Code)** -- Codestral 22B und Qwen3 8B (über Continue.dev) vervollständigen beide mehrzeilige Funktionskörper präzise anhand des Kontexts vor und nach dem Cursor. Kimi K2.6 kann kein FIM ausführen (dafür nicht trainiert). **Gewinner:** Codestral 22B und Qwen3 8B für die IDE-Integration.',
+            '**TypeScript-Typinferenz** -- Kimi K2.6 leitet Union-Typen und generische Constraints korrekt ab. Qwen 3.6 27B erreicht über 85% Genauigkeit bei Typinferenz-Aufgaben. Qwen3 8B scheitert bei über 15% komplexer Typverfeinerungs-Prompts. **Gewinner:** Kimi K2.6 für komplexe Typsysteme und Multi-Datei-Typverfolgung.',
+          ],
+          callouts: [
+            { type: 'insight', text: 'Real-World-Programmieraufgaben (SWE-bench) begünstigen größere Modelle. Kimi K2.6 (58,6 SWE-Bench Pro) und Qwen 3.6 27B (77,2% SWE-bench) erzielen bei praktischem Debugging und Refactoring ~5–10% höhere Werte als Qwen3 8B. Bei alltäglichen Skripting-Aufgaben verringert sich der Abstand deutlich.' },
           ],
         },
         whichCodingModel: {
@@ -2612,6 +2639,19 @@ schema: {
           imageCaption: 'Scores de benchmark par modèle (juin 2026) : Qwen3-Coder 32B en tête avec 87% HumanEval, DeepSeek V4 Flash obtient 78/100 en conditions réelles indépendantes, Qwen 3.6 27B atteint 77.2% SWE-bench, Qwen3 8B environ 76% HumanEval, et Kimi K2.6 obtient 58.6 sur le SWE-Bench Pro, plus exigeant.',
           callouts: [
             { type: 'note', text: 'HumanEval mesure la génération de fonctions Python isolées. SWE-bench mesure des modifications de code multi-fichiers réelles. Les scores « conditions réelles » proviennent de benchmarks de codage multi-tâches indépendants. Les deux métriques sont pertinentes ; SWE-bench prédit mieux la performance en production.' },
+          ],
+        },
+        codingExamples: {
+          id: 'coding-examples',
+          title: 'Comment ces modèles se comportent-ils sur des tâches de codage réelles ?',
+          numberedItems: [
+            '**Débogage de fonction Python** -- Kimi K2.6 (58,6 SWE-Bench Pro) identifie le bug (condition de boucle décalée d\'un cran) en 1 à 2 réponses. Qwen 3.6 27B (77,2% SWE-bench) le résout en 2 à 3 passes. Codestral 22B nécessite une reformulation pour une détection précise. **Vainqueur :** Kimi K2.6 pour la précision et la rapidité de débogage.',
+            '**Refactoring de code multi-fichiers** -- Qwen 3.6 27B excelle sur les modifications multi-fichiers car tous ses 27 milliards de paramètres sont actifs (modèle dense). Kimi K2.6 (MoE) route différemment selon le token mais obtient des résultats similaires plus rapidement. Devstral Small 24B est conçu spécifiquement pour les workflows multi-fichiers via l\'appel d\'outils. **Vainqueur :** Qwen 3.6 27B pour un raisonnement multi-fichiers cohérent.',
+            '**FIM / autocomplétion IDE (VS Code)** -- Codestral 22B et Qwen3 8B (via Continue.dev) complètent tous deux avec précision des corps de fonction sur plusieurs lignes à partir du contexte situé de part et d\'autre du curseur. Kimi K2.6 ne peut pas effectuer de FIM (non entraîné pour cela). **Vainqueur :** Codestral 22B et Qwen3 8B pour l\'intégration IDE.',
+            '**Inférence de types TypeScript** -- Kimi K2.6 infère correctement les types union et les contraintes génériques. Qwen 3.6 27B atteint plus de 85% de précision sur les tâches d\'inférence de types. Qwen3 8B échoue sur plus de 15% des invites complexes de raffinement de types. **Vainqueur :** Kimi K2.6 pour les systèmes de types complexes et le suivi des types multi-fichiers.',
+          ],
+          callouts: [
+            { type: 'insight', text: 'Les tâches de codage réelles (SWE-bench) favorisent les modèles plus grands. Kimi K2.6 (58,6 SWE-Bench Pro) et Qwen 3.6 27B (77,2% SWE-bench) obtiennent des scores ~5 à 10% supérieurs à Qwen3 8B sur le débogage et le refactoring pratiques. Pour les scripts du quotidien, cet écart se réduit nettement.' },
           ],
         },
         whichCodingModel: {
@@ -3964,6 +4004,20 @@ schema: {
             '**DeepSeek AI. (2024).** "DeepSeek-Coder-V2 기술 보고서." https://arxiv.org/abs/2406.11931 — DeepSeek-Coder V2 Lite의 MoE 아키텍처 및 코딩 벤치마크 결과.',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'url': 'https://www.promptquorum.com/ko/local-llms/best-local-llms-for-coding',
+        'name': '2026년 최고의 코딩용 로컬 LLM -- HumanEval 순위',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Kimi K2.6', 'description': 'SWE-Bench Pro 58.6점. MoE (32B 활성 / 1T 전체). Modified MIT 라이선스. 전체 최고. ollama run kimi-k2.6', 'url': 'https://www.promptquorum.com/ko/local-llms/best-local-llms-for-coding#qwen25-coder-32b' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Qwen 3.6 27B', 'description': 'SWE-bench 77.2%. VRAM 22 GB. 최고의 밀집형 모델. FIM 지원. ollama run qwen3.6:27b', 'url': 'https://www.promptquorum.com/ko/local-llms/best-local-llms-for-coding#deepseek-coder-v2' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': 'HumanEval 72%. RAM 4.7 GB. 8 GB 환경에 최적. FIM 지원. ollama run qwen2.5-coder:7b', 'url': 'https://www.promptquorum.com/ko/local-llms/best-local-llms-for-coding#qwen25-coder-7b' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Codestral 22B', 'description': 'HumanEval 67%. 최고의 FIM 자동 완성. RAM 9 GB. 600개 이상 언어 지원.', 'url': 'https://www.promptquorum.com/ko/local-llms/best-local-llms-for-coding#starcoder2-15b' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': 'HumanEval 72%. RAM 5.5 GB. 범용 대체 모델. ollama run llama3.2', 'url': 'https://www.promptquorum.com/ko/local-llms/best-local-llms-for-coding#llama-31-8b' },
+        ],
       },
     },
   };

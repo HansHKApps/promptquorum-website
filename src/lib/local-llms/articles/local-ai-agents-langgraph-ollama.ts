@@ -2150,6 +2150,30 @@ schema: {
           ],
         },
       },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'Quanto mais rápidos são os agentes na nuvem em comparação aos agentes locais?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Agentes na nuvem: ~1 segundo por etapa de raciocínio. Agentes locais: ~3-5 segundos por etapa, dependendo do tamanho do modelo e do hardware. A inferência local adiciona latência, mas elimina custos de API e mantém todos os dados no seu próprio hardware.' } },
+          { '@type': 'Question', 'name': 'Agentes locais podem acessar a internet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, se você fornecer uma ferramenta web_search. O agente chama essa ferramenta da mesma forma que chama qualquer outra função. Opções populares incluem a API de busca do DuckDuckGo e o SerpAPI para resultados estruturados.' } },
+          { '@type': 'Question', 'name': 'Como garantir que um agente não danifique nada (por exemplo, exclua arquivos)?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Execute as ferramentas dentro de um container Docker com permissões estritas de sistema de arquivos e rede. Registre cada chamada de ferramenta com suas entradas e saídas para trilhas de auditoria. Adicione uma etapa de confirmação antes de qualquer ação destrutiva.' } },
+          { '@type': 'Question', 'name': 'Posso executar múltiplos agentes em paralelo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim. Use frameworks assíncronos como FastAPI para lidar com solicitações concorrentes de agentes. Cada solicitação recebe seu próprio estado de conversa. Cada agente paralelo requer sua própria thread de inferência do LLM, então a VRAM limita quantos você pode executar simultaneamente.' } },
+          { '@type': 'Question', 'name': 'Qual é o hardware mínimo necessário para executar um agente de IA local?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Um modelo com 13B+ parâmetros é recomendado para raciocínio autônomo confiável. Isso requer pelo menos 16GB de RAM e, de preferência, uma GPU com 8GB+ de VRAM para um modelo 13B quantizado. Em hardware somente CPU, espere de 5 a 15 segundos por etapa de raciocínio.' } },
+          { '@type': 'Question', 'name': 'Quando devo usar o LangGraph em vez do LangChain puro?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Use o LangGraph quando seu fluxo de trabalho exigir loops, ramificações condicionais ou recuperação de falhas de ferramentas. O LangChain puro funciona bem para pipelines lineares sem pontos de decisão. Se seu agente precisar tentar novamente ou raciocinar de novo após uma etapa falha, a estrutura de grafo do LangGraph resolve isso de forma limpa.' } },
+          { '@type': 'Question', 'name': 'O LangGraph é o mesmo que o LangChain?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não. O LangChain é um kit de ferramentas de LLM de uso geral para construir cadeias e pipelines. O LangGraph é um framework separado, construído sobre o LangChain especificamente para agentes e fluxos de trabalho com estado — ele adiciona a estrutura de grafo necessária para loops de raciocínio confiáveis.' } },
+          { '@type': 'Question', 'name': 'Quantas ferramentas um agente local deve ter?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Limite os agentes a 5-10 ferramentas. Com opções demais, o LLM tem dificuldade para selecionar a ferramenta certa e a latência por etapa aumenta. Comece com 3-5 ferramentas essenciais e expanda apenas ao encontrar uma lacuna de capacidade específica.' } },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Fluxo de Trabalho de Agentes de IA Locais',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Definir ferramentas para o agente', 'description': 'Ferramentas = ações que o agente pode executar. Exemplos: file_read, web_search, calculator, chamadas de API.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Construir um loop de raciocínio com LangGraph', 'description': 'O agente observa o estado, raciocina sobre a próxima ação, executa a ferramenta e repete até atingir o objetivo.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Implantar com sandboxing', 'description': 'Execute os agentes em containers Docker. Restrinja o acesso a arquivos/rede. Registre todas as chamadas de ferramentas para segurança e auditoria.' },
+        ]
+      },
     },
   ko: {
       freshness_tier: 'semi_annual',
@@ -2402,6 +2426,16 @@ schema: {
             '[ReAct: 언어 모델에서 추론과 행동의 시너지 (Yao et al., 2022)](https://arxiv.org/abs/2210.03629) — LangGraph 에이전트에서 사용되는 관찰-추론-행동 루프를 소개한 기초 논문.',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '로컬 AI 에이전트 워크플로우',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '에이전트를 위한 도구 정의', 'description': '도구 = 에이전트가 취할 수 있는 행동. 예: file_read, web_search, calculator, API 호출.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'LangGraph로 추론 루프 구축', 'description': '에이전트가 상태를 관찰하고, 다음 행동을 추론하고, 도구를 실행하며, 목표를 달성할 때까지 반복합니다.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '샌드박싱을 적용해 배포', 'description': 'Docker 컨테이너에서 에이전트를 실행하십시오. 파일/네트워크 접근을 제한하십시오. 안전과 감사를 위해 모든 도구 호출을 로깅하십시오.' },
+        ]
       },
     },
   };

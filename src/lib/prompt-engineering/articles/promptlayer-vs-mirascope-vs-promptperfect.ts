@@ -3459,6 +3459,34 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
     },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'PromptLayer vs Mirascope vs PromptPerfect 도구 비교',
+      inLanguage: 'ko',
+      url: 'https://www.promptquorum.com/ko/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
+      numberOfItems: 3,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'PromptLayer',
+          description: '프로덕션 호출 로깅, 비용 추적, 프롬프트 버전 간 A/B 테스트를 지원하는 LLM 옵저버빌리티 및 프롬프트 버전 관리 플랫폼',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Mirascope',
+          description: 'Pydantic 출력 검증을 사용하여 타입 안전하고 공급자에 종속되지 않는 LLM 애플리케이션을 개발하기 위한 오픈소스 Python 라이브러리',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'PromptPerfect',
+          description: '텍스트 및 이미지 생성 모델에서 더 나은 성능을 내도록 프롬프트를 재작성하는 AI 기반 프롬프트 최적화 도구',
+        },
+      ],
+    },
     leadAnswerBlock: 'PromptLayer는 프로덕션 LLM 호출을 기록하고($49/월), Mirascope는 무료 Python 라이브러리로 타입 안전 LLM 코드를 지원하며, PromptPerfect는 코드 없이 프롬프트를 재작성합니다($20/월). 세 도구는 서로 다른 문제를 해결하므로 하나만 선택하십시오.',
   },
 };

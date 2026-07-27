@@ -1012,6 +1012,18 @@ schema: {
           { '@type': 'Thing', 'name': 'Comparação de custos de agentes' },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Comparação entre Agentes de IA Local e na Nuvem 2026',
+        'numberOfItems': 4,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Agente na Nuvem (API GPT-4)', 'description': '100–200ms por etapa. $20 por 1M de tokens. Melhor para raciocínio complexo, uso de ferramentas e aplicações de baixa latência.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Agente na Nuvem (API Claude Sonnet 5)', 'description': '150–300ms por etapa. $20 por 1M de tokens. Forte em tarefas de contexto longo e geração de código.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Agente Local (Llama 13B)', 'description': '2–3 s por etapa. $0 por token após o hardware. Melhor para privacidade, automação rotineira e cargas de trabalho de alto volume.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Abordagem Híbrida', 'description': 'Direcione consultas simples para o agente local e consultas complexas para a nuvem. Redução de custo de 80%. Melhor prática para implantações em produção em 2026.' },
+        ],
+      },
       gammaEmbedUrl: '/presentations/local-vs-cloud-agents-static.html',
       gammaDescription: 'A apresentação cobre: desempenho de agentes na Nuvem (100–300ms), velocidade de agentes locais (2–5 s), ponto de equilíbrio de custos mensais (~50M tokens), conformidade de privacidade (LGPD/HIPAA) e a abordagem híbrida como melhor prática para 2026. Baixe o PDF como guia de decisão de agentes local vs Nuvem.',
     },
@@ -2304,6 +2316,18 @@ schema: {
             '멀티모달 입력은 새로운 워크플로를 열어줍니다. 이미지 프롬프팅에는 다른 기술이 필요합니다. [텍스트를 넘어서: 이미지로 프롬프팅하는 방법](https://www.promptquorum.com/prompt-engineering/beyond-text-how-to-prompt-with-images)에서 비전-언어 프롬프팅에 대해 알아보십시오.',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '로컬 vs 클라우드 AI 에이전트 비교 2026',
+        'numberOfItems': 4,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '클라우드 에이전트 (GPT-4 API)', 'description': '단계당 100–200ms. 100만 토큰당 $20. 복잡한 추론, 도구 사용, 저지연 애플리케이션에 최적.' },
+          { '@type': 'ListItem', 'position': 2, 'name': '클라우드 에이전트 (Claude Sonnet 5 API)', 'description': '단계당 150–300ms. 100만 토큰당 $20. 긴 컨텍스트 작업과 코드 생성에 강함.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '로컬 에이전트 (Llama 13B)', 'description': '단계당 2–3초. 하드웨어 구매 후 토큰당 $0. 개인정보 보호, 반복 자동화, 대용량 워크로드에 최적.' },
+          { '@type': 'ListItem', 'position': 4, 'name': '하이브리드 접근 방식', 'description': '단순한 쿼리는 로컬로, 복잡한 쿼리는 클라우드로 라우팅. 비용 80% 절감. 2026년 프로덕션 배포를 위한 모범 사례.' },
+        ],
       },
     },
   };

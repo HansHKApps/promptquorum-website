@@ -399,6 +399,16 @@ schema: {
           },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Componentes de la configuración air-gapped para LLM local offline',
+        'itemListElement': [
+          { '@type': 'Thing', 'name': 'Air-Gapped Inference Server', 'description': 'Máquina dedicada sin conectividad de red, solo con puerto USB, que ejecuta el LLM local para procesar datos sensibles.' },
+          { '@type': 'Thing', 'name': 'Encrypted Data Transfer via USB', 'description': 'Transferencia de documentos cifrada con GPG entre la máquina admin conectada y el servidor air-gapped mediante medios USB extraíbles.' },
+          { '@type': 'Thing', 'name': 'Hardware & Supply Chain Security', 'description': 'Hardening del BIOS, actualizaciones de firmware, inspección física y detección de manipulación para proteger la máquina air-gapped.' },
+        ],
+      },
     },
     ar: {
       freshness_tier: 'semi_annual',
@@ -612,6 +622,16 @@ schema: {
           },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'مكونات إعداد LLM محلي غير متصل بالشبكة (Air-Gapped)',
+        'itemListElement': [
+          { '@type': 'Thing', 'name': 'Air-Gapped Inference Server', 'description': 'جهاز مخصص بلا اتصال شبكي على الإطلاق، بمنفذ USB فقط، يشغّل LLM محليًا لمعالجة البيانات الحساسة.' },
+          { '@type': 'Thing', 'name': 'Encrypted Data Transfer via USB', 'description': 'نقل مستندات مشفّر بـ GPG بين الجهاز الإداري المتصل والخادم المعزول عن الشبكة عبر وسائط USB قابلة للإزالة.' },
+          { '@type': 'Thing', 'name': 'Hardware & Supply Chain Security', 'description': 'تقوية إعدادات BIOS، تحديثات البرامج الثابتة، الفحص المادي، وكشف العبث لحماية الجهاز المعزول عن الشبكة.' },
+        ],
+      },
     },
     pt: {
       freshness_tier: 'semi_annual',
@@ -823,6 +843,16 @@ schema: {
               text: 'Modo batch: criptografar os 10 documentos, transferir via USB, processar um a um na máquina air-gapped, criptografar os resultados, devolver o USB.',
             },
           },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Componentes da configuração air-gapped de LLM local offline',
+        'itemListElement': [
+          { '@type': 'Thing', 'name': 'Air-Gapped Inference Server', 'description': 'Máquina dedicada sem qualquer conectividade de rede, apenas com porta USB, executando o LLM local para processar dados sensíveis.' },
+          { '@type': 'Thing', 'name': 'Encrypted Data Transfer via USB', 'description': 'Transferência de documentos criptografada com GPG entre a máquina admin conectada e o servidor air-gapped usando mídia USB removível.' },
+          { '@type': 'Thing', 'name': 'Hardware & Supply Chain Security', 'description': 'Hardening da BIOS, atualizações de firmware, inspeção física e detecção de violação para proteger a máquina air-gapped.' },
         ],
       },
     },
@@ -1053,6 +1083,16 @@ schema: {
           },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Komponenten des Air-Gapped-Setups für lokale LLMs offline',
+        'itemListElement': [
+          { '@type': 'Thing', 'name': 'Air-Gapped Inference Server', 'description': 'Dedizierte Maschine ohne jegliche Netzwerkverbindung, nur mit USB-Anschluss, die das lokale LLM zur Verarbeitung sensibler Daten ausführt.' },
+          { '@type': 'Thing', 'name': 'Encrypted Data Transfer via USB', 'description': 'GPG-verschlüsselte Dokumentübertragung zwischen der verbundenen Admin-Maschine und dem isolierten Server über austauschbare USB-Medien.' },
+          { '@type': 'Thing', 'name': 'Hardware & Supply Chain Security', 'description': 'BIOS-Hardening, Firmware-Updates, physische Inspektion und Manipulationserkennung zum Schutz der isolierten Maschine.' },
+        ],
+      },
     },
     fr: {
       freshness_tier: 'semi_annual',
@@ -1264,6 +1304,16 @@ schema: {
               text: 'Mode batch : chiffrer les 10 docs, transférer via USB, traiter un par un sur machine isolée, chiffrer les résultats, retourner l\'USB.',
             },
           },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Composants de la configuration LLM local air-gapped hors ligne',
+        'itemListElement': [
+          { '@type': 'Thing', 'name': 'Air-Gapped Inference Server', 'description': 'Machine dédiée sans aucune connectivité réseau, uniquement port USB, exécutant le LLM local pour traiter les données sensibles.' },
+          { '@type': 'Thing', 'name': 'Encrypted Data Transfer via USB', 'description': 'Transfert de documents chiffré avec GPG entre la machine admin connectée et le serveur isolé via des supports USB amovibles.' },
+          { '@type': 'Thing', 'name': 'Hardware & Supply Chain Security', 'description': 'Durcissement du BIOS, mises à jour du firmware, inspection physique et détection d\'altération pour protéger la machine isolée.' },
         ],
       },
     },
@@ -1479,6 +1529,16 @@ schema: {
           },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'オフラインのエアギャップ型ローカルLLMセットアップの構成要素',
+        'itemListElement': [
+          { '@type': 'Thing', 'name': 'Air-Gapped Inference Server', 'description': 'ネットワーク接続を一切持たず、USBポートのみを備えた専用マシンで、ローカルLLMを実行して機密データを処理する。' },
+          { '@type': 'Thing', 'name': 'Encrypted Data Transfer via USB', 'description': '接続された管理マシンとエアギャップサーバー間で、リムーバブルUSBメディアを使用したGPG暗号化ドキュメント転送。' },
+          { '@type': 'Thing', 'name': 'Hardware & Supply Chain Security', 'description': 'エアギャップマシンを保護するためのBIOSハードニング、ファームウェア更新、物理検査、改ざん検出。' },
+        ],
+      },
     },
     zh: {
       freshness_tier: 'semi_annual',
@@ -1692,6 +1752,16 @@ schema: {
           },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '离线气隙本地LLM设置的组成部分',
+        'itemListElement': [
+          { '@type': 'Thing', 'name': 'Air-Gapped Inference Server', 'description': '不具备任何网络连接、仅有USB端口的专用机器，运行本地LLM以处理敏感数据。' },
+          { '@type': 'Thing', 'name': 'Encrypted Data Transfer via USB', 'description': '通过可移动USB介质，在联网的管理机器与气隙服务器之间进行GPG加密文档传输。' },
+          { '@type': 'Thing', 'name': 'Hardware & Supply Chain Security', 'description': 'BIOS加固、固件更新、物理检查和篡改检测，用于保护气隙机器。' },
+        ],
+      },
     },
   ko: {
       freshness_tier: 'semi_annual',
@@ -1834,6 +1904,16 @@ schema: {
             'Air-gapped 시스템 모범 사례: NSA/CISA Cybersecurity Technical Reference Architecture',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '오프라인 Air-Gapped 로컬 LLM 설정 구성 요소',
+        'itemListElement': [
+          { '@type': 'Thing', 'name': 'Air-Gapped Inference Server', 'description': '네트워크 연결이 전혀 없고 USB 포트만 있는 전용 머신으로, 민감한 데이터를 처리하기 위해 로컬 LLM을 실행합니다.' },
+          { '@type': 'Thing', 'name': 'Encrypted Data Transfer via USB', 'description': '이동식 USB 매체를 사용하여 연결된 관리 머신과 air-gapped 서버 간에 GPG로 암호화된 문서를 전송합니다.' },
+          { '@type': 'Thing', 'name': 'Hardware & Supply Chain Security', 'description': 'air-gapped 머신을 보호하기 위한 BIOS 강화, 펌웨어 업데이트, 물리적 검사 및 변조 탐지입니다.' },
+        ],
       },
     },
   };

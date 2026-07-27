@@ -1125,6 +1125,17 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
           '**Dois caminhos de acesso**: Ollama (CLI, API) ou LM Studio (GUI, sem CLI).',
         ],
       },
+      ollamaSetup: {
+        id: 'ollama-setup',
+        title: 'Configuração do Qwen2-VL com Ollama',
+        numberedItems: [
+          { title: 'Instalar o Ollama', whyItMatters: 'O Ollama gerencia o download do modelo, o formato GGUF e a API local. Está disponível para macOS, Linux e Windows.' },
+          { title: 'Baixar o Qwen2-VL com uma tag de tamanho explícita', whyItMatters: 'Use qwen2-vl:7b. A tag simples qwen2-vl pode resolver para um tamanho diferente — sempre especifique 2b, 7b ou 72b para obter o modelo que este guia usa como alvo.' },
+          { title: 'Executar o modelo e anexar uma imagem', whyItMatters: 'No modo interativo, digite o caminho do arquivo de imagem dentro do seu prompt. O Ollama detecta o caminho e carrega a imagem no encoder de visão.' },
+          { title: 'Enviar imagens pela API', whyItMatters: 'O endpoint /api/generate aceita um array de imagens codificadas em base64. É assim que aplicações — e o PromptQuorum — enviam imagens programaticamente.' },
+          { title: 'Verificar o OCR multilíngue', whyItMatters: 'Envie uma digitalização de documento em chinês ou japonês e confirme que o texto extraído corresponde. Isso comprova que o encoder de visão e o tokenizador lidam corretamente com escrita CJK antes de você construir sobre isso.' },
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Perguntas frequentes',

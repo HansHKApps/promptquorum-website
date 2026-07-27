@@ -2171,6 +2171,30 @@ schema: {
         'proficiencyLevel': 'Beginner',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Melhores Modelos de LLM Local para Notebooks 2026',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': 'Modelo 3B. 2,5 GB de RAM. 25-45 tok/s na CPU, 60-100 tok/s no Apple Silicon. Melhor modelo inicial para notebooks de 8 GB.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': 'Modelo 3,8B. 3 GB de RAM. 20-35 tok/s na CPU. Melhor raciocínio e código para menos de 4 GB de RAM.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': 'Modelo 7B. 4,5 GB de RAM. 10-20 tok/s na CPU. Melhor modelo de uso geral para notebooks de 8-16 GB.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': 'Modelo 7B. 4,7 GB de RAM. 10-18 tok/s na CPU. Melhor para tarefas multilíngues e código em notebooks de 8-16 GB.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': 'Modelo 8B. 5,5 GB de RAM. 8-15 tok/s na CPU. Melhor qualidade no tamanho para notebooks de 16 GB.' },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Como Reduzir o Throttling Térmico em um Notebook Durante a Inferência de LLM Local',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Use um suporte para notebook com espaço para ventilação', 'text': 'Eleve o notebook 2-3 cm em um suporte para melhorar o fluxo de ar de exaustão e adiar o início do throttling de 10 para 20+ minutos.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Desative o Intel Turbo Boost ou o AMD Precision Boost', 'text': 'Rodar na frequência base produz desempenho estável sem picos térmicos. No macOS, use o modo "Baixo Consumo" nas configurações de bateria.' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Limite o tamanho do lote de geração', 'text': 'Divida tarefas longas em prompts mais curtos. Evite regenerar respostas muito longas em uma única passagem.' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Use quantização Q4_K_M em vez de Q8_0', 'text': 'Quantização menor exige menos computação por token, reduzindo a geração de calor com impacto mínimo na qualidade em hardware de notebook.' },
+        ],
+      },
       sections: {
         quickAnswerByRam: {
           id: 'quick-answer-ram',
@@ -3725,6 +3749,30 @@ schema: {
         { label: '노트북에서 로컬 LLM 실행에 관한 자주 묻는 질문', anchor: '#faq' },
         { label: '출처', anchor: '#sources' },
       ],
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '2026년 노트북용 최고의 로컬 LLM 모델',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.2 3B', 'description': '3B 모델. 2.5GB RAM. CPU에서 25~45토큰/초, Apple Silicon에서 60~100토큰/초. 8GB 노트북을 위한 최고의 시작 모델.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': '3.8B 모델. 3GB RAM. CPU에서 20~35토큰/초. 4GB 미만 RAM에서 최고의 추론 및 코딩 성능.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '7B 모델. 4.5GB RAM. CPU에서 10~20토큰/초. 8~16GB 노트북을 위한 최고의 범용 모델.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '7B 모델. 4.7GB RAM. CPU에서 10~18토큰/초. 8~16GB 노트북에서 다국어 작업 및 코딩에 최적.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '8B 모델. 5.5GB RAM. CPU에서 8~15토큰/초. 16GB 노트북에서 해당 크기 최고 품질.' },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '로컬 LLM 추론 중 노트북의 열 쓰로틀링을 줄이는 방법',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': '통풍이 가능한 노트북 스탠드 사용', 'text': '노트북을 2~3cm 높이면 배기 통풍이 개선되어 쓰로틀링 발생 시점이 10분에서 20분 이상으로 연장됩니다.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Intel Turbo Boost 또는 AMD Precision Boost 비활성화', 'text': '기본 클럭 속도로 실행하면 열 스파이크 없이 안정적인 성능을 냅니다. macOS에서는 배터리 설정의 저전력 모드를 사용하십시오.' },
+          { '@type': 'HowToStep', 'position': 3, 'name': '생성 배치 크기 제한', 'text': '긴 작업은 더 짧은 프롬프트로 나누십시오. 한 번에 매우 긴 응답을 재생성하는 것을 피하십시오.' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Q8_0 대신 Q4_K_M 양자화 사용', 'text': '낮은 양자화는 토큰당 계산량이 적어, 노트북 하드웨어에서 품질 저하는 최소화하면서 발열을 줄입니다.' },
+        ],
+      },
       sections: {
         quickAnswerByRam: {
           id: 'quick-answer-ram',

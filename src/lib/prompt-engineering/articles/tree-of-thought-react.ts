@@ -443,6 +443,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: 'Tree-of-Thought erkundet mehrere Lösungszweige; ReAct verschränkt Reasoning mit Tool-Calls. 2026 ist ReAct in GPT-5.6, Claude und Gemini nativ integriert.',
     educationalLevel: 'Advanced',
     audience: 'Entwickler, die KI-Agenten erstellen, Produktteams, die mehrstufige Workflows entwerfen, Forscher',
+    primaryTerm: 'Tree-of-Thought-Prompting',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -1674,6 +1675,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: 'Tree-of-Thought explore plusieurs branches de solution pour la planification ; ReAct entrelace le raisonnement avec les appels d\'outils. En 2026, ReAct est intégré nativement dans GPT-5.6, Claude et Gemini.',
     educationalLevel: 'Advanced',
     audience: 'Développeurs construisant des agents IA, équipes produit concevant des workflows multi-étapes, chercheurs',
+    primaryTerm: 'Prompting Tree-of-Thought',
     toc: [
       { label: 'Points clés', anchor: 'key-takeaways' },
       { label: 'Qu\'est-ce que Tree-of-Thought ?', anchor: 'what-is-tree-of-thought' },
@@ -1992,6 +1994,7 @@ Réponse finale : [conclusion synthétisée]`,
     metaDescription: 'Tree-of-Thoughtは計画用に複数のソリューションブランチを探索。ReActはツールコールと推論を組み合わせます。2026年では、ReAct は GPT-5.6、Claude、Gemini にネイティブに統合されています。',
     educationalLevel: 'Advanced',
     audience: 'AIエージェントを構築する開発者、マルチステップワークフローを設計するプロダクトチーム、研究者',
+    primaryTerm: 'Tree-of-Thoughtプロンプティング',
     toc: [
       { label: '重要ポイント', anchor: 'key-takeaways' },
       { label: 'Tree-of-Thoughtとは？', anchor: 'what-is-tree-of-thought' },
@@ -2311,6 +2314,7 @@ Final Answer: [総合結論]`,
     metaDescription: '树思考为规划探索多个解决方案分支；ReAct 将推理与工具调用交织。2026年，ReAct已内置于GPT-5.6、Claude和Gemini。',
     educationalLevel: 'Advanced',
     audience: '构建 AI 代理的开发者、设计多步工作流的产品团队、研究人员',
+    primaryTerm: '树思考提示',
     toc: [
       { label: '核心要点', anchor: 'key-takeaways' },
       { label: '树思考是什么？', anchor: 'what-is-tree-of-thought' },

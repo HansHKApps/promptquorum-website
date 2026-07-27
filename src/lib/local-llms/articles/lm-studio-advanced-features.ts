@@ -1002,6 +1002,19 @@ schema: {
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
       },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'LM Studioの高度な機能を設定する方法',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'GPUメモリを設定する', 'text': '「設定」→GPUアクセラレーションのスライダーを開きます。VRAMの10〜100%の範囲で調整します。値を低くすると他のアプリ用にGPUを解放でき、値を高くすると推論速度が最大化されます。' },
+          { '@type': 'HowToStep', 'name': 'コンテキストウィンドウを調整する', 'text': '「設定」でコンテキスト長をモデルの上限まで増やします。コンテキストが長くなるほどVRAM使用量は増えますが、履歴を失わずに長い会話が可能になります。' },
+          { '@type': 'HowToStep', 'name': 'ローカルAPI（ベータ版）を有効にする', 'text': '「設定」でローカルAPIを有効にすると、localhost:1234でOpenAI互換のエンドポイントが公開されます。OpenAI互換の任意のクライアントと連携できます。' },
+          { '@type': 'HowToStep', 'name': 'LoRAファインチューニングを設定する', 'text': '2026年4月時点で、LoRAファインチューニングはLM Studioに組み込まれていません。ファインチューニングのワークフローにはText-Generation-WebUIまたはトレーニングスクリプトを使用してください。' },
+          { '@type': 'HowToStep', 'name': 'バッチ推論を実行する', 'text': 'バッチモードを使用して複数のプロンプトを一度に処理します。評価、テスト、大規模な推論タスクに役立ちます。' },
+          { '@type': 'HowToStep', 'name': 'パフォーマンスをベンチマークする', 'text': '「パフォーマンス」タブでトークン/秒、レイテンシ、VRAM使用量を測定します。GPU/コンテキストを変更した後にベンチマークを実行し、改善を確認してください。' }
+        ]
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1157,6 +1170,19 @@ schema: {
         'description': 'LM Studio高级功能：GPU优化、上下文窗口、API、LoRA微调和批量推理。开发者指南。免费--2026年4月。',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '如何配置 LM Studio 的高级功能',
+        'step': [
+          { '@type': 'HowToStep', 'name': '配置 GPU 内存', 'text': '打开"设置" → GPU 加速滑块。将其调整为 VRAM 的 10%-100%。数值越低，越能为其他应用释放 GPU；数值越高，推理速度越快。' },
+          { '@type': 'HowToStep', 'name': '调整上下文窗口', 'text': '在"设置"中，将上下文长度增加到模型上限。上下文越长，占用的 VRAM 越多，但可以在不丢失历史记录的情况下进行更长的对话。' },
+          { '@type': 'HowToStep', 'name': '启用本地 API（测试版）', 'text': '在"设置"中启用本地 API，即可在 localhost:1234 上暴露与 OpenAI 兼容的接口。可与任何兼容 OpenAI 的客户端集成。' },
+          { '@type': 'HowToStep', 'name': '设置 LoRA 微调', 'text': '截至 2026 年 4 月，LM Studio 尚未内置 LoRA 微调功能。微调工作流请使用 Text-Generation-WebUI 或训练脚本。' },
+          { '@type': 'HowToStep', 'name': '运行批量推理', 'text': '使用批处理模式一次处理多个提示词，适用于评估、测试和大规模推理任务。' },
+          { '@type': 'HowToStep', 'name': '进行性能基准测试', 'text': '在"性能"选项卡中测量每秒生成的 token 数、延迟和 VRAM 使用情况。在更改 GPU/上下文设置后运行基准测试以验证改进效果。' }
+        ]
       },
       sections: {
         tldr: {
@@ -1851,6 +1877,19 @@ schema: {
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
         'educationalLevel': 'Advanced',
         'proficiencyLevel': 'Advanced',
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Como configurar os recursos avançados do LM Studio',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Configurar a memória GPU', 'text': 'Abra Configurações → controle deslizante de aceleração GPU. Ajuste de 10% a 100% da VRAM. Valores mais baixos liberam a GPU para outros aplicativos; valores mais altos maximizam a velocidade de inferência.' },
+          { '@type': 'HowToStep', 'name': 'Ajustar a janela de contexto', 'text': 'Em Configurações, aumente o comprimento de contexto até o limite do modelo. Mais contexto usa mais VRAM, mas permite conversas mais longas sem perder o histórico.' },
+          { '@type': 'HowToStep', 'name': 'Ativar a API local (Beta)', 'text': 'Ative o Servidor local em Configurações para expor endpoints compatíveis com OpenAI em localhost:1234. Integre com qualquer cliente compatível com OpenAI.' },
+          { '@type': 'HowToStep', 'name': 'Configurar o fine-tuning com LoRA', 'text': 'A partir de abril de 2026, o fine-tuning com LoRA não está integrado ao LM Studio. Use o Text-Generation-WebUI ou scripts de treinamento para fluxos de fine-tuning.' },
+          { '@type': 'HowToStep', 'name': 'Executar inferência em batch', 'text': 'Processe múltiplos prompts de uma vez usando o modo batch. Útil para avaliações, testes e tarefas de inferência em larga escala.' },
+          { '@type': 'HowToStep', 'name': 'Medir o desempenho', 'text': 'Use a aba Desempenho para medir tokens/segundo, latência e uso de VRAM. Faça benchmarks após mudanças de GPU/contexto para validar melhorias.' }
+        ]
       },
       sections: {
         tldr: {

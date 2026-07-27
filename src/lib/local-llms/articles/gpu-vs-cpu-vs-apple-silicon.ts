@@ -1100,6 +1100,19 @@ schema: {
           { '@type': 'Question', name: 'A CPU é viável para LLMs locais?', acceptedAnswer: { '@type': 'Answer', text: 'Para uso ocasional e modelos pequenos (3B–7B), sim — 5–15 tok/s é utilizável. Para uso interativo regular, uma GPU de entrada (RTX 4060, $280) oferece 20–25 tok/s — uma diferença perceptível.' } },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'GPU vs CPU vs Apple Silicon para LLMs locais 2026: Comparativo de arquiteturas',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'NVIDIA RTX 5090 (32 GB GPU)', 'description': 'GPU de consumo mais rápida em 2026: 150–200 tok/s em modelos de 8B. 32 GB GDDR7, 1.792 GB/s de largura de banda. $2.000. Melhor para cargas de produção e velocidade máxima em modelos de 7B–14B. Não carrega 30B sem offloading.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'NVIDIA RTX 5070 (12 GB GPU)', 'description': 'Melhor custo-benefício em 2026: 60–80 tok/s em modelos de 8B. 12 GB GDDR7, 672 GB/s de largura de banda. $600. Melhor custo por tok/s para chat e código de usuário único. Limitada a 7B–8B em qualidade total.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Apple M5 Pro MacBook Pro (64 GB)', 'description': 'Melhor plataforma geral em 2026: 40–60 tok/s em 8B, 20–30 tok/s em 30B nativamente. 307 GB/s de memória unificada. ~$2.399. Consumo de 25W. Nenhuma GPU iguala o desempenho nativo em 30B nesse preço.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Apple M5 Max MacBook Pro (128 GB)', 'description': 'Melhor para modelos de 70B: 60–80 tok/s em 8B, 35–50 tok/s em 70B nativamente. 460–614 GB/s de memória unificada. ~$3.199+. Para pesquisa e cargas pesadas de 30B–70B.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Somente CPU (Intel/AMD, DDR5)', 'description': 'Custo extra de hardware zero: 10–20 tok/s em modelos de 8B com DDR5. Viável para uso ocasional e processamento em lote. Impraticável para chat em tempo real ou modelos maiores que 8B.' },
+        ],
+      },
     },
     de: {
       freshness_tier: 'semi_annual',
@@ -2405,6 +2418,19 @@ schema: {
             '하드웨어마다 다른 토큰 속도를 생성하지만, 모든 추론은 구조화된 프롬프트의 혜택을 받습니다. 긴 컨텍스트 요청은 짧은 요청과 다른 기술이 필요합니다: [컨텍스트 윈도우 설명](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets)은 어떤 하드웨어에서든 적용할 수 있는 전략을 다룹니다.',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'GPU vs CPU vs Apple Silicon 로컬 LLM 2026: 아키텍처 비교',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'NVIDIA RTX 5090 (32GB GPU)', 'description': '2026년 가장 빠른 소비자용 GPU: 8B 모델에서 150–200 tok/s. 32GB GDDR7, 1,792 GB/s 대역폭. $2,000. 프로덕션 워크로드와 7B–14B 모델 최고 속도에 적합. 오프로딩 없이는 30B를 로드할 수 없음.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'NVIDIA RTX 5070 (12GB GPU)', 'description': '2026년 최고 가성비 GPU: 8B 모델에서 60–80 tok/s. 12GB GDDR7, 672 GB/s 대역폭. $600. 단일 사용자 채팅 및 코딩에 tok/s당 최고 비용 효율. 7B–8B 최고 품질로 제한.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Apple M5 Pro MacBook Pro (64GB)', 'description': '2026년 최고의 올라운드 플랫폼: 8B에서 40–60 tok/s, 30B 네이티브에서 20–30 tok/s. 307 GB/s 통합 메모리. 약 $2,399. 25W 전력 소비. 이 가격대에서 30B 네이티브 성능을 따라올 GPU는 없음.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Apple M5 Max MacBook Pro (128GB)', 'description': '70B 모델에 최적: 8B에서 60–80 tok/s, 70B 네이티브에서 35–50 tok/s. 460–614 GB/s 통합 메모리. 약 $3,199 이상. 연구 및 30B–70B 고강도 워크로드용.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'CPU 전용 (Intel/AMD, DDR5)', 'description': '추가 하드웨어 비용 없음: DDR5로 8B 모델에서 10–20 tok/s. 가끔 사용 및 배치 처리에 적합. 실시간 채팅이나 8B보다 큰 모델에는 비실용적.' },
+        ],
       },
     },
   };

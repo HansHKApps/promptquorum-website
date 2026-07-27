@@ -968,6 +968,17 @@ schema: {
       },
     ],
   },
+
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Kostenvergleich: Lokale GPU vs. Cloud-GPU-Anbieter',
+    itemListElement: [
+      { '@type': 'Thing', name: 'Lokale RTX 4070', description: 'Gebrauchte GPU für 350–500 $ mit Gesamtkosten von 0,043 $/Stunde inklusive Abschreibung – die niedrigsten Gesamtbetriebskosten im ersten Jahr bei kontinuierlicher Nutzung.' },
+      { '@type': 'Thing', name: 'Cloud Lambda Labs RTX 4090', description: 'Pay-as-you-go für 2,50 $/Stunde, am besten für Lastspitzen geeignet, 10- bis 50-mal teurer pro Stunde als lokal.' },
+      { '@type': 'Thing', name: 'Cloud Paperspace A100', description: 'Günstigere Cloud-Option für 0,60 $/Stunde beim Fine-Tuning, Break-even nach rund 3 Jahren gegenüber der lokalen RTX 4070.' },
+    ],
+  },
     },
   ja: {
   theme: 'Cost & Comparisons',
@@ -1195,6 +1206,17 @@ schema: {
       },
     ],
   },
+
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'コスト比較: ローカルGPU vs クラウドGPUプロバイダー',
+    itemListElement: [
+      { '@type': 'Thing', name: 'ローカルRTX 4070', description: '中古で350〜500ドルのGPU。減価償却を含めた総コストは1時間あたり0.043ドルで、継続利用時の1年間TCOが最も低い。' },
+      { '@type': 'Thing', name: 'クラウドLambda Labs RTX 4090', description: '従量課金制で1時間2.50ドル。バーストワークロードに最適だが、ローカルより1時間あたり10〜50倍高い。' },
+      { '@type': 'Thing', name: 'クラウドPaperspace A100', description: 'ファインチューニング向けの安価なクラウドオプションで1時間0.60ドル。ローカルRTX 4070と比較して約3年で損益分岐点に達する。' },
+    ],
+  },
   },
   fr: {
   theme: 'Cost & Comparisons',
@@ -1237,6 +1259,7 @@ schema: {
   },
   schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Local LLMs vs. GPU Cloud: Comparaison des coûts 2026', description: 'Coût total de possession des LLM locaux vs. solutions GPU Cloud. Comparaison TCO, analyse ROI et optimisation des coûts pour les entreprises.', url: 'https://www.promptquorum.com/fr/local-llms/local-llm-vs-cloud-gpu-cost', inLanguage: 'fr', datePublished: '2026-01-15', dateModified: '2026-06-14', image: buildOgImageObject(OG_SLUG, 'fr'), author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
   faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-vs-cloud-gpu-cost', 'mainEntity': [ { '@type': 'Question', 'name': 'Quand le Cloud est-il économiquement plus judicieux que le local?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Le Cloud est plus judicieux quand: (1) vous avez une charge de travail variable (par exemple, demande saisonnière), (2) des projets courts (<6 mois), (3) vous voulez éviter la gestion du matériel GPU, (4) budget capital limité, ou (5) besoin de mises à jour fréquentes de modèles. Le Cloud évite les risques d\'amortissement.' } }, { '@type': 'Question', 'name': 'Quel est le délai d\'amortissement typique pour l\'infrastructure GPU locale?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Avec une utilisation constante de 20+ heures par semaine, l\'équilibre se fait généralement après 18–24 mois. Cela signifie: après 24 mois, vous aurez déjà économisé plus avec le local que ce que le Cloud aurait coûté. Les économies augmentent ensuite exponentiellement les années suivantes.' } }, { '@type': 'Question', 'name': 'Devrais-je acheter de nouvelles GPU locales ou des modèles d\'occasion/reconditionnés?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Les GPU neuves sont plus fiables et bénéficient de la garantie fabricant complète (3 ans). Les modèles reconditionnés coûtent 30–50% moins cher, mais offrent seulement 1 an de garantie et un risque d\'échec plus élevé. Pour la production, nous recommandons du neuf; pour le développement/test, les reconditionnés sont acceptables.' } }, { '@type': 'Question', 'name': 'Quels sont les coûts cachés avec les LLM locaux que je n\'ai pas avec le Cloud?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Principalement: mise à niveau de l\'infrastructure électrique (éventuellement une ligne électrique supplémentaire environ 2.000–5.000 €), alimentation électrique redondante/UPS (environ 1.500 €), système de refroidissement (environ 1.000–2.000 €), main-d\'œuvre pour l\'administration/surveillance (environ 20% d\'un salaire d\'admin système), et matériel de réparation/remplacement (environ 500 €/an de réserve). Coûts cachés totaux: environ 3.000–5.000 € la première année.' } }, { '@type': 'Question', 'name': 'Puis-je combiner Cloud et local?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, l\'hybride est populaire: exécutez les charges de travail courantes localement, utilisez le Cloud pour les pics de charge ou les expériences. Cela réalise généralement 30–40% d\'économies de coûts par rapport au Cloud pur, plus la protection des données et le contrôle. L\'orchestration nécessite du travail (équilibrage de charge, logique de basculement).' } }, { '@type': 'Question', 'name': 'Comment les prix GPU futurs influencent-ils ma décision?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Si vous choisissez le local, votre investissement s\'amortit déjà après 18–24 mois indépendamment des prix futurs. Si les prix baissent, le local économise quand même plus aux années 3–5. Les prix Cloud sont plus stables, mais globalement plus chers à long terme. Le local est plus à l\'épreuve du temps si votre charge de travail durera 3+ ans.' } } ] },
+  itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Comparaison des coûts: GPU local vs fournisseurs de GPU Cloud', itemListElement: [ { '@type': 'Thing', name: 'RTX 4070 local', description: 'GPU d\'occasion à 350–500 $ avec un coût total de 0,043 $/heure, amortissement inclus, le TCO le plus bas sur 1 an pour une utilisation constante.' }, { '@type': 'Thing', name: 'Lambda Labs RTX 4090 Cloud', description: 'Paiement à l\'usage à 2,50 $/heure, idéal pour les charges en rafale, 10 à 50 fois plus cher par heure que le local.' }, { '@type': 'Thing', name: 'Paperspace A100 Cloud', description: 'Option Cloud plus économique à 0,60 $/heure pour le fine-tuning, seuil de rentabilité à environ 3 ans face à la RTX 4070 locale.' } ] },
   },
   zh: {
   theme: 'Cost & Comparisons',
@@ -1279,6 +1302,7 @@ schema: {
   },
   schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '本地LLM与云GPU: 2026年成本比较', description: '本地LLM与云GPU解决方案的总拥有成本。TCO比较、ROI分析和企业成本优化。', url: 'https://www.promptquorum.com/zh/local-llms/local-llm-vs-cloud-gpu-cost', inLanguage: 'zh', datePublished: '2026-01-15', dateModified: '2026-06-14', image: buildOgImageObject(OG_SLUG, 'zh'), author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
   faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-vs-cloud-gpu-cost', 'mainEntity': [ { '@type': 'Question', 'name': '什么时候云在经济上比本地更有利?', 'acceptedAnswer': { '@type': 'Answer', 'text': '在以下情况下云更有利: (1)变化的工作负载(例如季节性需求)、(2)短项目(<6个月)、(3)想避免GPU硬件管理、(4)资本预算有限或(5)需要频繁的模型升级。云避免折旧风险。' } }, { '@type': 'Question', 'name': '本地GPU基础设施的典型回本期是多少?', 'acceptedAnswer': { '@type': 'Answer', 'text': '在每周20小时以上的一致使用中，损益平衡点通常在18-24个月后。这意味着24个月后，您已经用本地节省了超过云成本的金额。之后的节省呈指数增长。' } }, { '@type': 'Question', 'name': '我应该购买新的本地GPU还是二手/翻新的?', 'acceptedAnswer': { '@type': 'Answer', 'text': '新GPU更可靠，有完整的制造商保修(3年)。翻新型号便宜30-50%，但仅有1年保修和更高的故障风险。对于生产环境我们推荐新的; 对于开发/测试翻新型号可接受。' } }, { '@type': 'Question', 'name': '本地LLM有哪些云没有的隐藏成本?', 'acceptedAnswer': { '@type': 'Answer', 'text': '主要是: 电力基础设施升级(可能需要额外电路约20,000-50,000元)、冗余电源/UPS(约15,000元)、冷却系统(约10,000-20,000元)、管理/监控劳动力(约系统管理员工资的20%)、维修/更换硬件(约5,000元/年预备)。总隐藏成本: 第一年约30,000-50,000元。' } }, { '@type': 'Question', 'name': '我可以结合云和本地吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的，混合很受欢迎: 在本地运行日常工作负载，使用云处理峰值负载或实验。这通常比纯云实现30-40%的成本节省，加上数据保护和控制。编排需要工作(负载均衡、故障转移逻辑)。' } }, { '@type': 'Question', 'name': '未来GPU价格如何影响我的决策?', 'acceptedAnswer': { '@type': 'Answer', 'text': '如果选择本地，您的投资将在18-24个月后收回，无论未来价格如何。即使价格下降，本地在第3-5年仍会节省更多。云价格更稳定，但长期更贵。如果您的工作负载将运行3年以上，本地更具前景。' } } ] },
+  itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', name: '成本比较：本地GPU与云GPU提供商', itemListElement: [ { '@type': 'Thing', name: '本地RTX 4070', description: '二手GPU价格350-500美元，含折旧的总成本为每小时0.043美元，持续使用时1年期TCO最低。' }, { '@type': 'Thing', name: '云端Lambda Labs RTX 4090', description: '按使用量付费，每小时2.50美元，最适合突发工作负载，每小时成本比本地高10-50倍。' }, { '@type': 'Thing', name: '云端Paperspace A100', description: '更便宜的云选项，微调每小时0.60美元，与本地RTX 4070相比约3年可达到收支平衡。' } ] },
   },
   ko: {
       theme: '비용 및 비교',
@@ -1424,6 +1448,16 @@ schema: {
             'AWS EC2 GPU 인스턴스 가격: aws.amazon.com/ec2/pricing/on-demand (2026년 4월)',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '비용 비교: 로컬 GPU vs 클라우드 GPU 공급업체',
+        'itemListElement': [
+          { '@type': 'Thing', 'name': '로컬 RTX 4070', 'description': '중고 $350-500 GPU로 감가상각을 포함한 총 비용은 시간당 $0.043이며, 지속적으로 사용할 경우 1년 TCO가 가장 낮습니다.' },
+          { '@type': 'Thing', 'name': '클라우드 Lambda Labs RTX 4090', 'description': '시간당 $2.50의 종량제 요금으로 버스트 워크로드에 가장 적합하며, 로컬보다 시간당 10-50배 더 비쌉니다.' },
+          { '@type': 'Thing', 'name': '클라우드 Paperspace A100', 'description': '파인튜닝용으로 시간당 $0.60의 더 저렴한 클라우드 옵션이며, 로컬 RTX 4070 대비 약 3년 후 손익분기점에 도달합니다.' },
+        ],
       },
     },
   };

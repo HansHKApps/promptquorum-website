@@ -956,6 +956,18 @@ schema: {
           { '@type': 'Question', name: 'Que documentação de conformidade os LLMs locais precisam?', acceptedAnswer: { '@type': 'Answer', text: 'Documentação mínima: (1) registro de atividades de tratamento (exigido pela LGPD), (2) avaliação de impacto de proteção de dados para sistemas de alto risco, (3) políticas de retenção de dados, (4) registros de treinamento de funcionários, (5) plano de resposta a incidentes.' } },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'pt-BR',
+        name: 'Conformidade Empresarial com LLMs Locais',
+        numberOfItems: 3,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'LGPD e Residência de Dados', description: 'Dados pessoais devem permanecer no local; os titulares dos dados têm direitos (acesso, exclusão, portabilidade), e a conformidade é obrigatória para operações no Brasil.' },
+          { '@type': 'ListItem', position: 2, name: 'HIPAA: Informações de Saúde Protegidas', description: 'Dados de pacientes exigem criptografia, logs de acesso, trilhas de auditoria e notificação de incidentes em ambientes de saúde.' },
+          { '@type': 'ListItem', position: 3, name: 'SOC2 e EU AI Act', description: 'Ambos exigem documentação, transparência, trilhas de auditoria e controles abrangentes para implantação empresarial.' },
+        ],
+      },
     },
     de: {
       freshness_tier: 'annual',

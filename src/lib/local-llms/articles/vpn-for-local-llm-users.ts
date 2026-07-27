@@ -1552,6 +1552,18 @@ schema: {
             '**Alternativa sem servidor**: Cloudflare Tunnel não expõe IP público, mas cria dependência de fornecedor.',
           ],
         },
+        setup: {
+          id: 'setup',
+          title: 'Configuração: servidor VPN na rede LLM',
+          numberedItems: [
+            '**Instale o WireGuard** no servidor VPN (VM Linux na mesma LAN do servidor LLM).',
+            '**Gere as chaves:** chave privada (segredo do lado do servidor), chaves públicas (distribuídas aos clientes).',
+            '**Regra de firewall:** permita UDP 51820 (porta padrão do WireGuard) de entrada vindo da internet.',
+            '**Configuração do cliente:** cada usuário recebe um arquivo .conf com chave privada, endpoint do servidor e IPs permitidos.',
+            '**Software cliente:** app desktop do WireGuard (Mac, Windows, Linux) ou móvel (iOS, Android).',
+            '**Teste:** o usuário conecta a VPN, faz ping no servidor LLM (deve responder) e executa a inferência via API.',
+          ],
+        },
         faqSection: {
           id: 'faq',
           title: 'Perguntas frequentes',
@@ -1727,6 +1739,16 @@ schema: {
             'NIST 사이버보안 프레임워크: VPN 모범 사례',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '로컬 LLM 원격 접속을 위한 VPN 설정 옵션',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'WireGuard: 지연 시간 5~10ms, 설정 시간 30분, 코드 4,000줄(감사 가능), 공개 키 인증. 권장.' },
+          { '@type': 'ListItem', position: 2, name: 'OpenVPN: 지연 시간 15ms, 설정 시간 2시간, 코드 400K+줄(복잡), 인증서 기반. 대안 옵션.' },
+          { '@type': 'ListItem', position: 3, name: 'Cloudflare Tunnel: 설정이 가장 간단, 공개 IP 노출 없음, 내장 DDoS 방어, 다만 공급업체 종속.' },
+        ],
       },
     },
   };

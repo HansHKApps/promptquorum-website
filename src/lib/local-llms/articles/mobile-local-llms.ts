@@ -3005,6 +3005,51 @@ schema: {
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Dispositivos móveis para inferência de LLM local 2026',
+        numberOfItems: 6,
+        inLanguage: 'pt-BR',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'iPad Pro M4',
+            description: '15 tok/s no Llama 7B. Suporta modelos de 13B. 16 GB de memória unificada. Melhor dispositivo móvel para LLM.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Android Snapdragon X Elite',
+            description: '5 tok/s em modelos de 7B. 8–12 GB de RAM. Melhor opção Android para inferência de 7B.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'iPhone 16 Pro (A18 Pro)',
+            description: '4 tok/s em modelos de 3B. 12 GB de RAM compartilhada. Mínimo prático de iPhone para LLM local.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Samsung Galaxy S25 Ultra',
+            description: '4 tok/s em 7B. 12 GB de RAM. Galaxy AI híbrido; local puro via MLC Chat.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'Pixel 9 Pro (Tensor G4)',
+            description: '3 tok/s em 3B. 16 GB de RAM. Gemini Nano nativo via AICore (não acessível ao usuário).',
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            name: 'iPhone 16 (A18)',
+            description: '3 tok/s em modelos de 3B. 8 GB de RAM compartilhada. iPhone de entrada para LLMs locais de 1–3B.',
+          },
+        ],
+      },
     },
   ko: {
       freshness_tier: 'semi_annual',
@@ -3301,6 +3346,51 @@ schema: {
             '모바일 모델은 하드웨어 제약을 넘어선 더 많은 한계가 있습니다. 가장 큰 모바일 모델조차 근본적인 추론 격차가 있습니다: [LLM이 할 수 없는 것](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do)에서 이러한 한계를 설명합니다.',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '2026년 로컬 LLM 추론을 위한 모바일 기기',
+        numberOfItems: 6,
+        inLanguage: 'ko',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'iPad Pro M4',
+            description: 'Llama 7B에서 15 tok/s. 13B 모델 지원. 16GB 통합 메모리. 최고의 모바일 LLM 기기.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Android Snapdragon X Elite',
+            description: '7B 모델에서 5 tok/s. 8–12GB RAM. 7B 추론에 최적인 Android 옵션.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'iPhone 16 Pro (A18 Pro)',
+            description: '3B 모델에서 4 tok/s. 12GB 공유 RAM. 로컬 LLM을 위한 실용적인 최소 사양 iPhone.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Samsung Galaxy S25 Ultra',
+            description: '7B에서 4 tok/s. 12GB RAM. Galaxy AI 하이브리드; MLC Chat을 통한 순수 로컬 실행.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'Pixel 9 Pro (Tensor G4)',
+            description: '3B에서 3 tok/s. 16GB RAM. AICore를 통한 네이티브 Gemini Nano(사용자 접근 불가).',
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            name: 'iPhone 16 (A18)',
+            description: '3B 모델에서 3 tok/s. 8GB 공유 RAM. 1–3B 로컬 LLM을 위한 입문형 iPhone.',
+          },
+        ],
       },
     },
   };

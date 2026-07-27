@@ -344,6 +344,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-22',
       readTime: '12 Min. Lesezeit',
       educationalLevel: 'Beginner',
+      primaryTerm: 'KI-Halluzination',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -550,6 +551,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Quellen-Verantwortlichkeit:** Jede Aussage erfordert, die Quellenangabe zu zitieren',
           ],
         },
+        howToStart: {
+          title: 'Wie man KI-Halluzinationen reduziert: 6 Prompt-Techniken',
+          numberedItems: [
+            '**Explizite Erlaubnis geben, "Ich weiß es nicht" zu sagen:** Fügen Sie jedem sachlichen Prompt hinzu: "Wenn du dir nicht sicher bist, sage \'Ich weiß es nicht\', anstatt zu raten." Allein das eliminiert eine große Klasse selbstbewusster Erfindungen.',
+            '**Nach Quellen oder Belegen fragen:** Weisen Sie das Modell an, für jede Aussage eine Quelle zu zitieren oder nicht verifizierbare Aussagen zu kennzeichnen. Beispiel: "Notiere nach jeder Tatsache entweder den Namen der Quelle oder \'[nicht verifiziert]\'."',
+            '**Einen Selbstkritik-Schritt hinzufügen:** Bitten Sie das Modell, seine eigene Ausgabe vor der Fertigstellung zu überprüfen. Beispiel: "Liste vor der Antwort alle Aussagen auf, bei denen du dir zu weniger als 90 % sicher bist."',
+            '**Negative Anweisungen verwenden:** Verbieten Sie explizit halluzinationsanfälliges Verhalten. Beispiel: "Erfinde keine Namen, Titel oder Statistiken. Extrapoliere nicht über den bereitgestellten Kontext hinaus."',
+            '**Schrittweises Denken verlangen:** Chain-of-Thought-Prompting zwingt das Modell, seinen Denkweg offenzulegen, wodurch Fehler erkennbar werden, bevor sie die endgültige Antwort erreichen.',
+            '**An mehrere Modelle mit PromptQuorum versenden:** Senden Sie denselben Prompt gleichzeitig an GPT-5.5, Claude und Gemini. Von allen drei bestätigte Fakten haben hohe Konfidenz; abweichende Antworten kennzeichnen Aussagen, die überprüft werden müssen.',
+          ],
+        },
         faq: {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
@@ -612,6 +624,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Entiende por qué los LLMs alucinan y aplica técnicas probadas de prompting para minimizar errores. Incluye LLMs locales y el consenso de PromptQuorum.',
       readTime: '12 min de lectura',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Alucinación de IA',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -736,6 +749,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '"Responsabilidad de las fuentes:" Cada afirmación requiere citar la referencia',
           ],
         },
+        howToStart: {
+          title: 'Cómo reducir las alucinaciones de la IA: 6 técnicas de prompt',
+          numberedItems: [
+            '"Dar permiso explícito para decir \'No lo sé\':" Añade a cada prompt factual: "Si no estás seguro, di \'No lo sé\' en lugar de adivinar." Esto solo elimina una gran clase de fabricaciones seguras de sí mismas.',
+            '"Pedir fuentes o evidencia:" Indica al modelo que cite una fuente para cada afirmación, o que marque las afirmaciones que no puede verificar. Ejemplo: "Después de cada dato, anota el nombre de la fuente o \'[no verificado]\'."',
+            '"Añadir un paso de autocrítica:" Pide al modelo que revise su propia respuesta antes de finalizarla. Ejemplo: "Antes de responder, enumera las afirmaciones en las que tengas menos del 90% de confianza."',
+            '"Usar instrucciones negativas:" Prohíbe explícitamente los comportamientos propensos a alucinar. Ejemplo: "No inventes nombres, títulos ni estadísticas. No extrapoles más allá del contexto proporcionado."',
+            '"Exigir razonamiento paso a paso:" El chain-of-thought prompting obliga al modelo a mostrar su razonamiento, haciendo que los errores sean detectables antes de llegar a la respuesta final.',
+            '"Enviar a varios modelos con PromptQuorum:" Envía el mismo prompt a GPT-5.5, Claude y Gemini simultáneamente. Los hechos confirmados por los tres tienen alta confianza; las respuestas divergentes señalan afirmaciones que necesitan verificación.',
+          ],
+        },
         faq: {
           id: 'faq',
           title: 'Preguntas frecuentes',
@@ -798,6 +822,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: '⁨7⁩ أنماط هلوسة في النماذج اللغوية الكبيرة مع تقنيات صياغة تعليمات مجرَّبة لتقليلها. يشمل النماذج المحلية وتوافق ⁨PromptQuorum⁩ عبر ⁨25⁩+ نموذج.',
       readTime: '١٢ دقيقة للقراءة',
       educationalLevel: 'مبتدئ',
+      primaryTerm: 'هلوسة الذكاء الاصطناعي',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -922,6 +947,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '"مسؤولية المصادر:" كل ادعاء يتطلب الاستشهاد بالمرجع',
           ],
         },
+        howToStart: {
+          title: 'كيفية تقليل هلوسات الذكاء الاصطناعي: 6 تقنيات لصياغة التعليمات',
+          numberedItems: [
+            '"امنح إذنًا صريحًا بقول \'لا أعرف\':" أضف إلى كل تعليمة واقعية: "إذا لم تكن متأكدًا، قل \'لا أعرف\' بدلاً من التخمين." هذا وحده يُزيل فئة كبيرة من الاختلاقات الواثقة.',
+            '"اطلب مصادر أو أدلة:" وجّه النموذج للاستشهاد بمصدر لكل ادعاء، أو الإشارة إلى الادعاءات التي لا يمكنه التحقق منها. مثال: "بعد كل حقيقة، دوّن اسم المصدر أو \'[غير موثّق]\'."',
+            '"أضف خطوة نقد ذاتي:" اطلب من النموذج مراجعة مخرجاته الخاصة قبل الانتهاء. مثال: "قبل الإجابة، اذكر أي ادعاءات لست متأكدًا منها بنسبة أقل من 90%."',
+            '"استخدم تعليمات سلبية:" امنع صراحةً السلوك المعرَّض للهلوسة. مثال: "لا تخترع أسماء أو ألقابًا أو إحصاءات. لا تتوسّع فيما هو أبعد من السياق المقدَّم."',
+            '"اطلب استدلالًا خطوة بخطوة:" يُجبر التفكير المتسلسل (Chain-of-Thought) النموذج على إظهار خطوات تفكيره، مما يجعل الأخطاء قابلة للاكتشاف قبل وصولها إلى الإجابة النهائية.',
+            '"أرسل إلى عدة نماذج باستخدام PromptQuorum:" أرسل نفس التعليمة إلى GPT-5.5 وClaude وGemini في آنٍ واحد. الحقائق التي تؤكدها النماذج الثلاثة تحظى بثقة عالية؛ أما الإجابات المتباينة فتشير إلى ادعاءات تحتاج إلى تحقق.',
+          ],
+        },
         faq: {
           id: 'faq',
           title: 'أسئلة شائعة',
@@ -984,6 +1020,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Entenda por que os LLMs alucinam e aplique técnicas comprovadas de prompting para minimizar erros. Inclui LLMs locais e consenso multi-modelo do PromptQuorum.',
       readTime: '12 min de leitura',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Alucinação de IA',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1273,6 +1310,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-22',
       readTime: '12 min de lecture',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Hallucination IA',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1479,6 +1517,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Responsabilité des sources:** Chaque affirmation exige de citer quel document elle provient',
           ],
         },
+        howToStart: {
+          title: 'Comment réduire les hallucinations de l\'IA : 6 techniques de prompt',
+          numberedItems: [
+            '**Donner la permission explicite de dire "Je ne sais pas" :** Ajoutez à chaque prompt factuel : "Si tu n\'es pas certain, dis \'Je ne sais pas\' plutôt que de deviner." Cela seul élimine une grande catégorie de fabrications assurées.',
+            '**Demander des sources ou des preuves :** Demandez au modèle de citer une source pour chaque affirmation, ou de signaler les affirmations qu\'il ne peut pas vérifier. Exemple : "Après chaque fait, indique soit le nom de la source, soit \'[non vérifié]\'."',
+            '**Ajouter une étape d\'autocritique :** Demandez au modèle de revoir sa propre réponse avant de la finaliser. Exemple : "Avant de répondre, liste toute affirmation dont tu es sûr à moins de 90 %."',
+            '**Utiliser des instructions négatives :** Interdisez explicitement les comportements propices à l\'hallucination. Exemple : "N\'invente pas de noms, de titres ou de statistiques. Ne dépasse pas le contexte fourni."',
+            '**Exiger un raisonnement étape par étape :** Le chain-of-thought prompting force le modèle à montrer son raisonnement, rendant les erreurs détectables avant qu\'elles n\'atteignent la réponse finale.',
+            '**Envoyer à plusieurs modèles avec PromptQuorum :** Envoyez le même prompt simultanément à GPT-5.5, Claude et Gemini. Les faits confirmés par les trois ont une confiance élevée ; les réponses divergentes signalent des affirmations à vérifier.',
+          ],
+        },
         faq: {
           id: 'faq',
           title: 'Foire aux questions',
@@ -1541,6 +1590,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-22',
       readTime: '12分で読める',
       educationalLevel: 'Beginner',
+      primaryTerm: 'AIハルシネーション',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1747,6 +1797,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**ソース責任：** すべての請求は、どのドキュメントがそれから来たかを引用することが必要です',
           ],
         },
+        howToStart: {
+          title: 'AIの幻覚を減らす方法：6つのプロンプト技術',
+          numberedItems: [
+            '**「わかりません」と言う明示的な許可を与える：** すべての事実に関するプロンプトに追加：「確信が持てない場合は、推測するのではなく『わかりません』と言ってください。」これだけで、自信満々な捏造の大部分を排除できます。',
+            '**出典や根拠を求める：** モデルに各主張の出典を引用させるか、検証できない主張にフラグを立てさせます。例：「各事実の後に、出典名または『[未確認]』のいずれかを記載してください。」',
+            '**自己批評のステップを追加する：** 最終決定の前に、モデル自身の出力を見直すよう求めます。例：「回答する前に、90%未満の確信度である主張を挙げてください。」',
+            '**否定的な指示を使う：** 幻覚を起こしやすい挙動を明示的に禁止します。例：「名前、肩書き、統計を捏造しないでください。提供されたコンテキストを超えて推測しないでください。」',
+            '**段階的な推論を要求する：** Chain-of-Thoughtプロンプティングは、モデルに思考過程を示すことを強制し、最終回答に到達する前にエラーを検出可能にします。',
+            '**PromptQuorumで複数モデルに送信する：** 同じプロンプトをGPT-5.5、Claude、Geminiに同時に送信します。3つすべてで確認された事実は信頼度が高く、異なる回答は検証が必要な主張を示します。',
+          ],
+        },
         faq: {
           id: 'faq',
           title: 'よくある質問',
@@ -1809,6 +1870,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-22',
       readTime: '12分钟阅读',
       educationalLevel: 'Beginner',
+      primaryTerm: 'AI幻觉',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -2015,6 +2077,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**来源责任：** 每个索赔都需要引用它来自哪个文件',
           ],
         },
+        howToStart: {
+          title: '如何减少AI幻觉：6种提示技巧',
+          numberedItems: [
+            '**明确允许说"我不知道"：** 在每个事实性提示中添加："如果你不确定，请说「我不知道」，而不是猜测。"仅此一项就能消除一大类自信满满的捏造内容。',
+            '**要求提供来源或证据：** 指示模型为每项声明引用来源，或标记其无法验证的声明。示例："在每个事实后注明来源名称或「未验证」。"',
+            '**添加自我批评步骤：** 要求模型在最终确定前审查自己的输出。示例："在回答前，列出你信心低于90%的任何声明。"',
+            '**使用否定指令：** 明确禁止易产生幻觉的行为。示例："不要编造姓名、头衔或统计数据。不要超出所提供的上下文进行推断。"',
+            '**要求逐步推理：** 思维链提示迫使模型展示其推理过程，使错误在到达最终答案之前就能被发现。',
+            '**使用PromptQuorum分发到多个模型：** 将同一提示同时发送给GPT-5.5、Claude和Gemini。三者都确认的事实具有高置信度；不同的答案则标记出需要核实的声明。',
+          ],
+        },
         faq: {
           id: 'faq',
           title: '常见问题解答',
@@ -2078,6 +2151,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: 'LLM이 왜 환각을 일으키는지 이해하고, 오류를 최소화하는 검증된 프롬프트 기술을 배우십시오. 로컬 LLM 및 PromptQuorum 합의 점수에 대한 특별 섹션 포함.',
     readTime: '12분 분량',
     educationalLevel: 'Beginner',
+    primaryTerm: 'AI 환각',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -2200,6 +2274,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '"부정적 지시:" "타임라인에 없는 정보를 추가하지 마십시오"는 명시적입니다',
           '"생략 허가:" "확신이 없다면 건너뛰십시오"는 세부 사항을 만들어내는 압력을 제거합니다',
           '"출처 책임:" 모든 주장은 참고문헌 인용을 요구합니다',
+        ],
+      },
+      howToStart: {
+        title: 'AI 환각을 줄이는 방법: 6가지 프롬프트 기법',
+        numberedItems: [
+          '"모른다고 말할 명시적 권한 부여:" 모든 사실 기반 프롬프트에 추가: "확실하지 않다면 추측하지 말고 \'모릅니다\'라고 말하세요." 이것만으로도 자신감 있는 조작의 상당 부분이 사라집니다.',
+          '"출처나 증거 요청:" 모델에게 각 주장에 대한 출처를 인용하거나 검증할 수 없는 주장에 플래그를 지정하도록 지시하세요. 예: "각 사실 뒤에 출처 이름 또는 \'[미확인]\'을 표기하세요."',
+          '"자기비판 단계 추가:" 최종 확정 전에 모델이 자신의 출력을 검토하도록 요청하세요. 예: "답변하기 전에 90% 미만으로 확신하는 주장을 나열하세요."',
+          '"부정 지시 사용:" 환각을 유발하기 쉬운 행동을 명시적으로 금지하세요. 예: "이름, 직함, 통계를 지어내지 마십시오. 제공된 맥락을 벗어나 추정하지 마십시오."',
+          '"단계별 추론 요구:" Chain-of-Thought 프롬프팅은 모델이 사고 과정을 보여주도록 강제하여, 최종 답변에 도달하기 전에 오류를 발견할 수 있게 합니다.',
+          '"PromptQuorum으로 여러 모델에 전송:" 동일한 프롬프트를 GPT-5.5, Claude, Gemini에 동시에 전송하세요. 세 모델 모두가 확인한 사실은 신뢰도가 높고, 답변이 갈리는 경우 검증이 필요한 주장임을 나타냅니다.',
         ],
       },
       faq: {

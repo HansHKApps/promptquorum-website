@@ -897,6 +897,31 @@ schema: {
         ],
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'LLMs Locais vs APIs na Nuvem: Comparação de 8 Fatores 2026',
+        'numberOfItems': 8,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Privacidade de dados', 'description': 'LLM local: total, os dados nunca saem do dispositivo. API na nuvem: processada em servidores do provedor, sujeita à política de privacidade.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Custo por token', 'description': 'LLM local: $0 após o hardware. API na nuvem: $0,15-$60 por 1M tokens.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Qualidade de saída', 'description': 'LLM local: boa entre 13B-70B. API na nuvem: a melhor disponível -- GPT-5.6, Claude Sonnet 5 lideram os benchmarks.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Velocidade de resposta', 'description': 'LLM local: 10-120 tok/seg dependendo do hardware. API na nuvem: 50-200 tok/seg dependendo do provedor.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Tempo de configuração', 'description': 'LLM local: 5-15 minutos com Ollama. API na nuvem: 2-5 minutos para conta e chave de API.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Acesso offline', 'description': 'LLM local: sim, funciona sem internet. API na nuvem: não, exige conexão ativa.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Atualizações de modelo', 'description': 'LLM local: manual, você escolhe quando atualizar. API na nuvem: automática, o provedor atualiza sem aviso.' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Personalização', 'description': 'LLM local: total -- fine-tuning, quantização, prompts de sistema. API na nuvem: limitada apenas a prompts de sistema.' },
+        ],
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'inLanguage': 'pt-BR',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
+      },
     },
     de: {
       theme: 'Erste Schritte',
@@ -1908,6 +1933,22 @@ schema: {
       gammaDescription: '아래 슬라이드 자료는 로컬 LLM과 클라우드 API를 8가지 요소에 걸쳐 비교합니다: 토큰당 $0 비용, 프라이버시, 속도 벤치마크(10~160 tok/s), 모델 품질. PDF를 로컬 LLM 의사결정 참조 카드로 다운로드하십시오.',
       educationalLevel: 'Beginner',
       primaryTerm: '로컬 LLM',
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '로컬 LLM vs 클라우드 API: 8가지 요소 비교 2026',
+        'numberOfItems': 8,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '데이터 프라이버시', 'description': '로컬 LLM: 완전함, 데이터가 기기를 벗어나지 않음. 클라우드 API: 제공업체 서버에서 처리되며 개인정보 처리방침의 적용을 받음.' },
+          { '@type': 'ListItem', 'position': 2, 'name': '토큰당 비용', 'description': '로컬 LLM: 하드웨어 구매 후 $0. 클라우드 API: 100만 토큰당 $0.15~$60.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '출력 품질', 'description': '로컬 LLM: 13B~70B에서 우수함. 클라우드 API: 최고 수준 -- GPT-5.6, Claude Sonnet 5가 벤치마크를 선도.' },
+          { '@type': 'ListItem', 'position': 4, 'name': '응답 속도', 'description': '로컬 LLM: 하드웨어에 따라 초당 10~120 토큰. 클라우드 API: 제공업체에 따라 초당 50~200 토큰.' },
+          { '@type': 'ListItem', 'position': 5, 'name': '설정 시간', 'description': '로컬 LLM: Ollama로 5~15분. 클라우드 API: 계정 및 API 키 발급에 2~5분.' },
+          { '@type': 'ListItem', 'position': 6, 'name': '오프라인 접근', 'description': '로컬 LLM: 가능, 인터넷 없이 작동. 클라우드 API: 불가능, 활성 연결 필요.' },
+          { '@type': 'ListItem', 'position': 7, 'name': '모델 업데이트', 'description': '로컬 LLM: 수동, 업데이트 시점을 직접 선택. 클라우드 API: 자동, 예고 없이 제공업체가 업데이트.' },
+          { '@type': 'ListItem', 'position': 8, 'name': '맞춤화', 'description': '로컬 LLM: 완전함 -- 파인튜닝, 양자화, 시스템 프롬프트. 클라우드 API: 시스템 프롬프트로만 제한됨.' },
+        ],
+      },
       toc: [
         { label: '핵심 요약', anchor: '#key-takeaways' },
         { label: '핵심 차이점', anchor: '#what-is-the-core-difference' },
@@ -1921,6 +1962,15 @@ schema: {
         { label: '관련 자료', anchor: '#related-reading' },
         { label: 'FAQ', anchor: '#common-questions' },
       ],
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        inLanguage: 'ko',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro'],
+        },
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',

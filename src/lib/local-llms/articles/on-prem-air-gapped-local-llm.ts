@@ -919,6 +919,36 @@ schema: {
             '**Esquecer de desativar rádios do hardware.** Muitos servidores modernos têm Wi-Fi e Bluetooth integrados. Desabilite-os no BIOS/UEFI e fisicamente se possível.',
           ],
         },
+        faqSection: {
+          id: 'faq',
+          title: 'Perguntas frequentes sobre sistemas air-gapped',
+          faqs: [
+            {
+              q: 'Como atualizamos os modelos em um sistema air-gapped?',
+              a: 'Manualmente via USB criptografado, ou por meio de uma rede interna segura isolada da internet. Todas as atualizações exigem aprovação de controle de mudanças e trilhas de auditoria.',
+            },
+            {
+              q: 'Podemos usar backups em nuvem para sistemas air-gapped?',
+              a: 'Não. Backups em nuvem exigem conexão à internet (o que anula o air-gapping). Use backups físicos (discos rígidos criptografados) armazenados em instalação segura separada.',
+            },
+            {
+              q: 'O air-gapped é realmente seguro contra todos os ataques?',
+              a: 'Na maior parte, mas ameaças internas permanecem. O air-gapped é seguro contra ataques remotos, mas o acesso físico ou de pessoal interno pode comprometê-lo.',
+            },
+            {
+              q: 'Quanto custa uma implantação air-gapped?',
+              a: 'O hardware custa entre US$ 50 mil e US$ 500 mil (não muito mais que um ambiente on-prem regular). Os custos operacionais (segurança, auditoria, treinamento) são de 5 a 10 vezes maiores devido aos processos manuais.',
+            },
+            {
+              q: 'Podemos usar ferramentas padrão (Ollama, vLLM) em ambientes air-gapped?',
+              a: 'Sim. Ambas as ferramentas funcionam sem internet. Implante uma vez e depois não é necessária conectividade com a internet. Garanta que todas as dependências sejam instaladas offline.',
+            },
+            {
+              q: 'E se precisarmos de conformidade com o GDPR mas não precisarmos de air-gapping completo?',
+              a: 'Para workloads em que o air-gapping não é necessário mas o GDPR é, [opções de GPU em nuvem compatíveis com a UE →](/pt/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) oferecem residência de dados na UE sem a complexidade do isolamento.',
+            },
+          ],
+        },
         relatedReading: {
           id: 'related-reading',
           title: 'Leituras relacionadas',
@@ -951,6 +981,32 @@ schema: {
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Implantação de LLM Local Air-Gapped',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Isolamento Completo de Rede',
+            'description': 'A infraestrutura air-gapped não possui conexão de rede com a internet ou qualquer sistema externo, garantindo acesso externo zero.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Procedimentos de Atualização Manual',
+            'description': 'As atualizações de modelo exigem mídia física (pendrive USB) ou redes internas seguras apenas; sem acesso à nuvem.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Segurança Aprimorada',
+            'description': 'Protege dados classificados em ambientes governamentais, militares e financeiros que exigem proteção máxima de dados.',
+          },
+        ],
       },
     },
     de: {
@@ -1457,6 +1513,15 @@ schema: {
             '**管理:** エアギャップ内の管理ワークステーション、シリアルコンソール、物理キーボード。',
             '**更新メディア:** USB 3.0 (暗号化)、光学メディア(DVD-R)、専用転送デバイス。',
           ],
+          numberedItems: [
+            '**専用ハードウェア:** LLM推論専用のサーバー。他の用途には使用しない。',
+            '**隔離されたネットワーク:** 企業ネットワークやインターネットへの接続なし。最大でも独立したVLANのみ。',
+            '**暗号化ストレージ:** すべてのモデルファイル、データ、ログを保存時に暗号化。',
+            '**制御されたアクセス:** 権限を持つ担当者のみアクセス可能。多要素認証が必須。',
+            '**物理的セキュリティ:** 施錠されたサーバールーム、監視カメラ、アクセスログ。',
+            '**リムーバブルメディア禁止:** USBポートを無効化、CD/DVDドライブを撤去。',
+            '**ローカル監視:** ログはシステム内に保持され、外部の監視サービスには送信しない。',
+          ],
         },
         'network-isolation': {
           id: 'network-isolation',
@@ -1513,6 +1578,36 @@ schema: {
             'テスト環境の甘いセキュリティ。テスト = 本番同等セキュリティ必須。',
           ],
         },
+        faqSection: {
+          id: 'faq',
+          title: 'エアギャップシステムに関するよくある質問',
+          faqs: [
+            {
+              q: 'エアギャップシステムでモデルをどう更新しますか?',
+              a: '暗号化USB経由での手動更新、またはインターネットから隔離された内部セキュアネットワーク経由で行います。すべての更新は変更管理の承認と監査証跡が必要です。',
+            },
+            {
+              q: 'エアギャップシステムでクラウドバックアップを使用できますか?',
+              a: 'いいえ。クラウドバックアップにはインターネット接続が必要であり、エアギャップの原則に反します。別の安全な施設に保管する物理バックアップ(暗号化ハードドライブ)を使用してください。',
+            },
+            {
+              q: 'エアギャップはすべての攻撃に対して本当に安全ですか?',
+              a: 'おおむね安全ですが、内部脅威は残ります。エアギャップはリモート攻撃には強いものの、物理的アクセスや内部者によるアクセスで侵害される可能性があります。',
+            },
+            {
+              q: 'エアギャップデプロイメントのコストはどれくらいですか?',
+              a: 'ハードウェアコストは5万〜50万ドル(通常のオンプレミスとさほど変わりません)。運用コスト(セキュリティ、監査、トレーニング)は手動プロセスのため5〜10倍高くなります。',
+            },
+            {
+              q: 'エアギャップ環境で標準ツール(Ollama、vLLM)を使用できますか?',
+              a: 'はい。どちらのツールもインターネットなしで動作します。一度デプロイすれば、その後はインターネット接続は不要です。すべての依存関係がオフラインでインストールされていることを確認してください。',
+            },
+            {
+              q: '完全なエアギャップは不要だがGDPR準拠が必要な場合はどうすればよいですか?',
+              a: 'エアギャップが不要でGDPR準拠が必要なワークロードには、[EU準拠のクラウドGPUオプション →](/ja/local-llms/eu-cloud-gpu-gdpr-2026)(Hetzner、Scaleway、OVHcloud)が、隔離の複雑さなしにEUデータ所在地を提供します。',
+            },
+          ],
+        },
         'relatedReading': {
           id: 'related-reading',
           title: '関連記事',
@@ -1543,6 +1638,32 @@ schema: {
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'エアギャップローカルLLMデプロイメント',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': '完全なネットワーク隔離',
+            'description': 'エアギャップインフラはインターネットや外部システムへのネットワーク接続を一切持たず、外部アクセスをゼロに保ちます。',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': '手動更新手順',
+            'description': 'モデルの更新には物理メディア(USBドライブ)または内部セキュアネットワークのみを使用し、クラウドアクセスはありません。',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': '強化されたセキュリティ',
+            'description': '政府、軍事、金融環境における機密データを保護し、最大限のデータ保護を実現します。',
+          },
+        ],
       },
     },
     zh: {
@@ -1983,6 +2104,32 @@ schema: {
             '에어갭 보안 가이드라인 -- ietf.org (네트워크 격리에 관한 RFC 문서)',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '에어갭 로컬 LLM 배포',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': '완전한 네트워크 격리',
+            'description': '에어갭 인프라는 인터넷이나 외부 시스템과의 네트워크 연결이 전혀 없어 외부 접근을 원천 차단합니다.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': '수동 업데이트 절차',
+            'description': '모델 업데이트는 물리적 매체(USB 드라이브) 또는 내부 보안 네트워크를 통해서만 이루어지며, 클라우드 접근은 없습니다.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': '강화된 보안',
+            'description': '최대 수준의 데이터 보호가 필요한 정부, 군사, 금융 환경의 기밀 데이터를 보호합니다.',
+          },
+        ],
       },
     },
   };

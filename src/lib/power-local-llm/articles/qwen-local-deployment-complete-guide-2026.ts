@@ -797,6 +797,19 @@ docker run --gpus all \\
         },
       ],
     },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Déployer Qwen comme serveur API de production avec Docker',
+      step: [
+        { '@type': 'HowToStep', name: 'Installer Docker et Docker Compose', position: 1 },
+        { '@type': 'HowToStep', name: 'Créer docker-compose.yml avec Ollama + Open WebUI', position: 2 },
+        { '@type': 'HowToStep', name: 'Définir OLLAMA_HOST=0.0.0.0 dans l\'environnement du conteneur', position: 3 },
+        { '@type': 'HowToStep', name: 'Récupérer le modèle Qwen via docker exec ollama ollama pull qwen3:8b', position: 4 },
+        { '@type': 'HowToStep', name: 'Ajouter Nginx comme passerelle API avec authentification de base', position: 5 },
+        { '@type': 'HowToStep', name: 'Définir la politique de redémarrage sur unless-stopped', position: 6 },
+      ],
+    },
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -918,6 +931,19 @@ docker run --gpus all \\
           name: 'OllamaとvLLMの違いは？',
           acceptedAnswer: { '@type': 'Answer', text: 'Ollamaはセットアップが簡単で個人・小規模チームに最適。vLLMは高負荷時に2〜4倍効率的で、毎時100件以上のリクエストを処理する本番APIに適しています。' },
         },
+      ],
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Qwenを本番用APIサーバーとしてDockerでデプロイする',
+      step: [
+        { '@type': 'HowToStep', name: 'DockerとDocker Composeをインストールする', position: 1 },
+        { '@type': 'HowToStep', name: 'Ollama + Open WebUIでdocker-compose.ymlを作成する', position: 2 },
+        { '@type': 'HowToStep', name: 'コンテナ環境でOLLAMA_HOST=0.0.0.0を設定する', position: 3 },
+        { '@type': 'HowToStep', name: 'docker exec ollama ollama pull qwen3:8bでQwenモデルを取得する', position: 4 },
+        { '@type': 'HowToStep', name: 'Basic認証付きのAPIゲートウェイとしてNginxを追加する', position: 5 },
+        { '@type': 'HowToStep', name: '再起動ポリシーをunless-stoppedに設定する', position: 6 },
       ],
     },
     schema: {
@@ -1062,6 +1088,19 @@ docker run --gpus all \\
           name: '生产环境中Ollama和vLLM有什么区别？',
           acceptedAnswer: { '@type': 'Answer', text: 'Ollama配置简单，适合20人以下并发。vLLM在高负载下效率高2-4倍，适合每小时100+请求的生产API。' },
         },
+      ],
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: '将Qwen部署为生产环境API服务器（使用Docker）',
+      step: [
+        { '@type': 'HowToStep', name: '安装Docker和Docker Compose', position: 1 },
+        { '@type': 'HowToStep', name: '创建包含Ollama + Open WebUI的docker-compose.yml', position: 2 },
+        { '@type': 'HowToStep', name: '在容器环境中设置OLLAMA_HOST=0.0.0.0', position: 3 },
+        { '@type': 'HowToStep', name: '通过docker exec ollama ollama pull qwen3:8b拉取Qwen模型', position: 4 },
+        { '@type': 'HowToStep', name: '添加带基础认证的Nginx作为API网关', position: 5 },
+        { '@type': 'HowToStep', name: '将重启策略设置为unless-stopped', position: 6 },
       ],
     },
     schema: {

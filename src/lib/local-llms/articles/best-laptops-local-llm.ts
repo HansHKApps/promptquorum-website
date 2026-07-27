@@ -1961,5 +1961,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
     },
   },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'url': 'https://www.promptquorum.com/ko/local-llms/best-laptops-local-llm',
+    'name': '2026년 6월 로컬 LLM 최고 노트북',
+    'itemListElement': [
+      { '@type': 'ListItem', position: 1, name: 'MacBook Pro M5 Pro 14" ($2,199, 24 GB 통합 메모리) — Qwen3 14B Q4에서 45~60 tok/s, 무소음, 종합 최고.' },
+      { '@type': 'ListItem', position: 2, name: 'RTX 5080 노트북 (~$2,799, 16 GB GDDR7 VRAM) — Llama 3.3 8B Q4에서 ~70 tok/s, 최고의 Windows 선택.' },
+      { '@type': 'ListItem', position: 3, name: 'RTX 5070 Ti 노트북 (~$2,499, 12 GB GDDR7 VRAM) — 7B에서 ~50 tok/s, 7B~13B 모델을 위한 최고의 가성비 Windows.' },
+      { '@type': 'ListItem', position: 4, name: 'MacBook Pro M5 Max 14" ($3,199+, 36 GB 통합) — 30B~70B 모델 실행, 연구자를 위한 최고의 Apple 노트북.' },
+    ],
+  },
 },
   };

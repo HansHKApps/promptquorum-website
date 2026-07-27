@@ -942,6 +942,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-01',
       readTime: '8 min de lectura',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Estructura de prompt',
       dateModified: '2026-05-04',
       schema: {
         '@context': 'https://schema.org',
@@ -1276,6 +1277,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ar: {
       freshness_tier: 'semi_annual',
+      primaryTerm: 'بنية البرومبت',
       theme: 'Fundamentals',
       title: 'المكونات الخمسة التي يحتاجها كل برومبت',
       seoTitle: '⁨5⁩ مكونات البرومبت الأساسية لكل نموذج ⁨LLM⁩',
@@ -1618,6 +1620,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     pt: {
+      primaryTerm: 'Estrutura de prompt',
       theme: 'Fundamentals',
       title: 'Os 5 blocos de construção que todo prompt precisa',
       seoTitle: '5 blocos de construção para cada prompt de IA',
@@ -2823,6 +2826,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-01',
       readTime: '阅读约8分钟',
       educationalLevel: 'Beginner',
+      primaryTerm: '提示词结构',
       dateModified: '2026-05-04',
       lastFactChecked: '2026-05-04',
       schema: {
@@ -2837,6 +2841,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['提示词结构', '提示词构件', '角色与背景', '输出格式', '提示词约束', '少样本示例', '提示词工程', '语言模型'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'zh',
+        name: '每个AI提示词必需的5个构建模块',
+        description: '每个可靠的AI提示词都包含的5个结构组成部分：角色、任务、输入与示例、约束条件和输出格式。',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '模块一：角色与上下文', description: '告诉模型它是谁、为谁工作。设定领域专业性和受众意识。' },
+          { '@type': 'ListItem', position: 2, name: '模块二：任务/指令', description: '使用明确的动作动词，清晰陈述模型必须完成的任务。' },
+          { '@type': 'ListItem', position: 3, name: '模块三：输入与示例', description: '模型要处理的数据或内容，以及展示正确输出形态的可选示例。' },
+          { '@type': 'ListItem', position: 4, name: '模块四：约束条件', description: '模型必须遵守的规则——长度限制、禁止内容、风格限制。' },
+          { '@type': 'ListItem', position: 5, name: '模块五：输出格式', description: '输出必须采用的确切结构：JSON、项目符号列表、表格、散文段落或编号步骤。' },
+        ],
       },
       sections: {
         definition: {
@@ -3004,6 +3023,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**未指定输出格式：** 模型自行选择结构——这会在不同次运行间变化，并破坏下游流程',
             '**将所有内容混入一个段落：** 混为一块的文本更难让模型解析——为每个模块使用换行或明确标签',
             '**过于相似的示例：** 三个完全相同的示例只能教会一种模式——使其多样化，以覆盖真实的输入范围',
+          ],
+        },
+
+        howToStart: {
+          id: 'how-to-build-a-prompt',
+          title: '如何使用5个构建模块搭建提示词',
+          numberedItems: [
+            '**设定角色与上下文：** 开头说明模型是谁、所处的领域。例如："你是一名正在帮助德国小企业主的资深税务顾问。" 缺少这一步，模型会从通用视角作答。',
+            '**编写任务/指令：** 明确陈述你希望产出的内容——具体且可验证。"用200字总结主要增值税义务"优于"告诉我关于增值税的事"。',
+            '**添加输入与示例：** 提供原始数据，以及至少一个正确输出格式的示例。一个精心选择的示例比任何其他单一技巧都更能减少不一致。',
+            '**定义约束条件：** 列出模型不能做的事、长度限制和语气规则。例如："不要为德国以外的司法管辖区提供建议。最多200字。正式语气。"',
+            '**指定输出格式：** 说明答案必须采用的确切形态——JSON对象、3点摘要、表格或散文段落。省略这一步是导致AI输出无法使用的最常见原因。在部署到生产环境之前，先在 [Anthropic 控制台](https://docs.anthropic.com/) 或 [OpenAI Playground](https://platform.openai.com/playground) 中测试你完成的5模块提示词。',
           ],
         },
 

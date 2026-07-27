@@ -886,6 +886,16 @@ schema: {
           { '@type': 'SoftwareApplication', 'name': 'LlamaIndex' },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Essenciais do RAG Local 2026',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Faça o chunking correto dos documentos', 'description': 'Divida documentos em fragmentos de 500-1000 tokens com 20% de sobreposição. O chunking semântico preserva melhor o significado do que o de tamanho fixo.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Escolha um banco de dados vetorial', 'description': 'Chroma para <1M documentos em hardware de consumo. Qdrant para RAG distribuído e em escala de produção.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Avalie a qualidade de recuperação', 'description': 'Meça precisão e recall. Recuperação ruim = alucinações. Use ferramentas automatizadas como Ragas para avaliação.' },
+        ]
+      },
     },
     de: {
       freshness_tier: 'annual',
@@ -2039,6 +2049,16 @@ schema: {
             'RAG Paper (Lewis et al.) -- arxiv.org/abs/2005.11401',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '로컬 RAG 2026 핵심 요소',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '문서를 올바르게 청킹하기', 'description': '문서를 20% 오버랩을 적용해 500~1000 토큰 청크로 분할합니다. 의미론적 청킹은 고정 크기 청킹보다 의미를 더 잘 보존합니다.' },
+          { '@type': 'ListItem', 'position': 2, 'name': '벡터 데이터베이스 선택하기', 'description': '일반 소비자용 하드웨어에서 100만 건 미만 문서라면 Chroma, 분산형 프로덕션급 RAG라면 Qdrant를 사용합니다.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '검색 품질 평가하기', 'description': '정밀도와 재현율을 측정합니다. 잘못된 검색은 환각으로 이어집니다. Ragas와 같은 자동화 도구로 평가합니다.' },
+        ]
       },
     },
   };

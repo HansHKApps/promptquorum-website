@@ -1492,6 +1492,29 @@ schema: {
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '5 melhores modelos LLM locais para iniciantes 2026',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Meta Llama 3.2 3B', description: '2,5 GB RAM. 25-45 tok/s CPU. Contexto de 128K. Melhor para iniciantes em geral. ollama run llama3.2:3b' },
+          { '@type': 'ListItem', position: 2, name: 'Microsoft Phi-4 Mini 3.8B', description: '2,5 GB RAM. 30-50 tok/s CPU. Contexto de 128K. 68% MMLU, 70% HumanEval. Melhor raciocínio com pouca RAM. ollama run phi4-mini' },
+          { '@type': 'ListItem', position: 3, name: 'Google Gemma 3 2B', description: '1,7 GB RAM. 40-60 tok/s CPU. Contexto de 128K. O modelo 2B mais rápido. ollama run gemma3:2b' },
+          { '@type': 'ListItem', position: 4, name: 'Meta Llama 3.3 8B', description: '5,5 GB RAM. 10-18 tok/s CPU. Contexto de 128K. 72% HumanEval. Melhor 7B/8B completo. ollama run llama3.3:8b-instruct' },
+          { '@type': 'ListItem', position: 5, name: 'Qwen3 8B', description: '5,2 GB RAM. 10-18 tok/s CPU. Contexto de 32K (131K YaRN). Melhor codificação + multilíngue. ollama run qwen3:8b' },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Como baixar e rodar um LLM local para iniciantes',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Instalar o Ollama', 'text': 'Instale o Ollama a partir de ollama.com -- um único instalador para macOS, Windows e Linux. Sem configuração manual necessária.' },
+          { '@type': 'HowToStep', 'name': 'Escolher o modelo pela RAM disponível', 'text': '2 GB de RAM ou menos: ollama run llama3.2:1b. Menos de 4 GB de RAM: ollama run gemma3:2b. 8 GB de RAM, primeiro modelo: ollama run llama3.2:3b. 4-6 GB com foco em raciocínio: ollama run phi4-mini. 8 GB+ para codificação/multilíngue: ollama run qwen3:8b.' },
+          { '@type': 'HowToStep', 'name': 'Baixar e rodar o modelo', 'text': 'Execute o comando escolhido no terminal. O Ollama baixa o modelo na primeira execução e inicia automaticamente uma sessão de chat interativa.' },
+        ],
+      },
     },
     de: {
       theme: 'Erste Schritte',

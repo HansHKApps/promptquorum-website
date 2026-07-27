@@ -908,6 +908,13 @@ schema: {
         installOnMacos: {
           id: 'install-on-macos',
           title: 'Como instalar o Ollama no macOS',
+          numberedItems: [
+            'Acesse ollama.com/download e clique em "Download for macOS".',
+            'Abra o arquivo Ollama.dmg baixado e arraste o Ollama para a pasta Applications.',
+            'Abra o Ollama a partir de Applications. Um ícone de lhama aparece na barra de menus -- o Ollama já está em execução como um serviço em segundo plano.',
+            'Abra o Terminal e execute seu primeiro modelo: `ollama run llama3.2`',
+            'O modelo é baixado (~2 GB para llama3.2:3b) e um prompt de chat aparece. Digite uma mensagem e pressione Enter.',
+          ],
           codeBlock: '# Opção 1: Baixe o instalador em ollama.com\n# Clique em Download, abra o .dmg, arraste Ollama para Aplicativos\n\n# Opção 2: Homebrew\nbrew install ollama\n\n# Verificar instalação\nollama --version\n\n# Executar o primeiro modelo\nollama run llama3.2',
           codeLanguage: 'bash',
         },

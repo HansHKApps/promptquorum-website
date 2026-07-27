@@ -1095,6 +1095,19 @@ schema: {
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Melhores LLMs Locais Julho 2026 -- Comparação de Benchmarks',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Qwen3.6 27B', description: 'MMLU 84%, SWE-bench Verified 77%. Requer ~17 GB de RAM em Q4_K_M. 201 idiomas, contexto 262K. Melhor LLM local no geral em julho de 2026.' },
+          { '@type': 'ListItem', position: 2, name: 'Gemma 4 26B-A4B', description: 'AIME 2026: 89%. Requer ~15 GB de RAM. Arquitetura MoE, ~4B parâmetros ativos. Melhor para raciocínio e matemática.' },
+          { '@type': 'ListItem', position: 3, name: 'Qwen2.5-Coder 7B', description: 'HumanEval 88%, EvalPlus 78%. Requer ~5 GB de RAM. Feito especificamente para geração de código. Melhor modelo local de código com menos de 10 GB de RAM.' },
+          { '@type': 'ListItem', position: 4, name: 'Phi-4-mini 3.8B', description: 'MMLU 68%, HumanEval 70%. Requer ~2,5 GB de RAM. 30-50 tok/s em CPU. Melhor modelo apenas para CPU e edge.' },
+          { '@type': 'ListItem', position: 5, name: 'Gemma 4 E2B', description: '2,3B parâmetros efetivos. Requer ~2 GB de VRAM. Contexto 128K. Melhor modelo minúsculo para SBCs e implantações com RAM mínima.' },
+        ],
+      },
     },
 
 
@@ -1932,6 +1945,19 @@ schema: {
     { label: '자주 묻는 질문', anchor: '#common-questions' },
     { label: '출처', anchor: '#sources' },
   ],
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: '2026년 7월 최고의 로컬 LLM -- 벤치마크 비교',
+    numberOfItems: 5,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Qwen3.6 27B', description: 'MMLU 84%, SWE-bench Verified 77%. Q4_K_M 기준 RAM 약 17GB 필요. 201개 언어, 262K 컨텍스트. 2026년 7월 종합 최고의 로컬 LLM.' },
+      { '@type': 'ListItem', position: 2, name: 'Gemma 4 26B-A4B', description: 'AIME 2026: 89%. RAM 약 15GB 필요. MoE 아키텍처, 활성 파라미터 약 4B. 추론과 수학에 최적.' },
+      { '@type': 'ListItem', position: 3, name: 'Qwen2.5-Coder 7B', description: 'HumanEval 88%, EvalPlus 78%. RAM 약 5GB 필요. 코드 생성 전용으로 설계. RAM 10GB 미만 최고의 로컬 코딩 모델.' },
+      { '@type': 'ListItem', position: 4, name: 'Phi-4-mini 3.8B', description: 'MMLU 68%, HumanEval 70%. RAM 약 2.5GB 필요. CPU에서 30-50 tok/s. CPU 전용 및 엣지 기기 최고 모델.' },
+      { '@type': 'ListItem', position: 5, name: 'Gemma 4 E2B', description: '유효 파라미터 2.3B. VRAM 약 2GB 필요. 128K 컨텍스트. SBC 및 최소 RAM 환경을 위한 최고의 초소형 모델.' },
+    ],
+  },
   sections: {
     tldr: {
       id: 'key-takeaways',

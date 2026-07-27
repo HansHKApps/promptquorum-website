@@ -2156,5 +2156,31 @@ schema: {
           ],
         },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '기업용 RAG 로컬 LLM',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': '대규모 문서 수집',
+            'description': '1만~10만 개의 문서를 업로드하고, PDF/Word/HTML을 파싱하고, 지능적으로 청킹한 뒤 로컬 모델로 임베딩합니다.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': '다중 사용자 RAG 아키텍처',
+            'description': '로드 밸런싱, 검색 품질 최적화, 2초 미만 지연 시간으로 동시 사용자 100~500명을 지원합니다.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': '거버넌스 및 컴플라이언스',
+            'description': '접근 제어, 감사 추적, 데이터 보존 정책, 역할 기반 문서 접근 권한을 구현합니다.',
+          },
+        ],
+      },
     },
   };
