@@ -978,6 +978,16 @@ schema: {
           { '@type': 'Thing', 'name': 'IA que preserva a privacidade' },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Comparação: Claude Pro vs Llama 3.3 70B local',
+        'itemListElement': [
+          { '@type': 'Thing', 'name': 'Claude Pro', 'description': 'Assinatura em nuvem da Anthropic por $20/mês com janela de contexto de 200 mil tokens, compreensão de imagens e garantias de privacidade.' },
+          { '@type': 'Thing', 'name': 'Llama 3.3 70B local', 'description': 'Modelo de código aberto em RTX 4090 ($1.000 usada) com contexto de 128 mil tokens, suporte completo a fine-tuning e operação offline.' },
+          { '@type': 'Thing', 'name': 'Análise de TCO em 5 anos', 'description': 'Claude Pro $1.200 vs Llama local $1.300 (GPU usada) — custo quase idêntico, com compensações diferentes.' },
+        ],
+      },
     },
     de: {
       theme: 'Cost & Comparisons',
@@ -2194,6 +2204,16 @@ schema: {
             '[Open LLM Leaderboard — MMLU 및 HumanEval 벤치마크](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) — Hugging Face, 2026년 4월',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Claude Pro vs 로컬 Llama 3.3 70B 비교',
+        'itemListElement': [
+          { '@type': 'Thing', 'name': 'Claude Pro', 'description': '월 $20의 Anthropic 클라우드 구독. 20만 토큰 컨텍스트 창, 이미지 이해, 개인정보 보호 보장을 제공합니다.' },
+          { '@type': 'Thing', 'name': '로컬 Llama 3.3 70B', 'description': 'RTX 4090(중고 $1,000)에서 실행되는 오픈 소스 모델. 12.8만 토큰 컨텍스트, 완전한 파인튜닝 지원, 오프라인 작동을 제공합니다.' },
+          { '@type': 'Thing', 'name': '5년 총소유비용(TCO) 분석', 'description': 'Claude Pro $1,200 vs 로컬 Llama $1,300(중고 GPU) — 비용은 거의 동일하지만 트레이드오프가 다릅니다.' },
+        ],
       },
     },
   };

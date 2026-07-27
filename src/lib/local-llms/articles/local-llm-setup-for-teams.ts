@@ -1601,6 +1601,62 @@ schema: {
         'proficiencyLevel': 'Advanced',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Configurar um servidor LLM local para equipes',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Configuração para equipe pequena (5-10 usuários)', 'text': 'Servidor único vLLM + nginx + autenticação por token. Hardware: RTX 4090 + 64GB RAM + 1TB SSD. Custo: R$15.000 em hardware + R$250/mês em eletricidade.' },
+          { '@type': 'HowToStep', 'name': 'Configuração para equipe média (10-50 usuários)', 'text': 'Cluster dual-GPU + load balancer + monitoramento Prometheus. Hardware: 2× RTX 4090 + 128GB RAM. Custo: R$30.000 em hardware + R$500/mês em eletricidade.' },
+          { '@type': 'HowToStep', 'name': 'Configuração para equipe grande (50+ usuários)', 'text': 'Implantação empresarial com redundância, cache (Redis) e escalonamento automático. Custo: orçamento personalizado. Tempo de configuração: 1 mês, incluindo auditoria de segurança.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Quanto custa um servidor LLM local de equipe comparado a APIs na nuvem?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Configuração de servidor único: R$15.000 em hardware + R$250/mês em eletricidade (R$3.000/ano) frente a R$5.000+/mês em APIs na nuvem (R$60.000+/ano). Prazo de retorno para equipes ativas: 2 a 3 meses.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como configurar a autenticação de usuários no servidor LLM da equipe?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Empresas usam SSO (Active Directory / Okta) com OAuth 2.0. Equipes pequenas e médias usam autenticação simples por token. Todas as consultas são registradas com ID de usuário, timestamp e número de tokens para atribuição de custos.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que acontece se uma GPU falhar na configuração da equipe?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Use um cluster dual-GPU com load balancer: se a GPU 0 falhar, todas as requisições são roteadas automaticamente para a GPU 1, sem indisponibilidade. Em uma configuração de servidor único, o RAID protege os dados, mas a recuperação de falha de GPU exige redundância.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'É possível adicionar mais usuários sem comprar novo hardware?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, até 20-30 usuários simultâneos por GPU. Acima disso, adicione uma placa de GPU e reequilibre o load balancer. Uma RTX 4090 processa aproximadamente 5 tokens/s por usuário simultâneo.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como lidar com atualizações de modelo na configuração da equipe?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Baixe e teste o novo modelo em uma máquina separada antes de substituí-lo. O vLLM suporta hot-swap sem indisponibilidade: pausa novas requisições, conclui as consultas em andamento e então substitui os arquivos do modelo.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Devo usar Kubernetes na implantação de LLM local para equipes?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Desnecessário para menos de 50 usuários. Docker + docker-compose simples é mais direto e tem menos overhead. Kubernetes adiciona complexidade sem benefício correspondente para equipes pequenas.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'É possível cobrar dos membros da equipe com base no uso de tokens?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, por meio de relatórios showback. Use métricas do Prometheus para rastrear os tokens diários por usuário e depois rateie o custo do servidor proporcionalmente. Defina antes a política: custo compartilhado ou cobrança por departamento.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como fazer backup dos dados e logs dos usuários no servidor da equipe?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Faça backup diário de todos os logs de entrada e saída em armazenamento externo. Use redundância RAID 6 (sobrevive a 2 falhas simultâneas de disco). Teste a recuperação mensalmente para confirmar que os backups são válidos.' },
+          },
+        ],
+      },
       sections: {
         tldr: {
           id: 'tldr',
@@ -1621,6 +1677,22 @@ schema: {
             'Setores financeiros (Banco Central) e de saúde (ANS/ANVISA) no Brasil têm requisitos adicionais de localização de dados que a inferência local satisfaz nativamente.',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Configuração de LLM Local para Equipes Empresariais',
+        'numberOfItems': 8,
+        'itemListElement': [
+          { '@type': 'ListItem', position: 1, name: 'Equipe pequena (5-10): servidor único (vLLM) + nginx + autenticação = R$15K em hardware, R$250/mês em eletricidade.' },
+          { '@type': 'ListItem', position: 2, name: 'Equipe média (10-50): cluster dual-GPU + load balancer + monitoramento Prometheus = R$30K em hardware, R$500/mês em eletricidade.' },
+          { '@type': 'ListItem', position: 3, name: 'Equipe grande (50+): configuração empresarial com redundância, camada de cache (Redis), escalonamento automático = orçamento personalizado.' },
+          { '@type': 'ListItem', position: 4, name: 'Custo por usuário: R$50-500/mês conforme o volume de inferência (frente a R$1.000-2.500/mês em APIs na nuvem).' },
+          { '@type': 'ListItem', position: 5, name: 'Tempo de configuração: servidor único = 1 dia. Cluster = 1 semana. Empresarial = 1 mês (incluindo auditoria de segurança).' },
+          { '@type': 'ListItem', position: 6, name: 'Autenticação de API: OAuth 2.0 (SSO via AD/Okta) para empresas. Autenticação simples por token para PMEs.' },
+          { '@type': 'ListItem', position: 7, name: 'Rastreamento de uso: cada consulta é registrada com ID de usuário, timestamp e tokens gerados (para atribuição de custos).' },
+          { '@type': 'ListItem', position: 8, name: 'Carga administrativa: mínima (monitoramento automatizado). Evento de escalonamento = adicionar placa de GPU + reequilibrar (sem alterações de código).' },
+        ],
       },
     },
   ko: {

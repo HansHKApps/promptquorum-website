@@ -1099,6 +1099,22 @@ for filename, review in reviews:
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'pt-BR',
+        name: 'Guia de Stack de LLM Local por Caso de Uso',
+        numberOfItems: 7,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Escrita e Criação de Conteúdo', description: 'Ollama + OpenWebUI + Llama 3.3 (24GB) ou Llama 3.2 8B (8GB). Ideal para textos longos com janelas de contexto ajustáveis de 8K–32K. Configuração simples, sem necessidade de código.' },
+          { '@type': 'ListItem', position: 2, name: 'Desenvolvimento de Software e Revisão de Código', description: 'vLLM + Qwen3-Coder-7B-Instruct (RTX 3060 12GB) ou -14B (RTX 4070+). Mais rápido para inferência em lote (3–5× mais rápido que Ollama). 82% no HumanEval.' },
+          { '@type': 'ListItem', position: 3, name: 'RAG Local (Q&A de Documentos)', description: 'LlamaIndex + Ollama/vLLM + banco vetorial Qdrant + UI FastAPI. Chunking, embedding e recuperação integrados. Qdrant é autohospedado, privado e rápido.' },
+          { '@type': 'ListItem', position: 4, name: 'Agentes de IA e Workflows', description: 'LangGraph + vLLM (não Ollama) + definições de ferramentas. Loops de agente estruturados com uso explícito de ferramentas e memória. vLLM necessário para latência sub-segundo.' },
+          { '@type': 'ListItem', position: 5, name: 'Servidor de API Multi-Usuário', description: 'vLLM + balanceador de carga nginx + monitoramento Prometheus. Inferência distribuída entre múltiplas GPUs. Escala para 10+ usuários simultâneos.' },
+          { '@type': 'ListItem', position: 6, name: 'Fine-Tuning e Pesquisa', description: 'HuggingFace Transformers + LoRA + Ollama/vLLM para inferência. LoRA reduz o uso de VRAM em 10×. Treine em hardware dedicado, sirva na máquina de inferência.' },
+          { '@type': 'ListItem', position: 7, name: 'Streaming em Tempo Real', description: 'Ollama (endpoint de streaming nativo) ou vLLM + Server-Sent Events (SSE). Tokens em streaming melhoram a performance percebida e a UX.' },
+        ],
+      },
     },
     de: {
       theme: 'Tools & Schnittstellen',
@@ -2260,6 +2276,22 @@ schema: {
     { label: '실시간 채팅 (스트리밍)', anchor: '#streaming' },
     { label: '자주 묻는 질문', anchor: '#faq' },
   ],
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    inLanguage: 'ko',
+    name: '사용 사례별 로컬 LLM 스택 가이드',
+    numberOfItems: 7,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: '글쓰기 및 콘텐츠 제작', description: 'Ollama + OpenWebUI + Llama 3.3 (24GB) 또는 Llama 3.2 8B (8GB). 8K–32K 조절 가능한 컨텍스트 윈도우로 장문 작성에 최적. 코딩 불필요, 간단한 설정.' },
+      { '@type': 'ListItem', position: 2, name: '소프트웨어 개발 및 코드 리뷰', description: 'vLLM + Qwen3-Coder-7B-Instruct (RTX 3060 12GB) 또는 -14B (RTX 4070+). 배치 추론에서 가장 빠름 (Ollama보다 3–5배). HumanEval 82% 점수.' },
+      { '@type': 'ListItem', position: 3, name: '로컬 RAG (문서 Q&A)', description: 'LlamaIndex + Ollama/vLLM + Qdrant 벡터 데이터베이스 + FastAPI UI. 문서 청킹, 임베딩, 검색이 통합됨. Qdrant는 셀프호스팅, 프라이빗, 빠름.' },
+      { '@type': 'ListItem', position: 4, name: 'AI 에이전트 및 워크플로', description: 'LangGraph + vLLM (Ollama 아님) + 도구 정의. 명시적 도구 사용과 메모리를 갖춘 구조화된 에이전트 루프. 서브초 지연을 위해 vLLM 필수.' },
+      { '@type': 'ListItem', position: 5, name: '다중 사용자 API 서버', description: 'vLLM + nginx 로드 밸런서 + Prometheus 모니터링. 여러 GPU에 걸친 분산 추론. 10명 이상의 동시 사용자로 확장.' },
+      { '@type': 'ListItem', position: 6, name: '파인튜닝 및 연구', description: 'HuggingFace Transformers + LoRA + 추론용 Ollama/vLLM. LoRA는 VRAM 사용량을 10배 줄임. 전용 하드웨어에서 훈련, 추론 머신에서 서빙.' },
+      { '@type': 'ListItem', position: 7, name: '실시간 스트리밍', description: 'Ollama (네이티브 스트리밍 엔드포인트) 또는 vLLM + Server-Sent Events (SSE). 스트리밍 토큰은 체감 성능과 UX를 개선.' },
+    ],
+  },
   sections: {
     tldr: {
       id: 'tldr',

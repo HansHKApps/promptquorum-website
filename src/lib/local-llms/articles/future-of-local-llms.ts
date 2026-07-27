@@ -943,7 +943,7 @@ schema: {
       },
       schema: {
         '@context': 'https://schema.org',
-        '@type': 'TechArticle',
+        '@type': 'BlogPosting',
         headline: 'Tendências de LLM local 2026–2027: 5 previsões principais para adoção empresarial',
         description: 'A qualidade dos modelos pequenos por parâmetro continua melhorando em 2026. Smartphones executam LLMs a 15–30 tok/s. Raciocínio melhora a precisão em 15–30%.',
         url: 'https://www.promptquorum.com/pt/local-llms/future-of-local-llms',
@@ -961,6 +961,20 @@ schema: {
         mainEntity: [
           { '@type': 'Question', name: 'Os modelos de 1–3B realmente rivalizam com os 7B em 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Para tarefas específicas de domínio, sim. Modelos de 1–3B com fine-tuning (Phi-4 Mini, Gemma 3 2B) superam modelos de 7B genéricos em tarefas especializadas. Para uso geral, os 7B ainda são superiores.' } },
           { '@type': 'Question', name: 'Quando os smartphones executarão LLMs localmente de forma confiável?', acceptedAnswer: { '@type': 'Answer', text: 'Já estão em 2026: iPhone 16 Pro (A18 Pro) roda Llama 3.2 1B/3B localmente via Core ML. Snapdragon X Elite roda Llama 3.2 8B a 15–30 tok/s. Para modelos 7B+, ainda é necessário hardware dedicado.' } },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'pt-BR',
+        name: 'Principais Tendências de LLM Local em 2026–2027',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Modelos menores atingindo qualidade 7B', description: 'A qualidade por parâmetro dos modelos pequenos continua melhorando ano a ano. Prático para resumo e Q&A com 4 GB de RAM.' },
+          { '@type': 'ListItem', position: 2, name: 'IA em dispositivo em smartphones', description: 'iPhones A18 e Snapdragon X Elite executam modelos de 1–3B a 15–30 tok/s. Privacidade total, sem internet, compatível com a LGPD.' },
+          { '@type': 'ListItem', position: 3, name: 'Modelos de raciocínio melhorando a precisão', description: 'Modelos chain-of-thought (DeepSeek-R1, OpenAI o1) melhoram a precisão em matemática/lógica/multi-etapas em 15–30%. Trade-off: 3–5x mais tokens por resposta.' },
+          { '@type': 'ListItem', position: 4, name: 'Ferramentas de fine-tuning sem código lançando', description: 'Plataformas de fine-tuning baseadas em GUI (Unsloth, sucessores do Axolotl) esperadas para o final de 2026–2027. Atualmente só via linha de comando; tempos de treinamento em queda conforme as ferramentas amadurecem.' },
+          { '@type': 'ListItem', position: 5, name: 'Adoção empresarial on-premises', description: 'Setores regulados — bancos, saúde, jurídico — adotam inferência on-prem primeiro, impulsionados em parte por regras de residência de dados. Mid-market e PMEs seguem conforme os custos de hardware caem.' },
         ],
       },
     },
@@ -2137,6 +2151,33 @@ schema: {
         { label: '자주 묻는 질문', anchor: '#faq' },
         { label: '관련 읽을거리', anchor: '#related-reading' },
       ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: '로컬 LLM 트렌드 2026–2027: 기업 도입과 온디바이스 AI를 위한 5가지 핵심 예측',
+        description: '소형 모델의 파라미터당 품질은 2026년에도 계속 향상되고 있습니다. 스마트폰이 15–30 tok/sec으로 로컬 LLM을 실행합니다.',
+        url: 'https://www.promptquorum.com/ko/local-llms/future-of-local-llms',
+        inLanguage: 'ko',
+        datePublished: '2026-04-04',
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        proficiencyLevel: 'Intermediate',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'ko',
+        name: '2026–2027년 주요 로컬 LLM 트렌드',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '소형 모델이 7B 품질에 도달', description: '파라미터당 소형 모델 품질이 해마다 계속 향상되고 있습니다. 4GB RAM에서 요약과 Q&A에 실용적입니다.' },
+          { '@type': 'ListItem', position: 2, name: '스마트폰의 온디바이스 AI', description: 'iPhone A18과 Snapdragon X Elite가 1–3B 모델을 15–30 tok/sec으로 실행합니다. 완전한 프라이버시, 인터넷 불필요, GDPR 5조 준수.' },
+          { '@type': 'ListItem', position: 3, name: '추론 모델의 정확도 향상', description: 'Chain-of-thought 모델(DeepSeek-R1, OpenAI o1)이 수학/논리/다단계 정확도를 15–30% 향상시킵니다. 트레이드오프: 응답당 토큰 3–5배 증가.' },
+          { '@type': 'ListItem', position: 4, name: '노코드 파인튜닝 도구 출시', description: 'GUI 기반 파인튜닝 플랫폼(Unsloth, Axolotl 후속작)이 2026년 말–2027년 출시 예정입니다. 현재는 명령줄 전용이며, 도구가 성숙해지면서 훈련 시간이 감소하는 추세입니다.' },
+          { '@type': 'ListItem', position: 5, name: '기업 온프레미스 도입', description: '금융, 의료, 법률 등 규제 산업이 데이터 거주 규정에 힘입어 온프레미스 추론을 먼저 도입합니다. 하드웨어 비용이 하락하면서 중견기업과 중소기업이 뒤따릅니다.' },
+        ],
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',

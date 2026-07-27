@@ -1120,6 +1120,64 @@ schema: {
           'Setores financeiros e de saúde no Brasil também estão sujeitos às regulamentações do Banco Central e da ANVISA — a inferência local satisfaz os requisitos de residência de dados por padrão.',
         ],
       },
+      checklist: {
+        title: 'O que inclui a lista de verificação de segurança para LLMs locais?',
+        content: '**Verifique cada item abaixo antes de trabalhar com dados sensíveis ou regulados.** A lista de verificação cobre as lacunas de privacidade e segurança mais comuns em configurações do Ollama, LM Studio, Jan AI e GPT4All.',
+        numberedItems: [
+          { title: 'Baixe modelos apenas de fontes confiáveis', whyItMatters: 'Evita arquivos de modelos maliciosos vindos de fontes não confiáveis.' },
+          { title: 'Verifique os checksums do modelo para uso sensível', whyItMatters: 'Garante que os arquivos de modelo baixados não foram adulterados.' },
+          { title: 'Desative a telemetria na sua ferramenta de inferência', whyItMatters: 'Evita a coleta de dados de uso e informações de sessão.' },
+          { title: 'Confirme que o Ollama está vinculado apenas ao localhost', whyItMatters: 'Evita que a API fique exposta a outros dispositivos na sua rede.' },
+          { title: 'Habilite a criptografia de disco completo', whyItMatters: 'Protege os pesos do modelo e os registros de chat caso o dispositivo seja perdido ou roubado.' },
+          { title: 'Armazene registros de chat sensíveis em uma pasta criptografada', whyItMatters: 'Protege o histórico de conversas com dados sensíveis contra acesso não autorizado.' },
+          { title: 'Revise extensões e plugins instalados', whyItMatters: 'Evita que extensões de terceiros maliciosas acessem a rede.' },
+          { title: 'Use uma conta de usuário dedicada para trabalho com LLMs', whyItMatters: 'Isola arquivos de modelo, histórico de chat e chaves de API do seu perfil principal.' },
+          { title: 'Não exponha a API local à internet', whyItMatters: 'Evita acesso remoto não autorizado ao seu motor de inferência local.' },
+          { title: 'Audite os system prompts em qualquer app que use LLMs locais', whyItMatters: 'Evita a exfiltração de dados por meio de extensões de navegador ou integrações de ferramentas de produtividade.' },
+          { title: 'Mantenha as ferramentas de inferência atualizadas', whyItMatters: 'Corrige vulnerabilidades de segurança conhecidas no Ollama, LM Studio e ferramentas relacionadas.' },
+          { title: 'Para ambientes air-gapped ou regulados: documente as versões de modelo aprovadas', whyItMatters: 'Garante conformidade com requisitos regulatórios de tratamento de dados e isolamento de infraestrutura.' },
+        ],
+        image: '/images/local-llm-security-privacy-checklist-checklist-overview-hero-pt.png',
+        imageCaption: 'Verifique cada item antes de trabalhar com dados sensíveis ou regulados.',
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Quais são as perguntas de segurança mais comuns sobre LLMs locais?',
+        faqs: [
+          {
+            q: 'Um LLM local pode acessar meus arquivos ou a internet?',
+            a: 'Não -- o modelo em si é um arquivo estático que gera texto. Ele não tem capacidade de ler seu sistema de arquivos ou fazer solicitações de rede. No entanto, a ferramenta de inferência que executa o modelo (Ollama, LM Studio) tem acesso normal em nível de sistema operacional. Algumas ferramentas incluem funções que realmente leem arquivos -- como o LocalDocs do GPT4All ou o recurso de anexar arquivos do LM Studio. Esses recursos são opt-in e explicitamente documentados.',
+          },
+          {
+            q: 'É seguro usar um LLM local com dados cobertos pela HIPAA?',
+            a: 'A inferência local elimina o risco do processador de dados terceirizado que as APIs em nuvem criam. No entanto, a conformidade com a HIPAA exige mais do que inferência privada -- você precisa de criptografia de disco completo, controles de acesso, registro de auditoria e um Acordo de Associado Comercial (BAA) caso algum fornecedor de software possa acessar PHI. Usar o Ollama com o FileVault habilitado e a telemetria desativada é um ponto de partida razoável, mas a conformidade formal com a HIPAA exige uma avaliação de risco completa.',
+          },
+          {
+            q: 'O Ollama envia meus prompts para algum lugar?',
+            a: 'Não. O Ollama é de código aberto (github.com/ollama/ollama) e não contém código de telemetria ou coleta de dados. Os prompts são processados localmente pelo llama.cpp e nunca são transmitidos. A única atividade de rede de saída do Ollama são os downloads de modelos a partir de ollama.com quando você executa `ollama pull`.',
+          },
+          {
+            q: 'Usar um LLM local é mais privado do que usar a API da OpenAI?',
+            a: 'Sim, em termos de privacidade dos prompts. Com um LLM local, seus prompts nunca saem da sua máquina. A API da OpenAI envia os prompts para os servidores da OpenAI para processamento. Os Termos de Serviço da API da OpenAI afirmam que a entrada/saída da API não é usada para treinar modelos por padrão, mas os dados transitam pela infraestrutura deles. Para dados sensíveis ou regulados (médicos, jurídicos, financeiros), a inferência local é a escolha mais conservadora.',
+          },
+          {
+            q: 'Como verifico se um arquivo de modelo baixado é seguro?',
+            a: 'Baixe modelos apenas do Hugging Face (huggingface.co) ou da biblioteca oficial do Ollama. No Hugging Face, cada arquivo mostra um hash SHA256 -- verifique-o com `sha256sum <model_file>` após o download. Fique com modelos de publicadores conhecidos: Meta, Google, Microsoft, Mistral AI e Qwen/Alibaba. Evite compartilhamentos anônimos de arquivos ou postagens em servidores do Discord.',
+          },
+          {
+            q: 'Qual é a diferença entre privacidade e segurança para LLMs locais?',
+            a: 'Privacidade significa que seus prompts e saídas não são acessíveis a terceiros. Segurança significa que seu sistema está protegido contra ameaças. Um LLM local pode ser privado (nenhum dado sai da sua máquina), mas inseguro (modelo baixado de uma fonte não confiável, ou API do Ollama exposta na rede). Ambos precisam ser tratados de forma independente.',
+          },
+          {
+            q: 'Posso usar um LLM local para dados regulados pela LGPD?',
+            a: 'A inferência local reduz significativamente o risco de conformidade com a LGPD porque os dados não saem da sua infraestrutura. No entanto, você ainda deve verificar se a ferramenta de inferência (Ollama, LM Studio) tem a telemetria desativada, se a criptografia de disco está habilitada e se os controles de acesso estão em vigor. Para requisitos de relatório de impacto à proteção de dados, documente sua configuração de tratamento de dados e confirme que nenhum dado pessoal transita por servidores de terceiros.',
+          },
+          {
+            q: 'O LM Studio envia dados para os servidores dele?',
+            a: 'O LM Studio coleta análises anônimas por padrão (contagens de sessões, nomes de modelos usados, métricas de desempenho). Ele não envia o conteúdo dos prompts. Para desativar as análises: Configurações → Privacidade → desmarque "Enviar dados de uso anônimos". A inferência do modelo e os registros de chat permanecem locais independentemente dessa configuração.',
+          },
+        ],
+      },
     },
   },
 

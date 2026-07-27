@@ -1155,6 +1155,32 @@ schema: {
         proficiencyLevel: 'Advanced',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'llama.cpp vs vLLM vs Text-Generation-WebUI 2026',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'llama.cpp',
+            'description': 'Biblioteca em C++. Excelente em CPU, boa em GPU. 1-100 tok/s. Formato GGUF. Motor por trás do Ollama. Melhor para dispositivos de consumo e inferência em CPU.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'vLLM',
+            'description': 'Framework em Python. Somente GPU (NVIDIA). 100-1000+ tok/s com batching. Precisão total e 8/4-bit. Melhor para servidores de API em produção com 50+ usuários simultâneos.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Text-Generation-WebUI',
+            'description': 'Aplicativo Python com interface web integrada. CPU e GPU. 1-100 tok/s. GGUF, safetensors, fp16. Fine-tuning com LoRA integrado. Melhor para pesquisa e experimentação.',
+          },
+        ],
+      },
     },
     de: {
       theme: 'Tools & Interfaces',
@@ -2677,6 +2703,32 @@ schema: {
             'oobabooga. (2024). **"Text-Generation-WebUI GitHub."** [https://github.com/oobabooga/text-generation-webui](https://github.com/oobabooga/text-generation-webui) -- Text-Generation-WebUI 소스 코드 및 설치 가이드.',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'llama.cpp vs vLLM vs Text-Generation-WebUI 2026',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'llama.cpp',
+            'description': 'C++ 라이브러리. CPU에서 탁월, GPU에서도 우수. 1-100 tok/s. GGUF 포맷. Ollama의 기반 엔진. 소비자 기기 및 CPU 추론에 최적.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'vLLM',
+            'description': 'Python 프레임워크. GPU 전용(NVIDIA). 배칭 시 100-1000+ tok/s. 전체 정밀도 및 8/4비트 지원. 동시 사용자 50명 이상인 프로덕션 API 서버에 최적.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Text-Generation-WebUI',
+            'description': '내장 웹 UI가 있는 Python 앱. CPU 및 GPU 지원. 1-100 tok/s. GGUF, safetensors, fp16. LoRA 파인튜닝 내장. 연구 및 실험에 최적.',
+          },
+        ],
       },
     },
   };

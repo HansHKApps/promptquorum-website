@@ -1031,6 +1031,65 @@ schema: {
             'Limitação de potência (power limit) para 80% pode economizar 20% de energia com apenas 5% de queda de desempenho.',
           ],
         },
+        faqSection: {
+          id: 'faq',
+          title: 'FAQ sobre energia e resfriamento',
+          callouts: [
+            { type: 'insight', text: 'A inferência com limitação de potência a 60% do TDP é uma prática comum em data centers. A RTX 4090 a 350W (60% de 575W) entrega 90% do desempenho máximo com 40% menos custo de eletricidade e menos carga de resfriamento.' },
+          ],
+          faqs: [
+            {
+              q: 'Quanta energia consome a execução de um LLM local?',
+              a: 'O consumo depende do nível da GPU. RTX 4090: 575W no pico (600W em média com o sistema). RTX 4080: 320W na GPU (450W no sistema). RTX 4070 Ti: 290W na GPU (400W no sistema). Mac com Apple M5 Max: 25–35W no total — de longe a opção mais eficiente energeticamente. A inferência mantém a GPU em 90–100% de utilização continuamente.',
+            },
+            {
+              q: 'Quanto custa rodar um LLM local 24/7?',
+              a: 'À tarifa residencial média brasileira de R$0,90/kWh: um sistema com RTX 4090 custa ~R$280/mês. Sistema com RTX 4070: ~R$97/mês. Mac com Apple M5 Max: ~R$13,50/mês. As tarifas variam por região — rodar a inferência apenas em horário comercial (8h/dia) reduz os custos em ~67%.',
+            },
+            {
+              q: 'Qual potência de fonte (PSU) preciso para uma RTX 4090?',
+              a: 'Fonte mínima de 1000W; 1200W é o recomendado. A RTX 4090 consome 575W no pico. Somando CPU (150–170W), placa-mãe/RAM/armazenamento (100W) e uma margem de segurança de 20%, a carga total do sistema chega a ~900W. Uma fonte de 750W causará desligamentos sob carga sustentada de inferência de LLM. Compre sempre de marcas de fonte confiáveis (Seasonic, Corsair, EVGA).',
+            },
+            {
+              q: 'A Apple Silicon é mais eficiente que a NVIDIA para LLMs locais?',
+              a: 'Sim — por uma margem grande. O M5 Max (128 GB unificados) executa modelos de 7B a 65–85 tok/s com apenas 25–35W de consumo total do sistema. Uma RTX 4090 executa o mesmo modelo a 150 tok/s com 600W. O M5 Max usa ~10× menos energia por token que a RTX 4090, além de oferecer um pool de memória 4× maior (128 GB vs. 32 GB) para modelos de 70B.',
+            },
+            {
+              q: 'Qual temperatura de GPU é segura para inferência sustentada de LLM?',
+              a: 'Mantenha a temperatura da GPU abaixo de 83°C para inferência sustentada. O throttle térmico da RTX 4090 é acionado a 83°C, reduzindo os clocks e a velocidade de inferência em 10–20%. Faixa ideal de operação: 65–75°C. Use `nvidia-smi -q -d TEMPERATURE` para monitorar. Se as temperaturas ultrapassarem 80°C, melhore o fluxo de ar do gabinete ou substitua a pasta térmica.',
+            },
+            {
+              q: 'Como reduzir o consumo de energia sem perder velocidade de inferência?',
+              a: 'Limite a potência da GPU (NVIDIA) sem reduzir os clocks. RTX 4090: definir o limite de potência para 350W (a partir de 575W) reduz o consumo em 40% com apenas ~10% de perda de velocidade — o ponto ideal para inferência eficiente. Use `nvidia-smi -pl 350` para definir o limite de potência. Usuários de Apple Silicon: nenhum ajuste é necessário, o hardware já é otimizado.',
+            },
+            {
+              q: 'O que é TDP e por que ele importa para LLMs locais?',
+              a: 'TDP (Thermal Design Power) é o calor máximo que uma GPU gera em carga máxima, medido em watts. A NVIDIA classifica o TDP da RTX 4090 em 575W, mas a inferência real pode chegar a 600W+ dependendo dos limites de potência e clocks. O TDP importa porque determina o tamanho mínimo da fonte e os requisitos de resfriamento. TDP mais alto = fonte maior, mais custo de eletricidade, mais resfriamento necessário.',
+            },
+            {
+              q: 'Rodar um LLM local danifica minha GPU?',
+              a: 'Não — a inferência sustentada não danifica uma GPU saudável se o resfriamento for adequado. As GPUs são projetadas para rodar a 100% de utilização 24/7 (é isso que os data centers fazem). Os riscos reais são: (1) resfriamento ruim causa throttling e reduz a vida útil, (2) picos de energia de uma fonte subdimensionada podem causar desligamentos, (3) poeira/fluxo de ar ruim degrada o desempenho ao longo dos anos. Monitore as temperaturas e mantenha um bom fluxo de ar, e sua GPU durará 5+ anos.',
+            },
+          ],
+        },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Comparação de Consumo de Energia de GPU para LLM Local 2026',
+        numberOfItems: 10,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Apple M5 Pro (GPU)', description: '20–28W. A mais eficiente. 64 GB de memória unificada. Operação silenciosa.' },
+          { '@type': 'ListItem', position: 2, name: 'Apple M5 Max (GPU)', description: '25–35W. 128 GB unificados. 65–85 tok/s em modelos de 7B. 10× mais eficiente por token que a RTX 4090.' },
+          { '@type': 'ListItem', position: 3, name: 'RTX 4070', description: '200W de TDP. 12 GB de VRAM. Fonte de 650W. Opção NVIDIA de entrada eficiente.' },
+          { '@type': 'ListItem', position: 4, name: 'RTX 5070', description: '250W de TDP. 12 GB de VRAM. Fonte de 800W.' },
+          { '@type': 'ListItem', position: 5, name: 'RTX 4070 Ti', description: '285W de TDP. 12 GB de VRAM. Fonte de 750W.' },
+          { '@type': 'ListItem', position: 6, name: 'RTX 4080', description: '320W de TDP. 16 GB de VRAM. Fonte de 850W.' },
+          { '@type': 'ListItem', position: 7, name: 'AMD RX 7900 XTX', description: '355W de TDP. 24 GB de VRAM. Fonte de 850W. Melhor opção não NVIDIA.' },
+          { '@type': 'ListItem', position: 8, name: 'RTX 5080', description: '360W de TDP. 16 GB de VRAM. Fonte de 1000W.' },
+          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '450W de TDP base, 575W no máximo. 24 GB de VRAM. Fonte de 1200W. ~R$280/mês à tarifa residencial média brasileira.' },
+          { '@type': 'ListItem', position: 10, name: 'RTX 5090', description: '575W de TDP. 32 GB GDDR7. Fonte de 1200W+. Maior consumo para o maior desempenho.' },
+        ],
       },
     },
     de: {

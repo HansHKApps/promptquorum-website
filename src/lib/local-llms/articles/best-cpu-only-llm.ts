@@ -1076,6 +1076,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Melhores LLMs somente CPU 2026',
+        'url': 'https://www.promptquorum.com/pt/local-llms/best-cpu-only-llm',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — Melhor CPU LLM Geral (3.8B, 12 tok/s)' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 3 2B — Mais Rápido em CPU (1.5 GB, 15 tok/s)' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.2 3B — Melhor Equilíbrio Qualidade/Velocidade (2 GB, 10 tok/s)' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Mistral Small Q4 — Melhor Qualidade com 16+ GB de RAM (4.5 GB, 5 tok/s)' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B Q4 — Melhor para Programação em CPU (5 GB, 4 tok/s)' },
+        ],
+      },
     },
     de: {
       freshness_tier: 'semi_annual',

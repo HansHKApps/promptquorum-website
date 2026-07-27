@@ -939,12 +939,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**O melhor benchmark é testar em sua própria tarefa.** Benchmarks genéricos como MMLU existem principalmente em inglês. Para avaliação multilíngue, use:',
           ],
-          items: [
-            '**JMT-bench (japonês):** Conjunto de instruções em japonês para testar seguimento de instruções, código e análise.',
-            '**Ko-bench (coreano):** Benchmark de seguimento de instruções em coreano.',
-            '**MMLU multilíngue:** Versões em 14 idiomas do MMLU para testar o conhecimento do mundo.',
-            '**Teste manual:** Envie 10 prompts em seu idioma alvo e avalie subjetivamente a gramática, naturalidade e precisão.',
-            '**Teste de tokenização:** Use `ollama run qwen3:7b "Conte os tokens nesta frase em japonês"` para verificar se o modelo lida com o script corretamente.',
+          numberedItems: [
+            'Execute o MGSM (Multilingual Grade School Math) -- testa o raciocínio matemático em 10 idiomas. Disponível no Hugging Face: datasets/juletxara/mgsm.',
+            'Execute o m-MMLU -- a versão multilíngue do MMLU, cobrindo 57 disciplinas em vários idiomas.',
+            'Para qualidade conversacional: escreva 10 prompts de teste no idioma alvo cobrindo diferentes tipos de tarefa (resumo, perguntas e respostas, tradução, escrita criativa). Avalie as respostas manualmente ou com um falante nativo.',
+            'Para japonês especificamente: use o JMT-bench (github.com/Stability-AI/lm-evaluation-harness), que cobre o seguimento de instruções em japonês.',
+            'Compare seu modelo local com APIs na nuvem usando o [PromptQuorum](/pt) -- envie o mesmo prompt multilíngue simultaneamente para seu modelo Ollama local e para o GPT-5.5 para quantificar a diferença de qualidade no seu caso de uso específico.',
           ],
         },
         comparisonTable: {

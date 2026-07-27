@@ -1030,6 +1030,19 @@ schema: {
           { '@type': 'Question', name: 'Qual GPU tem o melhor ROI para LLMs locais em 2026?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 5060 Ti 16 GB (nova ~$450–500, usada ~$280–350) oferece o melhor equilíbrio de custo-benefício. Cobre modelos 7B–13B confortavelmente e paga-se em 18–24 meses vs ChatGPT Plus.' } },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'ROI de 5 Anos: GPU vs ChatGPT Plus por Nível de Uso 2026',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Usuário ocasional (2 horas/semana)', description: 'GPU $600 no total vs ChatGPT Plus $1.200. A GPU perde por $600. Continue com a assinatura.' },
+          { '@type': 'ListItem', position: 2, name: 'Usuário casual (5 horas/semana)', description: 'GPU $600 no total vs ChatGPT Plus $1.200. A GPU economiza $600. Ponto de equilíbrio: 18–24 meses.' },
+          { '@type': 'ListItem', position: 3, name: 'Usuário regular (10 horas/semana)', description: 'GPU $750 no total vs ChatGPT Plus $1.200. A GPU economiza $450 + sem limites de taxa. Ponto de equilíbrio: 12–14 meses.' },
+          { '@type': 'ListItem', position: 4, name: 'Usuário avançado (20 horas/semana)', description: 'GPU $1.050 no total vs ChatGPT Plus $1.200. A GPU economiza $150 + consultas ilimitadas. Ponto de equilíbrio: 9–12 meses.' },
+          { '@type': 'ListItem', position: 5, name: 'Usuário intensivo (40+ horas/semana)', description: 'GPU $1.650 vs upgrade forçado para Pro $100 ($6.000/5 anos). A GPU economiza $4.350 + sem limites de taxa. Pro $100 é essencial se depender apenas da nuvem.' },
+        ],
+      },
     },
     de: {
     theme: 'Kosten & Vergleiche',
@@ -1203,6 +1216,45 @@ schema: {
           { type: '🛠️ Best Practice', text: 'China: Lokale LLMs sind zwingend erforderlich für Unternehmen; keine Abonnement-Alternativen verfügbar.' },
         ],
       },
+      'faqSection': {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
+        content: '**Hier sind die häufigsten Fragen zu GPU vs Abonnement-ROI und wie Sie entscheiden:**',
+        faqs: [
+          {
+            q: 'Was, wenn die Stromkosten in meiner Region deutlich höher sind?',
+            a: 'Bei 0,30 €/kWh (europäische Tarife) kostet eine RTX 4070 60 €/Jahr Strom statt 30 €. Der Payback-Zeitraum verlängert sich auf 2 Jahre statt 1,5. Bei 5+ Stunden/Woche weiterhin wettbewerbsfähig.',
+          },
+          {
+            q: 'Beeinflusst die Preisvolatilität bei GPUs den ROI?',
+            a: 'Ja. Gebrauchte RTX-4090-Preise lagen 2024–2025 zwischen 800 € und 1.200 €. Neue GPU-Markteinführungen (NVIDIA RTX 5090 in 2025) können Gebrauchtpreise um 20–40 % senken.',
+          },
+          {
+            q: 'Kann ich eine GPU als Betriebsausgabe abschreiben?',
+            a: 'Wenn die KI-Nutzung geschäftlich ist, ja. Abschreibung über 5–7 Jahre reduziert die effektiven Kosten. Abonnements sind sofort abzugsfähige Ausgaben. Konsultieren Sie einen Steuerberater.',
+          },
+          {
+            q: 'Was, wenn ich eine GPU kaufe und sie dann nicht mehr nutze?',
+            a: 'Wiederverkaufswert: Eine RTX 4070 erzielt 60–70 % des Kaufpreises, eine RTX 4090 50–65 %. Sie erhalten den Großteil der Kosten zurück. Abonnement-Zahlungen sind verlorene Kosten.',
+          },
+          {
+            q: 'Passt die Miete von Cloud-GPUs in diese Analyse?',
+            a: 'Cloud-GPUs (Lambda Labs 2,50 €/Std.) kosten pro Stunde 10- bis 50-mal mehr als lokale Hardware. Nur für kurzfristige Lastspitzen sinnvoll, nicht für dauerhafte Nutzung.',
+          },
+          {
+            q: 'Rechtfertigen zukünftige Modelle (GPT-5, Claude 4) die Beibehaltung von Abonnements?',
+            a: 'Möglicherweise. Wenn GPT-5 nur über ein Abonnement verfügbar ist, können lokale Llama-Äquivalente hinterherhinken. Für Zukunftssicherheit ist ein Hybrid-Ansatz (lokal + Abonnement) ratsam.',
+          },
+          {
+            q: 'Sollte ich ChatGPT Pro für 100 € statt einer GPU kaufen?',
+            a: 'Pro 100 € (eingeführt am 9. April 2026) kostet 1.200 €/Jahr — vergleichbar mit einer neuen RTX 5060 Ti 16 GB. Pro 100 € enthält GPT-5.4 Pro (höchste Qualität) und den o1-Pro-Reasoning-Modus. Für Nutzer, die maximale Cloud-Qualität ohne eigene Infrastruktur benötigen: Pro 100 € schlägt lokale Lösungen. Für Nutzer, die die Qualität von Llama 3.3 70B akzeptieren (~82 % von GPT-5.2 auf MMLU): Eine gebrauchte RTX 4090 für 1.400 € amortisiert sich in 14 Monaten und läuft danach dauerhaft weiter.',
+          },
+          {
+            q: 'Ändert der Mac mini M5 die Rechnung GPU vs. Abonnement?',
+            a: 'Der Mac mini M5 Pro wird für Mitte 2026 erwartet (geschätzt 1.599 € mit 64 GB Unified Memory). Er führt Llama 3.3 70B mit 15–20 Tokens/Sek. aus — vergleichbar mit einem 2.000-€-RTX-5090-Aufbau. Für Mac-Nutzer ändert das die Rechnung deutlich: lautloser Betrieb, kein CUDA-Setup, sofort einsatzbereites Ollama. Payback gegenüber ChatGPT Plus: ca. 6,5 Jahre bei 20 €/Monat. Schneller im Vergleich zu Pro 100 € (16 Monate).',
+          },
+        ],
+      },
       'commonMistakes': {
         id: 'common-mistakes',
         title: 'Häufige Fehler in GPU vs Abonnement ROI-Analyse',
@@ -1263,6 +1315,21 @@ schema: {
         { '@type': 'Thing', 'name': 'Lokales LLM Payback' },
       ],
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'url': 'https://www.promptquorum.com/de/local-llms/gpu-vs-ai-subscription-roi',
+      'mainEntity': [
+        { '@type': 'Question', 'name': 'Was, wenn die Stromkosten in meiner Region deutlich höher sind?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bei 0,30 €/kWh (europäische Tarife) kostet eine RTX 5060 Ti 60 €/Jahr Strom statt 30 €. Der Payback-Zeitraum verlängert sich auf 2 Jahre. Bei 5+ Stunden/Woche weiterhin wettbewerbsfähig.' } },
+        { '@type': 'Question', 'name': 'Beeinflusst die Preisvolatilität bei GPUs den ROI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Gebrauchtpreise für GPUs schwanken saisonal. Neue Markteinführungen (RTX 5090 in 2025) können Gebrauchtpreise um 20–40 % senken. Beobachten Sie eBay für 6 Monate alte Karten.' } },
+        { '@type': 'Question', 'name': 'Kann ich eine GPU als Betriebsausgabe abschreiben?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, sofern geschäftlich genutzt. Abschreibung über 5–7 Jahre. Abonnements sind sofort abzugsfähige Ausgaben. Konsultieren Sie einen Steuerberater zur steuerlichen Behandlung.' } },
+        { '@type': 'Question', 'name': 'Was, wenn ich eine GPU kaufe und sie dann nicht mehr nutze?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Wiederverkaufswert: Eine RTX 5060 Ti erzielt nach 3 Jahren 60–70 % des Kaufpreises. Sie erhalten den Großteil der Kosten zurück. Abonnement-Zahlungen sind verlorene Kosten.' } },
+        { '@type': 'Question', 'name': 'Passt die Miete von Cloud-GPUs in diese Analyse?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Cloud-GPUs (Lambda Labs 2,50 €/Std.) sind 10- bis 50-mal teurer als lokale Hardware. Nur für kurzfristige Lastspitzen geeignet, nicht für dauerhafte Nutzung.' } },
+        { '@type': 'Question', 'name': 'Rechtfertigen zukünftige Modelle (GPT-6, Claude 5) die Beibehaltung von Abonnements?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Möglicherweise. Wenn GPT-6 nur per Abonnement verfügbar ist, können lokale Llama-Äquivalente 6–12 Monate hinterherhinken. Ein Hybrid-Ansatz (lokal + Abonnement) macht Ihr Setup zukunftssicher.' } },
+        { '@type': 'Question', 'name': 'Sollte ich ChatGPT Pro für 100 € statt einer GPU kaufen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pro 100 € (1.200 €/Jahr) ist vergleichbar mit den Kosten einer RTX 5060 Ti. Für maximale Cloud-Qualität gewinnt Pro 100 €. Für akzeptable lokale Qualität (82 % Parität): eine gebrauchte RTX 4090 (1.400 €) amortisiert sich in 14 Monaten.' } },
+        { '@type': 'Question', 'name': 'Ändert der Mac mini M5 die Rechnung GPU vs. Abonnement?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Der Mac mini M5 Pro (erwartet Mitte 2026, ca. 1.599 €, 64 GB) führt Llama 3.3 70B mit 15–20 Tokens/Sek. aus. Für Mac-Nutzer: lautlos, sofort einsatzbereit. Payback vs. Plus: 6,5 Jahre. vs. Pro 100 €: 16 Monate.' } },
+      ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',

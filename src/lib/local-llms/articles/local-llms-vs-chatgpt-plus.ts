@@ -2231,6 +2231,21 @@ schema: {
         'audience': { '@type': 'Audience', 'audienceType': 'Iniciantes avaliando LLM local vs assinaturas de IA na nuvem' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Níveis de Preço do ChatGPT em Abril de 2026',
+        'numberOfItems': 7,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Free', 'description': '$0/mês. GPT-5.3 com anúncios desde fevereiro de 2026. 10 mensagens a cada 5 horas. Para usuários ocasionais.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Go', 'description': '$8/mês. GPT-5.3 com anúncios. Limites maiores que o Free (~100 mensagens/5h). Opção econômica com modelo com anúncios.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Plus', 'description': '$20/mês. GPT-5.2 + Thinking. 160 mensagens a cada 3 horas + 3.000 consultas Thinking por semana. Sem anúncios. Melhor custo-benefício para a maioria dos usuários.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Pro $100', 'description': '$100/mês. Lançado em 9 de abril de 2026. 5× os limites de uso do Plus. Acesso ao GPT-5.4 Pro e ao modo o1 Pro. Para usuários avançados que atingem os limites do Plus.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Pro $200', 'description': '$200/mês. Nível Pro original. 20× os limites de uso do Plus. Nível Codex mais alto e acesso a todos os modelos. Para uso profissional intenso.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Business', 'description': '$25 por usuário por mês. GPT-5.2 com controles administrativos e SSO. Sem treinamento com dados da empresa. Para equipes com 2+ usuários.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Enterprise', 'description': 'Preço personalizado. Acesso ilimitado, garantias de SLA, recursos completos de conformidade, capacidade dedicada. Para grandes organizações.' },
+        ],
+      },
     },
   ko: {
       freshness_tier: 'annual',
@@ -2461,6 +2476,21 @@ schema: {
             '[Framework Desktop (AMD Ryzen AI Max 395+)](https://frame.work/desktop) — 로컬 LLM을 위해 설계된 128 GB 통합 메모리 데스크톱 사양',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '2026년 4월 ChatGPT 요금제',
+        'numberOfItems': 7,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Free', 'description': '$0/월. 2026년 2월부터 광고가 포함된 GPT-5.3. 5시간당 메시지 10개. 가끔 사용하는 사용자용.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Go', 'description': '$8/월. 광고가 포함된 GPT-5.3. Free보다 높은 한도(5시간당 약 100개). 광고 지원 모델의 저가형 옵션.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Plus', 'description': '$20/월. GPT-5.2 + Thinking. 3시간당 메시지 160개 + 주당 Thinking 쿼리 3,000개. 광고 없음. 대부분의 사용자에게 최고의 가치.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Pro $100', 'description': '$100/월. 2026년 4월 9일 출시. Plus 사용 한도의 5배. GPT-5.4 Pro 및 o1 Pro 모드 접근. Plus 한도에 도달한 파워 유저용.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Pro $200', 'description': '$200/월. 기존 Pro 등급. Plus 사용 한도의 20배. 최고 등급 Codex 및 모든 모델 접근. 헤비 프로페셔널 사용자용.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Business', 'description': '사용자당 월 $25. 관리자 제어 및 SSO를 갖춘 GPT-5.2. 비즈니스 데이터로 학습하지 않음. 2명 이상의 팀용.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Enterprise', 'description': '맞춤형 가격. 무제한 접근, SLA 보장, 완전한 규정 준수 기능, 전용 용량. 대규모 조직용.' },
+        ],
       },
     },
   };

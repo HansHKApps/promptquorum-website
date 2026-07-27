@@ -972,6 +972,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         inLanguage: 'fr',
         mainEntity: [],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Comparaison LLM local vs API cloud pour la conformité',
+        inLanguage: 'fr',
+        numberOfItems: 4,
+        itemListElement: [],
+      },
       toc: [
         { label: 'Résumé', anchor: '#tldr' },
         { label: 'Pourquoi les LLM locaux pour la conformité ?', anchor: '#why' },
@@ -1184,6 +1192,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'ja',
         mainEntity: [],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'ローカルLLM vs クラウドAPI コンプライアンス比較',
+        inLanguage: 'ja',
+        numberOfItems: 4,
+        itemListElement: [],
       },
       toc: [
         { label: '要点', anchor: '#tldr' },
@@ -1573,6 +1589,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '本地LLM vs 云API合规性比较',
+        'inLanguage': 'zh',
+        'numberOfItems': 4,
+        'itemListElement': [],
       },
     },
 

@@ -369,6 +369,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Prompt Engineering 2026: die Technik, die KI-Ausgaben zuverlässig macht. Rollenanweisung, Chain-of-Thought und Few-Shot für ChatGPT, Claude und Ollama.',
       publishDate: '2026-03-01',
       readTime: '10 Min. Lesezeit',
+      primaryTerm: 'Prompt Engineering',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -697,6 +698,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Prompt engineering en 2026: diseña entradas de texto para resultados fiables. Aprende role prompting, chain-of-thought y few-shot para ChatGPT y Claude.',
       publishDate: '2026-03-01',
       readTime: '10 min de lectura',
+      primaryTerm: 'Prompt Engineering',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1037,6 +1039,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'هندسة الطلبات: صمّم المدخلات النصية للحصول على نتائج موثوقة من ⁨LLMs⁩. تعلّم ⁨role prompting⁩ و⁨chain-of-thought⁩ و⁨few-shot⁩ لـ ⁨ChatGPT⁩ و⁨Claude⁩ و⁨Ollama⁩.',
       publishDate: '2026-03-01',
       readTime: '١٠ دقائق للقراءة',
+      primaryTerm: 'هندسة الطلبات',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1377,6 +1380,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Prompt engineering em 2026: projete entradas de texto para resultados confiáveis de IA. Aprenda role prompting, chain-of-thought e few-shot para ChatGPT, Claude e Ollama.',
       publishDate: '2026-03-01',
       readTime: '10 min de leitura',
+      primaryTerm: 'Prompt Engineering',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1599,6 +1603,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Le prompt engineering détermine la qualité de vos résultats IA. Apprenez le prompting de rôle, chain-of-thought et few-shot pour ChatGPT, Claude et Ollama.',
       publishDate: '2026-03-01',
       readTime: '10 min de lecture',
+      primaryTerm: 'Prompt Engineering',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1928,6 +1933,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'プロンプトエンジニアリングはAI出力の品質を決める技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。ロール指示・Chain-of-Thought含む。10分で習得。',
       publishDate: '2026-03-01',
       readTime: '10分で読める',
+      primaryTerm: 'プロンプトエンジニアリング',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -2220,6 +2226,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: '提示工程是决定AI输出质量的核心技能。学习角色提示、思维链和少样本方法，适用于ChatGPT、Claude和Ollama。初学者友好，约10分钟阅读。',
       publishDate: '2026-03-01',
       readTime: '阅读约10分钟',
+      primaryTerm: '提示工程',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',

@@ -1465,6 +1465,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Wann AutoDL gewinnt:** Entwicklung, Burst-Fine-Tuning und kostensensible Batch-Inferenz, bei der gelegentliche Spot-Unterbrechungen akzeptabel sind. Für garantierte Verfügbarkeit mit SLA nutzen Sie stattdessen On-Demand-Instanzen von Alibaba Cloud PAI oder Tencent Cloud TI.',
         ],
       },
+      setup: {
+        id: 'setup',
+        title: 'Einrichtungsanleitungen — Schnellstart für jeden Anbieter',
+        content:
+          '**Jeder Anbieter hat einen anderen Onboarding-Ablauf.** AutoDL ist am schnellsten (5 Minuten bis zur ersten GPU); Alibaba Cloud PAI erfordert mehr Konfiguration, aber die Qwen-optimierte Umgebung lohnt sich.',
+        numberedItems: [
+          { title: 'AutoDL: Registrieren Sie sich auf autodl.com mit Alipay/WeChat Pay → GPU-Instanz auswählen → Qwen-Umgebung aus Community-Docker-Images klonen', whyItMatters: 'Die AutoDL-Community stellt vorgefertigte Qwen-Docker-Images bereit — spart über 30 Minuten Einrichtungszeit.' },
+          { title: 'Alibaba Cloud PAI: Registrieren Sie sich auf aliyun.com (oder intl.aliyun.com für international) → PAI-Dienst aktivieren → DSW-Notebook starten → Qwen-Schnellstart-Umgebung auswählen', whyItMatters: 'PAI-EAS bietet ein Einklick-Deployment für Qwen, das automatisch die optimierte Laufzeit auswählt.' },
+          { title: 'Tencent Cloud TI: Registrieren Sie sich auf cloud.tencent.com → TI Platform aktivieren → Notebook-Instanz erstellen → Tencents offizielle Qwen/Hunyuan-Jupyter-Vorlagen verwenden', whyItMatters: 'Tencents Jupyter-Vorlagen enthalten vorkonfigurierte WeChat-API-Integration für Chatbot-Projekte.' },
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
@@ -1576,6 +1587,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Quand AutoDL l\'emporte :** développement, fine-tuning burst et inférence par lots sensible aux coûts où une préemption spot occasionnelle est acceptable. Pour une disponibilité garantie avec SLA, utilisez plutôt les instances à la demande d\'Alibaba Cloud PAI ou Tencent Cloud TI.',
         ],
       },
+      setup: {
+        id: 'setup',
+        title: 'Tutoriels de configuration — démarrage rapide pour chaque fournisseur',
+        content:
+          '**Chaque fournisseur a un parcours d\'intégration différent.** AutoDL est le plus rapide (5 minutes jusqu\'au premier GPU) ; Alibaba Cloud PAI demande plus de configuration, mais l\'environnement optimisé pour Qwen en vaut la peine.',
+        numberedItems: [
+          { title: 'AutoDL : inscrivez-vous sur autodl.com avec Alipay/WeChat Pay → sélectionnez une instance GPU → clonez l\'environnement Qwen depuis les images Docker de la communauté', whyItMatters: 'La communauté AutoDL héberge des images Docker Qwen préconstruites — cela fait gagner plus de 30 minutes de configuration de l\'environnement.' },
+          { title: 'Alibaba Cloud PAI : inscrivez-vous sur aliyun.com (ou intl.aliyun.com pour l\'international) → activez le service PAI → lancez un notebook DSW → sélectionnez l\'environnement de démarrage rapide Qwen', whyItMatters: 'PAI-EAS propose un déploiement Qwen en un clic qui sélectionne automatiquement le runtime optimisé.' },
+          { title: 'Tencent Cloud TI : inscrivez-vous sur cloud.tencent.com → activez TI Platform → créez une instance de notebook → utilisez les modèles Jupyter officiels Qwen/Hunyuan de Tencent', whyItMatters: 'Les modèles Jupyter de Tencent incluent une intégration préconfigurée à l\'API WeChat pour les projets de chatbot.' },
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Questions fréquentes',
@@ -1685,6 +1707,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**課金モデル：** 秒単位課金、従量制。月額契約なし；インスタンスを停止すれば課金も停止します。新規アカウントの¥10無料クレジットでA100 80GBを約1.5時間テストできます。',
           '**AutoDLと類似コンピュートプラットフォームの比較：** 中国向けワークロードでは、Featurizeと恒源云（Hengyuan Cloud）が同等の分単位課金とコミュニティイメージを提供し、智星云（Zhixingyun）はRTX 4090やA100 80GBでAutoDLを下回ることがあります。カード決済での国際アクセスには、Vast.ai（マーケットプレイス、通常最安の時間単価）とRunPod（予測しやすく、事前構築済みテンプレート）が最も近い相当サービスです。',
           '**AutoDLが有利な場面：** 開発、バーストのファインチューニング、スポットの一時的な中断が許容できるコスト重視のバッチ推論。SLA付きの保証された可用性が必要な場合は、代わりにAlibaba Cloud PAIまたはテンセントクラウドTIのオンデマンドインスタンスを利用してください。',
+        ],
+      },
+      setup: {
+        id: 'setup',
+        title: 'セットアップ手順——各プロバイダーのクイックスタート',
+        content:
+          '**プロバイダーごとにオンボーディングの流れが異なります。** AutoDLが最も速く（最初のGPUまで5分）、Alibaba Cloud PAIは設定に手間がかかりますが、Qwen最適化環境はその価値があります。',
+        numberedItems: [
+          { title: 'AutoDL：Alipay／WeChat Payでautodl.comに登録 → GPUインスタンスを選択 → コミュニティのDockerイメージからQwen環境をクローン', whyItMatters: 'AutoDLコミュニティは構築済みのQwen Dockerイメージを提供しており、環境構築の30分以上を節約できます。' },
+          { title: 'Alibaba Cloud PAI：aliyun.com（国際版はintl.aliyun.com）に登録 → PAIサービスを有効化 → DSWノートブックを起動 → Qwenクイックスタート環境を選択', whyItMatters: 'PAI-EASにはQwenのワンクリックデプロイがあり、最適化されたランタイムを自動的に選択します。' },
+          { title: 'テンセントクラウドTI：cloud.tencent.comに登録 → TI Platformを有効化 → ノートブックインスタンスを作成 → テンセント公式のQwen／HunyuanのJupyterテンプレートを使用', whyItMatters: 'テンセントのJupyterテンプレートには、チャットボットプロジェクト向けの設定済みWeChat API連携が含まれています。' },
         ],
       },
       faq: {
@@ -1816,6 +1849,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         note: '价格来源：2026年7月各平台控制台及AutoDL价格页。现货价格按北京时间0-6点最便宜，比按需价格低40-60%。',
         image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-zh.png',
         imageCaption: '阿里云对比腾讯云对比AutoDL GPU价格 -- 每小时费率（2026年7月）',
+      },
+      setup: {
+        id: 'setup',
+        title: '配置教程——各服务商快速上手',
+        content:
+          '**每家服务商的上手流程都不同。** AutoDL最快（5分钟内获得第一块GPU）；阿里云PAI需要更多配置，但Qwen优化环境值得投入。',
+        numberedItems: [
+          { title: 'AutoDL：使用支付宝/微信支付在autodl.com注册 → 选择GPU实例 → 从社区Docker镜像克隆Qwen环境', whyItMatters: 'AutoDL社区提供预构建的Qwen Docker镜像——可节省30分钟以上的环境搭建时间。' },
+          { title: '阿里云PAI：在aliyun.com（国际用户为intl.aliyun.com）注册 → 开通PAI服务 → 启动DSW笔记本 → 选择Qwen快速启动环境', whyItMatters: 'PAI-EAS提供Qwen一键部署，自动选择优化运行时。' },
+          { title: '腾讯云TI：在cloud.tencent.com注册 → 开通TI Platform → 创建笔记本实例 → 使用腾讯官方的Qwen/混元（Hunyuan）Jupyter模板', whyItMatters: '腾讯的Jupyter模板包含预配置的微信API集成，适用于聊天机器人项目。' },
+        ],
       },
       faq: {
         id: 'faq',

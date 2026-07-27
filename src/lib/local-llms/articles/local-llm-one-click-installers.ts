@@ -1038,6 +1038,18 @@ schema: {
       },
       gammaEmbedUrl: '/presentations/local-llm-one-click-installers-static.html',
       gammaDescription: 'O conjunto de slides compara Ollama, LM Studio, Jan AI e GPT4All: ports API (11434, 1234, 1337, 4891), ranking de privacidade e passos de instalação. Baixe o PDF como cartão de referência de instaladores de LLM local.',
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Comparativo de instaladores de LLM local em um clique 2026',
+        numberOfItems: 4,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Ollama', description: 'Terminal + API. Mais de 4.500 modelos curados. Compatível com OpenAI em localhost:11434. Licença MIT. Sem telemetria. Ideal para desenvolvedores.' },
+          { '@type': 'ListItem', position: 2, name: 'LM Studio', description: 'GUI desktop com busca no Hugging Face. Milhares de modelos GGUF. API em localhost:1234. Freeware de código fechado. Ideal para iniciantes.' },
+          { '@type': 'ListItem', position: 3, name: 'Jan AI', description: 'Aplicativo desktop MIT de código aberto. Sem telemetria, completamente offline. API em localhost:1337. Ideal para usuários focados em privacidade.' },
+          { '@type': 'ListItem', position: 4, name: 'GPT4All', description: 'O instalador mais simples dos quatro. RAG LocalDocs integrado. API opcional em localhost:4891. Licença MIT. Ideal para usuários não técnicos.' },
+        ],
+      },
       sections: {
         tldr: {
           id: 'tldr',
@@ -2426,6 +2438,18 @@ schema: {
             { q: 'Ollama는 오픈소스인가요? 어떤 라이선스를 쓰나요?', a: '네. Ollama는 MIT 라이선스 오픈소스(github.com/ollama/ollama)로, 사용 제한이나 유료 등급 없이 무료이며, 소스 코드상 텔레메트리를 수집하지 않는 것이 확인됩니다. 유일한 비용은 본인의 하드웨어뿐입니다.' },
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '2026년 원클릭 로컬 LLM 설치 도구 비교',
+        numberOfItems: 4,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Ollama', description: '터미널 + API. 4,500개 이상의 큐레이션된 모델. localhost:11434에서 OpenAI 호환. MIT 라이선스. 텔레메트리 없음. 개발자에게 최적.' },
+          { '@type': 'ListItem', position: 2, name: 'LM Studio', description: 'Hugging Face 검색 기능이 있는 데스크톱 GUI. 수천 개의 GGUF 모델. localhost:1234에서 API. 비공개 소스 프리웨어. 초보자에게 최적.' },
+          { '@type': 'ListItem', position: 3, name: 'Jan AI', description: 'MIT 오픈 소스 데스크톱 앱. 텔레메트리 없음, 완전 오프라인. localhost:1337에서 API. 개인정보 보호 중심 사용자에게 최적.' },
+          { '@type': 'ListItem', position: 4, name: 'GPT4All', description: '네 가지 중 가장 간단한 설치 도구. 내장 LocalDocs RAG. localhost:4891에서 선택적 API. MIT 라이선스. 비기술자에게 최적.' },
+        ],
       },
     },
   };

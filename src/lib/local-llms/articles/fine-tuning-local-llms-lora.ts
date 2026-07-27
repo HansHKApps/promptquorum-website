@@ -1199,6 +1199,31 @@ schema: {
           { '@type': 'Question', name: 'LoRA é melhor que RAG para personalização de LLM?', acceptedAnswer: { '@type': 'Answer', text: 'Depende do caso de uso. Use RAG quando seus documentos mudam frequentemente. Use LoRA quando quiser mudar o estilo, tom ou comportamento do modelo permanentemente.' } },
         ],
       },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Como fazer fine-tuning de um LLM local com LoRA usando Unsloth',
+        'description': 'Guia passo a passo para fazer fine-tuning do Llama 3.3 8B com LoRA em 8 GB de VRAM usando Unsloth em 2 horas.',
+        'totalTime': 'PT2H',
+        'estimatedCost': { '@type': 'PriceSpecification', 'priceCurrency': 'USD', 'price': '0' },
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Instalar Unsloth e dependências', 'text': 'pip install unsloth[colab-new] xformers bitsandbytes' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Carregar o modelo base com configuração LoRA', 'text': 'FastLanguageModel.from_pretrained(model_name="unsloth/llama-3.1-8b-bnb-4bit", load_in_4bit=True, lora_r=16)' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Preparar 500+ exemplos de treinamento em JSONL', 'text': 'Cada linha: {instruction, input, output} ou formato {text}' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Treinar com SFTTrainer por 3 épocas', 'text': 'SFTTrainer(model, train_dataset, num_train_epochs=3, learning_rate=2e-4)' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'Mesclar o adaptador e exportar para GGUF para o Ollama', 'text': 'model.merge_and_unload() e depois converter para GGUF. Criar Modelfile do Ollama: FROM ./model.gguf' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Fluxo de Fine-Tuning com LoRA',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Preparar dados de treinamento', 'description': 'Criar 500-5000 exemplos de alta qualidade em formato de chat. A qualidade importa mais que a quantidade.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Fazer fine-tuning com unsloth ou HuggingFace TRL', 'description': 'Unsloth é 2× mais rápido em hardware de consumo. Requer 8 GB de VRAM para modelos 7B em quantização de 4 bits.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Mesclar adaptadores e implantar', 'description': 'Use model.merge_and_unload() para criar um único arquivo GGUF. Distribuível como pesos LoRA ou modelo mesclado.' },
+        ]
+      },
     },
     de: {
       freshness_tier: 'annual',
@@ -2833,6 +2858,31 @@ schema: {
             '파인튜닝은 기반이 탄탄할 때 가장 효과적입니다. LoRA에 시간을 투자하기 전에 베이스 프롬프트가 최적화되어 있는지 확인하십시오: [프롬프트 엔지니어링 가이드](https://www.promptquorum.com/prompt-engineering)에서는 미조정 모델의 출력 품질을 향상시키는 80가지 기법을 다룹니다.',
           ],
         },
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Unsloth를 사용해 LoRA로 로컬 LLM을 파인튜닝하는 방법',
+        'description': 'Unsloth를 사용해 8 GB VRAM에서 2시간 만에 Llama 3.3 8B를 LoRA로 파인튜닝하는 단계별 가이드.',
+        'totalTime': 'PT2H',
+        'estimatedCost': { '@type': 'PriceSpecification', 'priceCurrency': 'USD', 'price': '0' },
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Unsloth와 종속성 설치', 'text': 'pip install unsloth[colab-new] xformers bitsandbytes' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'LoRA 설정으로 베이스 모델 로드', 'text': 'FastLanguageModel.from_pretrained(model_name="unsloth/llama-3.1-8b-bnb-4bit", load_in_4bit=True, lora_r=16)' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'JSONL로 500개 이상의 훈련 예제 준비', 'text': '각 줄: {instruction, input, output} 또는 {text} 형식' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'SFTTrainer로 3 에포크 학습', 'text': 'SFTTrainer(model, train_dataset, num_train_epochs=3, learning_rate=2e-4)' },
+          { '@type': 'HowToStep', 'position': 5, 'name': '어댑터를 병합하고 Ollama용 GGUF로 내보내기', 'text': 'model.merge_and_unload() 실행 후 GGUF로 변환. Ollama Modelfile 생성: FROM ./model.gguf' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'LoRA 파인튜닝 워크플로우',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '훈련 데이터 준비', 'description': '채팅 형식으로 500~5000개의 고품질 예제를 작성하십시오. 수량보다 품질이 중요합니다.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'unsloth 또는 HuggingFace TRL로 파인튜닝', 'description': 'Unsloth는 일반 소비자용 하드웨어에서 2배 빠릅니다. 4비트 양자화 7B 모델에 8 GB VRAM이 필요합니다.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '어댑터 병합 및 배포', 'description': 'model.merge_and_unload()를 사용해 단일 GGUF 파일을 생성하십시오. LoRA 가중치 또는 병합된 모델로 배포 가능합니다.' },
+        ]
       },
     },
   };

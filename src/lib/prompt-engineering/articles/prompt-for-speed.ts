@@ -457,6 +457,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Beispiel (ausgefüllt)',
           blockquote: 'Du bist ein Produktmanager mit Expertise in B2B-SaaS-Metriken.\n\nFasse die 3 wichtigsten Treiber von Kundenabwanderung in unserem Abonnement-Segment zusammen.\n\nFormat: Bullet Points, eine Zeile jeder.\n\nLänge: maximal 3 Bullets.\n\nNicht: Wiederhole die bereitgestellten Daten, füge Einleitung hinzu, hedgge mit "es kommt drauf an".',
         },
+
+        howToStart: {
+          title: 'Wie man für schnellere, prägnantere KI-Antworten promptet',
+          numberedItems: [
+            '**Die Aufgabe auf eine einzige, spezifische Frage eingrenzen:** Teilen Sie zusammengesetzte Aufgaben in separate Prompts auf. „Fasse diesen Vertrag zusammen und identifiziere Risiken" wird zu zwei Prompts — kürzer, schneller und genauer bei jedem.',
+            '**Eine explizite Längenbeschränkung hinzufügen:** Fügen Sie in jedem Prompt, der keine lange Ausgabe benötigt, eine Wort- oder Satzgrenze hinzu. „Antworte in 3 Bullets" oder „maximal 100 Wörter" verhindert langatmige Präambeln und Füllmaterial.',
+            '**Format an die Aufgabe anpassen:** Verwenden Sie Aufzählungslisten für Listen, Tabellen für Vergleiche und einzelne Sätze für Ja/Nein-Antworten. Modelle greifen standardmäßig auf Fließtext zurück, wenn kein Format angegeben ist.',
+            '**Rolle und Kontext nutzen, um Erklärungsaufwand zu reduzieren:** Ein Modell, das weiß, dass es mit einem Experten spricht, überspringt grundlegende Definitionen. „Du berätst einen erfahrenen Softwareentwickler" eliminiert Absätze von Hintergrundinformationen.',
+            '**Negative Anweisungen hinzufügen, um Füllmaterial zu blockieren:** „Wiederhole die Frage nicht", „Füge keine abschließende Zusammenfassung hinzu" und „Verwende keine Füllphrasen" eliminieren die häufigsten Quellen von Antwort-Aufblähung.',
+          ],
+        },
         faqs: {
           faqs: [
             {
@@ -642,6 +653,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Ejemplo (completo)',
           blockquote: 'Eres un product manager con experiencia en métricas B2B SaaS.\n\nResume los 3 principales impulsores de la rotación de clientes en nuestro segmento de suscripciones.\n\nFormato: Bullets, una línea cada uno.\n\nLongitud: Máx. 3 bullets.\n\nSin: repetir los datos proporcionados, añadir introducción, cubrir con "depende".',
         },
+
+        howToStart: {
+          title: 'Cómo hacer prompts para respuestas de IA más rápidas y concisas',
+          numberedItems: [
+            '**Reducir la tarea a una sola pregunta específica:** Divide las tareas compuestas en prompts separados. "Resume este contrato e identifica riesgos" se convierte en dos prompts — más cortos, más rápidos y más precisos en cada uno.',
+            '**Añadir una restricción de longitud explícita:** Incluye un límite de palabras o frases en cada prompt que no necesite una respuesta larga. "Responde en 3 bullets" o "máximo 100 palabras" evita preámbulos extensos y relleno.',
+            '**Ajustar el formato a la tarea:** Usa listas de bullets para listas, tablas para comparaciones y frases únicas para respuestas de sí/no. Los modelos recurren a prosa por defecto cuando no se especifica un formato.',
+            '**Usar rol y contexto para reducir la sobrecarga de explicaciones:** Un modelo que sabe que habla con un experto omite definiciones básicas. "Estás asesorando a un ingeniero de software senior" elimina párrafos de contexto.',
+            '**Añadir instrucciones negativas para bloquear el relleno:** "No repitas la pregunta", "No añadas un resumen final" y "No uses frases de relleno" eliminan las fuentes más comunes de respuestas infladas.',
+          ],
+        },
         faqs: {
           faqs: [
             {
@@ -826,6 +848,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'مثال (كامل)',
           blockquote: 'أنت مدير منتج متخصص في مقاييس B2B SaaS.\n\nلخّص أهم 3 محركات لتراجع العملاء في قطاع الاشتراكات لدينا.\n\nالتنسيق: نقاط، سطر واحد لكل منها.\n\nالطول: أقصى 3 نقاط.\n\nبدون: تكرار البيانات المقدمة، إضافة مقدمة، التغطية بـ"يعتمد على".',
         },
+
+        howToStart: {
+          title: 'كيفية صياغة التعليمات للحصول على إجابات ذكاء اصطناعي أسرع وأكثر إيجازًا',
+          numberedItems: [
+            '**تضييق المهمة إلى سؤال واحد محدد:** قسّم المهام المركّبة إلى تعليمات منفصلة. "لخّص هذا العقد وحدّد المخاطر" تصبح تعليمتين — أقصر وأسرع وأكثر دقة في كل منهما.',
+            '**أضف قيدًا صريحًا على الطول:** أدرج حدًا للكلمات أو الجمل في كل تعليمة لا تحتاج إلى مخرجات طويلة. "أجب في 3 نقاط" أو "بحد أقصى 100 كلمة" يمنع المقدمات المطوَّلة والحشو.',
+            '**طابق التنسيق مع المهمة:** استخدم القوائم النقطية للقوائم، والجداول للمقارنات، والجمل المفردة لإجابات نعم/لا. تلجأ النماذج افتراضيًا إلى النثر عند عدم تحديد تنسيق.',
+            '**استخدم الدور والسياق لتقليل عبء الشرح:** النموذج الذي يعرف أنه يخاطب خبيرًا يتخطى التعريفات الأساسية. "أنت تقدّم المشورة لمهندس برمجيات كبير" يُزيل فقرات من المعلومات الأساسية.',
+            '**أضف تعليمات سلبية لمنع الحشو:** "لا تكرر السؤال" و"لا تضف ملخصًا ختاميًا" و"لا تستخدم عبارات حشو" تُزيل أكثر مصادر تضخيم الإجابة شيوعًا.',
+          ],
+        },
         faqs: {
           faqs: [
             {
@@ -1009,6 +1042,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
         templateExample: {
           title: 'Exemplo (completo)',
           blockquote: 'Você é um gerente de produto com experiência em métricas B2B SaaS.\n\nResuma os 3 principais fatores de rotatividade de clientes em nosso segmento de assinaturas.\n\nFormato: Bullets, uma linha cada.\n\nComprimento: Máx. 3 bullets.\n\nSem: repetir os dados fornecidos, adicionar introdução, cobrir com "depende".',
+        },
+
+        howToStart: {
+          title: 'Como fazer prompts para respostas de IA mais rápidas e concisas',
+          numberedItems: [
+            '**Reduzir a tarefa a uma única pergunta específica:** Divida tarefas compostas em prompts separados. "Resuma este contrato e identifique riscos" se torna dois prompts — mais curtos, mais rápidos e mais precisos em cada um.',
+            '**Adicionar uma restrição de comprimento explícita:** Inclua um limite de palavras ou frases em todo prompt que não precise de uma resposta longa. "Responda em 3 bullets" ou "máximo 100 palavras" evita preâmbulos longos e enchimento.',
+            '**Ajustar o formato à tarefa:** Use listas com marcadores para listas, tabelas para comparações e frases únicas para respostas sim/não. Os modelos recorrem à prosa por padrão quando nenhum formato é especificado.',
+            '**Usar papel e contexto para reduzir a sobrecarga de explicação:** Um modelo que sabe que está falando com um especialista pula definições básicas. "Você está aconselhando um engenheiro de software sênior" elimina parágrafos de contexto.',
+            '**Adicionar instruções negativas para bloquear o enchimento:** "Não repita a pergunta", "Não adicione um resumo final" e "Não use frases de preenchimento" eliminam as fontes mais comuns de respostas infladas.',
+          ],
         },
         faqs: {
           faqs: [
@@ -1221,6 +1265,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Exemple (rempli)',
           blockquote: 'Vous êtes un chef de produit avec expertise en métriques B2B SaaS.\n\nRésumez les 3 principaux facteurs de désabonnement client dans notre cohorte d\'abonnement.\n\nFormat : points à puces, une ligne chacun.\n\nLongueur : maximum 3 puces.\n\nNe pas : Répéter les données fournies, ajouter d\'introduction, vous couvrir avec "cela dépend".',
         },
+
+        howToStart: {
+          title: 'Comment formuler des prompts pour des réponses IA plus rapides et concises',
+          numberedItems: [
+            '**Réduire la tâche à une seule question spécifique :** Divisez les tâches composées en prompts séparés. "Résume ce contrat et identifie les risques" devient deux prompts — plus courts, plus rapides et plus précis chacun.',
+            '**Ajouter une contrainte de longueur explicite :** Incluez une limite de mots ou de phrases dans chaque prompt qui n\'a pas besoin d\'une longue réponse. "Réponds en 3 puces" ou "maximum 100 mots" évite les préambules verbeux et le remplissage.',
+            '**Adapter le format à la tâche :** Utilisez des listes à puces pour les listes, des tableaux pour les comparaisons et des phrases uniques pour les réponses oui/non. Les modèles reviennent à la prose par défaut lorsqu\'aucun format n\'est spécifié.',
+            '**Utiliser le rôle et le contexte pour réduire la charge d\'explication :** Un modèle qui sait qu\'il s\'adresse à un expert saute les définitions de base. "Vous conseillez un ingénieur logiciel senior" élimine des paragraphes de contexte.',
+            '**Ajouter des instructions négatives pour bloquer le remplissage :** "Ne répète pas la question", "N\'ajoute pas de résumé final" et "N\'utilise pas de formules de remplissage" éliminent les sources les plus courantes de réponses gonflées.',
+          ],
+        },
         faqs: {
           faqs: [
             {
@@ -1432,6 +1487,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '例（記入済み）',
           blockquote: 'あなたはB2B SaaS メトリクスに専門知識を持つプロダクトマネージャーです。\n\nサブスクリプション コホートでの顧客離脱の上位 3 つのドライバーを要約します。\n\nフォーマット：箇条書き、各 1 行。\n\n長さ：最大 3 個の箇条書き。\n\nしないこと：提供されたデータを繰り返す、導入を追加する、「それはそれに依存する」とヘッジする。',
         },
+
+        howToStart: {
+          title: 'より速く簡潔なAI回答を得るプロンプトの書き方',
+          numberedItems: [
+            '**タスクを1つの具体的な質問に絞る：** 複合タスクは別々のプロンプトに分割します。「この契約書を要約してリスクを特定して」は2つのプロンプトになり、それぞれがより短く、速く、正確になります。',
+            '**明示的な長さ制限を追加する：** 長い出力が不要なすべてのプロンプトに単語数や文数の制限を含めます。「3箇条で回答」や「最大100語」は冗長な前置きや水増しを防ぎます。',
+            '**フォーマットをタスクに合わせる：** リストには箇条書き、比較には表、はい/いいえの回答には単文を使います。フォーマットが指定されていない場合、モデルは既定で散文形式になります。',
+            '**役割とコンテキストで説明のオーバーヘッドを削減する：** 専門家に話していると分かっているモデルは基本的な定義を省略します。「シニアソフトウェアエンジニアに助言している」とすると背景説明の段落が不要になります。',
+            '**否定命令を追加して水増しをブロックする：** 「質問を繰り返さない」「結びの要約を追加しない」「決まり文句を使わない」は回答が膨張する最も一般的な原因を排除します。',
+          ],
+        },
+
         faqs: {
           faqs: [
             {
@@ -1643,6 +1710,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '示例（已填充）',
           blockquote: '你是拥有B2B SaaS指标专业知识的产品经理。\n\n总结我们订阅队列中客户流失的前3个驱动因素。\n\n格式：项目符号，每行一个。\n\n长度：最多3个项目符号。\n\n不要：重复提供的数据、添加引言、用"这取决于"来套话。',
         },
+
+        howToStart: {
+          title: '如何提示词以获得更快、更简洁的AI回答',
+          numberedItems: [
+            '**将任务缩小到单一具体问题：** 把复合任务拆分成独立的提示词。"总结这份合同并识别风险"变成两个提示词——每个都更短、更快、更准确。',
+            '**添加明确的长度约束：** 在每个不需要长输出的提示词中包含字数或句数限制。"用3个要点回答"或"最多100字"可以防止冗长的前言和填充内容。',
+            '**将格式与任务匹配：** 列表用项目符号，比较用表格，是/否回答用单句。如果没有指定格式，模型默认使用散文。',
+            '**用角色和上下文减少解释开销：** 知道自己在与专家对话的模型会跳过基本定义。"你正在为一名资深软件工程师提供建议"可以消除大段背景说明。',
+            '**添加否定指令以阻止填充：** "不要重复问题"、"不要添加结尾总结"、"不要使用套话"可以消除回答膨胀的最常见来源。',
+          ],
+        },
+
         faqs: {
           faqs: [
             {
@@ -1827,6 +1906,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '예시 (완성)',
           blockquote: '당신은 B2B SaaS 지표 전문 제품 관리자입니다.\n\n구독 코호트에서 고객 이탈의 상위 3가지 원인을 요약하십시오.\n\n형식: Bullet, 각 한 줄.\n\n길이: 최대 3개 bullet.\n\n없음: 제공된 데이터 반복, 도입 추가, "경우에 따라 다릅니다"로 헤징.',
         },
+
+        howToStart: {
+          title: '더 빠르고 간결한 AI 답변을 위한 prompt 작성법',
+          numberedItems: [
+            '**작업을 하나의 구체적인 질문으로 좁히기:** 복합 작업을 별도의 prompt로 분리합니다. "이 계약서를 요약하고 위험을 식별하세요"는 두 개의 prompt가 되어 각각 더 짧고, 빠르고, 정확해집니다.',
+            '**명시적인 길이 제약 추가하기:** 긴 출력이 필요 없는 모든 prompt에 단어 수나 문장 수 제한을 포함합니다. "3개 bullet로 답변" 또는 "최대 100단어"는 장황한 서론과 불필요한 내용을 방지합니다.',
+            '**형식을 작업에 맞추기:** 목록에는 bullet, 비교에는 표, 예/아니오 답변에는 단문을 사용합니다. 형식이 지정되지 않으면 모델은 기본적으로 산문으로 답변합니다.',
+            '**역할과 맥락으로 설명 부담 줄이기:** 전문가와 대화하고 있다고 아는 모델은 기본 정의를 생략합니다. "당신은 시니어 소프트웨어 엔지니어에게 조언하고 있습니다"는 배경 설명 단락을 없앱니다.',
+            '**부정 지시어를 추가해 불필요한 내용 차단하기:** "질문을 반복하지 마세요", "마무리 요약을 추가하지 마세요", "상투적인 표현을 사용하지 마세요"는 답변이 부풀려지는 가장 흔한 원인을 제거합니다.',
+          ],
+        },
+
         faqs: {
           faqs: [
             {

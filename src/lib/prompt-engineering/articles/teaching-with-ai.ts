@@ -2078,6 +2078,90 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: 'Ensinar com IA em 2026: Guia de 2× Mais Aprendizado',
       metaDescription: 'Estudo Harvard: tutoria com IA dobra aprendizado em 18% menos tempo. Ferramentas: Khanmigo, MagicSchool e Claude. Com guia de conformidade para escolas.',
       educationalLevel: 'Beginner',
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'pt-BR',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Os tutores de IA realmente melhoram os resultados de aprendizado?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sim — a evidência é forte. Um ensaio clínico randomizado de Harvard de 2024, com 194 estudantes de física de graduação, constatou que a tutoria com IA produziu tamanhos de efeito de 0,73–1,3 desvios-padrão acima de salas de aula de aprendizado ativo, com alunos alcançando notas mais altas em 49 minutos contra 60 minutos de tempo de aula (p < 10⁻⁸). Uma revisão sistemática de 2025 com 21 estudos constatou que alunos apoiados por IA superam o ensino tradicional em 15–35% nas avaliações.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qual é a melhor ferramenta de IA para professores em 2026?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'A resposta depende da tarefa. Khanmigo (Khan Academy) é a mais forte para tutoria de alunos via questionamento socrático. MagicSchool lidera em ferramentas abrangentes de fluxo de trabalho do professor (planos de aula, IEPs, comunicação com pais). Modelos de propósito geral como GPT-5.6 oferecem a geração de conteúdo mais flexível. Para análise complexa de currículo, Claude Sonnet 5 processa 1M de tokens — aproximadamente 800 páginas padrão — em uma única sessão.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quanto tempo a IA pode economizar dos professores por semana?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Prompts específicos e ricos em contexto economizam de 5 a 13 horas por semana em planejamento de aulas e tarefas administrativas quando usados de forma consistente. As aplicações mais comuns que economizam tempo são: pesquisa e coleta de conteúdo (44% dos professores), criação de planos de aula (38%), resumo de informações (38%) e geração de material de sala de aula (37%).',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'O uso de IA na educação é legal segundo as regulamentações da UE e a LGPD brasileira?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sistemas de IA que influenciam avaliação educacional ou trajetórias de aprendizado são classificados como de "alto risco" segundo a Lei de IA da UE (Anexo III). Escolas da UE devem implementar treinamento de alfabetização em IA para o pessoal (Artigo 4, em vigor desde 2025), manter supervisão humana sobre avaliações influenciadas por IA e garantir trilhas de auditoria para qualquer sistema de IA que afete resultados de alunos. No Brasil, a LGPD (Lei 13.709/2018) exige consentimento específico dos responsáveis legais para o processamento de dados de alunos menores de 18 anos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Softwares de detecção de IA identificam de forma confiável a cola acadêmica?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Não — as ferramentas de detecção de IA atuais têm taxas de falso positivo de 15–30% em estudos revisados por pares, o que significa que até 30 de cada 100 submissões legítimas de alunos podem ser sinalizadas incorretamente. Falantes não nativos de inglês e alunos que escrevem em estilos acadêmicos estruturados são sinalizados em taxas desproporcionalmente mais altas. Em 2026, universidades estão migrando de políticas de proibição para frameworks de divulgação e citação, tratando a detecção de IA como um insumo entre vários, e não como prova definitiva de má conduta.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qual configuração de temperatura os professores devem usar no planejamento de aulas com IA?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Defina a temperatura em 0,1–0,2 para conteúdo educacional factual — planos de aula, rubricas de avaliação, alinhamento curricular. Isso produz saída consistente e com baixa variação. Use 0,7–0,9 apenas ao gerar ideias de atividades criativas, quando opções diversas forem o objetivo. A temperatura padrão na maioria das plataformas (0,7–1,0) é projetada para tarefas criativas e aumenta erros factuais em conteúdo educacional.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'As ferramentas de IA ajudam na instrução diferenciada?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sim — este é um dos casos de uso educacional mais fortes da IA. Os LLMs conseguem reescrever o mesmo conteúdo em múltiplos níveis de leitura em segundos. Estrutura de prompt: "Reescreva este trecho no nível de leitura da série [N]. Preserve todo o conteúdo factual. Substitua vocabulário complexo por equivalentes mais simples. Mantenha a mesma estrutura de parágrafo." O Claude Sonnet 5 produz a diferenciação mais consistente entre níveis de leitura.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qual deve ser o primeiro passo de uma escola brasileira para adotar IA em conformidade com a LGPD?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Antes de usar qualquer ferramenta de IA com dados de alunos, verifique os termos de serviço e as políticas de processamento de dados de menores de cada fornecedor. A LGPD (Lei 13.709/2018) exige consentimento específico dos responsáveis legais para o processamento de dados de alunos menores de 18 anos. Nunca insira nomes completos de alunos ou informações de planos de ensino individualizado em ferramentas de IA sem um acordo de processamento de dados (DPA) adequado com o fornecedor.',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'pt-BR',
+        'name': 'Ferramentas de IA para Professores 2026',
+        'description': 'Comparação de ferramentas de ensino com IA mencionadas neste guia',
+        'numberOfItems': 3,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Khanmigo', 'description': 'Tutoria de alunos via questionamento socrático. Alunos do K-12, ecossistema Khan Academy.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'MagicSchool', 'description': 'Planejamento de aulas e gestão de sala de aula. Mais de 60 ferramentas para professores do K-12.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Claude Sonnet 5 / GPT-5.6', 'description': 'Modelos de propósito geral para geração de conteúdo e análise de currículo. Sem proteções incorporadas para uso estudantil.' },
+        ],
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -3665,6 +3749,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
       audience: 'AI 도구를 사용하는 교사, 학교 관리자 및 교육 전문가',
       aboutTopics: ['교육에서의 AI', 'Khanmigo', 'EU AI Act'],
       howToName: 'AI를 활용한 교육 방법',
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'ko',
+        'name': '2026년 교사를 위한 AI 도구',
+        'description': '교실에서 사용하는 AI 교육 도구 비교',
+        'numberOfItems': 6,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Khanmigo', 'description': '소크라테스식 질문을 통한 학생 튜터링. K-12, Khan Academy 생태계. $44/년.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'MagicSchool', 'description': '수업 계획 및 교실 관리. K-12 교사. 무료 제한 티어.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'ChatGPT / GPT-5.6', 'description': '유연한 콘텐츠 생성 및 초안 작성. 모든 수준, 모든 과목. 무료 제한 티어.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Claude Sonnet 5', 'description': '심층 분석, 신중한 추론, 작문 품질, 1M 컨텍스트. 고등 교육 이상 및 복잡한 과제. 무료 제한 티어.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'NotebookLM', 'description': '업로드된 자료에 대한 출처 기반 Q&A. 대학 및 연구 맥락. 무료.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Gemini 3.1 Pro', 'description': '대용량 문서 분석, 1M 컨텍스트. 교육구 관리자. 무료 제한 티어.' },
+        ],
+      },
       specific_year: 2026,
       next_refresh_due: '2027-05-04',
       ogDescription: '미국 교사의 85%가 2024–25학년도에 AI를 사용했지만 모호한 프롬프트는 이를 낭비합니다. 하버드 연구는 AI 튜터링이 학습 효과를 두 배로 높인다는 것을 입증했습니다. 교사를 위한 5가지 프롬프트 프레임워크와 학교를 위한 EU AI Act 준수 방법을 소개합니다.',

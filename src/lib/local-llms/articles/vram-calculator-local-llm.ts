@@ -1257,6 +1257,31 @@ schema: {
       readTime: '10 min de leitura',
       educationalLevel: 'Beginner to Intermediate',
       primaryTerm: 'calculadora de VRAM',
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Como calcular os requisitos de VRAM para LLMs locais',
+        description: 'Calcule a VRAM exata necessária para qualquer modelo LLM local usando a fórmula: (Parâmetros do modelo em bilhões × Bits de quantização) ÷ 8. Inclui overhead de contexto, lote e sistema.',
+        inLanguage: 'pt-BR',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Identifique o tamanho do seu modelo', text: 'Determine a contagem de parâmetros em bilhões (ex.: 7B = 7 bilhões de parâmetros, 13B = 13 bilhões). Modelos comuns: Llama 3.2 (7B, 13B), Qwen3 (7B, 14B, 32B, 72B), Mistral 3.1 (7B, 32B), Claude (varia).' },
+          { '@type': 'HowToStep', position: 2, name: 'Escolha o nível de quantização', text: 'Selecione os bits de quantização: FP16 (100% de qualidade, maior tamanho), Q8 (99%), Q5 (95%, equilíbrio recomendado), Q4 (90-95%, padrão para consumidores), Q3 (80-85%, compressão extrema), Q2 (70%, dispositivos edge).' },
+          { '@type': 'HowToStep', position: 3, name: 'Aplique a fórmula', text: 'Calcule: VRAM (GB) = (Tamanho do modelo em bilhões × Bits de quantização) ÷ 8. Exemplo: modelo 13B em Q4 = (13 × 4) ÷ 8 = 6,5 GB de peso base do modelo.' },
+          { '@type': 'HowToStep', position: 4, name: 'Considere o overhead', text: 'Adicione overhead para contexto (1-3 GB para 4k tokens), processamento em lote (×tamanho do lote) e sistema (1-2 GB). Total = base + overhead.' },
+          { '@type': 'HowToStep', position: 5, name: 'Aplique uma margem de segurança de 25%', text: 'Multiplique o total por 1,25 para obter a VRAM recomendada. Exemplo: 10 GB calculados = compre uma GPU de 12-16 GB. Isso considera variações de execução e margem de segurança.' },
+          { '@type': 'HowToStep', position: 6, name: 'Verifique a compatibilidade da GPU', text: 'Compare a VRAM recomendada com as GPUs disponíveis. RTX 4090 (24 GB), RTX 4080 (16 GB), RTX 4070 Ti (12 GB), RTX 3060 (12 GB), M5 Max (36 GB). Use a calculadora interativa para compatibilidade em tempo real.' }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Calculadora de VRAM para LLMs locais',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Calcule a VRAM base', 'description': 'Use a fórmula: (Parâmetros em bilhões × Bits de quantização) ÷ 8. Q4 = 4 bits, Q8 = 8 bits.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Adicione overhead de contexto e lote', 'description': 'Contexto (4K tokens): +2-3 GB. Lote: +(tamanho do lote−1) × 1-2 GB por requisição.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Aplique uma margem de segurança de 25%', 'description': 'Multiplique o total por 1,25. Exemplo: 10 GB calculados → compre uma GPU de 12-16 GB.' },
+        ]
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1396,6 +1421,7 @@ schema: {
       },
       softwareApplicationSchema: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'VRAM-Rechner für lokale LLMs', description: 'Interaktiver VRAM-Rechner für lokale LLMs. Berechnen Sie exakte GPU-VRAM-Anforderungen für jede Kombination von Modellgröße (1B–405B), Quantisierung (FP16, Q8, Q5, Q4, Q3, Q2), Kontextlänge (2K–128K Tokens) und Batch-Größe (1–8). Enthält Echtzeit-GPU-Kompatibilitätsprüfung für RTX 3060/4070/4080/4090 und M5 Max.', applicationCategory: 'UtilityApplication', operatingSystem: 'Web', url: 'https://www.promptquorum.com/de/local-llms/vram-calculator-local-llm', inLanguage: 'de', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, creator: { '@type': 'Person', name: 'Hans Kuepper' } },
       howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: 'So berechnen Sie VRAM-Anforderungen für lokale LLMs', description: 'Berechnen Sie exakten VRAM-Bedarf für lokale LLM-Modelle mit der Formel: (Modell-Milliarden × Quantisierungs-Bits) ÷ 8. Enthält Kontext-, Batch- und Systemoverhead.', inLanguage: 'de', step: [{ '@type': 'HowToStep', position: 1, name: 'Bestimmen Sie Ihre Modellgröße', text: 'Bestimmen Sie die Parameterzahl in Milliarden (z. B. 7B = 7 Milliarden Parameter, 13B = 13 Milliarden). Häufige Modelle: Llama 3.2 (7B, 13B), Qwen3 (7B, 14B, 32B, 72B), Mistral 3.1 (7B, 32B), Claude (variiert).' }, { '@type': 'HowToStep', position: 2, name: 'Wählen Sie Quantisierungsstufe', text: 'Wählen Sie Quantisierungs-Bits: FP16 (100 % Qualität, größtes), Q8 (99 %), Q5 (95 %, empfohlene Balance), Q4 (90–95 %, Consumer-Standard), Q3 (80–85 %, extreme Kompression), Q2 (70 %, Edge-Geräte).' }, { '@type': 'HowToStep', position: 3, name: 'Wenden Sie die Formel an', text: 'Berechnen Sie: VRAM (GB) = (Modellgröße in Milliarden × Quantisierungs-Bits) ÷ 8. Beispiel: 13B-Modell bei Q4 = (13 × 4) ÷ 8 = 6,5 GB Basis-Modellgewicht.' }, { '@type': 'HowToStep', position: 4, name: 'Berücksichtigen Sie Overhead', text: 'Addieren Sie Overhead für Kontext (1–3 GB für 4K Tokens), Batch-Verarbeitung (×Batch-Größe) und System (1–2 GB). Gesamt = Basis + Overhead.' }, { '@type': 'HowToStep', position: 5, name: 'Wenden Sie 25 % Sicherheitsmarge an', text: 'Multiplizieren Sie Gesamt mit 1,25 um empfohlenes VRAM zu erhalten. Beispiel: 10 GB berechnet = kaufen Sie 12–16 GB GPU. Dies berücksichtigt Laufzeitvariationen und Spielraum.' }, { '@type': 'HowToStep', position: 6, name: 'Prüfen Sie GPU-Kompatibilität', text: 'Vergleichen Sie Ihr empfohlenes VRAM mit verfügbaren GPUs. RTX 4090 (24 GB), RTX 4080 (16 GB), RTX 4070 Ti (12 GB), RTX 3060 (12 GB), M5 Max (36 GB). Verwenden Sie den interaktiven Rechner für Echtzeit-Matching.' }] },
+      itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', 'name': 'VRAM-Rechner für lokale LLMs', 'itemListElement': [{ '@type': 'ListItem', 'position': 1, 'name': 'Basis-VRAM berechnen', 'description': 'Verwenden Sie die Formel: (Parameter in Milliarden × Quantisierungs-Bits) ÷ 8. Q4 = 4 Bits, Q8 = 8 Bits.' }, { '@type': 'ListItem', 'position': 2, 'name': 'Kontext- und Batch-Overhead addieren', 'description': 'Kontext (4K Tokens): +2–3 GB. Batch: +(Batch-Größe−1) × 1–2 GB pro Anfrage.' }, { '@type': 'ListItem', 'position': 3, 'name': '25 % Sicherheitsmarge anwenden', 'description': 'Multiplizieren Sie das Gesamtergebnis mit 1,25. Beispiel: 10 GB berechnet → kaufen Sie eine 12–16 GB GPU.' }] },
       toc: [
         { label: 'Zusammenfassung', anchor: '#key-takeaways' },
         { label: 'Quick Facts', anchor: '#quick-facts' },
@@ -1435,6 +1461,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'C
       faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'fr', mainEntity: [{ '@type': 'Question', name: 'La formule fonctionne-t-elle pour tous les types de modèles ?', acceptedAnswer: { '@type': 'Answer', text: "Oui. La formule (Milliards modèle × Bits quantification) ÷ 8 s'applique à tous les modèles basés sur Transformer (Llama, Qwen, Mistral, Claude, etc.). Les architectures non-Transformer (RNN, etc.) sont rares et peuvent nécessiter des ajustements." } }, { '@type': 'Question', name: 'Quelle quantification utiliser ?', acceptedAnswer: { '@type': 'Answer', text: 'Pour la plupart des usages : Q5 offre le meilleur équilibre (95 % qualité, 68 % réduction). Pour les GPU grand public : Q4 est standard (90–95 % qualité, 75 % réduction). En production : Q8 si la VRAM le permet (99 % qualité). Évitez Q3 et en dessous sauf nécessité absolue.' } }, { '@type': 'Question', name: 'Quelle quantité de RAM système faut-il ?', acceptedAnswer: { '@type': 'Answer', text: '16 Go minimum pour le déchargement. En cas de déchargement VRAM (débordement CPU), la RAM système devient le recours. Pour le traitement par lots, ajoutez 8–16 Go. Pour le chat mono-utilisateur, 16 Go suffisent.' } }, { '@type': 'Question', name: 'La taille du lot affecte-t-elle le calcul VRAM ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. La formule calcule la VRAM pour une requête unique. La taille du lot ajoute de la VRAM linéairement : chaque requête simultanée ajoute ~500 Mo–2 Go selon le contexte. Avec batch=4, ajoutez 2–8 Go au montant calculé.' } }, { '@type': 'Question', name: 'Puis-je exécuter un modèle 70B sur un GPU 12 Go ?', acceptedAnswer: { '@type': 'Answer', text: "Uniquement avec une quantification extrême (Q2, ~70 % de perte qualité) et déchargement CPU (très lent, 1–3 tokens/s). Peu pratique. Meilleure option : un modèle 13B en Q4 (même VRAM, bien plus rapide et de meilleure qualité)." } }, { '@type': 'Question', name: "Que faire si l'utilisation VRAM réelle est inférieure au calcul ?", acceptedAnswer: { '@type': 'Answer', text: "La formule est conservative et inclut la surcharge. Une utilisation inférieure signifie plus de marge pour le traitement par lots, des contextes plus longs ou une sécurité accrue. Utilisez nvidia-smi pour mesurer l'utilisation réelle, puis benchmarkez votre modèle." } }] },
       softwareApplicationSchema: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'Calculateur VRAM pour LLMs locaux', description: 'Calculateur VRAM interactif pour LLMs locaux. Calculez les exigences GPU exactes pour toute combinaison taille modèle (1B–405B), quantification (FP16, Q8, Q5, Q4, Q3, Q2), longueur contexte (2K–128K tokens) et taille lot (1–8). Inclut vérification compatibilité GPU en temps réel pour RTX 3060/4070/4080/4090 et M5 Max.', applicationCategory: 'UtilityApplication', operatingSystem: 'Web', url: 'https://www.promptquorum.com/fr/local-llms/vram-calculator-local-llm', inLanguage: 'fr', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, creator: { '@type': 'Person', name: 'Hans Kuepper' } },
       howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: 'Comment calculer les exigences VRAM pour les LLMs locaux', description: 'Calculez la VRAM exacte pour tout modèle LLM local avec la formule : (Milliards modèle × Bits quantification) ÷ 8. Inclut contexte, lot et surcharge système.', inLanguage: 'fr', step: [{ '@type': 'HowToStep', position: 1, name: 'Identifiez la taille de votre modèle', text: 'Déterminez le nombre de paramètres en milliards (ex. 7B = 7 milliards, 13B = 13 milliards). Modèles courants : Llama 3.2 (7B, 13B), Qwen3 (7B, 14B, 32B, 72B), Mistral 3.1 (7B, 32B).' }, { '@type': 'HowToStep', position: 2, name: 'Choisissez le niveau de quantification', text: 'Sélectionnez les bits : FP16 (100 % qualité, plus grand), Q8 (99 %), Q5 (95 %, équilibre recommandé), Q4 (90–95 %, défaut grand public), Q3 (80–85 %, compression extrême), Q2 (70 %, appareils Edge).' }, { '@type': 'HowToStep', position: 3, name: 'Appliquez la formule', text: 'Calculez : VRAM (Go) = (Taille modèle en milliards × Bits quantification) ÷ 8. Exemple : modèle 13B en Q4 = (13 × 4) ÷ 8 = 6.5 Go de poids de modèle de base.' }, { '@type': 'HowToStep', position: 4, name: 'Comptabilisez la surcharge', text: 'Ajoutez la surcharge pour le contexte (1–3 Go pour 4k tokens), le traitement par lots (×taille lot) et le système (1–2 Go). Total = base + surcharge.' }, { '@type': 'HowToStep', position: 5, name: 'Appliquez une marge de sécurité de 25 %', text: 'Multipliez le total par 1.25 pour obtenir la VRAM recommandée. Exemple : 10 Go calculés = achetez un GPU 12–16 Go.' }, { '@type': 'HowToStep', position: 6, name: 'Vérifiez la compatibilité GPU', text: 'Comparez votre VRAM recommandée aux GPU disponibles. RTX 4090 (24 Go), RTX 4080 (16 Go), RTX 4070 Ti (12 Go), RTX 3060 (12 Go), M5 Max (36 Go). Utilisez le calculateur interactif.' }] },
+      itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', 'name': 'Calculateur VRAM pour LLMs locaux', 'itemListElement': [{ '@type': 'ListItem', 'position': 1, 'name': 'Calculer la VRAM de base', 'description': 'Utilisez la formule : (Paramètres en milliards × Bits de quantification) ÷ 8. Q4 = 4 bits, Q8 = 8 bits.' }, { '@type': 'ListItem', 'position': 2, 'name': 'Ajouter la surcharge de contexte et de lot', 'description': 'Contexte (4K tokens) : +2–3 Go. Lot : +(taille du lot−1) × 1–2 Go par requête.' }, { '@type': 'ListItem', 'position': 3, 'name': 'Appliquer une marge de sécurité de 25 %', 'description': 'Multipliez le total par 1,25. Exemple : 10 Go calculés → achetez un GPU de 12–16 Go.' }] },
       toc: [
         { label: 'Points clés', anchor: '#key-takeaways' },
         { label: 'Faits rapides', anchor: '#quick-facts' },
@@ -1552,6 +1579,16 @@ schema: {
           { '@type': 'HowToStep', position: 4, name: 'オーバーヘッドを考慮する', text: 'コンテキスト（4kトークンで1〜3 GB）、バッチ処理（×バッチサイズ）、システム（1〜2 GB）のオーバーヘッドを追加します。合計 = 基本 + オーバーヘッド。' },
           { '@type': 'HowToStep', position: 5, name: '25%のセーフティマージンを適用する', text: '合計を1.25倍して推奨VRAMを取得します。例：10 GBの計算 = 12〜16 GB GPUを購入。これにより実行時の変動とヘッドルームが考慮されます。' },
           { '@type': 'HowToStep', position: 6, name: 'GPU互換性を確認する', text: '推奨VRAMと利用可能なGPUを比較します。RTX 4090（24 GB）、RTX 4080（16 GB）、RTX 4070 Ti（12 GB）、RTX 3060（12 GB）、M5 Max（36 GB）。インタラクティブカリキュレーターをリアルタイムマッチングに使用してください。' }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'ローカルLLM向けVRAM計算機',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '基本VRAMを計算する', 'description': '計算式を使用：（パラメータ数（十億単位）× 量子化ビット数）÷ 8。Q4 = 4ビット、Q8 = 8ビット。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'コンテキストとバッチのオーバーヘッドを加算する', 'description': 'コンテキスト（4kトークン）：+2〜3 GB。バッチ：リクエストごとに+（バッチサイズ−1）× 1〜2 GB。' },
+          { '@type': 'ListItem', 'position': 3, 'name': '25%のセーフティマージンを適用する', 'description': '合計を1.25倍します。例：10 GBの計算結果 → 12〜16 GBのGPUを購入してください。' },
         ]
       },
       toc: [
@@ -1843,6 +1880,16 @@ schema: {
           { '@type': 'HowToStep', position: 6, name: '检查GPU兼容性', text: '将推荐VRAM与可用GPU对比。RTX 4090（24 GB）、RTX 4080（16 GB）、RTX 4070 Ti（12 GB）、RTX 3060（12 GB）、M5 Max（36 GB）。使用交互式计算器进行实时匹配。' },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '本地LLM VRAM计算器',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '计算基础VRAM', 'description': '使用公式：（参数量十亿单位 × 量化位数）÷ 8。Q4 = 4位，Q8 = 8位。' },
+          { '@type': 'ListItem', 'position': 2, 'name': '加上上下文和批处理开销', 'description': '上下文（4K token）：+2-3 GB。批处理：每个请求+（批次大小-1）× 1-2 GB。' },
+          { '@type': 'ListItem', 'position': 3, 'name': '应用25%安全余量', 'description': '将总计乘以1.25。示例：计算结果为10 GB → 购买12-16 GB的GPU。' },
+        ],
+      },
       toc: [
         { label: '核心要点', anchor: '#key-takeaways' },
         { label: '快速概览', anchor: '#quick-facts' },
@@ -2068,6 +2115,31 @@ schema: {
       readTime: '10분 소요',
       educationalLevel: '초급~중급',
       primaryTerm: 'VRAM 계산기',
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: '로컬 LLM의 VRAM 요구 사항을 계산하는 방법',
+        description: '공식 (모델 파라미터 수(B) × 양자화 비트) ÷ 8을 사용하여 모든 로컬 LLM 모델에 필요한 정확한 VRAM을 계산합니다. 컨텍스트, 배치, 시스템 오버헤드를 포함합니다.',
+        inLanguage: 'ko',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: '모델 크기 확인하기', text: '파라미터 수를 십억 단위(B)로 확인하십시오(예: 7B = 70억 파라미터, 13B = 130억). 일반적인 모델: Llama 3.2(7B, 13B), Qwen3(7B, 14B, 32B, 72B), Mistral 3.1(7B, 32B), Claude(다양함).' },
+          { '@type': 'HowToStep', position: 2, name: '양자화 수준 선택하기', text: '양자화 비트를 선택하십시오: FP16(품질 100%, 최대 용량), Q8(99%), Q5(95%, 권장 균형), Q4(90~95%, 소비자용 기본값), Q3(80~85%, 극단적 압축), Q2(70%, 엣지 기기용).' },
+          { '@type': 'HowToStep', position: 3, name: '공식 적용하기', text: '계산: VRAM(GB) = (모델 크기(B) × 양자화 비트) ÷ 8. 예시: 13B 모델을 Q4로 실행 = (13 × 4) ÷ 8 = 6.5 GB 기본 모델 가중치.' },
+          { '@type': 'HowToStep', position: 4, name: '오버헤드 반영하기', text: '컨텍스트(4K 토큰 기준 1~3 GB), 배치 처리(×배치 크기), 시스템(1~2 GB) 오버헤드를 더하십시오. 총합 = 기본 + 오버헤드.' },
+          { '@type': 'HowToStep', position: 5, name: '25% 안전 마진 적용하기', text: '총합에 1.25를 곱해 권장 VRAM을 구하십시오. 예시: 계산값 10 GB = 12~16 GB GPU를 구매하십시오. 이는 실행 시 변동과 여유 공간을 반영합니다.' },
+          { '@type': 'HowToStep', position: 6, name: 'GPU 호환성 확인하기', text: '권장 VRAM을 사용 가능한 GPU와 비교하십시오. RTX 4090(24 GB), RTX 4080(16 GB), RTX 4070 Ti(12 GB), RTX 3060(12 GB), M5 Max(36 GB). 실시간 매칭에는 인터랙티브 계산기를 사용하십시오.' }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '로컬 LLM용 VRAM 계산기',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '기본 VRAM 계산하기', 'description': '공식 사용: (파라미터 수(B) × 양자화 비트) ÷ 8. Q4 = 4비트, Q8 = 8비트.' },
+          { '@type': 'ListItem', 'position': 2, 'name': '컨텍스트 및 배치 오버헤드 추가하기', 'description': '컨텍스트(4K 토큰): +2~3 GB. 배치: 요청당 +(배치 크기−1) × 1~2 GB.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '25% 안전 마진 적용하기', 'description': '총합에 1.25를 곱하십시오. 예시: 계산값 10 GB → 12~16 GB GPU를 구매하십시오.' },
+        ]
+      },
       toc: [
         { label: '핵심 요점', anchor: '#key-takeaways' },
         { label: '빠른 사실', anchor: '#quick-facts' },

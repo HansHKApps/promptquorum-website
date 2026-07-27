@@ -2510,6 +2510,17 @@ schema: {
           { '@type': 'Thing', name: 'Conformidade HIPAA com IA' },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Checklist de Implantação de IA On-Premises para Empresas',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Seleção de hardware', description: 'Mínimo: 1× RTX 5090 (32 GB) para modelos de 13B. Enterprise: 2–4× RTX 5090 ou A100 80 GB para modelos de 70B e 100+ usuários simultâneos.' },
+          { '@type': 'ListItem', position: 2, name: 'Configuração de conformidade', description: 'LGPD: infraestrutura no Brasil, residência de dados. HIPAA: criptografia AES-256, logs de auditoria, BAA. SOC2: trilha de auditoria, acesso baseado em função.' },
+          { '@type': 'ListItem', position: 3, name: 'Stack de inferência', description: 'vLLM para APIs multiusuário. Kubernetes para múltiplos servidores. Qdrant para armazenamento vetorial de RAG.' },
+          { '@type': 'ListItem', position: 4, name: 'Análise de custos', description: 'Ponto de equilíbrio a partir de 200M+ tokens/mês em comparação com GPT-5.2. Hardware amortizado em 36 meses mais eletricidade de ~R$250/mês.' },
+        ],
+      },
     },
   ko: {
       freshness_tier: 'semi_annual',
@@ -2703,6 +2714,17 @@ schema: {
             'vLLM. (2026). "[vLLM 분산 서빙](https://docs.vllm.ai/en/latest/serving/distributed_serving.html)" — 멀티 GPU 텐서 병렬 배포를 위한 공식 vLLM 문서.',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '기업용 온프레미스 AI 배포 체크리스트',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '하드웨어 선택', description: '최소: 13B 모델용 1× RTX 5090 (32 GB). 엔터프라이즈: 70B 모델 및 100명 이상 동시 사용자를 위한 2–4× RTX 5090 또는 A100 80 GB.' },
+          { '@type': 'ListItem', position: 2, name: '컴플라이언스 설정', description: 'GDPR: EU 기반 인프라, 데이터 거주. HIPAA: AES-256 암호화, 감사 로그, BAA. SOC2: 감사 추적, 역할 기반 접근 제어.' },
+          { '@type': 'ListItem', position: 3, name: '추론 스택', description: '멀티 유저 API를 위한 vLLM. 다중 서버를 위한 Kubernetes. RAG 벡터 저장을 위한 Qdrant.' },
+          { '@type': 'ListItem', position: 4, name: '비용 분석', description: 'GPT-5.2 대비 월 2억 토큰 이상에서 손익분기점 도달. 하드웨어는 36개월에 걸쳐 상각하며 전기 요금은 월 약 50달러 추가.' },
+        ],
       },
     },
   };

@@ -394,6 +394,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Software-Stack für jeden Workstation-Build einrichten',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Ubuntu 22.04 LTS oder Windows 11 installieren (Ubuntu bevorzugt für CUDA-Stabilität)' },
+        { '@type': 'HowToStep', position: 2, name: 'NVIDIA-Treiber 550+ von nvidia.com installieren oder `ubuntu-drivers autoinstall` ausführen' },
+        { '@type': 'HowToStep', position: 3, name: 'Ollama installieren: `curl -fsSL https://ollama.com/install.sh | sh`' },
+        { '@type': 'HowToStep', position: 4, name: 'Ein Modell laden: `ollama pull qwen2.5:14b-instruct-q8_0`' },
+        { '@type': 'HowToStep', position: 5, name: 'Als Netzwerkserver ausführen: `OLLAMA_HOST=0.0.0.0 ollama serve`' },
+        { '@type': 'HowToStep', position: 6, name: 'Open WebUI für die Browser-Oberfläche installieren: `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`' },
+        { '@type': 'HowToStep', position: 7, name: 'Über Tailscale für sicheren Fernzugriff von jedem Gerät freigeben' },
+      ],
+    },
     itemListSchema: {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
@@ -554,6 +568,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Vaut-il mieux construire une workstation ou louer des GPU cloud ?',
           acceptedAnswer: { '@type': 'Answer', text: 'Pour 2+ heures/jour : construire. Un A40 cloud à 0,44 $/h pour 4h/j coûte ~640 €/an. Un build à 3000–4000 € est rentabilisé en 5–6 ans.' },
         },
+      ],
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Configurer le logiciel pour n\'importe quelle configuration',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Installer Ubuntu 22.04 LTS ou Windows 11 (Ubuntu préféré pour la stabilité CUDA)' },
+        { '@type': 'HowToStep', position: 2, name: 'Installer les pilotes NVIDIA 550+ depuis nvidia.com ou via `ubuntu-drivers autoinstall`' },
+        { '@type': 'HowToStep', position: 3, name: 'Installer Ollama : `curl -fsSL https://ollama.com/install.sh | sh`' },
+        { '@type': 'HowToStep', position: 4, name: 'Récupérer un modèle : `ollama pull qwen2.5:14b-instruct-q8_0`' },
+        { '@type': 'HowToStep', position: 5, name: 'Lancer en serveur réseau : `OLLAMA_HOST=0.0.0.0 ollama serve`' },
+        { '@type': 'HowToStep', position: 6, name: 'Installer Open WebUI pour l\'interface navigateur : `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`' },
+        { '@type': 'HowToStep', position: 7, name: 'Exposer via Tailscale pour un accès distant sécurisé depuis n\'importe quel appareil' },
       ],
     },
     itemListSchema: {
@@ -721,6 +749,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'ワークステーションを自作するべきか、クラウドGPUを借りるべきか？',
           acceptedAnswer: { '@type': 'Answer', text: '1日2時間以上の定期利用なら自作。RunPod A40を1日4時間使うと年間約9万円。300万円のプロビルドは5〜6年で元が取れます。' },
         },
+      ],
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'どのビルドでもソフトウェアスタックをセットアップする',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Ubuntu 22.04 LTSまたはWindows 11をインストールする（CUDAの安定性のためUbuntuを推奨）' },
+        { '@type': 'HowToStep', position: 2, name: 'nvidia.comまたは`ubuntu-drivers autoinstall`でNVIDIAドライバー550以降をインストールする' },
+        { '@type': 'HowToStep', position: 3, name: 'Ollamaをインストールする: `curl -fsSL https://ollama.com/install.sh | sh`' },
+        { '@type': 'HowToStep', position: 4, name: 'モデルを取得する: `ollama pull qwen2.5:14b-instruct-q8_0`' },
+        { '@type': 'HowToStep', position: 5, name: 'ネットワークサーバーとして実行する: `OLLAMA_HOST=0.0.0.0 ollama serve`' },
+        { '@type': 'HowToStep', position: 6, name: 'ブラウザUI用のOpen WebUIをインストールする: `docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`' },
+        { '@type': 'HowToStep', position: 7, name: 'Tailscale経由で公開し、あらゆるデバイスから安全にリモートアクセスする' },
       ],
     },
     itemListSchema: {
@@ -897,6 +939,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '专业方案为什么用双RTX 3090而不是单RTX 4090？',
           acceptedAnswer: { '@type': 'Answer', text: '显存决定一切。双3090合计48GB可装下70B Q4（约40GB）；单4090只有24GB，70B必须CPU卸载。双3090在70B GPU速度推理上性价比更高。' },
         },
+      ],
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: '为任意配置搭建软件栈',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: '安装Ubuntu 22.04 LTS或Windows 11（推荐Ubuntu以获得更稳定的CUDA支持）' },
+        { '@type': 'HowToStep', position: 2, name: '从nvidia.com安装550以上版本的NVIDIA驱动，或运行`ubuntu-drivers autoinstall`' },
+        { '@type': 'HowToStep', position: 3, name: '安装Ollama：`curl -fsSL https://ollama.com/install.sh | sh`' },
+        { '@type': 'HowToStep', position: 4, name: '拉取模型：`ollama pull qwen2.5:14b-instruct-q8_0`' },
+        { '@type': 'HowToStep', position: 5, name: '以网络服务器模式运行：`OLLAMA_HOST=0.0.0.0 ollama serve`' },
+        { '@type': 'HowToStep', position: 6, name: '安装Open WebUI以获得浏览器界面：`docker run -d -p 3000:8080 --gpus all ghcr.io/open-webui/open-webui:cuda`' },
+        { '@type': 'HowToStep', position: 7, name: '通过Tailscale暴露服务，实现从任意设备安全远程访问' },
       ],
     },
     itemListSchema: {

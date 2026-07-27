@@ -318,6 +318,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ],
       },
+      faq: {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
+        faqs: [
+          { q: 'Wie reduzieren Content-Teams KI-Review-Zyklen mit Prompt Engineering?', a: 'Content-Teams reduzieren Review-Zyklen, indem sie Qualitätskriterien — Ton, Format, Wortzahl, Brand-Vokabular und Anti-Listen — direkt vor der Generierung in den Prompt kodieren. Wenn die Ausgabeanforderungen explizit sind, kommt der KI-generierte Content näher am Ziel an und benötigt weniger Überarbeitungsrunden.' },
+          { q: 'Was ist das CRAFT-Framework und wann sollten Content-Teams es einsetzen?', a: 'CRAFT steht für Context, Role, Action, Format und Tone. Es ist ein strukturiertes Prompt-Framework für kreative und Content-Arbeit, weil es die fünf für Content-Ausgaben relevantesten Dimensionen organisiert. Verwenden Sie es als Basisstruktur für jeden Content-Prompt, der Brand Voice, Formatanforderungen oder Multi-Stakeholder-Review betrifft.' },
+          { q: 'Wie viele Brand-Beispiele brauche ich in einem Brand-Voice-Prompt?', a: 'Fügen Sie 2 bis 3 genehmigte Content-Samples in den Prompt ein. Weniger als 2 gibt dem Modell zu wenig Mustersignal. Mehr als 3 kann das für die eigentliche Aufgabe verfügbare Kontextfenster verwässern. Die Beispiele sollten den Zielkanal und Content-Typ repräsentieren — verwenden Sie kein LinkedIn-Beispiel für einen E-Mail-Brief.' },
+          { q: 'Wann sollte ein Content-Team die Faktgenauigkeits-Review-Stufe überspringen?', a: 'Überspringen Sie die Faktgenauigkeitsstufe nur für risikoarmen Content ohne Faktenbehauptungen — Social-Media-Captions, die ein Event ankündigen, kurze CTAs oder reine Formatausgaben wie Betreffzeilen-Optionen. Jeder Content mit Aussagen zu Produkten, Preisen, Leistung oder Dritten benötigt vor der Veröffentlichung eine Faktgenauigkeitsprüfung.' },
+          { q: 'Wie richte ich ein Content-Template ein, das konsistent über mehrere Modelle funktioniert?', a: 'Testen Sie dasselbe Template an 2–3 Modellen verschiedener Anbieter mit jeweils 10+ Testläufen. Verwenden Sie die 5-Punkte-Qualitäts-Scoring-Checkliste zur Bewertung der Konsistenz. Wenn alle Modelle 1,5+ erreichen, ist das Template portabel. Fällt ein Modell unter 1,5, überarbeiten Sie den Prompt statt eine modellspezifische Version zu übernehmen.' },
+          { q: 'Was ist die Deployment-Schwelle für einen Content-Prompt?', a: 'Deployen Sie den Prompt, wenn der Durchschnittsscore über alle 5 Kriterien (Aufgabe erfüllt, Formatkonformität, Brand-Voice-Übereinstimmung, Faktgenauigkeit, CTA-Ausrichtung) über 10 Testläufe 1,5 oder höher (auf einer Skala von 0–2) beträgt. Ein Score unter 1,5 deutet auf zu viele teilweise oder fehlerhafte Ausgaben für den Produktionseinsatz ohne zusätzlichen Review-Aufwand hin.' },
+        ],
+      },
     },
   },
 

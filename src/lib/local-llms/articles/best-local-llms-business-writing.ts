@@ -1779,5 +1779,20 @@ schema: {
           ],
         },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '2026년 비즈니스 문서 작성을 위한 최고의 로컬 LLM',
+        'numberOfItems': 7,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '이메일 초안 작성', 'description': 'Mistral Small 3.1 24B. 능동태, 최대 150단어, 전문 용어 없이. 결과물 품질 우수.' },
+          { '@type': 'ListItem', 'position': 2, 'name': '비즈니스 제안서', 'description': 'Llama 3.3 8B. 톤 참고용으로 제안서 예시 2~3개 제공. 결과물 품질 양호.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '경영진용 메모', 'description': 'Mistral Small 3.1 24B. 문제/권고/다음 단계 형식. 결과물 품질 우수.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Slack/내부 메시지', 'description': 'Qwen3 7B. 캐주얼하지만 전문적으로, 2~3문장. 결과물 품질 양호, 낮은 지연.' },
+          { '@type': 'ListItem', 'position': 5, 'name': '비영어권 비즈니스 이메일', 'description': 'Qwen3 7B. 프랑스어, 독일어, 일본어를 포함한 29개 네이티브 언어. 결과물 품질 우수.' },
+          { '@type': 'ListItem', 'position': 6, 'name': '계약서 요약', 'description': 'Llama 3.3 70B. 긴 컨텍스트로 전체 문서를 처리. 결과물 품질 최고.' },
+          { '@type': 'ListItem', 'position': 7, 'name': '기존 초안 다듬기', 'description': '7B 모델(모든 종류). 편집 모드: 유행어 제거, 능동태 사용. 결과물 품질 우수한 활용 사례.' },
+        ],
+      },
     },
   };

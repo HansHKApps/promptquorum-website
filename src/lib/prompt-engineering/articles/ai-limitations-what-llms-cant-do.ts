@@ -788,6 +788,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-09-24',
+      primaryTerm: 'Limitaciones de la IA',
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
+      },
       theme: 'Fundamentals',
       title: 'Limitaciones de la IA: Lo que los LLMs no pueden hacer en 2026',
       intro: 'Los grandes modelos de lenguaje tienen ocho límites estrictos que ninguna cantidad de fine-tuning, escala o prompt engineering puede eliminar: sin datos en tiempo real, alucinaciones confiadas, razonamiento débil de varios pasos, límites del context window, sin memoria, sin acciones en el mundo real, sesgo de entrenamiento y sin autoverificación. Cada modelo — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro y las alternativas de código abierto — comparte estas restricciones estructurales. Esta guía cubre cada límite con el workaround de ingeniería que funciona en producción.',
@@ -1005,6 +1014,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-05-01',
       readTime: '١١ دقيقة للقراءة',
       educationalLevel: 'متوسط',
+      primaryTerm: 'قيود الذكاء الاصطناعي',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1052,6 +1062,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'HowToStep', position: 4, name: 'أرشد النموذج للإشارة إلى عدم اليقين', text: 'اطلب من النموذج قول "لست متأكدًا" أو وضع علامة على أي ادعاء لا يستطيع التحقق منه من السياق المقدَّم.' },
           { '@type': 'HowToStep', position: 5, name: 'تحقق من المخرجات مقابل المصادر الأولية', text: 'لا تنشر مخرجات النموذج اللغوي الكبير حول الادعاءات الواقعية دون التحقق من الأرقام والتواريخ والاستشهادات الرئيسية مقابل المصادر الموثوقة.' },
         ],
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
       },
       sections: {
         definition: {
@@ -1209,6 +1227,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/ai-limitations-what-llms-cant-do-quick-reference-hero-pt.png',
       readTime: '11 min de leitura',
       educationalLevel: 'Intermediate',
+      primaryTerm: 'Limitações da IA',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1256,6 +1275,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'HowToStep', position: 4, name: 'Instrua o modelo a sinalizar incerteza', text: 'Peça ao modelo que diga "Não tenho certeza" ou marque qualquer afirmação que não possa verificar a partir do contexto fornecido.' },
           { '@type': 'HowToStep', position: 5, name: 'Valide as saídas contra fontes primárias', text: 'Nunca publique saída de LLM sobre afirmações factuais sem verificar números-chave, datas e citações contra fontes autorizadas.' },
         ],
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
       },
       sections: {
         definition: {
@@ -2579,6 +2606,7 @@ zh: {
     dateModified: '2026-05-01',
     readTime: '11분 분량',
     educationalLevel: 'Intermediate',
+    primaryTerm: 'AI 한계',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -2620,6 +2648,14 @@ zh: {
         { '@type': 'HowToStep', position: 4, name: '불확실성 표시 지시', text: '모델에게 "확실하지 않습니다"라고 말하거나 제공된 컨텍스트에서 검증할 수 없는 주장을 표시하도록 요청하세요.' },
         { '@type': 'HowToStep', position: 5, name: '1차 소스에 대해 출력 검증', text: '권위 있는 소스에 대해 주요 수치, 날짜, 인용을 확인하지 않고 사실적 주장에 대한 LLM 출력을 절대 게시하지 마세요.' },
       ],
+    },
+    supplementalSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      'speakable': {
+        '@type': 'SpeakableSpecification',
+        'cssSelector': ['.article-intro'],
+      },
     },
     sections: {
       definition: {

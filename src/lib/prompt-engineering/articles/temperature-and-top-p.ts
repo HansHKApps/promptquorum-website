@@ -278,6 +278,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-22',
       readTime: '10 Min. Lesezeit',
       educationalLevel: 'Intermediate',
+      primaryTerm: 'Temperatur und Top-P Sampling',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -425,6 +426,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Vollständig ignorieren, dass dein Anbieter Top-P ignoriert.** Einige Modelle tun es; einige nicht. Überprüfe die Dokumentation, um zu vermeiden, dass Zeit mit der Anpassung eines deaktivierten Reglers verschwendet wird.',
           ],
         },
+
+        howToStart: {
+          title: 'So stellst du Temperatur und Top-P für deine Aufgabe ein',
+          numberedItems: [
+            '**Beginne mit dem Prompt, nicht mit den Parametern:** Schreibe und verfeinere deine Anweisungen, bis sie klar sind. Parameter können einen vagen Prompt nicht reparieren – sie beeinflussen nur die Sampling-Verteilung, nicht das Verständnis der Aufgabe durch das Modell.',
+            '**Bestimme deinen Aufgabentyp:** Faktische oder analytische Aufgaben (juristische Analyse, Code-Review, Datenextraktion) → Temperatur 0,0–0,3 einstellen. Kreative oder generative Aufgaben (Brainstorming, Werbetexte, Story-Ideen) → Temperatur 0,7–1,0 einstellen.',
+            '**Lasse Top-P auf dem Standardwert (0,9–1,0):** Passe Top-P nur an, wenn du einen bestimmten Grund dafür hast. Wenn du Temperatur und Top-P gleichzeitig änderst, wird es schwieriger zu erkennen, welche Einstellung die Ausgabe verändert hat.',
+            '**Führe 3–5 Testprompts bei deiner Zieltemperatur aus:** Bewerte die Konsistenz der Ausgaben. Wenn die Ausgaben bei einer faktischen Aufgabe zu stark variieren, senke die Temperatur. Wenn sich die Ausgaben bei einer kreativen Aufgabe zu repetitiv anfühlen, erhöhe die Temperatur.',
+            '**Dokumentiere deine kalibrierten Einstellungen pro Anwendungsfall:** Sobald du die richtige Temperatur für einen bestimmten Workflow gefunden hast, halte sie in deiner System-Prompt-Vorlage fest, damit sie über alle Sitzungen hinweg konsistent angewendet wird.',
+          ],
+        },
+
         faqs: {
           faqs: [
             { q: 'Sollte ich zuerst die Temperatur oder Top-P anpassen?', a: 'Temperatur. Sie hat einen offensicheren Effekt. Halte Top-P bei einem Standard (0.9–1.0), bis du ein Gefühl dafür hast, was Temperatur für deine Aufgabe tut, dann fine-tune Top-P nur bei Bedarf.' },
@@ -460,6 +473,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: 'Temperatura y Top-P 2026: ajusta creatividad y precisión',
       metaDescription: 'Temperatura 0–2 y Top-P 0.1–1.0: define la aleatoriedad de la IA para código, resúmenes o brainstorming. Rangos prácticos para ChatGPT, Claude y Gemini.',
       readTime: '10 min de lectura',
+      primaryTerm: 'Muestreo de Temperatura y Top-P',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -637,6 +651,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        howToStart: {
+          title: 'Cómo configurar temperatura y top-p para tu tarea',
+          numberedItems: [
+            '**Empieza por el prompt, no por los parámetros:** Escribe y refina tus instrucciones hasta que sean claras. Los parámetros no pueden arreglar un prompt vago — solo afectan la distribución de muestreo, no la comprensión de la tarea por parte del modelo.',
+            '**Identifica el tipo de tarea:** Tareas factuales o analíticas (análisis legal, revisión de código, extracción de datos) → establece temperatura 0.0–0.3. Tareas creativas o generativas (brainstorming, copy publicitario, ideas para historias) → establece temperatura 0.7–1.0.',
+            '**Deja top-p en su valor predeterminado (0.9–1.0):** Ajusta top-p solo si tienes una razón específica. Cambiar temperatura y top-p simultáneamente dificulta diagnosticar qué ajuste modificó el output.',
+            '**Ejecuta 3–5 prompts de prueba con tu temperatura objetivo:** Evalúa la consistencia del output. Si los outputs varían demasiado en una tarea factual, baja la temperatura. Si los outputs se sienten repetitivos en una tarea creativa, sube la temperatura.',
+            '**Documenta tus ajustes calibrados por caso de uso:** Una vez que encuentres la temperatura correcta para un flujo de trabajo específico, regístrala en tu plantilla de prompt de sistema para que se aplique de forma consistente en todas las sesiones.',
+          ],
+        },
+
         faqs: {
           faqs: [
             { q: '¿Debo ajustar primero la temperatura o el top-p?', a: 'La temperatura. Tiene un efecto más obvio. Mantén el top-p en un valor predeterminado (0.9–1.0) hasta que tengas una idea de lo que la temperatura hace para tu tarea, luego ajusta el top-p solo si es necesario.' },
@@ -674,6 +699,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: '⁨Temperature⁩ و⁨Top-P 2026⁩: اضبط الإبداع والدقة',
       metaDescription: '⁨Temperature⁩ من ⁨0⁩ إلى ⁨2⁩ و⁨Top-P⁩ من ⁨0.1⁩ إلى ⁨1.0⁩: تحكم في عشوائية ⁨LLMs⁩ للكود والملخصات والعصف الذهني. نطاقات مُختبرة على ⁨ChatGPT⁩ و⁨Claude⁩ و⁨Gemini⁩.',
       readTime: '١٠ دقائق للقراءة',
+      primaryTerm: 'أخذ العينات بدرجة الحرارة وTop-P',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -851,6 +877,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        howToStart: {
+          title: 'كيف تضبط درجة الحرارة وTop-P لمهمتك',
+          numberedItems: [
+            '**ابدأ بالطلب لا بالمعاملات:** اكتب تعليماتك ونقّحها حتى تصبح واضحة. لا يمكن للمعاملات إصلاح طلب غامض — فهي تؤثر فقط على توزيع أخذ العينات، لا على فهم النموذج للمهمة.',
+            '**حدّد نوع مهمتك:** المهام الواقعية أو التحليلية (التحليل القانوني، مراجعة الكود، استخراج البيانات) ← اضبط درجة الحرارة على 0.0–0.3. المهام الإبداعية أو التوليدية (العصف الذهني، كتابة الإعلانات، أفكار القصص) ← اضبط درجة الحرارة على 0.7–1.0.',
+            '**اترك Top-P عند قيمته الافتراضية (0.9–1.0):** لا تعدّل Top-P إلا إذا كان لديك سبب محدد. تعديل درجة الحرارة وTop-P في آنٍ واحد يجعل تشخيص الإعداد الذي غيّر المخرجات أصعب.',
+            '**شغّل 3–5 طلبات اختبار عند درجة حرارتك المستهدفة:** قيّم اتساق المخرجات. إذا تفاوتت المخرجات كثيرًا في مهمة واقعية، اخفض درجة الحرارة. إذا شعرت أن المخرجات مكررة في مهمة إبداعية، ارفع درجة الحرارة.',
+            '**وثّق إعداداتك المعايرة لكل حالة استخدام:** بمجرد أن تجد درجة الحرارة الصحيحة لسير عمل معين، سجّلها في قالب طلب النظام الخاص بك لتُطبَّق باستمرار عبر الجلسات.',
+          ],
+        },
+
         faqs: {
           faqs: [
             { q: 'هل يجب أن أضبط درجة الحرارة أولًا أم Top-P؟', a: 'درجة الحرارة. لها تأثير أوضح. أبقِ على top-p عند قيمة افتراضية (0.9–1.0) حتى تتضح لك تأثيرات درجة الحرارة على مهمتك، ثم اضبط top-p إذا لزم.' },
@@ -888,6 +925,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: 'Temperatura e Top-P 2026: ajuste criatividade e precisão',
       metaDescription: 'Temperatura 0–2 e Top-P 0,1–1,0: defina criatividade e precisão da IA. Guia prático com valores ideais para escrita criativa, código e chat.',
       readTime: '9 min de leitura',
+      primaryTerm: 'Amostragem por Temperatura e Top-P',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1002,6 +1040,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-22',
       readTime: '10 min de lecture',
       educationalLevel: 'Intermediate',
+      primaryTerm: 'Échantillonnage par température et top-p',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1149,6 +1188,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Ignorer complètement parce que ton fournisseur l\'ignore.** Certains modèles le font ; d\'autres non. Vérifie la documentation pour éviter de gaspiller du temps à ajuster un curseur désactivé.',
           ],
         },
+
+        howToStart: {
+          title: 'Comment régler la température et le Top-P pour ta tâche',
+          numberedItems: [
+            '**Commence par le prompt, pas par les paramètres :** Rédige et affine tes instructions jusqu\'à ce qu\'elles soient claires. Les paramètres ne peuvent pas corriger un prompt vague — ils n\'affectent que la distribution d\'échantillonnage, pas la compréhension de la tâche par le modèle.',
+            '**Identifie le type de ta tâche :** Tâches factuelles ou analytiques (analyse juridique, revue de code, extraction de données) → règle la température sur 0,0–0,3. Tâches créatives ou génératives (brainstorming, rédaction publicitaire, idées d\'histoires) → règle la température sur 0,7–1,0.',
+            '**Laisse le top-p à sa valeur par défaut (0,9–1,0) :** N\'ajuste le top-p que si tu as une raison précise. Modifier à la fois la température et le top-p rend plus difficile le diagnostic du paramètre qui a changé la sortie.',
+            '**Exécute 3–5 prompts de test à ta température cible :** Évalue la cohérence des sorties. Si les sorties varient trop pour une tâche factuelle, baisse la température. Si les sorties semblent répétitives pour une tâche créative, augmente la température.',
+            '**Documente tes réglages calibrés par cas d\'usage :** Une fois que tu as trouvé la bonne température pour un flux de travail spécifique, note-la dans ton modèle de prompt système pour qu\'elle s\'applique de manière cohérente d\'une session à l\'autre.',
+          ],
+        },
+
         faqs: {
           faqs: [
             { q: 'Dois-je d\'abord ajuster la température ou le top-p ?', a: 'La température. Il a un effet plus évident. Garde top-p par défaut (0.9–1.0) jusqu\'à ce que tu aies une idée de ce que la température fait pour ta tâche, puis affine uniquement le top-p si nécessaire.' },
@@ -1185,6 +1236,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-22',
       readTime: '10分で読める',
       educationalLevel: 'Intermediate',
+      primaryTerm: '温度とTop-Pサンプリング',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1332,6 +1384,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**プロバイダーが無視するため完全に無視します。** 一部のモデルはそうしますが、そうではないものもあります。ドキュメントをチェックして、無効になっているノブを調整するための時間を無駄にしないでください。',
           ],
         },
+
+        howToStart: {
+          title: 'タスクに合わせて温度とTop-Pを設定する方法',
+          numberedItems: [
+            '**パラメータではなくプロンプトから始める：** 指示が明確になるまで書いて調整してください。パラメータは曖昧なプロンプトを修正できません — サンプリング分布に影響するだけで、モデルのタスク理解には影響しません。',
+            '**タスクの種類を特定する：** 事実に基づく分析タスク（法律分析、コードレビュー、データ抽出）→ 温度0.0〜0.3に設定。創造的または生成的なタスク（ブレーンストーミング、コピーライティング、ストーリーのアイデア）→ 温度0.7〜1.0に設定。',
+            '**Top-Pはデフォルト（0.9〜1.0）のままにする：** 特定の理由がある場合のみTop-Pを調整してください。温度とTop-Pを同時に変更すると、どちらの設定が出力を変えたのか診断が難しくなります。',
+            '**目標温度で3〜5回のテストプロンプトを実行する：** 出力の一貫性を評価します。事実に基づくタスクで出力のばらつきが大きすぎる場合は温度を下げ、創造的なタスクで出力が単調に感じる場合は温度を上げます。',
+            '**ユースケースごとに調整済みの設定を記録する：** 特定のワークフローに適した温度が見つかったら、システムプロンプトテンプレートに記録し、セッション間で一貫して適用されるようにします。',
+          ],
+        },
+
         faqs: {
           faqs: [
             { q: 'まず温度またはTop-Pを調整すべきですか？', a: '温度。より明らかな効果があります。タスクが温度を実行するかについて感覚を得るまでTop-Pをデフォルト（0.9–1.0）に保ち、必要に応じてのみTop-Pを微調整します。' },
@@ -1368,6 +1432,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-22',
       readTime: '阅读约10分钟',
       educationalLevel: 'Intermediate',
+      primaryTerm: '温度与Top-P采样',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1515,6 +1580,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**完全忽略，因为您的提供商忽略了它。** 一些模型这样做；有些则不。检查文档以避免浪费时间调整禁用的旋钮。',
           ],
         },
+
+        howToStart: {
+          title: '如何为您的任务设置温度和Top-P',
+          numberedItems: [
+            '**从提示词开始，而不是参数：** 编写并优化您的指令，直到它们清晰为止。参数无法修复模糊的提示词——它们只影响采样分布，不影响模型对任务的理解。',
+            '**确定您的任务类型：** 事实性或分析性任务（法律分析、代码审查、数据提取）→ 将温度设置为0.0–0.3。创造性或生成性任务（头脑风暴、文案写作、故事创意）→ 将温度设置为0.7–1.0。',
+            '**将Top-P保留为默认值（0.9–1.0）：** 只有在有具体理由时才调整Top-P。同时更改温度和Top-P会让您更难诊断是哪个设置改变了输出。',
+            '**在目标温度下运行3–5个测试提示词：** 评估输出一致性。如果事实性任务的输出差异过大，请降低温度。如果创造性任务的输出感觉重复，请提高温度。',
+            '**记录每个用例的校准设置：** 一旦为特定工作流程找到正确的温度，将其记录在您的系统提示词模板中，以便在各个会话中保持一致应用。',
+          ],
+        },
+
         faqs: {
           faqs: [
             { q: '我应该先调整温度还是Top-P？', a: '温度。它有更明显的效果。保持Top-P为默认值（0.9–1.0），直到您感受到温度对您的任务的影响，然后仅在需要时微调Top-P。' },

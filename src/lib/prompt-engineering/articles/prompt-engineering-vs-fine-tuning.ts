@@ -1553,6 +1553,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     dateModified: '2026-05-04',
     readTime: '阅读约10分钟',
     educationalLevel: 'Intermediate',
+    primaryTerm: 'Prompt工程 vs 微调',
     seoTitle: 'Prompt工程 vs 微调 2026：快速决策',
     metaDescription: '何时用Prompt工程，何时微调？2026年指南：成本、时间、可逆性对比。中国数据安全法合规指南。决策流程图。',
     schema: {

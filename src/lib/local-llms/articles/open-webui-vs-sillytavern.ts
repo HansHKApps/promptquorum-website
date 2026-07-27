@@ -1695,6 +1695,17 @@ schema: {
           { '@type': 'Thing', 'name': 'Interfaces de chat LLM local' },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'pt-BR',
+        name: 'Open WebUI vs SillyTavern: Comparação de Recursos',
+        numberOfItems: 2,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Open WebUI', description: 'Backend Python FastAPI + frontend Svelte. Suporte multiusuário com gerenciamento de chaves de API. Deploy via Docker. Interface de chat profissional com plugins de RAG e upload de documentos. Ideal para equipes, pesquisa e fluxos de trabalho profissionais.' },
+          { '@type': 'ListItem', position: 2, name: 'SillyTavern', description: 'Servidor Node.js com frontend no navegador. Single-user. Character cards com personalidade e aparência. Lorebooks para contexto de mundo persistente. Chat em grupo, TTS/STT e integração com Stable Diffusion. Ideal para escrita criativa e roleplay de personagens.' },
+        ],
+      },
     },
   ko: {
       freshness_tier: 'semi_annual',
@@ -1723,6 +1734,17 @@ schema: {
         { label: '흔한 실수', anchor: '#mistakes' },
         { label: 'FAQ', anchor: '#faq' },
       ],
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'ko',
+        name: 'Open WebUI vs SillyTavern: 기능 비교',
+        numberOfItems: 2,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Open WebUI', description: 'Python FastAPI + Svelte 프론트엔드. API 키 관리를 통한 다중 사용자 지원. Docker 배포. RAG 플러그인과 문서 업로드를 갖춘 전문적인 채팅 인터페이스. 팀, 연구, 전문 워크플로에 최적.' },
+          { '@type': 'ListItem', position: 2, name: 'SillyTavern', description: '브라우저 프론트엔드를 가진 Node.js 서버. 단일 사용자. 성격과 외모를 담은 캐릭터 카드. 지속적인 세계관을 위한 로어북. 그룹 채팅, TTS/STT, Stable Diffusion 통합. 창작 글쓰기와 캐릭터 롤플레이에 최적.' },
+        ],
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',

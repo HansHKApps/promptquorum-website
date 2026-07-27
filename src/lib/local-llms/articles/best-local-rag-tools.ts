@@ -1896,5 +1896,15 @@ schema: {
       ],
     },
   },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'name': '최고의 로컬 RAG 도구',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Chroma', 'description': '로컬 RAG를 위한 임베디드 벡터 데이터베이스. 소비자 하드웨어에서 10만~100만 개 문서를 처리합니다. 간단한 Python API 제공.' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'LlamaIndex', 'description': '인덱싱 및 검색을 위한 프레임워크. 여러 벡터 DB와 임베딩 모델을 지원합니다.' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Open WebUI', 'description': '내장 RAG 지원과 파일 업로드 기능을 갖춘 로컬 LLM용 웹 인터페이스.' },
+    ]
+  },
 },
   };

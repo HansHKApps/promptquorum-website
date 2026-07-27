@@ -1350,6 +1350,20 @@ schema: {
           { '@type': 'Question', name: 'Quanta VRAM eu preciso para LLMs locais interativos?', acceptedAnswer: { '@type': 'Answer', text: '8 GB VRAM é o ponto ideal para 2026: roda Mistral Small Q4 e Llama 3.3 8B Q4 a 25–60 tok/s — velocidade interativa completa. 4 GB funciona para modelos 1B–3B. Somente CPU é possível mas mais lento.' } },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'LLMs Locais mais Rápidos por Nível de Hardware 2026',
+        'url': 'https://www.promptquorum.com/pt/local-llms/fastest-local-llms-low-end-pcs',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Somente CPU (sem GPU)', 'description': 'Phi-4 Mini 3.8B Q4. 5–15 tok/s. 2,5 GB RAM. ollama run phi4-mini' },
+          { '@type': 'ListItem', 'position': 2, 'name': '4 GB VRAM (GTX 1650)', 'description': 'TinyLlama 1.1B Q5. 20–40 tok/s. ollama run tinyllama' },
+          { '@type': 'ListItem', 'position': 3, 'name': '6 GB VRAM (RTX 2060)', 'description': 'Phi-4 Mini 3.8B Q5. 15–30 tok/s. ollama run phi4-mini' },
+          { '@type': 'ListItem', 'position': 4, 'name': '8 GB VRAM (RTX 3060) — ponto ideal', 'description': 'Mistral Small Q4. 25–60 tok/s. Experiência completa de assistente. ollama run mistral' },
+          { '@type': 'ListItem', 'position': 5, 'name': '16+ GB VRAM (RTX 3080 / 4070)', 'description': 'Modelos 13B Q4. 20–50 tok/s. ollama run llama3.1:13b' },
+        ],
+      },
     },
     de: {
       theme: 'Modelle nach Anwendungsfall',
@@ -3037,6 +3051,20 @@ schema: {
             '[llama.cpp CPU 최적화 가이드](https://github.com/ggerganov/llama.cpp/blob/master/docs/build.md) — AVX-512, NEON 및 스레드 구성을 포함한 CPU 가속 플래그.',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '2026년 하드웨어 티어별 가장 빠른 로컬 LLM',
+        'url': 'https://www.promptquorum.com/ko/local-llms/fastest-local-llms-low-end-pcs',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'CPU 전용 (GPU 없음)', 'description': 'Phi-4 Mini 3.8B Q4. 초당 5–15 토큰. RAM 2.5 GB. ollama run phi4-mini' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'VRAM 4 GB (GTX 1650)', 'description': 'TinyLlama 1.1B Q5. 초당 20–40 토큰. ollama run tinyllama' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'VRAM 6 GB (RTX 2060)', 'description': 'Phi-4 Mini 3.8B Q5. 초당 15–30 토큰. ollama run phi4-mini' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'VRAM 8 GB (RTX 3060) — 최적 지점', 'description': 'Mistral Small Q4. 초당 25–60 토큰. 완전한 어시스턴트 경험. ollama run mistral' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'VRAM 16+ GB (RTX 3080 / 4070)', 'description': '13B 모델 Q4. 초당 20–50 토큰. ollama run llama3.1:13b' },
+        ],
       },
     },
   };

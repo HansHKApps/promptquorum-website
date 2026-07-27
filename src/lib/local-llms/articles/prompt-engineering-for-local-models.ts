@@ -1376,6 +1376,50 @@ schema: {
         proficiencyLevel: 'Advanced',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Como Definir um System Prompt no Ollama',
+        inLanguage: 'pt-BR',
+        totalTime: 'PT3M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Criar um Modelfile com a instrução SYSTEM', text: 'FROM llama3.1:8b\nSYSTEM "You are a Python expert with 10 years experience. Answer only Python questions. Provide code examples. Use type hints."\nPARAMETER temperature 0.4\nPARAMETER top_p 0.85\nPARAMETER repeat_penalty 1.15' },
+          { '@type': 'HowToStep', position: 2, name: 'Adicionar parâmetros de temperatura e amostragem', text: 'PARAMETER temperature 0.4\nPARAMETER top_p 0.85\nPARAMETER repeat_penalty 1.15' },
+          { '@type': 'HowToStep', position: 3, name: 'Registrar o modelo personalizado', text: 'ollama create python-expert -f Modelfile' },
+          { '@type': 'HowToStep', position: 4, name: 'Executar o modelo configurado', text: 'ollama run python-expert' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Técnicas de Prompt Engineering para LLMs Locais',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Prompting por Cadeia de Pensamento',
+            description: 'Peça ao modelo que raciocine passo a passo antes de responder. Melhora a precisão em 10–20% em tarefas de raciocínio para modelos locais de 7B–13B.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Formatação de Saída Estruturada',
+            description: 'Especifique o formato exato de saída (esquema JSON, estrutura markdown). Necessário para respostas estruturadas confiáveis de modelos locais.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Exemplos Few-Shot',
+            description: 'Forneça 3–5 exemplos rotulados antes da tarefa. Melhora a precisão de classificação e extração em 15–25% em comparação com zero-shot para modelos locais.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Definição de Papel',
+            description: 'Atribua um papel específico ("Você é um especialista em Python com 10 anos de experiência"). Melhora a qualidade da resposta específica do domínio.',
+          },
+        ],
+      },
     },
     de: {
       freshness_tier: 'semi_annual',
@@ -3137,6 +3181,50 @@ schema: {
             '[Ollama Modelfile 참조](https://github.com/ollama/ollama/blob/main/docs/modelfile.md) — 시스템 프롬프트, 파라미터(temperature, top_p, repeat_penalty), 사용자 정의 모델 생성에 관한 공식 문서.',
           ],
         },
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Ollama에서 시스템 프롬프트를 설정하는 방법',
+        inLanguage: 'ko',
+        totalTime: 'PT3M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'SYSTEM 지시문이 포함된 Modelfile 생성', text: 'FROM llama3.1:8b\nSYSTEM "You are a Python expert with 10 years experience. Answer only Python questions. Provide code examples. Use type hints."\nPARAMETER temperature 0.4\nPARAMETER top_p 0.85\nPARAMETER repeat_penalty 1.15' },
+          { '@type': 'HowToStep', position: 2, name: '온도 및 샘플링 파라미터 추가', text: 'PARAMETER temperature 0.4\nPARAMETER top_p 0.85\nPARAMETER repeat_penalty 1.15' },
+          { '@type': 'HowToStep', position: 3, name: '커스텀 모델 등록', text: 'ollama create python-expert -f Modelfile' },
+          { '@type': 'HowToStep', position: 4, name: '설정된 모델 실행', text: 'ollama run python-expert' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '로컬 LLM을 위한 프롬프트 엔지니어링 기법',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Chain-of-Thought 프롬프팅',
+            description: '답변하기 전에 모델이 단계별로 추론하도록 요청합니다. 로컬 7B–13B 모델의 추론 작업 정확도를 10–20% 향상시킵니다.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: '구조화된 출력 형식',
+            description: '정확한 출력 형식(JSON 스키마, 마크다운 구조)을 지정합니다. 로컬 모델에서 신뢰할 수 있는 구조화된 응답을 위해 필요합니다.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Few-Shot 예시',
+            description: '작업 전에 라벨이 붙은 3–5개의 예시를 제공합니다. 로컬 모델의 zero-shot 대비 분류 및 추출 정확도를 15–25% 향상시킵니다.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: '역할 정의',
+            description: '구체적인 역할을 지정합니다("당신은 10년 경력의 Python 전문가입니다"). 도메인별 응답 품질을 향상시킵니다.',
+          },
+        ],
       },
     },
   };

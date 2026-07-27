@@ -1875,6 +1875,29 @@ schema: {
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Economia de RAM por tamanho de modelo: Q4_K_M vs FP16 (2026)',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Modelo 3B', 'description': 'FP16: 6 GB de RAM. Q4_K_M: 2 GB de RAM. Economia: 67%. Roda em dispositivos com 4 GB.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Modelo 7B', 'description': 'FP16: 14 GB de RAM. Q4_K_M: 4,5 GB de RAM. Economia: 68%. Roda com 8 GB de RAM.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Modelo 13B', 'description': 'FP16: 26 GB de RAM. Q4_K_M: 8,5 GB de RAM. Economia: 67%. Roda com 16 GB de RAM.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Modelo 34B', 'description': 'FP16: 68 GB de RAM. Q4_K_M: 22 GB de RAM. Economia: 68%. Roda com 32 GB de RAM.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Modelo 70B', 'description': 'FP16: 140 GB de RAM. Q4_K_M: 40 GB de RAM. Economia: 71%. Roda com 48 GB de RAM.' },
+        ],
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'url': 'https://www.promptquorum.com/pt/local-llms/llm-quantization-explained',
+        'inLanguage': 'pt-BR',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
+      },
       gammaEmbedUrl: '/presentations/llm-quantization-explained-static.html',
       gammaDescription: 'O conjunto de slides abaixo cobre: comparação Q4_K_M vs Q8_0 vs formato GGUF, economia de RAM por tamanho de modelo (3B-70B), perda de qualidade por nível de quantização e qual quantização escolher para seu hardware. Baixe o PDF como cartão de referência de quantização de LLM.',
       sections: {
@@ -2781,6 +2804,16 @@ schema: {
           },
         ],
       },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'url': 'https://www.promptquorum.com/de/local-llms/llm-quantization-explained',
+        'inLanguage': 'de',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
+      },
       gammaEmbedUrl: '/presentations/llm-quantization-explained-static.html',
       gammaDescription: 'Das Slide-Deck umfasst: Q4_K_M vs Q8_0 vs GGUF-Formatvergleich, RAM-Einsparungen nach Modellgröße (3B-70B), Qualitätsverlust nach Quantisierungsstufe und welche Quantisierung für Ihre Hardware geeignet ist. PDF als LLM-Quantisierungs-Referenzkarte herunterladen.',
     },
@@ -3332,6 +3365,16 @@ schema: {
           },
         ],
       },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'url': 'https://www.promptquorum.com/fr/local-llms/llm-quantization-explained',
+        'inLanguage': 'fr',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
+      },
       gammaEmbedUrl: '/presentations/llm-quantization-explained-static.html',
       gammaDescription: 'Le diaporama ci-dessous couvre : comparaison Q4_K_M vs Q8_0 vs GGUF, économies RAM par taille de modèle (3B-70B), perte de qualité par niveau de quantification, et quelle quantification choisir pour votre matériel. Téléchargez le PDF comme référence de quantification LLM.',
     },
@@ -3882,6 +3925,16 @@ schema: {
           },
         ],
       },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'url': 'https://www.promptquorum.com/ja/local-llms/llm-quantization-explained',
+        'inLanguage': 'ja',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
+      },
       gammaEmbedUrl: '/presentations/llm-quantization-explained-static.html',
       gammaDescription: '下記のスライドデッキには次の内容が含まれています：Q4_K_M vs Q8_0 vs GGUF形式の比較、モデルサイズ（3B～70B）別のRAM削減量、量子化レベル別の品質低下、お使いのハードウェアに適した量子化の選択方法。PDFをLLM量子化リファレンスカードとしてダウンロードできます。',
     },
@@ -4423,6 +4476,16 @@ schema: {
           },
         ],
       },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'url': 'https://www.promptquorum.com/zh/local-llms/llm-quantization-explained',
+        'inLanguage': 'zh',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
+      },
       gammaEmbedUrl: '/presentations/llm-quantization-explained-static.html',
       gammaDescription: '下方幻灯片涵盖：Q4_K_M vs Q8_0 vs GGUF格式对比、按模型大小（3B～70B）节省的RAM、各量化级别的质量损失，以及如何为您的硬件选择量化级别。将PDF下载为LLM量化参考卡片。',
     },
@@ -4445,6 +4508,29 @@ schema: {
       audience: '프로덕션 환경에서 로컬 LLM을 배포하거나, 제한된 VRAM을 최적화하거나, 멀티 GPU 시스템을 구축하는 엔지니어',
       readTime: '14분 소요',
       educationalLevel: 'Advanced',
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'url': 'https://www.promptquorum.com/ko/local-llms/llm-quantization-explained',
+        'inLanguage': 'ko',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '모델 크기별 RAM 절감량: Q4_K_M vs FP16 (2026)',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '3B 모델', 'description': 'FP16: 6 GB RAM. Q4_K_M: 2 GB RAM. 절감: 67%. 4 GB 기기에서 실행 가능.' },
+          { '@type': 'ListItem', 'position': 2, 'name': '7B 모델', 'description': 'FP16: 14 GB RAM. Q4_K_M: 4.5 GB RAM. 절감: 68%. 8 GB RAM에서 실행 가능.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '13B 모델', 'description': 'FP16: 26 GB RAM. Q4_K_M: 8.5 GB RAM. 절감: 67%. 16 GB RAM에서 실행 가능.' },
+          { '@type': 'ListItem', 'position': 4, 'name': '34B 모델', 'description': 'FP16: 68 GB RAM. Q4_K_M: 22 GB RAM. 절감: 68%. 32 GB RAM에서 실행 가능.' },
+          { '@type': 'ListItem', 'position': 5, 'name': '70B 모델', 'description': 'FP16: 140 GB RAM. Q4_K_M: 40 GB RAM. 절감: 71%. 48 GB RAM에서 실행 가능.' },
+        ],
+      },
       primaryTerm: 'LLM 양자화 및 VRAM 최적화',
       quickAnswerTop: {
         ko: {

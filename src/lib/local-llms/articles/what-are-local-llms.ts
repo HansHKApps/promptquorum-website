@@ -1064,6 +1064,16 @@ schema: {
           { '@type': 'HowToStep', 'name': 'Résoudre le modèle non trouvé', 'text': 'Lister les modèles avec ollama list, extraire les modèles manquants avec ollama pull, vérifier les noms/tags exacts.' },
         ]
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'L\'essentiel des LLMs locaux',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Qu\'est-ce qu\'un LLM local ?', 'description': 'Un modèle IA qui s\'exécute sur votre propre matériel sans internet ni appels API, avec une confidentialité totale des données et un coût par token nul.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Comment ça fonctionne', 'description': 'Trois composants travaillent ensemble : le fichier modèle (format GGUF), un moteur d\'inférence (Ollama, LM Studio, llama.cpp) et une interface.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Configuration matérielle requise', 'description': 'Minimum 8 GB de RAM pour un modèle 7B en quantification Q4 ; 16 GB de RAM suffisent pour la plupart des usages courants.' },
+        ]
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1219,6 +1229,16 @@ schema: {
         { label: 'いつローカルLLMを使うべき？', anchor: '#when-should-you-use-a-local-llm' },
         { label: 'よくある質問', anchor: '#common-questions' },
       ],
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'ローカルLLMの基本',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'ローカルLLMとは？', 'description': 'インターネット接続もAPI呼び出しも不要で、あなたのハードウェア上で動作するAIモデル。データは完全にプライベートで、トークン費用もかかりません。' },
+          { '@type': 'ListItem', 'position': 2, 'name': '仕組み', 'description': '3つの要素が連携します。モデルファイル（GGUF形式）、推論エンジン（Ollama、LM Studio、llama.cpp）、そしてインターフェースです。' },
+          { '@type': 'ListItem', 'position': 3, 'name': '必要なハードウェア', 'description': '7Bパラメータモデルを4ビット量子化で実行する場合、最低8GBのRAMが必要です。16GBあれば日常的な用途を快適にこなせます。' },
+        ]
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1374,6 +1394,16 @@ schema: {
         { label: '何时使用本地LLM？', anchor: '#when-should-you-use-a-local-llm' },
         { label: '常见问题', anchor: '#common-questions' },
       ],
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '本地LLM要点',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '什么是本地LLM？', 'description': '一种在您自己的硬件上运行的AI模型，无需互联网或API调用，具有完全的数据隐私和零token成本。' },
+          { '@type': 'ListItem', 'position': 2, 'name': '工作原理', 'description': '三个组件协同工作：模型文件（GGUF格式）、推理引擎（Ollama、LM Studio、llama.cpp）和界面。' },
+          { '@type': 'ListItem', 'position': 3, 'name': '硬件要求', 'description': '以Q4量化运行7B模型最低需要8GB RAM；16GB RAM足以应对大多数日常使用场景。' },
+        ]
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1529,6 +1559,16 @@ schema: {
         { label: 'Wann sollten Sie ein lokales LLM verwenden?', anchor: '#when-should-you-use-a-local-llm' },
         { label: 'Häufig gestellte Fragen', anchor: '#common-questions' },
       ],
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Grundlagen lokaler LLMs',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Was ist ein lokales LLM?', 'description': 'Ein KI-Modell, das ohne Internetverbindung oder API-Aufrufe auf Ihrer eigenen Hardware läuft -- mit vollständiger Datenprivatsphäre und null Kosten pro Token.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Funktionsweise', 'description': 'Drei Komponenten arbeiten zusammen: die Modelldatei (GGUF-Format), eine Inferenz-Engine (Ollama, LM Studio, llama.cpp) und eine Schnittstelle.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Hardwareanforderungen', 'description': 'Mindestens 8 GB RAM für ein 7B-Modell mit Q4-Quantisierung; 16 GB RAM reichen für die meisten alltäglichen Anwendungsfälle komfortabel aus.' },
+        ]
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1689,6 +1729,16 @@ schema: {
         { label: '언제 로컬 LLM을 사용해야 하나요?', anchor: '#when-should-you-use-a-local-llm' },
         { label: '자주 묻는 질문', anchor: '#common-questions' },
       ],
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '로컬 LLM 핵심 요소',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '로컬 LLM이란?', 'description': '인터넷 연결이나 API 호출 없이 자체 하드웨어에서 실행되는 AI 모델로, 완전한 데이터 프라이버시와 제로 토큰 비용을 제공합니다.' },
+          { '@type': 'ListItem', 'position': 2, 'name': '작동 방식', 'description': '세 가지 구성 요소가 함께 작동합니다: 모델 파일(GGUF 형식), 추론 엔진(Ollama, LM Studio, llama.cpp), 그리고 인터페이스입니다.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '하드웨어 요구 사항', 'description': 'Q4 양자화된 7B 모델을 실행하려면 최소 8GB RAM이 필요합니다. 16GB RAM이면 대부분의 일상적인 사용 사례를 편안하게 처리할 수 있습니다.' },
+        ]
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',
