@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
+    heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-en.png',
     title: 'Best Local AI Apps for Low-End PCs in 2026 (8GB RAM, No GPU)',
     seoTitle: 'Best Local AI Apps for 8GB RAM PCs 2026: Tested CPU-Only',
     metaDescription:
@@ -512,6 +513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
+    heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-de.png',
     title: 'Beste lokale KI-Apps für leistungsschwache PCs in 2026 (8 GB RAM, ohne GPU)',
     seoTitle: 'Lokale KI für 8-GB-RAM-PCs 2026: CPU-only getestet',
     metaDescription:
@@ -913,6 +915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
+    heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-fr.png',
     title: 'Meilleures applications d\'IA locale pour PC modestes en 2026 (8 Go RAM, sans GPU)',
     seoTitle: 'Meilleures apps IA locales PC 8 Go RAM 2026 : test CPU',
     metaDescription:
@@ -1189,6 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
+    heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-ja.png',
     title: 'ロースペックPC向けベストローカルAIアプリ 2026年版（8GB RAM・GPUなし）',
     seoTitle: '8GB RAM PC向けローカルAIアプリ 2026：CPU専用テスト',
     metaDescription:
@@ -1469,6 +1473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
+    heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-zh.png',
     title: '2026年低配PC最佳本地AI应用（8GB内存，无独立GPU）',
     seoTitle: '8GB内存集成显卡PC适用的本地AI 2026：Ollama、GPT4All、Jan、llama.cpp无GPU实测',
     metaDescription:
@@ -1749,6 +1754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
+    heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-es.png',
     title: 'Mejores apps de IA local para PCs de gama baja en 2026 (8 GB RAM, sin GPU)',
     seoTitle: 'Mejores apps de IA local en PC de 8 GB 2026: solo CPU',
     metaDescription:
@@ -2232,6 +2238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
+    heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-pt.png',
     title: 'Melhores apps de IA local para PCs de baixo desempenho em 2026 (8 GB RAM, sem GPU)',
     seoTitle: 'Melhores apps de IA local em PC de 8 GB 2026: só CPU',
     metaDescription:
@@ -2715,6 +2722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
+    heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-ar.png',
     title: 'أفضل تطبيقات الذكاء الاصطناعي المحلي للأجهزة الضعيفة ⁨2026⁩ (⁨8 GB RAM⁩ بدون ⁨GPU⁩)',
     seoTitle: 'ذكاء اصطناعي محلي بدون ⁨GPU 2026⁩: ⁨Ollama⁩ و⁨GPT4All⁩',
     metaDescription:
@@ -3198,6 +3206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
+    heroImage: '/images/best-local-ai-app-low-end-pc-overview-hero-ko.png',
     title: '저사양 PC를 위한 최고의 로컬 AI 앱 2026 (8 GB RAM, GPU 없음)',
     seoTitle: '저사양 PC 8 GB 로컬 AI 앱 2026: CPU 전용',
     metaDescription:

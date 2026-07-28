@@ -19,6 +19,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-en.png',
     title: 'Local AI Workstation Build Guide 2026: 3 Budget Tiers',
     seoTitle: 'Local AI PC Build 2026: Budget to 70B Workstation',
     intro:
@@ -532,6 +533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-de.png',
     title: 'Lokale-KI-Workstation 2026 selbst bauen: 3 Budget-Stufen',
     seoTitle: 'Lokaler-KI-PC 2026: vom Budget-Build zur 70B-Workstation',
     intro:
@@ -1053,6 +1055,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-fr.png',
     title: 'Monter une station IA locale en 2026 : 3 niveaux de budget',
     seoTitle: 'PC pour IA locale 2026 : du budget à la station 70B',
     intro:
@@ -1566,6 +1569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-ja.png',
     title: 'ローカルAIワークステーション自作ガイド2026：予算別3構成',
     seoTitle: 'ローカルAI PC自作2026：エントリーから70B対応機まで',
     intro:
@@ -2079,6 +2083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-zh.png',
     title: '2026 本地 AI 工作站装机指南：三档预算配置',
     seoTitle: '2026 本地 AI PC 装机：从入门到 70B 工作站',
     intro:
@@ -2592,6 +2597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-es.png',
     title: 'Guía para armar una PC con IA local 2026: 3 niveles de presupuesto',
     seoTitle: 'PC para IA local 2026: del básico a la estación 70B',
     intro:
@@ -3118,6 +3124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-pt.png',
     title: 'Guia para montar um PC com IA local 2026: 3 níveis de orçamento',
     seoTitle: 'PC para IA local 2026: do básico à estação de trabalho 70B',
     intro:
@@ -3645,6 +3652,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-ar.png',
     title: 'دليل بناء محطة عمل الذكاء الاصطناعي المحلي ⁨2026⁩: ⁨3⁩ مستويات ميزانية',
     seoTitle: 'بناء حاسوب ⁨LLM⁩ محلي ⁨2026⁩: ⁨3⁩ مستويات من ⁨7B⁩ حتى ⁨70B⁩',
     intro:
@@ -4171,6 +4179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-ko.png',
     title: '로컬 AI 워크스테이션 구성 가이드 2026: 예산별 3단계',
     seoTitle: '로컬 AI PC 2026: 입문부터 70B 워크스테이션까지',
     intro:

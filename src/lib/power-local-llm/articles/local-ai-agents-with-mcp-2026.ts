@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-en.png',
     title: 'Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026',
     seoTitle: 'Local Ollama + MCP: Connect AI to Databases and APIs (2026)',
     intro:
@@ -441,6 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-de.png',
     title: 'Ollama mit Datenbanken und APIs über MCP verbinden: Lokale Agent-Einrichtung 2026',
     seoTitle: 'Lokale KI-Agenten mit MCP 2026: Model Context Protocol',
     intro:
@@ -893,6 +895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-fr.png',
     title: "Connecter Ollama aux bases de données et APIs via MCP : configuration d'agent local 2026",
     seoTitle: 'Ollama + MCP local : agent IA avec bases et APIs 2026',
     intro:
@@ -1337,6 +1340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-ja.png',
     title: 'Ollama をデータベースと API に MCP で接続：ローカルエージェントセットアップ 2026',
     seoTitle: 'Ollama + MCP ローカル：DB と API 接続ガイド 2026',
     intro:
@@ -1789,6 +1793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-zh.png',
     title: '通过 MCP 将 Ollama 连接到数据库和 API：2026 年本地智能体配置指南',
     seoTitle: '本地 Ollama + MCP：连接数据库与 API 完整指南 2026',
     intro:
@@ -2241,6 +2246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-es.png',
     title: 'Conecta Ollama a bases de datos y APIs con MCP: configuración de agentes locales 2026',
     seoTitle: 'Ollama + MCP local 2026: conecta IA a bases de datos y APIs',
     intro:
@@ -2683,6 +2689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-pt.png',
     title: 'Conecte o Ollama a bancos de dados e APIs com MCP: configuração de agentes locais 2026',
     seoTitle: 'Ollama + MCP local 2026: conecte IA a bancos de dados e APIs',
     intro:
@@ -3123,6 +3130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-ar.png',
     title: 'ربط ⁨Ollama⁩ بقواعد البيانات و⁨APIs⁩ مع ⁨MCP⁩: إعداد وكيل محلي ⁨2026⁩',
     seoTitle: '⁨Ollama + MCP⁩ محلياً ⁨2026⁩: ربط قواعد البيانات و⁨APIs⁩',
     intro:
@@ -3478,6 +3486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-ko.png',
     title: 'Ollama를 데이터베이스 및 API에 MCP로 연결하기: 로컬 AI 에이전트 설정 2026',
     seoTitle: 'Ollama + MCP 로컬 2026: AI를 데이터베이스 및 API에 연결하기',
     intro:
