@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
+    heroImage: '/images/pe-for-developers-workflow-overview-hero-en.png',
     title: 'Prompt Engineering Workflow for Developers: IDE Setup, Testing, and CI/CD Integration',
     dateModified: '2026-07-13',
     seoTitle: 'Prompt Engineering for Developers: IDE & CI/CD Setup',
@@ -189,6 +190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatisierung',
+    heroImage: '/images/pe-for-developers-workflow-overview-hero-de.png',
     title: 'Prompt-Engineering-Workflow für Entwickler: IDE, Tests & CI/CD',
     seoTitle: 'Prompt Engineering für Entwickler: IDE & CI/CD-Setup',
     metaDescription: 'Entwickler-Prompt-Workflow: Cursor/VS Code, Promptfoo-Tests in 30s, Git-Versionierung, CI/CD-Gate bei 85% Pass-Rate, Produktions-Monitoring.',
@@ -356,6 +358,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatización',
+    heroImage: '/images/pe-for-developers-workflow-overview-hero-es.png',
     title: 'Flujo de trabajo de prompt engineering para desarrolladores: configuración de IDE, pruebas e integración CI/CD',
     seoTitle: 'Prompt engineering para desarrolladores: IDE y CI/CD',
     metaDescription: 'Flujo de trabajo de prompts en 5 etapas: Cursor/VS Code, Promptfoo en 30s, versionado en Git, gate CI/CD al 85%, monitoreo en producción.',
@@ -522,6 +525,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Workflows & Automação',
+    heroImage: '/images/pe-for-developers-workflow-overview-hero-pt.png',
     title: 'Fluxo de trabalho de prompt engineering para desenvolvedores: configuração de IDE, testes e integração CI/CD',
     seoTitle: 'Prompt engineering para desenvolvedores: IDE e CI/CD',
     metaDescription: 'Fluxo de trabalho de prompts em 5 etapas: Cursor/VS Code, Promptfoo em 30s, versionamento em Git, gate CI/CD a 85%, monitoramento em produção.',
@@ -689,6 +693,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Workflows et automatisation',
+    heroImage: '/images/pe-for-developers-workflow-overview-hero-fr.png',
     title: 'Workflow de prompt engineering pour les développeurs : configuration IDE, tests et intégration CI/CD',
     seoTitle: 'Prompt engineering pour les développeurs : IDE & CI/CD',
     metaDescription: 'Workflow prompt en 5 étapes : Cursor/VS Code, Promptfoo en 30s, versionnement Git, gate CI/CD à 85% pass-rate, monitoring production.',
@@ -856,6 +861,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'evergreen',
     theme: 'ワークフローと自動化',
+    heroImage: '/images/pe-for-developers-workflow-overview-hero-ja.png',
     title: '開発者向けプロンプトエンジニアリングワークフロー：IDEセットアップ、テスト、CI/CD統合',
     seoTitle: '開発者向けプロンプトエンジニアリング：IDE & CI/CDセットアップ',
     metaDescription: '開発者プロンプトワークフロー5段階：CursorまたはVS Codeで記述、Promptfooで30秒ローカルテスト、Gitでバージョン管理、CI/CDゲート85%、本番監視。',
@@ -1023,6 +1029,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'evergreen',
     theme: '工作流与自动化',
+    heroImage: '/images/pe-for-developers-workflow-overview-hero-zh.png',
     title: '开发者提示词工程工作流：IDE配置、测试和CI/CD集成',
     seoTitle: '开发者提示词工程：IDE & CI/CD配置',
     metaDescription: '开发者提示词工作流5个阶段：在Cursor或VS Code中编写，使用Promptfoo在30秒内本地测试，Git版本控制，CI/CD门控85%，生产监控。',
@@ -1190,6 +1197,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
+    heroImage: '/images/pe-for-developers-workflow-overview-hero-ar.png',
     title: 'سير عمل هندسة البرومبت للمطوّرين: إعداد بيئة التطوير والاختبار والتكامل المستمر',
     seoTitle: 'سير عمل البرومبت للمطوّرين: إعداد ⁨IDE⁩ و⁨CI/CD⁩',
     metaDescription: '⁨5⁩ مراحل لسير عمل البرومبت: ⁨Cursor/VS Code⁩، اختبار ⁨Promptfoo⁩ في ⁨30⁩ ثانية، إصدار ⁨Git⁩، بوابة ⁨CI/CD⁩ عند ⁨85%⁩، مراقبة الإنتاج.',
@@ -1356,6 +1364,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'evergreen',
     theme: '워크플로우 및 자동화',
+    heroImage: '/images/pe-for-developers-workflow-overview-hero-ko.png',
     title: '개발자를 위한 프롬프트 엔지니어링 워크플로우: IDE 설정, 테스트 및 CI/CD 통합',
     seoTitle: '개발자를 위한 프롬프트 엔지니어링: IDE 및 CI/CD 설정',
     metaDescription: '5단계 프롬프트 워크플로우: Cursor/VS Code에서 작성, 30초 내 Promptfoo 테스트, Git 버전 관리, 85% 통과율 CI/CD 게이트, 프로덕션 모니터링.',
