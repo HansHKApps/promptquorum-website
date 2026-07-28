@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      heroImage: '/images/single-prompt-method-overview-hero-en.png',
       title: 'The Single Step Prompt Method',
       intro: 'The Single Step Prompt Method is a minimal prompt framework where you describe the entire task in one carefully structured instruction instead of building a multi-turn conversation. This method reduces overhead, makes results easier to compare across models, and is the default starting framework inside PromptQuorum for new users.',
       publishDate: '2026-03-24',
@@ -441,6 +442,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      heroImage: '/images/single-prompt-method-overview-hero-de.png',
       title: 'Die Single Step Prompt Methode',
       intro: 'Die Single Step Prompt Methode ist ein minimalistisches Prompt-Framework, bei dem Sie die gesamte Aufgabe in einer sorgfältig strukturierten Anweisung beschreiben, anstatt ein Mehrturngespräch zu führen. Diese Methode reduziert den Aufwand, macht es einfacher, Ergebnisse zwischen Modellen zu vergleichen, und ist das standardmäßige Startframework für neue Benutzer in PromptQuorum.',
       publishDate: '2026-03-24',
@@ -735,6 +737,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      heroImage: '/images/single-prompt-method-overview-hero-es.png',
       title: 'El Método de Prompt de Un Solo Paso',
       intro: 'El Método de Prompt de Un Solo Paso es un framework de prompt mínimo donde describes toda la tarea en una instrucción cuidadosamente estructurada en lugar de construir una conversación de múltiples turnos. Este método reduce la sobrecarga, facilita la comparación de resultados entre modelos y es el framework de inicio predeterminado dentro de PromptQuorum para nuevos usuarios.',
       publishDate: '2026-03-24',
@@ -1126,6 +1129,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      heroImage: '/images/single-prompt-method-overview-hero-ar.png',
       title: 'طريقة البرومبت في خطوة واحدة',
       intro: 'طريقة البرومبت في خطوة واحدة هي إطار برومبت بحده الأدنى حيث تصف المهمة بأكملها في تعليمة واحدة منظمة بعناية بدلاً من بناء محادثة متعددة الأدوار. تُقلّل هذه الطريقة من العبء وتُسهّل مقارنة النتائج بين النماذج، وهي إطار البدء الافتراضي في PromptQuorum للمستخدمين الجدد.',
       publishDate: '2026-03-24',
@@ -1516,6 +1520,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Frameworks',
+      heroImage: '/images/single-prompt-method-overview-hero-pt.png',
       title: 'O Método de Prompt de Passo Único',
       intro: 'O Método de Prompt de Passo Único é um framework de prompt mínimo onde você descreve toda a tarefa em uma instrução cuidadosamente estruturada em vez de construir uma conversa de múltiplos turnos. Esse método reduz a sobrecarga, facilita a comparação de resultados entre modelos e é o framework de início padrão no PromptQuorum para novos usuários.',
       publishDate: '2026-03-24',
@@ -1646,6 +1651,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      heroImage: '/images/single-prompt-method-overview-hero-fr.png',
       title: 'La Méthode Single Step Prompt',
       intro: 'La Méthode Single Step Prompt est une approche minimaliste où vous décrivez l\'intégralité de la tâche dans une seule instruction structurée plutôt que de construire une conversation multi-tours. Cette méthode réduit la surcharge, facilite la comparaison des résultats entre modèles et constitue le cadre par défaut pour les nouveaux utilisateurs de PromptQuorum.',
       publishDate: '2026-03-24',
@@ -1853,6 +1859,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 ja: {
   freshness_tier: 'semi_annual',
   theme: 'Frameworks',
+  heroImage: '/images/single-prompt-method-overview-hero-ja.png',
   title: 'シングルステップ・プロンプト手法',
   intro: 'Single Step Prompt Methodは、複数ターンの対話を避け、1つのプロンプトにロール・目的・コンテキスト・制約・出力形式のすべてを凝縮するシンプルなフレームワークです。このアプローチにより往復のやり取りが削減され、複数のAIモデル間での結果比較が容易になり、PromptQuorumの新規ユーザー向けデフォルトフレームワークとして採用されています。',
   publishDate: '2026-03-24',
@@ -2195,6 +2202,7 @@ ja: {
     zh: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      heroImage: '/images/single-prompt-method-overview-hero-zh.png',
       title: '单步提示法',
       intro: '单步提示法是一种高效的提示工程框架，将角色、目标、上下文、约束条件和输出格式整合到一条精确的提示中。这种方法避免了多轮对话的复杂性，使AI模型能够在一次交互中理解完整的任务需求，从而生成更加稳定和可比较的结果。',
       publishDate: '2026-03-24',
@@ -2484,6 +2492,7 @@ ja: {
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+    heroImage: '/images/single-prompt-method-overview-hero-ko.png',
       title: '단일 단계 프롬프트 방법론',
       intro: '단일 단계 프롬프트 방법론(Single Step Prompt Method)은 멀티턴 대화를 구성하는 대신, 하나의 신중하게 구조화된 지시문에 전체 작업을 기술하는 최소한의 프롬프트 프레임워크입니다. 이 방법론은 오버헤드를 줄이고, 모델 간 결과 비교를 용이하게 하며, PromptQuorum에서 신규 사용자를 위한 기본 시작 프레임워크로 채택되어 있습니다.',
       publishDate: '2026-03-24',
