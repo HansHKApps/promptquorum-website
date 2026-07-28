@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Models by Use Case',
+      heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-en.png',
       title: 'Best 7B Models for Consumer Hardware',
       seoTitle: 'Best 7B Local LLMs for Consumer Hardware (2026) – Fast, Efficient AI on Laptop & PC',
       intro: '**For consumer GPUs with 8–12GB VRAM, Llama 3.3 7B, Mistral Small, and Qwen3 7B lead the 7B category in 2026.** As of April 2026, all three run at ~15 tok/sec on RTX 3060 12GB, but differ in reasoning (Llama 3.3 wins at 82% MATH), instruction-following (Mistral wins at 92%), and multilingual support (Qwen3 wins with 27 languages). Pick based on your use case.',
@@ -278,6 +279,7 @@ schema: {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Models by Use Case',
+      heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-es.png',
       title: 'Mejores modelos 7B para hardware de consumo',
       seoTitle: 'Mejores LLMs locales 7B para hardware de consumo 2026',
       intro: '**Para GPUs de consumo con 8–12 GB de VRAM, Llama 3.3 7B, Mistral Small y Qwen3 7B lideran la categoría 7B en 2026.** A partir de abril de 2026, los tres alcanzan ~15 tok/seg en RTX 3060 12 GB, pero difieren en razonamiento (Llama 3.3 gana con 82% MATH), seguimiento de instrucciones (Mistral gana con 92%) y soporte multilingüe (Qwen3 gana con 27 idiomas). Elige según tu caso de uso.',
@@ -546,6 +548,7 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Models by Use Case',
+      heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-ar.png',
       title: 'أفضل نماذج ⁨7B⁩ لعتاد المستهلك',
       seoTitle: 'أفضل نماذج ⁨LLM⁩ محلية ⁨7B⁩ لعتاد المستهلك ⁨2026⁩',
       intro: '**لكروت رسوميات المستهلك بـ 8–12 GB من VRAM، يتصدّر Llama 3.3 7B وMistral Small وQwen3 7B فئة 7B في 2026.** اعتبارًا من أبريل 2026، تبلغ الثلاثة نحو 15 tok/ثانية على RTX 3060 12 GB، لكنها تختلف في الاستدلال (يفوز Llama 3.3 بـ 82% MATH)، واتباع التعليمات (يفوز Mistral بـ 92%)، والدعم متعدد اللغات (يفوز Qwen3 بـ 27 لغة). اختر حسب حالة استخدامك.',
@@ -817,6 +820,7 @@ schema: {
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Models by Use Case',
+      heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-pt.png',
       title: 'Melhores modelos 7B para hardware de consumo 2026',
       seoTitle: 'Melhores LLMs locais 7B para hardware de consumo 2026',
       intro: '**Para GPUs de consumo com 8-12 GB de VRAM, Llama 3.3 7B, Mistral Small e Qwen3 7B lideram a categoria 7B em 2026.** Em abril de 2026, os três atingem ~15 tok/s em RTX 3060 12 GB, mas diferem em raciocínio (Llama 3.3 vence com 82% MATH), seguimento de instruções (Mistral vence com 92%) e suporte multilíngue (Qwen3 vence com 27 idiomas). Escolha com base no seu caso de uso.',
@@ -1020,6 +1024,7 @@ schema: {
     },
     de: {
       theme: 'Modelle nach Anwendungsfall',
+      heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-de.png',
       title: 'Beste 7B-Modelle für Consumer-Hardware',
       seoTitle: 'Beste 7B-Modelle für Consumer-Hardware 2026',
       intro: '**Für Consumer-GPUs mit 8–12 GB VRAM führen Llama 3.3 7B, Mistral Small und Qwen2,5 7B die 7B-Kategorie im Jahr 2026 an.** Stand April 2026 erreichen alle drei ~15 Tokens/Sek. auf einer RTX 3060 12 GB, unterscheiden sich jedoch in Schlussfolgern (Llama 3.3 gewinnt mit 82 % MATH), Instruktionsbefolgung (Mistral gewinnt mit 92 %) und Mehrsprachigkeit (Qwen2,5 gewinnt mit 27 Sprachen). Wählen Sie das Modell anhand Ihres Anwendungsfalls.',
@@ -1300,6 +1305,7 @@ schema: {
     },
     fr: {
       theme: 'Modèles par cas d\'usage',
+      heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-fr.png',
       title: 'Meilleurs modèles 7B pour les GPU grand public',
       seoTitle: 'Meilleurs modèles LLM 7B locaux pour PC grand public (2026)',
       intro: '**Pour les GPU grand public avec 8–12 Go de VRAM, Llama 3.3 7B, Mistral Small et Qwen3 7B dominent la catégorie 7B en 2026.** En avril 2026, les trois atteignent ~15 tokens/sec sur RTX 3060 12 Go, mais diffèrent par le raisonnement (Llama 3.3 gagne à 82 % MATH), le suivi d\'instructions (Mistral gagne à 92 %) et le support multilingue (Qwen3 gagne avec 27 langues). Choisissez selon votre cas d\'usage.',
@@ -1567,6 +1573,7 @@ schema: {
     },
     ja: {
       theme: 'ユースケース別モデル',
+      heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-ja.png',
       title: 'コンシューマハードウェア向け最良の7Bモデル',
       seoTitle: 'コンシューマー向け7BローカルLLMおすすめ（2026年）',
       intro: '**8〜12GB VRAMのコンシューマGPUには、2026年の7BカテゴリでLlama 3.3 7B、Mistral Small、Qwen3 7Bがトップです。** 2026年4月時点、3モデルともRTX 3060 12GBで約15トークン/秒を達成しますが、推論力（Llama 3.3が82% MATHで優位）、指示追従（Mistralが92%で優位）、多言語対応（Qwen3が27言語で優位）に違いがあります。ユースケースに応じて選択してください。',
@@ -1834,6 +1841,7 @@ schema: {
     },
     zh: {
       theme: '按用途分类的模型',
+      heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-zh.png',
       title: '消费级硬件最佳7B模型',
       seoTitle: '最佳7B本地大模型（2026）— 适用于普通电脑和笔记本',
       intro: '**搭载8–12GB显存的消费级GPU中，Llama 3.3 7B、Mistral Small和Qwen3 7B是2026年7B类别的领先模型。** 截至2026年4月，三款模型在RTX 3060 12GB上均可达到约15 tokens/秒，但在推理能力（Llama 3.3以82% MATH领先）、指令遵循（Mistral以92%领先）和多语言支持（Qwen3支持27种语言领先）方面各有侧重。请根据您的使用场景进行选择。',
@@ -2102,6 +2110,7 @@ schema: {
   ko: {
     freshness_tier: 'semi_annual',
     theme: '용도별 모델',
+    heroImage: '/images/best-7b-models-consumer-hardware-overview-hero-ko.png',
     title: '소비자 하드웨어를 위한 최고의 7B 모델',
     seoTitle: '소비자 하드웨어용 최고의 7B 로컬 LLM 2026: 노트북·PC',
     intro: '**8–12GB VRAM의 소비자 GPU 환경에서는 Llama 3.3 7B, Mistral Small, Qwen3 7B가 2026년 7B 카테고리를 선도합니다.** 2026년 4월 기준, 세 모델 모두 RTX 3060 12GB에서 초당 약 15 토큰을 처리하지만, 추론 능력(Llama 3.3이 MATH 82%로 우위), 지시 수행(Mistral이 92%로 우위), 다국어 지원(Qwen3가 27개 언어로 우위) 면에서 차이가 있습니다. 사용 목적에 맞는 모델을 선택하십시오.',
