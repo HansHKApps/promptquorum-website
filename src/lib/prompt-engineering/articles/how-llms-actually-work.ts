@@ -13,6 +13,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-en.png',
       title: 'How LLMs Actually Work: Tokens, Attention, and Inference',
       intro: 'Large language models predict the next token using probability distributions — not by understanding. Learn tokenization, attention, RLHF, inference parameters, and why this matters for prompt engineering.',
       publishDate: '2026-03-30',
@@ -468,6 +469,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-de.png',
       title: 'Wie LLMs wirklich funktionieren: Tokens, Attention und Inferenz',
       intro: 'Große Sprachmodelle sagen das nächste Token per Wahrscheinlichkeitsverteilung voraus — kein Verstehen, kein Abrufen. Lerne Tokenisierung, Attention, RLHF und Inferenzparameter.',
       publishDate: '2026-03-30',
@@ -738,6 +740,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     es: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-es.png',
       title: 'Cómo funcionan realmente los LLMs: tokens, attention e inferencia',
       intro: 'Los grandes modelos de lenguaje predicen el siguiente token usando distribuciones de probabilidad — no comprensión. Aprende tokenización, attention, RLHF, parámetros de inferencia y por qué esto importa para el prompt engineering.',
       publishDate: '2026-03-30',
@@ -1009,6 +1012,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ar: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-ar.png',
       title: 'كيف تعمل نماذج اللغة الكبيرة فعلاً: الرموز والانتباه والاستدلال',
       intro: 'تتنبأ نماذج اللغة الكبيرة بالرمز التالي باستخدام توزيعات الاحتمالات — لا بالفهم أو الاسترجاع. تعلّم التحليل إلى رموز، والانتباه، وRLHF، ومعاملات الاستدلال.',
       publishDate: '2026-03-30',
@@ -1280,6 +1284,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     fr: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-fr.png',
       title: 'Comment fonctionnent vraiment les LLMs : tokens, attention et inférence',
       intro: 'Les grands modèles de langage prédisent le prochain token par distribution de probabilités — sans comprendre ni récupérer. Apprenez la tokenisation, l\'attention, le RLHF et les paramètres d\'inférence.',
       publishDate: '2026-03-30',
@@ -1550,6 +1555,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-ja.png',
       title: 'LLMは実際にどのように機能するか：トークン、注意、推論',
       intro: '大規模言語モデルは確率分布経由で次のトークンを予測します — 理解や取得ではなく。トークン化、注意、RLHF、推論パラメータを学んでください。',
       publishDate: '2026-03-30',
@@ -1834,6 +1840,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-zh.png',
       title: '大型语言模型实际如何工作：令牌、注意力与推理',
       intro: '大型语言模型通过概率分布预测下一个令牌——而非理解或检索。学习令牌化、注意力机制、RLHF和推理参数。',
       publishDate: '2026-03-30',
@@ -2118,6 +2125,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-pt.png',
       title: 'Como os LLMs Realmente Funcionam: Tokens, Atenção e Inferência',
       intro: 'Os grandes modelos de linguagem preveem o próximo token usando distribuições de probabilidade — não por compreensão. Aprenda tokenização, atenção, RLHF, parâmetros de inferência e por que isso importa para o prompt engineering.',
       publishDate: '2026-03-30',
@@ -2389,6 +2397,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ko: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-ko.png',
       title: 'LLM이 실제로 작동하는 방식: 토큰, 어텐션, 추론',
       intro: '대규모 언어 모델은 확률 분포를 이용해 다음 토큰을 예측합니다 — 이해하거나 검색하는 것이 아닙니다. 토크나이제이션, 어텐션, RLHF, 추론 매개변수, 그리고 이것이 프롬프트 엔지니어링에 왜 중요한지 학습하십시오.',
       publishDate: '2026-03-30',
