@@ -7374,6 +7374,51 @@
     "width": 800,
     "height": 420
   },
+  "/images/best-prompt-engineering-ides-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-prompt-engineering-ides-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-prompt-engineering-ides-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-prompt-engineering-ides-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-prompt-engineering-ides-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-prompt-engineering-ides-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-prompt-engineering-ides-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-prompt-engineering-ides-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-prompt-engineering-ides-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-prompt-optimization-tools-teams-overview-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -12548,6 +12593,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 330
+  },
+  "/images/how-to-evaluate-prompt-quality-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-to-evaluate-prompt-quality-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-to-evaluate-prompt-quality-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-to-evaluate-prompt-quality-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-to-evaluate-prompt-quality-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-to-evaluate-prompt-quality-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-to-evaluate-prompt-quality-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-to-evaluate-prompt-quality-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/how-to-evaluate-prompt-quality-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/how-to-install-lm-studio-overview-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -21159,6 +21249,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/pe-for-support-operations-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pe-for-support-operations-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pe-for-support-operations-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pe-for-support-operations-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pe-for-support-operations-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pe-for-support-operations-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pe-for-support-operations-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pe-for-support-operations-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pe-for-support-operations-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/persona-prompting-overview-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -22329,6 +22464,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/prompt-evaluation-metrics-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-evaluation-metrics-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-evaluation-metrics-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-evaluation-metrics-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-evaluation-metrics-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-evaluation-metrics-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-evaluation-metrics-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-evaluation-metrics-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-evaluation-metrics-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/prompt-for-speed-overview-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -22685,6 +22865,51 @@
     "height": 675
   },
   "/images/prompt-version-control-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-with-images-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-with-images-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-with-images-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-with-images-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-with-images-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-with-images-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-with-images-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-with-images-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/prompt-with-images-overview-hero-zh.png": {
     "encodingFormat": "image/png",
     "width": 1200,
     "height": 675
@@ -26204,6 +26429,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/teaching-with-ai-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/teaching-with-ai-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/teaching-with-ai-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/teaching-with-ai-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/teaching-with-ai-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/teaching-with-ai-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/teaching-with-ai-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/teaching-with-ai-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/teaching-with-ai-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/team-llm-architecture-comparison.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 900,
@@ -26565,6 +26835,51 @@
     "height": 675
   },
   "/images/top-open-source-models-ollama-use-case-picks-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tree-of-thought-react-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tree-of-thought-react-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tree-of-thought-react-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tree-of-thought-react-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tree-of-thought-react-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tree-of-thought-react-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tree-of-thought-react-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tree-of-thought-react-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/tree-of-thought-react-overview-hero-zh.png": {
     "encodingFormat": "image/png",
     "width": 1200,
     "height": 675
