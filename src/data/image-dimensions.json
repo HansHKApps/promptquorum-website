@@ -7384,6 +7384,51 @@
     "width": 800,
     "height": 465
   },
+  "/images/cloud-gpu-rental-comparison-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-comparison-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-comparison-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-comparison-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-comparison-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-comparison-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-comparison-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-comparison-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cloud-gpu-rental-comparison-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -8839,6 +8884,51 @@
     "width": 800,
     "height": 460
   },
+  "/images/desktop-vs-webui-local-llm-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/desktop-vs-webui-local-llm-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/desktop-vs-webui-local-llm-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/desktop-vs-webui-local-llm-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/desktop-vs-webui-local-llm-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/desktop-vs-webui-local-llm-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/desktop-vs-webui-local-llm-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/desktop-vs-webui-local-llm-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/desktop-vs-webui-local-llm-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/developer-stack-performance.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -10094,6 +10184,51 @@
     "width": 800,
     "height": 450
   },
+  "/images/gpu-vs-ai-subscription-roi-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-vs-ai-subscription-roi-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-vs-ai-subscription-roi-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-vs-ai-subscription-roi-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-vs-ai-subscription-roi-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-vs-ai-subscription-roi-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-vs-ai-subscription-roi-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-vs-ai-subscription-roi-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gpu-vs-ai-subscription-roi-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/gpu-vs-cpu-vs-apple-silicon-cost-performance-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -10368,6 +10503,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/headless-local-llms-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/headless-local-llms-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/headless-local-llms-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/headless-local-llms-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/headless-local-llms-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/headless-local-llms-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/headless-local-llms-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/headless-local-llms-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/headless-local-llms-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/history-of-smart-home-technology-pendulum-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -14174,6 +14354,51 @@
     "width": 800,
     "height": 420
   },
+  "/images/local-llm-vs-cloud-gpu-cost-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-vs-cloud-gpu-cost-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-vs-cloud-gpu-cost-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-vs-cloud-gpu-cost-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-vs-cloud-gpu-cost-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-vs-cloud-gpu-cost-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-vs-cloud-gpu-cost-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-vs-cloud-gpu-cost-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-vs-cloud-gpu-cost-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-llm-with-obsidian-2026-plugin-comparison-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -17828,6 +18053,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 450
+  },
+  "/images/multilingual-local-llms-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multilingual-local-llms-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multilingual-local-llms-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multilingual-local-llms-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multilingual-local-llms-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multilingual-local-llms-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multilingual-local-llms-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multilingual-local-llms-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multilingual-local-llms-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multimodal-local-llms-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multimodal-local-llms-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multimodal-local-llms-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multimodal-local-llms-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multimodal-local-llms-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multimodal-local-llms-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multimodal-local-llms-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multimodal-local-llms-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/multimodal-local-llms-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/ollama-command-guide-command-lifecycle-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -22264,6 +22579,51 @@
     "width": 900,
     "height": 450
   },
+  "/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/tool-calling-format-comparison-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -22884,6 +23244,51 @@
     "width": 800,
     "height": 455
   },
+  "/images/used-gpus-for-local-llms-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/used-gpus-for-local-llms-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/used-gpus-for-local-llms-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/used-gpus-for-local-llms-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/used-gpus-for-local-llms-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/used-gpus-for-local-llms-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/used-gpus-for-local-llms-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/used-gpus-for-local-llms-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/used-gpus-for-local-llms-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/voice-assistant-local-mobile-offline-decision-tree-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -22893,6 +23298,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/vpn-for-local-llm-users-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vpn-for-local-llm-users-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vpn-for-local-llm-users-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vpn-for-local-llm-users-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vpn-for-local-llm-users-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vpn-for-local-llm-users-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vpn-for-local-llm-users-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vpn-for-local-llm-users-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/vpn-for-local-llm-users-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/vram-calculator-local-llm-accuracy-de.svg": {
     "encodingFormat": "image/svg+xml",
