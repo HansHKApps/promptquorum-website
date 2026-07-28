@@ -16,6 +16,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       specific_year: 2026,
       next_refresh_due: '2027-05-04',
       theme: 'Use Cases',
+      heroImage: '/images/ai-code-review-overview-hero-en.png',
       title: 'AI Code Review 2026: Best Tools Ranked (CodeRabbit, Greptile, Snyk) + Prompt Framework',
       intro: 'AI code review tools detect 42–85% of runtime bugs in automated reviews — more than double the sub-20% detection rate of traditional static analysis tools. The critical challenge is signal-to-noise: 64% of AI review comments address style rather than logic bugs, causing developer adoption collapse. Scoped prompts that explicitly prioritize security and logic over formatting invert this ratio and reach 50%+ developer action rates.',
       publishDate: '2026-03-24',
@@ -470,6 +471,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     de: {
       theme: 'Use Cases',
+      heroImage: '/images/ai-code-review-overview-hero-de.png',
       title: 'KI-Code-Review: Tools, Halluzinations-Raten und Verifikations-Workflows',
       intro: 'KI-Code-Review-Tools erkennen 42–85% von Runtime-Bugs in automatisierten Reviews — mehr als doppelt so hoch wie die unter-20% Erkennungsrate von traditionellen statischen Analyse-Tools. Die kritische Herausforderung ist Signal-Rausch-Verhältnis: 64% der KI-Review-Kommentare befassen sich mit Stil statt mit Logik-Bugs, was zum Zusammenbruch der Entwickler-Adoption führt. Begrenzte Prompts, die explizit Sicherheit und Logik über Formatierung priorisieren, kehren dieses Verhältnis um und erreichen 50%+ Entwickler-Aktionsraten.',
       publishDate: '2026-03-24',
@@ -697,6 +699,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     es: {
       theme: 'Use Cases',
+      heroImage: '/images/ai-code-review-overview-hero-es.png',
       title: 'Revisión de Código con IA 2026: Mejores Herramientas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
       intro: 'Las herramientas de revisión de código con IA detectan entre el 42 y el 85 % de los bugs en tiempo de ejecución durante revisiones automatizadas — más del doble de la tasa de detección por debajo del 20 % de las herramientas de análisis estático tradicionales. El desafío crítico es la relación señal/ruido: el 64 % de los comentarios de revisión de IA abordan el estilo en lugar de bugs de lógica, lo que provoca el colapso de la adopción por parte de los desarrolladores. Los prompts acotados que priorizan explícitamente la seguridad y la lógica sobre el formato invierten esta proporción y alcanzan tasas de acción del desarrollador superiores al 50 %.',
       publishDate: '2026-03-24',
@@ -1153,6 +1156,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     ar: {
       theme: 'Use Cases',
+      heroImage: '/images/ai-code-review-overview-hero-ar.png',
       title: 'مراجعة الكود بالذكاء الاصطناعي ⁨2026⁩: أفضل الأدوات (⁨CodeRabbit⁩، ⁨Greptile⁩، ⁨Snyk⁩) + إطار التعليمات',
       intro: 'تكتشف أدوات مراجعة الكود بالذكاء الاصطناعي ما بين 42 و85٪ من أخطاء وقت التشغيل خلال المراجعات الآلية — أكثر من ضعف معدل اكتشاف أدوات التحليل الثابت التقليدية التي تقل عن 20٪. التحدي الحرج هو نسبة الإشارة إلى الضوضاء: 64٪ من تعليقات مراجعة الذكاء الاصطناعي تتناول الأسلوب بدلًا من أخطاء المنطق، مما يُسبِّب انهيار تبني المطورين. التعليمات ذات النطاق المحدد التي تُعطي أولوية صريحة للأمان والمنطق على التنسيق تعكس هذه النسبة وتبلغ معدلات تصرف المطورين أكثر من 50٪.',
       publishDate: '2026-03-24',
@@ -1609,6 +1613,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     pt: {
       theme: 'Use Cases',
+      heroImage: '/images/ai-code-review-overview-hero-pt.png',
       title: 'Revisão de Código com IA 2026: Melhores Ferramentas (CodeRabbit, Greptile, Snyk) + Framework de Prompts',
       intro: 'As ferramentas de revisão de código com IA detectam entre 42% e 85% dos bugs em tempo de execução durante revisões automatizadas — mais que o dobro da taxa de detecção abaixo de 20% das ferramentas de análise estática tradicional. O desafio crítico é a relação sinal/ruído: 64% dos comentários de revisão de IA tratam de estilo em vez de bugs de lógica, o que provoca o colapso da adoção por desenvolvedores. Prompts com escopo que priorizam explicitamente segurança e lógica sobre formatação invertem essa proporção e atingem taxas de ação do desenvolvedor superiores a 50%.',
       publishDate: '2026-03-24',
@@ -2064,6 +2069,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     fr: {
       theme: 'Use Cases',
+      heroImage: '/images/ai-code-review-overview-hero-fr.png',
       title: 'Révision de Code par IA : Outils, Taux d\'Hallucinations et Workflows de Vérification',
       intro: 'Les outils de révision de code par IA détectent 42–85% des bugs d\'exécution lors des révisions automatisées — plus du double du taux de détection de moins de 20% des outils d\'analyse statique traditionnels. Le défi critique est le rapport signal-bruit : 64% des commentaires de révision par IA concernent le style plutôt que les bugs de logique, ce qui entraîne l\'effondrement de l\'adoption par les développeurs. Les prompts limités, qui hiérarchisent explicitement la sécurité et la logique sur le formatage, inversent ce rapport et atteignent 50%+ de taux d\'action des développeurs.',
       publishDate: '2026-03-24',
@@ -2291,6 +2297,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: 'Use Cases',
+      heroImage: '/images/ai-code-review-overview-hero-ja.png',
       title: 'AI コードレビュー：ツール、ハルシネーション率、検証ワークフロー',
       intro: 'AI コードレビューツールは自動レビュー時に実行時バグの42～85%を検出——従来の静的分析ツールの20%未満の検出率の2倍以上です。重大な課題はシグナル・ノイズ比です：AI レビューコメントの64%はロジックバグではなくスタイルに関するもので、開発者採用の崩壊につながります。セキュリティとロジックをフォーマット上で明示的に優先する制限されたプロンプトがこの比率を反転させ、50%以上の開発者アクション率を達成します。',
       publishDate: '2026-03-24',
@@ -2518,6 +2525,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: 'Use Cases',
+      heroImage: '/images/ai-code-review-overview-hero-zh.png',
       title: 'AI 代码审查：工具、幻觉率和验证工作流',
       intro: 'AI 代码审查工具在自动审查中检测 42–85% 的运行时错误——是传统静态分析工具 20% 以下检出率的两倍多。关键挑战是信号噪声比：64% 的 AI 审查评论涉及风格而非逻辑错误，导致开发者采用率崩溃。明确优先考虑安全性和逻辑而非格式化的受限提示会逆转这一比率，达到 50%+ 的开发者行动率。',
       publishDate: '2026-03-24',
@@ -2748,6 +2756,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     specific_year: 2026,
     next_refresh_due: '2027-05-04',
     theme: 'Use Cases',
+    heroImage: '/images/ai-code-review-overview-hero-ko.png',
     title: 'AI 코드 리뷰 2026: 최고 도구 순위 (CodeRabbit, Greptile, Snyk) + 프롬프트 프레임워크',
     intro: 'AI 코드 리뷰 도구는 자동화된 검토에서 런타임 버그의 42~85%를 감지합니다 — 전통적인 정적 분석 도구의 20% 미만 감지율의 두 배 이상입니다. 핵심 과제는 신호 대 잡음 비율입니다. AI 리뷰 코멘트의 64%가 로직 버그가 아닌 스타일을 다루어 개발자 채택률 붕괴를 초래합니다. 명시적으로 보안과 로직을 형식보다 우선시하는 범위 한정 프롬프트는 이 비율을 역전시키고 개발자 실행률 50% 이상을 달성합니다.',
     publishDate: '2026-03-24',

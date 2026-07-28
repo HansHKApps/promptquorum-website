@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/prompt-chaining-overview-hero-en.png',
       title: 'Prompt Chaining: How to Break Big Tasks Into Winning Steps',
       intro: 'Prompt chaining is a technique where you break a complex task into multiple smaller prompts and feed the output of one step into the next. This lets you build reliable multi-step workflows instead of relying on a single, overly complicated prompt.',
       publishDate: '2026-03-26',
@@ -348,6 +349,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/prompt-chaining-overview-hero-de.png',
       title: 'Prompt Chaining: Komplexe Aufgaben in Fokussierte Schritte Zerlegen',
       intro: 'Prompt Chaining ist eine Technik, bei der Sie eine komplexe Aufgabe in mehrere kleinere Prompts zerlegen und die Ausgabe eines Schritts als Eingabe für den nächsten verwenden. Dies ermöglicht es Ihnen, zuverlässige Multi-Step-Workflows zu erstellen, anstatt sich auf einen einzigen, übermäßig komplizierten Prompt zu verlassen.',
       publishDate: '2026-03-26',
@@ -702,6 +704,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/prompt-chaining-overview-hero-es.png',
       title: 'Prompt chaining: cómo dividir tareas grandes en pasos ganadores',
       intro: 'El prompt chaining es una técnica donde divides una tarea compleja en múltiples prompts más pequeños y alimentas la salida de un paso al siguiente. Esto te permite construir workflows de múltiples pasos fiables en lugar de depender de un único prompt excesivamente complicado.',
       publishDate: '2026-03-26',
@@ -944,6 +947,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/prompt-chaining-overview-hero-ar.png',
       title: 'ربط البرومبتات: كيف تقسّم المهام الكبيرة إلى خطوات رابحة',
       intro: 'ربط البرومبتات تقنية تقسّم فيها مهمة معقدة إلى عدة برومبتات أصغر، وتُغذّي مخرجات كل خطوة إلى الخطوة التالية. هذا يتيح لك بناء سير عمل موثوق متعدد الخطوات بدلًا من الاعتماد على برومبت واحد بالغ التعقيد.',
       publishDate: '2026-03-26',
@@ -1186,6 +1190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Techniques',
+      heroImage: '/images/prompt-chaining-overview-hero-pt.png',
       title: 'Prompt chaining: como dividir tarefas grandes em etapas vencedoras',
       intro: 'O prompt chaining é uma técnica onde você divide uma tarefa complexa em vários prompts menores e alimenta a saída de uma etapa para a próxima. Isso permite construir fluxos de trabalho de IA de múltiplas etapas confiáveis em vez de depender de um único prompt excessivamente complicado.',
       publishDate: '2026-03-26',
@@ -1426,6 +1431,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/prompt-chaining-overview-hero-fr.png',
       title: 'Chaînage de Prompts : Décomposer les Tâches Complexes en Étapes Gagnantes',
       intro: 'Le chaînage de prompts est une technique où vous décomposez une tâche complexe en plusieurs prompts plus petits et alimentez la sortie d\'une étape dans la suivante. Cela vous permet de construire des workflows IA fiables multi-étapes au lieu de dépendre d\'un seul prompt excessivement compliqué.',
       publishDate: '2026-03-26',
@@ -1699,6 +1705,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques',
+      heroImage: '/images/prompt-chaining-overview-hero-ja.png',
   title: 'プロンプトチェーニング：複雑なタスクを成功する段階に分ける方法',
   intro: 'プロンプトチェーニングは、複雑なタスクを複数の小さなプロンプトに分割し、1つのステップの出力を次のステップに流し込む手法です。これにより、1つの過度に複雑なプロンプトに頼るのではなく、信頼できる多段階ワークフローを構築できます。',
   publishDate: '2026-03-26',
@@ -1972,6 +1979,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 zh: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+  heroImage: '/images/prompt-chaining-overview-hero-zh.png',
       title: '提示词链接：如何将复杂任务拆分成成功的步骤',
       intro: '提示词链接是一种技术，您可以将复杂任务分解为多个较小的提示词，并将一个步骤的输出输入到下一个步骤。这让您可以构建可靠的多步骤工作流程，而不是依赖单个过于复杂的提示词。',
       publishDate: '2026-03-26',
@@ -2131,6 +2139,7 @@ zh: {
   ko: {
       freshness_tier: 'semi_annual',
       theme: '기법',
+    heroImage: '/images/prompt-chaining-overview-hero-ko.png',
       title: '프롬프트 체이닝: 복잡한 작업을 성공적인 단계로 분해하는 방법',
       intro: '프롬프트 체이닝은 복잡한 작업을 여러 개의 소규모 프롬프트로 분해하고, 한 단계의 출력을 다음 단계의 입력으로 전달하는 기법입니다. 이를 통해 단일하고 지나치게 복잡한 프롬프트에 의존하는 대신, 신뢰할 수 있는 다단계 워크플로를 구축할 수 있습니다.',
       publishDate: '2026-03-26',

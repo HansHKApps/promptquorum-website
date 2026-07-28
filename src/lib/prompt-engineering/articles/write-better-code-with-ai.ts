@@ -13,6 +13,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
+      heroImage: '/images/write-better-code-with-ai-overview-hero-en.png',
       title: 'How to Write Better Code With AI: Prompts, Models, and Security in 2026',
       intro: '**To write better code with AI in 2026: use a structured prompt (role, objective, constraints, output format, edge cases), set Temperature to 0.1–0.2 for production, route backend tasks to Claude 4.8 and algorithm tasks to GPT-5, and run every output through a security linter before deployment.**\n\nAI coding tools reduce development time by 30–75% — but only when the developer writes structured prompts, not casual questions. The model\'s output quality is directly determined by how explicitly you specify role, constraints, and expected output. As of April 2026, Claude 4.8 Opus leads on backend code and bug tracing, GPT-5 leads on algorithm design, and LLaMA 4 via Ollama runs entirely on your own hardware with 8GB RAM.\n\nAI still introduces security vulnerabilities in 45% of generated code — making review and linting non-negotiable before deployment.',
       publishDate: '2026-03-22',
@@ -492,6 +493,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
+      heroImage: '/images/write-better-code-with-ai-overview-hero-de.png',
       title: 'Besseren Code mit KI schreiben: Prompts, Modelle und Sicherheit 2026',
       intro: '**Um 2026 besseren Code mit KI zu schreiben: Nutzen Sie einen strukturierten Prompt (Rolle, Ziel, Constraints, Output-Format, Edge Cases), setzen Sie Temperature auf 0,1–0,2 für Production, leiten Sie Backend-Aufgaben zu Claude 4.8 und Algorithmen zu GPT-5, und führen Sie jeden Output durch einen Security-Linter vor dem Deployment durch.**\n\nKI-Programmiertools reduzieren die Entwicklungszeit um 30–75 % — aber nur wenn der Entwickler strukturierte Prompts schreibt, nicht beiläufige Fragen. Die Output-Qualität des Modells hängt direkt davon ab, wie explizit Sie Rolle, Constraints und erwarteten Output spezifizieren. Im April 2026 führt Claude 4.8 Opus bei Backend-Code und Bug-Tracing an, GPT-5 führt bei Algorithmus-Design an, und LLaMA 4 läuft über Ollama vollständig lokal mit 8 GB RAM.\n\nKI führt weiterhin Sicherheitslücken in 45 % des generierten Codes ein — was Review und Linting vor dem Deployment unverzichtbar macht.',
       publishDate: '2026-03-22',
@@ -1011,6 +1013,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
+      heroImage: '/images/write-better-code-with-ai-overview-hero-es.png',
       title: 'Cómo Escribir Mejor Código con IA: Prompts, Modelos y Seguridad en 2026',
       intro: '**Para escribir mejor código con IA en 2026: usa un prompt estructurado (rol, objetivo, restricciones, formato de salida, casos límite), establece la Temperatura en 0,1–0,2 para producción, enruta las tareas de backend a Claude 4.8 y las de algoritmos a GPT-5, y ejecuta cada salida por un linter de seguridad antes del despliegue.**\n\nLas herramientas de programación con IA reducen el tiempo de desarrollo entre un 30 y un 75 % — pero solo cuando el desarrollador escribe prompts estructurados, no preguntas casuales. La calidad de la salida del modelo está determinada directamente por cuán explícitamente especificas el rol, las restricciones y la salida esperada. A partir de abril de 2026, Claude 4.8 Opus lidera en código de backend y rastreo de bugs, GPT-5 lidera en diseño de algoritmos, y LLaMA 4 mediante Ollama se ejecuta completamente en tu propio hardware con 8 GB de RAM.\n\nLa IA todavía introduce vulnerabilidades de seguridad en el 45 % del código generado — haciendo que la revisión y el linting sean innegociables antes del despliegue.',
       publishDate: '2026-03-22',
@@ -1293,6 +1296,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
+      heroImage: '/images/write-better-code-with-ai-overview-hero-ar.png',
       title: 'كيف تكتب كودًا أفضل بالذكاء الاصطناعي: الطلبات والنماذج والأمان في ⁨2026⁩',
       intro: '**لكتابة كود أفضل بالذكاء الاصطناعي في 2026: استخدم طلبًا منظمًا (الدور والهدف والقيود وتنسيق المخرجات والحالات الحدية)، اضبط درجة الحرارة على 0.1–0.2 للإنتاج، وجّه مهام الخلفية إلى Claude 4.8 ومهام الخوارزميات إلى GPT-5، وشغّل كل مخرجة عبر أداة فحص أمني قبل النشر.**\n\nأدوات البرمجة بالذكاء الاصطناعي تقلّص وقت التطوير بنسبة 30–75% — لكن فقط عندما يكتب المطور طلبات منظمة، لا أسئلة عشوائية. جودة مخرجات النموذج تتحدد مباشرةً بمدى صراحتك في تحديد الدور والقيود والمخرجات المتوقعة. اعتبارًا من أبريل 2026، Claude 4.8 Opus يتصدر في كود الخلفية وتتبع الأخطاء، وGPT-5 يتصدر في تصميم الخوارزميات، وLLaMA 4 عبر Ollama يعمل محليًا على جهازك بـ 8 جيجابايت من الذاكرة.\n\nالذكاء الاصطناعي لا يزال يُدخل ثغرات أمنية في 45% من الكود المُولَّد — مما يجعل المراجعة والفحص أمرًا غير قابل للتفاوض قبل النشر.',
       publishDate: '2026-03-22',
@@ -1574,6 +1578,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     pt: {
       theme: 'Use Cases',
+      heroImage: '/images/write-better-code-with-ai-overview-hero-pt.png',
       title: 'Como Escrever Código Melhor com IA: Prompts, Modelos e Segurança em 2026',
       intro: '**Para escrever código melhor com IA em 2026: use um prompt estruturado (função, objetivo, restrições, formato de saída, casos extremos), defina a Temperatura em 0,1–0,2 para produção, encaminhe tarefas de backend para Claude 4.8 e tarefas de algoritmo para GPT-5, e execute cada saída por um linter de segurança antes do deploy.**\n\nFerramentas de codificação com IA reduzem o tempo de desenvolvimento em 30–75% — mas apenas quando o desenvolvedor escreve prompts estruturados, não perguntas casuais. A qualidade da saída do modelo é diretamente determinada por quão explicitamente você especifica a função, as restrições e a saída esperada. Em abril de 2026, Claude 4.8 Opus lidera em código de backend e rastreamento de bugs, GPT-5 lidera em design de algoritmos, e LLaMA 4 via Ollama roda completamente no seu próprio hardware com 8 GB de RAM.\n\nA IA ainda introduz vulnerabilidades de segurança em 45% do código gerado — tornando a revisão e o linting inegociáveis antes do deploy.',
       publishDate: '2026-03-22',
@@ -1824,6 +1829,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
+      heroImage: '/images/write-better-code-with-ai-overview-hero-fr.png',
       title: 'Comment Écrire du Code Meilleur avec l\'IA : Prompts, Modèles et Sécurité en 2026',
       intro: '**Pour écrire du code meilleur avec l\'IA en 2026 : utilisez un prompt structuré (rôle, objectif, contraintes, format de sortie, cas limites), réglez la Température sur 0,1–0,2 pour la production, routez les tâches backend vers Claude 4.8 et les algorithmes vers GPT-5, et exécutez chaque sortie dans un linter de sécurité avant le déploiement.**\n\nLes outils de codage IA réduisent le temps de développement de 30 à 75 % — mais uniquement si le développeur écrit des prompts structurés, pas des questions improvisées. La qualité de sortie du modèle dépend directement de la clarté avec laquelle vous précisez le rôle, les contraintes et la sortie attendue. En avril 2026, Claude 4.8 Opus mène sur le code backend et le débogage, GPT-5 mène sur la conception d\'algorithmes, et LLaMA 4 via Ollama s\'exécute localement avec 8 GB de RAM.\n\nL\'IA introduit encore des vulnérabilités de sécurité dans 45 % du code généré — ce qui rend l\'examen et le linting non négociables avant le déploiement.',
       publishDate: '2026-03-22',
@@ -2331,6 +2337,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
+      heroImage: '/images/write-better-code-with-ai-overview-hero-ja.png',
       title: 'AIでコード品質を向上させる方法：プロンプト、モデル選択、セキュリティ 2026年版',
       intro: '**2026年にAIでコード品質を向上させるには：構造化プロンプト（役割、目的、制約、出力形式、エッジケース）を使用し、Temperature を 0.1～0.2 に設定し、バックエンド処理を Claude 4.8 に、アルゴリズム設計を GPT-5 にルーティングし、デプロイ前にセキュリティリンターで検証します。**\n\nAI コーディングツールは開発時間を 30～75% 短縮します。ただし、開発者が構造化プロンプトを記述する場合に限ります。モデルの出力品質は、役割、制約、期待される出力を明示的にどれほど詳しく指定するかに直接左右されます。2026年4月時点では、Claude 4.8 Opus はバックエンドコードとバグトレーシングで優位、GPT-5 はアルゴリズム設計で優位、LLaMA 4（Ollama経由）は 8GB RAM で完全にローカル実行できます。\n\nAI は生成コードの 45% にセキュリティ脆弱性を導入しているため、デプロイ前のレビューとリンティングは必須です。',
       publishDate: '2026-03-22',
@@ -2772,6 +2779,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
+      heroImage: '/images/write-better-code-with-ai-overview-hero-zh.png',
       title: '使用AI编写更好的代码：提示词、模型和安全性（2026年）',
       intro: '**2026年使用AI编写更好的代码的关键：使用结构化提示词（角色、目标、约束条件、输出格式、边界情况），将温度设置为0.1–0.2以用于生产环境，将后端任务路由到Claude 4.8 Opus，将算法任务路由到GPT-5，并在部署前通过安全检查工具运行每个输出。**\n\nAI编码工具将开发时间减少了30–75% — 但前提是开发人员编写结构化提示词，而不是随意提问。模型的输出质量直接取决于你对角色、约束条件和预期输出的明确程度。截至2026年4月，Claude 4.8 Opus在后端代码和bug追踪方面领先，GPT-5在算法设计方面领先，LLaMA 4通过Ollama在你自己的硬件上运行，只需8GB RAM。\n\nAI仍在生成的代码中引入安全漏洞占45% — 使代码审查和检查在部署前成为必不可少的。',
       publishDate: '2026-03-22',
@@ -3266,6 +3274,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
+    heroImage: '/images/write-better-code-with-ai-overview-hero-ko.png',
       title: 'AI로 더 나은 코드 작성하기: 프롬프트, 모델, 그리고 2026년의 보안',
       intro: '**2026년 AI로 더 나은 코드를 작성하려면: 구조화된 프롬프트(역할, 목표, 제약 조건, 출력 형식, 엣지 케이스)를 사용하고, 프로덕션 환경에서는 Temperature를 0.1–0.2로 설정하며, 백엔드 작업은 Claude 4.8로, 알고리즘 작업은 GPT-5로 라우팅하고, 배포 전에 모든 출력물에 보안 린터를 실행하십시오.**\n\nAI 코딩 도구는 개발 시간을 30–75% 단축시킵니다. 단, 개발자가 단순한 질문이 아닌 구조화된 프롬프트를 작성할 때만 가능합니다. 모델의 출력 품질은 역할, 제약 조건, 예상 출력을 얼마나 명확하게 명시하느냐에 따라 직접적으로 결정됩니다. 2026년 4월 기준으로, Claude 4.8 Opus는 백엔드 코드 및 버그 추적에서 선두를 달리고 있으며, GPT-5는 알고리즘 설계에서 앞서고, Ollama를 통한 LLaMA 4는 8GB RAM으로 사용자의 하드웨어에서 완전히 실행됩니다.\n\nAI는 여전히 생성된 코드의 45%에서 보안 취약점을 도입합니다. 이로 인해 배포 전 검토와 린팅은 협상 불가능한 필수 사항입니다.',
       publishDate: '2026-03-22',

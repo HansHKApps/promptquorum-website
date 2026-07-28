@@ -4,6 +4,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     theme: 'Tools & Platforms',
+    heroImage: '/images/best-tools-structured-output-overview-hero-en.png',
     title: 'Best Tools for Structured Output and JSON Mode (2026)',
     seoTitle: 'Best Tools for Structured Output and JSON Mode (2026)',
     metaDescription: '6 structured output tools compared: Instructor, Outlines, Pydantic AI, LangChain, Marvin, PromptQuorum. Side-by-side table: pricing, local model support.',
@@ -333,6 +334,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   de: {
     theme: 'Tools & Plattformen',
+    heroImage: '/images/best-tools-structured-output-overview-hero-de.png',
     title: 'Beste Tools für Structured Output und JSON Mode (2026)',
     seoTitle: 'Beste Tools für Structured Output und JSON Mode (2026)',
     metaDescription: '6 Structured-Output-Tools 2026 verglichen: Instructor, Outlines, Pydantic AI, LangChain, Marvin, PromptQuorum. Tabelle mit Pricing und lokalen Modellen.',
@@ -663,6 +665,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   es: {
     theme: 'Tools & Platforms',
+    heroImage: '/images/best-tools-structured-output-overview-hero-es.png',
     title: 'Mejores herramientas para Structured Output y JSON Mode (2026)',
     seoTitle: 'Mejores herramientas de Structured Output y JSON Mode 2026',
     metaDescription: '6 herramientas de structured output comparadas: Instructor, Outlines, Pydantic AI, LangChain, Marvin y PromptQuorum. Precios y soporte de modelos locales.',
@@ -998,6 +1001,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Tools & Platforms',
+    heroImage: '/images/best-tools-structured-output-overview-hero-pt.png',
     title: 'Melhores ferramentas para Structured Output e JSON Mode (2026)',
     seoTitle: 'Melhores ferramentas de Structured Output e JSON Mode 2026',
     metaDescription: '6 ferramentas de structured output comparadas: Instructor, Outlines, Pydantic AI, LangChain, Marvin e PromptQuorum. Preços e suporte a modelos locais.',
@@ -1330,6 +1334,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   fr: {
     theme: 'Outils & Plateformes',
+    heroImage: '/images/best-tools-structured-output-overview-hero-fr.png',
     title: 'Meilleurs outils pour Structured Output et JSON Mode (2026)',
     seoTitle: 'Meilleurs outils Structured Output et JSON Mode 2026',
     metaDescription: 'Instructor vs Outlines vs Pydantic AI vs LangChain vs Marvin : quel outil choisir ? Tableau comparatif 2026 avec pricing et support de modèles locaux.',
@@ -1652,6 +1657,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ja: {
     theme: 'ツール＆プラットフォーム',
+    heroImage: '/images/best-tools-structured-output-overview-hero-ja.png',
     title: 'Structured Output対応ツール2026：用途別ランキング',
     seoTitle: '構造化出力・JSONモードのベストツール比較（2026年）',
     metaDescription: '構造化出力ツール6選を比較：Instructor、Outlines、Pydantic AI、LangChain、Marvin、PromptQuorum。価格・ローカルモデル対応・ユースケース別比較表。',
@@ -1978,6 +1984,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   zh: {
     theme: '工具与平台',
+    heroImage: '/images/best-tools-structured-output-overview-hero-zh.png',
     title: '2026年Structured Output最佳工具：用途排名',
     seoTitle: '结构化输出与JSON模式最佳工具对比（2026）',
     metaDescription: '6款结构化输出工具对比：Instructor、Outlines、Pydantic AI、LangChain、Marvin和PromptQuorum。含价格、本地模型支持和使用场景对比表。',
@@ -2306,6 +2313,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   ar: {
     theme: 'Tools & Platforms',
+    heroImage: '/images/best-tools-structured-output-overview-hero-ar.png',
     title: 'أفضل أدوات ⁨Structured Output⁩ و ⁨JSON Mode⁩ (⁨2026⁩)',
     seoTitle: 'أفضل أدوات ⁨Structured Output⁩ و ⁨JSON Mode 2026⁩',
     metaDescription: 'مقارنة ⁨6⁩ أدوات ⁨structured output⁩: ⁨Instructor⁩ و⁨Outlines⁩ و⁨Pydantic AI⁩ و⁨LangChain⁩ و⁨Marvin⁩ و⁨PromptQuorum⁩. الأسعار ودعم النماذج المحلية.',
@@ -2640,6 +2648,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ko: {
     theme: 'Tools & Platforms',
+    heroImage: '/images/best-tools-structured-output-overview-hero-ko.png',
     title: 'Structured Output 및 JSON Mode 최고의 도구 (2026)',
     seoTitle: '2026년 Structured Output JSON Mode 최고의 한국어 도구',
     metaDescription: 'Instructor, Outlines, Pydantic AI, LangChain, Marvin, PromptQuorum — 6가지 structured output 도구 비교. 가격 및 로컬 모델 지원 포함.',

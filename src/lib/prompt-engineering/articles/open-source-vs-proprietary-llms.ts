@@ -14,6 +14,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'monthly',
       theme: 'Techniques',
+      heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-en.png',
       title: 'Open Source vs Proprietary LLMs',
       intro: 'Open-weights models like LLaMA 3.1 and Mistral offer control and cost savings; proprietary models like GPT-5.6 and Claude Opus 4.8 deliver frontier performance. Both categories converge in capability but diverge in access, customization, and compliance requirements.',
       metaDescription: 'LLaMA 4 and DeepSeek-R1 vs GPT-5.6, Claude, Gemini: cost, privacy, context windows, agentic coding benchmarks. Which to use in 2026 — decision guide.',
@@ -617,6 +618,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'monthly',
       theme: 'Techniken',
+      heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-de.png',
       title: 'Open-Source vs proprietäre LLMs',
       intro: 'Open-Weights-Modelle wie LLaMA 4 Scout und Mistral bieten vollständige Kontrolle und Kosteneinsparungen; proprietäre Modelle wie GPT-5.6 und Claude Opus 4.8 liefern Spitzenleistung. Beide Kategorien konvergieren bei der Leistungsfähigkeit, divergieren aber bei Zugriff, Anpassung und Compliance-Anforderungen.',
       metaDescription: 'Vergleichen Sie Open-Weights (LLaMA 4, DeepSeek-R1) mit proprietären LLMs (GPT-5.6, Claude): Preise, Context Windows, MoE & Coding-Benchmarks.',
@@ -1158,6 +1160,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'monthly',
       theme: 'Techniques',
+      heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-es.png',
       title: 'LLMs de código abierto vs propietarios',
       intro: 'Los modelos open-weights como LLaMA 4 y Mistral ofrecen control y ahorro de costos; los modelos propietarios como GPT-5.6 y Claude Opus 4.8 ofrecen rendimiento de frontera. Ambas categorías convergen en capacidad pero divergen en acceso, personalización y requisitos de cumplimiento.',
       metaDescription: 'LLaMA 4 y DeepSeek-R1 vs GPT-5.6, Claude, Gemini: costo, privacidad, context windows, benchmarks de código agéntico. Cuál usar en 2026 — guía de decisión.',
@@ -1420,6 +1423,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'monthly',
       theme: 'Techniques',
+      heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-ar.png',
       title: 'النماذج مفتوحة المصدر مقابل النماذج المملوكة',
       intro: 'تقدم النماذج مفتوحة الأوزان مثل LLaMA 4 وMistral تحكمًا وتوفيرًا في التكاليف؛ بينما تقدم النماذج المملوكة مثل GPT-5.6 وClaude Opus 4.8 أداءً متقدمًا. كلا الفئتين تتقاربان في القدرة لكنهما تتباينان في الوصول والتخصيص ومتطلبات الامتثال.',
       metaDescription: '⁨LLaMA 4⁩ و⁨DeepSeek-R1⁩ مقابل ⁨GPT-5.6⁩ و⁨Claude⁩ و⁨Gemini⁩: التكلفة والخصوصية ونوافذ السياق والكود الوكيل. أيهما تختار في ⁨2026⁩ — دليل القرار.',
@@ -1680,6 +1684,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Techniques',
+      heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-pt.png',
       title: 'LLMs de código aberto vs proprietários',
       intro: 'Os modelos open-weights como LLaMA 4 e Mistral oferecem controle e economia de custos; os modelos proprietários como GPT-5.6 e Claude Opus 4.8 oferecem desempenho de fronteira. Ambas as categorias convergem em capacidade, mas divergem em acesso, personalização e requisitos de conformidade.',
       metaDescription: 'LLaMA 4 e DeepSeek-R1 vs GPT-5.6, Claude, Gemini: custo, privacidade, context windows, benchmarks de código agêntico. Qual usar em 2026 — guia de decisão.',
@@ -1940,6 +1945,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       freshness_tier: 'monthly',
       theme: 'Techniques',
+      heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-fr.png',
       title: 'Open-Weights vs LLMs propriétaires',
       intro: 'Les modèles open-weights comme LLaMA 4 et Mistral offrent contrôle total et économies d\'échelle ; les modèles propriétaires comme GPT-5.6 et Claude Opus 4.8 livrent des performances de pointe. Les deux catégories convergent en performance mais divergent sur l\'accès, la personnalisation et la conformité.',
       metaDescription: 'Comparez open-weights (LLaMA 4, DeepSeek-R1) vs propriétaires: prix, fenêtres contextuelles, MoE, benchmarks coding, compliance & architecture.',
@@ -2477,6 +2483,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
       freshness_tier: 'monthly',
       theme: 'Techniques',
+      heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-ja.png',
       title: 'オープンウェイト vs 独占的LLM',
       intro: 'LLaMA 4やMistralなどのオープンウェイトモデルは完全な制御とスケールでのコスト削減を提供し、GPT-5.6やClaude Opus 4.8などの独占的モデルはフロンティアパフォーマンスを実現します。両カテゴリは性能面で収束しつつありますが、アクセス方法、カスタマイズ性、コンプライアンス要件では大きく異なります。',
       metaDescription: 'オープンウェイト (LLaMA 4、DeepSeek-R1) と独占的LLM (GPT-5.6、Claude Opus 4.8、Gemini 3.1 Pro) を比較：価格、コンテキストウィンドウ、MoE アーキテクチャ、エージェント型コーディングベンチマーク、データプライバシー。',
@@ -3016,6 +3023,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
       freshness_tier: 'monthly',
       theme: 'Techniques',
+      heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-zh.png',
       title: '开源与专有LLM：竞争格局',
       intro: '开放权重模型（如LLaMA 4和Mistral）提供完全控制和规模化成本节省；专有模型（如GPT-5.6和Claude Opus 4.8）则提供前沿性能。两类模型的能力正在趋同，但在访问方式、定制化程度和合规要求上存在明显分歧。',
       metaDescription: '对比开放权重模型 (LLaMA 4、DeepSeek-R1) 与专有LLM (GPT-5.6、Claude Opus 4.8、Gemini 3.1 Pro)：定价、上下文窗口、MoE架构、代理编程基准与合规性。为企业和开发者选择合适的推理方案。',
@@ -3570,6 +3578,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ko: {
       freshness_tier: 'monthly',
       theme: 'Techniques',
+      heroImage: '/images/open-source-vs-proprietary-llms-overview-hero-ko.png',
       title: '오픈소스 vs 독점 LLM: 2026년 올바른 선택',
       intro: 'LLaMA 4, Mistral 같은 오픈-웨이트 모델은 제어권과 비용 절감을 제공하고, GPT-5.6, Claude Opus 4.8 같은 독점 모델은 최전선 성능을 제공합니다. 두 범주는 기능 면에서 수렴하고 있지만 접근성, 커스터마이징, 컴플라이언스 요구사항 면에서는 여전히 차이가 있습니다.',
       metaDescription: 'LLaMA 4, DeepSeek-R1 vs GPT-5.6, Claude, Gemini: 비용, 프라이버시, 컨텍스트 윈도우, 에이전틱 코드 벤치마크. 2026년 무엇을 사용할지 — 의사결정 가이드.',

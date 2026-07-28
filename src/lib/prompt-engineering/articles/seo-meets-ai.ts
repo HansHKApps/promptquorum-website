@@ -14,6 +14,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
+      heroImage: '/images/seo-meets-ai-overview-hero-en.png',
       title: 'SEO Meets AI: How GEO Is Replacing the Old Playbook',
       intro: '**Generative Engine Optimization (GEO) is the practice of structuring content so AI search engines (ChatGPT, Perplexity, Gemini, Claude) cite it when synthesizing answers — replacing the traditional SEO goal of ranking among Google\'s blue links with a new goal of being named in the 2–7 sources an AI quotes per response.**\n\nGEO does not replace traditional SEO; it adds a second optimization layer for a search landscape where AI assistants handle over 40% of search interactions and nearly 60% of all searches now end without a single click.',
       publishDate: '2026-03-23',
@@ -524,6 +525,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
       theme: 'Use Cases',
+      heroImage: '/images/seo-meets-ai-overview-hero-de.png',
       freshness_tier: 'semi_annual',
       title: 'SEO trifft KI: Wie GEO den alten Spielplan ersetzt',
       seoTitle: 'SEO trifft KI: Inhalte in KI-Antworten bringen (2026)',
@@ -996,6 +998,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     es: {
       theme: 'Use Cases',
+      heroImage: '/images/seo-meets-ai-overview-hero-es.png',
       freshness_tier: 'semi_annual',
       title: 'SEO y la IA: Cómo GEO Está Reemplazando el Manual Tradicional',
       seoTitle: 'SEO y IA: cómo GEO logra que ChatGPT cite tu contenido',
@@ -1333,6 +1336,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     ar: {
       theme: 'Use Cases',
+      heroImage: '/images/seo-meets-ai-overview-hero-ar.png',
       freshness_tier: 'semi_annual',
       title: 'السيو والذكاء الاصطناعي: كيف تُحلّ ⁨GEO⁩ محل الدليل التقليدي',
       seoTitle: '⁨GEO⁩ والسيو: كيف يجعل ⁨ChatGPT⁩ يستشهد بمحتواك',
@@ -1670,6 +1674,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     pt: {
       theme: 'Use Cases',
+      heroImage: '/images/seo-meets-ai-overview-hero-pt.png',
       title: 'SEO e IA: Como a GEO Está Substituindo o Manual Tradicional',
       seoTitle: 'SEO e IA: como GEO faz ChatGPT citar seu conteúdo',
       intro: '**A Otimização para Mecanismos Generativos (GEO) é a prática de estruturar conteúdo para que mecanismos de busca com IA (ChatGPT, Perplexity, Gemini, Claude) o citem ao sintetizar respostas — substituindo o objetivo tradicional do SEO de aparecer entre os links azuis do Google por um novo objetivo: ser nomeado entre as 2–7 fontes que uma IA cita por resposta.**\n\nGEO não substitui o SEO tradicional; adiciona uma segunda camada de otimização para um cenário de busca onde assistentes de IA lidam com mais de 40% das interações de pesquisa.',
@@ -1866,6 +1871,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     fr: {
       theme: 'Use Cases',
+      heroImage: '/images/seo-meets-ai-overview-hero-fr.png',
       freshness_tier: 'semi_annual',
       title: 'SEO rencontre l\'IA : comment GEO remplace la règle du jeu',
       seoTitle: 'SEO et IA : comment le GEO fait citer vos contenus par ChatGPT (2026)',
@@ -2338,6 +2344,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: 'ユースケース',
+      heroImage: '/images/seo-meets-ai-overview-hero-ja.png',
       freshness_tier: 'semi_annual',
       title: 'GEO完全ガイド：ChatGPT、Perplexity、Geminiの最適化',
       seoTitle: 'SEOとAI：GEOでChatGPTに引用されるコンテンツ戦略（2026）',
@@ -2764,6 +2771,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: '用例',
+      heroImage: '/images/seo-meets-ai-overview-hero-zh.png',
       freshness_tier: 'semi_annual',
       title: 'GEO完全指南：ChatGPT、Perplexity、Gemini优化',
       seoTitle: 'SEO遇上AI：GEO如何让ChatGPT引用你的内容（2026）',
@@ -3191,6 +3199,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
+    heroImage: '/images/seo-meets-ai-overview-hero-ko.png',
       title: 'SEO와 AI의 만남: GEO가 기존 방식을 대체하는 방법',
       intro: '**생성형 엔진 최적화(GEO)란 AI 검색 엔진(ChatGPT, Perplexity, Gemini, Claude)이 답변을 합성할 때 해당 콘텐츠를 인용하도록 구조화하는 기법입니다. Google의 파란색 링크 중 상위에 노출되는 기존 SEO 목표를, AI가 답변마다 인용하는 2~7개 출처 안에 포함되는 새로운 목표로 전환합니다.**\n\nGEO는 기존 SEO를 대체하지 않습니다. AI 어시스턴트가 검색 상호작용의 40% 이상을 처리하고, 전체 검색의 약 60%가 단 한 번의 클릭 없이 종료되는 검색 환경에서 두 번째 최적화 레이어를 추가하는 것입니다.',
       publishDate: '2026-03-23',

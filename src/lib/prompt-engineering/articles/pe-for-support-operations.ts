@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
+    heroImage: '/images/pe-for-support-operations-overview-hero-en.png',
     title: 'Prompt Engineering for Support Operations: Consistent, Accurate Response Templates',
     dateModified: '2026-06-20',
     seoTitle: 'Prompt Engineering for Support Teams: Template Guide',
@@ -203,6 +204,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatisierung',
+    heroImage: '/images/pe-for-support-operations-overview-hero-de.png',
     title: 'Prompt Engineering für Support-Operationen: Konsistente, genaue Antwort-Templates',
     seoTitle: 'Prompt Engineering für Support-Teams: Vorlagen-Leitfaden',
     metaDescription: 'Support-Prompts für Triage, Eskalation und Tonsteuerung. Guardrails verhindern Richtlinienfehler. Handoff-Muster klären Eskalations-Trigger.',
@@ -395,6 +397,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatización',
+    heroImage: '/images/pe-for-support-operations-overview-hero-es.png',
     title: 'Prompt engineering para operaciones de soporte: plantillas de respuesta consistentes y precisas',
     seoTitle: 'Prompts de soporte: guía de plantillas',
     metaDescription: 'Diseña prompts de soporte para triage, escalación y control de tono. Las salvaguardas evitan errores de política y aclaran cuándo escalar un caso.',
@@ -564,6 +567,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Workflows & Automação',
+    heroImage: '/images/pe-for-support-operations-overview-hero-pt.png',
     title: 'Prompt engineering para operações de suporte: modelos de resposta consistentes e precisos',
     seoTitle: 'Prompts de suporte: guia de modelos',
     metaDescription: 'Projete prompts de suporte para triagem, escalada e controle de tom. As salvaguardas evitam erros de política e esclarecem quando escalar um caso.',
@@ -734,6 +738,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatisation',
+    heroImage: '/images/pe-for-support-operations-overview-hero-fr.png',
     title: 'Prompt Engineering pour les opérations support : templates de réponses cohérents et précis',
     seoTitle: 'Prompts Support : Guide des Templates et Escalade',
     metaDescription: "Prompts support pour triage, escalade et ton. Guardrails de conformité préviennent les erreurs de politique. Patterns de transfert et escalade.",
@@ -899,6 +904,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'evergreen',
     theme: 'ワークフローと自動化',
+    heroImage: '/images/pe-for-support-operations-overview-hero-ja.png',
     title: 'サポートオペレーションのプロンプトエンジニアリング：一貫性のある正確な回答テンプレート',
     seoTitle: 'サポートプロンプト：テンプレート設計ガイド',
     metaDescription: 'サポートチームがトリアージ、エスカレーション、トーン制御のプロンプトを設計する方法。ポリシーコンプライアンスガードレールが政策エラーを防ぎます。ハンドオフパターンが人間へのエスカレーショントリガーを明確にします。',
@@ -1085,6 +1091,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'evergreen',
     theme: '工作流与自动化',
+    heroImage: '/images/pe-for-support-operations-overview-hero-zh.png',
     title: '支持运营的提示词工程：一致、准确的响应模板',
     seoTitle: '客支团队提示词工程：完整指南',
     metaDescription: '设计客户支持提示词以实现分诊、升级和语气控制。合规护栏防止策略错误。交接模式阐明人工升级触发器。包括完整模板、实际示例和部署前全面测试清单。',
@@ -1231,6 +1238,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
+    heroImage: '/images/pe-for-support-operations-overview-hero-ar.png',
     title: 'هندسة البرومبت لعمليات الدعم: قوالب استجابة متسقة ودقيقة',
     seoTitle: 'هندسة البرومبت لفِرق الدعم: دليل القوالب',
     metaDescription: '⁨3⁩ أولويات لبرومبتات الدعم: الدقة، والاتساق، والتصعيد. صمّم قوالب للفرز والتصعيد والتحكم في النبرة مع ضمانات الامتثال للسياسات.',
@@ -1400,6 +1408,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'evergreen',
     theme: '워크플로우 및 자동화',
+    heroImage: '/images/pe-for-support-operations-overview-hero-ko.png',
     title: '고객 지원 운영을 위한 프롬프트 엔지니어링: 일관되고 정확한 응답 템플릿',
     seoTitle: '지원팀을 위한 프롬프트 엔지니어링: 템플릿 가이드',
     metaDescription: '분류, 에스컬레이션, 톤 제어를 위한 지원 프롬프트를 설계하십시오. 가드레일이 정책 오류를 방지합니다. 핸드오프 패턴이 에스컬레이션 트리거를 명확히 합니다.',

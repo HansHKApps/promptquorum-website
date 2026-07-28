@@ -4,6 +4,7 @@ import type { LLMArticle } from '../types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     theme: 'Privacy & Security',
+    heroImage: '/images/qwen-local-gdpr-setup-guide-2026-overview-hero-en.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'How to Set Up Qwen Locally for GDPR-Compliant Workflows',
@@ -227,6 +228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Privacy & Security',
+    heroImage: '/images/qwen-local-gdpr-setup-guide-2026-overview-hero-de.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'Qwen lokal einrichten für DSGVO-konforme Workflows',
@@ -331,6 +333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Privacy & Security',
+    heroImage: '/images/qwen-local-gdpr-setup-guide-2026-overview-hero-fr.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'Configurer Qwen localement pour des workflows conformes au RGPD',
@@ -435,6 +438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Privacy & Security',
+    heroImage: '/images/qwen-local-gdpr-setup-guide-2026-overview-hero-ja.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'GDPRに準拠したワークフローのためのQwenローカルセットアップ方法',
@@ -539,6 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Privacy & Security',
+    heroImage: '/images/qwen-local-gdpr-setup-guide-2026-overview-hero-es.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'Cómo configurar Qwen localmente para flujos de trabajo conformes con el RGPD',
@@ -696,6 +701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Privacy & Security',
+    heroImage: '/images/qwen-local-gdpr-setup-guide-2026-overview-hero-ar.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'كيفية إعداد ⁨Qwen⁩ محليًا لسير عمل متوافق مع ⁨GDPR⁩',
@@ -853,6 +859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Privacy & Security',
+    heroImage: '/images/qwen-local-gdpr-setup-guide-2026-overview-hero-zh.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: '为GDPR合规工作流本地配置Qwen',
@@ -957,6 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Privacy & Security',
+    heroImage: '/images/qwen-local-gdpr-setup-guide-2026-overview-hero-pt.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'Como configurar o Qwen localmente para fluxos de trabalho em conformidade com o GDPR',
@@ -1126,6 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Privacy & Security',
+    heroImage: '/images/qwen-local-gdpr-setup-guide-2026-overview-hero-ko.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'GDPR 준수 워크플로를 위한 Qwen 로컬 설치 가이드',

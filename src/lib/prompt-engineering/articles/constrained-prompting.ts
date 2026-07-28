@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/constrained-prompting-overview-hero-en.png',
       title: 'Constrained Prompting',
       intro: '**Constrained prompting is a technique where you tell the model not just what to do, but also what it must and must not do — using "must," "must not," and "only" language — so outputs stay inside clearly defined boundaries.** This is essential when you need reliable formats, safe content, or strict compliance with internal rules.',
       leadAnswerBlock: '**Constrained prompting is the practice of adding explicit rules — format, length, content, and safety boundaries — directly into a prompt to make AI output predictable and reusable.** Instead of "write a summary," you specify exact structure, allowed content, and validation rules.',
@@ -348,6 +349,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Techniken',
+      heroImage: '/images/constrained-prompting-overview-hero-de.png',
       title: 'Constrained Prompting: Strukturierte Prompts für zuverlässige Ausgaben',
       intro: '**Constrained Prompting ist eine Technik, bei der Sie dem Modell nicht nur sagen, was es tun soll, sondern auch, was es unbedingt tun und nicht tun muss – damit die Ausgaben innerhalb klar definierter Grenzen bleiben.** Dies ist essentiell, wenn Sie zuverlässige Formate, sichere Inhalte oder strikte Einhaltung interner Richtlinien benötigen.',
       leadAnswerBlock: '**Constrained Prompting ist die Praxis, explizite Regeln – Format, Länge, Inhalt und Sicherheitsgrenzen – direkt in einen Prompt zu integrieren, um KI-Ausgaben vorhersehbar und wiederverwendbar zu machen.** Statt „schreibe eine Zusammenfassung" geben Sie vor: 150 Wörter, JSON-Format, keine Konkurrenten-Namen, muss einen Call-to-Action enthalten.',
@@ -676,6 +678,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/constrained-prompting-overview-hero-es.png',
       title: 'Constrained Prompting: Salidas estructuradas para respuestas fiables',
       intro: '**El constrained prompting es una técnica en la que le dices al modelo no solo qué hacer, sino también qué debe y no debe hacer — usando lenguaje como "debe", "no debe" y "solo" — para que las salidas permanezcan dentro de límites claramente definidos.** Es esencial cuando necesitas formatos fiables, contenido seguro o cumplimiento estricto de reglas internas.',
       leadAnswerBlock: '**El constrained prompting es la práctica de añadir reglas explícitas — formato, longitud, contenido y límites de seguridad — directamente en un prompt para hacer que la salida de la IA sea predecible y reutilizable.** En lugar de "escribe un resumen", especificas estructura exacta, contenido permitido y reglas de validación.',
@@ -1010,6 +1013,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/constrained-prompting-overview-hero-ar.png',
       title: 'الموجّهات المقيّدة: مخرجات منظّمة لاستجابات موثوقة',
       intro: '**الموجّهات المقيّدة تقنية تُخبر فيها النموذج ليس فقط بما يفعله، بل أيضًا بما يجب وما لا يجب فعله — باستخدام لغة مثل "يجب"، "لا يجب"، و"فقط" — حتى تظل المخرجات ضمن حدود محددة بوضوح.** إنها ضرورية عند الحاجة إلى تنسيقات موثوقة أو محتوى آمن أو امتثال صارم للقواعد الداخلية.',
       leadAnswerBlock: '**الموجّهات المقيّدة هي ممارسة إضافة قواعد صريحة — التنسيق والطول والمحتوى وحدود الأمان — مباشرةً في الموجّه لجعل مخرجات الذكاء الاصطناعي قابلة للتنبؤ وإعادة الاستخدام.** بدلًا من "اكتب ملخصًا"، تحدد البنية الدقيقة والمحتوى المسموح به وقواعد التحقق.',
@@ -1339,6 +1343,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/constrained-prompting-overview-hero-pt.png',
       title: 'Constrained Prompting: Saídas estruturadas para respostas confiáveis',
       intro: '**O constrained prompting é uma técnica em que você diz ao modelo não apenas o que fazer, mas também o que deve e não deve fazer — usando linguagem como "deve", "não deve" e "apenas" — para que as saídas permaneçam dentro de limites claramente definidos.** É essencial quando você precisa de formatos confiáveis, conteúdo seguro ou conformidade estrita com regras internas.',
       leadAnswerBlock: '**O constrained prompting é a prática de adicionar regras explícitas — formato, comprimento, conteúdo e limites de segurança — diretamente em um prompt para tornar a saída da IA previsível e reutilizável.** Em vez de "escreva um resumo", você especifica estrutura exata, conteúdo permitido e regras de validação.',
@@ -1666,6 +1671,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques de Prompting',
+      heroImage: '/images/constrained-prompting-overview-hero-fr.png',
   title: 'Prompting avec Contraintes : Structures Garanties pour Modèles de Langage',
   intro: '**Le prompting avec contraintes signifie ajouter des règles explicites — format, longueur, contenu, limites de sécurité — directement dans un prompt pour que les sorties IA restent prévisibles et réutilisables.** C\'est essentiel quand vous avez besoin de formats fiables, de contenu sécurisé, ou de respect strict des règles internes.',
   leadAnswerBlock: '**Le prompting avec contraintes est la pratique d\'ajouter des règles explicites — format, longueur, contenu et limites de sécurité — directement dans un prompt pour rendre les outputs IA prévisibles et réutilisables.** Au lieu de « rédige un résumé », vous spécifiez : 150 mots, format JSON, pas de noms concurrents, doit inclure un appel à l\'action.',
@@ -1991,6 +1997,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
   ja: {
   theme: 'プロンプティング技法',
+    heroImage: '/images/constrained-prompting-overview-hero-ja.png',
   title: '制約付きプロンプティング：完全ガイド',
   seoTitle: '制約付きプロンプティング：構造化AIの完全ガイド',
   intro: '制約付きプロンプティングとは、LLMに厳格なルールを強制する技法です。特定の出力形式、長さの制限、事前定義されたスキーマの遵守を指示します。本番環境で信頼性が高く、再現可能な結果を得たいときに有効です。',
@@ -2485,6 +2492,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     zh: {
   theme: '提示工程技术',
+      heroImage: '/images/constrained-prompting-overview-hero-zh.png',
   title: '受限提示：完整指南',
   seoTitle: '受限提示：结构化输出完整指南',
   intro: '受限提示强制LLM遵守严格规则：特定输出格式、长度限制或预定义架构遵守。在生产环境中需要可靠、可重现的结果时至关重要。',
@@ -2980,6 +2988,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    heroImage: '/images/constrained-prompting-overview-hero-ko.png',
     title: '제약 프롬프팅: 구조화된 AI 출력 완벽 가이드',
     intro: '**제약 프롬프팅은 모델에게 무엇을 해야 하는지뿐만 아니라 반드시 해야 할 것과 절대 해서는 안 되는 것을 명시적으로 지정하는 기법입니다. "반드시", "절대 안 됨", "오직"과 같은 언어를 사용하여 출력 결과가 명확히 정의된 경계 내에 머물도록 합니다.** 신뢰할 수 있는 형식, 안전한 콘텐츠, 또는 내부 규정의 엄격한 준수가 필요할 때 필수적인 기법입니다.',
     leadAnswerBlock: '제약 프롬프팅이란 형식, 길이, 콘텐츠, 안전 경계에 관한 명시적인 규칙을 프롬프트에 직접 추가하여 AI 출력을 예측 가능하고 재사용 가능하게 만드는 방법입니다. "요약을 작성하라" 대신 정확한 구조, 허용되는 콘텐츠, 검증 규칙을 지정합니다.',
