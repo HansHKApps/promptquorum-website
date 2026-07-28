@@ -169,6 +169,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           image: '/images/llm-quantization-explained-quant-levels-hero-en.png',
           imageCaption: 'Quantization levels compared: from Q2_K (highest compression) to Q8_0 (highest quality). Q4_K_M is the recommended standard for most users.',
         },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'Interactive VRAM Calculator',
+          content: 'Use this calculator to compute exact VRAM requirements for any combination of model, quantization, context, and batch size. Select your configuration and see which GPUs fit.',
+          component: 'VramCalculator',
+        },
         whatIsQ80: {
           id: 'what-is-q8-0',
           title: 'What is Q8_0 Quantization?',
@@ -774,6 +780,12 @@ schema: {
           image: '/images/llm-quantization-explained-quant-levels-hero-es.png',
           imageCaption: 'Niveles de cuantización comparados: de Q2_K (mayor compresión) a Q8_0 (mayor calidad). Q4_K_M es el estándar recomendado para la mayoría de usuarios.',
         },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'Calculadora interactiva de VRAM',
+          content: 'Usa esta calculadora para calcular los requisitos exactos de VRAM para cualquier combinación de modelo, cuantización, contexto y tamaño de lote. Selecciona tu configuración y comprueba qué GPU son compatibles.',
+          component: 'VramCalculator',
+        },
         whatIsQ80: {
           id: 'what-is-q8-0',
           title: '¿Qué es la cuantización Q8_0?',
@@ -1334,6 +1346,12 @@ schema: {
           columns: ['المستوى', 'البتات', 'RAM (7B)', 'فقدان الجودة', 'متى تستخدم'],
           image: '/images/llm-quantization-explained-quant-levels-hero-ar.png',
           imageCaption: 'مستويات التكميم مقارنةً: من Q2_K (أعلى ضغط) إلى Q8_0 (أعلى جودة). Q4_K_M هو المعيار الموصى به لمعظم المستخدمين.',
+        },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'حاسبة VRAM التفاعلية',
+          content: 'استخدم هذه الحاسبة لحساب متطلبات VRAM الدقيقة لأي مجموعة نموذج، وتكميم، وسياق، وحجم دفعة. اختر تكوينك وتحقق من وحدات GPU المتوافقة.',
+          component: 'VramCalculator',
         },
         whatIsQ80: {
           id: 'what-is-q8-0',
@@ -1949,6 +1967,12 @@ schema: {
           image: '/images/llm-quantization-explained-quant-levels-hero-pt.png',
           imageCaption: 'Níveis de quantização comparados: de Q2_K (maior compressão) a Q8_0 (maior qualidade). Q4_K_M é o padrão recomendado para a maioria dos usuários.',
         },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'Calculadora Interativa de VRAM',
+          content: 'Use esta calculadora para calcular os requisitos exatos de VRAM para qualquer combinação de modelo, quantização, contexto e tamanho de lote. Selecione sua configuração e veja quais GPUs são compatíveis.',
+          component: 'VramCalculator',
+        },
         whatIsQ80: {
           id: 'what-is-q8-0',
           title: 'O que é a quantização Q8_0?',
@@ -2300,6 +2324,12 @@ schema: {
           columns: ['Ebene', 'Bits', 'RAM (7B)', 'Qualitätsverlust', 'Verwendung'],
           image: '/images/llm-quantization-explained-quant-levels-hero-de.png',
           imageCaption: 'Quantisierungsstufen im Vergleich: von Q2_K (höchste Komprimierung) bis Q8_0 (höchste Qualität). Q4_K_M ist der empfohlene Standard für die meisten Benutzer.',
+        },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'Interaktiver VRAM-Rechner',
+          content: 'Verwenden Sie diesen Rechner, um exakte VRAM-Anforderungen für jede Kombination von Modell, Quantisierung, Kontext und Batch-Größe zu berechnen. Wählen Sie Ihre Konfiguration und sehen Sie, welche GPUs passen.',
+          component: 'VramCalculator',
         },
         whatIsQ80: {
           id: 'what-is-q8-0',
@@ -2912,6 +2942,12 @@ schema: {
           image: '/images/llm-quantization-explained-quant-levels-hero-fr.png',
           imageCaption: 'Niveaux de quantification comparés : de Q2_K (compression maximale) à Q8_0 (qualité maximale). Q4_K_M est la norme recommandée pour la plupart des utilisateurs.',
         },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'Calculateur VRAM interactif',
+          content: 'Utilisez ce calculateur pour calculer les exigences VRAM exactes pour toute combinaison de modèle, quantification, contexte et taille de lot. Sélectionnez votre configuration et voyez quels GPU sont compatibles.',
+          component: 'VramCalculator',
+        },
         whatIsQ80: {
           id: 'what-is-q8-0',
           title: 'Qu\'est-ce que la quantification Q8_0 ?',
@@ -3473,6 +3509,12 @@ schema: {
           image: '/images/llm-quantization-explained-quant-levels-hero-ja.png',
           imageCaption: '量子化レベルの比較：Q2_K（最高圧縮）からQ8_0（最高品質）まで。Q4_K_Mはほとんどのユーザーに推奨される標準です。',
         },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'インタラクティブVRAMカリキュレーター',
+          content: 'このカリキュレーターを使用して、モデル、量子化、コンテキスト、バッチサイズの任意の組み合わせに対する正確なVRAM要件を計算してください。設定を選択して、どのGPUが適合するかを確認します。',
+          component: 'VramCalculator',
+        },
         whatIsQ80: {
           id: 'what-is-q8-0',
           title: 'Q8_0量子化とは？',
@@ -4032,6 +4074,12 @@ schema: {
           columns: ['级别', '位数', 'RAM (7B)', '质量损失', '使用场景'],
           image: '/images/llm-quantization-explained-quant-levels-hero-zh.png',
           imageCaption: '量化级别对比：从Q2_K（最高压缩）到Q8_0（最高质量）。Q4_K_M是大多数用户推荐的标准。',
+        },
+        calculator: {
+          id: 'interactive-calculator',
+          title: '交互式VRAM计算器',
+          content: '使用此计算器为任意模型、量化、上下文和批次大小组合计算精确的VRAM需求。选择您的配置，查看哪些GPU适配。',
+          component: 'VramCalculator',
         },
         whatIsQ80: {
           id: 'what-is-q8-0',
@@ -4621,6 +4669,12 @@ schema: {
           columns: ['Level', 'Bits', 'RAM (7B)', 'Quality Loss', 'Use When'],
           image: '/images/llm-quantization-explained-quant-levels-hero-ko.png',
           imageCaption: '양자화 수준 비교: Q2_K(최고 압축)부터 Q8_0(최고 품질)까지. Q4_K_M은 대부분의 사용자에게 권장되는 표준입니다.',
+        },
+        calculator: {
+          id: 'interactive-calculator',
+          title: '인터랙티브 VRAM 계산기',
+          content: '이 계산기를 사용하면 모델, 양자화, 컨텍스트, 배치 크기의 모든 조합에 대해 정확한 VRAM 요구량을 계산할 수 있습니다. 구성을 선택하면 어떤 GPU에 적합한지 확인할 수 있습니다.',
+          component: 'VramCalculator',
         },
         gguf: {
           id: 'what-is-gguf-format',

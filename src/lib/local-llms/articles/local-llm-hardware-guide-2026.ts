@@ -241,6 +241,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**48+ GB VRAM (RTX 6000 Ada, A100, DGX Spark):** Llama 3.3 70B Q4_K_M (40 GB, fits entirely). Llama 4 Scout (17B active / 109B total MoE, ~55 GB at Q4 -- best long-context 10M-token / multimodal pick). Llama 4 Maverick (17B active, 400B total, MoE). Llama 3.3 70B Q8_0 (70 GB -- needs 80 GB A100). NVIDIA DGX Spark (128 GB unified) fits every open-weight model up to and including 70B at Q8_0 with 58 GB to spare -- but not the newest frontier MoE models: GLM-5.2 (744B total, 40B active) needs ~239 GB even at aggressive 2-bit quantization, well beyond the DGX Spark or a single 128 GB Mac Studio.',
           ],
         },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'Interactive VRAM Calculator',
+          content: 'Use this calculator to compute exact VRAM requirements for any combination of model, quantization, context, and batch size. Select your configuration and see which GPUs fit.',
+          component: 'VramCalculator',
+        },
         modelsFor16GB: {
           id: 'models-16gb',
           title: 'Best Local LLMs for 16 GB VRAM (2026)',
@@ -920,6 +926,12 @@ schema: {
             '**32 GB de VRAM (RTX 5090):** Llama 3.3 70B Q4_K_M (40 GB -- necesita una descarga mínima a CPU para las últimas capas). Qwen3 32B (19 GB, cabe entero con 13 GB de sobra). Para programación agéntica, la línea Kimi K2 (MoE, 1T total / 32B activos, MIT modificado) es la opción de peso pesado -- Kimi K2.7 Code (junio de 2026) es la más reciente, con K2.6 como la versión general anterior; ambas necesitan cuantización y descarga intensa en este nivel. La RTX 5090 es la primera GPU de consumo única que cabe un 70B denso con descarga mínima.',
             '**48+ GB de VRAM (RTX 6000 Ada, A100, DGX Spark):** Llama 3.3 70B Q4_K_M (40 GB, cabe entero). Llama 4 Scout (17B activos / 109B totales MoE, ~55 GB en Q4 -- mejor opción de contexto largo de 10M tokens / multimodal). Llama 4 Maverick (17B activos, 400B totales, MoE). Llama 3.3 70B Q8_0 (70 GB -- necesita un A100 de 80 GB). NVIDIA DGX Spark (128 GB unificada) cabe cualquier modelo de pesos abiertos hasta un 70B en Q8_0 inclusive, con 58 GB de sobra -- pero no los modelos MoE de última generación más recientes: GLM-5.2 (744B en total, 40B activos) necesita ~239 GB incluso con cuantización agresiva de 2 bits, muy por encima de lo que ofrece el DGX Spark o un solo Mac Studio de 128 GB.',
           ],
+        },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'Calculadora interactiva de VRAM',
+          content: 'Usa esta calculadora para calcular los requisitos exactos de VRAM para cualquier combinación de modelo, cuantización, contexto y tamaño de lote. Selecciona tu configuración y comprueba qué GPU son compatibles.',
+          component: 'VramCalculator',
         },
         modelsFor16GB: {
           id: 'models-16gb',
@@ -1601,6 +1613,12 @@ schema: {
             '**48+ GB VRAM (RTX 6000 Ada، A100، DGX Spark):** Llama 3.3 70B Q4_K_M (40 GB، يتسع بالكامل). Llama 4 Scout (17B نشط / 109B إجمالي MoE، ~55 GB عند Q4 -- أفضل اختيار للسياق الطويل 10M رمز / متعدد الوسائط). Llama 4 Maverick (17B نشط، 400B إجمالي، MoE). Llama 3.3 70B Q8_0 (70 GB -- يحتاج A100 بسعة 80 GB). NVIDIA DGX Spark (128 GB موحدة) يتسع لكل نموذج مفتوح الأوزان حتى 70B عند Q8_0 مع 58 GB فائضة -- لكن ليس لأحدث نماذج MoE الطليعية: يحتاج GLM-5.2 (744B إجمالي، 40B نشط) إلى ~239 GB حتى عند تكميم 2-بت شديد، وهو ما يتجاوز بكثير سعة DGX Spark أو Mac Studio واحد بسعة 128 GB.',
           ],
         },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'حاسبة VRAM التفاعلية',
+          content: 'استخدم هذه الحاسبة لحساب متطلبات VRAM الدقيقة لأي مجموعة نموذج، وتكميم، وسياق، وحجم دفعة. اختر تكوينك وتحقق من وحدات GPU المتوافقة.',
+          component: 'VramCalculator',
+        },
         modelsFor16GB: {
           id: 'models-16gb',
           title: 'أفضل نماذج LLM المحلية لـ 16 GB VRAM (2026)',
@@ -2280,6 +2298,12 @@ schema: {
             '**32 GB de VRAM (RTX 5090):** Llama 3.3 70B Q4_K_M (40 GB -- precisa de offload mínimo de CPU para as últimas camadas). Qwen3 32B (19 GB, cabe inteiro com 13 GB sobrando). Para codificação agêntica, a linha Kimi K2 (MoE, 1T total / 32B ativos, MIT Modificada) é a escolha pesada -- o Kimi K2.7 Code (junho de 2026) é o mais recente, com o K2.6 sendo o lançamento geral anterior; ambos precisam de quantização e offload pesado nesta faixa. A RTX 5090 é a primeira GPU de consumo única que comporta um 70B denso com offload mínimo.',
             '**48+ GB de VRAM (RTX 6000 Ada, A100, DGX Spark):** Llama 3.3 70B Q4_K_M (40 GB, cabe inteiro). Llama 4 Scout (17B ativos / 109B total MoE, ~55 GB em Q4 -- melhor escolha de contexto longo de 10M tokens / multimodal). Llama 4 Maverick (17B ativos, 400B total, MoE). Llama 3.3 70B Q8_0 (70 GB -- precisa de A100 de 80 GB). A NVIDIA DGX Spark (128 GB unificada) comporta todo modelo de pesos abertos até e incluindo 70B em Q8_0 com 58 GB de sobra -- mas não os modelos MoE de fronteira mais novos: o GLM-5.2 (744B no total, 40B ativos) precisa de ~239 GB mesmo em quantização agressiva de 2 bits, bem além da DGX Spark ou de um único Mac Studio de 128 GB.',
           ],
+        },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'Calculadora Interativa de VRAM',
+          content: 'Use esta calculadora para calcular os requisitos exatos de VRAM para qualquer combinação de modelo, quantização, contexto e tamanho de lote. Selecione sua configuração e veja quais GPUs são compatíveis.',
+          component: 'VramCalculator',
         },
         modelsFor16GB: {
           id: 'models-16gb',
@@ -2961,6 +2985,12 @@ schema: {
             '**48+ GB VRAM (RTX 6000 Ada, A100, DGX Spark):** Llama 3.3 70B Q4_K_M (40 GB, passt vollstaendig). Llama 4 Scout (17B aktiv / 109B gesamt MoE, ~55 GB bei Q4 -- beste Wahl fuer langen Kontext 10M-Token / multimodal). Llama 4 Maverick (17B aktiv, 400B gesamt, MoE). Llama 3.3 70B Q8_0 (70 GB -- braucht 80-GB-A100). NVIDIA DGX Spark (128 GB unified) fasst jedes Open-Weight-Modell bis einschliesslich 70B bei Q8_0 mit 58 GB Reserve -- aber nicht die neuesten Frontier-MoE-Modelle: GLM-5.2 (744B gesamt, 40B aktiv) braucht ~239 GB selbst bei aggressiver 2-Bit-Quantisierung, weit ueber dem DGX Spark oder einem einzelnen 128-GB-Mac-Studio.',
           ],
         },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'Interaktiver VRAM-Rechner',
+          content: 'Verwenden Sie diesen Rechner, um exakte VRAM-Anforderungen für jede Kombination von Modell, Quantisierung, Kontext und Batch-Größe zu berechnen. Wählen Sie Ihre Konfiguration und sehen Sie, welche GPUs passen.',
+          component: 'VramCalculator',
+        },
         modelsFor16GB: {
           id: 'models-16gb',
           title: 'Beste lokale LLMs fuer 16 GB VRAM (2026)',
@@ -3640,6 +3670,12 @@ schema: {
             '**32 Go de VRAM (RTX 5090) :** Llama 3.3 70B Q4_K_M (40 Go -- necessite un deport CPU minimal pour les dernieres couches). Qwen3 32B (19 Go, tient entierement avec 13 Go de reserve). Pour le codage agentique, la gamme Kimi K2 (MoE, 1T total / 32B actifs, MIT modifie) est le choix poids lourd -- Kimi K2.7 Code (juin 2026) est le plus recent, K2.6 etant la version generale precedente ; les deux necessitent quantification et deport important a ce palier. La RTX 5090 est le premier GPU grand public unique qui accueille un 70B dense avec un deport minimal.',
             '**48+ Go de VRAM (RTX 6000 Ada, A100, DGX Spark) :** Llama 3.3 70B Q4_K_M (40 Go, tient entierement). Llama 4 Scout (17B actifs / 109B total MoE, ~55 Go en Q4 -- meilleur choix long contexte 10M tokens / multimodal). Llama 4 Maverick (17B actifs, 400B total, MoE). Llama 3.3 70B Q8_0 (70 Go -- necessite une A100 de 80 Go). Le NVIDIA DGX Spark (128 Go unifies) accueille tout modele a poids ouverts jusqu\'au 70B en Q8_0 inclus avec 58 Go de reserve -- mais pas les tout derniers modeles MoE de pointe : GLM-5.2 (744B au total, 40B actifs) necessite ~239 Go meme en quantification agressive 2 bits, bien au-dela du DGX Spark ou d\'un seul Mac Studio 128 Go.',
           ],
+        },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'Calculateur VRAM interactif',
+          content: 'Utilisez ce calculateur pour calculer les exigences VRAM exactes pour toute combinaison de modèle, quantification, contexte et taille de lot. Sélectionnez votre configuration et voyez quels GPU sont compatibles.',
+          component: 'VramCalculator',
         },
         modelsFor16GB: {
           id: 'models-16gb',
@@ -4322,6 +4358,12 @@ schema: {
             '**48 GB以上 VRAM（RTX 6000 Ada、A100、DGX Spark）：** Llama 3.3 70B Q4_K_M（40 GB、完全に収まる）。Llama 4 Scout（17Bアクティブ／109B合計 MoE、Q4で約55 GB — 最良のロングコンテキスト10Mトークン／マルチモーダルの選択肢）。Llama 4 Maverick（17Bアクティブ、400B合計、MoE）。Llama 3.3 70B Q8_0（70 GB — 80 GB A100が必要）。NVIDIA DGX Spark（128 GBユニファイド）は、Q8_0での70Bまでのすべてのオープンウェイトモデルを58 GBの余裕をもって収めます — ただし最新のフロンティア級MoEモデルは別です：GLM-5.2（合計744B、40Bアクティブ）は積極的な2ビット量子化でも約239 GBを必要とし、DGX Sparkや単一の128 GB Mac Studioを大きく超えます。',
           ],
         },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'インタラクティブVRAMカリキュレーター',
+          content: 'このカリキュレーターを使用して、モデル、量子化、コンテキスト、バッチサイズの任意の組み合わせに対する正確なVRAM要件を計算してください。設定を選択して、どのGPUが適合するかを確認します。',
+          component: 'VramCalculator',
+        },
         modelsFor16GB: {
           id: 'models-16gb',
           title: '16 GB VRAM向けベストローカルLLM（2026）',
@@ -5002,6 +5044,12 @@ schema: {
             '**48+ GB 显存（RTX 6000 Ada、A100、DGX Spark）：** Llama 3.3 70B Q4_K_M（40 GB，完整装入）。Llama 4 Scout（17B 激活 / 109B 总 MoE，Q4 下 ~55 GB——最佳长上下文 10M-token / 多模态选择）。Llama 4 Maverick（17B 激活，400B 总，MoE）。Llama 3.3 70B Q8_0（70 GB——需要 80 GB A100）。NVIDIA DGX Spark（128 GB 统一内存）可装入每一个开放权重模型，直至并包括 Q8_0 下的 70B，并剩余 58 GB——但装不下最新的前沿 MoE 模型：GLM-5.2（744B 总参数，40B 激活）即使采用激进的 2-bit 量化也需要约 239 GB，远超 DGX Spark 或单台 128 GB Mac Studio 的容量。',
           ],
         },
+        calculator: {
+          id: 'interactive-calculator',
+          title: '交互式VRAM计算器',
+          content: '使用此计算器为任意模型、量化、上下文和批次大小组合计算精确的VRAM需求。选择您的配置，查看哪些GPU适配。',
+          component: 'VramCalculator',
+        },
         modelsFor16GB: {
           id: 'models-16gb',
           title: '16 GB显存的最佳本地LLM（2026）',
@@ -5652,6 +5700,12 @@ schema: {
             '**32GB VRAM(RTX 5090):** Llama 3.3 70B Q4_K_M(40GB -- 마지막 레이어에서 최소한의 CPU 오프로드 필요). Kimi K2.6 양자화(MoE, 총 1T / 활성 32B, Modified MIT 라이선스, 최고 코딩). Qwen3 32B(19GB, 13GB 여유로 완전히 수용). RTX 5090은 최소한의 오프로드로 70B를 수용하는 최초의 단일 소비자용 GPU입니다.',
             '**48GB+ VRAM(RTX 6000 Ada, A100, DGX Spark):** Llama 3.3 70B Q4_K_M(40GB, 완전히 수용). Llama 4 Scout(17B 활성 / 109B 총 MoE, Q4에서 ~55GB -- 최고의 장문 컨텍스트 10M 토큰 / 멀티모달 선택). Llama 4 Maverick(17B 활성, 총 400B, MoE). Llama 3.3 70B Q8_0(70GB -- 80GB A100 필요). NVIDIA DGX Spark(128GB 통합)는 Q8_0에서 70B까지 포함한 모든 오픈 가중치 모델을 58GB 여유로 수용합니다 -- 그러나 가장 최신 프론티어 MoE 모델은 예외입니다: GLM-5.2(총 744B, 활성 40B)는 공격적인 2비트 양자화에서도 ~239GB가 필요하여 DGX Spark나 단일 128GB Mac Studio로도 수용할 수 없습니다.',
           ],
+        },
+        calculator: {
+          id: 'interactive-calculator',
+          title: '인터랙티브 VRAM 계산기',
+          content: '이 계산기를 사용하면 모델, 양자화, 컨텍스트, 배치 크기의 모든 조합에 대해 정확한 VRAM 요구량을 계산할 수 있습니다. 구성을 선택하면 어떤 GPU에 적합한지 확인할 수 있습니다.',
+          component: 'VramCalculator',
         },
         modelsFor16GB: {
           id: 'models-16gb',
