@@ -8,6 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     theme: 'Tools & Platforms',
+    heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-en.png',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: Pick One',
     metaDescription: 'PromptLayer ($49/mo) logs LLM calls, Mirascope (free) builds Python apps, PromptPerfect ($20/mo) rewrites prompts. Different problems — pick exactly one.',
@@ -410,6 +411,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   de: {
     theme: 'Tools & Plattformen',
+    heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-de.png',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect: Vergleich 2026',
     metaDescription: 'PromptLayer ($49/Mo.) loggt LLM-Aufrufe, Mirascope (kostenlos) baut Python-Apps, PromptPerfect ($20/Mo.) schreibt Prompts — drei Probleme, ein Tool wählen.',
@@ -820,6 +822,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   es: {
     theme: 'Tools & Platforms',
+    heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-es.png',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: elige uno',
     metaDescription: 'PromptLayer ($49/mes) registra llamadas LLM, Mirascope (gratis) crea apps Python y PromptPerfect ($20/mes) reescribe prompts. Problemas distintos: elige uno.',
@@ -1222,6 +1225,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   ar: {
     theme: 'Tools & Platforms',
+    heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-ar.png',
     title: '⁨PromptLayer⁩ مقابل ⁨Mirascope⁩ مقابل ⁨PromptPerfect⁩ (⁨2026⁩)',
     seoTitle: '⁨PromptLayer⁩ مقابل ⁨Mirascope⁩ مقابل ⁨PromptPerfect 2026⁩',
     metaDescription: '⁨PromptLayer⁩ ($⁨49⁩/شهر) يسجّل استدعاءات ⁨LLMs⁩، ⁨Mirascope⁩ (مجاني) يبني تطبيقات ⁨Python⁩، و⁨PromptPerfect⁩ ($⁨20⁩/شهر) يُحسّن الموجّهات. اختر واحدة.',
@@ -1629,6 +1633,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Ferramentas e Plataformas',
+    heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-pt.png',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: escolha um',
     metaDescription: 'PromptLayer (R$49/mês) registra chamadas LLM, Mirascope (grátis) cria apps Python e PromptPerfect (R$20/mês) reescreve prompts. Problemas distintos: escolha um.',
@@ -1925,6 +1930,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   fr: {
     theme: 'Outils & Plateformes',
+    heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-fr.png',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'Comparatif PromptLayer, Mirascope et PromptPerfect 2026',
     metaDescription: 'PromptLayer ($49/mois) trace les appels LLM, Mirascope (gratuit) structure le code Python, PromptPerfect ($20/mois) réécrit les prompts. Choisir un outil.',
@@ -2326,6 +2332,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   ja: {
     theme: 'ツール & プラットフォーム',
+    heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-ja.png',
     title: 'PromptLayer vs Mirascope vs PromptPerfect（2026年）',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026年：1つを選ぶ',
     metaDescription: 'PromptLayer（$49/月）はLLMコールを記録、Mirascope（無料）はPython SDK、PromptPerfect（$19.99/月）はプロンプトを自動最適化。3ツールは異なる問題を解決 — 1つを選択。',
@@ -2722,6 +2729,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   zh: {
     theme: '工具与平台',
+    heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-zh.png',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 对比 2026：选一款',
     metaDescription: 'PromptLayer（$49/月）记录 LLM 调用，Mirascope（免费）构建 Python 应用，PromptPerfect（$19.99/月）改写提示词。三款工具解决不同问题，按需选择一款。',
@@ -3117,6 +3125,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ko: {
     theme: 'Tools & Platforms',
+    heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-ko.png',
     title: 'PromptLayer vs Mirascope vs PromptPerfect 비교 (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: 하나를 선택하십시오',
     metaDescription: 'PromptLayer($49/월)는 LLM 호출을 기록하고, Mirascope(무료)는 Python 앱을 구축하며, PromptPerfect($20/월)는 프롬프트를 재작성합니다. 서로 다른 문제를 해결합니다 — 정확히 하나를 선택하십시오.',

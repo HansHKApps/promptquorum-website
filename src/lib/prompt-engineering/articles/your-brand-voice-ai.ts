@@ -14,6 +14,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'monthly',
       theme: 'Use Cases',
+      heroImage: '/images/your-brand-voice-ai-overview-hero-en.png',
       title: 'Brand Voice AI: How to Train Models to Match Your Tone',
       intro: 'A well-trained brand voice AI lets you generate and review content at scale without losing the tone, style, and personality that make your brand recognizable. Used correctly, it becomes an extension of your brand team: it learns from your best copy, applies those patterns across every channel, and flags anything that sounds off-brand before customers ever see it.',
       leadAnswerBlock: 'Brand voice AI layers your specific tone, vocabulary, and style rules on top of general-purpose models so every piece of generated content sounds like your brand instead of generic AI output. This guide covers how brand voice tools work, how to train them with your own examples, and how to set guardrails that prevent drift into marketing clichés.',
@@ -350,6 +351,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'monthly',
       theme: 'Use Cases',
+      heroImage: '/images/your-brand-voice-ai-overview-hero-de.png',
       title: 'Brand-Voice-AI: KI-Modelle trainieren, um in Ihrer Marke zu sprechen',
       intro: 'Eine gut trainierte Brand-Voice-AI ermöglicht es Ihnen, Inhalte im großen Maßstab zu generieren und zu überprüfen, ohne den Ton, den Stil und die Persönlichkeit zu verlieren, die Ihre Marke unverwechselbar machen. Richtig eingesetzt, wird sie zu einer Erweiterung Ihres Brand-Teams: Sie lernt von Ihrer besten Kopie, wendet diese Muster über jeden Kanal an und kennzeichnet alles, das nicht markengerecht klingt, bevor Kunden es überhaupt sehen.',
       leadAnswerBlock: 'Brand-Voice-AI legt Ihre spezifische Stimme, Ihr Vokabular und Ihre Stilregeln auf allgemeine Modelle, damit jedes generierte Stück Markeninhalt wie Ihre Marke und nicht wie generischer KI-Output klingt. Dieser Leitfaden zeigt, wie Brand-Voice-Tools funktionieren, wie Sie sie mit Ihren eigenen Beispielen trainieren und wie Sie Schutzmaßnahmen einrichten, die einen Drift in Marketing-Klischees verhindern.',
@@ -683,6 +685,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'monthly',
       theme: 'Use Cases',
+      heroImage: '/images/your-brand-voice-ai-overview-hero-es.png',
       title: 'IA para la Voz de Marca: Cómo Entrenar Modelos para que Coincidan con tu Tono',
       intro: 'Una IA de voz de marca bien entrenada te permite generar y revisar contenido a escala sin perder el tono, el estilo y la personalidad que hacen que tu marca sea reconocible. Utilizada correctamente, se convierte en una extensión de tu equipo de marca: aprende de tu mejor contenido, aplica esos patrones en todos los canales y señala cualquier cosa que suene fuera de la marca antes de que los clientes la vean.',
       leadAnswerBlock: 'La IA de voz de marca añade tu tono, vocabulario y reglas de estilo específicas sobre modelos de uso general para que cada pieza de contenido generado suene como tu marca en lugar de una salida genérica de IA. Esta guía cubre cómo funcionan las herramientas de voz de marca, cómo entrenarlas con tus propios ejemplos y cómo establecer salvaguardas que prevengan la deriva hacia los tópicos de marketing.',
@@ -1014,6 +1017,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'monthly',
       theme: 'Use Cases',
+      heroImage: '/images/your-brand-voice-ai-overview-hero-ar.png',
       title: 'الذكاء الاصطناعي لصوت العلامة التجارية: كيف تُدرّب النماذج على مطابقة نبرتك',
       intro: 'الذكاء الاصطناعي لصوت العلامة التجارية المُدرَّب جيدًا يتيح لك إنشاء المحتوى ومراجعته على نطاق واسع دون فقدان النبرة والأسلوب والشخصية التي تجعل علامتك التجارية مميزة. عند استخدامه بشكل صحيح، يصبح امتدادًا لفريق علامتك التجارية: يتعلم من أفضل محتواك، ويطبق تلك الأنماط عبر جميع القنوات، ويُشير إلى أي شيء يبدو خارج نطاق العلامة قبل أن يراه العملاء.',
       leadAnswerBlock: 'يُضيف الذكاء الاصطناعي لصوت العلامة التجارية نبرتك المحددة ومفرداتك وقواعد الأسلوب فوق النماذج العامة حتى تبدو كل قطعة محتوى مُولَّدة كعلامتك التجارية وليس كمخرجات ذكاء اصطناعي عامة. يتناول هذا الدليل كيفية عمل أدوات صوت العلامة، وكيفية تدريبها بأمثلتك الخاصة، وكيفية وضع ضمانات تمنع الانجراف نحو الكليشيهات التسويقية.',
@@ -1344,6 +1348,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     pt: {
       theme: 'Use Cases',
+      heroImage: '/images/your-brand-voice-ai-overview-hero-pt.png',
       title: 'IA para Voz de Marca: Como Treinar Modelos para Corresponder ao seu Tom',
       intro: 'Uma IA de voz de marca bem treinada permite que você gere e revise conteúdo em escala sem perder o tom, o estilo e a personalidade que tornam sua marca reconhecível. Usada corretamente, torna-se uma extensão da sua equipe de marca: aprende com seu melhor conteúdo, aplica esses padrões em todos os canais e sinaliza qualquer coisa que soe fora da marca antes que os clientes vejam.',
       leadAnswerBlock: 'IA de voz de marca adiciona seu tom específico, vocabulário e regras de estilo sobre modelos de uso geral para que cada conteúdo gerado soe como sua marca em vez de um output genérico de IA. Este guia cobre como as ferramentas de voz de marca funcionam, como treiná-las com seus próprios exemplos e como estabelecer barreiras que previnem a deriva para clichês de marketing.',
@@ -1635,6 +1640,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       freshness_tier: 'monthly',
       theme: 'Use Cases',
+      heroImage: '/images/your-brand-voice-ai-overview-hero-fr.png',
       title: 'Brand Voice IA : Entraîner les modèles à parler avec votre ton',
       intro: 'Une IA de voix de marque bien entraînée vous permet de générer et d\'examiner des contenus à grande échelle sans perdre le ton et la personnalité qui rendent votre marque reconnaissable. Utilisée correctement, elle devient une extension de votre équipe marque : elle apprend de vos meilleurs textes, applique ces modèles sur chaque canal et signale tout ce qui sonne hors-marque.',
       leadAnswerBlock: 'Brand Voice IA ajoute votre ton, vocabulaire et règles de style spécifiques aux modèles génériques pour que chaque contenu généré ressemble à votre marque au lieu de sortir d\'une IA générique. Ce guide couvre le fonctionnement des outils de voix de marque, comment les entraîner avec vos propres exemples, et comment fixer des garde-fous qui évitent la dérive vers des clichés marketing.',
@@ -1966,6 +1972,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
       freshness_tier: 'monthly',
       theme: 'Use Cases',
+      heroImage: '/images/your-brand-voice-ai-overview-hero-ja.png',
       title: 'ブランドボイスAI：モデルをあなたのトーンで話すようにトレーニング',
       intro: 'よくトレーニングされたブランドボイスAIにより、スケール・規模でコンテンツを生成・審査でき、ブランドを認識させるトーンと個性を失いません。正しく使用すると、ブランドチームの拡張になります。最良のコピーから学び、すべてのチャネルに適用し、顧客が見る前に、ブランドから外れた内容にフラグを立てます。',
       leadAnswerBlock: 'ブランドボイスAIは、特定のトーン・語彙・スタイル規則を汎用モデルの上に層状に置き、生成されたコンテンツが汎用AI出力ではなく、あなたのブランドのように聞こえます。本ガイドは、ブランドボイスツールの動作、独自の例でのトレーニング方法、およびマーケティング的陳腐さへの転向を防ぐガードレールの設定方法を網羅しています。',
@@ -2301,6 +2308,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
       freshness_tier: 'monthly',
       theme: 'Use Cases',
+      heroImage: '/images/your-brand-voice-ai-overview-hero-zh.png',
       title: '品牌声音AI：训练模型用你的语调说话',
       intro: '经过良好训练的品牌声音AI让你能大规模生成和审查内容，同时保持品牌的语调和个性。正确使用时，它成为品牌团队的延伸：从你的最佳文案学习，在每个渠道应用这些模式，在客户看到之前标记任何听起来不合品牌的内容。',
       leadAnswerBlock: '品牌声音AI将你的特定语调、词汇和风格规则叠加在通用模型之上，使每个生成的内容听起来像你的品牌，而不是通用AI输出。本指南涵盖品牌声音工具的工作原理、如何用你自己的示例训练它们，以及如何设置防护栏来防止陷入营销陈词滥调。',
@@ -2636,6 +2644,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'monthly',
       theme: 'Use Cases',
+    heroImage: '/images/your-brand-voice-ai-overview-hero-ko.png',
       title: '브랜드 보이스 AI: 모델이 귀사의 톤에 맞게 작동하도록 훈련하는 방법',
       intro: '잘 훈련된 브랜드 보이스 AI를 활용하면 브랜드를 차별화하는 톤, 스타일, 개성을 잃지 않고 대규모로 콘텐츠를 생성하고 검토할 수 있습니다. 올바르게 활용하면 브랜드 팀의 연장선이 됩니다. 최고의 카피에서 학습하고, 모든 채널에 해당 패턴을 적용하며, 고객에게 노출되기 전에 브랜드 톤에서 벗어난 내용을 자동으로 감지합니다.',
       leadAnswerBlock: '브랜드 보이스 AI는 귀사의 특정 톤, 어휘, 스타일 규칙을 범용 모델 위에 레이어로 얹어, 생성되는 모든 콘텐츠가 일반적인 AI 출력이 아닌 귀사의 브랜드처럼 들리도록 합니다. 이 가이드는 브랜드 보이스 도구의 작동 원리, 자체 예시를 활용한 훈련 방법, 마케팅 클리셰로의 변질을 방지하는 가드레일 설정 방법을 다룹니다.',
