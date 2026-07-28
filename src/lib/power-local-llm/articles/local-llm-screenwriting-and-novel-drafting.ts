@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-07-13',
     theme: 'Creative & Roleplay',
+    heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-en.png',
     title: 'Drafting Novels and Screenplays With Local LLMs: 100K+ Word Workflow Guide (2026)',
     seoTitle: 'Local LLM Screenwriting & Novel Drafting 2026',
     intro:
@@ -374,6 +375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-07-13',
     theme: 'Creative & Roleplay',
+    heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-es.png',
     title: 'Redactar novelas y guiones con LLMs locales: guía de flujo de trabajo para más de 100.000 palabras',
     seoTitle: 'LLM local para guiones y novelas sin conexión 2026',
     intro:
@@ -751,6 +753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-07-13',
     theme: 'Creative & Roleplay',
+    heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-de.png',
     title: 'Romane und Drehbücher mit lokalen LLMs verfassen: Workflow-Leitfaden für 100K+ Wörter',
     seoTitle: 'Lokales LLM-Drehbuch- & Romanschreiben offline 2026',
     intro:
@@ -1118,6 +1121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-07-13',
     theme: 'Creative & Roleplay',
+    heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-fr.png',
     title: 'Rédiger des romans et des scénarios avec des LLM locaux : guide de workflow 100 000+ mots',
     seoTitle: 'Scénarios et romans avec un LLM local hors ligne 2026',
     intro:
@@ -1485,6 +1489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-07-13',
     theme: 'Creative & Roleplay',
+    heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-ja.png',
     title: 'ローカルLLMで小説・脚本を執筆する：10万語以上のワークフロー完全ガイド',
     seoTitle: 'ローカルLLMで小説・脚本を執筆する：長編ワークフロー完全ガイド',
     intro:
@@ -1852,6 +1857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-07-13',
     theme: 'Creative & Roleplay',
+    heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-zh.png',
     title: '使用本地LLM创作小说与剧本：10万字以上工作流完整指南',
     seoTitle: '使用本地LLM创作小说与剧本：长篇工作流完整指南',
     intro:
@@ -2219,6 +2225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-07-13',
     theme: 'Creative & Roleplay',
+    heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-pt.png',
     title: 'Redigir romances e roteiros com LLMs locais: guia de fluxo de trabalho para mais de 100.000 palavras',
     seoTitle: 'LLM local para roteiros e romances sem conexão 2026',
     intro:
@@ -2595,6 +2602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-07-13',
     theme: 'Creative & Roleplay',
+    heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-ar.png',
     title: 'صياغة الروايات والسيناريوهات بالنماذج اللغوية المحلية: دليل سير العمل لأكثر من ⁨100⁩,⁨000⁩ كلمة',
     seoTitle: 'كتابة الروايات والسيناريوهات بنماذج ⁨LLM⁩ المحلية ⁨2026⁩',
     intro:
@@ -2971,6 +2979,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-07-13',
     theme: 'Creative & Roleplay',
+    heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-ko.png',
     title: '로컬 LLM으로 소설과 시나리오 집필하기: 10만 단어 이상을 위한 워크플로 가이드',
     seoTitle: '로컬 LLM 시나리오·소설 오프라인 집필 2026',
     intro:
