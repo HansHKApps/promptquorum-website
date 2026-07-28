@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/rag-explained-overview-hero-en.png',
       title: 'RAG Explained: How to Ground AI Answers in Real Data (2026)',
       intro: 'Retrieval-Augmented Generation (RAG) solves the three biggest failures of standalone LLMs: outdated knowledge, hallucinated facts, and inability to reference your private data. By separating retrieval from generation, RAG lets you update your knowledge base without retraining — and keeps sensitive data out of any model\'s parameters. As of April 2026, RAG is the most widely deployed architecture for enterprise AI that needs to answer from private or recent documents.',
       publishDate: '2026-03-26',
@@ -364,6 +365,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
       theme: 'Techniques',
+      heroImage: '/images/rag-explained-overview-hero-de.png',
       title: 'RAG erklärt: KI-Antworten in echten Daten verankern (2026)',
       intro: 'Retrieval-Augmented Generation (RAG) löst die drei größten Schwachstellen isolierter LLMs: veraltetes Wissen, erfundene Fakten und Unmöglichkeit, auf private Daten zuzugreifen. Durch die Entkopplung von Abruf und Generierung können Sie Ihre Wissensdatenbank aktualisieren, ohne zu retrainieren — und halten sensible Daten aus den Parametern aller Modelle heraus. Seit April 2026 ist RAG die am weitesten verbreitete Architektur für unternehmensweite KI, die von privaten oder aktuellen Dokumenten antworten muss.',
       publishDate: '2026-03-26',
@@ -716,6 +718,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     es: {
       theme: 'Techniques',
+      heroImage: '/images/rag-explained-overview-hero-es.png',
       title: 'RAG explicado: cómo anclar las respuestas de IA en datos reales (2026)',
       intro: 'RAG (Retrieval-Augmented Generation) resuelve los tres mayores fallos de los LLMs aislados: conocimiento desactualizado, hechos alucinados e incapacidad de acceder a tus datos privados. Al separar la recuperación de la generación, puedes actualizar tu base de conocimientos sin reentrenar — y mantienes los datos sensibles fuera de los parámetros del modelo. A partir de abril de 2026, RAG es la arquitectura más ampliamente desplegada para IA empresarial que necesita responder a partir de documentos privados o recientes.',
       publishDate: '2026-03-26',
@@ -982,6 +985,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ar: {
       theme: 'Techniques',
+      heroImage: '/images/rag-explained-overview-hero-ar.png',
       title: '⁨RAG⁩ موضَّح: كيف تُربط استجابات الذكاء الاصطناعي بالبيانات الحقيقية (⁨2026⁩)',
       intro: 'يحل التوليد المُعزَّز بالاسترجاع (RAG) أكبر ثلاثة إخفاقات في النماذج اللغوية الكبيرة المعزولة: المعرفة القديمة، والحقائق المُهلوَسة، وعدم القدرة على الوصول إلى بياناتك الخاصة. من خلال الفصل بين الاسترجاع والتوليد، يمكنك تحديث قاعدة معرفتك دون إعادة التدريب — وتُبقي البيانات الحساسة خارج معاملات النموذج. اعتباراً من أبريل 2026، يُعدّ RAG البنية المعمارية الأكثر انتشاراً لذكاء الأعمال الاصطناعي الذي يحتاج إلى الإجابة من المستندات الخاصة أو الحديثة.',
       publishDate: '2026-03-26',
@@ -1248,6 +1252,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Techniques',
+      heroImage: '/images/rag-explained-overview-hero-pt.png',
       title: 'RAG Explicado: Como Ancorar Respostas de IA em Dados Reais (2026)',
       intro: 'A Geração Aumentada por Recuperação (RAG) resolve as três maiores falhas dos LLMs isolados: conhecimento desatualizado, fatos alucinados e incapacidade de acessar os seus dados privados. Ao separar a recuperação da geração, você atualiza sua base de conhecimento sem retreinar — e mantém dados sensíveis fora dos parâmetros do modelo. Em abril de 2026, RAG é a arquitetura mais amplamente implantada para IA empresarial que precisa responder a partir de documentos privados ou recentes.',
       publishDate: '2026-03-26',
@@ -1513,6 +1518,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     fr: {
       theme: 'Techniques',
+      heroImage: '/images/rag-explained-overview-hero-fr.png',
       title: 'RAG expliqué : ancrer les réponses IA dans des données réelles (2026)',
       intro: 'RAG (Retrieval-Augmented Generation) résout les trois plus grands défauts des LLMs isolés : connaissances obsolètes, hallucinations et incapacité à accéder à vos données privées. En découplant la récupération et la génération, vous mettez à jour votre base de connaissances sans réentraîner — et gardez les données sensibles hors des paramètres du modèle. Depuis avril 2026, RAG est l\'architecture la plus déployée pour les systèmes IA d\'entreprise ayant besoin de répondre à partir de documents privés ou récents.',
       publishDate: '2026-03-26',
@@ -1831,6 +1837,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: 'Techniques',
+      heroImage: '/images/rag-explained-overview-hero-ja.png',
       title: 'RAG解説：実データでAI回答を根拠づける方法（2026年）',
       intro: 'Retrieval-Augmented Generation（RAG）は、スタンドアロン LLM の3つの最大の欠点を解決します：知識の陳腐化、ハルシネーション（幻覚）、プライベートデータへのアクセス不可。検索と生成を分離することで、再トレーニングなしに知識ベースを更新できます。また、機密データはモデルパラメータから完全に遮断されます。2026年4月時点で、RAG はプライベートドキュメントまたは最新データから応答する必要があるエンタープライズ AI システムで最も広く導入されているアーキテクチャです。',
       publishDate: '2026-03-26',
@@ -2148,6 +2155,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: 'Techniques',
+      heroImage: '/images/rag-explained-overview-hero-zh.png',
       title: 'RAG详解：让AI回答基于真实数据（2026）',
       intro: '检索增强生成（RAG）解决了独立LLM的三大核心缺陷：知识陈旧、幻觉生成和无法访问私有数据。通过分离检索和生成，你可以在无需重新训练的情况下更新知识库，同时将敏感数据排除在模型参数之外。截至2026年4月，RAG是需要从私有或最新文档中获取答案的企业AI系统最广泛部署的架构。',
       publishDate: '2026-03-26',
@@ -2479,6 +2487,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+    heroImage: '/images/rag-explained-overview-hero-ko.png',
       title: 'RAG 설명: 실제 데이터로 AI 답변을 근거화하는 방법 (2026)',
       intro: 'Retrieval-Augmented Generation (RAG)은 독립형 LLM의 세 가지 주요 문제를 해결합니다. 바로 오래된 지식, 환각된 사실, 그리고 비공개 데이터를 참조하지 못하는 한계입니다. 검색과 생성을 분리함으로써 RAG는 모델을 재학습하지 않고도 지식 베이스를 업데이트할 수 있게 해주며, 민감한 데이터가 모델의 파라미터에 흡수되지 않도록 보호합니다. 2026년 4월 기준으로, RAG는 비공개 문서 또는 최신 문서를 기반으로 답변해야 하는 기업용 AI에서 가장 널리 배포된 아키텍처입니다.',
       publishDate: '2026-03-26',

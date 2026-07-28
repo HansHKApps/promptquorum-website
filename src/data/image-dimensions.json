@@ -7679,6 +7679,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/chain-of-thought-prompting-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chain-of-thought-prompting-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chain-of-thought-prompting-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chain-of-thought-prompting-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chain-of-thought-prompting-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chain-of-thought-prompting-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chain-of-thought-prompting-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chain-of-thought-prompting-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chain-of-thought-prompting-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/chat-with-1000-pdfs-locally-architecture-decision-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -18849,6 +18894,51 @@
     "width": 800,
     "height": 400
   },
+  "/images/mram-in-memory-computing-local-ai-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mram-in-memory-computing-local-ai-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mram-in-memory-computing-local-ai-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mram-in-memory-computing-local-ai-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mram-in-memory-computing-local-ai-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mram-in-memory-computing-local-ai-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mram-in-memory-computing-local-ai-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mram-in-memory-computing-local-ai-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/mram-in-memory-computing-local-ai-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/multi-gpu-local-llms-layer-splitting-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -19988,6 +20078,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 450
+  },
+  "/images/persona-prompting-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/persona-prompting-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/persona-prompting-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/persona-prompting-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/persona-prompting-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/persona-prompting-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/persona-prompting-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/persona-prompting-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/persona-prompting-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/power-local-llm-hub-overview-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -21264,6 +21399,51 @@
     "width": 800,
     "height": 420
   },
+  "/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-gdpr-privacy-manifesto-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/qwen-llama-mistral-benchmarks-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -21538,6 +21718,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 900,
     "height": 520
+  },
+  "/images/qwen-local-gdpr-setup-guide-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-gdpr-setup-guide-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-gdpr-setup-guide-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-gdpr-setup-guide-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-gdpr-setup-guide-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-gdpr-setup-guide-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-gdpr-setup-guide-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-gdpr-setup-guide-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-local-gdpr-setup-guide-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/qwen-vs-claude-vs-deepseek-local-2026-benchmark-comparison-ar.svg": {
     "encodingFormat": "image/svg+xml",
@@ -21888,6 +22113,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 340
+  },
+  "/images/rag-explained-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rag-explained-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rag-explained-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rag-explained-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rag-explained-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rag-explained-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rag-explained-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rag-explained-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/rag-explained-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/rag-vs-platforms-architecture-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -23093,6 +23363,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 480
+  },
+  "/images/saudi-pdpl-data-sovereignty-local-ai-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/saudi-pdpl-data-sovereignty-local-ai-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/saudi-pdpl-data-sovereignty-local-ai-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/saudi-pdpl-data-sovereignty-local-ai-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/saudi-pdpl-data-sovereignty-local-ai-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/saudi-pdpl-data-sovereignty-local-ai-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/saudi-pdpl-data-sovereignty-local-ai-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/saudi-pdpl-data-sovereignty-local-ai-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/saudi-pdpl-data-sovereignty-local-ai-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/scaling-local-llms-enterprise-overview-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -24324,6 +24639,51 @@
     "width": 800,
     "height": 480
   },
+  "/images/uae-pdpl-data-sovereignty-local-ai-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uae-pdpl-data-sovereignty-local-ai-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uae-pdpl-data-sovereignty-local-ai-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uae-pdpl-data-sovereignty-local-ai-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uae-pdpl-data-sovereignty-local-ai-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uae-pdpl-data-sovereignty-local-ai-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uae-pdpl-data-sovereignty-local-ai-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uae-pdpl-data-sovereignty-local-ai-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/uae-pdpl-data-sovereignty-local-ai-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -24974,6 +25334,51 @@
     "width": 800,
     "height": 400
   },
+  "/images/what-is-prompt-engineering-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-prompt-engineering-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-prompt-engineering-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-prompt-engineering-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-prompt-engineering-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-prompt-engineering-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-prompt-engineering-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-prompt-engineering-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-prompt-engineering-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/what-is-q4-k-m-quantization-letter-breakdown-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -25303,5 +25708,50 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 450
+  },
+  "/images/zero-shot-vs-few-shot-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/zero-shot-vs-few-shot-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/zero-shot-vs-few-shot-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/zero-shot-vs-few-shot-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/zero-shot-vs-few-shot-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/zero-shot-vs-few-shot-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/zero-shot-vs-few-shot-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/zero-shot-vs-few-shot-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/zero-shot-vs-few-shot-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   }
 }
