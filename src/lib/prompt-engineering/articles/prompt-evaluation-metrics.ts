@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/prompt-evaluation-metrics-overview-hero-en.png',
       title: 'Prompt Evaluation Metrics: What to Measure and How',
       seoTitle: 'Prompt Evaluation Metrics: Pass Rate, BLEU & LLM-as-Judge (2026)',
       metaDescription: 'Learn which prompt evaluation metrics to use by output type: pass rate for JSON, BLEU for translation, semantic similarity for paraphrase, LLM-as-judge for free text.',
@@ -252,6 +253,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/prompt-evaluation-metrics-overview-hero-de.png',
       title: 'Prompt-Evaluierungsmetriken: Welche Metriken gelten für welche Ausgaben?',
       seoTitle: 'Prompt-Metriken: Pass Rate, BLEU & LLM-as-Judge (2026)',
       metaDescription: 'Welche Prompt-Metriken für welchen Output-Typ: Pass Rate für JSON, BLEU für Übersetzung, Semantic Similarity für Paraphrase, LLM-as-Judge für Freitext.',
@@ -500,6 +502,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/prompt-evaluation-metrics-overview-hero-es.png',
       title: 'Métricas de evaluación de prompts: qué medir y cómo',
       seoTitle: 'Métricas de evaluación de prompts: Pass Rate, BLEU y más',
       metaDescription: 'Aprende qué métricas de evaluación usar según el tipo de salida: pass rate para JSON, BLEU para traducción y LLM-as-judge para texto libre.',
@@ -746,6 +749,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/prompt-evaluation-metrics-overview-hero-ar.png',
       title: 'مقاييس تقييم البرومبتات: ماذا تقيس وكيف',
       seoTitle: 'مقاييس تقييم البرومبت: ⁨Pass Rate⁩ و⁨BLEU⁩ و⁨LLM-as-Judge⁩',
       metaDescription: '⁨Pass rate⁩ بنسبة ⁨90%⁩ يعني ⁨10%⁩ من الطلبات تفشل. تعلّم أي مقاييس تقييم تناسب مخرجاتك: ⁨Pass Rate⁩ لـ⁨JSON⁩ و⁨BLEU⁩ للترجمة و⁨LLM-as-judge⁩ للنص الحر.',
@@ -991,6 +995,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Techniques',
+      heroImage: '/images/prompt-evaluation-metrics-overview-hero-pt.png',
       title: 'Métricas de avaliação de prompts: o que medir e como',
       seoTitle: 'Métricas de avaliação de prompts: Pass Rate, BLEU e mais',
       metaDescription: 'Aprenda quais métricas de avaliação usar por tipo de saída: pass rate para JSON, BLEU para tradução e LLM-as-judge para texto livre.',
@@ -1234,6 +1239,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/prompt-evaluation-metrics-overview-hero-fr.png',
       title: 'Métriques d\'évaluation de prompts : Mesurer ce qui compte réellement',
       seoTitle: 'Métriques d\'Évaluation de Prompts : Pass Rate, BLEU et LLM-as-Judge (2026)',
       metaDescription: 'Quelle métrique d\'évaluation par type d\'output : pass rate pour JSON, BLEU pour traduction, similarité sémantique pour paraphrase, LLM-as-judge pour texte libre.',
@@ -1482,6 +1488,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/prompt-evaluation-metrics-overview-hero-ja.png',
       title: 'プロンプト評価指標：合格率・BLEUスコア・LLM-as-Judgeの選び方',
       seoTitle: 'プロンプト評価メトリクス：Pass Rate・BLEU・LLM-as-Judge（2026年）',
       metaDescription: '出力タイプ別のプロンプト評価メトリクス：JSONにはPass Rate、翻訳にはBLEU、言い換えにはSemantic Similarity、自由文にはLLM-as-Judge。',
@@ -1730,6 +1737,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/prompt-evaluation-metrics-overview-hero-zh.png',
       title: '提示词评估指标：通过率、BLEU与LLM-as-Judge的选择指南',
       seoTitle: 'Prompt评估指标：Pass Rate、BLEU与LLM-as-Judge（2026）',
       metaDescription: '按输出类型选择Prompt评估指标：JSON用Pass Rate，翻译用BLEU，改写用语义相似度，自由文本用LLM-as-Judge。含回归检测流程。',
@@ -1978,6 +1986,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ko: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/prompt-evaluation-metrics-overview-hero-ko.png',
       title: 'Prompt 평가 지표: 무엇을 측정하고 어떻게 합니까',
       seoTitle: 'Prompt 평가 지표: Pass Rate, BLEU, LLM-as-Judge (2026)',
       metaDescription: '출력 유형별 prompt 평가 지표 선택: JSON은 pass rate, 번역은 BLEU, 의역은 시맨틱 유사성, 자유 텍스트는 LLM-as-judge.',
