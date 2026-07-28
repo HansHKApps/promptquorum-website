@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
+    heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-en.png',
     title: 'Local LLM in Your CI/CD: Automated Code Review Without Cloud',
     seoTitle: 'Local LLM Code Review in CI/CD 2026: Automate PR Reviews',
     intro:
@@ -459,6 +460,7 @@ jobs:
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
+    heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-de.png',
     title: 'Lokale LLM im CI/CD: Automatisierte Code Review ohne Cloud',
     seoTitle: 'Lokale LLM-Code-Reviews in CI/CD 2026 automatisieren',
     intro:
@@ -914,6 +916,7 @@ jobs:
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
+    heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-fr.png',
     title: 'LLM Local en CI/CD : Révision de Code Automatisée Sans Cloud',
     seoTitle: 'Revue de code LLM dans CI/CD 2026 : automatiser les PR',
     intro: 'La révision de code LLM local auto-hébergée place un modèle Qwen3-Coder derrière votre pipeline CI/CD pour que chaque demande de tirage soit examinée sans que la base de code ne quitte votre réseau. L\'architecture est simple — un serveur GPU dédié exécutant Ollama, une action GitHub personnalisée appelant son API HTTP, et un prompt de révision ajusté sur le taux de faux positifs — et l\'économie bascule en faveur de l\'auto-hébergement quelque part entre 15 et 25 sièges GitHub payants. Ce guide couvre l\'architecture, un flux de travail GitHub Actions fonctionnant, le dimensionnement du matériel par taille d\'équipe, le modèle de sécurité et les pièges opérationnels qui frappent les équipes au deuxième mois.',
@@ -1028,6 +1031,7 @@ jobs:
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
+    heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-ja.png',
     title: 'ローカルLLMでCI/CDコードレビュー：セルフホスト型セットアップ2026',
     seoTitle: 'CI/CDのローカルLLMコードレビュー：セルフホスト型セットアップ2026',
     intro:
@@ -1511,6 +1515,7 @@ jobs:
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
+    heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-zh.png',
     title: '本地LLM在CI/CD中的代码审查：自托管设置2026',
     seoTitle: 'CI/CD中本地LLM代码审查：自托管设置2026',
     intro:
@@ -1554,6 +1559,7 @@ jobs:
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
+    heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-es.png',
     title: 'LLM Local en CI/CD: Revisión de Código Automatizada Sin Cloud',
     seoTitle: 'Revisión de código con LLM local en CI/CD: automatiza tus PR',
     intro:
@@ -2015,6 +2021,7 @@ jobs:
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
+    heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-pt.png',
     title: 'LLM Local no seu CI/CD: Revisão de Código Automatizada Sem Cloud',
     seoTitle: 'Revisão de código com LLM local em CI/CD 2026: automatize PRs',
     intro:
@@ -2475,6 +2482,7 @@ jobs:
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
+    heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-ar.png',
     title: 'نموذج لغوي محلي في ⁨CI/CD⁩: مراجعة الكود المؤتمتة بدون سحابة',
     seoTitle: 'مراجعة ⁨PR⁩ بـ ⁨LLM⁩ محلي في ⁨CI/CD 2026⁩: ⁨GitHub Actions⁩',
     intro:
@@ -2935,6 +2943,7 @@ jobs:
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
+    heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-ko.png',
     title: 'CI/CD에서 로컬 LLM 활용: 클라우드 없는 자동 코드 리뷰',
     seoTitle: '로컬 LLM으로 CI/CD 코드 리뷰 자동화 2026: PR을 자동으로 리뷰하십시오',
     intro:

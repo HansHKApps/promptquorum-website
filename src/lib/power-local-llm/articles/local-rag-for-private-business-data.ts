@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/local-rag-for-private-business-data-overview-hero-en.png',
     title: 'Local RAG for Business Data: GDPR-Compliant AI for Sensitive Documents (2026)',
     seoTitle: 'GDPR-Compliant Local RAG for Sensitive Documents (2026)',
     intro:
@@ -622,6 +623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/local-rag-for-private-business-data-overview-hero-de.png',
     title: 'Lokales RAG für Geschäftsdaten: DSGVO-konforme KI für vertrauliche Dokumente (2026)',
     seoTitle: 'DSGVO-konformes lokales RAG für sensible Dokumente (2026)',
     intro:
@@ -1242,6 +1244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/local-rag-for-private-business-data-overview-hero-fr.png',
     title: 'RAG local pour données métier : IA conforme RGPD pour documents sensibles (2026)',
     seoTitle: 'RAG local conforme RGPD pour documents sensibles (2026)',
     intro:
@@ -1854,6 +1857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/local-rag-for-private-business-data-overview-hero-ja.png',
     title: '業務データ向けローカルRAG：機密文書のためのGDPR準拠AI（2026年版）',
     seoTitle: 'GDPR準拠ローカルRAG：機密文書向け（2026）',
     intro:
@@ -2473,6 +2477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/local-rag-for-private-business-data-overview-hero-zh.png',
     title: '面向业务数据的本地 RAG：合规处理机密文档的 AI 架构（2026）',
     seoTitle: '本地 RAG 处理机密业务文档：合规与架构指南 (2026)',
     intro:
@@ -3093,6 +3098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/local-rag-for-private-business-data-overview-hero-es.png',
     title: 'RAG local para datos empresariales: IA conforme al RGPD para documentos sensibles (2026)',
     seoTitle: 'RAG local conforme al RGPD para documentos sensibles (2026)',
     intro:
@@ -3716,6 +3722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/local-rag-for-private-business-data-overview-hero-ko.png',
     title: '기업 민감 문서를 위한 로컬 RAG: GDPR 준수 AI 솔루션 (2026)',
     seoTitle: '로컬 RAG GDPR 준수 — 민감 문서용 AI (2026)',
     intro:
@@ -4350,6 +4357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/local-rag-for-private-business-data-overview-hero-pt.png',
     title: 'RAG local para dados empresariais: IA em conformidade com o GDPR para documentos sensíveis (2026)',
     seoTitle: 'RAG local em conformidade com o GDPR para documentos sensíveis (2026)',
     intro:
@@ -4973,6 +4981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/local-rag-for-private-business-data-overview-hero-ar.png',
     title: '⁨RAG⁩ محلي للبيانات المؤسسية: حلول ذكاء اصطناعي متوافقة مع ⁨GDPR⁩ للمستندات الحساسة (⁨2026⁩)',
     seoTitle: '⁨RAG⁩ محلي متوافق مع ⁨GDPR⁩ للمستندات الحساسة (⁨2026⁩)',
     intro:
