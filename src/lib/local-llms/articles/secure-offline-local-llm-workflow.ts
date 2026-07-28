@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Privacy & Business',
+      heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-en.png',
       title: 'How to Build a Secure Offline Local LLM Workflow',
       seoTitle: 'Secure Offline LLM Workflow: Air-Gapped Setup, Zero Network, Data Handling',
       intro: '**For maximum privacy, build an air-gapped workflow: LLM server offline (zero network), data transfer via encrypted USB.** As of April 2026, this is required for high-security environments (legal discovery, healthcare genetic data, classified research). Setup takes 1-2 days; operational overhead is moderate.',
@@ -190,6 +191,7 @@ schema: {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Privacy & Business',
+      heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-es.png',
       title: 'Cómo construir un flujo de trabajo local con LLM offline seguro',
       seoTitle: 'Flujo de trabajo LLM offline seguro: air-gapped y cero red',
       intro: '**Para máxima privacidad, construye un flujo de trabajo air-gapped: servidor LLM offline (cero red), transferencia de datos vía USB cifrado.** A partir de abril de 2026, esto es obligatorio en entornos de alta seguridad (descubrimiento legal, datos genéticos de salud, investigación clasificada). La configuración tarda 1-2 días; la carga operativa es moderada.',
@@ -413,6 +415,7 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Privacy & Business',
+      heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-ar.png',
       title: 'كيفية بناء سير عمل آمن لنموذج ⁨LLM⁩ محلي يعمل دون اتصال',
       seoTitle: 'سير عمل ⁨LLM⁩ آمن دون اتصال: معزول عن الشبكة وبلا شبكة',
       intro: '**لأقصى درجات الخصوصية، ابنِ سير عمل معزولًا عن الشبكة (air-gapped): خادم LLM دون اتصال (بلا شبكة)، ونقل البيانات عبر USB مشفّر.** اعتبارًا من أبريل 2026، يُعد هذا إلزاميًا في البيئات عالية الأمان (الاستكشاف القانوني، والبيانات الجينية الصحية، والأبحاث السرية). يستغرق الإعداد 1-2 يوم؛ والعبء التشغيلي متوسط.',
@@ -636,6 +639,7 @@ schema: {
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Privacy & Business',
+      heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-pt.png',
       title: 'Como construir um fluxo de trabalho local com LLM offline seguro',
       seoTitle: 'Fluxo de trabalho LLM offline seguro: air-gapped e rede zero',
       intro: '**Para máxima privacidade, construa um fluxo de trabalho air-gapped: servidor LLM offline (rede zero), transferência de dados via USB criptografado.** A partir de abril de 2026, isso é obrigatório em ambientes de alta segurança (discovery jurídico, dados genéticos de saúde, pesquisa classificada). A configuração leva 1-2 dias; a carga operacional é moderada.',
@@ -859,6 +863,7 @@ schema: {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Privacy & Business',
+      heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-de.png',
       title: 'Sichere Offline-Workflow mit lokalen LLMs aufbauen',
       seoTitle: 'Sicherer Offline-LLM-Workflow: Air-Gapped & Datenschutz',
       intro: '**Für maximale Datenschutz: Isolierte Workflow mit Offline-LLM-Server (kein Netzwerk), Datenübertragung via verschlüsseltem USB.** Seit April 2026 erforderlich für hochsichere Umgebungen (juristische Ermittlungen, genetische Gesundheitsdaten, Forschung mit Sicherheitsstufen). Setup dauert 1-2 Tage; operativer Aufwand ist moderat.',
@@ -1097,6 +1102,7 @@ schema: {
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Privacy & Business',
+      heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-fr.png',
       title: 'Construire un flux de travail LLM sécurisé hors ligne',
       seoTitle: 'Flux de travail LLM sécurisé hors ligne: Configuration isolée, zéro réseau',
       intro: '**Pour la confidentialité maximale, construisez un flux de travail isolé : serveur LLM hors ligne (zéro réseau), transfert de données via USB chiffré.** Depuis avril 2026, cette approche est obligatoire dans les environnements haute sécurité (découverte juridique, données génétiques sensibles, recherche classifiée). Conforme aux exigences de la CNIL et du RGPD en matière de protection des données. Mise en place : 1-2 jours ; charge opérationnelle modérée.',
@@ -1320,6 +1326,7 @@ schema: {
     ja: {
       freshness_tier: 'semi_annual',
       theme: 'Privacy & Business',
+      heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-ja.png',
       title: 'セキュアなオフラインローカルLLMワークフローの構築',
       seoTitle: 'セキュアなオフラインLLMワークフロー：エアギャップ型セットアップ、ゼロネットワーク',
       intro: '**最大のプライバシーのため、エアギャップワークフローを構築してください：LLMサーバーはオフライン（ゼロネットワーク）、データ転送は暗号化USB経由です。** 2026年4月時点で、これは高セキュリティ環境（法的発見プロセス、医療遺伝子データ、機密研究）に必要です。セットアップには1～2日かかります。運用オーバーヘッドは中程度です。',
@@ -1543,6 +1550,7 @@ schema: {
     zh: {
       freshness_tier: 'semi_annual',
       theme: 'Privacy & Business',
+      heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-zh.png',
       title: '构建安全的离线本地LLM工作流',
       seoTitle: '安全离线LLM工作流：气隙设置、零网络、数据处理',
       intro: '**为了最大隐私，构建气隙工作流：LLM服务器离线（零网络），数据传输通过加密USB。** 截至2026年4月，这在高安全环节中是必需的（法律发现、医疗遗传数据、机密研究）。设置需要1-2天；运营开销为中等。',
@@ -1766,6 +1774,7 @@ schema: {
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Privacy & Business',
+    heroImage: '/images/secure-offline-local-llm-workflow-overview-hero-ko.png',
       title: '안전한 오프라인 로컬 LLM 워크플로우 구축 방법',
       seoTitle: '안전한 오프라인 LLM 워크플로우: Air-Gapped 설정 가이드',
       intro: '**최대 프라이버시를 위해 air-gapped 워크플로우를 구축하십시오: LLM 서버를 오프라인으로 유지(제로 네트워크), 암호화된 USB를 통해 데이터를 전송합니다.** 2026년 4월 기준, 이는 고보안 환경(법적 증거 개시, 의료 유전 데이터, 기밀 연구)에서 필수적입니다. 설정에는 1-2일이 소요되며, 운영 오버헤드는 보통 수준입니다.',
