@@ -13,6 +13,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-en.png',
     title: 'Local AI Trends 2027, Part 10 of 10: Fine-Tuning Without Writing a Training Script',
     seoTitle: 'Local AI Trends 2027, Part 10: No-Code Fine-Tuning',
     metaDescription: 'Part 10 of 10: what a no-code fine-tuning workflow looks like as it matures toward 2027, who it unlocks fine-tuning for, and what it still cannot fix.',
@@ -104,6 +105,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-de.png',
     title: 'Local AI Trends 2027, Teil 10 von 10: Fine-Tuning ohne eigenes Trainingsskript',
     seoTitle: 'Local AI Trends 2027, Teil 10: No-Code Fine-Tuning',
     metaDescription: 'Teil 10 von 10: Wie ein No-Code-Fine-Tuning-Workflow auf dem Weg zu 2027 aussieht, wem er Fine-Tuning eröffnet und was er nicht beheben kann.',
@@ -195,6 +197,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-fr.png',
     title: 'Local AI Trends 2027, partie 10/10 : le fine-tuning sans écrire de script d\'entraînement',
     seoTitle: 'Local AI Trends 2027, partie 10 : fine-tuning no-code',
     metaDescription: 'Partie 10/10 : à quoi ressemblera un workflow de fine-tuning no-code d\'ici 2027, à qui il ouvre le fine-tuning, et ce qu\'il ne peut toujours pas corriger.',
@@ -286,6 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-ja.png',
     title: 'Local AI Trends 2027 第10回（全10回）：トレーニングスクリプトを書かないファインチューニング',
     seoTitle: 'Local AI Trends 2027 第10回：ノーコードのファインチューニング',
     metaDescription: '全10回の第10回：2027年に向けて成熟するノーコードのファインチューニング・ワークフローの姿、それが誰にファインチューニングを開くのか、そして依然として解決できないこと。',
@@ -377,6 +381,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-zh.png',
     title: 'Local AI Trends 2027 第10篇（共10篇）：无需编写训练脚本的微调',
     seoTitle: 'Local AI Trends 2027 第10篇：无代码微调',
     metaDescription: '共10篇的第10篇：一个无代码微调工作流在迈向2027年时会是什么样子,它为谁打开了微调的大门,以及它仍然无法解决的问题。',
@@ -468,6 +473,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-es.png',
     title: 'Local AI Trends 2027, parte 10 de 10: fine-tuning sin escribir un script de entrenamiento',
     seoTitle: 'Local AI Trends 2027, parte 10: fine-tuning sin código',
     metaDescription: 'Parte 10 de 10: cómo será un flujo de fine-tuning sin código a medida que madura hacia 2027, a quién le abre el fine-tuning y qué sigue sin poder resolver.',
@@ -559,6 +565,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-pt.png',
     title: 'Local AI Trends 2027, parte 10 de 10: fine-tuning sem escrever um script de treinamento',
     seoTitle: 'Local AI Trends 2027, parte 10: fine-tuning sem código',
     metaDescription: 'Parte 10 de 10: como será um fluxo de fine-tuning sem código à medida que amadurece rumo a 2027, para quem ele abre o fine-tuning e o que ele ainda não resolve.',
@@ -650,6 +657,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-ar.png',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 10 من 10: الضبط الدقيق بدون كتابة سكربت تدريب',
     seoTitle: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 10: الضبط الدقيق بلا كود',
     metaDescription: 'الجزء 10 من 10: كيف سيبدو سير عمل الضبط الدقيق بلا كود مع نضجه نحو 2027، ولمن يفتح الضبط الدقيق، وما الذي يظل غير قابل للحل.',
@@ -741,6 +749,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-no-code-fine-tuning-overview-hero-ko.png',
     title: '로컬 AI 트렌드 2027, 10부작 중 10부: 학습 스크립트 없이 하는 파인튜닝',
     seoTitle: '로컬 AI 트렌드 2027, 10부: 노코드 파인튜닝',
     metaDescription: '10부작 중 10부: 2027년을 향해 성숙해지는 노코드 파인튜닝 워크플로가 어떤 모습일지, 누구에게 파인튜닝을 열어주는지, 그리고 여전히 해결하지 못하는 것.',
