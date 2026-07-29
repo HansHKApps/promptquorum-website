@@ -34,6 +34,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-en.png',
     title: 'Is Balcony Solar Legal in Greece? 2027 Status Report',
     seoTitle: 'Is Balcony Solar Legal in Greece? 2027 Status Report',
     intro: 'Greece already has one of Europe\'s highest penetration rates for small-scale self-consumption solar — roughly 80,000 installations, with 37,407 systems (1,070 MW) added between 2020 and 2026 alone. What it lacked, until a ministerial decision now in public consultation through July 20, 2026, was a dedicated rule for plug-in balcony PV specifically. And the reason that rule lands as a strict "zero feed-in" design isn\'t caution for its own sake: Greece\'s grid already curtails existing solar output for hours most days, and industry experts have publicly warned that unrestricted balcony PV could push it toward collapse.',
@@ -142,6 +143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-de.png',
     title: 'Ist ein Balkonkraftwerk in Griechenland legal? Statusbericht 2027',
     seoTitle: 'Ist ein Balkonkraftwerk in Griechenland legal? Statusbericht 2027',
     intro: 'Griechenland hat bereits eine der höchsten Durchdringungsraten Europas bei kleinen Solaranlagen zur Eigenversorgung — rund 80.000 Anlagen, davon allein 37.407 Systeme (1.070 MW), die zwischen 2020 und 2026 hinzugekommen sind. Was bislang fehlte — bis zu einer ministeriellen Entscheidung, die derzeit bis zum 20. Juli 2026 in öffentlicher Konsultation ist —, war eine eigene Regel speziell für steckerfertige Balkon-PV-Anlagen. Und der Grund, warum diese Regel als striktes „Zero-Feed-in"-Design ausfällt, ist keine Vorsicht um ihrer selbst willen: Griechenlands Stromnetz drosselt bereits an den meisten Tagen stundenweise die bestehende Solareinspeisung, und Branchenexperten haben öffentlich davor gewarnt, dass unbeschränkte Balkon-PV das Netz an den Rand des Kollapses bringen könnte.',
@@ -250,6 +252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-es.png',
     title: '¿Es legal la energía solar de balcón en Grecia? Informe de estado 2027',
     seoTitle: '¿Es legal la energía solar de balcón en Grecia? Informe de estado 2027',
     intro: 'Grecia ya tiene una de las tasas de penetración más altas de Europa en energía solar de autoconsumo a pequeña escala — unas 80.000 instalaciones, con 37.407 sistemas (1.070 MW) añadidos solo entre 2020 y 2026. Lo que le faltaba, hasta una decisión ministerial ahora en consulta pública hasta el 20 de julio de 2026, era una norma específica para la energía solar de balcón enchufable. Y la razón por la que esa norma adopta un diseño estricto de «cero inyección a red» no es prudencia porque sí: la red eléctrica de Grecia ya restringe la producción solar existente durante horas la mayoría de los días, y expertos del sector han advertido públicamente que una energía solar de balcón sin restricciones podría empujarla hacia el colapso.',
@@ -358,6 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-fr.png',
     title: "Le solaire de balcon est-il légal en Grèce ? Rapport de situation 2027",
     seoTitle: "Le solaire de balcon est-il légal en Grèce ? Rapport de situation 2027",
     intro: "La Grèce affiche déjà l'un des taux de pénétration les plus élevés d'Europe pour le solaire d'autoconsommation à petite échelle — environ 80 000 installations, dont 37 407 systèmes (1 070 MW) ajoutés entre 2020 et 2026 seulement. Ce qui manquait, jusqu'à une décision ministérielle désormais en consultation publique jusqu'au 20 juillet 2026, c'était une règle dédiée spécifiquement au solaire de balcon enfichable. Et si cette règle adopte un dispositif strict de « zéro injection réseau », ce n'est pas par prudence gratuite : le réseau électrique grec restreint déjà la production solaire existante pendant plusieurs heures la plupart des jours, et des experts du secteur ont publiquement averti qu'un solaire de balcon sans restriction pourrait le pousser vers l'effondrement.",
@@ -466,6 +470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-ar.png',
     title: 'هل الطاقة الشمسية على الشرفات قانونية في اليونان؟ تقرير الحالة لعام 2027',
     seoTitle: 'هل الطاقة الشمسية على الشرفات قانونية في اليونان؟ تقرير الحالة لعام 2027',
     intro: 'تمتلك اليونان بالفعل واحدة من أعلى معدلات الانتشار في أوروبا للطاقة الشمسية صغيرة النطاق للاستهلاك الذاتي — نحو 80,000 تركيب، مع إضافة 37,407 نظامًا (1,070 ميغاواط) بين عامي 2020 و2026 وحدهما. وما كان ينقصها، حتى صدور قرار وزاري يخضع الآن لاستشارة عامة حتى 20 يوليو 2026، هو قاعدة مخصصة للطاقة الشمسية القابلة للتوصيل على الشرفات تحديدًا. والسبب في أن هذه القاعدة تتخذ تصميمًا صارمًا «بلا تغذية عكسية للشبكة إطلاقًا» ليس حذرًا لمجرد الحذر: فشبكة الكهرباء اليونانية تُقلّص بالفعل إنتاج الطاقة الشمسية القائم لساعات في معظم الأيام، وقد حذّر خبراء في القطاع علنًا من أن الطاقة الشمسية غير المقيدة على الشرفات قد تدفع الشبكة نحو الانهيار.',
@@ -574,6 +579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-ja.png',
     title: 'ギリシャでバルコニー太陽光は合法か？ 2027年ステータスレポート',
     seoTitle: 'ギリシャでバルコニー太陽光は合法か？ 2027年ステータスレポート',
     intro: 'ギリシャはすでに、小規模自家消費型太陽光でヨーロッパ最高水準の普及率を誇ります — 設置件数は約8万件で、2020年から2026年の間だけで37,407件（1,070MW）が追加されました。これまで欠けていたのは、2026年7月20日までパブリックコンサルテーション中の閣僚決定が定める、プラグイン式バルコニー太陽光専用のルールです。そのルールが厳格な「逆潮流ゼロ」設計になっている理由は、単なる慎重さのためではありません。ギリシャの送電網はすでにほとんどの日で数時間、既存の太陽光出力を抑制しており、業界専門家は無制限のバルコニー太陽光が送電網を崩壊に追い込みかねないと公に警告しています。',
@@ -682,6 +688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-ko.png',
     title: '그리스에서 발코니 태양광은 합법인가? 2027년 현황 보고서',
     seoTitle: '그리스에서 발코니 태양광은 합법인가? 2027년 현황 보고서',
     intro: '그리스는 이미 소규모 자가소비 태양광 분야에서 유럽 최고 수준의 보급률을 보이고 있습니다 — 약 8만 건의 설치가 있으며, 2020년부터 2026년 사이에만 37,407건(1,070MW)이 추가되었습니다. 그동안 부족했던 것은, 현재 2026년 7월 20일까지 공개 의견수렴 중인 장관령이 정하는 플러그인 방식 발코니 태양광 전용 규정이었습니다. 그리고 이 규정이 엄격한 "역송전 제로" 방식으로 설계된 이유는 단순한 신중함 때문이 아닙니다. 그리스의 전력망은 이미 대부분의 날에 몇 시간씩 기존 태양광 출력을 제한하고 있으며, 업계 전문가들은 규제되지 않은 발코니 태양광이 전력망을 붕괴로 몰아갈 수 있다고 공개적으로 경고해 왔습니다.',
@@ -790,6 +797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-pt.png',
     title: 'A energia solar de varanda é legal na Grécia? Relatório de status 2027',
     seoTitle: 'A energia solar de varanda é legal na Grécia? Relatório de status 2027',
     intro: 'A Grécia já tem uma das taxas de penetração mais altas da Europa em energia solar de autoconsumo de pequena escala — cerca de 80.000 instalações, com 37.407 sistemas (1.070 MW) adicionados somente entre 2020 e 2026. O que faltava, até uma decisão ministerial agora em consulta pública até 20 de julho de 2026, era uma regra dedicada especificamente à energia solar de varanda plug-and-play. E o motivo pelo qual essa regra adota um design rígido de "zero injeção na rede" não é cautela por si só: a rede elétrica da Grécia já restringe a produção solar existente por horas na maioria dos dias, e especialistas do setor alertaram publicamente que a energia solar de varanda sem restrições poderia empurrar a rede para um colapso.',
@@ -898,6 +906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-greece-status-2027-overview-hero-zh.png',
     title: '希腊阳台光伏合法吗？2027年现状报告',
     seoTitle: '希腊阳台光伏合法吗？2027年现状报告',
     intro: '希腊在小型自发自用太阳能领域已拥有欧洲最高的普及率之一——约8万套装机，仅2020年至2026年间就新增了37,407套系统（1,070兆瓦）。此前欠缺的是一项专门针对插电式阳台光伏的规则——该规则由一项部长级决定设定，目前正在公开征询意见，截止到2026年7月20日。而这项规则之所以采取严格的"零馈电"设计，并非出于单纯的谨慎：希腊电网目前在大多数日子里已经每天限制数小时的现有太阳能出力，业内专家已公开警告称，不受限制的阳台光伏可能将电网推向崩溃。',

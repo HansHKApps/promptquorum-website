@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     theme: 'Balcony Solar Long-Tail',
+    heroImage: '/images/balcony-solar-housing-associations-b2b-2027-overview-hero-en.png',
     title: 'Balcony Solar for Landlords: The B2B/Housing Association Shift in 2027',
     seoTitle: 'Balcony Solar for Landlords: The B2B/Housing Association Shift in 2027',
     intro: 'Balcony solar\'s next growth channel isn\'t individual consumers — it\'s housing associations. German social housing providers Vonovia and LEG Immobilien have announced programs to install balcony solar across their apartment portfolios, with combined installation targets exceeding 50,000 units by 2027, as part of broader building-decarbonization strategies driven by EU mandates.',
@@ -105,6 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Long-Tail',
+    heroImage: '/images/balcony-solar-housing-associations-b2b-2027-overview-hero-ar.png',
     title: 'الطاقة الشمسية للشرفة لأصحاب العقارات: تحول القطاع B2B/جمعيات الإسكان في 2027',
     seoTitle: 'الطاقة الشمسية للشرفة لأصحاب العقارات: تحول B2B في 2027',
     intro: 'القناة التالية لنمو الطاقة الشمسية للشرفة ليست المستهلكين الأفراد — بل جمعيات الإسكان. أعلنت شركتا الإسكان الاجتماعي الألمانيتان Vonovia وLEG Immobilien عن برامج لتركيب الطاقة الشمسية للشرفة عبر محافظ شققهما السكنية، بأهداف تركيب مجمّعة تتجاوز 50,000 وحدة بحلول عام 2027، كجزء من استراتيجيات أوسع لإزالة الكربون من المباني مدفوعة بتفويضات الاتحاد الأوروبي.',
@@ -201,6 +203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Long-Tail',
+    heroImage: '/images/balcony-solar-housing-associations-b2b-2027-overview-hero-de.png',
     title: 'Balkonsolar für Vermieter: Der B2B-/Wohnungsgesellschafts-Wandel 2027',
     seoTitle: 'Balkonsolar für Vermieter: Der B2B-/Wohnungsgesellschafts-Wandel 2027',
     intro: 'Der nächste Wachstumskanal für Balkonsolar sind nicht Privatverbraucher — sondern Wohnungsgesellschaften. Die deutschen sozialen Wohnungsbauunternehmen Vonovia und LEG Immobilien haben Programme angekündigt, um Balkonsolar in ihren Wohnungsbeständen zu installieren, mit einem gemeinsamen Installationsziel von über 50.000 Einheiten bis 2027 — als Teil breiterer Dekarbonisierungsstrategien für Gebäude, die durch EU-Vorgaben getrieben werden.',
@@ -297,6 +300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Long-Tail',
+    heroImage: '/images/balcony-solar-housing-associations-b2b-2027-overview-hero-es.png',
     title: 'Energía solar de balcón para propietarios: el cambio B2B/asociaciones de vivienda en 2027',
     seoTitle: 'Energía solar de balcón para propietarios: el cambio B2B/asociaciones de vivienda en 2027',
     intro: 'El próximo canal de crecimiento de la energía solar de balcón no son los consumidores individuales, sino las asociaciones de vivienda. Los proveedores alemanes de vivienda social Vonovia y LEG Immobilien han anunciado programas para instalar energía solar de balcón en sus carteras de apartamentos, con objetivos de instalación combinados que superan las 50.000 unidades para 2027, como parte de estrategias más amplias de descarbonización de edificios impulsadas por mandatos de la UE.',
@@ -393,6 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Long-Tail',
+    heroImage: '/images/balcony-solar-housing-associations-b2b-2027-overview-hero-fr.png',
     title: 'Le solaire de balcon pour les bailleurs : le tournant B2B/bailleurs sociaux en 2027',
     seoTitle: 'Le solaire de balcon pour les bailleurs : le tournant B2B/bailleurs sociaux en 2027',
     intro: 'Le prochain canal de croissance du solaire de balcon n\'est pas les consommateurs individuels — ce sont les bailleurs sociaux. Les bailleurs sociaux allemands Vonovia et LEG Immobilien ont annoncé des programmes d\'installation de solaire de balcon dans leur parc d\'appartements, avec des objectifs d\'installation combinés dépassant 50 000 unités d\'ici 2027, dans le cadre de stratégies plus larges de décarbonation des bâtiments portées par des obligations européennes.',
@@ -489,6 +494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Long-Tail',
+    heroImage: '/images/balcony-solar-housing-associations-b2b-2027-overview-hero-ja.png',
     title: '大家向けバルコニーソーラー：2027年のB2B/住宅協会シフト',
     seoTitle: '大家向けバルコニーソーラー：2027年のB2B/住宅協会シフト',
     intro: 'バルコニーソーラーの次の成長チャネルは個人消費者ではなく、住宅協会です。ドイツの社会住宅事業者VonoviaとLEG Immobilienは、EU指令主導の建物脱炭素化戦略の一環として、自社の集合住宅ポートフォリオ全体にバルコニーソーラーを設置するプログラムを発表し、2027年までに合計50,000戸を超える設置目標を掲げています。',
@@ -585,6 +591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Long-Tail',
+    heroImage: '/images/balcony-solar-housing-associations-b2b-2027-overview-hero-ko.png',
     title: '임대인을 위한 발코니 태양광: 2027년 B2B/주택협회 전환',
     seoTitle: '임대인을 위한 발코니 태양광: 2027년 B2B/주택협회 전환',
     intro: '발코니 태양광의 다음 성장 채널은 개인 소비자가 아니라 주택협회입니다. 독일의 사회주택 공급업체인 Vonovia와 LEG Immobilien은 EU 지침에 따른 건물 탈탄소화 전략의 일환으로 자사 아파트 포트폴리오 전반에 발코니 태양광을 설치하는 프로그램을 발표했으며, 2027년까지 합산 설치 목표가 50,000세대를 넘습니다.',
@@ -681,6 +688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Long-Tail',
+    heroImage: '/images/balcony-solar-housing-associations-b2b-2027-overview-hero-pt.png',
     title: 'Energia solar de varanda para proprietários: a mudança B2B/associações habitacionais em 2027',
     seoTitle: 'Energia solar de varanda para proprietários: a mudança B2B/associações habitacionais em 2027',
     intro: 'O próximo canal de crescimento da energia solar de varanda não são os consumidores individuais — são as associações habitacionais. As provedoras alemãs de habitação social Vonovia e LEG Immobilien anunciaram programas para instalar energia solar de varanda em seus portfólios de apartamentos, com metas de instalação combinadas superiores a 50.000 unidades até 2027, como parte de estratégias mais amplas de descarbonização de edifícios impulsionadas por mandatos da UE.',
@@ -777,6 +785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Long-Tail',
+    heroImage: '/images/balcony-solar-housing-associations-b2b-2027-overview-hero-zh.png',
     title: '面向房东的阳台光伏：2027年B2B/住房协会转型',
     seoTitle: '面向房东的阳台光伏：2027年B2B/住房协会转型',
     intro: '阳台光伏下一个增长渠道不是个体消费者——而是住房协会。德国社会住房提供商Vonovia和LEG Immobilien已宣布计划，在其公寓组合中安装阳台光伏系统，合计安装目标到2027年将超过50,000套，这是由欧盟法规驱动的更广泛建筑脱碳战略的一部分。',
