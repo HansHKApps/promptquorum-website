@@ -35,6 +35,7 @@ import { PageTracker } from '@/components/PageTracker'
 import { ClarityRouteTracker } from '@/components/ClarityRouteTracker'
 import { OneSignalInit } from '@/components/OneSignalInit'
 import { PushPromptBanner } from '@/components/PushPromptBanner'
+import { BetaFloatingCta } from '@/components/BetaFloatingCta'
 import { ConsentedAnalytics } from '@/components/ConsentedAnalytics'
 
 export const metadata: Metadata = {
@@ -248,6 +249,7 @@ export default function RootLayout({
           <Suspense><Footer /></Suspense>
           <CookieBanner />
           <PushPromptBanner />
+          <BetaFloatingCta />
 
           {/* Cookieless analytics — load for every visitor, no consent required.
               Umami (cookieless by design), Vercel Analytics + Speed Insights (cookieless),
