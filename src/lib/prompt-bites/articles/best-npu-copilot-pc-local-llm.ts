@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-en.png',
     title: 'Are Copilot+ PC NPUs Good for Local LLMs?',
     seoTitle: 'Copilot+ PC NPU for Local LLMs 2026 | Prompt Bites',
     metaDescription: 'Copilot+ PC NPUs (Snapdragon X Elite, Intel Lunar Lake, Ryzen AI 300) are not yet used by Ollama or llama.cpp — local LLM chat still runs on CPU or GPU.',
@@ -109,6 +110,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-ar.png',
     title: 'هل وحدات NPU في أجهزة Copilot+ PC جيدة لتشغيل LLM محليًا؟',
     seoTitle: 'وحدة NPU في Copilot+ PC لتشغيل LLM محليًا 2026 | Prompt Bites',
     metaDescription: 'NPU في Copilot+ PC (Snapdragon X Elite، Intel Lunar Lake، Ryzen AI 300) لا يستخدمها Ollama أو llama.cpp بعد — الدردشة عبر LLM محلي لا تزال تعمل على CPU أو GPU.',
@@ -214,6 +216,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-de.png',
     title: 'Sind Copilot+-PC-NPUs gut für lokale LLMs?',
     seoTitle: 'Copilot+-PC-NPU für lokale LLMs 2026 | Prompt Bites',
     metaDescription: 'Copilot+-PC-NPUs (Snapdragon X Elite, Intel Lunar Lake, Ryzen AI 300) werden von Ollama/llama.cpp nicht genutzt — lokaler LLM-Chat läuft auf CPU oder GPU.',
@@ -319,6 +322,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-es.png',
     title: '¿Son Buenas las NPU de las Copilot+ PC para LLMs Locales?',
     seoTitle: 'NPU de Copilot+ PC para LLMs Locales 2026 | Prompt Bites',
     metaDescription: 'Las NPU de Copilot+ PC (Snapdragon X Elite, Intel Lunar Lake, Ryzen AI 300) no son usadas por Ollama ni llama.cpp — el chat LLM local sigue en CPU o GPU.',
@@ -424,6 +428,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-fr.png',
     title: 'Les NPU des PC Copilot+ sont-ils performants pour les LLM locaux ?',
     seoTitle: 'NPU des PC Copilot+ pour LLM locaux 2026',
     metaDescription: 'Les NPU Copilot+ (Snapdragon X Elite, Intel Lunar Lake, Ryzen AI 300) restent inutilisés par Ollama/llama.cpp — le chat LLM local tourne sur CPU ou GPU.',
@@ -529,6 +534,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-ja.png',
     title: 'Copilot+ PCのNPUはローカルLLMに向いていますか?',
     seoTitle: '2026年版 Copilot+ PC NPUとローカルLLM | Prompt Bites',
     metaDescription: 'Copilot+ PCのNPU(Snapdragon X Elite、Intel Lunar Lake、Ryzen AI 300)はOllamaやllama.cppで未使用 — ローカルLLMチャットはCPUかGPUで動作します。',
@@ -634,6 +640,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-ko.png',
     title: 'Copilot+ PC의 NPU는 로컬 LLM에 유용한가?',
     seoTitle: '2026년 Copilot+ PC NPU와 로컬 LLM | Prompt Bites',
     metaDescription: 'Copilot+ PC NPU(Snapdragon X Elite, Intel Lunar Lake, Ryzen AI 300)는 Ollama·llama.cpp 미지원 — 로컬 LLM은 CPU·GPU 구동',
@@ -739,6 +746,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-pt.png',
     title: 'As NPUs dos PCs Copilot+ São Boas para LLMs Locais?',
     seoTitle: 'NPU de PC Copilot+ para LLMs Locais 2026',
     metaDescription: 'NPUs do PC Copilot+ (Snapdragon X Elite, Intel Lunar Lake, Ryzen AI 300) não são usadas por Ollama/llama.cpp — chat LLM local roda na CPU ou GPU.',
@@ -844,6 +852,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-zh.png',
     title: 'Copilot+ PC 的 NPU 对本地 LLM 有用吗？',
     seoTitle: '2026 年 Copilot+ PC NPU 与本地 LLM | Prompt Bites',
     metaDescription: 'Copilot+ PC 的 NPU（Snapdragon X Elite、Intel Lunar Lake、Ryzen AI 300）尚未被 Ollama 或 llama.cpp 使用——本地 LLM 聊天仍运行在 CPU 或 GPU 上。',

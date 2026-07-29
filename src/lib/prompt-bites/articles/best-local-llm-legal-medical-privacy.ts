@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-en.png',
     title: 'Best Local LLM Setup for Legal and Medical Document Privacy?',
     seoTitle: 'Best Local LLM Setup for Legal/Medical Privacy 2026',
     metaDescription: 'An RTX 4090 24GB workstation or Mac Studio with 32GB+ unified memory, running Qwen3 14B offline, keeps privileged legal and PHI data off any cloud API.',
@@ -124,6 +125,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-ar.png',
     title: 'أفضل إعداد LLM محلي لخصوصية المستندات القانونية والطبية؟',
     seoTitle: 'أفضل إعداد LLM محلي لخصوصية القانون/الطب 2026',
     metaDescription: 'محطة عمل RTX 4090 24GB أو Mac Studio بذاكرة موحدة 32GB+ تشغّل Qwen3 14B دون اتصال، تُبقي المستندات القانونية والملفات الطبية بعيدًا عن أي واجهة سحابية.',
@@ -244,6 +246,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-de.png',
     title: 'Das beste lokale LLM-Setup für den Schutz juristischer und medizinischer Dokumente?',
     seoTitle: 'Bestes lokales LLM-Setup für Recht/Medizin-Datenschutz 2026',
     metaDescription: 'Eine RTX-4090-24GB-Workstation oder ein Mac Studio mit 32GB+ Speicher, mit offline laufendem Qwen3 14B, hält Rechtsdaten und PHI von Cloud-APIs fern.',
@@ -364,6 +367,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-es.png',
     title: '¿Cuál es la Mejor Configuración de LLM Local para la Privacidad de Documentos Legales y Médicos?',
     seoTitle: 'Mejor Configuración de LLM Local para Privacidad Legal/Médica 2026',
     metaDescription: 'Una estación RTX 4090 24GB o Mac Studio con 32GB+ de memoria, con Qwen3 14B sin conexión, mantiene datos legales y PHI fuera de cualquier API en la nube.',
@@ -484,6 +488,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-fr.png',
     title: 'Quelle est la meilleure configuration de LLM local pour la confidentialité des documents juridiques et médicaux ?',
     seoTitle: 'Meilleure config LLM local pour confidentialité 2026',
     metaDescription: 'Une station RTX 4090 24 Go ou Mac Studio 32 Go+ exécutant Qwen3 14B hors ligne garde les documents juridiques et médicaux hors de tout cloud.',
@@ -604,6 +609,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-ja.png',
     title: '法務・医療文書のプライバシーに最適なローカルLLMセットアップは?',
     seoTitle: '2026年版 法務/医療プライバシーに最適なローカルLLMセットアップ',
     metaDescription: 'RTX 4090 24GBワークステーションか32GB以上の統合メモリを持つMac Studioで、Qwen3 14Bを完全オフラインで実行すれば、機密の法務文書やPHIをクラウドAPIから遠ざけられます。',
@@ -724,6 +730,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-ko.png',
     title: '법률 및 의료 문서 프라이버시를 위한 최적의 로컬 LLM 설정은?',
     seoTitle: '법률/의료 프라이버시 최적 로컬 LLM 설정 2026',
     metaDescription: 'RTX 4090 24GB 워크스테이션이나 Mac Studio(32GB+ 메모리)에서 Qwen3 14B를 오프라인으로 구동하면 법률 문서와 PHI가 클라우드 API를 벗어나지 않습니다.',
@@ -844,6 +851,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-pt.png',
     title: 'Qual a Melhor Configuração de LLM Local para Privacidade de Documentos Jurídicos e Médicos?',
     seoTitle: 'Melhor Configuração de LLM Local para Privacidade Jurídica/Médica 2026',
     metaDescription: 'Uma workstation RTX 4090 24GB ou Mac Studio com 32GB+ de memória, com Qwen3 14B offline, mantém documentos jurídicos e PHI fora de qualquer API na nuvem.',
@@ -964,6 +972,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-local-llm-legal-medical-privacy-overview-hero-zh.png',
     title: '法律和医疗文档隐私的最佳本地 LLM 配置是什么？',
     seoTitle: '2026 年法律/医疗隐私最佳本地 LLM 配置',
     metaDescription: 'RTX 4090 24GB 工作站或配备 32GB+ 统一内存的 Mac Studio，完全离线运行 Qwen3 14B，使受保护的法律和 PHI 文档不接触任何云端 API。',
