@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-en.png',
     title: 'Best Intel Arc GPU for Local LLMs?',
     seoTitle: 'Best Intel Arc GPU for Local LLMs 2026 | Prompt Bites',
     metaDescription: 'Intel Arc B580 12GB (~$249) is the best Intel Arc GPU for local LLMs, but expect rougher software support than NVIDIA — no CUDA, IPEX-LLM or Vulkan needed.',
@@ -116,6 +117,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-ar.png',
     title: 'أفضل بطاقة Intel Arc لتشغيل LLM محليًا؟',
     seoTitle: 'أفضل بطاقة Intel Arc لتشغيل LLM محليًا 2026 | Prompt Bites',
     metaDescription: 'بطاقة Intel Arc B580 12GB (~249 دولار) هي أفضل بطاقة Intel Arc لتشغيل LLM محليًا، لكن توقع دعم برمجيات أضعف من NVIDIA — لا CUDA، ويلزم IPEX-LLM أو Vulkan.',
@@ -228,6 +230,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-de.png',
     title: 'Die beste Intel-Arc-GPU für lokale LLMs?',
     seoTitle: 'Beste Intel-Arc-GPU für lokale LLMs 2026 | Prompt Bites',
     metaDescription: 'Intel Arc B580 12GB (~249 $) ist die beste Intel-Arc-GPU für lokale LLMs, doch Software-Support schwächer als NVIDIA — kein CUDA, IPEX-LLM/Vulkan nötig.',
@@ -340,6 +343,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-es.png',
     title: '¿Cuál es la Mejor GPU Intel Arc para LLMs Locales?',
     seoTitle: 'Mejor GPU Intel Arc para LLMs Locales 2026 | Prompt Bites',
     metaDescription: 'La Intel Arc B580 12GB (~$249) es la mejor GPU para LLMs locales, pero con soporte de software más débil que NVIDIA — sin CUDA, requiere IPEX-LLM o Vulkan.',
@@ -452,6 +456,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-fr.png',
     title: 'Meilleur GPU Intel Arc pour les LLM locaux ?',
     seoTitle: 'Meilleur GPU Intel Arc pour LLM locaux 2026',
     metaDescription: 'L\'Intel Arc B580 12 Go (~249 $) est le meilleur GPU pour LLM locaux, mais support logiciel plus rugueux que NVIDIA — sans CUDA, avec IPEX-LLM ou Vulkan.',
@@ -564,6 +569,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-ja.png',
     title: 'ローカルLLMに最適なIntel Arc GPUは?',
     seoTitle: '2026年版 ローカルLLM向け最適Intel Arc GPU | Prompt Bites',
     metaDescription: 'Intel Arc B580 12GB(約249ドル)はローカルLLMに最適なIntel Arc GPUですが、NVIDIAより粗いソフトウェアサポートを覚悟してください — CUDAなし、IPEX-LLMかVulkanが必要。',
@@ -676,6 +682,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-ko.png',
     title: '로컬 LLM에 최적의 Intel Arc GPU는?',
     seoTitle: '2026년 로컬 LLM 최적의 Intel Arc GPU | Prompt Bites',
     metaDescription: 'Intel Arc B580 12GB(약 249달러)가 로컬 LLM에 최적의 GPU입니다. 다만 NVIDIA보다 소프트웨어 지원이 거칠어 CUDA 없이 IPEX-LLM이나 Vulkan이 필요합니다.',
@@ -788,6 +795,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-pt.png',
     title: 'Qual a Melhor GPU Intel Arc para LLMs Locais?',
     seoTitle: 'Melhor GPU Intel Arc para LLMs Locais 2026',
     metaDescription: 'Intel Arc B580 12GB (~US$ 249) é a melhor GPU para LLMs locais, mas com suporte de software mais bruto que a NVIDIA — sem CUDA, requer IPEX-LLM ou Vulkan.',
@@ -900,6 +908,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-intel-arc-gpu-local-llm-overview-hero-zh.png',
     title: '本地 LLM 的最佳 Intel Arc GPU 是什么？',
     seoTitle: '2026 年本地 LLM 最佳 Intel Arc GPU | Prompt Bites',
     metaDescription: 'Intel Arc B580 12GB（约 249 美元）是本地 LLM 的最佳 Intel Arc GPU，但软件支持比 NVIDIA 更粗糙——需要 IPEX-LLM 或 Vulkan，没有 CUDA。',

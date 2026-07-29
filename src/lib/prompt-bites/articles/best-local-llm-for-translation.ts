@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-translation-overview-hero-en.png',
     title: 'Best Local LLM for Translation Tasks?',
     seoTitle: 'Best Local LLM for Translation Tasks | Prompt Bites',
     metaDescription:
@@ -103,6 +104,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-translation-overview-hero-de.png',
     title: 'Das beste lokale LLM für Übersetzungsaufgaben?',
     seoTitle: 'Bestes lokales LLM für Übersetzungsaufgaben | Prompt Bites',
     metaDescription:
@@ -202,6 +204,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-translation-overview-hero-fr.png',
     title: 'Meilleur LLM local pour les tâches de traduction ?',
     seoTitle: 'Meilleur LLM local pour la traduction | Prompt Bites',
     metaDescription:
@@ -301,6 +304,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-translation-overview-hero-ja.png',
     title: '翻訳タスクに最適なローカルLLMは？',
     seoTitle: '翻訳タスクに最適なローカルLLM | Prompt Bites',
     metaDescription:
@@ -400,6 +404,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-translation-overview-hero-zh.png',
     title: '哪种本地LLM最适合翻译任务？',
     seoTitle: '最适合翻译任务的本地LLM | Prompt Bites',
     metaDescription:
@@ -499,6 +504,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-translation-overview-hero-es.png',
     title: '¿Cuál es el mejor LLM local para tareas de traducción?',
     seoTitle: 'Mejor LLM local para tareas de traducción | Prompt Bites',
     metaDescription:
@@ -598,6 +604,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-translation-overview-hero-pt.png',
     title: 'Qual o melhor LLM local para tarefas de tradução?',
     seoTitle: 'Melhor LLM local para tarefas de tradução | Prompt Bites',
     metaDescription:
@@ -697,6 +704,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-translation-overview-hero-ar.png',
     title: 'ما هو أفضل نموذج لغوي محلي لمهام الترجمة؟',
     seoTitle: 'أفضل نموذج لغوي محلي لمهام الترجمة | Prompt Bites',
     metaDescription:
@@ -796,6 +804,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-translation-overview-hero-ko.png',
     title: '번역 작업에 가장 적합한 로컬 LLM은 무엇입니까?',
     seoTitle: '번역 작업에 최적인 로컬 LLM | Prompt Bites',
     metaDescription:

@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-local-llm-document-summarization-overview-hero-en.png',
     title: 'Best Local LLM for Document Summarization?',
     seoTitle: 'Best Local LLM for Document Summarization 2026',
     metaDescription: 'Qwen3 14B and Llama 3.3 8B are the best local LLMs for document summarization — both support 128K+ context on Ollama for long documents in one pass.',
@@ -99,6 +100,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-local-llm-document-summarization-overview-hero-ar.png',
     title: 'أفضل LLM محلي لتلخيص المستندات؟',
     seoTitle: 'أفضل LLM محلي لتلخيص المستندات 2026',
     metaDescription: 'نموذجا Qwen3 14B وLlama 3.3 8B هما الأفضل لتلخيص المستندات محليًا — كلاهما يدعم سياقًا 128K+ على Ollama، كافٍ لتلخيص مستندات طويلة في مرور واحد.',
@@ -194,6 +196,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-local-llm-document-summarization-overview-hero-de.png',
     title: 'Das beste lokale LLM für Dokumentenzusammenfassung?',
     seoTitle: 'Bestes lokales LLM für Dokumentenzusammenfassung 2026',
     metaDescription: 'Qwen3 14B und Llama 3.3 8B sind die besten lokalen LLMs für Dokumentenzusammenfassung, mit 128K+ Kontext auf Ollama für lange Dokumente in einem Durchgang.',
@@ -289,6 +292,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-local-llm-document-summarization-overview-hero-es.png',
     title: '¿Cuál es el Mejor LLM Local para Resumir Documentos?',
     seoTitle: 'Mejor LLM Local para Resumen de Documentos 2026',
     metaDescription: 'Qwen3 14B y Llama 3.3 8B son los mejores LLM locales para resumir documentos, con 128K+ de contexto en Ollama para documentos largos en una pasada.',
@@ -384,6 +388,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-local-llm-document-summarization-overview-hero-fr.png',
     title: 'Quel est le meilleur LLM local pour la synthèse de documents ?',
     seoTitle: 'Meilleur LLM local pour la synthèse de documents 2026',
     metaDescription: 'Qwen3 14B et Llama 3.3 8B sont les meilleurs LLM locaux pour résumer des documents longs, avec 128K+ de contexte sur Ollama en une seule passe.',
@@ -479,6 +484,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-local-llm-document-summarization-overview-hero-ja.png',
     title: '文書要約に最適なローカルLLMは?',
     seoTitle: '2026年版 文書要約に最適なローカルLLM',
     metaDescription: 'Qwen3 14BとLlama 3.3 8Bは文書要約に最適なローカルLLMです — どちらもOllamaで128K以上のコンテキストをサポートし、長い文書を1回のパスで要約できます。',
@@ -574,6 +580,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-local-llm-document-summarization-overview-hero-ko.png',
     title: '문서 요약을 위한 최적의 로컬 LLM은?',
     seoTitle: '2026년 문서 요약 최적 로컬 LLM',
     metaDescription: 'Qwen3 14B와 Llama 3.3 8B는 문서 요약을 위한 최적의 로컬 LLM입니다 — 둘 다 Ollama에서 128K 이상 컨텍스트를 지원해 긴 문서를 한 번에 요약할 수 있습니다.',
@@ -669,6 +676,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-local-llm-document-summarization-overview-hero-pt.png',
     title: 'Qual o Melhor LLM Local para Resumo de Documentos?',
     seoTitle: 'Melhor LLM Local para Resumo de Documentos 2026',
     metaDescription: 'O Qwen3 14B e Llama 3.3 8B são os melhores LLMs locais para resumo de documentos, com 128K+ de contexto no Ollama para documentos longos em uma passagem.',
@@ -764,6 +772,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-local-llm-document-summarization-overview-hero-zh.png',
     title: '文档摘要的最佳本地 LLM 是什么？',
     seoTitle: '2026 年文档摘要最佳本地 LLM',
     metaDescription: 'Qwen3 14B 和 Llama 3.3 8B 是文档摘要的最佳本地 LLM——两者在 Ollama 上都支持 128K+ 上下文，足以一次性摘要长文档。',
