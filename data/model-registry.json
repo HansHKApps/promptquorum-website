@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13",
+  "last_updated": "2026-07-29",
   "models": [
     {
       "company": "Anthropic",
@@ -247,11 +247,11 @@
       "model": "Llama 3.2 3B",
       "type": "open-weight",
       "release_date": null,
-      "status": "superseded",
-      "superseded_by": "Llama 4 Scout",
+      "status": "current",
+      "superseded_by": null,
       "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html",
       "verified_date": "2026-07-13",
-      "notes": "14 site mentions. Still listed as available on AWS Bedrock."
+      "notes": "Still the standard small/CPU-class pick as of 2026-07: Llama 4 Scout (17B active / 109B total MoE, ~55 GB VRAM at Q4) is not a substitute in this footprint — different size class entirely. Meta has not shipped a small (<=3B) Llama 4 variant. Re-flagged 2026-07-29 after the site's monthly refresh cycle surfaced this as a false STALE_MODEL positive."
     },
     {
       "company": "Mistral AI",
@@ -564,6 +564,78 @@
       "source_url": "https://docs.cohere.com/docs/models",
       "verified_date": "2026-07-13",
       "notes": "command-r-plus-08-2024. Cohere's own docs state Command A supersedes Command R+ for enterprise deployment. Site mentions 'Command R+ 104B' (4x) — added to source-lab coverage this cycle per the spec's 'adjust list if a lab is added/dropped from site content' rule."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3 8B",
+      "type": "open-weight",
+      "release_date": "2025-04",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://github.com/QwenLM/Qwen3.6",
+      "verified_date": "2026-07-29",
+      "notes": "Small/mid-size dense variant. Qwen3.6 has only shipped 27B and 35B-A3B sizes so far (per the Qwen3.6 registry entry) — no small-class successor exists yet, so Qwen3 8B remains the current best pick for 8-16GB RAM/VRAM tiers. Added 2026-07-29 as an exact-name entry so the validator stops flagging it via the generic family-level 'Qwen3' superseded entry, which only applies to sizes Qwen3.6 has actually replaced."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3 4B",
+      "type": "open-weight",
+      "release_date": "2025-04",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://github.com/QwenLM/Qwen3.6",
+      "verified_date": "2026-07-29",
+      "notes": "Small-class variant, no Qwen3.6 equivalent size shipped yet. See Qwen3 8B entry notes."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3 1.7B",
+      "type": "open-weight",
+      "release_date": "2025-04",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://github.com/QwenLM/Qwen3.6",
+      "verified_date": "2026-07-29",
+      "notes": "Small-class variant, no Qwen3.6 equivalent size shipped yet. See Qwen3 8B entry notes."
+    },
+    {
+      "company": "DeepSeek",
+      "family": "DeepSeek",
+      "model": "DeepSeek-R1 7B",
+      "type": "open-weight",
+      "release_date": "2025-01",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "verified_date": "2026-07-29",
+      "notes": "Distilled small variant (Qwen-based 7B distill of R1's reasoning traces), distinct from the flagship 'DeepSeek-R1' API model that DeepSeek-V4 replaced. Per the DeepSeek-R1 registry entry's own note: distilled variants are separate open-weight releases not directly addressed by the V4 deprecation notice. Remains the standard local reasoning/CPU pick for the 7B class. Added 2026-07-29 as an exact-name entry."
+    },
+    {
+      "company": "Moonshot AI",
+      "family": "Kimi",
+      "model": "Kimi K2.7 Code",
+      "type": "open-weight",
+      "release_date": "2026-06",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://platform.kimi.ai",
+      "verified_date": "2026-07-29",
+      "notes": "Coding-focused agentic model built on Kimi K2.6, per Moonshot AI. Confirmed live on platform.kimi.ai and already used as canonical current content in src/lib/local-llms/articles/top-open-source-models-ollama.ts (refreshed 2026-07-14). This is the entry the Kimi K2.6 record's notes flagged as 'not yet added — check platform.kimi.ai on next cycle'; added here 2026-07-29."
+    },
+    {
+      "company": "Poolside",
+      "family": "Laguna",
+      "model": "Laguna XS 2.1",
+      "type": "open-weight",
+      "release_date": "2026-07-02",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://ollama.com/library/laguna-xs-2.1",
+      "verified_date": "2026-07-29",
+      "notes": "33B total / 3B active MoE, agentic/long-horizon coding focus, OpenMDW-1.1 license. SWE-bench Verified 70.9%. Already used as canonical current content in src/lib/local-llms/articles/top-open-source-models-ollama.ts (refreshed 2026-07-14). Added 2026-07-29 — was previously UNKNOWN_MODEL."
     }
   ],
   "sources": [
