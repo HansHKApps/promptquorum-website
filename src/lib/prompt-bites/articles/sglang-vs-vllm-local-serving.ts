@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-en.png',
     title: 'SGLang vs vLLM for Local Model Serving?',
     seoTitle: 'SGLang vs vLLM for Local Serving | Prompt Bites',
     metaDescription: 'A quick guide to picking between SGLang and vLLM for local model serving: how their scheduling and caching approaches differ, and which workloads favor each.',
@@ -98,6 +99,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-de.png',
     title: 'SGLang oder vLLM für lokales Model-Serving?',
     seoTitle: 'SGLang vs. vLLM für lokales Serving | Prompt Bites',
     metaDescription: 'Ein kurzer Leitfaden zur Wahl zwischen SGLang und vLLM für lokales Model-Serving: wie sich Scheduling und Caching unterscheiden und welche Workloads jeweils profitieren.',
@@ -192,6 +194,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-fr.png',
     title: 'SGLang ou vLLM pour le serving local de modèles ?',
     seoTitle: 'SGLang vs vLLM pour le serving local | Prompt Bites',
     metaDescription: 'Un guide rapide pour choisir entre SGLang et vLLM pour le serving local de modèles : différences de scheduling et de cache, et quels workloads favorisent chacun.',
@@ -286,6 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-ja.png',
     title: 'ローカルモデルサービングにはSGLangとvLLMどちらが良いですか?',
     seoTitle: 'SGLang vs vLLM ローカルサービング比較 | Prompt Bites',
     metaDescription: 'ローカルモデルサービングでSGLangとvLLMのどちらを選ぶかの簡潔なガイドです。スケジューリングとキャッシュの違い、それぞれが向いているワークロードを解説します。',
@@ -380,6 +384,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-zh.png',
     title: '本地模型服务该选SGLang还是vLLM?',
     seoTitle: 'SGLang对比vLLM本地服务选择 | Prompt Bites',
     metaDescription: '快速指南:如何在SGLang和vLLM之间为本地模型服务做选择——两者调度和缓存方式的差异,以及各自更适合哪些工作负载。',
@@ -474,6 +479,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-es.png',
     title: '¿SGLang o vLLM para el serving local de modelos?',
     seoTitle: 'SGLang vs vLLM para serving local | Prompt Bites',
     metaDescription: 'Una guía rápida para elegir entre SGLang y vLLM en el serving local de modelos: en qué difieren su scheduling y su caché, y qué cargas de trabajo favorece cada uno.',
@@ -568,6 +574,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-pt.png',
     title: 'SGLang ou vLLM para servir modelos localmente?',
     seoTitle: 'SGLang vs vLLM para serving local | Prompt Bites',
     metaDescription: 'Um guia rápido para escolher entre SGLang e vLLM no serving local de modelos: como o agendamento e o cache diferem, e quais cargas de trabalho favorecem cada um.',
@@ -662,6 +669,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-ar.png',
     title: 'SGLang أم vLLM لخدمة النماذج محليًا؟',
     seoTitle: 'SGLang مقابل vLLM للخدمة المحلية | Prompt Bites',
     metaDescription: 'دليل سريع للاختيار بين SGLang وvLLM لخدمة النماذج محليًا: كيف يختلف الجدولة والتخزين المؤقت بينهما، وأي أحمال العمل يناسب كل منهما.',
@@ -756,6 +764,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/sglang-vs-vllm-local-serving-overview-hero-ko.png',
     title: '로컬 모델 서빙에는 SGLang과 vLLM 중 무엇을 선택해야 합니까?',
     seoTitle: 'SGLang vs vLLM 로컬 서빙 비교 | Prompt Bites',
     metaDescription: '로컬 모델 서빙에서 SGLang과 vLLM 중 하나를 선택하기 위한 간단한 가이드입니다. 스케줄링과 캐싱 방식의 차이, 각각에 적합한 워크로드를 설명합니다.',

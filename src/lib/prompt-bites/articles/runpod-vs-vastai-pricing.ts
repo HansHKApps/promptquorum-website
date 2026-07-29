@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-en.png',
     title: 'RunPod vs Vast.ai: Which Is Cheaper in 2026?',
     seoTitle: 'RunPod vs Vast.ai Pricing 2026 | Prompt Bites',
     metaDescription: 'Vast.ai is cheaper on spot/interruptible GPUs; RunPod is more reliable for sustained workloads. July 2026 hourly-rate snapshot — re-check current rates.',
@@ -178,6 +179,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-de.png',
     title: 'RunPod vs Vast.ai: Was ist 2026 günstiger?',
     seoTitle: 'RunPod vs Vast.ai Preise 2026 | Prompt Bites',
     metaDescription: 'Vast.ai ist günstiger bei Spot-/unterbrechbaren GPUs; RunPod ist zuverlässiger für dauerhafte Workloads. Juli 2026 — aktuelle Tarife stets prüfen.',
@@ -313,6 +315,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-fr.png',
     title: 'RunPod vs Vast.ai : lequel est le moins cher en 2026 ?',
     seoTitle: 'RunPod vs Vast.ai prix 2026 | Prompt Bites',
     metaDescription: 'Vast.ai est moins cher en GPU spot/interruptible ; RunPod est plus fiable pour les charges continues. Juillet 2026 — toujours vérifier les tarifs.',
@@ -448,6 +451,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-ja.png',
     title: '2026年、RunPodとVast.aiはどちらが安いですか？',
     seoTitle: 'RunPod vs Vast.ai 料金 2026 | Prompt Bites',
     metaDescription: 'Vast.aiはスポット/中断可GPUで安く、RunPodは継続ワークロードで信頼性が高いです。2026年7月時点 — 最新料金は常に確認を。',
@@ -583,6 +587,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-zh.png',
     title: '2026年RunPod与Vast.ai哪个更便宜？',
     seoTitle: 'RunPod vs Vast.ai 2026：GPU竞价实例价格与稳定性对比',
     metaDescription: 'Vast.ai竞价/可中断GPU实例价格更低（A100 80GB约0.7–1.1美元/小时）；RunPod在长时连续推理工作负载上可靠性更强，SLA更有保障。2026年7月价格快照，具体费率以各平台官网实时报价为准。',
@@ -718,6 +723,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-pt.png',
     title: 'RunPod vs Vast.ai: Qual é mais barato em 2026?',
     seoTitle: 'RunPod vs Vast.ai preços 2026 | Prompt Bites',
     metaDescription: 'Vast.ai é mais barato em GPUs spot/interruptíveis; RunPod é mais confiável para cargas sustentadas. Snapshot de tarifas por hora de julho de 2026; verifique as tarifas atuais.',
@@ -853,6 +859,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-es.png',
     title: 'RunPod vs Vast.ai: ¿Cuál es más barato en 2026?',
     seoTitle: 'RunPod vs Vast.ai precios 2026 | Prompt Bites',
     metaDescription: 'Vast.ai es más barato en GPUs spot/interrumpibles; RunPod es más fiable para cargas sostenidas. Tarifas por hora de julio 2026; verifica las tarifas actuales.',
@@ -988,6 +995,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-ar.png',
     title: '⁨RunPod⁩ مقابل ⁨Vast.ai⁩: أيهما أرخص في ⁨2026⁩؟',
     seoTitle: 'أسعار ⁨RunPod⁩ مقابل ⁨Vast.ai 2026⁩ | ⁨Prompt Bites⁩',
     metaDescription: '⁨Vast.ai⁩: ⁨RTX 4090⁩ بـ $⁨0.30⁩–⁨0.55/hr⁩؛ ⁨RunPod⁩: $⁨0.69⁩–⁨0.79/hr⁩ مع ضمان التشغيل. ⁨Vast.ai⁩ أرخص للـ ⁨GPU⁩ المؤقت؛ ⁨RunPod⁩ أوثق للإنتاج المستمر.',
@@ -1123,6 +1131,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/runpod-vs-vastai-pricing-overview-hero-ko.png',
     title: 'RunPod 대 Vast.ai: 2026년에 어느 쪽이 더 저렴합니까?',
     seoTitle: 'RunPod 대 Vast.ai 가격 2026 | Prompt Bites',
     metaDescription: 'Vast.ai는 스팟/중단 가능 GPU에서 더 저렴합니다. RunPod는 지속적인 워크로드에 더 안정적입니다. 2026년 7월 기준 시간당 요금 — 현재 요금을 다시 확인하십시오.',
