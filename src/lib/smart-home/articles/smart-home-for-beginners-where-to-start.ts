@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-for-beginners-where-to-start-overview-hero-en.png',
     title: 'Smart Home for Beginners: Where to Start in 2026',
     seoTitle: 'Smart Home Beginner Guide 2026: Where to Start First',
     intro:
@@ -195,6 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-for-beginners-where-to-start-overview-hero-ar.png',
     title: 'المنزل الذكي للمبتدئين: من أين تبدأ في ⁨2026⁩',
     seoTitle: 'دليل المنزل الذكي للمبتدئين ⁨2026⁩: من أين تبدأ أولًا',
     intro:
@@ -382,6 +384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-for-beginners-where-to-start-overview-hero-de.png',
     title: 'Smart Home für Einsteiger: Wo Sie 2026 starten',
     seoTitle: 'Smart Home für Einsteiger 2026: Wo und wie anfangen',
     intro:
@@ -569,6 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-for-beginners-where-to-start-overview-hero-es.png',
     title: 'Smart Home para Principiantes: Por Dónde Empezar en 2026',
     seoTitle: 'Smart Home para Principiantes 2026: Por Dónde Empezar',
     intro:
@@ -756,6 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-for-beginners-where-to-start-overview-hero-ko.png',
     title: '스마트홈 입문: 2026년 시작 방법 완전 가이드',
     seoTitle: '스마트홈 입문 2026: 어디서부터 시작할까',
     intro:
@@ -943,6 +948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-for-beginners-where-to-start-overview-hero-fr.png',
     title: 'Maison Connectée pour Débutants : Par Où Commencer en 2026',
     seoTitle: 'Maison Connectée Débutants 2026 : Par Où Commencer',
     intro:
@@ -1130,6 +1136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-for-beginners-where-to-start-overview-hero-ja.png',
     title: 'スマートホーム初心者：2026年 どこから始めるか',
     seoTitle: 'スマートホーム初心者ガイド（2026年版）：ハブ選びから自動化まで実践',
     intro:
@@ -1317,6 +1324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-for-beginners-where-to-start-overview-hero-pt.png',
     title: 'Casa Inteligente para Iniciantes: Por Onde Começar em 2026',
     seoTitle: 'Casa Inteligente para Iniciantes: Por Onde Começar',
     intro:
@@ -1504,6 +1512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-for-beginners-where-to-start-overview-hero-zh.png',
     title: '智能家居新手：2026 从何处开始',
     seoTitle: '智能家居新手完全入门2026：中枢选购、首个房间到自动化全流程实践',
     intro:
