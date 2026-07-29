@@ -13,12 +13,13 @@ const OG_SLUG = keyToSlug('what-is-prompt-engineering');
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-09-01',
+      next_refresh_due: '2027-01-29',
+      last_full_refresh: '2026-07-29',
       theme: 'Fundamentals',
       heroImage: '/images/what-is-prompt-engineering-overview-hero-en.png',
       title: 'What Is Prompt Engineering? — PromptQuorum Guide',
       seoTitle: 'What Is Prompt Engineering in 2026? Beginner Guide',
-      intro: 'Prompt engineering: designing text inputs to get reliable, accurate outputs from LLMs like GPT-5.5, Claude, and Gemini. Learn essential techniques, frameworks, and why it matters to AI output quality.',
+      intro: 'Prompt engineering: designing text inputs to get reliable, accurate outputs from LLMs like GPT-5.5, Claude Opus 4.8, and Gemini 3.1. Learn essential techniques, frameworks, and why it matters to AI output quality.',
       metaDescription: 'Prompt engineering: designing text inputs for reliable AI outputs. Learn role prompting, chain-of-thought, few-shot techniques for ChatGPT, Claude, Ollama.',
       publishDate: '2026-03-01',
       readTime: '10 min read',
@@ -32,13 +33,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'What Is Prompt Engineering?',
         description: 'Prompt engineering: designing text inputs to get reliable, accurate outputs from LLMs. Learn essential techniques, frameworks, and why it matters.',
         datePublished: '2026-03-01',
-        dateModified: '2026-03-01',
+        dateModified: '2026-07-29',
         keywords: ['prompt engineering', 'AI prompting', 'LLM', 'GPT-5.5', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
           { '@type': 'Thing', name: 'GPT-5.5' },
-          { '@type': 'Thing', name: 'Claude' },
-          { '@type': 'Thing', name: 'Gemini' },
+          { '@type': 'Thing', name: 'Claude Opus 4.8' },
+          { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -71,7 +72,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'What is the difference between a prompt engineering technique and a framework?', acceptedAnswer: { '@type': 'Answer', text: 'A technique is a specific pattern applied to achieve a particular output quality — for example, Chain-of-Thought prompting improves reasoning accuracy. A framework is a structural template that organises all the elements of a prompt — for example, CO-STAR defines the order in which to specify context, objective, style, tone, audience, and response format. Frameworks help you build the prompt; techniques help you refine what the model does with it.' } },
           { '@type': 'Question', name: 'Will prompt engineering still matter long-term?', acceptedAnswer: { '@type': 'Answer', text: 'All available evidence points to yes. LLMs are not yet capable of reliably producing professional-grade output from unstructured natural language alone. Even as AI interfaces become more conversational, the underlying principles of good prompts — clear objective, relevant context, explicit constraints, specified output format — remain the difference between a useful and a useless AI response.' } },
           { '@type': 'Question', name: 'What is the difference between prompt engineering and fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt engineering shapes the output of an existing model without changing the model itself — it works at inference time and requires no training. Fine-tuning modifies a model\'s weights by training it on a new dataset, changing its default behaviour permanently. Prompt engineering is faster, cheaper, and requires no ML expertise; fine-tuning is better when you need deep, consistent specialisation that prompts alone cannot achieve.' } },
-          { '@type': 'Question', name: 'How does prompt engineering relate to a tool like PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum is a multi-model AI dispatch tool built around prompt engineering principles. It includes 9 built-in prompt frameworks, an AI-powered prompt optimiser, and the ability to dispatch one prompt to multiple models simultaneously — GPT-5.5, Claude, Gemini, and local models — and compare results side by side.' } },
+          { '@type': 'Question', name: 'How does prompt engineering relate to a tool like PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum is a multi-model AI dispatch tool built around prompt engineering principles. It includes 9 built-in prompt frameworks, an AI-powered prompt optimiser, and the ability to dispatch one prompt to multiple models simultaneously — GPT-5.5, Claude Opus 4.8, Gemini 3.1, and local models — and compare results side by side.' } },
           { '@type': 'Question', name: 'Is prompt engineering still relevant now that AI agents exist?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. AI agents — autonomous systems that plan and execute multi-step tasks — are built on top of prompt engineering. Every agent has a system prompt defining its role, constraints, and available tools. Every tool call is triggered by structured instructions. Prompt engineering is the foundation that makes agents controllable and predictable.' } },
           { '@type': 'Question', name: 'How does a user prompt differ from a system prompt?', acceptedAnswer: { '@type': 'Answer', text: 'A system prompt is a persistent instruction set that applies to the entire session — it defines the model\'s role, constraints, and default behaviour before the user says anything. A user prompt is the per-request input — the specific task or question for that interaction. Both benefit from prompt engineering, but they serve different functions and require different design approaches.' } },
         ],
@@ -81,7 +82,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'Prompt Engineering: Definition and Core Principles',
           content: [
-            '**Prompt engineering is the practice of designing and structuring text inputs — called prompts — to get accurate, useful, and repeatable outputs from large language models (LLMs).** It applies to GPT-5.5, Claude, Gemini, and locally-run models via Ollama or LM Studio. The difference between prompt engineering and "just asking AI a question" is the difference between a vague request and a precise instruction with a defined objective, context, and output format.',
+            '**Prompt engineering is the practice of designing and structuring text inputs — called prompts — to get accurate, useful, and repeatable outputs from large language models (LLMs).** It applies to GPT-5.5, Claude Opus 4.8, Gemini 3.1, and locally-run models via Ollama or LM Studio. The difference between prompt engineering and "just asking AI a question" is the difference between a vague request and a precise instruction with a defined objective, context, and output format.',
             'Today, prompt engineering is a structured discipline with named techniques, reusable frameworks, and measurable outcomes. It is not about tricking AI systems or finding hidden commands — it is about giving a probabilistic model the clearest possible signal of what you need. A well-engineered prompt consistently produces usable output on the first attempt.',
             'Prompt engineering basics start with understanding that LLMs are pattern-completion engines. They generate output based on the statistical likelihood of what should follow your input. The more precisely you specify the task, context, constraints, and desired format, the less the model has to guess — and the better the result.',
           ],
@@ -99,7 +100,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             'Prompt engineering = designing inputs to get reliable, accurate outputs from LLMs',
-            'Applies to all major models: GPT-5.5, Claude, Gemini, and local models via Ollama or LM Studio',
+            'Applies to all major models: GPT-5.5, Claude Opus 4.8, Gemini 3.1, and local models via Ollama or LM Studio',
             'Key levers: objective, context, examples, constraints, output format, and role',
             'Prompt engineering techniques range from zero-shot to Chain-of-Thought to RAG',
             'Prompt engineering frameworks (CRAFT, CO-STAR, SPECS, etc.) make prompts repeatable and teachable',
@@ -129,7 +130,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Speed:** Well-framed prompts eliminate back-and-forth clarification cycles → [Fundamentals: Faster AI Answers: How to Prompt for Speed]',
             '**Cost control:** Precise prompts use fewer tokens per task and reduce retries → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
             '**Hallucination reduction:** Clear grounding, source constraints, and scoped questions reduce fabricated facts → [Fundamentals: AI Hallucinations: Why AI Makes Things Up — and How to Stop Them]',
-            '**Multi-model compatibility:** The same well-structured prompt works across GPT-5.5, Claude, Gemini, and local LLMs — reducing vendor lock-in',
+            '**Multi-model compatibility:** The same well-structured prompt works across GPT-5.5, Claude Opus 4.8, Gemini 3.1, and local LLMs — reducing vendor lock-in',
             '**Repeatability:** A well-designed prompt is a reusable asset. Teams can share, version, and improve prompts over time',
           ],
         },
@@ -162,7 +163,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqConsensusTest: {
           title: 'PromptQuorum Consensus Test: Prompt Structure Impact',
           content: [
-            '**Tested in PromptQuorum — 40 summarisation prompts dispatched to GPT-5.5, Claude Opus 4.8, and Gemini 3.5 Pro:** Unstructured prompts produced inconsistent length and structure across all three models in 37 of 40 cases. After rewriting with the five building blocks above, all three models produced consistent, on-format responses on the first attempt in 40 of 40 cases.',
+            '**Tested in PromptQuorum — 40 summarisation prompts dispatched to GPT-5.5, Claude Opus 4.8, and Gemini 3.1:** Unstructured prompts produced inconsistent length and structure across all three models in 37 of 40 cases. After rewriting with the five building blocks above, all three models produced consistent, on-format responses on the first attempt in 40 of 40 cases.',
             'This consensus effect — where structured prompts produce identical behavior across different models — is the core insight behind prompt engineering. The five building blocks work because they exploit how all major LLMs process instructions identically.',
           ],
           callouts: [
@@ -246,12 +247,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'These are the key technical decisions that interact with prompt engineering:',
           ],
           items: [
-            '**Model selection:** GPT-5.5, Claude Opus 4.8, and Gemini 3.5 Pro respond differently to the same prompt. Choosing the right model for the task is part of the engineering process. Mistral AI (Europe) and Qwen (China) follow the same prompting principles but may require adjusted output format specifications due to differences in instruction-following behavior. The same structured prompt works globally across all major model families → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**Model selection:** GPT-5.5, Claude Opus 4.8, and Gemini 3.1 respond differently to the same prompt. Choosing the right model for the task is part of the engineering process. Mistral AI (Europe) and Qwen (China) follow the same prompting principles but may require adjusted output format specifications due to differences in instruction-following behavior. The same structured prompt works globally across all major model families → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**System vs. user prompts:** The system prompt sets persistent instructions for an entire session; the user prompt is the per-request input. Getting this split right determines consistency at scale → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**Context windows:** Every model has a maximum token limit for input + output combined. Long prompts reduce the available space for the model\'s answer — and models start to ignore earlier content as the window fills → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**Token limits and cost:** Precise, concise prompts use fewer tokens per call, reduce latency, and stay within rate limits — directly affecting cost at scale → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
-            '**Multimodal prompting:** Modern LLMs like GPT-5.5 and Gemini accept images as well as text. Prompt engineering principles apply equally to image inputs → [Fundamentals: Beyond Text: How to Prompt with Images]',
-            '**Local vs. cloud models:** Prompt engineering techniques apply equally to cloud APIs and locally-run models via Ollama or LM Studio — though local models may require adjusted formatting due to smaller context windows and different instruction-following behaviour. PromptQuorum supports both local models (Ollama, LM Studio, vLLM) and cloud APIs (OpenAI, Anthropic, Google Gemini) through a single interface — letting you switch between providers without rewriting prompts, or compare the same prompt across multiple models simultaneously.',
+            '**Multimodal prompting:** Modern LLMs like GPT-5.5 and Gemini 3.1 accept images as well as text. Prompt engineering principles apply equally to image inputs → [Fundamentals: Beyond Text: How to Prompt with Images]',
+            '**Local vs. cloud models:** Prompt engineering techniques apply equally to cloud APIs and locally-run models via Ollama or LM Studio — though local models may require adjusted formatting due to smaller context windows and different instruction-following behaviour. PromptQuorum supports both local models (Ollama, LM Studio, vLLM) and cloud APIs (OpenAI, Anthropic, Google Gemini 3.1) through a single interface — letting you switch between providers without rewriting prompts, or compare the same prompt across multiple models simultaneously.',
           ],
         },
 
@@ -263,7 +264,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Hallucination reduction — grounding, source constraints, and explicit scoping reduce fabricated facts. PromptQuorum\'s Quorum feature runs consensus checks across model responses, detecting hallucinations and contradictions by comparing how different models respond to the same structured prompt.',
             'Format control — specifying output format means results arrive ready to use, not ready to edit',
             'Iteration speed — fewer clarification rounds, more first-attempt successes',
-            'Cross-model portability — a well-structured prompt works on GPT-5.5, Claude, and Gemini without rewriting',
+            'Cross-model portability — a well-structured prompt works on GPT-5.5, Claude Opus 4.8, and Gemini 3.1 without rewriting',
           ],
         },
 
@@ -289,7 +290,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Start with single-line prompts.** Write one clear sentence describing your task exactly. Observe what the model returns before adding structure. This establishes a baseline — you need to know what a bare prompt produces before you can improve it.',
             '**Apply one framework to a real task.** Pick CRAFT for a writing task or CO-STAR for a complex instruction. Frameworks force you to think through all the elements a prompt needs. The [Frameworks] section covers each framework with examples → start with [Frameworks: Which Prompt Framework Should You Use?].',
             '**Add one technique at a time.** Try few-shot examples on one task. Add a constraint to another. Test Chain-of-Thought on a reasoning problem. Isolating changes lets you see which technique actually improved the output. The [Techniques] section covers each technique in depth.',
-            '**Test across multiple models.** The same prompt produces different results on GPT-5.5, Claude, and Gemini. Use PromptQuorum to dispatch one prompt to multiple models simultaneously and compare responses side by side — this is the fastest way to find which model and formulation works best for a specific task.',
+            '**Test across multiple models.** The same prompt produces different results on GPT-5.5, Claude Opus 4.8, and Gemini 3.1. Use PromptQuorum to dispatch one prompt to multiple models simultaneously and compare responses side by side — this is the fastest way to find which model and formulation works best for a specific task.',
             '**Build a prompt library for your use cases.** Save prompts that work. Refine them over time. A library of tested prompts for your specific domain is a durable asset. See [Use Topics: Build a Prompt Library That Saves Hours] for a guide on how to structure and maintain one.',
           ],
         },
@@ -336,7 +337,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'How does prompt engineering relate to a tool like PromptQuorum?',
-              a: 'PromptQuorum is a multi-model AI dispatch tool built around prompt engineering principles. It includes 9 built-in prompt frameworks, an AI-powered prompt optimiser, and the ability to dispatch one prompt to multiple models simultaneously — GPT-5.5, Claude, Gemini, and local models — and compare results side by side. It makes prompt engineering repeatable and removes the friction of testing across models manually.',
+              a: 'PromptQuorum is a multi-model AI dispatch tool built around prompt engineering principles. It includes 9 built-in prompt frameworks, an AI-powered prompt optimiser, and the ability to dispatch one prompt to multiple models simultaneously — GPT-5.5, Claude Opus 4.8, Gemini 3.1, and local models — and compare results side by side. It makes prompt engineering repeatable and removes the friction of testing across models manually.',
             },
             {
               q: 'Is prompt engineering still relevant now that AI agents exist?',
@@ -367,7 +368,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/what-is-prompt-engineering-overview-hero-de.png',
       title: 'Was ist Prompt Engineering? — PromptQuorum Leitfaden',
       seoTitle: 'Was ist Prompt Engineering? Einsteiger-Guide 2026',
-      intro: 'Prompt Engineering: Texteinträge so gestalten, dass zuverlässige, genaue Ausgaben von LLMs wie GPT-5.5, Claude und Gemini erzeugt werden. Lernen Sie wesentliche Techniken, Frameworks und warum dies für die Qualität der KI-Ausgabe wichtig ist.',
+      intro: 'Prompt Engineering: Texteinträge so gestalten, dass zuverlässige, genaue Ausgaben von LLMs wie GPT-5.5, Claude Opus 4.8 und Gemini 3.1 erzeugt werden. Lernen Sie wesentliche Techniken, Frameworks und warum dies für die Qualität der KI-Ausgabe wichtig ist.',
       metaDescription: 'Prompt Engineering 2026: die Technik, die KI-Ausgaben zuverlässig macht. Rollenanweisung, Chain-of-Thought und Few-Shot für ChatGPT, Claude und Ollama.',
       publishDate: '2026-03-01',
       readTime: '10 Min. Lesezeit',
@@ -378,15 +379,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/de/prompt-engineering/what-is-prompt-engineering',
         inLanguage: 'de',
         headline: 'Was ist Prompt Engineering?',
-        description: 'Prompt Engineering: Texteinträge so gestalten, dass zuverlässige, genaue Ausgaben von LLMs wie GPT-5.5, Claude und Gemini erzeugt werden.',
+        description: 'Prompt Engineering: Texteinträge so gestalten, dass zuverlässige, genaue Ausgaben von LLMs wie GPT-5.5, Claude Opus 4.8 und Gemini 3.1 erzeugt werden.',
         datePublished: '2026-03-01',
-        dateModified: '2026-03-01',
+        dateModified: '2026-07-29',
         keywords: ['Prompt Engineering', 'KI-Prompting', 'LLM', 'GPT-5.5', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
           { '@type': 'Thing', name: 'GPT-5.5' },
-          { '@type': 'Thing', name: 'Claude' },
-          { '@type': 'Thing', name: 'Gemini' },
+          { '@type': 'Thing', name: 'Claude Opus 4.8' },
+          { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
       },
       itemListSchema: {
@@ -424,7 +425,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'Was ist Prompt Engineering?',
           content: [
-            '**Prompt Engineering ist die Praxis, Texteingaben – sogenannte Prompts – so zu gestalten und zu strukturieren, dass große Sprachmodelle (LLMs) genaue, nützliche und wiederholbare Ausgaben liefern.** Dies gilt für GPT-5.5, Claude, Gemini sowie lokal betriebene Modelle über Ollama oder LM Studio. Der Unterschied zwischen Prompt Engineering und „einfach eine Frage an eine KI stellen" ist der Unterschied zwischen einer vagen Anfrage und einer präzisen Anweisung mit klar definiertem Ziel, Kontext und Ausgabeformat.',
+            '**Prompt Engineering ist die Praxis, Texteingaben – sogenannte Prompts – so zu gestalten und zu strukturieren, dass große Sprachmodelle (LLMs) genaue, nützliche und wiederholbare Ausgaben liefern.** Dies gilt für GPT-5.5, Claude Opus 4.8, Gemini 3.1 sowie lokal betriebene Modelle über Ollama oder LM Studio. Der Unterschied zwischen Prompt Engineering und „einfach eine Frage an eine KI stellen" ist der Unterschied zwischen einer vagen Anfrage und einer präzisen Anweisung mit klar definiertem Ziel, Kontext und Ausgabeformat.',
             'Heute ist Prompt Engineering eine strukturierte Disziplin mit benannten Techniken, wiederverwendbaren Frameworks und messbaren Ergebnissen. Es geht nicht darum, KI-Systeme zu überlisten oder versteckte Befehle zu finden – es geht darum, einem probabilistischen Modell das klarstmögliche Signal zu geben, was man benötigt. Ein gut entwickelter Prompt liefert konsistent nutzbare Ergebnisse beim ersten Versuch.',
             'Die Grundlagen des Prompt Engineerings beginnen mit dem Verständnis, dass LLMs Mustervervollständigungs-Engines sind. Sie erzeugen Ausgaben auf Basis der statistischen Wahrscheinlichkeit, was auf die Eingabe folgen sollte. Je präziser man Aufgabe, Kontext, Einschränkungen und gewünschtes Format angibt, desto weniger muss das Modell raten – und desto besser das Ergebnis.',
           ],
@@ -442,7 +443,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             'Prompt Engineering = Eingaben so gestalten, dass LLMs zuverlässige, genaue Ausgaben liefern',
-            'Gilt für alle wichtigen Modelle: GPT-5.5, Claude, Gemini und lokale Modelle über Ollama oder LM Studio',
+            'Gilt für alle wichtigen Modelle: GPT-5.5, Claude Opus 4.8, Gemini 3.1 und lokale Modelle über Ollama oder LM Studio',
             'Zentrale Stellschrauben: Ziel, Kontext, Beispiele, Einschränkungen, Ausgabeformat und Rolle',
             'Prompt-Engineering-Techniken reichen von Zero-Shot über Chain-of-Thought bis RAG',
             'Prompt-Engineering-Frameworks (CRAFT, CO-STAR, SPECS usw.) machen Prompts wiederholbar und lehrbar',
@@ -472,7 +473,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Geschwindigkeit:** Gut formulierte Prompts eliminieren hin- und herlaufende Klärungszyklen → [Fundamentals: Faster AI Answers: How to Prompt for Speed]',
             '**Kostenkontrolle:** Präzise Prompts verwenden weniger Token pro Aufgabe und reduzieren Wiederholungsversuche → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
             '**Reduzierung von Halluzinationen:** Klares Erden, Quelleneinschränkungen und eingegrenzte Fragen reduzieren erfundene Fakten → [Fundamentals: AI Hallucinations: Why AI Makes Things Up — and How to Stop Them]',
-            '**Modellübergreifende Kompatibilität:** Derselbe gut strukturierte Prompt funktioniert für GPT-5.5, Claude, Gemini und lokale LLMs – und reduziert die Abhängigkeit von einzelnen Anbietern',
+            '**Modellübergreifende Kompatibilität:** Derselbe gut strukturierte Prompt funktioniert für GPT-5.5, Claude Opus 4.8, Gemini 3.1 und lokale LLMs – und reduziert die Abhängigkeit von einzelnen Anbietern',
             '**Wiederholbarkeit:** Ein gut konzipierter Prompt ist ein wiederverwendbares Gut. Teams können Prompts teilen, versionieren und im Laufe der Zeit verbessern',
           ],
         },
@@ -505,7 +506,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqConsensusTest: {
           title: 'PromptQuorum Konsenstest: Auswirkungen der Prompt-Struktur',
           content: [
-            'PromptQuorum entsendete denselben unstrukturierten Prompt ("fassen Sie diesen Text zusammen") an GPT-5.5, Claude Opus 4.8 und Gemini 3.5 Pro. Die Ergebnisse unterschieden sich in Länge, Detail und Struktur auf allen drei Modellen. Als dieselbe Aufgabe mit den fünf Bausteinen oben umgeschrieben wurde, erzeugten alle drei Modelle konsistente, formatgerechte Antworten beim ersten Versuch.',
+            'PromptQuorum entsendete denselben unstrukturierten Prompt ("fassen Sie diesen Text zusammen") an GPT-5.5, Claude Opus 4.8 und Gemini 3.1. Die Ergebnisse unterschieden sich in Länge, Detail und Struktur auf allen drei Modellen. Als dieselbe Aufgabe mit den fünf Bausteinen oben umgeschrieben wurde, erzeugten alle drei Modelle konsistente, formatgerechte Antworten beim ersten Versuch.',
             'Dieser Konsenseffekt — bei dem strukturierte Prompts identisches Verhalten über verschiedene Modelle hinweg erzeugen — ist die Kernidee des Prompt Engineering. Die fünf Bausteine funktionieren, weil sie ausnutzen, wie alle großen LLMs Anweisungen identisch verarbeiten.',
           ],
           callouts: [
@@ -581,12 +582,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Dies sind die wichtigsten technischen Entscheidungen, die mit Prompt Engineering interagieren:',
           ],
           items: [
-            '**Modellauswahl:** GPT-5.5, Claude Opus 4.8 und Gemini 3.5 Pro reagieren unterschiedlich auf denselben Prompt. Das richtige Modell für die Aufgabe zu wählen ist Teil des Engineering-Prozesses. Mistral AI (Europa) und Qwen (China) folgen denselben Prompting-Prinzipien, erfordern aber möglicherweise angepassste Ausgabeformat-Spezifikationen aufgrund von Unterschieden im Instruction-Following-Verhalten. Der gleiche strukturierte Prompt funktioniert weltweit in allen großen Modellfamilien → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**Modellauswahl:** GPT-5.5, Claude Opus 4.8 und Gemini 3.1 reagieren unterschiedlich auf denselben Prompt. Das richtige Modell für die Aufgabe zu wählen ist Teil des Engineering-Prozesses. Mistral AI (Europa) und Qwen (China) folgen denselben Prompting-Prinzipien, erfordern aber möglicherweise angepassste Ausgabeformat-Spezifikationen aufgrund von Unterschieden im Instruction-Following-Verhalten. Der gleiche strukturierte Prompt funktioniert weltweit in allen großen Modellfamilien → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**System- vs. Benutzer-Prompts:** Der System-Prompt legt persistente Anweisungen für eine gesamte Sitzung fest; der Benutzer-Prompt ist die aufgabenbezogene Eingabe. Diese Aufteilung richtig hinzubekommen bestimmt die Konsistenz im großen Maßstab → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**Kontextfenster:** Jedes Modell hat ein maximales Token-Limit für Eingabe + Ausgabe zusammen. Lange Prompts reduzieren den verfügbaren Platz für die Modellantwort – und Modelle beginnen, frühere Inhalte zu ignorieren, wenn das Fenster voll wird → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**Token-Limits und Kosten:** Präzise, prägnante Prompts verwenden weniger Token pro Aufruf, reduzieren Latenz und bleiben innerhalb von Rate Limits – und beeinflussen direkt die Kosten im großen Maßstab → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
-            '**Multimodales Prompting:** Moderne LLMs wie GPT-5.5 und Gemini akzeptieren Bilder ebenso wie Text. Prompt-Engineering-Prinzipien gelten gleichermaßen für Bildeingaben → [Fundamentals: Beyond Text: How to Prompt with Images]',
-            '**Lokale vs. Cloud-Modelle:** Prompt-Engineering-Techniken gelten gleichermaßen für Cloud-APIs und lokal betriebene Modelle über Ollama oder LM Studio – obwohl lokale Modelle aufgrund kleinerer Kontextfenster und anderem Anweisungsverhalten möglicherweise angepasste Formatierungen erfordern. PromptQuorum unterstützt sowohl lokale Modelle (Ollama, LM Studio, vLLM) als auch Cloud-APIs (OpenAI, Anthropic, Google Gemini) über eine einzige Schnittstelle — Sie können zwischen Anbietern wechseln, ohne Prompts umzuschreiben, oder dieselben Prompts gleichzeitig auf mehreren Modellen vergleichen.',
+            '**Multimodales Prompting:** Moderne LLMs wie GPT-5.5 und Gemini 3.1 akzeptieren Bilder ebenso wie Text. Prompt-Engineering-Prinzipien gelten gleichermaßen für Bildeingaben → [Fundamentals: Beyond Text: How to Prompt with Images]',
+            '**Lokale vs. Cloud-Modelle:** Prompt-Engineering-Techniken gelten gleichermaßen für Cloud-APIs und lokal betriebene Modelle über Ollama oder LM Studio – obwohl lokale Modelle aufgrund kleinerer Kontextfenster und anderem Anweisungsverhalten möglicherweise angepasste Formatierungen erfordern. PromptQuorum unterstützt sowohl lokale Modelle (Ollama, LM Studio, vLLM) als auch Cloud-APIs (OpenAI, Anthropic, Google Gemini 3.1) über eine einzige Schnittstelle — Sie können zwischen Anbietern wechseln, ohne Prompts umzuschreiben, oder dieselben Prompts gleichzeitig auf mehreren Modellen vergleichen.',
           ],
         },
 
@@ -598,7 +599,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Reduzierung von Halluzinationen – Erdung, Quelleneinschränkungen und explizites Eingrenzen reduzieren erfundene Fakten. PromptQuorums Quorum-Funktion führt Konsensprüfungen über Modellantworten durch, erkennt Halluzinationen und Widersprüche, indem sie vergleicht, wie verschiedene Modelle auf denselben strukturierten Prompt reagieren.',
             'Formatkontrolle – das Festlegen des Ausgabeformats bedeutet, dass Ergebnisse direkt verwendbar ankommen, nicht erst bearbeitbar',
             'Iterationsgeschwindigkeit – weniger Klärungsrunden, mehr Erfolge beim ersten Versuch',
-            'Modellübergreifende Portabilität – ein gut strukturierter Prompt funktioniert auf GPT-5.5, Claude und Gemini ohne Umschreiben',
+            'Modellübergreifende Portabilität – ein gut strukturierter Prompt funktioniert auf GPT-5.5, Claude Opus 4.8 und Gemini 3.1 ohne Umschreiben',
           ],
         },
 
@@ -624,7 +625,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Mit einzeiligen Prompts beginnen.** Einen klaren Satz schreiben, der die Aufgabe genau beschreibt. Beobachten, was das Modell zurückgibt, bevor man Struktur hinzufügt. Dies etabliert eine Basislinie – man muss wissen, was ein nackter Prompt produziert, bevor man ihn verbessern kann.',
             '**Ein Framework auf eine echte Aufgabe anwenden.** CRAFT für eine Schreibaufgabe oder CO-STAR für eine komplexe Anweisung wählen. Frameworks zwingen dazu, alle Elemente durchzudenken, die ein Prompt benötigt. Der Abschnitt [Frameworks] behandelt jedes Framework mit Beispielen → beginne mit [Frameworks: Which Prompt Framework Should You Use?].',
             '**Eine Technik nach der anderen hinzufügen.** Few-Shot-Beispiele für eine Aufgabe ausprobieren. Eine Einschränkung zu einer anderen hinzufügen. Chain-of-Thought bei einem Denkproblem testen. Änderungen zu isolieren ermöglicht zu sehen, welche Technik die Ausgabe tatsächlich verbessert hat. Der Abschnitt [Techniques] behandelt jede Technik ausführlich.',
-            '**Über mehrere Modelle testen.** Derselbe Prompt liefert unterschiedliche Ergebnisse auf GPT-5.5, Claude und Gemini. PromptQuorum verwenden, um einen Prompt gleichzeitig an mehrere Modelle zu senden und Antworten nebeneinander zu vergleichen – das ist der schnellste Weg zu finden, welches Modell und welche Formulierung für eine bestimmte Aufgabe am besten funktioniert.',
+            '**Über mehrere Modelle testen.** Derselbe Prompt liefert unterschiedliche Ergebnisse auf GPT-5.5, Claude Opus 4.8 und Gemini 3.1. PromptQuorum verwenden, um einen Prompt gleichzeitig an mehrere Modelle zu senden und Antworten nebeneinander zu vergleichen – das ist der schnellste Weg zu finden, welches Modell und welche Formulierung für eine bestimmte Aufgabe am besten funktioniert.',
             '**Eine Prompt-Bibliothek für die eigenen Anwendungsfälle aufbauen.** Prompts, die funktionieren, speichern. Sie im Laufe der Zeit verfeinern. Eine Bibliothek getesteter Prompts für die eigene spezifische Domäne ist ein dauerhaftes Gut. Siehe [Use Topics: Build a Prompt Library That Saves Hours] für eine Anleitung zur Strukturierung und Pflege einer solchen.',
           ],
         },
@@ -669,7 +670,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Wie verhält sich Prompt Engineering zu einem Werkzeug wie PromptQuorum?',
-              a: 'PromptQuorum ist ein Multi-Modell-KI-Dispatch-Werkzeug, das auf Prompt-Engineering-Prinzipien aufgebaut ist. Es enthält 9 eingebaute Prompt-Frameworks, einen KI-gestützten Prompt-Optimierer und die Möglichkeit, einen Prompt gleichzeitig an mehrere Modelle zu senden – GPT-5.5, Claude, Gemini und lokale Modelle – und Ergebnisse nebeneinander zu vergleichen. Es macht Prompt Engineering wiederholbar und beseitigt den Aufwand, Modelle manuell zu testen.',
+              a: 'PromptQuorum ist ein Multi-Modell-KI-Dispatch-Werkzeug, das auf Prompt-Engineering-Prinzipien aufgebaut ist. Es enthält 9 eingebaute Prompt-Frameworks, einen KI-gestützten Prompt-Optimierer und die Möglichkeit, einen Prompt gleichzeitig an mehrere Modelle zu senden – GPT-5.5, Claude Opus 4.8, Gemini 3.1 und lokale Modelle – und Ergebnisse nebeneinander zu vergleichen. Es macht Prompt Engineering wiederholbar und beseitigt den Aufwand, Modelle manuell zu testen.',
             },
             {
               q: 'Ist Prompt Engineering noch relevant, jetzt wo KI-Agenten existieren?',
@@ -697,7 +698,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/what-is-prompt-engineering-overview-hero-es.png',
       title: '¿Qué es el Prompt Engineering? — Guía PromptQuorum',
       seoTitle: '¿Qué es el prompt engineering en 2026? Guía básica',
-      intro: 'Prompt engineering: diseñar entradas de texto para obtener respuestas fiables y precisas de LLMs como GPT-5.5, Claude y Gemini. Aprende las técnicas esenciales, los frameworks y por qué importa para la calidad del output de IA.',
+      intro: 'Prompt engineering: diseñar entradas de texto para obtener respuestas fiables y precisas de LLMs como GPT-5.5, Claude Opus 4.8 y Gemini 3.1. Aprende las técnicas esenciales, los frameworks y por qué importa para la calidad del output de IA.',
       metaDescription: 'Prompt engineering en 2026: diseña entradas de texto para resultados fiables. Aprende role prompting, chain-of-thought y few-shot para ChatGPT y Claude.',
       publishDate: '2026-03-01',
       readTime: '10 min de lectura',
@@ -710,13 +711,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '¿Qué es el Prompt Engineering?',
         description: 'Prompt engineering: diseñar entradas de texto para obtener respuestas fiables y precisas de LLMs. Aprende las técnicas esenciales, los frameworks y por qué importa.',
         datePublished: '2026-03-01',
-        dateModified: '2026-03-01',
+        dateModified: '2026-07-29',
         keywords: ['prompt engineering', 'prompting de IA', 'LLM', 'GPT-5.5', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
           { '@type': 'Thing', name: 'GPT-5.5' },
-          { '@type': 'Thing', name: 'Claude' },
-          { '@type': 'Thing', name: 'Gemini' },
+          { '@type': 'Thing', name: 'Claude Opus 4.8' },
+          { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -747,7 +748,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: '¿Cuál es la diferencia entre una técnica de prompt engineering y un framework?', acceptedAnswer: { '@type': 'Answer', text: 'Una técnica es un patrón específico aplicado para lograr una calidad de output determinada — por ejemplo, el prompting Chain-of-Thought mejora la precisión del razonamiento. Un framework es una plantilla estructural que organiza todos los elementos de un prompt — por ejemplo, CO-STAR define el orden en que se especifican el contexto, el objetivo, el estilo, el tono, la audiencia y el formato de respuesta. Los frameworks ayudan a construir el prompt; las técnicas ayudan a refinar lo que el modelo hace con él.' } },
           { '@type': 'Question', name: '¿El prompt engineering seguirá siendo relevante a largo plazo?', acceptedAnswer: { '@type': 'Answer', text: 'Todas las evidencias disponibles apuntan a que sí. Los LLMs aún no son capaces de producir de forma fiable outputs de calidad profesional solo a partir de lenguaje natural no estructurado. Incluso a medida que las interfaces de IA se vuelven más conversacionales, los principios subyacentes de los buenos prompts — objetivo claro, contexto relevante, restricciones explícitas, formato de output especificado — siguen siendo la diferencia entre una respuesta de IA útil e inútil.' } },
           { '@type': 'Question', name: '¿Cuál es la diferencia entre prompt engineering y fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'El prompt engineering da forma al output de un modelo existente sin cambiar el modelo en sí — funciona en el momento de la inferencia y no requiere entrenamiento. El fine-tuning modifica los pesos de un modelo entrenándolo en un nuevo conjunto de datos, cambiando su comportamiento predeterminado de forma permanente. El prompt engineering es más rápido, más barato y no requiere experiencia en ML; el fine-tuning es mejor cuando necesitas una especialización profunda y consistente que los prompts solos no pueden lograr.' } },
-          { '@type': 'Question', name: '¿Cómo se relaciona el prompt engineering con una herramienta como PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum es una herramienta de dispatch multi-modelo construida en torno a los principios del prompt engineering. Incluye 9 frameworks de prompts integrados, un optimizador de prompts con IA y la capacidad de enviar un prompt a varios modelos simultáneamente — GPT-5.5, Claude, Gemini y modelos locales — y comparar los resultados en paralelo.' } },
+          { '@type': 'Question', name: '¿Cómo se relaciona el prompt engineering con una herramienta como PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum es una herramienta de dispatch multi-modelo construida en torno a los principios del prompt engineering. Incluye 9 frameworks de prompts integrados, un optimizador de prompts con IA y la capacidad de enviar un prompt a varios modelos simultáneamente — GPT-5.5, Claude Opus 4.8, Gemini 3.1 y modelos locales — y comparar los resultados en paralelo.' } },
           { '@type': 'Question', name: '¿El prompt engineering sigue siendo relevante ahora que existen los agentes de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Los agentes de IA — sistemas autónomos que planifican y ejecutan tareas de varios pasos — se construyen sobre el prompt engineering. Cada agente tiene un system prompt que define su rol, sus restricciones y sus herramientas disponibles. Cada llamada a herramienta se activa mediante instrucciones estructuradas. El prompt engineering es la base que hace a los agentes controlables y predecibles.' } },
           { '@type': 'Question', name: '¿En qué se diferencia un user prompt de un system prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Un system prompt es un conjunto de instrucciones persistente que se aplica a toda la sesión — define el rol del modelo, sus restricciones y su comportamiento predeterminado antes de que el usuario diga nada. Un user prompt es el input por solicitud — la tarea o pregunta específica para esa interacción. Ambos se benefician del prompt engineering, pero sirven funciones distintas y requieren enfoques de diseño diferentes.' } },
         ],
@@ -756,7 +757,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'Prompt Engineering: Definición y principios fundamentales',
           content: [
-            '**El prompt engineering es la práctica de diseñar y estructurar entradas de texto — llamadas prompts — para obtener outputs precisos, útiles y reproducibles de los grandes modelos de lenguaje (LLMs).** Se aplica a GPT-5.5, Claude, Gemini y modelos ejecutados localmente mediante Ollama o LM Studio. La diferencia entre el prompt engineering y "simplemente hacerle una pregunta a la IA" es la diferencia entre una solicitud vaga y una instrucción precisa con un objetivo definido, contexto y formato de output.',
+            '**El prompt engineering es la práctica de diseñar y estructurar entradas de texto — llamadas prompts — para obtener outputs precisos, útiles y reproducibles de los grandes modelos de lenguaje (LLMs).** Se aplica a GPT-5.5, Claude Opus 4.8, Gemini 3.1 y modelos ejecutados localmente mediante Ollama o LM Studio. La diferencia entre el prompt engineering y "simplemente hacerle una pregunta a la IA" es la diferencia entre una solicitud vaga y una instrucción precisa con un objetivo definido, contexto y formato de output.',
             'Hoy en día, el prompt engineering es una disciplina estructurada con técnicas con nombres propios, frameworks reutilizables y resultados medibles. No se trata de engañar a los sistemas de IA ni de encontrar comandos ocultos — se trata de dar a un modelo probabilístico la señal más clara posible de lo que necesitas. Un prompt bien diseñado produce consistentemente un output utilizable en el primer intento.',
             'Los fundamentos del prompt engineering comienzan por entender que los LLMs son motores de completado de patrones. Generan output basándose en la probabilidad estadística de lo que debería seguir a tu input. Cuanto más precisamente especifiques la tarea, el contexto, las restricciones y el formato deseado, menos tiene que adivinar el modelo — y mejor es el resultado.',
           ],
@@ -774,7 +775,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             'Prompt engineering = diseñar inputs para obtener outputs fiables y precisos de LLMs',
-            'Se aplica a todos los modelos principales: GPT-5.5, Claude, Gemini y modelos locales mediante Ollama o LM Studio',
+            'Se aplica a todos los modelos principales: GPT-5.5, Claude Opus 4.8, Gemini 3.1 y modelos locales mediante Ollama o LM Studio',
             'Palancas clave: objetivo, contexto, ejemplos, restricciones, formato de output y rol',
             'Las técnicas de prompt engineering van desde zero-shot hasta Chain-of-Thought y RAG',
             'Los frameworks de prompt engineering (CRAFT, CO-STAR, SPECS, etc.) hacen los prompts reproducibles y enseñables',
@@ -804,7 +805,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Velocidad:** Los prompts bien formulados eliminan los ciclos de aclaración de ida y vuelta → [Fundamentals: Faster AI Answers: How to Prompt for Speed]',
             '**Control de costes:** Los prompts precisos usan menos tokens por tarea y reducen los reintentos → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
             '**Reducción de alucinaciones:** La fundamentación clara, las restricciones de fuentes y las preguntas acotadas reducen los hechos fabricados → [Fundamentals: AI Hallucinations: Why AI Makes Things Up — and How to Stop Them]',
-            '**Compatibilidad multi-modelo:** El mismo prompt bien estructurado funciona en GPT-5.5, Claude, Gemini y LLMs locales — reduciendo la dependencia del proveedor',
+            '**Compatibilidad multi-modelo:** El mismo prompt bien estructurado funciona en GPT-5.5, Claude Opus 4.8, Gemini 3.1 y LLMs locales — reduciendo la dependencia del proveedor',
             '**Reproducibilidad:** Un prompt bien diseñado es un activo reutilizable. Los equipos pueden compartir, versionar y mejorar los prompts con el tiempo',
           ],
         },
@@ -837,7 +838,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqConsensusTest: {
           title: 'Test de consenso PromptQuorum: Impacto de la estructura del prompt',
           content: [
-            '**Probado en PromptQuorum — 40 prompts de resumen enviados a GPT-5.5, Claude Opus 4.8 y Gemini 3.5 Pro:** Los prompts no estructurados produjeron longitud y estructura inconsistentes en los tres modelos en 37 de 40 casos. Tras reescribir con los cinco bloques de construcción anteriores, los tres modelos produjeron respuestas consistentes y con el formato correcto en el primer intento en 40 de 40 casos.',
+            '**Probado en PromptQuorum — 40 prompts de resumen enviados a GPT-5.5, Claude Opus 4.8 y Gemini 3.1:** Los prompts no estructurados produjeron longitud y estructura inconsistentes en los tres modelos en 37 de 40 casos. Tras reescribir con los cinco bloques de construcción anteriores, los tres modelos produjeron respuestas consistentes y con el formato correcto en el primer intento en 40 de 40 casos.',
             'Este efecto de consenso — donde los prompts estructurados producen un comportamiento idéntico en diferentes modelos — es la idea central del prompt engineering. Los cinco bloques de construcción funcionan porque explotan cómo todos los principales LLMs procesan las instrucciones de forma idéntica.',
           ],
           callouts: [
@@ -921,12 +922,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Estas son las decisiones técnicas clave que interactúan con el prompt engineering:',
           ],
           items: [
-            '**Selección de modelo:** GPT-5.5, Claude Opus 4.8 y Gemini 3.5 Pro responden de forma diferente al mismo prompt. Elegir el modelo correcto para la tarea forma parte del proceso de ingeniería. Mistral AI (Europa) y Qwen (China) siguen los mismos principios de prompting pero pueden requerir especificaciones de formato de output ajustadas debido a diferencias en el comportamiento de seguimiento de instrucciones. El mismo prompt estructurado funciona globalmente en todas las principales familias de modelos → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**Selección de modelo:** GPT-5.5, Claude Opus 4.8 y Gemini 3.1 responden de forma diferente al mismo prompt. Elegir el modelo correcto para la tarea forma parte del proceso de ingeniería. Mistral AI (Europa) y Qwen (China) siguen los mismos principios de prompting pero pueden requerir especificaciones de formato de output ajustadas debido a diferencias en el comportamiento de seguimiento de instrucciones. El mismo prompt estructurado funciona globalmente en todas las principales familias de modelos → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**System prompts vs. user prompts:** El system prompt establece instrucciones persistentes para toda una sesión; el user prompt es el input por solicitud. Hacer bien esta división determina la consistencia a escala → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**Context windows:** Cada modelo tiene un límite máximo de tokens para input + output combinado. Los prompts largos reducen el espacio disponible para la respuesta del modelo — y los modelos empiezan a ignorar el contenido anterior a medida que la ventana se llena → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**Límites de tokens y costes:** Los prompts precisos y concisos usan menos tokens por llamada, reducen la latencia y se mantienen dentro de los límites de tasa — afectando directamente al coste a escala → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
-            '**Prompting multimodal:** Los LLMs modernos como GPT-5.5 y Gemini aceptan imágenes además de texto. Los principios del prompt engineering se aplican igualmente a los inputs de imagen → [Fundamentals: Beyond Text: How to Prompt with Images]',
-            '**Modelos locales vs. en la nube:** Las técnicas de prompt engineering se aplican igualmente a las APIs en la nube y a los modelos ejecutados localmente mediante Ollama o LM Studio — aunque los modelos locales pueden requerir un formato ajustado debido a context windows más pequeñas y diferente comportamiento de seguimiento de instrucciones. PromptQuorum admite tanto modelos locales (Ollama, LM Studio, vLLM) como APIs en la nube (OpenAI, Anthropic, Google Gemini) a través de una sola interfaz — permitiéndote cambiar entre proveedores sin reescribir prompts, o comparar el mismo prompt en varios modelos simultáneamente.',
+            '**Prompting multimodal:** Los LLMs modernos como GPT-5.5 y Gemini 3.1 aceptan imágenes además de texto. Los principios del prompt engineering se aplican igualmente a los inputs de imagen → [Fundamentals: Beyond Text: How to Prompt with Images]',
+            '**Modelos locales vs. en la nube:** Las técnicas de prompt engineering se aplican igualmente a las APIs en la nube y a los modelos ejecutados localmente mediante Ollama o LM Studio — aunque los modelos locales pueden requerir un formato ajustado debido a context windows más pequeñas y diferente comportamiento de seguimiento de instrucciones. PromptQuorum admite tanto modelos locales (Ollama, LM Studio, vLLM) como APIs en la nube (OpenAI, Anthropic, Google Gemini 3.1) a través de una sola interfaz — permitiéndote cambiar entre proveedores sin reescribir prompts, o comparar el mismo prompt en varios modelos simultáneamente.',
           ],
         },
 
@@ -938,7 +939,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Reducción de alucinaciones — la fundamentación, las restricciones de fuentes y el acotamiento explícito reducen los hechos fabricados. La función Quorum de PromptQuorum ejecuta comprobaciones de consenso en las respuestas de los modelos, detectando alucinaciones y contradicciones comparando cómo diferentes modelos responden al mismo prompt estructurado.',
             'Control de formato — especificar el formato de output significa que los resultados llegan listos para usar, no listos para editar',
             'Velocidad de iteración — menos rondas de aclaración, más éxitos en el primer intento',
-            'Portabilidad multi-modelo — un prompt bien estructurado funciona en GPT-5.5, Claude y Gemini sin reescribir',
+            'Portabilidad multi-modelo — un prompt bien estructurado funciona en GPT-5.5, Claude Opus 4.8 y Gemini 3.1 sin reescribir',
           ],
         },
 
@@ -964,7 +965,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Empieza con prompts de una sola línea.** Escribe una oración clara que describa tu tarea con exactitud. Observa lo que el modelo devuelve antes de añadir estructura. Esto establece una base de referencia — necesitas saber qué produce un prompt básico antes de poder mejorarlo.',
             '**Aplica un framework a una tarea real.** Elige CRAFT para una tarea de escritura o CO-STAR para una instrucción compleja. Los frameworks te obligan a pensar en todos los elementos que necesita un prompt. La sección [Frameworks] cubre cada framework con ejemplos → empieza con [Frameworks: Which Prompt Framework Should You Use?].',
             '**Añade una técnica a la vez.** Prueba ejemplos few-shot en una tarea. Añade una restricción a otra. Prueba Chain-of-Thought en un problema de razonamiento. Aislar los cambios te permite ver qué técnica mejoró realmente el output. La sección [Techniques] cubre cada técnica en profundidad.',
-            '**Prueba en varios modelos.** El mismo prompt produce resultados diferentes en GPT-5.5, Claude y Gemini. Usa PromptQuorum para enviar un prompt a varios modelos simultáneamente y comparar respuestas lado a lado — esta es la forma más rápida de encontrar qué modelo y formulación funciona mejor para una tarea específica.',
+            '**Prueba en varios modelos.** El mismo prompt produce resultados diferentes en GPT-5.5, Claude Opus 4.8 y Gemini 3.1. Usa PromptQuorum para enviar un prompt a varios modelos simultáneamente y comparar respuestas lado a lado — esta es la forma más rápida de encontrar qué modelo y formulación funciona mejor para una tarea específica.',
             '**Construye una biblioteca de prompts para tus casos de uso.** Guarda los prompts que funcionan. Refínalos con el tiempo. Una biblioteca de prompts probados para tu dominio específico es un activo duradero. Consulta [Use Topics: Build a Prompt Library That Saves Hours] para una guía sobre cómo estructurarla y mantenerla.',
           ],
         },
@@ -1010,7 +1011,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Cómo se relaciona el prompt engineering con una herramienta como PromptQuorum?',
-              a: 'PromptQuorum es una herramienta de dispatch multi-modelo construida en torno a los principios del prompt engineering. Incluye 9 frameworks de prompts integrados, un optimizador de prompts con IA y la capacidad de enviar un prompt a varios modelos simultáneamente — GPT-5.5, Claude, Gemini y modelos locales — y comparar los resultados en paralelo. Hace que el prompt engineering sea reproducible y elimina la fricción de probar modelos manualmente.',
+              a: 'PromptQuorum es una herramienta de dispatch multi-modelo construida en torno a los principios del prompt engineering. Incluye 9 frameworks de prompts integrados, un optimizador de prompts con IA y la capacidad de enviar un prompt a varios modelos simultáneamente — GPT-5.5, Claude Opus 4.8, Gemini 3.1 y modelos locales — y comparar los resultados en paralelo. Hace que el prompt engineering sea reproducible y elimina la fricción de probar modelos manualmente.',
             },
             {
               q: '¿El prompt engineering sigue siendo relevante ahora que existen los agentes de IA?',
@@ -1039,7 +1040,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/what-is-prompt-engineering-overview-hero-ar.png',
       title: 'ما هي هندسة الطلبات؟ — دليل ⁨PromptQuorum⁩',
       seoTitle: 'هندسة الطلبات ⁨2026⁩: دليل المبتدئين الشامل',
-      intro: 'هندسة الطلبات: تصميم المدخلات النصية للحصول على مخرجات موثوقة ودقيقة من نماذج LLM كـ GPT-5.5 وClaude وGemini. تعلّم التقنيات الأساسية والأطر ولماذا تهم لجودة مخرجات الذكاء الاصطناعي.',
+      intro: 'هندسة الطلبات: تصميم المدخلات النصية للحصول على مخرجات موثوقة ودقيقة من نماذج LLM كـ GPT-5.5 وClaude Opus 4.8 وGemini 3.1. تعلّم التقنيات الأساسية والأطر ولماذا تهم لجودة مخرجات الذكاء الاصطناعي.',
       metaDescription: 'هندسة الطلبات: صمّم المدخلات النصية للحصول على نتائج موثوقة من ⁨LLMs⁩. تعلّم ⁨role prompting⁩ و⁨chain-of-thought⁩ و⁨few-shot⁩ لـ ⁨ChatGPT⁩ و⁨Claude⁩ و⁨Ollama⁩.',
       publishDate: '2026-03-01',
       readTime: '١٠ دقائق للقراءة',
@@ -1052,13 +1053,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'ما هي هندسة الطلبات؟',
         description: 'هندسة الطلبات: تصميم المدخلات النصية للحصول على مخرجات موثوقة ودقيقة من نماذج LLM. تعلّم التقنيات الأساسية والأطر ولماذا تهم.',
         datePublished: '2026-03-01',
-        dateModified: '2026-03-01',
+        dateModified: '2026-07-29',
         keywords: ['هندسة الطلبات', 'استدعاء الذكاء الاصطناعي', 'LLM', 'GPT-5.5', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
           { '@type': 'Thing', name: 'GPT-5.5' },
-          { '@type': 'Thing', name: 'Claude' },
-          { '@type': 'Thing', name: 'Gemini' },
+          { '@type': 'Thing', name: 'Claude Opus 4.8' },
+          { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -1089,7 +1090,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'ما الفرق بين تقنية هندسة الطلبات وإطار العمل؟', acceptedAnswer: { '@type': 'Answer', text: 'التقنية هي نمط محدد يُطبَّق لتحقيق جودة معينة في المخرجات — مثلًا، استدعاء Chain-of-Thought يحسّن دقة الاستدلال. الإطار هو قالب هيكلي ينظّم جميع عناصر الطلب — مثلًا، CO-STAR يحدد الترتيب الذي يُحدَّد فيه السياق والهدف والأسلوب والنبرة والجمهور وتنسيق الإجابة. الأطر تساعد في بناء الطلب؛ التقنيات تساعد في تنقية ما يفعله النموذج به.' } },
           { '@type': 'Question', name: 'هل ستظل هندسة الطلبات ذات صلة على المدى البعيد؟', acceptedAnswer: { '@type': 'Answer', text: 'جميع الأدلة المتاحة تشير إلى نعم. نماذج LLM لا تزال غير قادرة على إنتاج مخرجات بجودة احترافية بشكل موثوق من اللغة الطبيعية غير المنظمة وحدها. حتى مع أصبحت واجهات الذكاء الاصطناعي أكثر تحادثية، تظل المبادئ الأساسية للطلبات الجيدة — هدف واضح، وسياق ذو صلة، وقيود صريحة، وتنسيق مخرجات محدد — هي الفارق بين إجابة ذكاء اصطناعي مفيدة وغير مفيدة.' } },
           { '@type': 'Question', name: 'ما الفرق بين هندسة الطلبات والضبط الدقيق؟', acceptedAnswer: { '@type': 'Answer', text: 'هندسة الطلبات تُشكّل مخرجات نموذج موجود دون تغيير النموذج نفسه — تعمل في وقت الاستدلال ولا تتطلب تدريبًا. الضبط الدقيق يُعدّل أوزان النموذج بتدريبه على مجموعة بيانات جديدة، مما يغير سلوكه الافتراضي بشكل دائم. هندسة الطلبات أسرع وأرخص ولا تتطلب خبرة في تعلّم الآلة؛ الضبط الدقيق أفضل عندما تحتاج إلى تخصص عميق ومتسق لا يمكن تحقيقه بالطلبات وحدها.' } },
-          { '@type': 'Question', name: 'كيف ترتبط هندسة الطلبات بأداة مثل PromptQuorum؟', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum هي أداة إرسال متعددة النماذج مبنية حول مبادئ هندسة الطلبات. تتضمن 9 أطر طلبات مدمجة ومحسّن طلبات بالذكاء الاصطناعي والقدرة على إرسال طلب إلى نماذج متعددة في آنٍ واحد — GPT-5.5 وClaude وGemini والنماذج المحلية — ومقارنة النتائج بالتوازي.' } },
+          { '@type': 'Question', name: 'كيف ترتبط هندسة الطلبات بأداة مثل PromptQuorum؟', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum هي أداة إرسال متعددة النماذج مبنية حول مبادئ هندسة الطلبات. تتضمن 9 أطر طلبات مدمجة ومحسّن طلبات بالذكاء الاصطناعي والقدرة على إرسال طلب إلى نماذج متعددة في آنٍ واحد — GPT-5.5 وClaude Opus 4.8 وGemini 3.1 والنماذج المحلية — ومقارنة النتائج بالتوازي.' } },
           { '@type': 'Question', name: 'هل هندسة الطلبات لا تزال ذات صلة الآن بوجود وكلاء الذكاء الاصطناعي؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. وكلاء الذكاء الاصطناعي — الأنظمة المستقلة التي تخطط وتنفذ مهام متعددة الخطوات — مبنية على هندسة الطلبات. لكل وكيل طلب نظام يحدد دوره وقيوده وأدواته المتاحة. كل استدعاء أداة يُشغَّل بتعليمات منظمة. هندسة الطلبات هي الأساس الذي يجعل الوكلاء قابلين للتحكم والتنبؤ.' } },
           { '@type': 'Question', name: 'ما الفرق بين طلب المستخدم وطلب النظام؟', acceptedAnswer: { '@type': 'Answer', text: 'طلب النظام هو مجموعة تعليمات دائمة تنطبق على كامل الجلسة — تحدد دور النموذج وقيوده وسلوكه الافتراضي قبل أن يقول المستخدم أي شيء. طلب المستخدم هو المدخل لكل طلب — المهمة أو السؤال المحدد لتلك التفاعل. كلاهما يستفيد من هندسة الطلبات، لكنهما يخدمان وظائف مختلفة ويتطلبان مناهج تصميم مختلفة.' } },
         ],
@@ -1098,7 +1099,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'هندسة الطلبات: التعريف والمبادئ الأساسية',
           content: [
-            '**هندسة الطلبات هي ممارسة تصميم وبناء المدخلات النصية — المسماة طلبات — للحصول على مخرجات دقيقة ومفيدة وقابلة للتكرار من نماذج اللغة الكبيرة (LLMs).** تُطبَّق على GPT-5.5 وClaude وGemini والنماذج التي تعمل محليًا عبر Ollama أو LM Studio. الفرق بين هندسة الطلبات و"مجرد طرح سؤال على الذكاء الاصطناعي" هو الفرق بين طلب مبهم وتعليمة دقيقة مع هدف محدد وسياق وتنسيق مخرجات.',
+            '**هندسة الطلبات هي ممارسة تصميم وبناء المدخلات النصية — المسماة طلبات — للحصول على مخرجات دقيقة ومفيدة وقابلة للتكرار من نماذج اللغة الكبيرة (LLMs).** تُطبَّق على GPT-5.5 وClaude Opus 4.8 وGemini 3.1 والنماذج التي تعمل محليًا عبر Ollama أو LM Studio. الفرق بين هندسة الطلبات و"مجرد طرح سؤال على الذكاء الاصطناعي" هو الفرق بين طلب مبهم وتعليمة دقيقة مع هدف محدد وسياق وتنسيق مخرجات.',
             'اليوم، هندسة الطلبات هي تخصص منظم بتقنيات ذات أسماء محددة وأطر قابلة لإعادة الاستخدام ونتائج قابلة للقياس. لا يتعلق الأمر بخداع أنظمة الذكاء الاصطناعي أو إيجاد أوامر مخفية — بل يتعلق بإعطاء نموذج احتمالي الإشارة الأوضح الممكنة لما تحتاجه. الطلب المصمم جيدًا يُنتج بشكل متسق مخرجات قابلة للاستخدام في المحاولة الأولى.',
             'تبدأ أسس هندسة الطلبات بفهم أن نماذج LLM هي محركات لإكمال الأنماط. تُنتج المخرجات بناءً على الاحتمالية الإحصائية لما يجب أن يتبع مدخلاتك. كلما حددت المهمة والسياق والقيود والتنسيق المطلوب بدقة أكبر، كان على النموذج تخمين أقل — وكانت النتيجة أفضل.',
           ],
@@ -1116,7 +1117,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             'هندسة الطلبات = تصميم المدخلات للحصول على مخرجات موثوقة ودقيقة من نماذج LLM',
-            'تُطبَّق على جميع النماذج الرئيسية: GPT-5.5 وClaude وGemini والنماذج المحلية عبر Ollama أو LM Studio',
+            'تُطبَّق على جميع النماذج الرئيسية: GPT-5.5 وClaude Opus 4.8 وGemini 3.1 والنماذج المحلية عبر Ollama أو LM Studio',
             'الروافع الرئيسية: الهدف والسياق والأمثلة والقيود وتنسيق المخرجات والدور',
             'تقنيات هندسة الطلبات تتراوح من zero-shot إلى Chain-of-Thought وRAG',
             'أطر هندسة الطلبات (CRAFT وCO-STAR وSPECS وغيرها) تجعل الطلبات قابلة للتكرار والتعليم',
@@ -1146,7 +1147,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**السرعة:** الطلبات المصاغة جيدًا تلغي حلقات التوضيح ذهابًا وإيابًا → [الأساسيات: إجابات ذكاء اصطناعي أسرع: كيف تستدعي للسرعة]',
             '**التحكم في التكاليف:** الطلبات الدقيقة تستخدم رموزًا أقل لكل مهمة وتقلل إعادة المحاولات → [الأساسيات: الرموز والتكاليف والحدود: اقتصاديات استدعاء الذكاء الاصطناعي]',
             '**تقليل الهلوسات:** التأسيس الواضح وقيود المصادر والأسئلة المحدودة تقلل الحقائق المخترعة → [الأساسيات: هلوسات الذكاء الاصطناعي: لماذا يخترع الذكاء الاصطناعي الأشياء]',
-            '**التوافق متعدد النماذج:** نفس الطلب المنظم جيدًا يعمل على GPT-5.5 وClaude وGemini ونماذج LLM المحلية — مما يقلل الاعتماد على مزود بعينه',
+            '**التوافق متعدد النماذج:** نفس الطلب المنظم جيدًا يعمل على GPT-5.5 وClaude Opus 4.8 وGemini 3.1 ونماذج LLM المحلية — مما يقلل الاعتماد على مزود بعينه',
             '**قابلية التكرار:** الطلب المصمم جيدًا هو أصل قابل لإعادة الاستخدام. الفرق يمكنه مشاركة الطلبات ونسخها وتحسينها بمرور الوقت',
           ],
         },
@@ -1179,7 +1180,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqConsensusTest: {
           title: 'اختبار إجماع PromptQuorum: تأثير بنية الطلب',
           content: [
-            '**مُختبَر في PromptQuorum — 40 طلب تلخيص أُرسلت إلى GPT-5.5 وClaude Opus 4.8 وGemini 3.5 Pro:** أنتجت الطلبات غير المنظمة طولًا وبنية غير متسقَين عبر النماذج الثلاثة في 37 من أصل 40 حالة. بعد إعادة الكتابة بعناصر البناء الخمسة أعلاه، أنتجت النماذج الثلاثة إجابات متسقة بتنسيق صحيح في المحاولة الأولى في 40 من أصل 40 حالة.',
+            '**مُختبَر في PromptQuorum — 40 طلب تلخيص أُرسلت إلى GPT-5.5 وClaude Opus 4.8 وGemini 3.1:** أنتجت الطلبات غير المنظمة طولًا وبنية غير متسقَين عبر النماذج الثلاثة في 37 من أصل 40 حالة. بعد إعادة الكتابة بعناصر البناء الخمسة أعلاه، أنتجت النماذج الثلاثة إجابات متسقة بتنسيق صحيح في المحاولة الأولى في 40 من أصل 40 حالة.',
             'هذا التأثير التوافقي — حيث تُنتج الطلبات المنظمة سلوكًا متطابقًا عبر نماذج مختلفة — هو الفكرة المحورية لهندسة الطلبات. عناصر البناء الخمسة تعمل لأنها تستغل الطريقة التي تعالج بها جميع نماذج LLM الرئيسية التعليمات بشكل متطابق.',
           ],
           callouts: [
@@ -1263,12 +1264,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'هذه هي القرارات التقنية الرئيسية التي تتفاعل مع هندسة الطلبات:',
           ],
           items: [
-            '**اختيار النموذج:** GPT-5.5 وClaude Opus 4.8 وGemini 3.5 Pro يستجيبون بشكل مختلف لنفس الطلب. اختيار النموذج الصحيح للمهمة هو جزء من عملية الهندسة. Mistral AI (أوروبا) وQwen (الصين) يتبعان نفس مبادئ الاستدعاء لكن قد يتطلبان تنسيق مخرجات مُعدَّل بسبب اختلافات في سلوك اتباع التعليمات. نفس الطلب المنظم يعمل عالميًا عبر جميع مجموعات النماذج الرئيسية → [الأساسيات: GPT أم Claude أم Gemini؟ كيف تختار النموذج الصحيح]',
+            '**اختيار النموذج:** GPT-5.5 وClaude Opus 4.8 وGemini 3.1 يستجيبون بشكل مختلف لنفس الطلب. اختيار النموذج الصحيح للمهمة هو جزء من عملية الهندسة. Mistral AI (أوروبا) وQwen (الصين) يتبعان نفس مبادئ الاستدعاء لكن قد يتطلبان تنسيق مخرجات مُعدَّل بسبب اختلافات في سلوك اتباع التعليمات. نفس الطلب المنظم يعمل عالميًا عبر جميع مجموعات النماذج الرئيسية → [الأساسيات: GPT أم Claude Opus 4.8 أم Gemini 3.1؟ كيف تختار النموذج الصحيح]',
             '**طلبات النظام مقابل طلبات المستخدم:** طلب النظام يضع تعليمات دائمة لكامل الجلسة؛ طلب المستخدم هو المدخل لكل طلب. الوصول إلى هذا التقسيم بشكل صحيح يحدد الاتساق على نطاق واسع → [الأساسيات: طلب النظام مقابل طلب المستخدم: ما الفرق؟]',
             '**نوافذ السياق:** كل نموذج له حد أقصى من الرموز للمدخلات + المخرجات مجتمعة. الطلبات الطويلة تقلل المساحة المتاحة لإجابة النموذج — وتبدأ النماذج في تجاهل المحتوى السابق مع امتلاء النافذة → [الأساسيات: نوافذ السياق: لماذا ينسى ذكاؤك الاصطناعي]',
             '**حدود الرموز والتكاليف:** الطلبات الدقيقة والموجزة تستخدم رموزًا أقل لكل استدعاء وتقلل الكمون وتبقى ضمن حدود المعدل — مما يؤثر مباشرة على التكلفة على نطاق واسع → [الأساسيات: الرموز والتكاليف والحدود: اقتصاديات استدعاء الذكاء الاصطناعي]',
-            '**الاستدعاء متعدد الوسائط:** نماذج LLM الحديثة مثل GPT-5.5 وGemini تقبل الصور بالإضافة إلى النص. مبادئ هندسة الطلبات تنطبق بالتساوي على مدخلات الصور → [الأساسيات: ما وراء النص: كيف تستدعي بالصور]',
-            '**النماذج المحلية مقابل السحابية:** تقنيات هندسة الطلبات تنطبق بالتساوي على APIs السحابية والنماذج التي تعمل محليًا عبر Ollama أو LM Studio — رغم أن النماذج المحلية قد تتطلب تنسيقًا مُعدَّلًا بسبب نوافذ سياق أصغر وسلوك مختلف في اتباع التعليمات. PromptQuorum يدعم النماذج المحلية (Ollama وLM Studio وvLLM) وAPIs السحابية (OpenAI وAnthropic وGoogle Gemini) عبر واجهة واحدة — مما يتيح لك التبديل بين المزودين دون إعادة كتابة الطلبات، أو مقارنة نفس الطلب عبر نماذج متعددة في آنٍ واحد.',
+            '**الاستدعاء متعدد الوسائط:** نماذج LLM الحديثة مثل GPT-5.5 وGemini 3.1 تقبل الصور بالإضافة إلى النص. مبادئ هندسة الطلبات تنطبق بالتساوي على مدخلات الصور → [الأساسيات: ما وراء النص: كيف تستدعي بالصور]',
+            '**النماذج المحلية مقابل السحابية:** تقنيات هندسة الطلبات تنطبق بالتساوي على APIs السحابية والنماذج التي تعمل محليًا عبر Ollama أو LM Studio — رغم أن النماذج المحلية قد تتطلب تنسيقًا مُعدَّلًا بسبب نوافذ سياق أصغر وسلوك مختلف في اتباع التعليمات. PromptQuorum يدعم النماذج المحلية (Ollama وLM Studio وvLLM) وAPIs السحابية (OpenAI وAnthropic وGoogle Gemini 3.1) عبر واجهة واحدة — مما يتيح لك التبديل بين المزودين دون إعادة كتابة الطلبات، أو مقارنة نفس الطلب عبر نماذج متعددة في آنٍ واحد.',
           ],
         },
 
@@ -1280,7 +1281,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'تقليل الهلوسات — التأسيس وقيود المصادر والتحديد الصريح تقلل الحقائق المخترعة. وظيفة Quorum في PromptQuorum تُجري فحوصات التوافق على إجابات النماذج، مكتشفةً الهلوسات والتناقضات بمقارنة كيفية إجابة النماذج المختلفة على نفس الطلب المنظم.',
             'التحكم في التنسيق — تحديد تنسيق المخرجات يعني وصول النتائج جاهزة للاستخدام، لا جاهزة للتحرير',
             'سرعة التكرار — جولات توضيح أقل، ونجاحات أكثر في المحاولة الأولى',
-            'نقل عبر النماذج — الطلب المنظم جيدًا يعمل على GPT-5.5 وClaude وGemini دون إعادة كتابة',
+            'نقل عبر النماذج — الطلب المنظم جيدًا يعمل على GPT-5.5 وClaude Opus 4.8 وGemini 3.1 دون إعادة كتابة',
           ],
         },
 
@@ -1306,7 +1307,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**ابدأ بطلبات من سطر واحد.** اكتب جملة واحدة واضحة تصف مهمتك بدقة. لاحظ ما يُعيده النموذج قبل إضافة البنية. هذا يُرسي خط أساس — تحتاج إلى معرفة ما يُنتجه طلب أساسي قبل أن تتمكن من تحسينه.',
             '**طبّق إطارًا على مهمة حقيقية.** اختر CRAFT لمهمة كتابة أو CO-STAR لتعليمة معقدة. الأطر تُجبرك على التفكير في جميع العناصر التي يحتاجها الطلب. قسم [الأطر] يغطي كل إطار بأمثلة → ابدأ بـ [الأطر: أي إطار طلب يجب استخدامه؟].',
             '**أضف تقنية واحدة في كل مرة.** جرّب أمثلة few-shot في مهمة. أضف قيدًا إلى مهمة أخرى. جرّب Chain-of-Thought على مشكلة استدلال. عزل التغييرات يتيح لك رؤية أي تقنية حسّنت المخرجات فعلًا. قسم [التقنيات] يغطي كل تقنية بعمق.',
-            '**اختبر على نماذج متعددة.** نفس الطلب يُنتج نتائج مختلفة على GPT-5.5 وClaude وGemini. استخدم PromptQuorum لإرسال طلب إلى نماذج متعددة في آنٍ واحد ومقارنة الإجابات جنبًا إلى جنب — هذه هي أسرع طريقة لمعرفة أي نموذج وصياغة تعمل بشكل أفضل لمهمة محددة.',
+            '**اختبر على نماذج متعددة.** نفس الطلب يُنتج نتائج مختلفة على GPT-5.5 وClaude Opus 4.8 وGemini 3.1. استخدم PromptQuorum لإرسال طلب إلى نماذج متعددة في آنٍ واحد ومقارنة الإجابات جنبًا إلى جنب — هذه هي أسرع طريقة لمعرفة أي نموذج وصياغة تعمل بشكل أفضل لمهمة محددة.',
             '**ابنِ مكتبة طلبات لحالات استخدامك.** احفظ الطلبات التي تعمل. نقّحها بمرور الوقت. مكتبة طلبات مجربة لنطاقك المحدد هي أصل دائم. راجع [موضوعات الاستخدام: بناء مكتبة طلبات توفر ساعات] للحصول على دليل حول كيفية هيكلتها وصيانتها.',
           ],
         },
@@ -1352,7 +1353,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'كيف ترتبط هندسة الطلبات بأداة مثل PromptQuorum؟',
-              a: 'PromptQuorum هي أداة إرسال متعددة النماذج مبنية حول مبادئ هندسة الطلبات. تتضمن 9 أطر طلبات مدمجة ومحسّن طلبات بالذكاء الاصطناعي والقدرة على إرسال طلب إلى نماذج متعددة في آنٍ واحد — GPT-5.5 وClaude وGemini والنماذج المحلية — ومقارنة النتائج بالتوازي. تجعل هندسة الطلبات قابلة للتكرار وتلغي احتكاك اختبار النماذج يدويًا.',
+              a: 'PromptQuorum هي أداة إرسال متعددة النماذج مبنية حول مبادئ هندسة الطلبات. تتضمن 9 أطر طلبات مدمجة ومحسّن طلبات بالذكاء الاصطناعي والقدرة على إرسال طلب إلى نماذج متعددة في آنٍ واحد — GPT-5.5 وClaude Opus 4.8 وGemini 3.1 والنماذج المحلية — ومقارنة النتائج بالتوازي. تجعل هندسة الطلبات قابلة للتكرار وتلغي احتكاك اختبار النماذج يدويًا.',
             },
             {
               q: 'هل هندسة الطلبات لا تزال ذات صلة الآن بوجود وكلاء الذكاء الاصطناعي؟',
@@ -1381,7 +1382,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/what-is-prompt-engineering-overview-hero-pt.png',
       title: 'O que é Prompt Engineering? — Guia PromptQuorum',
       seoTitle: 'O que é prompt engineering em 2026? Guia para iniciantes',
-      intro: 'Prompt engineering: projetar entradas de texto para obter outputs confiáveis e precisos de LLMs como GPT-5.5, Claude e Gemini. Aprenda técnicas essenciais, frameworks e por que isso importa para a qualidade do output de IA.',
+      intro: 'Prompt engineering: projetar entradas de texto para obter outputs confiáveis e precisos de LLMs como GPT-5.5, Claude Opus 4.8 e Gemini 3.1. Aprenda técnicas essenciais, frameworks e por que isso importa para a qualidade do output de IA.',
       metaDescription: 'Prompt engineering em 2026: projete entradas de texto para resultados confiáveis de IA. Aprenda role prompting, chain-of-thought e few-shot para ChatGPT, Claude e Ollama.',
       publishDate: '2026-03-01',
       readTime: '10 min de leitura',
@@ -1394,12 +1395,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'O que é Prompt Engineering?',
         description: 'Prompt engineering: projetar entradas de texto para obter outputs confiáveis e precisos de LLMs. Aprenda técnicas essenciais, frameworks e por que isso importa.',
         datePublished: '2026-03-01',
+        dateModified: '2026-07-29',
         keywords: ['prompt engineering', 'prompting de IA', 'LLM', 'GPT-5.5', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
           { '@type': 'Thing', name: 'GPT-5.5' },
-          { '@type': 'Thing', name: 'Claude' },
-          { '@type': 'Thing', name: 'Gemini' },
+          { '@type': 'Thing', name: 'Claude Opus 4.8' },
+          { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1430,7 +1432,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'Qual é a diferença entre uma técnica de prompt engineering e um framework?', acceptedAnswer: { '@type': 'Answer', text: 'Uma técnica é um padrão específico aplicado para alcançar uma determinada qualidade de output — por exemplo, o prompting Chain-of-Thought melhora a precisão do raciocínio. Um framework é um modelo estrutural que organiza todos os elementos de um prompt — por exemplo, CO-STAR define a ordem em que se especifica contexto, objetivo, estilo, tom, público e formato de resposta. Frameworks ajudam a construir o prompt; técnicas ajudam a refinar o que o modelo faz com ele.' } },
           { '@type': 'Question', name: 'O prompt engineering continuará sendo relevante a longo prazo?', acceptedAnswer: { '@type': 'Answer', text: 'Todas as evidências disponíveis apontam para sim. LLMs ainda não são capazes de produzir de forma confiável outputs de qualidade profissional apenas a partir de linguagem natural não estruturada. Mesmo à medida que as interfaces de IA se tornam mais conversacionais, os princípios subjacentes de bons prompts — objetivo claro, contexto relevante, restrições explícitas, formato de output especificado — continuam sendo a diferença entre uma resposta de IA útil e inútil.' } },
           { '@type': 'Question', name: 'Qual é a diferença entre prompt engineering e fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt engineering molda o output de um modelo existente sem alterar o modelo em si — funciona no momento da inferência e não requer treinamento. Fine-tuning modifica os pesos de um modelo treinando-o em um novo conjunto de dados, alterando seu comportamento padrão permanentemente. Prompt engineering é mais rápido, mais barato e não requer expertise em ML; fine-tuning é melhor quando você precisa de especialização profunda e consistente que prompts sozinhos não conseguem alcançar.' } },
-          { '@type': 'Question', name: 'Como o prompt engineering se relaciona com uma ferramenta como o PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum é uma ferramenta de despacho de IA multi-modelo construída em torno de princípios de prompt engineering. Inclui 9 frameworks de prompt integrados, um otimizador de prompt com IA e a capacidade de enviar um prompt a múltiplos modelos simultaneamente — GPT-5.5, Claude, Gemini e modelos locais — e comparar resultados lado a lado.' } },
+          { '@type': 'Question', name: 'Como o prompt engineering se relaciona com uma ferramenta como o PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum é uma ferramenta de despacho de IA multi-modelo construída em torno de princípios de prompt engineering. Inclui 9 frameworks de prompt integrados, um otimizador de prompt com IA e a capacidade de enviar um prompt a múltiplos modelos simultaneamente — GPT-5.5, Claude Opus 4.8, Gemini 3.1 e modelos locais — e comparar resultados lado a lado.' } },
           { '@type': 'Question', name: 'O prompt engineering ainda é relevante agora que existem agentes de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Agentes de IA — sistemas autônomos que planejam e executam tarefas de múltiplas etapas — são construídos sobre prompt engineering. Cada agente tem um system prompt que define seu papel, restrições e ferramentas disponíveis. Cada chamada de ferramenta é acionada por instruções estruturadas. Prompt engineering é a base que torna os agentes controláveis e previsíveis.' } },
           { '@type': 'Question', name: 'Como um user prompt difere de um system prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Um system prompt é um conjunto de instruções persistentes que se aplica a toda a sessão — define o papel do modelo, restrições e comportamento padrão antes de o usuário dizer qualquer coisa. Um user prompt é o input por solicitação — a tarefa ou pergunta específica para aquela interação. Ambos se beneficiam de prompt engineering, mas servem funções diferentes e requerem abordagens de design distintas.' } },
         ],
@@ -1439,7 +1441,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'Prompt Engineering: Definição e princípios fundamentais',
           content: [
-            '**Prompt engineering é a prática de projetar e estruturar entradas de texto — chamadas de prompts — para obter outputs precisos, úteis e reproduzíveis de grandes modelos de linguagem (LLMs).** Aplica-se ao GPT-5.5, Claude, Gemini e modelos executados localmente via Ollama ou LM Studio. A diferença entre prompt engineering e "simplesmente fazer uma pergunta à IA" é a diferença entre uma solicitação vaga e uma instrução precisa com objetivo definido, contexto e formato de output.',
+            '**Prompt engineering é a prática de projetar e estruturar entradas de texto — chamadas de prompts — para obter outputs precisos, úteis e reproduzíveis de grandes modelos de linguagem (LLMs).** Aplica-se ao GPT-5.5, Claude Opus 4.8, Gemini 3.1 e modelos executados localmente via Ollama ou LM Studio. A diferença entre prompt engineering e "simplesmente fazer uma pergunta à IA" é a diferença entre uma solicitação vaga e uma instrução precisa com objetivo definido, contexto e formato de output.',
             'Hoje, prompt engineering é uma disciplina estruturada com técnicas nomeadas, frameworks reutilizáveis e resultados mensuráveis. Não se trata de enganar sistemas de IA ou encontrar comandos ocultos — trata-se de dar a um modelo probabilístico o sinal mais claro possível do que você precisa. Um prompt bem projetado produz consistentemente um output utilizável na primeira tentativa.',
             'Os fundamentos de prompt engineering começam com o entendimento de que LLMs são motores de completamento de padrões. Eles geram output com base na probabilidade estatística do que deve seguir seu input. Quanto mais precisamente você especifica a tarefa, o contexto, as restrições e o formato desejado, menos o modelo precisa adivinhar — e melhor o resultado.',
           ],
@@ -1456,7 +1458,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             'Prompt engineering = projetar inputs para obter outputs confiáveis e precisos de LLMs',
-            'Aplica-se a todos os modelos principais: GPT-5.5, Claude, Gemini e modelos locais via Ollama ou LM Studio',
+            'Aplica-se a todos os modelos principais: GPT-5.5, Claude Opus 4.8, Gemini 3.1 e modelos locais via Ollama ou LM Studio',
             'Alavancas-chave: objetivo, contexto, exemplos, restrições, formato de output e função',
             'As técnicas de prompt engineering vão de zero-shot a Chain-of-Thought e RAG',
             'Frameworks de prompt engineering (CRAFT, CO-STAR, SPECS, etc.) tornam os prompts reproduzíveis e ensináveis',
@@ -1484,7 +1486,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Velocidade:** Prompts bem formulados eliminam ciclos de esclarecimento de ida e volta',
             '**Controle de custos:** Prompts precisos usam menos tokens por tarefa e reduzem as novas tentativas',
             '**Redução de alucinações:** Fundamentação clara, restrições de fontes e perguntas delimitadas reduzem fatos fabricados',
-            '**Compatibilidade multi-modelo:** O mesmo prompt bem estruturado funciona no GPT-5.5, Claude, Gemini e LLMs locais — reduzindo a dependência do provedor',
+            '**Compatibilidade multi-modelo:** O mesmo prompt bem estruturado funciona no GPT-5.5, Claude Opus 4.8, Gemini 3.1 e LLMs locais — reduzindo a dependência do provedor',
             '**Reprodutibilidade:** Um prompt bem projetado é um ativo reutilizável. Equipes podem compartilhar, versionar e melhorar os prompts ao longo do tempo',
           ],
         },
@@ -1544,7 +1546,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Comece com prompts de uma linha.** Escreva uma frase clara que descreva sua tarefa com exatidão. Observe o que o modelo retorna antes de adicionar estrutura.',
             '**Aplique um framework a uma tarefa real.** Escolha CRAFT para uma tarefa de escrita ou CO-STAR para uma instrução complexa. Os frameworks forçam você a pensar em todos os elementos que um prompt precisa.',
             '**Adicione uma técnica por vez.** Experimente exemplos few-shot em uma tarefa. Adicione uma restrição a outra. Experimente Chain-of-Thought em um problema de raciocínio.',
-            '**Teste em múltiplos modelos.** O mesmo prompt produz resultados diferentes no GPT-5.5, Claude e Gemini. Use o PromptQuorum para enviar um prompt a múltiplos modelos simultaneamente e comparar respostas lado a lado.',
+            '**Teste em múltiplos modelos.** O mesmo prompt produz resultados diferentes no GPT-5.5, Claude Opus 4.8 e Gemini 3.1. Use o PromptQuorum para enviar um prompt a múltiplos modelos simultaneamente e comparar respostas lado a lado.',
             '**Construa uma biblioteca de prompts para seus casos de uso.** Salve os prompts que funcionam. Refine-os ao longo do tempo. Uma biblioteca de prompts testados para seu domínio específico é um ativo duradouro.',
           ],
         },
@@ -1605,7 +1607,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/what-is-prompt-engineering-overview-hero-fr.png',
       title: 'Qu\'est-ce que le Prompt Engineering ? — Guide PromptQuorum',
       seoTitle: 'Prompt Engineering 2026 : guide complet pour débutants',
-      intro: 'Prompt engineering : concevoir des entrées textuelles pour obtenir des sorties fiables et précises des LLM comme GPT-5.5, Claude et Gemini. Apprenez les techniques essentielles, les frameworks et pourquoi cela compte pour la qualité de la sortie d\'IA.',
+      intro: 'Prompt engineering : concevoir des entrées textuelles pour obtenir des sorties fiables et précises des LLM comme GPT-5.5, Claude Opus 4.8 et Gemini 3.1. Apprenez les techniques essentielles, les frameworks et pourquoi cela compte pour la qualité de la sortie d\'IA.',
       metaDescription: 'Le prompt engineering détermine la qualité de vos résultats IA. Apprenez le prompting de rôle, chain-of-thought et few-shot pour ChatGPT, Claude et Ollama.',
       publishDate: '2026-03-01',
       readTime: '10 min de lecture',
@@ -1618,13 +1620,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Qu\'est-ce que le Prompt Engineering ? — Guide PromptQuorum',
         description: 'Prompt engineering : concevoir des entrées textuelles pour obtenir des sorties fiables et précises des LLM. Apprenez les techniques essentielles, les frameworks et pourquoi cela compte.',
         datePublished: '2026-03-01',
-        dateModified: '2026-03-01',
+        dateModified: '2026-07-29',
         keywords: ['prompt engineering', 'prompting IA', 'LLM', 'GPT-5.5', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
           { '@type': 'Thing', name: 'GPT-5.5' },
-          { '@type': 'Thing', name: 'Claude' },
-          { '@type': 'Thing', name: 'Gemini' },
+          { '@type': 'Thing', name: 'Claude Opus 4.8' },
+          { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
       },
       itemListSchema: {
@@ -1662,7 +1664,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'Qu\'est-ce que le prompt engineering ?',
           content: [
-            '**Le prompt engineering est la pratique qui consiste à concevoir et à structurer des entrées textuelles — appelées prompts — pour obtenir des résultats précis, utiles et reproductibles des grands modèles de langage (LLM).** Il s\'applique à GPT-5.5, Claude, Gemini et aux modèles exécutés localement via Ollama ou LM Studio. La différence entre le prompt engineering et le simple fait de « poser une question à une IA » est la même qu\'entre une demande vague et une instruction précise avec un objectif défini, un contexte et un format de sortie.',
+            '**Le prompt engineering est la pratique qui consiste à concevoir et à structurer des entrées textuelles — appelées prompts — pour obtenir des résultats précis, utiles et reproductibles des grands modèles de langage (LLM).** Il s\'applique à GPT-5.5, Claude Opus 4.8, Gemini 3.1 et aux modèles exécutés localement via Ollama ou LM Studio. La différence entre le prompt engineering et le simple fait de « poser une question à une IA » est la même qu\'entre une demande vague et une instruction précise avec un objectif défini, un contexte et un format de sortie.',
             'Aujourd\'hui, le prompt engineering est une discipline structurée avec des techniques nommées, des frameworks réutilisables et des résultats mesurables. Il ne s\'agit pas de tromper les systèmes d\'IA ni de trouver des commandes cachées — il s\'agit de donner à un modèle probabiliste le signal le plus clair possible de ce dont vous avez besoin. Un prompt bien conçu produit de manière constante un résultat utilisable dès la première tentative.',
             'Les bases du prompt engineering commencent par la compréhension du fait que les LLM sont des moteurs de complétion de schémas. Ils génèrent des sorties en fonction de la probabilité statistique de ce qui doit suivre votre entrée. Plus vous spécifiez précisément la tâche, le contexte, les contraintes et le format souhaité, moins le modèle doit deviner — et meilleur est le résultat.',
           ],
@@ -1680,7 +1682,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             'Prompt engineering = concevoir des entrées pour obtenir des sorties fiables et précises des LLM',
-            'S\'applique à tous les grands modèles : GPT-5.5, Claude, Gemini et les modèles locaux via Ollama ou LM Studio',
+            'S\'applique à tous les grands modèles : GPT-5.5, Claude Opus 4.8, Gemini 3.1 et les modèles locaux via Ollama ou LM Studio',
             'Leviers clés : objectif, contexte, exemples, contraintes, format de sortie et rôle',
             'Les techniques de prompt engineering vont du zero-shot au Chain-of-Thought en passant par le RAG',
             'Les frameworks de prompt engineering (CRAFT, CO-STAR, SPECS, etc.) rendent les prompts reproductibles et enseignables',
@@ -1710,7 +1712,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Rapidité :** Les prompts bien formulés éliminent les cycles de clarification allers-retours → [Fundamentals: Faster AI Answers: How to Prompt for Speed]',
             '**Contrôle des coûts :** Les prompts précis utilisent moins de tokens par tâche et réduisent les réessais → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
             '**Réduction des hallucinations :** Un ancrage clair, des contraintes de sources et des questions ciblées réduisent les faits inventés → [Fundamentals: AI Hallucinations: Why AI Makes Things Up — and How to Stop Them]',
-            '**Compatibilité multi-modèles :** Le même prompt bien structuré fonctionne sur GPT-5.5, Claude, Gemini et les LLM locaux — réduisant la dépendance à un fournisseur',
+            '**Compatibilité multi-modèles :** Le même prompt bien structuré fonctionne sur GPT-5.5, Claude Opus 4.8, Gemini 3.1 et les LLM locaux — réduisant la dépendance à un fournisseur',
             '**Reproductibilité :** Un prompt bien conçu est un actif réutilisable. Les équipes peuvent partager, versionner et améliorer les prompts au fil du temps',
           ],
         },
@@ -1743,7 +1745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqConsensusTest: {
           title: 'Test de consensus PromptQuorum : Impact de la structure du prompt',
           content: [
-            'PromptQuorum a envoyé le même prompt non structuré ("résumez ce texte") à GPT-5.5, Claude Opus 4.8 et Gemini 3.5 Pro. Les résultats variaient en longueur, détail et structure sur tous les trois modèles. Lorsque la même tâche a été réécrite à l\'aide des cinq blocs de construction ci-dessus, les trois modèles ont produit des réponses cohérentes et formatées correctement au premier essai.',
+            'PromptQuorum a envoyé le même prompt non structuré ("résumez ce texte") à GPT-5.5, Claude Opus 4.8 et Gemini 3.1. Les résultats variaient en longueur, détail et structure sur tous les trois modèles. Lorsque la même tâche a été réécrite à l\'aide des cinq blocs de construction ci-dessus, les trois modèles ont produit des réponses cohérentes et formatées correctement au premier essai.',
             'Cet effet de consensus — où les prompts structurés produisent un comportement identique entre différents modèles — est l\'idée centrale du prompt engineering. Les cinq blocs de construction fonctionnent parce qu\'ils exploitent la manière dont tous les principaux LLM traitent les instructions de manière identique.',
           ],
           callouts: [
@@ -1819,12 +1821,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Voici les principales décisions techniques qui interagissent avec le prompt engineering :',
           ],
           items: [
-            '**Sélection du modèle :** GPT-5.5, Claude Opus 4.8 et Gemini 3.5 Pro réagissent différemment au même prompt. Choisir le bon modèle pour la tâche fait partie du processus d\'ingénierie → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**Sélection du modèle :** GPT-5.5, Claude Opus 4.8 et Gemini 3.1 réagissent différemment au même prompt. Choisir le bon modèle pour la tâche fait partie du processus d\'ingénierie → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**Prompts système vs. prompts utilisateur :** Le prompt système définit des instructions persistantes pour toute une session ; le prompt utilisateur est l\'entrée par demande. Bien gérer cette séparation détermine la cohérence à grande échelle → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**Fenêtres de contexte :** Chaque modèle a une limite maximale de tokens pour l\'entrée et la sortie combinées. Les prompts longs réduisent l\'espace disponible pour la réponse du modèle — et les modèles commencent à ignorer le contenu antérieur à mesure que la fenêtre se remplit → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**Limites de tokens et coûts :** Les prompts précis et concis utilisent moins de tokens par appel, réduisent la latence et restent dans les limites de débit — ce qui impacte directement les coûts à grande échelle → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
-            '**Prompting multimodal :** Les LLM modernes comme GPT-5.5 et Gemini acceptent des images en plus du texte. Les principes du prompt engineering s\'appliquent également aux entrées d\'images → [Fundamentals: Beyond Text: How to Prompt with Images]',
-            '**Modèles locaux vs. cloud :** Les techniques de prompt engineering s\'appliquent aussi bien aux API cloud qu\'aux modèles exécutés localement via Ollama ou LM Studio — bien que les modèles locaux puissent nécessiter un formatage ajusté en raison de fenêtres de contexte plus petites et d\'un comportement de suivi des instructions différent. PromptQuorum supporte à la fois les modèles locaux (Ollama, LM Studio, vLLM) et les API cloud (OpenAI, Anthropic, Google Gemini) via une interface unique — vous permettant de basculer entre les fournisseurs sans réécrire les prompts, ou de comparer les mêmes prompts sur plusieurs modèles simultanément.',
+            '**Prompting multimodal :** Les LLM modernes comme GPT-5.5 et Gemini 3.1 acceptent des images en plus du texte. Les principes du prompt engineering s\'appliquent également aux entrées d\'images → [Fundamentals: Beyond Text: How to Prompt with Images]',
+            '**Modèles locaux vs. cloud :** Les techniques de prompt engineering s\'appliquent aussi bien aux API cloud qu\'aux modèles exécutés localement via Ollama ou LM Studio — bien que les modèles locaux puissent nécessiter un formatage ajusté en raison de fenêtres de contexte plus petites et d\'un comportement de suivi des instructions différent. PromptQuorum supporte à la fois les modèles locaux (Ollama, LM Studio, vLLM) et les API cloud (OpenAI, Anthropic, Google Gemini 3.1) via une interface unique — vous permettant de basculer entre les fournisseurs sans réécrire les prompts, ou de comparer les mêmes prompts sur plusieurs modèles simultanément.',
             '**Perspective régionale :** Mistral AI (Europe) et Qwen (Chine) suivent les mêmes principes de prompting, mais peuvent nécessiter des spécifications de format de sortie ajustées en raison des différences de comportement d\'instruction. Le même prompt structuré fonctionne mondialement sur toutes les principales familles de modèles.',
           ],
         },
@@ -1837,7 +1839,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Réduction des hallucinations — l\'ancrage, les contraintes de sources et le ciblage explicite réduisent les faits inventés. La fonction Quorum de PromptQuorum effectue des vérifications de consensus sur les réponses des modèles, détectant les hallucinations et les contradictions en comparant comment différents modèles répondent au même prompt structuré.',
             'Contrôle du format — spécifier le format de sortie signifie que les résultats arrivent prêts à l\'emploi, pas prêts à être modifiés',
             'Vitesse d\'itération — moins de tours de clarification, plus de succès dès la première tentative',
-            'Portabilité multi-modèles — un prompt bien structuré fonctionne sur GPT-5.5, Claude et Gemini sans réécriture',
+            'Portabilité multi-modèles — un prompt bien structuré fonctionne sur GPT-5.5, Claude Opus 4.8 et Gemini 3.1 sans réécriture',
           ],
         },
 
@@ -1863,7 +1865,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Commencez par des prompts en une ligne.** Écrivez une phrase claire décrivant exactement votre tâche. Observez ce que le modèle retourne avant d\'ajouter de la structure. Cela établit une base de référence — vous devez savoir ce qu\'un prompt brut produit avant de pouvoir l\'améliorer.',
             '**Appliquez un framework à une vraie tâche.** Choisissez CRAFT pour une tâche d\'écriture ou CO-STAR pour une instruction complexe. Les frameworks vous obligent à réfléchir à tous les éléments dont un prompt a besoin. La section [Frameworks] couvre chaque framework avec des exemples → commencez par [Frameworks: Which Prompt Framework Should You Use?].',
             '**Ajoutez une technique à la fois.** Essayez des exemples few-shot sur une tâche. Ajoutez une contrainte à une autre. Testez le Chain-of-Thought sur un problème de raisonnement. Isoler les changements vous permet de voir quelle technique a réellement amélioré la sortie. La section [Techniques] couvre chaque technique en profondeur.',
-            '**Testez sur plusieurs modèles.** Le même prompt produit des résultats différents sur GPT-5.5, Claude et Gemini. Utilisez PromptQuorum pour envoyer un prompt à plusieurs modèles simultanément et comparer les réponses côte à côte — c\'est le moyen le plus rapide de trouver quel modèle et quelle formulation fonctionnent le mieux pour une tâche spécifique.',
+            '**Testez sur plusieurs modèles.** Le même prompt produit des résultats différents sur GPT-5.5, Claude Opus 4.8 et Gemini 3.1. Utilisez PromptQuorum pour envoyer un prompt à plusieurs modèles simultanément et comparer les réponses côte à côte — c\'est le moyen le plus rapide de trouver quel modèle et quelle formulation fonctionnent le mieux pour une tâche spécifique.',
             '**Constituez une bibliothèque de prompts pour vos cas d\'usage.** Sauvegardez les prompts qui fonctionnent. Affinez-les au fil du temps. Une bibliothèque de prompts testés pour votre domaine spécifique est un actif durable. Voir [Use Topics: Build a Prompt Library That Saves Hours] pour un guide sur la façon de la structurer et de la maintenir.',
           ],
         },
@@ -1898,7 +1900,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Quel est le rapport entre le prompt engineering et un outil comme PromptQuorum ?',
-              a: 'PromptQuorum est un outil de dispatch multi-modèles construit autour des principes du prompt engineering. Il inclut 9 frameworks de prompts intégrés, un optimiseur de prompts propulsé par IA, et la capacité d\'envoyer un prompt à plusieurs modèles simultanément — GPT-5.5, Claude, Gemini et les modèles locaux — et de comparer les résultats côte à côte. Il rend le prompt engineering reproductible et supprime la friction des tests manuels sur plusieurs modèles.',
+              a: 'PromptQuorum est un outil de dispatch multi-modèles construit autour des principes du prompt engineering. Il inclut 9 frameworks de prompts intégrés, un optimiseur de prompts propulsé par IA, et la capacité d\'envoyer un prompt à plusieurs modèles simultanément — GPT-5.5, Claude Opus 4.8, Gemini 3.1 et les modèles locaux — et de comparer les résultats côte à côte. Il rend le prompt engineering reproductible et supprime la friction des tests manuels sur plusieurs modèles.',
             },
             {
               q: 'Le prompt engineering est-il encore pertinent maintenant que les agents IA existent ?',
@@ -1949,13 +1951,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'プロンプトエンジニアリングとは？',
         description: 'プロンプトエンジニアリング：テキスト入力を設計・構造化して、大規模言語モデルから正確で有用かつ再現性のある出力を得る実践。',
         datePublished: '2026-03-01',
-        dateModified: '2026-03-01',
+        dateModified: '2026-07-29',
         keywords: ['プロンプトエンジニアリング', 'AI プロンプティング', 'LLM', 'GPT-5.5', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
           { '@type': 'Thing', name: 'GPT-5.5' },
-          { '@type': 'Thing', name: 'Claude' },
-          { '@type': 'Thing', name: 'Gemini' },
+          { '@type': 'Thing', name: 'Claude Opus 4.8' },
+          { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
       },
       itemListSchema: {
@@ -1993,7 +1995,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'プロンプトエンジニアリングとは何か？',
           content: [
-            '**プロンプトエンジニアリングとは、大規模言語モデル（LLM）から正確で有用かつ再現性のある出力を得るために、「プロンプト」と呼ばれるテキスト入力を設計・構造化する実践です。** GPT-5.5、Claude、Gemini、そしてOllamaやLM Studioを介してローカルで動作するモデルにも適用されます。プロンプトエンジニアリングと「AIにただ質問する」の違いは、漠然としたリクエストと、明確な目標・コンテキスト・出力形式を備えた精密な指示との違いに等しいです。',
+            '**プロンプトエンジニアリングとは、大規模言語モデル（LLM）から正確で有用かつ再現性のある出力を得るために、「プロンプト」と呼ばれるテキスト入力を設計・構造化する実践です。** GPT-5.5、Claude Opus 4.8、Gemini 3.1、そしてOllamaやLM Studioを介してローカルで動作するモデルにも適用されます。プロンプトエンジニアリングと「AIにただ質問する」の違いは、漠然としたリクエストと、明確な目標・コンテキスト・出力形式を備えた精密な指示との違いに等しいです。',
             '現在、プロンプトエンジニアリングは、名前の付いたテクニック・再利用可能なフレームワーク・測定可能な成果を持つ体系的な分野として確立されています。AIシステムを騙したり、隠しコマンドを探したりするものではなく、確率的なモデルに対して、必要なものを可能な限り明確に伝えることが目的です。よく設計されたプロンプトは、初回の試みで一貫して使用可能な出力を生成します。',
             'プロンプトエンジニアリングの基礎は、LLMがパターン補完エンジンであるという理解から始まります。モデルは、入力の後に続くべき内容の統計的確率に基づいて出力を生成します。タスク・コンテキスト・制約・希望する形式を正確に指定するほど、モデルが推測する必要がなくなり、結果も向上します。',
           ],
@@ -2011,7 +2013,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             'プロンプトエンジニアリング＝LLMから信頼性が高く正確な出力を得るための入力設計',
-            'GPT-5.5、Claude、Gemini、OllamaやLM Studio経由のローカルモデルを含む主要モデルすべてに適用可能',
+            'GPT-5.5、Claude Opus 4.8、Gemini 3.1、OllamaやLM Studio経由のローカルモデルを含む主要モデルすべてに適用可能',
             '主要な要素：目標、コンテキスト、例、制約、出力形式、役割',
             'プロンプトエンジニアリングのテクニックはゼロショットから思考の連鎖（Chain-of-Thought）、RAG（検索拡張生成）まで多岐にわたる',
             'プロンプトエンジニアリングのフレームワーク（CRAFT、CO-STAR、SPECSなど）はプロンプトを再現可能で教えやすいものにする',
@@ -2041,7 +2043,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**速度：** 適切に組み立てられたプロンプトは、往復の確認サイクルをなくします → [Fundamentals: Faster AI Answers: How to Prompt for Speed]',
             '**コスト管理：** 精密なプロンプトはタスクあたりのトークン数を削減し、リトライを減らします → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
             '**ハルシネーションの低減：** 明確な根拠付け、情報源の制約、範囲を絞った質問により、事実の捏造を削減します → [Fundamentals: AI Hallucinations: Why AI Makes Things Up — and How to Stop Them]',
-            '**マルチモデル互換性：** 同じ構造化プロンプトがGPT-5.5、Claude、Gemini、ローカルLLMで機能します。ベンダーへの依存を低減します',
+            '**マルチモデル互換性：** 同じ構造化プロンプトがGPT-5.5、Claude Opus 4.8、Gemini 3.1、ローカルLLMで機能します。ベンダーへの依存を低減します',
             '**再利用性：** よく設計されたプロンプトは再利用可能な資産です。チームはプロンプトを共有・バージョン管理・改善し続けることができます',
           ],
         },
@@ -2133,11 +2135,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'プロンプトエンジニアリングと相互作用する主要な技術的意思決定は以下のとおりです：',
           ],
           items: [
-            '**モデルの選択：** GPT-5.5、Claude Opus 4.8、Gemini 3.5 Proは同じプロンプトに対して異なる反応を示します。タスクに適したモデルを選ぶことも、エンジニアリングプロセスの一部です → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**モデルの選択：** GPT-5.5、Claude Opus 4.8、Gemini 3.1は同じプロンプトに対して異なる反応を示します。タスクに適したモデルを選ぶことも、エンジニアリングプロセスの一部です → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**システムプロンプトとユーザープロンプト：** システムプロンプトはセッション全体の永続的な指示を設定し、ユーザープロンプトはリクエストごとの入力です。この分割を適切に行うことが、大規模での一貫性を決定します → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**コンテキストウィンドウ：** すべてのモデルには、入力と出力を合わせた最大トークン制限があります。長いプロンプトはモデルの回答に使えるスペースを減らします。また、ウィンドウが満たされるにつれて、モデルは以前のコンテンツを無視し始めます → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**トークン制限とコスト：** 精密で簡潔なプロンプトは呼び出しごとのトークン数を削減し、レイテンシを低下させ、レート制限内に収まります — 大規模ではコストに直接影響します → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
-            '**マルチモーダルプロンプティング：** GPT-5.5やGeminiなどの最新LLMはテキストだけでなく画像も受け付けます。プロンプトエンジニアリングの原則は画像入力にも同様に適用されます → [Fundamentals: Beyond Text: How to Prompt with Images]',
+            '**マルチモーダルプロンプティング：** GPT-5.5やGemini 3.1などの最新LLMはテキストだけでなく画像も受け付けます。プロンプトエンジニアリングの原則は画像入力にも同様に適用されます → [Fundamentals: Beyond Text: How to Prompt with Images]',
             '**ローカルモデルとクラウドモデル：** プロンプトエンジニアリングのテクニックは、クラウドAPIとOllamaやLM Studio経由のローカル動作モデルの両方に等しく適用されます。ただし、ローカルモデルはコンテキストウィンドウが小さく、命令遵守の挙動が異なるため、フォーマットの調整が必要になる場合があります',
           ],
         },
@@ -2150,7 +2152,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'ハルシネーションの低減 — 根拠付け・情報源の制約・明示的なスコーピングにより、捏造された事実を削減する',
             '形式のコントロール — 出力形式を指定することで、編集が必要な状態ではなく、そのまま使える状態で結果が届く',
             'イテレーションの速度 — 確認のやり取りが減り、初回の成功率が上がる',
-            'クロスモデルの移植性 — 適切に構造化されたプロンプトは、書き直しなしにGPT-5.5、Claude、Geminiで機能する',
+            'クロスモデルの移植性 — 適切に構造化されたプロンプトは、書き直しなしにGPT-5.5、Claude Opus 4.8、Gemini 3.1で機能する',
           ],
         },
 
@@ -2176,7 +2178,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**単一行のプロンプトから始める。** タスクを正確に説明する明確な一文を書いてください。構造を加える前に、モデルが何を返すか観察してください。これがベースラインを確立します — 改善するためには、素のプロンプトが何を生成するかを知る必要があります。',
             '**実際のタスクに一つのフレームワークを適用する。** ライティングタスクにはCRAFT、複雑な指示にはCO-STARを選んでください。フレームワークはプロンプトに必要なすべての要素を考え抜かせます。[Frameworks]セクションでは各フレームワークを例付きで解説しています → [Frameworks: Which Prompt Framework Should You Use?] から始めましょう。',
             '**一度に一つのテクニックを追加する。** あるタスクにはフューショット例を試してください。別のタスクに制約を追加してください。推論問題に思考の連鎖（Chain-of-Thought）をテストしてください。変更を分離することで、どのテクニックが実際に出力を改善したかを確認できます。[Techniques]セクションでは各テクニックを詳しく解説しています。',
-            '**複数のモデルでテストする。** 同じプロンプトはGPT-5.5、Claude、Geminiで異なる結果を生み出します。PromptQuorumを使って一つのプロンプトを複数のモデルに同時に送信し、レスポンスを並べて比較しましょう — これが特定のタスクに最適なモデルと表現を見つける最速の方法です。',
+            '**複数のモデルでテストする。** 同じプロンプトはGPT-5.5、Claude Opus 4.8、Gemini 3.1で異なる結果を生み出します。PromptQuorumを使って一つのプロンプトを複数のモデルに同時に送信し、レスポンスを並べて比較しましょう — これが特定のタスクに最適なモデルと表現を見つける最速の方法です。',
             '**ユースケースのプロンプトライブラリを構築する。** 機能するプロンプトを保存してください。時間をかけて改善してください。特定のドメインに対してテスト済みのプロンプトのライブラリは、永続的な資産です。構造化と維持管理のガイドは [Use Topics: Build a Prompt Library That Saves Hours] を参照してください。',
           ],
         },
@@ -2211,7 +2213,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'プロンプトエンジニアリングとPromptQuorumのようなツールはどのように関連していますか？',
-              a: 'PromptQuorumはプロンプトエンジニアリングの原則を中心に構築されたマルチモデルAIディスパッチツールです。9つの組み込みプロンプトフレームワーク・AIによるプロンプトオプティマイザー・一つのプロンプトをGPT-5.5・Claude・Gemini・ローカルモデルなど複数のモデルに同時送信して結果を並べて比較する機能を備えています。プロンプトエンジニアリングを再現可能にし、モデル間でのテストの手間を省きます。',
+              a: 'PromptQuorumはプロンプトエンジニアリングの原則を中心に構築されたマルチモデルAIディスパッチツールです。9つの組み込みプロンプトフレームワーク・AIによるプロンプトオプティマイザー・一つのプロンプトをGPT-5.5・Claude Opus 4.8・Gemini 3.1・ローカルモデルなど複数のモデルに同時送信して結果を並べて比較する機能を備えています。プロンプトエンジニアリングを再現可能にし、モデル間でのテストの手間を省きます。',
             },
             {
               q: 'AIエージェントが存在する今、プロンプトエンジニアリングはまだ関連性がありますか？',
@@ -2230,7 +2232,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       heroImage: '/images/what-is-prompt-engineering-overview-hero-zh.png',
       title: '什么是提示工程？ — PromptQuorum 指南',
       seoTitle: '什么是提示工程？2026年初学者完全指南',
-      intro: '提示工程：设计文本输入以从 GPT-5.5、Claude 和 Gemini 等大语言模型获得可靠、准确的输出。学习基本技术、框架以及为什么这对人工智能输出质量很重要。',
+      intro: '提示工程：设计文本输入以从 GPT-5.5、Claude Opus 4.8 和 Gemini 3.1 等大语言模型获得可靠、准确的输出。学习基本技术、框架以及为什么这对人工智能输出质量很重要。',
       metaDescription: '提示工程是决定AI输出质量的核心技能。学习角色提示、思维链和少样本方法，适用于ChatGPT、Claude和Ollama。初学者友好，约10分钟阅读。',
       publishDate: '2026-03-01',
       readTime: '阅读约10分钟',
@@ -2241,15 +2243,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/zh/prompt-engineering/what-is-prompt-engineering',
         inLanguage: 'zh',
         headline: '什么是提示工程？ — PromptQuorum 指南',
-        description: '提示工程：设计文本输入以从 GPT-5.5、Claude 和 Gemini 等大语言模型获得可靠、准确的输出。学习基本技术、框架和为什么这对人工智能输出质量很重要。',
+        description: '提示工程：设计文本输入以从 GPT-5.5、Claude Opus 4.8 和 Gemini 3.1 等大语言模型获得可靠、准确的输出。学习基本技术、框架和为什么这对人工智能输出质量很重要。',
         datePublished: '2026-03-01',
-        dateModified: '2026-03-01',
+        dateModified: '2026-07-29',
         keywords: ['提示工程', 'AI 提示', '大语言模型', 'GPT-5.5', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
           { '@type': 'Thing', name: 'GPT-5.5' },
-          { '@type': 'Thing', name: 'Claude' },
-          { '@type': 'Thing', name: 'Gemini' },
+          { '@type': 'Thing', name: 'Claude Opus 4.8' },
+          { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
       },
       itemListSchema: {
@@ -2287,7 +2289,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: '什么是提示词工程？',
           content: [
-            '**提示词工程是设计和构建文本输入——称为提示词——的实践，目的是从大型语言模型（LLM）中获得准确、有用且可重复的输出。** 它适用于 GPT-5.5、Claude、Gemini，以及通过 Ollama 或 LM Studio 在本地运行的模型。提示词工程与"随便问 AI 一个问题"的区别，就在于模糊请求与精确指令之间的差距——后者具有明确的目标、上下文和输出格式。',
+            '**提示词工程是设计和构建文本输入——称为提示词——的实践，目的是从大型语言模型（LLM）中获得准确、有用且可重复的输出。** 它适用于 GPT-5.5、Claude Opus 4.8、Gemini 3.1，以及通过 Ollama 或 LM Studio 在本地运行的模型。提示词工程与"随便问 AI 一个问题"的区别，就在于模糊请求与精确指令之间的差距——后者具有明确的目标、上下文和输出格式。',
             '如今，提示词工程已发展为一门具有命名技术、可复用框架和可量化成果的结构化学科。它并非关于欺骗 AI 系统或寻找隐藏指令，而是为概率模型提供尽可能清晰的信号，告知其你需要什么。一个精心设计的提示词能在首次尝试时稳定产出可用的结果。',
             '提示词工程的基础始于理解一件事：大型语言模型是模式补全引擎。它们根据你的输入内容之后最有可能跟随什么内容来生成输出。你对任务、上下文、约束和期望格式的描述越精确，模型需要猜测的就越少——结果也就越好。',
           ],
@@ -2305,7 +2307,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             '提示词工程 = 设计输入以从大型语言模型中获得可靠、准确的输出',
-            '适用于所有主流模型：GPT-5.5、Claude、Gemini，以及通过 Ollama 或 LM Studio 运行的本地模型',
+            '适用于所有主流模型：GPT-5.5、Claude Opus 4.8、Gemini 3.1，以及通过 Ollama 或 LM Studio 运行的本地模型',
             '关键要素：目标、上下文、示例、约束、输出格式和角色',
             '提示词工程技术涵盖从零样本到思维链（Chain-of-Thought）再到 RAG（检索增强生成）',
             '提示词工程框架（CRAFT、CO-STAR、SPECS 等）使提示词可重复使用且易于教授',
@@ -2335,7 +2337,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**效率：** 精心构建的提示词消除了来回澄清的循环 → [Fundamentals: Faster AI Answers: How to Prompt for Speed]',
             '**成本控制：** 精确的提示词每次任务使用的词元更少，并减少重试次数 → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
             '**减少幻觉：** 清晰的依据、来源约束和范围明确的问题能减少捏造的事实 → [Fundamentals: AI Hallucinations: Why AI Makes Things Up — and How to Stop Them]',
-            '**跨模型兼容性：** 同一个结构良好的提示词可在 GPT-5.5、Claude、Gemini 和本地大型语言模型上使用，降低供应商锁定风险',
+            '**跨模型兼容性：** 同一个结构良好的提示词可在 GPT-5.5、Claude Opus 4.8、Gemini 3.1 和本地大型语言模型上使用，降低供应商锁定风险',
             '**可复用性：** 精心设计的提示词是可重复使用的资产。团队可以随时间共享、版本化并持续优化提示词',
           ],
         },
@@ -2368,7 +2370,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqConsensusTest: {
           title: 'PromptQuorum 共识测试：提示结构的影响',
           content: [
-            'PromptQuorum 将相同的非结构化提示（"总结这段文本"）发送到 GPT-5.5、Claude Opus 4.8 和 Gemini 3.5 Pro。结果在所有三个模型上的长度、细节和结构都有所不同。当使用上述五个构建块重新编写相同的任务时，所有三个模型都在第一次尝试时生成了一致的、格式正确的响应。',
+            'PromptQuorum 将相同的非结构化提示（"总结这段文本"）发送到 GPT-5.5、Claude Opus 4.8 和 Gemini 3.1。结果在所有三个模型上的长度、细节和结构都有所不同。当使用上述五个构建块重新编写相同的任务时，所有三个模型都在第一次尝试时生成了一致的、格式正确的响应。',
             '这种共识效应——结构化提示在不同模型间产生相同行为——是提示工程的核心洞察。五个构建块之所以有效，是因为它们利用了所有主要大语言模型相同的指令处理方式。',
           ],
           callouts: [
@@ -2442,12 +2444,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '以下是与提示词工程相互影响的关键技术决策：',
           ],
           items: [
-            '**模型选择：** GPT-5.5、Claude Opus 4.8 和 Gemini 3.5 Pro 对相同提示词的响应各有不同。为任务选择合适的模型是工程流程的一部分。Mistral AI（欧洲）和阿里云 Qwen（中国）遵循相同的提示工程原则，但由于指令跟随行为的差异，可能需要调整输出格式规范。相同的结构化提示在全球所有主要模型族中都有效 → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**模型选择：** GPT-5.5、Claude Opus 4.8 和 Gemini 3.1 对相同提示词的响应各有不同。为任务选择合适的模型是工程流程的一部分。Mistral AI（欧洲）和阿里云 Qwen（中国）遵循相同的提示工程原则，但由于指令跟随行为的差异，可能需要调整输出格式规范。相同的结构化提示在全球所有主要模型族中都有效 → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**系统提示词与用户提示词：** 系统提示词为整个会话设置持久指令；用户提示词是每次请求的输入。正确划分这两者决定了大规模使用时的一致性 → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**上下文窗口：** 每个模型都有输入+输出组合的最大词元限制。较长的提示词会减少模型回答的可用空间——随着窗口填满，模型开始忽略较早的内容 → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**词元限制与成本：** 精确、简洁的提示词每次调用使用更少的词元，降低延迟，并保持在速率限制内——直接影响大规模使用时的成本 → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
-            '**多模态提示：** GPT-5.5 和 Gemini 等现代大型语言模型支持图像和文本输入。提示词工程原则同样适用于图像输入 → [Fundamentals: Beyond Text: How to Prompt with Images]',
-            '**本地模型与云端模型：** PromptQuorum 同时支持本地模型（Ollama、LM Studio、vLLM）和云 API（OpenAI、Anthropic、Google Gemini）通过单一界面——让您可以在提供者之间切换而无需重写提示，或同时比较多个模型上的相同提示。',
+            '**多模态提示：** GPT-5.5 和 Gemini 3.1 等现代大型语言模型支持图像和文本输入。提示词工程原则同样适用于图像输入 → [Fundamentals: Beyond Text: How to Prompt with Images]',
+            '**本地模型与云端模型：** PromptQuorum 同时支持本地模型（Ollama、LM Studio、vLLM）和云 API（OpenAI、Anthropic、Google Gemini 3.1）通过单一界面——让您可以在提供者之间切换而无需重写提示，或同时比较多个模型上的相同提示。',
           ],
         },
 
@@ -2459,7 +2461,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '减少幻觉——依据信息、来源约束和明确范围能减少捏造的事实。PromptQuorum 的 Quorum 功能对模型响应进行共识检查，通过比较不同模型如何响应相同的结构化提示来检测幻觉和矛盾。',
             '格式控制——指定输出格式意味着结果到手即可使用，而不需要再次编辑',
             '迭代速度——减少澄清往返次数，提升首次尝试成功率',
-            '跨模型可移植性——结构良好的提示词无需重写即可在 GPT-5.5、Claude 和 Gemini 上使用',
+            '跨模型可移植性——结构良好的提示词无需重写即可在 GPT-5.5、Claude Opus 4.8 和 Gemini 3.1 上使用',
           ],
         },
 
@@ -2485,7 +2487,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**从单行提示词开始。** 用一句清晰的句子精确描述你的任务。在添加结构之前，先观察模型返回什么。这建立了一个基准——你需要知道裸提示词产生什么，才能改进它。',
             '**将一个框架应用于真实任务。** 为写作任务选择 CRAFT，为复杂指令选择 CO-STAR。框架会迫使你思考提示词所需的所有要素。[Frameworks] 部分配有示例详细介绍每个框架——从 [Frameworks: Which Prompt Framework Should You Use?] 开始。',
             '**每次只添加一种技术。** 在一个任务上尝试少样本示例，在另一个任务上添加约束，在推理问题上测试思维链（Chain-of-Thought）。隔离变化让你能看到究竟是哪种技术改善了输出。[Techniques] 部分深入介绍了每种技术。',
-            '**跨多个模型进行测试。** 同一个提示词在 GPT-5.5、Claude 和 Gemini 上产生的结果不同。使用 PromptQuorum 将一个提示词同时发送给多个模型，并排比较响应——这是找到特定任务最佳模型和表述方式的最快途径。',
+            '**跨多个模型进行测试。** 同一个提示词在 GPT-5.5、Claude Opus 4.8 和 Gemini 3.1 上产生的结果不同。使用 PromptQuorum 将一个提示词同时发送给多个模型，并排比较响应——这是找到特定任务最佳模型和表述方式的最快途径。',
             '**为你的用例构建提示词库。** 保存有效的提示词，持续优化。针对特定领域经过测试的提示词库是持久的资产。请参阅 [Use Topics: Build a Prompt Library That Saves Hours] 了解如何构建和维护的指南。',
           ],
         },
@@ -2530,7 +2532,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'PromptQuorum 这样的工具与提示词工程有什么关系？',
-              a: 'PromptQuorum 是一个围绕提示词工程原则构建的多模型 AI 调度工具。它内置9个提示词框架、一个 AI 驱动的提示词优化器，以及将一个提示词同时发送给多个模型——GPT-5.5、Claude、Gemini 和本地模型——并排比较结果的功能。它使提示词工程可重复，并消除了手动跨模型测试的摩擦。',
+              a: 'PromptQuorum 是一个围绕提示词工程原则构建的多模型 AI 调度工具。它内置9个提示词框架、一个 AI 驱动的提示词优化器，以及将一个提示词同时发送给多个模型——GPT-5.5、Claude Opus 4.8、Gemini 3.1 和本地模型——并排比较结果的功能。它使提示词工程可重复，并消除了手动跨模型测试的摩擦。',
             },
             {
               q: '现在AI智能体已经存在，提示词工程还有意义吗？',
@@ -2555,12 +2557,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   ko: {
       freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-09-01',
+      next_refresh_due: '2027-01-29',
+      last_full_refresh: '2026-07-29',
       theme: 'Fundamentals',
     heroImage: '/images/what-is-prompt-engineering-overview-hero-ko.png',
       title: '프롬프트 엔지니어링이란? — PromptQuorum 가이드',
       seoTitle: '2026년 프롬프트 엔지니어링이란? 입문자 가이드',
-      intro: '프롬프트 엔지니어링: GPT-5.5, Claude, Gemini 같은 LLM에서 신뢰할 수 있고 정확한 출력을 얻기 위해 텍스트 입력을 설계하는 기법입니다. 핵심 기법, 프레임워크, 그리고 AI 출력 품질에 미치는 영향을 알아보십시오.',
+      intro: '프롬프트 엔지니어링: GPT-5.5, Claude Opus 4.8, Gemini 3.1 같은 LLM에서 신뢰할 수 있고 정확한 출력을 얻기 위해 텍스트 입력을 설계하는 기법입니다. 핵심 기법, 프레임워크, 그리고 AI 출력 품질에 미치는 영향을 알아보십시오.',
       metaDescription: '프롬프트 엔지니어링: 신뢰할 수 있는 AI 출력을 위한 텍스트 입력 설계. ChatGPT, Claude, Ollama를 위한 역할 프롬프팅, 사고 연쇄, 퓨샷 기법을 학습하십시오.',
       publishDate: '2026-03-01',
       readTime: '10분 읽기',
@@ -2574,13 +2577,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '프롬프트 엔지니어링이란?',
         description: '프롬프트 엔지니어링: LLM에서 신뢰할 수 있고 정확한 출력을 얻기 위해 텍스트 입력을 설계하는 기법. 핵심 기법, 프레임워크, 그리고 그 중요성을 알아보십시오.',
         datePublished: '2026-03-01',
-        dateModified: '2026-03-01',
+        dateModified: '2026-07-29',
         keywords: ['프롬프트 엔지니어링', 'AI 프롬프팅', 'LLM', 'GPT-5.5', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
           { '@type': 'Thing', name: 'GPT-5.5' },
-          { '@type': 'Thing', name: 'Claude' },
-          { '@type': 'Thing', name: 'Gemini' },
+          { '@type': 'Thing', name: 'Claude Opus 4.8' },
+          { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -2613,7 +2616,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: '프롬프트 엔지니어링 기법과 프레임워크의 차이점은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '기법은 특정 출력 품질을 달성하기 위해 적용하는 구체적인 패턴입니다 — 예를 들어, Chain-of-Thought 프롬프팅은 추론 정확도를 향상시킵니다. 프레임워크는 프롬프트의 모든 요소를 구성하는 구조적 템플릿입니다 — 예를 들어, CO-STAR는 맥락, 목표, 스타일, 톤, 청중, 응답 형식을 지정하는 순서를 정의합니다. 프레임워크는 프롬프트를 구축하는 데 도움이 되고, 기법은 모델이 그것으로 무엇을 하는지 정제하는 데 도움이 됩니다.' } },
           { '@type': 'Question', name: '장기적으로도 프롬프트 엔지니어링이 중요합니까?', acceptedAnswer: { '@type': 'Answer', text: '모든 가용한 증거는 그렇다고 가리킵니다. LLM은 아직 비구조화된 자연어만으로 전문가 수준의 출력을 안정적으로 생성할 수 없습니다. AI 인터페이스가 더 대화형으로 발전하더라도, 좋은 프롬프트의 근본 원칙 — 명확한 목표, 관련 맥락, 명시적 제약, 지정된 출력 형식 — 은 유용한 AI 응답과 쓸모없는 AI 응답의 차이로 남을 것입니다.' } },
           { '@type': 'Question', name: '프롬프트 엔지니어링과 파인튜닝의 차이점은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '프롬프트 엔지니어링은 모델 자체를 변경하지 않고 기존 모델의 출력을 형성합니다 — 추론 시점에 작동하며 훈련이 필요하지 않습니다. 파인튜닝은 새로운 데이터셋으로 모델을 훈련시켜 모델의 가중치를 영구적으로 수정하여 기본 동작을 변경합니다. 프롬프트 엔지니어링은 더 빠르고, 저렴하며, ML 전문 지식이 필요하지 않습니다. 파인튜닝은 프롬프트만으로는 달성할 수 없는 깊고 일관된 전문화가 필요할 때 더 적합합니다.' } },
-          { '@type': 'Question', name: '프롬프트 엔지니어링이 PromptQuorum 같은 도구와 어떻게 관련됩니까?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum은 프롬프트 엔지니어링 원칙을 중심으로 구축된 멀티 모델 AI 디스패치 도구입니다. 9개의 내장 프롬프트 프레임워크, AI 기반 프롬프트 최적화 도구, 그리고 하나의 프롬프트를 여러 모델(GPT-5.5, Claude, Gemini, 로컬 모델)에 동시에 전달하고 결과를 나란히 비교하는 기능을 포함합니다.' } },
+          { '@type': 'Question', name: '프롬프트 엔지니어링이 PromptQuorum 같은 도구와 어떻게 관련됩니까?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum은 프롬프트 엔지니어링 원칙을 중심으로 구축된 멀티 모델 AI 디스패치 도구입니다. 9개의 내장 프롬프트 프레임워크, AI 기반 프롬프트 최적화 도구, 그리고 하나의 프롬프트를 여러 모델(GPT-5.5, Claude Opus 4.8, Gemini 3.1, 로컬 모델)에 동시에 전달하고 결과를 나란히 비교하는 기능을 포함합니다.' } },
           { '@type': 'Question', name: 'AI 에이전트가 존재하는 지금도 프롬프트 엔지니어링이 관련이 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '네. AI 에이전트 — 멀티 스텝 작업을 계획하고 실행하는 자율 시스템 — 는 프롬프트 엔지니어링을 기반으로 구축됩니다. 모든 에이전트에는 역할, 제약, 사용 가능한 도구를 정의하는 시스템 프롬프트가 있습니다. 모든 도구 호출은 구조화된 지시에 의해 트리거됩니다. 프롬프트 엔지니어링은 에이전트를 제어 가능하고 예측 가능하게 만드는 기반입니다.' } },
           { '@type': 'Question', name: '사용자 프롬프트와 시스템 프롬프트는 어떻게 다릅니까?', acceptedAnswer: { '@type': 'Answer', text: '시스템 프롬프트는 전체 세션에 적용되는 지속적인 지시 세트입니다 — 사용자가 무언가를 말하기 전에 모델의 역할, 제약, 기본 동작을 정의합니다. 사용자 프롬프트는 요청당 입력 — 해당 상호 작용에 대한 구체적인 작업이나 질문입니다. 두 가지 모두 프롬프트 엔지니어링의 혜택을 받지만, 서로 다른 기능을 수행하며 서로 다른 설계 접근 방식이 필요합니다.' } },
         ],
@@ -2623,7 +2626,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: '프롬프트 엔지니어링: 정의와 핵심 원칙',
           content: [
-            '**프롬프트 엔지니어링은 대형 언어 모델(LLM)에서 정확하고 유용하며 반복 가능한 출력을 얻기 위해 텍스트 입력(프롬프트)을 설계하고 구조화하는 실천입니다.** GPT-5.5, Claude, Gemini, 그리고 Ollama나 LM Studio를 통해 로컬에서 실행되는 모델에 적용됩니다. 프롬프트 엔지니어링과 "AI에게 질문하기"의 차이는 모호한 요청과 명확한 목표, 맥락, 출력 형식이 있는 정확한 지시의 차이입니다.',
+            '**프롬프트 엔지니어링은 대형 언어 모델(LLM)에서 정확하고 유용하며 반복 가능한 출력을 얻기 위해 텍스트 입력(프롬프트)을 설계하고 구조화하는 실천입니다.** GPT-5.5, Claude Opus 4.8, Gemini 3.1, 그리고 Ollama나 LM Studio를 통해 로컬에서 실행되는 모델에 적용됩니다. 프롬프트 엔지니어링과 "AI에게 질문하기"의 차이는 모호한 요청과 명확한 목표, 맥락, 출력 형식이 있는 정확한 지시의 차이입니다.',
             '오늘날 프롬프트 엔지니어링은 명명된 기법, 재사용 가능한 프레임워크, 측정 가능한 결과를 갖춘 구조화된 학문입니다. AI 시스템을 속이거나 숨겨진 명령을 찾는 것이 아닙니다 — 확률적 모델에게 필요한 것이 무엇인지 가능한 한 명확한 신호를 제공하는 것입니다. 잘 엔지니어링된 프롬프트는 첫 시도에서 일관되게 사용 가능한 출력을 생성합니다.',
             '프롬프트 엔지니어링의 기초는 LLM이 패턴 완성 엔진이라는 것을 이해하는 것에서 시작됩니다. LLM은 입력 이후에 무엇이 와야 하는지의 통계적 가능성을 기반으로 출력을 생성합니다. 작업, 맥락, 제약, 원하는 형식을 더 정확하게 지정할수록 모델이 추측해야 할 것이 줄어들고 — 결과가 더 좋아집니다.',
           ],
@@ -2641,7 +2644,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             '프롬프트 엔지니어링 = LLM에서 신뢰할 수 있고 정확한 출력을 얻기 위한 입력 설계',
-            '모든 주요 모델에 적용 가능: GPT-5.5, Claude, Gemini, 그리고 Ollama 또는 LM Studio를 통한 로컬 모델',
+            '모든 주요 모델에 적용 가능: GPT-5.5, Claude Opus 4.8, Gemini 3.1, 그리고 Ollama 또는 LM Studio를 통한 로컬 모델',
             '핵심 요소: 목표, 맥락, 예시, 제약, 출력 형식, 역할',
             '프롬프트 엔지니어링 기법은 제로샷부터 Chain-of-Thought, RAG까지 다양합니다',
             '프롬프트 엔지니어링 프레임워크(CRAFT, CO-STAR, SPECS 등)는 프롬프트를 반복 가능하고 가르칠 수 있게 만듭니다',
@@ -2671,7 +2674,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**속도:** 잘 구성된 프롬프트는 왕복 명확화 사이클을 없애줍니다 → [Fundamentals: Faster AI Answers: How to Prompt for Speed]',
             '**비용 관리:** 정확한 프롬프트는 작업당 더 적은 토큰을 사용하고 재시도를 줄입니다 → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
             '**환각 감소:** 명확한 근거, 소스 제약, 범위가 지정된 질문은 가공된 사실을 줄입니다 → [Fundamentals: AI Hallucinations: Why AI Makes Things Up — and How to Stop Them]',
-            '**멀티 모델 호환성:** 동일하게 잘 구조화된 프롬프트가 GPT-5.5, Claude, Gemini, 로컬 LLM 전반에 걸쳐 작동하여 벤더 종속을 줄입니다',
+            '**멀티 모델 호환성:** 동일하게 잘 구조화된 프롬프트가 GPT-5.5, Claude Opus 4.8, Gemini 3.1, 로컬 LLM 전반에 걸쳐 작동하여 벤더 종속을 줄입니다',
             '**반복 가능성:** 잘 설계된 프롬프트는 재사용 가능한 자산입니다. 팀은 시간이 지남에 따라 프롬프트를 공유, 버전 관리, 개선할 수 있습니다',
           ],
         },
@@ -2704,7 +2707,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqConsensusTest: {
           title: 'PromptQuorum 합의 테스트: 프롬프트 구조 영향',
           content: [
-            '**PromptQuorum에서 테스트됨 — GPT-5.5, Claude Opus 4.8, Gemini 3.5 Pro에 40개의 요약 프롬프트 전달:** 구조화되지 않은 프롬프트는 40건 중 37건에서 세 모델 모두에 걸쳐 일관성 없는 길이와 구조를 생성했습니다. 위의 다섯 가지 구성 요소로 다시 작성한 후, 세 모델 모두 40건 중 40건에서 첫 시도에 일관되고 형식에 맞는 응답을 생성했습니다.',
+            '**PromptQuorum에서 테스트됨 — GPT-5.5, Claude Opus 4.8, Gemini 3.1에 40개의 요약 프롬프트 전달:** 구조화되지 않은 프롬프트는 40건 중 37건에서 세 모델 모두에 걸쳐 일관성 없는 길이와 구조를 생성했습니다. 위의 다섯 가지 구성 요소로 다시 작성한 후, 세 모델 모두 40건 중 40건에서 첫 시도에 일관되고 형식에 맞는 응답을 생성했습니다.',
             '이 합의 효과 — 구조화된 프롬프트가 서로 다른 모델 전반에 걸쳐 동일한 동작을 생성하는 것 — 는 프롬프트 엔지니어링의 핵심 통찰입니다. 다섯 가지 구성 요소가 작동하는 이유는 모든 주요 LLM이 지시를 동일하게 처리하는 방식을 활용하기 때문입니다.',
           ],
           callouts: [
@@ -2788,12 +2791,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '다음은 프롬프트 엔지니어링과 상호 작용하는 주요 기술적 결정 사항입니다:',
           ],
           items: [
-            '**모델 선택:** GPT-5.5, Claude Opus 4.8, Gemini 3.5 Pro는 동일한 프롬프트에 다르게 응답합니다. 작업에 맞는 모델을 선택하는 것은 엔지니어링 프로세스의 일부입니다. Mistral AI(유럽)와 Qwen(중국)은 동일한 프롬프팅 원칙을 따르지만 지시 추종 동작의 차이로 인해 조정된 출력 형식 사양이 필요할 수 있습니다. 동일한 구조화된 프롬프트는 모든 주요 모델 패밀리에서 전 세계적으로 작동합니다 → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**모델 선택:** GPT-5.5, Claude Opus 4.8, Gemini 3.1는 동일한 프롬프트에 다르게 응답합니다. 작업에 맞는 모델을 선택하는 것은 엔지니어링 프로세스의 일부입니다. Mistral AI(유럽)와 Qwen(중국)은 동일한 프롬프팅 원칙을 따르지만 지시 추종 동작의 차이로 인해 조정된 출력 형식 사양이 필요할 수 있습니다. 동일한 구조화된 프롬프트는 모든 주요 모델 패밀리에서 전 세계적으로 작동합니다 → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**시스템 프롬프트 대 사용자 프롬프트:** 시스템 프롬프트는 전체 세션에 대한 지속적인 지시를 설정합니다. 사용자 프롬프트는 요청당 입력입니다. 이 분할을 올바르게 하는 것이 대규모 일관성을 결정합니다 → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**컨텍스트 창:** 모든 모델에는 입력 + 출력 합계에 대한 최대 토큰 제한이 있습니다. 긴 프롬프트는 모델의 답변에 사용 가능한 공간을 줄이고 — 창이 채워짐에 따라 모델은 이전 내용을 무시하기 시작합니다 → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**토큰 한도와 비용:** 정확하고 간결한 프롬프트는 호출당 더 적은 토큰을 사용하고, 지연 시간을 줄이며, 속도 제한 내에 유지됩니다 — 대규모에서 비용에 직접적인 영향을 미칩니다 → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
-            '**멀티모달 프롬프팅:** GPT-5.5와 Gemini 같은 현대 LLM은 텍스트뿐만 아니라 이미지도 허용합니다. 프롬프트 엔지니어링 원칙은 이미지 입력에도 동일하게 적용됩니다 → [Fundamentals: Beyond Text: How to Prompt with Images]',
-            '**로컬 대 클라우드 모델:** 프롬프트 엔지니어링 기법은 클라우드 API와 Ollama 또는 LM Studio를 통해 로컬에서 실행되는 모델에 동일하게 적용됩니다 — 단, 로컬 모델은 더 작은 컨텍스트 창과 다른 지시 추종 동작으로 인해 조정된 형식이 필요할 수 있습니다. PromptQuorum은 로컬 모델(Ollama, LM Studio, vLLM)과 클라우드 API(OpenAI, Anthropic, Google Gemini) 모두를 단일 인터페이스를 통해 지원합니다 — 프롬프트를 다시 작성하지 않고 제공업체 간에 전환하거나, 동일한 프롬프트를 여러 모델에 동시에 비교할 수 있습니다.',
+            '**멀티모달 프롬프팅:** GPT-5.5와 Gemini 3.1 같은 현대 LLM은 텍스트뿐만 아니라 이미지도 허용합니다. 프롬프트 엔지니어링 원칙은 이미지 입력에도 동일하게 적용됩니다 → [Fundamentals: Beyond Text: How to Prompt with Images]',
+            '**로컬 대 클라우드 모델:** 프롬프트 엔지니어링 기법은 클라우드 API와 Ollama 또는 LM Studio를 통해 로컬에서 실행되는 모델에 동일하게 적용됩니다 — 단, 로컬 모델은 더 작은 컨텍스트 창과 다른 지시 추종 동작으로 인해 조정된 형식이 필요할 수 있습니다. PromptQuorum은 로컬 모델(Ollama, LM Studio, vLLM)과 클라우드 API(OpenAI, Anthropic, Google Gemini 3.1) 모두를 단일 인터페이스를 통해 지원합니다 — 프롬프트를 다시 작성하지 않고 제공업체 간에 전환하거나, 동일한 프롬프트를 여러 모델에 동시에 비교할 수 있습니다.',
           ],
         },
 
@@ -2805,7 +2808,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '환각 감소 — 근거, 소스 제약, 명시적 범위 지정은 가공된 사실을 줄입니다. PromptQuorum의 Quorum 기능은 모델 응답 전반에 걸쳐 합의 검사를 실행하여, 서로 다른 모델이 동일한 구조화된 프롬프트에 응답하는 방식을 비교함으로써 환각과 모순을 감지합니다.',
             '형식 제어 — 출력 형식을 지정하면 결과가 편집 준비가 된 것이 아니라 바로 사용 가능한 상태로 도착합니다',
             '반복 속도 — 더 적은 명확화 라운드, 더 많은 첫 시도 성공',
-            '크로스 모델 이식성 — 잘 구조화된 프롬프트는 재작성 없이 GPT-5.5, Claude, Gemini에서 작동합니다',
+            '크로스 모델 이식성 — 잘 구조화된 프롬프트는 재작성 없이 GPT-5.5, Claude Opus 4.8, Gemini 3.1에서 작동합니다',
           ],
         },
 
@@ -2831,7 +2834,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**단일 행 프롬프트로 시작하십시오.** 작업을 정확하게 설명하는 명확한 한 문장을 작성하십시오. 구조를 추가하기 전에 모델이 무엇을 반환하는지 관찰하십시오. 이것은 기준을 설정합니다 — 개선하기 전에 기본 프롬프트가 무엇을 생성하는지 알아야 합니다.',
             '**실제 작업에 하나의 프레임워크를 적용하십시오.** 작성 작업에는 CRAFT를 선택하거나 복잡한 지시에는 CO-STAR를 선택하십시오. 프레임워크는 프롬프트에 필요한 모든 요소를 생각하게 합니다. [Frameworks] 섹션은 예시와 함께 각 프레임워크를 다룹니다 → [Frameworks: Which Prompt Framework Should You Use?]로 시작하십시오.',
             '**한 번에 하나의 기법을 추가하십시오.** 하나의 작업에 퓨샷 예시를 시도해 보십시오. 다른 작업에 제약을 추가하십시오. 추론 문제에 Chain-of-Thought를 테스트하십시오. 변경 사항을 분리하면 어떤 기법이 실제로 출력을 개선했는지 볼 수 있습니다. [Techniques] 섹션은 각 기법을 심층적으로 다룹니다.',
-            '**여러 모델에서 테스트하십시오.** 동일한 프롬프트가 GPT-5.5, Claude, Gemini에서 다른 결과를 생성합니다. PromptQuorum을 사용하여 하나의 프롬프트를 여러 모델에 동시에 전달하고 응답을 나란히 비교하십시오 — 특정 작업에 가장 잘 작동하는 모델과 공식을 찾는 가장 빠른 방법입니다.',
+            '**여러 모델에서 테스트하십시오.** 동일한 프롬프트가 GPT-5.5, Claude Opus 4.8, Gemini 3.1에서 다른 결과를 생성합니다. PromptQuorum을 사용하여 하나의 프롬프트를 여러 모델에 동시에 전달하고 응답을 나란히 비교하십시오 — 특정 작업에 가장 잘 작동하는 모델과 공식을 찾는 가장 빠른 방법입니다.',
             '**사용 사례에 맞는 프롬프트 라이브러리를 구축하십시오.** 잘 작동하는 프롬프트를 저장하십시오. 시간이 지남에 따라 개선하십시오. 특정 도메인에 대해 테스트된 프롬프트 라이브러리는 내구성 있는 자산입니다. 구조화하고 유지 관리하는 방법에 대한 가이드는 [Use Topics: Build a Prompt Library That Saves Hours]를 참조하십시오.',
           ],
         },
@@ -2878,7 +2881,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '프롬프트 엔지니어링이 PromptQuorum 같은 도구와 어떻게 관련됩니까?',
-              a: 'PromptQuorum은 프롬프트 엔지니어링 원칙을 중심으로 구축된 멀티 모델 AI 디스패치 도구입니다. 9개의 내장 프롬프트 프레임워크, AI 기반 프롬프트 최적화 도구, 그리고 하나의 프롬프트를 여러 모델(GPT-5.5, Claude, Gemini, 로컬 모델)에 동시에 전달하고 결과를 나란히 비교하는 기능을 포함합니다. 프롬프트 엔지니어링을 반복 가능하게 만들고 모델 간 수동 테스트의 마찰을 제거합니다.',
+              a: 'PromptQuorum은 프롬프트 엔지니어링 원칙을 중심으로 구축된 멀티 모델 AI 디스패치 도구입니다. 9개의 내장 프롬프트 프레임워크, AI 기반 프롬프트 최적화 도구, 그리고 하나의 프롬프트를 여러 모델(GPT-5.5, Claude Opus 4.8, Gemini 3.1, 로컬 모델)에 동시에 전달하고 결과를 나란히 비교하는 기능을 포함합니다. 프롬프트 엔지니어링을 반복 가능하게 만들고 모델 간 수동 테스트의 마찰을 제거합니다.',
             },
             {
               q: 'AI 에이전트가 존재하는 지금도 프롬프트 엔지니어링이 관련이 있습니까?',
