@@ -13,6 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'annual',
     specific_year: 2027,
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/net-metering-rollback-balcony-solar-2027-overview-hero-en.png',
     title: 'Net Metering Is Ending in 2027 — What It Means for Balcony Solar',
     seoTitle: 'Net Metering Is Ending in 2027 — What It Means for Balcony Solar',
     intro: 'A policy shift in the Netherlands is a preview of what\'s likely coming to other mature solar markets: the Dutch Senate approved ending 1:1 net metering (saldering) effective January 1, 2027. This page covers that specific rollback — it is a narrower, differentiated angle from a general net-metering/grid-export explainer previously scoped in the cluster backlog and held pending demand data; that broader piece remains unbuilt, and this article does not replace it.',
@@ -98,6 +99,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/net-metering-rollback-balcony-solar-2027-overview-hero-ar.png',
     title: 'صافي القياس (Net Metering) ينتهي في 2027 — ماذا يعني ذلك للطاقة الشمسية للشرفة',
     seoTitle: 'صافي القياس (Net Metering) ينتهي في 2027 — ماذا يعني ذلك للطاقة الشمسية للشرفة',
     intro: 'يمثل تحوّل في السياسات في هولندا مؤشرًا مبكرًا لما قد يحدث قريبًا في أسواق الطاقة الشمسية الناضجة الأخرى: وافق مجلس الشيوخ الهولندي على إنهاء نظام صافي القياس 1:1 (المعروف بـ saldering) اعتبارًا من 1 يناير 2027. تتناول هذه الصفحة هذا التراجع تحديدًا — وهو موضوع أضيق نطاقًا ومختلف عن دليل عام حول صافي القياس وتصدير الطاقة إلى الشبكة كان مقررًا سابقًا لهذه المجموعة من المحتوى وتم تأجيله بانتظار بيانات الطلب؛ ولا يزال ذلك المحتوى الأوسع نطاقًا غير منشأ، وهذا المقال لا يحل محله.',
@@ -183,6 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/net-metering-rollback-balcony-solar-2027-overview-hero-de.png',
     title: 'Net Metering endet 2027 – Was das für Balkonkraftwerke bedeutet',
     seoTitle: 'Net Metering endet 2027 – Was das für Balkonkraftwerke bedeutet',
     intro: 'Ein politischer Kurswechsel in den Niederlanden zeigt, was wahrscheinlich auch anderen etablierten Solarmärkten bevorsteht: Der niederländische Senat hat die Abschaffung des 1:1-Net-Metering (Saldering) zum 1. Januar 2027 beschlossen. Diese Seite behandelt genau diesen Rückbau — es handelt sich um ein enger gefasstes, differenziertes Thema gegenüber einem allgemeinen Net-Metering-/Netzeinspeisungs-Ratgeber, der zuvor für dieses Themencluster vorgesehen, aber wegen fehlender Nachfragedaten zurückgestellt wurde; dieser umfassendere Beitrag bleibt unerstellt, und dieser Artikel ersetzt ihn nicht.',
@@ -268,6 +271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/net-metering-rollback-balcony-solar-2027-overview-hero-es.png',
     title: 'El Net Metering llega a su fin en 2027: qué significa para la energía solar de balcón',
     seoTitle: 'El Net Metering llega a su fin en 2027: qué significa para la energía solar de balcón',
     intro: 'Un cambio de política en los Países Bajos anticipa lo que probablemente llegará a otros mercados solares maduros: el Senado neerlandés aprobó poner fin al net metering 1:1 (saldering) a partir del 1 de enero de 2027. Esta página cubre específicamente ese recorte — es un enfoque más acotado y diferenciado respecto a una guía general sobre net metering y exportación a la red que se había previsto anteriormente para este grupo de contenidos y quedó a la espera de datos de demanda; esa pieza más amplia sigue sin construirse, y este artículo no la sustituye.',
@@ -353,6 +357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/net-metering-rollback-balcony-solar-2027-overview-hero-fr.png',
     title: 'La fin du net metering en 2027 : ce que cela signifie pour le solaire de balcon',
     seoTitle: 'La fin du net metering en 2027 : ce que cela signifie pour le solaire de balcon',
     intro: 'Un changement de politique aux Pays-Bas préfigure ce qui pourrait bientôt arriver sur d\'autres marchés solaires matures : le Sénat néerlandais a approuvé la suppression du net metering 1:1 (saldering) à compter du 1er janvier 2027. Cette page couvre spécifiquement ce recul — il s\'agit d\'un angle plus restreint et différencié par rapport à un guide général sur le net metering et l\'exportation vers le réseau, précédemment envisagé pour ce cluster de contenus et mis en attente de données de demande ; cette pièce plus large reste non construite, et cet article ne la remplace pas.',
@@ -438,6 +443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/net-metering-rollback-balcony-solar-2027-overview-hero-ja.png',
     title: '2027年にネットメータリングが終了 — バルコニーソーラーへの影響とは',
     seoTitle: '2027年にネットメータリングが終了 — バルコニーソーラーへの影響とは',
     intro: 'オランダにおける政策転換は、他の成熟した太陽光市場にもいずれ波及する可能性を示すものです。オランダ上院は、2027年1月1日付けで1:1ネットメータリング（サルデリング）を終了することを承認しました。このページはこの特定の制度縮小を取り上げます — これは、以前このクラスターで構想されながら需要データ待ちで保留となっている、より一般的なネットメータリング／系統輸出の解説記事とは異なる、より狭く差別化されたトピックです。その広範な記事は未作成のままであり、本記事はそれを代替するものではありません。',
@@ -523,6 +529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/net-metering-rollback-balcony-solar-2027-overview-hero-ko.png',
     title: '2027년 넷미터링 종료 — 발코니 태양광에 미치는 영향',
     seoTitle: '2027년 넷미터링 종료 — 발코니 태양광에 미치는 영향',
     intro: '네덜란드의 정책 전환은 다른 성숙한 태양광 시장에서도 곧 나타날 가능성이 있는 흐름을 미리 보여줍니다. 네덜란드 상원은 2027년 1월 1일부로 1:1 넷미터링(살더링, saldering)을 폐지하는 안을 승인했습니다. 이 페이지는 이 구체적인 제도 축소를 다룹니다 — 이는 이전에 이 클러스터를 위해 구상되었으나 수요 데이터 부족으로 보류된 일반적인 넷미터링/계통 송전 해설 기사와는 다른, 더 좁고 차별화된 주제입니다. 그 더 넓은 범위의 콘텐츠는 아직 제작되지 않았으며, 이 기사가 이를 대체하지 않습니다.',
@@ -608,6 +615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/net-metering-rollback-balcony-solar-2027-overview-hero-pt.png',
     title: 'O Net Metering Está Chegando ao Fim em 2027 — O Que Isso Significa para a Energia Solar de Varanda',
     seoTitle: 'O Net Metering Está Chegando ao Fim em 2027 — O Que Isso Significa para a Energia Solar de Varanda',
     intro: 'Uma mudança de política nos Países Baixos é um prévia do que provavelmente chegará a outros mercados solares maduros: o Senado neerlandês aprovou o fim do net metering 1:1 (saldering) a partir de 1º de janeiro de 2027. Esta página cobre especificamente esse recuo — é um ângulo mais restrito e diferenciado em relação a um guia geral sobre net metering e exportação de energia para a rede, previamente planejado para este cluster de conteúdo e mantido em espera até haver dados de demanda; esse conteúdo mais amplo permanece não criado, e este artigo não o substitui.',
@@ -693,6 +701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/net-metering-rollback-balcony-solar-2027-overview-hero-zh.png',
     title: '净计量政策将于2027年终止——对阳台光伏意味着什么',
     seoTitle: '净计量政策将于2027年终止——对阳台光伏意味着什么',
     intro: '荷兰的一项政策转变预示着其他成熟太阳能市场可能很快出现的趋势：荷兰参议院已批准自2027年1月1日起终止1:1净计量（saldering）制度。本页面专门介绍这一具体的政策收紧——这是一个范围更窄、有别于此前为该内容集群规划、但因缺乏需求数据而搁置的一般性净计量/电网输出解释文章的差异化主题；那篇更广泛的文章仍未撰写，本文并不能替代它。',
