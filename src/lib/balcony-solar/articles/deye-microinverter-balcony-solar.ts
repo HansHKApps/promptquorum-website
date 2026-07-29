@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/deye-microinverter-balcony-solar-overview-hero-en.png',
     title: 'Deye: Balcony Solar Microinverter Company Profile',
     seoTitle: 'Deye Balcony Solar Microinverter Profile',
     metaDescription: 'Company profile for Deye: history, ownership, and microinverter product range for balcony solar.',
@@ -90,6 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/deye-microinverter-balcony-solar-overview-hero-de.png',
     title: 'Deye: Firmenprofil zum Mikrowechselrichter für Balkonkraftwerke',
     seoTitle: 'Deye Balkonkraftwerk-Mikrowechselrichter im Profil',
     metaDescription: 'Firmenprofil zu Deye: Geschichte, Eigentümerstruktur und Mikrowechselrichter-Produktpalette für Balkonkraftwerke.',
@@ -172,6 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/deye-microinverter-balcony-solar-overview-hero-fr.png',
     title: 'Deye : profil d\'entreprise du micro-onduleur solaire de balcon',
     seoTitle: 'Profil Deye : micro-onduleur solaire balcon',
     metaDescription: 'Profil de l\'entreprise Deye : historique, actionnariat et gamme de micro-onduleurs pour le solaire de balcon.',
@@ -254,6 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/deye-microinverter-balcony-solar-overview-hero-ja.png',
     title: 'Deye:バルコニー太陽光用マイクロインバーター企業プロフィール',
     seoTitle: 'Deyeバルコニー太陽光マイクロインバーター企業情報',
     metaDescription: 'Deye社の企業プロフィールです。沿革、株主構成、バルコニー太陽光向けマイクロインバーター製品ラインナップを紹介します。',
@@ -336,6 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/deye-microinverter-balcony-solar-overview-hero-zh.png',
     title: 'Deye(德业):阳台光伏微型逆变器企业概况',
     seoTitle: 'Deye阳台光伏微型逆变器企业概况',
     metaDescription: 'Deye企业概况:历史沿革、股权结构及阳台光伏微型逆变器产品线介绍。',
@@ -418,6 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/deye-microinverter-balcony-solar-overview-hero-es.png',
     title: 'Deye: perfil de la empresa de microinversores para solar de balcón',
     seoTitle: 'Deye: perfil de microinversores solares de balcón',
     metaDescription: 'Perfil de la empresa Deye: historia, propiedad y gama de productos de microinversores para energía solar de balcón.',
@@ -500,6 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/deye-microinverter-balcony-solar-overview-hero-pt.png',
     title: 'Deye: perfil da empresa de microinversores para energia solar de varanda',
     seoTitle: 'Deye: perfil de microinversores solares de varanda',
     metaDescription: 'Perfil da empresa Deye: histórico, propriedade e linha de produtos de microinversores para energia solar de varanda.',
@@ -582,6 +589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/deye-microinverter-balcony-solar-overview-hero-ar.png',
     title: 'Deye: ملف الشركة الخاص بالميكرو إنفرتر للطاقة الشمسية على الشرفة',
     seoTitle: 'ملف شركة Deye لميكرو إنفرتر الشرفة الشمسية',
     metaDescription: 'ملف تعريفي لشركة Deye: التاريخ والملكية ومجموعة منتجات الميكرو إنفرتر للطاقة الشمسية على الشرفة.',
@@ -664,6 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/deye-microinverter-balcony-solar-overview-hero-ko.png',
     title: 'Deye: 발코니 태양광 마이크로인버터 기업 프로필',
     seoTitle: 'Deye 발코니 태양광 마이크로인버터 프로필',
     metaDescription: 'Deye 기업 프로필: 연혁, 소유 구조, 발코니 태양광용 마이크로인버터 제품 라인업을 소개합니다.',

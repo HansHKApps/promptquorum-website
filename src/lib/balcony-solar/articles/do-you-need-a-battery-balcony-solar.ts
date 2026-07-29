@@ -7,6 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'evergreen',
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/do-you-need-a-battery-balcony-solar-overview-hero-en.png',
     title: 'Do You Need a Battery for Balcony Solar?',
     seoTitle: 'Balcony Solar Battery: Do You Actually Need One?',
     intro: 'A battery is the single most common add-on question balcony solar buyers ask, and the honest answer is: usually not required, and not always worth it even when it\'s available. The decision comes down to one number you can actually check.',
@@ -133,6 +134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/do-you-need-a-battery-balcony-solar-overview-hero-es.png',
     title: '¿Necesitas una batería para la energía solar de balcón?',
     seoTitle: 'Batería para solar de balcón: ¿realmente la necesitas?',
     intro: 'Una batería es la pregunta de complemento más común que hacen los compradores de energía solar de balcón, y la respuesta honesta es: generalmente no es necesaria, y no siempre vale la pena incluso cuando está disponible. La decisión se reduce a un número que puedes verificar.',
@@ -260,6 +262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/do-you-need-a-battery-balcony-solar-overview-hero-pt.png',
     title: 'Você precisa de uma bateria para energia solar de varanda?',
     seoTitle: 'Bateria para solar de varanda: você realmente precisa?',
     intro: 'Uma bateria é a pergunta de complemento mais comum que os compradores de energia solar de varanda fazem, e a resposta honesta é: geralmente não é necessária, e nem sempre vale a pena mesmo quando está disponível. A decisão se resume a um número que você pode verificar.',
@@ -387,6 +390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/do-you-need-a-battery-balcony-solar-overview-hero-ar.png',
     title: 'هل تحتاج إلى بطارية للطاقة الشمسية للشرفة؟',
     seoTitle: 'بطارية الطاقة الشمسية للشرفة: هل تحتاجها فعلاً؟',
     intro: 'البطارية هي السؤال الأكثر شيوعًا حول الإضافات الذي يطرحه مشترو الطاقة الشمسية للشرفة، والإجابة الصادقة هي: عادةً غير مطلوبة، وليست دائمًا تستحق العناء حتى عندما تكون متاحة. يعتمد القرار على رقم واحد يمكنك التحقق منه فعليًا.',
@@ -514,6 +518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/do-you-need-a-battery-balcony-solar-overview-hero-ja.png',
     title: 'バルコニーソーラーにバッテリーは必要？',
     seoTitle: 'バルコニーソーラー用バッテリー：本当に必要？',
     intro: 'バッテリーは、バルコニーソーラー購入者が尋ねる最も一般的なアドオンに関する質問であり、正直な答えは：通常は不要で、入手可能な場合でも常に価値があるわけではない、というものです。判断は実際に確認できる1つの数字にかかっています。',
@@ -641,6 +646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/do-you-need-a-battery-balcony-solar-overview-hero-zh.png',
     title: '阳台光伏需要电池吗？',
     seoTitle: '阳台光伏电池：真的需要吗？',
     intro: '电池是阳台光伏购买者最常问的附加配件问题，诚实的答案是：通常不需要，即使有条件购买也不总是值得。这个决定取决于一个你实际可以核实的数字。',
@@ -768,6 +774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/do-you-need-a-battery-balcony-solar-overview-hero-fr.png',
     title: 'Avez-vous besoin d\'une batterie pour le solaire de balcon ?',
     seoTitle: 'Batterie solaire de balcon : en avez-vous vraiment besoin ?',
     intro: 'Une batterie est la question d\'accessoire la plus fréquente posée par les acheteurs de solaire de balcon, et la réponse honnête est : généralement pas nécessaire, et pas toujours rentable même lorsqu\'elle est disponible. La décision se résume à un chiffre que vous pouvez réellement vérifier.',
@@ -895,6 +902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/do-you-need-a-battery-balcony-solar-overview-hero-ko.png',
     title: '발코니 태양광에 배터리가 필요한가요?',
     seoTitle: '발코니 태양광 배터리: 정말 필요한가요?',
     intro: '배터리는 발코니 태양광 구매자가 가장 흔히 묻는 추가 장비 질문이며, 솔직한 답은: 대개 필요하지 않으며, 구매 가능한 경우에도 항상 가치가 있는 것은 아니라는 것입니다. 결정은 실제로 확인할 수 있는 한 가지 수치에 달려 있습니다.',
@@ -1022,6 +1030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/do-you-need-a-battery-balcony-solar-overview-hero-de.png',
     title: 'Brauchen Sie einen Speicher für Balkonsolar?',
     seoTitle: 'Balkonsolar-Speicher: Brauchen Sie wirklich einen?',
     intro: 'Ein Speicher ist die häufigste Zusatzfrage, die Käufer von Balkonsolaranlagen stellen, und die ehrliche Antwort lautet: meist nicht erforderlich, und nicht immer lohnenswert, selbst wenn einer verfügbar ist. Die Entscheidung läuft auf eine einzige Zahl hinaus, die Sie tatsächlich selbst prüfen können.',

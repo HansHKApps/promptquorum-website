@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/eu-800w-balcony-solar-standard-2027-overview-hero-en.png',
     title: 'The 800W Balcony Solar Standard: EU Harmonization Explained (2027)',
     seoTitle: 'The 800W Balcony Solar Standard: EU Harmonization Explained (2027)',
     intro: 'Germany\'s 800W balcony solar cap, finalized under DIN VDE V 0126-95 in December 2025, brings the country in line with a de facto EU standard already used by France, Austria, Belgium, and the Netherlands — rather than setting a new precedent others are following. This page tracks how that convergence is spreading — though Greece\'s own mechanism, set by a ministerial decision in public consultation through July 20, 2026 under the broader Law 5299/2026, takes a stricter "zero feed-in" approach rather than simply adopting the France/Austria/Belgium/Netherlands model, driven by the EU\'s Energy Performance of Buildings Directive. Not every member state is converging: Sweden and Hungary remain clear holdouts.',
@@ -108,6 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/eu-800w-balcony-solar-standard-2027-overview-hero-de.png',
     title: 'Der 800-Watt-Balkonkraftwerk-Standard: EU-Harmonisierung erklärt (2027)',
     seoTitle: 'Der 800-Watt-Balkonkraftwerk-Standard: EU-Harmonisierung erklärt (2027)',
     intro: 'Deutschlands 800-Watt-Grenze für Balkonkraftwerke, im Dezember 2025 mit der DIN VDE V 0126-95 endgültig festgelegt, bringt das Land in Einklang mit einem De-facto-EU-Standard, den Frankreich, Österreich, Belgien und die Niederlande bereits anwenden — statt einen neuen Präzedenzfall zu setzen, dem andere folgen. Diese Seite verfolgt, wie sich diese Angleichung ausbreitet — auch wenn Griechenlands eigener Rahmen, derzeit in öffentlicher Konsultation nach Gesetz 5299/2026 bis zum 20. Juli 2026, einen strengeren „Zero-Feed-in"-Ansatz verfolgt statt einfach das Modell von Frankreich/Österreich/Belgien/den Niederlanden zu übernehmen, angetrieben von der EU-Richtlinie über die Gesamtenergieeffizienz von Gebäuden (EPBD). Nicht jeder Mitgliedstaat gleicht sich an: Schweden und Ungarn bleiben klare Ausnahmen.',
@@ -205,6 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/eu-800w-balcony-solar-standard-2027-overview-hero-es.png',
     title: 'El estándar de 800 W para energía solar de balcón: la armonización de la UE explicada (2027)',
     seoTitle: 'El estándar de 800 W para energía solar de balcón: la armonización de la UE explicada (2027)',
     intro: 'El límite de 800 W para energía solar de balcón en Alemania, finalizado bajo la norma DIN VDE V 0126-95 en diciembre de 2025, pone al país en línea con un estándar de facto de la UE ya utilizado por Francia, Austria, Bélgica y los Países Bajos — en lugar de establecer un nuevo precedente que otros sigan. Esta página hace seguimiento de cómo se extiende esa convergencia — aunque el marco propio de Grecia, ahora en consulta pública bajo la Ley 5299/2026 hasta el 20 de julio de 2026, adopta un enfoque más estricto de «cero inyección a red» en lugar de simplemente sumarse al modelo de Francia/Austria/Bélgica/Países Bajos, impulsada por la Directiva de la UE sobre la Eficiencia Energética de los Edificios. No todos los Estados miembros convergen: Suecia y Hungría siguen siendo excepciones claras.',
@@ -302,6 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/eu-800w-balcony-solar-standard-2027-overview-hero-fr.png',
     title: "La norme des 800 W pour le solaire de balcon : l'harmonisation européenne expliquée (2027)",
     seoTitle: "La norme des 800 W pour le solaire de balcon : l'harmonisation européenne expliquée (2027)",
     intro: "Le plafond de 800 W pour le solaire de balcon en Allemagne, finalisé par la norme DIN VDE V 0126-95 en décembre 2025, aligne le pays sur une norme de facto déjà en vigueur en France, en Autriche, en Belgique et aux Pays-Bas — plutôt que d'établir un nouveau précédent que d'autres suivraient. Cette page suit la propagation de cette convergence — même si le cadre propre à la Grèce, désormais en consultation publique dans le cadre de la loi 5299/2026 jusqu'au 20 juillet 2026, adopte une approche plus stricte de « zéro injection réseau » plutôt que de simplement reprendre le modèle France/Autriche/Belgique/Pays-Bas, portée par la directive européenne sur la performance énergétique des bâtiments. Tous les États membres ne convergent pas : la Suède et la Hongrie restent des exceptions notables.",
@@ -399,6 +403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/eu-800w-balcony-solar-standard-2027-overview-hero-ar.png',
     title: 'معيار 800 واط للطاقة الشمسية على الشرفات: شرح التوحيد الأوروبي (2027)',
     seoTitle: 'معيار 800 واط للطاقة الشمسية على الشرفات: شرح التوحيد الأوروبي (2027)',
     intro: 'الحد الأقصى البالغ 800 واط للطاقة الشمسية على الشرفات في ألمانيا، الذي تم إقراره نهائيًا بموجب DIN VDE V 0126-95 في ديسمبر 2025، يجعل ألمانيا متوافقة مع معيار أوروبي بحكم الأمر الواقع تستخدمه بالفعل فرنسا والنمسا وبلجيكا وهولندا — وليس إرساءً لسابقة جديدة تتبعها دول أخرى. تتابع هذه الصفحة كيفية انتشار هذا التقارب — رغم أن إطار اليونان الخاص، الذي يخضع الآن لاستشارة عامة بموجب القانون 5299/2026 حتى 20 يوليو 2026، يتبنّى نهجًا أكثر صرامة قائمًا على «عدم التغذية العكسية للشبكة إطلاقًا» بدلاً من تبنّي نموذج فرنسا/النمسا/بلجيكا/هولندا ببساطة، مدفوعًا بتوجيه الاتحاد الأوروبي بشأن الأداء الطاقي للمباني (EPBD). لا تتقارب كل الدول الأعضاء: تبقى السويد والمجر استثناءين واضحين.',
@@ -496,6 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/eu-800w-balcony-solar-standard-2027-overview-hero-ja.png',
     title: '800W バルコニー太陽光基準：EU調和の解説（2027年）',
     seoTitle: '800W バルコニー太陽光基準：EU調和の解説（2027年）',
     intro: 'ドイツの800Wバルコニー太陽光上限は、2025年12月にDIN VDE V 0126-95のもとで確定し、フランス、オーストリア、ベルギー、オランダがすでに採用している事実上のEU基準にドイツが合わせた形です。新たな先例をドイツが作り、他国がそれに追随しているわけではありません。このページでは、この収束がどのように広がっているかを追跡します。ただし、ギリシャ独自の枠組みは2026年法5299号のもとで2026年7月20日までパブリックコンサルテーション中であり、フランス／オーストリア／ベルギー／オランダのモデルを単純に採用するのではなく、より厳格な「逆潮流ゼロ」方式を取っています。牽引役はEUの建築物エネルギー性能指令（EPBD）です。すべての加盟国が収束しているわけではなく、スウェーデンとハンガリーは明確な例外として残っています。',
@@ -593,6 +599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/eu-800w-balcony-solar-standard-2027-overview-hero-ko.png',
     title: '800W 발코니 태양광 표준: EU 조화 정책 설명 (2027년)',
     seoTitle: '800W 발코니 태양광 표준: EU 조화 정책 설명 (2027년)',
     intro: '2025년 12월 DIN VDE V 0126-95에 따라 확정된 독일의 800W 발코니 태양광 상한은, 프랑스·오스트리아·벨기에·네덜란드가 이미 채택하고 있던 사실상의 EU 표준에 독일이 합류한 것입니다. 다른 국가들이 뒤따르는 새로운 선례를 독일이 만든 것이 아닙니다. 이 페이지는 이러한 수렴 현상이 어떻게 확산되고 있는지 추적합니다 — 다만 그리스 자체의 체계는 2026년 법률 제5299호에 따라 2026년 7월 20일까지 공개 의견수렴 중이며, 프랑스·오스트리아·벨기에·네덜란드 모델을 단순히 따르기보다 더 엄격한 "역송전 제로" 방식을 취하고 있으며, EU 건물 에너지 성능 지침(EPBD)이 그 흐름을 주도하고 있습니다. 모든 회원국이 수렴하는 것은 아니며, 스웨덴과 헝가리는 명확한 예외로 남아 있습니다.',
@@ -690,6 +697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/eu-800w-balcony-solar-standard-2027-overview-hero-pt.png',
     title: 'O padrão de 800 W para energia solar de varanda: a harmonização da UE explicada (2027)',
     seoTitle: 'O padrão de 800 W para energia solar de varanda: a harmonização da UE explicada (2027)',
     intro: 'O limite de 800 W para energia solar de varanda na Alemanha, finalizado sob a norma DIN VDE V 0126-95 em dezembro de 2025, coloca o país em linha com um padrão de fato da UE já usado pela França, Áustria, Bélgica e Países Baixos — em vez de estabelecer um novo precedente que outros estejam seguindo. Esta página acompanha como essa convergência está se espalhando — embora o próprio regime da Grécia, agora em consulta pública sob a Lei 5299/2026 até 20 de julho de 2026, adote uma abordagem mais rígida de "zero injeção na rede" em vez de simplesmente adotar o modelo França/Áustria/Bélgica/Países Baixos, impulsionada pela Diretiva de Desempenho Energético dos Edifícios da UE. Nem todos os Estados-membros estão convergindo: Suécia e Hungria continuam sendo exceções claras.',
@@ -787,6 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/eu-800w-balcony-solar-standard-2027-overview-hero-zh.png',
     title: '800瓦阳台太阳能标准：欧盟统一进程解析（2027年）',
     seoTitle: '800瓦阳台太阳能标准：欧盟统一进程解析（2027年）',
     intro: '德国800瓦阳台太阳能上限已于2025年12月依据DIN VDE V 0126-95正式确定，这使德国与法国、奥地利、比利时、荷兰早已采用的事实上的欧盟标准保持一致——而不是德国率先设立标准、其他国家跟随。本页追踪这一趋同过程的扩散情况——不过希腊自身的框架目前正依据《5299/2026号法律》进行公众咨询，截至2026年7月20日，其采取的是更严格的「零并网馈电」路径，而非简单套用法国/奥地利/比利时/荷兰模式，背后推动力是欧盟《建筑能效指令》（EPBD）。并非所有成员国都在趋同：瑞典和匈牙利仍是明显的例外。',
