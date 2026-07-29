@@ -8,7 +8,7 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS, toOutputLocale } from '@/lib/i18n/constants'
 import { translations } from '@/translations'
 import { truncateTitle } from '@/lib/utils'
-import { getBlogPostIsoDate } from '@/lib/blog/parsePublishDate'
+import { getBlogPostIsoDate, getBlogPostModifiedIsoDate } from '@/lib/blog/parsePublishDate'
 import { buildImageObject } from '@/lib/imageObjectSchema'
 
 export function getArticleStaticParams() {
@@ -43,6 +43,7 @@ export async function buildArticleMetadata(slug: string, lang: Language): Promis
       url: canonicalUrl,
       type: 'article',
       publishedTime: getBlogPostIsoDate(postId),
+      modifiedTime: getBlogPostModifiedIsoDate(postId),
       images: [{ url: ogImageUrl, width: 1200, height: 675, alt: post.title }],
     },
     twitter: {
@@ -100,6 +101,9 @@ export async function buildArticlePageElement(slug: string, lang: Language) {
   // machine-readable source — see parsePublishDate.ts), never the localized
   // display string, which produced garbled non-ISO dates on every non-EN locale.
   const isoDate = getBlogPostIsoDate(postId)
+  // dateModified only diverges from datePublished when a post's EN block sets
+  // `dateModified` (a substantive content update) — see BlogPost.dateModified.
+  const modifiedIsoDate = getBlogPostModifiedIsoDate(postId)
 
   // Collapse into a single BlogPosting node (was 3 separate, conflicting Article/
   // BlogPosting/ScholarlyArticle nodes for one URL, with inconsistent author types).
@@ -116,7 +120,7 @@ export async function buildArticlePageElement(slug: string, lang: Language) {
     url: `https://www.promptquorum.com/blog/${slug}`,
     inLanguage: toOutputLocale(lang),
     datePublished: isoDate,
-    dateModified: isoDate,
+    dateModified: modifiedIsoDate,
     author: {
       '@type': 'Person',
       name: 'Hans Kuepper',
