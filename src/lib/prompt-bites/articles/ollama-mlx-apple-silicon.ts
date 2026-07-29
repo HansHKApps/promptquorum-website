@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-en.png',
     title: 'Does Ollama Support MLX on Apple Silicon?',
     dateModified: '2026-06-21',
     seoTitle: 'Ollama MLX Apple Silicon Support 2026 | Prompt Bites | PromptQuorum',
@@ -132,6 +133,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-de.png',
     title: 'Unterstützt Ollama MLX auf Apple Silicon?',
     seoTitle: 'Ollama MLX Apple Silicon 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Nein — Ollama verwendet llama.cpp + Metal, nicht MLX. Für native MLX-Inferenz auf Apple Silicon: mlx-lm oder LM Studio. LM Studio unterstützt beide Backends.',
@@ -213,6 +215,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-fr.png',
     title: 'Ollama prend-il en charge MLX sur Apple Silicon ?',
     seoTitle: 'Ollama MLX Apple Silicon 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Non — Ollama utilise llama.cpp + Metal, pas MLX. Pour une inférence MLX native sur Apple Silicon : mlx-lm ou LM Studio. LM Studio supporte les deux backends.',
@@ -294,6 +297,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-ja.png',
     title: 'OllamaはApple SiliconでMLXをサポートしていますか？',
     seoTitle: 'Ollama MLX Apple Silicon サポート 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'いいえ — OllamaはMLXではなくllama.cpp + Metalを使用します。Apple Silicon上のネイティブMLX推論にはmlx-lmまたはLM Studioを使用してください。',
@@ -375,6 +379,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-zh.png',
     title: 'Ollama 在 Apple Silicon 上支持 MLX 吗？',
     seoTitle: 'Ollama MLX Apple Silicon 支持 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '不支持 — Ollama 使用 llama.cpp + Metal，而非 MLX。Apple Silicon 原生 MLX 推理请使用 mlx-lm 或 LM Studio。LM Studio 同时支持两种后端。',
@@ -456,6 +461,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-pt.png',
     title: 'O Ollama suporta MLX no Apple Silicon?',
     seoTitle: 'Suporte do Ollama a MLX no Apple Silicon 2026 | PromptQuorum',
     metaDescription: 'Não — O Ollama usa llama.cpp + Metal, não MLX. Para inferência MLX nativa no Apple Silicon, use mlx-lm ou LM Studio. LM Studio suporta ambos os backends.',
@@ -546,6 +552,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-es.png',
     title: '¿Ollama soporta MLX en Apple Silicon?',
     seoTitle: 'Soporte de Ollama MLX en Apple Silicon 2026 | PromptQuorum',
     metaDescription: 'No — Ollama usa llama.cpp + Metal, no MLX. Para inferencia MLX nativa en Apple Silicon, usa mlx-lm o LM Studio. LM Studio soporta ambos backends.',
@@ -630,6 +637,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-ar.png',
     title: 'هل يدعم ⁨Ollama MLX⁩ على ⁨Apple Silicon⁩؟',
     seoTitle: '⁨Ollama⁩ على ⁨Apple Silicon⁩: ⁨llama.cpp + Metal⁩ لا ⁨MLX⁩',
     metaDescription: '⁨Ollama⁩ يستخدم ⁨llama.cpp + Metal⁩ على ⁨Apple Silicon⁩، وليس ⁨MLX⁩. سرعة ⁨MLX⁩ تبلغ ضعفَي ⁨Metal⁩. للحصول على ⁨MLX⁩ الأصلي استخدم ⁨mlx-lm⁩ أو ⁨LM Studio⁩.',
@@ -713,6 +721,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-mlx-apple-silicon-overview-hero-ko.png',
     title: 'Ollama는 Apple Silicon에서 MLX를 지원합니까?',
     seoTitle: 'Ollama MLX Apple Silicon 지원 여부 2026 | PromptQuorum',
     metaDescription: 'Ollama는 MLX 대신 llama.cpp + Metal을 사용합니다. Apple Silicon에서 네이티브 MLX 추론이 필요하다면 mlx-lm 또는 LM Studio를 사용하십시오. LM Studio는 두 백엔드를 모두 지원합니다.',

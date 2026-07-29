@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
+    heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-en.png',
     title: 'Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B: Which to Run Locally?',
     dateModified: '2026-06-20',
     seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026 | Prompt Bites | PromptQuorum',
@@ -129,6 +130,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Model Comparisons',
+    heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-de.png',
     title: 'Mistral Small 24B vs. Qwen 3 14B vs. Llama 3.3 8B: Welches lokal ausführen?',
     seoTitle: 'Mistral Small 24B vs. Qwen 14B vs. Llama 8B 2026',
     metaDescription: 'Llama 3.3 8B: 4,9 GB VRAM. Qwen 3 14B: 9,3 GB, MMLU 74,8 %. Mistral Small 24B: 14,4 GB, MMLU 81 %. Auswahl nach VRAM-Tier. Schnelle Antwort von PromptQuorum.',
@@ -208,6 +210,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Model Comparisons',
+    heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-fr.png',
     title: 'Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B : lequel lancer en local ?',
     seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.3 8B : 4,9 Go VRAM. Qwen 3 14B : 9,3 Go, MMLU 74,8 %. Mistral Small 24B : 14,4 Go, MMLU 81 %. Choisissez selon le tier VRAM. Réponse rapide de PromptQuorum.',
@@ -287,6 +290,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Model Comparisons',
+    heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-ja.png',
     title: 'Mistral Small 24B・Qwen 3 14B・Llama 3.3 8B：ローカルでどれを動かすべきか？',
     seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.3 8B：4.9 GB VRAM。Qwen 3 14B：9.3 GB、MMLU 74.8%。Mistral Small 24B：14.4 GB、MMLU 81%。VRAMティアで選択。PromptQuorumによる簡潔な回答。',
@@ -366,6 +370,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Model Comparisons',
+    heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-zh.png',
     title: 'Mistral Small 24B 对比 Qwen 3 14B 对比 Llama 3.3 8B：本地运行选哪个？',
     seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.3 8B：4.9 GB 显存。Qwen 3 14B：9.3 GB、MMLU 74.8%。Mistral Small 24B：14.4 GB、MMLU 81%。按显存层级选择。PromptQuorum 快速解答。',
@@ -445,6 +450,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Model Comparisons',
+    heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-pt.png',
     title: 'Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B: qual rodar localmente?',
     seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026',
     metaDescription: 'Llama 3.3 8B: 4,9 GB de VRAM. Qwen 3 14B: 9,3 GB, MMLU 74,8%. Mistral Small 24B: 14,4 GB, MMLU 81%. Escolha pelo nível de VRAM. Resposta rápida.',
@@ -524,6 +530,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Model Comparisons',
+    heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-es.png',
     title: 'Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B: ¿cuál ejecutar en local?',
     seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026',
     metaDescription: 'Llama 3.3 8B: 4,9 GB VRAM. Qwen 3 14B: 9,3 GB, MMLU 74,8%. Mistral Small 24B: 14,4 GB, MMLU 81%. Elige según tu nivel de VRAM. Respuesta rápida.',
@@ -603,6 +610,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Model Comparisons',
+    heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-ar.png',
     title: '⁨Mistral Small 24B⁩ مقابل ⁨Qwen 3 14B⁩ مقابل ⁨Llama 3.3 8B⁩: أيهما تشغّل محلياً؟',
     seoTitle: '⁨Mistral Small 24B⁩ مقابل ⁨Qwen 14B⁩ مقابل ⁨Llama 8B 2026⁩',
     metaDescription: '⁨Llama 3.3 8B⁩: ⁨4.9 GB VRAM⁩ و⁨66.6% MMLU. Qwen 3 14B⁩: ⁨9.3 GB⁩ و⁨74.8% MMLU. Mistral Small 24B⁩: ⁨14.4 GB⁩ و⁨81% MMLU⁩. اختر النموذج بحسب حجم ⁨VRAM⁩ المتاح.',
@@ -682,6 +690,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Model Comparisons',
+    heroImage: '/images/mistral-small-24b-vs-qwen-14b-vs-llama-8b-overview-hero-ko.png',
     title: 'Mistral Small 24B vs Qwen 3 14B vs Llama 3.3 8B: 로컬에서 무엇을 실행할까?',
     seoTitle: 'Mistral Small 24B vs Qwen 14B vs Llama 8B 2026 | PromptQuorum',
     metaDescription: 'Llama 3.3 8B: 4.9 GB VRAM, MMLU 66.6%. Qwen 3 14B: 9.3 GB, MMLU 74.8%. Mistral Small 24B: 14.4 GB, MMLU 81%. VRAM 용량에 따라 최적 모델을 선택하십시오.',
