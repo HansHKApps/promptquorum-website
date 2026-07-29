@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'evergreen',
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/how-to-install-balcony-solar-overview-hero-en.png',
     title: 'How to Install Balcony Solar: A Safety-First Step-by-Step Guide',
     seoTitle: 'How to Install Balcony Solar Safely: Step-by-Step',
     intro: 'Balcony solar is designed for self-installation, but "plug-in" doesn\'t mean "no risk." This guide covers the mounting and electrical steps in order, with the safety warnings placed where they matter — before you start, not buried at the end.',
@@ -166,6 +167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/how-to-install-balcony-solar-overview-hero-es.png',
     title: 'Cómo instalar energía solar de balcón: guía de seguridad paso a paso',
     seoTitle: 'Cómo instalar energía solar de balcón de forma segura: paso a paso',
     intro: 'La energía solar de balcón está diseñada para que la instales tú mismo, pero que sea "enchufar y listo" no significa "sin riesgo". Esta guía cubre los pasos de montaje y conexión eléctrica en orden, con las advertencias de seguridad colocadas donde realmente importan: antes de empezar, no al final.',
@@ -324,6 +326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/how-to-install-balcony-solar-overview-hero-pt.png',
     title: 'Como instalar energia solar de varanda: guia de segurança passo a passo',
     seoTitle: 'Como instalar energia solar de varanda com segurança: passo a passo',
     intro: 'A energia solar de varanda foi criada para você mesmo instalar, mas "plugar e usar" não significa "sem risco nenhum". Este guia mostra as etapas de montagem e ligação elétrica em ordem, com os avisos de segurança colocados onde realmente importam: antes de você começar, não escondidos no final.',
@@ -482,6 +485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/how-to-install-balcony-solar-overview-hero-ar.png',
     title: 'كيفية تركيب الطاقة الشمسية للشرفة: دليل خطوة بخطوة يركز على السلامة',
     seoTitle: 'تركيب الطاقة الشمسية للشرفة بأمان: خطوة بخطوة',
     intro: '**الطاقة الشمسية للشرفة مصممة للتركيب الذاتي، لكن "التوصيل المباشر" لا يعني "بلا مخاطر".** يغطي هذا الدليل خطوات التثبيت والتوصيل الكهربائي بالترتيب، مع وضع تحذيرات السلامة في المكان الذي تهم فيه فعلاً — قبل البدء، وليس مخفية في النهاية.',
@@ -640,6 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/how-to-install-balcony-solar-overview-hero-de.png',
     title: 'Balkonkraftwerk installieren: Sicherheits-Schritt-für-Schritt-Anleitung',
     seoTitle: 'Balkonkraftwerk sicher installieren: Schritt für Schritt',
     intro: 'Ein Balkonkraftwerk ist zur Selbstinstallation vorgesehen – aber „einfach einstecken" bedeutet nicht „kein Risiko". Diese Anleitung erklärt die Montage- und Elektroschritte in der richtigen Reihenfolge. Die Sicherheitshinweise stehen dort, wo sie wirklich wichtig sind: vor dem Beginn, nicht am Ende versteckt.',
@@ -800,6 +805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/how-to-install-balcony-solar-overview-hero-ja.png',
     title: 'バルコニーソーラーの設置方法:安全第一のステップバイステップガイド',
     seoTitle: 'バルコニーソーラーを安全に設置する方法:ステップバイステップ',
     intro: 'バルコニーソーラーは自分で設置できるように設計されていますが、「差し込むだけ」は「リスクゼロ」を意味しません。このガイドは設置と電気接続の手順を順番に解説し、安全上の注意点は最後にまとめるのではなく、始める前に必要な箇所に配置しています。',
@@ -958,6 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/how-to-install-balcony-solar-overview-hero-zh.png',
     title: '如何安装阳台光伏:安全优先的分步指南',
     seoTitle: '如何安全安装阳台光伏:分步指南',
     intro: '阳台光伏系统设计为可自行安装,但"即插即用"并不等于"零风险"。本指南按顺序介绍安装和电气连接步骤,并将安全提示放在真正重要的位置——开始之前,而不是藏在文末。',
@@ -1116,6 +1123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/how-to-install-balcony-solar-overview-hero-fr.png',
     title: 'Comment installer un panneau solaire de balcon : guide de sécurité étape par étape',
     seoTitle: 'Installer un panneau solaire de balcon en toute sécurité : étape par étape',
     intro: 'Le solaire de balcon est conçu pour être installé soi-même, mais « brancher et utiliser » ne veut pas dire « sans risque ». Ce guide présente les étapes de montage et de raccordement électrique dans l\'ordre, avec les avertissements de sécurité placés là où ils comptent vraiment — avant de commencer, et non enfouis à la fin.',
@@ -1274,6 +1282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/how-to-install-balcony-solar-overview-hero-ko.png',
     title: '발코니 태양광 설치 방법: 안전 우선 단계별 가이드',
     seoTitle: '발코니 태양광 안전하게 설치하는 방법: 단계별 가이드',
     intro: '발코니 태양광은 직접 설치할 수 있도록 설계되었지만, "꽂기만 하면 끝"이라는 말이 "위험이 전혀 없다"는 뜻은 아닙니다. 이 가이드는 거치와 전기 연결 단계를 순서대로 안내하며, 안전 경고를 마지막에 묻어두지 않고 시작하기 전, 정말 중요한 위치에 배치했습니다.',

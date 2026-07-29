@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'evergreen',
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/green-solar-pluginenergy-balcony-solar-overview-hero-en.png',
     title: 'Green Solar and PluginEnergy: Balcony Solar Reseller Profile',
     seoTitle: 'Green Solar and PluginEnergy Balcony Solar Profile',
     metaDescription: 'Combined company profile for Green Solar and PluginEnergy: smaller-volume balcony solar resellers, history, and product range.',
@@ -27,6 +28,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/green-solar-pluginenergy-balcony-solar-overview-hero-de.png',
     title: 'Green Solar und PluginEnergy: Balkonsolar-Händlerprofil',
     seoTitle: 'Green Solar und PluginEnergy: Balkonsolar-Profil',
     metaDescription: 'Firmenprofil zu Green Solar und PluginEnergy: kleinere Balkonsolar-Händler im deutschsprachigen Raum – mit Geschichte und Produktangebot im Überblick.',
@@ -44,6 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/green-solar-pluginenergy-balcony-solar-overview-hero-fr.png',
     title: 'Green Solar et PluginEnergy : profil des revendeurs de solaire de balcon',
     seoTitle: 'Green Solar et PluginEnergy : profil solaire balcon',
     metaDescription: 'Profil combiné de Green Solar et PluginEnergy, revendeurs de solaire de balcon à plus petit volume : historique et gamme de produits.',
@@ -61,6 +64,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/green-solar-pluginenergy-balcony-solar-overview-hero-ja.png',
     title: 'Green SolarとPluginEnergy:ベランダ太陽光発電の販売代理店プロフィール',
     seoTitle: 'Green SolarとPluginEnergyのベランダ太陽光販売店',
     metaDescription: 'Green SolarとPluginEnergyの企業概要:小規模なベランダ太陽光販売店の沿革と製品ラインナップを紹介します。',
@@ -78,6 +82,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/green-solar-pluginenergy-balcony-solar-overview-hero-zh.png',
     title: 'Green Solar与PluginEnergy:阳台太阳能经销商简介',
     seoTitle: 'Green Solar与PluginEnergy阳台太阳能简介',
     metaDescription: 'Green Solar与PluginEnergy企业简介:两家中小规模阳台太阳能经销商的历史与产品系列介绍。',
@@ -95,6 +100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/green-solar-pluginenergy-balcony-solar-overview-hero-es.png',
     title: 'Green Solar y PluginEnergy: perfil de revendedores de solar de balcón',
     seoTitle: 'Green Solar y PluginEnergy: perfil solar de balcón',
     metaDescription: 'Perfil combinado de Green Solar y PluginEnergy: revendedores de solar de balcón de menor volumen, su historia y gama de productos.',
@@ -112,6 +118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/green-solar-pluginenergy-balcony-solar-overview-hero-pt.png',
     title: 'Green Solar e PluginEnergy: perfil de revendedores de solar de varanda',
     seoTitle: 'Green Solar e PluginEnergy: perfil solar de varanda',
     metaDescription: 'Perfil combinado da Green Solar e PluginEnergy: revendedores de solar de varanda de menor volume, histórico e linha de produtos.',
@@ -129,6 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/green-solar-pluginenergy-balcony-solar-overview-hero-ar.png',
     title: 'Green Solar وPluginEnergy: ملف تعريفي لموزعي الطاقة الشمسية للشرفات',
     seoTitle: 'Green Solar وPluginEnergy: ملف موزعي الشرفات',
     metaDescription: 'ملف تعريفي مشترك لشركتي Green Solar وPluginEnergy: موزعو طاقة شمسية للشرفات بحجم أصغر، مع التاريخ ومجموعة المنتجات.',
@@ -146,6 +154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/green-solar-pluginenergy-balcony-solar-overview-hero-ko.png',
     title: 'Green Solar와 PluginEnergy: 베란다 태양광 판매업체 프로필',
     seoTitle: 'Green Solar·PluginEnergy 베란다 태양광 프로필',
     metaDescription: 'Green Solar와 PluginEnergy의 기업 프로필: 소규모 베란다 태양광 판매업체의 연혁과 제품 라인업을 소개합니다.',

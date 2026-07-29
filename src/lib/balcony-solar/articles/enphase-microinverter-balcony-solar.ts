@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/enphase-microinverter-balcony-solar-overview-hero-en.png',
     title: 'Enphase: Balcony Solar Microinverter Company Profile',
     seoTitle: 'Enphase Balcony Solar Microinverter Profile',
     metaDescription: 'Company profile for Enphase: history, ownership, and microinverter product range for balcony solar.',
@@ -89,6 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/enphase-microinverter-balcony-solar-overview-hero-de.png',
     title: 'Enphase: Firmenprofil zum Balkonkraftwerk-Mikrowechselrichter',
     seoTitle: 'Enphase Balkonkraftwerk-Mikrowechselrichter im Profil',
     metaDescription: 'Firmenprofil zu Enphase: Unternehmensgeschichte, Eigentümerstruktur und die Mikrowechselrichter-Produktpalette für Balkonkraftwerke im Überblick.',
@@ -170,6 +172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/enphase-microinverter-balcony-solar-overview-hero-fr.png',
     title: 'Enphase : profil d\'entreprise micro-onduleur solaire pour balcon',
     seoTitle: 'Enphase : profil de l\'entreprise micro-onduleur balcon',
     metaDescription: 'Profil d\'entreprise Enphase : historique, actionnariat et gamme complète de micro-onduleurs pour le solaire de balcon, avec repères clés.',
@@ -251,6 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/enphase-microinverter-balcony-solar-overview-hero-ja.png',
     title: 'Enphase：バルコニー太陽光発電用マイクロインバーター企業プロフィール',
     seoTitle: 'Enphaseのバルコニー太陽光マイクロインバーター企業情報',
     metaDescription: 'Enphaseの企業プロフィールです。バルコニー太陽光発電用マイクロインバーターの沿革、所有構造、製品ラインナップを解説します。',
@@ -332,6 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/enphase-microinverter-balcony-solar-overview-hero-zh.png',
     title: 'Enphase：阳台光伏微型逆变器企业概况',
     seoTitle: 'Enphase企业概况：阳台光伏微型逆变器解析',
     metaDescription: 'Enphase企业概况：详细介绍公司历史沿革、股权结构，以及专为阳台光伏发电设计的微型逆变器产品阵容，帮助读者全面了解该公司。',
@@ -413,6 +418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/enphase-microinverter-balcony-solar-overview-hero-es.png',
     title: 'Enphase: perfil de empresa de microinversores solares de balcón',
     seoTitle: 'Enphase: perfil de microinversores solares de balcón',
     metaDescription: 'Perfil de empresa de Enphase: historia, estructura de propiedad y gama completa de productos microinversores para energía solar de balcón.',
@@ -494,6 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/enphase-microinverter-balcony-solar-overview-hero-pt.png',
     title: 'Enphase: perfil da empresa de microinversores para energia solar de varanda',
     seoTitle: 'Enphase: perfil de microinversores solares de varanda',
     metaDescription: 'Perfil da empresa Enphase: histórico, estrutura de propriedade e linha de produtos de microinversores para energia solar de varanda.',
@@ -575,6 +582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/enphase-microinverter-balcony-solar-overview-hero-ar.png',
     title: 'Enphase: ملف الشركة الخاص بالميكرو إنفرتر للطاقة الشمسية للشرفات',
     seoTitle: 'Enphase: ملف شركة الميكرو إنفرتر للشرفات الشمسية',
     metaDescription: 'ملف تعريفي بشركة Enphase: التاريخ، الملكية، ومجموعة منتجات الميكرو إنفرتر للطاقة الشمسية للشرفات.',
@@ -656,6 +664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/enphase-microinverter-balcony-solar-overview-hero-ko.png',
     title: 'Enphase: 발코니 태양광 마이크로인버터 기업 프로필',
     seoTitle: 'Enphase 발코니 태양광 마이크로인버터 프로필',
     metaDescription: 'Enphase의 기업 프로필입니다. 연혁, 소유 구조, 발코니 태양광용 마이크로인버터 제품 라인업을 소개합니다.',
