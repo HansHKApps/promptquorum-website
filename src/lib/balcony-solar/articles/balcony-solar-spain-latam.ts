@@ -16,6 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-02',
     last_full_refresh: '2026-07-02',
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-spain-latam-overview-hero-en.png',
     title: 'Balcony Solar in Spain & Latin America: Legal Status Explained',
     seoTitle: 'Balcony Solar Legal Status: Spain & Latin America',
     intro: 'Spain\'s balcony solar legal status is genuinely unresolved — sources conflict, and this guide isn\'t going to paper over that to give you a tidier answer. Mexico, covered here as a Latin American reference point, has a clearer but less favorable picture: no small-system exemption exists at all.',
@@ -121,6 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-spain-latam-overview-hero-es.png',
     title: 'Energía solar de balcón en España y Latinoamérica: estatus legal explicado',
     seoTitle: 'Energía solar de balcón legal: España y Latinoamérica',
     intro: 'El estatus legal de la energía solar de balcón en España es genuinamente no resuelto — las fuentes se contradicen, y esta guía no va a maquillar eso para darte una respuesta más ordenada. México, cubierto aquí como referencia latinoamericana, tiene un panorama más claro pero menos favorable: no existe ninguna exención para sistemas pequeños.',
@@ -227,6 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-spain-latam-overview-hero-pt.png',
     title: 'Energia solar de varanda na Espanha e na América Latina: status legal explicado',
     seoTitle: 'Energia solar de varanda legal: Espanha e América Latina',
     intro: 'O status legal da energia solar de varanda na Espanha é genuinamente não resolvido — as fontes se contradizem, e este guia não vai maquiar isso para dar uma resposta mais organizada. O México, coberto aqui como referência latino-americana, tem um panorama mais claro, porém menos favorável: não existe nenhuma isenção para sistemas pequenos.',
@@ -333,6 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-spain-latam-overview-hero-ar.png',
     title: 'الطاقة الشمسية للشرفة في إسبانيا وأمريكا اللاتينية: شرح الوضع القانوني',
     seoTitle: 'الطاقة الشمسية للشرفة قانونية: إسبانيا وأمريكا اللاتينية',
     intro: 'الوضع القانوني للطاقة الشمسية للشرفة في إسبانيا غير محسوم فعليًا — تتضارب المصادر، ولن يُخفي هذا الدليل ذلك لإعطائك إجابة أكثر ترتيبًا. أما المكسيك، المشمولة هنا كنقطة مرجعية لأمريكا اللاتينية، فلديها صورة أوضح لكنها أقل ملاءمة: لا يوجد أي إعفاء للأنظمة الصغيرة على الإطلاق.',
@@ -439,6 +443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-spain-latam-overview-hero-ja.png',
     title: 'スペイン・ラテンアメリカのバルコニーソーラー：法的状況を解説',
     seoTitle: 'バルコニーソーラーの法的状況：スペイン・ラテンアメリカ',
     intro: 'スペインのバルコニーソーラーの法的状況は文字通り未解決です — 情報源が矛盾しており、本ガイドはそれをすっきりした答えに見せかけることはしません。ラテンアメリカの参考例として取り上げるメキシコは、より明確ですがあまり有利ではない状況です：小規模システムの適用除外は一切存在しません。',
@@ -545,6 +550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-spain-latam-overview-hero-zh.png',
     title: '西班牙与拉丁美洲的阳台光伏：法律状态解析',
     seoTitle: '阳台光伏法律状态：西班牙与拉丁美洲',
     intro: '西班牙阳台光伏的法律状态确实未有定论——各信息来源相互矛盾，本指南不会为了给你一个更整洁的答案而掩盖这一点。作为拉丁美洲参考点被收录于此的墨西哥，情况更加明确但不那么有利：完全不存在小型系统豁免。',
@@ -651,6 +657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-spain-latam-overview-hero-fr.png',
     title: 'Le solaire de balcon en Espagne et en Amérique latine : statut légal expliqué',
     seoTitle: 'Statut légal du solaire de balcon : Espagne et Amérique latine',
     intro: 'Le statut légal du solaire de balcon en Espagne est véritablement non résolu — les sources se contredisent, et ce guide ne va pas masquer cela pour vous donner une réponse plus nette. Le Mexique, couvert ici comme point de référence latino-américain, présente un tableau plus clair mais moins favorable : aucune exemption pour petits systèmes n\'existe du tout.',
@@ -757,6 +764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-spain-latam-overview-hero-de.png',
     title: 'Balkonkraftwerk in Spanien und Lateinamerika: Rechtslage erklärt',
     seoTitle: 'Balkonkraftwerk Spanien rechtlich: Spanien und Lateinamerika',
     intro: 'Die Rechtslage für Balkonkraftwerke in Spanien ist tatsächlich ungeklärt – die Quellen widersprechen sich, und dieser Leitfaden wird das nicht übertünchen, um Ihnen eine sauberere Antwort zu liefern. Mexiko, das hier als lateinamerikanischer Referenzpunkt behandelt wird, hat ein klareres, aber weniger günstiges Bild: Es gibt keinerlei Ausnahme für Kleinanlagen.',
@@ -863,6 +871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/balcony-solar-spain-latam-overview-hero-ko.png',
     title: '스페인과 라틴아메리카의 발코니 태양광: 법적 상태 설명',
     seoTitle: '발코니 태양광 법적 상태: 스페인과 라틴아메리카',
     intro: '스페인의 발코니 태양광 법적 상태는 실제로 미해결 상태입니다 — 출처들이 서로 모순되며, 이 가이드는 더 깔끔한 답을 주기 위해 이를 얼버무리지 않습니다. 라틴아메리카 참고 사례로 다루는 멕시코는 더 명확하지만 덜 유리한 그림을 보여줍니다: 소형 시스템 예외가 전혀 존재하지 않습니다.',

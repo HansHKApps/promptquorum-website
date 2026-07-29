@@ -23,6 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-02',
     last_full_refresh: '2026-07-02',
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-sizing-yield-payback-overview-hero-en.png',
     title: 'Balcony Solar Sizing, Yield & Payback: What to Expect by Country',
     seoTitle: 'Balcony Solar Sizing & Payback Calculator (2026)',
     intro: 'How much power you need, how much a panel actually produces in your climate, and how long it takes to pay for itself are three separate questions with three separate answers — and all three depend heavily on where you live, not just the hardware you buy.',
@@ -151,6 +152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-sizing-yield-payback-overview-hero-es.png',
     title: 'Dimensionamiento, rendimiento y amortización de la energía solar de balcón: qué esperar según el país',
     seoTitle: 'Calculadora de amortización solar de balcón (2026)',
     intro: 'Cuánta energía necesitas, cuánta produce realmente un panel en tu clima y cuánto tarda en amortizarse son tres preguntas distintas con tres respuestas distintas — y las tres dependen en gran medida de dónde vives, no solo del equipo que compres.',
@@ -280,6 +282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-sizing-yield-payback-overview-hero-pt.png',
     title: 'Dimensionamento, rendimento e retorno do investimento em energia solar de varanda: o que esperar por país',
     seoTitle: 'Calculadora de retorno de energia solar de varanda (2026)',
     intro: 'Quanta energia você precisa, quanto um painel realmente produz no seu clima e quanto tempo leva para se pagar são três perguntas diferentes com três respostas diferentes — e as três dependem muito de onde você mora, não apenas do equipamento que você compra.',
@@ -409,6 +412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-sizing-yield-payback-overview-hero-ar.png',
     title: 'تحديد حجم الطاقة الشمسية للشرفة، والإنتاجية، ومدة استرداد التكلفة: ما يمكن توقعه حسب الدولة',
     seoTitle: 'حاسبة استرداد تكلفة الطاقة الشمسية للشرفة (2026)',
     intro: 'كمية الطاقة التي تحتاجها، والكمية الفعلية التي ينتجها اللوح الشمسي في مناخك، والمدة التي يستغرقها استرداد تكلفته هي ثلاثة أسئلة منفصلة لها ثلاث إجابات منفصلة — وكلها تعتمد بشكل كبير على مكان إقامتك، وليس فقط على الجهاز الذي تشتريه.',
@@ -538,6 +542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-sizing-yield-payback-overview-hero-ja.png',
     title: 'バルコニーソーラーのサイジング・発電量・回収期間：国別に見る目安',
     seoTitle: 'バルコニーソーラー サイジング＆回収期間計算（2026年）',
     intro: '必要な電力量、実際にお住まいの気候でパネルがどれだけ発電するか、そして元が取れるまでの期間 — これらは3つの別々の問いであり、それぞれ別の答えがあります。そしていずれも、購入するハードウェアだけでなく、お住まいの地域に大きく左右されます。',
@@ -667,6 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-sizing-yield-payback-overview-hero-zh.png',
     title: '阳台光伏的容量选择、发电量与回本周期：各国预期一览',
     seoTitle: '阳台光伏容量与回本计算器（2026）',
     intro: '你需要多少电力、面板在你所在气候条件下实际能发多少电、以及需要多长时间才能收回成本——这是三个各自独立的问题，也有三个各自独立的答案，且三者都在很大程度上取决于你所在的地区，而不仅仅是你购买的硬件。',
@@ -796,6 +802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-sizing-yield-payback-overview-hero-fr.png',
     title: 'Dimensionnement, rendement et amortissement du solaire de balcon : à quoi s\'attendre selon le pays',
     seoTitle: 'Calculateur de dimensionnement et amortissement solaire de balcon (2026)',
     intro: 'La puissance dont vous avez besoin, ce qu\'un panneau produit réellement dans votre climat, et le temps nécessaire pour qu\'il s\'autofinance sont trois questions distinctes avec trois réponses distinctes — et toutes trois dépendent fortement de l\'endroit où vous vivez, pas seulement du matériel que vous achetez.',
@@ -925,6 +932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-sizing-yield-payback-overview-hero-ko.png',
     title: '발코니 태양광 용량 산정, 발전량, 투자회수 기간: 국가별 예상치',
     seoTitle: '발코니 태양광 용량 및 투자회수 계산 (2026년)',
     intro: '필요한 전력량, 실제 거주 지역의 기후에서 패널이 생산하는 발전량, 그리고 투자금을 회수하는 데 걸리는 기간은 세 가지 별개의 질문이며 각각 다른 답을 가집니다 — 그리고 이 세 가지 모두 구매하는 하드웨어뿐 아니라 거주 지역에 크게 좌우됩니다.',
@@ -1054,6 +1062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-sizing-yield-payback-overview-hero-de.png',
     title: 'Balkonkraftwerk: Dimensionierung, Ertrag und Amortisation im Länderüberblick',
     seoTitle: 'Balkonkraftwerk-Rechner für Ertrag und Amortisation (2026)',
     intro: 'Wie viel Leistung Sie benötigen, wie viel ein Panel in Ihrem Klima tatsächlich erzeugt und wie lange die Amortisation dauert, sind drei getrennte Fragen mit drei getrennten Antworten — und alle drei hängen stark davon ab, wo Sie leben, nicht nur von der gekauften Hardware.',
