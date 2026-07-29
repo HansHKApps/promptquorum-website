@@ -7,6 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'evergreen',
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-en.png',
     title: 'Balcony Solar Not Producing Power? Common Fixes',
     seoTitle: 'Balcony Solar Not Working? Troubleshooting Guide',
     intro: 'A balcony solar system that suddenly stops producing power is almost never a defective unit — the fault is nearly always one of a small number of common, fixable issues. Here\'s how to diagnose it in order, starting with the most likely cause.',
@@ -150,6 +151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-de.png',
     title: 'Balkonkraftwerk erzeugt keinen Strom? Häufige Ursachen und Lösungen',
     seoTitle: 'Balkonkraftwerk funktioniert nicht? Schritt-für-Schritt-Diagnose',
     intro: 'Ein Balkonkraftwerk, das plötzlich aufhört, Strom zu erzeugen, ist so gut wie nie auf ein defektes Gerät zurückzuführen — der Fehler liegt fast immer an einer überschaubaren Zahl von häufigen, behebbaren Ursachen. Hier erfahren Sie, wie Sie in der richtigen Reihenfolge vorgehen, beginnend mit der wahrscheinlichsten Ursache.',
@@ -295,6 +297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-es.png',
     title: '¿La energía solar de balcón no genera energía? Soluciones habituales',
     seoTitle: '¿Energía solar de balcón no funciona? Guía de solución',
     intro: 'Un sistema de energía solar de balcón que deja de generar energía de repente casi nunca se debe a una unidad defectuosa: el problema casi siempre es uno de un pequeño número de causas comunes y fáciles de solucionar. Así se diagnostica en orden, empezando por la causa más probable.',
@@ -438,6 +441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-pt.png',
     title: 'Energia solar de varanda não está gerando energia? Soluções comuns',
     seoTitle: 'Energia solar de varanda não funciona? Guia de solução de problemas',
     intro: 'Um sistema de energia solar de varanda que de repente para de gerar energia quase nunca é uma unidade com defeito — o problema quase sempre é uma entre um pequeno número de causas comuns e fáceis de resolver. Veja como diagnosticar isso em ordem, começando pela causa mais provável.',
@@ -581,6 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-ar.png',
     title: 'الطاقة الشمسية للشرفة لا تولّد طاقة؟ الحلول الشائعة',
     seoTitle: 'الطاقة الشمسية للشرفة لا تعمل؟ دليل استكشاف الأخطاء وإصلاحها',
     intro: 'نظام الطاقة الشمسية للشرفة الذي يتوقف فجأة عن توليد الطاقة نادرًا جدًا ما يكون بسبب وحدة معطوبة — فالسبب يكاد يكون دائمًا واحدًا من عدد صغير من المشكلات الشائعة القابلة للإصلاح. إليك كيفية التشخيص بالترتيب، بدءًا من السبب الأكثر احتمالًا.',
@@ -724,6 +729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-ja.png',
     title: 'バルコニー太陽光発電が発電しない？よくある原因と対処法',
     seoTitle: 'バルコニー太陽光発電が動作しない場合のトラブルシューティングガイド',
     intro: 'バルコニー太陽光発電システムが突然発電しなくなった場合、ユニットの故障であることはほとんどありません。原因は、少数のよくある修正可能な問題のいずれかである場合がほとんどです。ここでは、最も可能性の高い原因から順に診断する方法を説明します。',
@@ -867,6 +873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-zh.png',
     title: '阳台光伏不发电？常见原因与解决方法',
     seoTitle: '阳台光伏系统不工作？故障排查指南',
     intro: '阳台光伏系统突然停止发电，几乎从不是设备本身损坏 — 故障原因几乎总是少数几个常见且可修复的问题之一。以下是按可能性从高到低的顺序进行诊断的方法。',
@@ -1010,6 +1017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-fr.png',
     title: 'Le solaire de balcon ne produit plus d\'électricité ? Solutions courantes',
     seoTitle: 'Le solaire de balcon ne fonctionne plus ? Guide de dépannage',
     intro: 'Un système solaire de balcon qui cesse soudainement de produire de l\'électricité n\'est presque jamais dû à une unité défectueuse — la cause est presque toujours l\'un d\'un petit nombre de problèmes courants et faciles à corriger. Voici comment diagnostiquer le problème dans l\'ordre, en commençant par la cause la plus probable.',
@@ -1153,6 +1161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-ko.png',
     title: '베란다 태양광이 발전하지 않나요? 흔한 원인과 해결법',
     seoTitle: '베란다 태양광이 작동하지 않을 때 문제 해결 가이드',
     intro: '베란다 태양광 시스템이 갑자기 발전을 멈춘다면 유닛 자체가 고장 난 경우는 거의 없습니다 — 원인은 거의 항상 소수의 흔하고 쉽게 고칠 수 있는 문제 중 하나입니다. 가능성이 가장 높은 원인부터 순서대로 진단하는 방법을 소개합니다.',
