@@ -13,6 +13,7 @@ const OG_SLUG = keyToSlug('temperature-and-top-p');
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      next_refresh_due: '2026-09-22',
       theme: 'Fundamentals',
       heroImage: '/images/temperature-and-top-p-overview-hero-en.png',
       title: 'Temperature and Top-P: Control AI Creativity',
@@ -322,6 +323,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Die meisten Benutzer sollten eine Einstellung anpassen und die andere im Standard lassen.** Die Anpassung beider gleichzeitig macht es unmöglich zu wissen, welche Einstellung geholfen hat.',
             '**Prompt-Design ist immer noch wichtiger als Schieberegler-Einstellungen.** Behebe zuerst ungenaue Anweisungen, dann passe die Parameter an, falls nötig.',
             '**Unterschiedliche Anwendungsfälle benötigen unterschiedliche Einstellungen:** Code erfordert niedrige Temperatur, Ideenfindung belohnt höhere Werte.',
+          ],
+        },
+        promptExample: {
+          title: 'Prompt-Struktur + Temperatur-Einstellungen',
+          content: [
+            '[Schlechter Prompt] „Schreibe etwas Kreatives über den Herbst."',
+            '[Guter Prompt] „Schreibe eine 100 Wörter lange, metaphorische Beschreibung des Herbstes, als wärst du ein Dichter. Temperatur: 0.9, Top-P: 0.95."',
+          ],
+        },
+        notation: {
+          title: 'Mathematische Notation',
+          content: [
+            'Temperaturbereich: T ∈ [0.0, 2.0]',
+            'Softmax mit Temperatur: softmax(logit_i / T) = exp(logit_i / T) / Σ(exp(logit_j / T))',
+            'Top-P-Sampling: Σ P(token_i) bis ≥ p, dann Sampling aus dieser Menge',
           ],
         },
         behavior: {
@@ -1123,6 +1139,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
               q: 'Temperatura 0 é completamente determinística?',
               a: 'Quase, mas não completamente. Temperatura 0 seleciona o token de maior probabilidade a cada etapa, mas sementes aleatórias de hardware e arredondamento de ponto flutuante podem introduzir variação mínima. Na prática, temperatura 0 é muito consistente entre execuções.',
             },
+            {
+              q: 'Por que ainda vejo alucinações mesmo com temperatura baixa?',
+              a: 'Alucinações acontecem quando os dados de treinamento do modelo têm lacunas ou a tarefa é ambígua — não apenas por causa da amostragem aleatória. Uma configuração de temperatura baixa será consistente em suas alucinações, mas não vai eliminá-las. Use RAG ou restrições explícitas de fonte para reduzi-las.',
+            },
+            {
+              q: 'As configurações recomendadas mudam entre GPT-5.6, Claude Opus 4.8 e Gemini 3.1 Pro?',
+              a: 'Um pouco. Os três se comportam de forma razoável em temperatura 0,5–0,7, mas a tolerância a temperaturas mais altas varia. O GPT-5.6 consegue ir mais alto sem ficar incoerente; o Claude Opus 4.8 é muito estável; o Gemini 3.1 Pro é mais experimental. Teste seu modelo real.',
+            },
+            {
+              q: 'Quantas execuções eu preciso para comparar configurações de forma justa?',
+              a: 'Pelo menos 3–5 por configuração para ver o comportamento típico. Mais, se você estiver trabalhando com temperaturas mais altas, onde a variância da saída é maior. O recurso de múltiplas execuções do PromptQuorum lida com isso automaticamente em todos os modelos.',
+            },
           ],
         },
         relatedReading: {
@@ -1195,6 +1223,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**La plupart des utilisateurs doivent régler l\'un et garder l\'autre par défaut.** Ajuster les deux à la fois rend impossible de savoir quel paramètre a aidé.',
             '**La conception de prompt importe toujours plus que les paramètres.** Corrige d\'abord les instructions vagues, puis ajuste les paramètres si nécessaire.',
             '**Différents cas d\'usage nécessitent différents paramètres :** le code demande une température basse, le brainstorming récompense les valeurs supérieures.',
+          ],
+        },
+        promptExample: {
+          title: 'Structure de prompt + Réglages de température',
+          content: [
+            '[Mauvais prompt] « Écris quelque chose de créatif sur l\'automne. »',
+            '[Bon prompt] « Écris une description métaphorique de 100 mots de l\'automne comme si tu étais un poète. Température : 0.9, top-p : 0.95. »',
+          ],
+        },
+        notation: {
+          title: 'Notation mathématique',
+          content: [
+            'Plage de température : T ∈ [0.0, 2.0]',
+            'Softmax avec température : softmax(logit_i / T) = exp(logit_i / T) / Σ(exp(logit_j / T))',
+            'Échantillonnage top-p : Σ P(token_i) jusqu\'à ≥ p, puis échantillonnage dans cet ensemble',
           ],
         },
         behavior: {
@@ -1394,6 +1437,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**異なるユースケースは異なる設定が必要です：** コードは低い温度を必要とし、ブレーンストーミングはより高い値から利益を得ます。',
           ],
         },
+        promptExample: {
+          title: 'プロンプト構造＋温度設定',
+          content: [
+            '[悪いプロンプト]「秋について何か創造的なことを書いてください。」',
+            '[良いプロンプト]「詩人になったつもりで、秋についての100語の比喩的な描写を書いてください。温度：0.9、Top-P：0.95。」',
+          ],
+        },
+        notation: {
+          title: '数学的表記',
+          content: [
+            '温度範囲：T ∈ [0.0, 2.0]',
+            '温度付きソフトマックス：softmax(logit_i / T) = exp(logit_i / T) / Σ(exp(logit_j / T))',
+            'Top-pサンプリング：Σ P(token_i) が ≥ p になるまで累積し、その集合からサンプリングする',
+          ],
+        },
         behavior: {
           title: 'AIの動作をどのように変えるか',
           content: [
@@ -1589,6 +1647,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**大多数用户应该调整一个参数，保持另一个为默认值。** 同时调整两个会使不知道哪个设置有效。',
             '**提示设计总比滑块设置更重要。** 先修复模糊的说明，然后在必要时调整参数。',
             '**不同的用例需要不同的设置：** 代码需要低温度，头脑风暴从较高值中获益。',
+          ],
+        },
+        promptExample: {
+          title: '提示结构+温度设置',
+          content: [
+            '[糟糕的提示]"写一些关于秋天的创意内容。"',
+            '[好的提示]"以诗人的身份，写一段100字的秋天隐喻描写。温度：0.9，Top-P：0.95。"',
+          ],
+        },
+        notation: {
+          title: '数学符号',
+          content: [
+            '温度范围：T ∈ [0.0, 2.0]',
+            '带温度的Softmax：softmax(logit_i / T) = exp(logit_i / T) / Σ(exp(logit_j / T))',
+            'Top-p采样：累加Σ P(token_i)直到≥p，然后从该集合中采样',
           ],
         },
         behavior: {
