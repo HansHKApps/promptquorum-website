@@ -17,11 +17,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'AI Hallucinations: Why AI Makes Things Up — and How to Stop Them',
       intro: 'Large language models confidently produce false information. These errors—called hallucinations—range from invented citations to fabricated facts presented with complete authority. Understanding why they happen and how to detect and reduce them is essential for anyone using LLMs in real work.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       seoTitle: 'AI Hallucinations: How to Detect & Reduce Them 2026',
       metaDescription: 'Understand why LLMs hallucinate and learn proven prompting techniques to minimize errors. Special section on local LLMs and PromptQuorum consensus scoring.',
       readTime: '12 min read',
       educationalLevel: 'Beginner',
       primaryTerm: 'AI Hallucination',
+      next_refresh_due: '2026-09-22',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
