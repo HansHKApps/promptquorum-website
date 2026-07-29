@@ -649,6 +649,51 @@
     "width": 800,
     "height": 450
   },
+  "/images/anker-solix-balcony-solar-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anker-solix-balcony-solar-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anker-solix-balcony-solar-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anker-solix-balcony-solar-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anker-solix-balcony-solar-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anker-solix-balcony-solar-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anker-solix-balcony-solar-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anker-solix-balcony-solar-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anker-solix-balcony-solar-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/anker-solix-balcony-solar-position-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -1489,6 +1534,51 @@
     "width": 800,
     "height": 450
   },
+  "/images/apsystems-microinverter-balcony-solar-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apsystems-microinverter-balcony-solar-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apsystems-microinverter-balcony-solar-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apsystems-microinverter-balcony-solar-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apsystems-microinverter-balcony-solar-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apsystems-microinverter-balcony-solar-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apsystems-microinverter-balcony-solar-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apsystems-microinverter-balcony-solar-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/apsystems-microinverter-balcony-solar-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/apsystems-microinverter-balcony-solar-position-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -1564,6 +1654,141 @@
     "width": 800,
     "height": 400
   },
+  "/images/balcony-solar-battery-storage-standard-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-battery-storage-standard-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-battery-storage-standard-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-battery-storage-standard-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-battery-storage-standard-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-battery-storage-standard-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-battery-storage-standard-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-battery-storage-standard-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-battery-storage-standard-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-brazil-status-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-brazil-status-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-brazil-status-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-brazil-status-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-brazil-status-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-brazil-status-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-brazil-status-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-brazil-status-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-brazil-status-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-china-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-china-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-china-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-china-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-china-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-china-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-china-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-china-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-china-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/balcony-solar-global-market-overview-drivers-headwinds-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -1573,6 +1798,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 450
+  },
+  "/images/balcony-solar-global-market-overview-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-global-market-overview-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-global-market-overview-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-global-market-overview-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-global-market-overview-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-global-market-overview-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-global-market-overview-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-global-market-overview-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-global-market-overview-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/balcony-solar-global-market-overview-regional-status-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -1593,6 +1863,141 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 450
+  },
+  "/images/balcony-solar-greece-status-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-greece-status-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-greece-status-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-greece-status-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-greece-status-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-greece-status-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-greece-status-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-greece-status-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-greece-status-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-gulf-mena-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-gulf-mena-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-gulf-mena-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-gulf-mena-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-gulf-mena-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-gulf-mena-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-gulf-mena-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-gulf-mena-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-gulf-mena-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-housing-associations-b2b-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-housing-associations-b2b-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-housing-associations-b2b-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-housing-associations-b2b-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-housing-associations-b2b-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-housing-associations-b2b-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-housing-associations-b2b-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-housing-associations-b2b-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-housing-associations-b2b-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/balcony-solar-hub-overview-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -1644,6 +2049,51 @@
     "width": 800,
     "height": 450
   },
+  "/images/balcony-solar-industry-overview-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-industry-overview-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-industry-overview-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-industry-overview-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-industry-overview-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-industry-overview-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-industry-overview-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-industry-overview-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-industry-overview-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/balcony-solar-industry-overview-players-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -1668,6 +2118,141 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 450
+  },
+  "/images/balcony-solar-japan-status-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-japan-status-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-japan-status-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-japan-status-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-japan-status-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-japan-status-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-japan-status-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-japan-status-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-japan-status-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-legal-us-states-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-legal-us-states-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-legal-us-states-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-legal-us-states-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-legal-us-states-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-legal-us-states-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-legal-us-states-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-legal-us-states-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-legal-us-states-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-mounting-guide-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-mounting-guide-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-mounting-guide-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-mounting-guide-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-mounting-guide-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-mounting-guide-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-mounting-guide-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-mounting-guide-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/balcony-solar-mounting-guide-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/balcony-solar-stack.svg": {
     "encodingFormat": "image/svg+xml",
