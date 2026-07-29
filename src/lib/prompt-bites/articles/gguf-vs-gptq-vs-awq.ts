@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
+    heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-en.png',
     title: 'GGUF vs GPTQ vs AWQ: Which Quantization Format Should You Use?',
     seoTitle: 'GGUF vs GPTQ vs AWQ Quantization 2026 | Prompt Bites',
     metaDescription: 'GGUF is the best default quantization format for local use — runs on CPU and GPU via llama.cpp/Ollama. GPTQ and AWQ are GPU-only formats built for serving.',
@@ -100,6 +101,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Quantization & VRAM',
+    heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-ar.png',
     title: 'GGUF مقابل GPTQ مقابل AWQ: أي تنسيق تكميم يجب أن تستخدمه؟',
     seoTitle: 'GGUF مقابل GPTQ مقابل AWQ للتكميم 2026 | Prompt Bites',
     metaDescription: 'GGUF هو أفضل تنسيق تكميم افتراضي للاستخدام المحلي — يعمل على CPU وGPU عبر llama.cpp/Ollama. GPTQ وAWQ تنسيقان مخصصان لـ GPU مبنيان للتقديم الإنتاجي.',
@@ -196,6 +198,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Quantization & VRAM',
+    heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-de.png',
     title: 'GGUF vs. GPTQ vs. AWQ: Welches Quantisierungsformat sollten Sie verwenden?',
     seoTitle: 'GGUF vs. GPTQ vs. AWQ Quantisierung 2026 | Prompt Bites',
     metaDescription: 'GGUF ist das beste Quantisierungsformat für lokale Nutzung — läuft auf CPU und GPU via llama.cpp/Ollama. GPTQ und AWQ sind GPU-Formate fürs Serving.',
@@ -292,6 +295,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Quantization & VRAM',
+    heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-es.png',
     title: 'GGUF vs GPTQ vs AWQ: ¿Qué Formato de Cuantización Deberías Usar?',
     seoTitle: 'GGUF vs GPTQ vs AWQ Cuantización 2026 | Prompt Bites',
     metaDescription: 'GGUF es el mejor formato de cuantización para uso local — corre en CPU y GPU vía llama.cpp/Ollama. GPTQ y AWQ son formatos solo GPU para producción.',
@@ -388,6 +392,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Quantization & VRAM',
+    heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-fr.png',
     title: 'GGUF vs GPTQ vs AWQ : quel format de quantification utiliser ?',
     seoTitle: 'GGUF vs GPTQ vs AWQ : quantification 2026 | Prompt Bites',
     metaDescription: 'GGUF est le meilleur format de quantification pour un usage local via llama.cpp/Ollama, sur CPU/GPU. GPTQ et AWQ sont des formats GPU pour la production.',
@@ -484,6 +489,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Quantization & VRAM',
+    heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-ja.png',
     title: 'GGUF vs GPTQ vs AWQ: どの量子化フォーマットを使うべき?',
     seoTitle: '2026年版 GGUF vs GPTQ vs AWQ 量子化 | Prompt Bites',
     metaDescription: 'GGUFはローカル用途に最適なデフォルトの量子化フォーマットです — llama.cpp/OllamaでCPUとGPU両方で動作。GPTQとAWQは本番サービング向けのGPU専用フォーマットです。',
@@ -580,6 +586,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Quantization & VRAM',
+    heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-ko.png',
     title: 'GGUF 대 GPTQ 대 AWQ: 어떤 양자화 형식을 사용해야 하는가?',
     seoTitle: '2026년 GGUF 대 GPTQ 대 AWQ 양자화 | Prompt Bites',
     metaDescription: 'GGUF는 로컬 사용을 위한 최적의 기본 양자화 형식입니다 — llama.cpp/Ollama를 통해 CPU와 GPU에서 실행됩니다. GPTQ와 AWQ는 프로덕션 서빙을 위한 GPU 전용 형식입니다.',
@@ -676,6 +683,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Quantization & VRAM',
+    heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-pt.png',
     title: 'GGUF vs GPTQ vs AWQ: Qual Formato de Quantização Você Deve Usar?',
     seoTitle: 'GGUF vs GPTQ vs AWQ Quantização 2026',
     metaDescription: 'O GGUF é o melhor formato padrão de quantização para uso local — roda em CPU e GPU via llama.cpp/Ollama. GPTQ e AWQ são formatos somente GPU para produção.',
@@ -772,6 +780,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Quantization & VRAM',
+    heroImage: '/images/gguf-vs-gptq-vs-awq-overview-hero-zh.png',
     title: 'GGUF 对比 GPTQ 对比 AWQ：应该使用哪种量化格式？',
     seoTitle: '2026 年 GGUF 对比 GPTQ 对比 AWQ 量化 | Prompt Bites',
     metaDescription: 'GGUF 是本地使用的最佳默认量化格式——通过 llama.cpp/Ollama 在 CPU 和 GPU 上运行。GPTQ 和 AWQ 是专为生产环境服务打造的纯 GPU 格式。',
