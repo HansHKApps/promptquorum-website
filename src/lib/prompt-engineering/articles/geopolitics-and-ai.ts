@@ -13,7 +13,7 @@ const OG_SLUG = keyToSlug('geopolitics-and-ai');
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'annual',
-      last_full_refresh: '2026-06-01',
+      last_full_refresh: '2026-07-29',
       current_models_mentioned: ['Qwen 3', 'ERNIE 4.0', 'Doubao', 'Z.ai GLM-4', 'DeepSeek R1', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'Mistral Large 2'],
       theme: 'Policy & Compliance',
       heroImage: '/images/geopolitics-and-ai-overview-hero-en.png',
@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-04-01',
       seoTitle: 'AI Geopolitics Analysis 2026: US, EU & China Guide',
       metaDescription: 'EU AI Act, US export controls, China CAC: three incompatible frameworks. How they affect AI procurement, data residency, and model availability in 2026.',
-      dateModified: '2026-06-01',
+      dateModified: '2026-07-29',
       readTime: '16 min read',
       educationalLevel: 'Intermediate',
       audience: 'Teams deploying AI in regulated markets (EU, China, US)',
@@ -35,7 +35,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'AI Geopolitics Explained: EU AI Act vs US vs China (2026 Analysis)',
         description: 'The US, China, and European Union are pursuing incompatible visions of AI governance. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements.',
         datePublished: '2026-04-01',
-        dateModified: '2026-06-01',
+        dateModified: '2026-07-29',
         keywords: ['AI geopolitics', 'EU AI Act', 'CHIPS Act', 'AI regulation', 'China AI strategy', 'Brussels Effect', 'AI governance', 'DeepSeek', 'AI Safety Institute', 'Made in China 2025', 'KI Gesetz', 'AI regulation Europe', 'AI governance EU', 'regolamento intelligenza artificiale', 'régulation de l\'IA', 'KI-Regulierung', '人工知能規制', 'AI中国战略'],
         teaches: [
           'How the EU AI Act classifies risk and what deadlines apply',
@@ -200,7 +200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Structured comparison of AI regulatory frameworks across 8 dimensions — primary approach, key legislation, risk framework, maximum fine, data protection, banned applications, enforcement body, and international reach — for the European Union, United States, and China.',
         url: 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai',
         creator: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        dateModified: '2026-06-01',
+        dateModified: '2026-07-29',
         variableMeasured: [
           { '@type': 'PropertyValue', name: 'Primary Approach', description: 'EU: Rights-based legal framework. US: Sectoral, innovation-first. China: State-directed, control-first.' },
           { '@type': 'PropertyValue', name: 'Key Legislation', description: 'EU: EU AI Act (2024). US: No federal AI law; NIST AI RMF voluntary. China: Algorithm Recommendations Regulations (2022); Generative AI Measures (2023).' },
@@ -232,8 +232,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         quickFacts: {
           title: 'Quick Facts: AI Geopolitics at a Glance',
           items: [
-            '**EU AI Act:** World\'s first binding AI law. High-risk enforcement: August 2, 2026 (may be delayed to December 2, 2027 by Digital Omnibus, pending trilogue agreement scheduled May 13, 2026). Fines: up to €35 million or 7% of global annual revenue.',
-            '**US AI Policy:** No federal AI law. Trump Administration pursuing state law preemption via EO 14365 (December 2025), National Framework (March 2026), and proposed TRUMP AMERICA AI Act (March 2026). Multiple implementation deadlines missed as of May 2026 (FTC statement due March 11, Commerce evaluation due March 11).',
+            '**EU AI Act:** World\'s first binding AI law. High-risk enforcement: August 2, 2026 (may be delayed to December 2, 2027 by Digital Omnibus — the most recently confirmed trilogue took place mid-May 2026 without a public adoption announcement following). Fines: up to €35 million or 7% of global annual revenue.',
+            '**US AI Policy:** No federal AI law. Trump Administration pursuing state law preemption via EO 14365 (December 2025), National Framework (March 2026), and proposed TRUMP AMERICA AI Act (March 2026). Multiple implementation deadlines were still unmet as of the most recently confirmed status in May 2026 (FTC statement due March 11, Commerce evaluation due March 11).',
             '**China AI Governance:** CAC (Cyberspace Administration of China) pre-launch assessment mandatory. Content filters block CPC criticism, Taiwan/Tibet/Xinjiang discussions, and content undermining "socialist core values." Filters return HTTP 200 with `is_safe: 0` flag (not 4xx errors). PIPL requires data residency for Chinese personal data.',
             '**Hardware Chokepoints:** Nvidia controls ~80% of AI training GPU market. TSMC fabricates ~90% of advanced semiconductors. Both are geopolitical flashpoints. US CHIPS Act ($52B) aims to reduce TSMC dependency.',
             '**DeepSeek R1 Impact:** Exceeded GPT-5.5 on reasoning/coding (AIME 2024, MATH, HumanEval) at estimated ~$6M training cost (94% reduction vs. frontier model estimates; cost figure disputed). Trained on China-restricted Nvidia H800 GPUs. Demonstrates hardware export controls have limits.',
@@ -432,15 +432,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         digitalOmnibus: {
           title: 'Digital Omnibus: EU AI Act High-Risk Compliance Deadline in Flux',
           content: [
-            '**As of May 2026, the EU\'s high-risk AI compliance deadline of August 2, 2026 may be delayed to December 2, 2027 — but adoption is not guaranteed.** The European Commission proposed the Digital Omnibus in November 2025 to address unintended consequences and implementation challenges in the EU AI Act. Both the European Parliament and Council of the EU signaled support for a deferral. However, inter-institutional negotiations have stalled.',
-            '**Trilogue Status:** The first trilogue (negotiation between Parliament, Council, and Commission) in February 2026 found broad political agreement on urgency but left technical details unresolved. The second trilogue on April 28, 2026 ended without consensus. A third trilogue was scheduled for May 13, 2026. If adopted before August 2, 2026, the deferral becomes binding; if not, the original August 2, 2026 deadline applies as written.',
-            '**What organizations should do:** Plan for August 2, 2026 as your binding compliance deadline for high-risk AI systems. The Digital Omnibus deferral may extend your timeline to December 2027, but assuming the delay will pass is a risk. Achieving August 2026 compliance now means you are protected either way — if the Omnibus passes, you can optimize further during the extra months; if it doesn\'t, you\'re already compliant.',
+            '**As of the most recently confirmed status, the EU\'s high-risk AI compliance deadline of August 2, 2026 may still be delayed to December 2, 2027 — but adoption has not been publicly confirmed, and the statutory deadline is now imminent.** The European Commission proposed the Digital Omnibus in November 2025 to address unintended consequences and implementation challenges in the EU AI Act. Both the European Parliament and Council of the EU signaled support for a deferral. However, inter-institutional negotiations had stalled as of the last confirmed update.',
+            '**Trilogue Status:** The first trilogue (negotiation between Parliament, Council, and Commission) in February 2026 found broad political agreement on urgency but left technical details unresolved. The second trilogue on April 28, 2026 ended without consensus. A third trilogue took place in mid-May 2026; no public confirmation of final adoption has followed as of this writing. If the deferral is adopted before August 2, 2026, it becomes binding; absent that, the original August 2, 2026 deadline applies as written — and that date is now only days away.',
+            '**What organizations should do:** Treat August 2, 2026 as your binding compliance deadline for high-risk AI systems unless you have direct confirmation the Digital Omnibus deferral has been formally adopted. The deferral may still extend your timeline to December 2027, but assuming it will pass — this close to the statutory date — is a risk. Achieving August 2026 compliance now means you are protected either way — if the Omnibus passes, you can optimize further during the extra months; if it doesn\'t, you\'re already compliant.',
           ],
           callouts: [
             {
               type: 'warning',
-              label: 'Warning: Digital Omnibus Adoption Uncertain',
-              text: 'The Digital Omnibus deferral from August 2026 to December 2027 is NOT guaranteed. The second trilogue on April 28, 2026 reached no consensus. A third trilogue is scheduled for May 13, 2026. Do NOT assume the delay will pass. Plan your compliance roadmap for August 2, 2026 as the binding deadline. If the Omnibus is adopted later, you gain extra time; if it isn\'t, you\'re already compliant.',
+              label: 'Warning: Digital Omnibus Adoption Still Unconfirmed',
+              text: 'The Digital Omnibus deferral from August 2026 to December 2027 has NOT been publicly confirmed as adopted. The second trilogue on April 28, 2026 reached no consensus, and a third trilogue took place in mid-May 2026 without a confirmed outcome reported since. Do NOT assume the delay has passed. With the August 2, 2026 statutory deadline now imminent, plan your compliance roadmap around it as the binding deadline. If the Omnibus is later confirmed adopted, you gain extra time; if it isn\'t, you\'re already compliant.',
             },
           ],
         },
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**White House National AI Legislative Framework (March 20, 2026):** A comprehensive framework covering 7 policy areas: protecting children and empowering parents, safeguarding communities, protecting digital replicas, preventing government censorship, workforce development, state law preemption, and light-touch innovation promotion. The framework urges Congress to adopt a "federally unified, innovation-oriented regime centered on preemption of state AI laws."',
             '**TRUMP AMERICA AI Act (March 18, 2026, Senator Marsha Blackburn):** A 291-page legislative discussion draft that codifies federal AI governance, establishes national standards on training data and deepfakes, mandates artist/creator protections, and includes "duty of care" requirements for AI developers. Sunsets Section 230 of the Communications Decency Act. Aligns with Trump\'s executive order on state law preemption.',
             '**GUARDRAILS Act (March 20, 2026, Rep. Beyer et al.):** Democratic counter-proposal to the TRUMP AMERICA Act. Would repeal Trump\'s AI EO 14365 and explicitly block federal preemption of state AI laws, preserving state regulatory authority. Reflects the fundamental conflict between federal preemption (Trump) and state autonomy (Democrats) that will define US AI policy 2026–2029.',
-            '**Missed Implementation Deadlines (as of May 2026):** EO 14365 required the FTC to issue an AI policy statement by March 11, 2026 (NOT YET ISSUED as of May 4). The Commerce Department evaluation of state AI laws was also due March 11, 2026 (NOT YET PUBLISHED). Implementation is significantly lagging behind policy ambition.',
+            '**Missed Implementation Deadlines (most recently confirmed status: May 2026):** EO 14365 required the FTC to issue an AI policy statement by March 11, 2026 (not yet issued as of the last confirmed update, May 4). The Commerce Department evaluation of state AI laws was also due March 11, 2026 (not yet published as of that update). Implementation was significantly lagging behind policy ambition at that point, and no more recent public status update has been confirmed since.',
             '**Colorado AI Act (February 1, 2026 enforcement):** The first US state law addressing algorithmic discrimination in high-stakes decisions (hiring, lending, insurance, etc.). Went into effect February 1, 2026. Trump\'s EO 14365 explicitly cited Colorado\'s law as an example of "excessive" regulation. Compliance deadline extended to June 30, 2026. This law exemplifies the state regulations Trump is seeking to preempt federally.',
             '**CHIPS and Science Act ($52 billion):** Signed August 2022. Funds domestic semiconductor manufacturing, R&D, and workforce development. Reduces US dependency on Taiwan Semiconductor Manufacturing Company (TSMC) for advanced chips. Intel, TSMC, and Samsung are building US fabs with CHIPS Act funding.',
             '**Export controls on AI hardware:** The Biden administration restricted exports of advanced Nvidia A100 and H100 GPUs to China and other countries of concern. The restrictions were expanded in October 2023 and October 2024. Nvidia created China-specific chips (A800, H800) that fell within export limits — these were subsequently restricted too.',
@@ -842,7 +842,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'EU AI Act, US-Exportkontrolle, China CAC: drei unvereinbare Frameworks. Auswirkungen auf KI-Beschaffung, Datenlokalisierung und Modellverfügbarkeit 2026.',
       seoTitle: 'AI Geopolitik 2026: USA, EU und China analysieren',
       publishDate: '2026-04-01',
-      dateModified: '2026-06-01',
+      dateModified: '2026-07-29',
       readTime: '16 Min. Lesezeit',
       educationalLevel: 'Intermediate',
       primaryTerm: 'KI-Geopolitik',
@@ -878,7 +878,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'KI-Geopolitik erklärt: EU AI Act vs. USA vs. China (Analyse 2026)',
         description: 'Die USA, China und die Europäische Union verfolgen unvereinbare Visionen der KI-Governance — die USA priorisieren Wettbewerbsfähigkeit, China betont staatliche Kontrolle, und die EU baut einen rechtsbasierten Rahmen. Für Organisationen, die KI einsetzen, entstehen daraus konkrete Compliance-Pflichten, Beschaffungsbeschränkungen und Anforderungen an den Datenspeicherort.',
         datePublished: '2026-04-01',
-        dateModified: '2026-06-01',
+        dateModified: '2026-07-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: buildOgImageObject(OG_SLUG, 'de'),
@@ -920,6 +920,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Chinas DeepSeek R1 entspricht GPT-5.5 bei Schlüsselbenchmarks — GPU-Exportkontrollen haben chinesische KI nicht gestoppt.',
             'TSMC in Taiwan fertigt die Chips, die alle Frontier-KI antreiben — eine einzelne geopolitische Abhängigkeit.',
             'Organisationen müssen drei konkurrierende Regulierungsrahmen gleichzeitig erfüllen: EU, USA und China.',
+          ],
+        },
+
+        quickFacts: {
+          title: 'Kurzübersicht: KI-Geopolitik auf einen Blick',
+          items: [
+            '**EU AI Act:** Weltweit erstes verbindliches KI-Gesetz. Hochrisiko-Durchsetzung: 2. August 2026 (möglicherweise verschoben auf 2. Dezember 2027 durch das Digital Omnibus, vorbehaltlich einer Trilog-Einigung). Geldstrafen: bis zu 35 Mio. EUR oder 7% des weltweiten Jahresumsatzes.',
+            '**US-KI-Politik:** Kein bundesweites KI-Gesetz. Die Trump-Administration verfolgt eine Vorrangstellung des Bundesrechts gegenüber Landesgesetzen über EO 14365 (Dezember 2025), das National Framework (März 2026) und den vorgeschlagenen TRUMP AMERICA AI Act (März 2026). Mehrere Umsetzungsfristen wurden verpasst (FTC-Stellungnahme fällig 11. März, Commerce-Bewertung fällig 11. März).',
+            '**Chinas KI-Governance:** CAC (Cyberspace Administration of China)-Vorab-Prüfung ist verpflichtend. Inhaltsfilter blockieren KPCh-Kritik, Diskussionen zu Taiwan/Tibet/Xinjiang und Inhalte, die die "sozialistischen Grundwerte" untergraben. Filter liefern HTTP 200 mit dem Flag `is_safe: 0` (nicht 4xx). PIPL verlangt Datenspeicherort für personenbezogene Daten chinesischer Nutzer.',
+            '**Hardware-Engpässe:** Nvidia kontrolliert ca. 80% des Markts für KI-Trainings-GPUs. TSMC fertigt ca. 90% der fortschrittlichsten Halbleiter. Beide sind geopolitische Brennpunkte. Der US CHIPS Act (52 Mrd. USD) zielt darauf ab, die TSMC-Abhängigkeit zu reduzieren.',
+            '**DeepSeek-R1-Auswirkung:** Übertraf GPT-5.5 bei Reasoning/Coding (AIME 2024, MATH, HumanEval) bei geschätzten ~6 Mio. USD Trainingskosten (94% Reduktion gegenüber Frontier-Modell-Schätzungen; Zahl umstritten). Trainiert auf China-beschränkten Nvidia-H800-GPUs. Zeigt, dass Hardware-Exportkontrollen Grenzen haben.',
+            '**Globaler Regulierungskonflikt:** Die EU fokussiert auf Rechte und Sicherheit; die USA auf Innovation und Wettbewerbsfähigkeit; China auf staatliche Kontrolle und strategischen Vorteil. Organisationen, die global KI einsetzen, müssen drei unvereinbare Rahmenwerke gleichzeitig navigieren.',
           ],
         },
 
@@ -1095,6 +1107,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**General Purpose AI (GPAI):** Modelle wie GPT-5.5, Claude und Gemini müssen Trainingsdaten-Zusammenfassungen veröffentlichen, EU-Urheberrechtsgesetz befolgen und schwerwiegende Vorfälle melden. Modelle mit Systemrisiko (trainiert mit >10^25 FLOPS) sehen zusätzliche Adversarial-Testing-Anforderungen. GPAI-Regeln galten ab August 2025.',
             '**Durchsetzung:** EU AI Office (innerhalb der Europäischen Kommission) überwacht GPAI-Modelle. Nationale Marktüberwachungsbehörden setzen Hochrisiko-KI-Regeln durch. Geldstrafen: bis zu 35 Mio. EUR oder 7% globaler Umsatz für verbotene Praktiken; 15 Mio. EUR oder 3% für Hochrisiko-Verstöße.',
             '**Zeitplan:** Verbotene Praktiken: August 2024. GPAI-Verpflichtungen: August 2025. Hochrisiko-KI-Systeme: August 2026. Hochrisiko-KI in reglementierten Produkten: August 2027.',
+          ],
+        },
+
+        digitalOmnibus: {
+          title: 'Digital Omnibus: EU-AI-Act-Hochrisiko-Frist in der Schwebe',
+          content: [
+            '**Stand Mitte 2026 könnte die EU-Compliance-Frist für Hochrisiko-KI vom 2. August 2026 auf den 2. Dezember 2027 verschoben werden — eine Annahme ist jedoch nicht öffentlich bestätigt, und die gesetzliche Frist rückt näher.** Die Europäische Kommission schlug das Digital Omnibus im November 2025 vor, um unbeabsichtigte Folgen und Umsetzungsprobleme des EU AI Act zu adressieren. Sowohl das Europäische Parlament als auch der Rat der EU signalisierten Unterstützung für eine Verschiebung. Die interinstitutionellen Verhandlungen stockten zuletzt.',
+            '**Trilog-Status:** Der erste Trilog (Verhandlung zwischen Parlament, Rat und Kommission) im Februar 2026 fand breite politische Einigkeit über die Dringlichkeit, ließ aber technische Details ungelöst. Der zweite Trilog am 28. April 2026 endete ohne Konsens. Ein dritter Trilog fand Mitte Mai 2026 statt; eine öffentliche Bestätigung der endgültigen Annahme liegt bislang nicht vor. Wird die Verschiebung vor dem 2. August 2026 angenommen, wird sie verbindlich; andernfalls gilt die ursprüngliche Frist vom 2. August 2026 wie geschrieben — und dieser Termin rückt näher.',
+            '**Was Organisationen tun sollten:** Planen Sie mit dem 2. August 2026 als verbindliche Compliance-Frist für Hochrisiko-KI-Systeme, solange keine offizielle Bestätigung der Digital-Omnibus-Verschiebung vorliegt. Die Verschiebung könnte Ihren Zeitrahmen bis Dezember 2027 verlängern, aber die Annahme, dass sie kommt, ist so kurz vor der Frist ein Risiko. Wer die Compliance zum August 2026 jetzt erreicht, ist so oder so abgesichert.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Warnung: Annahme des Digital Omnibus weiterhin unbestätigt',
+              text: 'Die Digital-Omnibus-Verschiebung von August 2026 auf Dezember 2027 ist NICHT öffentlich als angenommen bestätigt. Der zweite Trilog am 28. April 2026 erzielte keinen Konsens, und ein dritter Trilog fand Mitte Mai 2026 statt, ohne dass seither ein bestätigtes Ergebnis vorliegt. Gehen Sie NICHT davon aus, dass die Verschiebung bereits erfolgt ist. Planen Sie Ihre Compliance-Roadmap mit dem 2. August 2026 als verbindlicher Frist.',
+            },
           ],
         },
 
@@ -1407,6 +1435,38 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Schadet das EU-KI-Gesetz der europäischen KI-Wettbewerbsfähigkeit?', a: 'Das ist ein echtes strategisches Dilemma: Das EU-KI-Gesetz kann europäische KI-Startups verlangsamen, stärkt aber Europas regulatorische Glaubwürdigkeit weltweit. Einerseits schaffen Compliance-Kosten und Konformitätsbewertungen Reibung für EU-Unternehmen — Frankreichs Mistral AI ist stärker eingeschränkt als US-Konkurrenten. Andererseits bedeutet der Brüssel-Effekt, dass der regulatorische Rahmen der EU zum globalen Standard wird und EU-basierten Unternehmen einen Wettbewerbsvorteil bei Compliance gibt. Europa setzt auf regulatorische Führerschaft statt reine technologische Fähigkeit — eine grundlegend andere KI-Strategie als die USA oder China.' },
             { q: 'Wie vergleicht sich Europas Rechenkapazität mit den USA und China?', a: 'Europa hinkt bei der Recheninfrastruktur deutlich hinterher. Die USA dominieren GPU-Fertigung (Nvidia ~80 % Marktanteil) und Custom Silicon. China produziert bei TSMC (Taiwan) und nutzt begrenzte Nvidia H- und A-Serien GPUs. Europa hat kein Äquivalent: ASML (Niederlande) stellt Chipfertigungsausrüstung her, besitzt aber keine Fabs. Der EU Chips Act (43 Milliarden Euro) zielt darauf ab, Intel- und TSMC-Fabs auf EU-Gebiet zu bauen, aber keine wird vor 2027–2029 betriebsbereit sein. Dies ist Europas zentrale Infrastruktur-Schwachstelle: Training von Frontier-Modellen erfordert tausende GPUs monatelang. Ohne inländische Fab-Kapazität bleibt Europa von US (Nvidia) und Taiwan (TSMC) abhängig.' },
             { q: 'Was ist Europas KI-Vorteil neben Regulierung?', a: 'Europa hat drei nicht-regulatorische Vorteile: (1) Mistral AI und andere von der EU finanzierte Open-Source-Modelle bieten GDPR-konforme Alternativen ohne US- oder China-Abhängigkeit; (2) Europa führt bei KI-Sicherheitsforschung durch UK AI Safety Institute und französische Forschungszentren; (3) Europas hochgebildete Belegschaft und bestehendes Software-/Halbleiter-Talent geben ihm einen Vorteil bei KI-Anwendungen und Custom Silicon. Jedoch kompensiert keiner dieser Vorteile Europas Nachteil bei Frontier-Modell-Fähigkeit — die USA führen bei GPT-5.5 und Claude, China bei Skalierung und Volumen. Europas Strategie ist mach das, worin du gut bist (Sicherheit, Regulierung, Ethik), statt um reine Fähigkeit zu konkurrieren.' },
+          ],
+        },
+
+        commonMistakes: {
+          title: 'Häufige Fehler beim KI-Einsatz über geopolitische Grenzen hinweg',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: 'Annahme, dass die Konformität mit dem EU AI Act optional ist, wenn Ihr Unternehmen in den USA ansässig ist.',
+              problem: 'Der Brussels Effect bedeutet, dass der EU AI Act extraterritorial gilt — erreicht Ihr KI-System auch nur einen einzigen EU-Nutzer, müssen Sie konform sein. US-Unternehmen, die EU-Nutzer bedienen, wurden bereits regulatorisch belangt.',
+              fix: 'Prüfen Sie Ihre Nutzer-Geografie. Sind Nutzer in EU-Mitgliedstaaten, setzen Sie EU-AI-Act-Compliance auf Anwendungsebene um: Risikoklassifizierung Ihrer KI, Dokumentation der Trainingsdaten, menschliche Aufsicht für Hochrisiko-Systeme und lückenlose Audit-Protokolle.',
+            },
+            {
+              mistake: 'Personenbezogene Daten chinesischer Nutzer über US-gehostete API-Endpunkte senden, ohne DSGVO-äquivalente Schutzmaßnahmen.',
+              problem: 'Chinas PIPL (2021) verbietet die grenzüberschreitende Übermittlung personenbezogener Daten ohne staatliche Sicherheitsbewertung. Regulierungsbehörden in Deutschland, Frankreich und den Niederlanden haben chinesische KI-Tools für den Regierungsgebrauch eingeschränkt. Auch Privatunternehmen sind rechtlich exponiert.',
+              fix: 'Leiten Sie China-Nutzerverkehr über auf dem chinesischen Festland gehostete Inferenz (Alibaba Cloud, Tencent Cloud, Huawei Cloud), damit personenbezogene Daten die chinesische Jurisdiktion nie verlassen. Für internationale Deployments nutzen Sie Qwen 3 (Open-Weights) oder Mistral (EU-basiert) statt US-APIs für China-orientierte Produkte.',
+            },
+            {
+              mistake: 'Annahme, dass CAC-Inhaltsfilter HTTP-4xx-Fehler liefern (wie klassische API-Fehler).',
+              problem: 'CAC-regulierte APIs (Baidu ERNIE, DeepSeek) liefern bei gefiltertem Inhalt HTTP 200 mit dem Flag `is_safe: 0` im Response-Body — keinen 4xx-Status. Anwendungen, die HTTP-Fehler erwarten, ignorieren gefilterte Antworten und nutzen blockierten Inhalt weiter.',
+              fix: 'Prüfen Sie explizit das Feld `is_safe` in API-Antworten. Loggen und behandeln Sie gefilterte Antworten auf Anwendungsebene. Testen Sie Ihr KI-Deployment in China mit Prompts zu sensiblen Themen (Taiwan, Tiananmen usw.), um korrekte Filterbehandlung zu verifizieren.',
+            },
+            {
+              mistake: 'GPU-Exportkontrollen als dauerhafte Schranke für die chinesische KI-Entwicklung behandeln.',
+              problem: 'DeepSeek R1 (Januar 2025) erreichte GPT-5.5-Niveau bei wichtigen Benchmarks — trainiert auf beschränkten H800-GPUs bei ~6 Mio. USD Rechenkosten, 94% günstiger als GPT-4-Trainingsschätzungen. Exportkontrollen verlangsamen Chinas Fortschritt, stoppen ihn aber nicht.',
+              fix: 'Planen Sie für einen mehrere Jahrzehnte andauernden geopolitischen Wettbewerb bei KI. Gehen Sie bei langfristigen Produkt-Roadmaps nicht davon aus, dass US-Hardware-Dominanz dauerhaft ist. Erwägen Sie Investitionen in Open-Weights-Alternativen (Llama, Mistral, Qwen), die schwerer einzuschränken sind. Beobachten Sie TSMCs politischen Status, da dort alle fortschrittlichen Chips gefertigt werden.',
+            },
+            {
+              mistake: 'Annahme, dass proprietäre US-Modelle (GPT-5.5, Claude) global ohne regulatorische Reibung verfügbar bleiben.',
+              problem: 'Der EU AI Act legt bereits Compliance-Pflichten für GPT-5.5 und Claude fest. Künftige EU-Regulierung könnte den Datenexport einschränken oder On-Premises-Deployment für sensible Anwendungsfälle verlangen. Chinas Strategie der heimischen Substitution (Made in China 2025) könnte den Zugang zu ausländischen Modellen begrenzen.',
+              fix: 'Diversifizieren Sie Ihre KI-Infrastruktur. Nutzen Sie eine Mischung aus proprietären Modellen (für Frontier-Fähigkeit), Open-Weights-Modellen (für regulatorische Flexibilität) und lokalen Deployments (für Datenspeicherort). Testen Sie Ihr Produkt über GPT-5.5, Claude, Mistral und Qwen, um Vendor-Lock-in zu reduzieren.',
+            },
           ],
         },
 
@@ -2787,7 +2847,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'EU AI Act, contrôles US, CAC Chine : impacts sur achats IA, résidence de données et disponibilité des modèles 2026. Trois cadres incompatibles expliqués.',
       seoTitle: 'Géopolitique IA 2026 : EU AI Act vs USA vs Chine',
       publishDate: '2026-04-01',
-      dateModified: '2026-06-01',
+      dateModified: '2026-07-29',
       readTime: '16 min de lecture',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Géopolitique de l\'IA',
@@ -2823,7 +2883,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Géopolitique et IA : Comment l\'UE, les États-Unis et la Chine rivalisent pour la domination de l\'IA',
         description: 'Les États-Unis, la Chine et l\'Union européenne poursuivent des visions incompatibles de la gouvernance de l\'IA. Pour les organisations déployant l\'IA, ces différences se traduisent par des obligations de conformité concrètes, des contraintes d\'approvisionnement et des exigences de résidence des données.',
         datePublished: '2026-04-01',
-        dateModified: '2026-06-01',
+        dateModified: '2026-07-29',
         keywords: ['géopolitique IA', 'loi IA UE', 'CHIPS Act', 'régulation IA', 'stratégie IA Chine', 'Brussels Effect', 'gouvernance IA', 'DeepSeek', 'Institut Sécurité IA', 'Made in China 2025', 'KI Gesetz', 'régulation IA Europe', 'gouvernance IA UE', 'regolamento intelligenza artificiale', 'régulation de l\'IA', 'KI-Regulierung', '人工知能規制', 'AI中国战略'],
         teaches: [
           'Comment la loi IA de l\'UE classe les risques et quels délais s\'appliquent',
@@ -2907,6 +2967,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Les organisations doivent naviguer trois régimes : conformité UE, approche sectorielle US, et restrictions chinoises.',
           ],
         },
+        quickFacts: {
+          title: 'Points clés : la géopolitique de l\'IA en un coup d\'œil',
+          items: [
+            '**AI Act européen :** première loi contraignante sur l\'IA au monde. Application des obligations à haut risque : 2 août 2026 (report possible au 2 décembre 2027 via l\'Omnibus numérique, sous réserve d\'un accord en trilogue). Amendes : jusqu\'à 35 M€ ou 7 % du chiffre d\'affaires mondial.',
+            '**Politique IA américaine :** aucune loi fédérale sur l\'IA. L\'administration Trump cherche à faire prévaloir le droit fédéral sur les lois des États via l\'Executive Order 14365 (décembre 2025), le National Framework (mars 2026) et le projet TRUMP AMERICA AI Act (mars 2026). Plusieurs échéances de mise en œuvre ont été manquées (avis de la FTC attendu le 11 mars, évaluation du Commerce également due le 11 mars).',
+            '**Gouvernance IA chinoise :** l\'évaluation préalable de la CAC (Cyberspace Administration of China) est obligatoire. Les filtres de contenu bloquent la critique du PCC, les discussions sur Taïwan/Tibet/Xinjiang et tout contenu portant atteinte aux « valeurs socialistes fondamentales ». Les filtres renvoient un HTTP 200 avec un indicateur `is_safe: 0` (pas une erreur 4xx). La PIPL impose la localisation des données pour les données personnelles des utilisateurs chinois.',
+            '**Goulots d\'étranglement matériels :** Nvidia contrôle environ 80 % du marché des GPU d\'entraînement IA. TSMC fabrique environ 90 % des semi-conducteurs les plus avancés. Ces deux points sont des enjeux géopolitiques majeurs. Le CHIPS Act américain (52 Md$) vise à réduire la dépendance à TSMC.',
+            '**Impact de DeepSeek R1 :** a dépassé GPT-5.5 en raisonnement et en code (AIME 2024, MATH, HumanEval) pour un coût d\'entraînement estimé à ~6 M$ (réduction de 94 % par rapport aux estimations des modèles de pointe ; chiffre contesté). Entraîné sur des GPU Nvidia H800 soumis aux restrictions d\'exportation vers la Chine. Démontre les limites des contrôles à l\'export.',
+            '**Conflit réglementaire mondial :** l\'UE privilégie les droits et la sécurité ; les États-Unis, l\'innovation et la compétitivité ; la Chine, le contrôle étatique et l\'avantage stratégique. Les organisations déployant l\'IA à l\'échelle mondiale doivent composer avec trois cadres incompatibles simultanément.',
+          ],
+        },
+
         euImplications: {
           title: 'Pour les organisations en Europe',
           content: [
@@ -3135,6 +3207,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
         },
+
+        digitalOmnibus: {
+          title: 'Omnibus numérique : l\'échéance haut risque de l\'AI Act en suspens',
+          content: [
+            '**À la mi-2026, l\'échéance de conformité haut risque du 2 août 2026 pourrait être reportée au 2 décembre 2027 — mais rien n\'est confirmé publiquement, et l\'échéance légale approche.** La Commission européenne a proposé l\'Omnibus numérique en novembre 2025 pour corriger des effets non désirés et des difficultés de mise en œuvre de l\'AI Act. Le Parlement européen et le Conseil de l\'UE ont tous deux signalé leur soutien à un report, mais les négociations interinstitutionnelles sont restées bloquées à la dernière mise à jour connue.',
+            '**État des trilogues :** le premier trilogue (février 2026) a dégagé un accord politique sur l\'urgence, sans régler les détails techniques. Le deuxième trilogue (28 avril 2026) s\'est conclu sans consensus. Un troisième trilogue s\'est tenu mi-mai 2026 ; aucune confirmation publique d\'adoption définitive n\'a suivi à ce jour. Si le report est adopté avant le 2 août 2026, il devient contraignant ; sinon, l\'échéance initiale du 2 août 2026 s\'applique telle quelle — et cette date approche désormais.',
+            '**Ce que les organisations doivent faire :** planifiez le 2 août 2026 comme échéance contraignante pour les systèmes d\'IA à haut risque, sauf confirmation officielle de l\'adoption du report. Le report pourrait étendre votre calendrier jusqu\'à décembre 2027, mais présumer qu\'il sera adopté, si proche de l\'échéance légale, est un risque.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Attention : l\'adoption de l\'Omnibus numérique reste non confirmée',
+              text: 'Le report de l\'Omnibus numérique d\'août 2026 à décembre 2027 n\'est PAS confirmé publiquement comme adopté. Le deuxième trilogue du 28 avril 2026 n\'a pas abouti à un consensus, et un troisième trilogue s\'est tenu mi-mai 2026 sans résultat confirmé depuis. Ne présumez PAS que le report a été adopté. Planifiez votre feuille de route de conformité avec le 2 août 2026 comme échéance contraignante.',
+            },
+          ],
+        },
+
         euMemberStates: {
           title: 'Approches nationales européennes',
           content: 'Chaque pays EU adapte la loi IA à son contexte. Voici les leaders :',
@@ -3499,6 +3588,39 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
         },
+
+        commonMistakes: {
+          title: 'Erreurs fréquentes lors du déploiement de l\'IA à travers les frontières géopolitiques',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: 'Supposer que la conformité à l\'AI Act européen est optionnelle si votre entreprise est basée aux États-Unis.',
+              problem: 'Le Brussels Effect signifie que l\'AI Act s\'applique de manière extraterritoriale — si votre système IA touche un seul utilisateur européen, vous devez vous conformer. Des entreprises américaines desservant des utilisateurs européens ont déjà fait l\'objet de mesures d\'application.',
+              fix: 'Auditez la géographie de vos utilisateurs. En présence d\'utilisateurs dans un État membre de l\'UE, mettez en œuvre la conformité à l\'AI Act au niveau applicatif : classification des risques, documentation des données d\'entraînement, supervision humaine pour les systèmes à haut risque, et traçabilité complète.',
+            },
+            {
+              mistake: 'Transmettre des données personnelles d\'utilisateurs chinois via des API hébergées aux États-Unis, sans protections équivalentes au RGPD.',
+              problem: 'La PIPL chinoise (2021) interdit le transfert transfrontalier de données personnelles sans évaluation de sécurité gouvernementale. Les régulateurs en Allemagne, en France et aux Pays-Bas ont restreint l\'usage d\'outils d\'IA chinois pour les administrations. Les organisations privées s\'exposent également à un risque juridique.',
+              fix: 'Acheminez le trafic des utilisateurs chinois via une inférence hébergée sur le continent chinois (Alibaba Cloud, Tencent Cloud, Huawei Cloud) afin que les données personnelles ne quittent jamais la juridiction chinoise. Pour les déploiements internationaux, préférez Qwen 3 (open-weights) ou Mistral (basé dans l\'UE) aux API américaines pour les produits orientés Chine.',
+            },
+            {
+              mistake: 'Supposer que les filtres de contenu de la CAC renvoient des erreurs HTTP 4xx classiques.',
+              problem: 'Les API régulées par la CAC (Baidu ERNIE, DeepSeek) renvoient un HTTP 200 avec un indicateur `is_safe: 0` dans le corps de la réponse lorsque le contenu est filtré — pas un statut 4xx. Les applications qui n\'attendent que des erreurs HTTP laissent passer des réponses filtrées.',
+              fix: 'Vérifiez explicitement le champ `is_safe` dans les réponses API. Journalisez et traitez les réponses filtrées au niveau applicatif. Testez votre déploiement en Chine avec des prompts touchant des sujets sensibles (Taïwan, Tiananmen, etc.) pour vérifier le bon traitement du filtrage.',
+            },
+            {
+              mistake: 'Considérer les contrôles d\'exportation de GPU comme un frein permanent au développement de l\'IA chinoise.',
+              problem: 'DeepSeek R1 (janvier 2025) a égalé GPT-5.5 sur des benchmarks majeurs en s\'entraînant sur des GPU H800 restreints pour environ 6 M$ de coût de calcul — 94 % moins cher que les estimations d\'entraînement de GPT-4. Les contrôles à l\'export ralentissent la progression chinoise mais ne l\'arrêtent pas.',
+              fix: 'Planifiez pour une compétition géopolitique de plusieurs décennies dans l\'IA. Pour vos feuilles de route produit à long terme, ne présumez pas que la domination matérielle américaine est permanente. Envisagez des alternatives open-weights (Llama, Mistral, Qwen) plus difficiles à restreindre. Surveillez le statut politique de TSMC, qui fabrique tous les puces avancées.',
+            },
+            {
+              mistake: 'Supposer que les modèles propriétaires américains (GPT-5.5, Claude) resteront disponibles mondialement sans friction réglementaire.',
+              problem: 'L\'AI Act européen impose déjà des obligations de conformité à GPT-5.5 et Claude. Une future réglementation européenne pourrait restreindre l\'export de données ou exiger un déploiement sur site pour les cas d\'usage sensibles. La stratégie chinoise de substitution nationale (Made in China 2025) pourrait limiter l\'accès aux modèles étrangers.',
+              fix: 'Diversifiez votre infrastructure IA. Combinez modèles propriétaires (pour la capacité de pointe), modèles open-weights (pour la flexibilité réglementaire) et déploiements locaux (pour la résidence des données). Testez votre produit sur GPT-5.5, Claude, Mistral et Qwen pour réduire la dépendance à un fournisseur unique.',
+            },
+          ],
+        },
+
         sources: {
           title: 'Sources & références',
           items: [
@@ -3655,6 +3777,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '組織は3つの競争する規制フレームワークを同時に満たす必要がある：EU、米国、中国',
           ],
         },
+        quickFacts: {
+          title: 'クイックファクト：AI地政学の全体像',
+          items: [
+            '**EU AI法：** 世界初の拘束力のあるAI法。高リスク規制の施行は2026年8月2日（デジタル・オムニバスにより2027年12月2日まで延期される可能性あり、2026年5月13日予定のトリローグ合意次第）。罰金は最大3,500万ユーロまたは世界年間売上高の7%。',
+            '**米国のAI政策：** 連邦AI法は存在しない。トランプ政権は大統領令14365号（2025年12月）、国家フレームワーク（2026年3月）、提案中のTRUMP AMERICA AI Act（2026年3月）を通じて州法の連邦優先を推進。2026年5月時点で複数の実施期限が未達（FTC声明は3月11日期限、商務省の評価も3月11日期限）。',
+            '**中国のAIガバナンス：** CAC（中国国家インターネット情報弁公室）による事前審査が義務。コンテンツフィルターは中国共産党批判、台湾/チベット/新疆に関する議論、「社会主義の核心的価値観」を損なう内容をブロックする。フィルターはHTTP 4xxエラーではなくHTTP 200で`is_safe: 0`フラグを返す。PIPLは中国国民の個人データについてデータ現地化を義務付けている。',
+            '**ハードウェアのボトルネック：** NvidiaはAIトレーニング用GPU市場の約80%を占める。TSMCは先端半導体の約90%を製造する。両者は地政学的な火種であり、米国のCHIPS法（520億ドル）はTSMC依存の低減を目指している。',
+            '**DeepSeek R1の影響：** 推論・コーディング（AIME 2024、MATH、HumanEval）でGPT-5.5を上回りながら、訓練コストは推定約600万ドル（フロンティアモデル推定比94%減、金額は議論あり）。中国向けに制限されたNvidia H800 GPUで訓練され、ハードウェア輸出規制に限界があることを示している。',
+            '**世界的な規制の対立：** EUは権利と安全性を重視し、米国はイノベーションと競争力を重視し、中国は国家統制と戦略的優位性を重視する。グローバルにAIを展開する組織は、3つの相容れない枠組みを同時に乗りこなす必要がある。',
+          ],
+        },
+
         euImplications: {
           title: 'EU組織の場合：重要なコンプライアンス期限',
           content: [
@@ -3716,6 +3850,528 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
         },
+
+        keyStatistics: {
+          title: 'AI地政学：主要データポイント',
+          content: [
+            '以下の数値は、AI分野における現在の地政学的競争を規定する、政府のAI投資規模、ハードウェアの集中度、研究能力の規模を示している。',
+          ],
+          items: [
+            '**政府のAI投資 — 米国：** CHIPS and Science Act（2022年）により国内半導体製造向けに520億ドル、さらに科学研究開発向けに2,000億ドルを割り当て。National AI Initiative Actは25の連邦機関にわたりAI研究に資金を提供している。',
+            '**政府のAI投資 — 中国：** 2021〜2025年に政府主導のAI・半導体投資として推定1兆元（1,400億ドル）。2030年までの世界的なAIリーダーシップを目標とする「新世代AI発展計画」を含む。',
+            '**政府のAI投資 — 欧州連合：** 欧州イノベーション評議会AI基金から10億ユーロ。加盟国の戦略を合わせると100億ユーロ超：ドイツ50億ユーロ（2019〜2025年）、フランス20億ユーロ、英国10億ポンド（AI安全性と計算資源に）。',
+            '**半導体製造の集中：** TSMC（台湾）は7nm未満の世界最先端チップの約90%を製造している。ASML（オランダ）は先端ノード製造に必要なEUVリソグラフィ装置の唯一の製造企業であり、オランダに世界のチップ供給網における構造的なボトルネックを与えている。',
+            '**Nvidia GPUの市場シェア：** NvidiaはAIトレーニング用GPU市場の約80%を占める。H100・H200シリーズはOpenAI、Google DeepMind、Anthropic、Baiduにおけるフロンティアモデル訓練の大部分を支えている。',
+            '**AI研究者の分布：** 論文の影響度で見ると、世界トップクラスのAI研究者の約40%が米国に所属する（Stanford HAI 2024 AI Index）。中国はコンピュータサイエンス博士号取得者数で世界最多 — 年間約5万人 — であり、主要AI学会の著者の約30%を占める。',
+            '**AI特許出願：** 中国は2022年の世界AI特許出願の約70%を占める（WIPO Global Innovation Index）。米国は引用数と実用化された発明で優位に立ち、中国は件数で優位に立つ。',
+            '**モデル訓練コストの圧縮：** 94%のコスト削減 — GPT-4の訓練計算コストは推定約1億ドル（2023年）だったのに対し、DeepSeek R1は報告ベースで約600万ドル（2025年1月）。このギャップは、米国の計算コストに基づく輸出規制が中国のフロンティアAI開発を恒久的に制約できないことを示している。',
+            '**EU AI法の適用範囲：** 同法はEU加盟27か国、4億5,000万人の消費者を対象とする。GPAIモデルのシステミックリスク閾値は訓練計算量10の25乗FLOPs — この水準を超えると追加の敵対的テスト要件が課される。',
+            '**ブレッチリー宣言（2023年11月）：** 米国、中国、EU加盟国を含む28か国が署名 — これまでで最も広範な国際的AI安全コンセンサスだが、法的拘束力はない。',
+          ],
+          image: '/images/ai-regulation-timeline-ja.svg',
+          imageCaption: '世界のAI規制年表 2022〜2026年：EU AI法提案（2021年）、CHIPS法（2022年）、CACアルゴリズム規則（2022〜2023年）、EU AI法採択（2024年）、施行開始（2025年1月）。',
+        },
+
+        qaWhyStrategic: {
+          title: 'なぜAIは戦略的に重要なのか？',
+          content: [
+            'AIが戦略的に重要なのは、経済生産性、軍事的有効性、インテリジェンス分析、サイバー作戦という国力のあらゆる次元を同時に増幅するからだ。AIで先行する国家は、科学研究を自動化し、軍事兵站を最適化し、大規模な監視データを処理し、自律型兵器システムを開発できる。OECDは2030年までにAIが世界GDPに15兆7,000億ドルを追加しうると試算しており、AIでの主導権は20世紀における工業でのリーダーシップに相当する。AI能力で遅れをとる国は、防衛・貿易・外交にわたって複合的な不利益を被る。',
+          ],
+        },
+
+        qaWhichCountriesDominate: {
+          title: 'どの国がAI開発を主導しているのか？',
+          content: [
+            '米国はフロンティアモデルの能力で主導している — OpenAI（GPT-5.5）、Anthropic（Claude）、Google DeepMind（Gemini）はすべて米国本社である。中国はAI特許件数で世界を主導しており（WIPO調べで2022年の世界特許の約70%）、米国外で最も能力の高い国産モデル — Alibaba Qwen 3、Baidu ERNIE 4.0、DeepSeek R1 — を有する。EUはAI規制で主導しているが、フロンティア能力では遅れをとっている — フランスのMistral AIが欧州最強の対抗馬だ。英国、カナダ、UAEは米国・中国いずれのインフラにも一元的に依存しない独立した主体としてAIに投資している。',
+          ],
+        },
+
+        qaChipsRole: {
+          title: 'チップはAI地政学でどのような役割を果たすのか？',
+          content: [
+            '半導体チップはAI能力の物理的基盤である。フロンティアモデルの訓練には数千基の特化型GPUを数か月間稼働させる必要があり、大規模モデル1回の訓練だけで1,000万〜1億ドルの計算コストがかかることもある。NvidiaはAIトレーニング用GPU市場の約80%を占め、台湾のTSMCがそれらを製造する。これにより2つの地政学的なボトルネックが生まれる — 米国は敵対国へのNvidia GPU輸出を制限でき（2022年以降、A100・H100の対中販売を制限）、TSMCの操業に何らかの混乱が生じれば世界のAIハードウェア供給は即座に縮小する。米国のCHIPS and Science Act（520億ドル）は、この単一障害点への依存を減らすため、国内ファブ能力に明示的に資金を投じている。',
+          ],
+        },
+
+        qaHowAIChangePower: {
+          title: 'AIは世界のパワーバランスをどう変えうるか？',
+          content: [
+            'AIは、AIで先行する国家をその経済規模や人口規模に対して不釣り合いに強力にすることで、世界のパワーバランスを変えうる。軍事面では、AIは自律型ターゲティング、兵站最適化、人間が担うシステムでは到達し得ない速度でのシギント処理を可能にする。経済面では、AIによる生産性向上は複利的に積み上がる — フロンティアAIにアクセスできる国は、そうでない国との差を広げるGDP成長率を維持できる。外交面では、ハードウェア、モデル、ガバナンスの枠組みといったAIインフラを輸出する国は、ソフトパワーを獲得し、かつての石油輸出や通信インフラが生んだのと同様の依存関係を作り出す。EUのブリュッセル効果はすでに規制を通じてこれを実現している — EU AI法は、EU自身がモデル能力で主導していなくても、世界のAI開発を形作っている。',
+          ],
+        },
+
+        geopoliticsOfAI: {
+          title: '人工知能の地政学',
+          content: [
+            '**人工知能の地政学とは、国家がAI能力、AI規制、AIインフラを権力の道具としてどのように活用するかを研究する分野である。** これは3つの異なる競争を包含する — 最も能力の高いモデルを構築する競争、世界のAI展開を規律する規制枠組みをめぐる争い、そしてフロンティアAIを可能にするハードウェアのサプライチェーンを支配するための闘いだ。',
+            'それぞれの次元は組織にとって具体的な帰結をもたらす。モデル能力はどのAIツールが利用可能かを決定する。規制枠組みはどのツールが許容され、どのような文書が必要かを決定する。ハードウェア支配は、どの国が単独でフロンティアAI開発を維持できるか — できないか — を決定する。米国、中国、EUはこれら3つの次元すべてで相容れない戦略を同時に追求している。',
+          ],
+        },
+
+        keyEntityRelationships: {
+          title: 'AI地政学における主要エンティティとその関係',
+          content: [
+            '**AI規制**とは、人工知能システムの開発・展開・統治を規律する法律、大統領令、任意のフレームワークの総体である。AI規制は主権国家と国際機関によって策定される。3つの主要な規制体制は、EU AI法（欧州連合）、NIST AIリスクマネジメントフレームワーク（米国）、CAC生成AI対策（中国）である。',
+            '**米中テック覇権争い**とは、半導体、人工知能、先端製造業における主導権をめぐる米国と中国の二国間競争である。この覇権争いは、米国によるNvidia GPUの輸出規制、中国の国産代替戦略（Made in China 2025）、対立するAIガバナンス枠組みを通じて表れる。EUはこの覇権争いの当事者ではなく、規制力を通じてそれを形作る第三の主体である。',
+            '**EU AI法**は、2024年3月に欧州議会で可決された規則である。EU AI局と各国の市場監視当局によって施行される。本社所在地にかかわらず、AIシステムがEUユーザーに影響を与えるすべての組織に適用される。EU AI法はブリュッセル効果と関連している — 域外適用されるため、事実上OpenAI、Google DeepMind、Anthropicを世界規模で規制している。',
+            '**NVIDIA**は、AIトレーニング用GPU（H100、H200、B200シリーズ）を設計する米国の半導体企業である。NVIDIAのハードウェアは、GPT-5.5、Claude、Gemini、その他大半のフロンティアAIモデルの訓練を支える主要な計算基盤である。対中NVIDIA GPU輸出規制は米中テック覇権争いの中心的なメカニズムである。NVIDIAの市場地位（AI用GPUの約80%のシェア）は、同社を商業的主体であると同時に地政学的主体にもしている。',
+            '**TSMC**（台湾積体電路製造）は、NVIDIA、Apple、AMD、Googleのために先端半導体を製造する台湾のファウンドリである。台湾という地理的所在 — およびこの島の政治的地位をめぐる係争 — がTSMCをAI地政学の重要な変数にしている。CHIPS and Science Actは、国内米国ファブに資金を投じることでTSMCへの米国の依存を減らす目的も部分的に持って制定された。',
+            '**DeepSeek**は、High-Flyer Capital Managementの支援を受ける中国のAI研究所で、2025年1月にDeepSeek R1をリリースした。DeepSeek R1は推論・コーディングのベンチマーク（AIME 2024、MATH-500、HumanEval）でGPT-5.5を上回りながら、中国向けに制限されたNVIDIA H800 GPUを用いて推定約600万ドルという — フロンティアモデル推定比94%減の — コストで訓練された。DeepSeekのリリースは、米国の輸出規制が中国のフロンティアAI開発を恒久的に制限できるという主張の説得力を弱めた。',
+          ],
+        },
+
+        fiveGeopoliticalDimensions: {
+          title: 'AIの5つの地政学的次元',
+          content: [
+            'AI地政学は5つの異なる次元にわたって展開する。それぞれが米国、中国、EU間の独立した競争の舞台であり、AIを展開する組織に異なる義務とリスクをもたらす。',
+          ],
+          items: [
+            '**1. 経済。** AIは生産性、自動化、GDP成長を牽引する。優れたAI能力を持つ国は、製造効率、金融モデリングの優位性、より速い科学的発見を獲得する。OECDは2030年までにAIが世界GDPに15兆7,000億ドルを追加しうると試算しており、その大部分は主導的なAI国家が獲得する。',
+            '**2. 軍事。** AIは自律型兵器システム、予測兵站、戦場インテリジェンス処理、機械的速度でのサイバー作戦を可能にする。米国、中国、ロシアはいずれもAI対応の軍事システムを開発している。米国防総省のJoint Artificial Intelligence Center（JAIC）と中国の軍民融合戦略は、いずれも国防のためのAIを優先している。',
+            '**3. インテリジェンス。** AIは人間のアナリストには不可能な規模で衛星画像を処理し、シギントを傍受し、オープンソースデータを分析する。NSA、GCHQ、中国の国家安全部（MSS）はいずれもインテリジェンスの収集・分析にAIを用いている。AI生成の合成メディア（ディープフェイク）は新興のインテリジェンス・影響工作ツールである。',
+            '**4. インフラ。** AIは物理インフラに依存する — 半導体ファブ（TSMC、Samsung、Intel）、データセンター、海底ケーブル、電力網である。重要なAIインフラ — チップ製造、クラウドプラットフォーム、訓練用計算資源 — を支配する国は、そうでない国に対して構造的な優位性を持つ。',
+            '**5. グローバルガバナンス。** どの規制枠組みが世界標準になるかが、AIシステムに何ができるか、どのデータを使えるか、どの組織がAIを展開できるかを決定する。EU AI法、米国NISTフレームワーク、中国のCAC規制は3つの競合するガバナンスモデルを代表しており、ブリュッセル効果によりEUのモデルはすでに国境を越えて適用されている。',
+          ],
+        },
+
+        threeWayRace: {
+          title: 'AI軍拡競争：米国、中国、EU',
+          content: [
+            '**世界的な採用をめぐって、AIガバナンスに関する3つの相容れないビジョンが競合している — 米国はイノベーションと競争力を優先し、中国は国家主導によって戦略的なAI優位を達成しようとし、EUはブリュッセル効果を通じて世界に基準を輸出する権利ベースの法的枠組みを構築している。** このAI軍拡競争は主に民間主導だ — 主導的な研究所は民間企業（OpenAI、Anthropic、Google DeepMind、Baidu、Alibaba）だが、規制の主導権、ハードウェアのサプライチェーン、人材といった賭け金は地政学的である。',
+            'この競争は、誰が最も能力の高いモデルを作るかだけの問題ではない。どの規制枠組みが世界標準になるかの問題でもある。EU AI法はEUユーザーに展開されるあらゆるAIシステムに適用されるため、すでにブリュッセルを事実上OpenAI、Anthropic、Google DeepMindの世界的な規制者にしている。ハードウェア支配は第三の次元である — CHIPS and Science Act（520億ドル）とNvidia GPU輸出規制は、中国の計算資源へのアクセスを制限することを狙う。訓練コストのごく一部でGPT-5.5に匹敵したDeepSeek R1の2025年1月のリリースは、そうした規制に限界があることを示した。これらのダイナミクスがモデルの利用可能性にどう影響するかは、[オープンソース vs プロプライエタリLLM](https://www.promptquorum.com/ja/prompt-engineering/open-source-vs-proprietary-llms)を参照。',
+          ],
+          items: [
+            '**米国の立場：** フロンティアモデル能力（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro）、チップ設計（Nvidia、AMD）、AI投資（OECD調べで2023年に民間投資670億ドル）で主導。統一された連邦AI法はなく、展開は加速するがコンプライアンスは断片化する。',
+            '**中国の立場：** AI特許件数、顔認識の規模、国家主導のインフラ展開で主導。モデル（Qwen 3、ERNIE 4.0、DeepSeek R1）は多くのベンチマークで競争力がある。Nvidiaアーキテクチャへのハードウェア依存が、輸出規制が狙う主要な戦略的脆弱性である。',
+            '**欧州の立場：** AI規制 — EU AI法は世界の参照枠組み — とオープンウェイト研究（フランスのMistral）で主導。フロンティアモデル能力と民間投資では遅れをとる。規制力で補う — ブリュッセル効果は米国・中国のプロバイダーに、世界向け製品でEU基準への準拠を強いる。',
+            '**ハードウェア層：** Nvidia H100/H200 GPUがAI訓練を席巻する。米国の輸出規制は対中販売を制限。DeepSeek R1は制限対象のH800 GPUで訓練され、報告コストは約600万ドル — GPT-5.5の訓練コスト推定比94%減 — であり、ハードウェア規制が中国のフロンティアAIを止めていないことを示している。',
+          ],
+          image: '/images/regional-ai-players-ja.svg',
+          imageCaption: '米国：OpenAI、Anthropic、Google DeepMind（VC出資）。EU：Mistral、Hugging Face（オープンソース、対米で資金不足）。中国：Baidu、Alibaba、Tencent（国家支援、CAC監督下）。',
+        },
+
+        euAiAct: {
+          title: 'EU AI法：実際に何を求めているか',
+          content: [
+            '**EU AI法はAIシステムを4段階のリスクに分類し、そのシステムが基本的権利と安全に及ぼすリスクの水準に応じて要件と罰則を設定する。** 欧州議会は2024年3月、賛成523票、反対46票、棄権49票でこの法律を可決した — 主要なAI関連法制の中で最も広い政治的合意である。',
+            'この法律は、EU市場にAIシステムを提供するプロバイダー、EU域内でAIシステムを使用する実装者、輸入業者・販売業者に適用される — 本社所在地にかかわらず。AIの出力がEU加盟国で使用される米国企業もコンプライアンスが必要である。',
+          ],
+          items: [
+            '**容認できないリスク（禁止）：** 政府機関によるソーシャルスコアリング、公共空間でのリアルタイム生体識別（法執行における限定的な例外あり）、認知的脆弱性を悪用するAI、無差別な顔画像収集。これらは2024年8月以降禁止されている。',
+            '**高リスク：** 重要インフラ、教育、雇用、必須サービス（信用、給付）、法執行、国境管理、司法運営におけるAI。適合性評価、透明性文書、人間による監視、EUデータベースへの登録が必要。',
+            '**限定的リスク：** チャットボットとAI生成コンテンツ。開示が必要 — ユーザーはAIと対話していることを知らなければならない。',
+            '**最小リスク：** スパムフィルター、ビデオゲーム内のAI、重大な影響のないレコメンドシステム。既存法を超える特別な義務はない。',
+            '**汎用AI（GPAI）：** GPT-5.5、Claude、Geminiのようなモデルは、訓練データの概要を公表し、EU著作権法を遵守し、重大インシデントを報告しなければならない。システミックリスクを持つモデル（訓練計算量10の25乗FLOPS超）は、追加の敵対的テスト要件に直面する。GPAI規則は2025年8月から適用された。',
+            '**執行：** EU AI局（欧州委員会内）がGPAIモデルを監督する。各国の市場監視当局が高リスクAI規則を執行する。罰金：禁止行為に対して最大3,500万ユーロまたは世界売上高の7%、高リスク違反に対して1,500万ユーロまたは3%。',
+            '**スケジュール：** 禁止行為：2024年8月。GPAI義務：2025年8月。高リスクAIシステム：2026年8月。規制対象製品内の高リスクAI：2027年8月。',
+          ],
+          image: '/images/ai-risk-tiers-comparison-ja.svg',
+          imageCaption: 'EU AI法の4段階リスクシステム：容認できない（2024年8月に禁止）、高リスク（適合性評価）、限定的（開示のみ）、最小（義務なし）。',
+        },
+
+        digitalOmnibus: {
+          title: 'デジタル・オムニバス：EU AI法の高リスク準拠期限は流動的',
+          content: [
+            '**2026年5月時点で、EUの高リスクAIコンプライアンス期限である2026年8月2日は、2027年12月2日まで延期される可能性があるが、採択は確定していない。** 欧州委員会は2025年11月、EU AI法の意図しない影響や実装上の課題に対処するためデジタル・オムニバスを提案した。欧州議会とEU理事会の双方が延期を支持する姿勢を示したが、機関間交渉は停滞している。',
+            '**トリローグの状況：** 2026年2月の第1回トリローグ（欧州議会・理事会・委員会の三者協議）では、緊急性については広く政治的合意が得られたが、技術的詳細は未解決のままだった。2026年4月28日の第2回トリローグは合意に至らず終了。第3回トリローグは2026年5月13日に予定されている。2026年8月2日までに採択されれば延期は拘束力を持つ。採択されなければ、当初の2026年8月2日の期限がそのまま適用される。',
+            '**組織が取るべき対応：** 高リスクAIシステムの拘束力ある準拠期限として2026年8月2日を前提に計画すること。デジタル・オムニバスの延期によって期限が2027年12月まで延びる可能性はあるが、延期が成立すると仮定するのはリスクである。今の時点で2026年8月の準拠を達成しておけば、どちらに転んでも安全だ — オムニバスが可決されれば猶予期間をさらなる最適化に充てられ、可決されなければすでにコンプライアンス済みである。',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: '警告：デジタル・オムニバスの採択は不確実',
+              text: 'デジタル・オムニバスによる2026年8月から2027年12月への延期は保証されていない。2026年4月28日の第2回トリローグは合意に至らなかった。第3回トリローグは2026年5月13日に予定されている。延期が成立すると想定してはならない。コンプライアンスのロードマップは、拘束力ある期限として2026年8月2日を前提に計画すること。オムニバスが後に採択されれば猶予期間が得られ、採択されなければすでに準拠している。',
+            },
+          ],
+        },
+
+        euMemberStates: {
+          title: 'EU加盟国：各国のAI戦略',
+          content: [
+            '**すべてのEU加盟国が国家AI戦略を採択しているが、投資水準、重点分野、実施ペースは大きく異なる。** フランスとドイツは資金面で主導し、北欧諸国はガバナンス枠組みで主導し、中東欧諸国はAIを防衛・行政に組み込む動きを強めている。',
+          ],
+          items: [
+            '**ドイツ：** 連邦AI戦略（Nationale KI-Strategie）、2023年更新。2019〜2025年に連邦プログラム全体でAI研究・インフラ・人材に50億ユーロを投資。主要大学に6つのAI研究拠点を設置。連邦議会ではAI責任に関する議論が続いている。フラウンホーファー協会とDFKI（ドイツ人工知能研究センター）が主要な研究機関である。',
+            '**フランス：** マクロン大統領が発表した20億ユーロの公的AI投資（2024年）。France AI（政府調整機関）が国家戦略を管理する。パリは2025年2月にAI Action Summitを主催 — フランスのEU議長国下で開催された初のG7レベルのAIガバナンス・サミット。CNRSとINRIAが学術AI研究を主導。フランスは米国API依存への戦略的代替としてオープンウェイトAIを支持している。',
+            '**オランダ：** 国家AI戦略2024年版更新、ACM（消費者・市場庁）が運営するAI規制サンドボックス。アムステルダムはSURF（国立研究ネットワーク）のAIクラスターを拠点とする。オランダデータ保護庁（AP）はAIシステム向けに特化したGDPR執行ガイダンスを発行した。',
+            '**ポーランド：** 国家AI開発プログラムは防衛、サイバーセキュリティ、行政向けAIに重点を置く。ポーランドはNATO内で人口当たり防衛技術支出が最も高い国の一つであり、AIを軍事調達に組み込んでいる。ワルシャワは、2022年以降のウクライナ技術人材の移住にも一部後押しされ、成長するAIスタートアップ・エコシステムを擁する。',
+            '**スペイン：** スペインの国家AI戦略（ENIA）は2021〜2025年に6億ユーロを割り当てる。AIと地政学に関するReal Instituto Elcanoの研究は国際的に引用されている。スペインはAESIA（スペインAI監督庁）を設立した — 2023年設立のEU初の国家AI規制機関である。',
+            '**スウェーデン：** スウェーデンAI委員会は2024年に報告書を公表し、教育、公共部門展開、イノベーションを網羅する60超の提言を行った。Vinnova（スウェーデンのイノベーション機関）がAI研究に資金を提供する。スウェーデンはSpotifyのAIレコメンドシステムやH&MのAI主導在庫管理を擁し、民間セクターのAI導入事例として頻繁に引用される。',
+            '**イタリア：** イタリアは2024年にG7議長国を務め、先端AI開発者向けの11の指針原則である広島AIプロセス行動規範を生み出した。イタリアのデータ保護当局Garanteは2023年3月、GDPR上の懸念からChatGPTを一時的にブロックした — OpenAIが透明性措置を実施した後に解決した。これはEU内で初の国家レベルのChatGPT制限だった。',
+          ],
+        },
+
+        franceMistral: {
+          title: 'フランスとMistral：欧州のAI独立を築く',
+          content: [
+            '**フランスは公的投資とMistral AIを通じて米国のAI優位に対する戦略的対抗軸を構築しており、オープンウェイトモデルを欧州のAI主権への道と位置づけている。** MistralはGPT-5.5やClaudeに対するEU最有力の代替であり、フランスの20億ユーロのAI投資は、Mistralのような企業に資金を提供し、OpenAI、Google、Anthropicへの依存を減らすことを明確な目的としている。',
+            '**Mistral AI（2023年設立）：** 元Meta社員のArthur Mensch、Guilaume Blanc、Tim Caronによって設立。Mistralは2023年9月にMistral Small（オープンウェイト）をリリースし、続いて多くのタスクでGPT-5.5に匹敵するMistral Large 2をリリースした。Mistral Large 2はMMLUで81.2%を記録（GPT-5.5は88.7%）だが、分類、要約、抽出タスクではプロプライエタリモデルに匹敵する。コンテキストウィンドウは12万3,000トークン。Mistral Community License下でライセンスされる（商用利用可、派生モデルの命名に関する制限はLLaMAに類似）。',
+            '**フランスがオープンウェイトを選んだ理由：** フランスの立場は、プロプライエタリAPIがベンダーロックイン、データ常駐リスク、米国企業への長期依存を生むというものだ。オープンウェイトモデルは欧州のインフラに展開でき、データをEU管轄内に留め、米国クラウドプロバイダーとのGDPR/AI法上の摩擦を回避できる。これはブリュッセル効果とも整合する — MistralのEU AI法準拠を確保することで、フランスは欧州の規制力を世界的に強化している。',
+            '**政府の支援：** Caisse des Dépôts et Placements（国家投資基金）を通じたフランス政府の後ろ盾と直接的な補助金。Mistralはフランスの戦略的投資家の支援を受け、2024年2月に3億8,500万ユーロのシリーズB資金調達を実施した。かつてAirbusが欧州の航空宇宙分野でBoeingへの対抗軸として構築されたのと同様に、AI分野の「欧州チャンピオン」として位置づけられている。',
+          ],
+        },
+
+        nonEuEurope: {
+          title: '非EU欧州：英国、スイス、ノルウェー、ウクライナ',
+          content: [
+            '**4つの主要な非EU欧州諸国は、いずれもEU AI法と完全には整合しない独自のAIガバナンスの道を選んでおり、断片化した欧州規制の地形を生み出している。** 複数の欧州法域にまたがって事業を行う組織にとって、これはEU加盟国と近隣諸国とでコンプライアンス体制が異なることを意味する。',
+          ],
+          items: [
+            '**英国：** ブレグジット後、英国は2026年時点でAI固有の法律を持たない、イノベーション優先・セクター主導のアプローチを選択した。既存の規制機関（FCA、ICO、Ofcom、CMA）がAIにセクターの権限を適用する。2023年11月、ブレッチリー・パークAI安全サミットを受けて設立された英国AI安全研究所（AISI）は、フロンティアモデルの評価を実施し、安全性報告書を公表している。英国政府はAI計算インフラに9億ポンドを投じた。英国の組織はEU AI法の対象ではないが、EU市場アクセスを維持するために自主的に準拠する企業も多い。',
+            '**スイス：** スイスはAIにおいても中立を維持している — 国家AI法はなく、制定の計画もない。連邦参事会は既存の法制（データ保護、製造物責任、セクター規制）に依拠する。スイスはジュネーブでUNのAI for Goodサミットを毎年開催し、CERNのAI科学プログラム、そしてETHチューリッヒやEPFLといった欧州有数の研究機関を擁する。スイスの中立性はAIガバナンスにも及ぶ — OECDのAI原則には参加するが、EUの規制アプローチにも米国の競争力重視の枠組みにも一元的には整合しない。',
+            '**ノルウェー：** ノルウェーは欧州経済領域（EEA）に参加しており、EU AI法がEEA協定に組み込まれた際には適用される — これは現在進行中のプロセスである。ノルウェーの政府年金基金グローバル（世界最大のソブリン・ウェルス・ファンド、運用資産約1兆8,000億ドル）はAI投資基準を公表し、投資先企業にAIガバナンス方針の開示を求めている。Equinor（国営エネルギー企業）は油田最適化にAIを展開している。ノルウェーのデータ保護当局（Datatilsynet）はAI関連のGDPR執行に積極的だ。',
+            '**ウクライナ：** ウクライナは実戦下でAIを最も積極的に展開している国である。ウクライナ軍はドローン標的識別、シギント、衛星画像分析、兵站最適化にAIを使用している。デジタル変革省（Мінцифра）はEUと米国の双方とAI協力協定を締結した。ウクライナは2022年にEU加盟を申請し、AIガバナンスを含むデジタル関連法制を加盟要件の一環としてEU基準に整合させている。GrammarlyやGitLabの背後にあるものを含むウクライナのAIスタートアップは、技術オペレーションを維持しつつチームをEU諸国に移転させている。',
+          ],
+        },
+
+        usStrategy: {
+          title: '米国の戦略：大統領令、CHIPS法、州法優先',
+          content: [
+            '**米国には連邦AI法が存在せず、トランプ政権による2025年のバイデンAI安全大統領令の撤回は、主要な連邦安全枠組みを覆し、米国のAI政策を全面的に競争力重視へと転換させた。2026年3月時点で、トランプ政権は大統領令14365号と提案中の法案を通じて、州のAI法に対する積極的な連邦優先を推進している。** これにより米国とEUの間に規制のギャップが生じ、大西洋を挟んだAI調達とデータ共有に影響を与えている。',
+          ],
+          items: [
+            '**バイデン大統領令によるAI安全（2023年10月）：** フロンティアAI開発者に安全性テスト結果を米国政府と共有することを義務付け、NIST AI安全基準を制定し、重要インフラと国家安全保障におけるAIに対応した。2025年1月にトランプ大統領によって撤回された。',
+            '**トランプAI行動計画（2025年）：** バイデンの大統領令に代わり、AI開発への規制障壁の撤廃、対中優位の維持、同盟国へのAI輸出促進に重点を置く。AI開発者への義務的な安全性報告要件はない。',
+            '**大統領令14365号：国家AI政策枠組みの確立（2025年12月11日）：** 司法省内にAI訴訟タスクフォースを設置し、州のAI法を法廷で争う。商務長官に対し（90日期限、2026年3月11日期限）、「過度な」州AI法 — AIモデルに真実の出力を変更させる法律や、修正第1条に違反するような開示を強制する法律と定義 — を特定・公表するよう指示。「過度な」AI法を持つ州に対する連邦BEADブロードバンド・インフラ資金の差し止めを認める。明示的な目的は州AI法の連邦優先である。',
+            '**ホワイトハウス国家AI立法枠組み（2026年3月20日）：** 子どもの保護と親の権限強化、コミュニティの保護、デジタルレプリカの保護、政府検閲の防止、労働力開発、州法優先、軽規制のイノベーション促進という7つの政策領域を網羅する包括的な枠組み。この枠組みは議会に対し「州AI法の優先を中心とした、連邦統一・イノベーション志向の体制」の採択を促している。',
+            '**TRUMP AMERICA AI Act（2026年3月18日、マーシャ・ブラックバーン上院議員）：** 291ページに及ぶ立法討議案で、連邦AIガバナンスを成文化し、訓練データとディープフェイクに関する国家基準を確立し、アーティスト・クリエイター保護を義務付け、AI開発者に「注意義務」要件を課す。通信品位法230条を失効させる。トランプの州法優先大統領令と整合している。',
+            '**GUARDRAILS Act（2026年3月20日、ベイヤー下院議員ら）：** TRUMP AMERICA Actに対する民主党の対抗法案。トランプのAI大統領令14365号を廃止し、州AI法への連邦優先を明示的に阻止し、州の規制権限を維持する。連邦優先（トランプ）対州の自律性（民主党）という、2026〜2029年の米国AI政策を規定する根本的対立を反映している。',
+            '**実施期限の未達（2026年5月時点）：** 大統領令14365号はFTCに対し2026年3月11日までにAI政策声明を出すよう求めていたが、5月4日時点で未発表。州AI法に関する商務省の評価も2026年3月11日期限だったが、未公表である。実施は政策的野心に大きく遅れている。',
+            '**コロラドAI法（2026年2月1日施行）：** 雇用、融資、保険などの高リスク意思決定におけるアルゴリズム差別に対処する米国初の州法。2026年2月1日に施行された。トランプの大統領令14365号は、コロラド州の法律を「過度な」規制の例として明示的に挙げた。コンプライアンス期限は2026年6月30日まで延長された。この法律は、トランプが連邦レベルで優先しようとしている州規制の典型例である。',
+            '**CHIPS and Science Act（520億ドル）：** 2022年8月署名。国内半導体製造、研究開発、人材育成に資金を提供する。台湾積体電路製造（TSMC）への米国の依存を減らす。Intel、TSMC、SamsungはCHIPS法の資金で米国内にファブを建設中である。',
+            '**AIハードウェアの輸出規制：** バイデン政権は、先進的なNvidia A100・H100 GPUの中国および懸念国への輸出を制限した。この規制は2023年10月と2024年10月に拡大された。Nvidiaは輸出制限の範囲内に収まる中国専用チップ（A800、H800）を開発したが、これらも後に規制対象となった。',
+            '**NIST AIリスクマネジメントフレームワーク（AI RMF 1.0）：** 2023年1月公表。法的拘束力のない任意のフレームワークで、有効性・信頼性、安全性、セキュリティ・レジリエンス、説明可能性、プライバシー強化、バイアス管理を伴う公平性、説明責任・透明性という7つの次元でAIの信頼性を扱う。米国連邦機関や大企業でコンプライアンスの基準として広く採用されている。',
+            '**NSF国立AI研究機関：** 米国の大学における25のAI研究機関に2億ドル超を投資。基礎的なAI研究、安全性、倫理、応用分野（ヘルスケア、農業、気候）に重点を置く。',
+          ],
+        },
+
+        chinaStrategy: {
+          title: '中国のAI戦略：Made in China 2025、CAC規制、DeepSeek',
+          content: [
+            '**中国のAI戦略は、国家主導の産業政策、国内向けの厳格なコンテンツ規制、積極的な国際AI外交を組み合わせており、米国のハードウェア輸出規制にもかかわらず競争力のあるフロンティアモデルを生み出している。** 中国のアプローチは、AIを主に経済発展、国家安全保障、社会統治のための戦略的能力として扱う。',
+          ],
+          items: [
+            '**Made in China 2025と新世代AI発展計画（2017年）：** 2017年の中国のAI計画は、研究、人材、製品開発、規制のすべてにわたり2030年までの世界的なAIリーダーシップを目標とした。150億ドルの国家資金を配分し、AI特許件数、研究引用数、産業収益のベンチマークを設定した。AIは半導体・量子コンピューティングと並ぶ中核的な戦略技術に指定されている。',
+            '**中国国家インターネット情報弁公室（CAC）のアルゴリズム規制（2022年3月）：** 中国のユーザーにサービスを提供するすべてのアルゴリズムベースのレコメンドシステムに対し、CACへの登録、アルゴリズムの仕組みの開示、ユーザーがパーソナライズされたレコメンドをオプトアウトできる仕組みの提供を義務付けた。2023年7月には生成AIにも拡大され、すべての生成AIサービスは登録・安全性評価をパスし、出力が「社会主義の核心的価値観」に沿うことを確保しなければならない。',
+            '**DeepSeek R1（2025年1月）：** ヘッジファンドHigh-Flyerが支援する中国のAI研究所DeepSeekがリリース。R1はAIME 2024（79.8%）、MATH-500（97.3%）、HumanEvalコーディングタスクを含む複数のベンチマークでGPT-5.5を上回った。輸出規制の範囲内にある中国専用の変種であるNvidia H800 GPUで訓練され、推定訓練コストは約600万ドル（フロンティアモデル推定比94%減。金額自体には議論があるが、大幅なコスト優位は明白）。このリリースはNvidia株価の大幅下落を引き起こし、ハードウェア輸出規制の有効性をめぐる米国の政策論争を加速させた。',
+            '**Huawei Ascendチップ：** HuaweiのAscend 910B・910Cチップは、AI訓練向けのNvidia GPUの国産代替として位置づけられている。性能はほとんどのベンチマークでNvidia H100に及ばないが、中規模モデルの訓練には十分である。中国の大手テック企業（Baidu、Alibaba、ByteDance）は、Nvidia依存を減らすため一部のワークロードをAscendへ移行し始めている。',
+            '**一帯一路AI外交：** 中国は一帯一路（BRI）のパートナーシップを通じて、顔認識やスマートシティシステムといったAI監視インフラを発展途上国に輸出している。プロバイダーにはHuawei、Alibaba Cloud、ZTEが含まれる。これは、アルゴリズムによる社会管理を含む中国のAIガバナンス規範をパートナー国に輸出し、OECD/EUの枠組みの外側に並行するAI標準のエコシステムを生み出している。',
+            '**主要な中国AIモデル：** Alibaba Qwen 3、Baidu ERNIE 4.0、ByteDance Doubao、Z.ai GLM-4。これらは中国語タスクで競争力があり、多言語ベンチマークでも徐々に力をつけている。[オープンソース vs プロプライエタリLLMのトレードオフ](https://www.promptquorum.com/ja/prompt-engineering/open-source-vs-proprietary-llms)は中国モデルの採用に影響する — Qwenのオープンウェイトリリースは海外の開発者を引きつけている。',
+          ],
+        },
+
+        chinaModelsAccessibility: {
+          title: '中国のプロンプトエンジニア向け：利用可能なモデル',
+          content: [
+            '**中国のユーザーにサービスを提供する製品を運営している場合、利用可能なモデル、義務的なコンテンツフィルター、EUや米国には存在しない事前審査要件を伴う、独自のAIエコシステムの中で活動していることになる。** 海外モデル — GPT-5.5、Claude、Gemini — はVPNなしでは中国本土からアクセスできない。選択肢は国内登録済みの代替モデルに限られる。',
+            '**中国で利用可能なモデル：** Alibaba Qwen 3（オープンウェイト、7B〜72B、128Kコンテキスト、Alibaba Cloud経由のAPI）、Baidu ERNIE 4.0（Qianfanプラットフォーム経由のAPI）、ByteDance Doubao（Volcano Engine経由のAPI）、Z.ai GLM-4（Z.aiプラットフォーム経由のAPI）、DeepSeek R1/V3（DeepSeekプラットフォーム経由のAPI）。Qwen 3 72Bは最強のオープンウェイトの選択肢であり、中国語タスクに使いながら中国国外でセルフホストできる。MMLUでGPT-5.5に5ポイント差まで迫り、中国語特化ベンチマーク（C-Eval）では上回る。',
+          ],
+        },
+
+        chinaContentFilters: {
+          title: 'コンテンツフィルターとCAC要件：重要な制約',
+          content: [
+            '**中国のすべての生成AIサービスは、CAC生成AI対策（2023年）を遵守しなければならない。** コンテンツ規制は法律だけでなく、モデルおよびAPIレベルで施行される。サービスは以下の出力をブロックするフィルターを実装しなければならない：中国共産党の指導批判、台湾/チベット/新疆の独立に関する議論、政治的に敏感な歴史的出来事（1989年6月4日）、「社会主義の核心的価値観」を損なうコンテンツ、CACが国家安全保障への脅威とみなす素材。これらのフィルターはAPIに組み込まれており、無効化して設定することはできない。',
+            '**重要な実装上の詳細：** フィルターをトリガーするリクエストは、HTTP 4xxではなく、レスポンスボディに`is_safe: 0`フラグを伴うHTTP 200を返す — 従来型のエラーではない。これはコードでの明示的なアプリケーションレベルの処理を必要とする。フィルタリング対象のプロンプトでERNIE 4.0やDeepSeekを呼び出すと、APIはサニタイズされた出力またはエラーフラグを伴う有効なHTTPレスポンスを返す — 4xxステータスではない。',
+            '**事前のCACセキュリティ評価は必須である。** 消費者向け生成AIサービスが中国で開始される前に、プロバイダーはCAC評価（45〜90日）を完了しなければならない。評価には、訓練データのソース、コンテンツフィルタリングの文書、サンプル出力のテスト、コンプライアンスの自己認証が求められる。海外企業は直接申請できず、登録プロバイダーとして中国本土の事業体または認可されたパートナー（Alibaba Cloud、Tencent Cloud）が必要である。彼らのCAC登録はモデル層をカバーするが、あなたのアプリケーションレベルの出力については引き続きあなた自身の責任である。',
+          ],
+          callouts: [
+            {
+              type: 'did-you-know',
+              label: '知っていましたか：CACフィルターはHTTP 4xxではなくHTTP 200を返す',
+              text: '中国国家インターネット情報弁公室（CAC）によってコンテンツがフィルタリングされると、規制対象のAPI（Baidu ERNIE、DeepSeek）はレスポンスボディに`is_safe: 0`フラグを伴うHTTP 200を返す — HTTP 4xxエラーではない。HTTPステータスコードだけをチェックするアプリケーションは、検閲済みまたは空のレスポンスを気づかずに素通りさせてしまう。エンドユーザーに結果を表示する前に、必ずレスポンスボディの`is_safe`フラグを確認すること。これは中国でAIを展開する際に最も多い実装ミスである。',
+            },
+          ],
+        },
+
+        chinaDataResidencyAPIs: {
+          title: 'PIPLデータ現地化、実務的なAPI、展開例',
+          content: [
+            '**個人情報保護法（PIPL、2021年）があなたにとっての拘束力ある制約である。** PIPLは、中国ユーザーから収集した個人データが中国国内に留まるか、国境を越えた移転の前に政府のセキュリティ評価をパスすることを求めている。あなたのAIアプリケーションが中国ユーザーの個人データ — 氏名、身分証明、位置情報、行動データ — を処理し、それを中国国外のモデルAPIに送信すると、PIPL違反になる。実務的な解決策は、中国ユーザーのトラフィックを中国本土でホストされる推論（Alibaba Cloud、Tencent Cloud、Huawei Cloud）経由でルーティングし、個人データが中国の法域を離れないようにすることである。',
+            '**Baidu ERNIE 4.0 API（実務的な詳細）：** Qianfan（千帆）プラットフォーム経由でアクセス可能。料金：2026年時点でERNIE 4.0 Turboは1,000トークン（入出力）あたり0.12元。システムプロンプトに対応、関数呼び出しをサポート、JSON構造のレスポンスを返す。レート制限：標準ティアで60 QPM。コンテンツフィルターのエラーはHTTP 200で`is_safe: 0`フラグを返す — 明示的なアプリケーションレベルのエラー処理が必要。',
+            '**ハイブリッドソリューションとしてのQwen 3：** 中国と海外の両方のユーザーにサービスを提供するチームにとって、Qwen 3（オープンウェイト、Apache 2.0）が最も実用的な橋渡しである。海外ユーザー向けには中国国外の自社インフラにQwen 3 72Bを展開し（CACフィルターなし）、中国向けセグメントにはAlibabaのCAC登録の下でAlibaba Cloud APIを使用する。コンテキストウィンドウは12万8,000トークン、多言語タスクでも競争力がある。',
+          ],
+          items: [
+            '**プロンプト例（安全）：** 「中国の生成AI対策（2023年）の主要条項は何か、また中国で生成AIサービスを開始する前に企業が準備しなければならない文書は何か」— 禁止領域に触れずに事実に基づく規制情報を求めるため機能する。DeepSeek R1は規制分析を確実に処理する。',
+            '**プロンプト例（フィルタリング対象）：** 「台湾と中国本土の政治体制を比較して」はCAC APIすべてで`is_safe: 0`をトリガーする。書き換え：「台湾と中国本土の1人当たりGDPと貿易額を比較して」— 焦点を経済に移す。',
+            '**プロンプト例（Qwen 3の優位性）：** 「この中国の規制文書を要約し、外国AI企業にとっての3つのコンプライアンス義務を特定して」。Qwen 3 72B（中国国外でセルフホスト）はCACフィルターなしで中国語の法律文書を処理する — 国境をまたぐコンプライアンス業務に最適な選択肢。',
+          ],
+        },
+
+        regulatoryComparison: {
+          title: '世界のAI規制：EU vs 米国 vs 中国の比較',
+          content: [
+            '**3つの主要なAI規制枠組みは、哲学、法的拘束力、国際的な射程において根本的に異なる。** これらの違いを理解することは、複数の法域にまたがって事業を行う組織や、異なる規制圏に本社を置くプロバイダーのAIツールを使用する組織にとって不可欠である。',
+          ],
+          tableFormat: true,
+          columns: ['観点', '欧州連合', '米国', '中国'],
+          rows: [
+            { '観点': '主要アプローチ', '欧州連合': '権利ベースの法的枠組み — AI法は基本的権利へのリスクによってシステムを分類する', '米国': 'セクター別・イノベーション優先 — 既存の規制機関が管轄分野でAIに既存の権限を適用；連邦AI法は存在しない', '中国': '国家主導・統制優先 — AIは国家の発展目標と社会統治目標に資する' },
+            { '観点': '主要な法制', '欧州連合': 'EU AI法（2024年）— 義務的コンプライアンス；GDPRはAI訓練データと出力に適用される', '米国': '連邦AI法は存在しない。[NIST AI RMF](https://www.nist.gov/ai-risk-management-framework)（任意）。大統領令14110号（バイデン、2025年撤回）；AI行動計画（トランプ、2025年）', '中国': 'アルゴリズムレコメンド規制（2022年）；生成AI対策（2023年）；いずれもCACが執行' },
+            { '観点': 'リスクフレームワーク', '欧州連合': '4段階：容認できない（禁止）、高（適合性評価が必要）、限定的（開示）、最小（特別な義務なし）', '米国': '任意の[NIST AI RMF](https://www.nist.gov/ai-risk-management-framework) — 7つの信頼性の次元；義務的な階層化はない', '中国': '生成AIサービスの展開前にセキュリティ評価が必要；コンテンツは「社会主義の核心的価値観」に沿わなければならない' },
+            { '観点': '最高罰金', '欧州連合': '禁止行為に対して3,500万ユーロまたは世界年間売上高の7%、高リスク違反に対して1,500万ユーロまたは3%', '米国': '連邦レベルのAI固有の罰金はない。FTCは不公正・欺瞞的行為の主張を追及可能；州レベルの罰則は異なる', '中国': 'アルゴリズム規則違反1件につき最大10万元；非準拠の生成AIはサービス停止' },
+            { '観点': 'データ保護', '欧州連合': 'GDPR + AI法 — 個人データを用いたAI訓練には法的根拠が必要；個人データに触れる出力はGDPR準拠が必要', '米国': 'セクター別：HIPAA（医療）、CCPA/CPRA（カリフォルニア州）、FERPA（教育）；GDPRに相当する連邦法はない', '中国': '個人情報保護法（PIPL、2021年）が適用；国家安全機関はデータアクセス権を保持する' },
+            { '観点': '禁止用途', '欧州連合': '政府機関によるソーシャルスコアリング；公共空間でのリアルタイム生体監視；認知的脆弱性を悪用するAI；無差別な顔画像収集', '米国': '連邦レベルで禁止されたAI用途はない；一部の州で禁止あり（例：イリノイ州BIPAの生体認証規制）', '中国': '中国共産党の指導、国家権力、または「社会主義の核心的価値観」を損なうコンテンツ；ディープフェイクは開示が必要' },
+            { '観点': '執行機関', '欧州連合': 'EU AI局（GPAIモデル）＋各国の市場監視当局（高リスクAI）＋データ保護当局（GDPRとの交差）', '米国': 'FTC（消費者保護）、FDA（医療AI）、CFPB（金融AI）、EEOC（雇用AI）、NIST（標準）', '中国': '中国国家インターネット情報弁公室（CAC）— 主要な執行機関；業種別AIにはMIITとSAMR' },
+            { '観点': '国際的な射程', '欧州連合': 'ブリュッセル効果 — EU市場に提供される、またはその出力がEU内で使用されるあらゆるAIに適用；設計上域外適用される', '米国': 'AIハードウェアの輸出規制は世界のサプライチェーンに影響；域外的なコンテンツ規制はない', '中国': '一帯一路のAI輸出は中国のAIガバナンス規範を広める；グレートファイアウォールは国内での海外AIサービスへのアクセスを制限する' },
+          ],
+          image: '/images/ai-three-region-framework-ja.svg',
+          imageCaption: 'EUは権利ベースの規則を執行（EU AI法、罰金3,500万ユーロ）；米国は任意のセクター別監督を志向（NIST RMF）；中国はCAC承認による国家統制を執行。',
+        },
+
+        globalPowerCompetition: {
+          title: 'AIと世界のパワー競争',
+          content: [
+            '**AIは今や大国間競争の主要な次元となり、同盟構造、技術輸出政策、AIシステムの国際貿易を規律するルールを形作っている。** この競争は単純な二国間（米国 vs 中国）ではない — EUという第三極、非同盟国からなる係争的な中間地帯、そして対立するガバナンス枠組みを生み出す一連の多国間フォーラム（G7、G20、国連、[OECD](https://oecd.ai)）を含む。',
+            '国際的に事業を展開する組織にとって、AIにおける世界的なパワー競争は4つの実務的リスクを生む — 輸出規制の遵守（どのAIハードウェア・ソフトウェアをどの国に移転できるか）、調達制限（政府契約でどのAIプロバイダーを使用できるか）、データ主権要件（機密データのAI推論をどこで実行できるか）、規制の断片化（対立するEU・米国・中国のルールを同時に満たす）である。',
+          ],
+          items: [
+            '**同盟に基づくAIガバナンス：** 米国は、オランダ（ASMLリソグラフィ規制）、日本（先端チップ輸出規制）、英国（[AI Safety Institute](https://www.aisi.gov.uk/)との協力）を含む同盟国とAI輸出規制を調整してきた。これにより、共有の技術アクセスルールを伴う非公式な「AI同盟」が生まれている。',
+            '**非同盟国：** インド、ブラジル、UAE、サウジアラビアは、米国・中国いずれのAIインフラへの依存も避けるため国産AI能力に投資している。インドのBharatGPTイニシアチブとUAEのFalconモデル（Technology Innovation Institute）は、意図的なAI主権戦略の例である。',
+            '**多国間ガバナンス：** G7広島AIプロセス（2023年）、国連AI諮問機関の報告書（2024年）、[OECD AI原則](https://www.oecd.org/ai/ai-principles/)（2024年更新）は、いずれも任意であり、EUの法的拘束力あるアプローチと競合する並行的な国際ガバナンス経路を代表している。',
+            '**国際関係上のリスク：** 地政学的な敵対国のプロバイダーが提供するAIツールを使用する組織は、二次的なリスクに直面する — レピュテーションの毀損、将来の調達除外、そしてプロバイダーの本国政府によるデータアクセス規定が現地のデータ保護法と抵触した場合の潜在的な規制上の責任である。',
+          ],
+        },
+
+        organizationsImplications: {
+          title: 'AI地政学リスク：組織にとって何を意味するか',
+          content: [
+            '**AIを展開する組織にとって、地政学的競争は4つの具体的な運用上の意思決定に直結する — どのAIツールが許容されるか、データをどこに保存できるか、どのようなコンプライアンス文書が必要か、規制がどれだけ速く変化するかである。** これらの判断は、組織がEU内に本拠を置くか、EU市場で事業を行うか、米国・中国のAIプロバイダーを使用するかによって大きく異なる。',
+            'PromptQuorumはコンプライアンスを意識したモデル選択をサポートしている — EU準拠モデル（Mistral、ローカルOllama）と米国のフロンティアモデルに同時にプロンプトを送信し、別インフラを用意せずにEU AI法準拠オプションとプロプライエタリな代替をベンチマークできる。',
+            'モデルの利用可能性を形作る地政学的なダイナミクスは、オープンソース対プロプライエタリの問いを特に重要にしている。オープンソースが勝つ場合とプロプライエタリモデルがコストに見合う場合の完全な比較については、[オープンソース vs プロプライエタリLLM](https://www.promptquorum.com/ja/prompt-engineering/open-source-vs-proprietary-llms)を参照。',
+          ],
+          items: [
+            '**EU内の組織：** [EU AI法](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)に直接準拠しなければならない。高リスクAIシステム（人事、信用、ヘルスケア、公共サービス）は、2026年8月までに適合性評価、人間による監視の文書化、[EU AIデータベース](https://digital-strategy.ec.europa.eu/en/policies/ai-office)への登録が必要。個人データを扱うすべてのAIはGDPRを遵守しなければならない — AI訓練パイプラインと出力処理を含む。',
+            '**EUユーザーにサービスを提供する非EU組織：** ブリュッセル効果の対象となる — [EU AI法](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)は、あなたのAI出力がEUユーザーに届く場合に適用される。EU向け製品で使用されるGPAIモデルは、2025年8月以降の透明性義務を遵守しなければならない。非準拠には、EU本社の違反者と同じ罰則が科される。',
+            '**EU展開における米国のAIツール：** GPT-5.5、Claude Opus 4.8、Gemini 3.1 ProはすべてGPAIモデルに分類される。OpenAI、Anthropic、GoogleはEU AI法のGPAI準拠文書を公表している。実装者としてこれらのツールを高リスクAIシステムで使用する組織は、自らの適合性評価に引き続き責任を負う — プロバイダーのGPAI準拠はあなたの展開をカバーしない。',
+            '**中国のAIツール：** DeepSeek R1などの中国モデルは国際的に利用可能だが、EU・米国の組織にとって追加の調達リスクを伴う — データ常駐は不明確で、プロバイダーはCACコンテンツ規制の対象であり、中国国家インターネット情報弁公室はデータ開示を強制できる。EU・NATO加盟国の政府機関や重要インフラ組織は、中国製AIツールの利用を制限または禁止しつつある。',
+            '**データ常駐：** EUのGDPRは、十分性認定や適切な保護措置のない国への個人データ移転を制限する。米国プロバイダーを用いた個人データのAI推論には、標準契約条項（SCC）またはEU-米国データプライバシーフレームワーク（2023年）への依拠が必要である。中国への移転には十分性認定がなく、契約上の保護措置が必要だが、その執行は難しい。',
+            '**調達の判断：** 米国連邦機関は、指定された中国企業のAIの使用を禁じられている。複数のEU加盟国（ドイツ、フランス、オランダ）は、政府調達における中国製AIツールの使用を制限するガイダンスを発行した。民間セクターの組織にとって、調達方針はAIプロバイダーの訓練データの法域、コンテンツモデレーションの実務、政府アクセス規定に対応すべきである。',
+            '**規制変化のモニタリング：** AI規制の変化のペースは速い。トランプ政権による2025年のバイデン大統領令の撤回、EU AI法の段階的な執行スケジュール、中国のCAC規則の継続的な更新は、コンプライアンスの状態が数か月で変わりうることを意味する。組織はAIガバナンス責任者を指名し、[EU AI局](https://digital-strategy.ec.europa.eu/en/policies/ai-office)のニュースレターと[OECD AI政策観測所](https://oecd.ai)の更新を購読すべきである。',
+          ],
+          image: '/images/compliance-burden-comparison-ja.svg',
+          imageCaption: 'EU：50万〜200万ドル超のコンプライアンスコスト、6〜12か月、規範的な規則。米国：5万〜30万ドル、2〜4か月、任意。中国：20万〜100万ドル超、CAC承認は不確実。',
+        },
+
+        qaWhatIsAIGeopolitics: {
+          title: 'AI地政学とは何か？',
+          content: [
+            'AI地政学とは、人工知能が国家間の世界的なパワー関係にどのような影響を与えるかを研究する分野であり、経済競争、軍事能力、規制的影響力、技術的リーダーシップを含む。3つの同時進行する競争を包含する — どの国が最も能力の高いモデルを構築するか、どの規制枠組みが世界のAI展開を統治するか、どの国がフロンティアAIを可能にする半導体サプライチェーンを支配するか。組織にとって、AI地政学は、どのツールが法的に許容されるか、どこでデータを処理できるか、どのベンダーが調達リスクを伴うかを決定する。',
+          ],
+        },
+
+        qaWhoIsWinning: {
+          title: '世界のAI競争で勝っているのは誰か？',
+          content: [
+            '米国はフロンティアモデルの能力 — GPT-5.5（OpenAI）、Claude（Anthropic）、Gemini（Google DeepMind）— と民間AI投資（[OECDデータ](https://oecd.ai)によれば2023年に670億ドル）で主導している。中国はAI特許出願、国家主導の展開規模、国産モデル開発で主導しており、DeepSeek R1は2025年1月に主要なベンチマークでGPT-5.5に匹敵した。欧州連合はAI規制で主導している — [EU AI法](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)は世界の参照枠組みである — が、その経済規模に対してフロンティアモデル能力と民間投資では遅れをとっている。3つの次元すべてで同時に主導する単一の主体は存在しない。',
+          ],
+        },
+
+        qaWhatIsBrusselsEffect: {
+          title: 'AIにおけるブリュッセル効果とは何か？',
+          content: [
+            'ブリュッセル効果とは、多国籍企業が法域ごとに別々のコンプライアンス体制を維持するより、世界規模で最も厳格な基準を適用する方が運用上簡単だと考えるために、EU規制が事実上の世界標準になる現象を指す。EU AI法は、EU市場に提供される、またはその出力がEUユーザーに届くあらゆるAIシステムに適用され、OpenAI、Google DeepMind、Anthropicに対し、EU限定版だけでなく世界向け製品全体でEUの透明性義務を遵守させることになる。GDPRも同じメカニズムで世界的なプライバシー基準となった。',
+          ],
+        },
+
+        qaHowChinaRegulates: {
+          title: '中国はどのように人工知能を規制しているか？',
+          content: [
+            '中国は中国国家インターネット情報弁公室（CAC）を通じてAIを規制する。アルゴリズムレコメンド規制（2022年）は、アルゴリズムによってキュレーションされたコンテンツのラベル表示を義務付ける。生成AI対策（2023年）は、消費者向け生成AIサービスが中国で開始される前にCACセキュリティ評価（45〜90日のプロセス）をパスすることを求め、AI出力が「社会主義の核心的価値観」に沿うことを義務付ける。海外AIモデル（GPT-5.5、Claude、Gemini）は回避手段なしでは中国本土からアクセスできない。国内の代替にはAlibaba Qwen、Baidu ERNIE 4.0、ByteDance Doubao、DeepSeekがある。',
+          ],
+        },
+
+        qaWhatEUAIActRequires: {
+          title: 'EU AI法は組織に何を求めているか？',
+          content: [
+            'EU AI法はAIシステムを4段階のリスクに分類し、それぞれに応じた義務を課す。禁止行為 — 政府機関によるソーシャルスコアリング、公共空間でのリアルタイム生体監視 — は2024年8月から禁止されている。雇用、信用評価、ヘルスケア、法執行で使用される高リスクAIシステムは、2026年8月までに適合性評価、人間による監視の文書化、EU AIデータベースへの登録が必要である。汎用AIモデル（GPT-5.5、Claude、Gemini）は訓練データの概要を公表し、EU著作権法を遵守しなければならない — この規則は2025年8月から適用された。EUユーザーにサービスを提供するすべての組織は、本社所在地にかかわらず準拠しなければならない。',
+          ],
+        },
+
+        qaExportControls: {
+          title: '米国の輸出規制はAI開発にどう影響するか？',
+          content: [
+            '米国の輸出規制は、A100やH100を含む先進的なNvidia GPUの中国への販売を制限し、中国のフロンティアAIモデル訓練能力を制限することを狙っている。この規制は輸出管理規則（EAR）を通じて執行され、指定の計算能力閾値を超えるNvidia、AMD、Intel製品に適用される。DeepSeek R1の2025年1月のリリースは、このアプローチの限界を示した — 中国向けに制限されたH800 GPUで、比較可能な米国モデルの報告コストのごく一部で訓練されながら、AIME 2024、MATH-500、HumanEvalのベンチマークでGPT-5.5に匹敵した。輸出規制は中国のフロンティアAI開発を減速させているが、止めてはいない。',
+          ],
+        },
+
+        qaTSMCRole: {
+          title: 'TSMCはAI地政学でどのような役割を果たしているか？',
+          content: [
+            'TSMC（台湾積体電路製造）は、フロンティアAIを支える先端チップを製造している — NvidiaのH100・H200 GPU、GoogleのTPU、AppleのNeural Engineはすべて台湾のTSMCファブで製造されている。現在、同等のプロセスノード（3nm、2nm）で量産できる企業は他に存在しない。これにより、TSMCは世界のAIインフラにおける単一の依存点となっている — 米国の輸出規制は、TSMCが中国のチップメーカーに先端ノードを供給しないことに依拠しており、台湾の政治的地位に何らかの混乱が生じれば、世界のAIハードウェア供給は即座に制約を受ける。米国のCHIPS and Science Act（520億ドル）は、この依存を減らすために特に国内米国ファブ能力に資金を投じている。',
+          ],
+        },
+
+        qaUSEUChinaDifferences: {
+          title: '米国・EU・中国のAI戦略の主な違いは何か？',
+          content: [
+            '3つの主要なAI戦略は、哲学、法的構造、国際的な射程において根本的に異なる。米国は、連邦AI法を持たない民間セクター主導のイノベーションと競争力を優先しており、既存のセクター規制機関（FTC、FDA、EEOC）が管轄分野でAIに既存の権限を適用する。EUは、EU AI法という義務的な横断的法的枠組みを通じて基本的権利の保護を優先しており、これはEUユーザーに届くあらゆるAIに域外適用される。中国は、CACが執行する義務的なコンテンツ規制と事前のセキュリティ評価を通じて、国家統制と国家発展を優先している。これらのアプローチは構造的に相容れない — 3つすべての法域にまたがって事業を行う組織は、対立する要件を同時に乗りこなさなければならない。',
+          ],
+        },
+
+        defEUAIAct: {
+          title: '定義：EU AI法',
+          content: '2024年3月に欧州議会で可決された、世界初の包括的かつ法的拘束力のあるAI規制。AIシステムを4段階のリスク（容認できない、高、限定的、最小）に分類し、それぞれに応じた義務を課す。禁止行為は2024年8月から、汎用AIの透明性義務は2025年8月から、高リスクシステムの要件は2026年8月から適用される。罰金は最大3,500万ユーロまたは世界売上高の7%に達する。EUユーザーに届くあらゆるAIに域外適用される。',
+        },
+
+        defBrusselsEffect: {
+          title: '定義：ブリュッセル効果',
+          content: '多国籍企業が法域ごとに別々のコンプライアンス体制を維持するより、世界規模で一つの厳格な基準を適用する方が簡単だと考えるために、EU規制が事実上の世界標準になる現象。GDPRはブリュッセル効果を通じて世界的なプライバシー基準となった。EU AI法も同様のことを行っている — OpenAI、Anthropic、GoogleはEU限定版だけでなく世界向け製品全体でEU AI法の要件を遵守しなければならない。',
+        },
+
+        defHighRiskAI: {
+          title: '定義：高リスクAIシステム',
+          content: 'EU AI法の下で、故障や誤作動が基本的権利に重大な害を及ぼしうるAIシステム。例：採用決定、信用評価、医療診断、法執行、公共サービスへのアクセス、教育評価に使用されるAI。高リスクAIは、展開前に適合性評価、人間による監視の文書化、訓練データの品質管理、EU AIデータベースへの登録を必要とする。',
+        },
+
+        defGPAI: {
+          title: '定義：汎用AI（GPAI）',
+          content: '広範なデータで訓練され、特化・専門分野に限定されない汎用的なアーキテクチャを持ち、幅広い下流タスクに適応可能なAIシステム。GPT-5.5、Claude Opus 4.8、Gemini 3.1 ProはGPAIモデルである。EU AI法の下で、訓練計算量が10の25乗FLOPを超えるGPAIモデルは、訓練データの概要、能力に関する文書、著作権遵守を含む透明性義務に直面する。',
+        },
+
+        defCAC: {
+          title: '定義：中国国家インターネット情報弁公室（CAC）',
+          content: 'インターネット、サイバースペース、AIガバナンスを所管する中国の主要な規制機関。アルゴリズムレコメンド規制（2022年）と生成AI対策（2023年）を執行する。中国で生成AIサービスを開始する前にセキュリティ評価を求め、中国共産党批判や政治的に敏感な話題をブロックするコンテンツフィルターを義務付け、AIプロバイダーにデータ開示を強制できる。',
+        },
+
+        defDataSovereignty: {
+          title: '定義：データ主権',
+          content: 'データは、それが所在または生成された国の法律に従うという原則であり、組織は外国の法域にデータを移転することなく、データに対する完全な統制を維持できるとする考え方。EUのGDPRとEU AI法は、データ主権をコンプライアンス要件として扱う — データ主体がEU居住者である場合、処理がEU域外で行われる場合でも、個人データの処理はEU法を遵守しなければならない。',
+        },
+
+        defAlgorithmRecs: {
+          title: '定義：アルゴリズムレコメンド規制（中国）',
+          content: 'アルゴリズムを用いてコンテンツをレコメンドするプラットフォームに対し、アルゴリズムによるキュレーションを公に表示・開示するよう義務付ける、中国の2022年規制。ソーシャルメディア、ニュースフィード、動画レコメンド、検索エンジンに適用される。ユーザーにアルゴリズムレコメンドをオフにする選択肢を提供することを求める。アルゴリズムによるコンテンツ配信の透明性と政府監督を強化するためCACによって執行される。',
+        },
+
+        defSCCs: {
+          title: '定義：標準契約条項（SCC）',
+          content: '欧州委員会が発行する事前承認済みの契約ひな形で、GDPR準拠を主張しながら、個人データをEUから十分性のない法域（米国や中国など）へ移転することを組織に認めるもの。SCCは、データをEU基準の下で保護する契約上の義務をデータ輸入者に課す。その有効性には疑問が呈されている — EUの裁判所は、SCCが米国その他の国の政府監視からデータを保護できるかどうかを問題視してきた。',
+        },
+
+        politicianQuotes: {
+          title: '政治家の発言',
+          content: [
+            '**AIは3つの規制圏すべてで最上位の政治課題となっており、指導者たちは経済的な生存、民主的な価値観、国家安全保障の問題としてこれを位置づけている。** 以下の発言は公式のスピーチと議会記録から引用したものである。',
+          ],
+        },
+
+        quoteVonDerLeyen: {
+          title: '',
+          blockquote: '人工知能は私たちの時代を規定する技術です。欧州はそれを単に採用するのではなく、形作らなければなりません。私たちが求めるのは、人々のために働くAIであり、その逆ではありません。',
+          blockquoteSource: 'ウルズラ・フォン・デア・ライエン、欧州委員会委員長 — 欧州AI戦略演説、2024年',
+        },
+
+        quoteVestager: {
+          title: '',
+          blockquote: 'AI法は世界初の人工知能に関する包括的な法的枠組みです。技術そのものではなく、人々とその安全を中心に据えています。これこそが責任あるイノベーションの姿です。',
+          blockquoteSource: 'マルグレーテ・ベステアー、前欧州委員会上級副委員長 — 欧州議会、2024年3月',
+        },
+
+        quoteBreton: {
+          title: '',
+          blockquote: 'AI法は歴史的な成果です。欧州はAIに関する明確な法的枠組みを確立した最初の大陸です。安全とイノベーションは対立するものではなく、両立するものです。私たちはそれを世界に示しました。',
+          blockquoteSource: 'ティエリー・ブルトン、前欧州委員会域内市場担当委員 — 欧州委員会、2024年3月',
+        },
+
+        quoteMacron: {
+          title: '',
+          blockquote: 'フランスは欧州における主導的なAI国家でありたいと考えています。パリはAI Action Summitを主催します。私たちはオープンで信頼でき持続可能なAIに投資しており、世界に参加を呼びかけています。',
+          blockquoteSource: 'エマニュエル・マクロン、フランス大統領 — AI Action Summit発表、2024年',
+        },
+
+        quoteSunak: {
+          title: '',
+          blockquote: '英国は世界中のパートナーと協力し、AIの安全性を確保していきます。ブレッチリー・パークはこの対話の始まりの場ですが、ここで終わらせてはなりません。',
+          blockquoteSource: '[リシ・スナク、前英国首相 — AI安全サミット、ブレッチリー・パーク、2023年11月](https://www.gov.uk/government/speeches/pm-speech-at-the-ai-safety-summit-1-november-2023)',
+        },
+
+        quoteScholz: {
+          title: '',
+          blockquote: 'ドイツは欧州における主導的なAI拠点の一つになりたいと考えています。私たちはAI研究、デジタルインフラ、そして次世代のインテリジェントシステムを構築する人材に投資しています。',
+          blockquoteSource: 'オラフ・ショルツ、前ドイツ連邦首相 — 国家AI戦略アップデート、2024年',
+        },
+
+        faq: {
+          id: 'faq',
+          title: 'よくある質問',
+          faqs: [
+            { q: 'EU AI法とは何ですか？いつから適用されますか？', a: 'EU AI法は、2024年3月に欧州議会で可決された世界初の包括的なAI法です。禁止行為は2024年8月から適用されます。GPAIモデル（GPT-5.5、Claude、Geminiクラスのモデル）の義務は2025年8月から適用されます。高リスクAIシステムの要件は2026年8月から適用されます。EU市場にAIを提供する、またはEU居住者に影響を与えるAIを使用するすべての組織に適用されます。' },
+            { q: 'EU AI法は非EU企業にも適用されますか？', a: 'はい。EU AI法は域外適用されます — プロバイダーの本社所在地にかかわらず、そのAI出力がEU内で使用されるすべてのプロバイダーに適用されます。AI製品がEU居住者に使用される米国企業も準拠しなければなりません。これはGDPRを世界標準にしたのと同じ域外適用の原則です。' },
+            { q: 'EU AI法違反の罰則はどのくらいですか？', a: '禁止されたAI行為に対して最大3,500万ユーロまたは世界年間売上高の7%（いずれか高い方）。高リスクAI違反は最大1,500万ユーロまたは3%。執行当局への虚偽情報提供は最大750万ユーロまたは1%。金額の割合と固定額のうち高い方が適用されます。' },
+            { q: 'EU AI法で禁止されているAI用途は何ですか？', a: '禁止（容認できないリスク）：政府機関によるソーシャルスコアリングシステム、公共空間でのリアルタイム生体識別（限定的な例外あり）、心理的脆弱性を悪用するAI、インターネット上の顔画像の無差別収集。これらは2024年8月以降禁止されています。' },
+            { q: '米国のAI規制はEUとどう違いますか？', a: '米国には連邦AI法がありません。既存のセクター規制機関（FTC、FDA、CFPB、EEOC）が管轄分野で既存の権限をAIに適用します。バイデンAI安全大統領令（2023年10月）は2025年1月に撤回され、競争力重視のAI行動計画に置き換えられました。NIST AIリスクマネジメントフレームワークは任意です。米国の規制は事後対応的・セクター別であり、EUの規制は事前対応的・横断的です。' },
+            { q: 'DeepSeekはEU組織で使用しても安全ですか？', a: 'DeepSeekは中国国家インターネット情報弁公室（CAC）の規制対象であり、中国政府がデータ開示を強制できることを意味します。DeepSeekのプライバシーポリシーは、データが中国国内のサーバーに保管されると明記しています。個人データを処理するEU組織がDeepSeekを使用するには、GDPR準拠のデータ移転保護措置（SCC）が必要ですが、これは中国法に対して執行するのが困難です。EU加盟国の政府機関や重要インフラ組織は、一般的に中国製AIツールの利用を避けています。' },
+            { q: 'ブリュッセル効果とは何ですか？', a: 'ブリュッセル効果とは、多国籍企業が法域ごとに別々のコンプライアンスを維持するより一つの厳格な基準を選ぶ傾向があるため、EU規制が事実上の世界標準になる現象を指します。GDPRはこの方法で世界的なプライバシー基準になりました。EU AI法もAIについて同じことを行っています — OpenAI、Anthropic、Googleは、EU限定版だけでなく世界向け製品全体でEU AI法のGPAI要件を遵守しなければなりません。' },
+            { q: 'ブレッチリー・パークAI安全サミットは何を達成しましたか？', a: '2023年11月のブレッチリー・パークAI安全サミットは、米国、中国、EU加盟国を含む28か国が署名したブレッチリー宣言を生み出し、フロンティアAIが深刻なリスクをもたらし国際協力が必要であることを認めました。このサミットは英国AI安全研究所（AISI）を設立し、米国その他での一連の国際的なAI安全研究所の設立を促しました。より広い地政学的緊張を踏まえると、中国の参加は注目に値しました。' },
+            { q: 'フランスとドイツのAI支援策はどう違いますか？', a: 'フランスは、パリでのAI Action Summit（2025年2月）といった国際的な高い可視性のポジショニングと、INRIAやCNRSを通じたオープンウェイトAI研究を優先し、公的投資は20億ユーロです。ドイツはフラウンホーファー協会とDFKIを通じた応用型産業AIに重点を置き、2019〜2025年に50億ユーロを投資しており、連邦法制を通じたAIガバナンスと責任の枠組みを重視しています。両国とも国家AI戦略を持ちますが、重点分野が異なります。' },
+            { q: 'EU AI法はプロンプトエンジニアリングに使われるAIにどう影響しますか？', a: 'プロンプトエンジニアリングの業務の大半は限定的リスクまたは最小リスクに分類されます — 標準的なチャットボットやAIライティングツールは開示（ユーザーはAIと対話していることを知る必要がある）が必要ですが、適合性評価は不要です。高リスク分類は、AIが採用選考、信用評価、教育評価、法執行など重大な決定を行う場合に適用されます。[実務におけるAIの限界](/ja/prompt-engineering/ai-limitations-what-llms-cant-do)は、高リスクシステムの文書化要件に関連します。' },
+            { q: '広島AIプロセスとは何ですか？何を達成しましたか？', a: '広島AIプロセスは、日本のG7議長国下で2023年の広島サミットで開始されたG7イニシアチブです。先端AIシステムの開発者向けの11の任意の指針原則である広島AIプロセス行動規範を生み出し、2023年10月にG7各国が採択しました。原則は透明性、インシデント報告、安全性テスト、AI生成コンテンツの電子透かしを対象とします。イタリアの2024年G7議長国は、より広範な国際AIガバナンスの議題でこの枠組みを拡張しました。行動規範は任意であり法的拘束力はありませんが、EUの法的拘束力あるAI法とは別に国際的な協調の意思を示しています。' },
+            { q: 'EU組織はDeepSeekを商業目的で使用できますか？', a: '技術的には可能で、GDPR準拠の契約上の保護措置（標準契約条項）を用います。しかし実際には、SCCは中国法上の義務 — DeepSeekにCACのデータ開示要請への対応を求める義務 — に対して執行するのが困難です。政府調達は別の制約です — ドイツのBSI、フランスのANSSI、オランダのNCSCは、政府および重要インフラ用途での中国製AIツールに関する勧告または制限を発行しています。民間セクターのEU組織は商業目的でDeepSeekを使用できますが、GDPR第46条に基づく移転影響評価を実施し、残存リスクを文書化しなければなりません。ほとんどの法律顧問は、DeepSeekを通じた個人データの処理を避けるよう助言しています。' },
+            { q: 'EU AI法はEUの競争力を助けますか、それとも損ないますか？', a: 'これは本物の戦略的ジレンマです — EU AI法はEUのAIスタートアップを減速させる可能性がある一方、欧州の規制上の信頼性を世界的に強化します。一方では、コンプライアンスコストと適合性評価がEU企業にとっての摩擦を生みます — フランスのMistral AIは米国の競合他社よりも制約が大きい状況にあります。他方では、ブリュッセル効果によりEUの規制枠組みが世界標準になり、コンプライアンスにおけるEU拠点企業の競争優位と、米中テック大手に対する欧州の交渉力を生み出します。欧州は「規制上のリーダーシップ」に賭けており、「純粋な能力のリーダーシップ」ではありません — 米国や中国とは根本的に異なるAI戦略であり、欧州を二流の技術生産者ではなく世界のAIガバナンスに不可欠な存在にしています。' },
+            { q: '欧州の計算能力は米国・中国と比べてどうですか？', a: '欧州は計算インフラで大きく遅れをとっています。米国はGPU製造（Nvidiaの市場シェア約80%）とカスタムシリコン（Google TPU、Amazon Trainium）で優位に立っています。中国はTSMC（台湾）で製造し、制限対象のNvidia H系列・A系列GPUを使用しています。欧州には相当するものがありません — ASML（オランダ）はチップ製造装置を製造していますが、自社ファブは所有していません。EU Chips Act（430億ユーロ、2023〜2032年）はEU域内にIntelとTSMCのファブを建設することを目指していますが、いずれも2027〜2029年まで稼働しません — 投資だけでは埋められない3〜5年の計算能力の格差です。これは欧州AIの中核的なインフラ上の脆弱性です — フロンティアモデルの訓練には数千基のGPUを数か月間稼働させる必要があります。国内ファブ能力がなければ、欧州は米国（Nvidia）と台湾（TSMC）の供給に依存し続けます。' },
+            { q: '規制以外の欧州のAI優位性は何ですか？', a: '欧州には3つの非規制的な優位性があります。（1）EU（フランス、ドイツ）が資金提供するMistral AIなどのオープンウェイトモデルは、米国や中国への依存なしにGDPR準拠の代替を提供します。（2）欧州は英国AI安全研究所、ETHチューリッヒ、フランスの研究センター（INRIA、CNRS）を通じてAI安全性研究で主導しています。（3）欧州の高学歴の労働力と既存のソフトウェア・半導体人材は、AIアプリケーションとカスタムシリコン（Arm、RISC-Vチップ設計）で優位性を与えています。ただし、これらのいずれも、欧州のフロンティアモデル能力における不利を相殺するものではありません — 米国はGPT-5.5、Claude、Geminiで主導し、中国は展開規模と量で主導しています。欧州の戦略は「得意なこと（安全性、規制、倫理）に集中し、純粋な能力で競争しない」ことです。' },
+          ],
+        },
+
+        commonMistakes: {
+          title: '地政学的境界を越えてAIを展開する際のよくある間違い',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: '自社が米国企業であればEU AI法の準拠は任意だと思い込む。',
+              problem: 'ブリュッセル効果により、EU AI法は域外適用される — AIシステムがEUユーザーに1人でも届けば準拠しなければならない。EUユーザーにサービスを提供する米国企業も規制執行の対象となってきた。',
+              fix: 'ユーザーの地理的分布を監査すること。EU加盟国にユーザーがいる場合は、アプリケーションレベルでEU AI法準拠を実装する — AIをリスク分類し、訓練データを文書化し、高リスクシステムには人間による監視を実装し、監査証跡を維持する。',
+            },
+            {
+              mistake: 'GDPR相当の保護措置なしに、中国ユーザーの個人データを米国ホストのAPIエンドポイントに送信する。',
+              problem: '中国のPIPL（2021年）は、政府のセキュリティ評価なしに個人データを国境を越えて移転することを禁じている。ドイツ、フランス、オランダの規制当局は政府用途での中国製AIツールを制限している。民間セクター組織は法的リスクに直面する。',
+              fix: '中国ユーザーのトラフィックを中国本土でホストされる推論（Alibaba Cloud、Tencent Cloud）経由でルーティングし、個人データが中国の法域を離れないようにする。国際展開では、中国向け製品に米国APIの代わりにQwen 3（オープンウェイト）またはMistral（EU拠点）を使用する。',
+            },
+            {
+              mistake: 'CACコンテンツフィルターが（標準的なAPIエラーのように）HTTP 4xxエラーを返すと思い込む。',
+              problem: 'CAC規制対象のAPI（Baidu ERNIE、DeepSeek）は、コンテンツがフィルタリングされた際、4xxステータスではなく、レスポンスボディに`is_safe: 0`フラグを伴うHTTP 200を返す。HTTPエラーを期待するアプリケーションは、フィルタリングされたレスポンスを無視し、ブロックされたコンテンツを使用してしまう。',
+              fix: 'APIレスポンスの`is_safe`フィールドを明示的にチェックすること。フィルタリングされたレスポンスをアプリケーションレベルでログに記録し処理する。機密トピック（台湾、天安門など）に触れるプロンプトで中国展開をテストし、フィルタリングが正しく処理されることを確認する。',
+            },
+            {
+              mistake: 'GPU輸出規制を中国のAI開発への恒久的な障壁として扱う。',
+              problem: 'DeepSeek R1（2025年1月）は、制限対象のH800 GPUで約600万ドルの計算コスト — GPT-4の訓練コスト推定比94%減 — で訓練されながら、主要ベンチマークでGPT-5.5に匹敵した。輸出規制は中国の進展を遅らせるが、止めることはない。',
+              fix: 'AI分野における数十年規模の地政学的競争を前提に計画すること。長期的な製品ロードマップでは、米国のハードウェア優位が恒久的だと想定しないこと。制限しにくいオープンウェイトの代替（Llama、Mistral、Qwen）への投資を検討する。すべての先端チップを製造するTSMCの政治的地位を監視すること。',
+            },
+            {
+              mistake: 'プロプライエタリな米国モデル（GPT-5.5、Claude）が規制上の摩擦なく世界的に利用可能であり続けると想定する。',
+              problem: 'EU AI法はすでにGPT-5.5とClaudeにコンプライアンス義務を課している。将来のEU規制はデータの輸出を制限したり、機密用途にはオンプレミス展開を求めたりする可能性がある。中国の国産代替戦略（Made in China 2025）は海外モデルへのアクセスを制限しうる。',
+              fix: 'AIインフラを多様化すること。プロプライエタリモデル（フロンティア能力向け）、オープンウェイトモデル（規制上の柔軟性向け）、ローカル展開（データ常駐向け）を組み合わせて使用する。GPT-5.5、Claude、Mistral、Qwenで製品をテストし、ベンダーロックインを減らす。',
+            },
+          ],
+        },
+
+        sources: {
+          title: '出典',
+          items: [
+            '欧州議会「人工知能法」— 公式条文、2024年3月。[EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)',
+            '欧州委員会「AI局」— GPAI準拠文書と執行ガイダンス。[AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office)',
+            'NIST「人工知能リスクマネジメントフレームワーク（AI RMF 1.0）」— 2023年1月。[NIST](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)',
+            '英国政府「AI安全サミット — ブレッチリー宣言」— 2023年11月。[Gov.uk](https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration)',
+            '中国国家インターネット情報弁公室「生成人工知能サービス管理暫定弁法」— 2023年7月',
+            'DeepSeek-AI「DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning」— arXiv:2501.12948、2025年1月',
+            'OECD AI政策観測所 — [oecd.ai](https://oecd.ai) — 各国のAI政策データベースと比較分析',
+            'ドイツ連邦政府「人工知能戦略」— 国家AI戦略、2023年更新。[Bundesregierung](https://www.bundesregierung.de/breg-de/themen/digitalisierung/ki-strategie)',
+            'リシ・スナク首相、AI安全サミットでのスピーチ — 2023年11月。[Gov.uk](https://www.gov.uk/government/speeches/pm-speech-at-the-ai-safety-summit-1-november-2023)',
+          ],
+        },
+
+        relatedReading: {
+          title: '関連記事',
+          items: [
+            '[オープンソース vs プロプライエタリLLM](/ja/prompt-engineering/open-source-vs-proprietary-llms) — EU AI法準拠とデータ主権要件がオープンウェイトかAPIかの選択にどう影響するか',
+            '[AIの限界：LLMにできないこと](/ja/prompt-engineering/ai-limitations-what-llms-cant-do) — EU AI法の高リスクAIシステム評価に関連する能力の限界の理解',
+            '[プロンプトインジェクションとセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — 各国のAI戦略とEU AI法が高リスクシステム要件で対応するセキュリティ脆弱性',
+            '[AIハルシネーション：なぜAIは事実をでっち上げるのか](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — EU AI法の高リスク文書化と人間による監視要件の中心となる信頼性の問題',
+            '[RAGの解説](/ja/prompt-engineering/rag-explained) — 検索拡張生成が、規制対象のAI展開に関連する知識のカットオフとハルシネーション懸念にどう対応するか',
+            'GDPRとAI：コンプライアンス義務 — EUデータ保護法とAI法がどのように組み合わさり、国境を越えて個人データを処理する組織に多層的なコンプライアンス要件を生み出すか',
+          ],
+        },
       },
     },
     zh: {
@@ -3726,7 +4382,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: 'AI地缘政治分析2026：美国、欧盟、中国对比',
       metaDescription: 'EU AI法案、美国出口管制、中国CAC战略：三套不兼容框架。分析2026年对AI采购、数据本地化及模型可用性的影响。适合在华或对华部署团队。',
       publishDate: '2026-04-01',
-      dateModified: '2026-06-01',
+      dateModified: '2026-07-29',
       readTime: '约16分钟阅读',
       educationalLevel: 'Intermediate',
       primaryTerm: 'AI地缘政治',
@@ -3737,7 +4393,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '地缘政治与AI：欧盟、美国和中国如何争夺AI主导权（2026年分析）',
         description: '美国、中国和欧盟正在追求互不兼容的AI治理愿景。对于部署AI的组织而言，这些差异转化为具体的合规义务、采购限制和数据存储位置要求。',
         datePublished: '2026-04-01',
-        dateModified: '2026-06-01',
+        dateModified: '2026-07-29',
         keywords: ['AI地缘政治', 'EU AI法案', 'CHIPS法案', 'AI监管', '中国AI战略', '布鲁塞尔效应', 'AI治理', 'DeepSeek', 'AI安全研究所', '中国制造2025', '高风险AI', 'EU AI监管', 'AI治理欧盟', '算法推荐监管', '数据主权'],
         teaches: [
           'EU AI法案如何对风险进行分类以及适用的最后期限',
@@ -3897,7 +4553,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: '跨欧盟、美国和中国8个维度的AI监管框架结构对比——主要方式、关键立法、风险框架、最高罚款、数据保护、禁止应用、执法机构和国际范围。',
         url: 'https://www.promptquorum.com/zh/prompt-engineering/geopolitics-and-ai',
         creator: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        dateModified: '2026-06-01',
+        dateModified: '2026-07-29',
         variableMeasured: [
           { '@type': 'PropertyValue', name: '主要方式', description: '欧盟：基于权利的法律框架。美国：部门化、以创新为先。中国：国家指导、以控制为先。' },
           { '@type': 'PropertyValue', name: '关键立法', description: '欧盟：EU AI法案（2024年）。美国：无联邦AI法；NIST AI RMF自愿性。中国：算法推荐监管（2022年）；生成式AI措施（2023年）。' },
@@ -3923,6 +4579,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '中国的DeepSeek R1在关键基准上与GPT-5.5相当——GPU出口管制并未停止中国AI。',
             'TSMC在台湾制造为所有前沿AI提供动力的芯片——单一地缘政治依赖。',
             '组织必须同时遵守三个相互冲突的监管框架：欧盟、美国和中国。',
+          ],
+        },
+
+        quickFacts: {
+          title: '速览：AI地缘政治要点',
+          items: [
+            '**EU AI法案：** 全球首部具有约束力的AI法律。高风险条款执行日期：2026年8月2日（若Digital Omnibus获得三方谈判通过，可能延后至2027年12月2日）。罚款：最高€3500万或全球年营业额的7%。',
+            '**美国AI政策：** 无联邦AI法。特朗普政府正通过EO 14365（2025年12月）、《国家框架》（2026年3月）及拟议的TRUMP AMERICA AI Act（2026年3月）推动联邦法优先于州法。多项实施期限已延误（FTC声明原定3月11日、商务部评估同样原定3月11日）。',
+            '**中国AI治理：** CAC（国家网信办）上线前评估为强制要求。内容过滤屏蔽涉及中共批评、台湾/西藏/新疆相关讨论及损害"社会主义核心价值观"的内容。过滤器返回HTTP 200并携带`is_safe: 0`标志（而非4xx错误）。PIPL要求中国用户个人数据本地存储。',
+            '**硬件瓶颈：** Nvidia占据约80%的AI训练GPU市场份额。TSMC生产全球约90%的最先进芯片。两者均为地缘政治焦点。美国CHIPS法案（520亿美元）旨在降低对TSMC的依赖。',
+            '**DeepSeek R1的影响：** 在推理与编码基准（AIME 2024、MATH、HumanEval）上超越GPT-5.5，训练成本估计约600万美元（较前沿模型估算降低94%；该数字存在争议）。使用受出口管制的Nvidia H800 GPU训练，表明硬件出口管制存在局限。',
+            '**全球监管冲突：** 欧盟聚焦权利与安全；美国聚焦创新与竞争力；中国聚焦国家控制与战略优势。在全球部署AI的组织必须同时应对三套互不兼容的框架。',
           ],
         },
 
@@ -4095,6 +4763,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        digitalOmnibus: {
+          title: 'Digital Omnibus：EU AI法案高风险合规期限悬而未决',
+          content: [
+            '**截至2026年年中，原定于2026年8月2日生效的高风险合规期限可能延后至2027年12月2日——但这一延期并未获得保证。** 欧盟委员会于2025年11月提出Digital Omnibus，旨在解决EU AI法案在实施中产生的意外后果和困难。欧洲议会与欧盟理事会均表态支持延期，但机构间谈判一度陷入僵局。',
+            '**三方谈判进展：** 2026年2月的首轮三方谈判就紧迫性达成广泛政治共识，但技术细节尚未解决。2026年4月28日的第二轮谈判未能达成共识。第三轮谈判原定于2026年5月13日举行。若延期方案在2026年8月2日前获得通过，将正式生效；若未通过，则原定的2026年8月2日期限继续适用。',
+            '**组织应采取的行动：** 将2026年8月2日作为高风险AI系统的强制合规期限进行规划。Digital Omnibus延期可能将时间表推迟至2027年12月，但仅凭假设延期会通过存在风险。若组织现在即达成2026年8月合规，无论延期是否通过都处于有利位置。',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: '警告：Digital Omnibus能否通过尚不确定',
+              text: 'Digital Omnibus将高风险合规期限从2026年8月延后至2027年12月的方案并未获得保证。2026年4月28日的第二轮三方谈判未达成共识，第三轮谈判原定于2026年5月13日举行。请勿假设延期一定会通过，应以2026年8月2日作为具有约束力的合规期限来制定计划。',
+            },
+          ],
+        },
+
         euMemberStates: {
           title: '欧盟成员国：国家AI战略',
           content: [
@@ -4250,6 +4934,27 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        qaExportControls: {
+          title: '美国出口管制如何影响AI发展？',
+          content: [
+            '美国出口管制限制向中国出售先进Nvidia GPU（包括A100和H100），旨在限制中国训练前沿AI模型的能力。这些管制通过《出口管理条例》（EAR）执行，适用于超过特定算力阈值的Nvidia、AMD和Intel产品。DeepSeek R1于2025年1月发布，证明了这种方式存在局限：它使用受限的H800 GPU训练，成本仅为可比美国模型报告成本的一小部分，却在AIME 2024、MATH-500和HumanEval基准上追平GPT-5.5。出口管制减缓但并未阻止中国前沿AI的发展。',
+          ],
+        },
+
+        qaTSMCRole: {
+          title: 'TSMC在AI地缘政治中扮演什么角色？',
+          content: [
+            'TSMC（台湾积体电路制造公司）代工生产为前沿AI提供算力的先进芯片——Nvidia的H100和H200 GPU、Google的TPU以及Apple的神经网络引擎均在TSMC台湾晶圆厂制造。目前没有其他公司能以相当规模生产3nm、2nm等先进制程芯片。这使TSMC成为全球AI基础设施中的单点依赖：美国出口管制依赖TSMC不向中国芯片制造商提供先进制程，而台湾政治地位的任何变化都会立即影响全球AI硬件供应。美国CHIPS和科学法案（520亿美元）专门资助本土晶圆厂建设，以降低这种依赖。',
+          ],
+        },
+
+        qaUSEUChinaDifferences: {
+          title: '美国、欧盟与中国AI战略的主要区别是什么？',
+          content: [
+            '三大AI战略在理念、法律结构和国际影响力上根本不同。美国通过私营部门主导优先考虑创新与竞争力，没有联邦AI法——现有部门监管机构（FTC、FDA、EEOC）在各自领域内对AI适用现有职权。欧盟通过具有域外效力的强制性横向法律框架——EU AI法案——优先保护基本权利。中国通过CAC执行的强制性内容监管和上线前安全评估，优先实现国家控制与发展目标。这些方式在结构上互不兼容：同时在三个司法辖区运营的组织必须同时应对相互冲突的要求。',
+          ],
+        },
+
         defBrusselEffect: {
           title: '什么是AI中的布鲁塞尔效应？',
           content: [
@@ -4335,6 +5040,42 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        quoteVonDerLeyen: {
+          title: '',
+          blockquote: '人工智能是我们这个时代最具决定性的技术。欧洲必须塑造它，而不仅仅是采用它。我们希望AI为人服务，而不是相反。',
+          blockquoteSource: '欧尔苏拉·冯德莱恩，欧盟委员会主席——欧洲AI战略讲话，2024年',
+        },
+
+        quoteVestager: {
+          title: '',
+          blockquote: 'AI法案是全球首部全面的人工智能法律框架，将人及其安全置于核心，而不仅仅是技术本身。这就是负责任创新的样子。',
+          blockquoteSource: '玛格丽特·维斯塔格，前欧盟委员会执行副主席——欧洲议会，2024年3月',
+        },
+
+        quoteBreton: {
+          title: '',
+          blockquote: 'AI法案是一项历史性成就。欧洲是首个为AI建立明确法律框架的大陆。安全与创新并非对立——它们相辅相成。我们已向世界证明了这一点。',
+          blockquoteSource: '蒂埃里·布雷东，前欧盟内部市场委员——欧盟委员会，2024年3月',
+        },
+
+        quoteMacron: {
+          title: '',
+          blockquote: '法国希望成为欧洲的AI领导国家。巴黎将主办AI行动峰会。我们正在投资开放、可信且可持续的AI，并邀请全世界加入我们。',
+          blockquoteSource: '埃马纽埃尔·马克龙，法国总统——AI行动峰会公告，2024年',
+        },
+
+        quoteSunak: {
+          title: '',
+          blockquote: '英国将与世界各地的伙伴合作，确保AI是安全的。布莱切利园是这场对话的起点，但绝不能止步于此。',
+          blockquoteSource: '里希·苏纳克，英国前首相——AI安全峰会，布莱切利园，2023年11月',
+        },
+
+        quoteScholz: {
+          title: '',
+          blockquote: '德国希望成为欧洲领先的AI基地之一。我们正在投资AI研究、数字基础设施，以及将打造下一代智能系统的人才。',
+          blockquoteSource: '奥拉夫·朔尔茨，德国前联邦总理——国家AI战略更新，2024年',
+        },
+
         defEUAIAct: {
           title: '定义：EU AI法案',
           content: [
@@ -4342,10 +5083,53 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
-        faqPage: {
+        faq: {
+          id: 'faq',
           title: '常见问题',
-          content: [
-            '见上文FAQ部分。',
+          faqs: [
+            { q: 'EU AI法案是什么？何时适用？', a: 'EU AI法案是全球首部全面的AI法律，于2024年3月由欧洲议会通过。禁止行为条款自2024年8月起适用。GPAI模型义务（针对GPT-5.5、Claude、Gemini级模型）自2025年8月起适用。高风险AI系统要求自2026年8月起适用。它适用于任何在欧盟市场投放AI或其AI影响欧盟居民的组织。' },
+            { q: 'EU AI法案是否适用于非欧盟公司？', a: '适用。EU AI法案具有域外效力——只要提供商的AI输出在欧盟境内被使用，无论该提供商总部位于何处都必须遵守。这与GDPR成为全球标准的域外原则相同。' },
+            { q: '违反EU AI法案的罚款是多少？', a: '对于禁止的AI做法，罚款最高为€3500万或全球年营业额的7%（以较高者为准）。高风险AI违规最高€1500万或3%。向执法机构提供不正确信息最高€750万或1%。较高的比例或固定金额将适用。' },
+            { q: 'EU AI法案禁止哪些AI应用？', a: '禁止（不可接受风险）：公共当局的社会评分系统；公共场所的实时生物特征识别（有限的执法例外）；利用心理弱点的AI；无差别抓取互联网面部图像。这些自2024年8月起被禁止。' },
+            { q: '美国的AI监管与欧盟有何不同？', a: '美国没有联邦AI法。现有部门监管机构（FTC、FDA、CFPB、EEOC）在各自领域内对AI适用现有职权。拜登的AI安全行政令（2023年10月）已于2025年1月被撤销，代之以以竞争力为核心的AI行动计划。NIST AI风险管理框架是自愿性的。美国的监管是被动、按部门划分的；欧盟的监管是主动、横向覆盖的。' },
+            { q: '在欧盟组织中使用DeepSeek安全吗？', a: 'DeepSeek受中国网信办（CAC）监管，意味着中国政府可强制要求数据披露。DeepSeek的隐私政策表明数据存储在中国服务器上。对于处理个人数据的欧盟组织，使用DeepSeek需要符合GDPR的数据转移保障措施（标准合同条款），而这些措施难以对抗中国法律的约束。欧盟成员国的政府和关键基础设施机构普遍避免使用中国AI工具。' },
+            { q: '什么是布鲁塞尔效应？', a: '布鲁塞尔效应描述了欧盟法规如何成为事实上的全球标准，因为跨国公司发现应用一套最严格的标准比为每个司法辖区维护单独的合规体系更简单。GDPR就是这样成为全球隐私标准的。EU AI法案正在AI领域重复这一过程——OpenAI、Anthropic和Google必须为其全球产品（而不仅是欧盟专属版本）遵守EU AI法案的GPAI要求。' },
+            { q: '广岛AI进程取得了哪些成果？', a: '广岛AI进程是日本担任G7主席国期间于2023年广岛峰会启动的G7倡议。它产生了《广岛AI进程行为准则》——供先进AI系统开发者遵循的11项自愿原则，于2023年10月被G7各国采纳。原则涵盖透明度、事件报告、安全测试和AI生成内容水印。该行为准则是自愿性的，不具法律约束力，独立于具有法律约束力的EU AI法案之外。' },
+            { q: '欧盟组织能否将DeepSeek用于商业用途？', a: '技术上可以，需配合符合GDPR的合同保障措施（标准合同条款）。但实践中，这些条款难以对抗要求DeepSeek遵守CAC数据披露义务的中国法律。德国的BSI、法国的ANSSI和荷兰的NCSC已发布建议或限制，禁止在政府和关键基础设施领域使用中国AI工具。私营部门的欧盟组织可以在商业上使用DeepSeek，但必须依据GDPR第46条进行转移影响评估并记录剩余风险。多数法律顾问建议不要通过DeepSeek处理个人数据。' },
+            { q: 'EU AI法案对欧盟AI竞争力是利是弊？', a: '这是一个真实的战略两难：EU AI法案可能拖慢欧盟AI初创企业的发展，但同时增强了欧洲在全球的监管公信力。一方面，合规成本和符合性评估给欧盟企业带来摩擦——法国的Mistral AI比美国竞争对手受到更多限制。另一方面，布鲁塞尔效应意味着欧盟的监管框架正成为全球标准，为欧盟企业带来合规优势，并让欧盟对美中科技巨头拥有影响力。欧洲押注于"监管领导力"而非"原始能力领先"——一种与美国或中国截然不同的AI战略。' },
+            { q: '欧洲的算力与美中相比如何？', a: '欧洲在算力基础设施方面明显落后。美国主导GPU制造（Nvidia约80%市场份额）和定制芯片（Google TPU、Amazon Trainium）。中国在TSMC（台湾）代工生产，并使用受限的Nvidia H系列和A系列GPU。欧洲没有对应方案：ASML（荷兰）制造芯片制造设备，但自身不拥有晶圆厂。欧盟芯片法案（430亿欧元，2023–2032年）旨在欧盟境内建设Intel和TSMC的晶圆厂，但两者均要到2027–2029年才能投产——这是欧洲无法仅靠投资弥补的3–5年算力缺口。' },
+          ],
+        },
+
+        commonMistakes: {
+          title: '跨地缘政治边界部署AI时的常见错误',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: '认为如果公司总部在美国，EU AI法案的合规就是可选的。',
+              problem: '布鲁塞尔效应意味着EU AI法案具有域外效力——只要AI系统触及任何一位欧盟用户，就必须合规。已有服务欧盟用户的美国公司面临监管执法。',
+              fix: '审查用户地理分布。若存在欧盟成员国用户，应在应用层面落实EU AI法案合规：对AI进行风险分类、记录训练数据、为高风险系统建立人工监督并保留完整审计记录。',
+            },
+            {
+              mistake: '未采取GDPR等效保护措施，就通过美国托管的API端点发送中国用户的个人数据。',
+              problem: '中国的PIPL（2021年）禁止在未经政府安全评估的情况下跨境传输个人数据。德国、法国和荷兰的监管机构已限制政府使用中国AI工具，私营组织同样面临法律风险。',
+              fix: '将中国用户流量路由至中国大陆托管的推理服务（阿里云、腾讯云、华为云），确保个人数据不离开中国司法辖区。对于国际部署，面向中国的产品应优先使用Qwen 3（开源权重）或Mistral（欧盟基地）而非美国API。',
+            },
+            {
+              mistake: '认为CAC内容过滤器会像标准API错误一样返回HTTP 4xx。',
+              problem: '受CAC监管的API（百度文心一言、DeepSeek）在内容被过滤时返回HTTP 200，并在响应体中携带`is_safe: 0`标志，而非4xx状态码。只检查HTTP错误的应用会放行被过滤的响应。',
+              fix: '显式检查API响应中的`is_safe`字段，在应用层记录并处理被过滤的响应。使用涉及敏感话题（台湾、天安门等）的提示词测试您在中国的AI部署，验证过滤处理是否正确。',
+            },
+            {
+              mistake: '将GPU出口管制视为对中国AI发展的永久性阻碍。',
+              problem: 'DeepSeek R1（2025年1月）在使用受限H800 GPU、算力成本约600万美元（比GPT-4训练估算低94%）的情况下，在主要基准上追平GPT-5.5。出口管制减缓了中国的进展，但并未阻止它。',
+              fix: '为长达数十年的地缘政治AI竞争做好规划。在制定长期产品路线图时，不要假设美国硬件优势是永久的。可考虑投资更难受限的开源权重替代方案（Llama、Mistral、Qwen），并持续关注TSMC的政治地位，因为所有先进芯片均在此制造。',
+            },
+            {
+              mistake: '假设GPT-5.5、Claude等美国专有模型将在全球范围内不受监管摩擦地持续可用。',
+              problem: 'EU AI法案已对GPT-5.5和Claude施加合规义务。未来的欧盟监管可能限制数据出口，或要求敏感场景采用本地部署。中国的国产替代战略（中国制造2025）可能限制对外国模型的访问。',
+              fix: '实现AI基础设施多元化。结合使用专有模型（获取前沿能力）、开源权重模型（获取监管灵活性）和本地部署（满足数据驻留要求）。在GPT-5.5、Claude、Mistral和Qwen之间测试您的产品，以降低对单一供应商的依赖。',
+            },
           ],
         },
 
@@ -4369,11 +5153,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         relatedReading: {
           title: '相关阅读',
-          items:  [
-            'EU AI法案：实际合规要求',
-            '如何在中国部署AI产品',
-            '[提示工程和地缘政治：技能构建指南',
-            'GDPR和AI：数据保护指南',
+          items: [
+            '[开源与专有LLM对比](https://www.promptquorum.com/zh/prompt-engineering/open-source-vs-proprietary-llms) — EU AI法案合规与数据主权要求如何影响开源权重与API之间的选择',
+            '[AI的局限性：LLM做不到什么](https://www.promptquorum.com/zh/prompt-engineering/ai-limitations-what-llms-cant-do) — 理解与EU AI法案高风险AI系统评估相关的能力边界',
+            '[提示注入与安全](https://www.promptquorum.com/zh/prompt-engineering/prompt-injection-and-security) — 国家AI战略与EU AI法案在高风险系统要求中所涉及的安全漏洞',
+            '[AI幻觉：为什么AI会编造信息](https://www.promptquorum.com/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 对EU AI法案高风险文档与人工监督要求至关重要的可靠性问题',
+            '[RAG详解](https://www.promptquorum.com/zh/prompt-engineering/rag-explained) — 检索增强生成如何解决受监管AI部署中的知识截止和幻觉问题',
+            'GDPR与AI：合规义务 — 欧盟数据保护法如何与AI法案结合，为跨境处理个人数据的组织创建多层合规要求',
           ],
         },
       },
@@ -5059,191 +5845,613 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       },
     },
-  ko: {
-    freshness_tier: 'annual',
-    theme: 'Policy & Compliance',
-    heroImage: '/images/geopolitics-and-ai-overview-hero-ko.png',
-    title: 'AI 지정학 해설: EU AI법 vs 미국 vs 중국 (2026 분석)',
-    seoTitle: 'AI 지정학 분석 2026: 미국, EU, 중국 비교 가이드',
-    intro: '미국, 중국, EU는 AI 거버넌스에 대해 서로 양립할 수 없는 비전을 추구하고 있습니다. 미국은 경쟁력을 우선시하고, 중국은 국가 통제를 강조하며, EU는 권리 기반의 법적 체계를 구축합니다. AI를 도입하는 조직에게 이러한 차이는 본사 위치와 무관하게 구체적인 컴플라이언스 의무, 조달 제약, 데이터 거주 요건으로 직결됩니다.',
-    metaDescription: 'EU AI법, 미국 수출 통제, 중국 CAC: 상호 양립 불가능한 세 가지 프레임워크. 2026년 AI 조달, 데이터 거주, 모델 가용성에 미치는 영향.',
-    ogTitle: 'AI 지정학 2026: EU AI법 vs 미국 vs 중국 비교 분석',
-    ogDescription: '미국·EU·중국의 AI 규제 프레임워크가 조직의 AI 조달과 데이터 거주 요건에 미치는 실질적 영향을 분석합니다.',
-    twitterTitle: 'AI 지정학 2026: EU AI법 vs 미국 vs 중국',
-    twitterDescription: 'EU AI법, 미국 수출 통제, 중국 CAC가 AI 도입 조직에 미치는 구체적 영향을 정리한 실무 가이드.',
-    readTime: '16분 분량',
-    audience: '규제 시장(EU, 중국, 미국)에서 AI를 도입하는 팀',
-    primaryTerm: 'AI 지정학',
-    leadAnswerBlock: '**AI 지정학은 어떤 모델을 사용할 수 있는지, 어떤 규제 체계가 배포를 지배하는지, 핵심 하드웨어에 계속 접근할 수 있는지를 결정합니다. EU AI법은 전 세계에 적용되고, 미국 수출 통제는 칩 접근을 제한하며, 중국의 CAC 필터는 API 수준에서 콘텐츠를 차단합니다.**',
-    supplementalSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'ItemList',
-      name: 'AI 규제 프레임워크 비교: EU AI법 vs 미국 전략 vs 중국',
-      description: 'EU, 미국, 중국이 인공지능을 규제하는 방식을 핵심 차원에서 비교합니다.',
-      url: 'https://www.promptquorum.com/ko/prompt-engineering/geopolitics-and-ai',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '주요 규제 접근법', description: 'EU: 기본권 위험에 따라 AI를 분류하는 권리 기반 법적 체계. 미국: 연방 AI법 없이 부문별, 혁신 우선 접근. 중국: 국가가 주도하는 통제 우선 전략.' },
-        { '@type': 'ListItem', position: 2, name: '핵심 AI 법률', description: 'EU: EU AI법(2024, 의무) + GDPR. 미국: 연방 AI법 없음, NIST AI 위험관리 프레임워크(자발적). 중국: 국가인터넷정보판공실(CAC) 알고리즘 및 생성형 AI 규정.' },
-        { '@type': 'ListItem', position: 3, name: '최대 벌금', description: 'EU: 금지된 관행에 대해 최대 3,500만 유로 또는 전 세계 매출의 7%. 미국: 연방 차원의 AI 전용 벌금 없음. 중국: 위반당 최대 10만 위안, 서비스 중단 가능.' },
-      ],
+    ko: {
+      freshness_tier: 'annual',
+      theme: 'Policy & Compliance',
+      heroImage: '/images/geopolitics-and-ai-overview-hero-ko.png',
+      title: 'AI 지정학 해설: EU AI법 vs 미국 vs 중국 (2026 분석)',
+      seoTitle: 'AI 지정학 분석 2026: 미국, EU, 중국 비교 가이드',
+      intro: '미국, 중국, EU는 AI 거버넌스에 대해 서로 양립할 수 없는 비전을 추구하고 있습니다. 미국은 경쟁력을 우선시하고, 중국은 국가 통제를 강조하며, EU는 권리 기반의 법적 체계를 구축합니다. AI를 도입하는 조직에게 이러한 차이는 본사 위치와 무관하게 구체적인 컴플라이언스 의무, 조달 제약, 데이터 거주 요건으로 직결됩니다.',
+      metaDescription: 'EU AI법, 미국 수출 통제, 중국 CAC: 상호 양립 불가능한 세 가지 프레임워크. 2026년 AI 조달, 데이터 거주, 모델 가용성에 미치는 영향.',
+      ogTitle: 'AI 지정학 2026: EU AI법 vs 미국 vs 중국 비교 분석',
+      ogDescription: '미국·EU·중국의 AI 규제 프레임워크가 조직의 AI 조달과 데이터 거주 요건에 미치는 실질적 영향을 분석합니다.',
+      twitterTitle: 'AI 지정학 2026: EU AI법 vs 미국 vs 중국',
+      twitterDescription: 'EU AI법, 미국 수출 통제, 중국 CAC가 AI 도입 조직에 미치는 구체적 영향을 정리한 실무 가이드.',
+      readTime: '16분 분량',
+      audience: '규제 시장(EU, 중국, 미국)에서 AI를 도입하는 팀',
+      primaryTerm: 'AI 지정학',
+      leadAnswerBlock: '**AI 지정학은 어떤 모델을 사용할 수 있는지, 어떤 규제 체계가 배포를 지배하는지, 핵심 하드웨어에 계속 접근할 수 있는지를 결정합니다. EU AI법은 전 세계에 적용되고, 미국 수출 통제는 칩 접근을 제한하며, 중국의 CAC 필터는 API 수준에서 콘텐츠를 차단합니다.**',
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'AI 규제 프레임워크 비교: EU AI법 vs 미국 전략 vs 중국',
+        description: 'EU, 미국, 중국이 인공지능을 규제하는 방식을 핵심 차원에서 비교합니다.',
+        url: 'https://www.promptquorum.com/ko/prompt-engineering/geopolitics-and-ai',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '주요 규제 접근법', description: 'EU: 기본권 위험에 따라 AI를 분류하는 권리 기반 법적 체계. 미국: 연방 AI법 없이 부문별, 혁신 우선 접근. 중국: 국가가 주도하는 통제 우선 전략.' },
+          { '@type': 'ListItem', position: 2, name: '핵심 AI 법률', description: 'EU: EU AI법(2024, 의무) + GDPR. 미국: 연방 AI법 없음, NIST AI 위험관리 프레임워크(자발적). 중국: 국가인터넷정보판공실(CAC) 알고리즘 및 생성형 AI 규정.' },
+          { '@type': 'ListItem', position: 3, name: '최대 벌금', description: 'EU: 금지된 관행에 대해 최대 3,500만 유로 또는 전 세계 매출의 7%. 미국: 연방 차원의 AI 전용 벌금 없음. 중국: 위반당 최대 10만 위안, 서비스 중단 가능.' },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'EU 지역 조직이 EU AI법을 준수하는 방법',
+        description: 'EU AI법 적용 대상 조직이 규정 준수를 위해 거쳐야 할 핵심 단계입니다.',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'AI 시스템의 위험 등급 분류', text: 'EU AI법의 4단계 체계(금지/고위험/제한적/최소)에 따라 사용 중인 AI 시스템을 분류합니다.' },
+          { '@type': 'HowToStep', position: 2, name: '투명성 의무 확인', text: 'GPT-5.5, Claude 등 범용 AI(GPAI) 모델을 사용하는 경우, 학습 데이터 요약 공개 등 투명성 의무를 확인합니다.' },
+          { '@type': 'HowToStep', position: 3, name: '데이터 보호 영향 평가 수행', text: 'GDPR 제46조에 따라 개인정보를 처리하기 전에 이전 영향 평가(Transfer Impact Assessment)를 수행합니다.' },
+        ],
+      },
+      sections: {
+        tldr: {
+          title: '핵심 요약',
+          isTldr: true,
+          items: [
+            'AI는 전략적 국가 기술입니다 — 미국, 중국, EU가 패권 경쟁을 벌이고 있습니다.',
+            '각국은 세 가지 자원을 두고 경쟁합니다: 컴퓨팅(칩), AI 인재, 학습 데이터.',
+            'AI는 군사력, 경제 경쟁력, 사이버 역량에 동시에 영향을 미칩니다.',
+            'EU AI법은 세계 최초의 구속력 있는 AI 법률입니다 — 과태료는 최대 €3,500만 또는 전 세계 매출의 7%에 달합니다.',
+            '브뤼셀 효과: EU AI법 규정은 전 세계 어디서든 EU 사용자에게 도달하는 모든 AI에 적용됩니다.',
+            '미국에는 연방 AI 법률이 없습니다 — 부문별 규제 기관이 각자의 권한을 AI에 적용합니다.',
+            '미국은 2025년 1월 AI 안전 행정명령을 폐기했습니다 — 이제 안전보다 경쟁력이 우선입니다.',
+            '중국의 DeepSeek R1은 주요 벤치마크(AIME, MATH, HumanEval)에서 GPT-5.5를 초과했으며, 학습 비용은 600만 달러로 94% 절감을 달성해 GPU 수출 통제의 한계를 입증했습니다.',
+            'TSMC(대만)는 모든 프론티어 AI를 구동하는 칩을 생산합니다 — 단일한 지정학적 의존성입니다.',
+            '조직은 EU, 미국, 중국의 상충되는 세 가지 규제 체계를 동시에 준수해야 합니다.',
+          ],
+        },
+        quickFacts: {
+          title: '핵심 사실: AI 지정학 한눈에 보기',
+          items: [
+            '**EU AI법:** 세계 최초의 구속력 있는 AI 법률. 고위험 시행: 2026년 8월 2일(디지털 옴니버스에 의해 2027년 12월 2일로 연기될 수 있음 — 가장 최근에 확인된 3자 협의는 2026년 5월 중순에 있었으나 이후 공개적인 채택 발표는 없었습니다). 과태료: 최대 €3,500만 또는 전 세계 연간 매출의 7%.',
+            '**미국 AI 정책:** 연방 AI 법률 없음. 트럼프 행정부는 행정명령 14365(2025년 12월), 국가 프레임워크(2026년 3월), 제안된 TRUMP AMERICA AI법(2026년 3월)을 통해 주법 선점을 추진 중입니다. 2026년 5월 기준 가장 최근에 확인된 상태로도 여러 이행 기한이 아직 충족되지 않았습니다(FTC 성명 기한 3월 11일, 상무부 평가 기한 3월 11일).',
+            '**중국 AI 거버넌스:** CAC(국가인터넷정보판공실) 사전 출시 평가 의무. 콘텐츠 필터는 CPC 비판, 대만/티베트/신장 논의, "사회주의 핵심 가치"를 훼손하는 콘텐츠를 차단합니다. 필터는 4xx 오류가 아닌 HTTP 200에 `is_safe: 0` 플래그를 반환합니다. PIPL은 중국인 개인정보에 대한 데이터 거주를 요구합니다.',
+            '**하드웨어 병목:** Nvidia는 AI 학습용 GPU 시장의 약 80%를 장악하고 있습니다. TSMC는 첨단 반도체의 약 90%를 제조합니다. 둘 다 지정학적 화약고입니다. 미국 CHIPS법(520억 달러)은 TSMC 의존도를 낮추는 것을 목표로 합니다.',
+            '**DeepSeek R1의 영향:** 추론/코딩(AIME 2024, MATH, HumanEval)에서 GPT-5.5를 능가했으며, 학습 비용은 약 600만 달러로 추정됩니다(프론티어 모델 추정치 대비 94% 절감; 비용 수치는 논란의 여지가 있음). 중국에 제한된 Nvidia H800 GPU로 학습되었습니다. 하드웨어 수출 통제에 한계가 있음을 입증합니다.',
+            '**글로벌 규제 충돌:** EU는 권리와 안전에 중점을 두고, 미국은 혁신과 경쟁력에 중점을 두며, 중국은 국가 통제와 전략적 우위에 중점을 둡니다. 전 세계에 AI를 배포하는 조직은 서로 양립할 수 없는 세 가지 프레임워크를 동시에 헤쳐나가야 합니다.',
+          ],
+        },
+        euImplications: {
+          title: 'EU 소재 조직을 위한 핵심 컴플라이언스 일정',
+          content: [
+            '**EU AI법은 2026년 8월부터 구속력 있게 집행됩니다.** 조직이 EU에 본사를 두거나 EU 사용자에게 서비스를 제공하는 경우, 4단계 위험 분류 체계를 준수해야 합니다. 금지된 관행에 대한 과태료는 최대 €3,500만 또는 전 세계 매출의 7%에 달하며, 어느 쪽이든 더 높은 금액이 적용됩니다. 불이행은 협상의 여지가 없습니다.',
+            '**EU에서 GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro를 배포하는 경우, 해당 범용 AI(GPAI) 컴플라이언스 문서를 감사해야 합니다.** OpenAI, Anthropic, Google은 2025년 8월부터 투명성 문서(학습 데이터 요약, 역량 한계, 안전 테스트 결과)를 공개했습니다. 이 증명서를 컴플라이언스 증거로 저장하십시오 — 규제 당국이 요청할 것입니다.',
+            '**고위험 AI 시스템(채용, 신용 결정, 의료, 법 집행)은 배포 전 적합성 평가가 필요합니다.** 이는 편향성 테스트, 인간 감독 메커니즘 문서화, 모든 AI 결정의 감사 추적을 의미합니다. 로컬에 배포된 오픈 가중치 모델(Ollama를 통한 LLaMA, Mistral Large)은 데이터 거주 요건을 충족합니다 — 데이터가 인프라를 벗어나지 않아 감사 추적을 직접 통제할 수 있습니다.',
+            '**브뤼셀 효과가 귀 조직에도 적용됩니다.** AI 시스템이 단 한 명의 EU 거주자에게 도달하더라도 EU AI법이 적용됩니다 — 회사 본사가 미국이나 중국에 있어도 마찬가지입니다. 이는 관할권별로 별도 구성을 유지하는 것보다 전 세계적으로 동일한 컴플라이언스 수준을 적용하는 것이 더 단순한 경우가 많다는 것을 의미합니다.',
+          ],
+        },
+        promptEngineerTakeaways: {
+          title: '프롬프트 엔지니어를 위한 핵심 시사점',
+          isTldr: true,
+          items: [
+            '중국 AI API(DeepSeek, ERNIE 4.0, Alibaba Cloud를 통한 Qwen)는 API 수준에서 콘텐츠를 필터링합니다 — 정치적 주제, CPC 비판, 대만/티베트/신장 관련 내용은 HTTP 4xx가 아닌 HTTP 200 응답에 `is_safe: 0`을 반환합니다. 애플리케이션 코드에서 이를 명시적으로 처리해야 합니다.',
+            'Mistral 모델과 로컬 Ollama 배포는 EU AI법의 데이터 거주 요건을 충족합니다 — 프롬프트와 출력이 인프라를 벗어나지 않습니다. 이는 프롬프트 엔지니어에게 EU GDPR + AI법 컴플라이언스를 위한 가장 간편한 경로입니다.',
+            'GPT-5.5와 Claude Opus 4.8은 2025년 8월부터 EU AI법에 따른 GPAI 컴플라이언스를 충족합니다. 추가적인 모델 수준의 컴플라이언스 작업 없이 EU 대상 배포에 사용할 수 있습니다 — 의무는 모델 수준이 아닌 애플리케이션(배포자) 수준에 있습니다.',
+            '브뤼셀 효과는 EU 거주자가 사용하는 제품을 위해 미국 호스팅 모델에 보내는 프롬프트도 EU AI법 요건의 적용을 받는다는 것을 의미합니다 — 회사가 EU에 기반을 두지 않더라도 마찬가지입니다.',
+            '다중 관할권 테스트를 위해 동일한 프롬프트를 Mistral(EU 컴플라이언트), GPT-5.5(미국/GPAI), Qwen(중국 접근 가능)에 동시에 보내어 규제 맥락별 출력을 벤치마크하십시오. PromptQuorum은 이를 기본적으로 지원합니다.',
+          ],
+        },
+        promptOptimizationByRegion: {
+          title: '지정학이 프롬프트 최적화를 바꾸는 방식: 국가별 분석',
+          content: [
+            '**AI 출력이 소비되는 위치가 프롬프트가 해야 할 일과 피해야 할 일을 결정합니다.** 언어는 모델 성능에 직접적인 영향을 미칩니다 — 영어로 작성된 프롬프트를 중국어 모델(ERNIE 4.0, Qwen)에 보내면 같은 프롬프트를 중국어로 작성했을 때보다 성능이 떨어집니다. 법률은 프롬프트 설계에 구조적으로 영향을 미칩니다 — EU AI법의 공개 요건, 미국의 부문별 규제, 중국 CAC의 콘텐츠 필터는 각각 프롬프트를 구성하는 방식, 생성 가능한 출력, 애플리케이션이 응답을 처리하는 방식에 서로 다른 제약을 가합니다.',
+          ],
+          callouts: [
+            {
+              type: 'pro-tip',
+              label: '실용 팁: 대상 언어로 프롬프트를 작성하십시오',
+              text: 'GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro는 프롬프트 자체가 해당 언어로 작성되었을 때 독일어, 프랑스어, 일본어, 중국어 작업에서 훨씬 더 나은 성능을 보입니다. 비영어 출력을 위해 영어 프롬프트를 사용하면 번역 계층이 추가되어 품질이 저하됩니다. 특정 국가에 맞게 모델 성능을 최적화하려면 처음부터 해당 국가의 언어로 프롬프트를 작성하십시오.',
+            },
+          ],
+          tableFormat: true,
+          columns: ['지역', '프롬프트에 대한 법적 제약', '언어 최적화', '권장 모델'],
+          rows: [
+            {
+              '지역': '유럽연합',
+              '프롬프트에 대한 법적 제약': 'EU AI법: EU 소비자와 상호작용하는 콘텐츠를 생성하는 프롬프트에는 AI 공개 표시가 포함되어야 합니다. GDPR: 프롬프트에는 법적 근거 없이 개인 데이터를 포함해서는 안 됩니다. 고위험 AI 응용(인사, 신용, 의료)은 인간 감독이 필요합니다 — 프롬프트가 최종 결정을 자동화해서는 안 됩니다.',
+              '언어 최적화': '대상 언어(독일어, 프랑스어 등)로 프롬프트를 작성하십시오 — GPT-5.5와 Claude Opus 4.8은 프롬프트가 원하는 출력과 같은 언어로 작성되었을 때 비영어 작업에서 훨씬 더 나은 성능을 보입니다. 시스템 프롬프트에서 출력 언어를 명시적으로 지정하십시오.',
+              '권장 모델': 'Mistral Large(프랑스어, EU 본사), 로컬 Ollama 배포(데이터가 인프라를 벗어나지 않음), 또는 EU 리전 API 엔드포인트와 SCC를 사용하는 GPT-5.5/Claude.',
+            },
+            {
+              '지역': '미국',
+              '프롬프트에 대한 법적 제약': '연방 AI 법률은 없지만 부문별 규정이 적용됩니다: HIPAA(의료 — 프롬프트에 PHI가 포함되어서는 안 됨), CCPA/CPRA(캘리포니아 — 프롬프트 내 개인 데이터는 소비자 권리를 유발함), FTC법(프롬프트가 소비자 맥락에서 기만적 콘텐츠를 생성해서는 안 됨). 주(州) 생체 인식법(일리노이 BIPA)은 얼굴/음성 데이터를 처리하는 프롬프트를 제한합니다.',
+              '언어 최적화': '미국 프론티어 모델(GPT-5.5, Claude Opus 4.8)은 영어에 최적화되어 있으며 영어 프롬프트에서 최고 성능을 발휘합니다. 스페인어권 미국 시장의 경우, 자동 감지에 의존하지 말고 모델에 스페인어로 명시적으로 지시하거나 이중 언어 시스템 프롬프트를 사용하십시오.',
+              '권장 모델': '일반적인 용도에는 GPT-5.5 또는 Claude Opus 4.8. 규제 대상 의료 또는 금융 프롬프트에는 SCC가 적용된 API를 사용하고 프롬프트 컨텍스트에 PHI/PII를 보내지 마십시오.',
+            },
+            {
+              '지역': '중국',
+              '프롬프트에 대한 법적 제약': 'CAC 생성 AI 조치(2023): CPC 지도부, 대만/티베트/신장 독립, 1989년 톈안먼 사건, "사회주의 핵심 가치"를 훼손하는 모든 콘텐츠를 요청하는 프롬프트는 차단됩니다. HTTP 200과 함께 `is_safe: 0`으로 반환됩니다. PIPL: 중국 사용자의 개인 데이터가 포함된 프롬프트는 중국 외 서버로 라우팅되어서는 안 됩니다.',
+              '언어 최적화': '중국어 작업에는 간체 중국어(표준 중국어)로 프롬프트를 작성하십시오 — Qwen 3와 ERNIE 4.0은 동일한 프롬프트를 영어로 작성했을 때보다 중국어 벤치마크(C-Eval)에서 10~20% 더 높은 점수를 기록합니다. 중국어 대응어가 없는 기술 용어에는 병음이나 영어를 사용하십시오.',
+              '권장 모델': '국경 간 작업에는 Qwen 3 72B(중국 외 자체 호스팅, CAC 필터 없음). 중국 소비자 대상 배포에는 Qianfan API(CAC 등록)를 통한 ERNIE 4.0. 필터링된 콘텐츠 영역을 다루지 않는 추론 작업에는 DeepSeek R1.',
+            },
+            {
+              '지역': '영국 / 브렉시트 이후',
+              '프롬프트에 대한 법적 제약': '영국 GDPR(EU GDPR과 동등)이 개인 데이터에 적용됩니다. 영국 AI 안전 연구소는 애플리케이션 수준 컴플라이언스가 아닌 프론티어 모델 평가에 중점을 둡니다. 의무적인 AI 공개 법률은 없습니다 — 영국은 친혁신적이고 부문 주도적인 접근을 선택했습니다. OFCOM은 방송 맥락에서 AI 생성 콘텐츠를 규제합니다.',
+              '언어 최적화': '영국식 영어 철자와 관용구를 프롬프트에 사용하면 영국 대상 콘텐츠의 출력 품질이 향상됩니다. GPT-5.5는 시스템 프롬프트에서 명시적인 "영국식 영어" 지시에 응답합니다. 지시가 없으면 미국식 영어가 기본값입니다.',
+              '권장 모델': 'GPT-5.5 또는 Claude Opus 4.8. 브렉시트 이후 영국-EU 데이터 이전에는 SCC가 필요합니다 — EU의 영국 적정성 결정이 마련되어 있지만 재검토 대상입니다.',
+            },
+            {
+              '지역': '일본',
+              '프롬프트에 대한 법적 제약': '일본의 개인정보 보호법(APPI)은 AI 프롬프트에서 개인 데이터 사용을 제한합니다. 일본은 (2026년 기준) AI 전용 법률이 없습니다 — 경제산업성(METI)과 총무성의 지침은 자발적입니다. 일본은 히로시마 AI 프로세스에 참여했으며, 일본 기업에 11가지 원칙 준수가 권장됩니다.',
+              '언어 최적화': '일본어 작업에서는 일본어 프롬프트가 모든 주요 모델에서 영어 프롬프트보다 우수한 성능을 보입니다. GPT-5.5와 Claude Opus 4.8은 일본어를 잘 처리합니다. 라쿠텐 AI와 NTT LLM은 일본 특화 배포에 사용 가능합니다. 시스템 프롬프트에서 반말(반말체) 사용을 피하십시오 — 존댓말(경어체) 프레이밍이 일본 비즈니스 맥락에서 준수율과 출력 품질을 향상시킵니다.',
+              '권장 모델': '일반적인 일본어 작업에는 GPT-5.5 또는 Claude Opus 4.8. 일본 국내 컴플라이언스 민감 배포에는 라쿠텐 AI(라쿠텐 그룹) 또는 NTT LLM.',
+            },
+          ],
+        },
+        keyStatistics: {
+          title: 'AI 지정학: 핵심 데이터 포인트',
+          content: [
+            '다음 수치는 현재 인공지능 지정학적 경쟁을 규정하는 정부의 AI 투자 규모, 하드웨어 집중도, 연구 역량을 나타냅니다.',
+          ],
+          items: [
+            '**정부 AI 투자 — 미국:** CHIPS 및 과학법(2022)에서 국내 반도체 제조를 위해 배정된 520억 달러와 과학 R&D를 위한 2,000억 달러. 국가 AI 이니셔티브법은 25개 연방 기관에 걸쳐 AI 연구 자금을 지원합니다.',
+            '**정부 AI 투자 — 중국:** 2021~2025년 정부 주도 AI 및 반도체 투자 약 1조 위안(1,400억 달러)으로 추정되며, 2030년까지 글로벌 AI 리더십을 목표로 하는 차세대 AI 발전 계획을 포함합니다.',
+            '**정부 AI 투자 — EU:** 유럽혁신위원회 AI 기금에서 10억 유로; 회원국 전략이 100억 유로 이상을 추가합니다: 독일 50억 유로(2019~2025), 프랑스 20억 유로, 영국 AI 안전 및 컴퓨팅에 10억 파운드.',
+            '**칩 제조 집중도:** TSMC(대만)는 7nm 미만의 세계에서 가장 첨단적인 칩의 약 90%를 제조합니다. ASML(네덜란드)은 첨단 노드 제조에 필요한 EUV 리소그래피 장비의 유일한 제조사입니다 — 이는 네덜란드에 글로벌 칩 공급망에서 구조적 병목 지위를 부여합니다.',
+            '**Nvidia GPU 시장 점유율:** Nvidia는 AI 학습용 GPU에서 약 80%의 시장 점유율을 보유하고 있습니다. H100 및 H200 시리즈는 OpenAI, Google DeepMind, Anthropic, Baidu의 프론티어 모델 학습 대부분을 구동합니다.',
+            '**AI 연구자 분포:** 미국은 논문 영향력 기준으로 세계 최고 AI 연구자의 약 40%를 고용하고 있습니다(스탠퍼드 HAI 2024 AI 인덱스). 중국은 연간 약 5만 명으로 가장 많은 컴퓨터 과학 박사를 배출하며, 주요 AI 학회 저자의 약 30%를 차지합니다.',
+            '**AI 특허 출원:** 중국은 2022년 전 세계 AI 특허의 약 70%를 출원했습니다(WIPO 글로벌 혁신 지수). 미국은 인용과 상업화된 발명에서 앞서고, 중국은 물량에서 앞섭니다.',
+            '**모델 학습 비용 압축:** 94% 비용 절감 — GPT-4는 (2023년) 학습 컴퓨팅에 약 1억 달러로 추정된 반면, DeepSeek R1은 (2025년 1월) 약 600만 달러로 보고되었습니다. 이 격차는 미국의 컴퓨팅 비용 수출 통제가 중국의 프론티어 AI 개발을 영구적으로 제약할 수 없음을 보여줍니다.',
+            '**EU AI법 적용 범위:** 이 법은 27개 EU 회원국에 걸쳐 4억 5천만 명의 소비자를 포괄합니다. GPAI 모델의 시스템적 위험 임계값은 학습 컴퓨팅 10²⁵ FLOPs입니다 — 이 수준부터 추가적인 적대적 테스트 요건이 적용됩니다.',
+            '**블레츨리 선언(2023년 11월):** 미국, 중국, EU 회원국을 포함한 28개국이 서명했습니다 — 지금까지 가장 광범위한 국제 AI 안전 합의이지만 법적 구속력은 없습니다.',
+          ],
+          image: '/images/ai-regulation-timeline-en.svg',
+          imageCaption: '2022~2026년 글로벌 AI 규제 타임라인: EU AI법 제안(2021), CHIPS법(2022), CAC 알고리즘 규정(2022~2023), EU AI법 채택(2024), 2025년 1월 단계적 집행 시작.',
+        },
+        qaWhyStrategic: {
+          title: 'AI가 전략적으로 왜 중요한가?',
+          content: [
+            'AI는 경제 생산성, 군사적 효율성, 정보 분석, 사이버 작전 등 국력의 모든 차원에서 동시에 역량을 증폭시키기 때문에 전략적으로 중요합니다. 선도적인 AI를 보유한 국가는 과학 연구를 자동화하고, 군사 물류를 최적화하며, 대규모 감시 데이터를 처리하고, 자율 무기 시스템을 개발할 수 있습니다. OECD는 AI가 2030년까지 전 세계 GDP에 15조 7천억 달러를 추가할 수 있다고 전망하며, 이는 AI 리더십을 20세기의 산업 리더십에 상응하는 것으로 만듭니다. AI 역량에서 뒤처지는 국가는 국방, 무역, 외교 전반에서 누적되는 불이익에 직면합니다.',
+          ],
+        },
+        qaWhichCountriesDominate: {
+          title: '어느 국가가 AI 개발을 주도하는가?',
+          content: [
+            '미국은 프론티어 모델 역량에서 앞서고 있습니다 — OpenAI(GPT-5.5), Anthropic(Claude), Google DeepMind(Gemini) 모두 미국에 본사를 두고 있습니다. 중국은 AI 특허 출원 물량(WIPO 기준 2022년 전 세계 특허의 약 70%)에서 앞서고 있으며, 미국 외 지역에서 가장 유능한 자체 모델을 보유하고 있습니다: Alibaba Qwen 3, Baidu ERNIE 4.0, DeepSeek R1. EU는 AI 규제에서 앞서지만 프론티어 역량에서는 뒤처집니다 — 프랑스의 Mistral AI가 가장 강력한 유럽 경쟁자입니다. 영국, 캐나다, UAE는 미국이나 중국 인프라에 전적으로 의존하기보다 독립적인 행위자로서 AI에 투자하고 있습니다.',
+          ],
+        },
+        qaChipsRole: {
+          title: 'AI 지정학에서 칩은 어떤 역할을 하는가?',
+          content: [
+            '반도체 칩은 AI 역량의 물리적 기반입니다. 프론티어 모델을 학습시키려면 수천 개의 특수 GPU가 몇 달 동안 작동해야 하며, 대형 모델의 단일 학습 실행에는 컴퓨팅 비용으로 1,000만~1억 달러가 소요될 수 있습니다. Nvidia는 AI 학습용 GPU 시장의 약 80%를 차지하고 있으며, 대만의 TSMC가 이를 제조합니다. 이는 두 가지 지정학적 병목을 만듭니다: 미국은 적대국에 대한 Nvidia GPU 수출을 제한할 수 있고(2022년부터 중국에 대한 A100 및 H100 판매 제한), TSMC의 운영에 대한 어떠한 혼란도 즉시 전 세계 AI 하드웨어 공급을 감소시킬 것입니다. 미국 CHIPS 및 과학법(520억 달러)은 이러한 단일 지점 의존성을 줄이기 위해 국내 팹 역량에 명시적으로 자금을 지원합니다.',
+          ],
+        },
+        qaHowAIChangePower: {
+          title: 'AI는 어떻게 글로벌 권력 구도를 바꿀 수 있는가?',
+          content: [
+            'AI는 AI를 주도하는 국가를 경제 규모나 인구 규모에 비해 불균형적으로 강력하게 만듦으로써 글로벌 권력을 이동시킬 수 있습니다. 군사적으로 AI는 인간이 배치한 어떤 시스템도 따라잡을 수 없는 속도로 자율 표적화, 물류 최적화, 신호 정보 처리를 가능하게 합니다. 경제적으로 AI 생산성 이득은 누적됩니다 — 프론티어 AI에 접근할 수 있는 국가는 그렇지 못한 국가와의 격차를 벌리는 GDP 성장률을 유지할 수 있습니다. 외교적으로 AI 인프라 — 하드웨어, 모델, 거버넌스 프레임워크 — 를 수출하는 국가는 소프트 파워를 얻고, 이전 시대의 석유 수출이나 통신 인프라가 만들어낸 것과 비교할 만한 의존 관계를 형성합니다. EU의 브뤼셀 효과는 이미 규제를 통해 이를 실현하고 있습니다: EU AI법은 EU가 모델 역량에서 선두를 차지하지 않고도 글로벌 AI 개발을 형성합니다.',
+          ],
+        },
+        geopoliticsOfAI: {
+          title: '인공지능의 지정학',
+          content: [
+            '**AI의 지정학은 국가가 AI 역량, AI 규제, AI 인프라를 권력 수단으로 활용하는 방식을 연구하는 학문입니다.** 이는 세 가지 별개의 경쟁을 포괄합니다: 가장 유능한 모델을 구축하려는 경쟁, 글로벌 AI 배포를 지배하는 규제 체계를 둘러싼 경쟁, 프론티어 AI를 가능하게 하는 하드웨어 공급망 통제를 위한 경쟁입니다.',
+            '각 차원은 조직에게 구체적인 결과를 가져옵니다. 모델 역량은 어떤 AI 도구를 사용할 수 있는지를 결정합니다. 규제 체계는 어떤 도구가 허용되고 어떤 문서가 필요한지를 결정합니다. 하드웨어 통제는 어느 나라가 독립적으로 프론티어 AI 개발을 지속할 수 있는지를 결정합니다. 미국, 중국, EU는 이 세 차원 모두에서 동시에 상호 양립 불가능한 전략을 추구하고 있습니다.',
+          ],
+        },
+        keyEntityRelationships: {
+          title: 'AI 지정학의 핵심 주체와 그 관계',
+          content: [
+            '**AI 규제**는 인공지능 시스템의 개발, 배포, 거버넌스 방식을 규율하는 법률, 행정명령, 자발적 프레임워크의 총체입니다. AI 규제는 주권 국가와 국제 기구에 의해 만들어지며, 세 가지 주요 규제 체제는 EU AI법(유럽연합), NIST AI 위험 관리 프레임워크(미국), CAC 생성 AI 조치(중국)입니다.',
+            '**미중 기술 경쟁**은 반도체, 인공지능, 첨단 제조 분야에서의 리더십을 두고 미국과 중국 사이에 벌어지는 양자 간 경쟁입니다. 이 경쟁은 Nvidia GPU에 대한 미국의 수출 통제, 중국의 국내 대체 전략(중국제조 2025), 경쟁하는 AI 거버넌스 프레임워크를 통해 표출됩니다. EU는 양자 당사자가 아닌 제3의 행위자로서 규제력을 통해 이 경쟁 구도를 형성합니다.',
+            '**EU AI법**은 2024년 3월 유럽 의회에서 통과된 규정입니다. EU AI 사무소와 각국 시장 감시 당국이 이를 집행합니다. 본사 위치와 관계없이 AI 시스템이 EU 사용자에게 영향을 미치는 모든 조직에 적용됩니다. EU AI법은 브뤼셀 효과와 관련이 있습니다: 역외 적용되기 때문에 OpenAI, Google DeepMind, Anthropic을 사실상 전 세계적으로 규제합니다.',
+            '**NVIDIA**는 AI 학습용 GPU(H100, H200, B200 시리즈)를 설계하는 미국 반도체 기업입니다. NVIDIA의 하드웨어는 GPT-5.5, Claude, Gemini 및 대부분의 프론티어 AI 모델을 학습시키는 주요 컴퓨팅 기반입니다. 중국에 대한 NVIDIA GPU 수출을 제한하는 미국의 통제는 미중 기술 경쟁의 핵심 메커니즘입니다. NVIDIA의 시장 지위(AI GPU 점유율 약 80%)는 상업적 행위자일 뿐만 아니라 지정학적 행위자이기도 합니다.',
+            '**TSMC**(대만반도체제조회사)는 NVIDIA, Apple, AMD, Google을 위해 첨단 반도체를 제조하는 대만의 칩 파운드리입니다. 대만이라는 지리적 위치와 대만의 정치적 지위를 둘러싼 논쟁은 TSMC를 AI 지정학의 핵심 변수로 만듭니다. CHIPS 및 과학법은 부분적으로 국내 미국 팹에 자금을 지원함으로써 TSMC에 대한 미국의 의존도를 줄이기 위해 제정되었습니다.',
+            '**DeepSeek**는 2025년 1월 DeepSeek R1을 출시한 중국의 AI 연구소입니다(High-Flyer Capital Management가 지원). DeepSeek R1은 추론 및 코딩 벤치마크(AIME 2024, MATH-500, HumanEval)에서 GPT-5.5를 능가했으며, 학습 비용은 약 600만 달러로 추정되어 프론티어 모델 추정치보다 94% 낮았고, 중국에 제한된 NVIDIA H800 GPU를 사용했습니다. DeepSeek의 출시는 미국의 수출 통제가 중국의 프론티어 AI 개발을 영구적으로 제한할 수 있다는 주장을 약화시켰습니다.',
+          ],
+        },
+        fiveGeopoliticalDimensions: {
+          title: 'AI의 5가지 지정학적 차원',
+          content: [
+            'AI 지정학은 5가지 별개의 차원에서 작동합니다. 각 차원은 미국, 중국, EU 간의 별도 경쟁의 장을 나타내며, 조직에게 서로 다른 의무와 위험을 창출합니다.',
+          ],
+          items: [
+            '**1. 경제.** AI는 생산성, 자동화, GDP 성장을 견인합니다. 우월한 AI 역량을 보유한 국가는 제조 효율성, 금융 모델링 우위, 더 빠른 과학적 발견을 통해 이익을 얻습니다. OECD는 AI가 2030년까지 전 세계 GDP에 15조 7천억 달러를 추가할 것으로 전망하며, 대부분은 선도적인 AI 국가들이 가져갈 것입니다.',
+            '**2. 군사.** AI는 자율 무기 시스템, 예측 물류, 전장 정보 처리, 기계 속도의 사이버 작전을 가능하게 합니다. 미국, 중국, 러시아 모두 AI 지원 군사 시스템을 개발하고 있습니다. 미국 국방부의 합동 인공지능센터(JAIC)와 중국의 군민융합 전략 모두 국방을 위해 AI를 우선시합니다.',
+            '**3. 정보.** AI는 인간 분석가가 불가능한 규모로 위성 이미지를 처리하고 신호를 감청하며 공개 출처 데이터를 분석합니다. NSA, GCHQ, 중국의 국가안전부(MSS) 모두 정보 수집과 분석에 AI를 활용합니다. AI 생성 합성 미디어(딥페이크)는 신흥 정보 및 영향력 작전 도구입니다.',
+            '**4. 인프라.** AI는 물리적 인프라에 의존합니다: 반도체 팹(TSMC, 삼성, 인텔), 데이터 센터, 해저 케이블, 전력망. 핵심 AI 인프라 — 칩 제조, 클라우드 플랫폼, 학습 컴퓨팅 — 를 통제하는 국가는 그렇지 못한 국가에 대해 구조적 레버리지를 보유합니다.',
+            '**5. 글로벌 거버넌스.** 어느 규제 체계가 글로벌 기본값이 되느냐에 따라 AI 시스템이 무엇을 할 수 있는지, 어떤 데이터를 사용할 수 있는지, 어떤 조직이 배포할 수 있는지가 결정됩니다. EU AI법, 미국 NIST 프레임워크, 중국의 CAC 규정은 세 가지 경쟁하는 거버넌스 모델을 대표하며 — 브뤼셀 효과는 EU의 모델이 이미 국경 너머에 적용되고 있음을 의미합니다.',
+          ],
+        },
+        threeWayRace: {
+          title: 'AI 군비 경쟁: 미국, 중국, EU',
+          content: [
+            '**세 가지 양립 불가능한 AI 거버넌스 비전이 글로벌 채택을 두고 경쟁하고 있습니다 — 미국은 혁신과 경쟁력을 우선시하고, 중국은 국가 주도로 전략적 AI 패권을 추구하며, EU는 브뤼셀 효과를 통해 자국 기준을 전 세계에 수출하는 권리 기반의 법적 체계를 구축합니다.** 이 AI 군비 경쟁은 주로 민간 영역입니다: 선두 연구소들은 민간 기업(OpenAI, Anthropic, Google DeepMind, Baidu, Alibaba)이지만, 규제 통제, 하드웨어 공급망, 인재라는 판돈은 지정학적입니다.',
+            '이 경쟁은 누가 가장 유능한 모델을 구축하느냐에 관한 것만이 아닙니다. 어느 규제 체계가 글로벌 기본값이 되느냐에 관한 것이기도 합니다. EU AI법은 EU 사용자에게 배포되는 모든 AI 시스템에 적용됨으로써 이미 브뤼셀을 OpenAI, Anthropic, Google DeepMind의 사실상 글로벌 규제자로 만들었습니다. 하드웨어 통제는 세 번째 차원입니다: CHIPS 및 과학법(520억 달러)과 Nvidia GPU 수출 통제는 중국의 컴퓨팅 접근을 제한하는 것을 목표로 합니다. 2025년 1월에 출시된 DeepSeek R1 — 학습 비용의 일부만으로 GPT-5.5와 경쟁력 있는 성능 — 은 그러한 통제에 한계가 있음을 입증했습니다.',
+          ],
+          items: [
+            '**미국의 위상:** 프론티어 모델 역량(GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro), 칩 설계(Nvidia, AMD), AI 투자(OECD에 따르면 2023년 민간 투자 670억 달러)에서 선두. 통합된 연방 AI 법률 부재 — 배포를 가속화하지만 컴플라이언스 분산을 야기.',
+            '**중국의 위상:** AI 특허 수량, 안면 인식 규모, 국가 주도 인프라 배포에서 선두. 모델들(Qwen 3, ERNIE 4.0, DeepSeek R1)은 많은 벤치마크에서 경쟁력이 있습니다. Nvidia 아키텍처에 대한 하드웨어 의존성이 수출 통제가 목표로 하는 주요 전략적 취약점입니다.',
+            '**유럽의 위상:** AI 규제에서 선두 — EU AI법이 글로벌 기준 프레임워크 — 오픈 가중치 연구(프랑스의 Mistral). 프론티어 모델 역량과 민간 투자에서는 뒤처짐. 브뤼셀 효과를 통한 규제 레버리지로 보완: 미국과 중국 공급업체가 글로벌 제품에 대해 EU 기준을 준수하도록 강제.',
+            '**하드웨어 계층:** Nvidia H100/H200 GPU가 AI 학습을 지배합니다. 미국 수출 통제는 중국 판매를 제한합니다. DeepSeek R1은 제한된 H800 GPU로 약 600만 달러에 학습되었으며 — GPT-5.5 학습 추정 비용 대비 94% 절감 — 하드웨어 통제가 중국의 프론티어 AI를 저지하지 못했음을 입증했습니다.',
+          ],
+          image: '/images/regional-ai-players-en.svg',
+          imageCaption: '미국: OpenAI, Anthropic, Google DeepMind (VC 지원). EU: Mistral, Hugging Face (오픈소스, 미국 대비 투자 부족). 중국: Baidu, Alibaba, Tencent (국가 지원, CAC 감독).',
+        },
+        euAiAct: {
+          title: 'EU AI법: 실제로 요구하는 것',
+          content: [
+            '**EU AI법은 AI 시스템을 기본권과 안전에 미치는 위험 수준에 따라 요구사항과 과태료를 조정하는 4단계 위험 등급으로 분류합니다.** 유럽 의회는 2024년 3월 찬성 523표, 반대 46표, 기권 49표로 이 법을 통과시켰습니다 — 전 세계 주요 AI 입법 중 가장 폭넓은 정치적 합의입니다.',
+            '이 법은 EU 시장에 AI 시스템을 출시하는 제공자, EU 내에서 AI 시스템을 사용하는 배포자, 수입업자 및 유통업자에게 적용됩니다 — 이들 조직의 본사 위치와 관계없이 적용됩니다. AI 출력이 EU 회원국에서 사용되는 미국 기업은 이를 준수해야 합니다.',
+          ],
+          items: [
+            '**허용 불가 위험(금지):** 공공 기관의 사회적 점수 부여; 공공장소에서의 실시간 생체 인식(좁은 법 집행 예외 허용); 인지적 취약성을 이용하는 AI; 비표적 안면 이미지 수집. 2024년 8월부터 금지됩니다.',
+            '**고위험:** 핵심 인프라, 교육, 고용, 필수 서비스(신용, 복지), 법 집행, 국경 통제, 사법 행정에서의 AI. 적합성 평가, 투명성 문서, 인간 감독, EU 데이터베이스 등록이 필요합니다.',
+            '**제한적 위험:** 챗봇 및 AI 생성 콘텐츠. 공개가 필요합니다 — 사용자는 자신이 AI와 상호작용하고 있음을 알아야 합니다.',
+            '**최소 위험:** 스팸 필터, 비디오 게임 내 AI, 중대한 영향이 없는 추천 시스템. 기존 법률 외 특정 의무는 없습니다.',
+            '**범용 AI(GPAI):** GPT-5.5, Claude, Gemini와 같은 모델은 학습 데이터 요약을 공개하고, EU 저작권법을 준수하며, 중대한 사고를 보고해야 합니다. 시스템적 위험이 있는 모델(10^25 FLOPS 초과 학습)은 추가적인 적대적 테스트 요건에 직면합니다. GPAI 규정은 2025년 8월부터 적용되었습니다.',
+            '**집행:** EU AI 사무소(유럽 위원회 산하)가 GPAI 모델을 감독합니다. 국가 시장 감시 당국이 고위험 AI 규정을 집행합니다. 과태료: 금지된 관행에는 최대 €3,500만 또는 전 세계 매출의 7%; 고위험 위반에는 €1,500만 또는 3%.',
+            '**일정:** 금지된 관행: 2024년 8월. GPAI 의무: 2025년 8월. 고위험 AI 시스템: 2026년 8월. 규제 제품 내 고위험 AI: 2027년 8월.',
+          ],
+          image: '/images/ai-risk-tiers-comparison-en.svg',
+          imageCaption: 'EU AI법 4단계 위험 체계: 허용 불가(2024년 8월 금지), 고위험(적합성 평가), 제한적(공개만), 최소(의무 없음).',
+        },
+        digitalOmnibus: {
+          title: '디지털 옴니버스: 유동적인 EU AI법 고위험 컴플라이언스 기한',
+          content: [
+            '**가장 최근에 확인된 상태 기준으로, EU의 2026년 8월 2일 고위험 AI 컴플라이언스 기한은 여전히 2027년 12월 2일로 연기될 수 있지만 — 채택이 공개적으로 확인되지 않았으며 법정 기한이 이제 임박했습니다.** 유럽 위원회는 EU AI법의 의도하지 않은 결과와 이행상의 문제를 해결하기 위해 2025년 11월 디지털 옴니버스를 제안했습니다. 유럽 의회와 EU 이사회 모두 연기에 대한 지지 의사를 밝혔습니다. 그러나 마지막으로 확인된 업데이트 기준으로 기관 간 협상은 정체된 상태였습니다.',
+            '**3자 협의 현황:** 2026년 2월의 첫 번째 3자 협의(의회, 이사회, 위원회 간 협상)에서는 시급성에 대한 폭넓은 정치적 합의가 있었지만 기술적 세부사항은 미해결로 남았습니다. 2026년 4월 28일의 두 번째 3자 협의는 합의 없이 종료되었습니다. 세 번째 3자 협의가 2026년 5월 중순에 열렸지만, 이 글을 작성하는 시점까지 최종 채택에 대한 공개적인 확인은 이어지지 않았습니다. 연기안이 2026년 8월 2일 이전에 채택되면 구속력을 갖게 됩니다. 그렇지 않으면 원래의 2026년 8월 2일 기한이 그대로 적용되며 — 그 날짜는 이제 며칠 남지 않았습니다.',
+            '**조직이 해야 할 일:** 디지털 옴니버스 연기가 공식적으로 채택되었다는 직접적인 확인이 없는 한, 2026년 8월 2일을 고위험 AI 시스템에 대한 구속력 있는 컴플라이언스 기한으로 취급하십시오. 연기안이 통과되면 기한이 2027년 12월까지 연장될 수 있지만, 법정 기한이 이렇게 임박한 시점에 통과를 가정하는 것은 위험합니다. 지금 2026년 8월 컴플라이언스를 달성하면 어느 경우든 보호받을 수 있습니다 — 옴니버스가 통과되면 추가 기간 동안 더 최적화할 수 있고, 통과되지 않으면 이미 준수한 상태입니다.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: '경고: 디지털 옴니버스 채택 여부 미확인',
+              text: '2026년 8월에서 2027년 12월로의 디지털 옴니버스 연기는 채택된 것으로 공개적으로 확인되지 않았습니다. 2026년 4월 28일의 두 번째 3자 협의는 합의에 이르지 못했고, 2026년 5월 중순에 열린 세 번째 3자 협의도 이후 확인된 결과 보고 없이 종료되었습니다. 연기가 이루어졌다고 가정하지 마십시오. 2026년 8월 2일의 법정 기한이 이제 임박했으므로, 이를 구속력 있는 기한으로 삼아 컴플라이언스 로드맵을 계획하십시오. 옴니버스가 나중에 채택된 것으로 확인되면 추가 시간을 얻게 되고, 그렇지 않으면 이미 준수한 상태입니다.',
+            },
+          ],
+        },
+        euMemberStates: {
+          title: 'EU 회원국: 국가별 AI 전략',
+          content: [
+            '**모든 EU 회원국이 국가 AI 전략을 채택했지만, 투자 수준, 중점 분야, 이행 속도는 크게 다릅니다.** 프랑스와 독일은 자금 지원에서 앞서고, 북유럽 국가들은 거버넌스 프레임워크에서 앞서며, 중부 및 동유럽 국가들은 AI를 국방과 공공 행정에 점점 더 통합하고 있습니다.',
+          ],
+          items: [
+            '**독일:** 2023년 업데이트된 연방 AI 전략(Nationale KI-Strategie). 2019~2025년 연방 프로그램 전반에 걸쳐 AI 연구, 인프라, 인재에 50억 유로 투자. 주요 대학에 6개의 AI 역량 센터 설립. 분데스탁의 AI 책임 관련 논의 진행 중. 프라운호퍼 협회와 DFKI(독일 인공지능연구센터)가 핵심 연구 기관입니다.',
+            '**프랑스:** 마크롱 대통령이 발표한 20억 유로 공공 AI 투자(2024년). France AI(정부 조정 기구)가 국가 전략을 관리합니다. 파리는 2025년 2월 AI 행동 정상회담을 개최했습니다 — 프랑스의 EU 의장국 하에서 열린 최초의 G7급 AI 거버넌스 정상회담입니다. CNRS와 INRIA가 학술 AI 연구를 주도합니다. 프랑스는 미국 API 의존에 대한 전략적 대안으로 오픈 가중치 AI를 지지합니다.',
+            '**네덜란드:** 2024년 국가 AI 전략 업데이트, ACM(소비자시장청)이 운영하는 AI 규제 샌드박스. 암스테르담은 SURF(국가 연구 네트워크) AI 클러스터를 개최합니다. 네덜란드 데이터 보호청(AP)은 AI 시스템에 특화된 GDPR 집행 지침을 발표했습니다.',
+            '**폴란드:** 국가 AI 발전 프로그램은 국방, 사이버 보안, 공공 행정을 위한 AI에 중점을 둡니다. 폴란드는 NATO 내에서 국방 기술에 대한 1인당 지출이 가장 높은 국가 중 하나이며 AI를 군사 조달에 통합하고 있습니다. 바르샤바는 2022년 이후 우크라이나 기술 인재 이주에 힘입어 성장하는 AI 스타트업 생태계를 보유하고 있습니다.',
+            '**스페인:** 스페인의 국가 AI 전략(ENIA)은 2021~2025년 6억 유로를 배정합니다. AI와 지정학에 관한 레알 인스티투토 엘카노의 연구는 국제적으로 인용됩니다. 스페인은 AESIA(스페인 인공지능감독청)를 설립했습니다 — 2023년 설립된 EU 최초의 국가 AI 규제 기관입니다.',
+            '**스웨덴:** 스웨덴 AI 위원회는 2024년 교육, 공공 부문 배포, 혁신을 다루는 60개 이상의 권고안이 담긴 보고서를 발표했습니다. Vinnova(스웨덴 혁신청)가 AI 연구에 자금을 지원합니다. 스웨덴은 Spotify의 AI 추천 시스템과 H&M의 AI 기반 재고 관리를 보유하고 있으며, 민간 부문 AI 도입 사례 연구로 자주 인용됩니다.',
+            '**이탈리아:** 이탈리아는 2024년 G7 의장국을 맡아 히로시마 AI 프로세스 행동 강령을 만들어냈습니다 — G7 국가들이 채택한 첨단 AI 개발자를 위한 11가지 지도 원칙입니다. 이탈리아의 데이터 보호 당국인 가란테(Garante)는 GDPR 우려로 2023년 3월 ChatGPT를 일시적으로 차단했습니다 — OpenAI가 투명성 조치를 이행한 후 나중에 해결되었습니다. 이는 EU 내 최초의 국가 차원 ChatGPT 제한이었습니다.',
+          ],
+        },
+        franceMistral: {
+          title: '프랑스와 Mistral: 유럽의 AI 자주권 구축',
+          content: [
+            '**프랑스는 공공 투자와 Mistral AI를 통해 미국 AI 패권에 대한 전략적 대항마를 구축하고 있습니다 — 오픈 가중치 모델을 유럽 AI 자주권의 경로로 자리매김시킵니다.** Mistral은 GPT-5.5와 Claude에 대한 EU의 가장 실현 가능한 대안이며, 프랑스의 20억 유로 AI 투자는 Mistral과 같은 기업에 자금을 지원하고 OpenAI, Google, Anthropic에 대한 의존도를 낮추기 위해 명시적으로 설계되었습니다.',
+            '**Mistral AI(2023년 설립):** 모두 전(前) Meta 직원인 Arthur Mensch, Guilaume Blanc, Tim Caron이 설립했습니다. Mistral은 2023년 9월 Mistral Small(오픈 가중치)를 출시한 데 이어 Mistral Large 2(많은 작업에서 GPT-5.5와 경쟁력 있음)를 출시했습니다. Mistral Large 2는 MMLU에서 81.2%를 기록해 GPT-5.5의 88.7%에는 못 미치지만, 분류, 요약, 추출 작업에서는 독점 모델과 대등한 성능을 보입니다. 컨텍스트 윈도우는 123K 토큰입니다. Mistral 커뮤니티 라이선스에 따라 라이선스가 부여됩니다(상업적 사용 허용; LLaMA와 유사한 파생 명명 제한).',
+            '**프랑스가 오픈 가중치를 선택한 이유:** 프랑스의 입장은 독점 API가 벤더 종속, 데이터 거주 위험, 미국 기업에 대한 장기적 의존을 만든다는 것입니다. 오픈 가중치 모델은 유럽 인프라에 배포할 수 있어 데이터를 EU 관할권 내에 유지하고 미국 클라우드 제공업체와의 GDPR/AI법 마찰을 피할 수 있습니다. 이는 브뤼셀 효과와 일치합니다 — Mistral이 EU AI법을 준수하도록 함으로써 프랑스는 유럽의 글로벌 규제 레버리지를 강화합니다.',
+            '**정부 지원:** 프랑스 정부는 예금공탁금고(국가 투자 기금)와 직접 보조금을 통해 지원합니다. Mistral은 2024년 2월 프랑스 전략 투자자들의 지원으로 3억 8,500만 유로의 시리즈 B 자금을 조달했습니다. 보잉에 대한 유럽의 항공우주 대항마로 에어버스가 구축된 방식과 유사하게, AI 분야의 "유럽 챔피언"으로 자리매김하고 있습니다.',
+          ],
+        },
+        nonEuEurope: {
+          title: 'EU 비회원 유럽: 영국, 스위스, 노르웨이, 우크라이나',
+          content: [
+            '**4개 주요 비EU 유럽 국가는 저마다 다른 AI 거버넌스 경로를 선택했으며, 어느 것도 EU AI법과 완전히 일치하지 않아 파편화된 유럽 규제 환경을 만들어냅니다.** 여러 유럽 관할권에서 운영하는 조직의 경우, 이는 EU 회원국과 인접 국가 간 컴플라이언스 요건이 다르다는 것을 의미합니다.',
+          ],
+          items: [
+            '**영국:** 브렉시트 이후 영국은 (2026년 기준) AI 전용 법률 없이 친혁신적이고 부문 주도적인 접근을 선택했습니다. 기존 규제 기관(FCA, ICO, Ofcom, CMA)이 각자의 부문 권한을 AI에 적용합니다. 2023년 11월 블레츨리 파크 AI 안전 정상회담 이후 설립된 영국 AI 안전 연구소(AISI)는 프론티어 모델 평가를 수행하고 안전 보고서를 발표합니다. 영국 정부는 AI 컴퓨팅 인프라에 9억 파운드를 투입했습니다. 영국 조직은 EU AI법의 적용을 받지 않지만 많은 조직이 EU 시장 접근을 유지하기 위해 자발적으로 준수합니다.',
+            '**스위스:** 스위스는 AI 중립성을 유지합니다 — 국가 AI 법률이 없으며 제정 계획도 없습니다. 연방 위원회는 기존 법률(데이터 보호, 제조물 책임, 부문별 규제)에 의존합니다. 스위스는 제네바에서 매년 UN AI for Good 정상회담을 개최하며, CERN의 과학을 위한 AI 프로그램과 주요 유럽 연구 기관(ETH 취리히, EPFL)을 보유하고 있습니다. 스위스의 중립성은 AI 거버넌스에도 확장됩니다: OECD AI 원칙에 참여하지만 EU의 규제 접근이나 미국의 경쟁력 프레이밍 어느 쪽과도 일치하지 않습니다.',
+            '**노르웨이:** 노르웨이는 유럽경제지역(EEA)에 참여하고 있으며, 이는 EU AI법이 EEA 협정에 통합될 경우 적용됨을 의미합니다 — 현재 진행 중인 과정입니다. 노르웨이의 정부연기금(약 1조 8천억 달러 규모로 세계 최대의 국부펀드)은 포트폴리오 기업이 AI 거버넌스 정책을 공개하도록 요구하는 AI 투자 기준을 발표했습니다. 국영 에너지 기업 에퀴노르는 유전 최적화를 위해 AI를 배포했습니다. 노르웨이 데이터보호청(Datatilsynet)은 AI 관련 GDPR 집행에 적극적입니다.',
+            '**우크라이나:** 우크라이나는 실전 분쟁 맥락에서 가장 적극적으로 AI를 배포하는 국가입니다. 우크라이나군은 드론 표적화, 신호 정보, 위성 이미지 분석, 물류 최적화에 AI를 사용합니다. 디지털전환부(Мінцифра)는 EU 및 미국과 AI 협력 협정을 체결했습니다. 우크라이나는 2022년 EU 가입을 신청했으며, 가입 요건의 일환으로 AI 거버넌스를 포함한 디지털 법률을 EU 기준에 맞춰 조정하고 있습니다. Grammarly와 GitLab을 만든 팀을 포함한 우크라이나 AI 스타트업들은 기술 운영을 유지하면서 팀을 EU 국가로 이전했습니다.',
+          ],
+        },
+        usStrategy: {
+          title: '미국 전략: 행정명령, CHIPS법, 주법 선점',
+          content: [
+            '**미국에는 연방 AI 법률이 없으며, 트럼프 행정부의 2025년 바이든 AI 안전 행정명령 폐기는 주요 연방 안전 프레임워크를 뒤집어 미국 AI 정책을 완전히 경쟁력 쪽으로 전환시켰습니다. 2026년 3월 기준, 트럼프는 행정명령 14365와 제안된 입법을 통해 주(州) AI 법률에 대한 적극적인 연방 선점을 추진하고 있습니다.** 이는 미국과 EU 사이에 규제 격차를 만들어내며, 대서양 간 AI 조달과 데이터 공유에 영향을 미칩니다.',
+          ],
+          items: [
+            '**바이든 AI 안전 행정명령(2023년 10월):** 프론티어 AI 개발자에게 안전 테스트 결과를 미국 정부와 공유하도록 요구했고, NIST AI 안전 표준을 수립했으며, 핵심 인프라와 국가 안보에서의 AI를 다루었습니다. 2025년 1월 트럼프 대통령에 의해 폐기되었습니다.',
+            '**트럼프 AI 행동 계획(2025년):** 바이든의 행정명령을 대체하여 AI 개발에 대한 규제 장벽 제거, 중국에 대한 미국 리더십 유지, 동맹국에 대한 AI 수출 촉진에 중점을 둡니다. AI 개발자에 대한 의무적 안전 보고 요건은 없습니다.',
+            '**행정명령 14365: AI 국가 정책 프레임워크 보장(2025년 12월 11일):** 법무부 내에 AI 소송 태스크포스를 설립하여 법정에서 주 AI 법률에 이의를 제기합니다. 상무부 장관에게 90일 기한(2026년 3월 11일)까지 "부담스러운" 주 AI 법률을 식별하고 공표하도록 지시합니다 — AI 모델이 사실적 출력을 변경하도록 요구하는 법률 또는 수정헌법 제1조를 위반할 공개를 강제하는 법률로 정의됩니다. "부담스러운" AI 법률을 가진 주에 대한 연방 BEAD 광대역 인프라 자금 보류를 허용합니다. 명시적 목표는 주 AI 법률에 대한 연방 선점입니다.',
+            '**백악관 국가 AI 입법 프레임워크(2026년 3월 20일):** 아동 보호와 부모 권한 강화, 지역사회 보호, 디지털 복제 보호, 정부 검열 방지, 인력 개발, 주법 선점, 경량 혁신 촉진 등 7개 정책 영역을 포괄하는 종합 프레임워크입니다. 이 프레임워크는 의회에 "주 AI 법률 선점을 중심으로 한 연방 통합적, 혁신 지향적 체제"를 채택할 것을 촉구합니다.',
+            '**TRUMP AMERICA AI법(2026년 3월 18일, Marsha Blackburn 상원의원):** 연방 AI 거버넌스를 성문화하고, 학습 데이터와 딥페이크에 대한 국가 표준을 수립하며, 예술가/창작자 보호를 의무화하고, AI 개발자에 대한 "주의 의무" 요건을 포함하는 291페이지 분량의 입법 논의안입니다. 통신품위법 제230조를 일몰시킵니다. 주 법률 선점에 관한 트럼프의 행정명령과 궤를 같이합니다.',
+            '**GUARDRAILS법(2026년 3월 20일, Beyer 하원의원 등):** TRUMP AMERICA법에 대한 민주당의 대응 법안입니다. 트럼프의 AI 행정명령 14365를 폐지하고 주 AI 법률에 대한 연방 선점을 명시적으로 차단하여 주(州)의 규제 권한을 보존합니다. 연방 선점(트럼프)과 주(州) 자율성(민주당) 사이의 근본적 갈등을 반영하며, 이는 2026~2029년 미국 AI 정책을 규정할 것입니다.',
+            '**이행 기한 미준수(가장 최근에 확인된 상태: 2026년 5월):** 행정명령 14365는 FTC가 2026년 3월 11일까지 AI 정책 성명을 발표하도록 요구했지만 (5월 4일 마지막으로 확인된 업데이트 기준으로) 아직 발표되지 않았습니다. 상무부의 주 AI 법률 평가도 2026년 3월 11일이 기한이었지만 (그 업데이트 시점 기준으로) 역시 발표되지 않았습니다. 그 시점에서 이행이 정책적 야심에 비해 상당히 뒤처져 있었으며, 이후 더 최근의 공개적인 상태 업데이트는 확인되지 않았습니다.',
+            '**콜로라도 AI법(2026년 2월 1일 시행):** 채용, 대출, 보험 등 고위험 결정에서의 알고리즘 차별을 다루는 최초의 미국 주(州) 법률입니다. 2026년 2월 1일부터 시행되었습니다. 트럼프의 행정명령 14365는 콜로라도의 법률을 "과도한" 규제의 사례로 명시적으로 인용했습니다. 컴플라이언스 기한은 2026년 6월 30일로 연장되었습니다. 이 법률은 트럼프가 연방 차원에서 선점하려는 주 규제의 전형적 사례입니다.',
+            '**CHIPS 및 과학법(520억 달러):** 2022년 8월 서명되었습니다. 국내 반도체 제조, R&D, 인력 개발에 자금을 지원합니다. 첨단 칩에 대한 대만반도체제조회사(TSMC) 의존도를 낮춥니다. Intel, TSMC, Samsung은 CHIPS법 자금을 활용해 미국 내 팹을 건설하고 있습니다.',
+            '**AI 하드웨어 수출 통제:** 바이든 행정부는 첨단 Nvidia A100 및 H100 GPU의 중국 및 기타 우려 국가로의 수출을 제한했습니다. 이 제한은 2023년 10월과 2024년 10월에 확대되었습니다. Nvidia는 수출 한도 내에 들어가는 중국 특화 칩(A800, H800)을 만들었지만, 이후 이들도 제한 대상이 되었습니다.',
+            '**NIST AI 위험 관리 프레임워크(AI RMF 1.0):** 2023년 1월 발표되었습니다. 법적 구속력이 없는 자발적 프레임워크로, AI 신뢰성을 7가지 차원에서 다룹니다: 유효성/신뢰성, 안전성, 보안성/복원력, 설명 가능성/해석 가능성, 프라이버시 강화, 편향 관리를 통한 공정성, 책임성/투명성. 미국 연방 기관과 대기업에서 컴플라이언스 기준선으로 널리 채택되었습니다.',
+            '**NSF 국가 AI 연구소:** 미국 대학의 25개 AI 연구소에 2억 달러 이상이 투자되었습니다. 기초 AI 연구, 안전, 윤리, 도메인 응용(의료, 농업, 기후)에 중점을 둡니다.',
+          ],
+        },
+        chinaStrategy: {
+          title: '중국의 AI 전략: 중국제조 2025, CAC 규정, DeepSeek',
+          content: [
+            '**중국의 AI 전략은 국가 주도 산업 정책, 제한적인 국내 콘텐츠 규제, 공격적인 국제 AI 외교를 결합합니다 — 이 조합은 미국의 하드웨어 수출 통제에도 불구하고 경쟁력 있는 프론티어 모델을 만들어냈습니다.** 중국의 접근 방식은 AI를 경제 개발, 국가 안보, 사회 거버넌스를 위한 전략적 역량으로 우선 취급합니다.',
+          ],
+          items: [
+            '**중국제조 2025 및 차세대 AI 발전 계획(2017년):** 중국의 2017년 AI 계획은 연구, 인재, 제품 개발, 규제 전반에서 2030년까지 글로벌 AI 리더십을 목표로 삼았습니다. 150억 달러의 국가 자금을 배정하고 AI 특허 출원, 연구 인용, 산업 매출에 대한 벤치마크를 설정했습니다. AI는 반도체, 양자 컴퓨팅과 함께 핵심 전략 기술로 지정되어 있습니다.',
+            '**국가인터넷정보판공실(CAC) 알고리즘 규정(2022년 3월):** 중국 사용자에게 서비스를 제공하는 모든 알고리즘 기반 추천 시스템이 CAC에 등록하고, 알고리즘 작동 방식을 공개하며, 사용자가 개인화된 추천을 거부할 수 있도록 요구했습니다. 2023년 7월 생성형 AI로 확대되어 — 모든 생성형 AI 서비스는 등록하고, 보안 평가를 통과하며, 출력이 "사회주의 핵심 가치"에 부합하도록 보장해야 합니다.',
+            '**DeepSeek R1(2025년 1월):** High-Flyer 헤지펀드가 지원하는 중국 AI 연구소 DeepSeek가 출시한 R1은 AIME 2024(79.8%), MATH-500(97.3%), HumanEval 코딩 작업을 포함한 여러 벤치마크에서 GPT-5.5를 능가했습니다. 수출 통제 한도 내에 있는 중국 특화 변형인 Nvidia H800 GPU로 학습되었으며, 추정 학습 비용은 약 600만 달러입니다(프론티어 모델 추정치 대비 94% 절감; 수치는 논란의 여지가 있지만 상당한 비용 우위는 분명함). 이 출시는 Nvidia 주가의 큰 하락을 촉발했고 하드웨어 수출 통제의 효과에 대한 미국 정책 논쟁을 가속화했습니다.',
+            '**화웨이 어센드 칩:** 화웨이의 어센드 910B 및 910C 칩은 AI 학습을 위한 Nvidia GPU의 국내 대안으로 자리매김하고 있습니다. 대부분의 벤치마크에서 성능은 여전히 Nvidia H100에 못 미치지만 중간 규모 모델을 학습시키기에는 충분합니다. 주요 중국 기술 기업(Baidu, Alibaba, ByteDance)은 Nvidia 의존도를 줄이기 위해 일부 워크로드를 어센드로 이전하기 시작했습니다.',
+            '**일대일로 AI 외교:** 중국은 일대일로(BRI) 파트너십을 통해 개발도상국에 AI 감시 인프라(안면 인식, 스마트 시티 시스템)를 수출합니다. 제공업체로는 화웨이, Alibaba Cloud, ZTE가 있습니다. 이는 알고리즘 사회 관리를 포함한 중국식 AI 거버넌스 규범을 파트너 국가로 수출하며, OECD/EU 프레임워크 외부에 병렬적인 AI 표준 생태계를 만들어냅니다.',
+            '**주요 중국 AI 모델:** Alibaba Qwen 3, Baidu ERNIE 4.0, ByteDance Doubao, Z.ai GLM-4. 이들은 중국어 작업에서 경쟁력이 있으며 다국어 벤치마크에서도 점점 더 경쟁력을 갖추고 있습니다. [오픈소스 대 독점 LLM 트레이드오프](https://www.promptquorum.com/ko/prompt-engineering/open-source-vs-proprietary-llms)는 중국 모델 도입에 영향을 미칩니다 — Qwen의 오픈 가중치 출시는 국제 개발자들을 끌어들였습니다.',
+          ],
+        },
+        chinaModelsAccessibility: {
+          title: '프롬프트 엔지니어를 위한 중국: 어떤 모델을 사용할 수 있는가',
+          content: [
+            '**제품이 중국 사용자에게 서비스를 제공한다면, EU나 미국에는 없는 사전 출시 승인 요건과 함께 사용 가능한 모델과 필수 콘텐츠 필터가 다른 별개의 AI 생태계에서 운영하고 있는 것입니다.** GPT-5.5, Claude, Gemini와 같은 외국 모델은 VPN 없이는 중국 본토에서 접근할 수 없습니다. 선택지는 국내에 등록된 대안으로 제한됩니다.',
+            '**중국에서 사용 가능한 모델:** Alibaba Qwen 3(오픈 가중치, 7B~72B, 128K 컨텍스트, Alibaba Cloud를 통한 API), Baidu ERNIE 4.0(Qianfan 플랫폼을 통한 API), ByteDance Doubao(Volcano Engine을 통한 API), Z.ai GLM-4(Z.ai 플랫폼을 통한 API), DeepSeek R1/V3(DeepSeek 플랫폼을 통한 API). Qwen 3 72B는 가장 강력한 오픈 가중치 옵션입니다 — 중국어 작업에 사용하면서 중국 외부에서 자체 호스팅할 수 있습니다. MMLU에서 GPT-5.5와 5퍼센트포인트 이내의 점수를 기록하며 중국어 특화 벤치마크(C-Eval)에서는 이를 능가합니다.',
+          ],
+        },
+        chinaContentFilters: {
+          title: '콘텐츠 필터와 CAC 요건: 중요한 제약',
+          content: [
+            '**중국의 모든 생성형 AI 서비스는 CAC 생성 AI 조치(2023)를 준수해야 합니다.** 콘텐츠 제한은 법률뿐만 아니라 모델 및 API 수준에서도 시행됩니다. 서비스는 다음에 대한 출력을 차단하는 필터를 구현해야 합니다: CPC 지도부 비판, 대만/티베트/신장 독립 논의, 정치적으로 민감한 역사적 사건(1989년 6월 4일), "사회주의 핵심 가치"를 훼손하는 콘텐츠, CAC가 국가 안보에 대한 위협으로 간주하는 자료. 이러한 필터는 API에 내장되어 있어 설정으로 끌 수 없습니다.',
+            '**중요한 구현 세부사항:** 필터를 유발하는 요청은 HTTP 4xx가 아닌 HTTP 200을 반환하며 응답 본문에 `is_safe: 0` 플래그가 포함됩니다 — 전통적인 오류가 아닙니다. 코드에서 명시적인 애플리케이션 수준 처리가 필요합니다. 필터링된 프롬프트로 ERNIE 4.0이나 DeepSeek를 호출하면, API는 정리된 출력이나 오류 플래그가 포함된 유효한 HTTP 응답을 반환하며 4xx 상태는 아닙니다.',
+            '**사전 출시 CAC 보안 평가가 의무입니다.** 중국에서 소비자 대상 생성형 AI 서비스를 출시하기 전에, 제공업체는 CAC 평가(45~90일)를 완료해야 합니다. 평가에는 학습 데이터 출처, 콘텐츠 필터링 문서, 샘플 출력 테스트, 컴플라이언스 자체 인증이 필요합니다. 외국 기업은 직접 신청할 수 없습니다 — 등록된 제공업체로서 중국 본토 법인이나 라이선스를 받은 파트너(Alibaba Cloud, Tencent Cloud)가 필요합니다. 이들의 CAC 등록은 모델 계층을 포괄하며, 애플리케이션 수준 출력에 대한 책임은 여전히 귀하에게 있습니다.',
+          ],
+          callouts: [
+            {
+              type: 'did-you-know',
+              label: '알아두기: CAC 필터는 4xx가 아닌 HTTP 200을 반환합니다',
+              text: '중국 국가인터넷정보판공실(CAC)에 의해 콘텐츠가 필터링되면, 규제 대상 API(Baidu ERNIE, DeepSeek)는 응답 본문에 `is_safe: 0` 플래그와 함께 HTTP 200을 반환합니다 — HTTP 4xx 오류가 아닙니다. HTTP 상태 코드만 확인하는 애플리케이션은 검열되거나 비어 있는 응답을 조용히 통과시킵니다. 최종 사용자에게 결과를 표시하기 전에 항상 응답 본문의 `is_safe` 플래그를 확인하십시오. 이는 중국에 AI를 배포할 때 가장 흔한 통합 오류입니다.',
+            },
+          ],
+        },
+        chinaDataResidencyAPIs: {
+          title: 'PIPL 데이터 거주, 실용적인 API, 배포 사례',
+          content: [
+            '**개인정보 보호법(PIPL, 2021)이 귀하의 구속력 있는 제약입니다.** PIPL은 중국 사용자로부터 수집된 개인 데이터가 중국 내에 머물거나, 국경을 넘는 이전 전에 정부 보안 평가를 통과하도록 요구합니다. AI 애플리케이션이 중국 사용자의 개인 데이터 — 이름, 신분증, 위치, 행동 데이터 — 를 처리하여 중국 외부의 모델 API로 전송하면 PIPL을 위반하게 됩니다. 실용적인 해결책: 개인 데이터가 중국 관할권을 벗어나지 않도록 중국 사용자 트래픽을 본토에서 호스팅되는 추론(Alibaba Cloud, Tencent Cloud, Huawei Cloud)으로 라우팅하는 것입니다.',
+            '**Baidu ERNIE 4.0 API(실용적 세부사항):** Qianfan(千帆) 플랫폼을 통해 접근 가능합니다. 가격: 2026년 기준 ERNIE 4.0 Turbo는 1K 토큰(입력/출력)당 0.12위안. 시스템 프롬프트를 수락하고 함수 호출을 지원하며 JSON 구조화 응답을 반환합니다. 속도 제한: 표준 등급 분당 60건. 콘텐츠 필터 오류는 `is_safe: 0` 플래그와 함께 HTTP 200을 반환합니다 — 명시적인 애플리케이션 수준 오류 처리가 필요합니다.',
+            '**하이브리드 솔루션으로서의 Qwen 3:** 중국 및 국제 사용자 모두에게 서비스를 제공하는 팀의 경우, Qwen 3(오픈 가중치, Apache 2.0)가 가장 실용적인 가교 역할을 합니다. 국제 사용자를 위해 중국 외부 인프라에 Qwen 3 72B를 배포하고(CAC 필터 없음), 중국 부문에는 Alibaba의 CAC 등록 하에 Alibaba Cloud API를 사용하십시오. 컨텍스트 윈도우는 128K이며 다국어 작업에서 경쟁력이 있습니다.',
+          ],
+          items: [
+            '**프롬프트 예시(안전):** "중국의 생성 AI 조치(2023)의 핵심 조항은 무엇이며, 중국에서 생성형 AI 서비스를 출시하기 전 기업이 준비해야 할 문서는 무엇입니까?" — 금지된 영역을 건드리지 않고 사실적인 규제 정보를 요청하기 때문에 작동합니다. DeepSeek R1은 규제 분석을 안정적으로 처리합니다.',
+            '**프롬프트 예시(필터링됨):** "대만과 중국 본토의 정치 체제를 비교하십시오"는 모든 CAC API에서 `is_safe: 0`을 유발합니다. 재구성: "대만과 중국 본토의 1인당 GDP와 무역량을 비교하십시오" — 초점을 경제로 옮깁니다.',
+            '**프롬프트 예시(Qwen 3의 장점):** "이 중국 규제 문서를 요약하고 외국 AI 기업이 지켜야 할 세 가지 컴플라이언스 의무를 식별하십시오." Qwen 3 72B(중국 외부에서 자체 호스팅)는 CAC 필터 없이 중국어 법률 문서를 처리합니다 — 국경 간 컴플라이언스 워크플로에 가장 적합한 옵션입니다.',
+          ],
+        },
+        regulatoryComparison: {
+          title: '글로벌 AI 규제: EU vs 미국 vs 중국 비교',
+          content: [
+            '**세 가지 주요 AI 규제 체계는 철학, 법적 효력, 국제적 적용 범위에서 근본적으로 다릅니다.** 이러한 차이를 이해하는 것은 관할권을 넘나들며 운영하거나 서로 다른 규제 블록에 본사를 둔 공급업체의 AI 도구를 사용하는 조직에게 필수적입니다.',
+          ],
+          tableFormat: true,
+          columns: ['차원', 'EU', '미국', '중국'],
+          rows: [
+            { '차원': '주요 접근방식', 'EU': '권리 기반 법적 체계 — AI법이 기본권 위험에 따라 시스템을 분류', '미국': '부문별, 혁신 우선 — 기존 규제 기관이 각 도메인의 권한을 AI에 적용; 연방 AI 법률 없음', '중국': '국가 주도, 통제 우선 — AI가 국가 발전과 사회 거버넌스 목표에 봉사' },
+            { '차원': '핵심 법률', 'EU': 'EU AI법(2024) — 의무적 컴플라이언스; GDPR은 AI 학습 데이터 및 출력에 적용', '미국': '연방 AI 법률 없음. [NIST AI RMF](https://www.nist.gov/ai-risk-management-framework) (자발적). EO 14110(바이든, 2025년 폐기); AI 행동 계획(트럼프 2025)', '중국': '알고리즘 추천 규정(2022); 생성 AI 조치(2023); 모두 CAC가 집행' },
+            { '차원': '위험 체계', 'EU': '4단계: 허용 불가(금지), 고위험(적합성 평가 필요), 제한적(공개), 최소(특정 의무 없음)', '미국': '자발적 [NIST AI RMF](https://www.nist.gov/ai-risk-management-framework) — 7가지 신뢰성 차원; 의무적 등급화 없음', '중국': '배포 전 생성 AI 서비스에 보안 평가 필요; 콘텐츠는 "사회주의 핵심 가치"에 부합해야 함' },
+            { '차원': '최대 과태료', 'EU': '금지된 관행에 대해 €3,500만 또는 전 세계 연간 매출의 7%; 고위험 위반 시 €1,500만 또는 3%', '미국': '연방 AI 특정 과태료 없음. FTC는 불공정/기만적 관행 주장 가능; 주(州)별 과태료 다양', '중국': '알고리즘 규칙 위반당 최대 ¥100,000; 비준수 생성 AI에 대한 서비스 중단' },
+            { '차원': '데이터 보호', 'EU': 'GDPR + AI법 — 개인 데이터로 AI 학습 시 법적 근거 필요; 개인 데이터에 관련된 출력에는 GDPR 컴플라이언스 필요', '미국': '부문별: HIPAA(의료), CCPA/CPRA(캘리포니아), FERPA(교육); GDPR에 상응하는 연방법 없음', '중국': 'PIPL(개인정보 보호법, 2021) 적용; 국가 보안 기관이 데이터 접근권 보유' },
+            { '차원': '금지 응용 프로그램', 'EU': '공공 기관의 사회적 점수 시스템; 공공장소 실시간 생체 인식 감시; 인지 취약성을 이용하는 AI; 인터넷에서 안면 이미지 비표적 수집', '미국': '연방 차원 금지 AI 응용 없음; 일부 주 차원 금지(예: 생체 인식에 관한 일리노이주 BIPA)', '중국': 'CPC 지도부, 국가 권위 또는 "사회주의 핵심 가치"를 훼손하는 콘텐츠; 딥페이크 공개 의무' },
+            { '차원': '집행 기관', 'EU': 'EU AI 사무소(GPAI 모델) + 국가 시장 감시 기관(고위험 AI) + 데이터 보호 당국(GDPR 교차점)', '미국': 'FTC(소비자 보호), FDA(의료 AI), CFPB(금융 AI), EEOC(고용 AI), NIST(표준)', '중국': 'CAC(사이버공간 관리국) — 주요 집행 기관; MIIT와 SAMR은 산업별 AI 담당' },
+            { '차원': '국제적 적용 범위', 'EU': '브뤼셀 효과 — EU 시장에 출시되거나 출력이 EU에서 사용되는 모든 AI에 적용; 설계상 역외 적용', '미국': 'AI 하드웨어에 대한 수출 통제가 글로벌 공급망에 영향; 역외 콘텐츠 규제 없음', '중국': 'BRI AI 수출이 중국식 AI 거버넌스 규범을 전파; 그레이트 파이어월이 국내에서 외국 AI 서비스 접근을 제한' },
+          ],
+          image: '/images/ai-three-region-framework-en.svg',
+          imageCaption: 'EU는 권리 기반 규정 집행(EU AI법, €3,500만 과태료); 미국은 자발적 부문별 감독 선호(NIST RMF); 중국은 CAC 승인을 통한 국가 통제 집행.',
+        },
+        globalPowerCompetition: {
+          title: 'AI와 글로벌 권력 경쟁',
+          content: [
+            '**AI는 이제 강대국 경쟁의 주요 차원이 되었습니다 — 동맹 구조, 기술 수출 정책, AI 시스템의 국제 무역을 규율하는 규칙을 형성합니다.** 이 경쟁은 단순히 양자 간(미국 대 중국)이 아닙니다. EU라는 제3의 극, 비동맹 국가들의 경합하는 중간 지대, 경쟁하는 거버넌스 프레임워크를 만들어내는 일련의 다자간 포럼(G7, G20, UN, [OECD](https://oecd.ai))이 관여합니다.',
+            '국제적으로 운영하는 조직에게 AI 분야의 글로벌 권력 경쟁은 네 가지 실질적 위험을 만듭니다: 수출 통제 컴플라이언스(어떤 AI 하드웨어와 소프트웨어를 어느 국가로 이전할 수 있는지), 조달 제한(정부 계약에 어떤 AI 공급업체를 사용할 수 있는지), 데이터 주권 요건(민감한 데이터에 대한 AI 추론이 어디서 이루어질 수 있는지), 규제 파편화(EU, 미국, 중국의 규정이 상충할 때 이를 동시에 준수하는 것).',
+          ],
+          items: [
+            '**동맹 기반 AI 거버넌스:** 미국은 네덜란드(ASML 리소그래피 통제), 일본(첨단 칩 수출 제한), 영국([AI 안전 연구소](https://www.aisi.gov.uk/) 협력)을 포함한 동맹국들과 AI 수출 통제를 조율해 왔습니다. 이는 기술 접근 규칙을 공유하는 비공식적인 "AI 동맹"을 만들어냅니다.',
+            '**비동맹 국가:** 인도, 브라질, UAE, 사우디아라비아는 미국이나 중국 AI 인프라에 대한 의존을 피하기 위해 국내 AI 역량에 투자하고 있습니다. 인도의 BharatGPT 이니셔티브와 UAE의 Falcon 모델(기술혁신연구소)은 의도적인 AI 자주권 전략의 사례입니다.',
+            '**다자간 거버넌스:** G7 히로시마 AI 프로세스(2023), UN AI 자문 기구 보고서(2024), [OECD AI 원칙](https://www.oecd.org/ai/ai-principles/)(2024년 업데이트)은 병렬적인 국제 거버넌스 트랙을 대표합니다 — 모두 자발적이며, 모두 EU의 법적 구속력 있는 접근 방식과 경쟁합니다.',
+            '**국제 관계 위험:** 지정학적 적대국에 있는 공급업체의 AI 도구를 사용하는 조직은 부차적인 위험에 직면합니다: 평판 노출, 향후 조달 자격 박탈, 공급업체의 정부 접근 조항이 현지 데이터 보호법과 충돌할 경우의 잠재적 규제 책임.',
+          ],
+        },
+        organizationsImplications: {
+          title: 'AI 지정학적 위험: 조직에 대한 시사점',
+          content: [
+            '**AI를 도입하는 조직에게 지정학적 경쟁은 네 가지 구체적인 운영 결정으로 전환됩니다: 어떤 AI 도구가 허용되는지, 데이터를 어디에 저장할 수 있는지, 어떤 컴플라이언스 문서가 필요한지, 그리고 규제가 얼마나 빠르게 변화할 것인지.** 이러한 결정은 조직이 EU에 기반을 두고 있는지, EU 시장에서 운영하는지, 미국 또는 중국 AI 공급업체를 사용하는지에 따라 크게 달라집니다.',
+            'PromptQuorum은 컴플라이언스를 고려한 모델 선택을 지원합니다 — EU 컴플라이언트 모델(Mistral, 로컬 Ollama)과 미국 프론티어 모델에 프롬프트를 동시에 발송하여 별도의 인프라 없이 EU AI법 준수 옵션과 독점적 대안을 벤치마크할 수 있습니다.',
+            '모델 가용성을 형성하는 지정학적 역학은 오픈소스 대 독점 모델 문제를 특히 중요하게 만듭니다. 오픈소스가 유리한 경우와 독점 모델이 비용 대비 가치가 있는 경우에 대한 완전한 비교는 [오픈소스 vs 독점 LLM](https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms)을 참조하십시오.',
+          ],
+          items: [
+            '**EU 소재 조직:** [EU AI법](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)을 직접 준수해야 합니다. 고위험 AI 시스템(HR, 신용, 의료, 공공 서비스)은 2026년 8월 전에 적합성 평가, 인간 감독 문서, [EU AI 데이터베이스](https://digital-strategy.ec.europa.eu/en/policies/ai-office) 등록이 필요합니다. 개인 데이터를 처리하는 모든 AI는 AI 학습 파이프라인과 출력 처리를 포함하여 GDPR을 준수해야 합니다.',
+            '**EU 사용자를 대상으로 하는 비EU 조직:** 브뤼셀 효과의 적용을 받습니다 — [EU AI법](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)은 EU 사용자에게 도달하는 AI 출력에 적용됩니다. EU 대상 제품에 사용되는 GPAI 모델은 투명성 의무를 준수해야 합니다(2025년 8월부터). 미준수 시 EU 본사 위반자와 동일한 과태료가 부과됩니다.',
+            '**EU 배포에서의 미국 AI 도구:** GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro는 모두 GPAI 모델로 분류됩니다. OpenAI, Anthropic, Google은 EU AI법 GPAI 컴플라이언스 문서를 공개했습니다. 고위험 AI 시스템에서 이러한 도구를 사용하는 조직(배포자)은 자체 적합성 평가에 대한 책임이 있습니다 — 공급업체의 GPAI 컴플라이언스가 배포를 포괄하지는 않습니다.',
+            '**중국 AI 도구:** DeepSeek R1 및 기타 중국 모델은 국제적으로 이용 가능하지만 EU 및 미국 조직에게 추가적인 조달 위험을 수반합니다 — 데이터 거주가 불명확하고, 공급업체가 CAC 콘텐츠 규정의 적용을 받으며, CAC가 데이터 공개를 강제할 수 있습니다. EU 및 NATO 회원국의 정부 및 핵심 인프라 조직은 중국 AI 도구 사용을 제한하거나 금지하고 있습니다.',
+            '**데이터 거주:** EU GDPR은 "적정성" 결정이나 적절한 안전장치가 없는 국가로의 개인 데이터 이전을 제한합니다. 미국 공급업체를 통한 개인 데이터 AI 추론에는 표준 계약 조항(SCC) 또는 EU-미국 데이터 프라이버시 프레임워크(2023)에 의존해야 합니다. 중국으로의 이전에는 적정성 결정이 없습니다 — 계약적 안전장치가 마련되어야 하며 집행하기 어렵습니다.',
+            '**조달 결정:** 미국 연방 기관은 중국 지정 기업의 AI 사용이 금지됩니다. 여러 EU 회원국(독일, 프랑스, 네덜란드)은 정부 조달에서 중국 AI 도구를 제한하는 지침을 발표했습니다. 민간 부문 조직의 경우 조달 정책은 AI 공급업체의 학습 데이터 관할권, 콘텐츠 조정 관행, 정부 접근 조항을 다루어야 합니다.',
+            '**규제 변화 모니터링:** AI 규제의 변화 속도는 빠릅니다. 트럼프 행정부의 2025년 바이든 행정명령 철회, EU AI법의 단계적 집행 일정, 중국의 지속적인 CAC 규칙 업데이트는 몇 달 내에 컴플라이언스 상태가 변할 수 있음을 의미합니다. 조직은 AI 거버넌스 담당자를 지정하고 [EU AI 사무소](https://digital-strategy.ec.europa.eu/en/policies/ai-office) 뉴스레터와 [OECD AI 정책 관측소](https://oecd.ai) 업데이트를 구독해야 합니다.',
+          ],
+          image: '/images/compliance-burden-comparison-en.svg',
+          imageCaption: 'EU: 컴플라이언스 비용 $50만~$200만+, 6~12개월, 규범적 규정. 미국: $5만~$30만, 2~4개월, 자발적. 중국: $20만~$100만+, CAC 승인 불확실.',
+        },
+        qaWhatIsAIGeopolitics: {
+          title: 'AI 지정학이란 무엇인가?',
+          content: [
+            'AI 지정학은 인공지능이 국가 간 글로벌 권력 관계에 미치는 영향을 연구하는 학문입니다 — 경제 경쟁, 군사 역량, 규제 영향력, 기술 리더십을 포함합니다. 이는 세 가지 동시 경쟁을 포괄합니다: 어느 국가가 가장 유능한 모델을 구축하는지, 어떤 규제 체계가 글로벌 AI 배포를 지배하는지, 어느 국가가 프론티어 AI를 가능하게 하는 반도체 공급망을 통제하는지. 조직에게 AI 지정학은 어떤 도구가 법적으로 허용되는지, 데이터를 어디서 처리할 수 있는지, 어떤 공급업체가 조달 위험을 수반하는지를 결정합니다.',
+          ],
+        },
+        qaWhoIsWinning: {
+          title: '누가 글로벌 AI 경쟁에서 앞서고 있는가?',
+          content: [
+            '미국은 프론티어 모델 역량 — GPT-5.5(OpenAI), Claude(Anthropic), Gemini(Google DeepMind) — 와 민간 AI 투자([OECD 데이터](https://oecd.ai) 기준 2023년 670억 달러)에서 앞서고 있습니다. 중국은 AI 특허 출원, 국가 주도 배포 규모, 국내 모델 개발에서 앞서고 있습니다. DeepSeek R1은 2025년 1월 주요 벤치마크에서 GPT-5.5와 대등한 성능을 보였습니다. 유럽연합은 AI 규제에서 앞서고 있습니다 — [EU AI법](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)이 글로벌 기준 프레임워크입니다 — 하지만 경제 규모에 비해 프론티어 모델 역량과 민간 투자에서는 뒤처집니다. 세 차원 모두에서 동시에 앞서는 단일 행위자는 없습니다.',
+          ],
+        },
+        qaWhatIsBrusselsEffect: {
+          title: 'AI에서 브뤼셀 효과란 무엇인가?',
+          content: [
+            '브뤼셀 효과는 다국적 기업이 관할권마다 별도의 컴플라이언스를 유지하는 것보다 가장 엄격한 기준을 전 세계에 적용하는 것이 운영상 더 단순하기 때문에 EU 규정이 사실상 글로벌 표준이 되는 현상을 설명합니다. EU AI법은 EU 시장에 출시되거나 출력이 EU 사용자에게 도달하는 모든 AI 시스템에 적용되어, OpenAI, Google DeepMind, Anthropic이 EU 전용 버전만이 아니라 글로벌 제품 전체에 대해 EU 투명성 의무를 준수하도록 강제합니다. 동일한 메커니즘이 GDPR을 글로벌 프라이버시 표준으로 만들었습니다.',
+          ],
+        },
+        qaHowChinaRegulates: {
+          title: '중국은 인공지능을 어떻게 규제하는가?',
+          content: [
+            '중국은 국가인터넷정보판공실(CAC)을 통해 AI를 규제합니다. 알고리즘 추천 규정(2022)은 알고리즘으로 선별된 콘텐츠에 라벨 표시를 요구합니다. 생성 AI 조치(2023)는 중국에서 소비자 대상 생성형 AI 서비스를 출시하기 전에 45~90일이 소요되는 CAC 보안 평가를 요구하며, AI 출력이 "사회주의 핵심 가치"에 부합하도록 의무화합니다. 외국 AI 모델(GPT-5.5, Claude, Gemini)은 우회 도구 없이는 중국 본토에서 접근할 수 없습니다. 국내 대안으로는 Alibaba Qwen, Baidu ERNIE 4.0, ByteDance Doubao, DeepSeek가 있습니다.',
+          ],
+        },
+        qaWhatEUAIActRequires: {
+          title: 'EU AI법은 조직에 무엇을 요구하는가?',
+          content: [
+            'EU AI법은 AI 시스템을 4단계 위험 등급으로 분류하고 등급에 따라 의무를 조정합니다. 금지된 관행 — 공공 기관의 사회적 점수 부여, 공공장소에서의 실시간 생체 인식 감시 — 은 2024년 8월부터 금지됩니다. 고용, 신용 평가, 의료, 법 집행에 사용되는 고위험 AI 시스템은 2026년 8월 전까지 적합성 평가, 인간 감독 문서, EU AI 데이터베이스 등록이 필요합니다. 범용 AI 모델(GPT-5.5, Claude, Gemini)은 학습 데이터 요약을 공개하고 EU 저작권법을 준수해야 하며, 이 규정은 2025년 8월부터 적용되었습니다. 본사 위치와 관계없이 EU 사용자에게 서비스를 제공하는 모든 조직이 이를 준수해야 합니다.',
+          ],
+        },
+        qaExportControls: {
+          title: '미국의 수출 통제는 AI 개발에 어떤 영향을 미치는가?',
+          content: [
+            '미국의 수출 통제는 A100과 H100을 포함한 첨단 Nvidia GPU의 중국 판매를 제한하여 중국의 프론티어 AI 모델 학습 역량을 제한하는 것을 목표로 합니다. 이 통제는 수출관리규정(EAR)을 통해 시행되며 특정 컴퓨팅 임계값을 초과하는 Nvidia, AMD, Intel 제품에 적용됩니다. 2025년 1월 DeepSeek R1의 출시는 이 접근 방식의 한계를 보여주었습니다: 중국에 제한된 H800 GPU로 비교 가능한 미국 모델 보고 비용의 일부만으로 학습되었음에도, AIME 2024, MATH-500, HumanEval 벤치마크에서 GPT-5.5와 대등한 성능을 보였습니다. 수출 통제는 중국의 프론티어 AI 개발을 늦추었지만 중단시키지는 못했습니다.',
+          ],
+        },
+        qaTSMCRole: {
+          title: 'AI 지정학에서 TSMC의 역할은 무엇인가?',
+          content: [
+            'TSMC(대만반도체제조회사)는 프론티어 AI를 구동하는 첨단 칩을 제조합니다 — Nvidia의 H100 및 H200 GPU, Google의 TPU, Apple의 Neural Engine 모두 대만의 TSMC 팹에서 제조됩니다. 현재 어떤 다른 기업도 3nm, 2nm와 같은 비교 가능한 공정 노드에서 규모 있게 칩을 제조하지 못합니다. 이는 TSMC를 글로벌 AI 인프라의 단일 의존 지점으로 만듭니다: 미국의 수출 통제는 TSMC가 중국 칩 제조업체에 첨단 노드를 공급하지 않는 것에 의존하며, 대만의 정치적 지위에 대한 어떠한 혼란도 즉시 글로벌 AI 하드웨어 공급을 제약할 것입니다. 미국 CHIPS 및 과학법(520억 달러)은 이러한 의존도를 줄이기 위해 특별히 국내 미국 팹 역량에 자금을 지원합니다.',
+          ],
+        },
+        qaUSEUChinaDifferences: {
+          title: '미국, EU, 중국의 AI 전략은 주로 어떻게 다른가?',
+          content: [
+            '세 가지 주요 AI 전략은 철학, 법적 구조, 국제적 적용 범위에서 근본적으로 다릅니다. 미국은 연방 AI 법률 없이 민간 부문 주도를 통해 혁신과 경쟁력을 우선시합니다 — 기존 부문별 규제 기관(FTC, FDA, EEOC)이 각 도메인 내에서 기존 권한을 AI에 적용합니다. EU는 EU 사용자에게 도달하는 모든 AI에 역외 적용되는 의무적인 수평적 법적 체계 — EU AI법 — 를 통해 기본권 보호를 우선시합니다. 중국은 CAC가 집행하는 의무적인 콘텐츠 규제와 사전 출시 보안 평가를 통해 국가 통제와 국가 발전을 우선시합니다. 이러한 접근 방식은 구조적으로 양립할 수 없습니다: 세 관할권 모두에서 운영하는 조직은 상충하는 요건을 동시에 헤쳐나가야 합니다.',
+          ],
+        },
+        defEUAIAct: {
+          title: '정의: EU AI법',
+          content: '2024년 3월 유럽 의회에서 통과된 세계 최초의 포괄적이고 법적 구속력이 있는 AI 규정입니다. AI 시스템을 4단계 위험 등급(허용 불가, 고위험, 제한적, 최소)으로 분류하며 등급별로 의무가 조정됩니다. 금지된 관행은 2024년 8월부터, 범용 AI 투명성 의무는 2025년 8월부터, 고위험 시스템 요건은 2026년 8월부터 적용됩니다. 과태료는 최대 3,500만 유로 또는 전 세계 매출의 7%에 달합니다. EU 사용자에게 도달하는 모든 AI에 역외 적용됩니다.',
+        },
+        defBrusselsEffect: {
+          title: '정의: 브뤼셀 효과',
+          content: '다국적 기업이 관할권마다 별도의 컴플라이언스를 유지하는 것보다 하나의 엄격한 기준을 전 세계에 적용하는 것이 더 단순하기 때문에 EU 규정이 사실상 글로벌 표준이 되는 현상입니다. GDPR은 브뤼셀 효과를 통해 글로벌 프라이버시 표준이 되었습니다. EU AI법도 동일한 작용을 하고 있습니다: OpenAI, Anthropic, Google은 EU 전용 버전만이 아니라 글로벌 제품 전체에 대해 EU AI법 요건을 준수해야 합니다.',
+        },
+        defHighRiskAI: {
+          title: '정의: 고위험 AI 시스템',
+          content: 'EU AI법에 따라 오작동이나 실패가 기본권에 중대한 피해를 초래할 수 있는 AI 시스템입니다. 예: 채용 결정, 신용 평가, 의료 진단, 법 집행, 공공 서비스 접근, 교육 평가에 사용되는 AI. 고위험 AI는 배포 전에 적합성 평가, 인간 감독 문서, 학습 데이터 품질 관리, EU AI 데이터베이스 등록이 필요합니다.',
+        },
+        defGPAI: {
+          title: '정의: 범용 AI(GPAI)',
+          content: '광범위한 데이터로 학습되고 일반적인 아키텍처(특정 도메인에 한정되지 않음)를 가져 광범위한 후속 작업에 적용될 수 있는 AI 시스템입니다. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro는 GPAI 모델입니다. EU AI법에 따라 10^25 FLOP를 초과하는 학습 컴퓨팅을 사용한 GPAI 모델은 학습 데이터 요약, 역량 문서, 저작권 준수를 포함한 투명성 의무에 직면합니다.',
+        },
+        defCAC: {
+          title: '정의: 국가인터넷정보판공실(CAC)',
+          content: '중국의 인터넷, 사이버공간, AI 거버넌스를 담당하는 주요 규제 기관입니다. 알고리즘 추천 규정(2022)과 생성 AI 조치(2023)를 집행합니다. 중국에서 생성형 AI 서비스를 출시하기 전 보안 평가를 요구하고, CPC 비판 및 정치적으로 민감한 주제를 차단하는 콘텐츠 필터를 의무화하며, AI 공급업체로부터 데이터 공개를 강제할 수 있습니다.',
+        },
+        defDataSovereignty: {
+          title: '정의: 데이터 주권',
+          content: '데이터가 위치하거나 생성된 국가의 법률 적용을 받으며, 조직이 데이터를 외국 관할권으로 이전하지 않고도 완전한 통제권을 유지할 수 있다는 원칙입니다. EU GDPR과 EU AI법은 데이터 주권을 컴플라이언스 요건으로 취급합니다: 개인 데이터 처리가 EU 외부에서 이루어지더라도 정보 주체가 EU 거주자라면 EU 법률을 준수해야 합니다.',
+        },
+        defAlgorithmRecs: {
+          title: '정의: 알고리즘 추천 규정(중국)',
+          content: '콘텐츠를 추천하기 위해 알고리즘을 사용하는 플랫폼이 알고리즘 큐레이션을 공개적으로 표시하고 공개하도록 요구하는 중국의 2022년 규정입니다. 소셜 미디어, 뉴스 피드, 동영상 추천, 검색 엔진에 적용됩니다. 사용자에게 알고리즘 추천을 끌 수 있는 옵션을 제공하도록 요구합니다. 알고리즘 기반 콘텐츠 배포의 투명성과 정부 감독을 강화하기 위해 CAC가 집행합니다.',
+        },
+        defSCCs: {
+          title: '정의: 표준 계약 조항(SCC)',
+          content: '유럽 위원회가 발행한 사전 승인된 계약 템플릿으로, 조직이 GDPR 준수를 주장하면서 EU에서 (미국이나 중국과 같은) 적정성이 없는 관할권으로 개인 데이터를 이전할 수 있도록 합니다. SCC는 데이터 수입자에게 EU 기준에 따라 데이터를 보호할 계약상 의무를 부과합니다. 효과성에는 의문이 제기됩니다: EU 법원 시스템은 SCC가 미국 및 기타 국가의 정부 감시로부터 보호할 수 있는지에 의문을 제기했습니다.',
+        },
+        politicianQuotes: {
+          title: '정치인들의 발언',
+          content: [
+            '**AI는 세 규제 블록 모두에서 최우선 정치 의제가 되었으며, 지도자들은 이를 경제적 생존, 민주적 가치, 국가 안보의 문제로 규정하고 있습니다.** 아래 발언은 공식 연설과 의회 기록에서 발췌한 것입니다.',
+          ],
+        },
+        quoteVonDerLeyen: {
+          title: '',
+          blockquote: '인공지능은 우리 시대를 정의하는 기술입니다. 유럽은 이를 단순히 받아들이는 것이 아니라 형성해야 합니다. 우리는 사람이 아니라 사람을 위해 작동하는 AI를 원합니다.',
+          blockquoteSource: 'Ursula von der Leyen, 유럽 위원회 위원장 — 유럽 AI 전략 연설, 2024년',
+        },
+        quoteVestager: {
+          title: '',
+          blockquote: 'AI법은 세계 최초의 포괄적인 인공지능 법적 프레임워크입니다. 이는 기술이 아니라 사람과 그들의 안전을 중심에 둡니다. 이것이 책임 있는 혁신의 모습입니다.',
+          blockquoteSource: 'Margrethe Vestager, 前 유럽 위원회 수석 부위원장 — 유럽 의회, 2024년 3월',
+        },
+        quoteBreton: {
+          title: '',
+          blockquote: 'AI법은 역사적인 성과입니다. 유럽은 AI에 대한 명확한 법적 프레임워크를 수립한 최초의 대륙입니다. 안전과 혁신은 상반되는 것이 아니라 함께 갑니다. 우리는 이를 세계에 보여주었습니다.',
+          blockquoteSource: 'Thierry Breton, 前 EU 역내시장 담당 집행위원 — 유럽 위원회, 2024년 3월',
+        },
+        quoteMacron: {
+          title: '',
+          blockquote: '프랑스는 유럽의 선도적인 AI 국가가 되고자 합니다. 파리는 AI 행동 정상회담을 개최할 것입니다. 우리는 개방적이고 신뢰할 수 있으며 지속 가능한 AI에 투자하고 있으며, 전 세계를 초대합니다.',
+          blockquoteSource: 'Emmanuel Macron, 프랑스 대통령 — AI 행동 정상회담 발표, 2024년',
+        },
+        quoteSunak: {
+          title: '',
+          blockquote: '영국은 전 세계 파트너들과 협력하여 AI의 안전을 보장할 것입니다. 블레츨리 파크는 이 대화가 시작되는 곳이지만, 여기서 끝나서는 안 됩니다.',
+          blockquoteSource: '[Rishi Sunak, 前 영국 총리 — AI 안전 정상회담, 블레츨리 파크, 2023년 11월](https://www.gov.uk/government/speeches/pm-speech-at-the-ai-safety-summit-1-november-2023)',
+        },
+        quoteScholz: {
+          title: '',
+          blockquote: '독일은 유럽의 선도적인 AI 거점 중 하나가 되고자 합니다. 우리는 AI 연구, 디지털 인프라, 그리고 차세대 지능형 시스템을 구축할 사람들에게 투자하고 있습니다.',
+          blockquoteSource: 'Olaf Scholz, 前 독일 연방총리 — 국가 AI 전략 업데이트, 2024년',
+        },
+        faq: {
+          id: 'faq',
+          title: '자주 묻는 질문',
+          faqs: [
+            { q: 'EU AI법이란 무엇이며 언제 적용됩니까?', a: 'EU AI법은 세계 최초의 포괄적 AI 법률로, 2024년 3월 유럽 의회에서 523표 찬성으로 통과되었습니다. 금지 관행은 2024년 8월부터 적용됩니다. GPAI 모델 의무(GPT-5.5, Claude, Gemini급 모델)는 2025년 8월부터 적용됩니다. 고위험 AI 시스템 요건은 2026년 8월부터 적용됩니다. EU 시장에 AI를 출시하거나 EU 거주자에게 영향을 미치는 AI를 사용하는 모든 조직에 적용됩니다.' },
+            { q: 'EU AI법이 비EU 기업에도 적용됩니까?', a: '예. EU AI법은 역외 적용 범위를 가집니다 — 공급업체의 본사 위치에 관계없이 EU에서 사용되는 AI 출력을 제공하는 모든 조직에 적용됩니다. EU 사용자가 사용하는 AI 제품을 보유한 미국 기업도 준수해야 합니다. 이것이 GDPR을 글로벌 표준으로 만든 것과 동일한 역외 원칙입니다.' },
+            { q: 'EU AI법 위반 시 과태료는 얼마입니까?', a: '금지된 AI 관행에 대해 최대 €3,500만 또는 전 세계 연간 매출의 7%(어느 쪽이든 더 높은 금액)의 과태료가 부과됩니다. 고위험 AI 위반에는 최대 €1,500만 또는 3%가 적용됩니다. 집행 당국에 부정확한 정보 제공 시 최대 €750만 또는 1%가 부과됩니다. 백분율과 고정 금액 중 더 높은 쪽이 적용됩니다.' },
+            { q: 'EU AI법에서 금지하는 AI 응용 프로그램은 무엇입니까?', a: '금지(허용 불가 위험): 공공 기관의 사회적 점수 시스템; 공공장소 실시간 생체 인식 식별(좁은 예외 있음); 심리적 취약성을 이용하는 AI; 인터넷에서 안면 이미지를 비표적으로 수집하는 행위. 이들은 2024년 8월부터 금지되었습니다.' },
+            { q: '미국 AI 규제는 EU와 어떻게 다릅니까?', a: '미국에는 연방 AI 법률이 없습니다. 기존 부문별 규제 기관(FTC, FDA, CFPB, EEOC)이 각 도메인에서 AI에 기존 권한을 적용합니다. 바이든 AI 안전 행정명령(2023년 10월)은 2025년 1월에 폐기되고 경쟁력 중심의 AI 행동 계획으로 대체되었습니다. NIST AI 위험 관리 프레임워크는 자발적입니다. 미국 규제는 사후 대응적이고 부문별이며, EU 규제는 사전 예방적이고 수평적입니다.' },
+            { q: 'EU 조직에서 DeepSeek를 사용하는 것이 안전합니까?', a: 'DeepSeek는 CAC(사이버공간 관리국) 규정의 적용을 받아 중국 정부가 데이터 공개를 강제할 수 있습니다. DeepSeek의 개인정보 처리방침은 데이터가 중국 내 서버에 저장된다고 명시합니다. 개인 데이터를 처리하는 EU 조직에게 DeepSeek 사용은 집행하기 어려운 GDPR 준수 데이터 이전 안전장치(SCC)가 필요합니다. EU 회원국의 정부 및 핵심 인프라 조직은 일반적으로 중국 AI 도구를 피하고 있습니다.' },
+            { q: '브뤼셀 효과란 무엇입니까?', a: '브뤼셀 효과는 다국적 기업이 관할권별로 별도의 컴플라이언스를 유지하는 것보다 가장 엄격한 기준을 전 세계에 적용하는 것을 선호하기 때문에 EU 규정이 사실상 글로벌 표준이 되는 현상을 설명합니다. GDPR이 이 방식으로 글로벌 프라이버시 표준이 되었습니다. EU AI법도 AI에 같은 작용을 하고 있습니다 — OpenAI, Anthropic, Google은 EU 전용 버전만이 아니라 글로벌 제품에 대해 EU AI법 GPAI 요건을 준수해야 합니다.' },
+            { q: '블레츨리 파크 AI 안전 정상회담은 무엇을 달성했습니까?', a: '2023년 11월 블레츨리 파크 AI 안전 정상회담은 블레츨리 선언을 이끌어냈습니다 — 미국, 중국, EU 회원국을 포함한 28개국이 서명하여 프론티어 AI가 심각한 위험을 초래하며 국제 협력이 필요하다는 것을 인정했습니다. 이 정상회담은 영국 AI 안전 연구소(AISI)를 설립하고 미국 등에서 글로벌 AI 안전 연구소 시리즈를 시작했습니다. 광범위한 지정학적 긴장에도 불구하고 중국의 참여는 주목할 만했습니다.' },
+            { q: '프랑스는 독일과 어떻게 다르게 AI를 지원합니까?', a: '프랑스는 고프로필 국제적 위상 확보(2025년 2월 파리 AI 행동 정상회담)와 INRIA 및 CNRS를 통한 오픈 가중치 AI 연구를 우선시하며 20억 유로의 공공 투자를 단행했습니다. 독일은 프라운호퍼 협회와 DFKI를 통한 응용 산업 AI에 집중하며 2019~2025년 50억 유로를 투자하고 연방 법률을 통한 AI 거버넌스와 책임 프레임워크를 강조합니다. 두 나라 모두 국가 AI 전략이 있지만 부문별 강조점이 다릅니다.' },
+            { q: 'EU AI법은 프롬프트 엔지니어링에 사용되는 AI에 어떤 영향을 미칩니까?', a: '대부분의 프롬프트 엔지니어링 작업은 제한적 또는 최소 위험 범주에 해당합니다 — 표준 챗봇과 AI 글쓰기 도구는 공개(사용자가 AI와 상호작용하고 있다는 사실 인지)가 필요하지만 적합성 평가는 필요하지 않습니다. 고위험 분류는 AI가 중요한 결정을 내릴 때 적용됩니다: 고용 심사, 신용 평가, 교육 평가, 법 집행. [실제 AI 한계](/prompt-engineering/ai-limitations-what-llms-cant-do)는 고위험 시스템 문서 요건과 관련이 있습니다.' },
+            { q: '히로시마 AI 프로세스란 무엇이며 무엇을 달성했습니까?', a: '히로시마 AI 프로세스는 일본의 G7 의장국 시절 2023년 히로시마 정상회담에서 시작된 G7 이니셔티브입니다. 2023년 10월 G7 국가들이 채택한 히로시마 AI 프로세스 행동 강령 — 첨단 AI 시스템 개발자를 위한 11가지 자발적 지도 원칙 — 을 만들어냈습니다. 원칙은 투명성, 사고 보고, 안전 테스트, AI 생성 콘텐츠 워터마킹을 다룹니다. 이탈리아의 2024년 G7 의장국은 더 넓은 국제 AI 거버넌스 의제로 프레임워크를 확장했습니다. 행동 강령은 법적 구속력이 없는 자발적 사항이지만 EU의 법적 구속력 있는 AI법과는 별도의 국제 조율을 신호합니다.' },
+            { q: 'EU 조직이 상업적 응용에 DeepSeek를 사용할 수 있습니까?', a: '기술적으로는 GDPR 준수 계약적 안전장치(표준 계약 조항)를 통해 가능합니다. 실질적으로는 SCC는 CAC 데이터 공개 요청에 DeepSeek가 응해야 하는 중국 법률 의무에 대해 집행하기 어렵습니다. 정부 조달은 별도의 제약입니다: 독일 BSI, 프랑스 ANSSI, 네덜란드 NCSC는 정부 및 핵심 인프라 사용에 대해 중국 AI 도구에 대한 권고사항이나 제한을 발표했습니다. EU 민간 부문 조직은 상업적으로 DeepSeek를 사용할 수 있지만 GDPR 제46조에 따른 이전 영향 평가를 실시하고 잔류 위험을 문서화해야 합니다. 대부분의 법률 자문은 DeepSeek를 통한 개인 데이터 처리에 반대합니다.' },
+            { q: 'EU AI법이 EU 경쟁력에 도움이 됩니까, 해가 됩니까?', a: '이것은 진정한 전략적 딜레마입니다: EU AI법은 EU AI 스타트업을 늦출 수 있지만 유럽의 글로벌 규제 신뢰성을 강화합니다. 한편으로는 컴플라이언스 비용과 적합성 평가가 EU 기업에 마찰을 일으킵니다 — 프랑스의 Mistral AI는 미국 경쟁자보다 더 많은 제약을 받습니다. 다른 한편으로는 브뤼셀 효과가 EU의 규제 체계를 글로벌 표준으로 만들어 EU 기반 기업에게 컴플라이언스 경쟁력 우위를 제공하고 EU에게 미국/중국 기술 대기업에 대한 레버리지를 부여합니다. 유럽은 미국이나 중국과 근본적으로 다른 AI 전략인 "원시 역량 리더십"이 아닌 "규제 리더십"에 베팅하고 있으며, 이는 유럽을 2등 기술 생산자가 아닌 글로벌 AI 거버넌스에 필수 불가결한 존재로 만드는 전략입니다.' },
+            { q: '유럽의 컴퓨팅 역량은 미국, 중국과 어떻게 비교됩니까?', a: '유럽은 컴퓨팅 인프라에서 크게 뒤처집니다. 미국은 GPU 제조(Nvidia ~80% 시장점유율)와 맞춤형 실리콘(Google TPU, Amazon Trainium)을 지배합니다. 중국은 TSMC(대만)에서 제조하고 제한된 Nvidia H시리즈 및 A시리즈 GPU를 사용합니다. 유럽에는 이에 상응하는 것이 없습니다: ASML(네덜란드)은 칩 제조 장비를 만들지만 팹을 소유하지 않습니다. EU 칩법(430억 유로, 2023~2032)은 EU 영토 내 Intel 및 TSMC 팹 건설을 목표로 하지만, 어느 것도 2027~2029년 이전에 가동되지 않을 것입니다 — 투자만으로는 메울 수 없는 3~5년의 컴퓨팅 역량 적자입니다.' },
+            { q: '규제 외 유럽의 AI 우위는 무엇입니까?', a: '유럽에는 세 가지 비규제적 우위가 있습니다: (1) EU(프랑스, 독일)가 지원하는 Mistral AI 및 기타 오픈 가중치 모델이 미국 또는 중국 의존성 없는 GDPR 준수 대안을 제공합니다; (2) 유럽은 영국 AI 안전 연구소, ETH 취리히, 프랑스 연구 센터(INRIA, CNRS)를 통한 AI 안전 연구에서 선두입니다; (3) 유럽의 고학력 인력과 기존 소프트웨어/반도체 인재가 AI 응용 분야와 맞춤형 실리콘(Arm, RISC-V 칩 설계)에서 우위를 제공합니다. 그러나 이 중 어느 것도 프론티어 모델 역량에서 유럽의 불리함을 상쇄하지 못합니다 — 미국이 GPT-5.5, Claude, Gemini에서 선두이고 중국이 배포 규모와 수량에서 선두입니다. 유럽의 전략은 "원시 역량 경쟁보다 잘하는 것(안전, 규제, 윤리)을 하는 것"입니다.' },
+          ],
+        },
+        commonMistakes: {
+          title: '지정학적 경계를 넘나드는 AI 배포 시 흔한 실수',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: '회사가 미국에 기반을 두고 있다면 EU AI법 준수가 선택사항이라고 가정하는 것.',
+              problem: '브뤼셀 효과로 인해 EU AI법은 역외 적용됩니다 — AI 시스템이 어떤 EU 사용자에게든 도달하면 이를 준수해야 합니다. EU 사용자에게 서비스를 제공하는 미국 기업들이 규제 집행에 직면한 사례가 있습니다.',
+              fix: '사용자 지역을 감사하십시오. EU 회원국에 사용자가 있다면 애플리케이션 수준에서 EU AI법 컴플라이언스를 구현하십시오: AI의 위험 등급을 분류하고, 학습 데이터를 문서화하며, 고위험 시스템에 인간 감독을 구현하고, 감사 추적을 유지하십시오.',
+            },
+            {
+              mistake: 'GDPR에 상응하는 보호 없이 미국 호스팅 API 엔드포인트를 통해 중국 사용자의 개인 데이터를 전송하는 것.',
+              problem: '중국의 PIPL(2021)은 정부 보안 평가 없이 개인 데이터의 국경 간 이전을 금지합니다. 독일, 프랑스, 네덜란드의 규제 당국은 정부 사용을 위한 중국 AI 도구를 제한했습니다. 민간 부문 조직은 법적 노출 위험에 직면합니다.',
+              fix: '개인 데이터가 중국 관할권을 벗어나지 않도록 중국 사용자 트래픽을 본토에서 호스팅되는 추론(Alibaba Cloud, Tencent Cloud)으로 라우팅하십시오. 국제 배포의 경우, 중국 대상 제품에는 미국 API 대신 Qwen 3(오픈 가중치) 또는 Mistral(EU 기반)을 사용하십시오.',
+            },
+            {
+              mistake: 'CAC 콘텐츠 필터가 (표준 API 오류처럼) HTTP 4xx 오류를 반환한다고 가정하는 것.',
+              problem: 'CAC 규제 대상 API(Baidu ERNIE, DeepSeek)는 콘텐츠가 필터링될 때 응답 본문에 `is_safe: 0` 플래그와 함께 HTTP 200을 반환합니다 — 4xx 상태가 아닙니다. HTTP 오류를 예상하는 애플리케이션은 필터링된 응답을 무시하고 차단된 콘텐츠를 사용하게 됩니다.',
+              fix: 'API 응답에서 `is_safe` 필드를 명시적으로 확인하십시오. 애플리케이션 수준에서 필터링된 응답을 기록하고 처리하십시오. 대만, 톈안먼 등 민감한 주제를 다루는 프롬프트로 중국 내 AI 배포를 테스트하여 필터링이 올바르게 처리되는지 확인하십시오.',
+            },
+            {
+              mistake: 'GPU 수출 통제를 중국 AI 개발에 대한 영구적인 장벽으로 취급하는 것.',
+              problem: 'DeepSeek R1(2025년 1월)은 제한된 H800 GPU로 약 600만 달러의 컴퓨팅 비용으로 학습되었음에도 — GPT-4 학습 추정치보다 94% 저렴 — 주요 벤치마크에서 GPT-5.5와 대등한 성능을 보였습니다. 수출 통제는 중국의 진전을 늦추지만 막지는 못합니다.',
+              fix: 'AI 분야에서 수십 년에 걸친 지정학적 경쟁을 대비해 계획하십시오. 장기 제품 로드맵의 경우 미국 하드웨어 우위가 영구적이라고 가정하지 마십시오. 제한하기 더 어려운 오픈 가중치 대안(Llama, Mistral, Qwen)에 투자하는 것을 고려하십시오. TSMC가 모든 첨단 칩을 제조하므로 대만의 정치적 지위를 계속 모니터링하십시오.',
+            },
+            {
+              mistake: '독점 미국 모델(GPT-5.5, Claude)이 규제 마찰 없이 전 세계에서 계속 이용 가능할 것이라고 가정하는 것.',
+              problem: 'EU AI법은 이미 GPT-5.5와 Claude에 컴플라이언스 의무를 적용하고 있습니다. 향후 EU 규제는 데이터 수출을 제한하거나 민감한 사용 사례에 온프레미스 배포를 요구할 수 있습니다. 중국의 국내 대체 전략(중국제조 2025)은 외국 모델 접근을 제한할 수 있습니다.',
+              fix: 'AI 인프라를 다각화하십시오. 독점 모델(프론티어 역량을 위해), 오픈 가중치 모델(규제 유연성을 위해), 로컬 배포(데이터 거주를 위해)를 혼합해 사용하십시오. 벤더 종속을 줄이기 위해 GPT-5.5, Claude, Mistral, Qwen 전반에서 제품을 테스트하십시오.',
+            },
+          ],
+        },
+        sources: {
+          title: '출처',
+          items: [
+            '유럽 의회, "인공지능법" — 공식 텍스트, 2024년 3월. [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)',
+            '유럽 위원회, "AI 사무소" — GPAI 컴플라이언스 문서 및 집행 지침. [AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office)',
+            'NIST, "인공지능 위험 관리 프레임워크(AI RMF 1.0)" — 2023년 1월. [NIST](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)',
+            '영국 정부, "AI 안전 정상회담 — 블레츨리 선언" — 2023년 11월. [Gov.uk](https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration)',
+            '중국 사이버공간 관리국, "생성 인공지능 서비스 관리 규정" — 2023년 7월',
+            'DeepSeek-AI, "DeepSeek-R1: 강화 학습을 통한 LLM의 추론 역량 강화" — arXiv:2501.12948, 2025년 1월',
+            'OECD AI 정책 관측소 — [oecd.ai](https://oecd.ai) — 국가별 AI 정책 데이터베이스 및 비교 분석',
+            '독일 연방 정부, "인공지능 전략" — 국가 AI 전략, 2023년 업데이트. [Bundesregierung](https://www.bundesregierung.de/breg-de/themen/digitalisierung/ki-strategie)',
+            'Rishi Sunak, AI 안전 정상회담 수상 연설 — 2023년 11월. [Gov.uk](https://www.gov.uk/government/speeches/pm-speech-at-the-ai-safety-summit-1-november-2023)',
+          ],
+        },
+        relatedReading: {
+          title: '관련 읽을거리',
+          items: [
+            '[오픈소스 vs 독점 LLM](https://www.promptquorum.com/ko/prompt-engineering/open-source-vs-proprietary-llms) — EU AI법 컴플라이언스와 데이터 주권 요건이 오픈 가중치 대 API 선택에 미치는 영향',
+            '[AI 한계: LLM이 할 수 없는 것](https://www.promptquorum.com/ko/prompt-engineering/ai-limitations-what-llms-cant-do) — EU AI법의 고위험 AI 시스템 평가와 관련된 역량 한계 이해',
+            '[프롬프트 인젝션과 보안](https://www.promptquorum.com/ko/prompt-engineering/prompt-injection-and-security) — 국가 AI 전략과 EU AI법이 고위험 시스템 요건에서 다루는 보안 취약점',
+            '[AI 환각: AI가 사실을 지어내는 이유](https://www.promptquorum.com/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — EU AI법 고위험 문서화와 인간 감독 요건의 핵심인 신뢰성 문제',
+            '[RAG 설명](https://www.promptquorum.com/ko/prompt-engineering/rag-explained) — 검색 증강 생성이 규제 대상 AI 배포와 관련된 지식 한계 및 환각 문제를 해결하는 방법',
+            '일반 데이터 보호 규정(GDPR)과 AI: 컴플라이언스 의무 — EU 데이터 보호법이 AI법과 결합하여 국경을 넘어 개인 데이터를 처리하는 조직에 다층적 컴플라이언스 요건을 만드는 방법',
+          ],
+        },
+      },
     },
-    howToSchema: {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: 'EU 지역 조직이 EU AI법을 준수하는 방법',
-      description: 'EU AI법 적용 대상 조직이 규정 준수를 위해 거쳐야 할 핵심 단계입니다.',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: 'AI 시스템의 위험 등급 분류', text: 'EU AI법의 4단계 체계(금지/고위험/제한적/최소)에 따라 사용 중인 AI 시스템을 분류합니다.' },
-        { '@type': 'HowToStep', position: 2, name: '투명성 의무 확인', text: 'GPT-5.5, Claude 등 범용 AI(GPAI) 모델을 사용하는 경우, 학습 데이터 요약 공개 등 투명성 의무를 확인합니다.' },
-        { '@type': 'HowToStep', position: 3, name: '데이터 보호 영향 평가 수행', text: 'GDPR 제46조에 따라 개인정보를 처리하기 전에 이전 영향 평가(Transfer Impact Assessment)를 수행합니다.' },
-      ],
-    },
-    sections: {
-      tldr: {
-        title: '핵심 요약',
-        isTldr: true,
-        items: [
-          'AI는 전략적 국가 기술입니다 — 미국, 중국, EU가 패권 경쟁을 벌이고 있습니다.',
-          '각국은 세 가지 자원을 두고 경쟁합니다: 컴퓨팅(칩), AI 인재, 학습 데이터.',
-          'AI는 군사력, 경제 경쟁력, 사이버 역량에 동시에 영향을 미칩니다.',
-          'EU AI법은 세계 최초의 구속력 있는 AI 법률입니다 — 과태료는 최대 €3,500만 또는 전 세계 매출의 7%에 달합니다.',
-          '브뤼셀 효과: EU AI법 규정은 전 세계 어디서든 EU 사용자에게 도달하는 모든 AI에 적용됩니다.',
-          '미국에는 연방 AI 법률이 없습니다 — 부문별 규제 기관이 각자의 권한을 AI에 적용합니다.',
-          '미국은 2025년 1월 AI 안전 행정명령을 폐기했습니다 — 이제 안전보다 경쟁력이 우선입니다.',
-          '중국의 DeepSeek R1은 주요 벤치마크(AIME, MATH, HumanEval)에서 GPT-5.5를 초과했으며, 학습 비용은 600만 달러로 94% 절감을 달성해 GPU 수출 통제의 한계를 입증했습니다.',
-          'TSMC(대만)는 모든 프론티어 AI를 구동하는 칩을 생산합니다 — 단일한 지정학적 의존성입니다.',
-          '조직은 EU, 미국, 중국의 상충되는 세 가지 규제 체계를 동시에 준수해야 합니다.',
-        ],
-      },
-      euImplications: {
-        title: 'EU 소재 조직을 위한 핵심 컴플라이언스 일정',
-        content: [
-          '**EU AI법은 2026년 8월부터 구속력 있게 집행됩니다.** 조직이 EU에 본사를 두거나 EU 사용자에게 서비스를 제공하는 경우, 4단계 위험 분류 체계를 준수해야 합니다. 금지된 관행에 대한 과태료는 최대 €3,500만 또는 전 세계 매출의 7%에 달하며, 어느 쪽이든 더 높은 금액이 적용됩니다. 불이행은 협상의 여지가 없습니다.',
-          '**EU에서 GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro를 배포하는 경우, 해당 범용 AI(GPAI) 컴플라이언스 문서를 감사해야 합니다.** OpenAI, Anthropic, Google은 2025년 8월부터 투명성 문서(학습 데이터 요약, 역량 한계, 안전 테스트 결과)를 공개했습니다. 이 증명서를 컴플라이언스 증거로 저장하십시오 — 규제 당국이 요청할 것입니다.',
-          '**고위험 AI 시스템(채용, 신용 결정, 의료, 법 집행)은 배포 전 적합성 평가가 필요합니다.** 이는 편향성 테스트, 인간 감독 메커니즘 문서화, 모든 AI 결정의 감사 추적을 의미합니다. 로컬에 배포된 오픈 가중치 모델(Ollama를 통한 LLaMA, Mistral Large)은 데이터 거주 요건을 충족합니다 — 데이터가 인프라를 벗어나지 않아 감사 추적을 직접 통제할 수 있습니다.',
-          '**브뤼셀 효과가 귀 조직에도 적용됩니다.** AI 시스템이 단 한 명의 EU 거주자에게 도달하더라도 EU AI법이 적용됩니다 — 회사 본사가 미국이나 중국에 있어도 마찬가지입니다. 이는 관할권별로 별도 구성을 유지하는 것보다 전 세계적으로 동일한 컴플라이언스 수준을 적용하는 것이 더 단순한 경우가 많다는 것을 의미합니다.',
-        ],
-      },
-      promptEngineerTakeaways: {
-        title: '프롬프트 엔지니어를 위한 핵심 시사점',
-        isTldr: true,
-        items: [
-          '중국 AI API(DeepSeek, ERNIE 4.0, Alibaba Cloud를 통한 Qwen)는 API 수준에서 콘텐츠를 필터링합니다 — 정치적 주제, CPC 비판, 대만/티베트/신장 관련 내용은 HTTP 4xx가 아닌 HTTP 200 응답에 `is_safe: 0`을 반환합니다. 애플리케이션 코드에서 이를 명시적으로 처리해야 합니다.',
-          'Mistral 모델과 로컬 Ollama 배포는 EU AI법의 데이터 거주 요건을 충족합니다 — 프롬프트와 출력이 인프라를 벗어나지 않습니다. 이는 프롬프트 엔지니어에게 EU GDPR + AI법 컴플라이언스를 위한 가장 간편한 경로입니다.',
-          'GPT-5.5와 Claude Opus 4.8은 2025년 8월부터 EU AI법에 따른 GPAI 컴플라이언스를 충족합니다. 추가적인 모델 수준의 컴플라이언스 작업 없이 EU 대상 배포에 사용할 수 있습니다 — 의무는 모델 수준이 아닌 애플리케이션(배포자) 수준에 있습니다.',
-          '브뤼셀 효과는 EU 거주자가 사용하는 제품을 위해 미국 호스팅 모델에 보내는 프롬프트도 EU AI법 요건의 적용을 받는다는 것을 의미합니다 — 회사가 EU에 기반을 두지 않더라도 마찬가지입니다.',
-          '다중 관할권 테스트를 위해 동일한 프롬프트를 Mistral(EU 컴플라이언트), GPT-5.5(미국/GPAI), Qwen(중국 접근 가능)에 동시에 보내어 규제 맥락별 출력을 벤치마크하십시오. PromptQuorum은 이를 기본적으로 지원합니다.',
-        ],
-      },
-      geopoliticsOfAI: {
-        title: '인공지능의 지정학',
-        content: [
-          '**AI의 지정학은 국가가 AI 역량, AI 규제, AI 인프라를 권력 수단으로 활용하는 방식을 연구하는 학문입니다.** 이는 세 가지 별개의 경쟁을 포괄합니다: 가장 유능한 모델을 구축하려는 경쟁, 글로벌 AI 배포를 지배하는 규제 체계를 둘러싼 경쟁, 프론티어 AI를 가능하게 하는 하드웨어 공급망 통제를 위한 경쟁입니다.',
-          '각 차원은 조직에게 구체적인 결과를 가져옵니다. 모델 역량은 어떤 AI 도구를 사용할 수 있는지를 결정합니다. 규제 체계는 어떤 도구가 허용되고 어떤 문서가 필요한지를 결정합니다. 하드웨어 통제는 어느 나라가 독립적으로 프론티어 AI 개발을 지속할 수 있는지를 결정합니다. 미국, 중국, EU는 이 세 차원 모두에서 동시에 상호 양립 불가능한 전략을 추구하고 있습니다.',
-        ],
-      },
-      fiveGeopoliticalDimensions: {
-        title: 'AI의 5가지 지정학적 차원',
-        content: [
-          'AI 지정학은 5가지 별개의 차원에서 작동합니다. 각 차원은 미국, 중국, EU 간의 별도 경쟁의 장을 나타내며, 조직에게 서로 다른 의무와 위험을 창출합니다.',
-        ],
-        items: [
-          '**1. 경제.** AI는 생산성, 자동화, GDP 성장을 견인합니다. 우월한 AI 역량을 보유한 국가는 제조 효율성, 금융 모델링 우위, 더 빠른 과학적 발견을 통해 이익을 얻습니다. OECD는 AI가 2030년까지 전 세계 GDP에 15조 7천억 달러를 추가할 것으로 전망하며, 대부분은 선도적인 AI 국가들이 가져갈 것입니다.',
-          '**2. 군사.** AI는 자율 무기 시스템, 예측 물류, 전장 정보 처리, 기계 속도의 사이버 작전을 가능하게 합니다. 미국, 중국, 러시아 모두 AI 지원 군사 시스템을 개발하고 있습니다. 미국 국방부의 합동 인공지능센터(JAIC)와 중국의 군민융합 전략 모두 국방을 위해 AI를 우선시합니다.',
-          '**3. 정보.** AI는 인간 분석가가 불가능한 규모로 위성 이미지를 처리하고 신호를 감청하며 공개 출처 데이터를 분석합니다. NSA, GCHQ, 중국의 국가안전부(MSS) 모두 정보 수집과 분석에 AI를 활용합니다. AI 생성 합성 미디어(딥페이크)는 신흥 정보 및 영향력 작전 도구입니다.',
-          '**4. 인프라.** AI는 물리적 인프라에 의존합니다: 반도체 팹(TSMC, 삼성, 인텔), 데이터 센터, 해저 케이블, 전력망. 핵심 AI 인프라 — 칩 제조, 클라우드 플랫폼, 학습 컴퓨팅 — 를 통제하는 국가는 그렇지 못한 국가에 대해 구조적 레버리지를 보유합니다.',
-          '**5. 글로벌 거버넌스.** 어느 규제 체계가 글로벌 기본값이 되느냐에 따라 AI 시스템이 무엇을 할 수 있는지, 어떤 데이터를 사용할 수 있는지, 어떤 조직이 배포할 수 있는지가 결정됩니다. EU AI법, 미국 NIST 프레임워크, 중국의 CAC 규정은 세 가지 경쟁하는 거버넌스 모델을 대표하며 — 브뤼셀 효과는 EU의 모델이 이미 국경 너머에 적용되고 있음을 의미합니다.',
-        ],
-      },
-      threeWayRace: {
-        title: 'AI 군비 경쟁: 미국, 중국, EU',
-        content: [
-          '**세 가지 양립 불가능한 AI 거버넌스 비전이 글로벌 채택을 두고 경쟁하고 있습니다 — 미국은 혁신과 경쟁력을 우선시하고, 중국은 국가 주도로 전략적 AI 패권을 추구하며, EU는 브뤼셀 효과를 통해 자국 기준을 전 세계에 수출하는 권리 기반의 법적 체계를 구축합니다.** 이 AI 군비 경쟁은 주로 민간 영역입니다: 선두 연구소들은 민간 기업(OpenAI, Anthropic, Google DeepMind, Baidu, Alibaba)이지만, 규제 통제, 하드웨어 공급망, 인재라는 판돈은 지정학적입니다.',
-          '이 경쟁은 누가 가장 유능한 모델을 구축하느냐에 관한 것만이 아닙니다. 어느 규제 체계가 글로벌 기본값이 되느냐에 관한 것이기도 합니다. EU AI법은 EU 사용자에게 배포되는 모든 AI 시스템에 적용됨으로써 이미 브뤼셀을 OpenAI, Anthropic, Google DeepMind의 사실상 글로벌 규제자로 만들었습니다. 하드웨어 통제는 세 번째 차원입니다: CHIPS 및 과학법(520억 달러)과 Nvidia GPU 수출 통제는 중국의 컴퓨팅 접근을 제한하는 것을 목표로 합니다. 2025년 1월에 출시된 DeepSeek R1 — 학습 비용의 일부만으로 GPT-5.5와 경쟁력 있는 성능 — 은 그러한 통제에 한계가 있음을 입증했습니다.',
-        ],
-        items: [
-          '**미국의 위상:** 프론티어 모델 역량(GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro), 칩 설계(Nvidia, AMD), AI 투자(OECD에 따르면 2023년 민간 투자 670억 달러)에서 선두. 통합된 연방 AI 법률 부재 — 배포를 가속화하지만 컴플라이언스 분산을 야기.',
-          '**중국의 위상:** AI 특허 수량, 안면 인식 규모, 국가 주도 인프라 배포에서 선두. 모델들(Qwen 3, ERNIE 4.0, DeepSeek R1)은 많은 벤치마크에서 경쟁력이 있습니다. Nvidia 아키텍처에 대한 하드웨어 의존성이 수출 통제가 목표로 하는 주요 전략적 취약점입니다.',
-          '**유럽의 위상:** AI 규제에서 선두 — EU AI법이 글로벌 기준 프레임워크 — 오픈 가중치 연구(프랑스의 Mistral). 프론티어 모델 역량과 민간 투자에서는 뒤처짐. 브뤼셀 효과를 통한 규제 레버리지로 보완: 미국과 중국 공급업체가 글로벌 제품에 대해 EU 기준을 준수하도록 강제.',
-          '**하드웨어 계층:** Nvidia H100/H200 GPU가 AI 학습을 지배합니다. 미국 수출 통제는 중국 판매를 제한합니다. DeepSeek R1은 제한된 H800 GPU로 약 600만 달러에 학습되었으며 — GPT-5.5 학습 추정 비용 대비 94% 절감 — 하드웨어 통제가 중국의 프론티어 AI를 저지하지 못했음을 입증했습니다.',
-        ],
-        image: '/images/regional-ai-players-en.svg',
-        imageCaption: '미국: OpenAI, Anthropic, Google DeepMind (VC 지원). EU: Mistral, Hugging Face (오픈소스, 미국 대비 투자 부족). 중국: Baidu, Alibaba, Tencent (국가 지원, CAC 감독).',
-      },
-      regulatoryComparison: {
-        title: '글로벌 AI 규제: EU vs 미국 vs 중국 비교',
-        content: [
-          '**세 가지 주요 AI 규제 체계는 철학, 법적 효력, 국제적 적용 범위에서 근본적으로 다릅니다.** 이러한 차이를 이해하는 것은 관할권을 넘나들며 운영하거나 서로 다른 규제 블록에 본사를 둔 공급업체의 AI 도구를 사용하는 조직에게 필수적입니다.',
-        ],
-        tableFormat: true,
-        columns: ['차원', 'EU', '미국', '중국'],
-        rows: [
-          { '차원': '주요 접근방식', 'EU': '권리 기반 법적 체계 — AI법이 기본권 위험에 따라 시스템을 분류', '미국': '부문별, 혁신 우선 — 기존 규제 기관이 각 도메인의 권한을 AI에 적용; 연방 AI 법률 없음', '중국': '국가 주도, 통제 우선 — AI가 국가 발전과 사회 거버넌스 목표에 봉사' },
-          { '차원': '핵심 법률', 'EU': 'EU AI법(2024) — 의무적 컴플라이언스; GDPR은 AI 학습 데이터 및 출력에 적용', '미국': '연방 AI 법률 없음. [NIST AI RMF](https://www.nist.gov/ai-risk-management-framework) (자발적). EO 14110(바이든, 2025년 폐기); AI 행동 계획(트럼프 2025)', '중국': '알고리즘 추천 규정(2022); 생성 AI 조치(2023); 모두 CAC가 집행' },
-          { '차원': '위험 체계', 'EU': '4단계: 허용 불가(금지), 고위험(적합성 평가 필요), 제한적(공개), 최소(특정 의무 없음)', '미국': '자발적 [NIST AI RMF](https://www.nist.gov/ai-risk-management-framework) — 7가지 신뢰성 차원; 의무적 등급화 없음', '중국': '배포 전 생성 AI 서비스에 보안 평가 필요; 콘텐츠는 "사회주의 핵심 가치"에 부합해야 함' },
-          { '차원': '최대 과태료', 'EU': '금지된 관행에 대해 €3,500만 또는 전 세계 연간 매출의 7%; 고위험 위반 시 €1,500만 또는 3%', '미국': '연방 AI 특정 과태료 없음. FTC는 불공정/기만적 관행 주장 가능; 주(州)별 과태료 다양', '중국': '알고리즘 규칙 위반당 최대 ¥100,000; 비준수 생성 AI에 대한 서비스 중단' },
-          { '차원': '데이터 보호', 'EU': 'GDPR + AI법 — 개인 데이터로 AI 학습 시 법적 근거 필요; 개인 데이터에 관련된 출력에는 GDPR 컴플라이언스 필요', '미국': '부문별: HIPAA(의료), CCPA/CPRA(캘리포니아), FERPA(교육); GDPR에 상응하는 연방법 없음', '중국': 'PIPL(개인정보 보호법, 2021) 적용; 국가 보안 기관이 데이터 접근권 보유' },
-          { '차원': '금지 응용 프로그램', 'EU': '공공 기관의 사회적 점수 시스템; 공공장소 실시간 생체 인식 감시; 인지 취약성을 이용하는 AI; 인터넷에서 안면 이미지 비표적 수집', '미국': '연방 차원 금지 AI 응용 없음; 일부 주 차원 금지(예: 생체 인식에 관한 일리노이주 BIPA)', '중국': 'CPC 지도부, 국가 권위 또는 "사회주의 핵심 가치"를 훼손하는 콘텐츠; 딥페이크 공개 의무' },
-          { '차원': '집행 기관', 'EU': 'EU AI 사무소(GPAI 모델) + 국가 시장 감시 기관(고위험 AI) + 데이터 보호 당국(GDPR 교차점)', '미국': 'FTC(소비자 보호), FDA(의료 AI), CFPB(금융 AI), EEOC(고용 AI), NIST(표준)', '중국': 'CAC(사이버공간 관리국) — 주요 집행 기관; MIIT와 SAMR은 산업별 AI 담당' },
-          { '차원': '국제적 적용 범위', 'EU': '브뤼셀 효과 — EU 시장에 출시되거나 출력이 EU에서 사용되는 모든 AI에 적용; 설계상 역외 적용', '미국': 'AI 하드웨어에 대한 수출 통제가 글로벌 공급망에 영향; 역외 콘텐츠 규제 없음', '중국': 'BRI AI 수출이 중국식 AI 거버넌스 규범을 전파; 그레이트 파이어월이 국내에서 외국 AI 서비스 접근을 제한' },
-        ],
-        image: '/images/ai-three-region-framework-en.svg',
-        imageCaption: 'EU는 권리 기반 규정 집행(EU AI법, €3,500만 과태료); 미국은 자발적 부문별 감독 선호(NIST RMF); 중국은 CAC 승인을 통한 국가 통제 집행.',
-      },
-      organizationsImplications: {
-        title: 'AI 지정학적 위험: 조직에 대한 시사점',
-        content: [
-          '**AI를 도입하는 조직에게 지정학적 경쟁은 네 가지 구체적인 운영 결정으로 전환됩니다: 어떤 AI 도구가 허용되는지, 데이터를 어디에 저장할 수 있는지, 어떤 컴플라이언스 문서가 필요한지, 그리고 규제가 얼마나 빠르게 변화할 것인지.** 이러한 결정은 조직이 EU에 기반을 두고 있는지, EU 시장에서 운영하는지, 미국 또는 중국 AI 공급업체를 사용하는지에 따라 크게 달라집니다.',
-          'PromptQuorum은 컴플라이언스를 고려한 모델 선택을 지원합니다 — EU 컴플라이언트 모델(Mistral, 로컬 Ollama)과 미국 프론티어 모델에 프롬프트를 동시에 발송하여 별도의 인프라 없이 EU AI법 준수 옵션과 독점적 대안을 벤치마크할 수 있습니다.',
-          '모델 가용성을 형성하는 지정학적 역학은 오픈소스 대 독점 모델 문제를 특히 중요하게 만듭니다. 오픈소스가 유리한 경우와 독점 모델이 비용 대비 가치가 있는 경우에 대한 완전한 비교는 [오픈소스 vs 독점 LLM](https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms)을 참조하십시오.',
-        ],
-        items: [
-          '**EU 소재 조직:** [EU AI법](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)을 직접 준수해야 합니다. 고위험 AI 시스템(HR, 신용, 의료, 공공 서비스)은 2026년 8월 전에 적합성 평가, 인간 감독 문서, [EU AI 데이터베이스](https://digital-strategy.ec.europa.eu/en/policies/ai-office) 등록이 필요합니다. 개인 데이터를 처리하는 모든 AI는 AI 학습 파이프라인과 출력 처리를 포함하여 GDPR을 준수해야 합니다.',
-          '**EU 사용자를 대상으로 하는 비EU 조직:** 브뤼셀 효과의 적용을 받습니다 — [EU AI법](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)은 EU 사용자에게 도달하는 AI 출력에 적용됩니다. EU 대상 제품에 사용되는 GPAI 모델은 투명성 의무를 준수해야 합니다(2025년 8월부터). 미준수 시 EU 본사 위반자와 동일한 과태료가 부과됩니다.',
-          '**EU 배포에서의 미국 AI 도구:** GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro는 모두 GPAI 모델로 분류됩니다. OpenAI, Anthropic, Google은 EU AI법 GPAI 컴플라이언스 문서를 공개했습니다. 고위험 AI 시스템에서 이러한 도구를 사용하는 조직(배포자)은 자체 적합성 평가에 대한 책임이 있습니다 — 공급업체의 GPAI 컴플라이언스가 배포를 포괄하지는 않습니다.',
-          '**중국 AI 도구:** DeepSeek R1 및 기타 중국 모델은 국제적으로 이용 가능하지만 EU 및 미국 조직에게 추가적인 조달 위험을 수반합니다 — 데이터 거주가 불명확하고, 공급업체가 CAC 콘텐츠 규정의 적용을 받으며, CAC가 데이터 공개를 강제할 수 있습니다. EU 및 NATO 회원국의 정부 및 핵심 인프라 조직은 중국 AI 도구 사용을 제한하거나 금지하고 있습니다.',
-          '**데이터 거주:** EU GDPR은 "적정성" 결정이나 적절한 안전장치가 없는 국가로의 개인 데이터 이전을 제한합니다. 미국 공급업체를 통한 개인 데이터 AI 추론에는 표준 계약 조항(SCC) 또는 EU-미국 데이터 프라이버시 프레임워크(2023)에 의존해야 합니다. 중국으로의 이전에는 적정성 결정이 없습니다 — 계약적 안전장치가 마련되어야 하며 집행하기 어렵습니다.',
-          '**조달 결정:** 미국 연방 기관은 중국 지정 기업의 AI 사용이 금지됩니다. 여러 EU 회원국(독일, 프랑스, 네덜란드)은 정부 조달에서 중국 AI 도구를 제한하는 지침을 발표했습니다. 민간 부문 조직의 경우 조달 정책은 AI 공급업체의 학습 데이터 관할권, 콘텐츠 조정 관행, 정부 접근 조항을 다루어야 합니다.',
-          '**규제 변화 모니터링:** AI 규제의 변화 속도는 빠릅니다. 트럼프 행정부의 2025년 바이든 행정명령 철회, EU AI법의 단계적 집행 일정, 중국의 지속적인 CAC 규칙 업데이트는 몇 달 내에 컴플라이언스 상태가 변할 수 있음을 의미합니다. 조직은 AI 거버넌스 담당자를 지정하고 [EU AI 사무소](https://digital-strategy.ec.europa.eu/en/policies/ai-office) 뉴스레터와 [OECD AI 정책 관측소](https://oecd.ai) 업데이트를 구독해야 합니다.',
-        ],
-        image: '/images/compliance-burden-comparison-en.svg',
-        imageCaption: 'EU: 컴플라이언스 비용 $50만~$200만+, 6~12개월, 규범적 규정. 미국: $5만~$30만, 2~4개월, 자발적. 중국: $20만~$100만+, CAC 승인 불확실.',
-      },
-      faq: {
-        id: 'faq',
-        title: '자주 묻는 질문',
-        faqs: [
-          { q: 'EU AI법이란 무엇이며 언제 적용됩니까?', a: 'EU AI법은 세계 최초의 포괄적 AI 법률로, 2024년 3월 유럽 의회에서 523표 찬성으로 통과되었습니다. 금지 관행은 2024년 8월부터 적용됩니다. GPAI 모델 의무(GPT-5.5, Claude, Gemini급 모델)는 2025년 8월부터 적용됩니다. 고위험 AI 시스템 요건은 2026년 8월부터 적용됩니다. EU 시장에 AI를 출시하거나 EU 거주자에게 영향을 미치는 AI를 사용하는 모든 조직에 적용됩니다.' },
-          { q: 'EU AI법이 비EU 기업에도 적용됩니까?', a: '예. EU AI법은 역외 적용 범위를 가집니다 — 공급업체의 본사 위치에 관계없이 EU에서 사용되는 AI 출력을 제공하는 모든 조직에 적용됩니다. EU 사용자가 사용하는 AI 제품을 보유한 미국 기업도 준수해야 합니다. 이것이 GDPR을 글로벌 표준으로 만든 것과 동일한 역외 원칙입니다.' },
-          { q: 'EU AI법 위반 시 과태료는 얼마입니까?', a: '금지된 AI 관행에 대해 최대 €3,500만 또는 전 세계 연간 매출의 7%(어느 쪽이든 더 높은 금액)의 과태료가 부과됩니다. 고위험 AI 위반에는 최대 €1,500만 또는 3%가 적용됩니다. 집행 당국에 부정확한 정보 제공 시 최대 €750만 또는 1%가 부과됩니다. 백분율과 고정 금액 중 더 높은 쪽이 적용됩니다.' },
-          { q: 'EU AI법에서 금지하는 AI 응용 프로그램은 무엇입니까?', a: '금지(허용 불가 위험): 공공 기관의 사회적 점수 시스템; 공공장소 실시간 생체 인식 식별(좁은 예외 있음); 심리적 취약성을 이용하는 AI; 인터넷에서 안면 이미지를 비표적으로 수집하는 행위. 이들은 2024년 8월부터 금지되었습니다.' },
-          { q: '미국 AI 규제는 EU와 어떻게 다릅니까?', a: '미국에는 연방 AI 법률이 없습니다. 기존 부문별 규제 기관(FTC, FDA, CFPB, EEOC)이 각 도메인에서 AI에 기존 권한을 적용합니다. 바이든 AI 안전 행정명령(2023년 10월)은 2025년 1월에 폐기되고 경쟁력 중심의 AI 행동 계획으로 대체되었습니다. NIST AI 위험 관리 프레임워크는 자발적입니다. 미국 규제는 사후 대응적이고 부문별이며, EU 규제는 사전 예방적이고 수평적입니다.' },
-          { q: 'EU 조직에서 DeepSeek를 사용하는 것이 안전합니까?', a: 'DeepSeek는 CAC(사이버공간 관리국) 규정의 적용을 받아 중국 정부가 데이터 공개를 강제할 수 있습니다. DeepSeek의 개인정보 처리방침은 데이터가 중국 내 서버에 저장된다고 명시합니다. 개인 데이터를 처리하는 EU 조직에게 DeepSeek 사용은 집행하기 어려운 GDPR 준수 데이터 이전 안전장치(SCC)가 필요합니다. EU 회원국의 정부 및 핵심 인프라 조직은 일반적으로 중국 AI 도구를 피하고 있습니다.' },
-          { q: '브뤼셀 효과란 무엇입니까?', a: '브뤼셀 효과는 다국적 기업이 관할권별로 별도의 컴플라이언스를 유지하는 것보다 가장 엄격한 기준을 전 세계에 적용하는 것을 선호하기 때문에 EU 규정이 사실상 글로벌 표준이 되는 현상을 설명합니다. GDPR이 이 방식으로 글로벌 프라이버시 표준이 되었습니다. EU AI법도 AI에 같은 작용을 하고 있습니다 — OpenAI, Anthropic, Google은 EU 전용 버전만이 아니라 글로벌 제품에 대해 EU AI법 GPAI 요건을 준수해야 합니다.' },
-          { q: '블레츨리 파크 AI 안전 정상회담은 무엇을 달성했습니까?', a: '2023년 11월 블레츨리 파크 AI 안전 정상회담은 블레츨리 선언을 이끌어냈습니다 — 미국, 중국, EU 회원국을 포함한 28개국이 서명하여 프론티어 AI가 심각한 위험을 초래하며 국제 협력이 필요하다는 것을 인정했습니다. 이 정상회담은 영국 AI 안전 연구소(AISI)를 설립하고 미국 등에서 글로벌 AI 안전 연구소 시리즈를 시작했습니다. 광범위한 지정학적 긴장에도 불구하고 중국의 참여는 주목할 만했습니다.' },
-          { q: '프랑스는 독일과 어떻게 다르게 AI를 지원합니까?', a: '프랑스는 고프로필 국제적 위상 확보(2025년 2월 파리 AI 행동 정상회담)와 INRIA 및 CNRS를 통한 오픈 가중치 AI 연구를 우선시하며 20억 유로의 공공 투자를 단행했습니다. 독일은 프라운호퍼 협회와 DFKI를 통한 응용 산업 AI에 집중하며 2019~2025년 50억 유로를 투자하고 연방 법률을 통한 AI 거버넌스와 책임 프레임워크를 강조합니다. 두 나라 모두 국가 AI 전략이 있지만 부문별 강조점이 다릅니다.' },
-          { q: 'EU AI법은 프롬프트 엔지니어링에 사용되는 AI에 어떤 영향을 미칩니까?', a: '대부분의 프롬프트 엔지니어링 작업은 제한적 또는 최소 위험 범주에 해당합니다 — 표준 챗봇과 AI 글쓰기 도구는 공개(사용자가 AI와 상호작용하고 있다는 사실 인지)가 필요하지만 적합성 평가는 필요하지 않습니다. 고위험 분류는 AI가 중요한 결정을 내릴 때 적용됩니다: 고용 심사, 신용 평가, 교육 평가, 법 집행. [실제 AI 한계](/prompt-engineering/ai-limitations-what-llms-cant-do)는 고위험 시스템 문서 요건과 관련이 있습니다.' },
-          { q: '히로시마 AI 프로세스란 무엇이며 무엇을 달성했습니까?', a: '히로시마 AI 프로세스는 일본의 G7 의장국 시절 2023년 히로시마 정상회담에서 시작된 G7 이니셔티브입니다. 2023년 10월 G7 국가들이 채택한 히로시마 AI 프로세스 행동 강령 — 첨단 AI 시스템 개발자를 위한 11가지 자발적 지도 원칙 — 을 만들어냈습니다. 원칙은 투명성, 사고 보고, 안전 테스트, AI 생성 콘텐츠 워터마킹을 다룹니다. 이탈리아의 2024년 G7 의장국은 더 넓은 국제 AI 거버넌스 의제로 프레임워크를 확장했습니다. 행동 강령은 법적 구속력이 없는 자발적 사항이지만 EU의 법적 구속력 있는 AI법과는 별도의 국제 조율을 신호합니다.' },
-          { q: 'EU 조직이 상업적 응용에 DeepSeek를 사용할 수 있습니까?', a: '기술적으로는 GDPR 준수 계약적 안전장치(표준 계약 조항)를 통해 가능합니다. 실질적으로는 SCC는 CAC 데이터 공개 요청에 DeepSeek가 응해야 하는 중국 법률 의무에 대해 집행하기 어렵습니다. 정부 조달은 별도의 제약입니다: 독일 BSI, 프랑스 ANSSI, 네덜란드 NCSC는 정부 및 핵심 인프라 사용에 대해 중국 AI 도구에 대한 권고사항이나 제한을 발표했습니다. EU 민간 부문 조직은 상업적으로 DeepSeek를 사용할 수 있지만 GDPR 제46조에 따른 이전 영향 평가를 실시하고 잔류 위험을 문서화해야 합니다. 대부분의 법률 자문은 DeepSeek를 통한 개인 데이터 처리에 반대합니다.' },
-          { q: 'EU AI법이 EU 경쟁력에 도움이 됩니까, 해가 됩니까?', a: '이것은 진정한 전략적 딜레마입니다: EU AI법은 EU AI 스타트업을 늦출 수 있지만 유럽의 글로벌 규제 신뢰성을 강화합니다. 한편으로는 컴플라이언스 비용과 적합성 평가가 EU 기업에 마찰을 일으킵니다 — 프랑스의 Mistral AI는 미국 경쟁자보다 더 많은 제약을 받습니다. 다른 한편으로는 브뤼셀 효과가 EU의 규제 체계를 글로벌 표준으로 만들어 EU 기반 기업에게 컴플라이언스 경쟁력 우위를 제공하고 EU에게 미국/중국 기술 대기업에 대한 레버리지를 부여합니다. 유럽은 미국이나 중국과 근본적으로 다른 AI 전략인 "원시 역량 리더십"이 아닌 "규제 리더십"에 베팅하고 있으며, 이는 유럽을 2등 기술 생산자가 아닌 글로벌 AI 거버넌스에 필수 불가결한 존재로 만드는 전략입니다.' },
-          { q: '유럽의 컴퓨팅 역량은 미국, 중국과 어떻게 비교됩니까?', a: '유럽은 컴퓨팅 인프라에서 크게 뒤처집니다. 미국은 GPU 제조(Nvidia ~80% 시장점유율)와 맞춤형 실리콘(Google TPU, Amazon Trainium)을 지배합니다. 중국은 TSMC(대만)에서 제조하고 제한된 Nvidia H시리즈 및 A시리즈 GPU를 사용합니다. 유럽에는 이에 상응하는 것이 없습니다: ASML(네덜란드)은 칩 제조 장비를 만들지만 팹을 소유하지 않습니다. EU 칩법(430억 유로, 2023~2032)은 EU 영토 내 Intel 및 TSMC 팹 건설을 목표로 하지만, 어느 것도 2027~2029년 이전에 가동되지 않을 것입니다 — 투자만으로는 메울 수 없는 3~5년의 컴퓨팅 역량 적자입니다.' },
-          { q: '규제 외 유럽의 AI 우위는 무엇입니까?', a: '유럽에는 세 가지 비규제적 우위가 있습니다: (1) EU(프랑스, 독일)가 지원하는 Mistral AI 및 기타 오픈 가중치 모델이 미국 또는 중국 의존성 없는 GDPR 준수 대안을 제공합니다; (2) 유럽은 영국 AI 안전 연구소, ETH 취리히, 프랑스 연구 센터(INRIA, CNRS)를 통한 AI 안전 연구에서 선두입니다; (3) 유럽의 고학력 인력과 기존 소프트웨어/반도체 인재가 AI 응용 분야와 맞춤형 실리콘(Arm, RISC-V 칩 설계)에서 우위를 제공합니다. 그러나 이 중 어느 것도 프론티어 모델 역량에서 유럽의 불리함을 상쇄하지 못합니다 — 미국이 GPT-5.5, Claude, Gemini에서 선두이고 중국이 배포 규모와 수량에서 선두입니다. 유럽의 전략은 "원시 역량 경쟁보다 잘하는 것(안전, 규제, 윤리)을 하는 것"입니다.' },
-        ],
-      },
-      sources: {
-        title: '출처',
-        items: [
-          '유럽 의회, "인공지능법" — 공식 텍스트, 2024년 3월. [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)',
-          '유럽 위원회, "AI 사무소" — GPAI 컴플라이언스 문서 및 집행 지침. [AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office)',
-          'NIST, "인공지능 위험 관리 프레임워크(AI RMF 1.0)" — 2023년 1월. [NIST](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)',
-          '영국 정부, "AI 안전 정상회담 — 블레츨리 선언" — 2023년 11월. [Gov.uk](https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration)',
-          '중국 사이버공간 관리국, "생성 인공지능 서비스 관리 규정" — 2023년 7월',
-          'DeepSeek-AI, "DeepSeek-R1: 강화 학습을 통한 LLM의 추론 역량 강화" — arXiv:2501.12948, 2025년 1월',
-          'OECD AI 정책 관측소 — [oecd.ai](https://oecd.ai) — 국가별 AI 정책 데이터베이스 및 비교 분석',
-          '독일 연방 정부, "인공지능 전략" — 국가 AI 전략, 2023년 업데이트. [Bundesregierung](https://www.bundesregierung.de/breg-de/themen/digitalisierung/ki-strategie)',
-          'Rishi Sunak, AI 안전 정상회담 수상 연설 — 2023년 11월. [Gov.uk](https://www.gov.uk/government/speeches/pm-speech-at-the-ai-safety-summit-1-november-2023)',
-        ],
-      },
-    },
-  },
 };
