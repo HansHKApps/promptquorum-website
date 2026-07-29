@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-protocols-explained-overview-hero-en.png',
     title: 'Matter, Thread, Zigbee, Z-Wave: Protocols Explained (2026)',
     seoTitle: 'Smart Home Protocols 2026: Matter, Thread, Zigbee, Z-Wave',
     intro:
@@ -197,6 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-protocols-explained-overview-hero-ar.png',
     title: '⁨Matter⁩ و⁨Thread⁩ و⁨Zigbee⁩ و⁨Z-Wave⁩: شرح البروتوكولات (⁨2026⁩)',
     seoTitle: '⁨Zigbee⁩ و⁨Z-Wave⁩ و⁨Matter⁩ و⁨Thread⁩: الدليل ⁨2026⁩',
     intro:
@@ -386,6 +388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-protocols-explained-overview-hero-de.png',
     title: 'Matter, Thread, Zigbee, Z-Wave: Protokolle erklärt (2026)',
     seoTitle: 'Smart-Home-Protokolle 2026: Matter, Thread, Zigbee, Z-Wave',
     intro:
@@ -575,6 +578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-protocols-explained-overview-hero-es.png',
     title: 'Matter, Thread, Zigbee, Z-Wave: Protocolos Explicados (2026)',
     seoTitle: 'Protocolos Smart Home 2026: Matter, Thread, Zigbee, Z-Wave',
     intro:
@@ -764,6 +768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-protocols-explained-overview-hero-ko.png',
     title: 'Matter, Thread, Zigbee, Z-Wave: 프로토콜 설명 (2026)',
     seoTitle: '스마트홈 프로토콜 2026: Matter, Thread, Zigbee, Z-Wave',
     intro:
@@ -953,6 +958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-protocols-explained-overview-hero-fr.png',
     title: 'Matter, Thread, Zigbee, Z-Wave : Protocoles Expliqués (2026)',
     seoTitle: 'Protocoles de la Maison Connectée Expliqués (2026)',
     intro:
@@ -1142,6 +1148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-protocols-explained-overview-hero-ja.png',
     title: 'Matter・Thread・Zigbee・Z-Wave：プロトコル解説（2026）',
     seoTitle: 'スマートホームプロトコル完全解説（2026年版）：メッシュ・ローカル・互換性',
     intro:
@@ -1331,6 +1338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-protocols-explained-overview-hero-pt.png',
     title: 'Matter, Thread, Zigbee, Z-Wave: Protocolos Explicados (2026)',
     seoTitle: 'Protocolos da Casa Inteligente 2026: Matter, Thread, Zigbee',
     intro:
@@ -1520,6 +1528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-protocols-explained-overview-hero-zh.png',
     title: 'Matter、Thread、Zigbee、Z-Wave：协议详解（2026）',
     seoTitle: '智能家居通信协议深度解析2026：网状、本地控制与协议互操作全面对比',
     intro:

@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
       title: 'Fix Local LLM Errors in 2026: 11 Common Problems in Ollama, LM Studio, and vLLM',
+      heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-en.png',
       seoTitle: 'Fix Local LLM Errors: OOM, GPU Detection, Port 11434',
       intro: 'The most common errors in local LLMs are out-of-memory crashes, GPU not detected, extremely slow CPU inference, connection refused from the API, and garbled output. As of July 2026, there are solutions for all 11 errors -- most require only one or two terminal commands. This guide covers Ollama (port 11434), LM Studio (port 1234), and vLLM with exact commands for each error.',
       metaDescription: '11 common local LLM errors fixed: OOM kills, GPU not detected, port 11434 refused, slow CPU fallback, unknown remote host. Fix commands for Ollama + LM Studio.',
@@ -334,6 +335,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
       title: 'Corregir errores de LLM local en 2026: 11 problemas frecuentes en Ollama, LM Studio y vLLM',
+      heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-es.png',
       seoTitle: 'Errores de LLM local: OOM, GPU no detectada y puerto 11434',
       intro: 'Los errores más comunes en los LLM locales son los cuelgues por falta de memoria, la GPU no detectada, la inferencia en CPU extremadamente lenta, la conexión rechazada por la API y la salida corrupta. A partir de julio de 2026, existen soluciones para los 11 errores — la mayoría requieren solo uno o dos comandos de terminal. Esta guía cubre Ollama (puerto 11434), LM Studio (puerto 1234) y vLLM con comandos exactos para cada error.',
       metaDescription: '11 errores comunes de LLM local resueltos: cuelgues OOM, GPU no detectada, puerto 11434 rechazado, CPU lenta y host remoto inesperado. Comandos para Ollama y LM Studio.',
@@ -657,6 +659,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
       title: 'إصلاح أخطاء ⁨LLM⁩ المحلي في ⁨2026⁩: ⁨11⁩ مشكلة شائعة في ⁨Ollama⁩ و⁨LM Studio⁩ و⁨vLLM⁩',
+      heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-ar.png',
       seoTitle: 'إصلاح أخطاء ⁨LLM⁩ المحلي: ⁨OOM⁩ و⁨GPU⁩ والمنفذ ⁨11434⁩',
       intro: 'أكثر الأخطاء شيوعًا في نماذج LLM المحلية هي التعليق بسبب نفاد الذاكرة، وعدم اكتشاف GPU، والاستدلال البطيء للغاية على CPU، ورفض الاتصال من API، والمخرجات التالفة. اعتبارًا من يوليو 2026، توجد حلول لكل الأخطاء الإحدى عشرة -- معظمها يتطلب أمرًا أو أمرين فقط في الطرفية. يغطي هذا الدليل Ollama (المنفذ 11434)، وLM Studio (المنفذ 1234)، وvLLM بأوامر دقيقة لكل خطأ.',
       metaDescription: '⁨11⁩ خطأ شائعًا في ⁨LLM⁩ المحلي: تعليق ⁨OOM⁩ يُحل بـ ⁨Q4⁩_⁨K⁩_⁨M⁩، ⁨GPU⁩ غير محتجزة، رفض منفذ ⁨11434⁩، ومضيف بعيد غير متوقع. أوامر دقيقة لـ ⁨Ollama⁩ و⁨LM Studio⁩.',
@@ -982,6 +985,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
       title: 'Corrigir erros de LLM local em 2026: 11 problemas frequentes no Ollama, LM Studio e vLLM',
+      heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-pt.png',
       seoTitle: 'Erros de LLM local: OOM, GPU não detectada e porta 11434',
       intro: 'Os erros mais comuns em LLMs locais são travamentos por falta de memória, GPU não detectada, inferência em CPU extremamente lenta, conexão recusada pela API e saída corrompida. A partir de julho de 2026, existem soluções para os 11 erros — a maioria requer apenas um ou dois comandos de terminal. Este guia cobre Ollama (porta 11434), LM Studio (porta 1234) e vLLM com comandos exatos para cada erro.',
       metaDescription: '11 erros comuns de LLM local resolvidos: travamentos OOM, GPU não detectada, porta 11434 recusada, CPU lenta e host remoto inesperado. Comandos para Ollama e LM Studio.',
@@ -1306,6 +1310,7 @@ schema: {
     de: {
   theme: 'Getting Started',
   title: 'Lokale LLM-Fehler 2026 beheben: 11 häufige Probleme in Ollama, LM Studio und vLLM',
+      heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-de.png',
   seoTitle: 'Lokale LLM-Fehler beheben: OOM, GPU, Port 11434 2026',
   intro: 'Die häufigsten Fehler bei lokalen LLMs sind Out-of-Memory-Abstürze, GPU wird nicht erkannt, extrem langsame CPU-Inferenz, Connection Refused vom API und fehlerhafte Ausgabe. Stand Juli 2026 gibt es Lösungen für alle 11 Fehler — die meisten erfordern nur ein bis zwei Terminal-Befehle. Dieser Leitfaden behandelt Ollama (Port 11434), LM Studio (Port 1234) und vLLM mit exakten Befehlen für jeden Fehler.',
   metaDescription: '11 häufige lokale LLM-Fehler behoben: OOM, GPU nicht erkannt, Port 11434 abgelehnt, langsamer CPU-Fallback, unerwarteter Remote-Host. Fix-Befehle für Ollama + LM Studio.',
@@ -1614,12 +1619,23 @@ schema: {
       ],
     },
   },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'name': 'Grundlagen zur Fehlerbehebung bei lokalen LLMs',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'OOM-Fehler', 'description': 'Behebe Out-of-Memory-Abstürze durch Wechsel zu Q4_K_M-Quantisierung oder kleineren Modellen. Prüfe den RAM mit free -h, bevor du Modelle herunterlädst.' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'GPU-Erkennung', 'description': 'Aktiviere die GPU durch Installation von NVIDIA-Treibern 525+, CUDA 11.3+ oder ROCm 5.7+ für AMD. Setze OLLAMA_GPU_LAYERS=999 für vollständiges GPU-Offloading.' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Langsame Inferenz', 'description': 'Prüfe die GPU-Aktivität mit ollama ps. Bei reinem CPU-Betrieb reduziere die Modellgröße oder nutze Q4_K_M-Quantisierung.' },
+    ],
+  },
   gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
   gammaDescription: 'Die folgende Präsentation behandelt: die 10 häufigsten Fehler beim Einrichten lokaler LLMs (Out-of-Memory, GPU nicht erkannt, langsame Inferenz, Connection Refused, fehlerhafte Ausgabe), RAM-Anforderungen für 3B–14B-Modelle bei Q4_K_M- und Q8_0-Quantisierung, einen 5-Schritte-Debugprozess und Ollama-Befehle für jeden Fix. Fehler 11 (unerwarteter Remote-Host) wird im Artikeltext behandelt. Als PDF herunterladen als Referenzkarte für die Fehlerbehebung bei lokalen LLMs.',
 },
     fr: {
     theme: 'Getting Started',
     title: 'Corriger les erreurs locales LLM 2026 : 11 problèmes courants dans Ollama, LM Studio et vLLM',
+      heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-fr.png',
     seoTitle: 'Corriger les erreurs LLM local : OOM, GPU, port 2026',
     intro: 'Les erreurs les plus courantes dans les LLM locaux sont les plantages manque de mémoire, GPU non détecté, inférence CPU extrêmement lente, connexion refusée par l\'API et sortie brouillée. En juillet 2026, il y a des solutions pour les 11 erreurs - la plupart nécessitent seulement une ou deux commandes de terminal. Ce guide couvre Ollama (port 11434), LM Studio (port 1234) et vLLM avec des commandes exactes pour chaque erreur.',
     metaDescription: '11 erreurs LLM local corrigées : OOM, GPU non détecté, port 11434 refusé, repli CPU lent, hôte distant inattendu. Commandes de correction Ollama + LM Studio.',
@@ -1927,12 +1943,23 @@ schema: {
           ],
         },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Essentiels du dépannage LLM local',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Erreurs OOM', 'description': 'Corrigez les plantages par manque de mémoire en passant à la quantification Q4_K_M ou à des modèles plus petits. Vérifiez la RAM avec free -h avant de télécharger des modèles.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Détection GPU', 'description': 'Activez le GPU en installant les pilotes NVIDIA 525+, CUDA 11.3+, ou ROCm 5.7+ pour AMD. Définissez OLLAMA_GPU_LAYERS=999 pour un déchargement GPU complet.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Inférence lente', 'description': 'Confirmez l\'activité GPU avec ollama ps. En cas de fonctionnement CPU uniquement, réduisez la taille du modèle ou utilisez la quantification Q4_K_M.' },
+        ],
+      },
       gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
       gammaDescription: 'La présentation suivante couvre : les 10 erreurs les plus courantes dans la configuration des LLM locaux (manque de mémoire, GPU non détecté, inférence lente, connexion refusée, sortie brouillée), les exigences RAM pour les modèles 3B–14B en quantification Q4_K_M et Q8_0, un processus de débogage en 5 étapes et les commandes Ollama pour chaque correction. L\'erreur 11 (hôte distant inattendu) est couverte dans le texte de l\'article. Télécharger le PDF comme carte de référence pour le dépannage des LLM locaux.',
     },
     ja: {
   theme: 'Getting Started',
   title: 'ローカルLLMエラーを2026年に修正する：Ollama、LM Studio、vLLMの10個の一般的な問題',
+      heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-ja.png',
   seoTitle: 'ローカルLLMエラー修正：OOM・GPU未検出・ポート11434対処法2026',
   intro: 'ローカルLLMで最も一般的なエラーは、メモリ不足のクラッシュ、GPUが検出されない、CPU推論が非常に遅い、APIからの接続拒否、出力が破損しているです。2026年7月現在、すべての11のエラーに対する修正が存在します。ほとんどの場合、1、2個のターミナルコマンドのみが必要です。このガイドは、Ollama（ポート11434）、LM Studio（ポート1234）、vLLMをカバーし、各エラーのための正確なコマンドを提供します。',
   metaDescription: 'OOMエラー、GPU未検出、ポート11434拒否、予期しないリモートホストなど11の頻出ローカルLLMエラーをOllama・LM Studioで修正するコマンド一覧。',
@@ -2300,12 +2327,23 @@ schema: {
       ],
     },
   },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'name': 'ローカルLLMトラブルシューティングの要点',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'OOMエラー', 'description': 'Q4_K_M量子化または小さいモデルに切り替えてメモリ不足によるクラッシュを解消します。モデルをダウンロードする前にfree -hでRAMを確認してください。' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'GPU検出', 'description': 'NVIDIAドライバー525以降、CUDA 11.3以降、またはAMD向けROCm 5.7以降をインストールしてGPUを有効化します。完全なGPUオフロードにはOLLAMA_GPU_LAYERS=999を設定してください。' },
+      { '@type': 'ListItem', 'position': 3, 'name': '推論が遅い', 'description': 'ollama psでGPUの稼働状況を確認してください。CPUのみで動作している場合は、モデルサイズを縮小するかQ4_K_M量子化を使用してください。' },
+    ],
+  },
   gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
   gammaDescription: '以下のプレゼンテーションでは、ローカルLLMセットアップの最も一般的な10のエラー（メモリ不足、GPU未検出、推論遅延、接続拒否、出力破損）、Q4_K_MとQ8_0量子化での3B〜14Bモデルのメモリ要件、5ステップのデバッグプロセス、各修正のOllamaコマンドを解説します。エラー11（予期しないリモートホスト）は記事本文で解説しています。ローカルLLMトラブルシューティングリファレンスカードとしてPDFをダウンロード。',
 },
     zh: {
       theme: '入门指南',
   title: '修复本地 LLM 错误 2026：Ollama、LM Studio 和 vLLM 的 11 个常见问题',
+      heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-zh.png',
   seoTitle: '本地LLM报错修复：OOM、GPU未检测、端口11434故障解决指南2026',
   intro: '本地 LLM 最常见的错误包括内存不足崩溃、GPU 无法检测、CPU 推理速度极慢、API 连接被拒绝和输出乱码。截至 2026 年 7 月，所有 11 个错误都有解决方案——大多数只需要一两个终端命令。本指南涵盖 Ollama（端口 11434）、LM Studio（端口 1234）和 vLLM，包含每个错误的确切命令。',
   metaDescription: '11个常见本地LLM报错修复方案：OOM内存溢出、GPU未检测、端口11434被拒、CPU降速、意外远程主机。Ollama与LM Studio修复命令大全。',
@@ -2622,6 +2660,16 @@ schema: {
       ],
     },
   },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'name': '本地 LLM 故障排除要点',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'OOM 错误', 'description': '切换到 Q4_K_M 量化或更小的模型以解决内存不足导致的崩溃。下载模型前用 free -h 检查内存。' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'GPU 检测', 'description': '安装 NVIDIA 525+ 驱动程序、CUDA 11.3+，或为 AMD 安装 ROCm 5.7+ 以启用 GPU。设置 OLLAMA_GPU_LAYERS=999 以实现完全 GPU 卸载。' },
+      { '@type': 'ListItem', 'position': 3, 'name': '推理缓慢', 'description': '用 ollama ps 确认 GPU 活动。如果仅使用 CPU，请缩小模型或使用 Q4_K_M 量化。' },
+    ],
+  },
   gammaEmbedUrl: '/presentations/troubleshooting-local-llm-setup-static.html',
   gammaDescription: '以下的演示文稿涵盖：本地 LLM 设置中最常见的 10 个错误（内存不足、GPU 未检测到、推理缓慢、连接被拒绝、输出乱码），Q4_K_M 和 Q8_0 量化下 3B–14B 模型的内存要求，5 步调试流程以及每个修复的 Ollama 命令。错误 11（意外的远程主机）在正文中说明。下载 PDF 作为本地 LLM 故障排除参考卡。',
 },
@@ -2629,6 +2677,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
       title: '2026년 로컬 LLM 오류 해결: Ollama, LM Studio, vLLM의 11가지 주요 문제',
+    heroImage: '/images/troubleshooting-local-llm-setup-overview-hero-ko.png',
       seoTitle: '로컬 LLM 오류 수정: OOM, GPU 감지, 포트 11434',
       intro: '로컬 LLM에서 가장 자주 발생하는 오류는 메모리 부족 충돌, GPU 미감지, 극도로 느린 CPU 추론, API 연결 거부, 그리고 비정상 출력입니다. 2026년 7월 기준, 이 11가지 오류 모두에 대한 해결책이 있으며, 대부분 터미널 명령 한두 개만으로 해결됩니다. 이 가이드는 Ollama(포트 11434), LM Studio(포트 1234), vLLM을 대상으로 각 오류에 대한 정확한 명령을 제공합니다.',
       metaDescription: '11가지 로컬 LLM 오류 해결: OOM 충돌, GPU 미감지, 포트 11434 거부, 느린 CPU 폴백, 예상치 못한 원격 호스트. Ollama + LM Studio 수정 명령.',
@@ -2852,6 +2901,74 @@ schema: {
             'AMD. (2024). "ROCm Installation Guide." https://rocm.docs.amd.com/projects/install-on-linux/en/latest/ — 공식 AMD ROCm 설치 및 Linux GPU 지원.',
           ],
         },
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '로컬 LLM 설정 오류 디버깅',
+        'step': [
+          { '@type': 'HowToStep', 'name': '메모리 부족 오류 수정', 'text': '더 작은 양자화(Q4_K_M) 또는 더 작은 모델로 전환하십시오. free -h로 RAM을 확인하십시오.' },
+          { '@type': 'HowToStep', 'name': 'GPU 감지 활성화', 'text': '드라이버를 업데이트하고(NVIDIA 525+), OLLAMA_GPU_LAYERS=999를 설정한 후 nvidia-smi로 확인하십시오.' },
+          { '@type': 'HowToStep', 'name': '느린 추론 속도 개선', 'text': 'ollama ps로 GPU 활동을 확인하고, 모델 크기를 줄이거나 Q4_K_M 양자화를 사용하십시오.' },
+          { '@type': 'HowToStep', 'name': '연결 거부 수정', 'text': 'ollama serve로 Ollama를 시작하거나 systemd 서비스를 재시작하십시오. curl localhost:11434로 확인하십시오.' },
+          { '@type': 'HowToStep', 'name': '모델을 찾을 수 없음 문제 해결', 'text': 'ollama list로 모델을 나열하고, ollama pull로 누락된 모델을 가져온 후 정확한 이름/태그를 확인하십시오.' },
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '로컬 LLM에서 OOM 오류의 원인은 무엇입니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'OOM(메모리 부족) 오류는 모델 크기가 사용 가능한 RAM 또는 VRAM을 초과할 때 발생합니다. 해결책: 더 작은 모델로 전환하거나(`ollama run llama3.2:3b`는 약 2.5GB 필요) 더 낮은 양자화 수준을 사용하십시오. 7B 이상 모델을 가져오기 전에 `free -h`(Linux/macOS)로 사용 가능한 RAM을 확인하십시오.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollama에서 GPU가 감지되지 않는 이유는 무엇입니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'NVIDIA: 드라이버 525+와 CUDA 툴킷 11.3+를 설치한 후 Ollama를 재시작하십시오. Linux의 AMD: ROCm 5.7+를 설치하십시오. `nvidia-smi`(NVIDIA) 또는 `rocm-smi`(AMD)로 감지 여부를 확인하십시오. Apple Silicon: Ollama는 기본적으로 Metal을 사용하므로 별도 설정이 필요하지 않습니다. 전체 GPU 오프로딩을 강제하려면 OLLAMA_GPU_LAYERS=999를 설정하십시오.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollama 실행 시 포트 11434가 거부되는 이유는 무엇입니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama 서버가 실행되지 않으면 포트 11434가 거부됩니다. `ollama serve`로 시작한 후 `curl http://localhost:11434`로 확인하십시오. 예상 응답은 "Ollama is running"입니다. Linux에서는 systemd 서비스를 재시작하십시오: `systemctl restart ollama`.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '로컬 LLM이 GPU 대신 CPU에서 실행되는 이유는 무엇입니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'GPU가 감지되지 않거나 VRAM이 부족하면 Ollama는 CPU로 폴백합니다. Ollama를 시작하기 전에 환경 변수 `OLLAMA_GPU_LAYERS=999`를 설정하여 최대 GPU 오프로딩을 강제하십시오. 먼저 `nvidia-smi`로 GPU 가시성을 확인하십시오. 전체 모델에 VRAM이 부족한 경우 Ollama는 자동으로 GPU와 CPU 간에 레이어를 분할합니다.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '가장 흔한 로컬 LLM 배포 오류는 무엇입니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '가장 흔한 로컬 LLM 오류 11가지는 다음과 같습니다: (1) OOM/메모리 부족, (2) GPU 미감지, (3) 포트 11434 거부, (4) 느린 CPU 폴백, (5) 모델을 찾을 수 없음, (6) 부분 다운로드 손상, (7) 생성 조기 중단, (8) CUDA 버전 불일치, (9) 컨텍스트 길이 초과, (10) 잘못된 모델 태그, (11) 클라이언트가 예상치 못한 원격 호스트에 연결을 시도. 각 오류마다 Ollama와 LM Studio에서 사용할 특정 수정 명령이 있습니다.' }
+          },
+          {
+            '@type': 'Question',
+            'name': '손상된 Ollama 모델 다운로드는 어떻게 수정합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '캐시된 모델을 삭제하고 다시 가져오십시오: `ollama rm <모델명>` 다음 `ollama pull <모델명>`. 손상된 다운로드는 가져오기가 중단될 때 발생합니다. Ollama가 부분 다운로드를 항상 자동으로 감지하는 것은 아닙니다.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollama가 GPU를 사용하고 있는지 어떻게 확인합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '모델이 로드된 상태에서 `ollama ps`를 실행하십시오 — 출력에 GPU와 CPU 중 어느 쪽에 레이어가 있는지 표시됩니다. 또는 `nvidia-smi -l 1`(1초마다 갱신)로 GPU 사용률을 모니터링하십시오. GPU 사용률이 0%로 유지되면 Ollama가 CPU에서만 실행 중인 것이므로 드라이버 설치와 CUDA 호환성을 확인하십시오.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'LLM 생성이 조기에 중단되는 이유는 무엇입니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '생성 조기 중단은 보통 Modelfile의 중지 토큰 때문입니다. 시스템 프롬프트와 템플릿에 예상치 못한 중지 시퀀스가 있는지 확인하십시오. 또한 `num_predict` 매개변수를 확인하십시오. 낮게 설정된 경우 Ollama는 해당 토큰 수에서 출력을 잘라냅니다. 기본값은 -1(무제한)입니다.' }
+          }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '로컬 LLM 문제 해결 핵심 요약',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'OOM 오류', 'description': 'Q4_K_M 양자화 또는 더 작은 모델로 전환하여 메모리 부족 충돌을 해결하십시오. 모델을 가져오기 전에 free -h로 RAM을 확인하십시오.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'GPU 감지', 'description': 'NVIDIA 드라이버 525+, CUDA 11.3+, 또는 AMD용 ROCm 5.7+를 설치하여 GPU를 활성화하십시오. 전체 GPU 오프로딩을 위해 OLLAMA_GPU_LAYERS=999를 설정하십시오.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '느린 추론', 'description': 'ollama ps로 GPU 활동을 확인하십시오. CPU 전용으로 실행 중이면 모델 크기를 줄이거나 Q4_K_M 양자화를 사용하십시오.' },
+        ]
       },
     },
 };

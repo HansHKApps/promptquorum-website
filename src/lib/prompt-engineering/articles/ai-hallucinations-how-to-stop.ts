@@ -17,24 +17,26 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'AI Hallucinations: Why AI Makes Things Up — and How to Stop Them',
       intro: 'Large language models confidently produce false information. These errors—called hallucinations—range from invented citations to fabricated facts presented with complete authority. Understanding why they happen and how to detect and reduce them is essential for anyone using LLMs in real work.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       seoTitle: 'AI Hallucinations: How to Detect & Reduce Them 2026',
       metaDescription: 'Understand why LLMs hallucinate and learn proven prompting techniques to minimize errors. Special section on local LLMs and PromptQuorum consensus scoring.',
       readTime: '12 min read',
       educationalLevel: 'Beginner',
       primaryTerm: 'AI Hallucination',
+      next_refresh_due: '2026-09-22',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'AI Hallucinations: Why AI Makes Things Up — and How to Stop Them',
         description: 'Why language models hallucinate, how to detect hallucinations, and techniques to reduce them. Learn prompt design strategies, system-level approaches, and multi-model consensus scoring.',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'en',
         keywords: ['AI hallucinations', 'LLM hallucinations', 'hallucination detection', 'prompt engineering', 'multi-model consensus', 'RAG', 'retrieval augmented generation'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
-          { '@type': 'Thing', name: 'GPT-5.5' },
+          { '@type': 'Thing', name: 'GPT-5.6' },
           { '@type': 'Thing', name: 'Claude' },
           { '@type': 'Thing', name: 'Gemini' },
           { '@type': 'Thing', name: 'LLM' },
@@ -197,12 +199,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         multiModel: {
           title: 'Multiple Models and Consensus Detection',
-          content: 'A single model can hallucinate confidently. But when you ask multiple independent models the same question, they often disagree on hallucinated claims.\n\nIf five models independently produce similar answers to a question, that answer is far more likely to be correct than if one model answers alone. If only one model claims something and four others don\'t mention it, that claim is highly suspect and warrants verification.\n\nThis is the principle behind **consensus scoring**: dispatching the same prompt to many models (GPT-5.5, Claude Opus 4.8, Gemini 3.5 Pro, Mistral Large, Llama 3, DeepSeek, etc.) and analyzing where they agree and disagree.',
+          content: 'A single model can hallucinate confidently. But when you ask multiple independent models the same question, they often disagree on hallucinated claims.\n\nIf five models independently produce similar answers to a question, that answer is far more likely to be correct than if one model answers alone. If only one model claims something and four others don\'t mention it, that claim is highly suspect and warrants verification.\n\nThis is the principle behind **consensus scoring**: dispatching the same prompt to many models (GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro, Mistral Large, Llama 3, DeepSeek, etc.) and analyzing where they agree and disagree.',
         },
 
         consensusTest: {
           title: 'PromptQuorum Consensus Test',
-          content: '**Tested in PromptQuorum — 15 hallucination-prone prompts dispatched to GPT-5.5, Claude Opus 4.8, and Gemini 3.5 Pro:** GPT-5.5 fabricated 1 citation completely; Claude Opus 4.8 declined to cite unverified papers; Gemini 3.5 Pro cited 3 real papers but 1 with an incorrect year. Only 1 citation appeared in all three model responses. This test demonstrates that consensus across models is a meaningful signal of reliability—and that single-model answers are more likely to contain fabrications.\n\nPromptQuorum automates this: send one prompt to 25+ AI models simultaneously, run consensus analysis across all responses, and get a verdict on which claims have high agreement (more likely reliable) and which have low agreement (worth investigating further). The tool flags exactly which claims contradict, surfaces claims that appear in only one or two responses, and weights model responses by capability—transforming hallucination detection from educated guessing into structured, data-driven analysis.\n\nSee how multi-model AI reduces hallucinations for a deeper technical explanation.',
+          content: '**Tested in PromptQuorum — 15 hallucination-prone prompts dispatched to GPT-5.6, Claude Opus 4.8, and Gemini 3.1 Pro:** GPT-5.6 fabricated 1 citation completely; Claude Opus 4.8 declined to cite unverified papers; Gemini 3.1 Pro cited 3 real papers but 1 with an incorrect year. Only 1 citation appeared in all three model responses. This test demonstrates that consensus across models is a meaningful signal of reliability—and that single-model answers are more likely to contain fabrications.\n\nPromptQuorum automates this: send one prompt to 25+ AI models simultaneously, run consensus analysis across all responses, and get a verdict on which claims have high agreement (more likely reliable) and which have low agreement (worth investigating further). The tool flags exactly which claims contradict, surfaces claims that appear in only one or two responses, and weights model responses by capability—transforming hallucination detection from educated guessing into structured, data-driven analysis.\n\nSee how multi-model AI reduces hallucinations for a deeper technical explanation.',
         },
 
         globalPerspective: {
@@ -275,7 +277,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Add a self-critique step:** Ask the model to review its own output before finalising. Example: "Before answering, list any claims you are less than 90% confident in."',
             '**Use negative instructions:** Explicitly prohibit hallucination-prone behaviour. Example: "Do not invent names, titles, or statistics. Do not extrapolate beyond the provided context."',
             '**Require step-by-step reasoning:** Chain-of-thought prompting forces the model to show its work, making errors detectable before they reach the final answer.',
-            '**Dispatch to multiple models with PromptQuorum:** Send the same prompt to GPT-5.5, Claude, and Gemini simultaneously. Facts confirmed by all three have high confidence; diverging answers flag claims needing verification.',
+            '**Dispatch to multiple models with PromptQuorum:** Send the same prompt to GPT-5.6, Claude, and Gemini simultaneously. Facts confirmed by all three have high confidence; diverging answers flag claims needing verification.',
           ],
         },
 
@@ -344,13 +346,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-22',
       readTime: '12 Min. Lesezeit',
       educationalLevel: 'Beginner',
+      primaryTerm: 'KI-Halluzination',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'KI-Halluzinationen: Warum KI Dinge erfindet — und wie man sie stoppt',
         description: 'Warum Sprachmodelle halluzinieren, wie man Halluzinationen erkennt und Techniken zu ihrer Verringerung. Erfahren Sie mehr über Prompt-Design-Strategien, systemweite Ansätze und Multi-Modell-Konsens-Scoring.',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'de',
         keywords: ['KI-Halluzinationen', 'LLM-Halluzinationen', 'Halluzinationserkennung', 'Prompt Engineering', 'Multi-Modell-Konsens', 'RAG', 'Retrieval Augmented Generation'],
@@ -490,11 +493,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         multiModel: {
           title: 'Mehrere Modelle und Consensus-Erkennung',
-          content: 'Ein einzelnes Modell kann selbstsicher halluzinieren. Aber wenn du mehrere unabhängige Modelle die gleiche Frage stellst, sind sie sich oft uneinig über halluzinierte Aussagen.\n\nWenn fünf Modelle unabhängig ähnliche Antworten auf eine Frage geben, ist diese Antwort viel wahrscheinlicher korrekt, als wenn nur ein Modell antwortet. Wenn nur ein Modell etwas behauptet und vier andere erwähnen es nicht, ist dieser Anspruch hochgradig verdächtig und rechtfertigt eine Überprüfung.\n\nDies ist das Prinzip hinter **Consensus Scoring**: den gleichen Prompt zu vielen Modellen senden (GPT-5.5, Claude Opus 4.8, Gemini 3.5 Pro, Mistral Large, Llama 3, DeepSeek, etc.) und analysieren, wo sie sich einigen und wo sie nicht einig sind.',
+          content: 'Ein einzelnes Modell kann selbstsicher halluzinieren. Aber wenn du mehrere unabhängige Modelle die gleiche Frage stellst, sind sie sich oft uneinig über halluzinierte Aussagen.\n\nWenn fünf Modelle unabhängig ähnliche Antworten auf eine Frage geben, ist diese Antwort viel wahrscheinlicher korrekt, als wenn nur ein Modell antwortet. Wenn nur ein Modell etwas behauptet und vier andere erwähnen es nicht, ist dieser Anspruch hochgradig verdächtig und rechtfertigt eine Überprüfung.\n\nDies ist das Prinzip hinter **Consensus Scoring**: den gleichen Prompt zu vielen Modellen senden (GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro, Mistral Large, Llama 3, DeepSeek, etc.) und analysieren, wo sie sich einigen und wo sie nicht einig sind.',
         },
         consensusTest: {
           title: 'PromptQuorum Consensus Test',
-          content: '**Getestet in PromptQuorum – 15 halluzinationsanfällige Prompts an GPT-5.5, Claude Opus 4.8 und Gemini 3.5 Pro gesendet:** GPT-5.5 erfand 1 Zitat komplett; Claude Opus 4.8 lehnte ab, unverifizierte Paper zu zitieren; Gemini 3.5 Pro zitierte 3 echte Paper, aber 1 mit falscher Jahr. Nur 1 Zitat erschien in allen drei Modell-Antworten. Dieser Test zeigt, dass Consensus über Modelle ein aussagekräftiges Signal für Zuverlässigkeit ist – und dass Single-Modell-Antworten mehr Erfindungen enthalten.\n\nPromptQuorum automatisiert dies: sende einen Prompt an 25+ KI-Modelle gleichzeitig, führe Consensus-Analyse über alle Antworten durch und erhalte ein Urteil darüber, welche Aussagen hohe Übereinstimmung haben (wahrscheinlich zuverlässig) und welche niedrige Übereinstimmung haben (wert, nachzuschlagen). Das Tool markiert genau, welche Aussagen widersprüchlich sind, zeigt Aussagen auf, die nur in ein oder zwei Antworten erscheinen, und gewichtet Model-Antworten nach Fähigkeit – und transformiert Halluzinations-Erkennung von Vermutungen in strukturierte, datengestützte Analyse.\n\nSiehe, wie Multi-Modell-KI Halluzinationen reduziert für eine tiefere technische Erklärung.',
+          content: '**Getestet in PromptQuorum – 15 halluzinationsanfällige Prompts an GPT-5.6, Claude Opus 4.8 und Gemini 3.1 Pro gesendet:** GPT-5.6 erfand 1 Zitat komplett; Claude Opus 4.8 lehnte ab, unverifizierte Paper zu zitieren; Gemini 3.1 Pro zitierte 3 echte Paper, aber 1 mit falscher Jahr. Nur 1 Zitat erschien in allen drei Modell-Antworten. Dieser Test zeigt, dass Consensus über Modelle ein aussagekräftiges Signal für Zuverlässigkeit ist – und dass Single-Modell-Antworten mehr Erfindungen enthalten.\n\nPromptQuorum automatisiert dies: sende einen Prompt an 25+ KI-Modelle gleichzeitig, führe Consensus-Analyse über alle Antworten durch und erhalte ein Urteil darüber, welche Aussagen hohe Übereinstimmung haben (wahrscheinlich zuverlässig) und welche niedrige Übereinstimmung haben (wert, nachzuschlagen). Das Tool markiert genau, welche Aussagen widersprüchlich sind, zeigt Aussagen auf, die nur in ein oder zwei Antworten erscheinen, und gewichtet Model-Antworten nach Fähigkeit – und transformiert Halluzinations-Erkennung von Vermutungen in strukturierte, datengestützte Analyse.\n\nSiehe, wie Multi-Modell-KI Halluzinationen reduziert für eine tiefere technische Erklärung.',
         },
         globalPerspective: {
           title: 'Globale Perspektiven auf Halluzinationsgovernance',
@@ -550,6 +553,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Quellen-Verantwortlichkeit:** Jede Aussage erfordert, die Quellenangabe zu zitieren',
           ],
         },
+        howToStart: {
+          title: 'Wie man KI-Halluzinationen reduziert: 6 Prompt-Techniken',
+          numberedItems: [
+            '**Explizite Erlaubnis geben, "Ich weiß es nicht" zu sagen:** Fügen Sie jedem sachlichen Prompt hinzu: "Wenn du dir nicht sicher bist, sage \'Ich weiß es nicht\', anstatt zu raten." Allein das eliminiert eine große Klasse selbstbewusster Erfindungen.',
+            '**Nach Quellen oder Belegen fragen:** Weisen Sie das Modell an, für jede Aussage eine Quelle zu zitieren oder nicht verifizierbare Aussagen zu kennzeichnen. Beispiel: "Notiere nach jeder Tatsache entweder den Namen der Quelle oder \'[nicht verifiziert]\'."',
+            '**Einen Selbstkritik-Schritt hinzufügen:** Bitten Sie das Modell, seine eigene Ausgabe vor der Fertigstellung zu überprüfen. Beispiel: "Liste vor der Antwort alle Aussagen auf, bei denen du dir zu weniger als 90 % sicher bist."',
+            '**Negative Anweisungen verwenden:** Verbieten Sie explizit halluzinationsanfälliges Verhalten. Beispiel: "Erfinde keine Namen, Titel oder Statistiken. Extrapoliere nicht über den bereitgestellten Kontext hinaus."',
+            '**Schrittweises Denken verlangen:** Chain-of-Thought-Prompting zwingt das Modell, seinen Denkweg offenzulegen, wodurch Fehler erkennbar werden, bevor sie die endgültige Antwort erreichen.',
+            '**An mehrere Modelle mit PromptQuorum versenden:** Senden Sie denselben Prompt gleichzeitig an GPT-5.6, Claude und Gemini. Von allen drei bestätigte Fakten haben hohe Konfidenz; abweichende Antworten kennzeichnen Aussagen, die überprüft werden müssen.',
+          ],
+        },
         faq: {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
@@ -590,6 +604,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) – die Grundkonzepte hinter der Strukturierung von Prompts',
             'Multi-Modell Consensus Scoring – wie das Vergleichen von Modellen Uneinigkeiten und Unzuverlässigkeit erkennt',
             'Self-Critique Prompting Techniken – wie man Modelle dazu bringt, ihre eigenen Fehler zu fangen',
+            '[KI-Grenzen: Was LLMs nicht können](/de/prompt-engineering/ai-limitations-what-llms-cant-do) – die acht strukturellen Einschränkungen, die jedes LLM teilt, und die technische Lösung für jede davon',
           '[KI-Wissensstichtag, Live-Suche und GEO: Der vollständige Leitfaden](/de/prompt-engineering/knowledge-cutoffs-and-geo) — veraltetes Wissen ist eine Hauptursache für Halluzinationen; RAG und GEO als Lösungen',
           ],
         },
@@ -612,13 +627,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Entiende por qué los LLMs alucinan y aplica técnicas probadas de prompting para minimizar errores. Incluye LLMs locales y el consenso de PromptQuorum.',
       readTime: '12 min de lectura',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Alucinación de IA',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Alucinaciones de IA: Por qué la IA inventa cosas — y cómo detenerlas',
         description: 'Por qué los modelos de lenguaje alucinan, cómo detectar alucinaciones y técnicas para reducirlas. Aprende estrategias de diseño de prompts, enfoques a nivel de sistema y puntuación de consenso multi-modelo.',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/es/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'es',
         keywords: ['alucinaciones de IA', 'alucinaciones LLM', 'detección de alucinaciones', 'prompt engineering', 'consenso multi-modelo', 'RAG'],
@@ -731,9 +747,102 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '"Nunca inventes fuentes, URLs o nombres de autores bajo ninguna circunstancia"',
             '"No adivines fechas si no estás seguro — deja la fecha en blanco en lugar de adivinar"',
             '"No añadas información que no esté en el contexto proporcionado"',
-            '"Instrucción negativa:" "No añadas información que no esté en la cronología" es explícita',
-            '"Permiso para omitir:" "Si no estás seguro, sáltalo" elimina la presión de inventar detalles',
-            '"Responsabilidad de las fuentes:" Cada afirmación requiere citar la referencia',
+          ],
+        },
+        technique4Extra: {
+          content: 'El enfoque negativo a veces funciona mejor que el enfoque positivo para prevenir errores específicos.',
+        },
+        technique5: {
+          title: '5. Razonamiento paso a paso con verificación',
+          content: 'Para tareas complejas, pide:\n\n> "Resuelve esto paso a paso. Después de cada paso, verifica que el paso anterior sea correcto antes de continuar con el siguiente."\n\nDividir la tarea en fragmentos más pequeños con pasos de verificación le da al modelo oportunidades de detectar inconsistencias antes de que se acumulen.',
+        },
+        technique6: {
+          title: '6. Formato de salida estructurado con sección de evidencia',
+          content: 'Pide al modelo que separe **respuesta**, **razonamiento** y **evidencia** en secciones distintas:\n\n```\nRESPUESTA: [Respuesta directa]\n\nRAZONAMIENTO: [Cómo llegaste a esto]\n\nEVIDENCIA: [Fuentes, hechos o citas que lo respaldan]\n\nCONFIANZA: [¿Qué tan seguro estás, y por qué?]\n```\n\nEsta estructura hace que las alucinaciones sean fáciles de detectar: las afirmaciones sin respaldo tendrán secciones de EVIDENCIA vacías o vagas, y valores de CONFIANZA bajos.',
+        },
+        systemLevel: {
+          title: 'Estrategias a nivel de sistema más allá del diseño de prompts',
+          content: 'Los prompts por sí solos no bastan para el trabajo de alto riesgo. Añade estas herramientas y flujos de trabajo.',
+        },
+        systemItems: {
+          items: [
+            '**Retrieval-Augmented Generation (RAG).** Proporciona al modelo un documento, base de conocimiento o dataset específico y pídele que responda solo usando ese contenido. Esto fundamenta las respuestas en datos reales en lugar de los datos de entrenamiento del modelo y elimina las alucinaciones sobre información faltante. Herramientas como LangChain, el prompt caching de Anthropic y las bases de datos vectoriales implementan este patrón. Consulta nuestra guía completa sobre [RAG: cómo fundamentar las respuestas de la IA en datos reales](/es/prompt-engineering/rag-explained).',
+            '**Tool calling y uso de funciones.** Permite que el modelo llame a funciones externas para cálculos, consultas a bases de datos o verificación de hechos. En lugar de inventar una estadística, el modelo llama a una función para obtenerla. Esto elimina por completo la tentación de alucinar en dominios específicos.',
+            '**Revisión humana y verificación experta.** Para decisiones críticas — médicas, legales, financieras, de seguridad — siempre haz que una persona (preferiblemente un experto) verifique las respuestas generadas por IA. Ninguna técnica de prompting reemplaza el juicio experto.',
+            '**Flujos de verificación de hechos automatizados.** Pasa las respuestas del modelo por sistemas automatizados (APIs de fact-checking, validación de URLs, verificación de citas) antes de mostrárselas a los usuarios. Esto detecta alucinaciones a escala sin revisión manual de cada respuesta.',
+          ],
+        },
+        multiModel: {
+          title: 'Múltiples modelos y detección por consenso',
+          content: 'Un solo modelo puede alucinar con total confianza. Pero cuando le haces la misma pregunta a varios modelos independientes, a menudo no están de acuerdo en las afirmaciones alucinadas.\n\nSi cinco modelos producen respuestas similares de forma independiente a una pregunta, esa respuesta es mucho más probable que sea correcta que si un solo modelo respondiera. Si solo un modelo afirma algo y otros cuatro no lo mencionan, esa afirmación es altamente sospechosa y requiere verificación.\n\nEste es el principio detrás de la **puntuación de consenso**: enviar el mismo prompt a muchos modelos (GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro, Mistral Large, Llama 3, DeepSeek, etc.) y analizar dónde están de acuerdo y dónde no.',
+        },
+        consensusTest: {
+          title: 'Prueba de consenso de PromptQuorum',
+          content: '**Probado en PromptQuorum — 15 prompts propensos a alucinaciones enviados a GPT-5.6, Claude Opus 4.8 y Gemini 3.1 Pro:** GPT-5.6 fabricó por completo 1 cita; Claude Opus 4.8 se negó a citar artículos no verificados; Gemini 3.1 Pro citó 3 artículos reales pero 1 con un año incorrecto. Solo 1 cita apareció en las tres respuestas de los modelos. Esta prueba demuestra que el consenso entre modelos es una señal significativa de fiabilidad — y que las respuestas de un solo modelo tienen más probabilidades de contener fabricaciones.\n\nPromptQuorum automatiza esto: envía un prompt a 25+ modelos de IA simultáneamente, ejecuta un análisis de consenso sobre todas las respuestas y obtén un veredicto sobre qué afirmaciones tienen alto acuerdo (más probablemente fiables) y cuáles tienen bajo acuerdo (merecen más investigación). La herramienta señala exactamente qué afirmaciones se contradicen, muestra las afirmaciones que aparecen en solo una o dos respuestas y pondera las respuestas de los modelos según su capacidad — transformando la detección de alucinaciones de una suposición educada en un análisis estructurado y basado en datos.\n\nDescubre cómo la IA multi-modelo reduce las alucinaciones para una explicación técnica más profunda.',
+        },
+        globalPerspective: {
+          title: 'Perspectivas globales sobre la gobernanza de las alucinaciones',
+          content: 'El riesgo de alucinación y las estrategias de mitigación varían según la región y el contexto regulatorio. **En Europa**, la Ley de IA de la UE enfatiza la transparencia y la notificación de errores para los sistemas de IA de alto riesgo, haciendo obligatoria la documentación de alucinaciones. Mistral AI (Francia) ha construido modelos con un enfoque específico en reducir las alucinaciones en aplicaciones conformes con la UE. **En China**, modelos como Qwen 3 y DeepSeek tienen patrones de alucinación diferentes debido a la composición de los datos de entrenamiento y la eficiencia de tokenización para idiomas CJK (chino, japonés, coreano) — estos modelos gestionan las proporciones de token a información de forma distinta a los modelos optimizados para inglés. **En Japón**, las empresas que operan bajo las directrices de gobernanza de datos del METI (Ministerio de Economía, Comercio e Industria) despliegan cada vez más modelos localmente para tareas propensas a alucinaciones, con el fin de garantizar la residencia de datos y el cumplimiento normativo.\n\nIndependientemente de la región, las técnicas fundamentales (RAG, verificación por consenso, revisión humana) siguen siendo universalmente aplicables. Elige y verifica los modelos según tu contexto regulatorio y tus requisitos de idioma.',
+        },
+        dangerDomains: {
+          title: 'Cuándo las alucinaciones son más peligrosas',
+          content: 'Las alucinaciones suponen un riesgo de daño significativo en dominios específicos. Ten especial cuidado con:',
+          items: [
+            '**Decisiones médicas y de salud** — Nombres de medicamentos, dosis o interpretaciones de síntomas incorrectos pueden dañar a los pacientes',
+            '**Legal y cumplimiento normativo** — Jurisprudencia inventada, requisitos regulatorios o precedentes fabricados pueden llevar a errores costosos o infracciones',
+            '**Asesoría financiera** — Datos de mercado falsos, información fiscal incorrecta o métricas de rendimiento fabricadas confunden decisiones de alto riesgo',
+            '**Sistemas críticos de seguridad** — Las alucinaciones en revisión de código, decisiones de arquitectura o análisis de seguridad pueden introducir vulnerabilidades o errores',
+            '**Atribución pública** — Todo lo publicado bajo tu nombre o marca debe verificarse; las alucinaciones dañan la credibilidad',
+          ],
+        },
+        criticalPrinciple: {
+          content: '**Principio crítico:** Incluso con prompts perfectos y verificación por consenso, la verificación humana sigue siendo esencial para decisiones de alto riesgo. Usa la IA como ahorro de tiempo y herramienta de primera pasada, no como reemplazo del juicio experto o de la verificación en fuentes primarias.\n\nDescubre cómo las técnicas de autocrítica pueden reducir aún más los errores en tareas de razonamiento complejas.',
+        },
+        checklist: {
+          title: 'Lista de verificación práctica: antes de enviar un prompt crítico',
+          content: 'Usa esta lista de verificación antes de enviar un prompt en el que vayas a basar decisiones o contenido público:',
+          items: [
+            '[ ] **¿El prompt permite explícitamente decir "no lo sé"?** Añade: "Puedes decir \'no lo sé\' si no estás seguro."',
+            '[ ] **¿Hay contexto o datos reales en el prompt?** Los prompts vagos invitan a la invención. Proporciona documentos, ejemplos o datos de entrada específicos.',
+            '[ ] **¿Las restricciones son explícitas?** Indica lo que el modelo NO debe hacer, especialmente: "No inventes fuentes, URLs ni citas."',
+            '[ ] **¿El formato de salida está estructurado?** Separa Respuesta / Razonamiento / Evidencia / Confianza. Esto hace evidentes las afirmaciones sin respaldo.',
+            '[ ] **¿Estás pidiendo fuentes?** Para cualquier afirmación factual, exige: "Cita la fuente de este hecho."',
+            '[ ] **¿La tarea es específica, no abierta?** "Enumera cinco estrategias de marketing *para un producto SaaS B2B dirigido a profesionales de finanzas*" es mejor que "Cuéntame sobre marketing."',
+            '[ ] **¿Le has pedido al modelo que se autoverifique?** Añade: "Revisa tu respuesta en busca de contradicciones antes de enviarla."',
+            '[ ] **Para decisiones de alto riesgo, ¿estás verificando de forma cruzada?** Envía el mismo prompt a varios modelos y compara las respuestas.',
+          ],
+        },
+        beforeAfter: {
+          title: 'Ejemplo de prompt: antes / después',
+        },
+        badPrompt: {
+          title: '[Prompt malo]',
+          blockquote: 'Cuéntame sobre la historia de la inteligencia artificial. Incluye los principales avances e investigadores importantes.',
+          content: '**Por qué falla:** Abierto, sin restricciones, sin permiso para admitir incertidumbre. El modelo inventará fechas, atribuirá mal los avances, afirmará con confianza información desactualizada y potencialmente citará artículos que no existen.',
+        },
+        goodPrompt: {
+          title: '[Prompt bueno]',
+          blockquote: 'Usando únicamente la siguiente cronología, resume los principales avances en IA de 1950 a 1990:\n\n{DATOS DE CRONOLOGÍA INSERTADOS}\n\nFormatea tu respuesta como:\n\n**AVANCE:** {Nombre}\n**AÑO:** {Año — solo si aparece en la cronología}\n**IMPORTANCIA:** {Qué permitió}\n**FUENTE:** {Qué documento de la cronología lo menciona?}\n\nNo añadas información que no esté en la cronología. Si no estás seguro de si algo está en la cronología, omítelo en lugar de adivinar.',
+        },
+        whyWorks: {
+          title: 'Por qué funciona:',
+          items: [
+            '**Datos reales en lugar de invención:** El modelo trabaja a partir del contexto proporcionado, no de las lagunas de sus datos de entrenamiento',
+            '**Salida estructurada:** El formato hace que las fuentes faltantes sean inmediatamente evidentes',
+            '**Instrucción negativa:** "No añadas información que no esté en la cronología" es explícita',
+            '**Permiso para omitir:** "Si no estás seguro, omítelo" elimina la presión de inventar detalles',
+            '**Responsabilidad de fuentes:** Cada afirmación requiere citar de qué documento proviene',
+          ],
+        },
+        howToStart: {
+          title: 'Cómo reducir las alucinaciones de la IA: 6 técnicas de prompt',
+          numberedItems: [
+            '"Dar permiso explícito para decir \'No lo sé\':" Añade a cada prompt factual: "Si no estás seguro, di \'No lo sé\' en lugar de adivinar." Esto solo elimina una gran clase de fabricaciones seguras de sí mismas.',
+            '"Pedir fuentes o evidencia:" Indica al modelo que cite una fuente para cada afirmación, o que marque las afirmaciones que no puede verificar. Ejemplo: "Después de cada dato, anota el nombre de la fuente o \'[no verificado]\'."',
+            '"Añadir un paso de autocrítica:" Pide al modelo que revise su propia respuesta antes de finalizarla. Ejemplo: "Antes de responder, enumera las afirmaciones en las que tengas menos del 90% de confianza."',
+            '"Usar instrucciones negativas:" Prohíbe explícitamente los comportamientos propensos a alucinar. Ejemplo: "No inventes nombres, títulos ni estadísticas. No extrapoles más allá del contexto proporcionado."',
+            '"Exigir razonamiento paso a paso:" El chain-of-thought prompting obliga al modelo a mostrar su razonamiento, haciendo que los errores sean detectables antes de llegar a la respuesta final.',
+            '"Enviar a varios modelos con PromptQuorum:" Envía el mismo prompt a GPT-5.6, Claude y Gemini simultáneamente. Los hechos confirmados por los tres tienen alta confianza; las respuestas divergentes señalan afirmaciones que necesitan verificación.',
           ],
         },
         faq: {
@@ -774,7 +883,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Material relacionado',
           items: [
             '[¿Qué es el Prompt Engineering?](/es/prompt-engineering/what-is-prompt-engineering) — los conceptos básicos detrás de la estructuración de prompts',
+            'Puntuación de Consenso Multi-Modelo — cómo comparar modelos detecta desacuerdos y falta de fiabilidad',
             'Self-Critique Prompting Techniques — cómo hacer que los modelos atrapen sus propios errores',
+            '[Limitaciones de la IA: Lo que los LLM no pueden hacer](/es/prompt-engineering/ai-limitations-what-llms-cant-do) — las ocho restricciones estructurales que comparte todo LLM y la solución de ingeniería para cada una',
           '[Fechas de corte del conocimiento de la IA, búsqueda en vivo y GEO: guía completa](/es/prompt-engineering/knowledge-cutoffs-and-geo) — el conocimiento desactualizado es una causa principal de alucinaciones; RAG y GEO como soluciones',
           ],
         },
@@ -798,13 +909,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: '⁨7⁩ أنماط هلوسة في النماذج اللغوية الكبيرة مع تقنيات صياغة تعليمات مجرَّبة لتقليلها. يشمل النماذج المحلية وتوافق ⁨PromptQuorum⁩ عبر ⁨25⁩+ نموذج.',
       readTime: '١٢ دقيقة للقراءة',
       educationalLevel: 'مبتدئ',
+      primaryTerm: 'هلوسة الذكاء الاصطناعي',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'هلوسات الذكاء الاصطناعي: لماذا تخترع الذكاء الاصطناعي الأشياء — وكيف توقفها',
         description: 'سبب هلوسة نماذج اللغة، وكيفية اكتشاف الهلوسات، وتقنيات الحد منها. تعلَّم استراتيجيات تصميم التعليمات والمناهج على مستوى النظام وتسجيل التوافق متعدد النماذج.',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/ar/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'ar',
         keywords: ['هلوسات الذكاء الاصطناعي', 'هلوسات النموذج اللغوي الكبير', 'اكتشاف الهلوسات', 'هندسة التعليمات', 'التوافق متعدد النماذج', 'RAG'],
@@ -917,9 +1029,102 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '"لا تخترع مصادر أو عناوين URL أو أسماء مؤلفين تحت أي ظرف"',
             '"لا تخمِّن التواريخ إذا لم تكن متأكدًا — اترك التاريخ فارغًا بدلًا من التخمين"',
             '"لا تُضف معلومات غير واردة في السياق المقدَّم"',
-            '"تعليمة سلبية:" "لا تُضف معلومات غير واردة في الجدول الزمني" تعليمة صريحة',
-            '"إذن بالحذف:" "إذا لم تكن متأكدًا، اتركه" يُزيل الضغط لاختراع التفاصيل',
-            '"مسؤولية المصادر:" كل ادعاء يتطلب الاستشهاد بالمرجع',
+          ],
+        },
+        technique4Extra: {
+          content: 'تعمل الصياغة السلبية أحيانًا بشكل أفضل من الصياغة الإيجابية لمنع أخطاء محددة.',
+        },
+        technique5: {
+          title: '٥. الاستدلال خطوة بخطوة مع التحقق',
+          content: 'بالنسبة للمهام المعقدة، اطلب:\n\n> "اعمل على هذا خطوة بخطوة. بعد كل خطوة، تحقق من صحة الخطوة السابقة قبل الانتقال إلى الخطوة التالية."\n\nتقسيم المهمة إلى أجزاء أصغر مع خطوات تحقق يمنح النموذج فرصًا لاكتشاف التناقضات قبل أن تتراكم.',
+        },
+        technique6: {
+          title: '٦. تنسيق مخرجات منظَّم مع قسم أدلة',
+          content: 'اطلب من النموذج فصل **الإجابة** و**الاستدلال** و**الأدلة** في أقسام منفصلة:\n\n```\nANSWER: [الإجابة المباشرة]\n\nREASONING: [كيف توصلت إلى هذا]\n\nEVIDENCE: [المصادر أو الحقائق أو الاستشهادات الداعمة]\n\nCONFIDENCE: [ما مدى ثقتك، ولماذا؟]\n```\n\nهذا التنسيق يجعل الهلوسات سهلة الاكتشاف: الادعاءات غير المدعومة ستحتوي على أقسام EVIDENCE فارغة أو غامضة، وقيم CONFIDENCE منخفضة.',
+        },
+        systemLevel: {
+          title: 'استراتيجيات على مستوى النظام تتجاوز تصميم التعليمات',
+          content: 'التعليمات وحدها لا تكفي للعمل عالي المخاطر. أضف هذه الأدوات وسير العمل.',
+        },
+        systemItems: {
+          items: [
+            '**التوليد المعزَّز بالاسترجاع (RAG).** زوِّد النموذج بوثيقة أو قاعدة معرفة أو مجموعة بيانات محددة واطلب منه الإجابة باستخدام هذا المحتوى فقط. هذا يُؤسِّس الإجابات على بيانات حقيقية بدلًا من بيانات تدريب النموذج ويُلغي الهلوسات حول المعلومات المفقودة. أدوات مثل LangChain، وprompt caching من Anthropic، وقواعد البيانات المتجهية تُطبِّق هذا النمط. راجع دليلنا الكامل عن [RAG: كيفية تأسيس إجابات الذكاء الاصطناعي على بيانات حقيقية](/ar/prompt-engineering/rag-explained).',
+            '**استدعاء الأدوات واستخدام الوظائف.** اسمح للنموذج باستدعاء وظائف خارجية لإجراء الحسابات أو الاستعلام عن قواعد البيانات أو التحقق من الحقائق. بدلًا من اختراع إحصائية، يستدعي النموذج وظيفة لاسترجاعها. هذا يُزيل تمامًا إغراء الهلوسة في مجالات محددة.',
+            '**المراجعة البشرية والتحقق من قِبل خبراء.** بالنسبة للقرارات الحرجة — الطبية والقانونية والمالية والأمنية — احرص دائمًا على أن يتحقق إنسان (يُفضَّل أن يكون خبيرًا) من الإجابات التي يُولِّدها الذكاء الاصطناعي. لا تُغني أي تقنية صياغة تعليمات عن الحكم الخبير.',
+            '**سير عمل التحقق الآلي من الحقائق.** مرِّر مخرجات النموذج عبر أنظمة آلية (واجهات برمجة تطبيقات للتحقق من الحقائق، والتحقق من صحة عناوين URL، والتحقق من الاستشهادات) قبل عرضها على المستخدمين. هذا يكتشف الهلوسات على نطاق واسع دون مراجعة يدوية لكل مخرج.',
+          ],
+        },
+        multiModel: {
+          title: 'النماذج المتعددة والكشف عن طريق التوافق',
+          content: 'يمكن لنموذج واحد أن يهلوس بثقة تامة. لكن حين تسأل نماذج مستقلة متعددة السؤال ذاته، غالبًا ما تختلف حول الادعاءات المهلوسة.\n\nإذا أنتجت خمسة نماذج بشكل مستقل إجابات متشابهة لسؤال ما، فإن هذه الإجابة أرجح أن تكون صحيحة مقارنةً بإجابة نموذج واحد. إذا ادَّعى نموذج واحد فقط شيئًا ولم يذكره أربعة نماذج أخرى، فإن هذا الادعاء مشبوه للغاية ويستوجب التحقق.\n\nهذا هو المبدأ وراء **درجة التوافق**: إرسال التعليمة ذاتها إلى نماذج عديدة (GPT-5.6 وClaude Opus 4.8 وGemini 3.1 Pro وMistral Large وLlama 3 وDeepSeek وغيرها) وتحليل أين تتفق وأين تختلف.',
+        },
+        consensusTest: {
+          title: 'اختبار توافق PromptQuorum',
+          content: '**اختُبِر في PromptQuorum — 15 تعليمة معرَّضة للهلوسة أُرسِلت إلى GPT-5.6 وClaude Opus 4.8 وGemini 3.1 Pro:** اختلق GPT-5.6 استشهادًا واحدًا بالكامل؛ رفض Claude Opus 4.8 الاستشهاد بأوراق غير محقَّقة؛ استشهد Gemini 3.1 Pro بثلاث أوراق حقيقية لكن واحدة منها بسنة خاطئة. ظهر استشهاد واحد فقط في إجابات النماذج الثلاثة جميعها. يُظهر هذا الاختبار أن التوافق بين النماذج إشارة ذات دلالة على الموثوقية — وأن إجابات النموذج الواحد أكثر عرضة لاحتواء اختلاقات.\n\nتُؤتمت PromptQuorum هذه العملية: أرسل تعليمة واحدة إلى أكثر من 25 نموذج ذكاء اصطناعي في آنٍ واحد، وشغِّل تحليل التوافق عبر جميع الإجابات، واحصل على حكم حول الادعاءات التي تحظى باتفاق عالٍ (أرجح أن تكون موثوقة) وتلك ذات الاتفاق المنخفض (تستحق مزيدًا من التحقيق). تُشير الأداة بدقة إلى الادعاءات المتناقضة، وتُظهر الادعاءات التي تظهر في إجابة أو إجابتين فقط، وتُرجِّح إجابات النماذج حسب القدرة — محوِّلةً اكتشاف الهلوسات من تخمين مدروس إلى تحليل منظَّم قائم على البيانات.\n\nاطَّلِع على كيفية تقليل الذكاء الاصطناعي متعدد النماذج للهلوسات للحصول على شرح تقني أعمق.',
+        },
+        globalPerspective: {
+          title: 'وجهات نظر عالمية حول حوكمة الهلوسات',
+          content: 'تختلف مخاطر الهلوسة واستراتيجيات التخفيف منها حسب المنطقة والسياق التنظيمي. **في أوروبا**، يُشدِّد قانون الذكاء الاصطناعي للاتحاد الأوروبي على الشفافية والإبلاغ عن الأخطاء لأنظمة الذكاء الاصطناعي عالية المخاطر، مما يجعل توثيق الهلوسات إلزاميًا. بنت Mistral AI (فرنسا) نماذج تُركِّز بشكل خاص على تقليل الهلوسات في التطبيقات المتوافقة مع الاتحاد الأوروبي. **في الصين**، تُظهر نماذج مثل Qwen 3 وDeepSeek أنماط هلوسة مختلفة بسبب تركيبة بيانات التدريب وكفاءة توكينة لغات CJK (الصينية واليابانية والكورية) — تتعامل هذه النماذج مع نسب الرمز إلى المعلومة بشكل مختلف عن النماذج المُحسَّنة للإنجليزية. **في اليابان**، تنشر المؤسسات العاملة وفق إرشادات حوكمة البيانات لوزارة الاقتصاد والتجارة والصناعة (METI) نماذج محليًا بشكل متزايد للمهام المعرَّضة للهلوسة لضمان إقامة البيانات والامتثال.\n\nبغض النظر عن المنطقة، تظل التقنيات الأساسية (RAG، والتحقق بالتوافق، والمراجعة البشرية) قابلة للتطبيق عالميًا. اختر النماذج وتحقَّق منها بناءً على سياقك التنظيمي ومتطلباتك اللغوية.',
+        },
+        dangerDomains: {
+          title: 'متى تكون الهلوسات أكثر خطورة',
+          content: 'تُشكِّل الهلوسات خطر ضرر كبير في مجالات محددة. توخَّ حذرًا خاصًا مع:',
+          items: [
+            '**القرارات الطبية والصحية** — قد تُلحق أسماء الأدوية أو الجرعات أو تفسيرات الأعراض الخاطئة ضررًا بالمرضى',
+            '**القانون والامتثال** — قد تؤدي السوابق القضائية المخترعة أو المتطلبات التنظيمية أو السوابق إلى أخطاء مكلفة أو انتهاكات',
+            '**المشورة المالية** — تُضلِّل بيانات السوق الكاذبة أو المعلومات الضريبية الخاطئة أو مقاييس الأداء الملفقة القرارات عالية المخاطر',
+            '**الأنظمة الحرجة أمنيًا** — يمكن أن تُدخِل الهلوسات في مراجعة الكود أو قرارات الهندسة المعمارية أو تحليل الأمان ثغرات أو أخطاء',
+            '**الإسناد العام** — يجب التحقق من صحة أي شيء يُنشر باسمك أو باسم علامتك التجارية؛ تُضِر الهلوسات بالمصداقية',
+          ],
+        },
+        criticalPrinciple: {
+          content: '**مبدأ جوهري:** حتى مع تعليمات مثالية والتحقق بالتوافق، تظل المراجعة البشرية ضرورية للقرارات عالية المخاطر. استخدم الذكاء الاصطناعي كأداة موفِّرة للوقت وتمريرة أولى، لا كبديل للحكم الخبير أو التحقق من المصادر الأولية.\n\nتعرَّف على كيفية أن تقنيات النقد الذاتي يمكن أن تُقلِّل الأخطاء أكثر في مهام الاستدلال المعقدة.',
+        },
+        checklist: {
+          title: 'قائمة تحقق عملية: قبل إرسال تعليمة حرجة',
+          content: 'استخدم قائمة التحقق هذه قبل إرسال تعليمة ستعتمد عليها في اتخاذ قرارات أو مخرجات موجَّهة للجمهور:',
+          items: [
+            '[ ] **هل تسمح التعليمة صراحةً بقول "لا أعرف"؟** أضف: "يمكنك قول \'لا أعرف\' إذا لم تكن متأكدًا."',
+            '[ ] **هل يوجد سياق أو بيانات حقيقية في التعليمة؟** التعليمات الغامضة تدعو إلى الاختراع. قدِّم وثائق أو أمثلة أو بيانات إدخال محددة.',
+            '[ ] **هل القيود صريحة؟** حدِّد ما لا يجب على النموذج فعله، خصوصًا: "لا تخترع مصادر أو عناوين URL أو استشهادات."',
+            '[ ] **هل تنسيق المخرج منظَّم؟** افصل الإجابة / الاستدلال / الأدلة / الثقة. هذا يجعل الادعاءات غير المدعومة واضحة.',
+            '[ ] **هل تطلب مصادر؟** لأي ادعاء واقعي، اشترط: "استشهد بمصدر هذه الحقيقة."',
+            '[ ] **هل المهمة محددة وليست مفتوحة؟** "اذكر خمس استراتيجيات تسويقية *لمنتج SaaS موجَّه للشركات يستهدف متخصصي المالية*" أفضل من "أخبرني عن التسويق."',
+            '[ ] **هل طلبت من النموذج التحقق الذاتي؟** أضف: "راجع إجابتك بحثًا عن تناقضات قبل إرسالها."',
+            '[ ] **بالنسبة للقرارات عالية المخاطر، هل تُجري تحققًا متقاطعًا؟** أرسل التعليمة ذاتها إلى نماذج متعددة وقارن الإجابات.',
+          ],
+        },
+        beforeAfter: {
+          title: 'مثال تعليمة: قبل / بعد',
+        },
+        badPrompt: {
+          title: '[تعليمة سيئة]',
+          blockquote: 'أخبرني عن تاريخ الذكاء الاصطناعي. أدرج الاختراقات الكبرى والباحثين المهمين.',
+          content: '**سبب فشلها:** مفتوحة، بلا قيود، بلا إذن بالاعتراف بعدم اليقين. سيخترع النموذج تواريخ، وينسب الاختراقات خطأً، ويؤكد بثقة معلومات قديمة، وقد يستشهد بأوراق غير موجودة.',
+        },
+        goodPrompt: {
+          title: '[تعليمة جيدة]',
+          blockquote: 'باستخدام الجدول الزمني التالي فقط، لخِّص الاختراقات الكبرى في الذكاء الاصطناعي من 1950 إلى 1990:\n\n{بيانات الجدول الزمني المُدرَجة}\n\nنسِّق إجابتك كما يلي:\n\n**الاختراق:** {الاسم}\n**السنة:** {السنة — فقط إذا وردت في الجدول الزمني}\n**الأهمية:** {ما الذي أتاحه}\n**المصدر:** {أي وثيقة من الجدول الزمني تذكر هذا؟}\n\nلا تُضف معلومات غير واردة في الجدول الزمني. إذا لم تكن متأكدًا مما إذا كان شيء ما موجودًا في الجدول الزمني، تخطَّه بدلًا من التخمين.',
+        },
+        whyWorks: {
+          title: 'لماذا ينجح هذا:',
+          items: [
+            '**بيانات حقيقية بدلًا من الاختراع:** يعمل النموذج انطلاقًا من السياق المُقدَّم، لا من ثغرات بيانات التدريب',
+            '**مخرجات منظَّمة:** يجعل التنسيق المصادر المفقودة واضحة فورًا',
+            '**تعليمة سلبية:** "لا تُضف معلومات غير واردة في الجدول الزمني" تعليمة صريحة',
+            '**إذن بالحذف:** "إذا لم تكن متأكدًا، تخطَّه" يُزيل الضغط لاختراع التفاصيل',
+            '**مسؤولية المصادر:** كل ادعاء يتطلب الاستشهاد بالوثيقة التي جاء منها',
+          ],
+        },
+        howToStart: {
+          title: 'كيفية تقليل هلوسات الذكاء الاصطناعي: 6 تقنيات لصياغة التعليمات',
+          numberedItems: [
+            '"امنح إذنًا صريحًا بقول \'لا أعرف\':" أضف إلى كل تعليمة واقعية: "إذا لم تكن متأكدًا، قل \'لا أعرف\' بدلاً من التخمين." هذا وحده يُزيل فئة كبيرة من الاختلاقات الواثقة.',
+            '"اطلب مصادر أو أدلة:" وجّه النموذج للاستشهاد بمصدر لكل ادعاء، أو الإشارة إلى الادعاءات التي لا يمكنه التحقق منها. مثال: "بعد كل حقيقة، دوّن اسم المصدر أو \'[غير موثّق]\'."',
+            '"أضف خطوة نقد ذاتي:" اطلب من النموذج مراجعة مخرجاته الخاصة قبل الانتهاء. مثال: "قبل الإجابة، اذكر أي ادعاءات لست متأكدًا منها بنسبة أقل من 90%."',
+            '"استخدم تعليمات سلبية:" امنع صراحةً السلوك المعرَّض للهلوسة. مثال: "لا تخترع أسماء أو ألقابًا أو إحصاءات. لا تتوسّع فيما هو أبعد من السياق المقدَّم."',
+            '"اطلب استدلالًا خطوة بخطوة:" يُجبر التفكير المتسلسل (Chain-of-Thought) النموذج على إظهار خطوات تفكيره، مما يجعل الأخطاء قابلة للاكتشاف قبل وصولها إلى الإجابة النهائية.',
+            '"أرسل إلى عدة نماذج باستخدام PromptQuorum:" أرسل نفس التعليمة إلى GPT-5.6 وClaude وGemini في آنٍ واحد. الحقائق التي تؤكدها النماذج الثلاثة تحظى بثقة عالية؛ أما الإجابات المتباينة فتشير إلى ادعاءات تحتاج إلى تحقق.',
           ],
         },
         faq: {
@@ -960,7 +1165,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'مواد ذات صلة',
           items: [
             '[ما هي هندسة التعليمات؟](/ar/prompt-engineering/what-is-prompt-engineering) — المفاهيم الأساسية وراء هيكلة التعليمات',
+            'درجة التوافق متعددة النماذج — كيف تكشف مقارنة النماذج الاختلافات وعدم الموثوقية',
             'تقنيات النقد الذاتي في التعليمات — كيفية جعل النماذج تكتشف أخطاءها الخاصة',
+            '[قيود الذكاء الاصطناعي: ما لا تستطيع النماذج اللغوية الكبيرة فعله](/ar/prompt-engineering/ai-limitations-what-llms-cant-do) — القيود الهيكلية الثمانية التي تشترك فيها كل نماذج اللغة الكبيرة والحل الهندسي لكل منها',
           '[تواريخ انقطاع معرفة الذكاء الاصطناعي والبحث المباشر و GEO: الدليل الكامل](/ar/prompt-engineering/knowledge-cutoffs-and-geo) — تقادم المعرفة سبب رئيسي للهلوسة؛ RAG وGEO كحلول',
           ],
         },
@@ -984,19 +1191,20 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Entenda por que os LLMs alucinam e aplique técnicas comprovadas de prompting para minimizar erros. Inclui LLMs locais e consenso multi-modelo do PromptQuorum.',
       readTime: '12 min de leitura',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Alucinação de IA',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Alucinações de IA: Por que a IA inventa coisas — e como pará-las',
         description: 'Por que os modelos de linguagem alucinam, como detectar alucinações e técnicas para reduzi-las. Aprenda estratégias de design de prompts, abordagens em nível de sistema e pontuação de consenso multi-modelo.',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/pt/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'pt-BR',
         keywords: ['alucinações de IA', 'alucinações LLM', 'detecção de alucinações', 'prompt engineering', 'consenso multi-modelo', 'RAG', 'geração aumentada por recuperação'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
-          { '@type': 'Thing', name: 'GPT-5.5' },
+          { '@type': 'Thing', name: 'GPT-5.6' },
           { '@type': 'Thing', name: 'Claude' },
           { '@type': 'Thing', name: 'Gemini' },
           { '@type': 'Thing', name: 'LLM' },
@@ -1138,11 +1346,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         multiModel: {
           title: 'Múltiplos modelos e detecção de consenso',
-          content: 'Um único modelo pode alucinar com confiança. Mas quando você faz a mesma pergunta a vários modelos independentes, eles frequentemente discordam sobre afirmações alucinadas.\n\nSe cinco modelos produzem de forma independente respostas semelhantes a uma pergunta, essa resposta é muito mais provável de estar correta do que se apenas um modelo responder. Se apenas um modelo afirma algo e quatro outros não o mencionam, essa afirmação é altamente suspeita e justifica verificação.\n\nEsse é o princípio por trás da **pontuação de consenso**: enviar o mesmo prompt para muitos modelos (GPT-5.5, Claude Opus 4.8, Gemini 3.5 Pro, Mistral Large, Llama 3, DeepSeek, etc.) e analisar onde eles concordam e discordam.',
+          content: 'Um único modelo pode alucinar com confiança. Mas quando você faz a mesma pergunta a vários modelos independentes, eles frequentemente discordam sobre afirmações alucinadas.\n\nSe cinco modelos produzem de forma independente respostas semelhantes a uma pergunta, essa resposta é muito mais provável de estar correta do que se apenas um modelo responder. Se apenas um modelo afirma algo e quatro outros não o mencionam, essa afirmação é altamente suspeita e justifica verificação.\n\nEsse é o princípio por trás da **pontuação de consenso**: enviar o mesmo prompt para muitos modelos (GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro, Mistral Large, Llama 3, DeepSeek, etc.) e analisar onde eles concordam e discordam.',
         },
         consensusTest: {
           title: 'Teste de consenso do PromptQuorum',
-          content: '**Testado no PromptQuorum — 15 prompts propensos a alucinações enviados para GPT-5.5, Claude Opus 4.8 e Gemini 3.5 Pro:** GPT-5.5 fabricou 1 citação completamente; Claude Opus 4.8 recusou-se a citar artigos não verificados; Gemini 3.5 Pro citou 3 artigos reais mas 1 com o ano incorreto. Apenas 1 citação apareceu nas três respostas dos modelos. Este teste demonstra que o consenso entre os modelos é um sinal significativo de confiabilidade — e que as respostas de modelos únicos têm maior probabilidade de conter fabricações.\n\nO PromptQuorum automatiza isso: envie um prompt para 25+ modelos de IA simultaneamente, execute análise de consenso em todas as respostas e obtenha um veredicto sobre quais afirmações têm alto acordo (mais provavelmente confiáveis) e quais têm baixo acordo (valem investigação adicional). A ferramenta sinaliza exatamente quais afirmações contradizem, revela afirmações que aparecem em apenas uma ou duas respostas e pondera as respostas dos modelos por capacidade — transformando a detecção de alucinações de suposições em análise estruturada baseada em dados.\n\nVeja como a IA multi-modelo reduz alucinações para uma explicação técnica mais profunda.',
+          content: '**Testado no PromptQuorum — 15 prompts propensos a alucinações enviados para GPT-5.6, Claude Opus 4.8 e Gemini 3.1 Pro:** GPT-5.6 fabricou 1 citação completamente; Claude Opus 4.8 recusou-se a citar artigos não verificados; Gemini 3.1 Pro citou 3 artigos reais mas 1 com o ano incorreto. Apenas 1 citação apareceu nas três respostas dos modelos. Este teste demonstra que o consenso entre os modelos é um sinal significativo de confiabilidade — e que as respostas de modelos únicos têm maior probabilidade de conter fabricações.\n\nO PromptQuorum automatiza isso: envie um prompt para 25+ modelos de IA simultaneamente, execute análise de consenso em todas as respostas e obtenha um veredicto sobre quais afirmações têm alto acordo (mais provavelmente confiáveis) e quais têm baixo acordo (valem investigação adicional). A ferramenta sinaliza exatamente quais afirmações contradizem, revela afirmações que aparecem em apenas uma ou duas respostas e pondera as respostas dos modelos por capacidade — transformando a detecção de alucinações de suposições em análise estruturada baseada em dados.\n\nVeja como a IA multi-modelo reduz alucinações para uma explicação técnica mais profunda.',
         },
         globalPerspective: {
           title: 'Perspectivas globais sobre governança de alucinações',
@@ -1206,7 +1414,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Adicione uma etapa de autocrítica:** Peça ao modelo que revise sua própria saída antes de finalizar. Exemplo: "Antes de responder, liste quaisquer afirmações sobre as quais você está menos de 90% confiante."',
             '**Use instruções negativas:** Proíba explicitamente comportamentos propensos a alucinações. Exemplo: "Não invente nomes, títulos ou estatísticas. Não extrapole além do contexto fornecido."',
             '**Exija raciocínio passo a passo:** O prompting chain-of-thought força o modelo a mostrar seu trabalho, tornando os erros detectáveis antes de chegarem à resposta final.',
-            '**Despache para vários modelos com o PromptQuorum:** Envie o mesmo prompt para GPT-5.5, Claude e Gemini simultaneamente. Fatos confirmados pelos três têm alta confiança; respostas divergentes sinalizam afirmações que precisam de verificação.',
+            '**Despache para vários modelos com o PromptQuorum:** Envie o mesmo prompt para GPT-5.6, Claude e Gemini simultaneamente. Fatos confirmados pelos três têm alta confiança; respostas divergentes sinalizam afirmações que precisam de verificação.',
           ],
         },
         faq: {
@@ -1273,13 +1481,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-22',
       readTime: '12 min de lecture',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Hallucination IA',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Hallucinations IA: Pourquoi l\'IA Invente des Choses — et Comment les Arrêter',
         description: 'Pourquoi les modèles de langage hallucinent, comment détecter les hallucinations et techniques pour les réduire. Apprenez les stratégies de conception de prompts, les approches au niveau du système et le consensus multi-modèles.',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'fr',
         keywords: ['hallucinations IA', 'hallucinations LLM', 'détection hallucination', 'prompt engineering', 'consensus multi-modèles', 'RAG', 'génération augmentée par récupération'],
@@ -1419,11 +1628,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         multiModel: {
           title: 'Plusieurs modèles et détection du consensus',
-          content: 'Un seul modèle peut halluciner confidentement. Mais lorsque tu poses à plusieurs modèles indépendants la même question, ils désaccordent souvent sur les affirmations hallucées.\n\nSi cinq modèles produisent indépendamment des réponses similaires à une question, cette réponse est beaucoup plus susceptible d\'être correcte que si un seul modèle répond. Si un seul modèle revendique quelque chose et quatre autres ne le mentionnent pas, cette réclamation est hautement suspecte et justifie une vérification.\n\nC\'est le principe derrière **consensus scoring**: envoyez le même prompt à de nombreux modèles (GPT-5.5, Claude Opus 4.8, Gemini 3.5 Pro, Mistral Large, Llama 3, DeepSeek, etc.) et analysez où ils s\'accordent et où ils ne le font pas.',
+          content: 'Un seul modèle peut halluciner confidentement. Mais lorsque tu poses à plusieurs modèles indépendants la même question, ils désaccordent souvent sur les affirmations hallucées.\n\nSi cinq modèles produisent indépendamment des réponses similaires à une question, cette réponse est beaucoup plus susceptible d\'être correcte que si un seul modèle répond. Si un seul modèle revendique quelque chose et quatre autres ne le mentionnent pas, cette réclamation est hautement suspecte et justifie une vérification.\n\nC\'est le principe derrière **consensus scoring**: envoyez le même prompt à de nombreux modèles (GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro, Mistral Large, Llama 3, DeepSeek, etc.) et analysez où ils s\'accordent et où ils ne le font pas.',
         },
         consensusTest: {
           title: 'Test de consensus PromptQuorum',
-          content: '**Testé dans PromptQuorum – 15 prompts sujets aux hallucinations envoyés à GPT-5.5, Claude Opus 4.8 et Gemini 3.5 Pro:** GPT-5.5 a complètement inventé 1 citation; Claude Opus 4.8 a refusé de citer des articles non vérifiés; Gemini 3.5 Pro a cité 3 articles réels mais 1 avec une année incorrecte. Seulement 1 citation apparaît dans les trois réponses du modèle. Ce test démontre que le consensus entre les modèles est un signal significatif de fiabilité – et que les réponses de modèle unique sont plus susceptibles de contenir des inventions.\n\nPromptQuorum automatise cela: envoyez un prompt à 25+ modèles IA simultanément, exécutez l\'analyse de consensus sur toutes les réponses, et obtenez un jugement sur les affirmations ayant un accord élevé (probablement fiable) et lesquels ont un accord faible (digne d\'être enquêté). L\'outil signale exactement quelles affirmations se contredisent, identifie les affirmations qui n\'apparaissent que dans une ou deux réponses, et ponde les réponses du modèle par la capacité – transformant la détection d\'hallucination de suppositions dans l\'analyse structurée basée sur les données.\n\nVoir comment l\'IA multi-modèles réduit les hallucinations pour une explication technique plus profonde.',
+          content: '**Testé dans PromptQuorum – 15 prompts sujets aux hallucinations envoyés à GPT-5.6, Claude Opus 4.8 et Gemini 3.1 Pro:** GPT-5.6 a complètement inventé 1 citation; Claude Opus 4.8 a refusé de citer des articles non vérifiés; Gemini 3.1 Pro a cité 3 articles réels mais 1 avec une année incorrecte. Seulement 1 citation apparaît dans les trois réponses du modèle. Ce test démontre que le consensus entre les modèles est un signal significatif de fiabilité – et que les réponses de modèle unique sont plus susceptibles de contenir des inventions.\n\nPromptQuorum automatise cela: envoyez un prompt à 25+ modèles IA simultanément, exécutez l\'analyse de consensus sur toutes les réponses, et obtenez un jugement sur les affirmations ayant un accord élevé (probablement fiable) et lesquels ont un accord faible (digne d\'être enquêté). L\'outil signale exactement quelles affirmations se contredisent, identifie les affirmations qui n\'apparaissent que dans une ou deux réponses, et ponde les réponses du modèle par la capacité – transformant la détection d\'hallucination de suppositions dans l\'analyse structurée basée sur les données.\n\nVoir comment l\'IA multi-modèles réduit les hallucinations pour une explication technique plus profonde.',
         },
         globalPerspective: {
           title: 'Perspectives mondiales sur la gouvernance des hallucinations',
@@ -1479,6 +1688,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Responsabilité des sources:** Chaque affirmation exige de citer quel document elle provient',
           ],
         },
+        howToStart: {
+          title: 'Comment réduire les hallucinations de l\'IA : 6 techniques de prompt',
+          numberedItems: [
+            '**Donner la permission explicite de dire "Je ne sais pas" :** Ajoutez à chaque prompt factuel : "Si tu n\'es pas certain, dis \'Je ne sais pas\' plutôt que de deviner." Cela seul élimine une grande catégorie de fabrications assurées.',
+            '**Demander des sources ou des preuves :** Demandez au modèle de citer une source pour chaque affirmation, ou de signaler les affirmations qu\'il ne peut pas vérifier. Exemple : "Après chaque fait, indique soit le nom de la source, soit \'[non vérifié]\'."',
+            '**Ajouter une étape d\'autocritique :** Demandez au modèle de revoir sa propre réponse avant de la finaliser. Exemple : "Avant de répondre, liste toute affirmation dont tu es sûr à moins de 90 %."',
+            '**Utiliser des instructions négatives :** Interdisez explicitement les comportements propices à l\'hallucination. Exemple : "N\'invente pas de noms, de titres ou de statistiques. Ne dépasse pas le contexte fourni."',
+            '**Exiger un raisonnement étape par étape :** Le chain-of-thought prompting force le modèle à montrer son raisonnement, rendant les erreurs détectables avant qu\'elles n\'atteignent la réponse finale.',
+            '**Envoyer à plusieurs modèles avec PromptQuorum :** Envoyez le même prompt simultanément à GPT-5.6, Claude et Gemini. Les faits confirmés par les trois ont une confiance élevée ; les réponses divergentes signalent des affirmations à vérifier.',
+          ],
+        },
         faq: {
           id: 'faq',
           title: 'Foire aux questions',
@@ -1519,6 +1739,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Qu\'est-ce que le prompt engineering?](/prompt-engineering/what-is-prompt-engineering) – les concepts fondamentaux derrière la structuration des prompts',
             'Consensus Scoring multi-modèles – comment comparer les modèles détecte les désaccords et l\'instabilité',
             'Techniques de prompt d\'autocritique – comment obtenir des modèles pour attraper leurs propres erreurs',
+            '[Limites de l\'IA : ce que les LLM ne peuvent pas faire](/fr/prompt-engineering/ai-limitations-what-llms-cant-do) – les huit contraintes structurelles communes à tous les LLM et la solution technique pour chacune',
           '[Dates de coupure des modèles d\'IA, recherche en direct et GEO : guide complet](/fr/prompt-engineering/knowledge-cutoffs-and-geo) — les données périmées sont une cause majeure d\'hallucinations ; RAG et GEO comme solutions',
           ],
         },
@@ -1541,13 +1762,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-22',
       readTime: '12分で読める',
       educationalLevel: 'Beginner',
+      primaryTerm: 'AIハルシネーション',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'AIハルシネーション：AIがなぜ物を作り出すのか — そしてそれを止める方法',
         description: '言語モデルが幻覚を起こす理由、幻覚を検出する方法、およびそれらを削減するための技術。プロンプト設計戦略、システムレベルのアプローチ、およびマルチモデルコンセンサススコアリングについて学ぶ。',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'ja',
         keywords: ['AI幻覚', 'LLM幻覚', '幻覚検出', 'プロンプトエンジニアリング', 'マルチモデルコンセンサス', 'RAG', '検索増強生成'],
@@ -1687,11 +1909,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         multiModel: {
           title: '複数のモデルとコンセンサス検出',
-          content: '単一のモデルは自信を持ってハルシネーションできます。しかし、複数の独立したモデルに同じ質問をする場合、彼らはしばしば幻想的な請求について意見が異なります。\n\n5つのモデルが独立して質問への類似した回答を生成する場合、その答えは単一のモデルが回答するよりもはるかに正確である可能性があります。1つのモデルのみが何かを主張し、4つのモデルは言及しない場合、その請求は非常に疑わしく、検証を正当化します。\n\nこれは**コンセンサススコアリング**の背後にある原則です：同じプロンプトを多くのモデル（GPT-5.5、Claude Opus 4.8、Gemini 3.5 Pro、Mistral Large、Llama 3、DeepSeekなど）に送信し、彼らが同意する場所と同意しないかを分析します。',
+          content: '単一のモデルは自信を持ってハルシネーションできます。しかし、複数の独立したモデルに同じ質問をする場合、彼らはしばしば幻想的な請求について意見が異なります。\n\n5つのモデルが独立して質問への類似した回答を生成する場合、その答えは単一のモデルが回答するよりもはるかに正確である可能性があります。1つのモデルのみが何かを主張し、4つのモデルは言及しない場合、その請求は非常に疑わしく、検証を正当化します。\n\nこれは**コンセンサススコアリング**の背後にある原則です：同じプロンプトを多くのモデル（GPT-5.6、Claude Opus 4.8、Gemini 3.1 Pro、Mistral Large、Llama 3、DeepSeekなど）に送信し、彼らが同意する場所と同意しないかを分析します。',
         },
         consensusTest: {
           title: 'PromptQuorum コンセンサステスト',
-          content: '**PromptQuorumでテスト—15ハルシネーション傾向プロンプトをGPT-5.5、Claude Opus 4.8、およびGemini 3.5 Proに送信：** GPT-5.5は完全に1つの引用を作成しました。Claude Opus 4.8は未検証のペーパーを引用することを拒否しました。Gemini 3.5 Proは3つの実際のペーパーを引用しましたが、1つは年が正しくありません。1つの引用のみが3つすべてのモデル応答に表示されました。このテストは、モデル全体のコンセンサスが信頼性の有意な信号である—そして、単一モデル応答がより多くの製造を含む可能性があることを実証しています。\n\nPromptQuorumはこれを自動化します：25 +のAIモデルに同時に1つのプロンプトを送信し、すべての回答全体でコンセンサス分析を実行し、どの請求が高い合意を持っているか（おそらく信頼できる）と低い合意（さらに調査する価値がある）についての判決を得ます。ツールは、どの請求が矛盾するかを正確に標識し、1つまたは2つの応答にのみ表示される請求を表示し、機能別にモデル応答を重み付け—ハルシネーション検出を根拠のない推測から構造化された、データドリブン分析に変換します。\n\nマルチモデルAIがハルシネーションを減らす方法を参照して、より深い技術的説明を行うことを参照してください。',
+          content: '**PromptQuorumでテスト—15ハルシネーション傾向プロンプトをGPT-5.6、Claude Opus 4.8、およびGemini 3.1 Proに送信：** GPT-5.6は完全に1つの引用を作成しました。Claude Opus 4.8は未検証のペーパーを引用することを拒否しました。Gemini 3.1 Proは3つの実際のペーパーを引用しましたが、1つは年が正しくありません。1つの引用のみが3つすべてのモデル応答に表示されました。このテストは、モデル全体のコンセンサスが信頼性の有意な信号である—そして、単一モデル応答がより多くの製造を含む可能性があることを実証しています。\n\nPromptQuorumはこれを自動化します：25 +のAIモデルに同時に1つのプロンプトを送信し、すべての回答全体でコンセンサス分析を実行し、どの請求が高い合意を持っているか（おそらく信頼できる）と低い合意（さらに調査する価値がある）についての判決を得ます。ツールは、どの請求が矛盾するかを正確に標識し、1つまたは2つの応答にのみ表示される請求を表示し、機能別にモデル応答を重み付け—ハルシネーション検出を根拠のない推測から構造化された、データドリブン分析に変換します。\n\nマルチモデルAIがハルシネーションを減らす方法を参照して、より深い技術的説明を行うことを参照してください。',
         },
         globalPerspective: {
           title: 'ハルシネーションガバナンスのグローバルパースペクティブ',
@@ -1747,6 +1969,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**ソース責任：** すべての請求は、どのドキュメントがそれから来たかを引用することが必要です',
           ],
         },
+        howToStart: {
+          title: 'AIの幻覚を減らす方法：6つのプロンプト技術',
+          numberedItems: [
+            '**「わかりません」と言う明示的な許可を与える：** すべての事実に関するプロンプトに追加：「確信が持てない場合は、推測するのではなく『わかりません』と言ってください。」これだけで、自信満々な捏造の大部分を排除できます。',
+            '**出典や根拠を求める：** モデルに各主張の出典を引用させるか、検証できない主張にフラグを立てさせます。例：「各事実の後に、出典名または『[未確認]』のいずれかを記載してください。」',
+            '**自己批評のステップを追加する：** 最終決定の前に、モデル自身の出力を見直すよう求めます。例：「回答する前に、90%未満の確信度である主張を挙げてください。」',
+            '**否定的な指示を使う：** 幻覚を起こしやすい挙動を明示的に禁止します。例：「名前、肩書き、統計を捏造しないでください。提供されたコンテキストを超えて推測しないでください。」',
+            '**段階的な推論を要求する：** Chain-of-Thoughtプロンプティングは、モデルに思考過程を示すことを強制し、最終回答に到達する前にエラーを検出可能にします。',
+            '**PromptQuorumで複数モデルに送信する：** 同じプロンプトをGPT-5.6、Claude、Geminiに同時に送信します。3つすべてで確認された事実は信頼度が高く、異なる回答は検証が必要な主張を示します。',
+          ],
+        },
         faq: {
           id: 'faq',
           title: 'よくある質問',
@@ -1787,6 +2020,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[プロンプトエンジニアリングとは何ですか？](/prompt-engineering/what-is-prompt-engineering) —プロンプト構造の背後にある基本的な概念',
             'マルチモデルコンセンサススコアリング —モデルの比較が不一致と不信頼を検出する方法',
             '自己批評プロンプト技術 —モデルに独自のエラーをキャッチさせる方法',
+            '[AIの限界：LLMができないこと](/ja/prompt-engineering/ai-limitations-what-llms-cant-do) —すべてのLLMに共通する8つの構造的制約と、それぞれに対する工学的な対処法',
           '[AIの知識カットオフ、ライブ検索、GEO：完全ガイド](/ja/prompt-engineering/knowledge-cutoffs-and-geo) — 知識の陳腐化は幻覚の主な原因；RAGとGEOによる解決策',
           ],
         },
@@ -1809,13 +2043,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-22',
       readTime: '12分钟阅读',
       educationalLevel: 'Beginner',
+      primaryTerm: 'AI幻觉',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'AI幻觉：为什么AI会编造东西——以及如何停止它们',
         description: '语言模型为什么会产生幻觉，如何检测幻觉，以及减少幻觉的技术。学习提示设计策略、系统级方法和多模型共识评分。',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
         inLanguage: 'zh',
         keywords: ['AI幻觉', 'LLM幻觉', '幻觉检测', '提示工程', '多模型共识', 'RAG', '检索增强生成'],
@@ -1955,11 +2190,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         multiModel: {
           title: '多个模型和共识检测',
-          content: '单个模型可以自信地幻觉。但是，当您向多个独立模型提出相同的问题时，他们经常对幻觉的索赔不同意。\n\n如果五个模型独立地向一个问题产生相似的答案，那么答案比单个模型答案的情况要远更正确。如果只有一个模型声称某些东西，而其他四个不提及，则该索赔高度可疑并证明验证。\n\n这是**共识评分**背后的原则：将相同的提示分派给许多模型（GPT-5.5、Claude Opus 4.8、Gemini 3.5 Pro、Mistral Large、Llama 3、DeepSeek等），并分析他们同意和不同意的地方。',
+          content: '单个模型可以自信地幻觉。但是，当您向多个独立模型提出相同的问题时，他们经常对幻觉的索赔不同意。\n\n如果五个模型独立地向一个问题产生相似的答案，那么答案比单个模型答案的情况要远更正确。如果只有一个模型声称某些东西，而其他四个不提及，则该索赔高度可疑并证明验证。\n\n这是**共识评分**背后的原则：将相同的提示分派给许多模型（GPT-5.6、Claude Opus 4.8、Gemini 3.1 Pro、Mistral Large、Llama 3、DeepSeek等），并分析他们同意和不同意的地方。',
         },
         consensusTest: {
           title: 'PromptQuorum共识测试',
-          content: '**在PromptQuorum中测试—15个幻觉倾向的提示分派给GPT-5.5、Claude Opus 4.8和Gemini 3.5 Pro：** GPT-5.5完全编造了1项引用; Claude Opus 4.8拒绝引用未验证的论文; Gemini 3.5 Pro引用了3个真实论文，但1个年份不正确。只有1个引用出现在所有三个模型响应中。此测试表明模型间的共识是可靠性的有意义信号—并且单模型答案更可能包含虚构。\n\nPromptQuorum自动化这种：将一个提示同时发送到25+AI模型，在所有响应中运行共识分析，并获得关于哪些索赔具有高度协议（可能可靠）和低协议（值得进一步调查）的判决。该工具精确标记哪些索赔相互矛盾，表面仅在一个或两个响应中出现的索赔，并按能力加权模型响应—将幻觉检测从有根据的猜测转变为结构化的数据驱动分析。\n\n参见多模型AI如何减少幻觉，获得更深层技术解释。',
+          content: '**在PromptQuorum中测试—15个幻觉倾向的提示分派给GPT-5.6、Claude Opus 4.8和Gemini 3.1 Pro：** GPT-5.6完全编造了1项引用; Claude Opus 4.8拒绝引用未验证的论文; Gemini 3.1 Pro引用了3个真实论文，但1个年份不正确。只有1个引用出现在所有三个模型响应中。此测试表明模型间的共识是可靠性的有意义信号—并且单模型答案更可能包含虚构。\n\nPromptQuorum自动化这种：将一个提示同时发送到25+AI模型，在所有响应中运行共识分析，并获得关于哪些索赔具有高度协议（可能可靠）和低协议（值得进一步调查）的判决。该工具精确标记哪些索赔相互矛盾，表面仅在一个或两个响应中出现的索赔，并按能力加权模型响应—将幻觉检测从有根据的猜测转变为结构化的数据驱动分析。\n\n参见多模型AI如何减少幻觉，获得更深层技术解释。',
         },
         globalPerspective: {
           title: '关于幻觉治理的全球观点',
@@ -2015,6 +2250,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**来源责任：** 每个索赔都需要引用它来自哪个文件',
           ],
         },
+        howToStart: {
+          title: '如何减少AI幻觉：6种提示技巧',
+          numberedItems: [
+            '**明确允许说"我不知道"：** 在每个事实性提示中添加："如果你不确定，请说「我不知道」，而不是猜测。"仅此一项就能消除一大类自信满满的捏造内容。',
+            '**要求提供来源或证据：** 指示模型为每项声明引用来源，或标记其无法验证的声明。示例："在每个事实后注明来源名称或「未验证」。"',
+            '**添加自我批评步骤：** 要求模型在最终确定前审查自己的输出。示例："在回答前，列出你信心低于90%的任何声明。"',
+            '**使用否定指令：** 明确禁止易产生幻觉的行为。示例："不要编造姓名、头衔或统计数据。不要超出所提供的上下文进行推断。"',
+            '**要求逐步推理：** 思维链提示迫使模型展示其推理过程，使错误在到达最终答案之前就能被发现。',
+            '**使用PromptQuorum分发到多个模型：** 将同一提示同时发送给GPT-5.6、Claude和Gemini。三者都确认的事实具有高置信度；不同的答案则标记出需要核实的声明。',
+          ],
+        },
         faq: {
           id: 'faq',
           title: '常见问题解答',
@@ -2055,6 +2301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[什么是提示工程？](/prompt-engineering/what-is-prompt-engineering) —提示结构背后的基本概念',
             '多模型共识评分 —比较模型如何检测分歧和不信度',
             '自我批评提示技术 —如何让模型捕获自己的错误',
+            '[AI的局限性：LLM做不到的事](/zh/prompt-engineering/ai-limitations-what-llms-cant-do) —所有LLM共有的八项结构性限制，以及针对每一项的工程解决方法',
           '[AI知识截止日期、实时搜索与GEO：完整指南](/zh/prompt-engineering/knowledge-cutoffs-and-geo) — 知识过时是幻觉的主要原因；RAG和GEO如何解决此问题',
           ],
         },
@@ -2078,13 +2325,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: 'LLM이 왜 환각을 일으키는지 이해하고, 오류를 최소화하는 검증된 프롬프트 기술을 배우십시오. 로컬 LLM 및 PromptQuorum 합의 점수에 대한 특별 섹션 포함.',
     readTime: '12분 분량',
     educationalLevel: 'Beginner',
+    primaryTerm: 'AI 환각',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'AI 환각: AI가 사실을 꾸며내는 이유와 이를 막는 방법',
       description: '언어 모델이 환각을 일으키는 이유, 환각을 탐지하는 방법, 이를 줄이는 기술. 프롬프트 설계 전략, 시스템 수준 접근법, 다중 모델 합의 점수를 배우십시오.',
       datePublished: '2026-03-22',
-      dateModified: '2026-03-22',
+      dateModified: '2026-07-29',
       url: 'https://www.promptquorum.com/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
       inLanguage: 'ko',
       keywords: ['AI 환각', 'LLM 환각', '환각 탐지', '프롬프트 엔지니어링', '다중 모델 합의', 'RAG'],
@@ -2197,9 +2445,102 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '"어떤 상황에서도 출처, URL, 저자 이름을 절대 만들어내지 마십시오"',
           '"확신이 없다면 날짜를 추측하지 마십시오 — 추측 대신 날짜를 비워 두십시오"',
           '"제공된 컨텍스트에 없는 정보를 추가하지 마십시오"',
-          '"부정적 지시:" "타임라인에 없는 정보를 추가하지 마십시오"는 명시적입니다',
-          '"생략 허가:" "확신이 없다면 건너뛰십시오"는 세부 사항을 만들어내는 압력을 제거합니다',
-          '"출처 책임:" 모든 주장은 참고문헌 인용을 요구합니다',
+        ],
+      },
+      technique4Extra: {
+        content: '특정 오류를 방지하는 데는 부정문 표현이 긍정문 표현보다 더 효과적일 때가 있습니다.',
+      },
+      technique5: {
+        title: '5. 검증을 동반한 단계별 추론',
+        content: '복잡한 작업에는 다음과 같이 요청하십시오:\n\n> "이 문제를 단계별로 풀어 주십시오. 각 단계 후에는 다음 단계로 넘어가기 전에 이전 단계가 올바른지 검증해 주십시오."\n\n작업을 검증 단계가 포함된 더 작은 단위로 나누면, 모델이 오류가 누적되기 전에 불일치를 발견할 기회를 얻게 됩니다.',
+      },
+      technique6: {
+        title: '6. 근거 섹션을 포함한 구조화된 출력 형식',
+        content: '모델에게 **답변**, **추론**, **근거**를 별도의 섹션으로 구분하도록 요청하십시오:\n\n```\nANSWER: [직접적인 답변]\n\nREASONING: [어떻게 이 결론에 도달했는지]\n\nEVIDENCE: [이를 뒷받침하는 출처, 사실 또는 인용]\n\nCONFIDENCE: [얼마나 확신하는지, 그리고 그 이유]\n```\n\n이 구조는 환각을 쉽게 발견할 수 있게 합니다. 근거가 없는 주장은 EVIDENCE 섹션이 비어 있거나 모호하며, CONFIDENCE 값이 낮게 나타납니다.',
+      },
+      systemLevel: {
+        title: '프롬프트 설계를 넘어선 시스템 수준 전략',
+        content: '고위험 작업에는 프롬프트만으로 충분하지 않습니다. 다음 도구와 워크플로를 추가하십시오.',
+      },
+      systemItems: {
+        items: [
+          '**검색 증강 생성(RAG).** 모델에게 특정 문서, 지식 베이스 또는 데이터셋을 제공하고 해당 내용만 사용하여 답하도록 요청하십시오. 이는 답변을 모델의 학습 데이터가 아닌 실제 데이터에 근거하게 하며, 누락된 정보에 대한 환각을 제거합니다. LangChain, Anthropic의 prompt caching, 벡터 데이터베이스 같은 도구가 이 패턴을 구현합니다. [RAG: 실제 데이터로 AI 답변의 근거를 마련하는 방법](/ko/prompt-engineering/rag-explained)에 대한 전체 가이드를 참고하십시오.',
+          '**도구 호출 및 함수 사용.** 모델이 계산, 데이터베이스 조회, 사실 확인을 위해 외부 함수를 호출하도록 허용하십시오. 통계를 지어내는 대신, 모델이 함수를 호출하여 실제 값을 가져옵니다. 이는 특정 영역에서 환각을 일으킬 유혹 자체를 제거합니다.',
+          '**인간 검토 및 전문가 검증.** 의료, 법률, 재무, 안전과 직결된 중요한 결정에는 항상 사람(가급적 해당 분야 전문가)이 AI가 생성한 답변을 검증해야 합니다. 어떤 프롬프트 기법도 전문가의 판단을 대체할 수 없습니다.',
+          '**자동화된 사실 확인 워크플로.** 사용자에게 표시하기 전에 모델 출력을 자동화 시스템(사실 확인 API, URL 검증, 인용 검증)을 통해 처리하십시오. 이를 통해 모든 출력을 수동으로 검토하지 않고도 대규모로 환각을 포착할 수 있습니다.',
+        ],
+      },
+      multiModel: {
+        title: '다중 모델과 합의 기반 탐지',
+        content: '단일 모델은 자신 있게 환각을 일으킬 수 있습니다. 하지만 여러 독립 모델에 동일한 질문을 하면, 환각된 주장에 대해 서로 의견이 다른 경우가 많습니다.\n\n다섯 개의 모델이 독립적으로 유사한 답변을 낸다면, 그 답변은 단일 모델의 답변보다 정확할 가능성이 훨씬 높습니다. 오직 한 모델만 어떤 사실을 주장하고 나머지 네 모델이 이를 언급하지 않는다면, 그 주장은 매우 의심스러우며 검증이 필요합니다.\n\n이것이 **합의 점수(consensus scoring)**의 원리입니다. 동일한 프롬프트를 여러 모델(GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro, Mistral Large, Llama 3, DeepSeek 등)에 전송하고, 어디에서 의견이 일치하고 불일치하는지 분석합니다.',
+      },
+      consensusTest: {
+        title: 'PromptQuorum 합의 테스트',
+        content: '**PromptQuorum에서 테스트 — 환각을 유발하기 쉬운 프롬프트 15개를 GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro에 전송한 결과:** GPT-5.6은 인용문 1건을 완전히 지어냈고, Claude Opus 4.8은 검증되지 않은 논문 인용을 거부했으며, Gemini 3.1 Pro는 실제 논문 3건을 인용했지만 그중 1건의 연도가 틀렸습니다. 세 모델의 응답 모두에 등장한 인용문은 단 1건뿐이었습니다. 이 테스트는 모델 간 합의가 신뢰성을 나타내는 유의미한 신호이며, 단일 모델의 답변이 조작된 내용을 포함할 가능성이 더 높다는 것을 보여줍니다.\n\nPromptQuorum은 이를 자동화합니다. 하나의 프롬프트를 25개 이상의 AI 모델에 동시에 전송하고, 모든 응답에 걸쳐 합의 분석을 실행하여 어떤 주장이 높은 합의를 얻었는지(신뢰할 가능성이 높음), 어떤 주장이 낮은 합의를 얻었는지(추가 조사가 필요함)에 대한 판정을 제공합니다. 이 도구는 정확히 어떤 주장이 서로 모순되는지 표시하고, 하나 또는 두 개의 응답에만 나타나는 주장을 드러내며, 모델의 능력에 따라 응답에 가중치를 부여함으로써 환각 탐지를 근거 없는 추측에서 구조화된 데이터 기반 분석으로 전환합니다.\n\n다중 모델 AI가 환각을 줄이는 방법에 대한 더 심층적인 기술 설명을 참고하십시오.',
+      },
+      globalPerspective: {
+        title: '환각 거버넌스에 대한 글로벌 관점',
+        content: '환각 위험과 완화 전략은 지역 및 규제 맥락에 따라 다릅니다. **유럽에서는** EU AI Act가 고위험 AI 시스템에 대한 투명성과 오류 보고를 강조하여 환각 문서화를 의무화하고 있습니다. Mistral AI(프랑스)는 EU 규정을 준수하는 애플리케이션에서 환각을 줄이는 데 특화된 모델을 구축했습니다. **중국에서는** Qwen 3, DeepSeek 같은 모델이 학습 데이터 구성과 CJK(중국어, 일본어, 한국어) 언어의 토큰화 효율성 차이로 인해 다른 환각 패턴을 보입니다. 이 모델들은 영어 최적화 모델과는 다른 방식으로 토큰 대 정보 비율을 처리합니다. **일본에서는** METI(경제산업성)의 데이터 거버넌스 지침에 따라 운영하는 기업들이 데이터 주권과 규정 준수를 보장하기 위해 환각이 발생하기 쉬운 작업에 점점 더 모델을 로컬로 배포하고 있습니다.\n\n지역에 관계없이 핵심 기법(RAG, 합의 검증, 인간 검토)은 보편적으로 적용됩니다. 규제 맥락과 언어 요구 사항에 맞춰 모델을 선택하고 검증하십시오.',
+      },
+      dangerDomains: {
+        title: '환각이 가장 위험한 경우',
+        content: '환각은 특정 영역에서 상당한 피해를 초래할 위험이 있습니다. 다음 영역에서는 특히 주의하십시오:',
+        items: [
+          '**의료 및 건강 관련 결정** — 잘못된 약물명, 용량, 증상 해석은 환자에게 해를 끼칠 수 있습니다',
+          '**법률 및 규정 준수** — 조작된 판례, 규제 요건, 선례는 값비싼 실수나 위반으로 이어질 수 있습니다',
+          '**재무 조언** — 잘못된 시장 데이터, 부정확한 세무 정보, 조작된 실적 지표는 고위험 결정을 그르칩니다',
+          '**안전이 중요한 시스템** — 코드 리뷰, 아키텍처 결정, 보안 분석에서의 환각은 취약점이나 버그를 유발할 수 있습니다',
+          '**공개적 귀속** — 본인 또는 브랜드 이름으로 게시하는 모든 것은 사실 확인을 거쳐야 합니다. 환각은 신뢰도를 손상시킵니다',
+        ],
+      },
+      criticalPrinciple: {
+        content: '**핵심 원칙:** 완벽한 프롬프트와 합의 검증을 사용하더라도, 고위험 결정에는 인간의 검증이 여전히 필수적입니다. AI는 시간을 절약하는 1차 도구로 사용하고, 전문가의 판단이나 1차 출처 검증을 대체하는 수단으로 사용하지 마십시오.\n\n자기비판 기법이 복잡한 추론 작업에서 오류를 더 줄이는 방법을 알아보십시오.',
+      },
+      checklist: {
+        title: '실용 체크리스트: 중요한 프롬프트를 보내기 전에',
+        content: '결정이나 공개용 출력에 사용할 프롬프트를 보내기 전에 다음 체크리스트를 사용하십시오:',
+        items: [
+          '[ ] **프롬프트가 명시적으로 "모릅니다"를 허용합니까?** 추가: "확신이 없다면 \'모릅니다\'라고 말해도 됩니다."',
+          '[ ] **프롬프트에 실제 컨텍스트나 데이터가 있습니까?** 모호한 프롬프트는 지어내기를 유발합니다. 구체적인 문서, 예시, 입력 데이터를 제공하십시오.',
+          '[ ] **제약 조건이 명시적입니까?** 모델이 해서는 안 되는 것을 명시하십시오. 특히: "출처, URL, 인용을 지어내지 마십시오."',
+          '[ ] **출력 형식이 구조화되어 있습니까?** 답변 / 추론 / 근거 / 확신도를 분리하십시오. 이렇게 하면 근거 없는 주장이 명확히 드러납니다.',
+          '[ ] **출처를 요구하고 있습니까?** 모든 사실 기반 주장에 대해 다음을 요구하십시오: "이 사실의 출처를 인용하십시오."',
+          '[ ] **작업이 개방형이 아니라 구체적입니까?** "마케팅에 대해 알려주십시오"보다 "*금융 전문가를 대상으로 하는 B2B SaaS 제품을 위한* 다섯 가지 마케팅 전략을 나열하십시오"가 더 낫습니다.',
+          '[ ] **모델에게 자체 검토를 요청했습니까?** 추가: "제출하기 전에 답변에 모순이 있는지 검토해 주십시오."',
+          '[ ] **고위험 결정의 경우, 교차 검증을 하고 있습니까?** 동일한 프롬프트를 여러 모델에 보내고 답변을 비교하십시오.',
+        ],
+      },
+      beforeAfter: {
+        title: '프롬프트 전/후 예시',
+      },
+      badPrompt: {
+        title: '[나쁜 프롬프트]',
+        blockquote: '인공지능의 역사에 대해 알려주십시오. 주요 돌파구와 중요한 연구자들을 포함해 주십시오.',
+        content: '**실패 이유:** 개방형이며 제약이 없고 불확실성을 인정할 권한도 없습니다. 모델은 날짜를 지어내고, 돌파구를 잘못 귀속시키며, 오래된 정보를 자신 있게 진술하고, 존재하지 않는 논문을 인용할 수도 있습니다.',
+      },
+      goodPrompt: {
+        title: '[좋은 프롬프트]',
+        blockquote: '다음 타임라인만 사용하여 1950년부터 1990년까지 AI의 주요 돌파구를 요약해 주십시오:\n\n{타임라인 데이터 삽입됨}\n\n답변을 다음 형식으로 작성하십시오:\n\n**돌파구:** {이름}\n**연도:** {타임라인에 명시된 경우에만}\n**의의:** {무엇을 가능하게 했는지}\n**출처:** {타임라인의 어느 문서가 이를 언급하는지?}\n\n타임라인에 없는 정보는 추가하지 마십시오. 어떤 내용이 타임라인에 있는지 확신할 수 없다면 추측하지 말고 건너뛰십시오.',
+      },
+      whyWorks: {
+        title: '이 방법이 효과적인 이유:',
+        items: [
+          '**지어내는 대신 실제 데이터 사용:** 모델이 학습 데이터의 공백이 아니라 제공된 컨텍스트에서 작업합니다',
+          '**구조화된 출력:** 형식 덕분에 누락된 출처가 즉시 드러납니다',
+          '**부정적 지시:** "타임라인에 없는 정보를 추가하지 마십시오"는 명시적입니다',
+          '**생략 허가:** "확신이 없다면 건너뛰십시오"는 세부 사항을 지어내는 압력을 제거합니다',
+          '**출처 책임:** 모든 주장은 어느 문서에서 나왔는지 인용해야 합니다',
+        ],
+      },
+      howToStart: {
+        title: 'AI 환각을 줄이는 방법: 6가지 프롬프트 기법',
+        numberedItems: [
+          '"모른다고 말할 명시적 권한 부여:" 모든 사실 기반 프롬프트에 추가: "확실하지 않다면 추측하지 말고 \'모릅니다\'라고 말하세요." 이것만으로도 자신감 있는 조작의 상당 부분이 사라집니다.',
+          '"출처나 증거 요청:" 모델에게 각 주장에 대한 출처를 인용하거나 검증할 수 없는 주장에 플래그를 지정하도록 지시하세요. 예: "각 사실 뒤에 출처 이름 또는 \'[미확인]\'을 표기하세요."',
+          '"자기비판 단계 추가:" 최종 확정 전에 모델이 자신의 출력을 검토하도록 요청하세요. 예: "답변하기 전에 90% 미만으로 확신하는 주장을 나열하세요."',
+          '"부정 지시 사용:" 환각을 유발하기 쉬운 행동을 명시적으로 금지하세요. 예: "이름, 직함, 통계를 지어내지 마십시오. 제공된 맥락을 벗어나 추정하지 마십시오."',
+          '"단계별 추론 요구:" Chain-of-Thought 프롬프팅은 모델이 사고 과정을 보여주도록 강제하여, 최종 답변에 도달하기 전에 오류를 발견할 수 있게 합니다.',
+          '"PromptQuorum으로 여러 모델에 전송:" 동일한 프롬프트를 GPT-5.6, Claude, Gemini에 동시에 전송하세요. 세 모델 모두가 확인한 사실은 신뢰도가 높고, 답변이 갈리는 경우 검증이 필요한 주장임을 나타냅니다.',
         ],
       },
       faq: {
@@ -2240,7 +2581,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '관련 자료',
         items: [
           '[프롬프트 엔지니어링이란?](/ko/prompt-engineering/what-is-prompt-engineering) — 프롬프트 구조화 뒤의 기본 개념',
+          '다중 모델 합의 점수 — 모델을 비교하여 불일치와 신뢰성 부족을 탐지하는 방법',
           '자기 비평 프롬프트 기술 — 모델이 자체 오류를 잡는 방법',
+          '[AI의 한계: LLM이 할 수 없는 것](/ko/prompt-engineering/ai-limitations-what-llms-cant-do) — 모든 LLM이 공유하는 8가지 구조적 제약과 각각에 대한 엔지니어링 해결책',
         '[AI 지식 차단 날짜, 실시간 검색 및 GEO: 완전한 가이드](/ko/prompt-engineering/knowledge-cutoffs-and-geo) — 지식 노후화는 환각의 주요 원인; RAG와 GEO로 해결',
         ],
       },

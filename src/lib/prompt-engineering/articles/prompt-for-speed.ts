@@ -9,10 +9,13 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      next_refresh_due: '2027-01-29',
       theme: 'Fundamentals',
+      heroImage: '/images/prompt-for-speed-overview-hero-en.png',
       title: 'Faster AI Answers: How to Prompt for Speed',
       intro: 'Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency. Most AI answers bloat because of vague prompts, not slow models.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       readTime: '9 min read',
 
       seoTitle: 'Prompt for Speed 2026: Reduce Latency',
@@ -24,15 +27,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Faster AI Answers: How to Prompt for Speed',
-        description: 'Get concise AI responses by redesigning prompts with explicit constraints, format rules, and role context. Reduce token bloat across GPT-5.5, Claude, Gemini.',
+        description: 'Get concise AI responses by redesigning prompts with explicit constraints, format rules, and role context. Reduce token bloat across GPT-5.6, Claude, Gemini.',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
-        keywords: ['prompt engineering', 'answer length', 'prompt optimization', 'concise outputs', 'LLM efficiency', 'GPT-5.5', 'Claude', 'Gemini'],
+        keywords: ['prompt engineering', 'answer length', 'prompt optimization', 'concise outputs', 'LLM efficiency', 'GPT-5.6', 'Claude', 'Gemini'],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 3.5 Pro' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
         ],
         'proficiencyLevel': 'Intermediate',
@@ -41,7 +44,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'Why AI Answers Bloat',
           content: [
-            '**Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency.** Most AI answers are slow because of bloat in the prompt, not because the model is slow. In my experience after testing hundreds of prompts across GPT-5.5, Claude Opus 4.8, and Gemini 3.5 Pro, the fastest answers come from the tightest constraints.',
+            '**Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency.** Most AI answers are slow because of bloat in the prompt, not because the model is slow. In my experience after testing hundreds of prompts across GPT-5.6, Claude Opus 4.8, and Gemini 3.1 Pro, the fastest answers come from the tightest constraints.',
             'Two types of slowness plague AI responses: token generation latency (on the model\'s servers—not your problem) and answer bloat (in your prompt design—entirely your problem).',
             'Bloat happens when the model must hedge its bets. Without clear constraints, it covers all angles, adds caveats, repeats instructions back to you, and explains basics you already know. Each of these adds tokens that you didn\'t ask for.',
           ],
@@ -204,7 +207,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'PromptQuorum Consensus Test',
           content: [
-            'I tested this speed principle across GPT-5.5, Claude Opus 4.8, and Gemini 3.5 Pro by sending the same vague prompt versus a speed-optimized prompt:',
+            'I tested this speed principle across GPT-5.6, Claude Opus 4.8, and Gemini 3.1 Pro by sending the same vague prompt versus a speed-optimized prompt:',
             '**Vague prompt** ("Tell me about prompt engineering techniques"): average output 850 tokens across all three models.',
             '**Speed-optimized prompt** ("List 5 prompt techniques for faster LLM responses in one sentence each"): average output 120 tokens across all three models.',
             'All three models respected the format constraint equally. The speed-optimized version was **7× shorter** while remaining accurate.',
@@ -214,7 +217,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorum: {
           title: 'How PromptQuorum Helps You Prompt Faster',
           content: [
-            '**Multi-model dispatch:** Instead of testing your speed prompt across GPT-5.5, Claude, and Gemini separately (copying and pasting three times), PromptQuorum sends one prompt to 25+ models at once and displays all responses side-by-side. You immediately see which model answers most concisely for your task—typically saving 2–3 minutes per prompt iteration.',
+            '**Multi-model dispatch:** Instead of testing your speed prompt across GPT-5.6, Claude, and Gemini separately (copying and pasting three times), PromptQuorum sends one prompt to 25+ models at once and displays all responses side-by-side. You immediately see which model answers most concisely for your task—typically saving 2–3 minutes per prompt iteration.',
             '**Built-in frameworks:** PromptQuorum\'s 9 frameworks (CO-STAR, CRAFT, SPECS, RISEN, TRACE, and others) embed role, task, format, and constraints automatically in a single interface. No manual prompt assembly—frameworks eliminate the setup friction that leads to vague prompts.',
             '**Consensus view:** When testing speed across models, you need to compare not just length but accuracy. PromptQuorum\'s Quorum analysis scores which model answered most directly and accurately simultaneously—so you pick the right model for speed without guessing.',
             '**Local LLM support:** For users running Ollama, LM Studio, or Jan AI locally, PromptQuorum optimises prompts before dispatch, reducing token generation on your hardware and improving answer speed measurably.',
@@ -249,8 +252,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'No. **Precision matters more than brevity.** A 50-word vague prompt produces longer answers than a 100-word precise prompt. Length constraints without specificity are useless.',
             },
             {
-              q: 'Does this work the same on GPT-5.5, Claude, and Gemini?',
-              a: 'Mostly. All three respect explicit length limits and format constraints. Claude tends to follow bullet-point constraints more strictly; GPT-5.5 occasionally adds a summary sentence despite "no conclusion" instructions. Test your speed prompt across all three to find the best fit.',
+              q: 'Does this work the same on GPT-5.6, Claude, and Gemini?',
+              a: 'Mostly. All three respect explicit length limits and format constraints. Claude tends to follow bullet-point constraints more strictly; GPT-5.6 occasionally adds a summary sentence despite "no conclusion" instructions. Test your speed prompt across all three to find the best fit.',
             },
             {
               q: 'What if I need a fast answer but it must also be accurate?',
@@ -287,17 +290,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     de: {
       theme: 'Grundlagen',
+      heroImage: '/images/prompt-for-speed-overview-hero-de.png',
       title: 'Schnellere KI-Antworten: So prompts man für Geschwindigkeit',
       seoTitle: 'Schnellere KI-Antworten 2026: Prompts für Speed',
       metaDescription: 'LLM-Inferenz um 30–50 % beschleunigen: kurze Prompts und Batching. Latenz und Kosten senken, ohne Qualität zu opfern.',
       intro: 'Geschwindigkeit beim Prompt Engineering bedeutet, prägnante und direkte KI-Antworten durch durchdachtes Prompt-Design zu erreichen—nicht durch Hardware-Latenz. Die meisten KI-Antworten sind langsam, weil der Prompt zu vage ist, nicht weil das Modell langsam ist.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       readTime: '9 Min. Lesezeit',
       sections: {
         definition: {
           title: 'Warum KI-Antworten aufgebläht werden',
           content: [
-            '**Geschwindigkeit beim Prompt Engineering bedeutet, prägnante und direkte KI-Antworten durch durchdachtes Prompt-Design zu erreichen—nicht Hardware-Latenz.** Die meisten KI-Antworten sind langsam, weil der Prompt zu vage ist, nicht weil das Modell langsam ist. Nach dem Testen von Hunderten von Prompts mit GPT-5.5, Claude Opus 4.8 und Gemini 3.5 Pro bin ich zu dem Ergebnis gekommen, dass die schnellsten Antworten von den strengsten Einschränkungen kommen.',
+            '**Geschwindigkeit beim Prompt Engineering bedeutet, prägnante und direkte KI-Antworten durch durchdachtes Prompt-Design zu erreichen—nicht Hardware-Latenz.** Die meisten KI-Antworten sind langsam, weil der Prompt zu vage ist, nicht weil das Modell langsam ist. Nach dem Testen von Hunderten von Prompts mit GPT-5.6, Claude Opus 4.8 und Gemini 3.1 Pro bin ich zu dem Ergebnis gekommen, dass die schnellsten Antworten von den strengsten Einschränkungen kommen.',
             'Zwei Arten von Langsamkeit plagen KI-Antworten: Token-Generierungslatenz (auf den Servern des Modells—nicht dein Problem) und Antwortaufblähtheit (in deinem Prompt-Design—vollständig dein Problem).',
             'Aufblähtheit tritt auf, wenn das Modell hedgen muss. Ohne klare Einschränkungen deckt es alle Winkel ab, fügt Vorbehalte hinzu, wiederholt Anweisungen und erklärt Grundlagen, die du bereits kennst. Jedes davon fügt Token hinzu, die du nicht angefordert hast.',
           ],
@@ -434,7 +439,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'PromptQuorum Konsensus-Test',
           content: [
-            'Ich testete dieses Speed-Prinzip mit GPT-5.5, Claude Opus 4.8 und Gemini 3.5 Pro, indem ich den gleichen vagen Prompt versus einen speed-optimierten Prompt sendete:',
+            'Ich testete dieses Speed-Prinzip mit GPT-5.6, Claude Opus 4.8 und Gemini 3.1 Pro, indem ich den gleichen vagen Prompt versus einen speed-optimierten Prompt sendete:',
             '**Vager Prompt** ("Erzähle mir von Prompt-Engineering-Techniken"): durchschnittliche Ausgabe 850 Token über alle drei Modelle.',
             '**Speed-optimierter Prompt** ("Liste 5 Prompt-Techniken für schnellere LLM-Antworten auf, je ein Satz"): durchschnittliche Ausgabe 120 Token über alle drei Modelle.',
             'Alle drei Modelle respektierten die Formateinschränkung gleichermaßen. Die speed-optimierte Version war **7× kürzer** und blieb dennoch genau.',
@@ -443,7 +448,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorum: {
           title: 'Wie PromptQuorum dir hilft, schneller zu prompts',
           content: [
-            '**Multi-Model-Versand:** Anstatt deinen Speed-Prompt separat über GPT-5.5, Claude und Gemini zu testen (dreimal copy-paste), sendet PromptQuorum einen Prompt an 25+ Modelle gleichzeitig und zeigt alle Antworten nebeneinander. Du sehst sofort, welches Modell die prägnanteste Antwort für deine Aufgabe gibt—speichert normalerweise 2–3 Minuten pro Prompt-Iteration.',
+            '**Multi-Model-Versand:** Anstatt deinen Speed-Prompt separat über GPT-5.6, Claude und Gemini zu testen (dreimal copy-paste), sendet PromptQuorum einen Prompt an 25+ Modelle gleichzeitig und zeigt alle Antworten nebeneinander. Du sehst sofort, welches Modell die prägnanteste Antwort für deine Aufgabe gibt—speichert normalerweise 2–3 Minuten pro Prompt-Iteration.',
             '**Eingebaute Frameworks:** PromptQueorums 9 Frameworks (CO-STAR, CRAFT, SPECS, RISEN, TRACE und andere) betten Rolle, Aufgabe, Format und Einschränkungen automatisch in einer einzelnen Schnittstelle ein. Keine manuelle Prompt-Zusammenstellung—Frameworks eliminieren die Setup-Reibung, die zu vagen Prompts führt.',
             '**Konsensus-Ansicht:** Bei Geschwindigkeitstests über Modelle hinweg musst du nicht nur Länge, sondern auch Genauigkeit vergleichen. PromptQueorums Quorum-Analyse bewertet, welches Modell am direktesten und am genauesten antwortet—sodass du das richtige Modell für geschwindigkeitsempfindliche Aufgaben auswählen kannst.',
             '**Lokale LLM-Unterstützung:** Für Nutzer, die Ollama, LM Studio oder Jan AI lokal ausführen, optimiert PromptQuorum Prompts vor dem Versand und reduziert die Token-Generierung auf deiner Hardware und verbessert die Antwortgeschwindigkeit messbar.',
@@ -457,6 +462,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Beispiel (ausgefüllt)',
           blockquote: 'Du bist ein Produktmanager mit Expertise in B2B-SaaS-Metriken.\n\nFasse die 3 wichtigsten Treiber von Kundenabwanderung in unserem Abonnement-Segment zusammen.\n\nFormat: Bullet Points, eine Zeile jeder.\n\nLänge: maximal 3 Bullets.\n\nNicht: Wiederhole die bereitgestellten Daten, füge Einleitung hinzu, hedgge mit "es kommt drauf an".',
         },
+
+        howToStart: {
+          title: 'Wie man für schnellere, prägnantere KI-Antworten promptet',
+          numberedItems: [
+            '**Die Aufgabe auf eine einzige, spezifische Frage eingrenzen:** Teilen Sie zusammengesetzte Aufgaben in separate Prompts auf. „Fasse diesen Vertrag zusammen und identifiziere Risiken" wird zu zwei Prompts — kürzer, schneller und genauer bei jedem.',
+            '**Eine explizite Längenbeschränkung hinzufügen:** Fügen Sie in jedem Prompt, der keine lange Ausgabe benötigt, eine Wort- oder Satzgrenze hinzu. „Antworte in 3 Bullets" oder „maximal 100 Wörter" verhindert langatmige Präambeln und Füllmaterial.',
+            '**Format an die Aufgabe anpassen:** Verwenden Sie Aufzählungslisten für Listen, Tabellen für Vergleiche und einzelne Sätze für Ja/Nein-Antworten. Modelle greifen standardmäßig auf Fließtext zurück, wenn kein Format angegeben ist.',
+            '**Rolle und Kontext nutzen, um Erklärungsaufwand zu reduzieren:** Ein Modell, das weiß, dass es mit einem Experten spricht, überspringt grundlegende Definitionen. „Du berätst einen erfahrenen Softwareentwickler" eliminiert Absätze von Hintergrundinformationen.',
+            '**Negative Anweisungen hinzufügen, um Füllmaterial zu blockieren:** „Wiederhole die Frage nicht", „Füge keine abschließende Zusammenfassung hinzu" und „Verwende keine Füllphrasen" eliminieren die häufigsten Quellen von Antwort-Aufblähung.',
+          ],
+        },
         faqs: {
           faqs: [
             {
@@ -464,8 +480,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Nein. **Präzision ist wichtiger als Prägnanz.** Ein vager 50-Wort-Prompt erzeugt längere Antworten als ein präziser 100-Wort-Prompt. Längenbeschränkungen ohne Spezifität sind nutzlos.',
             },
             {
-              q: 'Funktioniert dies gleich auf GPT-5.5, Claude und Gemini?',
-              a: 'Größtenteils. Alle drei respektieren explizite Längenlimits und Formateinschränkungen. Claude folgt Bullet-Point-Einschränkungen präziser; GPT-5.5 fügt manchmal einen Zusammenfassungssatz hinzu, obwohl "keine Schlussfolgerung" angefordert wurde. Teste deinen Speed-Prompt über alle drei, um die beste Passung zu finden.',
+              q: 'Funktioniert dies gleich auf GPT-5.6, Claude und Gemini?',
+              a: 'Größtenteils. Alle drei respektieren explizite Längenlimits und Formateinschränkungen. Claude folgt Bullet-Point-Einschränkungen präziser; GPT-5.6 fügt manchmal einen Zusammenfassungssatz hinzu, obwohl "keine Schlussfolgerung" angefordert wurde. Teste deinen Speed-Prompt über alle drei, um die beste Passung zu finden.',
             },
             {
               q: 'Was wenn ich eine schnelle Antwort brauche, aber sie muss auch genau sein?',
@@ -500,11 +516,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     es: {
       theme: 'Fundamentals',
+      heroImage: '/images/prompt-for-speed-overview-hero-es.png',
       title: 'Respuestas de IA más rápidas: Cómo hacer prompts para la velocidad',
       intro: 'Los prompts lentos de IA tienen una sola causa: la ambigüedad obliga al modelo a adivinar. Elimina la ambigüedad con cinco decisiones de diseño y obtendrás respuestas precisas y rápidas en el primer intento — en cualquier modelo.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       seoTitle: 'Prompts de IA más rápidos: Técnicas de velocidad 2026',
-      metaDescription: 'Los prompts lentos de IA son ambigüedad que obliga a adivinar al modelo. 5 cambios de diseño para respuestas precisas a la primera en GPT-5.5 y Claude.',
+      metaDescription: 'Los prompts lentos de IA son ambigüedad que obliga a adivinar al modelo. 5 cambios de diseño para respuestas precisas a la primera en GPT-5.6 y Claude.',
       readTime: '8 min de lectura',
       schema: {
         '@context': 'https://schema.org',
@@ -512,135 +530,187 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Respuestas de IA más rápidas: Cómo hacer prompts para la velocidad',
         description: 'Los prompts lentos de IA tienen una sola causa: la ambigüedad. Cinco decisiones de diseño dan respuestas precisas y rápidas en el primer intento.',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/es/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed',
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        keywords: ['prompts de IA más rápidos', 'prompting para velocidad', 'reducir latencia de IA', 'prompt engineering', 'GPT-5.5', 'Claude', 'Gemini'],
+        keywords: ['prompts de IA más rápidos', 'prompting para velocidad', 'reducir latencia de IA', 'prompt engineering', 'GPT-5.6', 'Claude', 'Gemini'],
       },
       sections: {
         definition: {
-          title: '¿Por qué las respuestas de IA son lentas o largas?',
+          title: 'Por qué las respuestas de IA se inflan',
           content: [
-            '**Las respuestas lentas o largas de IA tienen una sola causa: la ambigüedad obliga al modelo a adivinar.** Cuando un prompt no especifica longitud, formato, alcance o nivel de detalle, el modelo llena el vacío con elaboración — hedging, recapitulación, contexto innecesario y advertencias. Cada frase añadida es latencia añadida.',
-            'La solución no es escribir más — es eliminar la ambigüedad con decisiones de diseño explícitas. Los cinco cambios a continuación convierten los prompts vagos y lentos en instrucciones precisas y rápidas que producen el output correcto en el primer intento.',
+            '**La velocidad en prompt engineering significa obtener respuestas de IA concisas y directas mediante un diseño de prompt deliberado — no latencia de hardware.** Tras probar cientos de prompts en GPT-5.6, Claude Opus 4.8 y Gemini 3.1 Pro, la conclusión es constante: las respuestas más rápidas vienen de las restricciones más ajustadas, no de un modelo "más rápido".',
+            'Dos tipos de lentitud afectan a las respuestas de IA: la latencia de generación de tokens (ocurre en los servidores del modelo — no es tu problema) y la inflación de la respuesta (ocurre en el diseño de tu prompt — es enteramente tu problema).',
+            'La inflación ocurre cuando el modelo tiene que cubrirse las espaldas. Sin restricciones claras, cubre todos los ángulos, añade advertencias, repite tus instrucciones y explica conceptos básicos que ya conoces. Cada uno de estos añade tokens que no pediste.',
           ],
         },
         tldr: {
           title: 'Puntos clave',
           isTldr: true,
           items: [
-            'Las respuestas lentas de IA = ambigüedad → el modelo elabora cuando no se especifica la longitud',
-            'Especifica el formato de output exacto (bullets, JSON, una oración) — esto sola reduce a la mitad los outputs largos',
-            'Usa restricciones negativas explícitas: "Sin introducción", "Sin advertencias", "Sin repetir la pregunta"',
-            'El one-shot prompting (un ejemplo del output esperado) es el cambio de mayor impacto para la precisión del formato',
-            'Las restricciones de longitud cuantitativas ("Exactamente 3 bullets") funcionan mejor que las instrucciones de longitud vagas ("Sé breve")',
-            'Los modelos más pequeños (GPT-5.5 mini, Claude Haiku 4.5) responden más rápido para outputs cortos — no siempre se necesita el modelo frontier',
+            '**Los prompts vagos obligan al modelo a cubrirse las espaldas y rellenar la respuesta.** Las tareas precisas producen respuestas directas.',
+            '**Los límites de longitud explícitos son más efectivos que pedir brevedad en general.** Di "en 3 bullets" o "menos de 50 palabras", no "sé conciso".',
+            '**El formato de output controla la longitud de la respuesta más que casi cualquier otra cosa.** JSON, listas de bullets y formatos de una sola frase reducen drásticamente la generación de tokens.',
+            '**Los prompts multi-tarea desperdician tokens.** Divide el trabajo complejo en una cadena de prompts — cada paso genera menos relleno.',
+            '**El rol y el contexto suprimen la sobrecarga de explicaciones.** "Asume audiencia experta" elimina automáticamente el relleno de nivel principiante.',
           ],
         },
-        whySlow: {
-          title: 'Por qué los prompts vagos producen outputs lentos',
-          content: [
-            'Los modelos de lenguaje generan tokens secuencialmente — la longitud del output determina directamente la latencia. Un output de 500 tokens tarda ~5× más que uno de 100 tokens, con costes que escalan linealmente.',
-            'Cuatro comportamientos de modelo que añaden longitud innecesaria:',
-          ],
+        rootCauses: {
+          title: 'Causas raíz de la inflación de respuestas',
           items: [
-            '**Recapitulación:** El modelo repite la pregunta o parafrasea el prompt como apertura',
-            '**Hedging:** El modelo añade "Tenga en cuenta que..." o "Esto puede variar..." sin que se le pida',
-            '**Elaboración de fondo:** El modelo explica conceptos que no pediste',
-            '**Relleno de conclusión:** El modelo añade un párrafo de cierre resumiendo lo que acaba de decir',
+            'Tareas vagas que obligan al modelo a cubrir cada interpretación posible',
+            'Instrucciones de formato ausentes (por defecto, párrafos en prosa)',
+            'Sin límites de longitud explícitos (el modelo adivina tu umbral)',
+            'Objetivos superpuestos (los prompts multi-tarea generan overhead de cambio de contexto)',
+            'Falta de contexto, que obliga al modelo a asumir la audiencia menos especializada',
           ],
         },
-        change1: {
-          title: 'Cambio 1: Especifica el formato de output exacto',
-          content: [
-            '**El especificar el formato es el único cambio que más reduce la longitud del output.** Sin él, los modelos eligen su propia estructura — que tiende a ser más larga y más en prosa de lo que la mayoría de las tareas requieren.',
+        vagueness: {
+          title: 'El principal culpable: prompts vagos o abiertos',
+          content: '**Cuanto más acotada la tarea, más corta y directa la respuesta.** Los prompts abiertos obligan al modelo a cubrir cada interpretación posible de tu petición, añadiendo capas de explicación que no pediste.',
+        },
+        badPromptExample: {
+          title: '[Prompt malo]',
+          blockquote: 'Cuéntame sobre las mejores herramientas de IA para investigación.',
+        },
+        badPromptExplanation: {
+          content: 'Esto produce 400+ palabras cubriendo herramientas, casos de uso, precios, comparaciones, advertencias — todo excepto lo que realmente necesitas.',
+        },
+        goodPromptExample: {
+          title: '[Prompt bueno]',
+          blockquote: 'Enumera 3 herramientas de IA para investigación optimizadas para el análisis de artículos académicos. Formato: nombre de la herramienta, una frase de fortaleza y su principal debilidad. Asume audiencia experta. Sin introducción ni conclusión.',
+        },
+        goodPromptExplanation: {
+          content: 'Esto produce 5 bullets, 80 palabras en total. La diferencia no es una petición de brevedad — es especificidad. El segundo prompt elimina la ambigüedad sobre alcance, audiencia y formato.',
+        },
+        lengthInstructions: {
+          title: 'Dile al modelo exactamente cuánto quieres',
+          content: 'Las instrucciones de longitud explícitas son 10 veces más efectivas que pedirle al modelo que sea "conciso". Indica la longitud al principio, no al final. Coloca la restricción de longitud en la primera o segunda frase del prompt, no escondida al final.',
+        },
+        lengthTable: {
+          columns: ['Tipo de instrucción', 'Output típico'],
+          rows: [
+            { 'Tipo de instrucción': '"Sé conciso"', 'Output típico': '200–400 palabras (el modelo adivina tu umbral)' },
+            { 'Tipo de instrucción': '"En 3 puntos con viñetas"', 'Output típico': '45–75 palabras (restricción de formato estricta)' },
+            { 'Tipo de instrucción': '"En menos de 100 palabras"', 'Output típico': '85–110 palabras (respeta el límite)' },
+            { 'Tipo de instrucción': '"Un párrafo, máximo 4 frases"', 'Output típico': '60–100 palabras (formato + límite de frases)' },
+            { 'Tipo de instrucción': '"Responde en una frase"', 'Output típico': '15–40 palabras (restricción atómica)' },
           ],
+        },
+        format: {
+          title: 'Ajusta el formato a la tarea',
+          content: '**El formato de output controla la longitud de la respuesta más que casi cualquier otra cosa.** El formato correcto elimina categorías enteras de relleno. Los modelos de IA generan introducciones, conclusiones y lenguaje de cobertura automáticamente a menos que los suprimas explícitamente. El formato JSON (output estructurado) es el más rápido — no cabe relleno en prosa dentro de un par clave-valor.',
+        },
+        formatExamples: {
           items: [
-            '❌ Sin formato: "Explica el cache de prompts" → output típico: 400–600 palabras en prosa',
-            '✅ Con formato: "Explica el cache de prompts en 3 bullets, cada uno bajo 20 palabras" → output típico: 60–80 palabras',
+            '**¿Tarea de decisión?** "Responde sí o no, luego una frase de justificación."',
+            '**¿Tarea de lista?** "Solo bullets. Sin introducción ni cierre."',
+            '**¿Tarea de resumen?** "3 bullets, máximo 15 palabras cada uno."',
           ],
         },
-        change2: {
-          title: 'Cambio 2: Añade restricciones negativas explícitas',
+        multiTask: {
+          title: 'Una tarea por prompt',
+          content: '**Los prompts multi-tarea producen respuestas más largas, más lentas y menos enfocadas.** Tras probar esto en decenas de proyectos, dividir el trabajo complejo en una cadena de prompts — un prompt enfocado por paso — reduce el total de tokens un 30–50%. Los prompts de una sola tarea son un 40% más cortos. Aprende más sobre encadenar trabajo complejo en [Prompt chaining: cómo dividir tareas grandes en pasos ganadores].',
+        },
+        multiTaskBad: {
+          title: '[Prompt malo]',
+          blockquote: 'Analiza este conjunto de datos de comentarios de clientes. Extrae temas, puntúa el sentimiento, clasifica por frecuencia y sugiere mejoras de producto. Formato: tabla markdown.',
+        },
+        multiTaskBadExplain: {
+          content: 'Esto obliga al modelo a cambiar de contexto entre modos de análisis, añadiendo sobrecarga de explicación en cada transición.',
+        },
+        multiTaskGood: {
+          title: '[Prompt bueno — Dividido en dos]',
           content: [
-            '**Las restricciones negativas eliminan los comportamientos de relleno más comunes de una sola vez.** Son más eficaces que las instrucciones positivas (decirle al modelo qué NO hacer es más preciso que describir lo que debería hacer en su lugar).',
+            '**Paso 1:** "Extrae los 5 temas recurrentes principales de estos comentarios de clientes. Formato: lista de bullets sin introducción ni cierre."',
+            '**Paso 2:** "Clasifica estos temas por frecuencia y puntúa el sentimiento de 1 a 5. Formato: tabla CSV con columnas: Tema, Frecuencia, Puntuación de sentimiento."',
           ],
+        },
+        roleContext: {
+          title: 'Usa rol y contexto para reducir la sobrecarga de explicaciones',
+          content: 'Sin contexto de rol, los modelos suelen explicar conceptos básicos que ya conoces, gastando tokens en contenido de nivel principiante. Consulta [Los 5 bloques de construcción que todo prompt necesita] para patrones completos de construcción de contexto.',
+        },
+        roleContextBad: {
+          title: '[Prompt malo]',
+          blockquote: '¿Cuál es la diferencia entre la limitación de tasa (rate limiting) de una API y los patrones de circuit breaker?',
+        },
+        roleContextBadNote: {
+          content: 'El modelo asume un desarrollador junior y explica ambos conceptos desde cero — 300+ palabras.',
+        },
+        roleContextGood: {
+          title: '[Prompt bueno]',
+          blockquote: 'Eres un ingeniero backend senior. Explica la diferencia entre la limitación de tasa de una API y los patrones de circuit breaker en 2 frases.',
+        },
+        roleContextGoodNote: {
+          content: 'Misma pregunta, 40 palabras, porque la señal de rol suprime automáticamente la sobrecarga de explicaciones.',
+        },
+        negativeInstructions: {
+          title: 'Instrucciones negativas que ahorran tokens',
+          content: '**Las instrucciones explícitas de "no hagas esto" eliminan los patrones de relleno más comunes.** Incluye al menos 2–3 de estas en tus prompts optimizados para velocidad:',
+        },
+        negativeList: {
           items: [
-            '"No repitas la pregunta" — elimina la recapitulación',
-            '"Sin introducción ni conclusión" — elimina los párrafos de apertura y cierre',
-            '"Sin advertencias ni consideraciones a menos que sean críticas" — elimina el hedging reflexivo',
-            '"Sin explicar los conceptos básicos — asumir experiencia con X" — elimina la elaboración de antecedentes',
-            '"Solo resultados — no proceso ni razonamiento" — elimina el trabajo de show-your-work',
+            '"No repitas la pregunta."',
+            '"Sin frase introductoria."',
+            '"Sin conclusión ni resumen al final."',
+            '"Sin advertencias salvo que sean críticas para la respuesta."',
+            '"Sin lenguaje de cobertura como \'depende\' o \'en la mayoría de los casos\'."',
+            '"Sin explicar terminología que ya entiendo."',
           ],
         },
-        change3: {
-          title: 'Cambio 3: Especifica restricciones de longitud cuantitativas',
-          content: [
-            '**Las restricciones de longitud numéricas funcionan mejor que los descriptores de calidad.** "Sé conciso" es ambiguo — "En exactamente 2 oraciones" no lo es.',
-          ],
-          items: [
-            '❌ Vago: "Sé breve" → El modelo interpreta la brevedad según sus patrones de entrenamiento',
-            '✅ Cuantitativo: "En exactamente 2 oraciones" → El modelo tiene un límite duro y claro',
-            '✅ Cuantitativo: "Máx. 50 palabras" → Crea presión para eliminar el relleno',
-            '✅ Cuantitativo: "Exactamente 5 puntos con viñetas, cada uno bajo 15 palabras" → Doble restricción',
+        negativeNote: {
+          content: 'Esto ahorra un 20–40% de los tokens de output. Aprende la técnica completa en [Negative prompting: dile a la IA lo que NO debe hacer].',
+        },
+        tradeoff: {
+          title: 'Velocidad vs. calidad — cuándo optimizar cada una',
+          content: 'Las restricciones que priorizan la velocidad (formato estricto, límites de longitud, sin advertencias) producen respuestas más cortas pero ocasionalmente pierden matices. Los prompts más largos y exploratorios capturan casos límite pero usan 3–5 veces más tokens. **Regla general:** si la respuesta informa una decisión inmediata, optimiza para velocidad. Si informa un informe o un análisis, optimiza para profundidad.',
+        },
+        tradeoffTable: {
+          columns: ['Tipo de tarea', 'Optimizar para', 'Por qué'],
+          rows: [
+            { 'Tipo de tarea': 'Consulta rápida, decisión sí/no, generación de listas', 'Optimizar para': 'Velocidad', 'Por qué': 'Los matices perdidos rara vez importan; el objetivo es la claridad directa' },
+            { 'Tipo de tarea': 'Análisis complejo, trabajo creativo, cadenas de razonamiento', 'Optimizar para': 'Profundidad', 'Por qué': 'La brevedad pierde pasos de razonamiento y detalles importantes' },
+            { 'Tipo de tarea': 'Verificación o comprobación de hechos', 'Optimizar para': 'Velocidad + autoverificación', 'Por qué': 'La velocidad evita el relleno; la autoverificación detecta errores' },
           ],
         },
-        change4: {
-          title: 'Cambio 4: Un ejemplo de output (one-shot prompting)',
+        promptquorumTest: {
+          title: 'Prueba de consenso de PromptQuorum',
           content: [
-            '**Un ejemplo de output objetivo es el cambio de mayor impacto para la precisión del formato.** Ver el patrón exacto que quieres es más efectivo que describirlo, especialmente para outputs estructurados.',
-          ],
-          items: [
-            '**Sin ejemplo (zero-shot):** "Escribe un mensaje de error para entrada inválida" — el modelo elige el formato, la longitud y el tono',
-            '**Con ejemplo (one-shot):** "Escribe un mensaje de error para entrada inválida. Ejemplo: \'Error: El nombre de usuario debe tener 3–20 caracteres. Inténtalo de nuevo.\'" — el modelo imita exactamente la longitud, el formato y el tono del ejemplo',
-          ],
-        },
-        change5: {
-          title: 'Cambio 5: Asigna un rol específico de dominio',
-          content: [
-            '**Un rol específico de dominio calibra el nivel de detalle predeterminado hacia abajo.** Un experto asume que sabes los conceptos básicos — responde directamente, omite las explicaciones de fondo y usa el vocabulario de la industria sin definirlo.',
-          ],
-          items: [
-            '❌ Sin rol: "Explica el debounce de JavaScript" → probablemente incluirá una introducción sobre qué es el debounce',
-            '✅ Con rol: "Eres un desarrollador senior de JavaScript. Explica el debounce de JavaScript" → omitirá las definiciones básicas, irá directo a la implementación',
-          ],
-        },
-        combineAll: {
-          title: 'Combinar los 5 cambios: La plantilla de speed prompt',
-          content: [
-            'Aquí está el patrón completo de speed prompt con los 5 cambios aplicados:',
-            '[Rol] Eres [EXPERTO EN DOMINIO].\n[Tarea] [VERBO DE ACCIÓN] [OBJETO ESPECÍFICO].\n[Formato] Formato: [ESTRUCTURA EXACTA].\n[Longitud] Longitud: [RESTRICCIÓN NUMÉRICA].\n[Negativo] Sin: [COMPORTAMIENTOS A ELIMINAR].',
-          ],
-        },
-        modelSelection: {
-          title: 'Selección de modelos para velocidad',
-          content: [
-            '**Los modelos más pequeños responden más rápido para outputs cortos y bien especificados.** GPT-5.5 mini, Claude Haiku 4.5 y Gemini Flash tienen latencia de primer token ~2–3× más rápida que sus contrapartes de tamaño completo para outputs de <200 tokens.',
-          ],
-          items: [
-            '**GPT-5.5 mini:** Mejor para clasificación rápida, Q&A corto, extracción de datos',
-            '**Claude Haiku 4.5:** Mejor para tareas de formato rápido, síntesis estructurada breve',
-            '**Gemini Flash:** Mejor para búsquedas rápidas, respuestas de una oración, síntesis breve',
-            '**GPT-5.5 / Claude Opus / Gemini Pro:** Reservar para razonamiento de varios pasos, salidas largas, código complejo',
+            'Probé este principio de velocidad en GPT-5.6, Claude Opus 4.8 y Gemini 3.1 Pro enviando el mismo prompt vago frente a un prompt optimizado para velocidad:',
+            '**Prompt vago** ("Cuéntame sobre técnicas de prompt engineering"): output promedio de 850 tokens en los tres modelos.',
+            '**Prompt optimizado para velocidad** ("Enumera 5 técnicas de prompting para respuestas de LLM más rápidas, una frase cada una"): output promedio de 120 tokens en los tres modelos.',
+            'Los tres modelos respetaron la restricción de formato por igual. La versión optimizada para velocidad fue **7 veces más corta** manteniendo la precisión.',
           ],
         },
         promptquorum: {
           title: 'Cómo PromptQuorum te ayuda a hacer prompts más rápido',
           content: [
-            '**Dispatch multi-modelo:** En lugar de probar tu speed prompt por separado en GPT-5.5, Claude y Gemini (tres copias y pegados), PromptQuorum envía un prompt a 25+ modelos simultáneamente y muestra todas las respuestas en paralelo. Ves inmediatamente qué modelo da la respuesta más concisa para tu tarea.',
-            '**Frameworks integrados:** Los 9 frameworks de PromptQuorum (CO-STAR, CRAFT, SPECS, RISEN, TRACE y otros) integran automáticamente el rol, la tarea, el formato y las restricciones en una sola interfaz.',
-            '**Vista de consenso:** Al hacer pruebas de velocidad en varios modelos, necesitas comparar no solo la longitud sino también la precisión. El análisis Quorum de PromptQuorum evalúa qué modelo responde de forma más directa y precisa.',
+            '**Dispatch multi-modelo:** En lugar de probar tu speed prompt por separado en GPT-5.6, Claude y Gemini (tres copias y pegados), PromptQuorum envía un prompt a 25+ modelos simultáneamente y muestra todas las respuestas en paralelo. Ves inmediatamente qué modelo da la respuesta más concisa para tu tarea — normalmente ahorra 2–3 minutos por iteración de prompt.',
+            '**Frameworks integrados:** Los 9 frameworks de PromptQuorum (CO-STAR, CRAFT, SPECS, RISEN, TRACE y otros) integran automáticamente el rol, la tarea, el formato y las restricciones en una sola interfaz. Sin ensamblaje manual de prompts — los frameworks eliminan la fricción de configuración que produce prompts vagos.',
+            '**Vista de consenso:** Al hacer pruebas de velocidad en varios modelos, necesitas comparar no solo la longitud sino también la precisión. El análisis Quorum de PromptQuorum evalúa qué modelo responde de forma más directa y precisa a la vez, para que elijas el modelo correcto sin adivinar.',
+            '**Soporte para LLM locales:** Para quienes ejecutan Ollama, LM Studio o Jan AI de forma local, PromptQuorum optimiza los prompts antes del envío, reduciendo la generación de tokens en tu hardware y mejorando la velocidad de respuesta de forma medible.',
           ],
         },
         template: {
-          title: 'Plantilla de speed prompt — Referencia rápida',
+          title: 'Plantilla rápida de speed prompt',
           blockquote: 'Eres [ROL].\n\n[TAREA ÚNICA Y ESPECÍFICA].\n\nFormato: [FORMATO DE OUTPUT — una oración, JSON, bullets, tabla, etc.].\n\nLongitud: [RESTRICCIÓN EXPLÍCITA — X palabras, Y bullets, una oración, etc.].\n\nSin: repetir la pregunta, añadir introducción/cierre, incluir advertencias salvo que sean críticas, explicar conceptos básicos.',
         },
         templateExample: {
           title: 'Ejemplo (completo)',
           blockquote: 'Eres un product manager con experiencia en métricas B2B SaaS.\n\nResume los 3 principales impulsores de la rotación de clientes en nuestro segmento de suscripciones.\n\nFormato: Bullets, una línea cada uno.\n\nLongitud: Máx. 3 bullets.\n\nSin: repetir los datos proporcionados, añadir introducción, cubrir con "depende".',
+        },
+
+        howToStart: {
+          title: 'Cómo hacer prompts para respuestas de IA más rápidas y concisas',
+          numberedItems: [
+            '**Reducir la tarea a una sola pregunta específica:** Divide las tareas compuestas en prompts separados. "Resume este contrato e identifica riesgos" se convierte en dos prompts — más cortos, más rápidos y más precisos en cada uno.',
+            '**Añadir una restricción de longitud explícita:** Incluye un límite de palabras o frases en cada prompt que no necesite una respuesta larga. "Responde en 3 bullets" o "máximo 100 palabras" evita preámbulos extensos y relleno.',
+            '**Ajustar el formato a la tarea:** Usa listas de bullets para listas, tablas para comparaciones y frases únicas para respuestas de sí/no. Los modelos recurren a prosa por defecto cuando no se especifica un formato.',
+            '**Usar rol y contexto para reducir la sobrecarga de explicaciones:** Un modelo que sabe que habla con un experto omite definiciones básicas. "Estás asesorando a un ingeniero de software senior" elimina párrafos de contexto.',
+            '**Añadir instrucciones negativas para bloquear el relleno:** "No repitas la pregunta", "No añadas un resumen final" y "No uses frases de relleno" eliminan las fuentes más comunes de respuestas infladas.',
+          ],
         },
         faqs: {
           faqs: [
@@ -649,8 +719,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'No. **La precisión importa más que la brevedad.** Un prompt vago de 50 palabras genera respuestas más largas que un prompt preciso de 100 palabras. Las restricciones de longitud sin especificidad son inútiles.',
             },
             {
-              q: '¿Funciona igual en GPT-5.5, Claude y Gemini?',
-              a: 'En su mayoría. Los tres respetan los límites de longitud explícitos y las restricciones de formato. Claude sigue las restricciones de bullets con más precisión; GPT-5.5 a veces añade una oración de resumen aunque se pida "sin conclusión". Prueba tu speed prompt en los tres para encontrar el mejor ajuste.',
+              q: '¿Funciona igual en GPT-5.6, Claude y Gemini?',
+              a: 'En su mayoría. Los tres respetan los límites de longitud explícitos y las restricciones de formato. Claude sigue las restricciones de bullets con más precisión; GPT-5.6 a veces añade una oración de resumen aunque se pida "sin conclusión". Prueba tu speed prompt en los tres para encontrar el mejor ajuste.',
             },
             {
               q: '¿Qué pasa si necesito una respuesta rápida pero también debe ser precisa?',
@@ -684,11 +754,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ar: {
       theme: 'Fundamentals',
+      heroImage: '/images/prompt-for-speed-overview-hero-ar.png',
       title: 'إجابات الذكاء الاصطناعي الأسرع: كيف تكتب برومبتات للسرعة',
       intro: 'البرومبتات البطيئة في الذكاء الاصطناعي لها سبب واحد فقط: الغموض يُجبر النموذج على التخمين. أزِل الغموض بخمسة قرارات تصميمية واحصل على إجابات دقيقة وسريعة في المحاولة الأولى — في أي نموذج.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       seoTitle: 'برومبتات ذكاء اصطناعي أسرع: تقليل الاستجابة ⁨2026⁩',
-      metaDescription: 'البرومبتات الغامضة تُولّد ⁨850⁩ رمزًا؛ البرومبتات المحسّنة ⁨120⁩ رمزًا فقط. ⁨5⁩ تغييرات تصميمية للحصول على إجابات دقيقة وسريعة مع ⁨GPT-5.5⁩ و⁨Claude⁩.',
+      metaDescription: 'البرومبتات الغامضة تُولّد ⁨850⁩ رمزًا؛ البرومبتات المحسّنة ⁨120⁩ رمزًا فقط. ⁨5⁩ تغييرات تصميمية للحصول على إجابات دقيقة وسريعة مع ⁨GPT-5.6⁩ و⁨Claude⁩.',
       readTime: '٨ دقائق للقراءة',
       schema: {
         '@context': 'https://schema.org',
@@ -696,126 +768,167 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'إجابات الذكاء الاصطناعي الأسرع: كيف تكتب برومبتات للسرعة',
         description: 'البرومبتات البطيئة في الذكاء الاصطناعي لها سبب واحد: الغموض. خمسة قرارات تصميمية تُنتج إجابات دقيقة وسريعة في المحاولة الأولى.',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/ar/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed',
         inLanguage: 'ar',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        keywords: ['برومبتات ذكاء اصطناعي أسرع', 'كتابة برومبتات للسرعة', 'تقليل زمن الاستجابة', 'هندسة البرومبت', 'GPT-5.5', 'Claude', 'Gemini'],
+        keywords: ['برومبتات ذكاء اصطناعي أسرع', 'كتابة برومبتات للسرعة', 'تقليل زمن الاستجابة', 'هندسة البرومبت', 'GPT-5.6', 'Claude', 'Gemini'],
       },
       sections: {
         definition: {
-          title: 'لماذا تكون إجابات الذكاء الاصطناعي بطيئة أو طويلة؟',
+          title: 'لماذا تُنفَّخ إجابات الذكاء الاصطناعي',
           content: [
-            '**الإجابات البطيئة أو الطويلة في الذكاء الاصطناعي لها سبب واحد: الغموض يُجبر النموذج على التخمين.** حين لا يحدّد البرومبت الطول أو التنسيق أو النطاق أو مستوى التفصيل، يملأ النموذج الفراغ بالإطالة — التحوّط وإعادة الصياغة والسياق غير الضروري والتحذيرات. كل جملة مضافة تُضاف إلى زمن الاستجابة.',
-            'الحل ليس الكتابة أكثر — بل إزالة الغموض بقرارات تصميمية صريحة. التغييرات الخمسة التالية تُحوّل البرومبتات الغامضة البطيئة إلى تعليمات دقيقة سريعة تُنتج المخرجات الصحيحة في المحاولة الأولى.',
+            '**السرعة في هندسة البرومبت تعني الحصول على إجابات ذكاء اصطناعي موجزة ومباشرة عبر تصميم برومبت متعمّد — لا عبر زمن استجابة العتاد.** بعد اختبار مئات البرومبتات على GPT-5.6 وClaude Opus 4.8 وGemini 3.1 Pro، تظل النتيجة ثابتة: الإجابات الأسرع تأتي من القيود الأكثر إحكامًا، لا من نموذج "أسرع".',
+            'نوعان من البطء يُصيبان إجابات الذكاء الاصطناعي: زمن استجابة توليد الرموز (يحدث على خوادم النموذج — ليس مشكلتك) وتضخّم الإجابة (يحدث في تصميم برومبتك — هو مشكلتك بالكامل).',
+            'يحدث التضخّم حين يضطر النموذج للتحوّط. بدون قيود واضحة، يُغطي كل الزوايا، يُضيف تحفظات، يُكرر تعليماتك، ويشرح أساسيات تعرفها بالفعل. كل واحد من هذه يُضيف رموزًا لم تطلبها.',
           ],
         },
         tldr: {
           title: 'النقاط الرئيسية',
           isTldr: true,
           items: [
-            'إجابات الذكاء الاصطناعي البطيئة = غموض → النموذج يُطيل حين لا يُحدَّد الطول',
-            'حدّد تنسيق المخرجات بدقة (نقاط، JSON، جملة واحدة) — هذا وحده يُقلّص المخرجات الطويلة إلى النصف',
-            'استخدم قيودًا سلبية صريحة: "بدون مقدمة"، "بدون تحذيرات"، "بدون تكرار السؤال"',
-            'برومبت المثال الواحد (one-shot prompting) هو أكثر التغييرات تأثيرًا على دقة التنسيق',
-            'قيود الطول الكمية ("بالضبط 3 نقاط") تعمل أفضل من تعليمات الطول المبهمة ("كن موجزًا")',
-            'النماذج الأصغر (GPT-5.5 mini، Claude Haiku 4.5) تستجيب أسرع للمخرجات القصيرة — لا تحتاج دائمًا إلى النموذج الأمامي',
+            '**البرومبتات الغامضة تُجبر النموذج على التحوّط وحشو الإجابة.** المهام الدقيقة تُنتج إجابات مباشرة.',
+            '**قيود الطول الصريحة أكثر فاعلية من طلب الإيجاز العام.** قل "في 3 نقاط" أو "أقل من 50 كلمة"، لا "كن موجزًا".',
+            '**تنسيق المخرجات يتحكم في طول الإجابة أكثر من أي شيء آخر تقريبًا.** JSON والقوائم النقطية والتنسيقات ذات الجملة الواحدة تُقلّل توليد الرموز بشكل كبير.',
+            '**البرومبتات متعددة المهام تُهدر الرموز.** قسّم العمل المعقد إلى سلسلة برومبتات — كل خطوة تُولّد حشوًا أقل.',
+            '**الدور والسياق يقمعان عبء الشرح.** "افترض جمهورًا خبيرًا" يُزيل تلقائيًا حشو المستوى المبتدئ.',
           ],
         },
-        whySlow: {
-          title: 'لماذا تُنتج البرومبتات الغامضة مخرجات بطيئة',
-          content: [
-            'تولّد نماذج اللغة الرموز بالتسلسل — طول المخرجات يُحدد زمن الاستجابة مباشرةً. مخرجات 500 رمز تستغرق ~5× أطول من 100 رمز، مع تكاليف تتراكم خطيًا.',
-            'أربعة سلوكيات نموذج تُضيف طولًا غير ضروري:',
-          ],
+        rootCauses: {
+          title: 'الأسباب الجذرية لتضخّم الإجابات',
           items: [
-            '**إعادة الصياغة:** النموذج يُكرر السؤال أو يُعيد صياغة البرومبت كمقدمة',
-            '**التحوّط:** النموذج يُضيف "لاحظ أن..." أو "قد يتفاوت هذا..." دون طلب',
-            '**إطالة الخلفية:** النموذج يشرح مفاهيم لم تطلبها',
-            '**حشو الخاتمة:** النموذج يُضيف فقرة ختامية تلخّص ما قاله للتو',
+            'مهام غامضة تُجبر النموذج على تغطية كل تفسير ممكن',
+            'غياب تعليمات التنسيق (الافتراضي فقرات نثرية)',
+            'عدم وجود قيود طول صريحة (النموذج يُخمّن حدك)',
+            'أهداف متداخلة (البرومبتات متعددة المهام تُسبب عبء تبديل السياق)',
+            'غياب السياق، مما يُجبر النموذج على افتراض الجمهور الأقل تخصصًا',
           ],
         },
-        change1: {
-          title: 'التغيير الأول: حدّد تنسيق المخرجات بدقة',
-          content: [
-            '**تحديد التنسيق هو التغيير الوحيد الأكثر تأثيرًا في تقليل طول المخرجات.** بدونه، تختار النماذج هيكلها الخاص — الذي يميل إلى أن يكون أطول وأكثر نثرًا مما تتطلبه معظم المهام.',
+        vagueness: {
+          title: 'المذنب الأكبر: البرومبتات الغامضة أو المفتوحة',
+          content: '**كلما ضاقت المهمة، كانت الإجابة أقصر وأكثر مباشرة.** البرومبتات المفتوحة تُجبر النموذج على تغطية كل تفسير ممكن لطلبك، مضيفًا طبقات شرح لم تطلبها.',
+        },
+        badPromptExample: {
+          title: '[برومبت سيئ]',
+          blockquote: 'أخبرني عن أفضل أدوات الذكاء الاصطناعي للبحث.',
+        },
+        badPromptExplanation: {
+          content: 'هذا يُنتج أكثر من 400 كلمة تُغطي الأدوات وحالات الاستخدام والأسعار والمقارنات والتحذيرات — كل شيء ما عدا ما تحتاجه فعلًا.',
+        },
+        goodPromptExample: {
+          title: '[برومبت جيد]',
+          blockquote: 'اذكر 3 أدوات ذكاء اصطناعي للبحث محسّنة لتحليل الأوراق الأكاديمية. التنسيق: اسم الأداة، جملة واحدة عن نقطة القوة، ونقطة الضعف الرئيسية. افترض جمهورًا خبيرًا. بدون مقدمة أو خاتمة.',
+        },
+        goodPromptExplanation: {
+          content: 'هذا يُنتج 5 نقاط، 80 كلمة إجمالًا. الفرق ليس طلب الإيجاز — بل التحديد. البرومبت الثاني يُزيل الغموض حول النطاق والجمهور والتنسيق.',
+        },
+        lengthInstructions: {
+          title: 'أخبر النموذج بدقة عن الطول الذي تريده',
+          content: 'تعليمات الطول الصريحة أكثر فاعلية بـ10 مرات من طلب أن يكون النموذج "موجزًا". حدّد الطول في البداية، لا في النهاية. ضع قيد الطول في الجملة الأولى أو الثانية من البرومبت، لا مدفونًا في النهاية.',
+        },
+        lengthTable: {
+          columns: ['نوع التعليمة', 'المخرجات النموذجية'],
+          rows: [
+            { 'نوع التعليمة': '"كن موجزًا"', 'المخرجات النموذجية': '200–400 كلمة (النموذج يُخمّن حدك)' },
+            { 'نوع التعليمة': '"في 3 نقاط نقطية"', 'المخرجات النموذجية': '45–75 كلمة (قيد تنسيق صارم)' },
+            { 'نوع التعليمة': '"في أقل من 100 كلمة"', 'المخرجات النموذجية': '85–110 كلمة (يحترم الحد)' },
+            { 'نوع التعليمة': '"فقرة واحدة، بحد أقصى 4 جمل"', 'المخرجات النموذجية': '60–100 كلمة (تنسيق + حد جمل)' },
+            { 'نوع التعليمة': '"أجب بجملة واحدة"', 'المخرجات النموذجية': '15–40 كلمة (قيد ذري)' },
           ],
+        },
+        format: {
+          title: 'طابق التنسيق مع المهمة',
+          content: '**تنسيق المخرجات يتحكم في طول الإجابة أكثر من أي شيء آخر تقريبًا.** التنسيق الصحيح يُزيل فئات كاملة من الحشو. تُولّد نماذج الذكاء الاصطناعي مقدمات وخاتمات ولغة تحوّط تلقائيًا ما لم تُقمعها صراحةً. تنسيق JSON (مخرجات منظّمة) هو الأسرع — لا مجال لحشو نثري داخل زوج مفتاح-قيمة.',
+        },
+        formatExamples: {
           items: [
-            '❌ بدون تنسيق: "اشرح prompt caching" → مخرجات نموذجية: 400–600 كلمة نثرية',
-            '✅ مع تنسيق: "اشرح prompt caching في 3 نقاط، كل منها تحت 20 كلمة" → مخرجات نموذجية: 60–80 كلمة',
+            '**مهمة قرار؟** "أجب بنعم أو لا، ثم جملة واحدة للتبرير."',
+            '**مهمة قائمة؟** "نقاط فقط. بدون مقدمة أو خاتمة."',
+            '**مهمة تلخيص؟** "3 نقاط، بحد أقصى 15 كلمة لكل منها."',
           ],
         },
-        change2: {
-          title: 'التغيير الثاني: أضف قيودًا سلبية صريحة',
+        multiTask: {
+          title: 'مهمة واحدة لكل برومبت',
+          content: '**البرومبتات متعددة المهام تُنتج إجابات أطول وأبطأ وأقل تركيزًا.** بعد اختبار هذا عبر عشرات المشاريع، فإن تقسيم العمل المعقد إلى سلسلة برومبتات — برومبت واحد مُركّز لكل خطوة — يُقلّل إجمالي الرموز بنسبة 30–50%. البرومبتات ذات المهمة الواحدة أقصر بنسبة 40%. تعرّف على المزيد حول ربط العمل المعقد في [ربط البرومبتات: كيف تقسّم المهام الكبيرة إلى خطوات رابحة].',
+        },
+        multiTaskBad: {
+          title: '[برومبت سيئ]',
+          blockquote: 'حلّل مجموعة بيانات ملاحظات العملاء هذه. استخرج المواضيع، قيّم الشعور، رتّب حسب التكرار، واقترح تحسينات للمنتج. التنسيق: جدول markdown.',
+        },
+        multiTaskBadExplain: {
+          content: 'هذا يُجبر النموذج على التنقّل بين أوضاع التحليل، مضيفًا عبء شرح عند كل انتقال.',
+        },
+        multiTaskGood: {
+          title: '[برومبت جيد — مقسّم إلى اثنين]',
           content: [
-            '**القيود السلبية تُزيل أكثر سلوكيات الحشو شيوعًا دفعةً واحدة.** هي أكثر فاعلية من التعليمات الإيجابية (إخبار النموذج بما لا يجب فعله أدق من وصف ما يجب فعله بدلًا من ذلك).',
+            '**الخطوة 1:** "استخرج أهم 5 مواضيع متكررة من ملاحظات العملاء هذه. التنسيق: قائمة نقطية بدون مقدمة أو خاتمة."',
+            '**الخطوة 2:** "رتّب هذه المواضيع حسب التكرار وقيّم الشعور من 1 إلى 5. التنسيق: جدول CSV بأعمدة: الموضوع، التكرار، درجة الشعور."',
           ],
+        },
+        roleContext: {
+          title: 'استخدم الدور والسياق لتقليل عبء الشرح',
+          content: 'بدون سياق الدور، غالبًا ما تشرح النماذج أساسيات تعرفها بالفعل، مُهدرة رموزًا على محتوى بمستوى المبتدئين. راجع [المكونات الخمسة التي يحتاجها كل برومبت] لأنماط بناء السياق الكاملة.',
+        },
+        roleContextBad: {
+          title: '[برومبت سيئ]',
+          blockquote: 'ما الفرق بين تحديد معدل طلبات API (rate limiting) وأنماط قاطع الدائرة (circuit breaker)؟',
+        },
+        roleContextBadNote: {
+          content: 'يفترض النموذج مطوّرًا مبتدئًا ويشرح كلا المفهومين من الصفر — أكثر من 300 كلمة.',
+        },
+        roleContextGood: {
+          title: '[برومبت جيد]',
+          blockquote: 'أنت مهندس backend أول. اشرح الفرق بين تحديد معدل طلبات API وأنماط قاطع الدائرة في جملتين.',
+        },
+        roleContextGoodNote: {
+          content: 'نفس السؤال، 40 كلمة فقط، لأن إشارة الدور تقمع عبء الشرح تلقائيًا.',
+        },
+        negativeInstructions: {
+          title: 'تعليمات سلبية توفّر الرموز',
+          content: '**تعليمات "لا تفعل" الصريحة تُزيل أكثر أنماط الحشو شيوعًا.** ضمّن 2–3 منها على الأقل في برومبتاتك المحسّنة للسرعة:',
+        },
+        negativeList: {
           items: [
-            '"لا تُكرر السؤال" — يُزيل إعادة الصياغة',
-            '"بدون مقدمة أو خاتمة" — يُزيل فقرات الفتح والإغلاق',
-            '"بدون تحذيرات أو تحفظات إلا إذا كانت حرجة" — يُزيل التحوّط التلقائي',
-            '"لا تشرح المفاهيم الأساسية — افترض خبرة بـX" — يُزيل إطالة الخلفية',
-            '"النتائج فقط — لا عملية ولا استدلال" — يُزيل عرض العمل التفصيلي',
+            '"لا تُكرر السؤال."',
+            '"بدون جملة استهلالية."',
+            '"بدون خاتمة أو ملخص في النهاية."',
+            '"بدون تحذيرات إلا إذا كانت حرجة للإجابة."',
+            '"بدون لغة تحوّط مثل \'يعتمد على\' أو \'في معظم الحالات\'."',
+            '"بدون شرح مصطلحات أفهمها بالفعل."',
           ],
         },
-        change3: {
-          title: 'التغيير الثالث: حدّد قيود الطول الكمية',
-          content: [
-            '**قيود الطول الرقمية تعمل أفضل من واصفات الجودة.** "كن موجزًا" غامض — "في جملتين بالضبط" ليس كذلك.',
-          ],
-          items: [
-            '❌ غامض: "كن موجزًا" → النموذج يفسّر الإيجاز وفق أنماط تدريبه',
-            '✅ كمي: "في جملتين بالضبط" → النموذج لديه حد صارم وواضح',
-            '✅ كمي: "أقصى 50 كلمة" → يخلق ضغطًا لإزالة الحشو',
-            '✅ كمي: "بالضبط 5 نقاط، كل منها تحت 15 كلمة" → قيد مزدوج',
+        negativeNote: {
+          content: 'هذا يُوفّر 20–40% من رموز المخرجات. تعرّف على التقنية الكاملة في [البرومبت السلبي: قل للذكاء الاصطناعي ما لا يجب فعله].',
+        },
+        tradeoff: {
+          title: 'السرعة مقابل الجودة — متى تُحسّن لكل منهما',
+          content: 'القيود الأسرع (تنسيق صارم، حدود طول، بدون تحفظات) تُنتج إجابات أقصر لكنها أحيانًا تُفوّت الفروق الدقيقة. البرومبتات الأطول والاستكشافية تلتقط الحالات الحدّية لكنها تستهلك 3–5 أضعاف الرموز. **قاعدة عامة:** إذا كانت الإجابة تُغذّي قرارًا فوريًا، حسّن للسرعة. إذا كانت تُغذّي تقريرًا أو تحليلًا، حسّن للعمق.',
+        },
+        tradeoffTable: {
+          columns: ['نوع المهمة', 'حسّن من أجل', 'السبب'],
+          rows: [
+            { 'نوع المهمة': 'بحث سريع، قرار نعم/لا، توليد قوائم', 'حسّن من أجل': 'السرعة', 'السبب': 'الفروق الدقيقة المفقودة نادرًا ما تهم؛ الهدف هو المباشرة' },
+            { 'نوع المهمة': 'تحليل معقد، عمل إبداعي، سلاسل استدلال', 'حسّن من أجل': 'العمق', 'السبب': 'الإيجاز يُفقد خطوات الاستدلال والتفاصيل المهمة' },
+            { 'نوع المهمة': 'التحقق أو تدقيق الحقائق', 'حسّن من أجل': 'السرعة + التحقق الذاتي', 'السبب': 'السرعة تمنع الحشو؛ التحقق الذاتي يكتشف الأخطاء' },
           ],
         },
-        change4: {
-          title: 'التغيير الرابع: مثال واحد على المخرجات (one-shot prompting)',
+        promptquorumTest: {
+          title: 'اختبار الإجماع في PromptQuorum',
           content: [
-            '**مثال واحد على المخرجات المستهدفة هو أكثر التغييرات تأثيرًا على دقة التنسيق.** رؤية النمط الدقيق الذي تريده أكثر فاعلية من وصفه، خاصةً للمخرجات المنظمة.',
-          ],
-          items: [
-            '**بدون مثال (zero-shot):** "اكتب رسالة خطأ لإدخال غير صالح" — النموذج يختار التنسيق والطول والنبرة',
-            '**مع مثال (one-shot):** "اكتب رسالة خطأ لإدخال غير صالح. مثال: \'خطأ: يجب أن يكون اسم المستخدم بين 3 و20 حرفًا. حاول مرة أخرى.\'" — النموذج يُحاكي بالضبط طول المثال وتنسيقه ونبرته',
-          ],
-        },
-        change5: {
-          title: 'التغيير الخامس: خصّص دورًا متخصصًا في المجال',
-          content: [
-            '**الدور المتخصص في المجال يُعيد معايرة مستوى التفصيل الافتراضي نحو الأسفل.** الخبير يفترض أنك تعرف الأساسيات — يجيب مباشرةً، يحذف شروح الخلفية، ويستخدم مفردات المجال دون تعريف.',
-          ],
-          items: [
-            '❌ بدون دور: "اشرح debounce في JavaScript" → على الأرجح سيتضمن مقدمة عن ماهية debounce',
-            '✅ مع دور: "أنت مطوّر JavaScript أقدم. اشرح debounce في JavaScript" → سيحذف التعريفات الأساسية، يذهب مباشرةً للتطبيق',
-          ],
-        },
-        combineAll: {
-          title: 'دمج التغييرات الخمسة: قالب برومبت السرعة',
-          content: [
-            'هذا هو نمط برومبت السرعة الكامل مع تطبيق التغييرات الخمسة:',
-            '[الدور] أنت [خبير متخصص].\n[المهمة] [فعل إجرائي] [موضوع محدد].\n[التنسيق] التنسيق: [الهيكل الدقيق].\n[الطول] الطول: [القيد الرقمي].\n[السلبي] بدون: [السلوكيات المراد حذفها].',
-          ],
-        },
-        modelSelection: {
-          title: 'اختيار النموذج للسرعة',
-          content: [
-            '**النماذج الأصغر تستجيب أسرع للمخرجات القصيرة المحددة جيدًا.** GPT-5.5 mini وClaude Haiku 4.5 وGemini Flash لديها زمن استجابة أول رمز أسرع بـ~2–3× من نظيراتها كاملة الحجم للمخرجات التي تقل عن 200 رمز.',
-          ],
-          items: [
-            '**GPT-5.5 mini:** الأفضل للتصنيف السريع، الأسئلة والأجوبة القصيرة، استخراج البيانات',
-            '**Claude Haiku 4.5:** الأفضل لمهام التنسيق السريع، التوليف المنظم الموجز',
-            '**Gemini Flash:** الأفضل للبحث السريع، الإجابات بجملة واحدة، التوليف الموجز',
-            '**GPT-5.5 / Claude Opus / Gemini Pro:** احتفظ بها للاستدلال متعدد الخطوات، المخرجات الطويلة، الكود المعقد',
+            'اختبرت مبدأ السرعة هذا على GPT-5.6 وClaude Opus 4.8 وGemini 3.1 Pro بإرسال نفس البرومبت الغامض مقابل برومبت محسّن للسرعة:',
+            '**برومبت غامض** ("أخبرني عن تقنيات هندسة البرومبت"): متوسط مخرجات 850 رمزًا عبر النماذج الثلاثة.',
+            '**برومبت محسّن للسرعة** ("اذكر 5 تقنيات برومبتات لاستجابات LLM أسرع، جملة واحدة لكل منها"): متوسط مخرجات 120 رمزًا عبر النماذج الثلاثة.',
+            'احترمت النماذج الثلاثة قيد التنسيق بالتساوي. كانت النسخة المحسّنة للسرعة **أقصر بـ7 مرات** مع بقائها دقيقة.',
           ],
         },
         promptquorum: {
-          title: 'كيف يساعدك PromptQuorum على الكتابة بشكل أسرع',
+          title: 'كيف يساعدك PromptQuorum على كتابة برومبتات أسرع',
           content: [
-            '**إرسال متعدد النماذج:** بدلًا من اختبار برومبت السرعة بشكل منفصل على GPT-5.5 وClaude وGemini (ثلاث نسخ ولصق)، يُرسل PromptQuorum برومبتًا واحدًا إلى 25+ نموذجًا في آنٍ واحد ويعرض جميع الإجابات بالتوازي. ترى فورًا أي نموذج يُعطي الإجابة الأكثر إيجازًا لمهمتك.',
-            '**أطر عمل مدمجة:** أطر العمل الـ9 في PromptQuorum (CO-STAR وCRAFT وSPECS وRISEN وTRACE وغيرها) تدمج الدور والمهمة والتنسيق والقيود تلقائيًا في واجهة واحدة.',
-            '**عرض الإجماع:** عند اختبار السرعة عبر نماذج متعددة، تحتاج إلى مقارنة ليس الطول فحسب، بل الدقة أيضًا. يُقيّم تحليل Quorum في PromptQuorum أي نموذج يُجيب بشكل أكثر مباشرةً ودقةً.',
+            '**إرسال متعدد النماذج:** بدلًا من اختبار برومبت السرعة بشكل منفصل على GPT-5.6 وClaude وGemini (ثلاث نسخ ولصق)، يُرسل PromptQuorum برومبتًا واحدًا إلى 25+ نموذجًا في آنٍ واحد ويعرض جميع الإجابات جنبًا إلى جنب. ترى فورًا أي نموذج يُعطي الإجابة الأكثر إيجازًا لمهمتك — عادةً ما يُوفّر 2–3 دقائق لكل تكرار برومبت.',
+            '**أطر عمل مدمجة:** أطر العمل الـ9 في PromptQuorum (CO-STAR وCRAFT وSPECS وRISEN وTRACE وغيرها) تدمج الدور والمهمة والتنسيق والقيود تلقائيًا في واجهة واحدة. بدون تجميع برومبت يدوي — الأطر تُزيل احتكاك الإعداد الذي يُنتج برومبتات غامضة.',
+            '**عرض الإجماع:** عند اختبار السرعة عبر نماذج متعددة، تحتاج إلى مقارنة ليس الطول فحسب، بل الدقة أيضًا في آنٍ واحد. يُقيّم تحليل Quorum في PromptQuorum أي نموذج يُجيب بشكل أكثر مباشرةً ودقةً، فتختار النموذج الصحيح دون تخمين.',
+            '**دعم LLM المحلية:** لمستخدمي Ollama وLM Studio وJan AI محليًا، يُحسّن PromptQuorum البرومبتات قبل الإرسال، مما يُقلّل توليد الرموز على عتادك ويُحسّن سرعة الاستجابة بشكل قابل للقياس.',
           ],
         },
         template: {
@@ -826,6 +939,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'مثال (كامل)',
           blockquote: 'أنت مدير منتج متخصص في مقاييس B2B SaaS.\n\nلخّص أهم 3 محركات لتراجع العملاء في قطاع الاشتراكات لدينا.\n\nالتنسيق: نقاط، سطر واحد لكل منها.\n\nالطول: أقصى 3 نقاط.\n\nبدون: تكرار البيانات المقدمة، إضافة مقدمة، التغطية بـ"يعتمد على".',
         },
+
+        howToStart: {
+          title: 'كيفية صياغة التعليمات للحصول على إجابات ذكاء اصطناعي أسرع وأكثر إيجازًا',
+          numberedItems: [
+            '**تضييق المهمة إلى سؤال واحد محدد:** قسّم المهام المركّبة إلى تعليمات منفصلة. "لخّص هذا العقد وحدّد المخاطر" تصبح تعليمتين — أقصر وأسرع وأكثر دقة في كل منهما.',
+            '**أضف قيدًا صريحًا على الطول:** أدرج حدًا للكلمات أو الجمل في كل تعليمة لا تحتاج إلى مخرجات طويلة. "أجب في 3 نقاط" أو "بحد أقصى 100 كلمة" يمنع المقدمات المطوَّلة والحشو.',
+            '**طابق التنسيق مع المهمة:** استخدم القوائم النقطية للقوائم، والجداول للمقارنات، والجمل المفردة لإجابات نعم/لا. تلجأ النماذج افتراضيًا إلى النثر عند عدم تحديد تنسيق.',
+            '**استخدم الدور والسياق لتقليل عبء الشرح:** النموذج الذي يعرف أنه يخاطب خبيرًا يتخطى التعريفات الأساسية. "أنت تقدّم المشورة لمهندس برمجيات كبير" يُزيل فقرات من المعلومات الأساسية.',
+            '**أضف تعليمات سلبية لمنع الحشو:** "لا تكرر السؤال" و"لا تضف ملخصًا ختاميًا" و"لا تستخدم عبارات حشو" تُزيل أكثر مصادر تضخيم الإجابة شيوعًا.',
+          ],
+        },
         faqs: {
           faqs: [
             {
@@ -833,8 +957,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'لا. **الدقة تهم أكثر من الإيجاز.** برومبت غامض من 50 كلمة يُولّد إجابات أطول من برومبت دقيق من 100 كلمة. قيود الطول بدون تحديد لا قيمة لها.',
             },
             {
-              q: 'هل تعمل بنفس الطريقة على GPT-5.5 وClaude وGemini؟',
-              a: 'في معظمها. الثلاثة يحترمون حدود الطول الصريحة وقيود التنسيق. Claude يتبع قيود النقاط بدقة أكبر؛ GPT-5.5 أحيانًا يُضيف جملة ملخص رغم طلب "بدون خاتمة". اختبر برومبت السرعة على الثلاثة للعثور على الأنسب.',
+              q: 'هل تعمل بنفس الطريقة على GPT-5.6 وClaude وGemini؟',
+              a: 'في معظمها. الثلاثة يحترمون حدود الطول الصريحة وقيود التنسيق. Claude يتبع قيود النقاط بدقة أكبر؛ GPT-5.6 أحيانًا يُضيف جملة ملخص رغم طلب "بدون خاتمة". اختبر برومبت السرعة على الثلاثة للعثور على الأنسب.',
             },
             {
               q: 'ماذا لو احتجت إجابةً سريعةً لكنها يجب أن تكون دقيقةً أيضًا؟',
@@ -869,11 +993,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     pt: {
       theme: 'Fundamentals',
+      heroImage: '/images/prompt-for-speed-overview-hero-pt.png',
       title: 'Respostas de IA mais rápidas: Como fazer prompts para velocidade',
       intro: 'Prompts lentos de IA têm uma única causa: a ambiguidade força o modelo a adivinhar. Elimine a ambiguidade com cinco decisões de design e você obterá respostas precisas e rápidas na primeira tentativa — em qualquer modelo.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       seoTitle: 'Prompts de IA mais rápidos: Técnicas de velocidade 2026',
-      metaDescription: 'Prompts lentos de IA são ambiguidade que força o modelo a adivinhar. 5 mudanças de design para respostas precisas na primeira tentativa no GPT-5.5 e Claude.',
+      metaDescription: 'Prompts lentos de IA são ambiguidade que força o modelo a adivinhar. 5 mudanças de design para respostas precisas na primeira tentativa no GPT-5.6 e Claude.',
       readTime: '8 min de leitura',
       schema: {
         '@context': 'https://schema.org',
@@ -881,125 +1007,167 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Respostas de IA mais rápidas: Como fazer prompts para velocidade',
         description: 'Prompts lentos de IA têm uma única causa: a ambiguidade. Cinco decisões de design geram respostas precisas e rápidas na primeira tentativa.',
         datePublished: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/pt/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed',
         inLanguage: 'pt-BR',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        keywords: ['prompts de IA mais rápidos', 'prompting para velocidade', 'reduzir latência de IA', 'prompt engineering', 'GPT-5.5', 'Claude', 'Gemini'],
+        keywords: ['prompts de IA mais rápidos', 'prompting para velocidade', 'reduzir latência de IA', 'prompt engineering', 'GPT-5.6', 'Claude', 'Gemini'],
       },
       sections: {
         definition: {
-          title: 'Por que as respostas de IA são lentas ou longas?',
+          title: 'Por que as respostas de IA ficam infladas',
           content: [
-            '**Respostas lentas ou longas de IA têm uma única causa: a ambiguidade força o modelo a adivinhar.** Quando um prompt não especifica comprimento, formato, escopo ou nível de detalhe, o modelo preenche a lacuna com elaboração — hedging, recapitulação, contexto desnecessário e avisos. Cada frase adicionada é latência adicionada.',
-            'A solução não é escrever mais — é eliminar a ambiguidade com decisões de design explícitas. As cinco mudanças a seguir transformam prompts vagos e lentos em instruções precisas e rápidas que produzem o output correto na primeira tentativa.',
+            '**Velocidade em prompt engineering significa obter respostas de IA concisas e diretas por meio de um design de prompt deliberado — não latência de hardware.** Depois de testar centenas de prompts no GPT-5.6, Claude Opus 4.8 e Gemini 3.1 Pro, a conclusão se mantém: as respostas mais rápidas vêm das restrições mais rígidas, não de um modelo "mais rápido".',
+            'Dois tipos de lentidão afetam as respostas de IA: latência de geração de tokens (ocorre nos servidores do modelo — não é o seu problema) e inflação da resposta (ocorre no design do seu prompt — é totalmente o seu problema).',
+            'A inflação acontece quando o modelo precisa se proteger. Sem restrições claras, ele cobre todos os ângulos, adiciona ressalvas, repete suas instruções e explica conceitos básicos que você já conhece. Cada um desses itens adiciona tokens que você não pediu.',
           ],
         },
         tldr: {
           title: 'Pontos-chave',
           isTldr: true,
           items: [
-            'Respostas lentas de IA = ambiguidade → o modelo elabora quando o comprimento não é especificado',
-            'Especifique o formato de output exato (bullets, JSON, uma frase) — isso sozinho reduz os outputs longos pela metade',
-            'Use restrições negativas explícitas: "Sem introdução", "Sem avisos", "Sem repetir a pergunta"',
-            'O one-shot prompting (um exemplo do output esperado) é a mudança de maior impacto para a precisão do formato',
-            'Restrições de comprimento quantitativas ("Exatamente 3 bullets") funcionam melhor do que instruções vagas de comprimento ("Seja breve")',
-            'Modelos menores (GPT-5.5 mini, Claude Haiku 4.5) respondem mais rápido para outputs curtos — nem sempre é necessário o modelo frontier',
+            '**Prompts vagos forçam o modelo a se proteger e inflar a resposta.** Tarefas precisas produzem respostas diretas.',
+            '**Limites de comprimento explícitos são mais eficazes do que pedir concisão de forma geral.** Diga "em 3 bullets" ou "menos de 50 palavras", não "seja conciso".',
+            '**O formato do output controla o comprimento da resposta mais do que quase qualquer outra coisa.** JSON, listas com marcadores e formatos de frase única reduzem drasticamente a geração de tokens.',
+            '**Prompts multitarefa desperdiçam tokens.** Divida o trabalho complexo em uma cadeia de prompts — cada etapa gera menos enchimento.',
+            '**Papel e contexto suprimem a sobrecarga de explicação.** "Assuma um público especialista" elimina automaticamente o enchimento de nível básico.',
           ],
         },
-        whySlow: {
-          title: 'Por que prompts vagos produzem outputs lentos',
-          content: [
-            'Modelos de linguagem geram tokens sequencialmente — o comprimento do output determina diretamente a latência. Um output de 500 tokens leva ~5× mais tempo do que um de 100 tokens, com custos que escalam linearmente.',
-            'Quatro comportamentos do modelo que adicionam comprimento desnecessário:',
-          ],
+        rootCauses: {
+          title: 'Causas raiz da inflação de respostas',
           items: [
-            '**Recapitulação:** O modelo repete a pergunta ou parafraseia o prompt como abertura',
-            '**Hedging:** O modelo adiciona "Observe que..." ou "Isso pode variar..." sem que seja solicitado',
-            '**Elaboração de fundo:** O modelo explica conceitos que você não pediu',
-            '**Preenchimento de conclusão:** O modelo adiciona um parágrafo de fechamento resumindo o que acabou de dizer',
+            'Tarefas vagas que forçam o modelo a cobrir toda interpretação possível',
+            'Instruções de formato ausentes (o padrão é parágrafos em prosa)',
+            'Nenhum limite de comprimento explícito (o modelo adivinha seu limite)',
+            'Objetivos sobrepostos (prompts multitarefa geram sobrecarga de troca de contexto)',
+            'Falta de contexto, que força o modelo a assumir o público menos especializado',
           ],
         },
-        change1: {
-          title: 'Mudança 1: Especifique o formato de output exato',
-          content: [
-            '**Especificar o formato é a única mudança que mais reduz o comprimento do output.** Sem ele, os modelos escolhem sua própria estrutura — que tende a ser mais longa e mais em prosa do que a maioria das tarefas exige.',
+        vagueness: {
+          title: 'O maior culpado: prompts vagos ou abertos',
+          content: '**Quanto mais restrita a tarefa, mais curta e direta a resposta.** Prompts abertos forçam o modelo a cobrir toda interpretação possível do seu pedido, adicionando camadas de explicação que você não pediu.',
+        },
+        badPromptExample: {
+          title: '[Prompt ruim]',
+          blockquote: 'Me conte sobre as melhores ferramentas de IA para pesquisa.',
+        },
+        badPromptExplanation: {
+          content: 'Isso produz mais de 400 palavras cobrindo ferramentas, casos de uso, preços, comparações, avisos — tudo, exceto o que você realmente precisa.',
+        },
+        goodPromptExample: {
+          title: '[Prompt bom]',
+          blockquote: 'Liste 3 ferramentas de IA de pesquisa otimizadas para análise de artigos acadêmicos. Formato: nome da ferramenta, uma frase de ponto forte e principal fraqueza. Assuma público especialista. Sem introdução ou conclusão.',
+        },
+        goodPromptExplanation: {
+          content: 'Isso produz 5 bullets, 80 palavras no total. A diferença não é um pedido de brevidade — é especificidade. O segundo prompt elimina a ambiguidade sobre escopo, público e formato.',
+        },
+        lengthInstructions: {
+          title: 'Diga ao modelo exatamente o comprimento que você quer',
+          content: 'Instruções de comprimento explícitas são 10 vezes mais eficazes do que pedir ao modelo para ser "conciso". Indique o comprimento no início, não no fim. Coloque a restrição de comprimento na primeira ou segunda frase do prompt, não escondida no final.',
+        },
+        lengthTable: {
+          columns: ['Tipo de instrução', 'Output típico'],
+          rows: [
+            { 'Tipo de instrução': '"Seja conciso"', 'Output típico': '200–400 palavras (o modelo adivinha seu limite)' },
+            { 'Tipo de instrução': '"Em 3 bullets"', 'Output típico': '45–75 palavras (restrição de formato rígida)' },
+            { 'Tipo de instrução': '"Em menos de 100 palavras"', 'Output típico': '85–110 palavras (respeita o limite)' },
+            { 'Tipo de instrução': '"Um parágrafo, máximo 4 frases"', 'Output típico': '60–100 palavras (formato + limite de frases)' },
+            { 'Tipo de instrução': '"Responda em uma frase"', 'Output típico': '15–40 palavras (restrição atômica)' },
           ],
+        },
+        format: {
+          title: 'Ajuste o formato à tarefa',
+          content: '**O formato do output controla o comprimento da resposta mais do que quase qualquer outra coisa.** O formato certo elimina categorias inteiras de enchimento. Os modelos de IA geram introduções, conclusões e linguagem de ressalva automaticamente, a menos que você as suprima explicitamente. O formato JSON (output estruturado) é o mais rápido — não há espaço para enchimento em prosa dentro de um par chave-valor.',
+        },
+        formatExamples: {
           items: [
-            '❌ Sem formato: "Explique o cache de prompts" → output típico: 400–600 palavras em prosa',
-            '✅ Com formato: "Explique o cache de prompts em 3 bullets, cada um com menos de 20 palavras" → output típico: 60–80 palavras',
+            '**Tarefa de decisão?** "Responda sim ou não, depois uma frase de justificativa."',
+            '**Tarefa de lista?** "Apenas bullets. Sem introdução ou fechamento."',
+            '**Tarefa de resumo?** "3 bullets, máximo 15 palavras cada."',
           ],
         },
-        change2: {
-          title: 'Mudança 2: Adicione restrições negativas explícitas',
+        multiTask: {
+          title: 'Uma tarefa por prompt',
+          content: '**Prompts multitarefa produzem respostas mais longas, mais lentas e menos focadas.** Depois de testar isso em dezenas de projetos, dividir o trabalho complexo em uma cadeia de prompts — um prompt focado por etapa — reduz o total de tokens em 30–50%. Prompts de tarefa única são 40% mais curtos. Saiba mais sobre encadear trabalho complexo em [Prompt chaining: como dividir tarefas grandes em etapas vencedoras].',
+        },
+        multiTaskBad: {
+          title: '[Prompt ruim]',
+          blockquote: 'Analise este conjunto de dados de feedback de clientes. Extraia temas, pontue o sentimento, classifique por frequência e sugira melhorias de produto. Formato: tabela markdown.',
+        },
+        multiTaskBadExplain: {
+          content: 'Isso força o modelo a trocar de contexto entre modos de análise, adicionando sobrecarga de explicação em cada transição.',
+        },
+        multiTaskGood: {
+          title: '[Prompt bom — Dividido em dois]',
           content: [
-            '**Restrições negativas eliminam os comportamentos de preenchimento mais comuns de uma vez.** São mais eficazes do que instruções positivas (dizer ao modelo o que NÃO fazer é mais preciso do que descrever o que deveria fazer em vez disso).',
+            '**Etapa 1:** "Extraia os 5 principais temas recorrentes deste feedback de clientes. Formato: lista com marcadores, sem introdução ou fechamento."',
+            '**Etapa 2:** "Classifique esses temas por frequência e pontue o sentimento de 1 a 5. Formato: tabela CSV com colunas: Tema, Frequência, Pontuação de sentimento."',
           ],
+        },
+        roleContext: {
+          title: 'Use papel e contexto para reduzir a sobrecarga de explicação',
+          content: 'Sem contexto de papel, os modelos costumam explicar conceitos básicos que você já conhece, gastando tokens em conteúdo de nível básico. Veja [Os 5 blocos de construção que todo prompt precisa] para padrões completos de construção de contexto.',
+        },
+        roleContextBad: {
+          title: '[Prompt ruim]',
+          blockquote: 'Qual é a diferença entre limitação de taxa (rate limiting) de API e padrões de circuit breaker?',
+        },
+        roleContextBadNote: {
+          content: 'O modelo assume um desenvolvedor júnior e explica os dois conceitos do zero — mais de 300 palavras.',
+        },
+        roleContextGood: {
+          title: '[Prompt bom]',
+          blockquote: 'Você é um engenheiro backend sênior. Explique a diferença entre limitação de taxa de API e padrões de circuit breaker em 2 frases.',
+        },
+        roleContextGoodNote: {
+          content: 'Mesma pergunta, 40 palavras, porque o sinal de papel suprime automaticamente a sobrecarga de explicação.',
+        },
+        negativeInstructions: {
+          title: 'Instruções negativas que economizam tokens',
+          content: '**Instruções explícitas de "não faça" eliminam os padrões de enchimento mais comuns.** Inclua pelo menos 2–3 delas nos seus prompts otimizados para velocidade:',
+        },
+        negativeList: {
           items: [
-            '"Não repita a pergunta" — elimina a recapitulação',
-            '"Sem introdução nem conclusão" — elimina os parágrafos de abertura e fechamento',
-            '"Sem avisos nem considerações a menos que sejam críticos" — elimina o hedging reflexivo',
-            '"Sem explicar os conceitos básicos — assumir experiência com X" — elimina a elaboração de antecedentes',
-            '"Apenas resultados — sem processo nem raciocínio" — elimina o show-your-work',
+            '"Não repita a pergunta."',
+            '"Sem frase introdutória."',
+            '"Sem conclusão ou resumo no final."',
+            '"Sem ressalvas, a menos que sejam críticas para a resposta."',
+            '"Sem linguagem de ressalva como \'depende\' ou \'na maioria dos casos\'."',
+            '"Sem explicar terminologia que eu já entendo."',
           ],
         },
-        change3: {
-          title: 'Mudança 3: Especifique restrições de comprimento quantitativas',
-          content: [
-            '**Restrições numéricas de comprimento funcionam melhor do que descritores de qualidade.** "Seja conciso" é ambíguo — "Em exatamente 2 frases" não é.',
-          ],
-          items: [
-            '❌ Vago: "Seja breve" → O modelo interpreta a brevidade de acordo com seus padrões de treinamento',
-            '✅ Quantitativo: "Em exatamente 2 frases" → O modelo tem um limite rígido e claro',
-            '✅ Quantitativo: "Máx. 50 palavras" → Cria pressão para eliminar o preenchimento',
-            '✅ Quantitativo: "Exatamente 5 pontos com marcadores, cada um com menos de 15 palavras" → Restrição dupla',
+        negativeNote: {
+          content: 'Isso economiza 20–40% dos tokens de output. Aprenda a técnica completa em [Negative Prompting: diga à IA o que ela NÃO deve fazer].',
+        },
+        tradeoff: {
+          title: 'Velocidade vs. qualidade — quando otimizar para cada uma',
+          content: 'Restrições voltadas para velocidade (formato rígido, limites de comprimento, sem ressalvas) produzem respostas mais curtas, mas ocasionalmente perdem nuances. Prompts mais longos e exploratórios capturam casos extremos, mas usam 3–5 vezes mais tokens. **Regra geral:** se a resposta informa uma decisão imediata, otimize para velocidade. Se informa um relatório ou análise, otimize para profundidade.',
+        },
+        tradeoffTable: {
+          columns: ['Tipo de tarefa', 'Otimizar para', 'Por quê'],
+          rows: [
+            { 'Tipo de tarefa': 'Consulta rápida, decisão sim/não, geração de listas', 'Otimizar para': 'Velocidade', 'Por quê': 'Nuances perdidas raramente importam; o objetivo é a objetividade' },
+            { 'Tipo de tarefa': 'Análise complexa, trabalho criativo, cadeias de raciocínio', 'Otimizar para': 'Profundidade', 'Por quê': 'A brevidade perde etapas de raciocínio e detalhes importantes' },
+            { 'Tipo de tarefa': 'Verificação ou checagem de fatos', 'Otimizar para': 'Velocidade + autoverificação', 'Por quê': 'A velocidade evita enchimento; a autoverificação detecta erros' },
           ],
         },
-        change4: {
-          title: 'Mudança 4: Um exemplo de output (one-shot prompting)',
+        promptquorumTest: {
+          title: 'Teste de consenso do PromptQuorum',
           content: [
-            '**Um exemplo do output alvo é a mudança de maior impacto para a precisão do formato.** Ver o padrão exato que você quer é mais eficaz do que descrevê-lo, especialmente para outputs estruturados.',
-          ],
-          items: [
-            '**Sem exemplo (zero-shot):** "Escreva uma mensagem de erro para entrada inválida" — o modelo escolhe o formato, o comprimento e o tom',
-            '**Com exemplo (one-shot):** "Escreva uma mensagem de erro para entrada inválida. Exemplo: \'Erro: O nome de usuário deve ter 3–20 caracteres. Tente novamente.\'" — o modelo imita exatamente o comprimento, o formato e o tom do exemplo',
-          ],
-        },
-        change5: {
-          title: 'Mudança 5: Atribua um papel específico de domínio',
-          content: [
-            '**Um papel específico de domínio calibra o nível de detalhe padrão para baixo.** Um especialista assume que você conhece o básico — responde diretamente, omite as explicações de fundo e usa o vocabulário do setor sem defini-lo.',
-          ],
-          items: [
-            '❌ Sem papel: "Explique o debounce em JavaScript" → provavelmente incluirá uma introdução sobre o que é debounce',
-            '✅ Com papel: "Você é um desenvolvedor sênior de JavaScript. Explique o debounce em JavaScript" → omitirá as definições básicas, irá direto à implementação',
-          ],
-        },
-        combineAll: {
-          title: 'Combinar as 5 mudanças: O template de speed prompt',
-          content: [
-            'Aqui está o padrão completo de speed prompt com as 5 mudanças aplicadas:',
-            '[Papel] Você é [ESPECIALISTA NO DOMÍNIO].\n[Tarefa] [VERBO DE AÇÃO] [OBJETO ESPECÍFICO].\n[Formato] Formato: [ESTRUTURA EXATA].\n[Comprimento] Comprimento: [RESTRIÇÃO NUMÉRICA].\n[Negativo] Sem: [COMPORTAMENTOS A ELIMINAR].',
-          ],
-        },
-        modelSelection: {
-          title: 'Seleção de modelos para velocidade',
-          content: [
-            '**Modelos menores respondem mais rápido para outputs curtos e bem especificados.** GPT-5.5 mini, Claude Haiku 4.5 e Gemini Flash têm latência de primeiro token ~2–3× mais rápida do que suas contrapartes de tamanho completo para outputs de <200 tokens.',
-          ],
-          items: [
-            '**GPT-5.5 mini:** Melhor para classificação rápida, Q&A curto, extração de dados',
-            '**Claude Haiku 4.5:** Melhor para tarefas de formatação rápida, síntese estruturada breve',
-            '**Gemini Flash:** Melhor para buscas rápidas, respostas de uma frase, síntese breve',
-            '**GPT-5.5 / Claude Opus / Gemini Pro:** Reservar para raciocínio de múltiplos passos, outputs longos, código complexo',
+            'Testei esse princípio de velocidade no GPT-5.6, Claude Opus 4.8 e Gemini 3.1 Pro enviando o mesmo prompt vago contra um prompt otimizado para velocidade:',
+            '**Prompt vago** ("Me conte sobre técnicas de prompt engineering"): output médio de 850 tokens nos três modelos.',
+            '**Prompt otimizado para velocidade** ("Liste 5 técnicas de prompt para respostas de LLM mais rápidas, uma frase cada"): output médio de 120 tokens nos três modelos.',
+            'Os três modelos respeitaram a restrição de formato igualmente. A versão otimizada para velocidade foi **7 vezes mais curta** mantendo a precisão.',
           ],
         },
         promptquorum: {
           title: 'Como o PromptQuorum ajuda você a fazer prompts mais rápido',
           content: [
-            '**Dispatch multi-modelo:** Em vez de testar seu speed prompt separadamente no GPT-5.5, Claude e Gemini (três copiar e colar), o PromptQuorum envia um prompt para 25+ modelos simultaneamente e exibe todas as respostas em paralelo. Você vê imediatamente qual modelo dá a resposta mais concisa para sua tarefa.',
-            '**Frameworks integrados:** Os 9 frameworks do PromptQuorum (CO-STAR, CRAFT, SPECS, RISEN, TRACE e outros) integram automaticamente papel, tarefa, formato e restrições em uma única interface.',
-            '**Visualização de consenso:** Ao testar velocidade em vários modelos, você precisa comparar não apenas o comprimento, mas também a precisão. A análise Quorum do PromptQuorum avalia qual modelo responde de forma mais direta e precisa.',
+            '**Dispatch multi-modelo:** Em vez de testar seu speed prompt separadamente no GPT-5.6, Claude e Gemini (três copiar e colar), o PromptQuorum envia um prompt para 25+ modelos simultaneamente e exibe todas as respostas lado a lado. Você vê imediatamente qual modelo dá a resposta mais concisa para sua tarefa — normalmente economizando 2–3 minutos por iteração de prompt.',
+            '**Frameworks integrados:** Os 9 frameworks do PromptQuorum (CO-STAR, CRAFT, SPECS, RISEN, TRACE e outros) integram automaticamente papel, tarefa, formato e restrições em uma única interface. Sem montagem manual de prompt — os frameworks eliminam a fricção de configuração que leva a prompts vagos.',
+            '**Visualização de consenso:** Ao testar velocidade em vários modelos, você precisa comparar não apenas o comprimento, mas também a precisão. A análise Quorum do PromptQuorum avalia qual modelo responde de forma mais direta e precisa ao mesmo tempo, para você escolher o modelo certo sem adivinhar.',
+            '**Suporte a LLM local:** Para quem executa Ollama, LM Studio ou Jan AI localmente, o PromptQuorum otimiza os prompts antes do envio, reduzindo a geração de tokens no seu hardware e melhorando a velocidade de resposta de forma mensurável.',
           ],
         },
         template: {
@@ -1010,6 +1178,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Exemplo (completo)',
           blockquote: 'Você é um gerente de produto com experiência em métricas B2B SaaS.\n\nResuma os 3 principais fatores de rotatividade de clientes em nosso segmento de assinaturas.\n\nFormato: Bullets, uma linha cada.\n\nComprimento: Máx. 3 bullets.\n\nSem: repetir os dados fornecidos, adicionar introdução, cobrir com "depende".',
         },
+
+        howToStart: {
+          title: 'Como fazer prompts para respostas de IA mais rápidas e concisas',
+          numberedItems: [
+            '**Reduzir a tarefa a uma única pergunta específica:** Divida tarefas compostas em prompts separados. "Resuma este contrato e identifique riscos" se torna dois prompts — mais curtos, mais rápidos e mais precisos em cada um.',
+            '**Adicionar uma restrição de comprimento explícita:** Inclua um limite de palavras ou frases em todo prompt que não precise de uma resposta longa. "Responda em 3 bullets" ou "máximo 100 palavras" evita preâmbulos longos e enchimento.',
+            '**Ajustar o formato à tarefa:** Use listas com marcadores para listas, tabelas para comparações e frases únicas para respostas sim/não. Os modelos recorrem à prosa por padrão quando nenhum formato é especificado.',
+            '**Usar papel e contexto para reduzir a sobrecarga de explicação:** Um modelo que sabe que está falando com um especialista pula definições básicas. "Você está aconselhando um engenheiro de software sênior" elimina parágrafos de contexto.',
+            '**Adicionar instruções negativas para bloquear o enchimento:** "Não repita a pergunta", "Não adicione um resumo final" e "Não use frases de preenchimento" eliminam as fontes mais comuns de respostas infladas.',
+          ],
+        },
         faqs: {
           faqs: [
             {
@@ -1017,8 +1196,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Não. **A precisão importa mais do que a brevidade.** Um prompt vago de 50 palavras gera respostas mais longas do que um prompt preciso de 100 palavras. Restrições de comprimento sem especificidade são inúteis.',
             },
             {
-              q: 'Funciona da mesma forma no GPT-5.5, Claude e Gemini?',
-              a: 'Em sua maioria. Os três respeitam limites de comprimento explícitos e restrições de formato. Claude segue restrições de bullets com mais precisão; GPT-5.5 às vezes adiciona uma frase de resumo mesmo quando se pede "sem conclusão". Teste seu speed prompt nos três para encontrar o melhor ajuste.',
+              q: 'Funciona da mesma forma no GPT-5.6, Claude e Gemini?',
+              a: 'Em sua maioria. Os três respeitam limites de comprimento explícitos e restrições de formato. Claude segue restrições de bullets com mais precisão; GPT-5.6 às vezes adiciona uma frase de resumo mesmo quando se pede "sem conclusão". Teste seu speed prompt nos três para encontrar o melhor ajuste.',
             },
             {
               q: 'E se eu precisar de uma resposta rápida, mas ela também deve ser precisa?',
@@ -1053,15 +1232,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     fr: {
       theme: 'Fondamentaux',
+      heroImage: '/images/prompt-for-speed-overview-hero-fr.png',
       title: 'Des réponses IA plus rapides : Comment concevoir des prompts pour la vitesse',
       intro: 'La rapidité en ingénierie de prompt signifie obtenir des réponses IA concises et directes grâce à une conception délibérée—non une latence matérielle. La plupart des réponses IA sont lentes en raison d\'une conception vague de prompt, non pas parce que le modèle est lent.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       readTime: '9 min de lecture',
       sections: {
         definition: {
           title: 'Pourquoi les réponses IA sont gonflées',
           content: [
-            '**La rapidité en ingénierie de prompt signifie obtenir des réponses IA concises et directes grâce à une conception délibérée—non une latence matérielle.** La plupart des réponses IA sont lentes à cause d\'un gonflement du prompt, non pas parce que le modèle est lent. Après avoir testé des centaines de prompts sur GPT-5.5, Claude Opus 4.8 et Gemini 3.5 Pro, j\'ai trouvé que les réponses les plus rapides proviennent des contraintes les plus strictes.',
+            '**La rapidité en ingénierie de prompt signifie obtenir des réponses IA concises et directes grâce à une conception délibérée—non une latence matérielle.** La plupart des réponses IA sont lentes à cause d\'un gonflement du prompt, non pas parce que le modèle est lent. Après avoir testé des centaines de prompts sur GPT-5.6, Claude Opus 4.8 et Gemini 3.1 Pro, j\'ai trouvé que les réponses les plus rapides proviennent des contraintes les plus strictes.',
             'Deux types de lenteur affligent les réponses IA : la latence de génération de tokens (du côté des serveurs du modèle—pas votre problème) et le gonflement de réponse (dans votre conception de prompt—entièrement votre problème).',
             'Le gonflement se produit lorsque le modèle doit couvrir ses paris. Sans contraintes claires, il couvre tous les angles, ajoute des mises en garde, répète les instructions et explique les bases que vous connaissez déjà. Chacun d\'eux ajoute des tokens que vous n\'avez pas demandés.',
           ],
@@ -1198,7 +1379,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'Test de consensus PromptQuorum',
           content: [
-            'J\'ai testé ce principe de vitesse sur GPT-5.5, Claude Opus 4.8 et Gemini 3.5 Pro en envoyant le même prompt vague par rapport à un prompt optimisé pour la vitesse :',
+            'J\'ai testé ce principe de vitesse sur GPT-5.6, Claude Opus 4.8 et Gemini 3.1 Pro en envoyant le même prompt vague par rapport à un prompt optimisé pour la vitesse :',
             '**Prompt vague** ("Parle-moi des techniques d\'ingénierie de prompt"): sortie moyenne 850 tokens sur tous les trois modèles.',
             '**Prompt optimisé pour la vitesse** ("Liste 5 techniques de prompt pour des réponses LLM plus rapides en une phrase chacun"): sortie moyenne 120 tokens sur tous les trois modèles.',
             'Les trois modèles ont respecté la contrainte de format de la même manière. La version optimisée pour la vitesse était **7× plus courte** tout en restant précise.',
@@ -1207,7 +1388,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorum: {
           title: 'Comment PromptQuorum vous aide à concevoir plus rapidement',
           content: [
-            '**Dispatch multi-modèle :** Au lieu de tester votre prompt de vitesse séparément sur GPT-5.5, Claude et Gemini (trois fois copier-coller), PromptQuorum envoie un prompt à 25+ modèles à la fois et affiche toutes les réponses côte à côte. Vous voyez immédiatement quel modèle répondez de la manière la plus concise pour votre tâche—économisant généralement 2–3 minutes par itération de prompt.',
+            '**Dispatch multi-modèle :** Au lieu de tester votre prompt de vitesse séparément sur GPT-5.6, Claude et Gemini (trois fois copier-coller), PromptQuorum envoie un prompt à 25+ modèles à la fois et affiche toutes les réponses côte à côte. Vous voyez immédiatement quel modèle répondez de la manière la plus concise pour votre tâche—économisant généralement 2–3 minutes par itération de prompt.',
             '**Frameworks intégrés :** Les 9 frameworks de PromptQuorum (CO-STAR, CRAFT, SPECS, RISEN, TRACE et autres) intègrent le rôle, la tâche, le format et les contraintes automatiquement dans une seule interface. Pas de montage manuel de prompt—les frameworks éliminent la friction de configuration qui mène à des prompts vagues.',
             '**Affichage du consensus :** Lors du test de vitesse sur les modèles, vous devez comparer non seulement la longueur mais aussi la précision. L\'analyse Quorum de PromptQuorum évalue quel modèle a répondu de la manière la plus directe et la plus précise simultanément—afin que vous choisissiez le bon modèle pour les tâches sensibles à la vitesse.',
             '**Support LLM local :** Pour les utilisateurs exécutant Ollama, LM Studio ou Jan AI localement, PromptQuorum optimise les prompts avant la diffusion, réduisant la génération de tokens sur votre matériel et améliorant la vitesse de réponse de manière mesurable.',
@@ -1221,6 +1402,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Exemple (rempli)',
           blockquote: 'Vous êtes un chef de produit avec expertise en métriques B2B SaaS.\n\nRésumez les 3 principaux facteurs de désabonnement client dans notre cohorte d\'abonnement.\n\nFormat : points à puces, une ligne chacun.\n\nLongueur : maximum 3 puces.\n\nNe pas : Répéter les données fournies, ajouter d\'introduction, vous couvrir avec "cela dépend".',
         },
+
+        howToStart: {
+          title: 'Comment formuler des prompts pour des réponses IA plus rapides et concises',
+          numberedItems: [
+            '**Réduire la tâche à une seule question spécifique :** Divisez les tâches composées en prompts séparés. "Résume ce contrat et identifie les risques" devient deux prompts — plus courts, plus rapides et plus précis chacun.',
+            '**Ajouter une contrainte de longueur explicite :** Incluez une limite de mots ou de phrases dans chaque prompt qui n\'a pas besoin d\'une longue réponse. "Réponds en 3 puces" ou "maximum 100 mots" évite les préambules verbeux et le remplissage.',
+            '**Adapter le format à la tâche :** Utilisez des listes à puces pour les listes, des tableaux pour les comparaisons et des phrases uniques pour les réponses oui/non. Les modèles reviennent à la prose par défaut lorsqu\'aucun format n\'est spécifié.',
+            '**Utiliser le rôle et le contexte pour réduire la charge d\'explication :** Un modèle qui sait qu\'il s\'adresse à un expert saute les définitions de base. "Vous conseillez un ingénieur logiciel senior" élimine des paragraphes de contexte.',
+            '**Ajouter des instructions négatives pour bloquer le remplissage :** "Ne répète pas la question", "N\'ajoute pas de résumé final" et "N\'utilise pas de formules de remplissage" éliminent les sources les plus courantes de réponses gonflées.',
+          ],
+        },
         faqs: {
           faqs: [
             {
@@ -1228,8 +1420,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Non. **La précision importe plus que la brièveté.** Un prompt vague de 50 mots produit des réponses plus longues qu\'un prompt précis de 100 mots. Les contraintes de longueur sans spécificité sont inutiles.',
             },
             {
-              q: 'Cela fonctionne-t-il de la même manière sur GPT-5.5, Claude et Gemini ?',
-              a: 'Principalement. Les trois respectent les limites de longueur explicites et les contraintes de format. Claude suit les contraintes de points à puces plus strictement ; GPT-5.5 ajoute occasionnellement une phrase de résumé malgré les instructions "pas de conclusion". Testez votre prompt de vitesse sur tous les trois pour trouver le meilleur ajustement.',
+              q: 'Cela fonctionne-t-il de la même manière sur GPT-5.6, Claude et Gemini ?',
+              a: 'Principalement. Les trois respectent les limites de longueur explicites et les contraintes de format. Claude suit les contraintes de points à puces plus strictement ; GPT-5.6 ajoute occasionnellement une phrase de résumé malgré les instructions "pas de conclusion". Testez votre prompt de vitesse sur tous les trois pour trouver le meilleur ajustement.',
             },
             {
               q: 'Et si j\'ai besoin d\'une réponse rapide mais qu\'elle doit aussi être précise ?',
@@ -1264,15 +1456,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     ja: {
       theme: '基礎',
+      heroImage: '/images/prompt-for-speed-overview-hero-ja.png',
       title: '高速なAI回答：スピードのためのプロンプト設計',
       intro: 'プロンプトエンジニアリングにおける「速度」とは、意図的なプロンプト設計によって簡潔で直接的なAI応答を得ることです。ハードウェアレイテンシーではありません。ほとんどのAI回答が遅い理由は、モデルが遅いからではなく、プロンプトが曖昧だからです。',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       readTime: '9分で読める',
       sections: {
         definition: {
           title: 'AI回答が膨張する理由',
           content: [
-            '**プロンプトエンジニアリングにおける「速度」とは、意図的なプロンプト設計によって簡潔で直接的なAI応答を得ることです。** AI回答が遅いのは、モデルが遅いからではなく、プロンプトの膨張が原因です。GPT-5.5、Claude Opus 4.8、Gemini 3.5 Proで数百個のプロンプトをテストした経験から、最速の回答は最も厳しい制約から生まれることを発見しました。',
+            '**プロンプトエンジニアリングにおける「速度」とは、意図的なプロンプト設計によって簡潔で直接的なAI応答を得ることです。** AI回答が遅いのは、モデルが遅いからではなく、プロンプトの膨張が原因です。GPT-5.6、Claude Opus 4.8、Gemini 3.1 Proで数百個のプロンプトをテストした経験から、最速の回答は最も厳しい制約から生まれることを発見しました。',
             'AI回答の遅さには2つのタイプがあります：トークン生成レイテンシー（モデルのサーバー側—あなたの問題ではない）と回答膨張（プロンプト設計—完全にあなたの問題）。',
             '膨張は、モデルがリスクヘッジする必要があるときに発生します。明確な制約がないと、あらゆる観点をカバーし、注釈を追加し、指示を繰り返し、すでに知っている基礎を説明します。これらのすべてが、要求していないトークンを追加します。',
           ],
@@ -1409,7 +1603,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'PromptQuorumコンセンサステスト',
           content: [
-            'I tested this speed principle across GPT-5.5, Claude Opus 4.8, and Gemini 3.5 Pro by sending the same vague prompt versus a speed-optimized prompt:',
+            'この速度の原則を、同じ曖昧なプロンプトとスピード最適化プロンプトをGPT-5.6、Claude Opus 4.8、Gemini 3.1 Proに送信してテストしました：',
             '**曖昧なプロンプト** (「プロンプトエンジニアリング技術について教えてください」)：3つのモデルすべてで平均850トークンの出力。',
             '**スピード最適化プロンプト** (「より高速なLLM応答のための5つのプロンプト技術を1文ずつリストしてください」)：3つのモデルすべてで平均120トークンの出力。',
             '3つのモデルすべてがフォーマット制約を同等に尊重しました。スピード最適化版は**7倍短く** 、正確性を保ちました。',
@@ -1418,7 +1612,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorum: {
           title: 'PromptQuorumがより高速にプロンプトするのにどのように役立つか',
           content: [
-            '**マルチモデルディスパッチ：** スピードプロンプトをGPT-5.5、Claude、Geminiで個別にテストする代わりに(3回のコピー貼り付け)、PromptQuorumは1つのプロンプトを25以上のモデルに一度に送信し、すべての応答を並べて表示します。タスクのどのモデルが最も簡潔な回答を出すかをすぐに確認できます—通常、プロンプト反復あたり2～3分節約できます。',
+            '**マルチモデルディスパッチ：** スピードプロンプトをGPT-5.6、Claude、Geminiで個別にテストする代わりに(3回のコピー貼り付け)、PromptQuorumは1つのプロンプトを25以上のモデルに一度に送信し、すべての応答を並べて表示します。タスクのどのモデルが最も簡潔な回答を出すかをすぐに確認できます—通常、プロンプト反復あたり2～3分節約できます。',
             '**組み込みフレームワーク：** PromptQuorumの9つのフレームワーク(CO-STAR、CRAFT、SPECS、RISEN、TRACEなど)は、単一のインターフェース内にロール、タスク、フォーマット、制約を自動的に組み込みます。手動プロンプト組立なし—フレームワークは曖昧なプロンプトにつながるセットアップ摩擦を排除します。',
             '**コンセンサスビュー：** モデル間でスピードをテストするときは、長さだけでなく精度も比較する必要があります。PromptQuorumのQuorum分析は、どのモデルが最も直接的かつ正確に回答したかを同時にスコアリングします—スピード感応タスクの正しいモデルを推測なしで選択できます。',
             '**ローカルLLMサポート：** Ollama、LM Studio、またはJan AIをローカルで実行するユーザーの場合、PromptQuorumはディスパッチ前にプロンプトを最適化し、ハードウェア上のトークン生成を削減し、応答スピードを計測可能に向上させます。',
@@ -1432,6 +1626,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '例（記入済み）',
           blockquote: 'あなたはB2B SaaS メトリクスに専門知識を持つプロダクトマネージャーです。\n\nサブスクリプション コホートでの顧客離脱の上位 3 つのドライバーを要約します。\n\nフォーマット：箇条書き、各 1 行。\n\n長さ：最大 3 個の箇条書き。\n\nしないこと：提供されたデータを繰り返す、導入を追加する、「それはそれに依存する」とヘッジする。',
         },
+
+        howToStart: {
+          title: 'より速く簡潔なAI回答を得るプロンプトの書き方',
+          numberedItems: [
+            '**タスクを1つの具体的な質問に絞る：** 複合タスクは別々のプロンプトに分割します。「この契約書を要約してリスクを特定して」は2つのプロンプトになり、それぞれがより短く、速く、正確になります。',
+            '**明示的な長さ制限を追加する：** 長い出力が不要なすべてのプロンプトに単語数や文数の制限を含めます。「3箇条で回答」や「最大100語」は冗長な前置きや水増しを防ぎます。',
+            '**フォーマットをタスクに合わせる：** リストには箇条書き、比較には表、はい/いいえの回答には単文を使います。フォーマットが指定されていない場合、モデルは既定で散文形式になります。',
+            '**役割とコンテキストで説明のオーバーヘッドを削減する：** 専門家に話していると分かっているモデルは基本的な定義を省略します。「シニアソフトウェアエンジニアに助言している」とすると背景説明の段落が不要になります。',
+            '**否定命令を追加して水増しをブロックする：** 「質問を繰り返さない」「結びの要約を追加しない」「決まり文句を使わない」は回答が膨張する最も一般的な原因を排除します。',
+          ],
+        },
+
         faqs: {
           faqs: [
             {
@@ -1439,8 +1645,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'いいえ。**精度は簡潔性より重要です。** 曖昧な50単語のプロンプトは、正確な100単語のプロンプトより長い回答を生成します。特異性のない長さ制約は役に立たません。',
             },
             {
-              q: 'これはGPT-5.5、Claude、Geminiで同じように機能しますか？',
-              a: 'ほぼ。すべての3つが明示的な長さ制限とフォーマット制約を尊重します。Claudeはbullet ポイント制約により厳密に従う傾向があります。GPT-5.5は時々「結論なし」指示にもかかわらず要約文を追加します。最適な適合を見つけるために、3つすべてでスピードプロンプトをテストします。',
+              q: 'これはGPT-5.6、Claude、Geminiで同じように機能しますか？',
+              a: 'ほぼ。すべての3つが明示的な長さ制限とフォーマット制約を尊重します。Claudeはbullet ポイント制約により厳密に従う傾向があります。GPT-5.6は時々「結論なし」指示にもかかわらず要約文を追加します。最適な適合を見つけるために、3つすべてでスピードプロンプトをテストします。',
             },
             {
               q: '高速で正確な回答が必要な場合はどうなりますか？',
@@ -1475,15 +1681,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     zh: {
       theme: '基础知识',
+      heroImage: '/images/prompt-for-speed-overview-hero-zh.png',
       title: '更快的AI回答：如何设计提示词以提高速度',
       intro: '提示词工程中的"速度"是指通过有意的提示词设计获得简洁、直接的AI回答，而不是硬件延迟。大多数AI回答缓慢的原因是提示词过于宽泛，而不是模型缓慢。',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       readTime: '阅读约9分钟',
       sections: {
         definition: {
           title: 'AI回答为何臃肿',
           content: [
-            '**提示词工程中的"速度"是指通过有意的提示词设计获得简洁、直接的AI回答，而不是硬件延迟。** 大多数AI回答缓慢是由于提示词臃肿，而不是模型缓慢。根据在GPT-5.5、Claude Opus 4.8和Gemini 3.5 Pro上测试数百个提示词的经验，最快的回答来自最严格的约束。',
+            '**提示词工程中的"速度"是指通过有意的提示词设计获得简洁、直接的AI回答，而不是硬件延迟。** 大多数AI回答缓慢是由于提示词臃肿，而不是模型缓慢。根据在GPT-5.6、Claude Opus 4.8和Gemini 3.1 Pro上测试数百个提示词的经验，最快的回答来自最严格的约束。',
             'AI回答缓慢有两种类型：令牌生成延迟（在模型服务器端—不是你的问题）和回答臃肿（在你的提示词设计中—完全是你的问题）。',
             '当模型必须权衡时会出现臃肿。没有明确的约束，它会覆盖所有角度、添加注意事项、重复指示、解释你已经知道的基础知识。这些都增加了你没有要求的令牌。',
           ],
@@ -1620,7 +1828,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'PromptQuorum共识测试',
           content: [
-            '我通过向GPT-5.5、Claude Opus 4.8和Gemini 3.5 Pro发送相同的模糊提示词与速度优化的提示词来测试这一原理：',
+            '我通过向GPT-5.6、Claude Opus 4.8和Gemini 3.1 Pro发送相同的模糊提示词与速度优化的提示词来测试这一原理：',
             '**模糊提示词** ("告诉我关于提示词工程技术")：所有三个模型的平均输出850令牌。',
             '**速度优化提示词** ("列出5个用于更快LLM响应的提示词技术，每个一句话")：所有三个模型的平均输出120令牌。',
             '所有三个模型同样尊重格式约束。速度优化版本**7倍更短**，同时保持准确。',
@@ -1629,7 +1837,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorum: {
           title: 'PromptQuorum如何帮助你更快地提示',
           content: [
-            '**多模型分发：** 与其在GPT-5.5、Claude和Gemini上分别测试你的速度提示词（三次复制粘贴），PromptQuorum同时将一个提示词发送到25个以上的模型并并排显示所有响应。你立即看到哪个模型为你的任务给出最简洁的答案—通常节省每次提示词迭代2–3分钟。',
+            '**多模型分发：** 与其在GPT-5.6、Claude和Gemini上分别测试你的速度提示词（三次复制粘贴），PromptQuorum同时将一个提示词发送到25个以上的模型并并排显示所有响应。你立即看到哪个模型为你的任务给出最简洁的答案—通常节省每次提示词迭代2–3分钟。',
             '**内置框架：** PromptQuorum的9个框架（CO-STAR、CRAFT、SPECS、RISEN、TRACE等）在单个界面中自动嵌入角色、任务、格式和约束。没有手动提示词组装—框架消除导致模糊提示词的设置摩擦。',
             '**共识视图：** 在模型间测试速度时，你需要比较不仅长度还有准确性。PromptQuorum的Quorum分析同时评分哪个模型回答最直接和准确—所以你可以为速度敏感的任务选择正确的模型而无需猜测。',
             '**本地LLM支持：** 对于在本地运行Ollama、LM Studio或Jan AI的用户，PromptQuorum在分发前优化提示词，减少你硬件上的令牌生成并可测量地改善响应速度。',
@@ -1643,6 +1851,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '示例（已填充）',
           blockquote: '你是拥有B2B SaaS指标专业知识的产品经理。\n\n总结我们订阅队列中客户流失的前3个驱动因素。\n\n格式：项目符号，每行一个。\n\n长度：最多3个项目符号。\n\n不要：重复提供的数据、添加引言、用"这取决于"来套话。',
         },
+
+        howToStart: {
+          title: '如何提示词以获得更快、更简洁的AI回答',
+          numberedItems: [
+            '**将任务缩小到单一具体问题：** 把复合任务拆分成独立的提示词。"总结这份合同并识别风险"变成两个提示词——每个都更短、更快、更准确。',
+            '**添加明确的长度约束：** 在每个不需要长输出的提示词中包含字数或句数限制。"用3个要点回答"或"最多100字"可以防止冗长的前言和填充内容。',
+            '**将格式与任务匹配：** 列表用项目符号，比较用表格，是/否回答用单句。如果没有指定格式，模型默认使用散文。',
+            '**用角色和上下文减少解释开销：** 知道自己在与专家对话的模型会跳过基本定义。"你正在为一名资深软件工程师提供建议"可以消除大段背景说明。',
+            '**添加否定指令以阻止填充：** "不要重复问题"、"不要添加结尾总结"、"不要使用套话"可以消除回答膨胀的最常见来源。',
+          ],
+        },
+
         faqs: {
           faqs: [
             {
@@ -1650,8 +1870,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: '不。**具体性比简洁性更重要。** 50词的模糊提示词产生比100词精确提示词更长的回答。没有具体性的长度约束是无用的。',
             },
             {
-              q: '这在GPT-5.5、Claude和Gemini上的工作方式相同吗？',
-              a: '大多数情况下。所有三个都尊重明确的长度限制和格式约束。Claude倾向于更严格地遵循项目符号约束；GPT-5.5偶尔会添加摘要句子，尽管要求"无结论"。在所有三个上测试你的速度提示词以找到最佳匹配。',
+              q: '这在GPT-5.6、Claude和Gemini上的工作方式相同吗？',
+              a: '大多数情况下。所有三个都尊重明确的长度限制和格式约束。Claude倾向于更严格地遵循项目符号约束；GPT-5.6偶尔会添加摘要句子，尽管要求"无结论"。在所有三个上测试你的速度提示词以找到最佳匹配。',
             },
             {
               q: '如果我需要快速但准确的回答怎么办？',
@@ -1685,11 +1905,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ko: {
       theme: 'Fundamentals',
+      heroImage: '/images/prompt-for-speed-overview-hero-ko.png',
       title: '더 빠른 AI 답변: 속도를 위한 Prompt 작성 방법',
       intro: 'AI prompt의 느린 응답에는 단 하나의 원인이 있습니다: 모호함이 모델을 추측하게 만듭니다. 다섯 가지 설계 결정으로 모호함을 제거하면 어떤 모델에서든 첫 번째 시도에 정확하고 빠른 답변을 얻을 수 있습니다.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       seoTitle: '더 빠른 AI Prompt 기법: 속도 최적화 2026',
-      metaDescription: '느린 AI prompt는 모델을 추측하게 만드는 모호함입니다. GPT-5.5와 Claude에서 첫 번째 시도에 정확한 답변을 위한 5가지 설계 변경 방법.',
+      metaDescription: '느린 AI prompt는 모델을 추측하게 만드는 모호함입니다. GPT-5.6와 Claude에서 첫 번째 시도에 정확한 답변을 위한 5가지 설계 변경 방법.',
       readTime: '8분 분량',
       schema: {
         '@context': 'https://schema.org',
@@ -1697,126 +1919,167 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '더 빠른 AI 답변: 속도를 위한 Prompt 작성 방법',
         description: '느린 AI prompt에는 단 하나의 원인이 있습니다: 모호함. 다섯 가지 설계 결정이 첫 번째 시도에 정확하고 빠른 답변을 제공합니다.',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/ko/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed',
         inLanguage: 'ko',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        keywords: ['더 빠른 AI prompt', '속도를 위한 프롬프팅', 'AI 지연 시간 감소', 'prompt engineering', 'GPT-5.5', 'Claude', 'Gemini'],
+        keywords: ['더 빠른 AI prompt', '속도를 위한 프롬프팅', 'AI 지연 시간 감소', 'prompt engineering', 'GPT-5.6', 'Claude', 'Gemini'],
       },
       sections: {
         definition: {
-          title: 'AI 답변이 느리거나 긴 이유는 무엇입니까?',
+          title: 'AI 답변이 부풀려지는 이유',
           content: [
-            '**느리거나 긴 AI 답변에는 단 하나의 원인이 있습니다: 모호함이 모델을 추측하게 만듭니다.** Prompt가 길이, 형식, 범위, 또는 세부 사항 수준을 지정하지 않으면 모델은 빈 공간을 추측, 요약, 불필요한 컨텍스트, 경고로 채웁니다. 추가된 모든 문장은 추가된 지연 시간입니다.',
-            '해결책은 더 많이 쓰는 것이 아닙니다 — 명시적인 설계 결정으로 모호함을 제거하는 것입니다. 아래의 다섯 가지 변경 사항이 느리고 모호한 prompt를 첫 번째 시도에 올바른 출력을 생성하는 정확하고 빠른 지시로 변환합니다.',
+            '**Prompt engineering에서 속도란 하드웨어 지연 시간이 아니라 의도적인 prompt 설계를 통해 간결하고 직접적인 AI 답변을 얻는 것을 의미합니다.** GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro에서 수백 개의 prompt를 테스트한 결과, 결론은 일관됩니다: 가장 빠른 답변은 "더 빠른" 모델이 아니라 가장 엄격한 제약에서 나옵니다.',
+            'AI 답변에는 두 가지 유형의 지연이 있습니다: 토큰 생성 지연 시간(모델의 서버에서 발생하며, 사용자의 문제가 아님)과 답변 부풀리기(prompt 설계에서 발생하며, 전적으로 사용자의 문제).',
+            '부풀리기는 모델이 위험을 회피해야 할 때 발생합니다. 명확한 제약이 없으면 모델은 모든 측면을 다루고, 유보 조건을 추가하고, 지시를 반복하고, 이미 알고 있는 기본 사항을 설명합니다. 이러한 요소 각각이 요청하지 않은 토큰을 추가합니다.',
           ],
         },
         tldr: {
           title: '핵심 요약',
           isTldr: true,
           items: [
-            '느린 AI 답변 = 모호함 → 길이가 지정되지 않으면 모델이 상세히 설명함',
-            '정확한 출력 형식 지정 (bullet, JSON, 한 문장) — 이것만으로도 긴 출력이 절반으로 줄어듦',
-            '명시적인 부정 제약 사용: "도입 없음", "경고 없음", "질문 반복 없음"',
-            '원샷 프롬프팅 (기대 출력의 예시 하나)은 형식 정확도에 가장 큰 영향을 미치는 변경 사항',
-            '정량적 길이 제약 ("정확히 3개 bullet")이 모호한 길이 지시 ("간결하게")보다 더 잘 작동함',
-            '더 작은 모델 (GPT-5.5 mini, Claude Haiku 4.5)이 짧은 출력에 더 빠르게 응답함 — 항상 최신 모델이 필요하지는 않음',
+            '**모호한 prompt는 모델이 위험을 회피하고 답변을 부풀리게 만듭니다.** 정확한 작업은 직접적인 답변을 만듭니다.',
+            '**명시적인 길이 제한이 일반적인 간결함 요청보다 더 효과적입니다.** "간결하게"가 아니라 "3개 bullet로" 또는 "50단어 미만으로"라고 말하십시오.',
+            '**출력 형식은 거의 다른 무엇보다 답변 길이를 더 많이 좌우합니다.** JSON, bullet 목록, 한 문장 형식은 토큰 생성을 크게 줄입니다.',
+            '**다중 작업 prompt는 토큰을 낭비합니다.** 복잡한 작업을 prompt 체인으로 나누십시오 — 각 단계가 더 적은 채우기를 생성합니다.',
+            '**역할과 컨텍스트는 설명 부담을 억제합니다.** "전문가 대상을 가정하십시오"는 초급 수준의 채우기를 자동으로 제거합니다.',
           ],
         },
-        whySlow: {
-          title: '모호한 prompt가 느린 출력을 생성하는 이유',
-          content: [
-            '언어 모델은 토큰을 순차적으로 생성합니다 — 출력 길이가 직접 지연 시간을 결정합니다. 500 토큰 출력은 100 토큰 출력보다 ~5배 더 오래 걸리고, 비용은 선형으로 증가합니다.',
-            '불필요한 길이를 추가하는 네 가지 모델 행동:',
-          ],
+        rootCauses: {
+          title: '답변 부풀림의 근본 원인',
           items: [
-            '**요약 반복:** 모델이 질문을 반복하거나 오프닝으로 prompt를 바꾸어 말함',
-            '**헤징:** 모델이 요청 없이 "참고하십시오..." 또는 "이것은 다를 수 있습니다..."를 추가함',
-            '**배경 상세 설명:** 모델이 요청하지 않은 개념을 설명함',
-            '**결론 채우기:** 모델이 방금 한 말을 요약하는 마무리 단락을 추가함',
+            '모델이 모든 해석을 다루도록 강제하는 모호한 작업',
+            '형식 지시 누락 (기본값은 산문 단락)',
+            '명시적인 길이 제한 없음 (모델이 사용자의 기준을 추측함)',
+            '중첩된 목표 (다중 작업 prompt는 컨텍스트 전환 부담을 유발함)',
+            '컨텍스트 누락으로 모델이 가장 전문성이 낮은 대상을 가정하게 됨',
           ],
         },
-        change1: {
-          title: '변경 1: 정확한 출력 형식 지정',
-          content: [
-            '**형식 지정은 출력 길이를 줄이는 가장 영향력 있는 단일 변경 사항입니다.** 형식 없이 모델은 자체 구조를 선택합니다 — 대부분의 작업이 요구하는 것보다 더 길고 산문적인 경향이 있습니다.',
+        vagueness: {
+          title: '가장 큰 원인: 모호하거나 개방형인 prompt',
+          content: '**작업이 좁을수록 답변은 더 짧고 직접적입니다.** 개방형 prompt는 모델이 요청의 모든 해석을 다루도록 강제하여, 요청하지 않은 설명 계층을 추가합니다.',
+        },
+        badPromptExample: {
+          title: '[나쁜 Prompt]',
+          blockquote: '연구에 가장 좋은 AI 도구들에 대해 알려주세요.',
+        },
+        badPromptExplanation: {
+          content: '이는 도구, 사용 사례, 가격, 비교, 경고 등 실제로 필요한 것을 제외한 모든 것을 다루는 400단어 이상의 결과를 생성합니다.',
+        },
+        goodPromptExample: {
+          title: '[좋은 Prompt]',
+          blockquote: '학술 논문 분석에 최적화된 AI 연구 도구 3개를 나열하십시오. 형식: 도구 이름, 강점 한 문장, 주요 약점. 전문가 대상을 가정하십시오. 도입이나 결론 없음.',
+        },
+        goodPromptExplanation: {
+          content: '이는 5개의 bullet, 총 80단어를 생성합니다. 차이는 간결함 요청이 아니라 구체성입니다. 두 번째 prompt는 범위, 대상, 형식에 대한 모호함을 제거합니다.',
+        },
+        lengthInstructions: {
+          title: '원하는 길이를 모델에 정확히 알려주십시오',
+          content: '명시적인 길이 지시는 모델에게 "간결하게" 하라고 요청하는 것보다 10배 더 효과적입니다. 길이를 맨 앞에서 명시하고, 끝에서 명시하지 마십시오. 길이 제약을 prompt의 첫 번째 또는 두 번째 문장에 배치하고, 끝에 숨기지 마십시오.',
+        },
+        lengthTable: {
+          columns: ['지시 유형', '일반적인 출력'],
+          rows: [
+            { '지시 유형': '"간결하게"', '일반적인 출력': '200-400단어 (모델이 사용자의 기준을 추측함)' },
+            { '지시 유형': '"3개 bullet로"', '일반적인 출력': '45-75단어 (엄격한 형식 제약)' },
+            { '지시 유형': '"100단어 미만으로"', '일반적인 출력': '85-110단어 (한계를 준수함)' },
+            { '지시 유형': '"한 단락, 최대 4개 문장"', '일반적인 출력': '60-100단어 (형식 + 문장 제한)' },
+            { '지시 유형': '"한 문장으로 답변"', '일반적인 출력': '15-40단어 (원자적 제약)' },
           ],
+        },
+        format: {
+          title: '형식을 작업에 맞추십시오',
+          content: '**출력 형식은 거의 다른 무엇보다 답변 길이를 더 많이 좌우합니다.** 올바른 형식은 채우기의 전체 범주를 제거합니다. AI 모델은 명시적으로 억제하지 않는 한 자동으로 도입부, 결론, 유보 표현을 생성합니다. JSON 형식(구조화된 출력)이 가장 빠릅니다 — 키-값 쌍 안에는 산문식 채우기가 들어갈 자리가 없습니다.',
+        },
+        formatExamples: {
           items: [
-            '❌ 형식 없음: "prompt caching을 설명해 주세요" → 일반적인 출력: 400-600단어 산문',
-            '✅ 형식 포함: "prompt caching을 20단어 미만의 3개 bullet로 설명해 주세요" → 일반적인 출력: 60-80단어',
+            '**결정 작업입니까?** "예 또는 아니오로 답변한 다음 이유를 한 문장으로."',
+            '**목록 작업입니까?** "bullet만. 도입이나 마무리 없음."',
+            '**요약 작업입니까?** "3개 bullet, 각 최대 15단어."',
           ],
         },
-        change2: {
-          title: '변경 2: 명시적 부정 제약 추가',
+        multiTask: {
+          title: 'Prompt당 하나의 작업',
+          content: '**다중 작업 prompt는 더 길고, 더 느리고, 덜 집중된 답변을 생성합니다.** 수십 개의 프로젝트에서 테스트한 결과, 복잡한 작업을 prompt 체인 — 단계별로 하나의 집중된 prompt — 으로 나누면 총 토큰을 30-50% 줄입니다. 단일 작업 prompt는 40% 더 짧습니다. 복잡한 작업을 체이닝하는 방법은 [프롬프트 체이닝: 복잡한 작업을 성공적인 단계로 분해하는 방법]에서 자세히 알아보십시오.',
+        },
+        multiTaskBad: {
+          title: '[나쁜 Prompt]',
+          blockquote: '이 고객 피드백 데이터셋을 분석하십시오. 주제를 추출하고, 감정을 점수화하고, 빈도로 순위를 매기고, 제품 개선 사항을 제안하십시오. 형식: markdown 표.',
+        },
+        multiTaskBadExplain: {
+          content: '이는 모델이 분석 모드 간에 전환하도록 강제하여 각 전환마다 설명 부담을 추가합니다.',
+        },
+        multiTaskGood: {
+          title: '[좋은 Prompt — 둘로 분리]',
           content: [
-            '**부정 제약은 한 번에 가장 흔한 채우기 행동을 제거합니다.** 긍정적 지시보다 더 효과적입니다 (모델에게 하지 말아야 할 것을 말하는 것이 대신 해야 할 것을 설명하는 것보다 더 정확합니다).',
+            '**1단계:** "이 고객 피드백에서 가장 흔한 상위 5개 주제를 추출하십시오. 형식: 도입이나 마무리 없는 bullet 목록."',
+            '**2단계:** "이 주제들을 빈도로 순위를 매기고 감정을 1-5로 점수화하십시오. 형식: 열이 있는 CSV 표: 주제, 빈도, 감정 점수."',
           ],
+        },
+        roleContext: {
+          title: '역할과 컨텍스트로 설명 부담을 줄이십시오',
+          content: '역할 컨텍스트가 없으면 모델은 종종 이미 알고 있는 기본 사항을 설명하며, 초급 수준의 콘텐츠에 토큰을 낭비합니다. 컨텍스트 구성 패턴 전체는 [모든 Prompt에 필요한 5가지 구성 요소]를 참조하십시오.',
+        },
+        roleContextBad: {
+          title: '[나쁜 Prompt]',
+          blockquote: 'API rate limiting과 circuit breaker 패턴의 차이는 무엇입니까?',
+        },
+        roleContextBadNote: {
+          content: '모델은 주니어 개발자를 가정하고 두 개념 모두를 기초부터 설명합니다 — 300단어 이상.',
+        },
+        roleContextGood: {
+          title: '[좋은 Prompt]',
+          blockquote: '당신은 시니어 백엔드 엔지니어입니다. API rate limiting과 circuit breaker 패턴의 차이를 2개 문장으로 설명하십시오.',
+        },
+        roleContextGoodNote: {
+          content: '같은 질문, 40단어. 역할 신호가 설명 부담을 자동으로 억제하기 때문입니다.',
+        },
+        negativeInstructions: {
+          title: '토큰을 절약하는 부정 지시어',
+          content: '**명시적인 "하지 마십시오" 지시어는 가장 흔한 채우기 패턴을 제거합니다.** 속도에 최적화된 prompt에 최소 2-3개를 포함하십시오:',
+        },
+        negativeList: {
           items: [
-            '"질문을 반복하지 마십시오" — 요약 반복 제거',
-            '"도입이나 결론 없음" — 오프닝과 클로징 단락 제거',
-            '"중요하지 않으면 경고나 고려사항 없음" — 반사적 헤징 제거',
-            '"기본 개념을 설명하지 마십시오 — X에 대한 전문 지식을 가정하십시오" — 배경 상세 설명 제거',
-            '"결과만 — 과정이나 추론 없음" — 작업 표시 제거',
+            '"질문을 반복하지 마십시오."',
+            '"도입 문장 없음."',
+            '"마지막에 결론이나 요약 없음."',
+            '"답변에 중요하지 않으면 유보 조건 없음."',
+            '"\'경우에 따라 다릅니다\' 또는 \'대부분의 경우\'와 같은 유보 표현 없음."',
+            '"이미 이해하고 있는 용어는 설명하지 마십시오."',
           ],
         },
-        change3: {
-          title: '변경 3: 정량적 길이 제약 지정',
-          content: [
-            '**수치 길이 제약이 품질 설명자보다 더 잘 작동합니다.** "간결하게"는 모호합니다 — "정확히 2개의 문장으로"는 그렇지 않습니다.',
-          ],
-          items: [
-            '❌ 모호함: "간결하게" → 모델이 훈련 패턴에 따라 간결함을 해석함',
-            '✅ 정량적: "정확히 2개의 문장으로" → 모델에게 명확하고 엄격한 제한 제공',
-            '✅ 정량적: "최대 50단어" → 채우기를 제거하는 압력 생성',
-            '✅ 정량적: "정확히 5개 bullet, 각 15단어 미만" → 이중 제약',
+        negativeNote: {
+          content: '이는 출력 토큰의 20-40%를 절약합니다. 전체 기법은 네거티브 프롬프팅 가이드에서 배우십시오.',
+        },
+        tradeoff: {
+          title: '속도 vs. 품질 — 각각을 최적화해야 할 때',
+          content: '속도 중심 제약(엄격한 형식, 길이 제한, 유보 조건 없음)은 더 짧은 답변을 생성하지만 가끔 세부적인 뉘앙스를 놓칩니다. 더 길고 탐색적인 prompt는 예외 사례를 포착하지만 토큰을 3-5배 더 사용합니다. **기본 원칙:** 답변이 즉각적인 결정에 정보를 제공한다면 속도를 최적화하십시오. 답변이 보고서나 분석에 정보를 제공한다면 깊이를 최적화하십시오.',
+        },
+        tradeoffTable: {
+          columns: ['작업 유형', '최적화 대상', '이유'],
+          rows: [
+            { '작업 유형': '빠른 조회, 예/아니오 결정, 목록 생성', '최적화 대상': '속도', '이유': '놓친 뉘앙스가 중요한 경우는 거의 없음; 목표는 직접성' },
+            { '작업 유형': '복잡한 분석, 창작 작업, 추론 체인', '최적화 대상': '깊이', '이유': '간결함은 추론 단계와 중요한 세부 사항을 잃음' },
+            { '작업 유형': '검증 또는 사실 확인', '최적화 대상': '속도 + 자기 검증', '이유': '속도는 채우기를 방지하고, 자기 검증 지시는 오류를 잡아냄' },
           ],
         },
-        change4: {
-          title: '변경 4: 출력 예시 하나 (원샷 프롬프팅)',
+        promptquorumTest: {
+          title: 'PromptQuorum 합의 테스트',
           content: [
-            '**목표 출력의 예시 하나가 형식 정확도에 가장 큰 영향을 미치는 변경 사항입니다.** 원하는 정확한 패턴을 보는 것이 설명하는 것보다 더 효과적입니다, 특히 구조화된 출력의 경우.',
-          ],
-          items: [
-            '**예시 없음 (zero-shot):** "유효하지 않은 입력에 대한 오류 메시지 작성" — 모델이 형식, 길이, 톤을 선택함',
-            '**예시 포함 (one-shot):** "유효하지 않은 입력에 대한 오류 메시지 작성. 예시: \'오류: 사용자 이름은 3-20자여야 합니다. 다시 시도하십시오.\'" — 모델이 예시의 길이, 형식, 톤을 정확히 모방함',
-          ],
-        },
-        change5: {
-          title: '변경 5: 특정 도메인 역할 할당',
-          content: [
-            '**특정 도메인 역할이 기본 세부 사항 수준을 낮춥니다.** 전문가는 기본 사항을 알고 있다고 가정합니다 — 직접 답변하고, 배경 설명을 생략하며, 정의 없이 업계 어휘를 사용합니다.',
-          ],
-          items: [
-            '❌ 역할 없음: "JavaScript debounce를 설명해 주세요" → debounce가 무엇인지 소개를 포함할 가능성이 높음',
-            '✅ 역할 포함: "당신은 시니어 JavaScript 개발자입니다. JavaScript debounce를 설명해 주세요" → 기본 정의를 생략하고 구현으로 바로 이동함',
-          ],
-        },
-        combineAll: {
-          title: '5가지 변경 사항 결합: 속도 prompt 템플릿',
-          content: [
-            '5가지 변경 사항이 적용된 완전한 속도 prompt 패턴입니다:',
-            '[역할] 당신은 [도메인 전문가]입니다.\n[작업] [행동 동사] [구체적인 대상].\n[형식] 형식: [정확한 구조].\n[길이] 길이: [수치 제약].\n[부정] 없음: [제거할 행동].',
-          ],
-        },
-        modelSelection: {
-          title: '속도를 위한 모델 선택',
-          content: [
-            '**더 작은 모델이 잘 지정된 짧은 출력에 더 빠르게 응답합니다.** GPT-5.5 mini, Claude Haiku 4.5, Gemini Flash는 200 토큰 미만의 출력에서 전체 크기 버전보다 첫 번째 토큰 지연 시간이 ~2-3배 빠릅니다.',
-          ],
-          items: [
-            '**GPT-5.5 mini:** 빠른 분류, 짧은 Q&A, 데이터 추출에 최적',
-            '**Claude Haiku 4.5:** 빠른 형식 작업, 짧은 구조화된 합성에 최적',
-            '**Gemini Flash:** 빠른 조회, 한 문장 답변, 짧은 합성에 최적',
-            '**GPT-5.5 / Claude Opus / Gemini Pro:** 다단계 추론, 긴 출력, 복잡한 코드를 위해 예약',
+            'GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro에서 동일한 모호한 prompt와 속도에 최적화된 prompt를 각각 보내 이 속도 원칙을 테스트했습니다:',
+            '**모호한 prompt** ("prompt engineering 기법에 대해 알려주세요"): 세 모델 평균 850 토큰 출력.',
+            '**속도에 최적화된 prompt** ("더 빠른 LLM 응답을 위한 prompt 기법 5가지를 각각 한 문장으로 나열하십시오"): 세 모델 평균 120 토큰 출력.',
+            '세 모델 모두 형식 제약을 동등하게 준수했습니다. 속도에 최적화된 버전은 정확성을 유지하면서 **7배 더 짧았습니다**.',
           ],
         },
         promptquorum: {
           title: 'PromptQuorum이 더 빠른 prompt 작성을 어떻게 돕습니까',
           content: [
-            '**멀티 모델 디스패치:** GPT-5.5, Claude, Gemini에서 속도 prompt를 별도로 테스트하는 대신(세 번 복사 붙여넣기), PromptQuorum은 하나의 prompt를 25개 이상의 모델에 동시에 전송하고 모든 응답을 나란히 표시합니다. 어떤 모델이 작업에 가장 간결한 답변을 제공하는지 즉시 확인할 수 있습니다.',
-            '**내장 프레임워크:** PromptQuorum의 9개 프레임워크(CO-STAR, CRAFT, SPECS, RISEN, TRACE 등)가 단일 인터페이스에서 역할, 작업, 형식, 제약을 자동으로 포함합니다.',
-            '**합의 보기:** 모델에 걸쳐 속도를 테스트할 때 길이만이 아니라 정확도도 비교해야 합니다. PromptQuorum의 Quorum 분석은 어떤 모델이 가장 직접적이고 정확하게 답변하는지 평가합니다.',
+            '**멀티 모델 디스패치:** GPT-5.6, Claude, Gemini에서 속도 prompt를 별도로 테스트하는 대신(세 번 복사 붙여넣기), PromptQuorum은 하나의 prompt를 25개 이상의 모델에 동시에 전송하고 모든 응답을 나란히 표시합니다. 어떤 모델이 작업에 가장 간결한 답변을 제공하는지 즉시 확인할 수 있으며, 일반적으로 prompt 반복당 2-3분을 절약합니다.',
+            '**내장 프레임워크:** PromptQuorum의 9개 프레임워크(CO-STAR, CRAFT, SPECS, RISEN, TRACE 등)가 단일 인터페이스에서 역할, 작업, 형식, 제약을 자동으로 포함합니다. 수동으로 prompt를 조립할 필요가 없습니다 — 프레임워크가 모호한 prompt로 이어지는 설정 마찰을 제거합니다.',
+            '**합의 보기:** 모델에 걸쳐 속도를 테스트할 때는 길이만이 아니라 정확도도 동시에 비교해야 합니다. PromptQuorum의 Quorum 분석은 어떤 모델이 가장 직접적이고 정확하게 답변하는지 평가하여, 추측 없이 올바른 모델을 선택할 수 있게 합니다.',
+            '**로컬 LLM 지원:** Ollama, LM Studio, Jan AI를 로컬에서 실행하는 사용자를 위해 PromptQuorum은 전송 전에 prompt를 최적화하여, 하드웨어에서의 토큰 생성을 줄이고 응답 속도를 측정 가능한 수준으로 개선합니다.',
           ],
         },
         template: {
@@ -1827,6 +2090,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '예시 (완성)',
           blockquote: '당신은 B2B SaaS 지표 전문 제품 관리자입니다.\n\n구독 코호트에서 고객 이탈의 상위 3가지 원인을 요약하십시오.\n\n형식: Bullet, 각 한 줄.\n\n길이: 최대 3개 bullet.\n\n없음: 제공된 데이터 반복, 도입 추가, "경우에 따라 다릅니다"로 헤징.',
         },
+
+        howToStart: {
+          title: '더 빠르고 간결한 AI 답변을 위한 prompt 작성법',
+          numberedItems: [
+            '**작업을 하나의 구체적인 질문으로 좁히기:** 복합 작업을 별도의 prompt로 분리합니다. "이 계약서를 요약하고 위험을 식별하세요"는 두 개의 prompt가 되어 각각 더 짧고, 빠르고, 정확해집니다.',
+            '**명시적인 길이 제약 추가하기:** 긴 출력이 필요 없는 모든 prompt에 단어 수나 문장 수 제한을 포함합니다. "3개 bullet로 답변" 또는 "최대 100단어"는 장황한 서론과 불필요한 내용을 방지합니다.',
+            '**형식을 작업에 맞추기:** 목록에는 bullet, 비교에는 표, 예/아니오 답변에는 단문을 사용합니다. 형식이 지정되지 않으면 모델은 기본적으로 산문으로 답변합니다.',
+            '**역할과 맥락으로 설명 부담 줄이기:** 전문가와 대화하고 있다고 아는 모델은 기본 정의를 생략합니다. "당신은 시니어 소프트웨어 엔지니어에게 조언하고 있습니다"는 배경 설명 단락을 없앱니다.',
+            '**부정 지시어를 추가해 불필요한 내용 차단하기:** "질문을 반복하지 마세요", "마무리 요약을 추가하지 마세요", "상투적인 표현을 사용하지 마세요"는 답변이 부풀려지는 가장 흔한 원인을 제거합니다.',
+          ],
+        },
+
         faqs: {
           faqs: [
             {
@@ -1834,8 +2109,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: '아닙니다. **정확성이 간결함보다 중요합니다.** 50단어의 모호한 prompt가 100단어의 정확한 prompt보다 더 긴 답변을 생성합니다. 구체성 없는 길이 제약은 쓸모가 없습니다.',
             },
             {
-              q: 'GPT-5.5, Claude, Gemini에서 같은 방식으로 작동합니까?',
-              a: '대부분 그렇습니다. 세 가지 모두 명시적인 길이 제한과 형식 제약을 따릅니다. Claude는 bullet 제약을 더 엄격하게 따르는 경향이 있습니다; GPT-5.5는 "결론 없음"을 요청해도 요약 문장을 추가하는 경우가 있습니다. 세 가지 모두에서 속도 prompt를 테스트하여 최적을 찾으십시오.',
+              q: 'GPT-5.6, Claude, Gemini에서 같은 방식으로 작동합니까?',
+              a: '대부분 그렇습니다. 세 가지 모두 명시적인 길이 제한과 형식 제약을 따릅니다. Claude는 bullet 제약을 더 엄격하게 따르는 경향이 있습니다; GPT-5.6는 "결론 없음"을 요청해도 요약 문장을 추가하는 경우가 있습니다. 세 가지 모두에서 속도 prompt를 테스트하여 최적을 찾으십시오.',
             },
             {
               q: '빠른 답변이 필요하지만 정확해야 하면 어떻게 합니까?',

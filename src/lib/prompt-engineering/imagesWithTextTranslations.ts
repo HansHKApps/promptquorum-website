@@ -143,6 +143,18 @@ export const imagesWithTextDe: Record<string, PESection> = {
     ],
   },
 
+  howToStart: {
+    title: 'So startest du mit Bild-Prompts',
+    numberedItems: [
+      '**Bestimme deinen Modus: Bild→Text (analysieren), Text→Bild (generieren) oder Bild↔Bild (bearbeiten).** Jeder Modus hat eigene Best Practices. Analyse erfordert konkrete Fragen; Generierung erfordert detaillierte visuelle Beschreibungen; Bearbeitung erfordert explizite Vorher/Nachher-Vorgaben.',
+      '**Sei bei der Bildanalyse konkret, was du extrahieren willst.** Statt „Analysiere dieses Bild" frage „Extrahiere Datum, Rechnungsnummer und Gesamtbetrag aus dieser Quittung" oder „Identifiziere alle Personen auf diesem Foto und ihre Position."',
+      '**Strukturiere jeden Text-zu-Bild-Prompt um fünf Elemente:** Subjekt (was zu sehen ist), Aktion (was es tut), Stil (wie es aussieht), Kontext (wo es ist) und technische Details (Beleuchtung, Winkel, Kamera). Vermeide vage Begriffe wie „schön."',
+      '**Beschreibe bei der Bildbearbeitung explizit die zu ändernde Region und was unverändert bleiben muss.** Beispiel: „Ersetze den Hintergrund durch einen Wald, aber behalte Haltung und Ausdruck der Person identisch."',
+      '**Teste mit PromptQuorum über mehrere Modelle hinweg.** GPT-5.5 ist stark im Szenenverständnis, Claude Opus 4.8 bei der Textextraktion, Gemini 3.5 Pro bei langen Kontexten. Ein einzelnes Modell ist selten für alle Aufgaben am besten – vergleiche die Ausgaben.',
+      '**Vermeide drei Fallstricke:** vage Prompts („analysiere dieses Bild"), Annahme von Präzision (VLMs halluzinieren Details) und Überladung mit zu vielen Bildern (ab 10 in Stapeln arbeiten).',
+    ],
+  },
+
   faq: {
     title: 'FAQ',
     faqs: [
@@ -336,6 +348,18 @@ export const imagesWithTextFr: Record<string, PESection> = {
       '**Modèle texte-image :** « Sujet : [nom]. Action : [verbe + état]. Style : [style d\'art]. Contexte : [paramètre]. Technique : [angle de caméra, éclairage]. Exemple : Sujet : gramophone vintage. Action : joue avec des ondes sonores visibles. Style : surréalisme, peinture à l\'huile. Contexte : magasin d\'antiquités, faiblement éclairé. Technique : angle latéral, lumière dorée, faible profondeur de champ. »',
       '**Édition d\'image :** « Éditez cette image cible pour correspondre au style de cette image de référence tout en préservant la composition et le sujet de l\'image cible. N\'ajoutez pas et ne supprimez pas les éléments majeurs ; appliquez uniquement les modifications de couleur, d\'éclairage et de texture. »',
       '**Génération de texte alternatif :** « Écrivez le texte alternatif pour cette image. Doit être ≤125 caractères. Décrivez ce qu\'un utilisateur aveugle ou malvoyant doit savoir. Exemple : \'un homme en costume bleu serre la main d\'une femme en robe rouge lors d\'un événement formel avec une vue urbaine en arrière-plan.\' »',
+    ],
+  },
+
+  howToStart: {
+    title: 'Comment commencer à utiliser des images dans vos prompts',
+    numberedItems: [
+      '**Identifiez votre mode : Image→Texte (analyser), Texte→Image (générer) ou Image↔Image (éditer).** Chaque mode a ses propres bonnes pratiques. L\'analyse exige des questions précises ; la génération exige des descriptions visuelles détaillées ; l\'édition exige des contraintes avant/après explicites.',
+      '**Pour l\'analyse d\'image, soyez précis sur ce que vous voulez extraire.** Au lieu de « Analysez cette image », demandez « Extrayez la date, le numéro de facture et le montant total de ce reçu » ou « Identifiez toutes les personnes sur cette photo et leur position. »',
+      '**Pour la génération texte-image, structurez chaque prompt autour de cinq éléments :** Sujet (ce que vous voyez), Action (ce qu\'il fait), Style (à quoi cela ressemble), Contexte (où cela se trouve) et détails techniques (éclairage, angle, caméra). Évitez les termes vagues comme « beau ».',
+      '**Pour l\'édition d\'image, décrivez explicitement la région à modifier et ce qui doit rester inchangé.** Exemple : « Remplacez l\'arrière-plan par une forêt, mais gardez la pose et l\'expression de la personne identiques. »',
+      '**Testez sur plusieurs modèles avec PromptQuorum.** GPT-5.5 excelle dans la compréhension de scène, Claude Opus 4.8 dans l\'extraction de texte, Gemini 3.5 Pro dans les longs contextes. Un seul modèle est rarement le meilleur pour toutes les tâches — comparez les résultats.',
+      '**Évitez trois pièges :** les prompts vagues (« analysez cette image »), supposer la précision (les VLM hallucinent des détails), et surcharger avec trop d\'images (regroupez au-delà de 10).',
     ],
   },
 
@@ -535,6 +559,18 @@ export const imagesWithTextJa: Record<string, PESection> = {
     ],
   },
 
+  howToStart: {
+    title: '画像を使ったプロンプトの始め方',
+    numberedItems: [
+      '**モードを特定する: Image→Text（分析）、Text→Image（生成)、Image↔Image（編集）のいずれか。** 各モードにはベストプラクティスがあります。分析には具体的な質問が、生成には詳細な視覚的説明が、編集には明示的な前後の制約が必要です。',
+      '**画像分析では、抽出したい内容を具体的にする。** 「この画像を分析してください」ではなく、「この領収書から日付、請求書番号、合計金額を抽出してください」や「この写真に写っているすべての人物とその位置を特定してください」と依頼します。',
+      '**テキストから画像への生成では、すべてのプロンプトを5つの要素で構成する:** 主題（何が見えるか）、アクション（何をしているか）、スタイル（どう見えるか）、文脈（どこにあるか）、技術的詳細（照明、角度、カメラ）。「美しい」のような曖昧な表現は避けます。',
+      '**画像編集では、変更する領域と変更してはいけない部分を明示的に説明する。** 例: 「背景を森に置き換えてください。ただし人物のポーズと表情は同一のままにしてください。」',
+      '**PromptQuorumで複数モデルを横断してテストする。** GPT-5.5はシーン理解に優れ、Claude Opus 4.8はテキスト抽出に優れ、Gemini 3.5 Proは長いコンテキストに優れています。単一モデルがすべてのタスクで最良であることはまれです — 出力を比較してください。',
+      '**3つの落とし穴を避ける:** 曖昧なプロンプト（「この画像を分析してください」）、精度を過信すること（VLMは詳細を幻覚する）、そして多すぎる画像での過負荷（10枚を超える場合はバッチ処理する）。',
+    ],
+  },
+
   faq: {
     title: 'よくある質問',
     faqs: [
@@ -728,6 +764,18 @@ export const imagesWithTextEs: Record<string, PESection> = {
       '**Plantilla de texto a imagen:** "Sujeto: [sustantivo]. Acción: [verbo + estado]. Estilo: [estilo artístico]. Contexto: [configuración]. Técnico: [ángulo de cámara, iluminación]. Ejemplo: Sujeto: gramófono vintage. Acción: reproduce con ondas de sonido visibles. Estilo: surrealismo, pintura al óleo. Contexto: tienda de antigüedades, poca iluminación. Técnico: ángulo lateral, luz dorada, poca profundidad de campo."',
       '**Edición de imagen:** "Edita esta imagen objetivo para que coincida con el estilo de esta imagen de referencia, mientras preservas la composición y el sujeto de la imagen objetivo. No agregues ni elimines elementos principales; aplica solo cambios de color, iluminación y textura."',
       '**Generación de texto alternativo:** "Escribe texto alternativo para esta imagen. Debe ser ≤125 caracteres. Describe lo que un usuario ciego o con baja visión necesita saber. Ejemplo: \'un hombre con traje azul le da la mano a una mujer con vestido rojo en un evento formal con un paisaje urbano de fondo.\'"',
+    ],
+  },
+
+  howToStart: {
+    title: 'Cómo empezar a hacer prompts con imágenes',
+    numberedItems: [
+      '**Identifica tu modo: Imagen→Texto (analizar), Texto→Imagen (generar) o Imagen↔Imagen (editar).** Cada modo tiene sus propias mejores prácticas. El análisis requiere preguntas específicas; la generación requiere descripciones visuales detalladas; la edición requiere restricciones explícitas de antes/después.',
+      '**Para el análisis de imágenes, sé específico sobre lo que quieres extraer.** En lugar de "Analiza esta imagen", pregunta "Extrae la fecha, el número de factura y el monto total de este recibo" o "Identifica a todas las personas en esta foto y su posición."',
+      '**Para la generación de texto a imagen, estructura cada prompt en torno a cinco elementos:** Sujeto (lo que ves), Acción (lo que hace), Estilo (cómo se ve), Contexto (dónde está) y detalles técnicos (iluminación, ángulo, cámara). Evita términos vagos como "bonito."',
+      '**Para la edición de imágenes, describe explícitamente la región a cambiar y lo que debe permanecer sin cambios.** Ejemplo: "Reemplaza el fondo con un bosque, pero mantén la pose y expresión de la persona idénticas."',
+      '**Prueba en múltiples modelos con PromptQuorum.** GPT-5.5 destaca en la comprensión de escenas, Claude Opus 4.8 en la extracción de texto, Gemini 3.5 Pro en contextos largos. Un solo modelo rara vez es el mejor para todas las tareas — compara los resultados.',
+      '**Evita tres errores comunes:** prompts vagos ("analiza esta imagen"), asumir precisión (los VLM alucinan detalles), y sobrecargar con demasiadas imágenes (agrupa más de 10).',
     ],
   },
 
@@ -927,6 +975,18 @@ export const imagesWithTextZh: Record<string, PESection> = {
     ],
   },
 
+  howToStart: {
+    title: '如何开始使用图像提示词',
+    numberedItems: [
+      '**确定你的模式：图像→文本（分析）、文本→图像（生成）或图像↔图像（编辑）。** 每种模式都有不同的最佳实践。分析需要具体的问题；生成需要详细的视觉描述；编辑需要明确的前后约束。',
+      '**在图像分析中，明确说明你想提取的内容。** 不要说「分析这张图像」，而要问「从这张收据中提取日期、发票号码和总金额」或「识别这张照片中的所有人物及其位置」。',
+      '**在文本到图像生成中，围绕五个要素构建每个提示词：** 主题（你看到什么）、动作（它在做什么）、风格（它看起来如何）、背景（它在哪里）和技术细节（光线、角度、相机）。避免使用「漂亮」这样的模糊词汇。',
+      '**在图像编辑中，明确描述要更改的区域以及必须保持不变的部分。** 示例：「将背景替换为森林，但保持人物的姿势和表情完全不变。」',
+      '**使用PromptQuorum在多个模型间进行测试。** GPT-5.5擅长场景理解，Claude Opus 4.8擅长文本提取，Gemini 3.5 Pro擅长长上下文。单一模型很少在所有任务中都是最佳的——比较输出以找到最适合的模型。',
+      '**避免三个常见误区：** 模糊的提示词（「分析这张图像」）、假设精确度（VLM会幻觉出细节）以及用过多图像造成过载（超过10张时应分批处理）。',
+    ],
+  },
+
   faq: {
     title: '常见问题',
     faqs: [
@@ -1123,6 +1183,18 @@ export const imagesWithTextPt: Record<string, PESection> = {
     ],
   },
 
+  howToStart: {
+    title: 'Como começar a criar prompts com imagens',
+    numberedItems: [
+      '**Identifique seu modo: Imagem→Texto (analisar), Texto→Imagem (gerar) ou Imagem↔Imagem (editar).** Cada modo tem suas próprias boas práticas. A análise exige perguntas específicas; a geração exige descrições visuais detalhadas; a edição exige restrições explícitas de antes/depois.',
+      '**Para análise de imagem, seja específico sobre o que deseja extrair.** Em vez de "Analise esta imagem", pergunte "Extraia a data, o número da nota fiscal e o valor total deste recibo" ou "Identifique todas as pessoas nesta foto e sua posição."',
+      '**Para geração de texto para imagem, estruture cada prompt em torno de cinco elementos:** Sujeito (o que você vê), Ação (o que está fazendo), Estilo (como se parece), Contexto (onde está) e detalhes técnicos (iluminação, ângulo, câmera). Evite termos vagos como "bonito."',
+      '**Para edição de imagem, descreva explicitamente a região a ser alterada e o que deve permanecer inalterado.** Exemplo: "Substitua o fundo por uma floresta, mas mantenha a pose e a expressão da pessoa idênticas."',
+      '**Teste em vários modelos com o PromptQuorum.** GPT-5.5 se destaca na compreensão de cenas, Claude Opus 4.8 na extração de texto, Gemini 3.5 Pro em contextos longos. Um único modelo raramente é o melhor para todas as tarefas — compare os resultados.',
+      '**Evite três armadilhas:** prompts vagos ("analise esta imagem"), assumir precisão (VLMs alucinam detalhes) e sobrecarregar com muitas imagens (agrupe além de 10).',
+    ],
+  },
+
   faq: {
     title: 'FAQ',
     faqs: [
@@ -1316,6 +1388,18 @@ export const imagesWithTextAr: Record<string, PESection> = {
       '**قالب نص إلى صورة:** "الموضوع: [اسم]. الفعل: [فعل + حالة]. الأسلوب: [أسلوب فني]. السياق: [الإعداد]. تقني: [زاوية الكاميرا، الإضاءة]. مثال: الموضوع: فونوغراف عتيق. الفعل: يعزف مع موجات صوتية مرئية. الأسلوب: سريالية، لوحة زيتية. السياق: متجر تحف، إضاءة خافتة. تقني: زاوية جانبية، ضوء ذهبي، عمق مجال ضيق."',
       '**تحرير الصور:** "عدِّل هذه الصورة المستهدفة لتتطابق مع أسلوب هذه الصورة المرجعية مع الحفاظ على تكوين الصورة المستهدفة وموضوعها. لا تضف عناصر رئيسية ولا تحذفها؛ طبّق فقط تغييرات اللون والإضاءة والملمس."',
       '**توليد النص البديل:** "اكتب نصاً بديلاً لهذه الصورة. يجب أن يكون ≤125 حرفاً. صِف ما يحتاج المستخدم الكفيف أو ضعيف البصر معرفته. مثال: \'رجل يرتدي بدلة زرقاء يصافح امرأة ترتدي فستاناً أحمر في حفل رسمي مع منظر المدينة في الخلفية.\'"',
+    ],
+  },
+
+  howToStart: {
+    title: 'كيف تبدأ الاستفسار بالصور',
+    numberedItems: [
+      '**حدِّد وضعك: صورة→نص (تحليل)، نص→صورة (توليد)، أو صورة↔صورة (تحرير).** لكل وضع أفضل ممارساته الخاصة. التحليل يتطلب أسئلة محددة؛ التوليد يتطلب أوصافاً بصرية مفصلة؛ التحرير يتطلب قيوداً صريحة لما قبل/بعد.',
+      '**في تحليل الصور، كن محدداً بشأن ما تريد استخراجه.** بدلاً من "حلِّل هذه الصورة"، اسأل "استخرج التاريخ ورقم الفاتورة والمبلغ الإجمالي من هذا الإيصال" أو "حدِّد جميع الأشخاص في هذه الصورة وموضعهم."',
+      '**في توليد النص إلى صورة، نظِّم كل استفسار حول خمسة عناصر:** الموضوع (ما تراه)، الفعل (ما يفعله)، الأسلوب (كيف يبدو)، السياق (أين يوجد)، والتفاصيل التقنية (الإضاءة، الزاوية، الكاميرا). تجنّب المصطلحات الغامضة مثل "جميل."',
+      '**في تحرير الصور، صِف بوضوح المنطقة المراد تغييرها وما يجب أن يبقى دون تغيير.** مثال: "استبدل الخلفية بغابة، لكن حافظ على وضعية الشخص وتعبيره كما هما تماماً."',
+      '**اختبر عبر نماذج متعددة باستخدام PromptQuorum.** يتفوق GPT-5.5 في فهم المشهد، وClaude Opus 4.8 في استخراج النص، وGemini 3.5 Pro في السياقات الطويلة. نادراً ما يكون نموذج واحد الأفضل لكل المهام — قارن المخرجات.',
+      '**تجنّب ثلاثة مزالق:** الاستفسارات الغامضة ("حلِّل هذه الصورة")، افتراض الدقة (نماذج الرؤية واللغة تهلوس التفاصيل)، والإفراط في التحميل بعدد كبير من الصور (نظِّمها في دفعات تتجاوز 10 صور).',
     ],
   },
 

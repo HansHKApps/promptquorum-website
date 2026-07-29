@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-en.png',
     title: 'Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)',
     seoTitle: 'Logseq + Ollama Local LLM: RAG, Sync & Joplin (2026)',
     intro:
@@ -442,6 +443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-es.png',
     title: 'Logseq y Joplin con LLMs locales: notas inteligentes sin sincronización en la nube (2026)',
     seoTitle: 'Logseq + Ollama: LLM local, RAG y Joplin (2026)',
     intro:
@@ -886,6 +888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-pt.png',
     title: 'Logseq e Joplin com LLMs locais: notas inteligentes sem sincronização na nuvem (2026)',
     seoTitle: 'Logseq + Ollama: LLM local, RAG e Joplin (2026)',
     intro:
@@ -1329,6 +1332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-de.png',
     title: 'Logseq und Joplin mit lokalen LLMs: Intelligente Notizen ohne Cloud-Synchronisierung (2026)',
     seoTitle: 'Logseq + Ollama: Lokales LLM, RAG & Joplin (2026)',
     intro:
@@ -1767,6 +1771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-fr.png',
     title: 'Logseq et Joplin avec LLM locaux : notes intelligentes sans synchronisation cloud (2026)',
     seoTitle: 'Logseq + Ollama : LLM local, RAG et Joplin (2026)',
     intro:
@@ -2197,6 +2202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-ja.png',
     title: 'Logseq と Joplin でローカル LLM：クラウド同期なしのスマートノート（2026）',
     seoTitle: 'Logseq + Ollamaローカル LLM：RAGとJoplin比較 2026',
     intro:
@@ -2629,6 +2635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-zh.png',
     title: 'Logseq 与 Joplin 配合本地 LLM：无云同步的智能笔记（2026）',
     seoTitle: 'Logseq + Ollama 本地LLM：RAG与Joplin对比 2026',
     intro:
@@ -3060,6 +3067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-ar.png',
     title: '⁨Logseq⁩ و⁨Joplin⁩ مع نماذج اللغة المحلية: ملاحظات ذكية بدون مزامنة سحابية (⁨2026⁩)',
     seoTitle: '⁨Logseq⁩ مع ⁨Ollama⁩: ⁨LLM⁩ محلي و⁨RAG⁩ مقابل ⁨Joplin⁩ (⁨2026⁩)',
     intro:
@@ -3503,6 +3511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-ko.png',
     title: 'Logseq와 Joplin으로 로컬 LLM 활용하기: 클라우드 동기화 없는 스마트 노트 (2026)',
     seoTitle: 'Logseq + Ollama 로컬 LLM: RAG와 Joplin 비교 2026',
     intro:

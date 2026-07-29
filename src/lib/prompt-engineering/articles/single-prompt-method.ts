@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      heroImage: '/images/single-prompt-method-overview-hero-en.png',
       title: 'The Single Step Prompt Method',
       intro: 'The Single Step Prompt Method is a minimal prompt framework where you describe the entire task in one carefully structured instruction instead of building a multi-turn conversation. This method reduces overhead, makes results easier to compare across models, and is the default starting framework inside PromptQuorum for new users.',
       publishDate: '2026-03-24',
@@ -441,6 +442,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      heroImage: '/images/single-prompt-method-overview-hero-de.png',
       title: 'Die Single Step Prompt Methode',
       intro: 'Die Single Step Prompt Methode ist ein minimalistisches Prompt-Framework, bei dem Sie die gesamte Aufgabe in einer sorgfältig strukturierten Anweisung beschreiben, anstatt ein Mehrturngespräch zu führen. Diese Methode reduziert den Aufwand, macht es einfacher, Ergebnisse zwischen Modellen zu vergleichen, und ist das standardmäßige Startframework für neue Benutzer in PromptQuorum.',
       publishDate: '2026-03-24',
@@ -735,6 +737,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      heroImage: '/images/single-prompt-method-overview-hero-es.png',
       title: 'El Método de Prompt de Un Solo Paso',
       intro: 'El Método de Prompt de Un Solo Paso es un framework de prompt mínimo donde describes toda la tarea en una instrucción cuidadosamente estructurada en lugar de construir una conversación de múltiples turnos. Este método reduce la sobrecarga, facilita la comparación de resultados entre modelos y es el framework de inicio predeterminado dentro de PromptQuorum para nuevos usuarios.',
       publishDate: '2026-03-24',
@@ -1126,6 +1129,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      heroImage: '/images/single-prompt-method-overview-hero-ar.png',
       title: 'طريقة البرومبت في خطوة واحدة',
       intro: 'طريقة البرومبت في خطوة واحدة هي إطار برومبت بحده الأدنى حيث تصف المهمة بأكملها في تعليمة واحدة منظمة بعناية بدلاً من بناء محادثة متعددة الأدوار. تُقلّل هذه الطريقة من العبء وتُسهّل مقارنة النتائج بين النماذج، وهي إطار البدء الافتراضي في PromptQuorum للمستخدمين الجدد.',
       publishDate: '2026-03-24',
@@ -1516,6 +1520,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Frameworks',
+      heroImage: '/images/single-prompt-method-overview-hero-pt.png',
       title: 'O Método de Prompt de Passo Único',
       intro: 'O Método de Prompt de Passo Único é um framework de prompt mínimo onde você descreve toda a tarefa em uma instrução cuidadosamente estruturada em vez de construir uma conversa de múltiplos turnos. Esse método reduz a sobrecarga, facilita a comparação de resultados entre modelos e é o framework de início padrão no PromptQuorum para novos usuários.',
       publishDate: '2026-03-24',
@@ -1621,10 +1626,32 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
       },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'pt-BR',
+        mainEntity: [
+          { '@type': 'Question', name: 'Em que o Método de Prompt de Passo Único é diferente de simplesmente dar uma instrução?', acceptedAnswer: { '@type': 'Answer', text: 'Com o Passo Único, você obtém consistência estrutural. Em vez de uma resposta pontual, você obtém a mesma qualidade de resultado toda vez, porque o modelo segue restrições e formato fixos. Isso torna os resultados comparáveis entre modelos e reprodutíveis ao longo do tempo.' } },
+          { '@type': 'Question', name: 'Quando devo usar o Passo Único em vez de prompting em múltiplas etapas (Chain-of-Thought)?', acceptedAnswer: { '@type': 'Answer', text: 'Use o Passo Único quando seu objetivo for claro e bem definido. Prefira o prompting em múltiplas etapas para tarefas ambíguas ou exploratórias em que você precise ver o processo de raciocínio do modelo.' } },
+          { '@type': 'Question', name: 'Posso usar o Passo Único com modelos locais como Ollama ou LM Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Sim, sem restrições. O Método de Prompt de Passo Único funciona com qualquer modelo — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro ou modelos locais via Ollama e LM Studio. A mesma estrutura única se aplica a todas as plataformas.' } },
+          { '@type': 'Question', name: 'Quanto tempo leva para escrever e refinar um bom Prompt de Passo Único?', acceptedAnswer: { '@type': 'Answer', text: 'Normalmente 15–30 minutos para uma primeira versão sólida. Escreva um rascunho, teste-o em 3–5 exemplos, refine as partes que não funcionam e então use-o. O investimento inicial se paga rapidamente, já que você o reutilizará dezenas de vezes.' } },
+          { '@type': 'Question', name: 'Posso salvar meus Prompts de Passo Único como templates no PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Depois de criar um Prompt de Passo Único que funcione bem para um fluxo de trabalho específico (por exemplo, revisões de código, resumos de clientes), você pode salvá-lo como template no PromptQuorum e compartilhá-lo com sua equipe.' } },
+          { '@type': 'Question', name: 'E se minha tarefa for complexa demais para o Passo Único?', acceptedAnswer: { '@type': 'Answer', text: 'Se você não conseguir especificar claramente sua tarefa em uma única instrução, ou se realmente precisar de múltiplas passagens do modelo, mude para APE ou CRAFT.' } },
+          { '@type': 'Question', name: 'Como sei se meu Prompt de Passo Único está funcionando bem?', acceptedAnswer: { '@type': 'Answer', text: 'Execute-o em 5–10 exemplos representativos e verifique: (1) Os resultados seguem o formato especificado? (2) O conteúdo reflete o papel e o tom especificados? (3) Restrições como contagem de palavras são respeitadas? Se algo falhar, refine e teste novamente.' } },
+          { '@type': 'Question', name: 'Há diferença de desempenho entre o Passo Único e o APE na mesma tarefa?', acceptedAnswer: { '@type': 'Answer', text: 'Em uma tarefa simples com objetivo claro, o Passo Único normalmente produz resultados idênticos com uma fração dos tokens. O APE adiciona overhead para mostrar o raciocínio — o valor está em poder inspecionar e refinar os pensamentos do modelo.' } },
+          { '@type': 'Question', name: 'Como adapto o Passo Único para uma equipe multilíngue ou distribuída?', acceptedAnswer: { '@type': 'Answer', text: 'Salve o template de Passo Único no PromptQuorum com instruções claras sobre placeholders (variáveis) e valores fixos. Documente as expectativas de formato e os casos extremos. Os membros da equipe podem então preencher as variáveis e executar o prompt idêntico.' } },
+          { '@type': 'Question', name: 'O que devo observar ao usar Prompts de Passo Único com dados de clientes?', acceptedAnswer: { '@type': 'Answer', text: 'Documente qual prompt processou quais dados de clientes (para trilhas de auditoria). Use placeholders para dados sensíveis; preencha-os apenas em tempo de execução. Para processamento de dados regulado, você pode precisar de um Acordo de Processamento de Dados com seu provedor de IA e uma Avaliação de Impacto à Proteção de Dados.' } },
+          { '@type': 'Question', name: 'Pequenas e médias empresas podem padronizar Prompts de Passo Único para processos repetitivos?', acceptedAnswer: { '@type': 'Answer', text: 'Sim — essa é uma força central do Passo Único. Padronize o prompt na sua organização, salve-o no PromptQuorum, e novos colaboradores podem produzir resultados de alta qualidade (propostas, relatórios) sem treinamento. Isso é especialmente valioso para escalar sem dobrar o quadro de funcionários.' } },
+          { '@type': 'Question', name: 'Qual deve ser meu primeiro Prompt de Passo Único?', acceptedAnswer: { '@type': 'Answer', text: 'Comece com uma tarefa que você faz regularmente (e-mail, resumo, revisão de código, relatório). Escreva um prompt que capture papel, objetivo, contexto, restrições e formato. Teste em 3 exemplos reais. Salve-o. Essa é sua linha de base — melhore-a trimestralmente conforme aprende o que funciona.' } },
+          { '@type': 'Question', name: 'Posso usar o Passo Único para tarefas criativas?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Quanto mais restrições você adicionar (tom, audiência, extensão, estrutura), melhor. Para trabalho criativo verdadeiramente aberto, use um framework diferente, como o CRAFT.' } },
+          { '@type': 'Question', name: 'Como o PromptQuorum me ajuda a usar o Passo Único em escala?', acceptedAnswer: { '@type': 'Answer', text: 'O PromptQuorum permite estruturar os cinco blocos de construção em um formulário guiado, testar o mesmo prompt em vários modelos em paralelo, salvar prompts que funcionam como templates, compartilhar templates com sua equipe e versionar seus prompts — transformando prompts individuais em ativos da equipe.' } },
+        ],
+      },
     },
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      heroImage: '/images/single-prompt-method-overview-hero-fr.png',
       title: 'La Méthode Single Step Prompt',
       intro: 'La Méthode Single Step Prompt est une approche minimaliste où vous décrivez l\'intégralité de la tâche dans une seule instruction structurée plutôt que de construire une conversation multi-tours. Cette méthode réduit la surcharge, facilite la comparaison des résultats entre modèles et constitue le cadre par défaut pour les nouveaux utilisateurs de PromptQuorum.',
       publishDate: '2026-03-24',
@@ -1832,6 +1859,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 ja: {
   freshness_tier: 'semi_annual',
   theme: 'Frameworks',
+  heroImage: '/images/single-prompt-method-overview-hero-ja.png',
   title: 'シングルステップ・プロンプト手法',
   intro: 'Single Step Prompt Methodは、複数ターンの対話を避け、1つのプロンプトにロール・目的・コンテキスト・制約・出力形式のすべてを凝縮するシンプルなフレームワークです。このアプローチにより往復のやり取りが削減され、複数のAIモデル間での結果比較が容易になり、PromptQuorumの新規ユーザー向けデフォルトフレームワークとして採用されています。',
   publishDate: '2026-03-24',
@@ -2174,6 +2202,7 @@ ja: {
     zh: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+      heroImage: '/images/single-prompt-method-overview-hero-zh.png',
       title: '单步提示法',
       intro: '单步提示法是一种高效的提示工程框架，将角色、目标、上下文、约束条件和输出格式整合到一条精确的提示中。这种方法避免了多轮对话的复杂性，使AI模型能够在一次交互中理解完整的任务需求，从而生成更加稳定和可比较的结果。',
       publishDate: '2026-03-24',
@@ -2463,6 +2492,7 @@ ja: {
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
+    heroImage: '/images/single-prompt-method-overview-hero-ko.png',
       title: '단일 단계 프롬프트 방법론',
       intro: '단일 단계 프롬프트 방법론(Single Step Prompt Method)은 멀티턴 대화를 구성하는 대신, 하나의 신중하게 구조화된 지시문에 전체 작업을 기술하는 최소한의 프롬프트 프레임워크입니다. 이 방법론은 오버헤드를 줄이고, 모델 간 결과 비교를 용이하게 하며, PromptQuorum에서 신규 사용자를 위한 기본 시작 프레임워크로 채택되어 있습니다.',
       publishDate: '2026-03-24',

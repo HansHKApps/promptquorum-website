@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/matter-1-6-explained-overview-hero-en.png',
     // Verified 2026-07-16 directly against CSA's own newsroom (csa-iot.org/newsroom/matter-1-6-...):
     // Matter 1.6 released June 17, 2026 — no "Matter 2.0" exists, past or planned. Renamed from
     // matter-2-0-explained (see docs/SH_26_45_VERIFICATION_LIST.md Step 2 close-out).
@@ -168,6 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/matter-1-6-explained-overview-hero-de.png',
     title: 'Matter 1.6 erklärt: Was ist neu (2027)',
     seoTitle: 'Matter 1.6 erklärt (2027)',
     intro:
@@ -321,6 +323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/matter-1-6-explained-overview-hero-fr.png',
     title: 'Matter 1.6 expliqué : les nouveautés (2027)',
     seoTitle: 'Matter 1.6 expliqué (2027)',
     intro:
@@ -474,6 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/matter-1-6-explained-overview-hero-ja.png',
     title: 'Matter 1.6を解説：新機能とは（2027年）',
     seoTitle: 'Matter 1.6解説（2027年）',
     intro:
@@ -627,6 +631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/matter-1-6-explained-overview-hero-zh.png',
     title: 'Matter 1.6 详解：有哪些新功能（2027年）',
     seoTitle: 'Matter 1.6 详解（2027年）',
     intro:
@@ -780,6 +785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/matter-1-6-explained-overview-hero-es.png',
     title: 'Matter 1.6 explicado: qué hay de nuevo (2027)',
     seoTitle: 'Matter 1.6 explicado (2027)',
     intro:
@@ -933,6 +939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/matter-1-6-explained-overview-hero-pt.png',
     title: 'Matter 1.6 explicado: o que há de novo (2027)',
     seoTitle: 'Matter 1.6 explicado (2027)',
     intro:
@@ -1086,6 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/matter-1-6-explained-overview-hero-ar.png',
     title: 'شرح Matter 1.6: ما الجديد (⁨2027⁩)',
     seoTitle: 'شرح Matter 1.6 (⁨2027⁩)',
     intro:
@@ -1239,6 +1247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/matter-1-6-explained-overview-hero-ko.png',
     title: 'Matter 1.6 해설: 무엇이 새로운가 (2027년)',
     seoTitle: 'Matter 1.6 해설 (2027년)',
     intro:

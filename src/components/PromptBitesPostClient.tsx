@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { LangLinksBar } from '@/components/LangLinksBar'
@@ -485,6 +486,20 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
         <h1 className="prompt-bite-h1 text-3xl sm:text-4xl font-bold text-text-primary mb-8 leading-tight">
           {article.title}
         </h1>
+
+        {/* Static Hero Image for Discover */}
+        {(article as any).heroImage && (
+          <figure className="mb-8 rounded-xl overflow-hidden">
+            <Image
+              src={(article as any).heroImage}
+              alt={article.title || 'Article hero image'}
+              width={1200}
+              height={675}
+              priority
+              className="w-full"
+            />
+          </figure>
+        )}
 
         {/* Cross-language links */}
         <LangLinksBar cluster="prompt-bites" slug={slug} availableLangs={Object.keys(articleData ?? {})} initialLang={lang} />

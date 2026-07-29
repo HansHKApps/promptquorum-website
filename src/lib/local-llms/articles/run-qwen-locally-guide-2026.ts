@@ -1018,6 +1018,17 @@ LOCAL_LLM_MODEL=qwen3.6:27b
           '**Conformidade com LGPD**: Todos os dados ficam no seu hardware — nenhum prompt é enviado para servidores externos.',
         ],
       },
+      ollamaSetup: {
+        id: 'ollama-setup',
+        title: 'Configuração com Ollama',
+        numberedItems: [
+          { title: 'Instalar o Ollama', whyItMatters: 'O Ollama gerencia downloads de modelos, o formato GGUF, e fornece uma API local compatível com o padrão OpenAI.' },
+          { title: 'Baixar o modelo Qwen 3.6 27B com a tag explícita', whyItMatters: 'Use qwen3.6:27b explicitamente. A tag simples `qwen3` aponta para o modelo 8B por padrão — não o modelo 27B que este guia usa como alvo.' },
+          { title: 'Criar um Modelfile com o comprimento de contexto correto', whyItMatters: 'O num_ctx padrão de 2048 tokens é pequeno demais para tarefas reais de codificação. 32768 tokens cobre a maioria dos arquivos e conversas.' },
+          { title: 'Construir o modelo personalizado e executá-lo', whyItMatters: 'Cria uma instância do Qwen 3.6 27B com a janela de contexto estendida. Verifique com um prompt de teste.' },
+          { title: 'Testar o endpoint da API', whyItMatters: 'O Ollama expõe uma API compatível com OpenAI em localhost:11434/v1. Use esse endpoint para conectar clientes LLM, IDEs e o PromptQuorum.' },
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Perguntas frequentes',

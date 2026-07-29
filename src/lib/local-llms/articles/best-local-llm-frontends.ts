@@ -2510,6 +2510,22 @@ schema: {
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Melhores frontends para LLMs locais 2026',
+        'numberOfItems': 8,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'Aplicativo web (Docker). Melhor para RAG, equipes, rico em recursos. Configuração em 5 min. 12 GB+ de RAM. Mais de 140.000 estrelas no GitHub. Gratuito e open source.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Enchanted UI', 'description': 'Aplicativo nativo iOS/macOS/visionOS. Melhor para usuários Apple que querem um cliente de chat polido. Instalação em ~2 min (App Store). 8 GB+ de RAM. Gratuito e open source.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Jan AI', 'description': 'Aplicativo desktop (Windows/macOS/Linux). Melhor para usuários não técnicos, uso offline. Configuração em 3 min. 8 GB+ de RAM. Gratuito e open source.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Continue.dev', 'description': 'Extensão do VS Code. Melhor para completar código; desenvolvimento interrompido em meados de 2026 após a aquisição pela Cursor. Configuração em 2 min. 8 GB+ de RAM. Gratuito e open source.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Lobe Chat', 'description': 'Aplicativo web. Melhor para privacidade e personalização. Configuração em 5 min. 8 GB+ de RAM. Gratuito e open source.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Gradio', 'description': 'Biblioteca Python. Melhor para interfaces de ML personalizadas. Configuração em 5 min. 8 GB+ de RAM. Gratuito e open source.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Streamlit', 'description': 'Framework Python. Melhor para cientistas de dados. Configuração em 5 min. 8 GB+ de RAM. Gratuito e open source.' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'TextGen (antigo Text-generation-webui)', 'description': 'Web (complexo). Melhor para experimentação avançada. Configuração em 15 min. 12 GB+ de RAM. Gratuito e open source.' },
+        ]
+      },
     },
   ko: {
   freshness_tier: 'semi_annual',
@@ -2744,6 +2760,22 @@ schema: {
         '프론트엔드 선택은 사용자 경험에 영향을 미치며, 모델 출력에는 영향을 미치지 않습니다. 출력 품질은 인터페이스가 아닌 프롬프트에 달려 있습니다: [프롬프트 엔지니어링 가이드](https://www.promptquorum.com/prompt-engineering)는 모든 프론트엔드에서 작동합니다.',
       ],
     },
+  },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'name': '2026년 최고의 로컬 LLM 프론트엔드',
+    'numberOfItems': 8,
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': '웹 앱(Docker). RAG, 팀, 다양한 기능에 최적. 설정 5분. 12 GB+ RAM. GitHub 스타 140,000개 이상. 무료 오픈소스.' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Enchanted UI', 'description': '네이티브 iOS/macOS/visionOS 앱. 세련된 채팅 클라이언트를 원하는 Apple 사용자에게 최적. 설치 약 2분(App Store). 8 GB+ RAM. 무료 오픈소스.' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Jan AI', 'description': '데스크톱 앱(Windows/macOS/Linux). 비기술 사용자, 오프라인 사용에 최적. 설정 3분. 8 GB+ RAM. 무료 오픈소스.' },
+      { '@type': 'ListItem', 'position': 4, 'name': 'Continue.dev', 'description': 'VS Code 확장 프로그램. 코드 완성에 최적; Cursor 인수 이후 2026년 중반 개발 중단. 설정 2분. 8 GB+ RAM. 무료 오픈소스.' },
+      { '@type': 'ListItem', 'position': 5, 'name': 'Lobe Chat', 'description': '웹 앱. 프라이버시와 커스터마이징에 최적. 설정 5분. 8 GB+ RAM. 무료 오픈소스.' },
+      { '@type': 'ListItem', 'position': 6, 'name': 'Gradio', 'description': 'Python 라이브러리. 커스텀 ML 인터페이스에 최적. 설정 5분. 8 GB+ RAM. 무료 오픈소스.' },
+      { '@type': 'ListItem', 'position': 7, 'name': 'Streamlit', 'description': 'Python 프레임워크. 데이터 과학자에게 최적. 설정 5분. 8 GB+ RAM. 무료 오픈소스.' },
+      { '@type': 'ListItem', 'position': 8, 'name': 'TextGen(구 Text-generation-webui)', 'description': '웹(복잡함). 고급 실험에 최적. 설정 15분. 12 GB+ RAM. 무료 오픈소스.' },
+    ],
   },
 },
   };

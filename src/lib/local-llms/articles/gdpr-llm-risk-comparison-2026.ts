@@ -4,6 +4,7 @@ import type { LLMArticle } from '../types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     theme: 'Privacy & Security',
+    heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-en.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'GDPR Risk Comparison: Qwen vs DeepSeek vs Llama vs Claude 2026',
@@ -235,6 +236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Privacy & Security',
+    heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-es.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'Comparación de riesgos RGPD: Qwen vs DeepSeek vs Llama vs Claude 2026',
@@ -427,6 +429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Privacy & Security',
+    heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-ar.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'مقارنة مخاطر ⁨GDPR⁩: ⁨Qwen⁩ مقابل ⁨DeepSeek⁩ مقابل ⁨Llama⁩ مقابل ⁨Claude 2026⁩',
@@ -619,6 +622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Privacy & Security',
+    heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-de.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'DSGVO-Risikovergleich: Qwen vs DeepSeek vs Llama vs Claude 2026',
@@ -703,6 +707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Privacy & Security',
+    heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-fr.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'Comparaison des risques RGPD : Qwen vs DeepSeek vs Llama vs Claude 2026',
@@ -787,6 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Privacy & Security',
+    heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-ja.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'GDPR リスク比較: Qwen vs DeepSeek vs Llama vs Claude 2026',
@@ -871,6 +877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Privacy & Security',
+    heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-zh.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'GDPR 风险比较: Qwen vs DeepSeek vs Llama vs Claude 2026',
@@ -955,6 +962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Privacy & Security',
+    heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-pt.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'Comparação de riscos GDPR: Qwen vs DeepSeek vs Llama vs Claude 2026',
@@ -1160,6 +1168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   // VERIFY: preços de hardware on-premise em BRL (RTX 4070 Ti ~R$ 4.500-6.500; multi-GPU ~R$ 40.000-120.000) e eletricidade (~R$ 50-90/mês, ~R$ 600/ano) são estimativas de varejo BR (jun/2026); custos de API/tokens da nuvem mantidos em USD (cobrados em dólar). Referências jurídicas latino-americanas do bloco es foram trocadas pela LGPD/ANPD do Brasil. Confirmar antes de publicar.
   ko: {
     theme: '개인정보 보호 및 보안',
+    heroImage: '/images/gdpr-llm-risk-comparison-2026-overview-hero-ko.png',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     title: 'GDPR 리스크 비교: Qwen vs DeepSeek vs Llama vs Claude 2026',

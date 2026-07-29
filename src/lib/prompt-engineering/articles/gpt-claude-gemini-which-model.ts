@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
       theme: 'Fundamentals',
+      heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-en.png',
       title: 'GPT, Claude or Gemini: How to Pick the Right AI Model',
       intro: '**No single AI model is best for every task. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek, and Baidu ERNIE each win on different tasks, geographies, and budgets. This guide gives you a practical decision framework — not another benchmark list.**',
       publishDate: '2026-03-23',
@@ -506,6 +507,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
   theme: 'Fundamentals',
+      heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-de.png',
   title: 'GPT, Claude oder Gemini: Wie Sie das richtige KI-Modell auswählen',
   intro: 'Kein einzelnes KI-Modell ist für alle Aufgaben das Beste. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek und Baidu ERNIE dominieren jeweils in verschiedenen Aufgaben, Regionen und Budgets. Diese Anleitung bietet Ihnen ein praktisches Entscheidungsrahmenwerk — nicht noch eine weitere Benchmark-Liste.',
   publishDate: '2026-03-23',
@@ -542,6 +544,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
   },
   sections: {
+      howToStart: {
+        title: 'Wie man ein KI-Modell für die eigene Aufgabe auswählt',
+        numberedItems: [
+        '**Definieren Sie Ihren Aufgabentyp:** Ist sie faktisch/analytisch (Rechtsanalyse, Code-Review, Datenextraktion) oder kreativ/generativ (Brainstorming, Copywriting, Design-Ideenfindung)? Faktische Aufgaben bevorzugen GPT-5.5 oder Claude Opus 4.8; kreative Aufgaben funktionieren bei allen Frontier-Modellen.',
+        '**Passen Sie das Modell an Geschwindigkeits-/Kosten-Kompromisse an:** GPT-5.5 ist für die meisten Aufgaben am schnellsten und günstigsten. Claude Opus 4.8 eignet sich am besten für langes Schlussfolgern und Genauigkeit. Gemini 3.1 Pro glänzt bei multimodalen Aufgaben und langem Kontext (1M Tokens). Nutzen Sie PromptQuorum, um alle drei mit Ihrem spezifischen Prompt zu vergleichen.',
+        '**Beginnen Sie mit einem Frontier-Modell (GPT-5.5, Claude Opus 4.8 oder Gemini 3.1 Pro) und stufen Sie dann herunter, wenn möglich:** Eine Aufgabe, die auf GPT-5.5 gut funktioniert, läuft möglicherweise genauso gut auf GPT-5.5 Mini (10–33× günstiger). Testen Sie Ihren Prompt auf günstigeren Modellen, sobald Sie eine funktionierende Version haben.',
+        '**Verwenden Sie für lokale/private Workflows Ollama oder LM Studio, akzeptieren Sie aber geringere Qualität:** Lokale Modelle verarbeiten private Daten ohne externe API-Aufrufe, liefern aber eine geringere Genauigkeit als Frontier-Modelle. Nutzen Sie einen Hybridansatz: lokales Modell für den ersten Durchgang, Frontier-Modell für die Qualitätsprüfung.',
+        '**Leiten Sie geografisch verteilte Nutzer nach Region:** Globale Nutzer (USA, EU, Japan) → GPT-5.5 / Claude / Gemini. China → DeepSeek oder Baidu ERNIE (gesetzliche Vorgabe). Nutzen Sie PromptQuorum, um das Modell jeder Region unabhängig zu testen.',
+        '**Testen Sie alle drei (oder mehr) mit PromptQuorum, bevor Sie sich festlegen:** Senden Sie Ihren Prompt gleichzeitig an GPT-5.5, Claude Opus 4.8 und Gemini 3.1 Pro. Vergleichen Sie die Ausgaben, um herauszufinden, welches Modell am besten zu Ihrer Aufgabe passt.'
+        ],
+      },
+      
     definition: {
       title: 'Kein einzelnes „bestes" KI-Modell — wählen Sie nach Aufgabe',
       content: [
@@ -864,6 +878,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   fr: {
     theme: 'Fundamentals',
+    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-fr.png',
     title: 'GPT, Claude ou Gemini : Comment choisir le bon modèle IA',
     intro: 'Aucun modèle IA unique n\'est le meilleur pour chaque tâche. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek et Baidu ERNIE excellent chacun dans des tâches, régions et budgets différents. Ce guide vous offre un cadre décisionnel pratique — pas une autre liste de benchmarks.',
     publishDate: '2026-03-23',
@@ -900,6 +915,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sections: {
+      howToStart: {
+        title: 'Comment choisir un modèle d\'IA pour votre tâche',
+        numberedItems: [
+        '**Définissez le type de votre tâche :** Est-elle factuelle/analytique (analyse juridique, revue de code, extraction de données) ou créative/générative (brainstorming, copywriting, idéation de design) ? Les tâches factuelles favorisent GPT-5.5 ou Claude Opus 4.8 ; les tâches créatives fonctionnent bien sur tous les modèles de pointe.',
+        '**Adaptez le modèle aux compromis vitesse/coût :** GPT-5.5 est le plus rapide et le moins cher pour la plupart des tâches. Claude Opus 4.8 est le meilleur pour le raisonnement long et la précision. Gemini 3.1 Pro excelle en multimodal et en contexte long (1M tokens). Utilisez PromptQuorum pour comparer les trois sur votre prompt spécifique.',
+        '**Commencez par un modèle de pointe (GPT-5.5, Claude Opus 4.8 ou Gemini 3.1 Pro), puis rétrogradez si possible :** Une tâche qui fonctionne bien sur GPT-5.5 peut fonctionner tout aussi bien sur GPT-5.5 mini (10 à 33× moins cher). Testez votre prompt sur des modèles moins chers une fois que vous avez une version fonctionnelle.',
+        '**Pour les flux de travail locaux/privés, utilisez Ollama ou LM Studio, mais acceptez une qualité inférieure :** Les modèles locaux traitent les données privées sans appels API externes, mais produisent une précision inférieure à celle des modèles de pointe. Utilisez une approche hybride : modèle local pour le premier passage, modèle de pointe pour la vérification de qualité.',
+        '**Pour les utilisateurs répartis géographiquement, orientez par région :** Utilisateurs mondiaux (États-Unis, UE, Japon) → GPT-5.5 / Claude / Gemini. Chine → DeepSeek ou Baidu ERNIE (obligation légale). Utilisez PromptQuorum pour tester le modèle de chaque région indépendamment.',
+        '**Testez les trois (ou plus) avec PromptQuorum avant de vous engager :** Envoyez votre prompt à GPT-5.5, Claude Opus 4.8 et Gemini 3.1 Pro simultanément. Comparez les résultats pour découvrir quel modèle convient le mieux à votre tâche.'
+        ],
+      },
+      
       definition: {
         title: 'Aucun modèle IA « meilleur » — choisissez par tâche',
         content: [
@@ -1195,6 +1222,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   ja: {
     theme: 'Fundamentals',
+    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-ja.png',
     title: 'GPT、Claude、Gemini：正しいAIモデルの選び方',
     intro: 'すべてのタスクに最適な単一のAIモデルはありません。GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek、Baidu ERNIEは、それぞれ異なるタスク、地域、予算で優れています。このガイドでは、ベンチマークリストではなく、実践的な意思決定フレームワークを提供します。',
     publishDate: '2026-03-23',
@@ -1231,6 +1259,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sections: {
+      howToStart: {
+        title: 'タスクに合わせてAIモデルを選ぶ方法',
+        numberedItems: [
+        '**タスクの種類を定義する：** 事実確認・分析系（法的分析、コードレビュー、データ抽出）か、創造・生成系（ブレインストーミング、コピーライティング、デザイン発想）か？事実系タスクにはGPT-5.5またはClaude Opus 4.8が適しており、創造系タスクはすべてのフロンティアモデルで機能します。',
+        '**速度とコストのトレードオフにモデルを合わせる：** GPT-5.5はほとんどのタスクで最速かつ最安です。Claude Opus 4.8は長い推論と正確性に優れています。Gemini 3.1 Proはマルチモーダルと長いコンテキスト（100万トークン）に優れています。PromptQuorumを使って、特定のプロンプトで3つすべてをベンチマークしてください。',
+        '**まずフロンティアモデル（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro）から始め、可能であればダウングレードする：** GPT-5.5でうまく機能するタスクは、GPT-5.5 mini（10〜33倍安価）でも同様にうまく機能する可能性があります。動作するバージョンができたら、より安価なモデルでプロンプトをテストしてください。',
+        '**ローカル/プライベートなワークフローにはOllamaやLM Studioを使用するが、品質の低下を受け入れる：** ローカルモデルは外部API呼び出しなしでプライベートデータを処理しますが、フロンティアモデルより精度が低くなります。ハイブリッド方式を使用してください：最初のパスにローカルモデル、品質チェックにフロンティアモデルを使用します。',
+        '**地理的に分散したユーザーには地域ごとにルーティングする：** グローバルユーザー（米国、EU、日本）→ GPT-5.5 / Claude / Gemini。中国 → DeepSeekまたはBaidu ERNIE（法的要件）。PromptQuorumを使用して各地域のモデルを独立してテストしてください。',
+        '**確定する前にPromptQuorumで3つ（またはそれ以上）をテストする：** プロンプトをGPT-5.5、Claude Opus 4.8、Gemini 3.1 Proに同時に送信します。出力を比較して、どのモデルがタスクに最適かを確認してください。'
+        ],
+      },
+      
       definition: {
         title: '単一の「最高」AIモデルなし — タスク別に選択',
         content: [
@@ -1526,6 +1566,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   zh: {
     theme: 'Fundamentals',
+    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-zh.png',
     title: 'GPT、Claude还是Gemini：如何选择正确的AI模型',
     intro: '没有一个AI模型对所有任务都是最好的。GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek和Baidu ERNIE在不同的任务、地区和预算中各有所长。本指南为您提供了实用的决策框架——而不是另一个基准测试清单。',
     publishDate: '2026-03-23',
@@ -1562,6 +1603,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sections: {
+      howToStart: {
+        title: '如何为你的任务选择AI模型',
+        numberedItems: [
+        '**确定你的任务类型：** 是事实性/分析性任务（法律分析、代码审查、数据提取）还是创造性/生成性任务（头脑风暴、文案写作、设计构思）？事实性任务更适合GPT-5.5或Claude Opus 4.8；创造性任务在所有前沿模型上都表现良好。',
+        '**根据速度/成本权衡匹配模型：** GPT-5.5在大多数任务中速度最快、成本最低。Claude Opus 4.8最适合长推理和高准确性。Gemini 3.1 Pro在多模态和长上下文（100万令牌）方面表现出色。使用PromptQuorum针对你的特定提示对三者进行基准测试。',
+        '**从前沿模型（GPT-5.5、Claude Opus 4.8或Gemini 3.1 Pro）开始，然后尽可能降级：** 在GPT-5.5上运行良好的任务可能在GPT-5.5 mini（便宜10-33倍）上同样运行良好。一旦有了可用版本，就在更便宜的模型上测试你的提示。',
+        '**对于本地/私有工作流程，使用Ollama或LM Studio，但接受较低的质量：** 本地模型无需外部API调用即可处理私有数据，但准确度低于前沿模型。使用混合方式：第一遍使用本地模型，质量检查使用前沿模型。',
+        '**对于地理分布的用户，按地区路由：** 全球用户（美国、欧盟、日本）→ GPT-5.5 / Claude / Gemini。中国 → DeepSeek或百度文心一言（法律要求）。使用PromptQuorum独立测试每个地区的模型。',
+        '**在最终确定之前，用PromptQuorum测试所有三个（或更多）模型：** 同时将你的提示发送给GPT-5.5、Claude Opus 4.8和Gemini 3.1 Pro。比较输出结果，找出最适合你任务的模型。'
+        ],
+      },
+      
       definition: {
         title: '没有单一"最佳"AI模型——按任务选择',
         content: [
@@ -1858,6 +1911,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-04',
     theme: 'Fundamentals',
+    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-es.png',
     title: 'GPT, Claude o Gemini: Cómo elegir el modelo de IA correcto',
     intro: '**Ningún modelo de IA es el mejor para todas las tareas. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek y Baidu ERNIE destacan en distintas tareas, geografías y presupuestos. Esta guía te ofrece un framework de decisión práctico — no otra lista de benchmarks.**',
     publishDate: '2026-03-23',
@@ -2354,6 +2408,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Fundamentals',
+    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-pt.png',
     title: 'GPT, Claude ou Gemini: Como Escolher o Modelo de IA Certo',
     intro: '**Nenhum modelo de IA é o melhor para todas as tarefas. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek e Baidu ERNIE se destacam em tarefas, geografias e orçamentos diferentes. Este guia oferece um framework de decisão prático — não mais uma lista de benchmarks.**',
     publishDate: '2026-03-23',
@@ -2851,6 +2906,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-04',
     theme: 'Fundamentals',
+    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-ar.png',
     title: '⁨GPT⁩ أم ⁨Claude⁩ أم ⁨Gemini⁩: كيف تختار نموذج الذكاء الاصطناعي المناسب',
     intro: '**لا يوجد نموذج ذكاء اصطناعي واحد هو الأفضل لجميع المهام. يتفوق GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro وDeepSeek وBaidu ERNIE كل منها في مهام مختلفة وجغرافيات مختلفة وميزانيات مختلفة. يقدم لك هذا الدليل إطار قرار عملياً — وليس قائمة معايير أخرى.**',
     publishDate: '2026-03-23',
@@ -3346,6 +3402,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ko: {
     theme: 'Fundamentals',
+    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-ko.png',
     title: 'GPT, Claude, Gemini: 올바른 AI 모델을 선택하는 방법',
     intro: '**모든 작업에 최적화된 단 하나의 AI 모델은 존재하지 않습니다. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek, Baidu ERNIE는 각각 서로 다른 작업, 지역, 예산에서 우위를 보입니다. 이 가이드는 실용적인 의사결정 프레임워크를 제공합니다. 단순한 벤치마크 목록이 아닙니다.**',
     publishDate: '2026-03-23',

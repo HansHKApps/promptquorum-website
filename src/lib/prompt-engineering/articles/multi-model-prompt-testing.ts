@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automation',
+    heroImage: '/images/multi-model-prompt-testing-overview-hero-en.png',
     title: 'Multi-Model Prompt Testing: Compare Outputs Across GPT-5.6, Claude, and Gemini',
     dateModified: '2026-07-13',
     seoTitle: 'Multi-Model Prompt Testing: Compare GPT-5.6, Claude, Gemini',
@@ -262,6 +263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatisierung',
+    heroImage: '/images/multi-model-prompt-testing-overview-hero-de.png',
     title: 'Multi-Modell-Prompt-Testing: Ausgaben über GPT-5.6, Claude und Gemini vergleichen',
     seoTitle: 'Multi-Modell-Tests: GPT-5.6, Claude, Gemini',
     metaDescription: 'Multi-Modell-Prompt-Tests: Warum Ausgaben bei GPT-5.6, Claude 4.6, Gemini 2.5 abweichen. Testmatrix erstellen, Ergebnisse bewerten mit PromptQuorum.',
@@ -434,6 +436,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatización',
+    heroImage: '/images/multi-model-prompt-testing-overview-hero-es.png',
     title: 'Pruebas de prompts multi-modelo: Comparar resultados en GPT-5.6, Claude y Gemini',
     seoTitle: 'Pruebas multi-modelo: GPT-5.6, Claude, Gemini',
     metaDescription: 'Pruebas de prompts multimodelo: por qué los resultados difieren en GPT-5.6, Claude 4.6 y Gemini 2.5. Construye una matriz y evalúa con PromptQuorum.',
@@ -676,6 +679,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Workflows & Automation',
+    heroImage: '/images/multi-model-prompt-testing-overview-hero-pt.png',
     title: 'Testes de prompts multi-modelo: Compare resultados entre GPT-5.6, Claude e Gemini',
     seoTitle: 'Testes multi-modelo: GPT-5.6, Claude, Gemini',
     metaDescription: 'Testes de prompts multi-modelo: por que os resultados diferem no GPT-5.6, Claude 4.6 e Gemini 2.5. Monte uma matriz de testes e avalie com o PromptQuorum.',
@@ -919,6 +923,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatisation',
+    heroImage: '/images/multi-model-prompt-testing-overview-hero-fr.png',
     title: 'Test de prompts multi-modèles : comparer les sorties de GPT-5.6, Claude et Gemini',
     seoTitle: 'Test de prompts multi-modèles : GPT-5.6, Claude, Gemini',
     metaDescription: "Test de prompts multi-modèles : pourquoi les sorties diffèrent entre GPT-5.6, Claude 4.6 et Gemini 2.5. Matrice de test, scoring avec PromptQuorum.",
@@ -1091,6 +1096,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'ワークフローと自動化',
+    heroImage: '/images/multi-model-prompt-testing-overview-hero-ja.png',
     title: 'マルチモデルプロンプトテスト：GPT-5.6、Claude、Geminiの出力比較',
     seoTitle: 'マルチモデルプロンプトテスト：GPT-5.6、Claude、Gemini比較',
     metaDescription: 'マルチモデルプロンプトテスト：GPT-5.6、Claude Sonnet 5、Gemini 2.5 Flashで出力が異なる理由、テストマトリクスの構築方法、結果のスコアリング、PromptQuorumとPromptfooの活用法。',
@@ -1263,6 +1269,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     theme: '工作流与自动化',
+    heroImage: '/images/multi-model-prompt-testing-overview-hero-zh.png',
     title: '多模型提示词测试：比较GPT-5.6、Claude和Gemini的输出',
     seoTitle: '多模型提示词测试：GPT-5.6、Claude、Gemini比较',
     metaDescription: '多模型提示词测试：GPT-5.6、Claude Sonnet 5和Gemini 2.5 Flash输出差异原因、测试矩阵构建方法、结果评分，以及PromptQuorum和Promptfoo的使用方法。',
@@ -1436,6 +1443,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automation',
+    heroImage: '/images/multi-model-prompt-testing-overview-hero-ar.png',
     title: 'اختبار النماذج المتعددة للـ ⁨prompt⁩: مقارنة المخرجات عبر ⁨GPT-5.6⁩ و⁨Claude⁩ و⁨Gemini⁩',
     seoTitle: 'اختبار النماذج المتعددة: ⁨GPT-5.6⁩ و⁨Claude⁩ و⁨Gemini⁩',
     metaDescription: 'اختبار الـ ⁨prompt⁩ متعدد النماذج: لماذا تختلف المخرجات في ⁨GPT-5.6⁩ و⁨Claude 4.6⁩ و⁨Gemini 2.5⁩. أنشئ مصفوفة اختبار وقيّم النتائج باستخدام ⁨PromptQuorum⁩.',
@@ -1679,6 +1687,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: '워크플로우 및 자동화',
+    heroImage: '/images/multi-model-prompt-testing-overview-hero-ko.png',
     title: '멀티모델 프롬프트 테스트: GPT-5.6, Claude, Gemini 출력 비교',
     seoTitle: '멀티모델 프롬프트 테스트: GPT-5.6, Claude, Gemini 비교',
     metaDescription: '멀티모델 프롬프트 테스트: GPT-5.6, Claude Sonnet 5, Gemini 2.5 Flash에서 출력이 다른 이유, 테스트 매트릭스 구축 방법, PromptQuorum과 Promptfoo를 활용한 결과 평가.',

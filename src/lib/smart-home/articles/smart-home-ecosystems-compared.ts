@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-ecosystems-compared-overview-hero-en.png',
     title: 'Smart Home Ecosystems Compared (2026): Alexa vs Google vs Apple vs HA',
     seoTitle: 'Smart Home Platforms 2026: Alexa, Google Home, Apple, and HA',
     intro:
@@ -203,6 +204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-ecosystems-compared-overview-hero-ar.png',
     title: 'مقارنة منظومات المنزل الذكي (⁨2026⁩): ⁨Alexa⁩ مقابل ⁨Google⁩ مقابل ⁨Apple⁩ مقابل ⁨HA⁩',
     seoTitle: '⁨Alexa⁩ مقابل ⁨Google Home⁩ مقابل ⁨Home Assistant 2026⁩',
     intro:
@@ -398,6 +400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-ecosystems-compared-overview-hero-de.png',
     title: 'Smart-Home-Ökosysteme im Vergleich (2026): Alexa, Google, Apple, HA',
     seoTitle: 'Smart-Home-Ökosysteme 2026: Alexa, Google Home, Apple, HA',
     intro:
@@ -593,6 +596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-ecosystems-compared-overview-hero-es.png',
     title: 'Ecosistemas de Smart Home Comparados (2026): Alexa, Google, Apple, HA',
     seoTitle: 'Ecosistemas de Smart Home 2026: Alexa, Google, Apple, HA',
     intro:
@@ -788,6 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-ecosystems-compared-overview-hero-ko.png',
     title: '스마트홈 에코시스템 비교 (2026): Alexa, Google, Apple, HA',
     seoTitle: '스마트홈 에코시스템 2026: Alexa, Google, Apple, HA 비교',
     intro:
@@ -983,6 +988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-ecosystems-compared-overview-hero-fr.png',
     title: 'Écosystèmes de Maison Connectée Comparés (2026) : Alexa, Google, Apple, HA',
     seoTitle: 'Écosystèmes Maison Connectée 2026 : Alexa, Google, Apple, HA',
     intro:
@@ -1178,6 +1184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-ecosystems-compared-overview-hero-ja.png',
     title: 'スマートホームのエコシステム比較（2026）：Alexa・Google・Apple・HA',
     seoTitle: 'スマートホームのエコシステム比較（2026年版）：4大プラットフォーム',
     intro:
@@ -1373,6 +1380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-ecosystems-compared-overview-hero-pt.png',
     title: 'Ecossistemas de Casa Inteligente Comparados (2026): Alexa, Google, Apple, HA',
     seoTitle: 'Ecossistemas de Casa Inteligente Comparados (2026)',
     intro:
@@ -1568,6 +1576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-ecosystems-compared-overview-hero-zh.png',
     title: '智能家居生态系统对比（2026）：Alexa、Google、Apple、HA',
     seoTitle: '智能家居生态系统2026年度深度对比：隐私保护、本地控制与锁定分析',
     intro:

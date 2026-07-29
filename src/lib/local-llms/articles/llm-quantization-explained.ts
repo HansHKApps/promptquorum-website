@@ -169,6 +169,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           image: '/images/llm-quantization-explained-quant-levels-hero-en.png',
           imageCaption: 'Quantization levels compared: from Q2_K (highest compression) to Q8_0 (highest quality). Q4_K_M is the recommended standard for most users.',
         },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'Interactive VRAM Calculator',
+          content: 'Use this calculator to compute exact VRAM requirements for any combination of model, quantization, context, and batch size. Select your configuration and see which GPUs fit.',
+          component: 'VramCalculator',
+        },
         whatIsQ80: {
           id: 'what-is-q8-0',
           title: 'What is Q8_0 Quantization?',
@@ -774,6 +780,12 @@ schema: {
           image: '/images/llm-quantization-explained-quant-levels-hero-es.png',
           imageCaption: 'Niveles de cuantización comparados: de Q2_K (mayor compresión) a Q8_0 (mayor calidad). Q4_K_M es el estándar recomendado para la mayoría de usuarios.',
         },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'Calculadora interactiva de VRAM',
+          content: 'Usa esta calculadora para calcular los requisitos exactos de VRAM para cualquier combinación de modelo, cuantización, contexto y tamaño de lote. Selecciona tu configuración y comprueba qué GPU son compatibles.',
+          component: 'VramCalculator',
+        },
         whatIsQ80: {
           id: 'what-is-q8-0',
           title: '¿Qué es la cuantización Q8_0?',
@@ -1335,6 +1347,12 @@ schema: {
           image: '/images/llm-quantization-explained-quant-levels-hero-ar.png',
           imageCaption: 'مستويات التكميم مقارنةً: من Q2_K (أعلى ضغط) إلى Q8_0 (أعلى جودة). Q4_K_M هو المعيار الموصى به لمعظم المستخدمين.',
         },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'حاسبة VRAM التفاعلية',
+          content: 'استخدم هذه الحاسبة لحساب متطلبات VRAM الدقيقة لأي مجموعة نموذج، وتكميم، وسياق، وحجم دفعة. اختر تكوينك وتحقق من وحدات GPU المتوافقة.',
+          component: 'VramCalculator',
+        },
         whatIsQ80: {
           id: 'what-is-q8-0',
           title: 'ما هو تكميم Q8_0؟',
@@ -1875,6 +1893,29 @@ schema: {
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Economia de RAM por tamanho de modelo: Q4_K_M vs FP16 (2026)',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Modelo 3B', 'description': 'FP16: 6 GB de RAM. Q4_K_M: 2 GB de RAM. Economia: 67%. Roda em dispositivos com 4 GB.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Modelo 7B', 'description': 'FP16: 14 GB de RAM. Q4_K_M: 4,5 GB de RAM. Economia: 68%. Roda com 8 GB de RAM.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Modelo 13B', 'description': 'FP16: 26 GB de RAM. Q4_K_M: 8,5 GB de RAM. Economia: 67%. Roda com 16 GB de RAM.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Modelo 34B', 'description': 'FP16: 68 GB de RAM. Q4_K_M: 22 GB de RAM. Economia: 68%. Roda com 32 GB de RAM.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Modelo 70B', 'description': 'FP16: 140 GB de RAM. Q4_K_M: 40 GB de RAM. Economia: 71%. Roda com 48 GB de RAM.' },
+        ],
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'url': 'https://www.promptquorum.com/pt/local-llms/llm-quantization-explained',
+        'inLanguage': 'pt-BR',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
+      },
       gammaEmbedUrl: '/presentations/llm-quantization-explained-static.html',
       gammaDescription: 'O conjunto de slides abaixo cobre: comparação Q4_K_M vs Q8_0 vs formato GGUF, economia de RAM por tamanho de modelo (3B-70B), perda de qualidade por nível de quantização e qual quantização escolher para seu hardware. Baixe o PDF como cartão de referência de quantização de LLM.',
       sections: {
@@ -1925,6 +1966,12 @@ schema: {
           columns: ['Nível', 'Bits', 'RAM (7B)', 'Perda de qualidade', 'Quando usar'],
           image: '/images/llm-quantization-explained-quant-levels-hero-pt.png',
           imageCaption: 'Níveis de quantização comparados: de Q2_K (maior compressão) a Q8_0 (maior qualidade). Q4_K_M é o padrão recomendado para a maioria dos usuários.',
+        },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'Calculadora Interativa de VRAM',
+          content: 'Use esta calculadora para calcular os requisitos exatos de VRAM para qualquer combinação de modelo, quantização, contexto e tamanho de lote. Selecione sua configuração e veja quais GPUs são compatíveis.',
+          component: 'VramCalculator',
         },
         whatIsQ80: {
           id: 'what-is-q8-0',
@@ -2277,6 +2324,12 @@ schema: {
           columns: ['Ebene', 'Bits', 'RAM (7B)', 'Qualitätsverlust', 'Verwendung'],
           image: '/images/llm-quantization-explained-quant-levels-hero-de.png',
           imageCaption: 'Quantisierungsstufen im Vergleich: von Q2_K (höchste Komprimierung) bis Q8_0 (höchste Qualität). Q4_K_M ist der empfohlene Standard für die meisten Benutzer.',
+        },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'Interaktiver VRAM-Rechner',
+          content: 'Verwenden Sie diesen Rechner, um exakte VRAM-Anforderungen für jede Kombination von Modell, Quantisierung, Kontext und Batch-Größe zu berechnen. Wählen Sie Ihre Konfiguration und sehen Sie, welche GPUs passen.',
+          component: 'VramCalculator',
         },
         whatIsQ80: {
           id: 'what-is-q8-0',
@@ -2781,6 +2834,16 @@ schema: {
           },
         ],
       },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'url': 'https://www.promptquorum.com/de/local-llms/llm-quantization-explained',
+        'inLanguage': 'de',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
+      },
       gammaEmbedUrl: '/presentations/llm-quantization-explained-static.html',
       gammaDescription: 'Das Slide-Deck umfasst: Q4_K_M vs Q8_0 vs GGUF-Formatvergleich, RAM-Einsparungen nach Modellgröße (3B-70B), Qualitätsverlust nach Quantisierungsstufe und welche Quantisierung für Ihre Hardware geeignet ist. PDF als LLM-Quantisierungs-Referenzkarte herunterladen.',
     },
@@ -2878,6 +2941,12 @@ schema: {
           columns: ['Niveau', 'Bits', 'RAM (7B)', 'Perte de qualité', 'Utilisation'],
           image: '/images/llm-quantization-explained-quant-levels-hero-fr.png',
           imageCaption: 'Niveaux de quantification comparés : de Q2_K (compression maximale) à Q8_0 (qualité maximale). Q4_K_M est la norme recommandée pour la plupart des utilisateurs.',
+        },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'Calculateur VRAM interactif',
+          content: 'Utilisez ce calculateur pour calculer les exigences VRAM exactes pour toute combinaison de modèle, quantification, contexte et taille de lot. Sélectionnez votre configuration et voyez quels GPU sont compatibles.',
+          component: 'VramCalculator',
         },
         whatIsQ80: {
           id: 'what-is-q8-0',
@@ -3332,6 +3401,16 @@ schema: {
           },
         ],
       },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'url': 'https://www.promptquorum.com/fr/local-llms/llm-quantization-explained',
+        'inLanguage': 'fr',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
+      },
       gammaEmbedUrl: '/presentations/llm-quantization-explained-static.html',
       gammaDescription: 'Le diaporama ci-dessous couvre : comparaison Q4_K_M vs Q8_0 vs GGUF, économies RAM par taille de modèle (3B-70B), perte de qualité par niveau de quantification, et quelle quantification choisir pour votre matériel. Téléchargez le PDF comme référence de quantification LLM.',
     },
@@ -3429,6 +3508,12 @@ schema: {
           columns: ['レベル', 'ビット数', 'RAM (7B)', '品質低下', '使用場面'],
           image: '/images/llm-quantization-explained-quant-levels-hero-ja.png',
           imageCaption: '量子化レベルの比較：Q2_K（最高圧縮）からQ8_0（最高品質）まで。Q4_K_Mはほとんどのユーザーに推奨される標準です。',
+        },
+        calculator: {
+          id: 'interactive-calculator',
+          title: 'インタラクティブVRAMカリキュレーター',
+          content: 'このカリキュレーターを使用して、モデル、量子化、コンテキスト、バッチサイズの任意の組み合わせに対する正確なVRAM要件を計算してください。設定を選択して、どのGPUが適合するかを確認します。',
+          component: 'VramCalculator',
         },
         whatIsQ80: {
           id: 'what-is-q8-0',
@@ -3882,6 +3967,16 @@ schema: {
           },
         ],
       },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'url': 'https://www.promptquorum.com/ja/local-llms/llm-quantization-explained',
+        'inLanguage': 'ja',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
+      },
       gammaEmbedUrl: '/presentations/llm-quantization-explained-static.html',
       gammaDescription: '下記のスライドデッキには次の内容が含まれています：Q4_K_M vs Q8_0 vs GGUF形式の比較、モデルサイズ（3B～70B）別のRAM削減量、量子化レベル別の品質低下、お使いのハードウェアに適した量子化の選択方法。PDFをLLM量子化リファレンスカードとしてダウンロードできます。',
     },
@@ -3979,6 +4074,12 @@ schema: {
           columns: ['级别', '位数', 'RAM (7B)', '质量损失', '使用场景'],
           image: '/images/llm-quantization-explained-quant-levels-hero-zh.png',
           imageCaption: '量化级别对比：从Q2_K（最高压缩）到Q8_0（最高质量）。Q4_K_M是大多数用户推荐的标准。',
+        },
+        calculator: {
+          id: 'interactive-calculator',
+          title: '交互式VRAM计算器',
+          content: '使用此计算器为任意模型、量化、上下文和批次大小组合计算精确的VRAM需求。选择您的配置，查看哪些GPU适配。',
+          component: 'VramCalculator',
         },
         whatIsQ80: {
           id: 'what-is-q8-0',
@@ -4423,6 +4524,16 @@ schema: {
           },
         ],
       },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'url': 'https://www.promptquorum.com/zh/local-llms/llm-quantization-explained',
+        'inLanguage': 'zh',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
+      },
       gammaEmbedUrl: '/presentations/llm-quantization-explained-static.html',
       gammaDescription: '下方幻灯片涵盖：Q4_K_M vs Q8_0 vs GGUF格式对比、按模型大小（3B～70B）节省的RAM、各量化级别的质量损失，以及如何为您的硬件选择量化级别。将PDF下载为LLM量化参考卡片。',
     },
@@ -4445,6 +4556,29 @@ schema: {
       audience: '프로덕션 환경에서 로컬 LLM을 배포하거나, 제한된 VRAM을 최적화하거나, 멀티 GPU 시스템을 구축하는 엔지니어',
       readTime: '14분 소요',
       educationalLevel: 'Advanced',
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'url': 'https://www.promptquorum.com/ko/local-llms/llm-quantization-explained',
+        'inLanguage': 'ko',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '모델 크기별 RAM 절감량: Q4_K_M vs FP16 (2026)',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '3B 모델', 'description': 'FP16: 6 GB RAM. Q4_K_M: 2 GB RAM. 절감: 67%. 4 GB 기기에서 실행 가능.' },
+          { '@type': 'ListItem', 'position': 2, 'name': '7B 모델', 'description': 'FP16: 14 GB RAM. Q4_K_M: 4.5 GB RAM. 절감: 68%. 8 GB RAM에서 실행 가능.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '13B 모델', 'description': 'FP16: 26 GB RAM. Q4_K_M: 8.5 GB RAM. 절감: 67%. 16 GB RAM에서 실행 가능.' },
+          { '@type': 'ListItem', 'position': 4, 'name': '34B 모델', 'description': 'FP16: 68 GB RAM. Q4_K_M: 22 GB RAM. 절감: 68%. 32 GB RAM에서 실행 가능.' },
+          { '@type': 'ListItem', 'position': 5, 'name': '70B 모델', 'description': 'FP16: 140 GB RAM. Q4_K_M: 40 GB RAM. 절감: 71%. 48 GB RAM에서 실행 가능.' },
+        ],
+      },
       primaryTerm: 'LLM 양자화 및 VRAM 최적화',
       quickAnswerTop: {
         ko: {
@@ -4535,6 +4669,12 @@ schema: {
           columns: ['Level', 'Bits', 'RAM (7B)', 'Quality Loss', 'Use When'],
           image: '/images/llm-quantization-explained-quant-levels-hero-ko.png',
           imageCaption: '양자화 수준 비교: Q2_K(최고 압축)부터 Q8_0(최고 품질)까지. Q4_K_M은 대부분의 사용자에게 권장되는 표준입니다.',
+        },
+        calculator: {
+          id: 'interactive-calculator',
+          title: '인터랙티브 VRAM 계산기',
+          content: '이 계산기를 사용하면 모델, 양자화, 컨텍스트, 배치 크기의 모든 조합에 대해 정확한 VRAM 요구량을 계산할 수 있습니다. 구성을 선택하면 어떤 GPU에 적합한지 확인할 수 있습니다.',
+          component: 'VramCalculator',
         },
         gguf: {
           id: 'what-is-gguf-format',

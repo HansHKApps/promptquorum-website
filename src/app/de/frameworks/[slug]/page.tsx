@@ -96,6 +96,18 @@ export default async function DeFrameworkPage({ params }: { params: Promise<{ sl
             },
             {
               '@context': 'https://schema.org',
+              '@type': 'HowTo',
+              'name': labels.howToName(fw.name),
+              'description': labels.howToDescription(fw.name),
+              'step': fw.fields.map((field, i) => ({
+                '@type': 'HowToStep',
+                'position': i + 1,
+                'name': labels.fillInField(field.name),
+                'text': field.description,
+              })),
+            },
+            {
+              '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               'itemListElement': [
                 { '@type': 'ListItem', 'position': 1, 'name': labels.home, 'item': 'https://www.promptquorum.com/de' },

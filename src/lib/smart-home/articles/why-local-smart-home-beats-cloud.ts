@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-en.png',
     title: 'Why a Local Smart Home Beats the Cloud in 2026',
     seoTitle: 'Local vs Cloud Smart Home: Why Local Wins (2026)',
     intro:
@@ -198,6 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-ar.png',
     title: 'لماذا يتفوق المنزل الذكي المحلي على السحابة في ⁨2026⁩',
     seoTitle: 'المحلي مقابل السحابة: لماذا يفوز المحلي (⁨2026⁩)',
     intro:
@@ -388,6 +390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-de.png',
     title: 'Warum ein lokales Smart Home 2026 die Cloud schlägt',
     seoTitle: 'Lokal vs Cloud Smart Home: Warum lokal gewinnt (2026)',
     intro:
@@ -578,6 +581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-es.png',
     title: 'Por Qué un Smart Home Local Supera a la Nube en 2026',
     seoTitle: 'Local vs Nube: Por Qué Gana lo Local (2026)',
     intro:
@@ -768,6 +772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-ko.png',
     title: '2026년 로컬 스마트홈이 클라우드를 능가하는 이유',
     seoTitle: '로컬 대 클라우드 스마트홈: 로컬이 유리한 이유 (2026)',
     intro:
@@ -958,6 +963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-fr.png',
     title: 'Pourquoi une Maison Connectée Locale Bat le Cloud en 2026',
     seoTitle: 'Local vs Cloud : Pourquoi le Local Gagne (2026)',
     intro:
@@ -1148,6 +1154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-ja.png',
     title: 'なぜ2026年にローカルスマートホームはクラウドに勝るのか',
     seoTitle: 'ローカル対クラウド：なぜローカルが勝つか（2026）',
     intro:
@@ -1338,6 +1345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-pt.png',
     title: 'Por Que uma Casa Inteligente Local Supera a Nuvem em 2026',
     seoTitle: 'Local vs Nuvem: Por Que o Local Ganha (2026)',
     intro:
@@ -1528,6 +1536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-zh.png',
     title: '为何2026年本地智能家居胜过云端',
     seoTitle: '本地对云端：为何本地胜出（2026）',
     intro:

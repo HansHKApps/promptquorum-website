@@ -1410,6 +1410,36 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
       },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Como Escolher Entre Qwen3, Llama 4 e Mistral',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Determine sua tarefa principal', 'text': 'Identifique se você precisa de programação (SWE-bench), multilíngue, raciocínio em inglês, contexto longo ou máxima eficiência.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Verifique as restrições do seu hardware', 'text': 'Anote sua VRAM disponível: 5 GB (modelos 8B), 16 GB (gpt-oss:20b / nível intermediário), 24 GB (Qwen 3.6 27B a Q4), 40+ GB (70B+), ou ~55 GB+ (Llama 4 Scout a Q4).' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Revise as pontuações de benchmark', 'text': 'Qwen 3.6 lidera o SWE-bench (77,2% a 27B) e é o melhor em geral em 24 GB, Qwen3 72B lidera o MATH (84%), Llama 4 Scout domina em contexto (10M tokens) mas precisa de ~55 GB a Q4, Mistral maximiza qualidade por GB (Small 3.1 a 14 GB).' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Selecione o modelo e a variante', 'text': 'Qwen3 para programação/multilíngue/melhor em geral, Llama 4 Scout para contexto longo/multimodal (precisa de ~55 GB), Llama 3.3 para raciocínio em inglês, Mistral Small 3.1 para RAM limitada, Devstral para programação agentiva, Codestral para IDE.' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'Instale e teste localmente', 'text': 'Use o Ollama: `ollama run qwen3:8b`, `ollama run llama4:scout`, `ollama run mistral:small`, ou `ollama run devstral:small` para baixar e executar.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Comparação de Famílias de Modelos: Qwen3, Llama 4 e Mistral (Junho de 2026)',
+        'numberOfItems': 10,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Qwen 3.6 27B', 'description': 'Melhor modelo denso para programação. 77,2% SWE-bench (multi-arquivo do mundo real), 83% MMLU, 80% MATH, 29 idiomas nativos, 16 GB de RAM (Q4_K_M).' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Qwen3 72B', 'description': 'Melhor para multilíngue + raciocínio. 85% MMLU, 84% MATH, 29 idiomas nativos, 43 GB de RAM (Q4_K_M).' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 4 Scout 17B (MoE)', 'description': 'Melhor para contexto longo e multimodal. 17B ativos / 109B total, 16 especialistas, contexto de 10M tokens, multimodal, ~55 GB de VRAM a Q4 (cabe em 24 GB apenas a 1,78-bit).' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Mistral Small 3.1 24B', 'description': 'Melhor qualidade por GB de RAM. 79% MMLU, 74% HumanEval, qualidade próxima a um 70B com 14 GB de RAM (Q4_K_M).' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Devstral Small 24B', 'description': 'Melhor para fluxos de trabalho de programação agentiva. Feito especificamente para edição multi-arquivo, chamadas de ferramentas, ciclos de depuração, 16 GB de RAM.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Codestral 22B', 'description': 'Melhor para autocompletar em IDE (FIM). Otimizado para fill-in-the-middle em extensões do Continue.dev, Cursor, VSCode, 14 GB de RAM.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Qwen3 8B', 'description': 'Melhor 8B para programação. ~76% HumanEval (melhorado em relação ao Qwen3 7B), multilíngue, 5 GB de RAM (Q4_K_M).' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Llama 3.3 70B (legado)', 'description': 'Ainda muito utilizado. 82% MMLU, 88% HumanEval, melhor seguimento de instruções em inglês, 40 GB de RAM (Q4_K_M).' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'Llama 3.2 3B', 'description': 'Melhor 8B para seguimento de instruções. 73% MMLU, 72% HumanEval, amplamente documentado, 5,5 GB de RAM (Q4_K_M).' },
+          { '@type': 'ListItem', 'position': 10, 'name': 'Mistral Small v0.3', 'description': 'Melhor throughput em 7B. 40-60 tok/s em uma única GPU, 4,5 GB de RAM (Q4_K_M), chamadas de ferramentas robustas.' },
+        ]
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',

@@ -130,6 +130,13 @@ html[dir="rtl"] body {
   font-family: var(--font-arabic), system-ui, sans-serif;
 }
 
+/* Korean — font. Scoped to lang="ko" so the korean subset is only ever
+   requested by the browser when rendering a /ko/ page (no element matches
+   this selector elsewhere, so no other locale pays for the download). */
+html[lang="ko"] body {
+  font-family: var(--font-korean), system-ui, sans-serif;
+}
+
 /* Code blocks, inline code, and monospace must stay LTR in all languages.
    Numbers and Latin brand names embedded in RTL text also stay LTR via
    Unicode bidi isolation so no extra markup is needed for those. */

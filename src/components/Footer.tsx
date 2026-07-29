@@ -39,6 +39,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     privacy: 'Privacy Policy',
     impressum: 'Impressum',
     contact: 'hello@promptquorum.com',
+    preferredSource: 'Set as preferred source in Google',
   },
   de: {
     copyright: '© 2026 PromptQuorum. Alle Rechte vorbehalten.',
@@ -48,6 +49,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     privacy: 'Datenschutzerklärung',
     impressum: 'Impressum',
     contact: 'hello@promptquorum.com',
+    preferredSource: 'Als bevorzugte Quelle in Google festlegen',
   },
   fr: {
     copyright: '© 2026 PromptQuorum. Tous droits réservés.',
@@ -57,6 +59,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     privacy: 'Politique de confidentialité',
     impressum: 'Mentions légales',
     contact: 'hello@promptquorum.com',
+    preferredSource: 'Définir comme source préférée dans Google',
   },
   ja: {
     copyright: '© 2026 PromptQuorum. すべての権利を保有しています。',
@@ -66,6 +69,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     privacy: 'プライバシーポリシー',
     impressum: '法務',
     contact: 'hello@promptquorum.com',
+    preferredSource: 'Google で優先ソースに設定',
   },
   zh: {
     copyright: '© 2026 PromptQuorum. 版权所有。',
@@ -75,6 +79,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     privacy: '隐私政策',
     impressum: '法律声明',
     contact: 'hello@promptquorum.com',
+    preferredSource: '在 Google 中设为优先来源',
   },
   es: {
     copyright: '© 2026 PromptQuorum. Todos los derechos reservados.',
@@ -84,6 +89,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     privacy: 'Política de privacidad',
     impressum: 'Aviso legal',
     contact: 'hello@promptquorum.com',
+    preferredSource: 'Establecer como fuente preferida en Google',
   },
   pt: {
     copyright: '© 2026 PromptQuorum. Todos os direitos reservados.',
@@ -93,6 +99,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     privacy: 'Política de Privacidade',
     impressum: 'Aviso Legal',
     contact: 'hello@promptquorum.com',
+    preferredSource: 'Definir como fonte preferida no Google',
   },
   ar: {
     copyright: '© 2026 PromptQuorum. جميع الحقوق محفوظة.',
@@ -102,6 +109,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     privacy: 'سياسة الخصوصية',
     impressum: 'الإشعار القانوني',
     contact: 'hello@promptquorum.com',
+    preferredSource: 'تعيين كمصدر مفضل في Google',
   },
   ko: {
     copyright: '© 2026 PromptQuorum. 모든 권리 보유.',
@@ -111,6 +119,7 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     privacy: '개인 정보 처리 방침',
     impressum: '법적 고지',
     contact: 'hello@promptquorum.com',
+    preferredSource: 'Google에서 선호 소스로 설정',
   },
 }
 
@@ -231,6 +240,15 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
             <CookieSettingsLink lang={effectiveLang} />
             <span aria-hidden="true">•</span>
             <a href="mailto:hello@promptquorum.com" className="hover:text-primary transition-colors">{t.contact}</a>
+            <span aria-hidden="true">•</span>
+            <a
+              href="https://google.com/preferences/source?q=promptquorum.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              {t.preferredSource}
+            </a>
           </div>
         </div>
       </div>

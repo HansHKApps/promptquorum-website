@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-en.png',
     title: 'Build a Personal Knowledge Base With Local AI: 2026 Stack Guide',
     seoTitle: 'Local AI Personal Knowledge Base: 2026 Stack Guide',
     intro:
@@ -472,6 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-de.png',
     title: 'Persönliche Wissensdatenbank mit lokaler KI aufbauen: Stack-Guide 2026',
     seoTitle: 'Persönliche KI-Wissensdatenbank: Stack-Guide 2026',
     intro:
@@ -941,6 +943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-fr.png',
     title: 'Construire une base de connaissances avec une IA locale : guide stack 2026',
     seoTitle: 'Base de connaissances IA locale : Guide stack 2026',
     intro:
@@ -1402,6 +1405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-ja.png',
     title: 'ローカルAIで個人ナレッジベースを構築する: 2026年スタックガイド',
     seoTitle: 'ローカルAI個人ナレッジベース 2026 スタックガイド',
     intro:
@@ -1863,6 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-zh.png',
     title: '使用本地 AI 构建个人知识库:2026 技术栈指南',
     seoTitle: '本地 AI 个人知识库:2026 技术栈指南',
     intro:
@@ -2324,6 +2329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-es.png',
     title: 'Construye una base de conocimiento personal con IA local: guía de stack 2026',
     seoTitle: 'Base de conocimiento con IA local: guía de stack 2026',
     intro:
@@ -2798,6 +2804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-pt.png',
     title: 'Construa uma base de conhecimento pessoal com IA local: guia de stack 2026',
     seoTitle: 'Base de conhecimento com IA local: guia de stack 2026',
     intro:
@@ -3271,6 +3278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-ar.png',
     title: 'بناء قاعدة معرفة شخصية بالذكاء الاصطناعي المحلي: دليل الحزمة ⁨2026⁩',
     seoTitle: 'قاعدة معرفة شخصية بالذكاء الاصطناعي المحلي ⁨2026⁩',
     intro:
@@ -3744,6 +3752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
+    heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-ko.png',
     title: '로컬 AI로 개인 지식 베이스 구축하기: 2026 스택 가이드',
     seoTitle: '로컬 AI 개인 지식 베이스: 2026 스택 가이드',
     intro:

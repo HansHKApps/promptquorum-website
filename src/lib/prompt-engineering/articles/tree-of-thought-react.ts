@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    heroImage: '/images/tree-of-thought-react-overview-hero-en.png',
     title: 'Tree of Thought & ReAct: Advanced Reasoning for Hard Problems',
     intro: 'Tree-of-Thought and ReAct prompting are two advanced reasoning techniques: Tree-of-Thought explores multiple possible solution paths like a decision tree, while ReAct interleaves reasoning with explicit "actions" such as searching or retrieving information. Both aim to make complex problem-solving more reliable and transparent.',
     leadAnswerBlock: '**Tree-of-Thought (ToT) instructs a model to explore multiple solution branches before committing — useful for planning and strategy. ReAct (Reason + Act) alternates reasoning with tool calls and observations — the foundation of every modern AI agent. In 2026, ReAct is built into frontier models via native tool use; ToT remains a prompting-level technique for structured exploration.**',
@@ -434,6 +435,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Techniken',
+    heroImage: '/images/tree-of-thought-react-overview-hero-de.png',
     title: 'Tree of Thought & ReAct: Fortgeschrittene Reasoning-Techniken für komplexe Probleme',
     intro: 'Tree-of-Thought und ReAct Prompting sind zwei fortgeschrittene Reasoning-Techniken: Tree-of-Thought erkundet mehrere mögliche Lösungspfade wie einen Entscheidungsbaum, während ReAct Reasoning mit expliziten Aktionen wie Suche oder Informationsabruf verschränkt.',
     publishDate: '2026-03-26',
@@ -443,6 +445,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: 'Tree-of-Thought erkundet mehrere Lösungszweige; ReAct verschränkt Reasoning mit Tool-Calls. 2026 ist ReAct in GPT-5.6, Claude und Gemini nativ integriert.',
     educationalLevel: 'Advanced',
     audience: 'Entwickler, die KI-Agenten erstellen, Produktteams, die mehrstufige Workflows entwerfen, Forscher',
+    primaryTerm: 'Tree-of-Thought-Prompting',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -718,6 +721,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    heroImage: '/images/tree-of-thought-react-overview-hero-es.png',
     title: 'Tree of Thought y ReAct: Razonamiento avanzado para problemas difíciles',
     intro: 'Tree-of-Thought y ReAct Prompting son dos técnicas de razonamiento avanzadas: Tree-of-Thought explora múltiples caminos de solución posibles como un árbol de decisiones, mientras que ReAct entrelaza el razonamiento con "acciones" explícitas como buscar o recuperar información. Ambas buscan hacer la resolución de problemas complejos más fiable y transparente.',
     leadAnswerBlock: '**Tree-of-Thought (ToT) instruye a un modelo a explorar múltiples ramas de solución antes de comprometerse — útil para planificación y estrategia. ReAct (Reason + Act) alterna el razonamiento con llamadas a herramientas y observaciones — la base de todo agente de IA moderno. En 2026, ReAct está integrado en los modelos frontier a través del uso nativo de herramientas; ToT sigue siendo una técnica a nivel de prompt para exploración estructurada.**',
@@ -1032,6 +1036,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    heroImage: '/images/tree-of-thought-react-overview-hero-ar.png',
     title: '⁨Tree of Thought⁩ و ⁨ReAct⁩: الاستدلال المتقدم للمسائل الصعبة',
     intro: 'Tree-of-Thought و ReAct Prompting تقنيتان متقدمتان للاستدلال: يستكشف Tree-of-Thought مسارات الحل المتعددة الممكنة كشجرة قرارات، بينما يتشابك ReAct الاستدلال مع "الإجراءات" الصريحة مثل البحث أو استرجاع المعلومات. كلتا التقنيتين تهدفان إلى جعل حل المشكلات المعقدة أكثر موثوقية وشفافية.',
     leadAnswerBlock: '**يوجّه Tree-of-Thought (ToT) النموذج لاستكشاف فروع الحل المتعددة قبل الالتزام بها — مفيد للتخطيط والاستراتيجية. يتناوب ReAct (Reason + Act) بين الاستدلال واستدعاء الأدوات والملاحظات — وهو أساس كل وكيل ذكاء اصطناعي حديث. في عام 2026، أصبح ReAct مدمجاً في النماذج الحدية عبر استخدام الأدوات الأصلي؛ لا يزال ToT تقنية على مستوى الموجّه للاستكشاف المنظم.**',
@@ -1345,6 +1350,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Techniques',
+    heroImage: '/images/tree-of-thought-react-overview-hero-pt.png',
     title: 'Tree of Thought e ReAct: Raciocínio avançado para problemas difíceis',
     intro: 'Tree-of-Thought e ReAct Prompting são duas técnicas avançadas de raciocínio: o Tree-of-Thought explora múltiplos caminhos de solução possíveis como uma árvore de decisão, enquanto o ReAct intercala o raciocínio com "ações" explícitas, como buscar ou recuperar informações. Ambas visam tornar a resolução de problemas complexos mais confiável e transparente.',
     leadAnswerBlock: '**Tree-of-Thought (ToT) instrui um modelo a explorar múltiplas ramificações de solução antes de se comprometer — útil para planejamento e estratégia. ReAct (Reason + Act) alterna raciocínio com chamadas a ferramentas e observações — a base de todo agente de IA moderno. Em 2026, o ReAct está integrado nos modelos frontier via uso nativo de ferramentas; o ToT permanece uma técnica de nível de prompt para exploração estruturada.**',
@@ -1664,6 +1670,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    heroImage: '/images/tree-of-thought-react-overview-hero-fr.png',
     title: 'Tree of Thought et ReAct : Techniques de raisonnement avancées pour les problèmes complexes',
     intro: 'Tree-of-Thought et ReAct Prompting sont deux techniques de raisonnement avancées : Tree-of-Thought explore plusieurs chemins de solution possibles comme un arbre de décision, tandis que ReAct entrelace le raisonnement avec des actions explicites telles que la recherche ou la récupération d\'informations.',
     leadAnswerBlock: '**Tree-of-Thought (ToT) demande au modèle d\'explorer plusieurs branches de solution avant de s\'engager — utile pour la planification et la stratégie. ReAct (Reason + Act) alterne entre le raisonnement et les appels d\'outils avec observations — la base de tous les agents IA modernes. En 2026, ReAct est intégré nativement dans les modèles frontière via l\'utilisation native d\'outils ; ToT reste une technique au niveau du prompting pour l\'exploration structurée.**',
@@ -1674,6 +1681,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: 'Tree-of-Thought explore plusieurs branches de solution pour la planification ; ReAct entrelace le raisonnement avec les appels d\'outils. En 2026, ReAct est intégré nativement dans GPT-5.6, Claude et Gemini.',
     educationalLevel: 'Advanced',
     audience: 'Développeurs construisant des agents IA, équipes produit concevant des workflows multi-étapes, chercheurs',
+    primaryTerm: 'Prompting Tree-of-Thought',
     toc: [
       { label: 'Points clés', anchor: 'key-takeaways' },
       { label: 'Qu\'est-ce que Tree-of-Thought ?', anchor: 'what-is-tree-of-thought' },
@@ -1982,6 +1990,7 @@ Réponse finale : [conclusion synthétisée]`,
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'テクニック',
+    heroImage: '/images/tree-of-thought-react-overview-hero-ja.png',
     title: 'Tree of Thought & ReAct: 複雑な問題のための高度なReasoningテクニック',
     intro: 'Tree-of-Thoughtと ReAct プロンプティングは2つの高度なReasoning手法です。Tree-of-Thoughtは決定木のような複数の解決経路を探索し、ReAct は推論と検索や情報取得などの明示的な「アクション」を交互に実行します。',
     leadAnswerBlock: '**Tree-of-Thought (ToT) はモデルに複数の解決ブランチを探索させてからコミットさせます — 計画と戦略に有用です。ReAct (Reason + Act) はツールコールと観察を交互に行います — すべての現代的なAIエージェントの基礎です。2026年では、ReAct は frontier モデルにネイティブツール使用で組み込まれています。ToT はプロンプティングレベルのテクニックとして構造化探索を可能にします。**',
@@ -1992,6 +2001,7 @@ Réponse finale : [conclusion synthétisée]`,
     metaDescription: 'Tree-of-Thoughtは計画用に複数のソリューションブランチを探索。ReActはツールコールと推論を組み合わせます。2026年では、ReAct は GPT-5.6、Claude、Gemini にネイティブに統合されています。',
     educationalLevel: 'Advanced',
     audience: 'AIエージェントを構築する開発者、マルチステップワークフローを設計するプロダクトチーム、研究者',
+    primaryTerm: 'Tree-of-Thoughtプロンプティング',
     toc: [
       { label: '重要ポイント', anchor: 'key-takeaways' },
       { label: 'Tree-of-Thoughtとは？', anchor: 'what-is-tree-of-thought' },
@@ -2301,6 +2311,7 @@ Final Answer: [総合結論]`,
   zh: {
     freshness_tier: 'semi_annual',
     theme: '技巧',
+    heroImage: '/images/tree-of-thought-react-overview-hero-zh.png',
     title: '树思考与 ReAct: 复杂问题的高级推理技术',
     intro: '树思考（Tree-of-Thought）和 ReAct 提示是两种高级推理技术：树思考探索多条可能的解决路径，就像决策树一样，而 ReAct 将推理与显式"行动"（如搜索或信息检索）交织在一起。',
     leadAnswerBlock: '**树思考（ToT）指示模型在提交前探索多个解决分支——适用于规划和战略。ReAct（推理+行动）在推理与工具调用和观察之间交替——是所有现代 AI 代理的基础。在 2026 年，ReAct 通过原生工具使用内置于前沿模型；ToT 仍然是结构化探索的提示级技术。**',
@@ -2311,6 +2322,7 @@ Final Answer: [総合結論]`,
     metaDescription: '树思考为规划探索多个解决方案分支；ReAct 将推理与工具调用交织。2026年，ReAct已内置于GPT-5.6、Claude和Gemini。',
     educationalLevel: 'Advanced',
     audience: '构建 AI 代理的开发者、设计多步工作流的产品团队、研究人员',
+    primaryTerm: '树思考提示',
     toc: [
       { label: '核心要点', anchor: 'key-takeaways' },
       { label: '树思考是什么？', anchor: 'what-is-tree-of-thought' },
@@ -2396,6 +2408,7 @@ Final Answer: [総合結論]`,
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    heroImage: '/images/tree-of-thought-react-overview-hero-ko.png',
     title: 'Tree of Thought와 ReAct: 복잡한 문제를 위한 고급 추론 기법',
     intro: 'Tree-of-Thought와 ReAct 프롬프팅은 두 가지 고급 추론 기법입니다. Tree-of-Thought는 의사결정 트리처럼 여러 가능한 해결 경로를 탐색하고, ReAct는 추론과 검색 또는 정보 검색과 같은 명시적 "행동"을 교차하여 실행합니다. 두 기법 모두 복잡한 문제 해결을 더 신뢰할 수 있고 투명하게 만드는 것을 목표로 합니다.',
     leadAnswerBlock: '**Tree-of-Thought(ToT)는 모델이 결정을 내리기 전에 여러 해결 분기를 탐색하도록 지시합니다 — 계획과 전략에 유용합니다. ReAct(Reason + Act)는 추론과 도구 호출 및 관찰을 번갈아 수행합니다 — 모든 현대적 AI 에이전트의 기반입니다. 2026년에는 ReAct가 네이티브 도구 사용을 통해 프론티어 모델에 내장되어 있으며, ToT는 구조화된 탐색을 위한 프롬프팅 수준의 기법으로 남아 있습니다.**',

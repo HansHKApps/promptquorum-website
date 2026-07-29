@@ -9,6 +9,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     theme: 'Tools & Platforms',
+    heroImage: '/images/best-prompt-engineering-ides-overview-hero-en.png',
     title: 'Best Prompt Engineering IDEs and Editors 2026',
     seoTitle: 'Best Prompt Engineering IDEs and Editors 2026: Guide',
     metaDescription: 'Cursor costs $20/month; LM Studio is $0 after hardware. Six prompt engineering IDEs, each optimized for a different use case. Here\'s which one fits yours.',
@@ -309,6 +310,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   de: {
     theme: 'Tools & Plattformen',
+    heroImage: '/images/best-prompt-engineering-ides-overview-hero-de.png',
     title: 'Beste Prompt-Engineering-IDEs und Editoren (2026)',
     seoTitle: 'Beste Prompt-Engineering-IDEs und Editoren 2026: Leitfaden',
     metaDescription: '6 Prompt-Engineering-IDEs im Test: Cursor, VS Code + Continue, OpenAI Playground, Claude Console, Google AI Studio, LM Studio. Feature-Matrix nach Persona.',
@@ -612,6 +614,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   es: {
     theme: 'Tools & Platforms',
+    heroImage: '/images/best-prompt-engineering-ides-overview-hero-es.png',
     title: 'Mejores IDEs y editores de prompt engineering 2026',
     seoTitle: 'Mejores IDEs de prompt engineering 2026: 6 herramientas',
     metaDescription: 'Cursor cuesta $20/mes; LM Studio, $0 tras invertir en hardware. Seis IDEs de prompt engineering, cada uno para un caso de uso. Descubre cuál encaja contigo.',
@@ -914,6 +917,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Tools & Platforms',
+    heroImage: '/images/best-prompt-engineering-ides-overview-hero-pt.png',
     title: 'Melhores IDEs e editores de prompt engineering 2026',
     seoTitle: 'Melhores IDEs de prompt engineering 2026: 6 ferramentas',
     metaDescription: 'Cursor custa $20/mês; LM Studio, $0 após investimento em hardware. Seis IDEs de prompt engineering, cada um para um caso de uso. Descubra qual se encaixa com você.',
@@ -1213,6 +1217,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   fr: {
     theme: 'Outils et plateformes',
+    heroImage: '/images/best-prompt-engineering-ides-overview-hero-fr.png',
     title: 'Meilleurs IDE et Éditeurs de Prompt Engineering (2026)',
     seoTitle: 'Meilleurs IDE Prompt Engineering 2026 : Guide en 6 outils',
     metaDescription: 'Comparaison de 6 IDE de prompt engineering : Cursor, VS Code + Continue, OpenAI Playground, Claude Console, Google AI Studio. Matrice par persona.',
@@ -1514,6 +1519,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ja: {
     theme: 'ツール＆プラットフォーム',
+    heroImage: '/images/best-prompt-engineering-ides-overview-hero-ja.png',
     title: 'プロンプトエンジニアリング向けベストIDE・エディタ（2026年）',
     seoTitle: 'プロンプトエンジニアリングIDE 2026年：6ツール比較ガイド',
     metaDescription: 'プロンプトIDE 6選を比較：Cursor、VS Code + Continue、OpenAI Playground、Claude Console、Google AI Studio、LM Studio。ペルソナ別機能マトリクス。',
@@ -1815,6 +1821,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   zh: {
     theme: 'AI工具与平台',
+    heroImage: '/images/best-prompt-engineering-ides-overview-hero-zh.png',
     title: '最佳Prompt工程IDE与编辑器（2026）',
     seoTitle: '最佳Prompt工程IDE 2026：6款工具对比指南',
     metaDescription: '6款Prompt工程IDE对比：Cursor、VS Code + Continue、OpenAI Playground、Claude Console、Google AI Studio、LM Studio。按角色和场景的功能矩阵。',
@@ -2119,6 +2126,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-01',
     theme: 'Tools & Platforms',
+    heroImage: '/images/best-prompt-engineering-ides-overview-hero-ar.png',
     title: 'أفضل بيئات تطوير هندسة البرومبت لعام ⁨2026⁩',
     seoTitle: 'أفضل ⁨IDEs⁩ لهندسة البرومبت ⁨2026⁩: دليل المقارنة',
     metaDescription: '⁨Cursor⁩ بـ ⁨20⁩ دولار/شهر؛ ⁨LM Studio⁩ مجاني بعد الأجهزة. مقارنة ⁨6⁩ بيئات تطوير للبرومبت: ⁨Cursor⁩ و⁨VS Code⁩ و⁨OpenAI Playground⁩ و⁨LM Studio⁩ وغيرها.',
@@ -2377,6 +2385,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   ko: {
     theme: 'Tools & Platforms',
+    heroImage: '/images/best-prompt-engineering-ides-overview-hero-ko.png',
     title: '2026년 최고의 프롬프트 엔지니어링 IDE 및 에디터',
     seoTitle: '2026년 최고의 프롬프트 엔지니어링 IDE: 6가지 도구 비교',
     metaDescription: 'Cursor는 월 $20; LM Studio는 하드웨어 투자 후 $0. 용도별로 최적화된 6가지 프롬프트 엔지니어링 IDE를 비교합니다. 나에게 맞는 도구를 찾아보세요.',

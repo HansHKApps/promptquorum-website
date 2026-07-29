@@ -2223,6 +2223,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Können AMD Ryzen AI Max+ Mini-PCs Llama 3.3 70B ausführen?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, alle vier können. Minisforum/Beelink/AOOSTAR laufen 70B Q4 mit 18–22 tok/s. Beelink mit 128GB verarbeitet auch 70B Q5. GMKtec ist langsamer und auf 40B-Modelle begrenzt.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Wie vergleicht sich AMD Ryzen AI Max+ mit Apple M4 Max?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Nahezu identische Leistung (innerhalb 5–10%). AMD ist 30–40% günstiger. Kompromiss: macOS, Xcode, Final Cut-Ökosystem entfällt.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Brauche ich Linux oder kann ich Windows verwenden?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Alle vier werden mit Linux geliefert. Windows-Treiber werden entwickelt, sind aber noch nicht produktionsbereit.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Was ist der Unterschied zwischen Minisforum MS-A2 und Beelink GTR9 Pro?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforum hat 96GB RAM (€1.599). Beelink hat 128GB RAM (€1.999) und wird vorkonfiguriert mit Ubuntu plus ROCm geliefert.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Kann ich eine diskrete GPU zu diesen Mini-PCs hinzufügen?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'AOOSTAR GEM12 Pro unterstützt externe GPU via OCuLink (erfordert €500+ eGPU-Gehäuse).' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Wie viel Strom verbrauchen diese Mini-PCs?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '65–120W je nach Modell und Last. Ein ganzer Monat bei 100W entspricht etwa 72 kWh, rund €8–12 in deutschen Stromkosten.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Werden diese durch AMDs nächste Generation veraltet?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'AMD Ryzen AI Max Gen 2 ist voraussichtlich Ende 2026. Diese Maschinen bleiben 3–4 Jahre relevant.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Kann ich mehrere Modelle gleichzeitig ausführen?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, mit ausreichend RAM. 96GB erlaubt zwei 32B-Modelle oder ein 70B plus ein 13B. 128GB gibt mehr Spielraum.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Wie laut sind diese Mini-PCs unter Last?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforum 42dB, Beelink 44dB, AOOSTAR 40dB, GMKtec 38dB. Vergleichbar mit Laptop-Kühlern.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Sind diese Mini-PCs gut für Fine-Tuning?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, mit Vorbehalten. LoRA-Fine-Tuning funktioniert gut. Vollständiges Gewichts-Fine-Tuning ist langsamer als Desktop-GPU-Setups.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Kann ich Stable Diffusion auf diesen Mini-PCs ausführen?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Stable Diffusion XL läuft mit 8–12 Sek./Bild (langsam gegenüber RTX 4070 ~3 Sek./Bild).' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Wie vergleicht sich ROCm mit CUDA für Inferenz?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'ROCm ist 90% feature-vollständig gegenüber CUDA. Hauptlücke: einige proprietäre Fine-Tuning-Frameworks fehlen ROCm.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Wie lange ist die Garantiezeit?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforum 2 Jahre, AOOSTAR 1 Jahr, Beelink 1 Jahr (EU-Gesetz fügt 2 Jahre hinzu). GMKtec variiert je Region.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Kann ich den RAM später aufrüsten?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforum/AOOSTAR ja (bis 192GB). Beelink/GMKtec nein (verlötet). Kaufen Sie den benötigten RAM von Anfang an.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Welcher Mini-PC hat die beste Verarbeitungsqualität?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'AOOSTAR GEM12 Pro (Premium-Aluminium, Thermik-Optimierung). Minisforum ist knapper zweiter Platz.' }
+        },
+      ],
+    },
     supplementalSchema: {
       products: [
         {
@@ -2620,6 +2701,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Les mini PC AMD Ryzen AI Max+ peuvent-ils exécuter Llama 3.3 70B?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, tous les quatre. Minisforum/Beelink/AOOSTAR exécutent 70B Q4 à 18–22 tok/s. Beelink avec 128Go gère aussi 70B Q5. GMKtec est plus lent, limité aux modèles 40B.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Comment AMD Ryzen AI Max+ se compare-t-il à Apple M4 Max?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Performance quasi identique (dans une marge de 5–10%). AMD est 30–40% moins cher. Compromis: écosystème macOS, Xcode, Final Cut perdu.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Ai-je besoin de Linux ou Windows est-il possible?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Les quatre sont livrés avec Linux. Les pilotes Windows sont en développement mais pas encore prêts pour la production.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Quelle est la différence entre Minisforum MS-A2 et Beelink GTR9 Pro?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforum a 96Go de RAM (€1.599). Beelink a 128Go de RAM (€1.999) et est préconfiguré avec Ubuntu plus ROCm.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Puis-je ajouter un GPU discret à ces mini PC?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'AOOSTAR GEM12 Pro supporte un GPU externe via OCuLink (nécessite un boîtier eGPU à €500+).' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Combien d\'électricité ces mini PC consomment-ils?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '65–120W selon le modèle et la charge. Un mois entier à 100W équivaut à environ 72 kWh, soit €8–12 de coûts électriques.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Ces mini PC seront-ils obsolètes à la prochaine génération AMD?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'AMD Ryzen AI Max Gen 2 est probablement attendu fin 2026. Ces machines resteront pertinentes 3–4 ans.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Puis-je exécuter plusieurs modèles simultanément?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, avec assez de RAM. 96Go permet deux modèles 32B ou un 70B plus un 13B. 128Go donne plus de marge.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Quel est le niveau de bruit en charge?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforum 42dB, Beelink 44dB, AOOSTAR 40dB, GMKtec 38dB. Comparable aux ventilateurs de laptop.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Ces mini PC sont-ils bons pour le fine-tuning?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, avec des réserves. Le fine-tuning LoRA fonctionne bien. Le fine-tuning complet des poids est plus lent que les configurations GPU de bureau.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Puis-je exécuter Stable Diffusion sur ces mini PC?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Stable Diffusion XL tourne à 8–12 sec/image (lent comparé à RTX 4070 ~3 sec/image).' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Comment ROCm se compare-t-il à CUDA pour l\'inférence?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'ROCm est complet à 90% des fonctionnalités face à CUDA. Écart principal: certains frameworks propriétaires de fine-tuning manquent de support ROCm.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Quelle est la période de garantie?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforum 2 ans, AOOSTAR 1 an, Beelink 1 an (la loi UE ajoute 2 ans). GMKtec varie selon la région.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Puis-je mettre à niveau la RAM plus tard?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforum/AOOSTAR oui (jusqu\'à 192Go). Beelink/GMKtec non (soudée). Achetez la RAM nécessaire dès le départ.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Quel mini PC a la meilleure qualité de construction?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'AOOSTAR GEM12 Pro (aluminium premium, thermiques optimisées). Minisforum est second de près.' }
+        },
+      ],
+    },
     supplementalSchema: {
       products: [
         {
@@ -2992,6 +3154,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
     },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'AMD Ryzen AI Max+ ミニPCはLlama 3.3 70Bを実行できますか?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、全4機種で可能です。Minisforum/Beelink/AOOSTARは70B Q4で18–22 tok/s。Beelinkは128GBで70B Q5も可能。GMKtecはMax 385で推定14–16 tok/s(遅い)。' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'AMD Ryzen AI Max+とApple M4 Maxの性能比較は?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'ほぼ同等(差5–10%)。AMD ¥172,000–205,000 vs Mac Studio M4 Max ¥330,000–440,000(40–50%安い)。トレードオフはmacOSかLinux/ROCmか。' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Linuxが必須ですか?それともWindowsも使えますか?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '現在はLinuxのみです。Ubuntu 24.04 + ROCm 6.2推奨。Windowsドライバは開発中(2026年下半期予定)。' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Minisforum MS-A2とBeelink GTR9 Proの違いは?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforumは96GB(¥172,000)、Beelinkは128GB(¥205,000)。96GBで十分ならMinisforum推奨。複数モデル並列実行にはBeelinkが向いています。' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'AOOSTAR GEM12 Proに外部GPUを接続できますか?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、OCuLink経由でeGPUに対応しています(RTX 4090 eGPUエンクロージャーは€500–800別途)。合計で¥280,000以上になります。' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'これらのミニPCの消費電力は?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '通常操作で65–120W。月間平均100Wで72kWh、日本の電力費で¥1,500–2,000程度です。' }
+        },
+        {
+          '@type': 'Question',
+          'name': '次世代のAMD Ryzen AI Maxはいつ登場しますか?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '2026年末頃と予想されます。現行機種は3–4年は現役として通用するため、今購入しても陳腐化リスクは低いです。' }
+        },
+        {
+          '@type': 'Question',
+          'name': '複数のモデルを同時実行できますか?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '96GB環境では70B+13Bまたは32B+32Bが可能。128GB(Beelink)なら70B Q5+13Bの同時実行も可能です。' }
+        },
+        {
+          '@type': 'Question',
+          'name': '稼働中の騒音は?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforum 42dB、Beelink 44dB、AOOSTAR 40dB、GMKtec 38dB。ノートPCのファン音と同程度です。' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'これらのミニPCでfine-tuningはできますか?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'LoRAによるfine-tuningは可能です。フルウェイトの微調整にはGPUセットアップを推奨します。' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Stable Diffusionは実行できますか?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。XLモデルで8–12秒/画像(RTX 4070の約3秒/画像より遅い)ですが、実用的な速度です。' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'ROCmとCUDAの推論品質の差は?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'ROCmの機能完全度は90%です。主な差は、一部の独自fine-tuningフレームワークがROCmに未対応な点です。' }
+        },
+        {
+          '@type': 'Question',
+          'name': '保証期間は?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforum 2年、Beelink 1年(EU法で2年追加)、AOOSTAR 1年(同様)、GMKtecは地域により異なります。' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'メモリは後から増設できますか?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforum/AOOSTARは可能(192GBまで)。Beelink/GMKtecは不可(はんだ付け)。購入前にRAM容量を決めておく必要があります。' }
+        },
+        {
+          '@type': 'Question',
+          'name': '最も品質が高いのはどれですか?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'AOOSTAR GEM12 Pro(アルミ筐体、最適化された冷却、40dBで最も静か)。僅差でMinisforumが続きます。' }
+        },
+      ],
+    },
     supplementalSchema: {
       products: [
         {
@@ -3363,6 +3606,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LLM量化解释](/zh/local-llms/llm-quantization-explained)',
         ],
       },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'AMD Ryzen AI Max+ 迷你PC能运行Llama 3.3 70B吗?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '能,全部4款都可以。Minisforum/Beelink/AOOSTAR运行70B Q4达18–22 tok/s。Beelink 128GB也支持70B Q5。GMKtec(Max 385)预计14–16 tok/s,较慢。' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'AMD Ryzen AI Max+与Apple M4 Max性能对比如何?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '基本相当(差距5–10%)。AMD ¥10500~13700 vs Mac Studio M4 Max ¥20000以上(便宜40–50%)。权衡在于macOS还是Linux/ROCm。' }
+        },
+        {
+          '@type': 'Question',
+          'name': '必须用Linux吗?还是可以用Windows?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '目前仅支持Linux,推荐Ubuntu 24.04 + ROCm 6.2。Windows驱动正在开发中,预计2026年下半年推出。' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Minisforum MS-A2与Beelink GTR9 Pro有什么区别?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforum 96GB(¥10500)、Beelink 128GB(¥13700)。96GB够用选Minisforum,需要多模型并行运行选Beelink。' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'AOOSTAR GEM12 Pro能外接独立显卡吗?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '可以,支持OCuLink eGPU(RTX 4090 eGPU外接盒另需¥4000–6400),合计约¥17000以上。' }
+        },
+        {
+          '@type': 'Question',
+          'name': '这些迷你PC的功耗是多少?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '常规操作65–120W。月均100W约为72kWh,电费约¥50–70。' }
+        },
+        {
+          '@type': 'Question',
+          'name': '下一代AMD Ryzen AI Max何时推出?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '预计2026年底推出。现有机型仍将保持3–4年的实用性,现在购买陈旧化风险较低。' }
+        },
+        {
+          '@type': 'Question',
+          'name': '可以同时运行多个模型吗?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '96GB可运行70B+13B或32B+32B。128GB(Beelink)可同时运行70B Q5+13B。' }
+        },
+        {
+          '@type': 'Question',
+          'name': '运行时噪音多大?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforum 42dB、Beelink 44dB、AOOSTAR 40dB、GMKtec 38dB,与笔记本风扇音量相当。' }
+        },
+        {
+          '@type': 'Question',
+          'name': '这些迷你PC适合微调(fine-tuning)吗?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'LoRA微调可行。全权重微调建议使用桌面GPU方案,速度更快。' }
+        },
+        {
+          '@type': 'Question',
+          'name': '能运行Stable Diffusion吗?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '能。XL模型约8–12秒/图(比RTX 4070的约3秒/图慢),但速度可用。' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'ROCm与CUDA在推理上的差距如何?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'ROCm功能完整度达90%。主要差距在于部分专有微调框架尚未支持ROCm。' }
+        },
+        {
+          '@type': 'Question',
+          'name': '保修期是多久?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforum 2年、Beelink 1年(欧盟法定再加2年)、AOOSTAR 1年(同样规则)、GMKtec因地区而异。' }
+        },
+        {
+          '@type': 'Question',
+          'name': '内存可以升级吗?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Minisforum/AOOSTAR可以升级(最高192GB)。Beelink/GMKtec不可以(焊接内存)。购买前需确定所需RAM容量。' }
+        },
+        {
+          '@type': 'Question',
+          'name': '哪一款做工质量最好?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'AOOSTAR GEM12 Pro(铝合金机身、优化散热、40dB最安静)。Minisforum紧随其后。' }
+        },
+      ],
     },
     supplementalSchema: {
       products: [

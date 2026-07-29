@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Enterprise',
       title: 'On-Prem Air-Gapped Local LLMs: Isolated Deployment for Classified Environments',
+      heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-en.png',
       dateModified: '2026-06-21',
       seoTitle: 'Air-Gapped Local LLM Deployment',
       intro: 'Air-gapped deployment means the LLM infrastructure is completely isolated from the internet. No internet connection, no external API calls, no data exfiltration risk. As of April 2026, this is standard for government, military, and financial institutions handling classified or highly sensitive data.',
@@ -275,6 +276,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Enterprise',
       title: 'On-Prem Air-Gapped Local LLMs: Despliegue Aislado para Entornos Clasificados',
+      heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-es.png',
       seoTitle: 'Despliegue de LLM Local con Air-Gap',
       intro: 'El despliegue air-gapped significa que la infraestructura del LLM está completamente aislada de internet. Sin conexión a internet, sin llamadas a API externas, sin riesgo de exfiltración de datos. A partir de abril de 2026, esto es el estándar para gobiernos, militares e instituciones financieras que manejan datos clasificados o altamente sensibles.',
       metaDescription: 'Despliegue de LLM local con air-gap: arquitectura de aislamiento completo, seguridad de red, gestión de actualizaciones y manejo de datos clasificados.',
@@ -537,6 +539,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Enterprise',
       title: 'نماذج ⁨LLM⁩ المحلية المعزولة في الموقع (⁨Air-Gapped⁩): نشر معزول للبيئات المصنّفة',
+      heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-ar.png',
       seoTitle: '⁨LLM⁩ محلي معزول (⁨Air-Gap⁩): نشر في بيئات مصنّفة',
       intro: 'النشر المعزول (air-gapped) يعني أن بنية LLM التحتية معزولة تمامًا عن الإنترنت. بلا اتصال بالإنترنت، بلا استدعاءات API خارجية، بلا خطر تسريب البيانات. اعتبارًا من أبريل 2026، هذا هو المعيار للحكومات والجهات العسكرية والمؤسسات المالية التي تتعامل مع بيانات مصنّفة أو شديدة الحساسية.',
       metaDescription: 'النشر المعزول يقطع كل اتصال خارجي للبيانات المصنّفة. بنية عزل كاملة، أمان الشبكة وإدارة التحديثات بلا إنترنت للحكومات والمؤسسات المالية.',
@@ -799,6 +802,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Enterprise',
       title: 'LLMs Locais On-Prem Air-Gapped: Implantação Isolada para Ambientes Classificados',
+      heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-pt.png',
       seoTitle: 'Implantação de LLM Local com Air-Gap',
       intro: 'A implantação air-gapped significa que a infraestrutura do LLM está completamente isolada da internet. Sem conexão à internet, sem chamadas a APIs externas, sem risco de exfiltração de dados. Em abril de 2026, este é o padrão para governos, forças armadas e instituições financeiras que lidam com dados classificados ou altamente sensíveis. No Brasil, organizações sujeitas à LGPD que processam dados sensíveis (saúde, finanças, dados pessoais de alto risco) se beneficiam especialmente de implantações air-gapped para atender às exigências da ANPD.',
       metaDescription: 'Implantação de LLM local com air-gap: arquitetura de isolamento completo, segurança de rede, gestão de atualizações e tratamento de dados classificados.',
@@ -919,6 +923,36 @@ schema: {
             '**Esquecer de desativar rádios do hardware.** Muitos servidores modernos têm Wi-Fi e Bluetooth integrados. Desabilite-os no BIOS/UEFI e fisicamente se possível.',
           ],
         },
+        faqSection: {
+          id: 'faq',
+          title: 'Perguntas frequentes sobre sistemas air-gapped',
+          faqs: [
+            {
+              q: 'Como atualizamos os modelos em um sistema air-gapped?',
+              a: 'Manualmente via USB criptografado, ou por meio de uma rede interna segura isolada da internet. Todas as atualizações exigem aprovação de controle de mudanças e trilhas de auditoria.',
+            },
+            {
+              q: 'Podemos usar backups em nuvem para sistemas air-gapped?',
+              a: 'Não. Backups em nuvem exigem conexão à internet (o que anula o air-gapping). Use backups físicos (discos rígidos criptografados) armazenados em instalação segura separada.',
+            },
+            {
+              q: 'O air-gapped é realmente seguro contra todos os ataques?',
+              a: 'Na maior parte, mas ameaças internas permanecem. O air-gapped é seguro contra ataques remotos, mas o acesso físico ou de pessoal interno pode comprometê-lo.',
+            },
+            {
+              q: 'Quanto custa uma implantação air-gapped?',
+              a: 'O hardware custa entre US$ 50 mil e US$ 500 mil (não muito mais que um ambiente on-prem regular). Os custos operacionais (segurança, auditoria, treinamento) são de 5 a 10 vezes maiores devido aos processos manuais.',
+            },
+            {
+              q: 'Podemos usar ferramentas padrão (Ollama, vLLM) em ambientes air-gapped?',
+              a: 'Sim. Ambas as ferramentas funcionam sem internet. Implante uma vez e depois não é necessária conectividade com a internet. Garanta que todas as dependências sejam instaladas offline.',
+            },
+            {
+              q: 'E se precisarmos de conformidade com o GDPR mas não precisarmos de air-gapping completo?',
+              a: 'Para workloads em que o air-gapping não é necessário mas o GDPR é, [opções de GPU em nuvem compatíveis com a UE →](/pt/local-llms/eu-cloud-gpu-gdpr-2026) (Hetzner, Scaleway, OVHcloud) oferecem residência de dados na UE sem a complexidade do isolamento.',
+            },
+          ],
+        },
         relatedReading: {
           id: 'related-reading',
           title: 'Leituras relacionadas',
@@ -952,11 +986,38 @@ schema: {
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Implantação de LLM Local Air-Gapped',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Isolamento Completo de Rede',
+            'description': 'A infraestrutura air-gapped não possui conexão de rede com a internet ou qualquer sistema externo, garantindo acesso externo zero.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Procedimentos de Atualização Manual',
+            'description': 'As atualizações de modelo exigem mídia física (pendrive USB) ou redes internas seguras apenas; sem acesso à nuvem.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Segurança Aprimorada',
+            'description': 'Protege dados classificados em ambientes governamentais, militares e financeiros que exigem proteção máxima de dados.',
+          },
+        ],
+      },
     },
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Enterprise',
       title: 'On-Prem Air-Gapped Local LLMs: Isolierte Bereitstellung für klassifizierte Umgebungen',
+      heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-de.png',
       seoTitle: 'Air-Gapped Local LLM Bereitstellung',
       intro: 'Air-Gapped-Bereitstellung bedeutet, dass die LLM-Infrastruktur vollständig vom Internet isoliert ist. Keine Internetverbindung, keine externen API-Aufrufe, kein Datenabfluss-Risiko. Ab April 2026 ist dies Standard für Behörden, Militär und Finanzinstitute, die mit klassifizierten oder hochsensiblen Daten umgehen.',
       metaDescription: 'Air-Gapped Local LLM Bereitstellung: komplette Isolierungsarchitektur, Netzwerksicherheit, Update-Verwaltung und Klassifizierungsdaten-Handling.',
@@ -1183,6 +1244,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Enterprise',
       title: 'On-Prem Air-Gapped Local LLMs: Déploiement isolé pour environnements classifiés',
+      heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-fr.png',
       seoTitle: 'Déploiement d\'LLM air-gapped isolé',
       intro: 'Le déploiement air-gapped signifie que l\'infrastructure LLM est complètement isolée d\'Internet. Aucune connexion Internet, aucun appel API externe, aucun risque d\'exfiltration de données. Depuis avril 2026, c\'est la norme pour les gouvernements, militaires et institutions financières traitant des données classifiées ou hautement sensibles.',
       metaDescription: 'Déploiement air-gapped d\'LLM local: architecture d\'isolement complet, sécurité réseau, gestion des mises à jour et données classifiées.',
@@ -1399,6 +1461,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Enterprise',
       title: 'オンプレミス・エアギャップローカルLLM: 機密環境の隔離デプロイ',
+      heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-ja.png',
       seoTitle: 'エアギャップローカルLLM デプロイメント',
       intro: 'エアギャップデプロイメントはLLMインフラをインターネットから完全に隔離することを意味します。インターネット接続なし、外部API呼び出しなし、データ流出リスクなし。2026年4月時点、これは機密またはきわめて機密データを扱う政府、軍事、金融機関の標準。',
       metaDescription: 'エアギャップローカルLLMデプロイメント: 完全隔離アーキテクチャ、ネットワークセキュリティ、更新管理、機密データ処理。',
@@ -1457,6 +1520,15 @@ schema: {
             '**管理:** エアギャップ内の管理ワークステーション、シリアルコンソール、物理キーボード。',
             '**更新メディア:** USB 3.0 (暗号化)、光学メディア(DVD-R)、専用転送デバイス。',
           ],
+          numberedItems: [
+            '**専用ハードウェア:** LLM推論専用のサーバー。他の用途には使用しない。',
+            '**隔離されたネットワーク:** 企業ネットワークやインターネットへの接続なし。最大でも独立したVLANのみ。',
+            '**暗号化ストレージ:** すべてのモデルファイル、データ、ログを保存時に暗号化。',
+            '**制御されたアクセス:** 権限を持つ担当者のみアクセス可能。多要素認証が必須。',
+            '**物理的セキュリティ:** 施錠されたサーバールーム、監視カメラ、アクセスログ。',
+            '**リムーバブルメディア禁止:** USBポートを無効化、CD/DVDドライブを撤去。',
+            '**ローカル監視:** ログはシステム内に保持され、外部の監視サービスには送信しない。',
+          ],
         },
         'network-isolation': {
           id: 'network-isolation',
@@ -1513,6 +1585,36 @@ schema: {
             'テスト環境の甘いセキュリティ。テスト = 本番同等セキュリティ必須。',
           ],
         },
+        faqSection: {
+          id: 'faq',
+          title: 'エアギャップシステムに関するよくある質問',
+          faqs: [
+            {
+              q: 'エアギャップシステムでモデルをどう更新しますか?',
+              a: '暗号化USB経由での手動更新、またはインターネットから隔離された内部セキュアネットワーク経由で行います。すべての更新は変更管理の承認と監査証跡が必要です。',
+            },
+            {
+              q: 'エアギャップシステムでクラウドバックアップを使用できますか?',
+              a: 'いいえ。クラウドバックアップにはインターネット接続が必要であり、エアギャップの原則に反します。別の安全な施設に保管する物理バックアップ(暗号化ハードドライブ)を使用してください。',
+            },
+            {
+              q: 'エアギャップはすべての攻撃に対して本当に安全ですか?',
+              a: 'おおむね安全ですが、内部脅威は残ります。エアギャップはリモート攻撃には強いものの、物理的アクセスや内部者によるアクセスで侵害される可能性があります。',
+            },
+            {
+              q: 'エアギャップデプロイメントのコストはどれくらいですか?',
+              a: 'ハードウェアコストは5万〜50万ドル(通常のオンプレミスとさほど変わりません)。運用コスト(セキュリティ、監査、トレーニング)は手動プロセスのため5〜10倍高くなります。',
+            },
+            {
+              q: 'エアギャップ環境で標準ツール(Ollama、vLLM)を使用できますか?',
+              a: 'はい。どちらのツールもインターネットなしで動作します。一度デプロイすれば、その後はインターネット接続は不要です。すべての依存関係がオフラインでインストールされていることを確認してください。',
+            },
+            {
+              q: '完全なエアギャップは不要だがGDPR準拠が必要な場合はどうすればよいですか?',
+              a: 'エアギャップが不要でGDPR準拠が必要なワークロードには、[EU準拠のクラウドGPUオプション →](/ja/local-llms/eu-cloud-gpu-gdpr-2026)(Hetzner、Scaleway、OVHcloud)が、隔離の複雑さなしにEUデータ所在地を提供します。',
+            },
+          ],
+        },
         'relatedReading': {
           id: 'related-reading',
           title: '関連記事',
@@ -1544,11 +1646,38 @@ schema: {
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'エアギャップローカルLLMデプロイメント',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': '完全なネットワーク隔離',
+            'description': 'エアギャップインフラはインターネットや外部システムへのネットワーク接続を一切持たず、外部アクセスをゼロに保ちます。',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': '手動更新手順',
+            'description': 'モデルの更新には物理メディア(USBドライブ)または内部セキュアネットワークのみを使用し、クラウドアクセスはありません。',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': '強化されたセキュリティ',
+            'description': '政府、軍事、金融環境における機密データを保護し、最大限のデータ保護を実現します。',
+          },
+        ],
+      },
     },
     zh: {
       freshness_tier: 'semi_annual',
       theme: 'Enterprise',
       title: '本地LLM气隙部署: 隔离架构与分类数据保护',
+      heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-zh.png',
       seoTitle: '气隙本地LLM部署: 隔离架构与安全指南',
       intro: '气隙部署是指LLM基础设施完全隔离于互联网。无互联网连接、无外部API调用、无数据泄露风险。截至2026年4月，这是政府、军事和金融机构处理分类或高度敏感数据的标准做法。',
       metaDescription: '了解如何在完全隔离的网络环境中部署本地LLM: 包括网络隔离架构设计、模型离线管理、安全更新流程和分类信息保护。适用于政府、军事、金融机构。',
@@ -1812,6 +1941,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Enterprise',
       title: '온프레미스 에어갭 로컬 LLM: 기밀 환경을 위한 완전 격리 배포',
+    heroImage: '/images/on-prem-air-gapped-local-llm-overview-hero-ko.png',
       seoTitle: '에어갭 로컬 LLM 배포',
       intro: '에어갭 배포란 LLM 인프라가 인터넷으로부터 완전히 격리된 상태를 의미합니다. 인터넷 연결 없음, 외부 API 호출 없음, 데이터 유출 위험 없음. 2026년 4월 기준으로, 이는 기밀 또는 고도로 민감한 데이터를 다루는 정부, 군사, 금융 기관의 표준 방식입니다.',
       metaDescription: '에어갭 로컬 LLM 배포: 완전 격리 아키텍처, 네트워크 보안, 업데이트 관리, 기밀 데이터 처리.',
@@ -1983,6 +2113,32 @@ schema: {
             '에어갭 보안 가이드라인 -- ietf.org (네트워크 격리에 관한 RFC 문서)',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '에어갭 로컬 LLM 배포',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': '완전한 네트워크 격리',
+            'description': '에어갭 인프라는 인터넷이나 외부 시스템과의 네트워크 연결이 전혀 없어 외부 접근을 원천 차단합니다.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': '수동 업데이트 절차',
+            'description': '모델 업데이트는 물리적 매체(USB 드라이브) 또는 내부 보안 네트워크를 통해서만 이루어지며, 클라우드 접근은 없습니다.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': '강화된 보안',
+            'description': '최대 수준의 데이터 보호가 필요한 정부, 군사, 금융 환경의 기밀 데이터를 보호합니다.',
+          },
+        ],
       },
     },
   };

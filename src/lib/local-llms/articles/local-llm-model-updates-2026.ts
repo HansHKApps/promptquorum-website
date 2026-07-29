@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Local LLM Model Updates 2026: Every Major Open-Weight Release This Year',
+      heroImage: '/images/local-llm-model-updates-2026-overview-hero-en.png',
       dateModified: '2026-06-21',
       seoTitle: 'Local LLM 2026: Every Major Model Release + Ollama Status',
       intro: 'As of April 2026, the most significant local LLM releases this year include Meta Llama 3.3 70B (December 2025), DeepSeek-R1 (January 2025), Qwen3 and Qwen3-Coder families (September 2025), Microsoft Phi-4 (December 2024), and Google Gemma 3 (February 2026). This article tracks all major model releases with their key specifications and Ollama availability.',
@@ -315,6 +316,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Actualizaciones de modelos LLM locales 2026: Todos los lanzamientos open-weight importantes del año',
+      heroImage: '/images/local-llm-model-updates-2026-overview-hero-es.png',
       seoTitle: 'LLM locales 2026: lanzamientos y estado en Ollama',
       intro: 'A abril de 2026, los lanzamientos de LLM locales más significativos de este año incluyen Meta Llama 3.3 70B (diciembre de 2025), DeepSeek-R1 (enero de 2025), las familias Qwen3 y Qwen3-Coder (septiembre de 2025), Microsoft Phi-4 (diciembre de 2024) y Google Gemma 3 (febrero de 2026). Este artículo registra todos los lanzamientos principales de modelos con sus especificaciones clave y disponibilidad en Ollama.',
       metaDescription: 'Actualizaciones de LLM locales 2026: Gemma 3, Llama 4 Scout y lanzamientos del Q1 con especificaciones, benchmarks MMLU y disponibilidad en Ollama.',
@@ -623,6 +625,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'تحديثات نماذج ⁨LLM⁩ المحلية ⁨2026⁩: جميع الإصدارات مفتوحة الأوزان المهمة في العام',
+      heroImage: '/images/local-llm-model-updates-2026-overview-hero-ar.png',
       seoTitle: 'تحديثات نماذج ⁨LLM 2026⁩: ⁨Llama⁩ و⁨Gemma⁩ و⁨Qwen⁩ في ⁨Ollama⁩',
       intro: 'اعتباراً من أبريل 2026، تشمل أهم إصدارات نماذج LLM المحلية لهذا العام Meta Llama 3.3 70B (ديسمبر 2025)، وDeepSeek-R1 (يناير 2025)، وعائلتي Qwen3 وQwen3-Coder (سبتمبر 2025)، وMicrosoft Phi-4 (ديسمبر 2024)، وGoogle Gemma 3 (فبراير 2026). يسجّل هذا المقال جميع إصدارات النماذج الرئيسية بمواصفاتها الأساسية وتوافرها في Ollama.',
       metaDescription: '⁨Gemma 3⁩ و⁨Llama 4 Scout⁩ و⁨Qwen3⁩ و⁨DeepSeek-R1⁩ — أبرز إصدارات نماذج ⁨LLM⁩ المفتوحة في ⁨2026⁩ بالمواصفات ونتائج ⁨MMLU⁩ وتوافرها الفوري في ⁨Ollama⁩.',
@@ -931,6 +934,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Atualizações de modelos LLM locais 2026: Todos os grandes lançamentos open-weight do ano',
+      heroImage: '/images/local-llm-model-updates-2026-overview-hero-pt.png',
       seoTitle: 'LLMs locais 2026: lançamentos e status no Ollama',
       intro: 'A partir de abril de 2026, os maiores lançamentos de LLM local do ano são: Meta Llama 3.3 70B (dezembro de 2025), DeepSeek-R1 (janeiro de 2025), famílias Qwen3 e Qwen3-Coder (setembro de 2025), Microsoft Phi-4 (dezembro de 2024) e Google Gemma 3 (fevereiro de 2026). Este artigo rastreia todos os grandes lançamentos de modelos com suas especificações principais e disponibilidade no Ollama.',
       metaDescription: 'Atualizações de LLM local 2026: Gemma 3 (fev), Llama 4 Scout (mar) e 4 lançamentos do T1 com especificações, benchmarks MMLU e status no Ollama. Abril 2026.',
@@ -972,10 +976,113 @@ schema: {
           ],
         },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Principais lançamentos de LLM local no T1 2026',
+        'numberOfItems': 4,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Gemma 3 (todos os tamanhos)',
+            'description': 'Lançado em fevereiro de 2026 pelo Google. Visão em todos os tamanhos. Contexto de 128K. Apache 2.0. ollama run gemma3:9b',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Llama 4 Scout (preview)',
+            'description': 'Lançado em março de 2026 pela Meta. Arquitetura MoE. Contexto de 10M de tokens anunciado. Ainda não disponível no Ollama.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Mistral Small 3.2',
+            'description': 'Lançado em fevereiro de 2026 pela Mistral AI. Melhora no seguimento de instruções em relação ao Small 3.1. ollama run mistral-small3.2',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 4,
+            'name': 'Phi-4 Mini',
+            'description': 'Lançado em janeiro de 2026 pela Microsoft. 3,8B parâmetros. 70% no HumanEval. Contexto de 128K. ollama run phi4-mini',
+          },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Com que rapidez os novos modelos aparecem no Ollama após o lançamento?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Normalmente de 1 a 7 dias para grandes lançamentos da Meta, Google, Mistral e Alibaba. O Llama 3.3 70B apareceu na biblioteca do Ollama 3 dias após o lançamento open-weight da Meta. Modelos menores ou da comunidade podem levar de 2 a 4 semanas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Devo migrar do Llama 3.3 8B para um modelo mais novo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A atualização é opcional se você estiver satisfeito com a qualidade atual. O Qwen3 7B pontua ligeiramente mais alto em benchmarks, com melhor suporte multilíngue e de código. Para uso geral com foco em inglês, a diferença prática de qualidade é pequena.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Os modelos locais algum dia igualarão a qualidade dos modelos de nuvem de ponta atuais?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A tendência sugere que sim -- com um atraso de 18 a 24 meses. O GPT-4 (2023) é igualado pelo Llama 3.3 70B (2025, executável localmente). O GPT-5.5 (2024) provavelmente terá um equivalente executável localmente até o final de 2026 ou 2027.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que aconteceu com o DeepSeek e por que isso foi significativo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O DeepSeek-R1 (janeiro de 2025) demonstrou que um laboratório de IA chinês conseguia produzir modelos com capacidade de raciocínio competitivos com o OpenAI o1 a um custo de treinamento menor. O lançamento open-weight tornou um modelo de raciocínio de ponta disponível localmente. O DeepSeek-R1 7B atinge 52% no MATH contra 28% do Mistral Small, graças ao treinamento com cadeia de raciocínio.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é o Llama 4 e ele já está disponível localmente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A partir de abril de 2026, a Meta lançou uma prévia do Llama 4 Scout -- um modelo de mistura de especialistas (MoE) que alega suportar até 10M de tokens de contexto. O lançamento open-weight completo ainda não está disponível para inferência local. A biblioteca do Ollama ainda não inclui variantes do Llama 4.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Existem modelos locais para empresas ou setores regulados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A Mistral AI oferece suporte de nível empresarial para os modelos Mistral. Sua origem europeia é relevante para conformidade com o GDPR sob o EU AI Act (em vigor desde fevereiro de 2025). Qualquer modelo implantado localmente pode atender a requisitos de residência de dados -- o trabalho de conformidade está na infraestrutura de implantação, não na escolha do modelo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Com qual modelo um iniciante completo deve começar em 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Llama 3.2 3B ou Gemma 3 4B. Ambos rodam em hardware modesto (4-6 GB de VRAM), têm documentação extensa e têm bom desempenho em tarefas gerais. O Llama 3.2 3B tem mais guias da comunidade. O Gemma 3 4B é mais novo, um pouco mais rápido e suporta visão. Para usuários não técnicos, o LM Studio facilita o uso de ambos sem linha de comando.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Vale a pena atualizar para novos modelos se o meu modelo atual funciona bem?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Somente se você encontrar limitações específicas de qualidade. Se seu modelo de 7B ou 8B atende aos seus casos de uso, a atualização é opcional. Atualize se notar erros de raciocínio, suporte multilíngue fraco ou baixa capacidade de programação. O Qwen3 7B supera o Llama 3.3 8B na maioria dos benchmarks e é uma opção segura de atualização.',
+            },
+          },
+        ],
+      },
     },
     ja: {
       theme: 'ベストモデル',
       title: 'ローカルLLMモデルアップデート2026年：すべての大型オープンウェイトリリース',
+      heroImage: '/images/local-llm-model-updates-2026-overview-hero-ja.png',
       seoTitle: 'ローカルLLM 2026年：すべての主要モデルリリース + Ollama対応',
       intro: '2026年4月の現在、今年最大のローカルLLMリリースは以下の通りです：Meta Llama 3.3 70B（2025年12月）、DeepSeek-R1（2025年1月）、Qwen3 と Qwen3-Coder ファミリー（2025年9月）、Microsoft Phi-4（2024年12月）、Google Gemma 3（2026年2月）。この記事では、すべての大型モデルリリースを主要仕様と Ollama の可用性とともに追跡します。',
       metaDescription: 'ローカルLLMモデル更新2026：Gemma 3、Llama 4 Scout、Q1発布4件追跡、規格・MMUベンチマーク・Ollama対応。2026年4月。',
@@ -1205,6 +1312,7 @@ schema: {
     de: {
       theme: 'Beste Modelle',
       title: 'Lokale LLM-Modell-Updates 2026: Alle großen Open-Weight-Releases dieses Jahr',
+      heroImage: '/images/local-llm-model-updates-2026-overview-hero-de.png',
       seoTitle: 'Lokale LLMs 2026: Gemma 3, Llama 4 und Ollama-Status',
       intro: 'Stand April 2026 sind die bedeutendsten lokalen LLM-Releases dieses Jahr: Meta Llama 3.3 70B (Dezember 2025), DeepSeek-R1 (Januar 2025), Qwen3 und Qwen3-Coder Familien (September 2025), Microsoft Phi-4 (Dezember 2024) und Google Gemma 3 (Februar 2026). Dieser Artikel verfolgt alle großen Modell-Releases mit ihren Schlüsselspezifikationen und Ollama-Verfügbarkeit.',
       metaDescription: 'Lokale LLM-Updates 2026: Gemma 3 (Feb), Llama 4 Scout (Mrz) und 4 Q1-Releases mit Spezifikationen, MMLU-Benchmarks und Ollama-Status. April 2026.',
@@ -1405,6 +1513,7 @@ schema: {
     zh: {
       theme: '最佳模型',
       title: '本地LLM模型更新2026年：所有大型开源权重发布',
+      heroImage: '/images/local-llm-model-updates-2026-overview-hero-zh.png',
       seoTitle: '本地LLM新模型2026：Gemma 3、Llama 4与Ollama支持',
       intro: '截至2026年4月，今年最重要的本地LLM发布包括：Meta Llama 3.3 70B（2025年12月）、DeepSeek-R1（2025年1月）、Qwen3和Qwen3-Coder系列（2025年9月）、Microsoft Phi-4（2024年12月）和Google Gemma 3（2026年2月）。本文追踪所有主要模型发布及其关键规格和Ollama可用性。',
       metaDescription: '本地LLM模型更新2026：Gemma 3（2月）、Llama 4 Scout（3月）等6款Q1发布，含规格、MMLU基准和Ollama命令。2026年4月更新。',
@@ -1717,6 +1826,7 @@ schema: {
     fr: {
       theme: 'Meilleurs modèles',
       title: 'Mises à jour des LLM locaux 2026 : Chaque release open-weight majeure de l\'année',
+      heroImage: '/images/local-llm-model-updates-2026-overview-hero-fr.png',
       seoTitle: 'LLM locaux 2026: Gemma 3, Llama 4 et disponibilité Ollama',
       intro: 'En avril 2026, les mises à jour les plus importantes des LLM locaux de cette année incluent Meta Llama 3.3 70B (décembre 2025), DeepSeek-R1 (janvier 2025), les familles Qwen3 et Qwen3-Coder (septembre 2025), Microsoft Phi-4 (décembre 2024) et Google Gemma 3 (février 2026). Cet article suit toutes les releases de modèles majeurs avec leurs spécifications clés et la disponibilité Ollama.',
       metaDescription: 'Mises à jour LLM locaux 2026: Gemma 3, Llama 4 Scout, Q1 releases avec spécifications, benchmarks MMLU et Ollama. Avril 2026.',
@@ -1916,6 +2026,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: '로컬 LLM 모델 업데이트 2026: 올해 출시된 주요 오픈 웨이트 모델 총정리',
+    heroImage: '/images/local-llm-model-updates-2026-overview-hero-ko.png',
       seoTitle: '로컬 LLM 2026: 주요 모델 출시 현황 + Ollama 지원 여부',
       intro: '2026년 4월 기준, 올해의 가장 중요한 로컬 LLM 출시 모델로는 Meta Llama 3.3 70B (2025년 12월), DeepSeek-R1 (2025년 1월), Qwen3 및 Qwen3-Coder 패밀리 (2025년 9월), Microsoft Phi-4 (2024년 12월), 그리고 Google Gemma 3 (2026년 2월)가 있습니다. 본 문서는 모든 주요 모델 출시 현황을 주요 사양 및 Ollama 지원 여부와 함께 추적합니다.',
       metaDescription: '로컬 LLM 모델 업데이트 2026: Gemma 3, Llama 4 Scout, Q1 출시 모델을 사양, MMLU 벤치마크, Ollama 지원 여부와 함께 정리했습니다. 2026년 4월 기준.',
@@ -2089,6 +2200,38 @@ schema: {
             'DeepSeek AI. (2025). "DeepSeek-R1 Technical Paper." https://arxiv.org/abs/2501.12948 -- DeepSeek-R1의 연쇄 사고 아키텍처 및 MATH 벤치마크 결과.',
           ],
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '2026년 1분기 주요 로컬 LLM 출시 모델',
+        'numberOfItems': 4,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Gemma 3 (전 크기)',
+            'description': '2026년 2월 Google에서 출시. 모든 크기에서 비전 지원. 128K 컨텍스트. Apache 2.0. ollama run gemma3:9b',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Llama 4 Scout (프리뷰)',
+            'description': '2026년 3월 Meta에서 출시. MoE 아키텍처. 1000만 토큰 컨텍스트 주장. 아직 Ollama에서 사용 불가.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Mistral Small 3.2',
+            'description': '2026년 2월 Mistral AI에서 출시. Small 3.1 대비 향상된 명령어 수행 능력. ollama run mistral-small3.2',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 4,
+            'name': 'Phi-4 Mini',
+            'description': '2026년 1월 Microsoft에서 출시. 38억 파라미터. HumanEval 70%. 128K 컨텍스트. ollama run phi4-mini',
+          },
+        ],
       },
     },
   };

@@ -1287,6 +1287,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Welches Modell für Continue.dev?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 14B auf RTX 4060 Ti 16 GB: beste Balance aus Geschwindigkeit und Qualität für IDE-Autocomplete.' } },
       ],
     },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Qwen oder DeepSeek in Continue.dev, Cline oder Cursor Local Mode einrichten',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Ollama installieren und Qwen-Modell laden: ollama pull qwen2.5-coder:32b' },
+        { '@type': 'HowToStep', position: 2, name: 'In der Continue.dev config.json den Provider auf "ollama" und das Modell auf "qwen2.5-coder:32b" setzen' },
+        { '@type': 'HowToStep', position: 3, name: 'Für Cline: baseUrl auf http://localhost:11434/v1 und apiKey auf "ollama" setzen' },
+        { '@type': 'HowToStep', position: 4, name: 'Für DeepSeek-V3 über die API: api.deepseek.com mit eigenem DeepSeek-API-Schlüssel verwenden' },
+        { '@type': 'HowToStep', position: 5, name: 'Mit einer komplexen Refactoring-Aufgabe die Antwortqualität vor dem Commit vergleichen' },
+      ],
+    },
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -1388,6 +1400,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Puis-je exécuter DeepSeek-V3 localement ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. DeepSeek-V3 (236B MoE) nécessite ~140 Go de VRAM. Alternatives locales : DeepSeek-R1-Distill-Qwen-32B (RTX 4090) ou distillations plus petites.' } },
       ],
     },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Configurer Qwen ou DeepSeek dans Continue.dev, Cline ou Cursor Local Mode',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Installer Ollama et récupérer votre modèle Qwen : ollama pull qwen2.5-coder:32b' },
+        { '@type': 'HowToStep', position: 2, name: 'Dans config.json de Continue.dev, définir le provider sur "ollama" et le modèle sur "qwen2.5-coder:32b"' },
+        { '@type': 'HowToStep', position: 3, name: 'Pour Cline : définir baseUrl sur http://localhost:11434/v1 et apiKey sur "ollama"' },
+        { '@type': 'HowToStep', position: 4, name: 'Pour DeepSeek-V3 via API : utiliser api.deepseek.com avec votre clé API DeepSeek' },
+        { '@type': 'HowToStep', position: 5, name: 'Tester avec une tâche de refactoring complexe pour comparer la qualité des réponses avant de valider' },
+      ],
+    },
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -1487,6 +1511,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       mainEntity: [
         { '@type': 'Question', name: 'DeepSeek-V3をGPUでローカル実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。DeepSeek-V3（236B MoE）は約140GB VRAMが必要。ローカル代替：DeepSeek-R1-Distill-Qwen-32B（RTX 4090）。' } },
+      ],
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Continue.dev、Cline、Cursor Local ModeでQwenまたはDeepSeekを設定する',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Ollamaをインストールし、Qwenモデルを取得する: ollama pull qwen2.5-coder:32b' },
+        { '@type': 'HowToStep', position: 2, name: 'Continue.devのconfig.jsonでproviderを"ollama"に、modelを"qwen2.5-coder:32b"に設定する' },
+        { '@type': 'HowToStep', position: 3, name: 'Clineの場合：baseUrlをhttp://localhost:11434/v1に、apiKeyを"ollama"に設定する' },
+        { '@type': 'HowToStep', position: 4, name: 'DeepSeek-V3をAPI経由で使う場合：api.deepseek.comを自分のDeepSeek APIキーで利用する' },
+        { '@type': 'HowToStep', position: 5, name: 'コミット前に複雑なリファクタリングタスクで応答品質を比較テストする' },
       ],
     },
     schema: {
@@ -1604,6 +1640,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: '能在GPU上本地运行DeepSeek-V3吗？', acceptedAnswer: { '@type': 'Answer', text: '不能。DeepSeek-V3（236B MoE）需要约140GB显存。本地替代：DeepSeek-R1-Distill-Qwen-32B（RTX 4090）。' } },
         { '@type': 'Question', name: 'Continue.dev最适合哪个本地模型？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 14B（RTX 4060 Ti 16GB）：最佳速度质量平衡（14-18 tok/s）。有RTX 4090选Qwen3-Coder 32B。' } },
+      ],
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: '在Continue.dev、Cline或Cursor Local Mode中配置Qwen或DeepSeek',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: '安装Ollama并拉取Qwen模型：ollama pull qwen2.5-coder:32b' },
+        { '@type': 'HowToStep', position: 2, name: '在Continue.dev的config.json中将provider设为"ollama"，model设为"qwen2.5-coder:32b"' },
+        { '@type': 'HowToStep', position: 3, name: 'Cline设置：将baseUrl设为http://localhost:11434/v1，apiKey设为"ollama"' },
+        { '@type': 'HowToStep', position: 4, name: '通过API使用DeepSeek-V3：使用api.deepseek.com及自己的DeepSeek API密钥' },
+        { '@type': 'HowToStep', position: 5, name: '提交前用一个复杂的重构任务测试并比较响应质量' },
       ],
     },
     schema: {

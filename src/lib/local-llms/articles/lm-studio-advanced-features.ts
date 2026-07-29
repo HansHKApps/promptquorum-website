@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
+      heroImage: '/images/lm-studio-advanced-features-overview-hero-en.png',
       title: 'LM Studio Advanced Features in 2026: GPU Settings, LoRA, and Fine-Tuning',
       dateModified: '2026-06-20',
       seoTitle: 'LM Studio vs Ollama: API Server, GPU Layers & LoRA 2026',
@@ -259,6 +260,7 @@ schema: {
     },
     de: {
       theme: 'Tools & Interfaces',
+      heroImage: '/images/lm-studio-advanced-features-overview-hero-de.png',
       title: 'LM Studio erweiterte Funktionen 2026: GPU-Einstellungen, LoRA und Fine-Tuning',
       seoTitle: 'LM Studio 2026: GPU, Kontextfenster und API konfigurieren',
       intro: '**Aktivieren Sie die lokale API (localhost:1234), konfigurieren Sie GPU-Speicher für Ihre Hardware, erweitern Sie das Kontextfenster bei Bedarf. Überspringen Sie LoRA--verwenden Sie stattdessen Text-Generation-WebUI.** LM Studio\'s erweiterte Einstellungen ermöglichen es Ihnen, für Produktions-Workloads zu optimieren, VRAM für andere Apps freizugeben und über REST-Endpunkte mit externen Tools zu integrieren.',
@@ -637,6 +639,7 @@ schema: {
     },
     fr: {
       theme: 'Tools & Interfaces',
+      heroImage: '/images/lm-studio-advanced-features-overview-hero-fr.png',
       title: 'LM Studio : Fonctionnalités avancées 2026 (Paramètres GPU, LoRA et Fine-Tuning)',
       seoTitle: 'LM Studio 2026 : GPU, fenêtre de contexte et API locale',
       intro: '**Activez l\'API locale (localhost:1234), configurez la mémoire GPU pour votre matériel, étendez la fenêtre de contexte si nécessaire. Ignorez LoRA--utilisez plutôt Text-Generation-WebUI.** Les paramètres avancés de LM Studio vous permettent d\'optimiser pour les charges de travail en production, libérer le VRAM pour d\'autres applications et intégrer avec les outils externes via les points de terminaison REST.',
@@ -988,6 +991,7 @@ schema: {
     },
     ja: {
       theme: 'Tools & Interfaces',
+      heroImage: '/images/lm-studio-advanced-features-overview-hero-ja.png',
       seoTitle: 'LM Studio高度な機能 2026: GPU、API、ファインチューニング',
       metaDescription: 'LM Studio高度な機能：GPU最適化、コンテキストウィンドウ、API、LoRAファインチューニング、バッチ推論。デベロッパーガイド。無料--2026年4月。',
       publishDate: '2026-04-04',
@@ -1001,6 +1005,19 @@ schema: {
         'description': 'LM Studio高度な機能：GPU最適化、コンテキストウィンドウ、API、LoRAファインチューニング、バッチ推論。デベロッパーガイド。無料--2026年4月。',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'LM Studioの高度な機能を設定する方法',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'GPUメモリを設定する', 'text': '「設定」→GPUアクセラレーションのスライダーを開きます。VRAMの10〜100%の範囲で調整します。値を低くすると他のアプリ用にGPUを解放でき、値を高くすると推論速度が最大化されます。' },
+          { '@type': 'HowToStep', 'name': 'コンテキストウィンドウを調整する', 'text': '「設定」でコンテキスト長をモデルの上限まで増やします。コンテキストが長くなるほどVRAM使用量は増えますが、履歴を失わずに長い会話が可能になります。' },
+          { '@type': 'HowToStep', 'name': 'ローカルAPI（ベータ版）を有効にする', 'text': '「設定」でローカルAPIを有効にすると、localhost:1234でOpenAI互換のエンドポイントが公開されます。OpenAI互換の任意のクライアントと連携できます。' },
+          { '@type': 'HowToStep', 'name': 'LoRAファインチューニングを設定する', 'text': '2026年4月時点で、LoRAファインチューニングはLM Studioに組み込まれていません。ファインチューニングのワークフローにはText-Generation-WebUIまたはトレーニングスクリプトを使用してください。' },
+          { '@type': 'HowToStep', 'name': 'バッチ推論を実行する', 'text': 'バッチモードを使用して複数のプロンプトを一度に処理します。評価、テスト、大規模な推論タスクに役立ちます。' },
+          { '@type': 'HowToStep', 'name': 'パフォーマンスをベンチマークする', 'text': '「パフォーマンス」タブでトークン/秒、レイテンシ、VRAM使用量を測定します。GPU/コンテキストを変更した後にベンチマークを実行し、改善を確認してください。' }
+        ]
       },
       sections: {
         tldr: {
@@ -1144,6 +1161,7 @@ schema: {
     },
     zh: {
       theme: 'Tools & Interfaces',
+      heroImage: '/images/lm-studio-advanced-features-overview-hero-zh.png',
       seoTitle: 'LM Studio高级功能 2026: GPU、API、微调',
       metaDescription: 'LM Studio高级功能：GPU优化、上下文窗口、API、LoRA微调和批量推理。开发者指南。免费--2026年4月。',
       publishDate: '2026-04-04',
@@ -1157,6 +1175,19 @@ schema: {
         'description': 'LM Studio高级功能：GPU优化、上下文窗口、API、LoRA微调和批量推理。开发者指南。免费--2026年4月。',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '如何配置 LM Studio 的高级功能',
+        'step': [
+          { '@type': 'HowToStep', 'name': '配置 GPU 内存', 'text': '打开"设置" → GPU 加速滑块。将其调整为 VRAM 的 10%-100%。数值越低，越能为其他应用释放 GPU；数值越高，推理速度越快。' },
+          { '@type': 'HowToStep', 'name': '调整上下文窗口', 'text': '在"设置"中，将上下文长度增加到模型上限。上下文越长，占用的 VRAM 越多，但可以在不丢失历史记录的情况下进行更长的对话。' },
+          { '@type': 'HowToStep', 'name': '启用本地 API（测试版）', 'text': '在"设置"中启用本地 API，即可在 localhost:1234 上暴露与 OpenAI 兼容的接口。可与任何兼容 OpenAI 的客户端集成。' },
+          { '@type': 'HowToStep', 'name': '设置 LoRA 微调', 'text': '截至 2026 年 4 月，LM Studio 尚未内置 LoRA 微调功能。微调工作流请使用 Text-Generation-WebUI 或训练脚本。' },
+          { '@type': 'HowToStep', 'name': '运行批量推理', 'text': '使用批处理模式一次处理多个提示词，适用于评估、测试和大规模推理任务。' },
+          { '@type': 'HowToStep', 'name': '进行性能基准测试', 'text': '在"性能"选项卡中测量每秒生成的 token 数、延迟和 VRAM 使用情况。在更改 GPU/上下文设置后运行基准测试以验证改进效果。' }
+        ]
       },
       sections: {
         tldr: {
@@ -1301,6 +1332,7 @@ schema: {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
+      heroImage: '/images/lm-studio-advanced-features-overview-hero-es.png',
       title: 'LM Studio: Funciones avanzadas 2026 (GPU, LoRA y ajuste fino)',
       seoTitle: 'LM Studio 2026: API local, capas GPU y LoRA explicados',
       intro: 'LM Studio es principalmente una app de chat, pero también incluye funciones avanzadas para desarrolladores: configuración de memoria GPU, ajuste de ventana de contexto, API compatible con OpenAI e integración con herramientas de ajuste fino. A partir de abril de 2026, LM Studio está expandiéndose más allá del chat para soportar flujos de trabajo profesionales como ajuste fino con LoRA e inferencia por lotes.',
@@ -1553,6 +1585,7 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
+      heroImage: '/images/lm-studio-advanced-features-overview-hero-ar.png',
       title: '⁨LM Studio⁩: الميزات المتقدمة ⁨2026⁩ (⁨GPU⁩ و⁨LoRA⁩ والضبط الدقيق)',
       seoTitle: '⁨LM Studio⁩: ⁨GPU⁩ و⁨API⁩ و⁨LoRA⁩ — إعداد متقدم ⁨2026⁩',
       intro: 'يُعد LM Studio في المقام الأول تطبيق محادثة، لكنه يتضمن أيضًا ميزات متقدمة للمطورين: إعداد ذاكرة GPU وضبط نافذة السياق وواجهة API متوافقة مع OpenAI والتكامل مع أدوات الضبط الدقيق. اعتبارًا من أبريل 2026، يتوسع LM Studio إلى ما بعد المحادثة لدعم سير العمل الاحترافي مثل الضبط الدقيق باستخدام LoRA والاستدلال على دفعات.',
@@ -1808,6 +1841,7 @@ schema: {
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
+      heroImage: '/images/lm-studio-advanced-features-overview-hero-pt.png',
       title: 'Recursos Avançados do LM Studio em 2026: GPU, LoRA e Fine-Tuning',
       seoTitle: 'LM Studio 2026: servidor API, camadas GPU e LoRA',
       intro: 'LM Studio é principalmente um aplicativo de chat, mas também inclui recursos avançados para desenvolvedores: configuração de memória GPU, ajuste de janela de contexto, API compatível com OpenAI e integração com ferramentas de fine-tuning. A partir de abril de 2026, o LM Studio está se expandindo além do chat para suportar fluxos de trabalho profissionais como fine-tuning com LoRA e inferência em batch.',
@@ -1851,6 +1885,19 @@ schema: {
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
         'educationalLevel': 'Advanced',
         'proficiencyLevel': 'Advanced',
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Como configurar os recursos avançados do LM Studio',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Configurar a memória GPU', 'text': 'Abra Configurações → controle deslizante de aceleração GPU. Ajuste de 10% a 100% da VRAM. Valores mais baixos liberam a GPU para outros aplicativos; valores mais altos maximizam a velocidade de inferência.' },
+          { '@type': 'HowToStep', 'name': 'Ajustar a janela de contexto', 'text': 'Em Configurações, aumente o comprimento de contexto até o limite do modelo. Mais contexto usa mais VRAM, mas permite conversas mais longas sem perder o histórico.' },
+          { '@type': 'HowToStep', 'name': 'Ativar a API local (Beta)', 'text': 'Ative o Servidor local em Configurações para expor endpoints compatíveis com OpenAI em localhost:1234. Integre com qualquer cliente compatível com OpenAI.' },
+          { '@type': 'HowToStep', 'name': 'Configurar o fine-tuning com LoRA', 'text': 'A partir de abril de 2026, o fine-tuning com LoRA não está integrado ao LM Studio. Use o Text-Generation-WebUI ou scripts de treinamento para fluxos de fine-tuning.' },
+          { '@type': 'HowToStep', 'name': 'Executar inferência em batch', 'text': 'Processe múltiplos prompts de uma vez usando o modo batch. Útil para avaliações, testes e tarefas de inferência em larga escala.' },
+          { '@type': 'HowToStep', 'name': 'Medir o desempenho', 'text': 'Use a aba Desempenho para medir tokens/segundo, latência e uso de VRAM. Faça benchmarks após mudanças de GPU/contexto para validar melhorias.' }
+        ]
       },
       sections: {
         tldr: {
@@ -1966,6 +2013,7 @@ schema: {
   ko: {
       freshness_tier: 'semi_annual',
       theme: '도구 및 인터페이스',
+    heroImage: '/images/lm-studio-advanced-features-overview-hero-ko.png',
       title: 'LM Studio 고급 기능 2026: GPU 설정, LoRA, 파인튜닝',
       seoTitle: 'LM Studio vs Ollama: API 서버, GPU 레이어 & LoRA 2026',
       intro: 'LM Studio는 기본적으로 채팅 앱이지만, 개발자를 위한 고급 기능도 포함하고 있습니다. GPU 메모리 구성, 컨텍스트 창 조정, OpenAI 호환 API, 파인튜닝 도구와의 통합이 가능합니다. 2026년 4월 기준으로 LM Studio는 채팅을 넘어 LoRA 파인튜닝과 배치 추론 등 전문적인 워크플로우를 지원하는 방향으로 확장되고 있습니다.',

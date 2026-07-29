@@ -54,18 +54,22 @@ export function SearchModal({ isOpen, onClose, lang }: Props) {
 
   const handleSelect = useCallback(
     (entry: SearchEntry) => {
-      sessionStorage.setItem(
-        'pq_last_search',
-        JSON.stringify({
-          query,
-          resultId: entry.id,
-          resultHub: entry.hub,
-          resultSection: entry.section,
-          resultLevel: entry.level,
-          resultTags: entry.tags,
-          timestamp: Date.now(),
-        }),
-      )
+      try {
+        sessionStorage.setItem(
+          'pq_last_search',
+          JSON.stringify({
+            query,
+            resultId: entry.id,
+            resultHub: entry.hub,
+            resultSection: entry.section,
+            resultLevel: entry.level,
+            resultTags: entry.tags,
+            timestamp: Date.now(),
+          }),
+        )
+      } catch {
+        // Storage can be unavailable (private browsing, quota, blocked) — navigation must not depend on it.
+      }
       onClose()
       router.push(entry.url)
     },

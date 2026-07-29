@@ -4,6 +4,7 @@ import type { Language } from '@/lib/blog/blogContent'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     title: 'RunPod vs Vast.ai vs Lambda Labs for LLM Inference (July 2026)',
+    heroImage: '/images/cloud-gpu-rental-comparison-2026-overview-hero-en.png',
     seoTitle: 'RunPod vs Vast.ai vs Lambda Labs: GPU Pricing 2026',
     metaDescription: 'RunPod vs Vast.ai vs Lambda Labs for LLM inference: RTX 4090, A100, H100, RTX 5090 hourly pricing, uptime SLA, and GDPR compliance compared. Updated July 2026.',
     intro: 'Renting cloud GPUs is 30–50% cheaper than buying hardware if you need occasional compute power. This canonical comparison tests three leading providers (RunPod, Vast.ai, Lambda Labs) for LLM inference by pricing, reliability, GDPR compliance, and ease of use. Refreshed monthly given how fast GPU rental pricing moves.',
@@ -583,6 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     title: 'RunPod vs Vast.ai vs Lambda Labs para Inferencia LLM (Julio 2026)',
+    heroImage: '/images/cloud-gpu-rental-comparison-2026-overview-hero-es.png',
     seoTitle: 'RunPod vs Vast.ai vs Lambda Labs: Precios GPU 2026',
     metaDescription: 'RunPod vs Vast.ai vs Lambda Labs para inferencia LLM: precios por hora de RTX 4090, A100, H100 y RTX 5090, SLA de uptime y cumplimiento GDPR. Actualizado julio 2026.',
     intro: 'Alquilar GPUs en la nube es un 30–50% más barato que comprar hardware si necesitas potencia de cómputo de forma ocasional. Esta comparativa canónica prueba tres proveedores líderes (RunPod, Vast.ai, Lambda Labs) para inferencia LLM en precio, fiabilidad, cumplimiento GDPR y facilidad de uso. Se actualiza mensualmente dado lo rápido que cambian los precios de alquiler de GPU.',
@@ -1142,6 +1144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     title: 'RunPod مقابل Vast.ai مقابل Lambda Labs لاستدلال LLM (يوليو 2026)',
+    heroImage: '/images/cloud-gpu-rental-comparison-2026-overview-hero-ar.png',
     seoTitle: 'RunPod مقابل Vast.ai مقابل Lambda Labs: أسعار GPU 2026',
     metaDescription: 'RunPod مقابل Vast.ai مقابل Lambda Labs لاستدلال LLM: أسعار RTX 4090 وA100 وH100 وRTX 5090 بالساعة، واتفاقية وقت التشغيل، وامتثال GDPR. محدَّثة يوليو 2026.',
     intro: 'استئجار وحدات GPU سحابية أرخص بنسبة 30–50% من شراء العتاد إن كنت تحتاج قوة الحوسبة بشكل عَرَضي. تختبر هذه المقارنة المرجعية ثلاثة مزودين رائدين (RunPod، Vast.ai، Lambda Labs) لاستدلال LLM من حيث السعر والموثوقية وامتثال GDPR وسهولة الاستخدام. مُحدَّثة شهرياً نظراً لسرعة تغيّر أسعار استئجار GPU.',
@@ -1699,6 +1702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     title: 'Aluguel de GPU na Nuvem 2026: RunPod vs Vast.ai vs Lambda Labs (Testado Maio 2026)',
+    heroImage: '/images/cloud-gpu-rental-comparison-2026-overview-hero-pt.png',
     seoTitle: 'Aluguel de GPU na nuvem 2026: RunPod vs Vast.ai vs Lambda',
     metaDescription: 'Compare RunPod, Vast.ai e Lambda Labs para inferência LLM: preços ($0,34–$2,99/hr), SLA de uptime, conformidade LGPD e tempo de configuração. 2026.',
     intro: 'Alugar GPUs na nuvem é 30–50% mais barato que comprar hardware se você precisa de poder computacional ocasional. Esta comparativa canônica testa três provedores líderes (RunPod, Vast.ai, Lambda Labs) por preço, confiabilidade, conformidade com regulamentações e facilidade de uso. Atualizado mensalmente.',
@@ -1811,6 +1815,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: 'Lambda Labs', description: 'SLA de uptime de 99,9%, suporte dedicado (Slack/email/telefone), focado em A100/H100. Preços premium justificados para cargas de trabalho de IA em produção.' },
       ],
     },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Como alugar sua primeira GPU na nuvem em 10 minutos',
+      description: 'Guia passo a passo para se cadastrar e executar sua primeira instância de GPU em qualquer provedor de nuvem.',
+      inLanguage: 'pt-BR',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Cadastre-se', text: 'Crie uma conta com e-mail e cartão de crédito (RunPod) ou GitHub (Vast.ai)' },
+        { '@type': 'HowToStep', position: 2, name: 'Selecione a GPU', text: 'Escolha o tipo de GPU (RTX 4090, RTX 5090, A100, H100) e a região conforme disponibilidade e preço' },
+        { '@type': 'HowToStep', position: 3, name: 'Escolha a imagem', text: 'Selecione o sistema operacional (Ubuntu 22.04 com CUDA é o padrão)' },
+        { '@type': 'HowToStep', position: 4, name: 'Configure o armazenamento', text: 'Configure o tamanho do disco (mínimo recomendado de 50 GB)' },
+        { '@type': 'HowToStep', position: 5, name: 'Inicie a instância', text: 'Clique em Start e aguarde de 30 a 60 segundos para a instância inicializar' },
+        { '@type': 'HowToStep', position: 6, name: 'Acesso SSH', text: 'Conecte via SSH ao IP fornecido usando as credenciais do painel' },
+        { '@type': 'HowToStep', position: 7, name: 'Instale as ferramentas', text: 'Execute: apt update && apt install -y python3-pip' },
+        { '@type': 'HowToStep', position: 8, name: 'Execute a carga de trabalho', text: 'Clone seu repositório e execute seu script de treinamento ou inferência' },
+        { '@type': 'HowToStep', position: 9, name: 'Monitore o uso', text: 'Acompanhe o relógio no painel do provedor para rastrear custos em tempo real' },
+        { '@type': 'HowToStep', position: 10, name: 'Pare a instância', text: 'Pare quando terminar; a cobrança cessa imediatamente' },
+      ],
+    },
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -1824,6 +1847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     title: 'RunPod vs Vast.ai vs Lambda Labs für LLM-Inferenz (Juli 2026)',
+    heroImage: '/images/cloud-gpu-rental-comparison-2026-overview-hero-de.png',
     seoTitle: 'RunPod vs Vast.ai vs Lambda Labs: GPU-Preise 2026',
     metaDescription: 'RunPod vs Vast.ai vs Lambda Labs für LLM-Inferenz: Stundenpreise für RTX 4090, A100, H100, RTX 5090, Verfügbarkeits-SLA und DSGVO-Konformität. Aktualisiert Juli 2026.',
     intro: 'Die Miete von Cloud-GPUs ist 30–50% billiger als der Kauf von Hardware, wenn Sie gelegentliche Rechenleistung benötigen. Dieser kanonische Vergleich testet drei führende Anbieter (RunPod, Vast.ai, Lambda Labs) für LLM-Inferenz nach Preisgestaltung, Zuverlässigkeit, DSGVO-Konformität und Benutzerfreundlichkeit. Wird monatlich aktualisiert, da sich Cloud-GPU-Preise schnell ändern.',
@@ -2113,6 +2137,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'EU-Regionen: Ja (Niederlande, Rumänien)',
           'Kostenlose Gemeinschaft: Starkes Discord-Ökosystem',
         ],
+        faqs: [
+          { q: 'Ist RunPod Secure Cloud zuverlässig?', a: 'Ja. Secure-Cloud-Instanzen haben eine SLA von 99% Verfügbarkeit und werden nicht unterbrochen, außer der Anbieter storniert die Instanz (sehr selten). On-Demand-Instanzen können mit 5 Minuten Vorlaufzeit unterbrochen werden.' },
+          { q: 'Kann ich benutzerdefinierte Docker-Images verwenden?', a: 'Ja. RunPod erlaubt benutzerdefinierte Docker-Images; laden Sie sie auf Docker Hub oder eine Registry hoch und referenzieren Sie sie per URL. Auch eine One-Click-Bereitstellung von Vorlagen mit vorinstallierten ML-Frameworks ist verfügbar.' },
+          { q: 'Wie pausiere ich eine Instanz?', a: 'Über die Pause-Schaltfläche im Dashboard. Ein Snapshot wird gespeichert. Während der Pause zahlen Sie nur für Speicherplatz (vernachlässigbare Kosten).' },
+          { q: 'Kann ich auf mehrere GPUs skalieren?', a: 'Ja. RunPod unterstützt Multi-GPU-Instanzen und verteiltes Training über die API.' },
+        ],
       },
       vastaiDetailed: {
         id: 'vastai-provider',
@@ -2129,6 +2159,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Setup-Zeit: 10 Minuten (technischer)',
           'AVV: Fall für Fall (Peer-to-Peer, nicht universell verfügbar)',
           'EU-Regionen: Pro Host (hängt vom Standort des einzelnen Hosts ab)',
+        ],
+        faqs: [
+          { q: 'Was passiert, wenn meine Spot-Instanz unterbrochen wird?', a: 'Spot-Instanzen können mit 15 Sekunden Vorlaufzeit unterbrochen werden, wenn der Anbieter die GPU zurückfordert. Verwenden Sie den Filter „Interruptible: Off" für stabile Instanzen (höhere Preise, stabiler).' },
+          { q: 'Habe ich Root-/Sudo-Zugriff?', a: 'Die meisten Anbieter gewähren Sudo-Zugriff; einige nicht. Prüfen Sie die Instanzdetails vor der Miete. Von Vast.ai nicht garantiert.' },
+          { q: 'Wie lade ich Daten hoch?', a: 'Verwenden Sie rsync oder scp über SSH. Für große Datensätze (>100 GB) speichern Sie auf einem angehängten /mnt/-Laufwerk (geringer Aufpreis) oder nutzen Sie eine Cloud-Storage-Brücke (S3, Google Drive).' },
+          { q: 'Sind die Preise wirklich so viel günstiger?', a: 'Ja, aber Spot-Preise schwanken. $0,08/h sind real, aber selten (Spitzenauslastung). Median $0,21/h ist typischer. Beobachten Sie die Preise, bevor Sie sich für den Produktivbetrieb auf Spot-Instanzen festlegen.' },
+          { q: 'Funktionieren die Vast.ai-Preise für Stable Diffusion genauso wie für LLM-Inferenz?', a: 'Ja — dieselben RTX-4090- und RTX-5090-Spot-Instanzen, die für LLM-Inferenz genutzt werden, führen auch Stable Diffusion und andere Bildgenerierungs-Workloads aus. Bildgenerierung ist in der Regel stärker VRAM-limitiert und weniger latenzempfindlich als Chat-Inferenz, weshalb Spot-/unterbrechbare Instanzen (günstiger, können zurückgefordert werden) meist gut für Batch-Bildgenerierung geeignet sind; reservieren Sie stabile „Interruptible: Off"-Instanzen nur, wenn Sie eine ununterbrochene lange Render-Warteschlange benötigen.' },
         ],
       },
       lambdalabsDetailed: {
@@ -2147,6 +2184,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Team-Funktionen: Mehrere Benutzer pro Konto',
           'Support: Slack, E-Mail, Telefon (echte Menschen)',
           'AVV: Ja, aber nur US-Infrastruktur (nicht DSGVO für EU-Personendaten)',
+        ],
+        faqs: [
+          { q: 'Lohnt sich der Aufpreis bei Lambda Labs?', a: 'Ja, wenn Sie eine SLA von 99,9% Verfügbarkeit benötigen, US-Infrastruktur akzeptabel ist und Sie Wert auf persönlichen Support legen. Für Experimente sind RunPod oder Vast.ai günstiger. Für den Produktivbetrieb rechtfertigt die SLA von Lambda Labs die Kosten.' },
+          { q: 'Kann ich auf mehrere GPUs skalieren?', a: 'Ja. Lambda Labs erlaubt Multi-GPU-Instanzen und verteiltes Training. Die Jupyter-Umgebung übernimmt die Einrichtung.' },
+          { q: 'Wie sieht Ihre Rückerstattungsrichtlinie aus?', a: '30 Tage Rückerstattung bei Unzufriedenheit. Die meisten Nutzer benötigen dies nicht, nachdem sie das kostenlose Guthaben von $15 ausprobiert haben.' },
+          { q: 'Warum keine RTX 4090 oder RTX 5090?', a: 'Lambda Labs konzentriert sich auf den Enterprise-Markt mit A100/H100, nicht auf die Consumer-GPU-Stufe. Das ist eine bewusste Strategie.' },
+        ],
+      },
+      quickstart: {
+        id: 'quickstart-guide',
+        title: 'Schnellstart: Mieten Sie Ihre erste GPU in 10 Minuten',
+        content: 'Folgen Sie dieser Schritt-für-Schritt-Anleitung, um auf jeder Plattform eine GPU zum Laufen zu bringen.',
+        numberedItems: [
+          'Registrieren Sie sich mit E-Mail + Kreditkarte (RunPod) oder GitHub (Vast.ai)',
+          'Wählen Sie einen GPU-Typ und eine Region (nach Verfügbarkeit und Preis filtern)',
+          'Wählen Sie das Betriebssystem-Image (Ubuntu 22.04 + CUDA ist Standard)',
+          'Legen Sie die Festplattengröße fest (mindestens 50 GB für die meisten ML-Workloads)',
+          'Klicken Sie auf „Start" und warten Sie 30–60 Sekunden, bis die Instanz hochfährt',
+          'Verbinden Sie sich per SSH mit der bereitgestellten IP (Zugangsdaten in Ihrem Dashboard)',
+          'Installieren Sie Abhängigkeiten: apt update && apt install -y python3-pip',
+          'Klonen Sie Ihr Repository und starten Sie Ihren Workload',
+          'Überwachen Sie die Nutzung im Anbieter-Dashboard (behalten Sie die Zeit im Blick)',
+          'Stoppen Sie die Instanz, wenn Sie fertig sind (die Abrechnung endet sofort)',
         ],
       },
       internalLinks: {
@@ -2267,6 +2327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     title: 'RunPod vs Vast.ai vs Lambda Labs pour l\'inférence LLM (Juillet 2026)',
+    heroImage: '/images/cloud-gpu-rental-comparison-2026-overview-hero-fr.png',
     seoTitle: 'RunPod vs Vast.ai vs Lambda Labs : prix GPU 2026',
     metaDescription: 'RunPod vs Vast.ai vs Lambda Labs pour l\'inférence LLM : tarifs horaires RTX 4090, A100, H100, RTX 5090, SLA de disponibilité et conformité RGPD. Mis à jour juillet 2026.',
     intro: 'La location GPU cloud est 30–50% moins chère que l\'achat de matériel si vous avez besoin de puissance de calcul occasionnelle. Cette comparaison canonique teste trois fournisseurs leaders (RunPod, Vast.ai, Lambda Labs) pour l\'inférence LLM par tarification, fiabilité, conformité RGPD et facilité d\'utilisation. Mise à jour mensuellement, les prix de location GPU évoluant vite.',
@@ -2658,6 +2719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     title: 'RunPod vs Vast.ai vs Lambda Labs：LLM推論向けGPUレンタル比較(2026年7月版)',
+    heroImage: '/images/cloud-gpu-rental-comparison-2026-overview-hero-ja.png',
     seoTitle: 'RunPod vs Vast.ai vs Lambda Labs:GPU価格比較2026',
     metaDescription: 'LLM推論向けRunPod・Vast.ai・Lambda Labs比較:RTX 4090・A100・H100・RTX 5090の時間料金、稼働率SLA、GDPR対応。2026年7月更新。',
     intro: 'クラウドGPUレンタルは、たまに計算能力が必要な場合、ハードウェア購入より30～50%安価です。この完全ガイドは3つの主要プロバイダー(RunPod、Vast.ai、Lambda Labs)をLLM推論の観点から価格、信頼性、GDPR準拠、使いやすさで検証。クラウドGPU価格は変動が速いため毎月更新。',
@@ -3049,6 +3111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     title: 'RunPod vs Vast.ai vs Lambda Labs：LLM推理云GPU租赁对比(2026年7月)',
+    heroImage: '/images/cloud-gpu-rental-comparison-2026-overview-hero-zh.png',
     seoTitle: 'RunPod vs Vast.ai vs Lambda Labs:GPU价格对比2026',
     metaDescription: '面向LLM推理的RunPod、Vast.ai、Lambda Labs对比:RTX 4090、A100、H100、RTX 5090的每小时价格、正常运行时间SLA、GDPR合规性。2026年7月更新。',
     intro: '云GPU租赁是30–50%比购买硬件便宜如果您需要偶发计算能力。本权威对比针对LLM推理测试三个主要提供商(RunPod、Vast.ai、Lambda Labs)的价格、可靠性、GDPR合规性和易用性。鉴于云GPU价格变动很快,每月更新。',
@@ -3443,6 +3506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   next_refresh_due: 'November 18, 2026',
   theme: 'light',
   title: '클라우드 GPU 렌탈 2026: RunPod vs Vast.ai vs Lambda Labs (2026년 5월 테스트)',
+    heroImage: '/images/cloud-gpu-rental-comparison-2026-overview-hero-ko.png',
   seoTitle: '클라우드 GPU 렌탈 2026: RunPod vs Vast.ai vs Lambda Labs',
   metaDescription: '로컬 LLM 추론을 위한 RunPod, Vast.ai, Lambda Labs 비교: 가격($0.34–$2.99/시간), 가동률 SLA, GDPR 준수 여부, 설정 시간. 2026년 5월 기준.',
   intro: '클라우드 GPU 렌탈은 간헐적으로 컴퓨팅 파워가 필요한 경우 하드웨어 구매 대비 30~50% 저렴합니다. 이 비교 가이드는 세 가지 주요 공급업체(RunPod, Vast.ai, Lambda Labs)를 가격, 신뢰성, GDPR 준수 여부, 사용 편의성 기준으로 실제 테스트한 결과입니다. 매월 업데이트됩니다.',
@@ -3872,6 +3936,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { q: '정확히 1시간 렌탈 시 가격은 얼마입니까?', a: 'RunPod: 60분 최소 (올림). Lambda Labs: 전체 시간 청구. Vast.ai: 초 단위 청구 (정확히 1시간분만 청구, 추가 없음).' },
       ],
     },
+  },
+  itemListSchema: {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'RunPod',
+        description: '가격($0.34–0.69/시간, RTX 4090), 신뢰성(99% 가동률), 사용 편의성의 균형이 가장 우수한 LLM 추론용 공급업체. 프로덕션에는 Secure Cloud 티어를 권장합니다. EU 지역 이용 가능.',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Vast.ai',
+        description: '스팟 중단을 감수할 수 있다면 경쟁사보다 30~50% 저렴합니다. RTX 4090이 $0.08/시간부터 시작합니다. 가장 큰 GPU 카탈로그를 보유하고 있습니다. 피어투피어 방식(품질이 일정하지 않음).',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Lambda Labs',
+        description: '99.9% 가동률 SLA, 전담 지원(Slack/이메일/전화), A100/H100 중심. 프리미엄 가격($1.29–$2.99/시간)이 프로덕션 AI 워크로드에 정당화됩니다.',
+      },
+    ],
   },
 },
 }

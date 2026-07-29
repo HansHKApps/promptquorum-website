@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/chain-of-thought-prompting-overview-hero-en.png',
       title: 'Chain-of-Thought Prompting: Make AI Show Its Reasoning',
       intro: 'Chain-of-thought prompting is a technique where you explicitly ask the model to show its reasoning steps instead of jumping straight to the final answer. This makes complex decisions easier to audit, debug, and improve over time.',
       leadAnswerBlock: '**Chain-of-thought (CoT) prompting instructs an AI model to show its reasoning step by step before giving a final answer.** This improves accuracy on math, logic, and multi-step tasks. In 2026, frontier models like Claude Opus 4.8 and OpenAI o3 have built-in reasoning modes that automate CoT internally — but prompt-level CoT remains valuable on smaller and non-reasoning models where it\'s the primary way to elicit structured thinking.',
@@ -424,6 +425,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques',
+      heroImage: '/images/chain-of-thought-prompting-overview-hero-de.png',
   title: 'Chain-of-Thought Prompting: Lassen Sie die KI ihr Denken zeigen',
   intro: 'Chain-of-Thought Prompting ist eine Technik, bei der Sie die KI explizit auffordern, ihre Denkschritte zu zeigen, statt direkt zur Antwort zu springen. Dies macht komplexe Entscheidungen leichter nachvollziehbar, debugbar und im Laufe der Zeit verbesserbar.',
   leadAnswerBlock: '**Chain-of-Thought (CoT) Prompting fordert ein KI-Modell auf, seine Denkschritte Schritt für Schritt zu zeigen, bevor es eine abschließende Antwort gibt.** Dies verbessert die Genauigkeit bei Mathe-, Logik- und mehrstufigen Aufgaben. 2026 haben Modelle wie Claude Opus 4.8 und OpenAI o3 integrierte Denkfunktionen, die CoT intern automatisieren – aber Prompt-Level CoT bleibt wertvoll bei kleineren und nicht-denkfähigen Modellen, wo es der Hauptweg ist, um strukturiertes Denken hervorzurufen.',
@@ -836,6 +838,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques',
+      heroImage: '/images/chain-of-thought-prompting-overview-hero-es.png',
   title: 'Chain-of-Thought Prompting: Haz que la IA muestre su razonamiento',
   intro: 'El chain-of-thought prompting es una técnica en la que le pides explícitamente al modelo que muestre sus pasos de razonamiento en lugar de saltar directamente a la respuesta final. Esto hace que las decisiones complejas sean más fáciles de auditar, depurar y mejorar con el tiempo.',
   leadAnswerBlock: '**El chain-of-thought (CoT) prompting le indica a un modelo de IA que muestre su razonamiento paso a paso antes de dar una respuesta final.** Esto mejora la precisión en tareas de matemáticas, lógica y múltiples pasos. En 2026, los modelos de frontera como Claude Opus 4.8 y OpenAI o3 tienen modos de razonamiento integrados que automatizan CoT internamente, pero el CoT a nivel de prompt sigue siendo valioso en modelos más pequeños y sin razonamiento integrado, donde es la principal forma de elicitar pensamiento estructurado.',
@@ -1248,6 +1251,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques',
+      heroImage: '/images/chain-of-thought-prompting-overview-hero-ar.png',
   title: 'توجيه سلسلة الأفكار: اجعل الذكاء الاصطناعي يُظهر استدلاله',
   intro: 'توجيه سلسلة الأفكار تقنية تطلب فيها صراحةً من النموذج إظهار خطوات استدلاله بدلًا من القفز مباشرةً إلى الإجابة النهائية. هذا يجعل القرارات المعقدة أسهل للتدقيق والتصحيح والتحسين بمرور الوقت.',
   leadAnswerBlock: '**توجيه سلسلة الأفكار (CoT) يُرشِد نموذج الذكاء الاصطناعي إلى إظهار استدلاله خطوةً بخطوة قبل إعطاء إجابة نهائية.** هذا يُحسِّن الدقة في مهام الرياضيات والمنطق والخطوات المتعددة. في 2026، تمتلك نماذج الحدود مثل Claude Opus 4.8 وOpenAI o3 أوضاع استدلال مُدمَجة تُؤتمت CoT داخليًا، لكن CoT على مستوى التعليمات لا يزال قيِّمًا في النماذج الأصغر وغير المدمجة بالاستدلال، حيث يُعدّ الطريقة الرئيسية لاستدراج التفكير المنظَّم.',
@@ -1662,6 +1666,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     pt: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques',
+      heroImage: '/images/chain-of-thought-prompting-overview-hero-pt.png',
   title: 'Chain-of-Thought Prompting: Faça a IA mostrar seu raciocínio',
   intro: 'O chain-of-thought prompting é uma técnica em que você pede explicitamente ao modelo que mostre suas etapas de raciocínio em vez de pular diretamente para a resposta final. Isso torna decisões complexas mais fáceis de auditar, depurar e melhorar ao longo do tempo.',
   leadAnswerBlock: '**O chain-of-thought (CoT) prompting instrui um modelo de IA a mostrar seu raciocínio passo a passo antes de dar uma resposta final.** Isso melhora a precisão em tarefas de matemática, lógica e múltiplas etapas. Em 2026, modelos de fronteira como Claude Opus 4.8 e OpenAI o3 têm modos de raciocínio integrados que automatizam o CoT internamente, mas o CoT no nível do prompt ainda é valioso em modelos menores e sem raciocínio integrado, onde é a principal forma de eliciar pensamento estruturado.',
@@ -2069,6 +2074,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques',
+      heroImage: '/images/chain-of-thought-prompting-overview-hero-fr.png',
   title: 'Chain-of-Thought Prompting : Faites penser l\'IA à haute voix',
   intro: 'Le Chain-of-Thought Prompting demande explicitement au modèle de montrer ses étapes de raisonnement au lieu de sauter directement à la réponse finale. Cela rend les décisions complexes plus faciles à auditer, déboguer et améliorer au fil du temps.',
   leadAnswerBlock: '**Le Chain-of-Thought (CoT) Prompting demande à un modèle d\'IA de montrer ses étapes de raisonnement avant de donner une réponse finale.** Cela améliore la précision sur les tâches mathématiques, logiques et multi-étapes. En 2026, les modèles frontière comme Claude Opus 4.8 et OpenAI o3 disposent de modes de raisonnement intégrés qui automatisent CoT en interne – mais le CoT au niveau du prompt reste précieux sur les modèles plus petits et sans raisonnement intégré, où c\'est le principal moyen d\'obtenir une pensée structurée.',
@@ -2481,6 +2487,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques',
+      heroImage: '/images/chain-of-thought-prompting-overview-hero-ja.png',
   title: 'Chain-of-Thoughtプロンプティング: AIに推論プロセスを見せさせる',
   intro: 'Chain-of-Thoughtプロンプティングは、最終的な答えに直接飛び込むのではなく、モデルに推論ステップを明示的に示すように要求する技術です。複雑な判断をより監査しやすく、デバッグしやすく、時間とともに改善しやすくします。',
   leadAnswerBlock: '**Chain-of-Thought (CoT)プロンプティングは、最終回答前にAIモデルに推論ステップを段階的に示すよう指示する手法です。** 数学、論理、複数ステップのタスクで精度を向上させます。2026年、Claude Opus 4.8やOpenAI o3のようなフロンティアモデルは、CoTを内部で自動化する組み込み推論モードを備えています—しかし、プロンプトレベルのCoTは、構造化思考を引き出す主な方法である小規模なモデルでは依然として価値があります。',
@@ -2896,6 +2903,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques',
+      heroImage: '/images/chain-of-thought-prompting-overview-hero-zh.png',
   title: '链式思维提示词: 让AI展示其推理过程',
   intro: '链式思维提示词是一种技术，你明确要求模型展示其推理步骤，而不是直接跳到最终答案。这使复杂的决策更容易审计、调试和随时间改进。',
   leadAnswerBlock: '**链式思维(CoT)提示词指示AI模型在给出最终答案前逐步展示其推理步骤。** 这改善了数学、逻辑和多步骤任务的精度。2026年，Claude Opus 4.8和OpenAI o3等前沿模型具有内置推理模式，自动化内部CoT——但提示词级CoT在较小且非推理模型上仍然宝贵，其中它是获得结构化思维的主要方法。',
@@ -3311,6 +3319,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
   freshness_tier: 'semi_annual',
   theme: 'Techniques',
+    heroImage: '/images/chain-of-thought-prompting-overview-hero-ko.png',
   title: 'Chain-of-Thought 프롬프팅: AI가 추론 과정을 보여주게 하는 방법',
   intro: 'Chain-of-thought 프롬프팅은 모델에게 최종 답변으로 바로 넘어가지 말고 추론 단계를 명시적으로 보여달라고 요청하는 기법입니다. 이를 통해 복잡한 결정을 감사하고, 디버깅하고, 시간이 지나면서 개선하기가 훨씬 쉬워집니다.',
   leadAnswerBlock: '**Chain-of-thought(CoT) 프롬프팅은 AI 모델이 최종 답변을 제시하기 전에 추론 과정을 단계별로 보여주도록 지시합니다.** 이를 통해 수학, 논리, 다단계 작업에서 정확도가 향상됩니다. 2026년에는 Claude Opus 4.8, OpenAI o3와 같은 최전선 모델들이 CoT를 내부적으로 자동화하는 내장 추론 모드를 갖추고 있습니다. 그러나 프롬프트 수준의 CoT는 구조화된 사고를 이끌어내는 주요 방법으로서 더 작은 비추론 모델에서 여전히 가치 있습니다.',

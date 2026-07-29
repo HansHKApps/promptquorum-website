@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-en.png',
       title: 'Best NAS and Storage for Local AI Models',
       dateModified: '2026-06-20',
       seoTitle: 'NAS Storage for Local LLMs: RAID 6, Backup & Redundancy',
@@ -193,6 +194,7 @@ schema: {
     es: {
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-es.png',
       title: 'Mejor NAS y Almacenamiento para Modelos de IA Local',
       seoTitle: 'NAS para LLMs Locales: RAID 6, Backup y Redundancia',
       intro: '**Un NAS (Network-Attached Storage) mantiene tu biblioteca de modelos organizada, respaldada y accesible desde cualquier máquina.** A partir de abril de 2026, el almacenamiento RAID 6 (tolerancia a 2 fallos de disco) con backups automatizados es esencial para equipos de LLMs locales en producción. Presupuesto: $1.500-3.000 para 4-8TB de capacidad utilizable. Los precios pueden variar según tu país.',
@@ -375,6 +377,7 @@ schema: {
     ar: {
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-ar.png',
       title: 'أفضل ⁨NAS⁩ وتخزين لنماذج الذكاء الاصطناعي المحلية',
       seoTitle: 'تخزين ⁨NAS⁩ لنماذج ⁨LLM⁩ المحلية: ⁨RAID 6⁩ ونسخ احتياطي',
       intro: '**يحافظ NAS (التخزين المتصل بالشبكة) على مكتبة نماذجك منظمة ومنسوخة احتياطياً ومتاحة من أي جهاز.** اعتباراً من أبريل 2026، يُعد تخزين RAID 6 (تحمّل عطل قرصين) مع النسخ الاحتياطي الآلي ضرورياً لفرق نماذج LLM المحلية في الإنتاج. الميزانية: 1,500–3,000 دولار لسعة قابلة للاستخدام 4–8TB. قد تختلف الأسعار حسب بلدك.',
@@ -560,6 +563,7 @@ schema: {
     de: {
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-de.png',
       title: 'Bestes NAS und Speicher für lokale KI-Modelle',
       dateModified: '2026-07-23',
       seoTitle: 'NAS-Speicher für lokale LLMs: RAID 6, Backup & Redundanz',
@@ -742,6 +746,7 @@ schema: {
     },
     fr: {
       theme: 'Privacy & Business',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-fr.png',
       seoTitle: 'NAS pour LLM locaux 2026: RAID 6, Sauvegarde & Redondance',
       metaDescription: 'Meilleur NAS pour LLM locaux : redondance RAID 6, stratégie de sauvegarde et organisation de la bibliothèque de modèles. Comparez Synology, QNAP et TrueNAS. Gratuit -- avril 2026.',
 schema: {
@@ -752,6 +757,17 @@ schema: {
         'description': 'Meilleur NAS pour LLM locaux : redondance RAID 6, stratégie de sauvegarde et organisation de la bibliothèque de modèles. Comparez Synology, QNAP et TrueNAS. Gratuit -- avril 2026.',
         'datePublished': '2026-04-05',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Meilleur NAS pour LLM locaux',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'SSD local', 'description': 'Capacité de 2 To, accès rapide, aucune redondance. Idéal pour une machine unique.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'NAS avec RAID 6', 'description': 'Capacité de 8 To, accès partagé, tolérance de panne de 2 disques. Idéal pour les équipes.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Stockage cloud (AWS S3)', 'description': 'Capacité illimitée, accès à distance, excellente redondance. Idéal pour les modèles archivés.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Disque USB externe', 'description': 'Capacité de 4 To, portable, sauvegarde hors ligne. Idéal pour un stockage sécurisé hors ligne.' }
+        ]
       },
       sections: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['**NAS (Stockage en réseau) :** Stockage centralisé accessible en réseau. RAID 6 (2 disques peuvent tomber en panne simultanément).', '**Meilleur budget :** Synology DS420+ 4 baies, ~400 € (matériel seul). 4× 4To WD Red Pro = ~600 €. Total ~1 000 € pour 8To utilisables.', '**Meilleures performances :** QNAP TS-464C2U ou TrueNAS SCALE sur réseau 10Gbps. Coût : 2 000 €+.', '**Stockage modèles :** Conservez tous les modèles quantifiés (.gguf) sur le NAS. Un modèle 70B = 35 Go, stockez 10+ modèles.', '**Sauvegarde :** Sauvegarde quotidienne vers le cloud (Backblaze B2 = 6 $/mois illimité). Ou disques USB externes (hors ligne, sécurisé).', '**Latence réseau :** NAS sur même LAN que serveur d\'inférence = <10ms (acceptable). Via internet = trop lent.', '**Redondance :** RAID 6 protège contre 2 défaillances de disques. Faites quand même des sauvegardes externes (ransomware, vol).', '**Comparaison des coûts :** 8To NAS = ~1 000 € une fois + ~6 $/mois sauvegarde. Stockage cloud = 50-100 $/mois indéfiniment.'] },
@@ -768,6 +784,7 @@ schema: {
     },
     ja: {
       theme: 'Privacy & Business',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-ja.png',
       seoTitle: 'ローカルLLM用NAS 2026: RAID 6、バックアップ & 冗長性',
       metaDescription: 'ローカルLLM向けベストNAS：RAID 6冗長性、バックアップ戦略、モデルライブラリ組織。Synology、QNAP、TrueNASを比較。無料--2026年4月。',
 schema: {
@@ -778,6 +795,17 @@ schema: {
         'description': 'ローカルLLM向けベストNAS：RAID 6冗長性、バックアップ戦略、モデルライブラリ組織。Synology、QNAP、TrueNASを比較。無料--2026年4月。',
         'datePublished': '2026-04-05',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'ローカルLLM向けベストNAS',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'ローカルSSD', 'description': '容量2TB、高速アクセス、冗長性なし。単一マシンに最適。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'NAS（RAID 6）', 'description': '容量8TB、共有アクセス、2台のドライブ障害耐性。チームに最適。' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'クラウド（AWS S3）', 'description': '容量無制限、リモートアクセス、優れた冗長性。アーカイブモデルに最適。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'USB外付け', 'description': '容量4TB、ポータブル、オフラインバックアップ。オフライン安全ストレージに最適。' }
+        ]
       },
       sections: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['**NAS（ネットワーク接続ストレージ）：** ネットワーク経由でアクセス可能な中央集権ストレージ。RAID 6（2台のドライブが同時に障害を起こしてもデータ安全）。', '**最良バジェット：** Synology DS420+ 4ベイ、約6万円（ハードウェアのみ）。4× 4TB WD Red Proドライブ = 約9万円。合計約15万円で8TB使用可能。', '**最良パフォーマンス：** QNAP TS-464C2UまたはTrueNAS SCALEを10Gbpsネットワークで。費用：30万円以上。', '**モデルストレージ：** すべての量子化モデル（.ggufファイル）をNASに保存。70Bモデル1つ = 35GB、10以上のモデルを保存可能。', '**バックアップ：** クラウドへの毎日バックアップ（Backblaze B2 = 月額900円で無制限）。またはUSB外付けドライブ（オフライン、安全）。', '**ネットワーク遅延：** 推論サーバーと同じLANのNAS = <10ms（許容範囲）。インターネット経由 = 遅すぎ。', '**冗長性：** RAID 6は2台のドライブ障害から保護。ランサムウェアや盗難に備えて外部バックアップも実施。', '**コスト比較：** 8TB NAS = 約15万円の初期費用 + 月額900円バックアップ。クラウドストレージ = 月額7,500-15,000円が無期限。'] },
@@ -794,6 +822,7 @@ schema: {
     },
     zh: {
       theme: 'Privacy & Business',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-zh.png',
       seoTitle: '本地LLM的NAS存储 2026: RAID 6 与备份冗余',
       metaDescription: '本地LLM最佳NAS：RAID 6冗余、备份策略和模型库组织。对比Synology、QNAP和TrueNAS。免费--2026年4月。',
 schema: {
@@ -804,6 +833,17 @@ schema: {
         'description': '本地LLM最佳NAS：RAID 6冗余、备份策略和模型库组织。对比Synology、QNAP和TrueNAS。免费--2026年4月。',
         'datePublished': '2026-04-05',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '本地LLM最佳NAS',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '本地SSD', 'description': '2TB容量，访问速度快，无冗余。适合单机使用。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'NAS（RAID 6）', 'description': '8TB容量，共享访问，可容忍2块硬盘故障。适合团队使用。' },
+          { '@type': 'ListItem', 'position': 3, 'name': '云端（AWS S3）', 'description': '容量无限，远程访问，冗余性优秀。适合归档模型。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'USB外置硬盘', 'description': '4TB容量，便携，离线备份。适合离线安全存储。' }
+        ]
       },
       sections: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['**NAS（网络附加存储）：** 可通过网络访问的集中存储。RAID 6（两块硬盘同时故障数据仍然安全）。', '**预算之选：** Synology DS420+ 4盘位，约$500（仅硬件）。4× 4TB WD Red Pro硬盘 = 约$600。合计约$1,100，8TB可用空间。', '**性能之选：** QNAP TS-464C2U或TrueNAS SCALE搭配10Gbps网络。费用：$2,000以上。', '**模型存储：** 将所有量化模型（.gguf文件）存放在NAS上。一个70B模型 = 35GB，可存储10个以上模型。', '**备份：** 每日云端备份（Backblaze B2 = 每月$7，接近无限容量）。或USB外置硬盘（离线、安全）。', '**网络延迟：** 推理服务器与NAS在同一局域网 = <10ms（可接受）。通过互联网 = 太慢。', '**冗余性：** RAID 6可防护2块硬盘故障。针对勒索软件和盗窃，还需外部备份。', '**成本对比：** 8TB NAS = 约$1,100初始投入 + 每月$7备份费。云存储 = 每月$60-120无限期持续。'] },
@@ -821,6 +861,7 @@ schema: {
     pt: {
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-pt.png',
       title: 'Melhor NAS e Armazenamento para Modelos de IA Local',
       seoTitle: 'NAS para LLMs Locais: RAID 6, Backup e Redundância',
       // VERIFY: preços de hardware em BRL refletem o varejo brasileiro (NAS/HDDs têm alta carga tributária); valores são estimativas de jun/2026 e variam por loja (Kabum/Pichau/Mercado Livre) e câmbio. Serviços de nuvem (Backblaze B2, AWS S3) permanecem em USD pois são cobrados em dólar globalmente. Confirmar antes de publicar.
@@ -1004,6 +1045,7 @@ schema: {
   ko: {
       freshness_tier: 'annual',
       theme: '프라이버시 및 비즈니스',
+    heroImage: '/images/best-nas-storage-local-llm-overview-hero-ko.png',
       title: '로컬 AI 모델을 위한 최고의 NAS 및 스토리지',
       seoTitle: '로컬 LLM용 NAS 스토리지: RAID 6, 백업 및 이중화',
       intro: '**NAS(네트워크 결합 스토리지)는 모델 라이브러리를 체계적으로 구성하고, 백업하며, 여러 머신에서 접근할 수 있게 해 줍니다.** 2026년 4월 기준, 자동화된 백업이 포함된 RAID 6 스토리지(드라이브 2개 장애 허용)는 프로덕션 로컬 LLM 팀에 필수적입니다. 예산: 사용 가능 용량 4~8TB 기준 $1,500~$3,000.',

@@ -1,12 +1,18 @@
 #!/usr/bin/env node
 /**
- * Internal content freshness tracker (v1).
+ * Internal content freshness tracker (v2).
  * Run manually: `npm run freshness`
  *
- * Scope: EN content only, local-llms + prompt-engineering + power-local-llm clusters.
- * Blog is excluded from v1 (blogContent.ts has no dateModified field and is a single
- * monolithic file, so git-log fallback can't give per-post granularity — see
- * docs/FRESHNESS_TOOL.md for the full Step 0 audit).
+ * Scope: EN content, all clusters — local-llms, prompt-engineering, power-local-llm,
+ * balcony-solar, smart-home, and blog.
+ *
+ * Blog is structurally different (blogContent.ts is one monolithic file with all
+ * posts inline, not one file per article, and posts have no dateModified field) —
+ * it's loaded via a dedicated path (loadBlogArticles) that prefers each post's
+ * `last_full_refresh` field and falls back to `publishDate` as a freshness proxy
+ * when that isn't set. A publishDate-derived date measures time since the post was
+ * first published, not since it was last edited, so it can overstate staleness;
+ * flagged per-post in the warnings list when this fallback is used.
  *
  * GSC weighting is optional: paste a Search Console "Pages" export into
  * freshness-data/input.txt (gitignored) before running. Without it, only the
@@ -67,7 +73,33 @@ const CLUSTERS = [
     urlPrefix: '/power-local-llm/',
     publishedFilter: path.join(ROOT, 'src/lib/power-local-llm/published.ts'),
   },
+  {
+    name: 'smart-home',
+    dir: path.join(ROOT, 'src/lib/smart-home/articles'),
+    barrel: path.join(ROOT, 'src/lib/smart-home/articles-barrel.ts'),
+    slugsFile: path.join(ROOT, 'src/lib/smart-home/slugs.ts'),
+    slugMapExport: 'SMART_HOME_SLUG_TO_KEY',
+    urlPrefix: '/smart-home/',
+    publishedFilter: path.join(ROOT, 'src/lib/smart-home/published.ts'),
+  },
+  {
+    // published.ts derives its set from BALCONY_SOLAR_SLUG_TO_KEY at runtime
+    // (`Object.keys(...).filter(...)`) rather than listing literal slugs, and its
+    // current PENDING_SLUGS/LANG_ROLLOUT holdback lists are both empty — so every
+    // slug in the map is published today. No publishedFilter file to regex-scan
+    // against; revisit if a future holdback list is added.
+    name: 'balcony-solar',
+    dir: path.join(ROOT, 'src/lib/balcony-solar/articles'),
+    barrel: path.join(ROOT, 'src/lib/balcony-solar/articles-barrel.ts'),
+    slugsFile: path.join(ROOT, 'src/lib/balcony-solar/slugs.ts'),
+    slugMapExport: 'BALCONY_SOLAR_SLUG_TO_KEY',
+    urlPrefix: '/balcony-solar/',
+    publishedFilter: null,
+  },
 ]
+
+const BLOG_CONTENT_PATH = path.join(ROOT, 'src/lib/blog/blogContent.ts')
+const BLOG_SLUGS_PATH = path.join(ROOT, 'src/lib/blogSlugs.ts')
 
 const NON_EN_LOCALE_RE = /^\/(de|fr|ja|zh|es|pt|ar|ko)\//
 
@@ -155,15 +187,100 @@ function extractEnBlock(src) {
 }
 
 function extractField(block, field) {
-  const re = new RegExp(`\\n\\s*${field}:\\s*([^,\\n]+),?`)
-  const m = re.exec(block)
-  if (!m) return null
-  let val = m[1].trim().replace(/,$/, '')
-  const quoted = /^['"]([\s\S]*)['"]$/.exec(val)
-  if (quoted) return quoted[1]
+  // Quoted values first — matched by same-quote-char, not by stopping at the first
+  // comma, since date values like 'Published March 14, 2026' contain one.
+  const quotedRe = new RegExp(`\\n\\s*${field}:\\s*(['"])((?:\\\\.|(?!\\1)[\\s\\S])*)\\1`)
+  const qm = quotedRe.exec(block)
+  if (qm) return qm[2]
   // bare identifier referencing a shared constant
-  if (/^[A-Z_][A-Z0-9_]*$/.test(val)) return resolveConstant(val)
+  const identRe = new RegExp(`\\n\\s*${field}:\\s*([A-Z_][A-Z0-9_]*)\\s*,?`)
+  const im = identRe.exec(block)
+  if (im) return resolveConstant(im[1])
   return null
+}
+
+// Brace-balanced lookup of `key: { ... }` — unlike extractEnBlock's fixed-indent
+// regex, this works at any nesting depth, which blogContent.ts needs (postId ->
+// en -> fields, an extra level versus the one-file-per-article clusters above).
+function extractNamedBlock(text, key, indent) {
+  // Exact indent (rather than \s*) matters here: a bare `\s*` match finds the
+  // FIRST occurrence of `key: {` anywhere in the text, including nested section
+  // keys deep inside an unrelated earlier post (e.g. "comparison" as a section
+  // id) — silently extracting the wrong block instead of failing loudly.
+  // Optional quotes handle keys that aren't valid bare JS identifiers, e.g.
+  // 'geopolitics-and-ai' (hyphens require quoting).
+  const indentPattern = indent != null ? ' '.repeat(indent) : '\\s*'
+  const re = new RegExp(`(^|\\n)${indentPattern}['"]?${key}['"]?:\\s*\\{`)
+  const m = re.exec(text)
+  if (!m) return null
+  const braceStart = m.index + m[0].length - 1
+  let depth = 0
+  for (let i = braceStart; i < text.length; i++) {
+    if (text[i] === '{') depth++
+    else if (text[i] === '}') {
+      depth--
+      if (depth === 0) return text.slice(braceStart + 1, i)
+    }
+  }
+  return null
+}
+
+function parseBlogSlugMap() {
+  const content = fs.readFileSync(BLOG_SLUGS_PATH, 'utf-8')
+  const map = {}
+  const re = /['"]([^'"]+)['"]\s*:\s*['"]([^'"]+)['"]/g
+  let m
+  while ((m = re.exec(content))) map[m[1]] = m[2]
+  return map
+}
+
+function loadBlogArticles() {
+  const articles = []
+  const warnings = []
+  const slugMap = parseBlogSlugMap()
+  const fullSrc = fs.readFileSync(BLOG_CONTENT_PATH, 'utf-8')
+
+  for (const [slug, postId] of Object.entries(slugMap)) {
+    const postBlock = extractNamedBlock(fullSrc, postId, 2)
+    if (!postBlock) {
+      warnings.push(`blog/${slug}: could not locate postId "${postId}" block — skipped`)
+      continue
+    }
+    const enBlock = extractNamedBlock(postBlock, 'en', 4)
+    if (!enBlock) {
+      warnings.push(`blog/${slug}: no en block found — skipped`)
+      continue
+    }
+
+    const lastFullRefreshRaw = extractField(enBlock, 'last_full_refresh')
+    const publishDateRaw = extractField(enBlock, 'publishDate')
+
+    let parsed = lastFullRefreshRaw ? parseFlexibleDate(lastFullRefreshRaw) : null
+    let usedField = 'last_full_refresh'
+    if (!parsed && publishDateRaw) {
+      parsed = parseFlexibleDate(publishDateRaw)
+      usedField = 'publishDate'
+    }
+    if (!parsed) {
+      warnings.push(`blog/${slug}: no parseable date (last_full_refresh=${lastFullRefreshRaw}, publishDate=${publishDateRaw}) — excluded from stats`)
+      continue
+    }
+    if (parsed.wasLoose) {
+      warnings.push(`blog/${slug}: ${usedField} is not ISO 8601 ("${usedField === 'last_full_refresh' ? lastFullRefreshRaw : publishDateRaw}") — parsed leniently, fix at source`)
+    }
+    if (usedField === 'publishDate') {
+      warnings.push(`blog/${slug}: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)`)
+    }
+
+    articles.push({
+      cluster: 'blog',
+      slug,
+      urlPath: '/blog/' + slug,
+      date: parsed.date,
+      dateSource: usedField,
+    })
+  }
+  return { articles, warnings }
 }
 
 function loadArticles() {
@@ -209,6 +326,11 @@ function loadArticles() {
       })
     }
   }
+
+  const blog = loadBlogArticles()
+  articles.push(...blog.articles)
+  warnings.push(...blog.warnings)
+
   return { articles, warnings }
 }
 
@@ -367,10 +489,27 @@ function main() {
     console.log(`  ${b.label.padEnd(7)} ${String(b.count).padStart(4)} pages (${b.pct}%)`)
   }
 
+  const aged90to120 = articles
+    .map((a) => ({ ...a, age: daysSince(a.date, now) }))
+    .filter((a) => a.age >= 90 && a.age <= 120)
+    .sort((a, b) => b.age - a.age)
+
+  console.log(`\nARTICLES 90-120 DAYS OLD (${aged90to120.length}):`)
+  for (const a of aged90to120) {
+    console.log(`  ${a.urlPath.padEnd(60)} ${String(a.age).padStart(3)}d  (${a.dateSource})`)
+  }
+
   const report = {
     generatedAt: now.toISOString(),
-    scope: 'EN articles: local-llms, prompt-engineering, power-local-llm (blog excluded — see docs)',
+    scope: 'EN articles: local-llms, prompt-engineering, power-local-llm, smart-home, balcony-solar, blog',
     unweighted,
+    articlesAged90to120: aged90to120.map((a) => ({
+      cluster: a.cluster,
+      slug: a.slug,
+      urlPath: a.urlPath,
+      ageDays: a.age,
+      dateSource: a.dateSource,
+    })),
     warnings,
   }
 
