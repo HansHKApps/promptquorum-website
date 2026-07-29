@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    heroImage: '/images/home-assistant-vs-alexa-vs-google-overview-hero-en.png',
     title: 'Home Assistant vs Alexa vs Google Home: Which Is Right? (2026)',
     seoTitle: 'Home Assistant vs Alexa vs Google Home: 2026 Comparison',
     intro:
@@ -203,6 +204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    heroImage: '/images/home-assistant-vs-alexa-vs-google-overview-hero-ar.png',
     title: '⁨Home Assistant⁩ مقابل ⁨Alexa⁩ مقابل ⁨Google Home⁩: أيهم الأنسب؟ (⁨2026⁩)',
     seoTitle: '⁨Home Assistant⁩ مقابل ⁨Alexa⁩ مقابل ⁨Google Home 2026⁩',
     intro:
@@ -398,6 +400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    heroImage: '/images/home-assistant-vs-alexa-vs-google-overview-hero-de.png',
     title: 'Home Assistant vs Alexa vs Google Home: Was ist richtig? (2026)',
     seoTitle: 'Home Assistant vs Alexa vs Google Home – Vergleich 2026',
     intro:
@@ -593,6 +596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    heroImage: '/images/home-assistant-vs-alexa-vs-google-overview-hero-es.png',
     title: 'Home Assistant vs Alexa vs Google Home: ¿Cuál es el adecuado? (2026)',
     seoTitle: 'Home Assistant vs Alexa vs Google Home: Comparativa 2026',
     intro:
@@ -788,6 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    heroImage: '/images/home-assistant-vs-alexa-vs-google-overview-hero-ko.png',
     title: 'Home Assistant vs Alexa vs Google Home: 어떤 것이 맞습니까? (2026)',
     seoTitle: 'Home Assistant vs Alexa vs Google Home: 2026년 비교',
     intro:
@@ -983,6 +988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    heroImage: '/images/home-assistant-vs-alexa-vs-google-overview-hero-fr.png',
     title: 'Home Assistant vs Alexa vs Google Home : Lequel choisir ? (2026)',
     seoTitle: 'Home Assistant vs Alexa vs Google Home : Comparatif 2026',
     intro:
@@ -1178,6 +1184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    heroImage: '/images/home-assistant-vs-alexa-vs-google-overview-hero-ja.png',
     title: 'Home Assistant 対 Alexa 対 Google Home：どれが正解？（2026）',
     seoTitle: 'Home Assistant 対 Alexa 対 Google Home 比較ガイド（2026）',
     intro:
@@ -1373,6 +1380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    heroImage: '/images/home-assistant-vs-alexa-vs-google-overview-hero-pt.png',
     title: 'Home Assistant vs Alexa vs Google Home: Qual é o Certo? (2026)',
     seoTitle: 'Home Assistant vs Alexa vs Google Home: Comparativo 2026',
     intro:
@@ -1568,6 +1576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
+    heroImage: '/images/home-assistant-vs-alexa-vs-google-overview-hero-zh.png',
     title: 'Home Assistant 对 Alexa 对 Google Home：哪个适合你？（2026）',
     seoTitle: 'Home Assistant 对 Alexa 对 Google Home：2026年对比指南',
     intro:

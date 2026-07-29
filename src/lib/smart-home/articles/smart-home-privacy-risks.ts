@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-privacy-risks-overview-hero-en.png',
     title: 'Smart Home Privacy Risks (2026): What Your Devices Know',
     seoTitle: 'Smart Home Privacy Risks 2026: What Your Devices Collect',
     intro:
@@ -185,6 +186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-privacy-risks-overview-hero-ar.png',
     title: 'مخاطر الخصوصية في المنزل الذكي (⁨2026⁩): ما تعرفه أجهزتك عنك',
     seoTitle: 'مخاطر الخصوصية في المنزل الذكي ⁨2026⁩: ما تجمعه أجهزتك',
     intro:
@@ -362,6 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-privacy-risks-overview-hero-de.png',
     title: 'Smart-Home-Datenschutzrisiken (2026): Was Ihre Geräte wissen',
     seoTitle: 'Smart-Home-Datenschutzrisiken 2026: Was Geräte wissen',
     intro:
@@ -543,6 +546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-privacy-risks-overview-hero-es.png',
     title: 'Riesgos de Privacidad del Smart Home (2026): Qué Saben Tus Dispositivos',
     seoTitle: 'Riesgos de Privacidad del Smart Home 2026: Guía Completa',
     intro:
@@ -720,6 +724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-privacy-risks-overview-hero-ko.png',
     title: '스마트홈 개인정보 위험 (2026): 기기가 아는 것들',
     seoTitle: '스마트홈 개인정보 위험 2026: 기기 수집 항목',
     intro:
@@ -897,6 +902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-privacy-risks-overview-hero-fr.png',
     title: 'Risques de Confidentialité de la Maison Connectée (2026)',
     seoTitle: 'Risques Confidentialité Maison Connectée 2026: Ce Que Savent',
     intro:
@@ -1074,6 +1080,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-privacy-risks-overview-hero-ja.png',
     title: 'スマートホームのプライバシーリスク（2026）：機器は何を知るか',
     seoTitle: 'スマートホームのプライバシーリスク2026年版：機器が集めるデータと対策',
     intro:
@@ -1251,6 +1258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-privacy-risks-overview-hero-pt.png',
     title: 'Riscos de Privacidade da Casa Inteligente (2026): O Que Seus Dispositivos Sabem',
     seoTitle: 'Riscos de Privacidade da Casa Inteligente 2026: Guia',
     intro:
@@ -1428,6 +1436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
+    heroImage: '/images/smart-home-privacy-risks-overview-hero-zh.png',
     title: '智能家居隐私风险（2026）：你的设备知道什么',
     seoTitle: '智能家居隐私风险深度解析2026：数据收集、泄露与本地控制解决方案',
     intro:
