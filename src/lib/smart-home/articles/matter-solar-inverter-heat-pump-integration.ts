@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
+    heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-en.png',
     title: 'Matter for Solar Inverters and Heat Pumps: What\'s Coming (2027)',
     seoTitle: 'Matter for Solar Inverters + Heat Pumps: Not Yet (2027)',
     intro:
@@ -183,6 +184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
+    heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-de.png',
     title: 'Matter für Solarwechselrichter und Wärmepumpen: Was kommt (2027)',
     seoTitle: 'Matter für Wechselrichter + Wärmepumpen: Noch nicht (2027)',
     intro:
@@ -348,6 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
+    heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-fr.png',
     title: 'Matter pour onduleurs solaires et pompes à chaleur : ce qui arrive (2027)',
     seoTitle: 'Matter pour onduleurs + pompes à chaleur : pas encore (2027)',
     intro:
@@ -513,6 +516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
+    heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-ja.png',
     title: '太陽光インバーターとヒートポンプ向けMatter：今後の展望（2027年）',
     seoTitle: '太陽光インバーター＋ヒートポンプのMatter：まだ先（2027年）',
     intro:
@@ -678,6 +682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
+    heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-zh.png',
     title: '太阳能逆变器与热泵的Matter支持：即将到来（2027年）',
     seoTitle: '太阳能逆变器＋热泵的Matter：尚未到来（2027年）',
     intro:
@@ -843,6 +848,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
+    heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-es.png',
     title: 'Matter para inversores solares y bombas de calor: lo que viene (2027)',
     seoTitle: 'Matter para inversores + bombas de calor: aún no (2027)',
     intro:
@@ -1008,6 +1014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
+    heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-pt.png',
     title: 'Matter para inversores solares e bombas de calor: o que está por vir (2027)',
     seoTitle: 'Matter para inversores + bombas de calor: ainda não (2027)',
     intro:
@@ -1173,6 +1180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
+    heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-ar.png',
     title: 'معيار Matter للعاكسات الشمسية ومضخات الحرارة: ما القادم (⁨2027⁩)',
     seoTitle: 'Matter للعاكسات + مضخات الحرارة: ليس بعد (⁨2027⁩)',
     intro:
@@ -1338,6 +1346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
+    heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-ko.png',
     title: '태양광 인버터와 히트펌프를 위한 Matter: 다가오는 것 (2027년)',
     seoTitle: '태양광 인버터 + 히트펌프용 Matter: 아직 아님 (2027년)',
     intro:
