@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/home-assistant-getting-started-overview-hero-en.png',
     title: 'Home Assistant: Complete Getting-Started Guide (2026)',
     seoTitle: 'Home Assistant 2026: Complete Local Smart Home Setup',
     intro:
@@ -206,6 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/home-assistant-getting-started-overview-hero-ar.png',
     title: '⁨Home Assistant⁩: دليل البدء الشامل (⁨2026⁩)',
     seoTitle: '⁨Home Assistant 2026⁩: إعداد المنزل الذكي المحلي',
     intro:
@@ -404,6 +406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/home-assistant-getting-started-overview-hero-de.png',
     title: 'Home Assistant: Vollständiger Einsteiger-Leitfaden (2026)',
     seoTitle: 'Home Assistant 2026: Lokales Smart Home einrichten',
     intro:
@@ -602,6 +605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/home-assistant-getting-started-overview-hero-es.png',
     title: 'Home Assistant: Guía Completa para Empezar (2026)',
     seoTitle: 'Home Assistant 2026: Guía Completa para Empezar',
     intro:
@@ -800,6 +804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/home-assistant-getting-started-overview-hero-ko.png',
     title: 'Home Assistant: 완전한 시작 가이드 (2026)',
     seoTitle: 'Home Assistant 2026: 로컬 스마트 홈 완전 설정',
     intro:
@@ -998,6 +1003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/home-assistant-getting-started-overview-hero-fr.png',
     title: 'Home Assistant : Guide Complet pour Débuter (2026)',
     seoTitle: 'Home Assistant 2026 : Guide Complet pour Bien Démarrer',
     intro:
@@ -1196,6 +1202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/home-assistant-getting-started-overview-hero-ja.png',
     title: 'Home Assistant：完全入門ガイド（2026）',
     seoTitle: 'Home Assistant 2026 完全入門：インストールから自動化まで',
     intro:
@@ -1394,6 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/home-assistant-getting-started-overview-hero-pt.png',
     title: 'Home Assistant: Guia Completo para Começar (2026)',
     seoTitle: 'Home Assistant 2026: Guia Completo para Começar',
     intro:
@@ -1592,6 +1600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/home-assistant-getting-started-overview-hero-zh.png',
     title: 'Home Assistant：完整入门指南（2026）',
     seoTitle: 'Home Assistant 2026 完整入门指南：安装与本地自动化',
     intro:

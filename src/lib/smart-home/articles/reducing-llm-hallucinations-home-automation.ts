@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-en.png',
     title: 'Reducing LLM Hallucinations in Home Automation (2027)',
     seoTitle: 'Reducing LLM Hallucinations in Home Automation (2027)',
     intro:
@@ -170,6 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-de.png',
     title: 'LLM-Halluzinationen in der Hausautomation reduzieren (2027)',
     seoTitle: 'LLM-Halluzinationen in der Hausautomation reduzieren (2027)',
     intro:
@@ -331,6 +333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-fr.png',
     title: "Réduire les hallucinations LLM dans la domotique (2027)",
     seoTitle: "Réduire les hallucinations LLM dans la domotique (2027)",
     intro:
@@ -492,6 +495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-ja.png',
     title: 'ホームオートメーションにおけるLLM幻覚の低減（2027年）',
     seoTitle: 'ホームオートメーションにおけるLLM幻覚の低減（2027年）',
     intro:
@@ -653,6 +657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-zh.png',
     title: '减少家庭自动化中的LLM幻觉（2027年）',
     seoTitle: '减少家庭自动化中的LLM幻觉（2027年）',
     intro:
@@ -814,6 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-es.png',
     title: 'Reducir las alucinaciones de LLM en la domótica (2027)',
     seoTitle: 'Reducir las alucinaciones de LLM en la domótica (2027)',
     intro:
@@ -975,6 +981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-pt.png',
     title: 'Reduzindo alucinações de LLM na automação residencial (2027)',
     seoTitle: 'Reduzindo alucinações de LLM na automação residencial (2027)',
     intro:
@@ -1136,6 +1143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-ar.png',
     title: 'تقليل هلوسة نماذج اللغة الكبيرة في أتمتة المنزل (2027)',
     seoTitle: 'تقليل هلوسة نماذج اللغة الكبيرة في أتمتة المنزل (2027)',
     intro:
@@ -1297,6 +1305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-ko.png',
     title: '홈 자동화에서 LLM 환각 줄이기 (2027)',
     seoTitle: '홈 자동화에서 LLM 환각 줄이기 (2027)',
     intro:

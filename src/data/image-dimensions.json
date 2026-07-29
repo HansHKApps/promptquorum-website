@@ -164,6 +164,51 @@
     "width": 800,
     "height": 350
   },
+  "/images/ai-automations-local-llm-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-automations-local-llm-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-automations-local-llm-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-automations-local-llm-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-automations-local-llm-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-automations-local-llm-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-automations-local-llm-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-automations-local-llm-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-automations-local-llm-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/ai-code-review-overview-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -1704,6 +1749,51 @@
     "width": 800,
     "height": 450
   },
+  "/images/beelink-eq14-local-ai-review-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-eq14-local-ai-review-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-eq14-local-ai-review-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-eq14-local-ai-review-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-eq14-local-ai-review-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-eq14-local-ai-review-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-eq14-local-ai-review-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-eq14-local-ai-review-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-eq14-local-ai-review-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/beelink-ser8-local-ai-review-key-specs-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -1713,6 +1803,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/beelink-ser8-local-ai-review-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-ser8-local-ai-review-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-ser8-local-ai-review-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-ser8-local-ai-review-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-ser8-local-ai-review-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-ser8-local-ai-review-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-ser8-local-ai-review-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-ser8-local-ai-review-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/beelink-ser8-local-ai-review-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/best-14b-models-coding-humaneval-comparison-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -1858,6 +1993,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/best-affiliate-tools-ai-developers-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-affiliate-tools-ai-developers-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-affiliate-tools-ai-developers-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-affiliate-tools-ai-developers-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-affiliate-tools-ai-developers-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-affiliate-tools-ai-developers-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-affiliate-tools-ai-developers-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-affiliate-tools-ai-developers-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-affiliate-tools-ai-developers-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/best-ai-coding-assistant-local-llm-comparison-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -2168,6 +2348,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 460
+  },
+  "/images/best-ai-courses-certifications-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-courses-certifications-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-courses-certifications-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-courses-certifications-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-courses-certifications-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-courses-certifications-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-courses-certifications-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-courses-certifications-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-ai-courses-certifications-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/best-amd-gpus-local-llm-price-performance-ar.svg": {
     "encodingFormat": "image/svg+xml",
@@ -3184,6 +3409,51 @@
     "width": 800,
     "height": 420
   },
+  "/images/best-embedding-models-local-rag-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-embedding-models-local-rag-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-embedding-models-local-rag-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-embedding-models-local-rag-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-embedding-models-local-rag-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-embedding-models-local-rag-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-embedding-models-local-rag-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-embedding-models-local-rag-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-embedding-models-local-rag-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-embedding-models-local-rag-2026-retrieval-accuracy-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -3203,6 +3473,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
+  },
+  "/images/best-energy-monitoring-smart-plugs-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-energy-monitoring-smart-plugs-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-energy-monitoring-smart-plugs-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-energy-monitoring-smart-plugs-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-energy-monitoring-smart-plugs-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-energy-monitoring-smart-plugs-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-energy-monitoring-smart-plugs-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-energy-monitoring-smart-plugs-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-energy-monitoring-smart-plugs-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/best-gpu-buying-guide-local-llm-2026-comparison-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -3604,6 +3919,51 @@
     "width": 800,
     "height": 400
   },
+  "/images/best-hardware-for-local-smart-home-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-hardware-for-local-smart-home-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-hardware-for-local-smart-home-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-hardware-for-local-smart-home-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-hardware-for-local-smart-home-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-hardware-for-local-smart-home-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-hardware-for-local-smart-home-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-hardware-for-local-smart-home-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-hardware-for-local-smart-home-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-japanese-language-models-local-model-comparison-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -3870,6 +4230,51 @@
     "height": 675
   },
   "/images/best-laptops-local-llm-vram-fit-chart-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-ai-app-low-end-pc-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-ai-app-low-end-pc-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-ai-app-low-end-pc-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-ai-app-low-end-pc-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-ai-app-low-end-pc-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-ai-app-low-end-pc-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-ai-app-low-end-pc-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-ai-app-low-end-pc-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-ai-app-low-end-pc-overview-hero-zh.png": {
     "encodingFormat": "image/png",
     "width": 1200,
     "height": 675
@@ -5094,6 +5499,51 @@
     "width": 800,
     "height": 400
   },
+  "/images/best-local-llm-models-smart-home-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-models-smart-home-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-models-smart-home-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-models-smart-home-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-models-smart-home-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-models-smart-home-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-models-smart-home-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-models-smart-home-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-llm-models-smart-home-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-local-llm-stack-use-case-hardware-tier-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -5989,6 +6439,51 @@
     "width": 800,
     "height": 400
   },
+  "/images/best-local-security-cameras-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-security-cameras-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-security-cameras-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-security-cameras-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-security-cameras-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-security-cameras-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-security-cameras-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-security-cameras-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-local-security-cameras-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-mac-for-local-ai-2026-comparison-table-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -6734,6 +7229,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/best-monitors-ai-development-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-monitors-ai-development-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-monitors-ai-development-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-monitors-ai-development-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-monitors-ai-development-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-monitors-ai-development-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-monitors-ai-development-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-monitors-ai-development-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-monitors-ai-development-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -7464,6 +8004,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/best-rag-tools-for-business-documents-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-rag-tools-for-business-documents-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-rag-tools-for-business-documents-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-rag-tools-for-business-documents-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-rag-tools-for-business-documents-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-rag-tools-for-business-documents-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-rag-tools-for-business-documents-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-rag-tools-for-business-documents-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-rag-tools-for-business-documents-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-saudi-arabic-local-llms-allam-2026-aralingbench-score-gap-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -7538,6 +8123,186 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/best-smart-home-devices-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-devices-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-devices-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-devices-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-devices-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-devices-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-devices-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-devices-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-devices-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-hubs-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-hubs-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-hubs-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-hubs-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-hubs-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-hubs-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-hubs-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-hubs-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-home-hubs-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-locks-local-control-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-locks-local-control-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-locks-local-control-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-locks-local-control-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-locks-local-control-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-locks-local-control-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-locks-local-control-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-locks-local-control-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-locks-local-control-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-thermostats-local-ai-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-thermostats-local-ai-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-thermostats-local-ai-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-thermostats-local-ai-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-thermostats-local-ai-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-thermostats-local-ai-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-thermostats-local-ai-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-thermostats-local-ai-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-smart-thermostats-local-ai-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/best-tools-structured-output-overview-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -7629,6 +8394,51 @@
     "width": 800,
     "height": 460
   },
+  "/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-vpn-ai-privacy-local-llm-2026-vpn-comparison-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -7679,10 +8489,100 @@
     "width": 800,
     "height": 470
   },
+  "/images/best-workstation-build-local-ai-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-workstation-build-local-ai-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-workstation-build-local-ai-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-workstation-build-local-ai-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-workstation-build-local-ai-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-workstation-build-local-ai-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-workstation-build-local-ai-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-workstation-build-local-ai-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-workstation-build-local-ai-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/best-zigbee-thread-dongles-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-zigbee-thread-dongles-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-zigbee-thread-dongles-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-zigbee-thread-dongles-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-zigbee-thread-dongles-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-zigbee-thread-dongles-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-zigbee-thread-dongles-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-zigbee-thread-dongles-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/best-zigbee-thread-dongles-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/braintrust-vs-prompthub-vs-vellum-overview-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -8188,6 +9088,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 380
+  },
+  "/images/chat-with-1000-pdfs-locally-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chat-with-1000-pdfs-locally-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chat-with-1000-pdfs-locally-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chat-with-1000-pdfs-locally-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chat-with-1000-pdfs-locally-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chat-with-1000-pdfs-locally-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chat-with-1000-pdfs-locally-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chat-with-1000-pdfs-locally-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/chat-with-1000-pdfs-locally-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/chat-with-1000-pdfs-locally-storage-hardware-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -8934,6 +9879,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/continue-dev-vs-cline-vs-aider-local-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/continue-dev-vs-cline-vs-aider-local-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/continue-dev-vs-cline-vs-aider-local-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/continue-dev-vs-cline-vs-aider-local-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/continue-dev-vs-cline-vs-aider-local-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/continue-dev-vs-cline-vs-aider-local-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/continue-dev-vs-cline-vs-aider-local-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/continue-dev-vs-cline-vs-aider-local-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/continue-dev-vs-cline-vs-aider-local-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/control-the-output-overview-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -9464,6 +10454,51 @@
     "width": 800,
     "height": 210
   },
+  "/images/deepseek-offline-china-self-hosted-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-offline-china-self-hosted-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-offline-china-self-hosted-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-offline-china-self-hosted-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-offline-china-self-hosted-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-offline-china-self-hosted-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-offline-china-self-hosted-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-offline-china-self-hosted-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-offline-china-self-hosted-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/deepseek-offline-china-self-hosted-2026-sovereignty-comparison-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -9598,6 +10633,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/deepseek-r1-vs-distills-explained-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-r1-vs-distills-explained-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-r1-vs-distills-explained-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-r1-vs-distills-explained-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-r1-vs-distills-explained-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-r1-vs-distills-explained-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-r1-vs-distills-explained-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-r1-vs-distills-explained-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-r1-vs-distills-explained-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-ar.svg": {
     "encodingFormat": "image/svg+xml",
@@ -9783,6 +10863,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 360
+  },
+  "/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-ar.svg": {
     "encodingFormat": "image/svg+xml",
@@ -10445,6 +11570,51 @@
     "height": 675
   },
   "/images/eu-cloud-gpu-gdpr-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/eu-data-act-smart-home-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/eu-data-act-smart-home-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/eu-data-act-smart-home-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/eu-data-act-smart-home-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/eu-data-act-smart-home-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/eu-data-act-smart-home-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/eu-data-act-smart-home-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/eu-data-act-smart-home-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/eu-data-act-smart-home-2027-overview-hero-zh.png": {
     "encodingFormat": "image/png",
     "width": 1200,
     "height": 675
@@ -11294,6 +12464,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/geekom-a9-max-local-ai-review-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/geekom-a9-max-local-ai-review-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/geekom-a9-max-local-ai-review-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/geekom-a9-max-local-ai-review-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/geekom-a9-max-local-ai-review-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/geekom-a9-max-local-ai-review-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/geekom-a9-max-local-ai-review-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/geekom-a9-max-local-ai-review-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/geekom-a9-max-local-ai-review-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/geekom-a9-max-local-ai-review-ram-model-fit-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -11508,6 +12723,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/gmktec-g3-plus-local-ai-review-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gmktec-g3-plus-local-ai-review-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gmktec-g3-plus-local-ai-review-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gmktec-g3-plus-local-ai-review-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gmktec-g3-plus-local-ai-review-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gmktec-g3-plus-local-ai-review-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gmktec-g3-plus-local-ai-review-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gmktec-g3-plus-local-ai-review-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/gmktec-g3-plus-local-ai-review-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/gmktec-g3-plus-model-fit-by-ram-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -12079,6 +13339,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/history-of-smart-home-technology-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/history-of-smart-home-technology-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/history-of-smart-home-technology-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/history-of-smart-home-technology-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/history-of-smart-home-technology-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/history-of-smart-home-technology-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/history-of-smart-home-technology-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/history-of-smart-home-technology-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/history-of-smart-home-technology-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/history-of-smart-home-technology-pendulum-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -12089,10 +13394,145 @@
     "width": 800,
     "height": 400
   },
+  "/images/home-as-energy-microgrid-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-as-energy-microgrid-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-as-energy-microgrid-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-as-energy-microgrid-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-as-energy-microgrid-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-as-energy-microgrid-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-as-energy-microgrid-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-as-energy-microgrid-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-as-energy-microgrid-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-energy-dashboard-guide-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-energy-dashboard-guide-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-energy-dashboard-guide-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-energy-dashboard-guide-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-energy-dashboard-guide-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-energy-dashboard-guide-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-energy-dashboard-guide-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-energy-dashboard-guide-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-energy-dashboard-guide-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/home-assistant-getting-started-automation-steps-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/home-assistant-getting-started-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-getting-started-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-getting-started-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-getting-started-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-getting-started-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-getting-started-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-getting-started-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-getting-started-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-getting-started-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/home-assistant-getting-started-pi-vs-mini-pc-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -12198,6 +13638,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 430
+  },
+  "/images/home-assistant-vs-alexa-vs-google-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-vs-alexa-vs-google-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-vs-alexa-vs-google-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-vs-alexa-vs-google-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-vs-alexa-vs-google-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-vs-alexa-vs-google-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-vs-alexa-vs-google-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-vs-alexa-vs-google-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-assistant-vs-alexa-vs-google-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-digital-twin-explained-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-digital-twin-explained-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-digital-twin-explained-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-digital-twin-explained-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-digital-twin-explained-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-digital-twin-explained-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-digital-twin-explained-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-digital-twin-explained-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/home-digital-twin-explained-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/how-llms-actually-work-overview-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -12898,6 +14428,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
+  },
+  "/images/ikea-matter-ecosystem-guide-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ikea-matter-ecosystem-guide-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ikea-matter-ecosystem-guide-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ikea-matter-ecosystem-guide-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ikea-matter-ecosystem-guide-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ikea-matter-ecosystem-guide-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ikea-matter-ecosystem-guide-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ikea-matter-ecosystem-guide-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ikea-matter-ecosystem-guide-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/inference-engine-feature-comparison-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -14064,6 +15639,96 @@
     "width": 800,
     "height": 400
   },
+  "/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-studio-vs-jan-vs-gpt4all-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-ai-agents-langgraph-ollama-agent-loop-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -14203,6 +15868,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/local-ai-agents-with-mcp-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-with-mcp-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-with-mcp-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-with-mcp-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-with-mcp-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-with-mcp-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-with-mcp-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-with-mcp-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-agents-with-mcp-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/local-ai-agents-with-mcp-2026-setup-flow-ar.svg": {
     "encodingFormat": "image/svg+xml",
@@ -14344,10 +16054,100 @@
     "width": 800,
     "height": 400
   },
+  "/images/local-ai-app-with-built-in-rag-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-app-with-built-in-rag-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-app-with-built-in-rag-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-app-with-built-in-rag-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-app-with-built-in-rag-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-app-with-built-in-rag-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-app-with-built-in-rag-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-app-with-built-in-rag-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-app-with-built-in-rag-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/local-ai-behind-firewall-offline-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-behind-firewall-offline-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-behind-firewall-offline-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-behind-firewall-offline-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-behind-firewall-offline-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-behind-firewall-offline-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-behind-firewall-offline-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-behind-firewall-offline-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-behind-firewall-offline-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/local-ai-nontechnical-anythingllm-workspace-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -14564,6 +16364,51 @@
     "width": 800,
     "height": 400
   },
+  "/images/local-ai-security-camera-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-security-camera-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-security-camera-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-security-camera-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-security-camera-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-security-camera-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-security-camera-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-security-camera-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-security-camera-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-ai-security-camera-setup-flow-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -14573,6 +16418,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/local-ai-workstation-build-guide-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-workstation-build-guide-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-workstation-build-guide-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-workstation-build-guide-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-workstation-build-guide-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-workstation-build-guide-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-workstation-build-guide-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-workstation-build-guide-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-workstation-build-guide-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -14628,6 +16518,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 300
+  },
+  "/images/local-coding-llm-without-internet-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-coding-llm-without-internet-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-coding-llm-without-internet-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-coding-llm-without-internet-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-coding-llm-without-internet-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-coding-llm-without-internet-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-coding-llm-without-internet-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-coding-llm-without-internet-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-coding-llm-without-internet-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-code-review-ci-cd-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-code-review-ci-cd-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-code-review-ci-cd-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-code-review-ci-cd-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-code-review-ci-cd-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-code-review-ci-cd-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-code-review-ci-cd-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-code-review-ci-cd-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-code-review-ci-cd-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -14733,6 +16713,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 460
+  },
+  "/images/local-llm-email-and-calendar-automation-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-email-and-calendar-automation-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-email-and-calendar-automation-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-email-and-calendar-automation-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-email-and-calendar-automation-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-email-and-calendar-automation-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-email-and-calendar-automation-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-email-and-calendar-automation-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-email-and-calendar-automation-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/local-llm-hardware-guide-2026-gpu-tiers-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -15659,6 +17684,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/local-llm-personal-knowledge-base-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-personal-knowledge-base-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-personal-knowledge-base-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-personal-knowledge-base-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-personal-knowledge-base-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-personal-knowledge-base-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-personal-knowledge-base-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-personal-knowledge-base-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-personal-knowledge-base-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-llm-power-consumption-apple-vs-nvidia-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -15754,10 +17824,100 @@
     "width": 800,
     "height": 400
   },
+  "/images/local-llm-prompts-for-fiction-writers-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-prompts-for-fiction-writers-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-prompts-for-fiction-writers-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-prompts-for-fiction-writers-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-prompts-for-fiction-writers-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-prompts-for-fiction-writers-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-prompts-for-fiction-writers-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-prompts-for-fiction-writers-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-prompts-for-fiction-writers-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-llm-screenwriting-and-novel-drafting-context-window-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/local-llm-screenwriting-and-novel-drafting-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-screenwriting-and-novel-drafting-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-screenwriting-and-novel-drafting-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-screenwriting-and-novel-drafting-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-screenwriting-and-novel-drafting-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-screenwriting-and-novel-drafting-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-screenwriting-and-novel-drafting-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-screenwriting-and-novel-drafting-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-screenwriting-and-novel-drafting-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/local-llm-screenwriting-and-novel-drafting-workflow-steps-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -16139,6 +18299,51 @@
     "width": 800,
     "height": 420
   },
+  "/images/local-llm-software-directory-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-software-directory-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-software-directory-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-software-directory-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-software-directory-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-software-directory-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-software-directory-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-software-directory-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-software-directory-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-llm-software-directory-2026-rag-systems-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -16285,6 +18490,51 @@
     "height": 675
   },
   "/images/local-llm-vs-cloud-gpu-cost-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-with-logseq-and-joplin-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-with-logseq-and-joplin-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-with-logseq-and-joplin-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-with-logseq-and-joplin-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-with-logseq-and-joplin-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-with-logseq-and-joplin-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-with-logseq-and-joplin-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-with-logseq-and-joplin-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-with-logseq-and-joplin-overview-hero-zh.png": {
     "encodingFormat": "image/png",
     "width": 1200,
     "height": 675
@@ -17294,6 +19544,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/local-multimodal-pipeline-voice-vision-text-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-multimodal-pipeline-voice-vision-text-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-multimodal-pipeline-voice-vision-text-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-multimodal-pipeline-voice-vision-text-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-multimodal-pipeline-voice-vision-text-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-multimodal-pipeline-voice-vision-text-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-multimodal-pipeline-voice-vision-text-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-multimodal-pipeline-voice-vision-text-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-multimodal-pipeline-voice-vision-text-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-rag-2026-overview-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -17348,6 +19643,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 330
+  },
+  "/images/local-rag-for-private-business-data-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-for-private-business-data-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-for-private-business-data-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-for-private-business-data-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-for-private-business-data-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-for-private-business-data-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-for-private-business-data-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-for-private-business-data-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-for-private-business-data-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/local-rag-on-your-pdfs-step-by-step-chunk-settings-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -17499,6 +19839,51 @@
     "width": 800,
     "height": 320
   },
+  "/images/local-rag-on-your-pdfs-step-by-step-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-on-your-pdfs-step-by-step-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-on-your-pdfs-step-by-step-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-on-your-pdfs-step-by-step-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-on-your-pdfs-step-by-step-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-on-your-pdfs-step-by-step-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-on-your-pdfs-step-by-step-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-on-your-pdfs-step-by-step-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-rag-on-your-pdfs-step-by-step-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-rag-on-your-pdfs-step-by-step-prerequisites-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -17619,15 +20004,150 @@
     "width": 800,
     "height": 420
   },
+  "/images/local-small-language-models-smart-home-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-small-language-models-smart-home-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-small-language-models-smart-home-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-small-language-models-smart-home-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-small-language-models-smart-home-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-small-language-models-smart-home-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-small-language-models-smart-home-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-small-language-models-smart-home-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-small-language-models-smart-home-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-smart-home-complete-guide-cloud-vs-local-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
   },
+  "/images/local-smart-home-complete-guide-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-complete-guide-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-complete-guide-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-complete-guide-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-complete-guide-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-complete-guide-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-complete-guide-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-complete-guide-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-complete-guide-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-smart-home-complete-guide-stack-layers-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 500
+  },
+  "/images/local-smart-home-energy-management-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-energy-management-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-energy-management-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-energy-management-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-energy-management-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-energy-management-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-energy-management-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-energy-management-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-smart-home-energy-management-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-ar.svg": {
     "encodingFormat": "image/svg+xml",
@@ -17854,6 +20374,51 @@
     "width": 800,
     "height": 360
   },
+  "/images/local-vision-models-llava-ollama-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vision-models-llava-ollama-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vision-models-llava-ollama-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vision-models-llava-ollama-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vision-models-llava-ollama-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vision-models-llava-ollama-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vision-models-llava-ollama-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vision-models-llava-ollama-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vision-models-llava-ollama-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-vision-models-llava-ollama-2026-vram-comparison-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -17903,6 +20468,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/local-voice-assistant-smart-home-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-voice-assistant-smart-home-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-voice-assistant-smart-home-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-voice-assistant-smart-home-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-voice-assistant-smart-home-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-voice-assistant-smart-home-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-voice-assistant-smart-home-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-voice-assistant-smart-home-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-voice-assistant-smart-home-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/local-voice-assistant-smart-home-setup-steps-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -18123,6 +20733,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/local-vs-cloud-voice-assistant-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vs-cloud-voice-assistant-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vs-cloud-voice-assistant-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vs-cloud-voice-assistant-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vs-cloud-voice-assistant-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vs-cloud-voice-assistant-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vs-cloud-voice-assistant-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vs-cloud-voice-assistant-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-vs-cloud-voice-assistant-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/local-whisper-home-assistant-hardware-decision-tree-ar.svg": {
     "encodingFormat": "image/svg+xml",
@@ -19104,6 +21759,141 @@
     "width": 1200,
     "height": 675
   },
+  "/images/matter-1-6-explained-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-1-6-explained-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-1-6-explained-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-1-6-explained-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-1-6-explained-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-1-6-explained-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-1-6-explained-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-1-6-explained-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-1-6-explained-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-local-control-guide-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-local-control-guide-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-local-control-guide-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-local-control-guide-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-local-control-guide-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-local-control-guide-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-local-control-guide-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-local-control-guide-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-local-control-guide-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-solar-inverter-heat-pump-integration-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-solar-inverter-heat-pump-integration-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-solar-inverter-heat-pump-integration-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-solar-inverter-heat-pump-integration-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-solar-inverter-heat-pump-integration-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-solar-inverter-heat-pump-integration-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-solar-inverter-heat-pump-integration-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-solar-inverter-heat-pump-integration-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/matter-solar-inverter-heat-pump-integration-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/meyer-burger-solarwatt-heckert-balcony-solar-lineup-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -19133,6 +21923,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 450
+  },
+  "/images/migrating-from-cloud-to-local-smart-home-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/migrating-from-cloud-to-local-smart-home-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/migrating-from-cloud-to-local-smart-home-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/migrating-from-cloud-to-local-smart-home-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/migrating-from-cloud-to-local-smart-home-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/migrating-from-cloud-to-local-smart-home-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/migrating-from-cloud-to-local-smart-home-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/migrating-from-cloud-to-local-smart-home-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/migrating-from-cloud-to-local-smart-home-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/minisforum-um890-pro-local-ai-review-overview-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -20255,6 +23090,51 @@
     "height": 675
   },
   "/images/negative-prompting-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-zh.png": {
     "encodingFormat": "image/png",
     "width": 1200,
     "height": 675
@@ -21660,6 +24540,51 @@
     "height": 675
   },
   "/images/private-local-llm-sensitive-data-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/private-smart-home-gdpr-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/private-smart-home-gdpr-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/private-smart-home-gdpr-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/private-smart-home-gdpr-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/private-smart-home-gdpr-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/private-smart-home-gdpr-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/private-smart-home-gdpr-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/private-smart-home-gdpr-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/private-smart-home-gdpr-overview-hero-zh.png": {
     "encodingFormat": "image/png",
     "width": 1200,
     "height": 675
@@ -24229,6 +27154,51 @@
     "width": 800,
     "height": 340
   },
+  "/images/radar-presence-sensing-no-camera-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/radar-presence-sensing-no-camera-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/radar-presence-sensing-no-camera-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/radar-presence-sensing-no-camera-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/radar-presence-sensing-no-camera-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/radar-presence-sensing-no-camera-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/radar-presence-sensing-no-camera-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/radar-presence-sensing-no-camera-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/radar-presence-sensing-no-camera-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/rag-explained-overview-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -24454,6 +27424,51 @@
     "width": 820,
     "height": 400
   },
+  "/images/reducing-llm-hallucinations-home-automation-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/reducing-llm-hallucinations-home-automation-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/reducing-llm-hallucinations-home-automation-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/reducing-llm-hallucinations-home-automation-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/reducing-llm-hallucinations-home-automation-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/reducing-llm-hallucinations-home-automation-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/reducing-llm-hallucinations-home-automation-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/reducing-llm-hallucinations-home-automation-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/reducing-llm-hallucinations-home-automation-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/regional-ai-players-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 900,
@@ -24499,6 +27514,51 @@
     "width": 800,
     "height": 400
   },
+  "/images/replace-github-copilot-with-local-llm-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-github-copilot-with-local-llm-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-github-copilot-with-local-llm-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-github-copilot-with-local-llm-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-github-copilot-with-local-llm-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-github-copilot-with-local-llm-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-github-copilot-with-local-llm-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-github-copilot-with-local-llm-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-github-copilot-with-local-llm-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/replace-github-copilot-with-local-llm-setup-flow-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -24513,6 +27573,96 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 285
+  },
+  "/images/replace-grammarly-notion-ai-with-local-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-grammarly-notion-ai-with-local-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-grammarly-notion-ai-with-local-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-grammarly-notion-ai-with-local-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-grammarly-notion-ai-with-local-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-grammarly-notion-ai-with-local-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-grammarly-notion-ai-with-local-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-grammarly-notion-ai-with-local-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-grammarly-notion-ai-with-local-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-zapier-with-local-ai-agents-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-zapier-with-local-ai-agents-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-zapier-with-local-ai-agents-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-zapier-with-local-ai-agents-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-zapier-with-local-ai-agents-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-zapier-with-local-ai-agents-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-zapier-with-local-ai-agents-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-zapier-with-local-ai-agents-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/replace-zapier-with-local-ai-agents-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/rtx-5090-vs-rtx-4090-local-llm-cost-per-token-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -25659,6 +28809,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/sensor-fusion-smart-home-2027-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sensor-fusion-smart-home-2027-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sensor-fusion-smart-home-2027-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sensor-fusion-smart-home-2027-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sensor-fusion-smart-home-2027-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sensor-fusion-smart-home-2027-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sensor-fusion-smart-home-2027-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sensor-fusion-smart-home-2027-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/sensor-fusion-smart-home-2027-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/seo-meets-ai-overview-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -26194,10 +29389,100 @@
     "width": 800,
     "height": 460
   },
+  "/images/smart-home-ecosystems-compared-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-ecosystems-compared-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-ecosystems-compared-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-ecosystems-compared-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-ecosystems-compared-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-ecosystems-compared-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-ecosystems-compared-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-ecosystems-compared-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-ecosystems-compared-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/smart-home-ecosystems-compared-privacy-convenience-matrix-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 460
+  },
+  "/images/smart-home-for-beginners-where-to-start-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-for-beginners-where-to-start-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-for-beginners-where-to-start-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-for-beginners-where-to-start-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-for-beginners-where-to-start-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-for-beginners-where-to-start-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-for-beginners-where-to-start-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-for-beginners-where-to-start-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-for-beginners-where-to-start-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/smart-home-hub-overview-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -26249,6 +29534,96 @@
     "width": 960,
     "height": 480
   },
+  "/images/smart-home-privacy-risks-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-privacy-risks-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-privacy-risks-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-privacy-risks-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-privacy-risks-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-privacy-risks-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-privacy-risks-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-privacy-risks-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-privacy-risks-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-protocols-explained-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-protocols-explained-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-protocols-explained-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-protocols-explained-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-protocols-explained-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-protocols-explained-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-protocols-explained-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-protocols-explained-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-protocols-explained-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/smart-home-without-subscriptions-no-sub-setup-steps-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -26293,6 +29668,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/smart-home-without-subscriptions-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-without-subscriptions-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-without-subscriptions-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-without-subscriptions-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-without-subscriptions-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-without-subscriptions-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-without-subscriptions-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-without-subscriptions-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/smart-home-without-subscriptions-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/smart-home-without-subscriptions-subscription-vs-local-ar.svg": {
     "encodingFormat": "image/svg+xml",
@@ -26580,6 +30000,51 @@
     "height": 675
   },
   "/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/thread-14-wifi-7-routers-guide-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/thread-14-wifi-7-routers-guide-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/thread-14-wifi-7-routers-guide-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/thread-14-wifi-7-routers-guide-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/thread-14-wifi-7-routers-guide-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/thread-14-wifi-7-routers-guide-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/thread-14-wifi-7-routers-guide-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/thread-14-wifi-7-routers-guide-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/thread-14-wifi-7-routers-guide-overview-hero-zh.png": {
     "encodingFormat": "image/png",
     "width": 1200,
     "height": 675
@@ -27349,6 +30814,51 @@
     "width": 800,
     "height": 400
   },
+  "/images/voice-assistant-local-mobile-offline-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voice-assistant-local-mobile-offline-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voice-assistant-local-mobile-offline-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voice-assistant-local-mobile-offline-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voice-assistant-local-mobile-offline-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voice-assistant-local-mobile-offline-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voice-assistant-local-mobile-offline-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voice-assistant-local-mobile-offline-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/voice-assistant-local-mobile-offline-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/vpn-for-local-llm-users-overview-hero-ar.png": {
     "encodingFormat": "image/png",
     "width": 1200,
@@ -27684,6 +31194,51 @@
     "width": 800,
     "height": 360
   },
+  "/images/wechat-bot-local-llm-personal-assistant-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-bot-local-llm-personal-assistant-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-bot-local-llm-personal-assistant-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-bot-local-llm-personal-assistant-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-bot-local-llm-personal-assistant-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-bot-local-llm-personal-assistant-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-bot-local-llm-personal-assistant-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-bot-local-llm-personal-assistant-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-bot-local-llm-personal-assistant-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
   "/images/wechat-bot-model-speed-chinese-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -27708,6 +31263,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/wechat-local-llm-integration-2026-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-local-llm-integration-2026-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-local-llm-integration-2026-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-local-llm-integration-2026-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-local-llm-integration-2026-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-local-llm-integration-2026-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-local-llm-integration-2026-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-local-llm-integration-2026-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/wechat-local-llm-integration-2026-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/what-are-local-llms-how-it-works-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -27763,6 +31363,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
+  },
+  "/images/what-is-a-smart-home-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-a-smart-home-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-a-smart-home-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-a-smart-home-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-a-smart-home-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-a-smart-home-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-a-smart-home-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-a-smart-home-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/what-is-a-smart-home-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
   },
   "/images/what-is-prompt-engineering-overview-hero-ar.png": {
     "encodingFormat": "image/png",
@@ -28075,6 +31720,51 @@
     "height": 675
   },
   "/images/why-enterprises-use-local-llms-overview-hero-zh.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/why-local-smart-home-beats-cloud-overview-hero-ar.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/why-local-smart-home-beats-cloud-overview-hero-de.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/why-local-smart-home-beats-cloud-overview-hero-en.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/why-local-smart-home-beats-cloud-overview-hero-es.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/why-local-smart-home-beats-cloud-overview-hero-fr.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/why-local-smart-home-beats-cloud-overview-hero-ja.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/why-local-smart-home-beats-cloud-overview-hero-ko.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/why-local-smart-home-beats-cloud-overview-hero-pt.png": {
+    "encodingFormat": "image/png",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/why-local-smart-home-beats-cloud-overview-hero-zh.png": {
     "encodingFormat": "image/png",
     "width": 1200,
     "height": 675

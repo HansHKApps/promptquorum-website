@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-14',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
+    heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-en.png',
     title: 'Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline',
     seoTitle: 'Local Multimodal Pipeline 2026: Voice + Vision + Text',
     intro:
@@ -569,6 +570,7 @@ if __name__ == "__main__":
     dateModified: '2026-05-14',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
+    heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-de.png',
     title: 'Lokale multimodale KI-Pipeline 2026: Sprache, Vision und Text-Modelle offline kombinieren',
     seoTitle: 'Lokale multimodale Pipeline 2026: Sprache, Bild, Text',
     intro:
@@ -940,6 +942,7 @@ if __name__ == "__main__":
     dateModified: '2026-05-14',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
+    heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-fr.png',
     title: 'Pipeline IA multimodale locale 2026 : combiner voix, vision et texte hors ligne',
     seoTitle: 'Pipeline multimodal local 2026 : voix, vision, texte',
     intro:
@@ -1277,6 +1280,7 @@ if __name__ == "__main__":
     dateModified: '2026-05-14',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
+    heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-ja.png',
     title: 'ローカルマルチモーダルAIパイプライン2026：音声・ビジョン・テキストモデルをオフラインで統合',
     seoTitle: 'ローカルマルチモーダルAIパイプライン2026：音声+ビジョン+テキストをオフラインで',
     intro:
@@ -1614,6 +1618,7 @@ if __name__ == "__main__":
     dateModified: '2026-05-14',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
+    heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-zh.png',
     title: '本地多模态AI流水线2026：离线整合语音、视觉与文本模型',
     seoTitle: '本地多模态AI流水线2026：语音+视觉+文本模型离线整合',
     intro:
@@ -1951,6 +1956,7 @@ if __name__ == "__main__":
     dateModified: '2026-05-14',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
+    heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-es.png',
     title: 'Pipeline multimodal de IA local 2026: combina voz, visión y texto sin conexión',
     seoTitle: 'Pipeline multimodal local 2026: voz + visión + texto',
     intro:
@@ -2519,6 +2525,7 @@ if __name__ == "__main__":
     dateModified: '2026-05-14',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
+    heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-pt.png',
     title: 'Pipeline multimodal de IA local 2026: combine voz, visão e texto offline',
     seoTitle: 'Pipeline multimodal local 2026: voz + visão + texto',
     intro:
@@ -3087,6 +3094,7 @@ if __name__ == "__main__":
     dateModified: '2026-05-14',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
+    heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-ar.png',
     title: 'خط أنابيب الذكاء الاصطناعي متعدد الوسائط المحلي ⁨2026⁩: دمج الصوت والرؤية والنص دون اتصال',
     seoTitle: 'خط أنابيب ⁨LLM⁩ متعدد الوسائط محلياً: صوت ورؤية ونص',
     intro:
@@ -3643,6 +3651,7 @@ if __name__ == "__main__":
     dateModified: '2026-05-14',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
+    heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-ko.png',
     title: '로컬 멀티모달 AI 파이프라인 2026: 음성·비전·텍스트를 오프라인으로 결합하기',
     seoTitle: '로컬 멀티모달 파이프라인 2026: 음성 + 비전 + 텍스트',
     intro:

@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-en.png',
     title: 'Radar Presence Sensing: Room Occupancy Without a Camera (2027)',
     seoTitle: 'Radar Presence Sensing, No Camera (2027)',
     // Verified 2026-07-16 against Aqara's own spec page (us.aqara.com/pages/product-specs/presence-sensor-fp-2),
@@ -162,6 +163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-de.png',
     title: 'Radarpräsenzsensorik: Raumbelegung ohne Kamera (2027)',
     seoTitle: 'Radarpräsenzsensorik ohne Kamera (2027)',
     intro:
@@ -311,6 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-fr.png',
     title: "Détection de présence radar : occupation d'une pièce sans caméra (2027)",
     seoTitle: 'Détection de présence radar sans caméra (2027)',
     intro:
@@ -460,6 +463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-ja.png',
     title: 'レーダー式人感センサー：カメラなしの部屋の在室検知（2027年）',
     seoTitle: 'カメラ不要のレーダー人感センサー（2027年）',
     intro:
@@ -609,6 +613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-zh.png',
     title: '雷达人体存在感应：无需摄像头的房间占用检测（2027年）',
     seoTitle: '无摄像头雷达存在感应（2027年）',
     intro:
@@ -758,6 +763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-es.png',
     title: 'Detección de presencia por radar: ocupación de habitaciones sin cámara (2027)',
     seoTitle: 'Detección de presencia por radar sin cámara (2027)',
     intro:
@@ -907,6 +913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-pt.png',
     title: 'Detecção de presença por radar: ocupação de ambientes sem câmera (2027)',
     seoTitle: 'Detecção de presença por radar sem câmera (2027)',
     intro:
@@ -1056,6 +1063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-ar.png',
     title: 'استشعار الحضور بالرادار: اكتشاف إشغال الغرفة دون كاميرا (2027)',
     seoTitle: 'استشعار الحضور بالرادار دون كاميرا (2027)',
     intro:
@@ -1205,6 +1213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
+    heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-ko.png',
     title: '레이더 존재 감지: 카메라 없이 방 재실 여부 파악하기 (2027년)',
     seoTitle: '카메라 없는 레이더 존재 감지 (2027년)',
     intro:

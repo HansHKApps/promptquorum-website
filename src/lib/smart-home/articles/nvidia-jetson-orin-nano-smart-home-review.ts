@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
+    heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-en.png',
     // Verified 2026-07-16 directly against nvidia.com's own product page for the Jetson Orin Nano
     // Super Developer Kit (price and specs), Ollama's official Jetson documentation
     // (jetson-ai-lab.com/tutorials/ollama) for LLM support, and Frigate's own GitHub discussion #13081
@@ -172,6 +173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
+    heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-de.png',
     title: 'NVIDIA Jetson Orin Nano für Smart-Home-KI: Test (2027)',
     seoTitle: 'Jetson Orin Nano für Smart-Home-KI (2027)',
     intro:
@@ -330,6 +332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
+    heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-fr.png',
     title: 'NVIDIA Jetson Orin Nano pour la maison connectée : test (2027)',
     seoTitle: 'Jetson Orin Nano pour maison connectée (2027)',
     intro:
@@ -488,6 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
+    heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-ja.png',
     title: 'NVIDIA Jetson Orin Nanoでスマートホームaiを実現：レビュー（2027年）',
     seoTitle: 'スマートホームAI向けJetson Orin Nano（2027年）',
     intro:
@@ -646,6 +650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
+    heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-zh.png',
     title: 'NVIDIA Jetson Orin Nano智能家居AI评测（2027年）',
     seoTitle: 'Jetson Orin Nano智能家居AI（2027年）',
     intro:
@@ -804,6 +809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
+    heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-es.png',
     title: 'NVIDIA Jetson Orin Nano para IA en el hogar inteligente: análisis (2027)',
     seoTitle: 'Jetson Orin Nano para IA en el hogar inteligente (2027)',
     intro:
@@ -962,6 +968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
+    heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-pt.png',
     title: 'NVIDIA Jetson Orin Nano para IA em casa inteligente: análise (2027)',
     seoTitle: 'Jetson Orin Nano para IA em casa inteligente (2027)',
     intro:
@@ -1120,6 +1127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
+    heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-ar.png',
     title: 'مراجعة NVIDIA Jetson Orin Nano للذكاء الاصطناعي في المنزل الذكي (2027)',
     seoTitle: 'Jetson Orin Nano للذكاء الاصطناعي في المنزل الذكي (2027)',
     intro:
@@ -1278,6 +1286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
+    heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-ko.png',
     title: '스마트홈 AI용 NVIDIA Jetson Orin Nano 리뷰 (2027)',
     seoTitle: '스마트홈 AI용 Jetson Orin Nano (2027)',
     intro:

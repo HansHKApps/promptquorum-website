@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-en.png',
     title: 'Local AI Agents for Business Workflows: EU Compliance Guide (2026)',
     seoTitle: 'Local AI Agents for EU Business Workflows: Compliance 2026',
     intro:
@@ -362,6 +363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-de.png',
     title: 'Lokale KI-Agenten in Geschäftsworkflows: DSGVO & EU AI Act Leitfaden 2026',
     seoTitle: 'Lokale KI-Agenten: DSGVO + EU AI Act Compliance 2026',
     intro:
@@ -670,6 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-fr.png',
     title: 'Agents IA locaux pour workflows métier : guide conformité UE 2026',
     seoTitle: 'Agents IA locaux : conformité RGPD & EU AI Act 2026',
     intro:
@@ -970,6 +973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-ja.png',
     title: 'ローカルAIエージェントの業務ワークフロー：GDPR & EU AI Act準拠ガイド 2026',
     seoTitle: 'ローカルAIエージェント GDPR EU AI Act 準拠 2026',
     intro:
@@ -1270,6 +1274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-zh.png',
     title: '本地AI智能体业务工作流：GDPR与EU AI Act合规指南 2026',
     seoTitle: '本地AI智能体GDPR与欧盟AI法案合规指南 2026',
     intro:
@@ -1570,6 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-es.png',
     title: 'Agentes de IA locales para flujos de trabajo empresariales: guía de cumplimiento UE 2026',
     seoTitle: 'Agentes de IA locales para empresas 2026: GDPR y EU AI Act',
     intro:
@@ -1931,6 +1937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-pt.png',
     title: 'Agentes de IA locais para fluxos de trabalho empresariais: guia de conformidade UE 2026',
     seoTitle: 'Agentes de IA locais para empresas 2026: LGPD, GDPR e EU AI Act',
     intro:
@@ -2259,6 +2266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-ar.png',
     title: 'وكلاء الذكاء الاصطناعي المحلي لسير العمل المؤسسي: دليل الامتثال الأوروبي ⁨2026⁩',
     seoTitle: 'وكلاء ⁨AI⁩ المحلي للأعمال: ⁨GDPR⁩ و⁨EU AI Act 2026⁩',
     intro:
@@ -2601,6 +2609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
+    heroImage: '/images/local-ai-agents-business-workflows-eu-compliance-overview-hero-ko.png',
     slug: 'local-ai-agents-business-workflows-eu-compliance',
     title: '비즈니스 워크플로를 위한 로컬 AI 에이전트: EU 규정 준수 가이드 2026',
     seoTitle: '로컬 AI 에이전트 기업용 2026: GDPR 및 EU AI Act 준수',

@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
+    heroImage: '/images/best-local-llm-models-smart-home-overview-hero-en.png',
     title: 'Best Local LLM Models for Smart Home Control (2026)',
     seoTitle: 'Best Local LLMs for Home Assistant (2026)',
     intro:
@@ -195,6 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
+    heroImage: '/images/best-local-llm-models-smart-home-overview-hero-ar.png',
     title: 'أفضل نماذج ⁨LLM⁩ المحلية للتحكم في المنزل الذكي (⁨2026⁩)',
     seoTitle: 'أفضل ⁨LLMs⁩ المحلية لـ ⁨Home Assistant 2026⁩',
     intro:
@@ -382,6 +384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
+    heroImage: '/images/best-local-llm-models-smart-home-overview-hero-de.png',
     title: 'Beste lokale LLM-Modelle für die Smart-Home-Steuerung (2026)',
     seoTitle: 'Beste lokale LLMs für Home Assistant (2026)',
     intro:
@@ -569,6 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
+    heroImage: '/images/best-local-llm-models-smart-home-overview-hero-es.png',
     title: 'Mejores Modelos LLM Locales para el Control del Smart Home (2026)',
     seoTitle: 'Mejores LLM Locales para Home Assistant (2026)',
     intro:
@@ -756,6 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
+    heroImage: '/images/best-local-llm-models-smart-home-overview-hero-ko.png',
     title: '스마트 홈 제어를 위한 최고의 로컬 LLM 모델 (2026)',
     seoTitle: 'Home Assistant를 위한 최고의 로컬 LLM (2026)',
     intro:
@@ -943,6 +948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
+    heroImage: '/images/best-local-llm-models-smart-home-overview-hero-fr.png',
     title: 'Meilleurs Modèles LLM Locaux pour le Contrôle de la Maison Connectée (2026)',
     seoTitle: 'Meilleurs LLM Locaux pour Home Assistant (2026)',
     intro:
@@ -1130,6 +1136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
+    heroImage: '/images/best-local-llm-models-smart-home-overview-hero-ja.png',
     title: 'スマートホーム制御に最適なローカルLLMモデル（2026）',
     seoTitle: 'Home Assistant に最適なローカルLLM（2026）',
     intro:
@@ -1317,6 +1324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
+    heroImage: '/images/best-local-llm-models-smart-home-overview-hero-pt.png',
     title: 'Melhores Modelos LLM Locais para o Controle da Casa Inteligente (2026)',
     seoTitle: 'Melhores LLMs Locais para Home Assistant (2026)',
     intro:
@@ -1504,6 +1512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-05',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
+    heroImage: '/images/best-local-llm-models-smart-home-overview-hero-zh.png',
     title: '智能家居控制的最佳本地 LLM 模型（2026）',
     seoTitle: 'Home Assistant 的最佳本地 LLM（2026）',
     intro:

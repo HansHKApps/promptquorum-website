@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-en.png',
     title: 'Run Local AI Behind a Firewall: Offline Deployment Guide 2026',
     seoTitle: 'Local AI Behind Firewall 2026: Offline Setup Guide',
     intro:
@@ -251,6 +252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-de.png',
     title: 'Lokale KI hinter der Firewall: Offline-Deployment-Guide 2026',
     seoTitle: 'Lokale KI offline hinter Firewall 2026: Deployment-Guide',
     intro: 'Lokale KI hinter einer Unternehmens-Firewall oder in einer Air-Gap-Umgebung zu betreiben erfordert, dass alle Abhängigkeiten vor dem Verlust des Internetzugangs heruntergeladen werden. Dieser Leitfaden bietet eine vollständige Vorab-Checkliste, einen Schritt-für-Schritt-Offline-Workflow für Ollama und llama.cpp sowie Hardware-Empfehlungen für Organisationen in Deutschland und im Bereich DSGVO-konformer Datenverarbeitung.',
@@ -306,6 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-05-26', next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-fr.png',
     title: 'IA locale derrière un pare-feu : Guide de déploiement hors ligne 2026',
     seoTitle: 'IA locale hors ligne derrière pare-feu 2026 : Guide',
     intro: 'Exécuter une IA locale derrière un pare-feu d\'entreprise nécessite de télécharger toutes les dépendances avant de perdre l\'accès à Internet. Ce guide fournit une liste de contrôle complète, un workflow hors ligne pour Ollama et llama.cpp, et des recommandations matérielles pour les organisations soumises aux lois sur la résidence des données.',
@@ -348,6 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-05-26', next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-ja.png',
     title: 'ファイアウォール背後でのローカルAI：オフライン展開ガイド 2026',
     seoTitle: 'ファイアウォール背後のローカルAI 2026 | Ollama air-gapセットアップ完全ガイド',
     intro: '企業ファイアウォールの背後やエアギャップ環境でローカルAIを運用するには、インターネット接続を失う前にすべての依存関係をダウンロードする必要があります。このガイドでは、完全な事前チェックリスト、OllamaとLlama.cppのオフラインワークフロー、そして日本のMETIガイドラインやデータ居住要件に対応する組織向けのハードウェア推奨事項を提供します。',
@@ -390,6 +394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual', publishDate: '2026-05-26', dateModified: '2026-05-26', next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-zh.png',
     title: '防火墙后的本地AI：离线部署指南 2026',
     seoTitle: '防火墙内本地LLM离线部署 2026：Ollama air-gap配置与合规指南',
     intro: '在企业防火墙或隔离网络环境中运行本地AI，需要在断网前下载所有依赖文件。一个遗漏的文件——分词器配置、提示模板或量化模型分片——就会导致无声失败。本指南提供完整的部署前检查清单、Ollama和llama.cpp的离线工作流程，以及针对中国《数据安全法》和CAC法规的合规说明。',
@@ -438,6 +443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-es.png',
     title: 'IA local detrás de un cortafuegos: Guía de despliegue sin conexión 2026',
     seoTitle: 'IA local offline tras cortafuegos 2026: configuración',
     intro:
@@ -654,6 +660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-ko.png',
     title: '방화벽 뒤 로컬 AI: 2026 오프라인 배포 가이드',
     seoTitle: '방화벽·에어갭 환경 LLM 오프라인 배포 2026',
     intro:
@@ -870,6 +877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-pt.png',
     title: 'IA local atrás de um firewall: guia de implantação offline 2026',
     seoTitle: 'IA local offline atrás de firewall 2026: configuração',
     intro:
@@ -1086,6 +1094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
+    heroImage: '/images/local-ai-behind-firewall-offline-2026-overview-hero-ar.png',
     title: 'الذكاء الاصطناعي المحلي خلف جدار الحماية: دليل النشر دون اتصال ⁨2026⁩',
     seoTitle: '⁨LLM⁩ محلي خلف جدار الحماية ⁨2026⁩: نشر ⁨air-gap⁩ بـ⁨Ollama⁩',
     intro:
