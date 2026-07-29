@@ -24,6 +24,10 @@ export interface BlogPost {
   intro: string
   seoTitle?: string
   publishDate: string
+  /** ISO 8601 date (e.g. '2026-06-10'). Set only when this post's content is substantively
+   * updated — never for cosmetic date-label changes. EN block is the source of truth;
+   * used for JSON-LD dateModified and sitemap lastmod. Falls back to publishDate if unset. */
+  dateModified?: string
   readTime: string
   sections: Record<string, BlogSection>
   metaDescription?: string

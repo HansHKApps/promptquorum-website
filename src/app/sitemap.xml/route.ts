@@ -16,7 +16,7 @@ import { SMART_HOME_SLUG_TO_KEY } from '@/lib/smart-home/slugs'
 import { smartHomeContent } from '@/lib/smart-home/content'
 import { BALCONY_SOLAR_SLUG_TO_KEY } from '@/lib/balcony-solar/slugs'
 import { balconySolarContent } from '@/lib/balcony-solar/content'
-import { getBlogPostIsoDate } from '@/lib/blog/parsePublishDate'
+import { getBlogPostModifiedIsoDate } from '@/lib/blog/parsePublishDate'
 
 export const dynamic = 'force-static'
 
@@ -206,7 +206,7 @@ const BLOG_PAGES: Page[] = [
     path: `/blog/${slug}`,
     priority: 0.8,
     changefreq: 'monthly' as const,
-    lastmod: getBlogPostIsoDate(SLUG_TO_POST_ID[slug as keyof typeof SLUG_TO_POST_ID]),
+    lastmod: getBlogPostModifiedIsoDate(SLUG_TO_POST_ID[slug as keyof typeof SLUG_TO_POST_ID]),
   })),
 ]
 

@@ -24,3 +24,13 @@ export function getBlogPostIsoDate(postId: string): string {
   if (!month) return '2026-01-01'
   return `${year}-${month}-${(day ?? '01').padStart(2, '0')}`
 }
+
+/**
+ * JSON-LD dateModified / sitemap lastmod: the EN block's `dateModified` (set only on
+ * substantive content updates) if present, otherwise falls back to publishDate — same
+ * fallback chain other clusters use (dateModified ?? lastFactChecked ?? publishDate).
+ */
+export function getBlogPostModifiedIsoDate(postId: string): string {
+  const dateModified = blogContent[postId]?.en?.dateModified
+  return dateModified ?? getBlogPostIsoDate(postId)
+}
