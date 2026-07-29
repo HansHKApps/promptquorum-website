@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-embedding-model-local-rag-overview-hero-en.png',
     title: 'Best Embedding Model for Local RAG?',
     seoTitle: 'Best Embedding Model for Local RAG 2026 | Prompt Bites',
     metaDescription: 'Nomic-embed-text is the best embedding model for local RAG via Ollama — 8,192-token context, strong benchmarks. BGE-M3 is best for multilingual RAG.',
@@ -100,6 +101,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-embedding-model-local-rag-overview-hero-ar.png',
     title: 'أفضل نموذج تضمين لـ RAG محلي؟',
     seoTitle: 'أفضل نموذج تضمين لـ RAG محلي 2026 | Prompt Bites',
     metaDescription: 'نموذج nomic-embed-text هو أفضل نموذج تضمين لـ RAG محلي عبر Ollama — نافذة سياق 8,192 رمزًا ونتائج معيار مفتوح قوية. BGE-M3 هو الأفضل متعدد اللغات.',
@@ -196,6 +198,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-embedding-model-local-rag-overview-hero-de.png',
     title: 'Das beste Embedding-Modell für lokales RAG?',
     seoTitle: 'Bestes Embedding-Modell für lokales RAG 2026 | Prompt Bites',
     metaDescription: 'Nomic-embed-text ist das beste Embedding-Modell für lokales RAG via Ollama — 8.192-Token-Kontext, starke Benchmarks. BGE-M3 ist beste mehrsprachige Wahl.',
@@ -292,6 +295,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-embedding-model-local-rag-overview-hero-es.png',
     title: '¿Cuál es el Mejor Modelo de Embedding para RAG Local?',
     seoTitle: 'Mejor Modelo de Embedding para RAG Local 2026 | Prompt Bites',
     metaDescription: 'nomic-embed-text es el mejor embedding para RAG local vía Ollama — contexto de 8,192 tokens y buenos benchmarks. BGE-M3 es la mejor opción multilingüe.',
@@ -388,6 +392,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-embedding-model-local-rag-overview-hero-fr.png',
     title: 'Quel est le meilleur modèle d\'embedding pour un RAG local ?',
     seoTitle: 'Meilleur modèle d\'embedding RAG local 2026 | Prompt Bites',
     metaDescription: 'nomic-embed-text est le meilleur embedding pour un RAG local via Ollama — 8,192 tokens, bons benchmarks. BGE-M3 est le meilleur choix multilingue.',
@@ -484,6 +489,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-embedding-model-local-rag-overview-hero-ja.png',
     title: 'ローカルRAGに最適な埋め込みモデルは?',
     seoTitle: '2026年版 ローカルRAGに最適な埋め込みモデル | Prompt Bites',
     metaDescription: 'nomic-embed-textはOllama経由のローカルRAGに最適な埋め込みモデルです — 8,192トークンのコンテキストと強力なオープンベンチマーク結果。BGE-M3が最良の多言語選択です。',
@@ -580,6 +586,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-embedding-model-local-rag-overview-hero-ko.png',
     title: '로컬 RAG를 위한 최적의 임베딩 모델은?',
     seoTitle: '2026년 로컬 RAG 최적 임베딩 모델 | Prompt Bites',
     metaDescription: 'nomic-embed-text는 Ollama 로컬 RAG용 최적 임베딩 모델입니다 — 8,192토큰 컨텍스트와 강력한 벤치마크 결과. BGE-M3는 최고의 다국어 선택입니다.',
@@ -676,6 +683,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-embedding-model-local-rag-overview-hero-pt.png',
     title: 'Qual o Melhor Modelo de Embedding para RAG Local?',
     seoTitle: 'Melhor Modelo de Embedding para RAG Local 2026',
     metaDescription: 'O nomic-embed-text é o melhor embedding para RAG local via Ollama — contexto de 8.192 tokens e bons benchmarks. O BGE-M3 é a melhor escolha multilíngue.',
@@ -772,6 +780,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Quick Answers',
+    heroImage: '/images/best-embedding-model-local-rag-overview-hero-zh.png',
     title: '本地 RAG 的最佳嵌入模型是什么？',
     seoTitle: '2026 年本地 RAG 最佳嵌入模型 | Prompt Bites',
     metaDescription: 'nomic-embed-text 是通过 Ollama 实现本地 RAG 的最佳嵌入模型——8192 token 上下文，开放基准测试结果出色。BGE-M3 是最佳多语言选择。',
