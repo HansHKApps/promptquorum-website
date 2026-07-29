@@ -9,11 +9,13 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      next_refresh_due: '2027-01-29',
       theme: 'Fundamentals',
       heroImage: '/images/prompt-for-speed-overview-hero-en.png',
       title: 'Faster AI Answers: How to Prompt for Speed',
       intro: 'Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency. Most AI answers bloat because of vague prompts, not slow models.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       readTime: '9 min read',
 
       seoTitle: 'Prompt for Speed 2026: Reduce Latency',
@@ -25,15 +27,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Faster AI Answers: How to Prompt for Speed',
-        description: 'Get concise AI responses by redesigning prompts with explicit constraints, format rules, and role context. Reduce token bloat across GPT-5.5, Claude, Gemini.',
+        description: 'Get concise AI responses by redesigning prompts with explicit constraints, format rules, and role context. Reduce token bloat across GPT-5.6, Claude, Gemini.',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
-        keywords: ['prompt engineering', 'answer length', 'prompt optimization', 'concise outputs', 'LLM efficiency', 'GPT-5.5', 'Claude', 'Gemini'],
+        keywords: ['prompt engineering', 'answer length', 'prompt optimization', 'concise outputs', 'LLM efficiency', 'GPT-5.6', 'Claude', 'Gemini'],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
           { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 3.5 Pro' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
         ],
         'proficiencyLevel': 'Intermediate',
@@ -42,7 +44,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'Why AI Answers Bloat',
           content: [
-            '**Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency.** Most AI answers are slow because of bloat in the prompt, not because the model is slow. In my experience after testing hundreds of prompts across GPT-5.5, Claude Opus 4.8, and Gemini 3.5 Pro, the fastest answers come from the tightest constraints.',
+            '**Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency.** Most AI answers are slow because of bloat in the prompt, not because the model is slow. In my experience after testing hundreds of prompts across GPT-5.6, Claude Opus 4.8, and Gemini 3.1 Pro, the fastest answers come from the tightest constraints.',
             'Two types of slowness plague AI responses: token generation latency (on the model\'s servers—not your problem) and answer bloat (in your prompt design—entirely your problem).',
             'Bloat happens when the model must hedge its bets. Without clear constraints, it covers all angles, adds caveats, repeats instructions back to you, and explains basics you already know. Each of these adds tokens that you didn\'t ask for.',
           ],
@@ -205,7 +207,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'PromptQuorum Consensus Test',
           content: [
-            'I tested this speed principle across GPT-5.5, Claude Opus 4.8, and Gemini 3.5 Pro by sending the same vague prompt versus a speed-optimized prompt:',
+            'I tested this speed principle across GPT-5.6, Claude Opus 4.8, and Gemini 3.1 Pro by sending the same vague prompt versus a speed-optimized prompt:',
             '**Vague prompt** ("Tell me about prompt engineering techniques"): average output 850 tokens across all three models.',
             '**Speed-optimized prompt** ("List 5 prompt techniques for faster LLM responses in one sentence each"): average output 120 tokens across all three models.',
             'All three models respected the format constraint equally. The speed-optimized version was **7× shorter** while remaining accurate.',
@@ -215,7 +217,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorum: {
           title: 'How PromptQuorum Helps You Prompt Faster',
           content: [
-            '**Multi-model dispatch:** Instead of testing your speed prompt across GPT-5.5, Claude, and Gemini separately (copying and pasting three times), PromptQuorum sends one prompt to 25+ models at once and displays all responses side-by-side. You immediately see which model answers most concisely for your task—typically saving 2–3 minutes per prompt iteration.',
+            '**Multi-model dispatch:** Instead of testing your speed prompt across GPT-5.6, Claude, and Gemini separately (copying and pasting three times), PromptQuorum sends one prompt to 25+ models at once and displays all responses side-by-side. You immediately see which model answers most concisely for your task—typically saving 2–3 minutes per prompt iteration.',
             '**Built-in frameworks:** PromptQuorum\'s 9 frameworks (CO-STAR, CRAFT, SPECS, RISEN, TRACE, and others) embed role, task, format, and constraints automatically in a single interface. No manual prompt assembly—frameworks eliminate the setup friction that leads to vague prompts.',
             '**Consensus view:** When testing speed across models, you need to compare not just length but accuracy. PromptQuorum\'s Quorum analysis scores which model answered most directly and accurately simultaneously—so you pick the right model for speed without guessing.',
             '**Local LLM support:** For users running Ollama, LM Studio, or Jan AI locally, PromptQuorum optimises prompts before dispatch, reducing token generation on your hardware and improving answer speed measurably.',
@@ -250,8 +252,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'No. **Precision matters more than brevity.** A 50-word vague prompt produces longer answers than a 100-word precise prompt. Length constraints without specificity are useless.',
             },
             {
-              q: 'Does this work the same on GPT-5.5, Claude, and Gemini?',
-              a: 'Mostly. All three respect explicit length limits and format constraints. Claude tends to follow bullet-point constraints more strictly; GPT-5.5 occasionally adds a summary sentence despite "no conclusion" instructions. Test your speed prompt across all three to find the best fit.',
+              q: 'Does this work the same on GPT-5.6, Claude, and Gemini?',
+              a: 'Mostly. All three respect explicit length limits and format constraints. Claude tends to follow bullet-point constraints more strictly; GPT-5.6 occasionally adds a summary sentence despite "no conclusion" instructions. Test your speed prompt across all three to find the best fit.',
             },
             {
               q: 'What if I need a fast answer but it must also be accurate?',
@@ -294,12 +296,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'LLM-Inferenz um 30–50 % beschleunigen: kurze Prompts und Batching. Latenz und Kosten senken, ohne Qualität zu opfern.',
       intro: 'Geschwindigkeit beim Prompt Engineering bedeutet, prägnante und direkte KI-Antworten durch durchdachtes Prompt-Design zu erreichen—nicht durch Hardware-Latenz. Die meisten KI-Antworten sind langsam, weil der Prompt zu vage ist, nicht weil das Modell langsam ist.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       readTime: '9 Min. Lesezeit',
       sections: {
         definition: {
           title: 'Warum KI-Antworten aufgebläht werden',
           content: [
-            '**Geschwindigkeit beim Prompt Engineering bedeutet, prägnante und direkte KI-Antworten durch durchdachtes Prompt-Design zu erreichen—nicht Hardware-Latenz.** Die meisten KI-Antworten sind langsam, weil der Prompt zu vage ist, nicht weil das Modell langsam ist. Nach dem Testen von Hunderten von Prompts mit GPT-5.5, Claude Opus 4.8 und Gemini 3.5 Pro bin ich zu dem Ergebnis gekommen, dass die schnellsten Antworten von den strengsten Einschränkungen kommen.',
+            '**Geschwindigkeit beim Prompt Engineering bedeutet, prägnante und direkte KI-Antworten durch durchdachtes Prompt-Design zu erreichen—nicht Hardware-Latenz.** Die meisten KI-Antworten sind langsam, weil der Prompt zu vage ist, nicht weil das Modell langsam ist. Nach dem Testen von Hunderten von Prompts mit GPT-5.6, Claude Opus 4.8 und Gemini 3.1 Pro bin ich zu dem Ergebnis gekommen, dass die schnellsten Antworten von den strengsten Einschränkungen kommen.',
             'Zwei Arten von Langsamkeit plagen KI-Antworten: Token-Generierungslatenz (auf den Servern des Modells—nicht dein Problem) und Antwortaufblähtheit (in deinem Prompt-Design—vollständig dein Problem).',
             'Aufblähtheit tritt auf, wenn das Modell hedgen muss. Ohne klare Einschränkungen deckt es alle Winkel ab, fügt Vorbehalte hinzu, wiederholt Anweisungen und erklärt Grundlagen, die du bereits kennst. Jedes davon fügt Token hinzu, die du nicht angefordert hast.',
           ],
@@ -436,7 +439,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'PromptQuorum Konsensus-Test',
           content: [
-            'Ich testete dieses Speed-Prinzip mit GPT-5.5, Claude Opus 4.8 und Gemini 3.5 Pro, indem ich den gleichen vagen Prompt versus einen speed-optimierten Prompt sendete:',
+            'Ich testete dieses Speed-Prinzip mit GPT-5.6, Claude Opus 4.8 und Gemini 3.1 Pro, indem ich den gleichen vagen Prompt versus einen speed-optimierten Prompt sendete:',
             '**Vager Prompt** ("Erzähle mir von Prompt-Engineering-Techniken"): durchschnittliche Ausgabe 850 Token über alle drei Modelle.',
             '**Speed-optimierter Prompt** ("Liste 5 Prompt-Techniken für schnellere LLM-Antworten auf, je ein Satz"): durchschnittliche Ausgabe 120 Token über alle drei Modelle.',
             'Alle drei Modelle respektierten die Formateinschränkung gleichermaßen. Die speed-optimierte Version war **7× kürzer** und blieb dennoch genau.',
@@ -445,7 +448,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorum: {
           title: 'Wie PromptQuorum dir hilft, schneller zu prompts',
           content: [
-            '**Multi-Model-Versand:** Anstatt deinen Speed-Prompt separat über GPT-5.5, Claude und Gemini zu testen (dreimal copy-paste), sendet PromptQuorum einen Prompt an 25+ Modelle gleichzeitig und zeigt alle Antworten nebeneinander. Du sehst sofort, welches Modell die prägnanteste Antwort für deine Aufgabe gibt—speichert normalerweise 2–3 Minuten pro Prompt-Iteration.',
+            '**Multi-Model-Versand:** Anstatt deinen Speed-Prompt separat über GPT-5.6, Claude und Gemini zu testen (dreimal copy-paste), sendet PromptQuorum einen Prompt an 25+ Modelle gleichzeitig und zeigt alle Antworten nebeneinander. Du sehst sofort, welches Modell die prägnanteste Antwort für deine Aufgabe gibt—speichert normalerweise 2–3 Minuten pro Prompt-Iteration.',
             '**Eingebaute Frameworks:** PromptQueorums 9 Frameworks (CO-STAR, CRAFT, SPECS, RISEN, TRACE und andere) betten Rolle, Aufgabe, Format und Einschränkungen automatisch in einer einzelnen Schnittstelle ein. Keine manuelle Prompt-Zusammenstellung—Frameworks eliminieren die Setup-Reibung, die zu vagen Prompts führt.',
             '**Konsensus-Ansicht:** Bei Geschwindigkeitstests über Modelle hinweg musst du nicht nur Länge, sondern auch Genauigkeit vergleichen. PromptQueorums Quorum-Analyse bewertet, welches Modell am direktesten und am genauesten antwortet—sodass du das richtige Modell für geschwindigkeitsempfindliche Aufgaben auswählen kannst.',
             '**Lokale LLM-Unterstützung:** Für Nutzer, die Ollama, LM Studio oder Jan AI lokal ausführen, optimiert PromptQuorum Prompts vor dem Versand und reduziert die Token-Generierung auf deiner Hardware und verbessert die Antwortgeschwindigkeit messbar.',
@@ -477,8 +480,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Nein. **Präzision ist wichtiger als Prägnanz.** Ein vager 50-Wort-Prompt erzeugt längere Antworten als ein präziser 100-Wort-Prompt. Längenbeschränkungen ohne Spezifität sind nutzlos.',
             },
             {
-              q: 'Funktioniert dies gleich auf GPT-5.5, Claude und Gemini?',
-              a: 'Größtenteils. Alle drei respektieren explizite Längenlimits und Formateinschränkungen. Claude folgt Bullet-Point-Einschränkungen präziser; GPT-5.5 fügt manchmal einen Zusammenfassungssatz hinzu, obwohl "keine Schlussfolgerung" angefordert wurde. Teste deinen Speed-Prompt über alle drei, um die beste Passung zu finden.',
+              q: 'Funktioniert dies gleich auf GPT-5.6, Claude und Gemini?',
+              a: 'Größtenteils. Alle drei respektieren explizite Längenlimits und Formateinschränkungen. Claude folgt Bullet-Point-Einschränkungen präziser; GPT-5.6 fügt manchmal einen Zusammenfassungssatz hinzu, obwohl "keine Schlussfolgerung" angefordert wurde. Teste deinen Speed-Prompt über alle drei, um die beste Passung zu finden.',
             },
             {
               q: 'Was wenn ich eine schnelle Antwort brauche, aber sie muss auch genau sein?',
@@ -517,8 +520,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Respuestas de IA más rápidas: Cómo hacer prompts para la velocidad',
       intro: 'Los prompts lentos de IA tienen una sola causa: la ambigüedad obliga al modelo a adivinar. Elimina la ambigüedad con cinco decisiones de diseño y obtendrás respuestas precisas y rápidas en el primer intento — en cualquier modelo.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       seoTitle: 'Prompts de IA más rápidos: Técnicas de velocidad 2026',
-      metaDescription: 'Los prompts lentos de IA son ambigüedad que obliga a adivinar al modelo. 5 cambios de diseño para respuestas precisas a la primera en GPT-5.5 y Claude.',
+      metaDescription: 'Los prompts lentos de IA son ambigüedad que obliga a adivinar al modelo. 5 cambios de diseño para respuestas precisas a la primera en GPT-5.6 y Claude.',
       readTime: '8 min de lectura',
       schema: {
         '@context': 'https://schema.org',
@@ -526,12 +530,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Respuestas de IA más rápidas: Cómo hacer prompts para la velocidad',
         description: 'Los prompts lentos de IA tienen una sola causa: la ambigüedad. Cinco decisiones de diseño dan respuestas precisas y rápidas en el primer intento.',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/es/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed',
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        keywords: ['prompts de IA más rápidos', 'prompting para velocidad', 'reducir latencia de IA', 'prompt engineering', 'GPT-5.5', 'Claude', 'Gemini'],
+        keywords: ['prompts de IA más rápidos', 'prompting para velocidad', 'reducir latencia de IA', 'prompt engineering', 'GPT-5.6', 'Claude', 'Gemini'],
       },
       sections: {
         definition: {
@@ -550,7 +554,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Usa restricciones negativas explícitas: "Sin introducción", "Sin advertencias", "Sin repetir la pregunta"',
             'El one-shot prompting (un ejemplo del output esperado) es el cambio de mayor impacto para la precisión del formato',
             'Las restricciones de longitud cuantitativas ("Exactamente 3 bullets") funcionan mejor que las instrucciones de longitud vagas ("Sé breve")',
-            'Los modelos más pequeños (GPT-5.5 mini, Claude Haiku 4.5) responden más rápido para outputs cortos — no siempre se necesita el modelo frontier',
+            'Los modelos más pequeños (GPT-5.6 mini, Claude Haiku 4.5) responden más rápido para outputs cortos — no siempre se necesita el modelo frontier',
           ],
         },
         whySlow: {
@@ -631,19 +635,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
         modelSelection: {
           title: 'Selección de modelos para velocidad',
           content: [
-            '**Los modelos más pequeños responden más rápido para outputs cortos y bien especificados.** GPT-5.5 mini, Claude Haiku 4.5 y Gemini Flash tienen latencia de primer token ~2–3× más rápida que sus contrapartes de tamaño completo para outputs de <200 tokens.',
+            '**Los modelos más pequeños responden más rápido para outputs cortos y bien especificados.** GPT-5.6 mini, Claude Haiku 4.5 y Gemini Flash tienen latencia de primer token ~2–3× más rápida que sus contrapartes de tamaño completo para outputs de <200 tokens.',
           ],
           items: [
-            '**GPT-5.5 mini:** Mejor para clasificación rápida, Q&A corto, extracción de datos',
+            '**GPT-5.6 mini:** Mejor para clasificación rápida, Q&A corto, extracción de datos',
             '**Claude Haiku 4.5:** Mejor para tareas de formato rápido, síntesis estructurada breve',
             '**Gemini Flash:** Mejor para búsquedas rápidas, respuestas de una oración, síntesis breve',
-            '**GPT-5.5 / Claude Opus / Gemini Pro:** Reservar para razonamiento de varios pasos, salidas largas, código complejo',
+            '**GPT-5.6 / Claude Opus / Gemini Pro:** Reservar para razonamiento de varios pasos, salidas largas, código complejo',
           ],
         },
         promptquorum: {
           title: 'Cómo PromptQuorum te ayuda a hacer prompts más rápido',
           content: [
-            '**Dispatch multi-modelo:** En lugar de probar tu speed prompt por separado en GPT-5.5, Claude y Gemini (tres copias y pegados), PromptQuorum envía un prompt a 25+ modelos simultáneamente y muestra todas las respuestas en paralelo. Ves inmediatamente qué modelo da la respuesta más concisa para tu tarea.',
+            '**Dispatch multi-modelo:** En lugar de probar tu speed prompt por separado en GPT-5.6, Claude y Gemini (tres copias y pegados), PromptQuorum envía un prompt a 25+ modelos simultáneamente y muestra todas las respuestas en paralelo. Ves inmediatamente qué modelo da la respuesta más concisa para tu tarea.',
             '**Frameworks integrados:** Los 9 frameworks de PromptQuorum (CO-STAR, CRAFT, SPECS, RISEN, TRACE y otros) integran automáticamente el rol, la tarea, el formato y las restricciones en una sola interfaz.',
             '**Vista de consenso:** Al hacer pruebas de velocidad en varios modelos, necesitas comparar no solo la longitud sino también la precisión. El análisis Quorum de PromptQuorum evalúa qué modelo responde de forma más directa y precisa.',
           ],
@@ -674,8 +678,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'No. **La precisión importa más que la brevedad.** Un prompt vago de 50 palabras genera respuestas más largas que un prompt preciso de 100 palabras. Las restricciones de longitud sin especificidad son inútiles.',
             },
             {
-              q: '¿Funciona igual en GPT-5.5, Claude y Gemini?',
-              a: 'En su mayoría. Los tres respetan los límites de longitud explícitos y las restricciones de formato. Claude sigue las restricciones de bullets con más precisión; GPT-5.5 a veces añade una oración de resumen aunque se pida "sin conclusión". Prueba tu speed prompt en los tres para encontrar el mejor ajuste.',
+              q: '¿Funciona igual en GPT-5.6, Claude y Gemini?',
+              a: 'En su mayoría. Los tres respetan los límites de longitud explícitos y las restricciones de formato. Claude sigue las restricciones de bullets con más precisión; GPT-5.6 a veces añade una oración de resumen aunque se pida "sin conclusión". Prueba tu speed prompt en los tres para encontrar el mejor ajuste.',
             },
             {
               q: '¿Qué pasa si necesito una respuesta rápida pero también debe ser precisa?',
@@ -713,8 +717,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'إجابات الذكاء الاصطناعي الأسرع: كيف تكتب برومبتات للسرعة',
       intro: 'البرومبتات البطيئة في الذكاء الاصطناعي لها سبب واحد فقط: الغموض يُجبر النموذج على التخمين. أزِل الغموض بخمسة قرارات تصميمية واحصل على إجابات دقيقة وسريعة في المحاولة الأولى — في أي نموذج.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       seoTitle: 'برومبتات ذكاء اصطناعي أسرع: تقليل الاستجابة ⁨2026⁩',
-      metaDescription: 'البرومبتات الغامضة تُولّد ⁨850⁩ رمزًا؛ البرومبتات المحسّنة ⁨120⁩ رمزًا فقط. ⁨5⁩ تغييرات تصميمية للحصول على إجابات دقيقة وسريعة مع ⁨GPT-5.5⁩ و⁨Claude⁩.',
+      metaDescription: 'البرومبتات الغامضة تُولّد ⁨850⁩ رمزًا؛ البرومبتات المحسّنة ⁨120⁩ رمزًا فقط. ⁨5⁩ تغييرات تصميمية للحصول على إجابات دقيقة وسريعة مع ⁨GPT-5.6⁩ و⁨Claude⁩.',
       readTime: '٨ دقائق للقراءة',
       schema: {
         '@context': 'https://schema.org',
@@ -722,12 +727,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'إجابات الذكاء الاصطناعي الأسرع: كيف تكتب برومبتات للسرعة',
         description: 'البرومبتات البطيئة في الذكاء الاصطناعي لها سبب واحد: الغموض. خمسة قرارات تصميمية تُنتج إجابات دقيقة وسريعة في المحاولة الأولى.',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/ar/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed',
         inLanguage: 'ar',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        keywords: ['برومبتات ذكاء اصطناعي أسرع', 'كتابة برومبتات للسرعة', 'تقليل زمن الاستجابة', 'هندسة البرومبت', 'GPT-5.5', 'Claude', 'Gemini'],
+        keywords: ['برومبتات ذكاء اصطناعي أسرع', 'كتابة برومبتات للسرعة', 'تقليل زمن الاستجابة', 'هندسة البرومبت', 'GPT-5.6', 'Claude', 'Gemini'],
       },
       sections: {
         definition: {
@@ -746,7 +751,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'استخدم قيودًا سلبية صريحة: "بدون مقدمة"، "بدون تحذيرات"، "بدون تكرار السؤال"',
             'برومبت المثال الواحد (one-shot prompting) هو أكثر التغييرات تأثيرًا على دقة التنسيق',
             'قيود الطول الكمية ("بالضبط 3 نقاط") تعمل أفضل من تعليمات الطول المبهمة ("كن موجزًا")',
-            'النماذج الأصغر (GPT-5.5 mini، Claude Haiku 4.5) تستجيب أسرع للمخرجات القصيرة — لا تحتاج دائمًا إلى النموذج الأمامي',
+            'النماذج الأصغر (GPT-5.6 mini، Claude Haiku 4.5) تستجيب أسرع للمخرجات القصيرة — لا تحتاج دائمًا إلى النموذج الأمامي',
           ],
         },
         whySlow: {
@@ -827,19 +832,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
         modelSelection: {
           title: 'اختيار النموذج للسرعة',
           content: [
-            '**النماذج الأصغر تستجيب أسرع للمخرجات القصيرة المحددة جيدًا.** GPT-5.5 mini وClaude Haiku 4.5 وGemini Flash لديها زمن استجابة أول رمز أسرع بـ~2–3× من نظيراتها كاملة الحجم للمخرجات التي تقل عن 200 رمز.',
+            '**النماذج الأصغر تستجيب أسرع للمخرجات القصيرة المحددة جيدًا.** GPT-5.6 mini وClaude Haiku 4.5 وGemini Flash لديها زمن استجابة أول رمز أسرع بـ~2–3× من نظيراتها كاملة الحجم للمخرجات التي تقل عن 200 رمز.',
           ],
           items: [
-            '**GPT-5.5 mini:** الأفضل للتصنيف السريع، الأسئلة والأجوبة القصيرة، استخراج البيانات',
+            '**GPT-5.6 mini:** الأفضل للتصنيف السريع، الأسئلة والأجوبة القصيرة، استخراج البيانات',
             '**Claude Haiku 4.5:** الأفضل لمهام التنسيق السريع، التوليف المنظم الموجز',
             '**Gemini Flash:** الأفضل للبحث السريع، الإجابات بجملة واحدة، التوليف الموجز',
-            '**GPT-5.5 / Claude Opus / Gemini Pro:** احتفظ بها للاستدلال متعدد الخطوات، المخرجات الطويلة، الكود المعقد',
+            '**GPT-5.6 / Claude Opus / Gemini Pro:** احتفظ بها للاستدلال متعدد الخطوات، المخرجات الطويلة، الكود المعقد',
           ],
         },
         promptquorum: {
           title: 'كيف يساعدك PromptQuorum على الكتابة بشكل أسرع',
           content: [
-            '**إرسال متعدد النماذج:** بدلًا من اختبار برومبت السرعة بشكل منفصل على GPT-5.5 وClaude وGemini (ثلاث نسخ ولصق)، يُرسل PromptQuorum برومبتًا واحدًا إلى 25+ نموذجًا في آنٍ واحد ويعرض جميع الإجابات بالتوازي. ترى فورًا أي نموذج يُعطي الإجابة الأكثر إيجازًا لمهمتك.',
+            '**إرسال متعدد النماذج:** بدلًا من اختبار برومبت السرعة بشكل منفصل على GPT-5.6 وClaude وGemini (ثلاث نسخ ولصق)، يُرسل PromptQuorum برومبتًا واحدًا إلى 25+ نموذجًا في آنٍ واحد ويعرض جميع الإجابات بالتوازي. ترى فورًا أي نموذج يُعطي الإجابة الأكثر إيجازًا لمهمتك.',
             '**أطر عمل مدمجة:** أطر العمل الـ9 في PromptQuorum (CO-STAR وCRAFT وSPECS وRISEN وTRACE وغيرها) تدمج الدور والمهمة والتنسيق والقيود تلقائيًا في واجهة واحدة.',
             '**عرض الإجماع:** عند اختبار السرعة عبر نماذج متعددة، تحتاج إلى مقارنة ليس الطول فحسب، بل الدقة أيضًا. يُقيّم تحليل Quorum في PromptQuorum أي نموذج يُجيب بشكل أكثر مباشرةً ودقةً.',
           ],
@@ -870,8 +875,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'لا. **الدقة تهم أكثر من الإيجاز.** برومبت غامض من 50 كلمة يُولّد إجابات أطول من برومبت دقيق من 100 كلمة. قيود الطول بدون تحديد لا قيمة لها.',
             },
             {
-              q: 'هل تعمل بنفس الطريقة على GPT-5.5 وClaude وGemini؟',
-              a: 'في معظمها. الثلاثة يحترمون حدود الطول الصريحة وقيود التنسيق. Claude يتبع قيود النقاط بدقة أكبر؛ GPT-5.5 أحيانًا يُضيف جملة ملخص رغم طلب "بدون خاتمة". اختبر برومبت السرعة على الثلاثة للعثور على الأنسب.',
+              q: 'هل تعمل بنفس الطريقة على GPT-5.6 وClaude وGemini؟',
+              a: 'في معظمها. الثلاثة يحترمون حدود الطول الصريحة وقيود التنسيق. Claude يتبع قيود النقاط بدقة أكبر؛ GPT-5.6 أحيانًا يُضيف جملة ملخص رغم طلب "بدون خاتمة". اختبر برومبت السرعة على الثلاثة للعثور على الأنسب.',
             },
             {
               q: 'ماذا لو احتجت إجابةً سريعةً لكنها يجب أن تكون دقيقةً أيضًا؟',
@@ -910,8 +915,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Respostas de IA mais rápidas: Como fazer prompts para velocidade',
       intro: 'Prompts lentos de IA têm uma única causa: a ambiguidade força o modelo a adivinhar. Elimine a ambiguidade com cinco decisões de design e você obterá respostas precisas e rápidas na primeira tentativa — em qualquer modelo.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       seoTitle: 'Prompts de IA mais rápidos: Técnicas de velocidade 2026',
-      metaDescription: 'Prompts lentos de IA são ambiguidade que força o modelo a adivinhar. 5 mudanças de design para respostas precisas na primeira tentativa no GPT-5.5 e Claude.',
+      metaDescription: 'Prompts lentos de IA são ambiguidade que força o modelo a adivinhar. 5 mudanças de design para respostas precisas na primeira tentativa no GPT-5.6 e Claude.',
       readTime: '8 min de leitura',
       schema: {
         '@context': 'https://schema.org',
@@ -919,11 +925,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Respostas de IA mais rápidas: Como fazer prompts para velocidade',
         description: 'Prompts lentos de IA têm uma única causa: a ambiguidade. Cinco decisões de design geram respostas precisas e rápidas na primeira tentativa.',
         datePublished: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/pt/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed',
         inLanguage: 'pt-BR',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        keywords: ['prompts de IA mais rápidos', 'prompting para velocidade', 'reduzir latência de IA', 'prompt engineering', 'GPT-5.5', 'Claude', 'Gemini'],
+        keywords: ['prompts de IA mais rápidos', 'prompting para velocidade', 'reduzir latência de IA', 'prompt engineering', 'GPT-5.6', 'Claude', 'Gemini'],
       },
       sections: {
         definition: {
@@ -942,7 +949,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Use restrições negativas explícitas: "Sem introdução", "Sem avisos", "Sem repetir a pergunta"',
             'O one-shot prompting (um exemplo do output esperado) é a mudança de maior impacto para a precisão do formato',
             'Restrições de comprimento quantitativas ("Exatamente 3 bullets") funcionam melhor do que instruções vagas de comprimento ("Seja breve")',
-            'Modelos menores (GPT-5.5 mini, Claude Haiku 4.5) respondem mais rápido para outputs curtos — nem sempre é necessário o modelo frontier',
+            'Modelos menores (GPT-5.6 mini, Claude Haiku 4.5) respondem mais rápido para outputs curtos — nem sempre é necessário o modelo frontier',
           ],
         },
         whySlow: {
@@ -1023,19 +1030,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
         modelSelection: {
           title: 'Seleção de modelos para velocidade',
           content: [
-            '**Modelos menores respondem mais rápido para outputs curtos e bem especificados.** GPT-5.5 mini, Claude Haiku 4.5 e Gemini Flash têm latência de primeiro token ~2–3× mais rápida do que suas contrapartes de tamanho completo para outputs de <200 tokens.',
+            '**Modelos menores respondem mais rápido para outputs curtos e bem especificados.** GPT-5.6 mini, Claude Haiku 4.5 e Gemini Flash têm latência de primeiro token ~2–3× mais rápida do que suas contrapartes de tamanho completo para outputs de <200 tokens.',
           ],
           items: [
-            '**GPT-5.5 mini:** Melhor para classificação rápida, Q&A curto, extração de dados',
+            '**GPT-5.6 mini:** Melhor para classificação rápida, Q&A curto, extração de dados',
             '**Claude Haiku 4.5:** Melhor para tarefas de formatação rápida, síntese estruturada breve',
             '**Gemini Flash:** Melhor para buscas rápidas, respostas de uma frase, síntese breve',
-            '**GPT-5.5 / Claude Opus / Gemini Pro:** Reservar para raciocínio de múltiplos passos, outputs longos, código complexo',
+            '**GPT-5.6 / Claude Opus / Gemini Pro:** Reservar para raciocínio de múltiplos passos, outputs longos, código complexo',
           ],
         },
         promptquorum: {
           title: 'Como o PromptQuorum ajuda você a fazer prompts mais rápido',
           content: [
-            '**Dispatch multi-modelo:** Em vez de testar seu speed prompt separadamente no GPT-5.5, Claude e Gemini (três copiar e colar), o PromptQuorum envia um prompt para 25+ modelos simultaneamente e exibe todas as respostas em paralelo. Você vê imediatamente qual modelo dá a resposta mais concisa para sua tarefa.',
+            '**Dispatch multi-modelo:** Em vez de testar seu speed prompt separadamente no GPT-5.6, Claude e Gemini (três copiar e colar), o PromptQuorum envia um prompt para 25+ modelos simultaneamente e exibe todas as respostas em paralelo. Você vê imediatamente qual modelo dá a resposta mais concisa para sua tarefa.',
             '**Frameworks integrados:** Os 9 frameworks do PromptQuorum (CO-STAR, CRAFT, SPECS, RISEN, TRACE e outros) integram automaticamente papel, tarefa, formato e restrições em uma única interface.',
             '**Visualização de consenso:** Ao testar velocidade em vários modelos, você precisa comparar não apenas o comprimento, mas também a precisão. A análise Quorum do PromptQuorum avalia qual modelo responde de forma mais direta e precisa.',
           ],
@@ -1066,8 +1073,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Não. **A precisão importa mais do que a brevidade.** Um prompt vago de 50 palavras gera respostas mais longas do que um prompt preciso de 100 palavras. Restrições de comprimento sem especificidade são inúteis.',
             },
             {
-              q: 'Funciona da mesma forma no GPT-5.5, Claude e Gemini?',
-              a: 'Em sua maioria. Os três respeitam limites de comprimento explícitos e restrições de formato. Claude segue restrições de bullets com mais precisão; GPT-5.5 às vezes adiciona uma frase de resumo mesmo quando se pede "sem conclusão". Teste seu speed prompt nos três para encontrar o melhor ajuste.',
+              q: 'Funciona da mesma forma no GPT-5.6, Claude e Gemini?',
+              a: 'Em sua maioria. Os três respeitam limites de comprimento explícitos e restrições de formato. Claude segue restrições de bullets com mais precisão; GPT-5.6 às vezes adiciona uma frase de resumo mesmo quando se pede "sem conclusão". Teste seu speed prompt nos três para encontrar o melhor ajuste.',
             },
             {
               q: 'E se eu precisar de uma resposta rápida, mas ela também deve ser precisa?',
@@ -1106,12 +1113,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Des réponses IA plus rapides : Comment concevoir des prompts pour la vitesse',
       intro: 'La rapidité en ingénierie de prompt signifie obtenir des réponses IA concises et directes grâce à une conception délibérée—non une latence matérielle. La plupart des réponses IA sont lentes en raison d\'une conception vague de prompt, non pas parce que le modèle est lent.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       readTime: '9 min de lecture',
       sections: {
         definition: {
           title: 'Pourquoi les réponses IA sont gonflées',
           content: [
-            '**La rapidité en ingénierie de prompt signifie obtenir des réponses IA concises et directes grâce à une conception délibérée—non une latence matérielle.** La plupart des réponses IA sont lentes à cause d\'un gonflement du prompt, non pas parce que le modèle est lent. Après avoir testé des centaines de prompts sur GPT-5.5, Claude Opus 4.8 et Gemini 3.5 Pro, j\'ai trouvé que les réponses les plus rapides proviennent des contraintes les plus strictes.',
+            '**La rapidité en ingénierie de prompt signifie obtenir des réponses IA concises et directes grâce à une conception délibérée—non une latence matérielle.** La plupart des réponses IA sont lentes à cause d\'un gonflement du prompt, non pas parce que le modèle est lent. Après avoir testé des centaines de prompts sur GPT-5.6, Claude Opus 4.8 et Gemini 3.1 Pro, j\'ai trouvé que les réponses les plus rapides proviennent des contraintes les plus strictes.',
             'Deux types de lenteur affligent les réponses IA : la latence de génération de tokens (du côté des serveurs du modèle—pas votre problème) et le gonflement de réponse (dans votre conception de prompt—entièrement votre problème).',
             'Le gonflement se produit lorsque le modèle doit couvrir ses paris. Sans contraintes claires, il couvre tous les angles, ajoute des mises en garde, répète les instructions et explique les bases que vous connaissez déjà. Chacun d\'eux ajoute des tokens que vous n\'avez pas demandés.',
           ],
@@ -1248,7 +1256,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'Test de consensus PromptQuorum',
           content: [
-            'J\'ai testé ce principe de vitesse sur GPT-5.5, Claude Opus 4.8 et Gemini 3.5 Pro en envoyant le même prompt vague par rapport à un prompt optimisé pour la vitesse :',
+            'J\'ai testé ce principe de vitesse sur GPT-5.6, Claude Opus 4.8 et Gemini 3.1 Pro en envoyant le même prompt vague par rapport à un prompt optimisé pour la vitesse :',
             '**Prompt vague** ("Parle-moi des techniques d\'ingénierie de prompt"): sortie moyenne 850 tokens sur tous les trois modèles.',
             '**Prompt optimisé pour la vitesse** ("Liste 5 techniques de prompt pour des réponses LLM plus rapides en une phrase chacun"): sortie moyenne 120 tokens sur tous les trois modèles.',
             'Les trois modèles ont respecté la contrainte de format de la même manière. La version optimisée pour la vitesse était **7× plus courte** tout en restant précise.',
@@ -1257,7 +1265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorum: {
           title: 'Comment PromptQuorum vous aide à concevoir plus rapidement',
           content: [
-            '**Dispatch multi-modèle :** Au lieu de tester votre prompt de vitesse séparément sur GPT-5.5, Claude et Gemini (trois fois copier-coller), PromptQuorum envoie un prompt à 25+ modèles à la fois et affiche toutes les réponses côte à côte. Vous voyez immédiatement quel modèle répondez de la manière la plus concise pour votre tâche—économisant généralement 2–3 minutes par itération de prompt.',
+            '**Dispatch multi-modèle :** Au lieu de tester votre prompt de vitesse séparément sur GPT-5.6, Claude et Gemini (trois fois copier-coller), PromptQuorum envoie un prompt à 25+ modèles à la fois et affiche toutes les réponses côte à côte. Vous voyez immédiatement quel modèle répondez de la manière la plus concise pour votre tâche—économisant généralement 2–3 minutes par itération de prompt.',
             '**Frameworks intégrés :** Les 9 frameworks de PromptQuorum (CO-STAR, CRAFT, SPECS, RISEN, TRACE et autres) intègrent le rôle, la tâche, le format et les contraintes automatiquement dans une seule interface. Pas de montage manuel de prompt—les frameworks éliminent la friction de configuration qui mène à des prompts vagues.',
             '**Affichage du consensus :** Lors du test de vitesse sur les modèles, vous devez comparer non seulement la longueur mais aussi la précision. L\'analyse Quorum de PromptQuorum évalue quel modèle a répondu de la manière la plus directe et la plus précise simultanément—afin que vous choisissiez le bon modèle pour les tâches sensibles à la vitesse.',
             '**Support LLM local :** Pour les utilisateurs exécutant Ollama, LM Studio ou Jan AI localement, PromptQuorum optimise les prompts avant la diffusion, réduisant la génération de tokens sur votre matériel et améliorant la vitesse de réponse de manière mesurable.',
@@ -1289,8 +1297,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Non. **La précision importe plus que la brièveté.** Un prompt vague de 50 mots produit des réponses plus longues qu\'un prompt précis de 100 mots. Les contraintes de longueur sans spécificité sont inutiles.',
             },
             {
-              q: 'Cela fonctionne-t-il de la même manière sur GPT-5.5, Claude et Gemini ?',
-              a: 'Principalement. Les trois respectent les limites de longueur explicites et les contraintes de format. Claude suit les contraintes de points à puces plus strictement ; GPT-5.5 ajoute occasionnellement une phrase de résumé malgré les instructions "pas de conclusion". Testez votre prompt de vitesse sur tous les trois pour trouver le meilleur ajustement.',
+              q: 'Cela fonctionne-t-il de la même manière sur GPT-5.6, Claude et Gemini ?',
+              a: 'Principalement. Les trois respectent les limites de longueur explicites et les contraintes de format. Claude suit les contraintes de points à puces plus strictement ; GPT-5.6 ajoute occasionnellement une phrase de résumé malgré les instructions "pas de conclusion". Testez votre prompt de vitesse sur tous les trois pour trouver le meilleur ajustement.',
             },
             {
               q: 'Et si j\'ai besoin d\'une réponse rapide mais qu\'elle doit aussi être précise ?',
@@ -1329,12 +1337,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '高速なAI回答：スピードのためのプロンプト設計',
       intro: 'プロンプトエンジニアリングにおける「速度」とは、意図的なプロンプト設計によって簡潔で直接的なAI応答を得ることです。ハードウェアレイテンシーではありません。ほとんどのAI回答が遅い理由は、モデルが遅いからではなく、プロンプトが曖昧だからです。',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       readTime: '9分で読める',
       sections: {
         definition: {
           title: 'AI回答が膨張する理由',
           content: [
-            '**プロンプトエンジニアリングにおける「速度」とは、意図的なプロンプト設計によって簡潔で直接的なAI応答を得ることです。** AI回答が遅いのは、モデルが遅いからではなく、プロンプトの膨張が原因です。GPT-5.5、Claude Opus 4.8、Gemini 3.5 Proで数百個のプロンプトをテストした経験から、最速の回答は最も厳しい制約から生まれることを発見しました。',
+            '**プロンプトエンジニアリングにおける「速度」とは、意図的なプロンプト設計によって簡潔で直接的なAI応答を得ることです。** AI回答が遅いのは、モデルが遅いからではなく、プロンプトの膨張が原因です。GPT-5.6、Claude Opus 4.8、Gemini 3.1 Proで数百個のプロンプトをテストした経験から、最速の回答は最も厳しい制約から生まれることを発見しました。',
             'AI回答の遅さには2つのタイプがあります：トークン生成レイテンシー（モデルのサーバー側—あなたの問題ではない）と回答膨張（プロンプト設計—完全にあなたの問題）。',
             '膨張は、モデルがリスクヘッジする必要があるときに発生します。明確な制約がないと、あらゆる観点をカバーし、注釈を追加し、指示を繰り返し、すでに知っている基礎を説明します。これらのすべてが、要求していないトークンを追加します。',
           ],
@@ -1471,7 +1480,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'PromptQuorumコンセンサステスト',
           content: [
-            'I tested this speed principle across GPT-5.5, Claude Opus 4.8, and Gemini 3.5 Pro by sending the same vague prompt versus a speed-optimized prompt:',
+            'この速度の原則を、同じ曖昧なプロンプトとスピード最適化プロンプトをGPT-5.6、Claude Opus 4.8、Gemini 3.1 Proに送信してテストしました：',
             '**曖昧なプロンプト** (「プロンプトエンジニアリング技術について教えてください」)：3つのモデルすべてで平均850トークンの出力。',
             '**スピード最適化プロンプト** (「より高速なLLM応答のための5つのプロンプト技術を1文ずつリストしてください」)：3つのモデルすべてで平均120トークンの出力。',
             '3つのモデルすべてがフォーマット制約を同等に尊重しました。スピード最適化版は**7倍短く** 、正確性を保ちました。',
@@ -1480,7 +1489,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorum: {
           title: 'PromptQuorumがより高速にプロンプトするのにどのように役立つか',
           content: [
-            '**マルチモデルディスパッチ：** スピードプロンプトをGPT-5.5、Claude、Geminiで個別にテストする代わりに(3回のコピー貼り付け)、PromptQuorumは1つのプロンプトを25以上のモデルに一度に送信し、すべての応答を並べて表示します。タスクのどのモデルが最も簡潔な回答を出すかをすぐに確認できます—通常、プロンプト反復あたり2～3分節約できます。',
+            '**マルチモデルディスパッチ：** スピードプロンプトをGPT-5.6、Claude、Geminiで個別にテストする代わりに(3回のコピー貼り付け)、PromptQuorumは1つのプロンプトを25以上のモデルに一度に送信し、すべての応答を並べて表示します。タスクのどのモデルが最も簡潔な回答を出すかをすぐに確認できます—通常、プロンプト反復あたり2～3分節約できます。',
             '**組み込みフレームワーク：** PromptQuorumの9つのフレームワーク(CO-STAR、CRAFT、SPECS、RISEN、TRACEなど)は、単一のインターフェース内にロール、タスク、フォーマット、制約を自動的に組み込みます。手動プロンプト組立なし—フレームワークは曖昧なプロンプトにつながるセットアップ摩擦を排除します。',
             '**コンセンサスビュー：** モデル間でスピードをテストするときは、長さだけでなく精度も比較する必要があります。PromptQuorumのQuorum分析は、どのモデルが最も直接的かつ正確に回答したかを同時にスコアリングします—スピード感応タスクの正しいモデルを推測なしで選択できます。',
             '**ローカルLLMサポート：** Ollama、LM Studio、またはJan AIをローカルで実行するユーザーの場合、PromptQuorumはディスパッチ前にプロンプトを最適化し、ハードウェア上のトークン生成を削減し、応答スピードを計測可能に向上させます。',
@@ -1513,8 +1522,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'いいえ。**精度は簡潔性より重要です。** 曖昧な50単語のプロンプトは、正確な100単語のプロンプトより長い回答を生成します。特異性のない長さ制約は役に立たません。',
             },
             {
-              q: 'これはGPT-5.5、Claude、Geminiで同じように機能しますか？',
-              a: 'ほぼ。すべての3つが明示的な長さ制限とフォーマット制約を尊重します。Claudeはbullet ポイント制約により厳密に従う傾向があります。GPT-5.5は時々「結論なし」指示にもかかわらず要約文を追加します。最適な適合を見つけるために、3つすべてでスピードプロンプトをテストします。',
+              q: 'これはGPT-5.6、Claude、Geminiで同じように機能しますか？',
+              a: 'ほぼ。すべての3つが明示的な長さ制限とフォーマット制約を尊重します。Claudeはbullet ポイント制約により厳密に従う傾向があります。GPT-5.6は時々「結論なし」指示にもかかわらず要約文を追加します。最適な適合を見つけるために、3つすべてでスピードプロンプトをテストします。',
             },
             {
               q: '高速で正確な回答が必要な場合はどうなりますか？',
@@ -1553,12 +1562,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '更快的AI回答：如何设计提示词以提高速度',
       intro: '提示词工程中的"速度"是指通过有意的提示词设计获得简洁、直接的AI回答，而不是硬件延迟。大多数AI回答缓慢的原因是提示词过于宽泛，而不是模型缓慢。',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       readTime: '阅读约9分钟',
       sections: {
         definition: {
           title: 'AI回答为何臃肿',
           content: [
-            '**提示词工程中的"速度"是指通过有意的提示词设计获得简洁、直接的AI回答，而不是硬件延迟。** 大多数AI回答缓慢是由于提示词臃肿，而不是模型缓慢。根据在GPT-5.5、Claude Opus 4.8和Gemini 3.5 Pro上测试数百个提示词的经验，最快的回答来自最严格的约束。',
+            '**提示词工程中的"速度"是指通过有意的提示词设计获得简洁、直接的AI回答，而不是硬件延迟。** 大多数AI回答缓慢是由于提示词臃肿，而不是模型缓慢。根据在GPT-5.6、Claude Opus 4.8和Gemini 3.1 Pro上测试数百个提示词的经验，最快的回答来自最严格的约束。',
             'AI回答缓慢有两种类型：令牌生成延迟（在模型服务器端—不是你的问题）和回答臃肿（在你的提示词设计中—完全是你的问题）。',
             '当模型必须权衡时会出现臃肿。没有明确的约束，它会覆盖所有角度、添加注意事项、重复指示、解释你已经知道的基础知识。这些都增加了你没有要求的令牌。',
           ],
@@ -1695,7 +1705,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'PromptQuorum共识测试',
           content: [
-            '我通过向GPT-5.5、Claude Opus 4.8和Gemini 3.5 Pro发送相同的模糊提示词与速度优化的提示词来测试这一原理：',
+            '我通过向GPT-5.6、Claude Opus 4.8和Gemini 3.1 Pro发送相同的模糊提示词与速度优化的提示词来测试这一原理：',
             '**模糊提示词** ("告诉我关于提示词工程技术")：所有三个模型的平均输出850令牌。',
             '**速度优化提示词** ("列出5个用于更快LLM响应的提示词技术，每个一句话")：所有三个模型的平均输出120令牌。',
             '所有三个模型同样尊重格式约束。速度优化版本**7倍更短**，同时保持准确。',
@@ -1704,7 +1714,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorum: {
           title: 'PromptQuorum如何帮助你更快地提示',
           content: [
-            '**多模型分发：** 与其在GPT-5.5、Claude和Gemini上分别测试你的速度提示词（三次复制粘贴），PromptQuorum同时将一个提示词发送到25个以上的模型并并排显示所有响应。你立即看到哪个模型为你的任务给出最简洁的答案—通常节省每次提示词迭代2–3分钟。',
+            '**多模型分发：** 与其在GPT-5.6、Claude和Gemini上分别测试你的速度提示词（三次复制粘贴），PromptQuorum同时将一个提示词发送到25个以上的模型并并排显示所有响应。你立即看到哪个模型为你的任务给出最简洁的答案—通常节省每次提示词迭代2–3分钟。',
             '**内置框架：** PromptQuorum的9个框架（CO-STAR、CRAFT、SPECS、RISEN、TRACE等）在单个界面中自动嵌入角色、任务、格式和约束。没有手动提示词组装—框架消除导致模糊提示词的设置摩擦。',
             '**共识视图：** 在模型间测试速度时，你需要比较不仅长度还有准确性。PromptQuorum的Quorum分析同时评分哪个模型回答最直接和准确—所以你可以为速度敏感的任务选择正确的模型而无需猜测。',
             '**本地LLM支持：** 对于在本地运行Ollama、LM Studio或Jan AI的用户，PromptQuorum在分发前优化提示词，减少你硬件上的令牌生成并可测量地改善响应速度。',
@@ -1737,8 +1747,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: '不。**具体性比简洁性更重要。** 50词的模糊提示词产生比100词精确提示词更长的回答。没有具体性的长度约束是无用的。',
             },
             {
-              q: '这在GPT-5.5、Claude和Gemini上的工作方式相同吗？',
-              a: '大多数情况下。所有三个都尊重明确的长度限制和格式约束。Claude倾向于更严格地遵循项目符号约束；GPT-5.5偶尔会添加摘要句子，尽管要求"无结论"。在所有三个上测试你的速度提示词以找到最佳匹配。',
+              q: '这在GPT-5.6、Claude和Gemini上的工作方式相同吗？',
+              a: '大多数情况下。所有三个都尊重明确的长度限制和格式约束。Claude倾向于更严格地遵循项目符号约束；GPT-5.6偶尔会添加摘要句子，尽管要求"无结论"。在所有三个上测试你的速度提示词以找到最佳匹配。',
             },
             {
               q: '如果我需要快速但准确的回答怎么办？',
@@ -1776,8 +1786,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '더 빠른 AI 답변: 속도를 위한 Prompt 작성 방법',
       intro: 'AI prompt의 느린 응답에는 단 하나의 원인이 있습니다: 모호함이 모델을 추측하게 만듭니다. 다섯 가지 설계 결정으로 모호함을 제거하면 어떤 모델에서든 첫 번째 시도에 정확하고 빠른 답변을 얻을 수 있습니다.',
       publishDate: '2026-03-22',
+      dateModified: '2026-07-29',
       seoTitle: '더 빠른 AI Prompt 기법: 속도 최적화 2026',
-      metaDescription: '느린 AI prompt는 모델을 추측하게 만드는 모호함입니다. GPT-5.5와 Claude에서 첫 번째 시도에 정확한 답변을 위한 5가지 설계 변경 방법.',
+      metaDescription: '느린 AI prompt는 모델을 추측하게 만드는 모호함입니다. GPT-5.6와 Claude에서 첫 번째 시도에 정확한 답변을 위한 5가지 설계 변경 방법.',
       readTime: '8분 분량',
       schema: {
         '@context': 'https://schema.org',
@@ -1785,12 +1796,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '더 빠른 AI 답변: 속도를 위한 Prompt 작성 방법',
         description: '느린 AI prompt에는 단 하나의 원인이 있습니다: 모호함. 다섯 가지 설계 결정이 첫 번째 시도에 정확하고 빠른 답변을 제공합니다.',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
+        dateModified: '2026-07-29',
         url: 'https://www.promptquorum.com/ko/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed',
         inLanguage: 'ko',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        keywords: ['더 빠른 AI prompt', '속도를 위한 프롬프팅', 'AI 지연 시간 감소', 'prompt engineering', 'GPT-5.5', 'Claude', 'Gemini'],
+        keywords: ['더 빠른 AI prompt', '속도를 위한 프롬프팅', 'AI 지연 시간 감소', 'prompt engineering', 'GPT-5.6', 'Claude', 'Gemini'],
       },
       sections: {
         definition: {
@@ -1809,7 +1820,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '명시적인 부정 제약 사용: "도입 없음", "경고 없음", "질문 반복 없음"',
             '원샷 프롬프팅 (기대 출력의 예시 하나)은 형식 정확도에 가장 큰 영향을 미치는 변경 사항',
             '정량적 길이 제약 ("정확히 3개 bullet")이 모호한 길이 지시 ("간결하게")보다 더 잘 작동함',
-            '더 작은 모델 (GPT-5.5 mini, Claude Haiku 4.5)이 짧은 출력에 더 빠르게 응답함 — 항상 최신 모델이 필요하지는 않음',
+            '더 작은 모델 (GPT-5.6 mini, Claude Haiku 4.5)이 짧은 출력에 더 빠르게 응답함 — 항상 최신 모델이 필요하지는 않음',
           ],
         },
         whySlow: {
@@ -1890,19 +1901,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
         modelSelection: {
           title: '속도를 위한 모델 선택',
           content: [
-            '**더 작은 모델이 잘 지정된 짧은 출력에 더 빠르게 응답합니다.** GPT-5.5 mini, Claude Haiku 4.5, Gemini Flash는 200 토큰 미만의 출력에서 전체 크기 버전보다 첫 번째 토큰 지연 시간이 ~2-3배 빠릅니다.',
+            '**더 작은 모델이 잘 지정된 짧은 출력에 더 빠르게 응답합니다.** GPT-5.6 mini, Claude Haiku 4.5, Gemini Flash는 200 토큰 미만의 출력에서 전체 크기 버전보다 첫 번째 토큰 지연 시간이 ~2-3배 빠릅니다.',
           ],
           items: [
-            '**GPT-5.5 mini:** 빠른 분류, 짧은 Q&A, 데이터 추출에 최적',
+            '**GPT-5.6 mini:** 빠른 분류, 짧은 Q&A, 데이터 추출에 최적',
             '**Claude Haiku 4.5:** 빠른 형식 작업, 짧은 구조화된 합성에 최적',
             '**Gemini Flash:** 빠른 조회, 한 문장 답변, 짧은 합성에 최적',
-            '**GPT-5.5 / Claude Opus / Gemini Pro:** 다단계 추론, 긴 출력, 복잡한 코드를 위해 예약',
+            '**GPT-5.6 / Claude Opus / Gemini Pro:** 다단계 추론, 긴 출력, 복잡한 코드를 위해 예약',
           ],
         },
         promptquorum: {
           title: 'PromptQuorum이 더 빠른 prompt 작성을 어떻게 돕습니까',
           content: [
-            '**멀티 모델 디스패치:** GPT-5.5, Claude, Gemini에서 속도 prompt를 별도로 테스트하는 대신(세 번 복사 붙여넣기), PromptQuorum은 하나의 prompt를 25개 이상의 모델에 동시에 전송하고 모든 응답을 나란히 표시합니다. 어떤 모델이 작업에 가장 간결한 답변을 제공하는지 즉시 확인할 수 있습니다.',
+            '**멀티 모델 디스패치:** GPT-5.6, Claude, Gemini에서 속도 prompt를 별도로 테스트하는 대신(세 번 복사 붙여넣기), PromptQuorum은 하나의 prompt를 25개 이상의 모델에 동시에 전송하고 모든 응답을 나란히 표시합니다. 어떤 모델이 작업에 가장 간결한 답변을 제공하는지 즉시 확인할 수 있습니다.',
             '**내장 프레임워크:** PromptQuorum의 9개 프레임워크(CO-STAR, CRAFT, SPECS, RISEN, TRACE 등)가 단일 인터페이스에서 역할, 작업, 형식, 제약을 자동으로 포함합니다.',
             '**합의 보기:** 모델에 걸쳐 속도를 테스트할 때 길이만이 아니라 정확도도 비교해야 합니다. PromptQuorum의 Quorum 분석은 어떤 모델이 가장 직접적이고 정확하게 답변하는지 평가합니다.',
           ],
@@ -1934,8 +1945,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: '아닙니다. **정확성이 간결함보다 중요합니다.** 50단어의 모호한 prompt가 100단어의 정확한 prompt보다 더 긴 답변을 생성합니다. 구체성 없는 길이 제약은 쓸모가 없습니다.',
             },
             {
-              q: 'GPT-5.5, Claude, Gemini에서 같은 방식으로 작동합니까?',
-              a: '대부분 그렇습니다. 세 가지 모두 명시적인 길이 제한과 형식 제약을 따릅니다. Claude는 bullet 제약을 더 엄격하게 따르는 경향이 있습니다; GPT-5.5는 "결론 없음"을 요청해도 요약 문장을 추가하는 경우가 있습니다. 세 가지 모두에서 속도 prompt를 테스트하여 최적을 찾으십시오.',
+              q: 'GPT-5.6, Claude, Gemini에서 같은 방식으로 작동합니까?',
+              a: '대부분 그렇습니다. 세 가지 모두 명시적인 길이 제한과 형식 제약을 따릅니다. Claude는 bullet 제약을 더 엄격하게 따르는 경향이 있습니다; GPT-5.6는 "결론 없음"을 요청해도 요약 문장을 추가하는 경우가 있습니다. 세 가지 모두에서 속도 prompt를 테스트하여 최적을 찾으십시오.',
             },
             {
               q: '빠른 답변이 필요하지만 정확해야 하면 어떻게 합니까?',
