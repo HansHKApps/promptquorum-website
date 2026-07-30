@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-en.png',
     title: 'How Much Does a Cloud GPU Cost Per Hour in 2026?',
     seoTitle: 'Cloud GPU Cost Per Hour 2026 | Prompt Bites',
     metaDescription: 'Cloud GPU cost per hour (July 2026): RTX 4090 ~$0.30-0.80, A100 80 GB ~$0.90-2.00, H100 ~$2.50-4.00. Approximate ranges across major providers.',
@@ -144,6 +145,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-de.png',
     title: 'Wie viel kostet eine Cloud-GPU pro Stunde 2026?',
     seoTitle: 'Cloud-GPU-Kosten pro Stunde 2026 | Prompt Bites',
     metaDescription: 'Cloud-GPU-Kosten pro Stunde (Juli 2026): RTX 4090 ~0,30-0,80 $, A100 80 GB ~0,90-2,00 $, H100 ~2,50-4,00 $. Ungefähre Bereiche über große Anbieter.',
@@ -285,6 +287,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-fr.png',
     title: 'Combien coûte un GPU cloud par heure en 2026 ?',
     seoTitle: 'Coût horaire GPU cloud 2026 | Prompt Bites',
     metaDescription: 'Coût horaire GPU cloud (juillet 2026) : RTX 4090 ~0,30-0,80 $, A100 80 GB ~0,90-2,00 $, H100 ~2,50-4,00 $. Plages approximatives sur les grands fournisseurs.',
@@ -426,6 +429,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-ja.png',
     title: '2026年、クラウドGPUの時間料金はいくら？',
     seoTitle: 'クラウドGPU 時間料金 2026 | Prompt Bites',
     metaDescription: 'クラウドGPUの時間料金(2026年7月):RTX 4090 ~$0.30-0.80、A100 80 GB ~$0.90-2.00、H100 ~$2.50-4.00。主要プロバイダーでの概算。',
@@ -567,6 +571,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-zh.png',
     title: '2026年云GPU每小时多少钱？',
     seoTitle: '云GPU每小时价格 2026 | Prompt Bites',
     metaDescription: '云GPU每小时价格(2026年7月):RTX 4090 ~$0.30-0.80,A100 80 GB ~$0.90-2.00,H100 ~$2.50-4.00。主要提供商概算区间。',
@@ -708,6 +713,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-pt.png',
     title: 'Quanto custa uma GPU na nuvem por hora em 2026?',
     seoTitle: 'Preço de GPU na nuvem por hora 2026 | Prompt Bites',
     metaDescription: 'Preço de GPU na nuvem por hora (julho de 2026): RTX 4090 ~$0,30–0,80, A100 80 GB ~$0,90–2,00, H100 ~$2,50–4,00. Faixas aproximadas entre os principais provedores.',
@@ -849,6 +855,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-es.png',
     title: '¿Cuánto cuesta un GPU en la nube por hora en 2026?',
     seoTitle: 'Precio GPU en la nube por hora 2026 | Prompt Bites',
     metaDescription: 'Precio de GPU cloud por hora (julio 2026): RTX 4090 ~$0,30–0,80, A100 80 GB ~$0,90–2,00, H100 ~$2,50–4,00. Rangos aproximados entre los principales proveedores.',
@@ -990,6 +997,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-ar.png',
     title: 'كم تكلّف وحدة ⁨GPU⁩ السحابية في الساعة عام ⁨2026⁩؟',
     seoTitle: 'تكلفة ⁨GPU⁩ السحابية في الساعة ⁨2026⁩ | ⁨Prompt Bites⁩',
     metaDescription: 'تكلفة ⁨GPU⁩ السحابية في الساعة (يوليو ⁨2026⁩): ⁨RTX 4090⁩ ~$⁨0.30⁩–⁨0.80⁩، ⁨A100 80 GB⁩ ~$⁨0.90⁩–⁨2.00⁩، ⁨H100⁩ ~$⁨2.50⁩–⁨4.00⁩. نطاقات تقريبية عبر كبار مزودي الخدمة.',
@@ -1131,6 +1139,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-ko.png',
     title: '2026년 클라우드 GPU 시간당 비용은 얼마입니까?',
     seoTitle: '클라우드 GPU 시간당 가격 2026 | Prompt Bites',
     metaDescription: '클라우드 GPU 시간당 비용 (2026년 7월): RTX 4090 ~$0.30–0.80, A100 80 GB ~$0.90–2.00, H100 ~$2.50–4.00. 주요 공급업체 간 대략적인 범위입니다.',

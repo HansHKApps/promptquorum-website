@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-en.png',
     title: 'Cursor Pro vs Continue.dev: Is $20/Month Worth It in 2026?',
     seoTitle: 'Cursor Pro vs Continue.dev 2026 | Prompt Bites',
     metaDescription: 'Continue.dev was acquired by Cursor in June 2026 and is shutting down (July 15 data deadline). Cline is now the top free open-source alternative. Cursor Pro stays at $20/mo.',
@@ -140,6 +141,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-de.png',
     title: 'Cursor Pro vs Continue.dev: Lohnen sich 20 $/Monat 2026?',
     seoTitle: 'Cursor Pro vs. Continue.dev 2026: Welches Tool?',
     metaDescription: 'Continue.dev wurde im Juni 2026 von Cursor übernommen und stellt den Betrieb ein (Datenexport-Frist: 15. Juli). Cline ist jetzt die beste Open-Source-Alternative. Cursor Pro bleibt bei ~20 €/Monat.',
@@ -251,6 +253,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-fr.png',
     title: 'Cursor Pro vs Continue.dev : 20 $/mois en valent-ils la peine en 2026 ?',
     seoTitle: 'Cursor Pro vs Continue.dev 2026 | Prompt Bites',
     metaDescription: 'Continue.dev a été racheté par Cursor en juin 2026 et ferme ses portes (deadline export : 15 juillet). Cline est désormais la meilleure alternative open source gratuite. Cursor Pro reste à ~20 €/mois.',
@@ -350,6 +353,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-ja.png',
     title: 'Cursor Pro vs Continue.dev：2026年に月20ドルの価値はあるか？',
     seoTitle: 'Cursor Pro vs Continue.dev 2026 | Prompt Bites',
     metaDescription: 'Continue.devは2026年6月にCursorに買収され終了（データエクスポート期限：7月15日）。Clineが最良の無料OSS代替ツール。Cursor Proは引き続き月約3,000円。',
@@ -449,6 +453,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-zh.png',
     title: 'Cursor Pro 与 Continue.dev：2026年20美元/月值得吗？',
     seoTitle: 'Cursor Pro vs Continue.dev 2026 | Prompt Bites',
     metaDescription: 'Continue.dev已于2026年6月被Cursor收购并关闭（数据导出截止7月15日）。Cline是最佳免费开源替代方案。Cursor Pro仍为约$20/月。',
@@ -548,6 +553,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-pt.png',
     title: 'Cursor Pro vs Continue.dev: Vale $20/mês em 2026?',
     seoTitle: 'Cursor Pro vs Continue.dev 2026 | Prompt Bites',
     metaDescription: 'Continue.dev foi adquirido pela Cursor em junho de 2026 e está encerrando (prazo exportação: 15 de julho). Cline é agora a melhor alternativa gratuita open source. Cursor Pro permanece em $20/mês.',
@@ -682,6 +688,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-es.png',
     title: 'Cursor Pro vs Continue.dev: ¿Valen $20/mes en 2026?',
     seoTitle: 'Cursor Pro vs Continue.dev 2026 | Prompt Bites',
     metaDescription: 'Continue.dev fue adquirido por Cursor en junio de 2026 y está cerrando (plazo exportación: 15 de julio). Cline es ahora la mejor alternativa gratuita open source. Cursor Pro sigue en $20/mes.',
@@ -816,6 +823,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-ar.png',
     title: '⁨Cursor Pro⁩ مقابل ⁨Continue.dev⁩: هل تستحق $⁨20⁩/شهر في ⁨2026⁩؟',
     seoTitle: '⁨Cursor Pro⁩ مقابل ⁨Continue.dev 2026⁩ | أيهما للكود؟',
     metaDescription: 'جرى استحواذ Cursor على Continue.dev في يونيو 2026 وهو يُغلق أبوابه (موعد تصدير البيانات: 15 يوليو). Cline هو أفضل بديل مجاني مفتوح المصدر الآن. Cursor Pro لا يزال بـ $20/شهر.',
@@ -950,6 +958,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/cursor-pro-vs-continue-dev-overview-hero-ko.png',
     title: 'Cursor Pro vs Continue.dev: 2026년 월 $20 가치가 있을까?',
     seoTitle: 'Cursor Pro vs Continue.dev 2026: 로컬 vs 클라우드',
     metaDescription: 'Continue.dev는 2026년 6월 Cursor에 인수되어 서비스를 종료합니다(데이터 내보내기 기한: 7월 15일). Cline이 현재 최고의 무료 오픈소스 대안입니다. Cursor Pro는 여전히 월 $20입니다.',
