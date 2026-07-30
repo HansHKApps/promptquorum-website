@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware Extension',
+    heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-en.png',
     title: 'Ollama on WSL2 vs Native Windows: Which Should You Pick?',
     seoTitle: 'WSL2 vs Native Windows for Ollama | Prompt Bites',
     metaDescription:
@@ -109,6 +110,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   de: {
     theme: 'Hardware Extension',
+    heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-de.png',
     title: 'Ollama unter WSL2 vs. natives Windows: Was sollten Sie wählen?',
     seoTitle: 'WSL2 vs. natives Windows für Ollama | Prompt Bites',
     metaDescription:
@@ -214,6 +216,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   fr: {
     theme: 'Hardware Extension',
+    heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-fr.png',
     title: 'Ollama sous WSL2 ou Windows natif : que choisir ?',
     seoTitle: 'WSL2 vs Windows natif pour Ollama | Prompt Bites',
     metaDescription:
@@ -319,6 +322,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   ja: {
     theme: 'Hardware Extension',
+    heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-ja.png',
     title: 'Ollama を WSL2 と Windows ネイティブで使う場合、どちらを選ぶべきか？',
     seoTitle: 'Ollama：WSL2 vs Windowsネイティブ | Prompt Bites',
     metaDescription:
@@ -424,6 +428,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   zh: {
     theme: 'Hardware Extension',
+    heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-zh.png',
     title: 'Ollama 在 WSL2 与原生 Windows 上运行：该如何选择？',
     seoTitle: 'WSL2 与原生 Windows 运行 Ollama对比 | Prompt Bites',
     metaDescription:
@@ -529,6 +534,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   es: {
     theme: 'Hardware Extension',
+    heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-es.png',
     title: 'Ollama en WSL2 vs. Windows nativo: ¿Cuál deberías elegir?',
     seoTitle: 'WSL2 vs Windows nativo para Ollama | Prompt Bites',
     metaDescription:
@@ -634,6 +640,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   pt: {
     theme: 'Hardware Extension',
+    heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-pt.png',
     title: 'Ollama no WSL2 vs. Windows nativo: qual escolher?',
     seoTitle: 'WSL2 vs Windows nativo para Ollama | Prompt Bites',
     metaDescription:
@@ -739,6 +746,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   ar: {
     theme: 'Hardware Extension',
+    heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-ar.png',
     title: 'Ollama عبر WSL2 مقابل Windows الأصلي: أيهما تختار؟',
     seoTitle: 'WSL2 مقابل Windows الأصلي لـ Ollama | Prompt Bites',
     metaDescription:
@@ -844,6 +852,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   ko: {
     theme: 'Hardware Extension',
+    heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-ko.png',
     title: 'Ollama를 WSL2와 네이티브 Windows 중 어디에서 실행해야 할까요?',
     seoTitle: 'Ollama WSL2 vs 네이티브 Windows 비교 | Prompt Bites',
     metaDescription:

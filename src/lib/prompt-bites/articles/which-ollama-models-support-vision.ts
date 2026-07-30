@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Ollama',
+    heroImage: '/images/which-ollama-models-support-vision-overview-hero-en.png',
     title: 'Which Ollama Models Support Vision?',
     dateModified: '2026-06-21',
     seoTitle: 'Ollama Vision Models 2026 | Prompt Bites | PromptQuorum',
@@ -100,6 +101,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Ollama',
+    heroImage: '/images/which-ollama-models-support-vision-overview-hero-de.png',
     title: 'Welche Ollama-Modelle unterstützen Vision?',
     seoTitle: 'Ollama Vision-Modelle 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'LLaVA, Gemma 3 multimodal und Qwen-VL unterstützen Vision in Ollama. Start: ollama run llava. Alle akzeptieren Bilder via Ollama API. Stand Mai 2026.',
@@ -184,6 +186,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Ollama',
+    heroImage: '/images/which-ollama-models-support-vision-overview-hero-fr.png',
     title: 'Quels modèles Ollama supportent la vision ?',
     seoTitle: 'Ollama modèles vision 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'LLaVA, Gemma 3 multimodal et Qwen-VL supportent la vision sur Ollama. Démarrez : ollama run llava. Images acceptées via l\'API Ollama. Vérifié mai 2026.',
@@ -268,6 +271,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Ollama',
+    heroImage: '/images/which-ollama-models-support-vision-overview-hero-ja.png',
     title: 'OllamaでVisionに対応しているモデルは？',
     seoTitle: 'OllamaのVision対応モデル2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'OllamaではLLaVA、Gemma 3マルチモーダル、Qwen-VLがVisionに対応しています。まずは ollama run llava から始めましょう。すべてOllama APIで画像を受け付けます。2026年5月確認済み。',
@@ -352,6 +356,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Ollama',
+    heroImage: '/images/which-ollama-models-support-vision-overview-hero-zh.png',
     title: '哪些Ollama模型支持视觉功能？',
     seoTitle: '哪些Ollama模型支持视觉2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'LLaVA、Gemma 3多模态和Qwen-VL支持Ollama上的视觉功能。使用 ollama run llava 快速开始。所有模型均通过Ollama API接受图片。2026年5月更新。',
@@ -436,6 +441,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Ollama',
+    heroImage: '/images/which-ollama-models-support-vision-overview-hero-pt.png',
     title: 'Quais modelos do Ollama suportam visão?',
     seoTitle: 'Modelos de visão do Ollama 2026 | PromptQuorum',
     metaDescription: 'LLaVA, Gemma 3 multimodal e Qwen-VL suportam visão no Ollama. Comece com: ollama run llava. Todos aceitam imagens via a API do Ollama. Atualizado em 2026.',
@@ -520,6 +526,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Ollama',
+    heroImage: '/images/which-ollama-models-support-vision-overview-hero-es.png',
     title: '¿Qué modelos de Ollama son compatibles con visión?',
     seoTitle: 'Modelos de visión de Ollama 2026 | PromptQuorum',
     metaDescription: 'LLaVA, Gemma 3 multimodal y Qwen-VL soportan visión en Ollama. Empieza con: ollama run llava. Todos aceptan imágenes vía la API de Ollama. Actualizado 2026.',
@@ -604,6 +611,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Ollama',
+    heroImage: '/images/which-ollama-models-support-vision-overview-hero-ar.png',
     title: 'ما نماذج ⁨Ollama⁩ التي تدعم الرؤية؟',
     seoTitle: 'نماذج ⁨Ollama⁩ للرؤية ⁨2026⁩: ⁨LLaVA⁩ و ⁨Qwen-VL⁩ و ⁨Gemma 3⁩',
     metaDescription: '⁨4⁩ نماذج رؤية جاهزة في ⁨Ollama⁩: ⁨LLaVA⁩ و ⁨Llama 3.2 Vision⁩ و ⁨Qwen-VL⁩ و ⁨Gemma 3⁩. كل نموذج يحتاج ⁨1⁩–⁨3 GB VRAM⁩ إضافية؛ ابدأ بـ ⁨ollama run llava⁩.',
@@ -688,6 +696,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Ollama',
+    heroImage: '/images/which-ollama-models-support-vision-overview-hero-ko.png',
     title: 'Ollama에서 비전을 지원하는 모델은 무엇인가요?',
     seoTitle: 'Ollama 비전 모델 2026: LLaVA, Qwen-VL, Gemma 3 | PromptQuorum',
     metaDescription: 'Ollama에서 프로덕션 준비된 비전 모델 4종: LLaVA, Llama 3.2 Vision, Qwen-VL, Gemma 3. 각 모델은 1~3 GB 추가 VRAM이 필요합니다. ollama run llava로 시작하십시오.',
