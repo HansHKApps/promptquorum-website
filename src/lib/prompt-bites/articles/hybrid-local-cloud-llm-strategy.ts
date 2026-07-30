@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-en.png',
     title: 'When Should You Combine Local and Cloud LLM Inference?',
     seoTitle: 'Hybrid Local + Cloud LLM Strategy | Prompt Bites',
     metaDescription: 'When a hybrid local-cloud LLM strategy beats running everything locally or everything in the cloud, and how to architect the routing logic between the two.',
@@ -95,6 +96,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-de.png',
     title: 'Wann sollten Sie lokale und Cloud-LLM-Inferenz kombinieren?',
     seoTitle: 'Hybride Lokal-Cloud-LLM-Strategie | Prompt Bites',
     metaDescription: 'Wann eine hybride Lokal-Cloud-LLM-Strategie besser funktioniert als ein reiner Lokal- oder Cloud-Betrieb, und wie Sie die Routing-Logik zwischen beiden Umgebungen aufbauen.',
@@ -186,6 +188,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-fr.png',
     title: 'Quand faut-il combiner inférence LLM locale et cloud ?',
     seoTitle: 'Stratégie hybride LLM locale + cloud | Prompt Bites',
     metaDescription: 'Quand une stratégie hybride locale-cloud pour les LLM surpasse un fonctionnement entièrement local ou entièrement cloud, et comment architecturer la logique de routage entre les deux.',
@@ -277,6 +280,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-ja.png',
     title: 'ローカルとクラウドのLLM推論を組み合わせるべきタイミングとは？',
     seoTitle: 'ハイブリッド ローカル+クラウド LLM戦略 | Prompt Bites',
     metaDescription: 'ハイブリッドなローカル・クラウドLLM戦略が、すべてローカルまたはすべてクラウドで運用するより優れているケースと、両者間のルーティングロジックの設計方法を解説します。',
@@ -368,6 +372,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-zh.png',
     title: '什么时候应该结合本地和云端LLM推理？',
     seoTitle: '混合本地+云端LLM策略 | Prompt Bites',
     metaDescription: '混合本地-云端LLM策略在什么情况下优于完全本地或完全云端运行,以及如何设计两者之间的路由逻辑。',
@@ -459,6 +464,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-es.png',
     title: '¿Cuándo deberías combinar inferencia de LLM local y en la nube?',
     seoTitle: 'Estrategia híbrida de LLM local + nube | Prompt Bites',
     metaDescription: 'Cuándo una estrategia híbrida local-nube para LLM supera a ejecutar todo local o todo en la nube, y cómo diseñar la lógica de enrutamiento entre ambos.',
@@ -550,6 +556,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-pt.png',
     title: 'Quando você deve combinar inferência de LLM local e na nuvem?',
     seoTitle: 'Estratégia híbrida de LLM local + nuvem | Prompt Bites',
     metaDescription: 'Quando uma estratégia híbrida local-nuvem para LLM supera rodar tudo localmente ou tudo na nuvem, e como arquitetar a lógica de roteamento entre os dois.',
@@ -641,6 +648,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-ar.png',
     title: 'متى يجب الجمع بين الاستدلال المحلي واستدلال LLM السحابي؟',
     seoTitle: 'استراتيجية LLM هجينة محلية + سحابية | Prompt Bites',
     metaDescription: 'متى تتفوق الاستراتيجية الهجينة المحلية-السحابية لنماذج LLM على التشغيل المحلي الكامل أو السحابي الكامل، وكيفية تصميم منطق التوجيه بينهما.',
@@ -732,6 +740,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/hybrid-local-cloud-llm-strategy-overview-hero-ko.png',
     title: '로컬과 클라우드 LLM 추론을 언제 결합해야 할까요?',
     seoTitle: '하이브리드 로컬+클라우드 LLM 전략 | Prompt Bites',
     metaDescription: '하이브리드 로컬-클라우드 LLM 전략이 완전한 로컬 운영이나 완전한 클라우드 운영보다 나은 경우와, 두 환경 간 라우팅 로직을 설계하는 방법을 설명합니다.',
