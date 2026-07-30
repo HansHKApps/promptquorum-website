@@ -253,14 +253,19 @@ After updating, verify:
 
 ### Step 5: Multi-Language Propagation
 
-After the English (EN) page is finalized, propagate changes to all active non-English language versions. The active set is **6 languages total** (EN + 5):
+After the English (EN) page is finalized, propagate changes to all active non-English language versions. The active set is **9 languages total** (EN + 8):
 - DE (German)
 - ES (Spanish)
 - FR (French)
 - JA (Japanese)
 - ZH (Chinese)
+- PT (Brazilian Portuguese)
+- AR (Arabic)
+- KO (Korean)
 
-**Reserved languages — `pt` and `ar`:** These exist in the `Language` type but have no content yet. Do NOT propagate to them or fabricate blocks for them. Only translate `pt`/`ar` once their content is authored. When `pt` is authored it MUST be **Brazilian Portuguese** (pt-BR — você form, BR vocabulary such as *arquivo*/*tela*/*gerenciar*, LGPD/ANPD for compliance, hreflang and schema.inLanguage = `pt-BR`), never European Portuguese. `ar` is **RTL** and must keep Latin technical terms LTR.
+**Note on `pt` and `ar`:** An earlier version of this doc marked `pt`/`ar` as "reserved, no content yet" — that is stale. As of this writing, `pt`/`ar`/`ko` blocks exist for effectively every article across every cluster (local-llms, prompt-bites, power-local-llm, smart-home, balcony-solar: 100%; prompt-engineering: 78/81 for pt/ar, 81/81 for ko) — verified directly against the repo, not assumed. Treat them as fully active languages requiring the same propagation and parity work as DE/ES/FR/JA/ZH. The one exception: a specific new article that genuinely has no pt/ar/ko block yet is a separate "author this language" task (see Step 5.5 rule 5), not evidence that the language itself is reserved.
+
+When working with `pt`, it MUST be **Brazilian Portuguese** (pt-BR — você form, BR vocabulary such as *arquivo*/*tela*/*gerenciar*, LGPD/ANPD for compliance, hreflang and schema.inLanguage = `pt-BR`), never European Portuguese. `ar` is **RTL** and must keep Latin technical terms LTR.
 
 **Language update rules:**
 - Model names, benchmark names, ollama commands, and VRAM numbers are language-independent — copy exactly
@@ -386,7 +391,7 @@ Many pages include embedded slide decks and downloadable PDF reference cards. Th
 This file does NOT replace GEO writing guidelines. All updates must follow existing H2/H3 rules, lead answer block format, meta description formulas, Sources requirements, Related Reading requirements, and FAQ format. This file adds the update-specific process on top.
 
 ### geo-translation (per-language localization) and geo-meta-optimizer (meta tags)
-Step 5 translations must follow the **geo-translation** guide (the authoritative localization spec — 6 active languages, pt/ar reserved, Brazilian Portuguese for pt, RTL for ar). Title/meta-description optimization follows **geo-meta-optimizer** (per-language length targets, hard length gate). This protocol governs the *content refresh*; those two govern *how translation and meta are produced*. Keep all three in sync on the language set.
+Step 5 translations must follow the **geo-translation** guide (the authoritative localization spec — 9 active languages including pt/ar/ko, Brazilian Portuguese for pt, RTL for ar). Title/meta-description optimization follows **geo-meta-optimizer** (per-language length targets, hard length gate). This protocol governs the *content refresh*; those two govern *how translation and meta are produced*. Keep all three in sync on the language set.
 
 ### CONTENT_FRESHNESS_CLASSIFICATION.md
 This file extends the freshness system by adding the `monthly` tier and defining the operational process for each refresh cycle.
