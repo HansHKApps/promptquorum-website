@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-en.png',
     title: 'What Is Prompt Caching for Local LLMs?',
     seoTitle: 'Prompt Caching for Local LLMs Explained | Prompt Bites',
     metaDescription: 'How prompt and context caching speeds up repeated local LLM inference, when it helps most, and how to structure prompts to actually benefit from it.',
@@ -89,6 +90,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-de.png',
     title: 'Was ist Prompt-Caching für lokale LLMs?',
     seoTitle: 'Prompt-Caching für lokale LLMs erklärt | Prompt Bites',
     metaDescription: 'Wie Prompt- und Kontext-Caching wiederholte lokale LLM-Inferenz beschleunigt, wann es am meisten hilft und wie Sie Prompts strukturieren, um wirklich davon zu profitieren.',
@@ -174,6 +176,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-fr.png',
     title: "Qu'est-ce que le cache de prompt pour les LLM locaux ?",
     seoTitle: 'Cache de prompt pour LLM locaux expliqué | Prompt Bites',
     metaDescription: "Comment le cache de prompt et de contexte accélère l'inférence LLM locale répétée, quand il aide le plus, et comment structurer vos prompts pour en profiter réellement.",
@@ -259,6 +262,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-ja.png',
     title: 'ローカルLLMのプロンプトキャッシュとは？',
     seoTitle: 'ローカルLLMのプロンプトキャッシュを解説 | Prompt Bites',
     metaDescription: 'プロンプト・コンテキストキャッシュが繰り返しのローカルLLM推論をどう高速化するか、最も効果的な場面、そして実際に恩恵を受けるためのプロンプト構成方法を解説します。',
@@ -344,6 +348,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-zh.png',
     title: '什么是本地LLM的提示词缓存？',
     seoTitle: '本地LLM提示词缓存详解 | Prompt Bites',
     metaDescription: '提示词与上下文缓存如何加速重复的本地LLM推理、在什么情况下最有效，以及如何构建提示词才能真正从中受益。',
@@ -429,6 +434,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-es.png',
     title: '¿Qué es el caching de prompts para LLMs locales?',
     seoTitle: 'Caching de Prompts para LLMs Locales Explicado | Prompt Bites',
     metaDescription: 'Cómo el caching de prompts y contexto acelera la inferencia repetida de LLMs locales, cuándo ayuda más y cómo estructurar tus prompts para aprovecharlo realmente.',
@@ -514,6 +520,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-pt.png',
     title: 'O Que É Cache de Prompt para LLMs Locais?',
     seoTitle: 'Cache de Prompt para LLMs Locais Explicado | Prompt Bites',
     metaDescription: 'Como o cache de prompt e de contexto acelera a inferência repetida de LLMs locais, quando ele mais ajuda e como estruturar prompts para realmente aproveitá-lo.',
@@ -599,6 +606,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-ar.png',
     title: 'ما هو التخزين المؤقت للـ Prompt في نماذج LLM المحلية؟',
     seoTitle: 'شرح التخزين المؤقت للـ Prompt في LLM المحلية | Prompt Bites',
     metaDescription: 'كيف يسرّع التخزين المؤقت للـ prompt والسياق عمليات الاستدلال المتكررة لنماذج LLM المحلية، ومتى يكون أكثر فائدة، وكيفية هيكلة الطلبات للاستفادة منه فعليًا.',
@@ -684,6 +692,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/prompt-caching-for-local-llm-explained-overview-hero-ko.png',
     title: '로컬 LLM을 위한 프롬프트 캐싱이란 무엇입니까?',
     seoTitle: '로컬 LLM 프롬프트 캐싱 설명 | Prompt Bites',
     metaDescription: '프롬프트 및 컨텍스트 캐싱이 반복적인 로컬 LLM 추론을 어떻게 가속하는지, 언제 가장 효과적인지, 그리고 실제로 이점을 얻으려면 프롬프트를 어떻게 구성해야 하는지 설명합니다.',

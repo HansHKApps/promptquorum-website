@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/lora-vs-full-fine-tuning-overview-hero-en.png',
     title: 'LoRA vs Full Fine-Tuning: Which Should You Use?',
     seoTitle: 'LoRA vs Full Fine-Tuning: Which to Use? | Prompt Bites',
     metaDescription:
@@ -110,6 +111,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/lora-vs-full-fine-tuning-overview-hero-de.png',
     title: 'LoRA vs. vollständiges Fine-Tuning: Was sollten Sie verwenden?',
     seoTitle: 'LoRA vs. vollständiges Fine-Tuning | Prompt Bites',
     metaDescription:
@@ -216,6 +218,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/lora-vs-full-fine-tuning-overview-hero-fr.png',
     title: 'LoRA vs Fine-Tuning complet : lequel choisir ?',
     seoTitle: 'LoRA vs Fine-Tuning complet : lequel choisir ? | Prompt Bites',
     metaDescription:
@@ -322,6 +325,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/lora-vs-full-fine-tuning-overview-hero-ja.png',
     title: 'LoRAと完全なFine-Tuning:どちらを使うべきか',
     seoTitle: 'LoRA vs 完全なFine-Tuning | Prompt Bites',
     metaDescription:
@@ -428,6 +432,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/lora-vs-full-fine-tuning-overview-hero-zh.png',
     title: 'LoRA 与全量微调:该用哪一种?',
     seoTitle: 'LoRA 与全量微调对比 | Prompt Bites',
     metaDescription:
@@ -534,6 +539,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/lora-vs-full-fine-tuning-overview-hero-es.png',
     title: 'LoRA frente a fine-tuning completo: ¿cuál deberías usar?',
     seoTitle: 'LoRA vs fine-tuning completo: ¿cuál usar? | Prompt Bites',
     metaDescription:
@@ -640,6 +646,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/lora-vs-full-fine-tuning-overview-hero-pt.png',
     title: 'LoRA vs fine-tuning completo: qual usar?',
     seoTitle: 'LoRA vs fine-tuning completo: qual usar? | Prompt Bites',
     metaDescription:
@@ -746,6 +753,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/lora-vs-full-fine-tuning-overview-hero-ar.png',
     title: 'LoRA مقابل الضبط الدقيق الكامل: أيهما تستخدم؟',
     seoTitle: 'LoRA مقابل الضبط الدقيق الكامل | Prompt Bites',
     metaDescription:
@@ -852,6 +860,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/lora-vs-full-fine-tuning-overview-hero-ko.png',
     title: 'LoRA와 전체 파인튜닝: 무엇을 사용해야 할까요?',
     seoTitle: 'LoRA vs 전체 파인튜닝: 무엇을 사용할까? | Prompt Bites',
     metaDescription:

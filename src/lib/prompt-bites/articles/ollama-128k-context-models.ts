@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-128k-context-models-overview-hero-en.png',
     title: 'Which Ollama Models Support 128K Context?',
     dateModified: '2026-06-20',
     seoTitle: 'Ollama 128K Context 2026 | Prompt Bites | PromptQuorum',
@@ -95,6 +96,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-128k-context-models-overview-hero-de.png',
     title: 'Welche Ollama-Modelle unterstützen 128K Kontext?',
     seoTitle: 'Ollama 128K Kontext 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.3 8B und Qwen 3 14B unterstützen 128K+ Kontext auf Ollama. Qwen 3 erreicht 1M Tokens. Voller Kontext erhöht den VRAM stark. Stand Mai 2026.',
@@ -174,6 +176,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-128k-context-models-overview-hero-fr.png',
     title: 'Quels modèles Ollama supportent le contexte 128K ?',
     seoTitle: 'Ollama 128K contexte 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.3 8B et Qwen 3 14B supportent 128K+ contexte sur Ollama. Qwen 3 atteint 1M tokens. Le contexte plein augmente le VRAM. Vérifié mai 2026.',
@@ -253,6 +256,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-128k-context-models-overview-hero-ja.png',
     title: 'Ollamaで128Kコンテキストに対応するモデルは？',
     seoTitle: 'Ollama 128Kコンテキスト2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.3 8BとQwen 3 14BはOllamaで128K以上のコンテキストに対応。Qwen 3は1Mトークンに到達。フルコンテキストはVRAMを大幅に増加。2026年5月確認済み。',
@@ -332,6 +336,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-128k-context-models-overview-hero-zh.png',
     title: 'Ollama上哪些模型支持128K上下文？',
     seoTitle: 'Ollama 128K上下文2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.3 8B和Qwen 3 14B在Ollama上支持128K以上上下文。Qwen 3可达1M个token。完整上下文大幅增加VRAM需求。2026年5月更新。',
@@ -411,6 +416,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-128k-context-models-overview-hero-pt.png',
     title: 'Quais modelos do Ollama suportam contexto de 128K?',
     seoTitle: 'Ollama contexto 128K 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.3 8B e Qwen 3 14B suportam 128K+ de contexto no Ollama; Qwen 3 chega a 1M de tokens. O contexto completo aumenta muito a VRAM. 2026.',
@@ -490,6 +496,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-128k-context-models-overview-hero-es.png',
     title: '¿Qué modelos de Ollama admiten contexto de 128K?',
     seoTitle: 'Ollama contexto 128K 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.3 8B y Qwen 3 14B admiten 128K de contexto o más en Ollama; Qwen 3 llega a 1M de tokens. El contexto completo aumenta mucho la VRAM. 2026.',
@@ -569,6 +576,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-128k-context-models-overview-hero-ar.png',
     title: 'ما نماذج ⁨Ollama⁩ التي تدعم سياق ⁨128K⁩؟',
     seoTitle: '⁨Ollama⁩ سياق ⁨128K⁩: ⁨Llama 3.3 8B⁩ و⁨Qwen 3 2026⁩',
     metaDescription: '⁨Llama 3.3 8B⁩ يدعم سياق ⁨128K⁩ على ⁨Ollama⁩؛ ⁨Qwen 3 14B⁩ يصل إلى مليون رمز. نافذة ⁨128K⁩ تستهلك ⁨3⁩–⁨4⁩ أضعاف ⁨VRAM⁩ مقارنةً بالإعداد الافتراضي ⁨4K⁩.',
@@ -648,6 +656,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-128k-context-models-overview-hero-ko.png',
     title: 'Ollama에서 128K 컨텍스트를 지원하는 모델은 무엇입니까?',
     seoTitle: 'Ollama 128K 컨텍스트 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.3 8B와 Qwen 3 14B는 Ollama에서 128K 이상의 컨텍스트를 지원합니다. Qwen 3는 1M 토큰에 도달합니다. 전체 컨텍스트 실행 시 VRAM이 크게 증가합니다. 2026년 업데이트.',
