@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-en.png',
     title: 'Best UI for Viewing Local LLM Reasoning Tokens?',
     seoTitle: 'Best UI for Local LLM Reasoning Tokens | Prompt Bites',
     metaDescription: 'A quick guide to picking a local chat UI that displays a reasoning model\'s chain-of-thought tokens, and what to check before relying on one.',
@@ -98,6 +99,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-de.png',
     title: 'Best UI for Viewing Local LLM Reasoning Tokens?',
     seoTitle: 'Best UI for Local LLM Reasoning Tokens | Prompt Bites',
     metaDescription: 'Kurzanleitung zur Wahl einer lokalen Chat-Oberfläche, die die Denkschritte (Chain-of-Thought) eines Reasoning-Modells anzeigt, und worauf Sie achten sollten.',
@@ -192,6 +194,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-fr.png',
     title: 'Best UI for Viewing Local LLM Reasoning Tokens?',
     seoTitle: 'Best UI for Local LLM Reasoning Tokens | Prompt Bites',
     metaDescription: 'Guide rapide pour choisir une interface de chat locale affichant la chaîne de raisonnement d\'un modèle de raisonnement, et ce qu\'il faut vérifier avant d\'en adopter une.',
@@ -286,6 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-ja.png',
     title: 'Best UI for Viewing Local LLM Reasoning Tokens?',
     seoTitle: 'Best UI for Local LLM Reasoning Tokens | Prompt Bites',
     metaDescription: '推論モデルの思考過程（chain-of-thought）を表示できるローカルチャットUIの選び方を解説する簡単ガイド。利用前に確認すべき点も紹介します。',
@@ -380,6 +384,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-zh.png',
     title: 'Best UI for Viewing Local LLM Reasoning Tokens?',
     seoTitle: 'Best UI for Local LLM Reasoning Tokens | Prompt Bites',
     metaDescription: '快速指南：如何选择能够显示推理模型思维链（chain-of-thought）token的本地聊天界面，以及使用前需要检查的要点。',
@@ -474,6 +479,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-es.png',
     title: 'Best UI for Viewing Local LLM Reasoning Tokens?',
     seoTitle: 'Best UI for Local LLM Reasoning Tokens | Prompt Bites',
     metaDescription: 'Guía rápida para elegir una interfaz de chat local que muestre los tokens de razonamiento (chain-of-thought) de un modelo, y qué comprobar antes de confiar en una.',
@@ -568,6 +574,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-pt.png',
     title: 'Best UI for Viewing Local LLM Reasoning Tokens?',
     seoTitle: 'Best UI for Local LLM Reasoning Tokens | Prompt Bites',
     metaDescription: 'Um guia rápido para escolher uma interface de chat local que exiba os tokens de raciocínio (chain-of-thought) de um modelo, e o que verificar antes de confiar em uma.',
@@ -662,6 +669,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-ar.png',
     title: 'Best UI for Viewing Local LLM Reasoning Tokens?',
     seoTitle: 'Best UI for Local LLM Reasoning Tokens | Prompt Bites',
     metaDescription: 'دليل سريع لاختيار واجهة محادثة محلية تعرض رموز التفكير (chain-of-thought) لنموذج استدلال، وما يجب التحقق منه قبل الاعتماد عليها.',
@@ -756,6 +764,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/best-local-llm-reasoning-ui-overview-hero-ko.png',
     title: 'Best UI for Viewing Local LLM Reasoning Tokens?',
     seoTitle: 'Best UI for Local LLM Reasoning Tokens | Prompt Bites',
     metaDescription: '추론 모델의 사고 과정(chain-of-thought) 토큰을 표시하는 로컬 채팅 UI를 선택하는 간단한 가이드와 선택 전에 확인할 사항을 소개합니다.',

@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware Guides',
+    heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-en.png',
     title: 'Best Mini PC for Local LLMs in Japan (2026): Beelink, Minisforum, GMKtec',
     seoTitle: 'Mini PC Local LLM Japan 2026: Beelink, Minisforum, GMKtec',
     metaDescription: 'Best mini PCs for local LLMs in Japan: Beelink SER7, MINISFORUM UM790 Pro, GMKtec NucBox K6 (~¥65,000–85,000). Plus Geekom/Acemagic and a Ryzen AI Max+ 395 step-up for 70B and light fine-tuning.',
@@ -131,6 +132,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware Guides',
+    heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-de.png',
     title: 'Bester Mini-PC für lokale LLMs in Japan (2026): Beelink, Minisforum, GMKtec',
     seoTitle: 'Mini-PC lokale LLMs Japan 2026: Beelink, Minisforum, GMKtec',
     metaDescription: 'Beste Mini-PCs für lokale LLMs in Japan: Beelink SER7, MINISFORUM UM790 Pro, GMKtec NucBox K6 (~€540–700). Dazu Geekom/Acemagic und ein Ryzen AI Max+ 395 als Upgrade für 70B und leichtes Fine-Tuning.',
@@ -258,6 +260,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware Guides',
+    heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-fr.png',
     title: 'Meilleur mini PC pour LLM locaux au Japon (2026) : Beelink, Minisforum, GMKtec',
     seoTitle: 'Mini PC LLM local Japon 2026 : Beelink, Minisforum, GMKtec',
     metaDescription: 'Meilleurs mini PC pour LLM locaux au Japon : Beelink SER7, MINISFORUM UM790 Pro, GMKtec NucBox K6 (~€540–700). Plus Geekom/Acemagic et un Ryzen AI Max+ 395 pour le 70B et le fine-tuning léger.',
@@ -385,6 +388,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware Guides',
+    heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-ja.png',
     title: '日本のローカルLLM向けベストミニPC（2026）：Beelink・Minisforum・GMKtec',
     seoTitle: '日本ローカルLLMミニPC 2026：Beelink・Minisforum・GMKtec',
     metaDescription: '日本でローカルLLMに最適なミニPC：Beelink SER7、MINISFORUM UM790 Pro、GMKtec NucBox K6（約¥65,000〜85,000）。GeekomやAcemagic、さらに70Bや軽いファインチューニング向けにRyzen AI Max+ 395へのステップアップも。',
@@ -512,6 +516,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware Guides',
+    heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-es.png',
     title: 'Mejor mini PC para LLMs locales en Japón (2026): Beelink, Minisforum, GMKtec',
     seoTitle: 'Mini PC LLMs locales Japón 2026: Beelink, Minisforum, GMKtec',
     metaDescription: 'Mejores mini PC para LLMs locales en Japón: Beelink SER7, MINISFORUM UM790 Pro, GMKtec NucBox K6 (~€540–700). Más Geekom/Acemagic y un Ryzen AI Max+ 395 para 70B y fine-tuning ligero.',
@@ -639,6 +644,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware Guides',
+    heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-pt.png',
     title: 'Melhor mini PC para LLMs locais no Japão (2026): Beelink, Minisforum, GMKtec',
     seoTitle: 'Mini PC LLMs locais Japão 2026: Beelink, Minisforum, GMKtec',
     metaDescription: 'Melhores mini PCs para LLMs locais no Japão: Beelink SER7, MINISFORUM UM790 Pro, GMKtec NucBox K6 (~R$ 3.200–4.200). Mais Geekom/Acemagic e um Ryzen AI Max+ 395 para 70B e fine-tuning leve.',
@@ -766,6 +772,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware Guides',
+    heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-zh.png',
     title: '日本最适合本地LLM的迷你电脑（2026）：Beelink、Minisforum、GMKtec',
     seoTitle: '日本本地LLM迷你电脑2026：Beelink、Minisforum、GMKtec',
     metaDescription: '日本本地LLM最佳迷你电脑：Beelink SER7、MINISFORUM UM790 Pro、GMKtec NucBox K6（约$420–540）。另有Geekom/Acemagic，以及面向70B和轻量微调的Ryzen AI Max+ 395进阶之选。',
@@ -893,6 +900,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware Guides',
+    heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-ar.png',
     title: 'أفضل جهاز مصغر لنماذج اللغة الكبيرة المحلية في اليابان (2026): Beelink، Minisforum، GMKtec',
     seoTitle: 'أفضل جهاز مصغر لـ⁨LLM⁩ في اليابان ⁨2026⁩: ⁨Beelink⁩، ⁨Minisforum⁩، ⁨GMKtec⁩',
     metaDescription: 'أفضل الأجهزة المصغرة لنماذج ⁨LLM⁩ المحلية في اليابان: ⁨Beelink SER7⁩، ⁨MINISFORUM UM790 Pro⁩، ⁨GMKtec NucBox K6⁩ (~⁨$420–540⁩). إضافة إلى ⁨Geekom/Acemagic⁩ وترقية ⁨Ryzen AI Max+ 395⁩ لنماذج ⁨70B⁩ والضبط الدقيق الخفيف.',
@@ -1020,6 +1028,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware Guides',
+    heroImage: '/images/best-mini-pc-local-llm-japan-overview-hero-ko.png',
     title: '일본 로컬 LLM용 최고의 미니 PC (2026): Beelink, Minisforum, GMKtec',
     seoTitle: '일본 로컬 LLM 미니 PC 2026: Beelink, Minisforum, GMKtec',
     metaDescription: '일본 로컬 LLM용 최고의 미니 PC: Beelink SER7, MINISFORUM UM790 Pro, GMKtec NucBox K6 (~$420–540). Geekom/Acemagic 대안과 70B 및 경량 파인튜닝용 Ryzen AI Max+ 395 상위 옵션도 포함.',

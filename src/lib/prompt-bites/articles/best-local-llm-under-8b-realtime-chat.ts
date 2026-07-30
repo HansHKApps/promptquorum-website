@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-en.png',
     title: 'Best Sub-8B Model for Real-Time Chat?',
     seoTitle: 'Best Sub-8B Model for Real-Time Chat 2026',
     metaDescription: 'Qwen3 4B is the best sub-8B model for real-time chat — strong quality-to-speed ratio on modest hardware. Phi-4-mini and Llama 3.2 3B are close picks.',
@@ -98,6 +99,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-ar.png',
     title: 'أفضل نموذج دون 8B للدردشة الفورية؟',
     seoTitle: 'أفضل نموذج دون 8B للدردشة الفورية 2026',
     metaDescription: 'نموذج Qwen3 4B هو الأفضل دون 8B للدردشة الفورية — نسبة جودة إلى سرعة قوية على عتاد متواضع. Phi-4-mini وLlama 3.2 3B بدائل قريبة، ببصمة ذاكرة أصغر قليلاً.',
@@ -192,6 +194,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-de.png',
     title: 'Das beste Sub-8B-Modell für Echtzeit-Chat?',
     seoTitle: 'Bestes Sub-8B-Modell für Echtzeit-Chat 2026',
     metaDescription: 'Qwen3 4B ist das beste Sub-8B-Modell für Echtzeit-Chat — gutes Verhältnis von Qualität und Geschwindigkeit. Phi-4-mini und Llama 3.2 3B sind Alternativen.',
@@ -286,6 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-es.png',
     title: '¿Cuál es el Mejor Modelo Menor a 8B para Chat en Tiempo Real?',
     seoTitle: 'Mejor Modelo Menor a 8B para Chat en Tiempo Real 2026',
     metaDescription: 'Qwen3 4B es el mejor modelo sub-8B para chat en tiempo real — buen equilibrio calidad-velocidad. Phi-4-mini y Llama 3.2 3B son alternativas cercanas.',
@@ -380,6 +384,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-fr.png',
     title: 'Quel est le meilleur modèle sous 8B pour le chat en temps réel ?',
     seoTitle: 'Meilleur modèle sous 8B pour le chat en temps réel 2026',
     metaDescription: 'Qwen3 4B est le meilleur modèle sous 8B pour le chat en temps réel — bon rapport qualité/vitesse. Phi-4-mini et Llama 3.2 3B sont des alternatives proches.',
@@ -474,6 +479,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-ja.png',
     title: 'リアルタイムチャットに最適な8B未満のモデルは?',
     seoTitle: '2026年版 リアルタイムチャットに最適な8B未満モデル',
     metaDescription: 'Qwen3 4Bはリアルタイムチャットに最適な8B未満のモデルです — 控えめなハードウェアで優れた品質対速度比。Phi-4-miniとLlama 3.2 3Bが近い代替案です。',
@@ -568,6 +574,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-ko.png',
     title: '실시간 채팅을 위한 최적의 8B 이하 모델은?',
     seoTitle: '2026년 실시간 채팅 최적 8B 이하 모델',
     metaDescription: 'Qwen3 4B는 실시간 채팅을 위한 최적의 8B 이하 모델입니다 — 적당한 하드웨어에서 강력한 품질 대 속도 비율을 제공합니다. Phi-4-mini와 Llama 3.2 3B는 유사한 대안입니다.',
@@ -662,6 +669,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-pt.png',
     title: 'Qual o Melhor Modelo Sub-8B para Chat em Tempo Real?',
     seoTitle: 'Melhor Modelo Sub-8B para Chat em Tempo Real 2026',
     metaDescription: 'O Qwen3 4B é o melhor modelo sub-8B para chat em tempo real — bom equilíbrio qualidade-velocidade. Phi-4-mini e Llama 3.2 3B são alternativas próximas.',
@@ -756,6 +764,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-local-llm-under-8b-realtime-chat-overview-hero-zh.png',
     title: '实时聊天的最佳 8B 以下模型是什么？',
     seoTitle: '2026 年实时聊天最佳 8B 以下模型',
     metaDescription: 'Qwen3 4B 是实时聊天的最佳 8B 以下模型——在普通硬件上具有出色的质量-速度比。Phi-4-mini 和 Llama 3.2 3B 是接近的替代方案。',
