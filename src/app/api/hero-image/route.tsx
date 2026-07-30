@@ -4,6 +4,25 @@ import path from 'path'
 
 export const runtime = 'nodejs'
 
+// Article `tldr` bullets are authored with markdown `**bold**` emphasis for
+// the article page's own markdown renderer. Satori has no markdown support,
+// so without this the literal asterisks show up in the rendered PNG — split
+// on the marker and render matching spans with fontWeight 700 instead.
+function renderRich(text: string, boldColor: string) {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g).filter(Boolean)
+  return parts.map((part, i) => {
+    const m = part.match(/^\*\*([^*]+)\*\*$/)
+    if (m) {
+      return (
+        <span key={i} style={{ fontWeight: 700, color: boldColor }}>
+          {m[1]}
+        </span>
+      )
+    }
+    return <span key={i}>{part}</span>
+  })
+}
+
 type HeroSpec = {
   lang: string
   title: string
@@ -11,7 +30,50 @@ type HeroSpec = {
   columns?: string[]
   rows?: string[][]
   callout?: { formula: string; note: string }
+  bullets?: string[]
   footer: string
+}
+
+// Hard floor on rendered body content so a near-empty hero (the original bug:
+// title band + one line of text + a blank 500px void) can never ship again.
+// Counts only what actually fills the body — table cells, callout, or bullets
+// — not the header/subtitle, which is capped at 2 lines regardless of length.
+// CJK/Korean text conveys far more per character than Latin scripts (a 78-char
+// Japanese sentence is a complete, substantial description, not a fragment),
+// so the floor is scaled down for those languages rather than applying one
+// Latin-calibrated threshold everywhere.
+const MIN_BODY_CHARS_DEFAULT = 80
+const MIN_BODY_CHARS_CJK = 30
+const CJK_LANGS = new Set(['zh', 'ja', 'ko'])
+
+function minBodyChars(lang: string): number {
+  return CJK_LANGS.has(lang) ? MIN_BODY_CHARS_CJK : MIN_BODY_CHARS_DEFAULT
+}
+
+function bodyCharCount(spec: HeroSpec): number {
+  if (spec.callout) return spec.callout.formula.length + spec.callout.note.length
+  if (spec.columns && spec.rows) {
+    return spec.rows.flat().join('').length + spec.columns.join('').length
+  }
+  if (spec.bullets && spec.bullets.length > 0) {
+    return spec.bullets.join('').length
+  }
+  return spec.subtitle?.length ?? 0
+}
+
+// The brand mark (public/logo.svg) is 4 bars of fading opacity. Satori's
+// ImageResponse can't rasterize an <img> with an SVG data URI (throws deep
+// inside resvg), so reproduce the same 4-bar mark as plain divs instead —
+// simple enough that there's no real loss versus loading the actual file.
+function LogoMark({ color, barWidth = 6, barHeight = 28 }: { color: string; barWidth?: number; barHeight?: number }) {
+  const opacities = [1, 0.75, 0.5, 0.3]
+  return (
+    <div style={{ display: 'flex', gap: '3px', alignItems: 'flex-end' }}>
+      {opacities.map((o, i) => (
+        <div key={i} style={{ display: 'flex', width: `${barWidth}px`, height: `${barHeight}px`, background: color, opacity: o, borderRadius: '1px' }} />
+      ))}
+    </div>
+  )
 }
 
 // Internal content-tooling route: renders Discover-compliant (1200x675 raster,
@@ -27,6 +89,15 @@ export async function POST(request: Request) {
   const dir = isRtl ? 'rtl' : 'ltr'
   const rowDir = isRtl ? 'row-reverse' : 'row'
   const textAlign = isRtl ? 'right' : 'left'
+
+  const requiredChars = minBodyChars(spec.lang)
+  if (bodyCharCount(spec) < requiredChars) {
+    return new Response(
+      `Rejected: body content (${bodyCharCount(spec)} chars) is below the ${requiredChars}-char minimum for lang="${spec.lang}" — ` +
+        `supply richer bullets/table/callout data instead of a bare title+subtitle.`,
+      { status: 400 },
+    )
+  }
 
   return new ImageResponse(
     (
@@ -49,15 +120,63 @@ export async function POST(request: Request) {
             background: '#6750A4',
             padding: '28px 60px',
             color: '#FFFFFF',
+            position: 'relative',
           }}
         >
-          <div style={{ display: 'flex', fontSize: '30px', fontWeight: 700, textAlign }}>{spec.title}</div>
-          <div style={{ display: 'flex', fontSize: '18px', fontWeight: 400, color: '#E8DEF8', marginTop: '6px', textAlign }}>
+          <div style={{ display: 'flex', flexDirection: rowDir, alignItems: 'center', gap: '14px' }}>
+            <LogoMark color="#FFFFFF" />
+            <div style={{ display: 'flex', fontSize: '30px', fontWeight: 700, textAlign }}>{spec.title}</div>
+          </div>
+          <div
+            style={{
+              display: '-webkit-box',
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
+              fontSize: '18px',
+              fontWeight: 400,
+              color: '#E8DEF8',
+              marginTop: '6px',
+              textAlign,
+            }}
+          >
             {spec.subtitle}
           </div>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', flex: 1, padding: '32px 60px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', flex: 1, padding: '32px 60px', position: 'relative' }}>
+          {/* Decorative background texture — purely cosmetic, low-opacity so
+              it never competes with text contrast. Fixed positions rather
+              than data-driven so it's identical (and safe) across all specs. */}
+          <div
+            style={{
+              display: 'flex',
+              position: 'absolute',
+              top: '-60px',
+              width: '260px',
+              height: '260px',
+              borderRadius: '9999px',
+              background: '#6750A4',
+              opacity: 0.06,
+              zIndex: -1,
+              ...(isRtl ? { left: '-60px' } : { right: '-60px' }),
+            }}
+          />
+          <div
+            style={{
+              display: 'flex',
+              position: 'absolute',
+              bottom: '-80px',
+              width: '200px',
+              height: '200px',
+              borderRadius: '9999px',
+              background: '#F59E0B',
+              opacity: 0.05,
+              zIndex: -1,
+              ...(isRtl ? { right: '-40px' } : { left: '-40px' }),
+            }}
+          />
+
           {spec.callout && (
             <div
               style={{
@@ -124,6 +243,58 @@ export async function POST(request: Request) {
                   ))}
                 </div>
               ))}
+            </div>
+          )}
+
+          {spec.bullets && spec.bullets.length > 0 && (
+            <div style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'center', gap: '22px' }}>
+              {spec.bullets.slice(0, 5).map((bullet, i) => (
+                <div key={i} style={{ display: 'flex', flexDirection: rowDir, alignItems: 'flex-start', gap: '16px' }}>
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexShrink: 0,
+                      width: '32px',
+                      height: '32px',
+                      borderRadius: '8px',
+                      background: '#F7F2FA',
+                      color: '#6750A4',
+                      fontSize: '16px',
+                      fontWeight: 700,
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    {i + 1}
+                  </div>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', fontSize: '22px', fontWeight: 500, color: '#1C1B1F', textAlign, lineHeight: '1.4' }}>
+                    {renderRich(bullet, '#6750A4')}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Fallback: no table, callout, or bullets supplied — render the
+              subtitle as a large lead-in statement instead of leaving the
+              body empty. This is the layout every "overview" hero used
+              before this fix, which rendered nothing here at all. */}
+          {!spec.callout && !(spec.columns && spec.rows) && !(spec.bullets && spec.bullets.length > 0) && (
+            <div style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'center' }}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  borderLeft: isRtl ? 'none' : '4px solid #6750A4',
+                  borderRight: isRtl ? '4px solid #6750A4' : 'none',
+                  paddingLeft: isRtl ? '0' : '24px',
+                  paddingRight: isRtl ? '24px' : '0',
+                }}
+              >
+                <div style={{ display: 'flex', fontSize: '28px', fontWeight: 500, color: '#1C1B1F', textAlign, lineHeight: '1.5', maxWidth: '1000px' }}>
+                  {spec.subtitle}
+                </div>
+              </div>
             </div>
           )}
 
