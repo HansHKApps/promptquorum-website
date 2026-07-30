@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/priwatt-balcony-solar-overview-hero-en.png',
     title: 'priwatt: Balcony Solar Company Profile',
     seoTitle: 'priwatt Balcony Solar Company Profile',
     metaDescription: 'Company profile for priwatt: history, ownership, and product range in the balcony solar market.',
@@ -28,6 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/priwatt-balcony-solar-overview-hero-de.png',
     title: 'priwatt: Firmenprofil für Balkonkraftwerke',
     seoTitle: 'priwatt: Firmenprofil im Balkonkraftwerk-Markt',
     metaDescription: 'Firmenprofil zu priwatt: Gründungsgeschichte, Eigentümerstruktur und aktuelles Produktangebot des Anbieters im Markt für Balkonkraftwerke im Überblick.',
@@ -45,6 +47,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/priwatt-balcony-solar-overview-hero-fr.png',
     title: 'priwatt : profil d\'entreprise solaire de balcon',
     seoTitle: 'priwatt : profil d\'entreprise solaire balcon',
     metaDescription: 'Profil d\'entreprise priwatt : historique, structure actionnariale et gamme de produits sur le marché du solaire de balcon en Europe.',
@@ -62,6 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/priwatt-balcony-solar-overview-hero-ja.png',
     title: 'priwatt:バルコニー太陽光発電の企業プロフィール',
     seoTitle: 'priwattバルコニー太陽光企業プロフィール',
     metaDescription: 'priwattの企業プロフィール:設立の経緯、所有構造、バルコニー太陽光発電市場での製品ラインアップを紹介します。',
@@ -79,6 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/priwatt-balcony-solar-overview-hero-zh.png',
     title: 'priwatt:阳台太阳能公司简介',
     seoTitle: 'priwatt阳台太阳能发电公司简介',
     metaDescription: 'priwatt公司简介:介绍其发展历史、所有权结构以及在阳台太阳能市场的产品系列。',
@@ -96,6 +101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/priwatt-balcony-solar-overview-hero-es.png',
     title: 'priwatt: perfil de empresa de energía solar de balcón',
     seoTitle: 'priwatt: perfil de empresa solar de balcón',
     metaDescription: 'Perfil de la empresa priwatt: historia, estructura de propiedad y gama de productos en el mercado de energía solar de balcón.',
@@ -113,6 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/priwatt-balcony-solar-overview-hero-pt.png',
     title: 'priwatt: perfil da empresa de energia solar de varanda',
     seoTitle: 'priwatt: perfil de energia solar de varanda',
     metaDescription: 'Perfil da empresa priwatt: histórico, estrutura societária e linha de produtos no mercado de energia solar de varanda.',
@@ -130,6 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/priwatt-balcony-solar-overview-hero-ar.png',
     title: 'priwatt: الملف التعريفي لشركة الطاقة الشمسية للشرفات',
     seoTitle: 'priwatt: ملف شركة الطاقة الشمسية للشرفات',
     metaDescription: 'ملف تعريفي بشركة priwatt: تاريخها وهيكل ملكيتها ومجموعة منتجاتها في سوق أنظمة الطاقة الشمسية للشرفات.',
@@ -147,6 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/priwatt-balcony-solar-overview-hero-ko.png',
     title: 'priwatt: 발코니 태양광 기업 프로필',
     seoTitle: 'priwatt 발코니 태양광 기업 프로필',
     metaDescription: 'priwatt 기업 프로필: 연혁, 소유 구조, 발코니 태양광 시장 내 제품 라인업을 소개합니다.',

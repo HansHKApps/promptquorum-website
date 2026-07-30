@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/hoymiles-microinverter-balcony-solar-overview-hero-en.png',
     title: 'Hoymiles: Balcony Solar Microinverter Company Profile',
     seoTitle: 'Hoymiles Balcony Solar Microinverter Profile',
     metaDescription: 'Company profile for Hoymiles: history, ownership, and microinverter product range for balcony solar.',
@@ -90,6 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/hoymiles-microinverter-balcony-solar-overview-hero-de.png',
     title: 'Hoymiles: Firmenprofil zum Mikrowechselrichter für Balkonkraftwerke',
     seoTitle: 'Hoymiles: Mikrowechselrichter-Profil für Balkonkraftwerke',
     metaDescription: 'Firmenprofil zu Hoymiles: Unternehmensgeschichte, Eigentümerstruktur und die Mikrowechselrichter-Produktpalette für Balkonkraftwerke im Überblick.',
@@ -172,6 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/hoymiles-microinverter-balcony-solar-overview-hero-fr.png',
     title: 'Hoymiles : profil d\'entreprise du fabricant de micro-onduleurs solaires pour balcon',
     seoTitle: 'Profil Hoymiles : micro-onduleur solaire pour balcon',
     metaDescription: 'Profil d\'entreprise Hoymiles : historique, actionnariat et gamme complète de micro-onduleurs solaires pour installations solaires de balcon.',
@@ -254,6 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/hoymiles-microinverter-balcony-solar-overview-hero-ja.png',
     title: 'Hoymiles(ホイマイルズ):ベランダ太陽光発電用マイクロインバーター企業プロファイル',
     seoTitle: 'Hoymilesベランダ太陽光マイクロインバーター企業紹介',
     metaDescription: 'Hoymilesの企業プロファイルです。設立の経緯、株主構成、そしてベランダ太陽光発電向けマイクロインバーター製品ラインアップを詳しく解説します。',
@@ -336,6 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/hoymiles-microinverter-balcony-solar-overview-hero-zh.png',
     title: 'Hoymiles:阳台光伏微型逆变器企业简介',
     seoTitle: 'Hoymiles阳台光伏微型逆变器公司简介',
     metaDescription: 'Hoymiles公司简介:成立历史、股权结构,以及面向阳台光伏发电的微型逆变器产品系列详细介绍,帮助读者全面了解这家逆变器制造商。',
@@ -418,6 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/hoymiles-microinverter-balcony-solar-overview-hero-es.png',
     title: 'Hoymiles: perfil de empresa del microinversor solar de balcón',
     seoTitle: 'Perfil de Hoymiles: microinversor solar de balcón',
     metaDescription: 'Perfil de empresa de Hoymiles: historia, estructura de propiedad y la gama completa de microinversores para energía solar de balcón.',
@@ -500,6 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/hoymiles-microinverter-balcony-solar-overview-hero-pt.png',
     title: 'Hoymiles: perfil da empresa de microinversores para energia solar de varanda',
     seoTitle: 'Perfil da Hoymiles: microinversor solar de varanda',
     metaDescription: 'Perfil da empresa Hoymiles: histórico, estrutura societária e a linha completa de microinversores para sistemas de energia solar de varanda.',
@@ -582,6 +589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/hoymiles-microinverter-balcony-solar-overview-hero-ar.png',
     title: 'Hoymiles: ملف الشركة المصنّعة لعاكسات الطاقة الشمسية الصغيرة للشرفات',
     seoTitle: 'ملف شركة Hoymiles لعاكسات الطاقة الشمسية للشرفات',
     metaDescription: 'ملف تعريفي بشركة Hoymiles: التاريخ، الملكية، ومجموعة منتجات عاكسات الطاقة الشمسية الصغيرة (Microinverter) للشرفات.',
@@ -664,6 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/hoymiles-microinverter-balcony-solar-overview-hero-ko.png',
     title: 'Hoymiles: 발코니 태양광용 마이크로인버터 기업 프로필',
     seoTitle: 'Hoymiles 발코니 태양광 마이크로인버터 기업 프로필',
     metaDescription: 'Hoymiles의 기업 프로필입니다. 설립 연혁, 소유 구조, 그리고 발코니 태양광 발전용 마이크로인버터 제품 라인업을 자세히 정리했습니다.',

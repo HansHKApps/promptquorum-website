@@ -16,6 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/where-balcony-solar-doesnt-exist-yet-2027-overview-hero-en.png',
     title: 'Where Balcony Solar Doesn\'t Exist Yet: Bahrain and Taiwan (2027)',
     seoTitle: 'Where Balcony Solar Doesn\'t Exist Yet: Bahrain and Taiwan (2027)',
     intro: 'Not every market has a balcony solar story to tell yet. Research into Bahrain and Taiwan found no dedicated plug-in/balcony-solar regulation, market activity, or consumer product culture in either, as of July 2026 — this page reports that absence directly rather than manufacturing a country guide where none is warranted.',
@@ -110,6 +111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/where-balcony-solar-doesnt-exist-yet-2027-overview-hero-de.png',
     title: 'Wo es noch kein Balkonkraftwerk gibt: Bahrain und Taiwan (2027)',
     seoTitle: 'Wo es noch kein Balkonkraftwerk gibt: Bahrain und Taiwan (2027)',
     intro: 'Nicht jeder Markt hat bereits eine Balkonkraftwerk-Geschichte zu erzählen. Die Recherche zu Bahrain und Taiwan fand in keinem der beiden Länder eine eigene Regulierung, Marktaktivität oder Verbraucherprodukt-Kultur rund um steckerfertige Solaranlagen/Balkonkraftwerke, Stand Juli 2026 — diese Seite berichtet über diese Lücke direkt, statt einen Länderleitfaden zu konstruieren, wo keiner gerechtfertigt ist.',
@@ -204,6 +206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/where-balcony-solar-doesnt-exist-yet-2027-overview-hero-es.png',
     title: 'Dónde todavía no existe la energía solar de balcón: Baréin y Taiwán (2027)',
     seoTitle: 'Dónde todavía no existe la energía solar de balcón: Baréin y Taiwán (2027)',
     intro: 'No todos los mercados tienen todavía una historia que contar sobre energía solar de balcón. La investigación sobre Baréin y Taiwán no encontró regulación, actividad de mercado ni cultura de producto de consumo dedicada a la energía solar enchufable/de balcón en ninguno de los dos países, a fecha de julio de 2026 — esta página informa directamente de esa ausencia en lugar de fabricar una guía de país donde no está justificada.',
@@ -298,6 +301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/where-balcony-solar-doesnt-exist-yet-2027-overview-hero-fr.png',
     title: 'Où le solaire de balcon n\'existe pas encore : Bahreïn et Taïwan (2027)',
     seoTitle: 'Où le solaire de balcon n\'existe pas encore : Bahreïn et Taïwan (2027)',
     intro: 'Tous les marchés n\'ont pas encore une histoire solaire de balcon à raconter. Les recherches sur Bahreïn et Taïwan n\'ont trouvé aucune réglementation, activité de marché ou culture de produit dédiée au solaire plug-in/de balcon dans l\'un ou l\'autre pays, à juillet 2026 — cette page rapporte directement cette absence plutôt que de fabriquer un guide pays où rien ne le justifie.',
@@ -392,6 +396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/where-balcony-solar-doesnt-exist-yet-2027-overview-hero-ar.png',
     title: 'أين لا توجد الطاقة الشمسية على الشرفات بعد: البحرين وتايوان (2027)',
     seoTitle: 'أين لا توجد الطاقة الشمسية على الشرفات بعد: البحرين وتايوان (2027)',
     intro: 'ليس لكل سوق قصة عن الطاقة الشمسية على الشرفات يرويها بعد. لم تجد الأبحاث حول البحرين وتايوان أي تنظيم أو نشاط سوقي أو ثقافة منتجات استهلاكية مخصصة للطاقة الشمسية القابلة للتوصيل/على الشرفات في أي من البلدين، حتى يوليو 2026 — تُبلغ هذه الصفحة عن هذا الغياب مباشرةً بدلاً من تلفيق دليل قُطري حيث لا يوجد مبرر لذلك.',
@@ -486,6 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/where-balcony-solar-doesnt-exist-yet-2027-overview-hero-ja.png',
     title: 'まだバルコニー太陽光が存在しない地域：バーレーンと台湾（2027年）',
     seoTitle: 'まだバルコニー太陽光が存在しない地域：バーレーンと台湾（2027年）',
     intro: 'すべての市場にバルコニー太陽光のストーリーがあるわけではありません。バーレーンと台湾を調査した結果、2026年7月時点でどちらの国にも、プラグイン式/バルコニー太陽光に特化した規制、市場活動、消費者向け製品文化は見つかりませんでした。このページは、根拠のない国別ガイドを作り上げるのではなく、この「空白」をそのまま報告します。',
@@ -580,6 +586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/where-balcony-solar-doesnt-exist-yet-2027-overview-hero-ko.png',
     title: '아직 발코니 태양광이 존재하지 않는 곳: 바레인과 대만 (2027년)',
     seoTitle: '아직 발코니 태양광이 존재하지 않는 곳: 바레인과 대만 (2027년)',
     intro: '모든 시장에 아직 발코니 태양광 이야기가 있는 것은 아닙니다. 바레인과 대만을 조사한 결과, 2026년 7월 기준으로 두 나라 어디에서도 플러그인/발코니 태양광에 특화된 규제, 시장 활동, 소비자 제품 문화가 발견되지 않았습니다 — 이 페이지는 근거 없는 국가 가이드를 억지로 만들어내는 대신 이 공백을 있는 그대로 보고합니다.',
@@ -674,6 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/where-balcony-solar-doesnt-exist-yet-2027-overview-hero-pt.png',
     title: 'Onde a energia solar de varanda ainda não existe: Bahrein e Taiwan (2027)',
     seoTitle: 'Onde a energia solar de varanda ainda não existe: Bahrein e Taiwan (2027)',
     intro: 'Nem todo mercado ainda tem uma história de energia solar de varanda para contar. A pesquisa sobre Bahrein e Taiwan não encontrou regulamentação, atividade de mercado ou cultura de produto dedicada à energia solar plug-in/de varanda em nenhum dos dois países, até julho de 2026 — esta página relata essa ausência diretamente, em vez de fabricar um guia de país onde nenhum se justifica.',
@@ -768,6 +776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/where-balcony-solar-doesnt-exist-yet-2027-overview-hero-zh.png',
     title: '阳台太阳能尚未出现的地区：巴林与台湾（2027年）',
     seoTitle: '阳台太阳能尚未出现的地区：巴林与台湾（2027年）',
     intro: '并非每个市场都已经有阳台太阳能的故事可讲。针对巴林和台湾的调研发现，截至2026年7月，这两个地区都没有专门针对插电式/阳台太阳能的监管、市场活动或消费产品文化——本页直接报告这一空白，而不是在没有依据的情况下编造一篇地区指南。',
