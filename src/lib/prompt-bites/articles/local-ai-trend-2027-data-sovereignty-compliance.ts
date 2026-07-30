@@ -16,6 +16,7 @@ const siblingBites = [
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-en.png',
     title: 'Local AI Trends 2027, Part 9 of 10: The Regulatory Calendar Local AI Teams Should Watch',
     seoTitle: 'Local AI Trends 2027, Part 9: The Regulatory Calendar | Prompt Bites',
     metaDescription: 'Part 9 of 10: the specific EU AI Act, sector-specific, and data-localization milestones expected around 2027, and what each means for local AI adoption — with appropriate hedging on dates.',
@@ -111,6 +112,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-de.png',
     title: 'Lokale KI-Trends 2027, Teil 9 von 10: Der regulatorische Kalender für lokale KI-Teams',
     seoTitle: 'Lokale KI-Trends 2027, Teil 9: Der regulatorische Kalender | Prompt Bites',
     metaDescription: 'Teil 9 von 10: die konkreten Meilensteine des EU AI Act, branchenspezifischer Regeln und der Datenlokalisierung, die um 2027 erwartet werden — samt angemessener Vorbehalte bei den Terminen.',
@@ -206,6 +208,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-fr.png',
     title: "Tendances de l'IA locale 2027, partie 9/10 : le calendrier réglementaire à surveiller pour les équipes IA locale",
     seoTitle: "Tendances de l'IA locale 2027, partie 9 : le calendrier réglementaire | Prompt Bites",
     metaDescription: "Partie 9/10 : les échéances concrètes de l'AI Act européen, des règles sectorielles et de la localisation des données attendues autour de 2027, et ce que chacune implique pour l'adoption de l'IA locale — avec les réserves appropriées sur les dates.",
@@ -301,6 +304,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-ja.png',
     title: 'ローカルAIトレンド2027 第9回/全10回:ローカルAIチームが注視すべき規制カレンダー',
     seoTitle: 'ローカルAIトレンド2027 第9回:規制カレンダー | Prompt Bites',
     metaDescription: '第9回/全10回:2027年前後に予想されるEU AI Act、業界別規制、データローカライゼーションの具体的な節目と、それぞれがローカルAI導入に与える影響を、日付への適切な留保付きで解説。',
@@ -396,6 +400,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-zh.png',
     title: '本地AI趋势2027,第9篇(共10篇):本地AI团队应关注的监管日历',
     seoTitle: '本地AI趋势2027,第9篇:监管日历 | Prompt Bites',
     metaDescription: '第9篇(共10篇):预计在2027年前后出现的具体欧盟AI法案、行业特定规则和数据本地化里程碑,以及每一项对本地AI采用意味着什么——并对日期做出适当的保留说明。',
@@ -491,6 +496,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-es.png',
     title: 'Tendencias de IA local 2027, parte 9 de 10: el calendario regulatorio que deben vigilar los equipos de IA local',
     seoTitle: 'Tendencias de IA local 2027, parte 9: el calendario regulatorio | Prompt Bites',
     metaDescription: 'Parte 9 de 10: los hitos concretos de la Ley de IA de la UE, reglas sectoriales y localización de datos previstos alrededor de 2027, y qué significa cada uno para la adopción de IA local, con las reservas adecuadas sobre las fechas.',
@@ -586,6 +592,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-pt.png',
     title: 'Tendências de IA local 2027, parte 9 de 10: o calendário regulatório que as equipes de IA local devem observar',
     seoTitle: 'Tendências de IA local 2027, parte 9: o calendário regulatório | Prompt Bites',
     metaDescription: 'Parte 9 de 10: os marcos concretos da Lei de IA da UE, regras setoriais e localização de dados previstos para por volta de 2027, e o que cada um significa para a adoção de IA local — com as devidas ressalvas sobre as datas.',
@@ -681,6 +688,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-ar.png',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 9 من 10: التقويم التنظيمي الذي يجب أن تراقبه فرق الذكاء الاصطناعي المحلي',
     seoTitle: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 9: التقويم التنظيمي | Prompt Bites',
     metaDescription: 'الجزء 9 من 10: المحطات المحددة لقانون الذكاء الاصطناعي الأوروبي والقواعد القطاعية وتوطين البيانات المتوقعة حول عام 2027، وما تعنيه كل منها لاعتماد الذكاء الاصطناعي المحلي — مع التحفظات المناسبة بشأن التواريخ.',
@@ -776,6 +784,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-data-sovereignty-compliance-overview-hero-ko.png',
     title: '로컬 AI 트렌드 2027, 10부작 중 9부: 로컬 AI 팀이 주시해야 할 규제 일정',
     seoTitle: '로컬 AI 트렌드 2027, 9부: 규제 일정 | Prompt Bites',
     metaDescription: '10부작 중 9부: 2027년을 전후해 예상되는 EU AI 법, 업종별 규정, 데이터 현지화의 구체적 이정표와 각각이 로컬 AI 도입에 미치는 의미를 날짜에 대한 적절한 유보와 함께 다룹니다.',
