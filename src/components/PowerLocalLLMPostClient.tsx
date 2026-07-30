@@ -609,8 +609,43 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
         </ol>
       )}
 
+      {/* Item-heading list — each row gets its own H3 (e.g. per-tool directory entries) */}
+      {section.itemHeadings && section.rows && section.columns && (
+        <div className="my-6 space-y-4">
+          {section.rows.map((row, i) => {
+            const [nameCol, ...restCols] = section.columns!
+            const name = row[nameCol] ?? row['0'] ?? ''
+            const itemId = name
+              .replace(/\*\*/g, '')
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, '-')
+              .replace(/^-|-$/g, '')
+            return (
+              <div key={i} id={itemId || undefined} className="border border-primary/10 rounded-xl p-4 scroll-mt-24">
+                <h3 className="text-lg font-bold text-text-primary mb-2">
+                  {renderInlineLinks(name, lang)}
+                </h3>
+                <dl className="text-sm text-text-secondary space-y-1.5">
+                  {restCols.map((col) => (
+                    <div key={col} className="flex flex-col sm:flex-row sm:gap-2">
+                      <dt className="font-semibold text-text-primary shrink-0 sm:w-24">{col}:</dt>
+                      <dd>{renderInlineLinks(row[col] ?? '—', lang)}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            )
+          })}
+          {section.note && (
+            <p className="text-sm text-text-secondary leading-relaxed mt-4 italic">
+              {renderInlineLinks(section.note, lang)}
+            </p>
+          )}
+        </div>
+      )}
+
       {/* Table */}
-      {section.rows && section.columns && (
+      {!section.itemHeadings && section.rows && section.columns && (
         <div className="relative overflow-x-auto my-6">
           <table className="w-full border-collapse text-sm">
             <thead>

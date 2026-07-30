@@ -314,25 +314,36 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
 
   const mdUrlRe = /\[.*?\]\((https?:\/\/[^)]+)\)/
   const itemListSchemas = Object.values(article.sections)
-    .filter((s) => s.rows && s.rows.length > 0 && s.columns?.includes('Link'))
-    .map((s) => ({
-      '@context': 'https://schema.org',
-      '@type': 'ItemList',
-      name: s.title ?? article.title,
-      itemListElement: s.rows!.map((row, i) => {
-        const urlMatch = (row['Link'] ?? '').match(mdUrlRe)
-        return {
-          '@type': 'ListItem',
-          position: i + 1,
-          item: {
-            '@type': 'Thing',
-            name: (row['Device'] ?? row['Tool'] ?? '').replace(/\*\*/g, '').trim(),
-            ...(urlMatch && { url: urlMatch[1] }),
-            description: row['Description'] ?? '',
-          },
-        }
-      }),
-    }))
+    .filter((s) => s.rows && s.rows.length > 0 && s.columns && s.columns.length > 0)
+    // Column headers are localized (e.g. 'Link' in EN is 'Lien'/'Enlace'/'リンク' elsewhere), so detect
+    // the link column by content (markdown URL pattern) rather than by matching the English header text.
+    .map((s) => {
+      const columns = s.columns!
+      const linkCol = columns.find((col) => s.rows!.some((r) => mdUrlRe.test(r[col] ?? '')))
+      if (!linkCol) return null
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: s.title ?? article.title,
+        itemListElement: s.rows!.map((row, i) => {
+          const urlMatch = (row[linkCol] ?? '').match(mdUrlRe)
+          // The item-name column is 'Device'/'Tool' in EN; other locales translate the header,
+          // so fall back to the conventional 2nd column (Category, Device, Link, Why) or the 1st.
+          const nameVal = row['Device'] ?? row['Tool'] ?? row['Model'] ?? row[columns[1]] ?? row[columns[0]] ?? ''
+          return {
+            '@type': 'ListItem',
+            position: i + 1,
+            item: {
+              '@type': 'Thing',
+              name: nameVal.replace(/\*\*/g, '').trim(),
+              ...(urlMatch && { url: urlMatch[1] }),
+              description: row['Description'] ?? '',
+            },
+          }
+        }),
+      }
+    })
+    .filter((s): s is NonNullable<typeof s> => s !== null)
 
   return (
     <>
