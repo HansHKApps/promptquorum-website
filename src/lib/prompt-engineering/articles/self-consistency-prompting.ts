@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/self-consistency-prompting-overview-hero-en.png',
       title: 'Self-Consistency Prompting: Generate Multiple Answers, Pick the One That\'s Right',
       intro: '**Self-consistency prompting generates 5-20 independent reasoning paths for the same question and selects the answer that appears most frequently.** Instead of trusting a single AI answer (which may be wrong), you ask the question multiple times at higher temperatures and let majority voting decide. This simple technique improves accuracy on math, logic, and multi-step analysis by 15-25 percentage points.',
       leadAnswerBlock: '**Self-consistency prompting: ask the model the same question 5-20 times with higher temperature (0.7-1.0) to generate diverse reasoning paths, then pick the majority answer. The technique improved math accuracy from 56% (single chain-of-thought) to 74% (self-consistency with 40 samples) in the original paper. Works on all models. Trade-off: 5-20× more tokens per task.**',
@@ -265,6 +266,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/self-consistency-prompting-overview-hero-de.png',
       title: 'Self-Consistency Prompting: Mehrfache Antworten generieren, Konsens auswählen',
       intro: '**Self-Consistency Prompting generiert 5–20 unabhängige Lösungswege für die gleiche Frage und wählt dann die am häufigsten auftretende Antwort aus.** Anstatt einer einzelnen KI-Antwort zu vertrauen, verlassen Sie sich auf den Konsens vieler. Diese einfache Technik verbessert die Genauigkeit bei Mathematik, Logik und mehrstufiger Analyse um 15–25 Prozentpunkte.',
       leadAnswerBlock: '**Self-Consistency Prompting: Stellen Sie dem Modell die gleiche Frage 5–20 Mal mit höherer Temperatur (0,7–1,0) um unterschiedliche Lösungswege zu generieren, dann wählen Sie die Mehrheitsantwort. Die Technik verbesserte die Mathematik-Genauigkeit von 56% (einzelne Chain-of-Thought) auf 74% (Self-Consistency mit 40 Samples). Funktioniert bei allen Modellen. Trade-off: 5–20× mehr Token pro Aufgabe.**',
@@ -523,6 +525,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/self-consistency-prompting-overview-hero-es.png',
       title: 'Self-Consistency Prompting: genera múltiples respuestas y elige la correcta',
       intro: '**El self-consistency prompting genera 5–20 caminos de razonamiento independientes para la misma pregunta y selecciona la respuesta que aparece con más frecuencia.** En lugar de confiar en una sola respuesta de IA (que puede ser incorrecta), haces la pregunta múltiples veces con temperaturas más altas y dejas que el voto mayoritario decida. Esta técnica sencilla mejora la precisión en matemáticas, lógica y análisis de múltiples pasos en 15–25 puntos porcentuales.',
       leadAnswerBlock: '**Self-consistency prompting: haz la misma pregunta al modelo 5–20 veces con temperatura alta (0.7–1.0) para generar caminos de razonamiento diversos, luego elige la respuesta mayoritaria. La técnica mejoró la precisión en matemáticas del 56% (chain-of-thought único) al 74% (self-consistency con 40 muestras) en el artículo original. Funciona en todos los modelos. Trade-off: 5–20× más tokens por tarea.**',
@@ -770,6 +773,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/self-consistency-prompting-overview-hero-ar.png',
       title: 'برومبت الاتساق الذاتي: أنتج استجابات متعددة واختر الصحيحة',
       intro: '**يُولّد برومبت الاتساق الذاتي 5–20 مساراً استدلالياً مستقلاً للسؤال نفسه ويختار الإجابة التي تظهر في أغلب الأحيان.** بدلاً من الاعتماد على إجابة ذكاء اصطناعي واحدة (قد تكون خاطئة)، تطرح السؤال مرات عدة بدرجات حرارة أعلى وتدع التصويت الأغلبي يُقرر. هذه التقنية البسيطة تُحسّن الدقة في الرياضيات والمنطق والتحليل متعدد الخطوات بمقدار 15–25 نقطة مئوية.',
       leadAnswerBlock: '**برومبت الاتساق الذاتي: اطرح على النموذج السؤال نفسه 5–20 مرة بدرجة حرارة عالية (0.7–1.0) لتوليد مسارات استدلالية متنوعة، ثم اختر الإجابة الأكثرية. حسّنت التقنية دقة الرياضيات من 56٪ (سلسلة أفكار واحدة) إلى 74٪ (اتساق ذاتي بـ40 عينة) في الورقة الأصلية. تعمل مع جميع النماذج. المقايضة: 5–20× رموز أكثر لكل مهمة.**',
@@ -1016,6 +1020,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Techniques',
+      heroImage: '/images/self-consistency-prompting-overview-hero-pt.png',
       title: 'Self-Consistency Prompting: Gere Múltiplas Respostas, Escolha a Mais Consistente',
       intro: '**O self-consistency prompting gera 5–20 caminhos de raciocínio independentes para a mesma pergunta e seleciona a resposta que aparece com mais frequência.** Em vez de confiar em uma única resposta de IA (que pode estar errada), você faz a pergunta várias vezes com temperaturas mais altas e deixa a votação por maioria decidir. Essa técnica simples melhora a precisão em matemática, lógica e análise de múltiplos passos em 15–25 pontos percentuais.',
       leadAnswerBlock: '**Self-consistency prompting: faça ao modelo a mesma pergunta 5–20 vezes com temperatura alta (0,7–1,0) para gerar caminhos de raciocínio diversos, depois escolha a resposta majoritária. A técnica melhorou a precisão em matemática de 56% (chain-of-thought único) para 74% (self-consistency com 40 amostras) no artigo original. Funciona em todos os modelos. Trade-off: 5–20× mais tokens por tarefa.**',
@@ -1257,6 +1262,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+      heroImage: '/images/self-consistency-prompting-overview-hero-fr.png',
       title: 'Self-Consistency Prompting : Plusieurs Réponses, Choisir le Consensus',
       intro: '**Le Self-Consistency Prompting génère 5–20 chemins de raisonnement indépendants pour la même question, puis sélectionne la réponse qui apparaît le plus fréquemment.** Au lieu de faire confiance à une seule réponse IA, vous vous appuyez sur le consensus de plusieurs. Cette technique simple améliore la précision en mathématiques, logique et analyse multi-étapes de 15–25 points de pourcentage.',
       leadAnswerBlock: '**Self-Consistency Prompting : posez au modèle la même question 5–20 fois avec température élevée (0.7–1.0) pour générer des chemins de raisonnement distincts, puis choisissez la réponse majoritaire. La technique a amélioré la précision mathématique de 56% (chaîne de pensée unique) à 74% (Self-Consistency avec 40 échantillons). Fonctionne sur tous les modèles. Compromis : 5–20× plus de tokens par tâche.**',
@@ -1512,6 +1518,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
       freshness_tier: 'semi_annual',
       theme: '手法',
+      heroImage: '/images/self-consistency-prompting-overview-hero-ja.png',
       title: 'セルフコンシステンシープロンプティング：複数の答えを生成して正しいものを選ぶ',
       intro: '**セルフコンシステンシープロンプティングは、同じ質問に対して5～20の独立した推論パスを生成し、最も一貫性のある答えを投票で選ぶ手法です。** このアプローチにより、より高い精度が得られます。特に数学や論理的な問題で有効です。',
       leadAnswerBlock: '**セルフコンシステンシー：同じプロンプトに対して複数の異なる推論経路を生成し、最終的な答えを多数決で決定します。これにより、単一の線形推論（Chain-of-Thought）よりも精度が向上します。例えば、GSM8K数学ベンチマークでは56%から74%に改善されました。**',
@@ -1789,32 +1796,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         howToStart: {
           id: 'how-to-start',
           title: 'はじめ方',
-          content: [
-            '1. 現在の精度を測定',
-            '   • CoT単一パスで実行',
-            '   • 正答率を記録',
-            '',
-            '2. セルフコンシステンシー設定',
-            '   • Temperature: 0.7～0.9',
-            '   • パス数: 5',
-            '',
-            '3. テスト実行',
-            '   • 同じプロンプトで5回実行',
-            '   • 最終答え5つを記録',
-            '',
-            '4. 投票で決定',
-            '   • 最多票の答えが最終結果',
-            '   • 確信度を計算',
-            '',
-            '5. 精度比較',
-            '   • セルフコンシステンシー vs CoT',
-            '   • コスト増とのバランス判定',
-            '',
-            '6. 最適化（必要に応じて）',
-            '   • パス数を8、10に増やし再テスト',
-            '   • 温度調整で多様性確認',
-            '',
-            '推奨開始モデル：Claude Opus 4.8 または GPT-5.5'
+          numberedItems: [
+            '**現在の精度を測定する。** CoT単一パスで実行し、正答率を記録します。',
+            '**セルフコンシステンシーを設定する。** Temperatureを0.7～0.9に設定し、パス数を5に設定します。',
+            '**テストを実行する。** 同じプロンプトで5回実行し、最終答え5つを記録します。',
+            '**投票で決定する。** 最多票の答えを最終結果とし、確信度を計算します。',
+            '**精度を比較する。** セルフコンシステンシーとCoTを比較し、コスト増とのバランスを判定します。',
+            '**必要に応じて最適化する。** パス数を8や10に増やして再テストし、温度調整で多様性を確認します。推奨開始モデル：Claude Opus 4.8 または GPT-5.5。',
           ]
         },
 
@@ -1860,6 +1848,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'ja',
         mainEntity: [
           {
             '@type': 'Question',
@@ -1986,6 +1977,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
       freshness_tier: 'semi_annual',
       theme: '技术',
+      heroImage: '/images/self-consistency-prompting-overview-hero-zh.png',
       title: '自洽一致性提示：生成多个答案，投票选择最佳答案',
       intro: '**自洽一致性提示（Self-Consistency）让模型对同一个问题生成5-20条独立的推理路径，然后投票选择出现最频繁的答案。** 这个简单的技巧将数学、逻辑和复杂分析的准确率从56%提升到74%，比单次Chain-of-Thought推理提高18个百分点。',
       leadAnswerBlock: '**自洽一致性：用更高的Temperature（0.7-1.0）让同一个提示词生成5-20条不同的推理路径，然后用多数投票选择最终答案。相比单一推理，这个方法在数学基准上从56%提升到74%。权衡：消耗5-20倍的token，但精度显著提升。**',
@@ -2283,36 +2275,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         howToStart: {
           id: 'how-to-start',
           title: '快速开始',
-          content: [
-            '第1步：找一个有明确答案的问题',
-            '  • 数学题、逻辑谜题或医学案例都可以',
-            '  • 必须有标准答案可对比',
-            '',
-            '第2步：基线测试',
-            '  • 用单次CoT运行，记录准确率',
-            '  • 示例：测试10道题，CoT答对5道（50%）',
-            '',
-            '第3步：配置自洽一致性',
-            '  • Temperature: 0.8',
-            '  • 采样次数: 5',
-            '',
-            '第4步：运行5次采样',
-            '  • 同一题目5次输出',
-            '  • 记录所有答案',
-            '',
-            '第5步：投票',
-            '  • 统计答案频率',
-            '  • 取最多票答案',
-            '',
-            '第6步：精度对比',
-            '  • 单次CoT vs 5采样投票',
-            '  • 计算提升百分点',
-            '',
-            '第7步：优化（可选）',
-            '  • 如果精度还不够，试试8采样',
-            '  • 如果成本受限，试试3采样',
-            '',
-            '推荐首选模型：Claude Opus 4.8（推理强）或 GPT-5.5（多样性好）'
+          numberedItems: [
+            '**找一个有明确答案的问题。** 数学题、逻辑谜题或医学案例都可以，但必须有标准答案可对比。',
+            '**进行基线测试。** 用单次CoT运行，记录准确率。示例：测试10道题，CoT答对5道（50%）。',
+            '**配置自洽一致性。** 将Temperature设为0.8，采样次数设为5。',
+            '**运行5次采样。** 对同一题目生成5次输出，记录所有答案。',
+            '**投票决定最终答案。** 统计答案频率，取最多票的答案。',
+            '**对比精度。** 比较单次CoT与5采样投票的结果，计算提升百分点。',
+            '**按需优化。** 如果精度还不够，试试8采样；如果成本受限，试试3采样。推荐首选模型：Claude Opus 4.8（推理强）或 GPT-5.5（多样性好）。',
           ]
         },
 
@@ -2358,6 +2328,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'zh',
         mainEntity: [
           {
             '@type': 'Question',
@@ -2485,6 +2458,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
+    heroImage: '/images/self-consistency-prompting-overview-hero-ko.png',
       title: '자기 일관성 프롬프팅: 여러 답변을 생성하고 올바른 답을 선택하십시오',
       intro: '**자기 일관성 프롬프팅은 동일한 질문에 대해 5~20개의 독립적인 추론 경로를 생성한 후 가장 자주 등장하는 답변을 선택합니다.** 단일 AI 답변을 신뢰하는 대신(틀릴 수 있으므로), 더 높은 temperature에서 동일한 질문을 여러 번 제시하고 다수결로 결론을 도출합니다. 이 간단한 기법은 수학, 논리, 다단계 분석의 정확도를 15~25 퍼센트포인트 향상시킵니다.',
       leadAnswerBlock: '**자기 일관성 프롬프팅: 동일한 질문을 temperature 0.7~1.0으로 설정하여 5~20회 모델에 제시함으로써 다양한 추론 경로를 생성한 후, 다수결 답변을 선택합니다. 이 기법은 원본 논문에서 수학 정확도를 단일 chain-of-thought의 56%에서 자기 일관성(40샘플) 74%로 향상시켰습니다. 모든 모델에서 작동합니다. 트레이드오프: 작업당 5~20배 더 많은 토큰이 소비됩니다.**',

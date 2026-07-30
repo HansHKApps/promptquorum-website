@@ -779,6 +779,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Memória': '64GB', 'Modelos confortáveis': 'até 34B Q5', 'Modelos no limite': '70B Q3', 'Não recomendado': '405B' },
           { 'Memória': '128GB', 'Modelos confortáveis': 'até 70B Q5', 'Modelos no limite': '70B Q8', 'Não recomendado': '405B (parcialmente)' },
         ],
+        numberedItems: [
+          { title: '16 GB (M5 base, MacBook Air)', whyItMatters: 'Llama 3.3 8B Q4 cabe (modelo de 5GB + 8GB de SO = 13GB) ✓ mas no limite. Llama 8B Q8 não cabe sem swap. Whisper small cabe junto.' },
+          { title: '36 GB (M5 Pro base)', whyItMatters: 'Llama 3.3 8B Q8 cabe com conforto. Llama 13B Q4 cabe. Qwen3 34B Q4 cabe no limite (20GB + 8GB de SO = 28GB). Multi-modelo: Whisper + LLaVA + TTS cabem ✓' },
+          { title: '64 GB (M5 Pro max)', whyItMatters: 'Qwen3 34B Q5 cabe com conforto (24GB). Llama 70B Q3 cabe no limite. Pilhas multi-modelo têm bastante espaço sobrando.' },
+          { title: '128 GB (M5 Max)', whyItMatters: 'Melhor modelo para 128GB: Llama 3.3 70B Q5 (49GB) — o maior modelo mainstream que cabe com folga. 70B Q8 cabe (74GB) para qualidade quase sem perdas. Multi-modal: Whisper + modelo de visão de 90B + LLM de 8B cabem simultaneamente ✓' },
+        ],
       },
       quantizationOverhead: {
         id: 'quantization-overhead',

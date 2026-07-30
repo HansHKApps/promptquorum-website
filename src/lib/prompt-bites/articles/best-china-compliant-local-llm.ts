@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-china-compliant-local-llm-overview-hero-en.png',
     title: 'Best Local LLM for Mainland-China-Compliant Deployments?',
     seoTitle: 'Best Local LLM for China-Compliant Deployment 2026',
     metaDescription: 'Qwen and DeepSeek, developed by PRC companies under domestic content-review rules, are the most-used local LLMs for mainland-China-facing deployments.',
@@ -100,6 +101,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-china-compliant-local-llm-overview-hero-ar.png',
     title: 'أفضل LLM محلي للنشر المتوافق مع الصين القارية؟',
     seoTitle: 'أفضل LLM محلي للنشر المتوافق مع الصين 2026',
     metaDescription: 'نموذجا Qwen وDeepSeek، المطوَّران من قِبل شركات صينية بموجب متطلبات مراجعة محتوى محلية، هما الأكثر استخدامًا من نماذج LLM المحلية للنشر الموجَّه للصين القارية.',
@@ -196,6 +198,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-china-compliant-local-llm-overview-hero-de.png',
     title: 'Das beste lokale LLM für China-konforme Deployments?',
     seoTitle: 'Bestes lokales LLM für China-konforme Deployments 2026',
     metaDescription: 'Qwen und DeepSeek, entwickelt von chinesischen Firmen unter inländischen Content-Review-Regeln, sind die meistgenutzten lokalen LLMs für China.',
@@ -292,6 +295,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-china-compliant-local-llm-overview-hero-es.png',
     title: '¿Cuál es el Mejor LLM Local para Despliegues Compatibles con China Continental?',
     seoTitle: 'Mejor LLM Local para Despliegue Compatible con China 2026',
     metaDescription: 'Qwen y DeepSeek, desarrollados por empresas chinas bajo normas de revisión de contenido, son los LLM locales más usados para China continental.',
@@ -388,6 +392,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-china-compliant-local-llm-overview-hero-fr.png',
     title: 'Quel est le meilleur LLM local pour les déploiements conformes à la Chine continentale ?',
     seoTitle: 'Meilleur LLM local pour déploiement conforme en Chine 2026',
     metaDescription: 'Qwen et DeepSeek, développés par des entreprises chinoises soumises au contrôle de contenu domestique, sont les LLM locaux les plus utilisés pour la Chine.',
@@ -484,6 +489,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-china-compliant-local-llm-overview-hero-ja.png',
     title: '中国本土向けコンプライアンス対応デプロイに最適なローカルLLMは?',
     seoTitle: '2026年版 中国コンプライアンス対応デプロイに最適なローカルLLM',
     metaDescription: '国内コンテンツ審査要件のもとで中国企業により開発されたQwenとDeepSeekが、中国本土向けデプロイで最も使われているローカルLLMです。',
@@ -580,6 +586,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-china-compliant-local-llm-overview-hero-ko.png',
     title: '중국 본토 규정 준수 배포에 최적의 로컬 LLM은?',
     seoTitle: '2026년 중국 규정 준수 로컬 LLM 최적 선택',
     metaDescription: 'PRC 기업이 자국 콘텐츠 심사 요건 하에 개발한 Qwen과 DeepSeek은 중국 본토 대상 배포에 가장 많이 사용되는 로컬 LLM입니다.',
@@ -676,6 +683,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-china-compliant-local-llm-overview-hero-pt.png',
     title: 'Qual o Melhor LLM Local para Implantações Compatíveis com a China Continental?',
     seoTitle: 'Melhor LLM Local para Implantação Compatível com a China 2026',
     metaDescription: 'O Qwen e o DeepSeek, desenvolvidos por empresas chinesas sob normas domésticas de revisão de conteúdo, são os LLMs locais mais usados na China continental.',
@@ -772,6 +780,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Model Comparisons',
+    heroImage: '/images/best-china-compliant-local-llm-overview-hero-zh.png',
     title: '适合中国大陆合规部署的最佳本地 LLM 是什么？',
     seoTitle: '2026 年中国合规部署最佳本地 LLM',
     metaDescription: '由中国大陆企业根据国内内容审核规范开发的 Qwen 和 DeepSeek，是面向中国大陆合规部署中使用最广泛的本地 LLM，具体合规要求建议咨询法律顾问。',

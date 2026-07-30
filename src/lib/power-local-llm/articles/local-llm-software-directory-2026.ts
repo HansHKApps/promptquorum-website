@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'The Complete Local LLM Software Directory: 88 Tools to Run AI on Your Own Hardware (2026)',
-    seoTitle: 'Local LLM Tools 2026: 88 Apps Updated (Ollama to RAG)',
+    seoTitle: 'Local LLM Tools 2026: 88 Apps Compared by Category',
     affiliateDisclosure: true,
     intro:
       'This is an updated 2026 directory of 88 local LLM tools, apps, frameworks, and deployment software — last updated July 2026. The local-LLM ecosystem in 2026 is large enough that picking the wrong tool first costs hours, not minutes. The directory catalogues 88 actively-maintained projects across nine layers — runtimes, desktop apps, web UIs, coding assistants, RAG systems, agent frameworks, voice and multimodal, mobile clients, and specialized productivity plugins — with the description, licence, and primary URL for each. Whether you are picking local LLM tools, deployment tools for multi-user serving, or frameworks for building agents, use it as the "what exists" map before you commit to a stack; every category ends with a link to the deeper PromptQuorum comparison guide for that layer.',

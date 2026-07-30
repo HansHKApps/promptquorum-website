@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-en.png',
     title: 'Local AI Trends 2027, Part 3 of 10: Small Models Take Over the Boring Jobs',
     seoTitle: 'Local AI Trends 2027, Part 3: Small Models Take Over | Prompt Bites',
     metaDescription: 'Gartner and IDC project enterprises will shift narrow, high-volume AI tasks to small specialized local models by 2027 — not because small models got smarter, but because routing everything through one large model no longer pencils out.',
@@ -91,6 +92,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-de.png',
     title: 'Local AI Trends 2027, Teil 3 von 10: Kleine Modelle übernehmen die Routineaufgaben',
     seoTitle: 'Local AI Trends 2027, Teil 3: Kleine Modelle übernehmen | Prompt Bites',
     metaDescription: 'Gartner und IDC prognostizieren, dass Unternehmen enge, hochvolumige KI-Aufgaben bis 2027 auf kleine spezialisierte lokale Modelle verlagern werden — nicht weil kleine Modelle klüger wurden, sondern weil alles über ein großes Modell zu routen wirtschaftlich nicht mehr aufgeht.',
@@ -178,6 +180,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-fr.png',
     title: "Tendances IA locale 2027, partie 3 sur 10 : les petits modèles reprennent les tâches répétitives",
     seoTitle: "Tendances IA locale 2027, partie 3 : petits modèles | Prompt Bites",
     metaDescription: "Gartner et IDC prévoient que les entreprises transféreront les tâches IA étroites et à fort volume vers de petits modèles locaux spécialisés d'ici 2027 — non parce que les petits modèles sont devenus plus intelligents, mais parce qu'acheminer tout via un seul grand modèle n'est plus rentable.",
@@ -265,6 +268,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-ja.png',
     title: 'ローカルAIトレンド2027、第3回/全10回：小型モデルが単調な業務を引き受ける',
     seoTitle: 'ローカルAIトレンド2027 第3回：小型モデルの台頭 | Prompt Bites',
     metaDescription: 'GartnerとIDCは、2027年までに企業が狭く高頻度なAIタスクを小型の専用ローカルモデルに移行すると予測している。小型モデルが賢くなったからではなく、すべてを1つの大規模モデルに任せることが経済的に成り立たなくなるためだ。',
@@ -352,6 +356,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-zh.png',
     title: '2027本地AI趋势系列第3篇（共10篇）：小模型接管枯燥的日常任务',
     seoTitle: '2027本地AI趋势 第3篇：小模型接管 | Prompt Bites',
     metaDescription: 'Gartner和IDC预测,到2027年企业将把狭窄、高流量的AI任务转移到专用小型本地模型——不是因为小模型变得更聪明,而是因为把所有任务都交给单一大模型在经济上已不再划算。',
@@ -439,6 +444,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-es.png',
     title: 'Tendencias de IA local 2027, parte 3 de 10: los modelos pequeños se hacen cargo de las tareas rutinarias',
     seoTitle: 'Tendencias de IA local 2027, parte 3: modelos pequeños | Prompt Bites',
     metaDescription: 'Gartner e IDC proyectan que las empresas trasladarán tareas de IA estrechas y de alto volumen a pequeños modelos locales especializados para 2027 — no porque los modelos pequeños se hayan vuelto más inteligentes, sino porque enrutar todo a través de un solo modelo grande ya no resulta rentable.',
@@ -526,6 +532,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-pt.png',
     title: 'Tendências de IA local 2027, parte 3 de 10: os modelos pequenos assumem as tarefas repetitivas',
     seoTitle: 'Tendências de IA local 2027, parte 3: modelos pequenos | Prompt Bites',
     metaDescription: 'Gartner e IDC projetam que as empresas vão migrar tarefas de IA estreitas e de alto volume para pequenos modelos locais especializados até 2027 — não porque os modelos pequenos ficaram mais inteligentes, mas porque rotear tudo por um único modelo grande deixou de ser economicamente viável.',
@@ -613,6 +620,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-ar.png',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 3 من 10: النماذج الصغيرة تتولى المهام الروتينية',
     seoTitle: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 3 | Prompt Bites',
     metaDescription: 'تتوقع Gartner و IDC أن تنقل الشركات المهام الضيقة وعالية الحجم إلى نماذج محلية صغيرة متخصصة بحلول 2027 — ليس لأن النماذج الصغيرة أصبحت أذكى، بل لأن توجيه كل شيء عبر نموذج كبير واحد لم يعد مجديًا اقتصاديًا.',
@@ -700,6 +708,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-small-language-models-overview-hero-ko.png',
     title: '로컬 AI 트렌드 2027, 10부작 중 3부: 소형 모델이 지루한 업무를 맡는다',
     seoTitle: '로컬 AI 트렌드 2027, 3부: 소형 모델의 부상 | Prompt Bites',
     metaDescription: 'Gartner와 IDC는 2027년까지 기업이 좁고 대량인 AI 작업을 소형 특화 로컬 모델로 전환할 것으로 전망합니다 — 소형 모델이 더 똑똑해져서가 아니라, 모든 것을 하나의 대형 모델로 처리하는 방식이 더 이상 경제적으로 맞지 않기 때문입니다.',

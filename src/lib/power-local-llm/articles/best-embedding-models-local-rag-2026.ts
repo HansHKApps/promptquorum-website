@@ -13,6 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-07-14',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-en.png',
     title: 'Best Local Embedding Models for RAG in 2026 (Tested on Real Documents)',
     seoTitle: 'Best Local Embedding Models for RAG 2026: 6 Models Tested',
     intro:
@@ -531,6 +532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-15',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-es.png',
     title: 'Mejores modelos de embedding local para RAG en 2026 (probados con documentos reales)',
     seoTitle: 'Mejores modelos de embedding local para RAG 2026: 6 modelos probados',
     intro:
@@ -1062,6 +1064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-15',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-pt.png',
     title: 'Melhores modelos de embedding local para RAG em 2026 (testados com documentos reais)',
     seoTitle: 'Melhores modelos de embedding local para RAG 2026: 6 testados',
     intro:
@@ -1593,6 +1596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-15',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-de.png',
     title: 'Beste lokale Embedding-Modelle für RAG 2026 (Getestet auf echten Dokumenten)',
     seoTitle: 'Beste lokale Embedding-Modelle für RAG 2026: 6 im Test',
     intro:
@@ -2101,6 +2105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-15',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-fr.png',
     title: "Meilleurs modèles d'embedding local pour RAG en 2026 (Testés sur documents réels)",
     seoTitle: "Meilleurs modèles embedding local RAG 2026 : 6 modèles testés",
     intro: "Six modèles d'embedding open-weight populaires — nomic-embed-text-v2, bge-large-en-v1.5, gte-large, mxbai-embed-large, snowflake-arctic-embed, jina-embeddings-v3 — testés sur 4 types de documents (contrats légaux, articles de recherche, code source, wiki multilingue). 100 requêtes notées par modèle, retrieval@10 mesuré contre une clé réponse connue, débits CPU et GPU sur matériel grand public. Un modèle gagne en précision globale, un autre en vitesse CPU, et le débat sur la dimension trouve sa réponse. Sections dédiées sur le retrieval chinois/CJK et les embedders code, où les modèles généralistes accusent le plus grand retard face aux spécialistes.",
@@ -2592,6 +2597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-15',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-ja.png',
     title: 'ローカルRAGの最高埋め込みモデル2026（実文書でテスト済み）',
     seoTitle: 'ローカルRAG最高埋め込みモデル2026：6モデルベンチマーク',
     intro:
@@ -3100,6 +3106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: "2026-07-15",
     next_refresh_due: "2027-01-14",
     theme: "RAG & Document Chat",
+    heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-zh.png',
     title: "2026年本地RAG最佳嵌入模型（真实文档测试）",
     seoTitle: "2026年本地RAG最佳嵌入模型：6个模型测试",
     intro:
@@ -3608,6 +3615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-15',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-ar.png',
     title: 'أفضل نماذج التضمين المحلية لـ ⁨RAG⁩ في ⁨2026⁩ (اختبار بوثائق حقيقية)',
     seoTitle: 'أفضل نماذج التضمين المحلية لـ ⁨RAG⁩ ⁨2026⁩: اختبار ⁨6⁩ نماذج',
     intro:
@@ -4114,6 +4122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-15',
     next_refresh_due: '2027-01-14',
     theme: 'RAG & Document Chat',
+    heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-ko.png',
     title: '2026년 로컬 RAG를 위한 최고의 임베딩 모델 (실제 문서로 테스트)',
     seoTitle: '2026년 로컬 RAG 임베딩 모델 최고 6선 테스트',
     intro:

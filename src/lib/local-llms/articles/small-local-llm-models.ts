@@ -1140,6 +1140,19 @@ schema: {
           { '@type': 'Thing', name: 'Llama 3.2 3B' },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Beste kleine lokale LLMs unter 4B Parametern 2026',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Phi-4 Mini 3.8B', description: 'MMLU 68%, HumanEval 70%. 2,5 GB RAM. 30-50 tok/sek auf CPU. 128K Kontext. Bestes Reasoning. ollama run phi4-mini' },
+          { '@type': 'ListItem', position: 2, name: 'Gemma 2 2B', description: 'MMLU 52%. 1,7 GB RAM. 40-60 tok/sek auf CPU -- schnellstes kleines Modell. 8K Kontext. ollama run gemma2:2b' },
+          { '@type': 'ListItem', position: 3, name: 'Qwen3 3B', description: 'MMLU 62%, HumanEval 65%. 2 GB RAM. 29 Sprachen nativ. Funktionsaufrufe unterstützt. ollama run qwen2.5:3b' },
+          { '@type': 'ListItem', position: 4, name: 'Llama 3.2 3B', description: 'MMLU 58%, HumanEval 60%. 2,5 GB RAM. 128K Kontext. Beste Community-Unterstützung. ollama run llama3.2:3b' },
+          { '@type': 'ListItem', position: 5, name: 'Llama 3.2 1B', description: 'MMLU 32%. 1,3 GB RAM. 60-90 tok/sek auf CPU. Absolute Mindestanforderung an RAM. ollama run llama3.2:1b' },
+        ],
+      },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -1196,6 +1209,19 @@ schema: {
           { '@type': 'Thing', name: 'Gemma 2 2B' },
           { '@type': 'Thing', name: 'Qwen3 3B' },
           { '@type': 'Thing', name: 'Llama 3.2 3B' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Meilleurs petits LLMs locaux de moins de 4B paramètres 2026',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Phi-4 Mini 3.8B', description: 'MMLU 68%, HumanEval 70%. 2,5 Go de RAM. 30-50 tok/sec sur CPU. Contexte 128K. Meilleur raisonnement. ollama run phi4-mini' },
+          { '@type': 'ListItem', position: 2, name: 'Gemma 2 2B', description: 'MMLU 52%. 1,7 Go de RAM. 40-60 tok/sec sur CPU -- le petit modèle le plus rapide. Contexte 8K. ollama run gemma2:2b' },
+          { '@type': 'ListItem', position: 3, name: 'Qwen3 3B', description: 'MMLU 62%, HumanEval 65%. 2 Go de RAM. 29 langues nativement. Appel de fonction supporté. ollama run qwen2.5:3b' },
+          { '@type': 'ListItem', position: 4, name: 'Llama 3.2 3B', description: 'MMLU 58%, HumanEval 60%. 2,5 Go de RAM. Contexte 128K. Meilleur support communautaire. ollama run llama3.2:3b' },
+          { '@type': 'ListItem', position: 5, name: 'Llama 3.2 1B', description: 'MMLU 32%. 1,3 Go de RAM. 60-90 tok/sec sur CPU. Exigence de RAM minimale absolue. ollama run llama3.2:1b' },
         ],
       },
       faqSchema: {
@@ -1256,6 +1282,19 @@ schema: {
           { '@type': 'Thing', name: 'Gemma 2 2B' },
           { '@type': 'Thing', name: 'Qwen3 3B' },
           { '@type': 'Thing', name: 'Llama 3.2 3B' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '2026年4Bパラメータ未満の最高の小規模ローカルLLM',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Phi-4 Mini 3.8B', description: 'MMLU 68%、HumanEval 70%。2.5 GB RAM。CPUで30-50トークン/秒。128Kコンテキスト。最高の推論。ollama run phi4-mini' },
+          { '@type': 'ListItem', position: 2, name: 'Gemma 2 2B', description: 'MMLU 52%。1.7 GB RAM。CPUで40-60トークン/秒----最速の小規模モデル。8Kコンテキスト。ollama run gemma2:2b' },
+          { '@type': 'ListItem', position: 3, name: 'Qwen3 3B', description: 'MMLU 62%、HumanEval 65%。2 GB RAM。29言語をネイティブサポート。関数呼び出し対応。ollama run qwen2.5:3b' },
+          { '@type': 'ListItem', position: 4, name: 'Llama 3.2 3B', description: 'MMLU 58%、HumanEval 60%。2.5 GB RAM。128Kコンテキスト。最も多くのコミュニティサポート。ollama run llama3.2:3b' },
+          { '@type': 'ListItem', position: 5, name: 'Llama 3.2 1B', description: 'MMLU 32%。1.3 GB RAM。CPUで60-90トークン/秒。絶対的な最小RAM要件。ollama run llama3.2:1b' },
         ],
       },
       faqSchema: {
@@ -1480,6 +1519,19 @@ schema: {
           { '@type': 'Thing', name: 'Gemma 2 2B' },
           { '@type': 'Thing', name: 'Qwen3 3B' },
           { '@type': 'Thing', name: 'Llama 3.2 3B' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '2026年4B参数以下最佳小型本地LLM',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Phi-4 Mini 3.8B', description: 'MMLU 68%，HumanEval 70%。2.5GB RAM。CPU上30-50个令牌/秒。128K上下文。最佳推理能力。ollama run phi4-mini' },
+          { '@type': 'ListItem', position: 2, name: 'Gemma 2 2B', description: 'MMLU 52%。1.7GB RAM。CPU上40-60个令牌/秒----最快的小型模型。8K上下文。ollama run gemma2:2b' },
+          { '@type': 'ListItem', position: 3, name: 'Qwen3 3B', description: 'MMLU 62%，HumanEval 65%。2GB RAM。原生支持29种语言。支持函数调用。ollama run qwen2.5:3b' },
+          { '@type': 'ListItem', position: 4, name: 'Llama 3.2 3B', description: 'MMLU 58%，HumanEval 60%。2.5GB RAM。128K上下文。社区支持最广泛。ollama run llama3.2:3b' },
+          { '@type': 'ListItem', position: 5, name: 'Llama 3.2 1B', description: 'MMLU 32%。1.3GB RAM。CPU上60-90个令牌/秒。绝对最低RAM要求。ollama run llama3.2:1b' },
         ],
       },
       faqSchema: {

@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Privacy & Security',
+    heroImage: '/images/can-local-llm-help-gdpr-overview-hero-en.png',
     title: 'Can a Local LLM Help with GDPR Compliance?',
     dateModified: '2026-06-20',
     seoTitle: 'Can Local LLM Help GDPR Compliance? 2026 | Prompt Bites | PromptQuorum',
@@ -100,6 +101,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Privacy & Security',
+    heroImage: '/images/can-local-llm-help-gdpr-overview-hero-de.png',
     title: 'Kann ein lokales LLM bei der DSGVO-Compliance helfen?',
     seoTitle: 'Hilft ein lokales LLM bei der DSGVO?',
     metaDescription: 'Ja — lokales Open-Weight-LLM beseitigt das DSGVO-Artikel-44-Drittlandtransfer-Problem vollständig. Beste Modelle für datensensible Organisationen 2026.',
@@ -176,6 +178,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Privacy & Security',
+    heroImage: '/images/can-local-llm-help-gdpr-overview-hero-fr.png',
     title: 'Un LLM local peut-il aider à la conformité RGPD ?',
     seoTitle: 'LLM local pour la conformité RGPD 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Oui — un LLM open-weight local élimine entièrement le problème de transfert vers pays tiers de l\'Article 44 du RGPD. Meilleurs modèles pour orgs data-sensibles 2026.',
@@ -252,6 +255,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Privacy & Security',
+    heroImage: '/images/can-local-llm-help-gdpr-overview-hero-ja.png',
     title: 'ローカルLLMはGDPRコンプライアンスに役立ちますか？',
     seoTitle: 'ローカルLLMでGDPRコンプライアンス？2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'はい——オープンウェイトLLMをローカル実行するとGDPR第44条の第三国転送問題が完全に排除されます。2026年のデータ機密組織向け最適モデル。',
@@ -328,6 +332,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Privacy & Security',
+    heroImage: '/images/can-local-llm-help-gdpr-overview-hero-zh.png',
     title: '本地LLM能帮助GDPR合规吗？',
     seoTitle: '本地LLM助力GDPR合规 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '可以——本地运行开源权重LLM完全消除GDPR第44条第三国数据传输问题。2026年数据敏感机构最佳模型推荐。',
@@ -404,6 +409,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Privacy & Security',
+    heroImage: '/images/can-local-llm-help-gdpr-overview-hero-pt.png',
     title: 'Um LLM local pode ajudar com a conformidade do RGPD?',
     seoTitle: 'LLM local ajuda com o RGPD? 2026 | PromptQuorum',
     metaDescription: 'Sim: executar um LLM de código aberto localmente elimina o problema de transferência do Artigo 44 do RGPD. Melhores modelos para organizações com dados sensíveis em 2026.',
@@ -488,6 +494,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Privacy & Security',
+    heroImage: '/images/can-local-llm-help-gdpr-overview-hero-es.png',
     title: '¿Puede un LLM local ayudar con el cumplimiento del RGPD?',
     seoTitle: '¿LLM local ayuda con el RGPD? 2026 | PromptQuorum',
     metaDescription: 'Sí: ejecutar un LLM de código abierto en local elimina el problema de transferencia del Artículo 44 del RGPD. Mejores modelos para datos sensibles en 2026.',
@@ -572,6 +579,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Privacy & Security',
+    heroImage: '/images/can-local-llm-help-gdpr-overview-hero-ar.png',
     title: 'هل يمكن لنموذج ⁨LLM⁩ المحلي المساعدة في الامتثال للائحة ⁨GDPR⁩؟',
     seoTitle: '⁨LLM⁩ محلي لامتثال ⁨GDPR 2026⁩: إلغاء المادة ⁨44⁩',
     metaDescription: 'نعم — النموذج المحلي يُلغي نقل بيانات المادة ⁨44⁩ من ⁨GDPR. Qwen 3 14B Q4⁩_⁨K⁩_⁨M⁩ عبر ⁨Ollama⁩ يحتاج ⁨12 GB VRAM⁩ ويعالج نصوص ⁨HR⁩ والوثائق القانونية محليًا.',
@@ -656,6 +664,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Privacy & Security',
+    heroImage: '/images/can-local-llm-help-gdpr-overview-hero-ko.png',
     title: '로컬 LLM이 GDPR 컴플라이언스에 도움이 됩니까?',
     seoTitle: '로컬 LLM GDPR 컴플라이언스 2026: 제44조 해결 | PromptQuorum',
     metaDescription: '네 — 오픈 웨이트 모델을 로컬에서 실행하면 GDPR 제44조 제3국 이전 문제가 완전히 해소됩니다. 2026년 민감 데이터 처리에 적합한 최적 모델을 소개합니다.',

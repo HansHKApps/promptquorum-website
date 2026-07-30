@@ -17,6 +17,9 @@ export type FrameworkUiLabels = {
   faqHeading: string
   relatedHeading: string
   allFrameworks: string
+  howToName: (name: string) => string
+  howToDescription: (name: string) => string
+  fillInField: (field: string) => string
 }
 
 const EN: FrameworkUiLabels = {
@@ -37,6 +40,9 @@ const EN: FrameworkUiLabels = {
   faqHeading: 'Frequently Asked Questions',
   relatedHeading: 'Related Frameworks',
   allFrameworks: 'All Frameworks',
+  howToName: name => `How to use the ${name} prompt framework`,
+  howToDescription: name => `A step-by-step guide to using the ${name} framework for AI prompt engineering.`,
+  fillInField: field => `Fill in ${field}`,
 }
 
 const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
@@ -58,6 +64,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     faqHeading: 'Häufig gestellte Fragen',
     relatedHeading: 'Verwandte Frameworks',
     allFrameworks: 'Alle Frameworks',
+    howToName: name => `${name}-Prompt-Framework verwenden`,
+    howToDescription: name => `Eine Schritt-für-Schritt-Anleitung zur Verwendung des ${name}-Frameworks für Prompt Engineering.`,
+    fillInField: field => `${field} ausfüllen`,
   },
   fr: {
     home: 'Accueil',
@@ -77,6 +86,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     faqHeading: 'Questions fréquentes',
     relatedHeading: 'Frameworks associés',
     allFrameworks: 'Tous les frameworks',
+    howToName: name => `Comment utiliser le framework de prompt ${name}`,
+    howToDescription: name => `Un guide étape par étape pour utiliser le framework ${name} en prompt engineering.`,
+    fillInField: field => `Renseigner ${field}`,
   },
   es: {
     home: 'Inicio',
@@ -96,6 +108,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     faqHeading: 'Preguntas frecuentes',
     relatedHeading: 'Frameworks relacionados',
     allFrameworks: 'Todos los frameworks',
+    howToName: name => `Cómo usar el framework de prompt ${name}`,
+    howToDescription: name => `Una guía paso a paso para usar el framework ${name} en ingeniería de prompts.`,
+    fillInField: field => `Completa ${field}`,
   },
   pt: {
     home: 'Início',
@@ -115,6 +130,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     faqHeading: 'Perguntas frequentes',
     relatedHeading: 'Frameworks relacionados',
     allFrameworks: 'Todos os frameworks',
+    howToName: name => `Como usar o framework de prompt ${name}`,
+    howToDescription: name => `Um guia passo a passo para usar o framework ${name} em engenharia de prompts.`,
+    fillInField: field => `Preencha ${field}`,
   },
   ja: {
     home: 'ホーム',
@@ -134,6 +152,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     faqHeading: 'よくある質問',
     relatedHeading: '関連フレームワーク',
     allFrameworks: 'すべてのフレームワーク',
+    howToName: name => `${name}プロンプトフレームワークの使い方`,
+    howToDescription: name => `AIプロンプトエンジニアリングにおける${name}フレームワークの使い方をステップごとに解説します。`,
+    fillInField: field => `${field}を入力`,
   },
   zh: {
     home: '首页',
@@ -153,6 +174,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     faqHeading: '常见问题',
     relatedHeading: '相关框架',
     allFrameworks: '所有框架',
+    howToName: name => `如何使用${name}提示词框架`,
+    howToDescription: name => `关于在AI提示词工程中使用${name}框架的分步指南。`,
+    fillInField: field => `填写${field}`,
   },
   ar: {
     home: 'الرئيسية',
@@ -172,6 +196,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     faqHeading: 'الأسئلة الشائعة',
     relatedHeading: 'أطر عمل ذات صلة',
     allFrameworks: 'جميع أطر العمل',
+    howToName: name => `كيفية استخدام إطار الأوامر ${name}`,
+    howToDescription: name => `دليل خطوة بخطوة لاستخدام إطار ${name} في هندسة الأوامر للذكاء الاصطناعي.`,
+    fillInField: field => `املأ ${field}`,
   },
   ko: {
     home: '홈',
@@ -191,6 +218,9 @@ const LABELS: Record<FrameworkLang, FrameworkUiLabels> = {
     faqHeading: '자주 묻는 질문',
     relatedHeading: '관련 프레임워크',
     allFrameworks: '모든 프레임워크',
+    howToName: name => `${name} 프롬프트 프레임워크 사용법`,
+    howToDescription: name => `AI 프롬프트 엔지니어링에서 ${name} 프레임워크를 사용하는 단계별 가이드입니다.`,
+    fillInField: field => `${field} 입력`,
   },
 }
 

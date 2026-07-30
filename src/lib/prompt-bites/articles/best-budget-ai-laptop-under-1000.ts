@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-en.png',
     title: 'Best Budget AI Laptop Under $1,000 in 2026 (Local LLM & ML)?',
     seoTitle: 'Best Budget AI Laptop Under $1000 2026: LLM & ML Picks',
     metaDescription: 'Best budget AI laptops under $1,000 for local LLMs and machine learning: a 16 GB-RAM Ryzen 7 runs 7B models on CPU; discounted RTX 4050/4060 8 GB gaming laptops add GPU. RAM/VRAM matter most.',
@@ -136,6 +137,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-de.png',
     title: 'Bestes Budget-KI-Notebook unter 1.000 € im Jahr 2026 (Lokales LLM & ML)?',
     seoTitle: 'Budget-KI-Notebook unter 1.000 € 2026: LLM & ML',
     metaDescription:
@@ -269,6 +271,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-fr.png',
     title: 'Meilleur PC portable IA à moins de 1 000 € en 2026 (LLM local & ML) ?',
     seoTitle: 'PC portable IA à moins de 1 000 € 2026 : LLM & ML',
     metaDescription:
@@ -402,6 +405,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-ja.png',
     title: '2026年、15万円以下のベストAIノートPCは？（ローカルLLM & ML）',
     seoTitle: '15万円以下ベストAIノートPC 2026：LLM & ML',
     metaDescription:
@@ -535,6 +539,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-es.png',
     title: '¿Mejor Laptop IA Económico por Menos de 1.000 € en 2026 (LLM Local y ML)?',
     seoTitle: 'Mejor Laptop IA bajo 1.000 € 2026: LLM y ML',
     metaDescription:
@@ -668,6 +673,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-pt.png',
     title: 'Melhor Notebook IA Econômico por Menos de R$ 6.000 em 2026 (LLM Local e ML)?',
     seoTitle: 'Melhor Notebook IA até R$ 6.000 2026: LLM e ML',
     metaDescription:
@@ -797,6 +803,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-ar.png',
     title: 'أفضل حاسب محمول للذكاء الاصطناعي بأقل من ⁨1⁩,⁨000⁩ دولار في ⁨2026⁩ (LLM محلي و⁨ML⁩)؟',
     seoTitle: 'أفضل حاسب ذكاء اصطناعي دون ⁨1000⁩ دولار ⁨2026⁩: LLM محلي و⁨ML⁩',
     metaDescription: 'أفضل الحواسيب المحمولة الاقتصادية للذكاء الاصطناعي بأقل من ⁨1000⁩ دولار لتشغيل النماذج اللغوية الكبيرة محلياً وتعلم الآلة: ⁨Ryzen 7⁩ مع ⁨16 GB RAM⁩ يشغّل نماذج ⁨7B⁩ على ⁨CPU⁩؛ حواسيب الألعاب المخفّضة ⁨RTX 4050/4060⁩ بذاكرة ⁨8 GB⁩ تضيف ⁨GPU⁩. الذاكرة و⁨VRAM⁩ هما الأهم.',
@@ -929,6 +936,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-zh.png',
     title: '2026年1,000美元以下最佳AI笔记本电脑（本地LLM与ML）？',
     seoTitle: '1,000美元以下最佳AI笔记本2026：本地LLM与ML之选',
     metaDescription:
@@ -1062,6 +1070,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-budget-ai-laptop-under-1000-overview-hero-ko.png',
     title: '2026년 1,000달러 이하 최고의 예산형 AI 노트북은? (로컬 LLM & ML)',
     seoTitle: '1,000달러 이하 최고의 AI 노트북 2026: 로컬 LLM & ML 추천',
     metaDescription:

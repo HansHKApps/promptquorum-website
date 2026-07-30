@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/local-smart-home-complete-guide-overview-hero-en.png',
     title: 'Local Smart Home: The Complete No-Cloud Guide (2026)',
     seoTitle: 'Local Smart Home 2026: The Complete No-Cloud Guide',
     intro:
@@ -225,6 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/local-smart-home-complete-guide-overview-hero-ar.png',
     title: 'المنزل الذكي المحلي: الدليل الشامل بدون سحابة (⁨2026⁩)',
     seoTitle: 'المنزل الذكي المحلي ⁨2026⁩: الدليل الشامل بدون سحابة',
     intro:
@@ -442,6 +444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/local-smart-home-complete-guide-overview-hero-de.png',
     title: 'Lokales Smart Home: Der komplette No-Cloud-Leitfaden (2026)',
     seoTitle: 'Lokales Smart Home 2026: Vollständiger No-Cloud-Leitfaden',
     intro:
@@ -659,6 +662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/local-smart-home-complete-guide-overview-hero-es.png',
     title: 'Smart Home Local: La Guía Completa Sin Nube (2026)',
     seoTitle: 'Smart Home Local 2026: Guía Completa Sin Nube',
     intro:
@@ -876,6 +880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/local-smart-home-complete-guide-overview-hero-ko.png',
     title: '클라우드 없는 로컬 스마트 홈 완전 가이드 (2026)',
     seoTitle: '로컬 스마트 홈 2026: 클라우드 없는 완전 가이드',
     intro:
@@ -1093,6 +1098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/local-smart-home-complete-guide-overview-hero-fr.png',
     title: 'Maison Connectée Locale : Le Guide Complet Sans Cloud (2026)',
     seoTitle: 'Maison Connectée Locale 2026 : Guide Sans Cloud',
     intro:
@@ -1310,6 +1316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/local-smart-home-complete-guide-overview-hero-ja.png',
     title: 'ローカルスマートホーム完全ガイド：クラウド不要（2026）',
     seoTitle: 'ローカルスマートホーム2026：クラウド不要の完全ガイド',
     intro:
@@ -1527,6 +1534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/local-smart-home-complete-guide-overview-hero-pt.png',
     title: 'Casa Inteligente Local: O Guia Completo Sem Nuvem (2026)',
     seoTitle: 'Casa Inteligente Local 2026: Guia Sem Nuvem',
     intro:
@@ -1744,6 +1752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
+    heroImage: '/images/local-smart-home-complete-guide-overview-hero-zh.png',
     title: '本地智能家居完整指南：无需云端（2026）',
     seoTitle: '2026本地智能家居：Home Assistant无云端完整搭建指南',
     intro:

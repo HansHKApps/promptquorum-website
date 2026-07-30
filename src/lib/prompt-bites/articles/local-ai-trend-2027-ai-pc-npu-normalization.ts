@@ -16,6 +16,7 @@ const SIBLING_BITES = [
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-en.png',
     title: 'Local AI Trends 2027, Part 2 of 10: AI PCs Everywhere, NPUs Still Catching Up',
     seoTitle: 'AI PCs & NPU Normalization by 2027 | Prompt Bites',
     metaDescription: 'Analysts project NPU-equipped "AI PCs" will dominate laptop shipments by 2027, but local LLM tools like Ollama still barely use the NPU — a shipping-vs-useful gap that may not close on schedule.',
@@ -116,6 +117,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-de.png',
     title: 'Local AI Trends 2027, Teil 2 von 10: KI-PCs überall, NPUs hinken noch hinterher',
     seoTitle: 'KI-PCs & NPU-Normalisierung bis 2027 | Prompt Bites',
     metaDescription: 'Analysten erwarten, dass NPU-ausgestattete „KI-PCs" bis 2027 die Laptop-Auslieferungen dominieren, doch lokale LLM-Tools wie Ollama nutzen die NPU kaum — eine Lücke zwischen Verfügbarkeit und Nutzen, die sich womöglich nicht rechtzeitig schließt.',
@@ -216,6 +218,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-fr.png',
     title: 'Tendances IA Locale 2027, Partie 2 sur 10 : Des PC IA Partout, les NPU Toujours à la Traîne',
     seoTitle: 'PC IA et normalisation des NPU d\'ici 2027 | Prompt Bites',
     metaDescription: 'Les analystes prévoient que les « PC IA » équipés de NPU domineront les livraisons d\'ordinateurs portables d\'ici 2027, mais les outils LLM locaux comme Ollama exploitent encore à peine le NPU — un écart entre disponibilité et utilité qui pourrait ne pas se combler à temps.',
@@ -316,6 +319,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-ja.png',
     title: 'ローカルAIトレンド2027 第2回(全10回):AI PCはどこにでも、NPUはまだ追いついていない',
     seoTitle: '2027年までのAI PCとNPU普及 | Prompt Bites',
     metaDescription: 'アナリストはNPU搭載「AI PC」が2027年までにノートPC出荷の主流になると予測しているが、OllamaのようなローカルLLMツールはまだNPUをほとんど活用していない——出荷と実用のギャップは予定通り縮まらない可能性がある。',
@@ -416,6 +420,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-zh.png',
     title: '本地AI趋势2027,第2/10篇:AI PC无处不在,NPU仍在追赶',
     seoTitle: '2027年前AI PC与NPU普及化 | Prompt Bites',
     metaDescription: '分析师预测配备NPU的"AI PC"将在2027年前主导笔记本电脑出货量,但Ollama等本地LLM工具目前几乎不使用NPU——这一出货量与实用性之间的差距可能无法如期弥合。',
@@ -516,6 +521,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-es.png',
     title: 'Tendencias de IA Local 2027, Parte 2 de 10: PCs con IA en Todas Partes, las NPU Aún se Están Poniendo al Día',
     seoTitle: 'PCs con IA y normalización de NPU para 2027 | Prompt Bites',
     metaDescription: 'Los analistas proyectan que las "PC con IA" equipadas con NPU dominarán los envíos de portátiles para 2027, pero herramientas de LLM local como Ollama apenas usan la NPU — una brecha entre disponibilidad y utilidad que podría no cerrarse a tiempo.',
@@ -616,6 +622,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-pt.png',
     title: 'Tendências de IA Local 2027, Parte 2 de 10: PCs com IA em Toda Parte, as NPUs Ainda Estão se Atualizando',
     seoTitle: 'PCs com IA e normalização de NPU até 2027 | Prompt Bites',
     metaDescription: 'Analistas projetam que os "PCs com IA" equipados com NPU dominarão os embarques de notebooks até 2027, mas ferramentas de LLM local como o Ollama ainda mal usam a NPU — uma lacuna entre disponibilidade e utilidade que pode não se fechar a tempo.',
@@ -716,6 +723,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-ar.png',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 2 من 10: أجهزة الكمبيوتر الذكية في كل مكان، ووحدات NPU لا تزال تلحق بالركب',
     seoTitle: 'أجهزة الكمبيوتر الذكية وتعميم NPU بحلول 2027 | Prompt Bites',
     metaDescription: 'يتوقع المحللون أن تهيمن أجهزة "الكمبيوتر الذكي" المزودة بوحدة NPU على شحنات أجهزة الحاسوب المحمولة بحلول 2027، لكن أدوات LLM المحلية مثل Ollama لا تستخدم NPU إلا نادرًا — فجوة بين الشحن والفائدة قد لا تُغلق في الوقت المحدد.',
@@ -816,6 +824,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-pc-npu-normalization-overview-hero-ko.png',
     title: '로컬 AI 트렌드 2027, 10편 중 2편: 어디에나 있는 AI PC, 아직 따라잡지 못한 NPU',
     seoTitle: '2027년까지 AI PC와 NPU 보편화 | Prompt Bites',
     metaDescription: '분석가들은 NPU를 탑재한 "AI PC"가 2027년까지 노트북 출하량을 주도할 것으로 전망하지만, Ollama 같은 로컬 LLM 도구는 여전히 NPU를 거의 사용하지 않는다 — 출하량과 실사용 사이의 격차가 제때 좁혀지지 않을 수 있다.',

@@ -9,78 +9,80 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-12-19',
+      next_refresh_due: '2027-01-29',
+      last_full_refresh: '2026-07-29',
       theme: 'Best Models',
       title: 'Best CPU-Only Local LLM 2026: No GPU Needed (5 Models Tested)',
       seoTitle: 'CPU-Only LLM 2026: Phi-4 Mini Runs 12 tok/s, No GPU',
-      intro: 'CPU-only inference is practical for 3–13B models on modern processors with 8–32 GB RAM. The best CPU-only models in May 2026 are Phi-4 Mini (3.8B, ~2.3 GB, 12 tokens/sec on CPU), Gemma 3 2B (1.5 GB, 15 tokens/sec), and Llama 3.2 3B (2 GB, 10 tokens/sec). Run via Ollama, LM Studio, or llama.cpp with CPU-only mode enabled.',
-      metaDescription: '5 CPU-only LLMs benchmarked in 2026: Phi-4 Mini (3.8B) runs 12 tok/s, Gemma 3 2B hits 15 tok/s, Llama 3.2 3B delivers 10 tok/s — all without a GPU.',
+      intro: 'CPU-only inference is practical for 3–13B models on modern processors with 8–32 GB RAM. The best CPU-only models in July 2026 are Phi-4 Mini (3.8B, ~2.3 GB, 12 tokens/sec on CPU), Gemma 4 E2B (1.5 GB, 15 tokens/sec), and Llama 3.2 3B (2 GB, 10 tokens/sec). Run via Ollama, LM Studio, or llama.cpp with CPU-only mode enabled.',
+      metaDescription: '5 CPU-only LLMs benchmarked in 2026: Phi-4 Mini (3.8B) runs 12 tok/s, Gemma 4 E2B hits 15 tok/s, Llama 3.2 3B delivers 10 tok/s — all without a GPU.',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-en.png',
       publishDate: '2026-05-07',
-      dateModified: '2026-06-19',
-      current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4', 'Qwen3 7B'],
+      dateModified: '2026-07-29',
+      current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B', 'Qwen3 8B'],
+      current_benchmarks_used: ['HumanEval', 'MATH', 'MMLU'],
       current_hardware_mentioned: ['Intel i7-12700', 'AMD Ryzen 7 5700X', 'Apple M3', 'Apple M4'],
-      leadAnswerBlock: '**CPU-only inference works well for 3–13B models on modern processors. Best picks: Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec on CPU) for general chat, Gemma 3 2B (1.5 GB, fastest) for speed-critical tasks, and Llama 3.2 3B (2 GB, balanced) for quality. Use Ollama or llama.cpp with CPU mode. CPU inference is 10–30× slower than GPU but uses no dedicated video VRAM — just system RAM.**',
+      leadAnswerBlock: '**CPU-only inference works well for 3–13B models on modern processors. Best picks: Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec on CPU) for general chat, Gemma 4 E2B (1.5 GB, fastest) for speed-critical tasks, and Llama 3.2 3B (2 GB, balanced) for quality. Use Ollama or llama.cpp with CPU mode. CPU inference is 10–30× slower than GPU but uses no dedicated video VRAM — just system RAM.**',
       quickAnswerTop: {
         en: {
           question: 'Can I run an LLM without a GPU and which models work on CPU only?',
-          answer: 'The best CPU-only LLM for most users is **Phi-4-mini** (3.8B) — fast enough for real-time conversation on 16 GB RAM and accurate enough for coding and writing tasks. For best balance of quality and RAM usage, **Qwen3 7B in Q4 quantization** runs well on 8–16 GB RAM.',
+          answer: 'The best CPU-only LLM for most users is **Phi-4-mini** (3.8B) — fast enough for real-time conversation on 16 GB RAM and accurate enough for coding and writing tasks. For best balance of quality and RAM usage, **Qwen3 8B in Q4 quantization** runs well on 8–16 GB RAM.',
           bullets: [
             'Phi-4 Mini (3.8B, 2.3 GB) — best overall CPU model, 12 tokens/sec on i7-12700, 1–3% quality loss from FP16',
-            'Gemma 3 2B (1.5 GB) — fastest on CPU, 15 tokens/sec, excellent for real-time chat on 8 GB RAM',
+            'Gemma 4 E2B (1.5 GB) — fastest on CPU, 15 tokens/sec, excellent for real-time chat on 8 GB RAM',
             'Llama 3.2 3B (2 GB) — best balance of quality and speed, 10 tokens/sec on modern CPU',
-            'Mistral Small Q4 (4.5 GB) — larger but still CPU-feasible on 16+ GB RAM, 5 tokens/sec',
+            'Qwen3 8B (5 GB) — larger but still CPU-feasible on 16+ GB RAM, 4-5 tokens/sec',
             'Enable CPU-only mode in Ollama or llama.cpp — tells the tool to use system RAM, not VRAM',
           ],
-          updatedDate: '2026-06-19',
+          updatedDate: '2026-07-29',
         },
         de: {
           question: 'Kann ich ein LLM ohne eine GPU ausführen und welche Modelle funktionieren nur auf der CPU?',
-          answer: 'Ja, moderne CPUs können 3–13B-Modelle effizient ausführen. CPU-Geschwindigkeiten betragen 8–15 Token/Sekunde vs. GPU 50–200 Token/Sekunde, aber Sie verwenden null VRAM. Beste CPU-only-Modelle: Phi-4 Mini (3,8B, 2,3 GB), Gemma 3 2B (1,5 GB, am schnellsten), Llama 3.2 3B (2 GB, ausgewogene Qualität).',
+          answer: 'Ja, moderne CPUs können 3–13B-Modelle effizient ausführen. CPU-Geschwindigkeiten betragen 8–15 Token/Sekunde vs. GPU 50–200 Token/Sekunde, aber Sie verwenden null VRAM. Beste CPU-only-Modelle: Phi-4 Mini (3,8B, 2,3 GB), Gemma 4 E2B (1,5 GB, am schnellsten), Llama 3.2 3B (2 GB, ausgewogene Qualität).',
           bullets: [
             'Phi-4 Mini (3,8B, 2,3 GB) — bestes CPU-Modell, 12 Token/Sekunde auf i7-12700',
-            'Gemma 3 2B (1,5 GB) — schnellstes auf CPU, 15 Token/Sekunde, hervorragend für Echtzeit-Chat auf 8 GB RAM',
+            'Gemma 4 E2B (1,5 GB) — schnellstes auf CPU, 15 Token/Sekunde, hervorragend für Echtzeit-Chat auf 8 GB RAM',
             'Llama 3.2 3B (2 GB) — beste Balance zwischen Qualität und Geschwindigkeit',
-            'Mistral Small Q4 (4,5 GB) — größer, aber immer noch auf CPU mit 16+ GB RAM machbar',
+            'Qwen3 8B (5 GB) — größer, aber immer noch auf CPU mit 16+ GB RAM machbar',
             'CPU-only-Modus in Ollama oder llama.cpp aktivieren — sagt dem Tool, System-RAM zu verwenden',
           ],
-          updatedDate: '2026-06-19',
+          updatedDate: '2026-07-29',
         },
         fr: {
           question: 'Puis-je exécuter un LLM sans GPU et quels modèles fonctionnent sur CPU uniquement ?',
-          answer: 'Oui, les processeurs modernes peuvent exécuter efficacement des modèles 3–13B. Les vitesses CPU sont de 8–15 tokens/sec vs GPU 50–200 tokens/sec, mais vous n\'utilisez pas de VRAM. Meilleurs modèles CPU-only : Phi-4 Mini (3,8B, 2,3 GB), Gemma 3 2B (1,5 GB, plus rapide), Llama 3.2 3B (2 GB, qualité équilibrée).',
+          answer: 'Oui, les processeurs modernes peuvent exécuter efficacement des modèles 3–13B. Les vitesses CPU sont de 8–15 tokens/sec vs GPU 50–200 tokens/sec, mais vous n\'utilisez pas de VRAM. Meilleurs modèles CPU-only : Phi-4 Mini (3,8B, 2,3 GB), Gemma 4 E2B (1,5 GB, plus rapide), Llama 3.2 3B (2 GB, qualité équilibrée).',
           bullets: [
             'Phi-4 Mini (3,8B, 2,3 GB) — meilleur modèle CPU, 12 tokens/sec sur i7-12700',
-            'Gemma 3 2B (1,5 GB) — le plus rapide sur CPU, 15 tokens/sec, excellent pour le chat temps réel sur 8 GB RAM',
+            'Gemma 4 E2B (1,5 GB) — le plus rapide sur CPU, 15 tokens/sec, excellent pour le chat temps réel sur 8 GB RAM',
             'Llama 3.2 3B (2 GB) — meilleur équilibre entre qualité et vitesse',
-            'Mistral Small Q4 (4,5 GB) — plus volumineux mais toujours faisable sur CPU avec 16+ GB RAM',
+            'Qwen3 8B (5 GB) — plus volumineux mais toujours faisable sur CPU avec 16+ GB RAM',
             'Activez le mode CPU-only dans Ollama ou llama.cpp — indique à l\'outil d\'utiliser la RAM système',
           ],
-          updatedDate: '2026-06-19',
+          updatedDate: '2026-07-29',
         },
         ja: {
           question: 'GPU なしで LLM を実行でき、CPU のみで動作するモデルはどれですか？',
-          answer: 'はい、現代の CPU は 3～13B モデルを効率的に実行できます。CPU速度は 8～15 トークン/秒対 GPU 50～200 トークン/秒ですが、VRAM は使用しません。最高の CPU-only モデル：Phi-4 Mini (3.8B, 2.3 GB)、Gemma 3 2B (1.5 GB、最速)、Llama 3.2 3B (2 GB、バランス型品質)。',
+          answer: 'はい、現代の CPU は 3～13B モデルを効率的に実行できます。CPU速度は 8～15 トークン/秒対 GPU 50～200 トークン/秒ですが、VRAM は使用しません。最高の CPU-only モデル：Phi-4 Mini (3.8B, 2.3 GB)、Gemma 4 E2B (1.5 GB、最速)、Llama 3.2 3B (2 GB、バランス型品質)。',
           bullets: [
             'Phi-4 Mini (3.8B、2.3 GB) — 最高の CPU モデル、i7-12700 で 12 トークン/秒',
-            'Gemma 3 2B (1.5 GB) — CPU で最速、15 トークン/秒、8 GB RAM でのリアルタイム チャットに最適',
+            'Gemma 4 E2B (1.5 GB) — CPU で最速、15 トークン/秒、8 GB RAM でのリアルタイム チャットに最適',
             'Llama 3.2 3B (2 GB) — 品質と速度の最高のバランス',
-            'Mistral Small Q4 (4.5 GB) — より大きいが、16+ GB RAM では CPU でも実行可能',
+            'Qwen3 8B (5 GB) — より大きいが、16+ GB RAM では CPU でも実行可能',
             'Ollama または llama.cpp で CPU-only モードを有効にする — ツールに システム RAM を使用するよう指示',
           ],
-          updatedDate: '2026-06-19',
+          updatedDate: '2026-07-29',
         },
         zh: {
           question: '我可以在没有 GPU 的情况下运行 LLM 吗，哪些模型仅在 CPU 上运行？',
-          answer: '是的，现代 CPU 可以有效运行 3-13B 模型。CPU 速度为 8-15 令牌/秒对比 GPU 50-200 令牌/秒，但您不使用 VRAM。最佳 CPU-only 模型：Phi-4 Mini (3.8B, 2.3 GB)、Gemma 3 2B (1.5 GB, 最快)、Llama 3.2 3B (2 GB, 平衡质量)。',
+          answer: '是的，现代 CPU 可以有效运行 3-13B 模型。CPU 速度为 8-15 令牌/秒对比 GPU 50-200 令牌/秒，但您不使用 VRAM。最佳 CPU-only 模型：Phi-4 Mini (3.8B, 2.3 GB)、Gemma 4 E2B (1.5 GB, 最快)、Llama 3.2 3B (2 GB, 平衡质量)。',
           bullets: [
             'Phi-4 Mini (3.8B、2.3 GB) — 最佳 CPU 模型，i7-12700 上 12 令牌/秒',
-            'Gemma 3 2B (1.5 GB) — CPU 上最快，15 令牌/秒，非常适合 8 GB RAM 上的实时聊天',
+            'Gemma 4 E2B (1.5 GB) — CPU 上最快，15 令牌/秒，非常适合 8 GB RAM 上的实时聊天',
             'Llama 3.2 3B (2 GB) — 质量和速度的最佳平衡',
-            'Mistral Small Q4 (4.5 GB) — 更大但在 16+ GB RAM 时仍可在 CPU 上运行',
+            'Qwen3 8B (5 GB) — 更大但在 16+ GB RAM 时仍可在 CPU 上运行',
             '在 Ollama 或 llama.cpp 中启用 CPU-only 模式 — 告诉工具使用系统 RAM',
           ],
-          updatedDate: '2026-06-19',
+          updatedDate: '2026-07-29',
         },
       },
       audience: 'Users with older hardware, Raspberry Pi users, and those without dedicated GPUs seeking practical local LLM inference.',
@@ -109,7 +111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           items: [
             'CPU-only inference works well for 3–13B models on modern processors with 8–32 GB RAM.',
-            'Best CPU models: Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec), Gemma 3 2B (1.5 GB, 15 tokens/sec), Llama 3.2 3B (2 GB, 10 tokens/sec).',
+            'Best CPU models: Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec), Gemma 4 E2B (1.5 GB, 15 tokens/sec), Llama 3.2 3B (2 GB, 10 tokens/sec).',
             'CPU inference is 10–30× slower than GPU but uses zero dedicated VRAM.',
             'Enable CPU-only mode in Ollama or llama.cpp with a simple command-line flag.',
             'CPU inference is ideal for production APIs (no GPU overhead), edge devices, and cost-constrained environments.',
@@ -134,14 +136,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: '**Phi-4 Mini (3.8B, Q4_K_M) is the best overall CPU-only model in 2026 — 12 tokens/sec on a modern CPU with a 2.3 GB RAM footprint.** The table below ranks the top 5 by speed, RAM use, and use case, tested on Intel i7-12700 (12-core, AVX-512):',
           rows: [
             { 'Model': '[Phi-4 Mini](https://ollama.com/library/phi4)', 'Params': '3.8B', 'GGUF Size': '~2.3 GB', 'RAM Needed': '4 GB', 'CPU Speed': '12 tok/sec', 'Best For': 'General chat, code assist' },
-            { 'Model': '[Gemma 3 2B](https://ollama.com/library/gemma3)', 'Params': '2B', 'GGUF Size': '~1.5 GB', 'RAM Needed': '3 GB', 'CPU Speed': '15 tok/sec', 'Best For': 'Fast responses, low VRAM' },
+            { 'Model': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', 'Params': '2B', 'GGUF Size': '~1.5 GB', 'RAM Needed': '3 GB', 'CPU Speed': '15 tok/sec', 'Best For': 'Fast responses, low VRAM' },
             { 'Model': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Params': '3B', 'GGUF Size': '~2 GB', 'RAM Needed': '3.5 GB', 'CPU Speed': '10 tok/sec', 'Best For': 'Balanced quality/speed' },
-            { 'Model': '[Mistral Small Q4](https://ollama.com/library/mistral)', 'Params': '7B', 'GGUF Size': '~4.5 GB', 'RAM Needed': '6 GB', 'CPU Speed': '5 tok/sec', 'Best For': 'Better quality, 16+ GB RAM' },
-            { 'Model': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Params': '8B', 'GGUF Size': '~5 GB', 'RAM Needed': '7 GB', 'CPU Speed': '4 tok/sec', 'Best For': 'Coding, logic tasks' },
+            { 'Model': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'Params': '8B', 'GGUF Size': '~5 GB', 'RAM Needed': '6 GB', 'CPU Speed': '4-5 tok/sec', 'Best For': 'Best coding on CPU, 76% HumanEval' },
+            { 'Model': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'Params': '7B', 'GGUF Size': '~5 GB', 'RAM Needed': '7 GB', 'CPU Speed': '4 tok/sec', 'Best For': 'Reasoning, math (chain-of-thought)' },
           ],
           columns: ['Model', 'Params', 'GGUF Size', 'RAM Needed', 'CPU Speed', 'Best For'],
           image: '/images/best-cpu-only-llm-model-speeds-hero-en.png',
-          imageCaption: 'Phi-4 Mini balances speed and quality best -- Gemma 3 2B is faster but has less capability at 12 tok/s vs 15 tok/s.',
+          imageCaption: 'Phi-4 Mini balances speed and quality best -- Gemma 4 E2B is faster but has less capability at 12 tok/s vs 15 tok/s.',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -152,7 +154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Hardware': '[AMD Ryzen 7 5700X](https://www.amd.com/en/products/processors/desktops/ryzen.html) (CPU)', 'Model': 'Phi-4 Mini 3.8B', 'Speed': '9 tokens/sec', 'Notes': 'Older AVX2 only' },
             { 'Hardware': 'Apple M3 (CPU)', 'Model': 'Phi-4 Mini 3.8B', 'Speed': '14 tokens/sec', 'Notes': 'Unified memory advantage' },
             { 'Hardware': 'RTX 3060 (GPU, 12 GB)', 'Model': 'Phi-4 Mini 3.8B', 'Speed': '80 tokens/sec', 'Notes': 'GPU is 6.7× faster' },
-            { 'Hardware': 'RTX 4090 (GPU, 24 GB)', 'Model': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Speed': '120 tokens/sec', 'Notes': 'GPU is 30× faster than CPU' },
+            { 'Hardware': 'RTX 4090 (GPU, 24 GB)', 'Model': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'Speed': '120 tokens/sec', 'Notes': 'GPU is 30× faster than CPU' },
           ],
           columns: ['Hardware', 'Model', 'Speed', 'Notes'],
           image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-en.png',
@@ -163,11 +165,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'How Much RAM Does Each CPU-Only Model Need?',
           content: '**Rule of thumb: GGUF size + 500 MB overhead = minimum RAM needed.** A 2 GB GGUF model needs 2.5–3 GB of free system RAM:',
           rows: [
-            { 'Model': '[Gemma 3 2B](https://ollama.com/library/gemma3)', 'GGUF Size': '~1.5 GB', 'Min RAM': '2–2.5 GB', 'Comfortable': '4 GB', 'Context Length': '8K' },
+            { 'Model': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', 'GGUF Size': '~1.5 GB', 'Min RAM': '2–2.5 GB', 'Comfortable': '4 GB', 'Context Length': '128K' },
             { 'Model': '[Phi-4 Mini](https://ollama.com/library/phi4) 3.8B', 'GGUF Size': '~2.3 GB', 'Min RAM': '3 GB', 'Comfortable': '6 GB', 'Context Length': '4K' },
             { 'Model': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'GGUF Size': '~2 GB', 'Min RAM': '2.5–3 GB', 'Comfortable': '6 GB', 'Context Length': '8K' },
-            { 'Model': '[Mistral Small Q4](https://ollama.com/library/mistral)', 'GGUF Size': '~4.5 GB', 'Min RAM': '5 GB', 'Comfortable': '8 GB', 'Context Length': '32K' },
-            { 'Model': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'GGUF Size': '~5 GB', 'Min RAM': '6 GB', 'Comfortable': '12 GB', 'Context Length': '128K' },
+            { 'Model': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'GGUF Size': '~5 GB', 'Min RAM': '5 GB', 'Comfortable': '8 GB', 'Context Length': '32K' },
+            { 'Model': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'GGUF Size': '~5 GB', 'Min RAM': '6 GB', 'Comfortable': '12 GB', 'Context Length': '128K' },
           ],
           columns: ['Model', 'GGUF Size', 'Min RAM', 'Comfortable', 'Context Length'],
         },
@@ -215,7 +217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'What\'s the smallest model that still produces coherent output on CPU?',
-              a: 'Gemma 3 2B (1.5 GB) produces reasonable responses. Below 2B, quality drops. For best quality on 8 GB RAM, use Phi-4 Mini (3.8B) or Llama 3.2 3B (2 GB).',
+              a: 'Gemma 4 E2B (1.5 GB) produces reasonable responses. Below 2B, quality drops. For best quality on 8 GB RAM, use Phi-4 Mini (3.8B) or Llama 3.2 3B (2 GB).',
             },
             {
               q: 'Can I run a 13B model on CPU?',
@@ -233,6 +235,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               q: 'Do I need to adjust settings for Apple Silicon CPUs?',
               a: 'No. Ollama auto-detects M1/M2/M3/M4 and uses unified memory efficiently. Apple Silicon is ~10–20% faster than equivalent Intel CPUs due to memory architecture.',
             },
+            {
+              q: 'How much VRAM does a 7B model need in CPU-only mode?',
+              a: 'Zero dedicated VRAM. A 7B model at Q4_K_M quantization (~4.5 GB) needs 5–6 GB of system RAM to run comfortably. This is the core advantage of CPU-only inference — no GPU or VRAM required at all.',
+            },
+            {
+              q: 'Can I fine-tune an LLM on CPU?',
+              a: 'Technically yes, but it is impractical. Fine-tuning on CPU runs 10–30× slower than on GPU. Use CPU-only mode for inference only; switch to a GPU for any fine-tuning or training workload.',
+            },
+            {
+              q: 'Can I run multiple models simultaneously on CPU?',
+              a: 'Technically possible if RAM allows, but not practical. Running multiple models at once causes memory contention, and both models slow down. Run one model at a time for the best performance.',
+            },
+            {
+              q: 'What are the security risks of CPU-only inference?',
+              a: 'CPU-only inference is more secure than cloud inference, since no data leaves the machine and there is no transmission risk. The remaining risks are the same as any local software: keep the OS patched and the physical machine secured, because unencrypted sensitive data can still sit on disk.',
+            },
+            {
+              q: 'Is there a speed difference between Ollama and llama.cpp for CPU inference?',
+              a: 'The difference is minimal. Both use the same core CPU optimizations (AVX-512). Any variance of roughly 2–5% comes from differences in thread-management implementation. Start with Ollama\'s defaults unless you need llama.cpp\'s finer-grained flags.',
+            },
+            {
+              q: 'Is CPU-only inference practical on an old laptop with 8–10 GB of RAM?',
+              a: 'Yes. Gemma 4 E2B (1.5 GB) or Phi-4 Mini (2.3 GB) run efficiently within 8–10 GB of RAM. Expect 3–5 tokens/sec, which is fine for batch processing or a lightweight chatbot but too slow for real-time chat.',
+            },
           ],
         },
         nextSteps: {
@@ -248,7 +274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'regional-context',
           title: 'Why CPU-Only LLMs Matter for Privacy-Sensitive Deployments',
           content: [
-            '**EU GDPR: CPU inference on a local device is the highest tier of data privacy compliance.** When Phi-4 Mini or Gemma 3 2B runs on your CPU, inference is fully air-gapped — no API calls, no telemetry, no data residency questions. This satisfies GDPR Article 25 (privacy by design) at the infrastructure level. EU healthcare, legal, and government users increasingly prefer CPU inference for sensitive document workflows where even GPU cloud instances create audit complexity.',
+            '**EU GDPR: CPU inference on a local device is the highest tier of data privacy compliance.** When Phi-4 Mini or Gemma 4 E2B runs on your CPU, inference is fully air-gapped — no API calls, no telemetry, no data residency questions. This satisfies GDPR Article 25 (privacy by design) at the infrastructure level. EU healthcare, legal, and government users increasingly prefer CPU inference for sensitive document workflows where even GPU cloud instances create audit complexity.',
             '**Developing markets and offline environments: CPU models work without reliable internet.** In regions with unstable connectivity or metered bandwidth, CPU inference enables AI workflows that are impossible with cloud APIs. A Phi-4 Mini GGUF file downloaded once runs indefinitely without internet.',
             '**Export-controlled environments: CPUs face no hardware restriction.** High-end NVIDIA A100/H100 server GPUs face US export controls to certain countries. Consumer CPUs do not. Organizations in affected regions can run capable 3B–7B models on standard x86 hardware with no import restrictions.',
           ],
@@ -260,7 +286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Running FP16 instead of Q4_K_M.** FP16 Phi-4 Mini needs 7.6 GB RAM vs 2.3 GB at Q4_K_M with negligible quality loss. Always use GGUF quantized models for CPU inference.',
             '**Forgetting to set CPU-only flags in llama.cpp.** Without explicit flags, llama.cpp may attempt partial GPU use. Set `--n-gpu-layers 0` for pure CPU mode.',
             '**Using batch size > 1 on CPU.** Batching helps GPU throughput but hurts CPU latency. Keep batch size at 1 for interactive chat.',
-            '**Choosing too large a model.** Phi-4 Mini (3.8B) at 12 tok/sec beats Llama 3.3 8B at 4 tok/sec for interactive use. Match model size to CPU speed, not just RAM.',
+            '**Choosing too large a model.** Phi-4 Mini (3.8B) at 12 tok/sec beats DeepSeek-R1 7B at 4 tok/sec for interactive use. Match model size to CPU speed, not just RAM.',
             '**Not setting thread count.** Ollama auto-detects threads, but llama.cpp may default low. Explicitly set thread count to match your CPU core count.',
           ],
         },
@@ -283,7 +309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[llama.cpp GitHub — CPU inference benchmarks and AVX2/NEON optimization notes](https://github.com/ggerganov/llama.cpp)',
             '[Ollama documentation — CPU-only mode and thread configuration](https://ollama.com/docs)',
             '[Microsoft Phi-4 Mini model card — Hugging Face](https://huggingface.co/microsoft/phi-4-mini)',
-            '[Google Gemma 3 2B model card — Hugging Face](https://huggingface.co/google/gemma-3-2b)',
+            '[Google Gemma 4 E2B model card — Hugging Face](https://huggingface.co/google/gemma-3-2b)',
           ],
         },
       },
@@ -291,10 +317,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Best CPU-Only Local LLM 2026: No GPU Needed (5 Models Tested)',
-        description: '5 CPU-only LLMs benchmarked in 2026: Phi-4 Mini (3.8B) runs 12 tok/s, Gemma 3 2B hits 15 tok/s, Llama 3.2 3B delivers 10 tok/s — all without a GPU.',
+        description: '5 CPU-only LLMs benchmarked in 2026: Phi-4 Mini (3.8B) runs 12 tok/s, Gemma 4 E2B hits 15 tok/s, Llama 3.2 3B delivers 10 tok/s — all without a GPU.',
         url: 'https://www.promptquorum.com/local-llms/best-cpu-only-llm',
         datePublished: '2026-04-01',
-        dateModified: '2026-06-19',
+        dateModified: '2026-07-29',
         inLanguage: 'en',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -315,10 +341,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — Best Overall CPU LLM (3.8B, 12 tok/s)' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 3 2B — Fastest on CPU (1.5 GB, 15 tok/s)' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 4 E2B — Fastest on CPU (1.5 GB, 15 tok/s)' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.2 3B — Best Quality/Speed Balance (2 GB, 10 tok/s)' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Mistral Small Q4 — Better Quality on 16+ GB RAM (4.5 GB, 5 tok/s)' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B Q4 — Best for Coding on CPU (5 GB, 4 tok/s)' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 8B — Best Coding on CPU, 76% HumanEval (5 GB, 4-5 tok/s)' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'DeepSeek-R1 7B — Best for Reasoning and Math (5 GB, 4 tok/s)' },
         ],
       },
       faqSchema: {
@@ -338,7 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'What is the best CPU-only LLM?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec) is the best overall. For speed: Gemma 3 2B (1.5 GB, 15 tokens/sec). For balance: Llama 3.2 3B (2 GB, 10 tokens/sec).',
+              text: 'Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec) is the best overall. For speed: Gemma 4 E2B (1.5 GB, 15 tokens/sec). For balance: Llama 3.2 3B (2 GB, 10 tokens/sec).',
             },
           },
           {
@@ -346,7 +372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'How much RAM do I need for CPU-only inference?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Use the rule: GGUF file size + 500 MB overhead. Phi-4 Mini (2.3 GB) needs 3 GB RAM. Gemma 3 2B (1.5 GB) needs 2 GB RAM. Mistral Small Q4 (4.5 GB) needs 5 GB RAM.',
+              text: 'Use the rule: GGUF file size + 500 MB overhead. Phi-4 Mini (2.3 GB) needs 3 GB RAM. Gemma 4 E2B (1.5 GB) needs 2 GB RAM. Qwen3 8B (5 GB) needs 5 GB RAM.',
             },
           },
           {
@@ -373,23 +399,86 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               text: 'No. Ollama auto-detects M1/M2/M3/M4 and uses unified memory efficiently. Apple Silicon is 10–20% faster than equivalent Intel CPUs due to memory architecture.',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'How much VRAM does a 7B model need in CPU-only mode?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Zero dedicated VRAM. A 7B model at Q4_K_M quantization (~4.5 GB) needs 5–6 GB of system RAM to run comfortably.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I fine-tune an LLM on CPU?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Technically yes, but it is impractical — fine-tuning on CPU runs 10–30× slower than on GPU. Use CPU-only mode for inference only; switch to a GPU for fine-tuning or training.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I run multiple models simultaneously on CPU?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Technically possible if RAM allows, but not practical — running multiple models at once causes memory contention and both models slow down. Run one model at a time.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What are the security risks of CPU-only inference?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'CPU-only inference is more secure than cloud inference since no data leaves the machine. Keep the OS patched and the physical machine secured, since unencrypted sensitive data can still sit on disk.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is there a speed difference between Ollama and llama.cpp for CPU inference?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The difference is minimal — both use the same core CPU optimizations (AVX-512). Any variance of roughly 2–5% comes from thread-management implementation differences.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is CPU-only inference practical on an old laptop with 8–10 GB of RAM?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Gemma 4 E2B (1.5 GB) or Phi-4 Mini (2.3 GB) run efficiently within 8–10 GB of RAM at 3–5 tokens/sec — fine for batch processing or a lightweight chatbot, too slow for real-time chat.',
+            },
+          },
         ],
       },
     },
     es: {
       freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-12-19',
+      next_refresh_due: '2027-01-29',
       theme: 'Best Models',
       title: 'Mejores LLM Solo CPU 2026: Sin GPU (5 Modelos Probados)',
-      seoTitle: '5 LLMs sin GPU 2026: Phi-4 Mini, Gemma 3, Llama 3.2',
-      intro: 'La inferencia solo con CPU es práctica para modelos de 3–13B en procesadores modernos con 8–32 GB de RAM. Los mejores modelos solo CPU en mayo de 2026 son Phi-4 Mini (3,8B, ~2,3 GB, 12 tokens/seg en CPU), Gemma 3 2B (1,5 GB, 15 tokens/seg) y Llama 3.2 3B (2 GB, 10 tokens/seg). Ejecútalos con Ollama, LM Studio o llama.cpp con el modo solo CPU activado.',
-      metaDescription: 'Phi-4 Mini (12 tok/s), Gemma 3 2B (15 tok/s) y Llama 3.2 3B (10 tok/s) sin GPU. Solo 4 GB RAM mínima. Comparativa de 5 modelos LLM para CPU 2026.',
+      seoTitle: '5 LLMs sin GPU 2026: Phi-4 Mini, Gemma 4, Llama 3.2',
+      intro: 'La inferencia solo con CPU es práctica para modelos de 3–13B en procesadores modernos con 8–32 GB de RAM. Los mejores modelos solo CPU en julio de 2026 son Phi-4 Mini (3,8B, ~2,3 GB, 12 tokens/seg en CPU), Gemma 4 E2B (1,5 GB, 15 tokens/seg) y Llama 3.2 3B (2 GB, 10 tokens/seg). Ejecútalos con Ollama, LM Studio o llama.cpp con el modo solo CPU activado.',
+      metaDescription: 'Phi-4 Mini (12 tok/s), Gemma 4 E2B (15 tok/s) y Llama 3.2 3B (10 tok/s) sin GPU. Solo 4 GB RAM mínima. Comparativa de 5 modelos LLM para CPU 2026.',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-es.png',
       publishDate: '2026-05-07',
-      dateModified: '2026-06-19',
-      current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
+      dateModified: '2026-07-29',
+      current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Intel i7-12700', 'AMD Ryzen 7 5700X', 'Apple M3', 'Apple M4'],
-      leadAnswerBlock: '**La inferencia solo con CPU funciona bien para modelos de 3–13B en procesadores modernos. Mejores opciones: Phi-4 Mini (3,8B, 2,3 GB, 12 tokens/seg en CPU) para chat general, Gemma 3 2B (1,5 GB, la más rápida) para tareas críticas de velocidad, y Llama 3.2 3B (2 GB, equilibrada) para calidad. Usa Ollama o llama.cpp con modo CPU. La inferencia CPU es 10–30× más lenta que la GPU pero no usa VRAM de video dedicada — solo RAM del sistema.**',
+      leadAnswerBlock: '**La inferencia solo con CPU funciona bien para modelos de 3–13B en procesadores modernos. Mejores opciones: Phi-4 Mini (3,8B, 2,3 GB, 12 tokens/seg en CPU) para chat general, Gemma 4 E2B (1,5 GB, la más rápida) para tareas críticas de velocidad, y Llama 3.2 3B (2 GB, equilibrada) para calidad. Usa Ollama o llama.cpp con modo CPU. La inferencia CPU es 10–30× más lenta que la GPU pero no usa VRAM de video dedicada — solo RAM del sistema.**',
+      quickAnswerTop: {
+        es: {
+          question: '¿Puedo ejecutar un LLM sin GPU y qué modelos funcionan solo con CPU?',
+          answer: 'El mejor LLM solo CPU para la mayoría de usuarios es **Phi-4 Mini** (3,8B) — suficientemente rápido para conversación en tiempo real con 16 GB de RAM y preciso para tareas de código y escritura. Para el mejor equilibrio entre calidad y uso de RAM, **Qwen3 8B en cuantización Q4** funciona bien con 8–16 GB de RAM.',
+          bullets: [
+            'Phi-4 Mini (3,8B, 2,3 GB) — mejor modelo CPU en general, 12 tokens/seg en i7-12700, 1–3% de pérdida de calidad frente a FP16',
+            'Gemma 4 E2B (1,5 GB) — el más rápido en CPU, 15 tokens/seg, excelente para chat en tiempo real con 8 GB de RAM',
+            'Llama 3.2 3B (2 GB) — mejor equilibrio entre calidad y velocidad, 10 tokens/seg en CPU moderna',
+            'Qwen3 8B (5 GB) — mejor programación en CPU, 76% HumanEval, viable con 16+ GB de RAM, 4-5 tokens/seg',
+            'DeepSeek-R1 7B (5 GB) — mejor para razonamiento y matemáticas (cadena de pensamiento), 4 tokens/seg',
+            'Activa el modo solo CPU en Ollama o llama.cpp — indica a la herramienta que use la RAM del sistema, no la VRAM',
+          ],
+          updatedDate: '2026-07-29',
+        },
+      },
       audience: 'Usuarios con hardware antiguo, usuarios de Raspberry Pi y quienes no tienen GPU dedicada y buscan inferencia local de LLM práctica.',
       readTime: '8 min de lectura',
       educationalLevel: 'Beginner',
@@ -412,7 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'La inferencia solo con CPU funciona bien para modelos de 3–13B en procesadores modernos con 8–32 GB de RAM.',
-            'Mejores modelos CPU: Phi-4 Mini (3,8B, 2,3 GB, 12 tokens/seg), Gemma 3 2B (1,5 GB, 15 tokens/seg), Llama 3.2 3B (2 GB, 10 tokens/seg).',
+            'Mejores modelos CPU: Phi-4 Mini (3,8B, 2,3 GB, 12 tokens/seg), Gemma 4 E2B (1,5 GB, 15 tokens/seg), Llama 3.2 3B (2 GB, 10 tokens/seg).',
             'La inferencia CPU es 10–30× más lenta que la GPU pero usa cero VRAM dedicada.',
             'Activa el modo solo CPU en Ollama o llama.cpp con una simple opción de línea de comandos.',
             'La inferencia CPU es ideal para APIs de producción (sin sobrecarga de GPU), dispositivos edge y entornos con presupuesto limitado.',
@@ -433,15 +522,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: 'La siguiente tabla clasifica los modelos por rendimiento en Intel i7-12700 (12 núcleos, AVX-512) con modo solo CPU:',
           rows: [
             { 'Modelo': '[Phi-4 Mini](https://ollama.com/library/phi4)', 'Parámetros': '3,8B', 'Tamaño GGUF': '~2,3 GB', 'RAM necesaria': '4 GB', 'Velocidad CPU': '12 tok/seg', 'Mejor para': 'Chat general, asistencia de código' },
-            { 'Modelo': '[Gemma 3 2B](https://ollama.com/library/gemma3)', 'Parámetros': '2B', 'Tamaño GGUF': '~1,5 GB', 'RAM necesaria': '3 GB', 'Velocidad CPU': '15 tok/seg', 'Mejor para': 'Respuestas rápidas, bajo VRAM' },
+            { 'Modelo': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', 'Parámetros': '2B', 'Tamaño GGUF': '~1,5 GB', 'RAM necesaria': '3 GB', 'Velocidad CPU': '15 tok/seg', 'Mejor para': 'Respuestas rápidas, bajo VRAM' },
             { 'Modelo': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Parámetros': '3B', 'Tamaño GGUF': '~2 GB', 'RAM necesaria': '3,5 GB', 'Velocidad CPU': '10 tok/seg', 'Mejor para': 'Equilibrio calidad/velocidad' },
-            { 'Modelo': '[Mistral Small Q4](https://ollama.com/library/mistral)', 'Parámetros': '7B', 'Tamaño GGUF': '~4,5 GB', 'RAM necesaria': '6 GB', 'Velocidad CPU': '5 tok/seg', 'Mejor para': 'Mejor calidad, 16+ GB RAM' },
-            { 'Modelo': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Parámetros': '8B', 'Tamaño GGUF': '~5 GB', 'RAM necesaria': '7 GB', 'Velocidad CPU': '4 tok/seg', 'Mejor para': 'Programación, tareas lógicas' },
+            { 'Modelo': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'Parámetros': '8B', 'Tamaño GGUF': '~5 GB', 'RAM necesaria': '6 GB', 'Velocidad CPU': '5 tok/seg', 'Mejor para': 'Mejor programación en CPU, 76% HumanEval' },
+            { 'Modelo': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'Parámetros': '7B', 'Tamaño GGUF': '~5 GB', 'RAM necesaria': '7 GB', 'Velocidad CPU': '4 tok/seg', 'Mejor para': 'Razonamiento, matemáticas (cadena de pensamiento)' },
           ],
           columns: ['Modelo', 'Parámetros', 'Tamaño GGUF', 'RAM necesaria', 'Velocidad CPU', 'Mejor para'],
         
           image: '/images/best-cpu-only-llm-model-speeds-hero-es.png',
-          imageCaption: 'Phi-4 Mini ofrece el mejor equilibrio entre velocidad y calidad — Gemma 3 2B es más rápido pero menos capaz, con 15 tok/s frente a 12 tok/s.',
+          imageCaption: 'Phi-4 Mini ofrece el mejor equilibrio entre velocidad y calidad — Gemma 4 E2B es más rápido pero menos capaz, con 15 tok/s frente a 12 tok/s.',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -452,7 +541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Hardware': '[AMD Ryzen 7 5700X](https://www.amd.com/en/products/processors/desktops/ryzen.html) (CPU)', 'Modelo': 'Phi-4 Mini 3,8B', 'Velocidad': '9 tokens/seg', 'Notas': 'Solo AVX2 más antiguo' },
             { 'Hardware': 'Apple M3 (CPU)', 'Modelo': 'Phi-4 Mini 3,8B', 'Velocidad': '14 tokens/seg', 'Notas': 'Ventaja de memoria unificada' },
             { 'Hardware': 'RTX 3060 (GPU, 12 GB)', 'Modelo': 'Phi-4 Mini 3,8B', 'Velocidad': '80 tokens/seg', 'Notas': 'GPU es 6,7× más rápida' },
-            { 'Hardware': 'RTX 4090 (GPU, 24 GB)', 'Modelo': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Velocidad': '120 tokens/seg', 'Notas': 'GPU es 30× más rápida que CPU' },
+            { 'Hardware': 'RTX 4090 (GPU, 24 GB)', 'Modelo': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'Velocidad': '120 tokens/seg', 'Notas': 'GPU es 30× más rápida que CPU' },
           ],
           columns: ['Hardware', 'Modelo', 'Velocidad', 'Notas'],
         
@@ -464,11 +553,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Requisitos de RAM por modelo',
           content: '**Regla general: tamaño GGUF + 500 MB de sobrecarga = RAM mínima necesaria.** Un modelo GGUF de 2 GB necesita 2,5–3 GB de RAM del sistema libre:',
           rows: [
-            { 'Modelo': '[Gemma 3 2B](https://ollama.com/library/gemma3)', 'Tamaño GGUF': '~1,5 GB', 'RAM mínima': '2–2,5 GB', 'Cómodo': '4 GB', 'Longitud de contexto': '8K' },
+            { 'Modelo': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', 'Tamaño GGUF': '~1,5 GB', 'RAM mínima': '2–2,5 GB', 'Cómodo': '4 GB', 'Longitud de contexto': '128K' },
             { 'Modelo': '[Phi-4 Mini](https://ollama.com/library/phi4) 3,8B', 'Tamaño GGUF': '~2,3 GB', 'RAM mínima': '3 GB', 'Cómodo': '6 GB', 'Longitud de contexto': '4K' },
             { 'Modelo': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Tamaño GGUF': '~2 GB', 'RAM mínima': '2,5–3 GB', 'Cómodo': '6 GB', 'Longitud de contexto': '8K' },
-            { 'Modelo': '[Mistral Small Q4](https://ollama.com/library/mistral)', 'Tamaño GGUF': '~4,5 GB', 'RAM mínima': '5 GB', 'Cómodo': '8 GB', 'Longitud de contexto': '32K' },
-            { 'Modelo': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Tamaño GGUF': '~5 GB', 'RAM mínima': '6 GB', 'Cómodo': '12 GB', 'Longitud de contexto': '128K' },
+            { 'Modelo': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'Tamaño GGUF': '~5 GB', 'RAM mínima': '5 GB', 'Cómodo': '8 GB', 'Longitud de contexto': '32K' },
+            { 'Modelo': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'Tamaño GGUF': '~5 GB', 'RAM mínima': '6 GB', 'Cómodo': '12 GB', 'Longitud de contexto': '128K' },
           ],
           columns: ['Modelo', 'Tamaño GGUF', 'RAM mínima', 'Cómodo', 'Longitud de contexto'],
         },
@@ -516,7 +605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: '¿Cuál es el modelo más pequeño que produce salidas coherentes en CPU?',
-              a: 'Gemma 3 2B (1,5 GB) produce respuestas razonables. Por debajo de 2B, la calidad cae. Para mejor calidad con 8 GB de RAM, usa Phi-4 Mini (3,8B) o Llama 3.2 3B (2 GB).',
+              a: 'Gemma 4 E2B (1,5 GB) produce respuestas razonables. Por debajo de 2B, la calidad cae. Para mejor calidad con 8 GB de RAM, usa Phi-4 Mini (3,8B) o Llama 3.2 3B (2 GB).',
             },
             {
               q: '¿Puedo ejecutar un modelo de 13B en CPU?',
@@ -533,6 +622,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             {
               q: '¿Necesito ajustar configuraciones para CPU Apple Silicon?',
               a: 'No. Ollama detecta automáticamente M1/M2/M3/M4 y usa la memoria unificada de forma eficiente. Apple Silicon es ~10–20% más rápido que las CPU Intel equivalentes gracias a su arquitectura de memoria.',
+            },
+            {
+              q: '¿Cuánta VRAM necesita un modelo de 7B en modo solo CPU?',
+              a: 'Cero VRAM dedicada. Un modelo de 7B con cuantización Q4_K_M (~4,5 GB) necesita 5–6 GB de RAM del sistema para funcionar con comodidad. Esta es la ventaja principal de la inferencia solo CPU: no necesitas GPU ni VRAM en absoluto.',
+            },
+            {
+              q: '¿Puedo hacer fine-tuning de un LLM en CPU?',
+              a: 'Técnicamente sí, pero no es práctico. El fine-tuning en CPU es 10–30× más lento que en GPU. Usa el modo solo CPU únicamente para inferencia; cambia a una GPU para cualquier tarea de fine-tuning o entrenamiento.',
+            },
+            {
+              q: '¿Puedo ejecutar varios modelos a la vez en CPU?',
+              a: 'Es técnicamente posible si la RAM lo permite, pero no es práctico. Ejecutar varios modelos a la vez provoca contención de memoria y ambos modelos se vuelven más lentos. Ejecuta un modelo a la vez para obtener el mejor rendimiento.',
+            },
+            {
+              q: '¿Cuáles son los riesgos de seguridad de la inferencia solo CPU?',
+              a: 'La inferencia solo CPU es más segura que la inferencia en la nube, porque ningún dato sale de tu equipo y no existe riesgo de transmisión. Los riesgos restantes son los mismos que en cualquier software local: mantén el sistema operativo actualizado y asegura físicamente el equipo, ya que los datos sensibles sin cifrar pueden seguir en el disco.',
+            },
+            {
+              q: '¿Hay diferencia de velocidad entre Ollama y llama.cpp para inferencia en CPU?',
+              a: 'La diferencia es mínima. Ambos usan las mismas optimizaciones de CPU (AVX-512). Cualquier variación de un 2–5% aproximadamente proviene de diferencias en la gestión de hilos. Empieza con la configuración predeterminada de Ollama, salvo que necesites los parámetros más detallados de llama.cpp.',
+            },
+            {
+              q: '¿Es práctica la inferencia solo CPU en una laptop antigua con 8–10 GB de RAM?',
+              a: 'Sí. Gemma 4 E2B (1,5 GB) o Phi-4 Mini (2,3 GB) funcionan de forma eficiente con 8–10 GB de RAM. Espera 3–5 tokens/seg, suficiente para procesamiento por lotes o un chatbot ligero, pero demasiado lento para chat en tiempo real.',
             },
           ],
         },
@@ -566,10 +679,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — Mejor LLM CPU general (3,8B, 12 tok/s)' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 3 2B — El más rápido en CPU (1,5 GB, 15 tok/s)' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 4 E2B — El más rápido en CPU (1,5 GB, 15 tok/s)' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.2 3B — Mejor equilibrio calidad/velocidad (2 GB, 10 tok/s)' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Mistral Small Q4 — Mejor calidad con 16+ GB RAM (4,5 GB, 5 tok/s)' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B Q4 — Mejor para programación en CPU (5 GB, 4 tok/s)' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 8B — Mejor programación en CPU, 76% HumanEval (5 GB, 4-5 tok/s)' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'DeepSeek-R1 7B — Mejor para razonamiento y matemáticas (5 GB, 4 tok/s)' },
         ],
       },
       faqSchema: {
@@ -589,7 +702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: '¿Cuál es el mejor LLM solo CPU?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Phi-4 Mini (3,8B, 2,3 GB, 12 tokens/seg) es el mejor en general. Para velocidad: Gemma 3 2B (1,5 GB, 15 tokens/seg). Para equilibrio: Llama 3.2 3B (2 GB, 10 tokens/seg).',
+              text: 'Phi-4 Mini (3,8B, 2,3 GB, 12 tokens/seg) es el mejor en general. Para velocidad: Gemma 4 E2B (1,5 GB, 15 tokens/seg). Para equilibrio: Llama 3.2 3B (2 GB, 10 tokens/seg).',
             },
           },
           {
@@ -597,7 +710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: '¿Cuánta RAM necesito para la inferencia solo CPU?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Usa la regla: tamaño del archivo GGUF + 500 MB de sobrecarga. Phi-4 Mini (2,3 GB) necesita 3 GB de RAM. Gemma 3 2B (1,5 GB) necesita 2 GB de RAM. Mistral Small Q4 (4,5 GB) necesita 5 GB de RAM.',
+              text: 'Usa la regla: tamaño del archivo GGUF + 500 MB de sobrecarga. Phi-4 Mini (2,3 GB) necesita 3 GB de RAM. Gemma 4 E2B (1,5 GB) necesita 2 GB de RAM. Qwen3 8B (5 GB) necesita 5 GB de RAM.',
             },
           },
           {
@@ -616,23 +729,94 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               text: 'Sí, si no necesitas latencia en tiempo real. El procesamiento por lotes, las APIs asíncronas y los flujos de trabajo sin conexión funcionan muy bien en CPU. Para chat interactivo (latencia inferior a 1 segundo), usa GPU.',
             },
           },
+          {
+            '@type': 'Question',
+            name: '¿Necesito ajustar configuraciones para CPU Apple Silicon?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. Ollama detecta automáticamente M1/M2/M3/M4 y usa la memoria unificada de forma eficiente. Apple Silicon es ~10–20% más rápido que las CPU Intel equivalentes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuánta VRAM necesita un modelo de 7B en modo solo CPU?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Cero VRAM dedicada. Un modelo de 7B con cuantización Q4_K_M (~4,5 GB) necesita 5–6 GB de RAM del sistema para funcionar con comodidad.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Puedo hacer fine-tuning de un LLM en CPU?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Técnicamente sí, pero no es práctico — el fine-tuning en CPU es 10–30× más lento que en GPU. Usa el modo solo CPU únicamente para inferencia.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Puedo ejecutar varios modelos a la vez en CPU?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Es técnicamente posible si la RAM lo permite, pero no es práctico — provoca contención de memoria y ambos modelos se vuelven más lentos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuáles son los riesgos de seguridad de la inferencia solo CPU?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'La inferencia solo CPU es más segura que la inferencia en la nube, porque ningún dato sale de tu equipo. Mantén el sistema operativo actualizado y asegura físicamente el equipo, ya que los datos sensibles sin cifrar pueden seguir en el disco.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Hay diferencia de velocidad entre Ollama y llama.cpp para inferencia en CPU?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'La diferencia es mínima — ambos usan las mismas optimizaciones de CPU (AVX-512). Cualquier variación de un 2–5% proviene de diferencias en la gestión de hilos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Es práctica la inferencia solo CPU en una laptop antigua con 8–10 GB de RAM?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sí. Gemma 4 E2B (1,5 GB) o Phi-4 Mini (2,3 GB) funcionan de forma eficiente con 8–10 GB de RAM a 3–5 tokens/seg — suficiente para lotes o un chatbot ligero, pero lento para chat en tiempo real.',
+            },
+          },
         ],
       },
     },
     ar: {
       freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-12-19',
+      next_refresh_due: '2027-01-29',
       theme: 'Best Models',
       title: 'أفضل نماذج ⁨LLM⁩ على ⁨CPU⁩ فقط ⁨2026⁩: بدون ⁨GPU⁩ (⁨5⁩ نماذج مُختبرة)',
       seoTitle: '⁨LLM⁩ على ⁨CPU⁩ فقط ⁨2026⁩: ⁨Phi-4 Mini⁩ بـ ⁨12⁩ رمزًا/ثانية',
-      intro: 'الاستدلال باستخدام CPU فقط عملي لنماذج 3–13B على المعالجات الحديثة المزودة بذاكرة RAM بسعة 8–32 GB. أفضل نماذج CPU فقط في مايو 2026 هي Phi-4 Mini (3.8B، ~2.3 GB، 12 token/ثانية على CPU)، وGemma 3 2B (1.5 GB، 15 token/ثانية)، وLlama 3.2 3B (2 GB، 10 token/ثانية). شغّلها عبر Ollama أو LM Studio أو llama.cpp مع تفعيل وضع CPU فقط.',
-      metaDescription: '⁨Phi-4 Mini⁩ (⁨3.8B⁩) يحقق ⁨12⁩ رمزًا/ثانية و⁨Gemma 3 2B⁩ يصل إلى ⁨15⁩ — بدون ⁨GPU⁩. مقارنة ⁨5⁩ نماذج ⁨LLM⁩ على ⁨CPU⁩ بمتطلبات ⁨RAM⁩ وسرعة الاستدلال الفعلية ⁨2026⁩.',
+      intro: 'الاستدلال باستخدام CPU فقط عملي لنماذج 3–13B على المعالجات الحديثة المزودة بذاكرة RAM بسعة 8–32 GB. أفضل نماذج CPU فقط في يوليو 2026 هي Phi-4 Mini (3.8B، ~2.3 GB، 12 token/ثانية على CPU)، وGemma 4 E2B (1.5 GB، 15 token/ثانية)، وLlama 3.2 3B (2 GB، 10 token/ثانية). شغّلها عبر Ollama أو LM Studio أو llama.cpp مع تفعيل وضع CPU فقط.',
+      metaDescription: '⁨Phi-4 Mini⁩ (⁨3.8B⁩) يحقق ⁨12⁩ رمزًا/ثانية و⁨Gemma 4 E2B⁩ يصل إلى ⁨15⁩ — بدون ⁨GPU⁩. مقارنة ⁨5⁩ نماذج ⁨LLM⁩ على ⁨CPU⁩ بمتطلبات ⁨RAM⁩ وسرعة الاستدلال الفعلية ⁨2026⁩.',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-ar.png',
       publishDate: '2026-05-07',
-      dateModified: '2026-06-19',
-      current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
+      dateModified: '2026-07-29',
+      current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Intel i7-12700', 'AMD Ryzen 7 5700X', 'Apple M3', 'Apple M4'],
-      leadAnswerBlock: '**الاستدلال باستخدام CPU فقط يعمل جيداً لنماذج 3–13B على المعالجات الحديثة. أفضل الخيارات: Phi-4 Mini (3.8B، 2.3 GB، 12 token/ثانية على CPU) للدردشة العامة، وGemma 3 2B (1.5 GB، الأسرع) للمهام الحساسة للسرعة، وLlama 3.2 3B (2 GB، متوازن) للجودة. استخدم Ollama أو llama.cpp مع وضع CPU. الاستدلال على CPU أبطأ بمقدار 10–30× من GPU لكنه لا يستخدم VRAM مخصصة — فقط ذاكرة RAM النظام.**',
+      leadAnswerBlock: '**الاستدلال باستخدام CPU فقط يعمل جيداً لنماذج 3–13B على المعالجات الحديثة. أفضل الخيارات: Phi-4 Mini (3.8B، 2.3 GB، 12 token/ثانية على CPU) للدردشة العامة، وGemma 4 E2B (1.5 GB، الأسرع) للمهام الحساسة للسرعة، وLlama 3.2 3B (2 GB، متوازن) للجودة. استخدم Ollama أو llama.cpp مع وضع CPU. الاستدلال على CPU أبطأ بمقدار 10–30× من GPU لكنه لا يستخدم VRAM مخصصة — فقط ذاكرة RAM النظام.**',
+      quickAnswerTop: {
+        ar: {
+          question: 'هل يمكنني تشغيل LLM بدون GPU وما هي النماذج التي تعمل على CPU فقط؟',
+          answer: 'أفضل LLM يعمل على CPU فقط لمعظم المستخدمين هو **Phi-4 Mini** (3.8B) — سريع بما يكفي للمحادثة الفورية مع 16 GB من RAM ودقيق بما يكفي لمهام البرمجة والكتابة. لأفضل توازن بين الجودة واستخدام RAM، يعمل **Qwen3 8B بتكميم Q4** جيداً مع 8–16 GB من RAM.',
+          bullets: [
+            'Phi-4 Mini (3.8B، 2.3 GB) — أفضل نموذج CPU بشكل عام، 12 token/ثانية على i7-12700، فقدان جودة 1–3% مقارنة بـ FP16',
+            'Gemma 4 E2B (1.5 GB) — الأسرع على CPU، 15 token/ثانية، ممتاز للدردشة الفورية مع 8 GB من RAM',
+            'Llama 3.2 3B (2 GB) — أفضل توازن بين الجودة والسرعة، 10 token/ثانية على CPU حديث',
+            'Qwen3 8B (5 GB) — أفضل برمجة على CPU، 76% HumanEval، ممكن مع 16+ GB من RAM، 5 token/ثانية',
+            'DeepSeek-R1 7B (5 GB) — الأفضل للاستدلال والرياضيات (سلسلة الأفكار)، 4 token/ثانية',
+            'فعّل وضع CPU فقط في Ollama أو llama.cpp — يخبر الأداة باستخدام ذاكرة RAM للنظام وليس VRAM',
+          ],
+          updatedDate: '2026-07-29',
+        },
+      },
       audience: 'المستخدمون أصحاب العتاد القديم، ومستخدمو Raspberry Pi، ومن لا يملكون GPU مخصصة ويبحثون عن استدلال LLM محلي عملي.',
       readTime: '8 دقائق للقراءة',
       educationalLevel: 'Beginner',
@@ -655,7 +839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'الاستدلال باستخدام CPU فقط يعمل جيداً لنماذج 3–13B على المعالجات الحديثة المزودة بذاكرة RAM بسعة 8–32 GB.',
-            'أفضل نماذج CPU: Phi-4 Mini (3.8B، 2.3 GB، 12 token/ثانية)، وGemma 3 2B (1.5 GB، 15 token/ثانية)، وLlama 3.2 3B (2 GB، 10 token/ثانية).',
+            'أفضل نماذج CPU: Phi-4 Mini (3.8B، 2.3 GB، 12 token/ثانية)، وGemma 4 E2B (1.5 GB، 15 token/ثانية)، وLlama 3.2 3B (2 GB، 10 token/ثانية).',
             'الاستدلال على CPU أبطأ بمقدار 10–30× من GPU لكنه يستخدم صفر VRAM مخصصة.',
             'فعّل وضع CPU فقط في Ollama أو llama.cpp عبر خيار بسيط في سطر الأوامر.',
             'الاستدلال على CPU مثالي لواجهات API الإنتاجية (بدون عبء GPU)، وأجهزة الحافة، والبيئات محدودة الميزانية.',
@@ -675,29 +859,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'أفضل نماذج CPU فقط 2026',
           content: 'يصنّف الجدول التالي النماذج حسب الأداء على Intel i7-12700 (12 نواة، AVX-512) مع وضع CPU فقط:',
           rows: [
-            { 'Modelo': '[Phi-4 Mini](https://ollama.com/library/phi4)', 'Parámetros': '3.8B', 'Tamaño GGUF': '~2.3 GB', 'RAM necesaria': '4 GB', 'Velocidad CPU': '12 tok/ثانية', 'Mejor para': 'دردشة عامة، مساعدة برمجية' },
-            { 'Modelo': '[Gemma 3 2B](https://ollama.com/library/gemma3)', 'Parámetros': '2B', 'Tamaño GGUF': '~1.5 GB', 'RAM necesaria': '3 GB', 'Velocidad CPU': '15 tok/ثانية', 'Mejor para': 'ردود سريعة، VRAM منخفض' },
-            { 'Modelo': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Parámetros': '3B', 'Tamaño GGUF': '~2 GB', 'RAM necesaria': '3.5 GB', 'Velocidad CPU': '10 tok/ثانية', 'Mejor para': 'توازن الجودة/السرعة' },
-            { 'Modelo': '[Mistral Small Q4](https://ollama.com/library/mistral)', 'Parámetros': '7B', 'Tamaño GGUF': '~4.5 GB', 'RAM necesaria': '6 GB', 'Velocidad CPU': '5 tok/ثانية', 'Mejor para': 'أفضل جودة، 16+ GB RAM' },
-            { 'Modelo': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Parámetros': '8B', 'Tamaño GGUF': '~5 GB', 'RAM necesaria': '7 GB', 'Velocidad CPU': '4 tok/ثانية', 'Mejor para': 'البرمجة، المهام المنطقية' },
+            { 'النموذج': '[Phi-4 Mini](https://ollama.com/library/phi4)', 'المعاملات': '3.8B', 'حجم GGUF': '~2.3 GB', 'RAM المطلوبة': '4 GB', 'سرعة CPU': '12 tok/ثانية', 'الأفضل لـ': 'دردشة عامة، مساعدة برمجية' },
+            { 'النموذج': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', 'المعاملات': '2B', 'حجم GGUF': '~1.5 GB', 'RAM المطلوبة': '3 GB', 'سرعة CPU': '15 tok/ثانية', 'الأفضل لـ': 'ردود سريعة، VRAM منخفض' },
+            { 'النموذج': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'المعاملات': '3B', 'حجم GGUF': '~2 GB', 'RAM المطلوبة': '3.5 GB', 'سرعة CPU': '10 tok/ثانية', 'الأفضل لـ': 'توازن الجودة/السرعة' },
+            { 'النموذج': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'المعاملات': '8B', 'حجم GGUF': '~5 GB', 'RAM المطلوبة': '6 GB', 'سرعة CPU': '4-5 tok/ثانية', 'الأفضل لـ': 'أفضل برمجة على CPU، 76% HumanEval' },
+            { 'النموذج': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'المعاملات': '7B', 'حجم GGUF': '~5 GB', 'RAM المطلوبة': '7 GB', 'سرعة CPU': '4 tok/ثانية', 'الأفضل لـ': 'الاستدلال، الرياضيات (سلسلة الأفكار)' },
           ],
-          columns: ['Modelo', 'Parámetros', 'Tamaño GGUF', 'RAM necesaria', 'Velocidad CPU', 'Mejor para'],
+          columns: ['النموذج', 'المعاملات', 'حجم GGUF', 'RAM المطلوبة', 'سرعة CPU', 'الأفضل لـ'],
         
           image: '/images/best-cpu-only-llm-model-speeds-hero-ar.png',
-          imageCaption: 'يوازن Phi-4 Mini بين السرعة والجودة بأفضل شكل — بينما يُعد Gemma 3 2B أسرع لكن أقل قدرة بمعدل 15 مقابل 12 رمزاً/ثانية.',
+          imageCaption: 'يوازن Phi-4 Mini بين السرعة والجودة بأفضل شكل — بينما يُعد Gemma 4 E2B أسرع لكن أقل قدرة بمعدل 15 مقابل 12 رمزاً/ثانية.',
         },
         speedComparison: {
           id: 'speed-comparison',
           title: 'مقارنة السرعة: CPU مقابل GPU',
           content: 'تتفاوت السرعة حسب العتاد. أُجريت هذه القياسات على عتاد قياسي لعام 2026 يشغّل Ollama أو llama.cpp:',
           rows: [
-            { 'Hardware': '[Intel i7-12700](https://www.intel.com/content/www/us/en/products/details/processors/core.html) (CPU)', 'Modelo': '[Phi-4 Mini](https://ollama.com/library/phi4) 3.8B', 'Velocidad': '12 token/ثانية', 'Notas': 'AVX-512 مُفعّل' },
-            { 'Hardware': '[AMD Ryzen 7 5700X](https://www.amd.com/en/products/processors/desktops/ryzen.html) (CPU)', 'Modelo': 'Phi-4 Mini 3.8B', 'Velocidad': '9 token/ثانية', 'Notas': 'AVX2 أقدم فقط' },
-            { 'Hardware': 'Apple M3 (CPU)', 'Modelo': 'Phi-4 Mini 3.8B', 'Velocidad': '14 token/ثانية', 'Notas': 'ميزة الذاكرة الموحدة' },
-            { 'Hardware': 'RTX 3060 (GPU, 12 GB)', 'Modelo': 'Phi-4 Mini 3.8B', 'Velocidad': '80 token/ثانية', 'Notas': 'GPU أسرع بمقدار 6.7×' },
-            { 'Hardware': 'RTX 4090 (GPU, 24 GB)', 'Modelo': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Velocidad': '120 token/ثانية', 'Notas': 'GPU أسرع بمقدار 30× من CPU' },
+            { 'العتاد': '[Intel i7-12700](https://www.intel.com/content/www/us/en/products/details/processors/core.html) (CPU)', 'النموذج': '[Phi-4 Mini](https://ollama.com/library/phi4) 3.8B', 'السرعة': '12 token/ثانية', 'ملاحظات': 'AVX-512 مُفعّل' },
+            { 'العتاد': '[AMD Ryzen 7 5700X](https://www.amd.com/en/products/processors/desktops/ryzen.html) (CPU)', 'النموذج': 'Phi-4 Mini 3.8B', 'السرعة': '9 token/ثانية', 'ملاحظات': 'AVX2 أقدم فقط' },
+            { 'العتاد': 'Apple M3 (CPU)', 'النموذج': 'Phi-4 Mini 3.8B', 'السرعة': '14 token/ثانية', 'ملاحظات': 'ميزة الذاكرة الموحدة' },
+            { 'العتاد': 'RTX 3060 (GPU, 12 GB)', 'النموذج': 'Phi-4 Mini 3.8B', 'السرعة': '80 token/ثانية', 'ملاحظات': 'GPU أسرع بمقدار 6.7×' },
+            { 'العتاد': 'RTX 4090 (GPU, 24 GB)', 'النموذج': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'السرعة': '120 token/ثانية', 'ملاحظات': 'GPU أسرع بمقدار 30× من CPU' },
           ],
-          columns: ['Hardware', 'Modelo', 'Velocidad', 'Notas'],
+          columns: ['العتاد', 'النموذج', 'السرعة', 'ملاحظات'],
         
           image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-ar.png',
           imageCaption: 'يكون CPU أبطأ من GPU بمقدار 6 إلى 30 مرة — لكنه لا يُكلّف شيئاً من عتاد مخصص ويعمل على أي جهاز.',
@@ -707,13 +891,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'متطلبات RAM لكل نموذج',
           content: '**القاعدة العامة: حجم GGUF + 500 MB عبء = الحد الأدنى من RAM المطلوب.** نموذج GGUF بحجم 2 GB يحتاج إلى 2.5–3 GB من RAM النظام الحرة:',
           rows: [
-            { 'Modelo': '[Gemma 3 2B](https://ollama.com/library/gemma3)', 'Tamaño GGUF': '~1.5 GB', 'RAM mínima': '2–2.5 GB', 'Cómodo': '4 GB', 'Longitud de contexto': '8K' },
-            { 'Modelo': '[Phi-4 Mini](https://ollama.com/library/phi4) 3.8B', 'Tamaño GGUF': '~2.3 GB', 'RAM mínima': '3 GB', 'Cómodo': '6 GB', 'Longitud de contexto': '4K' },
-            { 'Modelo': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Tamaño GGUF': '~2 GB', 'RAM mínima': '2.5–3 GB', 'Cómodo': '6 GB', 'Longitud de contexto': '8K' },
-            { 'Modelo': '[Mistral Small Q4](https://ollama.com/library/mistral)', 'Tamaño GGUF': '~4.5 GB', 'RAM mínima': '5 GB', 'Cómodo': '8 GB', 'Longitud de contexto': '32K' },
-            { 'Modelo': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Tamaño GGUF': '~5 GB', 'RAM mínima': '6 GB', 'Cómodo': '12 GB', 'Longitud de contexto': '128K' },
+            { 'النموذج': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', 'حجم GGUF': '~1.5 GB', 'أدنى RAM': '2–2.5 GB', 'مريح': '4 GB', 'طول السياق': '128K' },
+            { 'النموذج': '[Phi-4 Mini](https://ollama.com/library/phi4) 3.8B', 'حجم GGUF': '~2.3 GB', 'أدنى RAM': '3 GB', 'مريح': '6 GB', 'طول السياق': '4K' },
+            { 'النموذج': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'حجم GGUF': '~2 GB', 'أدنى RAM': '2.5–3 GB', 'مريح': '6 GB', 'طول السياق': '8K' },
+            { 'النموذج': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'حجم GGUF': '~5 GB', 'أدنى RAM': '5 GB', 'مريح': '8 GB', 'طول السياق': '32K' },
+            { 'النموذج': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'حجم GGUF': '~5 GB', 'أدنى RAM': '6 GB', 'مريح': '12 GB', 'طول السياق': '128K' },
           ],
-          columns: ['Modelo', 'Tamaño GGUF', 'RAM mínima', 'Cómodo', 'Longitud de contexto'],
+          columns: ['النموذج', 'حجم GGUF', 'أدنى RAM', 'مريح', 'طول السياق'],
         },
         howToRun: {
           id: 'how-to-run',
@@ -759,7 +943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'ما هو أصغر نموذج يُنتج مخرجات متماسكة على CPU؟',
-              a: 'Gemma 3 2B (1.5 GB) يُنتج ردوداً معقولة. أقل من 2B، تنخفض الجودة. لأفضل جودة مع 8 GB من RAM، استخدم Phi-4 Mini (3.8B) أو Llama 3.2 3B (2 GB).',
+              a: 'Gemma 4 E2B (1.5 GB) يُنتج ردوداً معقولة. أقل من 2B، تنخفض الجودة. لأفضل جودة مع 8 GB من RAM، استخدم Phi-4 Mini (3.8B) أو Llama 3.2 3B (2 GB).',
             },
             {
               q: 'هل يمكنني تشغيل نموذج 13B على CPU؟',
@@ -776,6 +960,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             {
               q: 'هل أحتاج إلى ضبط إعدادات لمعالجات Apple Silicon؟',
               a: 'لا. يكتشف Ollama تلقائياً M1/M2/M3/M4 ويستخدم الذاكرة الموحدة بكفاءة. Apple Silicon أسرع بنحو 10–20% من معالجات Intel المكافئة بفضل بنية ذاكرته.',
+            },
+            {
+              q: 'كم من VRAM يحتاج نموذج 7B في وضع CPU فقط؟',
+              a: 'صفر VRAM مخصصة. نموذج 7B بتكميم Q4_K_M (~4.5 GB) يحتاج إلى 5–6 GB من RAM النظام ليعمل بارتياح. هذه هي الميزة الأساسية للاستدلال على CPU فقط — لا حاجة إلى GPU أو VRAM على الإطلاق.',
+            },
+            {
+              q: 'هل يمكنني إجراء fine-tuning لنموذج LLM على CPU؟',
+              a: 'من الناحية التقنية نعم، لكنه غير عملي. الـ fine-tuning على CPU أبطأ بمقدار 10–30× من GPU. استخدم وضع CPU فقط للاستدلال فقط؛ وانتقل إلى GPU لأي مهمة fine-tuning أو تدريب.',
+            },
+            {
+              q: 'هل يمكنني تشغيل عدة نماذج في وقت واحد على CPU؟',
+              a: 'ممكن تقنياً إذا سمحت RAM بذلك، لكنه غير عملي. تشغيل عدة نماذج في وقت واحد يسبب تنافساً على الذاكرة، ويصبح كلا النموذجين أبطأ. شغّل نموذجاً واحداً في كل مرة للحصول على أفضل أداء.',
+            },
+            {
+              q: 'ما هي المخاطر الأمنية للاستدلال على CPU فقط؟',
+              a: 'الاستدلال على CPU فقط أكثر أماناً من الاستدلال السحابي، لأن البيانات لا تغادر الجهاز ولا يوجد خطر نقل. المخاطر المتبقية هي نفسها في أي برنامج محلي: حافظ على تحديث نظام التشغيل وأمّن الجهاز الفعلي، لأن البيانات الحساسة غير المشفّرة يمكن أن تبقى على القرص.',
+            },
+            {
+              q: 'هل هناك فرق في السرعة بين Ollama وllama.cpp للاستدلال على CPU؟',
+              a: 'الفرق ضئيل جداً. يستخدم كلاهما نفس تحسينات CPU الأساسية (AVX-512). أي تفاوت بنسبة 2–5% تقريباً يأتي من اختلافات في إدارة الخيوط (threads). ابدأ بالإعدادات الافتراضية لـ Ollama ما لم تحتج إلى الأعلام الأكثر تفصيلاً في llama.cpp.',
+            },
+            {
+              q: 'هل الاستدلال على CPU فقط عملي على حاسوب محمول قديم بذاكرة 8–10 GB؟',
+              a: 'نعم. يعمل Gemma 4 E2B (1.5 GB) أو Phi-4 Mini (2.3 GB) بكفاءة ضمن 8–10 GB من RAM. توقع 3–5 token في الثانية — مناسب للمعالجة بالدفعات أو روبوت دردشة خفيف، لكنه بطيء جداً للدردشة الفورية.',
             },
           ],
         },
@@ -809,10 +1017,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — أفضل نموذج LLM عام على CPU (3.8B، 12 tok/s)' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 3 2B — الأسرع على CPU (1.5 GB، 15 tok/s)' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 4 E2B — الأسرع على CPU (1.5 GB، 15 tok/s)' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.2 3B — أفضل توازن جودة/سرعة (2 GB، 10 tok/s)' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Mistral Small Q4 — أفضل جودة مع 16+ GB RAM (4.5 GB، 5 tok/s)' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B Q4 — أفضل للبرمجة على CPU (5 GB، 4 tok/s)' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 8B — أفضل برمجة على CPU، 76% HumanEval (5 GB، 4-5 tok/s)' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'DeepSeek-R1 7B — أفضل للاستدلال والرياضيات (5 GB، 4 tok/s)' },
         ],
       },
       faqSchema: {
@@ -832,7 +1040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'ما هو أفضل نموذج LLM على CPU فقط؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Phi-4 Mini (3.8B، 2.3 GB، 12 token/ثانية) هو الأفضل عموماً. للسرعة: Gemma 3 2B (1.5 GB، 15 token/ثانية). للتوازن: Llama 3.2 3B (2 GB، 10 token/ثانية).',
+              text: 'Phi-4 Mini (3.8B، 2.3 GB، 12 token/ثانية) هو الأفضل عموماً. للسرعة: Gemma 4 E2B (1.5 GB، 15 token/ثانية). للتوازن: Llama 3.2 3B (2 GB، 10 token/ثانية).',
             },
           },
           {
@@ -840,7 +1048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'كم من RAM أحتاج للاستدلال على CPU فقط؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'استخدم القاعدة: حجم ملف GGUF + 500 MB عبء. Phi-4 Mini (2.3 GB) يحتاج إلى 3 GB من RAM. Gemma 3 2B (1.5 GB) يحتاج إلى 2 GB من RAM. Mistral Small Q4 (4.5 GB) يحتاج إلى 5 GB من RAM.',
+              text: 'استخدم القاعدة: حجم ملف GGUF + 500 MB عبء. Phi-4 Mini (2.3 GB) يحتاج إلى 3 GB من RAM. Gemma 4 E2B (1.5 GB) يحتاج إلى 2 GB من RAM. Qwen3 8B (5 GB) يحتاج إلى 5 GB من RAM.',
             },
           },
           {
@@ -859,34 +1067,90 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               text: 'نعم، إذا لم تكن بحاجة إلى زمن استجابة في الوقت الفعلي. المعالجة بالدفعات، وواجهات API غير المتزامنة، وسير العمل دون اتصال تعمل بشكل ممتاز على CPU. للدردشة التفاعلية (زمن استجابة أقل من ثانية واحدة)، استخدم GPU.',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'هل أحتاج إلى ضبط إعدادات لمعالجات Apple Silicon؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'لا. يكتشف Ollama تلقائياً M1/M2/M3/M4 ويستخدم الذاكرة الموحدة بكفاءة. Apple Silicon أسرع بنحو 10–20% من معالجات Intel المكافئة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'كم من VRAM يحتاج نموذج 7B في وضع CPU فقط؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'صفر VRAM مخصصة. نموذج 7B بتكميم Q4_K_M (~4.5 GB) يحتاج إلى 5–6 GB من RAM النظام ليعمل بارتياح.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'هل يمكنني إجراء fine-tuning لنموذج LLM على CPU؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'من الناحية التقنية نعم، لكنه غير عملي — الـ fine-tuning على CPU أبطأ بمقدار 10–30× من GPU. استخدم وضع CPU فقط للاستدلال فقط.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'هل يمكنني تشغيل عدة نماذج في وقت واحد على CPU؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ممكن تقنياً إذا سمحت RAM بذلك، لكنه غير عملي — يسبب تنافساً على الذاكرة ويصبح كلا النموذجين أبطأ.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'ما هي المخاطر الأمنية للاستدلال على CPU فقط؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'الاستدلال على CPU فقط أكثر أماناً من الاستدلال السحابي لأن البيانات لا تغادر الجهاز. حافظ على تحديث نظام التشغيل وأمّن الجهاز الفعلي، لأن البيانات الحساسة غير المشفّرة يمكن أن تبقى على القرص.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'هل هناك فرق في السرعة بين Ollama وllama.cpp للاستدلال على CPU؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'الفرق ضئيل جداً — يستخدم كلاهما نفس تحسينات CPU الأساسية (AVX-512). أي تفاوت بنسبة 2–5% يأتي من اختلافات في إدارة الخيوط.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'هل الاستدلال على CPU فقط عملي على حاسوب محمول قديم بذاكرة 8–10 GB؟',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'نعم. يعمل Gemma 4 E2B (1.5 GB) أو Phi-4 Mini (2.3 GB) بكفاءة ضمن 8–10 GB من RAM بسرعة 3–5 token في الثانية — مناسب للمعالجة بالدفعات أو دردشة خفيفة، لكنه بطيء للدردشة الفورية.',
+            },
+          },
         ],
       },
     },
     pt: {
       freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-12-19',
+      next_refresh_due: '2027-01-29',
       theme: 'Best Models',
       title: 'Melhores LLMs somente CPU 2026: sem GPU (5 modelos testados)',
       seoTitle: 'LLM somente CPU 2026: Phi-4 Mini roda a 12 tok/s, sem GPU',
-      intro: 'A inferência somente com CPU é prática para modelos de 3-13B em processadores modernos com 8-32 GB de RAM. Os melhores modelos somente CPU em maio de 2026 são Phi-4 Mini (3,8B, ~2,3 GB, 12 tokens/s na CPU), Gemma 3 2B (1,5 GB, 15 tokens/s) e Llama 3.2 3B (2 GB, 10 tokens/s). Rode-os com Ollama, LM Studio ou llama.cpp com o modo somente CPU ativado.',
-      metaDescription: '5 LLMs somente CPU comparados em 2026: Phi-4 Mini (3,8B) atinge 12 tok/s, Gemma 3 2B chega a 15 tok/s, Llama 3.2 3B entrega 10 tok/s -- tudo sem GPU.',
+      intro: 'A inferência somente com CPU é prática para modelos de 3-13B em processadores modernos com 8-32 GB de RAM. Os melhores modelos somente CPU em julho de 2026 são Phi-4 Mini (3,8B, ~2,3 GB, 12 tokens/s na CPU), Gemma 4 E2B (1,5 GB, 15 tokens/s) e Llama 3.2 3B (2 GB, 10 tokens/s). Rode-os com Ollama, LM Studio ou llama.cpp com o modo somente CPU ativado.',
+      metaDescription: '5 LLMs somente CPU comparados em 2026: Phi-4 Mini (3,8B) atinge 12 tok/s, Gemma 4 E2B chega a 15 tok/s, Llama 3.2 3B entrega 10 tok/s -- tudo sem GPU.',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-pt.png',
       publishDate: '2026-05-07',
-      current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
+      current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Intel i7-12700', 'AMD Ryzen 7 5700X', 'Apple M3', 'Apple M4'],
-      leadAnswerBlock: '**A inferência somente com CPU funciona bem para modelos de 3-13B em processadores modernos. Melhores opções: Phi-4 Mini (3,8B, 2,3 GB, 12 tokens/s na CPU) para chat geral, Gemma 3 2B (1,5 GB, a mais rápida) para tarefas críticas de velocidade, e Llama 3.2 3B (2 GB, equilibrada) para qualidade. Use Ollama ou llama.cpp com modo CPU. A inferência CPU é 10-30× mais lenta que a GPU, mas não usa VRAM de vídeo dedicada -- apenas RAM do sistema.**',
+      leadAnswerBlock: '**A inferência somente com CPU funciona bem para modelos de 3-13B em processadores modernos. Melhores opções: Phi-4 Mini (3,8B, 2,3 GB, 12 tokens/s na CPU) para chat geral, Gemma 4 E2B (1,5 GB, a mais rápida) para tarefas críticas de velocidade, e Llama 3.2 3B (2 GB, equilibrada) para qualidade. Use Ollama ou llama.cpp com modo CPU. A inferência CPU é 10-30× mais lenta que a GPU, mas não usa VRAM de vídeo dedicada -- apenas RAM do sistema.**',
       quickAnswerTop: {
         pt: {
-          question: 'Posso rodar um LLM sem GPU e quais modelos funcionam somente na CPU?', // VERIFY
-          answer: 'Sim, as CPUs modernas conseguem rodar modelos de 3–13B com eficiência. As velocidades da CPU são de 8–15 tokens/s contra 50–200 tokens/s na GPU, mas você usa zero VRAM. Melhores modelos somente CPU: Phi-4 Mini (3.8B, 2.3 GB), Gemma 3 2B (1.5 GB, a mais rápida), Llama 3.2 3B (2 GB, qualidade equilibrada).', // VERIFY
+          question: 'Posso rodar um LLM sem GPU e quais modelos funcionam somente na CPU?',
+          answer: 'Sim, as CPUs modernas conseguem rodar modelos de 3–13B com eficiência. As velocidades da CPU são de 8–15 tokens/s contra 50–200 tokens/s na GPU, mas você usa zero VRAM. Melhores modelos somente CPU: Phi-4 Mini (3.8B, 2.3 GB), Gemma 4 E2B (1.5 GB, a mais rápida), Llama 3.2 3B (2 GB, qualidade equilibrada).',
           bullets: [
-            'Phi-4 Mini (3.8B, 2.3 GB) — melhor modelo de CPU no geral, 12 tokens/s no i7-12700, 1–3% de perda de qualidade em relação ao FP16', // VERIFY
-            'Gemma 3 2B (1.5 GB) — a mais rápida na CPU, 15 tokens/s, excelente para chat em tempo real com 8 GB de RAM', // VERIFY
-            'Llama 3.2 3B (2 GB) — melhor equilíbrio entre qualidade e velocidade, 10 tokens/s em CPU moderna', // VERIFY
-            'Mistral Small Q4 (4.5 GB) — maior, mas ainda viável na CPU com 16+ GB de RAM, 5 tokens/s', // VERIFY
-            'Ative o modo somente CPU no Ollama ou llama.cpp — instrui a ferramenta a usar a RAM do sistema, não a VRAM', // VERIFY
+            'Phi-4 Mini (3.8B, 2.3 GB) — melhor modelo de CPU no geral, 12 tokens/s no i7-12700, 1–3% de perda de qualidade em relação ao FP16',
+            'Gemma 4 E2B (1.5 GB) — a mais rápida na CPU, 15 tokens/s, excelente para chat em tempo real com 8 GB de RAM',
+            'Llama 3.2 3B (2 GB) — melhor equilíbrio entre qualidade e velocidade, 10 tokens/s em CPU moderna',
+            'Qwen3 8B (5 GB) — melhor programação em CPU, 76% HumanEval, viável com 16+ GB de RAM, 4-5 tokens/s',
+            'Ative o modo somente CPU no Ollama ou llama.cpp — instrui a ferramenta a usar a RAM do sistema, não a VRAM',
           ],
-          updatedDate: '2026-06-19',
+          updatedDate: '2026-07-29',
         },
       },
       audience: 'Usuários com hardware antigo, usuários de Raspberry Pi e quem não tem GPU dedicada e busca inferência local de LLM prática.',
@@ -911,7 +1175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'A inferência somente com CPU funciona bem para modelos de 3-13B em processadores modernos com 8-32 GB de RAM.',
-            'Melhores modelos CPU: Phi-4 Mini (3,8B, 2,3 GB, 12 tokens/s), Gemma 3 2B (1,5 GB, 15 tokens/s), Llama 3.2 3B (2 GB, 10 tokens/s).',
+            'Melhores modelos CPU: Phi-4 Mini (3,8B, 2,3 GB, 12 tokens/s), Gemma 4 E2B (1,5 GB, 15 tokens/s), Llama 3.2 3B (2 GB, 10 tokens/s).',
             'A inferência CPU é 10-30× mais lenta que a GPU, mas usa zero VRAM dedicada.',
             'Ative o modo somente CPU no Ollama ou llama.cpp com uma simples opção de linha de comando.',
             'A inferência CPU é ideal para APIs de produção (sem sobrecarga de GPU), dispositivos edge e ambientes com orçamento limitado.',
@@ -933,13 +1197,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Modelo', 'Parâmetros', 'RAM necessária', 'Velocidade CPU', 'Melhor para'],
           rows: [
             { 'Modelo': 'Phi-4 Mini', 'Parâmetros': '3,8B', 'RAM necessária': '~2,3 GB', 'Velocidade CPU': '12 tok/s', 'Melhor para': 'Chat geral, raciocínio' },
-            { 'Modelo': 'Gemma 3 2B', 'Parâmetros': '2B', 'RAM necessária': '~1,5 GB', 'Velocidade CPU': '15 tok/s', 'Melhor para': 'Velocidade máxima, edge' },
+            { 'Modelo': 'Gemma 4 E2B', 'Parâmetros': '2B', 'RAM necessária': '~1,5 GB', 'Velocidade CPU': '15 tok/s', 'Melhor para': 'Velocidade máxima, edge' },
             { 'Modelo': 'Llama 3.2 3B', 'Parâmetros': '3B', 'RAM necessária': '~2 GB', 'Velocidade CPU': '10 tok/s', 'Melhor para': 'Qualidade equilibrada' },
-            { 'Modelo': 'Mistral Small Q4', 'Parâmetros': '7B', 'RAM necessária': '~4,5 GB', 'Velocidade CPU': '5-7 tok/s', 'Melhor para': 'Tarefas mais complexas sem GPU' },
+            { 'Modelo': 'Qwen3 8B', 'Parâmetros': '8B', 'RAM necessária': '~5 GB', 'Velocidade CPU': '4-5 tok/s', 'Melhor para': 'Melhor programação em CPU, 76% HumanEval' },
+            { 'Modelo': 'DeepSeek-R1 7B', 'Parâmetros': '7B', 'RAM necessária': '~5 GB', 'Velocidade CPU': '4 tok/s', 'Melhor para': 'Raciocínio, matemática (cadeia de pensamento)' },
           ],
-        
+
           image: '/images/best-cpu-only-llm-model-speeds-hero-pt.png',
-          imageCaption: 'O Phi-4 Mini equilibra melhor velocidade e qualidade — o Gemma 3 2B é mais rápido, mas menos capaz, com 15 tok/s contra 12 tok/s.',
+          imageCaption: 'O Phi-4 Mini equilibra melhor velocidade e qualidade — o Gemma 4 E2B é mais rápido, mas menos capaz, com 15 tok/s contra 12 tok/s.',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -950,7 +1215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Hardware': '[AMD Ryzen 7 5700X](https://www.amd.com/en/products/processors/desktops/ryzen.html) (CPU)', 'Modelo': 'Phi-4 Mini 3.8B', 'Velocidade': '9 tokens/s', 'Notas': 'Apenas AVX2 (mais antigo)' },
             { 'Hardware': 'Apple M3 (CPU)', 'Modelo': 'Phi-4 Mini 3.8B', 'Velocidade': '14 tokens/s', 'Notas': 'Vantagem da memória unificada' },
             { 'Hardware': 'RTX 3060 (GPU, 12 GB)', 'Modelo': 'Phi-4 Mini 3.8B', 'Velocidade': '80 tokens/s', 'Notas': 'GPU é 6,7&#215; mais rápida' },
-            { 'Hardware': 'RTX 4090 (GPU, 24 GB)', 'Modelo': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Velocidade': '120 tokens/s', 'Notas': 'GPU é 30&#215; mais rápida que a CPU' },
+            { 'Hardware': 'RTX 4090 (GPU, 24 GB)', 'Modelo': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'Velocidade': '120 tokens/s', 'Notas': 'GPU é 30&#215; mais rápida que a CPU' },
           ],
           columns: ['Hardware', 'Modelo', 'Velocidade', 'Notas'],
           image: '/images/best-cpu-only-llm-cpu-vs-gpu-hero-pt.png',
@@ -961,11 +1226,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Quanta RAM Cada Modelo Somente CPU Precisa?',
           content: '**Regra prática: tamanho do GGUF + 500 MB de overhead = RAM mínima necessária.** Um modelo GGUF de 2 GB precisa de 2,5-3 GB de RAM livre do sistema:',
           rows: [
-            { 'Modelo': '[Gemma 3 2B](https://ollama.com/library/gemma3)', 'Tamanho GGUF': '~1,5 GB', 'RAM Mínima': '2-2,5 GB', 'Confortável': '4 GB', 'Comprimento de Contexto': '8K' },
+            { 'Modelo': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', 'Tamanho GGUF': '~1,5 GB', 'RAM Mínima': '2-2,5 GB', 'Confortável': '4 GB', 'Comprimento de Contexto': '128K' },
             { 'Modelo': '[Phi-4 Mini](https://ollama.com/library/phi4) 3.8B', 'Tamanho GGUF': '~2,3 GB', 'RAM Mínima': '3 GB', 'Confortável': '6 GB', 'Comprimento de Contexto': '4K' },
             { 'Modelo': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Tamanho GGUF': '~2 GB', 'RAM Mínima': '2,5-3 GB', 'Confortável': '6 GB', 'Comprimento de Contexto': '8K' },
-            { 'Modelo': '[Mistral Small Q4](https://ollama.com/library/mistral)', 'Tamanho GGUF': '~4,5 GB', 'RAM Mínima': '5 GB', 'Confortável': '8 GB', 'Comprimento de Contexto': '32K' },
-            { 'Modelo': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Tamanho GGUF': '~5 GB', 'RAM Mínima': '6 GB', 'Confortável': '12 GB', 'Comprimento de Contexto': '128K' },
+            { 'Modelo': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'Tamanho GGUF': '~5 GB', 'RAM Mínima': '5 GB', 'Confortável': '8 GB', 'Comprimento de Contexto': '32K' },
+            { 'Modelo': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'Tamanho GGUF': '~5 GB', 'RAM Mínima': '6 GB', 'Confortável': '12 GB', 'Comprimento de Contexto': '128K' },
           ],
           columns: ['Modelo', 'Tamanho GGUF', 'RAM Mínima', 'Confortável', 'Comprimento de Contexto'],
         },
@@ -1010,9 +1275,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'Posso rodar LLMs somente com CPU?', a: 'Sim. CPUs modernas com 8+ GB de RAM podem rodar modelos de 3-7B a 8-15 tokens/s. Isso é suficiente para chat interativo com respostas em 10-30 segundos.' },
-            { q: 'Qual é o melhor modelo LLM para CPU sem GPU?', a: 'Phi-4 Mini (3,8B) é o melhor equilíbrio de qualidade e velocidade para somente CPU em 2026. Gemma 3 2B é o mais rápido. Llama 3.2 3B é o mais equilibrado.' },
-            { q: 'A inferência somente CPU é adequada para o português?', a: 'Sim. Qwen3 7B (5 tok/s em CPU) tem melhor suporte para português. Phi-4 Mini e Llama 3.2 3B também funcionam razoavelmente em português.' },
+            { q: 'Qual é o melhor modelo LLM para CPU sem GPU?', a: 'Phi-4 Mini (3,8B) é o melhor equilíbrio de qualidade e velocidade para somente CPU em 2026. Gemma 4 E2B é o mais rápido. Llama 3.2 3B é o mais equilibrado.' },
+            { q: 'A inferência somente CPU é adequada para o português?', a: 'Sim. Qwen3 8B (5 tok/s em CPU) tem melhor suporte para português. Phi-4 Mini e Llama 3.2 3B também funcionam razoavelmente em português.' },
             { q: 'A inferência CPU é adequada para produção?', a: 'Sim, se você não precisar de latência em tempo real. Processamento em lote, APIs assíncronas e fluxos de trabalho offline funcionam muito bem em CPU.' },
+            { q: 'Qual a diferença de velocidade entre CPU e GPU na inferência?', a: 'CPU: 8-15 tokens/s em processadores modernos. GPU (RTX 3060): 80 tokens/s. GPU (RTX 4090): mais de 120 tokens/s. A CPU é de 10 a 30× mais lenta, mas não exige nenhum investimento em GPU.' },
+            { q: 'Qual é o menor modelo que ainda produz respostas coerentes na CPU?', a: 'O Gemma 4 E2B (1,5 GB) produz respostas razoáveis. Abaixo de 2B, a qualidade cai bastante. Para a melhor qualidade com 8 GB de RAM, use o Phi-4 Mini (3,8B) ou o Llama 3.2 3B (2 GB).' },
+            { q: 'É possível rodar um modelo de 13B na CPU?', a: 'Sim. Com quantização Q4_K_M, um modelo de 13B ocupa cerca de 6,5 GB e precisa de 8-12 GB de RAM do sistema. A velocidade fica em torno de 2-3 tokens/s -- desconfortável para uso interativo, mas funciona bem para processamento em lote.' },
+            { q: 'A inferência em CPU usa a GPU em algum momento?', a: 'Não. O modo somente CPU no Ollama e no llama.cpp desativa explicitamente o uso da GPU e depende exclusivamente da RAM do sistema.' },
+            { q: 'A inferência somente CPU é estável?', a: 'Sim, mais estável do que a GPU. Não há travamentos de driver nem erros de memória de GPU. O único risco é a saturação da RAM do sistema, que você controla escolhendo o modelo certo.' },
+            { q: 'Preciso ajustar configurações para CPUs Apple Silicon?', a: 'Não. O Ollama detecta automaticamente os chips M1/M2/M3/M4 e usa a memória unificada com eficiência. O Apple Silicon é cerca de 10-20% mais rápido do que CPUs Intel equivalentes graças à sua arquitetura de memória.' },
+            { q: 'Quanta VRAM um modelo de 7B precisa no modo somente CPU?', a: 'Nenhuma VRAM dedicada. Um modelo de 7B com quantização Q4_K_M (~4,5 GB) precisa de 5-6 GB de RAM do sistema para rodar com folga. Essa é a grande vantagem da inferência somente CPU: você não precisa de GPU nem de VRAM.' },
+            { q: 'A inferência somente CPU é viável em um notebook antigo com 8-10 GB de RAM?', a: 'Sim. O Gemma 4 E2B (1,5 GB) ou o Phi-4 Mini (2,3 GB) rodam com eficiência em 8-10 GB de RAM. Espere de 3 a 5 tokens/s -- suficiente para processamento em lote ou um chatbot leve, mas lento demais para chat em tempo real.' },
           ],
         },
         nextSteps: {
@@ -1028,7 +1301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'regional-context',
           title: 'Por Que LLMs Somente CPU Importam para Implantações Sensíveis à Privacidade?',
           content: [
-            '**LGPD do Brasil: a inferência em CPU em um dispositivo local é o nível mais alto de conformidade com privacidade de dados.** Quando o Phi-4 Mini ou o Gemma 3 2B roda na sua CPU, a inferência é totalmente isolada -- sem chamadas de API, sem telemetria, sem questões de residência de dados. Isso satisfaz os requisitos de segurança da LGPD (Lei nº 13.709/2018) no nível de infraestrutura. Empresas de saúde, jurídicas e o setor público no Brasil cada vez mais preferem a inferência em CPU para fluxos de trabalho com documentos sensíveis, já que até instâncias de GPU na nuvem criam complexidade de auditoria.',
+            '**LGPD do Brasil: a inferência em CPU em um dispositivo local é o nível mais alto de conformidade com privacidade de dados.** Quando o Phi-4 Mini ou o Gemma 4 E2B roda na sua CPU, a inferência é totalmente isolada -- sem chamadas de API, sem telemetria, sem questões de residência de dados. Isso satisfaz os requisitos de segurança da LGPD (Lei nº 13.709/2018) no nível de infraestrutura. Empresas de saúde, jurídicas e o setor público no Brasil cada vez mais preferem a inferência em CPU para fluxos de trabalho com documentos sensíveis, já que até instâncias de GPU na nuvem criam complexidade de auditoria.',
             '**Mercados em desenvolvimento e ambientes offline: modelos em CPU funcionam sem internet confiável.** Em regiões com conectividade instável ou banda limitada, a inferência em CPU viabiliza fluxos de trabalho de IA impossíveis com APIs na nuvem. Um arquivo GGUF do Phi-4 Mini baixado uma vez roda indefinidamente sem internet.',
             '**Ambientes sob controle de exportação: CPUs não enfrentam restrições de hardware.** GPUs de servidor NVIDIA A100/H100 de ponta enfrentam controles de exportação dos EUA para certos países. CPUs de consumo não. Organizações em regiões afetadas podem rodar modelos capazes de 3B-7B em hardware x86 padrão sem restrições de importação.',
           ],
@@ -1040,7 +1313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Rodar FP16 em vez de Q4_K_M.** O Phi-4 Mini em FP16 precisa de 7,6 GB de RAM contra 2,3 GB em Q4_K_M, com perda de qualidade insignificante. Sempre use modelos GGUF quantizados para inferência em CPU.',
             '**Esquecer de definir as flags de somente CPU no llama.cpp.** Sem flags explícitas, o llama.cpp pode tentar usar parcialmente a GPU. Defina `--n-gpu-layers 0` para o modo CPU puro.',
             '**Usar batch size > 1 na CPU.** O batching ajuda no throughput da GPU, mas prejudica a latência na CPU. Mantenha o batch size em 1 para chat interativo.',
-            '**Escolher um modelo grande demais.** O Phi-4 Mini (3,8B) a 12 tok/s supera o Llama 3.3 8B a 4 tok/s para uso interativo. Ajuste o tamanho do modelo à velocidade da CPU, não só à RAM.',
+            '**Escolher um modelo grande demais.** O Phi-4 Mini (3,8B) a 12 tok/s supera o DeepSeek-R1 7B a 4 tok/s para uso interativo. Ajuste o tamanho do modelo à velocidade da CPU, não só à RAM.',
             '**Não definir a contagem de threads.** O Ollama detecta threads automaticamente, mas o llama.cpp pode usar um valor padrão baixo. Defina explicitamente a contagem de threads para corresponder aos núcleos da sua CPU.',
           ],
         },
@@ -1061,7 +1334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[llama.cpp no GitHub — benchmarks de inferência em CPU e notas de otimização AVX2/NEON](https://github.com/ggerganov/llama.cpp)',
             '[Documentação do Ollama — modo somente CPU e configuração de threads](https://ollama.com/docs)',
             '[Ficha do modelo Phi-4 Mini da Microsoft — Hugging Face](https://huggingface.co/microsoft/phi-4-mini)',
-            '[Ficha do modelo Gemma 3 2B do Google — Hugging Face](https://huggingface.co/google/gemma-3-2b)',
+            '[Ficha do modelo Gemma 4 E2B do Google — Hugging Face](https://huggingface.co/google/gemma-3-2b)',
           ],
         },
       },
@@ -1069,28 +1342,146 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Melhores LLMs somente CPU 2026: sem GPU (5 modelos testados)',
-        'description': '5 LLMs somente CPU comparados em 2026: Phi-4 Mini (3,8B) atinge 12 tok/s, Gemma 3 2B chega a 15 tok/s.',
+        'description': '5 LLMs somente CPU comparados em 2026: Phi-4 Mini (3,8B) atinge 12 tok/s, Gemma 4 E2B chega a 15 tok/s.',
         'url': 'https://www.promptquorum.com/pt/local-llms/best-cpu-only-llm',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-05-07',
+        'dateModified': '2026-07-29',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Melhores LLMs somente CPU 2026',
+        'url': 'https://www.promptquorum.com/pt/local-llms/best-cpu-only-llm',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — Melhor CPU LLM Geral (3.8B, 12 tok/s)' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 4 E2B — Mais Rápido em CPU (1.5 GB, 15 tok/s)' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.2 3B — Melhor Equilíbrio Qualidade/Velocidade (2 GB, 10 tok/s)' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 8B — Melhor Programação em CPU, 76% HumanEval (5 GB, 4-5 tok/s)' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'DeepSeek-R1 7B — Melhor para Raciocínio e Matemática (5 GB, 4 tok/s)' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'pt-BR',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Posso rodar LLMs somente com CPU?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sim. CPUs modernas com 8+ GB de RAM podem rodar modelos de 3-7B a 8-15 tokens/s. Isso é suficiente para chat interativo com respostas em 10-30 segundos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qual é o melhor modelo LLM para CPU sem GPU?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Phi-4 Mini (3,8B) é o melhor equilíbrio de qualidade e velocidade para somente CPU em 2026. Gemma 4 E2B é o mais rápido. Llama 3.2 3B é o mais equilibrado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'A inferência somente CPU é adequada para o português?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sim. Qwen3 8B (5 tok/s em CPU) tem melhor suporte para português. Phi-4 Mini e Llama 3.2 3B também funcionam razoavelmente em português.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'A inferência CPU é adequada para produção?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sim, se você não precisar de latência em tempo real. Processamento em lote, APIs assíncronas e fluxos de trabalho offline funcionam muito bem em CPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qual a diferença de velocidade entre CPU e GPU na inferência?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'CPU: 8-15 tokens/s em processadores modernos. GPU (RTX 3060): 80 tokens/s. GPU (RTX 4090): mais de 120 tokens/s. A CPU é de 10 a 30× mais lenta, mas não exige nenhum investimento em GPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qual é o menor modelo que ainda produz respostas coerentes na CPU?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'O Gemma 4 E2B (1,5 GB) produz respostas razoáveis. Abaixo de 2B, a qualidade cai bastante. Para a melhor qualidade com 8 GB de RAM, use o Phi-4 Mini (3,8B) ou o Llama 3.2 3B (2 GB).',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'É possível rodar um modelo de 13B na CPU?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sim. Com quantização Q4_K_M, um modelo de 13B ocupa cerca de 6,5 GB e precisa de 8-12 GB de RAM do sistema. A velocidade fica em torno de 2-3 tokens/s.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'A inferência em CPU usa a GPU em algum momento?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Não. O modo somente CPU no Ollama e no llama.cpp desativa explicitamente o uso da GPU e depende exclusivamente da RAM do sistema.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'A inferência somente CPU é estável?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sim, mais estável do que a GPU. Não há travamentos de driver nem erros de memória de GPU. O único risco é a saturação da RAM do sistema.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Preciso ajustar configurações para CPUs Apple Silicon?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Não. O Ollama detecta automaticamente os chips M1/M2/M3/M4 e usa a memória unificada com eficiência. O Apple Silicon é cerca de 10-20% mais rápido do que CPUs Intel equivalentes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quanta VRAM um modelo de 7B precisa no modo somente CPU?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Nenhuma VRAM dedicada. Um modelo de 7B com quantização Q4_K_M (~4,5 GB) precisa de 5-6 GB de RAM do sistema para rodar com folga.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'A inferência somente CPU é viável em um notebook antigo com 8-10 GB de RAM?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sim. O Gemma 4 E2B (1,5 GB) ou o Phi-4 Mini (2,3 GB) rodam com eficiência em 8-10 GB de RAM a 3-5 tokens/s -- suficiente para lote ou chatbot leve, mas lento para chat em tempo real.',
+            },
+          },
+        ],
       },
     },
     de: {
       freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-12-19',
+      next_refresh_due: '2027-01-29',
       theme: 'Beste Modelle',
       title: 'Beste CPU-only LLMs 2026: KI ohne GPU ausführen',
       seoTitle: 'CPU-only LLM 2026: Phi-4 Mini 12 Tok/Sek, kein GPU',
-      intro: 'CPU-only-Inferenz ist praktisch für 3–13B-Modelle auf modernen Prozessoren mit 8–32 GB RAM. Die besten CPU-only-Modelle im Mai 2026 sind Phi-4 Mini (3,8B, ~2,3 GB, 12 Token/Sekunde auf CPU), Gemma 3 2B (1,5 GB, 15 Token/Sekunde) und Llama 3.2 3B (2 GB, 10 Token/Sekunde). Führen Sie über Ollama, LM Studio oder llama.cpp mit aktiviertem CPU-only-Modus aus.',
-      metaDescription: '5 CPU-only-Modelle im Vergleich: Phi-4 Mini läuft mit 12 Tok/Sek, Gemma 3 2B mit 15 Tok/Sek, Llama 3.2 3B mit 10 Tok/Sek — ohne GPU, nur 4–8 GB RAM.',
+      intro: 'CPU-only-Inferenz ist praktisch für 3–13B-Modelle auf modernen Prozessoren mit 8–32 GB RAM. Die besten CPU-only-Modelle im Juli 2026 sind Phi-4 Mini (3,8B, ~2,3 GB, 12 Token/Sekunde auf CPU), Gemma 4 E2B (1,5 GB, 15 Token/Sekunde) und Llama 3.2 3B (2 GB, 10 Token/Sekunde). Führen Sie über Ollama, LM Studio oder llama.cpp mit aktiviertem CPU-only-Modus aus.',
+      metaDescription: '5 CPU-only-Modelle im Vergleich: Phi-4 Mini läuft mit 12 Tok/Sek, Gemma 4 E2B mit 15 Tok/Sek, Llama 3.2 3B mit 10 Tok/Sek — ohne GPU, nur 4–8 GB RAM.',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-de.png',
       publishDate: '2026-05-07',
-      dateModified: '2026-06-19',
-      current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
+      dateModified: '2026-07-29',
+      current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Intel i7-12700', 'AMD Ryzen 7 5700X', 'Apple M3', 'Apple M4'],
-      leadAnswerBlock: '**CPU-only-Inferenz funktioniert gut für 3–13B-Modelle auf modernen Prozessoren. Beste Optionen: Phi-4 Mini (3,8B, 2,3 GB, 12 Token/Sekunde auf CPU) für allgemeines Chat, Gemma 3 2B (1,5 GB, schnellste) für geschwindigkeitskritische Aufgaben und Llama 3.2 3B (2 GB, ausgewogen) für Qualität. Nutzen Sie Ollama oder llama.cpp mit CPU-Modus. CPU-Inferenz ist 10–30× langsamer als GPU, benötigt aber kein dediziertes Video-VRAM — nur System-RAM.**',
+      leadAnswerBlock: '**CPU-only-Inferenz funktioniert gut für 3–13B-Modelle auf modernen Prozessoren. Beste Optionen: Phi-4 Mini (3,8B, 2,3 GB, 12 Token/Sekunde auf CPU) für allgemeines Chat, Gemma 4 E2B (1,5 GB, schnellste) für geschwindigkeitskritische Aufgaben und Llama 3.2 3B (2 GB, ausgewogen) für Qualität. Nutzen Sie Ollama oder llama.cpp mit CPU-Modus. CPU-Inferenz ist 10–30× langsamer als GPU, benötigt aber kein dediziertes Video-VRAM — nur System-RAM.**',
       audience: 'Benutzer mit älterer Hardware, Raspberry Pi-Benutzer und Nutzer ohne dedizierte GPUs, die praktische lokale LLM-Inferenz suchen.',
       readTime: '8 Min. Lesezeit',
       educationalLevel: 'Anfänger',
@@ -1113,7 +1504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'CPU-only-Inferenz funktioniert gut für 3–13B-Modelle auf modernen Prozessoren mit 8–32 GB RAM.',
-            'Beste CPU-Modelle: Phi-4 Mini (3,8B, 2,3 GB, 12 Token/Sekunde), Gemma 3 2B (1,5 GB, 15 Token/Sekunde), Llama 3.2 3B (2 GB, 10 Token/Sekunde).',
+            'Beste CPU-Modelle: Phi-4 Mini (3,8B, 2,3 GB, 12 Token/Sekunde), Gemma 4 E2B (1,5 GB, 15 Token/Sekunde), Llama 3.2 3B (2 GB, 10 Token/Sekunde).',
             'CPU-Inferenz ist 10–30× langsamer als GPU, verwendet aber null dediziertes VRAM.',
             'Aktivieren Sie CPU-only-Modus in Ollama oder llama.cpp mit einem einfachen Befehlszeilenflag.',
             'CPU-Inferenz ist ideal für Produktions-APIs (kein GPU-Overhead), Edge-Geräte und kostenbegrenzte Umgebungen.',
@@ -1134,15 +1525,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: 'Die nachfolgende Tabelle ordnet Modelle nach Leistung auf Intel i7-12700 (12-Core, AVX-512) mit CPU-only-Modus:',
           rows: [
             { 'Modell': '[Phi-4 Mini](https://ollama.com/library/phi4)', 'Parameter': '3,8B', 'GGUF-Größe': '~2,3 GB', 'RAM erforderlich': '4 GB', 'CPU-Geschwindigkeit': '12 Token/Sekunde', 'Beste für': 'Allgemeines Chat, Code-Unterstützung' },
-            { 'Modell': '[Gemma 3 2B](https://ollama.com/library/gemma3)', 'Parameter': '2B', 'GGUF-Größe': '~1,5 GB', 'RAM erforderlich': '3 GB', 'CPU-Geschwindigkeit': '15 Token/Sekunde', 'Beste für': 'Schnelle Antworten, niedriges VRAM' },
+            { 'Modell': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', 'Parameter': '2B', 'GGUF-Größe': '~1,5 GB', 'RAM erforderlich': '3 GB', 'CPU-Geschwindigkeit': '15 Token/Sekunde', 'Beste für': 'Schnelle Antworten, niedriges VRAM' },
             { 'Modell': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Parameter': '3B', 'GGUF-Größe': '~2 GB', 'RAM erforderlich': '3,5 GB', 'CPU-Geschwindigkeit': '10 Token/Sekunde', 'Beste für': 'Ausgewogene Qualität/Geschwindigkeit' },
-            { 'Modell': '[Mistral Small Q4](https://ollama.com/library/mistral)', 'Parameter': '7B', 'GGUF-Größe': '~4,5 GB', 'RAM erforderlich': '6 GB', 'CPU-Geschwindigkeit': '5 Token/Sekunde', 'Beste für': 'Bessere Qualität, 16+ GB RAM' },
-            { 'Modell': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Parameter': '8B', 'GGUF-Größe': '~5 GB', 'RAM erforderlich': '7 GB', 'CPU-Geschwindigkeit': '4 Token/Sekunde', 'Beste für': 'Kodierung, Logik-Aufgaben' },
+            { 'Modell': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'Parameter': '8B', 'GGUF-Größe': '~5 GB', 'RAM erforderlich': '6 GB', 'CPU-Geschwindigkeit': '5 Token/Sekunde', 'Beste für': 'Beste Programmierung auf CPU, 76% HumanEval' },
+            { 'Modell': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'Parameter': '7B', 'GGUF-Größe': '~5 GB', 'RAM erforderlich': '7 GB', 'CPU-Geschwindigkeit': '4 Token/Sekunde', 'Beste für': 'Logisches Denken, Mathematik (Chain-of-Thought)' },
           ],
           columns: ['Modell', 'Parameter', 'GGUF-Größe', 'RAM erforderlich', 'CPU-Geschwindigkeit', 'Beste für'],
         
           image: '/images/best-cpu-only-llm-model-speeds-hero-de.png',
-          imageCaption: 'Phi-4 Mini bietet die beste Balance aus Geschwindigkeit und Qualität — Gemma 3 2B ist mit 15 statt 12 Tok/s schneller, aber weniger leistungsfähig.',
+          imageCaption: 'Phi-4 Mini bietet die beste Balance aus Geschwindigkeit und Qualität — Gemma 4 E2B ist mit 15 statt 12 Tok/s schneller, aber weniger leistungsfähig.',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -1153,7 +1544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Hardware': '[AMD Ryzen 7 5700X](https://www.amd.com/en/products/processors/desktops/ryzen.html) (CPU)', 'Modell': 'Phi-4 Mini 3,8B', 'Geschwindigkeit': '9 Token/Sekunde', 'Notizen': 'Nur älteres AVX2' },
             { 'Hardware': 'Apple M3 (CPU)', 'Modell': 'Phi-4 Mini 3,8B', 'Geschwindigkeit': '14 Token/Sekunde', 'Notizen': 'Vorteil des einheitlichen Speichers' },
             { 'Hardware': 'RTX 3060 (GPU, 12 GB)', 'Modell': 'Phi-4 Mini 3,8B', 'Geschwindigkeit': '80 Token/Sekunde', 'Notizen': 'GPU ist 6,7× schneller' },
-            { 'Hardware': 'RTX 4090 (GPU, 24 GB)', 'Modell': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Geschwindigkeit': '120 Token/Sekunde', 'Notizen': 'GPU ist 30× schneller als CPU' },
+            { 'Hardware': 'RTX 4090 (GPU, 24 GB)', 'Modell': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'Geschwindigkeit': '120 Token/Sekunde', 'Notizen': 'GPU ist 30× schneller als CPU' },
           ],
           columns: ['Hardware', 'Modell', 'Geschwindigkeit', 'Notizen'],
         
@@ -1165,11 +1556,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'RAM-Anforderungen nach Modell',
           content: '**Faustregel: GGUF-Größe + 500 MB Overhead = Minimum-RAM erforderlich.** Ein 2 GB GGUF-Modell benötigt 2,5–3 GB freies System-RAM:',
           rows: [
-            { 'Modell': '[Gemma 3 2B](https://ollama.com/library/gemma3)', 'GGUF-Größe': '~1,5 GB', 'Min RAM': '2–2,5 GB', 'Komfortabel': '4 GB', 'Kontextlänge': '8K' },
+            { 'Modell': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', 'GGUF-Größe': '~1,5 GB', 'Min RAM': '2–2,5 GB', 'Komfortabel': '4 GB', 'Kontextlänge': '128K' },
             { 'Modell': '[Phi-4 Mini](https://ollama.com/library/phi4) 3,8B', 'GGUF-Größe': '~2,3 GB', 'Min RAM': '3 GB', 'Komfortabel': '6 GB', 'Kontextlänge': '4K' },
             { 'Modell': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'GGUF-Größe': '~2 GB', 'Min RAM': '2,5–3 GB', 'Komfortabel': '6 GB', 'Kontextlänge': '8K' },
-            { 'Modell': '[Mistral Small Q4](https://ollama.com/library/mistral)', 'GGUF-Größe': '~4,5 GB', 'Min RAM': '5 GB', 'Komfortabel': '8 GB', 'Kontextlänge': '32K' },
-            { 'Modell': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'GGUF-Größe': '~5 GB', 'Min RAM': '6 GB', 'Komfortabel': '12 GB', 'Kontextlänge': '128K' },
+            { 'Modell': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'GGUF-Größe': '~5 GB', 'Min RAM': '5 GB', 'Komfortabel': '8 GB', 'Kontextlänge': '32K' },
+            { 'Modell': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'GGUF-Größe': '~5 GB', 'Min RAM': '6 GB', 'Komfortabel': '12 GB', 'Kontextlänge': '128K' },
           ],
           columns: ['Modell', 'GGUF-Größe', 'Min RAM', 'Komfortabel', 'Kontextlänge'],
         },
@@ -1217,7 +1608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Welches ist das kleinste Modell, das auf CPU noch kohärente Ausgaben produziert?',
-              a: 'Gemma 3 2B (1,5 GB) produziert angemessene Antworten. Darunter sinkt die Qualität. Für beste Qualität auf 8 GB RAM verwenden Sie Phi-4 Mini (3,8B) oder Llama 3.2 3B (2 GB).',
+              a: 'Gemma 4 E2B (1,5 GB) produziert angemessene Antworten. Darunter sinkt die Qualität. Für beste Qualität auf 8 GB RAM verwenden Sie Phi-4 Mini (3,8B) oder Llama 3.2 3B (2 GB).',
             },
             {
               q: 'Kann ich ein 13B-Modell auf CPU ausführen?',
@@ -1275,10 +1666,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — Bestes CPU-LLM gesamt (3,8B, 12 Tok/Sek)' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 3 2B — Schnellstes auf CPU (1,5 GB, 15 Tok/Sek)' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 4 E2B — Schnellstes auf CPU (1,5 GB, 15 Tok/Sek)' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.2 3B — Bestes Qualität/Geschwindigkeit-Verhältnis (2 GB, 10 Tok/Sek)' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Mistral Small Q4 — Bessere Qualität auf 16+ GB RAM (4,5 GB, 5 Tok/Sek)' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B Q4 — Bestes für Coding auf CPU (5 GB, 4 Tok/Sek)' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 8B — Beste Programmierung auf CPU, 76% HumanEval (5 GB, 5 Tok/Sek)' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'DeepSeek-R1 7B — Bestes für logisches Denken und Mathematik (5 GB, 4 Tok/Sek)' },
         ],
       },
       faqSchema: {
@@ -1299,7 +1690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Was ist das beste CPU-only-LLM?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Phi-4 Mini (3,8B, 2,3 GB, 12 Token/Sekunde) ist insgesamt das beste. Für Geschwindigkeit: Gemma 3 2B (1,5 GB, 15 Token/Sekunde). Für Balance: Llama 3.2 3B (2 GB, 10 Token/Sekunde).',
+              text: 'Phi-4 Mini (3,8B, 2,3 GB, 12 Token/Sekunde) ist insgesamt das beste. Für Geschwindigkeit: Gemma 4 E2B (1,5 GB, 15 Token/Sekunde). Für Balance: Llama 3.2 3B (2 GB, 10 Token/Sekunde).',
             },
           },
           {
@@ -1307,7 +1698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Wie viel RAM benötige ich für CPU-only-Inferenz?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Verwenden Sie die Regel: GGUF-Dateigröße + 500 MB Overhead. Phi-4 Mini (2,3 GB) benötigt 3 GB RAM. Gemma 3 2B (1,5 GB) benötigt 2 GB RAM. Mistral Small Q4 (4,5 GB) benötigt 5 GB RAM.',
+              text: 'Verwenden Sie die Regel: GGUF-Dateigröße + 500 MB Overhead. Phi-4 Mini (2,3 GB) benötigt 3 GB RAM. Gemma 4 E2B (1,5 GB) benötigt 2 GB RAM. Qwen3 8B (5 GB) benötigt 5 GB RAM.',
             },
           },
           {
@@ -1339,7 +1730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Welches ist das kleinste Modell, das auf CPU noch kohärente Ausgaben produziert?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemma 3 2B (1,5 GB) produziert angemessene Antworten. Darunter sinkt die Qualität. Für beste Qualität auf 8 GB RAM verwenden Sie Phi-4 Mini (3,8B) oder Llama 3.2 3B (2 GB).',
+              text: 'Gemma 4 E2B (1,5 GB) produziert angemessene Antworten. Darunter sinkt die Qualität. Für beste Qualität auf 8 GB RAM verwenden Sie Phi-4 Mini (3,8B) oder Llama 3.2 3B (2 GB).',
             },
           },
           {
@@ -1395,18 +1786,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     fr: {
       freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-12-19',
+      next_refresh_due: '2027-01-29',
       theme: 'Meilleurs Modèles',
       title: 'Meilleurs LLMs CPU-only 2026: Exécutez l\'IA sans GPU',
       seoTitle: 'LLM CPU-only 2026: Phi-4 Mini 12 tok/s, sans GPU requis',
-      intro: 'L\'inférence CPU-only est pratique pour les modèles 3–13B sur processeurs modernes avec 8–32 GB de RAM. Les meilleurs modèles CPU-only en mai 2026 sont Phi-4 Mini (3.8B, ~2.3 GB, 12 tokens/sec sur CPU), Gemma 3 2B (1.5 GB, 15 tokens/sec), et Llama 3.2 3B (2 GB, 10 tokens/sec). Exécutez via Ollama, LM Studio, ou llama.cpp avec le mode CPU-only activé.',
-      metaDescription: '5 LLMs CPU-only comparés en 2026 : Phi-4 Mini (3.8B) atteint 12 tok/s, Gemma 3 2B 15 tok/s, Llama 3.2 3B 10 tok/s — sans GPU, sur 4–8 Go RAM.',
+      intro: 'L\'inférence CPU-only est pratique pour les modèles 3–13B sur processeurs modernes avec 8–32 GB de RAM. Les meilleurs modèles CPU-only en juillet 2026 sont Phi-4 Mini (3.8B, ~2.3 GB, 12 tokens/sec sur CPU), Gemma 4 E2B (1.5 GB, 15 tokens/sec), et Llama 3.2 3B (2 GB, 10 tokens/sec). Exécutez via Ollama, LM Studio, ou llama.cpp avec le mode CPU-only activé.',
+      metaDescription: '5 LLMs CPU-only comparés en 2026 : Phi-4 Mini (3.8B) atteint 12 tok/s, Gemma 4 E2B 15 tok/s, Llama 3.2 3B 10 tok/s — sans GPU, sur 4–8 Go RAM.',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-fr.png',
       publishDate: '2026-05-07',
-      dateModified: '2026-06-19',
-      current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
+      dateModified: '2026-07-29',
+      current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Intel i7-12700', 'AMD Ryzen 7 5700X', 'Apple M3', 'Apple M4'],
-      leadAnswerBlock: '**L\'inférence CPU-only fonctionne bien pour les modèles 3–13B sur processeurs modernes. Meilleurs choix: Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec sur CPU) pour chat général, Gemma 3 2B (1.5 GB, plus rapide) pour tâches sensibles au temps, et Llama 3.2 3B (2 GB, équilibré) pour la qualité. Utilisez Ollama ou llama.cpp avec mode CPU. L\'inférence CPU est 10–30× plus lente que GPU mais utilise zéro VRAM vidéo dédié — juste RAM système.**',
+      leadAnswerBlock: '**L\'inférence CPU-only fonctionne bien pour les modèles 3–13B sur processeurs modernes. Meilleurs choix: Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec sur CPU) pour chat général, Gemma 4 E2B (1.5 GB, plus rapide) pour tâches sensibles au temps, et Llama 3.2 3B (2 GB, équilibré) pour la qualité. Utilisez Ollama ou llama.cpp avec mode CPU. L\'inférence CPU est 10–30× plus lente que GPU mais utilise zéro VRAM vidéo dédié — juste RAM système.**',
       audience: 'Utilisateurs avec matériel ancien, utilisateurs Raspberry Pi, et ceux sans GPUs dédiés cherchant l\'inférence LLM locale pratique.',
       readTime: '8 min de lecture',
       educationalLevel: 'Débutant',
@@ -1429,7 +1820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'L\'inférence CPU-only fonctionne bien pour les modèles 3–13B sur processeurs modernes avec 8–32 GB RAM.',
-            'Meilleurs modèles CPU: Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec), Gemma 3 2B (1.5 GB, 15 tokens/sec), Llama 3.2 3B (2 GB, 10 tokens/sec).',
+            'Meilleurs modèles CPU: Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec), Gemma 4 E2B (1.5 GB, 15 tokens/sec), Llama 3.2 3B (2 GB, 10 tokens/sec).',
             'L\'inférence CPU est 10–30× plus lente que GPU mais utilise zéro VRAM dédié.',
             'Activez le mode CPU-only dans Ollama ou llama.cpp avec un simple flag en ligne de commande.',
             'L\'inférence CPU est idéale pour les APIs production (pas d\'overhead GPU), appareils edge, et environnements limités en coût.',
@@ -1450,15 +1841,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: 'Le tableau ci-dessous classe les modèles par performance sur Intel i7-12700 (12-core, AVX-512) avec mode CPU-only:',
           rows: [
             { 'Modèle': '[Phi-4 Mini](https://ollama.com/library/phi4)', 'Paramètres': '3.8B', 'Taille GGUF': '~2.3 GB', 'RAM Requise': '4 GB', 'Vitesse CPU': '12 tokens/sec', 'Meilleur Pour': 'Chat général, assistance code' },
-            { 'Modèle': '[Gemma 3 2B](https://ollama.com/library/gemma3)', 'Paramètres': '2B', 'Taille GGUF': '~1.5 GB', 'RAM Requise': '3 GB', 'Vitesse CPU': '15 tokens/sec', 'Meilleur Pour': 'Réponses rapides, VRAM faible' },
+            { 'Modèle': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', 'Paramètres': '2B', 'Taille GGUF': '~1.5 GB', 'RAM Requise': '3 GB', 'Vitesse CPU': '15 tokens/sec', 'Meilleur Pour': 'Réponses rapides, VRAM faible' },
             { 'Modèle': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Paramètres': '3B', 'Taille GGUF': '~2 GB', 'RAM Requise': '3.5 GB', 'Vitesse CPU': '10 tokens/sec', 'Meilleur Pour': 'Équilibre qualité/vitesse' },
-            { 'Modèle': '[Mistral Small Q4](https://ollama.com/library/mistral)', 'Paramètres': '7B', 'Taille GGUF': '~4.5 GB', 'RAM Requise': '6 GB', 'Vitesse CPU': '5 tokens/sec', 'Meilleur Pour': 'Meilleure qualité, 16+ GB RAM' },
-            { 'Modèle': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Paramètres': '8B', 'Taille GGUF': '~5 GB', 'RAM Requise': '7 GB', 'Vitesse CPU': '4 tokens/sec', 'Meilleur Pour': 'Codage, tâches logiques' },
+            { 'Modèle': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'Paramètres': '8B', 'Taille GGUF': '~5 GB', 'RAM Requise': '6 GB', 'Vitesse CPU': '4-5 tokens/sec', 'Meilleur Pour': 'Meilleur codage sur CPU, 76% HumanEval' },
+            { 'Modèle': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'Paramètres': '7B', 'Taille GGUF': '~5 GB', 'RAM Requise': '7 GB', 'Vitesse CPU': '4 tokens/sec', 'Meilleur Pour': 'Raisonnement, mathématiques (chaîne de pensée)' },
           ],
           columns: ['Modèle', 'Paramètres', 'Taille GGUF', 'RAM Requise', 'Vitesse CPU', 'Meilleur Pour'],
         
           image: '/images/best-cpu-only-llm-model-speeds-hero-fr.png',
-          imageCaption: 'Phi-4 Mini offre le meilleur équilibre entre vitesse et qualité — Gemma 3 2B est plus rapide mais moins performant, à 15 tok/s contre 12 tok/s.',
+          imageCaption: 'Phi-4 Mini offre le meilleur équilibre entre vitesse et qualité — Gemma 4 E2B est plus rapide mais moins performant, à 15 tok/s contre 12 tok/s.',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -1469,7 +1860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Matériel': '[AMD Ryzen 7 5700X](https://www.amd.com/en/products/processors/desktops/ryzen.html) (CPU)', 'Modèle': 'Phi-4 Mini 3.8B', 'Vitesse': '9 tokens/sec', 'Notes': 'Ancien AVX2 seulement' },
             { 'Matériel': 'Apple M3 (CPU)', 'Modèle': 'Phi-4 Mini 3.8B', 'Vitesse': '14 tokens/sec', 'Notes': 'Avantage mémoire unifié' },
             { 'Matériel': 'RTX 3060 (GPU, 12 GB)', 'Modèle': 'Phi-4 Mini 3.8B', 'Vitesse': '80 tokens/sec', 'Notes': 'GPU 6.7× plus rapide' },
-            { 'Matériel': 'RTX 4090 (GPU, 24 GB)', 'Modèle': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Vitesse': '120 tokens/sec', 'Notes': 'GPU 30× plus rapide que CPU' },
+            { 'Matériel': 'RTX 4090 (GPU, 24 GB)', 'Modèle': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'Vitesse': '120 tokens/sec', 'Notes': 'GPU 30× plus rapide que CPU' },
           ],
           columns: ['Matériel', 'Modèle', 'Vitesse', 'Notes'],
         
@@ -1481,11 +1872,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Exigences RAM par Modèle',
           content: '**Règle d\'or: taille GGUF + 500 MB overhead = RAM minimum nécessaire.** Un modèle GGUF de 2 GB nécessite 2.5–3 GB de RAM système libre:',
           rows: [
-            { 'Modèle': '[Gemma 3 2B](https://ollama.com/library/gemma3)', 'Taille GGUF': '~1.5 GB', 'RAM Min': '2–2.5 GB', 'Confortable': '4 GB', 'Longueur Contexte': '8K' },
+            { 'Modèle': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', 'Taille GGUF': '~1.5 GB', 'RAM Min': '2–2.5 GB', 'Confortable': '4 GB', 'Longueur Contexte': '128K' },
             { 'Modèle': '[Phi-4 Mini](https://ollama.com/library/phi4) 3.8B', 'Taille GGUF': '~2.3 GB', 'RAM Min': '3 GB', 'Confortable': '6 GB', 'Longueur Contexte': '4K' },
             { 'Modèle': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Taille GGUF': '~2 GB', 'RAM Min': '2.5–3 GB', 'Confortable': '6 GB', 'Longueur Contexte': '8K' },
-            { 'Modèle': '[Mistral Small Q4](https://ollama.com/library/mistral)', 'Taille GGUF': '~4.5 GB', 'RAM Min': '5 GB', 'Confortable': '8 GB', 'Longueur Contexte': '32K' },
-            { 'Modèle': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'Taille GGUF': '~5 GB', 'RAM Min': '6 GB', 'Confortable': '12 GB', 'Longueur Contexte': '128K' },
+            { 'Modèle': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'Taille GGUF': '~5 GB', 'RAM Min': '5 GB', 'Confortable': '8 GB', 'Longueur Contexte': '32K' },
+            { 'Modèle': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'Taille GGUF': '~5 GB', 'RAM Min': '6 GB', 'Confortable': '12 GB', 'Longueur Contexte': '128K' },
           ],
           columns: ['Modèle', 'Taille GGUF', 'RAM Min', 'Confortable', 'Longueur Contexte'],
         },
@@ -1533,7 +1924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Quel est le plus petit modèle qui produit des sorties cohérentes sur CPU?',
-              a: 'Gemma 3 2B (1.5 GB) produit des réponses raisonnables. Au-dessous, la qualité baisse. Pour meilleure qualité sur 8 GB RAM, utilisez Phi-4 Mini (3.8B) ou Llama 3.2 3B (2 GB).',
+              a: 'Gemma 4 E2B (1.5 GB) produit des réponses raisonnables. Au-dessous, la qualité baisse. Pour meilleure qualité sur 8 GB RAM, utilisez Phi-4 Mini (3.8B) ou Llama 3.2 3B (2 GB).',
             },
             {
               q: 'Puis-je exécuter un modèle 13B sur CPU?',
@@ -1569,7 +1960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Comment puis-je optimiser davantage l\'inférence CPU sur du vieux matériel?',
-              a: 'Utilisez les plus petits modèles (Gemma 3 2B), quantisation maximale (Q4_K_M), contexte minimal (2K tokens), et réduisez le nombre de threads. Sur Raspberry Pi, dépassez rarement 5 tokens/sec.',
+              a: 'Utilisez les plus petits modèles (Gemma 4 E2B), quantisation maximale (Q4_K_M), contexte minimal (2K tokens), et réduisez le nombre de threads. Sur Raspberry Pi, dépassez rarement 5 tokens/sec.',
             },
           ],
         },
@@ -1603,10 +1994,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — Meilleur LLM CPU global (3.8B, 12 tok/s)' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 3 2B — Le plus rapide sur CPU (1.5 GB, 15 tok/s)' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 4 E2B — Le plus rapide sur CPU (1.5 GB, 15 tok/s)' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.2 3B — Meilleur équilibre qualité/vitesse (2 GB, 10 tok/s)' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Mistral Small Q4 — Meilleure qualité sur 16+ GB RAM (4.5 GB, 5 tok/s)' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B Q4 — Meilleur pour le code sur CPU (5 GB, 4 tok/s)' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 8B — Meilleur codage sur CPU, 76% HumanEval (5 GB, 4-5 tok/s)' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'DeepSeek-R1 7B — Meilleur pour le raisonnement et les mathématiques (5 GB, 4 tok/s)' },
         ],
       },
       faqSchema: {
@@ -1627,7 +2018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Quel est le meilleur LLM CPU-only?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec) est le meilleur globalement. Pour vitesse: Gemma 3 2B (1.5 GB, 15 tokens/sec). Pour équilibre: Llama 3.2 3B (2 GB, 10 tokens/sec).',
+              text: 'Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec) est le meilleur globalement. Pour vitesse: Gemma 4 E2B (1.5 GB, 15 tokens/sec). Pour équilibre: Llama 3.2 3B (2 GB, 10 tokens/sec).',
             },
           },
           {
@@ -1635,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Combien de RAM ai-je besoin pour l\'inférence CPU-only?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Utilisez la règle: taille GGUF + 500 MB overhead. Phi-4 Mini (2.3 GB) nécessite 3 GB RAM. Gemma 3 2B (1.5 GB) nécessite 2 GB RAM. Mistral Small Q4 (4.5 GB) nécessite 5 GB RAM.',
+              text: 'Utilisez la règle: taille GGUF + 500 MB overhead. Phi-4 Mini (2.3 GB) nécessite 3 GB RAM. Gemma 4 E2B (1.5 GB) nécessite 2 GB RAM. Qwen3 8B (5 GB) nécessite 5 GB RAM.',
             },
           },
           {
@@ -1667,7 +2058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'Quel est le plus petit modèle qui produit des sorties cohérentes sur CPU?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemma 3 2B (1.5 GB) produit des réponses raisonnables. Au-dessous, la qualité baisse. Pour meilleure qualité sur 8 GB RAM, utilisez Phi-4 Mini (3.8B) ou Llama 3.2 3B (2 GB).',
+              text: 'Gemma 4 E2B (1.5 GB) produit des réponses raisonnables. Au-dessous, la qualité baisse. Pour meilleure qualité sur 8 GB RAM, utilisez Phi-4 Mini (3.8B) ou Llama 3.2 3B (2 GB).',
             },
           },
           {
@@ -1707,18 +2098,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     ja: {
       freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-12-19',
+      next_refresh_due: '2027-01-29',
       theme: '最高のモデル',
       title: '最高の CPU-only LLMs 2026: GPU なしで AI を実行',
       seoTitle: 'CPU-only LLM 2026：Phi-4 Mini 12tok/秒、GPU不要の5モデル比較',
-      intro: 'CPU-only 推論は、8–32 GB RAM を搭載したモダン CPU 上の 3–13B モデルに実用的です。2026年5月の最高の CPU-only モデルは Phi-4 Mini (3.8B、~2.3 GB、CPU 上で 12 トークン/秒)、Gemma 3 2B (1.5 GB、15 トークン/秒)、Llama 3.2 3B (2 GB、10 トークン/秒) です。Ollama、LM Studio、または CPU-only モード有効の llama.cpp を使用して実行します。',
-      metaDescription: 'Phi-4 Mini（3.8B）は12トークン/秒、Gemma 3 2B（1.5 GB）は15トークン/秒をCPUのみで達成。GPU不要、RAM 4〜32 GBで動作する5モデルを2026年版として速度別に比較。',
+      intro: 'CPU-only 推論は、8–32 GB RAM を搭載したモダン CPU 上の 3–13B モデルに実用的です。2026年7月の最高の CPU-only モデルは Phi-4 Mini (3.8B、~2.3 GB、CPU 上で 12 トークン/秒)、Gemma 4 E2B (1.5 GB、15 トークン/秒)、Llama 3.2 3B (2 GB、10 トークン/秒) です。Ollama、LM Studio、または CPU-only モード有効の llama.cpp を使用して実行します。',
+      metaDescription: 'Phi-4 Mini（3.8B）は12トークン/秒、Gemma 4 E2B（1.5 GB）は15トークン/秒をCPUのみで達成。GPU不要、RAM 4〜32 GBで動作する5モデルを2026年版として速度別に比較。',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-ja.png',
       publishDate: '2026-05-07',
-      dateModified: '2026-06-19',
-      current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
+      dateModified: '2026-07-29',
+      current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Intel i7-12700', 'AMD Ryzen 7 5700X', 'Apple M3', 'Apple M4'],
-      leadAnswerBlock: '**CPU-only 推論はモダン CPU 上の 3–13B モデルで効果的です。最高の選択肢: 一般的なチャット向け Phi-4 Mini (3.8B、2.3 GB、CPU 上で 12 トークン/秒)、速度重視タスク向け Gemma 3 2B (1.5 GB、最速)、品質向け Llama 3.2 3B (2 GB、バランス)。Ollama または llama.cpp を CPU モードで使用します。CPU 推論は GPU より 10–30× 遅いですが、専用ビデオ VRAM は不要です — システム RAM のみです。**',
+      leadAnswerBlock: '**CPU-only 推論はモダン CPU 上の 3–13B モデルで効果的です。最高の選択肢: 一般的なチャット向け Phi-4 Mini (3.8B、2.3 GB、CPU 上で 12 トークン/秒)、速度重視タスク向け Gemma 4 E2B (1.5 GB、最速)、品質向け Llama 3.2 3B (2 GB、バランス)。Ollama または llama.cpp を CPU モードで使用します。CPU 推論は GPU より 10–30× 遅いですが、専用ビデオ VRAM は不要です — システム RAM のみです。**',
       audience: '古いハードウェアユーザー、Raspberry Pi ユーザー、および実用的なローカル LLM 推論を探す専用 GPU のないユーザー。',
       readTime: '8分で読める',
       educationalLevel: '初級',
@@ -1741,7 +2132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'CPU-only 推論は 8–32 GB RAM 搭載のモダン CPU 上の 3–13B モデルで効果的です。',
-            '最高の CPU モデル: Phi-4 Mini (3.8B、2.3 GB、12 トークン/秒)、Gemma 3 2B (1.5 GB、15 トークン/秒)、Llama 3.2 3B (2 GB、10 トークン/秒)。',
+            '最高の CPU モデル: Phi-4 Mini (3.8B、2.3 GB、12 トークン/秒)、Gemma 4 E2B (1.5 GB、15 トークン/秒)、Llama 3.2 3B (2 GB、10 トークン/秒)。',
             'CPU 推論は GPU より 10–30× 遅いですが、専用 VRAM をゼロ使用します。',
             'Ollama または llama.cpp で CPU-only モードを有効にします — シンプルなコマンドラインフラグ。',
             'CPU 推論は本番 API (GPU オーバーヘッド不要)、エッジデバイス、コスト制約環境に最適です。',
@@ -1762,15 +2153,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: '以下の表は、CPU-only モード搭載の Intel i7-12700 (12コア、AVX-512) 上のパフォーマンスでモデルをランク付けします:',
           rows: [
             { 'モデル': '[Phi-4 Mini](https://ollama.com/library/phi4)', 'パラメータ': '3.8B', 'GGUF サイズ': '~2.3 GB', 'RAM 要件': '4 GB', 'CPU 速度': '12 トークン/秒', '最適な用途': '一般的なチャット、コード支援' },
-            { 'モデル': '[Gemma 3 2B](https://ollama.com/library/gemma3)', 'パラメータ': '2B', 'GGUF サイズ': '~1.5 GB', 'RAM 要件': '3 GB', 'CPU 速度': '15 トークン/秒', '最適な用途': '高速応答、低 VRAM' },
+            { 'モデル': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', 'パラメータ': '2B', 'GGUF サイズ': '~1.5 GB', 'RAM 要件': '3 GB', 'CPU 速度': '15 トークン/秒', '最適な用途': '高速応答、低 VRAM' },
             { 'モデル': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'パラメータ': '3B', 'GGUF サイズ': '~2 GB', 'RAM 要件': '3.5 GB', 'CPU 速度': '10 トークン/秒', '最適な用途': 'バランスの取れた品質/速度' },
-            { 'モデル': '[Mistral Small Q4](https://ollama.com/library/mistral)', 'パラメータ': '7B', 'GGUF サイズ': '~4.5 GB', 'RAM 要件': '6 GB', 'CPU 速度': '5 トークン/秒', '最適な用途': 'より高い品質、16+ GB RAM' },
-            { 'モデル': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'パラメータ': '8B', 'GGUF サイズ': '~5 GB', 'RAM 要件': '7 GB', 'CPU 速度': '4 トークン/秒', '最適な用途': 'コーディング、ロジックタスク' },
+            { 'モデル': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'パラメータ': '8B', 'GGUF サイズ': '~5 GB', 'RAM 要件': '6 GB', 'CPU 速度': '4-5 トークン/秒', '最適な用途': 'CPUでの最高のコーディング、76% HumanEval' },
+            { 'モデル': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'パラメータ': '7B', 'GGUF サイズ': '~5 GB', 'RAM 要件': '7 GB', 'CPU 速度': '4 トークン/秒', '最適な用途': '推論、数学（思考の連鎖）' },
           ],
           columns: ['モデル', 'パラメータ', 'GGUF サイズ', 'RAM 要件', 'CPU 速度', '最適な用途'],
         
           image: '/images/best-cpu-only-llm-model-speeds-hero-ja.png',
-          imageCaption: 'Phi-4 Miniは速度と品質のバランスが最良です — Gemma 3 2Bは15対12トークン/秒で高速ですが、能力は劣ります。',
+          imageCaption: 'Phi-4 Miniは速度と品質のバランスが最良です — Gemma 4 E2Bは15対12トークン/秒で高速ですが、能力は劣ります。',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -1781,7 +2172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'ハードウェア': '[AMD Ryzen 7 5700X](https://www.amd.com/en/products/processors/desktops/ryzen.html) (CPU)', 'モデル': 'Phi-4 Mini 3.8B', '速度': '9 トークン/秒', '注釈': '古い AVX2 のみ' },
             { 'ハードウェア': 'Apple M3 (CPU)', 'モデル': 'Phi-4 Mini 3.8B', '速度': '14 トークン/秒', '注釈': 'ユニファイドメモリの利点' },
             { 'ハードウェア': 'RTX 3060 (GPU、12 GB)', 'モデル': 'Phi-4 Mini 3.8B', '速度': '80 トークン/秒', '注釈': 'GPU は 6.7× 高速' },
-            { 'ハードウェア': 'RTX 4090 (GPU、24 GB)', 'モデル': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', '速度': '120 トークン/秒', '注釈': 'GPU は CPU より 30× 高速' },
+            { 'ハードウェア': 'RTX 4090 (GPU、24 GB)', 'モデル': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', '速度': '120 トークン/秒', '注釈': 'GPU は CPU より 30× 高速' },
           ],
           columns: ['ハードウェア', 'モデル', '速度', '注釈'],
         
@@ -1793,11 +2184,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'モデル別 RAM 要件',
           content: '**経験則: GGUF サイズ + 500 MB オーバーヘッド = 必要最小限 RAM。** 2 GB GGUF モデルは 2.5–3 GB の無料システム RAM が必要です:',
           rows: [
-            { 'モデル': '[Gemma 3 2B](https://ollama.com/library/gemma3)', 'GGUF サイズ': '~1.5 GB', '最小 RAM': '2–2.5 GB', '快適': '4 GB', 'コンテキスト長': '8K' },
+            { 'モデル': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', 'GGUF サイズ': '~1.5 GB', '最小 RAM': '2–2.5 GB', '快適': '4 GB', 'コンテキスト長': '128K' },
             { 'モデル': '[Phi-4 Mini](https://ollama.com/library/phi4) 3.8B', 'GGUF サイズ': '~2.3 GB', '最小 RAM': '3 GB', '快適': '6 GB', 'コンテキスト長': '4K' },
             { 'モデル': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'GGUF サイズ': '~2 GB', '最小 RAM': '2.5–3 GB', '快適': '6 GB', 'コンテキスト長': '8K' },
-            { 'モデル': '[Mistral Small Q4](https://ollama.com/library/mistral)', 'GGUF サイズ': '~4.5 GB', '最小 RAM': '5 GB', '快適': '8 GB', 'コンテキスト長': '32K' },
-            { 'モデル': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'GGUF サイズ': '~5 GB', '最小 RAM': '6 GB', '快適': '12 GB', 'コンテキスト長': '128K' },
+            { 'モデル': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'GGUF サイズ': '~5 GB', '最小 RAM': '5 GB', '快適': '8 GB', 'コンテキスト長': '32K' },
+            { 'モデル': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'GGUF サイズ': '~5 GB', '最小 RAM': '6 GB', '快適': '12 GB', 'コンテキスト長': '128K' },
           ],
           columns: ['モデル', 'GGUF サイズ', '最小 RAM', '快適', 'コンテキスト長'],
         },
@@ -1845,7 +2236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'CPU 上で一貫性のある出力を生成する最小モデルは何ですか？',
-              a: 'Gemma 3 2B (1.5 GB) は合理的な応答を生成します。それ以下では品質が低下します。8 GB RAM での最高品質には Phi-4 Mini (3.8B) または Llama 3.2 3B (2 GB) を使用してください。',
+              a: 'Gemma 4 E2B (1.5 GB) は合理的な応答を生成します。それ以下では品質が低下します。8 GB RAM での最高品質には Phi-4 Mini (3.8B) または Llama 3.2 3B (2 GB) を使用してください。',
             },
             {
               q: '13B モデルを CPU 上で実行できますか？',
@@ -1869,7 +2260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: '10 GB の古いノートパソコンでも CPU-only 推論は実用的ですか？',
-              a: 'はい。Gemma 3 2B (1.5 GB) または Phi-4 Mini (2.3 GB) は 10 GB RAM で効率的に実行できます。3–5 トークン/秒のバッチ処理や軽量チャットボットに最適です。',
+              a: 'はい。Gemma 4 E2B (1.5 GB) または Phi-4 Mini (2.3 GB) は 10 GB RAM で効率的に実行できます。3–5 トークン/秒のバッチ処理や軽量チャットボットに最適です。',
             },
             {
               q: '複数のモデルを同時に CPU で実行できますか？',
@@ -1915,10 +2306,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — 最高の CPU LLM（3.8B、12 トークン/秒）' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 3 2B — CPU で最速（1.5 GB、15 トークン/秒）' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 4 E2B — CPU で最速（1.5 GB、15 トークン/秒）' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.2 3B — 品質と速度の最高バランス（2 GB、10 トークン/秒）' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Mistral Small Q4 — 16+ GB RAM でより高品質（4.5 GB、5 トークン/秒）' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B Q4 — CPU でコーディングに最適（5 GB、4 トークン/秒）' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 8B — CPU での最高のコーディング、76% HumanEval（5 GB、4-5 トークン/秒）' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'DeepSeek-R1 7B — 推論と数学に最適（5 GB、4 トークン/秒）' },
         ],
       },
       faqSchema: {
@@ -1939,7 +2330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: '最高の CPU-only LLM は何ですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Phi-4 Mini (3.8B、2.3 GB、12 トークン/秒) が全体的に最高です。速度: Gemma 3 2B (1.5 GB、15 トークン/秒)。バランス: Llama 3.2 3B (2 GB、10 トークン/秒)。',
+              text: 'Phi-4 Mini (3.8B、2.3 GB、12 トークン/秒) が全体的に最高です。速度: Gemma 4 E2B (1.5 GB、15 トークン/秒)。バランス: Llama 3.2 3B (2 GB、10 トークン/秒)。',
             },
           },
           {
@@ -1947,7 +2338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'CPU-only 推論にはどのくらいの RAM が必要ですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'ルールを使用: GGUF ファイルサイズ + 500 MB オーバーヘッド。Phi-4 Mini (2.3 GB) は 3 GB RAM が必要です。Gemma 3 2B (1.5 GB) は 2 GB RAM が必要です。Mistral Small Q4 (4.5 GB) は 5 GB RAM が必要です。',
+              text: 'ルールを使用: GGUF ファイルサイズ + 500 MB オーバーヘッド。Phi-4 Mini (2.3 GB) は 3 GB RAM が必要です。Gemma 4 E2B (1.5 GB) は 2 GB RAM が必要です。Qwen3 8B (5 GB) は 5 GB RAM が必要です。',
             },
           },
           {
@@ -1979,7 +2370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'CPU 上で一貫性のある出力を生成する最小モデルは何ですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemma 3 2B (1.5 GB) は合理的な応答を生成します。それ以下では品質が低下します。8 GB RAM での最高品質には Phi-4 Mini (3.8B) または Llama 3.2 3B (2 GB) を使用してください。',
+              text: 'Gemma 4 E2B (1.5 GB) は合理的な応答を生成します。それ以下では品質が低下します。8 GB RAM での最高品質には Phi-4 Mini (3.8B) または Llama 3.2 3B (2 GB) を使用してください。',
             },
           },
           {
@@ -2019,18 +2410,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     zh: {
       freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-12-19',
+      next_refresh_due: '2027-01-29',
       theme: '最佳模型',
       title: '2026 年最佳 CPU-only LLMs: 无需 GPU 运行 AI',
       seoTitle: '2026年最佳CPU-only LLM：Phi-4 Mini 12令牌/秒，无需GPU',
-      intro: 'CPU-only 推理适用于搭载 8–32 GB RAM 的现代处理器上的 3–13B 模型。2026 年 5 月最佳的 CPU-only 模型是 Phi-4 Mini (3.8B、~2.3 GB、CPU 上 12 令牌/秒)、Gemma 3 2B (1.5 GB、15 令牌/秒) 和 Llama 3.2 3B (2 GB、10 令牌/秒)。通过启用 CPU-only 模式的 Ollama、LM Studio 或 llama.cpp 运行。',
-      metaDescription: '2026年测试5款CPU-only LLM：Phi-4 Mini（3.8B）达12令牌/秒，Gemma 3 2B（1.5 GB）达15令牌/秒，Llama 3.2 3B达10令牌/秒。无需GPU，4–32 GB内存即可运行。',
+      intro: 'CPU-only 推理适用于搭载 8–32 GB RAM 的现代处理器上的 3–13B 模型。2026 年 5 月最佳的 CPU-only 模型是 Phi-4 Mini (3.8B、~2.3 GB、CPU 上 12 令牌/秒)、Gemma 4 E2B (1.5 GB、15 令牌/秒) 和 Llama 3.2 3B (2 GB、10 令牌/秒)。通过启用 CPU-only 模式的 Ollama、LM Studio 或 llama.cpp 运行。',
+      metaDescription: '2026年测试5款CPU-only LLM：Phi-4 Mini（3.8B）达12令牌/秒，Gemma 4 E2B（1.5 GB）达15令牌/秒，Llama 3.2 3B达10令牌/秒。无需GPU，4–32 GB内存即可运行。',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-zh.png',
       publishDate: '2026-05-07',
-      dateModified: '2026-06-19',
-      current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
+      dateModified: '2026-07-29',
+      current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Intel i7-12700', 'AMD Ryzen 7 5700X', 'Apple M3', 'Apple M4'],
-      leadAnswerBlock: '**CPU-only 推理对现代处理器上的 3–13B 模型有效。最佳选择: Phi-4 Mini (3.8B、2.3 GB、CPU 上 12 令牌/秒) 用于一般聊天、Gemma 3 2B (1.5 GB、最快) 用于时间敏感任务、Llama 3.2 3B (2 GB、平衡) 用于质量。使用 Ollama 或 llama.cpp 的 CPU 模式。CPU 推理比 GPU 慢 10–30 倍，但使用零专用视频 VRAM — 仅需系统 RAM。**',
+      leadAnswerBlock: '**CPU-only 推理对现代处理器上的 3–13B 模型有效。最佳选择: Phi-4 Mini (3.8B、2.3 GB、CPU 上 12 令牌/秒) 用于一般聊天、Gemma 4 E2B (1.5 GB、最快) 用于时间敏感任务、Llama 3.2 3B (2 GB、平衡) 用于质量。使用 Ollama 或 llama.cpp 的 CPU 模式。CPU 推理比 GPU 慢 10–30 倍，但使用零专用视频 VRAM — 仅需系统 RAM。**',
       audience: '拥有旧硬件、树莓派用户和寻求实用本地 LLM 推理但无专用 GPU 的用户。',
       readTime: '阅读约8分钟',
       educationalLevel: '初级',
@@ -2053,7 +2444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'CPU-only 推理对搭载 8–32 GB RAM 的现代处理器上的 3–13B 模型有效。',
-            '最佳 CPU 模型: Phi-4 Mini (3.8B、2.3 GB、12 令牌/秒)、Gemma 3 2B (1.5 GB、15 令牌/秒)、Llama 3.2 3B (2 GB、10 令牌/秒)。',
+            '最佳 CPU 模型: Phi-4 Mini (3.8B、2.3 GB、12 令牌/秒)、Gemma 4 E2B (1.5 GB、15 令牌/秒)、Llama 3.2 3B (2 GB、10 令牌/秒)。',
             'CPU 推理比 GPU 慢 10–30 倍，但使用零专用 VRAM。',
             '在 Ollama 或 llama.cpp 中使用简单的命令行标志启用 CPU-only 模式。',
             'CPU 推理对生产 API (无 GPU 开销)、边缘设备和成本受限环境最理想。',
@@ -2074,15 +2465,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: '下表按 CPU-only 模式下 Intel i7-12700 (12 核、AVX-512) 上的性能对模型进行排名:',
           rows: [
             { '模型': '[Phi-4 Mini](https://ollama.com/library/phi4)', '参数': '3.8B', 'GGUF 大小': '~2.3 GB', 'RAM 需求': '4 GB', 'CPU 速度': '12 令牌/秒', '最适合': '一般聊天、代码协助' },
-            { '模型': '[Gemma 3 2B](https://ollama.com/library/gemma3)', '参数': '2B', 'GGUF 大小': '~1.5 GB', 'RAM 需求': '3 GB', 'CPU 速度': '15 令牌/秒', '最适合': '快速响应、低 VRAM' },
+            { '模型': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', '参数': '2B', 'GGUF 大小': '~1.5 GB', 'RAM 需求': '3 GB', 'CPU 速度': '15 令牌/秒', '最适合': '快速响应、低 VRAM' },
             { '模型': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', '参数': '3B', 'GGUF 大小': '~2 GB', 'RAM 需求': '3.5 GB', 'CPU 速度': '10 令牌/秒', '最适合': '质量/速度平衡' },
-            { '模型': '[Mistral Small Q4](https://ollama.com/library/mistral)', '参数': '7B', 'GGUF 大小': '~4.5 GB', 'RAM 需求': '6 GB', 'CPU 速度': '5 令牌/秒', '最适合': '更高质量、16+ GB RAM' },
-            { '模型': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', '参数': '8B', 'GGUF 大小': '~5 GB', 'RAM 需求': '7 GB', 'CPU 速度': '4 令牌/秒', '最适合': '编码、逻辑任务' },
+            { '模型': '[Qwen3 8B](https://ollama.com/library/qwen3)', '参数': '8B', 'GGUF 大小': '~5 GB', 'RAM 需求': '6 GB', 'CPU 速度': '4-5 令牌/秒', '最适合': 'CPU上最佳编程，76% HumanEval' },
+            { '模型': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', '参数': '7B', 'GGUF 大小': '~5 GB', 'RAM 需求': '7 GB', 'CPU 速度': '4 令牌/秒', '最适合': '推理、数学（思维链）' },
           ],
           columns: ['模型', '参数', 'GGUF 大小', 'RAM 需求', 'CPU 速度', '最适合'],
         
           image: '/images/best-cpu-only-llm-model-speeds-hero-zh.png',
-          imageCaption: 'Phi-4 Mini在速度和质量之间取得最佳平衡 — Gemma 3 2B速度更快（15对12 tok/s）但能力较弱。',
+          imageCaption: 'Phi-4 Mini在速度和质量之间取得最佳平衡 — Gemma 4 E2B速度更快（15对12 tok/s）但能力较弱。',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -2093,7 +2484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { '硬件': '[AMD Ryzen 7 5700X](https://www.amd.com/en/products/processors/desktops/ryzen.html) (CPU)', '模型': 'Phi-4 Mini 3.8B', '速度': '9 令牌/秒', '备注': '仅限旧版 AVX2' },
             { '硬件': 'Apple M3 (CPU)', '模型': 'Phi-4 Mini 3.8B', '速度': '14 令牌/秒', '备注': '统一内存优势' },
             { '硬件': 'RTX 3060 (GPU、12 GB)', '模型': 'Phi-4 Mini 3.8B', '速度': '80 令牌/秒', '备注': 'GPU 快 6.7 倍' },
-            { '硬件': 'RTX 4090 (GPU、24 GB)', '模型': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', '速度': '120 令牌/秒', '备注': 'GPU 比 CPU 快 30 倍' },
+            { '硬件': 'RTX 4090 (GPU、24 GB)', '模型': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', '速度': '120 令牌/秒', '备注': 'GPU 比 CPU 快 30 倍' },
           ],
           columns: ['硬件', '模型', '速度', '备注'],
         
@@ -2105,11 +2496,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: '按模型列出的 RAM 要求',
           content: '**经验法则: GGUF 大小 + 500 MB 开销 = 最少 RAM 需求。** 2 GB GGUF 模型需要 2.5–3 GB 可用系统 RAM:',
           rows: [
-            { '模型': '[Gemma 3 2B](https://ollama.com/library/gemma3)', 'GGUF 大小': '~1.5 GB', '最小 RAM': '2–2.5 GB', '舒适': '4 GB', '上下文长度': '8K' },
+            { '模型': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', 'GGUF 大小': '~1.5 GB', '最小 RAM': '2–2.5 GB', '舒适': '4 GB', '上下文长度': '128K' },
             { '模型': '[Phi-4 Mini](https://ollama.com/library/phi4) 3.8B', 'GGUF 大小': '~2.3 GB', '最小 RAM': '3 GB', '舒适': '6 GB', '上下文长度': '4K' },
             { '模型': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'GGUF 大小': '~2 GB', '最小 RAM': '2.5–3 GB', '舒适': '6 GB', '上下文长度': '8K' },
-            { '模型': '[Mistral Small Q4](https://ollama.com/library/mistral)', 'GGUF 大小': '~4.5 GB', '最小 RAM': '5 GB', '舒适': '8 GB', '上下文长度': '32K' },
-            { '模型': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'GGUF 大小': '~5 GB', '最小 RAM': '6 GB', '舒适': '12 GB', '上下文长度': '128K' },
+            { '模型': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'GGUF 大小': '~5 GB', '最小 RAM': '5 GB', '舒适': '8 GB', '上下文长度': '32K' },
+            { '模型': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'GGUF 大小': '~5 GB', '最小 RAM': '6 GB', '舒适': '12 GB', '上下文长度': '128K' },
           ],
           columns: ['模型', 'GGUF 大小', '最小 RAM', '舒适', '上下文长度'],
         },
@@ -2157,7 +2548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: '在 CPU 上生成连贯输出的最小模型是什么？',
-              a: 'Gemma 3 2B (1.5 GB) 生成合理的回应。更小的质量下降。在 8 GB RAM 上实现最佳质量，使用 Phi-4 Mini (3.8B) 或 Llama 3.2 3B (2 GB)。',
+              a: 'Gemma 4 E2B (1.5 GB) 生成合理的回应。更小的质量下降。在 8 GB RAM 上实现最佳质量，使用 Phi-4 Mini (3.8B) 或 Llama 3.2 3B (2 GB)。',
             },
             {
               q: '我可以在 CPU 上运行 13B 模型吗？',
@@ -2181,7 +2572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: '旧笔记本电脑 (8 GB RAM) 可以运行 CPU-only 推理吗？',
-              a: '是的。Gemma 3 2B (1.5 GB) 在 8 GB RAM 上有效运行。预期 3–5 令轿/秒用于批处理或轻量级聊天机器人。',
+              a: '是的。Gemma 4 E2B (1.5 GB) 在 8 GB RAM 上有效运行。预期 3–5 令轿/秒用于批处理或轻量级聊天机器人。',
             },
             {
               q: '我可以同时在 CPU 上运行多个模型吗？',
@@ -2227,10 +2618,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — 综合最佳CPU LLM（3.8B，12令牌/秒）' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 3 2B — CPU最快（1.5 GB，15令牌/秒）' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 4 E2B — CPU最快（1.5 GB，15令牌/秒）' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.2 3B — 质量与速度最佳平衡（2 GB，10令牌/秒）' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Mistral Small Q4 — 16+ GB RAM下更高质量（4.5 GB，5令牌/秒）' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B Q4 — CPU编码最佳选择（5 GB，4令牌/秒）' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 8B — CPU上最佳编程，76% HumanEval（5 GB，5令牌/秒）' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'DeepSeek-R1 7B — 推理和数学最佳选择（5 GB，4令牌/秒）' },
         ],
       },
       faqSchema: {
@@ -2251,7 +2642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: '最好的 CPU-only LLM 是什么？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Phi-4 Mini (3.8B、2.3 GB、12 令牌/秒) 总体最好。速度: Gemma 3 2B (1.5 GB、15 令牌/秒)。平衡: Llama 3.2 3B (2 GB、10 令牌/秒)。',
+              text: 'Phi-4 Mini (3.8B、2.3 GB、12 令牌/秒) 总体最好。速度: Gemma 4 E2B (1.5 GB、15 令牌/秒)。平衡: Llama 3.2 3B (2 GB、10 令牌/秒)。',
             },
           },
           {
@@ -2259,7 +2650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'CPU-only 推理需要多少 RAM？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '使用规则: GGUF 文件大小 + 500 MB 开销。Phi-4 Mini (2.3 GB) 需要 3 GB RAM。Gemma 3 2B (1.5 GB) 需要 2 GB RAM。Mistral Small Q4 (4.5 GB) 需要 5 GB RAM。',
+              text: '使用规则: GGUF 文件大小 + 500 MB 开销。Phi-4 Mini (2.3 GB) 需要 3 GB RAM。Gemma 4 E2B (1.5 GB) 需要 2 GB RAM。Qwen3 8B (5 GB) 需要 5 GB RAM。',
             },
           },
           {
@@ -2291,7 +2682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: '在 CPU 上生成连贯输出的最小模型是什么？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemma 3 2B (1.5 GB) 生成合理的回应。更小的质量下降。在 8 GB RAM 上实现最佳质量，使用 Phi-4 Mini (3.8B) 或 Llama 3.2 3B (2 GB)。',
+              text: 'Gemma 4 E2B (1.5 GB) 生成合理的回应。更小的质量下降。在 8 GB RAM 上实现最佳质量，使用 Phi-4 Mini (3.8B) 或 Llama 3.2 3B (2 GB)。',
             },
           },
           {
@@ -2331,30 +2722,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     ko: {
       freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-12-19',
+      next_refresh_due: '2027-01-29',
       theme: '최고 모델',
       title: '2026년 최고의 CPU 전용 LLM: GPU 없이 AI 실행 (5개 모델 테스트)',
       seoTitle: 'CPU 전용 LLM 2026: Phi-4 Mini 12토큰/초, GPU 불필요',
-      intro: 'CPU 전용 추론은 8~32GB RAM을 탑재한 최신 프로세서에서 3~13B 모델을 실용적으로 실행하는 데 적합합니다. 2026년 5월 기준 최고의 CPU 전용 모델은 Phi-4 Mini(3.8B, 약 2.3GB, CPU에서 12토큰/초), Gemma 3 2B(1.5GB, 15토큰/초), Llama 3.2 3B(2GB, 10토큰/초)입니다. Ollama, LM Studio 또는 CPU 전용 모드를 활성화한 llama.cpp로 실행할 수 있습니다.',
-      metaDescription: '2026년 CPU 전용 LLM 5종 벤치마크: Phi-4 Mini(3.8B)는 12토큰/초, Gemma 3 2B는 15토큰/초, Llama 3.2 3B는 10토큰/초 — GPU 없이 모두 실행 가능합니다.',
+      intro: 'CPU 전용 추론은 8~32GB RAM을 탑재한 최신 프로세서에서 3~13B 모델을 실용적으로 실행하는 데 적합합니다. 2026년 7월 기준 최고의 CPU 전용 모델은 Phi-4 Mini(3.8B, 약 2.3GB, CPU에서 12토큰/초), Gemma 4 E2B(1.5GB, 15토큰/초), Llama 3.2 3B(2GB, 10토큰/초)입니다. Ollama, LM Studio 또는 CPU 전용 모드를 활성화한 llama.cpp로 실행할 수 있습니다.',
+      metaDescription: '2026년 CPU 전용 LLM 5종 벤치마크: Phi-4 Mini(3.8B)는 12토큰/초, Gemma 4 E2B는 15토큰/초, Llama 3.2 3B는 10토큰/초 — GPU 없이 모두 실행 가능합니다.',
       heroImage: '/images/best-cpu-only-llm-model-speeds-hero-ko.png',
       publishDate: '2026-05-07',
-      dateModified: '2026-06-19',
-      current_models_mentioned: ['Phi-4 Mini', 'Gemma 3 2B', 'Llama 3.2 3B', 'Mistral Small Q4'],
+      dateModified: '2026-07-29',
+      current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B'],
       current_hardware_mentioned: ['Intel i7-12700', 'AMD Ryzen 7 5700X', 'Apple M3', 'Apple M4'],
-      leadAnswerBlock: '**CPU 전용 추론은 최신 프로세서에서 3~13B 모델을 잘 처리합니다. 추천 모델: 일반 채팅용 Phi-4 Mini(3.8B, 2.3GB, CPU에서 12토큰/초), 속도 중시 작업용 Gemma 3 2B(1.5GB, 최고 속도), 품질 중시용 Llama 3.2 3B(2GB, 균형). Ollama 또는 llama.cpp를 CPU 모드로 사용하십시오. CPU 추론은 GPU보다 10~30배 느리지만 전용 비디오 VRAM을 전혀 사용하지 않고 시스템 RAM만 사용합니다.**',
+      leadAnswerBlock: '**CPU 전용 추론은 최신 프로세서에서 3~13B 모델을 잘 처리합니다. 추천 모델: 일반 채팅용 Phi-4 Mini(3.8B, 2.3GB, CPU에서 12토큰/초), 속도 중시 작업용 Gemma 4 E2B(1.5GB, 최고 속도), 품질 중시용 Llama 3.2 3B(2GB, 균형). Ollama 또는 llama.cpp를 CPU 모드로 사용하십시오. CPU 추론은 GPU보다 10~30배 느리지만 전용 비디오 VRAM을 전혀 사용하지 않고 시스템 RAM만 사용합니다.**',
       quickAnswerTop: {
         ko: {
           question: 'GPU 없이 LLM을 실행할 수 있으며, CPU 전용으로 작동하는 모델은 무엇입니까?',
-          answer: '예, 최신 CPU는 3~13B 모델을 효율적으로 실행할 수 있습니다. CPU 속도는 8~15토큰/초이며 GPU의 50~200토큰/초에 비해 느리지만 VRAM을 전혀 사용하지 않습니다. 최고의 CPU 전용 모델: Phi-4 Mini(3.8B, 2.3GB), Gemma 3 2B(1.5GB, 최고 속도), Llama 3.2 3B(2GB, 균형 잡힌 품질).',
+          answer: '예, 최신 CPU는 3~13B 모델을 효율적으로 실행할 수 있습니다. CPU 속도는 8~15토큰/초이며 GPU의 50~200토큰/초에 비해 느리지만 VRAM을 전혀 사용하지 않습니다. 최고의 CPU 전용 모델: Phi-4 Mini(3.8B, 2.3GB), Gemma 4 E2B(1.5GB, 최고 속도), Llama 3.2 3B(2GB, 균형 잡힌 품질).',
           bullets: [
             'Phi-4 Mini(3.8B, 2.3GB) — 전체 최고의 CPU 모델, i7-12700에서 12토큰/초, FP16 대비 품질 손실 1~3%',
-            'Gemma 3 2B(1.5GB) — CPU에서 가장 빠름, 15토큰/초, 8GB RAM 환경의 실시간 채팅에 탁월',
+            'Gemma 4 E2B(1.5GB) — CPU에서 가장 빠름, 15토큰/초, 8GB RAM 환경의 실시간 채팅에 탁월',
             'Llama 3.2 3B(2GB) — 품질과 속도의 최상의 균형, 최신 CPU에서 10토큰/초',
-            'Mistral Small Q4(4.5GB) — 더 크지만 16GB 이상 RAM에서 CPU로 실행 가능, 5토큰/초',
+            'Qwen3 8B(5 GB) — 더 크지만 16GB 이상 RAM에서 CPU로 실행 가능, 4-5토큰/초',
             'Ollama 또는 llama.cpp에서 CPU 전용 모드 활성화 — 도구가 VRAM 대신 시스템 RAM을 사용하도록 지시',
           ],
-          updatedDate: '2026-06-19',
+          updatedDate: '2026-07-29',
         },
       },
       audience: '구형 하드웨어 사용자, Raspberry Pi 사용자, 전용 GPU 없이 실용적인 로컬 LLM 추론을 원하는 사용자.',
@@ -2379,7 +2770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'CPU 전용 추론은 8~32GB RAM을 탑재한 최신 프로세서에서 3~13B 모델을 효과적으로 실행합니다.',
-            '최고의 CPU 모델: Phi-4 Mini(3.8B, 2.3GB, 12토큰/초), Gemma 3 2B(1.5GB, 15토큰/초), Llama 3.2 3B(2GB, 10토큰/초).',
+            '최고의 CPU 모델: Phi-4 Mini(3.8B, 2.3GB, 12토큰/초), Gemma 4 E2B(1.5GB, 15토큰/초), Llama 3.2 3B(2GB, 10토큰/초).',
             'CPU 추론은 GPU보다 10~30배 느리지만 전용 VRAM을 전혀 사용하지 않습니다.',
             'Ollama 또는 llama.cpp에서 간단한 명령줄 옵션으로 CPU 전용 모드를 활성화하십시오.',
             'CPU 추론은 프로덕션 API(GPU 오버헤드 없음), 엣지 디바이스, 비용 제약 환경에 이상적입니다.',
@@ -2400,15 +2791,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: '아래 표는 CPU 전용 모드의 Intel i7-12700(12코어, AVX-512)에서 성능 순으로 모델을 정렬한 것입니다.',
           rows: [
             { '모델': '[Phi-4 Mini](https://ollama.com/library/phi4)', '파라미터': '3.8B', 'GGUF 크기': '~2.3 GB', '필요 RAM': '4 GB', 'CPU 속도': '12토큰/초', '최적 용도': '일반 채팅, 코드 지원' },
-            { '모델': '[Gemma 3 2B](https://ollama.com/library/gemma3)', '파라미터': '2B', 'GGUF 크기': '~1.5 GB', '필요 RAM': '3 GB', 'CPU 속도': '15토큰/초', '최적 용도': '빠른 응답, 낮은 VRAM' },
+            { '모델': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', '파라미터': '2B', 'GGUF 크기': '~1.5 GB', '필요 RAM': '3 GB', 'CPU 속도': '15토큰/초', '최적 용도': '빠른 응답, 낮은 VRAM' },
             { '모델': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', '파라미터': '3B', 'GGUF 크기': '~2 GB', '필요 RAM': '3.5 GB', 'CPU 속도': '10토큰/초', '최적 용도': '품질/속도 균형' },
-            { '모델': '[Mistral Small Q4](https://ollama.com/library/mistral)', '파라미터': '7B', 'GGUF 크기': '~4.5 GB', '필요 RAM': '6 GB', 'CPU 속도': '5토큰/초', '최적 용도': '높은 품질, 16GB 이상 RAM' },
-            { '모델': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', '파라미터': '8B', 'GGUF 크기': '~5 GB', '필요 RAM': '7 GB', 'CPU 속도': '4토큰/초', '최적 용도': '코딩, 논리 작업' },
+            { '모델': '[Qwen3 8B](https://ollama.com/library/qwen3)', '파라미터': '8B', 'GGUF 크기': '~5 GB', '필요 RAM': '6 GB', 'CPU 속도': '4-5토큰/초', '최적 용도': 'CPU 최고 코딩, 76% HumanEval' },
+            { '모델': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', '파라미터': '7B', 'GGUF 크기': '~5 GB', '필요 RAM': '7 GB', 'CPU 속도': '4토큰/초', '최적 용도': '추론, 수학 (연쇄적 사고)' },
           ],
           columns: ['모델', '파라미터', 'GGUF 크기', '필요 RAM', 'CPU 속도', '최적 용도'],
         
           image: '/images/best-cpu-only-llm-model-speeds-hero-ko.png',
-          imageCaption: 'Phi-4 Mini는 속도와 품질의 균형이 가장 좋습니다 — Gemma 3 2B는 15 대 12 tok/s로 더 빠르지만 성능은 떨어집니다.',
+          imageCaption: 'Phi-4 Mini는 속도와 품질의 균형이 가장 좋습니다 — Gemma 4 E2B는 15 대 12 tok/s로 더 빠르지만 성능은 떨어집니다.',
         },
         speedComparison: {
           id: 'speed-comparison',
@@ -2419,7 +2810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { '하드웨어': '[AMD Ryzen 7 5700X](https://www.amd.com/en/products/processors/desktops/ryzen.html) (CPU)', '모델': 'Phi-4 Mini 3.8B', '속도': '9토큰/초', '비고': '구형 AVX2만 지원' },
             { '하드웨어': 'Apple M3 (CPU)', '모델': 'Phi-4 Mini 3.8B', '속도': '14토큰/초', '비고': '통합 메모리 이점' },
             { '하드웨어': 'RTX 3060 (GPU, 12 GB)', '모델': 'Phi-4 Mini 3.8B', '속도': '80토큰/초', '비고': 'GPU가 6.7배 빠름' },
-            { '하드웨어': 'RTX 4090 (GPU, 24 GB)', '모델': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', '속도': '120토큰/초', '비고': 'GPU가 CPU보다 30배 빠름' },
+            { '하드웨어': 'RTX 4090 (GPU, 24 GB)', '모델': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', '속도': '120토큰/초', '비고': 'GPU가 CPU보다 30배 빠름' },
           ],
           columns: ['하드웨어', '모델', '속도', '비고'],
         
@@ -2431,11 +2822,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: '모델별 RAM 요구 사항',
           content: '**경험칙: GGUF 크기 + 500MB 오버헤드 = 최소 필요 RAM.** 2GB GGUF 모델은 2.5~3GB의 여유 시스템 RAM이 필요합니다.',
           rows: [
-            { '모델': '[Gemma 3 2B](https://ollama.com/library/gemma3)', 'GGUF 크기': '~1.5 GB', '최소 RAM': '2~2.5 GB', '여유 RAM': '4 GB', '컨텍스트 길이': '8K' },
+            { '모델': '[Gemma 4 E2B](https://ollama.com/library/gemma3)', 'GGUF 크기': '~1.5 GB', '최소 RAM': '2~2.5 GB', '여유 RAM': '4 GB', '컨텍스트 길이': '128K' },
             { '모델': '[Phi-4 Mini](https://ollama.com/library/phi4) 3.8B', 'GGUF 크기': '~2.3 GB', '최소 RAM': '3 GB', '여유 RAM': '6 GB', '컨텍스트 길이': '4K' },
             { '모델': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'GGUF 크기': '~2 GB', '최소 RAM': '2.5~3 GB', '여유 RAM': '6 GB', '컨텍스트 길이': '8K' },
-            { '모델': '[Mistral Small Q4](https://ollama.com/library/mistral)', 'GGUF 크기': '~4.5 GB', '최소 RAM': '5 GB', '여유 RAM': '8 GB', '컨텍스트 길이': '32K' },
-            { '모델': '[Llama 3.3 8B Q4](https://ollama.com/library/llama3.3)', 'GGUF 크기': '~5 GB', '최소 RAM': '6 GB', '여유 RAM': '12 GB', '컨텍스트 길이': '128K' },
+            { '모델': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'GGUF 크기': '~5 GB', '최소 RAM': '5 GB', '여유 RAM': '8 GB', '컨텍스트 길이': '32K' },
+            { '모델': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'GGUF 크기': '~5 GB', '최소 RAM': '6 GB', '여유 RAM': '12 GB', '컨텍스트 길이': '128K' },
           ],
           columns: ['모델', 'GGUF 크기', '최소 RAM', '여유 RAM', '컨텍스트 길이'],
         },
@@ -2483,7 +2874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'CPU에서 일관된 출력을 생성하는 가장 작은 모델은 무엇입니까?',
-              a: 'Gemma 3 2B(1.5GB)는 합리적인 응답을 생성합니다. 2B 미만에서는 품질이 저하됩니다. 8GB RAM에서 최고 품질을 원한다면 Phi-4 Mini(3.8B) 또는 Llama 3.2 3B(2GB)를 사용하십시오.',
+              a: 'Gemma 4 E2B(1.5GB)는 합리적인 응답을 생성합니다. 2B 미만에서는 품질이 저하됩니다. 8GB RAM에서 최고 품질을 원한다면 Phi-4 Mini(3.8B) 또는 Llama 3.2 3B(2GB)를 사용하십시오.',
             },
             {
               q: 'CPU에서 13B 모델을 실행할 수 있습니까?',
@@ -2500,6 +2891,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             {
               q: 'Apple Silicon CPU를 위해 설정을 조정해야 합니까?',
               a: '아닙니다. Ollama는 M1/M2/M3/M4를 자동으로 감지하고 통합 메모리를 효율적으로 사용합니다. Apple Silicon은 메모리 아키텍처 덕분에 동급 Intel CPU보다 약 10~20% 빠릅니다.',
+            },
+            {
+              q: 'CPU 전용 모드에서 7B 모델은 VRAM이 얼마나 필요합니까?',
+              a: '전용 VRAM은 전혀 필요하지 않습니다. Q4_K_M 양자화를 적용한 7B 모델(약 4.5GB)은 편안하게 실행되려면 5~6GB의 시스템 RAM이 필요합니다. 이것이 CPU 전용 추론의 핵심 장점입니다 — GPU나 VRAM이 전혀 필요하지 않습니다.',
+            },
+            {
+              q: 'CPU에서 LLM을 파인튜닝할 수 있습니까?',
+              a: '기술적으로는 가능하지만 실용적이지 않습니다. CPU에서의 파인튜닝은 GPU보다 10~30배 느립니다. CPU 전용 모드는 추론 용도로만 사용하고, 파인튜닝이나 학습 작업에는 GPU로 전환하십시오.',
+            },
+            {
+              q: 'CPU에서 여러 모델을 동시에 실행할 수 있습니까?',
+              a: 'RAM이 허용한다면 기술적으로 가능하지만 실용적이지 않습니다. 여러 모델을 동시에 실행하면 메모리 경합이 발생하여 두 모델 모두 느려집니다. 최상의 성능을 위해서는 한 번에 하나의 모델만 실행하십시오.',
+            },
+            {
+              q: 'CPU 전용 추론의 보안 위험은 무엇입니까?',
+              a: 'CPU 전용 추론은 데이터가 기기를 벗어나지 않고 전송 위험이 없기 때문에 클라우드 추론보다 더 안전합니다. 남은 위험은 일반적인 로컬 소프트웨어와 동일합니다 — 암호화되지 않은 민감한 데이터가 디스크에 남아 있을 수 있으므로 OS를 최신 상태로 유지하고 물리적 기기를 안전하게 보호해야 합니다.',
+            },
+            {
+              q: 'CPU 추론에서 Ollama와 llama.cpp 사이에 속도 차이가 있습니까?',
+              a: '차이는 미미합니다. 두 도구 모두 동일한 핵심 CPU 최적화(AVX-512)를 사용합니다. 약 2~5%의 편차는 스레드 관리 구현 방식의 차이에서 발생합니다. llama.cpp의 세부 옵션이 필요하지 않다면 Ollama의 기본 설정으로 시작하십시오.',
+            },
+            {
+              q: '8~10GB RAM의 오래된 노트북에서도 CPU 전용 추론이 실용적입니까?',
+              a: '예. Gemma 4 E2B(1.5GB) 또는 Phi-4 Mini(2.3GB)는 8~10GB RAM에서 효율적으로 실행됩니다. 3~5토큰/초 정도를 예상하십시오 — 배치 처리나 경량 챗봇에는 적합하지만 실시간 채팅에는 너무 느립니다.',
             },
           ],
         },
@@ -2533,10 +2948,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'numberOfItems': 5,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Phi-4 Mini — 전체 최고의 CPU LLM (3.8B, 12토큰/초)' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 3 2B — CPU에서 가장 빠름 (1.5 GB, 15토큰/초)' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Gemma 4 E2B — CPU에서 가장 빠름 (1.5 GB, 15토큰/초)' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.2 3B — 최고의 품질/속도 균형 (2 GB, 10토큰/초)' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Mistral Small Q4 — 16GB 이상 RAM에서 더 높은 품질 (4.5 GB, 5토큰/초)' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B Q4 — CPU 코딩에 최적 (5 GB, 4토큰/초)' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 8B — CPU 최고 코딩, 76% HumanEval (5 GB, 4-5토큰/초)' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'DeepSeek-R1 7B — 추론 및 수학에 최적 (5 GB, 4토큰/초)' },
         ],
       },
       faqSchema: {
@@ -2557,7 +2972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: '최고의 CPU 전용 LLM은 무엇입니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Phi-4 Mini(3.8B, 2.3GB, 12토큰/초)가 전체적으로 가장 우수합니다. 속도 중시: Gemma 3 2B(1.5GB, 15토큰/초). 균형: Llama 3.2 3B(2GB, 10토큰/초).',
+              text: 'Phi-4 Mini(3.8B, 2.3GB, 12토큰/초)가 전체적으로 가장 우수합니다. 속도 중시: Gemma 4 E2B(1.5GB, 15토큰/초). 균형: Llama 3.2 3B(2GB, 10토큰/초).',
             },
           },
           {
@@ -2565,7 +2980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: 'CPU 전용 추론에 얼마나 많은 RAM이 필요합니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '경험칙 사용: GGUF 파일 크기 + 500MB 오버헤드. Phi-4 Mini(2.3GB)는 3GB RAM 필요. Gemma 3 2B(1.5GB)는 2GB RAM 필요. Mistral Small Q4(4.5GB)는 5GB RAM 필요.',
+              text: '경험칙 사용: GGUF 파일 크기 + 500MB 오버헤드. Phi-4 Mini(2.3GB)는 3GB RAM 필요. Gemma 4 E2B(1.5GB)는 2GB RAM 필요. Qwen3 8B(5 GB)는 5GB RAM 필요.',
             },
           },
           {
@@ -2582,6 +2997,62 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             acceptedAnswer: {
               '@type': 'Answer',
               text: '예, 실시간 지연이 필요하지 않은 경우에 그렇습니다. 배치 처리, 비동기 API, 오프라인 워크플로는 CPU에서 모두 잘 작동합니다. 대화형 채팅(1초 미만 지연)에는 GPU를 사용하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Apple Silicon CPU를 위해 설정을 조정해야 합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '아닙니다. Ollama는 M1/M2/M3/M4를 자동으로 감지하고 통합 메모리를 효율적으로 사용합니다. Apple Silicon은 동급 Intel CPU보다 약 10~20% 빠릅니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU 전용 모드에서 7B 모델은 VRAM이 얼마나 필요합니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '전용 VRAM은 전혀 필요하지 않습니다. Q4_K_M 양자화를 적용한 7B 모델(약 4.5GB)은 5~6GB의 시스템 RAM이 필요합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU에서 LLM을 파인튜닝할 수 있습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '기술적으로는 가능하지만 실용적이지 않습니다 — CPU에서의 파인튜닝은 GPU보다 10~30배 느립니다. 추론 용도로만 CPU 전용 모드를 사용하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU에서 여러 모델을 동시에 실행할 수 있습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'RAM이 허용한다면 기술적으로 가능하지만 실용적이지 않습니다 — 메모리 경합이 발생하여 두 모델 모두 느려집니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU 전용 추론의 보안 위험은 무엇입니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'CPU 전용 추론은 데이터가 기기를 벗어나지 않기 때문에 클라우드 추론보다 더 안전합니다. OS를 최신 상태로 유지하고 물리적 기기를 안전하게 보호하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'CPU 추론에서 Ollama와 llama.cpp 사이에 속도 차이가 있습니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '차이는 미미합니다 — 두 도구 모두 동일한 핵심 CPU 최적화(AVX-512)를 사용합니다. 약 2~5%의 편차는 스레드 관리 구현 방식의 차이에서 발생합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '8~10GB RAM의 오래된 노트북에서도 CPU 전용 추론이 실용적입니까?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '예. Gemma 4 E2B(1.5GB) 또는 Phi-4 Mini(2.3GB)는 8~10GB RAM에서 3~5토큰/초로 효율적으로 실행됩니다 — 배치 처리나 경량 챗봇에는 적합하지만 실시간 채팅에는 너무 느립니다.',
             },
           },
         ],

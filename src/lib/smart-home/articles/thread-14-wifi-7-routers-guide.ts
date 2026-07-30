@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-en.png',
     title: 'Thread and Wi-Fi 7 Routers for Smart Homes (2027)',
     seoTitle: 'Thread + Wi-Fi 7 Routers for Smart Homes (2027)',
     // Thread version confirmed 2026-07-16 directly against threadgroup.org: Thread 1.4.0 (Sept 2024)
@@ -165,6 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-de.png',
     title: 'Thread und Wi-Fi-7-Router für Smart Homes (2027)',
     seoTitle: 'Thread + Wi-Fi-7-Router für Smart Homes (2027)',
     intro:
@@ -316,6 +318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-fr.png',
     title: 'Thread et routeurs Wi-Fi 7 pour maisons connectées (2027)',
     seoTitle: 'Thread + routeurs Wi-Fi 7 pour maisons connectées (2027)',
     intro:
@@ -467,6 +470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-ja.png',
     title: 'スマートホーム向けThreadとWi-Fi 7ルーター（2027年）',
     seoTitle: 'スマートホーム向けThread + Wi-Fi 7ルーター（2027年）',
     intro:
@@ -618,6 +622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-zh.png',
     title: '智能家居的Thread与Wi-Fi 7路由器（2027年）',
     seoTitle: '智能家居Thread + Wi-Fi 7路由器（2027年）',
     intro:
@@ -769,6 +774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-es.png',
     title: 'Thread y routers Wi-Fi 7 para hogares inteligentes (2027)',
     seoTitle: 'Thread + routers Wi-Fi 7 para hogares inteligentes (2027)',
     intro:
@@ -920,6 +926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-pt.png',
     title: 'Thread e roteadores Wi-Fi 7 para casas inteligentes (2027)',
     seoTitle: 'Thread + roteadores Wi-Fi 7 para casas inteligentes (2027)',
     intro:
@@ -1071,6 +1078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-ar.png',
     title: 'Thread وأجهزة توجيه Wi-Fi 7 للمنازل الذكية (⁨2027⁩)',
     seoTitle: 'Thread + أجهزة توجيه Wi-Fi 7 للمنازل الذكية (⁨2027⁩)',
     intro:
@@ -1222,6 +1230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
+    heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-ko.png',
     title: '스마트홈을 위한 Thread와 Wi-Fi 7 라우터 (2027년)',
     seoTitle: '스마트홈용 Thread + Wi-Fi 7 라우터 (2027년)',
     intro:

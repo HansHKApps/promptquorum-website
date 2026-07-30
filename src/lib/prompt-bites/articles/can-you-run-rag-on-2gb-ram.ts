@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quick Answers',
+    heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-en.png',
     title: 'Can You Run RAG on 2 GB RAM?',
     dateModified: '2026-06-20',
     seoTitle: 'Run RAG on 2 GB RAM 2026? | Prompt Bites | PromptQuorum',
@@ -122,6 +123,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Quick Answers',
+    heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-de.png',
     title: 'Kann man RAG mit 2 GB RAM betreiben?',
     seoTitle: 'RAG mit 2 GB RAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2-Embeddings ermöglichen RAG auf 2 GB RAM mit ~1,3–1,5 GB Speicher. 7B+ Modelle benötigen 8 GB minimum. Antwort von PromptQuorum.',
@@ -193,6 +195,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Quick Answers',
+    heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-fr.png',
     title: 'Peut-on exécuter RAG avec 2 Go de RAM ?',
     seoTitle: 'RAG avec 2 Go de RAM 2026 ? | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2 permettent RAG sur 2 Go de RAM (~1,3–1,5 Go total). Modèles 7B+ nécessitent 8 Go minimum. Réponse rapide de PromptQuorum.',
@@ -264,6 +267,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Quick Answers',
+    heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-ja.png',
     title: '2 GB RAMでRAGを実行できますか？',
     seoTitle: '2 GB RAM での RAG 実行 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2 で 2 GB RAM 上の RAG が可能（~1.3–1.5 GB）。7B+ モデルは 8 GB 必須。PromptQuorum より。',
@@ -335,6 +339,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Quick Answers',
+    heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-pt.png',
     title: 'Você pode executar RAG com 2 GB de RAM?',
     seoTitle: 'RAG com 2 GB de RAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.2 1B + embeddings MiniLM-L6-v2 permitem RAG com 2 GB de RAM (~1,3–1,5 GB no total). Modelos 7B+ precisam de 8 GB. Resposta rápida do PromptQuorum.',
@@ -406,6 +411,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Quick Answers',
+    heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-es.png',
     title: '¿Puedes Ejecutar RAG con 2 GB de RAM?',
     seoTitle: 'RAG con 2 GB de RAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2 permiten RAG con 2 GB de RAM (~1,3–1,5 GB total). Los modelos 7B+ necesitan al menos 8 GB. Respuesta rápida de PromptQuorum.',
@@ -477,6 +483,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Quick Answers',
+    heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-zh.png',
     title: '2 GB 内存能运行 RAG 吗？',
     seoTitle: '2 GB 内存 RAG 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2 让 2 GB RAM 可运行 RAG（~1.3–1.5 GB）。7B+ 模型需 8 GB。PromptQuorum 快速解答。',
@@ -548,6 +555,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Quick Answers',
+    heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-ar.png',
     title: 'هل يمكنك تشغيل ⁨RAG⁩ بذاكرة ⁨2 GB RAM⁩؟',
     seoTitle: 'تشغيل ⁨RAG⁩ على ⁨2 GB RAM⁩ في ⁨2026⁩: دليل عملي',
     metaDescription: '⁨Llama 3.2 1B Q4⁩_⁨K⁩_⁨M⁩ (~⁨750 MB⁩) مع تضمينات ⁨MiniLM-L6-v2⁩ (~⁨80 MB⁩) يشغّل ⁨RAG⁩ على ⁨2 GB RAM⁩ بإجمالي ~⁨1.3-1.5 GB⁩. النماذج ⁨7B⁩+ تحتاج ⁨8 GB⁩.',
@@ -619,6 +627,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Quick Answers',
+    heroImage: '/images/can-you-run-rag-on-2gb-ram-overview-hero-ko.png',
     title: '2 GB RAM으로 RAG를 실행할 수 있습니까?',
     seoTitle: '2 GB RAM RAG 실행 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.2 1B + MiniLM-L6-v2 임베딩으로 2 GB RAM에서 RAG를 실행할 수 있습니다(~1.3-1.5 GB). 7B+ 모델은 최소 8 GB가 필요합니다. PromptQuorum 빠른 답변.',

@@ -7,6 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'evergreen',
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/home-assistant-balcony-solar-no-cloud-overview-hero-en.png',
     title: 'No-Cloud Balcony Solar: Monitor Your System With Home Assistant',
     seoTitle: 'Balcony Solar Without the Cloud: Home Assistant Setup',
     intro: 'Most balcony solar kits ship with a vendor app that routes your production data through the manufacturer\'s cloud. That works, but it means a company you\'ve never met can see how much power your home generates and uses — and if their servers go down, so does your monitoring. Local-control hardware and Home Assistant remove that dependency entirely.',
@@ -157,6 +158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/home-assistant-balcony-solar-no-cloud-overview-hero-de.png',
     title: 'Balkonkraftwerk ohne Cloud: System mit Home Assistant überwachen',
     seoTitle: 'Balkonkraftwerk ohne Cloud: Home Assistant Einrichtung',
     intro: 'Die meisten Balkonkraftwerk-Sets werden mit einer Hersteller-App geliefert, die Ihre Erzeugungsdaten über die Hersteller-Cloud überträgt. Das funktioniert zwar, bedeutet aber, dass ein Unternehmen, das Sie nie kennengelernt haben, sehen kann, wie viel Strom Ihr Haushalt erzeugt und verbraucht — und wenn deren Server ausfallen, fällt auch Ihr Monitoring aus. Local-Control-Hardware und Home Assistant beseitigen diese Abhängigkeit vollständig.',
@@ -308,6 +310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/home-assistant-balcony-solar-no-cloud-overview-hero-es.png',
     title: 'Solar de balcón sin nube: monitorea tu sistema con Home Assistant',
     seoTitle: 'Solar de balcón sin nube: configuración con Home Assistant',
     intro: 'La mayoría de los kits de energía solar de balcón vienen con una app del fabricante que enruta los datos de tu producción a través de la nube del fabricante. Eso funciona, pero significa que una empresa que nunca has conocido puede ver cuánta energía genera y consume tu hogar — y si sus servidores caen, tu monitoreo también deja de funcionar. El hardware de control local y Home Assistant eliminan esa dependencia por completo.',
@@ -459,6 +462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/home-assistant-balcony-solar-no-cloud-overview-hero-pt.png',
     title: 'Solar de varanda sem nuvem: monitore seu sistema com o Home Assistant',
     seoTitle: 'Solar de varanda sem nuvem: configuração com Home Assistant',
     intro: 'A maioria dos kits de energia solar de varanda vem com um aplicativo do fabricante que direciona os dados de produção para a nuvem do fabricante. Isso funciona, mas significa que uma empresa que você nunca conheceu pode ver quanta energia sua casa gera e consome — e, se os servidores dela ficarem fora do ar, seu monitoramento também para. Hardware de controle local e o Home Assistant eliminam essa dependência por completo.',
@@ -610,6 +614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/home-assistant-balcony-solar-no-cloud-overview-hero-ar.png',
     title: 'الطاقة الشمسية للشرفة بدون سحابة: راقب نظامك باستخدام Home Assistant',
     seoTitle: 'طاقة شمسية للشرفة بدون سحابة: الإعداد باستخدام Home Assistant',
     intro: 'تأتي معظم أطقم الطاقة الشمسية للشرفة مع تطبيق من الشركة المصنعة يوجّه بيانات الإنتاج عبر سحابة الشركة المصنعة. هذا يعمل، لكنه يعني أن شركة لم تتعامل معها من قبل يمكنها رؤية مقدار الطاقة التي يولدها منزلك ويستهلكها — وإذا تعطلت خوادمها، يتوقف المراقبة أيضًا. أجهزة التحكم المحلي و Home Assistant تزيلان هذا الاعتماد تمامًا.',
@@ -757,6 +762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/home-assistant-balcony-solar-no-cloud-overview-hero-ja.png',
     title: 'クラウド不要のバルコニーソーラー：Home Assistantでシステムを監視する',
     seoTitle: 'クラウドなしのバルコニーソーラー：Home Assistantでの設定方法',
     intro: 'ほとんどのバルコニーソーラーキットには、発電データをメーカーのクラウドに送信するベンダーアプリが付属しています。それでも動作はしますが、面識のない企業があなたの家庭の発電量と消費量を把握できることを意味し、メーカーのサーバーがダウンすれば監視自体も止まってしまいます。ローカル制御に対応したハードウェアとHome Assistantを使えば、この依存関係を完全になくせます。',
@@ -904,6 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/home-assistant-balcony-solar-no-cloud-overview-hero-zh.png',
     title: '无云阳台光伏：用Home Assistant监控你的系统',
     seoTitle: '无云阳台光伏：Home Assistant配置指南',
     intro: '大多数阳台光伏套件都自带一个厂商App，会把你的发电数据通过厂商云端转发。这样确实能用，但也意味着一家你素未谋面的公司能看到你家发了多少电、用了多少电——一旦对方服务器宕机，你的监控也会跟着失效。本地控制硬件加上Home Assistant，可以彻底摆脱这种依赖。',
@@ -1051,6 +1058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/home-assistant-balcony-solar-no-cloud-overview-hero-fr.png',
     title: 'Solaire de balcon sans cloud : surveillez votre système avec Home Assistant',
     seoTitle: 'Solaire de balcon sans cloud : configuration avec Home Assistant',
     intro: 'La plupart des kits solaires de balcon sont livrés avec une application du fabricant qui achemine vos données de production vers le cloud du fabricant. Cela fonctionne, mais cela signifie qu\'une entreprise que vous n\'avez jamais rencontrée peut voir combien d\'énergie votre logement produit et consomme — et si ses serveurs tombent en panne, votre surveillance s\'arrête aussi. Le matériel à contrôle local et Home Assistant suppriment entièrement cette dépendance.',
@@ -1202,6 +1210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/home-assistant-balcony-solar-no-cloud-overview-hero-ko.png',
     title: '클라우드 없는 발코니 태양광: Home Assistant로 시스템을 모니터링하기',
     seoTitle: '클라우드 없는 발코니 태양광: Home Assistant 설정 방법',
     intro: '대부분의 발코니 태양광 키트는 발전 데이터를 제조사 클라우드로 전송하는 벤더 앱과 함께 제공됩니다. 이 방식도 작동은 하지만, 한 번도 만난 적 없는 회사가 우리 집의 발전량과 소비량을 볼 수 있다는 뜻이며, 그 회사의 서버가 다운되면 모니터링도 함께 멈춥니다. 로컬 제어가 가능한 하드웨어와 Home Assistant를 사용하면 이런 의존성을 완전히 없앨 수 있습니다.',

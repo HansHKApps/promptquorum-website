@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    heroImage: '/images/persona-prompting-overview-hero-en.png',
     title: 'Persona Prompting: Give Your AI a Role and Watch It Improve',
     intro: 'Persona prompting is the practice of defining a clear role, worldview, and behavior for an AI model so it consistently answers like a specific expert or character across many prompts and sessions.',
     seoTitle: 'Persona Prompting: Unlock Consistent AI Expert Behavior',
@@ -347,6 +348,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Techniken',
+    heroImage: '/images/persona-prompting-overview-hero-de.png',
     title: 'Persona-Prompting: Geben Sie Ihrer KI eine Rolle und sehen Sie die Verbesserung',
     intro: 'Persona-Prompting ist die Praxis, ein klare Rolle, Weltanschauung und Verhalten für ein KI-Modell zu definieren, damit es konsistent wie ein spezifischer Experte oder eine Fachperson über viele Prompts und Sessions hinweg antwortet.',
     seoTitle: 'Persona-Prompting: Konsistente KI-Experten-Verhalten',
@@ -692,6 +694,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    heroImage: '/images/persona-prompting-overview-hero-es.png',
     title: 'Persona Prompting: dale un rol a tu IA y observa cómo mejora',
     intro: 'El persona prompting es la práctica de definir un rol claro, una visión del mundo y un comportamiento para un modelo de IA, de modo que responda de forma consistente como un experto o personaje específico en muchos prompts y sesiones.',
     seoTitle: 'Persona Prompting: comportamiento experto y consistente',
@@ -852,6 +855,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'El persona prompting es reversible en segundos; puedes cambiar personas por tarea o por región (UE vs China vs EE. UU.) sin cambios de infraestructura.',
         ],
       },
+      howToStart: {
+        title: 'Cómo usar el prompting basado en personas',
+        numberedItems: [
+          '**Elige una persona que coincida con el estilo de salida deseado.** Para copy de marketing: "Eres un redactor creativo." Para documentación técnica: "Eres un ingeniero principal." Para accesibilidad: "Escribes para usuarios no técnicos."',
+          '**Describe la persona con rasgos específicos relevantes para tu tarea.** En lugar de "amigable", di: "Explicas conceptos técnicos con analogías, usas frases cortas, evitas la jerga y priorizas la claridad sobre la exhaustividad."',
+          '**Combina la persona con claridad de la tarea.** Ejemplo: "Eres un redactor técnico experimentado en hacer sistemas complejos accesibles para no expertos. Escribe una explicación de 500 palabras sobre cómo funciona la limitación de tasa de API."',
+          '**Usa personas para controlar el tono y el estilo sin microgestionar cada detalle.** Una persona aporta convenciones y prioridades implícitas. "Arquitecto de software" sugiere pensamiento estructurado; "periodista" sugiere narrativa basada en hechos.',
+          '**Prueba las elecciones de persona ejecutando el mismo prompt con diferentes personas y comparando las salidas.** Genera el mismo contenido como "vendedor informal" frente a "consultor profesional". Observa qué tono se ajusta mejor a tu marca o caso de uso.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Preguntas frecuentes',
@@ -896,6 +909,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   pt: {
     theme: 'Techniques',
+    heroImage: '/images/persona-prompting-overview-hero-pt.png',
     title: 'Persona Prompting: dê um papel à sua IA e veja como ela melhora',
     intro: 'O persona prompting é a prática de definir um papel claro, uma visão de mundo e um comportamento para um modelo de IA, de modo que ele responda de forma consistente como um especialista ou personagem específico em muitos prompts e sessões.',
     seoTitle: 'Persona Prompting: comportamento especializado e consistente',
@@ -1055,6 +1069,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'O persona prompting é reversível em segundos; você pode trocar personas por tarefa ou por região (UE vs China vs EUA) sem mudanças de infraestrutura.',
         ],
       },
+      howToStart: {
+        title: 'Como usar o prompting baseado em personas',
+        numberedItems: [
+          '**Escolha uma persona que corresponda ao estilo de saída desejado.** Para copy de marketing: "Você é um redator criativo." Para documentação técnica: "Você é um engenheiro principal." Para acessibilidade: "Você escreve para usuários não técnicos."',
+          '**Descreva a persona com traços específicos relevantes para sua tarefa.** Em vez de "amigável", diga: "Você explica conceitos técnicos com analogias, usa frases curtas, evita jargão e prioriza clareza em vez de completude."',
+          '**Combine a persona com clareza da tarefa.** Exemplo: "Você é um redator técnico experiente em tornar sistemas complexos acessíveis para não especialistas. Escreva uma explicação de 500 palavras sobre como funciona a limitação de taxa de API."',
+          '**Use personas para controlar o tom e o estilo sem microgerenciar cada detalhe.** Uma persona traz convenções e prioridades implícitas. "Arquiteto de software" sugere pensamento estruturado; "jornalista" sugere narrativa baseada em fatos.',
+          '**Teste escolhas de persona executando o mesmo prompt com personas diferentes e comparando as saídas.** Gere o mesmo conteúdo como "vendedor casual" vs. "consultor profissional". Veja qual tom combina melhor com sua marca ou caso de uso.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Perguntas frequentes',
@@ -1100,6 +1124,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    heroImage: '/images/persona-prompting-overview-hero-fr.png',
     title: 'Persona Prompting : Donnez un Rôle Cohérent à Votre IA',
     intro: 'Le persona prompting est la pratique de définir un rôle clair, une vision du monde et un comportement pour un modèle d\'IA, afin qu\'il réponde de façon cohérente comme un expert spécifique ou un professionnel particulier, sur plusieurs prompts et sessions.',
     seoTitle: 'Persona Prompting : Débloquez un Comportement IA Stable',
@@ -1445,6 +1470,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    heroImage: '/images/persona-prompting-overview-hero-ja.png',
     title: 'ペルソナプロンプティング：AIに一貫性のある役割を与える',
     intro: 'ペルソナプロンプティングは、AIモデルに明確な役割、世界観、行動を定義して、複数のプロンプトやセッションにわたって特定の専門家やキャラクターのように一貫して回答させる実践です。',
     seoTitle: 'ペルソナプロンプティング：AIエキスパートの一貫性を引き出す',
@@ -1608,6 +1634,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '要素': '最適用途', 'ペルソナプロンプティング': '多様な役割、テスト重視', 'ファインチューニング': '単一専門スタイル、本番環境' },
         ],
       },
+      howToStart: {
+        id: 'how-to-start-persona',
+        title: 'ペルソナベースのプロンプティングの使い方',
+        numberedItems: [
+          '**望む出力スタイルに合ったペルソナを選ぶ。** マーケティングコピーなら「あなたはクリエイティブなコピーライターです」。技術文書なら「あなたはプリンシパルエンジニアです」。アクセシビリティなら「あなたは非技術者向けに書いています」。',
+          '**タスクに関連する具体的な特性でペルソナを記述する。** 「親しみやすい」と言う代わりに: 「あなたは技術的な概念をアナロジーで説明し、短い文を使い、専門用語を避け、完全性よりも明確さを優先します。」',
+          '**ペルソナとタスクの明確さを組み合わせる。** 例: 「あなたは複雑なシステムを非専門家にアクセスしやすくすることに経験豊富なテクニカルライターです。APIレート制限の仕組みについて500語の説明を書いてください。」',
+          '**すべての詳細をマイクロマネジメントせずに、トーンとスタイルを制御するためにペルソナを使用する。** ペルソナは暗黙の慣習と優先順位をもたらします。「ソフトウェアアーキテクト」は構造化された思考を示唆し、「ジャーナリスト」は事実に基づいた語りを示唆します。',
+          '**同じプロンプトを異なるペルソナで実行し、出力を比較してペルソナの選択をテストする。** 「カジュアルなマーケター」対「プロフェッショナルなコンサルタント」として同じコンテンツを生成する。どちらのトーンがブランドやユースケースに合うか確認する。',
+        ],
+      },
       enterpriseContext: {
         id: 'enterprise-context',
         title: 'エンタープライズと規制の観点',
@@ -1683,6 +1720,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    heroImage: '/images/persona-prompting-overview-hero-zh.png',
     title: '人物角色提示：引导AI表现出一致的专家行为',
     intro: '人物角色提示是一种定义明确的角色、世界观和行为的做法，使AI模型在多个提示和会话中能够像特定专家或角色一样一致地回答问题。',
     seoTitle: '人物角色提示：释放AI专家行为的一致性',
@@ -1846,6 +1884,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '维度': '最优用途', '人物角色提示': '多样角色、测试重点', '微调': '单一专业风格、生产环境' },
         ],
       },
+      howToStart: {
+        id: 'how-to-start-persona',
+        title: '如何使用基于人物角色的提示',
+        numberedItems: [
+          '**选择符合你期望输出风格的人物角色。** 营销文案：「你是一位富有创意的文案撰稿人。」技术文档：「你是一位首席工程师。」无障碍内容：「你正在为非技术用户撰写内容。」',
+          '**用与任务相关的具体特征描述人物角色。** 不要只说「友好」，而要说：「你用类比解释技术概念，使用简短的句子，避免行话，并优先考虑清晰而非完整。」',
+          '**将人物角色与任务清晰度结合。** 示例：「你是一位擅长让复杂系统对非专家易于理解的技术撰稿人。请写一篇500字的说明，解释API速率限制的工作原理。」',
+          '**使用人物角色控制语气和风格，而无需对每个细节进行微观管理。** 一个人物角色带来隐含的惯例和优先级。「软件架构师」暗示结构化思维；「记者」暗示基于事实的叙述。',
+          '**通过用不同人物角色运行相同提示并比较输出来测试人物角色选择。** 生成相同内容作为「随性营销人员」与「专业顾问」。看看哪种语气更适合你的品牌或使用场景。',
+        ],
+      },
       enterpriseContext: {
         id: 'enterprise-context',
         title: '企业部署与监管',
@@ -1921,6 +1970,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Techniques',
+    heroImage: '/images/persona-prompting-overview-hero-ar.png',
     title: 'توجيه الشخصية: امنح ذكاءك الاصطناعي دوراً وراقب كيف يتحسن',
     intro: 'توجيه الشخصية هو ممارسة تحديد دور واضح ورؤية للعالم وسلوك لنموذج الذكاء الاصطناعي، بحيث يستجيب باستمرار كخبير أو شخصية محددة عبر عدة طلبات وجلسات.',
     seoTitle: 'توجيه الشخصية: سلوك خبير ثابت بدون ⁨fine-tuning⁩',
@@ -2082,6 +2132,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'توجيه الشخصية قابل للعكس في ثوانٍ؛ يمكنك تغيير الشخصيات حسب المهمة أو المنطقة (الاتحاد الأوروبي مقابل الصين مقابل الولايات المتحدة) دون تغييرات في البنية التحتية.',
         ],
       },
+      howToStart: {
+        title: 'كيفية استخدام التوجيه القائم على الشخصية',
+        numberedItems: [
+          '**اختر شخصية تتوافق مع أسلوب الإخراج المطلوب.** لنص تسويقي: "أنت كاتب إعلانات مبدع." للتوثيق التقني: "أنت مهندس رئيسي." لسهولة الوصول: "أنت تكتب لمستخدمين غير تقنيين."',
+          '**صف الشخصية بسمات محددة ذات صلة بمهمتك.** بدلاً من "ودود"، قل: "أنت تشرح المفاهيم التقنية بالتشبيهات، وتستخدم جملاً قصيرة، وتتجنب المصطلحات المتخصصة، وتُعطي الأولوية للوضوح على الاكتمال."',
+          '**اجمع بين الشخصية ووضوح المهمة.** مثال: "أنت كاتب تقني ذو خبرة في جعل الأنظمة المعقدة سهلة الفهم لغير المتخصصين. اكتب شرحاً من 500 كلمة حول كيفية عمل تحديد معدل API."',
+          '**استخدم الشخصيات للتحكم في النبرة والأسلوب دون إدارة كل تفصيل بدقة مفرطة.** تجلب الشخصية أعرافاً وأولويات ضمنية. "مهندس برمجيات" يوحي بتفكير منظم؛ "صحفي" يوحي بسرد قائم على الحقائق.',
+          '**اختبر خيارات الشخصية بتشغيل نفس الطلب مع شخصيات مختلفة ومقارنة المخرجات.** أنشئ نفس المحتوى كـ"مسوّق غير رسمي" مقابل "مستشار محترف". لاحظ أي نبرة تناسب علامتك التجارية أو حالة استخدامك بشكل أفضل.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
@@ -2127,6 +2187,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: '기법',
+    heroImage: '/images/persona-prompting-overview-hero-ko.png',
     title: '페르소나 프롬프팅: AI에게 역할을 부여하고 개선을 확인하십시오',
     intro: '페르소나 프롬프팅은 AI 모델이 여러 프롬프트와 세션에 걸쳐 특정 전문가나 캐릭터처럼 일관되게 응답하도록 명확한 역할, 세계관, 행동 방식을 정의하는 기법입니다.',
     seoTitle: '페르소나 프롬프팅: 일관된 AI 전문가 행동 구현',

@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
       title: 'What Are Local LLMs? How Running AI Models on Your Own Hardware Works',
+      heroImage: '/images/what-are-local-llms-overview-hero-en.png',
       seoTitle: 'What Are Local LLMs? How AI Models Run on Your Hardware',
       intro: 'A local LLM is an AI language model that runs entirely on your own hardware -- no internet connection, no API calls, no data leaving your machine. You download the model weights as a file, run an inference engine like Ollama or LM Studio, and the model responds from your CPU or GPU alone. As of April 2026, the most practical models for beginners are Llama 3.2 3B and Phi-3 Mini.',
       metaDescription: 'Local LLMs run AI models on your own hardware -- no internet required. Learn what they are, how they work, and when to use them. Guide for 2026.',
@@ -268,6 +269,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
       title: '¿Qué son los LLM locales? Cómo ejecutar modelos de IA en tu propio hardware',
+      heroImage: '/images/what-are-local-llms-overview-hero-es.png',
       seoTitle: '¿Qué son los LLM locales? IA que corre en tu hardware',
       intro: 'Un LLM local es un modelo de lenguaje de IA que se ejecuta completamente en tu propio hardware: sin conexión a internet, sin llamadas a API, sin datos que abandonen tu máquina. Descarga los pesos del modelo como un archivo, ejecuta un motor de inferencia como Ollama o LM Studio, y el modelo responde desde tu CPU o GPU. A partir de abril de 2026, los modelos más prácticos para principiantes son Llama 3.2 3B y Phi-3 Mini.',
       metaDescription: 'Los LLM locales ejecutan modelos de IA en tu propio hardware, sin necesidad de internet. Aprende qué son, cómo funcionan y cuándo usarlos. Guía para 2026.',
@@ -523,6 +525,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
       title: 'ما هي نماذج ⁨LLM⁩ المحلية؟ كيف تشغّل نماذج الذكاء الاصطناعي على عتادك الخاص',
+      heroImage: '/images/what-are-local-llms-overview-hero-ar.png',
       seoTitle: 'ما هي نماذج ⁨LLM⁩ المحلية؟ ذكاء اصطناعي يعمل على عتادك',
       intro: 'نموذج LLM المحلي هو نموذج لغة ذكاء اصطناعي يعمل بالكامل على عتادك الخاص: بلا اتصال بالإنترنت، وبلا استدعاءات API، وبلا بيانات تغادر جهازك. نزّل أوزان النموذج كملف، شغّل محرك استدلال مثل Ollama أو LM Studio، فيستجيب النموذج من CPU أو GPU لديك. اعتبارًا من أبريل 2026، أكثر النماذج عملية للمبتدئين هي Llama 3.2 3B وPhi-3 Mini.',
       metaDescription: 'تعمل نماذج ⁨LLM⁩ المحلية بالكامل على عتادك بلا إنترنت. نموذج ⁨7B⁩ بـ ⁨Q4⁩ يحتاج ⁨8 GB RAM⁩ فقط. دليل ⁨Ollama⁩ و⁨LM Studio⁩ وصيغة ⁨GGUF⁩ لعام ⁨2026⁩.',
@@ -780,6 +783,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
       title: 'O que são LLMs locais? Como rodar modelos de IA no seu próprio hardware',
+      heroImage: '/images/what-are-local-llms-overview-hero-pt.png',
       seoTitle: 'O que são LLMs locais? IA que roda no seu hardware',
       intro: 'Um LLM local é um modelo de linguagem de IA que roda inteiramente no seu próprio hardware: sem conexão à internet, sem chamadas de API, sem dados saindo da sua máquina. Você baixa os pesos do modelo como um arquivo, roda um motor de inferência como o Ollama ou o LM Studio, e o modelo responde a partir da sua CPU ou GPU. A partir de abril de 2026, os modelos mais práticos para iniciantes são Llama 3.2 3B e Phi-3 Mini.',
       metaDescription: 'Os LLMs locais rodam modelos de IA no seu próprio hardware, sem precisar de internet. Aprenda o que são, como funcionam e quando usá-los. Guia para 2026.',
@@ -1034,6 +1038,7 @@ schema: {
     fr: {
       theme: 'Premiers pas',
       title: 'Qu\'est-ce que les LLMs locaux ? Comment exécuter des modèles IA sur votre propre matériel',
+      heroImage: '/images/what-are-local-llms-overview-hero-fr.png',
       seoTitle: 'LLMs locaux 2026 : avantages, risques et guide de démarrage',
       intro: 'Un LLM local est un modèle de langage IA exécuté entièrement sur votre propre matériel -- sans connexion internet, sans appels API, sans données quittant votre machine. Téléchargez les poids du modèle, lancez un moteur d\'inférence comme Ollama ou LM Studio, et obtenez des réponses depuis votre CPU ou GPU. En avril 2026, les modèles les plus pratiques pour débuter sont Llama 3.2 3B et Phi-3 Mini.',
       metaDescription: 'LLMs locaux : confidentialité totale, coût zéro, utilisation hors ligne. Comparez les avantages et inconvénients, commencez avec Ollama et LM Studio.',
@@ -1062,6 +1067,16 @@ schema: {
           { '@type': 'HowToStep', 'name': "Accélérer l'inférence lente", 'text': "Confirmer l'activité du GPU avec ollama ps, réduire la taille du modèle ou utiliser Q4_K_M." },
           { '@type': 'HowToStep', 'name': 'Corriger la connexion refusée', 'text': 'Démarrer Ollama avec ollama serve ou redémarrer le service systemd. Vérifier avec curl localhost:11434.' },
           { '@type': 'HowToStep', 'name': 'Résoudre le modèle non trouvé', 'text': 'Lister les modèles avec ollama list, extraire les modèles manquants avec ollama pull, vérifier les noms/tags exacts.' },
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'L\'essentiel des LLMs locaux',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Qu\'est-ce qu\'un LLM local ?', 'description': 'Un modèle IA qui s\'exécute sur votre propre matériel sans internet ni appels API, avec une confidentialité totale des données et un coût par token nul.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Comment ça fonctionne', 'description': 'Trois composants travaillent ensemble : le fichier modèle (format GGUF), un moteur d\'inférence (Ollama, LM Studio, llama.cpp) et une interface.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Configuration matérielle requise', 'description': 'Minimum 8 GB de RAM pour un modèle 7B en quantification Q4 ; 16 GB de RAM suffisent pour la plupart des usages courants.' },
         ]
       },
       sections: {
@@ -1202,6 +1217,7 @@ schema: {
     ja: {
       theme: 'はじめに',
       title: 'ローカルLLMとは？自分のハードウェアでAIモデルを実行する方法',
+      heroImage: '/images/what-are-local-llms-overview-hero-ja.png',
       seoTitle: 'ローカルLLM 2026：メリット・デメリット・入門ガイド',
       intro: 'ローカルLLM（大規模言語モデル）とは、あなたのハードウェア上で完全に実行されるAIモデルです。インターネット接続不要、API呼び出しなし、データは一切外に出ません。モデルの重みをダウンロードしてOllamaやLM Studioなどの推論エンジンを実行すれば、あなたのCPUまたはGPUから直接応答が得られます。2026年4月現在、初心者向けの実用的なモデルはLlama 3.2 3BおよびPhi-3 Miniです。',
       metaDescription: 'ローカルLLM：完全なプライバシー、コストゼロ、オフライン利用。メリット・デメリットを比較、OllamaとLM Studioで今すぐ始める。',
@@ -1219,6 +1235,16 @@ schema: {
         { label: 'いつローカルLLMを使うべき？', anchor: '#when-should-you-use-a-local-llm' },
         { label: 'よくある質問', anchor: '#common-questions' },
       ],
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'ローカルLLMの基本',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'ローカルLLMとは？', 'description': 'インターネット接続もAPI呼び出しも不要で、あなたのハードウェア上で動作するAIモデル。データは完全にプライベートで、トークン費用もかかりません。' },
+          { '@type': 'ListItem', 'position': 2, 'name': '仕組み', 'description': '3つの要素が連携します。モデルファイル（GGUF形式）、推論エンジン（Ollama、LM Studio、llama.cpp）、そしてインターフェースです。' },
+          { '@type': 'ListItem', 'position': 3, 'name': '必要なハードウェア', 'description': '7Bパラメータモデルを4ビット量子化で実行する場合、最低8GBのRAMが必要です。16GBあれば日常的な用途を快適にこなせます。' },
+        ]
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1357,6 +1383,7 @@ schema: {
     zh: {
       theme: '入门',
       title: '什么是本地LLM？在自己的硬件上运行AI模型的方法',
+      heroImage: '/images/what-are-local-llms-overview-hero-zh.png',
       seoTitle: '本地LLM 2026：优势、风险和入门指南',
       intro: '本地LLM（大型语言模型）是在您自己的硬件上完全运行的AI模型。无需互联网连接，无需API调用，数据永远不会离开您的机器。下载模型权重，运行推理引擎如Ollama或LM Studio，从您的CPU或GPU获取直接响应。2026年4月，初学者最实用的模型是Llama 3.2 3B和Phi-3 Mini。',
       metaDescription: '本地LLM：完全隐私、零成本、离线使用。比较优劣，用Ollama和LM Studio立即开始。',
@@ -1374,6 +1401,16 @@ schema: {
         { label: '何时使用本地LLM？', anchor: '#when-should-you-use-a-local-llm' },
         { label: '常见问题', anchor: '#common-questions' },
       ],
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '本地LLM要点',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '什么是本地LLM？', 'description': '一种在您自己的硬件上运行的AI模型，无需互联网或API调用，具有完全的数据隐私和零token成本。' },
+          { '@type': 'ListItem', 'position': 2, 'name': '工作原理', 'description': '三个组件协同工作：模型文件（GGUF格式）、推理引擎（Ollama、LM Studio、llama.cpp）和界面。' },
+          { '@type': 'ListItem', 'position': 3, 'name': '硬件要求', 'description': '以Q4量化运行7B模型最低需要8GB RAM；16GB RAM足以应对大多数日常使用场景。' },
+        ]
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1512,6 +1549,7 @@ schema: {
     de: {
       theme: 'Erste Schritte',
       title: 'Was sind lokale LLMs? Wie die Ausführung von KI-Modellen auf Ihrer eigenen Hardware funktioniert',
+      heroImage: '/images/what-are-local-llms-overview-hero-de.png',
       seoTitle: 'Was sind lokale LLMs? Vorteile, Risiken & Einstieg 2026',
       intro: 'Ein lokales LLM ist ein KI-Sprachmodell, das vollständig auf Ihrer eigenen Hardware ausgeführt wird -- keine Internetverbindung, keine API-Aufrufe, keine Daten, die Ihren Computer verlassen. Sie laden die Modellgewichte als Datei herunter, führen eine Inferenz-Engine wie Ollama oder LM Studio aus, und das Modell antwortet ausschließlich von Ihrer CPU oder GPU. Ab April 2026 sind die praktischsten Modelle für Anfänger Llama 3.2 3B und Phi-3 Mini.',
       metaDescription: 'Was sind lokale LLMs? KI-Modelle, die offline auf Ihrer Hardware laufen. Vorteile, Funktionsweise und Einstieg in lokale Sprachmodelle ohne Cloud.',
@@ -1529,6 +1567,16 @@ schema: {
         { label: 'Wann sollten Sie ein lokales LLM verwenden?', anchor: '#when-should-you-use-a-local-llm' },
         { label: 'Häufig gestellte Fragen', anchor: '#common-questions' },
       ],
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Grundlagen lokaler LLMs',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Was ist ein lokales LLM?', 'description': 'Ein KI-Modell, das ohne Internetverbindung oder API-Aufrufe auf Ihrer eigenen Hardware läuft -- mit vollständiger Datenprivatsphäre und null Kosten pro Token.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Funktionsweise', 'description': 'Drei Komponenten arbeiten zusammen: die Modelldatei (GGUF-Format), eine Inferenz-Engine (Ollama, LM Studio, llama.cpp) und eine Schnittstelle.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Hardwareanforderungen', 'description': 'Mindestens 8 GB RAM für ein 7B-Modell mit Q4-Quantisierung; 16 GB RAM reichen für die meisten alltäglichen Anwendungsfälle komfortabel aus.' },
+        ]
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',
@@ -1669,6 +1717,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Getting Started',
       title: '로컬 LLM이란 무엇인가요? 자체 하드웨어에서 AI 모델을 실행하는 방법',
+    heroImage: '/images/what-are-local-llms-overview-hero-ko.png',
       seoTitle: '로컬 LLM이란? 자체 하드웨어에서 AI 모델을 실행하는 방법',
       intro: '로컬 LLM은 인터넷 연결 없이, API 호출 없이, 데이터 외부 전송 없이 완전히 자체 하드웨어에서 실행되는 AI 언어 모델입니다. 모델 가중치를 파일로 다운로드하고 Ollama 또는 LM Studio와 같은 추론 엔진을 실행하면, 모델이 CPU 또는 GPU만으로 응답합니다. 2026년 4월 기준, 초보자에게 가장 실용적인 모델은 Llama 3.2 3B와 Phi-3 Mini입니다.',
       metaDescription: '로컬 LLM은 인터넷 없이 자체 하드웨어에서 AI 모델을 실행합니다. 로컬 LLM이 무엇인지, 어떻게 작동하는지, 언제 사용해야 하는지 알아보세요. 2026년 가이드.',
@@ -1689,6 +1738,16 @@ schema: {
         { label: '언제 로컬 LLM을 사용해야 하나요?', anchor: '#when-should-you-use-a-local-llm' },
         { label: '자주 묻는 질문', anchor: '#common-questions' },
       ],
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '로컬 LLM 핵심 요소',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '로컬 LLM이란?', 'description': '인터넷 연결이나 API 호출 없이 자체 하드웨어에서 실행되는 AI 모델로, 완전한 데이터 프라이버시와 제로 토큰 비용을 제공합니다.' },
+          { '@type': 'ListItem', 'position': 2, 'name': '작동 방식', 'description': '세 가지 구성 요소가 함께 작동합니다: 모델 파일(GGUF 형식), 추론 엔진(Ollama, LM Studio, llama.cpp), 그리고 인터페이스입니다.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '하드웨어 요구 사항', 'description': 'Q4 양자화된 7B 모델을 실행하려면 최소 8GB RAM이 필요합니다. 16GB RAM이면 대부분의 일상적인 사용 사례를 편안하게 처리할 수 있습니다.' },
+        ]
+      },
       sections: {
         tldr: {
           id: 'key-takeaways',

@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     next_refresh_due: '2026-07-12',
     is_living_page: true,
     theme: 'Knowledge & Research',
+    heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-en.png',
     type: 'reference',
     title: 'AI Model Knowledge Cutoff Dates 2026: Complete Cheat Sheet',
     seoTitle: 'AI Model Knowledge Cutoff Dates 2026 | PromptQuorum Cheat Sheet',
@@ -316,6 +317,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-07-12',
     theme: 'Knowledge & Research',
+    heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-de.png',
     title: 'KI-Modell Wissens-Cutoff-Daten 2026: Vollständige Übersicht',
     seoTitle: 'KI Wissens-Cutoff-Daten 2026 | PromptQuorum',
     metaDescription: 'Verifizierte Wissens-Cutoff-Daten für Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma und Phi. Welche Modelle live suchen — und welche eingefroren sind.',
@@ -342,17 +344,41 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[Lokale LLM-Modell-Updates 2026](/de/local-llms/local-llm-model-updates-2026) — alle wichtigen Open-Weight-Releases und deren Einfluss auf den Cutoff-Zeitraum',
         ],
       },
+      faq: {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen zu KI-Wissens-Cutoff-Daten',
+        faqs: [
+          { q: 'Was ist ein Wissens-Cutoff-Datum bei KI?', a: 'Ein Wissens-Cutoff-Datum ist das Datum, nach dem ein KI-Modell keine Trainingsdaten mehr hat. Ereignisse, Produktveröffentlichungen oder Informationen nach diesem Datum sind für das Modell unsichtbar, es sei denn, es kann im Live-Web suchen oder erhält die Information im Prompt.' },
+          { q: 'Was ist der Unterschied zwischen Wissens-Cutoff und Live-Suche?', a: 'Ein Wissens-Cutoff ist eine Eigenschaft der Trainingsdaten des Modells — ein fixes, eingefrorenes Datum. Live-Suche ist eine zusätzliche Fähigkeit, die aktuelle Webseiten zur Abfragezeit abruft. Lokale LLMs haben standardmäßig keine Live-Suche.' },
+          { q: 'Aktualisieren lokale LLMs jemals ihr Wissen?', a: 'Nein. Das Wissen eines lokalen LLM ist bei seinem Trainings-Cutoff eingefroren und bleibt dauerhaft eingefroren. Um Zugriff auf neuere Informationen zu geben, muss man entweder das Modell neu trainieren oder eine RAG-Pipeline aufbauen.' },
+          { q: 'Welche KI-Modelle können aktuelle Nachrichten sehen?', a: 'ChatGPT, Gemini und Grok haben standardmäßig Zugriff auf aktuelle Informationen über eingebaute Websuche. Claude kann nur suchen, wenn Entwickler das Websuche-Tool explizit aktivieren. Lokale LLMs (Llama, Qwen, Gemma, Phi) haben keinen Standard-Suchzugriff.' },
+        ],
+      },
     },
   },
   fr: {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-07-12',
     theme: 'Knowledge & Research',
+    heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-fr.png',
     title: 'Dates de Coupure des Modèles IA 2026 : Référence Complète',
     seoTitle: 'Dates de Coupure IA 2026 | PromptQuorum',
     metaDescription: 'Dates de coupure vérifiées pour Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma et Phi. Quels modèles utilisent la recherche live — et lesquels sont figés dans le temps.',
     publishDate: '2026-06-12',
     dateModified: '2026-06-21',
+    quickAnswerTop: {
+      fr: {
+        question: 'Quelles sont les dates de coupure des modèles d\'IA en 2026 ?',
+        answer: 'Coupures vérifiées : GPT-5.5 août 2025 (ChatGPT recherche Bing par défaut ; GPT-4o legacy oct 2023) ; Claude Opus 4.8 janvier 2026 (coupure fiable) ; Grok 4.3 novembre 2024 (recherche X) ; Gemini 3.1 Pro janvier 2025 (Google Search natif). Les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont pas de couche de recherche — leur coupure est une limite absolue.',
+        bullets: [
+          'GPT-5.5 (ChatGPT) : coupure août 2025 — partiellement compensée par Bing',
+          'Claude (Opus 4.8) : coupure jan 2026 (fiable) — recherche web opt-in uniquement',
+          'Grok 4.3 : coupure nov 2024 — recherche X par défaut',
+          'LLM locaux : aucune recherche — la coupure est une limite dure',
+        ],
+        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -362,6 +388,32 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Les modèles cloud (ChatGPT, Gemini, Grok) compensent partiellement via la recherche web intégrée',
           'Les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont AUCUNE couche de recherche — leur coupure est une limite absolue',
           'Plusieurs grands modèles — Mistral Large, Llama 4, Qwen3 — n\'ont pas divulgué de dates de coupure exactes',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Questions fréquentes sur les dates de coupure des modèles IA',
+        faqs: [
+          {
+            q: 'Qu\'est-ce qu\'une date de coupure des connaissances en IA ?',
+            a: 'Une date de coupure des connaissances est la date après laquelle un modèle d\'IA n\'a plus aucune donnée d\'entraînement. Les événements, lancements de produits, publications de recherche ou toute information publiée après la coupure sont invisibles pour le modèle. Le modèle ne peut pas connaître ces éléments, sauf s\'il peut effectuer une recherche web en direct ou si l\'information lui est fournie dans le prompt.',
+          },
+          {
+            q: 'Quelle est la différence entre une date de coupure et la recherche en direct ?',
+            a: 'Une date de coupure est une propriété des données d\'entraînement du modèle — une date fixe et figée. La recherche en direct est une capacité ajoutée par-dessus le modèle qui lui permet de récupérer des pages web actuelles au moment de la requête. ChatGPT (Bing), Gemini (Google) et Grok (X) disposent de la recherche en direct par défaut. Claude nécessite une activation explicite de l\'outil. Les LLM locaux n\'ont pas de recherche en direct par défaut — il faut construire un pipeline RAG pour l\'ajouter.',
+          },
+          {
+            q: 'Les LLM locaux mettent-ils un jour à jour leurs connaissances ?',
+            a: 'Non. Les connaissances d\'un LLM local sont figées à sa date de coupure d\'entraînement et le restent indéfiniment. Pour donner à un LLM local accès à des informations plus récentes, il faut soit : (1) réentraîner ou affiner le modèle sur des données plus récentes (coûteux), soit (2) construire un pipeline RAG (génération augmentée par récupération) qui récupère les documents pertinents au moment de la requête et les injecte dans le prompt.',
+          },
+          {
+            q: 'Quels modèles d\'IA peuvent voir les actualités et événements actuels ?',
+            a: 'ChatGPT (utilise Bing par défaut dans les offres payantes), Gemini 3.1 Pro (utilise Google par défaut) et Grok 4.3 (recherche X/Twitter par défaut) peuvent accéder aux informations actuelles. Perplexity est nativement connecté au web et récupère des résultats en direct pour chaque requête. Claude ne peut rechercher sur le web que si les développeurs activent explicitement l\'outil de recherche web. DeepSeek, Mistral Large et tous les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont pas d\'accès à la recherche par défaut.',
+          },
+          {
+            q: 'La date de coupure de ChatGPT correspond-elle à ce qu\'il sait actuellement ?',
+            a: 'Non. ChatGPT (le produit) dispose à la fois d\'une date de coupure d\'entraînement et d\'une capacité de recherche Bing en direct. Pour les requêtes factuelles récentes, il recherche sur Bing et complète sa réponse avec des résultats actuels — ce qu\'il « sait » au moment de la requête peut donc être bien plus récent que la coupure d\'entraînement. La coupure d\'entraînement reste importante pour : la compréhension nuancée des événements (pas seulement des faits), les connaissances contextuelles intégrées à son raisonnement, et toute information non indexée par Bing.',
+          },
         ],
       },
       relatedBites: {
@@ -380,11 +432,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-07-12',
     theme: 'Knowledge & Research',
+    heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-ja.png',
     title: 'AIモデルの知識カットオフ日2026：完全チートシート',
     seoTitle: 'AIモデル知識カットオフ日2026 | PromptQuorum',
     metaDescription: 'Claude、ChatGPT、Gemini、Grok、Llama、Qwen、Gemma、Phiの検証済み知識カットオフ日。どのモデルがライブ検索を使用し、どのモデルが凍結されているかを解説。',
     publishDate: '2026-06-12',
     dateModified: '2026-06-21',
+    quickAnswerTop: {
+      ja: {
+        question: 'AIモデルの知識カットオフ日は2026年現在どうなっていますか？',
+        answer: '確認済みカットオフ：GPT-5.5は2025年8月（ChatGPTはデフォルトでBing検索；GPT-4oレガシーは2023年10月）、Claude Opus 4.8は2026年1月（信頼性の高いカットオフ）、Grok 4.3は2024年11月（X検索）、Gemini 3.1 Proは2025年1月（Google Search統合）。ローカルLLM（Llama、Qwen、Gemma、Phi）は検索レイヤーなし — カットオフは絶対的な制限。',
+        bullets: [
+          'GPT-5.5 (ChatGPT)：カットオフ2025年8月 — Bing検索で部分補完',
+          'Claude (Opus 4.8)：カットオフ2026年1月（信頼性高）— ウェブ検索はオプトイン',
+          'Grok 4.3：カットオフ2024年11月 — X検索をデフォルトで使用',
+          'ローカルLLM：検索なし — カットオフは固定された絶対的な知識の限界',
+        ],
+        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -394,6 +460,32 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'クラウドモデル（ChatGPT、Gemini、Grok）は組み込みのウェブ検索で部分的に補完',
           'ローカルLLM（Llama、Qwen、Gemma、Phi）は検索レイヤーなし — カットオフは絶対的な制限',
           'Mistral Large、Llama 4、Qwen3など主要モデルのカットオフ日は非公開',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'AIの知識カットオフ日に関するよくある質問',
+        faqs: [
+          {
+            q: 'AIにおける知識カットオフ日とは何ですか？',
+            a: '知識カットオフ日とは、その日以降のトレーニングデータをAIモデルが持たなくなる日付のことです。カットオフ後に発表された出来事、製品発売、研究論文、その他の情報はモデルには見えません。モデルがライブでウェブ検索できるか、プロンプトにその情報が与えられない限り、これらの存在を知ることはできません。',
+          },
+          {
+            q: '知識カットオフとライブ検索の違いは何ですか？',
+            a: '知識カットオフはモデルのトレーニングデータの特性であり、固定された凍結日です。ライブ検索はモデルに追加された機能で、クエリ時点の現在のウェブページを取得できます。ChatGPT（Bing）、Gemini（Google）、Grok（X）はデフォルトでライブ検索を備えています。Claudeは明示的なツールの有効化が必要です。ローカルLLMはデフォルトでライブ検索を持たず、追加するにはRAGパイプラインを構築する必要があります。',
+          },
+          {
+            q: 'ローカルLLMは知識を更新することがありますか？',
+            a: 'いいえ。ローカルLLMの知識はトレーニングのカットオフ時点で凍結され、それ以降は永久に更新されません。ローカルLLMに新しい情報へのアクセスを与えるには、（1）新しいデータでモデルをファインチューニングまたは再トレーニングする（コストがかかる）、または（2）クエリ時点で関連文書を取得しプロンプトに注入するRAG（検索拡張生成）パイプラインを構築する、のいずれかが必要です。',
+          },
+          {
+            q: '今日のニュースや最新の出来事を確認できるAIモデルはどれですか？',
+            a: 'ChatGPT（有料プランではデフォルトでBingを使用）、Gemini 3.1 Pro（デフォルトでGoogleを使用）、Grok 4.3（デフォルトでX/Twitterを検索）は最新情報にアクセスできます。Perplexityはウェブ検索ネイティブで、すべてのクエリに対してライブ結果を取得します。Claudeは開発者がウェブ検索ツールを明示的に有効化した場合のみウェブ検索が可能です。DeepSeek、Mistral Large、およびすべてのローカルLLM（Llama、Qwen、Gemma、Phi）はデフォルトの検索アクセスを持ちません。',
+          },
+          {
+            q: 'ChatGPTのカットオフ日は、現在知っていることと同じですか？',
+            a: 'いいえ。ChatGPT（製品）はトレーニングのカットオフ日とライブBing検索機能の両方を備えています。最近の事実に関するクエリでは、Bingを検索して最新の結果で回答を補完するため、クエリ時点で「知っている」内容はトレーニングカットオフよりもはるかに新しいことがあります。ただし、トレーニングカットオフは、単なる事実だけでなく出来事の微妙な理解、推論に織り込まれた文脈的知識、Bingにインデックスされていない情報については依然として重要です。',
+          },
         ],
       },
       relatedBites: {
@@ -412,11 +504,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-07-12',
     theme: 'Knowledge & Research',
+    heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-zh.png',
     title: 'AI模型知识截止日期2026：完整参考表',
     seoTitle: 'AI模型知识截止日期2026 | PromptQuorum',
     metaDescription: 'Claude、ChatGPT、Gemini、Grok、Llama、Qwen、Gemma和Phi的已验证知识截止日期。哪些模型使用实时搜索，哪些模型知识被冻结。',
     publishDate: '2026-06-12',
     dateModified: '2026-06-21',
+    quickAnswerTop: {
+      zh: {
+        question: '2026年AI模型的知识截止日期是什么？',
+        answer: '已验证截止日期：GPT-5.5 2025年8月（ChatGPT默认搜索Bing；GPT-4o旧版2023年10月）；Claude Opus 4.8 2026年1月（可靠截止日期）；Grok 4.3 2024年11月（搜索X）；Gemini 3.1 Pro 2025年1月（原生Google Search集成）。本地LLM（Llama、Qwen、Gemma、Phi）无搜索层——截止日期是绝对硬限制。',
+        bullets: [
+          'GPT-5.5 (ChatGPT)：截止2025年8月 — 由Bing搜索部分补充',
+          'Claude (Opus 4.8)：截止2026年1月（可靠）— 网络搜索需手动启用',
+          'Grok 4.3：截止2024年11月 — 默认搜索X',
+          '本地LLM：无搜索层 — 截止日期是冻结的绝对知识边界',
+        ],
+        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -426,6 +532,32 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '云端模型（ChatGPT、Gemini、Grok）通过内置网络搜索部分弥补这一限制',
           '本地LLM（Llama、Qwen、Gemma、Phi）无搜索层——截止日期是绝对的知识边界',
           'Mistral Large、Llama 4、Qwen3等多个主要模型未公开具体截止日期',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '关于AI知识截止日期的常见问题',
+        faqs: [
+          {
+            q: 'AI中的知识截止日期是什么？',
+            a: '知识截止日期是指AI模型不再拥有训练数据的日期。截止日期之后发布的事件、产品发布、研究论文或任何信息对模型来说都是不可见的。除非模型可以进行实时网络搜索，或在提示中提供相关信息，否则模型无法知晓这些内容。',
+          },
+          {
+            q: '知识截止日期与实时搜索有什么区别？',
+            a: '知识截止日期是模型训练数据的一个属性——一个固定的冻结日期。实时搜索是叠加在模型之上的一项能力，使其能够在查询时检索当前的网页。ChatGPT（Bing）、Gemini（Google）和Grok（X）默认具备实时搜索功能。Claude需要显式启用工具。本地LLM默认没有实时搜索——需要构建RAG管道才能添加此功能。',
+          },
+          {
+            q: '本地LLM会更新其知识吗？',
+            a: '不会。本地LLM的知识在其训练截止日期被冻结，并无限期保持冻结状态。要让本地LLM获取更新的信息，必须：（1）用更新的数据对模型进行微调或重新训练（成本较高），或（2）构建一个RAG（检索增强生成）管道，在查询时获取相关文档并将其注入提示中。',
+          },
+          {
+            q: '哪些AI模型可以查看今天的新闻和最新事件？',
+            a: 'ChatGPT（在付费套餐中默认使用Bing）、Gemini 3.1 Pro（默认使用Google）和Grok 4.3（默认搜索X/Twitter）可以访问最新信息。Perplexity原生支持网络搜索，每次查询都会检索实时结果。Claude只有在开发者明确启用网络搜索工具时才能进行网络搜索。DeepSeek、Mistral Large以及所有本地LLM（Llama、Qwen、Gemma、Phi）默认没有搜索访问权限。',
+          },
+          {
+            q: 'ChatGPT的截止日期与它当前所知道的内容相同吗？',
+            a: '不同。ChatGPT（产品）同时具有训练截止日期和实时Bing搜索功能。对于近期的事实性查询，它会搜索Bing并用最新结果补充其回答——因此它在查询时"知道"的内容可能比训练截止日期新得多。但训练截止日期对以下方面仍然很重要：对事件（而不仅仅是事实）的细致理解、融入其推理的上下文知识，以及任何未被Bing索引的信息。',
+          },
         ],
       },
       relatedBites: {
@@ -444,11 +576,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-07-12',
     theme: 'Knowledge & Research',
+    heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-ko.png',
     title: 'AI 모델 지식 컷오프 날짜 2026: 완전한 치트 시트',
     seoTitle: 'AI 모델 지식 컷오프 날짜 2026 | PromptQuorum',
     metaDescription: 'Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma, Phi의 검증된 지식 컷오프 날짜. 어떤 모델이 실시간 웹 검색을 사용하고 어떤 모델이 과거 시점에 고정되어 있는지 확인하세요.',
     publishDate: '2026-06-12',
     dateModified: '2026-06-21',
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 현재 AI 모델의 지식 컷오프 날짜는 무엇인가요?',
+        answer: '검증된 컷오프: GPT-5.5는 2025년 8월(ChatGPT는 기본적으로 Bing 검색 사용; GPT-4o 레거시는 2023년 10월), Claude Opus 4.8은 2026년 1월(신뢰할 수 있는 컷오프), Grok 4.3은 2024년 11월(X 검색), Gemini 3.1 Pro는 2025년 1월(네이티브 Google Search). 로컬 LLM(Llama, Qwen, Gemma, Phi)은 검색 레이어가 없으므로 컷오프가 절대적인 한계입니다.',
+        bullets: [
+          'GPT-5.5 (ChatGPT): 컷오프 2025년 8월 — Bing 검색으로 부분 보완',
+          'Claude (Opus 4.8): 컷오프 2026년 1월(신뢰 가능) — 웹 검색은 명시적 도구 활성화 필요',
+          'Grok 4.3: 컷오프 2024년 11월 — 기본적으로 X 검색',
+          '로컬 LLM: 검색 레이어 없음 — 컷오프는 고정된 절대적 한계',
+        ],
+        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -458,6 +604,32 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '클라우드 모델(ChatGPT, Gemini, Grok)은 내장된 웹 검색으로 이를 부분적으로 보완합니다',
           '로컬 LLM(Llama, Qwen, Gemma, Phi)은 검색 레이어가 없습니다 — 컷오프는 절대적인 지식의 한계입니다',
           'Mistral Large, Llama 4, Qwen3 등 여러 주요 모델은 정확한 컷오프 날짜를 공개하지 않았습니다',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'AI 지식 컷오프 날짜에 대한 자주 묻는 질문',
+        faqs: [
+          {
+            q: 'AI의 지식 컷오프 날짜란 무엇인가요?',
+            a: '지식 컷오프 날짜는 AI 모델이 더 이상 학습 데이터를 갖지 않는 기준일입니다. 컷오프 이후에 발생한 사건, 제품 출시, 연구 논문 또는 기타 정보는 모델에게 보이지 않습니다. 모델이 실시간으로 웹을 검색하거나 프롬프트에 해당 정보가 제공되지 않는 한, 모델은 이러한 사실의 존재를 알 수 없습니다.',
+          },
+          {
+            q: '지식 컷오프와 실시간 검색의 차이는 무엇인가요?',
+            a: '지식 컷오프는 모델의 학습 데이터가 갖는 고정된 속성으로, 변하지 않는 기준일입니다. 실시간 검색은 모델 위에 추가된 기능으로, 질의 시점에 현재의 웹 페이지를 가져올 수 있게 해줍니다. ChatGPT(Bing), Gemini(Google), Grok(X)은 기본적으로 실시간 검색을 제공합니다. Claude는 명시적인 도구 활성화가 필요합니다. 로컬 LLM은 기본적으로 실시간 검색이 없으며, 이를 추가하려면 RAG 파이프라인을 구축해야 합니다.',
+          },
+          {
+            q: '로컬 LLM은 지식을 업데이트하나요?',
+            a: '아니요. 로컬 LLM의 지식은 학습 컷오프 시점에 고정되며 무기한 그대로 유지됩니다. 로컬 LLM에 더 최신 정보를 제공하려면 (1) 모델을 더 새로운 데이터로 파인튜닝하거나 재학습하거나(비용이 많이 듦), (2) 질의 시점에 관련 문서를 가져와 프롬프트에 주입하는 RAG(검색 증강 생성) 파이프라인을 구축해야 합니다.',
+          },
+          {
+            q: '오늘의 뉴스와 최신 사건을 확인할 수 있는 AI 모델은 무엇인가요?',
+            a: 'ChatGPT(유료 요금제에서 기본적으로 Bing 사용), Gemini 3.1 Pro(기본적으로 Google 사용), Grok 4.3(기본적으로 X/Twitter 검색)은 최신 정보에 접근할 수 있습니다. Perplexity는 웹 검색 네이티브로, 모든 질의에 대해 실시간 결과를 가져옵니다. Claude는 개발자가 웹 검색 도구를 명시적으로 활성화한 경우에만 웹을 검색할 수 있습니다. DeepSeek, Mistral Large 및 모든 로컬 LLM(Llama, Qwen, Gemma, Phi)은 기본적으로 검색 접근 권한이 없습니다.',
+          },
+          {
+            q: 'ChatGPT의 컷오프 날짜가 현재 알고 있는 것과 같은가요?',
+            a: '아니요. ChatGPT(제품)는 학습 컷오프 날짜와 실시간 Bing 검색 기능을 모두 갖고 있습니다. 최근 사실에 관한 질의에서는 Bing을 검색하여 최신 결과로 답변을 보완하므로, 질의 시점에 "알고 있는" 내용은 학습 컷오프보다 훨씬 최신일 수 있습니다. 그러나 학습 컷오프는 단순한 사실이 아닌 사건에 대한 미묘한 이해, 추론에 녹아든 맥락적 지식, Bing에 색인되지 않은 정보에 대해서는 여전히 중요합니다.',
+          },
         ],
       },
       relatedBites: {
@@ -476,11 +648,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-07-12',
     theme: 'Knowledge & Research',
+    heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-pt.png',
     title: 'Datas de corte de conhecimento dos modelos de IA 2026: guia de referência completo',
     seoTitle: 'Datas de corte de conhecimento de IA 2026 | PromptQuorum',
     metaDescription: 'Datas de corte verificadas para Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma e Phi. Descubra quais modelos usam busca web ao vivo e quais estão congelados em um ponto no tempo.',
     publishDate: '2026-06-12',
     dateModified: '2026-06-21',
+    quickAnswerTop: {
+      pt: {
+        question: 'Quais são as datas de corte de conhecimento dos modelos de IA em 2026?',
+        answer: 'Datas de corte verificadas: GPT-5.5 agosto 2025 (ChatGPT busca no Bing por padrão; GPT-4o legado out 2023); Claude Opus 4.8 janeiro 2026 (corte confiável); Grok 4.3 novembro 2024 (busca X); Gemini 3.1 Pro janeiro 2025 (Google Search nativo). LLMs locais (Llama, Qwen, Gemma, Phi) não têm camada de busca — o corte é um limite absoluto.',
+        bullets: [
+          'GPT-5.5 (ChatGPT): corte ago 2025 — parcialmente compensado pela busca Bing',
+          'Claude (Opus 4.8): corte jan 2026 (confiável) — busca web requer ativação explícita',
+          'Grok 4.3: corte nov 2024 — busca X por padrão',
+          'LLMs locais: sem camada de busca — o corte é um limite de conhecimento fixo',
+        ],
+        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -490,6 +676,32 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Modelos em nuvem (ChatGPT, Gemini, Grok) compensam parcialmente com busca web integrada',
           'LLMs locais (Llama, Qwen, Gemma, Phi) não têm camada de busca — o corte é um limite absoluto de conhecimento',
           'Vários modelos principais — incluindo Mistral Large, Llama 4 e Qwen3 — não divulgaram datas de corte exatas',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Perguntas frequentes sobre datas de corte de conhecimento de IA',
+        faqs: [
+          {
+            q: 'O que é uma data de corte de conhecimento em IA?',
+            a: 'Uma data de corte de conhecimento é a data após a qual um modelo de IA não possui dados de treinamento. Eventos, lançamentos de produtos, artigos de pesquisa ou qualquer informação publicada após o corte são invisíveis para o modelo. O modelo não pode saber que essas coisas existem, a menos que consiga pesquisar na web ao vivo ou receba a informação no prompt.',
+          },
+          {
+            q: 'Qual é a diferença entre uma data de corte de conhecimento e busca ao vivo?',
+            a: 'Uma data de corte de conhecimento é uma propriedade dos dados de treinamento do modelo — uma data fixa e congelada. A busca ao vivo é uma capacidade adicionada sobre o modelo que permite recuperar páginas web atuais no momento da consulta. ChatGPT (Bing), Gemini (Google) e Grok (X) têm busca ao vivo por padrão. Claude requer ativação explícita da ferramenta. LLMs locais não têm busca ao vivo por padrão — é preciso construir um pipeline RAG para adicioná-la.',
+          },
+          {
+            q: 'Os LLMs locais alguma vez atualizam seu conhecimento?',
+            a: 'Não. O conhecimento de um LLM local fica congelado em seu corte de treinamento e permanece assim indefinidamente. Para dar a um LLM local acesso a informações mais recentes, é preciso: (1) fazer fine-tuning ou retreinar o modelo com dados mais recentes (caro), ou (2) construir um pipeline RAG (geração aumentada por recuperação) que busca documentos relevantes no momento da consulta e os injeta no prompt.',
+          },
+          {
+            q: 'Quais modelos de IA conseguem ver notícias e eventos atuais?',
+            a: 'ChatGPT (usa o Bing por padrão nos planos pagos), Gemini 3.1 Pro (usa o Google por padrão) e Grok 4.3 (busca no X/Twitter por padrão) podem acessar informações atuais. O Perplexity é nativo de busca web e recupera resultados ao vivo para cada consulta. O Claude só consegue buscar na web quando os desenvolvedores ativam explicitamente a ferramenta de busca web. DeepSeek, Mistral Large e todos os LLMs locais (Llama, Qwen, Gemma, Phi) não têm acesso de busca por padrão.',
+          },
+          {
+            q: 'A data de corte do ChatGPT é a mesma coisa que ele sabe agora?',
+            a: 'Não. O ChatGPT (o produto) tem tanto uma data de corte de treinamento quanto uma capacidade de busca ao vivo no Bing. Para consultas factuais recentes, ele busca no Bing e complementa sua resposta com resultados atuais — então o que ele "sabe" no momento da consulta pode ser muito mais recente do que o corte de treinamento. O corte de treinamento ainda importa para: a compreensão sutil de eventos (não apenas fatos), o conhecimento contextual entrelaçado em seu raciocínio, e qualquer informação não indexada pelo Bing.',
+          },
         ],
       },
       relatedBites: {
@@ -508,11 +720,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-07-12',
     theme: 'Knowledge & Research',
+    heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-ar.png',
     title: 'تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي ⁨2026⁩: دليل مرجعي شامل',
     seoTitle: 'تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي ⁨2026⁩',
     metaDescription: 'تواريخ انقطاع موثّقة لـ ⁨Claude⁩ و⁨ChatGPT⁩ و⁨Gemini⁩ و⁨Llama⁩ و⁨Qwen⁩. اكتشف أي النماذج تستخدم البحث المباشر وأيها مجمّدة عند نقطة زمنية محددة.',
     publishDate: '2026-06-12',
     dateModified: '2026-06-21',
+    quickAnswerTop: {
+      ar: {
+        question: 'ما هي تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي في 2026؟',
+        answer: 'تواريخ انقطاع موثّقة: GPT-5.5 أغسطس 2025 (ChatGPT يبحث في Bing افتراضيًا؛ GPT-4o القديم أكتوبر 2023)؛ Claude Opus 4.8 يناير 2026 (انقطاع موثوق)؛ Grok 4.3 نوفمبر 2024 (يبحث في X)؛ Gemini 3.1 Pro يناير 2025 (Google Search الأصيل). نماذج LLM المحلية (Llama وQwen وGemma وPhi) بلا طبقة بحث — الانقطاع حد مطلق.',
+        bullets: [
+          'GPT-5.5 (ChatGPT): انقطاع أغسطس 2025 — مُعوَّض جزئيًا ببحث Bing',
+          'Claude (Opus 4.8): انقطاع يناير 2026 (موثوق) — بحث الويب يتطلب تفعيلًا صريحًا',
+          'Grok 4.3: انقطاع نوفمبر 2024 — يبحث في X افتراضيًا',
+          'نماذج LLM المحلية: بلا بحث — الانقطاع حد معرفي مجمّد مطلق',
+        ],
+        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -522,6 +748,32 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'نماذج السحابة (ChatGPT وGemini وGrok) تعوّض جزئيًا ببحث ويب مدمج',
           'نماذج LLM المحلية (Llama وQwen وGemma وPhi) بلا طبقة بحث — الانقطاع حد معرفي مطلق',
           'عدة نماذج رئيسية — بما فيها Mistral Large وLlama 4 وQwen3 — لم تُفصح عن تواريخ انقطاع دقيقة',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة حول تواريخ انقطاع معرفة الذكاء الاصطناعي',
+        faqs: [
+          {
+            q: 'ما هو تاريخ انقطاع المعرفة في الذكاء الاصطناعي؟',
+            a: 'تاريخ انقطاع المعرفة هو التاريخ الذي لا يملك النموذج بعده أي بيانات تدريب. الأحداث وإطلاقات المنتجات وأوراق البحث أو أي معلومات نُشرت بعد الانقطاع تكون غير مرئية للنموذج. لا يمكن للنموذج معرفة وجود هذه الأشياء إلا إذا استطاع البحث في الويب مباشرة أو حصل على المعلومة داخل الطلب (prompt).',
+          },
+          {
+            q: 'ما الفرق بين تاريخ انقطاع المعرفة والبحث المباشر؟',
+            a: 'تاريخ انقطاع المعرفة خاصية من خصائص بيانات تدريب النموذج — تاريخ ثابت ومجمّد. أما البحث المباشر فهو قدرة تُضاف فوق النموذج تتيح له استرجاع صفحات ويب حالية وقت الاستعلام. يتوفر البحث المباشر افتراضيًا في ChatGPT (عبر Bing) وGemini (عبر Google) وGrok (عبر X). أما Claude فيتطلب تفعيلًا صريحًا للأداة. نماذج LLM المحلية لا تملك بحثًا مباشرًا افتراضيًا — يجب بناء خط أنابيب RAG لإضافته.',
+          },
+          {
+            q: 'هل تُحدّث نماذج LLM المحلية معرفتها في أي وقت؟',
+            a: 'لا. تبقى معرفة نموذج LLM المحلي مجمّدة عند تاريخ انقطاع تدريبه إلى أجل غير مسمى. لمنح نموذج LLM محلي إمكانية الوصول إلى معلومات أحدث، يجب إما: (1) إعادة ضبط دقيق أو إعادة تدريب النموذج على بيانات أحدث (مكلف)، أو (2) بناء خط أنابيب RAG (التوليد المعزز بالاسترجاع) يجلب المستندات ذات الصلة وقت الاستعلام ويُدرجها في الطلب.',
+          },
+          {
+            q: 'ما هي نماذج الذكاء الاصطناعي القادرة على رؤية الأخبار والأحداث الحالية؟',
+            a: 'يمكن لـ ChatGPT (يستخدم Bing افتراضيًا في الخطط المدفوعة)، وGemini 3.1 Pro (يستخدم Google افتراضيًا)، وGrok 4.3 (يبحث في X/Twitter افتراضيًا) الوصول إلى معلومات حالية. Perplexity مبني أصلًا على البحث في الويب ويسترجع نتائج مباشرة لكل استعلام. لا يستطيع Claude البحث في الويب إلا عندما يُفعّل المطورون أداة البحث في الويب صراحةً. لا تملك DeepSeek وMistral Large وجميع نماذج LLM المحلية (Llama وQwen وGemma وPhi) إمكانية بحث افتراضية.',
+          },
+          {
+            q: 'هل تاريخ انقطاع ChatGPT هو نفسه ما يعرفه الآن؟',
+            a: 'لا. يملك ChatGPT (المنتج) تاريخ انقطاع تدريب وقدرة بحث مباشر عبر Bing في آنٍ واحد. بالنسبة للاستعلامات الواقعية الحديثة، يبحث في Bing ويُكمّل إجابته بنتائج حالية — لذا فإن ما "يعرفه" وقت الاستعلام قد يكون أحدث بكثير من تاريخ انقطاع التدريب. يبقى تاريخ انقطاع التدريب مهمًا لـ: الفهم الدقيق للأحداث (وليس الحقائق فقط)، والمعرفة السياقية المدمجة في استدلاله، وأي معلومات لم تُفهرسها Bing.',
+          },
         ],
       },
       relatedBites: {

@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-en.png',
     title: 'Best Local LLM for SQL and Data Analysis?',
     seoTitle: 'Best Local LLM for SQL & Data Analysis | Prompt Bites',
     metaDescription:
@@ -103,6 +104,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-de.png',
     title: 'Das beste lokale LLM für SQL und Datenanalyse?',
     seoTitle: 'Bestes lokales LLM für SQL & Datenanalyse | Prompt Bites',
     metaDescription:
@@ -202,6 +204,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-fr.png',
     title: 'Meilleur LLM local pour le SQL et l\'analyse de données ?',
     seoTitle: 'Meilleur LLM local pour SQL & analyse de données | Prompt Bites',
     metaDescription:
@@ -301,6 +304,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-ja.png',
     title: 'SQLとデータ分析に最適なローカルLLMは？',
     seoTitle: 'SQL・データ分析に最適なローカルLLM | Prompt Bites',
     metaDescription:
@@ -400,6 +404,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-zh.png',
     title: '哪种本地LLM最适合SQL和数据分析？',
     seoTitle: '最适合SQL和数据分析的本地LLM | Prompt Bites',
     metaDescription:
@@ -499,6 +504,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-es.png',
     title: '¿Cuál es el mejor LLM local para SQL y análisis de datos?',
     seoTitle: 'Mejor LLM local para SQL y análisis de datos | Prompt Bites',
     metaDescription:
@@ -598,6 +604,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-pt.png',
     title: 'Qual o melhor LLM local para SQL e análise de dados?',
     seoTitle: 'Melhor LLM local para SQL e análise de dados | Prompt Bites',
     metaDescription:
@@ -697,6 +704,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-ar.png',
     title: 'ما هو أفضل نموذج لغوي محلي لـ SQL وتحليل البيانات؟',
     seoTitle: 'أفضل نموذج لغوي محلي لـ SQL وتحليل البيانات | Prompt Bites',
     metaDescription:
@@ -796,6 +804,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Model Capability Picks',
+    heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-ko.png',
     title: 'SQL 및 데이터 분석에 가장 적합한 로컬 LLM은 무엇입니까?',
     seoTitle: 'SQL 및 데이터 분석에 최적인 로컬 LLM | Prompt Bites',
     metaDescription:

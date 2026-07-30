@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'annual',
     specific_year: 2026,
     theme: 'Techniques',
+    heroImage: '/images/prompts-for-reliable-structured-data-overview-hero-en.png',
     title: 'Prompts for Reliable Structured Data: 3 Techniques (2026)',
     seoTitle: 'Prompts for Reliable Structured Data: 3 Techniques (2026)',
     metaDescription: 'JSON mode enforces JSON syntax, not field completeness. Schema embedding, output examples, and field instructions raise reliability to 95%+ without API changes.',
@@ -402,6 +403,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-30',
     theme: 'Techniken',
+    heroImage: '/images/prompts-for-reliable-structured-data-overview-hero-de.png',
     title: 'Zuverlässige strukturierte Daten mit Prompts: 3 Techniken',
     seoTitle: 'Zuverlässige strukturierte Daten mit Prompts: 3 Techniken',
     metaDescription: 'JSON-Modus erzwingt nur Syntax, nicht Feldvollständigkeit. Schema-Einbettung, Beispiele und Feldanweisungen erreichen 95 % Zuverlässigkeit ohne API-Änderung.',
@@ -456,6 +458,45 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       audience: { '@type': 'Audience', audienceType: 'Entwickler, die Produktions-Workflows mit LLM-APIs erstellen' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Vergleich der Formate für strukturierte Ausgabe: JSON, YAML, XML, CSV, Markdown',
+      inLanguage: 'de',
+      numberOfItems: 5,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'JSON',
+          description: 'Am besten für APIs, Datenbanken und typsichere Konsumenten. Höchste Zuverlässigkeit mit API-Erzwingung (99%+). Ohne Erzwingung: 80–85% mit Schema im Prompt. Erfordert schließende Klammern und Escape-Sequenzen, was die Syntaxfehlerrate bei freier Generierung erhöht.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'YAML',
+          description: 'Am besten für menschenlesbare Konfiguration und Dokumentationsausgabe ohne API-Erzwingung. Modelle erreichen 88–92% Zuverlässigkeit mit Schema im Prompt aufgrund einfacherer Syntax (keine Klammern, keine abschließenden Kommas). Erfordert Konvertierung vor der Übergabe an JSON-erwartende Systeme.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'XML',
+          description: 'Am besten für Dokumententransformation und Legacy-Systemintegration. Modelle produzieren 85–90% korrektes XML mit Schema im Prompt. Umständlich für einfache Schlüssel-Wert-Daten; besser geeignet für hierarchische Dokumentstrukturen.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'CSV',
+          description: 'Am besten für flache tabellarische Daten, die in Tabellenkalkulationen oder Datenpipelines exportiert werden. Höchste Zuverlässigkeit für flache Daten (95%+) aufgrund einfacher Zeilen-Spalten-Struktur. Ungeeignet für verschachtelte oder hierarchische Daten.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'Markdown-Tabellen',
+          description: 'Am besten für Berichte und menschenlesbare Ausgabe mit tabellarischen Abschnitten. Hohe Zuverlässigkeit für einfache Tabellen. Nicht geeignet für maschinenlesbare nachgelagerte Verarbeitung ohne Parser.',
+        },
+      ],
     },
     sections: {
       keyTakeaways: {
@@ -638,6 +679,45 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ],
       },
+      faqSection: {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
+        content: '**Die häufigsten Fragen zu strukturiertem Output-Prompting betreffen die Grenze zwischen JSON-Modus und Prompt-Design, wie viele Beispiele einzubeziehen sind und wie ein fehlschlagender Prompt systematisch verbessert wird.**',
+        faqs: [
+          {
+            q: 'Macht JSON-Modus Schema im Prompt überflüssig?',
+            a: 'Nein. JSON-Modus erzwingt analysierbare JSON-Syntax, nicht Schema-Konformität. Ein Modell mit JSON-Modus kann weiterhin gültiges JSON mit fehlenden erforderlichen Feldern, falschen Datentypen oder ungültigen Enum-Werten zurückgeben. Schema im Prompt und Feldanweisungen beheben Schema-Konformitätsfehler; JSON-Modus verhindert nur nicht analysierbare Ausgaben. Beide Ansätze ergänzen sich, sie ersetzen sich nicht.',
+          },
+          {
+            q: 'Wie viele Ausgabebeispiele sollte ich in den Prompt aufnehmen?',
+            a: 'Ein Beispiel reicht in der Regel aus und bringt den größten Zuverlässigkeitsgewinn. Ein zweites Beispiel lohnt sich nur, wenn Ihre Daten je nach Eingabebedingung eine deutlich andere Struktur haben — etwa wenn bestimmte Felder abhängig vom Eingabetyp bedingt erforderlich sind. Ab zwei Beispielen übersteigen die zusätzlichen Token-Kosten den Zuverlässigkeitsgewinn für die meisten strukturierten Output-Aufgaben.',
+          },
+          {
+            q: 'Soll ich JSON oder YAML für strukturierte Ausgabe ohne API-Erzwingung verwenden?',
+            a: 'Verwenden Sie YAML, wenn Sie ohne API-Erzwingung generieren und die Ausgabe nicht von einem System geparst werden muss, das JSON erwartet. Modelle produzieren in YAML weniger Syntaxfehler, da keine schließenden Klammern, Escape-Sequenzen oder abschließenden Kommas verfolgt werden müssen. Verwenden Sie JSON, wenn die Ausgabe direkt in eine API, Datenbank oder ein nachgelagertes System einfließt, das JSON benötigt. Parsen und validieren Sie unabhängig vom Format immer.',
+          },
+          {
+            q: 'Was ist der schnellste Weg, einen Prompt mit 70% strukturierter Output-Pass-Rate zu verbessern?',
+            a: 'Führen Sie das Test-Set auf Feldebene aus, nicht nur insgesamt. Finden Sie das Feld mit der niedrigsten individuellen Pass-Rate, fügen Sie eine explizite Anweisung zu Typ, Format und null-Behandlung hinzu und testen Sie erneut. Eine einzelne gezielte Feldanweisung hebt die Gesamtpass-Rate typischerweise um 5–15 Prozentpunkte. Wiederholen Sie dies, bis Sie 95% oder mehr erreichen.',
+          },
+          {
+            q: 'Wie erhalte ich zuverlässige strukturierte Ausgabe von einem Modell ohne nativen JSON-Modus?',
+            a: 'Betten Sie das vollständige JSON-Schema als Template in den Prompt ein, fügen Sie ein gültiges Ausgabebeispiel hinzu, ergänzen Sie feldspezifische Anweisungen und führen Sie bei Temperatur 0 aus. Parsen und validieren Sie jede Ausgabe; senden Sie bei jedem Validierungsfehler einen Korrektur-Prompt. Gut gestaltete Prompts erreichen bei den meisten Modellen bei Temperatur 0 eine Zuverlässigkeit von 85–92% ohne nativen JSON-Modus.',
+          },
+          {
+            q: 'Wie groß sollte ein Test-Set für einen strukturierten Output-Prompt sein?',
+            a: 'Mindestens 20 Fälle: 10 Happy-Path-Eingaben (typische, wohlgeformte Daten), 5 Edge Cases (ungewöhnliche Werte, fehlende optionale Felder, lange Eingaben) und 5 gegnerische Eingaben (Werte, die das Modell in die Irre führen könnten, in Feldwerte eingebettete Anweisungen, mehrdeutige Typen). Diese Größe identifiziert die häufigsten Fehlerkategorien ohne übermäßigen Einrichtungsaufwand.',
+          },
+          {
+            q: 'Wann sollte ich einen Korrektur-Prompt statt den Basis-Prompt zu reparieren verwenden?',
+            a: 'Verwenden Sie einen Korrektur-Prompt, wenn Fehler selten sind — weniger als 10% der Ausgaben — und durch ungewöhnliche Grenzfall-Eingaben verursacht werden. Reparieren Sie den Basis-Prompt, wenn Fehler systematisch auftreten: das gleiche fehlende Feld oder der gleiche Typfehler in mehreren Testfällen. Ein Korrektur-Prompt addiert Latenz und API-Kosten pro Fehler; ein besserer Basis-Prompt verhindert Fehler von vornherein.',
+          },
+          {
+            q: 'Beeinflusst die Reihenfolge der Felder im Schema die strukturierte Output-Zuverlässigkeit?',
+            a: 'Ja. Platzieren Sie erforderliche Felder zuerst und optionale oder nullable Felder zuletzt. Modelle gewichten frühere Schema-Elemente stärker, wenn sie entscheiden, was einzubeziehen ist. Ein zuerst gelistetes nullable Feld wird eher weggelassen als ein später gelistetes erforderliches Feld, wenn das Modell sich beim Wert unsicher ist. Dieser Reihenfolgeeffekt ist bei GPT-5.6 und Claude Sonnet 5 konsistent.',
+          },
+        ],
+      },
       relatedReading: {
         id: 'related-reading',
         title: 'Weiterführende Ressourcen',
@@ -667,6 +747,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'annual',
     specific_year: 2026,
     theme: 'Techniques',
+    heroImage: '/images/prompts-for-reliable-structured-data-overview-hero-es.png',
     title: 'Prompts para datos estructurados fiables: 3 técnicas (2026)',
     seoTitle: 'Prompts para datos estructurados fiables: 3 técnicas (2026)',
     metaDescription: 'El modo JSON impone la sintaxis, no la completitud de campos. Esquemas embebidos, ejemplos de salida e instrucciones de campo elevan la fiabilidad al 95 %+.',
@@ -960,6 +1041,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'annual',
     specific_year: 2026,
     theme: 'Techniques',
+    heroImage: '/images/prompts-for-reliable-structured-data-overview-hero-ar.png',
     title: 'مطالبات للبيانات المنظمة الموثوقة: ⁨3⁩ تقنيات (⁨2026⁩)',
     seoTitle: 'برومبتات للبيانات المنظمة الموثوقة: ⁨3⁩ تقنيات',
     metaDescription: 'وضع ⁨JSON⁩ يفرض بناء الجملة فقط، لا اكتمال الحقول. تضمين المخطط وأمثلة المخرجات وتعليمات الحقول ترفع الموثوقية إلى ⁨95%⁩+ دون تغييرات في ⁨API⁩.',
@@ -1253,6 +1335,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'annual',
     specific_year: 2026,
     theme: 'Techniques',
+    heroImage: '/images/prompts-for-reliable-structured-data-overview-hero-pt.png',
     title: 'Prompts para dados estruturados confiáveis: 3 técnicas (2026)',
     seoTitle: 'Prompts para dados estruturados confiáveis: 3 técnicas (2026)',
     metaDescription: 'O modo JSON impõe a sintaxe JSON, não a completude dos campos. Esquemas embutidos, exemplos de saída e instruções de campo elevam a confiabilidade para 95%+ sem alterações na API.',
@@ -1545,6 +1628,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-30',
     theme: 'Techniques',
+    heroImage: '/images/prompts-for-reliable-structured-data-overview-hero-fr.png',
     title: 'Données structurées fiables avec Prompts: 3 Techniques',
     seoTitle: 'Données structurées fiables avec Prompts: 3 Techniques',
     metaDescription: 'JSON-mode impose la syntaxe, pas la complétude des champs. Intégration du schéma, exemples de sortie et instructions de champ atteignent 95%+ de fiabilité sans changements API.',
@@ -1599,6 +1683,45 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       audience: { '@type': 'Audience', audienceType: 'Développeurs créant des workflows de production avec les APIs LLM' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Comparaison des Formats de Sortie Structurée: JSON, YAML, XML, CSV, Markdown',
+      inLanguage: 'fr',
+      numberOfItems: 5,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'JSON',
+          description: 'Idéal pour les APIs, bases de données et consommateurs type-safe. Fiabilité la plus élevée avec imposition API (99%+). Sans imposition: 80–85% avec schéma dans le prompt. Nécessite des accolades fermantes et séquences d\'échappement, ce qui augmente le taux d\'erreur de syntaxe en génération libre.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'YAML',
+          description: 'Idéal pour la configuration lisible par l\'humain et la sortie de documentation sans imposition API. Les modèles atteignent 88–92% de fiabilité avec schéma dans le prompt grâce à une syntaxe plus simple (pas d\'accolades, pas de virgules finales). Nécessite une conversion avant d\'être transmis à des systèmes attendant du JSON.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'XML',
+          description: 'Idéal pour la transformation de documents et l\'intégration de systèmes legacy. Les modèles produisent 85–90% de XML correct avec schéma dans le prompt. Verbeux pour les données clé-valeur simples; mieux adapté aux structures de documents hiérarchiques.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'CSV',
+          description: 'Idéal pour les données tabulaires plates exportées vers des tableurs ou pipelines de données. Fiabilité la plus élevée pour les données plates (95%+) grâce à une structure ligne-colonne simple. Inadapté aux données imbriquées ou hiérarchiques.',
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'Tableaux Markdown',
+          description: 'Idéal pour les rapports et la sortie lisible par l\'humain avec sections tabulaires. Haute fiabilité pour les tableaux simples. Non adapté au traitement en aval lisible par machine sans parseur.',
+        },
+      ],
     },
     sections: {
       keyTakeaways: {
@@ -1781,6 +1904,45 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ],
       },
+      faqSection: {
+        id: 'faq',
+        title: 'Questions Fréquemment Posées',
+        content: '**Les questions les plus fréquentes sur le prompting de sortie structurée portent sur la frontière entre JSON-mode et design de prompt, combien d\'exemples inclure, et comment améliorer systématiquement un prompt en échec.**',
+        faqs: [
+          {
+            q: 'JSON-mode rend-il le schéma dans le prompt inutile?',
+            a: 'Non. JSON-mode impose une syntaxe JSON analysable, pas la conformité du schéma. Un modèle utilisant JSON-mode peut toujours retourner du JSON valide manquant des champs requis, utilisant de mauvais types de données ou contenant des valeurs enum invalides. Le schéma dans le prompt et les instructions de champ résolvent les défaillances de conformité du schéma; JSON-mode empêche seulement les sorties non analysables. Les deux approches sont complémentaires, pas alternatives.',
+          },
+          {
+            q: 'Combien d\'exemples de sortie devrais-je inclure dans le prompt?',
+            a: 'Un exemple suffit généralement et apporte le plus grand gain de fiabilité. Un second exemple n\'apporte de la valeur que lorsque vos données ont une structure significativement différente selon les conditions d\'entrée — par exemple, quand certains champs sont conditionnellement requis selon le type d\'entrée. Au-delà de deux exemples, le coût en longueur de prompt dépasse le bénéfice de fiabilité pour la plupart des tâches de sortie structurée.',
+          },
+          {
+            q: 'Devrais-je utiliser JSON ou YAML pour la sortie structurée sans imposition API?',
+            a: 'Utilisez YAML lors de la génération sans imposition API et quand la sortie n\'a pas besoin d\'être analysée par un système attendant du JSON. Les modèles produisent moins d\'erreurs de syntaxe en YAML car il ne nécessite pas d\'accolades fermantes, de séquences d\'échappement ou de suivi de virgules finales. Utilisez JSON quand la sortie alimente directement une API, une base de données ou un système en aval nécessitant du JSON. Analysez et validez toujours, quel que soit le format.',
+          },
+          {
+            q: 'Quel est le moyen le plus rapide d\'améliorer un prompt avec un taux de réussite de sortie structurée de 70%?',
+            a: 'Exécutez l\'ensemble de test au niveau du champ, pas seulement globalement. Trouvez le champ avec le taux de réussite individuel le plus bas, ajoutez une instruction explicite couvrant type, format et traitement null, puis réexécutez. Une instruction de champ ciblée unique élève typiquement le taux de réussite global de 5–15 points. Répétez jusqu\'à atteindre 95% ou plus.',
+          },
+          {
+            q: 'Comment obtenir une sortie structurée fiable d\'un modèle sans JSON-mode natif?',
+            a: 'Intégrez le schéma JSON complet comme template dans le prompt, incluez un exemple de sortie valide, ajoutez des instructions au niveau du champ et exécutez à la température 0. Analysez et validez chaque sortie; envoyez un prompt de correction pour tout échec de validation. Les prompts bien conçus atteignent 85–92% de fiabilité sur la plupart des modèles à la température 0 sans JSON-mode natif.',
+          },
+          {
+            q: 'Quelle est la taille d\'ensemble de test appropriée pour un prompt de sortie structurée?',
+            a: '20 cas minimum: 10 entrées happy-path (données typiques, bien formées), 5 cas limites (valeurs inhabituelles, champs optionnels manquants, entrées longues) et 5 entrées adversariales (valeurs pouvant induire le modèle en erreur, instructions intégrées dans les valeurs de champs, types ambigus). Cette taille identifie les catégories d\'échec les plus courantes sans temps de configuration excessif.',
+          },
+          {
+            q: 'Quand devrais-je utiliser un prompt de correction plutôt que corriger le prompt de base?',
+            a: 'Utilisez un prompt de correction quand les échecs sont rares — moins de 10% des sorties — et causés par des entrées de cas limites inhabituelles. Corrigez le prompt de base quand les échecs sont systématiques: le même champ manquant ou la même erreur de type apparaissant sur plusieurs cas de test. Un prompt de correction ajoute latence et coût API par échec; un meilleur prompt de base prévient les échecs entièrement.',
+          },
+          {
+            q: 'L\'ordre des champs dans le schéma affecte-t-il la fiabilité de la sortie structurée?',
+            a: 'Oui. Placez les champs requis en premier et les champs optionnels ou nullable en dernier. Les modèles pondèrent plus fortement les éléments de schéma antérieurs lors de la décision de ce qu\'il faut inclure. Un champ nullable listé en premier est plus susceptible d\'être omis qu\'un champ requis listé plus tard quand le modèle est incertain de la valeur. Cet effet d\'ordre est cohérent entre GPT-5.6 et Claude Sonnet 5.',
+          },
+        ],
+      },
       relatedReading: {
         id: 'related-reading',
         title: 'Lectures Supplémentaires',
@@ -1810,6 +1972,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-30',
     theme: 'テクニック',
+    heroImage: '/images/prompts-for-reliable-structured-data-overview-hero-ja.png',
     title: '信頼できる構造化データのためのプロンプト: 3つのテクニック',
     seoTitle: '信頼できる構造化データのためのプロンプト: 3つのテクニック',
     metaDescription: 'JSON-modeは構文を強制しますが、フィールドの完全性は強制しません。スキーマ埋め込み、出力例、フィールド指示で95%以上の信頼性を達成できます。',
@@ -1864,6 +2027,45 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       audience: { '@type': 'Audience', audienceType: 'LLM APIで本番ワークフローを構築する開発者' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: '構造化出力フォーマット比較: JSON、YAML、XML、CSV、Markdown',
+      inLanguage: 'ja',
+      numberOfItems: 5,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'JSON',
+          description: 'APIやデータベース、タイプセーフなコンシューマーに最適です。API強制で最高の信頼性 (99%+)。強制なし: プロンプト内スキーマで80–85%。閉じ括弧とエスケープシーケンスが必要で、自由形式生成での構文エラー率が上がります。',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'YAML',
+          description: 'API強制なしの人間が読める設定とドキュメント出力に最適です。単純な構文 (括弧なし、末尾のカンマなし) のため、モデルはプロンプト内スキーマで88–92%の信頼性を達成します。JSON期待システムに渡す前に変換が必要です。',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'XML',
+          description: 'ドキュメント変換とレガシーシステム統合に最適です。モデルはプロンプト内スキーマで85–90%の正しいXMLを生成します。単純なキーバリューデータには冗長; 階層的なドキュメント構造により適しています。',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'CSV',
+          description: 'スプレッドシートやデータパイプラインにエクスポートされるフラットな表形式データに最適です。単純な行列構造のため、フラットデータで最高の信頼性 (95%+)。ネストされた、または階層的データには不適切です。',
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'Markdownテーブル',
+          description: '表形式セクションを持つレポートと人間が読める出力に最適です。単純なテーブルで高い信頼性。パーサーなしでは機械可読な下流処理に不適切です。',
+        },
+      ],
     },
     sections: {
       keyTakeaways: {
@@ -2046,6 +2248,45 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ],
       },
+      faqSection: {
+        id: 'faq',
+        title: 'よくある質問',
+        content: '**構造化出力プロンプティングに関する最も一般的な質問は、JSON-modeとプロンプト設計の境界、含めるべき例の数、失敗しているプロンプトを体系的に改善する方法をカバーしています。**',
+        faqs: [
+          {
+            q: 'JSON-modeはプロンプト内スキーマを不要にしますか?',
+            a: 'いいえ。JSON-modeは解析可能なJSON構文を強制しますが、スキーマ準拠は強制しません。JSON-modeを使用するモデルは、必須フィールドが不足していたり、間違ったデータ型を使用していたり、無効な列挙値を含んでいたりする有効なJSONを返すことがあります。プロンプト内スキーマとフィールド指示はスキーマ準拠の失敗に対処します; JSON-modeは解析不可能な出力のみを防ぎます。両方のアプローチは補完的であり、代替ではありません。',
+          },
+          {
+            q: 'プロンプトにいくつの出力例を含めるべきですか?',
+            a: '通常、1つの例で十分であり、最大の信頼性向上をもたらします。2番目の例は、入力条件によってデータが意味のある異なる構造を持つ場合 — 例えば、入力タイプに応じて特定のフィールドが条件付きで必要な場合 — にのみ価値を追加します。2つを超える例では、プロンプトの長さのコストがほとんどの構造化出力タスクの信頼性の利益を上回ります。',
+          },
+          {
+            q: 'API強制なしの構造化出力にはJSONとYAMLのどちらを使うべきですか?',
+            a: 'API強制なしで生成し、出力がJSONを期待するシステムによって解析される必要がない場合はYAMLを使用します。モデルは、閉じ括弧、エスケープシーケンス、末尾のカンマの追跡が不要なため、YAMLでより少ない構文エラーを生成します。出力がJSONを必要とするAPI、データベース、または下流システムに直接供給される場合はJSONを使用します。フォーマットに関わらず、常に解析と検証を行ってください。',
+          },
+          {
+            q: '70%の構造化出力パスレートを持つプロンプトを改善する最速の方法は何ですか?',
+            a: '全体だけでなく、フィールドレベルでテストセットを実行します。個々のパスレートが最も低いフィールドを見つけ、タイプ、フォーマット、null処理をカバーする明示的な指示を1つ追加してから再実行します。単一のターゲットフィールド指示は通常、全体的なパスレートを5–15ポイント上げます。95%以上に達するまで繰り返します。',
+          },
+          {
+            q: 'ネイティブJSON-modeなしでモデルから信頼できる構造化出力を得るにはどうすればよいですか?',
+            a: '完全なJSONスキーマをテンプレートとしてプロンプトに埋め込み、有効な出力例を1つ含め、フィールドレベルの指示を追加し、温度0で実行します。すべての出力を解析して検証してください; 検証に失敗した場合は修正プロンプトを送信します。よく設計されたプロンプトは、ネイティブJSON-modeなしで温度0のほとんどのモデルで85–92%の信頼性を達成します。',
+          },
+          {
+            q: '構造化出力プロンプトに適したテストセットのサイズはどれくらいですか?',
+            a: '最低20ケース: 10個のhappy-path入力 (典型的で整形式のデータ)、5個のエッジケース (異常な値、不足しているオプションフィールド、長い入力)、5個の敵対的入力 (モデルを誤解させる可能性のある値、フィールド値に埋め込まれた指示、曖昧なタイプ)。このサイズは、過度なセットアップ時間なしに最も一般的な失敗カテゴリーを特定します。',
+          },
+          {
+            q: 'いつ修正プロンプトを使うべきで、いつベースプロンプトを修正すべきですか?',
+            a: '失敗がまれで — 出力の10%未満 — 珍しいエッジケース入力によって引き起こされる場合は修正プロンプトを使用します。失敗が体系的な場合はベースプロンプトを修正します: 複数のテストケースで同じフィールドが不足しているか、同じタイプエラーが発生している場合です。修正プロンプトは失敗ごとに遅延とAPIコストを追加します; より良いベースプロンプトは失敗を完全に防ぎます。',
+          },
+          {
+            q: 'スキーマ内のフィールドの順序は構造化出力の信頼性に影響しますか?',
+            a: 'はい。必須フィールドを最初に、オプションまたはnullableフィールドを最後に配置します。モデルは、何を含めるかを決定する際に、以前のスキーマ要素をより重視します。最初にリストされたnullableフィールドは、モデルが値について不確かな場合、後でリストされた必須フィールドよりも省略される可能性が高くなります。この順序効果は、GPT-5.6とClaude Sonnet 5全体で一貫しています。',
+          },
+        ],
+      },
       relatedReading: {
         id: 'related-reading',
         title: '参考資料',
@@ -2075,6 +2316,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-30',
     theme: '技术',
+    heroImage: '/images/prompts-for-reliable-structured-data-overview-hero-zh.png',
     title: '可靠结构化数据的提示词：3 种技巧（2026）',
     seoTitle: '可靠结构化数据的提示词：3 种技巧（2026）',
     metaDescription: 'JSON mode 只强制 JSON 语法，而非字段完整性。嵌入 schema、输出示例和字段指令可在不改动 API 的情况下，将可靠性提升到 95%+。',
@@ -2468,6 +2710,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'annual',
     specific_year: 2026,
     theme: 'Techniques',
+    heroImage: '/images/prompts-for-reliable-structured-data-overview-hero-ko.png',
     title: '신뢰할 수 있는 구조화 데이터를 위한 프롬프트: 3가지 기법 (2026)',
     seoTitle: '신뢰할 수 있는 구조화 데이터를 위한 프롬프트: 3가지 기법 (2026)',
     metaDescription: 'JSON 모드는 JSON 구문만 강제할 뿐 필드 완성도는 보장하지 않습니다. 스키마 임베딩, 출력 예시, 필드 지시사항으로 API 변경 없이 신뢰도를 95% 이상으로 높일 수 있습니다.',

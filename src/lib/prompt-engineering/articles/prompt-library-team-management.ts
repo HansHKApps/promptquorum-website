@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automation',
+    heroImage: '/images/prompt-library-team-management-overview-hero-en.png',
     title: 'Prompt Library Management: How to Organize, Version, and Govern Team Prompts',
     seoTitle: 'Prompt Library Management: Organize & Version Team Prompts',
     intro: 'Teams that rely on shared prompts without a structured library spend significant time re-creating prompts that already exist, lose the knowledge embedded in previous versions, and cannot enforce quality standards at scale. This guide covers folder structure, naming conventions, version control with Git and PromptHub, access control, and deprecation workflow.',
@@ -189,6 +190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatisierung',
+    heroImage: '/images/prompt-library-team-management-overview-hero-de.png',
     title: 'Prompt-Bibliothek für Teams: Organisieren, Versionieren & Verwalten (2026)',
     seoTitle: 'Prompt-Bibliothek: Organisation und Versionierung',
     intro: 'Teams, die gemeinsame Prompts ohne eine strukturierte Bibliothek nutzen, verlieren Zeit mit dem Neuerstellen bereits vorhandener Prompts, verlieren das in früheren Versionen verankerte Wissen und können keine Qualitätsstandards im großen Maßstab durchsetzen. Dieser Leitfaden behandelt Ordnerstruktur, Namenskonventionen, Versionskontrolle mit Git und PromptHub, Zugriffssteuerung und den Deprecation-Workflow.',
@@ -355,6 +357,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatización',
+    heroImage: '/images/prompt-library-team-management-overview-hero-es.png',
     title: 'Gestión de biblioteca de prompts: cómo organizar, versionar y gobernar los prompts del equipo',
     seoTitle: 'Gestión de biblioteca de prompts: organiza y versiona',
     intro: 'Los equipos que dependen de prompts compartidos sin una biblioteca estructurada pasan tiempo significativo recreando prompts que ya existen, pierden el conocimiento integrado en versiones anteriores y no pueden aplicar estándares de calidad a escala. Esta guía cubre estructura de carpetas, convenciones de nombres, control de versiones con Git y PromptHub, control de acceso y flujo de trabajo de deprecación.',
@@ -532,6 +535,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Workflows & Automação',
+    heroImage: '/images/prompt-library-team-management-overview-hero-pt.png',
     title: 'Gerenciamento de biblioteca de prompts: como organizar, versionar e governar os prompts da equipe',
     seoTitle: 'Gerenciamento de biblioteca de prompts: organize e versione',
     intro: 'Equipes que dependem de prompts compartilhados sem uma biblioteca estruturada gastam tempo significativo recriando prompts que já existem, perdem o conhecimento embutido em versões anteriores e não conseguem aplicar padrões de qualidade em escala. Este guia cobre estrutura de pastas, convenções de nomes, controle de versões com Git e PromptHub, controle de acesso e fluxo de trabalho de depreciação.',
@@ -709,6 +713,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatisation',
+    heroImage: '/images/prompt-library-team-management-overview-hero-fr.png',
     title: 'Gestion de bibliothèque de prompts : organiser, versionner et gouverner les prompts d\'équipe',
     seoTitle: 'Bibliothèque de prompts : organiser et versionner',
     intro: 'Les équipes qui partagent des prompts sans bibliothèque structurée passent du temps à recréer des prompts existants, perdent les connaissances intégrées dans les versions précédentes, et ne peuvent pas imposer des standards de qualité à l\'échelle. Ce guide couvre la structure de dossiers, les conventions de nommage, la gestion de version avec Git et PromptHub, le contrôle d\'accès, et le workflow de dépréciation.',
@@ -875,6 +880,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'ワークフローと自動化',
+    heroImage: '/images/prompt-library-team-management-overview-hero-ja.png',
     title: 'プロンプトライブラリ管理：チームのプロンプトを整理、バージョン管理、統治する方法',
     seoTitle: 'プロンプトライブラリ管理：チームプロンプトの整理とバージョン管理',
     intro: '構造化されたライブラリなしに共有プロンプトを使用するチームは、すでに存在するプロンプトを再作成することに時間を費やし、以前のバージョンに埋め込まれた知識を失い、大規模な品質標準を強制できません。このガイドでは、フォルダ構造、命名規則、GitとPromptHubによるバージョン管理、アクセス制御、廃止ワークフローを扱います。',
@@ -1041,6 +1047,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     theme: '工作流与自动化',
+    heroImage: '/images/prompt-library-team-management-overview-hero-zh.png',
     title: 'Prompt库管理：如何组织、版本控制和治理团队Prompt',
     seoTitle: 'Prompt库管理：组织和版本控制团队Prompt',
     intro: '没有结构化库而依赖共享Prompt的团队会花费大量时间重新创建已有的Prompt，丢失之前版本中的知识，并且无法在规模上执行质量标准。本指南涵盖文件夹结构、命名规范、使用Git和PromptHub进行版本控制、访问控制以及弃用工作流。',
@@ -1207,6 +1214,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automatización',
+    heroImage: '/images/prompt-library-team-management-overview-hero-ko.png',
     title: '프롬프트 라이브러리 관리: 팀 프롬프트 구성·버전 관리·거버넌스 방법',
     seoTitle: '프롬프트 라이브러리 관리: 구성과 버전 관리',
     intro: '구조화된 라이브러리 없이 공유 프롬프트에 의존하는 팀은 이미 존재하는 프롬프트를 다시 만드는 데 상당한 시간을 허비하고, 이전 버전에 담긴 지식을 잃으며, 규모에 맞는 품질 기준을 적용하지 못합니다. 이 가이드는 폴더 구조, 명명 규칙, Git과 PromptHub를 이용한 버전 관리, 접근 제어, 사용 중단 워크플로를 다룹니다.',
@@ -1385,6 +1393,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Workflows & Automation',
+    heroImage: '/images/prompt-library-team-management-overview-hero-ar.png',
     title: 'إدارة مكتبة التلقينات: كيفية تنظيم تلقينات الفريق وإصدارها وحوكمتها',
     seoTitle: 'إدارة مكتبة ⁨Prompt⁩ للفريق: تنظيم وإصدار ⁨Git⁩',
     intro: 'تُضيع الفرق التي تعتمد على تلقينات مشتركة دون مكتبة منظمة وقتًا كبيرًا في إعادة إنشاء تلقينات موجودة بالفعل، وتفقد المعرفة المُدمجة في الإصدارات السابقة، ولا تستطيع فرض معايير جودة على نطاق واسع. يغطي هذا الدليل بنية المجلدات، واصطلاحات التسمية، والتحكم بالإصدارات باستخدام Git وPromptHub، والتحكم بالوصول، وسير عمل الإهمال.',

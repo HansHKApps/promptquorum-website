@@ -7,6 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'evergreen',
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-mounting-guide-overview-hero-en.png',
     title: 'Balcony Solar Mounting Guide: Railing, Wall, Ground & Flat Roof',
     seoTitle: 'Balcony Solar Mounting Guide: Every Surface Type',
     intro: 'Not every balcony solar setup actually mounts on a railing — walls, ground stands, and flat roofs all work too, and each has different wind-load, angle, and safety considerations. Picking the right mounting method for your specific surface matters more than most buyers expect.',
@@ -146,6 +147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-mounting-guide-overview-hero-es.png',
     title: 'Guía de montaje de solar de balcón: barandilla, pared, suelo y techo plano',
     seoTitle: 'Guía de montaje de solar de balcón: todos los tipos de superficie',
     intro: 'No todas las instalaciones solares de balcón se montan realmente en una barandilla — las paredes, los soportes de suelo y los techos planos también funcionan, y cada uno tiene consideraciones distintas de carga de viento, ángulo y seguridad. Elegir el método de montaje adecuado para tu superficie específica importa más de lo que la mayoría de los compradores espera.',
@@ -286,6 +288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-mounting-guide-overview-hero-pt.png',
     title: 'Guia de fixação de energia solar de varanda: grade, parede, solo e telhado plano',
     seoTitle: 'Guia de fixação de energia solar de varanda: todo tipo de superfície',
     intro: 'Nem toda instalação de energia solar de varanda é realmente fixada em uma grade — paredes, suportes de solo e telhados planos também funcionam, e cada um tem considerações diferentes de carga de vento, ângulo e segurança. Escolher o método de fixação certo para sua superfície específica importa mais do que a maioria dos compradores espera.',
@@ -426,6 +429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-mounting-guide-overview-hero-ar.png',
     title: 'دليل تركيب الطاقة الشمسية على الشرفة: الدرابزين والحائط والأرض والسطح المستوي',
     seoTitle: 'دليل تركيب الطاقة الشمسية على الشرفة: كل أنواع الأسطح',
     intro: 'ليست كل أنظمة الطاقة الشمسية للشرفة تُركَّب فعليًا على الدرابزين — فالحوائط وحوامل الأرض والأسطح المستوية تعمل جميعها أيضًا، ولكل منها اعتبارات مختلفة من حيث تحمل الرياح والزاوية والسلامة. اختيار طريقة التركيب المناسبة لسطحك المحدد أهم مما يتوقعه معظم المشترين.',
@@ -566,6 +570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-mounting-guide-overview-hero-de.png',
     title: 'Balkonkraftwerk montieren: Geländer, Wand, Boden und Flachdach',
     seoTitle: 'Balkonkraftwerk montieren: Alle Montageflächen im Überblick',
     intro: 'Nicht jedes Balkonkraftwerk wird tatsächlich am Geländer befestigt – auch Wände, Bodenständer und Flachdächer sind mögliche Montageflächen, und jede hat andere Anforderungen an Windlast, Neigungswinkel und Sicherheit. Die richtige Montagemethode für Ihre spezifische Fläche zu wählen ist wichtiger, als die meisten Käufer erwarten.',
@@ -706,6 +711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-mounting-guide-overview-hero-ja.png',
     title: 'バルコニーソーラー取り付けガイド：手すり・壁・地面・陸屋根',
     seoTitle: 'バルコニーソーラー取り付けガイド：あらゆる設置面に対応',
     intro: 'バルコニーソーラーのすべてが手すりに取り付けられるわけではありません — 壁、地面スタンド、陸屋根もすべて有効な選択肢であり、それぞれ風荷重、角度、安全性の考慮点が異なります。自分の設置面に合った取り付け方法を選ぶことは、多くの購入者が思う以上に重要です。',
@@ -846,6 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-mounting-guide-overview-hero-zh.png',
     title: '阳台光伏安装指南：栏杆、墙面、地面与平屋顶',
     seoTitle: '阳台光伏安装指南：适用于所有安装面',
     intro: '并非所有阳台光伏系统都安装在栏杆上——墙面、地面支架和平屋顶同样适用，而且每种方式在风荷载、倾角和安全性方面的考量各不相同。为你的具体安装面选择合适的安装方式，比大多数购买者想象的更重要。',
@@ -986,6 +993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-mounting-guide-overview-hero-fr.png',
     title: 'Guide de fixation du solaire de balcon : rambarde, mur, sol et toit plat',
     seoTitle: 'Guide de fixation du solaire de balcon : tous les types de surface',
     intro: 'Toutes les installations solaires de balcon ne se fixent pas forcément sur une rambarde — les murs, les supports au sol et les toits plats fonctionnent également, et chacun présente des considérations différentes en matière de charge de vent, d\'angle et de sécurité. Choisir la méthode de fixation adaptée à votre surface spécifique compte plus que ce à quoi la plupart des acheteurs s\'attendent.',
@@ -1126,6 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-solar-mounting-guide-overview-hero-ko.png',
     title: '발코니 태양광 설치 가이드: 난간, 벽면, 지면, 평지붕',
     seoTitle: '발코니 태양광 설치 가이드: 모든 설치면 유형',
     intro: '모든 발코니 태양광 시스템이 난간에 설치되는 것은 아닙니다 — 벽면, 지면 스탠드, 평지붕도 모두 가능하며, 각각 풍하중, 각도, 안전성 측면에서 고려사항이 다릅니다. 자신의 설치면에 맞는 설치 방법을 선택하는 것은 대부분의 구매자가 예상하는 것보다 더 중요합니다.',

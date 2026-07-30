@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    heroImage: '/images/specs-framework-overview-hero-en.png',
     title: 'The SPECS Framework',
     intro: 'The SPECS Framework is a prompt structure that turns vague requests into precise specifications so that large language models produce predictable, parseable outputs. In PromptQuorum, the SPECS Framework is available as a built-in option that any user can select and apply directly in the app.',
     publishDate: '2026-03-24',
@@ -145,6 +146,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    heroImage: '/images/specs-framework-overview-hero-de.png',
     title: 'Das SPECS-Framework',
     intro: 'Das SPECS-Framework ist eine Prompt-Struktur, die vage Anfragen in präzise Spezifikationen verwandelt, damit große Sprachmodelle vorhersagbare, maschinell verwertbare Ausgaben erzeugen. In PromptQuorum steht das SPECS-Framework als integrierte Option zur Verfügung, die jeder Nutzer direkt in der App auswählen und anwenden kann.',
     publishDate: '2026-03-24',
@@ -280,6 +282,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    heroImage: '/images/specs-framework-overview-hero-es.png',
     title: 'El Framework SPECS',
     intro: 'El Framework SPECS es una estructura de prompts que convierte solicitudes vagas en especificaciones precisas para que los grandes modelos de lenguaje produzcan salidas predecibles y procesables. En PromptQuorum, el Framework SPECS está disponible como una opción integrada que cualquier usuario puede seleccionar y aplicar directamente en la app.',
     publishDate: '2026-03-24',
@@ -415,6 +418,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    heroImage: '/images/specs-framework-overview-hero-zh.png',
     title: 'SPECS 框架',
     intro: 'SPECS 框架是一种提示词结构，可将模糊的请求转化为精确的规范，使大语言模型产出可预测、可执行的输出。在 PromptQuorum 中，SPECS 框架作为内置选项提供，任何用户都可以直接在应用中选择并应用它。',
     publishDate: '2026-03-24',
@@ -549,6 +553,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   pt: {
     theme: 'Frameworks',
+    heroImage: '/images/specs-framework-overview-hero-pt.png',
     title: 'O Framework SPECS',
     intro: 'O Framework SPECS é uma estrutura de prompts que transforma solicitações vagas em especificações precisas para que os grandes modelos de linguagem produzam resultados previsíveis e processáveis por máquinas. No PromptQuorum, o Framework SPECS está disponível como uma opção integrada que qualquer usuário pode selecionar e aplicar diretamente no aplicativo.',
     publishDate: '2026-03-24',
@@ -687,6 +692,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    heroImage: '/images/specs-framework-overview-hero-ar.png',
     title: 'إطار ⁨SPECS⁩ لهندسة البرومبت: دليل عملي',
     intro: 'يُوفّر إطار SPECS هيكلاً منضبطاً لكتابة البرومبتات من خلال خمسة مكوّنات: الموضوع، والهدف، والسياق، والمتطلبات، والأسلوب. يمكّن هذا الهيكل المطوّرين وفرق المحتوى من توحيد البرومبتات وتكرارها بدلاً من الاعتماد على الصياغة العشوائية.',
     publishDate: '2025-09-15',
@@ -806,6 +812,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    heroImage: '/images/specs-framework-overview-hero-ko.png',
     title: 'SPECS 프레임워크',
     intro: 'SPECS 프레임워크는 모호한 요청을 정밀한 명세로 전환하여 대형 언어 모델이 예측 가능하고 파싱 가능한 출력을 생성하도록 하는 프롬프트 구조입니다. PromptQuorum에서 SPECS 프레임워크는 사용자가 앱에서 직접 선택하고 적용할 수 있는 기본 제공 옵션으로 제공됩니다.',
     publishDate: '2026-03-24',
@@ -919,6 +926,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    heroImage: '/images/specs-framework-overview-hero-fr.png',
     title: 'Le Framework SPECS',
     intro: 'Le Framework SPECS est une structure de prompt qui transforme des demandes vagues en spécifications précises, afin que les grands modèles de langage produisent des sorties prévisibles et exploitables. Dans PromptQuorum, le Framework SPECS est proposé comme option intégrée que tout utilisateur peut sélectionner et appliquer directement dans l\'application.',
     publishDate: '2026-03-24',
@@ -1054,6 +1062,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
+    heroImage: '/images/specs-framework-overview-hero-ja.png',
     title: 'SPECS フレームワーク',
     intro: 'SPECS フレームワークは、曖昧なリクエストを精密な仕様に変換し、大規模言語モデルが予測可能で解析しやすい出力を生成できるようにするプロンプト構造です。PromptQuorum では、SPECS フレームワークが組み込みオプションとして提供されており、どのユーザーもアプリ内で直接選択して適用できます。',
     publishDate: '2026-03-24',

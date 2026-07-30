@@ -34,6 +34,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-10-16',
     last_full_refresh: '2026-07-16',
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/how-balcony-solar-became-legal-in-the-us-overview-hero-en.png',
     title: 'How Balcony Solar Went From Illegal to Law in 8 US States (2026)',
     seoTitle: 'How Balcony Solar Became Legal in the US (2026)',
     intro: 'Until 2025, plug-in balcony solar was effectively illegal everywhere in the US — not banned by name, but caught under interconnection rules written for 5–25 kW rooftop systems. Utah broke the deadlock in March 2025, and seven more states have signed similar laws since. This is the story of how that happened, why California, Florida, and Texas are still stuck, and what a missing safety certification has to do with all of it.',
@@ -261,6 +262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/how-balcony-solar-became-legal-in-the-us-overview-hero-de.png',
     title: 'Wie Balkonkraftwerke in 8 US-Bundesstaaten von illegal zu legal wurden (2026)',
     seoTitle: 'Wie Balkonkraftwerke in den USA legal wurden (2026)',
     intro: 'Bis 2025 waren steckerfertige Balkonkraftwerke in den USA faktisch überall illegal — nicht namentlich verboten, aber gefangen in Netzanschlussvorschriften, die für 5–25-kW-Dachanlagen geschrieben wurden. Utah durchbrach diese Blockade im März 2025, und seitdem haben sieben weitere Bundesstaaten ähnliche Gesetze unterzeichnet. Dies ist die Geschichte, wie es dazu kam, warum Kalifornien, Florida und Texas noch immer feststecken — und was eine fehlende Sicherheitszertifizierung damit zu tun hat.',
@@ -503,6 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/how-balcony-solar-became-legal-in-the-us-overview-hero-fr.png',
     title: 'Comment le solaire de balcon est devenu légal dans 8 États américains (2026)',
     seoTitle: 'Comment le solaire de balcon est devenu légal aux États-Unis (2026)',
     intro: 'Jusqu\'en 2025, le solaire de balcon branchable était de fait illégal partout aux États-Unis — non pas interdit nommément, mais pris au piège de règles d\'interconnexion conçues pour des installations sur toit de 5 à 25 kW. L\'Utah a débloqué la situation en mars 2025, et sept autres États ont depuis signé des lois similaires. Voici comment cela s\'est produit, pourquoi la Californie, la Floride et le Texas restent bloqués, et ce qu\'une certification de sécurité manquante a à voir avec tout cela.',
@@ -745,6 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/how-balcony-solar-became-legal-in-the-us-overview-hero-es.png',
     title: 'Cómo el balcony solar pasó de ilegal a ley en 8 estados de EE. UU. (2026)',
     seoTitle: 'Cómo se legalizó el balcony solar en EE. UU. (2026)',
     intro: 'Hasta 2025, el balcony solar enchufable era, en la práctica, ilegal en todo EE. UU. — no prohibido explícitamente, sino atrapado bajo normas de interconexión pensadas para sistemas de tejado de 5 a 25 kW. Utah rompió el bloqueo en marzo de 2025, y desde entonces siete estados más han firmado leyes similares. Esta es la historia de cómo ocurrió, por qué California, Florida y Texas siguen estancados, y qué tiene que ver una certificación de seguridad ausente con todo esto.',
@@ -987,6 +991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/how-balcony-solar-became-legal-in-the-us-overview-hero-pt.png',
     title: 'Como a energia solar de varanda deixou de ser ilegal e virou lei em 8 estados dos EUA (2026)',
     seoTitle: 'Como a energia solar de varanda se tornou legal nos EUA (2026)',
     intro: 'Até 2025, a energia solar de varanda plug-and-play era, na prática, ilegal em todo o território dos EUA — não proibida por nome, mas enquadrada em regras de interconexão criadas para sistemas residenciais de telhado de 5 a 25 kW. Utah rompeu esse impasse em março de 2025, e mais sete estados sancionaram leis semelhantes desde então. Esta é a história de como isso aconteceu, por que Califórnia, Flórida e Texas ainda estão travados, e o que uma certificação de segurança ausente tem a ver com tudo isso.',
@@ -1229,6 +1234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/how-balcony-solar-became-legal-in-the-us-overview-hero-ar.png',
     title: 'كيف تحوّلت الطاقة الشمسية للشرفات من الحظر إلى القانون في 8 ولايات أمريكية (2026)',
     seoTitle: 'كيف أصبحت الطاقة الشمسية للشرفات قانونية في الولايات المتحدة (2026)',
     intro: 'حتى عام 2025، كانت الطاقة الشمسية للشرفات القابلة للتوصيل غير قانونية عمليًا في كل أنحاء الولايات المتحدة — لم تُحظر باسمها، لكنها وقعت ضمن قواعد الربط بالشبكة الموضوعة أصلًا لأنظمة سقفية بقدرة 5–25 كيلوواط. كسرت يوتا هذا الجمود في مارس 2025، ووقّعت سبع ولايات أخرى قوانين مماثلة منذ ذلك الحين. هذه قصة كيف حدث ذلك، ولماذا لا تزال كاليفورنيا وفلوريدا وتكساس عالقة، وما علاقة اعتماد سلامة مفقود بكل هذا.',
@@ -1471,6 +1477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/how-balcony-solar-became-legal-in-the-us-overview-hero-ja.png',
     title: 'バルコニーソーラーが米国8州で違法から合法になった経緯(2026年)',
     seoTitle: '米国でバルコニーソーラーが合法化された経緯(2026年)',
     intro: '2025年までは、米国のどこでもプラグイン式バルコニーソーラーは事実上違法だった — 名指しで禁止されていたわけではなく、5〜25kWの屋根置きシステム向けに書かれた系統連系規則に引っかかっていたためだ。2025年3月にユタ州がこの膠着状態を打ち破り、以降さらに7州が同様の法律に署名した。これは、その経緯、カリフォルニア州・フロリダ州・テキサス州がなぜ依然として停滞しているのか、そして欠けていた安全認証がそのすべてにどう関わっているのかについての物語だ。',
@@ -1713,6 +1720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/how-balcony-solar-became-legal-in-the-us-overview-hero-zh.png',
     title: '阳台光伏如何在美国8个州从违法变为合法(2026年)',
     seoTitle: '美国阳台光伏合法化历程(2026年)',
     intro: '在2025年之前,插电式阳台光伏在美国实际上处处违法——并非被明令禁止,而是被套用在为5–25 kW屋顶光伏系统设计的并网规则之下。犹他州于2025年3月率先打破僵局,此后又有7个州签署了类似法律。这是这一切发生的经过——为什么加利福尼亚州、佛罗里达州和德克萨斯州仍然停滞不前,以及一项缺失的安全认证与这一切有何关系。',
@@ -1955,6 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Legislation',
+    heroImage: '/images/how-balcony-solar-became-legal-in-the-us-overview-hero-ko.png',
     title: '미국 8개 주에서 발코니 태양광은 어떻게 합법이 되었나 (2026년)',
     seoTitle: '미국 발코니 태양광 합법화 과정 (2026년)',
     intro: '2025년까지 미국에서는 플러그인 발코니 태양광이 사실상 어디서나 불법이었다 — 명시적으로 금지된 것은 아니었지만, 5~25kW 지붕형 시스템을 기준으로 만들어진 계통 연계 규정에 걸렸기 때문이다. 유타주가 2025년 3월 이 교착 상태를 깼고, 이후 7개 주가 유사한 법안에 서명했다. 이 글은 그 과정이 어떻게 이루어졌는지, 캘리포니아주·플로리다주·텍사스주가 왜 여전히 진전이 없는지, 그리고 누락된 안전 인증 하나가 이 모든 것과 어떤 관련이 있는지를 다룬다.',

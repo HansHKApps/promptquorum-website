@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
@@ -402,6 +403,16 @@ export function PromptBitesHubClient({ lang }: Props) {
           <p className="text-text-secondary text-lg max-w-2xl mx-auto mb-4">
             {HUB_SUBTITLE[lang]}
           </p>
+          <figure className="mb-8 rounded-xl overflow-hidden max-w-2xl mx-auto">
+            <Image
+              src={`/images/prompt-bites-hub-overview-hero-${lang}.png`}
+              alt={HUB_HEADLINE[lang] ?? 'Prompt Bites'}
+              width={1200}
+              height={675}
+              priority
+              className="w-full"
+            />
+          </figure>
           <HubReviewedBadge
             date={latestDateModified(Object.values(promptBitesContent).map((a) => a?.en))}
             lang={lang}

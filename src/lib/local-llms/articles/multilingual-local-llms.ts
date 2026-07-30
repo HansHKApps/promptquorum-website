@@ -11,6 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Multilingual Local LLMs: Best Models for Non-English Languages in 2026',
+      heroImage: '/images/multilingual-local-llms-overview-hero-en.png',
       dateModified: '2026-06-21',
       seoTitle: 'Best Multilingual Local LLMs 2026: Qwen3 vs Mistral',
       intro: 'Qwen3 is the strongest multilingual local LLM family in 2026, with native support for 29 languages including Chinese, Japanese, Korean, Arabic, and all major European languages. For European languages specifically, Mistral and Llama 3.x models perform competitively. For Asian languages (Japanese, Korean, Chinese), Qwen3 outperforms all alternatives at every comparable model size.',
@@ -185,6 +186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     es: {
       theme: 'Best Models',
       title: 'Los mejores LLM locales multilingues 2026: Qwen3 vs Mistral',
+      heroImage: '/images/multilingual-local-llms-overview-hero-es.png',
       seoTitle: 'Mejores LLM locales multilingues 2026: Qwen3 vs Mistral',
       intro: 'Qwen3 es la familia de LLM locales multilingues más potente de 2026, con soporte nativo para 29 idiomas, incluidos chino, japonés, coreano, árabe y todos los principales idiomas europeos. Para idiomas europeos, Mistral y Llama 3.x son competitivos. Para idiomas asiáticos (japonés, coreano, chino), Qwen3 supera a todas las alternativas en cada tamaño de modelo comparable.',
       metaDescription: 'Qwen3 domina los idiomas asiáticos (15-25% mejor que Llama en JMT-bench). Mistral competitivo en idiomas europeos. Comparativa de benchmarks -- abril 2026.',
@@ -516,6 +518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ar: {
       theme: 'Best Models',
       title: 'أفضل نماذج ⁨LLM⁩ المحلية متعددة اللغات ⁨2026⁩: ⁨Qwen3⁩ مقابل ⁨Mistral⁩',
+      heroImage: '/images/multilingual-local-llms-overview-hero-ar.png',
       seoTitle: 'أفضل ⁨LLM⁩ محلية متعددة اللغات ⁨2026⁩: ⁨Qwen3⁩ و⁨Mistral⁩',
       intro: 'Qwen3 هو أقوى عائلة نماذج LLM محلية متعددة اللغات في 2026، بدعم أصلي لـ 29 لغة، بما في ذلك الصينية واليابانية والكورية والعربية وجميع اللغات الأوروبية الرئيسية. للغات الأوروبية، Mistral وLlama 3.x تنافسيان. للغات الآسيوية (اليابانية، الكورية، الصينية)، يتفوق Qwen3 على جميع البدائل في كل حجم نموذج مماثل.',
       metaDescription: '⁨Qwen3⁩ يتفوق في اللغات الآسيوية بـ ⁨15⁩–⁨25%⁩ عن ⁨Llama⁩ في ⁨JMT-bench. Mistral⁩ تنافسي أوروبياً. مقارنة اختبارات الأداء لـ ⁨29⁩ لغة — أبريل ⁨2026⁩.',
@@ -847,6 +850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     pt: {
       theme: 'Best Models',
       title: 'Melhores LLMs Locais Multilíngues 2026: Qwen3 vs Mistral',
+      heroImage: '/images/multilingual-local-llms-overview-hero-pt.png',
       seoTitle: 'Melhores LLMs locais multilíngues 2026: Qwen3 vs Mistral',
       intro: 'O Qwen3 é a família de LLMs locais multilíngues mais poderosa de 2026, com suporte nativo a 29 idiomas, incluindo chinês, japonês, coreano, árabe e todos os principais idiomas europeus. Para idiomas europeus, Mistral e Llama 3.x são competitivos. Para idiomas asiáticos (japonês, coreano, chinês), o Qwen3 supera todas as alternativas em cada tamanho de modelo comparável.',
       metaDescription: 'Qwen3 domina idiomas asiáticos (15–25% melhor que Llama no JMT-bench). Mistral competitivo em idiomas europeus. Comparativo de benchmarks — abril 2026.',
@@ -939,12 +943,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**O melhor benchmark é testar em sua própria tarefa.** Benchmarks genéricos como MMLU existem principalmente em inglês. Para avaliação multilíngue, use:',
           ],
-          items: [
-            '**JMT-bench (japonês):** Conjunto de instruções em japonês para testar seguimento de instruções, código e análise.',
-            '**Ko-bench (coreano):** Benchmark de seguimento de instruções em coreano.',
-            '**MMLU multilíngue:** Versões em 14 idiomas do MMLU para testar o conhecimento do mundo.',
-            '**Teste manual:** Envie 10 prompts em seu idioma alvo e avalie subjetivamente a gramática, naturalidade e precisão.',
-            '**Teste de tokenização:** Use `ollama run qwen3:7b "Conte os tokens nesta frase em japonês"` para verificar se o modelo lida com o script corretamente.',
+          numberedItems: [
+            'Execute o MGSM (Multilingual Grade School Math) -- testa o raciocínio matemático em 10 idiomas. Disponível no Hugging Face: datasets/juletxara/mgsm.',
+            'Execute o m-MMLU -- a versão multilíngue do MMLU, cobrindo 57 disciplinas em vários idiomas.',
+            'Para qualidade conversacional: escreva 10 prompts de teste no idioma alvo cobrindo diferentes tipos de tarefa (resumo, perguntas e respostas, tradução, escrita criativa). Avalie as respostas manualmente ou com um falante nativo.',
+            'Para japonês especificamente: use o JMT-bench (github.com/Stability-AI/lm-evaluation-harness), que cobre o seguimento de instruções em japonês.',
+            'Compare seu modelo local com APIs na nuvem usando o [PromptQuorum](/pt) -- envie o mesmo prompt multilíngue simultaneamente para seu modelo Ollama local e para o GPT-5.5 para quantificar a diferença de qualidade no seu caso de uso específico.',
           ],
         },
         comparisonTable: {
@@ -1023,6 +1027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     de: {
       theme: 'Einstieg',
       title: 'Beste mehrsprachige lokale LLMs 2026: Qwen3 vs. Mistral',
+      heroImage: '/images/multilingual-local-llms-overview-hero-de.png',
       seoTitle: 'Beste mehrsprachige lokale LLMs 2026: Qwen3 vs. Mistral',
       intro: 'Vergleich mehrsprachiger lokaler Sprachmodelle: Qwen3 7B dominiert asiatische Sprachen (Chinesisch, Japanisch, Koreanisch) mit 5-Stern-Bewertungen. Mistral Small konkurriert bei europäischen Sprachen. Testen Sie schnell offline ohne API-Kosten.',
       metaDescription: 'Mehrsprachige LLMs 2026: Qwen3 7B beste für Chinesisch/Japanisch/Koreanisch. Mistral konkurriert bei Französisch/Deutsch. Benchmarkvergleich.',
@@ -1546,6 +1551,7 @@ schema: {
     fr: {
       theme: 'Meilleurs modèles',
       title: 'Meilleurs LLMs locaux multilingues 2026 : Qwen3 vs Mistral',
+      heroImage: '/images/multilingual-local-llms-overview-hero-fr.png',
       seoTitle: 'Meilleurs LLMs multilingues 2026 : Qwen3 vs Mistral',
       intro: 'Comparez les LLMs locaux multilingues : Qwen3 7B domine les langues asiatiques (chinois, japonais, coréen) avec des évaluations 5 étoiles. Mistral Small rivalise sur les langues européennes. Testez rapidement hors ligne sans frais API.',
       metaDescription: 'LLMs locaux multilingues 2026 : Qwen3 7B meilleur pour chinois/japonais/coréen. Mistral rivalise en français/allemand. Comparaison avec benchmarks.',
@@ -2044,6 +2050,7 @@ schema: {
     ja: {
       theme: 'ベストモデル',
       title: 'ベスト多言語ローカルLLM 2026：Qwen3 vs Mistral',
+      heroImage: '/images/multilingual-local-llms-overview-hero-ja.png',
       seoTitle: 'ベスト多言語ローカルLLM 2026：Qwen3 vs Mistral',
       intro: '多言語ローカルLLMを比較：Qwen3 7Bはアジア言語（中国語、日本語、韓国語）で5つ星評価を獲得。Mistral Smallはヨーロッパ言語で競争力あり。API費用なしでオフライン高速テスト可能。',
       metaDescription: '多言語ローカルLLM 2026：Qwen3 7Bはアジア言語でLlamaより15-25%優勢（JMT基準）。欧州語はMistralと競争力互角。29言語、ベンチマーク比較掲載。',
@@ -2547,6 +2554,7 @@ schema: {
     zh: {
       theme: '最佳模型',
       title: '多语言本地LLM：2026年非英语语言的最佳模型',
+      heroImage: '/images/multilingual-local-llms-overview-hero-zh.png',
       seoTitle: '最佳多语言本地LLM 2026：Qwen3 vs Mistral',
       intro: 'Qwen3是2026年最强大的多语言本地LLM系列，支持29种语言，包括中文、日文、韩文、阿拉伯文和所有主要欧洲语言。对于欧洲语言，Mistral和Llama 3.x与Qwen3具有竞争力。对于亚洲语言（日语、韩语、中文），Qwen3在每个可比较的模型大小上都优于所有替代方案。',
       metaDescription: 'Qwen3在中文/日文/韩文上领先（JMT基准高15-25%）。支持29种语言本地运行。Mistral在欧洲语言具竞争力。基准对比与推荐 -- 2026年4月。',
@@ -2754,6 +2762,7 @@ schema: {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: '다국어 로컬 LLM: 2026년 비영어권 언어에 최적화된 모델',
+    heroImage: '/images/multilingual-local-llms-overview-hero-ko.png',
       seoTitle: '2026년 최고의 다국어 로컬 LLM: Qwen3 vs Mistral',
       intro: 'Qwen3는 2026년 현재 가장 강력한 다국어 로컬 LLM 패밀리로, 중국어, 일본어, 한국어, 아랍어, 주요 유럽 언어를 포함한 29개 언어를 기본 지원합니다. 유럽 언어에 한해서는 Mistral과 Llama 3.x 모델도 Qwen3에 근접한 성능을 보입니다. 아시아 언어(일본어, 한국어, 중국어)에서는 Qwen3가 동급 모델 크기 기준으로 모든 대안을 능가합니다.',
       metaDescription: 'Qwen3는 아시아 언어에서 Llama 대비 15~25% 높은 성능을 기록합니다. Mistral은 유럽 언어에서 경쟁력이 있습니다. 2026년 4월 벤치마크 비교.',

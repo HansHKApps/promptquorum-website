@@ -1226,6 +1226,7 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
       { label: 'Análise de custos vs APIs na nuvem', anchor: '#cost-analysis' },
       { label: 'Modelos alternativos 70B+', anchor: '#alternatives' },
       { label: 'Otimização de velocidade', anchor: '#speed-optimization' },
+      { label: 'Casos de uso práticos', anchor: '#use-cases' },
       { label: 'Leitura relacionada', anchor: '#related-reading' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
     ],
@@ -1242,6 +1243,18 @@ for chunk in stream_generate(model, tokenizer, "Explica la computación cuántic
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'O M5 Max 128GB é o único hardware de consumo capaz de executar modelos 70B a velocidade de chat em tempo real (15–20 tok/s) sem configurações multi-GPU complexas.' },
+        ],
+      },
+      useCases: {
+        id: 'use-cases',
+        title: 'Casos de uso práticos para inferência local com 70B',
+        numberedItems: [
+          { title: 'Análise de documentos confidenciais', whyItMatters: 'Contratos jurídicos, prontuários médicos, demonstrações financeiras, due diligence de fusões e aquisições. APIs na nuvem não são aceitáveis sob HIPAA, GDPR ou NDA. O 70B Q5 no M5 Max entrega análise com qualidade de nuvem sem qualquer exfiltração de dados.' },
+          { title: 'Assistência de código em alto volume', whyItMatters: 'Desenvolvedor solo usando Copilot 8h/dia: ~$10/mês. Equipe de 10 usando 70B Coder localmente: $0/mês. O código nunca sai da rede da empresa. O M5 Max como servidor de inferência compartilhado se paga em 3 meses para uma equipe de 10 pessoas.' },
+          { title: 'Geração de conteúdo longo', whyItMatters: 'Posts de blog com 5.000 palavras, documentação técnica. O 70B produz conteúdo longo dramaticamente melhor que o 8B. Local: sem limites de token, sem limites de taxa. Gere 50.000 palavras/dia por $0 em vez de $50–100 em custos de API.' },
+          { title: 'Pesquisa e uso acadêmico', whyItMatters: 'Processe milhares de artigos para revisão de literatura, gere hipóteses em diversos domínios. A qualidade de raciocínio do 70B é necessária. Os custos de nuvem são proibitivos para orçamentos de estudantes e pós-doutorandos.' },
+          { title: 'IA pessoal com privacidade em primeiro lugar', whyItMatters: 'Análise de diário pessoal, planejamento financeiro familiar, reflexão sobre saúde com dados privados. Substitui o ChatGPT Plus para uma casa inteira. Zero dados enviados a terceiros.' },
+          { title: 'Fluxos de trabalho críticos offline', whyItMatters: 'Jornalistas em campo em regiões restritivas, profissionais de saúde em áreas remotas, viagens sem internet confiável, instalações seguras sem acesso a rede externa.' },
         ],
       },
       faqSection: {

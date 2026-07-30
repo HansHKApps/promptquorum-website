@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-latest-version-overview-hero-en.png',
     title: 'What Is the Latest Ollama Version?',
     dateModified: '2026-06-21',
     seoTitle: 'Latest Ollama Version 2026 | Prompt Bites | PromptQuorum',
@@ -103,6 +104,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-latest-version-overview-hero-de.png',
     title: 'Was ist die neueste Ollama-Version?',
     seoTitle: 'Neueste Ollama-Version 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Aktuelle Ollama-Version auf GitHub prüfen. Linux-Update: Installationsskript neu ausführen. Mac/Windows: Installer von ollama.com herunterladen. Stand Mai 2026.',
@@ -191,6 +193,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-latest-version-overview-hero-fr.png',
     title: 'Quelle est la dernière version d\'Ollama ?',
     seoTitle: 'Version Ollama actuelle 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Sur GitHub : dernière version Ollama. Linux : relancer le script d\'installation. Mac/Windows : réinstaller depuis ollama.com. Vérifié mai 2026.',
@@ -279,6 +282,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-latest-version-overview-hero-ja.png',
     title: 'Ollamaの最新バージョンは？',
     seoTitle: 'Ollama 2026最新バージョン確認 | Prompt Bites | PromptQuorum',
     metaDescription: 'ollama --versionで現在のバージョンを確認できます。最新リリースはGitHubで公開。Linuxはインストールスクリプト再実行、Mac/Windowsはollama.comから再ダウンロード。2026年5月更新。',
@@ -367,6 +371,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-latest-version-overview-hero-zh.png',
     title: 'Ollama最新版本是什么？',
     seoTitle: 'Ollama 2026 最新版本查询 | Prompt Bites | PromptQuorum',
     metaDescription: '在GitHub查看最新Ollama版本。运行ollama --version检查已安装版本。Linux重新运行安装脚本，Mac/Windows从ollama.com重新下载安装程序。2026年5月更新。',
@@ -455,6 +460,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-latest-version-overview-hero-pt.png',
     title: 'Qual é a versão mais recente do Ollama?',
     seoTitle: 'Versão mais recente do Ollama 2026 | PromptQuorum',
     metaDescription: 'Verifique a versão atual do Ollama no GitHub. Execute ollama --version. Linux: execute novamente o script de instalação; Mac/Windows: baixe em ollama.com.',
@@ -543,6 +549,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-latest-version-overview-hero-es.png',
     title: '¿Cuál es la versión más reciente de Ollama?',
     seoTitle: 'Versión más reciente de Ollama 2026 | PromptQuorum',
     metaDescription: 'Consulta la versión actual de Ollama en GitHub. Ejecuta ollama --version. Linux: relanza el script de instalación; Mac/Windows: descarga desde ollama.com.',
@@ -631,6 +638,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-latest-version-overview-hero-ar.png',
     title: 'ما هو أحدث إصدار من ⁨Ollama⁩؟',
     seoTitle: 'إصدار ⁨Ollama⁩ الأحدث ⁨2026⁩: فحص وتحديث سريع',
     metaDescription: 'شغّل ⁨ollama --version⁩ لمعرفة إصدارك المثبّت. ⁨Linux⁩: أعد سكريبت التثبيت بأمر واحد. ⁨Mac⁩ و⁨Windows⁩: حمّل المثبّت من ⁨ollama.com⁩. النماذج لا تُحذف.',
@@ -719,6 +727,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Ollama',
+    heroImage: '/images/ollama-latest-version-overview-hero-ko.png',
     title: 'Ollama 최신 버전은 무엇입니까?',
     seoTitle: 'Ollama 최신 버전 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'ollama --version 명령으로 설치된 버전을 확인하십시오. GitHub 릴리스 페이지에서 최신 버전을 확인할 수 있습니다. Linux는 설치 스크립트 재실행, Mac/Windows는 ollama.com에서 재다운로드하십시오.',

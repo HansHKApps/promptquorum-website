@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-en.png',
     title: 'Local AI Trends 2027, Part 7 of 10: The NAS Becomes an Always-On AI Memory Layer',
     seoTitle: 'AI Trends 2027 Part 7: NAS as AI Memory Layer',
     metaDescription: 'Part 7 of 10 in Local AI Trends 2027: why analysts expect home and small-office NAS devices to evolve into an always-on private AI memory layer, not just storage.',
@@ -110,6 +111,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-de.png',
     title: 'Local AI Trends 2027, Teil 7 von 10: Das NAS wird zur ständig aktiven KI-Gedächtnisebene',
     seoTitle: 'KI-Trends 2027 Teil 7: NAS als KI-Gedächtnis',
     metaDescription: 'Teil 7 von 10 der Serie Local AI Trends 2027: Warum Analysten erwarten, dass NAS-Geräte für Zuhause und kleine Büros zu einer ständig aktiven privaten KI-Gedächtnisebene werden.',
@@ -216,6 +218,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-fr.png',
     title: 'Tendances de l\'IA locale 2027, partie 7 sur 10 : le NAS devient une couche de mémoire IA permanente',
     seoTitle: 'Tendances IA 2027 partie 7 : NAS comme mémoire IA',
     metaDescription: 'Partie 7 sur 10 de Local AI Trends 2027 : pourquoi les analystes prévoient que les NAS domestiques et pour petites structures deviennent une couche de mémoire IA privée permanente.',
@@ -322,6 +325,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-ja.png',
     title: 'ローカルAIトレンド2027 第7回(全10回):NASが常時稼働のAIメモリ層になる',
     seoTitle: 'AIトレンド2027 第7回:NASがAIメモリ層に',
     metaDescription: 'Local AI Trends 2027の第7回(全10回):アナリストが自宅・小規模オフィス向けNASを常時稼働のプライベートAIメモリ層へと進化すると予測する理由を解説。',
@@ -428,6 +432,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-zh.png',
     title: '本地AI趋势2027,第7篇(共10篇):NAS将成为常在线的AI记忆层',
     seoTitle: 'AI趋势2027第7篇:NAS成为AI记忆层',
     metaDescription: 'Local AI Trends 2027系列第7篇(共10篇):为何分析师预计家庭和小型办公室的NAS设备将演变为常在线的私有AI记忆层,而不只是存储设备。',
@@ -534,6 +539,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-es.png',
     title: 'Tendencias de IA local 2027, parte 7 de 10: el NAS se convierte en una capa de memoria de IA siempre activa',
     seoTitle: 'Tendencias IA 2027 parte 7: NAS como memoria IA',
     metaDescription: 'Parte 7 de 10 de Local AI Trends 2027: por qué los analistas esperan que los dispositivos NAS domésticos y de pequeñas oficinas se conviertan en una capa de memoria de IA privada siempre activa.',
@@ -640,6 +646,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-pt.png',
     title: 'Tendências de IA local 2027, parte 7 de 10: o NAS se torna uma camada de memória de IA sempre ativa',
     seoTitle: 'Tendências IA 2027 parte 7: NAS como memória IA',
     metaDescription: 'Parte 7 de 10 da série Local AI Trends 2027: por que analistas esperam que dispositivos NAS domésticos e de pequenos escritórios se tornem uma camada de memória de IA privada sempre ativa.',
@@ -746,6 +753,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-ar.png',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 7 من 10: يتحول NAS إلى طبقة ذاكرة ذكاء اصطناعي تعمل باستمرار',
     seoTitle: 'اتجاهات الذكاء الاصطناعي 2027 الجزء 7: NAS كذاكرة ذكاء اصطناعي',
     metaDescription: 'الجزء 7 من 10 من سلسلة Local AI Trends 2027: لماذا يتوقع المحللون أن تتطور أجهزة NAS المنزلية والمكاتب الصغيرة إلى طبقة ذاكرة ذكاء اصطناعي خاصة تعمل باستمرار.',
@@ -852,6 +860,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Industry Trends & Predictions',
+    heroImage: '/images/local-ai-trend-2027-ai-nas-home-server-overview-hero-ko.png',
     title: '로컬 AI 트렌드 2027, 10부 중 7부: NAS가 상시 가동되는 AI 메모리 계층으로 변화하다',
     seoTitle: 'AI 트렌드 2027 7부: NAS가 AI 메모리로',
     metaDescription: 'Local AI Trends 2027 시리즈 10부 중 7부: 분석가들이 가정용·소규모 사무실용 NAS 장치가 상시 가동되는 프라이빗 AI 메모리 계층으로 진화할 것으로 예상하는 이유.',

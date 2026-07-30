@@ -56,7 +56,12 @@ export function buildLocalLLMArticleSchemas(slug: string, key: string, lang: LLM
   const llmLevelMap: Record<string, string> = { Beginner: 'Beginner', Intermediate: 'Intermediate', Advanced: 'Expert', Technical: 'Expert' }
   const llmProficiencyLevel = llmEdLevel ? (llmLevelMap[llmEdLevel] ?? llmEdLevel) : undefined
   const llmAboutTopics = ((article as any).aboutTopics ?? (enArticle as any)?.aboutTopics) as string[] | undefined
-  const llmHowToName = ((article as any).howToName ?? (enArticle as any)?.howToName) as string | undefined
+  // Locale-own field only — never fall back to enArticle.howToName. Falling back
+  // cross-locale would emit the EN string as the HowTo schema `name` on a non-EN
+  // page (a Zero-English-Rule violation in the schema layer). howToSection.title
+  // and article.title below are the locale's own already-translated fields, so the
+  // full fallback chain never surfaces English on a non-English page.
+  const llmHowToName = (article as any).howToName as string | undefined
 
   // Use article.schema if defined; otherwise fallback to generic TechArticle schema
   const articleSchema: any = (article as any).schema || {
@@ -154,7 +159,7 @@ export function buildLocalLLMArticleSchemas(slug: string, key: string, lang: LLM
   const howToSchema = article.howToSchema ?? (howToSection ? {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: llmHowToName ?? article.title,
+    name: llmHowToName ?? howToSection.title ?? article.title,
     description: article.intro,
     step: howToSection.numberedItems!.map((step, i) => {
       const rawText = typeof step === 'string' ? step : `${step.title}: ${step.whyItMatters}`

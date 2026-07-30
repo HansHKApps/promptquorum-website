@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useMemo } from 'react'
 import { llmThemes, type LLMTheme } from '@/lib/local-llms/themes'
@@ -1761,6 +1762,17 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
           <p className="article-intro text-lg text-text-secondary max-w-2xl leading-relaxed mb-4">
             {HUB_HERO_DESC[lang] ?? HUB_HERO_DESC['en']}
           </p>
+          <figure className="mb-8 rounded-xl overflow-hidden max-w-2xl">
+            <Image
+              src={`/images/local-llms-hub-overview-hero-${lang}.png`}
+              alt={HUB_HERO_TITLE[lang] ?? HUB_HERO_TITLE['en']}
+              width={1200}
+              height={675}
+              priority
+              className="w-full"
+            />
+          </figure>
+
           <HubReviewedBadge date={latestDateModified(Object.values(datesMap))} lang={lang} className="mb-10" />
 
           {/* Key Takeaways */}

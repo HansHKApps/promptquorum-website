@@ -1656,6 +1656,21 @@ schema: {
         'proficiencyLevel': 'Beginner',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Quando Usar uma API na Nuvem em Vez de um LLM Local',
+        numberOfItems: 6,
+        inLanguage: 'pt',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'É necessária qualidade máxima de saída', description: 'Documentos jurídicos, geração de código complexo, análise de pesquisa avançada. Use GPT-5.6 ou Claude Sonnet 5.' },
+          { '@type': 'ListItem', position: 2, name: 'É necessária informação em tempo real', description: 'Notícias atuais, dados ao vivo, recuperação de URLs. Modelos locais têm uma data de corte de treinamento.' },
+          { '@type': 'ListItem', position: 3, name: 'O tempo de configuração é uma restrição', description: 'Para um protótipo rápido ou uma tarefa pontual, uma chave de API na nuvem funciona mais rápido do que uma instalação local.' },
+          { '@type': 'ListItem', position: 4, name: 'Seu hardware é limitado', description: 'Em uma máquina com 4-6 GB de RAM, a inferência local é marginal. APIs na nuvem produzem melhores resultados sem nenhum esforço de hardware.' },
+          { '@type': 'ListItem', position: 5, name: 'Processamento de documentos muito longos', description: 'Contextos de 100 mil+ tokens são lentos localmente. Modelos na nuvem lidam com isso de forma mais prática.' },
+          { '@type': 'ListItem', position: 6, name: 'Comparar LLM local vs nuvem lado a lado', description: 'Ferramentas como o PromptQuorum enviam um prompt simultaneamente ao seu modelo Ollama local e a 25+ modelos na nuvem, permitindo avaliar diferenças de qualidade nas suas tarefas específicas antes de se comprometer com uma abordagem.' },
+        ],
+      },
       sections: {
         tldr: {
           id: 'tldr',
@@ -1685,6 +1700,32 @@ schema: {
             '[Entender o que são LLMs locais e como funcionam no seu hardware](/pt/local-llms/what-are-local-llms) — Conceitos básicos, arquitetura e diferenças em relação a modelos na nuvem',
             '[Comparar LLMs locais vs APIs na nuvem: quando usar cada abordagem](/pt/local-llms/local-llms-vs-cloud-apis) — Análise de trade-offs, comparação de custos e guia de decisão',
             '[Explorar os melhores LLMs locais disponíveis em 2026](/pt/local-llms/best-local-llms-2026) — Melhores modelos, pontuações de benchmark e comparações de desempenho',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Perguntas frequentes sobre limitações de LLMs locais',
+          faqs: [
+            {
+              q: 'Devo usar um LLM local ou uma API na nuvem?',
+              a: 'Local se a privacidade for essencial. Nuvem se velocidade ou dados em tempo real forem essenciais. Na dúvida? Teste os dois com o PromptQuorum — envie um prompt para o seu Ollama local e para 25+ modelos na nuvem simultaneamente para comparar a qualidade na sua tarefa específica.',
+            },
+            {
+              q: 'O LLM local é mais rápido do que uma API na nuvem?',
+              a: 'Não. APIs na nuvem geram 80–150 tokens/s. LLMs locais na CPU geram 10–25 tok/s — de 4 a 10 vezes mais lento. A GPU ajuda: a NVIDIA RTX 4090 atinge 130–160 tok/s, equiparando-se à nuvem, mas custa US$ 1.600 ou mais.',
+            },
+            {
+              q: 'O LLM local é mais barato do que a nuvem?',
+              a: 'Depende do uso. O local custa de US$ 800 a US$ 2.000 em hardware inicial. A nuvem custa de US$ 5 a US$ 50 por mês. Para usuários leves (menos de 100 mil tokens/mês), a nuvem é mais barata. Para usuários pesados (mais de 10 milhões de tokens/mês), o local se paga em 6–12 meses.',
+            },
+            {
+              q: 'Quando devo usar um LLM local em vez da nuvem?',
+              a: 'Use local quando: a privacidade dos dados for essencial (nenhum dado sai do seu dispositivo), você tiver hardware adequado (16+ GB de RAM ou 40+ GB para modelos 70B), você não precisar de informação em tempo real e a complexidade de configuração for aceitável. Use a nuvem quando: a velocidade for essencial, for necessário acesso a dados em tempo real, o hardware for limitado (menos de 8 GB de RAM) ou você precisar de raciocínio de nível frontier.',
+            },
+            {
+              q: 'Quais são as principais limitações dos LLMs locais?',
+              a: 'Seis limitações principais: (1) Qualidade inferior em raciocínio complexo em comparação com modelos frontier na nuvem, (2) Inferência de 4 a 10 vezes mais lenta em hardware de consumo, (3) Altos requisitos de hardware (US$ 800–2.000 iniciais), (4) Ausência de acesso a informações em tempo real (data de corte de treinamento), (5) Complexidade de configuração (20–40 minutos vs 5 minutos na nuvem), (6) Janela de contexto limitada (4K–128K tokens localmente vs 1M+ na nuvem).',
+            },
           ],
         },
       },

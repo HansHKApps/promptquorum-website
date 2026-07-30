@@ -4,6 +4,7 @@
 
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import Image from 'next/image'
 import Link from 'next/link'
 import { truncateTitle } from '@/lib/utils'
 import { PowerLocalLLMPostClient } from '@/components/PowerLocalLLMPostClient'
@@ -405,6 +406,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
       url: `${BASE}${powerLLMHubPath(lang)}`,
       type: 'website',
       siteName: 'PromptQuorum',
+      images: [{ url: `${BASE}/images/power-local-llm-hub-overview-hero-${lang}.png`, width: 1200, height: 675, alt: titleByLang[lang] ?? titleByLang['en']! }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -1721,6 +1723,18 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt'
             <p className="article-intro text-lg text-text-secondary max-w-2xl leading-relaxed mb-10">
               {hero.intro} <strong>{hero.introBold}</strong>
             </p>
+
+            {/* Static Hero Image for Discover */}
+            <figure className="mb-10 rounded-xl overflow-hidden max-w-2xl">
+              <Image
+                src={`/images/power-local-llm-hub-overview-hero-${lang}.png`}
+                alt={hero.h1}
+                width={1200}
+                height={675}
+                priority
+                className="w-full"
+              />
+            </figure>
 
             {/* Key Takeaways */}
             <div className="key-takeaways mb-10 bg-primary/3 border border-primary/15 rounded-xl p-5">

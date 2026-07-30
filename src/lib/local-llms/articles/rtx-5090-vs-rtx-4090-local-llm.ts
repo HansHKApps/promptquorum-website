@@ -998,5 +998,16 @@ schema: {
           ],
         },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'RTX 5090 vs RTX 4090 비교',
+        'numberOfItems': 3,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': '속도 차이', 'description': 'RTX 5090은 로컬 LLM 추론(tokens/sec 기준)에서 RTX 4090보다 20-25% 빠릅니다.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'VRAM 및 사양', 'description': 'RTX 5090은 32GB GDDR7, RTX 4090은 24GB GDDR6X입니다. 8GB의 추가 VRAM은 34B Q8 추론과 더 큰 컨텍스트 창을 가능하게 합니다.' },
+          { '@type': 'ListItem', 'position': 3, 'name': '비용 효율성', 'description': 'RTX 5090은 $1,000 더 비쌉니다($1,999 vs. 중고 4090 $999). 이미 4090을 보유 중이라면 가격 대비 성능 향상이 업그레이드를 정당화하지 않습니다.' },
+        ]
+      },
     },
   };

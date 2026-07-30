@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/apsystems-microinverter-balcony-solar-overview-hero-en.png',
     title: 'APsystems: Balcony Solar Microinverter Company Profile',
     seoTitle: 'APsystems Balcony Solar Microinverter Profile',
     metaDescription: 'Company profile for APsystems: history, ownership, and microinverter product range for balcony solar.',
@@ -90,6 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/apsystems-microinverter-balcony-solar-overview-hero-de.png',
     title: 'APsystems: Unternehmensprofil für Balkonkraftwerk-Mikrowechselrichter',
     seoTitle: 'APsystems Mikrowechselrichter für Balkonkraftwerke',
     metaDescription: 'Unternehmensprofil zu APsystems: Firmengeschichte, Eigentümerstruktur und die Mikrowechselrichter-Produktpalette für Balkonkraftwerke.',
@@ -172,6 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/apsystems-microinverter-balcony-solar-overview-hero-fr.png',
     title: 'APsystems : profil de l\'entreprise de micro-onduleurs solaires pour balcon',
     seoTitle: 'APsystems : profil du fabricant de micro-onduleurs',
     metaDescription: 'Profil d\'entreprise d\'APsystems : historique, structure de propriété et gamme complète de micro-onduleurs pour le solaire de balcon.',
@@ -254,6 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/apsystems-microinverter-balcony-solar-overview-hero-ja.png',
     title: 'APsystems:バルコニーソーラー用マイクロインバーター企業プロフィール',
     seoTitle: 'APsystemsのマイクロインバーター企業プロフィール',
     metaDescription: 'APsystemsの企業プロフィールです。バルコニーソーラー向けマイクロインバーターの沿革、株主構成、製品ラインアップを解説します。',
@@ -336,6 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/apsystems-microinverter-balcony-solar-overview-hero-zh.png',
     title: 'APsystems：阳台光伏微型逆变器公司简介',
     seoTitle: 'APsystems公司简介：阳台光伏微型逆变器制造商',
     metaDescription: 'APsystems公司简介：介绍其发展历史、股权结构，以及面向阳台光伏系统的微型逆变器产品线，帮助读者全面了解这家企业。',
@@ -418,6 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/apsystems-microinverter-balcony-solar-overview-hero-es.png',
     title: 'APsystems: perfil de la empresa de microinversores para solar de balcón',
     seoTitle: 'Perfil de APsystems: microinversores solares de balcón',
     metaDescription: 'Perfil de la empresa APsystems: historia, estructura de propiedad y gama completa de microinversores para energía solar de balcón.',
@@ -500,6 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/apsystems-microinverter-balcony-solar-overview-hero-pt.png',
     title: 'APsystems: perfil da empresa de microinversores para energia solar de varanda',
     seoTitle: 'Perfil da APsystems: microinversores solares de varanda',
     metaDescription: 'Perfil da empresa APsystems: histórico, estrutura societária e linha de microinversores para energia solar de varanda.',
@@ -582,6 +589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/apsystems-microinverter-balcony-solar-overview-hero-ar.png',
     title: 'APsystems: نبذة عن شركة العاكسات الصغيرة للطاقة الشمسية على الشرفة',
     seoTitle: 'نبذة عن APsystems: عاكسات الطاقة الشمسية للشرفة',
     metaDescription: 'نبذة عن شركة APsystems: التاريخ والملكية ومجموعة منتجات العاكسات الصغيرة للطاقة الشمسية على الشرفة.',
@@ -664,6 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/apsystems-microinverter-balcony-solar-overview-hero-ko.png',
     title: 'APsystems: 발코니 태양광 마이크로인버터 기업 프로필',
     seoTitle: 'APsystems 마이크로인버터 기업 프로필',
     metaDescription: 'APsystems의 기업 프로필입니다. 발코니 태양광 발전용 마이크로인버터의 연혁, 소유 구조, 제품 라인업을 소개합니다.',

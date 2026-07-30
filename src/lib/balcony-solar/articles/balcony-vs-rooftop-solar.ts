@@ -7,6 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'evergreen',
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-vs-rooftop-solar-overview-hero-en.png',
     title: 'Balcony Solar vs. Rooftop Solar: Which Should You Choose?',
     seoTitle: 'Balcony Solar vs. Rooftop Solar: Key Differences Explained',
     intro: 'Balcony solar and rooftop solar solve different problems — one is a small, self-installed, low-commitment system; the other is a large, professionally installed, long-term investment. Choosing between them starts with what you actually own and control, not which produces more power.',
@@ -145,6 +146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-vs-rooftop-solar-overview-hero-es.png',
     title: 'Energía solar de balcón vs. solar en el tejado: ¿cuál elegir?',
     seoTitle: 'Solar de balcón vs. solar en tejado: diferencias clave',
     intro: 'La energía solar de balcón y la energía solar en el tejado resuelven problemas distintos: una es un sistema pequeño, autoinstalado y de bajo compromiso; la otra es una inversión grande, instalada por profesionales y a largo plazo. Elegir entre ambas empieza por lo que realmente posees y controlas, no por cuál genera más energía.',
@@ -282,6 +284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-vs-rooftop-solar-overview-hero-pt.png',
     title: 'Energia solar de varanda vs. energia solar no telhado: qual escolher?',
     seoTitle: 'Solar de varanda vs. solar no telhado: diferenças principais',
     intro: 'A energia solar de varanda e a energia solar no telhado resolvem problemas diferentes: uma é um sistema pequeno, autoinstalado e de baixo compromisso; a outra é um investimento grande, instalado por profissionais e de longo prazo. Escolher entre as duas começa pelo que você realmente possui e controla, não por qual gera mais energia.',
@@ -419,6 +422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-vs-rooftop-solar-overview-hero-ar.png',
     title: 'الطاقة الشمسية للشرفة مقابل الطاقة الشمسية للسطح: أيهما تختار؟',
     seoTitle: 'الطاقة الشمسية للشرفة مقابل السطح: الفروقات الرئيسية',
     intro: 'تحل الطاقة الشمسية للشرفة والطاقة الشمسية للسطح مشكلتين مختلفتين: الأولى نظام صغير يُركَّب ذاتيًا بالتزام منخفض، والثانية استثمار كبير يُركَّب بواسطة متخصصين على المدى الطويل. يبدأ الاختيار بينهما بما تملكه وتتحكم فيه فعليًا، وليس بأيهما ينتج طاقة أكبر.',
@@ -556,6 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-vs-rooftop-solar-overview-hero-ja.png',
     title: 'バルコニーソーラー vs. 屋根置きソーラー：どちらを選ぶべき？',
     seoTitle: 'バルコニーソーラー vs. 屋根置きソーラー：主な違いを解説',
     intro: 'バルコニーソーラーと屋根置きソーラーは異なる問題を解決します — 一方は小型で自分で設置でき、コミットメントの少ないシステム。もう一方はプロによる施工が必要な、大規模で長期的な投資です。どちらを選ぶかは、どちらがより多くの電力を発電するかではなく、あなたが実際に何を所有し、何をコントロールできるかから始まります。',
@@ -695,6 +700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-vs-rooftop-solar-overview-hero-zh.png',
     title: '阳台光伏 vs. 屋顶光伏：应该选哪个？',
     seoTitle: '阳台光伏 vs. 屋顶光伏：关键差异解析',
     intro: '阳台光伏和屋顶光伏解决的是不同的问题——一个是小型、自行安装、低承诺的系统；另一个是大型、专业安装的长期投资。在两者之间做选择，首先要考虑的是你实际拥有和能掌控什么，而不是哪个发电更多。',
@@ -834,6 +840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-vs-rooftop-solar-overview-hero-fr.png',
     title: 'Solaire de balcon vs. solaire de toiture : lequel choisir ?',
     seoTitle: 'Solaire de balcon vs. solaire de toiture : différences clés expliquées',
     intro: 'Le solaire de balcon et le solaire de toiture résolvent des problèmes différents — l\'un est un petit système auto-installé à faible engagement ; l\'autre est un investissement à long terme, installé par un professionnel, à grande échelle. Choisir entre les deux commence par ce que vous possédez et contrôlez réellement, pas par lequel produit le plus d\'énergie.',
@@ -973,6 +980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-vs-rooftop-solar-overview-hero-ko.png',
     title: '발코니 태양광 vs. 지붕 태양광: 무엇을 선택해야 할까요?',
     seoTitle: '발코니 태양광 vs. 지붕 태양광: 핵심 차이점 설명',
     intro: '발코니 태양광과 지붕 태양광은 서로 다른 문제를 해결합니다 — 하나는 소규모의 직접 설치 가능한 저부담 시스템이고, 다른 하나는 전문가가 설치하는 대규모 장기 투자입니다. 둘 중 무엇을 선택할지는 어느 쪽이 더 많은 전력을 생산하는지가 아니라, 실제로 무엇을 소유하고 통제할 수 있는지에서 시작됩니다.',
@@ -1112,6 +1120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Foundations',
+    heroImage: '/images/balcony-vs-rooftop-solar-overview-hero-de.png',
     title: 'Balkonkraftwerk vs. Dachanlage: Was ist die richtige Wahl?',
     seoTitle: 'Balkonkraftwerk vs. Dachanlage: Wichtigste Unterschiede erklärt',
     intro: 'Balkonkraftwerk und Dachanlage lösen unterschiedliche Probleme — das eine ist ein kleines, selbst montierbares System mit geringer Bindung, das andere eine große, professionell installierte Langzeitinvestition. Die Entscheidung zwischen beiden beginnt damit, was Sie tatsächlich besitzen und kontrollieren können — nicht damit, welches System mehr Strom erzeugt.',

@@ -14,6 +14,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
+      heroImage: '/images/seo-meets-ai-overview-hero-en.png',
       title: 'SEO Meets AI: How GEO Is Replacing the Old Playbook',
       intro: '**Generative Engine Optimization (GEO) is the practice of structuring content so AI search engines (ChatGPT, Perplexity, Gemini, Claude) cite it when synthesizing answers — replacing the traditional SEO goal of ranking among Google\'s blue links with a new goal of being named in the 2–7 sources an AI quotes per response.**\n\nGEO does not replace traditional SEO; it adds a second optimization layer for a search landscape where AI assistants handle over 40% of search interactions and nearly 60% of all searches now end without a single click.',
       publishDate: '2026-03-23',
@@ -524,6 +525,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
       theme: 'Use Cases',
+      heroImage: '/images/seo-meets-ai-overview-hero-de.png',
       freshness_tier: 'semi_annual',
       title: 'SEO trifft KI: Wie GEO den alten Spielplan ersetzt',
       seoTitle: 'SEO trifft KI: Inhalte in KI-Antworten bringen (2026)',
@@ -996,6 +998,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     es: {
       theme: 'Use Cases',
+      heroImage: '/images/seo-meets-ai-overview-hero-es.png',
       freshness_tier: 'semi_annual',
       title: 'SEO y la IA: Cómo GEO Está Reemplazando el Manual Tradicional',
       seoTitle: 'SEO y IA: cómo GEO logra que ChatGPT cite tu contenido',
@@ -1333,6 +1336,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     ar: {
       theme: 'Use Cases',
+      heroImage: '/images/seo-meets-ai-overview-hero-ar.png',
       freshness_tier: 'semi_annual',
       title: 'السيو والذكاء الاصطناعي: كيف تُحلّ ⁨GEO⁩ محل الدليل التقليدي',
       seoTitle: '⁨GEO⁩ والسيو: كيف يجعل ⁨ChatGPT⁩ يستشهد بمحتواك',
@@ -1670,6 +1674,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     pt: {
       theme: 'Use Cases',
+      heroImage: '/images/seo-meets-ai-overview-hero-pt.png',
       title: 'SEO e IA: Como a GEO Está Substituindo o Manual Tradicional',
       seoTitle: 'SEO e IA: como GEO faz ChatGPT citar seu conteúdo',
       intro: '**A Otimização para Mecanismos Generativos (GEO) é a prática de estruturar conteúdo para que mecanismos de busca com IA (ChatGPT, Perplexity, Gemini, Claude) o citem ao sintetizar respostas — substituindo o objetivo tradicional do SEO de aparecer entre os links azuis do Google por um novo objetivo: ser nomeado entre as 2–7 fontes que uma IA cita por resposta.**\n\nGEO não substitui o SEO tradicional; adiciona uma segunda camada de otimização para um cenário de busca onde assistentes de IA lidam com mais de 40% das interações de pesquisa.',
@@ -1679,6 +1684,90 @@ export const article: Partial<Record<Language, PEArticle>> = {
       readTime: '8 min de leitura',
       educationalLevel: 'Beginner',
       primaryTerm: 'Generative Engine Optimization',
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'pt-BR',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Qual é a diferença entre SEO e GEO?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'SEO (Search Engine Optimization) foca em posicionar páginas nos resultados tradicionais de mecanismos de busca como Google e Bing, onde os usuários escolhem entre uma lista de links azuis. GEO (Generative Engine Optimization) foca em fazer seu conteúdo ser citado dentro de respostas geradas por IA do ChatGPT, Perplexity, Gemini e Claude — onde os usuários recebem uma resposta sintetizada em vez de uma lista de opções. Ambos são necessários: estar entre os 10 primeiros do Google aumenta em aproximadamente 25% a probabilidade de ser citado nas Visões Gerais de IA do Google.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'O tráfego de busca por IA converte melhor do que a busca orgânica?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Para empresas B2B, sim — significativamente. Uma análise da WebFX com 2,3 bilhões de sessões constatou que visitantes vindos de IA converteram a uma taxa de sessão de 54,15% contra 45,23% da busca orgânica. A Ahrefs relatou taxas de conversão 23 vezes maiores vindas de busca por IA em seu próprio site. Para e-commerce, a evidência é mista — a análise da SearchEngineLand em 973 sites de e-commerce constatou que a busca por IA converteu pior do que a orgânica. A vantagem de conversão é mais clara para B2B e compras de alta consideração.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quanto o schema markup melhora as taxas de citação de IA?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Páginas com schema JSON-LD implementado corretamente recebem até 40% mais impressões de resultados avançados. Testes controlados constataram que conteúdo com dados estruturados corretamente implementados alcançou taxas de citação 340% mais altas do que conteúdo idêntico sem estrutura. No entanto, um estudo da SearchAtlas de 2026 constatou que a cobertura de schema isoladamente não aumenta de forma consistente a frequência de citação de LLMs entre OpenAI, Gemini e Perplexity — autoridade de conteúdo e estrutura de resposta direta continuam sendo sinais mais fortes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quão rápido a busca por IA está crescendo?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'O tráfego de IA generativa cresceu 796% entre janeiro de 2024 e dezembro de 2025, com conversões de sessão crescendo 6.432% no mesmo período. O tráfego gerado por IA para sites de varejo dos EUA aumentou 4.700% ano a ano até julho de 2025. Apesar desse crescimento, a busca por IA representa apenas 0,18% do total de sessões na web — o tráfego orgânico e direto ainda domina com 63%. Projeta-se que o tráfego de busca por IA ultrapasse a busca orgânica tradicional dentro de 2 a 4 anos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'O SEO ainda é relevante na era da busca por IA?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sim — o SEO tradicional é um pré-requisito para o GEO, não uma alternativa a ele. Sites entre os 10 primeiros do Google têm 25% de chance de serem citados nas Visões Gerais de IA; sites fora dos 10 primeiros têm visibilidade de IA próxima de zero através da plataforma do Google. Sinais de E-E-A-T (Experiência, Expertise, Autoridade, Confiabilidade) que melhoram rankings tradicionais também fortalecem a probabilidade de citação por IA. As duas disciplinas compartilham requisitos fundamentais — a diferença é que o GEO adiciona estrutura de resposta direta, densidade de entidades e schema markup como camadas adicionais.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qual é o primeiro passo para otimizar meu conteúdo para GEO?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Comece auditando seu conteúdo atual com uma lente de IA: pegue 10 das suas páginas com mais tráfego e consulte o ChatGPT, o Perplexity e as Visões Gerais de IA do Google com perguntas relacionadas ao seu tópico. Verifique se seu conteúdo é citado ou recomendado. Isso identifica lacunas onde você não está aparecendo em respostas de IA. A partir daí, priorize adicionar schema markup JSON-LD (Article e FAQPage têm o maior impacto), reestruturar o conteúdo para o formato de resposta direta e adicionar seções de FAQ que antecipem subperguntas que sistemas de IA decompõem de consultas de usuário mais amplas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'O que é o llms.txt e eu preciso de um?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'llms.txt é um padrão emergente (análogo ao robots.txt) que permite fornecer um resumo estruturado do site para que modelos de IA o processem diretamente. Ele fica na raiz do seu site e sinaliza qual conteúdo está disponível para citação. Em abril de 2026, ChatGPT, Perplexity e Claude suportam o llms.txt como indicação de rastreamento. Não é obrigatório, mas acelera a indexação por IA do seu conteúdo de maior valor.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'O GEO é diferente do AEO (Answer Engine Optimization)?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'GEO e AEO são intimamente relacionados, mas não idênticos. O AEO foca em otimizar para caixas de resposta direta e snippets em destaque em mecanismos de busca tradicionais. O GEO tem como alvo especificamente mecanismos de IA generativa (ChatGPT, Gemini, Perplexity, Claude) que sintetizam respostas de múltiplas fontes usando pipelines RAG. O GEO exige estrutura de resposta direta, schema markup e densidade de entidades — as técnicas de AEO se sobrepõem significativamente, mas o GEO adiciona a exigência de parágrafos autônomos e extraíveis que podem ser citados fora de contexto.',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'pt-BR',
+        'name': 'SEO e IA: Principais Tópicos',
+        'description': 'Conceitos centrais para entender a Otimização para Mecanismos Generativos',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'GEO vs SEO: Dois Jogos Diferentes', 'description': 'Entendendo as diferenças entre o SEO tradicional e a Otimização para Mecanismos Generativos' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Por que o Tráfego de IA Converte de Forma Diferente', 'description': 'Como visitantes vindos de IA convertem a taxas mais altas do que a busca orgânica' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Os Fundamentos Técnicos da GEO', 'description': 'Schema markup JSON-LD e seu impacto nas taxas de citação de IA' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Como Otimizar Conteúdo para GEO', 'description': 'Passos práticos para estruturar conteúdo para citação por mecanismos de busca com IA' },
+        ],
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1751,7 +1840,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Robots.txt correto:** Crawlers de IA (GPTBot, Claude-Web, PerplexityBot) seguem robots.txt. Bloqueie acidentalmente e você desaparece.',
           ],
         },
-        howToOptimize: {
+        howToStart: {
           id: 'how-to-optimize-content-for-geo',
           title: 'Como Otimizar Conteúdo para GEO',
           numberedItems: [
@@ -1782,6 +1871,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     fr: {
       theme: 'Use Cases',
+      heroImage: '/images/seo-meets-ai-overview-hero-fr.png',
       freshness_tier: 'semi_annual',
       title: 'SEO rencontre l\'IA : comment GEO remplace la règle du jeu',
       seoTitle: 'SEO et IA : comment le GEO fait citer vos contenus par ChatGPT (2026)',
@@ -2254,6 +2344,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: 'ユースケース',
+      heroImage: '/images/seo-meets-ai-overview-hero-ja.png',
       freshness_tier: 'semi_annual',
       title: 'GEO完全ガイド：ChatGPT、Perplexity、Geminiの最適化',
       seoTitle: 'SEOとAI：GEOでChatGPTに引用されるコンテンツ戦略（2026）',
@@ -2680,6 +2771,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: '用例',
+      heroImage: '/images/seo-meets-ai-overview-hero-zh.png',
       freshness_tier: 'semi_annual',
       title: 'GEO完全指南：ChatGPT、Perplexity、Gemini优化',
       seoTitle: 'SEO遇上AI：GEO如何让ChatGPT引用你的内容（2026）',
@@ -3107,6 +3199,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
+    heroImage: '/images/seo-meets-ai-overview-hero-ko.png',
       title: 'SEO와 AI의 만남: GEO가 기존 방식을 대체하는 방법',
       intro: '**생성형 엔진 최적화(GEO)란 AI 검색 엔진(ChatGPT, Perplexity, Gemini, Claude)이 답변을 합성할 때 해당 콘텐츠를 인용하도록 구조화하는 기법입니다. Google의 파란색 링크 중 상위에 노출되는 기존 SEO 목표를, AI가 답변마다 인용하는 2~7개 출처 안에 포함되는 새로운 목표로 전환합니다.**\n\nGEO는 기존 SEO를 대체하지 않습니다. AI 어시스턴트가 검색 상호작용의 40% 이상을 처리하고, 전체 검색의 약 60%가 단 한 번의 클릭 없이 종료되는 검색 환경에서 두 번째 최적화 레이어를 추가하는 것입니다.',
       publishDate: '2026-03-23',

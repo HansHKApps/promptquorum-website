@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-vs-lm-studio-overview-hero-en.png',
     title: 'Ollama vs LM Studio: Which Should You Pick?',
     dateModified: '2026-06-20',
     seoTitle: 'Ollama vs LM Studio? | Prompt Bites | PromptQuorum',
@@ -129,6 +130,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-vs-lm-studio-overview-hero-de.png',
     title: 'Ollama vs LM Studio: Welches sollten Sie wählen?',
     seoTitle: 'Ollama vs. LM Studio 2026: Welches lokale LLM-Tool?',
     metaDescription: 'Ollama (Port 11434): Terminal und APIs. LM Studio (Port 1234): GUI-Oberfläche. Beide kostenlos, Modelle laufen lokal. Schnelle Antwort von PromptQuorum.',
@@ -207,6 +209,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-vs-lm-studio-overview-hero-fr.png',
     title: 'Ollama vs LM Studio : lequel choisir ?',
     seoTitle: 'Ollama vs LM Studio ? | Prompt Bites | PromptQuorum',
     metaDescription: 'Ollama (port 11434) pour terminal et API. LM Studio (port 1234) pour interface graphique. Gratuits, modèles en local. Réponse rapide de PromptQuorum.',
@@ -285,6 +288,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-vs-lm-studio-overview-hero-ja.png',
     title: 'Ollama vs LM Studio：どちらを選ぶべきですか？',
     seoTitle: 'Ollama vs LM Studio？ | Prompt Bites | PromptQuorum',
     metaDescription: 'ターミナルを使用してAPIで開発するならOllamaを選んでください。GUIを好む場合はLM Studioを使用してください。両方とも無料でローカルでモデルを実行します。PromptQuorumによる簡潔な回答。',
@@ -363,6 +367,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-vs-lm-studio-overview-hero-zh.png',
     title: 'Ollama vs LM Studio：应该选哪个？',
     seoTitle: 'Ollama vs LM Studio？| Prompt Bites | PromptQuorum',
     metaDescription: '如果使用终端并通过 API 开发，选 Ollama。如果想要图形界面，使用 LM Studio。两者均免费且在本地运行模型。PromptQuorum 快速解答。',
@@ -441,6 +446,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-vs-lm-studio-overview-hero-pt.png',
     title: 'Ollama vs LM Studio: Qual você deve escolher?',
     seoTitle: 'Ollama vs LM Studio | Prompt Bites | PromptQuorum',
     metaDescription: 'Se você usa terminal e desenvolve com APIs, escolha Ollama. Se prefere GUI e quer apenas conversar com modelos, use LM Studio. Resposta rápida do PromptQuorum.',
@@ -526,6 +532,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-vs-lm-studio-overview-hero-es.png',
     title: 'Ollama vs LM Studio: ¿Cuál deberías elegir?',
     seoTitle: 'Ollama vs LM Studio | Prompt Bites | PromptQuorum',
     metaDescription: 'Si usas terminal y desarrollas con APIs, elige Ollama. Si prefieres GUI y quieres chatear con modelos, usa LM Studio. Respuesta rápida de PromptQuorum.',
@@ -611,6 +618,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-vs-lm-studio-overview-hero-ar.png',
     title: '⁨Ollama⁩ مقابل ⁨LM Studio⁩: أيهما تختار؟',
     seoTitle: '⁨Ollama⁩ مقابل ⁨LM Studio 2026⁩: أيهما للمطور؟',
     metaDescription: 'استخدم ⁨Ollama⁩ للطرفية والبناء عبر ⁨APIs⁩، و⁨LM Studio⁩ لواجهة رسومية. كلاهما مجاني ويشغّل النماذج محليًا. إجابة سريعة من ⁨PromptQuorum⁩.',
@@ -696,6 +704,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Tool Comparisons',
+    heroImage: '/images/ollama-vs-lm-studio-overview-hero-ko.png',
     title: 'Ollama vs LM Studio: 어떤 도구를 선택해야 할까요?',
     seoTitle: 'Ollama vs LM Studio | Prompt Bites | PromptQuorum',
     metaDescription: '터미널을 사용하고 API로 개발하신다면 Ollama를 선택하십시오. GUI를 선호하고 모델과 채팅하고 싶으시다면 LM Studio를 사용하십시오. 두 도구 모두 무료이며 모델을 로컬에서 실행합니다.',

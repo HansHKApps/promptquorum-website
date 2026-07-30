@@ -14,6 +14,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'annual',
       theme: 'Use Cases',
+      heroImage: '/images/teaching-with-ai-overview-hero-en.png',
       title: 'Teaching With AI in 2026: Harvard Study Shows 2× Learning Gains — Tools, Prompts & EU AI Act Guide',
       intro: '**To teach effectively with AI in 2026: use a structured five-component prompt (role, objective, student context, constraints, output format), choose a tool matched to the task (Khanmigo for tutoring, MagicSchool for lesson planning, Claude Sonnet 5 or GPT-5.6 for content generation), set temperature to 0.1–0.2 for factual content, and — for EU schools — implement Article 4 staff AI literacy training before deploying any high-risk system.** A 2024 Harvard randomized controlled trial found AI tutoring produced learning gains more than twice those of active learning classrooms — in 18% less study time. As of May 2026, 85% of US teachers and 86% of students used AI during the school year, higher than any other industry. The challenge is not adoption but structure: vague prompts produce unusable outputs, structured prompts save 5–13 hours per week, and EU schools now carry legal obligations under the AI Act for any AI tool that touches student assessment.',
       publishDate: '2026-03-23',
@@ -587,6 +588,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'annual',
       theme: 'Use Cases',
+      heroImage: '/images/teaching-with-ai-overview-hero-de.png',
       title: 'Mit KI unterrichten 2026: Harvard-Studie zeigt 2× Lernzuwachs — Tools, Prompts & EU AI Act Leitfaden',
       intro: '**Um 2026 effektiv mit KI zu unterrichten: Verwenden Sie einen strukturierten fünfteiligen Prompt (Rolle, Ziel, Schülerkontext, Einschränkungen, Ausgabeformat), wählen Sie ein Tool, das zur Aufgabe passt (Khanmigo für Nachhilfe, MagicSchool für Unterrichtsplanung, Claude Sonnet 5 oder GPT-5.6 für Inhalterstellung), stellen Sie die Temperatur auf 0,1–0,2 für sachliche Inhalte ein, und — für Schulen in der EU — implementieren Sie vor der Bereitstellung eines hochriskanten Systems Schulungen zur KI-Kompetenz für Lehrkräfte gemäß Artikel 4.** Eine randomisierte kontrollierte Studie der Harvard-Universität aus dem Jahr 2024 stellte fest, dass KI-Nachhilfe Lernzuwächse erzeugte, die mehr als doppelt so hoch waren wie in aktiven Lernklassenzimmern — in 18 % weniger Lernzeit. Im Mai 2026 nutzten 85 % der US-amerikanischen Lehrkräfte und 86 % der Schüler KI während des Schuljahres — höher als in jeder anderen Branche. Die Herausforderung liegt nicht in der Akzeptanz, sondern in der Struktur: vage Prompts produzieren unbenutzbare Outputs, strukturierte Prompts sparen 5–13 Stunden pro Woche, und EU-Schulen haben nun rechtliche Verpflichtungen gemäß dem AI Act für jedes KI-Tool, das die Schülerbewertung beeinflusst.',
       publishDate: '2026-03-23',
@@ -1203,6 +1205,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       specific_year: 2026,
       next_refresh_due: '2027-05-04',
       theme: 'Use Cases',
+      heroImage: '/images/teaching-with-ai-overview-hero-es.png',
       title: 'Enseñar con IA en 2026: Estudio Harvard Muestra 2× Más Aprendizaje — Herramientas, Prompts y Guía Ley de IA de la UE',
       intro: '**Para enseñar eficazmente con IA en 2026: usa un prompt estructurado de cinco componentes (rol, objetivo, contexto del estudiante, restricciones, formato de salida), elige una herramienta adaptada a la tarea (Khanmigo para tutoría, MagicSchool para planificación de lecciones, Claude Sonnet 5 o GPT-5.6 para generación de contenido), establece la temperatura en 0,1–0,2 para contenido factual, y — para escuelas de la UE — implementa la formación en alfabetización en IA del personal según el Artículo 4 antes de desplegar cualquier sistema de alto riesgo.** Un ensayo controlado aleatorizado de Harvard de 2024 descubrió que la tutoría con IA produjo ganancias de aprendizaje más del doble de las de las aulas de aprendizaje activo — en un 18 % menos de tiempo de estudio. En mayo de 2026, el 85 % de los docentes estadounidenses y el 86 % de los estudiantes usaron IA durante el año escolar, más que cualquier otra industria. El desafío no es la adopción sino la estructura: los prompts vagos producen resultados inutilizables, los prompts estructurados ahorran 5–13 horas por semana, y las escuelas de la UE ahora tienen obligaciones legales bajo la Ley de IA para cualquier herramienta de IA que afecte la evaluación de los estudiantes.',
       publishDate: '2026-03-23',
@@ -1638,6 +1641,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       specific_year: 2026,
       next_refresh_due: '2027-05-04',
       theme: 'Use Cases',
+      heroImage: '/images/teaching-with-ai-overview-hero-ar.png',
       title: 'التدريس بالذكاء الاصطناعي في ⁨2026⁩: دراسة هارفارد تُثبت ضعف التعلم — الأدوات والبرومبتات ودليل قانون الذكاء الاصطناعي الأوروبي',
       intro: '**للتدريس الفعّال بالذكاء الاصطناعي في 2026: استخدم برومبتاً منظماً من خمسة مكونات (الدور والهدف وسياق الطالب والقيود وصيغة المخرج)، واختر الأداة المناسبة للمهمة (Khanmigo للتدريس الفردي، MagicSchool للتخطيط للدروس، Claude Sonnet 5 أو GPT-5.6 لإنشاء المحتوى)، واضبط درجة الحرارة على 0.1–0.2 للمحتوى الحقائقي، وللمدارس في دول الاتحاد الأوروبي نفّذ تدريب كفاءة الذكاء الاصطناعي للموظفين وفق المادة 4 قبل نشر أي نظام عالي المخاطر.** كشفت تجربة عشوائية محكومة من جامعة هارفارد عام 2024 أن التدريس الفردي بالذكاء الاصطناعي أنتج مكاسب تعليمية تفوق ضعف تلك التي تحققت في فصول التعلم النشط — في وقت دراسة أقل بنسبة 18٪. في مايو 2026، استخدم 85٪ من المعلمين الأمريكيين و86٪ من الطلاب الذكاء الاصطناعي خلال العام الدراسي. التحدي ليس التبني بل البنية: البرومبتات الغامضة تُنتج نتائج غير صالحة، والبرومبتات المنظمة توفّر 5–13 ساعة أسبوعياً، وللمدارس الأوروبية الآن التزامات قانونية بموجب قانون الذكاء الاصطناعي.',
       publishDate: '2026-03-23',
@@ -2070,6 +2074,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     pt: {
       specific_year: 2026,
       theme: 'Use Cases',
+      heroImage: '/images/teaching-with-ai-overview-hero-pt.png',
       title: 'Ensinar com IA em 2026: Estudo Harvard Mostra 2× Mais Aprendizado — Ferramentas, Prompts e Guia da Lei de IA da UE',
       intro: '**Para ensinar eficazmente com IA em 2026: use um prompt estruturado de cinco componentes (papel, objetivo, contexto do aluno, restrições, formato de saída), escolha uma ferramenta adaptada à tarefa (Khanmigo para tutoria, MagicSchool para planejamento de aulas, Claude Sonnet 5 ou GPT-5.6 para geração de conteúdo), defina temperatura em 0,1–0,2 para conteúdo factual.** Um ensaio clínico randomizado de Harvard de 2024 descobriu que a tutoria com IA produziu ganhos de aprendizado mais do que o dobro dos de salas de aula de aprendizado ativo — em 18% menos tempo de estudo.',
       publishDate: '2026-03-23',
@@ -2078,6 +2083,90 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: 'Ensinar com IA em 2026: Guia de 2× Mais Aprendizado',
       metaDescription: 'Estudo Harvard: tutoria com IA dobra aprendizado em 18% menos tempo. Ferramentas: Khanmigo, MagicSchool e Claude. Com guia de conformidade para escolas.',
       educationalLevel: 'Beginner',
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: 'pt-BR',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Os tutores de IA realmente melhoram os resultados de aprendizado?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sim — a evidência é forte. Um ensaio clínico randomizado de Harvard de 2024, com 194 estudantes de física de graduação, constatou que a tutoria com IA produziu tamanhos de efeito de 0,73–1,3 desvios-padrão acima de salas de aula de aprendizado ativo, com alunos alcançando notas mais altas em 49 minutos contra 60 minutos de tempo de aula (p < 10⁻⁸). Uma revisão sistemática de 2025 com 21 estudos constatou que alunos apoiados por IA superam o ensino tradicional em 15–35% nas avaliações.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qual é a melhor ferramenta de IA para professores em 2026?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'A resposta depende da tarefa. Khanmigo (Khan Academy) é a mais forte para tutoria de alunos via questionamento socrático. MagicSchool lidera em ferramentas abrangentes de fluxo de trabalho do professor (planos de aula, IEPs, comunicação com pais). Modelos de propósito geral como GPT-5.6 oferecem a geração de conteúdo mais flexível. Para análise complexa de currículo, Claude Sonnet 5 processa 1M de tokens — aproximadamente 800 páginas padrão — em uma única sessão.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Quanto tempo a IA pode economizar dos professores por semana?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Prompts específicos e ricos em contexto economizam de 5 a 13 horas por semana em planejamento de aulas e tarefas administrativas quando usados de forma consistente. As aplicações mais comuns que economizam tempo são: pesquisa e coleta de conteúdo (44% dos professores), criação de planos de aula (38%), resumo de informações (38%) e geração de material de sala de aula (37%).',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'O uso de IA na educação é legal segundo as regulamentações da UE e a LGPD brasileira?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sistemas de IA que influenciam avaliação educacional ou trajetórias de aprendizado são classificados como de "alto risco" segundo a Lei de IA da UE (Anexo III). Escolas da UE devem implementar treinamento de alfabetização em IA para o pessoal (Artigo 4, em vigor desde 2025), manter supervisão humana sobre avaliações influenciadas por IA e garantir trilhas de auditoria para qualquer sistema de IA que afete resultados de alunos. No Brasil, a LGPD (Lei 13.709/2018) exige consentimento específico dos responsáveis legais para o processamento de dados de alunos menores de 18 anos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Softwares de detecção de IA identificam de forma confiável a cola acadêmica?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Não — as ferramentas de detecção de IA atuais têm taxas de falso positivo de 15–30% em estudos revisados por pares, o que significa que até 30 de cada 100 submissões legítimas de alunos podem ser sinalizadas incorretamente. Falantes não nativos de inglês e alunos que escrevem em estilos acadêmicos estruturados são sinalizados em taxas desproporcionalmente mais altas. Em 2026, universidades estão migrando de políticas de proibição para frameworks de divulgação e citação, tratando a detecção de IA como um insumo entre vários, e não como prova definitiva de má conduta.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qual configuração de temperatura os professores devem usar no planejamento de aulas com IA?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Defina a temperatura em 0,1–0,2 para conteúdo educacional factual — planos de aula, rubricas de avaliação, alinhamento curricular. Isso produz saída consistente e com baixa variação. Use 0,7–0,9 apenas ao gerar ideias de atividades criativas, quando opções diversas forem o objetivo. A temperatura padrão na maioria das plataformas (0,7–1,0) é projetada para tarefas criativas e aumenta erros factuais em conteúdo educacional.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'As ferramentas de IA ajudam na instrução diferenciada?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sim — este é um dos casos de uso educacional mais fortes da IA. Os LLMs conseguem reescrever o mesmo conteúdo em múltiplos níveis de leitura em segundos. Estrutura de prompt: "Reescreva este trecho no nível de leitura da série [N]. Preserve todo o conteúdo factual. Substitua vocabulário complexo por equivalentes mais simples. Mantenha a mesma estrutura de parágrafo." O Claude Sonnet 5 produz a diferenciação mais consistente entre níveis de leitura.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Qual deve ser o primeiro passo de uma escola brasileira para adotar IA em conformidade com a LGPD?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Antes de usar qualquer ferramenta de IA com dados de alunos, verifique os termos de serviço e as políticas de processamento de dados de menores de cada fornecedor. A LGPD (Lei 13.709/2018) exige consentimento específico dos responsáveis legais para o processamento de dados de alunos menores de 18 anos. Nunca insira nomes completos de alunos ou informações de planos de ensino individualizado em ferramentas de IA sem um acordo de processamento de dados (DPA) adequado com o fornecedor.',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'pt-BR',
+        'name': 'Ferramentas de IA para Professores 2026',
+        'description': 'Comparação de ferramentas de ensino com IA mencionadas neste guia',
+        'numberOfItems': 3,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Khanmigo', 'description': 'Tutoria de alunos via questionamento socrático. Alunos do K-12, ecossistema Khan Academy.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'MagicSchool', 'description': 'Planejamento de aulas e gestão de sala de aula. Mais de 60 ferramentas para professores do K-12.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Claude Sonnet 5 / GPT-5.6', 'description': 'Modelos de propósito geral para geração de conteúdo e análise de currículo. Sem proteções incorporadas para uso estudantil.' },
+        ],
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -2177,6 +2266,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
   freshness_tier: 'annual',
   theme: 'Use Cases',
+  heroImage: '/images/teaching-with-ai-overview-hero-fr.png',
   title: 'Enseigner avec l\'IA en 2026 : étude Harvard révèle un gain de 2× — outils, prompts et guide loi IA de l\'UE',
   intro: '**Pour enseigner efficacement avec l\'IA en 2026 : utilisez un prompt structuré à cinq composants (rôle, objectif, contexte apprenant, contraintes, format de sortie), choisissez un outil adapté à la tâche (Khanmigo pour tutorat, MagicSchool pour planification, Claude Sonnet 5 ou GPT-5.6 pour création de contenu), réglez la température sur 0,1–0,2 pour contenu factuel, et — dans les écoles de l\'UE — mettez en place une formation en compétences IA pour tous les enseignants avant le déploiement de systèmes à haut risque selon l\'article 4.** Une étude randomisée contrôlée de Harvard en 2024 a montré que le tutorat par IA produit des gains d\'apprentissage plus que deux fois supérieurs aux salles de classe d\'apprentissage actif — en 18 % moins de temps. En mai 2026, 85 % des enseignants américains et 86 % des élèves utilisent l\'IA pendant l\'année scolaire — le taux d\'adoption le plus élevé de toute industrie. Le défi ne réside pas dans l\'adoption, mais dans la structure : des prompts vagues produisent des résultats inutilisables, les prompts structurés économisent 5–13 heures par semaine, et les écoles de l\'UE ont désormais des obligations légales selon la Loi IA pour tout outil IA affectant l\'évaluation des élèves.',
   publishDate: '2026-03-23',
@@ -2755,6 +2845,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
   freshness_tier: 'annual',
   theme: 'Use Cases',
+  heroImage: '/images/teaching-with-ai-overview-hero-ja.png',
   title: 'AIで教える 2026：ハーバード研究が示す学習効果2倍—ツール・プロンプト・EU AI法ガイド',
   intro: '**2026年に効果的にAIで教えるために：5つのコンポーネント構造プロンプト（役割、目標、学習者コンテキスト、制約、出力形式）を使用し、タスクに合ったツール（チューター向けKhanmigo、計画向けMagicSchool、コンテンツ作成向けClaude Sonnet 5またはGPT-5.6）を選択し、ファクト内容は温度0.1–0.2に設定し、EU圏内の学校の場合、高リスクシステム導入前にすべての教師にAIリテラシー研修を実施してください。** 2024年のハーバード大学ランダム化比較試験では、AIチューターは従来のアクティブラーニング教室より2倍以上の学習成果をもたらし、18%少ない学習時間で実現することが示されました。2026年5月時点で、米国の教師の85%と生徒の86%が学年中にAIを使用しており、これはあらゆる業界で最も高いAI採用率です。課題は採用ではなく構造にあります。曖昧なプロンプトは使用不可能な結果を生み出し、構造化されたプロンプトは週5~13時間を節約し、EU圏の学校は現在、生徒評価に影響するあらゆるAIツールについてAI法に基づく法的義務があります。',
   publishDate: '2026-03-23',
@@ -3144,6 +3235,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
       freshness_tier: 'annual',
       theme: '应用案例',
+      heroImage: '/images/teaching-with-ai-overview-hero-zh.png',
       title: '2026年用AI教学：哈佛研究证明学习效果提升2倍——工具、提示词与EU AI法合规指南',
       intro: '**有效地在2026年用AI教学：采用结构化五步提示词（角色、目标、学生背景、约束条件、输出格式），选择与任务匹配的工具（Khanmigo用于辅导、MagicSchool用于课程规划、Claude Sonnet 5或GPT-5.6用于内容生成），将温度设置为0.1–0.2处理事实性内容，对于欧盟学校，在部署任何高风险系统前实施第4条员工AI素养培训。** 2024年哈佛大学随机对照试验发现AI辅导的学习增长是主动学习课堂的两倍以上——用时减少18%。截至2026年5月，85%的美国教师和86%的学生在学年中使用了AI，超过任何其他行业。挑战不在于采用，而在于结构：模糊提示词产生无法使用的输出，结构化提示词每周节省5–13小时，欧盟学校现在对任何涉及学生评估的AI工具承担AI法的法律义务。',
       publishDate: '2026-03-23',
@@ -3654,6 +3746,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'annual',
       theme: 'Use Cases',
+      heroImage: '/images/teaching-with-ai-overview-hero-ko.png',
       title: '2026년 AI를 활용한 교육: 하버드 연구, 학습 효과 2배 — 도구, 프롬프트 및 EU AI Act 가이드',
       intro: '**2026년 AI를 효과적으로 활용하여 가르치려면: 구조화된 5가지 구성 요소 프롬프트(역할, 목표, 학생 맥락, 제약 조건, 출력 형식)를 사용하고, 과제에 맞는 도구를 선택하며(튜터링에는 Khanmigo, 수업 계획에는 MagicSchool, 콘텐츠 생성에는 Claude Sonnet 5 또는 GPT-5.6), 사실적 콘텐츠에는 temperature를 0.1–0.2로 설정하고, EU 학교의 경우 고위험 시스템을 배포하기 전에 Article 4 직원 AI 리터러시 교육을 실시해야 합니다.** 2024년 하버드 무작위 대조 시험에 따르면 AI 튜터링은 능동적 학습 교실보다 두 배 이상의 학습 효과를 산출했으며, 18% 적은 학습 시간이 소요되었습니다. 2026년 5월 기준으로 미국 교사의 85%와 학생의 86%가 학년도 중에 AI를 사용했으며, 이는 다른 어떤 산업보다 높은 수치입니다. 과제는 도입이 아니라 구조화입니다. 모호한 프롬프트는 사용할 수 없는 결과물을 생산하고, 구조화된 프롬프트는 주당 5–13시간을 절약하며, EU 학교는 이제 학생 평가에 관여하는 모든 AI 도구에 대해 AI Act에 따른 법적 의무를 지닙니다.',
       publishDate: '2026-03-23',
@@ -3665,6 +3758,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
       audience: 'AI 도구를 사용하는 교사, 학교 관리자 및 교육 전문가',
       aboutTopics: ['교육에서의 AI', 'Khanmigo', 'EU AI Act'],
       howToName: 'AI를 활용한 교육 방법',
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        inLanguage: 'ko',
+        'name': '2026년 교사를 위한 AI 도구',
+        'description': '교실에서 사용하는 AI 교육 도구 비교',
+        'numberOfItems': 6,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Khanmigo', 'description': '소크라테스식 질문을 통한 학생 튜터링. K-12, Khan Academy 생태계. $44/년.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'MagicSchool', 'description': '수업 계획 및 교실 관리. K-12 교사. 무료 제한 티어.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'ChatGPT / GPT-5.6', 'description': '유연한 콘텐츠 생성 및 초안 작성. 모든 수준, 모든 과목. 무료 제한 티어.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Claude Sonnet 5', 'description': '심층 분석, 신중한 추론, 작문 품질, 1M 컨텍스트. 고등 교육 이상 및 복잡한 과제. 무료 제한 티어.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'NotebookLM', 'description': '업로드된 자료에 대한 출처 기반 Q&A. 대학 및 연구 맥락. 무료.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Gemini 3.1 Pro', 'description': '대용량 문서 분석, 1M 컨텍스트. 교육구 관리자. 무료 제한 티어.' },
+        ],
+      },
       specific_year: 2026,
       next_refresh_due: '2027-05-04',
       ogDescription: '미국 교사의 85%가 2024–25학년도에 AI를 사용했지만 모호한 프롬프트는 이를 낭비합니다. 하버드 연구는 AI 튜터링이 학습 효과를 두 배로 높인다는 것을 입증했습니다. 교사를 위한 5가지 프롬프트 프레임워크와 학교를 위한 EU AI Act 준수 방법을 소개합니다.',

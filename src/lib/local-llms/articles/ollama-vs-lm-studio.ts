@@ -2529,6 +2529,24 @@ schema: {
         ],
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Comparativo de recursos: Ollama vs LM Studio 2026',
+        'numberOfItems': 10,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Interface de usuário', 'description': 'Ollama: apenas CLI. LM Studio: aplicativo gráfico completo.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Chat integrado', 'description': 'Ollama: não (requer ferramenta de terceiros). LM Studio: sim, integrado.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'REST API', 'description': 'Ollama: sim, compatível com OpenAI, pronta para produção. LM Studio: sim (beta).' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Sistemas operacionais', 'description': 'Ollama: macOS, Linux, Windows. LM Studio: macOS, Windows, Linux (beta).' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Tempo de configuração', 'description': 'Ollama: 2-3 minutos (CLI). LM Studio: 5 minutos (baixar, instalar, executar).' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Facilidade para iniciantes', 'description': 'Ollama: 2/5. LM Studio: 5/5.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Facilidade para desenvolvedores', 'description': 'Ollama: 5/5. LM Studio: 3/5.' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Configurações de GPU', 'description': 'Ollama: variáveis de ambiente. LM Studio: controles deslizantes visuais.' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'Navegador de modelos', 'description': 'Ollama: lista via linha de comando. LM Studio: navegador de modelos visual.' },
+          { '@type': 'ListItem', 'position': 10, 'name': 'Preço', 'description': 'Ollama: gratuito. LM Studio: gratuito.' },
+        ],
+      },
     },
 
   ko: {

@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-en.png',
     title: 'Best Local LLM for a 32GB Unified Memory Mac?',
     seoTitle: 'Best Local LLM for 32GB Unified Memory Mac 2026',
     metaDescription: 'Best local LLM for a 32GB unified memory Mac: 32B models at Q4 (~18-20GB), leaving headroom for macOS. 70B only fits at aggressive low-bit quantization.',
@@ -118,6 +119,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-ar.png',
     title: 'أفضل LLM محلي لجهاز Mac بذاكرة موحدة 32GB؟',
     seoTitle: 'أفضل LLM محلي لجهاز Mac بذاكرة موحدة 32GB 2026',
     metaDescription: 'أفضل LLM محلي لجهاز Mac بذاكرة موحدة 32GB: نماذج 32B بدقة Q4 (~18-20GB)، مع ترك هامش لنظام macOS. لا يستوعب نموذج 70B إلا بتكميم منخفض عدواني.',
@@ -232,6 +234,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-de.png',
     title: 'Das beste lokale LLM für einen Mac mit 32 GB Unified Memory?',
     seoTitle: 'Bestes lokales LLM für 32GB Unified Memory Mac 2026',
     metaDescription: 'Bestes lokales LLM für einen 32GB-Mac: 32B-Modelle bei Q4 (~18-20GB), Reserve für macOS. 70B passt nur mit aggressiver Low-Bit-Quantisierung.',
@@ -346,6 +349,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-es.png',
     title: '¿Cuál es el Mejor LLM Local para un Mac con 32GB de Memoria Unificada?',
     seoTitle: 'Mejor LLM Local para Mac con 32GB de Memoria Unificada 2026',
     metaDescription: 'Mejor LLM local para un Mac con 32GB: 32B en Q4 (~18-20GB), con margen para macOS. El 70B solo cabe con cuantización agresiva de bits bajos.',
@@ -460,6 +464,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-fr.png',
     title: 'Quel est le meilleur LLM local pour un Mac à 32 Go de mémoire unifiée ?',
     seoTitle: 'Meilleur LLM local pour Mac 32 Go mémoire unifiée 2026',
     metaDescription: 'Meilleur LLM local pour Mac 32 Go de mémoire unifiée : modèles 32B en Q4 (~18-20 Go), marge pour macOS. Le 70B ne tient qu\'en quantification agressive.',
@@ -574,6 +579,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-ja.png',
     title: '32GB統合メモリMacに最適なローカルLLMは?',
     seoTitle: '2026年版 32GB統合メモリMacに最適なローカルLLM',
     metaDescription: '32GB統合メモリMacに最適なローカルLLM: 32BモデルをQ4で(約18-20GB)、macOS用の余裕を残します。70Bは積極的な低ビット量子化でのみ収まります。',
@@ -688,6 +694,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-ko.png',
     title: '32GB 통합 메모리 Mac을 위한 최적의 로컬 LLM은?',
     seoTitle: '32GB 통합 메모리 Mac 최적 로컬 LLM 2026',
     metaDescription: '32GB 통합 메모리 Mac을 위한 최적의 로컬 LLM: Q4의 32B 모델(약 18-20GB)로 macOS를 위한 여유 공간이 남습니다. 70B는 공격적인 저비트 양자화에서만 맞습니다.',
@@ -802,6 +809,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-pt.png',
     title: 'Qual o Melhor LLM Local para um Mac com 32GB de Memória Unificada?',
     seoTitle: 'Melhor LLM Local para Mac com 32GB de Memória Unificada 2026',
     metaDescription: 'Melhor LLM local para um Mac de 32GB: 32B em Q4 (~18-20GB), com espaço para o macOS. 70B só cabe com quantização agressiva de baixa taxa de bits.',
@@ -916,6 +924,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-local-llm-32gb-unified-memory-mac-overview-hero-zh.png',
     title: '32GB 统一内存 Mac 的最佳本地 LLM 是什么？',
     seoTitle: '2026 年 32GB 统一内存 Mac 最佳本地 LLM',
     metaDescription: '32GB 统一内存 Mac 的最佳本地 LLM：Q4 下的 32B 模型（约 18-20GB），为 macOS 留有余量。70B 只有在激进的低位量化下才能装下。',

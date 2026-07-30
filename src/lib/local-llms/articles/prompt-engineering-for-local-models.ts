@@ -10,6 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
+      heroImage: '/images/prompt-engineering-for-local-models-overview-hero-en.png',
       title: 'Prompt Engineering for Local LLMs 2026: CoT & Few-Shot',
       seoTitle: 'Prompt Engineering for Local LLMs 2026: CoT & Few-Shot',
       intro: 'Local 7B–13B models respond differently to prompts than GPT-5.2 or Claude. They need explicit structure, clearer instructions, and 3–5 few-shot examples where cloud models need 1–2. As of April 2026, proven techniques include chain-of-thought prompting (+10–20% accuracy), role definition, structured output formatting (JSON), and system prompt configuration in Ollama and LM Studio.',
@@ -374,6 +375,7 @@ schema: {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
+      heroImage: '/images/prompt-engineering-for-local-models-overview-hero-es.png',
       title: 'Prompt Engineering para LLMs locales 2026: CoT y Few-Shot',
       seoTitle: 'Prompt Engineering para LLMs locales 2026: CoT y Few-Shot',
       intro: 'Los modelos locales 7B–13B responden de forma diferente a los prompts que GPT-5.2 o Claude. Necesitan estructura explícita, instrucciones más claras y 3–5 ejemplos few-shot donde los modelos cloud necesitan 1–2. En abril de 2026, las técnicas probadas incluyen el prompting por cadena de pensamiento (+10–20% de precisión), la definición de roles, el formato estructurado de salida (JSON) y la configuración del system prompt en Ollama y LM Studio.',
@@ -748,6 +750,7 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
+      heroImage: '/images/prompt-engineering-for-local-models-overview-hero-ar.png',
       title: 'هندسة الأوامر لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨CoT⁩ و⁨Few-Shot⁩',
       seoTitle: 'هندسة الأوامر لنماذج ⁨LLM⁩ المحلية: ⁨CoT⁩ و⁨Few-Shot⁩',
       intro: 'تستجيب النماذج المحلية بحجم 7B–13B للأوامر بشكل مختلف عن GPT-5.2 أو Claude. فهي تحتاج إلى بنية صريحة وتعليمات أوضح و3–5 أمثلة few-shot حيث تكتفي النماذج السحابية بمثال أو مثالين. في أبريل 2026، تشمل التقنيات المثبتة أمر سلسلة التفكير (Chain-of-Thought) (+10–20% دقة)، وتعريف الأدوار، وتنسيق المخرجات المنظم (JSON)، وإعداد أمر النظام في Ollama وLM Studio.',
@@ -1122,6 +1125,7 @@ schema: {
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
+      heroImage: '/images/prompt-engineering-for-local-models-overview-hero-pt.png',
       title: 'Prompt Engineering para LLMs locais 2026: CoT e Few-Shot',
       seoTitle: 'Prompt Engineering para LLMs locais 2026: CoT e Few-Shot',
       intro: 'Modelos locais de 7B–13B respondem de forma diferente a prompts do que o GPT-5.2 ou Claude. Eles precisam de estrutura explícita, instruções mais claras e 3–5 exemplos few-shot onde modelos na nuvem precisam de apenas 1–2. Em abril de 2026, técnicas comprovadas incluem prompting por cadeia de pensamento (+10–20% de precisão), definição de papéis, formatação de saída estruturada (JSON) e configuração de system prompt no Ollama e LM Studio.',
@@ -1376,10 +1380,55 @@ schema: {
         proficiencyLevel: 'Advanced',
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Como Definir um System Prompt no Ollama',
+        inLanguage: 'pt-BR',
+        totalTime: 'PT3M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Criar um Modelfile com a instrução SYSTEM', text: 'FROM llama3.1:8b\nSYSTEM "You are a Python expert with 10 years experience. Answer only Python questions. Provide code examples. Use type hints."\nPARAMETER temperature 0.4\nPARAMETER top_p 0.85\nPARAMETER repeat_penalty 1.15' },
+          { '@type': 'HowToStep', position: 2, name: 'Adicionar parâmetros de temperatura e amostragem', text: 'PARAMETER temperature 0.4\nPARAMETER top_p 0.85\nPARAMETER repeat_penalty 1.15' },
+          { '@type': 'HowToStep', position: 3, name: 'Registrar o modelo personalizado', text: 'ollama create python-expert -f Modelfile' },
+          { '@type': 'HowToStep', position: 4, name: 'Executar o modelo configurado', text: 'ollama run python-expert' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Técnicas de Prompt Engineering para LLMs Locais',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Prompting por Cadeia de Pensamento',
+            description: 'Peça ao modelo que raciocine passo a passo antes de responder. Melhora a precisão em 10–20% em tarefas de raciocínio para modelos locais de 7B–13B.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Formatação de Saída Estruturada',
+            description: 'Especifique o formato exato de saída (esquema JSON, estrutura markdown). Necessário para respostas estruturadas confiáveis de modelos locais.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Exemplos Few-Shot',
+            description: 'Forneça 3–5 exemplos rotulados antes da tarefa. Melhora a precisão de classificação e extração em 15–25% em comparação com zero-shot para modelos locais.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Definição de Papel',
+            description: 'Atribua um papel específico ("Você é um especialista em Python com 10 anos de experiência"). Melhora a qualidade da resposta específica do domínio.',
+          },
+        ],
+      },
     },
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Fortgeschrittene Techniken',
+      heroImage: '/images/prompt-engineering-for-local-models-overview-hero-de.png',
       title: 'Prompt Engineering für lokale LLMs 2026: CoT & Few-Shot',
       seoTitle: 'Prompt Engineering für lokale LLMs 2026: CoT & Few-Shot',
       intro: 'Lokale 7B–13B-Modelle reagieren anders auf Prompts als GPT-5.2 oder Claude. Sie benötigen explizite Struktur, klarere Anweisungen und 3–5 Few-Shot-Beispiele, während Cloud-Modelle nur 1–2 benötigen. Im April 2026 gehören zu bewährten Techniken Chain-of-Thought-Prompting (+10–20% Genauigkeit), Rollendefinition, strukturierte Ausgabeformatierung (JSON) und System-Prompt-Konfiguration in Ollama und LM Studio.',
@@ -1773,6 +1822,7 @@ schema: {
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques avancées',
+      heroImage: '/images/prompt-engineering-for-local-models-overview-hero-fr.png',
       title: 'Ingénierie des prompts pour LLM locaux 2026 : CoT & Few-Shot',
       seoTitle: 'Ingénierie des prompts pour LLM locaux 2026 : CoT & Few-Shot',
       intro: 'Les modèles locaux 7B–13B réagissent différemment aux prompts que GPT-5.2 ou Claude. Ils exigent une structure explicite, des instructions plus claires et 3–5 exemples Few-Shot, là où les modèles cloud ne nécessitent que 1–2. En avril 2026, les techniques éprouvées incluent le prompting par chaîne de pensées (+10–20% de précision), la définition de rôles, le formatage structuré des sorties (JSON) et la configuration des prompts système dans Ollama et LM Studio.',
@@ -2148,6 +2198,7 @@ schema: {
     ja: {
       freshness_tier: 'semi_annual',
       theme: '高度なテクニック',
+      heroImage: '/images/prompt-engineering-for-local-models-overview-hero-ja.png',
       title: 'ローカルLLM向けプロンプトエンジニアリング2026：CoT＆Few-Shot',
       seoTitle: 'ローカルLLM向けプロンプトエンジニアリング2026：CoT＆Few-Shot',
       intro: 'ローカルの7B～13Bモデルは、GPT-5.2やClaudeとは異なる方法でプロンプトに応答します。明示的な構造、より明確な指示、クラウドモデルが1～2個必要とするところで3～5個のFew-Shotサンプルが必要です。2026年4月現在、実証済みのテクニックには思考の連鎖プロンプティング（+10～20%精度向上）、ロール定義、構造化された出力フォーマット（JSON）、およびOllamaとLM StudioでのシステムプロンプトDiagramが含まれています。',
@@ -2522,6 +2573,7 @@ schema: {
     zh: {
       freshness_tier: 'semi_annual',
       theme: '高级技术',
+      heroImage: '/images/prompt-engineering-for-local-models-overview-hero-zh.png',
       title: '本地LLM提示工程2026：思维链与少样本',
       seoTitle: '本地LLM提示工程2026：思维链与少样本',
       intro: '本地7B-13B模型对提示的响应方式与GPT-5.2或Claude不同。它们需要明确的结构、更清晰的指示，以及云模型需要1-2个的地方需要3-5个少样本示例。截至2026年4月，经过验证的技术包括思维链提示词（+10-20%准确率）、角色定义、结构化输出格式（JSON）以及Ollama和LM Studio中的系统提示词配置。',
@@ -2896,6 +2948,7 @@ schema: {
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
+    heroImage: '/images/prompt-engineering-for-local-models-overview-hero-ko.png',
       title: '로컬 LLM 프롬프트 엔지니어링 2026: CoT 및 Few-Shot',
       seoTitle: '로컬 LLM 프롬프트 엔지니어링 2026: CoT 및 Few-Shot',
       intro: '로컬 7B–13B 모델은 GPT-5.2 또는 Claude와 다르게 프롬프트에 반응합니다. 명시적인 구조, 더 명확한 지침, 그리고 클라우드 모델이 1–2개만 필요한 곳에서 3–5개의 few-shot 예시가 필요합니다. 2026년 4월 기준으로, 검증된 기법에는 chain-of-thought 프롬프팅(정확도 10–20% 향상), 역할 정의, 구조화된 출력 형식 지정(JSON), Ollama 및 LM Studio의 시스템 프롬프트 구성이 포함됩니다.',
@@ -3137,6 +3190,50 @@ schema: {
             '[Ollama Modelfile 참조](https://github.com/ollama/ollama/blob/main/docs/modelfile.md) — 시스템 프롬프트, 파라미터(temperature, top_p, repeat_penalty), 사용자 정의 모델 생성에 관한 공식 문서.',
           ],
         },
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Ollama에서 시스템 프롬프트를 설정하는 방법',
+        inLanguage: 'ko',
+        totalTime: 'PT3M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'SYSTEM 지시문이 포함된 Modelfile 생성', text: 'FROM llama3.1:8b\nSYSTEM "You are a Python expert with 10 years experience. Answer only Python questions. Provide code examples. Use type hints."\nPARAMETER temperature 0.4\nPARAMETER top_p 0.85\nPARAMETER repeat_penalty 1.15' },
+          { '@type': 'HowToStep', position: 2, name: '온도 및 샘플링 파라미터 추가', text: 'PARAMETER temperature 0.4\nPARAMETER top_p 0.85\nPARAMETER repeat_penalty 1.15' },
+          { '@type': 'HowToStep', position: 3, name: '커스텀 모델 등록', text: 'ollama create python-expert -f Modelfile' },
+          { '@type': 'HowToStep', position: 4, name: '설정된 모델 실행', text: 'ollama run python-expert' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '로컬 LLM을 위한 프롬프트 엔지니어링 기법',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Chain-of-Thought 프롬프팅',
+            description: '답변하기 전에 모델이 단계별로 추론하도록 요청합니다. 로컬 7B–13B 모델의 추론 작업 정확도를 10–20% 향상시킵니다.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: '구조화된 출력 형식',
+            description: '정확한 출력 형식(JSON 스키마, 마크다운 구조)을 지정합니다. 로컬 모델에서 신뢰할 수 있는 구조화된 응답을 위해 필요합니다.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Few-Shot 예시',
+            description: '작업 전에 라벨이 붙은 3–5개의 예시를 제공합니다. 로컬 모델의 zero-shot 대비 분류 및 추출 정확도를 15–25% 향상시킵니다.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: '역할 정의',
+            description: '구체적인 역할을 지정합니다("당신은 10년 경력의 Python 전문가입니다"). 도메인별 응답 품질을 향상시킵니다.',
+          },
+        ],
       },
     },
   };

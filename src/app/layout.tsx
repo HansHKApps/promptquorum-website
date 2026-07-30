@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
-import { Plus_Jakarta_Sans, JetBrains_Mono, Noto_Sans_Arabic } from 'next/font/google'
+import { Plus_Jakarta_Sans, JetBrains_Mono, Noto_Sans_Arabic, Noto_Sans_KR } from 'next/font/google'
 import './globals.css'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -21,6 +21,25 @@ const notoSansArabic = Noto_Sans_Arabic({
   subsets: ['arabic'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-arabic',
+  display: 'swap',
+})
+const notoSansKR = Noto_Sans_KR({
+  // 'korean' is not a valid next/font subset for this family — Google's font
+  // metadata only exposes cyrillic/latin/latin-ext/vietnamese as SUPPLEMENTARY
+  // subsets for Noto Sans KR (same for Noto Sans JP/SC/TC: none of the CJK
+  // Noto families expose a same-script subset). The Hangul glyphs are always
+  // bundled regardless of which of these is chosen — 'subsets' here only
+  // controls whether accessory Latin/Cyrillic/Vietnamese characters are
+  // included alongside them. 'latin' was already correct on this axis; the
+  // actual defect was that --font-korean had zero CSS references anywhere
+  // (fixed in globals.css), so the font was never applied to any element.
+  //
+  // A prior commit (fdb048efd, part of #217) removed this font entirely as
+  // "unused" — correct at the time (no CSS referenced --font-korean), but no
+  // longer true now that globals.css has the html[lang="ko"] rule. Re-added.
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-korean',
   display: 'swap',
 })
 
@@ -115,7 +134,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" dir="ltr" className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${notoSansArabic.variable}`} suppressHydrationWarning>
+    <html lang="en" dir="ltr" className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${notoSansArabic.variable} ${notoSansKR.variable}`} suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#6750A4" />
 

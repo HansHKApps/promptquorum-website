@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/speculative-decoding-explained-overview-hero-en.png',
     title: 'What Is Speculative Decoding?',
     seoTitle: 'Speculative Decoding Explained | Prompt Bites',
     metaDescription:
@@ -103,6 +104,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/speculative-decoding-explained-overview-hero-de.png',
     title: 'Was ist Spekulatives Dekodieren?',
     seoTitle: 'Spekulatives Dekodieren erklärt | Prompt Bites',
     metaDescription:
@@ -202,6 +204,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/speculative-decoding-explained-overview-hero-fr.png',
     title: "Qu'est-ce que le décodage spéculatif ?",
     seoTitle: 'Le décodage spéculatif expliqué | Prompt Bites',
     metaDescription:
@@ -301,6 +304,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/speculative-decoding-explained-overview-hero-ja.png',
     title: '投機的デコーディングとは',
     seoTitle: '投機的デコーディングを解説 | Prompt Bites',
     metaDescription:
@@ -400,6 +404,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/speculative-decoding-explained-overview-hero-zh.png',
     title: '什么是推测解码？',
     seoTitle: '推测解码详解 | Prompt Bites',
     metaDescription: '推测解码通过让小型草稿模型提出候选词元、由大模型并行验证，加速本地LLM推理，且不降低输出质量。',
@@ -498,6 +503,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/speculative-decoding-explained-overview-hero-es.png',
     title: '¿Qué es la decodificación especulativa?',
     seoTitle: 'Decodificación especulativa explicada | Prompt Bites',
     metaDescription:
@@ -597,6 +603,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/speculative-decoding-explained-overview-hero-pt.png',
     title: 'O que é decodificação especulativa?',
     seoTitle: 'Decodificação especulativa explicada | Prompt Bites',
     metaDescription:
@@ -696,6 +703,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/speculative-decoding-explained-overview-hero-ar.png',
     title: 'ما هو فك التشفير التخميني؟',
     seoTitle: 'شرح فك التشفير التخميني | Prompt Bites',
     metaDescription:
@@ -795,6 +803,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Technique & Concept Explainers',
+    heroImage: '/images/speculative-decoding-explained-overview-hero-ko.png',
     title: '추측 디코딩이란 무엇입니까?',
     seoTitle: '추측 디코딩 설명 | Prompt Bites',
     metaDescription:

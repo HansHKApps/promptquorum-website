@@ -317,6 +317,17 @@ DEEPSEEK_MODEL=deepseek-chat
           'Dispatch-Strategie: private/DSGVO-Coding-Aufgaben → lokales Qwen 3.6, nicht-sensitive Massenverarbeitung → DeepSeek Coder API.',
         ],
       },
+      faq: {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
+        faqs: [
+          { q: 'Ist Qwen 3.6 27B besser als DeepSeek Coder für lokales Coding?', a: 'Für lokales Deployment: Qwen 3.6 27B erreicht 77,2% SWE-bench (verifiziert) und läuft vollständig lokal auf 16 GB VRAM, was es DSGVO-konform für EU-Teams macht. DeepSeek Coder ist eine Cloud-API mit Kosten von ~0,14 $/1M Input-Token — die bessere Wahl für nicht-sensitive Massen-Codegenerierung, wenn keine lokale Hardware verfügbar ist. Die Abwägung hängt von Datensensibilität und Budget ab, es gibt keinen einzelnen Gewinner.' },
+          { q: 'Was ist Mistral Devstral und warum wird es hier erwähnt?', a: 'Mistral Devstral Small 24B ist ein Coding-fokussiertes Modell von Mistral AI, veröffentlicht im Mai 2026, das speziell für agentische Coding-Aufgaben entwickelt wurde — Multi-Datei-Refactoring, Tool-Einsatz und iterative Codegenerierung. Es erreicht 90,1% HumanEval und läuft auf 14 GB VRAM. Es ist besonders stark bei Aufgaben mit mehreren sequenziellen Code-Operationen, wo sein agentisches Training einen Vorteil gegenüber den reinen Benchmark-Werten von Qwen 3.6 27B bietet.' },
+          { q: 'Kann ich Qwen 3.6 27B und Devstral 24B gleichzeitig ausführen?', a: 'Auf einer einzelnen RTX 4090 (24 GB VRAM) nein — Qwen 3.6 27B Q4_K_M nutzt ~15,8 GB und Devstral 24B Q4_K_M ~14,2 GB, zusammen ~30 GB. Erforderlich wäre ein Dual-GPU-Setup (zwei RTX 3090 oder zwei RTX 4090) oder Apple Silicon mit 96+ GB unified Memory. Die praktische Lösung ist, jeweils ein Modell zu nutzen und über Ollama zu wechseln, was auf einer RTX 4090 ~5 Sekunden dauert.' },
+          { q: 'Ist DeepSeek Coder sicher für EU-Unternehmenscode?', a: 'DeepSeek Coder verarbeitet Daten auf Servern von DeepSeek AI, einem in China eingetragenen Unternehmen. Die EU-Kommission hat für China keinen Angemessenheitsbeschluss erlassen. Die Nutzung von DeepSeek Coder mit personenbezogenen EU-Daten oder proprietärem Quellcode mit personenbezogenen Informationen erfordert eine rechtliche Prüfung der Konformität mit Artikel 44 DSGVO. Für proprietären Code ohne personenbezogene Daten konsultieren Sie Ihr Rechtsteam. Für die Verarbeitung personenbezogener Daten ist lokales Qwen 3.6 27B die konforme Alternative.' },
+          { q: 'Was ist SWE-bench und warum liegt der Fokus darauf?', a: 'SWE-bench (Software Engineering Benchmark) testet, ob ein LLM reale GitHub-Issues in Open-Source-Codebasen wie Django, Flask und NumPy lösen kann. Es misst praktische Softwareentwicklungsfähigkeit statt isolierter Funktions-Codierung. Qwen 3.6 27B erreicht 77,2% auf SWE-bench Verified, der derzeit zuverlässigsten Metrik für reale Coding-Aufgaben.' },
+        ],
+      },
     },
   },
   fr: {
@@ -561,6 +572,17 @@ DEEPSEEK_MODEL=deepseek-chat
           'ディスパッチ戦略：プライベート/GDPR対象のコーディングタスク → ローカルQwen 3.6、非機密の大量生成 → DeepSeek Coder API。',
         ],
       },
+      faq: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          { q: 'ローカルコーディングにはQwen 3.6 27BのほうがDeepSeek Coderより優れていますか？', a: 'ローカル展開の場合：Qwen 3.6 27Bは77.2% SWE-bench（検証済み）を達成し、16 GB VRAMで完全にローカル実行できるため、EUチームにとってGDPR準拠となります。DeepSeek Coderは入力トークン約$0.14/1Mのクラウドapiで、ローカルハードウェアが利用できない非機密の大量コード生成に適しています。トレードオフはデータの機密性と予算次第であり、単一の勝者は存在しません。' },
+          { q: 'Mistral Devstralとは何ですか、なぜここで取り上げられていますか？', a: 'Mistral Devstral Small 24Bは、2026年5月にリリースされたMistral AIによるコーディング特化モデルで、マルチファイルのリファクタリング、ツール使用、反復的なコード生成といったエージェント型コーディングタスク向けに設計されています。90.1% HumanEvalを達成し、14 GB VRAMで動作します。複数の連続したコード操作を必要とするタスクで特に強く、エージェント型トレーニングによりQwen 3.6 27Bの純粋なベンチマークスコアに対して優位性を持ちます。' },
+          { q: 'Qwen 3.6 27BとDevstral 24Bを同時に実行できますか？', a: '単一のRTX 4090（24 GB VRAM）では不可能です。Qwen 3.6 27B Q4_K_Mは約15.8 GB、Devstral 24B Q4_K_Mは約14.2 GBを使用し、合計約30 GBとなります。デュアルGPU構成（RTX 3090を2枚またはRTX 4090を2枚）、または96 GB以上のユニファイドメモリを搭載したApple Siliconが必要です。実用的な解決策は、一度に1つのモデルを使用し、Ollamaで切り替えることで、RTX 4090ではモデル切り替えに約5秒かかります。' },
+          { q: 'EU企業のコードにDeepSeek Coderを使用しても安全ですか？', a: 'DeepSeek Coderは、中国で法人登記されている企業DeepSeek AIのサーバー上でデータを処理します。EU委員会は中国に対する十分性認定を発行していません。個人データを含むEUの個人データや専有ソースコードでDeepSeek Coderを使用する場合、GDPR第44条への準拠について法的分析が必要です。個人データを含まない専有コードについては法務チームに相談してください。個人データ処理の場合、ローカルのQwen 3.6 27Bが準拠する代替手段です。' },
+          { q: 'SWE-benchとは何であり、なぜ重視されるのですか？', a: 'SWE-bench（ソフトウェアエンジニアリングベンチマーク）は、LLMがDjango、Flask、NumPyなどのオープンソースコードベースにおける実際のGitHub issueを解決できるかをテストします。孤立した関数レベルのコーディングではなく、実践的なソフトウェアエンジニアリング能力を測定します。Qwen 3.6 27BはSWE-bench Verifiedで77.2%を達成しており、これは現時点で最も信頼性の高い実世界コーディング指標です。' },
+        ],
+      },
     },
   },
   zh: {
@@ -584,6 +606,17 @@ DEEPSEEK_MODEL=deepseek-chat
           'DeepSeek Coder是云端成本冠军：$0.14/1M令牌，HumanEval比Qwen低0.5个百分点。',
           'Mistral Devstral擅长智能体任务：在多步骤工具使用和多文件重构上表现更好。',
           '调度策略：私有/GDPR相关代码任务 → 本地Qwen 3.6，非敏感批量生成 → DeepSeek Coder API。',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          { q: '在本地编程方面，Qwen 3.6 27B比DeepSeek Coder更好吗？', a: '对于本地部署：Qwen 3.6 27B达到77.2% SWE-bench（已验证），并可在16 GB显存下完全本地运行，使其符合欧盟团队的GDPR合规要求。DeepSeek Coder是一个云API，输入令牌成本约为$0.14/1M——在没有本地硬件的情况下，是非敏感大批量代码生成的更好选择。取舍取决于数据敏感度和预算，没有单一的赢家。' },
+          { q: 'Mistral Devstral是什么，为什么在这里提及它？', a: 'Mistral Devstral Small 24B是Mistral AI于2026年5月发布的一款专注于编程的模型，专为智能体编程任务设计——包括多文件重构、工具使用和迭代代码生成。它达到90.1% HumanEval，可在14 GB显存下运行。它在需要多个连续代码操作的任务上表现尤为出色，其智能体训练使其在这类任务上优于Qwen 3.6 27B的纯基准测试分数。' },
+          { q: '我可以同时运行Qwen 3.6 27B和Devstral 24B吗？', a: '在单张RTX 4090（24 GB显存）上不行——Qwen 3.6 27B Q4_K_M使用约15.8 GB，Devstral 24B Q4_K_M使用约14.2 GB，合计约30 GB。您需要双GPU配置（两张RTX 3090或两张RTX 4090），或配备96 GB以上统一内存的Apple Silicon设备。实用的解决方案是一次使用一个模型，并通过Ollama切换，在RTX 4090上切换模型约需5秒。' },
+          { q: 'DeepSeek Coder用于欧盟企业代码是否安全？', a: 'DeepSeek Coder在DeepSeek AI（一家在中国注册成立的公司）的服务器上处理数据。欧盟委员会尚未就中国发布充分性认定决定。将DeepSeek Coder用于欧盟个人数据或包含个人信息的专有源代码，需要对GDPR第44条的合规性进行法律分析。对于不含个人数据的专有代码，请咨询您的法务团队。对于个人数据处理，本地Qwen 3.6 27B是合规的替代方案。' },
+          { q: '什么是SWE-bench，为什么要关注它？', a: 'SWE-bench（软件工程基准测试）测试LLM是否能够解决Django、Flask和NumPy等开源代码库中的真实GitHub issue。它衡量的是实际的软件工程能力，而非孤立的函数级编码。Qwen 3.6 27B在SWE-bench Verified上达到77.2%，这是目前最可靠的真实世界编程指标。' },
         ],
       },
     },

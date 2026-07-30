@@ -8,6 +8,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
+    heroImage: '/images/manual-vs-automated-prompt-optimization-overview-hero-en.png',
     title: 'Manual vs Automated Prompt Optimization: When to Iterate, When to Automate',
     seoTitle: 'Manual vs Automated Optimization: Choosing Your Approach',
     metaDescription: 'Manual vs automated prompt optimization: choose based on prompt count and resources. When to iterate by hand, when to automate. Decision framework and comparison.',
@@ -210,6 +211,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
+    heroImage: '/images/manual-vs-automated-prompt-optimization-overview-hero-de.png',
     title: 'Manuelle vs Automatisierte Prompt-Optimierung: Wann welcher Ansatz',
     seoTitle: 'Manuelle vs Automatisierte Optimierung: Entscheidungshilfe',
     metaDescription: 'Manuelle vs automatisierte Prompt-Optimierung: Entscheidungsrahmen basierend auf Prompt-Anzahl und Ressourcen. Wann von Hand optimieren, wann automatisieren.',
@@ -414,6 +416,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
+    heroImage: '/images/manual-vs-automated-prompt-optimization-overview-hero-es.png',
     title: 'Optimización manual vs automatizada de prompts: cuándo iterar, cuándo automatizar',
     seoTitle: 'Optimización manual vs automatizada: elige tu enfoque',
     metaDescription: 'Optimización manual vs automatizada de prompts: elige según el número de prompts y recursos. Cuándo iterar a mano y cuándo automatizar. Con framework.',
@@ -615,6 +618,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Tools & Platforms',
+    heroImage: '/images/manual-vs-automated-prompt-optimization-overview-hero-pt.png',
     title: 'Otimização manual vs automatizada de prompts: quando iterar, quando automatizar',
     seoTitle: 'Otimização manual vs automatizada: escolha sua abordagem',
     metaDescription: 'Otimização manual vs automatizada de prompts: escolha conforme o número de prompts e recursos. Quando iterar manualmente e quando automatizar. Com framework.',
@@ -815,6 +819,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
+    heroImage: '/images/manual-vs-automated-prompt-optimization-overview-hero-fr.png',
     title: 'Optimisation Manuelle vs Automatisée des Prompts : Quand Choisir Chaque Approche',
     seoTitle: 'Optimisation Manuelle vs Automatisée : Guide de Décision',
     metaDescription: 'Optimisation manuelle vs automatisée : quand itérer manuellement, quand utiliser DSPy ou Promptfoo. Cadre décisionnel avec comparaison des coûts et scalabilité.',
@@ -1017,6 +1022,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
+    heroImage: '/images/manual-vs-automated-prompt-optimization-overview-hero-ja.png',
     title: 'マニュアル vs 自動プロンプト最適化：いつどちらを使うか',
     seoTitle: 'マニュアル vs 自動最適化：判断フレームワーク',
     metaDescription: 'マニュアル vs 自動プロンプト最適化の判断基準。手動反復とDSPy・Promptfooの選択、コスト・スケーリング比較フレームワーク。',
@@ -1220,6 +1226,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
+    heroImage: '/images/manual-vs-automated-prompt-optimization-overview-hero-zh.png',
     title: '手动 vs 自动提示词优化：何时选择每种方法',
     seoTitle: '手动 vs 自动提示词优化：决策框架',
     metaDescription: '手动 vs 自动提示词优化的判断基准。何时手动迭代，何时自动化。成本和扩展性对比决策框架。',
@@ -1423,6 +1430,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
+    heroImage: '/images/manual-vs-automated-prompt-optimization-overview-hero-ar.png',
     title: 'تحسين الـ ⁨prompts⁩ يدويًا أم تلقائيًا: متى تُكرر التجربة ومتى تُؤتمت العملية',
     seoTitle: 'تحسين الـ ⁨prompts⁩: يدوي أم آلي؟ إطار القرار',
     metaDescription: 'تحسين الـ ⁨prompts⁩ يدويًا أم تلقائيًا: اختر بناءً على عدد الـ ⁨prompts⁩ والموارد. متى تُكرر يدويًا ومتى تُؤتمت — إطار القرار الشامل.',
@@ -1625,6 +1633,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
+    heroImage: '/images/manual-vs-automated-prompt-optimization-overview-hero-ko.png',
     title: '수동 vs 자동 프롬프트 최적화: 언제 반복하고 언제 자동화할 것인가',
     seoTitle: '수동 vs 자동 최적화: 접근 방식 선택 가이드',
     metaDescription: '수동 vs 자동 프롬프트 최적화: 프롬프트 수와 리소스에 따라 선택하십시오. 언제 직접 반복하고 언제 자동화할지에 관한 의사결정 프레임워크 및 비교.',

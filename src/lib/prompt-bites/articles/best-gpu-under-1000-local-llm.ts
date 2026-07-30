@@ -4,6 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-en.png',
     title: 'Best GPU Under $1,000 for Local LLM Inference?',
     seoTitle: 'Best GPU Under $1,000 for Local LLM 2026 | Prompt Bites',
     metaDescription: 'Best GPU under $1,000 for local LLMs: used RTX 4090 24 GB (~$900-1,100). 24 GB VRAM runs 32B models at Q4 and 70B at low quant. July 2026 snapshot.',
@@ -124,6 +125,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-ar.png',
     title: 'أفضل GPU بأقل من 1,000 دولار لتشغيل LLM محلي؟',
     seoTitle: 'أفضل GPU بأقل من 1,000 دولار لـ LLM المحلي 2026 | Prompt Bites',
     metaDescription: 'أفضل GPU بأقل من 1,000 دولار لتشغيل LLM محليًا: RTX 4090 24 GB مستعمل (~900-1,100 دولار). VRAM بسعة 24 GB تشغّل نماذج 32B بدقة Q4 و70B بتكميم منخفض. لقطة يوليو 2026.',
@@ -244,6 +246,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-de.png',
     title: 'Die beste GPU unter 1.000 $ für lokale LLM-Inferenz?',
     seoTitle: 'Beste GPU unter 1.000 $ für lokale LLMs 2026 | Prompt Bites',
     metaDescription: 'Beste GPU unter 1.000 $ für lokale LLMs: gebrauchte RTX 4090 24 GB (~900-1.100 $). 24 GB VRAM laufen 32B-Modelle bei Q4, 70B bei niedriger Quantisierung.',
@@ -364,6 +367,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-es.png',
     title: '¿Cuál es la mejor GPU por menos de $1,000 para inferencia de LLM local?',
     seoTitle: 'Mejor GPU por Menos de $1,000 para LLM Local 2026 | Prompt Bites',
     metaDescription: 'Mejor GPU por menos de $1,000 para LLMs locales: RTX 4090 24 GB usada (~$900-1,100). 24 GB VRAM ejecuta 32B en Q4 y 70B en cuantización baja. Julio 2026.',
@@ -484,6 +488,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-fr.png',
     title: 'Meilleur GPU à moins de 1 000 $ pour l\'inférence LLM locale ?',
     seoTitle: 'Meilleur GPU sous 1 000 $ pour LLM local 2026',
     metaDescription: 'Meilleur GPU à moins de 1 000 $ pour LLM locaux : RTX 4090 24 Go d\'occasion (~900-1 100 $). 24 Go VRAM font tourner 32B en Q4 et 70B en quant faible.',
@@ -604,6 +609,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-ja.png',
     title: 'ローカルLLM推論に最適な1,000ドル以下のGPUは?',
     seoTitle: '2026年版 ローカルLLM向け1,000ドル以下GPU | Prompt Bites',
     metaDescription: 'ローカルLLMに最適な1,000ドル以下のGPUは中古RTX 4090 24GB(約900-1,100ドル)。24GB VRAMで32BモデルをQ4で、70Bも低量子化で動作。2026年7月時点。',
@@ -724,6 +730,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-ko.png',
     title: '로컬 LLM 추론에 1,000달러 이하 최적의 GPU는?',
     seoTitle: '1,000달러 이하 최적의 로컬 LLM GPU 2026',
     metaDescription: '로컬 LLM용 1,000달러 이하 최적의 GPU: 중고 RTX 4090 24GB(약 900-1,100달러). Q4에서 32B, 낮은 양자화로 70B 구동. 2026년 7월.',
@@ -844,6 +851,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-pt.png',
     title: 'Qual a Melhor GPU Abaixo de US$ 1.000 para Inferência de LLM Local?',
     seoTitle: 'Melhor GPU Abaixo de US$ 1.000 para LLM Local 2026',
     metaDescription: 'Melhor GPU abaixo de US$ 1.000 para LLMs locais: RTX 4090 24 GB usada (~US$ 900-1.100). 24 GB VRAM roda 32B em Q4 e 70B em quant baixa. Julho 2026.',
@@ -964,6 +972,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
+    heroImage: '/images/best-gpu-under-1000-local-llm-overview-hero-zh.png',
     title: '1000 美元以下运行本地 LLM 的最佳 GPU 是什么？',
     seoTitle: '2026 年 1000 美元以下本地 LLM 最佳 GPU | Prompt Bites',
     metaDescription: '1000 美元以下运行本地 LLM 的最佳 GPU：二手 RTX 4090 24 GB（约 900-1100 美元）。24 GB 显存可在 Q4 下运行 32B 模型，低量化下可运行 70B。2026 年 7 月快照。',

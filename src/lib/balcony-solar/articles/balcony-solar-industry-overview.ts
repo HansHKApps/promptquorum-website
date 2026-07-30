@@ -7,6 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/balcony-solar-industry-overview-overview-hero-en.png',
     title: 'Balcony Solar Industry Overview (2026): History, Supply Chain, and Market Players',
     seoTitle: 'Balcony Solar Industry Overview (2026)',
     metaDescription: 'How the balcony solar industry formed, its three-layer supply chain, and the companies driving it, updated for 2026.',
@@ -88,6 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/balcony-solar-industry-overview-overview-hero-de.png',
     title: 'Balkonsolar-Branchenüberblick (2026): Geschichte, Lieferkette und Marktteilnehmer',
     seoTitle: 'Balkonsolar-Branche 2026: Überblick & Marktakteure',
     metaDescription: 'Wie sich die Balkonsolar-Branche entwickelte, ihre dreistufige Lieferkette und die Unternehmen, die sie antreiben – aktualisiert für 2026.',
@@ -168,6 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/balcony-solar-industry-overview-overview-hero-fr.png',
     title: 'Aperçu de l\'industrie du solaire de balcon (2026) : histoire, chaîne d\'approvisionnement et acteurs du marché',
     seoTitle: 'Industrie du solaire de balcon : aperçu (2026)',
     metaDescription: 'Comment l\'industrie du solaire de balcon s\'est formée, sa chaîne d\'approvisionnement à trois niveaux et les entreprises qui la portent (2026).',
@@ -248,6 +251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/balcony-solar-industry-overview-overview-hero-ja.png',
     title: 'ベランダソーラー産業概観（2026年）：歴史、サプライチェーン、市場プレーヤー',
     seoTitle: 'ベランダソーラー産業の歴史とサプライチェーン概観（2026年）',
     metaDescription: 'ベランダソーラー産業がどのように形成されたか、3層構造のサプライチェーン、そして業界を牽引する企業について、2026年版として解説します。',
@@ -328,6 +332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/balcony-solar-industry-overview-overview-hero-zh.png',
     title: '阳台光伏行业概览（2026年）：历史、供应链与市场参与者',
     seoTitle: '阳台光伏产业发展历程、供应链结构与市场参与者概览（2026年）',
     metaDescription: '本文介绍阳台光伏行业的发展历程、三层供应链结构，以及推动行业发展的主要企业，内容更新至2026年。',
@@ -408,6 +413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/balcony-solar-industry-overview-overview-hero-es.png',
     title: 'Panorama de la industria del solar de balcón (2026): historia, cadena de suministro y actores del mercado',
     seoTitle: 'Panorama de la industria del solar de balcón (2026)',
     metaDescription: 'Cómo se formó la industria del solar de balcón, su cadena de suministro de tres niveles y las empresas que la impulsan, actualizado para 2026.',
@@ -488,6 +494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/balcony-solar-industry-overview-overview-hero-pt.png',
     title: 'Panorama da indústria de energia solar de varanda (2026): história, cadeia de suprimentos e players do mercado',
     seoTitle: 'Panorama do setor de energia solar de varanda (2026)',
     metaDescription: 'Como a indústria de energia solar de varanda se formou, sua cadeia de suprimentos de três camadas e as empresas que a impulsionam, atualizado para 2026.',
@@ -568,6 +575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/balcony-solar-industry-overview-overview-hero-ar.png',
     title: 'نظرة عامة على صناعة الطاقة الشمسية للشرفات (2026): التاريخ وسلسلة التوريد واللاعبين في السوق',
     seoTitle: 'نظرة عامة على صناعة الطاقة الشمسية للشرفات (2026)',
     metaDescription: 'كيف تشكّلت صناعة الطاقة الشمسية للشرفات، وسلسلة التوريد ثلاثية الطبقات، والشركات التي تقودها، محدّثة لعام 2026.',
@@ -648,6 +656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
+    heroImage: '/images/balcony-solar-industry-overview-overview-hero-ko.png',
     title: '발코니 태양광 산업 개요(2026): 역사, 공급망, 시장 참여자',
     seoTitle: '발코니 태양광 산업 역사와 공급망 개요(2026)',
     metaDescription: '발코니 태양광 산업이 어떻게 형성되었는지, 3단계 공급망 구조, 그리고 이를 이끄는 기업들에 대해 2026년 기준으로 정리했습니다.',

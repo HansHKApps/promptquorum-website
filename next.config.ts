@@ -1,4 +1,7 @@
 import type { NextConfig } from 'next'
+import { PATH_PREFIX_LANGS } from './src/lib/i18n/constants'
+
+const FRAMEWORK_REDIRECT_SLUGS = ['craft', 'trace', 'risen', 'rtf', 'co-star']
 
 const nextConfig: NextConfig = {
   compress: true,
@@ -51,6 +54,14 @@ const nextConfig: NextConfig = {
         destination: '/frameworks/co-star',
         permanent: true,
       },
+      // Framework consolidation, locale-prefixed variants — mirrors the EN redirects above
+      ...PATH_PREFIX_LANGS.flatMap(lang =>
+        FRAMEWORK_REDIRECT_SLUGS.map(slug => ({
+          source: `/${lang}/prompt-engineering/${slug}-framework`,
+          destination: `/${lang}/frameworks/${slug}`,
+          permanent: true,
+        }))
+      ),
       // Slug corrections: fix broken internal links
       {
         source: '/prompt-engineering/ai-hallucinations-how-to-stop',

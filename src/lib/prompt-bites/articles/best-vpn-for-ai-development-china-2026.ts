@@ -9,6 +9,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-en.png',
     title: 'Best VPN for AI Development in China 2026',
     seoTitle: 'Best VPN for AI Dev China 2026: GitHub + HuggingFace',
     metaDescription:
@@ -253,6 +254,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-de.png',
     title: 'Bestes VPN für KI-Entwicklung in China 2026',
     seoTitle: 'Bestes VPN für KI-Entwickler China 2026 (Getestet)',
     metaDescription:
@@ -344,6 +346,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-fr.png',
     title: 'Meilleur VPN pour le Développement IA en Chine 2026',
     seoTitle: 'Meilleur VPN IA Chine 2026 : GitHub et HuggingFace',
     metaDescription:
@@ -418,6 +421,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-ja.png',
     title: '中国でのAI開発に最適なVPN 2026',
     seoTitle: '中国AI開発VPN 2026：HuggingFace・GitHub・Docker対応、速度テスト',
     metaDescription:
@@ -492,6 +496,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-zh.png',
     title: '2026年中国AI开发最佳VPN推荐',
     seoTitle: '2026年中国AI开发VPN：HuggingFace、GitHub、Docker Hub访问指南',
     metaDescription:
@@ -600,6 +605,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   pt: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-pt.png',
     title: 'Melhor VPN para desenvolvimento de IA na China em 2026',
     seoTitle: 'Melhor VPN para IA na China 2026: GitHub e HuggingFace',
     metaDescription:
@@ -732,6 +738,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-es.png',
     title: 'Mejor VPN para desarrollo de IA en China 2026',
     seoTitle: 'Mejor VPN para IA en China 2026: GitHub y HuggingFace',
     metaDescription:
@@ -864,6 +871,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-ar.png',
     title: 'أفضل ⁨VPN⁩ لتطوير الذكاء الاصطناعي في الصين ⁨2026⁩',
     seoTitle: 'أفضل ⁨VPN⁩ لتطوير الذكاء الاصطناعي في الصين ⁨2026⁩',
     metaDescription:
@@ -996,6 +1004,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Privacy & Security',
+    heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-ko.png',
     title: '중국 AI 개발을 위한 최고의 VPN 2026',
     seoTitle: '중국 AI 개발용 VPN 2026: GitHub, HuggingFace 접속',
     metaDescription:

@@ -468,10 +468,13 @@ export function LandingPageServer({ initialLang }: { initialLang?: import('@/hoo
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-6 animate-fade-in">
+          <Link
+            href={lang === 'en' ? '/download' : `/${lang}/download`}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-6 animate-fade-in hover:bg-primary/20 transition-colors"
+          >
             <Sparkles />
             <span>{t.badge}</span>
-          </div>
+          </Link>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-text-primary leading-tight animate-fade-in" style={{ animationDelay: '100ms' }}>
             {t.h1a}

@@ -13,6 +13,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-en.png',
       title: 'How LLMs Actually Work: Tokens, Attention, and Inference',
       intro: 'Large language models predict the next token using probability distributions — not by understanding. Learn tokenization, attention, RLHF, inference parameters, and why this matters for prompt engineering.',
       publishDate: '2026-03-30',
@@ -468,6 +469,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-de.png',
       title: 'Wie LLMs wirklich funktionieren: Tokens, Attention und Inferenz',
       intro: 'Große Sprachmodelle sagen das nächste Token per Wahrscheinlichkeitsverteilung voraus — kein Verstehen, kein Abrufen. Lerne Tokenisierung, Attention, RLHF und Inferenzparameter.',
       publishDate: '2026-03-30',
@@ -476,6 +478,20 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-04-12',
       readTime: '12 Min. Lesezeit',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Großes Sprachmodell (LLM)',
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Häufige LLM-Missverständnisse',
+        description: 'Fünf verbreitete Missverständnisse darüber, wie große Sprachmodelle funktionieren und was sie können, mit Klarstellungen zum tatsächlichen Verhalten.',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Das Modell liest und versteht mein Dokument', description: 'Das Modell verarbeitet Token-Sequenzen und sagt Fortsetzungen voraus — kein Leseverständnis. Explizit angeben, was extrahiert werden soll; nicht davon ausgehen, dass das Modell das Ziel ableitet.' },
+          { '@type': 'ListItem', position: 2, name: 'Das Modell erinnert sich an unser letztes Gespräch', description: 'Jeder API-Aufruf ist zustandslos; der Verlauf muss explizit im Kontextfenster eingeschlossen werden. Relevanten früheren Kontext im System-Prompt oder Gesprächsverlauf einbeziehen.' },
+          { '@type': 'ListItem', position: 3, name: 'Das Modell kennt das aktuelle Datum', description: 'Das Modell hat einen Trainings-Cutoff und weiß nicht, welcher Tag heute ist, wenn es nicht mitgeteilt wird. Aktuelles Datum im System-Prompt für datumssensitive Aufgaben einfügen.' },
+          { '@type': 'ListItem', position: 4, name: 'Höhere Temperatur = klügere Ausgabe', description: 'Temperatur steuert Sampling-Zufälligkeit, nicht Leistungsfähigkeit oder Genauigkeit. Niedrige Temperatur (0,0–0,3) für analytische Aufgaben; höhere für kreative Variationen.' },
+          { '@type': 'ListItem', position: 5, name: 'Das Modell kann Zeichen zuverlässig zählen', description: 'Token-Grenzen sind Subwort-Einheiten; präzises Zeichen- oder Wortzählen ist keine native Fähigkeit. Nicht auf das Modell für präzises Wortzählen verlassen; Nachbearbeitung oder Code verwenden.' },
+        ],
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -645,6 +661,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Grundlagen: KI-Halluzinationen erklärt — Warum LLMs Dinge erfinden](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — wie Token-Vorhersage und fehlende Faktenabrufung zu Konfidenzfehlern führen',
           ],
         },
+        howToStart: {
+          title: 'Wie man versteht, wie LLMs funktionieren',
+          numberedItems: [
+            '**Beginnen Sie mit Tokens: Verstehen Sie, dass LLMs keine Buchstaben oder Wörter sehen, sondern Tokens (Subwort-Einheiten), im Englischen meist 1–2 Tokens pro Wort.** Nutzen Sie einen Online-Tokenizer (von OpenAI, von Anthropic), um Tokens in einem Beispieltext zu zählen. Sehen Sie, wie „ChatGPT" zu „Chat" + „G" + „PT" wird, und wie sich das auf Preise und Kontextfenster auswirkt.',
+            '**Lernen Sie die drei Kernschichten der Transformer-Architektur: Embeddings, Attention und Output-Projektion.** Sie müssen sie nicht implementieren, aber konzeptionell verstehen: Embeddings wandeln Tokens in Vektoren um, Attention vergleicht alle Token-Paare, um Beziehungen zu verstehen, die Output-Projektion bildet wieder auf das Vokabular ab. Das erklärt, warum LLMs Kontext verstehen und warum sie halluzinieren.',
+            '**Verstehen Sie, warum LLMs halluzinieren: Sie sagen „wahrscheinlich nächste Tokens" basierend auf Mustern der Trainingsdaten voraus, nicht „korrekte Fakten".** Wenn die Trainingsdaten zu einem Thema widersprüchlich oder spärlich sind, liegt die beste Schätzung des Modells manchmal falsch. Das ist eine fundamentale Eigenschaft, kein behebbarer Fehler. Setzen Sie die Temperature (T) niedrig für faktische Aufgaben, hoch für kreative.',
+            '**Experimentieren Sie mit Temperature und Top-p, um zu sehen, wie sie den Output verändern.** Erzeugen Sie Text bei T=0,0 (deterministisch), T=0,7 (variiert, aber kohärent) und T=1,5 (zufällig). Höheres T bedeutet mehr Variation. Top-p (Nucleus Sampling) filtert unwahrscheinliche Tokens heraus und reduziert Unsinn.',
+            '**Verstehen Sie Kontextfenster: Das Modell „sieht" nur ein festes Fenster der jüngsten Tokens.** Das 128k-Token-Fenster von GPT-5.5 entspricht ~96.000 Wörtern. Ältere Informationen werden „vergessen", weil sie außerhalb des Fensters liegen. Das erklärt, warum LLMs sich manchmal in einem langen Gespräch selbst widersprechen.',
+          ],
+        },
         faq: {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
@@ -714,6 +740,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     es: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-es.png',
       title: 'Cómo funcionan realmente los LLMs: tokens, attention e inferencia',
       intro: 'Los grandes modelos de lenguaje predicen el siguiente token usando distribuciones de probabilidad — no comprensión. Aprende tokenización, attention, RLHF, parámetros de inferencia y por qué esto importa para el prompt engineering.',
       publishDate: '2026-03-30',
@@ -722,6 +749,20 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-04-12',
       readTime: '12 min de lectura',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Modelo de lenguaje grande (LLM)',
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Conceptos erróneos comunes sobre los LLMs',
+        description: 'Cinco conceptos erróneos extendidos sobre cómo funcionan los grandes modelos de lenguaje y qué pueden hacer, con aclaraciones sobre el comportamiento real.',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'El modelo lee y comprende mi documento', description: 'El modelo procesa secuencias de tokens y predice continuaciones — no hay comprensión lectora. Especifica explícitamente qué quieres extraer; no asumas que el modelo infiere tu objetivo.' },
+          { '@type': 'ListItem', position: 2, name: 'El modelo recuerda nuestra última conversación', description: 'Cada llamada a la API no tiene estado; el historial debe incluirse explícitamente en el context window. Incluye el contexto previo relevante en el system prompt o el historial de conversación.' },
+          { '@type': 'ListItem', position: 3, name: 'El modelo sabe la fecha actual', description: 'El modelo tiene un corte de entrenamiento y no sabe qué día es a menos que se le diga. Inyecta la fecha actual en el system prompt para cualquier tarea sensible a la fecha.' },
+          { '@type': 'ListItem', position: 4, name: 'Mayor temperatura = output más inteligente', description: 'La temperatura controla la aleatoriedad del muestreo, no la capacidad ni la precisión. Usa temperatura baja (0.0–0.3) para tareas analíticas; mayor para variación creativa.' },
+          { '@type': 'ListItem', position: 5, name: 'El modelo puede contar caracteres de forma fiable', description: 'Los límites de token son unidades de subpalabra; contar caracteres o palabras con precisión no es una habilidad nativa. No confíes en el modelo para contar palabras con precisión; usa postprocesamiento o código.' },
+        ],
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -971,6 +1012,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ar: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-ar.png',
       title: 'كيف تعمل نماذج اللغة الكبيرة فعلاً: الرموز والانتباه والاستدلال',
       intro: 'تتنبأ نماذج اللغة الكبيرة بالرمز التالي باستخدام توزيعات الاحتمالات — لا بالفهم أو الاسترجاع. تعلّم التحليل إلى رموز، والانتباه، وRLHF، ومعاملات الاستدلال.',
       publishDate: '2026-03-30',
@@ -979,6 +1021,20 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-04-12',
       readTime: '١٢ دقيقة للقراءة',
       educationalLevel: 'مبتدئ',
+      primaryTerm: 'نموذج اللغة الكبير (LLM)',
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'المفاهيم الخاطئة الشائعة حول نماذج LLM',
+        description: 'خمسة مفاهيم خاطئة شائعة حول كيفية عمل نماذج اللغة الكبيرة وما يمكنها فعله، مع توضيحات للسلوك الفعلي.',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'النموذج يقرأ ويفهم مستندي', description: 'النموذج يعالج تسلسلات رموز ويتنبأ بالاستمرارات — لا توجد قراءة فهم. حدّد صراحةً ما تريد استخلاصه؛ لا تفترض أن النموذج يستنتج هدفك.' },
+          { '@type': 'ListItem', position: 2, name: 'النموذج يتذكر محادثتنا الأخيرة', description: 'كل استدعاء API لا حالة له؛ يجب تضمين التاريخ صراحةً في نافذة السياق. أدرج السياق السابق ذا الصلة في التلقيح النظامي أو تاريخ المحادثة.' },
+          { '@type': 'ListItem', position: 3, name: 'النموذج يعرف التاريخ الحالي', description: 'للنموذج تاريخ قطع تدريب ولا يعرف اليوم ما لم يُخبَر. أدرج التاريخ الحالي في التلقيح النظامي لأي مهمة حساسة للوقت.' },
+          { '@type': 'ListItem', position: 4, name: 'درجة حرارة أعلى = مخرج أذكى', description: 'درجة الحرارة تتحكم في عشوائية أخذ العيّنات لا في القدرة أو الدقة. استخدم درجة حرارة منخفضة (0.0–0.3) للمهام التحليلية؛ أعلى للتنوع الإبداعي.' },
+          { '@type': 'ListItem', position: 5, name: 'يستطيع النموذج عد الأحرف بموثوقية', description: 'حدود الرموز هي وحدات فرعية للكلمات؛ عد الأحرف أو الكلمات بدقة ليست مهارة أصيلة. لا تعتمد على النموذج لعد الكلمات بدقة؛ استخدم المعالجة اللاحقة أو الكود.' },
+        ],
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1228,6 +1284,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     fr: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-fr.png',
       title: 'Comment fonctionnent vraiment les LLMs : tokens, attention et inférence',
       intro: 'Les grands modèles de langage prédisent le prochain token par distribution de probabilités — sans comprendre ni récupérer. Apprenez la tokenisation, l\'attention, le RLHF et les paramètres d\'inférence.',
       publishDate: '2026-03-30',
@@ -1236,6 +1293,20 @@ export const article: Partial<Record<Language, PEArticle>> = {
       educationalLevel: 'Beginner',
       dateModified: '2026-04-12',
       readTime: '12 min de lecture',
+      primaryTerm: 'Grand modèle de langage (LLM)',
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Idées reçues courantes sur les LLMs',
+        description: 'Cinq idées reçues répandues sur le fonctionnement des grands modèles de langage et sur leurs capacités, avec des clarifications sur leur comportement réel.',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Le modèle lit et comprend mon document', description: 'Le modèle traite des séquences de tokens et prédit des continuations — pas de compréhension de lecture. Indiquez explicitement ce que vous voulez extraire ; ne supposez pas que le modèle infère votre objectif.' },
+          { '@type': 'ListItem', position: 2, name: 'Le modèle se souvient de notre dernière conversation', description: 'Chaque appel API est sans état ; l\'historique doit être explicitement inclus dans la fenêtre de contexte. Incluez le contexte précédent pertinent dans le system prompt ou l\'historique de conversation.' },
+          { '@type': 'ListItem', position: 3, name: 'Le modèle connaît la date actuelle', description: 'Le modèle a une date de coupure d\'entraînement et ne sait pas quelle date il est sauf si on le lui dit. Injectez la date actuelle dans le system prompt pour les tâches sensibles à la date.' },
+          { '@type': 'ListItem', position: 4, name: 'Température plus élevée = sortie plus intelligente', description: 'La température contrôle l\'aléatoire de l\'échantillonnage, pas la capacité ou la précision. Utilisez une température basse (0,0–0,3) pour les tâches analytiques ; plus élevée pour les variations créatives.' },
+          { '@type': 'ListItem', position: 5, name: 'Le modèle peut compter les caractères de façon fiable', description: 'Les frontières des tokens sont des unités de sous-mots ; compter précisément les caractères ou les mots n\'est pas une compétence native. Ne vous fiez pas au modèle pour compter les mots précisément ; utilisez un post-traitement ou du code.' },
+        ],
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1405,6 +1476,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Fondamentaux : Hallucinations IA expliquées — Pourquoi les LLMs inventent](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — comment la prédiction de tokens et l\'absence de récupération de faits conduisent à des erreurs de confiance',
           ],
         },
+        howToStart: {
+          title: 'Comment comprendre le fonctionnement des LLMs',
+          numberedItems: [
+            '**Commencez par les tokens : comprenez que les LLMs ne voient pas de lettres ni de mots, mais des tokens (unités de sous-mots), généralement 1 à 2 tokens par mot en anglais.** Utilisez un tokenizer en ligne (celui d\'OpenAI, celui d\'Anthropic) pour compter les tokens dans un texte d\'exemple. Observez comment « ChatGPT » devient « Chat » + « G » + « PT », et comment cela affecte la tarification et les fenêtres de contexte.',
+            '**Apprenez les trois couches principales de l\'architecture transformer : embeddings, attention et projection de sortie.** Vous n\'avez pas besoin de l\'implémenter, mais comprenez conceptuellement : les embeddings convertissent les tokens en vecteurs, l\'attention compare toutes les paires de tokens pour comprendre les relations, la projection de sortie remappe vers le vocabulaire. Cela explique pourquoi les LLMs comprennent le contexte et pourquoi ils hallucinent.',
+            '**Comprenez pourquoi les LLMs hallucinent : ils prédisent les « tokens suivants probables » à partir des motifs des données d\'entraînement, pas des « faits corrects ».** Lorsque les données d\'entraînement sont contradictoires ou rares sur un sujet, la meilleure estimation du modèle est parfois erronée. C\'est une propriété fondamentale, pas un bug corrigible. Réglez la température (T) basse pour les tâches factuelles, haute pour les tâches créatives.',
+            '**Expérimentez avec la température et le top-p pour voir comment ils modifient la sortie.** Générez du texte à T=0.0 (déterministe), T=0.7 (varié mais cohérent) et T=1.5 (aléatoire). Un T plus élevé signifie plus de variation. Le top-p (nucleus sampling) filtre les tokens peu probables, réduisant les incohérences.',
+            '**Comprenez les fenêtres de contexte : le modèle ne « voit » qu\'une fenêtre fixe des tokens les plus récents.** La fenêtre de 128k tokens de GPT-5.5 équivaut à environ 96 000 mots. Les informations anciennes sont « oubliées » car elles tombent hors de la fenêtre. Cela explique pourquoi les LLMs contredisent parfois des informations antérieures dans une longue conversation.',
+          ],
+        },
         faq: {
           id: 'faq',
           title: 'Questions fréquemment posées',
@@ -1474,6 +1555,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-ja.png',
       title: 'LLMは実際にどのように機能するか：トークン、注意、推論',
       intro: '大規模言語モデルは確率分布経由で次のトークンを予測します — 理解や取得ではなく。トークン化、注意、RLHF、推論パラメータを学んでください。',
       publishDate: '2026-03-30',
@@ -1482,6 +1564,20 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-04-12',
       readTime: '12分で読める',
       educationalLevel: 'Beginner',
+      primaryTerm: '大規模言語モデル（LLM）',
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '一般的なLLM誤解',
+        description: '大規模言語モデルの仕組みとその能力についてよくある5つの誤解と、実際の挙動についての説明。',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'モデルが私のドキュメントを読んで理解します', description: 'モデルはトークンシーケンスを処理し、継続を予測します — 読解は行われません。何を抽出するかを明示的に述べてください；モデルが目的を推測することを想定しないでください。' },
+          { '@type': 'ListItem', position: 2, name: 'モデルは私たちの最後の会話を覚えています', description: 'すべてのAPI呼び出しはステートレスです；履歴はコンテキストウィンドウに明示的に含める必要があります。システムプロンプトまたは会話履歴に関連する以前のコンテキストを含めてください。' },
+          { '@type': 'ListItem', position: 3, name: 'モデルは今日の日付を知っています', description: 'モデルにはトレーニングカットオフがあり、伝えられない限り今日の日付を知りません。日付に敏感なタスクのシステムプロンプトに現在の日付を挿入してください。' },
+          { '@type': 'ListItem', position: 4, name: 'より高い温度＝より賢い出力', description: '温度はサンプリングのランダム性を制御するものであり、能力や精度ではありません。分析タスクには低い温度（0.0～0.3）を、創造的なバリエーションにはより高い温度を使用してください。' },
+          { '@type': 'ListItem', position: 5, name: 'モデルは確実に文字数を数えられる', description: 'トークン境界はサブワード単位です；正確な文字または単語数の計算はネイティブの能力ではありません。正確な単語数のカウントをモデルに依存せず、後処理またはコードを使用してください。' },
+        ],
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1663,6 +1759,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        howToStart: {
+          title: 'LLMの仕組みを理解する方法',
+          numberedItems: [
+            '**トークンから始める：LLMは文字や単語ではなく、トークン（サブワード単位）を見ていることを理解してください。英語では通常1単語あたり1〜2トークンです。** オンラインのトークナイザー（OpenAIやAnthropicのもの）を使ってサンプルテキストのトークン数を数えてください。「ChatGPT」が「Chat」＋「G」＋「PT」になる様子と、それが料金やコンテキストウィンドウにどう影響するかを確認してください。',
+            '**Transformerアーキテクチャの3つの中核層（埋め込み、注意、出力射影）を学ぶ。** 実装する必要はありませんが、概念として理解してください：埋め込みはトークンをベクトルに変換し、注意はすべてのトークンペアを比較して関係性を理解し、出力射影は語彙に再マッピングします。これにより、LLMがなぜ文脈を理解し、なぜ幻覚を起こすのかが説明できます。',
+            '**LLMがなぜ幻覚を起こすのかを理解する：訓練データのパターンに基づいて「起こりそうな次のトークン」を予測しているのであり、「正しい事実」を予測しているのではありません。** あるトピックについて訓練データが矛盾していたり乏しかったりすると、モデルの最良の推測が時に誤ることがあります。これは修正可能なバグではなく、根本的な性質です。事実に基づくタスクでは温度（T）を低く、創造的なタスクでは高く設定してください。',
+            '**温度とtop-pを実験して、出力がどう変化するかを確認する。** T=0.0（決定的）、T=0.7（多様だが一貫性あり）、T=1.5（ランダム）でテキストを生成してください。Tが高いほど変動が大きくなります。top-p（核サンプリング）は起こりにくいトークンを除外し、無意味な出力を減らします。',
+            '**コンテキストウィンドウを理解する：モデルは最近のトークンの固定されたウィンドウしか「見て」いません。** GPT-5.5の128kトークンウィンドウは約96,000語に相当します。古い情報はウィンドウの外に出るため「忘れられ」ます。これにより、LLMが長い会話の中で以前の情報と矛盾することがある理由が説明できます。',
+          ],
+        },
+
         faq: {
           id: 'faq',
           title: 'よくある質問',
@@ -1733,6 +1840,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-zh.png',
       title: '大型语言模型实际如何工作：令牌、注意力与推理',
       intro: '大型语言模型通过概率分布预测下一个令牌——而非理解或检索。学习令牌化、注意力机制、RLHF和推理参数。',
       publishDate: '2026-03-30',
@@ -1741,6 +1849,20 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-04-12',
       readTime: '12分钟阅读',
       educationalLevel: 'Beginner',
+      primaryTerm: '大型语言模型（LLM）',
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '常见的LLM误解',
+        description: '关于大型语言模型工作原理及其能力的五个常见误解，并附有对实际行为的澄清说明。',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '模型读取并理解我的文档', description: '模型处理令牌序列并预测延续——没有阅读理解。明确说明需要提取什么；不要假设模型会推断目标。' },
+          { '@type': 'ListItem', position: 2, name: '模型记得我们上次的对话', description: '每个API调用都是无状态的；历史记录必须明确包含在上下文窗口中。在系统提示或对话历史中包含相关的先前上下文。' },
+          { '@type': 'ListItem', position: 3, name: '模型知道今天的日期', description: '模型有训练截止日期，除非被告知否则不知道今天的日期。在系统提示中插入当前日期用于日期敏感任务。' },
+          { '@type': 'ListItem', position: 4, name: '更高的温度=更聪明的输出', description: '温度控制采样随机性，而非能力或准确性。分析任务使用低温度（0.0–0.3）；创意变体使用较高温度。' },
+          { '@type': 'ListItem', position: 5, name: '模型可以可靠地计算字符数', description: '令牌边界是子词单元；精确的字符或单词计数不是原生能力。不要依赖模型进行精确的字数统计；使用后处理或代码。' },
+        ],
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1922,6 +2044,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        howToStart: {
+          title: '如何理解LLM的工作原理',
+          numberedItems: [
+            '**从令牌开始：理解LLM看到的不是字母或单词，而是令牌（子词单元），英语中通常每个单词对应1-2个令牌。** 使用在线令牌化工具（如OpenAI或Anthropic提供的工具）计算示例文本中的令牌数。观察"ChatGPT"如何变为"Chat" + "G" + "PT"，以及这如何影响定价和上下文窗口。',
+            '**学习Transformer架构的三个核心层：嵌入、注意力和输出投影。** 你不需要自己实现它，但要从概念上理解：嵌入将令牌转换为向量，注意力比较所有令牌对以理解关系，输出投影再映射回词汇表。这解释了LLM为什么能理解上下文，也解释了它们为什么会产生幻觉。',
+            '**理解LLM为什么会产生幻觉：它们基于训练数据中的模式预测"可能的下一个令牌"，而不是"正确的事实"。** 当训练数据在某个主题上存在冲突或稀缺时，模型的最佳猜测有时会出错。这是一种根本属性，而非可修复的缺陷。事实性任务将温度（T）设低，创意性任务设高。',
+            '**尝试调整温度和top-p，观察输出的变化。** 在T=0.0（确定性）、T=0.7（多样但连贯）和T=1.5（随机）下生成文本。观察到T越高变化越大。理解top-p（核采样）会过滤掉不太可能的令牌，减少无意义输出。',
+            '**理解上下文窗口：模型只能"看到"最近令牌的固定窗口。** GPT-5.5的128k令牌窗口约等于96,000个单词。较旧的信息因落在窗口之外而被"遗忘"。这解释了为什么LLM有时会在长对话中与之前的信息相矛盾。',
+          ],
+        },
+
         faq: {
           id: 'faq',
           title: '常见问题',
@@ -1992,6 +2125,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-pt.png',
       title: 'Como os LLMs Realmente Funcionam: Tokens, Atenção e Inferência',
       intro: 'Os grandes modelos de linguagem preveem o próximo token usando distribuições de probabilidade — não por compreensão. Aprenda tokenização, atenção, RLHF, parâmetros de inferência e por que isso importa para o prompt engineering.',
       publishDate: '2026-03-30',
@@ -1999,6 +2133,20 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'LLMs preveem tokens por distribuições de probabilidade — não por significado. Aprenda tokenização, transformer attention, RLHF e parâmetros de inferência com benchmarks específicos de modelos.',
       readTime: '12 min de leitura',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Modelo de linguagem grande (LLM)',
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Equívocos Comuns sobre LLMs',
+        description: 'Cinco equívocos amplamente difundidos sobre como os grandes modelos de linguagem funcionam e o que podem fazer, com esclarecimentos sobre o comportamento real.',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'O modelo lê e entende meu documento', description: 'O modelo processa sequências de tokens e prevê continuações — nenhuma compreensão de leitura ocorre. Especifique explicitamente o que você quer extrair; não assuma que o modelo infere seu objetivo.' },
+          { '@type': 'ListItem', position: 2, name: 'O modelo lembra da nossa última conversa', description: 'Cada chamada à API é stateless; o histórico deve ser incluído explicitamente no context window. Inclua o contexto anterior relevante no system prompt ou no histórico de conversa.' },
+          { '@type': 'ListItem', position: 3, name: 'O modelo sabe a data atual', description: 'O modelo tem um corte de treinamento e não sabe que dia é a menos que seja informado. Injete a data atual no system prompt para qualquer tarefa sensível à data.' },
+          { '@type': 'ListItem', position: 4, name: 'Temperatura mais alta = saída mais inteligente', description: 'A temperatura controla a aleatoriedade da amostragem, não a capacidade ou a precisão. Use temperatura baixa (0,0–0,3) para tarefas analíticas; mais alta para variação criativa.' },
+          { '@type': 'ListItem', position: 5, name: 'O modelo pode contar caracteres de forma confiável', description: 'Os limites de token são unidades de subpalavra; contagem precisa de caracteres ou palavras não é uma habilidade nativa. Não confie no modelo para contar palavras com precisão; use pós-processamento ou código.' },
+        ],
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -2249,6 +2397,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ko: {
       theme: 'Fundamentals',
+      heroImage: '/images/how-llms-actually-work-overview-hero-ko.png',
       title: 'LLM이 실제로 작동하는 방식: 토큰, 어텐션, 추론',
       intro: '대규모 언어 모델은 확률 분포를 이용해 다음 토큰을 예측합니다 — 이해하거나 검색하는 것이 아닙니다. 토크나이제이션, 어텐션, RLHF, 추론 매개변수, 그리고 이것이 프롬프트 엔지니어링에 왜 중요한지 학습하십시오.',
       publishDate: '2026-03-30',
@@ -2257,6 +2406,20 @@ export const article: Partial<Record<Language, PEArticle>> = {
       dateModified: '2026-04-12',
       readTime: '12분 읽기',
       educationalLevel: 'Beginner',
+      primaryTerm: '대규모 언어 모델(LLM)',
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'LLM에 대한 일반적인 오해',
+        description: '대규모 언어 모델의 작동 방식과 할 수 있는 일에 대한 다섯 가지 널리 퍼진 오해와 실제 동작에 대한 설명.',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '모델이 내 문서를 읽고 이해한다', description: '모델은 토큰 시퀀스를 처리하고 연속을 예측합니다 — 독해가 이루어지지 않습니다. 추출하고자 하는 것을 명시적으로 지정하십시오; 모델이 목표를 추론한다고 가정하지 마십시오.' },
+          { '@type': 'ListItem', position: 2, name: '모델이 지난 대화를 기억한다', description: '각 API 호출은 무상태입니다; 기록은 컨텍스트 윈도우에 명시적으로 포함해야 합니다. 관련 이전 컨텍스트를 시스템 프롬프트 또는 대화 기록에 포함시키십시오.' },
+          { '@type': 'ListItem', position: 3, name: '모델이 현재 날짜를 안다', description: '모델에는 학습 종료일이 있으며 알려주지 않으면 오늘 날짜를 모릅니다. 날짜에 민감한 과제의 경우 시스템 프롬프트에 현재 날짜를 주입하십시오.' },
+          { '@type': 'ListItem', position: 4, name: '온도가 높을수록 더 똑똑한 출력이 나온다', description: '온도는 능력이나 정확도가 아닌 샘플링 무작위성을 제어합니다. 분석 과제에는 낮은 온도(0.0–0.3)를 사용하십시오; 창의적 변형에는 높은 온도를 사용하십시오.' },
+          { '@type': 'ListItem', position: 5, name: '모델이 문자 수를 안정적으로 셀 수 있다', description: '토큰 경계는 서브워드 단위입니다; 정확한 문자 또는 단어 계산은 기본 기능이 아닙니다. 정확한 단어 세기를 모델에 의존하지 마십시오; 후처리 또는 코드를 사용하십시오.' },
+        ],
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',

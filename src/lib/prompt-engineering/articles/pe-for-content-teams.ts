@@ -9,6 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
+    heroImage: '/images/pe-for-content-teams-overview-hero-en.png',
     title: 'Prompt Engineering for Content Teams: Templates, Review Flows, and Quality Checks',
     dateModified: '2026-07-13',
     seoTitle: 'Prompt Engineering for Content Teams: Templates & Reviews',
@@ -208,6 +209,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatisierung',
+    heroImage: '/images/pe-for-content-teams-overview-hero-de.png',
     title: 'Prompt Engineering für Content-Teams: Templates, Review-Prozesse und Qualitätschecks',
     seoTitle: 'Prompt Engineering für Content-Teams: Templates & Reviews',
     metaDescription: 'PE für Content-Teams: Brand-Voice-Encoding, 5 wiederverwendbare Templates (Blog, Social, Summary, SEO-Meta, E-Mail), Review-Workflow, Quality-Scoring.',
@@ -318,12 +320,25 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ],
       },
+      faq: {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
+        faqs: [
+          { q: 'Wie reduzieren Content-Teams KI-Review-Zyklen mit Prompt Engineering?', a: 'Content-Teams reduzieren Review-Zyklen, indem sie Qualitätskriterien — Ton, Format, Wortzahl, Brand-Vokabular und Anti-Listen — direkt vor der Generierung in den Prompt kodieren. Wenn die Ausgabeanforderungen explizit sind, kommt der KI-generierte Content näher am Ziel an und benötigt weniger Überarbeitungsrunden.' },
+          { q: 'Was ist das CRAFT-Framework und wann sollten Content-Teams es einsetzen?', a: 'CRAFT steht für Context, Role, Action, Format und Tone. Es ist ein strukturiertes Prompt-Framework für kreative und Content-Arbeit, weil es die fünf für Content-Ausgaben relevantesten Dimensionen organisiert. Verwenden Sie es als Basisstruktur für jeden Content-Prompt, der Brand Voice, Formatanforderungen oder Multi-Stakeholder-Review betrifft.' },
+          { q: 'Wie viele Brand-Beispiele brauche ich in einem Brand-Voice-Prompt?', a: 'Fügen Sie 2 bis 3 genehmigte Content-Samples in den Prompt ein. Weniger als 2 gibt dem Modell zu wenig Mustersignal. Mehr als 3 kann das für die eigentliche Aufgabe verfügbare Kontextfenster verwässern. Die Beispiele sollten den Zielkanal und Content-Typ repräsentieren — verwenden Sie kein LinkedIn-Beispiel für einen E-Mail-Brief.' },
+          { q: 'Wann sollte ein Content-Team die Faktgenauigkeits-Review-Stufe überspringen?', a: 'Überspringen Sie die Faktgenauigkeitsstufe nur für risikoarmen Content ohne Faktenbehauptungen — Social-Media-Captions, die ein Event ankündigen, kurze CTAs oder reine Formatausgaben wie Betreffzeilen-Optionen. Jeder Content mit Aussagen zu Produkten, Preisen, Leistung oder Dritten benötigt vor der Veröffentlichung eine Faktgenauigkeitsprüfung.' },
+          { q: 'Wie richte ich ein Content-Template ein, das konsistent über mehrere Modelle funktioniert?', a: 'Testen Sie dasselbe Template an 2–3 Modellen verschiedener Anbieter mit jeweils 10+ Testläufen. Verwenden Sie die 5-Punkte-Qualitäts-Scoring-Checkliste zur Bewertung der Konsistenz. Wenn alle Modelle 1,5+ erreichen, ist das Template portabel. Fällt ein Modell unter 1,5, überarbeiten Sie den Prompt statt eine modellspezifische Version zu übernehmen.' },
+          { q: 'Was ist die Deployment-Schwelle für einen Content-Prompt?', a: 'Deployen Sie den Prompt, wenn der Durchschnittsscore über alle 5 Kriterien (Aufgabe erfüllt, Formatkonformität, Brand-Voice-Übereinstimmung, Faktgenauigkeit, CTA-Ausrichtung) über 10 Testläufe 1,5 oder höher (auf einer Skala von 0–2) beträgt. Ein Score unter 1,5 deutet auf zu viele teilweise oder fehlerhafte Ausgaben für den Produktionseinsatz ohne zusätzlichen Review-Aufwand hin.' },
+        ],
+      },
     },
   },
 
   es: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatización',
+    heroImage: '/images/pe-for-content-teams-overview-hero-es.png',
     title: 'Prompt engineering para equipos de contenido: plantillas, flujos de revisión y controles de calidad',
     seoTitle: 'Prompt engineering para equipos de contenido: plantillas',
     metaDescription: 'Prompts para equipos de contenido: voz de marca, 5 plantillas reutilizables (blog, social, SEO, email), flujo de revisión y puntuación de calidad.',
@@ -476,6 +491,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Workflows & Automação',
+    heroImage: '/images/pe-for-content-teams-overview-hero-pt.png',
     title: 'Prompt engineering para equipes de conteúdo: modelos, fluxos de revisão e controles de qualidade',
     seoTitle: 'Prompt engineering para equipes de conteúdo: modelos e revisões',
     metaDescription: 'Prompts para equipes de conteúdo: voz da marca, 5 modelos reutilizáveis (blog, social, SEO, email), fluxo de revisão e pontuação de qualidade.',
@@ -629,6 +645,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automatisation',
+    heroImage: '/images/pe-for-content-teams-overview-hero-fr.png',
     title: "Prompt Engineering pour les équipes contenu : templates, flux de validation et contrôles qualité",
     seoTitle: "Prompt Engineering pour équipes contenu : templates et révisions",
     metaDescription: "Prompts pour équipes contenu : voix de marque, 5 templates (blog, social, résumé, SEO meta, email), workflow de révision, scoring qualité.",
@@ -774,6 +791,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'evergreen',
     theme: 'ワークフローと自動化',
+    heroImage: '/images/pe-for-content-teams-overview-hero-ja.png',
     title: 'コンテンツチームのためのプロンプトエンジニアリング：テンプレート、レビューフロー、品質チェック',
     seoTitle: 'コンテンツチームのプロンプトエンジニアリング：テンプレートとレビュー',
     metaDescription: 'コンテンツチームのプロンプトエンジニアリング：ブランドボイスのエンコード、5つの再利用可能なコンテンツテンプレート（ブログ、SNS、要約、SEOメタ、メール）、編集レビューワークフロー、品質スコアリングチェックリスト。',
@@ -919,6 +937,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'evergreen',
     theme: '工作流与自动化',
+    heroImage: '/images/pe-for-content-teams-overview-hero-zh.png',
     title: '内容团队的提示词工程：模板、审核流程和质量检查',
     seoTitle: '内容团队提示词工程：模板与审核',
     metaDescription: '内容团队的提示词工程：品牌声音编码、5个可复用内容模板（博客、社交、摘要、SEO元标签、邮件）、编辑审核工作流和质量评分清单，提升内容输出。',
@@ -1064,6 +1083,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'evergreen',
     theme: 'Workflows & Automation',
+    heroImage: '/images/pe-for-content-teams-overview-hero-ar.png',
     title: 'هندسة البرومبت لفرق المحتوى: القوالب وسير مراجعة المحتوى ومعايير الجودة',
     seoTitle: 'هندسة البرومبت لفرق المحتوى: القوالب والمراجعة',
     metaDescription: 'هندسة البرومبت لفرق المحتوى: ترميز صوت العلامة التجارية في ⁨4⁩ عناصر، ⁨5⁩ قوالب قابلة للإعادة (مدونة، ⁨SEO⁩، بريد)، سير مراجعة ⁨3⁩ مراحل وتقييم الجودة.',
@@ -1231,6 +1251,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'evergreen',
     theme: '워크플로우 및 자동화',
+    heroImage: '/images/pe-for-content-teams-overview-hero-ko.png',
     title: '콘텐츠 팀을 위한 프롬프트 엔지니어링: 템플릿, 검토 흐름 및 품질 점검',
     seoTitle: '콘텐츠 팀을 위한 프롬프트 엔지니어링: 템플릿 및 검토',
     metaDescription: '콘텐츠 팀 프롬프트: 브랜드 보이스 인코딩, 5가지 재사용 가능한 템플릿(블로그, 소셜, 요약, SEO 메타, 이메일), 편집 검토 워크플로우, 품질 점수화.',
