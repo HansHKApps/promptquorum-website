@@ -40,6 +40,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
 import { useLang } from '@/hooks/useLang'
+import { cn } from '@/lib/utils'
 
 const DISMISS_KEY = 'pq_beta_fab_dismissed_until'
 const DISMISS_DURATION_MS = 14 * 24 * 60 * 60 * 1000 // 14 days
@@ -49,7 +50,21 @@ const SCROLL_DEPTH_TRIGGER = 0.2 // 20% down the page
 // Don't show on pages that already carry this exact CTA in-context.
 const HIDDEN_PATH_PATTERNS = [/\/download(\/|$)/, /\/waitlist(\/|$)/]
 
+// High-intent clusters: visitors here are already evaluating local/AI-model
+// tooling, so the widget goes bigger, brighter, and pulses to earn the extra
+// attention. Everywhere else (balcony-solar, smart-home, blog, homepage, etc.)
+// it stays at the calmer default so it doesn't feel like it's chasing people
+// who landed for an unrelated topic.
+const LOCALE_PREFIX = '(?:de|fr|ja|zh|es|pt|ar|ko)'
+const HIGH_INTENT_RE = new RegExp(`^/(?:${LOCALE_PREFIX}/)?(?:local-llms|power-local-llm)(?:/|$)`)
+
+function getIntensity(pathname: string | null): 'high' | 'default' {
+  if (!pathname) return 'default'
+  return HIGH_INTENT_RE.test(pathname) ? 'high' : 'default'
+}
+
 type Copy = {
+  pillLabel: string
   title: string
   body: string
   ctaWithOs: string // use {os} as the placeholder
@@ -60,6 +75,7 @@ type Copy = {
 
 const COPY: Record<string, Copy> = {
   en: {
+    pillLabel: 'Beta',
     title: 'Try the beta',
     body: 'Send one prompt to 25+ AI models and compare answers — free, open beta. Share it with anyone.',
     ctaWithOs: 'Download for {os}',
@@ -68,6 +84,7 @@ const COPY: Record<string, Copy> = {
     toggleAria: 'Try the PromptQuorum beta',
   },
   de: {
+    pillLabel: 'Beta',
     title: 'Beta testen',
     body: 'Senden Sie einen Prompt an über 25 KI-Modelle und vergleichen Sie die Antworten — kostenlose, offene Beta. Teilen Sie sie gerne weiter.',
     ctaWithOs: 'Für {os} herunterladen',
@@ -76,6 +93,7 @@ const COPY: Record<string, Copy> = {
     toggleAria: 'PromptQuorum-Beta testen',
   },
   fr: {
+    pillLabel: 'Bêta',
     title: 'Essayer la bêta',
     body: "Envoyez un même prompt à plus de 25 modèles d'IA et comparez les réponses — bêta gratuite et ouverte. Partagez-la librement.",
     ctaWithOs: 'Télécharger pour {os}',
@@ -84,6 +102,7 @@ const COPY: Record<string, Copy> = {
     toggleAria: 'Essayer la bêta PromptQuorum',
   },
   es: {
+    pillLabel: 'Beta',
     title: 'Probar la beta',
     body: 'Envía un mismo prompt a más de 25 modelos de IA y compara las respuestas — beta gratuita y abierta. Compártela con quien quieras.',
     ctaWithOs: 'Descargar para {os}',
@@ -92,6 +111,7 @@ const COPY: Record<string, Copy> = {
     toggleAria: 'Probar la beta de PromptQuorum',
   },
   pt: {
+    pillLabel: 'Beta',
     title: 'Experimentar a beta',
     body: 'Envie um único prompt para mais de 25 modelos de IA e compare as respostas — beta gratuita e aberta. Compartilhe à vontade.',
     ctaWithOs: 'Baixar para {os}',
@@ -100,6 +120,7 @@ const COPY: Record<string, Copy> = {
     toggleAria: 'Experimentar a beta do PromptQuorum',
   },
   ja: {
+    pillLabel: 'ベータ',
     title: 'ベータ版を試す',
     body: '1つのプロンプトを25以上のAIモデルに送信し、回答を比較できます — 無料のオープンベータ。共有も自由です。',
     ctaWithOs: '{os}版をダウンロード',
@@ -108,6 +129,7 @@ const COPY: Record<string, Copy> = {
     toggleAria: 'PromptQuorumベータ版を試す',
   },
   zh: {
+    pillLabel: '测试版',
     title: '试用测试版',
     body: '将同一条提示词发送给 25+ 个 AI 模型并比较回答——免费公开测试版，欢迎分享。',
     ctaWithOs: '下载 {os} 版',
@@ -116,6 +138,7 @@ const COPY: Record<string, Copy> = {
     toggleAria: '试用 PromptQuorum 测试版',
   },
   ko: {
+    pillLabel: '베타',
     title: '베타 체험하기',
     body: '하나의 프롬프트를 25개 이상의 AI 모델에 보내고 답변을 비교하세요 — 무료 오픈 베타. 자유롭게 공유하세요.',
     ctaWithOs: '{os}용 다운로드',
@@ -124,6 +147,7 @@ const COPY: Record<string, Copy> = {
     toggleAria: 'PromptQuorum 베타 체험하기',
   },
   ar: {
+    pillLabel: 'تجريبي',
     title: 'جرّب النسخة التجريبية',
     body: 'أرسل أمرًا واحدًا إلى أكثر من 25 نموذج ذكاء اصطناعي وقارن الإجابات — نسخة تجريبية مجانية ومفتوحة. شاركها مع من تشاء.',
     ctaWithOs: 'تنزيل لـ {os}',
@@ -152,6 +176,8 @@ export function BetaFloatingCta() {
   const lang = useLang()
   const c = COPY[lang] ?? COPY.en
   const dir = lang === 'ar' ? 'rtl' : undefined
+  const intensity = getIntensity(pathname)
+  const isHigh = intensity === 'high'
 
   const [mountedVisible, setMountedVisible] = useState(false)
   const [dismissed, setDismissed] = useState(false)
@@ -245,22 +271,43 @@ export function BetaFloatingCta() {
       className="fixed z-[80] bottom-20 right-4 md:bottom-6 md:right-6"
     >
       {!expanded && (
-        <button
-          onClick={() => setExpanded(true)}
-          aria-label={c.toggleAria}
-          aria-expanded={expanded}
-          className="flex items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg p-3 opacity-65 hover:opacity-100 transition-opacity"
-        >
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <path
-              d="M10 3v10m0 0l-4-4m4 4l4-4M4 16h12"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+        <div className="relative">
+          {isHigh && (
+            <span
+              aria-hidden="true"
+              className="absolute inset-0 rounded-full bg-primary animate-ping opacity-60"
             />
-          </svg>
-        </button>
+          )}
+          <button
+            onClick={() => setExpanded(true)}
+            aria-label={c.toggleAria}
+            aria-expanded={expanded}
+            className={cn(
+              'relative flex items-center justify-center gap-1.5 rounded-full bg-primary text-primary-foreground shadow-lg transition-opacity',
+              isHigh
+                ? 'px-4 py-2.5 text-sm font-semibold opacity-90 hover:opacity-100'
+                : 'px-3 py-2 text-xs font-medium opacity-65 hover:opacity-100'
+            )}
+          >
+            <svg
+              width={isHigh ? 18 : 16}
+              height={isHigh ? 18 : 16}
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+              className="flex-none"
+            >
+              <path
+                d="M10 2v7.31M14 9.3V1.99M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0M5.52 16h12.96"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <span>{c.pillLabel}</span>
+          </button>
+        </div>
       )}
 
       {expanded && (
