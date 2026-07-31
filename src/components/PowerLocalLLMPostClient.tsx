@@ -5,7 +5,8 @@
 // Differences:
 //   - `lang` is a REQUIRED prop (resolved server-side from the URL path); no useLang() call.
 //   - Sibling links use path-based URLs (/de/power-local-llm/...) not query params.
-//   - Loads from powerLLMContent + POWER_LLM_SLUG_TO_KEY (not the local-llms maps).
+//   - articleData is resolved server-side (page.tsx) and passed as a required prop —
+//     this component never imports the powerLLMContent barrel.
 //   - LanguageSwitcher omitted in this iteration; cluster ships noindex until launch.
 
 import { useState } from 'react'
@@ -13,9 +14,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { Language } from '@/lib/blog/blogContent'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
-import { powerLLMContent } from '@/lib/power-local-llm/content'
-import type { LLMSection } from '@/lib/local-llms/types'
-import { POWER_LLM_SLUG_TO_KEY } from '@/lib/power-local-llm/slugs'
+import type { LLMSection, LLMArticle } from '@/lib/local-llms/types'
 import { powerLLMHubPath, powerLLMArticlePath } from '@/lib/power-local-llm/metadata-helpers'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
@@ -30,6 +29,7 @@ import { CopyButton } from '@/components/CopyButton'
 interface Props {
   slug: string
   lang: Language
+  articleData: Partial<Record<Language, LLMArticle>>
 }
 
 // Section header translations
@@ -875,10 +875,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
   )
 }
 
-function PowerLocalLLMPostContent({ slug, lang }: Props) {
-  const key = POWER_LLM_SLUG_TO_KEY[slug]
-  const articleData = key ? powerLLMContent[key] : null
-
+function PowerLocalLLMPostContent({ slug, lang, articleData }: Props) {
   if (!articleData) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
   }
