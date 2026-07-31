@@ -360,7 +360,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       {itemListSchemas.map((schema, i) => (
         <script key={`itemlist-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <PowerLocalLLMPostClient slug={slug} lang={lang} />
+      <PowerLocalLLMPostClient slug={slug} lang={lang} articleData={articleData!} />
     </>
   )
 }
