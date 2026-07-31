@@ -358,7 +358,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       {itemListSchemas.map((schema, i) => (
         <script key={`itemlist-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <SmartHomePostClient slug={slug} lang={lang} />
+      <SmartHomePostClient slug={slug} lang={lang} articleData={articleData!} />
     </>
   )
 }
