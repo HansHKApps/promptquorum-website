@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
-    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-en.png',
+    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-en.webp',
     title: 'DeepSeek vs Qwen: Local LLM Comparison 2026',
     seoTitle: 'DeepSeek vs Qwen Local LLM 2026: Benchmarks & VRAM',
     intro:
@@ -363,7 +363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
-    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-es.png',
+    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-es.webp',
     title: 'DeepSeek vs Qwen: Comparativa de LLM local 2026',
     seoTitle: 'DeepSeek vs Qwen LLM local 2026: Benchmarks y VRAM',
     intro:
@@ -729,7 +729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
-    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-pt.png',
+    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-pt.webp',
     title: 'DeepSeek vs Qwen: Comparativo de LLM local 2026',
     seoTitle: 'DeepSeek vs Qwen LLM local 2026: Benchmarks e VRAM',
     intro:
@@ -1095,7 +1095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
-    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-ar.png',
+    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-ar.webp',
     title: '⁨DeepSeek⁩ مقابل ⁨Qwen⁩: مقارنة النماذج اللغوية المحلية ⁨2026⁩',
     seoTitle: '⁨DeepSeek⁩ مقابل ⁨Qwen⁩ محلياً ⁨2026⁩: ⁨VRAM⁩ والمعايير',
     intro:
@@ -1401,7 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
-    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-de.png',
+    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-de.webp',
     title: 'DeepSeek vs Qwen: Lokaler LLM-Vergleich 2026',
     seoTitle: 'DeepSeek vs Qwen lokal 2026: Benchmarks & VRAM-Vergleich',
     intro:
@@ -1594,7 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
-    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-fr.png',
+    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-fr.webp',
     title: 'DeepSeek vs Qwen : Comparaison LLM local 2026',
     seoTitle: 'DeepSeek vs Qwen local 2026 : Benchmarks & comparatif VRAM',
     intro:
@@ -1656,7 +1656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
-    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-ja.png',
+    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-ja.webp',
     title: 'DeepSeek vs Qwen：ローカルLLM比較 2026',
     seoTitle: 'DeepSeek vs Qwen ローカルLLM 2026：ベンチマーク & VRAM比較ガイド',
     intro:
@@ -1719,7 +1719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
-    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-zh.png',
+    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-zh.webp',
     title: 'DeepSeek vs Qwen：本地LLM对比 2026',
     seoTitle: 'DeepSeek vs Qwen 本地LLM 2026：VRAM、MMLU基准测试与模型推荐对比',
     intro:
@@ -1782,7 +1782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Overview & Reference',
-    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-ko.png',
+    heroImage: '/images/deepseek-vs-qwen-local-comparison-2026-overview-hero-ko.webp',
     slug: 'deepseek-vs-qwen-local-comparison-2026',
     title: 'DeepSeek vs Qwen: 로컬 LLM 비교 2026',
     seoTitle: 'DeepSeek vs Qwen 로컬 LLM 2026: 벤치마크 및 VRAM 비교',

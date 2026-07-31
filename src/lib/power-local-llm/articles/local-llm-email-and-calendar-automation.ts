@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-en.png',
+    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-en.webp',
     title: 'Local AI for Email and Calendar: Triage Without Sending Data to Google (2026)',
     seoTitle: 'Local AI Email and Calendar Triage 2026',
     intro:
@@ -404,7 +404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-de.png',
+    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-de.webp',
     title: 'Lokale KI für E-Mail und Kalender: Automatisierung ohne Cloud-API (2026)',
     seoTitle: 'Lokale KI-Automatisierung für E-Mail und Kalender 2026',
     intro:
@@ -824,7 +824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-fr.png',
+    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-fr.webp',
     title: 'IA locale pour l\'e-mail et le calendrier : automatisation sans API cloud (2026)',
     seoTitle: 'Automatisation locale de l\'e-mail et du calendrier 2026',
     intro:
@@ -1216,7 +1216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-es.png',
+    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-es.webp',
     title: 'IA local para email y calendario: automatización sin API en la nube (2026)',
     seoTitle: 'Automatización local de email y calendario con IA 2026',
     intro:
@@ -1624,7 +1624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-pt.png',
+    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-pt.webp',
     title: 'IA local para e-mail e calendário: triagem sem API na nuvem (2026)',
     seoTitle: 'Triagem local de e-mail e calendário com IA 2026',
     intro:
@@ -2030,7 +2030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-ja.png',
+    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-ja.webp',
     title: 'ローカルLLMでメール・カレンダー自動化：クラウドAPIなし (2026)',
     seoTitle: 'ローカルLLM メール・カレンダー自動化 2026',
     intro:
@@ -2450,7 +2450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-zh.png',
+    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-zh.webp',
     title: '本地AI进行电子邮件和日历自动化：无需将数据发送到谷歌 (2026)',
     seoTitle: '本地AI 电子邮件日历自动化 2026',
     intro:
@@ -2842,7 +2842,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-ar.png',
+    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-ar.webp',
     title: 'الذكاء الاصطناعي المحلي للبريد الإلكتروني والتقويم: أتمتة بدون إرسال البيانات إلى السحابة (⁨2026⁩)',
     seoTitle: 'أتمتة البريد والتقويم بـ ⁨LLM⁩ محلي: ⁨Ollama + IMAP⁩',
     intro:
@@ -3247,7 +3247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-ko.png',
+    heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-ko.webp',
     title: '로컬 LLM으로 이메일·캘린더 자동화: 클라우드 API 없이 처리하기 (2026)',
     seoTitle: '로컬 AI 이메일·캘린더 자동화 2026',
     intro:

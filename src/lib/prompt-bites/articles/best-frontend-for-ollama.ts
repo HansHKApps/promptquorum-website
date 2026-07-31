@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-frontend-for-ollama-overview-hero-en.png',
+    heroImage: '/images/best-frontend-for-ollama-overview-hero-en.webp',
     title: 'Best Frontend for Ollama?',
     dateModified: '2026-06-20',
     seoTitle: 'Best Frontend for Ollama? | Prompt Bites | PromptQuorum',
@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-frontend-for-ollama-overview-hero-de.png',
+    heroImage: '/images/best-frontend-for-ollama-overview-hero-de.webp',
     title: 'Bestes Frontend für Ollama?',
     seoTitle: 'Bestes Frontend für Ollama? | Prompt Bites | PromptQuorum',
     metaDescription: 'Open WebUI ist das beste Ollama-Frontend. SillyTavern für Rollenspiele. Jan ergänzt die Modellverwaltung. Alle kostenlos und Open Source. Aktualisiert Mai 2026.',
@@ -211,7 +211,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-frontend-for-ollama-overview-hero-fr.png',
+    heroImage: '/images/best-frontend-for-ollama-overview-hero-fr.webp',
     title: 'Meilleur frontend pour Ollama ?',
     seoTitle: 'Meilleur frontend pour Ollama? | Prompt Bites | PromptQuorum',
     metaDescription: 'Open WebUI est le meilleur frontend Ollama. SillyTavern pour le jeu de rôle. Jan ajoute la gestion de modèles. Tous gratuits. Mis à jour mai 2026.',
@@ -291,7 +291,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-frontend-for-ollama-overview-hero-ja.png',
+    heroImage: '/images/best-frontend-for-ollama-overview-hero-ja.webp',
     title: 'Ollamaに最適なフロントエンドは？',
     seoTitle: 'Ollamaに最適なフロントエンドは？| Prompt Bites | PromptQuorum',
     metaDescription: 'Open WebUIはOllamaに最適なフロントエンドです。ロールプレイにはSillyTavern。Janはモデル管理を追加します。すべて無料でオープンソース。2026年5月更新。',
@@ -371,7 +371,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-frontend-for-ollama-overview-hero-zh.png',
+    heroImage: '/images/best-frontend-for-ollama-overview-hero-zh.webp',
     title: 'Ollama 最佳前端是什么？',
     seoTitle: 'Ollama 最佳前端工具 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Open WebUI 是最佳 Ollama 前端。SillyTavern 适合角色扮演。Jan 提供模型管理。全部免费且开源。2026年5月更新。',
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-frontend-for-ollama-overview-hero-es.png',
+    heroImage: '/images/best-frontend-for-ollama-overview-hero-es.webp',
     title: '¿Mejor frontend para Ollama?',
     seoTitle: '¿Mejor frontend para Ollama? | Prompt Bites | PromptQuorum',
     metaDescription: 'Open WebUI es el mejor frontend para Ollama. SillyTavern para roleplay y Jan para gestión de modelos. Los tres son gratuitos y open source. Mayo 2026.',
@@ -535,7 +535,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-frontend-for-ollama-overview-hero-pt.png',
+    heroImage: '/images/best-frontend-for-ollama-overview-hero-pt.webp',
     title: '¿Mejor frontend para Ollama?',
     seoTitle: 'Melhor frontend para Ollama? | Prompt Bites | PromptQuorum',
     metaDescription: 'Open WebUI é o melhor frontend para Ollama. SillyTavern para roleplay e Jan para gestão de modelos. Os três são gratuitos e open source. Maio 2026.',
@@ -619,7 +619,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-frontend-for-ollama-overview-hero-ar.png',
+    heroImage: '/images/best-frontend-for-ollama-overview-hero-ar.webp',
     title: 'أفضل واجهة أمامية لـ ⁨Ollama⁩؟',
     seoTitle: 'أفضل واجهة لـ ⁨Ollama⁩: ⁨Open WebUI⁩ أو ⁨SillyTavern 2026⁩',
     metaDescription: '⁨Open WebUI⁩ الأفضل لـ ⁨Ollama⁩: يعمل كحاوية ⁨Docker⁩ ويدعم ⁨RAG. SillyTavern⁩ للأدوار، ⁨Jan⁩ لإدارة النماذج. الثلاثة مجانية. مايو ⁨2026⁩.',
@@ -703,7 +703,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-frontend-for-ollama-overview-hero-ko.png',
+    heroImage: '/images/best-frontend-for-ollama-overview-hero-ko.webp',
     title: 'Ollama 최적 프론트엔드는?',
     seoTitle: 'Ollama 최적 프론트엔드 비교: Open WebUI vs SillyTavern vs Jan 2026',
     metaDescription: 'Ollama 프론트엔드 추천: Open WebUI가 대부분의 사용자에게 최선입니다. SillyTavern은 롤플레이, Jan은 모델 관리에 적합합니다. 세 가지 모두 무료 오픈소스입니다. 2026년 5월.',

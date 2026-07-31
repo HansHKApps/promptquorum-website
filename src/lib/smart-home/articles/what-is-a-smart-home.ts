@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/what-is-a-smart-home-overview-hero-en.png',
+    heroImage: '/images/what-is-a-smart-home-overview-hero-en.webp',
     title: 'What Is a Smart Home? A 2026 Beginner\'s Guide',
     seoTitle: 'What Is a Smart Home? Complete 2026 Beginner\'s Guide',
     intro:
@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/what-is-a-smart-home-overview-hero-ar.png',
+    heroImage: '/images/what-is-a-smart-home-overview-hero-ar.webp',
     title: 'ما هو المنزل الذكي؟ دليل المبتدئين لعام ⁨2026⁩',
     seoTitle: 'ما هو المنزل الذكي؟ الدليل الشامل للمبتدئين ⁨2026⁩',
     intro:
@@ -386,7 +386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/what-is-a-smart-home-overview-hero-de.png',
+    heroImage: '/images/what-is-a-smart-home-overview-hero-de.webp',
     title: 'Was ist ein Smart Home? Ein Einsteiger-Leitfaden für 2026',
     seoTitle: 'Was ist ein Smart Home? Einsteiger-Leitfaden 2026',
     intro:
@@ -575,7 +575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/what-is-a-smart-home-overview-hero-es.png',
+    heroImage: '/images/what-is-a-smart-home-overview-hero-es.webp',
     title: '¿Qué Es un Smart Home? Guía para Principiantes 2026',
     seoTitle: '¿Qué Es un Smart Home? Guía para Principiantes 2026',
     intro:
@@ -764,7 +764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/what-is-a-smart-home-overview-hero-ko.png',
+    heroImage: '/images/what-is-a-smart-home-overview-hero-ko.webp',
     title: '스마트홈이란? 2026 입문자 가이드',
     seoTitle: '스마트홈이란? 2026 완전한 입문자 가이드',
     intro:
@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/what-is-a-smart-home-overview-hero-fr.png',
+    heroImage: '/images/what-is-a-smart-home-overview-hero-fr.webp',
     title: 'Qu\'est-ce qu\'une Maison Connectée ? Guide Débutant 2026',
     seoTitle: 'Qu\'est-ce qu\'une Maison Connectée ? Guide Débutant 2026',
     intro:
@@ -1142,7 +1142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/what-is-a-smart-home-overview-hero-ja.png',
+    heroImage: '/images/what-is-a-smart-home-overview-hero-ja.webp',
     title: 'スマートホームとは？2026年版 初心者ガイド',
     seoTitle: 'スマートホームとは？アプリ・音声制御から始める2026年版初心者ガイド',
     intro:
@@ -1331,7 +1331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/what-is-a-smart-home-overview-hero-pt.png',
+    heroImage: '/images/what-is-a-smart-home-overview-hero-pt.webp',
     title: 'O Que É uma Casa Inteligente? Guia para Iniciantes 2026',
     seoTitle: 'O Que É uma Casa Inteligente? Guia Iniciantes 2026',
     intro:
@@ -1520,7 +1520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/what-is-a-smart-home-overview-hero-zh.png',
+    heroImage: '/images/what-is-a-smart-home-overview-hero-zh.webp',
     title: '什么是智能家居？2026新手指南',
     seoTitle: '什么是智能家居？应用与语音控制、生态系统与云端本地对比 2026新手指南',
     intro:

@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
-    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-en.png',
+    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-en.webp',
     title: 'Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)',
     seoTitle: 'Local LLM Prompts for Fiction Writers: 15 Templates 2026',
     intro:
@@ -639,7 +639,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
-    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-de.png',
+    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-de.webp',
     title: 'Lokale LLM-Prompts für Belletristik-Autoren: 15 Vorlagen & Techniken (2026)',
     seoTitle: 'LLM-Prompts für Romanautoren 2026: Belletristik schreiben',
     intro:
@@ -1273,7 +1273,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
-    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-fr.png',
+    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-fr.webp',
     title: 'Prompts LLM locaux pour auteurs de fiction : 15 modèles et techniques (2026)',
     seoTitle: 'Prompts LLM locaux pour auteurs de fiction 2026',
     intro:
@@ -1908,7 +1908,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
-    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-ja.png',
+    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-ja.webp',
     title: '小説家のためのローカルLLMプロンプト：15のテンプレートとテクニック（2026）',
     seoTitle: '小説家向けローカルLLMプロンプト：15テンプレート 2026',
     intro:
@@ -2543,7 +2543,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
-    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-zh.png',
+    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-zh.webp',
     title: '本地LLM小说写作提示词：15个模板与技巧（2026）',
     seoTitle: '本地LLM小说写作提示词：15个模板（2026）',
     intro:
@@ -3178,7 +3178,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
-    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-es.png',
+    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-es.webp',
     title: 'Prompts para LLM local para escritores de ficción: 15 plantillas y técnicas (2026)',
     seoTitle: '15 prompts de LLM local para escritores de ficción 2026',
     intro:
@@ -3819,7 +3819,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
-    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-pt.png',
+    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-pt.webp',
     title: 'Prompts para LLM local para escritores de ficção: 15 modelos e técnicas (2026)',
     seoTitle: '15 prompts de LLM local para escritores de ficção 2026',
     intro:
@@ -4459,7 +4459,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
-    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-ar.png',
+    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-ar.webp',
     title: 'أوامر النماذج اللغوية المحلية لكتّاب الخيال الأدبي: ⁨15⁩ قالباً وتقنية (⁨2026⁩)',
     seoTitle: '⁨15⁩ قالب أوامر ⁨LLM⁩ لكتّاب الروايات والخيال الأدبي',
     intro:
@@ -5099,7 +5099,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
     dateModified: '2026-07-13',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
-    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-ko.png',
+    heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-ko.webp',
     title: '소설 작가를 위한 로컬 LLM 프롬프트: 15가지 템플릿과 기법 (2026)',
     seoTitle: '소설 작가를 위한 로컬 LLM 프롬프트 15가지 2026',
     intro:

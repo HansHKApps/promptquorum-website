@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-en.png',
+    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-en.webp',
     title: 'Why Battery Storage Is Becoming Standard for Balcony Solar in 2027',
     seoTitle: 'Why Battery Storage Is Becoming Standard for Balcony Solar in 2027',
     intro: 'Battery storage is moving from optional accessory to default configuration for balcony solar buyers in the EU — but that is a statement about the market trend, not a claim that any individual household needs one. The EU\'s revised Renewable Energy Directive introduced a subsidy tier covering up to 30% of equipment cost for residential balcony systems completed before 2027, and manufacturers are responding with new hardware built specifically for dynamic-tariff arbitrage.',
@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-ar.png',
+    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-ar.webp',
     title: 'لماذا يصبح تخزين البطاريات معيارًا للطاقة الشمسية للشرفة في 2027',
     seoTitle: 'تخزين البطاريات: المعيار الجديد للطاقة الشمسية للشرفة في 2027',
     intro: 'ينتقل تخزين البطاريات من كونه إضافة اختيارية إلى تكوين افتراضي لدى مشتري الطاقة الشمسية للشرفة في الاتحاد الأوروبي — لكن هذا بيان عن اتجاه السوق، وليس ادعاءً بأن كل أسرة على حدة بحاجة إلى بطارية. أدخلت التوجيهات الأوروبية المعدَّلة بشأن الطاقة المتجددة شريحة دعم تغطي حتى 30% من تكلفة المعدات للأنظمة السكنية للشرفة المكتملة قبل عام 2027، وتستجيب الشركات المصنّعة بأجهزة جديدة مصمَّمة خصيصًا للمراجحة (arbitrage) في التعرفة الديناميكية.',
@@ -220,7 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-de.png',
+    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-de.webp',
     title: 'Warum Batteriespeicher 2027 zum Standard für Balkonkraftwerke wird',
     seoTitle: 'Batteriespeicher als Standard für Balkonkraftwerke 2027',
     intro: 'Batteriespeicher entwickeln sich für Balkonkraftwerk-Käufer in der EU vom optionalen Zubehör zur Standardkonfiguration — das ist eine Aussage über den Markttrend, keine Behauptung, dass jeder einzelne Haushalt einen Speicher benötigt. Die überarbeitete Richtlinie der EU zu erneuerbaren Energien (Renewable Energy Directive) hat eine Förderstufe eingeführt, die bis zu 30 % der Gerätekosten für private Balkonanlagen abdeckt, die vor 2027 fertiggestellt werden, und Hersteller reagieren mit neuer Hardware, die gezielt für die Arbitrage mit dynamischen Stromtarifen entwickelt wurde.',
@@ -324,7 +324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-es.png',
+    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-es.webp',
     title: 'Por qué el almacenamiento en batería se está convirtiendo en estándar para la energía solar de balcón en 2027',
     seoTitle: 'Por qué el almacenamiento en batería es el nuevo estándar en 2027',
     intro: 'El almacenamiento en batería está pasando de accesorio opcional a configuración predeterminada para los compradores de energía solar de balcón en la UE — pero esto es una afirmación sobre la tendencia del mercado, no una afirmación de que cada hogar individual necesite una. La Directiva de Energías Renovables revisada de la UE introdujo un nivel de subvención que cubre hasta el 30 % del coste del equipo para sistemas de balcón residenciales completados antes de 2027, y los fabricantes están respondiendo con hardware nuevo diseñado específicamente para el arbitraje de tarifas dinámicas.',
@@ -428,7 +428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-fr.png',
+    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-fr.webp',
     title: 'Pourquoi le stockage par batterie devient la norme pour le solaire de balcon en 2027',
     seoTitle: 'Stockage par batterie : la nouvelle norme du solaire de balcon en 2027',
     intro: 'Le stockage par batterie passe d\'accessoire optionnel à configuration par défaut pour les acheteurs de solaire de balcon dans l\'UE — mais il s\'agit d\'un constat sur la tendance du marché, non d\'une affirmation selon laquelle chaque foyer en aurait besoin. La directive européenne révisée sur les énergies renouvelables a introduit un palier de subvention couvrant jusqu\'à 30 % du coût de l\'équipement pour les installations résidentielles de balcon achevées avant 2027, et les fabricants répondent avec du nouveau matériel conçu spécifiquement pour l\'arbitrage des tarifs dynamiques.',
@@ -532,7 +532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-ja.png',
+    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-ja.webp',
     title: '2027年、バルコニーソーラーでバッテリー蓄電が標準になる理由',
     seoTitle: '2027年バルコニーソーラーのバッテリー蓄電標準化',
     intro: 'バッテリー蓄電は、EUのバルコニーソーラー購入者にとってオプションのアクセサリーからデフォルト構成へと移行しつつあります — ただしこれは市場トレンドについての説明であり、個々の家庭にバッテリーが必要だという主張ではありません。EUの改訂版再生可能エネルギー指令では、2027年より前に完成する住宅用バルコニーシステムの機器コストの最大30％をカバーする補助金枠が導入され、メーカーは動的料金でのアービトラージ（裁定取引）専用に設計された新しいハードウェアで対応しています。',
@@ -636,7 +636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-ko.png',
+    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-ko.webp',
     title: '2027년 발코니 태양광에서 배터리 저장장치가 표준이 되는 이유',
     seoTitle: '2027년 발코니 태양광 배터리 저장장치 표준화',
     intro: '배터리 저장장치는 EU 발코니 태양광 구매자들 사이에서 선택 사양에서 기본 구성으로 전환되고 있습니다 — 다만 이는 시장 트렌드에 관한 진술이지, 개별 가정에 배터리가 필요하다는 주장이 아닙니다. EU의 개정된 재생에너지 지침은 2027년 이전에 완공되는 주거용 발코니 시스템에 대해 장비 비용의 최대 30%를 지원하는 보조금 등급을 도입했으며, 제조사들은 동적 요금제 차익거래에 특화해 설계된 새로운 하드웨어로 대응하고 있습니다.',
@@ -740,7 +740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-pt.png',
+    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-pt.webp',
     title: 'Por que o armazenamento em bateria está se tornando padrão para energia solar de varanda em 2027',
     seoTitle: 'Armazenamento em bateria: o novo padrão da energia solar de varanda em 2027',
     intro: 'O armazenamento em bateria está deixando de ser um acessório opcional para se tornar a configuração padrão entre compradores de energia solar de varanda na UE — mas essa é uma constatação sobre a tendência de mercado, não uma afirmação de que cada residência individual precisa de uma. A Diretiva de Energias Renováveis revisada da UE introduziu uma faixa de subsídio que cobre até 30% do custo do equipamento para sistemas residenciais de varanda concluídos antes de 2027, e os fabricantes estão respondendo com hardware novo projetado especificamente para arbitragem de tarifas dinâmicas.',
@@ -844,7 +844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-zh.png',
+    heroImage: '/images/balcony-solar-battery-storage-standard-2027-overview-hero-zh.webp',
     title: '为什么电池储能正在成为2027年阳台光伏的标准配置',
     seoTitle: '电池储能：2027年阳台光伏的新标准',
     intro: '对于欧盟的阳台光伏购买者而言，电池储能正从可选配件转变为默认配置——但这是关于市场趋势的陈述，并不是说每个家庭都需要储能设备。欧盟修订后的《可再生能源指令》引入了一档补贴，为2027年前完工的住宅阳台系统提供最高30%的设备成本补贴，制造商也在以专为动态电价套利设计的新硬件作出回应。',

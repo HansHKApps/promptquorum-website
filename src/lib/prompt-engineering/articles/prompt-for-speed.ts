@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-01-29',
       theme: 'Fundamentals',
-      heroImage: '/images/prompt-for-speed-overview-hero-en.png',
+      heroImage: '/images/prompt-for-speed-overview-hero-en.webp',
       title: 'Faster AI Answers: How to Prompt for Speed',
       intro: 'Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency. Most AI answers bloat because of vague prompts, not slow models.',
       publishDate: '2026-03-22',
@@ -290,7 +290,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     de: {
       theme: 'Grundlagen',
-      heroImage: '/images/prompt-for-speed-overview-hero-de.png',
+      heroImage: '/images/prompt-for-speed-overview-hero-de.webp',
       title: 'Schnellere KI-Antworten: So prompts man für Geschwindigkeit',
       seoTitle: 'Schnellere KI-Antworten 2026: Prompts für Speed',
       metaDescription: 'LLM-Inferenz um 30–50 % beschleunigen: kurze Prompts und Batching. Latenz und Kosten senken, ohne Qualität zu opfern.',
@@ -516,7 +516,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     es: {
       theme: 'Fundamentals',
-      heroImage: '/images/prompt-for-speed-overview-hero-es.png',
+      heroImage: '/images/prompt-for-speed-overview-hero-es.webp',
       title: 'Respuestas de IA más rápidas: Cómo hacer prompts para la velocidad',
       intro: 'Los prompts lentos de IA tienen una sola causa: la ambigüedad obliga al modelo a adivinar. Elimina la ambigüedad con cinco decisiones de diseño y obtendrás respuestas precisas y rápidas en el primer intento — en cualquier modelo.',
       publishDate: '2026-03-22',
@@ -754,7 +754,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ar: {
       theme: 'Fundamentals',
-      heroImage: '/images/prompt-for-speed-overview-hero-ar.png',
+      heroImage: '/images/prompt-for-speed-overview-hero-ar.webp',
       title: 'إجابات الذكاء الاصطناعي الأسرع: كيف تكتب برومبتات للسرعة',
       intro: 'البرومبتات البطيئة في الذكاء الاصطناعي لها سبب واحد فقط: الغموض يُجبر النموذج على التخمين. أزِل الغموض بخمسة قرارات تصميمية واحصل على إجابات دقيقة وسريعة في المحاولة الأولى — في أي نموذج.',
       publishDate: '2026-03-22',
@@ -993,7 +993,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     pt: {
       theme: 'Fundamentals',
-      heroImage: '/images/prompt-for-speed-overview-hero-pt.png',
+      heroImage: '/images/prompt-for-speed-overview-hero-pt.webp',
       title: 'Respostas de IA mais rápidas: Como fazer prompts para velocidade',
       intro: 'Prompts lentos de IA têm uma única causa: a ambiguidade força o modelo a adivinhar. Elimine a ambiguidade com cinco decisões de design e você obterá respostas precisas e rápidas na primeira tentativa — em qualquer modelo.',
       publishDate: '2026-03-22',
@@ -1232,7 +1232,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     fr: {
       theme: 'Fondamentaux',
-      heroImage: '/images/prompt-for-speed-overview-hero-fr.png',
+      heroImage: '/images/prompt-for-speed-overview-hero-fr.webp',
       title: 'Des réponses IA plus rapides : Comment concevoir des prompts pour la vitesse',
       intro: 'La rapidité en ingénierie de prompt signifie obtenir des réponses IA concises et directes grâce à une conception délibérée—non une latence matérielle. La plupart des réponses IA sont lentes en raison d\'une conception vague de prompt, non pas parce que le modèle est lent.',
       publishDate: '2026-03-22',
@@ -1456,7 +1456,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     ja: {
       theme: '基礎',
-      heroImage: '/images/prompt-for-speed-overview-hero-ja.png',
+      heroImage: '/images/prompt-for-speed-overview-hero-ja.webp',
       title: '高速なAI回答：スピードのためのプロンプト設計',
       intro: 'プロンプトエンジニアリングにおける「速度」とは、意図的なプロンプト設計によって簡潔で直接的なAI応答を得ることです。ハードウェアレイテンシーではありません。ほとんどのAI回答が遅い理由は、モデルが遅いからではなく、プロンプトが曖昧だからです。',
       publishDate: '2026-03-22',
@@ -1681,7 +1681,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     zh: {
       theme: '基础知识',
-      heroImage: '/images/prompt-for-speed-overview-hero-zh.png',
+      heroImage: '/images/prompt-for-speed-overview-hero-zh.webp',
       title: '更快的AI回答：如何设计提示词以提高速度',
       intro: '提示词工程中的"速度"是指通过有意的提示词设计获得简洁、直接的AI回答，而不是硬件延迟。大多数AI回答缓慢的原因是提示词过于宽泛，而不是模型缓慢。',
       publishDate: '2026-03-22',
@@ -1905,7 +1905,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ko: {
       theme: 'Fundamentals',
-      heroImage: '/images/prompt-for-speed-overview-hero-ko.png',
+      heroImage: '/images/prompt-for-speed-overview-hero-ko.webp',
       title: '더 빠른 AI 답변: 속도를 위한 Prompt 작성 방법',
       intro: 'AI prompt의 느린 응답에는 단 하나의 원인이 있습니다: 모호함이 모델을 추측하게 만듭니다. 다섯 가지 설계 결정으로 모호함을 제거하면 어떤 모델에서든 첫 번째 시도에 정확하고 빠른 답변을 얻을 수 있습니다.',
       publishDate: '2026-03-22',

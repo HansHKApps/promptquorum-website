@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-en.png',
+    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-en.webp',
     title: 'Chat With 1000+ PDFs Locally: Scaling RAG Beyond Toy Examples',
     seoTitle: 'Chat With 1000+ PDFs Locally 2026: Scaling Local RAG Architecture',
     intro:
@@ -604,7 +604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-de.png',
+    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-de.webp',
     title: '1000+ PDFs lokal chatten: RAG-Skalierung über Demo-Beispiele',
     seoTitle: '1000 PDFs lokal durchsuchen: privates RAG ohne Cloud',
     intro:
@@ -1197,7 +1197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-fr.png',
+    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-fr.webp',
     title: 'Discuter avec 1000+ fichiers PDF en local : Évolution du RAG au-delà des démos',
     seoTitle: 'Discuter avec 1000 PDF en local : RAG privé sans cloud',
     intro:
@@ -1790,7 +1790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-ja.png',
+    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-ja.webp',
     title: '1000+ PDFをローカルでチャット: プロダクションレベルのRAG構築',
     seoTitle: '1000+ PDFをローカルチャット: RAGスケーリングアーキテクチャ2026',
     intro:
@@ -2382,7 +2382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-zh.png',
+    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-zh.webp',
     title: '本地处理1000+ PDF: 构建生产级RAG系统',
     seoTitle: '本地RAG扩展指南: 处理10000+文档的架构决策',
     intro:
@@ -2974,7 +2974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-es.png',
+    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-es.webp',
     title: 'Chatea con 1000+ PDFs en local: RAG a escala más allá de los ejemplos de prueba',
     seoTitle: 'Chatea con 1000 PDFs en local 2026: RAG a gran escala',
     intro:
@@ -3562,7 +3562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-ko.png',
+    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-ko.webp',
     title: '로컬에서 PDF 1,000개와 채팅하기: 테스트 예제를 넘어선 규모의 RAG',
     seoTitle: '로컬에서 PDF 1,000개와 채팅 2026: 대규모 RAG',
     intro: '1,000–10,000개 이상의 개인 문서(연구 라이브러리, 법적 기록, 내부 위키)를 가진 고급 사용자를 위한 결정 가이드. 기본 설정은 5,000개 청크 주변에서 실패합니다. 이 기사는 네 가지 확장 경로(조정된 AnythingLLM, 로컬 LlamaIndex, 맞춤형 Ollama+ChromaDB, 프로덕션 Ollama+Qdrant)를 100, 1,000, 10,000개 문서에서 측정된 지연시간, 저장소, 인덱싱 벤치마크와 함께 보여줍니다.',
@@ -4126,7 +4126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-pt.png',
+    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-pt.webp',
     title: 'Converse com 1000+ PDFs localmente: RAG em escala além dos exemplos de teste',
     seoTitle: 'Converse com 1000 PDFs localmente 2026: RAG em grande escala',
     intro:
@@ -4715,7 +4715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-ar.png',
+    heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-ar.webp',
     title: 'محادثة مع ⁨1000⁩+ ملف ⁨PDF⁩ محلياً: ⁨RAG⁩ على نطاق واسع يتجاوز نماذج الاختبار',
     seoTitle: 'محادثة مع ⁨1000⁩ ملف ⁨PDF⁩ محلياً: ⁨RAG⁩ على نطاق واسع',
     intro:

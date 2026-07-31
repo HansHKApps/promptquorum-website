@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/ai-automations-local-llm-overview-hero-en.png',
+    heroImage: '/images/ai-automations-local-llm-overview-hero-en.webp',
     title: 'Smarter Home Automations with a Local LLM (2026)',
     seoTitle: 'AI Home Automation 2026: Local LLM Beyond IFTTT',
     intro:
@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/ai-automations-local-llm-overview-hero-ar.png',
+    heroImage: '/images/ai-automations-local-llm-overview-hero-ar.webp',
     title: 'أتمتة المنزل الذكي بنموذج لغوي محلي (⁨2026⁩)',
     seoTitle: 'أتمتة المنزل بـ ⁨LLM⁩ محلي ⁨2026⁩: تجاوز ⁨IFTTT⁩',
     intro:
@@ -378,7 +378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/ai-automations-local-llm-overview-hero-de.png',
+    heroImage: '/images/ai-automations-local-llm-overview-hero-de.webp',
     title: 'Smartere Heim-Automatisierungen mit einem lokalen LLM (2026)',
     seoTitle: 'KI-Heimautomatisierung 2026: Lokales LLM statt IFTTT',
     intro:
@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/ai-automations-local-llm-overview-hero-es.png',
+    heroImage: '/images/ai-automations-local-llm-overview-hero-es.webp',
     title: 'Automatizaciones del Hogar Más Inteligentes con un LLM Local (2026)',
     seoTitle: 'Automatización con IA 2026: LLM Local más allá de IFTTT',
     intro:
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/ai-automations-local-llm-overview-hero-ko.png',
+    heroImage: '/images/ai-automations-local-llm-overview-hero-ko.webp',
     title: '로컬 LLM으로 더 스마트한 홈 자동화 (2026)',
     seoTitle: 'AI 홈 자동화 2026: 로컬 LLM으로 IFTTT를 넘어서십시오',
     intro:
@@ -933,7 +933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/ai-automations-local-llm-overview-hero-fr.png',
+    heroImage: '/images/ai-automations-local-llm-overview-hero-fr.webp',
     title: 'Des Automatisations Maison Plus Intelligentes avec un LLM Local (2026)',
     seoTitle: 'Automatisation IA 2026 : LLM Local au-delà d\'IFTTT',
     intro:
@@ -1118,7 +1118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/ai-automations-local-llm-overview-hero-ja.png',
+    heroImage: '/images/ai-automations-local-llm-overview-hero-ja.webp',
     title: 'ローカルLLMでより賢い家の自動化（2026）',
     seoTitle: 'AI ホーム自動化 2026：IFTTT を超えるローカルLLM',
     intro:
@@ -1303,7 +1303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/ai-automations-local-llm-overview-hero-pt.png',
+    heroImage: '/images/ai-automations-local-llm-overview-hero-pt.webp',
     title: 'Automações Domésticas Mais Inteligentes com um LLM Local (2026)',
     seoTitle: 'Automação com IA 2026: LLM Local além do IFTTT',
     intro:
@@ -1488,7 +1488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/ai-automations-local-llm-overview-hero-zh.png',
+    heroImage: '/images/ai-automations-local-llm-overview-hero-zh.webp',
     title: '用本地 LLM 实现更聪明的家庭自动化（2026）',
     seoTitle: 'AI 家庭自动化 2026：超越 IFTTT 的本地 LLM',
     intro:

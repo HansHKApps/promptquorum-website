@@ -4,7 +4,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     theme: 'Overview & Reference',
-    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-en.png',
+    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-en.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
@@ -241,7 +241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Overview & Reference',
-    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-de.png',
+    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-de.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Overview & Reference',
-    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-fr.png',
+    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-fr.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
@@ -718,7 +718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Overview & Reference',
-    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-ja.png',
+    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-ja.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
@@ -954,7 +954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Overview & Reference',
-    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-zh.png',
+    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-zh.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
@@ -1191,7 +1191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Overview & Reference',
-    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-es.png',
+    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-es.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
@@ -1441,7 +1441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 },
   pt: {
     theme: 'Overview & Reference',
-    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-pt.png',
+    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-pt.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
@@ -1691,7 +1691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Overview & Reference',
-    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-ar.png',
+    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-ar.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
@@ -1941,7 +1941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Overview & Reference',
-    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-ko.png',
+    heroImage: '/images/best-affiliate-tools-ai-developers-2026-overview-hero-ko.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,

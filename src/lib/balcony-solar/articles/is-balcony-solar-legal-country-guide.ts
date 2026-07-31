@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-02',
     last_full_refresh: '2026-07-02',
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-en.png',
+    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal? Country-by-Country Status Guide',
     seoTitle: 'Is Balcony Solar Legal? Global Status Guide (2026)',
     intro: 'Balcony solar\'s legal status ranges from a codified, well-defined simplified regime to genuine regulatory silence — and the difference matters more than any spec sheet before you buy anything. This guide tracks current status across every major market this site covers, with links to the full detail for each.',
@@ -141,7 +141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-de.png',
+    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-de.webp',
     title: 'Ist Balkonkraftwerk legal? Rechtsstatus-Leitfaden nach Ländern',
     seoTitle: 'Ist Balkonkraftwerk legal? Globaler Status-Leitfaden (2026)',
     intro: 'Der rechtliche Status von Balkonkraftwerken reicht von einer klar geregelten und kodifizierten vereinfachten Regelung bis hin zu einem echten Regulierungsvakuum — und dieser Unterschied ist vor dem Kauf wichtiger als jedes Datenblatt. Dieser Leitfaden verfolgt den aktuellen Status in allen wichtigen Märkten dieser Website mit Links zu den vollständigen Details für jeden Markt.',
@@ -267,7 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-es.png',
+    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-es.webp',
     title: '¿Es legal la energía solar de balcón? Guía de estado país por país',
     seoTitle: '¿Es legal la energía solar de balcón? Guía global (2026)',
     intro: 'El estado legal de la energía solar de balcón va desde un régimen simplificado, codificado y bien definido hasta un auténtico vacío normativo — y esa diferencia importa más que cualquier ficha técnica antes de comprar nada. Esta guía hace seguimiento del estado actual en cada mercado principal que cubre este sitio, con enlaces al detalle completo de cada uno.',
@@ -393,7 +393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-pt.png',
+    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-pt.webp',
     title: 'A energia solar de varanda é legal? Guia de status por país',
     seoTitle: 'Energia solar de varanda é legal? Guia global de status (2026)',
     intro: 'O status legal da energia solar de varanda varia de um regime simplificado, codificado e bem definido a um verdadeiro vazio regulatório — e essa diferença importa mais do que qualquer ficha técnica antes de você comprar qualquer coisa. Este guia acompanha o status atual em cada mercado importante coberto por este site, com links para o detalhamento completo de cada um.',
@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-ar.png',
+    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-ar.webp',
     title: 'هل الطاقة الشمسية للشرفة قانونية؟ دليل الوضع القانوني حسب الدولة',
     seoTitle: 'هل الطاقة الشمسية للشرفة قانونية؟ دليل الوضع العالمي (2026)',
     intro: 'يتراوح الوضع القانوني للطاقة الشمسية للشرفة بين نظام مبسّط مقنَّن وواضح المعالم وبين فراغ تنظيمي حقيقي — وهذا الفرق أهم من أي مواصفات تقنية قبل أن تشتري أي شيء. يتتبّع هذا الدليل الوضع الحالي في كل سوق رئيسي يغطيه هذا الموقع، مع روابط للتفاصيل الكاملة لكل دولة.',
@@ -645,7 +645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-ja.png',
+    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-ja.webp',
     title: 'バルコニーソーラーは合法か? 国別法的ステータスガイド',
     seoTitle: 'バルコニーソーラーは合法か? グローバルステータスガイド (2026年)',
     intro: 'バルコニーソーラーの法的ステータスは、明確に成文化された簡易制度から、実質的に規制が存在しない状態まで幅広く異なります——そしてこの違いは、購入前にはどんなスペック表よりも重要です。本ガイドでは、当サイトが扱う主要な市場すべての現在のステータスを追跡し、各国の詳細情報へのリンクを掲載しています。',
@@ -771,7 +771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-zh.png',
+    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-zh.webp',
     title: '阳台光伏合法吗?各国法律状态指南',
     seoTitle: '阳台光伏合法吗?全球状态指南(2026年)',
     intro: '阳台光伏的法律状态差异很大,从明确成文、定义清晰的简化制度,到真正的监管空白——在购买任何设备之前,这种差异比任何规格表都更重要。本指南追踪本站覆盖的每个主要市场的当前状态,并提供各国详细信息的链接。',
@@ -897,7 +897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-fr.png',
+    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-fr.webp',
     title: "L'énergie solaire de balcon est-elle légale ? Guide du statut pays par pays",
     seoTitle: "L'énergie solaire de balcon est-elle légale ? Guide mondial (2026)",
     intro: "Le statut juridique de l'énergie solaire de balcon va d'un régime simplifié codifié et bien défini à un véritable vide réglementaire — et cette différence compte plus que n'importe quelle fiche technique avant tout achat. Ce guide suit le statut actuel sur chaque marché majeur couvert par ce site, avec des liens vers le détail complet pour chacun.",
@@ -1023,7 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-ko.png',
+    heroImage: '/images/is-balcony-solar-legal-country-guide-overview-hero-ko.webp',
     title: '베란다 태양광 발전은 합법인가? 국가별 법적 지위 가이드',
     seoTitle: '베란다 태양광 발전은 합법인가? 글로벌 현황 가이드 (2026)',
     intro: '베란다 태양광 발전의 법적 지위는 명확하게 성문화된 간소화 제도부터 사실상의 규제 공백까지 다양하며, 이 차이는 무언가를 구매하기 전에 어떤 사양표보다 중요합니다. 이 가이드는 이 사이트가 다루는 모든 주요 시장의 현재 상태를 추적하며, 각 국가의 상세 정보로 연결되는 링크를 제공합니다.',

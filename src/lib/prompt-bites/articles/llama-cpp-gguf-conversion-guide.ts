@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-en.png',
+    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-en.webp',
     title: 'How Do You Convert a Model to GGUF With llama.cpp?',
     seoTitle: 'GGUF Conversion Guide with llama.cpp | Prompt Bites',
     metaDescription: 'How to convert a Hugging Face model to GGUF format using llama.cpp: the conversion script, output precision options, quantizing afterward, and common conversion errors.',
@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-de.png',
+    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-de.webp',
     title: 'Wie konvertiert man ein Modell mit llama.cpp in GGUF?',
     seoTitle: 'GGUF-Konvertierung mit llama.cpp erklärt | Prompt Bites',
     metaDescription: 'So konvertieren Sie ein Hugging-Face-Modell mit llama.cpp in das GGUF-Format: das Konvertierungsskript, Optionen für die Ausgabepräzision, anschließendes Quantisieren und häufige Konvertierungsfehler.',
@@ -188,7 +188,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-fr.png',
+    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-fr.webp',
     title: 'Comment convertir un modèle en GGUF avec llama.cpp ?',
     seoTitle: 'Guide de conversion GGUF avec llama.cpp | Prompt Bites',
     metaDescription: 'Comment convertir un modèle Hugging Face au format GGUF avec llama.cpp : le script de conversion, les options de précision de sortie, la quantification ultérieure et les erreurs de conversion courantes.',
@@ -280,7 +280,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-ja.png',
+    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-ja.webp',
     title: 'llama.cppでモデルをGGUFに変換するにはどうすればよいですか?',
     seoTitle: 'llama.cppによるGGUF変換ガイド | Prompt Bites',
     metaDescription: 'llama.cppを使ってHugging Face形式のモデルをGGUF形式に変換する方法を解説します。変換スクリプト、出力精度のオプション、変換後の量子化、よくある変換エラーについて説明します。',
@@ -372,7 +372,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-zh.png',
+    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-zh.webp',
     title: '如何用llama.cpp将模型转换为GGUF格式?',
     seoTitle: 'llama.cpp GGUF转换指南 | Prompt Bites',
     metaDescription: '如何用llama.cpp将Hugging Face模型转换为GGUF格式:转换脚本、输出精度选项、转换后量化以及常见转换错误。',
@@ -464,7 +464,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-es.png',
+    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-es.webp',
     title: '¿Cómo convertir un modelo a GGUF con llama.cpp?',
     seoTitle: 'Guía de conversión a GGUF con llama.cpp | Prompt Bites',
     metaDescription: 'Cómo convertir un modelo de Hugging Face a formato GGUF con llama.cpp: el script de conversión, las opciones de precisión de salida, la cuantización posterior y los errores de conversión más comunes.',
@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-pt.png',
+    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-pt.webp',
     title: 'Como converter um modelo para GGUF com o llama.cpp?',
     seoTitle: 'Guia de conversão para GGUF com llama.cpp | Prompt Bites',
     metaDescription: 'Como converter um modelo do Hugging Face para o formato GGUF usando o llama.cpp: o script de conversão, opções de precisão de saída, quantização posterior e erros comuns de conversão.',
@@ -648,7 +648,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-ar.png',
+    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-ar.webp',
     title: 'كيف تحوّل نموذجًا إلى صيغة GGUF باستخدام llama.cpp؟',
     seoTitle: 'دليل التحويل إلى GGUF باستخدام llama.cpp | Prompt Bites',
     metaDescription: 'كيفية تحويل نموذج بصيغة Hugging Face إلى صيغة GGUF باستخدام llama.cpp: نص التحويل البرمجي، خيارات دقة الإخراج، التكميم لاحقًا، وأخطاء التحويل الشائعة.',
@@ -740,7 +740,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-ko.png',
+    heroImage: '/images/llama-cpp-gguf-conversion-guide-overview-hero-ko.webp',
     title: 'llama.cpp로 모델을 GGUF로 변환하는 방법은 무엇입니까?',
     seoTitle: 'llama.cpp GGUF 변환 가이드 | Prompt Bites',
     metaDescription: 'llama.cpp를 사용해 Hugging Face 모델을 GGUF 형식으로 변환하는 방법을 설명합니다. 변환 스크립트, 출력 정밀도 옵션, 변환 후 양자화, 자주 발생하는 변환 오류를 다룹니다.',

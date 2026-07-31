@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/smart-home-without-subscriptions-overview-hero-en.png',
+    heroImage: '/images/smart-home-without-subscriptions-overview-hero-en.webp',
     title: 'How to Build a Smart Home With Zero Subscriptions (2026)',
     seoTitle: 'Smart Home Without Subscriptions: 2026 Setup Guide',
     intro:
@@ -192,7 +192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/smart-home-without-subscriptions-overview-hero-ar.png',
+    heroImage: '/images/smart-home-without-subscriptions-overview-hero-ar.webp',
     title: 'كيف تبني منزلًا ذكيًا بدون اشتراكات (⁨2026⁩)',
     seoTitle: 'منزل ذكي بدون اشتراكات: دليل الإعداد ⁨2026⁩',
     intro:
@@ -376,7 +376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/smart-home-without-subscriptions-overview-hero-de.png',
+    heroImage: '/images/smart-home-without-subscriptions-overview-hero-de.webp',
     title: 'Ein Smart Home ganz ohne Abonnements bauen (2026)',
     seoTitle: 'Smart Home ohne Abonnements: Aufbau-Anleitung 2026',
     intro:
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/smart-home-without-subscriptions-overview-hero-es.png',
+    heroImage: '/images/smart-home-without-subscriptions-overview-hero-es.webp',
     title: 'Cómo Construir un Smart Home con Cero Suscripciones (2026)',
     seoTitle: 'Smart Home sin Suscripciones: Guía de Configuración 2026',
     intro:
@@ -744,7 +744,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/smart-home-without-subscriptions-overview-hero-ko.png',
+    heroImage: '/images/smart-home-without-subscriptions-overview-hero-ko.webp',
     title: '구독료 없이 스마트홈 구축하는 방법 (2026)',
     seoTitle: '구독 없는 스마트홈: 2026 설정 가이드',
     intro:
@@ -928,7 +928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/smart-home-without-subscriptions-overview-hero-fr.png',
+    heroImage: '/images/smart-home-without-subscriptions-overview-hero-fr.webp',
     title: 'Construire une Maison Connectée Sans Aucun Abonnement (2026)',
     seoTitle: 'Maison Connectée Sans Abonnement : Guide Complet 2026',
     intro:
@@ -1112,7 +1112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/smart-home-without-subscriptions-overview-hero-ja.png',
+    heroImage: '/images/smart-home-without-subscriptions-overview-hero-ja.webp',
     title: 'サブスクなしでスマートホームを作る方法（2026）',
     seoTitle: 'サブスクなしのスマートホーム構築完全ガイド（2026年）',
     intro:
@@ -1296,7 +1296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/smart-home-without-subscriptions-overview-hero-pt.png',
+    heroImage: '/images/smart-home-without-subscriptions-overview-hero-pt.webp',
     title: 'Como Construir uma Casa Inteligente Sem Nenhuma Assinatura (2026)',
     seoTitle: 'Casa Inteligente Sem Assinaturas: Guia de Configuração 2026',
     intro:
@@ -1480,7 +1480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/smart-home-without-subscriptions-overview-hero-zh.png',
+    heroImage: '/images/smart-home-without-subscriptions-overview-hero-zh.webp',
     title: '如何打造零订阅的智能家居（2026）',
     seoTitle: '零订阅智能家居 2026：本地设备、本地中枢搭建完全指南',
     intro:

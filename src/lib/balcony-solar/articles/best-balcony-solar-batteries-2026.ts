@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-07-02',
     current_hardware_mentioned: ['EcoFlow STREAM Ultra', 'BigBlue POWAFREE H1', 'Zendure SolarFlow'],
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-en.png',
+    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-en.webp',
     affiliateDisclosure: true,
     title: 'Best Balcony Solar Batteries (2026): Store Your Surplus Power',
     seoTitle: 'Best Balcony Solar Batteries 2026: Storage Kits Compared',
@@ -177,7 +177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-es.png',
+    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-es.webp',
     affiliateDisclosure: true,
     title: 'Las mejores baterías de energía solar para balcón (2026): almacena tu excedente de energía',
     seoTitle: 'Mejores baterías solares de balcón 2026: kits de almacenamiento comparados',
@@ -346,7 +346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-pt.png',
+    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-pt.webp',
     affiliateDisclosure: true,
     title: 'As melhores baterias solares de varanda (2026): armazene seu excedente de energia',
     seoTitle: 'Melhores baterias solares de varanda 2026: kits de armazenamento comparados',
@@ -515,7 +515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-ar.png',
+    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-ar.webp',
     affiliateDisclosure: true,
     title: 'أفضل بطاريات الطاقة الشمسية للشرفة (2026): خزّن فائض الطاقة لديك',
     seoTitle: 'أفضل بطاريات الطاقة الشمسية للشرفة 2026: مقارنة أطقم التخزين',
@@ -683,7 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-ja.png',
+    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-ja.webp',
     affiliateDisclosure: true,
     title: 'バルコニー太陽光発電用バッテリーおすすめ(2026年):余剰電力を蓄える',
     seoTitle: 'バルコニー太陽光バッテリー2026年比較:蓄電キットまとめ',
@@ -851,7 +851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-zh.png',
+    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-zh.webp',
     affiliateDisclosure: true,
     title: '2026年最佳阳台光伏电池推荐:储存你的多余电力',
     seoTitle: '2026年最佳阳台光伏电池对比:储能套件全面比较',
@@ -1019,7 +1019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-fr.png',
+    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-fr.webp',
     affiliateDisclosure: true,
     title: 'Meilleures batteries solaires de balcon (2026) : stockez votre surplus d\'énergie',
     seoTitle: 'Meilleures batteries solaires de balcon 2026 : kits de stockage comparés',
@@ -1188,7 +1188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-ko.png',
+    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-ko.webp',
     affiliateDisclosure: true,
     title: '2026년 최고의 발코니 태양광 배터리: 남는 전력을 저장하세요',
     seoTitle: '2026년 최고의 발코니 태양광 배터리 비교: 저장 키트 총정리',
@@ -1356,7 +1356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-de.png',
+    heroImage: '/images/best-balcony-solar-batteries-2026-overview-hero-de.webp',
     affiliateDisclosure: true,
     title: 'Die besten Balkonkraftwerk Speicher (2026): Überschuss selbst nutzen statt einspeisen',
     seoTitle: 'Balkonkraftwerk Speicher 2026: Batterien im Vergleich',

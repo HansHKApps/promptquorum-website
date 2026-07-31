@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-ai-security-camera-overview-hero-en.png',
+    heroImage: '/images/local-ai-security-camera-overview-hero-en.webp',
     title: 'Local AI Security Cameras with Frigate (2026)',
     seoTitle: 'Frigate Local AI Cameras 2026: Private Detection',
     intro:
@@ -205,7 +205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-ai-security-camera-overview-hero-ar.png',
+    heroImage: '/images/local-ai-security-camera-overview-hero-ar.webp',
     title: 'كاميرات الأمان بالذكاء الاصطناعي المحلي مع ⁨Frigate⁩ (⁨2026⁩)',
     seoTitle: '⁨Frigate 2026⁩: كاميرات ذكاء اصطناعي محلي خاصة',
     intro:
@@ -402,7 +402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-ai-security-camera-overview-hero-de.png',
+    heroImage: '/images/local-ai-security-camera-overview-hero-de.webp',
     title: 'Lokale KI-Sicherheitskameras mit Frigate (2026)',
     seoTitle: 'Frigate lokale KI-Kameras 2026: Private Erkennung',
     intro:
@@ -599,7 +599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-ai-security-camera-overview-hero-es.png',
+    heroImage: '/images/local-ai-security-camera-overview-hero-es.webp',
     title: 'Cámaras de Seguridad con IA Local con Frigate (2026)',
     seoTitle: 'Cámaras IA Local con Frigate 2026: Detección Privada',
     intro:
@@ -796,7 +796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-ai-security-camera-overview-hero-ko.png',
+    heroImage: '/images/local-ai-security-camera-overview-hero-ko.webp',
     title: 'Frigate로 로컬 AI 보안 카메라 구축 (2026)',
     seoTitle: 'Frigate 로컬 AI 카메라 2026: 사적 감지',
     intro:
@@ -993,7 +993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-ai-security-camera-overview-hero-fr.png',
+    heroImage: '/images/local-ai-security-camera-overview-hero-fr.webp',
     title: 'Caméras de Sécurité à IA Locale avec Frigate (2026)',
     seoTitle: 'Caméras IA Locale Frigate 2026 : Détection Privée',
     intro:
@@ -1190,7 +1190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-ai-security-camera-overview-hero-ja.png',
+    heroImage: '/images/local-ai-security-camera-overview-hero-ja.webp',
     title: 'Frigate によるローカルAIセキュリティカメラ（2026）',
     seoTitle: 'Frigate ローカルAIカメラ 2026：プライベート検出',
     intro:
@@ -1387,7 +1387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-ai-security-camera-overview-hero-pt.png',
+    heroImage: '/images/local-ai-security-camera-overview-hero-pt.webp',
     title: 'Câmeras de Segurança com IA Local com Frigate (2026)',
     seoTitle: 'Câmeras IA Local com Frigate 2026: Detecção Privada',
     intro:
@@ -1584,7 +1584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-ai-security-camera-overview-hero-zh.png',
+    heroImage: '/images/local-ai-security-camera-overview-hero-zh.webp',
     title: '用 Frigate 的本地 AI 安防摄像头（2026）',
     seoTitle: 'Frigate 本地 AI 摄像头 2026：私密检测',
     intro:

@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?',
     seoTitle: 'M5 Max vs RTX 5090: Local LLM Benchmarks 2026',
     metaDescription: 'Apple M5 Max vs RTX 5090: RTX 5090 hits ~145 tok/s on Llama 3 8B but its 32GB VRAM cannot load 70B. M5 Max 128GB runs 70B at ~18 tok/s. Full benchmarks, cost, and power 2026.',
-    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-en.png',
+    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-en.webp',
     readTime: '18 min read',
     targetKeywords: [
       'apple mlx vs nvidia cuda local llm',
@@ -147,7 +147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: 'Performance Benchmarks: Tokens Per Second by Model',
-        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-en.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-en.webp',
         imageCaption: 'Inference speed comparison across hardware: RTX 4090 delivers ~150 tok/s on Llama 3 8B but cannot load 70B; M5 Max 128GB delivers ~75 tok/s on 8B and ~18 tok/s on 70B.',
         content: 'Inference speed is measured in tokens per second (tok/s) — higher is better for interactive use. NVIDIA dominates small model speed; Apple wins when models exceed [VRAM capacity](/local-llms/how-much-vram-local-llm).',
         snippetBlocks: [
@@ -174,7 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cost: {
         id: 'cost',
         title: 'Cost Comparison: Total System Cost by Model Size',
-        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-en.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-en.webp',
         imageCaption: 'Total system cost to run 7B to 96B models locally: NVIDIA wins under $1,500; Apple wins at the 70B tier (Mac Studio M4 Max 64GB ~$3,199 vs $7,000+ multi-GPU system).',
         content: 'Total system cost includes GPU card plus PC build for NVIDIA; just the Mac for Apple. The crossover where Apple becomes cheaper is the 32–70B model tier.',
         snippetBlocks: [
@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Apple MLX vs NVIDIA CUDA für lokale LLMs: Welches System wählen in 2026?',
     seoTitle: 'M5 Max vs RTX 5090: LLM-Benchmarks 2026',
     metaDescription: 'M5 Max vs RTX 5090: 75 Tok/s vs 150 Tok/s bei Llama 3 8B — 70B passt in M5 Max, nicht in RTX 4090. Benchmark, Kosten und Stromverbrauch für lokale LLMs 2026.',
-    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-de.png',
+    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-de.webp',
     readTime: '18 Min. Lesezeit',
     targetKeywords: [
       'apple mlx vs nvidia cuda lokale llm',
@@ -598,7 +598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: 'Leistungs-Benchmarks: Tokens pro Sekunde nach Modell',
-        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-de.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-de.webp',
         imageCaption: 'Inferenzgeschwindigkeits-Vergleich: RTX 4090 liefert ~150 Tok/s bei Llama 3 8B, kann 70B aber nicht laden; M5 Max 128GB liefert ~75 Tok/s bei 8B und ~18 Tok/s bei 70B.',
         content: 'Inferenzgeschwindigkeit wird in Tokens pro Sekunde (Tok/s) gemessen — höher ist besser für interaktive Nutzung. NVIDIA dominiert bei kleinen Modell-Geschwindigkeiten; Apple gewinnt, wenn Modelle die VRAM-Kapazität überschreiten.',
         snippetBlocks: [
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cost: {
         id: 'cost',
         title: 'Kostenvergleich: Gesamtsystemkosten nach Modellgröße',
-        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-de.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-de.webp',
         imageCaption: 'Gesamtsystemkosten für 7B bis 120B+ Modelle lokal: NVIDIA gewinnt unter 1.500 €; Apple gewinnt auf der 70B-Ebene (Mac Studio M4 Max 64GB ~3.199 € vs 7.000+ € Multi-GPU-System).',
         content: 'Gesamtsystemkosten umfassen GPU-Karte plus PC-Build für NVIDIA; nur den Mac für Apple. Der Schnittpunkt, wo Apple günstiger wird, ist die 70B-Modellebene.',
         snippetBlocks: [
@@ -913,7 +913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Apple MLX vs NVIDIA CUDA pour LLMs locaux : Quel système choisir en 2026 ?',
     seoTitle: 'M5 Max vs RTX 5090 : Benchmarks LLM locaux 2026',
     metaDescription: 'Apple M5 Max vs RTX 5090 : 75 tok/s vs 150 tok/s sur Llama 3 8B — Llama 70B tient dans le M5 Max, pas dans le RTX 4090. Benchmark, coût total et conso 2026.',
-    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-fr.png',
+    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-fr.webp',
     readTime: '18 min de lecture',
     targetKeywords: [
       'apple mlx vs nvidia cuda llm local',
@@ -1045,7 +1045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: 'Benchmarks de performance : tokens par seconde par modèle',
-        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-fr.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-fr.webp',
         imageCaption: 'Comparaison de vitesse d\'inférence : RTX 4090 atteint ~150 tok/s sur Llama 3 8B mais ne peut pas charger 70B ; M5 Max 128Go fait ~75 tok/s sur 8B et ~18 tok/s sur 70B.',
         content: 'La vitesse d\'inférence est mesurée en tokens par seconde (tok/s) — plus c\'est élevé, mieux c\'est pour l\'utilisation interactive. NVIDIA domine la vitesse sur les petits modèles ; Apple gagne quand les modèles dépassent la capacité VRAM.',
         snippetBlocks: [
@@ -1071,7 +1071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cost: {
         id: 'cost',
         title: 'Comparaison des coûts : coût système total par taille de modèle',
-        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-fr.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-fr.webp',
         imageCaption: 'Coût système total pour faire tourner des modèles de 7B à 120B+ en local : NVIDIA gagne sous 1 500 € ; Apple gagne au niveau 70B (Mac Studio M4 Max 64Go ~3 199 € vs 7 000 €+ système multi-GPU).',
         content: 'Le coût système total inclut la carte GPU plus le PC pour NVIDIA ; juste le Mac pour Apple. Le point de croisement où Apple devient moins cher est le niveau des modèles 70B.',
         snippetBlocks: [
@@ -1360,7 +1360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Apple MLX vs NVIDIA CUDA ローカルLLM比較：2026年どちらを選ぶべきか？',
     seoTitle: 'M5 Max vs RTX 5090 ローカルLLM比較 2026',
     metaDescription: 'M5 Max vs RTX 5090：Llama 3 8Bで75 tok/s対150 tok/s。70BはM5 Maxに収まるがRTX 4090では不可。ベンチマーク・コスト・消費電力 2026年比較。',
-    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ja.png',
+    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ja.webp',
     readTime: '18分で読める',
     targetKeywords: [
       'apple mlx vs nvidia cuda ローカルllm',
@@ -1492,7 +1492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: 'パフォーマンスベンチマーク：モデル別トークン/秒',
-        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ja.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ja.webp',
         imageCaption: '推論速度比較：RTX 4090はLlama 3 8Bで約150トークン/秒だが70Bをロード不可；M5 Max 128GBは8Bで約75、70Bで約18トークン/秒。',
         content: '推論速度はトークン/秒（tok/s）で測定—インタラクティブな使用では高いほど良い。NVIDIAは小型モデルの速度で優位；AppleはモデルがVRAM容量を超える場合に勝ります。',
         snippetBlocks: [
@@ -1518,7 +1518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cost: {
         id: 'cost',
         title: 'コスト比較：モデルサイズ別総システムコスト',
-        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-ja.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-ja.webp',
         imageCaption: '7Bから120B以上のモデルをローカルで実行する総システムコスト：NVIDIAは30万円以下で優位；Appleは70Bレベルで優位（Mac Studio M4 Max 64GB ~299,800円 vs マルチGPUシステム700,000円以上）。',
         content: '総システムコストにはNVIDIAのGPUカード＋PCビルドが含まれ；Appleの場合はMacだけ。AppleがNVIDIAより安くなる分岐点は70Bモデルレベル。',
         snippetBlocks: [
@@ -1807,7 +1807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Apple MLX vs NVIDIA CUDA 本地LLM对比：2026年该选哪个系统？',
     seoTitle: 'M5 Max vs RTX 5090：本地LLM基准测试2026',
     metaDescription: 'Apple M5 Max vs RTX 5090：Llama 3 8B速度75 tok/s对150 tok/s。70B模型可装入M5 Max统一内存，RTX 4090 24GB VRAM无法容纳。基准、成本与功耗对比2026。',
-    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-zh.png',
+    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-zh.webp',
     readTime: '18分钟阅读',
     targetKeywords: [
       'apple mlx vs nvidia cuda 本地llm',
@@ -1939,7 +1939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: '性能基准测试：各模型每秒token数',
-        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-zh.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-zh.webp',
         imageCaption: '推理速度对比：RTX 4090在Llama 3 8B上约150 tok/s但无法加载70B；M5 Max 128GB在8B上约75、70B约18 tok/s。',
         content: '推理速度以每秒token数（tok/s）衡量——越高越好用于交互。NVIDIA在小模型速度上占优；Apple在模型超出VRAM容量时获胜。',
         snippetBlocks: [
@@ -1965,7 +1965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cost: {
         id: 'cost',
         title: '成本对比：各模型大小的总系统成本',
-        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-zh.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-zh.webp',
         imageCaption: '本地运行7B到120B以上模型的总系统成本：NVIDIA在15,000元以下更便宜；Apple在70B级别更便宜（Mac Studio M4 Max 64GB约22,500元 vs 50,000元以上多GPU系统）。',
         content: '总系统成本NVIDIA包含显卡加PC构建；Apple只是Mac本身。Apple变得更便宜的交叉点是70B模型级别。',
         snippetBlocks: [
@@ -2254,7 +2254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Apple MLX vs NVIDIA CUDA para LLMs locales: ¿Qué sistema elegir en 2026?',
     seoTitle: 'M5 Max vs RTX 5090: Benchmarks LLM locales 2026',
     metaDescription: 'Apple M5 Max vs RTX 5090: 75 tok/s vs 150 tok/s en Llama 3 8B — Llama 70B cabe en M5 Max, no en RTX 4090. Benchmark, costo total y consumo eléctrico 2026.',
-    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-es.png',
+    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-es.webp',
     readTime: '18 min de lectura',
     targetKeywords: [
       'apple mlx vs nvidia cuda llm local',
@@ -2386,7 +2386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: 'Benchmarks de rendimiento: tokens por segundo por modelo',
-        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-es.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-es.webp',
         imageCaption: 'Comparativa de velocidad de inferencia: RTX 4090 entrega ~150 tok/s en Llama 3 8B pero no puede cargar el 70B; M5 Max 128GB entrega ~75 tok/s en 8B y ~18 tok/s en 70B.',
         content: 'La velocidad de inferencia se mide en tokens por segundo (tok/s) — cuanto mayor, mejor para uso interactivo. NVIDIA domina en velocidad con modelos pequeños; Apple gana cuando los modelos superan la [capacidad de VRAM](/es/local-llms/how-much-vram-local-llm).',
         snippetBlocks: [
@@ -2413,7 +2413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cost: {
         id: 'cost',
         title: 'Comparativa de costos: costo total del sistema por tamaño de modelo',
-        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-es.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-es.webp',
         imageCaption: 'Costo total del sistema para correr modelos de 7B a 120B+ en local: NVIDIA gana por debajo de $1,500; Apple gana en el nivel de 70B (Mac Studio M4 Max 64GB ~$3,199 vs más de $7,000 sistema multi-GPU).',
         content: 'El costo total del sistema incluye la tarjeta GPU más el PC para NVIDIA; solo el Mac para Apple. El punto de cruce donde Apple resulta más barata es el nivel de los modelos de 70B.',
         snippetBlocks: [
@@ -2719,7 +2719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Apple MLX vs NVIDIA CUDA para LLMs locais: qual sistema escolher em 2026?',
     seoTitle: 'M5 Max vs RTX 5090: Benchmarks LLM locais 2026',
     metaDescription: 'Apple M5 Max vs RTX 5090: 75 tok/s vs 150 tok/s no Llama 3 8B — Llama 70B cabe no M5 Max, não na RTX 4090. Benchmark, custo total e consumo de energia 2026.',
-    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-pt.png',
+    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-pt.webp',
     readTime: '18 min de leitura',
     targetKeywords: [
       'apple mlx vs nvidia cuda llm local',
@@ -2851,7 +2851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: 'Benchmarks de desempenho: tokens por segundo por modelo',
-        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-pt.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-pt.webp',
         imageCaption: 'Comparação de velocidade de inferência entre hardwares: a RTX 4090 entrega ~150 tok/s no Llama 3 8B mas não consegue carregar o 70B; o M5 Max 128GB entrega ~75 tok/s no 8B e ~18 tok/s no 70B.',
         content: 'A velocidade de inferência é medida em tokens por segundo (tok/s) — quanto maior, melhor para uso interativo. A NVIDIA domina na velocidade de modelos pequenos; a Apple vence quando os modelos excedem a [capacidade de VRAM](/pt/local-llms/how-much-vram-local-llm).',
         snippetBlocks: [
@@ -2878,7 +2878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cost: {
         id: 'cost',
         title: 'Comparativo de custos: custo total do sistema por tamanho de modelo',
-        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-pt.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-pt.webp',
         imageCaption: 'Custo total do sistema para rodar modelos de 7B a 120B+ localmente: a NVIDIA vence abaixo de $1,500; a Apple vence no nível de 70B (Mac Studio M4 Max 64GB ~$3,199 em um único dispositivo vs mais de $7,000 em um sistema multi-GPU).',
         content: 'O custo total do sistema inclui a placa GPU mais o PC para a NVIDIA; apenas o Mac para a Apple. O ponto de cruzamento em que a Apple fica mais barata é o nível dos modelos de 70B.',
         snippetBlocks: [
@@ -3184,7 +3184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '⁨Apple MLX⁩ مقابل ⁨NVIDIA CUDA⁩ لنماذج اللغة الكبيرة المحلية: أيهما تختار في ⁨2026⁩؟',
     seoTitle: '⁨M5 Max⁩ مقابل ⁨RTX 5090⁩: معايير ⁨LLM⁩ المحلية ⁨2026⁩',
     metaDescription: '⁨M5 Max⁩ مقابل ⁨RTX 5090⁩: ⁨75 tok/s⁩ مقابل ⁨150 tok/s⁩ على ⁨Llama 3 8B⁩ — نموذج ⁨70B⁩ يعمل على ⁨M5 Max⁩ لا على ⁨RTX 4090⁩. معايير الأداء والتكلفة والطاقة ⁨2026⁩.',
-    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ar.png',
+    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ar.webp',
     readTime: '18 دقائق قراءة',
     targetKeywords: [
       'apple mlx مقابل nvidia cuda نماذج لغة كبيرة محلية',
@@ -3316,7 +3316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: 'معايير الأداء: الرموز في الثانية لكل نموذج',
-        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ar.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ar.webp',
         imageCaption: 'مقارنة سرعة الاستنتاج عبر الأجهزة: RTX 4090 تُقدّم ~150 رمز/ثانية في Llama 3 8B لكنها لا تستطيع تحميل النموذج 70B؛ M5 Max 128GB تُقدّم ~75 رمز/ثانية في النموذج 8B وأيضًا تشغّل Llama 3 70B بـ~18 رمز/ثانية.',
         content: 'تُقاس سرعة الاستنتاج بالرموز في الثانية — كلما ارتفعت كانت أفضل للاستخدام التفاعلي. تهيمن NVIDIA على السرعة مع النماذج الصغيرة؛ وتفوز Apple حين تتجاوز النماذج [سعة VRAM](/ar/local-llms/how-much-vram-local-llm).',
         snippetBlocks: [
@@ -3343,7 +3343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cost: {
         id: 'cost',
         title: 'مقارنة التكاليف: التكلفة الإجمالية للنظام حسب حجم النموذج',
-        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-ar.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-ar.webp',
         imageCaption: 'التكلفة الإجمالية للنظام لتشغيل نماذج من 7B إلى 120B+ محليًا: NVIDIA تفوز دون 1,500 دولار؛ Apple تفوز عند مستوى 70B (Mac Studio M4 Max 64GB ~3,199 دولارًا لجهاز واحد مقابل أكثر من 7,000 دولار لنظام متعدد GPU).',
         content: 'تشمل التكلفة الإجمالية للنظام لوحة GPU بالإضافة إلى الحاسوب الشخصي لـNVIDIA؛ وجهاز Mac فقط لـApple. نقطة التقاطع حيث تصبح Apple أرخص هي مستوى نماذج 70B.',
         snippetBlocks: [
@@ -3649,7 +3649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Apple MLX vs NVIDIA CUDA 로컬 LLM: 2026년에 어떤 시스템을 선택해야 합니까?',
     seoTitle: 'M5 Max vs RTX 5090 로컬 LLM 비교 2026',
     metaDescription: 'Apple M5 Max vs RTX 5090: Llama 3 8B에서 75 tok/s vs 150 tok/s — 70B 모델은 M5 Max에 적합, RTX 4090 24GB VRAM으로는 불가. 벤치마크·비용·전력 비교 2026.',
-    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ko.png',
+    heroImage: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ko.webp',
     readTime: '18분 분량',
     targetKeywords: [
       'apple mlx vs nvidia cuda 로컬 llm',
@@ -3781,7 +3781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarks: {
         id: 'benchmarks',
         title: '성능 벤치마크: 모델별 토큰/초',
-        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ko.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-ko.webp',
         imageCaption: '추론 속도 비교: RTX 4090은 Llama 3 8B에서 ~150 tok/s를 달성하지만 70B는 탑재 불가; M5 Max 128GB는 8B에서 ~75 tok/s, 70B에서 ~18 tok/s를 달성합니다.',
         content: '추론 속도는 토큰/초(tok/s)로 측정됩니다 — 높을수록 대화형 사용에 좋습니다. NVIDIA는 소형 모델에서 속도가 우세하며, Apple은 모델이 [VRAM 용량](/ko/local-llms/how-much-vram-local-llm)을 초과할 때 우세합니다.',
         snippetBlocks: [
@@ -3808,7 +3808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cost: {
         id: 'cost',
         title: '비용 비교: 모델 크기별 총 시스템 비용',
-        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-ko.png',
+        image: '/images/apple-mlx-vs-nvidia-cuda-cost-hero-ko.webp',
         imageCaption: '로컬에서 7B~120B+ 모델 실행을 위한 총 시스템 비용: $1,500 미만에서는 NVIDIA 우세; 70B 수준(Mac Studio M4 Max 64GB ~$3,199 단일 장치 vs $7,000+ 멀티 GPU 시스템)에서는 Apple 우세.',
         content: '총 시스템 비용에는 NVIDIA의 경우 GPU 카드 플러스 PC가 포함되며, Apple의 경우 Mac만 포함됩니다. Apple이 더 저렴해지는 교차점은 70B 모델 수준입니다.',
         snippetBlocks: [

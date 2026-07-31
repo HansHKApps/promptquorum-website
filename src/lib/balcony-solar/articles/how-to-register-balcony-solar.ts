@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-02',
     last_full_refresh: '2026-07-02',
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/how-to-register-balcony-solar-overview-hero-en.png',
+    heroImage: '/images/how-to-register-balcony-solar-overview-hero-en.webp',
     title: 'How to Register Balcony Solar: Country-by-Country Requirements',
     seoTitle: 'Balcony Solar Registration Requirements by Country (2026)',
     intro: 'Registration requirements for balcony solar range from "none at all" to a full formal application process — and the difference depends entirely on which country and, in the US, which state you\'re in. This guide also covers plug type and typical hardware cost by market, detail that used to live in the installation guide before we split it out here to keep that page durably evergreen.',
@@ -176,7 +176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/how-to-register-balcony-solar-overview-hero-es.png',
+    heroImage: '/images/how-to-register-balcony-solar-overview-hero-es.webp',
     title: 'Cómo registrar energía solar de balcón: requisitos por país',
     seoTitle: 'Requisitos de registro de energía solar de balcón por país (2026)',
     intro: 'Los requisitos de registro para la energía solar de balcón van desde "ninguno en absoluto" hasta un proceso de solicitud formal completo, y la diferencia depende por completo del país y, en EE. UU., del estado en el que te encuentres. Esta guía también cubre el tipo de enchufe y el costo típico del equipo por mercado, un detalle que antes formaba parte de la guía de instalación antes de separarlo aquí para mantener esa página de forma duradera evergreen.',
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/how-to-register-balcony-solar-overview-hero-pt.png',
+    heroImage: '/images/how-to-register-balcony-solar-overview-hero-pt.webp',
     title: 'Como registrar energia solar de varanda: requisitos por país',
     seoTitle: 'Requisitos de registro de energia solar de varanda por país (2026)',
     intro: 'Os requisitos de registro para energia solar de varanda variam de "nenhum" a um processo de solicitação formal completo — e a diferença depende inteiramente do país e, nos EUA, do estado em que você está. Este guia também cobre o tipo de plugue e o custo típico do equipamento por mercado, um detalhe que antes fazia parte do guia de instalação antes de ser separado aqui para manter aquela página de forma durável evergreen.',
@@ -482,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/how-to-register-balcony-solar-overview-hero-ar.png',
+    heroImage: '/images/how-to-register-balcony-solar-overview-hero-ar.webp',
     title: 'كيفية تسجيل الطاقة الشمسية للشرفة: المتطلبات حسب الدولة',
     seoTitle: 'متطلبات تسجيل الطاقة الشمسية للشرفة حسب الدولة (2026)',
     intro: 'تتراوح متطلبات تسجيل أنظمة الطاقة الشمسية للشرفة (balcony solar) بين "عدم وجود أي تسجيل على الإطلاق" وعملية تقديم طلب رسمية كاملة — ويعتمد الفرق كليًا على الدولة، وفي الولايات المتحدة، على الولاية التي تقيم فيها. يغطي هذا الدليل أيضًا نوع القابس والتكلفة النموذجية للمعدات حسب السوق، وهو تفصيل كان يُدرج سابقًا ضمن دليل التركيب قبل أن يُفصل هنا للحفاظ على تلك الصفحة خالدة المحتوى (evergreen) بشكل دائم.',
@@ -635,7 +635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/how-to-register-balcony-solar-overview-hero-ja.png',
+    heroImage: '/images/how-to-register-balcony-solar-overview-hero-ja.webp',
     title: 'バルコニーソーラーの登録方法:国別の要件',
     seoTitle: '国別バルコニーソーラー登録要件ガイド(2026年)',
     intro: 'バルコニーソーラーの登録要件は「登録がまったく不要」から「正式な申請手続きが完全に必要」まで幅広く、その違いは国、そして米国の場合は州によって完全に決まります。このガイドでは、プラグの種類や市場ごとの一般的な機材価格も扱います。これらの情報は以前は設置ガイドに含まれていましたが、そのページを恒久的にevergreen(時代に左右されない内容)に保つため、こちらに切り出しました。',
@@ -788,7 +788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/how-to-register-balcony-solar-overview-hero-zh.png',
+    heroImage: '/images/how-to-register-balcony-solar-overview-hero-zh.webp',
     title: '如何注册阳台光伏系统:各国要求详解',
     seoTitle: '各国阳台光伏注册要求指南(2026年)',
     intro: '阳台光伏的注册要求差异极大,从"完全不需要注册"到"需要走完整的正式申请流程"都有——具体取决于所在国家,在美国还取决于所在州。本指南还涵盖了各市场的插头类型和典型硬件价格,这部分内容原本属于安装指南,现拆分至本页,以便让那篇指南保持真正的常青(evergreen)内容。',
@@ -941,7 +941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/how-to-register-balcony-solar-overview-hero-fr.png',
+    heroImage: '/images/how-to-register-balcony-solar-overview-hero-fr.webp',
     title: 'Comment enregistrer un kit solaire de balcon : les exigences pays par pays',
     seoTitle: 'Exigences d\'enregistrement du solaire de balcon par pays (2026)',
     intro: 'Les exigences d\'enregistrement pour le solaire de balcon vont de « aucune obligation » à une procédure de demande formelle complète — et la différence dépend entièrement du pays et, aux États-Unis, de l\'État concerné. Ce guide couvre également le type de prise et le coût matériel habituel par marché, un détail qui figurait auparavant dans le guide d\'installation avant d\'être déplacé ici pour garder cette page durablement evergreen.',
@@ -1094,7 +1094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/how-to-register-balcony-solar-overview-hero-ko.png',
+    heroImage: '/images/how-to-register-balcony-solar-overview-hero-ko.webp',
     title: '발코니 태양광 등록 방법: 국가별 요건 안내',
     seoTitle: '국가별 발코니 태양광 등록 요건 가이드 (2026년)',
     intro: '발코니 태양광의 등록 요건은 "전혀 필요 없음"부터 완전한 공식 신청 절차까지 매우 다양하며, 그 차이는 전적으로 어느 나라인지, 그리고 미국의 경우 어느 주인지에 따라 달라집니다. 이 가이드는 시장별 플러그 유형과 일반적인 하드웨어 비용도 함께 다룹니다. 이 내용은 원래 설치 가이드에 포함되어 있었지만, 그 페이지를 영구적으로 evergreen 콘텐츠로 유지하기 위해 이 페이지로 분리했습니다.',
@@ -1247,7 +1247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/how-to-register-balcony-solar-overview-hero-de.png',
+    heroImage: '/images/how-to-register-balcony-solar-overview-hero-de.webp',
     title: 'Balkonkraftwerk anmelden: Länderübersicht der Anforderungen',
     seoTitle: 'Balkonkraftwerk Anmeldung: Anforderungen nach Land (2026)',
     intro: 'Die Anmeldepflicht für Balkonkraftwerke reicht von „überhaupt keine Anmeldung" bis hin zu einem vollständigen formellen Genehmigungsverfahren — und der Unterschied hängt vollständig vom jeweiligen Land und in den USA vom jeweiligen Bundesstaat ab. Dieser Leitfaden behandelt außerdem Steckertypen und typische Hardware-Preise je Markt, da beides stark vom Herkunftsland abhängt.',

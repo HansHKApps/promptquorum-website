@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-korean-language-models-local-overview-hero-en.png',
+    heroImage: '/images/best-korean-language-models-local-overview-hero-en.webp',
     title: 'Which Local LLM Models Support Korean Best?',
     seoTitle: 'Best Local LLM Models for Korean 2026 | Prompt Bites',
     metaDescription: 'EXAONE 3.5 (LG AI Research) is the best local LLM for Korean, trained bilingually in Korean-English. Qwen3 is the best multilingual alternative.',
@@ -100,7 +100,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-korean-language-models-local-overview-hero-ar.png',
+    heroImage: '/images/best-korean-language-models-local-overview-hero-ar.webp',
     title: 'أي نماذج LLM محلية تدعم الكورية بشكل أفضل؟',
     seoTitle: 'أفضل نماذج LLM محلية للكورية 2026 | Prompt Bites',
     metaDescription: 'نموذج EXAONE 3.5 (LG AI Research) هو الأفضل محليًا للكورية — مبني خصيصًا بتدريب ثنائي اللغة كورية-إنجليزية قوي. Qwen3 هو أفضل بديل متعدد اللغات.',
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-korean-language-models-local-overview-hero-de.png',
+    heroImage: '/images/best-korean-language-models-local-overview-hero-de.webp',
     title: 'Welche lokalen LLM-Modelle unterstützen Koreanisch am besten?',
     seoTitle: 'Beste lokale LLM-Modelle für Koreanisch 2026 | Prompt Bites',
     metaDescription: 'EXAONE 3.5 (LG AI Research) ist das beste lokale LLM für Koreanisch, trainiert in Koreanisch-Englisch. Qwen3 ist die beste mehrsprachige Alternative.',
@@ -292,7 +292,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-korean-language-models-local-overview-hero-es.png',
+    heroImage: '/images/best-korean-language-models-local-overview-hero-es.webp',
     title: '¿Qué Modelos de LLM Local Soportan Mejor el Coreano?',
     seoTitle: 'Mejores Modelos de LLM Local para Coreano 2026 | Prompt Bites',
     metaDescription: 'EXAONE 3.5 (LG AI Research) es el mejor LLM local para coreano, entrenado en coreano-inglés bilingüe. Qwen3 es la mejor alternativa multilingüe.',
@@ -388,7 +388,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-korean-language-models-local-overview-hero-fr.png',
+    heroImage: '/images/best-korean-language-models-local-overview-hero-fr.webp',
     title: 'Quels modèles de LLM local prennent le mieux en charge le coréen ?',
     seoTitle: 'Meilleurs modèles de LLM local pour le coréen 2026',
     metaDescription: 'EXAONE 3.5 (LG AI Research) est le meilleur LLM local pour le coréen, entraîné en bilingue coréen-anglais. Qwen3 est la meilleure alternative multilingue.',
@@ -484,7 +484,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-korean-language-models-local-overview-hero-ja.png',
+    heroImage: '/images/best-korean-language-models-local-overview-hero-ja.webp',
     title: '韓国語に最も対応したローカルLLMモデルは?',
     seoTitle: '2026年版 韓国語向け最適ローカルLLMモデル | Prompt Bites',
     metaDescription: 'EXAONE 3.5(LG AI Research)は韓国語に最適なローカルLLMです — 強力なバイリンガル韓国語-英語トレーニングを備えて構築されています。Qwen3が最良の多言語代替案です。',
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-korean-language-models-local-overview-hero-ko.png',
+    heroImage: '/images/best-korean-language-models-local-overview-hero-ko.webp',
     title: '어떤 로컬 LLM 모델이 한국어를 가장 잘 지원하는가?',
     seoTitle: '2026년 한국어 최적 로컬 LLM 모델 | Prompt Bites',
     metaDescription: 'EXAONE 3.5(LG AI연구원)는 한국어를 가장 잘 지원하는 로컬 LLM입니다 — 강력한 한영 이중언어 훈련을 갖췄습니다. Qwen3는 최고의 다국어 대안입니다.',
@@ -676,7 +676,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-korean-language-models-local-overview-hero-pt.png',
+    heroImage: '/images/best-korean-language-models-local-overview-hero-pt.webp',
     title: 'Quais Modelos de LLM Local Suportam Melhor o Coreano?',
     seoTitle: 'Melhores Modelos de LLM Local para Coreano 2026',
     metaDescription: 'O EXAONE 3.5 (LG AI Research) é o melhor LLM local para coreano, treinado em coreano-inglês bilíngue. O Qwen3 é a melhor alternativa multilíngue.',
@@ -772,7 +772,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-korean-language-models-local-overview-hero-zh.png',
+    heroImage: '/images/best-korean-language-models-local-overview-hero-zh.webp',
     title: '哪些本地 LLM 模型对韩语支持最好？',
     seoTitle: '2026 年韩语最佳本地 LLM 模型 | Prompt Bites',
     metaDescription: 'EXAONE 3.5（LG AI Research）是韩语支持最好的本地 LLM——专为强大的韩英双语训练打造。Qwen3 是最佳的多语言替代方案。',

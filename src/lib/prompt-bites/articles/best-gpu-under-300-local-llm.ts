@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-en.png',
+    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-en.webp',
     title: 'RTX 3060 12GB: Best GPU Under $300 for Local LLMs (2026)?',
     seoTitle: 'RTX 3060 12GB for Local LLM 2026: Best GPU Under $300',
     metaDescription: 'RTX 3060 12GB (~$200–250 used, 2026) is the best GPU under $300 for local LLMs — runs every 7B and most 14B at Q4; its 360 GB/s bandwidth beats the RTX 4060 on speed.',
@@ -185,7 +185,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-de.png',
+    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-de.webp',
     title: 'RTX 3060 12GB: Beste GPU unter 300 € für lokale LLMs (2026)?',
     seoTitle: 'RTX 3060 12GB für lokale LLMs 2026: Beste GPU unter 300 €',
     metaDescription: 'RTX 3060 12GB (~200–250 € gebraucht, 2026) ist die beste GPU unter 300 € für lokale LLMs — führt jedes 7B und die meisten 14B bei Q4 aus; ihre 360 GB/s Bandbreite schlägt die RTX 4060 beim Tempo.',
@@ -327,7 +327,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-fr.png',
+    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-fr.webp',
     title: 'RTX 3060 12GB : meilleur GPU sous 300 € pour LLM local (2026) ?',
     seoTitle: 'RTX 3060 12GB pour LLM local 2026 : meilleur GPU sous 300 €',
     metaDescription: 'RTX 3060 12GB (~200–250 € d\'occasion, 2026) est le meilleur GPU sous 300 € pour LLM local — exécute tout 7B et la plupart des 14B en Q4 ; ses 360 GB/s de bande passante battent la RTX 4060 en vitesse.',
@@ -469,7 +469,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-ja.png',
+    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-ja.webp',
     title: 'RTX 3060 12GB：ローカルLLM向け300ドル以下ベストGPU（2026年）？',
     seoTitle: 'RTX 3060 12GB ローカルLLM 2026：300ドル以下ベストGPU',
     metaDescription: 'RTX 3060 12GB（中古2万5千〜3万円、2026年）はローカルLLM向け300ドル以下ベストGPU — 全7Bと大半の14BをQ4で動作。360 GB/sの帯域幅は速度でRTX 4060を上回る。',
@@ -611,7 +611,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-zh.png',
+    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-zh.webp',
     title: 'RTX 3060 12GB：300美元以下本地LLM最佳GPU（2026）？',
     seoTitle: 'RTX 3060 12GB 本地LLM 2026：300美元以下最佳GPU',
     metaDescription: 'RTX 3060 12GB（二手约$200–250，2026年）是300美元以下本地LLM最佳GPU — 可在Q4下运行所有7B和大多数14B；其360 GB/s带宽在速度上超越RTX 4060。',
@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-es.png',
+    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-es.webp',
     title: 'RTX 3060 12GB: mejor GPU bajo $300 para LLMs locales (2026)?',
     seoTitle: 'RTX 3060 12GB para LLM local 2026: mejor GPU bajo $300',
     metaDescription: 'RTX 3060 12GB (~200–250 € usada, 2026) es la mejor GPU bajo $300 para LLMs locales — ejecuta todo 7B y la mayoría de 14B en Q4; sus 360 GB/s de ancho de banda superan a la RTX 4060 en velocidad.',
@@ -895,7 +895,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-pt.png',
+    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-pt.webp',
     title: 'RTX 3060 12GB: melhor GPU abaixo de $300 para LLMs locais (2026)?',
     seoTitle: 'RTX 3060 12GB para LLM local 2026: melhor GPU abaixo de $300',
     metaDescription: 'RTX 3060 12GB (~R$ 1.600–1.800 usada, 2026) é a melhor GPU abaixo de $300 para LLMs locais — roda todo 7B e a maioria dos 14B em Q4; seus 360 GB/s de banda superam a RTX 4060 em velocidade.',
@@ -1037,7 +1037,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-ar.png',
+    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-ar.webp',
     title: '⁨RTX 3060 12GB⁩: أفضل ⁨GPU⁩ بأقل من ⁨$300⁩ لنماذج اللغة المحلية (⁨2026⁩)؟',
     seoTitle: '⁨RTX 3060 12GB⁩ لـ ⁨LLM⁩ المحلي ⁨2026⁩: أفضل ⁨GPU⁩ بأقل من ⁨$300⁩',
     metaDescription: '⁨RTX 3060 12GB⁩ (مستعملة ~⁨$200–250⁩، ⁨2026⁩) أفضل ⁨GPU⁩ بأقل من ⁨$300⁩ لـ ⁨LLMs⁩ المحلية — تشغّل كل ⁨7B⁩ وأغلب ⁨14B⁩ بـ ⁨Q4⁩؛ عرض نطاقها ⁨360 GB/s⁩ يتفوق على ⁨RTX 4060⁩ في السرعة.',
@@ -1179,7 +1179,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-ko.png',
+    heroImage: '/images/best-gpu-under-300-local-llm-overview-hero-ko.webp',
     title: 'RTX 3060 12GB: $300 이하 로컬 LLM 최고의 GPU (2026)?',
     seoTitle: 'RTX 3060 12GB 로컬 LLM 2026: $300 이하 최고 GPU',
     metaDescription: 'RTX 3060 12GB (중고 ~$200–250, 2026)는 $300 이하 로컬 LLM 최고 GPU — 모든 7B와 대부분의 14B를 Q4로 실행하며, 360 GB/s 대역폭이 속도에서 RTX 4060을 능가합니다.',

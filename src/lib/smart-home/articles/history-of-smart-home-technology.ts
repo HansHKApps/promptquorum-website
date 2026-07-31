@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/history-of-smart-home-technology-overview-hero-en.png',
+    heroImage: '/images/history-of-smart-home-technology-overview-hero-en.webp',
     title: 'Smart Home History: From X10 to Local AI (2026)',
     seoTitle: 'Smart Home Technology History: X10 to Local AI (2026)',
     intro:
@@ -202,7 +202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/history-of-smart-home-technology-overview-hero-ar.png',
+    heroImage: '/images/history-of-smart-home-technology-overview-hero-ar.webp',
     title: 'تاريخ المنزل الذكي: من ⁨X10⁩ إلى الذكاء الاصطناعي المحلي (⁨2026⁩)',
     seoTitle: 'تاريخ المنزل الذكي: من ⁨X10⁩ إلى الذكاء الاصطناعي (⁨2026⁩)',
     intro:
@@ -396,7 +396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/history-of-smart-home-technology-overview-hero-de.png',
+    heroImage: '/images/history-of-smart-home-technology-overview-hero-de.webp',
     title: 'Geschichte des Smart Home: Von X10 zur lokalen KI (2026)',
     seoTitle: 'Smart-Home-Geschichte: Von X10 bis zur lokalen KI (2026)',
     intro:
@@ -590,7 +590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/history-of-smart-home-technology-overview-hero-es.png',
+    heroImage: '/images/history-of-smart-home-technology-overview-hero-es.webp',
     title: 'Historia del Smart Home: De X10 a la IA Local (2026)',
     seoTitle: 'Historia del Smart Home: De X10 a la IA Local en 2026',
     intro:
@@ -784,7 +784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/history-of-smart-home-technology-overview-hero-ko.png',
+    heroImage: '/images/history-of-smart-home-technology-overview-hero-ko.webp',
     title: '스마트 홈의 역사: X10부터 로컬 AI까지 (2026)',
     seoTitle: '스마트 홈 기술의 역사: X10부터 로컬 AI까지 (2026)',
     intro:
@@ -978,7 +978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/history-of-smart-home-technology-overview-hero-fr.png',
+    heroImage: '/images/history-of-smart-home-technology-overview-hero-fr.webp',
     title: 'Histoire de la Maison Connectée : de X10 à l\'IA Locale (2026)',
     seoTitle: 'Histoire de la Maison Connectée : X10 à l\'IA (2026)',
     intro:
@@ -1172,7 +1172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/history-of-smart-home-technology-overview-hero-ja.png',
+    heroImage: '/images/history-of-smart-home-technology-overview-hero-ja.webp',
     title: 'スマートホームの歴史：X10からローカルAIへ（2026）',
     seoTitle: 'スマートホームの進化史（2026年版）：X10からMatterまでローカルAIへの転換を追う',
     intro:
@@ -1366,7 +1366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/history-of-smart-home-technology-overview-hero-pt.png',
+    heroImage: '/images/history-of-smart-home-technology-overview-hero-pt.webp',
     title: 'História da Casa Inteligente: do X10 à IA Local (2026)',
     seoTitle: 'História da Casa Inteligente: X10 à IA Local (2026)',
     intro:
@@ -1560,7 +1560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Smart Home Foundations',
-    heroImage: '/images/history-of-smart-home-technology-overview-hero-zh.png',
+    heroImage: '/images/history-of-smart-home-technology-overview-hero-zh.webp',
     title: '智能家居简史：从 X10 到本地AI（2026）',
     seoTitle: '智能家居技术发展完整史2026：X10电力线协议到本地人工智能控制的五十年',
     intro:

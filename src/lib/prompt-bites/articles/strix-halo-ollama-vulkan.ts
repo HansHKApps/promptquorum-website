@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-en.png',
+    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-en.webp',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: Setup and Performance',
     dateModified: '2026-07-01',
     seoTitle: 'Strix Halo Ollama Vulkan: Context Limit & Setup 2026',
@@ -173,7 +173,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-de.png',
+    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-de.webp',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: Einrichtung und Performance',
     dateModified: '2026-07-01',
     seoTitle: 'Strix Halo Ollama Vulkan: Kontextlimit & Setup 2026',
@@ -296,7 +296,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-fr.png',
+    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-fr.webp',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan : configuration et performances',
     dateModified: '2026-07-01',
     seoTitle: 'Strix Halo Ollama Vulkan : limite de contexte 2026',
@@ -419,7 +419,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-ja.png',
+    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-ja.webp',
     title: 'Strix Halo（Ryzen AI Max）+ Ollama Vulkan：セットアップとパフォーマンス',
     dateModified: '2026-07-01',
     seoTitle: 'Strix Halo Ollama Vulkan：コンテキスト上限と設定 2026',
@@ -542,7 +542,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-zh.png',
+    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-zh.webp',
     title: 'Strix Halo（Ryzen AI Max）+ Ollama Vulkan：配置与性能',
     dateModified: '2026-07-01',
     seoTitle: 'Strix Halo Ollama Vulkan：上下文上限与配置 2026',
@@ -665,7 +665,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-pt.png',
+    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-pt.webp',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: configuração e desempenho',
     dateModified: '2026-07-01',
     seoTitle: 'Strix Halo Ollama Vulkan: limite de contexto e config 2026',
@@ -787,7 +787,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-es.png',
+    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-es.webp',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: configuración y rendimiento',
     dateModified: '2026-07-01',
     seoTitle: 'Strix Halo Ollama Vulkan: límite de contexto y config 2026',
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-ar.png',
+    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-ar.webp',
     title: '⁨Strix Halo⁩ (⁨Ryzen AI Max⁩) + ⁨Ollama Vulkan⁩: الإعداد والأداء',
     dateModified: '2026-07-01',
     seoTitle: '⁨Strix Halo Ollama Vulkan⁩: حد السياق والإعداد ⁨2026⁩',
@@ -1031,7 +1031,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-ko.png',
+    heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-ko.webp',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: 설정 및 성능',
     dateModified: '2026-07-01',
     seoTitle: 'Strix Halo Ollama Vulkan: 컨텍스트 한도 및 설정 2026',

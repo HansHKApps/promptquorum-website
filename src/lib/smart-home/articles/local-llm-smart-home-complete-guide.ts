@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'A local LLM can now act as the brain of your smart home — interpreting natural-language commands, running context-aware automations, and powering a private voice assistant, all on hardware you own with no cloud. This guide explains what that means, why it became practical in 2026, the Home Assistant + Ollama + local-voice architecture, what it unlocks beyond rule-based automation, and the step-by-step path to build it.',
     metaDescription:
       'Run your smart home on a local LLM: natural-language control, context-aware automations, and private voice via Home Assistant + Ollama. No cloud. 2026 guide.',
-    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-en.png',
+    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-en.webp',
     twitterDescription:
       'Use a local LLM as your smart home brain: natural-language control and context-aware automations via Home Assistant + Ollama. Zero cloud.',
     readTime: '12 min read',
@@ -124,7 +124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'For concrete automation examples and the prompts behind them, see [smarter automations with a local LLM](/smart-home/ai-automations-local-llm).',
           'Keep deterministic safety automations (smoke alarm, door locks) as plain rules — do not route them through the model.',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-en.png',
+        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-en.webp',
         imageCaption: 'Local LLM vs Rule-Based Automation -- What flexibility costs in setup',
       },
       hardware: {
@@ -151,7 +151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Add a fully local voice front-end — [local voice assistant](/smart-home/local-voice-assistant-smart-home).',
           'Design context-aware automations — [AI automations with a local LLM](/smart-home/ai-automations-local-llm).',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-en.png',
+        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-en.webp',
         imageCaption: 'Your Step-by-Step Path -- Build in order',
       },
       faqSection: {
@@ -220,7 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'يمكن لنموذج لغوي محلي الآن أن يكون بمثابة عقل منزلك الذكي — يفسّر الأوامر باللغة الطبيعية، ويُشغِّل الأتمتة الواعية بالسياق، ويُفعِّل مساعدًا صوتيًا خاصًا، كل ذلك على أجهزتك دون أي سحابة. يشرح هذا الدليل ما يعنيه ذلك، ولماذا أصبح عمليًا في 2026، وبنية Home Assistant + Ollama + الصوت المحلي، وما يُفتحه مقارنةً بالأتمتة القائمة على القواعد، والمسار خطوة بخطوة لبنائه.',
     metaDescription:
       'Home Assistant + Ollama يحوِّل نموذجًا محليًا إلى عقل منزلك الذكي — تحكم بلغة طبيعية وأتمتة واعية بالسياق بدون سحابة. 2026.',
-    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-ar.png',
+    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-ar.webp',
     twitterDescription:
       'استخدم نموذجًا لغويًا محليًا كعقل لمنزلك الذكي: تحكم بلغة طبيعية وأتمتة واعية بالسياق عبر Home Assistant + Ollama. بدون سحابة إطلاقًا.',
     readTime: '12 دقائق للقراءة',
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لأمثلة أتمتة ملموسة والمطالبات الكامنة وراءها، راجع [أتمتة أذكى مع نموذج لغوي محلي](/ar/smart-home/ai-automations-local-llm).',
           'احتفظ بالأتمتة الأمنية الحتمية (إنذارات الدخان، أقفال الأبواب) كقواعد عادية — لا تمررها عبر النموذج.',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-ar.png',
+        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-ar.webp',
         imageCaption: 'النموذج المحلي مقابل الأتمتة القائمة على القواعد -- تكلفة إعداد المرونة',
       },
       hardware: {
@@ -357,7 +357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أضف واجهة صوتية محلية كاملة — [مساعد صوتي محلي](/ar/smart-home/local-voice-assistant-smart-home).',
           'صمِّم أتمتة واعية بالسياق — [أتمتة الذكاء الاصطناعي مع نموذج لغوي محلي](/ar/smart-home/ai-automations-local-llm).',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-ar.png',
+        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-ar.webp',
         imageCaption: 'مسارك خطوة بخطوة -- ابنِ بهذا الترتيب',
       },
       faqSection: {
@@ -426,7 +426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Ein lokales LLM kann heute als Gehirn Ihres Smart Homes dienen – es interpretiert natürlichsprachliche Befehle, führt kontextbewusste Automatisierungen aus und betreibt einen privaten Sprachassistenten, alles auf eigener Hardware und ohne Cloud. Dieser Leitfaden erklärt, was das bedeutet, warum es 2026 praxistauglich wurde, die Architektur aus Home Assistant + Ollama + lokaler Sprache, was es gegenüber regelbasierter Automatisierung freischaltet und den Schritt-für-Schritt-Weg zum Aufbau.',
     metaDescription:
       'Smart Home mit lokalem LLM 2026: Natürlichsprachliche Steuerung und kontextbewusste Automatisierungen via Home Assistant + Ollama. Kein Cloud-Dienst.',
-    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-de.png',
+    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-de.webp',
     twitterDescription:
       'Nutzen Sie ein lokales LLM als Smart-Home-Gehirn: natürlichsprachliche Steuerung und kontextbewusste Automatisierungen über Home Assistant + Ollama. Null Cloud.',
     readTime: '12 Min. Lesezeit',
@@ -536,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Konkrete Automatisierungsbeispiele und die zugehörigen Prompts finden Sie unter [smartere Automatisierungen mit einem lokalen LLM](/de/smart-home/ai-automations-local-llm).',
           'Behalten Sie deterministische Sicherheitsautomatisierungen (Rauchmelder, Türschlösser) als einfache Regeln – leiten Sie sie nicht durch das Modell.',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-de.png',
+        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-de.webp',
         imageCaption: 'Lokales LLM vs. Regelbasierte Automatisierung -- Was Flexibilität an Aufwand kostet',
       },
       hardware: {
@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ergänzen Sie ein vollständig lokales Sprach-Frontend – [lokaler Sprachassistent](/de/smart-home/local-voice-assistant-smart-home).',
           'Entwerfen Sie kontextbewusste Automatisierungen – [KI-Automatisierungen mit einem lokalen LLM](/de/smart-home/ai-automations-local-llm).',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-de.png',
+        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-de.webp',
         imageCaption: 'Ihr Schritt-für-Schritt-Pfad -- In dieser Reihenfolge aufbauen',
       },
       faqSection: {
@@ -632,7 +632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Un LLM local ya puede actuar como el cerebro de tu smart home: interpreta comandos en lenguaje natural, ejecuta automatizaciones contextuales y alimenta un asistente de voz privado, todo en hardware propio y sin nube. Esta guía explica qué significa, por qué se volvió práctico en 2026, la arquitectura Home Assistant + Ollama + voz local, qué desbloquea frente a la automatización por reglas y el camino paso a paso para montarlo.',
     metaDescription:
       'Smart home con LLM local 2026: control en lenguaje natural y automatizaciones contextuales via Home Assistant + Ollama. Sin nube.',
-    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-es.png',
+    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-es.webp',
     twitterDescription:
       'Usa un LLM local como cerebro de tu smart home: control en lenguaje natural y automatizaciones contextuales vía Home Assistant + Ollama. Cero nube.',
     readTime: '12 min de lectura',
@@ -742,7 +742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para ejemplos concretos de automatización y los prompts detrás, consulta [automatizaciones más inteligentes con un LLM local](/es/smart-home/ai-automations-local-llm).',
           'Mantén las automatizaciones de seguridad deterministas (alarma de humo, cerraduras) como reglas simples: no las enrutes por el modelo.',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-es.png',
+        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-es.webp',
         imageCaption: 'LLM Local vs Automatización por Reglas -- Lo que cuesta la flexibilidad en configuración',
       },
       hardware: {
@@ -769,7 +769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Añade un frontend de voz totalmente local — [asistente de voz local](/es/smart-home/local-voice-assistant-smart-home).',
           'Diseña automatizaciones contextuales — [automatizaciones con IA con un LLM local](/es/smart-home/ai-automations-local-llm).',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-es.png',
+        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-es.webp',
         imageCaption: 'Tu Ruta Paso a Paso -- Construye en este orden',
       },
       faqSection: {
@@ -838,7 +838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '이제 로컬 LLM이 스마트 홈의 두뇌 역할을 담당할 수 있습니다. 자연어 명령을 해석하고, 문맥 인식 자동화를 실행하며, 프라이빗 음성 어시스턴트를 구동합니다. 이 모든 것이 클라우드 없이 직접 소유한 하드웨어에서 실행됩니다. 이 가이드는 그 의미, 2026년에 실용화된 이유, Home Assistant + Ollama + 로컬 음성 아키텍처, 규칙 기반 자동화 대비 장점, 그리고 구축 단계별 경로를 설명합니다.',
     metaDescription:
       '로컬 LLM 스마트 홈 2026: Home Assistant + Ollama로 자연어 제어와 문맥 인식 자동화를 클라우드 없이 구현하는 완전 가이드.',
-    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-ko.png',
+    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-ko.webp',
     twitterDescription:
       '로컬 LLM을 스마트 홈의 두뇌로 활용하십시오. Home Assistant + Ollama를 통한 자연어 제어와 문맥 인식 자동화. 클라우드 없음.',
     readTime: '12분 분량',
@@ -948,7 +948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '구체적인 자동화 예시와 그 이면의 프롬프트는 [로컬 LLM을 활용한 스마트한 자동화](/ko/smart-home/ai-automations-local-llm)를 참조하십시오.',
           '결정론적 안전 자동화(화재 경보, 도어록)는 간단한 규칙으로 유지하십시오. 모델을 통해 라우팅하지 마십시오.',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-ko.png',
+        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-ko.webp',
         imageCaption: '로컬 LLM 대 규칙 기반 자동화 -- 유연성에 드는 설정 비용',
       },
       hardware: {
@@ -975,7 +975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '완전 로컬 음성 프론트엔드를 추가하십시오 — [로컬 음성 어시스턴트](/ko/smart-home/local-voice-assistant-smart-home).',
           '문맥 인식 자동화를 설계하십시오 — [로컬 LLM을 활용한 AI 자동화](/ko/smart-home/ai-automations-local-llm).',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-ko.png',
+        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-ko.webp',
         imageCaption: '단계별 진행 경로 -- 이 순서로 구축하세요',
       },
       faqSection: {
@@ -1044,7 +1044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Un LLM local peut désormais servir de cerveau à votre maison connectée : il interprète des commandes en langage naturel, exécute des automatisations contextuelles et alimente un assistant vocal privé, le tout sur votre propre matériel et sans cloud. Ce guide explique ce que cela signifie, pourquoi c\'est devenu pratique en 2026, l\'architecture Home Assistant + Ollama + voix locale, ce que cela débloque face à l\'automatisation par règles et le chemin pas à pas pour le construire.',
     metaDescription:
       'Maison connectée avec LLM local 2026 : commande en langage naturel et automatisations contextuelles via Home Assistant + Ollama. Sans cloud.',
-    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-fr.png',
+    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-fr.webp',
     twitterDescription:
       'Utilisez un LLM local comme cerveau de votre maison connectée : commande en langage naturel et automatisations contextuelles via Home Assistant + Ollama. Zéro cloud.',
     readTime: '12 min de lecture',
@@ -1154,7 +1154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pour des exemples concrets d\'automatisation et les prompts associés, voir [des automatisations plus intelligentes avec un LLM local](/fr/smart-home/ai-automations-local-llm).',
           'Gardez les automatisations de sécurité déterministes (détecteur de fumée, serrures) comme de simples règles — ne les faites pas passer par le modèle.',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-fr.png',
+        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-fr.webp',
         imageCaption: 'LLM Local vs Automatisation par Règles -- Le coût de la flexibilité en configuration',
       },
       hardware: {
@@ -1181,7 +1181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ajoutez un frontal vocal entièrement local — [assistant vocal local](/fr/smart-home/local-voice-assistant-smart-home).',
           'Concevez des automatisations contextuelles — [automatisations IA avec un LLM local](/fr/smart-home/ai-automations-local-llm).',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-fr.png',
+        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-fr.webp',
         imageCaption: 'Votre Parcours Étape par Étape -- Construisez dans cet ordre',
       },
       faqSection: {
@@ -1250,7 +1250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルLLMは今やスマートホームの頭脳として機能できます——自然言語コマンドを解釈し、文脈を踏まえた自動化を実行し、プライベートな音声アシスタントを動かします。すべて自分のハードウェア上でクラウドなしに行えます。本ガイドではその意味、2026年に実用化した理由、Home Assistant + Ollama + ローカル音声のアーキテクチャ、ルールベースの自動化に対して何が広がるか、そして構築の手順を説明します。',
     metaDescription:
       'ローカルLLMでスマートホームを動かす2026年ガイド：インストール手順、ハードウェア要件、音声制御の設定方法を解説。Home Assistant と Ollama で自然言語制御と文脈を踏まえた自動化を実現。クラウド不要のプライベートAI環境を構築。',
-    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-ja.png',
+    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-ja.webp',
     twitterDescription:
       'ローカルLLMをスマートホームの頭脳に：Home Assistant + Ollama による自然言語制御と文脈を踏まえた自動化。クラウドはゼロ。',
     readTime: '12分で読める',
@@ -1360,7 +1360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '具体的な自動化例とその背後のプロンプトは[ローカルLLMでより賢い自動化](/ja/smart-home/ai-automations-local-llm)を参照。',
           '決定論的な安全自動化（火災警報、ドアロック）は単純なルールのまま——モデルを経由させないでください。',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-ja.png',
+        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-ja.webp',
         imageCaption: 'ローカルLLM対ルールベース自動化 -- 柔軟性のセットアップコスト',
       },
       hardware: {
@@ -1387,7 +1387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '完全ローカルの音声フロントエンドを追加する——[ローカル音声アシスタント](/ja/smart-home/local-voice-assistant-smart-home)。',
           '文脈を踏まえた自動化を設計する——[ローカルLLMによるAI自動化](/ja/smart-home/ai-automations-local-llm)。',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-ja.png',
+        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-ja.webp',
         imageCaption: 'ステップバイステップの進め方 -- この順序で構築',
       },
       faqSection: {
@@ -1456,7 +1456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Um LLM local já pode atuar como o cérebro da sua casa inteligente: interpreta comandos em linguagem natural, executa automações contextuais e alimenta um assistente de voz privado, tudo em hardware próprio e sem nuvem. Este guia explica o que isso significa, por que se tornou prático em 2026, a arquitetura Home Assistant + Ollama + voz local, o que desbloqueia em relação à automação por regras e o caminho passo a passo para montar.',
     metaDescription:
       'Casa inteligente com LLM local 2026: controle em linguagem natural e automações contextuais via Home Assistant + Ollama. Sem nuvem.',
-    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-pt.png',
+    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-pt.webp',
     twitterDescription:
       'Use um LLM local como cérebro da sua casa inteligente: controle em linguagem natural e automações contextuais via Home Assistant + Ollama. Zero nuvem.',
     readTime: '12 min de leitura',
@@ -1566,7 +1566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para exemplos concretos de automação e os prompts por trás, veja [automações mais inteligentes com um LLM local](/pt/smart-home/ai-automations-local-llm).',
           'Mantenha automações de segurança determinísticas (alarme de fumaça, fechaduras) como regras simples — não as roteie pelo modelo.',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-pt.png',
+        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-pt.webp',
         imageCaption: 'LLM Local vs Automação Baseada em Regras -- O custo de configuração da flexibilidade',
       },
       hardware: {
@@ -1593,7 +1593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Adicione um frontend de voz totalmente local — [assistente de voz local](/pt/smart-home/local-voice-assistant-smart-home).',
           'Projete automações contextuais — [automações de IA com um LLM local](/pt/smart-home/ai-automations-local-llm).',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-pt.png',
+        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-pt.webp',
         imageCaption: 'Seu Caminho Passo a Passo -- Construa nesta ordem',
       },
       faqSection: {
@@ -1662,7 +1662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '本地LLM如今可以充当你智能家居的大脑：解读自然语言指令、执行情境化自动化，并驱动一个私密的语音助手，全部在你自己的硬件上运行且无需云端。本指南解释它的含义、为何在2026年变得实用、Home Assistant + Ollama + 本地语音的架构、相对基于规则的自动化它解锁了什么，以及搭建的分步路径。',
     metaDescription:
       '用本地LLM运行智能家居完整指南（2026）：实现自然语言设备控制和情境化智能自动化，通过 Home Assistant 与 Ollama 搭建私密语音控制系统。含硬件选型、安装配置步骤和模型选择建议，数据不离家，无需云端。',
-    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-zh.png',
+    heroImage: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-zh.webp',
     twitterDescription:
       '把本地LLM当作智能家居的大脑：通过 Home Assistant + Ollama 实现自然语言控制与情境化自动化。零云端。',
     readTime: '阅读约12分钟',
@@ -1772,7 +1772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '具体的自动化示例及其背后的提示词，参见[用本地LLM实现更聪明的自动化](/zh/smart-home/ai-automations-local-llm)。',
           '把确定性的安全自动化（烟雾报警、门锁）保持为简单规则——不要经过模型。',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-zh.png',
+        image: '/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-zh.webp',
         imageCaption: '本地LLM对比基于规则的自动化 -- 灵活性所需的配置成本',
       },
       hardware: {
@@ -1799,7 +1799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '添加一个完全本地的语音前端——[本地语音助手](/zh/smart-home/local-voice-assistant-smart-home)。',
           '设计情境化自动化——[用本地LLM实现AI自动化](/zh/smart-home/ai-automations-local-llm)。',
         ],
-        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-zh.png',
+        image: '/images/local-llm-smart-home-complete-guide-step-by-step-hero-zh.webp',
         imageCaption: '你的分步实施路径 -- 按此顺序构建',
       },
       faqSection: {

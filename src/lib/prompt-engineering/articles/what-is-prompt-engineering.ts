@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       next_refresh_due: '2027-01-29',
       last_full_refresh: '2026-07-29',
       theme: 'Fundamentals',
-      heroImage: '/images/what-is-prompt-engineering-overview-hero-en.png',
+      heroImage: '/images/what-is-prompt-engineering-overview-hero-en.webp',
       title: 'What Is Prompt Engineering? — PromptQuorum Guide',
       seoTitle: 'What Is Prompt Engineering in 2026? Beginner Guide',
       intro: 'Prompt engineering: designing text inputs to get reliable, accurate outputs from LLMs like GPT-5.5, Claude Opus 4.8, and Gemini 3.1. Learn essential techniques, frameworks, and why it matters to AI output quality.',
@@ -365,7 +365,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     // Non-English languages fall back to English in the renderer
     de: {
       theme: 'Fundamentals',
-      heroImage: '/images/what-is-prompt-engineering-overview-hero-de.png',
+      heroImage: '/images/what-is-prompt-engineering-overview-hero-de.webp',
       title: 'Was ist Prompt Engineering? — PromptQuorum Leitfaden',
       seoTitle: 'Was ist Prompt Engineering? Einsteiger-Guide 2026',
       intro: 'Prompt Engineering: Texteinträge so gestalten, dass zuverlässige, genaue Ausgaben von LLMs wie GPT-5.5, Claude Opus 4.8 und Gemini 3.1 erzeugt werden. Lernen Sie wesentliche Techniken, Frameworks und warum dies für die Qualität der KI-Ausgabe wichtig ist.',
@@ -695,7 +695,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     es: {
       theme: 'Fundamentals',
-      heroImage: '/images/what-is-prompt-engineering-overview-hero-es.png',
+      heroImage: '/images/what-is-prompt-engineering-overview-hero-es.webp',
       title: '¿Qué es el Prompt Engineering? — Guía PromptQuorum',
       seoTitle: '¿Qué es el prompt engineering en 2026? Guía básica',
       intro: 'Prompt engineering: diseñar entradas de texto para obtener respuestas fiables y precisas de LLMs como GPT-5.5, Claude Opus 4.8 y Gemini 3.1. Aprende las técnicas esenciales, los frameworks y por qué importa para la calidad del output de IA.',
@@ -1037,7 +1037,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ar: {
       theme: 'Fundamentals',
-      heroImage: '/images/what-is-prompt-engineering-overview-hero-ar.png',
+      heroImage: '/images/what-is-prompt-engineering-overview-hero-ar.webp',
       title: 'ما هي هندسة الطلبات؟ — دليل ⁨PromptQuorum⁩',
       seoTitle: 'هندسة الطلبات ⁨2026⁩: دليل المبتدئين الشامل',
       intro: 'هندسة الطلبات: تصميم المدخلات النصية للحصول على مخرجات موثوقة ودقيقة من نماذج LLM كـ GPT-5.5 وClaude Opus 4.8 وGemini 3.1. تعلّم التقنيات الأساسية والأطر ولماذا تهم لجودة مخرجات الذكاء الاصطناعي.',
@@ -1379,7 +1379,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Fundamentals',
-      heroImage: '/images/what-is-prompt-engineering-overview-hero-pt.png',
+      heroImage: '/images/what-is-prompt-engineering-overview-hero-pt.webp',
       title: 'O que é Prompt Engineering? — Guia PromptQuorum',
       seoTitle: 'O que é prompt engineering em 2026? Guia para iniciantes',
       intro: 'Prompt engineering: projetar entradas de texto para obter outputs confiáveis e precisos de LLMs como GPT-5.5, Claude Opus 4.8 e Gemini 3.1. Aprenda técnicas essenciais, frameworks e por que isso importa para a qualidade do output de IA.',
@@ -1604,7 +1604,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     fr: {
       theme: 'Fondamentaux',
-      heroImage: '/images/what-is-prompt-engineering-overview-hero-fr.png',
+      heroImage: '/images/what-is-prompt-engineering-overview-hero-fr.webp',
       title: 'Qu\'est-ce que le Prompt Engineering ? — Guide PromptQuorum',
       seoTitle: 'Prompt Engineering 2026 : guide complet pour débutants',
       intro: 'Prompt engineering : concevoir des entrées textuelles pour obtenir des sorties fiables et précises des LLM comme GPT-5.5, Claude Opus 4.8 et Gemini 3.1. Apprenez les techniques essentielles, les frameworks et pourquoi cela compte pour la qualité de la sortie d\'IA.',
@@ -1935,7 +1935,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: '基礎',
-      heroImage: '/images/what-is-prompt-engineering-overview-hero-ja.png',
+      heroImage: '/images/what-is-prompt-engineering-overview-hero-ja.webp',
       title: 'プロンプトエンジニアリングとは？',
       seoTitle: 'プロンプトエンジニアリングとは？2026年入門ガイド',
       intro: 'プロンプトエンジニアリングとは、大規模言語モデルから正確で有用かつ再現性のある出力を得るために、テキスト入力（プロンプト）を設計・構造化する実践です。',
@@ -2229,7 +2229,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: '基础知识',
-      heroImage: '/images/what-is-prompt-engineering-overview-hero-zh.png',
+      heroImage: '/images/what-is-prompt-engineering-overview-hero-zh.webp',
       title: '什么是提示工程？ — PromptQuorum 指南',
       seoTitle: '什么是提示工程？2026年初学者完全指南',
       intro: '提示工程：设计文本输入以从 GPT-5.5、Claude Opus 4.8 和 Gemini 3.1 等大语言模型获得可靠、准确的输出。学习基本技术、框架以及为什么这对人工智能输出质量很重要。',
@@ -2560,7 +2560,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       next_refresh_due: '2027-01-29',
       last_full_refresh: '2026-07-29',
       theme: 'Fundamentals',
-    heroImage: '/images/what-is-prompt-engineering-overview-hero-ko.png',
+    heroImage: '/images/what-is-prompt-engineering-overview-hero-ko.webp',
       title: '프롬프트 엔지니어링이란? — PromptQuorum 가이드',
       seoTitle: '2026년 프롬프트 엔지니어링이란? 입문자 가이드',
       intro: '프롬프트 엔지니어링: GPT-5.5, Claude Opus 4.8, Gemini 3.1 같은 LLM에서 신뢰할 수 있고 정확한 출력을 얻기 위해 텍스트 입력을 설계하는 기법입니다. 핵심 기법, 프레임워크, 그리고 AI 출력 품질에 미치는 영향을 알아보십시오.',

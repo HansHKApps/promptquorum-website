@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
-    heroImage: '/images/prompt-security-tools-overview-hero-en.png',
+    heroImage: '/images/prompt-security-tools-overview-hero-en.webp',
     title: 'Prompt Security Testing: Tools and Methods to Detect Injection Vulnerabilities',
     dateModified: '2026-07-13',
     seoTitle: 'Prompt Injection Testing: Garak & PyRIT Tools',
@@ -190,7 +190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Team-Governance',
-    heroImage: '/images/prompt-security-tools-overview-hero-de.png',
+    heroImage: '/images/prompt-security-tools-overview-hero-de.webp',
     title: 'Prompt-Security-Testing: Injection-Erkennung Tools & Methoden (2026)',
     seoTitle: 'Prompt-Injection-Tests: Garak und PyRIT erklärt',
     metaDescription: 'Teste Prompt-Injection mit Garak (40+ Angriffsmuster) und PyRIT (Multi-Turn). 4-Schichten-Abwehr: Input-Filterung, Schema, Privilegien-Trennung, Isolierung.',
@@ -359,7 +359,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
-    heroImage: '/images/prompt-security-tools-overview-hero-es.png',
+    heroImage: '/images/prompt-security-tools-overview-hero-es.webp',
     title: 'Pruebas de seguridad de prompts: herramientas y métodos para detectar vulnerabilidades de injection',
     seoTitle: 'Pruebas de injection de prompts: herramientas Garak y PyRIT',
     metaDescription: 'Prueba la prompt injection con Garak (40+ ataques) y PyRIT (multironda). Defensa en 4 capas: filtrado de entrada, esquema, privilegios y aislamiento.',
@@ -532,7 +532,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     theme: 'Governança de Equipe',
-    heroImage: '/images/prompt-security-tools-overview-hero-pt.png',
+    heroImage: '/images/prompt-security-tools-overview-hero-pt.webp',
     title: 'Testes de segurança de prompts: ferramentas e métodos para detectar vulnerabilidades de injeção',
     seoTitle: 'Testes de injeção de prompt: ferramentas Garak e PyRIT',
     metaDescription: 'Teste a injeção de prompt com Garak (40+ ataques) e PyRIT (múltiplos turnos). Defesa em 4 camadas: filtragem de entrada, schema, separação de privilégios e isolamento.',
@@ -705,7 +705,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Gouvernance d\'équipe',
-    heroImage: '/images/prompt-security-tools-overview-hero-fr.png',
+    heroImage: '/images/prompt-security-tools-overview-hero-fr.webp',
     title: 'Tests de sécurité des prompts : outils et méthodes pour détecter les vulnérabilités d\'injection',
     seoTitle: 'Tests d\'injection: Garak et PyRIT expliqués',
     metaDescription: 'Testez l\'injection de prompt avec Garak (40+ schémas) et PyRIT (multi-tour). Défense: filtrage, schéma, séparation des privilèges, isolation des instructions.',
@@ -873,7 +873,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'チームガバナンス',
-    heroImage: '/images/prompt-security-tools-overview-hero-ja.png',
+    heroImage: '/images/prompt-security-tools-overview-hero-ja.webp',
     title: 'プロンプトセキュリティテスト：インジェクション脆弱性を検出するためのツールと方法',
     seoTitle: 'プロンプトセキュリティテスト：インジェクション脆弱性を検出する',
     metaDescription: 'Garakで40以上の攻撃パターン、PyRITでマルチターン赤チーム化をテストします。4層防御：入力フィルタリング、スキーマ、特権分離、隔離。',
@@ -1042,7 +1042,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     theme: '团队治理',
-    heroImage: '/images/prompt-security-tools-overview-hero-zh.png',
+    heroImage: '/images/prompt-security-tools-overview-hero-zh.webp',
     title: '提示词安全测试：检测注入漏洞的工具和方法',
     seoTitle: '提示词安全测试：检测注入漏洞',
     metaDescription: '使用Garak（40+攻击模式）和PyRIT（多轮）测试提示词注入。4层防御：输入过滤、模式、权限分离、隔离。',
@@ -1211,7 +1211,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
-    heroImage: '/images/prompt-security-tools-overview-hero-ko.png',
+    heroImage: '/images/prompt-security-tools-overview-hero-ko.webp',
     title: '프롬프트 보안 테스트: 인젝션 취약점 탐지 도구와 방법',
     seoTitle: '프롬프트 인젝션 테스트: Garak와 PyRIT 도구',
     metaDescription: 'Garak(40개 이상 공격)와 PyRIT(다중 턴)로 프롬프트 인젝션을 테스트하십시오. 4계층 방어: 입력 필터링, 스키마, 권한 분리, 격리.',
@@ -1384,7 +1384,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
-    heroImage: '/images/prompt-security-tools-overview-hero-ar.png',
+    heroImage: '/images/prompt-security-tools-overview-hero-ar.webp',
     title: 'اختبار أمان الـ ⁨prompts⁩: أدوات وأساليب للكشف عن ثغرات الـ ⁨injection⁩',
     seoTitle: 'اختبار ⁨Prompt Injection⁩: أدوات ⁨Garak⁩ و⁨PyRIT⁩',
     metaDescription: '⁨Garak⁩ يغطي ⁨40⁩+ نمط هجوم و⁨PyRIT⁩ يتيح ⁨red-teaming⁩ متعدد الجولات. دفاع بـ ⁨4⁩ طبقات: تصفية المدخلات، المخطط، فصل الصلاحيات، العزل.',

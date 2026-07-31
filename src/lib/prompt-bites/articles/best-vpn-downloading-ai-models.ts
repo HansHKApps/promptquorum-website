@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Privacy & Security',
-    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-en.png',
+    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-en.webp',
     title: 'Best VPN for Downloading AI Models in 2026',
     seoTitle: '5 Best VPNs for Downloading AI Models (2026)',
     metaDescription: 'Top 5 VPNs for AI model downloads 2026: ProtonVPN (audited, free tier), Mullvad (anonymous), NordVPN (9,300+ RAM-only servers), Surfshark (cheapest ~$2/mo), ExpressVPN (fastest).',
@@ -242,7 +242,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Privacy & Security',
-    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-de.png',
+    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-de.webp',
     title: 'Bestes VPN zum Herunterladen von KI-Modellen 2026',
     seoTitle: '5 beste VPNs für KI-Modell-Downloads 2026',
     metaDescription: 'Top 5 VPNs für KI-Modell-Downloads 2026: ProtonVPN (auditiert, Gratis-Tarif), Mullvad (anonym), NordVPN (9.300+ RAM-only-Server), Surfshark (günstigste ~1,90 €), ExpressVPN (schnellste).',
@@ -428,7 +428,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Privacy & Security',
-    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-fr.png',
+    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-fr.webp',
     title: 'Meilleur VPN pour télécharger des modèles IA en 2026',
     seoTitle: '5 meilleurs VPN pour télécharger des modèles IA 2026',
     metaDescription: 'Top 5 VPN pour télécharger des modèles IA 2026 : ProtonVPN (audité, gratuit), Mullvad (anonyme), NordVPN (9 300+ serveurs RAM-only), Surfshark (~1,90 €), ExpressVPN (plus rapide).',
@@ -614,7 +614,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Privacy & Security',
-    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-ja.png',
+    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-ja.webp',
     title: '2026年AIモデルダウンロードに最適なVPN',
     seoTitle: 'AIモデルダウンロード向けVPN 2026年ベスト5',
     metaDescription: '2026年AIモデルダウンロード向けベスト5 VPN：ProtonVPN（審査済み・無料）、Mullvad（匿名）、NordVPN（9,300以上RAM-onlyサーバー）、Surfshark（最安値約$2/月）、ExpressVPN（最速）。',
@@ -800,7 +800,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Privacy & Security',
-    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-zh.png',
+    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-zh.webp',
     title: '2026年下载AI模型最佳VPN',
     seoTitle: 'AI模型下载最佳VPN 2026年5选',
     metaDescription: '2026年AI模型下载最佳5款VPN：ProtonVPN（审计·免费档）、Mullvad（匿名）、NordVPN（9,300+ RAM-only服务器）、Surfshark（最便宜约$2/月）、ExpressVPN（最快速）。',
@@ -986,7 +986,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Privacy & Security',
-    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-pt.png',
+    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-pt.webp',
     title: 'As melhores VPNs para baixar modelos de IA em 2026',
     seoTitle: 'As 5 melhores VPNs para baixar modelos de IA 2026',
     metaDescription: 'Top 5 VPNs para downloads de modelos de IA em 2026: ProtonVPN (auditada, plano gratuito), Mullvad (anônima), NordVPN (9.300+ servidores RAM-only), Surfshark (mais barata), ExpressVPN (mais rápida).',
@@ -1172,7 +1172,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Privacy & Security',
-    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-es.png',
+    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-es.webp',
     title: 'Las mejores VPN para descargar modelos de IA en 2026',
     seoTitle: 'Las 5 mejores VPN para descargar modelos de IA 2026',
     metaDescription: 'Las 5 mejores VPN para descargar modelos de IA en 2026: ProtonVPN (auditada, gratis), Mullvad (anónima), NordVPN (9.300+ servidores RAM-only), Surfshark (~1,90 €) y ExpressVPN (más rápida).',
@@ -1358,7 +1358,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Privacy & Security',
-    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-ar.png',
+    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-ar.webp',
     title: 'أفضل ⁨VPN⁩ لتنزيل نماذج الذكاء الاصطناعي في ⁨2026⁩',
     seoTitle: 'أفضل ⁨5⁩ شبكات ⁨VPN⁩ لتنزيل نماذج الذكاء ⁨AI 2026⁩',
     metaDescription: '⁨5⁩ شبكات ⁨VPN⁩ لتنزيل نماذج ⁨AI⁩: ⁨ProtonVPN⁩ مجاني ومراجَع، ⁨Mullvad⁩ مجهول الهوية، ⁨NordVPN⁩ بأكثر من ⁨9⁩,⁨300⁩ خادم ⁨RAM-only⁩، ⁨Surfshark⁩ (~$⁨2⁩/شهر)، ⁨ExpressVPN⁩ الأسرع.',
@@ -1544,7 +1544,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Privacy & Security',
-    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-ko.png',
+    heroImage: '/images/best-vpn-downloading-ai-models-overview-hero-ko.webp',
     title: 'AI 모델 다운로드를 위한 최고의 VPN 2026',
     seoTitle: 'AI 모델 다운로드용 최고의 VPN 5선 2026',
     metaDescription: 'AI 모델 다운로드용 VPN 5선 2026: ProtonVPN(감사 완료, 무료 플랜), Mullvad(익명), NordVPN(9,300개 이상 RAM-only 서버), Surfshark(최저가), ExpressVPN(최고속).',

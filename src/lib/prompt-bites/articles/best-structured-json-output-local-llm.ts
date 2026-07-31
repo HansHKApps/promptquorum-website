@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-en.png',
+    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-en.webp',
     title: 'Best Local LLM for Reliable Structured JSON Output?',
     seoTitle: 'Best Local LLM for Structured JSON Output | Prompt Bites',
     metaDescription:
@@ -104,7 +104,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-de.png',
+    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-de.webp',
     title: 'Welches lokale LLM liefert zuverlässige strukturierte JSON-Ausgabe?',
     seoTitle: 'Bestes lokales LLM für strukturierte JSON-Ausgabe | Prompt Bites',
     metaDescription:
@@ -204,7 +204,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-fr.png',
+    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-fr.webp',
     title: 'Quel LLM local fournit une sortie JSON structurée fiable ?',
     seoTitle: 'Meilleur LLM local pour la sortie JSON structurée | Prompt Bites',
     metaDescription:
@@ -304,7 +304,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-ja.png',
+    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-ja.webp',
     title: '信頼性の高い構造化JSON出力に最適なローカルLLMは？',
     seoTitle: '構造化JSON出力に最適なローカルLLM | Prompt Bites',
     metaDescription:
@@ -404,7 +404,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-zh.png',
+    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-zh.webp',
     title: '哪种本地LLM能可靠输出结构化JSON？',
     seoTitle: '结构化JSON输出的最佳本地LLM | Prompt Bites',
     metaDescription: '一份关于本地LLM如何可靠生成结构化JSON输出的指南，以及为什么语法约束解码优于单纯提示词。',
@@ -503,7 +503,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-es.png',
+    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-es.webp',
     title: '¿Qué LLM local ofrece salida JSON estructurada fiable?',
     seoTitle: 'Mejor LLM local para salida JSON estructurada | Prompt Bites',
     metaDescription:
@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-pt.png',
+    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-pt.webp',
     title: 'Qual LLM local oferece saída JSON estruturada confiável?',
     seoTitle: 'Melhor LLM local para saída JSON estruturada | Prompt Bites',
     metaDescription:
@@ -703,7 +703,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-ar.png',
+    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-ar.webp',
     title: 'ما هو أفضل نموذج لغوي محلي لإخراج JSON منظم وموثوق؟',
     seoTitle: 'أفضل نموذج لغوي محلي لإخراج JSON منظم | Prompt Bites',
     metaDescription:
@@ -803,7 +803,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Technique & Concept Explainers',
-    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-ko.png',
+    heroImage: '/images/best-structured-json-output-local-llm-overview-hero-ko.webp',
     title: '신뢰할 수 있는 구조화된 JSON 출력에 가장 좋은 로컬 LLM은?',
     seoTitle: '구조화된 JSON 출력에 가장 좋은 로컬 LLM | Prompt Bites',
     metaDescription:

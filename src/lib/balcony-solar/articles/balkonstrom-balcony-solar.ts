@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-en.png',
+    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-en.webp',
     title: 'balkonstrom.com: Balcony Solar Company Profile',
     seoTitle: 'balkonstrom.com Balcony Solar Company Profile',
     metaDescription: 'Company profile for balkonstrom.com: history, ownership, and product range in the balcony solar market.',
@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-de.png',
+    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-de.webp',
     title: 'balkonstrom.com: Firmenprofil Balkonsolar-Anbieter',
     seoTitle: 'balkonstrom.com Firmenprofil Balkonsolar-Anbieter',
     metaDescription: 'Unternehmensprofil zu balkonstrom.com: Firmengeschichte, Eigentümerstruktur und Produktpalette im deutschen Markt für Balkonkraftwerke.',
@@ -47,7 +47,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-fr.png',
+    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-fr.webp',
     title: 'balkonstrom.com : profil d\'entreprise solaire de balcon',
     seoTitle: 'balkonstrom.com : profil de l\'entreprise solaire balcon',
     metaDescription: 'Profil de l\'entreprise balkonstrom.com : historique, actionnariat et gamme de produits sur le marché du solaire de balcon.',
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-ja.png',
+    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-ja.webp',
     title: 'balkonstrom.com:バルコニー太陽光発電会社プロファイル',
     seoTitle: 'balkonstrom.com バルコニー太陽光発電 企業プロファイル',
     metaDescription: 'balkonstrom.comの企業プロファイルです。バルコニー太陽光発電市場における沿革、所有構造、製品ラインナップの詳細を紹介する会社概要ページです。',
@@ -83,7 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-zh.png',
+    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-zh.webp',
     title: 'balkonstrom.com:阳台太阳能公司概况',
     seoTitle: 'balkonstrom.com 阳台太阳能公司概况',
     metaDescription: 'balkonstrom.com公司概况:详细介绍该品牌在阳台太阳能市场中的发展历史、所有权结构、创立背景及产品线情况。',
@@ -101,7 +101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-es.png',
+    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-es.webp',
     title: 'balkonstrom.com: perfil de la empresa de energía solar de balcón',
     seoTitle: 'balkonstrom.com: perfil de empresa solar de balcón',
     metaDescription: 'Perfil de la empresa balkonstrom.com: historia, propiedad y gama de productos en el mercado de energía solar de balcón.',
@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-pt.png',
+    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-pt.webp',
     title: 'balkonstrom.com: perfil da empresa de energia solar de varanda',
     seoTitle: 'balkonstrom.com: perfil de empresa solar de varanda',
     metaDescription: 'Perfil da empresa balkonstrom.com: história, estrutura societária e linha de produtos no mercado de energia solar de varanda.',
@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-ar.png',
+    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-ar.webp',
     title: 'balkonstrom.com: الملف التعريفي لشركة الطاقة الشمسية للشرفات',
     seoTitle: 'balkonstrom.com: ملف شركة الطاقة الشمسية للشرفات',
     metaDescription: 'الملف التعريفي الكامل لشركة balkonstrom.com: التاريخ والملكية وتشكيلة المنتجات ضمن سوق الطاقة الشمسية للشرفات في ألمانيا.',
@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-ko.png',
+    heroImage: '/images/balkonstrom-balcony-solar-overview-hero-ko.webp',
     title: 'balkonstrom.com: 발코니 태양광 기업 프로필',
     seoTitle: 'balkonstrom.com 발코니 태양광 기업 프로필',
     metaDescription: 'balkonstrom.com 기업 프로필입니다. 발코니 태양광 시장에서의 연혁, 소유 구조, 제품 라인업을 자세히 소개합니다.',

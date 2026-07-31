@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Six Android apps run large language models entirely offline in 2026: MLC Chat, Maid, Layla, Ollama via Termux, Private AI, and PocketPal AI. They differ on NPU utilization, model library breadth, and Android integration — and the best choice depends on whether you want speed (MLC Chat with Hexagon NPU), maximum model flexibility (Ollama via Termux), or a polished native UI (Layla or PocketPal AI). This guide compares all six on the Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5), and OnePlus 13 (Snapdragon 8 Elite), covering Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5 inference, Android fragmentation realities, and how each app handles storage, background limits, and the Android share sheet.',
     metaDescription:
       'How local LLMs run on Android in 2026 — real benchmarks on S25 Ultra, Pixel 9 Pro, and OnePlus 13. NPU speeds, GGUF support, RAM limits. 6 apps compared.',
-    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-en.png',
+    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-en.webp',
     twitterDescription:
       'Android local AI in 2026: MLC Chat hits ~40 tok/sec with Snapdragon Hexagon NPU. Maid gives full GGUF access. Ollama via Termux is the power-user path. Full 6-app comparison on S25 Ultra, Pixel 9 Pro, OnePlus 13.',
     current_models_mentioned: [
@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comparison Table',
         content:
           '**Token speeds measured on Samsung Galaxy S25 Ultra (Snapdragon 8 Elite, 12 GB RAM) running Phi-4 Mini at Q4_K_M quantization.** NPU utilization varies by app — MLC Chat is the only app with verified Hexagon NPU support as of May 2026.',
-                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-en.png',
+                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-en.webp',
           imageCaption: 'MLC Chat reaches 22 tok/sec on Phi-4 Mini via Snapdragon Hexagon NPU, fastest of 6 Android LLM apps tested.',
 snippetBlocks: [
           {
@@ -220,7 +220,7 @@ snippetBlocks: [
         title: 'Chipset Comparison: Snapdragon vs MediaTek vs Tensor',
         content:
           '**Snapdragon 8 Elite is the most capable chipset for local LLM inference on Android in 2026 — its Hexagon NPU is the only mobile NPU with verified support in MLC Chat.** Tensor G5 and MediaTek Dimensity 9400 run all six apps in CPU or Vulkan-GPU mode only.',
-                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-en.png',
+                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-en.webp',
           imageCaption: 'Snapdragon 8 Elite\'s exposed Hexagon NPU runs Phi-4 Mini at 22 tok/sec; Tensor G5\'s CPU-only path manages 10-18.',
 snippetBlocks: [
           {
@@ -606,7 +606,7 @@ snippetBlocks: [
       'Sechs Android-Apps führen große Sprachmodelle 2026 vollständig offline aus: MLC Chat, Maid, Layla, Ollama via Termux, Private AI und PocketPal AI. Sie unterscheiden sich in NPU-Nutzung, Modellbibliotheksbreite und Android-Integration — und die beste Wahl hängt davon ab, ob Sie Geschwindigkeit wünschen (MLC Chat mit Hexagon NPU), maximale Modellflexibilität (Ollama via Termux) oder ein poliertes natives UI (Layla oder PocketPal AI). Dieser Leitfaden vergleicht alle sechs auf dem Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5) und OnePlus 13 (Snapdragon 8 Elite) und behandelt Snapdragon Hexagon NPU vs. MediaTek APU vs. Tensor G5 Inferenz, Android-Fragmentierungsrealitäten und wie jede App Speicher, Hintergrundlimits und das Android Share Sheet handhabt.',
     metaDescription:
       'Wie lokale LLMs wirklich auf Android laufen — Benchmarks auf S25 Ultra, Pixel 9 Pro, OnePlus 13. NPU-Geschwindigkeit, GGUF-Support, RAM-Limits. 6 Apps verglichen.',
-    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-de.png',
+    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-de.webp',
     twitterDescription:
       'Android lokale KI 2026: MLC Chat erreicht ~40 Token/Sek. mit Snapdragon Hexagon NPU. Maid bietet vollständigen GGUF-Zugriff. Ollama via Termux ist der Power-User-Weg. Vollständiger 6-App-Vergleich auf S25 Ultra, Pixel 9 Pro, OnePlus 13.',
     current_models_mentioned: [
@@ -715,7 +715,7 @@ snippetBlocks: [
         title: 'Vergleichstabelle',
         content:
           '**Token-Geschwindigkeit gemessen auf Samsung Galaxy S25 Ultra (Snapdragon 8 Elite, 12 GB RAM) mit Phi-4 Mini in Q4_K_M-Quantisierung.** Die NPU-Nutzung variiert zwischen Apps — MLC Chat ist die einzige App mit verifiziertem Hexagon NPU-Support ab Mai 2026.',
-                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-de.png',
+                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-de.webp',
           imageCaption: 'MLC Chat erreicht 22 Tok/Sek. bei Phi-4 Mini via Snapdragon Hexagon NPU — die schnellste von 6 getesteten Android-Apps.',
 snippetBlocks: [
           {
@@ -804,7 +804,7 @@ snippetBlocks: [
         title: 'Chipset-Vergleich: Snapdragon vs. MediaTek vs. Tensor',
         content:
           '**Snapdragon 8 Elite ist der fähigste Chipset für lokale LLM-Inferenz auf Android 2026 — seine Hexagon NPU ist die einzige mobile NPU mit verifiziertem Support in MLC Chat.** Tensor G5 und MediaTek Dimensity 9400 führen alle sechs Apps nur im CPU- oder Vulkan-GPU-Modus aus.',
-                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-de.png',
+                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-de.webp',
           imageCaption: 'Der offene Hexagon NPU des Snapdragon 8 Elite betreibt Phi-4 Mini mit 22 Tok/Sek.; der reine CPU-Pfad des Tensor G5 schafft 10-18.',
 snippetBlocks: [
           {
@@ -1213,7 +1213,7 @@ snippetBlocks: [
       'Six applications Android exécutent des modèles de langage volumineux entièrement hors ligne en 2026 : MLC Chat, Maid, Layla, Ollama via Termux, Private AI et PocketPal AI. Elles diffèrent par l\'utilisation du NPU, la portée de la bibliothèque de modèles et l\'intégration Android — et le meilleur choix dépend de votre priorité : la vitesse (MLC Chat avec NPU Hexagon), la flexibilité maximale (Ollama via Termux) ou une interface utilisateur native soignée (Layla ou PocketPal AI). Ce guide compare les six applications sur le Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5) et OnePlus 13 (Snapdragon 8 Elite), couvrant l\'inférence Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5, les réalités de la fragmentation Android et la façon dont chaque application gère le stockage, les limites d\'arrière-plan et la feuille de partage Android.',
     metaDescription:
       'Comment les LLMs locaux fonctionnent sur Android 2026 — benchmarks sur S25 Ultra, Pixel 9 Pro, OnePlus 13. Vitesses NPU, support GGUF, limites RAM. 6 apps comparées.',
-    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-fr.png',
+    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-fr.webp',
     twitterDescription:
       'IA locale sur Android en 2026 : MLC Chat atteint ~40 tok/sec avec NPU Hexagon Snapdragon. Maid offre un accès complet à GGUF. Ollama via Termux est la solution pour les utilisateurs avancés. Comparaison complète de 6 applications sur S25 Ultra, Pixel 9 Pro, OnePlus 13.',
     current_models_mentioned: [
@@ -1322,7 +1322,7 @@ snippetBlocks: [
         title: 'Tableau de comparaison',
         content:
           '**Vitesses de tokens mesurées sur Samsung Galaxy S25 Ultra (Snapdragon 8 Elite, 12 GB RAM) exécutant Phi-4 Mini en quantisation Q4_K_M.** L\'utilisation du NPU varie selon l\'application — MLC Chat est la seule application avec support NPU Hexagon vérifié à partir de mai 2026.',
-                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-fr.png',
+                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-fr.webp',
           imageCaption: 'MLC Chat atteint 22 tok/sec sur Phi-4 Mini via le NPU Hexagon Snapdragon, la plus rapide des 6 apps Android testées.',
 snippetBlocks: [
           {
@@ -1411,7 +1411,7 @@ snippetBlocks: [
         title: 'Comparaison des chipsets : Snapdragon vs. MediaTek vs. Tensor',
         content:
           '**Snapdragon 8 Elite est le chipset le plus capable pour l\'inférence IA locale sur Android en 2026 — son NPU Hexagon est le seul NPU mobile avec support vérifié dans MLC Chat.** Tensor G5 et MediaTek Dimensity 9400 exécutent les six applications en mode CPU ou GPU Vulkan uniquement.',
-                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-fr.png',
+                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-fr.webp',
           imageCaption: 'Le NPU Hexagon exposé du Snapdragon 8 Elite fait tourner Phi-4 Mini à 22 tok/sec ; le chemin CPU seul du Tensor G5 atteint 10-18.',
 snippetBlocks: [
           {
@@ -1801,7 +1801,7 @@ snippetBlocks: [
       '2026年、6つの Android アプリがローカル言語モデルを完全にオフラインで実行しています：MLC Chat、Maid、Layla、Ollama via Termux、Private AI、PocketPal AI。これらは NPU 利用、モデルライブラリの幅、Android 統合で異なります—最適な選択は、速度（MLC Chat with Hexagon NPU）、最大のモデル柔軟性（Ollama via Termux）、またはポーランド済みネイティブ UI（Layla または PocketPal AI）のどちらを優先するかによります。本ガイドは Samsung Galaxy S25 Ultra（Snapdragon 8 Elite）、Pixel 9 Pro（Tensor G5）、OnePlus 13（Snapdragon 8 Elite）での 6 つのアプリを比較し、Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5 推論、Android 断片化の現実、各アプリがストレージ、バックグラウンド制限、Android シェアシートをどう処理するかをカバーしています。',
     metaDescription:
       'Android でのローカル LLM の実際の動作 2026年 — S25 Ultra、Pixel 9 Pro、OnePlus 13 での実機ベンチマーク。NPU 速度、GGUF 対応、RAM 制限。6 アプリ比較。',
-    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-ja.png',
+    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-ja.webp',
     twitterDescription:
       'Android ローカルAI 2026：MLC Chat は Snapdragon Hexagon NPU で ~40 tok/sec に到達。Maid は完全な GGUF アクセスを提供。Ollama via Termux はパワーユーザー向け。S25 Ultra、Pixel 9 Pro、OnePlus 13 での 6 アプリ完全比較。',
     current_models_mentioned: [
@@ -1910,7 +1910,7 @@ snippetBlocks: [
         title: '比較表',
         content:
           '**トークン速度は Samsung Galaxy S25 Ultra（Snapdragon 8 Elite、12 GB RAM）上で Phi-4 Mini を Q4_K_M 量子化で実行して測定。** NPU 利用はアプリにより異なります—MLC Chat は 2026 年 5 月時点で唯一の検証済み Hexagon NPU サポートのあるアプリです。',
-                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-ja.png',
+                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-ja.webp',
           imageCaption: 'MLC ChatはSnapdragon Hexagon NPU経由でPhi-4 Miniを22 tok/秒で実行し、テストした6つのAndroidアプリ中最速です。',
 snippetBlocks: [
           {
@@ -1999,7 +1999,7 @@ snippetBlocks: [
         title: 'チップセット比較：Snapdragon vs. MediaTek vs. Tensor',
         content:
           '**Snapdragon 8 Elite は 2026 年 Android 上のローカル LLM 推論向けで最も能力のあるチップセットです—その Hexagon NPU は MLC Chat で検証済みサポートを持つ唯一のモバイル NPU です。** Tensor G5 と MediaTek Dimensity 9400 は 6 つのアプリすべてを CPU または Vulkan GPU モードのみで実行。',
-                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-ja.png',
+                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-ja.webp',
           imageCaption: 'Snapdragon 8 EliteのHexagon NPUはPhi-4 Miniを22 tok/秒で実行し、Tensor G5のCPUのみの経路は10〜18にとどまります。',
 snippetBlocks: [
           {
@@ -2404,7 +2404,7 @@ snippetBlocks: [
       '2026年有6款安卓应用可完全离线运行大型语言模型：MLC Chat、Maid、Layla、Ollama via Termux、Private AI和PocketPal AI。它们在NPU利用、模型库广度和安卓集成方面各不相同——最佳选择取决于您是想要速度（MLC Chat搭配Hexagon NPU）、最大模型灵活性（Ollama via Termux），还是打磨精细的原生UI（Layla或PocketPal AI）。本指南在Samsung Galaxy S25 Ultra（Snapdragon 8 Elite）、Pixel 9 Pro（Tensor G5）和OnePlus 13（Snapdragon 8 Elite）上对所有6款应用进行对比，涵盖Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5推理、安卓碎片化现实以及每款应用如何处理存储、后台限制和安卓分享表。',
     metaDescription:
       'Android 上本地 LLM 的实际运行情况 2026 — S25 Ultra、Pixel 9 Pro、OnePlus 13 真机基准测试。NPU 速度、GGUF 支持、RAM 限制。6 款应用对比。',
-    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-zh.png',
+    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-zh.webp',
     twitterDescription:
       '2026年安卓本地AI：MLC Chat搭配Snapdragon Hexagon NPU达到约40 token/秒。Maid提供完整GGUF访问。Ollama via Termux是高级用户路径。在S25 Ultra、Pixel 9 Pro、OnePlus 13上完整的6应用对比。',
     current_models_mentioned: ['Phi-4 Mini', 'Qwen3 1.7B', 'Qwen3 4B', 'Llama 3.2 3B', 'Gemma 3 4B', 'Gemma 3 1B', 'SmolLM2 1.7B'],
@@ -2481,7 +2481,7 @@ snippetBlocks: [{ type: 'one-sentence', text: 'Snapdragon 8 Elite的Hexagon NPU�
       'Seis apps de Android ejecutan modelos de lenguaje grandes completamente sin conexión en 2026: MLC Chat, Maid, Layla, Ollama via Termux, Private AI y PocketPal AI. Difieren en la utilización del NPU, la amplitud de la biblioteca de modelos y la integración con Android — y la mejor opción depende de si quieres velocidad (MLC Chat con NPU Hexagon), máxima flexibilidad de modelos (Ollama via Termux) o una interfaz nativa pulida (Layla o PocketPal AI). Esta guía compara las seis en el Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5) y OnePlus 13 (Snapdragon 8 Elite), cubriendo la inferencia de Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5, las realidades de la fragmentación de Android y cómo cada app gestiona el almacenamiento, los límites en segundo plano y el panel compartir de Android.',
     metaDescription:
       'Cómo funcionan los LLMs locales en Android 2026 — benchmarks en S25 Ultra, Pixel 9 Pro y OnePlus 13. Velocidades NPU, soporte GGUF, límites RAM. 6 apps comparadas.',
-    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-es.png',
+    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-es.webp',
     twitterDescription:
       'IA local en Android en 2026: MLC Chat alcanza ~40 tok/seg con NPU Hexagon de Snapdragon. Maid da acceso GGUF completo. Ollama via Termux es el camino para usuarios avanzados. Comparación completa de 6 apps en S25 Ultra, Pixel 9 Pro, OnePlus 13.',
     current_models_mentioned: [
@@ -2590,7 +2590,7 @@ snippetBlocks: [{ type: 'one-sentence', text: 'Snapdragon 8 Elite的Hexagon NPU�
         title: 'Tabla comparativa',
         content:
           '**Velocidades de tokens medidas en Samsung Galaxy S25 Ultra (Snapdragon 8 Elite, 12 GB RAM) ejecutando Phi-4 Mini con cuantización Q4_K_M.** La utilización del NPU varía según la app — MLC Chat es la única app con soporte verificado de NPU Hexagon a partir de mayo de 2026.',
-                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-es.png',
+                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-es.webp',
           imageCaption: 'MLC Chat alcanza 22 tok/seg en Phi-4 Mini vía Snapdragon Hexagon NPU, la más rápida de 6 apps Android probadas.',
 snippetBlocks: [
           {
@@ -2679,7 +2679,7 @@ snippetBlocks: [
         title: 'Comparativa de chipsets: Snapdragon vs MediaTek vs Tensor',
         content:
           '**Snapdragon 8 Elite es el chipset más capaz para inferencia de LLM local en Android en 2026 — su NPU Hexagon es el único NPU móvil con soporte verificado en MLC Chat.** Tensor G5 y MediaTek Dimensity 9400 ejecutan las seis apps solo en modo CPU o GPU Vulkan.',
-                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-es.png',
+                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-es.webp',
           imageCaption: 'El Hexagon NPU expuesto del Snapdragon 8 Elite ejecuta Phi-4 Mini a 22 tok/seg; la ruta solo-CPU del Tensor G5 llega a 10-18.',
 snippetBlocks: [
           {
@@ -3065,7 +3065,7 @@ snippetBlocks: [
       'Seis apps de Android executam modelos de linguagem grandes totalmente offline em 2026: MLC Chat, Maid, Layla, Ollama via Termux, Private AI e PocketPal AI. Eles diferem na utilização do NPU, na amplitude da biblioteca de modelos e na integração com o Android — e a melhor opção depende de você querer velocidade (MLC Chat com NPU Hexagon), máxima flexibilidade de modelos (Ollama via Termux) ou uma interface nativa refinada (Layla ou PocketPal AI). Este guia compara os seis no Samsung Galaxy S25 Ultra (Snapdragon 8 Elite), Pixel 9 Pro (Tensor G5) e OnePlus 13 (Snapdragon 8 Elite), cobrindo a inferência do Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5, as realidades da fragmentação do Android e como cada app gerencia o armazenamento, os limites em segundo plano e o painel de compartilhamento do Android.',
     metaDescription:
       'Como os LLMs locais rodam no Android 2026 — benchmarks no S25 Ultra, Pixel 9 Pro e OnePlus 13. Velocidades NPU, suporte GGUF, limites de RAM. 6 apps comparados.',
-    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-pt.png',
+    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-pt.webp',
     twitterDescription:
       'IA local no Android em 2026: MLC Chat atinge ~40 tok/seg com NPU Hexagon da Snapdragon. Maid dá acesso GGUF completo. Ollama via Termux é o caminho para usuários avançados. Comparação completa de 6 apps no S25 Ultra, Pixel 9 Pro, OnePlus 13.',
     current_models_mentioned: [
@@ -3174,7 +3174,7 @@ snippetBlocks: [
         title: 'Tabela comparativa',
         content:
           '**Velocidades de token medidas no Samsung Galaxy S25 Ultra (Snapdragon 8 Elite, 12 GB RAM) executando o Phi-4 Mini com quantização Q4_K_M.** A utilização do NPU varia conforme o app — o MLC Chat é o único app com suporte verificado ao NPU Hexagon em maio de 2026.',
-                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-pt.png',
+                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-pt.webp',
           imageCaption: 'O MLC Chat atinge 22 tok/seg no Phi-4 Mini via Snapdragon Hexagon NPU, o mais rápido entre 6 apps Android testados.',
 snippetBlocks: [
           {
@@ -3263,7 +3263,7 @@ snippetBlocks: [
         title: 'Comparativo de chipsets: Snapdragon vs MediaTek vs Tensor',
         content:
           '**O Snapdragon 8 Elite é o chipset mais capaz para inferência de LLM local no Android em 2026 — seu NPU Hexagon é o único NPU móvel com suporte verificado no MLC Chat.** O Tensor G5 e o MediaTek Dimensity 9400 executam os seis apps apenas em modo CPU ou GPU Vulkan.',
-                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-pt.png',
+                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-pt.webp',
           imageCaption: 'O Hexagon NPU exposto do Snapdragon 8 Elite roda o Phi-4 Mini a 22 tok/seg; o caminho somente CPU do Tensor G5 atinge 10-18.',
 snippetBlocks: [
           {
@@ -3649,7 +3649,7 @@ snippetBlocks: [
       'ستة تطبيقات Android تشغّل النماذج اللغوية الكبيرة بالكامل دون اتصال بالإنترنت في 2026: MLC Chat وMaid وLayla وOllama عبر Termux وPrivate AI وPocketPal AI. تتفاوت هذه التطبيقات في استخدام وحدة المعالجة العصبية (NPU) واتساع مكتبة النماذج والتكامل مع Android — ويعتمد الاختيار الأمثل على أولويتك: السرعة (MLC Chat مع NPU Hexagon) أو أقصى مرونة في النماذج (Ollama عبر Termux) أو واجهة مستخدم أصلية مصقولة (Layla أو PocketPal AI). يقارن هذا الدليل التطبيقات الستة على Samsung Galaxy S25 Ultra (Snapdragon 8 Elite) وPixel 9 Pro (Tensor G5) وOnePlus 13 (Snapdragon 8 Elite)، مع تغطية الاستدلال عبر Snapdragon Hexagon NPU مقابل MediaTek APU مقابل Tensor G5، وواقع تشرذم Android، وكيفية تعامل كل تطبيق مع التخزين وحدود الخلفية وقائمة المشاركة في Android.',
     metaDescription:
       'أداء النماذج اللغوية المحلية فعلياً على Android 2026: قياسات على S25 Ultra وPixel 9 Pro. سرعات NPU ودعم GGUF وحدود RAM. 6 تطبيقات.',
-    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-ar.png',
+    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-ar.webp',
     twitterDescription:
       'الذكاء الاصطناعي المحلي على Android في 2026: يبلغ MLC Chat ~40 رمز/ث مع NPU Hexagon من Snapdragon. يوفر Maid وصولاً كاملاً إلى GGUF. برنامج Ollama عبر Termux هو مسار المستخدمين المتقدمين. مقارنة كاملة لـ 6 تطبيقات على S25 Ultra وPixel 9 Pro وOnePlus 13.',
     current_models_mentioned: [
@@ -3758,7 +3758,7 @@ snippetBlocks: [
         title: 'جدول المقارنة',
         content:
           '**قيست سرعات الرموز على Samsung Galaxy S25 Ultra (Snapdragon 8 Elite، 12 غيغابايت RAM) مع تشغيل Phi-4 Mini بتكميم Q4_K_M.** يتفاوت استخدام NPU حسب التطبيق — MLC Chat هو التطبيق الوحيد بدعم موثّق لـ NPU Hexagon اعتباراً من مايو 2026.',
-                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-ar.png',
+                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-ar.webp',
           imageCaption: 'يحقق MLC Chat سرعة 22 tok/sec في Phi-4 Mini عبر Hexagon NPU من Snapdragon، وهو الأسرع بين 6 تطبيقات أندرويد تم اختبارها.',
 snippetBlocks: [
           {
@@ -3847,7 +3847,7 @@ snippetBlocks: [
         title: 'مقارنة الشرائح: Snapdragon مقابل MediaTek مقابل Tensor',
         content:
           '**Snapdragon 8 Elite هو الشريحة الأكثر قدرة على الاستدلال المحلي لـ LLM على Android في 2026 — NPU Hexagon فيه هو NPU المحمول الوحيد بدعم موثّق في MLC Chat.** يشغّل Tensor G5 وMediaTek Dimensity 9400 التطبيقات الستة بوضع CPU أو GPU Vulkan فحسب.',
-                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-ar.png',
+                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-ar.webp',
           imageCaption: 'يشغّل Hexagon NPU المكشوف في Snapdragon 8 Elite نموذج Phi-4 Mini بسرعة 22 tok/sec؛ بينما يصل مسار المعالج فقط في Tensor G5 إلى 10-18.',
 snippetBlocks: [
           {
@@ -4233,7 +4233,7 @@ snippetBlocks: [
       '2026년에 6가지 Android 앱이 인터넷 연결 없이 대형 언어 모델을 완전히 오프라인으로 실행합니다: MLC Chat, Maid, Layla, Ollama via Termux, Private AI, PocketPal AI. 각 앱은 NPU 활용 방식, 모델 라이브러리의 폭, Android 통합 수준에서 차이가 있습니다 — 최적의 선택은 속도(MLC Chat의 Hexagon NPU), 최대 모델 유연성(Ollama via Termux), 또는 세련된 네이티브 인터페이스(Layla 또는 PocketPal AI) 중 무엇을 원하느냐에 달려 있습니다. 이 가이드는 Samsung Galaxy S25 Ultra(Snapdragon 8 Elite), Pixel 9 Pro(Tensor G5), OnePlus 13(Snapdragon 8 Elite)에서 여섯 앱을 비교하며, Snapdragon Hexagon NPU vs MediaTek APU vs Tensor G5의 추론 성능, Android 파편화의 현실, 각 앱의 스토리지·백그라운드 제한·Android 공유 패널 처리 방식을 다룹니다.',
     metaDescription:
       'Android에서 로컬 LLM이 실제로 작동하는 방식 2026 — S25 Ultra, Pixel 9 Pro, OnePlus 13에서 실제 벤치마크. NPU 속도, GGUF 지원, RAM 한계. 6개 앱 비교.',
-    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-ko.png',
+    heroImage: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-ko.webp',
     twitterDescription:
       '2026년 Android 로컬 AI: MLC Chat은 Snapdragon의 Hexagon NPU로 ~40 tok/s 달성. Maid는 전체 GGUF 접근 제공. Ollama via Termux는 고급 사용자의 선택. S25 Ultra, Pixel 9 Pro, OnePlus 13에서 6개 앱 전체 비교.',
     current_models_mentioned: [
@@ -4342,7 +4342,7 @@ snippetBlocks: [
         title: '비교 표',
         content:
           '**토큰 속도는 Samsung Galaxy S25 Ultra(Snapdragon 8 Elite, 12 GB RAM)에서 Q4_K_M 양자화로 Phi-4 Mini를 실행하여 측정되었습니다.** NPU 활용은 앱에 따라 다릅니다 — MLC Chat은 2026년 5월 기준 검증된 Hexagon NPU 지원을 가진 유일한 앱입니다.',
-                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-ko.png',
+                  image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-ko.webp',
           imageCaption: 'MLC Chat는 Snapdragon Hexagon NPU를 통해 Phi-4 Mini에서 22 tok/sec를 기록하며, 테스트한 6개 안드로이드 앱 중 가장 빠릅니다.',
 snippetBlocks: [
           {
@@ -4435,7 +4435,7 @@ snippetBlocks: [
         title: '칩셋 비교: Snapdragon vs MediaTek vs Tensor',
         content:
           '**Snapdragon 8 Elite는 2026년 Android에서 로컬 LLM 추론을 위해 가장 유능한 칩셋입니다 — Hexagon NPU는 MLC Chat에서 검증된 지원을 받는 유일한 모바일 NPU입니다.** Tensor G5와 MediaTek Dimensity 9400은 6개 앱 모두를 CPU 전용 또는 GPU Vulkan 모드로만 실행합니다.',
-                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-ko.png',
+                  image: '/images/best-local-llm-apps-android-2026-chipset-npu-hero-ko.webp',
           imageCaption: 'Snapdragon 8 Elite의 개방된 Hexagon NPU는 Phi-4 Mini를 22 tok/sec로 구동하며, Tensor G5의 CPU 전용 경로는 10-18에 그칩니다.',
 snippetBlocks: [
           {

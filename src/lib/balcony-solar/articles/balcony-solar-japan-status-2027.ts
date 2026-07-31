@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-en.png',
+    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in Japan? 2027 Status Report',
     seoTitle: 'Is Balcony Solar Legal in Japan? 2027 Status Report',
     intro: 'Japan has no dedicated plug-in or balcony solar legislation as of this page\'s last update — this is a status report on an emerging policy conversation, not a guide to a settled legal framework. Japan\'s Renewable Energy Institute has published a policy column specifically assessing plug-in solar\'s prospects in Japan, explicitly benchmarking against European frameworks, while METI has begun distinguishing residential/rooftop solar policy from utility-scale support. Neither amounts to balcony-specific rules yet.',
@@ -109,7 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-de.png',
+    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-de.webp',
     title: 'Ist ein Balkonkraftwerk in Japan legal? Statusbericht 2027',
     seoTitle: 'Ist ein Balkonkraftwerk in Japan legal? Statusbericht 2027',
     intro: 'Japan hat zum Zeitpunkt der letzten Aktualisierung dieser Seite keine eigene Gesetzgebung für steckerfertige Solaranlagen oder Balkonkraftwerke — dies ist ein Statusbericht zu einer aufkommenden politischen Debatte, kein Leitfaden zu einem bereits feststehenden rechtlichen Rahmen. Japans Renewable Energy Institute (自然エネルギー財団) hat eine politische Analyse veröffentlicht, die speziell die Perspektiven steckerfertiger Solaranlagen in Japan bewertet und dabei ausdrücklich europäische Rahmenwerke als Vergleichsmaßstab heranzieht, während das japanische Wirtschaftsministerium METI begonnen hat, die Politik für Solaranlagen auf Wohngebäuden/Dächern von der Förderung für Solaranlagen im Versorgungsmaßstab zu trennen. Keines von beidem entspricht bereits balkonspezifischen Regeln.',
@@ -207,7 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-es.png',
+    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-es.webp',
     title: '¿Es legal la energía solar de balcón en Japón? Informe de estado 2027',
     seoTitle: '¿Es legal la energía solar de balcón en Japón? Informe de estado 2027',
     intro: 'Japón no cuenta con legislación específica sobre energía solar de balcón o de tipo enchufable hasta la última actualización de esta página — se trata de un informe de estado sobre una conversación de política emergente, no de una guía a un marco legal ya establecido. El Renewable Energy Institute de Japón ha publicado un análisis de política que evalúa específicamente las perspectivas de la energía solar enchufable en Japón, comparándola explícitamente con los marcos europeos, mientras que el METI ha comenzado a distinguir la política de energía solar residencial/en tejado de la de apoyo a gran escala. Ninguno de los dos equivale todavía a normas específicas para balcones.',
@@ -305,7 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-fr.png',
+    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-fr.webp',
     title: 'L\'énergie solaire de balcon est-elle légale au Japon ? Rapport d\'état 2027',
     seoTitle: 'L\'énergie solaire de balcon est-elle légale au Japon ? Rapport d\'état 2027',
     intro: 'Le Japon ne dispose d\'aucune législation dédiée à l\'énergie solaire de balcon ou aux panneaux solaires plug-and-play à la date de dernière mise à jour de cette page — ceci est un rapport d\'état sur une conversation politique émergente, pas un guide vers un cadre juridique déjà établi. Le Renewable Energy Institute japonais a publié une analyse évaluant spécifiquement les perspectives du solaire plug-and-play au Japon, en le comparant explicitement aux cadres européens, tandis que le METI a commencé à distinguer la politique du solaire résidentiel/en toiture du soutien à l\'échelle industrielle. Ni l\'un ni l\'autre ne constitue encore des règles spécifiques au solaire de balcon.',
@@ -403,7 +403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-ar.png',
+    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-ar.webp',
     title: 'هل الطاقة الشمسية للشرفات قانونية في اليابان؟ تقرير الحالة لعام 2027',
     seoTitle: 'هل الطاقة الشمسية للشرفات قانونية في اليابان؟ تقرير الحالة لعام 2027',
     intro: 'لا توجد في اليابان تشريعات مخصصة للطاقة الشمسية القابلة للتوصيل أو طاقة الشرفات الشمسية حتى آخر تحديث لهذه الصفحة — هذا تقرير حالة حول نقاش سياساتي ناشئ، وليس دليلاً لإطار قانوني مستقر. نشر معهد الطاقة المتجددة الياباني (Renewable Energy Institute) مقالة سياسات تُقيّم تحديداً آفاق الطاقة الشمسية القابلة للتوصيل في اليابان، وتقارنها صراحةً بالأطر الأوروبية، في حين بدأت وزارة الاقتصاد والتجارة والصناعة اليابانية (METI) بالتمييز بين سياسة الطاقة الشمسية السكنية/على الأسطح ودعم الطاقة الشمسية على نطاق المرافق العامة. لا يرقى أي منهما بعد إلى قواعد خاصة بالشرفات.',
@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-ja.png',
+    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-ja.webp',
     title: '日本でバルコニーソーラーは合法?2027年ステータスレポート',
     seoTitle: '日本でバルコニーソーラーは合法?2027年ステータスレポート',
     intro: '日本には、このページの最終更新時点でプラグイン型ソーラーやバルコニーソーラーに関する専用の法律はまだありません。これはすでに確立した法的枠組みへのガイドではなく、新たに始まった政策議論についてのステータスレポートです。日本の自然エネルギー財団(Renewable Energy Institute)は、プラグイン型ソーラーの日本における展望を具体的に評価する政策コラムを発表し、ヨーロッパの枠組みと明示的に比較しています。一方、経済産業省(METI)は、住宅用・屋根設置型ソーラーの政策と事業用大規模ソーラーへの支援を区別し始めました。どちらも、まだバルコニー専用のルールには至っていません。',
@@ -599,7 +599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-ko.png',
+    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-ko.webp',
     title: '일본에서 발코니 태양광은 합법인가? 2027년 현황 보고서',
     seoTitle: '일본에서 발코니 태양광은 합법인가? 2027년 현황 보고서',
     intro: '일본은 이 페이지의 최종 업데이트 시점 기준으로 플러그인형 태양광이나 발코니 태양광에 관한 전용 법률이 없습니다. 이는 이미 확립된 법적 체계에 대한 안내가 아니라, 새롭게 시작된 정책 논의에 대한 현황 보고서입니다. 일본의 자연에너지재단(Renewable Energy Institute)은 플러그인형 태양광의 일본 내 전망을 구체적으로 평가하는 정책 칼럼을 발표하고 유럽의 체계와 명시적으로 비교했습니다. 한편 경제산업성(METI)은 주택용·지붕형 태양광 정책과 유틸리티 규모 지원을 구분하기 시작했습니다. 두 사안 모두 아직 발코니 전용 규칙에는 이르지 않았습니다.',
@@ -697,7 +697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-pt.png',
+    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-pt.webp',
     title: 'A energia solar de varanda é legal no Japão? Relatório de status 2027',
     seoTitle: 'A energia solar de varanda é legal no Japão? Relatório de status 2027',
     intro: 'O Japão não tem legislação dedicada à energia solar plug-and-play ou de varanda até a última atualização desta página — este é um relatório de status sobre uma discussão de política emergente, não um guia para uma estrutura legal já estabelecida. O Renewable Energy Institute do Japão publicou uma coluna de política avaliando especificamente as perspectivas da energia solar plug-and-play no Japão, comparando-a explicitamente com estruturas europeias, enquanto o METI começou a separar a política de energia solar residencial/em telhado do apoio em escala de concessionária. Nenhuma das duas ainda equivale a regras específicas para varandas.',
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-zh.png',
+    heroImage: '/images/balcony-solar-japan-status-2027-overview-hero-zh.webp',
     title: '阳台光伏在日本合法吗?2027年现状报告',
     seoTitle: '阳台光伏在日本合法吗?2027年现状报告',
     intro: '截至本页面最近一次更新,日本尚无专门针对插电式或阳台光伏的立法——这是一份关于新兴政策讨论的现状报告,而不是关于已确立法律框架的指南。日本可再生能源研究所(Renewable Energy Institute)发表了一篇政策专栏,专门评估插电式光伏在日本的前景,并明确将其与欧洲框架进行对比;与此同时,日本经济产业省(METI)已开始将住宅/屋顶光伏政策与公用事业规模的支持区分开来。这两者都还不构成阳台专属规则。',

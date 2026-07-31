@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Most local-LLM GPU advice optimizes for the wrong number. Speed in tokens per second decides how fast a model answers, but VRAM decides whether the model runs at all — and a model that does not fit is infinitely slower than one that does. This guide compares eight consumer GPUs across four price tiers on the figures that actually bind a purchase: VRAM capacity, measured inference speed, power draw, and price. One caveat on price: GPU prices surged in 2026 on a memory shortage, and cards now sell 1.5-2x above original MSRP — every price here is a July 2026 snapshot, so confirm current pricing before you buy.',
     metaDescription:
       'Eight GPUs compared for local LLMs across four budgets: RTX 3060 to RTX 5090. VRAM, tokens/sec, power draw, and July 2026 prices — with the model size each tier runs.',
-    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-en.png',
+    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-en.webp',
     twitterDescription:
       'RTX 3060, RX 6700 XT, RTX 4060 Ti 16GB, RX 7800 XT, RTX 4070 Ti Super, RTX 4080 Super, RTX 4090, RTX 5090 — eight GPUs, four budgets, one decision rule: buy for VRAM.',
     affiliateDisclosure: true,
@@ -231,7 +231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Best for': 'Single-GPU 70B at Q4',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-en.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-en.webp',
         imageCaption:
           'Eight consumer GPUs for local LLMs compared by VRAM, 7B Q4 inference speed, power draw, and Jul 2026 price across four budget tiers. VRAM rises from 12 GB (RTX 3060) to 32 GB (RTX 5090); buy for the model size you need before optimizing for speed.',
       },
@@ -459,7 +459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Start with the biggest model you actually want to run and let that set your tier. Only then look at price, brand, and whether your power supply can handle the card. Doing it in the other order is how people overspend or buy a card that cannot run their model.',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-en.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-en.webp',
         imageCaption:
           'Four-question decision flow for choosing a local-LLM GPU: largest target model size sets the tier, budget ceiling narrows the pick, NVIDIA-versus-AMD decides the brand, and power-supply headroom confirms the enthusiast-tier choice.',
       },
@@ -610,7 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Die meisten GPU-Empfehlungen für lokale LLMs optimieren die falsche Kennzahl. Das Tempo in Token pro Sekunde entscheidet, wie schnell ein Modell antwortet — der VRAM entscheidet jedoch, ob das Modell überhaupt läuft. Ein Modell, das nicht in den Speicher passt, ist unendlich langsamer als eines, das passt. Dieser Leitfaden vergleicht acht Consumer-GPUs über vier Preisklassen anhand der Kennzahlen, die einen Kauf wirklich bestimmen: VRAM-Kapazität, gemessenes Inferenztempo, Leistungsaufnahme und Preis. Ein Hinweis zum Preis: Die GPU-Preise sind 2026 wegen einer Speicherknappheit stark gestiegen und liegen 1,5- bis 2-fach über der ursprünglichen UVP — alle Preise hier sind eine Momentaufnahme von Juli 2026, prüfen Sie also den aktuellen Preis vor dem Kauf.',
     metaDescription:
       'GPU-Kaufberatung für lokale LLMs 2026: VRAM je Modellgröße, beste GPUs nach Budget, gebraucht vs neu. RTX 4090, 3090, 4060 Ti und AMD-Optionen im Vergleich.',
-    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-de.png',
+    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-de.webp',
     twitterDescription:
       'RTX 3060, RX 6700 XT, RTX 4060 Ti 16GB, RX 7800 XT, RTX 4070 Ti Super, RTX 4080 Super, RTX 4090, RTX 5090 — acht GPUs, vier Budgets, eine Regel: nach VRAM kaufen.',
     affiliateDisclosure: true,
@@ -817,7 +817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Am besten für': '70B bei Q4 auf einer GPU',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-de.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-de.webp',
         imageCaption:
           'Acht Consumer-GPUs für lokale LLMs im Vergleich nach VRAM, 7B-Q4-Inferenztempo, Leistungsaufnahme und Preis (Juli 2026) über vier Preisklassen. Der VRAM steigt von 12 GB (RTX 3060) auf 32 GB (RTX 5090); kaufen Sie nach der benötigten Modellgröße, bevor Sie auf Tempo optimieren.',
       },
@@ -1045,7 +1045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Beginnen Sie mit dem größten Modell, das Sie wirklich ausführen wollen, und lassen Sie das Ihre Klasse bestimmen. Erst danach schauen Sie auf Preis, Marke und ob Ihr Netzteil die Karte versorgen kann. Die umgekehrte Reihenfolge ist der Weg, zu viel auszugeben oder eine Karte zu kaufen, die Ihr Modell nicht ausführen kann.',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-de.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-de.webp',
         imageCaption:
           'Vier-Fragen-Entscheidungsfluss zur Wahl einer GPU für lokale LLMs: Die größte Zielmodellgröße legt die Klasse fest, die Budgetgrenze grenzt die Wahl ein, NVIDIA gegen AMD entscheidet die Marke, und die Netzteilreserve bestätigt die Enthusiast-Wahl.',
       },
@@ -1195,7 +1195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'La plupart des conseils sur les GPU pour LLM locaux optimisent le mauvais chiffre. La vitesse en tokens par seconde décide de la rapidité de réponse d\'un modèle, mais c\'est la VRAM qui décide si le modèle s\'exécute tout court — et un modèle qui ne tient pas en mémoire est infiniment plus lent qu\'un modèle qui y tient. Ce guide compare huit GPU grand public sur quatre gammes de prix selon les chiffres qui pèsent réellement sur un achat : capacité VRAM, vitesse d\'inférence mesurée, consommation et prix. Une réserve sur les prix : ils ont flambé en 2026 à cause d\'une pénurie de mémoire, et les cartes se vendent désormais 1,5 à 2 fois au-dessus de leur tarif de lancement — chaque prix ici est un instantané de juillet 2026, vérifiez donc le tarif actuel avant d\'acheter.',
     metaDescription:
       'Guide d\'achat GPU pour LLMs locaux 2026 : besoins VRAM par taille de modèle, meilleurs GPU par budget. RTX 4090, 3090, 4060 Ti et options AMD comparées.',
-    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-fr.png',
+    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-fr.webp',
     twitterDescription:
       'RTX 3060, RX 6700 XT, RTX 4060 Ti 16 Go, RX 7800 XT, RTX 4070 Ti Super, RTX 4080 Super, RTX 4090, RTX 5090 — huit GPU, quatre budgets, une règle : achetez pour la VRAM.',
     affiliateDisclosure: true,
@@ -1402,7 +1402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Idéal pour': '70B en Q4 sur un seul GPU',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-fr.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-fr.webp',
         imageCaption:
           'Huit GPU grand public pour les LLM locaux comparés par VRAM, vitesse d\'inférence 7B Q4, consommation et prix de juillet 2026 sur quatre gammes de budget. La VRAM monte de 12 Go (RTX 3060) à 32 Go (RTX 5090) ; achetez pour la taille de modèle dont vous avez besoin avant d\'optimiser la vitesse.',
       },
@@ -1630,7 +1630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Commencez par le plus gros modèle que vous voulez réellement exécuter et laissez-le fixer votre gamme. Ce n\'est qu\'ensuite que vous regardez le prix, la marque et si votre alimentation peut gérer la carte. Faire l\'inverse, c\'est ainsi qu\'on dépense trop ou qu\'on achète une carte incapable de faire tourner son modèle.',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-fr.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-fr.webp',
         imageCaption:
           'Flux de décision en quatre questions pour choisir un GPU de LLM local : la plus grande taille de modèle visée fixe la gamme, le plafond budgétaire affine le choix, NVIDIA contre AMD décide la marque, et la marge de l\'alimentation confirme le choix de gamme enthousiaste.',
       },
@@ -1780,7 +1780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルLLM向けのGPUアドバイスの多くは、見るべきでない数値を最適化しています。トークン毎秒の速度はモデルが答える速さを決めますが、VRAMはそもそもモデルが動くかどうかを決めます。そして収まらないモデルは、収まるモデルよりも無限に遅いのです。本ガイドは、購入を実際に左右する数値、つまりVRAM容量・実測した推論速度・消費電力・価格で、4つの価格帯にわたり8枚のコンシューマーGPUを比較します。価格について1点注意があります。GPU価格はメモリ不足により2026年に急騰し、カードは現在、当初のメーカー希望小売価格の1.5～2倍で売られています。本記事の価格はすべて2026年7月時点のスナップショットですので、購入前に最新価格を確認してください。',
     metaDescription:
       'ローカルLLM向けに8枚のGPUを4つの予算帯で比較：RTX 3060からRTX 5090まで。VRAM、トークン毎秒、消費電力、2026年7月の価格、各価格帯が動かせるモデルサイズを掲載。',
-    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ja.png',
+    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ja.webp',
     twitterDescription:
       'RTX 3060、RX 6700 XT、RTX 4060 Ti 16GB、RX 7800 XT、RTX 4070 Ti Super、RTX 4080 Super、RTX 4090、RTX 5090 — 8枚のGPU、4つの予算、ひとつの判断基準：VRAMで選ぶ。',
     affiliateDisclosure: true,
@@ -1987,7 +1987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最適な用途': '1枚のGPUでQ4の70B',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ja.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ja.webp',
         imageCaption:
           'ローカルLLM向けの8枚のコンシューマーGPUを、VRAM、7B Q4推論速度、消費電力、2026年7月の価格で4つの予算帯にわたり比較。VRAMは12 GB（RTX 3060）から32 GB（RTX 5090）まで上がります。速度を最適化する前に、必要なモデルサイズで選んでください。',
       },
@@ -2215,7 +2215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '実際に動かしたい最大のモデルから始め、それに価格帯を決めさせてください。価格・ブランド・電源がカードに対応できるかを見るのは、その後だけです。逆の順序で進めるのが、使いすぎたり、自分のモデルを動かせないカードを買ったりする原因です。',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-ja.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-ja.webp',
         imageCaption:
           'ローカルLLM向けGPUを選ぶための4つの質問による判断フロー：対象とする最大のモデルサイズが価格帯を決め、予算の上限が選択を絞り、NVIDIA対AMDがブランドを決め、電源の余裕がエンスージアスト帯の選択を確定します。',
       },
@@ -2365,7 +2365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '大多数关于本地大模型显卡的建议都在优化错误的数字。每秒 token 的速度决定模型回答的快慢，但显存决定模型能否运行——一个装不下的模型，比一个装得下的模型慢无数倍。本指南在四个价位档次中比较八款消费级显卡，依据真正决定购买的数字：显存容量、实测推理速度、功耗和价格。关于价格有一点提醒：2026 年因内存短缺，显卡价格大涨，目前售价为原始建议零售价的 1.5 到 2 倍——本文每个价格都是 2026 年 7 月的快照，购买前请确认当前价格。',
     metaDescription:
       '八款显卡在四个预算档次中对比本地大模型表现：从 RTX 3060 到 RTX 5090。显存、token/s、功耗和 2026 年 7 月价格，附每档可运行的模型规模。',
-    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-zh.png',
+    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-zh.webp',
     twitterDescription:
       'RTX 3060、RX 6700 XT、RTX 4060 Ti 16GB、RX 7800 XT、RTX 4070 Ti Super、RTX 4080 Super、RTX 4090、RTX 5090——八款显卡，四个预算，一条原则：按显存买。',
     affiliateDisclosure: true,
@@ -2572,7 +2572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最适合': '单卡 Q4 运行 70B',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-zh.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-zh.webp',
         imageCaption:
           '八款消费级显卡在四个预算档次中按显存、7B Q4 推理速度、功耗和 2026 年 7 月价格对比本地大模型表现。显存从 12 GB（RTX 3060）升至 32 GB（RTX 5090）；优化速度之前，先按你需要的模型规模购买。',
       },
@@ -2800,7 +2800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '从你真正想运行的最大模型开始，让它来决定你的档次。只有在那之后，才看价格、品牌和电源能否带动显卡。按相反顺序来做，正是人们花冤枉钱或买到带不动自己模型的显卡的原因。',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-zh.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-zh.webp',
         imageCaption:
           '为本地大模型选显卡的四问题决策流程：最大目标模型规模确定档次，预算上限缩小选择，NVIDIA 与 AMD 决定品牌，电源余量确认发烧档的选择。',
       },
@@ -2950,7 +2950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'La mayoría de los consejos sobre GPUs para LLMs locales optimizan el número equivocado. La velocidad en tokens por segundo decide qué tan rápido responde un modelo, pero la VRAM decide si el modelo puede ejecutarse — y un modelo que no cabe en memoria es infinitamente más lento que uno que sí cabe. Esta guía compara ocho GPUs de consumo en cuatro rangos de precio según las cifras que realmente determinan una compra: capacidad de VRAM, velocidad de inferencia medida, consumo energético y precio. Una advertencia sobre los precios: los precios de GPUs se dispararon en 2026 debido a una escasez de memoria, y las tarjetas ahora se venden entre 1,5 y 2 veces por encima de su precio de lista original — cada precio aquí es un dato de julio de 2026, así que verifica el precio actual antes de comprar.',
     metaDescription:
       'Ocho GPUs comparadas para LLMs locales en 4 presupuestos: de la RTX 3060 a la RTX 5090. VRAM, tokens/s, consumo y precios 2026 por tamaño de modelo.',
-    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-es.png',
+    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-es.webp',
     twitterDescription:
       'RTX 3060, RX 6700 XT, RTX 4060 Ti 16GB, RX 7800 XT, RTX 4070 Ti Super, RTX 4080 Super, RTX 4090, RTX 5090 — ocho GPUs, cuatro presupuestos, una regla: compra por VRAM.',
     affiliateDisclosure: true,
@@ -3157,7 +3157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Ideal para': 'GPU única para 70B en Q4',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-es.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-es.webp',
         imageCaption:
           'Ocho GPUs de consumo para LLMs locales comparadas por VRAM, velocidad de inferencia 7B Q4, consumo energético y precio de julio de 2026 en cuatro rangos de presupuesto. La VRAM sube de 12 GB (RTX 3060) a 32 GB (RTX 5090); compra por el tamaño de modelo que necesitas antes de optimizar la velocidad.',
       },
@@ -3385,7 +3385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Empieza con el modelo más grande que realmente quieres ejecutar y deja que eso establezca tu rango. Solo entonces mira el precio, la marca y si tu fuente de alimentación puede manejar la tarjeta. Hacerlo en el orden contrario es como la gente gasta de más o compra una tarjeta que no puede ejecutar su modelo.',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-es.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-es.webp',
         imageCaption:
           'Flujo de decisión de cuatro preguntas para elegir una GPU de LLM local: el tamaño del modelo objetivo más grande establece el rango, el techo de presupuesto acota la elección, NVIDIA frente a AMD decide la marca, y el margen de la fuente de alimentación confirma la elección del rango entusiasta.',
       },
@@ -3548,7 +3548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'A maioria dos conselhos sobre GPUs para LLMs locais otimiza o número errado. A velocidade em tokens por segundo decide a rapidez com que um modelo responde, mas a VRAM decide se o modelo executa — e um modelo que não cabe na memória é infinitamente mais lento do que um que cabe. Este guia compara oito GPUs de consumo em quatro faixas de preço pelos números que realmente determinam uma compra: capacidade de VRAM, velocidade de inferência medida, consumo de energia e preço. Uma ressalva sobre o preço: os preços de GPUs dispararam em 2026 devido a uma escassez de memória, e as placas agora são vendidas de 1,5 a 2 vezes acima do preço de lista original — cada preço aqui é uma captura de julho de 2026, então confirme o preço atual antes de comprar.',
     metaDescription:
       'Oito GPUs comparadas para LLMs locais em 4 orçamentos: RTX 3060 ao RTX 5090. VRAM, tokens/s, consumo de energia e preços de julho de 2026 — com o tamanho de modelo que cada faixa executa.',
-    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-pt.png',
+    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-pt.webp',
     twitterDescription:
       'RTX 3060, RX 6700 XT, RTX 4060 Ti 16GB, RX 7800 XT, RTX 4070 Ti Super, RTX 4080 Super, RTX 4090, RTX 5090 — oito GPUs, quatro orçamentos, uma regra: compre pela VRAM.',
     affiliateDisclosure: true,
@@ -3755,7 +3755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Melhor para': 'GPU única para 70B em Q4',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-pt.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-pt.webp',
         imageCaption:
           'Oito GPUs de consumo para LLMs locais comparadas por VRAM, velocidade de inferência 7B Q4, consumo de energia e preço de julho de 2026 em quatro faixas de orçamento. A VRAM sobe de 12 GB (RTX 3060) a 32 GB (RTX 5090); compre pelo tamanho de modelo que você precisa antes de otimizar a velocidade.',
       },
@@ -3983,7 +3983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Comece com o maior modelo que você realmente quer executar e deixe isso definir sua faixa. Só então olhe para o preço, a marca e se sua fonte de alimentação consegue lidar com a placa. Fazer ao contrário é como as pessoas gastam demais ou compram uma placa que não consegue executar seu modelo.',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-pt.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-pt.webp',
         imageCaption:
           'Fluxo de decisão de quatro perguntas para escolher uma GPU para LLM local: o maior tamanho de modelo alvo define a faixa, o teto de orçamento estreita a escolha, NVIDIA versus AMD decide a marca, e a margem da fonte de alimentação confirma a escolha da faixa entusiasta.',
       },
@@ -4146,7 +4146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تُحسِّن معظم النصائح المتعلقة بوحدات معالجة الرسومات للنماذج اللغوية المحلية الرقم الخاطئ. سرعة الرموز في الثانية تحدد مدى سرعة استجابة النموذج، لكن VRAM تحدد ما إذا كان النموذج يُشغَّل أصلاً — ونموذج لا يناسب الذاكرة أبطأ من نموذج يناسبها بما لا يُقاس. يقارن هذا الدليل ثماني وحدات معالجة رسومات استهلاكية في أربع فئات سعرية من حيث الأرقام التي تُحدد الشراء فعلاً: سعة VRAM وسرعة الاستدلال المقاسة واستهلاك الطاقة والسعر. تحذير بشأن الأسعار: ارتفعت أسعار وحدات معالجة الرسومات بشكل حاد في 2026 بسبب نقص الذاكرة، وتُباع البطاقات الآن بما يتراوح بين 1.5 و2 ضعف سعر قائمتها الأصلية — كل سعر هنا هو صورة من يوليو 2026، لذا تأكد من السعر الحالي قبل الشراء.',
     metaDescription:
       '8 وحدات GPU مقارَنة عبر 4 ميزانيات لنماذج LLM المحلية: VRAM والرموز في الثانية واستهلاك الطاقة وأسعار يوليو 2026. RTX 3060 حتى RTX 5090.',
-    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ar.png',
+    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ar.webp',
     twitterDescription:
       'RTX 3060 وRX 6700 XT وRTX 4060 Ti 16GB وRX 7800 XT وRTX 4070 Ti Super وRTX 4080 Super وRTX 4090 وRTX 5090 — ثماني وحدات معالجة رسومات وأربع ميزانيات وقاعدة واحدة: اشترِ بحسب VRAM.',
     affiliateDisclosure: true,
@@ -4609,7 +4609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 LLM용 GPU 관련 조언의 대부분은 잘못된 수치를 최적화하고 있습니다. 초당 토큰 속도는 모델이 얼마나 빠르게 응답하는지를 결정하지만, VRAM은 모델이 실행될 수 있는지 여부를 결정합니다. 메모리에 맞지 않는 모델은 맞는 모델보다 무한히 느립니다. 이 가이드는 실제 구매 결정을 좌우하는 수치인 VRAM 용량, 측정된 추론 속도, 전력 소비, 가격에 따라 네 가지 가격대에서 8개의 소비자용 GPU를 비교합니다. 가격에 관한 주의 사항: 2026년에는 메모리 공급 부족으로 인해 GPU 가격이 급등하여 현재 카드들이 원래 출시 가격보다 1.5~2배에 판매되고 있습니다. 여기의 모든 가격은 2026년 7월 기준 데이터이므로, 구매 전 현재 가격을 반드시 확인하십시오.',
     metaDescription:
       '4가지 예산별로 로컬 LLM용 8개 GPU 비교: RTX 3060부터 RTX 5090까지. VRAM, 토큰/초, 전력 소비, 2026년 7월 가격 — 각 등급에서 실행 가능한 모델 크기 포함.',
-    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ko.png',
+    heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ko.webp',
     twitterDescription:
       'RTX 3060, RX 6700 XT, RTX 4060 Ti 16GB, RX 7800 XT, RTX 4070 Ti Super, RTX 4080 Super, RTX 4090, RTX 5090 — 8개 GPU, 4가지 예산, 하나의 규칙: VRAM으로 구매하십시오.',
     affiliateDisclosure: true,
@@ -4816,7 +4816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '적합 용도': '단일 GPU로 Q4에서 70B 실행',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ko.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ko.webp',
         imageCaption:
           '4가지 예산 등급에서 VRAM, 7B Q4 추론 속도, 전력 소비, 2026년 7월 가격으로 비교한 로컬 LLM용 8개 소비자용 GPU. VRAM은 12 GB (RTX 3060)에서 32 GB (RTX 5090)까지 증가합니다. 속도를 최적화하기 전에 필요한 모델 크기에 맞는 카드를 먼저 구매하십시오.',
       },
@@ -5044,7 +5044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '실제로 실행하고 싶은 가장 큰 모델부터 시작하여 등급을 설정하십시오. 그 후에만 가격, 브랜드, 파워 서플라이가 처리할 수 있는지를 확인하십시오. 반대 순서로 하는 것이 사람들이 과다 지출하거나 모델을 실행할 수 없는 카드를 구매하는 이유입니다.',
           },
         ],
-        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-ko.png',
+        image: '/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-ko.webp',
         imageCaption:
           '로컬 LLM GPU 선택을 위한 네 가지 질문 결정 흐름: 목표 모델 크기가 등급을 설정하고, 예산 상한선이 선택을 좁히며, NVIDIA 대 AMD가 브랜드를 결정하고, 파워 서플라이 여유가 최고급형 선택을 확인합니다.',
       },

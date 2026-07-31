@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/anker-solix-balcony-solar-overview-hero-en.png',
+    heroImage: '/images/anker-solix-balcony-solar-overview-hero-en.webp',
     title: 'Anker SOLIX: Balcony Solar Company Profile',
     seoTitle: 'Anker SOLIX Balcony Solar Company Profile',
     metaDescription: 'Company profile for Anker SOLIX: history, ownership, product range, and role in the balcony solar market.',
@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/anker-solix-balcony-solar-overview-hero-de.png',
+    heroImage: '/images/anker-solix-balcony-solar-overview-hero-de.webp',
     title: 'Anker SOLIX: Firmenprofil Balkonkraftwerk',
     seoTitle: 'Anker SOLIX: Firmenprofil im Balkonkraftwerk-Markt',
     metaDescription: 'Firmenprofil zu Anker SOLIX: Unternehmensgeschichte, Eigentümerstruktur, Produktpalette und Rolle im Markt für Balkonkraftwerke im Überblick.',
@@ -172,7 +172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/anker-solix-balcony-solar-overview-hero-fr.png',
+    heroImage: '/images/anker-solix-balcony-solar-overview-hero-fr.webp',
     title: 'Anker SOLIX : profil de l\'entreprise solaire de balcon',
     seoTitle: 'Anker SOLIX : profil de l\'entreprise solaire de balcon',
     metaDescription: 'Profil d\'entreprise d\'Anker SOLIX : historique, structure actionnariale, gamme de produits et rôle sur le marché du solaire de balcon.',
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/anker-solix-balcony-solar-overview-hero-ja.png',
+    heroImage: '/images/anker-solix-balcony-solar-overview-hero-ja.webp',
     title: 'Anker SOLIX：ベランダ太陽光発電の企業プロファイル',
     seoTitle: 'Anker SOLIX：ベランダ太陽光発電の企業プロフィール',
     metaDescription: 'Anker SOLIXの企業プロファイルを紹介します。設立の経緯、株主構成、製品ラインナップ、そしてベランダ太陽光発電市場における役割について解説します。',
@@ -336,7 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/anker-solix-balcony-solar-overview-hero-zh.png',
+    heroImage: '/images/anker-solix-balcony-solar-overview-hero-zh.webp',
     title: 'Anker SOLIX：阳台光伏企业档案',
     seoTitle: 'Anker SOLIX 阳台太阳能企业档案：历史、股权与产品线',
     metaDescription: 'Anker SOLIX企业档案：详细介绍该公司的发展历史、股权结构、产品线布局，以及其在阳台太阳能市场中所扮演的角色与市场定位。',
@@ -418,7 +418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/anker-solix-balcony-solar-overview-hero-es.png',
+    heroImage: '/images/anker-solix-balcony-solar-overview-hero-es.webp',
     title: 'Anker SOLIX: perfil de la empresa de energía solar de balcón',
     seoTitle: 'Anker SOLIX: perfil de la empresa solar de balcón',
     metaDescription: 'Perfil de la empresa Anker SOLIX: historia, propietarios, gama de productos y su papel en el mercado de la energía solar de balcón.',
@@ -500,7 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/anker-solix-balcony-solar-overview-hero-pt.png',
+    heroImage: '/images/anker-solix-balcony-solar-overview-hero-pt.webp',
     title: 'Anker SOLIX: Perfil da Empresa de Energia Solar de Varanda',
     seoTitle: 'Anker SOLIX: Perfil da Empresa Solar de Varanda',
     metaDescription: 'Perfil da empresa Anker SOLIX: histórico, estrutura societária, linha de produtos e papel no mercado de energia solar de varanda.',
@@ -582,7 +582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/anker-solix-balcony-solar-overview-hero-ar.png',
+    heroImage: '/images/anker-solix-balcony-solar-overview-hero-ar.webp',
     title: 'Anker SOLIX: الملف التعريفي لشركة الطاقة الشمسية للشرفات',
     seoTitle: 'Anker SOLIX: الملف التعريفي لشركة الطاقة الشمسية',
     metaDescription: 'ملف تعريفي لشركة Anker SOLIX: التاريخ، الملكية، تشكيلة المنتجات، ودورها في سوق الطاقة الشمسية للشرفات.',
@@ -664,7 +664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/anker-solix-balcony-solar-overview-hero-ko.png',
+    heroImage: '/images/anker-solix-balcony-solar-overview-hero-ko.webp',
     title: 'Anker SOLIX: 발코니 태양광 기업 프로필',
     seoTitle: 'Anker SOLIX 발코니 태양광 기업 프로필 소개',
     metaDescription: 'Anker SOLIX의 기업 프로필을 소개합니다. 연혁, 소유 구조, 제품 라인업, 그리고 발코니 태양광 시장에서 담당하는 역할을 설명합니다.',

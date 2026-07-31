@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Local AI Agents in 2026: What Actually Works (And What Still Fails)',
-    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-en.png',
+    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-en.webp',
     seoTitle: 'Local AI Agents 2026: Multi-Agent Orchestration Tested',
     intro:
       'Six local AI agent stacks, five real tasks, thirty days of evaluation. Two stacks land tasks reliably. Three fail in ways the demos do not show. One is effectively unusable. This is the honest report — what each agent setup actually does on a refactor, a research task, an email triage, a scrape-and-summarize, and a bug hunt, with the failures named specifically and the supervision cost quantified. CrewAI and AutoGen/AG2, evaluated separately as the multi-agent orchestration frameworks readers ask about most, confirm the same pattern rather than break it.',
@@ -489,7 +489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Agentes de IA locales en 2026: lo que realmente funciona (y lo que sigue fallando)',
-    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-es.png',
+    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-es.webp',
     seoTitle: 'Agentes de IA locales 2026: lo que funciona y lo que falla',
     intro:
       'Seis stacks de agentes de IA locales, cinco tareas reales, treinta días de evaluación. Dos stacks completan las tareas de forma fiable. Tres fallan de maneras que los demos no muestran. Uno es prácticamente inutilizable. Este es el informe honesto: qué hace realmente cada configuración de agente en una refactorización, una tarea de investigación, un triaje de correo, un scrape-y-resumen y una búsqueda de bugs, con los fallos nombrados específicamente y el coste de supervisión cuantificado. CrewAI y AutoGen/AG2, evaluados por separado como los frameworks de orquestación multiagente que más preguntan los lectores, confirman el mismo patrón en lugar de romperlo.',
@@ -978,7 +978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Agents locaux en 2026 : Ce qui fonctionne réellement (et ce qui échoue)',
-    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-fr.png',
+    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-fr.webp',
     seoTitle: 'Agents IA locaux 2026 : Ce qui marche, ce qui échoue',
     intro:
       'Six stacks d\'agents IA locaux, cinq tâches réelles, trente jours d\'évaluation. Deux stacks accomplissent les tâches de manière fiable. Trois échouent d\'une manière que les démos ne montrent pas. Un est pratiquement inutilisable. C\'est le rapport honnête — ce que chaque configuration d\'agent fait réellement sur une refonte, une tâche de recherche, une triage d\'e-mails, un scrape-et-résumé, et une chasse aux bugs, avec les échecs nommés spécifiquement et le coût de supervision quantifié. CrewAI et AutoGen/AG2, évalués séparément comme les frameworks d\'orchestration multi-agents les plus demandés par les lecteurs, confirment ce schéma plutôt que de le briser.',
@@ -1454,7 +1454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'ローカルAIエージェント2026年：実際に機能するもの（そして失敗するもの）',
-    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-ja.png',
+    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-ja.webp',
     seoTitle: '2026年ローカルAIエージェント評価：Cline vs LangGraph vs MetaGPT',
     intro:
       'ローカルAIエージェント6スタック、実務タスク5種類、30日間の評価。2スタックがタスクを確実に達成します。3スタックはデモに見えない方法で失敗します。1つは実質的に使用不可能です。これが正直なレポートです。各エージェント設定がリファクタリング、研究タスク、メールトリアージ、スクレイプと要約、バグハント実施時に実際に何を行うか、具体的に名前が付けられた失敗と定量化された監視コストを含みます。',
@@ -1878,7 +1878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Lokale KI-Agenten in 2026: Was funktioniert (und was noch fehlschlägt)',
-    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-de.png',
+    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-de.webp',
     seoTitle: 'Lokale KI-Agenten 2026: Was funktioniert, was fehlschlägt',
     intro:
       'Sechs lokale KI-Agent-Stacks, fünf echte Aufgaben, dreißig Tage Evaluation. Zwei Stacks landen Aufgaben zuverlässig. Drei fehlschlagen auf Wegen, die die Demos nicht zeigen. Einer ist praktisch unbrauchbar. Das ist der ehrliche Bericht — was jedes Agent-Setup bei einer Umstrukturierung, einer Recherchaufgabe, einer E-Mail-Triage, einem Scrape-and-Summarize und einer Bug-Suche wirklich tut, mit spezifisch benannten Fehlern und quantifizierten Überwachungskosten. CrewAI und AutoGen/AG2, separat evaluiert als die Multi-Agent-Orchestrierungs-Frameworks, nach denen Leser am häufigsten fragen, bestätigen dieses Muster, statt es zu brechen.',
@@ -2354,7 +2354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: '本地AI代理2026：实际可行的方案（以及失败的原因）',
-    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-zh.png',
+    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-zh.webp',
     seoTitle: '2026年本地AI代理评测：Cline vs LangGraph vs MetaGPT 哪款真能用',
     intro:
       '六个本地AI代理框架，五项真实任务，三十天评估。两个框架可靠完成任务。三个框架以演示中未显示的方式失败。一个框架完全无法使用。这是诚实的报告——每个代理设置在重构、研究任务、邮件分类、爬取和总结、漏洞修复中的实际表现，包括具体命名的失败原因和量化的监督成本。',
@@ -2788,7 +2788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Agentes de IA locais em 2026: o que realmente funciona (e o que ainda falha)',
-    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-pt.png',
+    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-pt.webp',
     seoTitle: 'Agentes de IA locais 2026: o que funciona e o que falha',
     intro:
       'Seis stacks de agentes de IA locais, cinco tarefas reais, trinta dias de avaliação. Dois stacks completam as tarefas de forma confiável. Três falham de maneiras que os demos não mostram. Um é praticamente inutilizável. Este é o relatório honesto: o que cada configuração de agente realmente faz em uma refatoração, uma tarefa de pesquisa, uma triagem de e-mail, um scrape-e-resumo e uma caça a bugs, com as falhas nomeadas especificamente e o custo de supervisão quantificado. CrewAI e AutoGen/AG2, avaliados separadamente como os frameworks de orquestração multiagente mais perguntados pelos leitores, confirmam esse padrão em vez de quebrá-lo.',
@@ -3277,7 +3277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'وكلاء الذكاء الاصطناعي المحليون في ⁨2026⁩: ما يعمل فعلاً (وما يستمر في الفشل)',
-    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-ar.png',
+    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-ar.webp',
     seoTitle: 'وكلاء ⁨AI⁩ محليون ⁨2026⁩: اختبار ⁨6⁩ أطر عمل بصدق',
     intro:
       'ستة أطر عمل لوكلاء الذكاء الاصطناعي المحليين، وخمس مهام حقيقية، وثلاثون يوماً من التقييم. نجح اثنان في إتمام المهام بشكل موثوق. وأخفق ثلاثة بطرق لا تُظهرها العروض التجريبية. أما الأخير فكان عديم الفائدة عملياً. هذا هو التقرير الأمين: ما الذي تفعله كل إعدادة وكيل فعلياً في مهام إعادة الهيكلة والبحث وفرز البريد والجمع والتلخيص والبحث عن الأخطاء، مع تسمية الإخفاقات صراحةً وقياس تكلفة الإشراف كمياً. أُقيّم CrewAI وAutoGen/AG2 بشكل منفصل بوصفهما إطاري تنسيق الوكلاء المتعددين الأكثر تساؤلاً من القراء، وهما يؤكدان هذا النمط بدل أن يكسراه.',
@@ -3766,7 +3766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: '2026년 로컬 AI 에이전트: 실제로 작동하는 것과 여전히 실패하는 것',
-    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-ko.png',
+    heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-ko.webp',
     seoTitle: '2026년 로컬 AI 에이전트: 작동하는 것 vs. 실패하는 것',
     intro:
       '6가지 로컬 AI 에이전트 스택, 5가지 실제 작업, 30일간의 평가를 진행하였습니다. 두 가지 스택은 작업을 안정적으로 완료합니다. 세 가지는 데모에서 드러나지 않는 방식으로 실패합니다. 하나는 사실상 사용 불가 수준입니다. 이것은 정직한 보고서입니다. 리팩터링, 리서치 작업, 이메일 트리아지, 스크레이프-요약, 버그 수색 등 각 에이전트 구성이 실제로 무엇을 하는지, 실패 사례를 구체적으로 명시하고 감독 비용을 정량화하였습니다. 독자들이 가장 많이 묻는 멀티에이전트 오케스트레이션 프레임워크인 CrewAI와 AutoGen/AG2를 별도로 평가했으며, 이들은 이 패턴을 깨뜨리는 것이 아니라 확인해줍니다.',

@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-en.png',
+    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-en.webp',
     title: 'Home Assistant Energy Dashboard: Complete Setup Guide (2027)',
     seoTitle: 'Home Assistant Energy Dashboard Setup (2027)',
     intro:
@@ -211,7 +211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-de.png',
+    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-de.webp',
     title: 'Home Assistant Energie-Dashboard: Komplette Einrichtungsanleitung (2027)',
     seoTitle: 'Home Assistant Energie-Dashboard einrichten (2027)',
     intro:
@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-fr.png',
+    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-fr.webp',
     title: 'Tableau de bord Énergie de Home Assistant : guide complet de configuration (2027)',
     seoTitle: 'Configurer le tableau de bord Énergie de Home Assistant (2027)',
     intro:
@@ -617,7 +617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-ja.png',
+    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-ja.webp',
     title: 'Home Assistant Energyダッシュボード：完全設定ガイド（2027年）',
     seoTitle: 'Home Assistant Energyダッシュボード設定（2027年）',
     intro:
@@ -820,7 +820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-zh.png',
+    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-zh.webp',
     title: 'Home Assistant能源仪表盘：完整设置指南（2027年）',
     seoTitle: 'Home Assistant能源仪表盘设置（2027年）',
     intro:
@@ -1023,7 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-es.png',
+    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-es.webp',
     title: 'Panel de Energía de Home Assistant: guía completa de configuración (2027)',
     seoTitle: 'Configurar el panel de Energía de Home Assistant (2027)',
     intro:
@@ -1226,7 +1226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-pt.png',
+    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-pt.webp',
     title: 'Painel de Energia do Home Assistant: guia completo de configuração (2027)',
     seoTitle: 'Configurar o painel de Energia do Home Assistant (2027)',
     intro:
@@ -1429,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-ar.png',
+    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-ar.webp',
     title: 'لوحة Energy في Home Assistant: دليل الإعداد الكامل (⁨2027⁩)',
     seoTitle: 'إعداد لوحة Energy في Home Assistant (⁨2027⁩)',
     intro:
@@ -1632,7 +1632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-ko.png',
+    heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-ko.webp',
     title: 'Home Assistant Energy 대시보드: 완전 설정 가이드 (2027년)',
     seoTitle: 'Home Assistant Energy 대시보드 설정 (2027년)',
     intro:

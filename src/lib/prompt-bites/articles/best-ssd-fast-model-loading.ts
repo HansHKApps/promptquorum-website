@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-en.png',
+    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-en.webp',
     title: 'Best SSD for Fast Model Loading in 2026?',
     seoTitle: 'Best SSD for Fast LLM Model Loading 2026 | Prompt Bites',
     metaDescription: 'Best SSD for fast LLM model loading: a PCIe Gen4 NVMe like the Samsung 990 Pro 2 TB. High sequential read pulls multi-GB models into RAM in seconds.',
@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-de.png',
+    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-de.webp',
     title: 'Beste SSD für schnelles Modell-Laden 2026?',
     seoTitle: 'Beste SSD für schnelles LLM-Modell-Laden 2026 | Prompt Bites',
     metaDescription: 'Schnelleres Laden lokaler LLMs mit der richtigen SSD: NVMe Gen4 lädt 70B in Sekunden. Lesegeschwindigkeit, Kapazität und Preis-Leistung im Vergleich.',
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-fr.png',
+    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-fr.webp',
     title: 'Meilleur SSD pour charger les modèles vite en 2026 ?',
     seoTitle: 'Meilleur SSD pour charger les LLM 2026 | Prompt Bites',
     metaDescription: 'Meilleur SSD pour charger les modèles LLM : un NVMe PCIe Gen4 comme le Samsung 990 Pro 2 TB. Lecture séquentielle élevée, modèles multi-GB en RAM en secondes.',
@@ -493,7 +493,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-ja.png',
+    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-ja.webp',
     title: '2026年、モデル読み込みが速いSSDは？',
     seoTitle: '高速LLMモデル読み込み向けSSD 2026 | Prompt Bites',
     metaDescription: '高速LLMモデル読み込み向けSSDはSamsung 990 Pro 2 TBのようなPCIe Gen4 NVMe。高いシーケンシャルリードで数GBのモデルを数秒でRAMへ。',
@@ -641,7 +641,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-zh.png',
+    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-zh.webp',
     title: '2026年模型加载最快的SSD是？',
     seoTitle: '快速LLM模型加载SSD 2026 | Prompt Bites',
     metaDescription: '快速LLM模型加载首选PCIe Gen4 NVMe,如Samsung 990 Pro 2 TB。高顺序读取秒级把多GB模型拉入RAM。',
@@ -792,7 +792,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-pt.png',
+    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-pt.webp',
     title: 'Melhor SSD para carregamento rápido de modelos em 2026?',
     seoTitle: 'Melhor SSD para carregamento rápido de modelos LLM 2026',
     metaDescription: 'Melhor SSD para carregamento rápido de modelos LLM: um NVMe PCIe Gen4 como o Samsung 990 Pro 2 TB. Leitura sequencial alta carrega modelos de vários GB na RAM em segundos.',
@@ -940,7 +940,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-es.png',
+    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-es.webp',
     title: '¿Mejor SSD para cargar modelos rápido en 2026?',
     seoTitle: 'Mejor SSD para carga rápida de modelos LLM 2026',
     metaDescription: 'Mejor SSD para cargar modelos LLM rápido: un NVMe PCIe Gen4 como el Samsung 990 Pro 2 TB. Su lectura secuencial carga varios GB en RAM en segundos.',
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-ar.png',
+    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-ar.webp',
     title: 'أفضل ⁨SSD⁩ لتحميل النماذج بسرعة في ⁨2026⁩؟',
     seoTitle: 'أفضل ⁨SSD⁩ لتحميل نماذج ⁨LLM⁩ بسرعة ⁨2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: '⁨Samsung 990 Pro 2 TB⁩ بسرعة ⁨7⁩,⁨000 MB/s⁩ يحمّل نموذج ⁨14B⁩ في أقل من ⁨5⁩ ثوانٍ. ⁨PCIe Gen4 NVMe⁩ أسرع ⁨7⁩ أضعاف من ⁨SSD SATA⁩ لتحميل نماذج ⁨LLM⁩.',
@@ -1236,7 +1236,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-ko.png',
+    heroImage: '/images/best-ssd-fast-model-loading-overview-hero-ko.webp',
     title: '2026년 모델 빠른 로딩을 위한 최고의 SSD는?',
     seoTitle: '2026년 LLM 모델 빠른 로딩을 위한 최고의 SSD',
     metaDescription: 'LLM 모델을 빠르게 로딩하려면 Samsung 990 Pro 2 TB 같은 NVMe PCIe Gen4가 최선입니다. 순차 읽기 속도 약 7,000 MB/s로 수 기가바이트 모델 파일을 몇 초 만에 RAM에 올립니다.',

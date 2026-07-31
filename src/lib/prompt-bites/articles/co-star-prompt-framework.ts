@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/co-star-prompt-framework-overview-hero-en.png',
+    heroImage: '/images/co-star-prompt-framework-overview-hero-en.webp',
     title: 'What Is the CO-STAR Prompt Framework?',
     dateModified: '2026-06-21',
     seoTitle: 'CO-STAR Framework 2026 | Prompt Bites | PromptQuorum',
@@ -138,7 +138,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/co-star-prompt-framework-overview-hero-de.png',
+    heroImage: '/images/co-star-prompt-framework-overview-hero-de.webp',
     title: 'Was ist das CO-STAR-Prompt-Framework?',
     seoTitle: 'CO-STAR: 6-Teil-Framework 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'CO-STAR-Framework mit sechs Komponenten: Context, Objective, Style, Tone, Audience, Response. Strukturiert Prompts für konsistente Ausgaben in 60–120 Wörtern.',
@@ -221,7 +221,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/co-star-prompt-framework-overview-hero-fr.png',
+    heroImage: '/images/co-star-prompt-framework-overview-hero-fr.webp',
     title: 'Qu\'est-ce que le framework de prompt CO-STAR ?',
     seoTitle: 'Framework CO-STAR 2026 expliqué | Prompt Bites | PromptQuorum',
     metaDescription: 'CO-STAR structure les prompts en six composants : Context, Objective, Style, Tone, Audience, Response. Produit des sorties LLM cohérentes en 60–120 mots.',
@@ -304,7 +304,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/co-star-prompt-framework-overview-hero-ja.png',
+    heroImage: '/images/co-star-prompt-framework-overview-hero-ja.webp',
     title: 'CO-STARプロンプトフレームワークとは？',
     seoTitle: 'CO-STAR：6部構成フレームワーク 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'CO-STARは6部構成のプロンプトフレームワーク。Context、Objective、Style、Tone、Audience、Responseで一貫した目的に合ったLLM出力を生成。60～120語で構造化。',
@@ -387,7 +387,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/co-star-prompt-framework-overview-hero-pt.png',
+    heroImage: '/images/co-star-prompt-framework-overview-hero-pt.webp',
     title: 'O que é o framework CO-STAR para prompts?',
     seoTitle: 'Framework CO-STAR 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'CO-STAR é um framework de 6 partes: Context, Objective, Style, Tone, Audience, Response. Estrutura prompts para outputs consistentes em 60–120 palavras.',
@@ -470,7 +470,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/co-star-prompt-framework-overview-hero-es.png',
+    heroImage: '/images/co-star-prompt-framework-overview-hero-es.webp',
     title: '¿Qué es el framework CO-STAR para prompts?',
     seoTitle: 'Framework CO-STAR 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'CO-STAR es un framework de 6 partes: Context, Objective, Style, Tone, Audience, Response. Estructura prompts para outputs consistentes en 60–120 palabras.',
@@ -553,7 +553,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/co-star-prompt-framework-overview-hero-zh.png',
+    heroImage: '/images/co-star-prompt-framework-overview-hero-zh.webp',
     title: 'CO-STAR 提示框架是什么？',
     seoTitle: 'CO-STAR 提示框架：6部分结构 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'CO-STAR提示框架，六个部分：Context、Objective、Style、Tone、Audience、Response。结构化提示以实现一致、有针对性的LLM输出。60-120词编写。',
@@ -636,7 +636,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/co-star-prompt-framework-overview-hero-ar.png',
+    heroImage: '/images/co-star-prompt-framework-overview-hero-ar.webp',
     title: 'ما هو إطار عمل ⁨CO-STAR⁩ للأوامر؟',
     seoTitle: 'إطار ⁨CO-STAR 2026⁩ | ⁨Prompt Bites⁩ | ⁨PromptQuorum⁩',
     metaDescription: '⁨CO-STAR⁩ إطار أوامر من ⁨6⁩ أجزاء: ⁨Context⁩ و⁨Objective⁩ و⁨Style⁩ و⁨Tone⁩ و⁨Audience⁩ و⁨Response⁩. يُهيكل الأوامر لمخرجات متسقة في ⁨60⁩–⁨120⁩ كلمة.',
@@ -719,7 +719,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/co-star-prompt-framework-overview-hero-ko.png',
+    heroImage: '/images/co-star-prompt-framework-overview-hero-ko.webp',
     title: 'CO-STAR 프롬프트 프레임워크란 무엇입니까?',
     seoTitle: 'CO-STAR 프레임워크 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'CO-STAR는 6개 구성 요소로 이루어진 프롬프트 프레임워크입니다: Context, Objective, Style, Tone, Audience, Response. 60~120 단어로 일관된 LLM 출력을 위한 프롬프트를 구조화합니다.',

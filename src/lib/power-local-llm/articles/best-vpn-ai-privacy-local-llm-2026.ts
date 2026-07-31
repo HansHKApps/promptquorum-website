@@ -19,7 +19,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-en.png',
+    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-en.webp',
     title: 'Best VPN for AI Privacy: Protect Your Local LLM Setup 2026',
     seoTitle: 'Best VPN for Local LLM Privacy 2026: 4 Providers Compared',
     intro:
@@ -476,7 +476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-es.png',
+    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-es.webp',
     title: 'Mejor VPN para la privacidad con IA: protege tu entorno de LLM local 2026',
     seoTitle: 'Mejor VPN para LLM local 2026: 4 proveedores comparados',
     intro:
@@ -946,7 +946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-ko.png',
+    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-ko.webp',
     title: '2026년 AI 프라이버시를 위한 최고의 VPN: 로컬 LLM 환경 보호',
     seoTitle: '2026년 로컬 LLM용 최고의 VPN: 4개 제공업체 비교',
     intro: '로컬 LLM은 프롬프트와 문서를 클라우드 서버 밖에 유지하지만, 원격으로 LLM에 접근하거나 모델, 가중치, 업데이트를 검색할 때는 여전히 네트워크 트래픽이 외부로 나갑니다. VPN은 이 마지막 틈을 막습니다. 원격 기기와 LLM 서버 간의 연결을 암호화하고, 인터넷 서비스 공급자에게 어떤 AI 서비스를 사용하는지 숨깁니다. 이 가이드는 AI 프라이버시 설정에서 중요한 측면(무로그 정책, 관할권, WireGuard 지원, 가격)을 기준으로 네 개의 소비자 VPN 제공업체(ProtonVPN, NordVPN, Mullvad, Surfshark)를 비교합니다. 가격 참고: VPN 가격은 프로모션 주기에 따라 크게 변동하므로 여기의 각 수치는 2026년 7월 기준 스냅샷입니다. 구독 전 제공업체 사이트에서 현재 요금을 확인하십시오.',
@@ -1401,7 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-pt.png',
+    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-pt.webp',
     title: 'Melhor VPN para privacidade com IA: proteja sua configuração de LLM local 2026',
     seoTitle: 'Melhor VPN para privacidade de LLM local 2026: 4 provedores comparados',
     intro:
@@ -1871,7 +1871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-de.png',
+    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-de.webp',
     title: 'Bestes VPN für KI-Datenschutz: Schützen Sie Ihr lokales LLM-Setup 2026',
     seoTitle: 'Bestes VPN für KI-Privatsphäre 2026: lokale LLMs',
     intro:
@@ -2335,7 +2335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-fr.png',
+    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-fr.webp',
     title: 'Meilleur VPN pour la confidentialité de l\'IA : protégez votre LLM local 2026',
     seoTitle: 'Meilleur VPN pour un LLM local 2026 : 4 fournisseurs comparés',
     intro:
@@ -2791,7 +2791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-ja.png',
+    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-ja.webp',
     title: 'AIプライバシーに最適なVPN：ローカルLLM環境を守る 2026',
     seoTitle: 'ローカルLLMのプライバシーに最適なVPN 2026：4社を比較',
     intro:
@@ -3247,7 +3247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-zh.png',
+    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-zh.webp',
     title: 'AI 隐私最佳 VPN：保护你的本地 LLM 环境 2026',
     seoTitle: '本地 LLM 隐私最佳 VPN 2026：4 家提供商对比',
     intro:
@@ -3704,7 +3704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-ar.png',
+    heroImage: '/images/best-vpn-ai-privacy-local-llm-2026-overview-hero-ar.webp',
     title: 'أفضل شبكة ⁨VPN⁩ لخصوصية الذكاء الاصطناعي: احمِ بيئة نموذج اللغة المحلي ⁨2026⁩',
     seoTitle: '⁨VPN⁩ لخصوصية ⁨LLM⁩ المحلي ⁨2026⁩: ⁨4⁩ مزودين مقارنةً',
     intro:

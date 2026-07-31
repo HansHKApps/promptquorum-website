@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Privacy & Security',
-    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-en.png',
+    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-en.webp',
     title: 'Is DeepSeek GDPR Safe to Use?',
     dateModified: '2026-06-20',
     seoTitle: 'Is DeepSeek GDPR Safe? 2026 | Prompt Bites | PromptQuorum',
@@ -100,7 +100,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Privacy & Security',
-    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-de.png',
+    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-de.webp',
     title: 'Ist DeepSeek DSGVO-sicher?',
     seoTitle: 'Ist DeepSeek DSGVO-konform?',
     metaDescription: 'Ist DeepSeek DSGVO-konform? Die DeepSeek-API speichert Daten in China – ein DSGVO-Risiko. Lokal über Ollama betrieben bleibt DeepSeek DSGVO-konform.',
@@ -180,7 +180,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Privacy & Security',
-    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-fr.png',
+    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-fr.webp',
     title: 'DeepSeek est-il sûr au regard du RGPD ?',
     seoTitle: 'DeepSeek sûr pour le RGPD 2026 ? | Prompt Bites | PromptQuorum',
     metaDescription: 'L\'API DeepSeek est le LLM le plus risqué pour le RGPD : juridiction chinoise, PIPL, pas de décision d\'adéquation UE. Les poids locaux DeepSeek sont moins risqués. Mai 2026.',
@@ -260,7 +260,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Privacy & Security',
-    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-ja.png',
+    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-ja.webp',
     title: 'DeepSeekはGDPR的に安全ですか？',
     seoTitle: 'DeepSeekはGDPR安全？2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'DeepSeek APIは主要LLM中でGDPRリスクが最高：中国管轄・PIPL・EU十分性認定なし。ローカルDeepSeek重みはリスクが低い。2026年5月更新。',
@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Privacy & Security',
-    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-zh.png',
+    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-zh.webp',
     title: 'DeepSeek在GDPR方面安全吗？',
     seoTitle: 'DeepSeek符合GDPR安全标准吗？2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'DeepSeek API是GDPR风险最高的LLM：中国数据访问法管辖，无欧盟充分性认定。本地DeepSeek权重风险较低。2026年5月更新。',
@@ -420,7 +420,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Privacy & Security',
-    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-pt.png',
+    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-pt.webp',
     title: 'O DeepSeek é seguro para uso sob o RGPD?',
     seoTitle: 'DeepSeek é seguro para o RGPD? 2026 | PromptQuorum',
     metaDescription: 'A API do DeepSeek é o LLM de maior risco para o RGPD: jurisdição da lei de dados chinesa, sem decisão de adequação da UE. Pesos locais do DeepSeek têm menor risco. Maio de 2026.',
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Privacy & Security',
-    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-es.png',
+    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-es.webp',
     title: '¿Es seguro usar DeepSeek bajo el RGPD?',
     seoTitle: '¿DeepSeek es seguro para el RGPD? 2026 | PromptQuorum',
     metaDescription: 'La API de DeepSeek es el LLM de mayor riesgo RGPD: jurisdicción china, ley PIPL y sin adecuación de la UE. Los pesos locales son de menor riesgo. Mayo 2026.',
@@ -588,7 +588,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Privacy & Security',
-    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-ar.png',
+    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-ar.webp',
     title: 'هل استخدام ⁨DeepSeek⁩ آمن وفق اللائحة الأوروبية لحماية البيانات ⁨GDPR⁩؟',
     seoTitle: '⁨DeepSeek GDPR 2026⁩: ⁨API⁩ الصيني أم أوزان محلية؟',
     metaDescription: '⁨DeepSeek API⁩ يحمل أعلى مخاطر ⁨GDPR⁩: خوادم صينية خاضعة لقانون ⁨PIPL⁩، ولا قرار كفاية أوروبي للصين. الأوزان المحلية تُلغي نقل البيانات تماماً.',
@@ -672,7 +672,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Privacy & Security',
-    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-ko.png',
+    heroImage: '/images/is-deepseek-gdpr-safe-overview-hero-ko.webp',
     title: 'DeepSeek는 GDPR에 안전한가?',
     seoTitle: 'DeepSeek GDPR 안전성 2026 | PromptQuorum',
     metaDescription: 'DeepSeek API는 GDPR 위험이 가장 높은 LLM입니다: 중국 관할권, PIPL 데이터 법, EU 적정성 결정 없음. 로컬 가중치는 위험이 낮습니다. 2026년 5월 업데이트.',

@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-en.png',
+    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-en.webp',
     title: 'Local Smart Home Energy Management (2027)',
     seoTitle: 'Local Smart Home Energy Management (2027)',
     intro:
@@ -179,7 +179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-de.png',
+    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-de.webp',
     title: 'Lokales Energiemanagement im Smart Home (2027)',
     seoTitle: 'Lokales Energiemanagement im Smart Home (2027)',
     intro:
@@ -350,7 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-fr.png',
+    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-fr.webp',
     title: 'Gestion locale de l\'énergie dans la maison connectée (2027)',
     seoTitle: 'Gestion locale de l\'énergie (2027)',
     intro:
@@ -521,7 +521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-ja.png',
+    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-ja.webp',
     title: 'ローカルなスマートホームのエネルギー管理（2027年）',
     seoTitle: 'ローカルなスマートホームのエネルギー管理（2027年）',
     intro:
@@ -692,7 +692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-zh.png',
+    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-zh.webp',
     title: '本地智能家居能源管理（2027年）',
     seoTitle: '本地智能家居能源管理（2027年）',
     intro:
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-es.png',
+    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-es.webp',
     title: 'Gestión local de energía en el hogar inteligente (2027)',
     seoTitle: 'Gestión local de energía en el hogar (2027)',
     intro:
@@ -1034,7 +1034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-pt.png',
+    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-pt.webp',
     title: 'Gestão local de energia na casa inteligente (2027)',
     seoTitle: 'Gestão local de energia na casa (2027)',
     intro:
@@ -1205,7 +1205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-ar.png',
+    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-ar.webp',
     title: 'إدارة الطاقة المحلية في المنزل الذكي (⁨2027⁩)',
     seoTitle: 'إدارة الطاقة المحلية في المنزل الذكي (⁨2027⁩)',
     intro:
@@ -1376,7 +1376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-ko.png',
+    heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-ko.webp',
     title: '로컬 스마트홈 에너지 관리 (2027년)',
     seoTitle: '로컬 스마트홈 에너지 관리 (2027년)',
     intro:

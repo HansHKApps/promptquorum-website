@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-en.png',
+    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-en.webp',
     title: 'How to Convert Ollama Models to MLX Format',
     dateModified: '2026-06-21',
     seoTitle: 'Convert Ollama Model to MLX 2026 | Prompt Bites | PromptQuorum',
@@ -134,7 +134,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-de.png',
+    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-de.webp',
     title: 'Ollama-Modelle in das MLX-Format konvertieren',
     seoTitle: 'Ollama-Modell zu MLX konvertieren 2026',
     metaDescription: 'Ollama-Modelle lassen sich nicht direkt in MLX konvertieren. Nutzen Sie Hugging-Face-Gewichte + mlx-lm convert. Viele Modelle gibt es bereits vorkonvertiert.',
@@ -217,7 +217,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-fr.png',
+    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-fr.webp',
     title: 'Comment convertir des modèles Ollama au format MLX',
     seoTitle: 'Convertir un modèle Ollama en MLX 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Vous ne pouvez pas convertir directement les modèles Ollama en MLX. Utilisez plutôt les poids Hugging Face + mlx-lm convert. La plupart des modèles populaires disposent déjà de versions MLX pré-converties sur Hugging Face.',
@@ -300,7 +300,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-ja.png',
+    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-ja.webp',
     title: 'OllamaモデルをMLX形式に変換する方法',
     seoTitle: 'OllamaモデルをMLXに変換 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'OllamaモデルをMLXに直接変換することはできません。代わりにHugging Faceの重みとmlx-lm convertを使用してください。Qwen 3をはじめ多くの人気モデルはHugging Faceにすでに事前変換済みMLXバージョンが存在します。',
@@ -383,7 +383,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-zh.png',
+    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-zh.webp',
     title: '如何将 Ollama 模型转换为 MLX 格式',
     seoTitle: '将 Ollama 模型转换为 MLX 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '您无法直接将 Ollama 模型转换为 MLX 格式。请改用 Hugging Face 权重 + mlx-lm convert。大多数流行模型在 Hugging Face 上已有预转换的 MLX 版本。',
@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-pt.png',
+    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-pt.webp',
     title: 'Como converter modelos do Ollama para o formato MLX',
     seoTitle: 'Converter modelos do Ollama para MLX 2026 | PromptQuorum',
     metaDescription: 'Você não pode converter modelos do Ollama para MLX diretamente. Use pesos do Hugging Face + mlx-lm convert. A maioria dos modelos populares já tem versão MLX pré-convertida.',
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-es.png',
+    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-es.webp',
     title: 'Cómo convertir modelos de Ollama a formato MLX',
     seoTitle: 'Convertir modelos de Ollama a MLX 2026 | PromptQuorum',
     metaDescription: 'No puedes convertir modelos de Ollama a MLX directamente. Usa pesos de Hugging Face + mlx-lm convert. La mayoría de modelos populares ya tienen versión MLX.',
@@ -632,7 +632,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-ar.png',
+    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-ar.webp',
     title: 'كيفية تحويل نماذج ⁨Ollama⁩ إلى صيغة ⁨MLX⁩',
     seoTitle: 'تحويل نماذج ⁨Ollama⁩ إلى ⁨MLX 2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: 'معظم نماذج ⁨Llama 3⁩ و⁨Qwen⁩ و⁨Mistral⁩ لها نسخ ⁨MLX⁩ جاهزة على ⁨Hugging Face⁩. لا يمكن تحويل نماذج ⁨Ollama⁩ مباشرةً؛ استخدم ⁨mlx-lm convert⁩.',
@@ -715,7 +715,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-ko.png',
+    heroImage: '/images/convert-ollama-model-to-mlx-overview-hero-ko.webp',
     title: 'Ollama 모델을 MLX 형식으로 변환하는 방법',
     seoTitle: 'Ollama 모델 MLX 변환 2026 | PromptQuorum',
     metaDescription: 'Ollama 모델을 MLX로 직접 변환할 수 없습니다. Hugging Face 가중치와 mlx-lm convert를 사용하십시오. 대부분의 인기 모델은 이미 MLX 버전이 존재합니다.',

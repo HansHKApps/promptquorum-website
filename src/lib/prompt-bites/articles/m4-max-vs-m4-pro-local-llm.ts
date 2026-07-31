@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
-    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-en.png',
+    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-en.webp',
     title: 'Apple M4 Max vs M4 Pro: Which Is Better for Local LLMs?',
     seoTitle: 'M4 Max vs M4 Pro for Local LLMs 2026 | Prompt Bites',
     metaDescription: 'M4 Max beats M4 Pro for local LLMs: more memory bandwidth (546 vs 273 GB/s), higher unified memory ceiling (128GB vs 48GB) — faster tokens/sec.',
@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Model Comparisons',
-    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-ar.png',
+    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-ar.webp',
     title: 'Apple M4 Max مقابل M4 Pro: أيهما أفضل لتشغيل LLM محليًا؟',
     seoTitle: 'M4 Max مقابل M4 Pro لتشغيل LLM محليًا 2026 | Prompt Bites',
     metaDescription: 'يتفوق M4 Max على M4 Pro لتشغيل LLM محليًا في عرض نطاق الذاكرة (حتى 546 GB/s مقابل 273 GB/s) وسقف الذاكرة الموحدة (حتى 128GB مقابل 48GB) — أداء أسرع في كل حجم نموذج.',
@@ -234,7 +234,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Model Comparisons',
-    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-de.png',
+    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-de.webp',
     title: 'Apple M4 Max vs. M4 Pro: Was ist besser für lokale LLMs?',
     seoTitle: 'M4 Max vs. M4 Pro für lokale LLMs 2026 | Prompt Bites',
     metaDescription: 'M4 Max schlägt M4 Pro bei lokalen LLMs: mehr Speicherbandbreite (546 vs. 273 GB/s), höhere Unified-Memory-Grenze (128GB vs. 48GB) — schnellere Tokens/Sek.',
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Model Comparisons',
-    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-es.png',
+    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-es.webp',
     title: 'Apple M4 Max vs M4 Pro: ¿Cuál es Mejor para LLMs Locales?',
     seoTitle: 'M4 Max vs M4 Pro para LLMs Locales 2026 | Prompt Bites',
     metaDescription: 'El M4 Max supera al M4 Pro en LLMs locales: más ancho de banda (546 vs 273 GB/s), mayor techo de memoria unificada (128GB vs 48GB) — más tokens/seg.',
@@ -464,7 +464,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Model Comparisons',
-    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-fr.png',
+    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-fr.webp',
     title: 'Apple M4 Max vs M4 Pro : lequel est le meilleur pour les LLM locaux ?',
     seoTitle: 'M4 Max vs M4 Pro pour LLM locaux 2026 | Prompt Bites',
     metaDescription: 'Le M4 Max surpasse le M4 Pro pour les LLM locaux en bande passante (546 Go/s vs 273 Go/s) et plafond mémoire (128 Go vs 48 Go) — plus rapide partout.',
@@ -579,7 +579,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Model Comparisons',
-    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-ja.png',
+    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-ja.webp',
     title: 'Apple M4 Max vs M4 Pro: ローカルLLMに良いのはどちら?',
     seoTitle: '2026年版 M4 Max vs M4 Pro ローカルLLM比較 | Prompt Bites',
     metaDescription: 'M4 Maxはメモリ帯域幅(最大546GB/s対273GB/s)と統合メモリ上限(最大128GB対48GB)でM4 Proを上回ります — あらゆるモデルサイズでトークン毎秒が高速。',
@@ -694,7 +694,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Model Comparisons',
-    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-ko.png',
+    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-ko.webp',
     title: 'Apple M4 Max 대 M4 Pro: 로컬 LLM에 어느 것이 더 나은가?',
     seoTitle: 'M4 Max 대 M4 Pro 로컬 LLM 비교 2026 | Prompt Bites',
     metaDescription: 'M4 Max는 메모리 대역폭(546GB/s 대 273GB/s)과 통합 메모리 한계(128GB 대 48GB)에서 M4 Pro를 능가, 모든 모델 크기에서 토큰 속도가 더 빠릅니다.',
@@ -809,7 +809,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Model Comparisons',
-    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-pt.png',
+    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-pt.webp',
     title: 'Apple M4 Max vs M4 Pro: Qual É Melhor para LLMs Locais?',
     seoTitle: 'M4 Max vs M4 Pro para LLMs Locais 2026',
     metaDescription: 'O M4 Max supera o M4 Pro para LLMs locais: mais banda (546 vs 273 GB/s), maior teto de memória unificada (128GB vs 48GB) — tokens/s mais rápidos.',
@@ -924,7 +924,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Model Comparisons',
-    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-zh.png',
+    heroImage: '/images/m4-max-vs-m4-pro-local-llm-overview-hero-zh.webp',
     title: 'Apple M4 Max 对比 M4 Pro：哪个更适合本地 LLM？',
     seoTitle: '2026 年 M4 Max 对比 M4 Pro 本地 LLM | Prompt Bites',
     metaDescription: 'M4 Max 在本地 LLM 上胜过 M4 Pro，得益于显存带宽（最高 546 GB/s 对比 273 GB/s）和统一内存上限（最高 128GB 对比 48GB）——在各种模型规模下每秒 token 数都更快。',

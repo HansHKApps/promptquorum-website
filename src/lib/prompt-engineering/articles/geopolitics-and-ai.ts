@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       last_full_refresh: '2026-07-29',
       current_models_mentioned: ['Qwen 3', 'ERNIE 4.0', 'Doubao', 'Z.ai GLM-4', 'DeepSeek R1', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'Mistral Large 2'],
       theme: 'Policy & Compliance',
-      heroImage: '/images/geopolitics-and-ai-overview-hero-en.png',
+      heroImage: '/images/geopolitics-and-ai-overview-hero-en.webp',
       title: 'AI Geopolitics Explained: EU AI Act vs US vs China (2026 Analysis)',
       intro: 'The US, China, and European Union are pursuing incompatible visions of AI governance — the US prioritizes competitiveness, China emphasizes state control, and the EU builds a rights-based legal framework. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements that apply regardless of where the organization is headquartered.',
       leadAnswerBlock: '**AI geopolitics determines which models you can use, what regulatory framework governs your deployment, and whether critical hardware remains accessible. The EU AI Act applies globally, US export controls limit chip access, and China\'s CAC filters block content at the API level.**',
@@ -836,7 +836,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
       theme: 'Policy & Compliance',
-      heroImage: '/images/geopolitics-and-ai-overview-hero-de.png',
+      heroImage: '/images/geopolitics-and-ai-overview-hero-de.webp',
       title: 'KI-Geopolitik erklärt: EU AI Act vs. USA vs. China (Analyse 2026)',
       intro: 'Die USA, China und die Europäische Union verfolgen unvereinbare Visionen der KI-Governance — die USA priorisieren Wettbewerbsfähigkeit, China betont staatliche Kontrolle, und die EU baut einen rechtsbasierten Rahmen. Für Organisationen, die KI einsetzen, entstehen daraus konkrete Compliance-Pflichten, Beschaffungsbeschränkungen und Anforderungen an den Datenspeicherort, unabhängig davon, wo sich die Organisation befindet.',
       metaDescription: 'EU AI Act, US-Exportkontrolle, China CAC: drei unvereinbare Frameworks. Auswirkungen auf KI-Beschaffung, Datenlokalisierung und Modellverfügbarkeit 2026.',
@@ -1499,7 +1499,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     es: {
       theme: 'Policy & Compliance',
-      heroImage: '/images/geopolitics-and-ai-overview-hero-es.png',
+      heroImage: '/images/geopolitics-and-ai-overview-hero-es.webp',
       title: 'Geopolítica de la IA explicada: EU AI Act vs. EE.UU. vs. China (Análisis 2026)',
       intro: 'EE.UU., China y la Unión Europea persiguen visiones incompatibles de la gobernanza de la IA — EE.UU. prioriza la competitividad, China enfatiza el control estatal y la UE construye un marco legal basado en derechos. Para las organizaciones que despliegan IA, estas diferencias se traducen en obligaciones de cumplimiento concretas, restricciones de adquisición y requisitos de residencia de datos que aplican independientemente de dónde esté radicada la organización.',
       metaDescription: 'EU AI Act, controles de exportación de EE. UU. y CAC de China: tres marcos incompatibles. Cómo afectan a la compra de IA y la residencia de datos en 2026.',
@@ -2169,7 +2169,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ar: {
       theme: 'Policy & Compliance',
-      heroImage: '/images/geopolitics-and-ai-overview-hero-ar.png',
+      heroImage: '/images/geopolitics-and-ai-overview-hero-ar.webp',
       title: 'الجيوسياسة والذكاء الاصطناعي: كيف تتنافس الولايات المتحدة والاتحاد الأوروبي والصين على الهيمنة (تحليل ⁨2026⁩)',
       intro: 'تسعى الولايات المتحدة والصين والاتحاد الأوروبي نحو رؤى متعارضة لحوكمة الذكاء الاصطناعي — تُعطي الولايات المتحدة الأولوية للتنافسية، وتُركّز الصين على السيطرة الحكومية، بينما يبني الاتحاد الأوروبي إطاراً قانونياً قائماً على الحقوق. بالنسبة للمؤسسات التي تنشر الذكاء الاصطناعي، تتحول هذه الاختلافات إلى التزامات امتثال ملموسة وقيود على المشتريات ومتطلبات إقامة البيانات، تسري بصرف النظر عن موقع المؤسسة.',
       metaDescription: 'قانون الاتحاد الأوروبي للذكاء الاصطناعي وضوابط التصدير الأمريكية و⁨CAC⁩ الصيني: ⁨3⁩ أطر متعارضة تؤثر على المشتريات والبيانات في ⁨2026⁩.',
@@ -2841,7 +2841,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     fr: {
       theme: 'Policy & Compliance',
-      heroImage: '/images/geopolitics-and-ai-overview-hero-fr.png',
+      heroImage: '/images/geopolitics-and-ai-overview-hero-fr.webp',
       title: 'Géopolitique et IA : Comment l\'UE, les États-Unis et la Chine rivalisent pour la domination de l\'IA',
       intro: 'Les États-Unis, la Chine et l\'Union européenne poursuivent des visions incompatibles de la gouvernance de l\'IA. Pour les organisations déployant l\'IA, ces différences se traduisent par des obligations de conformité concrètes, des contraintes d\'approvisionnement et des exigences de résidence des données.',
       metaDescription: 'EU AI Act, contrôles US, CAC Chine : impacts sur achats IA, résidence de données et disponibilité des modèles 2026. Trois cadres incompatibles expliqués.',
@@ -3652,7 +3652,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: 'Policy & Compliance',
-      heroImage: '/images/geopolitics-and-ai-overview-hero-ja.png',
+      heroImage: '/images/geopolitics-and-ai-overview-hero-ja.webp',
       title: '地政学とAI：米国、中国、EUのAI支配競争解説（2026年分析）',
       intro: '米国、中国、EUはAIガバナンスに関して相反するビジョンを追求しており、AIを展開する組織にとっては具体的なコンプライアンス義務、調達制約、データ保管要件に直結します。',
       metaDescription: 'AIが地政学を変える2026年。米国セクター別規制、EU AI法、中国CAC戦略を分析。規制フレームワーク、コンプライアンスリスク、グローバル展開への影響を比較解説。',
@@ -4376,7 +4376,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: 'Policy & Compliance',
-      heroImage: '/images/geopolitics-and-ai-overview-hero-zh.png',
+      heroImage: '/images/geopolitics-and-ai-overview-hero-zh.webp',
       title: '地缘政治与AI：欧盟、美国和中国如何争夺AI主导权（2026年分析）',
       intro: '美国、中国和欧盟正在追求互不兼容的AI治理愿景——美国优先考虑竞争力，中国强调国家控制，欧盟建立基于权利的法律框架。对于部署AI的组织而言，这些差异转化为具体的合规义务、采购限制和数据存储位置要求，无论组织总部位于何处都适用。',
       seoTitle: 'AI地缘政治分析2026：美国、欧盟、中国对比',
@@ -5166,7 +5166,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Policy & Compliance',
-      heroImage: '/images/geopolitics-and-ai-overview-hero-pt.png',
+      heroImage: '/images/geopolitics-and-ai-overview-hero-pt.webp',
       title: 'Geopolítica da IA explicada: EU AI Act vs. EUA vs. China (Análise 2026)',
       intro: 'EUA, China e União Europeia perseguem visões incompatíveis de governança da IA — os EUA priorizam a competitividade, a China enfatiza o controle estatal e a UE constrói um framework jurídico baseado em direitos. Para organizações que implementam IA, essas diferenças se traduzem em obrigações concretas de conformidade, restrições de aquisição e requisitos de residência de dados que se aplicam independentemente de onde a organização está sediada.',
       metaDescription: 'EU AI Act, controles de exportação dos EUA e CAC da China: três frameworks incompatíveis. Como afetam a aquisição de IA e a residência de dados em 2026.',
@@ -5848,7 +5848,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ko: {
       freshness_tier: 'annual',
       theme: 'Policy & Compliance',
-      heroImage: '/images/geopolitics-and-ai-overview-hero-ko.png',
+      heroImage: '/images/geopolitics-and-ai-overview-hero-ko.webp',
       title: 'AI 지정학 해설: EU AI법 vs 미국 vs 중국 (2026 분석)',
       seoTitle: 'AI 지정학 분석 2026: 미국, EU, 중국 비교 가이드',
       intro: '미국, 중국, EU는 AI 거버넌스에 대해 서로 양립할 수 없는 비전을 추구하고 있습니다. 미국은 경쟁력을 우선시하고, 중국은 국가 통제를 강조하며, EU는 권리 기반의 법적 체계를 구축합니다. AI를 도입하는 조직에게 이러한 차이는 본사 위치와 무관하게 구체적인 컴플라이언스 의무, 조달 제약, 데이터 거주 요건으로 직결됩니다.',

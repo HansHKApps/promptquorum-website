@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
-    heroImage: '/images/vram-for-70b-model-overview-hero-en.png',
+    heroImage: '/images/vram-for-70b-model-overview-hero-en.webp',
     title: 'How Much VRAM for a 70B Model?',
     dateModified: '2026-06-21',
     seoTitle: '70B VRAM: 3 Run Options 2026 | Prompt Bites | PromptQuorum',
@@ -149,7 +149,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Quantization & VRAM',
-    heroImage: '/images/vram-for-70b-model-overview-hero-de.png',
+    heroImage: '/images/vram-for-70b-model-overview-hero-de.webp',
     title: 'Wie viel VRAM braucht ein 70B-Modell?',
     seoTitle: 'VRAM für 70B-Modelle 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Ein 70B-Modell bei Q4_K_M benötigt ~40 GB VRAM. Dual RTX 3090, M5 Max 128 GB oder Cloud-GPU sind die Optionen. Schnelle Antwort von PromptQuorum.',
@@ -225,7 +225,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Quantization & VRAM',
-    heroImage: '/images/vram-for-70b-model-overview-hero-fr.png',
+    heroImage: '/images/vram-for-70b-model-overview-hero-fr.webp',
     title: 'Combien de VRAM pour un modèle 70B ?',
     seoTitle: 'VRAM pour 70B : 3 options 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Un modèle 70B en Q4_K_M nécessite ~40 Go de VRAM. Options : dual RTX 3090 (48 Go), M5 Max 128 Go ou GPU cloud. Réponse rapide par PromptQuorum.',
@@ -301,7 +301,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Quantization & VRAM',
-    heroImage: '/images/vram-for-70b-model-overview-hero-ja.png',
+    heroImage: '/images/vram-for-70b-model-overview-hero-ja.webp',
     title: '70BモデルにはどれくらいのVRAMが必要ですか？',
     seoTitle: '70BモデルのVRAM：3つの方法 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_Mの70Bモデルには約40 GBのVRAMが必要です。デュアルRTX 3090（48 GB）、M5 Max 128 GB統合メモリ、またはクラウドGPUが選択肢です。PromptQuorumの解説。',
@@ -377,7 +377,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Quantization & VRAM',
-    heroImage: '/images/vram-for-70b-model-overview-hero-zh.png',
+    heroImage: '/images/vram-for-70b-model-overview-hero-zh.webp',
     title: '运行70B模型需要多少显存？',
     seoTitle: '70B模型VRAM：3种方案 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M量化的70B模型需要约40 GB显存。选项：双RTX 3090（48 GB）、M5 Max 128 GB统一内存或云端GPU。PromptQuorum快速解答。',
@@ -453,7 +453,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Quantization & VRAM',
-    heroImage: '/images/vram-for-70b-model-overview-hero-pt.png',
+    heroImage: '/images/vram-for-70b-model-overview-hero-pt.webp',
     title: 'Quanta VRAM um modelo 70B precisa?',
     seoTitle: 'VRAM para 70B: 3 opções 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Um modelo 70B em Q4_K_M precisa de ~40 GB de VRAM. Opções: dois RTX 3090 (48 GB), M5 Max com 128 GB de memória unificada ou GPU na nuvem. Resposta rápida do PromptQuorum.',
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Quantization & VRAM',
-    heroImage: '/images/vram-for-70b-model-overview-hero-es.png',
+    heroImage: '/images/vram-for-70b-model-overview-hero-es.webp',
     title: '¿Cuánta VRAM necesita un modelo 70B?',
     seoTitle: 'VRAM para 70B: 3 opciones 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Un modelo 70B en Q4_K_M necesita ~40 GB de VRAM. Opciones: dual RTX 3090 (48 GB), M5 Max con 128 GB unificados o GPU cloud. Respuesta rápida de PromptQuorum.',
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Quantization & VRAM',
-    heroImage: '/images/vram-for-70b-model-overview-hero-ar.png',
+    heroImage: '/images/vram-for-70b-model-overview-hero-ar.webp',
     title: 'كم من ⁨VRAM⁩ يحتاج نموذج ⁨70B⁩؟',
     seoTitle: '⁨VRAM⁩ لنموذج ⁨70B⁩: ⁨3⁩ خيارات ⁨2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: 'نموذج ⁨70B⁩ بـ ⁨Q4⁩_⁨K⁩_⁨M⁩ يحتاج ~⁨40 GB VRAM⁩. الخيارات: ⁨RTX 3090⁩ مزدوجة (⁨48 GB⁩) أو ⁨M5 Max 128 GB⁩ ذاكرة موحدة أو ⁨GPU⁩ سحابية بـ $⁨0.50⁩/ساعة.',
@@ -717,7 +717,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Quantization & VRAM',
-    heroImage: '/images/vram-for-70b-model-overview-hero-ko.png',
+    heroImage: '/images/vram-for-70b-model-overview-hero-ko.webp',
     title: '70B 모델에 VRAM이 얼마나 필요합니까?',
     seoTitle: '70B VRAM: 3가지 실행 옵션 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M 방식의 70B 모델은 약 40 GB의 VRAM이 필요합니다. 옵션: 듀얼 RTX 3090(48 GB), M5 Max 128 GB 통합 메모리, 또는 클라우드 GPU. PromptQuorum의 빠른 답변.',

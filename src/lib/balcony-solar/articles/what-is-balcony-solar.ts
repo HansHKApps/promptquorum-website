@@ -7,7 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'evergreen',
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/what-is-balcony-solar-overview-hero-en.png',
+    heroImage: '/images/what-is-balcony-solar-overview-hero-en.webp',
     title: 'What Is Balcony Solar? Plug-In Solar Panels Explained',
     seoTitle: 'Balcony Solar Explained: How Plug-In Solar Panels Work',
     intro: 'Balcony solar — also called plug-in solar or "Balkonkraftwerk" in its origin market of Germany — lets renters and apartment owners generate their own electricity without a rooftop installation. A small panel-and-inverter kit plugs directly into a standard wall outlet and feeds power into your home\'s existing wiring.',
@@ -181,7 +181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/what-is-balcony-solar-overview-hero-es.png',
+    heroImage: '/images/what-is-balcony-solar-overview-hero-es.webp',
     title: '¿Qué es la energía solar de balcón? Paneles solares enchufables explicados',
     seoTitle: 'Energía Solar de Balcón: Cómo Funcionan los Paneles Enchufables',
     intro: 'La energía solar de balcón — también llamada solar enchufable o "Balkonkraftwerk" en su mercado de origen, Alemania — permite a inquilinos y propietarios de pisos generar su propia electricidad sin necesidad de una instalación en el tejado. Un pequeño kit de panel e inversor se conecta directamente a un enchufe de pared estándar y envía energía al cableado eléctrico existente de tu hogar.',
@@ -354,7 +354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/what-is-balcony-solar-overview-hero-pt.png',
+    heroImage: '/images/what-is-balcony-solar-overview-hero-pt.webp',
     title: 'O Que É Energia Solar de Varanda? Painéis Solares Plug-and-Play Explicados',
     seoTitle: 'Energia Solar de Varanda: Como Funcionam os Painéis Plugáveis',
     intro: 'A energia solar de varanda — também chamada de solar plug-in ou "Balkonkraftwerk" em seu mercado de origem, a Alemanha — permite que inquilinos e proprietários de apartamentos gerem sua própria eletricidade sem precisar de uma instalação no telhado. Um pequeno kit de painel e inversor se conecta diretamente a uma tomada de parede padrão e envia energia para a fiação elétrica já existente da sua casa.',
@@ -527,7 +527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/what-is-balcony-solar-overview-hero-ar.png',
+    heroImage: '/images/what-is-balcony-solar-overview-hero-ar.webp',
     title: 'ما هي الطاقة الشمسية للشرفة؟ شرح الألواح الشمسية القابلة للتوصيل',
     seoTitle: 'الطاقة الشمسية للشرفة: كيف تعمل الألواح القابلة للتوصيل',
     intro: 'الطاقة الشمسية للشرفة — التي تُعرف أيضًا بالطاقة الشمسية القابلة للتوصيل أو Balkonkraftwerk في سوقها الأصلي، ألمانيا — تتيح للمستأجرين وأصحاب الشقق توليد كهربائهم الخاص دون الحاجة إلى تركيب على السطح. تُوصَل مجموعة صغيرة من الألواح والعاكس مباشرة بمقبس كهربائي قياسي في الحائط وتغذي الكهرباء في الأسلاك الموجودة أصلًا في المنزل.',
@@ -700,7 +700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/what-is-balcony-solar-overview-hero-ja.png',
+    heroImage: '/images/what-is-balcony-solar-overview-hero-ja.webp',
     title: 'バルコニーソーラーとは?差し込み式ソーラーパネルを解説',
     seoTitle: 'バルコニーソーラー解説:差し込み式ソーラーパネルの仕組み',
     intro: 'バルコニーソーラー——発祥地ドイツでは「Balkonkraftwerk」とも呼ばれ、差し込み式ソーラーとも言われる——は、賃貸住まいやマンション所有者が屋根への設置なしに自分で電力を作れる仕組みです。小型のパネルとインバーターのキットを標準的な壁のコンセントに直接差し込むだけで、家庭の既存配線に電力を供給します。',
@@ -872,7 +872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/what-is-balcony-solar-overview-hero-zh.png',
+    heroImage: '/images/what-is-balcony-solar-overview-hero-zh.webp',
     title: '什么是阳台光伏?插电式太阳能板详解',
     seoTitle: '阳台光伏详解:插电式太阳能板的工作原理',
     intro: '阳台光伏——也称插电式太阳能,在其发源地德国被称为"Balkonkraftwerk"——让租房者和公寓业主无需在屋顶安装系统即可自行发电。一套小型太阳能板加逆变器套件可直接插入标准墙壁插座,将电力输送到家中已有的电路中。',
@@ -1044,7 +1044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/what-is-balcony-solar-overview-hero-fr.png',
+    heroImage: '/images/what-is-balcony-solar-overview-hero-fr.webp',
     title: 'Qu\'est-ce que le solaire de balcon ? Les panneaux solaires enfichables expliqués',
     seoTitle: 'Solaire de Balcon Expliqué : Comment Fonctionnent les Panneaux Enfichables',
     intro: 'Le solaire de balcon — aussi appelé solaire enfichable ou « Balkonkraftwerk » dans son marché d\'origine, l\'Allemagne — permet aux locataires et aux propriétaires d\'appartements de produire leur propre électricité sans installation sur le toit. Un petit kit composé d\'un panneau et d\'un micro-onduleur se branche directement sur une prise murale standard et injecte de l\'électricité dans le câblage existant du logement.',
@@ -1217,7 +1217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/what-is-balcony-solar-overview-hero-ko.png',
+    heroImage: '/images/what-is-balcony-solar-overview-hero-ko.webp',
     title: '베란다 태양광이란? 플러그인 태양광 패널 완벽 설명',
     seoTitle: '베란다 태양광 설명: 플러그인 태양광 패널 작동 원리',
     intro: '베란다 태양광(발코니 태양광)은 원산지 독일에서 "Balkonkraftwerk"라고도 불리며 플러그인 태양광이라고도 하는데, 세입자와 아파트 소유자가 지붕 설치 없이도 직접 전기를 생산할 수 있게 해줍니다. 소형 패널과 인버터로 구성된 키트를 표준 벽면 콘센트에 바로 꽂으면 가정의 기존 배선으로 전력이 공급됩니다.',
@@ -1389,7 +1389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Foundations',
-    heroImage: '/images/what-is-balcony-solar-overview-hero-de.png',
+    heroImage: '/images/what-is-balcony-solar-overview-hero-de.webp',
     title: 'Was ist ein Balkonkraftwerk? Steckersolar-Anlagen erklärt',
     seoTitle: 'Balkonkraftwerk erklärt: Wie Steckersolaranlagen funktionieren',
     intro: 'Ein Balkonkraftwerk — auch Steckersolar oder Plug-in-Solar genannt — ermöglicht Mietern und Wohnungseigentümern, eigenen Strom zu erzeugen, ohne eine Dachanlage zu benötigen. Ein kompaktes Set aus Panel und Wechselrichter wird direkt in eine Haushaltssteckdose eingesteckt und speist Strom in das bestehende Hausnetz ein.',

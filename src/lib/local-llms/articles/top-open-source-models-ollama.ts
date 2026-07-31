@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'Ollama July 2026: v0.32.0 Update + Best Models by Use Case',
       intro: 'The current Ollama version is v0.32.0 (July 11, 2026), adding an interactive "Chat, Code & Work" agent experience. The newest models added since June are Laguna XS 2.1 (Poolside, agentic coding) and Kimi K2.7 Code (Moonshot AI). Best overall on consumer hardware is still Qwen 3.6 27B (77.2% SWE-bench, fits 24 GB at Q4); best for coding depends on your setup — see the use-case breakdown below.',
       metaDescription: 'Ollama v0.32.0 (July 11 2026): current version, newest models, and the best Ollama model for chat, coding, RAG, vision, and reasoning. Benchmarks + pull commands.',
-      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-en.png',
+      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-en.webp',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**The current Ollama version is v0.32.0 (July 11, 2026). The newest models added since June are Laguna XS 2.1 (Poolside, 33B/3B active MoE, agentic coding) and Kimi K2.7 Code (Moonshot AI, coding-focused, built on K2.6). Best overall on consumer hardware is Qwen 3.6 27B (77.2% SWE-bench, fits 24 GB at Q4). Other top picks: Kimi K2.6 or Laguna XS 2.1 (frontier/agentic coding), gpt-oss:20b (best small / 16 GB), qwen3:30b (balanced all-round), DeepSeek-R1 (reasoning), Gemma 4 (vision/tool calling, now ~90% faster on Apple Silicon), Dolphin 3.0 (uncensored general-purpose), and Llama 4 Scout (long-context 10M / multimodal). Most downloaded overall remains the Llama family.**',
       quickAnswerTop: {
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Document Q&A (RAG)**: `ollama run llama3.2` with Open WebUI\'s RAG feature -- best-supported combination.',
             '**Home automation / wake word AI**: `ollama run phi4-mini` — Phi-4 Mini (3.8B, ~3 GB VRAM) handles Home Assistant voice queries at 20–25 tok/sec on a mini PC without a discrete GPU. See [Home Assistant + Ollama integration guide →](/smart-home/home-assistant-ollama-integration).',
           ],
-          image: '/images/top-open-source-models-ollama-use-case-picks-hero-en.png',
+          image: '/images/top-open-source-models-ollama-use-case-picks-hero-en.webp',
           imageCaption: 'Ollama model selection by use case: pick qwen3.6:27b (best overall, 77.2% SWE-bench) for chat and coding, kimi-k2.6 for frontier coding, gpt-oss:20b on 16 GB, deepseek-r1:7b for math.',
         },
         newApril2026: {
@@ -262,7 +262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { '#': '10', 'Model': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Best For': 'First model, general chat', 'RAM': '2.5 GB', 'HumanEval': '60%' },
           ],
           columns: ['#', 'Model', 'Best For', 'RAM', 'HumanEval'],
-          image: '/images/top-open-source-models-ollama-top-models-hero-en.png',
+          image: '/images/top-open-source-models-ollama-top-models-hero-en.webp',
           imageCaption: 'Top Ollama models July 2026: Qwen 3.6 27B (best overall, 24 GB Q4), Kimi K2.6, Laguna XS 2.1 (agentic coding), gpt-oss:20b. Llama 4 Scout for 10M-token context (~55 GB).',
         },
         howToBrowse: {
@@ -579,7 +579,7 @@ schema: {
       seoTitle: 'Ollama Julio 2026 Actualización: v0.32.0 + Top 10 Modelos Clasificados',
       intro:'Actualizado en julio de 2026. La versión actual de Ollama es v0.32.0 (lanzada el 11 de julio de 2026), que añade la experiencia interactiva de agente "Chat, Code & Work". Los modelos más nuevos de la biblioteca desde junio son Laguna XS 2.1 (Poolside, 2 de julio, programación agéntica de largo alcance) y Kimi K2.7 Code (Moonshot AI), que se suman a Kimi K2.6, Qwen 3.6, GLM-5.1, gpt-oss y Gemma 4. Los más descargados en general siguen siendo la familia Llama (Llama 4 Scout, Llama 3.x); el mejor general en hardware de consumo sigue siendo Qwen 3.6 27B (77,2% SWE-bench).',
       metaDescription: 'Ollama v0.32.0 (11 julio 2026): novedades, nuevos modelos, top 10 open source clasificados — Qwen 3.6 27B, Kimi K2.6, Laguna XS 2.1. Benchmarks + comandos pull.',
-      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-es.png',
+      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-es.webp',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**La versión actual de Ollama es v0.32.0 (11 de julio de 2026). Los modelos más nuevos añadidos desde junio son Laguna XS 2.1 (Poolside, 33B/3B activos MoE, programación agéntica) y Kimi K2.7 Code (Moonshot AI, enfocado en programación, basado en K2.6). El mejor modelo general en hardware de consumo es Qwen 3.6 27B (77,2% SWE-bench, cabe en 24 GB con Q4). Otras opciones destacadas: Kimi K2.6 o Laguna XS 2.1 (programación de frontera/agéntica), gpt-oss:20b (mejor pequeño / 16 GB), qwen3:30b (equilibrado), DeepSeek-R1 (razonamiento), Gemma 4 (visión/tool calling, ahora ~90% más rápido en Apple Silicon), Dolphin 3.0 (uso general sin censura) y Llama 4 Scout (contexto largo 10M / multimodal). Los más descargados en general siguen siendo la familia Llama.**',
       quickAnswerTop: {
@@ -739,7 +739,7 @@ schema: {
             '**Q&A de documentos (RAG)**: `ollama run llama3.2` con la función RAG de Open WebUI -- combinación mejor soportada.',
             '**Domótica / IA de palabra de activación**: `ollama run phi4-mini` — Phi-4 Mini (3,8B, ~3 GB VRAM) gestiona comandos de voz de Home Assistant a 20–25 tok/seg en un mini PC sin GPU dedicada. Ver [guía de integración Home Assistant + Ollama →](/smart-home/home-assistant-ollama-integration).',
           ],
-          image: '/images/top-open-source-models-ollama-use-case-picks-hero-es.png',
+          image: '/images/top-open-source-models-ollama-use-case-picks-hero-es.webp',
           imageCaption: 'Selección de modelos Ollama por caso de uso: elige qwen3.6:27b (mejor general, 77,2% SWE-bench) para chat y programación, kimi-k2.6 para programación de frontera, gpt-oss:20b en 16 GB, deepseek-r1:7b para matemáticas.',
         },
         newApril2026: {
@@ -805,7 +805,7 @@ schema: {
             { '#': '10', 'Modelo': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Mejor para': 'Primer modelo, chat general', 'RAM': '2,5 GB', 'HumanEval': '60%' },
           ],
           columns: ['#', 'Modelo', 'Mejor para', 'RAM', 'HumanEval'],
-          image: '/images/top-open-source-models-ollama-top-models-hero-es.png',
+          image: '/images/top-open-source-models-ollama-top-models-hero-es.webp',
           imageCaption: 'Mejores modelos Ollama julio de 2026: Qwen 3.6 27B (mejor general, 24 GB Q4), Kimi K2.6, Laguna XS 2.1 (programación agéntica), gpt-oss:20b. Llama 4 Scout para contexto de 10M tokens (~55 GB).',
         },
         howToBrowse: {
@@ -1113,7 +1113,7 @@ schema: {
       seoTitle: 'Ollama Julho 2026 Atualização: v0.32.0 + Top 10 Modelos Classificados',
       intro: 'Atualizado em julho de 2026. A versão atual do Ollama é a v0.32.0 (lançada em 11 de julho de 2026), que amplia o suporte de hardware GGUF por meio do llama.cpp e atualiza o mecanismo MLX para Apple Silicon. Os modelos mais novos na biblioteca este mês são o Laguna XS 2.1 (Poolside, 2 de julho, MoE de 33B total / 3B ativo, programação agentiva de longo horizonte, contexto de 256K, SWE-bench Verified 70,9%, licença OpenMDW-1.1) e o Kimi K2.7 Code (Moonshot AI, ~junho de 2026, modelo agentivo focado em programação construído sobre o Kimi K2.6), somando-se a Kimi K2.6, Qwen 3.6, GLM-5.1, gpt-oss e Gemma 4. O mais baixado em geral continua sendo a família Llama (Llama 4 Scout, Llama 3.x); o melhor geral em hardware de consumo é o Qwen 3.6 27B (77,2% SWE-bench).',
       metaDescription: 'Ollama v0.32.0 (11 julho 2026): novidades, novos modelos, top 10 open source classificados — Qwen 3.6 27B, Kimi K2.6, gpt-oss:20b. Benchmarks + comandos pull.',
-      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-pt.png',
+      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-pt.webp',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**A versão atual do Ollama é a v0.32.0 (11 de julho de 2026). Os modelos mais novos adicionados este mês são o Laguna XS 2.1 (Poolside, MoE de 33B total/3B ativo, programação agentiva, contexto de 256K) e o Kimi K2.7 Code (Moonshot AI, agentivo para programação). O melhor geral em hardware de consumo é o Qwen 3.6 27B (77,2% SWE-bench, cabe em 24 GB com Q4). Outras opções destacadas: Kimi K2.6 (programação frontier), gpt-oss:20b (melhor pequeno / 16 GB), qwen3:30b (equilibrado), DeepSeek-R1 (raciocínio), Dolphin 3.0 (melhor sem censura / uso geral), Gemma 4 (visão/tool calling) e Llama 4 Scout (contexto longo 10M / multimodal). O mais baixado em geral continua sendo a família Llama.**',
       quickAnswerTop: {
@@ -1225,7 +1225,7 @@ schema: {
       seoTitle: 'Ollama Juli 2026 Update: v0.32.0 + Top 10 Modelle (Rangliste)',
       intro: 'Aktualisiert im Juli 2026. Die aktuelle Ollama-Version ist v0.32.0 (veröffentlicht am 11. Juli 2026), die eine interaktive "Chat, Code & Work"-Agenten-Erfahrung einführt. Die neuesten Modelle in der Bibliothek seit Juni sind Laguna XS 2.1 (Poolside, agentisches Coding) und Kimi K2.7 Code (Moonshot AI), die sich zu Kimi K2.6, Qwen 3.6, GLM-5.1, gpt-oss und Gemma 4 gesellen. Am häufigsten heruntergeladen bleibt insgesamt die Llama-Familie (Llama 4 Scout, Llama 3.x); das beste Modell für Consumer-Hardware ist weiterhin Qwen 3.6 27B (77,2% SWE-bench).',
       metaDescription: 'Ollama v0.32.0 (11. Juli 2026): Neuerungen, neue Modelle, Top 10 Open Source — Qwen 3.6 27B, Kimi K2.6, Laguna XS 2.1. Benchmarks + Pull-Befehle.',
-      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-de.png',
+      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-de.webp',
       publishDate: '2026-04-11',
       readTime: '9 Min. Lesezeit',
       educationalLevel: 'Anfänger',
@@ -1309,7 +1309,7 @@ schema: {
             '**Hohe Qualität (16 GB RAM)**: `ollama run mistral-small3.1` -- nahe 70B Qualität bei 14 GB RAM.',
             '**Heimautomatisierung / Wake-Word-KI**: `ollama run phi4-mini` — Phi-4 Mini (3.8B, ~3 GB VRAM) verarbeitet Home Assistant Sprachbefehle mit 20–25 Tok/Sek auf einem Mini-PC ohne dedizierte GPU. Siehe [Home Assistant + Ollama Integrationsguide →](/smart-home/home-assistant-ollama-integration).',
           ],
-          image: '/images/top-open-source-models-ollama-use-case-picks-hero-de.png',
+          image: '/images/top-open-source-models-ollama-use-case-picks-hero-de.webp',
           imageCaption: 'Ollama-Modellauswahl nach Anwendungsfall: Juli 2026. Chat: qwen3.6:27b, Codierung: kimi-k2.6 / laguna-xs-2.1, Reasoning: deepseek-r1:7b.',
         },
         deepseekR1: {
@@ -1354,7 +1354,7 @@ schema: {
           title: 'Vollständiger Top-10-Vergleich',
           content: 'Download-Zählungen bevorzugen immer noch Llama 3.x aufgrund der Häufigkeit von Tutorials. Für neue Projekte im Juli 2026 sind Qwen 3.6 27B (bestes Modell fuer Consumer-Hardware), Kimi K2.6 oder Laguna XS 2.1 (Codierung), gpt-oss:20b und qwen3:30b zu bevorzugen.',
           columns: ['#', 'Modell', 'Beste für', 'RAM', 'HumanEval'],
-          image: '/images/top-open-source-models-ollama-top-models-hero-de.png',
+          image: '/images/top-open-source-models-ollama-top-models-hero-de.webp',
           imageCaption: 'Beste Ollama-Modelle Juli 2026: Qwen 3.6 27B (bestes Modell, 24 GB Q4), Kimi K2.6, Laguna XS 2.1 (agentische Codierung), gpt-oss:20b. Llama 4 Scout für 10M-Token-Kontext (~55 GB).',
           rows: [
             { '#': '1', 'Modell': '[Qwen 3.6 27B](https://ollama.com/library/qwen3)', 'Beste für': 'Bestes Modell fuer Consumer-Hardware', 'RAM': '24 GB (Q4)', 'HumanEval': '77,2% SWE-bench' },
@@ -1662,7 +1662,7 @@ schema: {
       seoTitle: 'Ollama Juillet 2026 Mise à Jour : v0.32.0 + Top 10 Modèles (Classés)',
       intro: 'Mise à jour juillet 2026. La version actuelle d\'Ollama est la v0.32.0 (publiée le 11 juillet 2026), qui introduit une expérience d\'agent interactive « Chat, Code & Work ». Les modèles les plus récents de la bibliothèque sont Laguna XS 2.1 (Poolside, 2 juillet, codage agentique) et Kimi K2.7 Code (Moonshot AI, juin 2026), rejoignant Kimi K2.6, Qwen 3.6, GLM-5.1, gpt-oss et Gemma 4. Le plus téléchargé reste la famille Llama (Llama 4 Scout, Llama 3.x) ; le meilleur global sur materiel grand public est Qwen 3.6 27B (77,2% SWE-bench).',
       metaDescription: 'Ollama v0.32.0 (11 juillet 2026) : nouveautés, nouveaux modèles, top 10 open source classés — Qwen 3.6 27B, Laguna XS 2.1, Kimi K2.6, gpt-oss:20b. Benchmarks + commandes pull.',
-      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-fr.png',
+      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-fr.webp',
       publishDate: '2026-04-11',
       readTime: '9 min de lecture',
       educationalLevel: 'Débutant',
@@ -1742,7 +1742,7 @@ schema: {
             '**Haute qualité (16 Go RAM)** : `ollama run mistral-small3.1` -- qualité proche de 70B à 14 Go RAM.',
             '**Domotique / IA mot de réveil** : `ollama run phi4-mini` — Phi-4 Mini (3,8B, ~3 Go VRAM) gère les commandes vocales Home Assistant à 20–25 tok/sec sur mini PC sans GPU dédié. Voir [guide d\'intégration Home Assistant + Ollama →](/smart-home/home-assistant-ollama-integration).',
           ],
-          image: '/images/top-open-source-models-ollama-use-case-picks-hero-fr.png',
+          image: '/images/top-open-source-models-ollama-use-case-picks-hero-fr.webp',
           imageCaption: 'Sélection Ollama par cas d\'usage : juillet 2026. Chat : llama4:scout, codage : qwen3.6:27b ou laguna-xs-2.1, raisonnement : deepseek-r1:7b.',
         },
         deepseekR1: {
@@ -1783,7 +1783,7 @@ schema: {
           title: 'Comparaison complète du Top 10',
           content: 'Les 10 modèles les plus téléchargés sur Ollama en avril 2026 selon les téléchargements mensuels :',
           columns: ['#', 'Modèle', 'Meilleur pour', 'RAM', 'HumanEval'],
-          image: '/images/top-open-source-models-ollama-top-models-hero-fr.png',
+          image: '/images/top-open-source-models-ollama-top-models-hero-fr.webp',
           imageCaption: 'Top 10 modèles Ollama par téléchargements : RAM 1,7 Go (gemma2:2b) à 14 Go (mistral-small3.1). HumanEval 39-74 %.',
           rows: [
             { '#': '1', 'Modèle': '[Llama 3.3 8B](https://ollama.com/library/llama3.3)', 'Meilleur pour': 'Débutants, polyvalent', 'RAM': '6.5 GB', 'HumanEval': '68.2 %' },
@@ -2089,7 +2089,7 @@ schema: {
       seoTitle: 'Ollama 2026年7月 v0.32.0 アップデート + トップ10モデルランキング',
       intro: '2026年7月更新。現在のOllamaバージョンはv0.32.0（2026年7月11日リリース）で、「Chat, Code & Work」エージェント体験を導入し、Codex AppはChatGPT Appに改称されました。今月ライブラリに加わった最新モデルはLaguna XS 2.1（Poolside、7月2日、33B総パラメータ/3B活性MoE、エージェント型長期タスク・コーディング向け、256Kコンテキスト）とKimi K2.7 Code（Moonshot AI、Kimi K2.6ベースのコーディング特化エージェントモデル）で、Kimi K2.6、Qwen 3.6、GLM-5.1、gpt-oss、Gemma 4に加わります。全体での最多ダウンロードは引き続きLlamaファミリー（Llama 4 Scout、Llama 3.x）、コンシューマーハードウェアでの総合最高はQwen 3.6 27B（77.2% SWE-bench）です。',
       metaDescription: 'Ollama v0.32.0（2026年7月11日）：新機能、新モデル、トップ10 open sourceランキング — Qwen 3.6 27B、Laguna XS 2.1、gpt-oss:20b。ベンチマーク + pullコマンド。',
-      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-ja.png',
+      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-ja.webp',
       publishDate: '2026-04-11',
       readTime: '9分で読める',
       educationalLevel: 'ビギナー',
@@ -2171,7 +2171,7 @@ schema: {
             '**高品質（16GB RAM）**：`ollama run mistral-small3.1` -- 70B品質に近い14GB RAM。',
             '**ホームオートメーション / ウェイクワードAI**：`ollama run phi4-mini` — Phi-4 Mini（3.8B、VRAM約3 GB）は専用GPUなしのミニPCでHome Assistantの音声コマンドを20〜25 tok/secで処理できます。[Home Assistant + Ollama 統合ガイド →](/smart-home/home-assistant-ollama-integration)をご覧ください。',
           ],
-          image: '/images/top-open-source-models-ollama-use-case-picks-hero-ja.png',
+          image: '/images/top-open-source-models-ollama-use-case-picks-hero-ja.webp',
           imageCaption: '用途別Ollamaモデル選択：2026年7月。チャット：llama4:scout、コーディング：qwen3.6:27b、推論：deepseek-r1:7b。',
         },
         deepseekR1: {
@@ -2212,7 +2212,7 @@ schema: {
           title: 'トップ10完全比較',
           content: '2026年4月Ollama月間DL数トップ10：',
           columns: ['#', 'モデル', '最適用途', 'RAM', 'HumanEval'],
-          image: '/images/top-open-source-models-ollama-top-models-hero-ja.png',
+          image: '/images/top-open-source-models-ollama-top-models-hero-ja.webp',
           imageCaption: 'ダウンロード数Top 10 Ollamaモデル: RAM 1.7 GB (gemma2:2b)から14 GB (mistral-small3.1)。HumanEval 39-74%。',
           rows: [
             { '#': '1', 'モデル': '[Llama 3.3 8B](https://ollama.com/library/llama3.3)', '最適用途': '初心者・汎用', 'RAM': '6.5 GB', 'HumanEval': '68.2%' },
@@ -2522,7 +2522,7 @@ schema: {
       seoTitle: 'Ollama 2026年7月 v0.32.0 更新 + Top 10模型排名',
       intro: '2026年7月更新。当前Ollama版本为v0.32.0（2026年7月11日发布），新增交互式"Chat, Code & Work"代理体验。自6月以来库中新增的最新模型为Laguna XS 2.1（Poolside，专注智能体编程）和Kimi K2.7 Code（Moonshot AI），与Kimi K2.6、Qwen 3.6、GLM-5.1、gpt-oss和Gemma 4并列。总下载量最高仍为Llama系列（Llama 4 Scout、Llama 3.x）；消费级硬件综合最佳仍为Qwen 3.6 27B（77.2% SWE-bench）。',
       metaDescription: 'Ollama v0.32.0（2026年7月11日）：新功能、新模型、Top 10开源排名 — Qwen 3.6 27B、Kimi K2.6、Laguna XS 2.1。基准测试 + pull命令。',
-      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-zh.png',
+      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-zh.webp',
       publishDate: '2026-04-11',
       readTime: '阅读约9分钟',
       educationalLevel: 'Beginner',
@@ -2605,7 +2605,7 @@ schema: {
             '**高质量（16GB显存）**：`ollama run mistral-small3.1` -- 70B品质14GB显存。',
             '**家庭自动化 / 唤醒词AI**：`ollama run phi4-mini` — Phi-4 Mini（3.8B，约3 GB VRAM）在无独显的迷你PC上以20–25 tok/sec处理Home Assistant语音命令。参阅[Home Assistant + Ollama集成指南 →](/smart-home/home-assistant-ollama-integration)。',
           ],
-          image: '/images/top-open-source-models-ollama-use-case-picks-hero-zh.png',
+          image: '/images/top-open-source-models-ollama-use-case-picks-hero-zh.webp',
           imageCaption: '按用途选择Ollama：2026年7月。聊天llama4:scout，编码kimi-k2.6 / laguna-xs-2.1，推理deepseek-r1:7b。',
         },
         deepseekR1: {
@@ -2638,7 +2638,7 @@ schema: {
           title: 'Ollama完整Top 10模型排行（2026年4月）',
           content: '根据Ollama官方下载统计和HumanEval、MMLU基准：',
           columns: ['排名', '模型', '最适用于', 'RAM要求', 'HumanEval'],
-          image: '/images/top-open-source-models-ollama-top-models-hero-zh.png',
+          image: '/images/top-open-source-models-ollama-top-models-hero-zh.webp',
           imageCaption: '按下载量排名前10的Ollama模型：RAM从1.7 GB (gemma2:2b)到14 GB (mistral-small3.1)。HumanEval 39-74%。',
           rows: [
             { '排名': '1', '模型': '[Llama 3.3 8B](https://ollama.com/library/llama3.3)', '最适用于': '通用、初学者入门', 'RAM要求': '6.5 GB', 'HumanEval': '76%' },
@@ -2935,7 +2935,7 @@ schema: {
       seoTitle: 'Ollama 최고 오픈소스 모델 2026년 7월: Top 10',
       intro: '2026년 7월 업데이트. 현재 Ollama 버전은 v0.32.0(2026년 7월 11일 출시)으로, "Chat, Code & Work" 대화형 에이전트 경험을 추가했습니다. 6월 이후 라이브러리에 추가된 최신 모델은 Laguna XS 2.1(Poolside, 에이전틱 코딩)과 Kimi K2.7 Code(Moonshot AI)입니다. 소비자 하드웨어에서 가장 우수한 전반적 모델은 여전히 Qwen 3.6 27B(77.2% SWE-bench, Q4에서 24GB에 적합)입니다.',
       metaDescription: '2026년 7월 Ollama 최고 오픈소스 모델: Qwen 3.6 27B(종합 최고), Kimi K2.6·Laguna XS 2.1(코딩), gpt-oss:20b(16GB). 검증된 벤치마크, RAM, pull 명령.',
-      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-ko.png',
+      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-ko.webp',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**현재 Ollama 버전은 v0.32.0(2026년 7월 11일)입니다. 6월 이후 추가된 최신 모델은 Laguna XS 2.1(Poolside, 33B 전체/3B 활성 MoE, 에이전틱 코딩)과 Kimi K2.7 Code(Moonshot AI, K2.6 기반 코딩 특화 모델)입니다. 소비자 하드웨어에서 가장 우수한 전반적 모델은 Qwen 3.6 27B(77.2% SWE-bench, Q4에서 24GB에 적합)입니다. 기타 추천 모델: Kimi K2.6 또는 Laguna XS 2.1(최전선/에이전틱 코딩), gpt-oss:20b(소형 최강 / 16GB), qwen3:30b(균형잡힌 범용), DeepSeek-R1(추론), Gemma 4(비전/도구 호출, Apple Silicon에서 약 90% 빨라짐), Dolphin 3.0(무검열 범용), Llama 4 Scout(10M 긴 컨텍스트 / 멀티모달). 전체 다운로드 최다는 여전히 Llama 계열입니다.**',
       quickAnswerTop: {
@@ -3047,7 +3047,7 @@ schema: {
             '**문서 Q&A(RAG)**: Open WebUI의 RAG 기능과 함께 `ollama run llama3.2` -- 가장 잘 지원되는 조합.',
             '**홈 자동화 / 웨이크 워드 AI**: `ollama run phi4-mini` — Phi-4 Mini(3.8B, ~3GB VRAM)는 독립 GPU 없이 미니 PC에서 20~25 tok/sec로 Home Assistant 음성 쿼리를 처리합니다. [Home Assistant + Ollama 통합 가이드 →](/smart-home/home-assistant-ollama-integration) 참조.',
           ],
-          image: '/images/top-open-source-models-ollama-use-case-picks-hero-ko.png',
+          image: '/images/top-open-source-models-ollama-use-case-picks-hero-ko.webp',
           imageCaption: '사용 사례별 Ollama 모델 선택: 채팅과 코딩에는 qwen3.6:27b(전반 최고, 77.2% SWE-bench), 최전선 코딩에는 kimi-k2.6, 16GB에서는 gpt-oss:20b, 수학에는 deepseek-r1:7b.',
         },
         newApril2026: {
@@ -3113,7 +3113,7 @@ schema: {
             { '#': '10', 'Model': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Best For': '첫 번째 모델, 일반 채팅', 'RAM': '2.5GB', 'HumanEval': '60%' },
           ],
           columns: ['#', 'Model', 'Best For', 'RAM', 'HumanEval'],
-          image: '/images/top-open-source-models-ollama-top-models-hero-ko.png',
+          image: '/images/top-open-source-models-ollama-top-models-hero-ko.webp',
           imageCaption: '2026년 7월 상위 Ollama 모델: Qwen 3.6 27B(전반 최고, Q4에서 24GB), Kimi K2.6, Laguna XS 2.1(에이전틱 코딩), gpt-oss:20b. 1,000만 토큰 컨텍스트에는 Llama 4 Scout(~55GB).',
         },
         howToBrowse: {
@@ -3290,7 +3290,7 @@ schema: {
       seoTitle: '⁨Ollama⁩ يوليو ⁨2026⁩: تحديث ⁨v0.32.0⁩ + أفضل النماذج حسب الاستخدام',
       intro: 'الإصدار الحالي من Ollama هو v0.32.0 (11 يوليو 2026)، ويضيف تجربة وكيل تفاعلية بعنوان "Chat, Code & Work". أحدث النماذج المضافة منذ يونيو هي Laguna XS 2.1 (من Poolside، للبرمجة الوكيلة) وKimi K2.7 Code (من Moonshot AI). لا يزال أفضل خيار عام على عتاد المستهلك هو Qwen 3.6 27B (77.2% SWE-bench، يلائم 24 GB عند Q4)؛ ويعتمد أفضل خيار للبرمجة على إعدادك -- راجع التفصيل حسب حالة الاستخدام أدناه.',
       metaDescription: '⁨Ollama⁩ ⁨v0.32.0⁩ (⁨11⁩ يوليو ⁨2026⁩): الإصدار الحالي، أحدث النماذج، وأفضل نموذج ⁨Ollama⁩ للدردشة والبرمجة وRAG والرؤية والاستدلال. معايير موثقة وأوامر ⁨pull⁩.',
-      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-ar.png',
+      heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-ar.webp',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**الإصدار الحالي من Ollama هو v0.32.0 (11 يوليو 2026). أحدث النماذج المضافة منذ يونيو هي Laguna XS 2.1 (من Poolside، MoE بحجم 33B إجمالي/3B نشط، للبرمجة الوكيلة) وKimi K2.7 Code (من Moonshot AI، مخصص للبرمجة، مبني على K2.6). أفضل خيار عام على عتاد المستهلك هو Qwen 3.6 27B (77.2% SWE-bench، يلائم 24 GB عند Q4). خيارات بارزة أخرى: Kimi K2.6 أو Laguna XS 2.1 (برمجة متقدمة/وكيلة)، gpt-oss:20b (أفضل نموذج صغير / 16 GB)، qwen3:30b (متوازن لكل الاستخدامات)، DeepSeek-R1 (الاستدلال)، Gemma 4 (الرؤية/استدعاء الأدوات، أصبح الآن أسرع بنحو 90% على Apple Silicon)، Dolphin 3.0 (عام الأغراض غير الخاضع للرقابة)، وLlama 4 Scout (سياق طويل 10M / متعدد الوسائط). الأكثر تنزيلاً عمومًا لا تزال عائلة Llama.**',
       quickAnswerTop: {
@@ -3399,7 +3399,7 @@ schema: {
             '**أسئلة وأجوبة المستندات (RAG)**: `ollama run llama3.2` مع ميزة RAG في Open WebUI -- أفضل تركيبة مدعومة.',
             '**أتمتة المنزل / الذكاء بكلمة التنبيه**: `ollama run phi4-mini` — يعالج Phi-4 Mini (3.8B، ~3 GB VRAM) استعلامات Home Assistant الصوتية بسرعة 20-25 tok/sec على حاسوب مصغّر دون GPU منفصل. راجع [دليل تكامل Home Assistant + Ollama ←](/ar/smart-home/home-assistant-ollama-integration).',
           ],
-          image: '/images/top-open-source-models-ollama-use-case-picks-hero-ar.png',
+          image: '/images/top-open-source-models-ollama-use-case-picks-hero-ar.webp',
           imageCaption: 'اختيار نموذج Ollama حسب حالة الاستخدام: اختر qwen3.6:27b (أفضل خيار عام، 77.2% SWE-bench) للدردشة والبرمجة، وkimi-k2.6 للبرمجة المتقدمة، وgpt-oss:20b على 16 GB، وdeepseek-r1:7b للرياضيات.',
         },
         newApril2026: {
@@ -3465,7 +3465,7 @@ schema: {
             { '#': '10', 'Model': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Best For': 'النموذج الأول، الدردشة العامة', 'RAM': '2.5 GB', 'HumanEval': '60%' },
           ],
           columns: ['#', 'Model', 'Best For', 'RAM', 'HumanEval'],
-          image: '/images/top-open-source-models-ollama-top-models-hero-ar.png',
+          image: '/images/top-open-source-models-ollama-top-models-hero-ar.webp',
           imageCaption: 'أفضل نماذج Ollama يوليو 2026: Qwen 3.6 27B (أفضل خيار عام، 24 GB Q4)، Kimi K2.6، Laguna XS 2.1 (برمجة وكيلة)، gpt-oss:20b. وLlama 4 Scout لسياق 10M توكن (~55 GB).',
         },
         howToBrowse: {

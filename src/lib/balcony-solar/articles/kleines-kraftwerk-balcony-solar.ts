@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-en.png',
+    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-en.webp',
     title: 'Kleines Kraftwerk: Balcony Solar Company Profile',
     seoTitle: 'Kleines Kraftwerk Balcony Solar Company Profile',
     metaDescription: 'Company profile for Kleines Kraftwerk: history, ownership, and product range in the balcony solar market.',
@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-de.png',
+    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-de.webp',
     title: 'Kleines Kraftwerk: Firmenprofil im Balkonkraftwerk-Markt',
     seoTitle: 'Kleines Kraftwerk: Firmenprofil im Balkonkraftwerk-Markt',
     metaDescription: 'Firmenprofil zu Kleines Kraftwerk: Geschichte, Eigentümerstruktur und Produktangebot im deutschen Balkonkraftwerk-Markt, laut offiziellen Angaben.',
@@ -47,7 +47,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-fr.png',
+    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-fr.webp',
     title: 'Kleines Kraftwerk : Profil d\'entreprise solaire de balcon',
     seoTitle: 'Kleines Kraftwerk : Profil d\'entreprise solaire de balcon',
     metaDescription: 'Profil d\'entreprise de Kleines Kraftwerk : histoire, actionnariat et gamme de produits complète sur le marché du solaire de balcon en Allemagne.',
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-ja.png',
+    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-ja.webp',
     title: 'クレイネス・クラフトヴェルク:バルコニーソーラー企業プロフィール',
     seoTitle: 'クレイネス・クラフトヴェルク:バルコニーソーラー企業プロフィール',
     metaDescription: 'クレイネス・クラフトヴェルクの企業プロフィールです。ドイツのバルコニーソーラー市場における沿革、所有構造、および製品ラインナップの詳細を、公開情報に基づいて解説します。',
@@ -83,7 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-zh.png',
+    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-zh.webp',
     title: 'Kleines Kraftwerk:阳台光伏公司档案',
     seoTitle: 'Kleines Kraftwerk 阳台光伏公司档案与产品概况',
     metaDescription: 'Kleines Kraftwerk公司档案:详细介绍其成立背景、发展历程、股权结构,以及在德国阳台光伏市场的产品线与主要供应商合作情况。',
@@ -101,7 +101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-es.png',
+    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-es.webp',
     title: 'Kleines Kraftwerk: Perfil de empresa de energía solar de balcón',
     seoTitle: 'Kleines Kraftwerk: perfil de empresa solar de balcón',
     metaDescription: 'Perfil de la empresa Kleines Kraftwerk: historia, estructura de propiedad y gama de productos en el mercado de energía solar de balcón en Alemania.',
@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-pt.png',
+    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-pt.webp',
     title: 'Kleines Kraftwerk: perfil da empresa de energia solar de varanda',
     seoTitle: 'Kleines Kraftwerk: perfil da empresa solar de varanda',
     metaDescription: 'Perfil da empresa Kleines Kraftwerk: história, estrutura societária e linha de produtos no mercado de energia solar de varanda na Alemanha.',
@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-ar.png',
+    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-ar.webp',
     title: 'Kleines Kraftwerk: ملف الشركة لأنظمة الطاقة الشمسية للشرفات',
     seoTitle: 'Kleines Kraftwerk: ملف شركة الطاقة الشمسية للشرفات',
     metaDescription: 'ملف شركة Kleines Kraftwerk: التاريخ، هيكل الملكية، ومجموعة المنتجات الكاملة في سوق الطاقة الشمسية للشرفات في ألمانيا.',
@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-ko.png',
+    heroImage: '/images/kleines-kraftwerk-balcony-solar-overview-hero-ko.webp',
     title: 'Kleines Kraftwerk: 발코니 태양광 기업 프로필',
     seoTitle: 'Kleines Kraftwerk: 발코니 태양광 기업 프로필',
     metaDescription: 'Kleines Kraftwerk의 기업 프로필입니다. 독일 발코니 태양광 시장에서의 연혁, 소유 구조, 제품 라인업을 소개합니다.',

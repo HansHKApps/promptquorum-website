@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'monthly',
       theme: 'Fundamentals',
-      heroImage: '/images/build-a-prompt-library-overview-hero-en.png',
+      heroImage: '/images/build-a-prompt-library-overview-hero-en.webp',
       title: 'How to Build a Prompt Library: 8-Field Template, Governance, and Team Adoption Guide',
       intro: 'A prompt library is a team-wide collection of tested instructions. Done well, each entry works like a small tool: pick it up, adapt the inputs, and get consistent results.',
       publishDate: '2026-03-24',
@@ -621,7 +621,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
   theme: 'Grundlagen',
-      heroImage: '/images/build-a-prompt-library-overview-hero-de.png',
+      heroImage: '/images/build-a-prompt-library-overview-hero-de.webp',
   title: 'Erstelle eine Prompt-Bibliothek, die Zeit spart',
   intro: 'Eine Prompt-Bibliothek ist eine teamweite Sammlung getesteter Anweisungen mit Metadaten, die Ihrem Team hilft, Prompts zu standardisieren, zu teilen und zu verbessern. Richtig aufgebaut, wird sie zum zweiten Gehirn Ihres Teams: Sie reduziert Setup-Zeit, beschleunigt das Onboarding und verhindert, dass bewährte Prompts in persönlichen Notizen verloren gehen. Dieses 12-Schritte-Framework zeigt, wie Sie eine Prompt-Bibliothek bauen, die Ihr Team tatsächlich nutzt.',
   seoTitle: 'Prompt-Bibliothek erstellen: Wiederverwendbare KI-Vorlagen',
@@ -1202,7 +1202,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'monthly',
       theme: 'Fundamentals',
-      heroImage: '/images/build-a-prompt-library-overview-hero-es.png',
+      heroImage: '/images/build-a-prompt-library-overview-hero-es.webp',
       title: 'Cómo construir una biblioteca de prompts: plantilla de 8 campos, gobernanza y guía de adopción para equipos',
       intro: 'Una biblioteca de prompts es una colección de instrucciones probadas para todo el equipo. Bien construida, cada entrada funciona como una pequeña herramienta: tómala, adapta las entradas y obtén resultados consistentes.',
       publishDate: '2026-03-24',
@@ -1549,7 +1549,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'monthly',
       theme: 'Fundamentals',
-      heroImage: '/images/build-a-prompt-library-overview-hero-ar.png',
+      heroImage: '/images/build-a-prompt-library-overview-hero-ar.webp',
       title: 'كيفية بناء مكتبة تعليمات: قالب ⁨8⁩ حقول والحوكمة ودليل التبني للفرق',
       intro: 'مكتبة التعليمات هي مجموعة من التعليمات المختبرة لكامل الفريق. حين تُبنى بشكل صحيح، كل إدخال يعمل كأداة صغيرة: خذها وكيِّف المدخلات واحصل على نتائج متسقة.',
       publishDate: '2026-03-24',
@@ -1896,7 +1896,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     pt: {
       freshness_tier: 'monthly',
       theme: 'Fundamentals',
-      heroImage: '/images/build-a-prompt-library-overview-hero-pt.png',
+      heroImage: '/images/build-a-prompt-library-overview-hero-pt.webp',
       title: 'Como construir uma biblioteca de prompts: modelo de 8 campos, governança e guia de adoção para equipes',
       intro: 'Uma biblioteca de prompts é uma coleção de instruções testadas para toda a equipe. Bem construída, cada entrada funciona como uma pequena ferramenta: pegue-a, adapte as entradas e obtenha resultados consistentes.',
       publishDate: '2026-03-24',
@@ -2241,7 +2241,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     fr: {
   theme: 'Fondamentaux',
-      heroImage: '/images/build-a-prompt-library-overview-hero-fr.png',
+      heroImage: '/images/build-a-prompt-library-overview-hero-fr.webp',
   title: 'Créer une bibliothèque de prompts qui fait gagner du temps',
   intro: 'Une bibliothèque de prompts est une collection d\'instructions testées avec métadonnées que votre équipe partage et améliore ensemble. Bien construite, elle devient le deuxième cerveau de votre équipe : elle réduit le temps de configuration, accélère l\'intégration et empêche les meilleurs prompts de se perdre dans des notes personnelles. Ce cadre en 12 étapes montre comment construire une bibliothèque que votre équipe utilise réellement.',
   seoTitle: 'Créer une bibliothèque de prompts : modèles IA réutilisables',
@@ -2797,7 +2797,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     ja: {
   theme: '基礎知識',
-      heroImage: '/images/build-a-prompt-library-overview-hero-ja.png',
+      heroImage: '/images/build-a-prompt-library-overview-hero-ja.webp',
   title: 'プロンプトライブラリを構築して時間を節約する',
   intro: 'プロンプトライブラリは、テストされたプロンプトをメタデータとともに保存し、チームで共有・改善するための構造化された集約です。適切に構築すれば、プロンプトセットアップの時間を短縮し、新しいチームメンバーのオンボーディングを加速させ、価値あるプロンプトが散逸するのを防ぎます。本フレームワークは、チームが実際に使用するプロンプトライブラリを構築するための12ステップガイドです。',
   seoTitle: 'プロンプトライブラリの作り方：チーム向けAIテンプレート管理',
@@ -3376,7 +3376,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     zh: {
   theme: '基础知识',
-      heroImage: '/images/build-a-prompt-library-overview-hero-zh.png',
+      heroImage: '/images/build-a-prompt-library-overview-hero-zh.webp',
   title: '构建提示词库，节省时间',
   intro: '提示词库是一个包含元数据的、经过测试的指令集合，您的团队可以共享和改进。构建得当，它成为团队的第二大脑：减少设置时间、加速新员工入职、防止优质提示词丢失。本指南提供了12步框架，帮助您构建团队真正会使用的提示词库。',
   seoTitle: '构建提示词库：团队可复用的AI模板管理指南',
@@ -3956,7 +3956,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ko: {
       freshness_tier: 'monthly',
       theme: 'Fundamentals',
-      heroImage: '/images/build-a-prompt-library-overview-hero-ko.png',
+      heroImage: '/images/build-a-prompt-library-overview-hero-ko.webp',
       title: '프롬프트 라이브러리 구축 방법: 8가지 필드 템플릿, 거버넌스 및 팀 도입 가이드',
       intro: '프롬프트 라이브러리는 팀 전체가 공유하는 검증된 지시문 모음입니다. 올바르게 구축되면 각 항목은 작은 도구처럼 작동합니다. 가져와서 입력값을 조정하면 일관된 결과를 얻을 수 있습니다.',
       publishDate: '2026-03-24',

@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-en.png',
+    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-en.webp',
     title: 'Best Windows Laptop for Local LLMs Under $1,500?',
     seoTitle: 'Best Windows Laptop for Local LLMs Under $1,500',
     metaDescription: 'Best Windows laptop under $1,500 for local LLMs: RTX 4070 8GB mobile GPU + 32GB RAM. Runs 8B models fast and 14B at Q4 with tight VRAM headroom.',
@@ -113,7 +113,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-ar.png',
+    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-ar.webp',
     title: 'أفضل جهاز Windows محمول لتشغيل LLM محليًا بأقل من 1,500 دولار؟',
     seoTitle: 'أفضل جهاز Windows محمول لتشغيل LLM محليًا بأقل من 1,500 دولار',
     metaDescription: 'أفضل جهاز Windows محمول بأقل من 1,500 دولار لتشغيل LLM محليًا: بطاقة رسومات محمولة RTX 4070 8GB + ذاكرة RAM 32GB. تشغّل نماذج 8B بسرعة و14B بدقة Q4 بهامش VRAM ضيق.',
@@ -222,7 +222,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-de.png',
+    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-de.webp',
     title: 'Der beste Windows-Laptop für lokale LLMs unter 1.500 $?',
     seoTitle: 'Bester Windows-Laptop für lokale LLMs unter 1.500 $',
     metaDescription: 'Bester Windows-Laptop unter 1.500 $ für lokale LLMs: mobile RTX 4070 8GB + 32GB RAM. Läuft 8B-Modelle schnell und 14B bei Q4 mit knapper VRAM-Reserve.',
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-es.png',
+    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-es.webp',
     title: '¿Cuál es el Mejor Portátil Windows para LLMs Locales por Menos de $1,500?',
     seoTitle: 'Mejor Portátil Windows para LLMs Locales por Menos de $1,500',
     metaDescription: 'Mejor portátil Windows por menos de $1,500 para LLMs locales: RTX 4070 8GB móvil + 32GB RAM. Ejecuta 8B rápido y 14B en Q4 con VRAM ajustada.',
@@ -440,7 +440,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-fr.png',
+    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-fr.webp',
     title: 'Quel est le meilleur ordinateur portable Windows pour les LLM locaux à moins de 1 500 $ ?',
     seoTitle: 'Meilleur PC portable Windows pour LLM locaux < 1 500 $',
     metaDescription: 'Meilleur PC portable Windows sous 1500$ pour LLM locaux : GPU mobile RTX 4070 8 Go + 32 Go RAM. Rapide en 8B, correct en 14B (Q4) avec VRAM serrée.',
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-ja.png',
+    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-ja.webp',
     title: '1,500ドル以下でローカルLLMに最適なWindowsラップトップは?',
     seoTitle: '1,500ドル以下でローカルLLMに最適なWindowsラップトップ',
     metaDescription: '1,500ドル以下でローカルLLMに最適なWindowsラップトップ: RTX 4070 8GBモバイルGPU+32GB RAM。8Bモデルを高速に、14BもQ4でタイトなVRAM余裕で動作。',
@@ -658,7 +658,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-ko.png',
+    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-ko.webp',
     title: '1,500달러 이하 로컬 LLM용 최적의 Windows 노트북은?',
     seoTitle: '1,500달러 이하 로컬 LLM 최적 Windows 노트북',
     metaDescription: '1,500달러 이하 최적의 Windows 로컬 LLM 노트북: RTX 4070 8GB + 32GB RAM. 8B는 빠르게, 14B는 Q4로 VRAM 여유 타이트.',
@@ -767,7 +767,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-pt.png',
+    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-pt.webp',
     title: 'Qual o Melhor Notebook Windows para LLMs Locais Abaixo de US$ 1.500?',
     seoTitle: 'Melhor Notebook Windows para LLMs Locais Abaixo de US$ 1.500',
     metaDescription: 'Melhor notebook Windows abaixo de US$ 1.500 para LLMs locais: GPU móvel RTX 4070 8GB + 32GB RAM. Roda 8B rápido e 14B em Q4 com VRAM apertada.',
@@ -876,7 +876,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-zh.png',
+    heroImage: '/images/best-windows-laptop-local-llm-under-1500-overview-hero-zh.webp',
     title: '1500 美元以下运行本地 LLM 的最佳 Windows 笔记本电脑是什么？',
     seoTitle: '1500 美元以下本地 LLM 最佳 Windows 笔记本电脑',
     metaDescription: '1500 美元以下本地 LLM 最佳 Windows 笔记本电脑：RTX 4070 8GB 移动版 GPU + 32GB 内存。快速运行 8B 模型，14B 在 Q4 下显存较紧张但可用。',

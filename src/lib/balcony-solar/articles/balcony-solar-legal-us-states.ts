@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-09-01',
     last_full_refresh: '2026-07-16',
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-en.png',
+    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in My State? US State-by-State Guide',
     seoTitle: 'Balcony Solar Legal by State: US Guide (2026)',
     intro: `As of write-time, ${signedStates.length} US states have signed balcony solar legislation into law, and ${pendingStates.length} more have passed their state legislature and are awaiting a governor's signature. There is no federal framework — legality is determined entirely state by state, and most states haven't addressed balcony solar specifically at all yet.`,
@@ -179,7 +179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-de.png',
+    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-de.webp',
     title: 'Ist Balkonkraftwerk in meinem Bundesstaat legal? US-Leitfaden nach Bundesstaaten',
     seoTitle: 'Balkonkraftwerk legal nach Bundesstaat: US-Leitfaden (2026)',
     intro: `Zum Redaktionsschluss haben ${signedStates.length} US-Bundesstaaten Gesetze zu Balkonkraftwerken unterzeichnet, und ${pendingStates.length} weitere haben das Staatsgesetz verabschiedet und warten auf die Unterschrift des Gouverneurs. Es gibt keinen bundesweiten Rahmen — die Legalität wird vollständig auf Bundesstaatenebene bestimmt, und die meisten Bundesstaaten haben Balkonkraftwerke bisher noch nicht spezifisch geregelt.`,
@@ -328,7 +328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-es.png',
+    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-es.webp',
     title: '¿Es legal el balcony solar en mi estado? Guía estado por estado en EE. UU.',
     seoTitle: 'Balcony solar legal por estado: guía EE. UU. (2026)',
     intro: `Hasta la fecha de esta publicación, ${signedStates.length} estados de EE. UU. han convertido en ley la legislación sobre balcony solar, y ${pendingStates.length} más han sido aprobados por su legislatura estatal y esperan la firma del gobernador. No existe un marco federal: la legalidad se determina estado por estado, y la mayoría de los estados todavía no ha abordado específicamente el balcony solar.`,
@@ -477,7 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-pt.png',
+    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-pt.webp',
     title: 'A energia solar de varanda é legal no meu estado? Guia estado a estado dos EUA',
     seoTitle: 'Solar de varanda legal por estado: guia dos EUA (2026)',
     intro: `Até o momento desta publicação, ${signedStates.length} estados dos EUA sancionaram legislação sobre energia solar de varanda, e mais ${pendingStates.length} já foram aprovados pela assembleia legislativa estadual e aguardam a assinatura do governador. Não existe uma estrutura federal — a legalidade é determinada inteiramente estado a estado, e a maioria dos estados ainda não tratou especificamente da energia solar de varanda.`,
@@ -626,7 +626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-ar.png',
+    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-ar.webp',
     title: 'هل الطاقة الشمسية للشرفات قانونية في ولايتي؟ دليل الولايات الأمريكية واحدة تلو الأخرى',
     seoTitle: 'قانونية الطاقة الشمسية للشرفات حسب الولاية: دليل أمريكا (2026)',
     intro: `حتى وقت كتابة هذا التقرير، وقّعت ${signedStates.length} ولايات أمريكية على تشريعات الطاقة الشمسية للشرفات لتصبح قانونًا، وأقرّت ${pendingStates.length} ولايات أخرى مشروعات القانون في مجالسها التشريعية وهي بانتظار توقيع الحاكم. لا يوجد إطار عمل فيدرالي — تُحدَّد القانونية بالكامل على مستوى كل ولاية على حدة، ومعظم الولايات لم تتناول موضوع الطاقة الشمسية للشرفات تحديدًا بعد.`,
@@ -775,7 +775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-ja.png',
+    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-ja.webp',
     title: 'バルコニーソーラーは自分の州で合法? 米国州別ガイド',
     seoTitle: '州別バルコニーソーラーの合法性: 米国ガイド(2026年)',
     intro: `執筆時点で、米国では${signedStates.length}州がバルコニーソーラーに関する法律に署名し、さらに${pendingStates.length}州が州議会を通過して知事の署名待ちとなっている。連邦レベルの枠組みは存在せず、合法性は完全に州ごとに決まる。ほとんどの州はまだバルコニーソーラーについて 具体的に取り上げていない。`,
@@ -924,7 +924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-zh.png',
+    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-zh.webp',
     title: '阳台光伏在我所在的州合法吗?美国各州指南',
     seoTitle: '各州阳台光伏合法性:美国指南(2026年)',
     intro: `截至发稿时,美国已有${signedStates.length}个州签署了阳台光伏相关立法使其成为正式法律,另有${pendingStates.length}个州的法案已通过州议会,正等待州长签署。目前不存在联邦层面的统一框架——合法性完全由各州自行决定,大多数州尚未专门就阳台光伏立法。`,
@@ -1073,7 +1073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-fr.png',
+    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-fr.webp',
     title: 'Le solaire de balcon est-il légal dans mon État ? Guide État par État aux États-Unis',
     seoTitle: 'Solaire de balcon légal par État : guide américain (2026)',
     intro: `Au moment de la rédaction, ${signedStates.length} États américains ont promulgué une législation sur le solaire de balcon, et ${pendingStates.length} de plus ont été adoptés par leur assemblée législative d'État et attendent la signature du gouverneur. Il n'existe aucun cadre fédéral — la légalité est déterminée entièrement État par État, et la plupart des États n'ont pas encore traité spécifiquement du solaire de balcon.`,
@@ -1222,7 +1222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-ko.png',
+    heroImage: '/images/balcony-solar-legal-us-states-overview-hero-ko.webp',
     title: '내 주에서 발코니 태양광이 합법인가요? 미국 주별 가이드',
     seoTitle: '주별 발코니 태양광 합법성: 미국 가이드(2026년)',
     intro: `이 글 작성 시점 기준, 미국에서는 ${signedStates.length}개 주가 발코니 태양광 관련 법안에 서명하여 법으로 확정했으며, ${pendingStates.length}개 주가 추가로 주 의회를 통과해 주지사의 서명을 기다리고 있다. 연방 차원의 법적 프레임워크는 존재하지 않으며, 합법 여부는 전적으로 주 단위로 결정된다. 대부분의 주는 아직 발코니 태양광을 구체적으로 다루지 않았다.`,

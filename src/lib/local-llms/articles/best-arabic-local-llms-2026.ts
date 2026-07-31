@@ -4,7 +4,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     title: 'Best Arabic Local LLMs: Jais, Falcon & Running Arabic AI On-Premise (2026)',
-    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-en.png',
+    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-en.webp',
     seoTitle: 'Best Arabic Local LLMs 2026: Jais, Falcon Arabic, Qwen3',
     metaDescription: 'Compare Jais 30B, Falcon Arabic 7B and Qwen3-8B, the top Arabic local LLMs in 2026. VRAM table, on-premise setup and quality evaluation tips.',
     intro: 'Jais 30B (Core42/G42, Abu Dhabi, Apache 2.0) and Falcon Arabic 7B (TII, Abu Dhabi) are the top Arabic-native local LLMs in 2026. For general multilingual workloads with strong Arabic support, Qwen3-8B leads HELM Arabic benchmarks among models sized for consumer hardware. All three run on-premise with Ollama or vLLM, keeping Arabic-language data within national borders. This guide ranks the models, gives a VRAM table, and shows how to deploy and evaluate Arabic AI locally.',
@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     title: 'أفضل نماذج ⁨LLM⁩ العربية المحلية: ⁨Jais⁩ و⁨Falcon⁩ وتشغيل الذكاء الاصطناعي العربي داخل المؤسسة (⁨2026⁩)',
-    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-ar.png',
+    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-ar.webp',
     seoTitle: 'أفضل نماذج الذكاء الاصطناعي العربية محليًا ⁨2026⁩',
     metaDescription: 'نماذج الذكاء الاصطناعي العربية المحلية: ⁨Jais 30B⁩ و⁨Falcon Arabic 7B⁩ و⁨Qwen3-8B⁩ الأفضل في ⁨2026⁩. جدول ⁨VRAM⁩ ودليل الإعداد داخل المؤسسة والتقييم.',
     intro: 'يُعد Jais 30B (Core42/G42، أبوظبي، Apache 2.0) وFalcon Arabic 7B (TII، أبوظبي) أفضل نماذج LLM المحلية العربية الأصيلة في 2026. للأعباء متعددة اللغات مع دعم عربي قوي، يتصدر Qwen3-8B معايير HELM Arabic بين النماذج المصممة لأجهزة المستهلكين. تعمل النماذج الثلاثة جميعها داخل المؤسسة عبر Ollama أو vLLM، مع إبقاء البيانات باللغة العربية داخل الحدود الوطنية. يصنّف هذا الدليل النماذج، ويقدّم جدول VRAM، ويوضّح كيفية نشر الذكاء الاصطناعي العربي وتقييمه محليًا.',
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     title: 'Beste arabische lokale LLMs: Jais, Falcon und arabische KI On-Premise betreiben (2026)',
-    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-de.png',
+    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-de.webp',
     seoTitle: 'Beste arabische lokale LLMs 2026: Jais, Falcon Arabic',
     metaDescription: 'Jais 30B, Falcon Arabic 7B und Qwen3-8B im Vergleich: die besten arabischen lokalen LLMs 2026. Mit VRAM-Tabelle, On-Premise-Setup und Bewertungstipps.',
     intro: 'Jais 30B (Core42/G42, Abu Dhabi, Apache 2.0) und Falcon Arabic 7B (TII, Abu Dhabi) sind die besten arabisch-nativen lokalen LLMs im Jahr 2026. Für allgemeine multilinguale Workloads mit starker arabischer Unterstützung führt Qwen3-8B die HELM-Arabic-Benchmarks unter den für Consumer-Hardware dimensionierten Modellen an. Alle drei laufen On-Premise mit Ollama oder vLLM und halten arabischsprachige Daten innerhalb der nationalen Grenzen. Dieser Leitfaden ordnet die Modelle, liefert eine VRAM-Tabelle und zeigt, wie Sie arabische KI lokal bereitstellen und bewerten.',
@@ -1060,7 +1060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     title: 'Mejores LLM locales en árabe: Jais, Falcon y ejecutar IA árabe on-premise (2026)',
-    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-es.png',
+    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-es.webp',
     seoTitle: 'Mejores LLM locales en árabe 2026: Jais y Falcon',
     metaDescription: 'Jais 30B, Falcon Arabic 7B y Qwen3-8B son los mejores LLM locales en árabe en 2026. Tabla de VRAM, guía de instalación on-premise y evaluación.',
     intro: 'Jais 30B (Core42/G42, Abu Dabi, Apache 2.0) y Falcon Arabic 7B (TII, Abu Dabi) son los mejores LLM locales nativos en árabe en 2026. Para cargas de trabajo multilingües generales con un fuerte soporte de árabe, Qwen3-8B lidera los benchmarks HELM Arabic entre los modelos dimensionados para hardware de consumidor. Los tres se ejecutan on-premise con Ollama o vLLM, manteniendo los datos en lengua árabe dentro de las fronteras nacionales. Esta guía clasifica los modelos, ofrece una tabla de VRAM y muestra cómo desplegar y evaluar IA árabe localmente.',
@@ -1413,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     title: 'Meilleurs LLM locaux arabophones : Jais, Falcon et exécution de l\'IA arabe sur site (2026)',
-    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-fr.png',
+    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-fr.webp',
     seoTitle: 'Meilleurs LLM locaux arabophones 2026 : Jais, Falcon',
     metaDescription: 'Jais 30B, Falcon Arabic 7B et Qwen3-8B : les meilleurs LLM locaux arabophones en 2026. Tableau VRAM, installation sur site et conseils d\'évaluation.',
     intro: 'Jais 30B (Core42/G42, Abu Dhabi, Apache 2.0) et Falcon Arabic 7B (TII, Abu Dhabi) sont les meilleurs LLM locaux nativement arabophones en 2026. Pour les charges de travail multilingues générales avec un fort support arabe, Qwen3-8B domine les benchmarks HELM Arabic parmi les modèles dimensionnés pour le matériel grand public. Les trois s\'exécutent sur site avec Ollama ou vLLM, en gardant les données en langue arabe à l\'intérieur des frontières nationales. Ce guide classe les modèles, fournit un tableau VRAM et montre comment déployer et évaluer l\'IA arabe en local.',
@@ -1765,7 +1765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     title: 'ベストなアラビア語対応ローカルLLM：Jais、Falcon、オンプレミスでのアラビア語AI実行（2026）',
-    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-ja.png',
+    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-ja.webp',
     seoTitle: 'ベストなアラビア語ローカルLLM 2026：Jais・Falcon比較',
     metaDescription: 'Jais 30B・Falcon Arabic 7B・Qwen3-8Bが2026年のベストなアラビア語ローカルLLM。VRAM表、オンプレミス設定、品質評価のコツを解説。',
     intro: 'Jais 30B（Core42/G42、アブダビ、Apache 2.0）とFalcon Arabic 7B（TII、アブダビ）は2026年のトップのアラビア語ネイティブローカルLLMです。アラビア語サポートが強い汎用の多言語ワークロードでは、Qwen3-8Bがコンシューマーハードウェア向けのサイズのモデルの中でHELM Arabicベンチマークをリードしています。3つともOllamaまたはvLLMでオンプレミス実行でき、アラビア語データを国内に留めておけます。本ガイドではこれらのモデルをランク付けし、VRAM表を示し、アラビア語AIをローカルでデプロイ・評価する方法を解説します。',
@@ -2117,7 +2117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     title: 'Melhores LLMs locais em árabe: Jais, Falcon e IA em árabe on-premise (2026)',
-    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-pt.png',
+    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-pt.webp',
     seoTitle: 'Melhores LLMs locais em árabe 2026: Jais e Falcon',
     metaDescription: 'Jais 30B, Falcon Arabic 7B e Qwen3-8B são os melhores LLMs locais em árabe em 2026. Tabela de VRAM, guia de instalação on-premise e avaliação.',
     intro: 'Jais 30B (Core42/G42, Abu Dhabi, Apache 2.0) e Falcon Arabic 7B (TII, Abu Dhabi) são os principais LLMs locais nativos em árabe em 2026. Para cargas de trabalho multilíngues gerais com forte suporte ao árabe, o Qwen3-8B lidera os benchmarks HELM Arabic entre modelos dimensionados para hardware de consumidor. Os três rodam on-premise com Ollama ou vLLM, mantendo os dados em árabe dentro das fronteiras nacionais. Este guia classifica os modelos, traz uma tabela de VRAM e mostra como implantar e avaliar IA em árabe localmente.',
@@ -2470,7 +2470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     title: '最佳阿拉伯语本地LLM：Jais、Falcon 及在本地运行阿拉伯语 AI（2026）',
-    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-zh.png',
+    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-zh.webp',
     seoTitle: '2026最佳阿拉伯语本地LLM：Jais、Falcon Arabic对比',
     metaDescription: 'Jais 30B、Falcon Arabic 7B、Qwen3-8B 是 2026 年最佳阿拉伯语本地 LLM。含 VRAM 表、本地部署指南与质量评估建议。',
     intro: 'Jais 30B（Core42/G42，阿布扎比，Apache 2.0）和 Falcon Arabic 7B（TII，阿布扎比）是 2026 年最顶尖的阿拉伯语原生本地 LLM。对于需要强阿拉伯语支持的通用多语言工作负载，Qwen3-8B 在适配消费级硬件的模型中领跑 HELM Arabic 基准。这三款模型都可以用 Ollama 或 vLLM 在本地运行，将阿拉伯语数据保留在国境之内。本指南对这些模型进行排名，提供 VRAM 表，并展示如何在本地部署和评估阿拉伯语 AI。',
@@ -2823,7 +2823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     title: '최고의 아랍어 로컬 LLM: Jais, Falcon 및 아랍어 AI 온프레미스 실행 (2026)',
-    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-ko.png',
+    heroImage: '/images/best-arabic-local-llms-2026-overview-hero-ko.webp',
     seoTitle: '2026 최고의 아랍어 로컬 LLM: Jais, Falcon 비교',
     metaDescription: 'Jais 30B, Falcon Arabic 7B, Qwen3-8B은 2026년 최고의 아랍어 로컬 LLM. VRAM 표, 온프레미스 설정, 품질 평가 팁을 제공합니다.',
     intro: 'Jais 30B (Core42/G42, 아부다비, Apache 2.0)와 Falcon Arabic 7B (TII, 아부다비)는 2026년 최고의 아랍어 네이티브 로컬 LLM입니다. 강력한 아랍어 지원을 갖춘 일반 다국어 워크로드의 경우, Qwen3-8B이 소비자 하드웨어에 맞는 크기의 모델 중에서 HELM Arabic 벤치마크를 선도합니다. 세 모델 모두 Ollama 또는 vLLM으로 온프레미스에서 실행되어 아랍어 데이터를 국경 내에 유지합니다. 본 가이드는 모델 순위를 매기고, VRAM 표를 제공하며, 아랍어 AI를 로컬에서 배포하고 평가하는 방법을 보여드립니다.',

@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-qwen-model-for-coding-overview-hero-en.png',
+    heroImage: '/images/best-qwen-model-for-coding-overview-hero-en.webp',
     title: 'Best Qwen Model for Coding?',
     seoTitle: 'Qwen3-Coder 2026: 7B vs 14B vs 32B by VRAM Tier',
     metaDescription: 'Qwen3-Coder 32B leads at 24 GB VRAM with 91.5% HumanEval. At 8 GB, 7B hits 79.7%. 14B is the sweet spot at 12 GB. Size guide for every tier.',
@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   de: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-qwen-model-for-coding-overview-hero-de.png',
+    heroImage: '/images/best-qwen-model-for-coding-overview-hero-de.webp',
     title: 'Bestes Qwen-Modell für Coding?',
     seoTitle: 'Qwen3-Coder 2026: 7B vs 14B vs 32B nach VRAM-Tier',
     metaDescription: 'Qwen3-Coder 32B führt mit 24 GB VRAM (91,5 % HumanEval). Bei 8 GB: 7B mit 79,7 %. 14B ist der Sweet Spot bei 12 GB. Größenleitfaden für jede Tier.',
@@ -241,7 +241,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   fr: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-qwen-model-for-coding-overview-hero-fr.png',
+    heroImage: '/images/best-qwen-model-for-coding-overview-hero-fr.webp',
     title: 'Meilleur modèle Qwen pour le codage ?',
     seoTitle: 'Qwen3-Coder 2026 : 7B vs 14B vs 32B par niveau VRAM',
     metaDescription: 'Qwen3-Coder 32B en tête à 24 Go VRAM (91,5 % HumanEval). À 8 Go : 7B atteint 79,7 %. Le 14B est le sweet spot à 12 Go. Guide par niveau de VRAM.',
@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   ja: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-qwen-model-for-coding-overview-hero-ja.png',
+    heroImage: '/images/best-qwen-model-for-coding-overview-hero-ja.webp',
     title: 'コーディング向け最適Qwenモデルは？',
     seoTitle: 'コーディング向け最適Qwen3-Coderモデル 2026 | 7B vs 14B vs 32B',
     metaDescription: 'Qwen3-Coder 32Bが24 GB VRAMで最高（HumanEval 91.5%）。8 GBなら7B（79.7%）。12 GBのスイートスポットは14B。VRAMティア別サイズガイド。',
@@ -439,7 +439,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   zh: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-qwen-model-for-coding-overview-hero-zh.png',
+    heroImage: '/images/best-qwen-model-for-coding-overview-hero-zh.webp',
     title: '编程最佳Qwen模型是哪个？',
     seoTitle: 'Qwen3-Coder 2026编程对比：7B vs 14B vs 32B各显存层级完整指南',
     metaDescription: 'Qwen3-Coder 32B在24 GB显存下以91.5% HumanEval得分领先；14B是12 GB显存速度与精度最均衡的选择；7B在8 GB显存下得79.7%，适合低显存设备。三款均支持Ollama本地运行，按显存预算精准匹配，无需订阅费用。',
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   pt: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-qwen-model-for-coding-overview-hero-pt.png',
+    heroImage: '/images/best-qwen-model-for-coding-overview-hero-pt.webp',
     title: 'Qual é o melhor modelo Qwen para programar?',
     seoTitle: 'Qwen3-Coder 2026: 7B vs 14B vs 32B por nível de VRAM',
     metaDescription: 'Qwen3-Coder 32B lidera com 24 GB de VRAM (HumanEval 91,5%). Com 8 GB o 7B alcança 79,7%. O 14B é o ponto ideal para a maioria dos desenvolvedores em 12 GB. Guia por hardware.',
@@ -651,7 +651,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-qwen-model-for-coding-overview-hero-es.png',
+    heroImage: '/images/best-qwen-model-for-coding-overview-hero-es.webp',
     title: '¿Cuál es el mejor modelo Qwen para programar?',
     seoTitle: 'Qwen3-Coder 2026: 7B vs 14B vs 32B por nivel de VRAM',
     metaDescription: 'Qwen3-Coder 32B lidera con 24 GB de VRAM (HumanEval 91,5%). Con 8 GB el 7B logra 79,7%. El 14B es el punto óptimo a 12 GB. Guía de tamaños por hardware.',
@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-qwen-model-for-coding-overview-hero-ar.png',
+    heroImage: '/images/best-qwen-model-for-coding-overview-hero-ar.webp',
     title: 'ما هو أفضل نموذج ⁨Qwen⁩ للبرمجة؟',
     seoTitle: '⁨Qwen3-Coder⁩ للبرمجة ⁨2026⁩: ⁨7B⁩ مقابل ⁨14B⁩ مقابل ⁨32B⁩',
     metaDescription: '⁨Qwen3-Coder 32B⁩ يحقق ⁨91.5% HumanEval⁩ بـ⁨24 GB VRAM. 14B⁩ النقطة المثلى بـ⁨9.5 GB⁩ (⁨88.0%⁩). ⁨7B⁩ يعمل بـ⁨5.5 GB⁩ على ⁨RTX 3060⁩ بـ⁨8⁩–⁨15⁩ رمز/ثانية.',
@@ -850,7 +850,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Model Comparisons',
-    heroImage: '/images/best-qwen-model-for-coding-overview-hero-ko.png',
+    heroImage: '/images/best-qwen-model-for-coding-overview-hero-ko.webp',
     title: '코딩에 가장 적합한 Qwen 모델은 무엇입니까?',
     seoTitle: 'Qwen3-Coder 2026: VRAM 용량별 7B vs 14B vs 32B 비교',
     metaDescription: 'Qwen3-Coder 32B는 24 GB VRAM에서 HumanEval 91.5%로 최고 성능입니다. 8 GB에서는 7B가 79.7%를 달성합니다. 14B는 12 GB에서 최적의 균형을 제공합니다.',

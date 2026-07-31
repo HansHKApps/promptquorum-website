@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-en.png',
+    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-en.webp',
     title: 'eGPU for Ollama on a MacBook in 2026: Intel vs Apple Silicon',
     seoTitle: 'eGPU for Ollama on MacBook 2026: Intel vs Apple Silicon',
     metaDescription: 'eGPU + Ollama on a MacBook: Apple Silicon has no eGPU support at all. On an Intel MacBook, Ollama won\'t use an AMD eGPU either — but llama.cpp with Vulkan (MoltenVK) can.',
@@ -129,7 +129,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-de.png',
+    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-de.webp',
     title: 'eGPU für Ollama auf einem MacBook 2026: Intel vs Apple Silicon',
     seoTitle: 'eGPU für Ollama am MacBook 2026: Intel vs Apple Silicon',
     metaDescription: 'eGPU + Ollama am MacBook: Apple Silicon unterstützt gar kein eGPU. Auf einem Intel-MacBook nutzt Ollama ein AMD-eGPU ebenfalls nicht — aber llama.cpp mit Vulkan (MoltenVK) kann es.',
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-fr.png',
+    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-fr.webp',
     title: 'eGPU pour Ollama sur un MacBook en 2026 : Intel vs Apple Silicon',
     seoTitle: 'eGPU Ollama sur MacBook 2026 : Intel vs Apple Silicon',
     metaDescription: 'eGPU + Ollama sur un MacBook : Apple Silicon ne prend pas du tout en charge l\'eGPU. Sur un MacBook Intel, Ollama n\'utilise pas non plus un eGPU AMD — mais llama.cpp avec Vulkan (MoltenVK) le peut.',
@@ -379,7 +379,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-ja.png',
+    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-ja.webp',
     title: 'MacBookでのOllama向けeGPU 2026年版：Intel vs Apple Silicon',
     seoTitle: 'MacBookでOllama用eGPU 2026：Intel vs Apple Silicon',
     metaDescription: 'eGPU + Ollama on MacBook：Apple SiliconはeGPUに一切対応しません。Intel MacBookでもOllamaはAMD eGPUを使いませんが、llama.cppをVulkan（MoltenVK）で使えば可能です。',
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-zh.png',
+    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-zh.webp',
     title: '2026年MacBook上的Ollama eGPU：Intel vs Apple Silicon',
     seoTitle: 'MacBook Ollama eGPU 2026：Intel vs Apple Silicon',
     metaDescription: 'eGPU + Ollama on MacBook：Apple Silicon完全不支持eGPU。在Intel MacBook上，Ollama也不会使用AMD eGPU——但用Vulkan（MoltenVK）的llama.cpp可以。',
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-ar.png',
+    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-ar.webp',
     title: '⁨eGPU⁩ لـ ⁨Ollama⁩ على ⁨MacBook⁩ في ⁨2026⁩: ⁨Intel⁩ مقابل ⁨Apple Silicon⁩',
     seoTitle: '⁨eGPU⁩ لـ ⁨Ollama⁩ على ⁨MacBook 2026⁩: ⁨Intel⁩ مقابل ⁨Apple Silicon⁩',
     metaDescription: '⁨eGPU⁩ + ⁨Ollama⁩ على ⁨MacBook⁩: ⁨Apple Silicon⁩ لا يدعم ⁨eGPU⁩ إطلاقاً. على ⁨MacBook Intel⁩ لن يستخدم ⁨Ollama⁩ ⁨eGPU⁩ من ⁨AMD⁩ أيضاً — لكن ⁨llama.cpp⁩ مع ⁨Vulkan⁩ (⁨MoltenVK⁩) يمكنه ذلك.',
@@ -754,7 +754,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-es.png',
+    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-es.webp',
     title: 'eGPU para Ollama en un MacBook en 2026: Intel vs Apple Silicon',
     seoTitle: 'eGPU para Ollama en MacBook 2026: Intel vs Apple Silicon',
     metaDescription: 'eGPU + Ollama en un MacBook: Apple Silicon no admite eGPU en absoluto. En un MacBook Intel, Ollama tampoco usará un eGPU AMD — pero llama.cpp con Vulkan (MoltenVK) sí.',
@@ -879,7 +879,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-pt.png',
+    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-pt.webp',
     title: 'eGPU para Ollama em um MacBook em 2026: Intel vs Apple Silicon',
     seoTitle: 'eGPU para Ollama no MacBook 2026: Intel vs Apple Silicon',
     metaDescription: 'eGPU + Ollama em um MacBook: o Apple Silicon não tem nenhum suporte a eGPU. Em um MacBook Intel, o Ollama também não usará uma eGPU AMD — mas o llama.cpp com Vulkan (MoltenVK) consegue.',
@@ -1004,7 +1004,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-ko.png',
+    heroImage: '/images/best-egpu-ollama-macbook-overview-hero-ko.webp',
     title: '2026년 MacBook에서 Ollama를 위한 eGPU: Intel vs Apple Silicon',
     seoTitle: 'MacBook Ollama eGPU 2026: Intel vs Apple Silicon',
     metaDescription: 'eGPU + Ollama on MacBook: Apple Silicon은 eGPU를 전혀 지원하지 않습니다. Intel MacBook에서도 Ollama는 AMD eGPU를 사용하지 않지만, Vulkan(MoltenVK)을 사용한 llama.cpp는 가능합니다.',

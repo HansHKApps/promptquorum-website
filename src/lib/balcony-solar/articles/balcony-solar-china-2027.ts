@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-china-2027-overview-hero-en.png',
+    heroImage: '/images/balcony-solar-china-2027-overview-hero-en.webp',
     title: 'Balcony Solar in China: The Domestic Market Emerging Behind the Export Boom (2027)',
     seoTitle: 'Balcony Solar in China: The Domestic Market Emerging Behind the Export Boom (2027)',
     intro: 'China is the world\'s largest exporter of balcony solar hardware — but this page is about a different, newer story: a domestic adoption market taking shape inside China itself, formalized by the country\'s first balcony-solar industry standard in May 2026 and driven by a 2025 policy shift that undercut the economics of traditional grid-subsidized household solar.',
@@ -121,7 +121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-china-2027-overview-hero-de.png',
+    heroImage: '/images/balcony-solar-china-2027-overview-hero-de.webp',
     title: 'Balkonkraftwerke in China: Der heimische Markt hinter dem Exportboom (2027)',
     seoTitle: 'Balkonkraftwerke in China: Der heimische Markt hinter dem Exportboom (2027)',
     intro: 'China ist der weltweit größte Exporteur von Balkonkraftwerk-Hardware — doch diese Seite behandelt eine andere, neuere Geschichte: einen heimischen Absatzmarkt, der sich innerhalb Chinas selbst entwickelt, formalisiert durch den ersten Branchenstandard des Landes für Balkonkraftwerke im Mai 2026 und angetrieben durch eine politische Kurskorrektur 2025, die die Wirtschaftlichkeit der traditionellen, netzsubventionierten Haushaltssolaranlagen untergrub.',
@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-china-2027-overview-hero-es.png',
+    heroImage: '/images/balcony-solar-china-2027-overview-hero-es.webp',
     title: 'Energía solar de balcón en China: el mercado interno que emerge detrás del boom exportador (2027)',
     seoTitle: 'Energía solar de balcón en China: el mercado interno que emerge detrás del boom exportador (2027)',
     intro: 'China es el mayor exportador mundial de hardware de energía solar de balcón — pero esta página trata una historia diferente y más reciente: un mercado de adopción interno que está tomando forma dentro de China, formalizado por el primer estándar de la industria de energía solar de balcón del país en mayo de 2026 e impulsado por un cambio de política en 2025 que socavó la economía de la energía solar doméstica tradicional subsidiada por la red.',
@@ -337,7 +337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-china-2027-overview-hero-fr.png',
+    heroImage: '/images/balcony-solar-china-2027-overview-hero-fr.webp',
     title: "L'énergie solaire de balcon en Chine : le marché intérieur qui émerge derrière le boom des exportations (2027)",
     seoTitle: "L'énergie solaire de balcon en Chine : le marché intérieur qui émerge derrière le boom des exportations (2027)",
     intro: "La Chine est le premier exportateur mondial de matériel solaire de balcon — mais cette page traite d'une histoire différente et plus récente : un marché d'adoption intérieur qui se dessine en Chine même, formalisé par la première norme sectorielle chinoise pour le solaire de balcon en mai 2026 et porté par un changement de politique en 2025 qui a fragilisé l'économie du solaire résidentiel traditionnel subventionné par le réseau.",
@@ -445,7 +445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-china-2027-overview-hero-ar.png',
+    heroImage: '/images/balcony-solar-china-2027-overview-hero-ar.webp',
     title: 'الطاقة الشمسية للشرفات في الصين: السوق المحلي الناشئ خلف طفرة التصدير (2027)',
     seoTitle: 'الطاقة الشمسية للشرفات في الصين: السوق المحلي الناشئ خلف طفرة التصدير (2027)',
     intro: 'الصين هي أكبر مُصدِّر في العالم لمعدات الطاقة الشمسية للشرفات — لكن هذه الصفحة تتناول قصة مختلفة وأحدث: سوقًا محليًا للتبني آخذًا في التشكل داخل الصين نفسها، تم إضفاء الطابع الرسمي عليه من خلال أول معيار صناعي صيني للطاقة الشمسية للشرفات في مايو 2026، ومدفوعًا بتحول في السياسات عام 2025 قوّض اقتصاديات الطاقة الشمسية المنزلية التقليدية المدعومة من الشبكة.',
@@ -553,7 +553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-china-2027-overview-hero-ja.png',
+    heroImage: '/images/balcony-solar-china-2027-overview-hero-ja.webp',
     title: '中国のバルコニー太陽光発電：輸出ブームの裏で台頭する国内市場（2027年）',
     seoTitle: '中国のバルコニー太陽光発電：輸出ブームの裏で台頭する国内市場（2027年）',
     intro: '中国はバルコニー太陽光発電機器の世界最大の輸出国です。しかし、このページが取り上げるのは別の、より新しい話です。中国国内で形成されつつある国内導入市場について解説します。この市場は、2026年5月に発表された同国初のバルコニー太陽光発電業界規格によって制度化され、2025年の政策転換によって後押しされました。この政策転換は、従来の系統連系型・補助金依存の家庭用太陽光発電の経済性を弱めるものでした。',
@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-china-2027-overview-hero-ko.png',
+    heroImage: '/images/balcony-solar-china-2027-overview-hero-ko.webp',
     title: '중국 발코니 태양광: 수출 붐 이면에서 부상하는 내수 시장 (2027년)',
     seoTitle: '중국 발코니 태양광: 수출 붐 이면에서 부상하는 내수 시장 (2027년)',
     intro: '중국은 세계 최대의 발코니 태양광 장비 수출국입니다. 그러나 이 페이지에서는 다른, 더 새로운 이야기를 다룹니다. 바로 중국 내부에서 형성되고 있는 내수 도입 시장입니다. 이 시장은 2026년 5월에 발표된 중국 최초의 발코니 태양광 산업 표준으로 제도화되었으며, 전통적인 계통 보조금 기반 가정용 태양광의 경제성을 약화시킨 2025년 정책 전환에 의해 촉진되었습니다.',
@@ -769,7 +769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-china-2027-overview-hero-pt.png',
+    heroImage: '/images/balcony-solar-china-2027-overview-hero-pt.webp',
     title: 'Energia Solar de Varanda na China: O Mercado Doméstico Emergindo por Trás do Boom de Exportação (2027)',
     seoTitle: 'Energia Solar de Varanda na China: O Mercado Doméstico Emergindo por Trás do Boom de Exportação (2027)',
     intro: 'A China é a maior exportadora mundial de equipamentos de energia solar de varanda — mas esta página aborda uma história diferente e mais recente: um mercado de adoção doméstico que está se formando dentro da própria China, formalizado pelo primeiro padrão do setor de energia solar de varanda do país em maio de 2026 e impulsionado por uma mudança de política em 2025 que enfraqueceu a economia da energia solar residencial tradicional subsidiada pela rede.',
@@ -877,7 +877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-china-2027-overview-hero-zh.png',
+    heroImage: '/images/balcony-solar-china-2027-overview-hero-zh.webp',
     title: '中国阳台光伏：出口热潮背后崛起的国内市场（2027年）',
     seoTitle: '中国阳台光伏：出口热潮背后崛起的国内市场（2027年）',
     intro: '中国是全球最大的阳台光伏设备出口国——但本页要讲述的是另一个更新的故事：中国国内正在形成的自用市场。这一市场因2026年5月发布的中国首个阳台光伏行业标准而得到规范，并受到2025年一项政策转变的推动，该转变削弱了传统电网补贴型家庭光伏的经济性。',
