@@ -1764,7 +1764,7 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
           </p>
           <figure className="mb-8 rounded-xl overflow-hidden max-w-2xl">
             <Image
-              src={`/images/local-llms-hub-overview-hero-${lang}.png`}
+              src={`/images/local-llms-hub-overview-hero-${lang}.webp`}
               alt={HUB_HERO_TITLE[lang] ?? HUB_HERO_TITLE['en']}
               width={1200}
               height={675}
