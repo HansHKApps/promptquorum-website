@@ -136,6 +136,7 @@ export default async function JaLocalLLMsArticlePage({ params }: PageProps) {
       <LocalLLMsPostClient
         slug={slug}
         initialLang="ja"
+        articleData={llmContent[key]}
       />
     </>
   )
