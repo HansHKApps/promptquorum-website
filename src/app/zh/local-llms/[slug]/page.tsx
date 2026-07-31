@@ -136,6 +136,7 @@ export default async function ZhLocalLLMsArticlePage({ params }: PageProps) {
       <LocalLLMsPostClient
         slug={slug}
         initialLang="zh"
+        articleData={llmContent[key]}
       />
     </>
   )

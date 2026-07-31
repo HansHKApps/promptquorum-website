@@ -136,6 +136,7 @@ export default async function FrLocalLLMsArticlePage({ params }: PageProps) {
       <LocalLLMsPostClient
         slug={slug}
         initialLang="fr"
+        articleData={llmContent[key]}
       />
     </>
   )
