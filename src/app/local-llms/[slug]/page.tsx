@@ -185,7 +185,7 @@ export default async function LocalLLMsArticlePage({ params }: PageProps) {
   return (
     <>
       <LocalLLMArticleJsonLd slug={slug} articleKey={key} lang={selectedLang} />
-      <LocalLLMsPostClient slug={slug} initialLang={selectedLang} articleData={llmContent[key]} />
+      <LocalLLMsPostClient slug={slug} initialLang={selectedLang} />
     </>
   )
 }
