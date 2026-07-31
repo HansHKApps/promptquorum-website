@@ -78,6 +78,7 @@ export default async function DePromptEngineeringArticlePage({ params }: PagePro
       <PromptEngineeringPostClient
         slug={slug}
         initialLang="de"
+        articleData={peContent[key]}
       />
     </>
   )

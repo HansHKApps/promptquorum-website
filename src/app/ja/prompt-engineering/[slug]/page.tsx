@@ -78,6 +78,7 @@ export default async function JaPromptEngineeringArticlePage({ params }: PagePro
       <PromptEngineeringPostClient
         slug={slug}
         initialLang="ja"
+        articleData={peContent[key]}
       />
     </>
   )

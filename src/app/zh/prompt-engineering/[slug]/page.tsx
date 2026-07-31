@@ -78,6 +78,7 @@ export default async function ZhPromptEngineeringArticlePage({ params }: PagePro
       <PromptEngineeringPostClient
         slug={slug}
         initialLang="zh"
+        articleData={peContent[key]}
       />
     </>
   )
