@@ -5,7 +5,8 @@
 // Differences:
 //   - `lang` is a REQUIRED prop (resolved server-side from the URL path); no useLang() call.
 //   - Sibling links use path-based URLs (/de/smart-home/...) not query params.
-//   - Loads from smartHomeContent + SMART_HOME_SLUG_TO_KEY (not the local-llms maps).
+//   - articleData is resolved server-side (page-helpers.tsx) and passed as a
+//     required prop — this component never imports the smartHomeContent barrel.
 //   - LanguageSwitcher omitted in this iteration; cluster ships noindex until launch.
 
 import { useState } from 'react'
@@ -13,9 +14,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { Language } from '@/lib/blog/blogContent'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
-import { smartHomeContent } from '@/lib/smart-home/content'
-import type { LLMSection } from '@/lib/local-llms/types'
-import { SMART_HOME_SLUG_TO_KEY } from '@/lib/smart-home/slugs'
+import type { LLMSection, LLMArticle } from '@/lib/local-llms/types'
 import { smartHomeHubPath, smartHomeArticlePath } from '@/lib/smart-home/metadata-helpers'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
@@ -30,6 +29,7 @@ import { CopyButton } from '@/components/CopyButton'
 interface Props {
   slug: string
   lang: Language
+  articleData: Partial<Record<Language, LLMArticle>>
 }
 
 // Section header translations
@@ -750,9 +750,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
   )
 }
 
-function SmartHomePostContent({ slug, lang }: Props) {
-  const key = SMART_HOME_SLUG_TO_KEY[slug]
-  const articleData = key ? smartHomeContent[key] : null
+function SmartHomePostContent({ slug, lang, articleData }: Props) {
 
   if (!articleData) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
