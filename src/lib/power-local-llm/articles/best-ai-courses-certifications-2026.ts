@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-en.png',
+    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-en.webp',
     title: 'Best AI Courses and Certifications: 2026 Buying Guide',
     seoTitle: 'Best AI Courses & Certifications 2026: Free & Paid',
     intro:
@@ -500,7 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-de.png',
+    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-de.webp',
     title: 'Die besten KI-Kurse und Zertifizierungen: Kaufratgeber 2026',
     seoTitle: 'Beste KI-Kurse & Zertifizierungen 2026: Gratis & Bezahlt',
     intro:
@@ -991,7 +991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-fr.png',
+    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-fr.webp',
     title: 'Meilleurs cours et certifications en IA : guide d\'achat 2026',
     seoTitle: 'Cours et certifications IA 2026 : gratuits et payants',
     intro:
@@ -1474,7 +1474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-ja.png',
+    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-ja.webp',
     title: '最良のAIコースと資格認定：2026年購入ガイド',
     seoTitle: '最良のAIコース2026：無料・有料・資格認定ガイド',
     intro:
@@ -1957,7 +1957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-zh.png',
+    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-zh.webp',
     title: '最佳 AI 课程与认证：2026 选购指南',
     seoTitle: '2026 最佳 AI 课程：免费、付费与认证指南',
     intro:
@@ -2440,7 +2440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-es.png',
+    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-es.webp',
     title: 'Mejores cursos y certificaciones de IA: guía de compra 2026',
     seoTitle: 'Mejores cursos y certificaciones de IA 2026: gratis o pago',
     intro:
@@ -2936,7 +2936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-pt.png',
+    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-pt.webp',
     title: 'Melhores cursos e certificações de IA: guia de compra 2026',
     seoTitle: 'Melhores cursos e certificações de IA 2026: grátis ou pago',
     intro:
@@ -3432,7 +3432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-ar.png',
+    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-ar.webp',
     title: 'أفضل دورات وشهادات الذكاء الاصطناعي: دليل الشراء ⁨2026⁩',
     seoTitle: 'دورات وشهادات الذكاء الاصطناعي ⁨2026⁩: مجانية ومدفوعة',
     intro:
@@ -3928,7 +3928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-02',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-ko.png',
+    heroImage: '/images/best-ai-courses-certifications-2026-overview-hero-ko.webp',
     title: '최고의 AI 강좌 및 자격증: 2026 구매 가이드',
     seoTitle: '2026 최고의 AI 강좌 및 자격증: 무료 또는 유료',
     intro:

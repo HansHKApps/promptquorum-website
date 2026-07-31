@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-en.png',
+    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-en.webp',
     title: 'Build a Local Voice Assistant on Your Phone: Whisper + Local LLM (No Cloud) — 2026',
     seoTitle: 'Local Voice Assistant Whisper + LLM Phone 2026',
     intro:
@@ -450,7 +450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-de.png',
+    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-de.webp',
     title: 'Einen lokalen Sprachassistenten auf Ihrem Telefon erstellen: Whisper + lokales LLM (keine Cloud) — 2026',
     seoTitle: 'Lokaler Sprachassistent Whisper LLM Telefon 2026',
     intro:
@@ -929,7 +929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-fr.png',
+    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-fr.webp',
     title: 'Construire un assistant vocal local sur votre téléphone : Whisper + LLM local (sans cloud) — 2026',
     seoTitle: 'Assistant vocal local Whisper LLM téléphone 2026',
     intro:
@@ -1408,7 +1408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-ja.png',
+    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-ja.webp',
     title: 'スマートフォンで完全オフラインの音声アシスタントを構築する：Whisper + ローカルLLM（クラウドなし）— 2026',
     seoTitle: 'ローカル音声アシスタント Whisper LLM スマートフォン 2026',
     intro:
@@ -1887,7 +1887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-zh.png',
+    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-zh.webp',
     title: '在您的手机上构建完全离线语音助手：Whisper + 本地LLM（无云）— 2026',
     seoTitle: '本地语音助手 Whisper LLM 手机 2026',
     intro:
@@ -2366,7 +2366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-es.png',
+    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-es.webp',
     title: 'Crea un asistente de voz local en tu teléfono: Whisper + LLM local (sin nube) — 2026',
     seoTitle: 'Asistente de voz local Whisper LLM teléfono 2026',
     intro:
@@ -2845,7 +2845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-ko.png',
+    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-ko.webp',
     title: '전화기에서 로컬 음성 비서 만들기: Whisper + 로컬 LLM (클라우드 없음) — 2026',
     seoTitle: '로컬 음성 비서 Whisper LLM 전화기 2026',
     intro:
@@ -3324,7 +3324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-pt.png',
+    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-pt.webp',
     title: 'Crie um assistente de voz local no seu telefone: Whisper + LLM local (sem nuvem) — 2026',
     seoTitle: 'Assistente de voz local Whisper LLM telefone 2026',
     intro:
@@ -3804,7 +3804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-08',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-ar.png',
+    heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-ar.webp',
     title: 'أنشئ مساعدًا صوتيًا محليًا على هاتفك: ⁨Whisper + LLM⁩ محلي (بدون سحابة) — ⁨2026⁩',
     seoTitle: 'مساعد صوتي محلي ⁨Whisper + LLM⁩ للهاتف ⁨2026⁩',
     intro:

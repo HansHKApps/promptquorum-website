@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Six open-weight coding models compete for the local-LLM coding crown in 2026: Qwen3-Coder (30B and 7B), DeepSeek Coder V3, Codestral 22B, Llama 3.3 Code, Granite Code, and StarCoder 2. They differ on parameter count, context window, training-data emphasis, license, and VRAM footprint — and the right pick depends on which of these constraints binds first for your hardware and your language. This guide compares them on what is publicly verifiable: architecture, sizes, context, licenses, VRAM math, and vendor-reported benchmark direction, with citations to each model card so you can re-check the numbers yourself.',
     metaDescription:
       '6 local coding models tested on VRAM, HumanEval+ benchmark direction, license, and context window. Qwen3-Coder 30B is the default pick for May 2026.',
-    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-en.png',
+    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-en.webp',
     twitterDescription:
       'Qwen3-Coder, DeepSeek Coder V3, Codestral, Llama 3.3 Code, Granite Code, StarCoder 2 — six open-weight coding models, six different sweet spots. Verdict per scenario inside.',
     current_models_mentioned: [
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Best for': 'Broad language coverage incl. niche languages',
           },
         ],
-        image: '/images/best-local-coding-models-2026-model-comparison-hero-en.png',
+        image: '/images/best-local-coding-models-2026-model-comparison-hero-en.webp',
         imageCaption: 'Seven local coding models ranked by VRAM, context window, licence, and best-fit use case at Q4_K_M in May 2026. Qwen3-Coder 30B is the default 24 GB pick; DeepSeek Coder V3 leads on long-context; StarCoder 2 15B leads on niche-language coverage.',
       },
       whichOne: {
@@ -357,7 +357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'For a deeper explanation of how quantization works and why Q4_K_M is the most cited default, see [LLM Quantization Explained](/local-llms/llm-quantization-explained). The rest of this guide assumes the math above.',
           },
         ],
-        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-en.png',
+        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-en.webp',
         imageCaption: 'VRAM requirements by quantization level for 7B and 30B models at Q4_K_M through FP16. Q4_K_M is the recommended default at ~0.60 GB per billion parameters; add 2–4 GB for context and tooling overhead.',
       },
       contextWindow: {
@@ -539,7 +539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Lokale Coding-Modelle 2026: Qwen3, DeepSeek, Codestral',
     intro: 'Sechs Open-Source-Coding-Modelle konkurrieren 2026 um den Titel des besten lokalen Coding-Modells: Qwen3-Coder (30B und 7B), DeepSeek Coder V3, Codestral 22B, Llama 3.3 Code, Granite Code und StarCoder 2. Sie unterscheiden sich in Parameterzahl, Kontext-Fenster, Trainingsdaten-Schwerpunkt, Lizenz und VRAM-Speicherfußabdruck — die richtige Wahl hängt davon ab, welche dieser Beschränkungen für Ihre Hardware und Ihre Programmiersprache zuerst bindend wird. Dieser Leitfaden vergleicht sie anhand öffentlich verifizierbarer Kriterien: Architektur, Größen, Kontext, Lizenzen, VRAM-Mathematik und Hersteller-gemeldete Benchmark-Richtung, mit Quellenangaben zu jedem Modell-Karteneintrag.',
     metaDescription: '6 lokale Coding-Modelle im Vergleich: Größe, Kontext, Lizenz, VRAM und HumanEval+-Richtung. Qwen3-Coder 30B ist die Empfehlung für Mai 2026.',
-    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-de.png',
+    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-de.webp',
     twitterDescription: 'Qwen3-Coder, DeepSeek Coder V3, Codestral, Llama 3.3 Code, Granite Code, StarCoder 2 — sechs Open-Source-Coding-Modelle, sechs verschiedene Sweet Spots. Empfehlungen pro Szenario im Beitrag.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
@@ -642,7 +642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Kriterium': 'Größe optimal für', 'Qwen3-Coder 30B': '24 GB GPU', 'DeepSeek V3': '48+ GB VRAM', 'Codestral 22B': '16 GB GPU', 'Llama 3.3': '48+ GB VRAM', 'Granite 34B': '24 GB GPU', 'StarCoder 2': '8 GB GPU' },
           { 'Kriterium': 'Training-Fokus', 'Qwen3-Coder 30B': 'Code + Mathe', 'DeepSeek V3': 'Code nur', 'Codestral 22B': 'Code nur', 'Llama 3.3': 'Generalist (Code)', 'Granite 34B': 'Code + Enterprise', 'StarCoder 2': 'Multi-Sprache' },
         ],
-        image: '/images/best-local-coding-models-2026-model-comparison-hero-de.png',
+        image: '/images/best-local-coding-models-2026-model-comparison-hero-de.webp',
         imageCaption: 'Sieben lokale Coding-Modelle im Vergleich: VRAM, Kontext-Fenster, Lizenz und bestes Einsatzszenario bei Q4_K_M im Mai 2026. Qwen3-Coder 30B ist die Standard-Wahl für 24-GB-GPUs.',
       },
       whichOne: {
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Lizenz-Story?** DeepSeek lizenziert unter Mistral Non-Production; kommerzielle Nutzung benötigt Verkaufsabsprache. Das ist für Open-Source-Liebhaber wichtig — denken Sie dies bei Deployment durch.',
           '**Häufige Fehler?** Zu viel Kontext füttern führt zu Token-Explosion. 48 GB ist der Q4_K_M Boden für volle Größe; gekürzte Versionen sind möglich, aber verlieren Vorteile.',
         ],
-        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-de.png',
+        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-de.webp',
         imageCaption: 'VRAM-Bedarf nach Quantisierungsstufe für 7B- und 30B-Modelle. Q4_K_M ist der empfohlene Standard mit ca. 0,60 GB pro Milliarde Parameter; zusätzlich 2–4 GB Puffer für Kontext und Tooling.',
       },
       codestral: {
@@ -973,7 +973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Modèles de codage local 2026 : Qwen3, DeepSeek, Codestral',
     intro: 'Six modèles de codage open-source rivalisent pour la couronne du codage local en 2026 : Qwen3-Coder (30B et 7B), DeepSeek Coder V3, Codestral 22B, Llama 3.3 Code, Granite Code et StarCoder 2. Ils diffèrent sur le nombre de paramètres, la fenêtre de contexte, l\'accent de la formation, la licence et l\'empreinte VRAM — le bon choix dépend de quelle contrainte devient prioritaire d\'abord pour votre matériel et votre langage. Ce guide les compare sur ce qui est publiquement vérifiable : architecture, tailles, contexte, licences, mathématique VRAM, avec citations à chaque fiche modèle pour que vous puissiez revérifier les chiffres.',
     metaDescription: '6 modèles de codage local comparés : taille, contexte, licence, VRAM, direction HumanEval+. Qwen3-Coder 30B est la recommandation pour mai 2026.',
-    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-fr.png',
+    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-fr.webp',
     twitterDescription: 'Qwen3-Coder, DeepSeek Coder V3, Codestral, Llama 3.3 Code, Granite Code, StarCoder 2 — six modèles open-source, six points forts différents. Verdict par scénario inclus.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
@@ -1076,7 +1076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Critère': 'Taille optimal pour', 'Qwen3-Coder 30B': 'GPU 24 GB', 'DeepSeek V3': 'VRAM 48+ GB', 'Codestral 22B': 'GPU 16 GB', 'Llama 3.3': 'VRAM 48+ GB', 'Granite 34B': 'GPU 24 GB', 'StarCoder 2': 'GPU 8 GB' },
           { 'Critère': 'Focus formation', 'Qwen3-Coder 30B': 'Code + Maths', 'DeepSeek V3': 'Code seul', 'Codestral 22B': 'Code seul', 'Llama 3.3': 'Généraliste (Code)', 'Granite 34B': 'Code + Enterprise', 'StarCoder 2': 'Multi-langue' },
         ],
-        image: '/images/best-local-coding-models-2026-model-comparison-hero-fr.png',
+        image: '/images/best-local-coding-models-2026-model-comparison-hero-fr.webp',
         imageCaption: 'Sept modèles de codage locaux comparés sur VRAM, fenêtre de contexte, licence et cas d\'utilisation optimal en mai 2026. Qwen3-Coder 30B est le choix par défaut pour GPU 24 Go.',
       },
       whichOne: {
@@ -1115,7 +1115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Licence-story ?** DeepSeek licence sous Mistral Non-Production; usage commercial besoin accord ventes. Important pour open-source lovers — pensez à cela pour deployment.',
           '**Erreurs courantes ?** Trop contexte feeding mène explosion token. 48 GB est Q4_K_M floor pour full size; versions tronquées possibles mais perdent avantages.',
         ],
-        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-fr.png',
+        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-fr.webp',
         imageCaption: 'Besoins VRAM par niveau de quantisation pour modèles 7B et 30B. Q4_K_M est la valeur par défaut recommandée à environ 0,60 Go par milliard de paramètres ; ajouter 2–4 Go pour le contexte et les outils.',
       },
       codestral: {
@@ -1385,7 +1385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026年には6つのオープンウェイトコーディングモデルがローカルLLMコーディングの覇権を争っています：Qwen3-Coder（30B および 7B）、DeepSeek Coder V3、Codestral 22B、Llama 3.3 Code、Granite Code、StarCoder 2。これらはパラメータ数、コンテキストウィンドウ、トレーニングデータの重点、ライセンス、VRAMフットプリントが異なり、最適な選択はハードウェアと使用言語でどの制約が最初に効くかに依存します。このガイドでは公開されている検証可能な情報に基づいて比較します：アーキテクチャ、サイズ、コンテキスト、ライセンス、VRAM計算、ベンダー報告のベンチマーク方向。各モデルカードへのリンクを含めているため、自分で数字を再確認できます。',
     metaDescription:
       '6つのローカルコーディングモデルをサイズ、コンテキスト、ライセンス、VRAM、ベンダー報告HumanEval+方向で比較。Qwen3-Coder 30Bが2026年5月の推奨モデルです。',
-    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-ja.png',
+    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-ja.webp',
     twitterDescription:
       'Qwen3-Coder、DeepSeek Coder V3、Codestral、Llama 3.3 Code、Granite Code、StarCoder 2 — 6つのオープンウェイトコーディングモデル、6つの異なる選択肢。シナリオ別の結論を内部に記載。',
     current_models_mentioned: [
@@ -1560,7 +1560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最適な用途': '広言語対応。ニッチ言語を含む',
           },
         ],
-        image: '/images/best-local-coding-models-2026-model-comparison-hero-ja.png',
+        image: '/images/best-local-coding-models-2026-model-comparison-hero-ja.webp',
         imageCaption: '2026年5月のQ4_K_M時点での7つのローカルコーディングモデル比較：VRAM、コンテキストウィンドウ、ライセンス、最適な用途。Qwen3-Coder 30Bは24GB GPU向けデフォルト選択。',
       },
       whichOne: {
@@ -1721,7 +1721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '量子化がどのように機能するか、およびQ4_K_Mがなぜほとんどの引用デフォルトであるかについてのより深い説明については、[LLM量子化説明](/local-llms/llm-quantization-explained)を参照してください。このガイドの残りは上記の計算を想定しています。',
           },
         ],
-        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-ja.png',
+        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-ja.webp',
         imageCaption: '量子化レベル別の7Bおよび30Bモデルのメモリ要件。Q4_K_Mは十億パラメータあたり約0.60GBの推奨デフォルト。コンテキストとツールの追加オーバーヘッドとして2〜4GBを加算。',
       },
       contextWindow: {
@@ -1905,7 +1905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026年，6个开放权重编码模型正在争夺本地LLM编码的王冠：Qwen3-Coder（30B和7B）、DeepSeek Coder V3、Codestral 22B、Llama 3.3 Code、Granite Code和StarCoder 2。它们在参数数量、上下文窗口、训练数据重点、许可证和VRAM占用空间上存在差异 — 最佳选择取决于硬件和使用语言中哪个约束最先生效。本指南基于公开可验证的信息进行比较：架构、大小、上下文、许可证、VRAM计算和供应商报告的基准方向，并包含每个模型卡的链接，以便您可以自己重新检查数字。',
     metaDescription:
       '6个本地编码模型在大小、上下文、许可证、VRAM和供应商报告HumanEval+方向上的比较。Qwen3-Coder 30B是2026年5月的推荐选择。',
-    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-zh.png',
+    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-zh.webp',
     twitterDescription:
       'Qwen3-Coder、DeepSeek Coder V3、Codestral、Llama 3.3 Code、Granite Code、StarCoder 2 — 6个开放权重编码模型，6个不同的优势。场景特定的结论在内部。',
     current_models_mentioned: [
@@ -2080,7 +2080,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最适合': '广泛语言覆盖（包括小众语言）',
           },
         ],
-        image: '/images/best-local-coding-models-2026-model-comparison-hero-zh.png',
+        image: '/images/best-local-coding-models-2026-model-comparison-hero-zh.webp',
         imageCaption: '2026年5月Q4_K_M量化下七个本地编程模型对比：显存、上下文窗口、许可证和最佳使用场景。Qwen3-Coder 30B是24GB显卡的默认首选。',
       },
       whichOne: {
@@ -2241,7 +2241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '关于量化如何工作以及为什么Q4_K_M是最常见的默认值的更深入解释，请参阅[LLM量化解释](/local-llms/llm-quantization-explained)。本指南的其余部分假设上面的数学。',
           },
         ],
-        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-zh.png',
+        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-zh.webp',
         imageCaption: '7B和30B模型在不同量化级别下的显存需求。Q4_K_M是推荐默认值，约每十亿参数0.60GB；另需加2–4GB用于上下文和工具开销。',
       },
       contextWindow: {
@@ -2425,7 +2425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Seis modelos de código de pesos abiertos compiten por el liderazgo en 2026: Qwen3-Coder (30B y 7B), DeepSeek Coder V3, Codestral 22B, Llama 3.3 Code, Granite Code y StarCoder 2. Se diferencian en cantidad de parámetros, ventana de contexto, énfasis del entrenamiento, licencia y huella de VRAM. La elección correcta depende de qué restricción te afecta primero según tu hardware y tu lenguaje de programación. Esta guía los compara con información públicamente verificable: arquitectura, tamaños, contexto, licencias, cálculo de VRAM y dirección de benchmarks reportada por cada proveedor, con enlaces a cada ficha de modelo para que puedas comprobar los datos tú mismo.',
     metaDescription:
       '6 modelos de código local comparados en VRAM, HumanEval+, licencia y ventana de contexto. Qwen3-Coder 30B es la opción recomendada para mayo de 2026.',
-    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-es.png',
+    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-es.webp',
     twitterDescription:
       'Qwen3-Coder, DeepSeek Coder V3, Codestral, Llama 3.3 Code, Granite Code, StarCoder 2 — seis modelos de código de pesos abiertos, seis puntos fuertes diferentes. El veredicto por escenario está adentro.',
     current_models_mentioned: [
@@ -2600,7 +2600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Mejor para': 'Cobertura amplia de lenguajes, incluidos lenguajes de nicho',
           },
         ],
-        image: '/images/best-local-coding-models-2026-model-comparison-hero-es.png',
+        image: '/images/best-local-coding-models-2026-model-comparison-hero-es.webp',
         imageCaption: 'Siete modelos de código local comparados por VRAM, ventana de contexto, licencia y caso de uso óptimo con Q4_K_M en mayo de 2026. Qwen3-Coder 30B es la opción por defecto para 24 GB; DeepSeek Coder V3 lidera en contexto largo; StarCoder 2 15B lidera en cobertura de lenguajes de nicho.',
       },
       whichOne: {
@@ -2761,7 +2761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Para una explicación más profunda de cómo funciona la cuantización y por qué Q4_K_M es el estándar más citado, consulta [Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained). El resto de esta guía asume los cálculos anteriores.',
           },
         ],
-        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-es.png',
+        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-es.webp',
         imageCaption: 'Requisitos de VRAM por nivel de cuantización para modelos de 7B y 30B, de Q4_K_M a FP16. Q4_K_M es el estándar recomendado con ~0,60 GB por cada mil millones de parámetros; añade 2-4 GB de overhead para contexto y herramientas.',
       },
       contextWindow: {
@@ -3072,7 +3072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Seis modelos de código de pesos abertos competem pela liderança em 2026: Qwen3-Coder (30B e 7B), DeepSeek Coder V3, Codestral 22B, Llama 3.3 Code, Granite Code e StarCoder 2. Eles diferem em quantidade de parâmetros, janela de contexto, ênfase do treinamento, licença e pegada de VRAM. A escolha certa depende de qual restrição afeta você primeiro conforme o seu hardware e a sua linguagem de programação. Este guia os compara com informações publicamente verificáveis: arquitetura, tamanhos, contexto, licenças, cálculo de VRAM e direção de benchmarks reportada por cada fornecedor, com links para cada model card para que você possa conferir os dados por conta própria.',
     metaDescription:
       '6 modelos de código local comparados em VRAM, HumanEval+, licença e janela de contexto. O Qwen3-Coder 30B é a opção recomendada para maio de 2026.',
-    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-pt.png',
+    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-pt.webp',
     twitterDescription:
       'Qwen3-Coder, DeepSeek Coder V3, Codestral, Llama 3.3 Code, Granite Code, StarCoder 2 — seis modelos de código de pesos abertos, seis pontos fortes diferentes. O veredicto por cenário está aqui.',
     current_models_mentioned: [
@@ -3247,7 +3247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Melhor para': 'Cobertura ampla de linguagens, incluindo linguagens de nicho',
           },
         ],
-        image: '/images/best-local-coding-models-2026-model-comparison-hero-pt.png',
+        image: '/images/best-local-coding-models-2026-model-comparison-hero-pt.webp',
         imageCaption: 'Sete modelos de código local comparados por VRAM, janela de contexto, licença e caso de uso ideal com Q4_K_M em maio de 2026. O Qwen3-Coder 30B é a opção padrão para 24 GB; o DeepSeek Coder V3 lidera em contexto longo; o StarCoder 2 15B lidera em cobertura de linguagens de nicho.',
       },
       whichOne: {
@@ -3408,7 +3408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Para uma explicação mais aprofundada de como a quantização funciona e por que o Q4_K_M é o padrão mais citado, consulte [Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained). O restante deste guia pressupõe os cálculos acima.',
           },
         ],
-        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-pt.png',
+        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-pt.webp',
         imageCaption: 'Requisitos de VRAM por nível de quantização para modelos de 7B e 30B, de Q4_K_M a FP16. Q4_K_M é o padrão recomendado com ~0,60 GB por bilhão de parâmetros; adicione 2-4 GB de overhead para contexto e ferramentas.',
       },
       contextWindow: {
@@ -3719,7 +3719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ستة نماذج مفتوحة الأوزان تتنافس على صدارة البرمجة المحلية في 2026: Qwen3-Coder (30B و7B) وDeepSeek Coder V3 وCodestral 22B وLlama 3.3 Code وGranite Code وStarCoder 2. تتفاوت هذه النماذج في عدد المعاملات ونافذة السياق وتركيز بيانات التدريب والترخيص والبصمة على ذاكرة VRAM. يعتمد الاختيار الصحيح على أيّ قيد يظهر أولاً بحسب عتادك ولغة البرمجة المستخدمة. يقارن هذا الدليل النماذج وفق معلومات قابلة للتحقق العلني: البنية والأحجام والسياق والتراخيص وحسابات VRAM واتجاهات المعايير التي يُبلغ عنها كل مزود، مع روابط لبطاقة كل نموذج لمراجعة الأرقام بنفسك.',
     metaDescription:
       '6 نماذج برمجة مفتوحة الأوزان مقارَنة في VRAM والترخيص ونافذة السياق وHumanEval+. Qwen3-Coder 30B هو الخيار الأفضل في مايو 2026 للعمل المحلي.',
-    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-ar.png',
+    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-ar.webp',
     twitterDescription:
       'Qwen3-Coder وDeepSeek Coder V3 وCodestral وLlama 3.3 Code وGranite Code وStarCoder 2 — ستة نماذج مفتوحة الأوزان، ستة نقاط قوة مختلفة. الحكم حسب كل سيناريو بداخله.',
     current_models_mentioned: [
@@ -3894,7 +3894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الأنسب لـ': 'تغطية واسعة للغات البرمجة بما فيها اللغات المتخصصة',
           },
         ],
-        image: '/images/best-local-coding-models-2026-model-comparison-hero-ar.png',
+        image: '/images/best-local-coding-models-2026-model-comparison-hero-ar.webp',
         imageCaption: 'سبعة نماذج برمجة محلية مقارنةً حسب VRAM ونافذة السياق والترخيص وحالة الاستخدام المثلى بضغط Q4_K_M في مايو 2026. Qwen3-Coder 30B هو الخيار الافتراضي لمعالجات رسومات 24 جيجابايت.',
       },
       whichOne: {
@@ -4055,7 +4055,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'للاطلاع على شرح أعمق لآلية عمل الضغط الكمّي ولماذا يُعدّ Q4_K_M الافتراضي الأكثر استشهاداً، راجع [شرح الضغط الكمّي للنماذج اللغوية الكبيرة](/ar/local-llms/llm-quantization-explained). يفترض باقي هذا الدليل الحسابات الواردة أعلاه.',
           },
         ],
-        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-ar.png',
+        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-ar.webp',
         imageCaption: 'متطلبات VRAM حسب مستوى الضغط الكمّي لنماذج 7B و30B من Q4_K_M إلى FP16. Q4_K_M هو الافتراضي الموصى به بـ ~0.60 جيجابايت لكل مليار معامل؛ أضف 2-4 جيجابايت كحمولة للسياق والأدوات.',
       },
       contextWindow: {
@@ -4366,7 +4366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026년 오픈 웨이트 코딩 모델 6개가 선두 자리를 놓고 경쟁하고 있습니다: Qwen3-Coder(30B 및 7B), DeepSeek Coder V3, Codestral 22B, Llama 3.3 Code, Granite Code, StarCoder 2입니다. 각 모델은 파라미터 수, 컨텍스트 창, 학습 중점, 라이선스, VRAM 요구량에서 차이를 보입니다. 올바른 선택은 하드웨어와 프로그래밍 언어에 따라 어떤 제약이 먼저 발목을 잡는지에 달려 있습니다. 이 가이드는 공개적으로 검증 가능한 정보를 토대로 비교합니다: 아키텍처, 모델 크기, 컨텍스트, 라이선스, VRAM 계산, 각 공급사가 보고한 벤치마크 방향성, 그리고 직접 데이터를 확인할 수 있도록 각 모델 카드 링크를 제공합니다.',
     metaDescription:
       '6개의 로컬 코딩 모델을 VRAM, HumanEval+, 라이선스, 컨텍스트 창 기준으로 비교합니다. Qwen3-Coder 30B는 2026년 5월 기준 권장 기본 선택지입니다.',
-    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-ko.png',
+    heroImage: '/images/best-local-coding-models-2026-model-comparison-hero-ko.webp',
     twitterDescription:
       'Qwen3-Coder, DeepSeek Coder V3, Codestral, Llama 3.3 Code, Granite Code, StarCoder 2 — 오픈 웨이트 코딩 모델 6개, 각기 다른 강점 6가지. 시나리오별 평결을 확인하십시오.',
     current_models_mentioned: [
@@ -4541,7 +4541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '최적 사용 사례': '틈새 언어 포함 광범위한 언어 커버리지',
           },
         ],
-        image: '/images/best-local-coding-models-2026-model-comparison-hero-ko.png',
+        image: '/images/best-local-coding-models-2026-model-comparison-hero-ko.webp',
         imageCaption: '2026년 5월 Q4_K_M 기준 VRAM, 컨텍스트 창, 라이선스, 최적 사용 사례별로 비교된 7개 로컬 코딩 모델. Qwen3-Coder 30B는 24 GB의 기본 선택지; DeepSeek Coder V3는 긴 컨텍스트에서 선두; StarCoder 2 15B는 틈새 언어 커버리지에서 선두.',
       },
       whichOne: {
@@ -4702,7 +4702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '양자화가 어떻게 작동하는지와 Q4_K_M이 가장 많이 인용되는 표준인 이유에 대한 더 깊은 설명은 [LLM 양자화 설명](/ko/local-llms/llm-quantization-explained)을 참조하십시오. 이 가이드의 나머지는 위의 계산을 가정합니다.',
           },
         ],
-        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-ko.png',
+        image: '/images/best-local-coding-models-2026-vram-by-quant-hero-ko.webp',
         imageCaption: 'Q4_K_M에서 FP16까지 7B 및 30B 모델의 양자화 수준별 VRAM 요구량. Q4_K_M은 10억 파라미터당 ~0.60 GB로 권장 표준; 컨텍스트와 도구를 위해 2-4 GB 오버헤드를 추가합니다.',
       },
       contextWindow: {

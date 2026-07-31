@@ -7,7 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-en.png',
+    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-en.webp',
     title: 'Balcony Solar Global Market Overview (2026): Germany, EU, UK, US, and Asia-Pacific',
     seoTitle: 'Balcony Solar Global Market Overview (2026)',
     metaDescription: 'Region-by-region balcony solar market sizing for Germany, the EU, UK, US, and Asia-Pacific, with segment and driver breakdowns.',
@@ -89,7 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-de.png',
+    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-de.webp',
     title: 'Balkonsolar-Weltmarktüberblick (2026): Deutschland, EU, UK, USA und Asien-Pazifik',
     seoTitle: 'Balkonsolar-Weltmarktüberblick 2026: Deutschland, EU, USA',
     metaDescription: 'Balkonsolar-Marktgröße nach Regionen: Deutschland, EU, UK, USA und Asien-Pazifik im Vergleich, mit Aufschlüsselung nach Segmenten und Treibern.',
@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-fr.png',
+    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-fr.webp',
     title: 'Aperçu du marché mondial du solaire de balcon (2026) : Allemagne, UE, Royaume-Uni, États-Unis et Asie-Pacifique',
     seoTitle: 'Aperçu du marché mondial du solaire de balcon (2026)',
     metaDescription: 'Taille du marché du solaire de balcon par région : Allemagne, UE, Royaume-Uni, États-Unis et Asie-Pacifique, avec répartition par segment et facteur.',
@@ -251,7 +251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-ja.png',
+    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-ja.webp',
     title: 'バルコニーソーラー世界市場概観（2026年）：ドイツ、EU、英国、米国、アジア太平洋地域',
     seoTitle: 'バルコニーソーラー世界市場概観（2026年）：地域別データ分析',
     metaDescription: 'ドイツ、EU、英国、米国、アジア太平洋地域におけるバルコニーソーラー市場規模を地域別に解説し、セグメントと普及要因の内訳も紹介します。',
@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-zh.png',
+    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-zh.webp',
     title: '阳台光伏全球市场概览（2026年）：德国、欧盟、英国、美国与亚太地区',
     seoTitle: '阳台光伏全球市场规模概览（2026年）：各地区数据对比分析',
     metaDescription: '德国、欧盟、英国、美国与亚太地区的阳台光伏市场规模逐区解析，涵盖德国、欧盟、英国、美国及亚太地区的细分市场与增长驱动因素对比。',
@@ -413,7 +413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-es.png',
+    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-es.webp',
     title: 'Panorama del mercado global de energía solar de balcón (2026): Alemania, UE, Reino Unido, EE. UU. y Asia-Pacífico',
     seoTitle: 'Panorama del mercado global solar de balcón (2026)',
     metaDescription: 'Tamaño del mercado de energía solar de balcón por región: Alemania, UE, Reino Unido, EE. UU. y Asia-Pacífico, con desglose por segmento e impulsor.',
@@ -494,7 +494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-pt.png',
+    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-pt.webp',
     title: 'Panorama do mercado global de energia solar de varanda (2026): Alemanha, UE, Reino Unido, EUA e Ásia-Pacífico',
     seoTitle: 'Panorama do mercado global solar de varanda (2026)',
     metaDescription: 'Tamanho do mercado de energia solar de varanda por região: Alemanha, UE, Reino Unido, EUA e Ásia-Pacífico, com detalhamento por segmento e fator.',
@@ -575,7 +575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-ar.png',
+    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-ar.webp',
     title: 'نظرة عامة على السوق العالمية للطاقة الشمسية للشرفات (2026): ألمانيا والاتحاد الأوروبي والمملكة المتحدة والولايات المتحدة وآسيا والمحيط الهادئ',
     seoTitle: 'نظرة عامة على سوق الطاقة الشمسية للشرفات (2026)',
     metaDescription: 'حجم سوق الطاقة الشمسية للشرفات حسب المنطقة في ألمانيا والاتحاد الأوروبي والمملكة المتحدة والولايات المتحدة وآسيا والمحيط الهادئ، مع تفصيل القطاعات.',
@@ -656,7 +656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-ko.png',
+    heroImage: '/images/balcony-solar-global-market-overview-overview-hero-ko.webp',
     title: '발코니 태양광 글로벌 시장 개요(2026년): 독일, EU, 영국, 미국, 아시아태평양',
     seoTitle: '발코니 태양광 글로벌 시장 개요(2026년): 지역별 분석',
     metaDescription: '독일, EU, 영국, 미국, 아시아태평양의 발코니 태양광 시장 규모를 지역별로 비교하고 세그먼트와 성장 요인을 정리했습니다.',

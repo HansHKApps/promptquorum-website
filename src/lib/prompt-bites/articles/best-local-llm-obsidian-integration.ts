@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-en.png',
+    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-en.webp',
     title: 'Best Way to Connect a Local LLM to Obsidian?',
     seoTitle: 'Best Local LLM + Obsidian Integration | Prompt Bites',
     metaDescription: 'A quick guide to connecting a local LLM to Obsidian for note-taking: community plugins vs a local API bridge, and what to check before picking one.',
@@ -99,7 +99,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-de.png',
+    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-de.webp',
     title: 'Best Way to Connect a Local LLM to Obsidian?',
     seoTitle: 'Best Local LLM + Obsidian Integration | Prompt Bites',
     metaDescription: 'Kurzanleitung: ein lokales LLM mit Obsidian verbinden — Community-Plugins vs. lokale API-Brücke, und worauf Sie bei der Wahl achten sollten.',
@@ -194,7 +194,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-fr.png',
+    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-fr.webp',
     title: 'Best Way to Connect a Local LLM to Obsidian?',
     seoTitle: 'Best Local LLM + Obsidian Integration | Prompt Bites',
     metaDescription: 'Guide rapide pour connecter un LLM local à Obsidian pour la prise de notes : plugins communautaires ou pont API local, et ce qu\'il faut vérifier avant de choisir.',
@@ -289,7 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-ja.png',
+    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-ja.webp',
     title: 'Best Way to Connect a Local LLM to Obsidian?',
     seoTitle: 'Best Local LLM + Obsidian Integration | Prompt Bites',
     metaDescription: 'ローカルLLMをノート管理アプリのObsidianに接続するための簡単ガイド。コミュニティプラグインとローカルAPIブリッジの違い、選ぶ前に確認すべき点を解説します。',
@@ -384,7 +384,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-zh.png',
+    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-zh.webp',
     title: 'Best Way to Connect a Local LLM to Obsidian?',
     seoTitle: 'Best Local LLM + Obsidian Integration | Prompt Bites',
     metaDescription: '快速指南：如何将本地LLM连接到Obsidian用于笔记管理——社区插件与本地API桥接的对比，以及选择前需要检查的要点。',
@@ -479,7 +479,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-es.png',
+    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-es.webp',
     title: 'Best Way to Connect a Local LLM to Obsidian?',
     seoTitle: 'Best Local LLM + Obsidian Integration | Prompt Bites',
     metaDescription: 'Guía rápida para conectar un LLM local a Obsidian para tomar notas: plugins de la comunidad frente a un puente API local, y qué comprobar antes de elegir uno.',
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-pt.png',
+    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-pt.webp',
     title: 'Best Way to Connect a Local LLM to Obsidian?',
     seoTitle: 'Best Local LLM + Obsidian Integration | Prompt Bites',
     metaDescription: 'Um guia rápido para conectar um LLM local ao Obsidian para anotações: plugins da comunidade vs. uma ponte de API local, e o que verificar antes de escolher um.',
@@ -669,7 +669,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-ar.png',
+    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-ar.webp',
     title: 'Best Way to Connect a Local LLM to Obsidian?',
     seoTitle: 'Best Local LLM + Obsidian Integration | Prompt Bites',
     metaDescription: 'دليل سريع لربط نموذج لغوي محلي بتطبيق Obsidian لتدوين الملاحظات: إضافات مجتمعية مقابل جسر API محلي، وما يجب التحقق منه قبل الاختيار.',
@@ -764,7 +764,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-ko.png',
+    heroImage: '/images/best-local-llm-obsidian-integration-overview-hero-ko.webp',
     title: 'Best Way to Connect a Local LLM to Obsidian?',
     seoTitle: 'Best Local LLM + Obsidian Integration | Prompt Bites',
     metaDescription: '로컬 LLM을 노트 앱 Obsidian에 연결하는 간단한 가이드: 커뮤니티 플러그인과 로컬 API 브리지 비교, 선택 전에 확인할 사항.',

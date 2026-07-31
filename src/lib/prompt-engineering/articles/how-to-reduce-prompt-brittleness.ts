@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Evaluation & Reliability',
-    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-en.png',
+    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-en.webp',
     title: 'How to Reduce Prompt Brittleness: 7 Techniques for Reliable Prompts',
     intro: 'Prompt brittleness causes silent production failures. Learn 7 techniques — structured output, defensive instructions, regression testing — to make prompts reliable across input variations and model updates.',
     seoTitle: 'How to Reduce Prompt Brittleness: 7 Techniques',
@@ -294,7 +294,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Evaluation & Reliability',
-    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-de.png',
+    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-de.webp',
     title: 'Prompt-Brittleness reduzieren: 7 Techniken für zuverlässige Prompts',
     intro: 'Prompt-Brittleness verursacht stille Produktionsfehler. Lernen Sie 7 Techniken — strukturierte Ausgabe, defensive Anweisungen, Regressionstests — um Prompts über Eingabevariationen und Modellaktualisierungen hinweg zuverlässig zu machen.',
     seoTitle: 'Prompt-Brittleness reduzieren: 7 Techniken',
@@ -591,7 +591,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Evaluation & Reliability',
-    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-es.png',
+    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-es.webp',
     title: 'Cómo reducir la fragilidad de prompts: 7 técnicas para prompts fiables',
     intro: 'La fragilidad de prompts causa fallos silenciosos en producción. Aprende 7 técnicas — salida estructurada, instrucciones defensivas, pruebas de regresión — para que los prompts sean fiables ante variaciones de entrada y actualizaciones del modelo.',
     seoTitle: 'Cómo reducir la fragilidad de prompts: 7 técnicas',
@@ -880,7 +880,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Evaluation & Reliability',
-    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-pt.png',
+    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-pt.webp',
     title: 'Como reduzir a fragilidade de prompts: 7 técnicas para prompts confiáveis',
     intro: 'A fragilidade de prompts causa falhas silenciosas em produção. Aprenda 7 técnicas — saída estruturada, instruções defensivas, testes de regressão — para tornar prompts confiáveis diante de variações de entrada e atualizações de modelo.',
     seoTitle: 'Como reduzir a fragilidade de prompts: 7 técnicas',
@@ -1168,7 +1168,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Evaluation & Reliability',
-    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-fr.png',
+    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-fr.webp',
     title: 'Réduire la Fragilité des Prompts : 7 Techniques pour des Prompts Fiables',
     intro: 'La fragilité des prompts provoque des défaillances silencieuses en production. Découvrez 7 techniques — sortie structurée, instructions défensives, tests de régression — pour rendre vos prompts fiables malgré les variations d\'entrée et les mises à jour du modèle.',
     seoTitle: 'Fragilité des Prompts : 7 Techniques',
@@ -1465,7 +1465,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     theme: '評価と信頼性',
-    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-ja.png',
+    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-ja.webp',
     title: 'プロンプトの脆弱性を低減する7つのテクニック',
     intro: 'プロンプト脆弱性は本番環境での静かな失敗を引き起こします。構造化出力、防御的指示、回帰テストの7つのテクニックを学んで、入力変動とモデル更新全体でプロンプトを信頼できるようにしましょう。',
     seoTitle: 'プロンプト脆弱性を低減する7つのテクニック',
@@ -1754,7 +1754,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     theme: '评估和可靠性',
-    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-zh.png',
+    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-zh.webp',
     title: '减少Prompt脆弱性：7种可靠Prompt技术',
     intro: 'Prompt脆弱性导致生产环境中的静默失败。学习7种技术——结构化输出、防御性指令、回归测试——使Prompt在输入变化和模型更新中保持可靠。',
     seoTitle: '减少Prompt脆弱性：7种技术',
@@ -2044,7 +2044,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Evaluation & Reliability',
-    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-ar.png',
+    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-ar.webp',
     title: 'كيفية تقليل هشاشة الـ ⁨prompt⁩: ⁨7⁩ تقنيات للحصول على ⁨prompts⁩ موثوقة',
     intro: 'تُسبِّب هشاشة الـ prompt إخفاقاتٍ صامتةً في بيئة الإنتاج. تعرَّف على 7 تقنيات — الإخراج المهيكل، والتعليمات الدفاعية، واختبار الانحدار — لجعل الـ prompts موثوقةً في مواجهة التباينات في المدخلات وتحديثات النماذج.',
     seoTitle: 'تقليل هشاشة الـ ⁨prompt⁩: ⁨7⁩ تقنيات للموثوقية',
@@ -2334,7 +2334,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Evaluation & Reliability',
-    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-ko.png',
+    heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-ko.webp',
     title: '프롬프트 취약성 줄이기: 신뢰할 수 있는 프롬프트를 위한 7가지 기법',
     intro: '프롬프트 취약성은 프로덕션에서 발생하는 조용한 실패의 원인입니다. 구조화된 출력, 방어적 지시문, 회귀 테스트 등 7가지 기법을 통해 입력 변형과 모델 업데이트에도 안정적으로 작동하는 프롬프트를 만드는 방법을 학습하십시오.',
     seoTitle: '프롬프트 취약성 줄이기: 7가지 기법',

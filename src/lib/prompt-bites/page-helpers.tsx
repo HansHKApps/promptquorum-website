@@ -239,7 +239,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
       url: `${BASE}${promptBitesHubPath(lang)}`,
       type: 'website',
       siteName: 'PromptQuorum',
-      images: [{ url: `${BASE}/images/prompt-bites-hub-overview-hero-${lang}.png`, width: 1200, height: 675, alt: titleByLang[lang] ?? titleByLang['en']! }],
+      images: [{ url: `${BASE}/images/prompt-bites-hub-overview-hero-${lang}.webp`, width: 1200, height: 675, alt: titleByLang[lang] ?? titleByLang['en']! }],
     },
     twitter: {
       card: 'summary_large_image',

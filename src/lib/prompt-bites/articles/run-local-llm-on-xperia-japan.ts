@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware Guides',
-    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-en.png',
+    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-en.webp',
     title: 'Can You Run a Local LLM on an Xperia Phone?',
     dateModified: '2026-06-20',
     seoTitle: 'Local LLM on Xperia Japan 2026 | Prompt Bites | PromptQuorum',
@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware Guides',
-    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-de.png',
+    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-de.webp',
     title: 'Kann man auf einem Xperia ein lokales LLM ausführen?',
     seoTitle: 'LLM auf Xperia Japan 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Xperia 1 VI (12 GB): Phi-4 Q4 + Rinna 3.6B via MLC Chat. Xperia 5 V (8 GB): 3B-Modelle. Xperia 10 VI (6 GB): nur TinyLlama. Kein Root, kein Developer Mode.',
@@ -232,7 +232,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware Guides',
-    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-fr.png',
+    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-fr.webp',
     title: 'Peut-on exécuter un LLM local sur un Xperia ?',
     seoTitle: 'LLM sur Xperia Japon 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Xperia 1 VI (12 Go) : Phi-4 Q4, Rinna 3.6B. Xperia 5 V (8 Go) : Rinna 3.6B. Xperia 10 VI (6 Go) : TinyLlama. Tout via MLC Chat, aucun root requis en 2026.',
@@ -320,7 +320,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware Guides',
-    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-ja.png',
+    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-ja.webp',
     title: 'XperiaでローカルLLMを動かせる？',
     seoTitle: 'Xperia ローカルLLM 日本 2026年版 | Prompt Bites | PromptQuorum',
     metaDescription: 'はい — Xperia 1 VI（12 GB RAM、Snapdragon 8 Gen 3）はMLC Chat経由でPhi-4 Q4とRinna 3.6Bを実行できます。Xperia 5 Vは軽量モデルに対応。Xperia 10 VIはTinyLlamaとGemma 2Bのみ。',
@@ -408,7 +408,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware Guides',
-    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-pt.png',
+    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-pt.webp',
     title: 'Você pode executar um LLM local em um telefone Xperia?',
     seoTitle: 'LLM local no Xperia Japão 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Xperia 1 VI (12 GB) executa Phi-4 Q4 e Rinna 3.6B; Xperia 5 V (8 GB) roda modelos 3B; Xperia 10 VI (6 GB), apenas TinyLlama. MLC Chat, sem root.',
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware Guides',
-    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-es.png',
+    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-es.webp',
     title: '¿Puedes ejecutar un LLM local en un teléfono Xperia?',
     seoTitle: 'LLM local en Xperia Japón 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'El Xperia 1 VI (12 GB) ejecuta Phi-4 Q4 y Rinna 3.6B; el Xperia 5 V (8 GB) corre modelos 3B; el 10 VI (6 GB), solo TinyLlama. MLC Chat, sin root.',
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware Guides',
-    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-zh.png',
+    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-zh.webp',
     title: 'Xperia手机能运行本地LLM吗？',
     seoTitle: 'Xperia本地LLM日本2026 | Prompt Bites | PromptQuorum',
     metaDescription: '可以——Xperia 1 VI（12 GB内存，Snapdragon 8 Gen 3）可通过MLC Chat运行Phi-4 Q4和Rinna 3.6B。Xperia 5 V支持轻量模型。Xperia 10 VI仅限TinyLlama和Gemma 2B。',
@@ -672,7 +672,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware Guides',
-    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-ar.png',
+    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-ar.webp',
     title: 'هل يمكنك تشغيل نموذج لغة محلي على هاتف ⁨Xperia⁩؟',
     seoTitle: '⁨LLM⁩ محلي على ⁨Xperia⁩ باليابان ⁨2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: '⁨Xperia 1 VI⁩ (⁨12 GB RAM⁩) يشغّل ⁨Phi-4 Q4⁩ و ⁨Rinna 3.6B⁩ عبر ⁨MLC Chat. Xperia 5 V⁩ (⁨8 GB⁩): نماذج ⁨3B. Xperia 10 VI⁩ (⁨6 GB⁩): ⁨TinyLlama⁩ فقط. بدون روت.',
@@ -759,7 +759,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware Guides',
-    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-ko.png',
+    heroImage: '/images/run-local-llm-on-xperia-japan-overview-hero-ko.webp',
     title: 'Xperia 스마트폰에서 로컬 LLM을 실행할 수 있습니까?',
     seoTitle: 'Xperia 로컬 LLM 일본 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Xperia 1 VI (12 GB RAM)에서 MLC Chat으로 Phi-4 Q4와 Rinna 3.6B 실행 가능합니다. Xperia 5 V (8 GB)는 3B 모델 지원, Xperia 10 VI (6 GB)는 TinyLlama만 가능합니다.',

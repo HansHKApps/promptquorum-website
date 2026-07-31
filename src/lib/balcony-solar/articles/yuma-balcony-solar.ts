@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/yuma-balcony-solar-overview-hero-en.png',
+    heroImage: '/images/yuma-balcony-solar-overview-hero-en.webp',
     title: 'Yuma: Balcony Solar Company Profile',
     seoTitle: 'Yuma Balcony Solar Company Profile',
     metaDescription: 'Company profile for Yuma: history, ownership, and product range in the balcony solar market.',
@@ -89,7 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/yuma-balcony-solar-overview-hero-de.png',
+    heroImage: '/images/yuma-balcony-solar-overview-hero-de.webp',
     title: 'Yuma: Unternehmensprofil im Balkonsolar-Markt',
     seoTitle: 'Yuma Balkonkraftwerke: Unternehmensprofil und Historie',
     metaDescription: 'Unternehmensprofil zu Yuma: Gründungsgeschichte, Eigentümerstruktur, Standort und Produktangebot des Anbieters im Markt für Balkonkraftwerke.',
@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/yuma-balcony-solar-overview-hero-fr.png',
+    heroImage: '/images/yuma-balcony-solar-overview-hero-fr.webp',
     title: 'Yuma : profil de l\'entreprise Balcony Solar',
     seoTitle: 'Yuma : profil de l\'entreprise solaire balcon',
     metaDescription: 'Profil de l\'entreprise Yuma : historique, structure de propriété, implantation et gamme de produits sur le marché du solaire de balcon.',
@@ -251,7 +251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/yuma-balcony-solar-overview-hero-ja.png',
+    heroImage: '/images/yuma-balcony-solar-overview-hero-ja.webp',
     title: 'Yuma:ベランダ太陽光発電企業プロフィール',
     seoTitle: 'Yumaのベランダ太陽光企業プロフィール',
     metaDescription: 'Yumaの企業プロフィールです。設立の経緯や所有構造、ベランダ太陽光発電市場における製品ラインナップについて解説します。',
@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/yuma-balcony-solar-overview-hero-zh.png',
+    heroImage: '/images/yuma-balcony-solar-overview-hero-zh.webp',
     title: 'Yuma:阳台太阳能公司简介',
     seoTitle: 'Yuma阳台太阳能公司简介',
     metaDescription: 'Yuma公司简介:介绍其发展历程、所有权结构、总部所在地以及在阳台太阳能市场的产品线概况。',
@@ -413,7 +413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/yuma-balcony-solar-overview-hero-es.png',
+    heroImage: '/images/yuma-balcony-solar-overview-hero-es.webp',
     title: 'Yuma: perfil de la empresa de solar de balcón',
     seoTitle: 'Yuma: perfil de la empresa de solar de balcón',
     metaDescription: 'Perfil de la empresa Yuma: historia, estructura de propiedad, sede y gama de productos en el mercado de la energía solar de balcón.',
@@ -494,7 +494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/yuma-balcony-solar-overview-hero-pt.png',
+    heroImage: '/images/yuma-balcony-solar-overview-hero-pt.webp',
     title: 'Yuma: perfil da empresa de energia solar de varanda',
     seoTitle: 'Yuma: perfil da empresa de solar de varanda',
     metaDescription: 'Perfil da empresa Yuma: histórico, estrutura societária, sede e linha de produtos no mercado de energia solar de varanda.',
@@ -575,7 +575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/yuma-balcony-solar-overview-hero-ar.png',
+    heroImage: '/images/yuma-balcony-solar-overview-hero-ar.webp',
     title: 'Yuma: الملف التعريفي لشركة الطاقة الشمسية للشرفات',
     seoTitle: 'Yuma: ملف الشركة للطاقة الشمسية للشرفات',
     metaDescription: 'ملف تعريفي لشركة Yuma: التاريخ، وهيكل الملكية، ومجموعة المنتجات في سوق الطاقة الشمسية للشرفات.',
@@ -656,7 +656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/yuma-balcony-solar-overview-hero-ko.png',
+    heroImage: '/images/yuma-balcony-solar-overview-hero-ko.webp',
     title: 'Yuma: 발코니 태양광 기업 프로필',
     seoTitle: 'Yuma 발코니 태양광 기업 프로필',
     metaDescription: 'Yuma의 기업 프로필입니다. 연혁, 소유 구조, 발코니 태양광 시장에서의 제품 라인업을 다룹니다.',

@@ -8,7 +8,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-en.png',
+    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in Connecticut?',
     dateModified: '2026-07-16',
     seoTitle: 'Is Balcony Solar Legal in Connecticut? | Prompt Bites | PromptQuorum',
@@ -112,7 +112,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-de.png',
+    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-de.webp',
     title: 'Ist Balkonsolar in Connecticut legal?',
     dateModified: '2026-07-16',
     seoTitle: 'Ist Balkonsolar in Connecticut legal? | Prompt Bites | PromptQuorum',
@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-fr.png',
+    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-fr.webp',
     title: 'Le solaire de balcon est-il légal dans le Connecticut ?',
     dateModified: '2026-07-16',
     seoTitle: 'Le solaire de balcon est-il légal dans le Connecticut ? | Prompt Bites | PromptQuorum',
@@ -320,7 +320,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-ja.png',
+    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-ja.webp',
     title: 'コネチカット州でバルコニーソーラーは合法ですか？',
     dateModified: '2026-07-16',
     seoTitle: 'コネチカット州でバルコニーソーラーは合法ですか？ | Prompt Bites | PromptQuorum',
@@ -424,7 +424,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-zh.png',
+    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-zh.webp',
     title: '康涅狄格州的阳台太阳能合法吗？',
     dateModified: '2026-07-16',
     seoTitle: '康涅狄格州的阳台太阳能合法吗？ | Prompt Bites | PromptQuorum',
@@ -528,7 +528,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-es.png',
+    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-es.webp',
     title: '¿Es legal la energía solar de balcón en Connecticut?',
     dateModified: '2026-07-16',
     seoTitle: '¿Es legal la energía solar de balcón en Connecticut? | Prompt Bites | PromptQuorum',
@@ -632,7 +632,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-pt.png',
+    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-pt.webp',
     title: 'A energia solar de varanda é legal em Connecticut?',
     dateModified: '2026-07-16',
     seoTitle: 'A energia solar de varanda é legal em Connecticut? | Prompt Bites | PromptQuorum',
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-ar.png',
+    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-ar.webp',
     title: 'هل الطاقة الشمسية للشرفات قانونية في كونيتيكت؟',
     dateModified: '2026-07-16',
     seoTitle: 'هل الطاقة الشمسية للشرفات قانونية في كونيتيكت؟ | Prompt Bites | PromptQuorum',
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-ko.png',
+    heroImage: '/images/is-balcony-solar-legal-connecticut-overview-hero-ko.webp',
     title: '코네티컷주에서 발코니 태양광은 합법입니까?',
     dateModified: '2026-07-16',
     seoTitle: '코네티컷주에서 발코니 태양광은 합법입니까? | Prompt Bites | PromptQuorum',

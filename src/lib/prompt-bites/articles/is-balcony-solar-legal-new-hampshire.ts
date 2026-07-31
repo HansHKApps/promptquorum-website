@@ -16,7 +16,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-en.png',
+    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in New Hampshire?',
     dateModified: '2026-07-16',
     seoTitle: 'Is Balcony Solar Legal in New Hampshire? | Prompt Bites | PromptQuorum',
@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-de.png',
+    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-de.webp',
     title: 'Ist Balkonsolar in New Hampshire legal?',
     dateModified: '2026-07-16',
     seoTitle: 'Ist Balkonsolar in New Hampshire legal? | Prompt Bites | PromptQuorum',
@@ -222,7 +222,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-fr.png',
+    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-fr.webp',
     title: 'Le solaire de balcon est-il légal au New Hampshire ?',
     dateModified: '2026-07-16',
     seoTitle: 'Le solaire de balcon est-il légal au New Hampshire ? | Prompt Bites | PromptQuorum',
@@ -325,7 +325,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-ja.png',
+    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-ja.webp',
     title: 'ニューハンプシャー州でベランダソーラーは合法ですか？',
     dateModified: '2026-07-16',
     seoTitle: 'ニューハンプシャー州でベランダソーラーは合法ですか？ | Prompt Bites | PromptQuorum',
@@ -428,7 +428,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-zh.png',
+    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-zh.webp',
     title: '新罕布什尔州的阳台太阳能合法吗？',
     dateModified: '2026-07-16',
     seoTitle: '新罕布什尔州的阳台太阳能合法吗？| Prompt Bites | PromptQuorum',
@@ -531,7 +531,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-es.png',
+    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-es.webp',
     title: '¿Es legal la energía solar de balcón en New Hampshire?',
     dateModified: '2026-07-16',
     seoTitle: '¿Es legal la energía solar de balcón en New Hampshire? | Prompt Bites | PromptQuorum',
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-pt.png',
+    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-pt.webp',
     title: 'A energia solar de varanda é legal em New Hampshire?',
     dateModified: '2026-07-16',
     seoTitle: 'A energia solar de varanda é legal em New Hampshire? | Prompt Bites | PromptQuorum',
@@ -737,7 +737,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-ar.png',
+    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-ar.webp',
     title: 'هل الطاقة الشمسية للشرفات قانونية في نيو هامبشاير؟',
     dateModified: '2026-07-16',
     seoTitle: 'هل الطاقة الشمسية للشرفات قانونية في نيو هامبشاير؟ | Prompt Bites | PromptQuorum',
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-ko.png',
+    heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-ko.webp',
     title: '뉴햄프셔주에서 발코니 태양광은 합법입니까?',
     dateModified: '2026-07-16',
     seoTitle: '뉴햄프셔주에서 발코니 태양광은 합법입니까? | Prompt Bites | PromptQuorum',

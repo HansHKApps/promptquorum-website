@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
-    heroImage: '/images/prompt-audit-regression-overview-hero-en.png',
+    heroImage: '/images/prompt-audit-regression-overview-hero-en.webp',
     title: 'Prompt Audit & Regression Testing: Catch Silent Failures Before Production (2026)',
     dateModified: '2026-07-13',
     seoTitle: 'Prompt Audit & Regression Testing: Catch Silent Failures',
@@ -275,7 +275,7 @@ tests:
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Team-Governance',
-    heroImage: '/images/prompt-audit-regression-overview-hero-de.png',
+    heroImage: '/images/prompt-audit-regression-overview-hero-de.webp',
     title: 'Prompt-Audit & Regressionstests: Stille Fehler vor Produktion erkennen (2026)',
     seoTitle: 'Prompt-Audit & Regressionstests: Stille Fehler (2026)',
     metaDescription: 'Testsuite mit Golden Cases, Edge Cases und adversarialen Eingaben erstellen. Deployment bei über 5 % Pass-Raten-Rückgang blockieren. Promptfoo & Braintrust.',
@@ -530,7 +530,7 @@ tests:
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
-    heroImage: '/images/prompt-audit-regression-overview-hero-es.png',
+    heroImage: '/images/prompt-audit-regression-overview-hero-es.webp',
     title: 'Auditoría de prompts y pruebas de regresión: detecta fallos silenciosos antes de producción (2026)',
     seoTitle: 'Auditoría y regresión de prompts: evita fallos silenciosos',
     metaDescription: 'Crea una suite de pruebas con ejemplos golden, casos límite y entradas adversariales. Bloquea el despliegue si la tasa de éxito cae más de un 5 %.',
@@ -787,7 +787,7 @@ tests:
 
   pt: {
     theme: 'Team Governance',
-    heroImage: '/images/prompt-audit-regression-overview-hero-pt.png',
+    heroImage: '/images/prompt-audit-regression-overview-hero-pt.webp',
     title: 'Auditoria de prompts e testes de regressão: detecte falhas silenciosas antes da produção (2026)',
     seoTitle: 'Auditoria e regressão de prompts: evite falhas silenciosas',
     metaDescription: 'Crie uma suite de testes com exemplos golden, casos limite e entradas adversariais. Bloqueie a implantação se a taxa de sucesso cair mais de 5%.',
@@ -1045,7 +1045,7 @@ tests:
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Gouvernance d\'équipe',
-    heroImage: '/images/prompt-audit-regression-overview-hero-fr.png',
+    heroImage: '/images/prompt-audit-regression-overview-hero-fr.webp',
     title: 'Audit de prompts & tests de régression : défaillances silencieuses (2026)',
     seoTitle: 'Audit & Tests de Régression : Défaillances Silencieuses',
     metaDescription: 'Construisez une suite de tests avec cas de référence, cas limites et entrées adversariales. Bloquez le déploiement si taux baisse >5%. Promptfoo, Braintrust, PromptQuorum.',
@@ -1300,7 +1300,7 @@ tests:
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'チームガバナンス',
-    heroImage: '/images/prompt-audit-regression-overview-hero-ja.png',
+    heroImage: '/images/prompt-audit-regression-overview-hero-ja.webp',
     title: 'プロンプト監査と回帰テスト：本番前に静かな障害を検出（2026年）',
     seoTitle: 'プロンプト監査と回帰テスト：静かな障害検出（2026）',
     metaDescription: 'プロンプト回帰テストスイート：10-20ゴールデンケース、エッジケース、敵対的入力。パス率5%超低下でデプロイ阻止。Promptfoo、Braintrust、PromptQuorum比較。',
@@ -1555,7 +1555,7 @@ tests:
   zh: {
     freshness_tier: 'semi_annual',
     theme: '团队治理',
-    heroImage: '/images/prompt-audit-regression-overview-hero-zh.png',
+    heroImage: '/images/prompt-audit-regression-overview-hero-zh.webp',
     title: '提示词审计与回归测试：生产前捕获静默故障（2026）',
     seoTitle: '提示词审计与回归测试：静默故障（2026）',
     metaDescription: '提示词回归测试套件：10-20黄金用例、边界情况、对抗性输入。通过率下降>5%阻止部署。Promptfoo、Braintrust和PromptQuorum对比。',
@@ -1810,7 +1810,7 @@ tests:
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
-    heroImage: '/images/prompt-audit-regression-overview-hero-ar.png',
+    heroImage: '/images/prompt-audit-regression-overview-hero-ar.webp',
     title: 'تدقيق الـ ⁨Prompt⁩ واختبار الانحدار: اكتشف الأعطال الصامتة قبل الإنتاج',
     seoTitle: 'تدقيق الـ ⁨Prompt⁩ واختبار الانحدار: أعطال صامتة',
     metaDescription: 'مجموعة اختبارات من ⁨3⁩ مكونات: ⁨10-20⁩ مثالاً ذهبياً وحالات حافة ومدخلات عدائية. أوقف النشر تلقائيًا إذا انخفض معدل النجاح أكثر من ⁨5%⁩.',
@@ -2067,7 +2067,7 @@ tests:
   ko: {
     freshness_tier: 'semi_annual',
     theme: '팀 거버넌스',
-    heroImage: '/images/prompt-audit-regression-overview-hero-ko.png',
+    heroImage: '/images/prompt-audit-regression-overview-hero-ko.webp',
     title: '프롬프트 감사 및 회귀 테스트: 프로덕션 배포 전 무음 장애 포착 (2026)',
     seoTitle: '프롬프트 감사 및 회귀 테스트: 무음 장애 포착',
     metaDescription: '골든 예제, 엣지 케이스, 적대적 입력으로 프롬프트 테스트 스위트를 구축하세요. 통과율이 5% 이상 하락하면 배포를 차단합니다. Promptfoo, Braintrust, PromptQuorum 비교.',

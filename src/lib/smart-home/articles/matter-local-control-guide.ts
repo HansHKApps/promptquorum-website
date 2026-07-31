@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/matter-local-control-guide-overview-hero-en.png',
+    heroImage: '/images/matter-local-control-guide-overview-hero-en.webp',
     title: 'Matter & Local Control: An Internet-Independent Smart Home (2026)',
     seoTitle: 'Matter Local Control 2026: No-Cloud Smart Home',
     intro:
@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/matter-local-control-guide-overview-hero-ar.png',
+    heroImage: '/images/matter-local-control-guide-overview-hero-ar.webp',
     title: '⁨Matter⁩ والتحكم المحلي: منزل ذكي مستقل عن الإنترنت (⁨2026⁩)',
     seoTitle: '⁨Matter + Thread 2026⁩: منزل ذكي محلي بلا سحابة',
     intro:
@@ -386,7 +386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/matter-local-control-guide-overview-hero-de.png',
+    heroImage: '/images/matter-local-control-guide-overview-hero-de.webp',
     title: 'Matter & lokale Steuerung: Ein internetunabhängiges Smart Home (2026)',
     seoTitle: 'Matter lokale Steuerung 2026: Smart Home ohne Cloud',
     intro:
@@ -575,7 +575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/matter-local-control-guide-overview-hero-es.png',
+    heroImage: '/images/matter-local-control-guide-overview-hero-es.webp',
     title: 'Matter y Control Local: Un Smart Home Independiente de Internet (2026)',
     seoTitle: 'Matter Control Local 2026: Smart Home sin Nube',
     intro:
@@ -764,7 +764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/matter-local-control-guide-overview-hero-ko.png',
+    heroImage: '/images/matter-local-control-guide-overview-hero-ko.webp',
     title: 'Matter와 로컬 제어: 인터넷 독립 스마트홈 구축 가이드 (2026)',
     seoTitle: 'Matter 로컬 제어 2026: 클라우드 없는 스마트홈',
     intro:
@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/matter-local-control-guide-overview-hero-fr.png',
+    heroImage: '/images/matter-local-control-guide-overview-hero-fr.webp',
     title: 'Matter et Contrôle Local : Une Maison Connectée Indépendante d\'Internet (2026)',
     seoTitle: 'Matter Contrôle Local 2026 : Maison Connectée sans Cloud',
     intro:
@@ -1142,7 +1142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/matter-local-control-guide-overview-hero-ja.png',
+    heroImage: '/images/matter-local-control-guide-overview-hero-ja.webp',
     title: 'Matter とローカル制御：インターネットに依存しないスマートホーム（2026）',
     seoTitle: 'Matter ローカル制御 2026：クラウド不要のスマートホーム',
     intro:
@@ -1331,7 +1331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/matter-local-control-guide-overview-hero-pt.png',
+    heroImage: '/images/matter-local-control-guide-overview-hero-pt.webp',
     title: 'Matter e Controle Local: Uma Casa Inteligente Independente da Internet (2026)',
     seoTitle: 'Matter Controle Local 2026: Casa Inteligente sem Nuvem',
     intro:
@@ -1520,7 +1520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/matter-local-control-guide-overview-hero-zh.png',
+    heroImage: '/images/matter-local-control-guide-overview-hero-zh.webp',
     title: 'Matter 与本地控制：一个不依赖互联网的智能家居（2026）',
     seoTitle: 'Matter 本地控制 2026：无云端智能家居',
     intro:

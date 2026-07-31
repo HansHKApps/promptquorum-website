@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/growatt-balcony-solar-overview-hero-en.png',
+    heroImage: '/images/growatt-balcony-solar-overview-hero-en.webp',
     title: 'Growatt: Balcony Solar Company Profile',
     seoTitle: 'Growatt Balcony Solar Company Profile',
     metaDescription: 'Company profile for Growatt: history, ownership, and product range in the balcony solar market.',
@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/growatt-balcony-solar-overview-hero-de.png',
+    heroImage: '/images/growatt-balcony-solar-overview-hero-de.webp',
     title: 'Growatt: Unternehmensprofil Balkonkraftwerke',
     seoTitle: 'Growatt Balkonkraftwerk: Unternehmensprofil',
     metaDescription: 'Unternehmensprofil zu Growatt: Gründung 2011, Eigentümerstruktur, Finanzierung durch Sequoia und Produktpalette im deutschen Markt für Balkonkraftwerke.',
@@ -174,7 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/growatt-balcony-solar-overview-hero-fr.png',
+    heroImage: '/images/growatt-balcony-solar-overview-hero-fr.webp',
     title: 'Growatt : profil d\'entreprise solaire balcon',
     seoTitle: 'Growatt : profil entreprise solaire balcon',
     metaDescription: 'Profil de Growatt : fondation en 2011, actionnariat, financement par Sequoia et gamme de produits sur le marché allemand du solaire balcon.',
@@ -257,7 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/growatt-balcony-solar-overview-hero-ja.png',
+    heroImage: '/images/growatt-balcony-solar-overview-hero-ja.webp',
     title: 'Growatt:バルコニーソーラー企業プロファイル',
     seoTitle: 'Growattバルコニーソーラー企業プロファイル',
     metaDescription: 'Growattの企業プロファイルです。バルコニーソーラー市場における沿革、株主構成、製品ラインナップを紹介します。',
@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/growatt-balcony-solar-overview-hero-zh.png',
+    heroImage: '/images/growatt-balcony-solar-overview-hero-zh.webp',
     title: 'Growatt:阳台光伏企业档案',
     seoTitle: 'Growatt阳台光伏企业档案',
     metaDescription: 'Growatt企业档案:阳台光伏市场中的发展历程、股权结构与产品线介绍。',
@@ -423,7 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/growatt-balcony-solar-overview-hero-es.png',
+    heroImage: '/images/growatt-balcony-solar-overview-hero-es.webp',
     title: 'Growatt: perfil de empresa de solar de balcón',
     seoTitle: 'Growatt: perfil de empresa solar de balcón',
     metaDescription: 'Perfil de empresa de Growatt: fundación en 2011, propiedad, financiación de Sequoia y gama de productos en el mercado alemán de solar de balcón.',
@@ -506,7 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/growatt-balcony-solar-overview-hero-pt.png',
+    heroImage: '/images/growatt-balcony-solar-overview-hero-pt.webp',
     title: 'Growatt: perfil da empresa de energia solar de varanda',
     seoTitle: 'Growatt: perfil da empresa solar de varanda',
     metaDescription: 'Perfil da empresa Growatt: fundação em 2011, estrutura societária, investimento da Sequoia e linha de produtos no mercado alemão de energia solar de varanda.',
@@ -589,7 +589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/growatt-balcony-solar-overview-hero-ar.png',
+    heroImage: '/images/growatt-balcony-solar-overview-hero-ar.webp',
     title: 'Growatt: ملف الشركة للطاقة الشمسية للشرفات',
     seoTitle: 'Growatt: ملف شركة الطاقة الشمسية للشرفات',
     metaDescription: 'ملف شركة Growatt: التاريخ والملكية ومجموعة المنتجات في سوق الطاقة الشمسية للشرفات.',
@@ -672,7 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/growatt-balcony-solar-overview-hero-ko.png',
+    heroImage: '/images/growatt-balcony-solar-overview-hero-ko.webp',
     title: 'Growatt: 발코니 태양광 기업 프로필',
     seoTitle: 'Growatt 발코니 태양광 기업 프로필',
     metaDescription: 'Growatt 기업 프로필입니다. 발코니 태양광 시장에서의 연혁, 소유 구조, 제품 라인업을 소개합니다.',

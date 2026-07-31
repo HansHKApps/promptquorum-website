@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-02',
     last_full_refresh: '2026-07-02',
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-en.png',
+    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-en.webp',
     title: 'Balcony Solar in the Gulf & MENA Region: UAE and Saudi Arabia',
     seoTitle: 'Balcony Solar Legal Status: UAE & Saudi Arabia (2026)',
     intro: 'Despite having some of the highest solar yield potential in the world, the Gulf/MENA region has the least developed regulatory picture of any market this guide covers — UAE and Saudi Arabia handle small plug-in solar very differently, and neither has a clear "yes, go ahead" answer.',
@@ -139,7 +139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-es.png',
+    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-es.webp',
     title: 'Energía solar de balcón en el Golfo y Oriente Medio: Emiratos Árabes Unidos y Arabia Saudita',
     seoTitle: 'Energía Solar de Balcón: EAU y Arabia Saudita (2026)',
     intro: 'A pesar de contar con uno de los mayores potenciales de rendimiento solar del mundo, la región del Golfo y Oriente Medio (MENA) tiene el panorama regulatorio menos desarrollado de todos los mercados que cubre esta guía: los EAU y Arabia Saudita gestionan la energía solar de balcón enchufable de forma muy distinta, y ninguno de los dos ofrece una respuesta clara de "adelante, instálalo".',
@@ -253,7 +253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-pt.png',
+    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-pt.webp',
     title: 'Energia solar de varanda no Golfo e no Oriente Médio: Emirados Árabes Unidos e Arábia Saudita',
     seoTitle: 'Energia Solar de Varanda: EAU e Arábia Saudita (2026)',
     intro: 'Apesar de ter um dos maiores potenciais de geração solar do mundo, a região do Golfo/Oriente Médio (MENA) tem o cenário regulatório menos desenvolvido de todos os mercados cobertos neste guia — os EAU e a Arábia Saudita tratam a energia solar de varanda plug-and-play de forma muito diferente, e nenhum dos dois oferece uma resposta clara de "pode instalar".',
@@ -367,7 +367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-ar.png',
+    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-ar.webp',
     title: 'الطاقة الشمسية للشرفات في الخليج ومنطقة الشرق الأوسط وشمال أفريقيا: الإمارات العربية المتحدة والمملكة العربية السعودية',
     seoTitle: 'الوضع القانوني للطاقة الشمسية للشرفات: الإمارات والسعودية (2026)',
     intro: 'رغم أن هذه المنطقة تمتلك واحدة من أعلى إمكانات الإنتاج الشمسي في العالم، إلا أن منطقة الخليج والشرق الأوسط وشمال أفريقيا (MENA) لديها أقل صورة تنظيمية وضوحاً من بين جميع الأسواق التي يغطيها هذا الدليل — فالإمارات والسعودية تتعاملان مع أنظمة الطاقة الشمسية الصغيرة القابلة للتوصيل المباشر بطريقتين مختلفتين تماماً، ولا يقدّم أيّ منهما إجابة واضحة بـ"نعم، يمكنك التركيب".',
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-ja.png',
+    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-ja.webp',
     title: '湾岸・MENA地域のバルコニーソーラー：UAEとサウジアラビア',
     seoTitle: 'バルコニーソーラーの法的状況：UAE・サウジアラビア（2026年）',
     intro: '世界でも屈指の日射量ポテンシャルを持つ地域であるにもかかわらず、湾岸・MENA地域は本ガイドが扱う市場の中で最も規制整備が遅れています — UAEとサウジアラビアは小型プラグイン太陽光への対応がまったく異なり、どちらも明確な「設置してよい」という答えを持っていません。',
@@ -595,7 +595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-zh.png',
+    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-zh.webp',
     title: '海湾及中东北非地区的阳台光伏：阿联酋与沙特阿拉伯',
     seoTitle: '阳台光伏法律状态：阿联酋与沙特阿拉伯（2026）',
     intro: '尽管这一地区拥有全球最高的太阳能发电潜力之一，海湾/中东北非（MENA）地区在本指南涵盖的所有市场中监管体系最不完善——阿联酋和沙特阿拉伯对小型插拔式光伏的处理方式截然不同，两国都没有给出明确的"可以安装"的答案。',
@@ -709,7 +709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-fr.png',
+    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-fr.webp',
     title: 'Le solaire de balcon dans le Golfe et la région MENA : Émirats arabes unis et Arabie saoudite',
     seoTitle: 'Statut légal du solaire de balcon : EAU et Arabie saoudite (2026)',
     intro: 'Malgré un potentiel de rendement solaire parmi les plus élevés au monde, la région du Golfe/MENA présente le paysage réglementaire le moins développé de tous les marchés couverts par ce guide — les EAU et l\'Arabie saoudite traitent le solaire de balcon plug-in de manière très différente, et aucun des deux ne donne de réponse claire de type « oui, allez-y ».',
@@ -823,7 +823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-ko.png',
+    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-ko.webp',
     title: '걸프 및 MENA 지역의 발코니 태양광: UAE와 사우디아라비아',
     seoTitle: '발코니 태양광 법적 상태: UAE·사우디아라비아 (2026년)',
     intro: '세계 최고 수준의 태양광 발전 잠재력을 갖추고 있음에도, 걸프/MENA 지역은 이 가이드가 다루는 시장 중 규제 체계가 가장 미비합니다 — UAE와 사우디아라비아는 소형 플러그인 태양광을 매우 다르게 다루고 있으며, 두 나라 모두 "설치해도 좋다"는 명확한 답을 주지 않습니다.',
@@ -937,7 +937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-de.png',
+    heroImage: '/images/balcony-solar-gulf-mena-overview-hero-de.webp',
     title: 'Balkonkraftwerk in den Golfstaaten und der MENA-Region: VAE und Saudi-Arabien',
     seoTitle: 'Balkonkraftwerk Rechtsstatus: VAE & Saudi-Arabien (2026)',
     intro: 'Obwohl die Region zu den sonnenstärksten der Welt gehört, ist die Golf-/MENA-Region regulatorisch der am wenigsten entwickelte Markt in diesem Leitfaden — VAE und Saudi-Arabien handhaben kleine Plug-in-Solaranlagen sehr unterschiedlich, und keines der beiden Länder gibt eine klare Antwort im Sinne von „ja, einfach installieren".',

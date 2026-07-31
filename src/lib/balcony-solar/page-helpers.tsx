@@ -379,7 +379,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
       url: `${BASE}${balconySolarHubPath(lang)}`,
       type: 'website',
       siteName: 'PromptQuorum',
-      images: [{ url: `${BASE}/images/balcony-solar-hub-overview-hero-${lang}.png`, width: 1200, height: 675, alt: title }],
+      images: [{ url: `${BASE}/images/balcony-solar-hub-overview-hero-${lang}.webp`, width: 1200, height: 675, alt: title }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -809,7 +809,7 @@ function renderHub(lang: Lang) {
         )}
 
         <img
-          src={`/images/balcony-solar-hub-overview-hero-${lang}.png`}
+          src={`/images/balcony-solar-hub-overview-hero-${lang}.webp`}
           alt={hubTitle}
           width={1200}
           height={675}

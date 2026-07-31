@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-en.png',
+    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-en.webp',
     title: 'Best RTX 4090 Setup for Running 70B Models?',
     seoTitle: 'RTX 4090 Setup for 70B Models 2026 | Prompt Bites',
     metaDescription: 'A single RTX 4090 (24GB) cannot fully fit a 70B model — it needs ~40GB at Q4. Two RTX 4090s (48GB) or CPU offload are the realistic 70B setups.',
@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-ar.png',
+    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-ar.webp',
     title: 'أفضل إعداد RTX 4090 لتشغيل نماذج 70B؟',
     seoTitle: 'إعداد RTX 4090 لنماذج 70B 2026 | Prompt Bites',
     metaDescription: 'بطاقة RTX 4090 واحدة (24GB) لا يمكنها استيعاب نموذج 70B بالكامل — يحتاج إلى ~40GB بدقة Q4. بطاقتا RTX 4090 (48GB) أو تفريغ CPU هما الإعدادان الواقعيان لتشغيل 70B.',
@@ -232,7 +232,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-de.png',
+    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-de.webp',
     title: 'Das beste RTX-4090-Setup für den Betrieb von 70B-Modellen?',
     seoTitle: 'RTX-4090-Setup für 70B-Modelle 2026 | Prompt Bites',
     metaDescription: 'Eine einzelne RTX 4090 (24 GB) fasst ein 70B-Modell nicht vollständig — braucht ~40 GB bei Q4. Zwei RTX 4090 (48 GB) oder CPU-Offload sind realistischer.',
@@ -346,7 +346,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-es.png',
+    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-es.webp',
     title: '¿Cuál es la Mejor Configuración RTX 4090 para Ejecutar Modelos de 70B?',
     seoTitle: 'Configuración RTX 4090 para Modelos de 70B 2026 | Prompt Bites',
     metaDescription: 'Una sola RTX 4090 (24GB) no puede cargar un modelo de 70B completo — necesita ~40GB en Q4. Dos RTX 4090 (48GB) o descarga a CPU son la opción realista.',
@@ -460,7 +460,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-fr.png',
+    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-fr.webp',
     title: 'Meilleure configuration RTX 4090 pour faire tourner des modèles 70B ?',
     seoTitle: 'Configuration RTX 4090 pour modèles 70B 2026',
     metaDescription: 'Une seule RTX 4090 (24 Go) ne peut pas contenir un 70B complet — faut ~40 Go en Q4. Deux RTX 4090 (48 Go) ou déchargement CPU sont la config réaliste.',
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-ja.png',
+    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-ja.webp',
     title: '70Bモデルを動かすための最適なRTX 4090セットアップは?',
     seoTitle: '2026年版 70Bモデル向けRTX 4090セットアップ | Prompt Bites',
     metaDescription: '単一のRTX 4090(24GB)は70Bモデルを完全には収められません — Q4で約40GB必要です。2枚のRTX 4090(48GB)かCPUオフロードが現実的な70Bセットアップです。',
@@ -688,7 +688,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-ko.png',
+    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-ko.webp',
     title: '70B 모델 구동을 위한 최적의 RTX 4090 설정은?',
     seoTitle: '70B 모델을 위한 RTX 4090 설정 2026 | Prompt Bites',
     metaDescription: '단일 RTX 4090(24GB)은 70B 모델을 완전히 수용할 수 없습니다 — Q4에서 약 40GB가 필요합니다. 두 RTX 4090(48GB)이나 CPU 오프로드가 현실적인 70B 설정입니다.',
@@ -802,7 +802,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-pt.png',
+    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-pt.webp',
     title: 'Qual a Melhor Configuração RTX 4090 para Rodar Modelos de 70B?',
     seoTitle: 'Configuração RTX 4090 para Modelos de 70B 2026',
     metaDescription: 'Uma única RTX 4090 (24GB) não comporta totalmente um modelo de 70B — precisa de ~40GB em Q4. Duas RTX 4090 (48GB) ou offload de CPU são a opção real.',
@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-zh.png',
+    heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-zh.webp',
     title: '运行 70B 模型的最佳 RTX 4090 配置是什么？',
     seoTitle: '2026 年 70B 模型的 RTX 4090 配置 | Prompt Bites',
     metaDescription: '单张 RTX 4090（24GB）无法完整装下 70B 模型——需要约 40GB 才能在 Q4 下运行。双 RTX 4090（48GB）或 CPU 卸载是现实可行的 70B 配置方案。',

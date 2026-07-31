@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/local-small-language-models-smart-home-overview-hero-en.png',
+    heroImage: '/images/local-small-language-models-smart-home-overview-hero-en.webp',
     title: 'Small Language Models for Smart Home Control (2027)',
     seoTitle: 'Small Language Models for Smart Home (2027)',
     intro:
@@ -172,7 +172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/local-small-language-models-smart-home-overview-hero-de.png',
+    heroImage: '/images/local-small-language-models-smart-home-overview-hero-de.webp',
     title: 'Kleine Sprachmodelle für die Smart-Home-Steuerung (2027)',
     seoTitle: 'Kleine Sprachmodelle für Smart Home (2027)',
     intro:
@@ -336,7 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/local-small-language-models-smart-home-overview-hero-fr.png',
+    heroImage: '/images/local-small-language-models-smart-home-overview-hero-fr.webp',
     title: 'Petits modèles de langage pour le contrôle de la maison connectée (2027)',
     seoTitle: 'Petits modèles de langage pour maison connectée (2027)',
     intro:
@@ -500,7 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/local-small-language-models-smart-home-overview-hero-ja.png',
+    heroImage: '/images/local-small-language-models-smart-home-overview-hero-ja.webp',
     title: 'スマートホーム制御のための小規模言語モデル（2027年）',
     seoTitle: 'スマートホーム向け小規模言語モデル（2027年）',
     intro:
@@ -664,7 +664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/local-small-language-models-smart-home-overview-hero-zh.png',
+    heroImage: '/images/local-small-language-models-smart-home-overview-hero-zh.webp',
     title: '智能家居控制的小型语言模型（2027年）',
     seoTitle: '智能家居小型语言模型（2027年）',
     intro:
@@ -828,7 +828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/local-small-language-models-smart-home-overview-hero-es.png',
+    heroImage: '/images/local-small-language-models-smart-home-overview-hero-es.webp',
     title: 'Modelos de lenguaje pequeños para el control del hogar inteligente (2027)',
     seoTitle: 'Modelos de lenguaje pequeños para hogar inteligente (2027)',
     intro:
@@ -992,7 +992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/local-small-language-models-smart-home-overview-hero-pt.png',
+    heroImage: '/images/local-small-language-models-smart-home-overview-hero-pt.webp',
     title: 'Modelos de linguagem pequenos para o controle da casa inteligente (2027)',
     seoTitle: 'Modelos de linguagem pequenos para casa inteligente (2027)',
     intro:
@@ -1156,7 +1156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/local-small-language-models-smart-home-overview-hero-ar.png',
+    heroImage: '/images/local-small-language-models-smart-home-overview-hero-ar.webp',
     title: 'نماذج اللغة الصغيرة للتحكم في المنزل الذكي (⁨2027⁩)',
     seoTitle: 'نماذج اللغة الصغيرة للمنزل الذكي (⁨2027⁩)',
     intro:
@@ -1320,7 +1320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/local-small-language-models-smart-home-overview-hero-ko.png',
+    heroImage: '/images/local-small-language-models-smart-home-overview-hero-ko.webp',
     title: '스마트홈 제어를 위한 소형 언어 모델 (2027년)',
     seoTitle: '스마트홈용 소형 언어 모델 (2027년)',
     intro:

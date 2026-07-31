@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-02',
     last_full_refresh: '2026-07-02',
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-en.png',
+    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-en.webp',
     title: 'Is Balcony Solar Worth It in 2026?',
     seoTitle: 'Is Balcony Solar Worth It? Honest 2026 Breakdown',
     intro: 'The honest answer is: it depends on your electricity rate, your country\'s hardware pricing, and how long you plan to keep the system — not a universal yes. Here\'s how to actually work it out for yourself rather than trust a generic answer.',
@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-es.png',
+    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-es.webp',
     title: '¿Vale la Pena la Energía Solar de Balcón en 2026?',
     seoTitle: 'Energía Solar de Balcón: ¿Vale la Pena en 2026?',
     intro: 'La respuesta honesta es: depende de tu tarifa eléctrica, del precio del hardware en tu país y de cuánto tiempo planees mantener el sistema — no es un sí universal. Aquí te explicamos cómo calcularlo tú mismo en lugar de confiar en una respuesta genérica.',
@@ -253,7 +253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-pt.png',
+    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-pt.webp',
     title: 'A Energia Solar de Varanda Vale a Pena em 2026?',
     seoTitle: 'Energia Solar de Varanda: Vale a Pena em 2026?',
     intro: 'A resposta honesta é: depende da sua tarifa de energia elétrica, do preço do hardware no seu país e de quanto tempo você pretende manter o sistema — não é um sim universal. Veja como calcular isso por conta própria, em vez de confiar em uma resposta genérica.',
@@ -375,7 +375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-ar.png',
+    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-ar.webp',
     title: 'هل تستحق الطاقة الشمسية للشرفة الاستثمار في 2026؟',
     seoTitle: 'هل تستحق الطاقة الشمسية للشرفة الاستثمار؟ 2026',
     intro: 'الإجابة الصادقة هي: يعتمد الأمر على تعرفة الكهرباء لديك، وسعر الأجهزة في بلدك، والمدة التي تخطط للاحتفاظ بها بالنظام — وليست إجابة عامة بنعم في كل مكان. إليك كيفية حساب ذلك بنفسك بدلًا من الاعتماد على إجابة عامة.',
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-de.png',
+    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-de.webp',
     title: 'Lohnt sich ein Balkonkraftwerk 2026 wirklich?',
     seoTitle: 'Balkonkraftwerk: Lohnt es sich 2026? Ehrliche Analyse',
     intro: 'Die ehrliche Antwort lautet: Es kommt darauf an — auf Ihren Strompreis, den Hardwarepreis in Ihrem Land und wie lange Sie das System betreiben möchten. Es gibt kein universelles Ja. Hier erfahren Sie, wie Sie die Rechnung selbst aufstellen, anstatt einer pauschalen Antwort zu vertrauen.',
@@ -619,7 +619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-ja.png',
+    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-ja.webp',
     title: '2026年、バルコニー太陽光発電は本当に元が取れるのか?',
     seoTitle: 'バルコニー太陽光発電は元が取れる? 2026年正直診断',
     intro: '正直な答えは「状況による」です。あなたの地域の電気料金、あなたの国でのハードウェア価格、そしてシステムをどれだけ長く使い続けるつもりかによって決まります — 万人に当てはまる「イエス」ではありません。一般論に頼るのではなく、自分自身で判断できるよう計算方法を解説します。',
@@ -741,7 +741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-zh.png',
+    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-zh.webp',
     title: '2026年阳台光伏真的划算吗?',
     seoTitle: '阳台光伏值不值? 2026年诚实分析',
     intro: '诚实的答案是:这取决于你所在地区的电价、你所在国家的硬件价格,以及你打算使用系统多长时间 —— 并不是一个放之四海而皆准的"值"。下面介绍如何自己算清这笔账,而不是依赖一个笼统的答案。',
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-fr.png',
+    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-fr.webp',
     title: 'Le Solaire de Balcon en Vaut-il la Peine en 2026?',
     seoTitle: 'Solaire de Balcon: En Vaut-il la Peine en 2026?',
     intro: 'La réponse honnête est: cela dépend de votre tarif d\'électricité, du prix du matériel dans votre pays et de la durée pendant laquelle vous comptez conserver le système — ce n\'est pas un oui universel. Voici comment le calculer vous-même plutôt que de vous fier à une réponse générique.',
@@ -985,7 +985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-ko.png',
+    heroImage: '/images/balcony-solar-payback-worth-it-2026-overview-hero-ko.webp',
     title: '2026년 베란다 태양광, 정말 본전을 뽑을까?',
     seoTitle: '베란다 태양광 손익분기점 2026년 솔직 분석',
     intro: '솔직한 답은 "상황에 따라 다르다"입니다 — 지역 전기 요금, 해당 국가의 하드웨어 가격, 그리고 시스템을 얼마나 오래 사용할 계획인지에 달려 있으며, 모두에게 통하는 "예"라는 답은 없습니다. 일반적인 답을 그대로 믿기보다 직접 계산하는 방법을 알려드립니다.',

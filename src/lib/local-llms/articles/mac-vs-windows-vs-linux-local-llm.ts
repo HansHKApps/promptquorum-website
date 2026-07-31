@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'Mac vs Windows vs Linux for Local LLMs 2026: M5 vs RTX 5090',
       intro: '**macOS with Apple M5 silicon is the simplest setup — Ollama installs in 6 minutes, runs Llama 3.3 8B at 40–60 tok/sec on M5 Pro with $0 extra hardware. MacBook Pro M5 Max (128 GB, 614 GB/s bandwidth) handles 70B at 25–35 tok/sec — a 4× improvement over M4 Max. Windows with RTX 5090 (32 GB, $2,000) runs 70B at 40–50 tok/sec. Linux is 1–5% faster than Windows on identical hardware and costs $810 total over 3 years for production servers. As of April 2026, the M5 generation closed the speed gap between Apple Silicon and discrete GPUs significantly.**',
       metaDescription: 'MacBook Pro M5 Max 128GB: 70B at 25–35 tok/s, 614 GB/s bandwidth. Windows RTX 5090 32GB: 70B at 40–50 tok/s, $2,000. Linux: 1–5% faster, $810 TCO 3 years. Full OS comparison.',
-      heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-en.png',
+      heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-en.webp',
       publishDate: '2026-04-05',
       dateModified: '2026-04-19',
       leadAnswerBlock: '**macOS with Apple M5 silicon is the simplest setup — Ollama installs in 6 minutes, runs Llama 3.3 8B at 40–60 tok/sec on M5 Pro with $0 extra hardware. MacBook Pro M5 Max (128 GB, 614 GB/s bandwidth) handles 70B at 25–35 tok/sec — a 4× improvement over M4 Max. Windows with RTX 5090 (32 GB, $2,000) runs 70B at 40–50 tok/sec. Linux is 1–5% faster than Windows on identical hardware and costs $810 total over 3 years for production servers.**',
@@ -55,7 +55,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'hardware-cost': {
           id: 'hardware-cost',
           title: 'What Is the Hardware Cost by Operating System?',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-en.png',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-en.webp',
           imageCaption: 'Mac vs Windows vs Linux hardware cost for local LLMs: M5 Max at $3,499–4,999 runs 70B Q8 at 25–35 tok/s; RTX 5090 at ~$2,000 reaches 40–50 tok/s; used RTX 4090 at $1,000–1,400 offers 70B Q4 support.',
           content: [
             '**macOS (Apple M5 generation — shipping March 2026):** MacBook Pro M5 Pro 64 GB ($2,499–3,199) runs 70B Q4 at 15–20 tok/sec. MacBook Pro M5 Max 128 GB ($3,499–4,999) runs 70B Q8 at 25–35 tok/sec. MacBook Air M5 32 GB ($1,099–1,299) handles 8B smoothly. Total additional cost if upgrading: $0 if you already own a Mac; $1,099+ if buying new.',
@@ -70,7 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'setup': {
           id: 'setup',
           title: 'What Is the Setup and Complexity?',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-setup-hero-en.png',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-setup-hero-en.webp',
           imageCaption: 'Local LLM setup time by OS: macOS takes 6 minutes with zero terminal commands; Windows takes 15–20 minutes with GUI; Linux Ubuntu requires 40–70 minutes including CUDA installation.',
           content: [
             '**macOS:** Download Ollama (1 minute), run app, select Llama 3.3 8B (5 minutes) = 6 minutes total, zero terminal commands. Best for non-technical users.',
@@ -278,7 +278,7 @@ schema: {
       seoTitle: 'Mac vs Windows vs Linux para LLMs locales 2026',
       intro: '**macOS con Apple M5 Silicon es la configuración más sencilla — Ollama se instala en 6 minutos, ejecuta Llama 3.3 8B a 40–60 tok/s en M5 Pro con $0 de hardware adicional. MacBook Pro M5 Max (128 GB, 614 GB/s de ancho de banda) maneja 70B a 25–35 tok/s — una mejora de 4× sobre el M4 Max. Windows con RTX 5090 (32 GB, $2.000) ejecuta 70B a 40–50 tok/s. Linux es 1–5% más rápido que Windows en hardware idéntico y cuesta $810 en total durante 3 años para servidores de producción. A partir de abril de 2026, la generación M5 cerró significativamente la brecha de velocidad entre Apple Silicon y las GPU discretas.**',
       metaDescription: 'MacBook Pro M5 Max 128GB: 70B a 25–35 tok/s, 614 GB/s. Windows RTX 5090 32GB: 70B a 40–50 tok/s, $2.000. Linux: 1–5% más rápido, $810 TCO a 3 años.',
-      heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-es.png',
+      heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-es.webp',
       publishDate: '2026-04-05',
       dateModified: '2026-04-19',
       leadAnswerBlock: '**macOS con Apple M5 Silicon es la configuración más sencilla — Ollama se instala en 6 minutos, ejecuta Llama 3.3 8B a 40–60 tok/s en M5 Pro con $0 de hardware adicional. MacBook Pro M5 Max (128 GB, 614 GB/s de ancho de banda) maneja 70B a 25–35 tok/s — una mejora de 4× sobre el M4 Max. Windows con RTX 5090 (32 GB, $2.000) ejecuta 70B a 40–50 tok/s. Linux es 1–5% más rápido que Windows en hardware idéntico y cuesta $810 en total durante 3 años para servidores de producción.**',
@@ -319,7 +319,7 @@ schema: {
         'hardware-cost': {
           id: 'hardware-cost',
           title: '¿Cuál es el costo de hardware por sistema operativo?',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-es.png',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-es.webp',
           imageCaption: 'Costo de hardware Mac vs Windows vs Linux para LLMs locales: M5 Max a $3.499–4.999 ejecuta 70B Q8 a 25–35 tok/s; RTX 5090 a ~$2.000 alcanza 40–50 tok/s; RTX 4090 usada a $1.000–1.400 ofrece soporte 70B Q4.',
           content: [
             '**macOS (generación Apple M5 — envío marzo 2026):** MacBook Pro M5 Pro 64 GB ($2.499–3.199) ejecuta 70B Q4 a 15–20 tok/s. MacBook Pro M5 Max 128 GB ($3.499–4.999) ejecuta 70B Q8 a 25–35 tok/s. MacBook Air M5 32 GB ($1.099–1.299) maneja 8B sin problemas. Costo adicional total al actualizar: $0 si ya tienes un Mac; $1.099+ si compras nuevo.',
@@ -334,7 +334,7 @@ schema: {
         'setup': {
           id: 'setup',
           title: '¿Cuál es la configuración y la complejidad?',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-setup-hero-es.png',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-setup-hero-es.webp',
           imageCaption: 'Tiempo de configuración de LLM local por SO: macOS tarda 6 minutos sin comandos de terminal; Windows tarda 15–20 minutos con GUI; Linux Ubuntu requiere 40–70 minutos incluyendo la instalación de CUDA.',
           content: [
             '**macOS:** Descarga Ollama (1 minuto), ejecuta la app, selecciona Llama 3.3 8B (5 minutos) = 6 minutos en total, cero comandos de terminal. Mejor para usuarios no técnicos.',
@@ -547,7 +547,7 @@ schema: {
       seoTitle: '⁨Mac⁩ مقابل ⁨Windows⁩ مقابل ⁨Linux⁩ لـ ⁨LLMs⁩ المحلية ⁨2026⁩',
       intro: '**macOS مع Apple M5 Silicon هو الإعداد الأبسط — يُثبَّت Ollama في 6 دقائق، ويشغّل Llama 3.3 8B بسرعة 40–60 tok/s على M5 Pro مع 0 دولار عتاد إضافي. يتعامل MacBook Pro M5 Max (128 GB، عرض نطاق 614 GB/s) مع 70B بسرعة 25–35 tok/s — تحسّن 4× عن M4 Max. يشغّل Windows مع RTX 5090 (32 GB، 2,000 دولار) نموذج 70B بسرعة 40–50 tok/s. Linux أسرع بنسبة 1–5% من Windows على عتاد مماثل ويكلّف 810 دولارات إجمالًا على مدى 3 سنوات لخوادم الإنتاج. اعتبارًا من أبريل 2026، قلّص الجيل M5 بشكل ملحوظ فجوة السرعة بين Apple Silicon ووحدات GPU المنفصلة.**',
       metaDescription: '⁨M5 Max 128GB⁩: ⁨70B⁩ بـ ⁨25⁩–⁨35 tok/s⁩ و⁨614 GB/s. RTX 5090 32GB⁩: ⁨40⁩–⁨50 tok/s⁩ بـ ⁨2⁩,⁨000⁩$. ⁨Linux⁩ أسرع بـ ⁨1⁩–⁨5%⁩ وأوفر ⁨810⁩$ على ⁨3⁩ سنوات.',
-      heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-ar.png',
+      heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-ar.webp',
       publishDate: '2026-04-05',
       dateModified: '2026-04-19',
       leadAnswerBlock: '**macOS مع Apple M5 Silicon هو الإعداد الأبسط — يُثبَّت Ollama في 6 دقائق، ويشغّل Llama 3.3 8B بسرعة 40–60 tok/s على M5 Pro مع 0 دولار عتاد إضافي. يتعامل MacBook Pro M5 Max (128 GB، عرض نطاق 614 GB/s) مع 70B بسرعة 25–35 tok/s — تحسّن 4× عن M4 Max. يشغّل Windows مع RTX 5090 (32 GB، 2,000 دولار) نموذج 70B بسرعة 40–50 tok/s. Linux أسرع بنسبة 1–5% من Windows على عتاد مماثل ويكلّف 810 دولارات إجمالًا على مدى 3 سنوات لخوادم الإنتاج.**',
@@ -588,7 +588,7 @@ schema: {
         'hardware-cost': {
           id: 'hardware-cost',
           title: 'ما تكلفة العتاد حسب نظام التشغيل؟',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-ar.png',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-ar.webp',
           imageCaption: 'تكلفة العتاد Mac مقابل Windows مقابل Linux لنماذج LLM المحلية: M5 Max بسعر 3,499–4,999 دولار يشغّل 70B Q8 بسرعة 25–35 tok/s؛ RTX 5090 بسعر ~2,000 دولار يبلغ 40–50 tok/s؛ RTX 4090 مستعملة بسعر 1,000–1,400 دولار توفّر دعم 70B Q4.',
           content: [
             '**macOS (الجيل Apple M5 — الشحن مارس 2026):** MacBook Pro M5 Pro 64 GB (2,499–3,199 دولار) يشغّل 70B Q4 بسرعة 15–20 tok/s. MacBook Pro M5 Max 128 GB (3,499–4,999 دولار) يشغّل 70B Q8 بسرعة 25–35 tok/s. MacBook Air M5 32 GB (1,099–1,299 دولار) يتعامل مع 8B دون مشاكل. التكلفة الإضافية الإجمالية عند الترقية: 0 دولار إذا كان لديك Mac بالفعل؛ 1,099 دولارًا+ إذا اشتريت جديدًا.',
@@ -603,7 +603,7 @@ schema: {
         'setup': {
           id: 'setup',
           title: 'ما الإعداد والتعقيد؟',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-setup-hero-ar.png',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-setup-hero-ar.webp',
           imageCaption: 'وقت إعداد LLM المحلي حسب نظام التشغيل: يستغرق macOS 6 دقائق دون أوامر طرفية؛ يستغرق Windows 15–20 دقيقة بواجهة رسومية؛ يتطلب Linux Ubuntu بين 40–70 دقيقة بما في ذلك تثبيت CUDA.',
           content: [
             '**macOS:** نزّل Ollama (دقيقة واحدة)، شغّل التطبيق، اختر Llama 3.3 8B (5 دقائق) = 6 دقائق إجمالًا، صفر أوامر طرفية. الأفضل للمستخدمين غير التقنيين.',
@@ -816,7 +816,7 @@ schema: {
       seoTitle: 'Mac vs Windows vs Linux para LLMs locais 2026',
       intro: '**macOS com Apple M5 Silicon é a configuração mais simples — Ollama instala em 6 minutos, executa Llama 3.3 8B a 40–60 tok/s no M5 Pro com $0 de hardware adicional. MacBook Pro M5 Max (128 GB, 614 GB/s de largura de banda) gerencia 70B a 25–35 tok/s — uma melhoria de 4× sobre o M4 Max. Windows com RTX 5090 (32 GB, $2.000) executa 70B a 40–50 tok/s. Linux é 1–5% mais rápido que Windows no mesmo hardware e custa $810 no total durante 3 anos para servidores de produção. Em abril de 2026, a geração M5 fechou significativamente a diferença de velocidade entre Apple Silicon e GPUs discretas.**',
       metaDescription: 'MacBook Pro M5 Max 128GB: 70B a 25–35 tok/s, 614 GB/s. Windows RTX 5090 32GB: 70B a 40–50 tok/s, $2.000. Linux: 1–5% mais rápido, $810 TCO em 3 anos.',
-      heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-pt.png',
+      heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-pt.webp',
       publishDate: '2026-04-05',
       dateModified: '2026-04-19',
       leadAnswerBlock: '**macOS com Apple M5 Silicon é a configuração mais simples — Ollama instala em 6 minutos, executa Llama 3.3 8B a 40–60 tok/s no M5 Pro com $0 de hardware adicional. MacBook Pro M5 Max (128 GB, 614 GB/s de largura de banda) gerencia 70B a 25–35 tok/s. Windows com RTX 5090 (32 GB, $2.000) executa 70B a 40–50 tok/s. Linux é 1–5% mais rápido que Windows no mesmo hardware e custa $810 no total durante 3 anos para servidores de produção.**',
@@ -857,7 +857,7 @@ schema: {
         'hardware-cost': {
           id: 'hardware-cost',
           title: 'Qual é o custo de hardware por sistema operacional?',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-pt.png',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-pt.webp',
           imageCaption: 'Custo de hardware Mac vs Windows vs Linux para LLMs locais: M5 Max a $3.499–4.999 executa 70B Q8 a 25–35 tok/s; RTX 5090 a ~$2.000 atinge 40–50 tok/s; RTX 4090 usada a $1.000–1.400 oferece suporte 70B Q4.',
           content: [
             '**macOS (geração Apple M5 — lançamento março 2026):** MacBook Pro M5 Pro 64 GB ($2.499–3.199) executa 70B Q4 a 15–20 tok/s. MacBook Pro M5 Max 128 GB ($3.499–4.999) executa 70B Q8 a 25–35 tok/s. MacBook Air M5 32 GB ($1.099–1.299) gerencia 8B sem problemas. Custo adicional total ao atualizar: $0 se já tiver um Mac; $1.099+ se comprar novo.',
@@ -1006,7 +1006,7 @@ schema: {
       seoTitle: 'Mac vs Windows vs Linux für LLMs 2026: M5 vs RTX 5090',
       intro: '**macOS mit Apple M5 Silicon ist das einfachste Setup — Ollama wird in 6 Minuten installiert und läuft Llama 3.3 8B mit 40–60 tok/s auf M5 Pro ohne zusätzliche Hardware. MacBook Pro M5 Max (128 GB, 614 GB/s Bandbreite) verarbeitet 70B mit 25–35 tok/s — eine 4×-Verbesserung gegenüber M4 Max. Windows mit RTX 5090 (32 GB, ca. 3.449 €) läuft 70B mit 40–50 tok/s. Linux ist 1–5% schneller als Windows bei identischer Hardware und kostet ca. 770 € in 3 Jahren für Produktionsserver. Ab April 2026 hat die M5-Generation die Geschwindigkeitslücke zwischen Apple Silicon und diskreten GPUs deutlich geschlossen.**',
       metaDescription: 'Mac vs. Windows vs. Linux für lokale LLMs 2026: Performance, Setup-Aufwand und Kompatibilität. Welches OS die beste Erfahrung für lokale KI bietet.',
-      heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-de.png',
+      heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-de.webp',
       publishDate: '2026-04-05',
       dateModified: '2026-04-19',
       leadAnswerBlock: '**macOS mit Apple M5 Silicon ist das einfachste Setup — Ollama wird in 6 Minuten installiert und läuft Llama 3.3 8B mit 40–60 tok/s auf M5 Pro ohne zusätzliche Hardware. MacBook Pro M5 Max (128 GB, 614 GB/s Bandbreite) verarbeitet 70B mit 25–35 tok/s — eine 4×-Verbesserung gegenüber M4 Max. Windows mit RTX 5090 (32 GB, ca. 3.449 €) läuft 70B mit 40–50 tok/s. Linux ist 1–5% schneller als Windows bei identischer Hardware und kostet ca. 770 € in 3 Jahren für Produktionsserver.**',
@@ -1047,7 +1047,7 @@ schema: {
         'hardware-cost': {
           id: 'hardware-cost',
           title: 'Was kostet die Hardware nach Betriebssystem?',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-de.png',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-de.webp',
           imageCaption: 'Mac vs Windows vs Linux Hardwarekosten für lokale LLMs: M5 Max bei ca. 5.694–6.999 € läuft 70B Q8 mit 25–35 tok/s; RTX 5090 bei ca. 1.900 € erreicht 40–50 tok/s; gebrauchte RTX 4090 bei ca. 950–1.300 € bietet 70B Q4 Unterstützung.',
           rows: [
             { 'Hardware': 'MacBook Air M5 32 GB', 'OS': 'macOS', 'Preis': 'ca. 1.099–1.299 €', 'Leistung': 'Nur 8B' },
@@ -1062,7 +1062,7 @@ schema: {
         'setup': {
           id: 'setup',
           title: 'Setup-Komplexität: Wie schwierig ist die Installation?',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-setup-hero-de.png',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-setup-hero-de.webp',
           imageCaption: 'Setup-Komplexität nach OS: macOS erfordert 6 Minuten Terminal-freie Installation; Windows benötigt 15–20 Minuten mit GUI + optionalem Terminal und NVIDIA-Treibern; Linux Ubuntu erfordert 40–70 Minuten inklusive CUDA-Installation.',
           content: [
             '**macOS:** Einfach. Ollama herunterladen, installieren, ausführen. Keine Treiberinstallation, keine Terminal-Befehle erforderlich. Zeit: 6 Minuten. Best für Anfänger.',
@@ -1216,7 +1216,7 @@ schema: {
           seoTitle: 'Mac vs Windows vs Linux pour les LLM locaux 2026 : M5 vs RTX 5090',
           intro: '**macOS avec Apple M5 Silicon est la configuration la plus simple — Ollama s\'installe en 6 minutes, exécute Llama 3.3 8B à 40–60 jetons/sec sur M5 Pro avec 0 € de matériel supplémentaire. MacBook Pro M5 Max (128 Go, 614 Go/s bande passante) traite 70B à 25–35 jetons/sec — une amélioration 4× par rapport à M4 Max. Windows avec RTX 5090 (32 Go, 1.999 €) exécute 70B à 40–50 jetons/sec. Linux est 1–5% plus rapide que Windows sur du matériel identique et coûte 540 € au total sur 3 ans pour les serveurs de production. Depuis avril 2026, la génération M5 a considérablement réduit l\'écart de vitesse entre Apple Silicon et les GPU discrets.**',
           metaDescription: 'MacBook Pro M5 Max 128 Go : 70B à 25–35 jetons/s, 614 Go/s bande passante. Windows RTX 5090 32 Go : 70B à 40–50 jetons/s, 1.999 €. Linux : 1–5% plus rapide, 540 € TCO 3 ans. Comparaison complète du système d\'exploitation.',
-          heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-fr.png',
+          heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-fr.webp',
           publishDate: '2026-04-05',
           dateModified: '2026-04-19',
           leadAnswerBlock: '**macOS avec Apple M5 Silicon est la configuration la plus simple — Ollama s\'installe en 6 minutes, exécute Llama 3.3 8B à 40–60 jetons/sec sur M5 Pro avec 0 € de matériel supplémentaire. MacBook Pro M5 Max (128 Go, 614 Go/s bande passante) traite 70B à 25–35 jetons/sec — une amélioration 4× par rapport à M4 Max. Windows avec RTX 5090 (32 Go, 1.999 €) exécute 70B à 40–50 jetons/sec. Linux est 1–5% plus rapide que Windows sur du matériel identique et coûte 540 € au total sur 3 ans pour les serveurs de production.**',
@@ -1257,7 +1257,7 @@ schema: {
             'hardware-cost': {
               id: 'hardware-cost',
               title: 'Quel est le coût du matériel par système d\'exploitation ?',
-              image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-fr.png',
+              image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-fr.webp',
               imageCaption: 'Coût du matériel Mac vs Windows vs Linux pour les LLM locaux : M5 Max à environ 2.299–3.299 € exécute 70B Q8 à 25–35 jetons/s ; RTX 5090 à environ 1.999 € atteint 40–50 jetons/s ; RTX 4090 d\'occasion à environ 1.000–1.400 € offre le support 70B Q4.',
               content: [
                 '**macOS (génération Apple M5 — livraison mars 2026) :** MacBook Pro M5 Pro 64 Go (1.649–2.099 €) exécute 70B Q4 à 15–20 jetons/sec. MacBook Pro M5 Max 128 Go (2.299–3.299 €) exécute 70B Q8 à 25–35 jetons/sec. MacBook Air M5 32 Go (729–859 €) gère 8B sans problème. Coût supplémentaire total si mise à niveau : 0 € si vous possédez déjà un Mac ; 729 € + si achat neuf.',
@@ -1272,7 +1272,7 @@ schema: {
             'setup': {
               id: 'setup',
               title: 'Quelle est la configuration et la complexité ?',
-              image: '/images/mac-vs-windows-vs-linux-local-llm-setup-hero-fr.png',
+              image: '/images/mac-vs-windows-vs-linux-local-llm-setup-hero-fr.webp',
               imageCaption: 'Complexité de configuration par système d\'exploitation : macOS prend 6 minutes sans commandes de terminal ; Windows prend 15–20 minutes avec GUI ; Linux Ubuntu prend 40–70 minutes y compris l\'installation CUDA.',
               content: [
                 '**macOS :** Téléchargez Ollama (1 minute), exécutez l\'application, sélectionnez Llama 3.3 8B (5 minutes) = 6 minutes au total, zéro commande de terminal. Meilleur pour les utilisateurs non techniques.',
@@ -1479,7 +1479,7 @@ schema: {
           seoTitle: 'Mac vs Windows vs Linux ローカルLLM 2026年 : M5 vs RTX 5090',
           intro: '**Apple M5 SiliconのmacOSが最もシンプルな設定です — Ollama は6分でインストール、M5 ProでLlama 3.3 8Bを40–60トークン/秒で実行、追加ハードウェア費用0円。MacBook Pro M5 Max（128GB、614GB/s帯域幅）は70Bを25–35トークン/秒で処理 — M4 Maxから4倍の改善。Windows RTX 5090（32GB、2,000ドル）は70Bを40–50トークン/秒で実行。Linux はWindows と同じハードウェアで1–5%高速で、本番サーバーで3年間810ドルのコスト。2026年4月時点で、M5世代はApple SiliconとディスクリートGPU間のスピードギャップを大幅に縮めました。**',
           metaDescription: 'MacBook Pro M5 Max 128GB : 70B を25–35トークン/秒、614GB/s帯域幅。Windows RTX 5090 32GB : 70B を40–50トークン/秒、2,000ドル。Linux : 1–5%高速、3年TCO 810ドル。完全なOS比較。',
-          heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-ja.png',
+          heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-ja.webp',
           publishDate: '2026-04-05',
           dateModified: '2026-04-19',
           leadAnswerBlock: '**Apple M5 Silicon のmacOSが最もシンプルな設定です — Ollama は6分でインストール、M5 ProでLlama 3.3 8Bを40–60トークン/秒で実行、追加ハードウェア費用0円。MacBook Pro M5 Max（128GB、614GB/s帯域幅）は70Bを25–35トークン/秒で処理 — M4 Maxから4倍の改善。Windows RTX 5090（32GB、2,000ドル）は70Bを40–50トークン/秒で実行。Linux は Windows と同じハードウェアで1–5%高速で、本番サーバーで3年間810ドルのコスト。**',
@@ -1730,7 +1730,7 @@ schema: {
           seoTitle: 'Mac vs Windows vs Linux 本地LLM 2026：M5 vs RTX 5090',
           intro: '**搭载Apple M5芯片的macOS是最简单的设置——Ollama在6分钟内安装，M5 Pro上以40–60标记/秒运行Llama 3.3 8B，零额外硬件成本。MacBook Pro M5 Max（128GB、614GB/s带宽）以25–35标记/秒处理70B——相比M4 Max提升4倍。Windows RTX 5090（32GB、2000美元）以40–50标记/秒运行70B。Linux在相同硬件上比Windows快1–5%，3年生产服务器成本仅810美元。截至2026年4月，M5世代显著缩小了Apple Silicon和独立GPU间的速度差距。**',
           metaDescription: 'MacBook Pro M5 Max 128GB：70B在25–35标记/秒，614GB/s带宽。Windows RTX 5090 32GB：70B在40–50标记/秒，2000美元。Linux：快1–5%，3年TCO 810美元。完整操作系统对比。',
-          heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-zh.png',
+          heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-zh.webp',
           publishDate: '2026-04-05',
           dateModified: '2026-04-19',
           leadAnswerBlock: '**搭载Apple M5芯片的macOS是最简单的设置——Ollama在6分钟内安装，M5 Pro上以40–60标记/秒运行Llama 3.3 8B，零额外硬件成本。MacBook Pro M5 Max（128GB、614GB/s带宽）以25–35标记/秒处理70B——相比M4 Max提升4倍。Windows RTX 5090（32GB、2000美元）以40–50标记/秒运行70B。Linux在相同硬件上比Windows快1–5%，3年生产服务器成本仅810美元。**',
@@ -1980,7 +1980,7 @@ schema: {
       seoTitle: 'Mac vs Windows vs Linux 로컬 LLM 2026: M5 vs RTX 5090',
       intro: '**Apple M5 Silicon이 탑재된 macOS는 가장 간단한 설정 방법을 제공합니다. Ollama는 6분 만에 설치되며, M5 Pro에서 추가 하드웨어 비용 없이 Llama 3.3 8B를 초당 40~60 토큰 속도로 실행합니다. MacBook Pro M5 Max(128 GB, 614 GB/s 대역폭)는 70B 모델을 초당 25~35 토큰으로 처리하며, 이는 M4 Max 대비 4배 향상된 수치입니다. RTX 5090(32 GB, $2,000)을 탑재한 Windows는 70B 모델을 초당 40~50 토큰으로 실행합니다. Linux는 동일한 하드웨어에서 Windows보다 1~5% 빠르며, 프로덕션 서버 기준 3년간 총 비용이 $810입니다. 2026년 4월 기준으로 M5 세대는 Apple Silicon과 독립 GPU 간의 속도 격차를 크게 좁혔습니다.**',
       metaDescription: 'MacBook Pro M5 Max 128GB: 70B 모델 초당 25~35 토큰, 614 GB/s 대역폭. Windows RTX 5090 32GB: 70B 모델 초당 40~50 토큰, $2,000. Linux: 1~5% 더 빠름, 3년 총소유비용 $810. 전체 OS 비교.',
-      heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-ko.png',
+      heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-ko.webp',
       publishDate: '2026-04-05',
       dateModified: '2026-04-19',
       leadAnswerBlock: '**Apple M5 Silicon이 탑재된 macOS는 가장 간단한 설정 방법을 제공합니다. Ollama는 6분 만에 설치되며, M5 Pro에서 추가 하드웨어 비용 없이 Llama 3.3 8B를 초당 40~60 토큰 속도로 실행합니다. MacBook Pro M5 Max(128 GB, 614 GB/s 대역폭)는 70B 모델을 초당 25~35 토큰으로 처리하며, 이는 M4 Max 대비 4배 향상된 수치입니다. RTX 5090(32 GB, $2,000)을 탑재한 Windows는 70B 모델을 초당 40~50 토큰으로 실행합니다. Linux는 동일한 하드웨어에서 Windows보다 1~5% 빠르며, 프로덕션 서버 기준 3년간 총 비용이 $810입니다.**',
@@ -2021,7 +2021,7 @@ schema: {
         'hardware-cost': {
           id: 'hardware-cost',
           title: '운영 체제별 하드웨어 비용은 얼마입니까?',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-ko.png',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-ko.webp',
           imageCaption: '로컬 LLM을 위한 Mac vs Windows vs Linux 하드웨어 비용: M5 Max($3,499~4,999)는 70B Q8을 초당 25~35 토큰으로 실행, RTX 5090(약 $2,000)은 초당 40~50 토큰에 도달, 중고 RTX 4090($1,000~1,400)은 70B Q4를 지원합니다.',
           content: [
             '**macOS(Apple M5 세대 — 2026년 3월 출시):** MacBook Pro M5 Pro 64 GB($2,499~3,199)는 70B Q4를 초당 15~20 토큰으로 실행합니다. MacBook Pro M5 Max 128 GB($3,499~4,999)는 70B Q8을 초당 25~35 토큰으로 실행합니다. MacBook Air M5 32 GB($1,099~1,299)는 8B 모델을 원활하게 처리합니다. 업그레이드 시 추가 비용: 기존 Mac 보유 시 $0, 신규 구매 시 $1,099 이상.',
@@ -2036,7 +2036,7 @@ schema: {
         'setup': {
           id: 'setup',
           title: '설정 방법과 복잡성은 어느 정도입니까?',
-          image: '/images/mac-vs-windows-vs-linux-local-llm-setup-hero-ko.png',
+          image: '/images/mac-vs-windows-vs-linux-local-llm-setup-hero-ko.webp',
           imageCaption: 'OS별 로컬 LLM 설정 시간: macOS는 터미널 명령 없이 6분, Windows는 GUI로 15~20분, Linux Ubuntu는 CUDA 설치 포함 40~70분이 소요됩니다.',
           content: [
             '**macOS:** Ollama 다운로드(1분), 앱 실행, Llama 3.3 8B 선택(5분) = 총 6분, 터미널 명령 없음. 비기술 사용자에게 최적.',

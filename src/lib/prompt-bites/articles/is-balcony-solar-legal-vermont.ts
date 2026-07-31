@@ -8,7 +8,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-en.png',
+    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in Vermont?',
     dateModified: '2026-07-16',
     seoTitle: 'Is Balcony Solar Legal in Vermont? | Prompt Bites | PromptQuorum',
@@ -112,7 +112,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-de.png',
+    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-de.webp',
     title: 'Ist Balkonsolar in Vermont legal?',
     dateModified: '2026-07-16',
     seoTitle: 'Ist Balkonsolar in Vermont legal? | Prompt Bites | PromptQuorum',
@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-fr.png',
+    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-fr.webp',
     title: "Le solaire de balcon est-il légal dans le Vermont ?",
     dateModified: '2026-07-16',
     seoTitle: 'Solaire de balcon légal dans le Vermont ? | Prompt Bites | PromptQuorum',
@@ -320,7 +320,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-ja.png',
+    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-ja.webp',
     title: 'バーモント州でバルコニーソーラーは合法か？',
     dateModified: '2026-07-16',
     seoTitle: 'バーモント州のバルコニーソーラーは合法？ | Prompt Bites | PromptQuorum',
@@ -424,7 +424,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-zh.png',
+    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-zh.webp',
     title: '佛蒙特州的阳台太阳能合法吗？',
     dateModified: '2026-07-16',
     seoTitle: '佛蒙特州阳台太阳能合法吗？ | Prompt Bites | PromptQuorum',
@@ -528,7 +528,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-es.png',
+    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-es.webp',
     title: '¿Es legal la energía solar de balcón en Vermont?',
     dateModified: '2026-07-16',
     seoTitle: '¿Solar de balcón legal en Vermont? | Prompt Bites | PromptQuorum',
@@ -632,7 +632,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-pt.png',
+    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-pt.webp',
     title: 'A energia solar de varanda é legal em Vermont?',
     dateModified: '2026-07-16',
     seoTitle: 'Solar de varanda legal em Vermont? | Prompt Bites | PromptQuorum',
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-ar.png',
+    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-ar.webp',
     title: 'هل الطاقة الشمسية للشرفات قانونية في فيرمونت؟',
     dateModified: '2026-07-16',
     seoTitle: 'الطاقة الشمسية للشرفات في فيرمونت قانونية؟ | Prompt Bites | PromptQuorum',
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'US Balcony Solar Regulation',
-    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-ko.png',
+    heroImage: '/images/is-balcony-solar-legal-vermont-overview-hero-ko.webp',
     title: '버몬트주에서 발코니 태양광은 합법입니까?',
     dateModified: '2026-07-16',
     seoTitle: '버몬트주 발코니 태양광, 합법입니까? | Prompt Bites | PromptQuorum',

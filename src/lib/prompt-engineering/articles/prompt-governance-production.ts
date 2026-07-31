@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
-    heroImage: '/images/prompt-governance-production-overview-hero-en.png',
+    heroImage: '/images/prompt-governance-production-overview-hero-en.webp',
     title: 'Prompt Governance in Production: Roles, Review Gates, and Deployment Rules',
     seoTitle: 'Prompt Governance in Production: Roles & Review Gates',
     intro: 'Prompt governance is the system of roles, review processes, and deployment rules that controls which prompts reach production and how they are monitored once live. Without it, prompt changes are untracked, untested, and unrollbackable.',
@@ -223,7 +223,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Team-Steuerung',
-    heroImage: '/images/prompt-governance-production-overview-hero-de.png',
+    heroImage: '/images/prompt-governance-production-overview-hero-de.webp',
     title: 'Prompt-Governance in Produktion: Rollen, Gates & Deployment (2026)',
     seoTitle: 'Prompt-Governance in Produktion: Rollen & Review-Gates',
     intro: 'Prompt-Governance ist das System aus Rollen, Reviewprozessen und Deployment-Regeln, das kontrolliert, welche Prompts in die Produktion gelangen und wie sie überwacht werden. Ohne Governance werden Prompt-Änderungen nicht nachverfolgt, nicht getestet und lassen sich nicht zurückrollen.',
@@ -417,7 +417,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
-    heroImage: '/images/prompt-governance-production-overview-hero-es.png',
+    heroImage: '/images/prompt-governance-production-overview-hero-es.webp',
     title: 'Governance de prompts en producción: roles, gates de revisión y reglas de despliegue',
     seoTitle: 'Gobernanza de prompts en producción: roles y revisión',
     intro: 'La governance de prompts es el sistema de roles, procesos de revisión y reglas de despliegue que controla qué prompts llegan a producción y cómo se monitorizan una vez en vivo. Sin ella, los cambios de prompts no se rastrean, no se prueban y no pueden revertirse.',
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Team Governance',
-    heroImage: '/images/prompt-governance-production-overview-hero-pt.png',
+    heroImage: '/images/prompt-governance-production-overview-hero-pt.webp',
     title: 'Governance de prompts em produção: papéis, gates de revisão e regras de implantação',
     seoTitle: 'Governança de prompts em produção: papéis e revisão',
     intro: 'A governance de prompts é o sistema de papéis, processos de revisão e regras de implantação que controla quais prompts chegam à produção e como são monitorados. Sem ela, as alterações de prompts não são rastreadas, não são testadas e não podem ser revertidas.',
@@ -842,7 +842,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Gouvernance d\'équipe',
-    heroImage: '/images/prompt-governance-production-overview-hero-fr.png',
+    heroImage: '/images/prompt-governance-production-overview-hero-fr.webp',
     title: 'Gouvernance des prompts en production : rôles, gates de révision et règles de déploiement',
     seoTitle: 'Gouvernance des prompts en production : rôles et révision',
     intro: 'La gouvernance des prompts est le système de rôles, de processus de révision et de règles de déploiement qui contrôle quels prompts atteignent la production et comment ils sont surveillés. Sans elle, les changements de prompts ne sont pas suivis, pas testés et ne peuvent pas être annulés.',
@@ -1036,7 +1036,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'チームガバナンス',
-    heroImage: '/images/prompt-governance-production-overview-hero-ja.png',
+    heroImage: '/images/prompt-governance-production-overview-hero-ja.webp',
     title: '本番環境のPromptガバナンス：役割、レビューゲート、デプロイルール',
     seoTitle: '本番Promptガバナンス：役割とレビューゲートの設計',
     intro: 'Promptガバナンスは、どのPromptが本番環境に到達するか、どのように監視するかを制御する役割・レビュープロセス・デプロイルールのシステムです。なければPromptの変更は追跡されず、テストされず、ロールバックもできません。',
@@ -1230,7 +1230,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
-    heroImage: '/images/prompt-governance-production-overview-hero-ar.png',
+    heroImage: '/images/prompt-governance-production-overview-hero-ar.webp',
     title: 'حوكمة التعليمات في بيئة الإنتاج: الأدوار وبوابات المراجعة وقواعد النشر',
     seoTitle: 'حوكمة ⁨Prompt⁩ في الإنتاج: أدوار وبوابات مراجعة',
     intro: 'حوكمة التعليمات هي منظومة الأدوار وعمليات المراجعة وقواعد النشر التي تتحكم في أي التعليمات تصل إلى بيئة الإنتاج وكيفية مراقبتها بعد التشغيل المباشر. من دونها تظل التغييرات على التعليمات غير متتبَّعة وغير مختبَرة ولا يمكن التراجع عنها.',
@@ -1443,7 +1443,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     theme: '团队治理',
-    heroImage: '/images/prompt-governance-production-overview-hero-zh.png',
+    heroImage: '/images/prompt-governance-production-overview-hero-zh.webp',
     title: '生产环境中的Prompt治理：角色、审查门控与部署规则',
     seoTitle: '生产Prompt治理：角色定义与审查门控设计',
     intro: 'Prompt治理是一套角色、审查流程和部署规则体系，控制哪些Prompt能够进入生产环境以及如何监控上线后的运行状态。没有治理体系，Prompt的变更将无法追踪、无法测试、无法回滚。',
@@ -1638,7 +1638,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Team Governance',
-    heroImage: '/images/prompt-governance-production-overview-hero-ko.png',
+    heroImage: '/images/prompt-governance-production-overview-hero-ko.webp',
     title: '프롬프트 거버넌스 실전: 역할·검토 게이트·배포 규칙',
     seoTitle: '생산 환경 프롬프트 거버넌스: 역할과 검토 게이트',
     intro: '프롬프트 거버넌스는 어떤 프롬프트가 프로덕션에 도달하는지, 라이브 상태에서 어떻게 모니터링되는지를 제어하는 역할·검토 프로세스·배포 규칙의 체계입니다. 거버넌스 없이는 프롬프트 변경이 추적되지 않고, 테스트되지 않으며, 롤백도 불가능합니다.',

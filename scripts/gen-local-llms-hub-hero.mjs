@@ -121,7 +121,7 @@ async function generate(lang, spec) {
   });
   if (!res.ok) throw new Error(`${lang}: HTTP ${res.status} — ${await res.text()}`);
   const buf = Buffer.from(await res.arrayBuffer());
-  const path = `public/images/local-llms-hub-overview-hero-${lang}.png`;
+  const path = `public/images/local-llms-hub-overview-hero-${lang}.webp`;
   await import('node:fs/promises').then(fs => fs.writeFile(path, buf));
   console.log(`  ${path} (${buf.length} bytes)`);
 }

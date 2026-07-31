@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-07-02',
     current_hardware_mentioned: ['APsystems EZ1-LV-NA', 'APsystems EZ1', 'EcoFlow STREAM Ultra', 'BigBlue POWAFREE H1'],
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-en.png',
+    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-en.webp',
     affiliateDisclosure: true,
     title: 'Best Balcony Solar Kits (2026): Complete Plug-In Solar Systems Compared',
     seoTitle: 'Best Balcony Solar Kits 2026: Tested & Compared',
@@ -194,7 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-es.png',
+    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-es.webp',
     affiliateDisclosure: true,
     title: 'Los Mejores Kits Solares de Balcón (2026): Sistemas Solares Enchufables Completos Comparados',
     seoTitle: 'Mejores Kits Solares de Balcón 2026: Comparativa',
@@ -386,7 +386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-pt.png',
+    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-pt.webp',
     affiliateDisclosure: true,
     title: 'Os Melhores Kits de Energia Solar para Varanda (2026): Sistemas Solares Plug-and-Play Completos Comparados',
     seoTitle: 'Melhores Kits de Energia Solar para Varanda 2026',
@@ -578,7 +578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-ar.png',
+    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-ar.webp',
     affiliateDisclosure: true,
     title: 'أفضل أطقم الطاقة الشمسية للشرفة (2026): مقارنة كاملة لأنظمة الطاقة الشمسية الجاهزة للتوصيل',
     seoTitle: 'أفضل أطقم الطاقة الشمسية للشرفة 2026 في أمريكا',
@@ -769,7 +769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-ja.png',
+    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-ja.webp',
     affiliateDisclosure: true,
     title: '【2026年】おすすめバルコニーソーラーキット完全比較:プラグイン式太陽光発電システム',
     seoTitle: '2026年版 ベストバルコニーソーラーキット比較',
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-zh.png',
+    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-zh.webp',
     affiliateDisclosure: true,
     title: '2026年最佳阳台光伏套装:插电式太阳能系统完整对比',
     seoTitle: '2026年最佳阳台光伏套装对比',
@@ -1151,7 +1151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-fr.png',
+    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-fr.webp',
     affiliateDisclosure: true,
     title: "Meilleurs kits solaires de balcon (2026) : comparatif complet des systèmes solaires prêts à brancher",
     seoTitle: "Meilleurs kits solaires de balcon 2026 : comparatif",
@@ -1343,7 +1343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-ko.png',
+    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-ko.webp',
     affiliateDisclosure: true,
     title: '2026년 최고의 발코니 태양광 키트: 완전한 플러그인 태양광 시스템 비교',
     seoTitle: '2026년 최고의 발코니 태양광 키트 비교',
@@ -1534,7 +1534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-de.png',
+    heroImage: '/images/best-balcony-solar-kits-2026-overview-hero-de.webp',
     affiliateDisclosure: true,
     title: 'Beste Balkonkraftwerk Sets (2026): Komplette Steckersolar-Systeme im Vergleich',
     seoTitle: 'Beste Balkonkraftwerk Sets 2026: Getestet & Verglichen',

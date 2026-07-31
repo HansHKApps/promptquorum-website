@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-en.png',
+    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-en.webp',
     // Verified 2026-07-16: battery capacity figures below are cited directly from manufacturer
     // datasheets (Tesla's Energy Library, Enphase's own spec sheet) as anchor examples of what
     // capacity ranges exist today — capacity (kWh) is a stable spec, unlike price. No price or
@@ -181,7 +181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-de.png',
+    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-de.webp',
     title: 'Ihr Zuhause zum Energie-Microgrid machen (2027)',
     seoTitle: 'Heimisches Energie-Microgrid einrichten (2027)',
     intro:
@@ -347,7 +347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-fr.png',
+    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-fr.webp',
     title: 'Transformer votre maison en microgrid énergétique (2027)',
     seoTitle: 'Configuration d\'un microgrid énergétique domestique (2027)',
     intro:
@@ -513,7 +513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-ja.png',
+    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-ja.webp',
     title: '家をエネルギーマイクログリッドに変える（2027年）',
     seoTitle: '家庭用エネルギーマイクログリッド構築（2027年）',
     intro:
@@ -679,7 +679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-zh.png',
+    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-zh.webp',
     title: '把你家变成能源微电网（2027年）',
     seoTitle: '家庭能源微电网搭建（2027年）',
     intro:
@@ -845,7 +845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-es.png',
+    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-es.webp',
     title: 'Convertir tu hogar en una microrred de energía (2027)',
     seoTitle: 'Configuración de microrred energética doméstica (2027)',
     intro:
@@ -1011,7 +1011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-pt.png',
+    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-pt.webp',
     title: 'Transformando sua casa em uma microrrede de energia (2027)',
     seoTitle: 'Configuração de microrrede energética doméstica (2027)',
     intro:
@@ -1177,7 +1177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-ar.png',
+    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-ar.webp',
     title: 'تحويل منزلك إلى شبكة طاقة صغيرة (⁨2027⁩)',
     seoTitle: 'إعداد شبكة طاقة منزلية صغيرة (⁨2027⁩)',
     intro:
@@ -1343,7 +1343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
-    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-ko.png',
+    heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-ko.webp',
     title: '집을 에너지 마이크로그리드로 만들기 (2027년)',
     seoTitle: '가정용 에너지 마이크로그리드 구축 (2027년)',
     intro:

@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-en.png',
+    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-en.webp',
     title: 'Best Monitors for AI Development and LLM Work 2026',
     seoTitle: 'Best Monitor for AI Development 2026: 4K, Ultrawide Guide',
     intro:
@@ -503,7 +503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-es.png',
+    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-es.webp',
     title: 'Mejores monitores para desarrollo de IA y trabajo con LLM 2026',
     seoTitle: 'Mejor monitor para desarrollo de IA 2026: 4K y ultrawide',
     intro:
@@ -1002,7 +1002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-de.png',
+    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-de.webp',
     title: 'Beste Monitore für KI-Entwicklung und LLM-Arbeit 2026',
     seoTitle: 'Bester Monitor für KI-Entwicklung 2026: 4K & Ultrawide',
     intro:
@@ -1496,7 +1496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-fr.png',
+    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-fr.webp',
     title: 'Meilleurs moniteurs pour le développement IA et le travail LLM 2026',
     seoTitle: 'Écrans pour le développement IA 2026 : 4K, OLED',
     intro:
@@ -1982,7 +1982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-ja.png',
+    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-ja.webp',
     title: 'AI開発・LLM作業に最適なモニター 2026年版',
     seoTitle: 'AI開発に最適なモニター 2026: 4K・ウルトラワイドガイド',
     intro:
@@ -2468,7 +2468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-zh.png',
+    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-zh.webp',
     title: 'AI 开发与 LLM 工作的最佳显示器 2026',
     seoTitle: 'AI 开发最佳显示器 2026：4K 与带鱼屏选购指南',
     intro:
@@ -2954,7 +2954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-pt.png',
+    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-pt.webp',
     title: 'Melhores monitores para desenvolvimento de IA e trabalho com LLM 2026',
     seoTitle: 'Melhor monitor para desenvolvimento de IA 2026: 4K e ultrawide',
     intro:
@@ -3454,7 +3454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-ar.png',
+    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-ar.webp',
     title: 'أفضل شاشات تطوير الذكاء الاصطناعي والعمل مع نماذج ⁨LLM 2026⁩',
     seoTitle: 'شاشات تطوير الذكاء الاصطناعي ⁨2026⁩: ⁨4K⁩ أم عريضة',
     intro:
@@ -3953,7 +3953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-01',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
-    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-ko.png',
+    heroImage: '/images/best-monitors-ai-development-2026-overview-hero-ko.webp',
     title: 'AI 개발 및 LLM 작업을 위한 최고의 모니터 2026',
     seoTitle: 'AI 개발 최고 모니터 2026: 4K 및 울트라와이드',
     intro:

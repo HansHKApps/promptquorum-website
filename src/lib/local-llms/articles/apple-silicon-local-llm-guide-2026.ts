@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Apple Silicon 2026: M5 Pro vs M5 Max for Local LLMs',
     intro: 'Complete guide to running local LLMs on Apple Silicon in 2026. Compare M1 through M5 Max chips with unified memory tiers, Metal GPU acceleration benchmarks, power consumption analysis, and model recommendations per Mac configuration. Includes decision flowchart for MacBook Pro vs Mac Mini vs Mac Studio, framework comparison (Ollama vs MLX vs llama.cpp), and real-world scenarios (coding agent, RAG pipeline, voice assistant, multimodal). Covers why Apple Silicon unified memory removes VRAM bottlenecks that plague discrete GPUs, enabling 70B models on consumer hardware with zero driver overhead.',
     metaDescription: 'M5 Pro runs 34B models at 15–20 tok/s for $1,400. M5 Max runs 70B models at 12–18 tok/s for $3,500. Complete guide with benchmarks, memory tiers, Mac selection flowchart.',
-    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-en.png',
+    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-en.webp',
     twitterDescription: 'Apple Silicon for local LLMs: M1→M5 Max, unified memory tiers, Metal GPU, best models, MLX vs Ollama. Complete 2026 guide.',
     publishDate: '2026-05-15',
     dateModified: '2026-06-21',
@@ -158,7 +158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'M5 Max (614 GB/s) → ~100–120 tok/s on Llama 3.3 8B Q4 (but uses different GPU, so speed scales with architecture too)',
           'Lesson: M5 Pro is exactly 2× faster than M5 base on the same model because bandwidth doubled. When buying, prioritize bandwidth over GPU core count.',
         ],
-        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-en.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-en.webp',
         imageCaption: 'When buying, prioritize memory bandwidth over GPU core count -- it is the real bottleneck for LLM inference.',
       },
       powerThermals: {
@@ -175,7 +175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Setup': 'Desktop RTX 3060', 'Power (idle)': '30W', 'Power (LLM load)': '170–200W', 'Noise': 'Moderate', 'Heat': 'Warm' },
         ],
         note: 'Annual electricity cost at $0.15/kWh, 24/7 AI server: Mac Mini M5 (~$35/year) vs Desktop RTX 4090 (~$400/year).',
-        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-en.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-en.webp',
         imageCaption: '24/7 inference: ~$35/year on Mac Mini M5 vs. ~$400/year on a desktop RTX 4090 -- a 10x difference at $0.15/kWh.',
       },
       scenarios: {
@@ -290,7 +290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Apple Silicon 2026: M5 Pro vs M5 Max para IA Local',
     intro: 'Guía completa para ejecutar LLMs locales en Apple Silicon en 2026. Compara los chips M1 hasta M5 Max con niveles de memoria unificada, benchmarks de aceleración GPU Metal, análisis de consumo energético y recomendaciones de modelos por configuración de Mac. Incluye diagrama de decisión entre MacBook Pro, Mac Mini y Mac Studio, comparación de frameworks (Ollama vs MLX vs llama.cpp) y escenarios reales (agente de código, pipeline RAG, asistente de voz, multimodal). Cubre por qué la memoria unificada de Apple Silicon elimina los cuellos de botella de VRAM que afectan a las GPUs discretas, permitiendo modelos de 70B en hardware de consumo sin configuración de drivers.',
     metaDescription: 'M5 Pro ($1,400) corre 34B a 15–20 tok/s; M5 Max ($3,500) corre 70B a 12–18 tok/s. Guía con benchmarks reales para elegir tu Apple Silicon 2026.',
-    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-es.png',
+    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-es.webp',
     twitterDescription: 'Apple Silicon para LLMs locales: M1→M5 Max, memoria unificada, GPU Metal, mejores modelos, MLX vs Ollama. Guía completa 2026.',
     publishDate: '2026-05-15',
     dateModified: '2026-06-14',
@@ -448,7 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Lección: M5 Pro es exactamente 2× más rápido que M5 base en el mismo modelo porque el ancho de banda se duplicó. Al comprar, prioriza el ancho de banda sobre el número de núcleos GPU.',
         ],
       
-        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-es.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-es.webp',
         imageCaption: 'Al comprar, prioriza el ancho de banda de memoria sobre el número de núcleos de GPU — es el verdadero cuello de botella en la inferencia de LLM.',
       },
       powerThermals: {
@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Costo anual de electricidad a $0,15/kWh, servidor IA 24/7: Mac Mini M5 (~$35/año) vs RTX 4090 de escritorio (~$400/año). Los precios pueden variar según tu país.',
       
-        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-es.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-es.webp',
         imageCaption: 'Inferencia 24/7: ~35 $/año en Mac Mini M5 frente a ~400 $/año en una RTX 4090 de escritorio — una diferencia de 10x a 0,15 $/kWh.',
       },
       scenarios: {
@@ -594,7 +594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '⁨Apple Silicon⁩ لـ ⁨LLM⁩ المحلي ⁨2026⁩: ⁨M5 Pro⁩ مقابل ⁨Max⁩',
     intro: 'دليل كامل لتشغيل نماذج LLM المحلية على Apple Silicon في 2026. يقارن شرائح من M1 حتى M5 Max بمستويات الذاكرة الموحدة، واختبارات تسريع GPU عبر Metal المرجعية، وتحليل استهلاك الطاقة، وتوصيات النماذج حسب تهيئة Mac. يتضمن مخطط قرار بين MacBook Pro وMac Mini وMac Studio، ومقارنة الأطر (Ollama مقابل MLX مقابل llama.cpp) وسيناريوهات واقعية (وكيل برمجة، خط أنابيب RAG، مساعد صوتي، متعدد الوسائط). يغطي لماذا تزيل الذاكرة الموحدة في Apple Silicon اختناقات VRAM التي تؤثر في كروت الرسوميات المنفصلة، مما يتيح نماذج 70B على عتاد المستهلك دون تهيئة برامج تشغيل.',
     metaDescription: '⁨M5 Pro⁩ يشغّل ⁨34B⁩ بسرعة ⁨15⁩–⁨20 tok/s⁩ بسعر ⁨1⁩,⁨400⁩ دولار؛ ⁨M5 Max⁩ يشغّل ⁨70B⁩ بسرعة ⁨12⁩–⁨18 tok/s⁩ بسعر ⁨3⁩,⁨500⁩ دولار. مستويات الذاكرة ومخطط اختيار ⁨Mac⁩.',
-    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ar.png',
+    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ar.webp',
     twitterDescription: '⁨Apple Silicon⁩ لنماذج ⁨LLM⁩ المحلية: ⁨M1⁩→⁨M5 Max⁩، الذاكرة الموحدة، ⁨GPU Metal⁩، أفضل النماذج، ⁨MLX⁩ مقابل ⁨Ollama⁩. دليل كامل ⁨2026⁩.',
     publishDate: '2026-05-15',
     dateModified: '2026-06-21',
@@ -733,7 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الدرس: M5 Pro أسرع بالضبط بمقدار ضعفين من M5 الأساسي على النموذج نفسه لأن عرض النطاق تضاعف. عند الشراء، رتّب عرض النطاق فوق عدد أنوية GPU.',
         ],
       
-        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ar.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ar.webp',
         imageCaption: 'عند الشراء، أعطِ الأولوية لعرض النطاق الترددي للذاكرة على عدد أنوية GPU — فهو عنق الزجاجة الحقيقي في استدلال LLM.',
       },
       powerThermals: {
@@ -751,7 +751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'التكلفة السنوية للكهرباء بسعر 0.15 دولار/kWh، خادم ذكاء اصطناعي على مدار الساعة: Mac Mini M5 (نحو 35 دولارًا سنويًا) مقابل RTX 4090 المكتبي (نحو 400 دولار سنويًا). قد تتفاوت الأسعار حسب بلدك.',
       
-        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-ar.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-ar.webp',
         imageCaption: 'الاستدلال على مدار الساعة: نحو 35 دولاراً سنوياً لجهاز Mac Mini M5 مقابل نحو 400 دولار سنوياً لبطاقة RTX 4090 لسطح المكتب — فرق 10 أضعاف عند 0.15 دولار/kWh.',
       },
       scenarios: {
@@ -879,7 +879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Apple Silicon 2026: M5 Pro vs M5 Max para LLMs locais',
     intro: 'Guia completo para rodar LLMs locais no Apple Silicon em 2026. Compare chips M1 até M5 Max com níveis de memória unificada, benchmarks de aceleração GPU Metal, análise de consumo energético e recomendações de modelos por configuração de Mac. Inclui fluxograma de decisão entre MacBook Pro, Mac Mini e Mac Studio, comparação de frameworks (Ollama vs MLX vs llama.cpp) e cenários reais (agente de código, pipeline RAG, assistente de voz, multimodal).',
     metaDescription: 'M5 Pro roda modelos 34B a 15-20 tok/s. M5 Max roda modelos 70B a 12-18 tok/s. Guia completo com benchmarks, níveis de memória e fluxograma de seleção de Mac.',
-    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-pt.png',
+    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-pt.webp',
     twitterDescription: 'Apple Silicon para LLMs locais: M1→M5 Max, memória unificada, GPU Metal, melhores modelos, MLX vs Ollama. Guia completo 2026.',
     publishDate: '2026-05-15',
     current_models_mentioned: ['Llama 3.3 8B', 'Llama 3.3 70B', 'Mistral Small', 'Phi-4', 'Whisper large-v3', 'LLaVA 7B'],
@@ -1023,7 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Lição: M5 Pro é exatamente 2× mais rápido que o M5 base no mesmo modelo porque a largura de banda dobrou. Ao comprar, priorize a largura de banda sobre o número de núcleos GPU.',
         ],
       
-        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-pt.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-pt.webp',
         imageCaption: 'Ao comprar, priorize a largura de banda de memória em vez do número de núcleos da GPU — esse é o verdadeiro gargalo da inferência de LLM.',
       },
       powerThermals: {
@@ -1041,7 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Custo anual de eletricidade a US$ 0,15/kWh, servidor de IA 24/7: Mac Mini M5 (~US$ 35/ano) vs RTX 4090 de mesa (~US$ 400/ano).',
       
-        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-pt.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-pt.webp',
         imageCaption: 'Inferência 24/7: ~US$35/ano no Mac Mini M5 vs. ~US$400/ano em uma RTX 4090 de mesa — uma diferença de 10x a US$0,15/kWh.',
       },
       scenarios: {
@@ -1168,7 +1168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Apple Silicon 2026: M5 Pro vs M5 Max für lokale LLMs',
     intro: 'Vollständiger Leitfaden zum Betreiben lokaler LLMs auf Apple Silicon in 2026. Vergleichen Sie alle M-Serie-Chips (M1 bis M5 Max) mit detaillierten Speicherstufen, Metal-GPU-Beschleunigungstests, Stromverbrauchsanalysen und Modellempfehlungen für jede Mac-Konfiguration. Der einheitliche Speicher beseitigt VRAM-Engpässe, die dedizierte GPUs plagen, und ermöglicht 70B-Modelle auf Verbraucher-Hardware. Erfahren Sie, warum M5 Pro (307 GB/s) 34B-Modelle bei 15–20 Token/Sekunde erzeugt und M5 Max (614 GB/s) 70B-Modelle mit nur 60–100W Stromverbrauch verarbeitet — ein 10× niedrigeres Stromverbrauchsprofil als Desktop-GPU.',
     metaDescription: 'M5 Pro läuft 34B-Modelle bei 15–20 tok/s für 1.400€. M5 Max läuft 70B-Modelle bei 12–18 tok/s für 3.500€. Kompletter Leitfaden mit Benchmarks.',
-    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-de.png',
+    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-de.webp',
     twitterDescription: 'Apple Silicon für lokale LLMs: M1→M5 Max, einheitlicher Speicher, Metal GPU, beste Modelle, MLX vs Ollama, Stromverbrauch. 2026-Leitfaden.',
     publishDate: '2026-05-15',
     dateModified: '2026-06-21',
@@ -1344,7 +1344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Lektion: Priorisieren Sie Bandbreite über GPU-Kernen beim Kauf.',
         ],
       
-        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-de.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-de.webp',
         imageCaption: 'Priorisieren Sie beim Kauf die Speicherbandbreite über die Anzahl der GPU-Kerne — sie ist der eigentliche Engpass bei der LLM-Inferenz.',
       },
       powerThermals: {
@@ -1362,7 +1362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Jährliche Stromkosten bei 0,15€/kWh, 24/7 KI-Server: Mac mini M5 (~35€/Jahr) vs. Desktop RTX 4090 (~350€/Jahr).',
       
-        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-de.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-de.webp',
         imageCaption: '24/7-Inferenz: ~35 $/Jahr bei Mac Mini M5 vs. ~400 $/Jahr bei einer Desktop-RTX 4090 — ein 10-facher Unterschied bei 0,15 $/kWh.',
       },
       scenarios: {
@@ -1425,7 +1425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Apple Silicon 2026 : M5 Pro vs M5 Max pour LLMs locaux',
     intro: 'Guide complet pour exécuter des LLMs locaux sur Apple Silicon en 2026. Comparez les puces M1 à M5 Max avec les niveaux de mémoire unifiée, l\'accélération GPU Metal, l\'analyse de la consommation d\'énergie et les recommandations de modèles par configuration Mac. La mémoire unifiée élimine les limites VRAM qui entravent les GPU discrets, permettant les modèles 70B sur le matériel grand public. Découvrez pourquoi M5 Pro (307 GB/s) traite les modèles 34B à 15–20 tok/s et M5 Max (614 GB/s) traite les modèles 70B avec seulement 60–100W.',
     metaDescription: 'M5 Pro exécute modèles 34B à 15–20 tok/s pour 1.400€. M5 Max exécute modèles 70B à 12–18 tok/s pour 3.500€. Guide complet avec benchmarks.',
-    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-fr.png',
+    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-fr.webp',
     twitterDescription: 'Apple Silicon pour LLMs locaux : M1→M5 Max, mémoire unifiée, GPU Metal, meilleurs modèles, MLX vs Ollama. Guide complet 2026.',
     publishDate: '2026-05-15',
     dateModified: '2026-06-21',
@@ -1562,7 +1562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Leçon : priorisez bande passante sur cœurs GPU lors de l\'achat.',
         ],
       
-        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-fr.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-fr.webp',
         imageCaption: 'Lors de l\'achat, privilégiez la bande passante mémoire au nombre de cœurs GPU — c\'est le véritable goulot d\'étranglement pour l\'inférence LLM.',
       },
       powerThermals: {
@@ -1580,7 +1580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Coût électricité annuel à 0,15€/kWh, serveur IA 24/7 : Mac mini M5 (~35€/an) vs Desktop RTX 4090 (~350€/an).',
       
-        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-fr.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-fr.webp',
         imageCaption: 'Inférence 24/7 : ~35 $/an sur Mac Mini M5 contre ~400 $/an sur une RTX 4090 de bureau — un facteur 10 à 0,15 $/kWh.',
       },
       scenarios: {
@@ -1643,7 +1643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Apple Silicon 2026：M5 Pro vs M5 Max',
     intro: '2026年にApple SiliconでローカルLLMを実行するための完全ガイド。M1からM5 Maxチップの比較、統一メモリ層、Metal GPU加速、電力消費分析、Macの構成ごとのモデル推奨。統一メモリはVRAM制限を排除し、離散GPUの課題を解決します。M5 Pro（307 GB/s）が34Bモデルを15～20 tok/sで処理し、M5 Max（614 GB/s）が70Bモデルを12～18 tok/sでわずか60～100Wで処理する理由を発見してください。',
     metaDescription: 'M5 Pro は34B モデルを15～20 tok/s で実行（¥1,400）。M5 Max は70B モデルを12～18 tok/s で実行（¥3,500）。詳細ベンチマーク、メモリ層、Mac選択フローチャート、フレームワーク比較。',
-    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ja.png',
+    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ja.webp',
     twitterDescription: 'Apple SiliconローカルLLM：M1→M5 Max、統一メモリ、Metal GPU、最高モデル、MLX vs Ollama。完全2026ガイド。',
     publishDate: '2026-05-15',
     dateModified: '2026-06-21',
@@ -1762,7 +1762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'レッスン：購入時に帯域幅をGPU coresより優先。',
         ],
       
-        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ja.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ja.webp',
         imageCaption: '購入時はGPUコア数よりもメモリ帯域幅を優先してください — それがLLM推論の真のボトルネックです。',
       },
       powerThermals: {
@@ -1780,7 +1780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: '年間電力費用 ¥0.15/kWh、24/7 AIサーバー：Mac mini M5（~¥3,850/年）対デスクトップRTX 4090（~¥33,000/年）。',
       
-        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-ja.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-ja.webp',
         imageCaption: '24時間365日の推論：Mac Mini M5で年間約35ドル、デスクトップRTX 4090で年間約400ドル — 0.15ドル/kWhで10倍の差。',
       },
       scenarios: {
@@ -1872,7 +1872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Apple Silicon 2026：M5 Pro vs M5 Max',
     intro: '2026年在Apple Silicon上运行本地LLM的完整指南。比较M1至M5 Max芯片、统一内存层级、Metal GPU加速基准、功耗分析以及按Mac配置的模型建议。统一内存消除了困扰离散GPU的VRAM瓶颈，在消费级硬件上实现70B模型。发现M5 Pro（307 GB/s）如何以15-20 tok/s处理34B模型，M5 Max（614 GB/s）如何仅消耗60-100W功率处理70B模型。',
     metaDescription: 'M5 Pro 运行34B 模型，速度15–20 tok/s，价格1,400元。M5 Max 运行70B 模型，速度12–18 tok/s，价格3,500元。完整基准、内存层级、选择指南。',
-    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-zh.png',
+    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-zh.webp',
     twitterDescription: 'Apple Silicon本地LLM：M1→M5 Max、统一内存、Metal GPU、最佳模型、MLX vs Ollama。完整2026指南。',
     publishDate: '2026-05-15',
     dateModified: '2026-06-21',
@@ -1991,7 +1991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '经验教训：购买时优先考虑带宽而非GPU核心。',
         ],
       
-        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-zh.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-zh.webp',
         imageCaption: '购买时应优先考虑内存带宽而非GPU核心数量 — 这才是LLM推理的真正瓶颈。',
       },
       powerThermals: {
@@ -2009,7 +2009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: '年度电力费用 ¥0.15/kWh，24/7 AI服务器：Mac mini M5（~¥245/年）对比台式RTX 4090（~¥2,100/年）。',
       
-        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-zh.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-zh.webp',
         imageCaption: '全天候推理：Mac Mini M5每年约35美元，台式RTX 4090每年约400美元 — 按0.15美元/kWh计算相差10倍。',
       },
       scenarios: {
@@ -2101,7 +2101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Apple Silicon 2026: 로컬 LLM용 M5 Pro vs M5 Max',
     intro: '2026년 Apple Silicon에서 로컬 LLM을 실행하기 위한 완전 가이드입니다. M1부터 M5 Max까지 칩 비교, 통합 메모리 계층, Metal GPU 가속 벤치마크, 소비 전력 분석, Mac 구성별 모델 권장 사항을 다룹니다. MacBook Pro, Mac Mini, Mac Studio 선택 결정 플로우차트, 프레임워크 비교(Ollama vs MLX vs llama.cpp), 실제 사용 시나리오(코딩 에이전트, RAG 파이프라인, 음성 비서, 멀티모달)도 포함되어 있습니다. Apple Silicon의 통합 메모리가 독립형 GPU의 VRAM 병목 현상을 어떻게 제거하는지, 그리고 드라이버 오버헤드 없이 소비자 하드웨어에서 70B 모델을 실행하는 방법을 설명합니다.',
     metaDescription: 'M5 Pro는 34B 모델을 15–20 tok/s로 실행($1,400). M5 Max는 70B 모델을 12–18 tok/s로 실행($3,500). 벤치마크, 메모리 계층, Mac 선택 플로우차트를 포함한 완전 가이드.',
-    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ko.png',
+    heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ko.webp',
     twitterDescription: 'Apple Silicon 로컬 LLM: M1→M5 Max, 통합 메모리, Metal GPU, 최적 모델, MLX vs Ollama. 2026년 완전 가이드.',
     publishDate: '2026-05-15',
     dateModified: '2026-06-21',
@@ -2259,7 +2259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '교훈: M5 Pro는 대역폭이 두 배가 되었기 때문에 동일한 모델에서 M5 기본보다 정확히 2배 빠릅니다. 구매 시 GPU 코어 수보다 대역폭을 우선시하십시오.',
         ],
       
-        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ko.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-ko.webp',
         imageCaption: '구매 시 GPU 코어 수보다 메모리 대역폭을 우선하세요 — 이것이 LLM 추론의 진짜 병목입니다.',
       },
       powerThermals: {
@@ -2277,7 +2277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: '$0.15/kWh 기준 연간 전기 요금, 24/7 AI 서버: Mac Mini M5(~$35/년) 대 데스크탑 RTX 4090(~$400/년).',
       
-        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-ko.png',
+        image: '/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-ko.webp',
         imageCaption: '24/7 추론: Mac Mini M5는 연간 약 $35, 데스크톱 RTX 4090은 연간 약 $400 — $0.15/kWh 기준 10배 차이.',
       },
       scenarios: {

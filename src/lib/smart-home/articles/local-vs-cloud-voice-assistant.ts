@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-en.png',
+    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-en.webp',
     title: 'Local vs Cloud Voice Assistants: Privacy, Cost & Capability (2026)',
     seoTitle: 'Local vs Cloud Voice Assistant: 2026 Privacy & Cost Guide',
     intro:
@@ -190,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-ar.png',
+    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-ar.webp',
     title: 'المساعدون الصوتيون المحليون مقابل السحابيون: الخصوصية والتكلفة والقدرة (⁨2026⁩)',
     seoTitle: 'مساعد صوتي محلي مقابل سحابي: الخصوصية والتكلفة ⁨2026⁩',
     intro:
@@ -372,7 +372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-de.png',
+    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-de.webp',
     title: 'Lokale vs Cloud-Sprachassistenten: Datenschutz, Kosten & Fähigkeit (2026)',
     seoTitle: 'Lokaler vs Cloud-Sprachassistent: Datenschutz 2026',
     intro:
@@ -554,7 +554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-es.png',
+    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-es.webp',
     title: 'Asistentes de Voz Local vs Nube: Privacidad, Coste y Capacidad (2026)',
     seoTitle: 'Asistente de Voz Local vs Nube: Guía de Privacidad 2026',
     intro:
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-ko.png',
+    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-ko.webp',
     title: '로컬 vs 클라우드 음성 어시스턴트: 프라이버시, 비용, 성능 (2026)',
     seoTitle: '로컬 vs 클라우드 음성 어시스턴트: 2026 프라이버시 가이드',
     intro:
@@ -918,7 +918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-fr.png',
+    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-fr.webp',
     title: 'Assistants Vocaux Local vs Cloud : Confidentialité, Coût et Capacité (2026)',
     seoTitle: 'Assistant Vocal Local vs Cloud : Guide Confidentialité 2026',
     intro:
@@ -1100,7 +1100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-ja.png',
+    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-ja.webp',
     title: 'ローカル対クラウドの音声アシスタント：プライバシー・コスト・能力（2026）',
     seoTitle: 'ローカル対クラウド音声アシスタント比較ガイド（2026年）',
     intro:
@@ -1282,7 +1282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-pt.png',
+    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-pt.webp',
     title: 'Assistentes de Voz Local vs Nuvem: Privacidade, Custo e Capacidade (2026)',
     seoTitle: 'Assistente de Voz Local vs Nuvem: Guia de Privacidade 2026',
     intro:
@@ -1464,7 +1464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Decision & Comparison',
-    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-zh.png',
+    heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-zh.webp',
     title: '本地对云端的语音助手：隐私、成本与能力（2026）',
     seoTitle: '本地 vs 云端语音助手 2026：隐私、成本与技能的选择',
     intro:

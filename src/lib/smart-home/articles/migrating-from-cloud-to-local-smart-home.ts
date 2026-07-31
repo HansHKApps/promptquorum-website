@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-en.png',
+    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-en.webp',
     title: 'How to Migrate from a Cloud Smart Home to Local Control (2026)',
     seoTitle: 'Migrate Alexa to Home Assistant: Local Control (2026)',
     intro:
@@ -198,7 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-ar.png',
+    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-ar.webp',
     title: 'كيفية الانتقال من منزل ذكي سحابي إلى التحكم المحلي (⁨2026⁩)',
     seoTitle: 'الانتقال إلى ⁨Home Assistant 2026⁩: تحكم محلي',
     intro:
@@ -388,7 +388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-de.png',
+    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-de.webp',
     title: 'Von einem Cloud-Smart-Home zu lokaler Steuerung migrieren (2026)',
     seoTitle: 'Alexa zu Home Assistant migrieren: lokal (2026)',
     intro:
@@ -578,7 +578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-es.png',
+    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-es.webp',
     title: 'Cómo Migrar de un Smart Home en la Nube al Control Local (2026)',
     seoTitle: 'Migrar de Alexa a Home Assistant: Control Local (2026)',
     intro:
@@ -768,7 +768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-ko.png',
+    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-ko.webp',
     title: '클라우드 스마트홈에서 로컬 제어로 이전하는 방법 (2026)',
     seoTitle: 'Alexa에서 Home Assistant로: 로컬 제어 이전 (2026)',
     intro:
@@ -958,7 +958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-fr.png',
+    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-fr.webp',
     title: 'Comment Migrer d\'une Maison Connectée Cloud vers le Contrôle Local (2026)',
     seoTitle: 'Migrer d\'Alexa à Home Assistant : Contrôle Local (2026)',
     intro:
@@ -1148,7 +1148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-ja.png',
+    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-ja.webp',
     title: 'クラウドのスマートホームからローカル制御へ移行する方法（2026）',
     seoTitle: 'Alexa から Home Assistant へ移行：ローカル制御（2026）',
     intro:
@@ -1338,7 +1338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-pt.png',
+    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-pt.webp',
     title: 'Como Migrar de uma Casa Inteligente na Nuvem para o Controle Local (2026)',
     seoTitle: 'Migrar da Alexa para o Home Assistant: Controle Local (2026)',
     intro:
@@ -1528,7 +1528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-zh.png',
+    heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-zh.webp',
     title: '如何从云端智能家居迁移到本地控制（2026）',
     seoTitle: '从 Alexa 迁移到 Home Assistant：本地控制（2026）',
     intro:

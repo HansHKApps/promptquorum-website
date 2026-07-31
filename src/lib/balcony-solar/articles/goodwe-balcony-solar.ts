@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/goodwe-balcony-solar-overview-hero-en.png',
+    heroImage: '/images/goodwe-balcony-solar-overview-hero-en.webp',
     title: 'GoodWe: Balcony Solar Company Profile',
     seoTitle: 'GoodWe Balcony Solar Company Profile',
     metaDescription: 'Company profile for GoodWe: history, ownership, and product range in the balcony solar market.',
@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/goodwe-balcony-solar-overview-hero-de.png',
+    heroImage: '/images/goodwe-balcony-solar-overview-hero-de.webp',
     title: 'GoodWe: Unternehmensprofil Balkonkraftwerke',
     seoTitle: 'GoodWe: Unternehmensprofil im Balkonkraftwerk-Markt',
     metaDescription: 'Unternehmensprofil zu GoodWe: Gründung, Börsennotierung, Eigentümerstruktur und Produktangebot der Marke PVBM im Balkonkraftwerk-Markt.',
@@ -174,7 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/goodwe-balcony-solar-overview-hero-fr.png',
+    heroImage: '/images/goodwe-balcony-solar-overview-hero-fr.webp',
     title: 'GoodWe : profil d\'entreprise solaire balcon',
     seoTitle: 'GoodWe : profil d\'entreprise dans le solaire balcon',
     metaDescription: 'Profil d\'entreprise de GoodWe : fondation, cotation en bourse, actionnariat et gamme de produits de la marque PVBM sur le marché du solaire balcon.',
@@ -257,7 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/goodwe-balcony-solar-overview-hero-ja.png',
+    heroImage: '/images/goodwe-balcony-solar-overview-hero-ja.webp',
     title: 'GoodWe:ベランダ太陽光企業プロフィール',
     seoTitle: 'GoodWe企業プロフィール:ベランダ太陽光市場での立ち位置',
     metaDescription: 'GoodWeの企業プロフィールを解説。2010年の設立から上海STARマーケット上場、株主構成、消費者ブランドPVBMによるベランダ太陽光製品ラインナップまでを紹介します。',
@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/goodwe-balcony-solar-overview-hero-zh.png',
+    heroImage: '/images/goodwe-balcony-solar-overview-hero-zh.webp',
     title: 'GoodWe:阳台光伏公司简介',
     seoTitle: 'GoodWe阳台光伏公司简介:成立历史、股权结构与产品线',
     metaDescription: 'GoodWe公司简介:详解其成立于2010年的历史沿革、在上海科创板的上市情况、股权结构,以及旗下消费品牌PVBM在阳台光伏市场的完整产品线。',
@@ -423,7 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/goodwe-balcony-solar-overview-hero-es.png',
+    heroImage: '/images/goodwe-balcony-solar-overview-hero-es.webp',
     title: 'GoodWe: perfil de empresa de solar de balcón',
     seoTitle: 'GoodWe: perfil completo de empresa solar de balcón',
     metaDescription: 'Perfil de empresa de GoodWe: fundación, cotización bursátil, propiedad y gama de productos de la marca PVBM en el mercado del solar de balcón.',
@@ -506,7 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/goodwe-balcony-solar-overview-hero-pt.png',
+    heroImage: '/images/goodwe-balcony-solar-overview-hero-pt.webp',
     title: 'GoodWe: perfil da empresa de energia solar de varanda',
     seoTitle: 'GoodWe: perfil completo da empresa solar de varanda',
     metaDescription: 'Perfil da empresa GoodWe: fundação, listagem em bolsa, propriedade e linha de produtos da marca PVBM no mercado de energia solar de varanda.',
@@ -589,7 +589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/goodwe-balcony-solar-overview-hero-ar.png',
+    heroImage: '/images/goodwe-balcony-solar-overview-hero-ar.webp',
     title: 'GoodWe: الملف التعريفي لشركة الطاقة الشمسية للشرفات',
     seoTitle: 'GoodWe: الملف التعريفي لشركة الطاقة الشمسية للشرفات',
     metaDescription: 'ملف تعريفي لشركة GoodWe: التأسيس، الإدراج في البورصة، الملكية، وتشكيلة منتجات علامة PVBM بالكامل في سوق الطاقة الشمسية للشرفات.',
@@ -672,7 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/goodwe-balcony-solar-overview-hero-ko.png',
+    heroImage: '/images/goodwe-balcony-solar-overview-hero-ko.webp',
     title: 'GoodWe: 발코니 태양광 기업 프로필',
     seoTitle: 'GoodWe 발코니 태양광 기업 프로필 및 시장 위치',
     metaDescription: 'GoodWe 기업 프로필을 소개합니다. 2010년 설립부터 상하이 STAR 마켓 상장, 소유 구조, 소비자 브랜드 PVBM의 발코니 태양광 제품 라인업까지 다룹니다.',

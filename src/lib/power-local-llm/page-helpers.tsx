@@ -406,7 +406,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
       url: `${BASE}${powerLLMHubPath(lang)}`,
       type: 'website',
       siteName: 'PromptQuorum',
-      images: [{ url: `${BASE}/images/power-local-llm-hub-overview-hero-${lang}.png`, width: 1200, height: 675, alt: titleByLang[lang] ?? titleByLang['en']! }],
+      images: [{ url: `${BASE}/images/power-local-llm-hub-overview-hero-${lang}.webp`, width: 1200, height: 675, alt: titleByLang[lang] ?? titleByLang['en']! }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -1727,7 +1727,7 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt'
             {/* Static Hero Image for Discover */}
             <figure className="mb-10 rounded-xl overflow-hidden max-w-2xl">
               <Image
-                src={`/images/power-local-llm-hub-overview-hero-${lang}.png`}
+                src={`/images/power-local-llm-hub-overview-hero-${lang}.webp`}
                 alt={hero.h1}
                 width={1200}
                 height={675}

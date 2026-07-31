@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
-    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-en.png',
+    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-en.webp',
     title: 'Chinese vs English Prompting: Which is Better?',
     seoTitle: 'Chinese vs English Prompting 2026: LLM Token Efficiency',
     metaDescription: 'Chinese prompts use 30–50% fewer tokens on Qwen3. English produces stronger reasoning chains. Mixed-language techniques and per-model guidance.',
@@ -163,7 +163,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   de: {
     theme: 'Model Comparisons',
-    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-de.png',
+    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-de.webp',
     title: 'Chinesisch vs. Englisch beim Prompting: Was ist besser?',
     seoTitle: 'Chinesisch vs. Englisch Prompting für lokale LLMs 2026',
     metaDescription: 'Chinesische Prompts nutzen 30–50 % weniger Tokens auf Qwen3. Englisch ist besser für Reasoning-Ketten. Gemischte Techniken und modellspezifische Tipps.',
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   fr: {
     theme: 'Model Comparisons',
-    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-fr.png',
+    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-fr.webp',
     title: 'Prompting en chinois vs anglais : lequel est meilleur ?',
     seoTitle: 'Prompting chinois vs anglais 2026 : efficacité des tokens',
     metaDescription: 'Les prompts chinois économisent 30–50 % de tokens sur Qwen3. L\'anglais produit de meilleures chaînes logiques. Techniques mixtes et guide par modèle LLM.',
@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   ja: {
     theme: 'Model Comparisons',
-    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-ja.png',
+    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-ja.webp',
     title: '中国語 vs 英語プロンプト：どちらが優れている？',
     seoTitle: '中国語vs英語プロンプティング完全ガイド 2026：ローカルLLMのトークン効率と推論品質を詳解',
     metaDescription: 'Qwen3とDeepSeek-R1-Distillモデルでは中国語プロンプトがトークンを三十〜五十パーセント節約します。英語プロンプトはほぼ全モデルで強力な論理推論チェーンを生成します。混合言語テクニックと各モデル別の詳細ガイダンスを解説します。',
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   zh: {
     theme: 'Model Comparisons',
-    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-zh.png',
+    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-zh.webp',
     title: '中文 vs 英文提示词：哪种更好？',
     seoTitle: '本地LLM提示词语言选择 2026：中文vs英文分词效率与推理质量的深度对比及各模型最佳实践指南',
     metaDescription: '在Qwen3和DeepSeek-R1-Distill模型上，中文提示词比英文少用百分之三十到五十的token，中文输出更自然流畅。英文提示词在几乎所有模型上产生更强的逻辑推理链。本文提供混合语言提示技巧与各模型专项最佳实践指南。',
@@ -639,7 +639,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   pt: {
     theme: 'Model Comparisons',
-    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-pt.png',
+    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-pt.webp',
     title: 'Prompts em chinês vs inglês: qual é melhor para LLMs locais?',
     seoTitle: 'Prompts em chinês vs inglês 2026: eficiência de tokens',
     metaDescription: 'Prompts em chinês usam 30–50% menos tokens no Qwen3. O inglês produz cadeias de raciocínio mais fortes. Técnicas mistas e guia por modelo.',
@@ -755,7 +755,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Model Comparisons',
-    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-es.png',
+    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-es.webp',
     title: 'Prompts en chino vs inglés: ¿cuál es mejor para LLMs locales?',
     seoTitle: 'Prompts en chino vs inglés 2026: eficiencia de tokens',
     metaDescription: 'Los prompts en chino usan 30–50% menos tokens en Qwen3. El inglés produce cadenas de razonamiento más fuertes. Técnicas mixtas y guía por modelo.',
@@ -871,7 +871,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Model Comparisons',
-    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-ar.png',
+    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-ar.webp',
     title: 'الكتابة بالصينية مقابل الإنجليزية: أيهما أفضل لنماذج ⁨LLM⁩ المحلية؟',
     seoTitle: 'الكتابة بالصينية مقابل الإنجليزية ⁨2026⁩: كفاءة الرموز',
     metaDescription: 'الأوامر الصينية توفّر ⁨30⁩–⁨50%⁩ من الرموز على ⁨Qwen3⁩ و⁨DeepSeek-R1-Distill⁩. الإنجليزية تُنتج سلاسل استدلال أقوى. تقنيات مختلطة وتوصيات لكل نموذج ⁨LLM⁩.',
@@ -981,7 +981,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Model Comparisons',
-    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-ko.png',
+    heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-ko.webp',
     title: '중국어 vs 영어 프롬프팅: 로컬 LLM에는 어느 쪽이 더 낫습니까?',
     seoTitle: '중국어 vs 영어 프롬프팅 2026: 토큰 효율성',
     metaDescription: '중국어 프롬프트는 Qwen3에서 토큰을 30–50% 절약합니다. 영어는 더 강력한 추론 체인을 생성합니다. 혼합 기법 및 모델별 가이드.',

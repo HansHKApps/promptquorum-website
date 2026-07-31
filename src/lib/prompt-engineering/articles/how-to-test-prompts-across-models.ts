@@ -9,7 +9,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     theme: 'Techniques',
-    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-en.png',
+    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-en.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
     current_models_mentioned: ['GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.5 Pro', 'Llama 3.3 70B'],
@@ -262,7 +262,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   de: {
     theme: 'Techniken',
-    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-de.png',
+    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-de.webp',
     title: 'Prompts über mehrere Modelle testen: Multi-Modell-Evaluation',
     seoTitle: 'Prompts modellübergreifend testen: GPT vs Claude vs Gemini',
     metaDescription: 'Denselben Prompt parallel auf GPT, Claude, Gemini und Llama testen: JSON-Zuverlässigkeit, Pass-Raten, Ablehnungsmuster und Token-Kosten vergleichen. April 2026.',
@@ -498,7 +498,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   es: {
     theme: 'Techniques',
-    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-es.png',
+    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-es.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
     current_models_mentioned: ['GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.5 Pro', 'Llama 3.3 70B'],
@@ -752,7 +752,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Techniques',
-    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-pt.png',
+    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-pt.webp',
     title: 'Como testar prompts entre modelos: avaliação multi-modelo',
     seoTitle: 'Teste prompts entre modelos: GPT vs Claude vs Gemini (2026)',
     metaDescription: 'Teste o mesmo prompt no GPT, Claude, Gemini e Llama em paralelo. Compare confiabilidade JSON, taxas de sucesso, padrões de recusa e custo por token. Com modelos de teste.',
@@ -1001,7 +1001,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   fr: {
     theme: 'Techniques',
-    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-fr.png',
+    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-fr.webp',
     title: 'Tester des prompts sur plusieurs modèles : évaluation multi-modèles',
     seoTitle: 'Tester les Prompts sur Plusieurs Modèles : GPT vs Claude',
     metaDescription: 'Testez le même prompt sur GPT, Claude, Gemini et Llama en parallèle. Comparez fiabilité JSON, taux de réussite, patterns de refus et coût par token. Framework multi-modèle avec modèles de test. Avril 2026.',
@@ -1235,7 +1235,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ja: {
     theme: 'テクニック',
-    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-ja.png',
+    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-ja.webp',
     title: 'プロンプトの複数モデルテスト：マルチモデル評価',
     seoTitle: 'プロンプトをモデル横断テスト：GPT vs Claude vs Gemini',
     metaDescription: '同じプロンプトをGPT・Claude・Gemini・Llamaに並列送信。JSON信頼性、パス率、拒否パターン、トークン単価を比較。テストセットテンプレート付きマルチモデル評価フレームワーク。2026年4月版。',
@@ -1469,7 +1469,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   zh: {
     theme: '技术',
-    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-zh.png',
+    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-zh.webp',
     title: '跨模型测试提示词：多模型评估',
     seoTitle: '跨模型测试提示词：GPT vs Claude vs Gemini（2026）',
     metaDescription: '将同一提示词并行发送至GPT、Claude、Gemini和Llama。比较JSON可靠性、通过率、拒绝模式和每Token成本。含测试集模板的多模型评估框架。2026年4月版。',
@@ -1703,7 +1703,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   ar: {
     theme: 'Techniques',
-    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-ar.png',
+    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-ar.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
     current_models_mentioned: ['GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.5 Pro', 'Llama 3.3 70B'],
@@ -1957,7 +1957,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   ko: {
     theme: 'Techniques',
-    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-ko.png',
+    heroImage: '/images/how-to-test-prompts-across-models-overview-hero-ko.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
     current_models_mentioned: ['GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.5 Pro', 'Llama 3.3 70B'],

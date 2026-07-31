@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-04',
       theme: 'Fundamentals',
-      heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-en.png',
+      heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-en.webp',
       title: 'GPT, Claude or Gemini: How to Pick the Right AI Model',
       intro: '**No single AI model is best for every task. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek, and Baidu ERNIE each win on different tasks, geographies, and budgets. This guide gives you a practical decision framework — not another benchmark list.**',
       publishDate: '2026-03-23',
@@ -507,7 +507,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
   theme: 'Fundamentals',
-      heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-de.png',
+      heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-de.webp',
   title: 'GPT, Claude oder Gemini: Wie Sie das richtige KI-Modell auswählen',
   intro: 'Kein einzelnes KI-Modell ist für alle Aufgaben das Beste. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek und Baidu ERNIE dominieren jeweils in verschiedenen Aufgaben, Regionen und Budgets. Diese Anleitung bietet Ihnen ein praktisches Entscheidungsrahmenwerk — nicht noch eine weitere Benchmark-Liste.',
   publishDate: '2026-03-23',
@@ -878,7 +878,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   fr: {
     theme: 'Fundamentals',
-    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-fr.png',
+    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-fr.webp',
     title: 'GPT, Claude ou Gemini : Comment choisir le bon modèle IA',
     intro: 'Aucun modèle IA unique n\'est le meilleur pour chaque tâche. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek et Baidu ERNIE excellent chacun dans des tâches, régions et budgets différents. Ce guide vous offre un cadre décisionnel pratique — pas une autre liste de benchmarks.',
     publishDate: '2026-03-23',
@@ -1222,7 +1222,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   ja: {
     theme: 'Fundamentals',
-    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-ja.png',
+    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-ja.webp',
     title: 'GPT、Claude、Gemini：正しいAIモデルの選び方',
     intro: 'すべてのタスクに最適な単一のAIモデルはありません。GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek、Baidu ERNIEは、それぞれ異なるタスク、地域、予算で優れています。このガイドでは、ベンチマークリストではなく、実践的な意思決定フレームワークを提供します。',
     publishDate: '2026-03-23',
@@ -1566,7 +1566,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   zh: {
     theme: 'Fundamentals',
-    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-zh.png',
+    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-zh.webp',
     title: 'GPT、Claude还是Gemini：如何选择正确的AI模型',
     intro: '没有一个AI模型对所有任务都是最好的。GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、DeepSeek和Baidu ERNIE在不同的任务、地区和预算中各有所长。本指南为您提供了实用的决策框架——而不是另一个基准测试清单。',
     publishDate: '2026-03-23',
@@ -1911,7 +1911,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-04',
     theme: 'Fundamentals',
-    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-es.png',
+    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-es.webp',
     title: 'GPT, Claude o Gemini: Cómo elegir el modelo de IA correcto',
     intro: '**Ningún modelo de IA es el mejor para todas las tareas. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek y Baidu ERNIE destacan en distintas tareas, geografías y presupuestos. Esta guía te ofrece un framework de decisión práctico — no otra lista de benchmarks.**',
     publishDate: '2026-03-23',
@@ -2408,7 +2408,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
   pt: {
     theme: 'Fundamentals',
-    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-pt.png',
+    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-pt.webp',
     title: 'GPT, Claude ou Gemini: Como Escolher o Modelo de IA Certo',
     intro: '**Nenhum modelo de IA é o melhor para todas as tarefas. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek e Baidu ERNIE se destacam em tarefas, geografias e orçamentos diferentes. Este guia oferece um framework de decisão prático — não mais uma lista de benchmarks.**',
     publishDate: '2026-03-23',
@@ -2906,7 +2906,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-04',
     theme: 'Fundamentals',
-    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-ar.png',
+    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-ar.webp',
     title: '⁨GPT⁩ أم ⁨Claude⁩ أم ⁨Gemini⁩: كيف تختار نموذج الذكاء الاصطناعي المناسب',
     intro: '**لا يوجد نموذج ذكاء اصطناعي واحد هو الأفضل لجميع المهام. يتفوق GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro وDeepSeek وBaidu ERNIE كل منها في مهام مختلفة وجغرافيات مختلفة وميزانيات مختلفة. يقدم لك هذا الدليل إطار قرار عملياً — وليس قائمة معايير أخرى.**',
     publishDate: '2026-03-23',
@@ -3402,7 +3402,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ko: {
     theme: 'Fundamentals',
-    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-ko.png',
+    heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-ko.webp',
     title: 'GPT, Claude, Gemini: 올바른 AI 모델을 선택하는 방법',
     intro: '**모든 작업에 최적화된 단 하나의 AI 모델은 존재하지 않습니다. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, DeepSeek, Baidu ERNIE는 각각 서로 다른 작업, 지역, 예산에서 우위를 보입니다. 이 가이드는 실용적인 의사결정 프레임워크를 제공합니다. 단순한 벤치마크 목록이 아닙니다.**',
     publishDate: '2026-03-23',

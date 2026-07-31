@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
-      heroImage: '/images/prompt-engineering-glossary-overview-hero-en.png',
+      heroImage: '/images/prompt-engineering-glossary-overview-hero-en.webp',
       title: 'Prompt Engineering Glossary: 500 Key Terms',
       intro: 'Concise definitions of the 500 most important prompt engineering terms — from tokens and context windows to agent orchestration, RAG, and evaluation metrics.',
       publishDate: '2026-03-28',
@@ -224,7 +224,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
   theme: 'Fundamentals',
-      heroImage: '/images/prompt-engineering-glossary-overview-hero-de.png',
+      heroImage: '/images/prompt-engineering-glossary-overview-hero-de.webp',
   title: 'Prompt Engineering Glossar: 500 Essenzielle Begriffe für Entwickler & KI-Teams',
   intro: 'Ihr umfassendes Nachschlagewerk mit über 500 Definitionen – von Tokens und Kontextfenstern bis zur intelligenten Agent-Orchestrierung, RAG-Systemen und modernen Evaluierungsmetriken.',
   publishDate: '2026-03-28',
@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     es: {
   theme: 'Fundamentals',
-      heroImage: '/images/prompt-engineering-glossary-overview-hero-es.png',
+      heroImage: '/images/prompt-engineering-glossary-overview-hero-es.webp',
   title: 'Glosario de Prompt Engineering: 500 términos clave',
   intro: 'Definiciones concisas de los 500 términos más importantes del prompt engineering — desde tokens y context windows hasta orquestación de agentes, RAG y métricas de evaluación.',
   publishDate: '2026-03-28',
@@ -507,7 +507,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     ar: {
   theme: 'Fundamentals',
-      heroImage: '/images/prompt-engineering-glossary-overview-hero-ar.png',
+      heroImage: '/images/prompt-engineering-glossary-overview-hero-ar.webp',
   title: 'مسرد هندسة البرومبت: ⁨500⁩ مصطلح أساسي',
   intro: 'تعريفات موجزة لأهم 500 مصطلح في هندسة البرومبت — من الرموز والنوافذ السياقية إلى تنسيق الوكلاء وRAG ومقاييس التقييم.',
   publishDate: '2026-03-28',
@@ -658,7 +658,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     pt: {
   theme: 'Fundamentals',
-      heroImage: '/images/prompt-engineering-glossary-overview-hero-pt.png',
+      heroImage: '/images/prompt-engineering-glossary-overview-hero-pt.webp',
   title: 'Glossário de Prompt Engineering: 500 Termos Essenciais',
   intro: 'Definições concisas dos 500 termos mais importantes do prompt engineering — de tokens e context windows até orquestração de agentes, RAG e métricas de avaliação.',
   publishDate: '2026-03-28',
@@ -808,7 +808,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     fr: {
   theme: 'Fundamentals',
-      heroImage: '/images/prompt-engineering-glossary-overview-hero-fr.png',
+      heroImage: '/images/prompt-engineering-glossary-overview-hero-fr.webp',
   title: 'Glossaire de l\'ingénierie de prompt : 500 termes essentiels',
   intro: 'Référence complète des 500 termes les plus importants en ingénierie de prompt — de la théorie des tokens aux architectures d\'agents et métriques d\'évaluation — rédigée pour développeurs et praticiens IA francophones.',
   publishDate: '2026-03-28',
@@ -1034,7 +1034,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
         ja: {
   theme: 'Fundamentals',
-  heroImage: '/images/prompt-engineering-glossary-overview-hero-ja.png',
+  heroImage: '/images/prompt-engineering-glossary-overview-hero-ja.webp',
   title: 'プロンプトエンジニアリング用語集：500の必須用語',
   intro: '日本の開発チームと企業向けに、プロンプトエンジニアリングの基礎から実践まで、500の重要用語を精選し解説。トークンとコンテキストウィンドウの理論から、マルチエージェント・オーケストレーション、RAG、評価指標まで網羅。',
   publishDate: '2026-03-28',
@@ -1313,7 +1313,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     zh: {
       theme: 'Fundamentals',
-      heroImage: '/images/prompt-engineering-glossary-overview-hero-zh.png',
+      heroImage: '/images/prompt-engineering-glossary-overview-hero-zh.webp',
       title: '提示工程词汇表：500个必备术语',
       intro: '为中国开发者精心编选的完整提示工程词汇表。涵盖从令牌（Token）和上下文窗口（Context Window）的基础概念，到多代理编排（Multi-Agent Orchestration）、检索增强生成（RAG）和评估指标等实战应用——500个术语，一本全书。',
       publishDate: '2026-03-28',
@@ -1620,7 +1620,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'semi_annual',
       theme: '기초',
-    heroImage: '/images/prompt-engineering-glossary-overview-hero-ko.png',
+    heroImage: '/images/prompt-engineering-glossary-overview-hero-ko.webp',
       title: '프롬프트 엔지니어링 용어집: 500개 핵심 용어',
       intro: '토큰과 컨텍스트 윈도우부터 에이전트 오케스트레이션, RAG, 평가 지표까지 — 프롬프트 엔지니어링에서 가장 중요한 500개 용어를 간결하게 정의합니다.',
       publishDate: '2026-03-28',

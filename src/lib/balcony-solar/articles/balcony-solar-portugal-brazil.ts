@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-02',
     last_full_refresh: '2026-07-02',
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-en.png',
+    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-en.webp',
     title: 'Balcony Solar in Portugal & Brazil: Legal Status Compared',
     seoTitle: 'Balcony Solar Legal: Portugal vs. Brazil (2026)',
     intro: 'Portugal and Brazil offer a sharp contrast: Portugal has one of the most clearly codified simplified regimes of any country in this guide, while Brazil has no dedicated framework at all — small plug-in kits exist there in an informally tolerated gray zone rather than a legal exemption.',
@@ -135,7 +135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-es.png',
+    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-es.webp',
     title: 'Energía solar de balcón en Portugal y Brasil: estatus legal comparado',
     seoTitle: 'Energía solar de balcón legal: Portugal vs. Brasil (2026)',
     intro: 'Portugal y Brasil ofrecen un contraste marcado: Portugal tiene uno de los regímenes simplificados más claramente codificados de esta guía, mientras que Brasil no tiene ningún marco dedicado — los kits plug-in pequeños existen allí en una zona gris tolerada informalmente, no bajo una exención legal.',
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-pt.png',
+    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-pt.webp',
     title: 'Energia solar de varanda em Portugal e no Brasil: status legal comparado',
     seoTitle: 'Energia solar de varanda legal: Portugal vs. Brasil (2026)',
     intro: 'Portugal e o Brasil oferecem um contraste marcante: Portugal tem um dos regimes simplificados mais claramente codificados desta análise, enquanto o Brasil não tem nenhum marco dedicado — os kits plug-in pequenos existem lá numa zona cinzenta tolerada informalmente, e não sob uma isenção legal.',
@@ -359,7 +359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-ar.png',
+    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-ar.webp',
     title: 'الطاقة الشمسية للشرفات في البرتغال والبرازيل: مقارنة الوضع القانوني',
     seoTitle: 'الطاقة الشمسية للشرفة قانونية: البرتغال مقابل البرازيل (2026)',
     intro: 'تقدّم البرتغال والبرازيل تباينًا واضحًا: تمتلك البرتغال أحد أوضح الأنظمة المبسّطة والمقنَّنة في هذا الدليل، بينما لا تملك البرازيل أي إطار تنظيمي مخصص على الإطلاق — توجد الأطقم الصغيرة القابلة للتوصيل المباشر هناك في منطقة رمادية يُتغاضى عنها بشكل غير رسمي، وليس بموجب إعفاء قانوني.',
@@ -471,7 +471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-ja.png',
+    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-ja.webp',
     title: 'ポルトガルとブラジルのバルコニーソーラー：法的状況を比較',
     seoTitle: 'バルコニーソーラーの合法性：ポルトガル vs. ブラジル（2026年）',
     intro: 'ポルトガルとブラジルは対照的だ。ポルトガルはこのガイドの中でも最も明確に成文化された簡易制度を持つ国の一つである一方、ブラジルには専用の法的枠組みが存在しない——小型のプラグイン式キットは、法的な適用除外ではなく、非公式に黙認されたグレーゾーンの中で流通している。',
@@ -583,7 +583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-zh.png',
+    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-zh.webp',
     title: '葡萄牙与巴西的阳台光伏：法律状况对比',
     seoTitle: '阳台光伏是否合法：葡萄牙 vs. 巴西（2026年）',
     intro: '葡萄牙和巴西形成了鲜明对比：葡萄牙拥有本指南中规定最明确的简化制度之一，而巴西完全没有专门的法律框架——那里的小型插电式套件存在于一种非正式默许的灰色地带，而非法定豁免之下。',
@@ -695,7 +695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-fr.png',
+    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-fr.webp',
     title: 'Solaire de balcon au Portugal et au Brésil : statut légal comparé',
     seoTitle: 'Solaire de balcon légal : Portugal vs. Brésil (2026)',
     intro: 'Le Portugal et le Brésil offrent un contraste frappant : le Portugal dispose de l\'un des régimes simplifiés les plus clairement codifiés de ce guide, tandis que le Brésil ne dispose d\'aucun cadre dédié — les petits kits plug-and-play y existent dans une zone grise tolérée de manière informelle plutôt que sous une exemption légale.',
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-de.png',
+    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-de.webp',
     title: 'Balkonkraftwerk in Portugal und Brasilien: Rechtslage im Vergleich',
     seoTitle: 'Balkonkraftwerk Portugal rechtlich: Portugal vs. Brasilien (2026)',
     intro: 'Portugal und Brasilien bieten einen deutlichen Kontrast: Portugal hat eines der am klarsten kodifizierten vereinfachten Regime in diesem Leitfaden, während Brasilien überhaupt keinen dedizierten Rahmen hat – kleine Plug-in-Geräte existieren dort in einer informell geduldeten Grauzone, nicht unter einer rechtlichen Ausnahme.',
@@ -919,7 +919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-ko.png',
+    heroImage: '/images/balcony-solar-portugal-brazil-overview-hero-ko.webp',
     title: '포르투갈과 브라질의 베란다 태양광: 법적 지위 비교',
     seoTitle: '베란다 태양광 합법성: 포르투갈 vs. 브라질 (2026년)',
     intro: '포르투갈과 브라질은 뚜렷한 대조를 이룬다. 포르투갈은 이 가이드에서 가장 명확하게 성문화된 간소화 제도 중 하나를 갖추고 있는 반면, 브라질에는 전용 법적 체계가 전혀 존재하지 않는다 — 소형 플러그인 키트는 법적 면제가 아니라 비공식적으로 묵인되는 회색지대에서 유통되고 있다.',

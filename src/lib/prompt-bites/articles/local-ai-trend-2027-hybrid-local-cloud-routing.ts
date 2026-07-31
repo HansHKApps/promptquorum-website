@@ -13,7 +13,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-en.png',
+    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 6 of 10: Hybrid Routing Becomes a Product Category',
     seoTitle: 'Local AI Trends 2027, Part 6: Hybrid Routing as a Product | Prompt Bites',
     metaDescription: 'Gartner and Forrester analysts project hybrid local-cloud routing shifts from custom glue code to a packaged vendor category by 2027. What changes when routing becomes a product.',
@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-de.png',
+    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-de.webp',
     title: 'Local AI Trends 2027, Teil 6 von 10: Hybrides Routing wird zur eigenen Produktkategorie',
     seoTitle: 'Local AI Trends 2027, Teil 6: Hybrides Routing als Produkt | Prompt Bites',
     metaDescription: 'Analysten von Gartner und Forrester erwarten, dass hybrides Lokal-Cloud-Routing bis 2027 von individuellem Code zu einer eigenen Anbieterkategorie wird. Was sich ändert, wenn Routing zum Produkt wird.',
@@ -209,7 +209,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-fr.png',
+    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-fr.webp',
     title: 'Tendances de l\'IA locale 2027, partie 6 sur 10 : le routage hybride devient une catégorie de produits',
     seoTitle: 'Tendances IA locale 2027, partie 6 : routage hybride en produit | Prompt Bites',
     metaDescription: 'Gartner et Forrester prévoient que le routage hybride local-cloud passera du code sur mesure à une catégorie de produits packagés d\'ici 2027. Ce qui change quand le routage devient un produit.',
@@ -307,7 +307,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-ja.png',
+    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-ja.webp',
     title: 'ローカルAIトレンド2027 第6回（全10回）：ハイブリッドルーティングが製品カテゴリになる',
     seoTitle: 'ローカルAIトレンド2027 第6回：ハイブリッドルーティングの製品化 | Prompt Bites',
     metaDescription: 'GartnerやForresterのアナリストは、ハイブリッドなローカル・クラウドルーティングが2027年までに独自コードからパッケージ化されたベンダーカテゴリへ移行すると予測しています。ルーティングが製品になると何が変わるか。',
@@ -405,7 +405,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-zh.png',
+    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-zh.webp',
     title: '2027本地AI趋势 第6篇（共10篇）：混合路由成为独立产品类别',
     seoTitle: '2027本地AI趋势 第6篇：混合路由产品化 | Prompt Bites',
     metaDescription: 'Gartner和Forrester分析师预测,到2027年混合本地-云端路由将从定制粘合代码转变为打包的供应商产品类别。当路由成为产品时会发生什么变化。',
@@ -503,7 +503,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-es.png',
+    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-es.webp',
     title: 'Tendencias de IA local 2027, parte 6 de 10: el enrutamiento híbrido se convierte en una categoría de producto',
     seoTitle: 'Tendencias IA local 2027, parte 6: enrutamiento híbrido como producto | Prompt Bites',
     metaDescription: 'Analistas de Gartner y Forrester prevén que el enrutamiento híbrido local-nube pase de código a medida a una categoría de producto empaquetada para 2027. Qué cambia cuando el enrutamiento se convierte en producto.',
@@ -601,7 +601,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-pt.png',
+    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-pt.webp',
     title: 'Tendências de IA local 2027, parte 6 de 10: o roteamento híbrido se torna uma categoria de produto',
     seoTitle: 'Tendências de IA local 2027, parte 6: roteamento híbrido como produto | Prompt Bites',
     metaDescription: 'Analistas da Gartner e da Forrester projetam que o roteamento híbrido local-nuvem passará de código sob medida para uma categoria de produto empacotada até 2027. O que muda quando o roteamento vira produto.',
@@ -699,7 +699,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-ar.png',
+    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-ar.webp',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 6 من 10: التوجيه الهجين يصبح فئة منتجات',
     seoTitle: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 6: التوجيه الهجين كمنتج | Prompt Bites',
     metaDescription: 'يتوقع محللو Gartner وForrester أن ينتقل التوجيه الهجين بين المحلي والسحابي من كود مخصص إلى فئة منتجات جاهزة بحلول 2027. ما الذي يتغير عندما يصبح التوجيه منتجًا.',
@@ -797,7 +797,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-ko.png',
+    heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-ko.webp',
     title: '2027 로컬 AI 트렌드, 10부작 중 6부: 하이브리드 라우팅이 제품 카테고리가 되다',
     seoTitle: '2027 로컬 AI 트렌드 6부: 제품이 되는 하이브리드 라우팅 | Prompt Bites',
     metaDescription: 'Gartner와 Forrester 애널리스트들은 2027년까지 하이브리드 로컬-클라우드 라우팅이 맞춤 코드에서 패키지화된 벤더 카테고리로 전환될 것으로 전망합니다. 라우팅이 제품이 되면 무엇이 달라지는지 다룹니다.',

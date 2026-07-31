@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
-    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-en.png',
+    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-en.webp',
     title: 'Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026',
     seoTitle: 'Continue.dev vs Cline vs Aider: Local Coding Agent Verdict 2026',
     intro:
@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
-    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-de.png',
+    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-de.webp',
     title: 'Continue.dev vs Cline vs Aider: Der beste lokale Coding Agent in 2026',
     seoTitle: 'Continue.dev vs Cline vs Aider: KI-Coding 2026',
     intro:
@@ -1002,7 +1002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
-    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-fr.png',
+    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-fr.webp',
     title: 'Continue.dev vs Cline vs Aider : Meilleur agent de codage local 2026',
     seoTitle: 'Continue.dev vs Cline vs Aider : IA code local 2026',
     intro:
@@ -1499,7 +1499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
-    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-ja.png',
+    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-ja.webp',
     title: 'Continue.dev vs Cline vs Aider：ローカルコーディング AI 2026 比較',
     seoTitle: 'Continue.dev vs Cline vs Aider – ローカルコーディングエージェント比較 2026',
     intro:
@@ -1995,7 +1995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
-    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-zh.png',
+    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-zh.webp',
     title: 'Continue.dev vs Cline vs Aider：2026 年本地编码代理对比',
     seoTitle: 'Continue.dev vs Cline vs Aider – 2026 年本地编码代理对比',
     intro:
@@ -2491,7 +2491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
-    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-es.png',
+    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-es.webp',
     title: 'Continue.dev vs Cline vs Aider: Mejor agente de código local en 2026',
     seoTitle: 'Continue.dev vs Cline vs Aider: Agente de código local 2026',
     intro:
@@ -3001,7 +3001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
-    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-pt.png',
+    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-pt.webp',
     title: 'Continue.dev vs Cline vs Aider: Melhor agente de código local em 2026',
     seoTitle: 'Continue.dev vs Cline vs Aider: Agente de código local 2026',
     intro:
@@ -3511,7 +3511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
-    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-ar.png',
+    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-ar.webp',
     title: '⁨Continue.dev⁩ مقابل ⁨Cline⁩ مقابل ⁨Aider⁩: أفضل وكيل برمجة محلي في ⁨2026⁩',
     seoTitle: '⁨Continue.dev⁩ مقابل ⁨Cline⁩ و⁨Aider⁩: أيّها لعملك؟',
     intro:
@@ -4021,7 +4021,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'Coding Assistants',
-    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-ko.png',
+    heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-ko.webp',
     title: 'Continue.dev vs Cline vs Aider: 2026년 최고의 로컬 코드 에이전트',
     seoTitle: 'Continue.dev vs Cline vs Aider: 로컬 코드 에이전트 2026',
     intro:

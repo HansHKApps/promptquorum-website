@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Most AI-coding-tool comparisons rank on autocomplete quality and miss the question that decides the purchase for many developers: does the tool run on a local LLM, or does it send your code to a third-party server? For proprietary code, NDA-bound work, or regulated industries, that single answer reorders the whole ranking. This guide compares four tools — Cursor, Continue.dev, GitHub Copilot, and Sourcegraph Cody — on the criteria that bind a real choice: local LLM support, price, IDE coverage, and where your code goes. One caveat on price: developer-tool subscriptions change with plan revisions, so every figure here is a July 2026 snapshot — confirm the current rate on the vendor site before you subscribe.',
     metaDescription:
       'Continue.dev vs Cursor for local models: Continue.dev (free, native Ollama) wins local-first; Cursor (~$20/mo) for polish. Best Ollama model: Qwen3 Coder 14B.',
-    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-en.png',
+    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-en.webp',
     twitterDescription:
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — four AI coding tools compared. The decision rule most rankings skip: does it run on a local LLM?',
     affiliateDisclosure: true,
@@ -186,7 +186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Best for': 'Teams needing codebase-wide context',
           },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-en.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-en.webp',
         imageCaption: 'AI Coding Tools Compared -- July 2026 snapshot',
       },
       whichTool: {
@@ -204,7 +204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your situation': 'I have no GPU and cannot run a local LLM', 'Choose this': 'GitHub Copilot or Cursor (cloud models)' },
           { 'Your situation': 'I am unsure and want a safe, zero-cost starting point', 'Choose this': 'Continue.dev — free, then add a paid tool if you outgrow it' },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-en.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-en.webp',
         imageCaption: 'Which AI Coding Tool Should You Choose? -- Decision shortcut',
       },
       continueSection: {
@@ -482,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Die meisten Vergleiche von KI-Coding-Tools bewerten nach Autovervollständigungsqualität und übersehen die Frage, die für viele Entwickler über den Kauf entscheidet: Läuft das Tool auf einem lokalen LLM, oder sendet es Ihren Code an einen Drittanbieter-Server? Bei proprietärem Code, NDA-gebundener Arbeit oder regulierten Branchen ordnet diese eine Antwort die gesamte Rangfolge neu. Dieser Leitfaden vergleicht vier Tools — Cursor, Continue.dev, GitHub Copilot und Sourcegraph Cody — anhand der Kriterien, die eine echte Entscheidung bestimmen: Unterstützung für lokale LLMs, Preis, IDE-Abdeckung und wohin Ihr Code geht. Eine Einschränkung beim Preis: Abonnements für Entwickler-Tools ändern sich mit Tarifüberarbeitungen, daher ist jede Zahl hier eine Momentaufnahme von Juli 2026 — bestätigen Sie den aktuellen Tarif auf der Anbieter-Website, bevor Sie ein Abonnement abschließen.',
     metaDescription:
       'Continue.dev vs. Cursor für lokale Modelle: Continue.dev (kostenlos, natives Ollama) gewinnt local-first; Cursor (~20 $/Mo) für Politur. Bestes Ollama-Modell: Qwen3 Coder 14B.',
-    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-de.png',
+    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-de.webp',
     twitterDescription:
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — vier KI-Coding-Tools im Vergleich. Die Entscheidungsregel, die die meisten Rankings auslassen: Läuft es auf einem lokalen LLM?',
     affiliateDisclosure: true,
@@ -643,7 +643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Am besten für': 'Teams, die projektweiten Kontext brauchen',
           },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-de.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-de.webp',
         imageCaption: 'KI-Coding-Tools im Vergleich -- Momentaufnahme Juli 2026',
       },
       whichTool: {
@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ihre Situation': 'Ich habe keine GPU und kann kein lokales LLM betreiben', 'Wählen Sie das': 'GitHub Copilot oder Cursor (Cloud-Modelle)' },
           { 'Ihre Situation': 'Ich bin unsicher und will einen sicheren, kostenlosen Ausgangspunkt', 'Wählen Sie das': 'Continue.dev — kostenlos, dann ein kostenpflichtiges Tool ergänzen, wenn Sie darüber hinauswachsen' },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-de.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-de.webp',
         imageCaption: 'Welches KI-Coding-Tool Sollten Sie Wählen? -- Entscheidungshilfe',
       },
       continueSection: {
@@ -939,7 +939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "La plupart des comparatifs d'outils de codage IA classent les produits sur la qualité de l'autocomplétion et passent à côté de la question qui décide l'achat pour de nombreux développeurs : l'outil tourne-t-il sur un LLM local, ou envoie-t-il votre code vers un serveur tiers ? Pour du code propriétaire, du travail sous NDA ou des secteurs régulés, cette seule réponse réordonne tout le classement. Ce guide compare quatre outils — Cursor, Continue.dev, GitHub Copilot et Sourcegraph Cody — sur les critères qui déterminent un vrai choix : prise en charge des LLM locaux, prix, couverture des IDE et destination de votre code. Une réserve sur le prix : les abonnements aux outils de développement évoluent avec les révisions de plans, donc chaque chiffre ici est un instantané de juillet 2026 — confirmez le tarif courant sur le site de l'éditeur avant de souscrire.",
     metaDescription:
       "Continue.dev vs Cursor pour modèles locaux : Continue.dev (gratuit, Ollama natif) gagne en local-first ; Cursor (~20 $/mois) pour la finition. Meilleur modèle Ollama : Qwen3 Coder 14B.",
-    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-fr.png',
+    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-fr.webp',
     twitterDescription:
       "Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — quatre outils de codage IA comparés. La règle de décision que la plupart des classements ignorent : tourne-t-il sur un LLM local ?",
     affiliateDisclosure: true,
@@ -1101,7 +1101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Idéal pour': 'Équipes ayant besoin de contexte à l\'échelle du code source',
           },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-fr.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-fr.webp',
         imageCaption: 'Outils de Codage IA Comparés -- Instantané de juillet 2026',
       },
       whichTool: {
@@ -1119,7 +1119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Votre situation': "Je n'ai pas de GPU et ne peux pas faire tourner un LLM local", 'Choisissez ceci': 'GitHub Copilot ou Cursor (modèles cloud)' },
           { 'Votre situation': "Je suis indécis et veux un point de départ sûr et sans coût", 'Choisissez ceci': "Continue.dev — gratuit, puis ajoutez un outil payant si vous le dépassez" },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-fr.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-fr.webp',
         imageCaption: 'Quel Outil de Codage IA Choisir ? -- Raccourci de décision',
       },
       continueSection: {
@@ -1397,7 +1397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'AIコーディングツールの比較記事の多くは、オートコンプリートの品質でランク付けし、多くの開発者にとって購入を決定づける問いを見落としています。そのツールはローカルLLMで動作するのか、それともコードをサードパーティのサーバーに送信するのか、という問いです。プロプライエタリなコード、NDAに縛られた業務、規制対象の業界では、その単一の答えがランキング全体を組み替えます。本ガイドでは、4つのツール — Cursor、Continue.dev、GitHub Copilot、Sourcegraph Cody — を、実際の選択を左右する基準で比較します。ローカルLLMサポート、価格、IDEカバレッジ、そしてコードがどこへ送られるか、です。価格について1つ注意点があります。開発者向けツールのサブスクリプションはプラン改定とともに変動するため、ここに記載した数値はすべて2026年7月時点のスナップショットです。契約前にベンダーサイトで現在のレートを確認してください。',
     metaDescription:
       'ローカルモデル向けContinue.dev vs Cursor：Continue.dev（無料・Ollamaネイティブ）がローカルファーストで有利、Cursor（月約20ドル）は完成度重視。最適なOllamaモデルはQwen3 Coder 14B。',
-    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-ja.png',
+    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-ja.webp',
     twitterDescription:
       'Cursor、Continue.dev、GitHub Copilot、Sourcegraph Cody — 4つのAIコーディングツールを比較。多くのランキングが飛ばす判断基準: ローカルLLMで動作するか。',
     affiliateDisclosure: true,
@@ -1558,7 +1558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最適な用途': 'コードベース全体のコンテキストが必要なチーム',
           },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-ja.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-ja.webp',
         imageCaption: 'AIコーディングツール比較 -- 2026年7月時点',
       },
       whichTool: {
@@ -1576,7 +1576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'あなたの状況': 'GPUがなく、ローカルLLMを動かせない', 'これを選ぶ': 'GitHub Copilot または Cursor (クラウドモデル)' },
           { 'あなたの状況': '迷っていて、安全でゼロコストの出発点が欲しい', 'これを選ぶ': 'Continue.dev — 無料、足りなくなったら有料ツールを追加' },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-ja.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-ja.webp',
         imageCaption: 'どのAIコーディングツールを選ぶべきか？ -- 判断ショートカット',
       },
       continueSection: {
@@ -1854,7 +1854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '大多数 AI 编程工具的对比都以自动补全质量来排名，却忽略了对许多开发者真正决定购买的那个问题：这个工具能在本地 LLM 上运行吗，还是会把你的代码发送到第三方服务器？对于专有代码、受 NDA 约束的工作或受监管行业，这一个答案就会重排整个排名。本指南从真正决定选择的标准出发，对比四款工具——Cursor、Continue.dev、GitHub Copilot 和 Sourcegraph Cody：本地 LLM 支持、价格、IDE 覆盖范围，以及你的代码去往何处。关于价格有一点提醒：开发者工具的订阅会随套餐调整而变动，因此这里的每个数字都是 2026 年 7 月的快照——在订阅前请到厂商网站确认当前价格。',
     metaDescription:
       '面向本地模型的 Continue.dev vs Cursor：Continue.dev（免费、原生 Ollama）在本地优先场景胜出；Cursor（约 20 美元/月）胜在完善度。最佳 Ollama 模型：Qwen3 Coder 14B。',
-    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-zh.png',
+    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-zh.webp',
     twitterDescription:
       'Cursor、Continue.dev、GitHub Copilot、Sourcegraph Cody——四款 AI 编程工具对比。大多数排名跳过的决策规则：它能在本地 LLM 上运行吗？',
     affiliateDisclosure: true,
@@ -2015,7 +2015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '最适合': '需要全代码库上下文的团队',
           },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-zh.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-zh.webp',
         imageCaption: 'AI编程工具对比 -- 2026年7月快照',
       },
       whichTool: {
@@ -2033,7 +2033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '你的情况': '我没有 GPU，无法运行本地 LLM', '选择这个': 'GitHub Copilot 或 Cursor（云端模型）' },
           { '你的情况': '我不确定，想要一个安全、零成本的起点', '选择这个': 'Continue.dev——免费，如果不够用再加付费工具' },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-zh.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-zh.webp',
         imageCaption: '应该选择哪个AI编程工具？ -- 决策捷径',
       },
       continueSection: {
@@ -2311,7 +2311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'La mayoría de comparativas de herramientas de programación con IA evalúan la calidad del autocompletado y pasan por alto la pregunta que realmente decide la compra para muchos desarrolladores: ¿la herramienta se ejecuta sobre un LLM local, o envía tu código a un servidor de terceros? Para código propietario, trabajo bajo NDA o sectores regulados, esa única respuesta reordena por completo el ranking. Esta guía compara cuatro herramientas — Cursor, Continue.dev, GitHub Copilot y Sourcegraph Cody — en los criterios que determinan una decisión real: compatibilidad con LLM local, precio, cobertura de IDE y a dónde va tu código. Un aviso sobre precios: las suscripciones a herramientas para desarrolladores cambian con las revisiones de planes, por lo que cada cifra aquí es una instantánea de julio de 2026 — confirma la tarifa actual en el sitio del proveedor antes de suscribirte.',
     metaDescription:
       'Continue.dev vs Cursor para modelos locales: Continue.dev (gratis, Ollama nativo) gana en local-first; Cursor (~$20/mes) por su acabado. Mejor modelo Ollama: Qwen3 Coder 14B.',
-    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-es.png',
+    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-es.webp',
     twitterDescription:
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — cuatro herramientas de programación con IA comparadas. La regla de decisión que la mayoría de rankings omite: ¿funciona con un LLM local?',
     affiliateDisclosure: true,
@@ -2472,7 +2472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Ideal para': 'Equipos que necesitan contexto de toda la base de código',
           },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-es.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-es.webp',
         imageCaption: 'Herramientas de Codificación con IA Comparadas -- Instantánea de julio de 2026',
       },
       whichTool: {
@@ -2490,7 +2490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu situación': 'No tengo GPU y no puedo ejecutar un LLM local', 'Elige esta': 'GitHub Copilot o Cursor (modelos en la nube)' },
           { 'Tu situación': 'No estoy seguro y quiero un punto de partida seguro y sin coste', 'Elige esta': 'Continue.dev — gratuito, luego añade una herramienta de pago si lo superas' },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-es.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-es.webp',
         imageCaption: '¿Qué Herramienta de Codificación con IA Elegir? -- Atajo de decisión',
       },
       continueSection: {
@@ -2781,7 +2781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'A maioria das comparações de ferramentas de programação com IA avalia a qualidade do autocompletar e ignora a pergunta que realmente decide a compra para muitos desenvolvedores: a ferramenta roda sobre um LLM local, ou ela envia o seu código para um servidor de terceiros? Para código proprietário, trabalho sob NDA ou setores regulados, essa única resposta reordena todo o ranking. Este guia compara quatro ferramentas — Cursor, Continue.dev, GitHub Copilot e Sourcegraph Cody — nos critérios que determinam uma decisão real: compatibilidade com LLM local, preço, cobertura de IDE e para onde vai o seu código. Uma ressalva sobre preços: as assinaturas de ferramentas para desenvolvedores mudam com as revisões de planos, então cada valor aqui é um retrato de julho de 2026 — confirme a tarifa atual no site do fornecedor antes de assinar.',
     metaDescription:
       'Continue.dev vs Cursor para modelos locais: Continue.dev (grátis, Ollama nativo) vence no local-first; Cursor (~$20/mês) pelo acabamento. Melhor modelo Ollama: Qwen3 Coder 14B.',
-    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-pt.png',
+    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-pt.webp',
     twitterDescription:
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — quatro ferramentas de programação com IA comparadas. A regra de decisão que a maioria dos rankings ignora: ela funciona com um LLM local?',
     affiliateDisclosure: true,
@@ -2942,7 +2942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Ideal para': 'Times que precisam de contexto de toda a base de código',
           },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-pt.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-pt.webp',
         imageCaption: 'Ferramentas de Codificação com IA Comparadas -- Instantâneo de julho de 2026',
       },
       whichTool: {
@@ -2960,7 +2960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sua situação': 'Não tenho GPU e não consigo executar um LLM local', 'Escolha esta': 'GitHub Copilot ou Cursor (modelos na nuvem)' },
           { 'Sua situação': 'Estou indeciso e quero um ponto de partida seguro e sem custo', 'Escolha esta': 'Continue.dev — gratuito, depois adicione uma ferramenta paga se superá-lo' },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-pt.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-pt.webp',
         imageCaption: 'Qual Ferramenta de Codificação com IA Escolher? -- Atalho de decisão',
       },
       continueSection: {
@@ -3251,7 +3251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تُقيّم معظم مقارنات أدوات البرمجة بالذكاء الاصطناعي جودة الإكمال التلقائي وتتجاهل السؤال الذي يحسم القرار فعلياً لدى كثير من المطورين: هل تعمل الأداة على نموذج لغوي محلي؟ أم تُرسل الكود إلى خادم طرف ثالث؟ بالنسبة للكود المملوك والعمل الخاضع لاتفاقيات عدم الإفصاح والقطاعات المنظَّمة، تُعيد هذه الإجابة الوحيدة ترتيب التصنيف بأكمله. يقارن هذا الدليل أربع أدوات — Cursor وContinue.dev وGitHub Copilot وSourcegraph Cody — وفق المعايير التي تحدد القرار الفعلي: التوافق مع النموذج المحلي، والسعر، وتغطية بيئة التطوير، ووجهة الكود. تحذير بشأن الأسعار: اشتراكات أدوات المطورين تتغير مع مراجعات الخطط، لذا كل رقم هنا صورة من يوليو 2026 — تحقق من السعر الحالي على موقع المورّد قبل الاشتراك.',
     metaDescription:
       'Continue.dev مقابل Cursor للنماذج المحلية: يتفوّق Continue.dev (مجاني، Ollama أصلي) في النهج المحلي أولاً؛ وCursor (~20$ شهريًا) للإتقان. أفضل نموذج Ollama: Qwen3 Coder 14B.',
-    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-ar.png',
+    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-ar.webp',
     twitterDescription:
       'Cursor وContinue.dev وGitHub Copilot وSourcegraph Cody — أربع أدوات برمجة بالذكاء الاصطناعي مقارَنة. قاعدة القرار التي يتجاهلها معظم التصنيفات: هل تعمل مع نموذج لغوي محلي؟',
     affiliateDisclosure: true,
@@ -3412,7 +3412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الأنسب لـ': 'الفرق التي تحتاج إلى سياق قاعدة الكود بأكملها',
           },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-ar.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-ar.webp',
         imageCaption: 'مقارنة أدوات البرمجة بالذكاء الاصطناعي -- لقطة يوليو 2026',
       },
       whichTool: {
@@ -3430,7 +3430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'وضعك': 'لا أمتلك GPU ولا أستطيع تشغيل نموذج لغوي محلي', 'اختر هذا': 'GitHub Copilot أو Cursor (نماذج سحابية)' },
           { 'وضعك': 'لم أحسم قراري وأريد نقطة بداية آمنة بدون تكلفة', 'اختر هذا': 'Continue.dev — مجاني، ثم أضف أداة مدفوعة إذا تجاوزتها' },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-ar.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-ar.webp',
         imageCaption: 'أي أداة برمجة بالذكاء الاصطناعي تختار؟ -- اختصار القرار',
       },
       continueSection: {
@@ -3721,7 +3721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'AI 코딩 도구 비교 자료 대부분은 자동완성 품질만 평가하고, 많은 개발자에게 실제 구매를 결정짓는 핵심 질문을 간과합니다. 바로 이것입니다: 해당 도구는 로컬 LLM 위에서 실행됩니까, 아니면 코드를 제3자 서버로 전송합니까? 독점 코드, NDA 적용 업무, 또는 규제 산업의 경우 이 단 하나의 답변이 순위를 완전히 뒤바꿉니다. 이 가이드는 실제 의사 결정을 좌우하는 기준 — 로컬 LLM 호환성, 가격, IDE 지원 범위, 코드 전송 여부 — 에 따라 네 가지 도구(Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody)를 비교합니다. 가격에 관한 주의 사항: 개발자 도구 구독 요금은 요금제 개편에 따라 변경되므로, 이 가이드의 모든 수치는 2026년 7월 기준 스냅샷입니다. 구독 전에 공급업체 사이트에서 현재 요금을 반드시 확인하십시오.',
     metaDescription:
       '로컬 모델용 Continue.dev vs Cursor: Continue.dev(무료, 네이티브 Ollama)가 로컬 우선에서 우세, Cursor(월 약 $20)는 완성도. 최적 Ollama 모델: Qwen3 Coder 14B.',
-    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-ko.png',
+    heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-ko.webp',
     twitterDescription:
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — 4가지 AI 코딩 도구 비교. 대부분의 순위가 놓치는 결정적 기준: 로컬 LLM을 지원합니까?',
     affiliateDisclosure: true,
@@ -3882,7 +3882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '적합 대상': '전체 코드베이스 컨텍스트가 필요한 팀',
           },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-ko.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-ko.webp',
         imageCaption: 'AI 코딩 도구 비교 -- 2026년 7월 스냅샷',
       },
       whichTool: {
@@ -3900,7 +3900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '상황': 'GPU가 없어 로컬 LLM을 실행할 수 없음', '선택할 도구': 'GitHub Copilot 또는 Cursor (클라우드 모델)' },
           { '상황': '확실하지 않으며 안전하고 무료인 시작점을 원함', '선택할 도구': 'Continue.dev — 무료로 시작한 후 필요 시 유료 도구 추가' },
         ],
-        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-ko.png',
+        image: '/images/best-ai-coding-tools-comparison-2026-which-tool-hero-ko.webp',
         imageCaption: '어떤 AI 코딩 도구를 선택해야 할까? -- 결정 지름길',
       },
       continueSection: {

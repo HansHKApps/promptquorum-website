@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-en.png',
+    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-en.webp',
     title: 'Best LLM for AMD 5700X + RTX 3070 Ti?',
     dateModified: '2026-07-26',
     seoTitle: 'AMD 5700X + RTX 3070 Ti: Best LLM (25 tok/s) | PromptQuorum',
@@ -132,7 +132,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-de.png',
+    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-de.webp',
     title: 'Bestes LLM für AMD 5700X + RTX 3070 Ti?',
     seoTitle: 'AMD 5700X + RTX 3070 Ti: Bestes LLM (25 tok/s)',
     metaDescription: 'Llama 3 8B Q4_K_M und Mistral Small Q5_K_M erreichen 22–25 tok/s auf RTX 3070 Ti bei je ~6 GB VRAM. Tabelle, FAQ und Upgrade-Pfad im Artikel.',
@@ -213,7 +213,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-fr.png',
+    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-fr.webp',
     title: 'Meilleur LLM pour AMD 5700X + RTX 3070 Ti ?',
     seoTitle: 'AMD 5700X + RTX 3070 Ti : meilleur LLM (25 tok/s)',
     metaDescription: 'Llama 3 8B Q4_K_M et Mistral Small Q5_K_M atteignent 22–25 tok/s sur RTX 3070 Ti, ~6 Go de VRAM chacun. Tableau des vitesses, FAQ et upgrade GPU à l\'intérieur.',
@@ -294,7 +294,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-ja.png',
+    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-ja.webp',
     title: 'AMD 5700X + RTX 3070 Ti に最適な LLM は？',
     seoTitle: 'AMD 5700X+RTX 3070 Ti 最適LLM（25 tok/s）',
     metaDescription: 'Llama 3 8B Q4_K_M と Mistral Small Q5_K_M は RTX 3070 Ti で22–25 tok/sを実現、各約6 GB VRAM使用。速度比較表、FAQ、GPUアップグレード方法も掲載。',
@@ -375,7 +375,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-zh.png',
+    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-zh.webp',
     title: 'AMD 5700X + RTX 3070 Ti 最适合哪款 LLM？',
     seoTitle: 'AMD 5700X+RTX 3070 Ti 最佳LLM（25 tok/s）',
     metaDescription: 'Llama 3 8B Q4_K_M和Mistral Small Q5_K_M在RTX 3070 Ti上达到22–25 tok/s，各占用约6 GB VRAM。文内含速度对比表、FAQ及GPU升级路径。',
@@ -456,7 +456,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-es.png',
+    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-es.webp',
     title: '¿Mejor LLM para AMD 5700X + RTX 3070 Ti?',
     seoTitle: 'AMD 5700X + RTX 3070 Ti: mejor LLM (25 tok/s)',
     metaDescription: 'Llama 3 8B Q4_K_M y Mistral Small Q5_K_M llegan a 22–25 tok/s en RTX 3070 Ti con ~6 GB VRAM cada uno. Tabla de velocidades, FAQs y ruta de mejora GPU dentro.',
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-pt.png',
+    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-pt.webp',
     title: 'Melhor LLM para AMD 5700X + RTX 3070 Ti?',
     seoTitle: 'AMD 5700X + RTX 3070 Ti: melhor LLM (25 tok/s)',
     metaDescription: 'Llama 3 8B Q4_K_M e Mistral Small Q5_K_M atingem 22–25 tok/s na RTX 3070 Ti com ~6 GB VRAM cada. Tabela de velocidades, FAQs e caminho de upgrade GPU dentro.',
@@ -618,7 +618,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-ar.png',
+    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-ar.webp',
     title: 'أفضل نموذج لغة كبير لـ⁨AMD 5700X + RTX 3070 Ti⁩؟',
     seoTitle: '⁨LLM⁩ لـ⁨AMD 5700X + RTX 3070 Ti⁩ بـ⁨25⁩ رمز/ثانية',
     metaDescription: '⁨Llama 3 8B Q4⁩_⁨K⁩_⁨M⁩ و⁨Mistral Small Q5⁩_⁨K⁩_⁨M⁩ بـ⁨22⁩–⁨25⁩ رمز/ثانية على ⁨RTX 3070 Ti⁩. الجدول والأسئلة ومسار ترقية ⁨GPU⁩ بالداخل.',
@@ -699,7 +699,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-ko.png',
+    heroImage: '/images/best-models-amd-5700x-3070ti-overview-hero-ko.webp',
     title: 'AMD 5700X + RTX 3070 Ti에 최적인 LLM은?',
     seoTitle: 'AMD 5700X + RTX 3070 Ti 최적 LLM (25 tok/s)',
     metaDescription: 'Llama 3 8B Q4_K_M과 Mistral Small Q5_K_M은 RTX 3070 Ti에서 22~25 tok/s를 달성하며 각각 VRAM 약 6 GB를 사용합니다. 속도 비교표, FAQ, GPU 업그레이드 경로까지 본문에서 확인하세요.',

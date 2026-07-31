@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quick Answers',
-    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-en.png',
+    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-en.webp',
     title: 'Can You Run a Local LLM on a Raspberry Pi 5?',
     seoTitle: 'Local LLM on Raspberry Pi 5: What Actually Works (2026)',
     metaDescription: 'Yes, but only tiny models: Raspberry Pi 5 (8GB) runs 1B-3B models at Q4 via llama.cpp, at roughly 2-5 tokens/sec on CPU. No GPU acceleration is available.',
@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Quick Answers',
-    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-ar.png',
+    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-ar.webp',
     title: 'هل يمكن تشغيل LLM محلي على جهاز Raspberry Pi 5؟',
     seoTitle: 'تشغيل LLM محلي على Raspberry Pi 5: ما يعمل فعليًا (2026)',
     metaDescription: 'نعم، لكن فقط نماذج صغيرة جدًا: يشغّل Raspberry Pi 5 (8GB) نماذج 1B-3B بدقة Q4 عبر llama.cpp، بحوالي 2-5 رمزًا في الثانية على CPU. لا تسريع GPU متاح.',
@@ -230,7 +230,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Quick Answers',
-    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-de.png',
+    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-de.webp',
     title: 'Kann man ein lokales LLM auf einem Raspberry Pi 5 betreiben?',
     seoTitle: 'Lokales LLM auf Raspberry Pi 5: Was wirklich funktioniert (2026)',
     metaDescription: 'Ja, aber nur winzige Modelle: Der Raspberry Pi 5 (8GB) läuft 1B-3B-Modelle bei Q4 via llama.cpp mit 2-5 Tokens/Sek. auf der CPU – ohne GPU-Beschleunigung.',
@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Quick Answers',
-    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-es.png',
+    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-es.webp',
     title: '¿Puedes Ejecutar un LLM Local en una Raspberry Pi 5?',
     seoTitle: 'LLM Local en Raspberry Pi 5: Qué Funciona Realmente (2026)',
     metaDescription: 'Sí, pero solo modelos diminutos: la Raspberry Pi 5 (8GB) ejecuta modelos de 1B-3B en Q4 vía llama.cpp a 2-5 tokens/seg en CPU, sin aceleración por GPU.',
@@ -456,7 +456,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Quick Answers',
-    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-fr.png',
+    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-fr.webp',
     title: 'Peut-on exécuter un LLM local sur un Raspberry Pi 5 ?',
     seoTitle: 'LLM local sur Raspberry Pi 5 : ce qui fonctionne (2026)',
     metaDescription: 'Oui, mais seulement des modèles 1B-3B : le Raspberry Pi 5 (8 Go) tourne via llama.cpp à environ 2-5 tokens/sec sur CPU, sans accélération GPU disponible.',
@@ -569,7 +569,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Quick Answers',
-    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-ja.png',
+    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-ja.webp',
     title: 'Raspberry Pi 5でローカルLLMを動かせますか?',
     seoTitle: 'Raspberry Pi 5でのローカルLLM: 実際に動くもの(2026年)',
     metaDescription: '動きますが小さいモデルのみです: Raspberry Pi 5(8GB)はllama.cpp経由でQ4の1B-3Bモデルを、CPUでおよそ2-5トークン毎秒で動かせます。GPUアクセラレーションはありません。',
@@ -682,7 +682,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Quick Answers',
-    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-ko.png',
+    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-ko.webp',
     title: 'Raspberry Pi 5에서 로컬 LLM을 구동할 수 있는가?',
     seoTitle: 'Raspberry Pi 5 로컬 LLM: 실제로 되는 것 (2026)',
     metaDescription: '가능하지만 아주 작은 모델만: Raspberry Pi 5(8GB)는 llama.cpp를 통해 Q4의 1B-3B 모델을 CPU에서 초당 약 2-5토큰으로 구동합니다. GPU 가속은 없습니다.',
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Quick Answers',
-    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-pt.png',
+    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-pt.webp',
     title: 'É Possível Rodar um LLM Local em um Raspberry Pi 5?',
     seoTitle: 'LLM Local no Raspberry Pi 5: O Que Realmente Funciona (2026)',
     metaDescription: 'Sim, mas apenas modelos pequenos: o Raspberry Pi 5 (8GB) roda modelos de 1B-3B em Q4 via llama.cpp a 2-5 tokens/s na CPU, sem aceleração de GPU.',
@@ -908,7 +908,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Quick Answers',
-    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-zh.png',
+    heroImage: '/images/local-llm-raspberry-pi-5-overview-hero-zh.webp',
     title: 'Raspberry Pi 5 能运行本地 LLM 吗？',
     seoTitle: 'Raspberry Pi 5 本地 LLM 实测：真正能用的方案（2026）',
     metaDescription: '可以，但仅限极小模型：Raspberry Pi 5（8GB）通过 llama.cpp 以 Q4 运行 1B-3B 模型，CPU 上速度约每秒 2-5 个 token。没有 GPU 加速可用。',

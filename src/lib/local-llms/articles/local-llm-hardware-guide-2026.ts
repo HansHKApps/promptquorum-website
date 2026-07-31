@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'Local LLM Hardware Requirements 2026: 8GB to 70B by VRAM',
       intro: 'Running a local LLM means matching the model to your GPU\'s VRAM. As of July 2026, a 7B model needs about 4-5 GB VRAM at Q4_K_M (the standard rule of thumb: roughly 0.6 GB per billion parameters at 4-bit) or 8-9 GB at Q8, a 14B model needs ~9 GB at Q4_K_M, and most 70B models need ~40 GB -- more than a single RTX 4090 (24 GB) holds. This guide gives the exact hardware requirement per model size, then the best model for 8 GB, 12 GB, 16 GB, and 24 GB VRAM tiers, what it really takes to run 70B (and the far larger GLM-5.2) locally, CPU-only inference on 16 GB system RAM, MacBook 8 GB options, and current July 2026 GPU prices after this year\'s memory shortage.',
       metaDescription: 'Local LLM hardware requirements by VRAM: best models for 8, 16 & 24 GB GPUs plus exact 70B and GLM-5.2 needs. RTX 50-series, Apple M5, July 2026 prices.',
-      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-en.png',
+      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-en.webp',
       publishDate: '2026-04-04',
       readTime: '13 min read',
       educationalLevel: 'Intermediate',
@@ -181,7 +181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           callouts: [
             { type: 'keyPoint', text: '**In one sentence:** VRAM is the GPU\'s dedicated memory pool -- the single number that determines which AI models you can run locally and at what quality.' },
           ],
-          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-en.png',
+          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-en.webp',
           imageCaption: 'VRAM calculator showing the formula (Model Size × Bits) ÷ 8, with examples: 8B Q4_K_M = 4.7 GB, 13B Q5_K_M = 9.1 GB, 70B Q4_K_M = 40 GB. Q4_K_M is the recommended sweet spot for most hardware.',
         },
         kvCache: {
@@ -709,7 +709,7 @@ schema: {
       seoTitle: 'Requisitos de hardware para LLM locales 2026: de 8GB a 70B por VRAM',
       intro: 'Ejecutar un LLM local significa ajustar el modelo a la VRAM de tu GPU. A fecha de julio de 2026, un modelo de 7B necesita unos 4-5 GB de VRAM en Q4_K_M (la regla general habitual: aproximadamente 0,6 GB por cada mil millones de parámetros en 4 bits) u 8-9 GB en Q8, un modelo de 14B necesita ~9 GB en Q4_K_M, y la mayoría de los modelos de 70B necesitan ~40 GB -- más de lo que contiene una sola RTX 4090 (24 GB). Esta guía ofrece el requisito de hardware exacto por tamaño de modelo, luego el mejor modelo para los niveles de VRAM de 8 GB, 12 GB, 16 GB y 24 GB, qué hace falta realmente para ejecutar un 70B (y el mucho más grande GLM-5.2) en local, inferencia solo en CPU con 16 GB de RAM del sistema, opciones de MacBook de 8 GB, y los precios actuales de GPU de julio de 2026 tras la escasez de memoria de este año.',
       metaDescription: 'Requisitos de hardware para LLM locales por VRAM: mejores modelos para GPU de 8, 16 y 24 GB, además de las necesidades exactas para 70B y GLM-5.2. RTX serie 50, Apple M5, precios de julio de 2026.',
-      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-es.png',
+      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-es.webp',
       publishDate: '2026-04-04',
       readTime: '13 min de lectura',
       educationalLevel: 'Intermediate',
@@ -867,7 +867,7 @@ schema: {
           callouts: [
             { type: 'keyPoint', text: '**En una frase:** la VRAM es el grupo de memoria dedicada de la GPU -- el único número que determina qué modelos de IA puedes ejecutar en local y con qué calidad.' },
           ],
-          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-es.png',
+          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-es.webp',
           imageCaption: 'Calculadora de VRAM mostrando la fórmula (Tamaño del modelo × Bits) ÷ 8, con ejemplos: 8B Q4_K_M = 4,7 GB, 13B Q5_K_M = 9,1 GB, 70B Q4_K_M = 40 GB. Q4_K_M es el punto óptimo recomendado para la mayoría del hardware.',
         },
         kvCache: {
@@ -1395,7 +1395,7 @@ schema: {
       seoTitle: 'متطلبات عتاد ⁨LLM⁩ المحلي ⁨2026⁩: من ⁨8GB⁩ إلى ⁨70B⁩ حسب ⁨VRAM⁩',
       intro: 'تشغيل LLM محلي يعني مطابقة النموذج مع VRAM الخاص بـ GPU لديك. **قاعدة سريعة:** يحتاج نموذج 7B عند Q4 إلى ~4-5 GB VRAM فقط -- نحو 0.6 GB لكل مليار معامل عند دقة 4-بت. اعتبارًا من يوليو 2026، يحتاج نموذج 7B إلى 8-9 GB VRAM عند Q8، ويحتاج نموذج 14B إلى ~9 GB عند Q4_K_M، وتحتاج معظم نماذج 70B إلى ~40 GB -- أكثر مما يحمله RTX 4090 (24 GB) الواحد. يقدم هذا الدليل متطلبات العتاد الدقيقة لكل حجم نموذج، ثم أفضل نموذج لمستويات 8 GB و12 GB و16 GB و24 GB VRAM، وما يتطلبه فعليًا تشغيل 70B (وGLM-5.2 الأكبر بكثير) محليًا، والاستدلال على CPU فقط بذاكرة نظام 16 GB، وخيارات MacBook بسعة 8 GB، وأسعار GPU الحالية في يوليو 2026 بعد نقص الذاكرة هذا العام.',
       metaDescription: 'متطلبات عتاد ⁨LLM⁩ المحلي حسب ⁨VRAM⁩: أفضل النماذج لبطاقات ⁨8⁩ و⁨16⁩ و⁨24 GB⁩ إضافة إلى الاحتياجات الدقيقة لـ ⁨70B⁩ و⁨GLM-5.2⁩. ⁨RTX 50-series⁩ و⁨Apple M5⁩ وأسعار يوليو ⁨2026⁩.',
-      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-ar.png',
+      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-ar.webp',
       publishDate: '2026-04-04',
       readTime: '13 دقيقة للقراءة',
       educationalLevel: 'Intermediate',
@@ -1553,7 +1553,7 @@ schema: {
           callouts: [
             { type: 'keyPoint', text: '**في جملة واحدة:** VRAM هو مجمع الذاكرة المخصص لـ GPU -- الرقم الوحيد الذي يحدد أي نماذج ذكاء اصطناعي يمكنك تشغيلها محليًا وبأي جودة.' },
           ],
-          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-ar.png',
+          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-ar.webp',
           imageCaption: 'حاسبة VRAM تُظهر الصيغة (حجم النموذج × البتات) ÷ 8، مع أمثلة: 8B Q4_K_M = 4.7 GB، 13B Q5_K_M = 9.1 GB، 70B Q4_K_M = 40 GB. Q4_K_M هي النقطة المثالية الموصى بها لمعظم العتاد.',
         },
         kvCache: {
@@ -2081,7 +2081,7 @@ schema: {
       seoTitle: 'Requisitos de Hardware para LLM Local 2026: 8GB a 70B por VRAM',
       intro: 'Rodar um LLM local significa combinar o modelo com a VRAM da sua GPU. Em julho de 2026, um modelo 7B precisa de cerca de 4-5 GB de VRAM em Q4_K_M (regra prática padrão: aproximadamente 0,6 GB por bilhão de parâmetros em 4 bits) ou 8-9 GB em Q8, um modelo 14B precisa de ~9 GB em Q4_K_M, e a maioria dos modelos 70B precisa de ~40 GB -- mais do que uma única RTX 4090 (24 GB) comporta. Este guia traz o requisito exato de hardware por tamanho de modelo, depois o melhor modelo para as faixas de 8 GB, 12 GB, 16 GB e 24 GB de VRAM, o que realmente é preciso para rodar 70B (e o muito maior GLM-5.2) localmente, inferência apenas em CPU com 16 GB de RAM do sistema, opções de MacBook com 8 GB, e os preços atuais de GPU de julho de 2026 após a escassez de memória deste ano.',
       metaDescription: 'Requisitos de hardware para LLM local por VRAM: melhores modelos para GPUs de 8, 16 e 24 GB e o que 70B e GLM-5.2 precisam. RTX série 50, Apple M5, preços de julho de 2026.',
-      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-pt.png',
+      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-pt.webp',
       publishDate: '2026-04-04',
       readTime: '13 min de leitura',
       educationalLevel: 'Intermediate',
@@ -2239,7 +2239,7 @@ schema: {
           callouts: [
             { type: 'keyPoint', text: '**Em uma frase:** a VRAM é o pool de memória dedicado da GPU -- o único número que determina quais modelos de IA você pode rodar localmente e com qual qualidade.' },
           ],
-          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-pt.png',
+          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-pt.webp',
           imageCaption: 'Calculadora de VRAM mostrando a fórmula (Tamanho do Modelo × Bits) ÷ 8, com exemplos: 8B Q4_K_M = 4,7 GB, 13B Q5_K_M = 9,1 GB, 70B Q4_K_M = 40 GB. O Q4_K_M é o ponto ideal recomendado para a maioria dos hardwares.',
         },
         kvCache: {
@@ -2767,7 +2767,7 @@ schema: {
       seoTitle: 'Lokale LLM Hardware-Anforderungen 2026: 8GB bis 70B nach VRAM',
       intro: 'Ein lokales LLM zu betreiben bedeutet, das Modell auf den VRAM deiner GPU abzustimmen. Stand Juli 2026 braucht ein 7B-Modell bei Q4_K_M etwa 4-5 GB VRAM (Faustregel: rund 0,6 GB pro Milliarde Parameter bei 4-Bit) oder 8-9 GB bei Q8, ein 14B-Modell ~9 GB bei Q4_K_M und die meisten 70B-Modelle benoetigen ~40 GB -- mehr, als eine einzelne RTX 4090 (24 GB) fasst. Dieser Leitfaden nennt die exakte Hardware-Anforderung pro Modellgroesse, dann das beste Modell fuer die VRAM-Stufen 8 GB, 12 GB, 16 GB und 24 GB, was es wirklich braucht, um 70B (und das weit groessere GLM-5.2) lokal zu betreiben, CPU-only-Inferenz auf 16 GB Arbeitsspeicher, MacBook-8-GB-Optionen und die aktuellen GPU-Preise von Juli 2026 nach der diesjaehrigen Speicherknappheit.',
       metaDescription: 'Lokale LLM Hardware-Anforderungen nach VRAM: beste Modelle fuer 8-, 16- und 24-GB-GPUs plus exakter Bedarf fuer 70B und GLM-5.2. RTX-50-Serie, Apple M5, Preise Juli 2026.',
-      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-de.png',
+      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-de.webp',
       publishDate: '2026-04-04',
       readTime: '13 Min. Lesezeit',
       educationalLevel: 'Intermediate',
@@ -2925,7 +2925,7 @@ schema: {
           callouts: [
             { type: 'keyPoint', text: '**In einem Satz:** VRAM ist der dedizierte Speicherpool der GPU -- die eine Zahl, die bestimmt, welche KI-Modelle du lokal und in welcher Qualitaet ausfuehren kannst.' },
           ],
-          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-de.png',
+          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-de.webp',
           imageCaption: 'VRAM-Rechner mit der Formel (Modellgroesse × Bits) ÷ 8, mit Beispielen: 8B Q4_K_M = 4,7 GB, 13B Q5_K_M = 9,1 GB, 70B Q4_K_M = 40 GB. Q4_K_M ist der empfohlene Sweetspot fuer die meiste Hardware.',
         },
         kvCache: {
@@ -3453,7 +3453,7 @@ schema: {
       seoTitle: 'Configuration materielle LLM local 2026 : de 8 Go a 70B par VRAM',
       intro: 'Faire tourner un LLM local consiste a adapter le modele a la VRAM de votre GPU. Regle empirique pour un 7B en Q4 : comptez 4-5 Go de VRAM, soit environ 0,6 Go par milliard de parametres en 4 bits. En juillet 2026, un modele 7B necessite 8-9 Go de VRAM en Q8, un modele 14B environ 9 Go en Q4_K_M, et la plupart des modeles 70B ont besoin d\'environ 40 Go -- soit plus que ce que contient une seule RTX 4090 (24 Go). Ce guide donne le besoin materiel exact par taille de modele, puis le meilleur modele pour les paliers de VRAM de 8 Go, 12 Go, 16 Go et 24 Go, ce qu\'il faut vraiment pour faire tourner du 70B (et le bien plus grand GLM-5.2) en local, l\'inference CPU seul sur 16 Go de RAM systeme, les options MacBook 8 Go, et les prix GPU actuels de juillet 2026 apres la penurie de memoire de cette annee.',
       metaDescription: 'Besoins materiels LLM local par VRAM : meilleurs modeles pour GPU 8, 16 et 24 Go plus ce qu\'exigent exactement le 70B et GLM-5.2. RTX serie 50, Apple M5, prix juillet 2026.',
-      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-fr.png',
+      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-fr.webp',
       publishDate: '2026-04-04',
       readTime: '13 min de lecture',
       educationalLevel: 'Intermediate',
@@ -3611,7 +3611,7 @@ schema: {
           callouts: [
             { type: 'keyPoint', text: '**En une phrase :** la VRAM est le pool memoire dedie du GPU -- le seul chiffre qui determine quels modeles d\'IA vous pouvez faire tourner en local et a quelle qualite.' },
           ],
-          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-fr.png',
+          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-fr.webp',
           imageCaption: 'Calculateur de VRAM montrant la formule (taille du modele x bits) / 8, avec exemples : 8B Q4_K_M = 4,7 Go, 13B Q5_K_M = 9,1 Go, 70B Q4_K_M = 40 Go. Q4_K_M est le point ideal recommande pour la plupart du materiel.',
         },
         kvCache: {
@@ -4140,7 +4140,7 @@ schema: {
       seoTitle: '2026年ローカルLLMハードウェア要件：8GBから70BまでVRAM別解説',
       intro: 'ローカルLLMを実行するということは、モデルをGPUのVRAMに合わせることを意味します。2026年7月時点で、7BモデルはQ4_K_Mで約4〜5 GBのVRAM（標準的な目安：4ビットでパラメータ10億あたり約0.6 GB）またはQ8で8〜9 GB、14BモデルはQ4_K_Mで約9 GB、そしてほとんどの70Bモデルは約40 GB（単一のRTX 4090の24 GBを超える）を必要とします。本ガイドでは、モデルサイズごとの正確なハードウェア要件を示し、続いて8 GB、12 GB、16 GB、24 GBの各VRAMティアに最適なモデル、70B（そしてはるかに巨大なGLM-5.2）をローカルで実行するために実際に必要なもの、システムRAM 16 GBでのCPUのみの推論、MacBook 8 GBの選択肢、そして今年のメモリ不足を経た2026年7月現在のGPU価格を解説します。',
       metaDescription: 'VRAM別ローカルLLMハードウェア要件：8、16、24 GB GPU向けベストモデルと70BおよびGLM-5.2をローカルで動かすために必要なもの。RTX 50シリーズ、Apple M5、2026年7月価格。',
-      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-ja.png',
+      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-ja.webp',
       publishDate: '2026-04-04',
       readTime: '13分で読めます',
       educationalLevel: 'Intermediate',
@@ -4298,7 +4298,7 @@ schema: {
           callouts: [
             { type: 'keyPoint', text: '**一文で言うと：** VRAMはGPU専用のメモリプールであり、どのAIモデルをローカルで、どの品質で実行できるかを決定する唯一の数値です。' },
           ],
-          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-ja.png',
+          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-ja.webp',
           imageCaption: '計算式（モデルサイズ × ビット数）÷ 8 を示すVRAM計算機、例付き：8B Q4_K_M = 4.7 GB、13B Q5_K_M = 9.1 GB、70B Q4_K_M = 40 GB。Q4_K_Mはほとんどのハードウェアで推奨されるスイートスポットです。',
         },
         kvCache: {
@@ -4826,7 +4826,7 @@ schema: {
       seoTitle: '2026年本地LLM硬件要求：8GB到70B，按显存划分',
       intro: '运行本地LLM意味着将模型与GPU的显存相匹配。截至2026年7月，一个7B模型在Q4_K_M下大约需要4-5 GB显存（标准经验法则：4位精度下每十亿参数约0.6 GB），在Q8下需要8-9 GB，14B模型在Q4_K_M下需要约9 GB，而大多数70B模型需要约40 GB——超过单张RTX 4090（24 GB）的容量。本指南给出每种模型规模的精确硬件要求，然后是8 GB、12 GB、16 GB和24 GB显存档位的最佳模型，本地运行70B（以及规模大得多的GLM-5.2）真正需要什么，16 GB系统内存上的纯CPU推理，MacBook 8 GB的选项，以及今年内存短缺之后2026年7月的当前GPU价格。',
       metaDescription: '按显存划分的本地LLM硬件要求：8、16和24 GB GPU的最佳模型，以及70B和GLM-5.2的精确需求。RTX 50系列、Apple M5、2026年7月价格。',
-      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-zh.png',
+      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-zh.webp',
       publishDate: '2026-04-04',
       readTime: '阅读时间13分钟',
       educationalLevel: 'Intermediate',
@@ -4984,7 +4984,7 @@ schema: {
           callouts: [
             { type: 'keyPoint', text: '**一句话：** 显存是 GPU 的专用内存池——这个单一数字决定了你可以在本地运行哪些 AI 模型以及以何种质量运行。' },
           ],
-          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-zh.png',
+          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-zh.webp',
           imageCaption: '显存计算器展示公式 (Model Size × Bits) ÷ 8，示例：8B Q4_K_M = 4.7 GB，13B Q5_K_M = 9.1 GB，70B Q4_K_M = 40 GB。Q4_K_M 是大多数硬件推荐的甜点。',
         },
         kvCache: {
@@ -5512,7 +5512,7 @@ schema: {
       seoTitle: '2026년 LLM 하드웨어 요구 사항: 8GB부터 70B까지 VRAM별 가이드',
       intro: '로컬 LLM을 실행하려면 GPU의 VRAM을 실행하려는 모델에 맞게 설정해야 합니다. 기본 경험 법칙: 7B 모델은 Q4_K_M에서 약 4~5GB VRAM이 필요합니다(4비트 기준 파라미터 10억 개당 약 0.6GB). 2026년 7월 기준으로 7B 모델은 Q8에서 8~9GB VRAM이 필요하고, 14B 모델은 15GB, 대부분의 70B 모델은 Q4_K_M에서 39GB가 필요합니다. 이는 단일 RTX 4090의 용량을 초과합니다. 이 가이드는 12GB, 16GB, 24GB VRAM 티어별 모델 권장 사항, 70B(그리고 훨씬 더 큰 GLM-5.2)를 로컬에서 실행하는 데 실제로 필요한 것, 16GB 시스템 RAM에서의 CPU 전용 추론, RTX 4070 Ti에서의 llama.cpp 속도 설정, 그리고 완전한 하드웨어 빌드 구성을 다룹니다.',
       metaDescription: 'VRAM별 LLM 하드웨어 요구 사항: 8, 16, 24GB GPU를 위한 최적 모델과 70B 및 GLM-5.2에 정확히 필요한 사양. RTX 50 시리즈, Apple M5, 2026년 7월 가격.',
-      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-ko.png',
+      heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-ko.webp',
       publishDate: '2026-04-04',
       readTime: '13분 읽기',
       educationalLevel: 'Intermediate',
@@ -5642,7 +5642,7 @@ schema: {
           callouts: [
             { type: 'keyPoint', text: '**한 문장 요약:** VRAM은 GPU의 전용 메모리 풀입니다 — 어떤 AI 모델을 로컬에서 어떤 품질로 실행할 수 있는지를 결정하는 단일 수치입니다.' },
           ],
-          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-ko.png',
+          image: '/images/local-llm-hardware-guide-2026-vram-formula-hero-ko.webp',
           imageCaption: 'VRAM 계산기: 공식 (모델 크기 × 비트 수) ÷ 8, 예시 — 8B Q4_K_M = 4.7GB, 13B Q5_K_M = 9.1GB, 70B Q4_K_M = 40GB. Q4_K_M이 대부분의 하드웨어에서 권장되는 최적 지점입니다.',
         },
         kvCache: {

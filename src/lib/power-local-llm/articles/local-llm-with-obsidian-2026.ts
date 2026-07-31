@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Five Obsidian plugins turn a vault into a working second brain when paired with a local Ollama backend in 2026: Smart Connections, Copilot for Obsidian, Text Generator, Local GPT, and BMO Chatbot. Each covers a different layer — semantic search, inline chat, template generation, privacy-first conversation, lightweight context-aware chat. The recommended combination for most users is Smart Connections + Copilot for Obsidian: one handles vault-wide semantic linking, the other handles the chat interface. This guide ranks all five on vault search quality, generation speed, prompt customisation, and mobile-sync behaviour, with concrete configuration steps for Ollama.',
     metaDescription:
       'Best Obsidian plugins for local LLM with Ollama in 2026: Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot — tested and compared.',
-    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-en.png',
+    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-en.webp',
     twitterDescription:
       'Best Obsidian plugins for local LLM with Ollama in 2026: Smart Connections (semantic vault search) + Copilot for Obsidian (chat). All 5 plugins tested. Mobile sync caveats.',
     current_models_mentioned: [
@@ -177,7 +177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plugin': 'Local GPT', 'Vault search': 'No', 'Generation': 'Yes (chat)', 'Mobile sync': 'Plugin syncs; Ollama must be LAN-reachable', 'Best for': 'Privacy-first chat with current note' },
           { 'Plugin': 'BMO Chatbot', 'Vault search': 'No', 'Generation': 'Yes (chat)', 'Mobile sync': 'Plugin syncs; Ollama must be LAN-reachable', 'Best for': 'Lightweight chat with current note' },
         ],
-        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-en.png',
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-en.webp',
         imageCaption: 'Plugin comparison across 5 Obsidian LLM tools: Smart Connections is the only one with vault-wide embedding search, Copilot for Obsidian adds vault QA chat, and Text Generator, Local GPT, BMO Chatbot cover generation without vault search.',
         callouts: [
           {
@@ -307,7 +307,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Test:** open a note → check Smart Connections sidebar for related notes → open Copilot chat → ask a question that requires vault knowledge ("summarise what I\'ve written about [topic]") → verify the response references your actual notes.',
           '**Optional third plugin:** add Text Generator if you have repeatable workflows (daily-note summaries, meeting expansions, MOC generation). Configure with the same Ollama endpoint.',
         ],
-        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-en.png',
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-en.webp',
         imageCaption: 'Five-step setup flow for Smart Connections + Copilot for Obsidian: install Ollama and pull llama3.2:3b, start and verify at localhost:11434, index the vault with nomic-embed-text, configure Copilot at the /v1 endpoint, then test vault-aware chat.',
         callouts: [
           {
@@ -470,7 +470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Fünf Obsidian-Plugins verwandeln einen Vault 2026 in ein funktionierendes zweites Gehirn, sobald sie an ein lokales Ollama-Backend angebunden sind: Smart Connections, Copilot for Obsidian, Text Generator, Local GPT und BMO Chatbot. Jedes deckt eine andere Schicht ab — semantische Suche, Inline-Chat, Template-Generierung, Privacy-First-Konversation, schlanker kontextbewusster Chat. Die für die meisten Anwender empfohlene Kombination ist Smart Connections + Copilot for Obsidian: das eine übernimmt die vault-weite semantische Verknüpfung, das andere die Chat-Oberfläche. Dieser Leitfaden bewertet alle fünf Plugins anhand der Vault-Suchqualität, Generierungsgeschwindigkeit, Prompt-Anpassbarkeit und des Mobile-Sync-Verhaltens und enthält konkrete Konfigurationsschritte für Ollama.',
     metaDescription:
       'Beste Obsidian-Plugins für lokales LLM mit Ollama 2026: Smart Connections, Copilot, Text Generator, Local GPT und BMO Chatbot im Test und Vergleich.',
-    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-de.png',
+    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-de.webp',
     twitterDescription:
       'Beste Obsidian-Plugins für lokales LLM mit Ollama 2026: Smart Connections (semantische Vault-Suche) + Copilot for Obsidian (Chat). Alle 5 Plugins getestet. Mobile-Sync-Hinweise.',
     current_models_mentioned: [
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plugin': 'Local GPT', 'Vault-Suche': 'Nein', 'Generierung': 'Ja (Chat)', 'Mobile-Sync': 'Plugin synchronisiert; Ollama muss im LAN erreichbar sein', 'Am besten geeignet für': 'Privacy-First-Chat mit der aktuellen Notiz' },
           { 'Plugin': 'BMO Chatbot', 'Vault-Suche': 'Nein', 'Generierung': 'Ja (Chat)', 'Mobile-Sync': 'Plugin synchronisiert; Ollama muss im LAN erreichbar sein', 'Am besten geeignet für': 'Schlanker Chat mit der aktuellen Notiz' },
         ],
-        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-de.png',
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-de.webp',
         imageCaption: 'Vergleich von 5 Obsidian-LLM-Plugins: Nur Smart Connections durchsucht den gesamten Vault per Embedding-Index, Copilot for Obsidian ergänzt Vault-QA-Chat, und Text Generator, Local GPT sowie BMO Chatbot decken Generierung ohne Vault-Suche ab.',
         callouts: [
           {
@@ -759,7 +759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Testen:** Notiz öffnen → Smart-Connections-Sidebar auf verwandte Notizen prüfen → Copilot-Chat öffnen → eine Frage stellen, die Vault-Wissen erfordert („Fasse zusammen, was ich zu [Thema] geschrieben habe") → prüfen, ob die Antwort tatsächlich Ihre Notizen referenziert.',
           '**Optionales drittes Plugin:** Text Generator hinzufügen, wenn Sie wiederholbare Workflows haben (Daily-Note-Zusammenfassungen, Meeting-Erweiterungen, MOC-Generierung). Mit demselben Ollama-Endpoint konfigurieren.',
         ],
-        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-de.png',
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-de.webp',
         imageCaption: 'Fünf-Schritte-Setup für Smart Connections + Copilot for Obsidian: Ollama installieren und llama3.2:3b laden, unter localhost:11434 starten und prüfen, den Vault mit nomic-embed-text indexieren, Copilot am /v1-Endpoint konfigurieren und den vault-bewussten Chat testen.',
         callouts: [
           {
@@ -922,7 +922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Cinq plugins Obsidian transforment un vault en deuxième cerveau fonctionnel en 2026 lorsqu\'ils sont connectés à un backend Ollama local : Smart Connections, Copilot for Obsidian, Text Generator, Local GPT et BMO Chatbot. Chacun couvre une couche différente — recherche sémantique, chat intégré, génération de templates, conversation centrée sur la confidentialité, chat contexte léger. Pour la plupart des utilisateurs, la combinaison recommandée est Smart Connections + Copilot for Obsidian : l\'une gère la liaison sémantique dans l\'ensemble du vault, l\'autre fournit l\'interface de chat. Ce guide classe les cinq plugins selon la qualité de recherche du vault, la vitesse de génération, la personnalisation des prompts et le comportement de synchronisation mobile, avec des étapes de configuration concrètes pour Ollama.',
     metaDescription:
       'Meilleurs plugins Obsidian pour LLM local avec Ollama en 2026 : Smart Connections, Copilot, Text Generator, Local GPT et BMO Chatbot testés et comparés.',
-    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-fr.png',
+    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-fr.webp',
     twitterDescription:
       'Meilleurs plugins Obsidian pour LLM local avec Ollama en 2026 : Smart Connections (recherche sémantique du vault) + Copilot for Obsidian (chat). Les 5 plugins testés. Notes sur la synchronisation mobile.',
     current_models_mentioned: [
@@ -1081,7 +1081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plugin': 'Local GPT', 'Recherche vault': 'Non', 'Génération': 'Oui (chat)', 'Synchronisation mobile': 'Le plugin se synchronise ; Ollama doit être accessible sur le LAN', 'Meilleur pour': 'Chat axé sur la confidentialité avec note actuelle' },
           { 'Plugin': 'BMO Chatbot', 'Recherche vault': 'Non', 'Génération': 'Oui (chat)', 'Synchronisation mobile': 'Le plugin se synchronise ; Ollama doit être accessible sur le LAN', 'Meilleur pour': 'Chat léger avec note actuelle' },
         ],
-        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-fr.png',
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-fr.webp',
         imageCaption: 'Comparaison de 5 plugins LLM pour Obsidian : seul Smart Connections indexe tout le vault par embeddings, Copilot for Obsidian ajoute le chat en mode QA vault, et Text Generator, Local GPT, BMO Chatbot couvrent la génération sans recherche dans le vault.',
         callouts: [
           {
@@ -1211,7 +1211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Testez :** ouvrez une note → vérifiez la barre latérale Smart Connections pour les notes connexes → ouvrez le chat Copilot → posez une question nécessitant la connaissance du vault (« résumez ce que j\'ai écrit sur [sujet] ») → vérifiez que la réponse référence réellement vos notes.',
           '**Plugin tiers optionnel :** ajoutez Text Generator si vous avez des workflows répétables (résumés de notes quotidiennes, expansions de réunion, génération MOC). Configurez avec le même endpoint Ollama.',
         ],
-        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-fr.png',
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-fr.webp',
         imageCaption: 'Configuration en 5 étapes pour Smart Connections + Copilot for Obsidian : installer Ollama et télécharger llama3.2:3b, démarrer et vérifier sur localhost:11434, indexer le vault avec nomic-embed-text, configurer Copilot sur le point de terminaison /v1, puis tester le chat conscient du vault.',
         callouts: [
           {
@@ -1374,7 +1374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026年、5つのObsidianプラグインがローカルOllamaバックエンドと組み合わせることで、ボルトを機能する第二の脳に変えます: Smart Connections、Copilot for Obsidian、Text Generator、Local GPT、BMO Chatbot。各プラグインは異なるレイヤーをカバーしています — セマンティック検索、インラインチャット、テンプレート生成、プライバシー重視の会話、軽量なコンテキスト対応チャット。ほとんどのユーザーにとって推奨される組み合わせはSmart Connections + Copilot for Obsidianです: 一方がボルト全体のセマンティック連携を処理し、もう一方がチャットインターフェイスを提供します。このガイドは、ボルト検索品質、生成速度、プロンプトのカスタマイズ、モバイル同期の動作に基づいて5つのプラグインをランク付けし、Ollamaの具体的な設定手順を含みます。',
     metaDescription:
       'Obsidian向けOllamaローカルLLMプラグイン比較2026:Smart Connections、Copilot、Text Generator、Local GPT、BMO Chatbotを実機検証。',
-    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-ja.png',
+    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-ja.webp',
     twitterDescription:
       '2026年のObsidian + Ollamaローカル LLM最良の組み合わせ: Smart Connections (ボルトセマンティック検索) + Copilot for Obsidian (チャット)。すべての5つのプラグインを実機テスト。モバイル同期の注意事項。',
     current_models_mentioned: [
@@ -1533,7 +1533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'プラグイン': 'Local GPT', 'ボルト検索': 'いいえ', '生成': 'はい (チャット)', 'モバイル同期': 'プラグイン同期; OllamaはLAN上でアクセス可能である必要があります', '最適用途': '現在のノートでプライバシー重視チャット' },
           { 'プラグイン': 'BMO Chatbot', 'ボルト検索': 'いいえ', '生成': 'はい (チャット)', 'モバイル同期': 'プラグイン同期; OllamaはLAN上でアクセス可能である必要があります', '最適用途': '現在のノートで軽量チャット' },
         ],
-        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-ja.png',
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-ja.webp',
         imageCaption: 'Obsidian向け5つのLLMプラグインの比較: Smart Connectionsだけがエンベディングでボルト全体を検索でき、Copilot for ObsidianはvaultQAチャットを追加、Text Generator・Local GPT・BMO Chatbotはボルト検索なしの生成をカバーする。',
         callouts: [
           {
@@ -1663,7 +1663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**テスト:** ノートを開く → Smart Connectionsサイドバーで関連ノートを確認 → Copilotチャットを開く → ボルト知識を必要とする質問を尋ねる (「[トピック] について書いたものを要約してください」) → 応答が実際にノートを参照しているか確認。',
           '**オプション3番目プラグイン:** 繰り返し可能なワークフローがある場合Text Generatorを追加 (日次ノート要約、会議展開、MOC生成)。同じOllamaエンドポイントで設定します。',
         ],
-        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-ja.png',
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-ja.webp',
         imageCaption: 'Smart Connections + Copilot for Obsidianの5ステップ設定: Ollamaをインストールしllama3.2:3bを取得、localhost:11434で起動・確認、nomic-embed-textでボルトをインデックス、Copilotを/v1エンドポイントで設定、ボルトを認識するチャットをテストする。',
         callouts: [
           {
@@ -1826,7 +1826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026 年，五个 Obsidian 插件配合本地 Ollama 后端，能将您的库转变为真正可用的第二大脑：Smart Connections、Copilot for Obsidian、Text Generator、Local GPT 和 BMO Chatbot。每个插件负责不同的功能层——语义搜索、行内聊天、模板生成、隐私优先对话、轻量级上下文感知聊天。大多数用户的推荐组合是 Smart Connections + Copilot for Obsidian：前者处理库范围内的语义链接，后者处理聊天界面。本指南从库搜索质量、生成速度、提示自定义和移动同步行为五个维度评估这五个插件，并提供 Ollama 的具体配置步骤。',
     metaDescription:
       'Obsidian搭配Ollama本地大模型插件推荐2026：Smart Connections、Copilot、Text Generator、Local GPT、BMO Chatbot实测对比。',
-    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-zh.png',
+    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-zh.webp',
     twitterDescription:
       '2026 年最佳 Obsidian + Ollama 本地大模型组合：Smart Connections（语义库搜索）+ Copilot for Obsidian（聊天）。全部 5 个插件实测。移动同步注意事项。',
     current_models_mentioned: [
@@ -1985,7 +1985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '插件': 'Local GPT', '库搜索': '否', '生成': '是（聊天）', '移动同步': '插件同步；Ollama 必须在 LAN 上可达', '最适合': '当前笔记的隐私优先聊天' },
           { '插件': 'BMO Chatbot', '库搜索': '否', '生成': '是（聊天）', '移动同步': '插件同步；Ollama 必须在 LAN 上可达', '最适合': '当前笔记的轻量级聊天' },
         ],
-        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-zh.png',
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-zh.webp',
         imageCaption: '5 款 Obsidian 本地 LLM 插件对比：只有 Smart Connections 用嵌入索引搜索整个库，Copilot for Obsidian 增加了库 QA 聊天，Text Generator、Local GPT 和 BMO Chatbot 提供无库搜索的生成功能。',
         callouts: [
           {
@@ -2115,7 +2115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**测试：** 打开笔记 → 检查 Smart Connections 侧边栏的相关笔记 → 打开 Copilot 聊天 → 提出需要库知识的问题（"总结我写过的关于[主题]的内容"）→ 验证响应引用您的实际笔记。',
           '**可选第三个插件：** 如果您有可重复的工作流（每日笔记摘要、会议扩展、MOC 生成），添加 Text Generator。使用相同的 Ollama 端点配置。',
         ],
-        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-zh.png',
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-zh.webp',
         imageCaption: 'Smart Connections + Copilot for Obsidian 的 5 步安装流程：安装 Ollama 并拉取 llama3.2:3b，在 localhost:11434 启动并验证，用 nomic-embed-text 为库建立索引，在 /v1 端点配置 Copilot，最后测试库感知聊天。',
         callouts: [
           {
@@ -2278,7 +2278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Cinco plugins de Obsidian convierten un vault en un segundo cerebro funcional en 2026 cuando se combinan con un backend local de Ollama: Smart Connections, Copilot for Obsidian, Text Generator, Local GPT y BMO Chatbot. Cada uno cubre una capa diferente: búsqueda semántica, chat en línea, generación por plantillas, conversación con privacidad prioritaria, chat ligero con contexto. La combinación recomendada para la mayoría de usuarios es Smart Connections + Copilot for Obsidian: uno gestiona la vinculación semántica en todo el vault, el otro proporciona la interfaz de chat. Esta guía clasifica los cinco plugins según la calidad de búsqueda en el vault, velocidad de generación, personalización de prompts y comportamiento de sincronización móvil, con pasos concretos de configuración para Ollama.',
     metaDescription:
       'Mejores plugins de Obsidian para LLM local con Ollama en 2026: Smart Connections, Copilot, Text Generator, Local GPT y BMO Chatbot probados.',
-    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-es.png',
+    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-es.webp',
     twitterDescription:
       'Mejores plugins de Obsidian para LLM local con Ollama en 2026: Smart Connections (búsqueda semántica del vault) + Copilot for Obsidian (chat). Los 5 plugins probados. Advertencias de sincronización móvil.',
     current_models_mentioned: [
@@ -2437,7 +2437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plugin': 'Local GPT', 'Búsqueda en vault': 'No', 'Generación': 'Sí (chat)', 'Sincronización móvil': 'El plugin se sincroniza; Ollama debe ser accesible en LAN', 'Ideal para': 'Chat con privacidad prioritaria con la nota actual' },
           { 'Plugin': 'BMO Chatbot', 'Búsqueda en vault': 'No', 'Generación': 'Sí (chat)', 'Sincronización móvil': 'El plugin se sincroniza; Ollama debe ser accesible en LAN', 'Ideal para': 'Chat ligero con la nota actual' },
         ],
-        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-es.png',
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-es.webp',
         imageCaption: 'Comparación de 5 plugins de LLM local para Obsidian: solo Smart Connections indexa todo el vault con embeddings, Copilot for Obsidian añade el chat en modo vault QA, y Text Generator, Local GPT y BMO Chatbot cubren la generación sin búsqueda en el vault.',
         callouts: [
           {
@@ -2567,7 +2567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Prueba:** abre una nota → revisa la barra lateral de Smart Connections para notas relacionadas → abre el chat de Copilot → haz una pregunta que requiera conocimiento del vault ("resume lo que he escrito sobre [tema]") → verifica que la respuesta hace referencia a tus notas reales.',
           '**Tercer plugin opcional:** agrega Text Generator si tienes flujos de trabajo repetibles (resúmenes de notas diarias, expansiones de reuniones, generación de MOC). Configura con el mismo endpoint de Ollama.',
         ],
-        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-es.png',
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-es.webp',
         imageCaption: 'Configuración en 5 pasos de Smart Connections + Copilot for Obsidian: instalar Ollama y descargar llama3.2:3b, iniciar y verificar en localhost:11434, indexar el vault con nomic-embed-text, configurar Copilot en el endpoint /v1 y probar el chat consciente del vault.',
         callouts: [
           {
@@ -2746,7 +2746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Cinco plugins do Obsidian transformam um vault em um segundo cérebro funcional em 2026 quando combinados com um backend local do Ollama: Smart Connections, Copilot for Obsidian, Text Generator, Local GPT e BMO Chatbot. Cada um cobre uma camada diferente: busca semântica, chat inline, geração por templates, conversa com privacidade em primeiro lugar, chat leve com contexto. A combinação recomendada para a maioria dos usuários é Smart Connections + Copilot for Obsidian: um cuida da vinculação semântica em todo o vault, o outro fornece a interface de chat. Este guia classifica os cinco plugins por qualidade de busca no vault, velocidade de geração, personalização de prompts e comportamento de sincronização móvel, com passos concretos de configuração para o Ollama.',
     metaDescription:
       'Melhores plugins do Obsidian para LLM local com Ollama em 2026: Smart Connections, Copilot, Text Generator, Local GPT e BMO Chatbot testados.',
-    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-pt.png',
+    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-pt.webp',
     twitterDescription:
       'Melhores plugins do Obsidian para LLM local com Ollama em 2026: Smart Connections (busca semântica do vault) + Copilot for Obsidian (chat). Os 5 plugins testados. Ressalvas de sincronização móvel.',
     current_models_mentioned: [
@@ -2920,7 +2920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plugin': 'Local GPT', 'Busca no vault': 'Não', 'Geração': 'Sim (chat)', 'Sincronização móvel': 'O plugin sincroniza; o Ollama deve ser acessível na LAN', 'Melhor para': 'Chat com privacidade em primeiro lugar com a nota atual' },
           { 'Plugin': 'BMO Chatbot', 'Busca no vault': 'Não', 'Geração': 'Sim (chat)', 'Sincronização móvel': 'O plugin sincroniza; o Ollama deve ser acessível na LAN', 'Melhor para': 'Chat leve com a nota atual' },
         ],
-        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-pt.png',
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-pt.webp',
         imageCaption: 'Comparação de 5 plugins de LLM local para Obsidian: só o Smart Connections indexa o vault inteiro com embeddings, o Copilot for Obsidian acrescenta o chat em modo vault QA, e o Text Generator, Local GPT e BMO Chatbot cobrem a geração sem busca no vault.',
         callouts: [
           {
@@ -3050,7 +3050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Teste:** abra uma nota → verifique a barra lateral do Smart Connections em busca de notas relacionadas → abra o chat do Copilot → faça uma pergunta que exija conhecimento do vault ("resuma o que escrevi sobre [tema]") → verifique se a resposta faz referência às suas notas reais.',
           '**Terceiro plugin opcional:** adicione o Text Generator se você tem fluxos de trabalho repetíveis (resumos de notas diárias, expansões de reunião, geração de MOC). Configure com o mesmo endpoint do Ollama.',
         ],
-        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-pt.png',
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-pt.webp',
         imageCaption: 'Configuração em 5 passos do Smart Connections + Copilot for Obsidian: instalar o Ollama e baixar o llama3.2:3b, iniciar e verificar em localhost:11434, indexar o vault com nomic-embed-text, configurar o Copilot no endpoint /v1 e testar o chat com consciência do vault.',
         callouts: [
           {
@@ -3226,7 +3226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'خمسة ملحقات لـ Obsidian تحوّل المخزن إلى دماغ ثانٍ حقيقي في 2026 حين تُقرن بخلفية Ollama محلية: Smart Connections وCopilot for Obsidian وText Generator وLocal GPT وBMO Chatbot. يغطي كلٌّ منها طبقةً مختلفة: بحث دلالي، ودردشة مضمّنة، وتوليد بالقوالب، ومحادثة تعطي الأولوية للخصوصية، ودردشة خفيفة بسياق. المزيج الموصى به لمعظم المستخدمين هو Smart Connections + Copilot for Obsidian: الأول يتولى الربط الدلالي عبر المخزن بأكمله، والثاني يوفر واجهة الدردشة. يُقيّم هذا الدليل الملحقات الخمسة من حيث جودة البحث في المخزن وسرعة التوليد وتخصيص الموجّهات وسلوك المزامنة على الجوّال، مع خطوات تهيئة ملموسة لـ Ollama.',
     metaDescription:
       'أفضل ملحقات ⁨Obsidian⁩ لـ ⁨LLM⁩ محلي مع ⁨Ollama⁩ في ⁨2026⁩: ⁨Smart Connections⁩ وCopilot وText Generator وLocal GPT وBMO Chatbot — مُختبرة ومقارنة.',
-    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-ar.png',
+    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-ar.webp',
     twitterDescription:
       'أفضل ملحقات Obsidian لـ LLM محلي مع Ollama في 2026: Smart Connections (بحث دلالي في المخزن) + Copilot for Obsidian (دردشة). الملحقات الخمسة مُختبرة. تحفظات المزامنة المحمولة.',
     current_models_mentioned: [
@@ -3385,7 +3385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الملحق': 'Local GPT', 'البحث في المخزن': 'لا', 'التوليد': 'نعم (دردشة)', 'المزامنة المحمولة': 'يتزامن الملحق؛ يجب أن يكون Ollama متاحاً على LAN', 'الأنسب لـ': 'دردشة تعطي الأولوية للخصوصية مع الملاحظة الحالية' },
           { 'الملحق': 'BMO Chatbot', 'البحث في المخزن': 'لا', 'التوليد': 'نعم (دردشة)', 'المزامنة المحمولة': 'يتزامن الملحق؛ يجب أن يكون Ollama متاحاً على LAN', 'الأنسب لـ': 'دردشة خفيفة مع الملاحظة الحالية' },
         ],
-        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-ar.png',
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-ar.webp',
         imageCaption: 'مقارنة 5 ملحقات LLM محلية لـ Obsidian: Smart Connections وحده يفهرس المخزن بأكمله بالتضمينات، ويضيف Copilot for Obsidian دردشة بوضع vault QA، بينما يغطي Text Generator وLocal GPT وBMO Chatbot التوليد بدون بحث في المخزن.',
         callouts: [
           {
@@ -3515,7 +3515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الاختبار:** افتح ملاحظة ← راجع شريط Smart Connections الجانبي للملاحظات ذات الصلة ← افتح دردشة Copilot ← اطرح سؤالاً يتطلب معرفة بالمخزن ("لخّص ما كتبته عن [موضوع]") ← تحقق من أن الإجابة تُشير إلى ملاحظاتك الفعلية.',
           '**الملحق الثالث الاختياري:** أضف Text Generator إن كان لديك سير عمل متكررة (ملخصات الملاحظات اليومية، توسيعات الاجتماعات، توليد MOC). هيّئه بنفس نقطة نهاية Ollama.',
         ],
-        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-ar.png',
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-ar.webp',
         imageCaption: 'إعداد من 5 خطوات لـ Smart Connections + Copilot for Obsidian: ثبّت Ollama ونزّل llama3.2:3b، شغّله وتحقق منه على localhost:11434، فهرس المخزن باستخدام nomic-embed-text، هيّئ Copilot على نقطة نهاية /v1، ثم اختبر الدردشة المدركة للمخزن.',
         callouts: [
           {
@@ -3691,7 +3691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026년에 Ollama 로컬 백엔드와 결합하면 5가지 Obsidian 플러그인이 보관함을 완전한 제2의 뇌로 변환합니다: Smart Connections, Copilot for Obsidian, Text Generator, Local GPT, BMO Chatbot. 각각 다른 레이어를 담당합니다—시맨틱 검색, 인라인 채팅, 템플릿 기반 생성, 개인 정보 보호 우선 대화, 컨텍스트가 있는 경량 채팅. 대부분의 사용자에게 권장하는 조합은 Smart Connections + Copilot for Obsidian입니다. 하나는 보관함 전체의 시맨틱 연결을 관리하고, 다른 하나는 채팅 인터페이스를 제공합니다. 이 가이드는 보관함 검색 품질, 생성 속도, 프롬프트 커스터마이징, 모바일 동기화 동작을 기준으로 5가지 플러그인을 평가하며 Ollama 설정을 위한 구체적인 단계를 제공합니다.',
     metaDescription:
       'Obsidian×Ollama 로컬 LLM 플러그인 추천 2026: Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot 실사용 비교.',
-    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-ko.png',
+    heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-ko.webp',
     twitterDescription:
       '2026년 최적의 Obsidian + Ollama 로컬 LLM 조합: Smart Connections(보관함 시맨틱 검색) + Copilot for Obsidian(채팅). 5가지 플러그인 실사용 테스트. 모바일 동기화 주의사항 포함.',
     current_models_mentioned: [
@@ -3850,7 +3850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '플러그인': 'Local GPT', '보관함 검색': '아니오', '생성': '예(채팅)', '모바일 동기화': '플러그인 동기화됨; Ollama는 LAN에서 접근 가능해야 함', '최적 용도': '현재 노트와 개인 정보 보호 우선 채팅' },
           { '플러그인': 'BMO Chatbot', '보관함 검색': '아니오', '생성': '예(채팅)', '모바일 동기화': '플러그인 동기화됨; Ollama는 LAN에서 접근 가능해야 함', '최적 용도': '현재 노트와 경량 채팅' },
         ],
-        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-ko.png',
+        image: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-ko.webp',
         imageCaption: 'Obsidian용 로컬 LLM 플러그인 5종 비교: Smart Connections만 임베딩으로 보관함 전체를 검색하고, Copilot for Obsidian은 보관함 QA 채팅을 추가하며, Text Generator·Local GPT·BMO Chatbot은 보관함 검색 없이 생성 기능을 제공합니다.',
         callouts: [
           {
@@ -3980,7 +3980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**테스트:** 노트 열기 → Smart Connections 사이드바에서 관련 노트 확인 → Copilot 채팅 열기 → 보관함 지식이 필요한 질문 하기("내가 [주제]에 대해 쓴 내용 요약해줘") → 응답이 실제 노트를 참조하는지 확인.',
           '**선택적 세 번째 플러그인:** 반복 가능한 워크플로(일일 노트 요약, 회의 확장, MOC 생성)가 있다면 Text Generator를 추가하십시오. 동일한 Ollama 엔드포인트로 설정하십시오.',
         ],
-        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-ko.png',
+        image: '/images/local-llm-with-obsidian-2026-setup-flow-hero-ko.webp',
         imageCaption: 'Smart Connections + Copilot for Obsidian 5단계 설정: Ollama 설치 후 llama3.2:3b 다운로드, localhost:11434에서 시작 및 확인, nomic-embed-text로 보관함 색인 생성, /v1 엔드포인트에서 Copilot 설정, 보관함 인식 채팅 테스트.',
         callouts: [
           {

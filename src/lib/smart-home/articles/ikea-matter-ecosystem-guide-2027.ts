@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-en.png',
+    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-en.webp',
     title: "IKEA's Matter Ecosystem: Complete Guide (2027)",
     seoTitle: 'IKEA Matter Ecosystem Guide (2027)',
     // Verified 2026-07-16 against IKEA's own US product listing (ikea.com/us/en/cat/smart-home-products-36812/)
@@ -157,7 +157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-de.png',
+    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-de.webp',
     title: 'Das Matter-Ökosystem von IKEA: Kompletter Leitfaden (2027)',
     seoTitle: 'IKEA-Matter-Ökosystem-Leitfaden (2027)',
     intro:
@@ -304,7 +304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-fr.png',
+    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-fr.webp',
     title: "L'écosystème Matter d'IKEA : guide complet (2027)",
     seoTitle: "Guide de l'écosystème Matter IKEA (2027)",
     intro:
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-ja.png',
+    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-ja.webp',
     title: 'IKEAのMatterエコシステム：完全ガイド（2027年）',
     seoTitle: 'IKEA Matterエコシステムガイド（2027年）',
     intro:
@@ -598,7 +598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-zh.png',
+    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-zh.webp',
     title: '宜家的Matter生态系统：完整指南（2027年）',
     seoTitle: '宜家Matter生态系统指南（2027年）',
     intro:
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-es.png',
+    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-es.webp',
     title: 'El ecosistema Matter de IKEA: guía completa (2027)',
     seoTitle: 'Guía del ecosistema Matter de IKEA (2027)',
     intro:
@@ -892,7 +892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-pt.png',
+    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-pt.webp',
     title: 'O ecossistema Matter da IKEA: guia completo (2027)',
     seoTitle: 'Guia do ecossistema Matter da IKEA (2027)',
     intro:
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-ar.png',
+    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-ar.webp',
     title: 'نظام IKEA البيئي لـ Matter: دليل شامل (⁨2027⁩)',
     seoTitle: 'دليل نظام IKEA البيئي لـ Matter (⁨2027⁩)',
     intro:
@@ -1186,7 +1186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-ko.png',
+    heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-ko.webp',
     title: 'IKEA의 Matter 생태계: 완전 가이드 (2027년)',
     seoTitle: 'IKEA Matter 생태계 가이드 (2027년)',
     intro:

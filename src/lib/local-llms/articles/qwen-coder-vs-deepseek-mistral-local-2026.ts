@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Qwen 3.6 Coder vs DeepSeek vs Mistral: Coding Benchmark 2026',
     intro: 'Qwen 3.6 27B scores 77.2% SWE-bench locally on 16 GB VRAM, matching DeepSeek Coder (91.6% HumanEval, ~75% SWE-bench) and outperforming Mistral Devstral Small 24B (90.1% HumanEval, ~73% SWE-bench) on agentic coding. All three run locally on consumer hardware. This benchmark covers HumanEval, SWE-bench, MBPP, per-token cost math, latency at different quantizations, hardware profiles, and multi-model dispatch strategy for coding workloads.',
     metaDescription: 'Local coding model benchmark: Qwen 3.6 27B (92.1% HumanEval, 77.2% SWE-bench), DeepSeek Coder ($0.14/1M), Mistral Devstral (agentic tasks). Cost, latency, hardware.',
-    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-en.png',
+    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-en.webp',
     publishDate: '2026-05-16',
     dateModified: '2026-07-13',
     readTime: '9 min read',
@@ -139,7 +139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarkTable: {
         id: 'benchmark-table',
         title: 'Benchmark Table',
-        image: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-en.png',
+        image: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-en.webp',
         imageCaption: 'SWE-bench scores for local coding models: Qwen 3.6 27B 77.2%, DeepSeek Coder ~75%, Mistral Devstral 24B ~73%, all runnable on consumer GPUs with 14-16 GB VRAM.',
         content: 'All scores are published May 2026 figures from official model pages or open leaderboards. HumanEval uses pass@1 metric. SWE-bench uses verified test pass rate. MBPP uses pass@1 on the full MBPP test set.',
         rows: [
@@ -228,7 +228,7 @@ ollama run qwen3-coder-local`,
       dispatchStrategy: {
         id: 'dispatch-strategy',
         title: 'Multi-Model Dispatch Strategy',
-        image: '/images/qwen-coder-deepseek-mistral-dispatch-hero-en.png',
+        image: '/images/qwen-coder-deepseek-mistral-dispatch-hero-en.webp',
         imageCaption: 'Coding task dispatch decision tree: GDPR-relevant code routes to local Qwen 3.6 27B, interactive autocomplete to local Devstral 24B (40 tok/sec), non-sensitive batch tasks to the DeepSeek Coder API ($0.14/1M tokens).',
         content: [
           'No single coding model wins every task. Qwen 3.6 27B leads on benchmark accuracy. Devstral leads on agentic multi-file tasks. DeepSeek Coder is the cheapest at scale for non-sensitive code. A dispatch layer that routes tasks by type captures the benefits of all three.',
@@ -302,7 +302,7 @@ DEEPSEEK_MODEL=deepseek-chat
     seoTitle: 'Qwen 3.6 Coder vs. DeepSeek vs. Mistral: Code-Benchmark 2026',
     intro: 'Qwen 3.6 27B erreicht 92,1% HumanEval und 77,2% SWE-bench lokal auf 16 GB VRAM. DeepSeek Coder erreicht 91,6% HumanEval als Cloud-API. Mistral Devstral Small 24B erreicht 90,1% HumanEval und fuehrt bei agentischen Multi-Datei-Aufgaben.',
     metaDescription: 'Qwen 3 Coder vs. DeepSeek vs. Mistral für lokales Coding 2026: Benchmarks, VRAM-Bedarf und Performance. Das beste lokale Coding-Modell.',
-    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-de.png',
+    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-de.webp',
     publishDate: '2026-05-16',
     dateModified: '2026-07-13',
     readTime: '9 min Lesezeit',
@@ -338,7 +338,7 @@ DEEPSEEK_MODEL=deepseek-chat
     seoTitle: 'Qwen 3.6 Coder vs DeepSeek vs Mistral : Benchmark Code 2026',
     intro: 'Qwen 3.6 27B obtient 77,2% SWE-bench en local sur 16 Go VRAM, rivalisant avec DeepSeek Coder (91,6% HumanEval, ~75% SWE-bench) et surpassant Mistral Devstral Small 24B (90,1% HumanEval, ~73% SWE-bench) sur les tâches de codage agentique. Les trois modèles fonctionnent localement sur du matériel grand public. Ce benchmark couvre HumanEval, SWE-bench, MBPP, le coût par token, la latence selon les quantisations, les profils matériels et la stratégie de dispatch multi-modèles pour les charges de travail de codage.',
     metaDescription: 'Benchmark code : Qwen 3.6 27B (92,1% HumanEval, 77,2% SWE-bench), DeepSeek Coder (0,14 $/1M), Mistral Devstral (tâches agents). Coûts, latence, matériel requis.',
-    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-fr.png',
+    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-fr.webp',
     publishDate: '2026-05-16',
     dateModified: '2026-07-13',
     readTime: '9 min de lecture',
@@ -395,7 +395,7 @@ DEEPSEEK_MODEL=deepseek-chat
       benchmarkTable: {
         id: 'benchmark-table',
         title: 'Tableau de benchmarks',
-        image: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-fr.png',
+        image: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-fr.webp',
         imageCaption: 'Scores SWE-bench des modèles de code locaux : Qwen 3.6 27B 77,2%, DeepSeek Coder ~75%, Mistral Devstral 24B ~73%, tous exécutables sur GPU grand public avec 14-16 Go de VRAM.',
         content: 'Tous les scores sont les chiffres publiés en mai 2026 sur les pages officielles des modèles ou les leaderboards ouverts. HumanEval utilise la métrique pass@1. SWE-bench utilise le taux de passage des tests vérifiés. MBPP utilise pass@1 sur l\'ensemble de test MBPP complet.',
         rows: [
@@ -483,7 +483,7 @@ ollama run qwen3-coder-local`,
       dispatchStrategy: {
         id: 'dispatch-strategy',
         title: 'Stratégie de dispatch multi-modèles',
-        image: '/images/qwen-coder-deepseek-mistral-dispatch-hero-fr.png',
+        image: '/images/qwen-coder-deepseek-mistral-dispatch-hero-fr.webp',
         imageCaption: 'Arbre de décision pour le dispatch des tâches de code : le code RGPD est routé vers Qwen 3.6 27B local, l\'autocomplétion interactive vers Devstral 24B local (40 tok/sec), les tâches par lots non sensibles vers l\'API DeepSeek Coder (0,14 $/1M tokens).',
         content: [
           'Aucun modèle de code ne remporte toutes les tâches. Qwen 3.6 27B est en tête sur la précision des benchmarks. Devstral est devant sur les tâches agentiques multi-fichiers. DeepSeek Coder est le moins cher à grande échelle pour le code non sensible. Une couche de dispatch qui route les tâches par type capture les avantages des trois.',
@@ -557,7 +557,7 @@ DEEPSEEK_MODEL=deepseek-chat
     seoTitle: 'Qwen 3.6 Coder vs DeepSeek vs Mistral：コードベンチマーク 2026',
     intro: 'Qwen 3.6 27Bは16 GB VRAMでローカル実行して92.1% HumanEvalと77.2% SWE-benchを達成。DeepSeek CoderはクラウドAPIで91.6% HumanEval。Mistral Devstral Small 24Bは90.1% HumanEvalで、エージェント型マルチファイルタスクに最適。',
     metaDescription: 'コードベンチマーク：Qwen 3.6 27B（92.1% HumanEval、77.2% SWE-bench）、DeepSeek Coder（$0.14/1M）、Mistral Devstral（エージェントタスク）。コスト、レイテンシ、ハードウェア要件。',
-    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-ja.png',
+    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-ja.webp',
     publishDate: '2026-05-16',
     dateModified: '2026-07-13',
     readTime: '9分で読めます',
@@ -593,7 +593,7 @@ DEEPSEEK_MODEL=deepseek-chat
     seoTitle: 'Qwen 3.6 Coder vs DeepSeek vs Mistral：编码基准 2026',
     intro: 'Qwen 3.6 27B在16 GB显存下本地运行达到92.1% HumanEval和77.2% SWE-bench。DeepSeek Coder作为云API达到91.6% HumanEval。Mistral Devstral Small 24B达到90.1% HumanEval，在智能体多文件任务上领先。',
     metaDescription: '编码基准：Qwen 3.6 27B（92.1% HumanEval、77.2% SWE-bench）、DeepSeek Coder（$0.14/1M）、Mistral Devstral（智能体任务）。成本、延迟、硬件要求详解。',
-    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-zh.png',
+    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-zh.webp',
     publishDate: '2026-05-16',
     dateModified: '2026-07-13',
     readTime: '9分钟阅读',
@@ -629,7 +629,7 @@ DEEPSEEK_MODEL=deepseek-chat
     seoTitle: 'Qwen 3.6 Coder vs DeepSeek vs Mistral: código 2026',
     intro: 'Qwen 3.6 27B alcanza 77.2% SWE-bench localmente en 16 GB VRAM, igualando a DeepSeek Coder (91.6% HumanEval, ~75% SWE-bench) y superando a Mistral Devstral Small 24B (90.1% HumanEval, ~73% SWE-bench) en codificación agéntica. Los tres modelos se ejecutan localmente en hardware de consumo. Este benchmark cubre HumanEval, SWE-bench, MBPP, matemáticas de coste por token, latencia con distintas cuantizaciones, perfiles de hardware y estrategia de despacho multi-modelo para cargas de trabajo de codificación.',
     metaDescription: 'Benchmark de código local: Qwen 3.6 27B (92,1% HumanEval, 77,2% SWE-bench), DeepSeek Coder ($0,14/1M) y Mistral Devstral. Coste, latencia y hardware.',
-    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-es.png',
+    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-es.webp',
     publishDate: '2026-05-16',
     dateModified: '2026-07-13',
     readTime: '9 min de lectura',
@@ -686,7 +686,7 @@ DEEPSEEK_MODEL=deepseek-chat
       benchmarkTable: {
         id: 'benchmark-table',
         title: 'Tabla de benchmarks',
-        image: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-es.png',
+        image: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-es.webp',
         imageCaption: 'Puntuaciones SWE-bench de modelos de código locales: Qwen 3.6 27B 77.2%, DeepSeek Coder ~75%, Mistral Devstral 24B ~73%, todos ejecutables en GPU de consumo con 14-16 GB de VRAM.',
         content: 'Todas las puntuaciones son cifras publicadas en mayo de 2026 en páginas oficiales de modelos o leaderboards abiertos. HumanEval usa la métrica pass@1. SWE-bench usa la tasa de paso de pruebas verificadas. MBPP usa pass@1 en el conjunto de pruebas completo de MBPP.',
         rows: [
@@ -775,7 +775,7 @@ ollama run qwen3-coder-local`,
       dispatchStrategy: {
         id: 'dispatch-strategy',
         title: 'Estrategia de despacho multi-modelo',
-        image: '/images/qwen-coder-deepseek-mistral-dispatch-hero-es.png',
+        image: '/images/qwen-coder-deepseek-mistral-dispatch-hero-es.webp',
         imageCaption: 'Árbol de decisión para el despacho de tareas de código: el código relevante para GDPR se enruta a Qwen 3.6 27B local, el autocompletado interactivo a Devstral 24B local (40 tok/seg), las tareas por lotes no sensibles a la API DeepSeek Coder ($0.14/1M tokens).',
         content: [
           'Ningún modelo de código gana en todas las tareas. Qwen 3.6 27B lidera en precisión de benchmarks. Devstral lidera en tareas agénticas multi-archivo. DeepSeek Coder es el más barato a escala para código no sensible. Una capa de despacho que enruta las tareas por tipo captura los beneficios de los tres.',
@@ -849,7 +849,7 @@ DEEPSEEK_MODEL=deepseek-chat
     seoTitle: 'مقارنة ⁨Qwen 3.6 Coder⁩ و⁨DeepSeek Coder⁩ و⁨Mistral 2026⁩',
     intro: 'يحقق Qwen 3.6 27B نسبة 77.2% في SWE-bench محليًا على 16 GB من VRAM، مساويًا DeepSeek Coder (91.6% HumanEval، ~75% SWE-bench) ومتفوقًا على Mistral Devstral Small 24B (90.1% HumanEval، ~73% SWE-bench) في البرمجة بالوكلاء. تعمل النماذج الثلاثة محليًا على أجهزة استهلاكية. يغطي هذا المعيار HumanEval وSWE-bench وMBPP وحسابات تكلفة الـ token والكمون عند مستويات تكميم مختلفة وملفات الأجهزة واستراتيجية التوزيع متعدد النماذج لأعباء عمل البرمجة.',
     metaDescription: '⁨Qwen 3.6 27B⁩ يحقق ⁨92.1% HumanEval⁩ و⁨77.2% SWE-bench⁩ محليًا بـ ⁨16 GB VRAM⁩. مقارنة ⁨DeepSeek Coder⁩ ($⁨0.14/1M⁩) و⁨Mistral Devstral⁩: تكلفة وكمون وأجهزة.',
-    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-ar.png',
+    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-ar.webp',
     publishDate: '2026-05-16',
     dateModified: '2026-07-13',
     readTime: '9 دقائق قراءة',
@@ -906,7 +906,7 @@ DEEPSEEK_MODEL=deepseek-chat
       benchmarkTable: {
         id: 'benchmark-table',
         title: 'جدول المعايير',
-        image: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-ar.png',
+        image: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-ar.webp',
         imageCaption: 'درجات SWE-bench لنماذج البرمجة المحلية: Qwen 3.6 27B بنسبة 77.2%، DeepSeek Coder حوالي 75%، Mistral Devstral 24B حوالي 73%، جميعها قابلة للتشغيل على وحدات معالجة رسومية استهلاكية بـ 14-16 GB VRAM.',
         content: 'جميع الدرجات أرقام منشورة في مايو 2026 على صفحات النماذج الرسمية أو لوحات الصدارة المفتوحة. يستخدم HumanEval مقياس pass@1. يستخدم SWE-bench معدل اجتياز الاختبارات المُتحقق منها. يستخدم MBPP مقياس pass@1 على مجموعة اختبار MBPP الكاملة.',
         rows: [
@@ -995,7 +995,7 @@ ollama run qwen3-coder-local`,
       dispatchStrategy: {
         id: 'dispatch-strategy',
         title: 'استراتيجية التوزيع متعدد النماذج',
-        image: '/images/qwen-coder-deepseek-mistral-dispatch-hero-ar.png',
+        image: '/images/qwen-coder-deepseek-mistral-dispatch-hero-ar.webp',
         imageCaption: 'شجرة قرار توزيع مهام الكود: الكود المتعلق بـ GDPR يُوجَّه إلى Qwen 3.6 27B المحلي، الإكمال التلقائي التفاعلي إلى Devstral 24B المحلي (40 token/ثانية)، مهام الدفعات غير الحساسة إلى واجهة DeepSeek Coder API (0.14$/1M token).',
         content: [
           'لا يفوز أي نموذج كود في جميع المهام. يتصدر Qwen 3.6 27B في دقة المعايير. يتصدر Devstral في المهام بالوكلاء متعددة الملفات. DeepSeek Coder هو الأرخص على نطاق واسع للكود غير الحساس. طبقة توزيع تُوجّه المهام حسب النوع تلتقط مزايا الثلاثة جميعًا.',
@@ -1070,7 +1070,7 @@ DEEPSEEK_MODEL=deepseek-chat
     seoTitle: 'Qwen 3.6 Coder vs DeepSeek vs Mistral: código 2026',
     intro: 'O Qwen 3.6 27B atinge 77,2% no SWE-bench localmente em 16 GB de VRAM, igualando o DeepSeek Coder (91,6% HumanEval, ~75% SWE-bench) e superando o Mistral Devstral Small 24B (90,1% HumanEval, ~73% SWE-bench) em codificação agêntica. Os três modelos rodam localmente em hardware de consumo. Este benchmark cobre HumanEval, SWE-bench, MBPP, matemática de custo por token, latência com diferentes quantizações, perfis de hardware e estratégia de despacho multimodelo para cargas de trabalho de codificação.',
     metaDescription: 'Benchmark de código local: Qwen 3.6 27B (92,1% HumanEval, 77,2% SWE-bench), DeepSeek Coder ($0,14/1M) e Mistral Devstral. Custo, latência e hardware.',
-    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-pt.png',
+    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-pt.webp',
     publishDate: '2026-05-16',
     dateModified: '2026-07-13',
     readTime: '9 min de leitura',
@@ -1141,7 +1141,7 @@ DEEPSEEK_MODEL=deepseek-chat
       benchmarkTable: {
         id: 'benchmark-table',
         title: 'Tabela de benchmarks',
-        image: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-pt.png',
+        image: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-pt.webp',
         imageCaption: 'Pontuações SWE-bench de modelos de código locais: Qwen 3.6 27B 77,2%, DeepSeek Coder ~75%, Mistral Devstral 24B ~73%, todos executáveis em GPUs de consumo com 14-16 GB de VRAM.',
         content: 'Todas as pontuações são números publicados em maio de 2026 em páginas oficiais dos modelos ou em leaderboards abertos. O HumanEval usa a métrica pass@1. O SWE-bench usa a taxa de aprovação de testes verificados. O MBPP usa pass@1 no conjunto de testes completo do MBPP.',
         rows: [
@@ -1230,7 +1230,7 @@ ollama run qwen3-coder-local`,
       dispatchStrategy: {
         id: 'dispatch-strategy',
         title: 'Estratégia de despacho multimodelo',
-        image: '/images/qwen-coder-deepseek-mistral-dispatch-hero-pt.png',
+        image: '/images/qwen-coder-deepseek-mistral-dispatch-hero-pt.webp',
         imageCaption: 'Árvore de decisão para despacho de tarefas de código: código relevante para GDPR/LGPD é roteado para o Qwen 3.6 27B local, autocompletar interativo para o Devstral 24B local (40 tok/seg), tarefas em lote não sensíveis para a API DeepSeek Coder ($0,14/1M tokens).',
         content: [
           'Nenhum modelo de código vence em todas as tarefas. O Qwen 3.6 27B lidera em precisão de benchmarks. O Devstral lidera em tarefas agênticas multiarquivo. O DeepSeek Coder é o mais barato em escala para código não sensível. Uma camada de despacho que roteia as tarefas por tipo captura os benefícios dos três.',
@@ -1304,7 +1304,7 @@ DEEPSEEK_MODEL=deepseek-chat
     seoTitle: 'Qwen 3.6 Coder vs DeepSeek vs Mistral: 코딩 벤치마크 2026',
     intro: 'Qwen 3.6 27B는 16 GB VRAM에서 로컬로 SWE-bench 77.2%를 기록하며, DeepSeek Coder(HumanEval 91.6%, SWE-bench ~75%)와 동등하고 에이전트 코딩에서 Mistral Devstral Small 24B(HumanEval 90.1%, SWE-bench ~73%)를 능가합니다. 세 모델 모두 소비자용 하드웨어에서 로컬로 실행할 수 있습니다. 본 벤치마크는 HumanEval, SWE-bench, MBPP, 토큰당 비용 계산, 다양한 양자화 수준에서의 지연 시간, 하드웨어 프로필, 코딩 워크로드를 위한 멀티 모델 디스패치 전략을 다룹니다.',
     metaDescription: '로컬 코딩 모델 벤치마크: Qwen 3.6 27B(HumanEval 92.1%, SWE-bench 77.2%), DeepSeek Coder($0.14/1M), Mistral Devstral(에이전트 작업). 비용, 지연 시간, 하드웨어.',
-    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-ko.png',
+    heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-ko.webp',
     publishDate: '2026-05-16',
     dateModified: '2026-07-13',
     readTime: '9분 읽기',
@@ -1375,7 +1375,7 @@ DEEPSEEK_MODEL=deepseek-chat
       benchmarkTable: {
         id: 'benchmark-table',
         title: '벤치마크 표',
-        image: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-ko.png',
+        image: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-ko.webp',
         imageCaption: '로컬 코딩 모델의 SWE-bench 점수: Qwen 3.6 27B 77.2%, DeepSeek Coder 약 75%, Mistral Devstral 24B 약 73% — 모두 14-16GB VRAM의 소비자용 GPU에서 실행 가능.',
         content: '모든 점수는 공식 모델 페이지 또는 오픈 리더보드에서 가져온 2026년 5월 수치입니다. HumanEval은 pass@1 지표를 사용합니다. SWE-bench는 검증된 테스트 통과율을 사용합니다. MBPP는 전체 MBPP 테스트 세트에서 pass@1을 사용합니다.',
         rows: [
@@ -1464,7 +1464,7 @@ ollama run qwen3-coder-local`,
       dispatchStrategy: {
         id: 'dispatch-strategy',
         title: '멀티 모델 디스패치 전략',
-        image: '/images/qwen-coder-deepseek-mistral-dispatch-hero-ko.png',
+        image: '/images/qwen-coder-deepseek-mistral-dispatch-hero-ko.webp',
         imageCaption: '코딩 작업 디스패치 의사결정 트리: GDPR 관련 코드는 로컬 Qwen 3.6 27B로, 대화형 자동완성은 로컬 Devstral 24B(40 tok/sec)로, 비민감 배치 작업은 DeepSeek Coder API($0.14/1M 토큰)로 라우팅.',
         content: [
           '단일 코딩 모델이 모든 작업에서 최고 성능을 발휘하지는 않습니다. Qwen 3.6 27B는 벤치마크 정확도에서 앞서고, Devstral은 에이전트 방식의 멀티 파일 작업에서 강합니다. DeepSeek Coder는 비민감 코드의 대규모 처리에서 가장 저렴합니다. 작업 유형에 따라 라우팅하는 디스패치 레이어를 구성하면 세 모델의 장점을 모두 활용할 수 있습니다.',

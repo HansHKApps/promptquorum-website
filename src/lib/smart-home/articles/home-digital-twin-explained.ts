@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/home-digital-twin-explained-overview-hero-en.png',
+    heroImage: '/images/home-digital-twin-explained-overview-hero-en.webp',
     title: 'Home Digital Twin Explained (2027)',
     seoTitle: 'Home Digital Twin Explained (2027)',
     intro:
@@ -167,7 +167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/home-digital-twin-explained-overview-hero-de.png',
+    heroImage: '/images/home-digital-twin-explained-overview-hero-de.webp',
     title: 'Home Digital Twin erklärt (2027)',
     seoTitle: 'Home Digital Twin erklärt (2027)',
     intro:
@@ -326,7 +326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/home-digital-twin-explained-overview-hero-fr.png',
+    heroImage: '/images/home-digital-twin-explained-overview-hero-fr.webp',
     title: 'Jumeau numérique de la maison expliqué (2027)',
     seoTitle: 'Jumeau numérique de la maison expliqué (2027)',
     intro:
@@ -485,7 +485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/home-digital-twin-explained-overview-hero-ja.png',
+    heroImage: '/images/home-digital-twin-explained-overview-hero-ja.webp',
     title: 'ホームデジタルツインを解説（2027年）',
     seoTitle: 'ホームデジタルツインを解説（2027年）',
     intro:
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/home-digital-twin-explained-overview-hero-zh.png',
+    heroImage: '/images/home-digital-twin-explained-overview-hero-zh.webp',
     title: '家庭数字孪生详解（2027年）',
     seoTitle: '家庭数字孪生详解（2027年）',
     intro:
@@ -803,7 +803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/home-digital-twin-explained-overview-hero-es.png',
+    heroImage: '/images/home-digital-twin-explained-overview-hero-es.webp',
     title: 'Gemelo digital del hogar explicado (2027)',
     seoTitle: 'Gemelo digital del hogar explicado (2027)',
     intro:
@@ -962,7 +962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/home-digital-twin-explained-overview-hero-pt.png',
+    heroImage: '/images/home-digital-twin-explained-overview-hero-pt.webp',
     title: 'Gêmeo digital da casa explicado (2027)',
     seoTitle: 'Gêmeo digital da casa explicado (2027)',
     intro:
@@ -1121,7 +1121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/home-digital-twin-explained-overview-hero-ar.png',
+    heroImage: '/images/home-digital-twin-explained-overview-hero-ar.webp',
     title: 'شرح التوأم الرقمي للمنزل (⁨2027⁩)',
     seoTitle: 'شرح التوأم الرقمي للمنزل (⁨2027⁩)',
     intro:
@@ -1280,7 +1280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/home-digital-twin-explained-overview-hero-ko.png',
+    heroImage: '/images/home-digital-twin-explained-overview-hero-ko.webp',
     title: '홈 디지털 트윈 해설 (2027년)',
     seoTitle: '홈 디지털 트윈 해설 (2027년)',
     intro:

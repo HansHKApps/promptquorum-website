@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'Tools & Interfaces',
       title: 'Local LLMs With VS Code and Cursor: Setup and Best Practices',
-      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-en.png',
+      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-en.webp',
       dateModified: '2026-07-13',
       seoTitle: 'Local LLMs in VS Code and Cursor: 2026 Setup Guide',
       intro: 'VS Code and Cursor (an AI-first code editor) can both use local LLMs for code completions and suggestions, via Continue.dev extension (VS Code) or direct integration (Cursor). As of April 2026, local code completions are practical for 7B-13B models and require 8-16 GB RAM. This guide covers setup, best models, and performance tuning.',
@@ -261,7 +261,7 @@ schema: {
     de: {
       theme: 'Tools & Interfaces',
       title: 'Lokale LLMs mit VS Code und Cursor: Einrichtung und Best Practices',
-      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-de.png',
+      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-de.webp',
       seoTitle: 'Lokale LLMs in VS Code & Cursor: Einrichtung 2026',
       intro: 'VS Code und Cursor (ein KI-fokussierter Code-Editor) können beide lokale LLMs für Code-Vervollständigungen und Vorschläge nutzen, über die Continue.dev-Erweiterung (VS Code) oder direkte Integration (Cursor). Stand April 2026 sind lokale Code-Vervollständigungen praktisch für 7B-13B-Modelle und erfordern 8-16 GB RAM. Dieser Leitfaden behandelt Einrichtung, beste Modelle und Performance-Tuning.',
       metaDescription: 'Lokale LLMs in VS Code mit Continue.dev und Cursor einrichten. Beste Modelle: Qwen-Coder 7B, Llama Code 13B. Performance-Optimierung, Latenz, VRAM-Leitfaden.',
@@ -469,7 +469,7 @@ schema: {
     fr: {
       theme: 'Tools & Interfaces',
       title: 'LLM Locaux avec VS Code et Cursor : Configuration et Bonnes Pratiques',
-      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-fr.png',
+      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-fr.webp',
       seoTitle: 'LLM Locaux dans VS Code & Cursor : Configuration 2026',
       intro: 'VS Code et Cursor (un éditeur de code axé sur l\'IA) peuvent tous deux utiliser des LLM locaux pour les complétions et suggestions de code, via l\'extension Continue.dev (VS Code) ou l\'intégration directe (Cursor). Depuis avril 2026, les complétions de code locales sont pratiques pour les modèles 7B-13B et nécessitent 8-16 Go de RAM. Ce guide couvre la configuration, les meilleurs modèles et l\'optimisation des performances.',
       metaDescription: 'Configurez les LLM locaux dans VS Code avec Continue.dev et Cursor. Meilleurs modèles : Qwen-Coder 7B, Llama Code 13B. Performance, latence, RAM.',
@@ -661,7 +661,7 @@ schema: {
     ja: {
       theme: 'Tools & Interfaces',
       title: 'VS CodeとCursorでローカルLLMを使用する：セットアップとベストプラクティス',
-      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-ja.png',
+      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-ja.webp',
       seoTitle: 'VS CodeとCursorでローカルLLMコード補完ガイド：セットアップ 2026',
       intro: 'VS CodeとCursor（AI-firstコードエディタ）の両方は、Continue.dev拡張機能（VS Code）または直接統合（Cursor）を介して、ローカルLLMをコード補完と提案に使用できます。2026年4月現在、ローカルコード補完は7B〜13Bモデルに実用的で、8〜16 GBのRAMが必要です。このガイドではセットアップ、最適なモデル、パフォーマンスチューニングをカバーしています。',
       metaDescription: 'VS CodeおよびCursorエディタでローカル大言語モデルによるコード補完を実現するための完全セットアップガイド。Continue.dev設定、Cursor統合、最適なモデル選択、パフォーマンスチューニング、VRAM要件。',
@@ -868,7 +868,7 @@ schema: {
     zh: {
       theme: 'Tools & Interfaces',
       title: 'VS Code和Cursor中的本地LLM：设置和最佳实践',
-      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-zh.png',
+      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-zh.webp',
       seoTitle: 'VS Code和Cursor中使用本地大模型实现代码补全的完整教程 2026',
       intro: 'VS Code和Cursor（AI优先的代码编辑器）都可以通过Continue.dev扩展（VS Code）或直接集成（Cursor）使用本地LLM进行代码补全和建议。截至2026年4月，本地代码补全对于7B-13B模型很实用，需要8-16 GB RAM。本指南涵盖设置、最佳模型和性能调整。',
       metaDescription: '在VS Code和Cursor代码编辑器中使用本地运行的大语言模型实现私密代码补全的完整教程与最佳实践指南。详细讲解Continue.dev扩展的安装配置、Cursor集成方法、最优编码模型推荐、性能优化技巧、显存需求分析、隐私保护措施和完整的零成本高效AI编程助手解决方案步骤。',
@@ -1060,7 +1060,7 @@ schema: {
     es: {
       theme: 'Tools & Interfaces',
       title: 'LLMs Locales con VS Code y Cursor: Configuración y Mejores Prácticas',
-      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-es.png',
+      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-es.webp',
       seoTitle: 'LLMs Locales en VS Code y Cursor: Guía de Configuración 2026',
       intro: 'VS Code y Cursor (un editor de código orientado a la IA) pueden usar LLMs locales para completar y sugerir código, mediante la extensión Continue.dev (VS Code) o la integración directa (Cursor). A partir de abril de 2026, las completaciones de código locales son prácticas para modelos 7B-13B y requieren 8-16 GB de RAM. Esta guía cubre la configuración, los mejores modelos y el ajuste del rendimiento.',
       metaDescription: 'Usa Ollama en VS Code con Continue.dev para completados de código locales sin clave API. Mejores modelos, requisitos de VRAM e integración con Cursor 2026.',
@@ -1254,7 +1254,7 @@ schema: {
     ar: {
       theme: 'Tools & Interfaces',
       title: 'نماذج ⁨LLM⁩ المحلية مع ⁨VS Code⁩ و⁨Cursor⁩: الإعداد وأفضل الممارسات',
-      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-ar.png',
+      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-ar.webp',
       seoTitle: '⁨LLM⁩ محلي في ⁨VS Code⁩ و⁨Cursor⁩: إعداد ⁨Ollama 2026⁩',
       intro: 'يستطيع VS Code وCursor (محرر شيفرة موجّه نحو الذكاء الاصطناعي) استخدام نماذج LLM المحلية لإكمال الشيفرة واقتراحها، عبر إضافة Continue.dev (VS Code) أو التكامل المباشر (Cursor). اعتبارًا من أبريل 2026، إكمالات الشيفرة المحلية عملية لنماذج 7B-13B وتتطلب 8-16 GB من RAM. يغطي هذا الدليل الإعداد وأفضل النماذج وضبط الأداء.',
       metaDescription: '⁨Ollama⁩ مع ⁨Continue.dev⁩ في ⁨VS Code⁩ يتيح إكمال الشيفرة محليًا بلا مفتاح ⁨API⁩. أفضل النماذج ⁨2026⁩، متطلبات ⁨VRAM⁩ التفصيلية، وإعداد ⁨Cursor⁩ بخطوات واضحة.',
@@ -1448,7 +1448,7 @@ schema: {
     pt: {
       theme: 'Tools & Interfaces',
       title: 'LLMs Locais com VS Code e Cursor: Configuração e Boas Práticas',
-      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-pt.png',
+      heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-pt.webp',
       seoTitle: 'LLMs Locais no VS Code e Cursor: Guia de Configuração 2026',
       intro: 'O VS Code e o Cursor (um editor de código voltado para IA) podem usar LLMs locais para completar e sugerir código, via extensão Continue.dev (VS Code) ou integração direta (Cursor). A partir de abril de 2026, os completamentos de código locais são práticos para modelos 7B-13B e exigem 8-16 GB de RAM. Este guia cobre a configuração, os melhores modelos e o ajuste de desempenho.',
       metaDescription: 'Use o Ollama no VS Code com o Continue.dev para completamentos de código locais sem chave de API. Melhores modelos, requisitos de VRAM e integração com o Cursor 2026.',
@@ -1643,7 +1643,7 @@ schema: {
       freshness_tier: 'annual',
       theme: 'Tools & Interfaces',
       title: 'VS Code와 Cursor에서 로컬 LLM 사용하기: 설정 및 모범 사례',
-    heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-ko.png',
+    heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-ko.webp',
       seoTitle: 'VS Code와 Cursor에서 로컬 LLM 사용하기: 2026 설정 가이드',
       intro: 'VS Code와 Cursor(AI 중심 코드 편집기)는 모두 Continue.dev 확장(VS Code) 또는 직접 통합(Cursor)을 통해 로컬 LLM을 코드 자동 완성 및 제안에 활용할 수 있습니다. 2026년 4월 기준, 7B~13B 모델에서 로컬 코드 자동 완성이 실용적이며 8~16GB RAM이 필요합니다. 이 가이드는 설정 방법, 최적 모델, 성능 튜닝을 다룹니다.',
       metaDescription: 'Continue.dev를 통해 Ollama를 VS Code에 연결하여 로컬 코드 자동 완성을 사용하십시오 — API 키 불필요. 2026년 최적 모델, VRAM 요구 사항, Cursor 통합 안내.',

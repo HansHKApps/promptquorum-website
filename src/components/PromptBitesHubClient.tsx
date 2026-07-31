@@ -405,7 +405,7 @@ export function PromptBitesHubClient({ lang }: Props) {
           </p>
           <figure className="mb-8 rounded-xl overflow-hidden max-w-2xl mx-auto">
             <Image
-              src={`/images/prompt-bites-hub-overview-hero-${lang}.png`}
+              src={`/images/prompt-bites-hub-overview-hero-${lang}.webp`}
               alt={HUB_HEADLINE[lang] ?? 'Prompt Bites'}
               width={1200}
               height={675}

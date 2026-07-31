@@ -22,7 +22,7 @@ const siblingBites = [
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-en.png',
+    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 1 of 10: The Cloud Pricing Reset',
     seoTitle: 'Local AI Trends 2027: The Cloud Pricing Reset | Prompt Bites',
     metaDescription: 'Part 1 of 10: why analysts including Gartner and IDC expect cloud AI inference pricing to normalize by 2027 as hyperscaler subsidies unwind, and what it changes for local inference.',
@@ -123,7 +123,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-de.png',
+    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-de.webp',
     title: 'Lokale-KI-Trends 2027, Teil 1 von 10: Der Cloud-Preis-Reset',
     seoTitle: 'Lokale-KI-Trends 2027: Der Cloud-Preis-Reset | Prompt Bites',
     metaDescription: 'Teil 1 von 10: Warum Analysten wie Gartner und IDC bis 2027 eine Normalisierung der Cloud-KI-Inferenzpreise erwarten, da Hyperscaler-Subventionen auslaufen, und was das für lokale Inferenz bedeutet.',
@@ -224,7 +224,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-fr.png',
+    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-fr.webp',
     title: 'Tendances IA locale 2027, partie 1 sur 10 : la réinitialisation des prix du cloud',
     seoTitle: 'Tendances IA locale 2027 : la réinitialisation des prix du cloud | Prompt Bites',
     metaDescription: 'Partie 1 sur 10 : pourquoi des analystes comme Gartner et IDC prévoient une normalisation des prix d\'inférence IA cloud d\'ici 2027, et ce que cela change pour l\'inférence locale.',
@@ -325,7 +325,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-ja.png',
+    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-ja.webp',
     title: 'ローカルAIトレンド2027、第1部/全10部:クラウド価格のリセット',
     seoTitle: 'ローカルAIトレンド2027:クラウド価格のリセット | Prompt Bites',
     metaDescription: '全10部の第1部:GartnerやIDCなどのアナリストが2027年までにクラウドAI推論価格が正常化すると予測する理由と、それがローカル推論にもたらす変化を解説します。',
@@ -426,7 +426,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-zh.png',
+    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-zh.webp',
     title: '本地AI趋势2027,第1部分(共10部分):云端定价重置',
     seoTitle: '本地AI趋势2027:云端定价重置 | Prompt Bites',
     metaDescription: '共10部分中的第1部分:Gartner和IDC等分析机构为何预测到2027年云端AI推理定价将趋于正常化,以及这对本地推理意味着什么。',
@@ -527,7 +527,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-es.png',
+    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-es.webp',
     title: 'Tendencias de IA local 2027, parte 1 de 10: el reinicio de precios en la nube',
     seoTitle: 'Tendencias de IA local 2027: el reinicio de precios en la nube | Prompt Bites',
     metaDescription: 'Parte 1 de 10: por qué analistas como Gartner e IDC esperan que los precios de inferencia de IA en la nube se normalicen para 2027, y qué cambia eso para la inferencia local.',
@@ -628,7 +628,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-pt.png',
+    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-pt.webp',
     title: 'Tendências de IA local 2027, parte 1 de 10: o reset de preços da nuvem',
     seoTitle: 'Tendências de IA local 2027: o reset de preços da nuvem | Prompt Bites',
     metaDescription: 'Parte 1 de 10: por que analistas como Gartner e IDC esperam que os preços de inferência de IA na nuvem se normalizem até 2027, e o que isso muda para a inferência local.',
@@ -729,7 +729,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-ar.png',
+    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-ar.webp',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 1 من 10: إعادة ضبط أسعار السحابة',
     seoTitle: 'اتجاهات الذكاء الاصطناعي المحلي 2027: إعادة ضبط أسعار السحابة | Prompt Bites',
     metaDescription: 'الجزء 1 من 10: لماذا يتوقع محللون مثل Gartner وIDC أن تتطبع أسعار استدلال الذكاء الاصطناعي السحابي بحلول 2027، وما الذي يغيره ذلك بالنسبة للاستدلال المحلي.',
@@ -830,7 +830,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-ko.png',
+    heroImage: '/images/local-ai-trend-2027-cloud-subsidy-collapse-overview-hero-ko.webp',
     title: '로컬 AI 트렌드 2027, 10부 중 1부: 클라우드 가격 리셋',
     seoTitle: '로컬 AI 트렌드 2027: 클라우드 가격 리셋 | Prompt Bites',
     metaDescription: '10부 중 1부: Gartner와 IDC 같은 분석 기관이 2027년까지 클라우드 AI 추론 가격이 정상화될 것으로 예상하는 이유와 이것이 로컬 추론에 미치는 영향.',

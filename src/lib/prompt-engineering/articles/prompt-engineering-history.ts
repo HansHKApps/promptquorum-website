@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
-      heroImage: '/images/prompt-engineering-history-overview-hero-en.png',
+      heroImage: '/images/prompt-engineering-history-overview-hero-en.webp',
       title: 'From GPT-2 to Today: How Prompt Engineering Evolved',
       seoTitle: 'Prompt Engineering is Dead? How It Evolved Into Context Design (2026)',
       intro: 'Prompt engineering evolved from informal experiments around GPT-3 in 2020 to a structured discipline with named techniques and frameworks by 2026. This timeline traces the key breakthroughs, research papers, and turning points that made prompting a core skill.',
@@ -382,7 +382,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Grundlagen',
-      heroImage: '/images/prompt-engineering-history-overview-hero-de.png',
+      heroImage: '/images/prompt-engineering-history-overview-hero-de.webp',
       title: 'Wie sich Prompt Engineering entwickelt hat: Von GPT-3 zu Context Design',
       seoTitle: 'Prompt Engineering: Von Few-Shot zu Context Design 2026',
       intro: 'Prompt Engineering entwickelte sich von informellen Experimenten rund um GPT-3 im Jahr 2020 zu einer strukturierten Disziplin mit benannten Techniken und Frameworks bis 2026. Diese Zeitleiste verfolgt die Schlüsseldurchbrüche, Forschungsarbeiten und Wendepunkte, die Prompting zu einer Kernkompetenz machten.',
@@ -613,7 +613,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
-      heroImage: '/images/prompt-engineering-history-overview-hero-es.png',
+      heroImage: '/images/prompt-engineering-history-overview-hero-es.webp',
       title: 'De GPT-2 a hoy: Cómo evolucionó el Prompt Engineering',
       seoTitle: '¿Está muerto el prompt engineering? Su evolución en 2026',
       intro: 'El prompt engineering evolucionó de experimentos informales en torno a GPT-3 en 2020 a una disciplina estructurada con técnicas y frameworks con nombre propios para 2026. Esta línea de tiempo traza los avances clave, los artículos de investigación y los puntos de inflexión que convirtieron el prompting en una habilidad fundamental.',
@@ -841,7 +841,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
-      heroImage: '/images/prompt-engineering-history-overview-hero-ar.png',
+      heroImage: '/images/prompt-engineering-history-overview-hero-ar.webp',
       title: 'من ⁨GPT-2⁩ حتى اليوم: كيف تطورت هندسة البرومبت',
       seoTitle: 'هندسة البرومبت: ⁨7⁩ مراحل من ⁨GPT-3⁩ إلى تصميم السياق',
       intro: 'تطورت هندسة البرومبت من تجارب غير رسمية حول GPT-3 في 2020 إلى تخصص منظّم مع تقنيات وأطر عمل مُسمَّاة بحلول 2026. هذا الخط الزمني يتتبع التطورات الرئيسية وأوراق البحث ونقاط التحول التي جعلت من البرومبت مهارة أساسية.',
@@ -1052,7 +1052,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     pt: {
       theme: 'Fundamentals',
-      heroImage: '/images/prompt-engineering-history-overview-hero-pt.png',
+      heroImage: '/images/prompt-engineering-history-overview-hero-pt.webp',
       title: 'De GPT-2 até hoje: Como evoluiu o Prompt Engineering',
       seoTitle: 'O prompt engineering está morto? Sua evolução em 2026',
       intro: 'O prompt engineering evoluiu de experimentos informais em torno do GPT-3 em 2020 para uma disciplina estruturada com técnicas e frameworks nomeados até 2026. Esta linha do tempo traça os avanços-chave, os artigos de pesquisa e os pontos de inflexão que transformaram o prompting em uma habilidade fundamental.',
@@ -1277,7 +1277,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Fondamentaux',
-      heroImage: '/images/prompt-engineering-history-overview-hero-fr.png',
+      heroImage: '/images/prompt-engineering-history-overview-hero-fr.webp',
       title: 'Comment l\'ingénierie des prompts a évolué : De GPT-3 au Context Design',
       seoTitle: 'L\'évolution du Prompt Engineering 2020–2026 : De Few-Shot au Context Design',
       intro: 'L\'ingénierie des prompts a évolué d\'expériences informelles autour de GPT-3 en 2020 à une discipline structurée avec des techniques et frameworks nommés en 2026. Cette chronologie retrace les percées clés, les articles de recherche et les points tournants qui ont fait du prompting une compétence fondamentale.',
@@ -1508,7 +1508,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
       freshness_tier: 'semi_annual',
       theme: '基礎',
-      heroImage: '/images/prompt-engineering-history-overview-hero-ja.png',
+      heroImage: '/images/prompt-engineering-history-overview-hero-ja.webp',
       title: 'プロンプトエンジニアリングはどのように進化したか：GPT-3からContext Designへ',
       seoTitle: 'プロンプトエンジニアリング進化史 2020–2026：Few-ShottからContext Designへ',
       intro: 'プロンプトエンジニアリングは2020年のGPT-3周辺での非公式な実験から、2026年までに名付けられた技術とフレームワークを備えた構造化された分野へと進化しました。このタイムラインは、プロンプティングをコア スキルにした主要な突破口、研究論文、および転換点を追跡しています。',
@@ -1765,7 +1765,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     zh: {
       freshness_tier: 'semi_annual',
       theme: '基础知识',
-      heroImage: '/images/prompt-engineering-history-overview-hero-zh.png',
+      heroImage: '/images/prompt-engineering-history-overview-hero-zh.webp',
       title: '从GPT-2到今天：提示词工程的演变',
       seoTitle: '提示工程进化2020–2026：从少样本学习到上下文设计完全解析',
       intro: '提示词工程的历史：从2020年的GPT-3和少样本提示到2026年的上下文设计。',
@@ -1996,7 +1996,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'semi_annual',
       theme: '기초',
-    heroImage: '/images/prompt-engineering-history-overview-hero-ko.png',
+    heroImage: '/images/prompt-engineering-history-overview-hero-ko.webp',
       title: 'GPT-2부터 현재까지: 프롬프트 엔지니어링의 진화',
       seoTitle: '프롬프트 엔지니어링은 끝났는가? 컨텍스트 설계로의 진화 (2026)',
       intro: '프롬프트 엔지니어링은 2020년 GPT-3를 중심으로 한 비공식적인 실험에서 출발하여, 2026년까지 명명된 기법과 프레임워크를 갖춘 체계적인 학문 분야로 발전하였습니다. 이 타임라인은 프롬프팅을 핵심 기술로 자리잡게 한 주요 돌파구, 연구 논문, 전환점을 추적합니다.',

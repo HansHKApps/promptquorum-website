@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-en.png',
+    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 4 of 10: Private RAG Becomes Default Infrastructure',
     seoTitle: 'Local AI Trends 2027 Part 4: Private RAG Infrastructure',
     metaDescription: 'Why private retrieval-augmented generation becomes standard company AI infrastructure by 2027, driven by data growth and compliance pressure — not a new tool pick.',
@@ -103,7 +103,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-de.png',
+    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-de.webp',
     title: 'Local AI Trends 2027, Teil 4 von 10: Private RAG wird zur Standardinfrastruktur',
     seoTitle: 'Local AI Trends 2027 Teil 4: Private RAG Infrastruktur',
     metaDescription: 'Warum private Retrieval-Augmented Generation bis 2027 zur Standard-KI-Infrastruktur von Unternehmen wird, getrieben von Datenwachstum und Compliance-Druck — keine neue Tool-Empfehlung.',
@@ -202,7 +202,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-fr.png',
+    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-fr.webp',
     title: 'Local AI Trends 2027, Partie 4 sur 10 : le RAG privé devient une infrastructure par défaut',
     seoTitle: 'Local AI Trends 2027 Partie 4 : infrastructure RAG privée',
     metaDescription: 'Pourquoi la génération augmentée par récupération (RAG) privée devient une infrastructure IA standard en entreprise d\'ici 2027, portée par la croissance des données et la pression de conformité.',
@@ -301,7 +301,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-ja.png',
+    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-ja.webp',
     title: 'Local AI Trends 2027 第4回(全10回):プライベートRAGが標準インフラになる',
     seoTitle: 'Local AI Trends 2027 第4回:プライベートRAGインフラ',
     metaDescription: 'プライベートなRetrieval-Augmented Generation(RAG)が2027年までに企業の標準AIインフラになる理由を、データ増加とコンプライアンス圧力の観点から解説します。新しいツール比較ではありません。',
@@ -400,7 +400,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-zh.png',
+    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-zh.webp',
     title: 'Local AI Trends 2027 第4篇(共10篇):私有RAG成为默认基础设施',
     seoTitle: 'Local AI Trends 2027 第4篇:私有RAG基础设施',
     metaDescription: '为什么私有检索增强生成(RAG)将在2027年前成为企业标准AI基础设施——由数据增长和合规压力驱动,而非新的工具推荐。',
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-es.png',
+    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-es.webp',
     title: 'Local AI Trends 2027, Parte 4 de 10: el RAG privado se convierte en infraestructura por defecto',
     seoTitle: 'Local AI Trends 2027 Parte 4: infraestructura RAG privada',
     metaDescription: 'Por qué la generación aumentada por recuperación (RAG) privada se convierte en infraestructura de IA estándar en las empresas hacia 2027, impulsada por el crecimiento de datos y la presión de cumplimiento.',
@@ -598,7 +598,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-pt.png',
+    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-pt.webp',
     title: 'Local AI Trends 2027, Parte 4 de 10: o RAG privado se torna infraestrutura padrão',
     seoTitle: 'Local AI Trends 2027 Parte 4: infraestrutura de RAG privado',
     metaDescription: 'Por que a geração aumentada por recuperação (RAG) privada se torna infraestrutura de IA padrão nas empresas até 2027, impulsionada pelo crescimento de dados e pela pressão de compliance.',
@@ -697,7 +697,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-ar.png',
+    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-ar.webp',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 4 من 10: RAG الخاص يصبح بنية تحتية افتراضية',
     seoTitle: 'اتجاهات الذكاء الاصطناعي المحلي 2027 الجزء 4: بنية RAG الخاصة',
     metaDescription: 'لماذا يصبح التوليد المعزز بالاسترجاع (RAG) الخاص بنية تحتية معيارية للذكاء الاصطناعي في الشركات بحلول 2027، مدفوعًا بنمو البيانات وضغوط الامتثال.',
@@ -796,7 +796,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-ko.png',
+    heroImage: '/images/local-ai-trend-2027-private-rag-overview-hero-ko.webp',
     title: 'Local AI Trends 2027, 10부작 중 4부: 프라이빗 RAG가 기본 인프라가 되다',
     seoTitle: 'Local AI Trends 2027 4부: 프라이빗 RAG 인프라',
     metaDescription: '프라이빗 검색 증강 생성(RAG)이 2027년까지 기업의 표준 AI 인프라가 되는 이유를 데이터 증가와 컴플라이언스 압박의 관점에서 설명합니다. 새로운 도구 추천이 아닙니다.',
