@@ -6,8 +6,7 @@ import Image from 'next/image'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
-import { llmContent, type LLMSection } from '@/lib/local-llms/content'
-import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
+import type { LLMSection } from '@/lib/local-llms/types'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
@@ -25,6 +24,7 @@ import { StickyNextStepBar } from '@/components/StickyNextStepBar'
 interface Props {
   slug: string
   initialLang?: Language
+  articleData?: Record<string, any> | null
 }
 
 // Section header translations
@@ -750,11 +750,9 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
   )
 }
 
-function LocalLLMsPostContent({ slug, initialLang }: Props) {
+function LocalLLMsPostContent({ slug, initialLang, articleData }: Props) {
   const clientLang = useLang(initialLang) as Language
   const lang: Language = clientLang
-  const key = LLM_SLUG_TO_KEY[slug]
-  const articleData = key ? llmContent[key] : null
 
   if (!articleData) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
