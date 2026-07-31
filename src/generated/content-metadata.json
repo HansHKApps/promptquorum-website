@@ -143,11 +143,11 @@
       ],
       "images": [
         {
-          "url": "/images/how-to-install-ollama-linux-systemd-flow-hero-en.png",
+          "url": "/images/how-to-install-ollama-linux-systemd-flow-hero-en.webp",
           "title": "Four-step flow for running Ollama as a systemd service on Linux: install with `curl -fsSL https://ollama.com/install.sh | sh`, check status with `systemctl status ollama`, control it with `start`/`stop`/`restart`, and tail logs with `journalctl -u ollama -f`."
         },
         {
-          "url": "/images/how-to-install-ollama-troubleshooting-table-hero-en.png",
+          "url": "/images/how-to-install-ollama-troubleshooting-table-hero-en.webp",
           "title": "Reference table of 5 common Ollama installation errors -- service not running, stalled 2-47 GB downloads, out-of-memory errors, undetected GPUs, and prompts truncated at 4096 tokens -- each mapped to its fix command."
         }
       ]
@@ -224,11 +224,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-beginner-local-llm-models-3b-vs-7b-hero-en.png",
+          "url": "/images/best-beginner-local-llm-models-3b-vs-7b-hero-en.webp",
           "title": "3B vs 7B parameter tradeoff -- 3B models use 2-3 GB RAM at 25-60 tok/s; 7B models use 4.5-5 GB RAM at 10-20 tok/s with significantly better quality on complex reasoning and long documents."
         },
         {
-          "url": "/images/best-beginner-local-llm-models-comparison-table-hero-en.png",
+          "url": "/images/best-beginner-local-llm-models-comparison-table-hero-en.webp",
           "title": "Five beginner local LLM models compared by RAM, CPU inference speed, context window, and use case -- all benchmarked at Q4_K_M quantization via Ollama. Llama 3.2 3B is the recommended first model; Gemma 3 2B is fastest at 1.7 GB RAM."
         },
         {
@@ -325,7 +325,7 @@
       ],
       "images": [
         {
-          "url": "/images/local-llm-on-laptop-ram-tiers-hero-en.png",
+          "url": "/images/local-llm-on-laptop-ram-tiers-hero-en.webp",
           "title": "8 GB RAM is the practical floor -- a 7B model at Q4_K_M runs on any laptop built after 2018."
         },
         {
@@ -333,7 +333,7 @@
           "title": "Ollama running Mistral Small on a MacBook -- 22 tokens/sec on CPU at Q4_K_M quantization."
         },
         {
-          "url": "/images/local-llm-on-laptop-model-picks-hero-en.png",
+          "url": "/images/local-llm-on-laptop-model-picks-hero-en.webp",
           "title": "Llama 3.2 3B fits 8 GB laptops at 25-45 tok/s; Llama 3.3 8B needs 16 GB but gives the best quality at this size."
         },
         {
@@ -364,11 +364,11 @@
       ],
       "images": [
         {
-          "url": "/images/local-llm-security-privacy-checklist-checklist-overview-hero-en.png",
+          "url": "/images/local-llm-security-privacy-checklist-checklist-overview-hero-en.webp",
           "title": "Verify every item before working with sensitive or regulated data."
         },
         {
-          "url": "/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-en.png",
+          "url": "/images/local-llm-security-privacy-checklist-telemetry-defaults-hero-en.webp",
           "title": "Ollama and Jan AI collect nothing by default; LM Studio and GPT4All ship analytics on — check settings."
         }
       ]
@@ -391,11 +391,11 @@
       ],
       "images": [
         {
-          "url": "/images/local-llm-limitations-quality-benchmarks-hero-en.png",
+          "url": "/images/local-llm-limitations-quality-benchmarks-hero-en.webp",
           "title": "Quality Gap: Benchmark Scores — Local 7B models score 10–20 points lower on reasoning and coding than GPT-5.6"
         },
         {
-          "url": "/images/local-llm-limitations-speed-comparison-hero-en.png",
+          "url": "/images/local-llm-limitations-speed-comparison-hero-en.webp",
           "title": "Speed: Local vs Cloud APIs — Local CPU produces 4–10× fewer tokens per second than cloud APIs"
         },
         {
@@ -426,11 +426,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-local-llms-2026-ranked-comparison-hero-en.png",
+          "url": "/images/best-local-llms-2026-ranked-comparison-hero-en.webp",
           "title": "Top 5 local LLMs ranked for July 2026: Qwen3.6 27B leads overall at 84% MMLU and ~17 GB RAM, followed by Gemma 4 26B-A4B (89% AIME, ~15 GB), Qwen2.5-Coder 7B (88% HumanEval, ~5 GB), Phi-4-mini (~2.5 GB), and Gemma 4 E2B (~2 GB)."
         },
         {
-          "url": "/images/best-local-llms-2026-ram-tier-picker-hero-en.png",
+          "url": "/images/best-local-llms-2026-ram-tier-picker-hero-en.webp",
           "title": "RAM tier picker for local LLMs: Gemma 4 E2B fits ~2 GB, Phi-4-mini ~2.5 GB, Qwen2.5-Coder 7B ~5 GB, Gemma 4 26B-A4B ~15 GB, and Qwen3.6 27B needs ~17 GB (24 GB+ recommended)."
         }
       ]
@@ -453,7 +453,7 @@
       ],
       "images": [
         {
-          "url": "/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-en.png",
+          "url": "/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-en.webp",
           "title": "Benchmark comparison (June 2026): Qwen 3.6 27B (77.2% SWE-bench) leads dense coding and fits 24 GB at Q4. SWE-bench (real-world multi-file coding) is now more relevant than HumanEval for evaluating coding models. Llama 4 Scout uses a 16-expert MoE architecture (17B active / 109B total) but needs ~55 GB VRAM at Q4."
         },
         {
@@ -461,7 +461,7 @@
           "title": "Qwen3 multilingual support: 29 native languages (Chinese, Japanese, Korean, Arabic, German, French + more) versus Llama 3.x and Mistral as English-primary local LLMs."
         },
         {
-          "url": "/images/qwen-vs-llama-vs-mistral-overview-hero-en.png",
+          "url": "/images/qwen-vs-llama-vs-mistral-overview-hero-en.webp",
           "title": "Mistral Small 3.1 efficiency: 79% MMLU at 14 GB RAM versus Llama 3.3 70B (82% / 40 GB) and Qwen3 72B (85% / 43 GB) -- near-70B quality at 33% of the RAM cost. Plus: Devstral (agentic) and Codestral (IDE autocomplete)."
         },
         {
@@ -492,11 +492,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-cpu-only-llm-model-speeds-hero-en.png",
+          "url": "/images/best-cpu-only-llm-model-speeds-hero-en.webp",
           "title": "Phi-4 Mini balances speed and quality best -- Gemma 4 E2B is faster but has less capability at 12 tok/s vs 15 tok/s."
         },
         {
-          "url": "/images/best-cpu-only-llm-cpu-vs-gpu-hero-en.png",
+          "url": "/images/best-cpu-only-llm-cpu-vs-gpu-hero-en.webp",
           "title": "CPU is 6-30x slower than GPU -- but costs $0 in dedicated hardware and works on any machine."
         }
       ]
@@ -519,11 +519,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-local-llms-for-coding-benchmark-comparison-hero-en.png",
+          "url": "/images/best-local-llms-for-coding-benchmark-comparison-hero-en.webp",
           "title": "Benchmark scores by model (July 2026): Qwen3-Coder 32B leads at 87% HumanEval, DeepSeek V4 Flash scores 78/100 on independent real-world tests, Qwen 3.6 27B hits 77.2% SWE-bench, Laguna XS 2.1 scores 70.9% SWE-bench Verified as the newest agentic challenger, Qwen3 8B reaches ~76% HumanEval, and Kimi K2.6 scores 58.6 on the harder SWE-Bench Pro."
         },
         {
-          "url": "/images/best-local-llms-for-coding-hardware-selection-hero-en.png",
+          "url": "/images/best-local-llms-for-coding-hardware-selection-hero-en.webp",
           "title": "Hardware-matched model selection (July 2026): 8 GB RAM → Qwen3 8B (5 GB VRAM, improved coding); 16 GB RAM → Devstral Small 24B (16 GB VRAM, agentic coding) or Qwen 3.6 27B (77.2% SWE-bench); long-horizon agentic sessions → Laguna XS 2.1 (SWE-bench Verified 70.9%, 256K context); 20+ GB RAM → Kimi K2.6 quantized (58.6 SWE-Bench Pro, best local quality)."
         }
       ]
@@ -546,11 +546,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-local-llms-for-creative-writing-model-comparison-hero-en.png",
+          "url": "/images/best-local-llms-for-creative-writing-model-comparison-hero-en.webp",
           "title": "Creative writing local LLM comparison: Llama 3.3 70B (40GB, best prose), Mistral 24B (14GB, 16GB tier), Llama 3.3 8B (6GB, entry tier)."
         },
         {
-          "url": "/images/best-local-llms-for-creative-writing-quality-spectrum-hero-en.png",
+          "url": "/images/best-local-llms-for-creative-writing-quality-spectrum-hero-en.webp",
           "title": "Local LLM creative writing quality spectrum: 8B handles 500-word stories, 24B up to 2K words, 70B sustains 1K-3K word scenes with widest style range."
         },
         {
@@ -581,11 +581,11 @@
           "title": "Decision tree: choose by priority (reasoning, speed, or coding). Default to Llama 3.2 3B if unsure."
         },
         {
-          "url": "/images/small-local-llm-models-performance-tier-hero-en.png",
+          "url": "/images/small-local-llm-models-performance-tier-hero-en.webp",
           "title": "Performance tiers: MMLU and HumanEval scores show Phi-4 Mini leads on reasoning and coding, Gemma 2 is fastest on CPU, Qwen3 excels at coding."
         },
         {
-          "url": "/images/small-local-llm-models-quantization-tradeoff-hero-en.png",
+          "url": "/images/small-local-llm-models-quantization-tradeoff-hero-en.webp",
           "title": "Quantization trade-off: Q4_K_M (2.5 GB, -0.5% quality) is the recommended default. Q8_0 uses 3.8 GB with no quality gain. Q3_K_M (1.8 GB, -1.8% loss) for extreme RAM constraints."
         }
       ]
@@ -608,11 +608,11 @@
       ],
       "images": [
         {
-          "url": "/images/70b-models-consumer-hardware-hardware-comparison-hero-en.png",
+          "url": "/images/70b-models-consumer-hardware-hardware-comparison-hero-en.webp",
           "title": "Hardware comparison: Apple Silicon M5 Max achieves 25-35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10-18 tok/sec, and CPU-only 70B inference produces just 1-3 tok/sec."
         },
         {
-          "url": "/images/70b-models-consumer-hardware-quantization-tradeoff-hero-en.png",
+          "url": "/images/70b-models-consumer-hardware-quantization-tradeoff-hero-en.webp",
           "title": "Quantization trade-off curve: Q4_K_M (recommended) requires 40-43 GB RAM with only 1-3% quality loss versus FP16, balancing practicality and performance for consumer hardware."
         },
         {
@@ -639,7 +639,7 @@
       ],
       "images": [
         {
-          "url": "/images/llm-quantization-explained-quant-levels-hero-en.png",
+          "url": "/images/llm-quantization-explained-quant-levels-hero-en.webp",
           "title": "Quantization levels compared: from Q2_K (highest compression) to Q8_0 (highest quality). Q4_K_M is the recommended standard for most users."
         },
         {
@@ -693,11 +693,11 @@
       ],
       "images": [
         {
-          "url": "/images/long-context-local-llms-models-comparison-hero-en.png",
+          "url": "/images/long-context-local-llms-models-comparison-hero-en.webp",
           "title": "8 local LLM models with 128K context support in 2026 -- Qwen3 14B is the top pick for 16 GB machines, Qwen3 4B for 8 GB machines."
         },
         {
-          "url": "/images/long-context-local-llms-ram-scaling-hero-en.png",
+          "url": "/images/long-context-local-llms-ram-scaling-hero-en.webp",
           "title": "KV cache RAM scales with context length -- a 7B model at Q4_K_M needs ~6 GB at 4K context but ~14 GB at 128K context."
         },
         {
@@ -728,7 +728,7 @@
       ],
       "images": [
         {
-          "url": "/images/top-open-source-models-ollama-use-case-picks-hero-en.png",
+          "url": "/images/top-open-source-models-ollama-use-case-picks-hero-en.webp",
           "title": "Ollama model selection by use case: pick qwen3.6:27b (best overall, 77.2% SWE-bench) for chat and coding, kimi-k2.6 for frontier coding, gpt-oss:20b on 16 GB, deepseek-r1:7b for math."
         },
         {
@@ -740,7 +740,7 @@
           "title": "5 Ollama vision models for image input. Gemma 4 E4B (6 GB) now includes tool calling. Llama 3.2 Vision 11B (8 GB) for dedicated vision. All run locally."
         },
         {
-          "url": "/images/top-open-source-models-ollama-top-models-hero-en.png",
+          "url": "/images/top-open-source-models-ollama-top-models-hero-en.webp",
           "title": "Top Ollama models July 2026: Qwen 3.6 27B (best overall, 24 GB Q4), Kimi K2.6, Laguna XS 2.1 (agentic coding), gpt-oss:20b. Llama 4 Scout for 10M-token context (~55 GB)."
         }
       ]
@@ -848,11 +848,11 @@
       ],
       "images": [
         {
-          "url": "/images/ollama-vs-lm-studio-interface-comparison-hero-en.png",
+          "url": "/images/ollama-vs-lm-studio-interface-comparison-hero-en.webp",
           "title": "Ollama runs via CLI commands and exposes a REST API at localhost:11434; LM Studio bundles a visual model browser, chat UI, and GPU sliders in a desktop app."
         },
         {
-          "url": "/images/ollama-vs-lm-studio-when-to-use-hero-en.png",
+          "url": "/images/ollama-vs-lm-studio-when-to-use-hero-en.webp",
           "title": "Ollama suits developers needing an API and automation; LM Studio suits beginners wanting a desktop chat interface with visual settings."
         }
       ]
@@ -875,11 +875,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-local-llm-frontends-frontend-selection-hero-en.png",
+          "url": "/images/best-local-llm-frontends-frontend-selection-hero-en.webp",
           "title": "Choose your local LLM frontend by use case -- all options connect to the same Ollama API."
         },
         {
-          "url": "/images/best-local-llm-frontends-architecture-hero-en.png",
+          "url": "/images/best-local-llm-frontends-architecture-hero-en.webp",
           "title": "Open WebUI sits between your browser and Ollama -- enabling multi-user access, RAG, and multimodal features via Docker."
         }
       ]
@@ -933,11 +933,11 @@
       ],
       "images": [
         {
-          "url": "/images/local-llm-openai-compatible-api-one-line-change-hero-en.png",
+          "url": "/images/local-llm-openai-compatible-api-one-line-change-hero-en.webp",
           "title": "Switching from OpenAI to Ollama requires changing 2 lines -- base_url and api_key -- all other code stays identical."
         },
         {
-          "url": "/images/local-llm-openai-compatible-api-api-request-flow-hero-en.png",
+          "url": "/images/local-llm-openai-compatible-api-api-request-flow-hero-en.webp",
           "title": "Ollama intercepts the OpenAI-formatted request and runs inference locally -- the response returns in identical OpenAI format, no internet required."
         },
         {
@@ -1125,7 +1125,7 @@
       ],
       "images": [
         {
-          "url": "/images/local-llm-hardware-guide-2026-vram-formula-hero-en.png",
+          "url": "/images/local-llm-hardware-guide-2026-vram-formula-hero-en.webp",
           "title": "VRAM calculator showing the formula (Model Size × Bits) ÷ 8, with examples: 8B Q4_K_M = 4.7 GB, 13B Q5_K_M = 9.1 GB, 70B Q4_K_M = 40 GB. Q4_K_M is the recommended sweet spot for most hardware."
         },
         {
@@ -1663,15 +1663,15 @@
       ],
       "images": [
         {
-          "url": "/images/local-llms-for-coding-workflows-generation-workflow-hero-en.png",
+          "url": "/images/local-llms-for-coding-workflows-generation-workflow-hero-en.webp",
           "title": "Code generation workflow: write detailed prompt with function signature and docstring → send to Qwen3 8B or Devstral Small 24B model → model generates implementation → review code for bugs → integrate into application. All 5 steps essential."
         },
         {
-          "url": "/images/local-llms-for-coding-workflows-ide-setup-hero-en.png",
+          "url": "/images/local-llms-for-coding-workflows-ide-setup-hero-en.webp",
           "title": "IDE integration setup: Install Ollama (ollama.ai) → Install Continue.dev VS Code extension → Configure localhost:11434 → Select Codestral 22B or Qwen3 8B model → Use Ctrl+Shift+\\ to trigger inline suggestions. 3-step setup complete."
         },
         {
-          "url": "/images/local-llms-for-coding-workflows-mistakes-hero-en.png",
+          "url": "/images/local-llms-for-coding-workflows-mistakes-hero-en.webp",
           "title": "Common coding mistakes vs best practices: avoid 3B models (poor accuracy), use Qwen3 8B minimum (~76% HumanEval, 5 GB VRAM). Set iteration limits (10-20), always review code, use coding-specific models—not general Mistral or Llama."
         }
       ]
@@ -1912,11 +1912,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-budget-gpus-local-llm-model-speeds-hero-en.png",
+          "url": "/images/best-budget-gpus-local-llm-model-speeds-hero-en.webp",
           "title": "RTX 3060 12GB runs Qwen3 14B at 9-12 tok/sec and Qwen3 8B at 16-20 tok/sec, all at Q4_K_M quantization."
         },
         {
-          "url": "/images/best-budget-gpus-local-llm-gpu-comparison-hero-en.png",
+          "url": "/images/best-budget-gpus-local-llm-gpu-comparison-hero-en.webp",
           "title": "RTX 3060 12GB ($200-250 used) beats RTX 4060 Ti, RTX A4000, RTX 4070 Super, and RX 6700 XT on VRAM-per-dollar."
         }
       ]
@@ -1939,11 +1939,11 @@
       ],
       "images": [
         {
-          "url": "/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-en.png",
+          "url": "/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-en.webp",
           "title": "RTX 5090 vs RTX 4090 Speed -- Real-world LLM inference"
         },
         {
-          "url": "/images/rtx-5090-vs-rtx-4090-local-llm-cost-per-token-hero-en.png",
+          "url": "/images/rtx-5090-vs-rtx-4090-local-llm-cost-per-token-hero-en.webp",
           "title": "Cost Per Token: Which Is Cheaper? -- Price vs throughput on Llama 70B"
         }
       ]
@@ -1984,11 +1984,11 @@
       ],
       "images": [
         {
-          "url": "/images/how-much-vram-local-llm-vram-by-size-hero-en.png",
+          "url": "/images/how-much-vram-local-llm-vram-by-size-hero-en.webp",
           "title": "Rule of thumb: divide model size in billions by 2 to get raw Q4 VRAM in GB, then add headroom."
         },
         {
-          "url": "/images/how-much-vram-local-llm-quantization-tradeoff-hero-en.png",
+          "url": "/images/how-much-vram-local-llm-quantization-tradeoff-hero-en.webp",
           "title": "Q4 is the sweet spot for most users — 87.5% smaller than FP32 with only ~1% accuracy loss."
         }
       ]
@@ -2011,11 +2011,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-amd-gpus-local-llm-price-performance-hero-en.png",
+          "url": "/images/best-amd-gpus-local-llm-price-performance-hero-en.webp",
           "title": "RX 7900 XTX matches RTX 4090 speed and VRAM for roughly 60% of the price -- the trade-off is ROCm setup friction."
         },
         {
-          "url": "/images/best-amd-gpus-local-llm-software-support-hero-en.png",
+          "url": "/images/best-amd-gpus-local-llm-software-support-hero-en.webp",
           "title": "llama.cpp and Text Generation WebUI are the reliable AMD paths in 2026 -- Ollama's ROCm support remains inconsistent."
         }
       ]
@@ -2081,11 +2081,11 @@
           "title": "Framework Desktop vs Mac mini M4 Pro: Framework runs Llama 3.3 70B at 20–25 tok/s with 128 GB unified memory for $1,999; Mac mini M4 Pro delivers 10–15 tok/s with 64 GB for $2,299."
         },
         {
-          "url": "/images/best-mini-pcs-local-llm-platform-value-hero-en.png",
+          "url": "/images/best-mini-pcs-local-llm-platform-value-hero-en.webp",
           "title": "Mini PC platform value comparison: ASUS PN51 with RTX 5060 Ti delivers best value at ~$900; Intel NUC 13 with Thunderbolt eGPU dock costs ~$1,300 for premium build quality."
         },
         {
-          "url": "/images/best-mini-pcs-local-llm-gpu-compatibility-hero-en.png",
+          "url": "/images/best-mini-pcs-local-llm-gpu-compatibility-hero-en.webp",
           "title": "GPU compatibility table for mini-ITX cases: RTX 5060 Ti 16 GB fits all cases at 217mm for $450–500; RTX 5070 and RTX 4070 require case measurement."
         },
         {
@@ -2112,11 +2112,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-amd-mini-pc-local-llm-2026-comparison-hero-en.png",
+          "url": "/images/best-amd-mini-pc-local-llm-2026-comparison-hero-en.webp",
           "title": "Price, RAM, NPU power, and performance across all four mini PC models. Minisforum offers the best balance, Beelink maximum memory, GMKtec the entry point."
         },
         {
-          "url": "/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-en.png",
+          "url": "/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-en.webp",
           "title": "Tokens/sec across 8B, 32B, and 70B models. Minisforum/Beelink/AOOSTAR achieve identical performance due to shared Ryzen AI Max+ 395 silicon. GMKtec EVO-X2 is 10–15% slower due to Ryzen AI Max 385."
         },
         {
@@ -2147,11 +2147,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-laptops-local-llm-vram-fit-chart-hero-en.png",
+          "url": "/images/best-laptops-local-llm-vram-fit-chart-hero-en.webp",
           "title": "VRAM and unified memory tiers mapped to local LLM model sizes: 8 GB (RTX 5070) fits 7B only, 12–16 GB (RTX 5070 Ti, RTX 5080) comfortably runs 7B–14B, 24 GB and 36 GB+ (Apple M5 Pro, M5 Max) handle 30B and 70B models at Q4."
         },
         {
-          "url": "/images/best-laptops-local-llm-comparison-table-hero-en.png",
+          "url": "/images/best-laptops-local-llm-comparison-table-hero-en.webp",
           "title": "Laptop comparison for local LLMs: MacBook Pro M5 Pro ($2,199, 24 GB unified memory, 45–60 tok/s) vs. RTX 5080 laptop (~$2,799, 16 GB VRAM, ~70 tok/s) vs. RTX 5070 Ti laptop (~$2,499, 12 GB VRAM), tested with Ollama and LM Studio."
         }
       ]
@@ -2174,11 +2174,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-local-llm-stack-use-case-use-case-picker-hero-en.png",
+          "url": "/images/best-local-llm-stack-use-case-use-case-picker-hero-en.webp",
           "title": "Best Local LLM Stack by Use Case -- Tools that work together for the job"
         },
         {
-          "url": "/images/best-local-llm-stack-use-case-hardware-tier-hero-en.png",
+          "url": "/images/best-local-llm-stack-use-case-hardware-tier-hero-en.webp",
           "title": "Best Stack by Hardware Tier -- Match GPU/VRAM to the optimal stack"
         }
       ]
@@ -2304,7 +2304,7 @@
       ],
       "images": [
         {
-          "url": "/images/best-ai-coding-assistant-local-llm-comparison-hero-en.png",
+          "url": "/images/best-ai-coding-assistant-local-llm-comparison-hero-en.webp",
           "title": "AI coding assistants comparison: Continue.dev (best overall, free), Cursor ($20/mo, best UX), Sourcegraph Cody ($9/user/mo, best teams), Tabnine ($12/mo, best privacy), Windsurf (free/$15/mo, rising alternative). All support local LLMs with varying setup complexity. June 2026."
         },
         {
@@ -2312,7 +2312,7 @@
           "title": "Local LLM integration depth comparison: Continue.dev (top right = easy setup + full feature support locally), Cursor (moderate difficulty, cloud-first with local fallback), Sourcegraph Cody (balanced but cloud-first), Tabnine (bottom left = complex enterprise-only), Windsurf (rising support). Chart shows setup ease vs feature completeness."
         },
         {
-          "url": "/images/best-ai-coding-assistant-local-llm-decision-tree-hero-en.png",
+          "url": "/images/best-ai-coding-assistant-local-llm-decision-tree-hero-en.webp",
           "title": "Decision tree flowchart for choosing AI coding assistants: Start → Budget (Free/Paid) → Free path: Local support? (Yes=Continue.dev, No=Windsurf) → Paid path: Solo/Team? (Solo=Cursor, Team=Cody/Tabnine). Recommendations show advantages of each choice."
         },
         {
@@ -2339,11 +2339,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-local-llms-code-review-model-comparison-hero-en.png",
+          "url": "/images/best-local-llms-code-review-model-comparison-hero-en.webp",
           "title": "Best Local LLM by Code Review Type -- Model and minimum RAM"
         },
         {
-          "url": "/images/best-local-llms-code-review-tradeoffs-hero-en.png",
+          "url": "/images/best-local-llms-code-review-tradeoffs-hero-en.webp",
           "title": "Accuracy vs Speed Trade-offs -- Per 500 lines of code"
         }
       ]
@@ -2424,11 +2424,11 @@
       ],
       "images": [
         {
-          "url": "/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-en.png",
+          "url": "/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-en.webp",
           "title": "Local LLM speed by hardware tier (CPU-only and iGPU): 4 GB RAM (25–40 tok/s, Qwen3 1.7B), 8 GB RAM CPU (15–25 tok/s, Phi-4-mini), 8 GB + Iris iGPU (12–20 tok/s), 16 GB CPU (8–15 tok/s), 16 GB + iGPU (20–35 tok/s). July 2026 benchmarks."
         },
         {
-          "url": "/images/fastest-local-llms-low-end-pcs-cpu-vs-gpu-hero-en.png",
+          "url": "/images/fastest-local-llms-low-end-pcs-cpu-vs-gpu-hero-en.webp",
           "title": "CPU vs GPU speed comparison for local LLMs: CPU-only reaches 10–25 tok/sec (3B models) and 15–40 tok/sec. GPU (RTX 3060, 8 GB) hits 25–60 tok/sec — 4–10× faster than CPU-only inference."
         },
         {
@@ -2459,7 +2459,7 @@
       ],
       "images": [
         {
-          "url": "/images/quantization-levels-comparison-vram-savings-hero-en.png",
+          "url": "/images/quantization-levels-comparison-vram-savings-hero-en.webp",
           "title": "VRAM savings by quantization level: FP32 = 280GB, Q8 = 140GB (50% savings), Q4 = 70GB (75% savings), Q3 = 53GB (81% savings). Q4 is the sweet spot for most users."
         },
         {
@@ -2467,7 +2467,7 @@
           "title": "Hardware selection guide: 8GB RAM → Q3/Q4 (7B models), 16GB → Q4_K_M (recommended), 32GB+ → Q5/Q6/Q8 (larger models, higher quality), 64GB+ → Q8 or FP32 (research/medical)."
         },
         {
-          "url": "/images/quantization-levels-comparison-quality-loss-hero-en.png",
+          "url": "/images/quantization-levels-comparison-quality-loss-hero-en.webp",
           "title": "Quality loss benchmarks: Q8 = -0.1% loss, Q5 = -0.5% loss, Q4 = -1.2% loss, Q3 = -3.7% loss on MMLU. Q4 quality loss is imperceptible for most tasks."
         }
       ]
@@ -2736,11 +2736,11 @@
           "title": "macOS vs Windows vs Linux for local LLMs: macOS offers the simplest setup from $1,099; Windows delivers peak GPU performance; Linux provides the best cost-to-performance ratio starting at $810 total."
         },
         {
-          "url": "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-en.png",
+          "url": "/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-en.webp",
           "title": "Mac vs Windows vs Linux hardware cost for local LLMs: M5 Max at $3,499–4,999 runs 70B Q8 at 25–35 tok/s; RTX 5090 at ~$2,000 reaches 40–50 tok/s; used RTX 4090 at $1,000–1,400 offers 70B Q4 support."
         },
         {
-          "url": "/images/mac-vs-windows-vs-linux-local-llm-setup-hero-en.png",
+          "url": "/images/mac-vs-windows-vs-linux-local-llm-setup-hero-en.webp",
           "title": "Local LLM setup time by OS: macOS takes 6 minutes with zero terminal commands; Windows takes 15–20 minutes with GUI; Linux Ubuntu requires 40–70 minutes including CUDA installation."
         },
         {
@@ -2793,11 +2793,11 @@
       ],
       "images": [
         {
-          "url": "/images/apple-silicon-m5-local-llm-config-comparison-hero-en.png",
+          "url": "/images/apple-silicon-m5-local-llm-config-comparison-hero-en.webp",
           "title": "Mac Studio M5 configs are projected (expected October 2026) -- only MacBook Pro 16\" M5 Max ships today."
         },
         {
-          "url": "/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-en.png",
+          "url": "/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-en.webp",
           "title": "Apple's advantage grows with model size; NVIDIA's advantage grows with raw speed and ecosystem breadth."
         }
       ]
@@ -2820,11 +2820,11 @@
       ],
       "images": [
         {
-          "url": "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-en.png",
+          "url": "/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-en.webp",
           "title": "When buying, prioritize memory bandwidth over GPU core count -- it is the real bottleneck for LLM inference."
         },
         {
-          "url": "/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-en.png",
+          "url": "/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-en.webp",
           "title": "24/7 inference: ~$35/year on Mac Mini M5 vs. ~$400/year on a desktop RTX 4090 -- a 10x difference at $0.15/kWh."
         }
       ]
@@ -2847,11 +2847,11 @@
       ],
       "images": [
         {
-          "url": "/images/m5-pro-max-llm-benchmarks-2026-tokens-per-sec-hero-en.png",
+          "url": "/images/m5-pro-max-llm-benchmarks-2026-tokens-per-sec-hero-en.webp",
           "title": "Tokens/sec by model size: M5 Pro reaches 50–60 tok/s on Llama 3.3 8B Q4 and 8–12 tok/s on 70B Q4; M5 Max nearly doubles both to 100–120 tok/s and 16–22 tok/s; RTX 4090 leads 8B at 80–100 tok/s but cannot fit 34B or 70B in its 24GB VRAM."
         },
         {
-          "url": "/images/m5-pro-max-llm-benchmarks-2026-which-to-buy-hero-en.png",
+          "url": "/images/m5-pro-max-llm-benchmarks-2026-which-to-buy-hero-en.webp",
           "title": "M5 Pro vs M5 Max buying guide: M5 Pro (64GB, 307 GB/s, 25–45W) suits 8B–34B models at $1,200–1,500 in a Mac Mini; M5 Max (128GB, 614 GB/s, 60–100W) is the only consumer option for regular 70B inference in a Mac Studio."
         }
       ]
@@ -2874,11 +2874,11 @@
       ],
       "images": [
         {
-          "url": "/images/how-much-unified-memory-for-local-llm-tier-fit-chart-hero-en.png",
+          "url": "/images/how-much-unified-memory-for-local-llm-tier-fit-chart-hero-en.webp",
           "title": "Unified memory tiers 16GB, 36GB, 64GB, and 128GB against five model sizes: Phi-4 3.8B fits every tier, Llama 3.3 8B is tight at 16GB, Llama 3.3 13B needs 36GB minimum, Qwen3 34B needs 64GB, and Llama 3.3 70B needs 128GB."
         },
         {
-          "url": "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-hero-en.png",
+          "url": "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-hero-en.webp",
           "title": "Buying decision tree for unified memory: 36GB for a single 13B model, 64GB if you also run vision/STT/TTS alongside it or want 34B Q5, and 128GB only if you specifically need 70B Q5 models."
         }
       ]
@@ -2901,11 +2901,11 @@
       ],
       "images": [
         {
-          "url": "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-hero-en.png",
+          "url": "/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-hero-en.webp",
           "title": "MLX is 15–25% faster across models due to native Metal optimization."
         },
         {
-          "url": "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-hero-en.png",
+          "url": "/images/mlx-vs-ollama-vs-llama-cpp-mac-decision-matrix-hero-en.webp",
           "title": "All three coexist without conflict — install Ollama, MLX, and llama.cpp side by side."
         }
       ]
@@ -2955,11 +2955,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-models-apple-silicon-2026-by-tier-hero-en.png",
+          "url": "/images/best-models-apple-silicon-2026-by-tier-hero-en.webp",
           "title": "Best Model by Mac Memory Tier -- Updated quarterly -- last verified July 2026"
         },
         {
-          "url": "/images/best-models-apple-silicon-2026-quality-benchmarks-hero-en.png",
+          "url": "/images/best-models-apple-silicon-2026-quality-benchmarks-hero-en.webp",
           "title": "Model Quality Benchmarks (2026) -- MMLU and average score"
         }
       ]
@@ -3036,11 +3036,11 @@
       ],
       "images": [
         {
-          "url": "/images/running-70b-models-apple-silicon-m5-max-hardware-comparison-hero-en.png",
+          "url": "/images/running-70b-models-apple-silicon-m5-max-hardware-comparison-hero-en.webp",
           "title": "M5 Max 128GB unified memory ($4,000, 460–614 GB/s bandwidth) runs 70B Q5 at 12–16 tokens/sec versus a dual RTX 4090 multi-GPU rig ($5,000+, 48 GB VRAM) at 18–25 tokens/sec with added orchestration complexity."
         },
         {
-          "url": "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-hero-en.png",
+          "url": "/images/running-70b-models-apple-silicon-m5-max-quantization-tradeoffs-hero-en.webp",
           "title": "70B model quantization tradeoffs on M5 Max 128GB: Q4_K_M uses 42 GB at 15–20 tok/s, Q5_K_M uses 49 GB at 12–16 tok/s (recommended), Q8_0 uses 74 GB at 8–12 tok/s lossless, and FP16 at 140 GB only fits M5 Ultra 256GB."
         }
       ]
@@ -3090,11 +3090,11 @@
       ],
       "images": [
         {
-          "url": "/images/run-qwen-locally-guide-2026-model-sizes-hero-en.png",
+          "url": "/images/run-qwen-locally-guide-2026-model-sizes-hero-en.webp",
           "title": "Qwen 3 model sizes by VRAM and speed: 27B Q4_K_M needs 16 GB VRAM at ~35 tokens/sec, 14B needs 9 GB at ~60 tokens/sec, 7B needs 5 GB at ~80 tokens/sec, and 72B needs 42 GB."
         },
         {
-          "url": "/images/run-qwen-locally-guide-2026-setup-steps-hero-en.png",
+          "url": "/images/run-qwen-locally-guide-2026-setup-steps-hero-en.webp",
           "title": "Five-step Ollama setup for Qwen 3.6 27B: install Ollama, pull qwen3.6:27b, fix num_ctx to 32768 in the Modelfile, build and run the model, then test the localhost:11434/v1 API endpoint — under 10 minutes total."
         }
       ]
@@ -3117,11 +3117,11 @@
       ],
       "images": [
         {
-          "url": "/images/qwen-coder-deepseek-mistral-swe-bench-hero-en.png",
+          "url": "/images/qwen-coder-deepseek-mistral-swe-bench-hero-en.webp",
           "title": "SWE-bench scores for local coding models: Qwen 3.6 27B 77.2%, DeepSeek Coder ~75%, Mistral Devstral 24B ~73%, all runnable on consumer GPUs with 14-16 GB VRAM."
         },
         {
-          "url": "/images/qwen-coder-deepseek-mistral-dispatch-hero-en.png",
+          "url": "/images/qwen-coder-deepseek-mistral-dispatch-hero-en.webp",
           "title": "Coding task dispatch decision tree: GDPR-relevant code routes to local Qwen 3.6 27B, interactive autocomplete to local Devstral 24B (40 tok/sec), non-sensitive batch tasks to the DeepSeek Coder API ($0.14/1M tokens)."
         }
       ]
@@ -3252,11 +3252,11 @@
       ],
       "images": [
         {
-          "url": "/images/qwen-local-deployment-guide-2026-hardware-hero-en.png",
+          "url": "/images/qwen-local-deployment-guide-2026-hardware-hero-en.webp",
           "title": "Qwen3 VRAM requirements by model size (Q4_K_M) — PromptQuorum 2026"
         },
         {
-          "url": "/images/qwen-local-deployment-guide-2026-benchmarks-hero-en.png",
+          "url": "/images/qwen-local-deployment-guide-2026-benchmarks-hero-en.webp",
           "title": "Qwen3 benchmark scores (Q4_K_M) — PromptQuorum 2026"
         }
       ]
@@ -3279,11 +3279,11 @@
       ],
       "images": [
         {
-          "url": "/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-en.png",
+          "url": "/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-en.webp",
           "title": "Alibaba vs Tencent vs AutoDL GPU Pricing -- July 2026 hourly rates"
         },
         {
-          "url": "/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-en.png",
+          "url": "/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-en.webp",
           "title": "Qwen Inference Speed by Provider -- Qwen3 72B on A100 80GB"
         }
       ]
@@ -3722,11 +3722,11 @@
       ],
       "images": [
         {
-          "url": "/images/prompt-building-blocks-5-blocks-overview-hero-en.png",
+          "url": "/images/prompt-building-blocks-5-blocks-overview-hero-en.webp",
           "title": "The 5 Building Blocks of a Prompt -- What each block does"
         },
         {
-          "url": "/images/prompt-building-blocks-quick-reference-hero-en.png",
+          "url": "/images/prompt-building-blocks-quick-reference-hero-en.webp",
           "title": "5 Building Blocks: Quick Reference -- When to use what"
         }
       ]
@@ -3803,7 +3803,7 @@
       ],
       "images": [
         {
-          "url": "/images/context-windows-explained-why-forgets-hero-en.png",
+          "url": "/images/context-windows-explained-why-forgets-hero-en.webp",
           "title": "Context windows work like a sliding window: new tokens push old ones out — once the window fills, the model literally cannot see earlier content."
         },
         {
@@ -3811,7 +3811,7 @@
           "title": "Prompt trimming saves 30–50% of tokens: removing redundant context from earlier turns keeps the window focused on what the model needs to answer correctly."
         },
         {
-          "url": "/images/context-windows-explained-context-table-hero-en.png",
+          "url": "/images/context-windows-explained-context-table-hero-en.webp",
           "title": "Context window sizes in 2026: Gemini 3.1 Pro supports 2M tokens — the largest available context, fitting an entire codebase or legal document in one request."
         }
       ]
@@ -4126,11 +4126,11 @@
       ],
       "images": [
         {
-          "url": "/images/ai-limitations-what-llms-cant-do-quick-reference-hero-en.png",
+          "url": "/images/ai-limitations-what-llms-cant-do-quick-reference-hero-en.webp",
           "title": "8 LLM Limitations at a Glance -- Quick lookup before diving into detail"
         },
         {
-          "url": "/images/ai-limitations-what-llms-cant-do-can-llms-do-x-hero-en.png",
+          "url": "/images/ai-limitations-what-llms-cant-do-can-llms-do-x-hero-en.webp",
           "title": "Can LLMs Do X? Quick Answers -- Base model capability, before tool use"
         }
       ]
@@ -5207,11 +5207,11 @@
       ],
       "images": [
         {
-          "url": "/images/knowledge-cutoffs-and-geo-search-layer-hero-en.png",
+          "url": "/images/knowledge-cutoffs-and-geo-search-layer-hero-en.webp",
           "title": "Cutoff vs Live Search -- Which AI systems search the web"
         },
         {
-          "url": "/images/knowledge-cutoffs-and-geo-geo-strategy-hero-en.png",
+          "url": "/images/knowledge-cutoffs-and-geo-geo-strategy-hero-en.webp",
           "title": "GEO Strategy by AI System -- Two tracks: search-based vs RAG-based"
         }
       ]
@@ -5236,11 +5236,11 @@
       ],
       "images": [
         {
-          "url": "/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-en.png",
+          "url": "/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-en.webp",
           "title": "AnythingLLM vs PrivateGPT vs Open WebUI -- Tested on a 5,047-page corpus"
         },
         {
-          "url": "/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-en.png",
+          "url": "/images/anythingllm-vs-privategpt-vs-openwebui-rag-which-one-hero-en.webp",
           "title": "Which RAG Platform Should You Choose? -- Decision shortcut by situation"
         },
         {
@@ -5345,11 +5345,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-en.png",
+          "url": "/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-en.webp",
           "title": "Eight consumer GPUs for local LLMs compared by VRAM, 7B Q4 inference speed, power draw, and Jul 2026 price across four budget tiers. VRAM rises from 12 GB (RTX 3060) to 32 GB (RTX 5090); buy for the model size you need before optimizing for speed."
         },
         {
-          "url": "/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-en.png",
+          "url": "/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-en.webp",
           "title": "Four-question decision flow for choosing a local-LLM GPU: largest target model size sets the tier, budget ceiling narrows the pick, NVIDIA-versus-AMD decides the brand, and power-supply headroom confirms the enthusiast-tier choice."
         },
         {
@@ -5376,11 +5376,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-mac-for-local-ai-2026-comparison-table-hero-en.png",
+          "url": "/images/best-mac-for-local-ai-2026-comparison-table-hero-en.webp",
           "title": "Mac Mini M5 Pro 64 GB (307 GB/s, ~$1,199) versus MacBook Pro 16\" M5 Max 64-128 GB (460-614 GB/s, ~$3,499-$4,499) versus Mac Studio 128 GB (~$3,999); Mac Studio M5 Max specs are projected, unreleased as of July 2026."
         },
         {
-          "url": "/images/best-mac-for-local-ai-2026-memory-by-model-hero-en.png",
+          "url": "/images/best-mac-for-local-ai-2026-memory-by-model-hero-en.webp",
           "title": "Unified memory by model size at Q4_K_M: 8B needs 8-9 GB, 13-14B needs 11-13 GB, 34B needs 21-25 GB, 70B Q4 needs 39-42 GB, and 70B Q5 or concurrent models need 50-70+ GB."
         }
       ]
@@ -5403,11 +5403,11 @@
       ],
       "images": [
         {
-          "url": "/images/cloud-gpu-rental-guide-2026-comparison-table-hero-en.png",
+          "url": "/images/cloud-gpu-rental-guide-2026-comparison-table-hero-en.webp",
           "title": "RunPod vs Lambda Labs vs Vast.ai -- July 2026 pricing snapshot"
         },
         {
-          "url": "/images/cloud-gpu-rental-guide-2026-which-provider-hero-en.png",
+          "url": "/images/cloud-gpu-rental-guide-2026-which-provider-hero-en.webp",
           "title": "Which Cloud GPU Provider? -- Pick by reliability need, then budget"
         }
       ]
@@ -5484,11 +5484,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-en.png",
+          "url": "/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-en.webp",
           "title": "NAS vs SSD for Local AI Storage -- Price snapshot, July 2026"
         },
         {
-          "url": "/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-en.png",
+          "url": "/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-en.webp",
           "title": "Best NVMe SSDs for AI Inference -- Speed vs price, July 2026 (4TB)"
         },
         {
@@ -5515,11 +5515,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-en.png",
+          "url": "/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-en.webp",
           "title": "AI Coding Tools Compared -- July 2026 snapshot"
         },
         {
-          "url": "/images/best-ai-coding-tools-comparison-2026-which-tool-hero-en.png",
+          "url": "/images/best-ai-coding-tools-comparison-2026-which-tool-hero-en.webp",
           "title": "Which AI Coding Tool Should You Choose? -- Decision shortcut"
         }
       ]
@@ -5569,11 +5569,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-laptops-local-llm-2026-comparison-table-hero-en.png",
+          "url": "/images/best-laptops-local-llm-2026-comparison-table-hero-en.webp",
           "title": "Apple MacBook Pro, ThinkPad/ROG, and Framework Laptop 16 compared by memory model and best-fit buying style for local LLMs."
         },
         {
-          "url": "/images/best-laptops-local-llm-2026-decision-flowchart-hero-en.png",
+          "url": "/images/best-laptops-local-llm-2026-decision-flowchart-hero-en.webp",
           "title": "Three questions route most buyers to one laptop family: repairability, battery/memory need, then durability versus raw speed."
         }
       ]
@@ -5650,7 +5650,7 @@
       ],
       "images": [
         {
-          "url": "/images/best-local-coding-models-2026-model-comparison-hero-en.png",
+          "url": "/images/best-local-coding-models-2026-model-comparison-hero-en.webp",
           "title": "Seven local coding models ranked by VRAM, context window, licence, and best-fit use case at Q4_K_M in May 2026. Qwen3-Coder 30B is the default 24 GB pick; DeepSeek Coder V3 leads on long-context; StarCoder 2 15B leads on niche-language coverage."
         },
         {
@@ -5658,7 +5658,7 @@
           "title": "Eight decision shortcuts mapping hardware, licence, context, and use-case constraints to the right local coding model. VRAM is the first filter; licence is the second."
         },
         {
-          "url": "/images/best-local-coding-models-2026-vram-by-quant-hero-en.png",
+          "url": "/images/best-local-coding-models-2026-vram-by-quant-hero-en.webp",
           "title": "VRAM requirements by quantization level for 7B and 30B models at Q4_K_M through FP16. Q4_K_M is the recommended default at ~0.60 GB per billion parameters; add 2–4 GB for context and tooling overhead."
         },
         {
@@ -5697,11 +5697,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-local-llm-apps-android-2026-speed-comparison-hero-en.png",
+          "url": "/images/best-local-llm-apps-android-2026-speed-comparison-hero-en.webp",
           "title": "MLC Chat reaches 22 tok/sec on Phi-4 Mini via Snapdragon Hexagon NPU, fastest of 6 Android LLM apps tested."
         },
         {
-          "url": "/images/best-local-llm-apps-android-2026-chipset-npu-hero-en.png",
+          "url": "/images/best-local-llm-apps-android-2026-chipset-npu-hero-en.webp",
           "title": "Snapdragon 8 Elite's exposed Hexagon NPU runs Phi-4 Mini at 22 tok/sec; Tensor G5's CPU-only path manages 10-18."
         }
       ]
@@ -5724,11 +5724,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-local-llm-apps-iphone-2026-which-app-hero-en.png",
+          "url": "/images/best-local-llm-apps-iphone-2026-which-app-hero-en.webp",
           "title": "Which local AI app to install on iPhone: PocketPal AI (free default), Private LLM (Siri + Shortcuts), MLC Chat (fastest on Apple Silicon), LLM Farm (configurable), Apple Intelligence (iOS 18+ built-in)."
         },
         {
-          "url": "/images/best-local-llm-apps-iphone-2026-comparison-hero-en.png",
+          "url": "/images/best-local-llm-apps-iphone-2026-comparison-hero-en.webp",
           "title": "iPhone local LLM app comparison: PocketPal AI and LLM Farm (free, ~10–15 tok/s), MLC Chat (free, ~14–20 tok/s Metal-accelerated), Private LLM (~£10 one-time, Siri + Shortcuts), Apple Intelligence (system-integrated, iOS 18+)."
         },
         {
@@ -5763,11 +5763,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-local-llm-creative-writing-2026-model-comparison-hero-en.png",
+          "url": "/images/best-local-llm-creative-writing-2026-model-comparison-hero-en.webp",
           "title": "Llama 3.3 70B wins broadest; specialists win one category each — pick by task, not overall rank."
         },
         {
-          "url": "/images/best-local-llm-creative-writing-2026-decision-tree-hero-en.png",
+          "url": "/images/best-local-llm-creative-writing-2026-decision-tree-hero-en.webp",
           "title": "Start with Qwen3 32B if unsure — it covers most workflows on consumer hardware."
         }
       ]
@@ -5798,7 +5798,7 @@
           "title": "Test methodology: 4 MCP servers (filesystem, sqlite, puppeteer, github), 50 prompts × 4 servers × 3 runs = 600 graded calls per model, ~3,000 total across 5 models — same Cline 3.x harness throughout, only the model varied."
         },
         {
-          "url": "/images/best-local-models-tool-calling-2026-comparison-hero-en.png",
+          "url": "/images/best-local-models-tool-calling-2026-comparison-hero-en.webp",
           "title": "Five tool-calling models benchmarked on 4 MCP servers: Llama 3.3 70B leads at ~97% well-formed calls (42 GB VRAM); Qwen3-Coder 30B tops ~96% on code tools; Gemma 4 27B delivers ~95% on 16 GB VRAM; GLM-4.7 32B ~94% with 128K context; Qwen3 32B ~93% well-rounded."
         },
         {
@@ -5806,7 +5806,7 @@
           "title": "Three model categories that fail tool calling: sub-7B models emit malformed calls on multi-step tasks; models without tool-call training paraphrase calls into prose; Q3/Q2 quantisation degrades tool reliability before chat quality — Q4_K_M is the production floor."
         },
         {
-          "url": "/images/best-local-models-tool-calling-2026-format-comparison-hero-en.png",
+          "url": "/images/best-local-models-tool-calling-2026-format-comparison-hero-en.webp",
           "title": "Four tool-call wire formats compared: OpenAI JSON (schema-validated, Continue.dev), Cline XML (very strict, first to surface failures), MCP JSON-RPC 2.0 (ecosystem standard, schema-validated), Aider SEARCH/REPLACE (pattern-matched verbatim) — all five benchmark models handle all four formats."
         }
       ]
@@ -5991,11 +5991,11 @@
       ],
       "images": [
         {
-          "url": "/images/local-ai-app-non-technical-users-which-app-hero-en.png",
+          "url": "/images/local-ai-app-non-technical-users-which-app-hero-en.webp",
           "title": "GPT4All 4-step install path: download ~290 MB from gpt4all.io, run installer, pick Llama 3.2 3B (2 GB download), start chatting — fully offline on any 8 GB laptop."
         },
         {
-          "url": "/images/local-ai-app-non-technical-users-privacy-comparison-hero-en.png",
+          "url": "/images/local-ai-app-non-technical-users-privacy-comparison-hero-en.webp",
           "title": "Jan privacy comparison: cloud AI sends prompts to remote servers with analytics SDKs; Jan delivers zero telemetry, AGPL-auditable source, and fully offline operation after install."
         },
         {
@@ -6157,11 +6157,11 @@
       ],
       "images": [
         {
-          "url": "/images/local-llm-with-obsidian-2026-plugin-comparison-hero-en.png",
+          "url": "/images/local-llm-with-obsidian-2026-plugin-comparison-hero-en.webp",
           "title": "Plugin comparison across 5 Obsidian LLM tools: Smart Connections is the only one with vault-wide embedding search, Copilot for Obsidian adds vault QA chat, and Text Generator, Local GPT, BMO Chatbot cover generation without vault search."
         },
         {
-          "url": "/images/local-llm-with-obsidian-2026-setup-flow-hero-en.png",
+          "url": "/images/local-llm-with-obsidian-2026-setup-flow-hero-en.webp",
           "title": "Five-step setup flow for Smart Connections + Copilot for Obsidian: install Ollama and pull llama3.2:3b, start and verify at localhost:11434, index the vault with nomic-embed-text, configure Copilot at the /v1 endpoint, then test vault-aware chat."
         }
       ]
@@ -6306,11 +6306,11 @@
           "title": "4-step model selection guide for mobile LLMs: check phone RAM, match phone tier (4 GB to 8 GB+), pick use case (speed, multilingual, or quality), then install Q4_K_M GGUF via PocketPal AI or LM Studio."
         },
         {
-          "url": "/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-en.png",
+          "url": "/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-en.webp",
           "title": "Six mobile LLM models benchmarked at Q4_K_M on iPhone 17 Pro: Phi-4 Mini (3.8B, ~13–18 tok/sec) is the smartest; SmolLM 2 (1.7B, ~26–32 tok/sec) is the fastest; Qwen 3 (1.7B) is the best multilingual; Gemma 3 1B (~35–45 tok/sec) works on 4 GB phones."
         },
         {
-          "url": "/images/mobile-llm-models-phi4-gemma-smollm-speed-chart-hero-en.png",
+          "url": "/images/mobile-llm-models-phi4-gemma-smollm-speed-chart-hero-en.webp",
           "title": "Tokens-per-second comparison for 6 mobile LLM models on 3 devices at Q4_K_M: Gemma 3 1B (~35–45 on iPhone 17 Pro) and SmolLM 2 1.7B (~26–32) lead on speed; Phi-4 Mini (~13–18) and Gemma 3 4B (~10–13) are slower but smarter."
         },
         {
@@ -6407,11 +6407,11 @@
           "title": "Android on-device AI: 5-step Termux + Ollama setup — install Termux from F-Droid (not Play Store), update packages, install Ollama via curl, pull a model (phi4-mini or qwen3:1.7b), then start the server at localhost:11434. Requires 8 GB RAM minimum."
         },
         {
-          "url": "/images/run-ai-on-tablet-ipad-android-remote-setup-hero-en.png",
+          "url": "/images/run-ai-on-tablet-ipad-android-remote-setup-hero-en.webp",
           "title": "Remote AI from a tablet in 4 steps: install Ollama on your home machine, pull a model + Open WebUI, find your home IP address, then open http://[IP]:3000 in your tablet browser — no model stored on tablet, runs 70B models at 20–40 tok/sec."
         },
         {
-          "url": "/images/run-ai-on-tablet-ipad-android-model-by-device-hero-en.png",
+          "url": "/images/run-ai-on-tablet-ipad-android-model-by-device-hero-en.webp",
           "title": "Best model by tablet: iPad Pro M5 (12 GB / 16 GB) reaches 32–38 tok/sec on Llama 3.2 3B; iPad Air M4 runs Phi-4 Mini at 18–20 tok/sec; Android 8 GB reaches 10–15 tok/sec via Termux; Pixel Tablet requires remote connection due to slow Tensor G2 chip."
         }
       ]
@@ -6452,11 +6452,11 @@
       ],
       "images": [
         {
-          "url": "/images/easiest-local-ai-app-comparison-table-hero-en.png",
+          "url": "/images/easiest-local-ai-app-comparison-table-hero-en.webp",
           "title": "LM Studio vs Jan vs GPT4All feature comparison: LM Studio offers 50,000+ models, local API, multi-chat, and the best UI; Jan is the open-source alternative (AGPLv3); GPT4All is the simplest single-window option for pure beginners."
         },
         {
-          "url": "/images/easiest-local-ai-app-setup-steps-hero-en.png",
+          "url": "/images/easiest-local-ai-app-setup-steps-hero-en.webp",
           "title": "LM Studio 4-step setup: (1) download installer from lmstudio.ai, (2) install and open the app, (3) browse Discover tab and download Q4_K_M model (~2.7–5 GB), (4) open Chat, select model, and start chatting — no terminal required."
         },
         {
@@ -6572,11 +6572,11 @@
       ],
       "images": [
         {
-          "url": "/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-en.png",
+          "url": "/images/sillytavern-vs-agnai-vs-risuai-roleplay-setup-hero-en.webp",
           "title": "Setup time & installation: SillyTavern 15 minutes (git clone + npm), Agnai single-user 10 minutes (npm), Agnai shared server 30 minutes (+ MongoDB + authentication), RisuAI 5 minutes (download desktop app, no terminal needed). First-time users: RisuAI fastest."
         },
         {
-          "url": "/images/sillytavern-vs-agnai-vs-risuai-roleplay-comparison-hero-en.png",
+          "url": "/images/sillytavern-vs-agnai-vs-risuai-roleplay-comparison-hero-en.webp",
           "title": "Feature comparison: SillyTavern offers deepest lore books and extensions, multi-character group chat (mature), no multi-user mode. Agnai adds credible multi-user/shared-server mode, simpler lore books. RisuAI simplest setup (5 min), mobile apps built-in, lighter feature set. All three load Tavern v2 character cards."
         },
         {
@@ -6611,11 +6611,11 @@
       ],
       "images": [
         {
-          "url": "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-en.png",
+          "url": "/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-en.webp",
           "title": "Hermes 3 balances instruction quality and uncensored range best — fully abliterated models drift faster and write worse prose."
         },
         {
-          "url": "/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-en.png",
+          "url": "/images/uncensored-local-llm-creative-writing-ethics-workflow-hero-en.webp",
           "title": "Most writers use the uncensored model for specific scenes only — not as a default replacement."
         }
       ]
@@ -6665,11 +6665,11 @@
       ],
       "images": [
         {
-          "url": "/images/local-whisper-stt-comparison-2026-model-sizes-hero-en.png",
+          "url": "/images/local-whisper-stt-comparison-2026-model-sizes-hero-en.webp",
           "title": "Whisper model sizes tiny to large-v3: WER drops from 7.6% to 2.5% while speed drops from 32x to 1x real-time."
         },
         {
-          "url": "/images/local-whisper-stt-comparison-2026-platform-winner-hero-en.png",
+          "url": "/images/local-whisper-stt-comparison-2026-platform-winner-hero-en.webp",
           "title": "whisper.cpp hits 10x real-time on Apple M5 Pro via Metal; faster-whisper hits 12x on RTX 4070 via CUDA int8."
         }
       ]
@@ -6719,11 +6719,11 @@
       ],
       "images": [
         {
-          "url": "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-en.png",
+          "url": "/images/local-tts-voice-cloning-piper-coqui-xtts-vram-by-engine-hero-en.webp",
           "title": "Local TTS VRAM needs range from Piper's CPU-only footprint to 4-8 GB for Bark and Tortoise voice engines."
         },
         {
-          "url": "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-en.png",
+          "url": "/images/local-tts-voice-cloning-piper-coqui-xtts-license-matrix-hero-en.webp",
           "title": "Piper, Bark, and StyleTTS 2 are MIT-licensed for commercial use; XTTS v2 (CPML) and F5-TTS (CC-BY-NC) are not."
         }
       ]
@@ -6822,11 +6822,11 @@
           "title": "Apple Silicon unified memory vs NVIDIA discrete GPU: CPU, GPU, Neural Engine share 128GB at 614 GB/s vs dedicated 24GB GDDR6X at 1,008 GB/s, separated by a PCIe bus."
         },
         {
-          "url": "/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-en.png",
+          "url": "/images/apple-mlx-vs-nvidia-cuda-benchmark-hero-en.webp",
           "title": "Inference speed comparison across hardware: RTX 4090 delivers ~150 tok/s on Llama 3 8B but cannot load 70B; M5 Max 128GB delivers ~75 tok/s on 8B and ~18 tok/s on 70B."
         },
         {
-          "url": "/images/apple-mlx-vs-nvidia-cuda-cost-hero-en.png",
+          "url": "/images/apple-mlx-vs-nvidia-cuda-cost-hero-en.webp",
           "title": "Total system cost to run 7B to 96B models locally: NVIDIA wins under $1,500; Apple wins at the 70B tier (Mac Studio M4 Max 64GB ~$3,199 vs $7,000+ multi-GPU system)."
         }
       ]
@@ -6876,11 +6876,11 @@
       ],
       "images": [
         {
-          "url": "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-en.png",
+          "url": "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-en.webp",
           "title": "Qwen3-Coder 32B vs DeepSeek-R1-Distill-Qwen-32B on identical RTX 4090 24 GB hardware: Qwen scores 88.4% HumanEval at 10-14 tok/s and wins Rust/C++, DeepSeek-R1-Distill scores 72.6% at 8-12 tok/s and wins algorithmic reasoning."
         },
         {
-          "url": "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-en.png",
+          "url": "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-en.webp",
           "title": "Decision tree for DeepSeek vs Qwen coding: code must stay local and language is Rust/C++ leads to Qwen3-Coder 32B, budget local leads to Qwen3-Coder 14B, algorithmic tasks leads to DeepSeek-R1 API, Python/JS with cloud allowed leads to DeepSeek-V3 API."
         }
       ]
@@ -6930,11 +6930,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-local-llm-ide-plugins-2026-plugin-ranking-hero-en.png",
+          "url": "/images/best-local-llm-ide-plugins-2026-plugin-ranking-hero-en.webp",
           "title": "Best IDE Plugins for Local LLMs, Ranked -- 2026 rankings"
         },
         {
-          "url": "/images/best-local-llm-ide-plugins-2026-model-recommendations-hero-en.png",
+          "url": "/images/best-local-llm-ide-plugins-2026-model-recommendations-hero-en.webp",
           "title": "Best Local Models by IDE Plugin -- Coding model and minimum VRAM"
         }
       ]
@@ -7148,11 +7148,11 @@
       ],
       "images": [
         {
-          "url": "/images/what-is-q4-k-m-quantization-letter-breakdown-hero-en.png",
+          "url": "/images/what-is-q4-k-m-quantization-letter-breakdown-hero-en.webp",
           "title": "What Each Letter in Q4_K_M Means -- Decoding the format name"
         },
         {
-          "url": "/images/what-is-q4-k-m-quantization-size-quality-hero-en.png",
+          "url": "/images/what-is-q4-k-m-quantization-size-quality-hero-en.webp",
           "title": "Q4_K_M vs Other Quantizations -- File size and quality (7B model)"
         }
       ]
@@ -7265,11 +7265,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-local-llm-6gb-vram-model-comparison-hero-en.png",
+          "url": "/images/best-local-llm-6gb-vram-model-comparison-hero-en.webp",
           "title": "Best Local LLMs for 6 GB VRAM -- Model size vs use case"
         },
         {
-          "url": "/images/best-local-llm-6gb-vram-windows-vs-mac-hero-en.png",
+          "url": "/images/best-local-llm-6gb-vram-windows-vs-mac-hero-en.webp",
           "title": "6 GB VRAM: Windows vs MacBook -- Llama 3 8B Q4_K_M speed"
         }
       ]
@@ -7310,11 +7310,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-ollama-models-right-now-tier-leaders-hero-en.png",
+          "url": "/images/best-ollama-models-right-now-tier-leaders-hero-en.webp",
           "title": "Best Ollama Models by VRAM Tier -- Current leader per tier"
         },
         {
-          "url": "/images/best-ollama-models-right-now-maturity-factors-hero-en.png",
+          "url": "/images/best-ollama-models-right-now-maturity-factors-hero-en.webp",
           "title": "Why Newer Isn't Always Better -- What it takes for a model to mature"
         }
       ]
@@ -7337,11 +7337,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-ollama-models-cpu-only-speed-reality-hero-en.png",
+          "url": "/images/best-ollama-models-cpu-only-speed-reality-hero-en.webp",
           "title": "CPU vs GPU Inference Speed -- Memory bandwidth is the bottleneck"
         },
         {
-          "url": "/images/best-ollama-models-cpu-only-model-comparison-hero-en.png",
+          "url": "/images/best-ollama-models-cpu-only-model-comparison-hero-en.webp",
           "title": "CPU-Only Model Comparison -- Best picks for Ollama without a GPU"
         }
       ]
@@ -7472,11 +7472,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-local-llm-apps-android-app-comparison-hero-en.png",
+          "url": "/images/best-local-llm-apps-android-app-comparison-hero-en.webp",
           "title": "Best Local LLM Apps for Android -- Setup effort vs model flexibility"
         },
         {
-          "url": "/images/best-local-llm-apps-android-battery-ram-hero-en.png",
+          "url": "/images/best-local-llm-apps-android-battery-ram-hero-en.webp",
           "title": "Battery & RAM by Model Tier -- What Android hardware needs"
         }
       ]
@@ -7535,11 +7535,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-14b-models-coding-humaneval-comparison-hero-en.png",
+          "url": "/images/best-14b-models-coding-humaneval-comparison-hero-en.webp",
           "title": "Best 14B Models for Coding -- HumanEval and VRAM (Q4_K_M)"
         },
         {
-          "url": "/images/best-14b-models-coding-vram-headroom-hero-en.png",
+          "url": "/images/best-14b-models-coding-vram-headroom-hero-en.webp",
           "title": "VRAM Headroom at Longer Context -- Q4_K_M usage as context grows"
         }
       ]
@@ -7580,11 +7580,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-moe-models-local-coding-moe-comparison-hero-en.png",
+          "url": "/images/best-moe-models-local-coding-moe-comparison-hero-en.webp",
           "title": "MoE Models: Total vs Active Parameters -- Why VRAM cost stays high"
         },
         {
-          "url": "/images/best-moe-models-local-coding-ollama-setup-hero-en.png",
+          "url": "/images/best-moe-models-local-coding-ollama-setup-hero-en.webp",
           "title": "Running MoE Models with Ollama -- VRAM tier and expected speed"
         }
       ]
@@ -7607,11 +7607,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-local-llm-coding-12gb-vram-model-vram-comparison-hero-en.png",
+          "url": "/images/best-local-llm-coding-12gb-vram-model-vram-comparison-hero-en.webp",
           "title": "Best Coding Models for 12 GB VRAM -- Q4_K_M quantization"
         },
         {
-          "url": "/images/best-local-llm-coding-12gb-vram-coding-settings-hero-en.png",
+          "url": "/images/best-local-llm-coding-12gb-vram-coding-settings-hero-en.webp",
           "title": "Settings That Matter for Coding -- Context and Flash Attention on 12 GB"
         }
       ]
@@ -8138,11 +8138,11 @@
       ],
       "images": [
         {
-          "url": "/images/sillytavern-chinese-roleplay-setup-model-comparison-hero-en.png",
+          "url": "/images/sillytavern-chinese-roleplay-setup-model-comparison-hero-en.webp",
           "title": "Best Models for Chinese Roleplay -- Hardware tier and use case"
         },
         {
-          "url": "/images/sillytavern-chinese-roleplay-setup-encoding-fixes-hero-en.png",
+          "url": "/images/sillytavern-chinese-roleplay-setup-encoding-fixes-hero-en.webp",
           "title": "Fixing Garbled Chinese Output -- Common causes and fixes"
         }
       ]
@@ -8309,11 +8309,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-japanese-language-models-local-model-comparison-hero-en.png",
+          "url": "/images/best-japanese-language-models-local-model-comparison-hero-en.webp",
           "title": "Best Local LLMs for Japanese -- Model size vs minimum RAM"
         },
         {
-          "url": "/images/best-japanese-language-models-local-task-mapping-hero-en.png",
+          "url": "/images/best-japanese-language-models-local-task-mapping-hero-en.webp",
           "title": "Which Japanese Model for Which Task -- Task-to-model mapping"
         }
       ]
@@ -9741,11 +9741,11 @@
       ],
       "images": [
         {
-          "url": "/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-en.png",
+          "url": "/images/local-llm-smart-home-complete-guide-what-it-unlocks-hero-en.webp",
           "title": "Local LLM vs Rule-Based Automation -- What flexibility costs in setup"
         },
         {
-          "url": "/images/local-llm-smart-home-complete-guide-step-by-step-hero-en.png",
+          "url": "/images/local-llm-smart-home-complete-guide-step-by-step-hero-en.webp",
           "title": "Your Step-by-Step Path -- Build in order"
         }
       ]
@@ -9768,11 +9768,11 @@
       ],
       "images": [
         {
-          "url": "/images/home-assistant-ollama-integration-setup-steps-hero-en.png",
+          "url": "/images/home-assistant-ollama-integration-setup-steps-hero-en.webp",
           "title": "Add the Ollama Integration -- Home Assistant setup, 4 steps"
         },
         {
-          "url": "/images/home-assistant-ollama-integration-troubleshooting-hero-en.png",
+          "url": "/images/home-assistant-ollama-integration-troubleshooting-hero-en.webp",
           "title": "Troubleshooting Common Issues -- Connectivity, model choice, or exposure"
         }
       ]
@@ -9948,11 +9948,11 @@
       ],
       "images": [
         {
-          "url": "/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-en.png",
+          "url": "/images/best-mini-pc-home-assistant-local-ai-class-comparison-hero-en.webp",
           "title": "Mini PC Classes for Home Assistant AI -- RAM guidance and what each can run"
         },
         {
-          "url": "/images/best-mini-pc-home-assistant-local-ai-pick-guide-hero-en.png",
+          "url": "/images/best-mini-pc-home-assistant-local-ai-pick-guide-hero-en.webp",
           "title": "Budget vs Performance Pick -- Buy the cheapest box that fits your model"
         }
       ]
@@ -11871,7 +11871,7 @@
       ],
       "images": [
         {
-          "url": "/images/ai-model-comparison-task-winner-hero-en.png",
+          "url": "/images/ai-model-comparison-task-winner-hero-en.webp",
           "title": "Which Model Wins by Task — Best pick per use case"
         }
       ]
