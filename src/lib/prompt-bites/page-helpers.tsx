@@ -191,9 +191,29 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
-      <PromptBitesPostClient slug={slug} lang={lang} />
+      <PromptBitesPostClient
+        slug={slug}
+        lang={lang}
+        articleData={articleData!}
+        siblingTitles={resolveSiblingTitles((article as any).siblingBites, lang)}
+      />
     </>
   )
+}
+
+// Resolves each sibling-bite slug to its localized title server-side, so the
+// client component never needs the full promptBitesContent barrel just to
+// render a handful of "related bites" link labels.
+function resolveSiblingTitles(siblingBites: string[] | undefined, lang: Lang): Record<string, string> | undefined {
+  if (!siblingBites || siblingBites.length === 0) return undefined
+  const titles: Record<string, string> = {}
+  for (const sibSlug of siblingBites) {
+    const sibKey = PROMPT_BITES_SLUG_TO_KEY[sibSlug]
+    const sibArticleData = sibKey ? promptBitesContent[sibKey] : undefined
+    const sibArticle = sibArticleData?.[lang] ?? sibArticleData?.['en']
+    titles[sibSlug] = sibArticle?.title ?? sibSlug
+  }
+  return titles
 }
 
 // ─── HUB PAGE ────────────────────────────────────────────────────────────────
