@@ -932,6 +932,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
               alt={article.title || 'Article hero image'}
               width={1200}
               height={675}
+              sizes="(max-width: 768px) 100vw, 768px"
               priority
               className="w-full"
             />
