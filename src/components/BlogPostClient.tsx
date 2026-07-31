@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useLang } from '@/hooks/useLang'
 import type { BlogPost, Language } from '@/lib/blog/blogContent'
-import { blogContent } from '@/lib/blog/blogContent'
 import { blogMetadata } from '@/lib/blog/blogTranslations'
 import { getDateISO } from '@/lib/blog/getDateISO'
 import { LangLinksBar } from '@/components/LangLinksBar'
@@ -19,6 +18,10 @@ interface BlogPostClientProps {
   post: BlogPost
   slug: string
   initialLang?: Language
+  // Resolved server-side from blogContent[postId]'s keys — avoids the client
+  // needing the full 2.6MB blogContent barrel just to list which languages
+  // this post has been translated into.
+  availableLangs: string[]
 }
 
 interface LightboxImage {
@@ -96,7 +99,7 @@ const BLOG_UI = {
   },
 }
 
-function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps) {
+function BlogPostClientContent({ post, slug, initialLang, availableLangs }: BlogPostClientProps) {
   const lang = useLang(initialLang) as Language
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
 
@@ -141,8 +144,8 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
           </div>
 
           {/* Cross-language links */}
-          {postId && blogContent[postId] && (
-            <LangLinksBar cluster="blog" slug={slug} availableLangs={Object.keys(blogContent[postId])} initialLang={lang} />
+          {postId && availableLangs.length > 0 && (
+            <LangLinksBar cluster="blog" slug={slug} availableLangs={availableLangs} initialLang={lang} />
           )}
 
           {/* Hero Component or Image */}
