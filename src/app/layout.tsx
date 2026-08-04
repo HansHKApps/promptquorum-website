@@ -45,7 +45,6 @@ const notoSansKR = Noto_Sans_KR({
 
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
 import { Footer } from '@/components/Footer'
@@ -290,7 +289,6 @@ export default function RootLayout({
             strategy="afterInteractive"
           >{`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="/api/clarity/tag/wtwpeavhum";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wtwpeavhum");window.clarity("consentv2",{ad_Storage:"denied",analytics_Storage:"denied"});`}</Script>
           <Analytics endpoint="/api/data" scriptSrc="/api/data/script.js" />
-          <SpeedInsights />
           <ConsentedAnalytics />
         </Providers>
       </body>
