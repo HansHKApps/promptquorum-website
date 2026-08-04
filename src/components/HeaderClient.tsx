@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { Logo } from './Logo'
 import { LanguageSwitcherWrapper } from './LanguageSwitcherWrapper'
 import { SearchTrigger } from './search/SearchTrigger'
 import { useWaitlist } from '@/context/WaitlistContext'
@@ -203,7 +204,7 @@ function HeaderInner() {
       </a>
       <div className="px-4 sm:px-6 h-16 flex items-center justify-between">
         <Link href={navHref('/', lang)} className="flex items-center gap-2 flex-shrink-0">
-          <img src="/logo.svg" alt="PromptQuorum" className="w-9 h-9 flex-shrink-0" width={36} height={36} />
+          <Logo size={36} className="w-9 h-9 flex-shrink-0" />
           <span className="font-semibold text-gray-900 whitespace-nowrap">PromptQuorum</span>
         </Link>
 
