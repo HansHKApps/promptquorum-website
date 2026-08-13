@@ -28,5 +28,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ZhLocalLLMsPage() {
-  return <LocalLLMsHub initialLang="zh" {...buildLLMHubData()} />
+  return <LocalLLMsHub initialLang="zh" {...buildLLMHubData('zh')} />
 }

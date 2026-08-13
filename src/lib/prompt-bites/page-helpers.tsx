@@ -8,6 +8,7 @@ import { truncateTitle } from '@/lib/utils'
 import { PromptBitesPostClient } from '@/components/PromptBitesPostClient'
 import { PromptBitesHubClient } from '@/components/PromptBitesHubClient'
 import { promptBitesContent } from './articles-barrel'
+import { buildPromptBitesHubData } from './hub-data'
 import { PROMPT_BITES_SLUG_TO_KEY } from './slugs'
 import { isPromptBitePublished, isPromptBitesHubPublished, PROMPT_BITES_PUBLISHED_SLUGS } from './published'
 import { promptBitesAlternates, promptBitesHubPath, promptBitesArticlePath } from './metadata-helpers'
@@ -298,7 +299,7 @@ export async function buildHubPageElement(lang: Lang) {
       {faqSchema && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
-      <PromptBitesHubClient lang={lang} />
+      <PromptBitesHubClient lang={lang} {...buildPromptBitesHubData(lang)} />
     </>
   )
 }
