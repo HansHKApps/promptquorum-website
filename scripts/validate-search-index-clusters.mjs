@@ -2,10 +2,10 @@
 /**
  * Guard against the "new cluster silently missing from site search" bug.
  *
- * The search index (src/app/api/search-index/route.ts) enumerates content
+ * The search index (src/lib/search/build-search-entries.ts) enumerates content
  * clusters by hand. When a new cluster is added under src/lib/<name>/ with the
  * standard articles-barrel.ts + slugs.ts shape, it is NOT picked up
- * automatically — it must also be wired into the search-index route. This
+ * automatically — it must also be wired into buildAllSearchEntries(). This
  * script fails if any such cluster is not referenced there.
  *
  * Run manually:  node scripts/validate-search-index-clusters.mjs
@@ -18,7 +18,7 @@ import { dirname, join } from 'node:path'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const libDir = join(root, 'src', 'lib')
-const routePath = join(root, 'src', 'app', 'api', 'search-index', 'route.ts')
+const routePath = join(root, 'src', 'lib', 'search', 'build-search-entries.ts')
 
 // A "cluster" is any src/lib/<name>/ that has both articles-barrel.ts and slugs.ts.
 const clusters = readdirSync(libDir, { withFileTypes: true })
@@ -49,7 +49,7 @@ if (missing.length > 0) {
   console.error('❌ These content clusters are NOT wired into site search:')
   for (const name of missing) console.error(`   • ${name}`)
   console.error('')
-  console.error('Fix: add the cluster to src/app/api/search-index/route.ts')
+  console.error('Fix: add the cluster to src/lib/search/build-search-entries.ts')
   console.error('  1. import { <name>Content } from "@/lib/<name>/articles-barrel"')
   console.error('  2. import { <NAME>_SLUG_TO_KEY } from "@/lib/<name>/slugs"')
   console.error('  3. import { <NAME>_PUBLISHED_SLUGS } from "@/lib/<name>/published" (if gated)')
