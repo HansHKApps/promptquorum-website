@@ -21,7 +21,11 @@ import { POWER_LLM_PUBLISHED_SLUGS } from '@/lib/power-local-llm/published'
 import { BALCONY_SOLAR_PUBLISHED_SLUGS } from '@/lib/balcony-solar/published'
 import { SMART_HOME_PUBLISHED_SLUGS } from '@/lib/smart-home/published'
 
-export const dynamic = 'force-static'
+// Not force-static: the route now reads the `lang` query param from `request`
+// to return a per-locale subset, so it must execute per-request rather than
+// serve one build-time-frozen response for every query string. Caching is
+// handled by the Cache-Control header below (same pattern as api/og/[slug]),
+// which lets Vercel's edge cache each distinct `?lang=` URL separately.
 
 function invertMap(map: Record<string, string>): Record<string, string> {
   const result: Record<string, string> = {}
@@ -34,7 +38,12 @@ function articleUrl(hub: string, slug: string, lang: string): string {
   return lang === 'en' ? `/${hub}/${slug}` : `/${lang}/${hub}/${slug}`
 }
 
-export function GET() {
+export function GET(request: Request) {
+  const requestedLang = new URL(request.url).searchParams.get('lang')
+  const lang = (SUPPORTED_LANGS as readonly string[]).includes(requestedLang ?? '')
+    ? (requestedLang as (typeof SUPPORTED_LANGS)[number])
+    : null
+
   const entries: SearchEntry[] = []
 
   const peKeyToSlug = invertMap(PE_SLUG_TO_KEY as Record<string, string>)
@@ -193,7 +202,9 @@ export function GET() {
     }
   }
 
-  return NextResponse.json(entries, {
+  const result = lang ? entries.filter((e) => e.lang === lang) : entries
+
+  return NextResponse.json(result, {
     headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=3600' },
   })
 }

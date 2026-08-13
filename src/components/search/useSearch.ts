@@ -114,7 +114,7 @@ export function useSearch(lang: string) {
     try {
       const [{ default: FuseCtor }, res] = await Promise.all([
         import('fuse.js'),
-        fetch('/api/search-index'),
+        fetch(`/api/search-index?lang=${lang}`),
       ])
       const data: SearchEntry[] = await res.json()
       fuseCtorRef.current = FuseCtor
@@ -123,7 +123,7 @@ export function useSearch(lang: string) {
     } catch {
       setIsLoaded(true)
     }
-  }, [allEntries])
+  }, [allEntries, lang])
 
   // Lazily build (and cache) a Fuse index + doc list scoped to the active locale.
   const getLocaleData = useCallback((): { fuse: Fuse<SearchEntry>; docs: SearchEntry[] } | null => {
