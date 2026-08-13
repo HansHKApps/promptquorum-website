@@ -4,7 +4,7 @@ import { PromptEngineeringHub } from '@/components/PromptEngineeringHub'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { toOutputLocale } from '@/lib/i18n/constants'
-import { peContent } from '@/lib/prompt-engineering/content'
+import { buildPEHubData } from '@/lib/prompt-engineering/hub-data'
 import type { Language } from '@/translations'
 import { truncateTitle } from '@/lib/utils'
 
@@ -175,30 +175,8 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
 
   const howToForLang = HOWTO_TRANSLATIONS[selectedLang] ?? HOWTO_TRANSLATIONS['en']
 
-  // Extract article titles from peContent to pass as prop (keeps full article content server-side)
-  const titlesMap: Record<string, Partial<Record<Language, string>>> = Object.fromEntries(
-    Object.entries(peContent).map(([key, langMap]) => [
-      key,
-      Object.fromEntries(
-        Object.entries(langMap).map(([lang, article]) => [lang, article.title])
-      ),
-    ])
-  )
-
-  // Educational level per content key — used by hub personalization signals
-  const articleLevels: Record<string, string> = Object.fromEntries(
-    Object.entries(peContent).map(([key, langMap]) => [
-      key,
-      (langMap.en?.educationalLevel ?? '').toLowerCase(),
-    ])
-  )
-
-  const datesMap: Record<string, { publishDate?: string; dateModified?: string }> = Object.fromEntries(
-    Object.entries(peContent).map(([key, langMap]) => [
-      key,
-      { publishDate: langMap.en?.publishDate, dateModified: langMap.en?.dateModified },
-    ])
-  )
+  // Titles/levels/dates scoped to the resolved language (keeps full article content server-side)
+  const { titlesMap, articleLevels, datesMap } = buildPEHubData(selectedLang as Language)
 
   const BREADCRUMB_LABELS: Record<string, string> = {
     en: 'Prompt Engineering', de: 'Prompt Engineering', fr: 'Ingénierie de prompts',
