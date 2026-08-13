@@ -1621,16 +1621,14 @@ function slugToTitle(slug: string): string {
     .join(' ')
 }
 
-// Returns the article title from the server-precomputed titlesMap, or a readable fallback
+// Returns the article title from the server-precomputed titlesMap (already
+// resolved to the active language, with English fallback baked in server-side
+// by buildLLMHubData), or a readable slug-derived fallback.
 function getArticleTitle(
   articleKey: string,
-  lang: Language,
-  titlesMap: Record<string, Partial<Record<Language, string>>>
+  titlesMap: Record<string, string>
 ): string {
-  const titles = titlesMap[articleKey]
-  if (titles?.[lang]) return titles[lang]!
-  if (titles?.en) return titles.en!
-  return slugToTitle(articleKey)
+  return titlesMap[articleKey] ?? slugToTitle(articleKey)
 }
 
 function ArticleCard({
@@ -1639,13 +1637,13 @@ function ArticleCard({
   articleKey: string
   dot: string
   lang: Language
-  titlesMap: Record<string, Partial<Record<Language, string>>>
+  titlesMap: Record<string, string>
   datesMap: Record<string, { publishDate?: string; dateModified?: string }>
   liveSet: Set<string>
 }) {
   if (!liveSet.has(articleKey)) return null
 
-  const title = getArticleTitle(articleKey, lang, titlesMap)
+  const title = getArticleTitle(articleKey, titlesMap)
   const href = navHref(`/local-llms/${articleKey}`, lang)
   const dates = datesMap[articleKey]
   const publishDate = dates?.publishDate
@@ -1681,9 +1679,9 @@ function ArticleCard({
 function ArticleComingSoon({ articleKey, lang, titlesMap }: {
   articleKey: string
   lang: Language
-  titlesMap: Record<string, Partial<Record<Language, string>>>
+  titlesMap: Record<string, string>
 }) {
-  const title = getArticleTitle(articleKey, lang, titlesMap)
+  const title = getArticleTitle(articleKey, titlesMap)
   return (
     <div className="flex items-start gap-3 bg-card border border-primary/20 rounded-xl p-4 opacity-50 cursor-default select-none">
       <span className="flex-shrink-0 w-2 h-2 rounded-full mt-2 bg-gray-300" />
@@ -1698,7 +1696,7 @@ function ArticleComingSoon({ articleKey, lang, titlesMap }: {
 function ThemeSection({ theme, lang, titlesMap, datesMap, liveSet }: {
   theme: LLMTheme
   lang: Language
-  titlesMap: Record<string, Partial<Record<Language, string>>>
+  titlesMap: Record<string, string>
   datesMap: Record<string, { publishDate?: string; dateModified?: string }>
   liveSet: Set<string>
 }) {
@@ -1742,7 +1740,7 @@ function ThemeSection({ theme, lang, titlesMap, datesMap, liveSet }: {
 
 function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
   initialLang?: import("@/hooks/useLang").Lang
-  titlesMap: Record<string, Partial<Record<Language, string>>>
+  titlesMap: Record<string, string>
   datesMap: Record<string, { publishDate?: string; dateModified?: string }>
   liveSlugs: string[]
 }) {
@@ -2230,7 +2228,7 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
 
 export function LocalLLMsHub({ initialLang, titlesMap, datesMap, liveSlugs }: {
   initialLang?: import("@/hooks/useLang").Lang
-  titlesMap: Record<string, Partial<Record<Language, string>>>
+  titlesMap: Record<string, string>
   datesMap: Record<string, { publishDate?: string; dateModified?: string }>
   liveSlugs: string[]
 }) {

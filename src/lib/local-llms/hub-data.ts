@@ -4,8 +4,8 @@ import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import type { Language } from '@/lib/blog/blogContent'
 
 export interface LLMHubData {
-  /** slug → lang → title */
-  titlesMap: Record<string, Partial<Record<Language, string>>>
+  /** slug → title, resolved for the requested language (falls back to English) */
+  titlesMap: Record<string, string>
   /** slug → publish/modified dates (only slugs that have en dates) */
   datesMap: Record<string, { publishDate?: string; dateModified?: string }>
   /** slugs that have content and are NOT in COMING_SOON_SLUGS */
@@ -13,12 +13,13 @@ export interface LLMHubData {
 }
 
 /**
- * Builds the data the LocalLLMsHub client component needs.
- * Called on the server so that llmContent (all 113 articles) never ships
- * to the browser.
+ * Builds the data the LocalLLMsHub client component needs, for one resolved
+ * language. Called on the server so that llmContent (all 129 articles, all
+ * 9 languages) never ships to the browser — only the single title per slug
+ * that this page will actually render.
  */
-export function buildLLMHubData(): LLMHubData {
-  const titlesMap: Record<string, Partial<Record<Language, string>>> = {}
+export function buildLLMHubData(lang: Language): LLMHubData {
+  const titlesMap: Record<string, string> = {}
   const datesMap: Record<string, { publishDate?: string; dateModified?: string }> = {}
   const liveSlugs: string[] = []
 
@@ -26,12 +27,10 @@ export function buildLLMHubData(): LLMHubData {
     const content = llmContent[contentKey]
     if (!content) continue
 
-    // Collect titles for each language
-    const titles: Partial<Record<Language, string>> = {}
-    for (const [lang, article] of Object.entries(content)) {
-      if (article?.title) titles[lang as Language] = article.title
-    }
-    titlesMap[slug] = titles
+    // Title in the requested language, falling back to English — matches the
+    // fallback getArticleTitle() previously did client-side.
+    const title = content[lang]?.title ?? content.en?.title
+    if (title) titlesMap[slug] = title
 
     // Dates from the English version (used for new/updated badges)
     const en = content.en

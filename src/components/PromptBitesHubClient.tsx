@@ -3,14 +3,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { LangLinksBar } from '@/components/LangLinksBar'
-import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
-import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import { PROMPT_BITES_CATEGORIES } from '@/lib/prompt-bites/categories'
 import { PROMPT_BITES_PUBLISHED_SLUGS } from '@/lib/prompt-bites/published'
+import type { PromptBitesHubArticleData } from '@/lib/prompt-bites/hub-data'
 import type { Language } from '@/lib/blog/blogContent'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 import { HubReviewedBadge } from '@/components/hub/HubReviewedBadge'
-import { latestDateModified } from '@/lib/hub-reviewed-date'
 
 const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد', ko: '새글' }
 const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث', ko: '업데이트' }
@@ -29,6 +27,8 @@ const RECENT_SUB: Record<string, string> = {
 
 interface Props {
   lang: Language
+  articles: Record<string, PromptBitesHubArticleData>
+  latestDateModified?: string
 }
 
 const HUB_HEADLINE: Partial<Record<Language, string>> = {
@@ -384,7 +384,7 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
   },
 }
 
-export function PromptBitesHubClient({ lang }: Props) {
+export function PromptBitesHubClient({ lang, articles, latestDateModified }: Props) {
   const slugsByCategory = PROMPT_BITES_CATEGORIES.map((cat) => ({
     ...cat,
     slugs: cat.articleSlugs,
@@ -414,7 +414,7 @@ export function PromptBitesHubClient({ lang }: Props) {
             />
           </figure>
           <HubReviewedBadge
-            date={latestDateModified(Object.values(promptBitesContent).map((a) => a?.en))}
+            date={latestDateModified}
             lang={lang}
             className="mb-0"
           />
@@ -451,9 +451,8 @@ export function PromptBitesHubClient({ lang }: Props) {
 
         {/* Recently Published — auto-surfaced articles with publishDate within 14 days */}
         {(() => {
-          const recentSlugs = Object.entries(PROMPT_BITES_SLUG_TO_KEY)
-            .filter(([slug, key]) => PROMPT_BITES_PUBLISHED_SLUGS.has(slug) && isNewArticle(promptBitesContent[key]?.['en']?.publishDate))
-            .map(([slug]) => slug)
+          const recentSlugs = Object.keys(articles)
+            .filter((slug) => PROMPT_BITES_PUBLISHED_SLUGS.has(slug) && isNewArticle(articles[slug].publishDate))
           if (recentSlugs.length === 0) return null
           return (
             <section className="mb-12 border-2 border-emerald-400/40 rounded-2xl p-6 bg-emerald-50/30">
@@ -464,8 +463,7 @@ export function PromptBitesHubClient({ lang }: Props) {
               <p className="text-xs text-emerald-700/70 mb-5">{RECENT_SUB[lang] ?? RECENT_SUB['en']}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {recentSlugs.map((slug) => {
-                  const key = PROMPT_BITES_SLUG_TO_KEY[slug]
-                  const article = promptBitesContent[key]?.[lang] ?? promptBitesContent[key]?.['en']
+                  const article = articles[slug]
                   if (!article) return null
                   const href = promptBitesArticleHref(lang, slug)
                   return (
@@ -509,22 +507,14 @@ export function PromptBitesHubClient({ lang }: Props) {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
                   {cat.slugs.map((slug) => {
-                    const key = PROMPT_BITES_SLUG_TO_KEY[slug]
-                    const article = promptBitesContent[key]?.[lang] ?? promptBitesContent[key]?.['en']
+                    const article = articles[slug]
                     if (!article) return null
                     const href = promptBitesArticleHref(lang, slug)
-                    const qaData = (article as any).quickAnswerTop
-                    const langAnswer = qaData?.[lang]?.answer
-                    const enAnswer = qaData?.['en']?.answer
-                    const rawAnswer = langAnswer && !langAnswer.includes('translation pending') ? langAnswer : enAnswer
-                    const firstSentence = rawAnswer?.match(/^.+?[.!?](?=\s|$)/)?.[0]
-                    const previewText = rawAnswer
-                      ? (firstSentence ?? rawAnswer.split('.')[0] + '.')
-                      : null
-                    const levelKey = (article as any).educationalLevel
-                    const levelLabel = EDUCATIONAL_LEVEL[levelKey]?.[lang] ?? levelKey
-                    const publishDate = promptBitesContent[key]?.['en']?.publishDate
-                    const dateModified = promptBitesContent[key]?.['en']?.dateModified
+                    const previewText = article.previewText
+                    const levelKey = article.educationalLevel
+                    const levelLabel = levelKey ? (EDUCATIONAL_LEVEL[levelKey]?.[lang] ?? levelKey) : undefined
+                    const publishDate = article.publishDate
+                    const dateModified = article.dateModified
                     const showNew = isNewArticle(publishDate)
                     const showUpdated = !showNew && isUpdatedArticle(publishDate, dateModified)
                     return (
