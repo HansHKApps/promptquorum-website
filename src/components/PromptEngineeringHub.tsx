@@ -880,14 +880,13 @@ const SLUG_TO_THEME_ID: Record<string, string> = Object.fromEntries(
   })
 )
 
-// Get translated article title — checks titles map, then fallback titles, then formats slug
-function getArticleTitle(articleKey: string, lang: Language, titlesMap: Record<string, Partial<Record<Language, string>>>): string {
+// Get translated article title — checks titles map (already resolved to the
+// active language, with English fallback baked in server-side by
+// buildPEHubData), then fallback titles, then formats slug.
+function getArticleTitle(articleKey: string, lang: Language, titlesMap: Record<string, string>): string {
   const contentKey = PE_SLUG_TO_KEY[articleKey]
-  if (contentKey && titlesMap[contentKey]?.[lang]) {
-    return titlesMap[contentKey][lang]!
-  }
-  if (contentKey && titlesMap[contentKey]?.en) {
-    return titlesMap[contentKey].en!
+  if (contentKey && titlesMap[contentKey]) {
+    return titlesMap[contentKey]
   }
   // Use fallback titles for articles without content yet
   if (FALLBACK_TITLES[articleKey]?.[lang]) {
@@ -899,7 +898,7 @@ function getArticleTitle(articleKey: string, lang: Language, titlesMap: Record<s
   return articleKey.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 }
 
-function ArticleCard({ articleKey, dot, lang, titlesMap }: { articleKey: string; dot: string; lang: Language; titlesMap: Record<string, Partial<Record<Language, string>>> }) {
+function ArticleCard({ articleKey, dot, lang, titlesMap }: { articleKey: string; dot: string; lang: Language; titlesMap: Record<string, string> }) {
   const title = getArticleTitle(articleKey, lang, titlesMap)
   const href = navHref(`/prompt-engineering/${articleKey}`, lang)
 
@@ -914,7 +913,7 @@ function ArticleCard({ articleKey, dot, lang, titlesMap }: { articleKey: string;
   )
 }
 
-function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, datesMap }: { initialLang?: import("@/hooks/useLang").Lang; titlesMap: Record<string, Partial<Record<Language, string>>>; articleLevels: Record<string, string>; datesMap?: Record<string, { publishDate?: string; dateModified?: string }> }) {
+function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, datesMap }: { initialLang?: import("@/hooks/useLang").Lang; titlesMap: Record<string, string>; articleLevels: Record<string, string>; datesMap?: Record<string, { publishDate?: string; dateModified?: string }> }) {
   const lang = useLang(initialLang)
   const { signal, setLevel, clearLevel } = useHubSignals(SLUG_TO_THEME_ID)
 
@@ -1212,6 +1211,6 @@ function PromptEngineeringHubContent({ initialLang, titlesMap, articleLevels, da
   )
 }
 
-export function PromptEngineeringHub({ initialLang, titlesMap, articleLevels, datesMap }: { initialLang?: import("@/hooks/useLang").Lang; titlesMap: Record<string, Partial<Record<Language, string>>>; articleLevels: Record<string, string>; datesMap?: Record<string, { publishDate?: string; dateModified?: string }> }) {
+export function PromptEngineeringHub({ initialLang, titlesMap, articleLevels, datesMap }: { initialLang?: import("@/hooks/useLang").Lang; titlesMap: Record<string, string>; articleLevels: Record<string, string>; datesMap?: Record<string, { publishDate?: string; dateModified?: string }> }) {
   return <PromptEngineeringHubContent initialLang={initialLang} titlesMap={titlesMap} articleLevels={articleLevels} datesMap={datesMap} />
 }
