@@ -2,6 +2,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "framework": "nextjs",
+  "ignoreCommand": "bash scripts/vercel-ignore-build-step.sh",
   "build": {
     "env": {
       "NODE_OPTIONS": "--max-old-space-size=6144",

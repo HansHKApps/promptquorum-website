@@ -22,7 +22,7 @@ export function formatDisplayDate(isoDate: string | undefined, lang: Language): 
   if (!isoDate) return ''
   const dateObj = new Date(isoDate)
   if (isNaN(dateObj.getTime())) return ''
-  return dateObj.toLocaleDateString(LOCALE_MAP[lang] ?? LOCALE_MAP.en, { month: 'long', day: 'numeric', year: 'numeric' })
+  return dateObj.toLocaleDateString(LOCALE_MAP[lang] ?? LOCALE_MAP.en, { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
 }
 
 /**
@@ -33,5 +33,5 @@ export function formatDisplayMonthYear(isoDate: string | undefined, lang: Langua
   if (!isoDate) return ''
   const dateObj = new Date(isoDate)
   if (isNaN(dateObj.getTime())) return ''
-  return dateObj.toLocaleDateString(LOCALE_MAP[lang] ?? LOCALE_MAP.en, { month: 'long', year: 'numeric' })
+  return dateObj.toLocaleDateString(LOCALE_MAP[lang] ?? LOCALE_MAP.en, { month: 'long', year: 'numeric', timeZone: 'UTC' })
 }
