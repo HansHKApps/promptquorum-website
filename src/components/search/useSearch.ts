@@ -114,7 +114,7 @@ export function useSearch(lang: string) {
     try {
       const [{ default: FuseCtor }, res] = await Promise.all([
         import('fuse.js'),
-        fetch(`/api/search-index?lang=${lang}`),
+        fetch(`/api/search-index/${lang}`),
       ])
       const data: SearchEntry[] = await res.json()
       fuseCtorRef.current = FuseCtor
