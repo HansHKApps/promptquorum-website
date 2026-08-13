@@ -19,12 +19,27 @@ jobs:
           HOST="www.promptquorum.com"
           KEY_LOCATION="https://www.promptquorum.com/${INDEXNOW_KEY}.txt"
 
-          # Fetch sitemap and extract all URLs
+          # Fetch sitemap and extract all page URLs. /sitemap.xml is a
+          # sitemapindex pointing at child sitemaps under /sitemaps/*.xml —
+          # walk it and read real page URLs from each child.
           echo "📥 Fetching sitemap from https://${HOST}/sitemap.xml..."
           SITEMAP=$(curl -s "https://${HOST}/sitemap.xml")
 
+          > /tmp/all_page_urls.txt
+
+          if echo "$SITEMAP" | grep -q "<sitemapindex"; then
+            echo "ℹ️ /sitemap.xml is a sitemap index — walking its child sitemaps."
+            CHILD_SITEMAPS=$(echo "$SITEMAP" | grep -oP '(?<=<loc>)[^<]+')
+            for child in $CHILD_SITEMAPS; do
+              echo "  📥 Fetching child sitemap: $child"
+              curl -s "$child" | grep -oP '(?<=<loc>)[^<]+' >> /tmp/all_page_urls.txt
+            done
+          else
+            echo "$SITEMAP" | grep -oP '(?<=<loc>)[^<]+' >> /tmp/all_page_urls.txt
+          fi
+
           # Extract all <loc> URLs (English canonical only — no /de /fr /ja /zh variants)
-          URLS=$(echo "$SITEMAP" | grep -oP '(?<=<loc>)[^<]+' | grep -vP "/${HOST}/[a-z]{2}(/|$)" | jq -R . | jq -s .)
+          URLS=$(grep -vP "/${HOST}/[a-z]{2}(/|$)" /tmp/all_page_urls.txt | jq -R . | jq -s .)
           TOTAL_URLS=$(echo "$URLS" | jq 'length')
 
           echo "📢 Submitting $TOTAL_URLS URLs to Bing IndexNow..."

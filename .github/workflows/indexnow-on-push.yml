@@ -30,10 +30,26 @@ jobs:
           touch "$SNAPSHOT_FILE"
 
           echo "📥 Fetching live sitemap from https://${HOST}/sitemap.xml..."
-          curl -s "https://${HOST}/sitemap.xml" \
-            | grep -oP '(?<=<loc>)[^<]+' \
-            | grep -vP "/${HOST}/[a-z]{2}(/|$)" \
+          SITEMAP_XML=$(curl -s "https://${HOST}/sitemap.xml")
+
+          > /tmp/current_urls_raw.txt
+
+          if echo "$SITEMAP_XML" | grep -q "<sitemapindex"; then
+            echo "ℹ️ /sitemap.xml is a sitemap index — walking its child sitemaps."
+            CHILD_SITEMAPS=$(echo "$SITEMAP_XML" | grep -oP '(?<=<loc>)[^<]+')
+            for child in $CHILD_SITEMAPS; do
+              echo "  📥 Fetching child sitemap: $child"
+              curl -s "$child" | grep -oP '(?<=<loc>)[^<]+' >> /tmp/current_urls_raw.txt
+            done
+          else
+            echo "ℹ️ /sitemap.xml is a flat urlset."
+            echo "$SITEMAP_XML" | grep -oP '(?<=<loc>)[^<]+' >> /tmp/current_urls_raw.txt
+          fi
+
+          grep -vP "/${HOST}/[a-z]{2}(/|$)" /tmp/current_urls_raw.txt \
             | sort -u > /tmp/current_urls.txt
+
+          echo "📊 $(wc -l < /tmp/current_urls.txt | tr -d ' ') live page URLs found."
 
           sort -u "$SNAPSHOT_FILE" > /tmp/previous_urls.txt
           comm -13 /tmp/previous_urls.txt /tmp/current_urls.txt > /tmp/new_urls.txt
