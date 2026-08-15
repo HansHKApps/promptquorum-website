@@ -2672,7 +2672,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[Aggarwal et al., 2023. \"GEO: Generative Engine Optimization\"](https://arxiv.org/ja/abs/2311.09735) — GEOを規律として定義し、構造化コンテンツからの引用上昇度を測定する基礎的学術論文',
             '[WebFX、2026。「AI トラフィックが796%成長＆有機検索を上回る」](https://www.webfx.com/ja/blog/seo/gen-ai-search-trends/) — 23億セッションでのAI対有機コンバージョン率の分析',
-            '[xSeek / Milestone Research、2026。「AI検索用構造化データ：40%より多くの引用」](https://www.xseek.io/ja/learnings/how-does-structured-data-boost-ai-search-visibility) — JSON-LDスキーマと AI 引用頻度に関する制御研究',
+            '[xSeek / Milestone Research、2026。「AI検索用構造化データ：40%より多くの引用」](https://www.xseek.io/blogs/articles/how-does-structured-data-boost-ai-search-visibility) — JSON-LDスキーマと AI 引用頻度に関する制御研究',
           ],
         },
         howToStart: {
@@ -3099,7 +3099,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[Aggarwal et al., 2023. \"GEO: Generative Engine Optimization\"](https://arxiv.org/zh/abs/2311.09735) — 定义GEO为一门学科并测量结构化内容引用提升的基础学术论文',
             '[WebFX、2026。「AI流量增长796%及超过有机搜索」](https://www.webfx.com/zh/blog/seo/gen-ai-search-trends/) — 在23亿个会话中分析AI对有机转化率',
-            '[xSeek / Milestone Research、2026。「AI搜索结构化数据：40%更多引用」](https://www.xseek.io/zh/learnings/how-does-structured-data-boost-ai-search-visibility) — 关于JSON-LD模式和AI引用频率的对照研究',
+            '[xSeek / Milestone Research、2026。「AI搜索结构化数据：40%更多引用」](https://www.xseek.io/blogs/articles/how-does-structured-data-boost-ai-search-visibility) — 关于JSON-LD模式和AI引用频率的对照研究',
           ],
         },
         howToStart: {

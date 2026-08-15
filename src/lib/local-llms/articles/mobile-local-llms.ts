@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Sources',
           items: [
             '[Apple A18 Chip Specifications](https://www.apple.com/iphone-16/specs/) — Official iPhone 16 hardware specs including Neural Engine and memory bandwidth',
-            '[Qualcomm Snapdragon X Elite Platform](https://www.qualcomm.com/products/mobile/snapdragon/pcs/snapdragon-x-elite) — AI inference capabilities for Android and Windows devices',
+            '[Qualcomm Snapdragon X Elite Platform](https://www.qualcomm.com/products/mobile/snapdragon/laptops-and-tablets/snapdragon-x-elite) — AI inference capabilities for Android and Windows devices',
             '[Ollama iOS (SwiftUI)](https://github.com/jmorello/Ollama-SwiftUI) — Open-source iOS client for running local LLMs on iPhone and iPad',
             '[TensorFlow Lite](https://www.tensorflow.org/lite) — Google\'s framework for on-device machine learning inference',
             'Mobile models are smaller and have limitations beyond hardware constraints. Even the largest mobile models have fundamental reasoning gaps: [what LLMs can\'t do](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do) explains these boundaries.',
@@ -753,7 +753,7 @@ schema: {
           title: 'Quellen',
           items: [
             '[Apple A18 Chip Spezifikationen](https://www.apple.com/iphone-16/specs/) — Offizielle iPhone 16 Hardware-Spezifikationen',
-            '[Qualcomm Snapdragon X Elite Plattform](https://www.qualcomm.com/products/mobile/snapdragon/pcs/snapdragon-x-elite) — KI-Inferenzfähigkeiten für Android- und Windows-Geräte',
+            '[Qualcomm Snapdragon X Elite Plattform](https://www.qualcomm.com/products/mobile/snapdragon/laptops-and-tablets/snapdragon-x-elite) — KI-Inferenzfähigkeiten für Android- und Windows-Geräte',
             '[Ollama iOS (SwiftUI)](https://github.com/jmorello/Ollama-SwiftUI) — Open-Source iOS-Client für lokale LLMs auf iPhone und iPad',
             '[TensorFlow Lite](https://www.tensorflow.org/lite) — Googles Framework für On-Device Machine Learning Inferenz',
           ],
@@ -1139,7 +1139,7 @@ schema: {
           title: 'Sources',
           items: [
             '[Spécifications Apple A18](https://www.apple.com/iphone-16/specs/) — Spécifications matérielles officielles de l\'iPhone 16',
-            '[Plateforme Qualcomm Snapdragon X Elite](https://www.qualcomm.com/products/mobile/snapdragon/pcs/snapdragon-x-elite) — Capacités d\'inférence IA pour appareils Android et Windows',
+            '[Plateforme Qualcomm Snapdragon X Elite](https://www.qualcomm.com/products/mobile/snapdragon/laptops-and-tablets/snapdragon-x-elite) — Capacités d\'inférence IA pour appareils Android et Windows',
             '[Ollama iOS (SwiftUI)](https://github.com/jmorello/Ollama-SwiftUI) — Client iOS open source pour LLM locaux sur iPhone et iPad',
             '[TensorFlow Lite](https://www.tensorflow.org/lite) — Framework Google pour l\'inférence machine learning on-device',
           ],
@@ -1523,7 +1523,7 @@ schema: {
           title: '出典',
           items: [
             '[Apple A18チップ仕様](https://www.apple.com/iphone-16/specs/) — iPhone 16公式ハードウェア仕様',
-            '[Qualcomm Snapdragon X Eliteプラットフォーム](https://www.qualcomm.com/products/mobile/snapdragon/pcs/snapdragon-x-elite) — Android・Windowsデバイス向けAI推論機能',
+            '[Qualcomm Snapdragon X Eliteプラットフォーム](https://www.qualcomm.com/products/mobile/snapdragon/laptops-and-tablets/snapdragon-x-elite) — Android・Windowsデバイス向けAI推論機能',
             '[Ollama iOS (SwiftUI)](https://github.com/jmorello/Ollama-SwiftUI) — iPhone・iPad向けオープンソースiOSクライアント',
             '[TensorFlow Lite](https://www.tensorflow.org/lite) — Googleのオンデバイス機械学習推論フレームワーク',
           ],
@@ -1907,7 +1907,7 @@ schema: {
           title: '来源',
           items: [
             '[Apple A18芯片规格](https://www.apple.com/iphone-16/specs/) — iPhone 16官方硬件规格',
-            '[Qualcomm Snapdragon X Elite平台](https://www.qualcomm.com/products/mobile/snapdragon/pcs/snapdragon-x-elite) — Android和Windows设备的AI推理能力',
+            '[Qualcomm Snapdragon X Elite平台](https://www.qualcomm.com/products/mobile/snapdragon/laptops-and-tablets/snapdragon-x-elite) — Android和Windows设备的AI推理能力',
             '[Ollama iOS (SwiftUI)](https://github.com/jmorello/Ollama-SwiftUI) — iPhone和iPad开源iOS客户端',
             '[TensorFlow Lite](https://www.tensorflow.org/lite) — Google端设备机器学习推理框架',
           ],
@@ -2292,7 +2292,7 @@ schema: {
           title: 'Fuentes',
           items: [
             '[Especificaciones del chip Apple A18](https://www.apple.com/iphone-16/specs/) — Especificaciones oficiales del hardware del iPhone 16, incluyendo Neural Engine y ancho de banda de memoria',
-            '[Plataforma Qualcomm Snapdragon X Elite](https://www.qualcomm.com/products/mobile/snapdragon/pcs/snapdragon-x-elite) — Capacidades de inferencia de IA para dispositivos Android y Windows',
+            '[Plataforma Qualcomm Snapdragon X Elite](https://www.qualcomm.com/products/mobile/snapdragon/laptops-and-tablets/snapdragon-x-elite) — Capacidades de inferencia de IA para dispositivos Android y Windows',
             '[Ollama iOS (SwiftUI)](https://github.com/jmorello/Ollama-SwiftUI) — Cliente iOS de código abierto para ejecutar LLMs locales en iPhone e iPad',
             '[TensorFlow Lite](https://www.tensorflow.org/lite) — Framework de Google para inferencia de aprendizaje automático en dispositivo',
             'Los modelos móviles son más pequeños y tienen limitaciones más allá de las restricciones de hardware. Incluso los modelos móviles más grandes tienen brechas fundamentales de razonamiento: [qué no pueden hacer los LLMs](https://www.promptquorum.com/es/prompt-engineering/ai-limitations-what-llms-cant-do) explica estos límites.',
@@ -2678,7 +2678,7 @@ schema: {
           title: 'المصادر',
           items: [
             '[مواصفات شريحة Apple A18](https://www.apple.com/iphone-16/specs/) — المواصفات الرسمية لعتاد iPhone 16، بما في ذلك Neural Engine وعرض نطاق الذاكرة',
-            '[منصة Qualcomm Snapdragon X Elite](https://www.qualcomm.com/products/mobile/snapdragon/pcs/snapdragon-x-elite) — قدرات استدلال الذكاء الاصطناعي لأجهزة Android وWindows',
+            '[منصة Qualcomm Snapdragon X Elite](https://www.qualcomm.com/products/mobile/snapdragon/laptops-and-tablets/snapdragon-x-elite) — قدرات استدلال الذكاء الاصطناعي لأجهزة Android وWindows',
             '[Ollama iOS (SwiftUI)](https://github.com/jmorello/Ollama-SwiftUI) — عميل iOS مفتوح المصدر لتشغيل نماذج LLM المحلية على iPhone وiPad',
             '[TensorFlow Lite](https://www.tensorflow.org/lite) — إطار عمل Google للاستدلال في تعلّم الآلة على الجهاز',
             'نماذج الهواتف أصغر ولها قيود تتجاوز حدود العتاد. حتى أكبر نماذج الهواتف لها فجوات استدلال جوهرية: [ما الذي لا تستطيع نماذج LLM فعله](https://www.promptquorum.com/ar/prompt-engineering/ai-limitations-what-llms-cant-do) يشرح هذه الحدود.',
@@ -3349,7 +3349,7 @@ schema: {
           title: '출처',
           items: [
             '[Apple A18 칩 사양](https://www.apple.com/iphone-16/specs/) — Neural Engine 및 메모리 대역폭을 포함한 공식 iPhone 16 하드웨어 사양',
-            '[Qualcomm Snapdragon X Elite 플랫폼](https://www.qualcomm.com/products/mobile/snapdragon/pcs/snapdragon-x-elite) — Android 및 Windows 기기의 AI 추론 기능',
+            '[Qualcomm Snapdragon X Elite 플랫폼](https://www.qualcomm.com/products/mobile/snapdragon/laptops-and-tablets/snapdragon-x-elite) — Android 및 Windows 기기의 AI 추론 기능',
             '[Ollama iOS (SwiftUI)](https://github.com/jmorello/Ollama-SwiftUI) — iPhone 및 iPad에서 로컬 LLM을 실행하기 위한 오픈 소스 iOS 클라이언트',
             '[TensorFlow Lite](https://www.tensorflow.org/lite) — 온디바이스 머신 러닝 추론을 위한 Google 프레임워크',
             '모바일 모델은 하드웨어 제약을 넘어선 더 많은 한계가 있습니다. 가장 큰 모바일 모델조차 근본적인 추론 격차가 있습니다: [LLM이 할 수 없는 것](https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do)에서 이러한 한계를 설명합니다.',

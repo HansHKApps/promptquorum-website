@@ -185,7 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cost: {
         id: 'cost-comparison',
         title: 'Cost per 1M Tokens',
-        content: 'Per-token pricing determines cloud LLM economics at scale. The comparison below uses input token pricing only; output pricing is typically 3–5× higher. Current pricing: [Claude Sonnet 5 via Anthropic](https://www.anthropic.com/pricing/claude) and public DeepSeek API documentation.',
+        content: 'Per-token pricing determines cloud LLM economics at scale. The comparison below uses input token pricing only; output pricing is typically 3–5× higher. Current pricing: [Claude Sonnet 5 via Anthropic](https://www.anthropic.com/pricing) and public DeepSeek API documentation.',
         rows: [
           { Model: 'DeepSeek R2', 'Input ($/1M)': '$0.14', 'Output ($/1M)': '$0.55', 'Monthly at 300M tokens': '$42', 'GDPR Safe for EU': '❌' },
           { Model: 'Qwen 3.6 (cloud, Alibaba)', 'Input ($/1M)': '~$0.30', 'Output ($/1M)': '~$0.90', 'Monthly at 300M tokens': '$90', 'GDPR Safe for EU': '⚠️ Region-dependent' },
@@ -404,7 +404,7 @@ dispatch_rules:
       cost: {
         id: 'cost-comparison',
         title: 'Coste por 1M de tokens',
-        content: 'El precio por token determina la economía de los LLMs en la nube a escala. La comparativa a continuación usa solo precios de tokens de entrada; el precio de salida suele ser 3–5× mayor. Precios actuales: [Claude Sonnet 5 via Anthropic](https://www.anthropic.com/pricing/claude) y documentación pública de la API de DeepSeek.',
+        content: 'El precio por token determina la economía de los LLMs en la nube a escala. La comparativa a continuación usa solo precios de tokens de entrada; el precio de salida suele ser 3–5× mayor. Precios actuales: [Claude Sonnet 5 via Anthropic](https://www.anthropic.com/pricing) y documentación pública de la API de DeepSeek.',
         rows: [
           { Modelo: 'DeepSeek R2', 'Entrada ($/1M)': '$0,14', 'Salida ($/1M)': '$0,55', 'Mensual a 300M tokens': '$42', 'Seguro GDPR para UE': '❌' },
           { Modelo: 'Qwen 3.6 (nube, Alibaba)', 'Entrada ($/1M)': '~$0,30', 'Salida ($/1M)': '~$0,90', 'Mensual a 300M tokens': '$90', 'Seguro GDPR para UE': '⚠️ Dependiente de región' },
@@ -651,7 +651,7 @@ dispatch_rules:
       cost: {
         id: 'cost-comparison',
         title: 'التكلفة لكل 1M token',
-        content: 'يحدد السعر لكل token اقتصاديات نماذج LLM السحابية على نطاق واسع. تستخدم المقارنة أدناه أسعار tokens الإدخال فقط؛ سعر الإخراج عادةً أعلى بـ 3–5×. الأسعار الحالية: [Claude Sonnet 5 عبر Anthropic](https://www.anthropic.com/pricing/claude) والتوثيق العام لـ API الخاص بـ DeepSeek.',
+        content: 'يحدد السعر لكل token اقتصاديات نماذج LLM السحابية على نطاق واسع. تستخدم المقارنة أدناه أسعار tokens الإدخال فقط؛ سعر الإخراج عادةً أعلى بـ 3–5×. الأسعار الحالية: [Claude Sonnet 5 عبر Anthropic](https://www.anthropic.com/pricing) والتوثيق العام لـ API الخاص بـ DeepSeek.',
         rows: [
           { Modelo: 'DeepSeek R2', 'Entrada ($/1M)': '$0.14', 'Salida ($/1M)': '$0.55', 'Mensual a 300M tokens': '$42', 'Seguro GDPR para UE': '❌' },
           { Modelo: 'Qwen 3.6 (سحابي، Alibaba)', 'Entrada ($/1M)': '~$0.30', 'Salida ($/1M)': '~$0.90', 'Mensual a 300M tokens': '$90', 'Seguro GDPR para UE': '⚠️ يعتمد على المنطقة' },
@@ -1118,7 +1118,7 @@ dispatch_rules:
       cost: {
         id: 'cost-comparison',
         title: 'Kosten pro 1M Token',
-        content: 'Die Token-bezogene Preisgestaltung bestimmt Cloud-LLM-Wirtschaft im großen Maßstab. Der Vergleich unten nutzt nur Input-Token-Preise; Output-Preise sind typischerweise 3–5× höher. Aktuelle Preise: [Claude Sonnet 5 via Anthropic](https://www.anthropic.com/pricing/claude) und öffentliche DeepSeek-API-Dokumentation.',
+        content: 'Die Token-bezogene Preisgestaltung bestimmt Cloud-LLM-Wirtschaft im großen Maßstab. Der Vergleich unten nutzt nur Input-Token-Preise; Output-Preise sind typischerweise 3–5× höher. Aktuelle Preise: [Claude Sonnet 5 via Anthropic](https://www.anthropic.com/pricing) und öffentliche DeepSeek-API-Dokumentation.',
         rows: [
           { Modell: 'DeepSeek R2', 'Input ($/1M)': '$0,14', 'Output ($/1M)': '$0,55', 'Monatlich bei 300M Token': '$42', 'DSGVO-sicher für EU': '❌' },
           { Modell: 'Qwen 3.6 (Cloud, Alibaba)', 'Input ($/1M)': '~$0,30', 'Output ($/1M)': '~$0,90', 'Monatlich bei 300M Token': '$90', 'DSGVO-sicher für EU': '⚠️ Region-abhängig' },
@@ -1340,7 +1340,7 @@ dispatch_rules:
       cost: {
         id: 'cost-comparison',
         title: 'Coût par 1M tokens',
-        content: 'Les tarifs par token déterminent l\'économie du cloud IA en grand volume. Comparaison ci-dessous utilise input tokens ; output coûte 3–5× plus. Tarifs actuels : [Claude Sonnet 5 Anthropic](https://www.anthropic.com/pricing/claude) et documentation API DeepSeek.',
+        content: 'Les tarifs par token déterminent l\'économie du cloud IA en grand volume. Comparaison ci-dessous utilise input tokens ; output coûte 3–5× plus. Tarifs actuels : [Claude Sonnet 5 Anthropic](https://www.anthropic.com/pricing) et documentation API DeepSeek.',
         rows: [
           { Modèle: 'DeepSeek R2', 'Input ($/1M)': '$0.14', 'Output ($/1M)': '$0.55', 'Mensuel 300M': '$42', 'RGPD UE': '❌' },
           { Modèle: 'Qwen 3.6 (cloud Alibaba)', 'Input ($/1M)': '~$0.30', 'Output ($/1M)': '~$0.90', 'Mensuel 300M': '$90', 'RGPD UE': '⚠️ Région-dépendant' },
@@ -1560,7 +1560,7 @@ dispatch_rules:
       cost: {
         id: 'cost-comparison',
         title: '每1M令牌成本对比',
-        content: '成本计算仅比较输入令牌(输出成本通常为3-5倍)。本地推断成本在一次性硬件投资后仅为电力成本。当前价格：[Claude Sonnet 5官方定价](https://www.anthropic.com/pricing/claude)和DeepSeek公开API文档。',
+        content: '成本计算仅比较输入令牌(输出成本通常为3-5倍)。本地推断成本在一次性硬件投资后仅为电力成本。当前价格：[Claude Sonnet 5官方定价](https://www.anthropic.com/pricing)和DeepSeek公开API文档。',
         rows: [
           { '模型': 'DeepSeek R2', '输入($/1M)': '$0.14', '输出($/1M)': '$0.55', '月300M令牌成本': '$42', '中国数据安全法合规': '❌' },
           { '模型': 'Qwen 3.6 (云端,阿里云)', '输入($/1M)': '~$0.30', '输出($/1M)': '~$0.90', '月300M令牌成本': '$90', '中国数据安全法合规': '⚠️ 区域依赖' },
@@ -2152,7 +2152,7 @@ dispatchers:
       cost: {
         id: 'cost-comparison',
         title: '1M 토큰당 비용',
-        content: '토큰당 가격은 대규모 클라우드 LLM 경제성을 결정합니다. 아래 비교는 입력 토큰 가격만 사용하며, 출력 가격은 일반적으로 3~5배 높습니다. 현재 가격: [Anthropic의 Claude Sonnet 5](https://www.anthropic.com/pricing/claude) 및 DeepSeek 공개 API 문서를 참조하십시오.',
+        content: '토큰당 가격은 대규모 클라우드 LLM 경제성을 결정합니다. 아래 비교는 입력 토큰 가격만 사용하며, 출력 가격은 일반적으로 3~5배 높습니다. 현재 가격: [Anthropic의 Claude Sonnet 5](https://www.anthropic.com/pricing) 및 DeepSeek 공개 API 문서를 참조하십시오.',
         rows: [
           { '모델': 'DeepSeek R2', '입력 ($/1M)': '$0.14', '출력 ($/1M)': '$0.55', '300M 토큰/월 비용': '$42', 'EU GDPR 안전': '❌' },
           { '모델': 'Qwen 3.6 (클라우드, Alibaba)', '입력 ($/1M)': '~$0.30', '출력 ($/1M)': '~$0.90', '300M 토큰/월 비용': '$90', 'EU GDPR 안전': '⚠️ 리전 의존' },

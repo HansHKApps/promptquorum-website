@@ -2409,7 +2409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         items: [
-          'بطاقة نموذج Qwen3-Coder — [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder) (مايو 2026).',
+          'بطاقة نموذج Qwen3-Coder — [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct) (مايو 2026).',
           'وثائق Continue.dev — [continue.dev/docs](https://continue.dev/docs) (2026).',
           'وثائق Ollama — [ollama.ai](https://ollama.ai) (2026).',
           'تسعير GitHub Copilot — [github.com/features/copilot](https://github.com/features/copilot) (مايو 2026): Copilot Pro $20/شهر.',
