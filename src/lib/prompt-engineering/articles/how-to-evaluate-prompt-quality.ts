@@ -271,7 +271,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Sources',
           items: [
             '[OpenAI Evals Framework (github.com/openai/evals)](https://github.com/openai/evals) — Open-source framework for evaluating LLM outputs with test harness and scoring utilities',
-            '[Anthropic Model Evaluations (anthropic.com)](https://www.anthropic.com/news/model-evaluations) — Anthropic approach to capability and safety evaluation methodology',
+            '[Anthropic Model Evaluations (anthropic.com)](https://www.anthropic.com/research/evaluating-ai-systems) — Anthropic approach to capability and safety evaluation methodology',
             '[The Prompt Report: Systematic Survey of Prompting Techniques (arXiv:2406.06608)](https://arxiv.org/abs/2406.06608) — Schulhoff et al., 2024. Comprehensive framework covering prompt design and evaluation across 50+ techniques.',
             '[DeepEval: LLM Evaluation Framework (github.com/confident-ai/deepeval)](https://github.com/confident-ai/deepeval) — Confident AI, 2024–2025. Open-source framework for automated LLM output evaluation with metrics, test sets, and CI/CD integration.',
             '[NIST AI Risk Management Framework (airc.nist.gov)](https://airc.nist.gov/Home) — NIST, 2023–2026 (updated). Framework covering AI system evaluation, quality assurance methodology, and governance documentation for regulated environments.',
@@ -546,7 +546,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Quellen',
           items: [
             '[OpenAI Evals Framework (github.com/openai/evals)](https://github.com/openai/evals) — Open-Source-Framework zur Bewertung von LLM-Ausgaben mit Test Harness und Scoring-Utilities',
-            '[Anthropic Model Evaluations (anthropic.com)](https://www.anthropic.com/news/model-evaluations) — Anthropic Ansatz zur Capability und Safety Evaluierungs-Methodik',
+            '[Anthropic Model Evaluations (anthropic.com)](https://www.anthropic.com/research/evaluating-ai-systems) — Anthropic Ansatz zur Capability und Safety Evaluierungs-Methodik',
             '[The Prompt Report: Systematic Survey of Prompting Techniques (arXiv:2406.06608)](https://arxiv.org/abs/2406.06608) — Schulhoff et al., 2024. Umfassender Rahmen der Prompt-Design und Bewertung über 50+ Techniken abdeckt.',
             '[DeepEval: LLM Evaluation Framework (github.com/confident-ai/deepeval)](https://github.com/confident-ai/deepeval) — Confident AI, 2024–2025. Open-Source-Framework für automatisierte LLM-Output-Bewertung mit Metriken, Test-Sets und CI/CD-Integration.',
             '[NIST AI Risk Management Framework (airc.nist.gov)](https://airc.nist.gov/Home) — NIST, 2023–2026 (aktualisiert). Framework abdeckt KI-System-Bewertung, Qualitätssicherungs-Methodik und Governance-Dokumentation für regulierte Umgebungen.',
@@ -819,7 +819,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Fuentes',
           items: [
             '[OpenAI Evals Framework (github.com/openai/evals)](https://github.com/openai/evals) — Framework de código abierto para evaluar salidas LLM con arnés de prueba y utilidades de puntuación',
-            '[Anthropic Model Evaluations (anthropic.com)](https://www.anthropic.com/news/model-evaluations) — Enfoque de Anthropic para la metodología de evaluación de capacidades y seguridad',
+            '[Anthropic Model Evaluations (anthropic.com)](https://www.anthropic.com/research/evaluating-ai-systems) — Enfoque de Anthropic para la metodología de evaluación de capacidades y seguridad',
             '[The Prompt Report: Systematic Survey of Prompting Techniques (arXiv:2406.06608)](https://arxiv.org/abs/2406.06608) — Schulhoff et al., 2024. Framework completo que cubre diseño y evaluación de prompts en 50+ técnicas.',
             '[DeepEval: LLM Evaluation Framework (github.com/confident-ai/deepeval)](https://github.com/confident-ai/deepeval) — Confident AI, 2024–2025. Framework de código abierto para evaluación automatizada de salidas LLM con métricas, conjuntos de prueba e integración CI/CD.',
             '[NIST AI Risk Management Framework (airc.nist.gov)](https://airc.nist.gov/Home) — NIST, 2023–2026 (actualizado). Framework que cubre evaluación de sistemas de IA, metodología de aseguramiento de calidad y documentación de gobernanza para entornos regulados.',
@@ -1092,7 +1092,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'المصادر',
           items: [
             '[OpenAI Evals Framework (github.com/openai/evals)](https://github.com/openai/evals) — إطار مفتوح المصدر لتقييم مخرجات النماذج اللغوية الكبيرة مع منهج اختبار وأدوات تسجيل',
-            '[Anthropic Model Evaluations (anthropic.com)](https://www.anthropic.com/news/model-evaluations) — نهج Anthropic لمنهجية تقييم القدرات والسلامة',
+            '[Anthropic Model Evaluations (anthropic.com)](https://www.anthropic.com/research/evaluating-ai-systems) — نهج Anthropic لمنهجية تقييم القدرات والسلامة',
             '[The Prompt Report: Systematic Survey of Prompting Techniques (arXiv:2406.06608)](https://arxiv.org/abs/2406.06608) — Schulhoff وآخرون، 2024. إطار شامل يغطي تصميم وتقييم البرومبت في 50+ تقنية.',
             '[DeepEval: LLM Evaluation Framework (github.com/confident-ai/deepeval)](https://github.com/confident-ai/deepeval) — Confident AI، 2024–2025. إطار مفتوح المصدر للتقييم الآلي لمخرجات النماذج اللغوية الكبيرة مع مقاييس ومجموعات اختبار وتكامل CI/CD.',
             '[NIST AI Risk Management Framework (airc.nist.gov)](https://airc.nist.gov/Home) — NIST، 2023–2026 (محدّث). إطار يغطي تقييم أنظمة الذكاء الاصطناعي، ومنهجية ضمان الجودة، وتوثيق الحوكمة للبيئات المنظّمة.',
@@ -1367,7 +1367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Sources',
           items: [
             '[OpenAI Evals Framework (github.com/openai/evals)](https://github.com/openai/evals) — Framework open-source pour évaluer les sorties LLM avec harnais de test et utilitaires de scoring',
-            '[Anthropic Model Evaluations (anthropic.com)](https://www.anthropic.com/news/model-evaluations) — Approche d\'Anthropic aux évaluations de capabilité et sécurité',
+            '[Anthropic Model Evaluations (anthropic.com)](https://www.anthropic.com/research/evaluating-ai-systems) — Approche d\'Anthropic aux évaluations de capabilité et sécurité',
             '[The Prompt Report: Systematic Survey of Prompting Techniques (arXiv:2406.06608)](https://arxiv.org/abs/2406.06608) — Schulhoff et al., 2024. Cadre complet couvrant la conception et l\'évaluation des prompts sur 50+ techniques.',
             '[DeepEval: LLM Evaluation Framework (github.com/confident-ai/deepeval)](https://github.com/confident-ai/deepeval) — Confident AI, 2024–2025. Framework open-source pour l\'évaluation automatisée des sorties LLM avec métriques, ensembles de tests et intégration CI/CD.',
             '[NIST AI Risk Management Framework (airc.nist.gov)](https://airc.nist.gov/Home) — NIST, 2023–2026 (mis à jour). Cadre couvrant l\'évaluation des systèmes IA, la méthodologie d\'assurance qualité et la documentation de gouvernance pour les environnements réglementés.',
@@ -2247,7 +2247,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Fontes',
           items: [
             '[OpenAI Evals Framework (github.com/openai/evals)](https://github.com/openai/evals) — Framework de código aberto para avaliar saídas LLM com arnês de teste e utilitários de pontuação',
-            '[Anthropic Model Evaluations (anthropic.com)](https://www.anthropic.com/news/model-evaluations) — Abordagem da Anthropic para metodologia de avaliação de capacidade e segurança',
+            '[Anthropic Model Evaluations (anthropic.com)](https://www.anthropic.com/research/evaluating-ai-systems) — Abordagem da Anthropic para metodologia de avaliação de capacidade e segurança',
             '[The Prompt Report: Systematic Survey of Prompting Techniques (arXiv:2406.06608)](https://arxiv.org/abs/2406.06608) — Schulhoff et al., 2024. Framework abrangente cobrindo design e avaliação de prompts em 50+ técnicas.',
             '[DeepEval: LLM Evaluation Framework (github.com/confident-ai/deepeval)](https://github.com/confident-ai/deepeval) — Confident AI, 2024–2025. Framework de código aberto para avaliação automatizada de saídas LLM com métricas, conjuntos de teste e integração CI/CD.',
             '[NIST AI Risk Management Framework (airc.nist.gov)](https://airc.nist.gov/Home) — NIST, 2023–2026 (atualizado). Framework cobrindo avaliação de sistemas de IA, metodologia de garantia de qualidade e documentação de governança para ambientes regulamentados.',
@@ -2518,7 +2518,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '출처',
         items: [
           '[OpenAI Evals Framework (github.com/openai/evals)](https://github.com/openai/evals) — 테스트 하네스 및 채점 유틸리티를 갖춘 LLM 출력 평가를 위한 오픈소스 프레임워크',
-          '[Anthropic Model Evaluations (anthropic.com)](https://www.anthropic.com/news/model-evaluations) — Anthropic의 역량 및 안전 평가 방법론 접근법',
+          '[Anthropic Model Evaluations (anthropic.com)](https://www.anthropic.com/research/evaluating-ai-systems) — Anthropic의 역량 및 안전 평가 방법론 접근법',
           '[The Prompt Report: Systematic Survey of Prompting Techniques (arXiv:2406.06608)](https://arxiv.org/abs/2406.06608) — Schulhoff et al., 2024. 50개 이상의 기법에 걸쳐 프롬프트 설계 및 평가를 다루는 포괄적인 프레임워크.',
           '[DeepEval: LLM Evaluation Framework (github.com/confident-ai/deepeval)](https://github.com/confident-ai/deepeval) — Confident AI, 2024~2025. 지표, 테스트 세트, CI/CD 통합을 갖춘 자동화된 LLM 출력 평가를 위한 오픈소스 프레임워크.',
           '[NIST AI Risk Management Framework (airc.nist.gov)](https://airc.nist.gov/Home) — NIST, 2023~2026 (업데이트됨). 규제 환경을 위한 AI 시스템 평가, 품질 보증 방법론, 거버넌스 문서화를 다루는 프레임워크.',
