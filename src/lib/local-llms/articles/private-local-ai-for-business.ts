@@ -198,7 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'European Commission. (2016). "[General Data Protection Regulation (GDPR)](https://gdpr-info.eu/)" — Official GDPR text including Article 28 (data processor requirements) and Article 5 (data minimization principle).',
             'U.S. Department of Health and Human Services. (2024). "[HIPAA Privacy Rule](https://www.hhs.gov/hipaa/for-professionals/privacy/)" — Official HIPAA compliance requirements for healthcare AI deployments.',
             'AICPA. (2024). "[SOC2 Trust Services Criteria](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2)" — SOC2 framework for audit trails, access controls, and security policies.',
-            'vLLM. (2026). "[Distributed Serving with vLLM](https://docs.vllm.ai/en/latest/serving/distributed_serving.html)" — Official vLLM documentation for multi-GPU tensor parallelism deployment.',
+            'vLLM. (2026). "[Distributed Serving with vLLM](https://docs.vllm.ai/en/stable/serving/parallelism_scaling/)" — Official vLLM documentation for multi-GPU tensor parallelism deployment.',
           ],
         },
       },
@@ -791,7 +791,7 @@ schema: {
             'Commission Européenne. (2016). "[Règlement Général sur la Protection des Données (RGPD)](https://gdpr-info.eu/fr/)" — Texte officiel RGPD incluant Article 28 (exigences processeur données) et Article 5 (principe minimisation données).',
             'U.S. Department of Health and Human Services. (2024). "[HIPAA Privacy Rule](https://www.hhs.gov/hipaa/for-professionals/privacy/)" — Exigences conformité HIPAA officielles déploiements IA santé.',
             'AICPA. (2024). "[SOC2 Trust Services Criteria](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2)" — Framework SOC2 journaux audit, contrôles accès, politiques sécurité.',
-            'vLLM. (2026). "[Distributed Serving with vLLM](https://docs.vllm.ai/en/latest/serving/distributed_serving.html)" — Documentation vLLM officielle déploiement parallélisme tenseur multi-GPU.'
+            'vLLM. (2026). "[Distributed Serving with vLLM](https://docs.vllm.ai/en/stable/serving/parallelism_scaling/)" — Documentation vLLM officielle déploiement parallélisme tenseur multi-GPU.'
           ]
         }
       },
@@ -1199,7 +1199,7 @@ schema: {
             '日本国経済産業省（METI）。（2024）。「[AI統治フレームワーク 2024](https://www.meti.go.jp/policy/ai_governance/en/index.html)」— 日本AI透明性、追跡可能性、セキュリティ要件。',
             '金融庁。（2024）。「[サイバーセキュリティ基本方針](https://www.fsa.go.jp/en/policy/cyber/)」— 金融機関オンプレミスセキュリティ要件。',
             'PPC。（2024）。「[個人情報保護法ガイドライン](https://www.ppc.go.jp/en/about/information/)」— 日本個人データ保護コンプライアンス。',
-            'vLLM。（2026）。「[Distributed Serving with vLLM](https://docs.vllm.ai/en/latest/serving/distributed_serving.html)」— vLLM 公式ドキュメント マルチGPU テンソル並列デプロイメント。'
+            'vLLM。（2026）。「[Distributed Serving with vLLM](https://docs.vllm.ai/en/stable/serving/parallelism_scaling/)」— vLLM 公式ドキュメント マルチGPU テンソル並列デプロイメント。'
           ]
         }
       },
@@ -1648,7 +1648,7 @@ schema: {
             '中国国家互联网信息办公室。（2021）。"[数据安全法](http://www.cac.gov.cn/2021-06/11/c_1623499842189526.htm)"——官方中国数据安全法规定。',
             '中国全国人大常委会。（2021）。"[个人信息保护法](http://www.npc.gov.cn/)"——中国个人数据保护合规。',
             '中国人民银行。（2024）。"[网络和信息安全管理](http://www.pbc.gov.cn/)"——金融机构网络安全要求。',
-            'vLLM。（2026）。"[分布式推理与vLLM](https://docs.vllm.ai/en/latest/serving/distributed_serving.html)"——vLLM官方文档多GPU张量并行部署。'
+            'vLLM。（2026）。"[分布式推理与vLLM](https://docs.vllm.ai/en/stable/serving/parallelism_scaling/)"——vLLM官方文档多GPU张量并行部署。'
           ]
         }
       },
@@ -1994,7 +1994,7 @@ schema: {
             'Comisión Europea. (2016). "[Reglamento General de Protección de Datos (GDPR)](https://gdpr-info.eu/)" — Texto oficial del GDPR, incluido el artículo 28 (requisitos del encargado del tratamiento) y el artículo 5 (principio de minimización de datos).',
             'Departamento de Salud y Servicios Humanos de EE. UU. (2024). "[HIPAA Privacy Rule](https://www.hhs.gov/hipaa/for-professionals/privacy/)" — Requisitos oficiales de cumplimiento de HIPAA para despliegues de IA en el sector sanitario.',
             'AICPA. (2024). "[SOC2 Trust Services Criteria](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2)" — Marco SOC2 para registros de auditoría, controles de acceso y políticas de seguridad.',
-            'vLLM. (2026). "[Distributed Serving with vLLM](https://docs.vllm.ai/en/latest/serving/distributed_serving.html)" — Documentación oficial de vLLM para el despliegue con paralelismo tensorial multi-GPU.',
+            'vLLM. (2026). "[Distributed Serving with vLLM](https://docs.vllm.ai/en/stable/serving/parallelism_scaling/)" — Documentación oficial de vLLM para el despliegue con paralelismo tensorial multi-GPU.',
           ],
         },
       },
@@ -2268,7 +2268,7 @@ schema: {
             'الهيئة السعودية للبيانات والذكاء الاصطناعي. "[نظام حماية البيانات الشخصية (PDPL)](https://sdaia.gov.sa/)" — النص الرسمي لنظام حماية البيانات الشخصية، بما في ذلك متطلبات معالجة البيانات وتقليل البيانات.',
             'وزارة الصحة. "متطلبات خصوصية البيانات الصحية" — متطلبات الامتثال الرسمية لعمليات نشر الذكاء الاصطناعي في القطاع الصحي.',
             'ISO. (2024). "[ISO 27001 Trust Services Criteria](https://www.iso.org/standard/27001)" — إطار ISO 27001 لسجلات التدقيق وضوابط الوصول وسياسات الأمان.',
-            'vLLM. (2026). "[Distributed Serving with vLLM](https://docs.vllm.ai/en/latest/serving/distributed_serving.html)" — التوثيق الرسمي لـ vLLM للنشر بالتوازي التنسوري متعدد GPU.',
+            'vLLM. (2026). "[Distributed Serving with vLLM](https://docs.vllm.ai/en/stable/serving/parallelism_scaling/)" — التوثيق الرسمي لـ vLLM للنشر بالتوازي التنسوري متعدد GPU.',
           ],
         },
       },
@@ -2720,7 +2720,7 @@ schema: {
             '유럽 위원회. (2016). "[일반 데이터 보호 규정 (GDPR)](https://gdpr-info.eu/)" — 제28조(데이터 처리자 요건) 및 제5조(데이터 최소화 원칙)를 포함한 공식 GDPR 전문.',
             '미국 보건복지부. (2024). "[HIPAA 프라이버시 규칙](https://www.hhs.gov/hipaa/for-professionals/privacy/)" — 의료 AI 배포를 위한 공식 HIPAA 준수 요건.',
             'AICPA. (2024). "[SOC2 신뢰 서비스 기준](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2)" — 감사 추적, 접근 제어, 보안 정책을 위한 SOC2 프레임워크.',
-            'vLLM. (2026). "[vLLM 분산 서빙](https://docs.vllm.ai/en/latest/serving/distributed_serving.html)" — 멀티 GPU 텐서 병렬 배포를 위한 공식 vLLM 문서.',
+            'vLLM. (2026). "[vLLM 분산 서빙](https://docs.vllm.ai/en/stable/serving/parallelism_scaling/)" — 멀티 GPU 텐서 병렬 배포를 위한 공식 vLLM 문서.',
           ],
         },
       },

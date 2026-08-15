@@ -540,7 +540,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             label: '価格.comでRTX 4060 Ti 16GBの価格を確認',
           },
           {
-            url: 'https://www.dospara.co.jp/SBR1158/IC355.html',
+            url: 'https://www.dospara.co.jp/BR31',
             productName: 'NVIDIA RTX 4060 Ti 16GB',
             productCategory: 'gpu',
             priceRange: '現在価格を確認',

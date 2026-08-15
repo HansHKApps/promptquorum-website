@@ -327,7 +327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'sources',
           title: 'Sources',
           items: [
-            '[Qwen Team. (2026). Qwen3 Technical Report.](https://arxiv.org/abs/) -- Qwen3 family benchmarks, Qwen 3.6 27B SWE-bench (77.2%), MoE variants.',
+            '[Qwen Team. (2026). Qwen3 Technical Report.](https://arxiv.org/abs/2505.09388) -- Qwen3 family benchmarks, Qwen 3.6 27B SWE-bench (77.2%), MoE variants.',
             '[Meta AI. (2025). Llama 4 Model Card.](https://llama.meta.com/) -- Official benchmark and architecture for Llama 4 Scout/Maverick MoE, 10M context window.',
             '[Mistral AI. (2026). Devstral Small 24B.](https://mistral.ai/) -- Architecture and benchmarks for agentic coding model.',
             '[Mistral AI. (2025). Codestral.](https://mistral.ai/) -- FIM-optimized coding model for IDE autocomplete.',
@@ -785,7 +785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'sources',
           title: 'Fuentes',
           items: [
-            '[Qwen Team. (2026). Qwen3 Technical Report.](https://arxiv.org/abs/) -- Benchmarks de la familia Qwen3, SWE-bench de Qwen 3.6 27B (77,2%), variantes MoE.',
+            '[Qwen Team. (2026). Qwen3 Technical Report.](https://arxiv.org/abs/2505.09388) -- Benchmarks de la familia Qwen3, SWE-bench de Qwen 3.6 27B (77,2%), variantes MoE.',
             '[Meta AI. (2025). Llama 4 Model Card.](https://llama.meta.com/) -- Benchmark oficial y arquitectura de Llama 4 Scout/Maverick MoE, ventana de contexto de 10M.',
             '[Mistral AI. (2026). Devstral Small 24B.](https://mistral.ai/) -- Arquitectura y benchmarks del modelo de programación agentiva.',
             '[Mistral AI. (2025). Codestral.](https://mistral.ai/) -- Modelo de programación optimizado FIM para autocompletado en IDE.',
@@ -1196,7 +1196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'sources',
           title: 'المصادر',
           items: [
-            '[Qwen Team. (2026). Qwen3 Technical Report.](https://arxiv.org/abs/) -- معايير عائلة Qwen3، SWE-bench لـ Qwen 3.6 27B (77.2%)، متغيرات MoE.',
+            '[Qwen Team. (2026). Qwen3 Technical Report.](https://arxiv.org/abs/2505.09388) -- معايير عائلة Qwen3، SWE-bench لـ Qwen 3.6 27B (77.2%)، متغيرات MoE.',
             '[Meta AI. (2025). Llama 4 Model Card.](https://llama.meta.com/) -- المعيار الرسمي وبنية Llama 4 Scout/Maverick MoE، نافذة سياق 10M.',
             '[Mistral AI. (2026). Devstral Small 24B.](https://mistral.ai/) -- بنية ومعايير نموذج البرمجة بالوكلاء.',
             '[Mistral AI. (2025). Codestral.](https://mistral.ai/) -- نموذج البرمجة المحسّن لـ FIM للإكمال التلقائي في IDE.',
@@ -2905,7 +2905,7 @@ schema: {
           id: 'sources',
           title: '출처',
           items: [
-            '[Qwen 팀. (2026). Qwen3 기술 보고서.](https://arxiv.org/abs/) — Qwen3 패밀리 벤치마크, Qwen 3.6 27B SWE-bench(77.2%), MoE 변형.',
+            '[Qwen 팀. (2026). Qwen3 기술 보고서.](https://arxiv.org/abs/2505.09388) — Qwen3 패밀리 벤치마크, Qwen 3.6 27B SWE-bench(77.2%), MoE 변형.',
             '[Meta AI. (2025). Llama 4 모델 카드.](https://llama.meta.com/) — Llama 4 Scout/Maverick MoE, 10M 컨텍스트 윈도우의 공식 벤치마크 및 아키텍처.',
             '[Mistral AI. (2026). Devstral Small 24B.](https://mistral.ai/) — 에이전틱 코딩 모델의 아키텍처 및 벤치마크.',
             '[Mistral AI. (2025). Codestral.](https://mistral.ai/) — IDE 자동완성을 위한 FIM 최적화 코딩 모델.',
