@@ -264,7 +264,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Sources',
         items: [
           '[Google Gemini API: Prompting Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) — Official Google Gemini API prompting guide (2024–2026)',
-          '[Gemini Structured Outputs API Reference](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — JSON schema enforcement at the API level',
+          '[Gemini Structured Outputs API Reference](https://ai.google.dev/gemini-api/docs/structured-output) — JSON schema enforcement at the API level',
           '[Google Search Grounding for Gemini](https://ai.google.dev/gemini-api/docs/grounding) — Automatic fact-checking via Google Search integration',
           '[Generative AI for Everyone - Google Cloud](https://www.cloudskillsboost.google/) — Practical prompting courses and guides',
           'OpenAI & Anthropic API Documentation (2026) — Prompt engineering best practices across GPT-5.5, Claude Opus 4.8, and open-source models',
@@ -529,7 +529,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Quellen',
         items: [
           '[Google Gemini API: Prompting Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) — Offizielle Google Gemini API Prompting-Guide (2024–2026)',
-          '[Gemini Structured Outputs API Reference](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — JSON-Schema-Erzwingung auf API-Level',
+          '[Gemini Structured Outputs API Reference](https://ai.google.dev/gemini-api/docs/structured-output) — JSON-Schema-Erzwingung auf API-Level',
           '[Google Search Grounding für Gemini](https://ai.google.dev/gemini-api/docs/grounding) — Automatisches Fact-Checking über Google Search-Integration',
           '[Generative AI for Everyone - Google Cloud](https://www.cloudskillsboost.google/) — Praktische Prompting-Kurse und Guides',
           'OpenAI & Anthropic API Documentation (2026) — Prompt-Engineering Best Practices über GPT-5.5, Claude Opus 4,7 und Open-Source-Modelle',
@@ -794,7 +794,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Sources',
         items: [
           '[Google Gemini API: Prompting Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) — Guide officiel Google Gemini API pour le prompting (2024–2026)',
-          '[Structured Outputs Gemini API Reference](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — Exécution du schéma JSON au niveau de l\'API',
+          '[Structured Outputs Gemini API Reference](https://ai.google.dev/gemini-api/docs/structured-output) — Exécution du schéma JSON au niveau de l\'API',
           '[Google Search Grounding pour Gemini](https://ai.google.dev/gemini-api/docs/grounding) — Fact-checking automatique via intégration Google Search',
           '[Generative AI for Everyone - Google Cloud](https://www.cloudskillsboost.google/) — Cours pratiques et guides de prompting',
           'OpenAI & Anthropic API Documentation (2026) — Bonnes pratiques de prompt engineering sur GPT-5.5, Claude Opus 4.8 et modèles open-source',
@@ -910,7 +910,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ] },
       sources: { id: 'sources', title: 'ソース', items: [
         '[Google Gemini API: Prompting Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) — Official Google Gemini API prompting guide（2024–2026）',
-        '[Gemini Structured Outputs API Reference](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — JSON schemaをAPI levelで強制',
+        '[Gemini Structured Outputs API Reference](https://ai.google.dev/gemini-api/docs/structured-output) — JSON schemaをAPI levelで強制',
         '[Google Search Grounding for Gemini](https://ai.google.dev/gemini-api/docs/grounding) — Automatic fact-checking via Google Search integration',
         '[Generative AI for Everyone - Google Cloud](https://www.cloudskillsboost.google/) — 実践prompt courses とguides',
         'OpenAI & Anthropic API Documentation（2026） — Prompt engineering best practicesアクロスGPT-5.5、Claude Opus 4.8、open-sourceモデル',
@@ -1025,7 +1025,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ] },
       sources: { id: 'sources', title: '来源', items: [
         '[Google Gemini API：提示词策略](https://ai.google.dev/gemini-api/docs/prompting-strategies) — 官方Google Gemini API提示词指南（2024–2026）',
-        '[Gemini 结构化输出API参考](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — 在API级别强制JSON schema',
+        '[Gemini 结构化输出API参考](https://ai.google.dev/gemini-api/docs/structured-output) — 在API级别强制JSON schema',
         '[Google Search为Gemini接地](https://ai.google.dev/gemini-api/docs/grounding) — 通过Google搜索集成自动事实检查',
         '[Google Cloud生成式AI课程](https://www.cloudskillsboost.google/) — 实践提示词课程和指南',
         'OpenAI & Anthropic API文档（2026） — GPT-5.5、Claude Opus 4.8、开源模型的提示词工程最佳实践',
@@ -1295,7 +1295,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Fuentes',
         items: [
           '[Google Gemini API: Estrategias de prompting](https://ai.google.dev/gemini-api/docs/prompting-strategies) — Guía oficial de prompting de la API de Google Gemini (2024–2026)',
-          '[Referencia de la API de Salidas Estructuradas de Gemini](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — Aplicación de esquemas JSON a nivel de API',
+          '[Referencia de la API de Salidas Estructuradas de Gemini](https://ai.google.dev/gemini-api/docs/structured-output) — Aplicación de esquemas JSON a nivel de API',
           '[Google Search Grounding para Gemini](https://ai.google.dev/gemini-api/docs/grounding) — Verificación automática de hechos mediante integración con Google Search',
           '[IA Generativa para Todos - Google Cloud](https://www.cloudskillsboost.google/) — Cursos prácticos de prompting y guías',
           'Documentación de la API de OpenAI y Anthropic (2026) — Mejores prácticas de ingeniería de prompts para GPT-5.5, Claude Opus 4.8 y modelos de código abierto',
@@ -1563,7 +1563,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Fontes',
         items: [
           '[Google Gemini API: Estratégias de prompting](https://ai.google.dev/gemini-api/docs/prompting-strategies) — Guia oficial de prompting da API do Google Gemini (2024–2026)',
-          '[Referência da API de Saídas Estruturadas do Gemini](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — Imposição de esquema JSON a nível de API',
+          '[Referência da API de Saídas Estruturadas do Gemini](https://ai.google.dev/gemini-api/docs/structured-output) — Imposição de esquema JSON a nível de API',
           '[Google Search Grounding para Gemini](https://ai.google.dev/gemini-api/docs/grounding) — Verificação automática de fatos via integração com Google Search',
           '[IA Generativa para Todos - Google Cloud](https://www.cloudskillsboost.google/) — Cursos práticos de prompting e guias',
           'Documentação da API da OpenAI e da Anthropic (2026) — Melhores práticas de engenharia de prompts para GPT-5.5, Claude Opus 4.8 e modelos de código aberto',
@@ -1834,7 +1834,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'المصادر',
         items: [
           '[Google Gemini API: استراتيجيات المطالبة](https://ai.google.dev/gemini-api/docs/prompting-strategies) — الدليل الرسمي للمطالبة من API Gemini الخاصة بـ Google (2024–2026)',
-          '[مرجع API المخرجات المنظمة من Gemini](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — تطبيق مخطط JSON على مستوى الـ API',
+          '[مرجع API المخرجات المنظمة من Gemini](https://ai.google.dev/gemini-api/docs/structured-output) — تطبيق مخطط JSON على مستوى الـ API',
           '[Google Search Grounding لـ Gemini](https://ai.google.dev/gemini-api/docs/grounding) — التحقق التلقائي من الحقائق عبر تكامل Google Search',
           '[الذكاء الاصطناعي التوليدي للجميع - Google Cloud](https://www.cloudskillsboost.google/) — دورات مطالبة عملية وأدلة',
           'وثائق OpenAI وAnthropic API (2026) — أفضل ممارسات هندسة المطالبات لـ GPT-5.5 وClaude Opus 4.8 والنماذج مفتوحة المصدر',
@@ -2105,7 +2105,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '출처',
         items: [
           '[Google Gemini API: 프롬프팅 전략](https://ai.google.dev/gemini-api/docs/prompting-strategies) — 공식 Google Gemini API 프롬프팅 가이드(2024–2026)',
-          '[Gemini 구조화된 출력 API 참조](https://ai.google.dev/gemini-api/docs/prompt-engineering/structured-output-and-json-mode) — API 수준의 JSON 스키마 강제',
+          '[Gemini 구조화된 출력 API 참조](https://ai.google.dev/gemini-api/docs/structured-output) — API 수준의 JSON 스키마 강제',
           '[Gemini용 Google Search 그라운딩](https://ai.google.dev/gemini-api/docs/grounding) — Google Search 통합을 통한 자동 팩트 체크',
           '[모두를 위한 생성형 AI - Google Cloud](https://www.cloudskillsboost.google/) — 실용적인 프롬프팅 강좌 및 가이드',
           'OpenAI 및 Anthropic API 문서(2026) — GPT-5.5, Claude Opus 4.8, 오픈소스 모델에 걸친 프롬프트 엔지니어링 모범 사례',
