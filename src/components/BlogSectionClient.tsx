@@ -39,7 +39,7 @@ function BlogSectionInner({ initialLang }: { initialLang?: Language }) {
           {blogPosts.map(({ key, href }) => {
             const post = blogMetadata[key][lang as 'en' | 'de' | 'fr' | 'ja' | 'zh'] || blogMetadata[key].en
             return (
-              <Link
+              <Link prefetch={false}
                 key={key}
                 href={href}
                 className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all"

@@ -505,7 +505,7 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
         }
       }
       return (
-        <Link key={i} href={finalUrl} className="text-primary font-medium hover:underline">
+        <Link prefetch={false} key={i} href={finalUrl} className="text-primary font-medium hover:underline">
           {label}
         </Link>
       )
@@ -523,7 +523,7 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
           href = `/${lang}${basePath}${anchor ? '#' + anchor : ''}`
         }
         return (
-          <Link key={i} href={href} className="text-primary font-medium hover:underline">
+          <Link prefetch={false} key={i} href={href} className="text-primary font-medium hover:underline">
             {label}
           </Link>
         )
@@ -539,7 +539,7 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
         if (slug) {
           const href = lang !== 'en' ? `/${lang}/prompt-engineering/${slug}` : `/prompt-engineering/${slug}`
           return (
-            <Link key={i} href={href} className="text-primary font-medium hover:underline">
+            <Link prefetch={false} key={i} href={href} className="text-primary font-medium hover:underline">
               {title}
             </Link>
           )
@@ -552,7 +552,7 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
           fallbackHref = `/${lang}${basePath}${anchor ? '#' + anchor : ''}`
         }
         return (
-          <Link key={i} href={fallbackHref} className="text-primary font-medium hover:underline">
+          <Link prefetch={false} key={i} href={fallbackHref} className="text-primary font-medium hover:underline">
             {title || label}
           </Link>
         )

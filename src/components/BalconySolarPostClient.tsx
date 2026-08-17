@@ -315,7 +315,7 @@ function renderInlineLinks(
         }
       }
       return (
-        <Link key={i} href={finalUrl} className="text-primary font-medium hover:underline">
+        <Link prefetch={false} key={i} href={finalUrl} className="text-primary font-medium hover:underline">
           {label}
         </Link>
       )

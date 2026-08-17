@@ -1663,7 +1663,7 @@ function ArticleCard({
           {UPDATED_LABEL[lang] ?? UPDATED_LABEL['en']}
         </span>
       )}
-      <Link
+      <Link prefetch={false}
         href={href}
         className={`flex items-start gap-3 bg-card rounded-xl p-4 h-full transition-colors group ${showNew ? 'border-2 border-emerald-400 hover:border-emerald-500' : showUpdated ? 'border-2 border-amber-400 hover:border-amber-500' : 'border border-primary/30 hover:border-primary/50 hover:bg-primary/5'}`}
       >

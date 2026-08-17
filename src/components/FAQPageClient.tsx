@@ -184,7 +184,7 @@ function FAQContent({ initialLang }: { initialLang?: import("@/hooks/useLang").L
         </div>
 
         <div className="mt-12 text-center">
-          <Link href="/" className="text-purple-600 hover:text-purple-700 font-semibold transition-colors">
+          <Link prefetch={false} href="/" className="text-purple-600 hover:text-purple-700 font-semibold transition-colors">
             {t.back}
           </Link>
         </div>

@@ -203,24 +203,24 @@ function HeaderInner() {
         {t('skipToMain', lang)}
       </a>
       <div className="px-4 sm:px-6 h-16 flex items-center justify-between">
-        <Link href={navHref('/', lang)} className="flex items-center gap-2 flex-shrink-0">
+        <Link prefetch={false} href={navHref('/', lang)} className="flex items-center gap-2 flex-shrink-0">
           <Logo size={36} className="w-9 h-9 flex-shrink-0" />
           <span className="font-semibold text-gray-900 whitespace-nowrap">PromptQuorum</span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6 ml-auto mr-6">
-          <Link href={navHref('/compare', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('compare', lang)}</Link>
-          <Link href={navHref('/features', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('features', lang)}</Link>
-          <Link href={navHref('/how-it-works', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('howItWorks', lang)}</Link>
-          <Link href={navHref('/faq', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('faq', lang)}</Link>
-          <Link href={navHref('/blog', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('blog', lang)}</Link>
-          <Link href={navHref('/prompt-engineering', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptEngineering', lang)}</Link>
-          <Link href={navHref('/local-llms', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('localLlms', lang)}</Link>
-          <Link href={powerLocalLlmHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('powerLocalLlm', lang)}</Link>
-          <Link href={promptBitesHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptBites', lang)}</Link>
-          <Link href={smartHomeHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('smartHome', lang)}</Link>
-          <Link href={balconySolarHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('balconySolar', lang)}</Link>
+          <Link prefetch={false} href={navHref('/compare', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('compare', lang)}</Link>
+          <Link prefetch={false} href={navHref('/features', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('features', lang)}</Link>
+          <Link prefetch={false} href={navHref('/how-it-works', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('howItWorks', lang)}</Link>
+          <Link prefetch={false} href={navHref('/faq', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('faq', lang)}</Link>
+          <Link prefetch={false} href={navHref('/blog', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('blog', lang)}</Link>
+          <Link prefetch={false} href={navHref('/prompt-engineering', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptEngineering', lang)}</Link>
+          <Link prefetch={false} href={navHref('/local-llms', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('localLlms', lang)}</Link>
+          <Link prefetch={false} href={powerLocalLlmHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('powerLocalLlm', lang)}</Link>
+          <Link prefetch={false} href={promptBitesHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptBites', lang)}</Link>
+          <Link prefetch={false} href={smartHomeHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('smartHome', lang)}</Link>
+          <Link prefetch={false} href={balconySolarHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('balconySolar', lang)}</Link>
           <a
             href="#waitlist"
             onClick={handleWaitlistClick}
@@ -268,77 +268,77 @@ function HeaderInner() {
           <LanguageSwitcherWrapper initialLang={lang as Language} />
         </div>
 
-        <Link
+        <Link prefetch={false}
           href={navHref('/compare', lang)}
           className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('compare', lang)}
         </Link>
-        <Link
+        <Link prefetch={false}
           href={navHref('/features', lang)}
           className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('features', lang)}
         </Link>
-        <Link
+        <Link prefetch={false}
           href={navHref('/how-it-works', lang)}
           className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('howItWorks', lang)}
         </Link>
-        <Link
+        <Link prefetch={false}
           href={navHref('/faq', lang)}
           className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('faq', lang)}
         </Link>
-        <Link
+        <Link prefetch={false}
           href={navHref('/blog', lang)}
           className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('blog', lang)}
         </Link>
-        <Link
+        <Link prefetch={false}
           href={navHref('/prompt-engineering', lang)}
           className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('promptEngineering', lang)}
         </Link>
-        <Link
+        <Link prefetch={false}
           href={navHref('/local-llms', lang)}
           className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('localLlms', lang)}
         </Link>
-        <Link
+        <Link prefetch={false}
           href={powerLocalLlmHref(lang)}
           className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('powerLocalLlm', lang)}
         </Link>
-        <Link
+        <Link prefetch={false}
           href={promptBitesHref(lang)}
           className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('promptBites', lang)}
         </Link>
-        <Link
+        <Link prefetch={false}
           href={smartHomeHref(lang)}
           className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
           onClick={() => setMobileMenuOpen(false)}
         >
           {t('smartHome', lang)}
         </Link>
-        <Link
+        <Link prefetch={false}
           href={balconySolarHref(lang)}
           className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
           onClick={() => setMobileMenuOpen(false)}

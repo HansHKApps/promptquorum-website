@@ -903,7 +903,7 @@ function ArticleCard({ articleKey, dot, lang, titlesMap }: { articleKey: string;
   const href = navHref(`/prompt-engineering/${articleKey}`, lang)
 
   return (
-    <Link
+    <Link prefetch={false}
       href={href}
       className="flex items-start gap-3 bg-card border border-primary/15 rounded-xl p-4 h-full hover:border-primary/50 hover:bg-primary/5 transition-colors group"
     >

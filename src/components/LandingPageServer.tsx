@@ -468,7 +468,7 @@ export function LandingPageServer({ initialLang }: { initialLang?: import('@/hoo
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <Link
+          <Link prefetch={false}
             href={lang === 'en' ? '/download' : `/${lang}/download`}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-6 animate-fade-in hover:bg-primary/20 transition-colors"
           >
@@ -519,7 +519,7 @@ export function LandingPageServer({ initialLang }: { initialLang?: import('@/hoo
           <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-8">
             {t.compareDesc}
           </p>
-          <Link href="/compare" className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
+          <Link prefetch={false} href="/compare" className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
             {t.compareBtn}
           </Link>
         </div>

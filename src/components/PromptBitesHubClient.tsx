@@ -471,7 +471,7 @@ export function PromptBitesHubClient({ lang, articles, latestDateModified }: Pro
                       <span className="absolute top-0 right-3 -translate-y-1/2 text-[11px] font-black uppercase tracking-widest text-white bg-emerald-500 border-2 border-emerald-300 shadow-md rounded px-2.5 py-0.5 z-10">
                         {NEW_LABEL[lang] ?? NEW_LABEL['en']}
                       </span>
-                      <Link href={href} className="flex flex-col rounded-xl border-2 border-emerald-400 bg-card p-4 h-full hover:border-emerald-500 hover:bg-primary/5 hover:shadow-sm transition-all">
+                      <Link prefetch={false} href={href} className="flex flex-col rounded-xl border-2 border-emerald-400 bg-card p-4 h-full hover:border-emerald-500 hover:bg-primary/5 hover:shadow-sm transition-all">
                         <p className="text-sm font-semibold text-text-primary leading-snug line-clamp-2">{article.title}</p>
                       </Link>
                     </div>
@@ -529,7 +529,7 @@ export function PromptBitesHubClient({ lang, articles, latestDateModified }: Pro
                             {UPDATED_LABEL[lang] ?? UPDATED_LABEL['en']}
                           </span>
                         )}
-                        <Link
+                        <Link prefetch={false}
                           href={href}
                           className={`flex flex-col rounded-xl bg-card p-4 h-full hover:bg-primary/5 hover:shadow-sm transition-all ${showNew ? 'border-2 border-emerald-400 hover:border-emerald-500' : showUpdated ? 'border-2 border-amber-400 hover:border-amber-500' : 'border border-primary/15 hover:border-primary/40'}`}
                         >
@@ -555,7 +555,7 @@ export function PromptBitesHubClient({ lang, articles, latestDateModified }: Pro
                 </div>
                 {(DEEPDIVE_LINKS[lang] ?? DEEPDIVE_LINKS["en"]!)[cat.titleEn] && (
                   <div>
-                    <Link
+                    <Link prefetch={false}
                       href={(DEEPDIVE_LINKS[lang] ?? DEEPDIVE_LINKS["en"]!)[cat.titleEn].href}
                       className="inline-block text-sm font-medium text-primary hover:text-primary/80 hover:underline transition-colors"
                     >

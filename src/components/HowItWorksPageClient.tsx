@@ -1346,17 +1346,17 @@ function HowItWorksContent({ initialLang }: { initialLang?: import("@/hooks/useL
         <div className="bg-primary/5 border border-primary/20 rounded-2xl p-10">
           <h2 className="text-2xl font-bold text-text-primary mb-3">{t.ctaH2}</h2>
           <p className="text-text-secondary mb-6">{t.ctaDesc}</p>
-          <Link href="/#waitlist" className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+          <Link prefetch={false} href="/#waitlist" className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">
             {t.ctaBtn}
           </Link>
           <div className="mt-6">
-            <Link href="/compare" className="text-sm text-primary hover:text-primary/80 font-medium">
+            <Link prefetch={false} href="/compare" className="text-sm text-primary hover:text-primary/80 font-medium">
               {t.compareLink}
             </Link>
           </div>
         </div>
         <p className="mt-8">
-          <Link href="/" className="text-primary hover:text-primary/80 font-medium">{t.back}</Link>
+          <Link prefetch={false} href="/" className="text-primary hover:text-primary/80 font-medium">{t.back}</Link>
         </p>
       </div>
 

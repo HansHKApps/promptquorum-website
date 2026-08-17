@@ -156,7 +156,7 @@ function GoDeeper({ parentArticle, siblingBites, siblingTitles, lang }: {
           <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">
             {GO_DEEPER_HEADING[lang]}
           </p>
-          <Link
+          <Link prefetch={false}
             href={`${langPrefix}${parentArticle}`}
             className="text-sm font-semibold text-primary hover:underline"
           >
@@ -174,7 +174,7 @@ function GoDeeper({ parentArticle, siblingBites, siblingTitles, lang }: {
               const title = siblingTitles?.[slug] ?? slug
               return (
                 <li key={slug}>
-                  <Link
+                  <Link prefetch={false}
                     href={`${langPrefix}/prompt-bites/${slug}`}
                     className="flex gap-2 text-sm text-text-secondary hover:text-primary transition-colors"
                   >
@@ -467,11 +467,11 @@ export function PromptBitesPostClient({ slug, lang, articleData, siblingTitles }
         {/* Breadcrumb + language switcher */}
         <div className="flex items-start justify-between gap-4 mb-6">
           <nav className="text-sm text-text-secondary min-w-0">
-            <Link href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary transition-colors shrink-0">
+            <Link prefetch={false} href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary transition-colors shrink-0">
               {(BREADCRUMB_LABELS[lang] ?? BREADCRUMB_LABELS["en"]!).home}
             </Link>
             <span className="mx-2">›</span>
-            <Link href={promptBitesHubHref(lang)} className="hover:text-primary transition-colors shrink-0">
+            <Link prefetch={false} href={promptBitesHubHref(lang)} className="hover:text-primary transition-colors shrink-0">
               {(BREADCRUMB_LABELS[lang] ?? BREADCRUMB_LABELS["en"]!).hub}
             </Link>
             <span className="mx-2">›</span>
@@ -590,7 +590,7 @@ export function PromptBitesPostClient({ slug, lang, articleData, siblingTitles }
 
         {/* Back to hub */}
         <div className="mt-8 pt-8 border-t border-primary/10">
-          <Link
+          <Link prefetch={false}
             href={promptBitesHubHref(lang)}
             className="text-sm text-primary hover:underline"
           >

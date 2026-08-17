@@ -1454,7 +1454,7 @@ function CompareContent({ initialLang }: { initialLang?: Lang }) {
       <header className="border-b border-gray-100 pb-12 mb-0">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <p className="text-xs font-mono text-text-secondary mb-5">
-            <Link href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary transition-colors">{t.breadcrumbHome}</Link>
+            <Link prefetch={false} href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary transition-colors">{t.breadcrumbHome}</Link>
             <span className="mx-2">/</span>
             <span>{t.breadcrumbCompare}</span>
           </p>
@@ -1713,7 +1713,7 @@ function CompareContent({ initialLang }: { initialLang?: Lang }) {
              lang === 'zh' ? '比较是第一步，获得出色结果是第二步。' :
              'Comparing is step one. Getting great results from each model is step two.'}
           </p>
-          <Link
+          <Link prefetch={false}
             href={lang === 'en' ? '/prompt-engineering' : `/${lang}/prompt-engineering`}
             className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >
@@ -1729,7 +1729,7 @@ function CompareContent({ initialLang }: { initialLang?: Lang }) {
         <div className="mt-14 bg-gradient-to-br from-primary to-primary/70 rounded-2xl p-10 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">{t.ctaH2}</h2>
           <p className="text-white/75 mb-6">{t.ctaSubtext}</p>
-          <Link
+          <Link prefetch={false}
             href={lang === 'en' ? '/#waitlist' : `/${lang}#waitlist`}
             className="inline-block bg-white text-primary font-bold text-sm px-7 py-3 rounded-lg hover:opacity-90 transition-opacity"
           >
