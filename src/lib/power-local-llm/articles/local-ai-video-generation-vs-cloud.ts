@@ -1,5 +1,5 @@
 // Power Local LLM — Local AI Video Generation vs. Cloud 2026: Wan 2.2, LTX-2, HunyuanVideo Compared
-// Slug: local-ai-video-generation-vs-cloud-2026
+// Slug: local-ai-video-generation-vs-cloud
 // Category: Image & Video Generation
 
 import type { Language } from '@/lib/blog/blogContent'

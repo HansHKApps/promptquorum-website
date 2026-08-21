@@ -101,7 +101,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'deepseek-offline-china-self-hosted-2026',
 
   // Category 11 — Image & Video Generation
-  'local-ai-video-generation-vs-cloud-2026',
+  'local-ai-video-generation-vs-cloud',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

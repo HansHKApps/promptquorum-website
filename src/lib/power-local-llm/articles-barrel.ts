@@ -67,7 +67,7 @@ import { article as a_wechat_local_llm_integration_2026 } from './articles/wecha
 // DeepSeek Series 2026-06-19
 import { article as a_deepseek_r1_vs_distills_explained_2026 } from './articles/deepseek-r1-vs-distills-explained-2026'
 import { article as a_deepseek_offline_china_self_hosted_2026 } from './articles/deepseek-offline-china-self-hosted-2026'
-import { article as a_local_ai_video_generation_vs_cloud_2026 } from './articles/local-ai-video-generation-vs-cloud-2026'
+import { article as a_local_ai_video_generation_vs_cloud } from './articles/local-ai-video-generation-vs-cloud'
 import { article as a_deepseek_vs_qwen_coding_local_2026 } from './articles/deepseek-vs-qwen-coding-local-2026'
 import { article as a_best_workstation_build_local_ai_2026 } from './articles/best-workstation-build-local-ai-2026'
 import { article as a_best_local_llm_ide_plugins_2026 } from './articles/best-local-llm-ide-plugins-2026'
@@ -143,5 +143,5 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'deepseek-r1-vs-distills-explained-2026':            a_deepseek_r1_vs_distills_explained_2026,
   'deepseek-offline-china-self-hosted-2026':           a_deepseek_offline_china_self_hosted_2026,
   // Category 11 — Image & Video Generation
-  'local-ai-video-generation-vs-cloud-2026':           a_local_ai_video_generation_vs_cloud_2026,
+  'local-ai-video-generation-vs-cloud':                a_local_ai_video_generation_vs_cloud,
 }

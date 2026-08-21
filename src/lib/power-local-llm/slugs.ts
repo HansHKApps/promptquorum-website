@@ -92,5 +92,5 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'deepseek-offline-china-self-hosted-2026':      'deepseek-offline-china-self-hosted-2026',
 
   // Category 11 — Image & Video Generation
-  'local-ai-video-generation-vs-cloud-2026':      'local-ai-video-generation-vs-cloud-2026',
+  'local-ai-video-generation-vs-cloud':           'local-ai-video-generation-vs-cloud',
 }
