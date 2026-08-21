@@ -524,7 +524,7 @@ if __name__ == "__main__":
           },
           {
             q: 'Is the local multimodal pipeline GDPR compliant for medical or legal use?',
-            a: 'A local multimodal pipeline that generates zero network traffic during operation is compliant by design for internal use cases — no data processing agreement is needed because no personal data leaves your systems. To verify compliance: run Wireshark during operation and confirm zero outbound packets from the pipeline process. Log storage is also important — if your orchestrator stores conversation history or image files, those stores are subject to retention requirements. Use ephemeral in-memory storage or encrypted local storage with appropriate retention policies.',
+            a: 'A local multimodal pipeline that generates zero network traffic during operation reduces data-transfer risk, but GDPR/HIPAA compliance depends on lawful basis, DPIA, retention policy, and breach procedures—not just data location. To assess compliance: run Wireshark during operation to confirm zero outbound packets from the pipeline process. Log storage is critical — if your orchestrator stores conversation history or image files, those stores are subject to strict retention and access-control requirements. Use ephemeral in-memory storage or encrypted local storage with documented retention policies. For medical/legal use, consult your legal and compliance teams.',
           },
           {
             q: 'Can I add web search to the multimodal pipeline?',

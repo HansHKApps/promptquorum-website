@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Open WebUI vs SillyTavern: Best Chat UI for Local LLMs',
       heroImage: '/images/open-webui-vs-sillytavern-overview-hero-en.webp',
       seoTitle: 'Open WebUI vs SillyTavern 2026: Team Chat vs Roleplay Frontend',
-      intro: '**Open WebUI is the professional choice for chat: clean, fast, multi-user capable, OpenAI-compatible.** As of April 2026, SillyTavern excels at roleplay and character-driven chat but lacks multi-user support. Both use identical backends (Ollama, vLLM, llama.cpp), so choose based on workflow: Open WebUI for work/research, SillyTavern for creative writing and character roleplay.',
+      intro: '**Open WebUI is the professional choice for chat: clean, fast, multi-user capable, OpenAI-compatible.** As of April 2026, SillyTavern excels at roleplay and character-driven chat but lacks multi-user support. Both use the same backends (Ollama, vLLM, llama.cpp), so choose based on workflow: Open WebUI for work/research, SillyTavern for creative writing and character roleplay.',
       metaDescription: 'Open WebUI (professional chat, multi-user, Docker) vs SillyTavern (character roleplay, lorebooks, group chat) for local LLMs. Both use Ollama, vLLM, llama.cpp backends. Feature matrix, April 2026 comparison.',
       twitterDescription: 'Open WebUI: professional, multi-user team chat. SillyTavern: roleplay, lorebooks, group chat. Both work with Ollama & vLLM. April 2026 comparison.',
       publishDate: '2026-04-05',
@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         'decision': {
           title: 'Quick Decision: Which One to Use?',
-          content: '**Choose based on workflow, not speed. Both frontends use identical backends.**',
+          content: '**Choose based on workflow, not speed. Both frontends use the same backends.**',
           image: '/images/open-webui-vs-sillytavern-decision-tree-en.svg',
           imageCaption: 'Decision tree for choosing a local LLM chat UI: team and professional workflows point to Open WebUI (multi-user, Docker deploy, API keys), while creative writing and character roleplay point to SillyTavern (character cards, lorebooks, group chat).',
           rows: [

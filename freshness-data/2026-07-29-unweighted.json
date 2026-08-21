@@ -1,0 +1,371 @@
+{
+  "generatedAt": "2026-07-29T05:05:10.534Z",
+  "scope": "EN articles: local-llms, prompt-engineering, power-local-llm, smart-home, balcony-solar, blog",
+  "unweighted": {
+    "n": 390,
+    "meanDays": 45.5,
+    "medianDays": 38,
+    "buckets": [
+      {
+        "label": "0-5",
+        "count": 4,
+        "pct": 1
+      },
+      {
+        "label": "6-15",
+        "count": 80,
+        "pct": 20.5
+      },
+      {
+        "label": "16-30",
+        "count": 106,
+        "pct": 27.2
+      },
+      {
+        "label": "31-60",
+        "count": 95,
+        "pct": 24.4
+      },
+      {
+        "label": "61-120",
+        "count": 85,
+        "pct": 21.8
+      },
+      {
+        "label": "121+",
+        "count": 20,
+        "pct": 5.1
+      }
+    ]
+  },
+  "articlesAged90to120": [
+    {
+      "cluster": "prompt-engineering",
+      "slug": "fundamentals-of-prompt-optimization",
+      "urlPath": "/prompt-engineering/fundamentals-of-prompt-optimization",
+      "ageDays": 116,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-local-llms-for-creative-writing",
+      "urlPath": "/local-llms/best-local-llms-for-creative-writing",
+      "ageDays": 115,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "small-local-llm-models",
+      "urlPath": "/local-llms/small-local-llm-models",
+      "ageDays": 115,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "blog",
+      "slug": "geopolitics-and-ai",
+      "urlPath": "/blog/geopolitics-and-ai",
+      "ageDays": 111,
+      "dateSource": "publishDate"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "best-prompt-testing-evaluation-tools",
+      "urlPath": "/prompt-engineering/best-prompt-testing-evaluation-tools",
+      "ageDays": 110,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "prompt-engineering-vs-rag-decision",
+      "urlPath": "/prompt-engineering/prompt-engineering-vs-rag-decision",
+      "ageDays": 110,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "prompt-evaluation-metrics",
+      "urlPath": "/prompt-engineering/prompt-evaluation-metrics",
+      "ageDays": 110,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "how-to-test-prompts-across-models",
+      "urlPath": "/prompt-engineering/how-to-test-prompts-across-models",
+      "ageDays": 110,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "text-generation-webui-vs-vllm-vs-llamacpp",
+      "urlPath": "/local-llms/text-generation-webui-vs-vllm-vs-llamacpp",
+      "ageDays": 108,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "tokens-costs-limits-economics-of-ai-prompting",
+      "urlPath": "/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting",
+      "ageDays": 108,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "how-llms-actually-work",
+      "urlPath": "/prompt-engineering/how-llms-actually-work",
+      "ageDays": 108,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "multi-gpu-local-llms",
+      "urlPath": "/local-llms/multi-gpu-local-llms",
+      "ageDays": 104,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-7b-models-consumer-hardware",
+      "urlPath": "/local-llms/best-7b-models-consumer-hardware",
+      "ageDays": 102,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "ollama-command-guide",
+      "urlPath": "/local-llms/ollama-command-guide",
+      "ageDays": 101,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "vram-calculator-local-llm",
+      "urlPath": "/local-llms/vram-calculator-local-llm",
+      "ageDays": 101,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "double-local-llm-speed",
+      "urlPath": "/local-llms/double-local-llm-speed",
+      "ageDays": 101,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "run-70b-models-24gb-vram",
+      "urlPath": "/local-llms/run-70b-models-24gb-vram",
+      "ageDays": 101,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "open-webui-vs-sillytavern",
+      "urlPath": "/local-llms/open-webui-vs-sillytavern",
+      "ageDays": 101,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "llamacpp-vs-ollama-vs-vllm",
+      "urlPath": "/local-llms/llamacpp-vs-ollama-vs-vllm",
+      "ageDays": 101,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llm-setup-for-teams",
+      "urlPath": "/local-llms/local-llm-setup-for-teams",
+      "ageDays": 101,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "secure-offline-local-llm-workflow",
+      "urlPath": "/local-llms/secure-offline-local-llm-workflow",
+      "ageDays": 101,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "mac-vs-windows-vs-linux-local-llm",
+      "urlPath": "/local-llms/mac-vs-windows-vs-linux-local-llm",
+      "ageDays": 101,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "private-local-ai-for-business",
+      "urlPath": "/local-llms/private-local-ai-for-business",
+      "ageDays": 100,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-ai-agents-langgraph-ollama",
+      "urlPath": "/local-llms/local-ai-agents-langgraph-ollama",
+      "ageDays": 96,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "prompt-engineering-for-local-models",
+      "urlPath": "/local-llms/prompt-engineering-for-local-models",
+      "ageDays": 96,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llm-power-consumption",
+      "urlPath": "/local-llms/local-llm-power-consumption",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "trace-framework",
+      "urlPath": "/prompt-engineering/trace-framework",
+      "ageDays": 92,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "write-better-code-with-ai",
+      "urlPath": "/prompt-engineering/write-better-code-with-ai",
+      "ageDays": 92,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "seo-meets-ai",
+      "urlPath": "/prompt-engineering/seo-meets-ai",
+      "ageDays": 92,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "prompting-across-languages",
+      "urlPath": "/prompt-engineering/prompting-across-languages",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "control-the-output",
+      "urlPath": "/prompt-engineering/control-the-output",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "build-quality-checks",
+      "urlPath": "/prompt-engineering/build-quality-checks",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "build-a-prompt-library",
+      "urlPath": "/prompt-engineering/build-a-prompt-library",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "how-to-evaluate-prompt-quality",
+      "urlPath": "/prompt-engineering/how-to-evaluate-prompt-quality",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "how-to-reduce-prompt-brittleness",
+      "urlPath": "/prompt-engineering/how-to-reduce-prompt-brittleness",
+      "ageDays": 91,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "best-tools-structured-output-json",
+      "urlPath": "/prompt-engineering/best-tools-structured-output-json",
+      "ageDays": 90,
+      "dateSource": "dateModified"
+    }
+  ],
+  "warnings": [
+    "blog/prompt-frameworks: publishDate is not ISO 8601 (\"Published March 14, 2026\") — parsed leniently, fix at source",
+    "blog/prompt-frameworks: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)",
+    "blog/local-ai-vs-cloud: publishDate is not ISO 8601 (\"Published March 14, 2026\") — parsed leniently, fix at source",
+    "blog/local-ai-vs-cloud: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)",
+    "blog/quorum: publishDate is not ISO 8601 (\"Published March 14, 2026\") — parsed leniently, fix at source",
+    "blog/quorum: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)",
+    "blog/prompt-optimization: publishDate is not ISO 8601 (\"Published March 14, 2026\") — parsed leniently, fix at source",
+    "blog/prompt-optimization: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)",
+    "blog/enterprise-data-privacy: publishDate is not ISO 8601 (\"Published March 15, 2026\") — parsed leniently, fix at source",
+    "blog/enterprise-data-privacy: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)",
+    "blog/research-prompt-optimization-impact: publishDate is not ISO 8601 (\"Published March 15, 2026\") — parsed leniently, fix at source",
+    "blog/research-prompt-optimization-impact: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)",
+    "blog/ai-consensus-scoring: publishDate is not ISO 8601 (\"Published March 16, 2026\") — parsed leniently, fix at source",
+    "blog/ai-consensus-scoring: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)",
+    "blog/promptquorum-vs-askquorum: publishDate is not ISO 8601 (\"Published March 17, 2026\") — parsed leniently, fix at source",
+    "blog/promptquorum-vs-askquorum: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)",
+    "blog/what-is-ai-consensus-scoring: publishDate is not ISO 8601 (\"Published March 17, 2026\") — parsed leniently, fix at source",
+    "blog/what-is-ai-consensus-scoring: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)",
+    "blog/prompt-optimization-market-overview-2026: publishDate is not ISO 8601 (\"Published March 24, 2026\") — parsed leniently, fix at source",
+    "blog/prompt-optimization-market-overview-2026: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)",
+    "blog/frontier-models-prompt-library: publishDate is not ISO 8601 (\"Published March 24, 2026\") — parsed leniently, fix at source",
+    "blog/frontier-models-prompt-library: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)",
+    "blog/geopolitics-and-ai: publishDate is not ISO 8601 (\"Published April 10, 2026\") — parsed leniently, fix at source",
+    "blog/geopolitics-and-ai: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)",
+    "blog/eu-companies-local-qwen-gdpr-shift: publishDate is not ISO 8601 (\"Published May 16, 2026\") — parsed leniently, fix at source",
+    "blog/eu-companies-local-qwen-gdpr-shift: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)",
+    "blog/promptquorum-desktop-app-beta: publishDate is not ISO 8601 (\"Published July 13, 2026\") — parsed leniently, fix at source",
+    "blog/promptquorum-desktop-app-beta: no last_full_refresh set — using publishDate as a freshness proxy (measures time since publish, not since last edit)"
+  ],
+  "weighted": {
+    "n": 166,
+    "meanDays": 32.7,
+    "medianDays": 28,
+    "buckets": [
+      {
+        "label": "0-5",
+        "impressions": 1274,
+        "pct": 0.4
+      },
+      {
+        "label": "6-15",
+        "impressions": 99626,
+        "pct": 29
+      },
+      {
+        "label": "16-30",
+        "impressions": 72631,
+        "pct": 21.2
+      },
+      {
+        "label": "31-60",
+        "impressions": 145791,
+        "pct": 42.5
+      },
+      {
+        "label": "61-120",
+        "impressions": 22589,
+        "pct": 6.6
+      },
+      {
+        "label": "121+",
+        "impressions": 1429,
+        "pct": 0.4
+      }
+    ],
+    "unmatchedGscRows": 44,
+    "unmatchedArticles": 224
+  },
+  "byproducts": {
+    "enShareOfImpressions": 90,
+    "discardedQueryStringRows": 1,
+    "nonEnRows": 178,
+    "nonEnImpressions": 41865
+  },
+  "priorityRefreshList": []
+}

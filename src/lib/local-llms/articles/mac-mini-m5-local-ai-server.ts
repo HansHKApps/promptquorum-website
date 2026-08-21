@@ -7,9 +7,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-15',
     theme: 'Hardware & Performance',
     heroImage: '/images/mac-mini-m5-local-ai-server-overview-hero-en.webp',
-    title: 'Mac Mini M5 as Local AI Server 2026: Always-On LLM, Whisper, RAG, Voice Assistant',
+    title: 'Mac Mini M5 as Local AI Server: Always-On LLM, Whisper, RAG, Voice Assistant (Anticipated)',
     seoTitle: 'Mac Mini M5 as Local AI Server: Always-On 24/7',
-    intro: 'Complete guide to running Mac Mini M5 Pro 64GB as a silent, always-on local AI server. Ollama LLM, Whisper STT, RAG pipeline, voice assistant stack. Power costs $26-39/year electricity. Step-by-step setup with real commands, use cases, cost analysis, and 5-year TCO breakdown.',
+    intro: 'When Apple releases the Mac Mini M5, it will make an excellent silent, always-on local AI server. This guide covers the anticipated hardware configuration, setup strategy, and cost-benefit analysis for running Ollama LLM, Whisper STT, RAG pipeline, and voice assistant stack. Estimated power costs: $26-39/year electricity. Note: M5 Mac Mini has not yet been announced; specifications are based on current M5 Pro/Max performance data.',
     metaDescription: 'Run always-on local AI server on Mac Mini M5. 25–55W power, $26–39/year electricity. Ollama LLM, Whisper STT, RAG, voice assistant. Silent, never reboots.',
     twitterDescription: 'Mac mini M5 Pro 64GB: perfect silent local AI server. Always-on LLM + Whisper + RAG for $35/year electricity. Full setup guide.',
     publishDate: '2026-05-15',
@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'Mac mini local AI server',
     targetKeywords: ['Mac mini AI server', 'always-on LLM', 'home AI infrastructure', 'Ollama always-on', 'Mac mini M5 server'],
-    leadAnswerBlock: '**Mac mini M5 Pro 64GB at $1,199 is the best-value always-on AI server in 2026. Silent (near-fanless), 25-55W power draw, $26-39/year electricity. Runs Ollama 34B models, Whisper STT, RAG pipeline, and voice assistant simultaneously. Pays back vs 4× ChatGPT Plus subscriptions in 15 months.**',
+    leadAnswerBlock: '**When released, Mac mini M5 Pro 64GB (estimated $1,199) would be an excellent always-on AI server option: silent (near-fanless), 25-55W power draw, ~$26-39/year electricity. Expected to run Ollama 34B models, Whisper STT, RAG pipeline, and voice assistant simultaneously. Note: M5 Mac Mini has not yet been announced by Apple.**',
     nextStep: {
       text: 'Ready to set up Ollama on your Mac Mini M5? Here\'s the full installation guide.',
       label: 'Ollama on Mac — Setup Guide 2026 →',
@@ -30,15 +30,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     quickAnswerTop: {
       en: {
-        question: 'Why use Mac mini M5 as a local AI server?',
-        answer: 'Silent (fanless or near-silent), 25-55W power (vs 300W+ GPU desktop), $26-39/year electricity (vs $300-400 GPU), $1,199 one-time cost. Runs Ollama 34B LLM + Whisper + RAG simultaneously on 64GB unified memory.',
+        question: 'Why would Mac mini M5 be a good local AI server (when released)?',
+        answer: 'Expected to be silent (fanless or near-silent), 25-55W power (vs 300W+ GPU desktop), estimated $26-39/year electricity. Would run Ollama 34B LLM + Whisper + RAG simultaneously on unified memory. Note: M5 Mac Mini has not yet been announced.',
         bullets: [
-          'M5 Pro 64GB: $1,199 — best value sweet spot',
-          'Power: 25-55W (vs 300W+ GPU desktop)',
-          'Annual electricity: $26-39 (vs $263-394 GPU)',
-          'Silent: near-fanless under typical LLM loads',
+          'M5 Pro 64GB: estimated $1,199 (not yet released)',
+          'Power: 25-55W expected (vs 300W+ GPU desktop)',
+          'Annual electricity: estimated $26-39 (vs $263-394 GPU)',
+          'Silent: expected near-fanless under typical LLM loads',
           'REST API accessible from all LAN devices',
-          'Pays back vs 4× ChatGPT Plus in ~15 months',
+          'Cost-benefit analysis: see TCO section below',
         ],
         updatedDate: '2026-05-15',
       },
@@ -62,10 +62,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       why: {
         id: 'why',
-        title: 'Why Mac Mini M5 is the Ideal AI Server',
+        title: 'Why Mac Mini M5 Would Be an Excellent AI Server (When Released)',
         content: [
-          'The Mac Mini M5 Pro 64GB at $1,199 is the best-value hardware in 2026 for running a silent, always-on local AI server. It combines near-silence (fanless or very low-RPM fan), low power draw (25-55W vs 300W+ for GPU desktops), and enough unified memory to run 34B parameter models or multiple smaller models simultaneously.',
-          'Annual electricity cost runs $26-39 vs $263-394 for desktop GPU equivalents — less than two months of a single ChatGPT Plus subscription, every year, forever.',
+          'When Apple releases the Mac Mini M5 Pro, a 64GB configuration (estimated around $1,199) would be excellent hardware for running a silent, always-on local AI server. It would combine near-silence (fanless or very low-RPM fan), low power draw (25-55W vs 300W+ for GPU desktops), and enough unified memory to run 34B parameter models or multiple smaller models simultaneously.',
+          'Estimated annual electricity cost: $26-39 vs $263-394 for desktop GPU equivalents — less than two months of a single ChatGPT Plus subscription, every year. Note: M5 Mac Mini has not yet been announced by Apple; specifications are based on expected M5 performance characteristics.',
         ],
         tableFormat: true,
         columns: ['Property', 'Mac Mini M5 Pro', 'Desktop + RTX 4070', 'Raspberry Pi 5'],

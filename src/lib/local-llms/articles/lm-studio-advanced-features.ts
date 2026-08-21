@@ -224,7 +224,7 @@ schema: {
           faqs: [
             {
               q: 'What is the difference between LM Studio API and Ollama API?',
-              a: 'Both expose OpenAI-compatible endpoints. LM Studio API is on localhost:1234, Ollama on localhost:11434. Both work identically. Choose whichever tool you prefer for chatting.',
+              a: 'Both expose OpenAI-compatible endpoints. LM Studio API is on localhost:1234, Ollama on localhost:11434. Both work similarly. Choose whichever tool you prefer for chatting.',
             },
             {
               q: 'Can I use the LM Studio API in production?',

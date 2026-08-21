@@ -391,7 +391,9 @@ Many pages include embedded slide decks and downloadable PDF reference cards. Th
 This file does NOT replace GEO writing guidelines. All updates must follow existing H2/H3 rules, lead answer block format, meta description formulas, Sources requirements, Related Reading requirements, and FAQ format. This file adds the update-specific process on top.
 
 ### geo-translation (per-language localization) and geo-meta-optimizer (meta tags)
-Step 5 translations must follow the **geo-translation** guide (the authoritative localization spec — 9 active languages including pt/ar/ko, Brazilian Portuguese for pt, RTL for ar). Title/meta-description optimization follows **geo-meta-optimizer** (per-language length targets, hard length gate). This protocol governs the *content refresh*; those two govern *how translation and meta are produced*. Keep all three in sync on the language set.
+Step 5 translations must follow the **geo-translation** guide (the authoritative localization spec — 9 active languages per `CLAUDE.md`'s `PATH_PREFIX_LANGS`: DE/ES/FR/JA/ZH/PT/AR/KO plus EN, Brazilian Portuguese for pt, RTL for ar). Title/meta-description optimization follows **geo-meta-optimizer** (per-language length targets, hard length gate). This protocol governs the *content refresh*; those two govern *how translation and meta are produced*. Keep all three in sync on the language set.
+
+**2026-08-21 correction:** this line previously read "6 active languages, pt/ar reserved" and did not mention ko at all. That was stale — confirmed against the live site (working 9-language switcher on published local-llms pages, e.g. `de/local-llms/best-gpu-for-llm-inference-under-500-2026`), `CLAUDE.md` (states 9 languages site-wide), and direct inspection of article source files (pt/ar/ko blocks contain full authored content, not stubs, across multiple `local-llms` articles). Do not reintroduce a 6-language assumption here without re-verifying against the live site first.
 
 ### CONTENT_FRESHNESS_CLASSIFICATION.md
 This file extends the freshness system by adding the `monthly` tier and defining the operational process for each refresh cycle.
