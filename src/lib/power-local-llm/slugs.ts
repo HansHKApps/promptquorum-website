@@ -93,4 +93,5 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Category 11 — Image & Video Generation
   'local-ai-video-generation-vs-cloud':           'local-ai-video-generation-vs-cloud',
+  'local-ai-image-generation-vs-cloud':           'local-ai-image-generation-vs-cloud',
 }

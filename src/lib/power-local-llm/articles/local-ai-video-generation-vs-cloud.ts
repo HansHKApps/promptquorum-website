@@ -334,6 +334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Local AI Image Generation vs. Cloud](/power-local-llm/local-ai-image-generation-vs-cloud) — the companion piece, same structure, for images instead of video.',
           '[VRAM Calculator for Local Models](/local-llms/vram-calculator-local-llm) — exact VRAM requirements per model and quantization.',
           '[How Much VRAM Do You Need?](/local-llms/how-much-vram-local-llm) — charts across model sizes from 7B to 70B.',
           '[Best GPUs for Local AI in 2026](/local-llms/best-gpus-for-local-llms) — hardware picks by budget tier.',
