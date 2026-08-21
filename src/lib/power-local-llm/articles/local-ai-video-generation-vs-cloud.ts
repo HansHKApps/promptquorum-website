@@ -8,11 +8,12 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
+    affiliateDisclosure: true,
     publishDate: '2026-08-21',
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    title: 'Cloud vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17',
+    title: 'InVideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17',
     seoTitle: 'Cloud vs Local AI Video 2026: InVideo vs Wan 2.2 & LTX-2',
     intro:
       'There are two doors into AI video in 2026. Door one is local: free, open video models running on your own GPU — unlimited generations, fully private, no subscription, but you build the entire workflow yourself. Door two is cloud: InVideo, where one prompt in gets you a finished narrated video out — script, stock footage, voiceover, music, and subtitles included, straight from your browser. Neither door is "better." This guide gives you the license fine print most comparisons skip, the real hardware requirements, and a decision tool that maps your situation to a recommendation.',
@@ -192,8 +193,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plan': 'Generative', 'Price': '$170/mo ($2,000/yr)', 'Credits/mo': '800+', 'Best for': 'Short-film / production volume' },
           { 'Plan': 'Elite', 'Price': '$900/mo ($10,800/yr)', 'Credits/mo': '4,250+', 'Best for': 'Episodic and commercial scale' },
         ],
-        note:
-          '[SPONSORED DISCLOSURE PLACEHOLDER — insert final InVideo sponsorship disclosure wording here before publishing; this note must be replaced, not removed.]',
       },
       decisionGuide: {
         id: 'decision-guide',
