@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Legal (attorney-client privilege):** Privileged documents cannot leave attorney\'s control. Air-gapped machine, no network, hardcopy output only.',
             '**Setup:** Ollama or vLLM on isolated Linux server, encrypted filesystem (LUKS), audit logging (ELK), no internet. Cost: $3K-5K hardware + $2K/year updates.',
             '**EU/GDPR:** Article 32 (Security), Article 35 (DPIA required), AI Act 2024/1689 (risk assessment). Data residency = local storage only.',
-            '**vs Cloud APIs:** Cloud = vendor controls data + breach liability. Local = you control + zero breach risk.',
+            '**vs Cloud APIs:** Cloud = vendor controls data + breach liability. Local = you control + you control the security perimeter (but security requires proper access controls, audit logging, and encryption key management).',
           ],
         },
         'why': {
