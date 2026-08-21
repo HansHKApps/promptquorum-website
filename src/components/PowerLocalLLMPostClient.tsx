@@ -186,6 +186,8 @@ const THEME_COLORS: Record<string, { dot: string; badge: string }> = {
   'Creative & Roleplay':            { dot: 'bg-rose-400',     badge: 'bg-rose-50 text-rose-700 border border-rose-200' },
   'Mobile & Edge LLMs':             { dot: 'bg-cyan-400',     badge: 'bg-cyan-50 text-cyan-700 border border-cyan-200' },
   'Productivity & Knowledge Tools': { dot: 'bg-amber-400',    badge: 'bg-amber-50 text-amber-700 border border-amber-200' },
+  'Voice, Speech & Multimodal':     { dot: 'bg-violet-400',   badge: 'bg-violet-50 text-violet-700 border border-violet-200' },
+  'Image & Video Generation':       { dot: 'bg-pink-400',     badge: 'bg-pink-50 text-pink-700 border border-pink-200' },
   // Legacy themes retained for back-compat with any article still using them
   'Best Models':                    { dot: 'bg-emerald-400',  badge: 'bg-emerald-50 text-emerald-700 border border-emerald-200' },
   'Hardware & Performance':         { dot: 'bg-orange-400',   badge: 'bg-orange-50 text-orange-700 border border-orange-200' },

@@ -99,6 +99,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // DeepSeek Series 2026-06-19
   'deepseek-r1-vs-distills-explained-2026',
   'deepseek-offline-china-self-hosted-2026',
+
+  // Category 11 — Image & Video Generation
+  'local-ai-video-generation-vs-cloud-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

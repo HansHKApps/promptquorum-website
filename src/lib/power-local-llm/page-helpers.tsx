@@ -791,6 +791,15 @@ const HUB_THEMES: Array<{
       'local-multimodal-pipeline-voice-vision-text',
     ],
   },
+  {
+    id: 'image-video-generation',
+    badge: 'Image & Video Generation',
+    question: 'Image & Video Generation: Which Local Models Create Visuals Offline?',
+    description: 'Stable Diffusion, Flux, and ComfyUI running entirely on your own GPU — no cloud queue, no per-image cost, no content filters. Local image and video generation compared for speed, VRAM requirements, and output quality, including which open video models are actually usable in 2026.',
+    colorBadge: 'bg-pink-50 text-pink-700 border-pink-200',
+    colorDot: 'bg-pink-400',
+    slugs: ['local-ai-video-generation-vs-cloud-2026'],
+  },
 ]
 
 // ─── LOCALIZED HUB CONTENT ────────────────────────────────────────────────
@@ -844,6 +853,11 @@ const HUB_THEME_TEXT_DE: Array<{ badge: string; question: string; description: s
     question: 'Sprache & Multimodal: Wie bauen Sie eine vollständig offline betriebene Sprach- und Vision-Pipeline?',
     description: 'Lokale Spracherkennung mit whisper.cpp und faster-whisper. Lokale Sprachsynthese mit Piper, Coqui und XTTS v2. Vision-Modelle (LLaVA, Llama 3.2 Vision) via Ollama. Vollständige Offline-Sprachassistenten und multimodale Pipelines — ohne Cloud-Mikrofon.',
   },
+  {
+    badge: 'Bild- & Videogenerierung',
+    question: 'Bild- & Videogenerierung: Welche lokalen Modelle erstellen Visuals offline?',
+    description: 'Stable Diffusion, Flux und ComfyUI, die vollständig auf der eigenen GPU laufen — keine Cloud-Warteschlange, keine Kosten pro Bild, keine Inhaltsfilter. Lokale Bild- und Videogenerierung im Vergleich zu Geschwindigkeit, VRAM-Anforderungen und Ausgabequalität, einschließlich welcher offenen Videomodelle 2026 tatsächlich nutzbar sind.',
+  },
 ]
 
 const HUB_THEME_TEXT_FR: Array<{ badge: string; question: string; description: string }> = [
@@ -891,6 +905,11 @@ const HUB_THEME_TEXT_FR: Array<{ badge: string; question: string; description: s
     badge: 'Voix, Parole & Multimodal',
     question: 'Voix & Multimodal : Comment Construire un Pipeline Complet de Parole et de Vision Hors Ligne ?',
     description: 'Reconnaissance vocale locale avec whisper.cpp et faster-whisper. Synthèse vocale locale avec Piper, Coqui et XTTS v2. Modèles de vision (LLaVA, Llama 3.2 Vision) via Ollama. Assistants vocaux hors ligne complets et pipelines multimodaux — pas de microphone cloud.',
+  },
+  {
+    badge: 'Génération d\'Images & de Vidéos',
+    question: 'Génération d\'Images & de Vidéos : Quels Modèles Locaux Créent des Visuels Hors Ligne ?',
+    description: 'Stable Diffusion, Flux et ComfyUI fonctionnant entièrement sur votre propre GPU — pas de file d\'attente cloud, pas de coût par image, pas de filtres de contenu. Génération locale d\'images et de vidéos comparée en termes de vitesse, d\'exigences VRAM et de qualité de sortie, y compris quels modèles vidéo ouverts sont réellement utilisables en 2026.',
   },
 ]
 
@@ -941,6 +960,11 @@ const HUB_THEME_TEXT_JA: Array<{ badge: string; question: string; description: s
     question: '音声 & マルチモーダル：完全にオフラインの音声とビジョンパイプラインをどのように構築しますか？',
     description: 'whisper.cpp と faster-whisper によるローカル音声認識。Piper、Coqui、XTTS v2 によるローカル音声合成。LLaVA、Llama 3.2 Vision via Ollama などのビジョンモデル。完全なオフライン音声アシスタント構築とマルチモーダルパイプライン — クラウドマイクは不要。',
   },
+  {
+    badge: '画像・動画生成',
+    question: '画像・動画生成：どのローカルモデルがオフラインでビジュアルを作成しますか？',
+    description: 'Stable Diffusion、Flux、ComfyUIを自分のGPUだけで完全に実行 — クラウドの待ち行列なし、画像ごとのコストなし、コンテンツフィルターなし。速度、VRAM要件、出力品質についてローカル画像・動画生成を比較し、2026年に実際に使えるオープン動画モデルも紹介。',
+  },
 ]
 
 // ZH theme text — same index order as HUB_THEMES
@@ -989,6 +1013,11 @@ const HUB_THEME_TEXT_ZH: Array<{ badge: string; question: string; description: s
     badge: '语音、语言 & 多模态',
     question: '语音 & 多模态：您如何构建完全离线的语音和视觉管道？',
     description: '使用whisper.cpp和faster-whisper的本地STT。使用Piper、Coqui和XTTS v2的本地TTS。LLaVA、Llama 3.2 Vision via Ollama等视觉模型。完整离线语音助手构建和多模态管道 — 无云麦克风。',
+  },
+  {
+    badge: '图像与视频生成',
+    question: '图像与视频生成：哪些本地模型可以离线创建视觉内容？',
+    description: 'Stable Diffusion、Flux 和 ComfyUI 完全在您自己的 GPU 上运行 — 无需云端排队，无按图收费，无内容过滤。比较本地图像与视频生成在速度、显存需求和输出质量方面的差异，包括2026年哪些开源视频模型真正可用。',
   },
 ]
 
@@ -1039,6 +1068,11 @@ const HUB_THEME_TEXT_ES: Array<{ badge: string; question: string; description: s
     question: 'Voz y Multimodal: ¿Cómo Construyes un Pipeline Completo de Voz y Visión Offline?',
     description: 'STT local con whisper.cpp y faster-whisper. Síntesis de voz local con Piper, Coqui y XTTS v2. Modelos de visión (LLaVA, Llama 3.2 Vision) vía Ollama. Asistentes de voz completamente offline y pipelines multimodales — sin micrófono en la nube.',
   },
+  {
+    badge: 'Generación de Imágenes y Video',
+    question: 'Generación de Imágenes y Video: ¿Qué Modelos Locales Crean Contenido Visual Offline?',
+    description: 'Stable Diffusion, Flux y ComfyUI ejecutándose completamente en tu propia GPU — sin cola en la nube, sin costo por imagen, sin filtros de contenido. Generación local de imágenes y video comparada en velocidad, requisitos de VRAM y calidad de salida, incluyendo qué modelos de video abiertos son realmente utilizables en 2026.',
+  },
 ]
 
 // PT theme text — same index order as HUB_THEMES
@@ -1087,6 +1121,11 @@ const HUB_THEME_TEXT_PT: Array<{ badge: string; question: string; description: s
     badge: 'Voz, Fala e Multimodal',
     question: 'Voz e Multimodal: Como Você Constrói um Pipeline Totalmente Offline de Voz e Visão?',
     description: 'STT local com whisper.cpp e faster-whisper. TTS local com Piper, Coqui e XTTS v2. Modelos de visão (LLaVA, Llama 3.2 Vision) via Ollama. Assistentes de voz totalmente offline e pipelines multimodais — sem microfone na nuvem.',
+  },
+  {
+    badge: 'Geração de Imagens e Vídeos',
+    question: 'Geração de Imagens e Vídeos: Quais Modelos Locais Criam Conteúdo Visual Offline?',
+    description: 'Stable Diffusion, Flux e ComfyUI rodando totalmente na sua própria GPU — sem fila na nuvem, sem custo por imagem, sem filtros de conteúdo. Geração local de imagens e vídeos comparada em velocidade, requisitos de VRAM e qualidade de saída, incluindo quais modelos de vídeo abertos são realmente utilizáveis em 2026.',
   },
 ]
 
@@ -1137,6 +1176,11 @@ const HUB_THEME_TEXT_KO: Array<{ badge: string; question: string; description: s
     question: '음성 및 멀티모달: 완전한 오프라인 음성·비전 파이프라인을 어떻게 구축할까요?',
     description: 'whisper.cpp와 faster-whisper로 로컬 STT. Piper, Coqui, XTTS v2로 로컬 TTS. Ollama를 통한 비전 모델(LLaVA, Llama 3.2 Vision). 완전한 오프라인 음성 어시스턴트와 멀티모달 파이프라인 — 클라우드 마이크 불필요.',
   },
+  {
+    badge: '이미지 및 영상 생성',
+    question: '이미지 및 영상 생성: 어떤 로컬 모델이 오프라인으로 비주얼을 만들까요?',
+    description: 'Stable Diffusion, Flux, ComfyUI를 자신의 GPU에서만 완전히 실행 — 클라우드 대기열 없음, 이미지당 비용 없음, 콘텐츠 필터 없음. 속도·VRAM 요구 사항·출력 품질 기준으로 로컬 이미지·영상 생성을 비교하고, 2026년 실제로 사용 가능한 오픈 영상 모델도 소개.',
+  },
 ]
 
 // AR theme text — same index order as HUB_THEMES
@@ -1185,6 +1229,11 @@ const HUB_THEME_TEXT_AR: Array<{ badge: string; question: string; description: s
     badge: 'الصوت والكلام والوسائط المتعددة',
     question: 'الصوت والوسائط المتعددة: كيف تبني خط أنابيب صوت ورؤية يعمل بالكامل دون اتصال؟',
     description: 'تحويل الكلام إلى نص محلياً عبر whisper.cpp وfaster-whisper. تحويل النص إلى كلام محلياً عبر Piper وCoqui وXTTS v2. نماذج الرؤية (LLaVA وLlama 3.2 Vision) عبر Ollama. مساعدون صوتيون كاملون دون اتصال وخطوط أنابيب متعددة الوسائط — بدون ميكروفون سحابي.',
+  },
+  {
+    badge: 'توليد الصور والفيديو',
+    question: 'توليد الصور والفيديو: أيّ النماذج المحلية تُنشئ محتوى بصرياً دون اتصال؟',
+    description: 'تشغيل Stable Diffusion وFlux وComfyUI بالكامل على وحدة معالجة الرسومات الخاصة بك — بدون قائمة انتظار سحابية، بدون تكلفة لكل صورة، بدون فلاتر محتوى. مقارنة توليد الصور والفيديو المحلي من حيث السرعة ومتطلبات VRAM وجودة الإخراج، بما في ذلك أي نماذج فيديو مفتوحة قابلة للاستخدام فعلياً في 2026.',
   },
 ]
 

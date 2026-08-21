@@ -46,6 +46,7 @@ const CLUSTERS = [
       'Mobile & Edge LLMs',
       'Productivity & Knowledge Tools',
       'Voice, Speech & Multimodal',
+      'Image & Video Generation',
     ]),
   },
   {
