@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Best Models',
       title: 'Long Context Local LLMs 2026: Best 128K Models Compared',
       seoTitle: 'Long Context Local LLMs (2026): 128K Models You Can Run Now',
-      intro: 'In June 2026, long context is mainstream. Qwen3, Gemma 3, Llama 3.1, and Mistral Small 3.1 all support 128K context natively. Qwen3 14B at Q4_K_M handles 128K tokens in roughly 12 GB RAM at 15-25 tok/s on Apple M5 Pro -- the clear winner for most setups. On 8 GB machines, Qwen3 4B covers the same 128K window at lower quality. Ollama's Modelfile spec runtime default (VRAM-scaled), but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above); this guide covers which models fit your VRAM and how fast they run at full context.',
+      intro: 'In June 2026, long context is mainstream. Qwen3, Gemma 3, Llama 3.1, and Mistral Small 3.1 all support 128K context natively. Qwen3 14B at Q4_K_M handles 128K tokens in roughly 12 GB RAM at 15-25 tok/s on Apple M5 Pro -- the clear winner for most setups. On 8 GB machines, Qwen3 4B covers the same 128K window at lower quality. Ollama\'s Modelfile spec defaults num_ctx to 2048, but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above); this guide covers which models fit your VRAM and how fast they run at full context.',
       metaDescription: 'Qwen3, Gemma 3, and Llama 3.1 all support 128K context locally. Which models fit your VRAM and how fast they run at full context.',
       heroImage: '/images/long-context-local-llms-models-comparison-hero-en.png',
       publishDate: '2026-04-04',
@@ -127,7 +127,7 @@ schema: {
             'name': 'Which Ollama models have the largest context window?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'As of June 2026: Qwen3 (all sizes 4B–30B), Gemma 3 (4B/12B/27B), Llama 3.1 (8B/70B), and Mistral Small 3.1 (24B) all support 128K tokens natively. Qwen3 14B Q4_K_M is the recommended choice for 16 GB machines. Ollama's Modelfile spec runtime default (VRAM-scaled), but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) -- set num_ctx explicitly in a Modelfile to access long contexts.',
+              'text': 'As of June 2026: Qwen3 (all sizes 4B–30B), Gemma 3 (4B/12B/27B), Llama 3.1 (8B/70B), and Mistral Small 3.1 (24B) all support 128K tokens natively. Qwen3 14B Q4_K_M is the recommended choice for 16 GB machines. Ollama\'s Modelfile spec defaults num_ctx to 2048, but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) -- set num_ctx explicitly in a Modelfile to access long contexts.',
             },
           },
           {
@@ -196,7 +196,7 @@ schema: {
       quickAnswerTop: {
         en: {
           question: 'Which local LLM handles the longest context in 2026?',
-          answer: 'All major 2026 local models — Qwen3, Gemma 3, Llama 3.1, Mistral Small 3.1 — support 128K tokens natively. The best pick for most users is Qwen3 14B Q4_K_M: handles 128K in ~12 GB RAM at 15–25 tok/s on Apple M5 Pro. On 8 GB, use Qwen3 4B (same 128K context, lower quality). Important: Ollama's Modelfile spec runtime default (VRAM-scaled), but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) — set num_ctx explicitly in a Modelfile.',
+          answer: 'All major 2026 local models — Qwen3, Gemma 3, Llama 3.1, Mistral Small 3.1 — support 128K tokens natively. The best pick for most users is Qwen3 14B Q4_K_M: handles 128K in ~12 GB RAM at 15–25 tok/s on Apple M5 Pro. On 8 GB, use Qwen3 4B (same 128K context, lower quality). Important: Ollama\'s Modelfile spec defaults num_ctx to 2048, but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) — set num_ctx explicitly in a Modelfile.',
           bullets: [
             '→ Qwen3 14B Q4_K_M: 128K context, ~12 GB RAM, 15–25 tok/s on M5 Pro (best all-round)',
             '→ Qwen3 4B: 128K context, ~4 GB RAM (best for 8 GB machines)',
@@ -308,7 +308,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'All major 2026 local LLMs support 128K tokens natively; Qwen3 14B Q4_K_M handles 128K in ~12 GB RAM at 15–25 tok/s — but Ollama's Modelfile spec runtime default (VRAM-scaled), but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above), so always set num_ctx explicitly in a Modelfile.' },
+            { type: 'one-sentence', text: 'All major 2026 local LLMs support 128K tokens natively; Qwen3 14B Q4_K_M handles 128K in ~12 GB RAM at 15–25 tok/s — but Ollama\'s Modelfile spec defaults num_ctx to 2048, and the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above), so always set num_ctx explicitly in a Modelfile.' },
             { type: 'plain-terms', text: 'Context length is how much text an AI can "see" at once. 128K tokens ≈ 96,000 words — enough for a full novel. The catch: models lose accuracy on information buried in the middle of very long inputs (called "Lost in the Middle"). Put your most important facts at the start of the prompt.' },
           ],
           items: [
@@ -317,7 +317,7 @@ schema: {
             'RAM scales with context length AND model size. A 7B Q4_K_M model needs ~6 GB at 4K context and ~14 GB at 128K. Qwen3 14B Q4_K_M uses ~12 GB at 128K on Apple Silicon (unified memory helps).',
             'Lost in the Middle still applies: LLMs miss details from middle sections of the context. Mitigation: keep critical info at prompt start, use RAG for search, or process in overlapping chunks.',
             'Long context excels for holistic analysis of complete documents (codebases, contracts, books). RAG excels for search-heavy tasks across many documents. Choose by task type, not context size alone.',
-            'Ollama's Modelfile spec runtime default (VRAM-scaled), but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) -- not 128K. Set num_ctx explicitly in a Modelfile to access full context. Apple M5 (16-32 GB, 200 GB/s) and M5 Pro (36-64 GB, 307 GB/s) handle 128K inference well.',
+            'Ollama\'s Modelfile spec defaults num_ctx to 2048, but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) -- not 128K. Set num_ctx explicitly in a Modelfile to access full context. Apple M5 (16-32 GB, 200 GB/s) and M5 Pro (36-64 GB, 307 GB/s) handle 128K inference well.',
           ],
         },
         whatIsContext: {
@@ -379,7 +379,7 @@ schema: {
         contextSettings: {
           id: 'set-context-ollama',
           title: 'How Do You Set Context Length in Ollama?',
-          content: ['Ollama's Modelfile spec runtime default (VRAM-scaled), but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) of context unless configured otherwise. To use a model\'s full context window:', 'Context window size determines how much text a model can process, but prompt structure determines how effectively it uses that context. For a deep dive into why models lose track of earlier input and strategies to mitigate it, see [context windows explained: why AI forgets](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets).'],
+          content: ['Ollama\'s Modelfile spec defaults num_ctx to 2048, but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) of context unless configured otherwise. To use a model\'s full context window:', 'Context window size determines how much text a model can process, but prompt structure determines how effectively it uses that context. For a deep dive into why models lose track of earlier input and strategies to mitigate it, see [context windows explained: why AI forgets](https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets).'],
           codeBlock: '# Set context length at runtime\nollama run llama3.2 --ctx 32768\n\n# Or create a custom model with a Modelfile\ncat << EOF > Modelfile\nFROM llama3.1:8b\nPARAMETER num_ctx 32768\nEOF\nollama create llama3.1-32k -f Modelfile\nollama run llama3.1-32k',
           codeLanguage: 'bash',
           image: '/images/ollama-context-modelfile-en.svg',
@@ -401,7 +401,7 @@ schema: {
           title: 'Common Mistakes with Long Context Local LLMs',
           items: [
             '**Assuming 128K context works as well as 4K:** The "lost in the middle" effect means information presented 30K-80K tokens ago is retrieved less reliably than information at the start or end. For critical document analysis, chunk long documents into 16K-32K sections and process each separately rather than feeding an entire 100K document at once.',
-            '**Not increasing Ollama\'s runtime default (VRAM-scaled), but the current runtime picks a VRAM-tiered runtime default (VRAM-scaled) tokens will truncate earlier messages. Always set num_ctx explicitly: add PARAMETER num_ctx 32768 to your Modelfile or use --ctx at runtime.',
+            '**Relying on the VRAM-tiered runtime default instead of setting num_ctx explicitly:** Ollama\'s Modelfile spec defaults num_ctx to 2048, and while the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above), multi-turn conversations that exceed that limit will truncate earlier messages. Always set num_ctx explicitly: add PARAMETER num_ctx 32768 to your Modelfile or use --ctx at runtime.',
             '**Running long context on insufficient RAM:** A 7B model with 128K context on 8 GB RAM total causes severe swap usage. Model weights (~4.5 GB) plus 128K KV cache (~8+ GB) exceed 8 GB. Reduce context to 32K (fits ~9 GB) or use 16+ GB RAM for 128K context inference.',
             '**Forgetting that generation speed is not the only latency factor at long context:** At 32K context, the time-to-first-token (TTFT) can be 5-15 seconds on consumer hardware -- the model must process all 32K input tokens before generating a single output token. This prefill phase scales linearly with context length. For interactive use, limit context to 8K-16K. Reserve 32K+ contexts for batch processing where TTFT is acceptable.',
             '**Using RAG when long context is the correct tool (and vice versa):** RAG is better for document search across many documents. Long context is better when you need the model to reason over a complete, coherent document -- a contract, a codebase, a book chapter -- where missing any part would break the analysis. Splitting a 10-page legal contract into RAG chunks can cause cross-reference errors that long context avoids. Choose by task type, not by default preference.',
