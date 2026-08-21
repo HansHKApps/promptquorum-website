@@ -77,7 +77,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'The Hardware Gate', anchor: '#hardware-gate' },
       { label: 'The DIY Reality: What "Free" Asks of You', anchor: '#diy-reality' },
       { label: 'What AI Images Are Actually Good For', anchor: '#use-cases' },
-      { label: 'The Cloud Door: Two Services Worth Paying For', anchor: '#cloud-door' },
+      { label: 'The Cloud Door: Two Services Worth Considering', anchor: '#cloud-door' },
+      { label: 'Adobe Firefly', anchor: '#adobe-firefly' },
+      { label: 'getimg.ai', anchor: '#getimg-ai' },
       { label: 'Cloud or Local: Which Door Is Yours?', anchor: '#decision-guide' },
       { label: 'See Them in Action', anchor: '#video-roundup' },
       { label: 'FAQ', anchor: '#faq' },
@@ -196,11 +198,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       cloudDoor: {
         id: 'cloud-door',
-        title: 'The Cloud Door: Two Services Worth Paying For',
+        title: 'The Cloud Door: Two Services Worth Considering',
         content:
-          'A transparency note first, because it matters for trust: the two most-used cloud image tools — Midjourney and ChatGPT — run no public affiliate or partner program that PromptQuorum is enrolled in, so this article cannot earn anything from recommending them regardless of merit. Adobe Firefly and getimg.ai do offer partner programs, and we picked them because they genuinely cover the two most common cloud needs: maximum commercial safety, and the easiest bridge from local to cloud. As of this writing, PromptQuorum is not enrolled in either program — the links below are plain, undisclosed-commission links, not affiliate links (see the disclosure note at the top of this page).\n\n**Adobe Firefly — the commercially safe pick.** Firefly is trained on Adobe Stock and openly licensed content — meaning Adobe designed it so business users don\'t inherit copyright risk — and it integrates directly with Photoshop and the rest of Creative Cloud. If client work or brand safety is your concern, this is the cloud door. A free trial exists to test it before paying; paid plans start at $9.99/month for 2,000 generative credits (Standard tier). Best for: professionals, agencies, anyone whose clients ask "is this legally safe?"\n\n**getimg.ai — the cloud version of the local models.** Here\'s the twist most comparisons miss: getimg.ai runs the same open models you\'d install locally — FLUX and friends, 20+ models in one interface — on their GPUs instead of yours. No setup, no VRAM math, commercial rights included on every plan. If the local door appeals to you but your hardware says no, this is the bridge. Pricing is paid-only since early 2026 (the free tier was retired) — Entry from $8/month billed annually ($10/month billed monthly) for 3,000 credits; higher tiers scale up from there. Best for: local-curious users without the GPU, and anyone who wants open-model variety without the ComfyUI learning curve.\n\n(Honorable mention: Ideogram — a cloud leader for text-in-image, with a limited free tier that publishes images to a public gallery, and paid plans starting around $20/month.)',
+          'We picked Adobe Firefly and getimg.ai because they genuinely cover the two most common cloud needs: maximum commercial safety, and the easiest bridge from local to cloud. Midjourney and ChatGPT are also widely used for image generation, but neither fits either of those two specific needs as directly — Firefly and getimg.ai are the more useful picks for this comparison, not a default.',
+      },
+      adobeFirefly: {
+        id: 'adobe-firefly',
+        title: 'Adobe Firefly — the commercially safe pick',
+        content:
+          'Firefly is trained on Adobe Stock and openly licensed content — meaning Adobe designed it so business users don\'t inherit copyright risk — and it integrates directly with Photoshop and the rest of Creative Cloud. If client work or brand safety is your concern, this is the cloud door. A free trial exists to test it before paying; paid plans start at $9.99/month for 2,000 generative credits (Standard tier). Best for: professionals, agencies, anyone whose clients ask "is this legally safe?"',
+        blockquote:
+          '**Want to try the commercially-safe cloud option?** If you don\'t have a GPU or don\'t want to manage local models, try Adobe Firefly before committing to a local setup. [Try Adobe Firefly →](https://firefly.adobe.com/)',
         affiliateLinks: [
           { url: 'https://firefly.adobe.com/', productName: 'Adobe Firefly', productCategory: 'cloud-image-service', label: 'Adobe Firefly' },
+        ],
+      },
+      getimgAi: {
+        id: 'getimg-ai',
+        title: 'getimg.ai — the cloud version of the local models',
+        content:
+          'Here\'s the twist most comparisons miss: getimg.ai runs the same open models you\'d install locally — FLUX and friends, 20+ models in one interface — on their GPUs instead of yours. No setup, no VRAM math, commercial rights included on every plan. If the local door appeals to you but your hardware says no, this is the bridge. Pricing is paid-only since early 2026 (the free tier was retired) — Entry from $8/month billed annually ($10/month billed monthly) for 3,000 credits; higher tiers scale up from there. Best for: local-curious users without the GPU, and anyone who wants open-model variety without the ComfyUI learning curve.\n\n(Honorable mention: Ideogram — a cloud leader for text-in-image, with a limited free tier that publishes images to a public gallery, and paid plans starting around $20/month.)',
+        blockquote:
+          '**Want local models without owning the GPU?** getimg.ai gives you access to open models such as FLUX through the cloud, without a ComfyUI installation or VRAM requirements. [Try getimg.ai →](https://getimg.ai/)',
+        affiliateLinks: [
           { url: 'https://getimg.ai/', productName: 'getimg.ai', productCategory: 'cloud-image-service', label: 'getimg.ai' },
         ],
       },
@@ -219,6 +239,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your situation': '8GB+ GPU, high volume, $0 marginal cost', 'Recommendation': 'Local: schnell for speed, Qwen-Image for text, SD 3.5 for styles' },
           { 'Your situation': 'Consistent character/style across many images', 'Recommendation': 'Local with LoRAs (SD 3.5/SDXL ecosystem)' },
         ],
+        blockquote:
+          '**No GPU? Start with the cloud.** If you\'re still unsure, try Firefly\'s free trial or use getimg.ai to experiment with open models without buying hardware. [Try Adobe Firefly →](https://firefly.adobe.com/) · [Try getimg.ai →](https://getimg.ai/)',
       },
       videoRoundup: {
         id: 'video-roundup',
