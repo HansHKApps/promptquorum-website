@@ -38,12 +38,21 @@ type HeroSpec = {
 // title band + one line of text + a blank 500px void) can never ship again.
 // Counts only what actually fills the body — table cells, callout, or bullets
 // — not the header/subtitle, which is capped at 2 lines regardless of length.
+//
+// STANDING RULE: every hero's body content (whether that's the subtitle
+// fallback, bullets, table, or callout) must render at least 3 lines of
+// real, specific detail in the body — not just clear this floor by a
+// sentence fragment. At the body subtitle's fontSize:28px / maxWidth:1000px
+// (see the no-bullets/table/callout fallback below), ~65-70 Latin chars fit
+// per line, so ~220 chars is the practical 3-line floor; write closer to
+// 300-350 chars (4-5 lines) when the topic supports it — e.g. spell out
+// what each side of a comparison actually is, not just restate the title.
 // CJK/Korean text conveys far more per character than Latin scripts (a 78-char
 // Japanese sentence is a complete, substantial description, not a fragment),
 // so the floor is scaled down for those languages rather than applying one
 // Latin-calibrated threshold everywhere.
-const MIN_BODY_CHARS_DEFAULT = 80
-const MIN_BODY_CHARS_CJK = 30
+const MIN_BODY_CHARS_DEFAULT = 220
+const MIN_BODY_CHARS_CJK = 85
 const CJK_LANGS = new Set(['zh', 'ja', 'ko'])
 
 function minBodyChars(lang: string): number {
