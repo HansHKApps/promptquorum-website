@@ -463,7 +463,7 @@ schema: {
           faqs: [
             {
               q: 'Was ist der Unterschied zwischen LM Studio API und Ollama API?',
-              a: 'Beide stellen OpenAI-kompatible Endpunkte zur Verfügung. LM Studio API ist auf localhost:1234, Ollama auf localhost:11434. Beide funktionieren identisch. Wählen Sie das Tool, das Sie lieber chatten möchten.',
+              a: 'Beide stellen OpenAI-kompatible Endpunkte zur Verfügung. LM Studio API ist auf localhost:1234, Ollama auf localhost:11434. Beide laufen mit vergleichbarer Geschwindigkeit auf derselben Basis. Wählen Sie das Tool, das Sie lieber chatten möchten.',
             },
             {
               q: 'Kann ich die LM Studio API in der Produktion verwenden?',
@@ -536,7 +536,7 @@ schema: {
             name: 'Was ist der Unterschied zwischen LM Studio API und Ollama API?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Beide stellen OpenAI-kompatible Endpunkte zur Verfügung. LM Studio API ist auf localhost:1234, Ollama auf localhost:11434. Beide funktionieren identisch. Wählen Sie das Tool, das Sie lieber chatten möchten.',
+              text: 'Beide stellen OpenAI-kompatible Endpunkte zur Verfügung. LM Studio API ist auf localhost:1234, Ollama auf localhost:11434. Beide laufen mit vergleichbarer Geschwindigkeit auf derselben Basis. Wählen Sie das Tool, das Sie lieber chatten möchten.',
             },
           },
           {
@@ -842,7 +842,7 @@ schema: {
           faqs: [
             {
               q: 'Quelle est la différence entre API LM Studio et API Ollama ?',
-              a: 'Les deux exposent points de terminaison compatibles OpenAI. API LM Studio sur localhost:1234, Ollama sur localhost:11434. Fonctionnent identiquement. Choisissez l\'outil que vous préférez.',
+              a: 'Les deux exposent des points de terminaison compatibles OpenAI. API LM Studio sur localhost:1234, Ollama sur localhost:11434. Les deux fonctionnent à des vitesses comparables sur la même base. Choisissez l\'outil que vous préférez.',
             },
             {
               q: 'Puis-je utiliser API LM Studio en production ?',
@@ -905,7 +905,7 @@ schema: {
             name: 'Quelle est la différence entre API LM Studio et API Ollama ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Les deux exposent points de terminaison compatibles OpenAI. API LM Studio sur localhost:1234, Ollama sur localhost:11434. Fonctionnent identiquement. Choisissez l\'outil que vous préférez.',
+              text: 'Les deux exposent des points de terminaison compatibles OpenAI. API LM Studio sur localhost:1234, Ollama sur localhost:11434. Les deux fonctionnent à des vitesses comparables sur la même base. Choisissez l\'outil que vous préférez.',
             },
           },
           {
@@ -1804,7 +1804,7 @@ schema: {
           faqs: [
             {
               q: 'ما الفرق بين واجهة API الخاصة بـ LM Studio وواجهة API الخاصة بـ Ollama؟',
-              a: 'كلتاهما تعرض نقاط نهاية متوافقة مع OpenAI. تستخدم واجهة API الخاصة بـ LM Studio العنوان localhost:1234، وتستخدم واجهة Ollama العنوان localhost:11434. كلتاهما تعملان بشكل متطابق. اختر الأداة التي تفضلها للمحادثة.',
+              a: 'كلتاهما تعرض نقاط نهاية متوافقة مع OpenAI. تستخدم واجهة API الخاصة بـ LM Studio العنوان localhost:1234، وتستخدم واجهة Ollama العنوان localhost:11434. كلتاهما تعملان بشكل متقارب. اختر الأداة التي تفضلها للمحادثة.',
             },
             {
               q: 'هل يمكنني استخدام واجهة API الخاصة بـ LM Studio في الإنتاج؟',

@@ -337,7 +337,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'What Are the Common Mistakes Running Qwen3 Locally?',
         items: [
           '**Using an untagged `ollama pull qwen2.5` command.** Without an explicit size tag (`:7b`, `:14b`, etc.), Ollama may resolve to a default size that changes between library updates. Always use explicit tags: `ollama pull qwen2.5:14b`.',
-          '**Ignoring the context window size.** Qwen3 supports 128K context, but Ollama defaults to 2K at `num_ctx`. If you\'re processing long documents, add `--num-ctx 8192` (or higher) to the run command — otherwise the model silently truncates input.',
+          '**Ignoring the context window size.** Qwen3 supports 128K context. Ollama\'s Modelfile spec defaults `num_ctx` to 2048, but the runtime actually picks a VRAM-tiered default instead — 4K under 24 GiB, 32K from 24–48 GiB, 256K above 48 GiB. Don\'t rely on either default: set `num_ctx` explicitly, e.g. add `--num-ctx 8192` (or higher) to the run command — otherwise the model silently truncates input.',
           '**Choosing Q2_K quantization for Chinese-language use.** At 2-bit precision, Qwen3\'s Chinese output becomes noticeably degraded — character substitutions increase. Use Q4_K_M as the minimum for any Chinese-language work.',
           '**Running the 32B model with too little VRAM.** If your GPU has 16 GB and the model needs 20.5 GB, Ollama offloads layers to system RAM. The model runs but at 3–5 tok/s — unusable for interactive use. Check the hardware table above and pick a model that fits your VRAM.',
           '**Using the wrong sub-family for coding.** Qwen3 8B (general) scores 57.3% on HumanEval. Qwen3-Coder 7B scores 75.6% on the same benchmark — a 32% relative improvement. If your use case is code, always use the Coder variant of the same size.',
@@ -644,7 +644,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Errores frecuentes al ejecutar Qwen3 en local',
         items: [
           '**Usar el comando `ollama pull qwen2.5` sin etiqueta de tamaño.** Sin una etiqueta de tamaño explícita (`:7b`, `:14b`, etc.), Ollama puede resolver al tamaño predeterminado, que puede cambiar entre actualizaciones de la biblioteca. Usa siempre etiquetas explícitas: `ollama pull qwen2.5:14b`.',
-          '**Ignorar el tamaño de la ventana de contexto.** Qwen3 soporta un contexto de 128K, pero Ollama usa 2K por defecto para `num_ctx`. Si procesas documentos largos, añade `--num-ctx 8192` (o más) al comando de ejecución — de lo contrario el modelo trunca la entrada en silencio.',
+          '**Ignorar el tamaño de la ventana de contexto.** Qwen3 soporta un contexto de 128K. La especificación del Modelfile de Ollama establece `num_ctx` en 2048 por defecto, pero en tiempo de ejecución se aplica un valor predeterminado escalonado según la VRAM: 4K por debajo de 24 GiB, 32K entre 24 y 48 GiB, y 256K por encima de 48 GiB. No confíes en ninguno de los dos valores predeterminados: configura `num_ctx` explícitamente, por ejemplo añadiendo `--num-ctx 8192` (o más) al comando de ejecución — de lo contrario el modelo trunca la entrada en silencio.',
           '**Elegir cuantización Q2_K para uso en chino.** A 2 bits de precisión, la salida en chino de Qwen3 se degrada notablemente. Usa Q4_K_M como mínimo para cualquier trabajo en chino.',
           '**Ejecutar el modelo 32B con poca VRAM.** Si la GPU tiene 16 GB y el modelo necesita 20,5 GB, Ollama descarga capas a la RAM del sistema. El modelo funciona pero a 3–5 tok/s — inutilizable para uso interactivo. Consulta la tabla de hardware y elige un modelo que quepa en tu VRAM.',
           '**Usar la subfamilia incorrecta para programación.** Qwen3 8B (uso general) puntúa 57,3 % en HumanEval. Qwen3-Coder 7B puntúa 75,6 % en el mismo benchmark — una mejora relativa del 32 %. Si tu caso de uso es código, usa siempre la variante Coder del mismo tamaño.',
@@ -951,7 +951,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'الأخطاء الشائعة عند تشغيل Qwen3 محليًا',
         items: [
           '**استخدام الأمر `ollama pull qwen2.5` دون وسم حجم.** بدون وسم حجم صريح (`:7b`، `:14b`، إلخ)، قد يُحل Ollama إلى الحجم الافتراضي، الذي قد يتغير بين تحديثات المكتبة. استخدم دائمًا وسومًا صريحة: `ollama pull qwen2.5:14b`.',
-          '**تجاهل حجم نافذة السياق.** يدعم Qwen3 سياق 128K، لكن Ollama يستخدم 2K افتراضيًا لـ `num_ctx`. إذا كنت تعالج مستندات طويلة، أضف `--num-ctx 8192` (أو أكثر) إلى أمر التشغيل — وإلا يقتطع النموذج الإدخال بصمت.',
+          '**تجاهل حجم نافذة السياق.** يدعم Qwen3 سياق 128K. تحدد مواصفات Modelfile في Ollama القيمة الافتراضية لـ `num_ctx` بـ 2048، لكن وقت التشغيل الفعلي يختار قيمة افتراضية متدرجة حسب VRAM: 4K أقل من 24 GiB، و32K بين 24 و48 GiB، و256K فوق 48 GiB. لا تعتمد على أي من القيمتين الافتراضيتين: اضبط `num_ctx` صراحةً، مثلاً بإضافة `--num-ctx 8192` (أو أكثر) إلى أمر التشغيل — وإلا يقتطع النموذج الإدخال بصمت.',
           '**اختيار تكميم Q2_K للاستخدام بالصينية.** بدقة 2 بت، تتدهور مخرجات Qwen3 بالصينية بشكل ملحوظ. استخدم Q4_K_M كحد أدنى لأي عمل بالصينية.',
           '**تشغيل نموذج 32B بـ VRAM قليل.** إذا كانت بطاقة الرسوم تملك 16 GB والنموذج يحتاج إلى 20.5 GB، يفرّغ Ollama الطبقات إلى RAM النظام. يعمل النموذج لكن بـ 3–5 token/ثانية — غير قابل للاستخدام التفاعلي. راجع جدول الأجهزة واختر نموذجًا يتسع في VRAM لديك.',
           '**استخدام العائلة الفرعية الخاطئة للبرمجة.** يسجّل Qwen3 8B (استخدام عام) 57.3% في HumanEval. ويسجّل Qwen3-Coder 7B نسبة 75.6% في المعيار نفسه — تحسّن نسبي بنسبة 32%. إذا كانت حالة استخدامك هي الكود، استخدم دائمًا متغير Coder بالحجم نفسه.',
@@ -1251,7 +1251,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Erros frequentes ao executar o Qwen3 localmente',
         items: [
           '**Usar o comando `ollama pull qwen2.5` sem tag de tamanho.** Sem uma tag de tamanho explícita (`:7b`, `:14b`, etc.), o Ollama pode resolver para o tamanho padrão, que pode mudar entre atualizações da biblioteca. Sempre use tags explícitas: `ollama pull qwen2.5:14b`.',
-          '**Ignorar o tamanho da janela de contexto.** O Qwen3 suporta um contexto de 128K, mas o Ollama usa 2K por padrão para `num_ctx`. Se você processa documentos longos, adicione `--num-ctx 8192` (ou mais) ao comando de execução.',
+          '**Ignorar o tamanho da janela de contexto.** O Qwen3 suporta um contexto de 128K. A especificação do Modelfile do Ollama define `num_ctx` como 2048 por padrão, mas o runtime na verdade aplica um padrão escalonado por VRAM: 4K abaixo de 24 GiB, 32K entre 24 e 48 GiB, 256K acima de 48 GiB. Não confie em nenhum dos dois padrões: defina `num_ctx` explicitamente, por exemplo adicionando `--num-ctx 8192` (ou mais) ao comando de execução — caso contrário o modelo trunca a entrada silenciosamente.',
           '**Escolher quantização Q2_K para uso em chinês.** A 2 bits de precisão, a saída em chinês do Qwen3 se degrada notavelmente. Use Q4_K_M no mínimo para qualquer trabalho em chinês.',
           '**Executar o modelo 32B com pouca VRAM.** Se a GPU tiver 16 GB e o modelo precisar de 20,5 GB, o Ollama descarrega camadas para a RAM do sistema. O modelo funciona mas a 3–5 tok/s — inutilizável para uso interativo.',
           '**Usar a subfamília errada para programação.** O Qwen3 8B (uso geral) pontua 57,3% no HumanEval. O Qwen3-Coder 7B pontua 75,6% — uma melhoria relativa de 32%. Para código, sempre use a variante Coder do mesmo tamanho.',
@@ -1557,7 +1557,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Erreurs courantes avec Qwen3 en local',
         items: [
           '**Utiliser `ollama pull qwen2.5` sans tag de taille.** Sans tag explicite (`:7b`, `:14b`, etc.), Ollama peut résoudre vers une taille par défaut qui change entre les mises à jour. Toujours utiliser des tags explicites.',
-          '**Ignorer la taille de la fenêtre de contexte.** Qwen3 supporte 128K de contexte, mais Ollama utilise 2K par défaut pour `num_ctx`. Pour les documents longs, ajouter `--num-ctx 8192` (ou plus).',
+          '**Ignorer la taille de la fenêtre de contexte.** Qwen3 supporte 128K de contexte. La spécification du Modelfile d\'Ollama fixe `num_ctx` à 2048 par défaut, mais le runtime applique en réalité une valeur par défaut échelonnée selon la VRAM : 4K en dessous de 24 Gio, 32K entre 24 et 48 Gio, 256K au-delà de 48 Gio. Ne comptez sur aucun des deux réglages par défaut : définissez `num_ctx` explicitement, par exemple en ajoutant `--num-ctx 8192` (ou plus) à la commande d\'exécution — sinon le modèle tronque silencieusement l\'entrée.',
           '**Choisir la quantification Q2_K pour du chinois.** À 2 bits, la sortie en langue chinoise de Qwen3 se dégrade notablement. Utiliser au minimum Q4_K_M pour tout travail en CJK.',
           '**Exécuter le modèle 32B avec trop peu de VRAM.** Si votre GPU a 16 Go et que le modèle en nécessite 20,5 Go, Ollama décharge des couches en RAM — le modèle tourne à 3–5 tokens/s, inutilisable en interactif.',
           '**Utiliser la mauvaise sous-famille pour le code.** Qwen3 8B (usage général) : 57,3 % sur HumanEval. Qwen3-Coder 7B : 75,6 % — soit +32 % de performance relative. Toujours utiliser la variante Coder pour le code.',
@@ -1867,7 +1867,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Häufige Fehler beim lokalen Betrieb von Qwen3',
         items: [
           '**Ungetaggter `ollama pull qwen2.5`-Befehl verwenden.** Ohne expliziten Größen-Tag (`:7b`, `:14b` usw.) kann Ollama eine Standardgröße auflösen, die sich zwischen Library-Updates ändert. Immer explizite Tags verwenden: `ollama pull qwen2.5:14b`.',
-          '**Kontextfenstergröße ignorieren.** Qwen3 unterstützt 128K-Kontext, Ollama verwendet aber standardmäßig 2K für `num_ctx`. Bei der Verarbeitung langer Dokumente `--num-ctx 8192` (oder höher) zum Run-Befehl hinzufügen — andernfalls kürzt das Modell die Eingabe stillschweigend.',
+          '**Kontextfenstergröße ignorieren.** Qwen3 unterstützt 128K-Kontext. Die Modelfile-Spezifikation von Ollama setzt `num_ctx` standardmäßig auf 2048, doch die Laufzeitumgebung wählt tatsächlich einen VRAM-gestaffelten Standardwert: 4K unter 24 GiB, 32K zwischen 24 und 48 GiB, 256K über 48 GiB. Verlassen Sie sich auf keinen der beiden Standardwerte: Legen Sie `num_ctx` explizit fest, zum Beispiel mit `--num-ctx 8192` (oder höher) im Run-Befehl — andernfalls kürzt das Modell die Eingabe stillschweigend.',
           '**Q2_K-Quantisierung für chinesischsprachige Nutzung wählen.** Bei 2-Bit-Präzision verschlechtert sich Qwen3\'s chinesische Ausgabe spürbar. Q4_K_M als Minimum für jede chinesischsprachige Arbeit verwenden.',
           '**32B-Modell mit zu wenig VRAM ausführen.** Wenn die GPU 16 GB hat und das Modell 20,5 GB benötigt, lagert Ollama Layer in den System-RAM aus. Das Modell läuft, aber mit 3–5 Tokens/Sek. — für interaktive Nutzung unbrauchbar.',
           '**Falsche Teilfamilie für Coding verwenden.** Qwen3 8B (allgemein) erreicht 57,3 % auf HumanEval. Qwen3-Coder 7B erreicht 75,6 % auf demselben Benchmark — eine 32 %ige relative Verbesserung. Für Coding immer die Coder-Variante gleicher Größe verwenden.',
@@ -2178,7 +2178,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'よくあるミス',
         items: [
           '**タグなしで`ollama pull qwen2.5`を実行する。** 明示的なサイズタグ（`:7b`、`:14b`など）なしでは、OllamaはOllamaのアップデートで変わりうるデフォルトサイズに解決します。常に明示的なタグを使用：`ollama pull qwen2.5:14b`。',
-          '**コンテキストウィンドウサイズを無視する。** Qwen3は128Kコンテキストをサポートしますが、Ollamaは`num_ctx`をデフォルト2Kに設定します。長い文書を処理する際は`--num-ctx 8192`（またはそれ以上）を追加してください。',
+          '**コンテキストウィンドウサイズを無視する。** Qwen3は128Kコンテキストをサポートします。OllamaのModelfile仕様では`num_ctx`のデフォルトは2048ですが、実際のランタイムはVRAM容量に応じた段階的なデフォルト値を採用します（24GiB未満は4K、24〜48GiBは32K、48GiB超は256K）。どちらのデフォルトにも依存せず、`num_ctx`を明示的に設定してください。例えば実行コマンドに`--num-ctx 8192`（またはそれ以上）を追加します。設定しないと、モデルは入力を黙って切り詰めます。',
           '**中国語用途にQ2_K量子化を選ぶ。** 2ビット精度では、Qwen3の中国語出力品質が著しく低下します。中国語作業には最低でもQ4_K_Mを使用してください。',
           '**VRAMが不足した状態で32Bモデルを実行する。** GPUが16GBでモデルが20.5GB必要な場合、Ollamaはシステムメモリにレイヤーをオフロードします。3〜5トークン/秒でインタラクティブ使用には不向きです。',
           '**コーディングに間違ったサブファミリーを使う。** Qwen3 8B（汎用）はHumanEvalで57.3%。Qwen3-Coder 7Bは同ベンチマークで75.6% — 相対的に32%の改善。コーディングには必ず同サイズのCoder バリアントを使用してください。',
@@ -2489,7 +2489,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: '常见错误',
         items: [
           '**使用无标签的`ollama pull qwen2.5`命令。** 没有明确的尺寸标签（`:7b`、`:14b`等），Ollama可能解析到随版本更新变化的默认尺寸。始终使用明确标签：`ollama pull qwen2.5:14b`。',
-          '**忽略上下文窗口大小。** Qwen3支持128K上下文，但Ollama默认`num_ctx`为2K。处理长文档时，在运行命令中添加`--num-ctx 8192`（或更高）——否则模型会静默截断输入。',
+          '**忽略上下文窗口大小。** Qwen3支持128K上下文。Ollama的Modelfile规范将`num_ctx`默认设为2048，但实际运行时会根据显存大小分级采用不同默认值：低于24 GiB为4K，24-48 GiB为32K，超过48 GiB为256K。不要依赖这两种默认值中的任何一个，应显式设置`num_ctx`，例如在运行命令中添加`--num-ctx 8192`（或更高）——否则模型会静默截断输入。',
           '**中文用途选择Q2_K量化。** 2位精度下，Qwen3的中文输出质量明显下降——出现字符替换问题。中文任务至少使用Q4_K_M。',
           '**显存不足时运行32B模型。** 若GPU只有16GB而模型需要20.5GB，Ollama会将层卸载到系统内存。模型可运行但速度仅3–5 token/秒，不适合交互使用。',
           '**代码任务使用错误的子系列。** Qwen3 8B（通用版）在HumanEval上得57.3%。Qwen3-Coder 7B得75.6%——相对提升32%。代码任务始终使用同等规格的Coder版本。',
@@ -2862,7 +2862,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Qwen3 로컬 실행 시 흔한 실수',
         items: [
           '**태그 없는 `ollama pull qwen2.5` 명령어 사용.** 명시적 크기 태그(`:7b`, `:14b` 등) 없이는 Ollama가 라이브러리 업데이트 사이에 변경될 수 있는 기본 크기로 해석할 수 있습니다. 항상 명시적 태그를 사용하십시오: `ollama pull qwen2.5:14b`.',
-          '**컨텍스트 창 크기 무시.** Qwen3는 128K 컨텍스트를 지원하지만 Ollama는 기본적으로 `num_ctx`를 2K로 설정합니다. 긴 문서를 처리하는 경우 실행 명령어에 `--num-ctx 8192`(또는 더 높은 값)를 추가하십시오 — 그렇지 않으면 모델이 자동으로 입력을 잘라냅니다.',
+          '**컨텍스트 창 크기 무시.** Qwen3는 128K 컨텍스트를 지원합니다. Ollama의 Modelfile 사양은 `num_ctx` 기본값을 2048로 지정하지만, 실제 런타임은 VRAM 용량에 따라 단계별 기본값을 적용합니다(24 GiB 미만은 4K, 24~48 GiB는 32K, 48 GiB 초과는 256K). 두 기본값 중 어느 것에도 의존하지 말고 `num_ctx`를 명시적으로 설정하십시오. 예를 들어 실행 명령어에 `--num-ctx 8192`(또는 더 높은 값)를 추가합니다 — 그렇지 않으면 모델이 자동으로 입력을 잘라냅니다.',
           '**중국어 용도에 Q2_K 양자화 선택.** 2비트 정밀도에서 Qwen3의 중국어 출력이 눈에 띄게 저하됩니다 — 문자 대체가 증가합니다. 중국어 작업에는 Q4_K_M을 최소값으로 사용하십시오.',
           '**VRAM이 부족한 상태에서 32B 모델 실행.** GPU에 16 GB가 있고 모델에 20.5 GB가 필요한 경우 Ollama가 레이어를 시스템 RAM으로 오프로드합니다. 모델은 실행되지만 초당 3–5 토큰으로 — 대화형 사용에는 적합하지 않습니다. 위의 하드웨어 표를 확인하고 VRAM에 맞는 모델을 선택하십시오.',
           '**코딩에 잘못된 하위 패밀리 사용.** Qwen3 8B(범용)는 HumanEval에서 57.3%를 기록합니다. Qwen3-Coder 7B는 같은 벤치마크에서 75.6%를 기록합니다 — 상대적으로 32% 향상입니다. 코딩이 목적이라면 항상 같은 크기의 Coder 변형을 사용하십시오.',

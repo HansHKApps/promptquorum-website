@@ -76,7 +76,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'How do I enable 128K context in Ollama?',
-            a: 'Add <code>--num-ctx 131072</code> to your run command: <code>ollama run llama3.1:8b --num-ctx 131072</code>. Without this flag, Ollama defaults to 2048–4096 tokens regardless of the model\'s maximum capability.',
+            a: 'Add <code>--num-ctx 131072</code> to your run command: <code>ollama run llama3.1:8b --num-ctx 131072</code>. Without this flag, Ollama\'s Modelfile spec defaults num_ctx to 2048, and even the VRAM-tiered runtime default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) may fall short of the model\'s maximum capability — set num_ctx explicitly to guarantee it.',
           },
           {
             q: 'Why does long context use so much VRAM?',
@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Wie aktiviere ich 128K Kontext in Ollama?',
-            a: 'Fügen Sie <code>--num-ctx 131072</code> zu Ihrem Run-Befehl hinzu: <code>ollama run llama3.1:8b --num-ctx 131072</code>. Ohne dieses Flag verwendet Ollama standardmäßig 2048–4096 Tokens, unabhängig von der maximalen Fähigkeit des Modells.',
+            a: 'Fügen Sie <code>--num-ctx 131072</code> zu Ihrem Run-Befehl hinzu: <code>ollama run llama3.1:8b --num-ctx 131072</code>. Ohne dieses Flag verwendet Ollamas Modelfile-Spezifikation standardmäßig 2048 Tokens, und selbst der VRAM-gestaffelte Laufzeit-Standard (4K unter 24 GiB, 32K bei 24–48 GiB, 256K darüber) kann unter der maximalen Fähigkeit des Modells liegen — setzen Sie num_ctx explizit, um dies zu garantieren.',
           },
           {
             q: 'Warum verbraucht langer Kontext so viel VRAM?',
@@ -236,7 +236,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Comment activer le contexte 128K dans Ollama ?',
-            a: 'Ajoutez <code>--num-ctx 131072</code> à votre commande run : <code>ollama run llama3.1:8b --num-ctx 131072</code>. Sans ce paramètre, Ollama utilise par défaut 2048–4096 tokens quelle que soit la capacité maximale du modèle.',
+            a: 'Ajoutez <code>--num-ctx 131072</code> à votre commande run : <code>ollama run llama3.1:8b --num-ctx 131072</code>. Sans ce paramètre, la spécification Modelfile d\'Ollama utilise par défaut 2048 tokens, et même la valeur par défaut échelonnée selon la VRAM (4K sous 24 Gio, 32K entre 24 et 48 Gio, 256K au-delà) peut rester en dessous de la capacité maximale du modèle — définissez num_ctx explicitement pour la garantir.',
           },
           {
             q: 'Pourquoi le contexte long utilise-t-il autant de VRAM ?',
@@ -316,7 +316,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Ollamaで128Kコンテキストを有効にするには？',
-            a: '実行コマンドに<code>--num-ctx 131072</code>を追加します：<code>ollama run llama3.1:8b --num-ctx 131072</code>。このフラグがない場合、モデルの最大能力に関係なく、Ollamaはデフォルトで2048〜4096トークンを使用します。',
+            a: '実行コマンドに<code>--num-ctx 131072</code>を追加します：<code>ollama run llama3.1:8b --num-ctx 131072</code>。このフラグがない場合、OllamaのModelfile仕様ではnum_ctxのデフォルトは2048ですが、VRAM階層別のランタイムデフォルト(24 GiB未満は4K、24〜48 GiBは32K、それ以上は256K)でもモデルの最大能力に届かないことがあります。確実に使うにはnum_ctxを明示的に設定してください。',
           },
           {
             q: '長いコンテキストはなぜVRAMを大量に消費するのですか？',
@@ -396,7 +396,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '如何在Ollama中启用128K上下文？',
-            a: '在运行命令中添加<code>--num-ctx 131072</code>：<code>ollama run llama3.1:8b --num-ctx 131072</code>。不使用该参数时，无论模型最大能力如何，Ollama默认使用2048–4096个token。',
+            a: '在运行命令中添加<code>--num-ctx 131072</code>：<code>ollama run llama3.1:8b --num-ctx 131072</code>。不使用该参数时，Ollama的Modelfile规范默认num_ctx为2048，即使是按VRAM分级的运行时默认值(24 GiB以下为4K，24–48 GiB为32K，以上为256K)也可能达不到模型的最大能力——请显式设置num_ctx以确保达到该能力。',
           },
           {
             q: '为什么长上下文需要这么多VRAM？',
@@ -476,7 +476,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Como ativar o contexto de 128K no Ollama?',
-            a: 'Adicione <code>--num-ctx 131072</code> ao seu comando de execução: <code>ollama run llama3.1:8b --num-ctx 131072</code>. Sem essa opção, o Ollama usa por padrão 2048–4096 tokens independentemente da capacidade máxima do modelo.',
+            a: 'Adicione <code>--num-ctx 131072</code> ao seu comando de execução: <code>ollama run llama3.1:8b --num-ctx 131072</code>. Sem essa opção, a especificação Modelfile do Ollama usa por padrão 2048 tokens, e mesmo o padrão de runtime escalonado por VRAM (4K abaixo de 24 GiB, 32K entre 24–48 GiB, 256K acima) pode ficar abaixo da capacidade máxima do modelo — defina num_ctx explicitamente para garanti-la.',
           },
           {
             q: 'Por que o contexto longo usa tanta VRAM?',
@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Cómo activo el contexto de 128K en Ollama?',
-            a: 'Añade <code>--num-ctx 131072</code> a tu comando de ejecución: <code>ollama run llama3.1:8b --num-ctx 131072</code>. Sin esta opción, Ollama usa de forma predeterminada entre 2048 y 4096 tokens independientemente de la capacidad máxima del modelo.',
+            a: 'Añade <code>--num-ctx 131072</code> a tu comando de ejecución: <code>ollama run llama3.1:8b --num-ctx 131072</code>. Sin esta opción, la especificación Modelfile de Ollama usa por defecto 2048 tokens, e incluso el valor predeterminado escalonado por VRAM (4K por debajo de 24 GiB, 32K entre 24 y 48 GiB, 256K por encima) puede quedarse corto frente a la capacidad máxima del modelo — configura num_ctx explícitamente para garantizarla.',
           },
           {
             q: '¿Por qué el contexto largo usa tanta VRAM?',
@@ -636,7 +636,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'كيف أفعّل سياق 128K في Ollama؟',
-            a: 'أضف <code>--num-ctx 131072</code> إلى أمر التشغيل: <code>ollama run llama3.1:8b --num-ctx 131072</code>. بدون هذا الخيار، يستخدم Ollama افتراضياً بين 2048 و4096 رمزاً بغض النظر عن الحد الأقصى للنموذج.',
+            a: 'أضف <code>--num-ctx 131072</code> إلى أمر التشغيل: <code>ollama run llama3.1:8b --num-ctx 131072</code>. بدون هذا الخيار، تحدد مواصفة Modelfile في Ollama القيمة الافتراضية لـ num_ctx بـ 2048 رمزاً، وحتى القيمة الافتراضية المتدرجة حسب VRAM (4K لأقل من 24 GiB، 32K من 24-48 GiB، 256K وما فوق) قد لا تصل إلى الحد الأقصى لقدرة النموذج — اضبط num_ctx صراحةً لضمان ذلك.',
           },
           {
             q: 'لماذا يستهلك السياق الطويل كثيراً من VRAM؟',
@@ -720,7 +720,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Ollama에서 128K 컨텍스트를 활성화하는 방법은 무엇입니까?',
-            a: '실행 명령에 <code>--num-ctx 131072</code>를 추가하십시오: <code>ollama run llama3.1:8b --num-ctx 131072</code>. 이 플래그 없이는 모델의 최대 용량과 관계없이 Ollama가 기본적으로 2048~4096 토큰을 사용합니다.',
+            a: '실행 명령에 <code>--num-ctx 131072</code>를 추가하십시오: <code>ollama run llama3.1:8b --num-ctx 131072</code>. 이 플래그 없이는 Ollama의 Modelfile 사양이 num_ctx를 기본값 2048로 설정하며, VRAM 등급별 런타임 기본값(24 GiB 미만은 4K, 24-48 GiB는 32K, 그 이상은 256K)도 모델의 최대 용량에 못 미칠 수 있습니다 — 이를 보장하려면 num_ctx를 명시적으로 설정하십시오.',
           },
           {
             q: '긴 컨텍스트는 왜 그렇게 많은 VRAM을 사용합니까?',

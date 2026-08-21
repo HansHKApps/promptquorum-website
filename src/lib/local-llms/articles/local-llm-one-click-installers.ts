@@ -473,7 +473,7 @@ schema: {
             '**Un instalador de LLM local de un clic agrupa el motor de inferencia, el gestor de modelos y la interfaz de usuario en una sola descarga — sin necesidad de compilar llama.cpp manualmente.** Esto engloba tres cosas: el motor de inferencia (normalmente llama.cpp), un gestor de modelos que gestiona las descargas y el almacenamiento, y una interfaz de usuario (UI de chat, servidor API o ambos).',
             'Sin estas herramientas, ejecutar un LLM local requiere compilar llama.cpp manualmente, convertir los pesos del modelo, configurar los ajustes de memoria y gestionar los archivos de modelo. Los instaladores de un clic eliminan todo eso.',
             'Las cuatro herramientas que se tratan aquí — Ollama, LM Studio, Jan AI y GPT4All — adoptan enfoques diferentes en cuanto a la interfaz mientras utilizan la misma tecnología de inferencia subyacente.',
-            '🔍 **¿Sabías que?** Los cuatro instaladores usan llama.cpp bajo el capó — el mismo motor de inferencia en C++. La diferencia de rendimiento entre ellos es insignificante en el mismo hardware. Lo que difiere es la interfaz (terminal vs GUI), el descubrimiento de modelos (biblioteca curada vs Hugging Face) y la postura de privacidad (con telemetría vs sin telemetría).',
+            '🔍 **¿Sabías que?** Los cuatro instaladores usan llama.cpp bajo el capó — el mismo motor de inferencia en C++. El rendimiento puede variar debido a diferencias en batching, optimización de flash-attention, manejo de KV-cache y overhead a nivel de aplicación. Lo que difiere es la interfaz (terminal vs GUI), el descubrimiento de modelos (biblioteca curada vs Hugging Face) y la postura de privacidad (con telemetría vs sin telemetría).',
           ],
         },
         ollama: {
@@ -2265,7 +2265,7 @@ schema: {
             '**원클릭 로컬 LLM 설치 도구는 추론 엔진, 모델 관리자, UI를 단일 다운로드로 번들링합니다 -- 수동 llama.cpp 컴파일이 필요하지 않습니다.** 이는 세 가지를 번들링합니다: 추론 엔진(일반적으로 llama.cpp), 다운로드 및 저장을 처리하는 모델 관리자, 그리고 사용자 인터페이스(채팅 UI, API 서버 또는 둘 다)입니다.',
             '이러한 도구 없이 로컬 LLM을 실행하려면 llama.cpp를 수동으로 컴파일하고, 모델 가중치를 변환하고, 메모리 설정을 구성하고, 모델 파일을 관리해야 합니다. 원클릭 설치 도구는 이 모든 과정을 제거합니다.',
             '여기서 다루는 네 가지 도구 -- Ollama, LM Studio, Jan AI, GPT4All -- 은 동일한 기본 추론 기술을 사용하면서 각각 다른 인터페이스 방식을 취합니다.',
-            '🔍 **알고 계셨습니까:** 네 가지 설치 도구 모두 내부적으로 llama.cpp를 사용합니다 -- 동일한 C++ 추론 엔진입니다. 동일한 하드웨어에서 이들 간의 성능 차이는 무시할 수 있는 수준입니다. 다른 점은 인터페이스(터미널 vs GUI), 모델 검색(큐레이션 라이브러리 vs Hugging Face), 개인정보 보호 정책(텔레메트리 vs 텔레메트리 없음)입니다.',
+            '🔍 **알고 계셨습니까:** 네 가지 설치 도구 모두 내부적으로 llama.cpp를 사용합니다 -- 동일한 C++ 추론 엔진입니다. 배칭, flash-attention 최적화, KV-캐시 처리, 애플리케이션 레벨 오버헤드의 차이로 인해 성능이 달라질 수 있습니다. 다른 점은 인터페이스(터미널 vs GUI), 모델 검색(큐레이션 라이브러리 vs Hugging Face), 개인정보 보호 정책(텔레메트리 vs 텔레메트리 없음)입니다.',
           ],
         },
         ollama: {
