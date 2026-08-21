@@ -934,11 +934,11 @@
       "images": [
         {
           "url": "/images/local-llm-openai-compatible-api-one-line-change-hero-en.webp",
-          "title": "Switching from OpenAI to Ollama requires changing 2 lines -- base_url and api_key -- all other code stays identical."
+          "title": "Switching from OpenAI to Ollama requires changing 2 lines -- base_url and api_key -- most other code stays the same."
         },
         {
           "url": "/images/local-llm-openai-compatible-api-api-request-flow-hero-en.webp",
-          "title": "Ollama intercepts the OpenAI-formatted request and runs inference locally -- the response returns in identical OpenAI format, no internet required."
+          "title": "Ollama intercepts the OpenAI-formatted request and runs inference locally -- the response returns in the same OpenAI-compatible format, no internet required."
         },
         {
           "url": "/images/openai-compatible-streaming-vs-batch-en.svg",
@@ -950,7 +950,7 @@
         },
         {
           "url": "/images/openai-compatible-platform-comparison-en.svg",
-          "title": "Ollama (port 11434), vLLM (port 8000), and LM Studio (port 1234) all expose OpenAI-compatible endpoints -- identical client code, different ports and use cases."
+          "title": "Ollama (port 11434), vLLM (port 8000), and LM Studio (port 1234) all expose OpenAI-compatible endpoints -- comparable client code, different ports and use cases."
         }
       ]
     },
