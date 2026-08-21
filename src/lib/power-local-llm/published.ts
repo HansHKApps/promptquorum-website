@@ -102,6 +102,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Category 11 — Image & Video Generation
   'local-ai-video-generation-vs-cloud',
+  'local-ai-image-generation-vs-cloud',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

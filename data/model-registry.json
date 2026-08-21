@@ -720,6 +720,102 @@
       "source_url": "https://dreamina.capcut.com/seedance/seedance-2-5",
       "verified_date": "2026-08-21",
       "notes": "Closed cloud video generation model, single-pass 30s clips up to 720p with native synchronized audio. Announced 2026-06-23, launched 2026-07-31. Seedance 2.0's global rollout was paused in March 2026 after cease-and-desist letters from major studios; it remains accessible in China with legal risk for international commercial use. Referenced as market context (not locally runnable) in src/lib/power-local-llm/articles/local-ai-video-generation-vs-cloud.ts. Added 2026-08-21."
+    },
+    {
+      "company": "Black Forest Labs",
+      "family": "FLUX",
+      "model": "FLUX.1 schnell",
+      "type": "open-weight",
+      "release_date": "2024-08",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell",
+      "verified_date": "2026-08-21",
+      "notes": "12B image generation model, Apache 2.0 — unrestricted commercial use. Generates in 1-4 steps, runs on 8GB VRAM. Distinct from FLUX.1/2 [dev] and Kontext, which use BFL's non-commercial license. Added 2026-08-21 for src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts."
+    },
+    {
+      "company": "Black Forest Labs",
+      "family": "FLUX",
+      "model": "FLUX.1 dev",
+      "type": "open-weight",
+      "release_date": "2024-08",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/black-forest-labs/FLUX.1-dev",
+      "verified_date": "2026-08-21",
+      "notes": "12B image generation model. FLUX.1 [dev] Non-Commercial License — free for non-commercial/non-production use only; a paid commercial license from Black Forest Labs is required for commercial use. Open weights does not mean commercially free here. Added 2026-08-21 for src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts."
+    },
+    {
+      "company": "Black Forest Labs",
+      "family": "FLUX",
+      "model": "FLUX.1 Kontext",
+      "type": "open-weight",
+      "release_date": "2025-06",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/black-forest-labs/FLUX.1-dev",
+      "verified_date": "2026-08-21",
+      "notes": "Image-editing variant of FLUX.1 [dev]; same FLUX.1 [dev] Non-Commercial License terms apply — non-commercial use only without a paid BFL license. Added 2026-08-21 for src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts."
+    },
+    {
+      "company": "Black Forest Labs",
+      "family": "FLUX",
+      "model": "FLUX.2 dev",
+      "type": "open-weight",
+      "release_date": "2025-11",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/black-forest-labs/FLUX.2-dev",
+      "verified_date": "2026-08-21",
+      "notes": "32B image generation and editing model, up to 4MP output, up to 10 reference images with character/product/style consistency. FLUX.2 [dev] Non-Commercial License — same non-commercial restriction as FLUX.1 [dev]; a paid BFL license is required for commercial use. Added 2026-08-21 for src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts."
+    },
+    {
+      "company": "Stability AI",
+      "family": "Stable Diffusion",
+      "model": "Stable Diffusion 3.5",
+      "type": "open-weight",
+      "release_date": "2024-11",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/stabilityai/stable-diffusion-3.5-large",
+      "verified_date": "2026-08-21",
+      "notes": "8B (Large) / 2.5B (Medium) image generation models. Stability AI Community License — free for commercial use only for organizations/individuals under $1M annual revenue; an Enterprise License is required above that threshold. Deepest local LoRA/ControlNet ecosystem of the major open image model families. Added 2026-08-21 for src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts."
+    },
+    {
+      "company": "Alibaba",
+      "family": "Qwen",
+      "model": "Qwen-Image",
+      "type": "open-weight",
+      "release_date": "2025-08-04",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/Qwen/Qwen-Image",
+      "verified_date": "2026-08-21",
+      "notes": "20B MMDiT image generation model, Apache 2.0 — no revenue thresholds, no territory exclusions. Leads local models on rendering readable, correctly-spelled text inside images, including multilingual (English/Chinese). Added 2026-08-21 for src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts."
+    },
+    {
+      "company": "Alibaba",
+      "family": "Qwen",
+      "model": "Qwen-Image-Edit",
+      "type": "open-weight",
+      "release_date": "2025-08",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/Qwen/Qwen-Image-Edit",
+      "verified_date": "2026-08-21",
+      "notes": "20B image-editing variant of Qwen-Image, Apache 2.0. Performs prompt-based edits (object/background/text changes) on existing photos while preserving the rest of the image. Added 2026-08-21 for src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts."
+    },
+    {
+      "company": "HiDream-ai",
+      "family": "HiDream",
+      "model": "HiDream-O1",
+      "type": "open-weight",
+      "release_date": "2026-05-08",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/HiDream-ai/HiDream-O1-Image",
+      "verified_date": "2026-08-21",
+      "notes": "8B pixel-native image generation model (no VAE, no separate text encoder), MIT license — more permissive than Apache 2.0. Ranked #8 on the Artificial Analysis Text-to-Image Arena as of 2026-05-05, the highest-ranked open-weight entry at the time (single-source ranking, verify before treating as settled). Added 2026-08-21 for src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts."
     }
   ],
   "sources": [

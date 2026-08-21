@@ -798,7 +798,7 @@ const HUB_THEMES: Array<{
     description: 'Stable Diffusion, Flux, and ComfyUI running entirely on your own GPU — no cloud queue, no per-image cost, no content filters. Local image and video generation compared for speed, VRAM requirements, and output quality, including which open video models are actually usable in 2026.',
     colorBadge: 'bg-pink-50 text-pink-700 border-pink-200',
     colorDot: 'bg-pink-400',
-    slugs: ['local-ai-video-generation-vs-cloud'],
+    slugs: ['local-ai-video-generation-vs-cloud', 'local-ai-image-generation-vs-cloud'],
   },
 ]
 
