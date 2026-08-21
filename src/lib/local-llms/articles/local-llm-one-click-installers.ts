@@ -178,7 +178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**A one-click local LLM installer bundles the inference engine, model manager, and UI into a single download -- no manual llama.cpp compilation required.** This bundles three things: the inference engine (typically llama.cpp), a model manager that handles downloads and storage, and a user interface (chat UI, API server, or both).',
             'Without these tools, running a local LLM requires manually compiling llama.cpp, converting model weights, configuring memory settings, and managing model files. One-click installers eliminate all of that.',
             'The four tools covered here -- Ollama, LM Studio, Jan AI, and GPT4All -- each take a different approach to the interface while using the same underlying inference technology.',
-            '🔍 **Did You Know:** All four installers use llama.cpp under the hood — the same C++ inference engine. The performance difference between them is negligible on the same hardware. What differs is the interface (terminal vs GUI), model discovery (curated library vs Hugging Face), and privacy posture (telemetry vs no telemetry).',
+            '🔍 **Did You Know:** All four installers use llama.cpp under the hood — the same C++ inference engine. However, performance can vary due to differences in batching, flash-attention optimization, KV-cache handling, and app-level overhead. What also differs is the interface (terminal vs GUI), model discovery (curated library vs Hugging Face), and privacy posture (telemetry vs no telemetry).',
           ],
         },
         ollama: {
