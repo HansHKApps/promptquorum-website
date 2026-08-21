@@ -44,8 +44,8 @@ import { cn } from '@/lib/utils'
 
 const DISMISS_KEY = 'pq_beta_fab_dismissed_until'
 const DISMISS_DURATION_MS = 14 * 24 * 60 * 60 * 1000 // 14 days
-const SHOW_DELAY_MS = 3000 // fallback timer
-const SCROLL_DEPTH_TRIGGER = 0.2 // 20% down the page
+const SHOW_DELAY_MS = 1000 // fallback timer — was 3000
+const SCROLL_DEPTH_TRIGGER = 0 // was 0.2 — show immediately, no scroll requirement
 
 // Don't show on pages that already carry this exact CTA in-context.
 const HIDDEN_PATH_PATTERNS = [/\/download(\/|$)/, /\/waitlist(\/|$)/]
@@ -58,9 +58,16 @@ const HIDDEN_PATH_PATTERNS = [/\/download(\/|$)/, /\/waitlist(\/|$)/]
 const LOCALE_PREFIX = '(?:de|fr|ja|zh|es|pt|ar|ko)'
 const HIGH_INTENT_RE = new RegExp(`^/(?:${LOCALE_PREFIX}/)?(?:local-llms|power-local-llm)(?:/|$)`)
 
-function getIntensity(pathname: string | null): 'high' | 'default' {
-  if (!pathname) return 'default'
-  return HIGH_INTENT_RE.test(pathname) ? 'high' : 'default'
+// TEST WINDOW (started 2026-08-21): pulsing "high" intensity site-wide instead of only
+// on local-llms/power-local-llm, to maximize exposure for the Preferred Source link now
+// riding along in the expanded card. Revert to the HIGH_INTENT_RE check below once the
+// ~30-day read is in (compare beta_fab_dismiss / beta_fab_open ratio — if it climbs
+// sharply in week 1, revert early rather than waiting the full window).
+function getIntensity(_pathname: string | null): 'high' | 'default' {
+  return 'high'
+  // Previous behavior, restore after the test window:
+  // if (!_pathname) return 'default'
+  // return HIGH_INTENT_RE.test(_pathname) ? 'high' : 'default'
 }
 
 type Copy = {
@@ -71,6 +78,7 @@ type Copy = {
   ctaFallback: string
   dismissAria: string
   toggleAria: string
+  preferredSourceLabel: string
 }
 
 const COPY: Record<string, Copy> = {
@@ -82,6 +90,7 @@ const COPY: Record<string, Copy> = {
     ctaFallback: 'Get the beta',
     dismissAria: 'Dismiss',
     toggleAria: 'Try the PromptQuorum beta',
+    preferredSourceLabel: 'Set as preferred source in Google',
   },
   de: {
     pillLabel: 'Beta',
@@ -91,6 +100,7 @@ const COPY: Record<string, Copy> = {
     ctaFallback: 'Beta holen',
     dismissAria: 'Schließen',
     toggleAria: 'PromptQuorum-Beta testen',
+    preferredSourceLabel: 'Als bevorzugte Quelle in Google festlegen',
   },
   fr: {
     pillLabel: 'Bêta',
@@ -100,6 +110,7 @@ const COPY: Record<string, Copy> = {
     ctaFallback: 'Obtenir la bêta',
     dismissAria: 'Fermer',
     toggleAria: 'Essayer la bêta PromptQuorum',
+    preferredSourceLabel: 'Définir comme source préférée dans Google',
   },
   es: {
     pillLabel: 'Beta',
@@ -109,6 +120,7 @@ const COPY: Record<string, Copy> = {
     ctaFallback: 'Obtener la beta',
     dismissAria: 'Cerrar',
     toggleAria: 'Probar la beta de PromptQuorum',
+    preferredSourceLabel: 'Establecer como fuente preferida en Google',
   },
   pt: {
     pillLabel: 'Beta',
@@ -118,6 +130,7 @@ const COPY: Record<string, Copy> = {
     ctaFallback: 'Obter a beta',
     dismissAria: 'Fechar',
     toggleAria: 'Experimentar a beta do PromptQuorum',
+    preferredSourceLabel: 'Definir como fonte preferida no Google',
   },
   ja: {
     pillLabel: 'ベータ',
@@ -127,6 +140,7 @@ const COPY: Record<string, Copy> = {
     ctaFallback: 'ベータ版を入手',
     dismissAria: '閉じる',
     toggleAria: 'PromptQuorumベータ版を試す',
+    preferredSourceLabel: 'Google で優先ソースに設定',
   },
   zh: {
     pillLabel: '测试版',
@@ -136,6 +150,7 @@ const COPY: Record<string, Copy> = {
     ctaFallback: '获取测试版',
     dismissAria: '关闭',
     toggleAria: '试用 PromptQuorum 测试版',
+    preferredSourceLabel: '在 Google 中设为优先来源',
   },
   ko: {
     pillLabel: '베타',
@@ -145,6 +160,7 @@ const COPY: Record<string, Copy> = {
     ctaFallback: '베타 받기',
     dismissAria: '닫기',
     toggleAria: 'PromptQuorum 베타 체험하기',
+    preferredSourceLabel: 'Google에서 선호 소스로 설정',
   },
   ar: {
     pillLabel: 'تجريبي',
@@ -154,6 +170,7 @@ const COPY: Record<string, Copy> = {
     ctaFallback: 'احصل على النسخة التجريبية',
     dismissAria: 'إغلاق',
     toggleAria: 'جرّب النسخة التجريبية من PromptQuorum',
+    preferredSourceLabel: 'تعيين كمصدر مفضل في Google',
   },
 }
 
@@ -279,7 +296,14 @@ export function BetaFloatingCta() {
             />
           )}
           <button
-            onClick={() => setExpanded(true)}
+            onClick={() => {
+              setExpanded(true)
+              try {
+                window.umami?.track('beta_fab_open', { intensity, source_page: pathname })
+              } catch {
+                // silent
+              }
+            }}
             aria-label={c.toggleAria}
             aria-expanded={expanded}
             className={cn(
@@ -315,7 +339,14 @@ export function BetaFloatingCta() {
           <div className="flex items-start justify-between gap-2">
             <h3 className="text-sm font-semibold text-text-primary">{c.title}</h3>
             <button
-              onClick={dismiss}
+              onClick={() => {
+                dismiss()
+                try {
+                  window.umami?.track('beta_fab_dismiss', { source_page: pathname })
+                } catch {
+                  // silent
+                }
+              }}
               aria-label={c.dismissAria}
               className="flex-none text-text-muted hover:text-text-secondary transition-colors p-1 -m-1"
             >
@@ -327,9 +358,31 @@ export function BetaFloatingCta() {
           <p className="mt-1.5 text-xs text-text-secondary leading-relaxed">{c.body}</p>
           <a
             href={downloadHref}
+            onClick={() => {
+              try {
+                window.umami?.track('beta_fab_download_click', { os: os ?? 'unknown', source_page: pathname })
+              } catch {
+                // silent
+              }
+            }}
             className="mt-3 inline-flex w-full items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             {ctaLabel}
+          </a>
+          <a
+            href="https://google.com/preferences/source?q=promptquorum.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => {
+              try {
+                window.umami?.track('preferred_source_click', { via: 'beta_fab', source_page: pathname, lang })
+              } catch {
+                // silent
+              }
+            }}
+            className="mt-2 inline-flex w-full items-center justify-center text-xs text-text-secondary hover:text-primary transition-colors"
+          >
+            {c.preferredSourceLabel}
           </a>
         </div>
       )}

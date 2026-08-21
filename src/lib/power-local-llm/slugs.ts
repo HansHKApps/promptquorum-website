@@ -90,4 +90,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // DeepSeek Series 2026-06-19
   'deepseek-r1-vs-distills-explained-2026':       'deepseek-r1-vs-distills-explained-2026',
   'deepseek-offline-china-self-hosted-2026':      'deepseek-offline-china-self-hosted-2026',
+
+  // Category 11 — Image & Video Generation
+  'local-ai-video-generation-vs-cloud':           'local-ai-video-generation-vs-cloud',
 }

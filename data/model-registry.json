@@ -636,6 +636,90 @@
       "source_url": "https://ollama.com/library/laguna-xs-2.1",
       "verified_date": "2026-07-29",
       "notes": "33B total / 3B active MoE, agentic/long-horizon coding focus, OpenMDW-1.1 license. SWE-bench Verified 70.9%. Already used as canonical current content in src/lib/local-llms/articles/top-open-source-models-ollama.ts (refreshed 2026-07-14). Added 2026-07-29 — was previously UNKNOWN_MODEL."
+    },
+    {
+      "company": "Alibaba",
+      "family": "Wan",
+      "model": "Wan 2.2",
+      "type": "open-weight",
+      "release_date": "2025-07-28",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://github.com/Wan-Video/Wan2.2",
+      "verified_date": "2026-08-21",
+      "notes": "Video generation model, Apache 2.0. Variants T2V-A14B/I2V-A14B (MoE, 27B total/14B active) and TI2V-5B. Highest publicly verified open-weight VBench score (~84.7%) as of 2026-08. No official Wan 2.7 or later release exists; sites offering it are scams. Added 2026-08-21 for src/lib/power-local-llm/articles/local-ai-video-generation-vs-cloud.ts."
+    },
+    {
+      "company": "Lightricks",
+      "family": "LTX",
+      "model": "LTX-2",
+      "type": "open-weight",
+      "release_date": "2025-10",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://ltx.io/model/license",
+      "verified_date": "2026-08-21",
+      "notes": "Video generation model with synchronized audio+video in one pass. LTX Community License — free commercial use under $10M annual revenue, paid license above. LTX-2.3 (2026-03) and LTX-2.5 (current, 2026-08) are both covered by this family entry. Some third-party sources incorrectly describe the license as Apache 2.0 — the official license page is the only reliable source. Added 2026-08-21 for src/lib/power-local-llm/articles/local-ai-video-generation-vs-cloud.ts."
+    },
+    {
+      "company": "Tencent",
+      "family": "Hunyuan",
+      "model": "HunyuanVideo 1.5",
+      "type": "open-weight",
+      "release_date": "2025-11-20",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5",
+      "verified_date": "2026-08-21",
+      "notes": "8.3B video generation model. Tencent Hunyuan Community License (not Apache 2.0) explicitly excludes the EU, UK, and South Korea for both the model and its outputs, per the official LICENSE file. Also caps use at 100M MAU and prohibits training competing models on outputs. Added 2026-08-21 for src/lib/power-local-llm/articles/local-ai-video-generation-vs-cloud.ts."
+    },
+    {
+      "company": "MiniMax",
+      "family": "MiniMax",
+      "model": "MiniMax H3",
+      "type": "open-weight",
+      "release_date": "2026-08-03",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://www.minimax.io/news/minimax-h3-open-source",
+      "verified_date": "2026-08-21",
+      "notes": "33.1B omni-modal video generation model, native stereo audio. Announced API-only 2026-07-31, weights published to Hugging Face 2026-08-03 under the MiniMax H3 Community License (reportedly carries its own geographic restrictions and a $20M revenue threshold — verify against the official model card before citing specifics). Local release caps at 768p; full 2K pipeline is hosted-only. Added 2026-08-21 for src/lib/power-local-llm/articles/local-ai-video-generation-vs-cloud.ts."
+    },
+    {
+      "company": "Kuaishou",
+      "family": "Kling",
+      "model": "Kling 3.0",
+      "type": "closed",
+      "release_date": "2026-02-05",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be",
+      "verified_date": "2026-08-21",
+      "notes": "Closed cloud video generation model. Up to 15s clips, native multi-language audio. Referenced as market context (not locally runnable) in src/lib/power-local-llm/articles/local-ai-video-generation-vs-cloud.ts. Added 2026-08-21."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Veo",
+      "model": "Veo 3.1",
+      "type": "closed",
+      "release_date": "2025-10-14",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://deepmind.google/models/veo/",
+      "verified_date": "2026-08-21",
+      "notes": "Closed cloud video generation model, 8s clips up to 4K with native audio. Accessible via Gemini API/app, Google Flow, Vertex AI. Referenced as market context (not locally runnable) in src/lib/power-local-llm/articles/local-ai-video-generation-vs-cloud.ts. Added 2026-08-21."
+    },
+    {
+      "company": "ByteDance",
+      "family": "Seedance",
+      "model": "Seedance 2.5",
+      "type": "closed",
+      "release_date": "2026-07-31",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://dreamina.capcut.com/seedance/seedance-2-5",
+      "verified_date": "2026-08-21",
+      "notes": "Closed cloud video generation model, single-pass 30s clips up to 720p with native synchronized audio. Announced 2026-06-23, launched 2026-07-31. Seedance 2.0's global rollout was paused in March 2026 after cease-and-desist letters from major studios; it remains accessible in China with legal risk for international commercial use. Referenced as market context (not locally runnable) in src/lib/power-local-llm/articles/local-ai-video-generation-vs-cloud.ts. Added 2026-08-21."
     }
   ],
   "sources": [
