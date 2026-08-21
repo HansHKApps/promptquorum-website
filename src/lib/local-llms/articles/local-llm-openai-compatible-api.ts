@@ -64,7 +64,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Code change:** 2 lines — `base_url` and `api_key`. All other code stays identical.',
             '**Supported:** Chat completions, text completions, embeddings, streaming, function calling',
             '**AI coding tools:** Aider, Cline, and Roo Code all support an OpenAI-compatible provider mode using the same base_url',
-            '**Authentication:** None by default — localhost access only. Add reverse proxy for network access.',
+            '**Authentication:** commonly starts without auth, bound to localhost by default. Add reverse proxy and authentication if exposing beyond localhost, since vLLM supports API-key auth and LM Studio can be exposed publicly.',
             '**Model for code examples:** Llama 4 Scout (best quality on 12 GB) or Llama 3.2 3B (lightweight)',
           ],
         },
