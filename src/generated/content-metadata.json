@@ -7116,7 +7116,15 @@
       "publishDate": "2026-08-21",
       "hasSections": true,
       "langs": [
-        "en"
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
       ],
       "images": []
     },
