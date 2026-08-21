@@ -49,7 +49,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Ollama exposes a REST API at `http://localhost:11434/v1` that mirrors OpenAI\'s API exactly.',
             'Use the OpenAI Python library: change `api_key="openai"` to `api_key="ollama"` and `base_url="http://localhost:11434/v1"`.',
             'Same approach in Node.js: OpenAI SDK, point to localhost:11434.',
-            'The OpenAI-compatible API is identical across Ollama, vLLM, and LM Studio -- no code changes needed to switch providers.',
+            'The OpenAI-compatible API share the same base format across Ollama, vLLM, and LM Studio -- no code changes needed to switch providers.',
             'As of May 2026, streaming (streaming responses token-by-token) and function calling both work with local models via this API.',
             'Aider, Cline, and Roo Code all connect to local models through this same base_url setting -- no separate integration required.',
           ],
