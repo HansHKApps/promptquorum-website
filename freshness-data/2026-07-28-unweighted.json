@@ -1,0 +1,88 @@
+{
+  "generatedAt": "2026-07-28T19:57:34.848Z",
+  "scope": "EN articles: local-llms, prompt-engineering, power-local-llm (blog excluded — see docs)",
+  "unweighted": {
+    "n": 274,
+    "meanDays": 49.2,
+    "medianDays": 38,
+    "buckets": [
+      {
+        "label": "0-5",
+        "count": 1,
+        "pct": 0.4
+      },
+      {
+        "label": "6-15",
+        "count": 82,
+        "pct": 29.9
+      },
+      {
+        "label": "16-30",
+        "count": 25,
+        "pct": 9.1
+      },
+      {
+        "label": "31-60",
+        "count": 72,
+        "pct": 26.3
+      },
+      {
+        "label": "61-120",
+        "count": 84,
+        "pct": 30.7
+      },
+      {
+        "label": "121+",
+        "count": 10,
+        "pct": 3.6
+      }
+    ]
+  },
+  "warnings": [],
+  "weighted": {
+    "n": 137,
+    "meanDays": 31.1,
+    "medianDays": 27,
+    "buckets": [
+      {
+        "label": "0-5",
+        "impressions": 1127,
+        "pct": 0.3
+      },
+      {
+        "label": "6-15",
+        "impressions": 147292,
+        "pct": 44.4
+      },
+      {
+        "label": "16-30",
+        "impressions": 19665,
+        "pct": 5.9
+      },
+      {
+        "label": "31-60",
+        "impressions": 140434,
+        "pct": 42.4
+      },
+      {
+        "label": "61-120",
+        "impressions": 22589,
+        "pct": 6.8
+      },
+      {
+        "label": "121+",
+        "impressions": 335,
+        "pct": 0.1
+      }
+    ],
+    "unmatchedGscRows": 73,
+    "unmatchedArticles": 137
+  },
+  "byproducts": {
+    "enShareOfImpressions": 90,
+    "discardedQueryStringRows": 1,
+    "nonEnRows": 178,
+    "nonEnImpressions": 41865
+  },
+  "priorityRefreshList": []
+}

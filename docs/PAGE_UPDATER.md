@@ -253,14 +253,19 @@ After updating, verify:
 
 ### Step 5: Multi-Language Propagation
 
-After the English (EN) page is finalized, propagate changes to all active non-English language versions. The active set is **6 languages total** (EN + 5):
+After the English (EN) page is finalized, propagate changes to all active non-English language versions. The active set is **9 languages total** (EN + 8):
 - DE (German)
 - ES (Spanish)
 - FR (French)
 - JA (Japanese)
 - ZH (Chinese)
+- PT (Brazilian Portuguese — pt-BR)
+- AR (Arabic — RTL)
+- KO (Korean)
 
-**Reserved languages — `pt` and `ar`:** These exist in the `Language` type but have no content yet. Do NOT propagate to them or fabricate blocks for them. Only translate `pt`/`ar` once their content is authored. When `pt` is authored it MUST be **Brazilian Portuguese** (pt-BR — você form, BR vocabulary such as *arquivo*/*tela*/*gerenciar*, LGPD/ANPD for compliance, hreflang and schema.inLanguage = `pt-BR`), never European Portuguese. `ar` is **RTL** and must keep Latin technical terms LTR.
+When updating `pt`, it MUST be **Brazilian Portuguese** (pt-BR — você form, BR vocabulary such as *arquivo*/*tela*/*gerenciar*, LGPD/ANPD for compliance, hreflang and schema.inLanguage = `pt-BR`), never European Portuguese. `ar` is **RTL** and must keep Latin technical terms LTR.
+
+**2026-08-21 correction:** this section previously stated a 6-language active set (EN + DE/ES/FR/JA/ZH) with `pt` and `ar` marked reserved/unauthored and `ko` not mentioned at all — directing updates to skip propagating to all three. That was stale and wrong: the live site has full authored content in pt/ar/ko on published pages (confirmed against `CLAUDE.md`'s 9-language `PATH_PREFIX_LANGS` and direct inspection of article source files). Any page update using the old 6-language instruction would have silently skipped 3 of the site's 9 live languages during a "full-depth" refresh. Re-verify against the live site before ever narrowing this list again — do not trust a language being "reserved" without checking whether it has shipped since.
 
 **Language update rules:**
 - Model names, benchmark names, ollama commands, and VRAM numbers are language-independent — copy exactly
@@ -386,7 +391,9 @@ Many pages include embedded slide decks and downloadable PDF reference cards. Th
 This file does NOT replace GEO writing guidelines. All updates must follow existing H2/H3 rules, lead answer block format, meta description formulas, Sources requirements, Related Reading requirements, and FAQ format. This file adds the update-specific process on top.
 
 ### geo-translation (per-language localization) and geo-meta-optimizer (meta tags)
-Step 5 translations must follow the **geo-translation** guide (the authoritative localization spec — 6 active languages, pt/ar reserved, Brazilian Portuguese for pt, RTL for ar). Title/meta-description optimization follows **geo-meta-optimizer** (per-language length targets, hard length gate). This protocol governs the *content refresh*; those two govern *how translation and meta are produced*. Keep all three in sync on the language set.
+Step 5 translations must follow the **geo-translation** guide (the authoritative localization spec — 9 active languages per `CLAUDE.md`'s `PATH_PREFIX_LANGS`: DE/ES/FR/JA/ZH/PT/AR/KO plus EN, Brazilian Portuguese for pt, RTL for ar). Title/meta-description optimization follows **geo-meta-optimizer** (per-language length targets, hard length gate). This protocol governs the *content refresh*; those two govern *how translation and meta are produced*. Keep all three in sync on the language set.
+
+**2026-08-21 correction:** this line previously read "6 active languages, pt/ar reserved" and did not mention ko at all. That was stale — confirmed against the live site (working 9-language switcher on published local-llms pages, e.g. `de/local-llms/best-gpu-for-llm-inference-under-500-2026`), `CLAUDE.md` (states 9 languages site-wide), and direct inspection of article source files (pt/ar/ko blocks contain full authored content, not stubs, across multiple `local-llms` articles). Do not reintroduce a 6-language assumption here without re-verifying against the live site first.
 
 ### CONTENT_FRESHNESS_CLASSIFICATION.md
 This file extends the freshness system by adding the `monthly` tier and defining the operational process for each refresh cycle.

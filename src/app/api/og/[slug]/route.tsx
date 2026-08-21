@@ -174,7 +174,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
       ] : undefined,
       headers: {
         'Content-Type': 'image/png',
-        'Cache-Control': 'public, max-age=86400, immutable',
+        'Cache-Control': 'public, max-age=86400, s-maxage=31536000, immutable',
       },
     },
   )

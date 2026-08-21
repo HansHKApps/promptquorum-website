@@ -4,6 +4,13 @@ import { PATH_PREFIX_LANGS } from './src/lib/i18n/constants'
 const FRAMEWORK_REDIRECT_SLUGS = ['craft', 'trace', 'risen', 'rtf', 'co-star']
 
 const nextConfig: NextConfig = {
+  // Frozen at build time so freshness-badge logic (src/lib/article-freshness.ts)
+  // is deterministic across ISR revalidations within the same deployment —
+  // using `new Date()` there would make output wall-clock-dependent and defeat
+  // any unchanged-content caching exemption.
+  env: {
+    BUILD_DATE: new Date().toISOString(),
+  },
   compress: true,
   trailingSlash: false,
   experimental: {
@@ -146,10 +153,13 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        // OG images are fetched cross-origin by social crawlers and link previewers
+        // OG images are fetched cross-origin by social crawlers and link previewers.
+        // Overrides the broader /api/:path* Cache-Control below (s-maxage=3600) —
+        // without this, generated PNGs never get a durable edge-cache hit.
         source: '/api/og/:path*',
         headers: [
           { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=31536000, immutable' },
         ],
       },
       {

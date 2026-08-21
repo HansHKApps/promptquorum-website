@@ -175,6 +175,30 @@ const THEME_COLORS: Record<string, { dot: string; badge: string }> = {
   'Balcony Solar Long-Tail':    { dot: 'bg-amber-400',   badge: 'bg-amber-50 text-amber-700 border border-amber-200' },
 }
 
+// Public-facing badge text for each internal `theme` value above. `theme` is an internal
+// content-strategy category (used by editorial tooling/audits) and must never be rendered
+// verbatim — "Balcony Solar Money Pages" showing up on a live page is an internal label
+// leak, not a real category name. Any theme not listed here falls back to the generic
+// "Balcony Solar" label (POST_UI.breadcrumbHub) rather than printing the raw internal string.
+const THEME_LABELS: Record<string, Partial<Record<Language, string>>> = {
+  'Balcony Solar Foundations': {
+    en: 'Guide', de: 'Ratgeber', fr: 'Guide', ja: 'ガイド', zh: '指南',
+    es: 'Guía', pt: 'Guia', ar: 'دليل', ko: '가이드',
+  },
+  'Balcony Solar Long-Tail': {
+    en: 'Guide', de: 'Ratgeber', fr: 'Guide', ja: 'ガイド', zh: '指南',
+    es: 'Guía', pt: 'Guia', ar: 'دليل', ko: '가이드',
+  },
+  'Balcony Solar Legislation': {
+    en: 'Regulations', de: 'Vorschriften', fr: 'Réglementation', ja: '規制', zh: '法规',
+    es: 'Normativa', pt: 'Regulamentação', ar: 'اللوائح', ko: '규정',
+  },
+  'Balcony Solar Money Pages': {
+    en: 'Balcony Solar', de: 'Balcony Solar', fr: 'Balcony Solar', ja: 'Balcony Solar', zh: 'Balcony Solar',
+    es: 'Balcony Solar', pt: 'Balcony Solar', ar: 'Balcony Solar', ko: 'Balcony Solar',
+  },
+}
+
 // Runtime safety net: rendered when an article slips through the prebuild
 // validator with a non-canonical theme (e.g., a translation that translated
 // the theme field). Without this, THEME_COLORS[badTheme] is undefined and
@@ -784,7 +808,7 @@ function BalconySolarPostContent({ slug, lang }: Props) {
         {/* Article header */}
         <div className="mb-10">
           <span className={`inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-4 ${colors.badge}`}>
-            {article.theme}
+            {THEME_LABELS[article.theme]?.[lang] ?? THEME_LABELS[article.theme]?.en ?? POST_UI.breadcrumbHub[lang] ?? 'Balcony Solar'}
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-4 leading-tight">
             {article.title}

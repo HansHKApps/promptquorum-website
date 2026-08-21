@@ -11,7 +11,8 @@ Generate production-ready translations for one language at a time with full loca
 ```
 
 **Exactly one language in the path prefix (`/de/`, `/fr/`, `/ja/`, etc.)** Supported: `ar`, `de`, `es`, `fr`, `ja`, `ko`, `pt`, `zh`.
-  - `es`, `de`, `fr`, `ja`, `zh` are ACTIVE. `pt` (Brazilian Portuguese), `ar` (Arabic), and `ko` (Korean) are RESERVED — full rules below; only generate them when authoring real content in those languages. `pt` outputs hreflang `pt-BR`; `ar` is RTL; `ko` is LTR.
+  - All 8 (`es`, `de`, `fr`, `ja`, `zh`, `pt`, `ar`, `ko`) are ACTIVE, matching `CLAUDE.md`'s 9-language site-wide language set (EN + these 8). `pt` outputs hreflang `pt-BR`; `ar` is RTL; `ko` is LTR.
+  - **2026-08-21 correction:** this line previously marked `pt`/`ar`/`ko` as RESERVED (unauthored). That was stale — the live site has full authored content in all 9 languages on published pages (confirmed via `CLAUDE.md` and direct inspection of `local-llms` article source files). Do not treat these three as reserved/skip-by-default without re-verifying against the live site first.
 
 ---
 
@@ -328,7 +329,7 @@ feat: Add DE (German) translation for local-llm-hardware-guide-2026 article
 
 ### 🔧 ALWAYS Set / Compute
 - `schema.url` → prepend language path prefix (e.g., `https://www.promptquorum.com/de/local-llms/slug`). EN: no prefix (default).
-- `schema.inLanguage` → `'de'` / `'es'` / `'fr'` / `'ja'` / `'zh'` / `'pt-BR'` (Portuguese — Brazilian; NOT `'pt'`) / `'ar'` / `'ko'` (RESERVED until go-live)
+- `schema.inLanguage` → `'de'` / `'es'` / `'fr'` / `'ja'` / `'zh'` / `'pt-BR'` (Portuguese — Brazilian; NOT `'pt'`) / `'ar'` / `'ko'` — all 9 languages including `ko` are live (2026-08-21 correction: `ko` is no longer gated, do emit it in hreflang/sitemap/`schema.inLanguage`)
 - `howToSchema.inLanguage`, `faqSchema.inLanguage`, `itemListSchema.inLanguage` → same as `schema.inLanguage` (add to all schema types)
 - `schema.author` → ALWAYS normalize to `{ '@type': 'Person', 'name': 'Hans Kuepper' }`
 - `schema.publisher` → ALWAYS normalize to `{ '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }`
@@ -524,7 +525,7 @@ de: {
 
 ### 🇧🇷 PT — Portuguese (Brazilian / pt-BR)
 
-> **RESERVED language.** Only generate when authoring real Brazilian Portuguese content. Target **Brazil (pt-BR)**, NEVER European Portuguese (pt-PT). hreflang and schema.inLanguage MUST output `pt-BR`.
+> **ACTIVE language** (2026-08-21 correction — previously marked RESERVED; live-site content confirms pt-BR is fully authored and published). Target **Brazil (pt-BR)**, NEVER European Portuguese (pt-PT). hreflang and schema.inLanguage MUST output `pt-BR`.
 
 | Aspect | Rule |
 |--------|------|
@@ -545,7 +546,7 @@ de: {
 
 ### 🇸🇦 AR — Arabic (Modern Standard Arabic / RTL)
 
-> **RESERVED language.** Only generate when authoring real Arabic content. Arabic is **right-to-left (RTL)** — handle bidirectional text carefully (see RTL rule below).
+> **ACTIVE language** (2026-08-21 correction — previously marked RESERVED; live-site content confirms Arabic is fully authored and published). Arabic is **right-to-left (RTL)** — handle bidirectional text carefully (see RTL rule below).
 
 | Aspect | Rule |
 |--------|------|
@@ -567,7 +568,7 @@ de: {
 
 ### 🇰🇷 KO — Korean (Modern Standard / formal register)
 
-> **RESERVED language.** Only generate when authoring real Korean content. Korean (`ko`) is gated — do not emit `ko` in hreflang, sitemap, or `schema.inLanguage` until go-live is enabled.
+> **ACTIVE language** (2026-08-21 correction — previously marked RESERVED and gated; live-site content confirms `ko` is fully authored, published, and already emitted in hreflang/sitemap/`schema.inLanguage`). No further go-live gating applies.
 
 | Aspect | Rule |
 |--------|------|

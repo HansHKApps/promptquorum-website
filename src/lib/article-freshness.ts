@@ -1,8 +1,12 @@
 const NEW_BADGE_DAYS = 14
 
+// Frozen at build time (next.config.ts) instead of read per-render, so badge
+// output stays identical across ISR revalidations until the next deployment.
+const BUILD_DATE = new Date(process.env.BUILD_DATE ?? Date.now())
+
 function daysSince(dateStr: string): number {
   const date = new Date(dateStr)
-  const today = new Date()
+  const today = new Date(BUILD_DATE)
   today.setHours(0, 0, 0, 0)
   date.setHours(0, 0, 0, 0)
   return Math.floor((today.getTime() - date.getTime()) / (1000 * 60 * 60 * 24))
