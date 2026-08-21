@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
-    heroImage: '/images/build-your-own-framework-overview-hero-en.png',
+    heroImage: '/images/build-your-own-framework-overview-hero-en.webp',
     title: 'Build Your Own Prompt Framework: 5-Step Design Process',
     seoTitle: 'Build a Custom Prompt Framework: 5-Step Process',
     intro: 'When existing frameworks — CO-STAR, CRAFT, RISEN — don\'t fit your workflow, building a custom prompt framework gives your team a reusable, testable structure. This guide covers when to build vs adopt, the 5-step design process, and a worked example.',
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
-    heroImage: '/images/build-your-own-framework-overview-hero-de.png',
+    heroImage: '/images/build-your-own-framework-overview-hero-de.webp',
     title: 'Eigenes Prompt-Framework erstellen: 5-Schritte-Prozess (2026)',
     seoTitle: 'Eigenes Prompt-Framework entwickeln: 5-Schritte-Anleitung',
     intro: 'Wenn Standardframeworks wie CO-STAR, CRAFT und RISEN nicht zu Ihrem Workflow passen, liefert ein maßgeschneidertes Prompt-Framework eine wiederverwendbare, testbare Struktur. Diese Anleitung erklärt, wann ein eigenes Framework sinnvoll ist, wie der 5-Schritte-Prozess funktioniert und zeigt ein konkretes Praxisbeispiel.',
@@ -429,7 +429,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
-    heroImage: '/images/build-your-own-framework-overview-hero-es.png',
+    heroImage: '/images/build-your-own-framework-overview-hero-es.webp',
     title: 'Construye tu propio framework de prompts: proceso de 5 pasos',
     seoTitle: 'Crear un framework de prompts personalizado: 5 pasos',
     intro: 'Cuando los frameworks existentes — CO-STAR, CRAFT, RISEN — no se adaptan a tu flujo de trabajo, construir un framework de prompts personalizado le da a tu equipo una estructura reutilizable y testeable. Esta guía cubre cuándo construir vs adoptar, el proceso de 5 pasos y un ejemplo práctico.',
@@ -669,7 +669,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
-    heroImage: '/images/build-your-own-framework-overview-hero-pt.png',
+    heroImage: '/images/build-your-own-framework-overview-hero-pt.webp',
     title: 'Construa seu próprio framework de prompts: processo de 5 etapas',
     seoTitle: 'Criar um framework de prompts personalizado: 5 etapas',
     intro: 'Quando os frameworks existentes — CO-STAR, CRAFT, RISEN — não se adaptam ao seu fluxo de trabalho, construir um framework de prompts personalizado dá à sua equipe uma estrutura reutilizável e testável. Este guia cobre quando construir vs. adotar, o processo de 5 etapas e um exemplo prático.',
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
-    heroImage: '/images/build-your-own-framework-overview-hero-fr.png',
+    heroImage: '/images/build-your-own-framework-overview-hero-fr.webp',
     title: 'Créer son propre framework de prompts : processus en 5 étapes',
     seoTitle: 'Créer un framework de prompts personnalisé : 5 étapes',
     intro: 'Quand les frameworks existants — CO-STAR, CRAFT, RISEN — ne correspondent pas à votre flux de travail, créer un framework de prompts personnalisé donne à votre équipe une structure réutilisable et testable. Ce guide explique quand créer plutôt qu\'adopter, le processus en 5 étapes, et un exemple concret.',
@@ -1099,7 +1099,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'フレームワーク',
-    heroImage: '/images/build-your-own-framework-overview-hero-ja.png',
+    heroImage: '/images/build-your-own-framework-overview-hero-ja.webp',
     title: '独自プロンプトフレームワークの構築：5ステップ設計プロセス',
     seoTitle: 'カスタムプロンプトフレームワーク構築：5ステップ手順',
     intro: 'CO-STAR、CRAFT、RISENなどの既存フレームワークがワークフローに合わない場合、カスタムプロンプトフレームワークを構築することで、チームに再利用可能でテスト可能な構造を提供できます。このガイドでは、構築すべき状況、5ステップの設計プロセス、実践例を解説します。',
@@ -1301,7 +1301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     theme: '框架',
-    heroImage: '/images/build-your-own-framework-overview-hero-zh.png',
+    heroImage: '/images/build-your-own-framework-overview-hero-zh.webp',
     title: '构建自己的Prompt框架：5步设计流程',
     seoTitle: '构建自定义Prompt框架：5步设计流程指南',
     intro: '当CO-STAR、CRAFT、RISEN等现有框架不适合您的工作流程时，构建自定义Prompt框架可以为团队提供可复用、可测试的结构。本指南说明何时应构建而非采用现有框架、5步设计流程，以及完整的实操案例。',
@@ -1503,7 +1503,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
-    heroImage: '/images/build-your-own-framework-overview-hero-ar.png',
+    heroImage: '/images/build-your-own-framework-overview-hero-ar.webp',
     title: 'بناء إطار عمل خاص بك للأوامر: عملية من ⁨5⁩ خطوات',
     seoTitle: 'بناء إطار عمل ⁨Prompt⁩ مخصص: عملية ⁨5⁩ خطوات',
     intro: 'عندما لا تتناسب أطر العمل الموجودة — CO-STAR وCRAFT وRISEN — مع سير عملك، فإن بناء إطار عمل مخصص للأوامر يمنح فريقك بنية قابلة لإعادة الاستخدام والاختبار. يتناول هذا الدليل متى تبني مقابل متى تتبنى، وعملية التصميم المكونة من 5 خطوات، ومثالاً عملياً.',
@@ -1742,7 +1742,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
-    heroImage: '/images/build-your-own-framework-overview-hero-ko.png',
+    heroImage: '/images/build-your-own-framework-overview-hero-ko.webp',
     title: '나만의 프롬프트 프레임워크 만들기: 5단계 프로세스',
     seoTitle: '커스텀 프롬프트 프레임워크 만들기: 5단계 가이드',
     intro: 'CO-STAR, CRAFT, RISEN 같은 기존 프레임워크가 업무 흐름에 맞지 않을 때, 커스텀 프롬프트 프레임워크를 구축하면 팀에게 재사용 가능하고 검증된 구조를 제공합니다. 이 가이드는 구축 vs. 도입 판단 기준, 5단계 프로세스, 그리고 실제 예시를 다룹니다.',

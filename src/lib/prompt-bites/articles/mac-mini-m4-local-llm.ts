@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-en.png',
+    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-en.webp',
     title: 'Is the Mac Mini M4 Good for Local LLMs in 2026?',
     seoTitle: 'Mac Mini M4 for Local LLMs: 16GB vs 24GB vs 48GB Guide 2026',
     metaDescription: 'Mac Mini M4 for local LLMs: 16 GB runs Qwen 3 8B (~35 tok/s); 24 GB M4 Pro adds 14B models (Qwen 14B ~20 tok/s); 48 GB runs 32B class. Best picks per config, July 2026.',
@@ -188,7 +188,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-de.png',
+    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-de.webp',
     title: 'Ist der Mac Mini M4 2026 gut für lokale LLMs?',
     seoTitle: 'Mac Mini M4 für lokale LLMs 2026 | Prompt Bites',
     metaDescription: 'Ja, der Mac Mini M4 läuft gut mit lokalen LLMs. Der M4 Pro mit 24 GB Unified Memory führt 8B-Modelle flüssig aus und ist die beste Apple-Wahl.',
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-fr.png',
+    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-fr.webp',
     title: 'Le Mac Mini M4 est-il bon pour les LLM locaux en 2026 ?',
     seoTitle: 'Mac Mini M4 pour LLM local 2026 | Prompt Bites',
     metaDescription: 'Oui, le Mac Mini M4 fait tourner les LLM locaux. Le M4 Pro avec 24 GB de mémoire unifiée gère les modèles 8B et constitue le meilleur Apple à prix correct.',
@@ -472,7 +472,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-ja.png',
+    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-ja.webp',
     title: '2026年、Mac Mini M4はローカルLLMに向いていますか？',
     seoTitle: 'ローカルLLM向けMac Mini M4 2026 | Prompt Bites',
     metaDescription: 'はい、Mac Mini M4はローカルLLMで良好に動作します。24 GBユニファイドメモリのM4 Proは8Bモデルを快適に動かす最良のApple選択肢です。',
@@ -614,7 +614,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-zh.png',
+    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-zh.webp',
     title: '2026年Mac Mini M4适合本地LLM吗？',
     seoTitle: '本地LLM用Mac Mini M4 2026 | Prompt Bites',
     metaDescription: '是的,Mac Mini M4适合本地LLM。M4 Pro配24 GB统一内存可流畅运行8B模型,是Apple中性价比最佳的选择。',
@@ -759,7 +759,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-pt.png',
+    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-pt.webp',
     title: 'O Mac Mini M4 é bom para LLMs locais em 2026?',
     seoTitle: 'Mac Mini M4 para LLMs locais 2026 | Prompt Bites',
     metaDescription: 'Sim, o Mac Mini M4 roda LLMs locais bem. O M4 Pro com 24 GB de memória unificada lida com modelos 8B facilmente e é a melhor opção Apple em custo-benefício.',
@@ -901,7 +901,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-es.png',
+    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-es.webp',
     title: '¿Es el Mac Mini M4 bueno para LLMs locales en 2026?',
     seoTitle: 'Mac Mini M4 para LLMs locales 2026 | Prompt Bites',
     metaDescription: 'Sí, el Mac Mini M4 ejecuta LLMs locales bien. El M4 Pro con 24 GB unificados maneja modelos 8B con holgura y es la mejor opción Apple en calidad-precio.',
@@ -1043,7 +1043,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-ar.png',
+    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-ar.webp',
     title: 'هل ⁨Mac Mini M4⁩ مناسب للنماذج اللغوية المحلية في ⁨2026⁩؟',
     seoTitle: '⁨Mac Mini M4⁩ لتشغيل النماذج ⁨LLM⁩ محلياً ⁨2026⁩',
     metaDescription: '⁨Mac Mini M4 Pro⁩ بـ ⁨24 GB⁩ ذاكرة موحدة يُشغّل ⁨Llama 3 8B⁩ بـ ~⁨36⁩ توكن/ثانية عبر ⁨MLX⁩. لا سقف ⁨VRAM⁩ منفصل؛ أفضل خيار ⁨Apple⁩ لتشغيل ⁨LLMs⁩ محلياً.',
@@ -1185,7 +1185,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-ko.png',
+    heroImage: '/images/mac-mini-m4-local-llm-overview-hero-ko.webp',
     title: 'Mac Mini M4는 2026년에 로컬 LLM 실행에 적합한가?',
     seoTitle: 'Mac Mini M4 로컬 LLM 2026 | Prompt Bites',
     metaDescription: 'Mac Mini M4 Pro 24 GB 통합 메모리로 Llama 3 8B를 MLX를 통해 ~36 tok/s로 실행합니다. 별도 VRAM 한계 없이 로컬 LLM 실행에 최고의 Apple 가성비 옵션입니다.',

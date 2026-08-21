@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-07-02',
     current_hardware_mentioned: ['EcoFlow STREAM Ultra', 'Zendure SolarFlow', 'Anker SOLIX Solarbank'],
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-en.png',
+    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-en.webp',
     affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure: Balcony Solar Ecosystem Compared',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure Balcony Solar (2026)',
@@ -153,7 +153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-es.png',
+    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-es.webp',
     affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure: comparativa del ecosistema de energía solar de balcón',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure solar de balcón (2026)',
@@ -297,7 +297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-pt.png',
+    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-pt.webp',
     affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure: comparativo do ecossistema de energia solar de varanda',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure solar de varanda (2026)',
@@ -441,7 +441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-ar.png',
+    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-ar.webp',
     affiliateDisclosure: true,
     title: 'EcoFlow مقابل Anker مقابل Zendure: مقارنة نظام الطاقة الشمسية للشرفة',
     seoTitle: 'EcoFlow مقابل Anker مقابل Zendure للطاقة الشمسية للشرفة (2026)',
@@ -585,7 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-ja.png',
+    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-ja.webp',
     affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure：バルコニーソーラーのエコシステム比較',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure バルコニーソーラー（2026年）',
@@ -729,7 +729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-zh.png',
+    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-zh.webp',
     affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure：阳台光伏储能生态系统对比',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure 阳台光伏（2026）',
@@ -873,7 +873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-fr.png',
+    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-fr.webp',
     affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure : comparatif de l\'écosystème solaire de balcon',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure solaire de balcon (2026)',
@@ -1017,7 +1017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-de.png',
+    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-de.webp',
     affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure: Balkonkraftwerk-Ökosystem im Vergleich',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure Balkonkraftwerk Vergleich (2026)',
@@ -1161,7 +1161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-ko.png',
+    heroImage: '/images/ecoflow-vs-anker-vs-zendure-balcony-solar-overview-hero-ko.webp',
     affiliateDisclosure: true,
     title: 'EcoFlow vs. Anker vs. Zendure: 발코니 태양광 생태계 비교',
     seoTitle: 'EcoFlow vs. Anker vs. Zendure 발코니 태양광 (2026년)',

@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Five iPhone apps run real LLMs fully on-device in 2026: PocketPal AI, Private LLM, MLC Chat, LLM Farm, and Apple Intelligence (system-integrated). All work without WiFi once the model is downloaded. This guide ranks them on tokens-per-second on iPhone 16 Pro and iPhone 17 Pro, model library, RAM management, privacy posture, and iOS integration.',
     metaDescription:
       'Five iPhone apps that run real LLMs on-device in 2026. PocketPal AI, Private LLM, MLC Chat, LLM Farm tested on iPhone 16 Pro and 17 Pro. Speed, privacy, model library compared.',
-    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-en.png',
+    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-en.webp',
     twitterDescription:
       'iPhone local AI in 2026: PocketPal AI (free default), Private LLM (paid Shortcuts), MLC Chat (Apple Silicon optimised), LLM Farm (most configurable). All run offline once downloaded.',
     current_models_mentioned: [
@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Which iPhone App Should You Install First?',
         content:
           '**For most users: PocketPal AI from the App Store, then download Phi-4 Mini (3.8B Q4_K_M).** This combination works on iPhone 14 Pro and newer, costs nothing, and produces usable output for everyday chat, summarisation, and quick drafting. Choose a different app only when you have a specific need it does not cover.',
-        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-en.png',
+        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-en.webp',
         imageCaption: 'Which local AI app to install on iPhone: PocketPal AI (free default), Private LLM (Siri + Shortcuts), MLC Chat (fastest on Apple Silicon), LLM Farm (configurable), Apple Intelligence (iOS 18+ built-in).',
         snippetBlocks: [
           {
@@ -161,7 +161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'iPhone App Comparison Table',
         content:
           '**The five apps differ on three axes that matter to most users: cost, model flexibility, and integration with iOS.** Speed differences exist but are smaller than the gap between any of these apps and a cloud LLM.',
-        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-en.png',
+        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-en.webp',
         imageCaption: 'iPhone local LLM app comparison: PocketPal AI and LLM Farm (free, ~10–15 tok/s), MLC Chat (free, ~14–20 tok/s Metal-accelerated), Private LLM (~£10 one-time, Siri + Shortcuts), Apple Intelligence (system-integrated, iOS 18+).',
         snippetBlocks: [
           {
@@ -458,7 +458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Fünf iPhone-Apps führen echte LLMs vollständig auf dem Gerät aus: PocketPal AI, Private LLM, MLC Chat, LLM Farm und Apple Intelligence (systemintegriert). Alle funktionieren ohne WLAN, sobald das Modell heruntergeladen wurde. Dieser Leitfaden bewertet die Apps nach Tokens pro Sekunde auf dem iPhone 16 Pro und iPhone 17 Pro, Modellbibliothek, RAM-Verwaltung, Datenschutz und iOS-Integration.',
     metaDescription:
       'PocketPal AI, Private LLM, MLC Chat und LLM Farm: Die besten LLM-Apps fürs iPhone 2026 im Test. Offline-KI auf iPhone 16 Pro und 17 Pro verglichen.',
-    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-de.png',
+    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-de.webp',
     twitterDescription:
       'iPhone-Local-KI 2026: PocketPal AI (kostenlos), Private LLM (mit Siri, 10,99 €), MLC Chat (schnellste), LLM Farm (konfigurierbar). Alle laufen offline nach dem Download.',
     current_models_mentioned: [
@@ -557,7 +557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Welche iPhone-App sollte ich zuerst installieren?',
         content:
           '**Für die meisten Nutzer: PocketPal AI aus dem App Store, dann Phi-4 Mini (3,8B Q4_K_M) herunterladen.** Diese Kombination funktioniert auf iPhone 14 Pro und neueren Modellen, ist kostenlos und liefert brauchbare Ergebnisse für alltäglichen Chat, Zusammenfassungen und schnelles Schreiben. Wählen Sie eine andere App nur, wenn Sie einen spezifischen Bedarf haben, den PocketPal AI nicht abdeckt.',
-        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-de.png',
+        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-de.webp',
         imageCaption: 'Welche lokale KI-App für iPhone: PocketPal AI (kostenloser Standard), Private LLM (Siri + Kurzbefehle), MLC Chat (schnellste auf Apple Silicon), LLM Farm (konfigurierbar), Apple Intelligence (integriert in iOS 18+).',
         snippetBlocks: [
           {
@@ -601,7 +601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'iPhone-App-Vergleichstabelle',
         content:
           '**Die fünf Apps unterscheiden sich in drei Dimensionen, die für die meisten Nutzer entscheidend sind: Kosten, Modellflexibilität und iOS-Integration.** Geschwindigkeitsunterschiede existieren, sind aber geringer als der Abstand zwischen diesen Apps und einem Cloud-LLM.',
-        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-de.png',
+        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-de.webp',
         imageCaption: 'iPhone Local-LLM-App-Vergleich: PocketPal AI und LLM Farm (kostenlos, ~10–15 Tok/Sek.), MLC Chat (kostenlos, ~14–20 Tok/Sek., Metal-beschleunigt), Private LLM (~10,99€ einmalig, Siri + Kurzbefehle), Apple Intelligence (systemintegriert, iOS 18+).',
         snippetBlocks: [
           {
@@ -905,7 +905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026年に5つのiPhoneアプリが、デバイス上で本格的なLLMを完全動作させます：PocketPal AI、Private LLM、MLC Chat、LLM Farm、そしてApple Intelligence（システム統合型）です。すべてのアプリはモデルをダウンロードすれば、WiFiなしで動作します。このガイドでは、iPhone 16 ProとiPhone 17 ProにおけるTokens/秒、モデルライブラリ、RAM管理、プライバシー対応、iOS統合の観点からランク付けします。',
     metaDescription:
       '2026年、iPhoneで本格LLMをWiFiなしで動かす5アプリ比較。PocketPal AI（無料）、Private LLM（有料・Siri連携）、MLC Chat（最速）、LLM FarmをiPhone 16 Pro・17 Proで実測。速度・プライバシー・モデル数を徹底検証。',
-    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ja.png',
+    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ja.webp',
     twitterDescription:
       'iPhone Local AI 2026：PocketPal AI（無料）、Private LLM（Siri対応・約¥1,500）、MLC Chat（最速）、LLM Farm（高設定）。ダウンロード後はオフラインで動作します。',
     current_models_mentioned: [
@@ -1004,7 +1004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '最初にインストールすべきiPhoneアプリは？',
         content:
           '**ほとんどのユーザーへの推奨：App StoreでPocketPal AIをインストールし、Phi-4 Mini（3.8B Q4_K_M）をダウンロードしてください。** この組み合わせはiPhone 14 Pro以降で動作し、無料で日常のチャット・要約・下書きに実用的な出力を提供します。PocketPal AIで対応できない特定の需要がある場合のみ、他のアプリを検討してください。',
-        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ja.png',
+        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ja.webp',
         imageCaption: 'iPhoneにインストールするローカルAIアプリの選び方：PocketPal AI（無料デフォルト）、Private LLM（Siri＋ショートカット）、MLC Chat（Apple Siliconで最速）、LLM Farm（設定可能）、Apple Intelligence（iOS 18+標準搭載）。',
         snippetBlocks: [
           {
@@ -1048,7 +1048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'iPhoneアプリ比較表',
         content:
           '**5つのアプリは、ほとんどのユーザーにとって重要な3つの軸で異なります：コスト、モデル柔軟性、iOS統合。** 速度の差は存在しますが、これらのアプリとクラウドLLMの差より小さいです。',
-        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-ja.png',
+        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-ja.webp',
         imageCaption: 'iPhoneローカルLLMアプリ比較：PocketPal AIとLLM Farm（無料、~10–15 tok/s）、MLC Chat（無料、~14–20 tok/s、Metal加速）、Private LLM（~£10一括、Siri＋ショートカット）、Apple Intelligence（システム統合、iOS 18+）。',
         snippetBlocks: [
           {
@@ -1344,7 +1344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Cinq applications iPhone font tourner de vrais LLM entièrement sur l\'appareil en 2026 : PocketPal AI, Private LLM, MLC Chat, LLM Farm et Apple Intelligence (intégrée au système). Toutes fonctionnent sans WiFi une fois le modèle téléchargé. Ce guide les classe selon les tokens par seconde sur iPhone 16 Pro et iPhone 17 Pro, la bibliothèque de modèles, la gestion de la RAM, la posture de confidentialité et l\'intégration iOS.',
     metaDescription:
       'Meilleures apps LLM locales pour iPhone 2026 : Private LLM, LLM Farm, Enclave. Vitesses sur A18 Pro, Neural Engine, confidentialité et modèles comparés.',
-    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-fr.png',
+    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-fr.webp',
     twitterDescription:
       'IA locale sur iPhone en 2026 : PocketPal AI (gratuit), Private LLM (~11 €, Siri), MLC Chat (le plus rapide), LLM Farm (le plus configurable). Fonctionne hors ligne après téléchargement.',
     current_models_mentioned: [
@@ -1443,7 +1443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quelle application iPhone installer en premier ?',
         content:
           '**Pour la plupart des utilisateurs : PocketPal AI depuis l\'App Store, puis téléchargez Phi-4 Mini (3,8B Q4_K_M).** Cette combinaison fonctionne sur iPhone 14 Pro et les modèles plus récents, ne coûte rien et produit des résultats utilisables pour le chat quotidien, la synthèse et la rédaction rapide. Choisissez une autre application uniquement si vous avez un besoin spécifique qu\'elle ne couvre pas.',
-        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-fr.png',
+        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-fr.webp',
         imageCaption: 'Quelle app IA locale pour iPhone : PocketPal AI (défaut gratuit), Private LLM (Siri + Raccourcis), MLC Chat (la plus rapide sur Apple Silicon), LLM Farm (configurable), Apple Intelligence (intégré à iOS 18+).',
         snippetBlocks: [
           {
@@ -1487,7 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tableau comparatif des applications iPhone',
         content:
           '**Les cinq applications se différencient sur trois axes importants pour la plupart des utilisateurs : le coût, la flexibilité des modèles et l\'intégration avec iOS.** Les différences de vitesse existent mais sont moins importantes que l\'écart entre n\'importe laquelle de ces applications et un LLM cloud.',
-        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-fr.png',
+        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-fr.webp',
         imageCaption: 'Comparatif apps LLM locaux iPhone : PocketPal AI et LLM Farm (gratuit, ~10–15 tok/s), MLC Chat (gratuit, ~14–20 tok/s, Metal), Private LLM (~10€ unique, Siri + Raccourcis), Apple Intelligence (système, iOS 18+).',
         snippetBlocks: [
           {
@@ -1783,7 +1783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '2026年，五款iPhone应用可在设备端完整运行真实LLM：PocketPal AI、Private LLM、MLC Chat、LLM Farm，以及系统集成的Apple Intelligence。所有应用在模型下载完成后均可离线使用。本指南从iPhone 16 Pro和iPhone 17 Pro的tokens/秒、模型库、内存管理、隐私保护及iOS集成度五个维度进行评测排名。',
     metaDescription:
       '2026年五款iPhone应用可在设备本地运行真实LLM。PocketPal AI、Private LLM、MLC Chat、LLM Farm经iPhone 16 Pro和17 Pro实测，速度、隐私与模型库全面对比。',
-    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-zh.png',
+    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-zh.webp',
     twitterDescription:
       'iPhone本地AI 2026：PocketPal AI（免费）、Private LLM（约£10，Siri集成）、MLC Chat（最快）、LLM Farm（最可配置）。下载后完全离线运行。',
     current_models_mentioned: [
@@ -1882,7 +1882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '首先应该安装哪款iPhone应用？',
         content:
           '**对大多数用户：在App Store安装PocketPal AI，然后下载Phi-4 Mini（3.8B Q4_K_M）。** 这个组合支持iPhone 14 Pro及更新机型，完全免费，能够胜任日常对话、摘要和快速起草等任务。只有在有特定需求时，再考虑其他应用。',
-        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-zh.png',
+        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-zh.webp',
         imageCaption: 'iPhone本地AI应用选择指南：PocketPal AI（免费默认）、Private LLM（Siri+快捷指令）、MLC Chat（Apple Silicon最快）、LLM Farm（可配置）、Apple Intelligence（iOS 18+内置）。',
         snippetBlocks: [
           {
@@ -1926,7 +1926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'iPhone应用对比表',
         content:
           '**五款应用在三个关键维度上有所差异：费用、模型灵活性和iOS集成度。** 速度差异存在，但均远小于这些应用与云端LLM之间的差距。',
-        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-zh.png',
+        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-zh.webp',
         imageCaption: 'iPhone本地LLM应用对比：PocketPal AI和LLM Farm（免费，~10–15 tok/s），MLC Chat（免费，~14–20 tok/s，Metal加速），Private LLM（~£10一次付清，Siri+快捷指令），Apple Intelligence（系统集成，iOS 18+）。',
         snippetBlocks: [
           {
@@ -2222,7 +2222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Cinco apps para iPhone ejecutan LLMs reales completamente en el dispositivo en 2026: PocketPal AI, Private LLM, MLC Chat, LLM Farm y Apple Intelligence (integrado en el sistema). Todas funcionan sin WiFi una vez descargado el modelo. Esta guía las clasifica por tokens por segundo en iPhone 16 Pro e iPhone 17 Pro, biblioteca de modelos, gestión de RAM, privacidad e integración con iOS.',
     metaDescription:
       'Cinco apps de iPhone que ejecutan LLMs en el dispositivo en 2026: PocketPal AI, Private LLM, MLC Chat y LLM Farm en iPhone 16/17 Pro. Velocidad y privacidad.',
-    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-es.png',
+    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-es.webp',
     twitterDescription:
       'IA local en iPhone en 2026: PocketPal AI (gratis), Private LLM (~10 € de pago único, Siri), MLC Chat (la más rápida), LLM Farm (la más configurable). Todas funcionan sin conexión tras descargar el modelo.',
     current_models_mentioned: [
@@ -2321,7 +2321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Qué app instalar primero en el iPhone?',
         content:
           '**Para la mayoría de usuarios: PocketPal AI desde el App Store y luego descarga Phi-4 Mini (3.8B Q4_K_M).** Esta combinación funciona en iPhone 14 Pro y modelos más recientes, no cuesta nada y produce resultados útiles para el chat diario, la síntesis y la redacción rápida. Elige otra app solo cuando tengas una necesidad específica que esta no cubra.',
-        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-es.png',
+        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-es.webp',
         imageCaption: 'Qué app de IA local instalar en iPhone: PocketPal AI (opción gratuita por defecto), Private LLM (Siri + Shortcuts), MLC Chat (la más rápida en Apple Silicon), LLM Farm (configurable), Apple Intelligence (integrada en iOS 18+).',
         snippetBlocks: [
           {
@@ -2365,7 +2365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tabla comparativa de apps para iPhone',
         content:
           '**Las cinco apps se diferencian en tres ejes que importan a la mayoría de usuarios: coste, flexibilidad de modelos e integración con iOS.** Las diferencias de velocidad existen, pero son menores que la brecha entre cualquiera de estas apps y un LLM en la nube.',
-        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-es.png',
+        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-es.webp',
         imageCaption: 'Comparativa de apps LLM local para iPhone: PocketPal AI y LLM Farm (gratis, ~10–15 tok/s), MLC Chat (gratis, ~14–20 tok/s con aceleración Metal), Private LLM (~10 € de pago único, Siri + Shortcuts), Apple Intelligence (integrada en el sistema, iOS 18+).',
         snippetBlocks: [
           {
@@ -2672,7 +2672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '2026년 iPhone 로컬 LLM 앱 베스트 5',
     intro: '2026년에 iPhone에서 실제 LLM을 완전히 기기에서 실행하는 앱은 다섯 가지입니다: PocketPal AI, Private LLM, MLC Chat, LLM Farm, 그리고 Apple Intelligence(시스템 내장). 모두 모델을 다운로드하면 WiFi 없이 작동합니다. 이 가이드는 iPhone 16 Pro와 iPhone 17 Pro에서의 초당 토큰 수, 모델 라이브러리, RAM 관리, 개인 정보 보호, iOS 통합을 기준으로 순위를 매깁니다.',
     metaDescription: '2026년 iPhone에서 기기 내 LLM을 실행하는 5가지 앱: iPhone 16/17 Pro에서 PocketPal AI, Private LLM, MLC Chat, LLM Farm. 속도와 개인 정보 보호 비교.',
-    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ko.png',
+    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ko.webp',
     twitterDescription: '2026년 iPhone 로컬 AI: PocketPal AI (무료), Private LLM (~10€ 일회 구매, Siri), MLC Chat (가장 빠름), LLM Farm (가장 구성 가능). 모두 모델 다운로드 후 오프라인 작동.',
     current_models_mentioned: [
       'Phi-4 Mini',
@@ -2766,7 +2766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-app',
         title: 'iPhone에서 먼저 설치할 앱',
         content: '**대부분의 사용자에게: App Store에서 PocketPal AI를 설치하고 Phi-4 Mini (3.8B Q4_K_M)를 다운로드하십시오.** 이 조합은 iPhone 14 Pro 이상에서 작동하고, 비용이 들지 않으며, 일상적인 채팅, 요약, 빠른 작문에 유용한 결과를 제공합니다. 이것이 충족하지 못하는 특정 필요가 있을 때만 다른 앱을 선택하십시오.',
-        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ko.png',
+        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ko.webp',
         imageCaption: 'iPhone에 설치할 로컬 AI 앱: PocketPal AI (무료 기본 선택), Private LLM (Siri + Shortcuts), MLC Chat (Apple Silicon에서 가장 빠름), LLM Farm (구성 가능), Apple Intelligence (iOS 18+ 내장).',
         snippetBlocks: [
           {
@@ -2809,7 +2809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'iPhone 앱 비교표',
         content: '**다섯 개의 앱은 대부분의 사용자에게 중요한 세 가지 축에서 차이가 납니다: 비용, 모델 유연성, iOS 통합.** 속도 차이는 존재하지만 이 앱들 중 어느 것과 클라우드 LLM 사이의 격차보다는 작습니다.',
-        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-ko.png',
+        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-ko.webp',
         imageCaption: 'iPhone 로컬 LLM 앱 비교: PocketPal AI와 LLM Farm (무료, ~10–15 tok/s), MLC Chat (무료, Metal 가속으로 ~14–20 tok/s), Private LLM (~10€ 일회 구매, Siri + Shortcuts), Apple Intelligence (시스템 내장, iOS 18+).',
         snippetBlocks: [
           {
@@ -3109,7 +3109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Cinco apps para iPhone executam LLMs reais completamente no dispositivo em 2026: PocketPal AI, Private LLM, MLC Chat, LLM Farm e Apple Intelligence (integrado ao sistema). Todos funcionam sem WiFi depois que o modelo é baixado. Este guia os classifica por tokens por segundo no iPhone 16 Pro e iPhone 17 Pro, biblioteca de modelos, gerenciamento de RAM, privacidade e integração com o iOS.',
     metaDescription:
       'Cinco apps de iPhone que executam LLMs no dispositivo em 2026: PocketPal AI, Private LLM, MLC Chat e LLM Farm no iPhone 16/17 Pro. Velocidade e privacidade.',
-    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-pt.png',
+    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-pt.webp',
     twitterDescription:
       'IA local no iPhone em 2026: PocketPal AI (grátis), Private LLM (~10 € de pagamento único, Siri), MLC Chat (o mais rápido), LLM Farm (o mais configurável). Todos funcionam sem conexão depois de baixar o modelo.',
     current_models_mentioned: [
@@ -3208,7 +3208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qual app instalar primeiro no iPhone?',
         content:
           '**Para a maioria dos usuários: PocketPal AI pela App Store e depois baixe o Phi-4 Mini (3.8B Q4_K_M).** Essa combinação funciona no iPhone 14 Pro e modelos mais recentes, não custa nada e produz resultados úteis para o chat diário, o resumo e a escrita rápida. Escolha outro app só quando você tiver uma necessidade específica que ele não cobre.',
-        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-pt.png',
+        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-pt.webp',
         imageCaption: 'Qual app de IA local instalar no iPhone: PocketPal AI (opção gratuita por padrão), Private LLM (Siri + Shortcuts), MLC Chat (o mais rápido no Apple Silicon), LLM Farm (configurável), Apple Intelligence (integrado ao iOS 18+).',
         snippetBlocks: [
           {
@@ -3252,7 +3252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tabela comparativa de apps para iPhone',
         content:
           '**Os cinco apps se diferenciam em três eixos que importam à maioria dos usuários: custo, flexibilidade de modelos e integração com o iOS.** As diferenças de velocidade existem, mas são menores que a diferença entre qualquer um desses apps e um LLM na nuvem.',
-        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-pt.png',
+        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-pt.webp',
         imageCaption: 'Comparativo de apps LLM local para iPhone: PocketPal AI e LLM Farm (grátis, ~10–15 tok/s), MLC Chat (grátis, ~14–20 tok/s com aceleração Metal), Private LLM (~10 € de pagamento único, Siri + Shortcuts), Apple Intelligence (integrado ao sistema, iOS 18+).',
         snippetBlocks: [
           {
@@ -3561,7 +3561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'خمسة تطبيقات لـ iPhone تُشغّل نماذج لغوية حقيقية بالكامل على الجهاز في 2026: برنامج PocketPal AI، وبرنامج Private LLM، وبرنامج MLC Chat، وبرنامج LLM Farm، وApple Intelligence (المدمج في النظام). جميعها تعمل بدون واي فاي بمجرد تنزيل النموذج. يصنّف هذا الدليل التطبيقات وفق عدد الرموز في الثانية على iPhone 16 Pro وiPhone 17 Pro، ومكتبة النماذج، وإدارة الذاكرة العشوائية، وموقف الخصوصية، والتكامل مع نظام iOS.',
     metaDescription:
       '5 تطبيقات تشغّل LLMs على iPhone بدون واي فاي: PocketPal AI وPrivate LLM وMLC Chat وLLM Farm مُختبَرة على iPhone 16 Pro. مقارنة السرعة والخصوصية.',
-    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ar.png',
+    heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ar.webp',
     twitterDescription:
       'ذكاء اصطناعي محلي على iPhone في 2026: برنامج PocketPal AI (مجاني)، برنامج Private LLM (~10 يورو دفعة واحدة، Siri)، برنامج MLC Chat (الأسرع)، برنامج LLM Farm (الأكثر قابلية للضبط). جميعها تعمل بدون اتصال بعد التنزيل.',
     current_models_mentioned: [
@@ -3660,7 +3660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'أي تطبيق iPhone تُثبّت أولاً؟',
         content:
           '**لمعظم المستخدمين: برنامج PocketPal AI من App Store، ثم تنزيل Phi-4 Mini (3.8B Q4_K_M).** هذا المزيج يعمل على iPhone 14 Pro والإصدارات الأحدث، لا تكلفة له، ويُنتج مخرجات مفيدة للدردشة اليومية والتلخيص والصياغة السريعة. اختر تطبيقاً آخر فقط عندما تحتاج إلى ميزة محددة لا يوفرها.',
-        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ar.png',
+        image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-ar.webp',
         imageCaption: 'أي تطبيق ذكاء اصطناعي محلي تُثبّت على iPhone: برنامج PocketPal AI (الخيار المجاني الافتراضي)، برنامج Private LLM (Siri + Shortcuts)، برنامج MLC Chat (الأسرع على Apple Silicon)، برنامج LLM Farm (قابل للضبط)، Apple Intelligence (مدمج في iOS 18+).',
         snippetBlocks: [
           {
@@ -3704,7 +3704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'جدول مقارنة تطبيقات iPhone',
         content:
           '**تتمايز التطبيقات الخمسة في ثلاثة محاور تهم معظم المستخدمين: التكلفة، ومرونة النماذج، والتكامل مع iOS.** فوارق السرعة موجودة لكنها أصغر من الفجوة بين أي من هذه التطبيقات ونموذج لغوي سحابي.',
-        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-ar.png',
+        image: '/images/best-local-llm-apps-iphone-2026-comparison-hero-ar.webp',
         imageCaption: 'مقارنة تطبيقات LLM المحلي لـ iPhone: برنامج PocketPal AI وLLM Farm (مجانيان، ~10–15 رمزاً/ثانية)، برنامج MLC Chat (مجاني، ~14–20 رمزاً/ثانية بتسريع Metal)، برنامج Private LLM (~10 يورو دفعة واحدة، Siri + Shortcuts)، Apple Intelligence (مدمج في النظام، iOS 18+).',
         snippetBlocks: [
           {

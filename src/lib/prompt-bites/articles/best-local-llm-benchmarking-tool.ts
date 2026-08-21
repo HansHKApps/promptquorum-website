@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-en.png',
+    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-en.webp',
     title: 'Best Tool for Benchmarking Local LLM Tokens/Sec?',
     seoTitle: 'Best Local LLM Benchmarking Tool: llama-bench vs Alternatives',
     metaDescription:
@@ -129,7 +129,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-de.png',
+    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-de.webp',
     title: 'Das beste Tool zum Benchmarking von Tokens/Sek. bei lokalen LLMs?',
     seoTitle: 'Bestes Benchmarking-Tool für lokale LLMs: llama-bench im Vergleich',
     metaDescription:
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-fr.png',
+    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-fr.webp',
     title: "Quel est le meilleur outil pour le benchmark des tokens/sec d'un LLM local ?",
     seoTitle: "Meilleur outil de benchmark pour LLM local : llama-bench et alternatives",
     metaDescription:
@@ -379,7 +379,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-ja.png',
+    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-ja.webp',
     title: 'ローカルLLMのトークン/秒をベンチマークする最良のツールは?',
     seoTitle: 'ローカルLLMベンチマークツール比較:llama-benchと代替ツール',
     metaDescription:
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-zh.png',
+    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-zh.webp',
     title: '衡量本地LLM每秒token数的最佳工具是什么?',
     seoTitle: '本地LLM基准测试工具评测:llama-bench与替代方案',
     metaDescription:
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-es.png',
+    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-es.webp',
     title: '¿Cuál es la mejor herramienta para medir tokens/seg en un LLM local?',
     seoTitle: 'Mejor herramienta de benchmarking para LLM local: llama-bench y alternativas',
     metaDescription:
@@ -754,7 +754,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-pt.png',
+    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-pt.webp',
     title: 'Qual é a melhor ferramenta para benchmark de tokens/seg em um LLM local?',
     seoTitle: 'Melhor ferramenta de benchmark para LLM local: llama-bench e alternativas',
     metaDescription:
@@ -879,7 +879,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-ar.png',
+    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-ar.webp',
     title: 'ما هي أفضل أداة لقياس الأداء (tokens/sec) في نماذج LLM المحلية؟',
     seoTitle: 'أفضل أداة قياس أداء لنماذج LLM المحلية: llama-bench والبدائل',
     metaDescription:
@@ -1004,7 +1004,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-ko.png',
+    heroImage: '/images/best-local-llm-benchmarking-tool-overview-hero-ko.webp',
     title: '로컬 LLM의 초당 토큰 수를 벤치마킹하는 가장 좋은 도구는 무엇입니까?',
     seoTitle: '최고의 로컬 LLM 벤치마킹 도구: llama-bench와 대안 비교',
     metaDescription:

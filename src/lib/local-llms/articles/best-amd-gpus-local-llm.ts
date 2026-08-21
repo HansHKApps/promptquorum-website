@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'Best AMD GPU for Local LLMs 2026: RX 7900 XTX vs RTX',
       intro: '**AMD RX 6800 XT and RX 7900 XTX are solid NVIDIA alternatives, offering 15-20% better compute-per-dollar, but suffer from weaker ONNX Runtime and vLLM driver support.** As of April 2026, AMD ROCm (HIP) has matured, but compatibility layers add friction. NVIDIA CUDA is still the path of least resistance for local LLMs. Use AMD only if you find a great used deal or already own AMD hardware.',
       metaDescription: 'AMD RX 7900 XTX matches RTX 4090 at 24 GB VRAM for $450–550 used — $500 cheaper. ROCm adds 5–10 h setup friction. The best AMD GPU for local LLMs in 2026.',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-en.png',
+      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-en.webp',
       publishDate: '2026-04-05',
       dateModified: '2026-07-14',
       leadAnswerBlock: '**AMD RX 6800 XT and RX 7900 XTX are solid NVIDIA alternatives, offering 15-20% better compute-per-dollar, but suffer from weaker ONNX Runtime and vLLM driver support.**',
@@ -179,7 +179,7 @@ schema: {
             { '0': 'RTX 4090', '1': '24GB', '2': '2,752', '3': '$1,000-1,300', '4': '--', '5': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Price Used', 'Perf/$ vs. RTX', 'Equivalent RTX'],
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-en.png',
+          image: '/images/best-amd-gpus-local-llm-price-performance-hero-en.webp',
           imageCaption: 'RX 7900 XTX matches RTX 4090 speed and VRAM for roughly 60% of the price -- the trade-off is ROCm setup friction.',
         },
         'rocm-setup': {
@@ -203,7 +203,7 @@ schema: {
             '**LM Studio:** NVIDIA only. No AMD support.',
             'As of April 2026: vLLM + llama.cpp are your AMD paths. Ollama is not reliable.',
           ],
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-en.png',
+          image: '/images/best-amd-gpus-local-llm-software-support-hero-en.webp',
           imageCaption: 'llama.cpp and Text Generation WebUI are the reliable AMD paths in 2026 -- Ollama\'s ROCm support remains inconsistent.',
         },
         'when-buy-amd': {
@@ -296,7 +296,7 @@ schema: {
       seoTitle: 'Mejores GPUs AMD para LLMs locales 2026: Guía de comparación',
       intro: '**La AMD RX 6800 XT y la RX 7900 XTX son alternativas sólidas a NVIDIA, con un rendimiento por dólar 15-20% mejor, pero sufren de menor compatibilidad con ONNX Runtime y los drivers de vLLM.** A partir de abril de 2026, AMD ROCm (HIP) ha madurado, aunque las capas de compatibilidad añaden fricción. NVIDIA CUDA sigue siendo el camino más sencillo para LLMs locales. Usa AMD solo si encuentras una gran oferta de segunda mano o ya tienes hardware AMD.',
       metaDescription: 'Compara AMD RX 6800 XT y RX 7900 XTX vs NVIDIA RTX: configuración ROCm, rendimiento en vLLM, coste por TFLOP y cuándo comprar AMD. Actualizado 2026.',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-es.png',
+      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-es.webp',
       publishDate: '2026-04-05',
       leadAnswerBlock: '**La AMD RX 6800 XT y la RX 7900 XTX son alternativas sólidas a NVIDIA, con un rendimiento por dólar 15-20% mejor, pero sufren de menor compatibilidad con ONNX Runtime y los drivers de vLLM.**',
       audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan sus flujos de trabajo de LLMs locales',
@@ -423,7 +423,7 @@ schema: {
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Precio (2ª mano)', 'Rend./$ vs. RTX', 'RTX equivalente'],
         
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-es.png',
+          image: '/images/best-amd-gpus-local-llm-price-performance-hero-es.webp',
           imageCaption: 'La RX 7900 XTX iguala la velocidad y la VRAM de la RTX 4090 por aproximadamente el 60% del precio — la contrapartida es la fricción de configuración de ROCm.',
         },
         'rocm-setup': {
@@ -448,7 +448,7 @@ schema: {
             'A partir de abril de 2026: vLLM + llama.cpp son tus opciones en AMD. Ollama no es fiable.',
           ],
         
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-es.png',
+          image: '/images/best-amd-gpus-local-llm-software-support-hero-es.webp',
           imageCaption: 'llama.cpp y Text Generation WebUI son las rutas fiables para AMD en 2026 — el soporte ROCm de Ollama sigue siendo inconsistente.',
         },
         'when-buy-amd': {
@@ -540,7 +540,7 @@ schema: {
       seoTitle: 'كروت ⁨AMD⁩ لنماذج ⁨LLM⁩ المحلية: ⁨RX 7900 XTX⁩ مقابل ⁨RTX⁩',
       intro: '**AMD RX 6800 XT وRX 7900 XTX بديلان قويان لـ NVIDIA، بأداء لكل دولار أفضل بنسبة 15-20%، لكنهما يعانيان من توافق أقل مع ONNX Runtime وبرامج تشغيل vLLM.** اعتبارًا من أبريل 2026، نضج AMD ROCm (HIP)، رغم أن طبقات التوافق تضيف احتكاكًا. ولا يزال NVIDIA CUDA المسار الأبسط لنماذج LLM المحلية. استخدم AMD فقط إن وجدت عرضًا مستعملًا رائعًا أو كنت تملك بالفعل عتاد AMD.',
       metaDescription: '⁨RX 7900 XTX⁩ بسعة ⁨24GB VRAM⁩ توازي ⁨RTX 4090⁩ بسعر أقل بـ ⁨300⁩ دولار. مقارنة ⁨ROCm⁩ مقابل ⁨CUDA⁩، دعم ⁨Ollama⁩ و⁨llama.cpp⁩، ومتى يستحق ⁨AMD⁩ الاختيار في ⁨2026⁩.',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-ar.png',
+      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-ar.webp',
       publishDate: '2026-04-05',
       leadAnswerBlock: '**AMD RX 6800 XT وRX 7900 XTX بديلان قويان لـ NVIDIA، بأداء لكل دولار أفضل بنسبة 15-20%، لكنهما يعانيان من توافق أقل مع ONNX Runtime وبرامج تشغيل vLLM.**',
       audience: 'المطورون المعتادون على Ollama أو LM Studio الذين يحسّنون تدفقات عملهم مع نماذج LLM المحلية',
@@ -669,7 +669,7 @@ schema: {
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Precio (2ª mano)', 'Rend./$ vs. RTX', 'RTX equivalente'],
         
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-ar.png',
+          image: '/images/best-amd-gpus-local-llm-price-performance-hero-ar.webp',
           imageCaption: 'تضاهي RX 7900 XTX سرعة وVRAM بطاقة RTX 4090 بنحو 60% من السعر — والمقابل هو صعوبة إعداد ROCm.',
         },
         'rocm-setup': {
@@ -694,7 +694,7 @@ schema: {
             'اعتبارًا من أبريل 2026: vLLM + llama.cpp هما خياراك على AMD. وOllama غير موثوق.',
           ],
         
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-ar.png',
+          image: '/images/best-amd-gpus-local-llm-software-support-hero-ar.webp',
           imageCaption: 'يُعد llama.cpp وText Generation WebUI المسارين الموثوقين لـ AMD في 2026 — بينما يظل دعم ROCm في Ollama غير مستقر.',
         },
         'when-buy-amd': {
@@ -787,7 +787,7 @@ schema: {
       seoTitle: 'Melhores GPUs AMD para LLMs locais 2026: Guia de comparação',
       intro: '**A AMD RX 6800 XT e a RX 7900 XTX são alternativas sólidas à NVIDIA, com desempenho por dólar 15-20% melhor, mas sofrem com a menor compatibilidade com o ONNX Runtime e os drivers do vLLM.** A partir de abril de 2026, o AMD ROCm (HIP) amadureceu, embora as camadas de compatibilidade adicionem fricção. O NVIDIA CUDA continua sendo o caminho mais simples para LLMs locais. Use AMD só se encontrar uma ótima oferta de segunda mão ou já tiver hardware AMD.',
       metaDescription: 'Compare AMD RX 6800 XT e RX 7900 XTX vs NVIDIA RTX: configuração ROCm, desempenho no vLLM, custo por TFLOP e quando comprar AMD. Atualizado 2026.',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-pt.png',
+      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-pt.webp',
       publishDate: '2026-04-05',
       leadAnswerBlock: '**A AMD RX 6800 XT e a RX 7900 XTX são alternativas sólidas à NVIDIA, com desempenho por dólar 15-20% melhor, mas sofrem com a menor compatibilidade com o ONNX Runtime e os drivers do vLLM. No varejo brasileiro, com impostos de importação, os preços em reais ficam bem mais altos.**',
       audience: 'Desenvolvedores familiarizados com Ollama ou LM Studio que otimizam seus fluxos de trabalho de LLMs locais',
@@ -914,7 +914,7 @@ schema: {
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Preço (2ª mão)', 'Desemp./$ vs. RTX', 'RTX equivalente'],
         
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-pt.png',
+          image: '/images/best-amd-gpus-local-llm-price-performance-hero-pt.webp',
           imageCaption: 'A RX 7900 XTX iguala a velocidade e a VRAM da RTX 4090 por cerca de 60% do preço — a contrapartida é o atrito de configuração do ROCm.',
         },
         'rocm-setup': {
@@ -939,7 +939,7 @@ schema: {
             'A partir de abril de 2026: vLLM + llama.cpp são suas opções em AMD. O Ollama não é confiável.',
           ],
         
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-pt.png',
+          image: '/images/best-amd-gpus-local-llm-software-support-hero-pt.webp',
           imageCaption: 'llama.cpp e Text Generation WebUI são os caminhos confiáveis para AMD em 2026 — o suporte ROCm do Ollama continua inconsistente.',
         },
         'when-buy-amd': {
@@ -1030,7 +1030,7 @@ schema: {
       seoTitle: 'AMD GPUs für lokale LLMs 2026: ROCm Setup & vLLM',
       intro: '**AMD RX 6800 XT und RX 7900 XTX sind solide NVIDIA-Alternativen mit 15-20% besserer Rechenleistung pro Dollar, leiden aber unter schwächerer ONNX-Runtime- und vLLM-Treiberunterstützung.** Seit April 2026 hat sich AMD ROCm (HIP) reif entwickelt, aber Kompatibilitätsschichten erzeugen Reibung. NVIDIA CUDA ist immer noch der einfachste Weg für lokale LLMs. Verwenden Sie AMD nur, wenn Sie ein großartiges gebrauchtes Angebot finden oder bereits AMD-Hardware besitzen.',
       metaDescription: 'AMD RX 6800 XT, 7900 XTX für lokale LLMs. ROCm-Einrichtung, vLLM-Unterstützung, Leistung vs. NVIDIA RTX. Entscheidungsleitfaden April 2026.',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-de.png',
+      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-de.webp',
       publishDate: '2026-04-05',
       readTime: '8 Min. Lesezeit',
       educationalLevel: 'Intermediate',
@@ -1082,7 +1082,7 @@ schema: {
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Preis gebraucht', 'Leistung/€ vs. RTX', 'Equivalent RTX'],
         
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-de.png',
+          image: '/images/best-amd-gpus-local-llm-price-performance-hero-de.webp',
           imageCaption: 'Die RX 7900 XTX erreicht Geschwindigkeit und VRAM der RTX 4090 für etwa 60 % des Preises — der Kompromiss ist der ROCm-Einrichtungsaufwand.',
         },
         'rocm-setup': {
@@ -1107,7 +1107,7 @@ schema: {
             'Seit April 2026: vLLM + llama.cpp sind Ihre AMD-Pfade. Ollama ist nicht zuverlässig.',
           ],
         
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-de.png',
+          image: '/images/best-amd-gpus-local-llm-software-support-hero-de.webp',
           imageCaption: 'llama.cpp und Text Generation WebUI sind 2026 die zuverlässigen AMD-Pfade — Ollamas ROCm-Unterstützung bleibt inkonsistent.',
         },
         'when-buy-amd': {
@@ -1206,7 +1206,7 @@ schema: {
       seoTitle: 'GPU AMD pour LLM locaux 2026: Comparaison ROCm et vLLM',
       intro: '**Les AMD RX 6800 XT et RX 7900 XTX sont des alternatives solides à NVIDIA, offrant 15-20% meilleure puissance de calcul par dollar, mais souffrent d\'un support ONNX Runtime et vLLM plus faible.** En avril 2026, AMD ROCm (HIP) a mûri, mais les couches de compatibilité créent des frictions. NVIDIA CUDA reste le chemin de moindre résistance pour les LLM locaux. Utilisez AMD uniquement si vous trouvez une excellente affaire d\'occasion ou possédez déjà du matériel AMD.',
       metaDescription: 'GPU AMD RX 6800 XT, 7900 XTX pour LLM locaux. Configuration ROCm, support vLLM, performance vs NVIDIA RTX. Guide décisionnel avril 2026.',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-fr.png',
+      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-fr.webp',
       publishDate: '2026-04-05',
       readTime: '8 min de lecture',
       educationalLevel: 'Intermediate',
@@ -1258,7 +1258,7 @@ schema: {
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Prix occasion', 'Perf/€ vs RTX', 'RTX équivalent'],
         
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-fr.png',
+          image: '/images/best-amd-gpus-local-llm-price-performance-hero-fr.webp',
           imageCaption: 'La RX 7900 XTX égale la vitesse et la VRAM de la RTX 4090 pour environ 60 % du prix — la contrepartie est la friction de configuration de ROCm.',
         },
         'rocm-setup': {
@@ -1283,7 +1283,7 @@ schema: {
             'Depuis avril 2026 : vLLM + llama.cpp sont vos chemins AMD. Ollama n\'est pas fiable.',
           ],
         
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-fr.png',
+          image: '/images/best-amd-gpus-local-llm-software-support-hero-fr.webp',
           imageCaption: 'llama.cpp et Text Generation WebUI sont les voies fiables pour AMD en 2026 — le support ROCm d\'Ollama reste incohérent.',
         },
         'when-buy-amd': {
@@ -1383,7 +1383,7 @@ schema: {
       seoTitle: 'AMD GPU ローカル LLM 2026：ROCm & vLLM ガイド',
       intro: '**AMD RX 6800 XT と RX 7900 XTX は NVIDIA の堅実な代替品で、計算性能当たりのコスト が 15-20% 優れています。ただし ONNX Runtime と vLLM ドライバーのサポートが弱いです。** 2026 年 4 月時点で AMD ROCm (HIP) は成熟していますが、互換レイヤーが摩擦を増加させます。NVIDIA CUDA は依然としてローカル LLM への最短経路です。AMD は優れた中古取引を見つけた場合、または既に AMD ハードウェアを所有している場合のみ使用してください。',
       metaDescription: 'AMD RX 6800 XT、7900 XTX ローカル LLM 向け。ROCm セットアップ、vLLM サポート、NVIDIA RTX 性能対比。2026 年 4 月決定ガイド。',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-ja.png',
+      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-ja.webp',
       publishDate: '2026-04-05',
       readTime: '9分で読める',
       educationalLevel: 'Intermediate',
@@ -1435,7 +1435,7 @@ schema: {
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', '中古価格', '性能/円 vs RTX', '等効 RTX'],
         
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-ja.png',
+          image: '/images/best-amd-gpus-local-llm-price-performance-hero-ja.webp',
           imageCaption: 'RX 7900 XTXはRTX 4090と同等の速度とVRAMを、価格の約60%で実現します — その代償がROCmのセットアップの手間です。',
         },
         'rocm-setup': {
@@ -1460,7 +1460,7 @@ schema: {
             '**2026 年 4 月起：** vLLM + llama.cpp があなたの AMD パスです。Ollama は信頼できません。',
           ],
         
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-ja.png',
+          image: '/images/best-amd-gpus-local-llm-software-support-hero-ja.webp',
           imageCaption: '2026年時点でllama.cppとText Generation WebUIが信頼できるAMDの選択肢です — OllamaのROCmサポートは不安定なままです。',
         },
         'when-buy-amd': {
@@ -1564,7 +1564,7 @@ schema: {
       seoTitle: 'AMD GPU 本地 LLM 2026：ROCm vs vLLM 完整对比指南',
       intro: '**AMD RX 6800 XT 和 RX 7900 XTX 是 NVIDIA 的坚实替代品，性能成本比提高 15-20%，但 ONNX Runtime 和 vLLM 驱动程序支持较弱。** 截至 2026 年 4 月，AMD ROCm (HIP) 已成熟，但兼容层增加了摩擦。NVIDIA CUDA 仍是本地 LLM 的最平缓路径。仅当您找到优秀的二手交易或已拥有 AMD 硬件时才选择 AMD。',
       metaDescription: 'AMD RX 6800 XT、7900 XTX 本地 LLM。ROCm 设置、vLLM 支持、NVIDIA RTX 性能对比。2026 年 4 月决策指南。',
-      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-zh.png',
+      heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-zh.webp',
       publishDate: '2026-04-05',
       readTime: '阅读约9分钟',
       educationalLevel: 'Intermediate',
@@ -1616,7 +1616,7 @@ schema: {
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', '二手价格', '性价比 vs RTX', '等效 RTX'],
         
-          image: '/images/best-amd-gpus-local-llm-price-performance-hero-zh.png',
+          image: '/images/best-amd-gpus-local-llm-price-performance-hero-zh.webp',
           imageCaption: 'RX 7900 XTX以约60%的价格实现与RTX 4090相当的速度和VRAM — 代价是ROCm配置的繁琐。',
         },
         'rocm-setup': {
@@ -1642,7 +1642,7 @@ schema: {
             '**2026 年 4 月起：** vLLM + llama.cpp 是您的 AMD 路径。Ollama 不可靠。',
           ],
         
-          image: '/images/best-amd-gpus-local-llm-software-support-hero-zh.png',
+          image: '/images/best-amd-gpus-local-llm-software-support-hero-zh.webp',
           imageCaption: '截至2026年，llama.cpp和Text Generation WebUI是可靠的AMD方案 — Ollama的ROCm支持仍不稳定。',
         },
         'when-buy-amd': {
@@ -1761,7 +1761,7 @@ schema: {
     seoTitle: '로컬 LLM용 AMD GPU 2026: RX 7900 XTX vs RTX 비교 가이드',
     intro: '**AMD RX 6800 XT와 RX 7900 XTX는 NVIDIA의 견실한 대안으로, 달러당 연산 성능이 15-20% 우수합니다. 다만 ONNX Runtime 및 vLLM 드라이버 지원이 상대적으로 취약합니다.** 2026년 4월 현재 AMD ROCm(HIP)은 성숙 단계에 접어들었으나, 호환성 레이어로 인한 설정 부담이 여전히 존재합니다. NVIDIA CUDA는 로컬 LLM 구동에 있어 여전히 가장 수월한 경로입니다. AMD는 중고 제품을 저렴하게 구입하거나 이미 AMD 하드웨어를 보유한 경우에만 사용을 권장합니다.',
     metaDescription: 'AMD RX 6800 XT, RX 7900 XTX vs NVIDIA RTX 비교: ROCm 설치, vLLM 성능, TFLOP당 비용 분석, AMD 선택 시기. 2026년 4월 업데이트.',
-    heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-ko.png',
+    heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-ko.webp',
     publishDate: '2026-04-05',
     dateModified: '2026-04-18',
     lastFactChecked: '2026-04-18',
@@ -1908,7 +1908,7 @@ schema: {
         ],
         columns: ['GPU', 'VRAM', 'TFLOPS', '중고 가격', '달러당 성능 vs. RTX', '동급 RTX'],
       
-        image: '/images/best-amd-gpus-local-llm-price-performance-hero-ko.png',
+        image: '/images/best-amd-gpus-local-llm-price-performance-hero-ko.webp',
         imageCaption: 'RX 7900 XTX는 RTX 4090의 속도와 VRAM을 가격의 약 60%로 제공합니다 — 대가는 ROCm 설정의 번거로움입니다.',
       },
       'rocm-setup': {
@@ -1933,7 +1933,7 @@ schema: {
           '2026년 4월 기준: vLLM + llama.cpp가 AMD에서의 선택지입니다. Ollama는 신뢰할 수 없습니다.',
         ],
       
-        image: '/images/best-amd-gpus-local-llm-software-support-hero-ko.png',
+        image: '/images/best-amd-gpus-local-llm-software-support-hero-ko.webp',
         imageCaption: '2026년 기준 llama.cpp와 Text Generation WebUI가 신뢰할 수 있는 AMD 경로입니다 — Ollama의 ROCm 지원은 여전히 불안정합니다.',
       },
       'when-buy-amd': {

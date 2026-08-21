@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-en.png',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-en.webp',
     title: 'Reducing LLM Hallucinations in Home Automation (2027)',
     seoTitle: 'Reducing LLM Hallucinations in Home Automation (2027)',
     intro:
@@ -171,7 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-de.png',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-de.webp',
     title: 'LLM-Halluzinationen in der Hausautomation reduzieren (2027)',
     seoTitle: 'LLM-Halluzinationen in der Hausautomation reduzieren (2027)',
     intro:
@@ -333,7 +333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-fr.png',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-fr.webp',
     title: "Réduire les hallucinations LLM dans la domotique (2027)",
     seoTitle: "Réduire les hallucinations LLM dans la domotique (2027)",
     intro:
@@ -495,7 +495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-ja.png',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-ja.webp',
     title: 'ホームオートメーションにおけるLLM幻覚の低減（2027年）',
     seoTitle: 'ホームオートメーションにおけるLLM幻覚の低減（2027年）',
     intro:
@@ -657,7 +657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-zh.png',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-zh.webp',
     title: '减少家庭自动化中的LLM幻觉（2027年）',
     seoTitle: '减少家庭自动化中的LLM幻觉（2027年）',
     intro:
@@ -819,7 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-es.png',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-es.webp',
     title: 'Reducir las alucinaciones de LLM en la domótica (2027)',
     seoTitle: 'Reducir las alucinaciones de LLM en la domótica (2027)',
     intro:
@@ -981,7 +981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-pt.png',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-pt.webp',
     title: 'Reduzindo alucinações de LLM na automação residencial (2027)',
     seoTitle: 'Reduzindo alucinações de LLM na automação residencial (2027)',
     intro:
@@ -1143,7 +1143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-ar.png',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-ar.webp',
     title: 'تقليل هلوسة نماذج اللغة الكبيرة في أتمتة المنزل (2027)',
     seoTitle: 'تقليل هلوسة نماذج اللغة الكبيرة في أتمتة المنزل (2027)',
     intro:
@@ -1305,7 +1305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-ko.png',
+    heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-ko.webp',
     title: '홈 자동화에서 LLM 환각 줄이기 (2027)',
     seoTitle: '홈 자동화에서 LLM 환각 줄이기 (2027)',
     intro:

@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-en.png',
+    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-en.webp',
     title: 'Meyer Burger, Solarwatt, and Heckert Solar: German Panel Maker Profile',
     seoTitle: 'Meyer Burger, Solarwatt, Heckert Solar Profile',
     metaDescription: 'Combined company profile for Meyer Burger, Solarwatt, and Heckert Solar: German balcony solar panel makers, history, and product range.',
@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-de.png',
+    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-de.webp',
     title: 'Meyer Burger, Solarwatt und Heckert Solar: Profil deutscher Panelhersteller',
     seoTitle: 'Meyer Burger, Solarwatt, Heckert Solar im Profil',
     metaDescription: 'Firmenprofil zu Meyer Burger, Solarwatt und Heckert Solar: deutsche Hersteller von Balkonkraftwerk-Modulen, Geschichte und Produktangebot im Überblick.',
@@ -47,7 +47,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-fr.png',
+    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-fr.webp',
     title: 'Meyer Burger, Solarwatt et Heckert Solar : profil des fabricants allemands',
     seoTitle: 'Meyer Burger, Solarwatt, Heckert Solar : profil',
     metaDescription: 'Profil combiné de Meyer Burger, Solarwatt et Heckert Solar : fabricants allemands de panneaux solaires pour balcon, historique et gamme de produits.',
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-ja.png',
+    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-ja.webp',
     title: 'マイヤーブルガー、ソーラーワット、ヘッケルトソーラー：ドイツ製パネルメーカー比較',
     seoTitle: 'マイヤーブルガー、ソーラーワット、ヘッケルトソーラー比較',
     metaDescription: 'マイヤーブルガー、ソーラーワット、ヘッケルトソーラーのドイツ製バルコニー太陽光パネルメーカーを比較する企業プロフィールです。沿革と製品ラインナップを紹介します。',
@@ -83,7 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-zh.png',
+    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-zh.webp',
     title: 'Meyer Burger、Solarwatt、Heckert Solar：德国阳台光伏板制造商简介',
     seoTitle: 'Meyer Burger、Solarwatt、Heckert Solar简介',
     metaDescription: 'Meyer Burger、Solarwatt和Heckert Solar三家德国阳台太阳能板制造商的综合简介，涵盖历史沿革与产品线。',
@@ -101,7 +101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-es.png',
+    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-es.webp',
     title: 'Meyer Burger, Solarwatt y Heckert Solar: perfil de fabricantes alemanes de paneles',
     seoTitle: 'Meyer Burger, Solarwatt y Heckert Solar: perfil',
     metaDescription: 'Perfil combinado de Meyer Burger, Solarwatt y Heckert Solar: fabricantes alemanes de paneles solares para balcón, historia y gama de productos.',
@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-pt.png',
+    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-pt.webp',
     title: 'Meyer Burger, Solarwatt e Heckert Solar: perfil dos fabricantes alemães de painéis',
     seoTitle: 'Meyer Burger, Solarwatt e Heckert Solar: perfil',
     metaDescription: 'Perfil combinado da Meyer Burger, Solarwatt e Heckert Solar: fabricantes alemães de painéis solares para varanda, histórico e linha de produtos.',
@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-ar.png',
+    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-ar.webp',
     title: 'Meyer Burger وSolarwatt وHeckert Solar: نبذة عن الشركات الألمانية المصنّعة للألواح',
     seoTitle: 'Meyer Burger وSolarwatt وHeckert Solar: نبذة الشركة',
     metaDescription: 'نبذة موحّدة عن Meyer Burger وSolarwatt وHeckert Solar، الشركات الألمانية المصنّعة لألواح الطاقة الشمسية للشرفات، تشمل التاريخ ومجموعة المنتجات.',
@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-ko.png',
+    heroImage: '/images/meyer-burger-solarwatt-heckert-balcony-solar-overview-hero-ko.webp',
     title: 'Meyer Burger, Solarwatt, Heckert Solar: 독일 패널 제조사 프로필',
     seoTitle: 'Meyer Burger·Solarwatt·Heckert Solar 프로필',
     metaDescription: 'Meyer Burger, Solarwatt, Heckert Solar의 통합 기업 프로필입니다. 독일 발코니 태양광 패널 제조사의 연혁과 제품 라인업을 다룹니다.',

@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-07-02',
     current_hardware_mentioned: ['Hoymiles HMS-800-2T-NA', 'Deye SUN600-1000G3', 'APsystems EZ1-M'],
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-en.png',
+    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-en.webp',
     title: 'Best Balcony Solar Micro-Inverters (2026): Hoymiles vs. Deye vs. APsystems',
     seoTitle: 'Best Balcony Solar Micro-Inverters 2026: Local vs. Cloud',
     intro: 'The micro-inverter is the component that actually determines whether your balcony solar system needs a cloud account to monitor — and whether it will play nicely with Home Assistant. Hoymiles, Deye, and APsystems dominate the US plug-in market, but they take very different approaches to local vs. cloud control.',
@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-es.png',
+    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-es.webp',
     title: 'Mejores microinversores solares de balcón (2026): Hoymiles vs. Deye vs. APsystems',
     seoTitle: 'Mejores microinversores solares de balcón 2026: local vs. nube',
     intro: 'El microinversor es el componente que realmente determina si tu sistema solar de balcón necesita una cuenta en la nube para monitorearlo — y si funcionará bien con Home Assistant. Hoymiles, Deye y APsystems dominan el mercado plug-in de EE. UU., pero adoptan enfoques muy distintos sobre control local frente a control en la nube.',
@@ -304,7 +304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-pt.png',
+    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-pt.webp',
     title: 'Melhores microinversores solares de varanda (2026): Hoymiles vs. Deye vs. APsystems',
     seoTitle: 'Melhores microinversores solares de varanda 2026: local vs. nuvem',
     intro: 'O microinversor é o componente que realmente determina se o seu sistema solar de varanda precisa de uma conta na nuvem para monitoramento — e se ele vai funcionar bem com o Home Assistant. Hoymiles, Deye e APsystems dominam o mercado plug-in dos EUA, mas adotam abordagens muito diferentes em relação ao controle local versus na nuvem.',
@@ -452,7 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-ar.png',
+    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-ar.webp',
     title: 'أفضل عاكسات (مايكرو إنفرتر) الطاقة الشمسية للشرفة (2026): Hoymiles مقابل Deye مقابل APsystems',
     seoTitle: 'أفضل مايكرو إنفرتر للطاقة الشمسية للشرفة 2026: محلي مقابل سحابي',
     intro: 'المايكرو إنفرتر هو المكوّن الذي يحدد فعليًا ما إذا كان نظام الطاقة الشمسية الخاص بشرفتك يحتاج إلى حساب سحابي للمراقبة — وما إذا كان سيعمل بشكل جيد مع Home Assistant. تهيمن Hoymiles وDeye وAPsystems على سوق التوصيل المباشر الأمريكي، لكنها تتبنى نهجًا مختلفًا تمامًا فيما يخص التحكم المحلي مقابل التحكم السحابي.',
@@ -599,7 +599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-ja.png',
+    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-ja.webp',
     title: 'バルコニーソーラー用マイクロインバーター比較(2026年): Hoymiles vs. Deye vs. APsystems',
     seoTitle: 'バルコニーソーラー用マイクロインバーター2026年版: ローカル vs. クラウド',
     intro: 'マイクロインバーターは、バルコニーソーラーシステムの監視にクラウドアカウントが必要かどうか、そしてHome Assistantとうまく連携できるかどうかを実質的に決定するコンポーネントです。Hoymiles、Deye、APsystemsは米国のプラグイン市場を席巻していますが、ローカル制御とクラウド制御に対するアプローチはそれぞれ大きく異なります。',
@@ -746,7 +746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-zh.png',
+    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-zh.webp',
     title: '2026年阳台光伏微逆变器推荐:Hoymiles vs. Deye vs. APsystems',
     seoTitle: '2026年阳台光伏微逆变器:本地控制 vs. 云端控制',
     intro: '微逆变器是真正决定你的阳台光伏系统是否需要云端账户才能监控的部件——也决定了它能否与Home Assistant顺畅配合。Hoymiles、Deye和APsystems主导着美国插电式阳台光伏市场,但在本地控制与云端控制上采取的策略截然不同。',
@@ -893,7 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-fr.png',
+    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-fr.webp',
     title: 'Meilleurs micro-onduleurs solaires de balcon (2026) : Hoymiles vs. Deye vs. APsystems',
     seoTitle: 'Meilleurs micro-onduleurs solaires de balcon 2026 : local vs. cloud',
     intro: 'Le micro-onduleur est le composant qui détermine réellement si votre système solaire de balcon nécessite un compte cloud pour le suivi — et s\'il fonctionnera bien avec Home Assistant. Hoymiles, Deye et APsystems dominent le marché américain des kits plug-and-play, mais adoptent des approches très différentes en matière de contrôle local et de contrôle cloud.',
@@ -1041,7 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-ko.png',
+    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-ko.webp',
     title: '2026년 최고의 베란다형 태양광 마이크로인버터: Hoymiles vs. Deye vs. APsystems',
     seoTitle: '2026년 베란다 태양광 마이크로인버터: 로컬 vs. 클라우드',
     intro: '마이크로인버터는 베란다형 태양광 시스템을 모니터링하는 데 클라우드 계정이 필요한지, 그리고 Home Assistant와 원활하게 연동되는지를 실질적으로 결정하는 부품입니다. Hoymiles, Deye, APsystems는 미국의 플러그인 시장을 장악하고 있지만, 로컬 제어와 클라우드 제어에 대해 매우 다른 접근 방식을 취합니다.',
@@ -1188,7 +1188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-de.png',
+    heroImage: '/images/best-balcony-solar-microinverters-overview-hero-de.webp',
     title: 'Beste Balkonkraftwerk Wechselrichter (2026): Hoymiles vs. Deye vs. APsystems',
     seoTitle: 'Beste Balkonkraftwerk Wechselrichter 2026: Lokal vs. Cloud',
     intro: 'Der Mikrowechselrichter ist die Komponente, die tatsächlich bestimmt, ob Ihr Balkonkraftwerk ein Cloud-Konto zur Überwachung benötigt — und ob er gut mit Home Assistant zusammenarbeitet. Hoymiles, Deye und APsystems dominieren den US-Plug-in-Markt, verfolgen beim Local- vs. Cloud-Control jedoch sehr unterschiedliche Ansätze.',

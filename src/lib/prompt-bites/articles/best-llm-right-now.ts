@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/best-llm-right-now-overview-hero-en.png',
+    heroImage: '/images/best-llm-right-now-overview-hero-en.webp',
     title: 'Best LLM Right Now?',
     dateModified: '2026-06-21',
     seoTitle: 'Best LLM Models 2026 | Prompt Bites | PromptQuorum',
@@ -135,7 +135,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/best-llm-right-now-overview-hero-de.png',
+    heroImage: '/images/best-llm-right-now-overview-hero-de.webp',
     title: 'Welches LLM ist aktuell das beste?',
     seoTitle: 'Beste LLM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Das beste lokale LLM jetzt: Llama 3.3 70B für die meisten, Qwen 3 Coder fürs Programmieren, Phi-4 für schwache Hardware. Nach Anwendungsfall und VRAM.',
@@ -215,7 +215,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/best-llm-right-now-overview-hero-fr.png',
+    heroImage: '/images/best-llm-right-now-overview-hero-fr.webp',
     title: 'Quel est le meilleur LLM en ce moment ?',
     seoTitle: 'Meilleur LLM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Code : Claude Opus 4.8 (87,6% SWE-Bench). Chat général : GPT-5.5 Instant (52,5% moins d\'hallucinations). Local : Llama 4 Scout ou Qwen 3 14B. Mis à jour chaque mois.',
@@ -295,7 +295,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/best-llm-right-now-overview-hero-ja.png',
+    heroImage: '/images/best-llm-right-now-overview-hero-ja.webp',
     title: '現在最良のLLMは何ですか？',
     seoTitle: '2026年最良LLM | Prompt Bites | PromptQuorum',
     metaDescription: 'クラウド：Claude Opus 4.8（87.6% SWE-Bench）コーディング、GPT-5.5 Instant（幻覚52.5%削減）汎用チャット。ローカル：Llama 4 Scout か Qwen 3 14B。毎月更新。',
@@ -375,7 +375,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/best-llm-right-now-overview-hero-es.png',
+    heroImage: '/images/best-llm-right-now-overview-hero-es.webp',
     title: '¿Cuál es el mejor LLM ahora mismo?',
     seoTitle: 'Mejor LLM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Código: Claude Opus 4.8 (87.6% SWE-Bench). Chat: GPT-5.5 Instant (52.5% menos alucinaciones). Local: Llama 4 Scout o Qwen 3 14B. Actualizado mensualmente.',
@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/best-llm-right-now-overview-hero-pt.png',
+    heroImage: '/images/best-llm-right-now-overview-hero-pt.webp',
     title: 'Qual é o melhor LLM agora?',
     seoTitle: 'Melhor LLM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Código: Claude Opus 4.8 (87,6% SWE-Bench). Chat: GPT-5.5 Instant (52,5% menos alucinações). Local: Llama 4 Scout ou Qwen 3 14B. Atualizado mensalmente.',
@@ -557,7 +557,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/best-llm-right-now-overview-hero-zh.png',
+    heroImage: '/images/best-llm-right-now-overview-hero-zh.webp',
     title: '当前最好的 LLM 是什么？',
     seoTitle: '2026年最佳LLM | Prompt Bites | PromptQuorum',
     metaDescription: '编程：Claude Opus 4.8（87.6% SWE-Bench）；对话：GPT-5.5 Instant（幻觉减少 52.5%）；本地：Llama 4 Scout 或 Qwen 3 14B。每月更新。',
@@ -637,7 +637,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/best-llm-right-now-overview-hero-ar.png',
+    heroImage: '/images/best-llm-right-now-overview-hero-ar.webp',
     title: 'ما هو أفضل نموذج لغوي كبير الآن؟',
     seoTitle: 'أفضل ⁨LLM 2026⁩: ⁨Claude Opus 4.8⁩ و⁨GPT-5.5⁩ و⁨Llama 4⁩',
     metaDescription: '⁨Claude Opus 4.8⁩ يحقق ⁨87.6%⁩ على ⁨SWE-Bench. GPT-5.5 Instant⁩ يقلل الهلوسة ⁨52.5%⁩. محلياً: ⁨Llama 4 Scout⁩ لـ⁨24 GB VRAM⁩ أو ⁨Qwen 3 14B⁩ لـ⁨12 GB⁩.',
@@ -728,7 +728,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Prompt Engineering',
-    heroImage: '/images/best-llm-right-now-overview-hero-ko.png',
+    heroImage: '/images/best-llm-right-now-overview-hero-ko.webp',
     title: '지금 가장 좋은 LLM은 무엇입니까?',
     seoTitle: '2026년 최고의 LLM | Prompt Bites | PromptQuorum',
     metaDescription: '코딩: Claude Opus 4.8 (SWE-Bench 87.6%). 일반 채팅: GPT-5.5 Instant (환각 52.5% 감소). 로컬: Llama 4 Scout 또는 Qwen 3 14B. 매월 업데이트.',

@@ -5212,7 +5212,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       readTime: '12 min read',
       seoTitle: 'GPT-5.6 vs Claude Opus 4.8 vs Gemini 3.1 Pro (2026)',
       metaDescription: 'GPT-5.6, Claude Opus 4.8, and Gemini 3.1 Pro compared on speed, reasoning, pricing, and context window. Which AI model to use — and when to use all three.',
-      heroImage: '/images/ai-model-comparison-comparisonTable-hero-en.png',
+      heroImage: '/images/ai-model-comparison-comparisonTable-hero-en.webp',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-09-14',
       last_full_refresh: '2026-07-14',
@@ -5454,7 +5454,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         contentCreation: {
-          image: '/images/ai-model-comparison-task-winner-hero-en.png',
+          image: '/images/ai-model-comparison-task-winner-hero-en.webp',
           imageCaption: 'Which Model Wins by Task — Best pick per use case',
           title: 'Content Creation',
           content: 'GPT-5.6 wins for pure creative output — most versatile, fastest, best for brainstorming and generating copy. Use GPT-5.6 for blog posts, social media, marketing copy, and creative ideation.',
@@ -5591,7 +5591,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       readTime: '12 دقيقة للقراءة',
       seoTitle: 'GPT-5.6 مقابل Claude Opus 4.8 مقابل Gemini 3.1 Pro (2026)',
       metaDescription: 'مقارنة بين GPT-5.6 وClaude Opus 4.8 وGemini 3.1 Pro من حيث السرعة والاستدلال والتسعير ونافذة السياق. أي نموذج ذكاء اصطناعي تستخدم — ومتى تستخدم الثلاثة معًا.',
-      heroImage: '/images/ai-model-comparison-comparisonTable-hero-ar.png',
+      heroImage: '/images/ai-model-comparison-comparisonTable-hero-ar.webp',
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -5831,7 +5831,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         contentCreation: {
-          image: '/images/ai-model-comparison-task-winner-hero-ar.png',
+          image: '/images/ai-model-comparison-task-winner-hero-ar.webp',
           imageCaption: 'أي نموذج يفوز حسب المهمة — أفضل اختيار لكل حالة استخدام',
           title: 'إنشاء المحتوى',
           content: 'يفوز GPT-5.6 في الإنتاج الإبداعي الخالص — الأكثر تنوعًا والأسرع والأفضل للعصف الذهني وتوليد النصوص. استخدم GPT-5.6 لمنشورات المدونات ووسائل التواصل الاجتماعي والنصوص التسويقية والأفكار الإبداعية.',
@@ -5968,7 +5968,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       readTime: '12 Min. Lesezeit',
       seoTitle: 'GPT-5.6 vs Claude Opus 4.8 vs Gemini 3.1 Pro (2026)',
       metaDescription: 'GPT-5.6, Claude Opus 4.8 und Gemini 3.1 Pro im Vergleich: Reasoning, Geschwindigkeit, Preise und Kontextfenster. Welches KI-Modell für welche Aufgabe?',
-      heroImage: '/images/ai-model-comparison-comparisonTable-hero-de.png',
+      heroImage: '/images/ai-model-comparison-comparisonTable-hero-de.webp',
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -6227,7 +6227,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         contentCreation: {
-          image: '/images/ai-model-comparison-task-winner-hero-de.png',
+          image: '/images/ai-model-comparison-task-winner-hero-de.webp',
           imageCaption: 'Welches Modell Gewinnt Je Aufgabe — Beste Wahl pro Anwendungsfall',
           title: 'Content-Erstellung',
           content: 'GPT-5.6 gewinnt bei reiner kreativer Ausgabe — das vielseitigste und schnellste Modell, ideal für Brainstorming und das Erstellen von Texten. Setzen Sie GPT-5.6 für Blogbeiträge, Social-Media-Inhalte, Marketing-Texte und kreative Ideenfindung ein.',
@@ -6379,7 +6379,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       readTime: '12 min de lecture',
       seoTitle: 'GPT-5.6 vs Claude Opus 4.8 vs Gemini 3.1 Pro (2026)',
       metaDescription: 'GPT-5.6, Claude Opus 4.8 et Gemini 3.1 Pro comparés : vitesse, raisonnement, prix et fenêtre de contexte. Quel modèle d\'IA choisir — et quand utiliser les trois.',
-      heroImage: '/images/ai-model-comparison-comparisonTable-hero-fr.png',
+      heroImage: '/images/ai-model-comparison-comparisonTable-hero-fr.webp',
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -6622,7 +6622,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         contentCreation: {
-          image: '/images/ai-model-comparison-task-winner-hero-fr.png',
+          image: '/images/ai-model-comparison-task-winner-hero-fr.webp',
           imageCaption: 'Quel Modèle Gagne Selon la Tâche — Meilleur choix par cas d\'usage',
           title: 'Création de contenu',
           content: 'GPT-5.6 s\'impose pour la production créative pure — le plus polyvalent et le plus rapide, idéal pour le brainstorming et la génération de textes. Utilisez GPT-5.6 pour les articles de blog, les réseaux sociaux, les textes marketing et l\'idéation créative.',
@@ -6772,7 +6772,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       readTime: '12分で読める',
       seoTitle: 'GPT-5.6 vs Claude Opus 4.8 vs Gemini 3.1 Pro (2026)',
       metaDescription: 'GPT-5.6・Claude Opus 4.8・Gemini 3.1 Proを推論・速度・価格・コンテキストで徹底比較。2026年最新版：どのAIモデルを選ぶべきか、用途別ガイド。',
-      heroImage: '/images/ai-model-comparison-comparisonTable-hero-ja.png',
+      heroImage: '/images/ai-model-comparison-comparisonTable-hero-ja.webp',
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -7031,7 +7031,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         contentCreation: {
-          image: '/images/ai-model-comparison-task-winner-hero-ja.png',
+          image: '/images/ai-model-comparison-task-winner-hero-ja.webp',
           imageCaption: 'タスク別に見る最適モデル — 用途ごとのベストな選択',
           title: 'コンテンツ制作',
           content: 'GPT-5.6は純粋なクリエイティブ出力で優位 — 最も多才で高速、ブレインストーミングとテキスト生成に最適です。ブログ投稿、SNS、マーケティングコピー、クリエイティブなアイデア出しにGPT-5.6を使用してください。',
@@ -7183,7 +7183,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       readTime: '阅读约12分钟',
       seoTitle: 'GPT-5.6 vs Claude Opus 4.8 vs Gemini 3.1 Pro (2026)',
       metaDescription: 'GPT-5.6、Claude Opus 4.8与Gemini 3.1 Pro深度对比：速度、推理、价格与上下文窗口。2026年最新AI模型选型指南，助您做出最优决策。',
-      heroImage: '/images/ai-model-comparison-comparisonTable-hero-zh.png',
+      heroImage: '/images/ai-model-comparison-comparisonTable-hero-zh.webp',
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -7442,7 +7442,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         contentCreation: {
-          image: '/images/ai-model-comparison-task-winner-hero-zh.png',
+          image: '/images/ai-model-comparison-task-winner-hero-zh.webp',
           imageCaption: '按任务看哪个模型更优 — 各使用场景的最佳选择',
           title: '内容创作',
           content: 'GPT-5.6在纯创意输出方面胜出——最为多才多艺且速度最快，是头脑风暴和文字生成的首选。博客文章、社交媒体、营销文案和创意构思，GPT-5.6是最优选择。',
@@ -7594,7 +7594,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       readTime: '12 min de lectura',
       seoTitle: 'GPT-5.6 vs Claude Opus 4.8 vs Gemini 3.1 Pro (2026)',
       metaDescription: 'GPT-5.6, Claude Opus 4.8 y Gemini 3.1 Pro comparados: velocidad, razonamiento, precios y ventana de contexto. Qué modelo de IA elegir — y cuándo usar los tres.',
-      heroImage: '/images/ai-model-comparison-comparisonTable-hero-es.png',
+      heroImage: '/images/ai-model-comparison-comparisonTable-hero-es.webp',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-09-14',
       last_full_refresh: '2026-07-14',

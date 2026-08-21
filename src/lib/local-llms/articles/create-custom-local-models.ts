@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
-      heroImage: '/images/create-custom-local-models-overview-hero-en.png',
+      heroImage: '/images/create-custom-local-models-overview-hero-en.webp',
       title: 'Create Custom Local LLMs 2026: Fine-Tuning vs Pre-Training with Unsloth and Ollama',
       seoTitle: 'Create Custom Local LLMs 2026: Fine-Tune for $500 vs $50K Pre-Train',
       intro: 'Creating custom local LLMs means fine-tuning an existing model or pre-training from scratch. As of April 2026, fine-tuning with LoRA is practical on consumer hardware: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Pre-training costs $50K–500K and requires 10B+ tokens — justified only for rare proprietary needs. This guide covers both approaches: the 7-step fine-tuning path with Unsloth, the decision matrix for fine-tuning vs pre-training vs RAG, and deployment to [Ollama](https://ollama.com/).',
@@ -390,7 +390,7 @@ schema: {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
-      heroImage: '/images/create-custom-local-models-overview-hero-es.png',
+      heroImage: '/images/create-custom-local-models-overview-hero-es.webp',
       title: 'Crear LLMs Locales Personalizados 2026: Fine-Tuning vs Pre-Training con Unsloth y Ollama',
       seoTitle: 'Crear LLMs locales personalizados: fine-tune vs pre-training',
       intro: 'Crear LLMs locales personalizados significa hacer fine-tuning de un modelo existente o pre-entrenar desde cero. A partir de abril de 2026, el fine-tuning con LoRA es práctico en hardware de consumo: 500 ejemplos, 8 GB VRAM, 1–2 horas, $100–500. El pre-training cuesta $50K–500K y requiere más de 10B tokens — justificado solo para necesidades propietarias excepcionales. Esta guía cubre ambos enfoques: el camino de fine-tuning en 7 pasos con Unsloth, la matriz de decisión entre fine-tuning vs pre-training vs RAG, y el despliegue en [Ollama](https://ollama.com/).',
@@ -774,7 +774,7 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
-      heroImage: '/images/create-custom-local-models-overview-hero-ar.png',
+      heroImage: '/images/create-custom-local-models-overview-hero-ar.webp',
       title: 'إنشاء نماذج ⁨LLM⁩ محلية مخصصة ⁨2026⁩: الضبط الدقيق مقابل التدريب المسبق بـ ⁨Unsloth⁩ و⁨Ollama⁩',
       seoTitle: 'ضبط ⁨LLM⁩ المحلية بـ ⁨LoRA⁩: ⁨500⁩ مثال و⁨VRAM⁩ بـ ⁨8 GB⁩',
       intro: 'إنشاء نماذج LLM محلية مخصصة يعني الضبط الدقيق لنموذج موجود أو التدريب المسبق من الصفر. اعتباراً من أبريل 2026، الضبط الدقيق بـ LoRA عملي على العتاد الاستهلاكي: 500 مثال، 8 GB VRAM، 1–2 ساعة، 100–500 دولار. يكلّف التدريب المسبق 50 ألف–500 ألف دولار ويتطلب أكثر من 10 مليارات رمز — مبرَّر فقط للاحتياجات المملوكة الاستثنائية. يغطي هذا الدليل النهجين: مسار الضبط الدقيق بـ 7 خطوات مع Unsloth، ومصفوفة القرار بين الضبط الدقيق والتدريب المسبق وRAG، والنشر على [Ollama](https://ollama.com/).',
@@ -1158,7 +1158,7 @@ schema: {
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
-      heroImage: '/images/create-custom-local-models-overview-hero-pt.png',
+      heroImage: '/images/create-custom-local-models-overview-hero-pt.webp',
       title: 'Criar LLMs Locais Personalizados 2026: Fine-Tuning vs Pré-Treinamento com Unsloth e Ollama',
       seoTitle: 'Criar LLMs locais personalizados: fine-tune vs pré-treinamento',
       intro: 'Criar LLMs locais personalizados significa fazer fine-tuning de um modelo existente ou pré-treinar do zero. A partir de abril de 2026, o fine-tuning com LoRA é prático em hardware de consumo: 500 exemplos, 8 GB VRAM, 1–2 horas, $100–500. O pré-treinamento custa $50K–500K e requer mais de 10B de tokens — justificado apenas para necessidades proprietárias excepcionais. Este guia cobre ambas as abordagens: o caminho de fine-tuning em 7 passos com Unsloth, a matriz de decisão entre fine-tuning vs pré-treinamento vs RAG, e o deploy no Ollama.',
@@ -1279,7 +1279,7 @@ schema: {
     de: {
       freshness_tier: 'semi_annual',
       theme: 'Fortgeschrittene Techniken',
-      heroImage: '/images/create-custom-local-models-overview-hero-de.png',
+      heroImage: '/images/create-custom-local-models-overview-hero-de.webp',
       title: 'Eigene lokale LLMs erstellen 2026: Fine-Tuning vs. Pre-Training mit Unsloth und Ollama',
       seoTitle: 'Eigene lokale LLMs 2026: Fine-Tuning vs. Pre-Training',
       intro: 'Eigene lokale LLMs erstellen bedeutet, ein bestehendes Modell zu Fine-Tuning oder von Grund auf zu pre-trainieren. Im April 2026 ist Fine-Tuning mit LoRA auf Consumer-Hardware praktikabel: 500 Beispiele, 8 GB VRAM, 1–2 Stunden, 100–500 €. Pre-Training kostet 50.000–500.000 € und benötigt 10 Milliarden+ Tokens – begründet nur für seltene proprietäre Bedürfnisse. Dieser Leitfaden behandelt beide Ansätze: den 7-Schritt-Fine-Tuning-Pfad mit Unsloth, die Entscheidungsmatrix für Fine-Tuning vs. Pre-Training vs. RAG und die Bereitstellung auf Ollama.',
@@ -1689,7 +1689,7 @@ schema: {
     fr: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques avancées',
-      heroImage: '/images/create-custom-local-models-overview-hero-fr.png',
+      heroImage: '/images/create-custom-local-models-overview-hero-fr.webp',
       title: 'Créer des LLMs locaux personnalisés en 2026 : Fine-tuning vs. Pre-training avec Unsloth et Ollama',
       seoTitle: 'Créer des LLMs locaux 2026 : Fine-Tuning 500 $ vs Pré-entraînement 50K $',
       intro: 'Créer des LLMs locaux personnalisés signifie affiner un modèle existant ou pré-entraîner à partir de zéro. En avril 2026, le fine-tuning avec LoRA est pratique sur du matériel grand public : 500 exemples, 8 GB VRAM, 1–2 heures, 100–500 €. Le pré-entraînement coûte 50 000–500 000 € et nécessite 10 milliards+ tokens — justifié uniquement pour les besoins propriétaires rares. Ce guide couvre les deux approches : le chemin de fine-tuning en 7 étapes avec Unsloth, la matrice de décision fine-tuning vs. pré-entraînement vs. RAG, et le déploiement sur Ollama.',
@@ -2074,7 +2074,7 @@ schema: {
     ja: {
       freshness_tier: 'semi_annual',
       theme: '高度な技術',
-      heroImage: '/images/create-custom-local-models-overview-hero-ja.png',
+      heroImage: '/images/create-custom-local-models-overview-hero-ja.webp',
       title: 'カスタム ローカル LLM を構築する 2026 年版：Unsloth と Ollama による Fine-tuning vs. Pre-training',
       seoTitle: 'カスタムローカルLLM作成2026：Fine-Tuning $500 vs 事前訓練 $50K',
       intro: 'カスタム ローカル LLM を構築するとは、既存モデルを fine-tune するか、ゼロから pre-train することを意味します。2026 年 4 月現在、LoRA による fine-tuning はコンシューマー ハードウェアで実用的です：500 サンプル、8 GB VRAM、1～2 時間、¥15,000～30,000。Pre-training には ¥6,000,000～60,000,000 かかり、100 億+ トークンが必要です—稀な独自ニーズのみ正当化されます。このガイドは両方のアプローチをカバーしています：Unsloth を使用した 7 ステップ fine-tuning パス、fine-tuning vs. pre-training vs. RAG の決定マトリックス、および Ollama への デプロイメント。',
@@ -2458,7 +2458,7 @@ schema: {
     zh: {
       freshness_tier: 'semi_annual',
       theme: '高级技术',
-      heroImage: '/images/create-custom-local-models-overview-hero-zh.png',
+      heroImage: '/images/create-custom-local-models-overview-hero-zh.webp',
       title: '创建自定义本地 LLM 2026：使用 Unsloth 和 Ollama 进行微调与预训练',
       seoTitle: '创建自定义本地LLM 2026：微调$500对比预训练$50K',
       intro: '创建自定义本地 LLM 意味着微调现有模型或从零开始预训练。截至 2026 年 4 月，使用 LoRA 的微调在消费级硬件上可行：500 个样本、8GB VRAM、1-2 小时、$100-500。预训练成本为 $50,000-500,000，需要 100 亿+ tokens——仅对罕见的专有需求合理。本指南涵盖两种方法：使用 Unsloth 的 7 步微调路径、微调 vs. 预训练 vs. RAG 决策矩阵以及 Ollama 部署。',
@@ -2842,7 +2842,7 @@ schema: {
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Advanced Techniques',
-    heroImage: '/images/create-custom-local-models-overview-hero-ko.png',
+    heroImage: '/images/create-custom-local-models-overview-hero-ko.webp',
       title: '커스텀 로컬 LLM 만들기 2026: Unsloth와 Ollama를 활용한 파인튜닝 vs 사전학습',
       seoTitle: '커스텀 로컬 LLM 만들기 2026: $500 파인튜닝 vs $5만 사전학습 비교',
       intro: '커스텀 로컬 LLM을 만드는 방법은 기존 모델을 파인튜닝하거나 처음부터 사전학습하는 두 가지가 있습니다. 2026년 4월 기준, LoRA를 활용한 파인튜닝은 소비자용 하드웨어에서도 실용적입니다: 예시 500개, VRAM 8 GB, 1~2시간, $100~500. 사전학습은 $5만~50만이 소요되며 100억 개 이상의 토큰이 필요합니다 — 특수한 독점 목적에만 정당화됩니다. 이 가이드에서는 두 가지 접근 방식을 모두 다룹니다: Unsloth를 활용한 7단계 파인튜닝 경로, 파인튜닝 vs 사전학습 vs RAG 의사결정 매트릭스, 그리고 [Ollama](https://ollama.com/) 배포 방법.',

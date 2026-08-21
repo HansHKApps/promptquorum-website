@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-18',
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-en.png',
+    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-en.webp',
     title: 'Balcony Solar in Brazil: Status Report 2027',
     seoTitle: 'Balcony Solar in Brazil: Status Report 2027',
     intro: 'Brazil has one of the world\'s largest distributed-generation solar markets — but that infrastructure and market culture is not balcony-plug-in-specific. This page is a status report on the specific gap: no dedicated regulation exists yet for direct-to-outlet, plug-and-play balcony solar, even though the general distributed-generation framework it would fall under is well established and heavily used.',
@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-de.png',
+    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-de.webp',
     title: 'Balkonkraftwerke in Brasilien: Statusbericht 2027',
     seoTitle: 'Balkonkraftwerke in Brasilien: Statusbericht 2027',
     intro: 'Brasilien hat einen der weltweit größten Märkte für dezentrale Solarstromerzeugung (geração distribuída) — doch diese Infrastruktur und Marktkultur ist nicht speziell auf steckerfertige Balkonkraftwerke ausgerichtet. Diese Seite ist ein Statusbericht zu genau dieser Lücke: Für direkt an die Steckdose angeschlossene, steckerfertige Balkonkraftwerke existiert noch keine eigene Regelung, obwohl der allgemeine Rahmen für dezentrale Erzeugung, unter den sie fallen würden, gut etabliert und stark genutzt ist.',
@@ -214,7 +214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-es.png',
+    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-es.webp',
     title: 'Energía solar de balcón en Brasil: informe de estado 2027',
     seoTitle: 'Energía solar de balcón en Brasil: informe de estado 2027',
     intro: 'Brasil tiene uno de los mercados de generación distribuida solar más grandes del mundo — pero esa infraestructura y cultura de mercado no es específica de la energía solar de balcón enchufable. Esta página es un informe de estado sobre esa brecha específica: todavía no existe una regulación dedicada para los kits solares de balcón enchufables y de instalación directa, aunque el marco general de generación distribuida bajo el que caerían está bien establecido y muy utilizado.',
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-fr.png',
+    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-fr.webp',
     title: "L'énergie solaire de balcon au Brésil : rapport de situation 2027",
     seoTitle: "L'énergie solaire de balcon au Brésil : rapport de situation 2027",
     intro: "Le Brésil possède l'un des plus grands marchés de production solaire distribuée au monde — mais cette infrastructure et cette culture de marché ne sont pas spécifiques au solaire de balcon prêt à brancher. Cette page est un rapport de situation sur cette lacune précise : aucune réglementation dédiée n'existe encore pour les kits solaires de balcon prêts à brancher directement sur une prise, même si le cadre général de production distribuée dont ils relèveraient est bien établi et largement utilisé.",
@@ -410,7 +410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-ar.png',
+    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-ar.webp',
     title: 'الطاقة الشمسية للشرفات في البرازيل: تقرير الحالة 2027',
     seoTitle: 'الطاقة الشمسية للشرفات في البرازيل: تقرير الحالة 2027',
     intro: 'تمتلك البرازيل واحدًا من أكبر أسواق التوليد الموزع للطاقة الشمسية في العالم — لكن هذه البنية التحتية والثقافة السوقية ليست خاصة بالطاقة الشمسية للشرفات ذات التوصيل المباشر بالمقبس (plug-and-play). هذه الصفحة هي تقرير حالة حول هذه الفجوة تحديدًا: لا توجد حتى الآن لائحة تنظيمية مخصصة للأنظمة الشمسية القابلة للتوصيل المباشر بالمقبس، رغم أن الإطار العام للتوليد الموزع الذي قد تندرج تحته هذه الأنظمة راسخ جيدًا ومستخدم على نطاق واسع.',
@@ -508,7 +508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-ja.png',
+    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-ja.webp',
     title: 'ブラジルのバルコニーソーラー：2027年現状レポート',
     seoTitle: 'ブラジルのバルコニーソーラー：2027年現状レポート',
     intro: 'ブラジルは世界最大級の分散型太陽光発電市場を持っていますが、そのインフラと市場文化はバルコニー据え置き型（プラグイン式）ソーラーに特化したものではありません。このページは、その特定のギャップに関する現状レポートです。コンセント直結・プラグアンドプレイ型のバルコニーソーラーには専用の規制がまだ存在しませんが、それが該当するであろう一般的な分散型発電の枠組みは十分に確立され、広く利用されています。',
@@ -606,7 +606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-ko.png',
+    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-ko.webp',
     title: '브라질 발코니 태양광 현황 보고서 2027',
     seoTitle: '브라질 발코니 태양광 현황 보고서 2027',
     intro: '브라질은 세계 최대 규모의 분산형 태양광 발전 시장 중 하나를 보유하고 있지만, 이러한 인프라와 시장 문화가 콘센트 직결형 발코니 태양광에 특화된 것은 아닙니다. 이 페이지는 바로 그 특정한 공백에 관한 현황 보고서입니다. 플러그 앤 플레이 방식으로 콘센트에 직접 연결하는 발코니 태양광에 대한 전용 규정은 아직 존재하지 않지만, 이러한 제품이 해당될 일반적인 분산발전 프레임워크 자체는 잘 확립되어 있고 널리 활용되고 있습니다.',
@@ -704,7 +704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-pt.png',
+    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-pt.webp',
     title: 'Energia solar de varanda no Brasil: relatório de status 2027',
     seoTitle: 'Energia solar de varanda no Brasil: relatório de status 2027',
     intro: 'O Brasil tem um dos maiores mercados de geração distribuída solar do mundo — mas essa infraestrutura e cultura de mercado não são específicas da energia solar de varanda plug-and-play. Esta página é um relatório de status sobre essa lacuna específica: ainda não existe regulamentação dedicada para kits solares plug-and-play, ligados diretamente à tomada, mesmo que o marco geral de geração distribuída sob o qual eles se enquadrariam esteja bem estabelecido e seja amplamente utilizado.',
@@ -802,7 +802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Legislation',
-    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-zh.png',
+    heroImage: '/images/balcony-solar-brazil-status-2027-overview-hero-zh.webp',
     title: '巴西阳台光伏现状报告2027',
     seoTitle: '巴西阳台光伏现状报告2027',
     intro: '巴西拥有全球最大的分布式光伏发电市场之一——但这种基础设施和市场文化并不是专门针对插座直连式阳台光伏的。本页是关于这一具体空白的现状报告:即插即用、直接接入插座的阳台光伏目前还没有专门的监管规定,尽管它可能适用的一般分布式发电框架已经十分成熟并被广泛使用。',

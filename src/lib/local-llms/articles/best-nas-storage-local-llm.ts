@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
-      heroImage: '/images/best-nas-storage-local-llm-overview-hero-en.png',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-en.webp',
       title: 'Best NAS and Storage for Local AI Models',
       dateModified: '2026-06-20',
       seoTitle: 'NAS Storage for Local LLMs: RAID 6, Backup & Redundancy',
@@ -194,7 +194,7 @@ schema: {
     es: {
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
-      heroImage: '/images/best-nas-storage-local-llm-overview-hero-es.png',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-es.webp',
       title: 'Mejor NAS y Almacenamiento para Modelos de IA Local',
       seoTitle: 'NAS para LLMs Locales: RAID 6, Backup y Redundancia',
       intro: '**Un NAS (Network-Attached Storage) mantiene tu biblioteca de modelos organizada, respaldada y accesible desde cualquier máquina.** A partir de abril de 2026, el almacenamiento RAID 6 (tolerancia a 2 fallos de disco) con backups automatizados es esencial para equipos de LLMs locales en producción. Presupuesto: $1.500-3.000 para 4-8TB de capacidad utilizable. Los precios pueden variar según tu país.',
@@ -377,7 +377,7 @@ schema: {
     ar: {
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
-      heroImage: '/images/best-nas-storage-local-llm-overview-hero-ar.png',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-ar.webp',
       title: 'أفضل ⁨NAS⁩ وتخزين لنماذج الذكاء الاصطناعي المحلية',
       seoTitle: 'تخزين ⁨NAS⁩ لنماذج ⁨LLM⁩ المحلية: ⁨RAID 6⁩ ونسخ احتياطي',
       intro: '**يحافظ NAS (التخزين المتصل بالشبكة) على مكتبة نماذجك منظمة ومنسوخة احتياطياً ومتاحة من أي جهاز.** اعتباراً من أبريل 2026، يُعد تخزين RAID 6 (تحمّل عطل قرصين) مع النسخ الاحتياطي الآلي ضرورياً لفرق نماذج LLM المحلية في الإنتاج. الميزانية: 1,500–3,000 دولار لسعة قابلة للاستخدام 4–8TB. قد تختلف الأسعار حسب بلدك.',
@@ -563,7 +563,7 @@ schema: {
     de: {
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
-      heroImage: '/images/best-nas-storage-local-llm-overview-hero-de.png',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-de.webp',
       title: 'Bestes NAS und Speicher für lokale KI-Modelle',
       dateModified: '2026-07-23',
       seoTitle: 'NAS-Speicher für lokale LLMs: RAID 6, Backup & Redundanz',
@@ -746,7 +746,7 @@ schema: {
     },
     fr: {
       theme: 'Privacy & Business',
-      heroImage: '/images/best-nas-storage-local-llm-overview-hero-fr.png',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-fr.webp',
       seoTitle: 'NAS pour LLM locaux 2026: RAID 6, Sauvegarde & Redondance',
       metaDescription: 'Meilleur NAS pour LLM locaux : redondance RAID 6, stratégie de sauvegarde et organisation de la bibliothèque de modèles. Comparez Synology, QNAP et TrueNAS. Gratuit -- avril 2026.',
 schema: {
@@ -784,7 +784,7 @@ schema: {
     },
     ja: {
       theme: 'Privacy & Business',
-      heroImage: '/images/best-nas-storage-local-llm-overview-hero-ja.png',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-ja.webp',
       seoTitle: 'ローカルLLM用NAS 2026: RAID 6、バックアップ & 冗長性',
       metaDescription: 'ローカルLLM向けベストNAS：RAID 6冗長性、バックアップ戦略、モデルライブラリ組織。Synology、QNAP、TrueNASを比較。無料--2026年4月。',
 schema: {
@@ -822,7 +822,7 @@ schema: {
     },
     zh: {
       theme: 'Privacy & Business',
-      heroImage: '/images/best-nas-storage-local-llm-overview-hero-zh.png',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-zh.webp',
       seoTitle: '本地LLM的NAS存储 2026: RAID 6 与备份冗余',
       metaDescription: '本地LLM最佳NAS：RAID 6冗余、备份策略和模型库组织。对比Synology、QNAP和TrueNAS。免费--2026年4月。',
 schema: {
@@ -861,7 +861,7 @@ schema: {
     pt: {
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
-      heroImage: '/images/best-nas-storage-local-llm-overview-hero-pt.png',
+      heroImage: '/images/best-nas-storage-local-llm-overview-hero-pt.webp',
       title: 'Melhor NAS e Armazenamento para Modelos de IA Local',
       seoTitle: 'NAS para LLMs Locais: RAID 6, Backup e Redundância',
       // VERIFY: preços de hardware em BRL refletem o varejo brasileiro (NAS/HDDs têm alta carga tributária); valores são estimativas de jun/2026 e variam por loja (Kabum/Pichau/Mercado Livre) e câmbio. Serviços de nuvem (Backblaze B2, AWS S3) permanecem em USD pois são cobrados em dólar globalmente. Confirmar antes de publicar.
@@ -1045,7 +1045,7 @@ schema: {
   ko: {
       freshness_tier: 'annual',
       theme: '프라이버시 및 비즈니스',
-    heroImage: '/images/best-nas-storage-local-llm-overview-hero-ko.png',
+    heroImage: '/images/best-nas-storage-local-llm-overview-hero-ko.webp',
       title: '로컬 AI 모델을 위한 최고의 NAS 및 스토리지',
       seoTitle: '로컬 LLM용 NAS 스토리지: RAID 6, 백업 및 이중화',
       intro: '**NAS(네트워크 결합 스토리지)는 모델 라이브러리를 체계적으로 구성하고, 백업하며, 여러 머신에서 접근할 수 있게 해 줍니다.** 2026년 4월 기준, 자동화된 백업이 포함된 RAID 6 스토리지(드라이브 2개 장애 허용)는 프로덕션 로컬 LLM 팀에 필수적입니다. 예산: 사용 가능 용량 4~8TB 기준 $1,500~$3,000.',

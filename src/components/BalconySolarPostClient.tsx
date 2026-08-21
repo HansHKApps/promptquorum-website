@@ -5,7 +5,8 @@
 // Differences:
 //   - `lang` is a REQUIRED prop (resolved server-side from the URL path); no useLang() call.
 //   - Sibling links use path-based URLs (/de/balcony-solar/...) not query params.
-//   - Loads from balconySolarContent + BALCONY_SOLAR_SLUG_TO_KEY (not the local-llms maps).
+//   - articleData is resolved server-side (page-helpers.tsx) and passed as a
+//     required prop — this component never imports the balconySolarContent barrel.
 //   - LanguageSwitcher omitted in this iteration; cluster ships noindex until launch.
 
 import { useState } from 'react'
@@ -13,9 +14,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { Language } from '@/lib/blog/blogContent'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
-import { balconySolarContent } from '@/lib/balcony-solar/content'
-import type { LLMSection } from '@/lib/local-llms/types'
-import { BALCONY_SOLAR_SLUG_TO_KEY } from '@/lib/balcony-solar/slugs'
+import type { LLMSection, LLMArticle } from '@/lib/local-llms/types'
 import { balconySolarHubPath, balconySolarArticlePath } from '@/lib/balcony-solar/metadata-helpers'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
@@ -30,6 +29,7 @@ import { CopyButton } from '@/components/CopyButton'
 interface Props {
   slug: string
   lang: Language
+  articleData: Partial<Record<Language, LLMArticle>>
 }
 
 // Section header translations
@@ -771,9 +771,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
   )
 }
 
-function BalconySolarPostContent({ slug, lang }: Props) {
-  const key = BALCONY_SOLAR_SLUG_TO_KEY[slug]
-  const articleData = key ? balconySolarContent[key] : null
+function BalconySolarPostContent({ slug, lang, articleData }: Props) {
 
   if (!articleData) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>

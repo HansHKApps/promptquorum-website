@@ -136,6 +136,7 @@ export default async function ArLocalLLMsArticlePage({ params }: PageProps) {
       <LocalLLMsPostClient
         slug={slug}
         initialLang="ar"
+        articleData={llmContent[key]}
       />
     </>
   )

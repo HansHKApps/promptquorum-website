@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-en.png',
+    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-en.webp',
     title: 'Build Local RAG on Your PDFs in 30 Minutes (Ollama + AnythingLLM)',
     seoTitle: 'Local RAG on Your PDFs 2026: Step-by-Step Setup',
     intro:
@@ -473,7 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-de.png',
+    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-de.webp',
     title: 'Lokales RAG auf deinen PDFs in 30 Minuten (Ollama + AnythingLLM)',
     seoTitle: 'Lokales RAG auf PDFs 2026: Ollama + AnythingLLM',
     intro:
@@ -954,7 +954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-fr.png',
+    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-fr.webp',
     title: 'Construire un RAG local sur vos PDFs en 30 minutes (Ollama + AnythingLLM)',
     seoTitle: 'RAG local sur vos PDF 2026 : configuration pas à pas',
     intro:
@@ -1427,7 +1427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-ja.png',
+    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-ja.webp',
     title: '30分でローカルRAGシステムを構築: Ollama + AnythingLLM',
     seoTitle: '30分でローカルRAG構築 2026: Ollama + AnythingLLM',
     intro:
@@ -1904,7 +1904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-zh.png',
+    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-zh.webp',
     title: '30分钟在本地PDF上构建RAG系统（Ollama + AnythingLLM）',
     seoTitle: '30分钟本地PDF RAG系统 2026：Ollama + AnythingLLM',
     intro:
@@ -2366,7 +2366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-es.png',
+    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-es.webp',
     title: 'Crea un RAG local en tus PDFs en 30 minutos (Ollama + AnythingLLM)',
     seoTitle: 'RAG local en PDFs 2026: configuración paso a paso',
     intro:
@@ -2834,7 +2834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-ko.png',
+    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-ko.webp',
     title: '30분 만에 PDF에 로컬 RAG 구축하기 (Ollama + AnythingLLM)',
     seoTitle: 'PDF 로컬 RAG 2026: 단계별 설정 가이드',
     intro:
@@ -3303,7 +3303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-pt.png',
+    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-pt.webp',
     title: 'Crie um RAG local nos seus PDFs em 30 minutos (Ollama + AnythingLLM)',
     seoTitle: 'RAG local em PDFs 2026: configuração passo a passo',
     intro:
@@ -3771,7 +3771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
     theme: 'RAG & Document Chat',
-    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-ar.png',
+    heroImage: '/images/local-rag-on-your-pdfs-step-by-step-overview-hero-ar.webp',
     title: 'ابنِ نظام ⁨RAG⁩ محليًا على ملفات ⁨PDF⁩ الخاصة بك في ⁨30⁩ دقيقة (⁨Ollama + AnythingLLM⁩)',
     seoTitle: '⁨RAG⁩ محلي على ملفات ⁨PDF 2026⁩: إعداد خطوة بخطوة',
     intro:

@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
-import type { Language } from '@/translations'
 import { translations } from '@/translations'
 import { PromptEngineeringHub } from '@/components/PromptEngineeringHub'
-import { peContent } from '@/lib/prompt-engineering/content'
+import { buildPEHubData } from '@/lib/prompt-engineering/hub-data'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 
@@ -30,28 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function EsPromptEngineeringPage() {
-  const titlesMap: Record<string, Partial<Record<Language, string>>> = Object.fromEntries(
-    Object.entries(peContent).map(([key, langMap]) => [
-      key,
-      Object.fromEntries(
-        Object.entries(langMap).map(([lang, article]) => [lang, article.title])
-      ),
-    ])
-  )
-
-  const articleLevels: Record<string, string> = Object.fromEntries(
-    Object.entries(peContent).map(([key, langMap]) => [
-      key,
-      (langMap.en?.educationalLevel ?? '').toLowerCase(),
-    ])
-  )
-
-  const datesMap: Record<string, { publishDate?: string; dateModified?: string }> = Object.fromEntries(
-    Object.entries(peContent).map(([key, langMap]) => [
-      key,
-      { publishDate: langMap.en?.publishDate, dateModified: langMap.en?.dateModified },
-    ])
-  )
+  const { titlesMap, articleLevels, datesMap } = buildPEHubData('ko')
 
   return <PromptEngineeringHub initialLang="ko" titlesMap={titlesMap} articleLevels={articleLevels} datesMap={datesMap} />
 }

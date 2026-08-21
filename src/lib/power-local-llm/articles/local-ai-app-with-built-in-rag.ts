@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-en.png',
+    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-en.webp',
     title: 'Local AI Apps With Built-In RAG: Chat With Your Files (No Setup)',
     seoTitle: 'Built-In RAG Apps 2026: Chat With PDFs Locally, No Setup',
     metaDescription:
@@ -538,7 +538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-de.png',
+    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-de.webp',
     title: 'Lokale KI-Apps mit integriertem RAG: Chat mit Ihren Dateien (ohne Setup)',
     seoTitle: 'PDFs lokal chatten 2026: Integrierte RAG, keine Vektor-DB',
     metaDescription:
@@ -1051,7 +1051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-fr.png',
+    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-fr.webp',
     title: 'Applications IA locales avec RAG intégré : Discutez avec vos fichiers (sans configuration)',
     seoTitle: 'RAG intégré 2026 : chat PDF local sans base vectorielle',
     metaDescription:
@@ -1556,7 +1556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-ja.png',
+    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-ja.webp',
     title: 'ローカルAIアプリ（内蔵RAG対応）：ファイルとチャット（セットアップ不要）',
     seoTitle: 'PDF対話内蔵RAGアプリ 2026：ベクトルDB不要、LM Studio・Jan・AnythingLLM実測',
     metaDescription:
@@ -2065,7 +2065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-zh.png',
+    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-zh.webp',
     title: '内置RAG的本地AI应用：与文件聊天（无需配置）',
     seoTitle: '本地PDF对话 2026：LM Studio、Jan、AnythingLLM内置RAG实测，无需向量数据库',
     metaDescription:
@@ -2574,7 +2574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-es.png',
+    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-es.webp',
     title: 'Apps de IA local con RAG integrado: Chatea con tus archivos (sin configuración)',
     seoTitle: 'Apps con RAG integrado 2026: chat con PDFs sin BD vectorial',
     metaDescription:
@@ -3097,7 +3097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-pt.png',
+    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-pt.webp',
     title: 'Apps de IA local com RAG integrado: Converse com seus arquivos (sem configuração)',
     seoTitle: 'Apps com RAG integrado 2026: chat com PDFs sem BD vetorial',
     metaDescription:
@@ -3621,7 +3621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-ar.png',
+    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-ar.webp',
     title: 'تطبيقات الذكاء الاصطناعي المحلي مع ⁨RAG⁩ مدمج: تحدّث مع ملفاتك (بدون إعداد)',
     seoTitle: '⁨RAG⁩ مدمج ⁨2026⁩: دردشة مع ⁨PDF⁩ محلياً بدون إعداد',
     metaDescription:
@@ -4118,7 +4118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-14',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
-    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-ko.png',
+    heroImage: '/images/local-ai-app-with-built-in-rag-overview-hero-ko.webp',
     title: '내장 RAG가 있는 로컬 AI 앱: 설정 없이 파일과 대화하기',
     seoTitle: '내장 RAG 앱 2026: 벡터 DB 없이 PDF 채팅',
     metaDescription:

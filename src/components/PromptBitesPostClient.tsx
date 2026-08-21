@@ -8,15 +8,19 @@ import { LangLinksBar } from '@/components/LangLinksBar'
 import { CopyButton } from '@/components/CopyButton'
 import { AffiliateLink } from '@/components/AffiliateLink'
 import { AFFILIATE_DISCLOSURE } from '@/lib/tracking/affiliate'
-import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
-import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMSection } from '@/lib/local-llms/types'
+import type { PromptBiteArticle } from '@/lib/prompt-bites/types'
 
 interface Props {
   slug: string
   lang: Language
+  articleData: Partial<Record<Language, PromptBiteArticle>>
+  // Resolved server-side: sibling-bite slug -> localized title. Avoids the
+  // client needing the full promptBitesContent barrel just to render a few
+  // "related bites" link labels.
+  siblingTitles?: Record<string, string>
 }
 
 function promptBitesHubHref(lang: Language): string {
@@ -137,9 +141,10 @@ const EDUCATIONAL_LEVEL: Record<string, Partial<Record<Language, string>>> = {
   Advanced:     { en: 'Advanced',     de: 'Fortgeschritten+',fr: 'Avancé',        ja: '上級', zh: '高级', es: 'Avanzado',      pt: 'Avançado',      ar: 'متقدم',  ko: '고급' }, // VERIFY
 }
 
-function GoDeeper({ parentArticle, siblingBites, lang }: {
+function GoDeeper({ parentArticle, siblingBites, siblingTitles, lang }: {
   parentArticle?: string
   siblingBites?: string[]
+  siblingTitles?: Record<string, string>
   lang: Language
 }) {
   if (!parentArticle && (!siblingBites || siblingBites.length === 0)) return null
@@ -166,10 +171,7 @@ function GoDeeper({ parentArticle, siblingBites, lang }: {
           </p>
           <ul className="space-y-2">
             {siblingBites.map((slug) => {
-              const key = PROMPT_BITES_SLUG_TO_KEY[slug]
-              const sibArticle = key ? promptBitesContent[key] : undefined
-              const sibData = sibArticle?.[lang] ?? sibArticle?.['en']
-              const title = sibData?.title ?? slug
+              const title = siblingTitles?.[slug] ?? slug
               return (
                 <li key={slug}>
                   <Link
@@ -433,9 +435,7 @@ function FaqSection({ title, faqs, lang: _lang }: { title?: string; faqs: Array<
   )
 }
 
-export function PromptBitesPostClient({ slug, lang }: Props) {
-  const key = PROMPT_BITES_SLUG_TO_KEY[slug]
-  const articleData = key ? promptBitesContent[key] : undefined
+export function PromptBitesPostClient({ slug, lang, articleData, siblingTitles }: Props) {
   const article = articleData?.[lang] ?? articleData?.['en']
 
   if (!article) {
@@ -586,7 +586,7 @@ export function PromptBitesPostClient({ slug, lang }: Props) {
         )}
 
         {/* Go deeper */}
-        <GoDeeper parentArticle={parentArticle} siblingBites={siblingBites} lang={lang} />
+        <GoDeeper parentArticle={parentArticle} siblingBites={siblingBites} siblingTitles={siblingTitles} lang={lang} />
 
         {/* Back to hub */}
         <div className="mt-8 pt-8 border-t border-primary/10">

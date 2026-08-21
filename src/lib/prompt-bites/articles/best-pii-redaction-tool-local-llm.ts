@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-en.png',
+    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-en.webp',
     title: 'Best Local Tool for PII Redaction in LLM Outputs?',
     seoTitle: 'Best Local PII Redaction Tool | Prompt Bites',
     metaDescription: 'A quick guide to picking a local tool for redacting personal information from LLM inputs and outputs, and where a local LLM itself fits into a redaction pipeline.',
@@ -99,7 +99,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-de.png',
+    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-de.webp',
     title: 'Bestes lokales Tool zur PII-Schwärzung in LLM-Ausgaben?',
     seoTitle: 'Bestes lokales PII-Schwärzungs-Tool | Prompt Bites',
     metaDescription: 'Ein kurzer Leitfaden zur Auswahl eines lokalen Tools zum Schwärzen personenbezogener Daten aus LLM-Ein- und -Ausgaben, und wo ein lokales LLM selbst in eine Schwärzungs-Pipeline passt.',
@@ -194,7 +194,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-fr.png',
+    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-fr.webp',
     title: "Meilleur outil local pour l'anonymisation des PII dans les sorties LLM ?",
     seoTitle: "Meilleur outil local d'anonymisation des PII | Prompt Bites",
     metaDescription: "Un guide rapide pour choisir un outil local d'anonymisation des informations personnelles dans les entrées et sorties LLM, et où un LLM local lui-même s'intègre dans un pipeline d'anonymisation.",
@@ -289,7 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-ja.png',
+    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-ja.webp',
     title: 'LLM出力のPII（個人情報）マスキングに最適なローカルツールは？',
     seoTitle: '最適なローカルPIIマスキングツール | Prompt Bites',
     metaDescription: 'ローカルLLMの入出力から個人情報をマスキングするツールの選び方と、マスキングパイプラインの中でローカルLLM自体がどう位置づけられるかを簡潔に解説します。',
@@ -384,7 +384,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-zh.png',
+    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-zh.webp',
     title: '本地LLM输出中PII脱敏的最佳本地工具是什么？',
     seoTitle: '最佳本地PII脱敏工具 | Prompt Bites',
     metaDescription: '快速指南：如何为本地LLM的输入输出选择个人信息脱敏工具，以及本地LLM本身在脱敏流程中扮演什么角色。',
@@ -479,7 +479,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-es.png',
+    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-es.webp',
     title: '¿Cuál es la Mejor Herramienta Local para Redactar PII en Salidas de LLM?',
     seoTitle: 'Mejor Herramienta Local para Redactar PII | Prompt Bites',
     metaDescription: 'Una guía rápida para elegir una herramienta local que redacte información personal de las entradas y salidas de un LLM, y dónde encaja el propio LLM local en un pipeline de redacción.',
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-pt.png',
+    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-pt.webp',
     title: 'Qual a Melhor Ferramenta Local para Redação de PII em Saídas de LLM?',
     seoTitle: 'Melhor Ferramenta Local de Redação de PII | Prompt Bites',
     metaDescription: 'Um guia rápido para escolher uma ferramenta local que redija informações pessoais das entradas e saídas de um LLM, e onde o próprio LLM local se encaixa em um pipeline de redação.',
@@ -669,7 +669,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-ar.png',
+    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-ar.webp',
     title: 'ما هي أفضل أداة محلية لإخفاء المعلومات الشخصية (PII) من مخرجات LLM؟',
     seoTitle: 'أفضل أداة محلية لإخفاء PII | Prompt Bites',
     metaDescription: 'دليل سريع لاختيار أداة محلية لإخفاء المعلومات الشخصية من مدخلات ومخرجات LLM، وأين يتناسب LLM المحلي نفسه ضمن خط أنابيب الإخفاء.',
@@ -764,7 +764,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-ko.png',
+    heroImage: '/images/best-pii-redaction-tool-local-llm-overview-hero-ko.webp',
     title: 'LLM 출력에서 PII를 마스킹하는 데 가장 좋은 로컬 도구는 무엇입니까?',
     seoTitle: '최고의 로컬 PII 마스킹 도구 | Prompt Bites',
     metaDescription: '로컬 LLM의 입력과 출력에서 개인정보를 마스킹할 도구를 선택하는 방법과, 마스킹 파이프라인에서 로컬 LLM 자체가 차지하는 역할을 간단히 설명합니다.',

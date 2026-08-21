@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-en.png',
+    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-en.webp',
     title: 'Best GPU Under $600 for Local LLMs in 2026?',
     seoTitle: 'Best GPU Under $600 for Local LLM 2026 | Prompt Bites',
     metaDescription: 'Best GPU under $600 for local LLMs: RTX 4060 Ti 16 GB ($424 new). 16 GB VRAM is the sweet spot for 14B models. July 2026 price snapshot.',
@@ -184,7 +184,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-de.png',
+    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-de.webp',
     title: 'Beste GPU unter 800 € für lokale LLMs 2026?',
     seoTitle: 'Beste GPU unter 800 € für lokale LLMs 2026 | Prompt Bites',
     metaDescription: 'Beste GPU unter 800 € für lokale LLMs: RTX 4060 Ti 16 GB (~800 € neu). 16 GB VRAM ist der Sweetspot für 14B-Modelle. Juli 2026.',
@@ -325,7 +325,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-fr.png',
+    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-fr.webp',
     title: 'Meilleur GPU sous 600 € pour LLM local en 2026 ?',
     seoTitle: 'Meilleur GPU sous 600 € LLM local 2026 | Prompt Bites',
     metaDescription: 'Meilleur GPU sous 600 € pour LLM local : RTX 4060 Ti 16 GB (~500-600 €). 16 GB de VRAM, le sweet spot pour les modèles 14B. Juillet 2026.',
@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-ja.png',
+    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-ja.webp',
     title: '2026年のローカルLLM向け、600ドル以下で最適なGPUは？',
     seoTitle: '600ドル以下のローカルLLM向けGPU 2026 | Prompt Bites',
     metaDescription: '600ドル以下のローカルLLM向けベストGPUはNVIDIA RTX 4060 Ti 16 GB。16 GBは14Bモデルのスイートスポット。2026年7月時点。',
@@ -540,7 +540,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             label: '価格.comでRTX 4060 Ti 16GBの価格を確認',
           },
           {
-            url: 'https://www.dospara.co.jp/SBR1158/IC355.html',
+            url: 'https://www.dospara.co.jp/BR31',
             productName: 'NVIDIA RTX 4060 Ti 16GB',
             productCategory: 'gpu',
             priceRange: '現在価格を確認',
@@ -607,7 +607,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-zh.png',
+    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-zh.webp',
     title: '2026年600美元以下最适合本地LLM的GPU？',
     seoTitle: '600美元以下本地LLM最佳GPU 2026 | Prompt Bites',
     metaDescription: '600美元以下本地LLM最佳GPU:NVIDIA RTX 4060 Ti 16 GB。16 GB VRAM是14B模型的甜点。2026年7月数据。',
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-es.png',
+    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-es.webp',
     title: '¿La mejor GPU por menos de $600 para LLMs locales en 2026?',
     seoTitle: 'Mejor GPU por menos de $600 para LLM local 2026',
     metaDescription: 'Mejor GPU por menos de $600 para LLMs locales: RTX 4060 Ti 16 GB (~$424 nueva). 16 GB de VRAM es el punto óptimo para modelos 14B. Precios de julio 2026.',
@@ -889,7 +889,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-ar.png',
+    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-ar.webp',
     title: 'أفضل معالج رسومات بأقل من ⁨600⁩ دولار للنماذج اللغوية الكبيرة المحلية في ⁨2026⁩؟',
     seoTitle: 'أفضل ⁨GPU⁩ بأقل من ⁨600⁩ دولار لـ ⁨LLMs⁩ المحلية ⁨2026⁩',
     metaDescription: '⁨RTX 4060 Ti 16 GB⁩ (~⁨424⁩ دولار جديد) أفضل ⁨GPU⁩ بأقل من ⁨600⁩ دولار لـ ⁨LLMs⁩: ⁨16 GB VRAM⁩ تشغّل نماذج ⁨14B⁩ بتكميم ⁨Q4⁩ وتستهلك ⁨165⁩ واط فقط.',
@@ -1030,7 +1030,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-pt.png',
+    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-pt.webp',
     title: 'Melhor GPU por menos de $600 para LLMs locais em 2026?',
     seoTitle: 'Melhor GPU por menos de $600 para LLM local 2026',
     metaDescription: 'Melhor GPU abaixo de $600 para LLMs locais: RTX 4060 Ti 16 GB (~$424 nova). 16 GB de VRAM é o ponto ideal para modelos 14B. Instantâneo de preços de julho 2026.',
@@ -1171,7 +1171,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-ko.png',
+    heroImage: '/images/best-gpu-under-600-local-llm-overview-hero-ko.webp',
     title: '2026년 로컬 LLM용 $600 이하 최고의 GPU는?',
     seoTitle: '로컬 LLM용 $600 이하 최고 GPU 2026',
     metaDescription: '로컬 LLM용 $600 이하 최고 GPU: RTX 4060 Ti 16 GB(약 $424 신품). 16 GB VRAM은 14B 모델의 최적 지점입니다. 2026년 7월 가격 기준.',

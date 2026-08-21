@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-en.png',
+    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-en.webp',
     title: 'RTX 4060 vs RTX 3060 12GB: Which Is Better for Local LLMs?',
     seoTitle: 'RTX 4060 vs RTX 3060 12GB for Local LLMs 2026',
     metaDescription: 'RTX 3060 12GB beats the standard RTX 4060 8GB for local LLMs — more VRAM (12 GB vs 8 GB) matters more than the newer architecture. Full comparison.',
@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-ar.png',
+    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-ar.webp',
     title: 'RTX 4060 مقابل RTX 3060 12GB: أيهما أفضل لتشغيل LLM محليًا؟',
     seoTitle: 'RTX 4060 مقابل RTX 3060 12GB لتشغيل LLM محليًا 2026',
     metaDescription: 'بطاقة RTX 3060 12GB تتفوق على RTX 4060 8GB القياسية لتشغيل LLM محليًا — سعة VRAM أكبر (12 GB مقابل 8 GB) أهم من الجيل الأحدث. شاهد المقارنة الكاملة هنا.',
@@ -232,7 +232,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-de.png',
+    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-de.webp',
     title: 'RTX 4060 vs. RTX 3060 12GB: Was ist besser für lokale LLMs?',
     seoTitle: 'RTX 4060 vs. RTX 3060 12GB für lokale LLMs 2026',
     metaDescription: 'RTX 3060 12GB schlägt die Standard-RTX 4060 8GB bei lokalen LLMs — mehr VRAM (12 GB vs. 8 GB) zählt mehr als die neuere Architektur. Der Vergleich.',
@@ -346,7 +346,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-es.png',
+    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-es.webp',
     title: 'RTX 4060 vs RTX 3060 12GB: ¿Cuál es Mejor para LLMs Locales?',
     seoTitle: 'RTX 4060 vs RTX 3060 12GB para LLMs Locales 2026',
     metaDescription: 'La RTX 3060 12GB supera a la RTX 4060 8GB estándar para LLMs locales — más VRAM (12 GB vs 8 GB) importa más que la arquitectura reciente. Ver comparación.',
@@ -460,7 +460,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-fr.png',
+    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-fr.webp',
     title: 'RTX 4060 vs RTX 3060 12 Go : lequel est le meilleur pour les LLM locaux ?',
     seoTitle: 'RTX 4060 vs RTX 3060 12 Go pour LLM locaux 2026',
     metaDescription: 'La RTX 3060 12 Go surpasse la RTX 4060 8 Go standard pour les LLM locaux — plus de VRAM (12 Go contre 8 Go) compte plus que l\'architecture récente.',
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-ja.png',
+    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-ja.webp',
     title: 'RTX 4060 vs RTX 3060 12GB: ローカルLLMに良いのはどちら?',
     seoTitle: 'RTX 4060 vs RTX 3060 12GB ローカルLLM比較 2026',
     metaDescription: 'RTX 3060 12GBは標準のRTX 4060 8GBよりローカルLLMで優れています — VRAM容量(12GB対8GB)が新しいアーキテクチャより重要です。全比較。',
@@ -688,7 +688,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-ko.png',
+    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-ko.webp',
     title: 'RTX 4060 대 RTX 3060 12GB: 로컬 LLM에 어느 것이 더 나은가?',
     seoTitle: 'RTX 4060 대 RTX 3060 12GB 로컬 LLM 비교 2026',
     metaDescription: 'RTX 3060 12GB가 표준 RTX 4060 8GB보다 로컬 LLM에서 더 우수합니다 — 더 많은 VRAM(12GB 대 8GB)이 최신 아키텍처보다 중요합니다. 전체 비교를 확인하십시오.',
@@ -802,7 +802,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-pt.png',
+    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-pt.webp',
     title: 'RTX 4060 vs RTX 3060 12GB: Qual É Melhor para LLMs Locais?',
     seoTitle: 'RTX 4060 vs RTX 3060 12GB para LLMs Locais 2026',
     metaDescription: 'A RTX 3060 12GB supera a RTX 4060 8GB padrão para LLMs locais — mais VRAM (12 GB vs 8 GB) importa mais que a arquitetura mais nova. Comparação completa.',
@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-zh.png',
+    heroImage: '/images/rtx-4060-vs-rtx-3060-12gb-overview-hero-zh.webp',
     title: 'RTX 4060 对比 RTX 3060 12GB：哪个更适合本地 LLM？',
     seoTitle: '2026 年 RTX 4060 对比 RTX 3060 12GB 本地 LLM',
     metaDescription: 'RTX 3060 12GB 在本地 LLM 上胜过标准版 RTX 4060 8GB——更大的显存（12 GB vs 8 GB）比更新的架构更重要。完整对比。',

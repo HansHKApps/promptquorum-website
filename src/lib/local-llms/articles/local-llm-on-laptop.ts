@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'Local LLM on a Laptop (2026): 8GB, 16GB & Apple Silicon',
       intro: 'Running a local LLM on a laptop is possible — even on 8 GB RAM — but performance depends heavily on model size, RAM, and thermals. A 7B model runs at 10–25 tokens/sec on CPU or 50–80 tok/sec on Apple Silicon, making laptops viable for development, testing, and lightweight AI workflows.',
       metaDescription: 'Yes, you can run a local LLM on a laptop — even 8GB RAM. See exactly what runs on 8GB vs 16GB vs Apple Silicon, real tok/sec by hardware, thermals, and the best models per RAM tier.',
-      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-en.png',
+      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-en.webp',
       twitterDescription: '7B models run on 8 GB laptops at 10–25 tok/sec. Apple Silicon M3: 50–80 tok/sec. Thermal throttling fix: use a stand + disable Turbo Boost. Q4_K_M guide.',
       publishDate: '2026-04-04',
       dateModified: '2026-06-19',
@@ -174,7 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Your laptop': 'Intel Iris Xe / AMD iGPU', 'Best model': '3B–7B (CPU only)', 'Speed (CPU)': '8–20 tok/s', 'Speed (Apple Silicon)': 'n/a' },
           ],
           columns: ['Your laptop', 'Best model', 'Speed (CPU)', 'Speed (Apple Silicon)'],
-          image: '/images/local-llm-on-laptop-ram-tiers-hero-en.png',
+          image: '/images/local-llm-on-laptop-ram-tiers-hero-en.webp',
           imageCaption: '8 GB RAM is the practical floor -- a 7B model at Q4_K_M runs on any laptop built after 2018.',
         },
         tldr: {
@@ -281,7 +281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Model': 'Llama 3.3 8B', 'RAM': '5.5 GB', 'Speed (CPU)': '8-15 tok/s', 'Quality': 'High+', 'Best For': '16 GB laptops, best quality at size' },
           ],
           columns: ['Model', 'RAM', 'Speed (CPU)', 'Quality', 'Best For'],
-          image: '/images/local-llm-on-laptop-model-picks-hero-en.png',
+          image: '/images/local-llm-on-laptop-model-picks-hero-en.webp',
           imageCaption: 'Llama 3.2 3B fits 8 GB laptops at 25-45 tok/s; Llama 3.3 8B needs 16 GB but gives the best quality at this size.',
         },
         bestSetup: {
@@ -650,7 +650,7 @@ schema: {
       seoTitle: 'Llama y Phi en portátiles de 8–16 GB: velocidad y térmica',
       intro: 'Ejecutar un LLM local en un portátil es posible — incluso con 8 GB de RAM — pero el rendimiento depende en gran medida del tamaño del modelo, la RAM y la temperatura. Un modelo 7B funciona a 10–25 tokens/seg en CPU o 50–80 tok/seg en Apple Silicon, lo que hace que los portátiles sean viables para desarrollo, pruebas y flujos de trabajo de IA ligeros.',
       metaDescription: 'Ejecuta Llama 3.2 7B, Phi-4 Mini y Gemma 2B en portátiles de 8–16 GB. El throttling térmico baja la velocidad un 20–40%. Apple Silicon vs Intel Iris Xe.',
-      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-es.png',
+      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-es.webp',
       twitterDescription: 'Los modelos 7B se ejecutan en portátiles de 8 GB a 10–25 tok/seg. Apple Silicon M3: 50–80 tok/seg. Solución al throttling térmico: usa un soporte y desactiva Turbo Boost. Guía Q4_K_M.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-18',
@@ -701,7 +701,7 @@ schema: {
           ],
           columns: ['Tu portátil', 'Mejor modelo', 'Velocidad (CPU)', 'Velocidad (Apple Silicon)'],
         
-          image: '/images/local-llm-on-laptop-ram-tiers-hero-es.png',
+          image: '/images/local-llm-on-laptop-ram-tiers-hero-es.webp',
           imageCaption: '8 GB de RAM es el mínimo práctico — un modelo de 7B en Q4_K_M funciona en cualquier portátil fabricado después de 2018.',
         },
         tldr: {
@@ -809,7 +809,7 @@ schema: {
           ],
           columns: ['Modelo', 'RAM', 'Velocidad (CPU)', 'Calidad', 'Mejor para'],
         
-          image: '/images/local-llm-on-laptop-model-picks-hero-es.png',
+          image: '/images/local-llm-on-laptop-model-picks-hero-es.webp',
           imageCaption: 'Llama 3.2 3B cabe en portátiles de 8 GB a 25–45 tok/s; Llama 3.3 8B necesita 16 GB pero ofrece la mejor calidad en este tamaño.',
         },
         bestSetup: {
@@ -1183,7 +1183,7 @@ schema: {
       seoTitle: '⁨LLM⁩ محلي على لابتوب (⁨2026⁩): ⁨8GB⁩ و⁨16GB⁩ و⁨Apple Silicon⁩',
       intro: 'تشغيل نموذج LLM محلي على لابتوب ممكن — حتى بذاكرة 8 GB من RAM — لكن الأداء يعتمد إلى حد كبير على حجم النموذج وRAM والحرارة. يعمل نموذج 7B بسرعة 10–25 رمزاً/ث على CPU أو 50–80 tok/ث على Apple Silicon، مما يجعل أجهزة اللابتوب صالحة للتطوير والاختبار وسير عمل الذكاء الاصطناعي الخفيف.',
       metaDescription: 'نعم، يمكنك تشغيل ⁨LLM⁩ محلي على لابتوب — حتى بـ ⁨8 GB RAM⁩. ما يعمل على ⁨8GB⁩ مقابل ⁨16GB⁩ مقابل ⁨Apple Silicon⁩، وسرعات ⁨tok/s⁩ الحقيقية لكل عتاد.',
-      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-ar.png',
+      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-ar.webp',
       twitterDescription: 'تعمل نماذج ⁨7B⁩ على أجهزة لابتوب بسعة ⁨8 GB⁩ بسرعة ⁨10⁩–⁨25 tok⁩/ث. ⁨Apple Silicon M3⁩: ⁨50⁩–⁨80 tok⁩/ث. حل خفض الأداء الحراري: استخدم حاملاً وعطّل ⁨Turbo Boost⁩. دليل ⁨Q4⁩_⁨K⁩_⁨M⁩.',
       publishDate: '2026-04-04',
       dateModified: '2026-06-19',
@@ -1234,7 +1234,7 @@ schema: {
           ],
           columns: ['لابتوبك', 'أفضل نموذج', 'السرعة (CPU)', 'السرعة (Apple Silicon)'],
         
-          image: '/images/local-llm-on-laptop-ram-tiers-hero-ar.png',
+          image: '/images/local-llm-on-laptop-ram-tiers-hero-ar.webp',
           imageCaption: 'تُعد 8 جيجابايت من RAM الحد العملي الأدنى — يعمل نموذج 7B بصيغة Q4_K_M على أي حاسوب محمول صُنع بعد عام 2018.',
         },
         tldr: {
@@ -1342,7 +1342,7 @@ schema: {
           ],
           columns: ['النموذج', 'RAM', 'السرعة (CPU)', 'الجودة', 'الأفضل لـ'],
         
-          image: '/images/local-llm-on-laptop-model-picks-hero-ar.png',
+          image: '/images/local-llm-on-laptop-model-picks-hero-ar.webp',
           imageCaption: 'يعمل Llama 3.2 3B على أجهزة محمولة بذاكرة 8 جيجابايت بسرعة 25–45 رمزاً/ثانية؛ بينما يحتاج Llama 3.3 8B إلى 16 جيجابايت لكنه يقدم أفضل جودة بهذا الحجم.',
         },
         bestSetup: {
@@ -1719,7 +1719,7 @@ schema: {
       seoTitle: 'Lokales LLM auf einem Laptop (2026): 8GB, 16GB & Apple Silicon',
       intro: 'Ein lokales LLM auf einem Laptop zu betreiben ist möglich -- auch mit 8 GB RAM -- aber die Leistung hängt stark von Modellgröße, RAM und Thermalverhalten ab. Ein 7B-Modell erreicht 10–25 Token/Sek. auf der CPU oder 50–80 Token/Sek. auf Apple Silicon und macht Laptops damit tauglich für Entwicklung, Tests und einfache KI-Workflows.',
       metaDescription: 'Ja, Sie können ein lokales LLM auf einem Laptop ausführen — sogar mit 8 GB RAM. Sehen Sie genau, was auf 8 GB vs 16 GB vs Apple Silicon läuft, echte Token/Sek. nach Hardware, Thermalverhalten und die besten Modelle pro RAM-Stufe.',
-      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-de.png',
+      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-de.webp',
       twitterDescription: '7B-Modelle auf 8 GB Laptops mit 10–25 Token/Sek. Apple Silicon M3: 50–80 Token/Sek. Thermal Throttling-Fix: Laptop-Ständer + Turbo Boost deaktivieren. Q4_K_M Guide.',
       publishDate: '2026-04-04',
       dateModified: '2026-06-19',
@@ -1759,7 +1759,7 @@ schema: {
           ],
           columns: ['Ihr Laptop', 'Bestes Modell', 'Geschwindigkeit (CPU)', 'Geschwindigkeit (Apple Silicon)'],
         
-          image: '/images/local-llm-on-laptop-ram-tiers-hero-de.png',
+          image: '/images/local-llm-on-laptop-ram-tiers-hero-de.webp',
           imageCaption: '8 GB RAM sind die praktische Untergrenze — ein 7B-Modell mit Q4_K_M läuft auf jedem Laptop, der nach 2018 gebaut wurde.',
         },
         tldr: {
@@ -1865,7 +1865,7 @@ schema: {
           ],
           columns: ['Modell', 'RAM', 'Geschwindigkeit (CPU)', 'Qualität', 'Beste für'],
         
-          image: '/images/local-llm-on-laptop-model-picks-hero-de.png',
+          image: '/images/local-llm-on-laptop-model-picks-hero-de.webp',
           imageCaption: 'Llama 3.2 3B passt auf 8-GB-Laptops mit 25–45 Tok/s; Llama 3.3 8B benötigt 16 GB, liefert dafür die beste Qualität dieser Größe.',
         },
         bestSetup: {
@@ -2133,7 +2133,7 @@ schema: {
       seoTitle: 'LLM Local em um Notebook (2026): 8GB, 16GB e Apple Silicon',
       intro: 'Executar um LLM local em um notebook é possível — mesmo com 8 GB de RAM — mas o desempenho depende muito do tamanho do modelo, da RAM e do gerenciamento térmico. Um modelo 7B roda a 10–25 tok/s na CPU ou 50–80 tok/s no Apple Silicon, tornando notebooks viáveis para desenvolvimento, testes e fluxos de trabalho de IA leves.',
       metaDescription: 'Sim, você pode executar um LLM local em um notebook — até com 8 GB de RAM. Veja exatamente o que roda em 8 GB vs 16 GB vs Apple Silicon, tok/s reais por hardware, temperatura e os melhores modelos por nível de RAM.',
-      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-pt.png',
+      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-pt.webp',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Um modelo 7B roda a 10–25 tok/s na CPU ou 50–80 tok/s no Apple Silicon. Para notebooks de 8 GB: use modelos 3B–7B em Q4_K_M. O throttling térmico reduz a velocidade em 20–40% após 10–15 minutos de uso contínuo. Solução: base de resfriamento + desativar Turbo Boost.**',
       audience: 'Usuários que querem executar LLMs locais em notebooks com hardware de consumo',
@@ -2209,7 +2209,7 @@ schema: {
             { 'Seu notebook': 'Intel Iris Xe / iGPU AMD', 'Melhor modelo': '3B-7B (somente CPU)', 'Velocidade (CPU)': '8-20 tok/s', 'Velocidade (Apple Silicon)': 'n/d' },
           ],
           columns: ['Seu notebook', 'Melhor modelo', 'Velocidade (CPU)', 'Velocidade (Apple Silicon)'],
-          image: '/images/local-llm-on-laptop-ram-tiers-hero-pt.png',
+          image: '/images/local-llm-on-laptop-ram-tiers-hero-pt.webp',
           imageCaption: '8 GB de RAM é o piso prático -- um modelo 7B em Q4_K_M roda em qualquer notebook fabricado após 2018.',
         },
         tldr: {
@@ -2316,7 +2316,7 @@ schema: {
             { 'Modelo': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Velocidade (CPU)': '8-15 tok/s', 'Qualidade': 'Alta+', 'Melhor Para': 'Notebooks de 16 GB, melhor qualidade no tamanho' },
           ],
           columns: ['Modelo', 'RAM', 'Velocidade (CPU)', 'Qualidade', 'Melhor Para'],
-          image: '/images/local-llm-on-laptop-model-picks-hero-pt.png',
+          image: '/images/local-llm-on-laptop-model-picks-hero-pt.webp',
           imageCaption: 'O Llama 3.2 3B cabe em notebooks de 8 GB a 25-45 tok/s; o Llama 3.3 8B precisa de 16 GB, mas oferece a melhor qualidade nesse tamanho.',
         },
         bestSetup: {
@@ -2476,7 +2476,7 @@ schema: {
       seoTitle: 'LLM local sur portable (2026) : 8 Go, 16 Go, Apple Silicon',
       intro: 'Exécuter un Local LLM sur un ordinateur portable est possible — même avec 8 Go de RAM — mais les performances dépendent fortement de la taille du modèle, de la RAM et de la gestion thermique. Un modèle 7B tourne à 10–25 token/sec sur CPU ou 50–80 token/sec sur Apple Silicon, rendant les ordinateurs portables viables pour le développement, les tests et les workflows IA légers.',
       metaDescription: 'Oui, vous pouvez exécuter un LLM local sur un portable — même avec 8 Go de RAM. Découvrez ce qui tourne sur 8 Go vs 16 Go vs Apple Silicon, les tok/sec réels par matériel, la thermique et les meilleurs modèles par palier de RAM.',
-      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-fr.png',
+      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-fr.webp',
       twitterDescription: 'Modèles 7B sur ordinateurs portables 8 Go avec 10–25 tok/sec. Apple Silicon M3: 50–80 tok/sec. Correction throttling: stand + désactiver Turbo Boost. Guide Q4_K_M.',
       publishDate: '2026-04-04',
       dateModified: '2026-06-19',
@@ -2517,7 +2517,7 @@ schema: {
           ],
           columns: ['Votre portable', 'Meilleur modèle', 'Vitesse (CPU)', 'Vitesse (Apple Silicon)'],
         
-          image: '/images/local-llm-on-laptop-ram-tiers-hero-fr.png',
+          image: '/images/local-llm-on-laptop-ram-tiers-hero-fr.webp',
           imageCaption: '8 Go de RAM constituent le plancher pratique — un modèle 7B en Q4_K_M fonctionne sur tout ordinateur portable fabriqué après 2018.',
         },
         tldr: {
@@ -2623,7 +2623,7 @@ schema: {
           ],
           columns: ['Modèle', 'RAM', 'Vitesse (CPU)', 'Qualité', 'Meilleur pour'],
         
-          image: '/images/local-llm-on-laptop-model-picks-hero-fr.png',
+          image: '/images/local-llm-on-laptop-model-picks-hero-fr.webp',
           imageCaption: 'Llama 3.2 3B convient aux portables de 8 Go à 25–45 tok/s ; Llama 3.3 8B nécessite 16 Go mais offre la meilleure qualité à cette taille.',
         },
         bestSetup: {
@@ -2888,7 +2888,7 @@ schema: {
       seoTitle: 'ノートパソコンでローカルLLM（2026）：8GB・16GB・Apple Silicon',
       intro: 'ノートパソコンでローカルLLMを実行することは可能です――8GB RAMでも動作しますが、パフォーマンスはモデルサイズ、RAM、発熱に大きく左右されます。7BモデルはCPUで10–25トークン/秒、Apple Siliconで50–80トークン/秒で動作し、開発・テスト・軽量AIワークフローにノートパソコンを十分活用できます。',
       metaDescription: 'はい、ノートパソコンでローカルLLMを実行できます――8GB RAMでも可能です。8GB・16GB・Apple Siliconでそれぞれ何が動くか、ハードウェア別の実測トークン/秒、発熱、RAM階層ごとの最適モデルを正確に確認できます。',
-      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-ja.png',
+      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-ja.webp',
       twitterDescription: '7B実行: 8GB ノートPCで 10–25 トークン/秒。Apple Silicon M3: 50–80 トークン/秒。熱対策: スタンド使用＋Turbo Boost無効化。Q4_K_M ガイド。',
       publishDate: '2026-04-04',
       dateModified: '2026-06-19',
@@ -2929,7 +2929,7 @@ schema: {
           ],
           columns: ['あなたのノートパソコン', '最適なモデル', '速度（CPU）', '速度（Apple Silicon）'],
         
-          image: '/images/local-llm-on-laptop-ram-tiers-hero-ja.png',
+          image: '/images/local-llm-on-laptop-ram-tiers-hero-ja.webp',
           imageCaption: '8GB RAMが実用上の最低ラインです — Q4_K_Mの7Bモデルは2018年以降に製造されたどのノートPCでも動作します。',
         },
         tldr: {
@@ -3035,7 +3035,7 @@ schema: {
           ],
           columns: ['モデル', 'RAM', 'Speed (CPU)', '品質', '最適な用途'],
         
-          image: '/images/local-llm-on-laptop-model-picks-hero-ja.png',
+          image: '/images/local-llm-on-laptop-model-picks-hero-ja.webp',
           imageCaption: 'Llama 3.2 3Bは8GBノートPCで25〜45 tok/s動作します。Llama 3.3 8Bは16GB必要ですが、このサイズで最高品質を提供します。',
         },
         bestSetup: {
@@ -3300,7 +3300,7 @@ schema: {
       seoTitle: '笔记本上的本地LLM（2026）：8GB、16GB和Apple Silicon',
       intro: '在笔记本电脑上运行本地LLM是可行的——即使只有8GB RAM——但性能高度取决于模型大小、RAM和散热。7B模型在CPU上可达10–25令牌/秒，在Apple Silicon上可达50–80令牌/秒，使笔记本电脑足以用于开发、测试和轻量AI工作流。',
       metaDescription: '是的，你可以在笔记本上运行本地LLM——即使只有8GB RAM。看清楚8GB、16GB和Apple Silicon分别能运行什么、各硬件的真实令牌/秒、散热表现，以及每个RAM档位的最佳模型。',
-      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-zh.png',
+      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-zh.webp',
       twitterDescription: '7B 运行：8GB 笔记本 10–25 词/秒。Apple Silicon M3：50–80 词/秒。降温方案：支架＋关闭 Turbo Boost。Q4_K_M 完全指南。',
       publishDate: '2026-04-04',
       dateModified: '2026-06-19',
@@ -3341,7 +3341,7 @@ schema: {
           ],
           columns: ['你的笔记本', '最佳模型', '速度（CPU）', '速度（Apple Silicon）'],
         
-          image: '/images/local-llm-on-laptop-ram-tiers-hero-zh.png',
+          image: '/images/local-llm-on-laptop-ram-tiers-hero-zh.webp',
           imageCaption: '8GB内存是实用下限 — Q4_K_M量化的7B模型可在2018年后制造的任何笔记本上运行。',
         },
         tldr: {
@@ -3447,7 +3447,7 @@ schema: {
           ],
           columns: ['模型', 'RAM', '速度（CPU）', '质量', '最佳适配'],
         
-          image: '/images/local-llm-on-laptop-model-picks-hero-zh.png',
+          image: '/images/local-llm-on-laptop-model-picks-hero-zh.webp',
           imageCaption: 'Llama 3.2 3B适合8GB笔记本，速度25–45 tok/s；Llama 3.3 8B需要16GB，但在此规模下质量最佳。',
         },
         bestSetup: {
@@ -3713,7 +3713,7 @@ schema: {
       seoTitle: '노트북에서 로컬 LLM (2026): 8GB, 16GB & Apple Silicon',
       intro: '노트북에서 로컬 LLM을 실행하는 것은 가능합니다 — 8GB RAM에서도 실행할 수 있지만, 성능은 모델 크기, RAM, 열 관리 방식에 따라 크게 달라집니다. 7B 모델은 CPU에서 10~25토큰/초, Apple Silicon에서 50~80토큰/초로 실행되므로, 노트북은 개발, 테스트, 경량 AI 워크플로에 충분히 활용할 수 있습니다.',
       metaDescription: '네, 노트북에서 로컬 LLM을 실행할 수 있습니다 — 8GB RAM에서도 가능합니다. 8GB, 16GB, Apple Silicon에서 각각 무엇이 실행되는지, 하드웨어별 실제 토큰/초, 발열, RAM 등급별 최적 모델을 정확히 확인하십시오.',
-      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-ko.png',
+      heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-ko.webp',
       twitterDescription: '7B 모델이 8GB 노트북에서 10~25토큰/초로 실행됩니다. Apple Silicon M3: 50~80토큰/초. 열 쓰로틀링 해결책: 스탠드 사용 + Turbo Boost 비활성화. Q4_K_M 가이드.',
       publishDate: '2026-04-04',
       dateModified: '2026-06-19',
@@ -3788,7 +3788,7 @@ schema: {
           ],
           columns: ['내 노트북', '최적 모델', '속도 (CPU)', '속도 (Apple Silicon)'],
         
-          image: '/images/local-llm-on-laptop-ram-tiers-hero-ko.png',
+          image: '/images/local-llm-on-laptop-ram-tiers-hero-ko.webp',
           imageCaption: '8GB RAM이 실질적인 최소 기준입니다 — Q4_K_M 양자화된 7B 모델은 2018년 이후 제작된 모든 노트북에서 실행됩니다.',
         },
         tldr: {
@@ -3896,7 +3896,7 @@ schema: {
           ],
           columns: ['Model', 'RAM', 'Speed (CPU)', 'Quality', 'Best For'],
         
-          image: '/images/local-llm-on-laptop-model-picks-hero-ko.png',
+          image: '/images/local-llm-on-laptop-model-picks-hero-ko.webp',
           imageCaption: 'Llama 3.2 3B는 8GB 노트북에서 25–45 tok/s로 실행되며, Llama 3.3 8B는 16GB가 필요하지만 이 크기에서 최고 품질을 제공합니다.',
         },
         bestSetup: {

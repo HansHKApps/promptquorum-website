@@ -78,6 +78,7 @@ export default async function EsPromptEngineeringArticlePage({ params }: PagePro
       <PromptEngineeringPostClient
         slug={slug}
         initialLang="pt"
+        articleData={peContent[key]}
       />
     </>
   )

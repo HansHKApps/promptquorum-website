@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-en.png',
+    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-en.webp',
     title: 'The EU Data Act and Your Smart Home (2027)',
     seoTitle: 'EU Data Act: Smart Home Guide (2027)',
     // Verified 2026-07-16 against the European Commission's own Data Act pages
@@ -164,7 +164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-de.png',
+    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-de.webp',
     title: 'Der EU Data Act und dein Smart Home (2027)',
     seoTitle: 'EU Data Act: Smart-Home-Leitfaden (2027)',
     intro:
@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-fr.png',
+    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-fr.webp',
     title: "Le règlement européen sur les données (Data Act) et votre maison connectée (2027)",
     seoTitle: 'EU Data Act : guide maison connectée (2027)',
     intro:
@@ -462,7 +462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-ja.png',
+    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-ja.webp',
     title: 'EUデータ法とあなたのスマートホーム（2027年）',
     seoTitle: 'EUデータ法：スマートホームガイド（2027年）',
     intro:
@@ -611,7 +611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-zh.png',
+    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-zh.webp',
     title: '欧盟《数据法案》与你的智能家居（2027年）',
     seoTitle: '欧盟数据法案：智能家居指南（2027年）',
     intro:
@@ -760,7 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-es.png',
+    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-es.webp',
     title: 'La Ley de Datos de la UE y tu hogar inteligente (2027)',
     seoTitle: 'Ley de Datos de la UE: guía para el hogar inteligente (2027)',
     intro:
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-pt.png',
+    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-pt.webp',
     title: 'A Lei de Dados da UE e sua casa inteligente (2027)',
     seoTitle: 'Lei de Dados da UE: guia para casa inteligente (2027)',
     intro:
@@ -1058,7 +1058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-ar.png',
+    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-ar.webp',
     title: 'قانون البيانات الأوروبي ومنزلك الذكي (⁨2027⁩)',
     seoTitle: 'قانون البيانات الأوروبي: دليل المنزل الذكي (⁨2027⁩)',
     intro:
@@ -1207,7 +1207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: '2027 Protocols & Regulation',
-    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-ko.png',
+    heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-ko.webp',
     title: 'EU 데이터법과 당신의 스마트홈 (2027년)',
     seoTitle: 'EU 데이터법: 스마트홈 가이드 (2027년)',
     intro:

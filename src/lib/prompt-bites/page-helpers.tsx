@@ -8,6 +8,7 @@ import { truncateTitle } from '@/lib/utils'
 import { PromptBitesPostClient } from '@/components/PromptBitesPostClient'
 import { PromptBitesHubClient } from '@/components/PromptBitesHubClient'
 import { promptBitesContent } from './articles-barrel'
+import { buildPromptBitesHubData } from './hub-data'
 import { PROMPT_BITES_SLUG_TO_KEY } from './slugs'
 import { isPromptBitePublished, isPromptBitesHubPublished, PROMPT_BITES_PUBLISHED_SLUGS } from './published'
 import { promptBitesAlternates, promptBitesHubPath, promptBitesArticlePath } from './metadata-helpers'
@@ -191,9 +192,29 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
-      <PromptBitesPostClient slug={slug} lang={lang} />
+      <PromptBitesPostClient
+        slug={slug}
+        lang={lang}
+        articleData={articleData!}
+        siblingTitles={resolveSiblingTitles((article as any).siblingBites, lang)}
+      />
     </>
   )
+}
+
+// Resolves each sibling-bite slug to its localized title server-side, so the
+// client component never needs the full promptBitesContent barrel just to
+// render a handful of "related bites" link labels.
+function resolveSiblingTitles(siblingBites: string[] | undefined, lang: Lang): Record<string, string> | undefined {
+  if (!siblingBites || siblingBites.length === 0) return undefined
+  const titles: Record<string, string> = {}
+  for (const sibSlug of siblingBites) {
+    const sibKey = PROMPT_BITES_SLUG_TO_KEY[sibSlug]
+    const sibArticleData = sibKey ? promptBitesContent[sibKey] : undefined
+    const sibArticle = sibArticleData?.[lang] ?? sibArticleData?.['en']
+    titles[sibSlug] = sibArticle?.title ?? sibSlug
+  }
+  return titles
 }
 
 // ─── HUB PAGE ────────────────────────────────────────────────────────────────
@@ -219,7 +240,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
       url: `${BASE}${promptBitesHubPath(lang)}`,
       type: 'website',
       siteName: 'PromptQuorum',
-      images: [{ url: `${BASE}/images/prompt-bites-hub-overview-hero-${lang}.png`, width: 1200, height: 675, alt: titleByLang[lang] ?? titleByLang['en']! }],
+      images: [{ url: `${BASE}/images/prompt-bites-hub-overview-hero-${lang}.webp`, width: 1200, height: 675, alt: titleByLang[lang] ?? titleByLang['en']! }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -278,7 +299,7 @@ export async function buildHubPageElement(lang: Lang) {
       {faqSchema && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
-      <PromptBitesHubClient lang={lang} />
+      <PromptBitesHubClient lang={lang} {...buildPromptBitesHubData(lang)} />
     </>
   )
 }

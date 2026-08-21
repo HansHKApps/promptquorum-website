@@ -209,7 +209,7 @@ export default async function PromptEngineeringArticlePage({ params }: PageProps
   return (
     <>
       <PEArticleJsonLd slug={slug} articleKey={key} lang={selectedLang} />
-      <PromptEngineeringPostClient slug={slug} initialLang={selectedLang} />
+      <PromptEngineeringPostClient slug={slug} initialLang={selectedLang} articleData={peContent[key]} />
     </>
   )
 }

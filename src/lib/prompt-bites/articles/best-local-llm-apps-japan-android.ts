@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-en.png',
+    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-en.webp',
     title: 'What Are the Best Local LLM Apps for Android in Japan?',
     dateModified: '2026-06-20',
     seoTitle: 'Best Android LLMs Japan 2026 | Prompt Bites | PromptQuorum',
@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-de.png',
+    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-de.webp',
     title: 'Welche lokalen LLM-Apps für Android sind in Japan am beliebtesten?',
     seoTitle: 'Beste Android LLMs Japan 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'MLC Chat (Rinna 3.6B, 4 GB RAM), PocketPal AI (ELYZA-7B, 6 GB) und Termux+Ollama (Qwen3 7B, 8 GB) sind die besten Android-Apps für lokale LLMs in Japan.',
@@ -222,7 +222,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-fr.png',
+    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-fr.webp',
     title: 'Quelles sont les meilleures apps LLM locales pour Android au Japon ?',
     seoTitle: 'LLM Apps Android Japon 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'MLC Chat, PocketPal AI et Termux+Ollama : les 3 apps Android pour LLM local au Japon. Rinna 3.6B : 4 Go, ELYZA-7B : 6 Go, Qwen3 7B : 8 Go. 2026.',
@@ -311,7 +311,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-ja.png',
+    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-ja.webp',
     title: '日本で人気のAndroidローカルLLMアプリは？',
     seoTitle: '日本で人気のAndroid LLMアプリ2026 | Prompt Bites | PromptQuorum',
     metaDescription: '日本のAndroidユーザー向けローカルLLMアプリ：MLC Chat、PocketPal AI、Termux + Ollama。Rinna 3.6BとELYZA-7Bが完全オフラインで動作。PromptQuorumによる簡潔な回答。',
@@ -400,7 +400,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-es.png',
+    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-es.webp',
     title: '¿Cuáles son las mejores apps de LLM local para Android en Japón?',
     seoTitle: 'Mejores LLM Android Japón 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'MLC Chat ejecuta Rinna 3.6B con 4 GB de RAM. PocketPal AI soporta ELYZA-7B con 6 GB. Termux + Ollama añade Qwen3 7B con 8 GB+. Todo offline en Japón.',
@@ -489,7 +489,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-pt.png',
+    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-pt.webp',
     title: 'Quais são os melhores apps de LLM local para Android no Japão?',
     seoTitle: 'Melhores LLM Android Japão 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'MLC Chat executa Rinna 3,6B com 4 GB de RAM. PocketPal AI suporta ELYZA-7B com 6 GB. Termux + Ollama adiciona Qwen3 7B com 8 GB+. Tudo offline no Japão.',
@@ -578,7 +578,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-ar.png',
+    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-ar.webp',
     title: 'ما أفضل تطبيقات النماذج اللغوية الكبيرة المحلية لنظام ⁨Android⁩ في اليابان؟',
     seoTitle: 'تطبيقات ⁨LLM⁩ لـ⁨Android⁩ باليابان ⁨2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: '⁨MLC Chat⁩ يشغّل ⁨Rinna 3.6B⁩ بـ⁨4 GB RAM. PocketPal AI⁩ يشغّل ⁨ELYZA-7B⁩ بـ⁨6 GB. Termux + Ollama⁩ يضيف ⁨Qwen3 7B⁩ لأجهزة ⁨8 GB⁩+. الثلاثة تعمل بلا إنترنت.',
@@ -667,7 +667,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-zh.png',
+    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-zh.webp',
     title: '日本最受欢迎的Android本地LLM应用是什么？',
     seoTitle: '日本最佳Android本地LLM应用2026 | Prompt Bites | PromptQuorum',
     metaDescription: '日本Android用户最佳本地LLM应用：MLC Chat、PocketPal AI、Termux + Ollama。Rinna 3.6B和ELYZA-7B完全离线运行。PromptQuorum快速解答。',
@@ -756,7 +756,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-ko.png',
+    heroImage: '/images/best-local-llm-apps-japan-android-overview-hero-ko.webp',
     title: '일본 Android에서 가장 좋은 로컬 LLM 앱은 무엇입니까?',
     seoTitle: '일본 Android 로컬 LLM 앱 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'MLC Chat은 4 GB RAM으로 Rinna 3.6B를 실행합니다. PocketPal AI는 6 GB RAM으로 ELYZA-7B를 지원합니다. Termux + Ollama는 8 GB 이상 기기에서 Qwen3 7B를 추가합니다. 일본에서 완전히 오프라인으로 동작합니다.',

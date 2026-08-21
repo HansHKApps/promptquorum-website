@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-en.png',
+    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 5 of 10: Frontier-Class Compute Comes to the Desktop',
     seoTitle: 'Frontier-Class Desktop AI Compute (2027) | Prompt Bites',
     metaDescription: 'By 2027, unified-memory desktop AI workstations let a narrow set of power users run near-frontier open-weight models locally. Here is who this actually matters for.',
@@ -130,7 +130,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-de.png',
+    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-de.webp',
     title: 'Local AI Trends 2027, Teil 5 von 10: Höchstleistungsrechenkapazität zieht auf den Desktop',
     seoTitle: 'Desktop-KI mit Höchstleistung 2027 | Prompt Bites',
     metaDescription: 'Bis 2027 ermöglichen Desktop-KI-Workstations mit Unified Memory einer kleinen Gruppe von Power-Usern, nahezu grenzwertige offene Modelle lokal auszuführen. Für wen das wirklich relevant ist.',
@@ -256,7 +256,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-fr.png',
+    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-fr.webp',
     title: "Tendances IA locale 2027, partie 5 sur 10 : la puissance de calcul de pointe arrive sur le bureau",
     seoTitle: 'IA de bureau haut de gamme en 2027 | Prompt Bites',
     metaDescription: "D'ici 2027, des stations de travail IA de bureau à mémoire unifiée permettront à un petit nombre d'utilisateurs avancés d'exécuter des modèles ouverts proches de la pointe, en local.",
@@ -382,7 +382,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-ja.png',
+    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-ja.webp',
     title: 'ローカルAIトレンド2027 第5回(全10回):フロンティア級の計算能力がデスクトップに到来',
     seoTitle: 'フロンティア級デスクトップAI(2027年) | Prompt Bites',
     metaDescription: '2027年までに、統合メモリ型デスクトップAIワークステーションにより、一部のパワーユーザーがフロンティア級に近いオープンウェイトモデルをローカルで実行できるようになります。誰にとって重要かを解説。',
@@ -508,7 +508,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-zh.png',
+    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-zh.webp',
     title: '本地AI趋势2027,第5部分(共10部分):前沿级算力走进桌面',
     seoTitle: '2027年前沿级桌面AI算力 | Prompt Bites',
     metaDescription: '到2027年,统一内存架构的桌面AI工作站将让一小部分高级用户在本地运行接近前沿水平的开源权重模型。以下是这对谁真正重要。',
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-es.png',
+    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-es.webp',
     title: 'Tendencias de IA local 2027, parte 5 de 10: la potencia de cómputo de frontera llega al escritorio',
     seoTitle: 'IA de escritorio de frontera en 2027 | Prompt Bites',
     metaDescription: 'Para 2027, las estaciones de trabajo de IA de escritorio con memoria unificada permitirán a un grupo reducido de usuarios avanzados ejecutar modelos abiertos cercanos a la frontera de forma local.',
@@ -760,7 +760,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-pt.png',
+    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-pt.webp',
     title: 'Tendências de IA local 2027, parte 5 de 10: computação de nível de fronteira chega ao desktop',
     seoTitle: 'IA de desktop de fronteira em 2027 | Prompt Bites',
     metaDescription: 'Até 2027, estações de trabalho de IA desktop com memória unificada permitirão que um grupo restrito de usuários avançados rode modelos de peso aberto próximos da fronteira localmente.',
@@ -886,7 +886,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-ar.png',
+    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-ar.webp',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 5 من 10: القدرة الحاسوبية من الطراز المتقدم تصل إلى سطح المكتب',
     seoTitle: 'حوسبة سطح المكتب المتقدمة للذكاء الاصطناعي 2027 | Prompt Bites',
     metaDescription: 'بحلول عام 2027، ستتيح محطات عمل الذكاء الاصطناعي المكتبية ذات الذاكرة الموحدة لفئة ضيقة من المستخدمين المتقدمين تشغيل نماذج مفتوحة الأوزان قريبة من الطراز المتقدم محليًا.',
@@ -1012,7 +1012,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-ko.png',
+    heroImage: '/images/local-ai-trend-2027-frontier-desktop-ai-overview-hero-ko.webp',
     title: '로컬 AI 트렌드 2027, 5부(전체 10부): 프론티어급 연산 능력이 데스크톱으로',
     seoTitle: '2027년 프론티어급 데스크톱 AI | Prompt Bites',
     metaDescription: '2027년까지 통합 메모리 데스크톱 AI 워크스테이션 덕분에 소수의 파워 유저가 프론티어 수준에 가까운 오픈 웨이트 모델을 로컬에서 실행할 수 있게 됩니다. 누구에게 실제로 중요한지 정리했습니다.',

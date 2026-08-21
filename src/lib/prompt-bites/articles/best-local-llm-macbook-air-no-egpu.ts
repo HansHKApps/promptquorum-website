@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-en.png',
+    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-en.webp',
     title: 'Best Local LLM for a MacBook Air Without an eGPU?',
     seoTitle: 'Best Local LLM for MacBook Air (No eGPU) 2026',
     metaDescription: 'Best local LLM for a MacBook Air: 7B-8B models at Q4 on 16GB unified memory, 13-14B on 24GB. No eGPU on Apple Silicon — unified memory is the only lever.',
@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-ar.png',
+    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-ar.webp',
     title: 'أفضل LLM محلي لجهاز MacBook Air بدون بطاقة رسومات خارجية (eGPU)؟',
     seoTitle: 'أفضل LLM محلي لـ MacBook Air (بدون eGPU) 2026',
     metaDescription: 'أفضل LLM محلي لجهاز MacBook Air: نماذج 7B-8B بدقة Q4 على ذاكرة موحدة 16GB، و13-14B على 24GB. لا تعمل أي eGPU على Apple Silicon — الذاكرة الموحدة هي الرافعة الوحيدة.',
@@ -218,7 +218,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-de.png',
+    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-de.webp',
     title: 'Das beste lokale LLM für ein MacBook Air ohne eGPU?',
     seoTitle: 'Bestes lokales LLM für MacBook Air (ohne eGPU) 2026',
     metaDescription: 'Bestes lokales LLM für ein MacBook Air: 7B-8B bei Q4 (16 GB), 13-14B bei 24 GB Unified Memory. Keine eGPU auf Apple Silicon — einziger Hebel.',
@@ -325,7 +325,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-es.png',
+    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-es.webp',
     title: '¿Cuál es el Mejor LLM Local para un MacBook Air sin eGPU?',
     seoTitle: 'Mejor LLM Local para MacBook Air (Sin eGPU) 2026',
     metaDescription: 'Mejor LLM local para un MacBook Air: 7B-8B en Q4 (16GB), 13-14B con 24GB de memoria unificada. Ninguna eGPU en Apple Silicon — única palanca.',
@@ -432,7 +432,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-fr.png',
+    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-fr.webp',
     title: 'Quel est le meilleur LLM local pour un MacBook Air sans eGPU ?',
     seoTitle: 'Meilleur LLM local pour MacBook Air (sans eGPU) 2026',
     metaDescription: 'Meilleur LLM local pour MacBook Air : 7B-8B en Q4 (16 Go), 13-14B (24 Go) de mémoire unifiée. Aucun eGPU sur Apple Silicon — seul levier possible.',
@@ -539,7 +539,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-ja.png',
+    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-ja.webp',
     title: 'eGPUなしのMacBook Airに最適なローカルLLMは?',
     seoTitle: '2026年版 MacBook Air(eGPUなし)に最適なローカルLLM',
     metaDescription: 'MacBook Airに最適なローカルLLM: 16GB統合メモリで7B-8BモデルをQ4、24GBで13-14B。Apple SiliconではeGPUは使えず、統合メモリだけが唯一のレバーです。',
@@ -646,7 +646,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-ko.png',
+    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-ko.webp',
     title: 'eGPU 없는 MacBook Air를 위한 최적의 로컬 LLM은?',
     seoTitle: 'eGPU 없는 MacBook Air 최적 로컬 LLM 2026',
     metaDescription: 'MacBook Air 최적 로컬 LLM: 16GB에서 Q4 7B-8B, 24GB에서 13-14B. Apple Silicon은 eGPU 미지원, 통합 메모리가 유일한 수단.',
@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-pt.png',
+    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-pt.webp',
     title: 'Qual o Melhor LLM Local para um MacBook Air Sem eGPU?',
     seoTitle: 'Melhor LLM Local para MacBook Air (Sem eGPU) 2026',
     metaDescription: 'Melhor LLM local para MacBook Air: 7B-8B em Q4 (16GB), 13-14B com 24GB de memória unificada. eGPU não funciona no Apple Silicon — única alavanca.',
@@ -860,7 +860,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-zh.png',
+    heroImage: '/images/best-local-llm-macbook-air-no-egpu-overview-hero-zh.webp',
     title: '没有 eGPU 的 MacBook Air 最佳本地 LLM 是什么？',
     seoTitle: '2026 年 MacBook Air（无 eGPU）最佳本地 LLM',
     metaDescription: 'MacBook Air 最佳本地 LLM：16GB 统一内存下 Q4 的 7B-8B 模型，24GB 下可运行 13-14B。Apple Silicon 上 eGPU 无效——统一内存是唯一的升级杠杆。',

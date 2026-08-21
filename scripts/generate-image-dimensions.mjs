@@ -61,10 +61,44 @@ function readPngDimensions(filePath) {
   return { width: data.readUInt32BE(16), height: data.readUInt32BE(20) }
 }
 
+// WebP is a RIFF container. The dimensions live in one of three chunk types
+// depending on how the file was encoded (lossy/lossless/extended) — sharp's
+// default .webp() output for a plain RGB image (no alpha/animation) produces
+// a bare "VP8 " chunk, but handle all three so this doesn't silently break
+// if a future image needs alpha or animation.
+function readWebpDimensions(filePath) {
+  const data = fs.readFileSync(filePath)
+  if (data.length < 30) return null
+  if (data.toString('ascii', 0, 4) !== 'RIFF' || data.toString('ascii', 8, 12) !== 'WEBP') return null
+  const chunkType = data.toString('ascii', 12, 16)
+
+  if (chunkType === 'VP8X') {
+    // Extended format: 1 byte flags, 3 bytes reserved, then 3-byte LE canvas width-1 / height-1
+    const width = 1 + (data[24] | (data[25] << 8) | (data[26] << 16))
+    const height = 1 + (data[27] | (data[28] << 8) | (data[29] << 16))
+    return { width, height }
+  }
+  if (chunkType === 'VP8L') {
+    // Lossless: signature byte (0x2f) at offset 20, then 14-bit width-1 / height-1 packed LE
+    const b0 = data[21], b1 = data[22], b2 = data[23], b3 = data[24]
+    const width = 1 + (((b1 & 0x3f) << 8) | b0)
+    const height = 1 + (((b3 & 0xf) << 10) | (b2 << 2) | ((b1 & 0xc0) >> 6))
+    return { width, height }
+  }
+  if (chunkType === 'VP8 ') {
+    // Lossy: 3-byte frame tag, then start code 0x9d 0x01 0x2a, then 14-bit width/height LE
+    const width = data.readUInt16LE(26) & 0x3fff
+    const height = data.readUInt16LE(28) & 0x3fff
+    return { width, height }
+  }
+  return null
+}
+
 function readDimensions(filePath, ext) {
   if (ext === 'svg') return readSvgDimensions(filePath)
   if (ext === 'jpg' || ext === 'jpeg') return readJpegDimensions(filePath)
   if (ext === 'png') return readPngDimensions(filePath)
+  if (ext === 'webp') return readWebpDimensions(filePath)
   return null
 }
 

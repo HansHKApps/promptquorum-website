@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-09-22',
       theme: 'Fundamentals',
-      heroImage: '/images/temperature-and-top-p-overview-hero-en.png',
+      heroImage: '/images/temperature-and-top-p-overview-hero-en.webp',
       title: 'Temperature and Top-P: Control AI Creativity',
       intro: 'Temperature and top-p control how adventurous or conservative an AI\'s word choices are. By tuning these settings, you trade off creativity versus reliability—higher values produce surprising, varied outputs; lower values produce safe, predictable ones.',
       publishDate: '2026-03-22',
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     de: {
       theme: 'Grundlagen',
-      heroImage: '/images/temperature-and-top-p-overview-hero-de.png',
+      heroImage: '/images/temperature-and-top-p-overview-hero-de.webp',
       title: 'Temperatur und Top-P: Kontrolliere die KI-Kreativität',
       seoTitle: 'Temperatur und Top-P: KI-Kreativität steuern 2026',
       intro: 'Temperatur und Top-P kontrollieren, wie abenteuerlich oder konservativ ein KI-Modell Wortwahlentscheidungen trifft. Durch Anpassung dieser Einstellungen wechselst du zwischen Kreativität und Zuverlässigkeit – höhere Werte erzeugen überraschende, vielfältige Ausgaben; niedrigere Werte erzeugen sichere, vorhersagbare Ausgaben.',
@@ -485,7 +485,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     es: {
       theme: 'Fundamentals',
-      heroImage: '/images/temperature-and-top-p-overview-hero-es.png',
+      heroImage: '/images/temperature-and-top-p-overview-hero-es.webp',
       title: 'Temperatura y Top-P: Controla la creatividad de la IA',
       intro: 'La temperatura y el top-p controlan lo aventureras o conservadoras que son las elecciones de palabras de la IA. Ajustando estos parámetros, equilibras creatividad versus fiabilidad — los valores más altos producen outputs sorprendentes y variados; los más bajos producen outputs seguros y predecibles.',
       publishDate: '2026-03-22',
@@ -712,7 +712,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     ar: {
       theme: 'Fundamentals',
-      heroImage: '/images/temperature-and-top-p-overview-hero-ar.png',
+      heroImage: '/images/temperature-and-top-p-overview-hero-ar.webp',
       title: 'درجة الحرارة و⁨Top-P⁩: تحكّم في إبداع الذكاء الاصطناعي',
       intro: 'تتحكم درجة الحرارة وTop-P في مدى المجازفة أو التحفظ في اختيار الكلمات لدى الذكاء الاصطناعي. بضبط هذين المعاملَين، توازن بين الإبداع والموثوقية — فالقيم المرتفعة تُنتج مخرجات مفاجئة ومتنوعة، بينما تُنتج القيم المنخفضة مخرجات آمنة ومتوقعة.',
       publishDate: '2026-03-22',
@@ -939,7 +939,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     pt: {
       theme: 'Fundamentals',
-      heroImage: '/images/temperature-and-top-p-overview-hero-pt.png',
+      heroImage: '/images/temperature-and-top-p-overview-hero-pt.webp',
       title: 'Temperatura e Top-P: Controle a Criatividade da IA',
       intro: 'Temperatura e top-p controlam quão aventureiras ou conservadoras são as escolhas de palavras da IA. Ajustando esses parâmetros, você equilibra criatividade versus confiabilidade — valores mais altos produzem saídas surpreendentes e variadas; valores mais baixos produzem saídas seguras e previsíveis.',
       publishDate: '2026-03-22',
@@ -1173,7 +1173,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     fr: {
       theme: 'Fondamentaux',
-      heroImage: '/images/temperature-and-top-p-overview-hero-fr.png',
+      heroImage: '/images/temperature-and-top-p-overview-hero-fr.webp',
       title: 'Température et Top-P : Contrôle la créativité de l\'IA',
       seoTitle: 'Température et Top-P: Contrôler la créativité IA 2026',
       intro: 'La température et le top-p contrôlent comment une IA fait des choix de mots aventureux ou conservateurs. En réglant ces paramètres, tu fais un compromis entre créativité et fiabilité — les valeurs élevées produisent des sorties surprenantes et variées ; les valeurs basses produisent des sorties sûres et prévisibles.',
@@ -1385,7 +1385,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     ja: {
       theme: '基礎',
-      heroImage: '/images/temperature-and-top-p-overview-hero-ja.png',
+      heroImage: '/images/temperature-and-top-p-overview-hero-ja.webp',
       title: '温度とTop-P：AI創造性を制御する',
       seoTitle: '温度とTop-P 2026：GPT-5.6とClaudeでAI創造性と精度を制御するパラメータ完全解説',
       intro: '温度とTop-Pは、AIモデルがどの程度冒険的または保守的な単語選択をするかを制御します。これらの設定を調整することで、創造性と信頼性のバランスを取ることができます。高い値は驚くべき多様な出力を生成し、低い値は安全で予測可能な出力を生成します。',
@@ -1597,7 +1597,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     zh: {
       theme: '基础知识',
-      heroImage: '/images/temperature-and-top-p-overview-hero-zh.png',
+      heroImage: '/images/temperature-and-top-p-overview-hero-zh.webp',
       title: '温度和Top-P：控制AI创造力',
       seoTitle: '2026年温度与Top-P参数完整解析：如何设置AI创造力与精确度以提升GPT-5.6和Claude输出质量',
       intro: '温度和Top-P控制AI模型在选择单词时的冒险程度或保守程度。通过调整这些设置，您可以在创造力和可靠性之间权衡——更高的值产生令人惊讶的多样化输出；较低的值产生安全的、可预测的输出。',
@@ -1809,7 +1809,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Fundamentals',
-    heroImage: '/images/temperature-and-top-p-overview-hero-ko.png',
+    heroImage: '/images/temperature-and-top-p-overview-hero-ko.webp',
       title: 'Temperature와 Top-P: AI 창의성 제어하기',
       intro: 'Temperature와 top-p는 AI의 단어 선택이 얼마나 모험적이거나 보수적인지를 제어합니다. 이 설정을 조정하면 창의성과 신뢰성 사이의 균형을 맞출 수 있습니다. 높은 값은 놀랍고 다양한 출력을 생성하고, 낮은 값은 안전하고 예측 가능한 출력을 생성합니다.',
       publishDate: '2026-03-22',

@@ -21,7 +21,7 @@ const SIBLING_BITES = [
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-en.png',
+    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 8 of 10: Local Agents Get a Longer Leash',
     seoTitle: 'Local Agentic AI Trends 2027 | Prompt Bites',
     metaDescription: 'What analysts forecast for local agentic AI between 2026 and 2027 — longer unsupervised task horizons, on-device multi-agent coordination, and where projects are expected to stall.',
@@ -121,7 +121,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-de.png',
+    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-de.webp',
     title: 'Local AI Trends 2027, Part 8 of 10: Lokale Agenten bekommen mehr Handlungsspielraum',
     seoTitle: 'Lokale Agentic-AI-Trends 2027 | Prompt Bites',
     metaDescription: 'Was Analysten für lokale Agentic AI zwischen 2026 und 2027 erwarten — längere unbeaufsichtigte Aufgabenhorizonte, Multi-Agenten-Koordination auf dem Gerät und wo Projekte voraussichtlich scheitern.',
@@ -221,7 +221,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-fr.png',
+    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-fr.webp',
     title: 'Local AI Trends 2027, Part 8 of 10 : les agents locaux gagnent en autonomie',
     seoTitle: 'Tendances IA agentique locale 2027 | Prompt Bites',
     metaDescription: 'Ce que les analystes prévoient pour l\'IA agentique locale entre 2026 et 2027 — horizons de tâches non supervisées plus longs, coordination multi-agents sur l\'appareil, et où les projets devraient caler.',
@@ -321,7 +321,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-ja.png',
+    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-ja.webp',
     title: 'Local AI Trends 2027、Part 8 of 10：ローカルエージェントの裁量が広がる',
     seoTitle: 'ローカルAIエージェント動向 2027 | Prompt Bites',
     metaDescription: '2026年から2027年にかけてローカルのエージェント型AIに何が起きると予測されているか——より長い無監督タスク期間、デバイス上でのマルチエージェント連携、そしてプロジェクトが停滞しやすい領域を解説します。',
@@ -421,7 +421,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-zh.png',
+    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-zh.webp',
     title: 'Local AI Trends 2027,第8部分(共10部分):本地智能体获得更大自主空间',
     seoTitle: '本地智能体AI趋势2027 | Prompt Bites',
     metaDescription: '分析师对2026至2027年本地智能体AI的预测——更长的无监督任务时长、设备端多智能体协作,以及项目最可能停滞的领域。',
@@ -521,7 +521,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-es.png',
+    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-es.webp',
     title: 'Local AI Trends 2027, Parte 8 de 10: los agentes locales ganan más margen de autonomía',
     seoTitle: 'Tendencias de IA agéntica local 2027 | Prompt Bites',
     metaDescription: 'Lo que los analistas prevén para la IA agéntica local entre 2026 y 2027 — horizontes de tareas no supervisadas más largos, coordinación multiagente en el dispositivo y dónde se espera que los proyectos se estanquen.',
@@ -621,7 +621,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-pt.png',
+    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-pt.webp',
     title: 'Local AI Trends 2027, Parte 8 de 10: os agentes locais ganham mais autonomia',
     seoTitle: 'Tendências de IA agêntica local 2027 | Prompt Bites',
     metaDescription: 'O que os analistas preveem para a IA agêntica local entre 2026 e 2027 — horizontes de tarefas não supervisionadas mais longos, coordenação multiagente no dispositivo e onde os projetos devem travar.',
@@ -721,7 +721,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-ar.png',
+    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-ar.webp',
     title: 'Local AI Trends 2027، الجزء 8 من 10: الوكلاء المحليون يحصلون على مساحة أكبر من الاستقلالية',
     seoTitle: 'اتجاهات الذكاء الاصطناعي الوكيلي المحلي 2027 | Prompt Bites',
     metaDescription: 'ما يتوقعه المحللون للذكاء الاصطناعي الوكيلي المحلي بين عامي 2026 و2027 — آفاق مهام أطول دون إشراف، وتنسيق متعدد الوكلاء على الجهاز، والمجالات التي يُتوقع أن تتعثر فيها المشاريع.',
@@ -821,7 +821,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Industry Trends & Predictions',
-    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-ko.png',
+    heroImage: '/images/local-ai-trend-2027-local-agentic-ai-overview-hero-ko.webp',
     title: 'Local AI Trends 2027, 10부 중 8부: 로컬 에이전트, 더 넓은 자율 범위를 얻다',
     seoTitle: '로컬 에이전틱 AI 트렌드 2027 | Prompt Bites',
     metaDescription: '2026년에서 2027년 사이 로컬 에이전틱 AI에서 애널리스트들이 예측하는 변화 — 더 길어지는 비감독 작업 범위, 기기 내 멀티 에이전트 협업, 그리고 프로젝트가 정체될 것으로 예상되는 영역.',

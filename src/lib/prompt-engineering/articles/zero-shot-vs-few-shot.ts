@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
-      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-en.png',
+      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-en.webp',
       title: 'Zero-Shot vs. Few-Shot Prompting',
       intro: 'Zero shot prompting uses no examples in the prompt and relies entirely on the model\'s pre-training, while few shot prompting embeds a handful of examples so the model can imitate a desired pattern.',
       seoTitle: 'Zero-Shot vs. Few-Shot Prompting 2026: Which to Use',
@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
   theme: 'Techniques',
-      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-de.png',
+      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-de.webp',
   title: 'Zero-Shot vs. Few-Shot Prompting',
   seoTitle: 'Zero-Shot vs. Few-Shot Prompting 2026: Wann was?',
   intro: 'Zero-Shot Prompting stellt dem Modell kein Beispiel zur Verfügung und verlässt sich vollständig auf das Vorwissen des Modells, während Few-Shot Prompting einige Beispiele einbettet, damit das Modell ein gewünschtes Muster nachahmen kann.',
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     es: {
   theme: 'Techniques',
-      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-es.png',
+      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-es.webp',
   title: 'Zero-Shot vs. Few-Shot Prompting',
   seoTitle: 'Zero-Shot vs. Few-Shot Prompting 2026: cuál usar',
   intro: 'El Zero-Shot Prompting no incluye ejemplos en el prompt y depende completamente del conocimiento previo del modelo, mientras que el Few-Shot Prompting incorpora algunos ejemplos para que el modelo pueda imitar un patrón deseado.',
@@ -398,7 +398,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     ar: {
   theme: 'Techniques',
-      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-ar.png',
+      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-ar.webp',
   title: 'الطلبات ⁨Zero-Shot⁩ مقابل ⁨Few-Shot⁩',
   seoTitle: '⁨Zero-Shot⁩ مقابل ⁨Few-Shot 2026⁩: أيهما تختار ومتى',
   intro: 'الطلبات Zero-Shot لا تتضمن أمثلة في الطلب وتعتمد كليًا على المعرفة المسبقة للنموذج، بينما تُضيف الطلبات Few-Shot عددًا صغيرًا من الأمثلة حتى يتمكن النموذج من تقليد النمط المطلوب.',
@@ -522,7 +522,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     pt: {
   theme: 'Techniques',
-      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-pt.png',
+      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-pt.webp',
   title: 'Zero-Shot vs. Few-Shot Prompting',
   seoTitle: 'Zero-Shot vs. Few-Shot Prompting 2026: qual usar',
   intro: 'O Zero-Shot Prompting não usa exemplos no prompt e depende inteiramente do pré-treinamento do modelo, enquanto o Few-Shot Prompting incorpora alguns exemplos para que o modelo possa imitar um padrão desejado.',
@@ -645,7 +645,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     fr: {
   theme: 'Techniques',
-      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-fr.png',
+      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-fr.webp',
   title: 'Zero-Shot vs. Few-Shot Prompting',
   intro: 'Le Zero-Shot Prompting ne fournit aucun exemple et repose entièrement sur les connaissances préexistantes du modèle, tandis que le Few-Shot Prompting intègre quelques exemples pour que le modèle puisse imiter un motif souhaité.',
   publishDate: '2026-03-26',
@@ -780,7 +780,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     ja: {
   theme: 'Techniques',
-      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-ja.png',
+      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-ja.webp',
   title: 'ゼロショット vs. フューショットプロンプティング',
   intro: 'ゼロショットプロンプティングはプロンプトに例を含めず、モデルの事前学習に完全に依存しますが、フューショットプロンプティングは複数の例を埋め込んで、モデルが望ましいパターンを模倣できるようにします。',
   publishDate: '2026-03-26',
@@ -937,7 +937,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 },
     zh: {
   theme: 'Techniques',
-      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-zh.png',
+      heroImage: '/images/zero-shot-vs-few-shot-overview-hero-zh.webp',
   title: '零样本 vs. 少样本提示',
   intro: '零样本提示在提示中不使用任何示例，完全依赖模型的预训练，而少样本提示嵌入少量示例，使模型能够模仿所需的模式。',
   publishDate: '2026-03-26',
@@ -1072,7 +1072,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
       freshness_tier: 'semi_annual',
       theme: 'Techniques',
-    heroImage: '/images/zero-shot-vs-few-shot-overview-hero-ko.png',
+    heroImage: '/images/zero-shot-vs-few-shot-overview-hero-ko.webp',
       title: 'Zero-Shot vs. Few-Shot 프롬프팅',
       intro: 'Zero-shot 프롬프팅은 프롬프트에 예시를 포함하지 않고 모델의 사전 학습에 전적으로 의존하는 방식이며, few-shot 프롬프팅은 소수의 예시를 포함하여 모델이 원하는 패턴을 모방할 수 있도록 합니다.',
       seoTitle: 'Zero-Shot vs. Few-Shot 프롬프팅 2026: 어느 것을 사용해야 합니까',

@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
-    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-en.png',
+    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-en.webp',
     title: 'DeepSeek V3 Local Hardware Requirements?',
     seoTitle: 'DeepSeek V3 Local 2026: 400 GB Reality + Alternatives',
     metaDescription: 'DeepSeek V3 is 671B MoE — impractical on consumer hardware. Q4_K_M needs ~400 GB RAM. Practical alternatives at every VRAM tier with exact numbers.',
@@ -149,7 +149,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   de: {
     theme: 'Model Comparisons',
-    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-de.png',
+    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-de.webp',
     title: 'DeepSeek V3 lokale Hardware-Anforderungen?',
     seoTitle: 'DeepSeek V3 Hardware 2026: 400 GB Realität + Alternativen',
     metaDescription: 'DeepSeek V3 ist ein 671B-MoE-Modell — nicht machbar auf Consumer-Hardware. Q4_K_M benötigt ~400 GB RAM. Praktische Alternativen mit genauen Zahlen.',
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   fr: {
     theme: 'Model Comparisons',
-    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-fr.png',
+    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-fr.webp',
     title: 'Prérequis matériels pour DeepSeek V3 en local ?',
     seoTitle: 'Prérequis matériels DeepSeek V3 local 2026 : faisable ?',
     metaDescription: 'DeepSeek V3 est un modèle MoE de 671B — impraticable sur matériel grand public. Q4_K_M nécessite ~400 Go RAM. Alternatives pratiques à chaque niveau.',
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   ja: {
     theme: 'Model Comparisons',
-    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-ja.png',
+    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-ja.webp',
     title: 'DeepSeek V3のローカル実行ハードウェア要件は？',
     seoTitle: 'DeepSeek V3 ローカル実行 2026：400GB RAMの現実とVRAMティア別代替モデル',
     metaDescription: 'DeepSeek V3は六百七十一億パラメーターのMoEモデル——コンシューマーハードウェアでは実行不可能。Q4_K_Mで約四百GBのRAMが必要。本記事では各VRAMティアの実用的代替案とDS-R1-Distill-Qwen系列の詳細ベンチマーク数値を提供します。',
@@ -453,7 +453,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   zh: {
     theme: 'Model Comparisons',
-    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-zh.png',
+    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-zh.webp',
     title: 'DeepSeek V3本地运行硬件要求？',
     seoTitle: 'DeepSeek V3本地运行硬件要求 2026：400GB现实与各显存层级实用替代方案完整指南',
     metaDescription: 'DeepSeek V3是671亿参数的MoE专家混合模型，消费级硬件完全无法本地运行——Q4_K_M量化版仍需约400 GB内存。本文列出各显存档位的实用替代方案，并附DS-R1-Distill-Qwen蒸馏系列的完整基准数据与本地部署建议。',
@@ -567,7 +567,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   pt: {
     theme: 'Model Comparisons',
-    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-pt.png',
+    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-pt.webp',
     title: 'Quais são os requisitos de hardware para rodar o DeepSeek V3 localmente?',
     seoTitle: 'DeepSeek V3 local 2026: 400 GB e alternativas reais',
     metaDescription: 'DeepSeek V3 é um MoE de 671B, inviável em hardware de consumo: Q4_K_M precisa de ~400 GB de RAM. Alternativas práticas com números exatos por nível de VRAM.',
@@ -674,7 +674,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Model Comparisons',
-    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-es.png',
+    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-es.webp',
     title: '¿Cuáles son los requisitos de hardware para ejecutar DeepSeek V3 en local?',
     seoTitle: 'DeepSeek V3 en local 2026: 400 GB y alternativas reales',
     metaDescription: 'DeepSeek V3 es un MoE de 671B, inviable en hardware de consumo: Q4_K_M necesita ~400 GB de RAM. Alternativas prácticas con cifras exactas por nivel de VRAM.',
@@ -791,7 +791,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Model Comparisons',
-    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-ar.png',
+    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-ar.webp',
     title: 'ما هي متطلبات الأجهزة لتشغيل ⁨DeepSeek V3⁩ محلياً؟',
     seoTitle: '⁨DeepSeek V3⁩ محلياً: ⁨400 GB RAM⁩ وبدائل ⁨2026⁩',
     metaDescription: '⁨DeepSeek V3⁩ (⁨671B MoE⁩) يستلزم حوالي ⁨400 GB RAM⁩ بتكميم ⁨Q4⁩_⁨K⁩_⁨M⁩ — مستحيل على أجهزة المستهلكين. بدائل عملية بأرقام ⁨VRAM⁩ دقيقة لكل مستوى.',
@@ -892,7 +892,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Model Comparisons',
-    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-ko.png',
+    heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-ko.webp',
     title: 'DeepSeek V3를 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?',
     seoTitle: 'DeepSeek V3 로컬 실행 2026: 400 GB RAM과 실용적 대안',
     metaDescription: 'DeepSeek V3 (671B MoE)는 Q4_K_M 양자화 기준 약 400 GB RAM이 필요합니다. 소비자용 하드웨어에서는 실행 불가합니다. VRAM 수준별 증류 모델 대안을 정확한 수치로 안내합니다.',

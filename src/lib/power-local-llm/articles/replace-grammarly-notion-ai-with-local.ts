@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-en.png',
+    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-en.webp',
     title: 'Replace Grammarly and Notion AI with a Local LLM (2026)',
     seoTitle: 'Replace Grammarly and Notion AI with Local LLM 2026',
     intro:
@@ -366,7 +366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-es.png',
+    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-es.webp',
     title: 'Reemplaza Grammarly y Notion AI con un LLM local (2026)',
     seoTitle: 'Reemplaza Grammarly y Notion AI con LLM local 2026',
     intro:
@@ -733,7 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-pt.png',
+    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-pt.webp',
     title: 'Substitua o Grammarly e o Notion AI por um LLM local (2026)',
     seoTitle: 'Substitua Grammarly e Notion AI com LLM local 2026',
     intro:
@@ -1100,7 +1100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-de.png',
+    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-de.webp',
     title: 'Grammarly und Notion AI durch ein lokales LLM ersetzen (2026)',
     seoTitle: 'Grammarly & Notion AI durch lokales LLM ersetzen 2026',
     intro:
@@ -1462,7 +1462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-fr.png',
+    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-fr.webp',
     title: 'Remplacer Grammarly et Notion AI par un LLM local (2026)',
     seoTitle: 'Remplacer Grammarly et Notion AI par un LLM local 2026',
     intro:
@@ -1816,7 +1816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-ja.png',
+    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-ja.webp',
     title: 'GrammarlyとNotion AIをローカルLLMで置き換える（2026）',
     seoTitle: 'GrammarlyとNotion AIをローカルLLMで代替（2026）',
     intro:
@@ -2171,7 +2171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-zh.png',
+    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-zh.webp',
     title: '用本地 LLM 替代 Grammarly 与 Notion AI（2026）',
     seoTitle: '本地 LLM 替代 Grammarly 与 Notion AI 2026',
     intro:
@@ -2528,7 +2528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-ar.png',
+    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-ar.webp',
     title: 'استبدل ⁨Grammarly⁩ و⁨Notion AI⁩ بنموذج ⁨LLM⁩ محلي (⁨2026⁩)',
     seoTitle: 'استبدل ⁨Grammarly⁩ و⁨Notion AI⁩ بـ ⁨LLM⁩ محلي ⁨2026⁩',
     intro:
@@ -2834,7 +2834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-14',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
-    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-ko.png',
+    heroImage: '/images/replace-grammarly-notion-ai-with-local-overview-hero-ko.webp',
     title: 'Grammarly와 Notion AI를 로컬 LLM으로 대체하기 (2026)',
     seoTitle: 'Grammarly Notion AI 로컬 LLM 대체 2026',
     intro:

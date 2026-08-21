@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Use Cases',
-      heroImage: '/images/ai-powered-research-overview-hero-en.png',
+      heroImage: '/images/ai-powered-research-overview-hero-en.webp',
       title: 'AI-Powered Research: Tools, Hallucination Rates, and Verification Workflows',
       intro: 'AI research tools reduce literature review time from weeks to hours — but introduce a critical risk: hallucinated citations that pass peer review. GPTZero confirmed 100+ fabricated references in NeurIPS 2025 papers that cleared multi-reviewer scrutiny. As of April 2026, the reliable workflow routes each research stage to the right tool (Elicit for extraction, Consensus for synthesis, scite.ai for verification) and cross-checks factual claims across at least two independent models before trusting them.',
       publishDate: '2026-03-23',
@@ -553,7 +553,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     de: {
       theme: 'Use Cases',
-      heroImage: '/images/ai-powered-research-overview-hero-de.png',
+      heroImage: '/images/ai-powered-research-overview-hero-de.webp',
       title: 'KI-gestützte Forschung: Tools, Halluzinations-Quoten und Verifikations-Workflows',
       intro: 'KI-Forschungstools verkürzen Literaturrecherchen von Wochen auf Stunden – führen aber ein kritisches Risiko ein: halluzinierte Zitate, die Peer Reviews passieren. GPTZero bestätigte 100+ fabrizierte Referenzen in NeurIPS-2025-Papieren, die eine Multi-Reviewer-Prüfung bestanden haben. Ab Mai 2026 leitet der zuverlässige Workflow jede Forschungsphase an das richtige Tool (Elicit für Datenextraktion, Consensus für Synthese, scite.ai für Verifizierung) und prüft faktische Ansprüche zwischen mindestens zwei unabhängigen Modellen, bevor man ihnen vertraut.',
       publishDate: '2026-03-23',
@@ -1077,7 +1077,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     es: {
       theme: 'Use Cases',
-      heroImage: '/images/ai-powered-research-overview-hero-es.png',
+      heroImage: '/images/ai-powered-research-overview-hero-es.webp',
       title: 'Investigación con IA: Herramientas, Tasas de Alucinaciones y Flujos de Verificación',
       intro: 'Las herramientas de investigación con IA reducen el tiempo de revisión bibliográfica de semanas a horas — pero introducen un riesgo crítico: citas alucinadas que superan la revisión por pares. GPTZero confirmó más de 100 referencias fabricadas en artículos de NeurIPS 2025 que superaron el escrutinio de múltiples revisores. A partir de abril de 2026, el flujo de trabajo fiable enruta cada fase de investigación a la herramienta correcta (Elicit para extracción, Consensus para síntesis, scite.ai para verificación) y verifica las afirmaciones factuales en al menos dos modelos independientes antes de confiar en ellas.',
       publishDate: '2026-03-23',
@@ -1602,7 +1602,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     ar: {
       theme: 'Use Cases',
-      heroImage: '/images/ai-powered-research-overview-hero-ar.png',
+      heroImage: '/images/ai-powered-research-overview-hero-ar.webp',
       title: 'البحث بالذكاء الاصطناعي: الأدوات ومعدلات الهلوسة وسير عمل التحقق',
       intro: 'تُقلِّل أدوات البحث بالذكاء الاصطناعي وقت مراجعة الأدبيات من أسابيع إلى ساعات — لكنها تُقدِّم خطرًا حرجًا: اقتباسات مُهلوَسة تجتاز مراجعة الأقران. أكّد GPTZero أكثر من 100 مرجع مُختلَق في أوراق NeurIPS 2025 اجتازت تدقيق مراجعين متعددين. اعتبارًا من أبريل 2026، سير العمل الموثوق يُوجِّه كل مرحلة بحثية إلى الأداة الصحيحة (Elicit للاستخراج، Consensus للتوليف، scite.ai للتحقق) ويتحقق من الادعاءات الواقعية في نموذجين مستقلين على الأقل قبل الثقة بها.',
       publishDate: '2026-03-23',
@@ -2127,7 +2127,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     pt: {
       theme: 'Use Cases',
-      heroImage: '/images/ai-powered-research-overview-hero-pt.png',
+      heroImage: '/images/ai-powered-research-overview-hero-pt.webp',
       title: 'Pesquisa com IA: Ferramentas, Taxas de Alucinação e Fluxos de Verificação',
       intro: 'As ferramentas de pesquisa com IA reduzem o tempo de revisão bibliográfica de semanas para horas — mas introduzem um risco crítico: citações alucinadas que passam pela revisão por pares. O GPTZero confirmou mais de 100 referências fabricadas em artigos do NeurIPS 2025 que passaram pelo escrutínio de múltiplos revisores. A partir de abril de 2026, o fluxo de trabalho confiável encaminha cada fase de pesquisa para a ferramenta correta (Elicit para extração, Consensus para síntese, scite.ai para verificação) e verifica as afirmações factuais em pelo menos dois modelos independentes antes de confiar nelas.',
       publishDate: '2026-03-23',
@@ -2651,7 +2651,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     fr: {
       theme: 'Use Cases',
-      heroImage: '/images/ai-powered-research-overview-hero-fr.png',
+      heroImage: '/images/ai-powered-research-overview-hero-fr.webp',
       title: 'Recherche Assistée par IA : Outils, Taux d\'Hallucination et Workflows de Vérification',
       intro: 'Les outils de recherche IA réduisent le temps de revue de littérature de plusieurs semaines à quelques heures — mais introduisent un risque critique : des citations hallucinées qui passent la révision par les pairs. GPTZero a confirmé plus de 100 références fabriquées dans des articles NeurIPS 2025 ayant passé un examen multi-réviseurs. En avril 2026, le workflow fiable achemine chaque étape de recherche vers le bon outil (Elicit pour l\'extraction, Consensus pour la synthèse, scite.ai pour la vérification) et vérifie les affirmations factuelles entre au moins deux modèles indépendants avant de leur faire confiance.',
       publishDate: '2026-03-23',
@@ -3175,7 +3175,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ja: {
       theme: 'Use Cases',
-      heroImage: '/images/ai-powered-research-overview-hero-ja.png',
+      heroImage: '/images/ai-powered-research-overview-hero-ja.webp',
       title: 'AI駆動型研究：ツール、幻想率、検証ワークフロー',
       intro: 'AI研究ツールは文献レビューの時間を数週間から数時間に短縮します — ただし、重大なリスクをもたらします。ピアレビューを通過した幻想的な引用です。GPTZeroは、複数レビュアーの審査に合格したNeurIPS 2025論文で、100を超える捏造参考文献を確認しました。2026年5月現在、信頼できるワークフローは各研究段階を適切なツール（抽出用Elicit、合成用Consensus、検証用scite.ai）に送り、少なくとも2つの独立したモデルで事実主張をクロスチェックしてから信頼します。',
       publishDate: '2026-03-23',
@@ -3429,7 +3429,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     zh: {
       theme: 'Use Cases',
-      heroImage: '/images/ai-powered-research-overview-hero-zh.png',
+      heroImage: '/images/ai-powered-research-overview-hero-zh.webp',
       title: 'AI研究：工具、幻想率和验证工作流',
       intro: 'AI研究工具将文献评审时间从数周缩短至数小时 — 但引入关键风险：通过同行评审的幻想引用。GPTZero确认了超过100条NeurIPS 2025论文中的捏造引用通过多评审人审查。截至2026年5月，可靠工作流将每个研究阶段路由到合适工具（Elicit进行提取、Consensus进行合成、scite.ai进行验证），并在至少两个独立模型间交叉检查事实声明后信任。',
       publishDate: '2026-03-23',
@@ -3684,7 +3684,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     theme: 'Use Cases',
-    heroImage: '/images/ai-powered-research-overview-hero-ko.png',
+    heroImage: '/images/ai-powered-research-overview-hero-ko.webp',
     title: 'AI 기반 연구: 도구, 환각률, 검증 워크플로우',
     intro: 'AI 연구 도구는 문헌 검토 시간을 몇 주에서 몇 시간으로 단축합니다 — 그러나 동료 심사를 통과하는 환각된 인용이라는 심각한 위험을 도입합니다. GPTZero는 다수의 심사자 검토를 통과한 NeurIPS 2025 논문에서 100개 이상의 조작된 참고문헌을 확인했습니다. 2026년 4월 기준, 신뢰할 수 있는 워크플로우는 각 연구 단계를 올바른 도구(Elicit로 추출, Consensus로 합성, scite.ai로 검증)로 라우팅하고 신뢰하기 전에 최소 두 개의 독립 모델에서 사실적 주장을 교차 검증합니다.',
     publishDate: '2026-03-23',

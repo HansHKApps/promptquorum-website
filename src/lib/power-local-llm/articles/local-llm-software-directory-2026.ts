@@ -89,6 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       runtimes: {
         id: 'runtimes',
         title: '1. Local LLM Runtimes & Inference Engines',
+        itemHeadings: true,
         content:
           '**A runtime is the engine that loads model weights into memory and turns prompts into tokens.** It is the first decision in a local-LLM stack and the one that constrains everything above it — every desktop app, web UI, and coding harness ultimately calls a runtime. Ollama dominates user-facing share in 2026 because it ships an OpenAI-compatible API and a one-command install; llama.cpp is the C++ engine underneath most of the others; vLLM is the right pick when you need to serve concurrent users on a real GPU.',
         columns: ['Tool', 'Link', 'Description', 'License'],
@@ -135,6 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       desktopApps: {
         id: 'desktop-apps',
         title: '2. Desktop GUI Apps',
+        itemHeadings: true,
         content:
           '**Desktop apps wrap a runtime in a chat interface and a model browser.** They are where most non-technical users start because there is no terminal step — download, click, chat. LM Studio, Jan, and GPT4All hold the bulk of the user base in 2026; AnythingLLM doubles as a desktop app and a RAG layer; Open Interpreter is the outlier that lets a local model drive your computer.',
         columns: ['Tool', 'Link', 'Description', 'License'],
@@ -172,6 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       webUis: {
         id: 'web-uis',
         title: '3. Web UIs & Browser Frontends',
+        itemHeadings: true,
         content:
           '**Web UIs are self-hosted ChatGPT clones — same conversational surface, but you point them at a runtime running on your own machine or LAN.** They are the natural choice when you want multi-device access (laptop, phone, tablet hitting one server) or team usage. Open WebUI dominates the self-hosted segment in 2026, with LibreChat as the team-features alternative and SillyTavern as the dedicated roleplay UI.',
         columns: ['Tool', 'Link', 'Description', 'License'],
@@ -191,6 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       codingAssistants: {
         id: 'coding-assistants',
         title: '4. Coding Assistants & IDE Integrations',
+        itemHeadings: true,
         content:
           '**Coding assistants connect a local LLM to your editor or terminal via OpenAI-compatible APIs.** The choice is mostly about workflow primitive: autocomplete-in-editor (Continue.dev), autonomous agent edits (Cline, OpenHands), or git-native diff edits at the terminal (Aider). All three patterns work against any runtime that speaks the OpenAI Chat Completions protocol — Ollama is the most common backend in 2026.',
         columns: ['Tool', 'Link', 'Description', 'License'],
@@ -220,6 +224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ragSystems: {
         id: 'rag-systems',
         title: '5. RAG & Document Chat Systems',
+        itemHeadings: true,
         content:
           '**[RAG (Retrieval-Augmented Generation)](/prompt-engineering/rag-explained) systems combine a local LLM with an embedding model and a vector store so the model can answer from your own documents.** The split is between turn-key apps (AnythingLLM, PrivateGPT, Quivr, Khoj) that "just work" and framework libraries (LlamaIndex, Haystack, txtai) that you build on. RAGFlow has gained share in 2026 specifically for documents that need citation-grade retrieval.',
         columns: ['Tool', 'Link', 'Description', 'License'],
@@ -243,6 +248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       agentFrameworks: {
         id: 'agent-frameworks',
         title: '6. Agent Frameworks & Orchestration',
+        itemHeadings: true,
         content:
           '**Agent frameworks turn one-shot LLM calls into multi-step workflows — plan, act, observe, repeat.** LangChain remains the general-purpose default; CrewAI and AutoGen specialise in role-based multi-agent setups; LangGraph is the right pick when state management matters across long-running flows. All eight frameworks below run cleanly against a local Ollama backend.',
         columns: ['Tool', 'Link', 'Description', 'License'],
@@ -261,6 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceMultimodal: {
         id: 'voice-multimodal',
         title: '7. Voice, Speech & Multimodal',
+        itemHeadings: true,
         content:
           '**Voice and multimodal stacks extend a local LLM beyond text — speech in (STT), speech out (TTS), and vision.** Whisper.cpp and faster-whisper own the local STT layer; Piper and Coqui share the TTS layer with XTTS v2 dominating voice cloning; LLaVA and Ollama vision models cover the vision side. A fully-offline voice assistant is buildable from this layer plus a small chat model.',
         columns: ['Tool', 'Link', 'Description', 'License'],
@@ -280,6 +287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mobileEdge: {
         id: 'mobile-edge',
         title: '8. Mobile & Edge Clients',
+        itemHeadings: true,
         content:
           '**Mobile clients run a quantised model directly on the phone using Apple Neural Engine, Qualcomm NPU, or pure CPU inference.** The MLC LLM project is the foundational layer; consumer apps (PocketPal AI, Private LLM, LLM Farm, Layla) wrap it with a chat UI. Flagship phones in 2026 run 2-4B models at usable speeds (8-15 tokens/sec); 7B is on the edge of feasibility for top-tier hardware.',
         columns: ['Tool', 'Link', 'Description', 'License'],
@@ -300,6 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specialized: {
         id: 'specialized',
         title: '9. Specialized & Productivity Tools',
+        itemHeadings: true,
         content:
           '**Specialized tools embed local LLMs into apps you already use** — note-taking platforms (Obsidian, Logseq, Joplin), autonomous task agents (AutoGPT, BabyAGI, MetaGPT), and roleplay frontends (Agnai, RisuAI). These are not generic chat surfaces; they are workflow-specific integrations that assume you already have a host app and a runtime.',
         columns: ['Tool', 'Link', 'Description', 'License'],
@@ -504,6 +513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       runtimes: {
         id: 'runtimes',
         title: '1. Lokale LLM-Laufzeitumgebungen & Inferenz-Engines',
+        itemHeadings: true,
         content:
           '**Eine Laufzeitumgebung ist die Engine, die Modellgewichte in den Speicher lädt und Eingaben in Token umwandelt.** Sie ist die erste Entscheidung in einem lokalen LLM-Stack und schränkt alles darüber ein — jede Desktop-App, jedes Web-UI und jede Coding-Integration ruft letztlich eine Laufzeitumgebung auf. Ollama dominiert 2026 den nutzerseitigen Marktanteil, weil es eine OpenAI-kompatible API und eine Ein-Befehl-Installation mitbringt; llama.cpp ist die C++-Engine unter den meisten anderen Tools; vLLM ist die richtige Wahl, wenn Sie gleichzeitige Anfragen mehrerer Nutzer auf einer echten GPU bedienen müssen.',
         columns: ['Tool', 'Link', 'Beschreibung', 'Lizenz'],
@@ -550,6 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       desktopApps: {
         id: 'desktop-apps',
         title: '2. Desktop-GUI-Anwendungen',
+        itemHeadings: true,
         content:
           '**Desktop-Apps kapseln eine Laufzeitumgebung in einer Chat-Oberfläche und einem Modell-Browser.** Hier steigen die meisten nicht-technischen Anwenderinnen und Anwender ein, weil kein Terminal-Schritt nötig ist — herunterladen, klicken, chatten. LM Studio, Jan und GPT4All halten 2026 den Großteil der Nutzerbasis; AnythingLLM fungiert gleichzeitig als Desktop-App und RAG-Schicht; Open Interpreter ist der Sonderfall, der einem lokalen Modell erlaubt, Ihren Computer zu steuern.',
         columns: ['Tool', 'Link', 'Beschreibung', 'Lizenz'],
@@ -587,6 +598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       webUis: {
         id: 'web-uis',
         title: '3. Web-UIs & Browser-Frontends',
+        itemHeadings: true,
         content:
           '**Web-UIs sind selbst gehostete ChatGPT-Klone — gleiche Konversationsoberfläche, aber Sie richten sie auf eine Laufzeitumgebung auf Ihrem eigenen Rechner oder LAN.** Sie sind die natürliche Wahl, wenn Sie Multi-Geräte-Zugriff (Laptop, Smartphone, Tablet auf einem Server) oder Team-Nutzung wünschen. Open WebUI dominiert 2026 das Self-Hosting-Segment; LibreChat ist die Team-Feature-Alternative; SillyTavern ist das dedizierte Rollenspiel-UI.',
         columns: ['Tool', 'Link', 'Beschreibung', 'Lizenz'],
@@ -606,6 +618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       codingAssistants: {
         id: 'coding-assistants',
         title: '4. Coding-Assistenten & IDE-Integrationen',
+        itemHeadings: true,
         content:
           '**Coding-Assistenten verbinden ein lokales LLM über OpenAI-kompatible APIs mit Ihrem Editor oder Terminal.** Die Wahl hängt hauptsächlich vom bevorzugten Arbeitsablauf ab: Autovervollständigung im Editor (Continue.dev), autonome Agenten-Edits (Cline, OpenHands) oder git-natives Diff-Editing im Terminal (Aider). Alle drei Muster funktionieren mit jeder Laufzeitumgebung, die das OpenAI Chat Completions-Protokoll unterstützt — Ollama ist 2026 das verbreitetste Backend.',
         columns: ['Tool', 'Link', 'Beschreibung', 'Lizenz'],
@@ -635,6 +648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ragSystems: {
         id: 'rag-systems',
         title: '5. RAG- & Dokumenten-Chat-Systeme',
+        itemHeadings: true,
         content:
           '**[RAG (Retrieval-Augmented Generation)](/de/prompt-engineering/rag-explained)-Systeme verbinden ein lokales LLM mit einem Embedding-Modell und einem Vektorspeicher, damit das Modell aus Ihren eigenen Dokumenten antworten kann.** Die Unterscheidung liegt zwischen schlüsselfertigen Apps (AnythingLLM, PrivateGPT, Quivr, Khoj), die „einfach funktionieren", und Framework-Bibliotheken (LlamaIndex, Haystack, txtai), auf denen Sie aufbauen. RAGFlow hat 2026 Marktanteile gewonnen, speziell für Dokumente, die zitiergenaue Extraktion erfordern.',
         columns: ['Tool', 'Link', 'Beschreibung', 'Lizenz'],
@@ -658,6 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       agentFrameworks: {
         id: 'agent-frameworks',
         title: '6. Agenten-Frameworks & Orchestrierung',
+        itemHeadings: true,
         content:
           '**Agenten-Frameworks verwandeln One-Shot-LLM-Aufrufe in mehrstufige Workflows — planen, handeln, beobachten, wiederholen.** LangChain bleibt der allgemeine Standard; CrewAI und AutoGen sind auf rollenbasierte Multi-Agenten-Setups spezialisiert; LangGraph ist die richtige Wahl, wenn Zustandsverwaltung über langläufige Abläufe hinweg wichtig ist. Alle acht Frameworks unten laufen problemlos mit einem lokalen Ollama-Backend.',
         columns: ['Tool', 'Link', 'Beschreibung', 'Lizenz'],
@@ -676,6 +691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceMultimodal: {
         id: 'voice-multimodal',
         title: '7. Sprache, Spracherkennung & Multimodal',
+        itemHeadings: true,
         content:
           '**Sprach- und Multimodal-Stacks erweitern ein lokales LLM über Text hinaus — Spracheingabe (STT), Sprachausgabe (TTS) und Bildverständnis.** Whisper.cpp und faster-whisper beherrschen die lokale STT-Schicht; Piper und Coqui teilen sich die TTS-Schicht, wobei XTTS v2 beim Voice-Cloning dominiert; LLaVA und Ollama Vision-Modelle decken die Bildseite ab. Ein vollständig offline betriebener Sprachassistent lässt sich aus dieser Schicht plus einem kleinen Chat-Modell aufbauen.',
         columns: ['Tool', 'Link', 'Beschreibung', 'Lizenz'],
@@ -695,6 +711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mobileEdge: {
         id: 'mobile-edge',
         title: '8. Mobile & Edge-Clients',
+        itemHeadings: true,
         content:
           '**Mobile-Clients führen ein quantisiertes Modell direkt auf dem Smartphone aus — über Apple Neural Engine, Qualcomm NPU oder reine CPU-Inferenz.** Das MLC LLM-Projekt ist die grundlegende Schicht; Consumer-Apps (PocketPal AI, Private LLM, LLM Farm, Layla) kapseln sie in einer Chat-Oberfläche. Aktuelle Flagship-Smartphones führen 2026 2-4B-Modelle mit praxistauglichen Geschwindigkeiten (8–15 Token/Sek.) aus; 7B liegt an der Machbarkeitsgrenze für Spitzengeräte.',
         columns: ['Tool', 'Link', 'Beschreibung', 'Lizenz'],
@@ -715,6 +732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specialized: {
         id: 'specialized',
         title: '9. Spezialisierte & Produktivitätswerkzeuge',
+        itemHeadings: true,
         content:
           '**Spezialisierte Tools betten lokale LLMs in bereits genutzte Anwendungen ein** — Notiz-Plattformen (Obsidian, Logseq, Joplin), autonome Aufgaben-Agenten (AutoGPT, BabyAGI, MetaGPT) und Rollenspiel-Frontends (Agnai, RisuAI). Dies sind keine generischen Chat-Oberflächen; es handelt sich um workflow-spezifische Integrationen, die voraussetzen, dass Sie bereits über eine Host-Anwendung und eine Laufzeitumgebung verfügen.',
         columns: ['Tool', 'Link', 'Beschreibung', 'Lizenz'],
@@ -926,6 +944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       runtimes: {
         id: 'runtimes',
         title: '1. Runtimes & moteurs d\'inférence LLM locaux',
+        itemHeadings: true,
         content:
           '**Un runtime est le moteur qui charge les poids du modèle en mémoire et transforme les invites en tokens.** C\'est le premier choix d\'une stack LLM locale et celui qui conditionne tout ce qui se trouve au-dessus. Ollama domine la part de marché en 2026 grâce à son API compatible OpenAI et son installation en une commande ; llama.cpp est le moteur C++ sous-jacent à la plupart des autres outils ; vLLM est le choix pour les déploiements à accès concurrent sur GPU.',
         columns: ['Tool', 'Link', 'Description', 'Licence'],
@@ -972,6 +991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       desktopApps: {
         id: 'desktop-apps',
         title: '2. Applications de bureau (GUI)',
+        itemHeadings: true,
         content:
           '**Les applications bureau encapsulent un runtime dans une interface de chat et un navigateur de modèles.** C\'est le point d\'entrée pour la plupart des utilisateurs non techniques — télécharger, cliquer, discuter. LM Studio, Jan et GPT4All détiennent l\'essentiel de la base utilisateurs en 2026 ; AnythingLLM fait office d\'application bureau et de couche RAG ; Open Interpreter est le cas particulier qui permet à un modèle local de piloter votre ordinateur.',
         columns: ['Tool', 'Link', 'Description', 'Licence'],
@@ -1009,6 +1029,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       webUis: {
         id: 'web-uis',
         title: '3. Interfaces web & frontends navigateur',
+        itemHeadings: true,
         content:
           '**Les interfaces web sont des clones ChatGPT auto-hébergés — même surface conversationnelle, mais pointant vers un runtime sur votre propre machine ou réseau local.** Elles conviennent particulièrement pour un accès multi-appareils ou un usage en équipe. Open WebUI domine le segment auto-hébergé en 2026, LibreChat est l\'alternative orientée équipe, SillyTavern est l\'interface dédiée au jeu de rôle.',
         columns: ['Tool', 'Link', 'Description', 'Licence'],
@@ -1028,6 +1049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       codingAssistants: {
         id: 'coding-assistants',
         title: '4. Assistants de codage & intégrations IDE',
+        itemHeadings: true,
         content:
           '**Les assistants de codage connectent un LLM local à votre éditeur ou terminal via des API compatibles OpenAI.** Le choix dépend surtout du workflow : autocomplétion dans l\'éditeur (Continue.dev), éditions autonomes par agent (Cline, OpenHands) ou éditions diff natives git en terminal (Aider). Les trois patterns fonctionnent avec tout runtime supportant le protocole OpenAI Chat Completions — Ollama est le backend le plus courant en 2026.',
         columns: ['Tool', 'Link', 'Description', 'Licence'],
@@ -1057,6 +1079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ragSystems: {
         id: 'rag-systems',
         title: '5. Systèmes RAG & chat sur documents',
+        itemHeadings: true,
         content:
           '**Les systèmes [RAG (Retrieval-Augmented Generation)](/fr/prompt-engineering/rag-explained) combinent un LLM local avec un modèle d\'embedding et un store vectoriel pour que le modèle puisse répondre à partir de vos propres documents.** La distinction est entre les applications clés en main (AnythingLLM, PrivateGPT, Quivr, Khoj) et les bibliothèques de framework (LlamaIndex, Haystack, txtai) sur lesquelles vous construisez. RAGFlow a gagné des parts de marché en 2026 pour les documents nécessitant une extraction de citations précise.',
         columns: ['Tool', 'Link', 'Description', 'Licence'],
@@ -1080,6 +1103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       agentFrameworks: {
         id: 'agent-frameworks',
         title: '6. Frameworks d\'agents & orchestration',
+        itemHeadings: true,
         content:
           '**Les frameworks d\'agents transforment les appels LLM en une seule passe en workflows multi-étapes — planifier, agir, observer, répéter.** LangChain reste la valeur par défaut généraliste ; CrewAI et AutoGen se spécialisent dans les setups multi-agents basés sur les rôles ; LangGraph est le bon choix lorsque la gestion d\'état sur des flux longs est essentielle. Les huit frameworks ci-dessous fonctionnent avec un backend Ollama local.',
         columns: ['Tool', 'Link', 'Description', 'Licence'],
@@ -1098,6 +1122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceMultimodal: {
         id: 'voice-multimodal',
         title: '7. Voix, parole & multimodal',
+        itemHeadings: true,
         content:
           '**Les stacks voix et multimodal étendent un LLM local au-delà du texte — reconnaissance vocale (STT), synthèse vocale (TTS) et vision.** Whisper.cpp et faster-whisper dominent la couche STT locale ; Piper et Coqui se partagent la couche TTS avec XTTS v2 en tête pour le clonage vocal ; LLaVA et les modèles vision Ollama couvrent la partie vision. Un assistant vocal entièrement hors ligne est faisable avec cette couche et un petit modèle de chat.',
         columns: ['Tool', 'Link', 'Description', 'Licence'],
@@ -1117,6 +1142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mobileEdge: {
         id: 'mobile-edge',
         title: '8. Clients mobiles & edge',
+        itemHeadings: true,
         content:
           '**Les clients mobiles exécutent un modèle quantifié directement sur le téléphone via Apple Neural Engine, Qualcomm NPU ou inférence CPU pure.** Le projet MLC LLM est la couche fondatrice ; les applications grand public (PocketPal AI, Private LLM, LLM Farm, Layla) l\'encapsulent dans une interface de chat. Les téléphones haut de gamme 2026 exécutent des modèles 2-4B à des vitesses utilisables (8–15 tokens/sec) ; les modèles 7B sont en limite de faisabilité.',
         columns: ['Tool', 'Link', 'Description', 'Licence'],
@@ -1137,6 +1163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specialized: {
         id: 'specialized',
         title: '9. Outils spécialisés & productivité',
+        itemHeadings: true,
         content:
           '**Les outils spécialisés intègrent les LLM locaux dans des applications déjà utilisées** — plateformes de prise de notes (Obsidian, Logseq, Joplin), agents de tâches autonomes (AutoGPT, BabyAGI, MetaGPT) et frontends de jeu de rôle (Agnai, RisuAI). Ce ne sont pas des interfaces de chat génériques ; ce sont des intégrations spécifiques à un workflow qui supposent que vous disposez déjà d\'une application hôte et d\'un runtime.',
         columns: ['Tool', 'Link', 'Description', 'Licence'],
@@ -1340,6 +1367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       runtimes: {
         id: 'runtimes',
         title: '1. ローカルLLMランタイム & 推論エンジン',
+        itemHeadings: true,
         content:
           '**ランタイムはモデルの重みをメモリに読み込み、プロンプトをトークンに変換するエンジンです。** ローカルLLMスタックの最初の選択肢であり、その上のすべて（デスクトップアプリ、Web UI、コーディング統合）を制約します。Ollamaは2026年にOpenAI互換APIとワンコマンドインストールでユーザーシェアを獲得しています。llama.cppは他の多くのツールの基盤C++エンジン。vLLMはGPU上で複数ユーザーの同時リクエストを処理する場合の選択肢です。',
         columns: ['Tool', 'Link', '概要', 'ライセンス'],
@@ -1386,6 +1414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       desktopApps: {
         id: 'desktop-apps',
         title: '2. デスクトップGUIアプリ',
+        itemHeadings: true,
         content:
           '**デスクトップアプリはランタイムをチャットインターフェースとモデルブラウザでラップします。** ターミナル操作不要でダウンロード・クリック・チャットができるため、ほとんどの非技術系ユーザーの出発点です。LM Studio、Jan、GPT4Allが2026年の大半のユーザーベースを占めています。AnythingLLMはデスクトップアプリとRAG層を兼ねています。Open Interpreterはローカルモデルがコンピュータを操作できる特殊なケースです。',
         columns: ['Tool', 'Link', '概要', 'ライセンス'],
@@ -1423,6 +1452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       webUis: {
         id: 'web-uis',
         title: '3. Web UI & ブラウザフロントエンド',
+        itemHeadings: true,
         content:
           '**Web UIはセルフホスト型ChatGPTクローンです** — 同じ会話インターフェースを、自分のマシンまたはLAN上のランタイムに向けます。マルチデバイスアクセスやチームでの利用に最適です。Open WebUIが2026年のセルフホストセグメントを支配し、LibreChatがチーム機能の代替、SillyTavernが専用のロールプレイUIです。',
         columns: ['Tool', 'Link', '概要', 'ライセンス'],
@@ -1442,6 +1472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       codingAssistants: {
         id: 'coding-assistants',
         title: '4. コーディングアシスタント & IDE統合',
+        itemHeadings: true,
         content:
           '**コーディングアシスタントはOpenAI互換APIを介してローカルLLMをエディタまたはターミナルに接続します。** 選択はワークフローの好みによります：エディタ内自動補完（Continue.dev）、自律エージェント編集（Cline、OpenHands）、gitネイティブのdiff編集（Aider）。3つのパターンすべてがOpenAI Chat Completionsプロトコルに対応するランタイムで動作します。2026年最も一般的なバックエンドはOllamaです。',
         columns: ['Tool', 'Link', '概要', 'ライセンス'],
@@ -1471,6 +1502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ragSystems: {
         id: 'rag-systems',
         title: '5. RAG & ドキュメントチャットシステム',
+        itemHeadings: true,
         content:
           '**[RAG（Retrieval-Augmented Generation）](/ja/prompt-engineering/rag-explained)システムはローカルLLMをembeddingモデルとベクターストアと組み合わせ、自分のドキュメントから回答できるようにします。** ターンキーアプリ（AnythingLLM、PrivateGPT、Quivr、Khoj）とフレームワークライブラリ（LlamaIndex、Haystack、txtai）に分かれます。RAGFlowは2026年に引用精度の高いドキュメント処理で存在感を高めています。',
         columns: ['Tool', 'Link', '概要', 'ライセンス'],
@@ -1494,6 +1526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       agentFrameworks: {
         id: 'agent-frameworks',
         title: '6. エージェントフレームワーク & オーケストレーション',
+        itemHeadings: true,
         content:
           '**エージェントフレームワークはワンショットLLM呼び出しをマルチステップワークフローに変換します** — 計画・実行・観察・繰り返し。LangChainが汎用デフォルトとして残っています。CrewAIとAutoGenはロールベースのマルチエージェントセットアップに特化。LangGraphは長時間フロー全体でのステート管理が重要な場合に適しています。以下8つのフレームワークはすべてローカルOllamaバックエンドで問題なく動作します。',
         columns: ['Tool', 'Link', '概要', 'ライセンス'],
@@ -1512,6 +1545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceMultimodal: {
         id: 'voice-multimodal',
         title: '7. 音声・スピーチ & マルチモーダル',
+        itemHeadings: true,
         content:
           '**音声・マルチモーダルスタックはローカルLLMをテキスト以外に拡張します** — 音声入力（STT）、音声出力（TTS）、視覚。Whisper.cppとfaster-whisperがローカルSTT層を支配。PiperとCoquiがTTS層を共有し、XTTS v2が音声クローニングで優位。LLaVAとOllamaビジョンモデルがビジョン側を担当します。この層と小さなチャットモデルを組み合わせれば完全オフライン音声アシスタントが構築可能です。',
         columns: ['Tool', 'Link', '概要', 'ライセンス'],
@@ -1531,6 +1565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mobileEdge: {
         id: 'mobile-edge',
         title: '8. モバイル & エッジクライアント',
+        itemHeadings: true,
         content:
           '**モバイルクライアントはApple Neural Engine、Qualcomm NPU、またはCPU推論を使って量子化モデルをスマートフォン上で直接実行します。** MLC LLMプロジェクトが基盤層です。コンシューマーアプリ（PocketPal AI、Private LLM、LLM Farm、Layla）がチャットUIでラップしています。2026年のフラッグシップ機は2-4Bモデルを実用的な速度（8〜15トークン/秒）で実行します。7Bはハイエンド機でギリギリ実行可能な範囲です。',
         columns: ['Tool', 'Link', '概要', 'ライセンス'],
@@ -1551,6 +1586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specialized: {
         id: 'specialized',
         title: '9. 専門ツール & 生産性向上',
+        itemHeadings: true,
         content:
           '**専門ツールはローカルLLMを既存のアプリに組み込みます** — ノートプラットフォーム（Obsidian、Logseq、Joplin）、自律タスクエージェント（AutoGPT、BabyAGI、MetaGPT）、ロールプレイフロントエンド（Agnai、RisuAI）。汎用チャット画面ではなく、ホストアプリとランタイムがすでにある前提のワークフロー固有の統合です。',
         columns: ['Tool', 'Link', '概要', 'ライセンス'],
@@ -1754,6 +1790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       runtimes: {
         id: 'runtimes',
         title: '1. 本地LLM运行时与推理引擎',
+        itemHeadings: true,
         content:
           '**运行时是将模型权重加载到内存、将提示词转换为token的核心引擎。**它是本地LLM技术栈的第一个决策，也制约着上层所有组件——每个桌面应用、Web界面和编程助手最终都会调用某个运行时。Ollama在2026年主导用户侧份额，原因在于它提供OpenAI兼容API并支持一条命令安装；llama.cpp是大多数其他工具底层的C++引擎；vLLM是在真实GPU上为多用户提供并发服务的首选。',
         columns: ['Tool', 'Link', '描述', '许可证'],
@@ -1800,6 +1837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       desktopApps: {
         id: 'desktop-apps',
         title: '2. 桌面图形界面应用',
+        itemHeadings: true,
         content:
           '**桌面应用将运行时封装成聊天界面和模型浏览器。**它们是大多数非技术用户的起点，因为无需命令行操作——下载、点击、开始聊天。LM Studio、Jan和GPT4All在2026年占据了大部分用户群体；AnythingLLM兼具桌面应用和RAG层的双重功能；Open Interpreter是个特例，它允许本地模型直接操控用户的电脑并执行代码。',
         columns: ['Tool', 'Link', '描述', '许可证'],
@@ -1837,6 +1875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       webUis: {
         id: 'web-uis',
         title: '3. Web界面与浏览器前端',
+        itemHeadings: true,
         content:
           '**Web界面是自托管的ChatGPT替代方案——相同的对话界面，但指向运行在本地机器或局域网上的运行时。**当需要多设备访问（笔记本、手机、平板同时连接一台服务器）或团队共用时，它们是自然之选。Open WebUI在2026年主导自托管市场，LibreChat是团队功能替代方案，SillyTavern专注角色扮演场景。',
         columns: ['Tool', 'Link', '描述', '许可证'],
@@ -1856,6 +1895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       codingAssistants: {
         id: 'coding-assistants',
         title: '4. 编程助手与IDE集成',
+        itemHeadings: true,
         content:
           '**编程助手通过OpenAI兼容API将本地LLM接入编辑器或终端。**选择主要取决于工作流偏好：编辑器内自动补全（Continue.dev）、自主智能体编辑（Cline、OpenHands）或终端内git原生差异编辑（Aider）。三种模式均可与任何支持OpenAI Chat Completions协议的运行时配合使用——Ollama是2026年最常见的后端。',
         columns: ['Tool', 'Link', '描述', '许可证'],
@@ -1885,6 +1925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ragSystems: {
         id: 'rag-systems',
         title: '5. RAG与文档问答系统',
+        itemHeadings: true,
         content:
           '**[RAG（检索增强生成）](/zh/prompt-engineering/rag-explained)系统将本地LLM与嵌入模型和向量数据库结合，使模型能够基于自有文档进行问答。**主要分为两类：开箱即用的应用（AnythingLLM、PrivateGPT、Quivr、Khoj）和可二次开发的框架库（LlamaIndex、Haystack、txtai）。RAGFlow在2026年凭借文档级引用精准检索能力取得了显著的份额增长。',
         columns: ['Tool', 'Link', '描述', '许可证'],
@@ -1908,6 +1949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       agentFrameworks: {
         id: 'agent-frameworks',
         title: '6. 智能体框架与编排工具',
+        itemHeadings: true,
         content:
           '**智能体框架将单次LLM调用转变为多步骤工作流——计划、行动、观察、循环。**LangChain仍是通用默认选择；CrewAI和AutoGen专注于基于角色的多智能体场景；LangGraph在长时运行流程中的状态管理方面表现更优。以下所有八个框架均可与本地Ollama后端无缝配合。',
         columns: ['Tool', 'Link', '描述', '许可证'],
@@ -1926,6 +1968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceMultimodal: {
         id: 'voice-multimodal',
         title: '7. 语音、语音合成与多模态',
+        itemHeadings: true,
         content:
           '**语音和多模态技术栈将本地LLM的能力从文本扩展至语音输入（STT）、语音输出（TTS）和视觉理解。**Whisper.cpp和faster-whisper占据本地STT层；Piper和Coqui共享TTS层，XTTS v2主导语音克隆；LLaVA和Ollama视觉模型覆盖视觉端。基于这一层加上一个小型聊天模型，即可构建完全离线的语音助手。',
         columns: ['Tool', 'Link', '描述', '许可证'],
@@ -1945,6 +1988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mobileEdge: {
         id: 'mobile-edge',
         title: '8. 移动端与边缘客户端',
+        itemHeadings: true,
         content:
           '**移动端客户端使用Apple Neural Engine、高通NPU或纯CPU推理直接在手机上运行量化模型。**MLC LLM是基础层；消费级应用（PocketPal AI、Private LLM、LLM Farm、Layla）在其上封装了聊天界面。2026年旗舰手机以实用速度（8-15 tokens/秒）运行2-4B模型；7B模型对顶级硬件来说处于可行性边缘。',
         columns: ['Tool', 'Link', '描述', '许可证'],
@@ -1965,6 +2009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specialized: {
         id: 'specialized',
         title: '9. 专业化与生产力工具',
+        itemHeadings: true,
         content:
           '**专业化工具将本地LLM嵌入您已在使用的应用**——笔记平台（Obsidian、Logseq、Joplin）、自主任务智能体（AutoGPT、BabyAGI、MetaGPT）以及角色扮演前端（Agnai、RisuAI）。这些不是通用聊天界面，而是面向特定工作流的集成方案，前提是您已有宿主应用和运行时。',
         columns: ['Tool', 'Link', '描述', '许可证'],
@@ -2168,6 +2213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       runtimes: {
         id: 'runtimes',
         title: '1. Runtimes y motores de inferencia LLM local',
+        itemHeadings: true,
         content:
           '**Un runtime es el motor que carga los pesos del modelo en memoria y convierte prompts en tokens.** Es la primera decisión en un stack LLM local y la que condiciona todo lo que está por encima — cada app de escritorio, interfaz web y asistente de código llama en última instancia a un runtime. Ollama domina la cuota de mercado orientada al usuario en 2026 porque incluye una API compatible con OpenAI y una instalación de un solo comando; llama.cpp es el motor C++ que subyace a la mayoría de las otras herramientas; vLLM es la opción adecuada cuando necesitas atender usuarios concurrentes en una GPU real.',
         columns: ['Tool', 'Link', 'Descripción', 'Licencia'],
@@ -2214,6 +2260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       desktopApps: {
         id: 'desktop-apps',
         title: '2. Aplicaciones de escritorio (GUI)',
+        itemHeadings: true,
         content:
           '**Las apps de escritorio envuelven un runtime en una interfaz de chat y un explorador de modelos.** Son donde la mayoría de los usuarios no técnicos comienzan porque no hay paso de terminal — descargar, hacer clic, chatear. LM Studio, Jan y GPT4All tienen la mayor parte de la base de usuarios en 2026; AnythingLLM también funciona como app de escritorio y capa RAG; Open Interpreter es el caso especial que permite a un modelo local controlar tu computadora.',
         columns: ['Tool', 'Link', 'Descripción', 'Licencia'],
@@ -2251,6 +2298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       webUis: {
         id: 'web-uis',
         title: '3. Interfaces web y frontends de navegador',
+        itemHeadings: true,
         content:
           '**Las interfaces web son clones de ChatGPT autoalojados — la misma superficie conversacional, pero apuntando a un runtime que corre en tu propia máquina o LAN.** Son la opción natural cuando quieres acceso multidispositivo (laptop, teléfono, tablet apuntando a un servidor) o uso en equipo. Open WebUI domina el segmento de self-hosting en 2026, con LibreChat como alternativa de funciones de equipo y SillyTavern como la interfaz dedicada al juego de rol.',
         columns: ['Tool', 'Link', 'Descripción', 'Licencia'],
@@ -2270,6 +2318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       codingAssistants: {
         id: 'coding-assistants',
         title: '4. Asistentes de código e integraciones IDE',
+        itemHeadings: true,
         content:
           '**Los asistentes de código conectan un LLM local a tu editor o terminal a través de APIs compatibles con OpenAI.** La elección depende principalmente del flujo de trabajo: autocompletado en el editor (Continue.dev), ediciones de agente autónomo (Cline, OpenHands) o ediciones diff nativas de git en el terminal (Aider). Los tres patrones funcionan con cualquier runtime que soporte el protocolo OpenAI Chat Completions — Ollama es el backend más común en 2026.',
         columns: ['Tool', 'Link', 'Descripción', 'Licencia'],
@@ -2299,6 +2348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ragSystems: {
         id: 'rag-systems',
         title: '5. Sistemas RAG y chat de documentos',
+        itemHeadings: true,
         content:
           '**Los sistemas [RAG (Retrieval-Augmented Generation)](/es/prompt-engineering/rag-explained) combinan un LLM local con un modelo de embeddings y un almacén vectorial para que el modelo pueda responder desde tus propios documentos.** La división es entre apps llave en mano (AnythingLLM, PrivateGPT, Quivr, Khoj) que "simplemente funcionan" y bibliotecas de framework (LlamaIndex, Haystack, txtai) sobre las que puedes construir. RAGFlow ha ganado cuota en 2026 específicamente para documentos que necesitan extracción de citas de calidad.',
         columns: ['Tool', 'Link', 'Descripción', 'Licencia'],
@@ -2322,6 +2372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       agentFrameworks: {
         id: 'agent-frameworks',
         title: '6. Frameworks de agentes y orquestación',
+        itemHeadings: true,
         content:
           '**Los frameworks de agentes convierten las llamadas de un solo paso a un LLM en flujos de trabajo de varios pasos — planificar, actuar, observar, repetir.** LangChain sigue siendo el estándar de propósito general; CrewAI y AutoGen se especializan en configuraciones multiagente basadas en roles; LangGraph es la opción correcta cuando la gestión de estado importa a lo largo de flujos de larga duración. Los ocho frameworks a continuación funcionan perfectamente con un backend local de Ollama.',
         columns: ['Tool', 'Link', 'Descripción', 'Licencia'],
@@ -2340,6 +2391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceMultimodal: {
         id: 'voice-multimodal',
         title: '7. Voz, habla y multimodal',
+        itemHeadings: true,
         content:
           '**Los stacks de voz y multimodal extienden un LLM local más allá del texto — habla de entrada (STT), habla de salida (TTS) y visión.** Whisper.cpp y faster-whisper son los dueños de la capa STT local; Piper y Coqui comparten la capa TTS con XTTS v2 dominando la clonación de voz; LLaVA y los modelos de visión de Ollama cubren el lado visual. Un asistente de voz completamente offline es construible desde esta capa más un pequeño modelo de chat.',
         columns: ['Tool', 'Link', 'Descripción', 'Licencia'],
@@ -2359,6 +2411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mobileEdge: {
         id: 'mobile-edge',
         title: '8. Clientes móviles y edge',
+        itemHeadings: true,
         content:
           '**Los clientes móviles ejecutan un modelo cuantizado directamente en el teléfono usando Apple Neural Engine, Qualcomm NPU o inferencia pura de CPU.** El proyecto MLC LLM es la capa fundamental; las apps de consumo (PocketPal AI, Private LLM, LLM Farm, Layla) lo envuelven con una interfaz de chat. Los teléfonos de gama alta en 2026 ejecutan modelos 2-4B a velocidades útiles (8-15 tokens/seg); 7B está en el límite de lo factible para el hardware de más alto nivel.',
         columns: ['Tool', 'Link', 'Descripción', 'Licencia'],
@@ -2379,6 +2432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specialized: {
         id: 'specialized',
         title: '9. Herramientas especializadas y de productividad',
+        itemHeadings: true,
         content:
           '**Las herramientas especializadas integran LLMs locales en apps que ya usas** — plataformas de notas (Obsidian, Logseq, Joplin), agentes de tareas autónomos (AutoGPT, BabyAGI, MetaGPT) y frontends de juego de rol (Agnai, RisuAI). No son interfaces de chat genéricas; son integraciones específicas de flujo de trabajo que asumen que ya tienes una app host y un runtime.',
         columns: ['Tool', 'Link', 'Descripción', 'Licencia'],
@@ -2596,6 +2650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       runtimes: {
         id: 'runtimes',
         title: '1. Runtimes e motores de inferência LLM local',
+        itemHeadings: true,
         content:
           '**Um runtime é o motor que carrega os pesos do modelo na memória e converte prompts em tokens.** É a primeira decisão em um stack LLM local e a que condiciona tudo que está acima — cada app de desktop, interface web e assistente de código chama em última instância um runtime. O Ollama domina a participação de mercado orientada ao usuário em 2026 porque inclui uma API compatível com OpenAI e uma instalação de um único comando; o llama.cpp é o motor C++ que sustenta a maioria das outras ferramentas; o vLLM é a opção adequada quando você precisa atender usuários concorrentes em uma GPU real.',
         columns: ['Ferramenta', 'Link', 'Descrição', 'Licença'],
@@ -2642,6 +2697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       desktopApps: {
         id: 'desktop-apps',
         title: '2. Aplicativos de desktop (GUI)',
+        itemHeadings: true,
         content:
           '**Os apps de desktop envolvem um runtime em uma interface de chat e um explorador de modelos.** São onde a maioria dos usuários não técnicos começa porque não há etapa de terminal — baixar, clicar, conversar. LM Studio, Jan e GPT4All têm a maior parte da base de usuários em 2026.',
         columns: ['Ferramenta', 'Link', 'Descrição', 'Licença'],
@@ -2679,6 +2735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       webUis: {
         id: 'web-uis',
         title: '3. Interfaces web e frontends de navegador',
+        itemHeadings: true,
         content:
           '**As interfaces web são clones do ChatGPT auto-hospedados — a mesma superfície conversacional, mas apontando para um runtime que roda na sua própria máquina ou LAN.** O Open WebUI domina o segmento de self-hosting em 2026, com LibreChat como alternativa de recursos de equipe e SillyTavern como a interface dedicada ao roleplay.',
         columns: ['Ferramenta', 'Link', 'Descrição', 'Licença'],
@@ -2698,6 +2755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       codingAssistants: {
         id: 'coding-assistants',
         title: '4. Assistentes de código e integrações IDE',
+        itemHeadings: true,
         content:
           '**Os assistentes de código conectam um LLM local ao seu editor ou terminal via APIs compatíveis com OpenAI.** A escolha depende principalmente do fluxo de trabalho: autocompletar no editor (Continue.dev), edições de agente autônomo (Cline, OpenHands) ou edições diff nativas de git no terminal (Aider).',
         columns: ['Ferramenta', 'Link', 'Descrição', 'Licença'],
@@ -2727,6 +2785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ragSystems: {
         id: 'rag-systems',
         title: '5. Sistemas RAG e chat de documentos',
+        itemHeadings: true,
         content:
           '**Os sistemas RAG (Retrieval-Augmented Generation) combinam um LLM local com um modelo de embeddings e um armazenamento vetorial para que o modelo possa responder a partir dos seus próprios documentos.** A divisão é entre apps plug-and-play (AnythingLLM, PrivateGPT, Quivr, Khoj) que "simplesmente funcionam" e bibliotecas de framework (LlamaIndex, Haystack, txtai) sobre as quais você pode construir.',
         columns: ['Ferramenta', 'Link', 'Descrição', 'Licença'],
@@ -2750,6 +2809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       agentFrameworks: {
         id: 'agent-frameworks',
         title: '6. Frameworks de agentes e orquestração',
+        itemHeadings: true,
         content:
           '**Os frameworks de agentes convertem as chamadas de uma única etapa a um LLM em fluxos de trabalho de múltiplas etapas — planejar, agir, observar, repetir.** O LangChain continua sendo o padrão de propósito geral; CrewAI e AutoGen se especializam em configurações multiagente baseadas em funções; LangGraph é a opção correta quando o gerenciamento de estado importa ao longo de fluxos de longa duração.',
         columns: ['Ferramenta', 'Link', 'Descrição', 'Licença'],
@@ -2768,6 +2828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceMultimodal: {
         id: 'voice-multimodal',
         title: '7. Voz, fala e multimodal',
+        itemHeadings: true,
         content:
           '**Os stacks de voz e multimodal estendem um LLM local além do texto — fala de entrada (STT), fala de saída (TTS) e visão.** Whisper.cpp e faster-whisper são os proprietários da camada STT local; Piper e Coqui compartilham a camada TTS com XTTS v2 dominando a clonagem de voz; LLaVA e os modelos de visão do Ollama cobrem o lado visual.',
         columns: ['Ferramenta', 'Link', 'Descrição', 'Licença'],
@@ -2787,6 +2848,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mobileEdge: {
         id: 'mobile-edge',
         title: '8. Clientes móveis e edge',
+        itemHeadings: true,
         content:
           '**Os clientes móveis executam um modelo quantizado diretamente no telefone usando Apple Neural Engine, Qualcomm NPU ou inferência pura de CPU.** O projeto MLC LLM é a camada fundamental; os apps de consumo (PocketPal AI, Private LLM, LLM Farm, Layla) o envolvem com uma interface de chat. Telefones de alta gama em 2026 executam modelos 2–4B em velocidades úteis (8–15 tokens/s); 7B está no limite do factível para o hardware de mais alto nível.',
         columns: ['Ferramenta', 'Link', 'Descrição', 'Licença'],
@@ -2807,6 +2869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specialized: {
         id: 'specialized',
         title: '9. Ferramentas especializadas e de produtividade',
+        itemHeadings: true,
         content:
           '**As ferramentas especializadas integram LLMs locais em apps que você já usa** — plataformas de anotação (Obsidian, Logseq, Joplin), agentes de tarefas autônomos (AutoGPT, BabyAGI, MetaGPT) e frontends de roleplay (Agnai, RisuAI).',
         columns: ['Ferramenta', 'Link', 'Descrição', 'Licença'],
@@ -3023,6 +3086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       runtimes: {
         id: 'runtimes',
         title: '1. رuntimes ومحركات استدلال النماذج اللغوية المحلية',
+        itemHeadings: true,
         content:
           '**الـruntime هو المحرك الذي يحمِّل أوزان النموذج في الذاكرة ويحوِّل الأوامر إلى رموز.** هو القرار الأول في stack النماذج اللغوية المحلية والذي يُحدِّد كل ما فوقه — كل تطبيق سطح مكتب وواجهة ويب ومساعد كود يستدعي في النهاية runtime. يسيطر Ollama على الحصة الموجهة للمستخدمين في 2026 لأنه يتضمن API متوافقة مع OpenAI وتثبيتاً بأمر واحد؛ llama.cpp هو محرك C++ الأساسي الذي يقوم عليه معظم الأدوات الأخرى؛ vLLM هو الخيار المناسب حين تحتاج خدمة مستخدمين متزامنين على GPU حقيقي.',
         columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص'],
@@ -3069,6 +3133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       desktopApps: {
         id: 'desktop-apps',
         title: '2. تطبيقات سطح المكتب (واجهة رسومية)',
+        itemHeadings: true,
         content:
           '**تُغلِّف تطبيقات سطح المكتب runtime في واجهة دردشة ومستعرض نماذج.** هي حيث يبدأ معظم المستخدمين غير التقنيين لأنه لا يوجد خطوة طرفية — تنزيل ونقر ودردشة. LM Studio وJan وGPT4All لديهم معظم قاعدة المستخدمين في 2026؛ AnythingLLM يعمل أيضاً كتطبيق سطح مكتب وطبقة RAG.',
         columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص'],
@@ -3106,6 +3171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       webUis: {
         id: 'web-uis',
         title: '3. واجهات الويب وواجهات المتصفح',
+        itemHeadings: true,
         content:
           '**واجهات الويب هي استنساخات ChatGPT مستضافة ذاتياً — نفس السطح المحادثاتي، لكنها موجَّهة نحو runtime يعمل على جهازك أو شبكتك المحلية.** هي الخيار الطبيعي عند الرغبة في وصول متعدد الأجهزة أو الاستخدام الجماعي. Open WebUI يسيطر على قطاع الاستضافة الذاتية في 2026، مع LibreChat كبديل لميزات الفريق وSillyTavern كواجهة مخصصة للعب الأدوار.',
         columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص'],
@@ -3125,6 +3191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       codingAssistants: {
         id: 'coding-assistants',
         title: '4. مساعدو الكود وتكاملات IDE',
+        itemHeadings: true,
         content:
           '**تربط مساعدو الكود نموذجاً لغوياً محلياً بمحررك أو طرفيتك عبر APIs متوافقة مع OpenAI.** يعتمد الاختيار أساساً على سير العمل: الإكمال التلقائي في المحرر (Continue.dev)، أو تعديلات العميل المستقل (Cline وOpenHands)، أو تعديلات diff أصلية لـgit في الطرفية (Aider). تعمل الأنماط الثلاثة مع أي runtime يدعم بروتوكول OpenAI Chat Completions — Ollama هو الـbackend الأكثر شيوعاً في 2026.',
         columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص'],
@@ -3154,6 +3221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ragSystems: {
         id: 'rag-systems',
         title: '5. أنظمة RAG ودردشة المستندات',
+        itemHeadings: true,
         content:
           '**تجمع أنظمة [RAG (التوليد المعزَّز بالاسترداد)](/ar/prompt-engineering/rag-explained) نموذجاً لغوياً محلياً مع نموذج embeddings ومخزن متجهات لكي يتمكن النموذج من الإجابة من مستنداتك.** التقسيم هو بين التطبيقات الجاهزة (AnythingLLM وPrivateGPT وQuivr وKhoj) التي "تعمل ببساطة" ومكتبات الأطر (LlamaIndex وHaystack وtxtai) التي يمكنك البناء عليها.',
         columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص'],
@@ -3177,6 +3245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       agentFrameworks: {
         id: 'agent-frameworks',
         title: '6. أطر العملاء الذكيين والتنسيق',
+        itemHeadings: true,
         content:
           '**تحوِّل أطر العملاء الذكيين استدعاءات الخطوة الواحدة للنموذج اللغوي إلى سير عمل متعدد الخطوات — تخطيط، تنفيذ، ملاحظة، تكرار.** LangChain لا يزال المعيار للأغراض العامة؛ CrewAI وAutoGen يتخصصان في الإعدادات متعددة العملاء القائمة على الأدوار؛ LangGraph هو الخيار الصحيح حين تهم إدارة الحالة عبر التدفقات الطويلة.',
         columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص'],
@@ -3195,6 +3264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceMultimodal: {
         id: 'voice-multimodal',
         title: '7. الصوت والكلام والوسائط المتعددة',
+        itemHeadings: true,
         content:
           '**تمتد stacks الصوت والوسائط المتعددة بنموذج لغوي محلي إلى ما هو أبعد من النص — كلام الإدخال (STT) وكلام الإخراج (TTS) والرؤية.** Whisper.cpp وfaster-whisper يمتلكان طبقة STT المحلية؛ Piper وCoqui يتشاركان طبقة TTS مع XTTS v2 يهيمن على استنساخ الصوت؛ LLaVA ونماذج رؤية Ollama تغطي الجانب البصري.',
         columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص'],
@@ -3214,6 +3284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mobileEdge: {
         id: 'mobile-edge',
         title: '8. العملاء المحمولة والحافة',
+        itemHeadings: true,
         content:
           '**تُشغِّل العملاء المحمولة نموذجاً مُكمَّماً مباشرة على الهاتف باستخدام Apple Neural Engine أو Qualcomm NPU أو استدلال CPU خالص.** مشروع MLC LLM هو الطبقة الأساسية؛ تطبيقات المستهلكين (PocketPal AI وPrivate LLM وLLM Farm وLayla) تُغلِّفه بواجهة دردشة. الهواتف الراقية في 2026 تشغِّل نماذج 2-4B بسرعات مفيدة (8-15 رمز/ثانية)؛ 7B في حدود الممكن لأعلى الأجهزة.',
         columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص'],
@@ -3234,6 +3305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specialized: {
         id: 'specialized',
         title: '9. الأدوات المتخصصة والإنتاجية',
+        itemHeadings: true,
         content:
           '**تدمج الأدوات المتخصصة النماذج اللغوية المحلية في التطبيقات التي تستخدمها فعلاً** — منصات الملاحظات (Obsidian وLogseq وJoplin)، والعملاء الذكيون المستقلون للمهام (AutoGPT وBabyAGI وMetaGPT)، وواجهات لعب الأدوار (Agnai وRisuAI). إنها ليست واجهات دردشة عامة؛ بل تكاملات سير عمل محددة تفترض أن لديك تطبيق مضيف وruntime.',
         columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص'],
@@ -3455,6 +3527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       runtimes: {
         id: 'runtimes',
         title: '1. 로컬 LLM 런타임 및 추론 엔진',
+        itemHeadings: true,
         content:
           '**런타임은 모델 가중치를 메모리에 로드하고 프롬프트를 토큰으로 변환하는 엔진입니다.** 로컬 LLM 스택에서 첫 번째 결정이며 그 위의 모든 것을 결정합니다 — 데스크톱 앱, 웹 UI, 코딩 어시스턴트는 모두 결국 런타임을 호출합니다. Ollama는 2026년 사용자 지향 시장 점유율을 지배합니다. OpenAI 호환 API와 단일 명령 설치를 제공하기 때문입니다. llama.cpp는 대부분의 다른 도구 기반에 있는 C++ 엔진이며, vLLM은 실제 GPU에서 동시 사용자를 서비스해야 할 때 적합한 선택입니다.',
         columns: ['도구', '링크', '설명', '라이선스'],
@@ -3501,6 +3574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       desktopApps: {
         id: 'desktop-apps',
         title: '2. 데스크톱 앱 (GUI)',
+        itemHeadings: true,
         content:
           '**데스크톱 앱은 런타임을 채팅 인터페이스와 모델 탐색기로 감쌉니다.** 터미널 단계가 없기 때문에 대부분의 비기술적 사용자가 시작하는 곳입니다 — 다운로드, 클릭, 채팅. LM Studio, Jan, GPT4All이 2026년 사용자 기반의 대부분을 차지합니다. AnythingLLM은 데스크톱 앱이자 RAG 레이어로도 기능하며, Open Interpreter는 로컬 모델이 컴퓨터를 제어하도록 허용하는 특수한 경우입니다.',
         columns: ['도구', '링크', '설명', '라이선스'],
@@ -3538,6 +3612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       webUis: {
         id: 'web-uis',
         title: '3. 웹 UI 및 브라우저 프런트엔드',
+        itemHeadings: true,
         content:
           '**웹 UI는 셀프호스팅 ChatGPT 클론입니다 — 동일한 대화 인터페이스지만, 직접 소유한 머신이나 LAN에서 실행되는 런타임을 가리킵니다.** 랩톱, 폰, 태블릿이 서버를 가리키는 멀티디바이스 접근이나 팀 사용에 자연스러운 선택입니다. Open WebUI는 2026년 셀프호스팅 세그먼트를 지배하며, LibreChat은 팀 기능 대안, SillyTavern은 전용 롤플레이 인터페이스입니다.',
         columns: ['도구', '링크', '설명', '라이선스'],
@@ -3557,6 +3632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       codingAssistants: {
         id: 'coding-assistants',
         title: '4. 코딩 어시스턴트 및 IDE 연동',
+        itemHeadings: true,
         content:
           '**코딩 어시스턴트는 OpenAI 호환 API를 통해 로컬 LLM을 편집기나 터미널에 연결합니다.** 선택은 주로 워크플로에 따라 달라집니다: 편집기 내 자동 완성(Continue.dev), 자율 에이전트 편집(Cline, OpenHands), 또는 터미널에서 git 네이티브 diff 편집(Aider). 세 패턴 모두 OpenAI Chat Completions 프로토콜을 지원하는 런타임에서 작동합니다 — 2026년에는 Ollama가 가장 일반적인 백엔드입니다.',
         columns: ['도구', '링크', '설명', '라이선스'],
@@ -3586,6 +3662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ragSystems: {
         id: 'rag-systems',
         title: '5. RAG 시스템 및 문서 채팅',
+        itemHeadings: true,
         content:
           '**[RAG (Retrieval-Augmented Generation)](/ko/prompt-engineering/rag-explained) 시스템은 로컬 LLM을 임베딩 모델 및 벡터 저장소와 결합하여 모델이 사용자 자신의 문서에서 답변할 수 있게 합니다.** "그냥 작동하는" 턴키 앱(AnythingLLM, PrivateGPT, Quivr, Khoj)과 구축의 기반이 되는 프레임워크 라이브러리(LlamaIndex, Haystack, txtai)로 나뉩니다. RAGFlow는 특히 고품질 인용 추출이 필요한 문서에 대해 2026년에 점유율을 늘리고 있습니다.',
         columns: ['도구', '링크', '설명', '라이선스'],
@@ -3609,6 +3686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       agentFrameworks: {
         id: 'agent-frameworks',
         title: '6. 에이전트 프레임워크 및 오케스트레이션',
+        itemHeadings: true,
         content:
           '**에이전트 프레임워크는 LLM에 대한 단일 단계 호출을 멀티스텝 워크플로(계획, 행동, 관찰, 반복)로 전환합니다.** LangChain은 여전히 범용 표준입니다. CrewAI와 AutoGen은 역할 기반 멀티에이전트 설정에 특화되어 있습니다. LangGraph는 장기 실행 흐름에서 상태 관리가 중요할 때 올바른 선택입니다. 아래 8개 프레임워크 모두 Ollama 로컬 백엔드와 원활하게 작동합니다.',
         columns: ['도구', '링크', '설명', '라이선스'],
@@ -3627,6 +3705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       voiceMultimodal: {
         id: 'voice-multimodal',
         title: '7. 음성, 스피치, 멀티모달',
+        itemHeadings: true,
         content:
           '**음성 및 멀티모달 스택은 로컬 LLM을 텍스트 너머로 확장합니다 — 음성 입력(STT), 음성 출력(TTS), 비전.** Whisper.cpp와 faster-whisper는 로컬 STT 레이어를 소유합니다. Piper와 Coqui는 XTTS v2가 음성 복제를 지배하며 TTS 레이어를 공유합니다. LLaVA와 Ollama 비전 모델은 시각 측면을 담당합니다. 완전 오프라인 음성 어시스턴트는 이 레이어와 소형 채팅 모델로 구축할 수 있습니다.',
         columns: ['도구', '링크', '설명', '라이선스'],
@@ -3646,6 +3725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mobileEdge: {
         id: 'mobile-edge',
         title: '8. 모바일 및 엣지 클라이언트',
+        itemHeadings: true,
         content:
           '**모바일 클라이언트는 Apple Neural Engine, Qualcomm NPU 또는 순수 CPU 추론을 사용하여 양자화된 모델을 스마트폰에서 직접 실행합니다.** MLC LLM 프로젝트가 기반 레이어이며, 소비자 앱(PocketPal AI, Private LLM, LLM Farm, Layla)이 채팅 인터페이스로 감쌉니다. 2026년 플래그십 폰은 실용적인 속도(8-15 토큰/초)로 2-4B 모델을 실행합니다. 7B는 최고급 하드웨어에서 가능합니다.',
         columns: ['도구', '링크', '설명', '라이선스'],
@@ -3666,6 +3746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       specialized: {
         id: 'specialized',
         title: '9. 전문 및 생산성 도구',
+        itemHeadings: true,
         content:
           '**전문 도구는 로컬 LLM을 이미 사용 중인 앱에 통합합니다** — 노트 플랫폼(Obsidian, Logseq, Joplin), 자율 작업 에이전트(AutoGPT, BabyAGI, MetaGPT), 롤플레이 프런트엔드(Agnai, RisuAI). 범용 채팅 인터페이스가 아닙니다. 호스트 앱과 런타임을 이미 보유하고 있다고 가정하는 특정 워크플로 통합입니다.',
         columns: ['도구', '링크', '설명', '라이선스'],

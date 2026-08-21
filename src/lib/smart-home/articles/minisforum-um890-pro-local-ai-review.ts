@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Minisforum UM890 Pro Review (2026): Local AI Home Server',
-    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-en.png',
+    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-en.webp',
     seoTitle: 'Minisforum UM890 Pro Review 2026 — Local AI Server',
     intro:
       'The Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, up to 96 GB DDR5) is the versatile step-up mini PC for a local-AI smart home. Priced from about $439 barebones to $649 with 32 GB (July 2026, volatile), it matches a Beelink SER8 on the local model but adds dual 2.5GbE, Wi-Fi 6E, and an OCuLink port for an external GPU. This review verifies its specs, sets honest expectations for local-LLM speed, and explains who should pay the premium over a SER8.',
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Minisforum UM890 Pro Test (2026): Lokaler-KI-Heimserver',
-    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-de.png',
+    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-de.webp',
     seoTitle: 'Minisforum UM890 Pro Test 2026 — Lokaler KI-Server',
     intro:
       'Der Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, bis zu 96 GB DDR5) ist der vielseitige Aufstiegs-Mini-PC für ein Smart Home mit lokaler KI. Ab ca. 489 € als Barebone bis ca. 649 € mit 32 GB (Juli 2026, schwankend) erreicht er beim lokalen Modell das Niveau eines Beelink SER8, bietet aber zusätzlich zwei 2,5GbE-Ports, Wi-Fi 6E und einen OCuLink-Anschluss für eine externe GPU. Dieser Test prüft die Spezifikationen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und erklärt, wer den Aufpreis gegenüber einem SER8 zahlen sollte.',
@@ -486,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Test Minisforum UM890 Pro (2026) : serveur IA local',
-    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-fr.png',
+    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-fr.webp',
     seoTitle: 'Test Minisforum UM890 Pro 2026 — serveur IA local',
     intro:
       'Le Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, jusqu\'à 96 GB DDR5) est le mini-PC polyvalent de montée en gamme pour une maison connectée à IA locale. À partir d\'environ 489 € en barebone jusqu\'à 649 € avec 32 GB (juillet 2026, variable), il égale un Beelink SER8 sur le modèle local mais ajoute deux ports 2.5GbE, le Wi-Fi 6E et un port OCuLink pour un GPU externe. Ce test vérifie ses caractéristiques, pose des attentes honnêtes sur la vitesse des LLM locaux et explique qui devrait payer le surcoût face à un SER8.',
@@ -723,7 +723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Análisis Minisforum UM890 Pro (2026): servidor de IA local',
-    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-es.png',
+    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-es.webp',
     seoTitle: 'Análisis Minisforum UM890 Pro 2026 — servidor de IA',
     intro:
       'El Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, hasta 96 GB DDR5) es el mini PC versátil de gama superior para un hogar inteligente con IA local. Desde unos €489 en versión barebones hasta €649 con 32 GB (julio de 2026, variable), iguala a un Beelink SER8 en el modelo local pero añade dos puertos 2.5GbE, Wi-Fi 6E y un puerto OCuLink para una GPU externa. Este análisis verifica sus especificaciones, fija expectativas honestas sobre la velocidad del LLM local y explica quién debería pagar el sobrecoste frente a un SER8.',
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Minisforum UM890 Pro レビュー（2026）: ローカルAIホームサーバー',
-    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-ja.png',
+    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-ja.webp',
     seoTitle: 'Minisforum UM890 Pro レビュー2026 — ローカルAIサーバー',
     intro:
       'Minisforum UM890 Pro（AMD Ryzen 9 8945HS、Radeon 780M、最大96 GB DDR5）は、ローカルAIスマートホーム向けの多用途なワンランク上のミニPCです。ベアボーンで約¥69,800、32GB版で約¥94,800（2026年7月時点、変動あり）で、ローカルモデルの性能はBeelink SER8と同等ながら、2基の2.5GbE、Wi-Fi 6E、外付けGPU用のOCuLinkポートを追加します。このレビューでは仕様を検証し、ローカルLLMの速度について現実的な期待値を示し、SER8より高い価格を払う価値がある人を説明します。',
@@ -1197,7 +1197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Minisforum UM890 Pro 评测（2026）：本地 AI 家庭服务器',
-    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-zh.png',
+    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-zh.webp',
     seoTitle: 'Minisforum UM890 Pro 评测 2026 — 本地 AI 服务器',
     intro:
       'Minisforum UM890 Pro（AMD Ryzen 9 8945HS、Radeon 780M、最高 96 GB DDR5）是本地 AI 智能家居中多用途的进阶迷你主机。准系统约 $439，32 GB 版约 $649（2026 年 7 月，价格波动），本地模型性能与 Beelink SER8 相当，但增加了双 2.5GbE、Wi-Fi 6E 以及用于外接 GPU 的 OCuLink 接口。本评测核实其规格，对本地 LLM 速度给出务实的预期，并说明谁值得为它比 SER8 多付这笔溢价。',
@@ -1434,7 +1434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Minisforum UM890 Pro 리뷰(2026): 로컬 AI 홈 서버',
-    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-ko.png',
+    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-ko.webp',
     seoTitle: 'Minisforum UM890 Pro 리뷰 2026 — 로컬 AI 서버',
     intro:
       'Minisforum UM890 Pro(AMD Ryzen 9 8945HS, Radeon 780M, 최대 96 GB DDR5)는 로컬 AI 스마트홈을 위한 다재다능한 상위 단계 미니 PC입니다. 베어본 약 $439에서 32 GB 구성 약 $649까지(2026년 7월 기준, 가격 변동)이며, 로컬 모델 성능은 Beelink SER8과 대등하지만 듀얼 2.5GbE, Wi-Fi 6E, 외장 GPU용 OCuLink 포트를 더합니다. 이 리뷰는 사양을 검증하고 로컬 LLM 속도에 대한 현실적인 기대치를 제시하며, SER8보다 더 지불할 가치가 있는 사용자를 설명합니다.',
@@ -1671,7 +1671,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Análise Minisforum UM890 Pro (2026): servidor de IA local',
-    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-pt.png',
+    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-pt.webp',
     seoTitle: 'Análise Minisforum UM890 Pro 2026 — servidor de IA',
     intro:
       'O Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, até 96 GB DDR5) é o mini PC versátil de nível superior para uma casa inteligente com IA local. No exterior custa de cerca de $439 na versão barebone a $649 com 32 GB (julho de 2026, volátil); no Brasil, os preços variam bastante por causa dos impostos de importação (indicativamente, a partir de cerca de R$ 3.900 na versão barebone). Ele iguala um Beelink SER8 no modelo local, mas adiciona duas portas 2.5GbE, Wi-Fi 6E e uma porta OCuLink para uma GPU externa. Esta análise verifica as especificações, define expectativas honestas sobre a velocidade do LLM local e explica quem deve pagar a diferença em relação a um SER8.',
@@ -1908,7 +1908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'مراجعة Minisforum UM890 Pro (2026): خادم منزلي بذكاء اصطناعي محلي',
-    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-ar.png',
+    heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-ar.webp',
     seoTitle: 'مراجعة Minisforum UM890 Pro 2026 — خادم ذكاء اصطناعي',
     intro:
       'جهاز Minisforum UM890 Pro (بمعالج AMD Ryzen 9 8945HS، وRadeon 780M، وحتى 96 GB DDR5) هو حاسوب mini PC متعدد الاستخدامات من الفئة الأعلى لمنزل ذكي يعتمد الذكاء الاصطناعي المحلي. بسعر يبدأ من نحو $439 بنسخة barebones وحتى $649 مع 32 GB (يوليو 2026، متقلب)، يوازي Beelink SER8 في النموذج المحلي لكنه يضيف منفذَي 2.5GbE، وWi-Fi 6E، ومنفذ OCuLink لبطاقة رسوميات خارجية. تتحقق هذه المراجعة من مواصفاته، وتضع توقعات صادقة لسرعة الـ LLM المحلي، وتوضح مَن ينبغي أن يدفع الفارق مقابل SER8.',

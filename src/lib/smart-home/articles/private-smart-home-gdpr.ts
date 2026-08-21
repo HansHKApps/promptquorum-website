@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/private-smart-home-gdpr-overview-hero-en.png',
+    heroImage: '/images/private-smart-home-gdpr-overview-hero-en.webp',
     title: 'Building a GDPR-Friendly Private Smart Home (EU, 2026)',
     seoTitle: 'GDPR-Friendly Private Smart Home (EU 2026)',
     intro:
@@ -185,7 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/private-smart-home-gdpr-overview-hero-ar.png',
+    heroImage: '/images/private-smart-home-gdpr-overview-hero-ar.webp',
     title: 'بناء منزل ذكي خاص ومتوافق مع اللائحة الأوروبية لحماية البيانات ⁨GDPR⁩ (الاتحاد الأوروبي، ⁨2026⁩)',
     seoTitle: 'منزل ذكي خاص متوافق مع ⁨GDPR⁩ (الاتحاد الأوروبي ⁨2026⁩)',
     intro:
@@ -362,7 +362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/private-smart-home-gdpr-overview-hero-de.png',
+    heroImage: '/images/private-smart-home-gdpr-overview-hero-de.webp',
     title: 'Ein DSGVO-freundliches privates Smart Home bauen (EU, 2026)',
     seoTitle: 'DSGVO-freundliches privates Smart Home (EU 2026)',
     intro:
@@ -543,7 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/private-smart-home-gdpr-overview-hero-es.png',
+    heroImage: '/images/private-smart-home-gdpr-overview-hero-es.webp',
     title: 'Construir un Smart Home Privado Compatible con el RGPD (UE, 2026)',
     seoTitle: 'Smart Home Privado Compatible con el RGPD (UE 2026)',
     intro:
@@ -720,7 +720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/private-smart-home-gdpr-overview-hero-ko.png',
+    heroImage: '/images/private-smart-home-gdpr-overview-hero-ko.webp',
     title: '개인정보 보호법(PIPA) 준수 프라이빗 스마트홈 구축 가이드 (한국, 2026)',
     seoTitle: '개인정보 보호법 준수 스마트홈 한국 2026: 클라우드 없이',
     intro:
@@ -897,7 +897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/private-smart-home-gdpr-overview-hero-fr.png',
+    heroImage: '/images/private-smart-home-gdpr-overview-hero-fr.webp',
     title: 'Construire une Maison Connectée Privée Conforme au RGPD (UE, 2026)',
     seoTitle: 'Maison Connectée Privée Conforme au RGPD (UE 2026)',
     intro:
@@ -1074,7 +1074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/private-smart-home-gdpr-overview-hero-ja.png',
+    heroImage: '/images/private-smart-home-gdpr-overview-hero-ja.webp',
     title: 'GDPR に配慮したプライベートなスマートホームを作る（EU・2026）',
     seoTitle: 'GDPR 対応のプライベートなスマートホーム（EU 2026）',
     intro:
@@ -1251,7 +1251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/private-smart-home-gdpr-overview-hero-pt.png',
+    heroImage: '/images/private-smart-home-gdpr-overview-hero-pt.webp',
     title: 'Construir uma Casa Inteligente Privada Compatível com GDPR/LGPD (2026)',
     seoTitle: 'Casa Inteligente Privada Compatível com GDPR/LGPD (2026)',
     intro:
@@ -1428,7 +1428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
-    heroImage: '/images/private-smart-home-gdpr-overview-hero-zh.png',
+    heroImage: '/images/private-smart-home-gdpr-overview-hero-zh.webp',
     title: '构建符合 GDPR 的私密智能家居（欧盟，2026）',
     seoTitle: '符合 GDPR 的私密智能家居（欧盟 2026）',
     intro:

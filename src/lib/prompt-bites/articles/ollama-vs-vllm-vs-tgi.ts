@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-en.png',
+    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-en.webp',
     title: 'Ollama vs vLLM vs TGI: Which Should You Use for Local Serving?',
     seoTitle: 'Ollama vs vLLM vs TGI for Local Serving 2026',
     metaDescription: 'Ollama is best for single-user local use; vLLM and TGI are built for serving many concurrent users. Pick based on whether you need multi-user throughput.',
@@ -100,7 +100,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-ar.png',
+    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-ar.webp',
     title: 'Ollama مقابل vLLM مقابل TGI: أيهما يجب أن تستخدمه للتقديم المحلي؟',
     seoTitle: 'Ollama مقابل vLLM مقابل TGI للتقديم المحلي 2026',
     metaDescription: 'Ollama هو الأفضل للاستخدام المحلي بمستخدم واحد؛ بينما vLLM وTGI مبنيان لتقديم مستخدمين متزامنين كثيرين. اختر بناءً على حاجتك لإنتاجية متعددة المستخدمين.',
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-de.png',
+    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-de.webp',
     title: 'Ollama vs. vLLM vs. TGI: Was sollten Sie für lokales Serving verwenden?',
     seoTitle: 'Ollama vs. vLLM vs. TGI für lokales Serving 2026',
     metaDescription: 'Ollama ist am besten für Einzelnutzer-Betrieb geeignet; vLLM und TGI sind für viele gleichzeitige Nutzer gebaut. Wählen Sie nach Ihrem Durchsatzbedarf.',
@@ -292,7 +292,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-es.png',
+    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-es.webp',
     title: 'Ollama vs vLLM vs TGI: ¿Cuál Deberías Usar para Servicio Local?',
     seoTitle: 'Ollama vs vLLM vs TGI para Servicio Local 2026',
     metaDescription: 'Ollama es mejor para uso local de un usuario; vLLM y TGI sirven a muchos usuarios concurrentes. Elige según tu necesidad de rendimiento multiusuario.',
@@ -388,7 +388,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-fr.png',
+    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-fr.webp',
     title: 'Ollama vs vLLM vs TGI : lequel utiliser pour le déploiement local ?',
     seoTitle: 'Ollama vs vLLM vs TGI pour le déploiement local 2026',
     metaDescription: 'Ollama est idéal pour un usage local mono-utilisateur ; vLLM et TGI servent des utilisateurs simultanés. Le choix dépend du débit multi-utilisateur requis.',
@@ -484,7 +484,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-ja.png',
+    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-ja.webp',
     title: 'Ollama vs vLLM vs TGI: ローカルサービングにどれを使うべき?',
     seoTitle: '2026年版 ローカルサービング Ollama vs vLLM vs TGI',
     metaDescription: 'Ollamaはシングルユーザーのローカル用途に最適です。vLLMとTGIは多数の同時ユーザーへのサービング向けに構築されています。マルチユーザーのスループットが必要かどうかで選んでください。',
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-ko.png',
+    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-ko.webp',
     title: 'Ollama 대 vLLM 대 TGI: 로컬 서빙에 무엇을 사용해야 하는가?',
     seoTitle: '2026년 로컬 서빙 Ollama 대 vLLM 대 TGI',
     metaDescription: 'Ollama는 단일 사용자 로컬 사용에 최적입니다. vLLM과 TGI는 다수의 동시 사용자를 서빙하기 위해 만들어졌습니다. 다중 사용자 처리량이 필요한지에 따라 선택하십시오.',
@@ -676,7 +676,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-pt.png',
+    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-pt.webp',
     title: 'Ollama vs vLLM vs TGI: Qual Você Deve Usar para Servir Localmente?',
     seoTitle: 'Ollama vs vLLM vs TGI para Servir Localmente 2026',
     metaDescription: 'O Ollama é melhor para uso local de um usuário; vLLM e TGI servem usuários simultâneos. Escolha com base na necessidade de taxa de transferência.',
@@ -772,7 +772,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-zh.png',
+    heroImage: '/images/ollama-vs-vllm-vs-tgi-overview-hero-zh.webp',
     title: 'Ollama 对比 vLLM 对比 TGI：本地服务应该使用哪个？',
     seoTitle: '2026 年 Ollama 对比 vLLM 对比 TGI 本地服务',
     metaDescription: 'Ollama 最适合单用户本地使用；vLLM 和 TGI 专为服务大量并发用户而构建，分别采用 PagedAttention 和连续批处理提升吞吐量。根据是否需要多用户吞吐量来选择。',

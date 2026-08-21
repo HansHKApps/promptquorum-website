@@ -8,7 +8,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     theme: 'Tools & Platforms',
-    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-en.png',
+    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-en.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
     seoTitle: 'Braintrust vs PromptHub vs Vellum: 2-Tool Stack 2026',
     intro: '**Four tools dominate prompt management for teams: Braintrust for output evaluation, PromptHub for version control, Vellum for production A/B testing, and Promptfoo for CI/CD regression prevention.** Most teams buy all four and waste $1,000+/month. The right stack is always exactly two tools — one for evaluation, one for deployment.',
@@ -491,7 +491,7 @@ tests:
   },
   de: {
     theme: 'Tools & Plattformen',
-    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-de.png',
+    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-de.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
     seoTitle: 'Braintrust vs. PromptHub vs. Vellum: 2-Tool-Stack 2026',
     metaDescription: 'Braintrust (€249/Mon.) bewertet Prompts, Vellum testet A/B, Promptfoo ist kostenloses CI/CD, PromptHub versioniert. Die meisten Teams brauchen genau 2 Tools.',
@@ -901,7 +901,7 @@ tests:
   },
   es: {
     theme: 'Tools & Platforms',
-    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-es.png',
+    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-es.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
     seoTitle: 'Braintrust vs PromptHub vs Vellum: el stack de 2 en 2026',
     intro: '**Cuatro herramientas dominan la gestión de prompts para equipos: Braintrust para evaluación de output, PromptHub para control de versiones, Vellum para A/B testing en producción y Promptfoo para prevención de regresiones CI/CD.** La mayoría de equipos compra las cuatro y desperdicia $1.000+/mes. El stack correcto siempre son exactamente dos herramientas — una para evaluación, otra para despliegue.',
@@ -1357,7 +1357,7 @@ tests:
 
   pt: {
     theme: 'Tools & Platforms',
-    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-pt.png',
+    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-pt.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
     seoTitle: 'Braintrust vs PromptHub vs Vellum: o stack de 2 em 2026',
     intro: '**Quatro ferramentas dominam o gerenciamento de prompts para equipes: Braintrust para avaliação de saída, PromptHub para controle de versões, Vellum para A/B testing em produção e Promptfoo para prevenção de regressões CI/CD.** A maioria das equipes compra as quatro e desperdiça $1.000+/mês. O stack correto é sempre exatamente duas ferramentas — uma para avaliação, outra para implantação.',
@@ -1810,7 +1810,7 @@ tests:
 
   fr: {
     theme: 'Outils & Plateformes',
-    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-fr.png',
+    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-fr.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)',
     seoTitle: 'Braintrust vs PromptHub vs Vellum : Stack 2-outils 2026',
     metaDescription: 'Braintrust (€249/mois Pro) évalue prompts. Vellum (€200-500/mois) A/B tests. Promptfoo gratuit CI/CD. PromptHub (€50-200/mois) versioning. Équipes: 2 outils.',
@@ -2213,7 +2213,7 @@ tests:
   ja: {
     freshness_tier: 'semi_annual',
     theme: 'ツール比較',
-    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-ja.png',
+    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-ja.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo 2026年',
     seoTitle: 'Braintrust vs PromptHub: 2ツール構成 2026年',
     metaDescription: 'ブレイントラスト（¥38,000/月）評価。ベルム（¥30,000-75,000/月）A/Bテスト。Promptfoo無料CI/CD。PromptHub（¥7,500-30,000/月）バージョン管理。チーム必要: 2つ。',
@@ -2273,7 +2273,7 @@ tests:
   zh: {
     freshness_tier: 'semi_annual',
     theme: '工具比较',
-    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-zh.png',
+    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-zh.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo 2026年',
     seoTitle: 'Braintrust vs PromptHub 2工具方案 2026',
     metaDescription: 'Braintrust（$249/月Pro）评估提示词。Vellum（$200-500/月）A/B测试。Promptfoo免费CI/CD。PromptHub（$50-200/月）版本管理。团队需2个工具。',
@@ -2332,7 +2332,7 @@ tests:
   },
   ar: {
     theme: 'Tools & Platforms',
-    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-ar.png',
+    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-ar.webp',
     title: '⁨Braintrust⁩ مقابل ⁨PromptHub⁩ مقابل ⁨Vellum⁩ مقابل ⁨Promptfoo⁩ (⁨2026⁩)',
     seoTitle: '⁨Braintrust⁩ مقابل ⁨PromptHub⁩ مقابل ⁨Vellum 2026⁩',
     intro: '**تهيمن أربع أدوات على إدارة الـ prompts للفرق: Braintrust لتقييم المخرجات، وPromptHub للتحكم في الإصدارات، وVellum لاختبار A/B في الإنتاج، وPromptfoo لمنع انحدارات CI/CD.** معظم الفرق تشتري الأدوات الأربع وتُهدر $1,000+ شهريًا. المجموعة الصحيحة دائمًا هي أداتان فقط — إحداهما للتقييم والأخرى للنشر.',
@@ -2787,7 +2787,7 @@ tests:
   },
   ko: {
     theme: 'Tools & Platforms',
-    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-ko.png',
+    heroImage: '/images/braintrust-vs-prompthub-vs-vellum-overview-hero-ko.webp',
     title: 'Braintrust vs PromptHub vs Vellum vs Promptfoo 비교 (2026)',
     seoTitle: 'Braintrust vs PromptHub vs Vellum 비교: 2026년 최적의 2가지 도구',
     intro: '**팀을 위한 프롬프트 관리 도구는 네 가지가 주도합니다: 출력 평가를 위한 Braintrust, 버전 관리를 위한 PromptHub, 프로덕션 A/B 테스트를 위한 Vellum, CI/CD 회귀 방지를 위한 Promptfoo.** 대부분의 팀은 네 가지 모두를 구매하여 월 $1,000 이상을 낭비합니다. 올바른 스택은 항상 정확히 두 가지 도구입니다 — 하나는 평가용, 하나는 배포용.',

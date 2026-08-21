@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware Guides',
-    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-en.png',
+    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-en.webp',
     title: 'What Is the Best Value GPU for Local LLMs in Japan?',
     seoTitle: 'Best Value GPU for Local LLM Japan 2026: RTX 3060–3090',
     metaDescription:
@@ -278,7 +278,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   de: {
     theme: 'Hardware Guides',
-    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-de.png',
+    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-de.webp',
     title: 'Welche GPU bietet in Japan das beste Preis-Leistungs-Verhältnis für lokale LLMs?',
     seoTitle: 'Beste Preis-Leistungs-GPU für LLMs Japan 2026',
     metaDescription:
@@ -495,7 +495,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   fr: {
     theme: 'Hardware Guides',
-    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-fr.png',
+    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-fr.webp',
     title: 'Quel est le GPU au meilleur rapport qualité-prix pour LLM locaux au Japon ?',
     seoTitle: 'Meilleur GPU qualité-prix LLM Japon 2026 : RTX 3060–3090',
     metaDescription:
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   ja: {
     theme: 'Hardware Guides',
-    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-ja.png',
+    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-ja.webp',
     title: '日本でコスパ最強のローカルLLM用GPUは？',
     seoTitle: '日本のローカルLLMコスパ最強GPU 2026：RTX 3060〜3090',
     metaDescription:
@@ -939,7 +939,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   zh: {
     theme: 'Hardware Guides',
-    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-zh.png',
+    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-zh.webp',
     title: '在日本性价比最高的本地LLM显卡是什么？',
     seoTitle: '日本本地LLM性价比最高显卡2026：RTX 3060 12 GB',
     metaDescription:
@@ -1163,7 +1163,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
 
   es: {
     theme: 'Hardware Guides',
-    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-es.png',
+    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-es.webp',
     title: '¿Cuál es la mejor GPU por precio para LLMs locales en Japón?',
     seoTitle: 'Mejor GPU por precio para LLM local Japón 2026: RTX 3060',
     metaDescription:
@@ -1408,7 +1408,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware Guides',
-    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-ar.png',
+    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-ar.webp',
     title: 'ما أفضل معالج رسومات من حيث السعر لتشغيل النماذج اللغوية الكبيرة محلياً في اليابان؟',
     seoTitle: 'أفضل ⁨GPU⁩ قيمةً للـ ⁨LLMs⁩ المحلية في اليابان ⁨2026⁩: ⁨RTX 3060⁩',
     metaDescription:
@@ -1623,7 +1623,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware Guides',
-    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-pt.png',
+    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-pt.webp',
     title: 'Qual é a melhor GPU por custo-benefício para LLMs locais no Japão?',
     seoTitle: 'Melhor GPU custo-benefício para LLM local Japão 2026: RTX 3060',
     metaDescription:
@@ -1878,7 +1878,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware Guides',
-    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-ko.png',
+    heroImage: '/images/best-gpu-local-llm-japan-price-overview-hero-ko.webp',
     title: '일본에서 로컬 LLM용 최고의 가성비 GPU는 무엇입니까?',
     seoTitle: '일본 로컬 LLM 가성비 최고 GPU 2026: RTX 3060',
     metaDescription:

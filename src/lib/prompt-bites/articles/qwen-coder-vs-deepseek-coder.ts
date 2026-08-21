@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-en.png',
+    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-en.webp',
     title: 'Qwen Coder vs DeepSeek Coder: Which Is Better?',
     dateModified: '2026-06-20',
     seoTitle: 'Qwen Coder vs DeepSeek Coder? | Prompt Bites | PromptQuorum',
@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-de.png',
+    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-de.webp',
     title: 'Qwen Coder vs. DeepSeek Coder: Welcher ist besser?',
     seoTitle: 'Qwen Coder vs. DeepSeek Coder? | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen 3 Coder siegt bei Python und TypeScript. DeepSeek Coder deckt mehr Sprachen ab. Beide ~10 GB VRAM bei 14B Q4. Schnelle Antwort von PromptQuorum.',
@@ -211,7 +211,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-es.png',
+    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-es.webp',
     title: 'Qwen Coder vs DeepSeek Coder: ¿Cuál es mejor?',
     seoTitle: 'Qwen Coder vs DeepSeek Coder? | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen 3 Coder gana en Python y TypeScript; DeepSeek Coder cubre más lenguajes. Ambos piden ~10 GB de VRAM en 14B Q4. Respuesta rápida de PromptQuorum.',
@@ -315,7 +315,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-pt.png',
+    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-pt.webp',
     title: 'Qwen Coder vs DeepSeek Coder: qual é melhor?',
     seoTitle: 'Qwen Coder vs DeepSeek Coder? | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen 3 Coder vence em Python e TypeScript; DeepSeek Coder cobre mais linguagens. Ambos precisam de ~10 GB de VRAM em 14B Q4. Resposta rápida do PromptQuorum.',
@@ -395,7 +395,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-fr.png',
+    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-fr.webp',
     title: 'Qwen Coder vs DeepSeek Coder : lequel est le meilleur ?',
     seoTitle: 'Qwen Coder vs DeepSeek Coder ? | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen 3 Coder domine en Python et TypeScript. DeepSeek Coder couvre plus de langages. Les deux ~10 Go de VRAM en 14B Q4. Réponse rapide de PromptQuorum.',
@@ -475,7 +475,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-ja.png',
+    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-ja.webp',
     title: 'Qwen Coder対DeepSeek Coder：どちらが優れているか？',
     seoTitle: 'Qwen Coder対DeepSeek Coder比較 | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen 3 CoderはPythonとTypeScriptで勝り。DeepSeek Coderはより広い言語サポート。両者とも14B Q4で~10 GB VRAM。PromptQuorumによる簡潔な回答。',
@@ -555,7 +555,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-zh.png',
+    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-zh.webp',
     title: 'Qwen Coder 对比 DeepSeek Coder：哪个更好？',
     seoTitle: 'Qwen Coder 对比 DeepSeek Coder？ | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen 3 Coder 在 Python 和 TypeScript 上更胜一筹。DeepSeek Coder 支持更广泛的编程语言。两者14B Q4 下均需约10 GB VRAM。PromptQuorum 快速解答。',
@@ -635,7 +635,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-ar.png',
+    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-ar.webp',
     title: '⁨Qwen Coder⁩ مقابل ⁨DeepSeek Coder⁩: أيهما أفضل؟',
     seoTitle: '⁨Qwen Coder⁩ مقابل ⁨DeepSeek Coder⁩: أيهما أفضل؟',
     metaDescription: '⁨Qwen 3 Coder 14B⁩ يتفوق في ⁨HumanEval⁩ بـ ⁨5⁩ نقاط على ⁨DeepSeek Coder V2⁩. كلاهما يعمل على ⁨RTX 3060⁩ بـ ~⁨10 GB VRAM. Python⁩ و ⁨TypeScript⁩: ⁨Qwen⁩ يفوز.',
@@ -746,7 +746,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Tool Comparisons',
-    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-ko.png',
+    heroImage: '/images/qwen-coder-vs-deepseek-coder-overview-hero-ko.webp',
     title: 'Qwen Coder 대 DeepSeek Coder: 어느 것이 더 낫습니까?',
     seoTitle: 'Qwen Coder 대 DeepSeek Coder 비교 | Prompt Bites | PromptQuorum',
     metaDescription: 'Qwen 3 Coder 14B는 Python 및 TypeScript에서 HumanEval을 약 5점 차로 앞섭니다. 두 모델 모두 RTX 3060에서 ~10 GB VRAM으로 실행됩니다. PromptQuorum의 빠른 답변.',

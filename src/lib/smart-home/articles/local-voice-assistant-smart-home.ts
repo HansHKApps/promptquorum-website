@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-en.png',
+    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-en.webp',
     title: 'Build a Fully Local Voice Assistant for Your Smart Home (2026)',
     seoTitle: 'Local Voice Assistant 2026: Replace Alexa Privately',
     intro:
@@ -218,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-ar.png',
+    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-ar.webp',
     title: 'ابنِ مساعدًا صوتيًا محليًا كاملًا لمنزلك الذكي (⁨2026⁩)',
     seoTitle: 'مساعد صوتي محلي ⁨2026⁩: استبدل ⁨Alexa⁩ بشكل خاص',
     intro:
@@ -428,7 +428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-de.png',
+    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-de.webp',
     title: 'Einen vollständig lokalen Sprachassistenten fürs Smart Home bauen (2026)',
     seoTitle: 'Lokaler Sprachassistent 2026: Alexa privat ersetzen',
     intro:
@@ -638,7 +638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-es.png',
+    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-es.webp',
     title: 'Monta un Asistente de Voz Totalmente Local para tu Smart Home (2026)',
     seoTitle: 'Asistente de Voz Local 2026: Reemplaza Alexa en Privado',
     intro:
@@ -848,7 +848,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-ko.png',
+    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-ko.webp',
     title: '스마트 홈용 완전 로컬 음성 어시스턴트 구축하기 (2026)',
     seoTitle: '로컬 음성 어시스턴트 2026: Alexa를 개인적으로 대체',
     intro:
@@ -1058,7 +1058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-fr.png',
+    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-fr.webp',
     title: 'Construire un Assistant Vocal Entièrement Local pour votre Maison Connectée (2026)',
     seoTitle: 'Assistant Vocal Local 2026 : Remplacer Alexa en Privé',
     intro:
@@ -1268,7 +1268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-ja.png',
+    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-ja.webp',
     title: 'スマートホーム向けの完全ローカルな音声アシスタントを作る（2026）',
     seoTitle: 'ローカル音声アシスタント 2026：Alexa をプライベートに置換',
     intro:
@@ -1478,7 +1478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-pt.png',
+    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-pt.webp',
     title: 'Monte um Assistente de Voz Totalmente Local para sua Casa Inteligente (2026)',
     seoTitle: 'Assistente de Voz Local 2026: Substitua a Alexa em Privado',
     intro:
@@ -1688,7 +1688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-06-04',
     next_refresh_due: '2026-12-04',
     theme: 'Local AI & LLMs in the Smart Home',
-    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-zh.png',
+    heroImage: '/images/local-voice-assistant-smart-home-overview-hero-zh.webp',
     title: '为你的智能家居搭建完全本地的语音助手（2026）',
     seoTitle: '本地语音助手 2026：私密地替代 Alexa',
     intro:

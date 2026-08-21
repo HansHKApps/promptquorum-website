@@ -12,7 +12,7 @@ const OG_SLUG = keyToSlug('best-prompt-optimization-tools-teams');
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     theme: 'Tools & Platforms',
-    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-en.png',
+    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-en.webp',
     title: 'Best Prompt Optimization Tools for Teams',
     seoTitle: 'Best Prompt Optimization Tools for Teams 2026: Ranked & Compared',
     intro: '**Prompt optimization for teams requires four capabilities: versioned storage, A/B variant testing, output scoring, and collaborative review. No single tool covers all four. This guide ranks seven specialist tools — plus PromptQuorum for cross-model comparison — by team type, pricing, and workflow fit.**',
@@ -526,7 +526,7 @@ tests:
   },
   de: {
     theme: 'Tools & Plattformen',
-    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-de.png',
+    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-de.webp',
     title: 'Die besten Prompt-Optimierungs-Tools für Teams',
     seoTitle: 'Beste Prompt-Optimierungstools für Teams 2026',
     intro: '**Prompt-Optimierung für Teams erfordert vier Funktionen: versionierte Speicherung, A/B-Varianten-Tests, Output-Bewertung und gemeinschaftliche Überprüfung. Kein einzelnes Tool deckt alle vier Funktionen ab. Dieser Leitfaden bewertet sieben spezialisierte Tools — plus PromptQuorum für modellübergreifende Vergleiche — nach Team-Typ, Preisgestaltung und Workflow-Anpassung.**',
@@ -920,7 +920,7 @@ tests:
   },
   es: {
     theme: 'Tools & Platforms',
-    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-es.png',
+    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-es.webp',
     title: 'Mejores herramientas de optimización de prompts para equipos',
     seoTitle: 'Optimización de prompts para equipos 2026: top herramientas',
     intro: '**La optimización de prompts para equipos requiere cuatro capacidades: almacenamiento versionado, testing A/B de variantes, puntuación del output y revisión colaborativa. Ninguna herramienta única cubre las cuatro. Esta guía clasifica siete herramientas especializadas — más PromptQuorum para comparación multi-modelo — por tipo de equipo, precios y ajuste al flujo de trabajo.**',
@@ -1395,7 +1395,7 @@ tests:
 
   pt: {
     theme: 'Tools & Platforms',
-    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-pt.png',
+    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-pt.webp',
     title: 'Melhores ferramentas de otimização de prompts para equipes',
     seoTitle: 'Otimização de prompts para equipes 2026: melhores ferramentas',
     intro: '**A otimização de prompts para equipes requer quatro capacidades: armazenamento versionado, testes A/B de variantes, pontuação da saída e revisão colaborativa. Nenhuma ferramenta única cobre as quatro. Este guia classifica sete ferramentas especializadas — mais PromptQuorum para comparação multi-modelo — por tipo de equipe, preços e adequação ao fluxo de trabalho.**',
@@ -1867,7 +1867,7 @@ tests:
 
   fr: {
     theme: 'Outils & Plateformes',
-    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-fr.png',
+    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-fr.webp',
     title: 'Meilleures outils d\'optimisation d\'invites pour les équipes',
     seoTitle: 'Meilleurs outils d\'optimisation de prompts pour équipes (2026)',
     intro: '**L\'optimisation d\'invites pour les équipes nécessite quatre capacités : stockage versionné, test A/B de variantes, notation des résultats et révision collaborative. Aucun outil unique ne les couvre toutes. Ce guide classe sept outils spécialisés — plus PromptQuorum pour comparaison multi-modèle — par type d\'équipe, tarification et adaptation du flux de travail.**',
@@ -2244,7 +2244,7 @@ tests:
   },
   ja: {
     theme: 'ツール & プラットフォーム',
-    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-ja.png',
+    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-ja.webp',
     title: 'チームのためのベストプロンプト最適化ツール',
     seoTitle: 'チーム向けプロンプト最適化ツール2026：ランキング＆比較',
     intro: '**チーム向けプロンプト最適化には4つの機能が必要です: バージョン管理されたストレージ、A/Bバリアントテスト、出力スコアリング、協調レビュー。単一ツールではすべてをカバーできません。本ガイドは、チームタイプ、料金、ワークフロー適合性で分類した7つの専門ツール — マルチモデル比較用PromptQuorum含む — をランク付けします。**',
@@ -2621,7 +2621,7 @@ tests:
   },
   zh: {
     theme: '工具与平台',
-    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-zh.png',
+    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-zh.webp',
     title: '2026年团队提示优化最佳工具',
     seoTitle: '2026团队最佳提示词优化工具：排名与对比',
     intro: '**团队提示优化需要四个核心能力：版本化存储、A/B变体测试、输出评分、协作审查。没有单一工具能覆盖全部四个能力。本指南根据团队类型、价格和工作流适配，对七个专业工具进行排名 — 加上PromptQuorum的跨模型对比。**',
@@ -3083,7 +3083,7 @@ tests:
   },
   ar: {
     theme: 'Tools & Platforms',
-    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-ar.png',
+    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-ar.webp',
     title: 'أفضل أدوات تحسين التعليمات للفرق',
     seoTitle: 'أدوات تحسين التعليمات للفرق ⁨2026⁩: مقارنة وتصنيف',
     intro: '**تحسين التعليمات للفرق يستلزم أربع قدرات: التخزين المُصنَّف بالإصدارات، واختبار A/B للمتغيرات، وتقييم المخرجات، والمراجعة التعاونية. لا توجد أداة واحدة تغطي الأربعة. يصنّف هذا الدليل سبع أدوات متخصصة — إضافةً إلى PromptQuorum للمقارنة بين النماذج — حسب نوع الفريق والأسعار ومدى الملاءمة مع سير العمل.**',
@@ -3556,7 +3556,7 @@ tests:
   },
   ko: {
     theme: 'Tools & Platforms',
-    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-ko.png',
+    heroImage: '/images/best-prompt-optimization-tools-teams-overview-hero-ko.webp',
     title: '팀을 위한 최고의 프롬프트 최적화 도구',
     seoTitle: '팀을 위한 프롬프트 최적화 도구 2026: 최고 순위 비교',
     intro: '**팀을 위한 프롬프트 최적화에는 네 가지 핵심 기능이 필요합니다: 버전 관리 저장소, 변형 A/B 테스트, 출력 점수 평가, 협업 검토. 단일 도구로는 네 가지를 모두 충족할 수 없습니다. 이 가이드는 팀 유형, 가격, 워크플로 적합성을 기준으로 일곱 개의 전문 도구 — 그리고 다중 모델 비교를 위한 PromptQuorum — 를 순위별로 정리합니다.**',

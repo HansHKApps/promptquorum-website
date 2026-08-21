@@ -29,5 +29,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function EsLocalLLMsPage() {
-  return <LocalLLMsHub initialLang="es" {...buildLLMHubData()} />
+  return <LocalLLMsHub initialLang="es" {...buildLLMHubData('es')} />
 }

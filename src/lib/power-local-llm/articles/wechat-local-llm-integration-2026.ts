@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-en.png',
+    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-en.webp',
     title: 'WeChat + Local LLM Integration: Developer Guide 2026',
     seoTitle: 'WeChat Local LLM Integration 2026: Ollama API Setup',
     intro:
@@ -314,7 +314,7 @@ while True:
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-de.png',
+    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-de.webp',
     title: 'WeChat + Lokales LLM: Entwicklerleitfaden 2026',
     seoTitle: 'WeChat Lokales LLM Integration 2026 | Ollama API-Brücke',
     intro:
@@ -526,7 +526,7 @@ while True:
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-fr.png',
+    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-fr.webp',
     title: 'WeChat + LLM local : Guide développeur 2026',
     seoTitle: 'Intégration WeChat LLM local 2026 | Pont API Ollama',
     intro:
@@ -722,7 +722,7 @@ while True:
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-ja.png',
+    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-ja.webp',
     title: 'WeChat + ローカルLLM統合：開発者ガイド 2026',
     seoTitle: 'WeChat × ローカルLLM統合開発ガイド 2026：WeChatFerry & Ollama API連携',
     intro:
@@ -924,7 +924,7 @@ while True:
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-zh.png',
+    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-zh.webp',
     title: '微信 + 本地LLM集成：开发者指南 2026',
     seoTitle: '微信接入本地LLM开发指南 2026：WeChatFerry、Webhook与Ollama服务器配置',
     intro:
@@ -1149,7 +1149,7 @@ while True:
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-es.png',
+    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-es.webp',
     title: 'WeChat + LLM local: Guía para desarrolladores 2026',
     seoTitle: 'Integración WeChat con LLM local 2026 | Puente API Ollama',
     intro:
@@ -1416,7 +1416,7 @@ while True:
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-ko.png',
+    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-ko.webp',
     title: 'WeChat + 로컬 LLM: 개발자 가이드 2026',
     seoTitle: 'WeChat 로컬 LLM 통합 2026 | Ollama API 브리지',
     intro:
@@ -1669,7 +1669,7 @@ while True:
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-pt.png',
+    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-pt.webp',
     title: 'WeChat + LLM local: Guia para desenvolvedores 2026',
     seoTitle: 'Integração WeChat com LLM local 2026 | Ponte API Ollama',
     intro:
@@ -1923,7 +1923,7 @@ while True:
     dateModified: '2026-05-26',
     next_refresh_due: '2026-11-26',
     theme: 'Local AI Agents & Tool Use',
-    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-ar.png',
+    heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-ar.webp',
     title: '⁨WeChat⁩ + نموذج لغة محلي: دليل المطور ⁨2026⁩',
     seoTitle: 'دمج ⁨WeChat⁩ مع ⁨LLM⁩ محلي عبر ⁨Ollama⁩: دليل ⁨2026⁩',
     intro:

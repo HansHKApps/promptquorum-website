@@ -136,6 +136,7 @@ export default async function DeLocalLLMsArticlePage({ params }: PageProps) {
       <LocalLLMsPostClient
         slug={slug}
         initialLang="de"
+        articleData={llmContent[key]}
       />
     </>
   )

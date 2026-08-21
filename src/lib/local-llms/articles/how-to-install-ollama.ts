@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       seoTitle: 'Install Ollama: 2-Minute Setup for macOS, Windows & Linux',
       intro: 'Ollama installs in under 2 minutes on macOS, Windows, and Linux. After installation, one command downloads and runs any model from the Ollama library -- no Python environment, no configuration files, and no GPU required to get started. Ollama maintains a curated model library at ollama.com/library, including Meta Llama 3.3, Qwen3, and Mistral.',
       metaDescription: 'Install Ollama in 2 minutes on any OS: download, run `ollama run llama3.2`, start chatting. Complete setup guide with troubleshooting for Beginners 2026.',
-      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-en.png',
+      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-en.webp',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Ollama installs in under 2 minutes on macOS, Windows, and Linux. After installation, one command downloads and runs any model from the Ollama library -- no Python environment, no configuration files, and no GPU required to get started.**',
       audience: 'Beginners running their first local LLM on consumer hardware',
@@ -107,7 +107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: 'The install script automatically registers Ollama as a systemd service. To manage it:',
           codeBlock: '# Check service status\nsystemctl status ollama\n\n# Start / stop / restart\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# View logs\njournalctl -u ollama -f',
           codeLanguage: 'bash',
-          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-en.png',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-en.webp',
           imageCaption: 'Four-step flow for running Ollama as a systemd service on Linux: install with `curl -fsSL https://ollama.com/install.sh | sh`, check status with `systemctl status ollama`, control it with `start`/`stop`/`restart`, and tail logs with `journalctl -u ollama -f`.',
         },
         firstModel: {
@@ -149,7 +149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         troubleshooting: {
           id: 'troubleshooting',
           title: 'Troubleshooting Common Ollama Installation Issues',
-          image: '/images/how-to-install-ollama-troubleshooting-table-hero-en.png',
+          image: '/images/how-to-install-ollama-troubleshooting-table-hero-en.webp',
           imageCaption: 'Reference table of 5 common Ollama installation errors -- service not running, stalled 2-47 GB downloads, out-of-memory errors, undetected GPUs, and prompts truncated at 4096 tokens -- each mapped to its fix command.',
           faqs: [
             {
@@ -302,7 +302,7 @@ schema: {
       seoTitle: 'Instalar Ollama en 2 minutos: macOS, Windows y Linux',
       intro: 'Ollama se instala en menos de 2 minutos en macOS, Windows y Linux. Tras la instalación, un solo comando descarga y ejecuta cualquier modelo de la biblioteca de Ollama -- sin entorno Python, sin archivos de configuración y sin necesidad de GPU para empezar. A partir de abril de 2026, Ollama admite más de 200 modelos, incluidos Meta Llama 3.3, Qwen3 y Mistral.',
       metaDescription: 'Instala Ollama en 2 minutos en cualquier sistema: descarga, ejecuta `ollama run llama3.2` y empieza a chatear. Guía completa con solución de problemas.',
-      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-es.png',
+      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-es.webp',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Ollama se instala en menos de 2 minutos en macOS, Windows y Linux. Tras la instalación, un solo comando descarga y ejecuta cualquier modelo de la biblioteca de Ollama -- sin entorno Python, sin archivos de configuración y sin necesidad de GPU para empezar.**',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
@@ -393,7 +393,7 @@ schema: {
           content: 'El script de instalación registra Ollama automáticamente como servicio systemd. Para gestionarlo:',
           codeBlock: '# Check service status\nsystemctl status ollama\n\n# Start / stop / restart\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# View logs\njournalctl -u ollama -f',
           codeLanguage: 'bash',
-          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-es.png',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-es.webp',
           imageCaption: 'Flujo de cuatro pasos para ejecutar Ollama como servicio systemd en Linux: instalar con `curl -fsSL https://ollama.com/install.sh | sh`, verificar el estado con `systemctl status ollama`, controlarlo con `start`/`stop`/`restart`, y seguir los logs con `journalctl -u ollama -f`.',
         },
         firstModel: {
@@ -435,7 +435,7 @@ schema: {
         troubleshooting: {
           id: 'troubleshooting',
           title: 'Solución de problemas comunes de instalación de Ollama',
-          image: '/images/how-to-install-ollama-troubleshooting-table-hero-es.png',
+          image: '/images/how-to-install-ollama-troubleshooting-table-hero-es.webp',
           imageCaption: 'Tabla de referencia de 5 errores comunes al instalar Ollama -- servicio inactivo, descargas de 2-47 GB detenidas, errores de memoria insuficiente, GPUs no detectadas y prompts truncados a 4096 tokens -- cada uno con su comando de solución.',
           faqs: [
             {
@@ -589,7 +589,7 @@ schema: {
       seoTitle: 'تثبيت ⁨Ollama⁩ في دقيقتين: ⁨macOS⁩ و ⁨Windows⁩ و ⁨Linux⁩',
       intro: 'يُثبَّت Ollama في أقل من دقيقتين على macOS و Windows و Linux. وبعد التثبيت، يقوم أمر واحد بتنزيل وتشغيل أي نموذج من مكتبة Ollama -- دون بيئة Python ودون ملفات تهيئة ودون حاجة إلى GPU للبدء. واعتبارًا من أبريل 2026، يدعم Ollama أكثر من 200 نموذج، بما في ذلك Meta Llama 3.3 و Qwen3 و Mistral.',
       metaDescription: '⁨Ollama⁩ يدعم أكثر من ⁨200⁩ نموذج بأمر واحد. ثبّته على ⁨macOS⁩ أو ⁨Windows⁩ أو ⁨Linux⁩، شغّل ⁨Llama⁩ أو ⁨Qwen⁩ أو ⁨Mistral⁩ دون إعداد ⁨Python⁩ أو ملفات تهيئة.',
-      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-ar.png',
+      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-ar.webp',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**يُثبَّت Ollama في أقل من دقيقتين على macOS و Windows و Linux. وبعد التثبيت، يقوم أمر واحد بتنزيل وتشغيل أي نموذج من مكتبة Ollama -- دون بيئة Python ودون ملفات تهيئة ودون حاجة إلى GPU للبدء.**',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على أجهزة استهلاكية',
@@ -680,7 +680,7 @@ schema: {
           content: 'يسجّل سكربت التثبيت Ollama تلقائيًا كخدمة systemd. لإدارتها:',
           codeBlock: '# Check service status\nsystemctl status ollama\n\n# Start / stop / restart\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# View logs\njournalctl -u ollama -f',
           codeLanguage: 'bash',
-          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-ar.png',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-ar.webp',
           imageCaption: 'مخطط من أربع خطوات لتشغيل Ollama كخدمة systemd على Linux: التثبيت باستخدام `curl -fsSL https://ollama.com/install.sh | sh`، التحقق من الحالة باستخدام `systemctl status ollama`، التحكم بها عبر `start`/`stop`/`restart`، ومتابعة السجلات باستخدام `journalctl -u ollama -f`.',
         },
         firstModel: {
@@ -722,7 +722,7 @@ schema: {
         troubleshooting: {
           id: 'troubleshooting',
           title: 'حل مشكلات تثبيت Ollama الشائعة',
-          image: '/images/how-to-install-ollama-troubleshooting-table-hero-ar.png',
+          image: '/images/how-to-install-ollama-troubleshooting-table-hero-ar.webp',
           imageCaption: 'جدول مرجعي لـ 5 أخطاء شائعة عند تثبيت Ollama -- خدمة غير نشطة، توقف تنزيلات 2-47 جيجابايت، أخطاء نفاد الذاكرة، عدم اكتشاف GPU، واقتطاع الطلبات عند 4096 رمزاً -- مع أمر الحل لكل منها.',
           faqs: [
             {
@@ -876,7 +876,7 @@ schema: {
       seoTitle: 'Instalar Ollama em 2 minutos: macOS, Windows e Linux',
       intro: 'O Ollama se instala em menos de 2 minutos no macOS, Windows e Linux. Após a instalação, um único comando baixa e executa qualquer modelo da biblioteca do Ollama — sem ambiente Python, sem arquivos de configuração e sem necessidade de GPU para começar. A partir de abril de 2026, o Ollama suporta mais de 200 modelos, incluindo Meta Llama 3.3, Qwen3 e Mistral.',
       metaDescription: 'Instale o Ollama em 2 minutos em qualquer sistema: baixe, execute `ollama run llama3.2` e comece a conversar. Guia completo com solução de problemas.',
-      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-pt.png',
+      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-pt.webp',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**O Ollama se instala em menos de 2 minutos no macOS, Windows e Linux. Após a instalação, um único comando baixa e executa qualquer modelo da biblioteca do Ollama — sem ambiente Python, sem arquivos de configuração e sem necessidade de GPU para começar.**',
       audience: 'Iniciantes executando o primeiro LLM local em hardware de consumo',
@@ -986,7 +986,7 @@ schema: {
       seoTitle: 'Ollama installieren 2026 - Vollständige Anleitung',
       intro: 'Ollama ist eine leichte Inference-Engine, die große Sprachmodelle lokal mit einem einzigen Befehl ausführt. Nach einer 2-Minuten-Installation lädt `ollama pull llama3.2:3b` ein 2-GB-Modell herunter, und `ollama run llama3.2` öffnet eine Chat-Schnittstelle. Ollama kombiniert Modellverwaltung, das llama.cpp-Inference-Backend und eine OpenAI-kompatible REST-API auf `localhost:11434` in einer einzigen Anwendung ohne Python-Umgebung, ohne Konfigurationsdateien und ohne erforderliche GPU zum Starten. Ab April 2026 unterstützt Ollama über 200 Modelle einschließlich Meta Llama 3.2, Qwen3, Mistral und DeepSeek und stellt seine API für jeden OpenAI-SDK ohne Codeänderungen bereit.',
       metaDescription: 'Ollama in unter 2 Minuten auf macOS, Windows oder Linux installieren. Ein Befehl startet Ihr erstes Modell. Zugriff auf 200+ Open-Source-Modelle lokal.',
-      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-de.png',
+      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-de.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
       readTime: '8 min Lesezeit',
@@ -1086,7 +1086,7 @@ schema: {
           content: 'Das Installationsskript registriert Ollama automatisch als systemd-Dienst. So verwalten Sie ihn:',
           codeBlock: '# Dienststatus überprüfen\nsystemctl status ollama\n\n# Starten / Stoppen / Neustarten\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# Protokolle anzeigen\njournalctl -u ollama -f',
           codeLanguage: 'bash',
-          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-de.png',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-de.webp',
           imageCaption: 'Vierstufiger Ablauf, um Ollama als systemd-Dienst unter Linux auszuführen: Installation mit `curl -fsSL https://ollama.com/install.sh | sh`, Statusprüfung mit `systemctl status ollama`, Steuerung über `start`/`stop`/`restart`, und Log-Verfolgung mit `journalctl -u ollama -f`.',
         },
         firstModel: {
@@ -1130,7 +1130,7 @@ schema: {
         troubleshooting: {
           id: 'troubleshooting',
           title: 'Wie behebe ich häufige Probleme bei der Installation von Ollama?',
-          image: '/images/how-to-install-ollama-troubleshooting-table-hero-de.png',
+          image: '/images/how-to-install-ollama-troubleshooting-table-hero-de.webp',
           imageCaption: 'Referenztabelle mit 5 häufigen Ollama-Installationsfehlern -- Dienst läuft nicht, gestoppte 2-47 GB Downloads, Speicherfehler, nicht erkannte GPUs und bei 4096 Tokens abgeschnittene Prompts -- jeweils mit passendem Fix-Befehl.',
           faqs: [
             {
@@ -1317,7 +1317,7 @@ schema: {
       seoTitle: 'Installer Ollama 2026: macOS, Windows, Linux',
       intro: 'Ollama est un moteur d\'inférence léger qui exécute de grands modèles de langage localement avec une seule commande. Après une installation de 2 minutes, `ollama pull llama3.2:3b` télécharge un modèle de 2 Go, et `ollama run llama3.2` ouvre une interface de chat. Ollama combine la gestion de modèles, le backend d\'inférence llama.cpp et une API REST compatible OpenAI sur `localhost:11434` dans une seule application sans environnement Python, sans fichiers de configuration et sans GPU requis pour commencer. En avril 2026, Ollama supporte plus de 200 modèles incluant Meta Llama 3.2, Qwen3, Mistral et DeepSeek, et expose son API à tout SDK OpenAI sans modifications de code.',
       metaDescription: 'Installer Ollama en moins de 2 minutes sur macOS, Windows ou Linux. Exécutez votre premier modèle avec un seul commande -- guide complet étape par étape.',
-      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-fr.png',
+      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-fr.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
       readTime: '8 min de lecture',
@@ -1417,7 +1417,7 @@ schema: {
           content: 'Le script d\'installation enregistre automatiquement Ollama comme service systemd. Pour le gérer :',
           codeBlock: '# Vérifier l\'état du service\nsystemctl status ollama\n\n# Démarrer / Arrêter / Redémarrer\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# Afficher les journaux\njournalctl -u ollama -f',
           codeLanguage: 'bash',
-          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-fr.png',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-fr.webp',
           imageCaption: 'Flux en quatre étapes pour exécuter Ollama comme service systemd sur Linux : installer avec `curl -fsSL https://ollama.com/install.sh | sh`, vérifier le statut avec `systemctl status ollama`, le contrôler avec `start`/`stop`/`restart`, et suivre les logs avec `journalctl -u ollama -f`.',
         },
         firstModel: {
@@ -1461,7 +1461,7 @@ schema: {
         troubleshooting: {
           id: 'troubleshooting',
           title: 'Comment résoudre les problèmes courants d\'installation d\'Ollama ?',
-          image: '/images/how-to-install-ollama-troubleshooting-table-hero-fr.png',
+          image: '/images/how-to-install-ollama-troubleshooting-table-hero-fr.webp',
           imageCaption: 'Tableau de référence de 5 erreurs courantes d\'installation d\'Ollama -- service inactif, téléchargements de 2-47 Go bloqués, erreurs de mémoire insuffisante, GPU non détectés et prompts tronqués à 4096 tokens -- chacune avec sa commande de correction.',
           faqs: [
             {
@@ -1648,7 +1648,7 @@ schema: {
       seoTitle: 'Ollama をインストール: macOS、Windows、Linux ガイド (2026)',
       intro: 'Ollama は、単一のコマンドで大規模言語モデルをローカルで実行する軽量推論エンジンです。2 分のインストール後、`ollama pull llama3.2:3b` は 2 GB のモデルをダウンロードし、`ollama run llama3.2` はチャット インターフェースを開きます。Ollama は、モデル管理、llama.cpp 推論バックエンド、および OpenAI 互換の REST API を `localhost:11434` に結合しており、Python 環境、構成ファイル、開始時の GPU は不要です。2026 年 4 月現在、Ollama は Meta Llama 3.2、Qwen3、Mistral、DeepSeek を含む 200 を超えるモデルをサポートし、その API を任意の OpenAI SDK にコード変更なしで公開しています。',
       metaDescription: '2 分以内に Ollama をインストール。1 つのコマンドで最初のモデルを実行----完全なステップバイステップガイド。',
-      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-ja.png',
+      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-ja.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
       readTime: '読了約8分',
@@ -1748,7 +1748,7 @@ schema: {
           content: 'インストール スクリプトは自動的に Ollama を systemd サービスとして登録。管理方法は:',
           codeBlock: '# サービス ステータスを確認\nsystemctl status ollama\n\n# 開始 / 停止 / 再起動\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# ログを表示\njournalctl -u ollama -f',
           codeLanguage: 'bash',
-          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-ja.png',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-ja.webp',
           imageCaption: 'Linux で Ollama を systemd サービスとして実行する4ステップ: `curl -fsSL https://ollama.com/install.sh | sh` でインストール、`systemctl status ollama` でステータス確認、`start`/`stop`/`restart` で制御、`journalctl -u ollama -f` でログを追跡します。',
         },
         firstModel: {
@@ -1792,7 +1792,7 @@ schema: {
         troubleshooting: {
           id: 'troubleshooting',
           title: 'Ollama インストール時の一般的な問題をトラブルシューティングするにはどうすればよいですか？',
-          image: '/images/how-to-install-ollama-troubleshooting-table-hero-ja.png',
+          image: '/images/how-to-install-ollama-troubleshooting-table-hero-ja.webp',
           imageCaption: 'Ollama インストールでよくある5つのエラーのリファレンステーブル -- サービス未起動、2〜47GBのダウンロード停止、メモリ不足エラー、GPU未検出、4096トークンでのプロンプト切り捨て -- それぞれに対応する修正コマンド付き。',
           faqs: [
             {
@@ -1979,7 +1979,7 @@ schema: {
       seoTitle: '安装 Ollama: macOS、Windows、Linux 指南 (2026)',
       intro: 'Ollama 是一个轻量级推理引擎，使用单一命令在本地运行大型语言模型。安装 2 分钟后，`ollama pull llama3.2:3b` 下载 2 GB 模型，`ollama run llama3.2` 打开聊天界面。Ollama 将模型管理、llama.cpp 推理后端和 OpenAI 兼容的 REST API 整合到 `localhost:11434` 的单一应用程序中，无需 Python 环境、配置文件和 GPU。截至 2026 年 4 月，Ollama 支持 200 多个模型，包括 Meta Llama 3.2、Qwen3、Mistral 和 DeepSeek，并将其 API 公开给任何 OpenAI SDK，无需代码修改。',
       metaDescription: '在 2 分钟内安装 Ollama。一条命令运行第一个模型----完整分步指南。',
-      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-zh.png',
+      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-zh.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
       readTime: '阅读约8分钟',
@@ -2079,7 +2079,7 @@ schema: {
           content: '安装脚本自动将 Ollama 注册为 systemd 服务。要管理它：',
           codeBlock: '# 检查服务状态\nsystemctl status ollama\n\n# 启动 / 停止 / 重启\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# 查看日志\njournalctl -u ollama -f',
           codeLanguage: 'bash',
-          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-zh.png',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-zh.webp',
           imageCaption: '在 Linux 上将 Ollama 作为 systemd 服务运行的四步流程：使用 `curl -fsSL https://ollama.com/install.sh | sh` 安装，用 `systemctl status ollama` 检查状态，通过 `start`/`stop`/`restart` 控制，并用 `journalctl -u ollama -f` 查看实时日志。',
         },
         firstModel: {
@@ -2123,7 +2123,7 @@ schema: {
         troubleshooting: {
           id: 'troubleshooting',
           title: '如何解决 Ollama 安装中的常见问题？',
-          image: '/images/how-to-install-ollama-troubleshooting-table-hero-zh.png',
+          image: '/images/how-to-install-ollama-troubleshooting-table-hero-zh.webp',
           imageCaption: '5 个常见 Ollama 安装错误参考表 -- 服务未运行、2-47GB 下载停滞、内存不足错误、GPU 未检测到、提示词在 4096 tokens 处被截断 -- 每项均附带修复命令。',
           faqs: [
             {
@@ -2311,7 +2311,7 @@ schema: {
       seoTitle: 'Ollama 설치: macOS, Windows & Linux 2분 설치 가이드',
       intro: 'Ollama는 macOS, Windows, Linux에서 2분 이내에 설치할 수 있습니다. 설치 후 명령어 하나로 Ollama 라이브러리의 모든 모델을 다운로드하고 실행할 수 있습니다 -- Python 환경, 설정 파일, 시작을 위한 GPU가 필요하지 않습니다. 2026년 4월 기준으로 Ollama는 Meta Llama 3.3, Qwen3, Mistral을 포함한 200개 이상의 모델을 지원합니다.',
       metaDescription: '모든 OS에서 2분 만에 Ollama를 설치하세요: 다운로드 후 `ollama run llama3.2`를 실행하면 바로 대화를 시작할 수 있습니다. 초보자를 위한 문제 해결 포함 완전 설치 가이드 2026.',
-      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-ko.png',
+      heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-ko.webp',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Ollama는 macOS, Windows, Linux에서 2분 이내에 설치할 수 있습니다. 설치 후 명령어 하나로 Ollama 라이브러리의 모든 모델을 다운로드하고 실행할 수 있습니다 -- Python 환경, 설정 파일, 시작을 위한 GPU가 필요하지 않습니다.**',
       audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
@@ -2402,7 +2402,7 @@ schema: {
           content: '설치 스크립트가 자동으로 Ollama를 systemd 서비스로 등록합니다. 관리 방법:',
           codeBlock: '# Check service status\nsystemctl status ollama\n\n# Start / stop / restart\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# View logs\njournalctl -u ollama -f',
           codeLanguage: 'bash',
-          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-ko.png',
+          image: '/images/how-to-install-ollama-linux-systemd-flow-hero-ko.webp',
           imageCaption: 'Linux에서 Ollama를 systemd 서비스로 실행하는 4단계 흐름: `curl -fsSL https://ollama.com/install.sh | sh`로 설치, `systemctl status ollama`로 상태 확인, `start`/`stop`/`restart`로 제어, `journalctl -u ollama -f`로 로그 실시간 확인.',
         },
         firstModel: {
@@ -2444,7 +2444,7 @@ schema: {
         troubleshooting: {
           id: 'troubleshooting',
           title: '일반적인 Ollama 설치 문제 해결',
-          image: '/images/how-to-install-ollama-troubleshooting-table-hero-ko.png',
+          image: '/images/how-to-install-ollama-troubleshooting-table-hero-ko.webp',
           imageCaption: 'Ollama 설치 시 흔한 5가지 오류 참조표 -- 서비스 미실행, 2-47GB 다운로드 멈춤, 메모리 부족 오류, GPU 미감지, 4096 토큰에서 프롬프트 잘림 -- 각각의 해결 명령 포함.',
           faqs: [
             {

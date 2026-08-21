@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-en.png',
+    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-en.webp',
     title: 'What Hardware Do You Need to Fine-Tune a 7B Model Locally?',
     seoTitle: 'Hardware to Fine-Tune a 7B Model Locally 2026',
     metaDescription: 'Fine-tune a 7B model locally with QLoRA on an RTX 4090 24GB (comfortable) or RTX 4060 Ti 16GB (workable with a smaller batch size). No multi-GPU needed.',
@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-ar.png',
+    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-ar.webp',
     title: 'ما العتاد اللازم للضبط الدقيق لنموذج 7B محليًا؟',
     seoTitle: 'عتاد الضبط الدقيق لنموذج 7B محليًا 2026',
     metaDescription: 'اضبط نموذج 7B دقيقًا محليًا بتقنية QLoRA على بطاقة RTX 4090 24GB (مريحة) أو RTX 4060 Ti 16GB (قابلة للعمل بحجم دفعة أصغر). لا حاجة لبطاقات GPU متعددة.',
@@ -232,7 +232,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-de.png',
+    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-de.webp',
     title: 'Welche Hardware braucht man, um ein 7B-Modell lokal zu fine-tunen?',
     seoTitle: 'Hardware zum lokalen Fine-Tuning eines 7B-Modells 2026',
     metaDescription: 'Fine-Tuning eines 7B-Modells lokal mit QLoRA auf RTX 4090 24GB (komfortabel) oder RTX 4060 Ti 16GB (kleinere Batch-Größe). Kein Multi-GPU nötig.',
@@ -346,7 +346,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-es.png',
+    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-es.webp',
     title: '¿Qué Hardware Necesitas para Hacer Fine-Tuning de un Modelo de 7B Localmente?',
     seoTitle: 'Hardware para Fine-Tuning de un Modelo de 7B Local 2026',
     metaDescription: 'Haz fine-tuning de un modelo de 7B localmente con QLoRA en RTX 4090 24GB (cómodo) o RTX 4060 Ti 16GB (batch más pequeño). No necesitas multi-GPU.',
@@ -460,7 +460,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-fr.png',
+    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-fr.webp',
     title: 'Quel matériel faut-il pour effectuer un fine-tuning local d\'un modèle 7B ?',
     seoTitle: 'Matériel pour fine-tuner un modèle 7B en local 2026',
     metaDescription: 'Effectuez un fine-tuning local d\'un modèle 7B avec QLoRA sur RTX 4090 24 Go (confortable) ou RTX 4060 Ti 16 Go (batch réduit). Aucun multi-GPU requis.',
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-ja.png',
+    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-ja.webp',
     title: '7Bモデルをローカルでファインチューニングするために必要なハードウェアは?',
     seoTitle: '2026年版 7Bモデルをローカルでファインチューニングするハードウェア',
     metaDescription: 'RTX 4090 24GB(快適)かRTX 4060 Ti 16GB(バッチサイズを小さくすれば実用的)でQLoRAを使い7Bモデルをローカルでファインチューニング。マルチGPUは不要。',
@@ -688,7 +688,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-ko.png',
+    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-ko.webp',
     title: '7B 모델을 로컬에서 파인튜닝하려면 어떤 하드웨어가 필요한가?',
     seoTitle: '2026년 7B 모델 로컬 파인튜닝 하드웨어',
     metaDescription: 'QLoRA로 RTX 4090 24GB(편안함)나 RTX 4060 Ti 16GB(더 작은 배치 크기로 작동 가능)에서 7B 모델을 로컬로 파인튜닝하십시오. 멀티 GPU는 필요 없습니다.',
@@ -802,7 +802,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-pt.png',
+    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-pt.webp',
     title: 'Qual Hardware Você Precisa para Fazer Fine-Tuning de um Modelo de 7B Localmente?',
     seoTitle: 'Hardware para Fine-Tuning de Modelo de 7B Localmente 2026',
     metaDescription: 'Faça fine-tuning de um modelo 7B com QLoRA em RTX 4090 24GB (confortável) ou RTX 4060 Ti 16GB (batch size menor). Sem necessidade de multi-GPU.',
@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Hardware-Specific',
-    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-zh.png',
+    heroImage: '/images/fine-tuning-7b-model-locally-hardware-overview-hero-zh.webp',
     title: '本地微调 7B 模型需要什么硬件？',
     seoTitle: '2026 年本地微调 7B 模型的硬件',
     metaDescription: '在 RTX 4090 24GB（舒适）或 RTX 4060 Ti 16GB（配合较小批量可行）上使用 QLoRA 在本地微调 7B 模型。无需多 GPU。',

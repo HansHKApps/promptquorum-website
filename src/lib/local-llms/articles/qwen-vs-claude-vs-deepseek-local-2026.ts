@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
     theme: 'Best Models',
-    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-en.png',
+    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-en.webp',
     title: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2: Local LLM vs Cloud Comparison 2026',
     seoTitle: 'Qwen 3 vs Claude 4.6 vs DeepSeek R2: 2026 Benchmark',
     intro: 'Qwen 3.6 27B reaches 77.2% SWE-bench and 92.1% HumanEval locally on 16 GB VRAM. Claude Sonnet 5 scores 89.4% HumanEval with no hardware requirement. DeepSeek R2 delivers frontier reasoning at $0.14/1M input tokens. This comparison covers benchmark data, EU GDPR jurisdiction, per-token cost math, and the dispatch layer problem that makes single-model choices obsolete in 2026.',
@@ -185,7 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cost: {
         id: 'cost-comparison',
         title: 'Cost per 1M Tokens',
-        content: 'Per-token pricing determines cloud LLM economics at scale. The comparison below uses input token pricing only; output pricing is typically 3–5× higher. Current pricing: [Claude Sonnet 5 via Anthropic](https://www.anthropic.com/pricing/claude) and public DeepSeek API documentation.',
+        content: 'Per-token pricing determines cloud LLM economics at scale. The comparison below uses input token pricing only; output pricing is typically 3–5× higher. Current pricing: [Claude Sonnet 5 via Anthropic](https://www.anthropic.com/pricing) and public DeepSeek API documentation.',
         rows: [
           { Model: 'DeepSeek R2', 'Input ($/1M)': '$0.14', 'Output ($/1M)': '$0.55', 'Monthly at 300M tokens': '$42', 'GDPR Safe for EU': '❌' },
           { Model: 'Qwen 3.6 (cloud, Alibaba)', 'Input ($/1M)': '~$0.30', 'Output ($/1M)': '~$0.90', 'Monthly at 300M tokens': '$90', 'GDPR Safe for EU': '⚠️ Region-dependent' },
@@ -286,7 +286,7 @@ dispatch_rules:
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
     theme: 'Best Models',
-    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-es.png',
+    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-es.webp',
     title: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2: LLM Local vs Cloud Comparación 2026',
     seoTitle: 'Qwen 3 vs Claude 4.6 vs DeepSeek R2: Comparativa 2026',
     intro: 'Qwen 3.6 27B alcanza 92,1% HumanEval y 77,2% SWE-bench de forma local con 16 GB de VRAM. Claude Sonnet 5 logra 89,4% HumanEval sin requerimientos de hardware. DeepSeek R2 ofrece razonamiento frontier a $0,14/1M tokens de entrada. Esta comparativa cubre datos de benchmarks, jurisdicción GDPR de la UE, matemáticas de coste por token y el problema de la capa de despacho que hace obsoletas las estrategias de modelo único en 2026.',
@@ -404,7 +404,7 @@ dispatch_rules:
       cost: {
         id: 'cost-comparison',
         title: 'Coste por 1M de tokens',
-        content: 'El precio por token determina la economía de los LLMs en la nube a escala. La comparativa a continuación usa solo precios de tokens de entrada; el precio de salida suele ser 3–5× mayor. Precios actuales: [Claude Sonnet 5 via Anthropic](https://www.anthropic.com/pricing/claude) y documentación pública de la API de DeepSeek.',
+        content: 'El precio por token determina la economía de los LLMs en la nube a escala. La comparativa a continuación usa solo precios de tokens de entrada; el precio de salida suele ser 3–5× mayor. Precios actuales: [Claude Sonnet 5 via Anthropic](https://www.anthropic.com/pricing) y documentación pública de la API de DeepSeek.',
         rows: [
           { Modelo: 'DeepSeek R2', 'Entrada ($/1M)': '$0,14', 'Salida ($/1M)': '$0,55', 'Mensual a 300M tokens': '$42', 'Seguro GDPR para UE': '❌' },
           { Modelo: 'Qwen 3.6 (nube, Alibaba)', 'Entrada ($/1M)': '~$0,30', 'Salida ($/1M)': '~$0,90', 'Mensual a 300M tokens': '$90', 'Seguro GDPR para UE': '⚠️ Dependiente de región' },
@@ -533,7 +533,7 @@ dispatch_rules:
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
     theme: 'Best Models',
-    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-ar.png',
+    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-ar.webp',
     title: '⁨Qwen 3⁩ مقابل ⁨Claude Sonnet 5⁩ مقابل ⁨DeepSeek R2⁩: مقارنة ⁨LLM⁩ المحلي مقابل السحابي ⁨2026⁩',
     seoTitle: '⁨Qwen 3⁩ مقابل ⁨Claude 4.6⁩ مقابل ⁨DeepSeek R2⁩: ⁨2026⁩',
     intro: 'يحقق Qwen 3.6 27B نسبة 92.1% HumanEval و77.2% SWE-bench محليًا بـ 16 GB من VRAM. يحقق Claude Sonnet 5 نسبة 89.4% HumanEval دون متطلبات أجهزة. يقدّم DeepSeek R2 استدلالًا حدوديًا بـ $0.14/1M token إدخال. تغطي هذه المقارنة بيانات المعايير والولاية القضائية لـ GDPR في الاتحاد الأوروبي وحسابات تكلفة الـ token ومشكلة طبقة التوزيع التي تجعل استراتيجيات النموذج الواحد عتيقة في 2026.',
@@ -651,7 +651,7 @@ dispatch_rules:
       cost: {
         id: 'cost-comparison',
         title: 'التكلفة لكل 1M token',
-        content: 'يحدد السعر لكل token اقتصاديات نماذج LLM السحابية على نطاق واسع. تستخدم المقارنة أدناه أسعار tokens الإدخال فقط؛ سعر الإخراج عادةً أعلى بـ 3–5×. الأسعار الحالية: [Claude Sonnet 5 عبر Anthropic](https://www.anthropic.com/pricing/claude) والتوثيق العام لـ API الخاص بـ DeepSeek.',
+        content: 'يحدد السعر لكل token اقتصاديات نماذج LLM السحابية على نطاق واسع. تستخدم المقارنة أدناه أسعار tokens الإدخال فقط؛ سعر الإخراج عادةً أعلى بـ 3–5×. الأسعار الحالية: [Claude Sonnet 5 عبر Anthropic](https://www.anthropic.com/pricing) والتوثيق العام لـ API الخاص بـ DeepSeek.',
         rows: [
           { Modelo: 'DeepSeek R2', 'Entrada ($/1M)': '$0.14', 'Salida ($/1M)': '$0.55', 'Mensual a 300M tokens': '$42', 'Seguro GDPR para UE': '❌' },
           { Modelo: 'Qwen 3.6 (سحابي، Alibaba)', 'Entrada ($/1M)': '~$0.30', 'Salida ($/1M)': '~$0.90', 'Mensual a 300M tokens': '$90', 'Seguro GDPR para UE': '⚠️ يعتمد على المنطقة' },
@@ -780,7 +780,7 @@ dispatch_rules:
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
     theme: 'Best Models',
-    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-pt.png',
+    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-pt.webp',
     title: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2: LLM Local vs Nuvem 2026',
     seoTitle: 'Qwen 3 vs Claude 4.6 vs DeepSeek R2: Comparação 2026',
     intro: 'O Qwen 3.6 27B atinge 92,1% no HumanEval e 77,2% no SWE-bench localmente com 16 GB de VRAM. O Claude Sonnet 5 alcança 89,4% no HumanEval sem requisitos de hardware. O DeepSeek R2 oferece raciocínio frontier a $0,14/1M tokens de entrada. Esta comparação cobre dados de benchmarks, jurisdição GDPR da UE, cálculos de custo por token e o problema da camada de despacho que torna obsoletas as estratégias de modelo único em 2026.',
@@ -1001,7 +1001,7 @@ dispatch_rules:
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
     theme: 'Best Models',
-    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-de.png',
+    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-de.webp',
     title: 'Qwen 3 vs. Claude Sonnet 5 vs. DeepSeek R2: Lokale KI vs. Cloud-Vergleich 2026',
     seoTitle: 'Qwen 3 vs. Claude Sonnet 5 vs. DeepSeek R2: Vergleich 2026',
     intro: 'Qwen 3.6 27B erreicht 92,1% HumanEval lokal auf 16 GB VRAM. Claude Sonnet 5 kommt auf 89,4% HumanEval ohne Hardware-Anforderungen. DeepSeek R2 bietet Frontier-Reasoning ab 0,14 $/1M Token. Dieser Vergleich deckt Benchmark-Daten, DSGVO-Jurisdiktion, Token-Kosten und die Dispatch-Layer-Problematik ab.',
@@ -1118,7 +1118,7 @@ dispatch_rules:
       cost: {
         id: 'cost-comparison',
         title: 'Kosten pro 1M Token',
-        content: 'Die Token-bezogene Preisgestaltung bestimmt Cloud-LLM-Wirtschaft im großen Maßstab. Der Vergleich unten nutzt nur Input-Token-Preise; Output-Preise sind typischerweise 3–5× höher. Aktuelle Preise: [Claude Sonnet 5 via Anthropic](https://www.anthropic.com/pricing/claude) und öffentliche DeepSeek-API-Dokumentation.',
+        content: 'Die Token-bezogene Preisgestaltung bestimmt Cloud-LLM-Wirtschaft im großen Maßstab. Der Vergleich unten nutzt nur Input-Token-Preise; Output-Preise sind typischerweise 3–5× höher. Aktuelle Preise: [Claude Sonnet 5 via Anthropic](https://www.anthropic.com/pricing) und öffentliche DeepSeek-API-Dokumentation.',
         rows: [
           { Modell: 'DeepSeek R2', 'Input ($/1M)': '$0,14', 'Output ($/1M)': '$0,55', 'Monatlich bei 300M Token': '$42', 'DSGVO-sicher für EU': '❌' },
           { Modell: 'Qwen 3.6 (Cloud, Alibaba)', 'Input ($/1M)': '~$0,30', 'Output ($/1M)': '~$0,90', 'Monatlich bei 300M Token': '$90', 'DSGVO-sicher für EU': '⚠️ Region-abhängig' },
@@ -1223,7 +1223,7 @@ dispatch_rules:
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
     theme: 'Best Models',
-    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-fr.png',
+    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-fr.webp',
     title: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 : Comparatif Local vs Cloud 2026',
     seoTitle: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 : Comparaison 2026',
     intro: 'Qwen 3.6 27B atteint 92.1% HumanEval en local sur 16 Go VRAM. Claude Sonnet 5 obtient 89.4% HumanEval sans matériel requis. DeepSeek R2 offre un raisonnement frontier à 0.14 $/1M tokens. Cette comparaison couvre les benchmarks, la juridiction RGPD, le coût par token et le problème de couche dispatch.',
@@ -1340,7 +1340,7 @@ dispatch_rules:
       cost: {
         id: 'cost-comparison',
         title: 'Coût par 1M tokens',
-        content: 'Les tarifs par token déterminent l\'économie du cloud IA en grand volume. Comparaison ci-dessous utilise input tokens ; output coûte 3–5× plus. Tarifs actuels : [Claude Sonnet 5 Anthropic](https://www.anthropic.com/pricing/claude) et documentation API DeepSeek.',
+        content: 'Les tarifs par token déterminent l\'économie du cloud IA en grand volume. Comparaison ci-dessous utilise input tokens ; output coûte 3–5× plus. Tarifs actuels : [Claude Sonnet 5 Anthropic](https://www.anthropic.com/pricing) et documentation API DeepSeek.',
         rows: [
           { Modèle: 'DeepSeek R2', 'Input ($/1M)': '$0.14', 'Output ($/1M)': '$0.55', 'Mensuel 300M': '$42', 'RGPD UE': '❌' },
           { Modèle: 'Qwen 3.6 (cloud Alibaba)', 'Input ($/1M)': '~$0.30', 'Output ($/1M)': '~$0.90', 'Mensuel 300M': '$90', 'RGPD UE': '⚠️ Région-dépendant' },
@@ -1445,7 +1445,7 @@ dispatch_rules:
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
     theme: 'Best Models',
-    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-zh.png',
+    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-zh.webp',
     title: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2：本地LLM vs 云端对比 2026',
     seoTitle: 'Qwen 3 vs Claude vs DeepSeek：2026年完整对比',
     intro: 'Qwen 3.6 27B在16 GB显存下本地运行达到92.1% HumanEval。Claude Sonnet 5无需硬件、89.4% HumanEval。DeepSeek R2为最便宜的前沿推理方案，$0.14/1M令牌。本比较涵盖基准测试数据、中国数据安全法合规性、每令牌成本核算，以及多模型分发架构。',
@@ -1560,7 +1560,7 @@ dispatch_rules:
       cost: {
         id: 'cost-comparison',
         title: '每1M令牌成本对比',
-        content: '成本计算仅比较输入令牌(输出成本通常为3-5倍)。本地推断成本在一次性硬件投资后仅为电力成本。当前价格：[Claude Sonnet 5官方定价](https://www.anthropic.com/pricing/claude)和DeepSeek公开API文档。',
+        content: '成本计算仅比较输入令牌(输出成本通常为3-5倍)。本地推断成本在一次性硬件投资后仅为电力成本。当前价格：[Claude Sonnet 5官方定价](https://www.anthropic.com/pricing)和DeepSeek公开API文档。',
         rows: [
           { '模型': 'DeepSeek R2', '输入($/1M)': '$0.14', '输出($/1M)': '$0.55', '月300M令牌成本': '$42', '中国数据安全法合规': '❌' },
           { '模型': 'Qwen 3.6 (云端,阿里云)', '输入($/1M)': '~$0.30', '输出($/1M)': '~$0.90', '月300M令牌成本': '$90', '中国数据安全法合规': '⚠️ 区域依赖' },
@@ -1708,7 +1708,7 @@ dispatch_rules:
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
     theme: 'Best Models',
-    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-ja.png',
+    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-ja.webp',
     title: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2：ローカルLLM vs クラウド比較 2026',
     seoTitle: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2：2026年比較',
     intro: 'Qwen 3.6 27Bは16 GB VRAMでローカル実行して77.2% SWE-benchと92.1% HumanEvalを達成。Claude Sonnet 5はハードウェア不要で89.4% HumanEval。DeepSeek R2は$0.14/1Mトークンでフロンティア推論を実現。このガイドはベンチマーク、日本のAI規制対応、トークンコスト分析、そして2026年における単一モデル戦略の陳腐化をもたらすディスパッチレイヤー問題をカバーします。',
@@ -1983,7 +1983,7 @@ dispatchers:
       headline: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2：ローカルLLM vs クラウド比較 2026',
       description: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2：HumanEval、SWE-bench、1Mトークンあたりコスト、METI AI戦略対応、ハードウェア要件を徹底比較。2026年5月更新。',
       inLanguage: 'ja',
-      image: 'https://www.promptquorum.com/images/og-qwen-vs-claude-vs-deepseek.png',
+      image: 'https://www.promptquorum.com/images/og-qwen-vs-claude-vs-deepseek.webp',
       datePublished: '2026-05-16',
       dateModified: '2026-07-13',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2023,7 +2023,7 @@ dispatchers:
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-16',
     theme: 'Best Models',
-    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-ko.png',
+    heroImage: '/images/qwen-vs-claude-vs-deepseek-local-2026-overview-hero-ko.webp',
     title: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2: 로컬 LLM vs 클라우드 비교 2026',
     seoTitle: 'Qwen 3 vs Claude 4.6 vs DeepSeek R2: 2026 벤치마크',
     intro: 'Qwen 3.6 27B는 16 GB VRAM 환경에서 로컬로 실행하여 SWE-bench 77.2%, HumanEval 92.1%를 달성합니다. Claude Sonnet 5는 하드웨어 요구 사항 없이 HumanEval 89.4%를 기록합니다. DeepSeek R2는 입력 토큰당 $0.14/1M이라는 최저 비용으로 최전선 추론 성능을 제공합니다. 이 비교 분석은 벤치마크 데이터, EU GDPR 관할권, 토큰당 비용 계산, 그리고 2026년에 단일 모델 선택을 더 이상 유효하지 않게 만드는 디스패치 레이어 문제를 다룹니다.',
@@ -2152,7 +2152,7 @@ dispatchers:
       cost: {
         id: 'cost-comparison',
         title: '1M 토큰당 비용',
-        content: '토큰당 가격은 대규모 클라우드 LLM 경제성을 결정합니다. 아래 비교는 입력 토큰 가격만 사용하며, 출력 가격은 일반적으로 3~5배 높습니다. 현재 가격: [Anthropic의 Claude Sonnet 5](https://www.anthropic.com/pricing/claude) 및 DeepSeek 공개 API 문서를 참조하십시오.',
+        content: '토큰당 가격은 대규모 클라우드 LLM 경제성을 결정합니다. 아래 비교는 입력 토큰 가격만 사용하며, 출력 가격은 일반적으로 3~5배 높습니다. 현재 가격: [Anthropic의 Claude Sonnet 5](https://www.anthropic.com/pricing) 및 DeepSeek 공개 API 문서를 참조하십시오.',
         rows: [
           { '모델': 'DeepSeek R2', '입력 ($/1M)': '$0.14', '출력 ($/1M)': '$0.55', '300M 토큰/월 비용': '$42', 'EU GDPR 안전': '❌' },
           { '모델': 'Qwen 3.6 (클라우드, Alibaba)', '입력 ($/1M)': '~$0.30', '출력 ($/1M)': '~$0.90', '300M 토큰/월 비용': '$90', 'EU GDPR 안전': '⚠️ 리전 의존' },

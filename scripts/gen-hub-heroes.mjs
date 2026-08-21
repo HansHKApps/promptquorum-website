@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // One-off generator for the 5 hub-page hero images (batch 02).
 // Posts real, already-published per-locale copy to /api/hero-image and saves
-// the PNG to public/images/{cluster}-hub-overview-hero-{lang}.png.
+// the image to public/images/{cluster}-hub-overview-hero-{lang}.webp.
 // Usage: node scripts/gen-hub-heroes.mjs (requires the dev server running on :3055)
 
 const BASE = 'http://localhost:3055';
@@ -72,7 +72,7 @@ async function generate(cluster, lang, spec) {
   });
   if (!res.ok) throw new Error(`${cluster}/${lang}: HTTP ${res.status}`);
   const buf = Buffer.from(await res.arrayBuffer());
-  const path = `public/images/${cluster}-hub-overview-hero-${lang}.png`;
+  const path = `public/images/${cluster}-hub-overview-hero-${lang}.webp`;
   await import('node:fs/promises').then(fs => fs.writeFile(path, buf));
   console.log(`  ${path} (${buf.length} bytes)`);
 }

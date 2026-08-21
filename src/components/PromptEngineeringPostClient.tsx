@@ -6,8 +6,7 @@ import Link from 'next/link'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
-import { peContent, type PESection } from '@/lib/prompt-engineering/content'
-import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
+import type { PESection, PEArticle } from '@/lib/prompt-engineering/types'
 import { LEARNING_PATHS, TRENDING_TERMS_2026, getTermPaths, DOMAIN_TO_PATH, LEVEL_TO_PATHS, type LearningPath } from '@/lib/prompt-engineering/learningPaths'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { LangLinksBar } from '@/components/LangLinksBar'
@@ -19,6 +18,7 @@ import { parseContentBlocks } from '@/lib/parseContentBlocks'
 interface Props {
   slug: string
   initialLang?: Language
+  articleData: Partial<Record<Language, PEArticle>>
 }
 
 // Jump-to-section translations
@@ -1176,11 +1176,9 @@ const THEME_COLORS: Record<string, { dot: string; badge: string; label: string }
   'Policy & Compliance': { dot: 'bg-rose-400',   badge: 'bg-rose-50 text-rose-700 border border-rose-200',     label: 'Policy & Compliance' },
 }
 
-function PromptEngineeringPostContent({ slug, initialLang }: Props) {
+function PromptEngineeringPostContent({ slug, initialLang, articleData }: Props) {
   const clientLang = useLang(initialLang) as Language
   const lang: Language = clientLang
-  const key = PE_SLUG_TO_KEY[slug]
-  const articleData = key ? peContent[key] : null
   const [searchQuery, setSearchQuery] = useState('')
   const [levelFilter, setLevelFilter] = useState('all')
   const [domainFilter, setDomainFilter] = useState('all')

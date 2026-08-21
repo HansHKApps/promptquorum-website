@@ -45,6 +45,7 @@ export interface LLMSection {
   numberedItems?: (string | { title: string; whyItMatters: string })[]
   rows?: Array<{ [key: string]: string }>
   columns?: string[]
+  itemHeadings?: boolean
   faqs?: Array<{ q: string; a: string }>
   isTldr?: boolean
   tableFormat?: boolean

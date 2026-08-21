@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Creative writing is the workload where local LLMs win on more than privacy and price. The best instruct-tuned and uncensored open-weight models in 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command A+, Yi-1.5 34B, and the Hermes/Dolphin uncensored derivatives — produce fiction, dialogue, and worldbuilding that holds up against frontier cloud models on most prompts. The differences are in voice consistency, willingness to handle dark or adult themes, and how naturally they take direction. This guide tests six picks against 50+ creative prompts across fiction, dialogue, poetry, and worldbuilding, with the temperature and top-p settings each one wants.',
     metaDescription:
       'Compare 6 local models for creative writing: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5, and uncensored variants. Tested on 50+ creative prompts.',
-    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-en.png',
+    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-en.webp',
     twitterDescription:
       '6 local models for fiction, dialogue, and worldbuilding tested on 50+ creative prompts. Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5, plus uncensored picks. Verdict per task type.',
     current_models_mentioned: [
@@ -161,7 +161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Two-model setup is the common pattern: Llama 3.3 70B (or Qwen3 32B) as the daily driver, plus the Hermes 3 derivative on the same Ollama for scenes the instruct version refuses. Switch between them per scene; both can sit in `ollama list` at the same time without conflict.',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-en.png',
+          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-en.webp',
           imageCaption: 'Llama 3.3 70B wins broadest; specialists win one category each — pick by task, not overall rank.',
         },
       verdicts: {
@@ -301,7 +301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Most writers overthink the model and underthink the prompt. A well-crafted system prompt with character notes, voice samples, and explicit POV does more for the output than switching from Qwen3 to Llama 70B. See [persona prompting](/prompt-engineering/persona-prompting) for the prompt structure that consistently lifts creative output.',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-en.png',
+          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-en.webp',
           imageCaption: 'Start with Qwen3 32B if unsure — it covers most workflows on consumer hardware.',
         },
       commonMistakes: {
@@ -405,7 +405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Beim kreativen Schreiben punkten lokale LLMs nicht nur mit Datenschutz und Kosteneffizienz. Die besten Instruct-tuned und Uncensored Open-Weight-Modelle 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command A+, Yi-1.5 34B sowie die Hermes/Dolphin-Uncensored-Derivate — liefern Belletristik, Dialog und Weltenbau, die auf den meisten Prompts mit führenden Cloud-Modellen mithalten können. Die Unterschiede liegen in der Stimmkonsistenz, der Bereitschaft für dunkle oder erwachsene Themen und der Fähigkeit, Anweisungen natürlich umzusetzen. Dieser Leitfaden testet sechs Modelle auf 50+ kreative Prompts aus Belletristik, Dialog, Poesie und Weltenbau — inklusive der optimalen Temperatur- und Top-p-Einstellungen.',
     metaDescription:
       '6 lokale Modelle für kreatives Schreiben verglichen: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 und Uncensored-Varianten. Getestet auf 50+ Prompts.',
-    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-de.png',
+    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-de.webp',
     twitterDescription:
       '6 lokale Modelle für Belletristik, Dialog und Weltenbau getestet auf 50+ Prompts. Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 plus Uncensored-Picks. Urteil je Aufgabentyp.',
     current_models_mentioned: [
@@ -548,7 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Zwei-Modell-Setup ist das gängige Muster: Llama 3.3 70B (oder Qwen3 32B) als täglicher Treiber, plus das Hermes-3-Derivat im selben Ollama für Szenen, die die Instruct-Version ablehnt. Zwischen ihnen je Szene wechseln; beide können gleichzeitig in `ollama list` liegen ohne Konflikt.',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-de.png',
+          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-de.webp',
           imageCaption: 'Llama 3.3 70B gewinnt am breitesten; Spezialisten gewinnen je eine Kategorie — nach Aufgabe wählen, nicht nach Gesamtrang.',
         },
       verdicts: {
@@ -688,7 +688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Die meisten Autoren denken zu viel über das Modell nach und zu wenig über den Prompt. Ein sorgfältig gestalteter System-Prompt mit Charakternotizen, Stimmproben und explizitem POV tut mehr für die Ausgabe als der Wechsel von Qwen3 zu Llama 70B. Siehe [Persona-Prompting](/de/prompt-engineering/persona-prompting) für die Prompt-Struktur, die kreative Ausgaben konsistent verbessert.',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-de.png',
+          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-de.webp',
           imageCaption: 'Bei Unsicherheit mit Qwen3 32B starten — deckt die meisten Workflows auf Consumer-Hardware ab.',
         },
       commonMistakes: {
@@ -799,7 +799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'L\'écriture créative est le domaine où les LLM locaux s\'imposent au-delà de la seule confidentialité et du coût. Les meilleurs modèles open-weight instruction-tuned et non censurés de 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command A+, Yi-1.5 34B et les dérivés non censurés Hermes/Dolphin — produisent de la fiction, des dialogues et de la construction de mondes comparables aux modèles cloud frontaux sur la plupart des prompts. Les différences portent sur la cohérence de la voix narrative, la capacité à traiter des thèmes sombres ou adultes, et la façon dont ils suivent les directives. Ce guide teste six modèles sur plus de 50 prompts créatifs couvrant fiction, dialogue, poésie et construction de mondes, avec les paramètres de température et de top-p adaptés à chacun.',
     metaDescription:
       '6 LLM locaux comparés pour l\'écriture créative : Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 et variantes non censurées. Testés sur plus de 50 prompts créatifs.',
-    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-fr.png',
+    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-fr.webp',
     twitterDescription:
       '6 modèles locaux pour la fiction, le dialogue et la construction de mondes testés sur 50+ prompts. Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 et options non censurées. Verdict par type de tâche.',
     current_models_mentioned: [
@@ -942,7 +942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'La configuration à deux modèles est le schéma courant : Llama 3.3 70B (ou Qwen3 32B) comme modèle principal, plus le dérivé Hermes 3 sur le même Ollama pour les scènes que la version instruct refuse. Basculer entre eux selon les scènes ; les deux peuvent coexister dans `ollama list` sans conflit.',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-fr.png',
+          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-fr.webp',
           imageCaption: 'Llama 3.3 70B gagne le plus largement ; les spécialistes gagnent une catégorie chacun — choisissez selon la tâche, pas le classement global.',
         },
       verdicts: {
@@ -1082,7 +1082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'La plupart des auteurs réfléchissent trop au modèle et pas assez au prompt. Un prompt système bien conçu avec des notes de personnage, des échantillons de voix et un PDV explicite fait plus pour la qualité de la sortie que passer de Qwen3 à Llama 70B. Voir [persona prompting](/fr/prompt-engineering/persona-prompting) pour la structure de prompt qui améliore régulièrement la sortie créative.',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-fr.png',
+          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-fr.webp',
           imageCaption: 'En cas de doute, commencez par Qwen3 32B — couvre la plupart des flux sur matériel grand public.',
         },
       commonMistakes: {
@@ -1193,7 +1193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'クリエイティブライティングは、ローカルLLMがプライバシーやコスト以外の面でも優位性を発揮するワークロードです。2026年のベストなinstruct-tuned・無検閲オープンウェイトモデル——Llama 3.3 70B、Qwen3 32B、Mistral Large、Command A+、Yi-1.5 34B、そしてHermes/Dolphinの無検閲派生版——は、ほとんどのプロンプトでフロンティアクラウドモデルに匹敵する小説・ダイアログ・世界構築を生成します。違いは声の一貫性、ダークまたは成人向けテーマの扱い、方向性への従いやすさにあります。本ガイドでは、6つのモデルを小説・ダイアログ・詩・世界構築にまたがる50以上のクリエイティブプロンプトでテストし、各モデルに適した温度とTop-Pの設定も紹介します。',
     metaDescription:
       'クリエイティブライティング向けローカルLLM 6モデル比較：Llama 3.3、Qwen3、Mistral Large、Command A+、Yi-1.5、無検閲版。50以上のプロンプトで実測。',
-    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-ja.png',
+    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-ja.webp',
     twitterDescription:
       '小説・ダイアログ・世界構築向けローカルLLM 6モデルを50以上のプロンプトでテスト。Llama 3.3、Qwen3、Mistral Large、Command A+、Yi-1.5と無検閲オプション。タスク別評価。',
     current_models_mentioned: [
@@ -1336,7 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '2モデル構成が一般的なパターンです：メインドライバーとしてLlama 3.3 70B（またはQwen3 32B）、instructバージョンが拒否するシーン用に同じOllamaにHermes 3派生版も追加します。シーンごとに切り替えられます；両方が`ollama list`に同時に存在しても競合しません。',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-ja.png',
+          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-ja.webp',
           imageCaption: 'Llama 3.3 70Bが最も幅広く優れる。専門モデルはそれぞれ1分野で勝る — 総合順位ではなくタスクで選ぶ。',
         },
       verdicts: {
@@ -1476,7 +1476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ほとんどの著者はモデルを考えすぎてプロンプトを考えなさすぎます。キャラクターノート・声のサンプル・明示的なPOVを含む適切に作られたシステムプロンプトは、Qwen3からLlama 70Bに切り替えるよりも出力品質に対してより多くのことをします。クリエイティブ出力を一貫して向上させるプロンプト構造については[ペルソナプロンプティング](/ja/prompt-engineering/persona-prompting)をご覧ください。',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-ja.png',
+          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-ja.webp',
           imageCaption: '迷ったらQwen3 32Bから — 一般的なコンシューマー機材のワークフローの大半をカバーする。',
         },
       commonMistakes: {
@@ -1587,7 +1587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '创意写作是本地LLM在隐私和价格之外更能体现优势的工作场景。2026年最优秀的指令调优和无审查开放权重模型——Llama 3.3 70B、Qwen3 32B、Mistral Large、Command A+、Yi-1.5 34B，以及Hermes/Dolphin无审查衍生版——在大多数提示词上，其小说、对话和世界构建输出已能与前沿云端模型比肩。差异体现在声音一致性、处理黑暗或成人题材的意愿，以及对创作方向指令的响应自然度。本指南在50余条创意提示词上对六款模型展开测试，覆盖小说、对话、诗歌、世界构建，并给出每款模型适用的温度与top-p设置。',
     metaDescription:
       '对比6款本地创意写作模型：Llama 3.3、Qwen3、Mistral Large、Command A+、Yi-1.5及无审查衍生版，在50余条创意提示词上测试完成。',
-    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-zh.png',
+    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-zh.webp',
     twitterDescription:
       '6款本地模型在小说、对话、世界构建上的50余条实测结果。Llama 3.3、Qwen3、Mistral Large、Command A+、Yi-1.5及无审查选择，逐任务给出结论。',
     current_models_mentioned: [
@@ -1730,7 +1730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '双模型配置是常见模式：Llama 3.3 70B（或Qwen3 32B）作为日常主力，加上同一Ollama中的Hermes 3衍生版处理指令版拒绝的场景。按场景切换；两款模型可同时出现在`ollama list`中而不冲突。',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-zh.png',
+          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-zh.webp',
           imageCaption: 'Llama 3.3 70B综合最强；专精模型各擅一项 — 按任务选择，而非按总排名。',
         },
       verdicts: {
@@ -1870,7 +1870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '大多数作者过度纠结模型，而忽视提示词。一个附有角色备注、语音示例和明确POV的精良系统提示词，对输出的改善程度远超从Qwen3切换到Llama 70B。请参阅[角色提示词设计](/zh/prompt-engineering/persona-prompting)，了解持续提升创意输出的提示词结构。',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-zh.png',
+          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-zh.webp',
           imageCaption: '不确定时从Qwen3 32B开始 — 覆盖消费级硬件上的大多数工作流。',
         },
       commonMistakes: {
@@ -1981,7 +1981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'La escritura creativa es la carga de trabajo en la que los LLM locales ganan por más que solo privacidad y precio. Los mejores modelos de peso abierto con ajuste de instrucciones y sin censura de 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command A+, Yi-1.5 34B y los derivados sin censura Hermes/Dolphin — producen ficción, diálogo y construcción de mundos que se mantiene a la par de los modelos cloud de frontera en la mayoría de los prompts. Las diferencias están en la consistencia de voz, la disposición para manejar temas oscuros o para adultos y la naturalidad con que siguen instrucciones. Esta guía prueba seis modelos en más de 50 prompts creativos de ficción, diálogo, poesía y construcción de mundos, con los valores de temperatura y top-p que requiere cada uno.',
     metaDescription:
       '6 modelos locales para escritura creativa comparados: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 y variantes sin censura. Probados en 50+ prompts.',
-    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-es.png',
+    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-es.webp',
     twitterDescription:
       '6 modelos locales para ficción, diálogo y construcción de mundos probados en 50+ prompts. Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 y opciones sin censura. Veredicto por tipo de tarea.',
     current_models_mentioned: [
@@ -2124,7 +2124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'El setup de dos modelos es el patrón habitual: Llama 3.3 70B (o Qwen3 32B) como modelo principal, más el derivado Hermes 3 en el mismo Ollama para escenas que la versión instruct rechaza. Cambia entre ellos por escena; ambos pueden estar en `ollama list` al mismo tiempo sin conflicto.',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-es.png',
+          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-es.webp',
           imageCaption: 'Llama 3.3 70B gana en más categorías; los especialistas ganan una cada uno — elige según la tarea, no el ranking general.',
         },
       verdicts: {
@@ -2264,7 +2264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'La mayoría de escritores piensan demasiado en el modelo y no suficiente en el prompt. Un system prompt bien elaborado con notas de personaje, muestras de voz y POV explícito hace más por la calidad de salida que cambiar de Qwen3 a Llama 70B. Ver [persona prompting](/es/prompt-engineering/persona-prompting) para la estructura de prompt que mejora consistentemente la salida creativa.',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-es.png',
+          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-es.webp',
           imageCaption: 'Si tienes dudas, empieza con Qwen3 32B — cubre la mayoría de flujos en hardware de consumo.',
         },
       commonMistakes: {
@@ -2380,7 +2380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'A escrita criativa é a carga de trabalho em que os LLMs locais vencem por mais do que apenas privacidade e preço. Os melhores modelos de peso aberto com ajuste de instruções e sem censura de 2026 — Llama 3.3 70B, Qwen3 32B, Mistral Large, Command A+, Yi-1.5 34B e os derivados sem censura Hermes/Dolphin — produzem ficção, diálogo e construção de mundos que se mantém à altura dos modelos de nuvem de fronteira na maioria dos prompts. As diferenças estão na consistência de voz, na disposição para lidar com temas sombrios ou adultos e na naturalidade com que seguem instruções. Este guia testa seis modelos em mais de 50 prompts criativos de ficção, diálogo, poesia e construção de mundos, com os valores de temperatura e top-p que cada um exige.',
     metaDescription:
       '6 modelos locais para escrita criativa comparados: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 e variantes sem censura. Testados em mais de 50 prompts.',
-    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-pt.png',
+    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-pt.webp',
     twitterDescription:
       '6 modelos locais para ficção, diálogo e construção de mundos testados em mais de 50 prompts. Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 e opções sem censura. Veredito por tipo de tarefa.',
     current_models_mentioned: [
@@ -2523,7 +2523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'O setup de dois modelos é o padrão habitual: Llama 3.3 70B (ou Qwen3 32B) como modelo principal, mais o derivado Hermes 3 no mesmo Ollama para cenas que a versão instruct recusa. Alterne entre eles por cena; ambos podem estar em `ollama list` ao mesmo tempo sem conflito.',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-pt.png',
+          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-pt.webp',
           imageCaption: 'O Llama 3.3 70B vence de forma mais ampla; especialistas vencem uma categoria cada — escolha pela tarefa, não pelo ranking geral.',
         },
       verdicts: {
@@ -2663,7 +2663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'A maioria dos escritores pensa demais no modelo e não o suficiente no prompt. Um system prompt bem elaborado com notas de personagem, amostras de voz e POV explícito faz mais pela qualidade da saída do que mudar do Qwen3 para o Llama 70B. Ver [persona prompting](/pt/prompt-engineering/persona-prompting) para a estrutura de prompt que melhora consistentemente a saída criativa.',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-pt.png',
+          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-pt.webp',
           imageCaption: 'Na dúvida, comece com o Qwen3 32B — cobre a maioria dos fluxos em hardware de consumo.',
         },
       commonMistakes: {
@@ -2779,7 +2779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'الكتابة الإبداعية هي المهمة التي تتفوق فيها نماذج LLM المحلية لأسباب تتجاوز الخصوصية والسعر. أفضل نماذج الأوزان المفتوحة المضبوطة على التعليمات وغير المقيدة في 2026 — Llama 3.3 70B وQwen3 32B وMistral Large وCommand A+ وYi-1.5 34B ومشتقات Hermes/Dolphin غير المقيدة — تنتج خيالاً وحواراً وبناءً للعوالم يضاهي نماذج السحابة الحديثة في معظم الطلبات. تكمن الفوارق في اتساق الأسلوب والاستعداد للتعامل مع الموضوعات المظلمة أو البالغين، ومدى طبيعية استجابتها للتوجيهات. يختبر هذا الدليل ستة نماذج على أكثر من 50 طلباً إبداعياً عبر الخيال والحوار والشعر وبناء العوالم، مع إعدادات الحرارة وtop-p التي تناسب كل نموذج.',
     metaDescription:
       '6 نماذج محلية اختُبرت على 50+ طلباً إبداعياً: Llama 3.3 70B وQwen3 32B وMistral Large وCommand A+ وYi-1.5. مقارنة الأسلوب والإعدادات المثلى.',
-    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-ar.png',
+    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-ar.webp',
     twitterDescription:
       '6 نماذج محلية للخيال والحوار وبناء العوالم اختُبرت على أكثر من 50 طلباً. Llama 3.3 وQwen3 وMistral Large وCommand A+ وYi-1.5 إلى جانب النماذج غير المقيدة. الحكم لكل نوع مهمة.',
     current_models_mentioned: [
@@ -2922,7 +2922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'الإعداد بنموذجَين هو النمط المعتاد: Llama 3.3 70B (أو Qwen3 32B) كنموذج رئيسي، إضافة مشتق Hermes 3 على نفس Ollama للمشاهد التي ترفضها نسخة instruct. بدّل بينهما مشهداً مشهداً؛ يمكن وجود كليهما في `ollama list` في آن واحد دون تعارض.',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-ar.png',
+          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-ar.webp',
           imageCaption: 'يتفوق Llama 3.3 70B في أوسع نطاق؛ النماذج المتخصصة تتفوق كل واحدة في فئة — اختر حسب المهمة لا الترتيب العام.',
         },
       verdicts: {
@@ -3062,7 +3062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'معظم الكتّاب يفكرون كثيراً في النموذج وقليلاً في الموجّه. موجّه نظام مُعدّ جيداً مع ملاحظات الشخصية ونماذج الصوت ووجهة النظر الصريحة يصنع أكثر لجودة المخرجات من التبديل بين Qwen3 وLlama 70B. انظر [التوجيه بالشخصية](/ar/prompt-engineering/persona-prompting) للبنية الموجّهة التي تحسّن المخرجات الإبداعية باستمرار.',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-ar.png',
+          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-ar.webp',
           imageCaption: 'إذا كنت غير متأكد، ابدأ بـ Qwen3 32B — يغطي معظم مهام العمل على أجهزة المستهلكين.',
         },
       commonMistakes: {
@@ -3178,7 +3178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '창작 글쓰기는 로컬 LLM이 단순히 프라이버시와 비용 측면에서만 앞서는 것이 아니라 진정한 가치를 발휘하는 작업입니다. 2026년 최고의 오픈 웨이트 인스트럭션 튜닝 및 비검열 모델인 Llama 3.3 70B, Qwen3 32B, Mistral Large, Command A+, Yi-1.5 34B, 그리고 비검열 파생 모델 Hermes/Dolphin은 대부분의 프롬프트에서 최첨단 클라우드 모델과 대등한 소설, 대화, 세계관 구축 결과물을 생성합니다. 차이는 음성 일관성, 어두운 주제나 성인 소재 처리 의지, 그리고 지시 사항 자연스러운 준수 능력에 있습니다. 이 가이드는 50개 이상의 소설, 대화, 시, 세계관 구축 창작 프롬프트에서 6가지 모델을 테스트하며, 각 모델에 필요한 온도 및 top-p 값을 함께 제공합니다.',
     metaDescription:
       '창작 글쓰기를 위한 로컬 모델 6가지 비교: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 및 비검열 변형. 50개 이상의 프롬프트에서 테스트 완료.',
-    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-ko.png',
+    heroImage: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-ko.webp',
     twitterDescription:
       '소설, 대화, 세계관 구축을 위한 로컬 모델 6가지를 50개 이상의 프롬프트에서 테스트했습니다. Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 및 비검열 옵션. 작업 유형별 최종 평가.',
     current_models_mentioned: [
@@ -3321,7 +3321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '두 모델 설정이 일반적인 패턴입니다: 메인 모델로 Llama 3.3 70B(또는 Qwen3 32B), 인스트럭트 버전이 거부하는 장면을 위해 같은 Ollama에 Hermes 3 파생 모델 추가. 장면별로 전환하십시오; 두 모델 모두 충돌 없이 동시에 `ollama list`에 있을 수 있습니다.',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-ko.png',
+          image: '/images/best-local-llm-creative-writing-2026-model-comparison-hero-ko.webp',
           imageCaption: 'Llama 3.3 70B가 가장 폭넓게 우수함; 전문 모델은 각각 한 분야에서 우수 — 전체 순위가 아닌 작업에 따라 선택.',
         },
       verdicts: {
@@ -3461,7 +3461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '대부분의 작가는 모델에 대해 너무 많이 생각하고 프롬프트에 대해 충분히 생각하지 않습니다. 캐릭터 노트, 음성 샘플, 명시적인 POV가 포함된 잘 작성된 시스템 프롬프트는 Qwen3에서 Llama 70B로 전환하는 것보다 출력 품질에 더 큰 영향을 미칩니다. 창작 출력을 일관되게 향상시키는 프롬프트 구조는 [페르소나 프롬프팅](/ko/prompt-engineering/persona-prompting)을 참조하십시오.',
           },
         ],
-          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-ko.png',
+          image: '/images/best-local-llm-creative-writing-2026-decision-tree-hero-ko.webp',
           imageCaption: '확신이 없다면 Qwen3 32B로 시작 — 소비자 하드웨어의 대부분 워크플로우를 커버함.',
         },
       commonMistakes: {

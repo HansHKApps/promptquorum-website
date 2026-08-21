@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'annual',
       theme: 'Advanced Techniques',
-      heroImage: '/images/future-of-local-llms-overview-hero-en.png',
+      heroImage: '/images/future-of-local-llms-overview-hero-en.webp',
       title: 'Local LLM Trends 2026–2027: 5 Key Predictions for Enterprise Adoption and On-Device AI',
       seoTitle: 'Local LLM Trends 2026–2027: 5 Predictions for Enterprise',
       intro: 'By late 2026: small-model quality per parameter keeps improving, on-device inference works on iPhones (A18) and Snapdragon X Elite phones, reasoning models improve step-by-step accuracy by 15–30%, and enterprise on-premises adoption is expected to grow, led by regulated industries. This guide covers the 5 key trends reshaping local AI in 2026–2027 with timelines, benchmarks, and adoption predictions.',
@@ -288,7 +288,7 @@ schema: {
     es: {
       freshness_tier: 'annual',
       theme: 'Advanced Techniques',
-      heroImage: '/images/future-of-local-llms-overview-hero-es.png',
+      heroImage: '/images/future-of-local-llms-overview-hero-es.webp',
       title: 'Tendencias de LLM local 2026–2027: 5 predicciones clave para la adopción empresarial y la IA en dispositivo',
       seoTitle: 'Tendencias LLM local 2026–2027: 5 predicciones para empresas',
       intro: 'Para finales de 2026: la calidad por parámetro de los modelos pequeños sigue mejorando, la inferencia en dispositivo funciona en iPhones (A18) y teléfonos Snapdragon X Elite, los modelos de razonamiento mejoran la precisión en un 15–30%, y se espera que la adopción empresarial de inferencia local crezca, liderada por sectores regulados. Esta guía cubre las 5 tendencias clave que están redefiniendo la IA local en 2026–2027 con cronogramas, benchmarks y predicciones de adopción.',
@@ -571,7 +571,7 @@ schema: {
     ar: {
       freshness_tier: 'annual',
       theme: 'Advanced Techniques',
-      heroImage: '/images/future-of-local-llms-overview-hero-ar.png',
+      heroImage: '/images/future-of-local-llms-overview-hero-ar.webp',
       title: 'اتجاهات ⁨LLM⁩ المحلية ⁨2026⁩–⁨2027⁩: ⁨5⁩ تنبؤات رئيسية لتبني المؤسسات والذكاء الاصطناعي على الجهاز',
       seoTitle: 'مستقبل ⁨LLMs⁩ المحلية ⁨2026⁩–⁨2027⁩: ⁨5⁩ اتجاهات للمؤسسات',
       intro: 'بحلول نهاية 2026: تستمر جودة النماذج الصغيرة لكل معامل في التحسن، ويعمل الاستدلال على الجهاز على هواتف iPhone (A18) وهواتف Snapdragon X Elite، وتحسّن نماذج الاستدلال الدقة بنسبة 15–30%، ومن المتوقع أن ينمو تبني الاستدلال المحلي في المؤسسات، بقيادة القطاعات الخاضعة للتنظيم. يغطي هذا الدليل الاتجاهات الخمسة الرئيسية التي تعيد تشكيل الذكاء الاصطناعي المحلي في 2026–2027 مع الجداول الزمنية والمعايير وتنبؤات التبني.',
@@ -854,7 +854,7 @@ schema: {
     pt: {
       freshness_tier: 'annual',
       theme: 'Advanced Techniques',
-      heroImage: '/images/future-of-local-llms-overview-hero-pt.png',
+      heroImage: '/images/future-of-local-llms-overview-hero-pt.webp',
       title: 'Tendências de LLM local 2026–2027: 5 previsões principais para adoção empresarial e IA em dispositivo',
       seoTitle: 'Tendências LLM local 2026–2027: 5 previsões para empresas',
       intro: 'Para o final de 2026: a qualidade por parâmetro dos modelos pequenos continua melhorando, a inferência em dispositivo funciona em iPhones (A18) e telefones Snapdragon X Elite, os modelos de raciocínio melhoram a precisão em 15–30%, e espera-se que a adoção empresarial de inferência local cresça, liderada por setores regulados. Este guia cobre as 5 tendências principais que estão redefinindo a IA local em 2026–2027 com cronogramas, benchmarks e previsões de adoção.',
@@ -985,7 +985,7 @@ schema: {
     de: {
       freshness_tier: 'annual',
       theme: 'Advanced Techniques',
-      heroImage: '/images/future-of-local-llms-overview-hero-de.png',
+      heroImage: '/images/future-of-local-llms-overview-hero-de.webp',
       title: 'Lokale LLM Trends 2026–2027: 5 Schlüsselvorhersagen für Enterprise-Adoption und On-Device-KI',
       seoTitle: 'Lokale LLM Trends 2026–2027: 5 Vorhersagen',
       intro: 'Bis Ende 2026: Die Modellqualität pro Parameter bei kleinen Modellen steigt weiter, On-Device-Inferenz funktioniert auf iPhones (A18) und Snapdragon X Elite Telefonen, Reasoning-Modelle verbessern Genauigkeit um 15–30%, und die Enterprise-Adoption von On-Premises-Inferenz wird voraussichtlich wachsen, angeführt von regulierten Branchen. Dieser Leitfaden behandelt die 5 Schlüsseltrends, die lokale KI 2026–2027 mit Zeitplänen, Benchmarks und Adoptionsprognosen umgestalten.',
@@ -1286,7 +1286,7 @@ schema: {
     fr: {
       freshness_tier: 'annual',
       theme: 'Advanced Techniques',
-      heroImage: '/images/future-of-local-llms-overview-hero-fr.png',
+      heroImage: '/images/future-of-local-llms-overview-hero-fr.webp',
       title: 'Tendances LLM local 2026–2027 : 5 prédictions clés pour l\'adoption entreprise et l\'IA sur appareil',
       seoTitle: 'Tendances LLM 2026–2027: 5 prédictions entreprise',
       intro: 'D\'ici fin 2026 : la qualité par paramètre des petits modèles continue de s\'améliorer, l\'inférence sur appareil fonctionne sur les iPhones (A18) et les téléphones Snapdragon X Elite, les modèles de raisonnement améliorent la précision de 15–30%, et l\'adoption de l\'inférence sur site par les entreprises devrait croître, menée par les secteurs réglementés. Ce guide couvre les 5 tendances clés qui remodelent l\'IA locale en 2026–2027 avec les calendriers, les benchmarks et les prédictions d\'adoption.',
@@ -1569,7 +1569,7 @@ schema: {
     ja: {
       freshness_tier: 'annual',
       theme: 'Advanced Techniques',
-      heroImage: '/images/future-of-local-llms-overview-hero-ja.png',
+      heroImage: '/images/future-of-local-llms-overview-hero-ja.webp',
       title: 'ローカルLLMトレンド2026–2027：エンタープライズ導入と端末AI予測',
       seoTitle: 'ローカルLLM2026–2027：5つの予測',
       intro: '2026年末までに：小型モデルのパラメータ当たり品質が向上を続け、iPhone（A18）とSnapdragon X Eliteで端末推論が実用的、推論モデルが精度15–30%向上、そしてエンタープライズのオンプレミス推論導入は規制業界を中心に拡大が見込まれます。このガイドは2026–2027年にローカルAIを変える5つのトレンドをタイムライン、ベンチマーク、導入予測とともに解説します。',
@@ -1852,7 +1852,7 @@ schema: {
     zh: {
       freshness_tier: 'annual',
       theme: 'Advanced Techniques',
-      heroImage: '/images/future-of-local-llms-overview-hero-zh.png',
+      heroImage: '/images/future-of-local-llms-overview-hero-zh.webp',
       title: '本地LLM趋势2026–2027：企业采用与端设备AI的5大预测',
       seoTitle: '本地LLM2026–2027：5个预测',
       intro: '到2026年底：小型模型的参数效率持续提升，iPhone（A18）和Snapdragon X Elite上的端设备推理已经实用，推理模型将精度提高15–30%，企业本地推理的采用预计将持续增长，由受监管行业带头。本指南涵盖2026–2027年重塑本地AI的5大趋势，包括时间表、基准和采用预测。',
@@ -2135,7 +2135,7 @@ schema: {
   ko: {
       freshness_tier: 'annual',
       theme: '고급 기법',
-    heroImage: '/images/future-of-local-llms-overview-hero-ko.png',
+    heroImage: '/images/future-of-local-llms-overview-hero-ko.webp',
       title: '로컬 LLM 트렌드 2026–2027: 기업 도입과 온디바이스 AI를 위한 5가지 핵심 예측',
       seoTitle: '로컬 LLM 트렌드 2026–2027: 기업을 위한 5가지 예측',
       intro: '2026년 말까지: 소형 모델의 파라미터당 품질이 계속 향상되고 있고, 온디바이스 추론이 iPhone(A18) 및 Snapdragon X Elite 스마트폰에서 실용적으로 작동하며, 추론 모델이 단계별 정확도를 15–30% 향상시키고, 기업의 온프레미스 추론 도입은 규제 산업을 중심으로 성장할 것으로 예상됩니다. 이 가이드는 타임라인, 벤치마크, 도입 예측과 함께 2026–2027년 로컬 AI를 재편하는 5가지 핵심 트렌드를 다룹니다.',

@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/zendure-balcony-solar-overview-hero-en.png',
+    heroImage: '/images/zendure-balcony-solar-overview-hero-en.webp',
     title: 'Zendure: Balcony Solar Company Profile',
     seoTitle: 'Zendure Balcony Solar Company Profile',
     metaDescription: 'Company profile for Zendure: history, ownership, product range, and role in the balcony solar market.',
@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/zendure-balcony-solar-overview-hero-de.png',
+    heroImage: '/images/zendure-balcony-solar-overview-hero-de.webp',
     title: 'Zendure: Firmenprofil zum Balkonkraftwerk',
     seoTitle: 'Zendure Balkonkraftwerk: Firmenprofil',
     metaDescription: 'Firmenprofil zu Zendure: Geschichte, Eigentümerstruktur, Produktpalette und Rolle im Markt für Balkonkraftwerke.',
@@ -172,7 +172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/zendure-balcony-solar-overview-hero-fr.png',
+    heroImage: '/images/zendure-balcony-solar-overview-hero-fr.webp',
     title: 'Zendure : profil d\'entreprise solaire de balcon',
     seoTitle: 'Zendure : profil d\'entreprise solaire balcon',
     metaDescription: 'Profil d\'entreprise Zendure : historique, actionnariat, gamme de produits et rôle sur le marché du solaire de balcon.',
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/zendure-balcony-solar-overview-hero-ja.png',
+    heroImage: '/images/zendure-balcony-solar-overview-hero-ja.webp',
     title: 'Zendure:ベランダ太陽光発電の企業プロフィール',
     seoTitle: 'Zendure企業プロフィール:ベランダ太陽光',
     metaDescription: 'Zendureの企業プロフィール:沿革、資本関係、製品ラインナップ、ベランダ太陽光市場での位置づけを解説します。',
@@ -336,7 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/zendure-balcony-solar-overview-hero-zh.png',
+    heroImage: '/images/zendure-balcony-solar-overview-hero-zh.webp',
     title: 'Zendure:阳台光伏企业档案',
     seoTitle: 'Zendure阳台光伏企业档案',
     metaDescription: 'Zendure企业档案:历史沿革、股权结构、产品线以及在阳台光伏市场中的地位。',
@@ -418,7 +418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/zendure-balcony-solar-overview-hero-es.png',
+    heroImage: '/images/zendure-balcony-solar-overview-hero-es.webp',
     title: 'Zendure: perfil de empresa de solar de balcón',
     seoTitle: 'Zendure: perfil de empresa solar de balcón',
     metaDescription: 'Perfil de empresa de Zendure: historia, propiedad, gama de productos y rol en el mercado de energía solar de balcón.',
@@ -500,7 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/zendure-balcony-solar-overview-hero-pt.png',
+    heroImage: '/images/zendure-balcony-solar-overview-hero-pt.webp',
     title: 'Zendure: perfil da empresa de energia solar de varanda',
     seoTitle: 'Zendure: perfil da empresa solar de varanda',
     metaDescription: 'Perfil da empresa Zendure: história, propriedade, linha de produtos e papel no mercado de energia solar de varanda.',
@@ -582,7 +582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/zendure-balcony-solar-overview-hero-ar.png',
+    heroImage: '/images/zendure-balcony-solar-overview-hero-ar.webp',
     title: 'Zendure: الملف التعريفي لشركة الطاقة الشمسية للشرفات',
     seoTitle: 'الملف التعريفي لشركة Zendure للشرفات',
     metaDescription: 'الملف التعريفي لشركة Zendure: التاريخ، الملكية، تشكيلة المنتجات، ودورها في سوق الطاقة الشمسية للشرفات.',
@@ -664,7 +664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/zendure-balcony-solar-overview-hero-ko.png',
+    heroImage: '/images/zendure-balcony-solar-overview-hero-ko.webp',
     title: 'Zendure: 발코니 태양광 기업 프로필',
     seoTitle: 'Zendure 발코니 태양광 기업 프로필',
     metaDescription: 'Zendure 기업 프로필: 연혁, 소유 구조, 제품 라인업, 발코니 태양광 시장에서의 위치를 다룹니다.',

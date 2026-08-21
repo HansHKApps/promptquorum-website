@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Home Assistant has a built-in Ollama integration that turns a locally hosted model into your conversation agent, controlling devices in natural language with no cloud. This guide walks through prerequisites, adding the integration, choosing a model, wiring the conversation agent, controlling devices, and troubleshooting — keeping Ollama setup and model selection linked out, not re-explained.',
     metaDescription:
       'Connect Ollama to Home Assistant step by step: add the integration, pick a model, set the conversation agent, and control devices in natural language. No cloud.',
-    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-en.png',
+    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-en.webp',
     twitterDescription:
       'Wire Ollama into Home Assistant for a fully local AI assistant: add the integration, choose a model, control devices by voice or text. Zero cloud.',
     readTime: '9 min read',
@@ -109,7 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Step': '3', 'Action': 'Enter the Ollama URL (http://host:11434)', 'Result': 'Home Assistant connects to Ollama' },
           { 'Step': '4', 'Action': 'Select a model from the list', 'Result': 'A conversation entity is created' },
         ],
-        image: '/images/home-assistant-ollama-integration-setup-steps-hero-en.png',
+        image: '/images/home-assistant-ollama-integration-setup-steps-hero-en.webp',
         imageCaption: 'Add the Ollama Integration -- Home Assistant setup, 4 steps',
       },
       chooseModel: {
@@ -160,7 +160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Model ignores devices:** confirm the entities are exposed to Assist and the Ollama entity is the active agent.',
           '**Wrong actions:** add a system prompt constraining scope, or reduce the number of exposed entities.',
         ],
-        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-en.png',
+        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-en.webp',
         imageCaption: 'Troubleshooting Common Issues -- Connectivity, model choice, or exposure',
       },
       faqSection: {
@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'يتضمن Home Assistant تكاملًا مدمجًا مع Ollama يحوّل نموذجًا يستضيفه محليًا إلى عامل محادثة يتحكم في الأجهزة بلغة طبيعية دون أي سحابة. يستعرض هذا الدليل المتطلبات الأساسية وإضافة التكامل واختيار النموذج وتوصيل عامل المحادثة والتحكم في الأجهزة واستكشاف الأخطاء — مع الإبقاء على إعداد Ollama واختيار النموذج كروابط خارجية لا إعادة شرح.',
     metaDescription:
       'ربط Ollama بـ Home Assistant على المنفذ 11434: أضف التكامل، اختر نموذجًا صغيرًا يدعم function-calling، وعيّنه عامل Assist للتحكم بالأجهزة محليًا.',
-    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-ar.png',
+    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-ar.webp',
     twitterDescription:
       'اربط Ollama بـ Home Assistant للحصول على مساعد ذكاء اصطناعي محلي بالكامل: أضف التكامل واختر نموذجًا وتحكم في الأجهزة بالصوت أو النص. صفر سحابة.',
     readTime: '9 دقائق للقراءة',
@@ -321,7 +321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الخطوة': '3', 'الإجراء': 'أدخل عنوان URL لـ Ollama (http://host:11434)', 'النتيجة': 'يتصل Home Assistant بـ Ollama' },
           { 'الخطوة': '4', 'الإجراء': 'حدد نموذجًا من القائمة', 'النتيجة': 'يُنشأ كيان محادثة' },
         ],
-        image: '/images/home-assistant-ollama-integration-setup-steps-hero-ar.png',
+        image: '/images/home-assistant-ollama-integration-setup-steps-hero-ar.webp',
         imageCaption: 'إضافة تكامل Ollama -- إعداد Home Assistant في 4 خطوات',
       },
       chooseModel: {
@@ -372,7 +372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**النموذج يتجاهل الأجهزة:** تأكد من أن الكيانات معروضة لـ Assist وأن كيان Ollama هو العامل النشط.',
           '**إجراءات خاطئة:** أضف تعليمة نظام تقيّد النطاق، أو قلّل عدد الكيانات المعروضة.',
         ],
-        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-ar.png',
+        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-ar.webp',
         imageCaption: 'حل المشكلات الشائعة -- الاتصال، اختيار النموذج، أو التعريض',
       },
       faqSection: {
@@ -438,7 +438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Home Assistant hat eine eingebaute Ollama-Integration, die ein lokal gehostetes Modell zu Ihrem Konversations-Agenten macht und Geräte in natürlicher Sprache ohne Cloud steuert. Dieser Leitfaden führt durch Voraussetzungen, das Hinzufügen der Integration, die Modellwahl, das Verdrahten des Konversations-Agenten, die Gerätesteuerung und die Fehlerbehebung – die Ollama-Installation und Modellauswahl werden verlinkt, nicht erneut erklärt.',
     metaDescription:
       'Ollama mit Home Assistant verbinden 2026: Integration hinzufügen, Modell wählen, Konversations-Agent setzen. Geräte in natürlicher Sprache steuern.',
-    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-de.png',
+    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-de.webp',
     twitterDescription:
       'Ollama in Home Assistant verdrahten für einen vollständig lokalen KI-Assistenten: Integration hinzufügen, Modell wählen, Geräte per Sprache oder Text steuern. Keine Cloud.',
     readTime: '9 Min. Lesezeit',
@@ -533,7 +533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Schritt': '3', 'Aktion': 'Die Ollama-URL eingeben (http://host:11434)', 'Ergebnis': 'Home Assistant verbindet sich mit Ollama' },
           { 'Schritt': '4', 'Aktion': 'Ein Modell aus der Liste wählen', 'Ergebnis': 'Eine Konversations-Entität wird erstellt' },
         ],
-        image: '/images/home-assistant-ollama-integration-setup-steps-hero-de.png',
+        image: '/images/home-assistant-ollama-integration-setup-steps-hero-de.webp',
         imageCaption: 'Die Ollama-Integration Hinzufügen -- Home-Assistant-Einrichtung in 4 Schritten',
       },
       chooseModel: {
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Modell ignoriert Geräte:** Bestätigen Sie, dass die Entitäten für Assist freigegeben sind und die Ollama-Entität der aktive Agent ist.',
           '**Falsche Aktionen:** Fügen Sie einen System-Prompt hinzu, der den Umfang begrenzt, oder reduzieren Sie die Zahl der freigegebenen Entitäten.',
         ],
-        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-de.png',
+        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-de.webp',
         imageCaption: 'Fehlerbehebung Häufiger Probleme -- Konnektivität, Modellwahl oder Freigabe',
       },
       faqSection: {
@@ -650,7 +650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Home Assistant tiene una integración de Ollama incorporada que convierte un modelo alojado localmente en tu agente de conversación, controlando dispositivos en lenguaje natural sin nube. Esta guía recorre los requisitos previos, añadir la integración, elegir un modelo, cablear el agente de conversación, controlar dispositivos y resolver problemas, manteniendo la instalación de Ollama y la elección de modelo enlazadas, no reexplicadas.',
     metaDescription:
       'Conecta Ollama a Home Assistant 2026: añade la integración, elige un modelo y controla dispositivos en lenguaje natural. Sin nube.',
-    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-es.png',
+    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-es.webp',
     twitterDescription:
       'Cablea Ollama en Home Assistant para un asistente de IA totalmente local: añade la integración, elige un modelo, controla dispositivos por voz o texto. Cero nube.',
     readTime: '9 min de lectura',
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Paso': '3', 'Acción': 'Introduce la URL de Ollama (http://host:11434)', 'Resultado': 'Home Assistant se conecta a Ollama' },
           { 'Paso': '4', 'Acción': 'Selecciona un modelo de la lista', 'Resultado': 'Se crea una entidad de conversación' },
         ],
-        image: '/images/home-assistant-ollama-integration-setup-steps-hero-es.png',
+        image: '/images/home-assistant-ollama-integration-setup-steps-hero-es.webp',
         imageCaption: 'Añadir la Integración de Ollama -- Configuración de Home Assistant en 4 pasos',
       },
       chooseModel: {
@@ -796,7 +796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**El modelo ignora los dispositivos:** confirma que las entidades están expuestas a Assist y que la entidad de Ollama es el agente activo.',
           '**Acciones erróneas:** añade un prompt de sistema que limite el alcance, o reduce el número de entidades expuestas.',
         ],
-        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-es.png',
+        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-es.webp',
         imageCaption: 'Solución de Problemas Comunes -- Conectividad, elección de modelo o exposición',
       },
       faqSection: {
@@ -862,7 +862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Home Assistant에는 로컬에서 호스팅된 모델을 대화 에이전트로 전환하여 클라우드 없이 자연어로 기기를 제어하는 Ollama 통합이 내장되어 있습니다. 이 가이드는 전제 조건, 통합 추가, 모델 선택, 대화 에이전트 연결, 기기 제어, 문제 해결을 안내합니다. Ollama 설정과 모델 선택은 외부 링크로 연결됩니다.',
     metaDescription:
       'Ollama를 Home Assistant에 단계별로 연결하기: 통합 추가, 모델 선택, 대화 에이전트 설정, 자연어로 기기 제어. 클라우드 없음.',
-    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-ko.png',
+    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-ko.webp',
     twitterDescription:
       'Ollama를 Home Assistant에 연결하여 완전한 로컬 AI 어시스턴트 구현: 통합 추가, 모델 선택, 음성 또는 텍스트로 기기 제어. 클라우드 제로.',
     readTime: '9분 분량',
@@ -957,7 +957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '단계': '3', '작업': 'Ollama URL 입력(http://host:11434)', '결과': 'Home Assistant가 Ollama에 연결됩니다' },
           { '단계': '4', '작업': '목록에서 모델을 선택합니다', '결과': '대화 엔티티가 생성됩니다' },
         ],
-        image: '/images/home-assistant-ollama-integration-setup-steps-hero-ko.png',
+        image: '/images/home-assistant-ollama-integration-setup-steps-hero-ko.webp',
         imageCaption: 'Ollama 통합 추가하기 -- Home Assistant 설정, 4단계',
       },
       chooseModel: {
@@ -1008,7 +1008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**모델이 기기를 무시함:** 엔티티가 Assist에 노출되어 있고 Ollama 엔티티가 활성 에이전트인지 확인하십시오.',
           '**잘못된 동작:** 범위를 제한하는 시스템 프롬프트를 추가하거나 노출된 엔티티 수를 줄이십시오.',
         ],
-        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-ko.png',
+        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-ko.webp',
         imageCaption: '일반적인 문제 해결 -- 연결, 모델 선택, 또는 노출 설정',
       },
       faqSection: {
@@ -1074,7 +1074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Home Assistant dispose d\'une intégration Ollama native qui transforme un modèle hébergé localement en votre agent de conversation, contrôlant les appareils en langage naturel sans cloud. Ce guide parcourt les prérequis, l\'ajout de l\'intégration, le choix d\'un modèle, le câblage de l\'agent de conversation, le contrôle des appareils et le dépannage — l\'installation d\'Ollama et le choix du modèle restant liés, non réexpliqués.',
     metaDescription:
       'Ollama + Home Assistant 2026 : ajoutez l\'intégration, choisissez un modèle, configurez l\'agent de conversation. Contrôle en langage naturel.',
-    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-fr.png',
+    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-fr.webp',
     twitterDescription:
       'Câblez Ollama dans Home Assistant pour un assistant IA entièrement local : ajoutez l\'intégration, choisissez un modèle, contrôlez les appareils par voix ou texte. Zéro cloud.',
     readTime: '9 min de lecture',
@@ -1169,7 +1169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Étape': '3', 'Action': 'Saisissez l\'URL Ollama (http://host:11434)', 'Résultat': 'Home Assistant se connecte à Ollama' },
           { 'Étape': '4', 'Action': 'Sélectionnez un modèle dans la liste', 'Résultat': 'Une entité de conversation est créée' },
         ],
-        image: '/images/home-assistant-ollama-integration-setup-steps-hero-fr.png',
+        image: '/images/home-assistant-ollama-integration-setup-steps-hero-fr.webp',
         imageCaption: 'Ajouter l\'Intégration Ollama -- Configuration Home Assistant en 4 étapes',
       },
       chooseModel: {
@@ -1220,7 +1220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Le modèle ignore les appareils :** confirmez que les entités sont exposées à Assist et que l\'entité Ollama est l\'agent actif.',
           '**Mauvaises actions :** ajoutez un prompt système limitant le périmètre, ou réduisez le nombre d\'entités exposées.',
         ],
-        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-fr.png',
+        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-fr.webp',
         imageCaption: 'Résoudre les Problèmes Courants -- Connectivité, choix du modèle ou exposition',
       },
       faqSection: {
@@ -1286,7 +1286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Home Assistant には組み込みの Ollama 統合があり、ローカルでホストするモデルを会話エージェントにして、機器を自然言語でクラウドなしに制御します。本ガイドは、前提条件、統合の追加、モデルの選択、会話エージェントの配線、機器の制御、トラブルシューティングを順に解説します——Ollama のインストールとモデル選択は外部リンクにし、再説明しません。',
     metaDescription:
       'Ollama を Home Assistant に順を追って接続（2026）：統合を追加し、モデルを選び、会話エージェントを設定して機器を自然言語で制御。日本語で家電を完全ローカルに操作できるプライベートなAI音声制御。クラウドなし。',
-    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-ja.png',
+    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-ja.webp',
     twitterDescription:
       'Ollama を Home Assistant に組み込み、完全ローカルのAIアシスタントに：統合を追加し、モデルを選び、機器を音声またはテキストで制御。クラウドはゼロ。',
     readTime: '9分で読める',
@@ -1381,7 +1381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '手順': '3', '操作': 'Ollama の URL を入力（http://host:11434）', '結果': 'Home Assistant が Ollama に接続' },
           { '手順': '4', '操作': '一覧からモデルを選択', '結果': '会話エンティティが作成される' },
         ],
-        image: '/images/home-assistant-ollama-integration-setup-steps-hero-ja.png',
+        image: '/images/home-assistant-ollama-integration-setup-steps-hero-ja.webp',
         imageCaption: 'Ollama統合を追加 -- Home Assistantセットアップ、4ステップ',
       },
       chooseModel: {
@@ -1432,7 +1432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**モデルが機器を無視する：** エンティティが Assist に公開され、Ollama エンティティがアクティブなエージェントか確認する。',
           '**誤った動作：** 範囲を制限するシステムプロンプトを加えるか、公開するエンティティ数を減らす。',
         ],
-        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-ja.png',
+        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-ja.webp',
         imageCaption: 'よくある問題のトラブルシューティング -- 接続性、モデル選択、または公開設定',
       },
       faqSection: {
@@ -1498,7 +1498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'O Home Assistant tem uma integração do Ollama embutida que transforma um modelo hospedado localmente no seu agente de conversa, controlando dispositivos em linguagem natural sem nuvem. Este guia percorre os pré-requisitos, adicionar a integração, escolher um modelo, cablear o agente de conversa, controlar dispositivos e solucionar problemas — mantendo a instalação do Ollama e a escolha do modelo com link externo, não reexplicadas.',
     metaDescription:
       'Conecte o Ollama ao Home Assistant 2026: adicione a integração, escolha um modelo e controle dispositivos em linguagem natural.',
-    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-pt.png',
+    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-pt.webp',
     twitterDescription:
       'Cableie o Ollama no Home Assistant para um assistente de IA totalmente local: adicione a integração, escolha um modelo, controle dispositivos por voz ou texto. Zero nuvem.',
     readTime: '9 min de leitura',
@@ -1593,7 +1593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Passo': '3', 'Ação': 'Insira a URL do Ollama (http://host:11434)', 'Resultado': 'O Home Assistant se conecta ao Ollama' },
           { 'Passo': '4', 'Ação': 'Selecione um modelo da lista', 'Resultado': 'Uma entidade de conversa é criada' },
         ],
-        image: '/images/home-assistant-ollama-integration-setup-steps-hero-pt.png',
+        image: '/images/home-assistant-ollama-integration-setup-steps-hero-pt.webp',
         imageCaption: 'Adicionar a Integração do Ollama -- Configuração do Home Assistant em 4 passos',
       },
       chooseModel: {
@@ -1644,7 +1644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**O modelo ignora os dispositivos:** confirme que as entidades estão expostas ao Assist e que a entidade do Ollama é o agente ativo.',
           '**Ações erradas:** adicione um prompt de sistema que limite o escopo, ou reduza o número de entidades expostas.',
         ],
-        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-pt.png',
+        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-pt.webp',
         imageCaption: 'Solução de Problemas Comuns -- Conectividade, escolha do modelo ou exposição',
       },
       faqSection: {
@@ -1710,7 +1710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Home Assistant 内置了 Ollama 集成，可把一个本地托管的模型变成你的对话代理，用自然语言控制设备且无需云端。本指南依次讲解前提条件、添加集成、选择模型、连线对话代理、控制设备和排错——Ollama 的安装与模型选择走外链，不再赘述。',
     metaDescription:
       '把 Ollama 逐步接入 Home Assistant（2026）：添加集成、选择模型并配置对话代理，以自然语言指令控制所有智能家居设备。所有数据始终留在本地硬件上运行，完全无需云端服务，有效保护家庭隐私与数据安全。',
-    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-zh.png',
+    heroImage: '/images/home-assistant-ollama-integration-setup-steps-hero-zh.webp',
     twitterDescription:
       '把 Ollama 接入 Home Assistant，打造完全本地的 AI 助手：添加集成、选择模型、用语音或文本控制设备。零云端。',
     readTime: '阅读约9分钟',
@@ -1805,7 +1805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '步骤': '3', '操作': '输入 Ollama 的 URL（http://host:11434）', '结果': 'Home Assistant 连接到 Ollama' },
           { '步骤': '4', '操作': '从列表中选择一个模型', '结果': '创建一个对话实体' },
         ],
-        image: '/images/home-assistant-ollama-integration-setup-steps-hero-zh.png',
+        image: '/images/home-assistant-ollama-integration-setup-steps-hero-zh.webp',
         imageCaption: '添加Ollama集成 -- Home Assistant设置，共4步',
       },
       chooseModel: {
@@ -1856,7 +1856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**模型忽略设备：** 确认实体已暴露给 Assist，且 Ollama 实体是当前活动代理。',
           '**动作错误：** 添加一段限制范围的系统提示词，或减少暴露的实体数量。',
         ],
-        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-zh.png',
+        image: '/images/home-assistant-ollama-integration-troubleshooting-hero-zh.webp',
         imageCaption: '常见问题排查 -- 连接性、模型选择或暴露设置',
       },
       faqSection: {

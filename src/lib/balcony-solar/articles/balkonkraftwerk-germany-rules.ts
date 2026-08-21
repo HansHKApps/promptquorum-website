@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-07-02',
     theme: 'Balcony Solar Legislation',
     title: 'Balkonkraftwerk Rules in Germany: The Complete 2026 Guide',
-    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-en.png',
+    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-en.webp',
     seoTitle: 'Balkonkraftwerk Germany: Rules, Limits & Registration',
     intro: 'Germany is the origin market for balcony solar — the "Balkonkraftwerk" — and has the most established regulatory framework of any country this guide covers. This page tracks the current 800W inverter cap, the single-registration process, and a newer product standard that took effect in December 2025.',
     metaDescription: 'Germany updated its Balkonkraftwerk rules in 2026 — a new inverter cap, a registration step people skip and get fined for, and a DIN standard that changes what you\'re allowed to install. Verified against the primary legal text.',
@@ -150,7 +150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     theme: 'Balcony Solar Legislation',
     title: 'Normas del Balkonkraftwerk en Alemania: La guía completa 2026',
-    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-es.png',
+    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-es.webp',
     seoTitle: 'Balkonkraftwerk en Alemania: normas, límites y registro',
     intro: 'Alemania es el mercado de origen de la energía solar de balcón — el "Balkonkraftwerk" — y cuenta con el marco regulatorio más consolidado de todos los países que cubre esta guía. Esta página recoge el límite vigente de 800 W en el inversor, el proceso de registro único, y una norma de producto más reciente que entró en vigor en diciembre de 2025.',
     metaDescription: 'Alemania actualizó las normas del Balkonkraftwerk en 2026: un nuevo límite en el inversor, un paso de registro que mucha gente se salta y por el que le multan, y una norma DIN que cambia lo que puedes instalar. Verificado con el texto legal primario.',
@@ -288,7 +288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     theme: 'Balcony Solar Legislation',
     title: 'Regras do Balkonkraftwerk na Alemanha: O Guia Completo 2026',
-    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-pt.png',
+    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-pt.webp',
     seoTitle: 'Balkonkraftwerk na Alemanha: Regras, Limites e Registro',
     intro: 'A Alemanha é o mercado de origem da energia solar de varanda — o "Balkonkraftwerk" — e tem o marco regulatório mais consolidado entre todos os países cobertos por este guia. Esta página acompanha o limite atual de 800 W no inversor, o processo de registro único, e um novo padrão de produto que entrou em vigor em dezembro de 2025.',
     metaDescription: 'A Alemanha atualizou as regras do Balkonkraftwerk em 2026: um novo limite no inversor, uma etapa de registro que muita gente pula e acaba multada, e um padrão DIN que muda o que você pode instalar. Verificado com o texto legal primário.',
@@ -426,7 +426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     theme: 'Balcony Solar Legislation',
     title: 'قواعد Balkonkraftwerk في ألمانيا: الدليل الكامل 2026',
-    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-ar.png',
+    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-ar.webp',
     seoTitle: 'Balkonkraftwerk في ألمانيا: القواعد والحدود والتسجيل',
     intro: 'ألمانيا هي السوق الأصلي للطاقة الشمسية القابلة للتركيب على الشرفة — المعروفة باسم "Balkonkraftwerk" — وتمتلك أكثر إطار تنظيمي رسوخًا بين جميع الدول التي يغطيها هذا الدليل. تتابع هذه الصفحة الحد الحالي البالغ 800 واط لخرج العاكس، وعملية التسجيل الواحدة، ومعيار منتج أحدث دخل حيز التنفيذ في ديسمبر 2025.',
     metaDescription: 'حدّثت ألمانيا قواعد Balkonkraftwerk في 2026: حد جديد لخرج العاكس، وخطوة تسجيل يتجاهلها كثيرون فتتم معاقبتهم عليها، ومعيار DIN جديد يغيّر ما يُسمح لك بتركيبه. تم التحقق منها مقابل النص القانوني الأساسي.',
@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     theme: 'Balcony Solar Legislation',
     title: 'ドイツのBalkonkraftwerkルール：2026年完全ガイド',
-    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-ja.png',
+    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-ja.webp',
     seoTitle: 'Balkonkraftwerkドイツ：ルール、上限、登録',
     intro: 'ドイツはバルコニーソーラー — 「Balkonkraftwerk」— の発祥市場であり、本ガイドが扱うどの国よりも規制枠組みが確立されています。このページでは、現行の800Wインバーター上限、単一登録プロセス、そして2025年12月に発効した新しい製品規格を追跡します。',
     metaDescription: 'ドイツは2026年にBalkonkraftwerkのルールを改定した — インバーター出力の新しい上限、見落とすと罰則につながる登録手続き、設置できる機器を変える新しいDIN規格。一次法的文書に基づき確認済み。',
@@ -702,7 +702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     theme: 'Balcony Solar Legislation',
     title: '德国Balkonkraftwerk规定：2026年完整指南',
-    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-zh.png',
+    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-zh.webp',
     seoTitle: 'Balkonkraftwerk德国：规定、限制与注册',
     intro: '德国是阳台光伏——"Balkonkraftwerk"——的发源市场，拥有本指南所涵盖国家中最成熟的监管框架。本页面追踪现行的800W逆变器上限、单一注册流程，以及2025年12月生效的新产品标准。',
     metaDescription: '德国在2026年更新了Balkonkraftwerk规定——新的逆变器输出上限、一个常被忽略却会被罚款的注册步骤,以及一项改变了可安装设备范围的新DIN标准。已核对一手法律文本。',
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     theme: 'Balcony Solar Legislation',
     title: 'Règles du Balkonkraftwerk en Allemagne : le guide complet 2026',
-    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-fr.png',
+    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-fr.webp',
     seoTitle: 'Balkonkraftwerk Allemagne : règles, limites et enregistrement',
     intro: 'L\'Allemagne est le marché d\'origine du solaire de balcon — le « Balkonkraftwerk » — et dispose du cadre réglementaire le plus établi de tous les pays couverts par ce guide. Cette page suit le plafond actuel de 800 W de l\'onduleur, le processus d\'enregistrement unique, et une nouvelle norme produit entrée en vigueur en décembre 2025.',
     metaDescription: 'L\'Allemagne a mis à jour les règles du Balkonkraftwerk en 2026 : un nouveau plafond d\'onduleur, une étape d\'enregistrement que beaucoup sautent et qui leur vaut une amende, et une nouvelle norme DIN qui change ce que vous pouvez installer. Vérifié par rapport au texte légal primaire.',
@@ -978,7 +978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     theme: 'Balcony Solar Legislation',
     title: '독일 Balkonkraftwerk 규정: 2026년 완전 가이드',
-    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-ko.png',
+    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-ko.webp',
     seoTitle: 'Balkonkraftwerk 독일: 규정, 제한, 등록',
     intro: '독일은 발코니 태양광 — "Balkonkraftwerk" — 의 발상지 시장이며, 이 가이드가 다루는 어느 국가보다 가장 확립된 규제 체계를 갖추고 있습니다. 이 페이지는 현행 800W 인버터 상한, 단일 등록 절차, 그리고 2025년 12월에 발효된 새로운 제품 규격을 추적합니다.',
     metaDescription: '독일이 2026년 Balkonkraftwerk 규정을 개정했다 — 새로워진 인버터 출력 상한, 놓치면 과태료로 이어지는 등록 절차, 설치 가능 기기를 바꾸는 새 DIN 규격까지. 1차 법률 문서 대조 확인.',
@@ -1116,7 +1116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     theme: 'Balcony Solar Legislation',
     title: 'Balkonkraftwerk in Deutschland: Der vollständige Ratgeber 2026',
-    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-de.png',
+    heroImage: '/images/balkonkraftwerk-germany-rules-overview-hero-de.webp',
     seoTitle: 'Balkonkraftwerk Deutschland: Regeln, Grenzen und Anmeldung',
     intro: 'Deutschland ist der Ursprungsmarkt des Balkonkraftwerks und besitzt den am weitesten entwickelten Rechtsrahmen aller in diesem Leitfaden behandelten Länder. Diese Seite dokumentiert die aktuelle Wechselrichter-Obergrenze von 800 W, das vereinfachte Anmeldeverfahren und eine neue Produktnorm, die seit Dezember 2025 gilt.',
     metaDescription: 'Deutschland hat die Balkonkraftwerk-Regeln 2026 geändert: eine neue Wechselrichter-Grenze, ein Anmeldeschritt, den viele übersehen und dafür Bußgeld zahlen, und eine neue DIN-Norm, die ändert, was installiert werden darf. Geprüft anhand des primären Gesetzestexts.',

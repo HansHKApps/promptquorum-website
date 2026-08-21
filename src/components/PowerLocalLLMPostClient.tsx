@@ -5,7 +5,8 @@
 // Differences:
 //   - `lang` is a REQUIRED prop (resolved server-side from the URL path); no useLang() call.
 //   - Sibling links use path-based URLs (/de/power-local-llm/...) not query params.
-//   - Loads from powerLLMContent + POWER_LLM_SLUG_TO_KEY (not the local-llms maps).
+//   - articleData is resolved server-side (page.tsx) and passed as a required prop —
+//     this component never imports the powerLLMContent barrel.
 //   - LanguageSwitcher omitted in this iteration; cluster ships noindex until launch.
 
 import { useState } from 'react'
@@ -13,9 +14,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { Language } from '@/lib/blog/blogContent'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
-import { powerLLMContent } from '@/lib/power-local-llm/content'
-import type { LLMSection } from '@/lib/local-llms/types'
-import { POWER_LLM_SLUG_TO_KEY } from '@/lib/power-local-llm/slugs'
+import type { LLMSection, LLMArticle } from '@/lib/local-llms/types'
 import { powerLLMHubPath, powerLLMArticlePath } from '@/lib/power-local-llm/metadata-helpers'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
@@ -30,6 +29,7 @@ import { CopyButton } from '@/components/CopyButton'
 interface Props {
   slug: string
   lang: Language
+  articleData: Partial<Record<Language, LLMArticle>>
 }
 
 // Section header translations
@@ -609,8 +609,43 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
         </ol>
       )}
 
+      {/* Item-heading list — each row gets its own H3 (e.g. per-tool directory entries) */}
+      {section.itemHeadings && section.rows && section.columns && (
+        <div className="my-6 space-y-4">
+          {section.rows.map((row, i) => {
+            const [nameCol, ...restCols] = section.columns!
+            const name = row[nameCol] ?? row['0'] ?? ''
+            const itemId = name
+              .replace(/\*\*/g, '')
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, '-')
+              .replace(/^-|-$/g, '')
+            return (
+              <div key={i} id={itemId || undefined} className="border border-primary/10 rounded-xl p-4 scroll-mt-24">
+                <h3 className="text-lg font-bold text-text-primary mb-2">
+                  {renderInlineLinks(name, lang)}
+                </h3>
+                <dl className="text-sm text-text-secondary space-y-1.5">
+                  {restCols.map((col) => (
+                    <div key={col} className="flex flex-col sm:flex-row sm:gap-2">
+                      <dt className="font-semibold text-text-primary shrink-0 sm:w-24">{col}:</dt>
+                      <dd>{renderInlineLinks(row[col] ?? '—', lang)}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            )
+          })}
+          {section.note && (
+            <p className="text-sm text-text-secondary leading-relaxed mt-4 italic">
+              {renderInlineLinks(section.note, lang)}
+            </p>
+          )}
+        </div>
+      )}
+
       {/* Table */}
-      {section.rows && section.columns && (
+      {!section.itemHeadings && section.rows && section.columns && (
         <div className="relative overflow-x-auto my-6">
           <table className="w-full border-collapse text-sm">
             <thead>
@@ -840,10 +875,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
   )
 }
 
-function PowerLocalLLMPostContent({ slug, lang }: Props) {
-  const key = POWER_LLM_SLUG_TO_KEY[slug]
-  const articleData = key ? powerLLMContent[key] : null
-
+function PowerLocalLLMPostContent({ slug, lang, articleData }: Props) {
   if (!articleData) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
   }

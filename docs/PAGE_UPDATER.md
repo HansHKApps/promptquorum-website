@@ -259,13 +259,13 @@ After the English (EN) page is finalized, propagate changes to all active non-En
 - FR (French)
 - JA (Japanese)
 - ZH (Chinese)
-- PT (Brazilian Portuguese — pt-BR)
-- AR (Arabic — RTL)
+- PT (Brazilian Portuguese)
+- AR (Arabic)
 - KO (Korean)
 
-When updating `pt`, it MUST be **Brazilian Portuguese** (pt-BR — você form, BR vocabulary such as *arquivo*/*tela*/*gerenciar*, LGPD/ANPD for compliance, hreflang and schema.inLanguage = `pt-BR`), never European Portuguese. `ar` is **RTL** and must keep Latin technical terms LTR.
+**Note on `pt` and `ar`:** An earlier version of this doc marked `pt`/`ar` as "reserved, no content yet" — that is stale. As of this writing, `pt`/`ar`/`ko` blocks exist for effectively every article across every cluster (local-llms, prompt-bites, power-local-llm, smart-home, balcony-solar: 100%; prompt-engineering: 78/81 for pt/ar, 81/81 for ko) — verified directly against the repo, not assumed. Treat them as fully active languages requiring the same propagation and parity work as DE/ES/FR/JA/ZH. The one exception: a specific new article that genuinely has no pt/ar/ko block yet is a separate "author this language" task (see Step 5.5 rule 5), not evidence that the language itself is reserved.
 
-**2026-08-21 correction:** this section previously stated a 6-language active set (EN + DE/ES/FR/JA/ZH) with `pt` and `ar` marked reserved/unauthored and `ko` not mentioned at all — directing updates to skip propagating to all three. That was stale and wrong: the live site has full authored content in pt/ar/ko on published pages (confirmed against `CLAUDE.md`'s 9-language `PATH_PREFIX_LANGS` and direct inspection of article source files). Any page update using the old 6-language instruction would have silently skipped 3 of the site's 9 live languages during a "full-depth" refresh. Re-verify against the live site before ever narrowing this list again — do not trust a language being "reserved" without checking whether it has shipped since.
+When working with `pt`, it MUST be **Brazilian Portuguese** (pt-BR — você form, BR vocabulary such as *arquivo*/*tela*/*gerenciar*, LGPD/ANPD for compliance, hreflang and schema.inLanguage = `pt-BR`), never European Portuguese. `ar` is **RTL** and must keep Latin technical terms LTR.
 
 **Language update rules:**
 - Model names, benchmark names, ollama commands, and VRAM numbers are language-independent — copy exactly

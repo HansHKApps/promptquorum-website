@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-19',
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-balcony-solar-overview-hero-en.png',
+    heroImage: '/images/ecoflow-balcony-solar-overview-hero-en.webp',
     title: 'EcoFlow: Balcony Solar Company Profile',
     seoTitle: 'EcoFlow Balcony Solar Company Profile',
     metaDescription: 'Company profile for EcoFlow: history, ownership, product range, and role in the balcony solar market.',
@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   de: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-balcony-solar-overview-hero-de.png',
+    heroImage: '/images/ecoflow-balcony-solar-overview-hero-de.webp',
     title: 'EcoFlow: Unternehmensprofil Balkonkraftwerk',
     seoTitle: 'EcoFlow Balkonkraftwerk Unternehmensprofil',
     metaDescription: 'Unternehmensprofil zu EcoFlow: Geschichte, Eigentümerstruktur, Produktpalette und Rolle im Markt für Balkonkraftwerke.',
@@ -172,7 +172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   fr: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-balcony-solar-overview-hero-fr.png',
+    heroImage: '/images/ecoflow-balcony-solar-overview-hero-fr.webp',
     title: 'EcoFlow : profil d\'entreprise solaire de balcon',
     seoTitle: 'EcoFlow : Profil Entreprise Solaire Balcon',
     metaDescription: 'Profil d\'entreprise d\'EcoFlow : historique, actionnariat, gamme de produits et rôle sur le marché du solaire de balcon.',
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-balcony-solar-overview-hero-ja.png',
+    heroImage: '/images/ecoflow-balcony-solar-overview-hero-ja.webp',
     title: 'EcoFlow:ベランダ太陽光発電の企業プロフィール',
     seoTitle: 'EcoFlow企業プロフィール ベランダ太陽光',
     metaDescription: 'EcoFlowの企業プロフィールです。沿革、資本構成、製品ラインナップ、ベランダ太陽光市場における位置づけを紹介します。',
@@ -336,7 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-balcony-solar-overview-hero-zh.png',
+    heroImage: '/images/ecoflow-balcony-solar-overview-hero-zh.webp',
     title: 'EcoFlow:阳台光伏企业档案',
     seoTitle: 'EcoFlow阳台光伏企业档案',
     metaDescription: 'EcoFlow企业档案:公司历史、股权结构、产品系列,以及在阳台光伏市场中的角色。',
@@ -418,7 +418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-balcony-solar-overview-hero-es.png',
+    heroImage: '/images/ecoflow-balcony-solar-overview-hero-es.webp',
     title: 'EcoFlow: perfil de empresa de solar de balcón',
     seoTitle: 'EcoFlow: Perfil Empresa Solar Balcón',
     metaDescription: 'Perfil de empresa de EcoFlow: historia, propiedad, gama de productos y su papel en el mercado de solar de balcón.',
@@ -500,7 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-balcony-solar-overview-hero-pt.png',
+    heroImage: '/images/ecoflow-balcony-solar-overview-hero-pt.webp',
     title: 'EcoFlow: perfil da empresa de solar de varanda',
     seoTitle: 'EcoFlow: Perfil Empresa Solar Varanda',
     metaDescription: 'Perfil da empresa EcoFlow: história, propriedade, linha de produtos e papel no mercado de solar de varanda.',
@@ -582,7 +582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-balcony-solar-overview-hero-ar.png',
+    heroImage: '/images/ecoflow-balcony-solar-overview-hero-ar.webp',
     title: 'EcoFlow: ملف الشركة للطاقة الشمسية للشرفات',
     seoTitle: 'EcoFlow: ملف شركة الطاقة الشمسية',
     metaDescription: 'ملف شركة EcoFlow: التاريخ والملكية وتشكيلة المنتجات ودورها في سوق الطاقة الشمسية للشرفات.',
@@ -664,7 +664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
     theme: 'Balcony Solar Money Pages',
-    heroImage: '/images/ecoflow-balcony-solar-overview-hero-ko.png',
+    heroImage: '/images/ecoflow-balcony-solar-overview-hero-ko.webp',
     title: 'EcoFlow: 발코니 태양광 기업 프로필',
     seoTitle: 'EcoFlow 발코니 태양광 기업 프로필',
     metaDescription: 'EcoFlow의 기업 프로필입니다. 연혁, 소유 구조, 제품 라인업, 그리고 발코니 태양광 시장에서의 역할을 소개합니다.',

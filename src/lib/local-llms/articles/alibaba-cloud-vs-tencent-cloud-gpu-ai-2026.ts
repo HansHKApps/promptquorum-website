@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'AutoDL Pricing 2026: A100 80GB vs Alibaba & Tencent',
     metaDescription:
       'AutoDL A100 80 GB is ¥5.98/hr (~$0.82) — cheapest China GPU cloud, vs ¥8–12/hr on Alibaba Cloud PAI and ¥7.5–10/hr on Tencent Cloud TI. RTX 4090 from ¥2.68/hr.',
-    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-en.png',
+    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-en.webp',
     twitterDescription:
       'AutoDL is cheapest for burst GPU use in China. Alibaba Cloud wins for Qwen-optimized inference. Tencent Cloud wins for teams already in WeChat/Tencent ecosystem.',
     affiliateDisclosure: true,
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Try Tencent Cloud TI Platform →',
           },
         ],
-        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-en.png',
+        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-en.webp',
         imageCaption: 'Alibaba vs Tencent vs AutoDL GPU Pricing -- July 2026 hourly rates',
       },
       qwenPerformance: {
@@ -182,7 +182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'Tencent Cloud TI (vLLM)', '1': 'A100 80 GB', '2': '17–22 tok/s', '3': '~160ms', '4': 'Standard vLLM stack' },
           { '0': 'RunPod (Western, A100 80 GB)', '1': 'A100 80 GB', '2': '15–18 tok/s', '3': '~200ms', '4': 'Higher latency from cross-Pacific routing' },
         ],
-        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-en.png',
+        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-en.webp',
         imageCaption: 'Qwen Inference Speed by Provider -- Qwen3 72B on A100 80GB',
       },
       compliance: {
@@ -360,7 +360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Precios AutoDL 2026: A100 80GB vs Alibaba y Tencent',
     metaDescription:
       'El A100 80 GB de AutoDL cuesta ¥5,98/h (~$0,82) — la nube GPU más barata de China, frente a ¥8–12/h en Alibaba Cloud PAI y ¥7,5–10/h en Tencent Cloud TI. RTX 4090 desde ¥2,68/h.',
-    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-es.png',
+    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-es.webp',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience:
@@ -506,7 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Prueba Tencent Cloud TI Platform →',
           },
         ],
-        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-es.png',
+        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-es.webp',
         imageCaption: 'Precios GPU: Alibaba vs Tencent vs AutoDL -- Tarifas por hora, julio de 2026',
       },
       qwenPerformance: {
@@ -522,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plataforma': 'Tencent Cloud TI (vLLM)', 'GPU': 'A100 80 GB', 'Velocidad Qwen3 72B (tok/s)': '17–22 tok/s', 'Latencia (primer token)': '~160ms', 'Notas': 'Stack vLLM estándar' },
           { 'Plataforma': 'RunPod (occidental, A100 80 GB)', 'GPU': 'A100 80 GB', 'Velocidad Qwen3 72B (tok/s)': '15–18 tok/s', 'Latencia (primer token)': '~200ms', 'Notas': 'Mayor latencia por enrutamiento transpacífico' },
         ],
-        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-es.png',
+        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-es.webp',
         imageCaption: 'Velocidad de Inferencia Qwen por Proveedor -- Qwen3 72B en A100 80GB',
       },
       compliance: {
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'أسعار ⁨AutoDL⁩ ⁨2026⁩: ⁨A100 80GB⁩ مقابل ⁨Alibaba⁩ و⁨Tencent⁩',
     metaDescription:
       'A100 80 GB لدى AutoDL بـ ¥5.98/ساعة (نحو 0.82 دولار) — أرخص GPU سحابي صيني، مقابل ¥8–12/ساعة على Alibaba Cloud PAI و¥7.5–10/ساعة على Tencent Cloud TI. RTX 4090 ابتداءً من ¥2.68/ساعة.',
-    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-ar.png',
+    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-ar.webp',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience:
@@ -852,7 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'جرّب Tencent Cloud TI Platform ←',
           },
         ],
-        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-ar.png',
+        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-ar.webp',
         imageCaption: 'أسعار GPU: علي بابا مقابل تينسنت مقابل AutoDL -- الأسعار بالساعة، يوليو 2026',
       },
       qwenPerformance: {
@@ -868,7 +868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'المنصة': 'Tencent Cloud TI (vLLM)', 'GPU': 'A100 80 GB', 'سرعة Qwen3 72B (tok/s)': '17–22 tok/s', 'زمن الاستجابة (أول token)': 'نحو 160ms', 'ملاحظات': 'حزمة vLLM قياسية' },
           { 'المنصة': 'RunPod (غربي، A100 80 GB)', 'GPU': 'A100 80 GB', 'سرعة Qwen3 72B (tok/s)': '15–18 tok/s', 'زمن الاستجابة (أول token)': 'نحو 200ms', 'ملاحظات': 'زمن استجابة أعلى بسبب التوجيه عبر المحيط الهادئ' },
         ],
-        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-ar.png',
+        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-ar.webp',
         imageCaption: 'سرعة استدلال Qwen حسب المزوّد -- Qwen3 72B على A100 80GB',
       },
       compliance: {
@@ -1056,7 +1056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Preços AutoDL 2026: A100 80GB vs Alibaba e Tencent',
     metaDescription:
       'O A100 80 GB do AutoDL custa ¥5,98/h (~US$ 0,82) — a nuvem GPU mais barata da China, contra ¥8–12/h no Alibaba Cloud PAI e ¥7,5–10/h no Tencent Cloud TI. RTX 4090 a partir de ¥2,68/h.',
-    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-pt.png',
+    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-pt.webp',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience:
@@ -1202,7 +1202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Experimente o Tencent Cloud TI Platform →',
           },
         ],
-        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-pt.png',
+        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-pt.webp',
         imageCaption: 'Preços de GPU: Alibaba vs Tencent vs AutoDL -- Tarifas por hora, julho de 2026',
       },
       qwenPerformance: {
@@ -1218,7 +1218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plataforma': 'Tencent Cloud TI (vLLM)', 'GPU': 'A100 80 GB', 'Velocidade Qwen3 72B (tok/s)': '17–22 tok/s', 'Latência (primeiro token)': '~160ms', 'Notas': 'Stack vLLM padrão' },
           { 'Plataforma': 'RunPod (ocidental, A100 80 GB)', 'GPU': 'A100 80 GB', 'Velocidade Qwen3 72B (tok/s)': '15–18 tok/s', 'Latência (primeiro token)': '~200ms', 'Notas': 'Maior latência por roteamento transpacífico' },
         ],
-        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-pt.png',
+        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-pt.webp',
         imageCaption: 'Velocidade de Inferência do Qwen por Provedor -- Qwen3 72B em A100 80GB',
       },
       compliance: {
@@ -1404,7 +1404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'AutoDL-Preise 2026: A100 80GB vs Alibaba & Tencent',
     metaDescription:
       'AutoDL A100 80 GB kostet ¥5,98/Std. (~0,82 $) — günstigste China-GPU-Cloud, vs. ¥8–12/Std. bei Alibaba Cloud PAI und ¥7,5–10/Std. bei Tencent Cloud TI. RTX 4090 ab ¥2,68/Std.',
-    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-de.png',
+    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-de.webp',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience: 'Entwickler in China oder mit China-bezogenen Workloads, die zwischen chinesischen Cloud-GPU-Anbietern wählen.',
@@ -1526,7 +1526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Tarifs AutoDL 2026 : A100 80Go vs Alibaba & Tencent',
     metaDescription:
       'L\'A100 80 Go d\'AutoDL est à ¥5,98/h (~0,82 $) — le cloud GPU le moins cher de Chine, contre ¥8–12/h chez Alibaba Cloud PAI et ¥7,5–10/h chez Tencent Cloud TI. RTX 4090 dès ¥2,68/h.',
-    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-fr.png',
+    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-fr.webp',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience: 'Développeurs en Chine ou avec des charges de travail orientées Chine, choisissant entre les fournisseurs cloud GPU chinois.',
@@ -1648,7 +1648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'AutoDL料金2026：A100 80GB vs 阿里云・腾讯',
     metaDescription:
       'AutoDLのA100 80GBは¥5.98/時間（約0.82ドル）——中国最安のGPUクラウド。Alibaba Cloud PAIの¥8〜12/時間、テンセントクラウドTIの¥7.5〜10/時間より安い。RTX 4090は¥2.68/時間から。',
-    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-ja.png',
+    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-ja.webp',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience: '中国向けワークロードまたは中国国内の開発者・研究者で、中国クラウドGPUプロバイダーを選ぼうとしている方。',
@@ -1770,7 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'AutoDL价格2026：A100 80GB vs 阿里云与腾讯云',
     metaDescription:
       'AutoDL的A100 80GB为¥5.98/时（约0.82美元）——中国最便宜GPU云，低于阿里云PAI的¥8-12/时和腾讯云TI的¥7.5-10/时。RTX 4090低至¥2.68/时。',
-    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-zh.png',
+    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-zh.webp',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience: '在中国或面向中国业务的开发者和研究人员，在中国云GPU服务商之间做选择。',
@@ -1847,7 +1847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'H100 80GB', '1': '¥8-11.98/时', '2': '¥11.98/时', '3': '¥18-25/时', '4': '¥18-24/时', '5': '高吞吐生产推理' },
         ],
         note: '价格来源：2026年7月各平台控制台及AutoDL价格页。现货价格按北京时间0-6点最便宜，比按需价格低40-60%。',
-        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-zh.png',
+        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-zh.webp',
         imageCaption: '阿里云对比腾讯云对比AutoDL GPU价格 -- 每小时费率（2026年7月）',
       },
       setup: {
@@ -1915,7 +1915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'AutoDL 가격 2026: A100 80GB vs Alibaba & Tencent',
     metaDescription:
       'AutoDL A100 80 GB는 ¥5.98/시간(~$0.82) — 중국 최저가 GPU 클라우드로, Alibaba Cloud PAI ¥8–12/시간, Tencent Cloud TI ¥7.5–10/시간보다 저렴. RTX 4090 ¥2.68/시간부터.',
-    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-ko.png',
+    heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-ko.webp',
     affiliateDisclosure: true,
     educationalLevel: 'Intermediate',
     audience:
@@ -2061,7 +2061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Tencent Cloud TI Platform 체험하기 →',
           },
         ],
-        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-ko.png',
+        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-ko.webp',
         imageCaption: '알리바바 대 텐센트 대 AutoDL GPU 가격 -- 시간당 요금(2026년 7월)',
       },
       qwenPerformance: {
@@ -2077,7 +2077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'Tencent Cloud TI (vLLM)', '1': 'A100 80 GB', '2': '17–22 tok/s', '3': '~160ms', '4': '표준 vLLM 스택' },
           { '0': 'RunPod (서양, A100 80 GB)', '1': 'A100 80 GB', '2': '15–18 tok/s', '3': '~200ms', '4': '태평양 횡단 라우팅으로 지연 증가' },
         ],
-        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-ko.png',
+        image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-ko.webp',
         imageCaption: '제공업체별 Qwen 추론 속도 -- A100 80GB에서 Qwen3 72B',
       },
       compliance: {

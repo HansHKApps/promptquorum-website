@@ -282,7 +282,7 @@ export async function buildArticlePageElement(slug: string, lang: Language) {
       {sectionImageObjects.length > 0 && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': sectionImageObjects }) }} />
       )}
-      <BlogPostClient post={post} slug={slug} initialLang={lang} />
+      <BlogPostClient post={post} slug={slug} initialLang={lang} availableLangs={Object.keys(blogContent[postId])} />
     </>
   )
 }

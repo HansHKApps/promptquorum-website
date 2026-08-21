@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-en.png',
+    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-en.webp',
     title: 'Sensor Fusion in the Smart Home (2027)',
     seoTitle: 'Sensor Fusion in the Smart Home (2027)',
     intro:
@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-de.png',
+    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-de.webp',
     title: 'Sensorfusion im Smart Home (2027)',
     seoTitle: 'Sensorfusion im Smart Home (2027)',
     intro:
@@ -304,7 +304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-fr.png',
+    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-fr.webp',
     title: 'Fusion de capteurs dans la maison connectée (2027)',
     seoTitle: 'Fusion de capteurs dans la maison connectée (2027)',
     intro:
@@ -452,7 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-ja.png',
+    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-ja.webp',
     title: 'スマートホームにおけるセンサーフュージョン（2027年）',
     seoTitle: 'スマートホームにおけるセンサーフュージョン（2027年）',
     intro:
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-zh.png',
+    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-zh.webp',
     title: '智能家居中的传感器融合(2027年)',
     seoTitle: '智能家居中的传感器融合(2027年)',
     intro:
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-es.png',
+    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-es.webp',
     title: 'Fusión de sensores en el hogar inteligente (2027)',
     seoTitle: 'Fusión de sensores en el hogar inteligente (2027)',
     intro:
@@ -896,7 +896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-pt.png',
+    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-pt.webp',
     title: 'Fusão de sensores na casa inteligente (2027)',
     seoTitle: 'Fusão de sensores na casa inteligente (2027)',
     intro:
@@ -1044,7 +1044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-ar.png',
+    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-ar.webp',
     title: 'دمج بيانات الاستشعار في المنزل الذكي (2027)',
     seoTitle: 'دمج بيانات الاستشعار في المنزل الذكي (2027)',
     intro:
@@ -1192,7 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
-    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-ko.png',
+    heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-ko.webp',
     title: '스마트홈의 센서 퓨전 (2027년)',
     seoTitle: '스마트홈의 센서 퓨전 (2027년)',
     intro:

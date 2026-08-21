@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quick Answers',
-    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-en.png',
+    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-en.webp',
     title: 'Best Local LLM for a 16 GB RAM Laptop (2026)?',
     dateModified: '2026-07-01',
     seoTitle: 'Best Local LLM for 16GB RAM Laptop 2026: Qwen3 8B, Gemma 3',
@@ -138,7 +138,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Quick Answers',
-    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-de.png',
+    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-de.webp',
     title: 'Bestes lokales LLM für einen 16-GB-RAM-Laptop (2026)?',
     dateModified: '2026-07-01',
     seoTitle: 'Bestes lokales LLM 16 GB Laptop 2026: Qwen3 8B, Gemma 3',
@@ -221,7 +221,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Quick Answers',
-    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-fr.png',
+    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-fr.webp',
     title: 'Meilleur LLM local pour un laptop avec 16 Go de RAM (2026) ?',
     dateModified: '2026-07-01',
     seoTitle: 'Meilleur LLM local laptop 16 Go 2026 : Qwen3 8B, Gemma 3',
@@ -304,7 +304,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Quick Answers',
-    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-ja.png',
+    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-ja.webp',
     title: '16 GB RAM ラップトップに最適なローカル LLM は？（2026）',
     dateModified: '2026-07-01',
     seoTitle: '16 GB ラップトップ最適ローカル LLM 2026：Qwen3 8B, Gemma 3',
@@ -387,7 +387,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Quick Answers',
-    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-es.png',
+    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-es.webp',
     title: '¿Qué LLM Local es Mejor para un Laptop con 16 GB de RAM (2026)?',
     dateModified: '2026-07-01',
     seoTitle: 'Mejor LLM local laptop 16 GB 2026: Qwen3 8B, Gemma 3',
@@ -470,7 +470,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Quick Answers',
-    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-pt.png',
+    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-pt.webp',
     title: 'Qual é o Melhor LLM Local para um Notebook com 16 GB de RAM (2026)?',
     dateModified: '2026-07-01',
     seoTitle: 'Melhor LLM local notebook 16 GB 2026: Qwen3 8B, Gemma 3',
@@ -553,7 +553,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Quick Answers',
-    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-ar.png',
+    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-ar.webp',
     title: 'ما أفضل نموذج لغوي كبير محلي لحاسب محمول بـ⁨16⁩ جيجابايت ⁨RAM⁩؟ (⁨2026⁩)',
     dateModified: '2026-07-01',
     seoTitle: 'أفضل ⁨LLM⁩ محلي لحاسب ⁨16 GB⁩ ⁨2026⁩: ⁨Qwen3 8B, Gemma 3⁩',
@@ -636,7 +636,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Quick Answers',
-    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-zh.png',
+    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-zh.webp',
     title: '16 GB 内存笔记本最适合哪款本地 LLM？（2026）',
     dateModified: '2026-07-01',
     seoTitle: '16 GB 笔记本最佳本地 LLM 2026：Qwen3 8B, Gemma 3',
@@ -719,7 +719,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Quick Answers',
-    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-ko.png',
+    heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-ko.webp',
     title: '16 GB RAM 노트북에 가장 적합한 로컬 LLM은 무엇입니까? (2026)',
     dateModified: '2026-07-01',
     seoTitle: '16 GB 노트북 최적 로컬 LLM 2026: Qwen3 8B, Gemma 3',

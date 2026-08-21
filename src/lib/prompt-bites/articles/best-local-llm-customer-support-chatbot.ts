@@ -4,7 +4,7 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Capability Picks',
-    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-en.png',
+    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-en.webp',
     title: 'Best Local LLM for a Customer Support Chatbot?',
     seoTitle: 'Best Local LLM for Customer Support Chatbot | Prompt Bites',
     metaDescription: 'A quick guide to picking a local LLM for a customer support chatbot: instruction-following reliability, response consistency, and what matters more than raw parameter count.',
@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     theme: 'Model Capability Picks',
-    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-de.png',
+    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-de.webp',
     title: 'Das beste lokale LLM für einen Kundensupport-Chatbot?',
     seoTitle: 'Bestes lokales LLM für Kundensupport-Chatbot | Prompt Bites',
     metaDescription: 'Ein kurzer Leitfaden zur Auswahl eines lokalen LLM für einen Kundensupport-Chatbot: Zuverlässigkeit beim Befolgen von Anweisungen, Antwortkonsistenz und warum das wichtiger ist als die reine Parameterzahl.',
@@ -176,7 +176,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     theme: 'Model Capability Picks',
-    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-fr.png',
+    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-fr.webp',
     title: 'Quel est le meilleur LLM local pour un chatbot de support client ?',
     seoTitle: 'Meilleur LLM local pour chatbot de support client | Prompt Bites',
     metaDescription: 'Un guide rapide pour choisir un LLM local pour un chatbot de support client : fiabilité du suivi des instructions, cohérence des réponses, et ce qui compte plus que le nombre brut de paramètres.',
@@ -262,7 +262,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     theme: 'Model Capability Picks',
-    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-ja.png',
+    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-ja.webp',
     title: 'カスタマーサポートチャットボットに最適なローカルLLMとは？',
     seoTitle: 'サポートチャットボットに最適なローカルLLM | Prompt Bites',
     metaDescription: 'カスタマーサポートチャットボット向けにローカルLLMを選ぶための簡潔なガイド。指示追従の信頼性、応答の一貫性、そして単純なパラメータ数よりも重要なポイントを解説します。',
@@ -348,7 +348,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     theme: 'Model Capability Picks',
-    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-zh.png',
+    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-zh.webp',
     title: '客户支持聊天机器人的最佳本地LLM是什么？',
     seoTitle: '客户支持聊天机器人的最佳本地LLM | Prompt Bites',
     metaDescription: '一份关于为客户支持聊天机器人选择本地LLM的简明指南：指令遵循的可靠性、回复一致性，以及比参数量更重要的因素。',
@@ -434,7 +434,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     theme: 'Model Capability Picks',
-    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-es.png',
+    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-es.webp',
     title: '¿Cuál es el mejor LLM local para un chatbot de atención al cliente?',
     seoTitle: 'Mejor LLM local para chatbot de soporte | Prompt Bites',
     metaDescription: 'Una guía rápida para elegir un LLM local para un chatbot de atención al cliente: fiabilidad al seguir instrucciones, consistencia de las respuestas, y qué importa más que el número de parámetros.',
@@ -520,7 +520,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     theme: 'Model Capability Picks',
-    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-pt.png',
+    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-pt.webp',
     title: 'Qual é o melhor LLM local para um chatbot de atendimento ao cliente?',
     seoTitle: 'Melhor LLM local para chatbot de atendimento | Prompt Bites',
     metaDescription: 'Um guia rápido para escolher um LLM local para um chatbot de atendimento ao cliente: confiabilidade ao seguir instruções, consistência das respostas e o que importa mais do que o número bruto de parâmetros.',
@@ -606,7 +606,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     theme: 'Model Capability Picks',
-    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-ar.png',
+    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-ar.webp',
     title: 'ما هو أفضل نموذج لغوي محلي لروبوت دردشة دعم العملاء؟',
     seoTitle: 'أفضل نموذج لغوي محلي لروبوت دعم العملاء | Prompt Bites',
     metaDescription: 'دليل سريع لاختيار نموذج لغوي محلي (LLM) لروبوت دردشة دعم العملاء: موثوقية اتباع التعليمات، اتساق الردود، وما هو أهم من مجرد عدد المعاملات.',
@@ -692,7 +692,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     theme: 'Model Capability Picks',
-    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-ko.png',
+    heroImage: '/images/best-local-llm-customer-support-chatbot-overview-hero-ko.webp',
     title: '고객 지원 챗봇에 가장 적합한 로컬 LLM은 무엇입니까?',
     seoTitle: '고객 지원 챗봇에 최적인 로컬 LLM | Prompt Bites',
     metaDescription: '고객 지원 챗봇에 사용할 로컬 LLM을 선택하기 위한 간단한 가이드입니다. 지시 따르기의 신뢰성, 응답 일관성, 그리고 단순한 파라미터 수보다 중요한 요소를 다룹니다.',
