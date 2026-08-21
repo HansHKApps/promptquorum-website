@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Qwen 3.6 7B (smaller) — runs on 6 GB VRAM, 60+ tokens/second, lower quality',
         ],
         callouts: [
-          { type: 'warning', text: 'Ollama defaults to num_ctx 2048, which is insufficient for most coding tasks. Set num_ctx to at least 32768 in your Modelfile or via the API parameter to avoid truncated context windows.' },
+          { type: 'warning', text: 'Ollama runtime default (VRAM-scaled), which is insufficient for most coding tasks. Set num_ctx to at least 32768 in your Modelfile or via the API parameter to avoid truncated context windows.' },
         ],
       },
       gdpr: {

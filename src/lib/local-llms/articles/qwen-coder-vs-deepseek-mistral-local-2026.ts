@@ -198,7 +198,7 @@ annual_local  = power_cost  # $1,073/year after hardware
         tableFormat: true,
         note: 'Latency figures are estimates from community benchmarks and testing, not official vendor measurements. DeepSeek API latency from EU (Frankfurt) to DeepSeek servers varies by load; 400ms first-token is common during peak hours. For autocomplete workflows, local inference is reliably faster.',
         callouts: [
-          { type: 'warning', text: 'Ollama default num_ctx 2048 increases apparent throughput (fewer tokens to process) but truncates context. Set num_ctx 32768 for accurate coding latency measurements.' },
+          { type: 'warning', text: 'Ollama runtime default (VRAM-scaled) increases apparent throughput (fewer tokens to process) but truncates context. Set num_ctx 32768 for accurate coding latency measurements.' },
         ],
       },
       hardware: {

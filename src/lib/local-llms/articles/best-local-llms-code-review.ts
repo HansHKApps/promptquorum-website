@@ -128,7 +128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Reviewing without context. Single-function review misses architectural issues. Always pass related files, imports, and type definitions.',
             'Not specifying issue type. "Review this code" is vague. Use "Check for SQL injection vulnerabilities" or "Suggest performance optimizations for this loop".',
             '**Using Llama 3.3 70B for every review task when a smaller model is sufficient:** Llama 3.3 70B takes 2-3 minutes per 500-line file on most hardware. For style feedback and obvious bugs, Qwen3-Coder 7B completes the same review in ~15 seconds at 60-65% accuracy. Reserve 70B for security-sensitive code and pre-merge review; use 7B for real-time IDE feedback.',
-            '**Not setting num_ctx for multi-file review:** Ollama defaults to 2048 tokens of context -- insufficient for most code files. For code review, set `PARAMETER num_ctx 32768` minimum in your Modelfile. For multi-file architectural review, use 128K context with a 70B model. Without explicit context configuration, the model silently truncates code beyond 2048 tokens and misses bugs in later sections.',
+            '**Not setting num_ctx for multi-file review:** Ollama's Modelfile spec runtime default (VRAM-scaled), but the current runtime picks a VRAM-tiered runtime default (VRAM-scaled) tokens and misses bugs in later sections.',
           ],
         },
         'relatedReading': {
