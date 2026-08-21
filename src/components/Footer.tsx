@@ -247,6 +247,17 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
+              onClick={() => {
+                try {
+                  window.umami?.track('preferred_source_click', {
+                    via: 'footer',
+                    source_page: window.location.pathname,
+                    lang: effectiveLang,
+                  })
+                } catch {
+                  // silent — umami might be blocked
+                }
+              }}
             >
               {t.preferredSource}
             </a>
