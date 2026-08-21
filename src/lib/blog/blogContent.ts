@@ -15736,7 +15736,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Is PromptQuorum GDPR and HIPAA compliant?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'For local and on-premise deployments: fully compliant by design (no data sharing, no tracking, complete control). For cloud API use: compliance depends on your chosen providers (you use your own API keys, not ours).',
+              text: 'Local deployments reduce data-transfer exposure by keeping data within your infrastructure, but they do not by themselves establish GDPR, HIPAA, or other regulatory compliance. Compliance depends on your lawful basis, DPIA, retention policy, access controls, and breach procedures. For cloud APIs: use your own API keys; compliance responsibility remains with your chosen providers.',
             },
           },
           {
@@ -15824,7 +15824,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 6,
             name: 'GDPR/HIPAA Compliant',
-            description: 'For local deployments: fully compliant by design. For cloud: compliance via your own API credentials.',
+            description: 'Local deployments reduce data-transfer exposure; compliance still requires lawful basis, DPIA, and access controls. For cloud: use your own API credentials.',
           },
           {
             '@type': 'ListItem',
@@ -15857,7 +15857,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Privacy by default: Offline-first. Data stays local unless you explicitly share it.',
             'Deployment options: Local (on your machine), on-premise (your servers), or hybrid.',
             'Direct API control: Use your own API keys. Requests go directly to providers, not through PromptQuorum.',
-            'GDPR/HIPAA compliant: Local deployments are compliant by design. No data to share = no compliance risk.',
+            'Privacy and data control: Local deployments keep data on-device, reducing transfer risk. Compliance still requires lawful basis, DPIA, retention policy, and breach procedures.',
             'Transparent: All frameworks documented. No black boxes. Complete data flow visibility.',
             'Enterprise-ready: Works with corporate LLMs, local models (Ollama, LM Studio), and your infrastructure.',
           ],
@@ -15869,7 +15869,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { q: 'Does PromptQuorum track my usage?', a: 'No. By default, nothing is sent to our backend. Only optional surveys that you explicitly approve before sending.' },
             { q: 'Where does my data go?', a: 'You control it. Local prompts stay local. API requests go directly from your computer to the provider (OpenAI, Anthropic, Google). Never through PromptQuorum.' },
             { q: 'Can PromptQuorum be deployed on corporate infrastructure?', a: 'Yes. Deploy on your private cloud (AWS, Azure, GCP), company servers, or run completely offline. Full control.' },
-            { q: 'Is PromptQuorum GDPR and HIPAA compliant?', a: 'For local deployments: fully compliant by design. For cloud APIs: compliance via your own credentials and chosen providers.' },
+            { q: 'Is PromptQuorum GDPR and HIPAA compliant?', a: 'Local inference reduces data-transfer exposure, but compliance depends on lawful basis, data retention policy, access controls, and breach procedures. Use your own API credentials with cloud providers. PromptQuorum itself has zero data collection.' },
             { q: 'Can I use PromptQuorum with local AI models?', a: 'Yes. Run Ollama or LM Studio with 1000+ open-source models and dispatch through PromptQuorum, all locally.' },
           ],
         },
