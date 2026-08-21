@@ -18200,7 +18200,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'What Is AI Consensus Scoring?',
           content: [
             'AI consensus scoring is a method for evaluating the reliability of AI-generated information by measuring agreement across multiple independent language models. When you send the same prompt to five or more AI models and analyse where their responses converge and diverge, you get a statistical signal about which claims are likely accurate and which are potentially hallucinated.',
-            'The underlying principle comes from ensemble methods in statistics: independent sources that arrive at the same conclusion are more likely to be correct than a single source, even if that single source is highly capable. This holds for AI models just as it does for human experts.',
+            'The underlying principle comes from ensemble methods in statistics: consistency signal than a single source, even if that single source is highly capable. This holds for AI models just as it does for human experts.',
             'Consensus scoring assigns a confidence level to each claim in a set of AI responses based on how many models independently agreed on it. High consensus = high reliability. Low consensus = investigate further.',
             'Consensus scoring works best when combined with systematic prompt evaluation. For the framework covering accuracy, consistency, and instruction-following metrics, see [how to evaluate prompt quality](https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality).',
           ],
