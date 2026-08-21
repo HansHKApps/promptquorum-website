@@ -252,6 +252,7 @@ https://www.promptquorum.com/power-local-llm/local-ai-agents-with-mcp-2026
 https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users
 https://www.promptquorum.com/power-local-llm/local-ai-app-with-built-in-rag
 https://www.promptquorum.com/power-local-llm/local-ai-behind-firewall-offline-2026
+https://www.promptquorum.com/power-local-llm/local-ai-video-generation-vs-cloud
 https://www.promptquorum.com/power-local-llm/local-ai-workstation-build-guide-2026
 https://www.promptquorum.com/power-local-llm/local-coding-llm-without-internet
 https://www.promptquorum.com/power-local-llm/local-llm-code-review-ci-cd
