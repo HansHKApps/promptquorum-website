@@ -71,6 +71,7 @@ import { article as a_deepseek_offline_china_self_hosted_2026 } from './articles
 import { article as a_local_ai_video_generation_vs_cloud } from './articles/local-ai-video-generation-vs-cloud'
 import { article as a_local_ai_image_generation_vs_cloud } from './articles/local-ai-image-generation-vs-cloud'
 import { article as a_loci_ai_review_offline_local_ai } from './articles/loci-ai-review-offline-local-ai'
+import { article as a_voice_ai_writers_cloud_vs_local } from './articles/voice-ai-writers-cloud-vs-local'
 import { article as a_deepseek_vs_qwen_coding_local_2026 } from './articles/deepseek-vs-qwen-coding-local-2026'
 import { article as a_best_workstation_build_local_ai_2026 } from './articles/best-workstation-build-local-ai-2026'
 import { article as a_best_local_llm_ide_plugins_2026 } from './articles/best-local-llm-ide-plugins-2026'
