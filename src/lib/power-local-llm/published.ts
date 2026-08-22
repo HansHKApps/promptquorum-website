@@ -65,6 +65,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-local-models-tool-calling-2026',
 
   // Cat 9 — Voice, Speech & Multimodal
+  'elevenlabs-vs-local-tts-piper-xtts',
   'local-whisper-stt-comparison-2026',
   'local-vision-models-llava-ollama-2026',
   'local-tts-voice-cloning-piper-coqui-xtts',

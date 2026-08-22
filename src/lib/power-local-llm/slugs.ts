@@ -83,6 +83,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'wechat-local-llm-integration-2026':            'wechat-local-llm-integration-2026',
 
   // Category 9 — Voice, Speech & Multimodal
+  'elevenlabs-vs-local-tts-piper-xtts':          'elevenlabs-vs-local-tts-piper-xtts',
   'local-whisper-stt-comparison-2026':           'local-whisper-stt-comparison-2026',
   'local-vision-models-llava-ollama-2026':        'local-vision-models-llava-ollama-2026',
   'local-tts-voice-cloning-piper-coqui-xtts':    'local-tts-voice-cloning-piper-coqui-xtts',
