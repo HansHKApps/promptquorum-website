@@ -132,6 +132,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-tts-voice-cloning-piper-coqui-xtts':          a_local_tts_voice_cloning_piper_coqui_xtts,
   'build-local-voice-assistant-2026':                  a_build_local_voice_assistant_2026,
   'local-multimodal-pipeline-voice-vision-text':       a_local_multimodal_pipeline_voice_vision_text,
+  'voice-ai-writers-cloud-vs-local':                   a_voice_ai_writers_cloud_vs_local,
   'best-affiliate-tools-ai-developers-2026':           a_best_affiliate_tools_ai_developers_2026,
   'apple-mlx-vs-nvidia-cuda-local-llm-2026':           a_apple_mlx_vs_nvidia_cuda_local_llm_2026,
   // Commercial Sprint 2026-05-26
