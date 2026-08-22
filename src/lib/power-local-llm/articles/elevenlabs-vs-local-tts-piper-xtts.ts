@@ -308,12 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Practical Answer': 'Calculate using actual usage and staffing costs'
           }
         ],
-        callouts: [
-          {
-            type: 'Warning',
-            text: 'Do not use a generic "break-even after X months" claim. The calculation changes with cloud plan, voice/model choice, character volume, existing equipment, electricity, staff time, and the reliability level your use case needs.'
-          }
-        ]
+        callouts: []
       },
       privacyLicensing: {
         id: 'privacy-licensing',
