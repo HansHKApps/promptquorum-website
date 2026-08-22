@@ -1319,7 +1319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         }
       ]
     },
-    current_models_mentioned: ['GPT-4o', 'Claude', 'Gemini', 'Llama', 'Mistral', 'Qwen', 'DeepSeek'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Raspberry Pi', 'RTX 4090', 'GPU', 'CPU'],
     current_benchmarks_used: ['10.000 monatliche Credits (ElevenLabs kostenlos)', '6 € pro Monat (ElevenLabs Starter)', '22 € pro Monat (ElevenLabs Creator)']
   },
@@ -1941,7 +1941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         }
       ]
     },
-    current_models_mentioned: ['GPT-4o', 'Claude', 'Gemini', 'Llama', 'Mistral', 'Qwen', 'DeepSeek'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Raspberry Pi', 'RTX 4090', 'GPU', 'CPU'],
     current_benchmarks_used: ['10 000 crédits mensuels (ElevenLabs gratuit)', '6 € par mois (ElevenLabs Starter)', '22 € par mois (ElevenLabs Creator)']
   },
@@ -2563,7 +2563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         }
       ]
     },
-    current_models_mentioned: ['GPT-4o', 'Claude', 'Gemini', 'Llama', 'Mistral', 'Qwen', 'DeepSeek'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Raspberry Pi', 'RTX 4090', 'GPU', 'CPU'],
     current_benchmarks_used: ['月間10,000クレジット（ElevenLabs無料）', '月額6ドル（ElevenLabsスターター）', '月額22ドル（ElevenLabsクリエイター）']
   },
@@ -3185,7 +3185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         }
       ]
     },
-    current_models_mentioned: ['GPT-4o', 'Claude', 'Gemini', 'Llama', 'Mistral', 'Qwen', 'DeepSeek'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Raspberry Pi', 'RTX 4090', 'GPU', 'CPU'],
     current_benchmarks_used: ['每月10,000个积分（ElevenLabs免费）', '每月6美元（ElevenLabs入门）', '每月22美元（ElevenLabs创意者）']
   },
@@ -3807,7 +3807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         }
       ]
     },
-    current_models_mentioned: ['GPT-4o', 'Claude', 'Gemini', 'Llama', 'Mistral', 'Qwen', 'DeepSeek'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Raspberry Pi', 'RTX 4090', 'GPU', 'CPU'],
     current_benchmarks_used: ['10.000-121.000 créditos/mes (ElevenLabs gratuito a Creator)', '6 $/mes (Iniciador)', '22 $/mes (Creador)']
   },
@@ -4429,7 +4429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         }
       ]
     },
-    current_models_mentioned: ['GPT-4o', 'Claude', 'Gemini', 'Llama', 'Mistral', 'Qwen', 'DeepSeek'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Raspberry Pi', 'RTX 4090', 'GPU', 'CPU'],
     current_benchmarks_used: ['10.000-121.000 créditos/mês (ElevenLabs gratuito a Criador)', '$6/mês (Iniciador)', '$22/mês (Criador)']
   },
@@ -4637,7 +4637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': 'هل يمكنني بناء مساعد صوت بدون اتصال بالكامل مع Whisper و LLM و Piper؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، من حيث المبدأ. المعمارية الشائعة هي التعرف على الكلام المحلي و LLM محلي و TTS محلي. يجب تثبيت كل مكون محلياً وتعطيل التكاملات عبر الإنترنت الاختيارية إذا كان الهدف التشغيل دون اتصال.' } }
       ]
     },
-    current_models_mentioned: ['GPT-4o', 'Claude', 'Gemini', 'Llama', 'Mistral', 'Qwen', 'DeepSeek'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Raspberry Pi', 'RTX 4090', 'GPU', 'CPU'],
     current_benchmarks_used: ['10000 رصيد شهري (ElevenLabs مجاني)', '6 دولارات/شهر (Starter)', '22 دولار/شهر (Creator)']
   },
@@ -4845,7 +4845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', 'name': 'Whisper, LLM 및 Piper로 완전히 오프라인 음성 어시스턴트를 구축할 수 있나요?', 'acceptedAnswer': { '@type': 'Answer', 'text': '원칙적으로 그렇습니다. 일반적인 아키텍처는 로컬 음성 인식, 로컬 LLM 및 로컬 TTS입니다. 각 구성 요소는 로컬로 설치되어야 하며, 오프라인 작동이 목표인 경우 선택적 온라인 통합을 비활성화해야 합니다.' } }
       ]
     },
-    current_models_mentioned: ['GPT-4o', 'Claude', 'Gemini', 'Llama', 'Mistral', 'Qwen', 'DeepSeek'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Raspberry Pi', 'RTX 4090', 'GPU', 'CPU'],
     current_benchmarks_used: ['월 10,000 크레딧(ElevenLabs 무료)', '월 $6(Starter)', '월 $22(Creator)']
   }
