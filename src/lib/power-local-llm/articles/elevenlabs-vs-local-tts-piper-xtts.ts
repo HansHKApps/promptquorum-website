@@ -85,7 +85,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       recommendedPath: {
         id: 'recommended-path',
         title: 'Recommended Path for Most Readers',
-        content: 'If you\'re here because you need a voiceover this week, here\'s the fastest path:',
+        content: 'ElevenLabs is built for the 88% of content creators who are casual-to-moderate users — YouTubers, podcasters, small marketing teams, and solo creators who need narration occasionally or weekly. You generate a script, click generate, and publish the audio. No review burden. No infrastructure overhead. G2's analysis of 2,770+ AI tool reviews shows that casual users save time overall, while high-volume professionals spend the saved drafting time reviewing AI output for brand compliance and accuracy. This article is for casual users.',
         items: [
           'Start with ElevenLabs free tier (10,000 monthly credits, no card required).',
           'Test the voice quality with your own script.',
@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'Key Point',
-            text: 'Used by YouTube creators, podcasters, and marketing agencies who need publishable audio ready to publish the same day.'
+            text: 'Used by YouTube creators, podcasters, and marketing agencies who need publishable audio ready to publish the same day. If you manage brand voice across channels or have legal/compliance review requirements, you need a different tool (local TTS with governance).'
           }
         ]
       },
