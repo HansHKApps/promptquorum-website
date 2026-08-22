@@ -620,7 +620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         }
       ]
     },
-    current_models_mentioned: ['GPT-4o', 'Claude', 'Gemini', 'Llama', 'Mistral', 'Qwen', 'DeepSeek'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Raspberry Pi', 'RTX 4090', 'GPU', 'CPU'],
     current_benchmarks_used: ['10,000 monthly credits (ElevenLabs free)', '$6/month (ElevenLabs Starter)', '$22/month (ElevenLabs Creator)']
   }
