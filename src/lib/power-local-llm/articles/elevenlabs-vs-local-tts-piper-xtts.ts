@@ -156,6 +156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudCosts: {
         id: 'cloud-costs',
         title: 'What You Pay For With Cloud TTS',
+        sponsoredSlot: true,
         content: 'ElevenLabs removes several tasks that local deployment leaves with you:',
         columns: ['Cloud Benefit', 'What It Changes in Practice'],
         rows: [
@@ -190,6 +191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ElevenLabs currently lists a free plan with 10,000 monthly credits. Its listed Starter tier is $6 per month with 30,000 credits, while the Creator tier is listed at $22 per month with 121,000 credits; annual billing changes the effective monthly price. Text-to-speech usage consumes shared credits, and the exact credit cost depends on the selected model and workflow.'
           }
         ],
+        blockquote: '**Need a voiceover by tomorrow without setup?** Start with ElevenLabs free tier — 10,000 monthly credits, no card required. Test the voice quality with your own content. [Try ElevenLabs for free →](https://elevenlabs.io/pricing)',
         affiliateLinks: [
           {
             url: 'https://elevenlabs.io/pricing',
@@ -203,6 +205,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What "Free" Local TTS Really Costs',
         content: 'Local TTS can be extremely economical once it is running, especially for offline assistants, internal systems, kiosks, embedded projects, and predictable high-volume workloads. But model weights costing $0 is only one line item:',
         columns: ['Local Cost', 'What It Means'],
+        affiliateLinks: [
+          {
+            url: 'https://github.com/rhasspy/piper',
+            productName: 'Piper TTS',
+            productCategory: 'Open-Source Local TTS',
+            label: 'Piper on GitHub'
+          },
+          {
+            url: 'https://github.com/coqui-ai/TTS',
+            productName: 'Coqui TTS / XTTS v2',
+            productCategory: 'Open-Source Voice Cloning',
+            label: 'Coqui TTS on GitHub'
+          }
+        ],
         rows: [
           {
             'Local Cost': 'Hardware',
@@ -238,7 +254,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             type: 'Key Point',
             text: 'Local TTS trades recurring service spend for upfront setup and ongoing responsibility. That is a great trade when you need control; it is usually a poor trade if you only need a polished voiceover before a publishing deadline.'
           }
-        ]
+        ],
+        blockquote: '**Want full offline control for a voice assistant or embedded product?** Piper is the most accessible local TTS engine for beginners. For voice cloning, Coqui TTS and XTTS v2 offer privacy-first alternatives. [Explore Piper →](https://github.com/rhasspy/piper)'
       },
       comparisonTable: {
         id: 'comparison-table',

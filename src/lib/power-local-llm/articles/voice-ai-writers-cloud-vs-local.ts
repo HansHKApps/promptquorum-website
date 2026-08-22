@@ -38,6 +38,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_models_mentioned: [],
     current_hardware_mentioned: ['desktop', 'mobile', 'browser'],
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://grammarly.com/desktop',
+        productName: 'Grammarly',
+        productCategory: 'Cloud Writing & Voice AI'
+      },
+      {
+        url: 'https://jasper.ai/pricing',
+        productName: 'Jasper',
+        productCategory: 'AI Writing for Marketing'
+      },
+      {
+        url: 'https://sudowrite.com',
+        productName: 'Sudowrite',
+        productCategory: 'AI Writing for Fiction'
+      },
+      {
+        url: 'https://quillbot.com',
+        productName: 'QuillBot',
+        productCategory: 'AI Paraphrasing & Rewriting'
+      }
+    ],
     leadAnswerBlock:
       '**If you dictate daily and want editing assistance without building infrastructure, a cloud writing tool like Grammarly is the fastest path. If privacy, offline capability, or data control matter more than convenience, a local pipeline around Whisper and a local LLM gives you more control—but you become responsible for setup and maintenance. For most writers, the smartest answer is hybrid: cloud for everyday writing, local for sensitive work.**',
     quickAnswerTop: {
@@ -94,14 +117,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudTools: {
         id: 'cloud-tools',
         title: 'The 4 Cloud Writing Tools Worth Considering',
+        sponsoredSlot: true,
         content: [
           'Cloud writing tools dominate because they offer finished, integrated workflows. Here are the four most compelling options for different writing needs.',
         ],
         items: [
-          '**Grammarly** — Best for everyday professional writing. Voice input + editing in one tool. Buy if you dictate frequently.',
-          '**Jasper** — Best for marketing teams and branded content. Document context + brand workflows. Buy if you produce large amounts of brand-specific copy.',
-          '**Sudowrite** — Best for fiction writers. Creative suggestions and scene development. Buy if fiction is your primary use case.',
-          '**QuillBot** — Best for straightforward rewriting. Fast paraphrasing and tone adjustment. Buy if your primary need is rewriting, not creation.',
+          '**[Grammarly](https://grammarly.com/desktop)** — Best for everyday professional writing. Voice input + editing in one tool. Buy if you dictate frequently.',
+          '**[Jasper](https://jasper.ai/pricing)** — Best for marketing teams and branded content. Document context + brand workflows. Buy if you produce large amounts of brand-specific copy.',
+          '**[Sudowrite](https://sudowrite.com)** — Best for fiction writers. Creative suggestions and scene development. Buy if fiction is your primary use case.',
+          '**[QuillBot](https://quillbot.com)** — Best for straightforward rewriting. Fast paraphrasing and tone adjustment. Buy if your primary need is rewriting, not creation.',
+        ],
+        blockquote: '**Looking for a finished writing workflow with voice input?** Start with Grammarly or Jasper — both offer voice dictation, editing assistance, and cross-platform support. [Try Grammarly →](https://grammarly.com/desktop)',
+        affiliateLinks: [
+          { url: 'https://grammarly.com/desktop', productName: 'Grammarly', productCategory: 'Cloud Writing & Voice AI', label: 'Try Grammarly' },
+          { url: 'https://jasper.ai/pricing', productName: 'Jasper', productCategory: 'AI Writing for Marketing', label: 'Try Jasper' },
+          { url: 'https://sudowrite.com', productName: 'Sudowrite', productCategory: 'AI Writing for Fiction', label: 'Try Sudowrite' },
+          { url: 'https://quillbot.com', productName: 'QuillBot', productCategory: 'AI Paraphrasing & Rewriting', label: 'Try QuillBot' }
         ],
       },
       comparison: {
