@@ -6284,6 +6284,16 @@
         }
       ]
     },
+    "loci-ai-review-offline-local-ai": {
+      "dateModified": "2026-08-22",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-22",
+      "hasSections": true,
+      "langs": [
+        "en"
+      ],
+      "images": []
+    },
     "mobile-llm-models-phi4-gemma-smollm": {
       "dateModified": "2026-07-14",
       "lastFactChecked": null,
@@ -7134,7 +7144,15 @@
       "publishDate": "2026-08-21",
       "hasSections": true,
       "langs": [
-        "en"
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
       ],
       "images": []
     }

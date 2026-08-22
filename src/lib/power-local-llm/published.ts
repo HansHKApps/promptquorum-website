@@ -45,9 +45,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'sillytavern-vs-agnai-vs-risuai-roleplay',
   'uncensored-local-llm-creative-writing-ethics',
 
-  // Cat 6 — Mobile & Edge LLMs (5)
+  // Cat 6 — Mobile & Edge LLMs (6)
   'best-local-llm-apps-iphone-2026',
   'best-local-llm-apps-android-2026',
+  'loci-ai-review-offline-local-ai',
   'run-ai-on-tablet-ipad-android',
   'mobile-llm-models-phi4-gemma-smollm',
   'voice-assistant-local-mobile-offline',
