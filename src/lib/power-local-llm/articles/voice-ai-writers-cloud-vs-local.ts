@@ -197,7 +197,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local vs. Cloud AI Writing Tools: Privacy, Productivity, and the Right Setup](/power-local-llm/local-vs-cloud-ai-writing-tools) — comprehensive comparison of cloud writing tools with privacy trade-offs.',
           '[Build a Local Voice Assistant on Your Phone: Whisper + Local LLM](/power-local-llm/voice-assistant-local-mobile-offline) — full offline voice pipeline with real performance data.',
           '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — voice-capable apps for dictation on mobile.',
           '[Best Local LLM Apps for Android in 2026](/power-local-llm/best-local-llm-apps-android-2026) — Android alternatives for voice input.',
