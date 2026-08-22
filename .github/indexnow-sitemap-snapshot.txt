@@ -270,6 +270,7 @@ https://www.promptquorum.com/power-local-llm/local-rag-on-your-pdfs-step-by-step
 https://www.promptquorum.com/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts
 https://www.promptquorum.com/power-local-llm/local-vision-models-llava-ollama-2026
 https://www.promptquorum.com/power-local-llm/local-whisper-stt-comparison-2026
+https://www.promptquorum.com/power-local-llm/loci-ai-review-offline-local-ai
 https://www.promptquorum.com/power-local-llm/mobile-llm-models-phi4-gemma-smollm
 https://www.promptquorum.com/power-local-llm/qwen-local-deployment-complete-guide-2026
 https://www.promptquorum.com/power-local-llm/replace-github-copilot-with-local-llm
