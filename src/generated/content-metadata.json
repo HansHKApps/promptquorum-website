@@ -6807,7 +6807,15 @@
       "publishDate": "2026-08-22",
       "hasSections": true,
       "langs": [
-        "en"
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
       ],
       "images": []
     },
