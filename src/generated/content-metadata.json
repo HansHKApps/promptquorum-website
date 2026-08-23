@@ -5612,7 +5612,14 @@
       "hasSections": true,
       "langs": [
         "en",
-        "de"
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
       ],
       "images": []
     },
