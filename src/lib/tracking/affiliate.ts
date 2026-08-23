@@ -39,7 +39,7 @@ const RETAILER_DOMAINS: ReadonlySet<string> = new Set([
   'apple.com', 'synology.com', 'qnap.com', 'westerndigital.com', 'wd.com',
   'samsung.com', 'lenovo.com', 'asus.com', 'frame.work', 'razer.com',
   'dell.com', 'lg.com', 'benq.com', 'minisforum.com', 'aoostar.com',
-  'bee-link.com', 'gmktec.com',
+  'bee-link.com', 'gmktec.com', 'geekompc.com',
   // VPN providers
   'protonvpn.com', 'nordvpn.com', 'mullvad.net', 'surfshark.com', 'expressvpn.com',
   // Developer tools (SaaS)
