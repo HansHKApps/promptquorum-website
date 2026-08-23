@@ -6,19 +6,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-22',
     theme: 'Voice, Speech & Multimodal',
-    title: 'ElevenLabs vs Local TTS in 2026: Cloud Voice AI or Self-Hosted?',
-    seoTitle: 'ElevenLabs vs Local TTS: Which Is Right For You?',
-    intro: 'For most creators, YouTubers, and agencies, ElevenLabs wins on speed and convenience. For developers who need offline or embedded TTS, local engines like Piper offer control—but at the cost of setup time and infrastructure. This guide covers the real trade-offs so you can make the right choice without wasting a week on setup.',
+    title: 'ElevenLabs vs Local TTS (Piper & XTTS) in 2026: Quality, Cost, Privacy & Voice Cloning',
+    seoTitle: 'ElevenLabs vs Piper vs XTTS v2: Quality, Cost & Privacy',
+    intro: 'For most creators, YouTubers, and agencies, ElevenLabs wins on speed and convenience. For developers who need offline or embedded TTS, local engines like Piper offer control—but at the cost of setup time and infrastructure. For local voice cloning specifically, XTTS v2 is the interesting option. This guide covers the real trade-offs so you can make the right choice without wasting a week on setup.',
     metaDescription: 'Compare ElevenLabs vs local TTS (Piper, XTTS v2). See trade-offs in quality, setup, privacy, cost, and offline use. Choose your TTS strategy.',
     publishDate: '2026-08-22',
-    dateModified: '2026-08-22',
+    dateModified: '2026-08-23',
     readTime: '12 min read',
     educationalLevel: 'Intermediate',
     audience: 'Content creators, developers, and teams choosing between cloud TTS and self-hosted speech synthesis.',
     primaryTerm: 'ElevenLabs vs local TTS',
     targetKeywords: ['ElevenLabs vs Piper', 'local TTS', 'Piper TTS', 'XTTS v2', 'text-to-speech cloud vs local', 'free TTS', 'voice cloning', 'offline speech synthesis'],
     twitterDescription: 'Should you pay for ElevenLabs or run Piper locally? Compare cloud TTS vs self-hosted speech synthesis.',
-    leadAnswerBlock: '**For a voiceover by tomorrow, start with ElevenLabs (10,000 free credits, no setup required).** For offline-only systems, embedded products, or privacy-critical workflows, local TTS is the strategic choice—but you\'ll spend hours on setup. Most creators should test ElevenLabs first.',
+    leadAnswerBlock: '**For a voiceover by tomorrow, start with ElevenLabs (10,000 free credits, no setup required, 5 minutes to first audio).** For offline-only systems, embedded products, or privacy-critical workflows, Piper is the strategic choice for lightweight local TTS—but you\'ll spend 1–2 hours on setup. For local voice cloning specifically, XTTS v2 is the option, at the cost of 1–2 days of setup and a GPU. Most creators should test ElevenLabs first.',
     quickAnswerTop: {
       en: {
         question: 'Should I use ElevenLabs or local TTS?',
@@ -45,16 +45,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: undefined,
     toc: [
       { label: 'Quick Answer', anchor: 'quick-answer' },
+      { label: 'The Short Answer', anchor: 'short-answer' },
       { label: 'Recommended Path for Most', anchor: 'recommended-path' },
       { label: 'At a Glance', anchor: 'at-a-glance' },
       { label: 'The Real Comparison: Service vs. Stack', anchor: 'service-vs-stack' },
       { label: 'Cloud TTS Trade-Offs', anchor: 'cloud-costs' },
       { label: 'Local TTS Real Costs', anchor: 'local-costs' },
       { label: 'Side-by-Side Comparison', anchor: 'comparison-table' },
+      { label: 'Piper vs XTTS v2', anchor: 'piper-vs-xtts' },
+      { label: 'Hardware You Actually Need', anchor: 'hardware-guide' },
       { label: 'Cost Calculator', anchor: 'cost-comparison' },
       { label: 'Privacy & Licensing', anchor: 'privacy-licensing' },
       { label: 'Choose ElevenLabs If...', anchor: 'choose-elevenlabs' },
+      { label: 'Don\'t Choose ElevenLabs If...', anchor: 'not-elevenlabs' },
       { label: 'Choose Local TTS If...', anchor: 'choose-local' },
+      { label: 'Don\'t Choose Local TTS If...', anchor: 'not-local' },
       { label: 'Testing Workflow', anchor: 'testing-workflow' },
       { label: 'FAQ', anchor: 'faq' },
       { label: 'Related Reading', anchor: 'related-reading' }
@@ -80,7 +85,29 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       intro: {
         id: 'quick-answer',
-        content: 'ElevenLabs is a hosted voice platform. Its current plans bundle text-to-speech with other voice and media features; credits are shared across products. Its free tier lists 10,000 credits per month, while paid plans add commercial-license access and higher allowances. Check the live pricing page before relying on any amount because features, credits, and pricing can change.\n\nPiper is an open-source local TTS engine. The Piper software repository is MIT licensed, but the licenses and intended use of individual voice datasets/checkpoints can differ. Treat the engine license and the selected voice/model license as separate questions.\n\nXTTS v2 and other local cloning-capable stacks can give you greater local control, but often require more setup, heavier hardware, and more careful review of model, voice, and commercial-use terms.\n\nThe right decision is therefore not "which voice is best?" It is: **Do you want a production service that abstracts away the infrastructure, or a local speech system that you operate and control?**'
+        content: 'ElevenLabs is a hosted voice platform. Its current plans bundle text-to-speech with other voice and media features; credits are shared across products. Its free tier lists 10,000 credits per month, while paid plans add commercial-license access and higher allowances. Check the live pricing page before relying on any amount because features, credits, and pricing can change.\n\nPiper is an open-source local TTS engine. The Piper software repository is MIT licensed, but the licenses and intended use of individual voice datasets/checkpoints can differ. Treat the engine license and the selected voice/model license as separate questions.\n\nXTTS v2 and other local cloning-capable stacks can give you greater local control, but often require more setup, heavier hardware, and more careful review of model, voice, and commercial-use terms.\n\nThe right decision is therefore not "which voice is best?" It is: **Do you want a production service that abstracts away the infrastructure, or a local speech system that you operate and control?**\n\nPricing and plan details in this guide were checked in August 2026 — always confirm current figures on the live pricing page before deciding.'
+      },
+      shortAnswer: {
+        id: 'short-answer',
+        title: 'The Short Answer',
+        content: 'Three tools, three different jobs. Pick based on what you actually need, not which one sounds most impressive:',
+        decisionBlock: {
+          title: 'Choose your TTS approach',
+          cloudIf: [
+            'You want the best voice quality with almost no setup — especially for YouTube, podcasts, advertising, or client work.',
+            'You need a voiceover today, not after a setup project.',
+            'You don\'t want to troubleshoot models, dependencies, or audio tooling.'
+          ],
+          localIf: [
+            'Piper — you need extremely lightweight, offline TTS, especially on CPUs, Raspberry Pi, or embedded hardware, and don\'t need voice cloning.',
+            'XTTS v2 — you need local voice cloning and privacy and are willing to accept substantially more setup time and hardware requirements (GPU recommended).'
+          ],
+          quick: [
+            'For most professional voiceovers: ElevenLabs wins.',
+            'For offline/embedded systems: Piper wins.',
+            'For local voice cloning: XTTS v2 is the interesting option.'
+          ]
+        }
       },
       recommendedPath: {
         id: 'recommended-path',
@@ -317,12 +344,37 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'XTTS v2 or Similar Local Cloning Stack': 'Verify the engine, checkpoint, datasets, output-use terms, and consent obligations'
           },
           {
+            Dimension: 'Languages',
+            ElevenLabs: 'Many (dozens, platform-dependent — check current docs)',
+            Piper: 'Many community voice packages across languages',
+            'XTTS v2 or Similar Local Cloning Stack': '16 languages officially documented, including cross-language cloning'
+          },
+          {
+            Dimension: 'CPU-only operation',
+            ElevenLabs: 'Not applicable (cloud-hosted)',
+            Piper: 'Excellent — designed for CPU-only use',
+            'XTTS v2 or Similar Local Cloning Stack': 'Possible but slow; GPU usually recommended'
+          },
+          {
+            Dimension: 'Raspberry Pi',
+            ElevenLabs: 'Not applicable (cloud-hosted)',
+            Piper: 'Excellent — a common deployment target',
+            'XTTS v2 or Similar Local Cloning Stack': 'Not practical — GPU-class compute is normally required'
+          },
+          {
+            Dimension: 'Concurrent streams',
+            ElevenLabs: 'Provider-managed; scales with your plan',
+            Piper: 'Limited by your own CPU; lightweight enough for several parallel local requests',
+            'XTTS v2 or Similar Local Cloning Stack': 'Limited by GPU memory and throughput; concurrency needs its own testing'
+          },
+          {
             Dimension: 'Best fit',
             ElevenLabs: 'Creators and agencies who need fast, polished production',
             Piper: 'Embedded/local speech and lightweight assistants',
-            'XTTS v2 or Similar Local Cloning Stack': 'Teams that need local control and can operate a more complex system'
+            'XTTS v2 or Similar Local Cloning Stack': 'Teams that need local voice cloning and can operate a more complex system'
           }
         ],
+        note: 'XTTS v2\'s own documentation specifically highlights voice cloning from a short reference clip, cross-language cloning, multilingual generation, and streaming — these are its primary selling points rather than raw synthesis speed. Concurrency and latency figures vary substantially by hardware; test with your own workload before committing to a deployment.',
         affiliateLinks: [
           {
             url: 'https://elevenlabs.io/pricing',
@@ -340,6 +392,42 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             productCategory: 'Open-Source Voice Cloning'
           }
         ]
+      },
+      piperVsXtts: {
+        id: 'piper-vs-xtts',
+        title: 'Piper vs XTTS v2: Which Local TTS Should You Use?',
+        content: '"Local TTS" is not one category — Piper and XTTS v2 solve different problems and target different hardware. Treating them as interchangeable is the most common mistake in this decision.',
+        columns: ['', 'Piper', 'XTTS v2'],
+        rows: [
+          { '': 'Role', 'Piper': 'Lightweight local TTS engine', 'XTTS v2': 'Local voice-cloning engine' },
+          { '': 'Hardware', 'Piper': 'CPU, including Raspberry Pi', 'XTTS v2': 'GPU preferable, substantially heavier' },
+          { '': 'Speed', 'Piper': 'Fast', 'XTTS v2': 'Slower, quality- and cloning-focused' },
+          { '': 'Voice cloning', 'Piper': 'No', 'XTTS v2': 'Yes, from a short reference clip' },
+          { '': 'Multilingual', 'Piper': 'Many community voice packages', 'XTTS v2': '16 languages, with cross-language cloning' },
+          { '': 'Complexity', 'Piper': 'Low — a lightweight assistant build', 'XTTS v2': 'Higher — more setup and licensing review' },
+        ],
+        items: [
+          '**Choose Piper when:** you need speed, you have CPU-only hardware, you need Raspberry Pi support, you don\'t need cloning, and you want a lightweight voice assistant.',
+          '**Choose XTTS v2 when:** you need voice cloning, voice quality and naturalness matter more than speed, you have a GPU, multilingual cloning matters, and you\'re comfortable with a more technical setup.'
+        ],
+        note: 'Piper and XTTS v2 are the two most established local options, but they\'re not the only ones. Newer local TTS models targeting faster synthesis on modest hardware, and others pushing closer to XTTS-level naturalness and cloning quality, appear regularly. If you\'re evaluating local TTS from scratch, it\'s worth a quick look at current community leaderboards before committing — but Piper and XTTS v2 remain the safest, most documented starting points for most projects.',
+        blockquote: 'For the full licensing breakdown on both engines — including per-voice and per-checkpoint terms — see our [Local TTS & Voice Cloning Licenses guide](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts).'
+      },
+      hardwareGuide: {
+        id: 'hardware-guide',
+        title: 'What Hardware Do You Actually Need?',
+        content: 'Hardware requirements differ sharply between Piper and XTTS v2 — this is often the deciding factor once cloning isn\'t a requirement.',
+        columns: ['Hardware', 'Piper', 'XTTS v2'],
+        rows: [
+          { Hardware: 'Raspberry Pi 5', Piper: 'Excellent', 'XTTS v2': 'Not recommended' },
+          { Hardware: 'Mac Mini / Apple Silicon', Piper: 'Excellent', 'XTTS v2': 'Good' },
+          { Hardware: '16GB RAM PC, no discrete GPU', Piper: 'Excellent', 'XTTS v2': 'Possible, but slow' },
+          { Hardware: 'NVIDIA 8GB GPU', Piper: 'Overkill', 'XTTS v2': 'Good' },
+          { Hardware: 'NVIDIA 12GB+ GPU', Piper: 'Excellent (unnecessary)', 'XTTS v2': 'Very good' },
+          { Hardware: 'CPU-only laptop', Piper: 'Excellent', 'XTTS v2': 'Slow' },
+        ],
+        note: 'These are directional guidelines, not benchmarks — actual performance depends on model version, voice length, batching, and concurrent load. Test with your own scripts before buying hardware.',
+        blockquote: 'Planning to buy hardware for local AI voice or LLM work? See our [best GPUs for local AI guide](/local-llms/best-gpus-for-local-llms) for buying recommendations across budgets.'
       },
       costComparison: {
         id: 'cost-comparison',
@@ -427,6 +515,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           }
         ]
       },
+      notElevenlabs: {
+        id: 'not-elevenlabs',
+        title: 'Don\'t Choose ElevenLabs If',
+        content: 'A managed cloud platform is the wrong fit if any of these describe your project:',
+        items: [
+          'You need completely offline operation.',
+          'Your data cannot leave your own infrastructure.',
+          'You\'re deploying on Raspberry Pi or other embedded hardware.',
+          'You need extremely high-volume local inference where per-request cloud pricing becomes uneconomical.',
+          'You want complete control over the inference stack, not just the output.'
+        ]
+      },
       chooseLocal: {
         id: 'choose-local',
         title: 'Choose Local TTS If',
@@ -438,6 +538,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'You already operate local AI infrastructure and are comfortable managing it.',
           'You expect sustained/high-volume use and can justify the operational effort.',
           'You value transparency and deployment control more than browser-first convenience.'
+        ]
+      },
+      notLocal: {
+        id: 'not-local',
+        title: 'Don\'t Choose Local TTS If',
+        content: 'A local deployment is the wrong fit if any of these describe your situation:',
+        items: [
+          'You need a voiceover today, not after a setup project.',
+          'You don\'t want to maintain AI infrastructure long-term.',
+          'You need the most polished, consistent voice quality with minimal iteration.',
+          'You\'re producing client work under tight deadlines.',
+          'You don\'t want to troubleshoot models, dependencies, or audio tooling.'
+        ],
+        blockquote: 'If this is you, start with [ElevenLabs\' free tier →](https://elevenlabs.io/pricing) instead — 10,000 monthly credits, no card required.',
+        affiliateLinks: [
+          {
+            url: 'https://elevenlabs.io/pricing',
+            productName: 'ElevenLabs',
+            productCategory: 'Cloud TTS / Voice AI'
+          }
         ]
       },
       testingWorkflow: {
@@ -495,6 +615,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Can I build a fully offline voice assistant with Whisper, an LLM, and Piper?',
             a: 'Yes, in principle. A common architecture is local speech recognition, a local LLM, and local TTS. Each component must be installed locally and optional online integrations disabled if the goal is offline operation.'
+          },
+          {
+            q: 'Is Piper completely free?',
+            a: 'The Piper software engine is MIT licensed, which is free and unrestricted. Individual voice models/checkpoints can carry separate licenses, so check the specific voice you plan to use before commercial deployment.'
+          },
+          {
+            q: 'Can Piper clone voices?',
+            a: 'No. Piper is a lightweight local TTS engine built for speed and low resource use, not voice cloning. If you need cloning, XTTS v2 or a similar cloning-capable stack is the right tool.'
+          },
+          {
+            q: 'Can XTTS v2 clone a voice?',
+            a: 'Yes. XTTS v2\'s documentation highlights voice cloning from a short reference audio clip, including cross-language cloning across its 16 supported languages.'
+          },
+          {
+            q: 'Can XTTS v2 be used commercially?',
+            a: 'Check the specific license terms for the checkpoint and any voice data you use — commercial use of cloning-capable models often carries more restrictions than a standard TTS engine license. Review the engine license, the model/checkpoint license, and consent requirements for the voice separately before commercial deployment.'
+          },
+          {
+            q: 'Does Piper work without a GPU?',
+            a: 'Yes. Piper is designed to run efficiently on CPU-only hardware, including low-power devices like a Raspberry Pi.'
+          },
+          {
+            q: 'Which is better for YouTube, ElevenLabs or local TTS?',
+            a: 'ElevenLabs, for most creators. It produces polished narration in minutes without local setup, which matters more for a publishing deadline than the marginal savings of running TTS locally.'
+          },
+          {
+            q: 'Which is cheaper at high volume?',
+            a: 'It depends on your actual usage and the value of your time. Cloud metered pricing can grow with volume, while local hardware and setup are a one-time-ish cost plus ongoing operations. Calculate using your real request volume, not a hypothetical one, before switching.'
           }
         ]
       },
@@ -587,10 +735,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'ElevenLabs vs Local TTS in 2026: Cloud Voice AI or Self-Hosted?',
+      'headline': 'ElevenLabs vs Local TTS (Piper & XTTS) in 2026: Quality, Cost, Privacy & Voice Cloning',
       'description': 'Compare ElevenLabs vs local TTS (Piper, XTTS v2). See trade-offs in quality, setup, privacy, cost, and offline use. Choose your TTS strategy.',
       'datePublished': '2026-08-22',
-      'dateModified': '2026-08-22',
+      'dateModified': '2026-08-23',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -710,6 +858,62 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'acceptedAnswer': {
             '@type': 'Answer',
             'text': 'Yes, in principle. A common architecture is local speech recognition, a local LLM, and local TTS. Each component must be installed locally and optional online integrations disabled if the goal is offline operation.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Is Piper completely free?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'The Piper software engine is MIT licensed, which is free and unrestricted. Individual voice models/checkpoints can carry separate licenses, so check the specific voice you plan to use before commercial deployment.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can Piper clone voices?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Piper is a lightweight local TTS engine built for speed and low resource use, not voice cloning. If you need cloning, XTTS v2 or a similar cloning-capable stack is the right tool.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can XTTS v2 clone a voice?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. XTTS v2\'s documentation highlights voice cloning from a short reference audio clip, including cross-language cloning across its 16 supported languages.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can XTTS v2 be used commercially?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Check the specific license terms for the checkpoint and any voice data you use — commercial use of cloning-capable models often carries more restrictions than a standard TTS engine license. Review the engine license, the model/checkpoint license, and consent requirements for the voice separately before commercial deployment.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does Piper work without a GPU?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Piper is designed to run efficiently on CPU-only hardware, including low-power devices like a Raspberry Pi.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Which is better for YouTube, ElevenLabs or local TTS?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'ElevenLabs, for most creators. It produces polished narration in minutes without local setup, which matters more for a publishing deadline than the marginal savings of running TTS locally.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Which is cheaper at high volume?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'It depends on your actual usage and the value of your time. Cloud metered pricing can grow with volume, while local hardware and setup are a one-time-ish cost plus ongoing operations. Calculate using your real request volume, not a hypothetical one, before switching.'
           }
         }
       ]
