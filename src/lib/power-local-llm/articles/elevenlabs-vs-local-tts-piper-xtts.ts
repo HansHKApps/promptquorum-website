@@ -1882,7 +1882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         text: 'Pensez-y comme au stockage cloud vs un NAS domestique : le cloud est plus simple à configurer et à faire évoluer, mais le stockage local garde tout sous votre contrôle et ne coûte rien par fichier.'
       }
     ],
-    heroImage: undefined,
+    heroImage: '/images/elevenlabs-vs-local-tts-hero-fr.webp',
     toc: [
       { label: 'Réponse rapide', anchor: 'quick-answer' },
       { label: 'La réponse courte', anchor: 'short-answer' },
