@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-22',
     next_refresh_due: '2027-02-22',
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voice-ai-writers-hero-en.webp',
+    heroImage: '/images/voice-ai-writers-hero-ar.webp',
     title: 'أفضل أدوات الكتابة بالذكاء الاصطناعي للكتّاب في 2026: السحابة مقابل التشغيل المحلي، التكلفة، الخصوصية، والإنتاجية',
     seoTitle: 'أدوات الكتابة بالذكاء الاصطناعي 2026: Grammarly مقابل Jasper مقابل الحلول المحلية — دليل الشراء',
     intro:
@@ -724,7 +724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-22',
     next_refresh_due: '2027-02-22',
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voice-ai-writers-hero-en.webp',
+    heroImage: '/images/voice-ai-writers-hero-de.webp',
     title: 'Die besten KI-Schreibtools für Autoren 2026: Cloud vs. lokal – Kosten, Datenschutz und Produktivität',
     seoTitle: 'KI-Schreibtools 2026: Grammarly vs. Jasper vs. lokal – Kaufratgeber',
     intro:
@@ -1080,7 +1080,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-22',
     next_refresh_due: '2027-02-22',
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voice-ai-writers-hero-en.webp',
+    heroImage: '/images/voice-ai-writers-hero-es.webp',
     title: 'Las mejores herramientas de escritura con IA para escritores en 2026: nube vs. local, costo, privacidad y productividad',
     seoTitle: 'Herramientas de escritura con IA 2026: Grammarly vs. Jasper vs. local — Guía de compra',
     intro:
@@ -1436,7 +1436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-22',
     next_refresh_due: '2027-02-22',
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voice-ai-writers-hero-en.webp',
+    heroImage: '/images/voice-ai-writers-hero-fr.webp',
     title: 'Meilleurs outils d\'écriture IA pour rédacteurs en 2026 : cloud vs local, coût, confidentialité et productivité',
     seoTitle: 'Outils d\'écriture IA 2026 : Grammarly vs Jasper vs local — Guide d\'achat',
     intro:
@@ -1792,7 +1792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-22',
     next_refresh_due: '2027-02-22',
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voice-ai-writers-hero-en.webp',
+    heroImage: '/images/voice-ai-writers-hero-ja.webp',
     title: '2026年ライター向けAI執筆ツール比較：クラウドvs.ローカル、コスト・プライバシー・生産性',
     seoTitle: 'AI執筆ツール2026：Grammarly vs. Jasper vs. ローカルAI 購入ガイド',
     intro:
@@ -2148,7 +2148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-22',
     next_refresh_due: '2027-02-22',
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voice-ai-writers-hero-en.webp',
+    heroImage: '/images/voice-ai-writers-hero-ko.webp',
     title: '2026년 작가를 위한 최고의 AI 글쓰기 도구: 클라우드 vs. 로컬, 비용, 개인정보 보호, 생산성',
     seoTitle: 'AI 글쓰기 도구 2026: Grammarly vs. Jasper vs. 로컬 구매 가이드',
     intro:
@@ -2504,7 +2504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-22',
     next_refresh_due: '2027-02-22',
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voice-ai-writers-hero-en.webp',
+    heroImage: '/images/voice-ai-writers-hero-pt.webp',
     title: 'Melhores Ferramentas de IA para Escrita em 2026: Nuvem vs. Local, Custo, Privacidade e Produtividade',
     seoTitle: 'Ferramentas de IA para Escrita 2026: Grammarly vs. Jasper vs. Local',
     intro:
@@ -2860,7 +2860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-22',
     next_refresh_due: '2027-02-22',
     theme: 'Voice, Speech & Multimodal',
-    heroImage: '/images/voice-ai-writers-hero-en.webp',
+    heroImage: '/images/voice-ai-writers-hero-zh.webp',
     title: '2026年最佳AI写作工具:云端与本地对比、成本、隐私与效率',
     seoTitle: 'AI写作工具2026:Grammarly对比Jasper对比本地方案——选购指南',
     intro:

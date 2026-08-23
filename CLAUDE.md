@@ -128,6 +128,21 @@ All Prompt Engineering articles automatically generate language-specific Open Gr
 
 Writers do not need to create or manage og:images; they are handled automatically by the system.
 
+## Hero Images Must Be Localized — No Language Exceptions
+
+**MANDATORY rule, no exceptions:** every article's `heroImage` field, in **every language block**, must point to a hero image rendered **in that block's own language**. Never point two different language blocks at the same hero file, and never reuse the `-en` hero as a placeholder for other locales "until someone gets to it later." A hero image with English text baked into it, served on a Spanish/German/Japanese page, is a visible, embarrassing bug — it is exactly the kind of crawler-visible English-on-a-translated-page defect this repo's i18n rules exist to prevent (see the "Critical: Server-to-Client Language Handoff" section above).
+
+This applies to every cluster that uses static pre-rendered hero images (`power-local-llm`, `local-llms`, etc. — anywhere an article sets `heroImage: '/images/{slug}-hero-{lang}.webp'`). It does **not** apply to the Prompt Engineering `/api/og/[slug]` route above, which renders OG images on-demand per request and is already language-aware automatically.
+
+**How to generate a hero image for one language:**
+1. Start the dev server (`npm run dev`).
+2. POST to `http://localhost:3000/api/hero-image` with `{ lang, title, subtitle, footer }` — `title`/`subtitle` should be that language's actual translated article title/intro (not a re-translation done separately from the article content — reuse what's already in the article's language block), `footer` is the localized "PromptQuorum Guide" string used elsewhere in that locale.
+3. Save the returned PNG to `public/images/{slug}-hero-{lang}.png`, then convert to lossless WebP (`sharp({lossless: true, effort: 6})`, matching `scripts/convert-heroes-to-webp.mjs`) and delete the intermediate PNG.
+4. Reference the resulting `{slug}-hero-{lang}.webp` from that language block's `heroImage` field — never from any other block.
+5. Repeat for **all 9 languages** (en, de, fr, ja, zh, es, pt, ar, ko) before considering a new article "done." Generating only the English hero and shipping the other 8 language blocks without their own hero is the same class of bug as shipping English body text on a translated URL.
+
+Existing batch scripts (`scripts/gen-batch*.mjs`, `scripts/gen-hub-heroes.mjs`) show the working pattern — one hero spec object per language, one API call per language, one output file per language. Follow that pattern for new articles instead of improvising a shortcut.
+
 ## Image Attribution (SVG Branding)
 
 All SVG images in `public/images/` must carry a `promptquorum.com` corner attribution mark and embedded Dublin Core metadata.

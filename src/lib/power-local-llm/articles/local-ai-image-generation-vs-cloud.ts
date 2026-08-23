@@ -336,7 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-ar.webp',
     title: 'الصور بالذكاء الاصطناعي المحلي مجانية. الصور بالذكاء الاصطناعي السحابي فورية. معالج الرسوميات (GPU) لديك هو من يقرر.',
     seoTitle: 'توليد الصور بالذكاء الاصطناعي محلياً 2026: FLUX مقابل SD 3.5 مقابل السحابة',
     intro:
@@ -658,7 +658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-de.webp',
     title: 'Lokale KI-Bilder sind kostenlos. Cloud-KI-Bilder sind sofort da. Ihre GPU entscheidet.',
     seoTitle: 'Lokale KI-Bildgenerierung 2026: FLUX vs. SD 3.5 vs. Cloud',
     intro:
@@ -988,7 +988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-es.webp',
     title: 'Las imágenes con IA local son gratis. Las de la nube son instantáneas. Tu GPU decide.',
     seoTitle: 'Generación de imágenes con IA local 2026: FLUX vs SD 3.5 vs la nube',
     intro:
@@ -1310,7 +1310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-fr.webp',
     title: 'Les images IA locales sont gratuites. Les images IA cloud sont instantanées. Votre GPU décide.',
     seoTitle: 'Génération d’images IA locale 2026 : FLUX vs SD 3.5 vs Cloud',
     intro:
@@ -1632,7 +1632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-ja.webp',
     title: 'ローカルAI画像生成は無料。クラウドAI画像は即時。決め手はGPUです。',
     seoTitle: 'ローカルAI画像生成2026:FLUX対SD 3.5対クラウド',
     intro:
@@ -1954,7 +1954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-ko.webp',
     title: '로컬 AI 이미지는 무료입니다. 클라우드 AI 이미지는 즉각적입니다. 선택은 GPU가 결정합니다.',
     seoTitle: '2026년 로컬 AI 이미지 생성: FLUX vs SD 3.5 vs 클라우드',
     intro:
@@ -2276,7 +2276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-pt.webp',
     title: 'Imagens de IA Local São Gratuitas. Imagens de IA na Nuvem São Instantâneas. Sua GPU Decide.',
     seoTitle: 'Geração Local de Imagens com IA 2026: FLUX vs SD 3.5 vs Nuvem',
     intro:
@@ -2598,7 +2598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-21',
     next_refresh_due: '2027-02-21',
     theme: 'Image & Video Generation',
-    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-en.webp',
+    heroImage: '/images/local-ai-image-generation-vs-cloud-hero-zh.webp',
     title: '本地AI图像免费,云端AI图像即时,你的GPU决定选哪个',
     seoTitle: '2026本地AI图像生成指南:FLUX对比SD 3.5对比云端',
     intro:

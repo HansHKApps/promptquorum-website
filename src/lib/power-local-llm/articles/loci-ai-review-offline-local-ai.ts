@@ -338,7 +338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-22',
     next_refresh_due: '2027-02-22',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/loci-ai-review-hero-en.webp',
+    heroImage: '/images/loci-ai-review-hero-ar.webp',
     title: 'مراجعة Loci AI (2026): ذكاء اصطناعي خاص دون إنترنت عبر iPhone و Android و iPad و Mac و Windows',
     seoTitle: 'مراجعة Loci AI 2026: ذكاء اصطناعي خاص دون الاتصال بالإنترنت',
     intro:
@@ -677,7 +677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-22',
     next_refresh_due: '2027-02-22',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/loci-ai-review-hero-en.webp',
+    heroImage: '/images/loci-ai-review-hero-de.webp',
     title: 'Loci AI Review (2026): Private Offline-KI für iPhone, Android, iPad, Mac und Windows',
     seoTitle: 'Loci AI Review 2026: Private Offline-KI auf allen Plattformen',
     intro:
@@ -1011,7 +1011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-22',
     next_refresh_due: '2027-02-22',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/loci-ai-review-hero-en.webp',
+    heroImage: '/images/loci-ai-review-hero-es.webp',
     title: 'Reseña de Loci AI (2026): IA privada sin conexión para iPhone, Android, iPad, Mac y Windows',
     seoTitle: 'Reseña de Loci AI 2026: IA privada sin conexión en todas las plataformas',
     intro:
@@ -1337,7 +1337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   dateModified: '2026-08-22',
   next_refresh_due: '2027-02-22',
   theme: 'Mobile & Edge LLMs',
-  heroImage: '/images/loci-ai-review-hero-en.webp',
+  heroImage: '/images/loci-ai-review-hero-fr.webp',
   title: 'Critique de Loci AI (2026) : IA hors ligne privée sur iPhone, Android, iPad, Mac et Windows',
   seoTitle: 'Critique Loci AI 2026 : IA hors ligne privée multiplateforme',
   intro:
@@ -1989,7 +1989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-22',
     next_refresh_due: '2027-02-22',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/loci-ai-review-hero-en.webp',
+    heroImage: '/images/loci-ai-review-hero-ko.webp',
     title: 'Loci AI 리뷰 (2026): iPhone, Android, iPad, Mac, Windows용 오프라인 AI',
     seoTitle: 'Loci AI 리뷰 2026: 크로스플랫폼 프라이빗 오프라인 AI',
     intro:
@@ -2315,7 +2315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   dateModified: '2026-08-22',
   next_refresh_due: '2027-02-22',
   theme: 'Mobile & Edge LLMs',
-  heroImage: '/images/loci-ai-review-hero-en.webp',
+  heroImage: '/images/loci-ai-review-hero-pt.webp',
   title: 'Revisão do Loci AI (2026): IA Offline para iPhone, Android, iPad, Mac e Windows',
   seoTitle: 'Revisão do Loci AI 2026: IA Offline Privada em Múltiplas Plataformas',
   intro:
@@ -2641,7 +2641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-08-22',
     next_refresh_due: '2027-02-22',
     theme: 'Mobile & Edge LLMs',
-    heroImage: '/images/loci-ai-review-hero-en.webp',
+    heroImage: '/images/loci-ai-review-hero-zh.webp',
     title: 'Loci AI 评测（2026）：iPhone、Android、iPad、Mac 和 Windows 上的离线 AI',
     seoTitle: 'Loci AI 评测 2026：跨平台私密离线 AI',
     intro:
