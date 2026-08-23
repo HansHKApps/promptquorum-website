@@ -4,8 +4,9 @@ description: PromptQuorum affiliate-page writing rules — which mode to write a
 ---
 
 # PromptQuorum Affiliate Writing Guide
-Last updated: 2026-08-16 (revised: added Click Mechanics section, zero-commission Mode B test,
-regional availability check, price-verification workflow — see changelog note at bottom)
+Last updated: 2026-08-23 (revised: added the Conversion Funnel section, expanded proof-before-CTA
+into a commercial-proof requirement, and product-specific CTA wording — see changelog note at
+bottom)
 
 **Scope of this guide:** affiliate-specific rules only — which mode to write a page in, where
 product recommendations and links go, and how disclosure works. This guide does NOT cover
@@ -149,6 +150,90 @@ separate format):**
 
 ---
 
+## The Conversion Funnel (applies to both modes)
+
+The rules above cover *where* links and recommendations go section-by-section. This section
+covers the *order* the reader moves through, especially in the first 30–50% of the page — the
+part that decides whether they stay long enough to reach a CTA at all. This matters most on
+high-intent page types: "best X," "X vs Y," "X review," and "X for [use case]" pages, where the
+reader already has commercial intent and is scanning for permission to act, not being introduced
+to the topic cold.
+
+**The ideal sequence for the first 30–50% of the page:**
+1. **Search intent acknowledged** — the opening line(s) mirror the reader's actual query back to
+   them (this is also GEO's answer-first rule — don't write a separate opening for funnel
+   purposes, use the one GEO already requires).
+2. **Recommendation stated** — the Lead Answer / Best Choice block names the pick plainly, not
+   buried after three paragraphs of throat-clearing.
+3. **Proof** — the commercial-proof evidence described below, placed immediately around the
+   recommendation, before the reader is asked to act.
+4. **Comparison** — the reader sees the alternative(s) it beat, so the recommendation reads as a
+   conclusion, not an assertion.
+5. **Primary CTA** — placed once the reader has enough to decide, not before.
+6. **Secondary CTA** — a lower-commitment alternative (free trial, "see pricing," a runner-up
+   pick) for the reader who isn't ready for the primary ask yet — don't let them leave with
+   nothing when a free-tier or lower-friction option exists.
+
+Don't treat this as a rigid template to fill mechanically — it's the shape the *first* screen or
+two should already have, before the deeper Mode A/B structure (full comparison tables, "who
+should use this" segments) takes over further down the page.
+
+### Commercial proof — what "proof before CTA" actually requires
+
+The Click Mechanics section already says one concrete fact beside the CTA beats a bare link. That
+is the floor, not the target. Every primary recommendation needs **2–4 concrete, decision-relevant
+reasons** placed immediately around the CTA — not scattered as generic spec-sheet copy elsewhere
+on the page. Draw from:
+- an important specification (the one that actually decides the purchase for this use case, not
+  every spec the product has)
+- current price/value
+- a specific use-case advantage ("best for X workload")
+- a meaningful limitation (this doubles as part of the "skip this if…" requirement — a
+  recommendation with zero named downsides reads as unverified, not as strong)
+- compatibility/availability (does it actually work with what the reader already has, is it
+  in stock, is it sold in their market)
+- why it wins commercially over the runner-up — cheaper than alternative Y, avoids a specific pain
+  point the alternative has, a meaningful edge over the second choice
+
+This is what keeps a page from reading as "AI-generated product description + affiliate button."
+The CTA should feel like the logical conclusion the reader already reached from the evidence, not
+an interruption asking them to trust the writer's word for it. This requirement is strictest on
+hardware pages, where "it has good specs" alone is not a reason to buy this one over the other
+five with equally good specs.
+
+**Every commercial page should be able to answer, explicitly, somewhere in its structure** (the
+existing "skip this if…" rule is already the answer to the fourth question — this just makes the
+full set explicit rather than leaving three of the five implicit):
+1. Why this product?
+2. Why now? (what makes this a good time to buy, not a stale evergreen claim — a real price drop,
+   a genuine current-best-in-category status, a seasonal factor — never invent urgency that isn't
+   real)
+3. What problem does it solve?
+4. What is the biggest reason NOT to buy it? (= "skip this if…")
+5. What should the reader do next? (= the primary CTA, and the secondary CTA if the primary isn't
+   right for them yet)
+
+### Product-specific CTA wording
+
+The generic patterns in Click Mechanics ("Check current price," "Check compatibility") are the
+right default for physical hardware, but they undersell products with a free entry point — "Check
+price" is a weaker ask than "Try free" when trying costs the reader nothing. Match the CTA to what
+the reader is actually being asked to commit to:
+
+| Product type | CTA pattern |
+|---|---|
+| Hardware | "Check current price" / "See configuration" |
+| Software (has a free tier) | "Start free" / "Try it free" |
+| Cloud AI / API credits | "Start with [N] free credits" / "See pricing" |
+| Subscriptions | "Start free trial" / "Compare plans" |
+| Services | "Get started" / "See plans" |
+
+If a product has a genuine free tier or trial, lead with that CTA rather than a paid-tier "check
+price" — the lower-friction ask converts the undecided reader, and the paid-plan detail can live
+in the surrounding proof instead of the button itself.
+
+---
+
 ## Disclosure (affiliate-specific, applies to both modes)
 
 - Until an affiliate program is live, say so plainly — "product links, no current affiliate
@@ -164,10 +249,11 @@ separate format):**
 
 The rules above cover *where* a link goes. These cover whether a reader actually clicks it.
 
-- **CTA wording — use an intent-specific action, not "Buy Now" or "Click Here."** Pick from
-  patterns like "Check current price," "See today's configuration," "Compare availability," "Check
-  compatibility" — whichever matches what the reader is actually deciding at that point. "Buy Now"
-  overstates certainty the reader doesn't have yet at the top of a comparison page.
+- **CTA wording — use an intent-specific action, not "Buy Now" or "Click Here."** "Buy Now"
+  overstates certainty the reader doesn't have yet at the top of a comparison page. See the
+  Conversion Funnel section's product-specific CTA table for the right pattern per product type
+  (hardware vs. software-with-free-tier vs. subscription, etc.) — don't default to a generic
+  "check price" CTA on a product that has a free entry point, it undersells the actual ask.
 - **Give physical products a fallback link when it's cheap to do so.** Hardware (GPUs, mini-PCs,
   balcony solar kits) goes out of stock. Where a genuine secondary vendor exists for the same
   product (Amazon + Newegg, official site + an authorized reseller), link both — "Check Amazon |
@@ -219,3 +305,14 @@ availability check, and a two-source price-verification step. Deliberately not i
 opportunity-scoring frameworks, page-prioritization ladders, and CTR/EPC-tier classification
 systems for deciding which pages to write first; that prioritization is handled manually, not by
 this guide.*
+
+*Changelog note (2026-08-23): added the Conversion Funnel section — the ideal search-intent →
+recommendation → proof → comparison → CTA → secondary-CTA sequence for the first 30–50% of
+high-intent pages (best X, X vs Y, X review, X for use case); expanded the existing "one concrete
+fact beside the CTA" rule into an explicit 2–4-item commercial-proof requirement per primary
+recommendation (spec, price/value, use-case advantage, limitation, compatibility/availability,
+why-it-wins-commercially); made the five-question commercial-page checklist explicit (why this,
+why now, what problem, why not, what next — the last two already existed as "skip this if" and
+the CTA itself, now stated as one complete set); added a product-type-specific CTA wording table
+so software/cloud/subscription products with a free tier lead with "start free" instead of a
+generic "check price" ask.*
