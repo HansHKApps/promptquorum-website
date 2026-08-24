@@ -779,8 +779,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
-    next_refresh_due: '2027-01-03',
+    dateModified: '2026-08-24',
+    next_refresh_due: '2027-02-24',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Test Minisforum UM890 Pro (2026) : serveur IA local',
@@ -906,6 +906,47 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Deux emplacements SO-DIMM et deux emplacements M.2 évolutifs facilitent l\'extension de la RAM et du stockage.',
         ],
       },
+      whichConfig: {
+        id: 'which-config',
+        title: 'Quelle configuration choisir ?',
+        content: 'Le UM890 Pro est vendu en plusieurs variantes. Voici comment choisir en fonction de votre charge de travail. **Tous les prix ci-dessous sont des estimations d\'août 2026** — consultez le revendeur pour les tarifs actuels.',
+        columns: ['Configuration', 'Utilisation type', 'Prix estimé', 'Modèle max recommandé'],
+        rows: [
+          {
+            Configuration: 'Barebone (aucune RAM/SSD)',
+            'Utilisation type': 'Vous possédez déjà des SO-DIMM DDR5 et une SSD NVMe ; économise 50–100 € par rapport aux versions préassemblées',
+            'Prix estimé': '~489 €',
+            'Modèle max recommandé': '7B (avec 32 GB RAM ajoutée)',
+          },
+          {
+            Configuration: '32 GB DDR5 + 1 TB SSD',
+            'Utilisation type': 'Entrée de gamme : Home Assistant, modèle local 7B, Whisper',
+            'Prix estimé': '~649 €',
+            'Modèle max recommandé': '7B confortable',
+          },
+          {
+            Configuration: '64 GB DDR5 + 1 TB SSD',
+            'Utilisation type': 'Montée en gamme : 13B–14B plus sûr, Frigate + IA, Whisper concurrent',
+            'Prix estimé': '~799 €',
+            'Modèle max recommandé': '13B–14B confortable',
+          },
+          {
+            Configuration: '96 GB DDR5 + 2 TB SSD',
+            'Utilisation type': 'Puissance maximale : 30B à faible débit, plusieurs modèles concurrents, OCuLink GPU prêt',
+            'Prix estimé': '~1.099 €',
+            'Modèle max recommandé': '30B Q4 ou 13B×2 concurrents',
+          },
+        ],
+        items: [
+          '**Estimé d\'après les spécifications, non mesuré.** Toutes les combinaisons RAM/modèles supposent Ollama avec quantification Q4_K_M.',
+          'Les prix changent chaque semaine ; consultez le revendeur avant d\'acheter. Ce sont des snapshots d\'août 2026.',
+          'La vitesse du SSD compte moins pour les LLMs locaux que pour le démarrage du système ; une SSD SATA fonctionne, NVMe est mieux.',
+        ],
+        affiliateLinks: [
+          { label: 'Vérifier tous les tarifs — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+
       localAi: {
         id: 'local-ai',
         title: 'IA locale & performances LLM',
@@ -924,6 +965,90 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Vérifier le prix actuel — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
         ],
       },
+      ser8Comparison: {
+        id: 'ser8-comparison',
+        title: 'UM890 Pro vs Beelink SER8 — Lequel choisir ?',
+        content: 'Les deux tournent un LLM 7B sur la même classe iGPU (Radeon 780M). Le UM890 Pro ajoute l\'extensibilité, la mise en réseau double et un chemin de mise à niveau clair.',
+        columns: ['Aspect', 'UM890 Pro', 'SER8', 'Gagnant'],
+        rows: [
+          {
+            Aspect: 'Classe CPU/GPU',
+            'UM890 Pro': 'Ryzen 9 8945HS, Radeon 780M',
+            SER8: 'Ryzen 8845HS, Radeon 780M',
+            Gagnant: 'Égalité (iGPU identique ; 8945 légèrement plus rapide)',
+          },
+          {
+            Aspect: 'RAM max',
+            'UM890 Pro': '96 GB (SO-DIMM auprustable)',
+            SER8: '64 GB (SO-DIMM auprustable)',
+            Gagnant: 'UM890 Pro',
+          },
+          {
+            Aspect: 'Réseau',
+            'UM890 Pro': 'Dual 2,5GbE, Wi-Fi 6E',
+            SER8: 'Simple 2,5GbE, Wi-Fi 6E',
+            Gagnant: 'UM890 Pro (Dual LAN)',
+          },
+          {
+            Aspect: 'Expansion eGPU',
+            'UM890 Pro': 'OCuLink (PCIe 4.0 ×4)',
+            SER8: 'USB4 seul',
+            Gagnant: 'UM890 Pro (OCuLink plus rapide pour GPU)',
+          },
+          {
+            Aspect: 'Prix (barebones)',
+            'UM890 Pro': '~489 €',
+            SER8: '~449 €',
+            Gagnant: 'Égalité / vérifier le prix actuel',
+          },
+          {
+            Aspect: 'Prix (32 GB configuré)',
+            'UM890 Pro': '~649 €',
+            SER8: '~649 €',
+            Gagnant: 'Égalité',
+          },
+          {
+            Aspect: 'Meilleur pour',
+            'UM890 Pro': 'Serveur maison extensible, chemin de mise à niveau GPU futur',
+            SER8: 'Choix bon marché, pas d\'expansion nécessaire',
+            Gagnant: 'Dépend de vos plans de croissance',
+          },
+        ],
+        items: [
+          '**Estimé d\'après les spécifications, non mesuré.** Les performances réelles sur les modèles 7B de l\'iGPU sont pratiquement identiques.',
+          'Les prix changent chaque semaine — vérifiez auprès des deux revendeurs avant de décider.',
+          'Consultez le [test complet Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) pour plus de détails.',
+        ],
+        affiliateLinks: [
+          { label: 'Vérifier le prix — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+
+      verifiedEstimated: {
+        id: 'verified-estimated',
+        title: 'Ce que nous avons vérifié, estimé et non testé',
+        content:
+          'Ce test repose sur des spécifications vérifiées et des estimations fondées — pas sur des tests indépendants ni des benchmarks mesurés par PromptQuorum.',
+        items: [
+          '**Vérifié (par rapport aux spécifications et aux sources indépendantes):** architecture CPU/GPU/RAM, stockage, OCuLink, réseau, ports, TDP de base',
+          '**Estimé à partir du matériel (pas mesuré indépendamment sur cette unité):** aptitude aux LLM locaux (compatibilité 7B/13B-14B), débit typique ~8–18 tok/sec (7B Q4_K_M à partir de rapports tiers Vulkan), consommation électrique 50–65 W iGPU uniquement, comportement thermique et acoustique',
+          '**Non testé indépendamment:** tok/sec sur cette unité spécifique, fiabilité en continu 24/7, limitation thermique sous charges très élevées, performance réelle eGPU OCuLink (aucune donnée de test utilisateur disponible)',
+        ],
+      },
+
+      whoShouldNotBuy: {
+        id: 'who-should-not-buy',
+        title: 'Qui ne devrait pas l\'acheter',
+        content: '**Le UM890 Pro n\'est pas pour tout le monde.** Si vous ressemblez à l\'un des profils ci-dessous, un modèle moins cher pourrait faire l\'affaire.',
+        items: [
+          'Vous ne lancerez qu\'un seul modèle 7B à perpétuité — le SER8 économise 150–300 € pour la même performance iGPU.',
+          'Votre espace est compté en centimètres — ses 67 mm de haut le rendent moins compact qu\'un Beelink.',
+          'Votre réseau n\'utilise pas la fibre — un seul lien Gigabit vous suffit ; payer pour le double 2,5GbE n\'a pas de sens.',
+          'Vous n\'avez pas 800+ € pour la montée en gamme 96 GB — le barebone + SO-DIMM à bas prix est OK, mais sinon, les box N150 économiques (Beelink EQ14) coûtent bien moins cher.',
+          'Vous voulez une box GPU intégrée dès le départ — l\'OCuLink est une voie de mise à niveau, pas une GPU embarquée. Pour cela, regardez le GEEKOM A9 Max (iGPU similaire, plafond RAM 128 GB, pas OCuLink).',
+        ],
+      },
+
       prosCons: {
         id: 'pros-cons',
         title: 'Avantages & inconvénients',
