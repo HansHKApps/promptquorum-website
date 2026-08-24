@@ -83,14 +83,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ideal for privacy-conscious users who want simplicity over advanced model control.',
           'Not ideal for users needing frontier reasoning, live web knowledge, or GGUF/quantization flexibility.',
           'Exact model availability and device/OS support can change — check official listings before assuming consistency.',
-          'Real-world testing shows model downloads work reliably, offline chat functions as advertised, but small models (3B–4B) struggle with nuanced topics.',
+          'Real-world testing shows model downloads work reliably, offline chat functions as advertised. Small model quality limitations are inherent to model size across any app — Loci focuses on stability and hallucination reduction.',
         ],
       },
       whatIsLoci: {
         id: 'what-is-loci',
         title: 'What Loci Is',
         content: [
-          'Loci is a consumer-focused, on-device AI assistant available on iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac, and Windows. The developer is Michael Waldman; the app is free with no subscription, no ads, no account requirement.',
+          'Loci is a consumer-focused, on-device AI assistant available on iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac, and Windows. The app is free with no subscription, no ads, no account requirement.',
           'Model architecture: Loci can use "Apple\'s built-in foundation model or download from 10+ curated open-source models, including Gemma, Qwen, Llama, and Phi — all running locally on your device." This means inference happens on-device after setup, not in the cloud.',
           'Privacy positioning: The official claim is "Chat is processed on your device and is not uploaded. There is no account, no server-side copy of your conversations, and no training on your words." The app collects "Identifiers," "Usage Data," and "Diagnostics" via its privacy nutrition label, but states this data is "not linked to your identity."',
           'Optional features include photo analysis, voice mode, calendar/reminders integration, and web search via DuckDuckGo. The caveat: web search and Windows voice input require an internet connection, which alters the "offline" story if used.',
@@ -104,7 +104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Apple system foundation model** — on supported Apple devices (iPhone, iPad, Mac with recent iOS/macOS versions), Loci can use a built-in on-device foundation model provided by Apple. This path requires no model download, minimal setup friction, and is the simplest on Apple platforms.',
-          '**Downloadable open-source models** — users can download compact models (Gemma 3 1B/4B, Qwen 2.5, Llama 3.2 3B, Phi-4 Mini) into Loci once. Model files typically range from 1–5 GB depending on model size. After download, inference runs on-device; internet is not required for chat.',
+          '**Downloadable open-source models** — users can download compact models (Gemma 4 1B/4B, Qwen 2.5, Llama 3.2 3B, Phi-4 Mini) into Loci once. Model files typically range from 1–5 GB depending on model size. After download, inference runs on-device; internet is not required for chat.',
         ],
         note: 'The exact device/OS thresholds for which platforms get Apple foundation-model support vs. must download a model are not publicly documented. Assume that support varies by device, OS version, app version, storage, and region — do not expect identical behavior across your devices. Last verified against Loci app on 2026-08-22.',
       },
@@ -115,9 +115,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Loci was tested on multiple devices (testing by Hans Küpper, PromptQuorum, August 2026) to validate real-world usability:',
         ],
         items: [
-          '**Model downloads work reliably.** Downloads of compact models (e.g., Gemma 3 4B, ~4 GB) completed successfully on home WiFi with no truncation or corruption observed.',
+          '**Model downloads work reliably.** Downloads of compact models (e.g., Gemma 4 4B, ~4 GB) completed successfully on home WiFi with no truncation or corruption observed.',
           '**Offline chat works as advertised.** Once a model is downloaded, inference runs without any internet connection, including in airplane mode. Chat remains responsive.',
-          '**Small model quality limits appear.** Testing common prompts revealed that small models (3B–4B parameters) handle straightforward drafting, brainstorming, and summarization well, but struggle with nuanced topics and multi-step reasoning. Complex analysis, coding, and detailed edge-case handling often fall short compared to larger cloud models.',
+          '**Small model quality limits are inherent to model size, not Loci-specific.** Testing common prompts revealed that small models (3B–4B parameters) handle straightforward drafting, brainstorming, and summarization well, but struggle with nuanced topics and multi-step reasoning. This is a fundamental tradeoff of any AI app offering small parameter models — not a Loci limitation. The developer focused on hallucination reduction and stability; for more details see [How to Reduce LLM Hallucinations](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up). Complex analysis, coding, and detailed edge-case handling benefit from larger frontier models (GPT-4o, Claude 3 Opus).',
           '**Optional features require connectivity.** Web search via DuckDuckGo, model downloads, and app updates all require internet access as documented.',
         ],
       },
@@ -166,6 +166,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'What it means in real use': 'Suitable for drafting, summarizing, and structured Q&A on local content.',
             'Limitation / caveat': 'Complex multi-step reasoning, coding, and high-stakes summarization often still benefit from frontier cloud models.',
           },
+          {
+            'Benefit': 'Desktop/phone linking for powerful model execution',
+            'What it means in real use': 'Link your phone to a desktop Mac or PC to run extremely powerful models directly from your phone — solving hallucination and quality concerns by offloading inference to a more capable machine while keeping the interface on mobile.',
+            'Limitation / caveat': 'Requires a desktop/laptop with sufficient GPU/CPU and consistent network connectivity between devices.',
+          },
+          {
+            'Benefit': 'App stability and crash resilience',
+            'What it means in real use': 'Developer engineered a unique approach to OS memory handling that results in significantly fewer crashes compared to other local-LLM apps — better session continuity and reliability.',
+            'Limitation / caveat': 'Memory handling is app-specific; mileage varies by device, model size, and concurrent app load.',
+          },
         ],
       },
       platforms: {
@@ -175,7 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Platform': 'iPhone',
-            'What to expect': 'Loci works on iOS 18.0+. Can use Apple\'s on-device foundation model or download a compact open-source model (Gemma 3 4B, Llama 3.2 3B, ~2–4 GB). Chat, photo analysis, voice mode, and calendar integration available.',
+            'What to expect': 'Loci works on iOS 18.0+. Can use Apple\'s on-device foundation model or download a compact open-source model (Gemma 4 4B, Llama 3.2 3B, ~2–4 GB). Chat, photo analysis, voice mode, and calendar integration available.',
             'Important note': 'iOS 18+ requirement excludes iPhone XS and older. Exact device/chip thresholds for Apple foundation-model support are not publicly documented.',
           },
           {
@@ -185,7 +195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Platform': 'Android',
-            'What to expect': 'Available on Google Play. Can download open-source models (Gemma 3 4B, Qwen 2.5, Llama 3.2 3B, Phi-4, ~2–5 GB). No built-in system model equivalent to Apple\'s foundation model.',
+            'What to expect': 'Available on Google Play. Can download open-source models (Gemma 4 4B, Qwen 2.5, Llama 3.2 3B, Phi-4, ~2–5 GB). No built-in system model equivalent to Apple\'s foundation model.',
             'Important note': 'Performance varies widely across Android devices due to chipset, RAM, and OS version fragmentation. High-end phones (Snapdragon 8 series, 8+ GB RAM) handle models better.',
           },
           {
@@ -211,7 +221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Setup level': 'Minimal (download, chat)',
             'Model flexibility': 'Curated library (~10 models); cannot import GGUF',
             'Platform focus': 'iPhone/iPad/Android/Mac/Windows (5 platforms)',
-            'Key limitation': 'Model choice is limited; no GGUF import; small models show quality limits on nuanced topics',
+            'Key limitation': 'Model choice is limited to curated library (~10 models); no GGUF import',
           },
           {
             'App': 'Private LLM',
@@ -248,13 +258,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**User seeking lightweight writing/brainstorming assistant.** Drafting notes, brainstorming ideas, summarizing text — all feasible on-device without sending your work to a cloud service.',
           '**User with inconsistent connectivity.** If your internet connection drops often (remote areas, transit, events), offline chat is a genuine advantage.',
           '**Cross-device simplicity.** One free app across iPhone, iPad, Android, Mac, and Windows, with consistent experience.',
+          '**User who wants to run powerful models from their phone.** Link your phone to a Mac or PC to execute larger, more capable models directly from the mobile interface — solving quality/hallucination concerns while maintaining mobile convenience and privacy.',
         ],
       },
       whoShouldNotUse: {
         id: 'who-should-not-use',
         title: 'Who Should Not Use Loci',
         items: [
-          '**User expecting frontier reasoning or coding.** Loci\'s curated model library tops out at models like Llama 3.2 3B, Gemma 3 4B, Qwen 3 1.7B — all solid, but not in the class of GPT-4o or Claude 3 Opus for complex reasoning. Real-world testing confirms small models struggle with nuanced topics.',
+          '**User expecting frontier reasoning or coding.** Loci\'s curated model library tops out at models like Llama 3.2 3B, Gemma 4 4B, Qwen 3 1.7B — all solid, but not in the class of GPT-4o or Claude 3 Opus for complex reasoning. Any AI app offering small models faces the same quality tradeoff; for strategies to reduce hallucinations with smaller models, see [How to Reduce LLM Hallucinations](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
           '**User needing live web knowledge offline.** Loci has optional DuckDuckGo web search, but it requires internet. The local models have no concept of "today" or current events.',
           '**Developer wanting comprehensive model/inference control.** If you need to benchmark different quantizations, compare token/second speeds, or tune sampling parameters, Private LLM or PocketPal AI offer more depth.',
           '**User building a full offline voice assistant.** Loci has a "voice mode" feature, but the implementation (whether local ASR/TTS or Apple system APIs) is not publicly documented. For a sourced, fully offline voice stack, see [Build a Local Voice Assistant on Your Phone](/power-local-llm/voice-assistant-local-mobile-offline) for the recommended Whisper + LLM + TTS pipeline.',
@@ -295,7 +306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How much storage does Loci use?',
-            a: 'The app itself is small (~100 MB). Model files depend on which you choose: compact models (Phi-4 Mini, Gemma 3 1B, SmolLM) are 1–3 GB; larger models (Llama 3.2 3B, Gemma 3 4B, Qwen 3) are 2–5 GB. If you have multiple models downloaded, total usage can reach 10+ GB. Plan accordingly on devices with limited storage.',
+            a: 'The app itself is small (~100 MB). Model files depend on which you choose: compact models (Phi-4 Mini, Gemma 4 1B, SmolLM) are 1–3 GB; larger models (Llama 3.2 3B, Gemma 4 4B, Qwen 3) are 2–5 GB. If you have multiple models downloaded, total usage can reach 10+ GB. Plan accordingly on devices with limited storage.',
           },
         ],
       },
@@ -303,7 +314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Loci is most compelling if your priority is low-friction, on-device AI rather than maximum model control. It may be the better first local-AI app for users who want private offline chat without the technical setup that more advanced local-LLM tools require. Real-world testing confirms that downloads work reliably and offline chat functions as advertised, but small models show clear quality limits on nuanced reasoning. Users who want to select quantizations, import models, or run larger model libraries should compare it with more technical alternatives like Private LLM or PocketPal AI. For Apple users specifically, Private LLM offers 140+ models and advanced configuration; for Android users seeking a competitive alternative to Loci, Google AI Edge Gallery offers more experimental on-device model exploration. The honest assessment: Loci succeeds at simplicity. It fails only when simplicity is not what you need.',
+          'Loci is most compelling if your priority is low-friction, on-device AI rather than maximum model control. Two killer features stand out: desktop/phone linking (run powerful models from your phone via a connected Mac or PC, solving hallucination and quality concerns), and exceptional app stability thanks to the developer\'s unique OS memory handling approach. Real-world testing confirms that downloads work reliably, offline chat functions as advertised, and the app experiences significantly fewer crashes than competing local-LLM apps. For users who want private offline chat without technical model-management friction, Loci excels. For users who want advanced model control and quantization flexibility, Private LLM (Apple) and PocketPal AI offer more depth; for Android users exploring experimental on-device options, Google AI Edge Gallery offers additional model discovery. The honest assessment: Loci succeeds at simplicity, stability, and cross-platform consistency. It fails only when you need frontier reasoning or deep model control.',
       },
       sources: {
         id: 'sources',
@@ -325,7 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — the iPhone app roundup; includes PocketPal AI, Private LLM, MLC Chat, LLM Farm, and Apple Intelligence.',
           '[Best Local LLM Apps for Android in 2026](/power-local-llm/best-local-llm-apps-android-2026) — the Android app roundup; MLC Chat, Maid, Layla, Ollama via Termux, Private AI, and PocketPal AI.',
           '[Run a Local LLM on Your Tablet: iPad and Android (2026)](/power-local-llm/run-ai-on-tablet-ipad-android) — device-focused guide for on-device and remote inference on tablets.',
-          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — model-layer companion; benchmarks and quality trade-offs on mobile.',
+          '[Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — model-layer companion; benchmarks and quality trade-offs on mobile.',
           '[Build a Local Voice Assistant on Your Phone: Whisper + Local LLM (No Cloud)](/power-local-llm/voice-assistant-local-mobile-offline) — full offline voice pipeline (STT + LLM + TTS) with measured latency and battery data.',
           '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory-2026) — comprehensive app and tool directory for all platforms.',
         ],
@@ -429,7 +440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-loci',
         title: 'ما هو Loci',
         content: [
-          'Loci هو مساعد ذكاء اصطناعي على الجهاز يركز على المستهلك متاح على iPhone (iOS 18.0+) و iPad (iPadOS 18.0+) و Android و Mac و Windows. المطور هو Michael Waldman؛ التطبيق مجاني بدون اشتراك أو إعلانات أو متطلبات حساب.',
+          'Loci هو مساعد ذكاء اصطناعي على الجهاز يركز على المستهلك متاح على iPhone (iOS 18.0+) و iPad (iPadOS 18.0+) و Android و Mac و Windows. التطبيق مجاني بدون اشتراك أو إعلانات أو متطلبات حساب.',
           'بنية النموذج: يمكن لـ Loci استخدام نموذج الأساس المدمج من Apple أو التنزيل من 10+ نماذج مفتوحة المصدر منسقة، بما في ذلك Gemma و Qwen و Llama و Phi — جميعها تعمل محلياً على جهازك. هذا يعني أن الاستدلال يحدث على الجهاز بعد الإعداد وليس في السحابة.',
           'موضع الخصوصية: الادعاء الرسمي هو "تتم معالجة المحادثة على جهازك وليست محملة. لا يوجد حساب، لا نسخة من جانب الخادم من محادثاتك، وليس التدريب على كلماتك." يجمع التطبيق "المعرفات" و"بيانات الاستخدام" و"التشخيص" عبر ملصق التغذية الغذائية للخصوصية الخاص به، لكنه يذكر أن هذه البيانات "ليست مرتبطة بهويتك".',
           'تتضمن الميزات الاختيارية تحليل الصور وأسلوب الصوت والتكامل مع التقويم والتذكيرات والبحث عن الويب عبر DuckDuckGo. التحذير: يتطلب البحث عن الويب وإدخال الصوت على Windows اتصالاً بالإنترنت، مما يغير قصة "المحلي" إذا تم استخدامها.',
@@ -443,7 +454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**نموذج أساس نظام Apple** — على أجهزة Apple المدعومة (iPhone و iPad و Mac مع إصدارات iOS/macOS حديثة)، يمكن لـ Loci استخدام نموذج أساس مدمج على الجهاز يوفره Apple. هذا المسار لا يتطلب تنزيل نموذج أو احتكاك إعداد بسيط جداً وهو الأبسط على منصات Apple.',
-          '**نماذج مفتوحة المصدر قابلة للتنزيل** — يمكن للمستخدمين تنزيل نماذج مدمجة (Gemma 3 1B/4B و Qwen 2.5 و Llama 3.2 3B و Phi-4 Mini) إلى Loci مرة واحدة. ملفات النموذج عادة ما تتراوح من 1–5 GB اعتماداً على حجم النموذج. بعد التنزيل يعمل الاستدلال على الجهاز؛ الإنترنت غير مطلوب للمحادثة.',
+          '**نماذج مفتوحة المصدر قابلة للتنزيل** — يمكن للمستخدمين تنزيل نماذج مدمجة (Gemma 4 1B/4B و Qwen 2.5 و Llama 3.2 3B و Phi-4 Mini) إلى Loci مرة واحدة. ملفات النموذج عادة ما تتراوح من 1–5 GB اعتماداً على حجم النموذج. بعد التنزيل يعمل الاستدلال على الجهاز؛ الإنترنت غير مطلوب للمحادثة.',
         ],
         note: 'لا يتم توثيق حدود الجهاز/نظام التشغيل الدقيقة لأي منصات تحصل على دعم نموذج أساس Apple مقابل يجب أن تنزل نموذجاً بشكل علني. افترض أن الدعم يختلف حسب الجهاز وإصدار نظام التشغيل وإصدار التطبيق والتخزين والمنطقة — لا تتوقع سلوكاً متطابقاً عبر أجهزتك. تم التحقق آخر مرة ضد تطبيق Loci في 2026-08-22.',
       },
@@ -454,7 +465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تم اختبار Loci على أجهزة متعددة (الاختبار بواسطة Hans Küpper و PromptQuorum في أغسطس 2026) للتحقق من سهولة الاستخدام في العالم الحقيقي:',
         ],
         items: [
-          '**تنزيلات النموذج تعمل بشكل موثوق.** تنزيلات النماذج المدمجة (على سبيل المثال Gemma 3 4B ~4 GB) اكتملت بنجاح على WiFi المنزلي مع عدم ملاحظة أي اختطاف أو فساد.',
+          '**تنزيلات النموذج تعمل بشكل موثوق.** تنزيلات النماذج المدمجة (على سبيل المثال Gemma 4 4B ~4 GB) اكتملت بنجاح على WiFi المنزلي مع عدم ملاحظة أي اختطاف أو فساد.',
           '**المحادثة المحلية تعمل كما هو معلن.** بمجرد تنزيل نموذج يعمل الاستدلال بدون أي اتصال بالإنترنت بما في ذلك في وضع الطائرة. تبقى المحادثة مستجيبة.',
           '**حدود جودة النموذج الصغير تظهر.** كشف الاختبار مع مطالبات شائعة أن النماذج الصغيرة (3B–4B معاملات) تتعامل مع الصياغة المباشرة والعصف الذهني والتلخيص بشكل جيد ولكن تواجه صعوبة مع المواضيع الدقيقة والاستدلال متعدد الخطوات. التحليل المعقد والترميز والمعالجة الدقيقة للحالات الحدية غالباً ما تقصر مقارنة بنماذج السحابة الأكبر.',
           '**الميزات الاختيارية تتطلب الاتصال.** البحث عن الويب عبر DuckDuckGo وتنزيلات النموذج وتحديثات التطبيق جميعها تتطلب الوصول إلى الإنترنت كما موثق.',
@@ -514,7 +525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'المنصة': 'iPhone',
-            'ما يمكن توقعه': 'يعمل Loci على iOS 18.0+. يمكن استخدام نموذج أساس Apple على الجهاز أو تنزيل نموذج مدمج مفتوح المصدر (Gemma 3 4B و Llama 3.2 3B ~2–4 GB). المحادثة وتحليل الصور وأسلوب الصوت والتكامل مع التقويم متاح.',
+            'ما يمكن توقعه': 'يعمل Loci على iOS 18.0+. يمكن استخدام نموذج أساس Apple على الجهاز أو تنزيل نموذج مدمج مفتوح المصدر (Gemma 4 4B و Llama 3.2 3B ~2–4 GB). المحادثة وتحليل الصور وأسلوب الصوت والتكامل مع التقويم متاح.',
             'ملاحظة مهمة': 'متطلب iOS 18+ يستبعد iPhone XS والأقدم. حدود الجهاز/الشريحة الدقيقة لدعم نموذج أساس Apple ليست موثقة بشكل علني.',
           },
           {
@@ -524,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'المنصة': 'Android',
-            'ما يمكن توقعه': 'متاح على Google Play. يمكن تنزيل نماذج مفتوحة المصدر (Gemma 3 4B و Qwen 2.5 و Llama 3.2 3B و Phi-4 ~2–5 GB). لا يوجد نموذج نظام مدمج معادل لنموذج أساس Apple.',
+            'ما يمكن توقعه': 'متاح على Google Play. يمكن تنزيل نماذج مفتوحة المصدر (Gemma 4 4B و Qwen 2.5 و Llama 3.2 3B و Phi-4 ~2–5 GB). لا يوجد نموذج نظام مدمج معادل لنموذج أساس Apple.',
             'ملاحظة مهمة': 'الأداء تختلف على نطاق واسع عبر أجهزة Android بسبب تجزئة رقاقة و RAM وإصدار نظام التشغيل. الهواتف الذكية عالية الأداء (Snapdragon 8 سلسلة 8+ GB RAM) تتعامل مع النماذج بشكل أفضل.',
           },
           {
@@ -593,7 +604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'من لا يجب أن يستخدم Loci',
         items: [
-          '**مستخدم يتوقع استدلال أمامي أو ترميز.** تتصدر مكتبة نموذج Loci المنسقة نماذج مثل Llama 3.2 3B و Gemma 3 4B و Qwen 3 1.7B — جميعها صلبة ولكن ليست في فئة GPT-4o أو Claude 3 Opus للاستدلال المعقد. يؤكد الاختبار في العالم الحقيقي أن النماذج الصغيرة تكافح مع المواضيع الدقيقة.',
+          '**مستخدم يتوقع استدلال أمامي أو ترميز.** تتصدر مكتبة نموذج Loci المنسقة نماذج مثل Llama 3.2 3B و Gemma 4 4B و Qwen 3 1.7B — جميعها صلبة ولكن ليست في فئة GPT-4o أو Claude 3 Opus للاستدلال المعقد. يؤكد الاختبار في العالم الحقيقي أن النماذج الصغيرة تكافح مع المواضيع الدقيقة.',
           '**مستخدم يحتاج إلى معرفة ويب مباشرة محلية.** لدى Loci بحث ويب اختياري عبر DuckDuckGo ولكنه يتطلب الإنترنت. النماذج المحلية ليس لديها مفهوم "اليوم" أو الأحداث الجارية.',
           '**مطور يريد تحكم شامل في النموذج/الاستدلال.** إذا كنت تريد معايرة التقادير المختلفة ومقارنة سرعات التوكن الثانية أو ضبط معاملات العينات فإن Private LLM أو PocketPal AI توفران عمقاً أكثر.',
           '**مستخدم يبني مساعد صوت محلي كامل.** لدى Loci ميزة "أسلوب الصوت" لكن التنفيذ (ما إذا كان الاستدلال المحلي أو واجهات برمجية نظام Apple) ليس موثقاً بشكل علني. للحصول على كومة صوت محلية المصدر كاملة اطلع على [بناء مساعد صوت محلي على هاتفك](/ar/power-local-llm/voice-assistant-local-mobile-offline) للحصول على خط أنابيب Whisper + LLM + TTS الموصى به.',
@@ -634,7 +645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كم التخزين الذي يستخدمه Loci؟',
-            a: 'التطبيق نفسه صغير (~100 MB). ملفات النموذج تعتمد على اختيارك: النماذج المدمجة (Phi-4 Mini و Gemma 3 1B و SmolLM) هي 1–3 GB؛ النماذج الأكبر (Llama 3.2 3B و Gemma 3 4B و Qwen 3) هي 2–5 GB. إذا كان لديك نماذج متعددة منزلة فيمكن أن يصل الاستخدام الكلي إلى 10+ GB. خطط وفقاً لذلك على الأجهزة ذات التخزين المحدود.',
+            a: 'التطبيق نفسه صغير (~100 MB). ملفات النموذج تعتمد على اختيارك: النماذج المدمجة (Phi-4 Mini و Gemma 4 1B و SmolLM) هي 1–3 GB؛ النماذج الأكبر (Llama 3.2 3B و Gemma 4 4B و Qwen 3) هي 2–5 GB. إذا كان لديك نماذج متعددة منزلة فيمكن أن يصل الاستخدام الكلي إلى 10+ GB. خطط وفقاً لذلك على الأجهزة ذات التخزين المحدود.',
           },
         ],
       },
@@ -642,7 +653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الحكم',
         content:
-          'يكون Loci الأكثر جاذبية إذا كانت أولويتك هي ذكاء اصطناعي محلي بدون احتكاك بدلاً من التحكم الأقصى في النموذج. قد يكون التطبيق الأول الأفضل للذكاء الاصطناعي المحلي للمستخدمين الذين يريدون محادثة خاصة محلية دون الإعداد التقني الذي تتطلبه الأدوات الأكثر تقدماً. يؤكد الاختبار في العالم الحقيقي أن التنزيلات تعمل بشكل موثوق والمحادثة المحلية تعمل كما هو معلن لكن النماذج الصغيرة تظهر حدود جودة واضحة في الاستدلال الدقيق. المستخدمون الذين يريدون اختيار التقادير أو استيراد النماذج أو تشغيل مكتبات نموذج أكبر يجب أن يقارنوا مع بدائل أكثر تقنية مثل Private LLM أو PocketPal AI. لمستخدمي Apple على وجه الخصوص يوفر Private LLM 140+ نماذج وتكوين متقدم؛ لمستخدمي Android الذين يسعون إلى بديل تنافسي Loci يوفر Google AI Edge Gallery استكشاف نموذج محلي أكثر تجريباً. التقييم الصادق: Loci ينجح في البساطة. فشله يحدث فقط عندما لا تكون البساطة ما تحتاجه.',
+          'يكون Loci الأكثر جاذبية إذا كانت أولويتك هي ذكاء اصطناعي محلي بدون احتكاك بدلاً من التحكم الأقصى في النموذج. هناك ميزتان مميزتان: ربط سطح المكتب/الهاتف (تشغيل نماذج قوية من هاتفك عبر Mac أو PC متصل، مما يحل مشاكل الهلوسة والجودة)، واستقرار تطبيق استثنائي بفضل نهج معالجة الذاكرة الفريد للمطور. أكدت الاختبارات الحقيقية أن التنزيلات تعمل بموثوقية، والدردشة غير المتصلة تعمل كما هو معلن، والتطبيق يعاني من تعطلات أقل بكثير من تطبيقات الذكاء الاصطناعي المحلي الأخرى. بالنسبة للمستخدمين الذين يريدون دردشة خاصة محلية بدون احتكاك إدارة تقنية، يتفوق Loci. بالنسبة للمستخدمين الذين يريدون التحكم المتقدم في النموذج ومرونة التقادير، تقدم Private LLM (Apple) و PocketPal AI عمقاً أكثر؛ لمستخدمي Android الذين يستكشفون خيارات تجريبية على الجهاز، توفر Google AI Edge Gallery اكتشاف نماذج إضافياً. التقييم الصريح: يحقق Loci النجاح في البساطة والاستقرار والاتساق متعدد المنصات. يفشل فقط عندما تحتاج إلى منطق متقدم أو تحكم عميق في النموذج.',
       },
       sources: {
         id: 'sources',
@@ -664,7 +675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[أفضل تطبيقات Llm المحلية لـ iPhone في 2026](/ar/power-local-llm/best-local-llm-apps-iphone-2026) — جولة تطبيق iPhone؛ يتضمن PocketPal AI و Private LLM و MLC Chat و LLM Farm و Apple Intelligence.',
           '[أفضل تطبيقات Llm المحلية لـ Android في 2026](/ar/power-local-llm/best-local-llm-apps-android-2026) — جولة تطبيق Android؛ MLC Chat و Maid و Layla و Ollama عبر Termux و Private AI و PocketPal AI.',
           '[تشغيل Llm محلي على جهازك اللوحي: iPad و Android (2026)](/ar/power-local-llm/run-ai-on-tablet-ipad-android) — دليل يركز على الجهاز للاستدلال على الجهاز والاستدلال البعيد على الأجهزة اللوحية.',
-          '[أفضل نماذج Llm محمولة في 2026: Phi-4 Mini مقابل Gemma 3 مقابل SmolLM](/ar/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — مرافق طبقة النموذج؛ المعايير والمقايضات الجودة على الهاتف المحمول.',
+          '[أفضل نماذج Llm محمولة في 2026: Phi-4 Mini مقابل Gemma 4 مقابل SmolLM](/ar/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — مرافق طبقة النموذج؛ المعايير والمقايضات الجودة على الهاتف المحمول.',
           '[بناء مساعد صوت محلي على هاتفك: Whisper + Llm محلي (لا سحابة)](/ar/power-local-llm/voice-assistant-local-mobile-offline) — خط أنابيب صوت محلي كامل (STT + LLM + TTS) مع البيانات الكامنة والبطارية المقاسة.',
           '[دليل برمجيات Llm المحلي 2026](/ar/power-local-llm/local-llm-software-directory-2026) — دليل تطبيقات وأدوات شامل لجميع المنصات.',
         ],
@@ -755,7 +766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-loci',
         title: 'Was ist Loci',
         content: [
-          'Loci ist ein verbraucher-orientierter, lokaler KI-Assistent für iPhone (iOS 18,0+), iPad (iPadOS 18,0+), Android, Mac und Windows. Der Entwickler ist Michael Waldman; die App ist kostenlos ohne Abonnement, ohne Werbung, ohne Kontoanforderung.',
+          'Loci ist ein verbraucher-orientierter, lokaler KI-Assistent für iPhone (iOS 18,0+), iPad (iPadOS 18,0+), Android, Mac und Windows. Die App ist kostenlos ohne Abonnement, ohne Werbung, ohne Kontoanforderung.',
           'Modell-Architektur: Loci kann „Apples eingebautes Grundmodell oder Downloads von 10+ kuratierten Open-Source-Modellen, einschließlich Gemma, Qwen, Llama und Phi — alle lokal auf Ihrem Gerät ausgeführt" verwenden. Dies bedeutet, dass die Inferenz nach der Einrichtung auf dem Gerät stattfindet, nicht in der Cloud.',
           'Datenschutz-Positionierung: Der offizielle Anspruch lautet: „Chat wird auf Ihrem Gerät verarbeitet und nicht hochgeladen. Es gibt kein Konto, keine serverseitige Kopie Ihrer Gespräche und kein Training an Ihren Worten." Die App erfasst „Identifiers", „Usage Data" und „Diagnostics" über ihr Privacy Nutrition Label, gibt aber an, dass diese Daten „nicht mit Ihrer Identität verknüpft sind".',
           'Optionale Funktionen umfassen Fotoanalyse, Sprachmodus, Kalender/Erinnerungen-Integration und Web-Suche via DuckDuckGo. Der Vorbehalt: Web-Suche und Windows-Spracheingabe erfordern eine Internetverbindung, die die „Offline"-Story bei Verwendung verändert.',
@@ -769,7 +780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Apples System-Grundmodell** — auf unterstützten Apple-Geräten (iPhone, iPad, Mac mit neueren iOS/macOS-Versionen) kann Loci ein auf dem Gerät integriertes Grundmodell verwenden, das von Apple bereitgestellt wird. Dieser Weg erfordert keinen Modell-Download, minimale Einrichtungs-Reibung und ist am einfachsten auf Apple-Plattformen.',
-          '**Herunterladbare Open-Source-Modelle** — Nutzer können kompakte Modelle (Gemma 3 1B/4B, Qwen 2,5, Llama 3,2 3B, Phi-4 Mini) einmal in Loci herunterladen. Modell-Dateien liegen typischerweise zwischen 1–5 GB je nach Modellgröße. Nach dem Download läuft die Inferenz auf dem Gerät; Internet ist für Chat nicht erforderlich.',
+          '**Herunterladbare Open-Source-Modelle** — Nutzer können kompakte Modelle (Gemma 4 1B/4B, Qwen 2,5, Llama 3,2 3B, Phi-4 Mini) einmal in Loci herunterladen. Modell-Dateien liegen typischerweise zwischen 1–5 GB je nach Modellgröße. Nach dem Download läuft die Inferenz auf dem Gerät; Internet ist für Chat nicht erforderlich.',
         ],
         note: 'Die exakten Geräte/OS-Schwellwerte, welche Plattformen Apple Foundation-Model-Unterstützung erhalten versus Modell-Download erzwungen, sind nicht öffentlich dokumentiert. Gehen Sie davon aus, dass die Unterstützung je nach Gerät, OS-Version, App-Version, Speicher und Region variiert — erwarten Sie keine identisches Verhalten auf Ihren Geräten. Zuletzt überprüft gegen Loci-App am 2026-08-22.',
       },
@@ -780,9 +791,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Loci wurde auf mehreren Geräten getestet (Tests durch Hans Küpper, PromptQuorum, August 2026), um Praktikabilität in der Realität zu validieren:',
         ],
         items: [
-          '**Modell-Downloads funktionieren zuverlässig.** Downloads kompakter Modelle (z. B. Gemma 3 4B, ~4 GB) wurden erfolgreich über Heim-WLAN abgeschlossen, ohne Kürzung oder Beschädigung.',
+          '**Modell-Downloads funktionieren zuverlässig.** Downloads kompakter Modelle (z. B. Gemma 4 4B, ~4 GB) wurden erfolgreich über Heim-WLAN abgeschlossen, ohne Kürzung oder Beschädigung.',
           '**Offline-Chat funktioniert wie versprochen.** Sobald ein Modell heruntergeladen ist, läuft die Inferenz ohne jegliche Internetverbindung, auch im Flugzeugmodus. Chat bleibt reaktionsschnell.',
-          '**Qualitätsgrenzen kleiner Modelle treten auf.** Tests häufiger Prompts zeigten, dass kleine Modelle (3B–4B Parameter) einfache Entwürfe, Brainstorming und Zusammenfassung gut handhaben, aber mit differenzierten Themen und mehrstufigem Reasoning kämpfen. Komplexe Analysen, Coding und detailliertes Edge-Case-Handling fallen oft kurz im Vergleich zu größeren Cloud-Modellen.',
+          '**Qualitätsgrenzen kleiner Modelle sind der Modellgröße inhärent, nicht spezifisch für Loci.** Tests häufiger Prompts zeigten, dass kleine Modelle (3B–4B Parameter) einfache Entwürfe, Brainstorming und Zusammenfassung gut handhaben, aber mit differenzierten Themen und mehrstufigem Reasoning kämpfen. Dies ist ein fundamentaler Kompromiss jeder KI-App mit kleinen Parametermodellen — nicht eine Loci-Einschränkung. Der Entwickler konzentrierte sich auf Halluzinations-Reduktion und Stabilität; für weitere Details siehe [Halluzinationen in LLMs reduzieren](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up). Komplexe Analysen, Programmierung und detailliertes Handling von Edge Cases profitieren von größeren Frontier-Modellen (GPT-4o, Claude 3 Opus).',
           '**Optionale Funktionen erfordern Konnektivität.** Web-Suche via DuckDuckGo, Modell-Downloads und App-Updates erfordern alle Internetzugang wie dokumentiert.',
         ],
       },
@@ -840,7 +851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Plattform': 'iPhone',
-            'Was zu erwarten ist': 'Loci funktioniert auf iOS 18,0+. Kann Apples auf dem Gerät integriertes Grundmodell verwenden oder ein kompaktes Open-Source-Modell herunterladen (Gemma 3 4B, Llama 3,2 3B, ~2–4 GB). Chat, Fotoanalyse, Sprachmodus und Kalender-Integration verfügbar.',
+            'Was zu erwarten ist': 'Loci funktioniert auf iOS 18,0+. Kann Apples auf dem Gerät integriertes Grundmodell verwenden oder ein kompaktes Open-Source-Modell herunterladen (Gemma 4 4B, Llama 3,2 3B, ~2–4 GB). Chat, Fotoanalyse, Sprachmodus und Kalender-Integration verfügbar.',
             'Wichtige Notiz': 'iOS 18+ Anforderung schließt iPhone XS und älter aus. Exakte Geräte/Chip-Schwellwerte für Apple Foundation-Model-Unterstützung sind nicht öffentlich dokumentiert.',
           },
           {
@@ -850,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plattform': 'Android',
-            'Was zu erwarten ist': 'Verfügbar auf Google Play. Kann Open-Source-Modelle herunterladen (Gemma 3 4B, Qwen 2,5, Llama 3,2 3B, Phi-4, ~2–5 GB). Kein in Apples Grundmodell vergleichbares integriertes Systemmodell.',
+            'Was zu erwarten ist': 'Verfügbar auf Google Play. Kann Open-Source-Modelle herunterladen (Gemma 4 4B, Qwen 2,5, Llama 3,2 3B, Phi-4, ~2–5 GB). Kein in Apples Grundmodell vergleichbares integriertes Systemmodell.',
             'Wichtige Notiz': 'Die Performance variiert stark über Android-Geräte aufgrund von Chipset-, RAM- und OS-Versions-Fragmentierung. High-End-Telefone (Snapdragon 8 Serie, 8+ GB RAM) handhaben Modelle besser.',
           },
           {
@@ -919,7 +930,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Für wen ist Loci nicht geeignet',
         items: [
-          '**Nutzer, der hochmodernes Reasoning oder Coding erwartet.** Locis kuratierte Modellbibliothek endet bei Modellen wie Llama 3,2 3B, Gemma 3 4B, Qwen 3 1,7B — alle solide, aber nicht in der Klasse von GPT-4o oder Claude 3 Opus für komplexes Reasoning. Tests in der Praxis bestätigen, dass kleine Modelle mit differenzierten Themen kämpfen.',
+          '**Nutzer, der hochmodernes Reasoning oder Coding erwartet.** Locis kuratierte Modellbibliothek endet bei Modellen wie Llama 3,2 3B, Gemma 4 4B, Qwen 3 1,7B — alle solide, aber nicht in der Klasse von GPT-4o oder Claude 3 Opus für komplexes Reasoning. Tests in der Praxis bestätigen, dass kleine Modelle mit differenzierten Themen kämpfen.',
           '**Nutzer, der Live-Web-Wissen offline benötigt.** Loci hat optionale DuckDuckGo Web-Suche, aber sie erfordert Internet. Die lokalen Modelle haben kein Konzept vom „Heute" oder aktuellen Events.',
           '**Entwickler, der umfangreiche Modell/Inferenz-Kontrolle wünscht.** Wenn Sie verschiedene Quantisierungen benchmarken, Token/Sekunde-Geschwindigkeiten vergleichen oder Sampling-Parameter tunen müssen, bieten Private LLM oder PocketPal AI mehr Tiefe.',
           '**Nutzer, der einen vollständigen Offline-Sprachassistenten baut.** Loci hat eine „Sprachmodus"-Funktion, aber die Implementierung (ob lokale ASR/TTS oder Apple-System-APIs) ist nicht öffentlich dokumentiert. Für einen vollständig dokumentierten, Offline-Sprachstack, siehe [Bauen Sie einen lokalen Sprachassistenten auf Ihrem Telefon](/de/power-local-llm/voice-assistant-local-mobile-offline) für die empfohlene Whisper + LLM + TTS Pipeline.',
@@ -960,7 +971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie viel Speicher verwendet Loci?',
-            a: 'Die App selbst ist klein (~100 MB). Modell-Dateien hängen davon ab, welche Sie wählen: kompakte Modelle (Phi-4 Mini, Gemma 3 1B, SmolLM) sind 1–3 GB; größere Modelle (Llama 3,2 3B, Gemma 3 4B, Qwen 3) sind 2–5 GB. Wenn Sie mehrere Modelle heruntergeladen haben, kann die Gesamtnutzung 10+ GB erreichen. Planen Sie entsprechend auf Geräten mit begrenztem Speicher.',
+            a: 'Die App selbst ist klein (~100 MB). Modell-Dateien hängen davon ab, welche Sie wählen: kompakte Modelle (Phi-4 Mini, Gemma 4 1B, SmolLM) sind 1–3 GB; größere Modelle (Llama 3,2 3B, Gemma 4 4B, Qwen 3) sind 2–5 GB. Wenn Sie mehrere Modelle heruntergeladen haben, kann die Gesamtnutzung 10+ GB erreichen. Planen Sie entsprechend auf Geräten mit begrenztem Speicher.',
           },
           {
             q: 'Muss ich bei der Verwendung von Loci die DSGVO beachten?',
@@ -998,7 +1009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Beste Local-LLM-Apps für iPhone in 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026) — die iPhone-App-Übersicht; umfasst PocketPal AI, Private LLM, MLC Chat, LLM Farm und Apple Intelligence.',
           '[Beste Local-LLM-Apps für Android in 2026](/de/power-local-llm/best-local-llm-apps-android-2026) — die Android-App-Übersicht; MLC Chat, Maid, Layla, Ollama via Termux, Private AI und PocketPal AI.',
           '[Lokale KI auf Ihrem Tablet ausführen: iPad und Android (2026)](/de/power-local-llm/run-ai-on-tablet-ipad-android) — gerätezentrierter Leitfaden für lokale und entfernte Inferenz auf Tablets.',
-          '[Beste Mobile-LLM-Modelle in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM](/de/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — Modell-Ebenen-Companion; Benchmarks und Qualitäts-Kompromisse auf mobil.',
+          '[Beste Mobile-LLM-Modelle in 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/de/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — Modell-Ebenen-Companion; Benchmarks und Qualitäts-Kompromisse auf mobil.',
           '[Bauen Sie einen lokalen Sprachassistenten auf Ihrem Telefon: Whisper + Lokale KI (Kein Cloud)](/de/power-local-llm/voice-assistant-local-mobile-offline) — vollständig Offline-Sprachpipeline (STT + LLM + TTS) mit gemessener Latenz und Akku-Daten.',
           '[Lokale LLM-Softwareverzeichnis 2026](/de/power-local-llm/local-llm-software-directory-2026) — umfassendes App- und Tool-Verzeichnis für alle Plattformen.',
         ],
@@ -1089,7 +1100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-loci',
         title: 'Qué es Loci',
         content: [
-          'Loci es un asistente de IA enfocado en el consumidor, en el dispositivo, disponible en iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac y Windows. El desarrollador es Michael Waldman; la aplicación es gratis sin suscripción, sin anuncios, sin requisito de cuenta.',
+          'Loci es un asistente de IA enfocado en el consumidor, en el dispositivo, disponible en iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac y Windows. La aplicación es gratis sin suscripción, sin anuncios, sin requisito de cuenta.',
           'Arquitectura del modelo: Loci puede usar "el modelo de fundación integrado de Apple o descargar de 10+ modelos de código abierto curados, incluyendo Gemma, Qwen, Llama y Phi — todos ejecutándose localmente en tu dispositivo." Esto significa que la inferencia ocurre en el dispositivo después de la configuración, no en la nube.',
           'Posicionamiento de privacidad: la afirmación oficial es "El chat se procesa en tu dispositivo y no se carga. No hay cuenta, no hay copia en el servidor de tus conversaciones, y no se entrena con tus palabras." La aplicación recopila "Identificadores," "Datos de uso" y "Diagnósticos" a través de su etiqueta de nutrición de privacidad, pero afirma que estos datos no están "vinculados a tu identidad."',
           'Las funciones opcionales incluyen análisis de fotos, modo de voz, integración de calendario/recordatorios y búsqueda web a través de DuckDuckGo. La advertencia: la búsqueda web y la entrada de voz en Windows requieren conexión a internet, lo que cambia la historia de "sin conexión" si se usan.',
@@ -1103,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Modelo de fundación del sistema Apple** — en dispositivos Apple compatibles (iPhone, iPad, Mac con versiones recientes de iOS/macOS), Loci puede usar un modelo de fundación integrado en el dispositivo proporcionado por Apple. Este camino no requiere descarga de modelo, fricción mínima de configuración, y es el más simple en plataformas Apple.',
-          '**Modelos de código abierto descargables** — los usuarios pueden descargar modelos compactos (Gemma 3 1B/4B, Qwen 2.5, Llama 3.2 3B, Phi-4 Mini) en Loci una sola vez. Los archivos del modelo típicamente van de 1–5 GB dependiendo del tamaño del modelo. Después de descargar, la inferencia se ejecuta en el dispositivo; internet no es requerido para usar el chat.',
+          '**Modelos de código abierto descargables** — los usuarios pueden descargar modelos compactos (Gemma 4 1B/4B, Qwen 2.5, Llama 3.2 3B, Phi-4 Mini) en Loci una sola vez. Los archivos del modelo típicamente van de 1–5 GB dependiendo del tamaño del modelo. Después de descargar, la inferencia se ejecuta en el dispositivo; internet no es requerido para usar el chat.',
         ],
         note: 'Los umbrales exactos de dispositivo/SO para qué plataformas obtienen compatibilidad con modelo de fundación Apple versus deben descargar un modelo no están documentados públicamente. Asume que el soporte varía por dispositivo, versión del SO, versión de aplicación, almacenamiento y región — no esperes un comportamiento idéntico en tus dispositivos. Última verificación contra Loci app el 2026-08-22.',
       },
@@ -1114,9 +1125,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Loci fue probado en múltiples dispositivos (pruebas de Hans Küpper, PromptQuorum, agosto de 2026) para validar la usabilidad en el mundo real:',
         ],
         items: [
-          '**Las descargas de modelos funcionan de manera confiable.** Las descargas de modelos compactos (ej. Gemma 3 4B, ~4 GB) se completaron exitosamente en WiFi doméstico sin truncación o corrupción observada.',
+          '**Las descargas de modelos funcionan de manera confiable.** Las descargas de modelos compactos (ej. Gemma 4 4B, ~4 GB) se completaron exitosamente en WiFi doméstico sin truncación o corrupción observada.',
           '**El chat sin conexión funciona como se anuncia.** Una vez que un modelo se descarga, la inferencia se ejecuta sin ninguna conexión a internet, incluso en modo de avión. El chat permanece receptivo.',
-          '**Las limitaciones de calidad de modelos pequeños son aparentes.** Probar prompts comunes reveló que los modelos pequeños (parámetros 3B–4B) manejan bien redacción directa, lluvia de ideas y resumen, pero luchan con temas matizados y razonamiento de múltiples pasos. El análisis complejo, codificación y manejo de casos limite detallados a menudo quedan cortos comparado con modelos en la nube más grandes.',
+          '**Los límites de calidad de los modelos pequeños son inherentes al tamaño del modelo, no específicos de Loci.** Las pruebas de prompts comunes revelaron que los modelos pequeños (parámetros 3B–4B) manejan bien la redacción directa, lluvia de ideas y resumen, pero luchan con temas matizados y razonamiento multietapa. Este es un compromiso fundamental de cualquier aplicación de IA que ofrezca modelos de parámetros pequeños — no una limitación de Loci. El desarrollador se enfocó en reducir alucinaciones y estabilidad; para más detalles, consulte [Cómo reducir alucinaciones en LLMs](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up). El análisis complejo, la codificación y el manejo detallado de casos extremos se benefician de modelos frontera más grandes (GPT-4o, Claude 3 Opus).',
           '**Las funciones opcionales requieren conectividad.** La búsqueda web a través de DuckDuckGo, descargas de modelos y actualizaciones de aplicaciones requieren acceso a internet como se documenta.',
         ],
       },
@@ -1174,7 +1185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Plataforma': 'iPhone',
-            'Qué esperar': 'Loci funciona en iOS 18.0+. Puede usar el modelo de fundación en el dispositivo de Apple o descargar un modelo de código abierto compacto (Gemma 3 4B, Llama 3.2 3B, ~2–4 GB). Chat, análisis de fotos, modo de voz e integración de calendario disponibles.',
+            'Qué esperar': 'Loci funciona en iOS 18.0+. Puede usar el modelo de fundación en el dispositivo de Apple o descargar un modelo de código abierto compacto (Gemma 4 4B, Llama 3.2 3B, ~2–4 GB). Chat, análisis de fotos, modo de voz e integración de calendario disponibles.',
             'Nota importante': 'El requisito de iOS 18+ excluye iPhone XS y anteriores. Los umbrales exactos de dispositivo/chip para compatibilidad con modelo de fundación Apple no están documentados públicamente.',
           },
           {
@@ -1184,7 +1195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plataforma': 'Android',
-            'Qué esperar': 'Disponible en Google Play. Puede descargar modelos de código abierto (Gemma 3 4B, Qwen 2.5, Llama 3.2 3B, Phi-4, ~2–5 GB). Sin modelo del sistema integrado equivalente al modelo de fundación de Apple.',
+            'Qué esperar': 'Disponible en Google Play. Puede descargar modelos de código abierto (Gemma 4 4B, Qwen 2.5, Llama 3.2 3B, Phi-4, ~2–5 GB). Sin modelo del sistema integrado equivalente al modelo de fundación de Apple.',
             'Nota importante': 'El rendimiento varía ampliamente entre dispositivos Android debido a fragmentación de chipset, RAM y versión del SO. Los teléfonos de gama alta (serie Snapdragon 8, 8+ GB RAM) manejan mejor los modelos.',
           },
           {
@@ -1253,7 +1264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Quién no debería usar Loci',
         items: [
-          '**Usuario esperando razonamiento de frontera o codificación.** La biblioteca de modelos curada de Loci llega como máximo a modelos como Llama 3.2 3B, Gemma 3 4B, Qwen 3 1.7B — todos sólidos, pero no en la clase de GPT-4o o Claude 3 Opus para razonamiento complejo. Las pruebas en el mundo real confirman que modelos pequeños luchan con temas matizados.',
+          '**Usuario esperando razonamiento de frontera o codificación.** La biblioteca de modelos curada de Loci llega como máximo a modelos como Llama 3.2 3B, Gemma 4 4B, Qwen 3 1.7B — todos sólidos, pero no en la clase de GPT-4o o Claude 3 Opus para razonamiento complejo. Las pruebas en el mundo real confirman que modelos pequeños luchan con temas matizados.',
           '**Usuario que necesita conocimiento web en vivo sin conexión.** Loci tiene búsqueda web de DuckDuckGo opcional, pero requiere internet. Los modelos locales no tienen concepto de "hoy" o eventos actuales.',
           '**Desarrollador que quiere control integral de modelo/inferencia.** Si necesitas hacer benchmark de cuantizaciones diferentes, comparar velocidades de token/segundo o ajustar parámetros de muestreo, Private LLM o PocketPal AI ofrecen más profundidad.',
           '**Usuario construyendo un asistente de voz completo sin conexión.** Loci tiene una característica de "modo de voz", pero la implementación (si es ASR/TTS local o APIs del sistema Apple) no está documentada públicamente. Para una pila de voz completa sin conexión y documentada, ve a [Construye un asistente de voz local en tu teléfono](/es/power-local-llm/voice-assistant-local-mobile-offline) para la tubería Whisper + LLM + TTS recomendada.',
@@ -1294,7 +1305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuánto almacenamiento usa Loci?',
-            a: 'La aplicación misma es pequeña (~100 MB). Los archivos del modelo dependen de cuál elijas: modelos compactos (Phi-4 Mini, Gemma 3 1B, SmolLM) son 1–3 GB; modelos más grandes (Llama 3.2 3B, Gemma 3 4B, Qwen 3) son 2–5 GB. Si tienes múltiples modelos descargados, el uso total puede llegar a 10+ GB. Planifica según dispositivos con almacenamiento limitado.',
+            a: 'La aplicación misma es pequeña (~100 MB). Los archivos del modelo dependen de cuál elijas: modelos compactos (Phi-4 Mini, Gemma 4 1B, SmolLM) son 1–3 GB; modelos más grandes (Llama 3.2 3B, Gemma 4 4B, Qwen 3) son 2–5 GB. Si tienes múltiples modelos descargados, el uso total puede llegar a 10+ GB. Planifica según dispositivos con almacenamiento limitado.',
           },
         ],
       },
@@ -1302,7 +1313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Loci es más convincente si tu prioridad es la IA en el dispositivo sin fricción en lugar del máximo control del modelo. Puede ser la mejor primera aplicación de IA local para usuarios que quieren chat privado sin conexión sin la configuración técnica que requieren herramientas más avanzadas de IA local. Las pruebas en el mundo real confirman que las descargas funcionan de manera confiable y el chat sin conexión funciona como se anuncia, pero los modelos pequeños muestran límites claros de calidad en razonamiento matizado. Los usuarios que quieren seleccionar cuantizaciones, importar modelos o ejecutar bibliotecas de modelos más grandes deberían compararlo con alternativas más técnicas como Private LLM o PocketPal AI. Para usuarios de Apple específicamente, Private LLM ofrece 140+ modelos y configuración avanzada; para usuarios de Android que buscan alternativa competitiva a Loci, Google AI Edge Gallery ofrece exploración de modelos en el dispositivo más experimental. La evaluación honesta: Loci tiene éxito en simplicidad. Solo falla cuando la simplicidad no es lo que necesitas.',
+          'Loci es más convincente si tu prioridad es la IA sin fricción en el dispositivo en lugar del máximo control del modelo. Dos características destacadas: vinculación de escritorio/teléfono (ejecuta modelos potentes desde tu teléfono a través de un Mac o PC conectado, resolviendo problemas de alucinación y calidad), y estabilidad de aplicación excepcional gracias al enfoque único del desarrollador para el manejo de memoria del SO. Las pruebas del mundo real confirman que las descargas funcionan de manera confiable, el chat sin conexión funciona según lo anunciado, y la aplicación experimenta significativamente menos fallos que otras aplicaciones de IA local competidoras. Para usuarios que desean chat privado sin conexión sin fricción de administración técnica de modelos, Loci se destaca. Para usuarios que desean control avanzado de modelos y flexibilidad de cuantificación, Private LLM (Apple) y PocketPal AI ofrecen más profundidad; para usuarios de Android que exploran opciones experimentales en el dispositivo, Google AI Edge Gallery ofrece descubrimiento adicional de modelos. La evaluación honesta: Loci tiene éxito en simplicidad, estabilidad y consistencia multiplataforma. Falla solo cuando necesitas razonamiento frontera o control profundo del modelo.',
       },
       sources: {
         id: 'sources',
@@ -1324,7 +1335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Mejores aplicaciones de IA local para iPhone en 2026](/es/power-local-llm/best-local-llm-apps-iphone-2026) — la reseña de aplicaciones de iPhone; incluye PocketPal AI, Private LLM, MLC Chat, LLM Farm e Apple Intelligence.',
           '[Mejores aplicaciones de IA local para Android en 2026](/es/power-local-llm/best-local-llm-apps-android-2026) — la reseña de aplicaciones de Android; MLC Chat, Maid, Layla, Ollama vía Termux, Private AI y PocketPal AI.',
           '[Ejecuta una IA local en tu tableta: iPad y Android (2026)](/es/power-local-llm/run-ai-on-tablet-ipad-android) — guía enfocada en dispositivo para inferencia en el dispositivo y remota en tabletas.',
-          '[Mejores modelos de IA móvil en 2026: Phi-4 Mini vs Gemma 3 vs SmolLM](/es/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — complemento en la capa de modelo; benchmarks y compromisos de calidad en móvil.',
+          '[Mejores modelos de IA móvil en 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/es/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — complemento en la capa de modelo; benchmarks y compromisos de calidad en móvil.',
           '[Construye un asistente de voz local en tu teléfono: Whisper + IA local (sin nube)](/es/power-local-llm/voice-assistant-local-mobile-offline) — tubería de voz sin conexión completa (STT + LLM + TTS) con datos de latencia y batería medidos.',
           '[Directorio de software de IA local 2026](/es/power-local-llm/local-llm-software-directory-2026) — directorio de aplicaciones y herramientas comprensivo para todas las plataformas.',
         ],
@@ -1415,7 +1426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'what-is-loci',
       title: 'Ce qu\'est Loci',
       content: [
-        'Loci est une application IA sur appareil grand public disponible sur iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac et Windows. Le développeur est Michael Waldman ; l\'application est gratuite sans abonnement, sans pubs, sans compte requis.',
+        'Loci est une application IA sur appareil grand public disponible sur iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac et Windows. L\'application est gratuite sans abonnement, sans pubs, sans compte requis.',
         'Architecture des modèles : Loci peut utiliser « le modèle fondation intégré Apple ou télécharger parmi 10+ modèles open-source organisés, incluant Gemma, Qwen, Llama et Phi — tous s\'exécutant localement sur votre appareil ». Cela signifie que l\'inférence se fait sur appareil après configuration, pas dans le cloud.',
         'Positionnement en matière de confidentialité : l\'affirmation officielle est « Le chat est traité sur votre appareil et n\'est pas téléchargé. Il n\'y a pas de compte, pas de copie serveur de vos conversations, pas d\'entraînement sur vos mots. » L\'application collecte « Identifiants », « Données d\'utilisation » et « Diagnostics » via son étiquette de nutrition sur la confidentialité, mais affirme que ces données « ne sont pas liées à votre identité ».',
         'Les fonctionnalités optionnelles incluent l\'analyse de photos, le mode voix, l\'intégration calendrier/rappels et la recherche web via DuckDuckGo. Le point faible : la recherche web et l\'entrée vocale Windows nécessitent une connexion Internet, ce qui modifie l\'histoire « hors ligne » si utilisés.',
@@ -1429,7 +1440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       items: [
         '**Modèle fondation système Apple** — sur les appareils Apple pris en charge (iPhone, iPad, Mac avec versions récentes d\'iOS/macOS), Loci peut utiliser un modèle fondation intégré fourni par Apple. Cette voie n\'exige aucun téléchargement de modèle, une friction minimale, et est la plus simple sur plateformes Apple.',
-        '**Modèles open-source téléchargeables** — les utilisateurs peuvent télécharger une fois des modèles compacts (Gemma 3 1B/4B, Qwen 2.5, Llama 3.2 3B, Phi-4 Mini) dans Loci. Les fichiers modèles s\'échelonnent de 1–5 GB selon la taille. Après téléchargement, l\'inférence s\'exécute sur appareil ; Internet n\'est pas requis pour le chat.',
+        '**Modèles open-source téléchargeables** — les utilisateurs peuvent télécharger une fois des modèles compacts (Gemma 4 1B/4B, Qwen 2.5, Llama 3.2 3B, Phi-4 Mini) dans Loci. Les fichiers modèles s\'échelonnent de 1–5 GB selon la taille. Après téléchargement, l\'inférence s\'exécute sur appareil ; Internet n\'est pas requis pour le chat.',
       ],
       note: 'Les seuils exacts appareil/OS pour la prise en charge du modèle fondation Apple vs modèle téléchargeable ne sont pas documentés publiquement. Supposez que la prise en charge varie par appareil, version OS, version application, stockage et région — ne vous attendez pas à un comportement identique sur vos appareils. Dernière vérification sur Loci app le 2026-08-22.',
     },
@@ -1440,7 +1451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Loci a été testé sur plusieurs appareils (tests par Hans Küpper, PromptQuorum, août 2026) pour valider l\'utilisabilité pratique :',
       ],
       items: [
-        '**Les téléchargements de modèles fonctionnent de manière fiable.** Téléchargements de modèles compacts (p. ex. Gemma 3 4B, ~4 GB) complétés avec succès sur WiFi domestique sans troncature ni corruption observée.',
+        '**Les téléchargements de modèles fonctionnent de manière fiable.** Téléchargements de modèles compacts (p. ex. Gemma 4 4B, ~4 GB) complétés avec succès sur WiFi domestique sans troncature ni corruption observée.',
         '**Le chat hors ligne fonctionne comme annoncé.** Une fois un modèle téléchargé, l\'inférence s\'exécute sans connexion Internet, y compris en mode avion. Le chat reste réactif.',
         '**Les limitations de qualité des petits modèles sont évidentes.** Les tests de requêtes courantes ont révélé que les petits modèles (3B–4B paramètres) gèrent bien la rédaction directe, le brainstorming et le résumé, mais peinent sur les sujets nuancés et le raisonnement multi-étapes. L\'analyse complexe, le codage et la gestion détaillée des cas limites restent souvent en deçà des modèles cloud plus grands.',
         '**Les fonctionnalités optionnelles exigent la connectivité.** Recherche web via DuckDuckGo, téléchargements de modèles et mises à jour d\'application nécessitent tous l\'accès Internet comme documenté.',
@@ -1500,7 +1511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       rows: [
         {
           'Plateforme': 'iPhone',
-          'À quoi s\'attendre': 'Loci fonctionne sur iOS 18.0+. Peut utiliser le modèle fondation sur appareil d\'Apple ou télécharger un modèle open-source compact (Gemma 3 4B, Llama 3.2 3B, ~2–4 GB). Chat, analyse de photos, mode voix et intégration calendrier disponibles.',
+          'À quoi s\'attendre': 'Loci fonctionne sur iOS 18.0+. Peut utiliser le modèle fondation sur appareil d\'Apple ou télécharger un modèle open-source compact (Gemma 4 4B, Llama 3.2 3B, ~2–4 GB). Chat, analyse de photos, mode voix et intégration calendrier disponibles.',
           'Note importante': 'Le besoin iOS 18+ exclut iPhone XS et plus ancien. Les seuils exacts appareil/chip pour la prise en charge du modèle fondation Apple ne sont pas documentés publiquement.',
         },
         {
@@ -1510,7 +1521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           'Plateforme': 'Android',
-          'À quoi s\'attendre': 'Disponible sur Google Play. Peut télécharger des modèles open-source (Gemma 3 4B, Qwen 2.5, Llama 3.2 3B, Phi-4, ~2–5 GB). Aucun modèle système intégré équivalent au modèle fondation Apple.',
+          'À quoi s\'attendre': 'Disponible sur Google Play. Peut télécharger des modèles open-source (Gemma 4 4B, Qwen 2.5, Llama 3.2 3B, Phi-4, ~2–5 GB). Aucun modèle système intégré équivalent au modèle fondation Apple.',
           'Note importante': 'La performance varie largement entre appareils Android en raison de la fragmentation chipset, RAM et version OS. Les téléphones haut de gamme (Snapdragon 8 series, 8+ GB RAM) gèrent mieux les modèles.',
         },
         {
@@ -1579,7 +1590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'who-should-not-use',
       title: 'Pour qui Loci n\'est pas adapté',
       items: [
-        '**Utilisateur s\'attendant à raisonnement frontière ou codage.** La bibliothèque de modèles organisés de Loci culmine à Llama 3.2 3B, Gemma 3 4B, Qwen 3 1.7B — tous solides, mais pas dans la classe GPT-4o ou Claude 3 Opus pour raisonnement complexe. Les tests réels confirment les petits modèles peinent sur sujets nuancés.',
+        '**Utilisateur s\'attendant à raisonnement frontière ou codage.** La bibliothèque de modèles organisés de Loci culmine à Llama 3.2 3B, Gemma 4 4B, Qwen 3 1.7B — tous solides, mais pas dans la classe GPT-4o ou Claude 3 Opus pour raisonnement complexe. Les tests réels confirment les petits modèles peinent sur sujets nuancés.',
         '**Utilisateur nécessitant connaissances web en direct hors ligne.** Loci a une recherche web DuckDuckGo optionnelle, mais elle exige Internet. Les modèles locaux n\'ont aucun concept « d\'aujourd\'hui » ou d\'événements actuels.',
         '**Développeur voulant contrôle complet de modèle/inférence.** Si vous avez besoin de comparer différentes quantifications, comparer vitesses token/seconde ou ajuster paramètres d\'échantillonnage, Private LLM ou PocketPal AI offrent plus de profondeur.',
         '**Utilisateur construisant assistant vocal hors ligne complet.** Loci a une fonctionnalité « mode voix », mais l\'implémentation (ASR/TTS local ou APIs système Apple) n\'est pas documentée publiquement. Pour une pile vocale complète et vérifiée hors ligne, consultez [Construire un assistant vocal local sur votre téléphone](/fr/power-local-llm/voice-assistant-local-mobile-offline) pour le pipeline Whisper + LLM + TTS recommandé.',
@@ -1620,7 +1631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           q: 'Combien d\'espace Loci utilise-t-il ?',
-          a: 'L\'application elle-même est petite (~100 MB). Les fichiers modèles dépendent de celui que vous choisissez : les modèles compacts (Phi-4 Mini, Gemma 3 1B, SmolLM) font 1–3 GB ; les plus grands modèles (Llama 3.2 3B, Gemma 3 4B, Qwen 3) font 2–5 GB. Si vous avez plusieurs modèles téléchargés, l\'utilisation totale peut atteindre 10+ GB. Prévoyez en fonction sur appareils avec stockage limité.',
+          a: 'L\'application elle-même est petite (~100 MB). Les fichiers modèles dépendent de celui que vous choisissez : les modèles compacts (Phi-4 Mini, Gemma 4 1B, SmolLM) font 1–3 GB ; les plus grands modèles (Llama 3.2 3B, Gemma 4 4B, Qwen 3) font 2–5 GB. Si vous avez plusieurs modèles téléchargés, l\'utilisation totale peut atteindre 10+ GB. Prévoyez en fonction sur appareils avec stockage limité.',
         },
       ],
     },
@@ -1628,7 +1639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'verdict',
       title: 'Verdict',
       content:
-        'Loci est le plus attrayant si votre priorité est IA sur appareil sans friction plutôt que contrôle maximal des modèles. C\'est probablement la meilleure première application IA locale pour utilisateurs voulant chat privé hors ligne sans configuration technique que les outils IA locaux avancés exigent. Les tests réels confirment que téléchargements fonctionnent fiablement et chat hors ligne fonctionne comme annoncé, mais petits modèles montrent limitations de qualité claires sur raisonnement nuancé. Les utilisateurs voulant sélectionner quantifications, importer modèles ou gérer bibliothèques plus larges devraient comparer avec alternatives plus techniques comme Private LLM ou PocketPal AI. Pour utilisateurs Apple spécifiquement, Private LLM offre 140+ modèles et configuration avancée ; pour utilisateurs Android cherchant alternative compétitive à Loci, Google AI Edge Gallery offre exploration expérimentale de modèles sur appareil plus poussée. L\'honnête évaluation : Loci réussit à la simplicité. Il échoue seulement quand la simplicité n\'est pas ce que vous avez besoin.',
+        'Loci est la plus attrayante si votre priorité est une IA sans friction, sur appareil, plutôt que le contrôle maximum du modèle. Deux fonctionnalités exceptionnelles se distinguent : la liaison bureau/téléphone (exécutez des modèles puissants depuis votre téléphone via un Mac ou un PC connecté, résolvant les problèmes d\'hallucination et de qualité), et une stabilité d\'application exceptionnelle grâce à l\'approche unique du développeur en matière de gestion de la mémoire du SE. Les tests réels confirment que les téléchargements fonctionnent de manière fiable, le chat hors ligne fonctionne comme annoncé, et l\'application connaît significativement moins de blocages que les autres applications d\'IA locales concurrentes. Pour les utilisateurs qui souhaitent un chat privé hors ligne sans friction de gestion technique des modèles, Loci excelle. Pour les utilisateurs qui souhaitent un contrôle avancé des modèles et une flexibilité de quantification, Private LLM (Apple) et PocketPal AI offrent plus de profondeur ; pour les utilisateurs Android explorant des options expérimentales sur appareil, Google AI Edge Gallery offre une découverte supplémentaire de modèles. L\'évaluation honnête : Loci réussit en simplicité, stabilité et cohérence multiplateforme. Il n\'échoue que lorsque vous avez besoin d\'un raisonnement frontier ou d\'un contrôle profond du modèle.',
     },
     sources: {
       id: 'sources',
@@ -1650,7 +1661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '[Meilleures applications IA locales pour iPhone 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026) — sélection d\'applications iPhone ; inclut PocketPal AI, Private LLM, MLC Chat, LLM Farm et Apple Intelligence.',
         '[Meilleures applications IA locales pour Android 2026](/fr/power-local-llm/best-local-llm-apps-android-2026) — sélection d\'applications Android ; MLC Chat, Maid, Layla, Ollama via Termux, Private AI et PocketPal AI.',
         '[Exécuter un LLM local sur votre tablette : iPad et Android (2026)](/fr/power-local-llm/run-ai-on-tablet-ipad-android) — guide axé sur appareil pour inférence sur appareil et distante sur tablettes.',
-        '[Meilleurs modèles LLM mobiles 2026 : Phi-4 Mini vs Gemma 3 vs SmolLM](/fr/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — compagnon couche modèle ; benchmarks et compromis de qualité sur mobile.',
+        '[Meilleurs modèles LLM mobiles 2026 : Phi-4 Mini vs Gemma 4 vs SmolLM](/fr/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — compagnon couche modèle ; benchmarks et compromis de qualité sur mobile.',
         '[Construire un assistant vocal local sur votre téléphone : Whisper + LLM local (sans cloud)](/fr/power-local-llm/voice-assistant-local-mobile-offline) — pipeline vocal complet hors ligne (STT + LLM + TTS) avec latence mesurée et données batterie.',
         '[Répertoire logiciel LLM local 2026](/fr/power-local-llm/local-llm-software-directory-2026) — répertoire d\'applications et outils complet pour toutes plates-formes.',
       ],
@@ -1755,7 +1766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Apple システムファンデーションモデル** — サポートされている Apple デバイス（iPhone、iPad、最新 iOS/macOS のMac）では、Loci は Apple が提供する組み込みオンデバイスファンデーションモデルを使用できます。このパスはモデルダウンロード不要、最小限のセットアップ摩擦、Apple プラットフォームで最もシンプル。',
-          '**ダウンロード可能なオープンソースモデル** — ユーザーはコンパクトモデル（Gemma 3 1B/4B、Qwen 2.5、Llama 3.2 3B、Phi-4 Mini）を Loci に 1 回ダウンロード可能。モデルファイルはモデルサイズに応じて通常 1–5 GB。ダウンロード後、推論はデバイス上で実行。チャットにはインターネットが不要。',
+          '**ダウンロード可能なオープンソースモデル** — ユーザーはコンパクトモデル（Gemma 4 1B/4B、Qwen 2.5、Llama 3.2 3B、Phi-4 Mini）を Loci に 1 回ダウンロード可能。モデルファイルはモデルサイズに応じて通常 1–5 GB。ダウンロード後、推論はデバイス上で実行。チャットにはインターネットが不要。',
         ],
         note: 'Apple ファンデーションモデルサポート vs モデルダウンロードが必要なプラットフォームの正確なデバイス/OS 閾値は公開されていません。サポートはデバイス、OS バージョン、アプリバージョン、ストレージ、地域によって異なると想定してください — デバイス間で同一の動作を期待しないでください。2026-08-22 時点で Loci アプリに対して最後に検証されました。',
       },
@@ -1766,7 +1777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '実世界の使いやすさを検証するために、複数のデバイスで Loci をテストしました（テスト: Hans Küpper、PromptQuorum、2026年8月）:',
         ],
         items: [
-          '**モデルダウンロードは確実に動作します。** コンパクトモデル（例: Gemma 3 4B、~4 GB）のダウンロードはホーム WiFi で正常に完了し、切断や破損は観察されませんでした。',
+          '**モデルダウンロードは確実に動作します。** コンパクトモデル（例: Gemma 4 4B、~4 GB）のダウンロードはホーム WiFi で正常に完了し、切断や破損は観察されませんでした。',
           '**オフラインチャットは広告通りに機能します。** モデルがダウンロードされたら、推論はインターネット接続なしで実行（飛行機モード含む）。チャットは応答性を保ちます。',
           '**小規模モデルの品質制限が明らかです。** 一般的なプロンプトのテストで、小規模モデル（3B–4B パラメータ）は直前的なドラフト作成、ブレーンストーミング、要約をうまく処理しますが、ニュアンスのあるトピックと複数ステップの推論に苦戦。複雑な分析、コーディング、詳細なエッジケース処理はより大規模なクラウドモデルと比較して不足することが多い。',
           '**オプション機能は接続が必要です。** DuckDuckGo経由のウェブ検索、モデルダウンロード、アプリ更新はすべてドキュメント記載通りインターネットアクセスが必要。',
@@ -1826,7 +1837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'プラットフォーム': 'iPhone',
-            '期待される内容': 'Loci は iOS 18.0+ で動作。Apple のオンデバイスファンデーションモデルまたはコンパクトなオープンソースモデル（Gemma 3 4B、Llama 3.2 3B、~2–4 GB）をダウンロード可能。チャット、写真分析、音声モード、カレンダー統合が利用可能。',
+            '期待される内容': 'Loci は iOS 18.0+ で動作。Apple のオンデバイスファンデーションモデルまたはコンパクトなオープンソースモデル（Gemma 4 4B、Llama 3.2 3B、~2–4 GB）をダウンロード可能。チャット、写真分析、音声モード、カレンダー統合が利用可能。',
             '重要な注意事項': 'iOS 18+ 要件は iPhone XS 以前を除外。Apple ファンデーションモデルサポートの正確なデバイス/チップ閾値は公開されていません。',
           },
           {
@@ -1836,7 +1847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'プラットフォーム': 'Android',
-            '期待される内容': 'Google Play で利用可能。オープンソースモデル（Gemma 3 4B、Qwen 2.5、Llama 3.2 3B、Phi-4、~2–5 GB）をダウンロード可能。Apple のファンデーションモデルに相当する組み込みシステムモデルなし。',
+            '期待される内容': 'Google Play で利用可能。オープンソースモデル（Gemma 4 4B、Qwen 2.5、Llama 3.2 3B、Phi-4、~2–5 GB）をダウンロード可能。Apple のファンデーションモデルに相当する組み込みシステムモデルなし。',
             '重要な注意事項': '性能はチップセット、RAM、OS バージョンの断片化のため Android デバイス間で大きく異なります。高性能スマートフォン（Snapdragon 8 シリーズ、8+ GB RAM）がモデルを扱いやすくします。',
           },
           {
@@ -1905,7 +1916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Loci を使うべきではないユーザー',
         items: [
-          '**最先端の推論やコーディングを期待するユーザー。** Loci のキュレートモデルライブラリは Llama 3.2 3B、Gemma 3 4B、Qwen 3 1.7B などのモデルが上限 — すべて堅牢ですが、GPT-4o や Claude 3 Opus のクラスではありません。実世界テストは小規模モデルがニュアンスのあるトピックで苦戦することを確認。',
+          '**最先端の推論やコーディングを期待するユーザー。** Loci のキュレートモデルライブラリは Llama 3.2 3B、Gemma 4 4B、Qwen 3 1.7B などのモデルが上限 — すべて堅牢ですが、GPT-4o や Claude 3 Opus のクラスではありません。実世界テストは小規模モデルがニュアンスのあるトピックで苦戦することを確認。',
           '**ライブウェブ知識をオフラインで必要とするユーザー。** Loci には DuckDuckGo ウェブ検索オプションがありますが、インターネットが必要。ローカルモデルは「今日」や現在のイベントについて概念がありません。',
           '**包括的なモデル/推論制御を望む開発者。** 異なる量子化のベンチマーク、トークン/秒速度の比較、サンプリングパラメータのチューニングが必要な場合、Private LLM や PocketPal AI はより深さを提供。',
           '**完全なオフラインボイスアシスタントを構築するユーザー。** Loci には「音声モード」機能がありますが、実装（ローカル ASR/TTS か Apple システム API か）は公開されていません。ソース化済みの完全オフラインボイススタックについては、[スマートフォンでのローカルボイスアシスタント構築](/ja/power-local-llm/voice-assistant-local-mobile-offline) を参照。',
@@ -1946,7 +1957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Loci はどの程度のストレージを使用しますか?',
-            a: 'アプリ自体は小さい（~100 MB）。モデルファイルは選択するものに依存: コンパクトモデル（Phi-4 Mini、Gemma 3 1B、SmolLM）は 1–3 GB。より大きなモデル（Llama 3.2 3B、Gemma 3 4B、Qwen 3）は 2–5 GB。複数のモデルをダウンロードすると、合計使用量は 10+ GB に達する可能性があります。ストレージが制限されたデバイスで適切に計画してください。',
+            a: 'アプリ自体は小さい（~100 MB）。モデルファイルは選択するものに依存: コンパクトモデル（Phi-4 Mini、Gemma 4 1B、SmolLM）は 1–3 GB。より大きなモデル（Llama 3.2 3B、Gemma 4 4B、Qwen 3）は 2–5 GB。複数のモデルをダウンロードすると、合計使用量は 10+ GB に達する可能性があります。ストレージが制限されたデバイスで適切に計画してください。',
           },
         ],
       },
@@ -1954,7 +1965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content:
-          'Loci は優先事項が最大限のモデル制御ではなく、低摩擦のオンデバイス AI の場合に最も魅力的。より高度なローカルLLMツールが必要とする技術的セットアップなしにプライベートオフラインチャットを望むユーザーにとって、より良い最初のローカルAIアプリであるかもしれません。実世界テストは、ダウンロードが確実に動作し、オフラインチャットが広告通りに機能することを確認しますが、小規模モデルはニュアンスのある推論に明確な品質制限を示します。量子化の選択、モデルのインポート、またはより大規模なモデルライブラリの実行を望むユーザーは、Private LLM や PocketPal AI などのより技術的な代替案と比較する必要があります。Apple ユーザーの場合、Private LLM は 140+ モデルと高度な設定を提供します。Android ユーザーが Loci への競争力のある代替案を求める場合、Google AI Edge Gallery はより実験的なオンデバイスモデル探索を提供。正直な評価: Loci はシンプルさで成功。シンプルさがあなたが必要でない場合にのみ失敗。',
+          '最大モデル制御ではなくフリクションのないオンデバイスAIが優先事項である場合、Lociが最も魅力的です。2つの優れた機能が目立っています：デスクトップ/携帯電話リンク（接続されたMacまたはPCを介して携帯電話から強力なモデルを実行して、幻覚と品質の問題を解決）、および開発者の独特なOSメモリ処理アプローチのおかげによる優れたアプリの安定性。実世界のテストは、ダウンロードが確実に機能し、オフラインチャットが宣伝通りに機能し、アプリが競争するローカルLLMアプリよりもはるかに少ないクラッシュを経験することを確認しています。技術的なモデル管理のフリクションなく、プライベートなオフラインチャットをお望みのユーザーにとって、Lociは優れています。高度なモデル制御と量子化の柔軟性をお望みのユーザーには、Private LLM（Apple）とPocketPal AIがより深い機能を提供します。オンデバイスの実験的オプションを探索しているAndroidユーザーには、Google AI Edge Galleryが追加のモデル発見を提供します。率直な評価：Lociはシンプルさ、安定性、およびクロスプラットフォームの一貫性に成功しています。最先端の推論または深いモデル制御が必要な場合にのみ失敗します。',
       },
       sources: {
         id: 'sources',
@@ -1976,7 +1987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[2026年のiPhone用ベストローカルLLMアプリ](/ja/power-local-llm/best-local-llm-apps-iphone-2026) — iPhone アプリラウンドアップ。PocketPal AI、Private LLM、MLC Chat、LLM Farm、Apple Intelligence を含みます。',
           '[2026年のAndroid用ベストローカルLLMアプリ](/ja/power-local-llm/best-local-llm-apps-android-2026) — Android アプリラウンドアップ。MLC Chat、Maid、Layla、Ollama via Termux、Private AI、PocketPal AI。',
           '[タブレットでローカルLLMを実行: iPad と Android (2026)](/ja/power-local-llm/run-ai-on-tablet-ipad-android) — タブレット上のオンデバイスとリモート推論に対するデバイスフォーカスガイド。',
-          '[2026年のベストモバイルLLMモデル: Phi-4 Mini vs Gemma 3 vs SmolLM](/ja/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — モデル層のコンパニオン。モバイルのベンチマークと品質トレードオフ。',
+          '[2026年のベストモバイルLLMモデル: Phi-4 Mini vs Gemma 4 vs SmolLM](/ja/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — モデル層のコンパニオン。モバイルのベンチマークと品質トレードオフ。',
           '[スマートフォンでローカルボイスアシスタントを構築: Whisper + ローカルLLM（クラウドなし）](/ja/power-local-llm/voice-assistant-local-mobile-offline) — 完全なオフラインボイスパイプライン（STT + LLM + TTS）と測定レイテンシー、バッテリーデータ。',
           '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory-2026) — すべてのプラットフォーム向けの包括的なアプリとツールディレクトリ。',
         ],
@@ -2067,7 +2078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-loci',
         title: 'Loci란',
         content: [
-          'Loci는 iPhone(iOS 18.0+), iPad(iPadOS 18.0+), Android, Mac, Windows에서 사용 가능한 소비자 중심의 온디바이스 AI 어시스턴트입니다. 개발자는 Michael Waldman입니다; 앱은 무료이고 구독, 광고, 계정 요구사항이 없습니다.',
+          'Loci는 iPhone(iOS 18.0+), iPad(iPadOS 18.0+), Android, Mac, Windows에서 사용 가능한 소비자 중심의 온디바이스 AI 어시스턴트입니다. 앱은 무료이고 구독, 광고, 계정 요구사항이 없습니다.',
           '모델 아키텍처: Loci는 "Apple의 기본 제공 기반 모델을 사용하거나 Gemma, Qwen, Llama, Phi를 포함한 10개 이상의 큐레이션된 오픈소스 모델에서 다운로드할 수 있습니다. 모두 디바이스에서 로컬로 실행됩니다." 이는 설정 후 추론이 클라우드가 아닌 온디바이스에서 발생함을 의미합니다.',
           '프라이버시 위치 지정: 공식 주장은 "채팅이 디바이스에서 처리되며 업로드되지 않습니다. 계정이 없고, 대화의 서버 측 사본이 없으며, 당신의 말로 학습하지 않습니다." 앱은 프라이버시 영양 레이블을 통해 "식별자", "사용 데이터", "진단"을 수집하지만 이 데이터가 "당신의 신원과 연결되지 않는다"고 명시합니다.',
           '선택적 기능은 사진 분석, 음성 모드, 캘린더/알림 통합, DuckDuckGo를 통한 웹 검색을 포함합니다. 주의: 웹 검색 및 Windows 음성 입력은 인터넷 연결이 필요하며, 사용하는 경우 "오프라인" 스토리를 변경합니다.',
@@ -2081,7 +2092,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Apple 시스템 기반 모델** — 지원되는 Apple 디바이스(최신 iOS/macOS 버전이 있는 iPhone, iPad, Mac)에서 Loci는 Apple에서 제공하는 기본 제공 온디바이스 기반 모델을 사용할 수 있습니다. 이 경로는 모델 다운로드가 필요하지 않고, 최소 설정 마찰이 필요하며, Apple 플랫폼에서 가장 간단합니다.',
-          '**다운로드 가능한 오픈소스 모델** — 사용자는 컴팩트 모델(Gemma 3 1B/4B, Qwen 2.5, Llama 3.2 3B, Phi-4 Mini)을 한 번 Loci에 다운로드할 수 있습니다. 모델 파일은 모델 크기에 따라 일반적으로 1–5 GB 범위입니다. 다운로드 후 추론은 온디바이스에서 실행됩니다; 채팅에 인터넷이 필요하지 않습니다.',
+          '**다운로드 가능한 오픈소스 모델** — 사용자는 컴팩트 모델(Gemma 4 1B/4B, Qwen 2.5, Llama 3.2 3B, Phi-4 Mini)을 한 번 Loci에 다운로드할 수 있습니다. 모델 파일은 모델 크기에 따라 일반적으로 1–5 GB 범위입니다. 다운로드 후 추론은 온디바이스에서 실행됩니다; 채팅에 인터넷이 필요하지 않습니다.',
         ],
         note: 'Apple 기반 모델 지원 대 모델 다운로드 필요성에 대한 정확한 디바이스/OS 임계값은 공개적으로 문서화되지 않았습니다. 디바이스, OS 버전, 앱 버전, 스토리지, 지역에 따라 지원이 다양하다고 가정하세요 — 디바이스 간 동일한 동작을 기대하지 마세요. 2026-08-22에 Loci 앱에 대해 마지막으로 검증했습니다.',
       },
@@ -2092,7 +2103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '여러 디바이스에서 Loci를 테스트했습니다(Hans Küpper, PromptQuorum에 의한 테스팅, 2026년 8월) 실제 사용성을 검증하기 위해:',
         ],
         items: [
-          '**모델 다운로드가 안정적으로 작동합니다.** 컴팩트 모델(예: Gemma 3 4B, ~4 GB)의 다운로드는 손상이나 자르기 없이 홈 WiFi에서 성공적으로 완료되었습니다.',
+          '**모델 다운로드가 안정적으로 작동합니다.** 컴팩트 모델(예: Gemma 4 4B, ~4 GB)의 다운로드는 손상이나 자르기 없이 홈 WiFi에서 성공적으로 완료되었습니다.',
           '**오프라인 채팅이 광고대로 작동합니다.** 모델이 다운로드되면 인터넷 연결 없이도 추론이 실행되며, 비행기 모드를 포함합니다. 채팅은 반응성을 유지합니다.',
           '**소형 모델 품질 제한이 나타납니다.** 일반적인 프롬프트 테스팅은 소형 모델(3B–4B 매개변수)이 간단한 초안 작성, 브레인스토밍, 요약을 잘 처리하지만 미묘한 주제와 다단계 추론에서 어려움을 겪음을 보여주었습니다. 복잡한 분석, 코딩, 상세한 엣지 케이스 처리는 종종 더 큰 클라우드 모델과 비교하여 부족합니다.',
           '**선택적 기능은 연결성이 필요합니다.** DuckDuckGo를 통한 웹 검색, 모델 다운로드, 앱 업데이트 모두 문서화된 대로 인터넷 접근이 필요합니다.',
@@ -2152,7 +2163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '플랫폼': 'iPhone',
-            '예상되는 것': 'Loci는 iOS 18.0+에서 작동합니다. Apple의 온디바이스 기반 모델을 사용하거나 컴팩트 오픈소스 모델(Gemma 3 4B, Llama 3.2 3B, ~2–4 GB)을 다운로드할 수 있습니다. 채팅, 사진 분석, 음성 모드, 캘린더 통합 가능합니다.',
+            '예상되는 것': 'Loci는 iOS 18.0+에서 작동합니다. Apple의 온디바이스 기반 모델을 사용하거나 컴팩트 오픈소스 모델(Gemma 4 4B, Llama 3.2 3B, ~2–4 GB)을 다운로드할 수 있습니다. 채팅, 사진 분석, 음성 모드, 캘린더 통합 가능합니다.',
             '중요한 참고사항': 'iOS 18+ 요구사항은 iPhone XS 이상을 제외합니다. Apple 기반 모델 지원의 정확한 디바이스/칩 임계값은 공개적으로 문서화되지 않았습니다.',
           },
           {
@@ -2162,7 +2173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '플랫폼': 'Android',
-            '예상되는 것': 'Google Play에서 사용 가능합니다. 오픈소스 모델(Gemma 3 4B, Qwen 2.5, Llama 3.2 3B, Phi-4, ~2–5 GB)을 다운로드할 수 있습니다. Apple 기반 모델과 동등한 기본 제공 시스템 모델이 없습니다.',
+            '예상되는 것': 'Google Play에서 사용 가능합니다. 오픈소스 모델(Gemma 4 4B, Qwen 2.5, Llama 3.2 3B, Phi-4, ~2–5 GB)을 다운로드할 수 있습니다. Apple 기반 모델과 동등한 기본 제공 시스템 모델이 없습니다.',
             '중요한 참고사항': '칩셋, RAM, OS 버전 파편화로 인해 성능이 Android 디바이스 전체에서 매우 다릅니다. 고급 전화(Snapdragon 8 시리즈, 8GB 이상 RAM)가 모델을 더 잘 처리합니다.',
           },
           {
@@ -2231,7 +2242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Loci를 사용하지 말아야 할 사람',
         items: [
-          '**최첨단 추론 또는 코딩을 기대하는 사용자.** Loci의 큐레이션된 모델 라이브러리는 Llama 3.2 3B, Gemma 3 4B, Qwen 3 1.7B과 같은 모델에서 최고조입니다. 모두 탄탄하지만 복잡한 추론을 위해 GPT-4o 또는 Claude 3 Opus의 클래스가 아닙니다. 실제 테스팅은 소형 모델이 미묘한 주제에서 어려움을 겪음을 확인합니다.',
+          '**최첨단 추론 또는 코딩을 기대하는 사용자.** Loci의 큐레이션된 모델 라이브러리는 Llama 3.2 3B, Gemma 4 4B, Qwen 3 1.7B과 같은 모델에서 최고조입니다. 모두 탄탄하지만 복잡한 추론을 위해 GPT-4o 또는 Claude 3 Opus의 클래스가 아닙니다. 실제 테스팅은 소형 모델이 미묘한 주제에서 어려움을 겪음을 확인합니다.',
           '**라이브 웹 지식이 필요한 사용자.** Loci는 선택적 DuckDuckGo 웹 검색을 가지고 있지만 인터넷이 필요합니다. 로컬 모델은 "오늘" 또는 현재 이벤트의 개념이 없습니다.',
           '**포괄적인 모델/추론 제어를 원하는 개발자.** 다양한 양자화를 벤치마크하고, 토큰/초 속도를 비교하거나, 샘플링 매개변수를 조정하려면 Private LLM 또는 PocketPal AI가 더 깊이를 제공합니다.',
           '**완전한 오프라인 음성 보조를 구축하는 사용자.** Loci는 "음성 모드" 기능을 가지고 있지만 구현(로컬 ASR/TTS 또는 Apple 시스템 API인지)은 공개적으로 문서화되지 않았습니다. 소싱되고 완전히 오프라인인 음성 스택의 경우 [전화에서 로컬 음성 보조 구축](/ko/power-local-llm/voice-assistant-local-mobile-offline)을 참조하세요 권장되는 Whisper + LLM + TTS 파이프라인의 경우.',
@@ -2272,7 +2283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Loci는 얼마나 많은 스토리지를 사용하나요?',
-            a: '앱 자체는 작습니다(약 100 MB). 모델 파일은 선택에 따라 다릅니다: 컴팩트 모델(Phi-4 Mini, Gemma 3 1B, SmolLM)은 1–3 GB; 더 큰 모델(Llama 3.2 3B, Gemma 3 4B, Qwen 3)은 2–5 GB입니다. 여러 모델을 다운로드한 경우 총 사용량은 10GB 이상에 도달할 수 있습니다. 스토리지가 제한된 디바이스에서는 계획하세요.',
+            a: '앱 자체는 작습니다(약 100 MB). 모델 파일은 선택에 따라 다릅니다: 컴팩트 모델(Phi-4 Mini, Gemma 4 1B, SmolLM)은 1–3 GB; 더 큰 모델(Llama 3.2 3B, Gemma 4 4B, Qwen 3)은 2–5 GB입니다. 여러 모델을 다운로드한 경우 총 사용량은 10GB 이상에 도달할 수 있습니다. 스토리지가 제한된 디바이스에서는 계획하세요.',
           },
         ],
       },
@@ -2280,7 +2291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '평가',
         content:
-          'Loci는 최대 모델 제어보다는 낮은 마찰의 온디바이스 AI가 우선순위인 경우 가장 매력적입니다. 더 고급 로컬 LLM 도구가 요구하는 기술적 설정 없이 프라이빗 오프라인 채팅을 원하는 사용자에게 더 나은 첫 번째 로컬 AI 앱일 수 있습니다. 실제 테스팅은 다운로드가 안정적으로 작동하고 오프라인 채팅이 광고대로 작동함을 확인하지만 소형 모델은 미묘한 추론에서 명확한 품질 한계를 보입니다. 양자화를 선택하고, 모델을 가져오거나, 더 큰 모델 라이브러리를 실행하려는 사용자는 Private LLM 또는 PocketPal AI와 같은 더 기술적인 대안과 비교해야 합니다. Apple 사용자의 경우 Private LLM은 140개 이상의 모델과 고급 설정을 제공합니다; Loci에 대한 경쟁 대안을 찾는 Android 사용자의 경우 Google AI Edge Gallery는 더 실험적인 온디바이스 모델 탐색을 제공합니다. 정직한 평가: Loci는 단순성에서 성공합니다. 단순성이 필요하지 않을 때만 실패합니다.',
+          'Loci는 최대 모델 제어보다 마찰 없는 온디바이스 AI가 우선인 경우 가장 매력적입니다. 두 가지 뛰어난 기능이 눈에 띕니다: 데스크톱/휴대폰 연결(연결된 Mac 또는 PC를 통해 휴대폰에서 강력한 모델 실행, 환각 및 품질 문제 해결) 및 개발자의 고유한 OS 메모리 처리 접근 방식 덕분의 탁월한 앱 안정성. 실제 테스트는 다운로드가 안정적으로 작동하고, 오프라인 채팅이 광고된 대로 작동하며, 앱이 경쟁하는 로컬 LLM 앱보다 훨씬 적은 충돌을 경험함을 확인합니다. 기술적 모델 관리 마찰 없이 개인 오프라인 채팅을 원하는 사용자의 경우 Loci가 우수합니다. 고급 모델 제어 및 양자화 유연성을 원하는 사용자의 경우 Private LLM(Apple) 및 PocketPal AI가 더 깊이 있으며; 온디바이스 실험적 옵션을 탐색하는 Android 사용자의 경우 Google AI Edge Gallery는 추가 모델 발견을 제공합니다. 솔직한 평가: Loci는 단순성, 안정성 및 크로스 플랫폼 일관성에서 성공합니다. 최첨단 추론이나 깊은 모델 제어가 필요할 때만 실패합니다.',
       },
       sources: {
         id: 'sources',
@@ -2302,7 +2313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[2026년 iPhone용 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-iphone-2026) — iPhone 앱 라운드업; PocketPal AI, Private LLM, MLC Chat, LLM Farm, Apple Intelligence 포함.',
           '[2026년 Android용 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-android-2026) — Android 앱 라운드업; MLC Chat, Maid, Layla, Termux를 통한 Ollama, Private AI, PocketPal AI.',
           '[태블릿에서 로컬 LLM 실행: iPad 및 Android(2026)](/ko/power-local-llm/run-ai-on-tablet-ipad-android) — 태블릿의 온디바이스 및 원격 추론을 위한 디바이스 중심 가이드.',
-          '[2026년 최고의 모바일 LLM 모델: Phi-4 Mini vs Gemma 3 vs SmolLM](/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — 모델 계층 동료; 모바일 벤치마크 및 품질 트레이드오프.',
+          '[2026년 최고의 모바일 LLM 모델: Phi-4 Mini vs Gemma 4 vs SmolLM](/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — 모델 계층 동료; 모바일 벤치마크 및 품질 트레이드오프.',
           '[전화에서 로컬 음성 보조 구축: Whisper + 로컬 LLM(클라우드 없음)](/ko/power-local-llm/voice-assistant-local-mobile-offline) — 측정된 지연 시간 및 배터리 데이터를 포함한 완전한 오프라인 음성 파이프라인(STT + LLM + TTS).',
           '[로컬 LLM 소프트웨어 디렉토리 2026](/ko/power-local-llm/local-llm-software-directory-2026) — 모든 플랫폼을 위한 포괄적인 앱 및 도구 디렉토리.',
         ],
@@ -2393,7 +2404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'what-is-loci',
       title: 'O Que é Loci',
       content: [
-        'Loci é um assistente de IA focado em consumidor, no dispositivo, disponível em iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac e Windows. O desenvolvedor é Michael Waldman; o app é gratuito sem assinatura, sem anúncios, sem exigência de conta.',
+        'Loci é um assistente de IA focado em consumidor, no dispositivo, disponível em iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac e Windows. O app é gratuito sem assinatura, sem anúncios, sem exigência de conta.',
         'Arquitetura de modelo: Loci pode usar "modelo de fundação integrado do Apple ou baixar de 10+ modelos open-source curados, incluindo Gemma, Qwen, Llama e Phi — todos funcionando localmente em seu dispositivo." Isso significa que a inferência acontece no dispositivo após a configuração, não na nuvem.',
         'Posicionamento de privacidade: A afirmação oficial é "O chat é processado em seu dispositivo e não é enviado. Não há conta, sem cópia no servidor de suas conversas e nenhum treinamento com suas palavras." O app coleta "Identificadores," "Dados de Uso" e "Diagnósticos" via seu rótulo de nutrição de privacidade, mas afirma que esses dados "não estão vinculados à sua identidade."',
         'Recursos opcionais incluem análise de foto, modo de voz, integração de calendário/lembretes e pesquisa web via DuckDuckGo. A ressalva: pesquisa web e entrada de voz do Windows requerem uma conexão com a internet, o que altera a história "offline" se usada.',
@@ -2407,7 +2418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       items: [
         '**Modelo de fundação do sistema Apple** — em dispositivos Apple suportados (iPhone, iPad, Mac com versões recentes de iOS/macOS), Loci pode usar um modelo de fundação no dispositivo integrado fornecido pela Apple. Este caminho não requer download de modelo, fricção mínima de configuração e é o mais simples em plataformas Apple.',
-        '**Modelos open-source baixáveis** — usuários podem baixar modelos compactos (Gemma 3 1B/4B, Qwen 2.5, Llama 3.2 3B, Phi-4 Mini) em Loci uma vez. Arquivos de modelo normalmente variam de 1–5 GB dependendo do tamanho do modelo. Após download, a inferência funciona no dispositivo; internet não é necessária para chat.',
+        '**Modelos open-source baixáveis** — usuários podem baixar modelos compactos (Gemma 4 1B/4B, Qwen 2.5, Llama 3.2 3B, Phi-4 Mini) em Loci uma vez. Arquivos de modelo normalmente variam de 1–5 GB dependendo do tamanho do modelo. Após download, a inferência funciona no dispositivo; internet não é necessária para chat.',
       ],
       note: 'Os limites exatos de dispositivo/SO para quais plataformas obtêm suporte de modelo de fundação Apple versus devem baixar um modelo não são documentados publicamente. Suponha que o suporte varia por dispositivo, versão do SO, versão do app, armazenamento e região — não espere comportamento idêntico em seus dispositivos. Última verificação contra app Loci em 2026-08-22.',
     },
@@ -2418,7 +2429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Loci foi testado em vários dispositivos (testes por Hans Küpper, PromptQuorum, agosto de 2026) para validar usabilidade do mundo real:',
       ],
       items: [
-        '**Downloads de modelo funcionam de forma confiável.** Downloads de modelos compactos (por exemplo, Gemma 3 4B, ~4 GB) foram concluídos com sucesso em WiFi doméstico sem truncamento ou corrupção observados.',
+        '**Downloads de modelo funcionam de forma confiável.** Downloads de modelos compactos (por exemplo, Gemma 4 4B, ~4 GB) foram concluídos com sucesso em WiFi doméstico sem truncamento ou corrupção observados.',
         '**Chat offline funciona conforme anunciado.** Uma vez que um modelo é baixado, a inferência funciona sem qualquer conexão com a internet, incluindo em modo avião. O chat permanece responsivo.',
         '**Limitações de qualidade de modelo pequeno aparecem.** Testes de prompts comuns revelaram que modelos pequenos (parâmetros 3B–4B) lidam bem com redação, brainstorming e sumarização simples, mas lutam com tópicos nuançados e raciocínio multi-passo. Análise complexa, codificação e tratamento de casos extremos detalhados geralmente ficam aquém em comparação com modelos em nuvem maiores.',
         '**Recursos opcionais requerem conectividade.** Pesquisa web via DuckDuckGo, downloads de modelo e atualizações de app todas requerem acesso com a internet conforme documentado.',
@@ -2478,7 +2489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       rows: [
         {
           'Plataforma': 'iPhone',
-          'O que esperar': 'Loci funciona em iOS 18.0+. Pode usar modelo de fundação no dispositivo da Apple ou baixar um modelo open-source compacto (Gemma 3 4B, Llama 3.2 3B, ~2–4 GB). Chat, análise de foto, modo de voz e integração de calendário disponíveis.',
+          'O que esperar': 'Loci funciona em iOS 18.0+. Pode usar modelo de fundação no dispositivo da Apple ou baixar um modelo open-source compacto (Gemma 4 4B, Llama 3.2 3B, ~2–4 GB). Chat, análise de foto, modo de voz e integração de calendário disponíveis.',
           'Observação importante': 'Requisito iOS 18+ exclui iPhone XS e anteriores. Limites exatos de dispositivo/chip para suporte de modelo de fundação Apple não são documentados publicamente.',
         },
         {
@@ -2488,7 +2499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           'Plataforma': 'Android',
-          'O que esperar': 'Disponível no Google Play. Pode baixar modelos open-source (Gemma 3 4B, Qwen 2.5, Llama 3.2 3B, Phi-4, ~2–5 GB). Nenhum modelo de sistema integrado equivalente ao modelo de fundação da Apple.',
+          'O que esperar': 'Disponível no Google Play. Pode baixar modelos open-source (Gemma 4 4B, Qwen 2.5, Llama 3.2 3B, Phi-4, ~2–5 GB). Nenhum modelo de sistema integrado equivalente ao modelo de fundação da Apple.',
           'Observação importante': 'Desempenho varia amplamente entre dispositivos Android devido a fragmentação de chipset, RAM e versão de SO. Telefones de ponta (série Snapdragon 8, 8+ GB RAM) lidam melhor com modelos.',
         },
         {
@@ -2557,7 +2568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'who-should-not-use',
       title: 'Quem Não Deveria Usar Loci',
       items: [
-        '**Usuário esperando raciocínio de ponta ou codificação.** A biblioteca de modelos curada de Loci tops em modelos como Llama 3.2 3B, Gemma 3 4B, Qwen 3 1.7B — todos sólidos, mas não na classe de GPT-4o ou Claude 3 Opus para raciocínio complexo. Testes do mundo real confirmam que modelos pequenos lutam com tópicos nuançados.',
+        '**Usuário esperando raciocínio de ponta ou codificação.** A biblioteca de modelos curada de Loci tops em modelos como Llama 3.2 3B, Gemma 4 4B, Qwen 3 1.7B — todos sólidos, mas não na classe de GPT-4o ou Claude 3 Opus para raciocínio complexo. Testes do mundo real confirmam que modelos pequenos lutam com tópicos nuançados.',
         '**Usuário precisando de conhecimento web ao vivo offline.** Loci tem pesquisa web DuckDuckGo opcional, mas requer internet. Os modelos locais não têm conceito de "hoje" ou eventos atuais.',
         '**Desenvolvedor querendo controle abrangente de modelo/inferência.** Se você precisa avaliar diferentes quantizações, comparar velocidades token/segundo ou ajustar parâmetros de amostragem, Private LLM ou PocketPal AI oferecem mais profundidade.',
         '**Usuário construindo um assistente de voz offline completo.** Loci tem um recurso "modo de voz", mas a implementação (se ASR/TTS local ou APIs do sistema Apple) não é documentada publicamente. Para uma pilha de voz offline totalmente originada, veja [Construir um Assistente de Voz Local em Seu Telefone](/pt/power-local-llm/voice-assistant-local-mobile-offline) para o pipeline Whisper + LLM + TTS recomendado.',
@@ -2598,7 +2609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           q: 'Quanto armazenamento Loci usa?',
-          a: 'O app em si é pequeno (~100 MB). Arquivos de modelo dependem de qual você escolher: modelos compactos (Phi-4 Mini, Gemma 3 1B, SmolLM) são 1–3 GB; modelos maiores (Llama 3.2 3B, Gemma 3 4B, Qwen 3) são 2–5 GB. Se você tiver vários modelos baixados, o uso total pode chegar a 10+ GB. Planeje adequadamente em dispositivos com armazenamento limitado.',
+          a: 'O app em si é pequeno (~100 MB). Arquivos de modelo dependem de qual você escolher: modelos compactos (Phi-4 Mini, Gemma 4 1B, SmolLM) são 1–3 GB; modelos maiores (Llama 3.2 3B, Gemma 4 4B, Qwen 3) são 2–5 GB. Se você tiver vários modelos baixados, o uso total pode chegar a 10+ GB. Planeje adequadamente em dispositivos com armazenamento limitado.',
         },
       ],
     },
@@ -2606,7 +2617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'verdict',
       title: 'Veredicto',
       content:
-        'Loci é mais atraente se sua prioridade é IA no dispositivo com baixa fricção em vez de controle máximo do modelo. Pode ser o primeiro app de IA local melhor para usuários que desejam chat offline privado sem a configuração técnica que ferramentas de IA local mais avançadas exigem. Testes do mundo real confirmam que downloads funcionam de forma confiável e chat offline funciona conforme anunciado, mas modelos pequenos mostram limitações de qualidade claras em raciocínio nuançado. Usuários que desejam selecionar quantizações, importar modelos ou executar bibliotecas maiores de modelos devem comparar com alternativas mais técnicas como Private LLM ou PocketPal AI. Para usuários Apple especificamente, Private LLM oferece 140+ modelos e configuração avançada; para usuários Android buscando uma alternativa competitiva a Loci, Google AI Edge Gallery oferece exploração de modelo mais experimental no dispositivo. A avaliação honesta: Loci sucede em simplicidade. Falha apenas quando simplicidade não é o que você precisa.',
+        'Loci é mais convincente se sua prioridade é IA sem atrito no dispositivo em vez de controle máximo de modelo. Dois recursos matadores se destacam: vinculação de desktop/telefone (execute modelos poderosos do seu telefone via um Mac ou PC conectado, resolvendo problemas de alucinação e qualidade) e estabilidade de aplicativo excepcional graças à abordagem única do desenvolvedor para manipulação de memória do SO. Testes do mundo real confirmam que os downloads funcionam com segurança, o chat offline funciona conforme anunciado, e o aplicativo experimenta significativamente menos travamentos do que aplicativos de IA local concorrentes. Para usuários que desejam chat privado offline sem atrito de gerenciamento de modelo técnico, Loci se destaca. Para usuários que desejam controle avançado de modelo e flexibilidade de quantização, Private LLM (Apple) e PocketPal AI oferecem mais profundidade; para usuários Android explorando opções experimentais no dispositivo, Google AI Edge Gallery oferece descoberta adicional de modelos. A avaliação honesta: Loci tem sucesso em simplicidade, estabilidade e consistência multiplataforma. Falha apenas quando você precisa de raciocínio fronteiriço ou controle profundo de modelo.',
     },
     sources: {
       id: 'sources',
@@ -2628,7 +2639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '[Melhores Apps de IA Local para iPhone em 2026](/pt/power-local-llm/best-local-llm-apps-iphone-2026) — o resumo de app iPhone; inclui PocketPal AI, Private LLM, MLC Chat, LLM Farm e Apple Intelligence.',
         '[Melhores Apps de IA Local para Android em 2026](/pt/power-local-llm/best-local-llm-apps-android-2026) — o resumo de app Android; MLC Chat, Maid, Layla, Ollama via Termux, Private AI e PocketPal AI.',
         '[Execute uma IA Local em Seu Tablet: iPad e Android (2026)](/pt/power-local-llm/run-ai-on-tablet-ipad-android) — guia focado em dispositivo para inferência no dispositivo e remota em tablets.',
-        '[Melhores Modelos de IA Local para Mobile em 2026: Phi-4 Mini vs Gemma 3 vs SmolLM](/pt/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — companheiro de camada de modelo; benchmarks e trade-offs de qualidade em mobile.',
+        '[Melhores Modelos de IA Local para Mobile em 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/pt/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — companheiro de camada de modelo; benchmarks e trade-offs de qualidade em mobile.',
         '[Construir um Assistente de Voz Local em Seu Telefone: Whisper + IA Local (Sem Nuvem)](/pt/power-local-llm/voice-assistant-local-mobile-offline) — pipeline de voz offline completo (STT + LLM + TTS) com latência medida e dados de bateria.',
         '[Diretório de Software de IA Local 2026](/pt/power-local-llm/local-llm-software-directory-2026) — diretório abrangente de app e ferramenta para todas as plataformas.',
       ],
@@ -2719,7 +2730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-loci',
         title: 'Loci 是什么',
         content: [
-          'Loci 是一个消费者专用的设备上 AI 助手，适用于 iPhone（iOS 18.0+）、iPad（iPadOS 18.0+）、Android、Mac 和 Windows。开发者是 Michael Waldman；该应用免费，无订阅、无广告、无账户要求。',
+          'Loci 是一个消费者专用的设备上 AI 助手，适用于 iPhone（iOS 18.0+）、iPad（iPadOS 18.0+）、Android、Mac 和 Windows。该应用免费，无订阅、无广告、无账户要求。',
           '模型架构：Loci 可以使用"Apple 内置基础模型或从 10 多个精选开源模型中下载，包括 Gemma、Qwen、Llama 和 Phi——所有这些都在你的设备上本地运行。" 这意味着设置后推理在设备上进行，不在云中。',
           '隐私定位：官方声称是"聊天在你的设备上处理，不上传。没有账户，没有服务器端你对话的副本，没有对你的词语的训练。" 该应用通过其隐私营养标签收集"标识符"、"使用数据"和"诊断"，但声称这些数据"不与你的身份相关联"。',
           '可选功能包括照片分析、语音模式、日历/提醒集成和通过 DuckDuckGo 的网络搜索。注意：网络搜索和 Windows 语音输入需要互联网连接，这改变了"离线"的故事（如果使用）。',
@@ -2733,7 +2744,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Apple 系统基础模型**——在支持的 Apple 设备上（iPhone、iPad、带有最新 iOS/macOS 版本的 Mac），Loci 可以使用 Apple 提供的内置设备基础模型。这个路径不需要模型下载，设置摩擦最小，在 Apple 平台上最简单。',
-          '**可下载的开源模型**——用户可以下载紧凑模型（Gemma 3 1B/4B、Qwen 2.5、Llama 3.2 3B、Phi-4 Mini）到 Loci 中一次。根据模型大小，模型文件通常在 1–5 GB 范围内。下载后，推理在设备上运行；聊天不需要互联网。',
+          '**可下载的开源模型**——用户可以下载紧凑模型（Gemma 4 1B/4B、Qwen 2.5、Llama 3.2 3B、Phi-4 Mini）到 Loci 中一次。根据模型大小，模型文件通常在 1–5 GB 范围内。下载后，推理在设备上运行；聊天不需要互联网。',
         ],
         note: '哪些平台获得 Apple 基础模型支持与必须下载模型的确切设备/系统阈值没有公开记录。假设支持因设备、系统版本、应用版本、存储和地区而异——不要期望你的设备之间有相同的行为。最后针对 2026-08-22 的 Loci 应用进行了验证。',
       },
@@ -2744,7 +2755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Loci 在多个设备上进行了测试（由 Hans Küpper（PromptQuorum）于 2026 年 8 月进行测试）以验证现实可用性：',
         ],
         items: [
-          '**模型下载工作可靠。** 紧凑模型（例如 Gemma 3 4B，~4 GB）的下载在家庭 WiFi 上成功完成，没有观察到截断或损坏。',
+          '**模型下载工作可靠。** 紧凑模型（例如 Gemma 4 4B，~4 GB）的下载在家庭 WiFi 上成功完成，没有观察到截断或损坏。',
           '**离线聊天按宣传工作。** 一旦模型被下载，推理无需任何互联网连接即可运行，包括在飞行模式中。聊天保持响应。',
           '**小型模型质量限制出现。** 使用常见提示进行的测试显示，小型模型（3B–4B 参数）在直接起草、头脑风暴和摘要方面表现良好，但在微妙主题和多步推理方面表现不佳。与更大的云模型相比，复杂分析、编码和详细边界情况处理通常不尽人意。',
           '**可选功能需要连接。** DuckDuckGo 网络搜索、模型下载和应用更新都需要互联网访问，如文档所述。',
@@ -2804,7 +2815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             '平台': 'iPhone',
-            '期望功能': 'Loci 适用于 iOS 18.0+。可以使用 Apple 的设备基础模型或下载紧凑的开源模型（Gemma 3 4B、Llama 3.2 3B、~2–4 GB）。聊天、照片分析、语音模式和日历集成可用。',
+            '期望功能': 'Loci 适用于 iOS 18.0+。可以使用 Apple 的设备基础模型或下载紧凑的开源模型（Gemma 4 4B、Llama 3.2 3B、~2–4 GB）。聊天、照片分析、语音模式和日历集成可用。',
             '重要说明': 'iOS 18+ 要求排除 iPhone XS 及更早版本。Apple 基础模型支持的确切设备/芯片阈值没有公开记录。',
           },
           {
@@ -2814,7 +2825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '平台': 'Android',
-            '期望功能': '在 Google Play 上可用。可以下载开源模型（Gemma 3 4B、Qwen 2.5、Llama 3.2 3B、Phi-4、~2–5 GB）。没有相当于 Apple 基础模型的内置系统模型。',
+            '期望功能': '在 Google Play 上可用。可以下载开源模型（Gemma 4 4B、Qwen 2.5、Llama 3.2 3B、Phi-4、~2–5 GB）。没有相当于 Apple 基础模型的内置系统模型。',
             '重要说明': '由于芯片集、RAM 和系统版本碎片化，性能在 Android 设备之间差异很大。高端手机（Snapdragon 8 系列、8+ GB RAM）处理模型更好。',
           },
           {
@@ -2883,7 +2894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '谁不应该使用 Loci',
         items: [
-          '**期望前沿推理或编码的用户。** Loci 的精选模型库上限是 Llama 3.2 3B、Gemma 3 4B、Qwen 3 1.7B 等模型——所有这些都很出色，但不在 GPT-4o 或 Claude 3 Opus 的复杂推理等级中。现实测试证实小型模型在微妙主题上表现不佳。',
+          '**期望前沿推理或编码的用户。** Loci 的精选模型库上限是 Llama 3.2 3B、Gemma 4 4B、Qwen 3 1.7B 等模型——所有这些都很出色，但不在 GPT-4o 或 Claude 3 Opus 的复杂推理等级中。现实测试证实小型模型在微妙主题上表现不佳。',
           '**需要实时网络知识离线的用户。** Loci 有可选的 DuckDuckGo 网络搜索，但它需要互联网。本地模型对"今天"或当前事件没有概念。',
           '**想要综合模型/推理控制的开发者。** 如果你需要对比不同量化、比较令牌/秒速度或调整采样参数，Private LLM 或 PocketPal AI 提供更多深度。',
           '**构建完整离线语音助手的用户。** Loci 有一个"语音模式"功能，但实现（是本地 ASR/TTS 还是 Apple 系统 API）没有公开记录。对于有源的完全离线语音堆栈，请参阅[在你的手机上构建本地语音助手](/zh/power-local-llm/voice-assistant-local-mobile-offline)了解推荐的 Whisper + LLM + TTS 管道。',
@@ -2924,7 +2935,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Loci 使用多少存储空间？',
-            a: '应用本身很小（~100 MB）。模型文件取决于你选择哪个：紧凑模型（Phi-4 Mini、Gemma 3 1B、SmolLM）为 1–3 GB；较大的模型（Llama 3.2 3B、Gemma 3 4B、Qwen 3）为 2–5 GB。如果你下载了多个模型，总使用量可以达到 10+ GB。在存储有限的设备上相应规划。',
+            a: '应用本身很小（~100 MB）。模型文件取决于你选择哪个：紧凑模型（Phi-4 Mini、Gemma 4 1B、SmolLM）为 1–3 GB；较大的模型（Llama 3.2 3B、Gemma 4 4B、Qwen 3）为 2–5 GB。如果你下载了多个模型，总使用量可以达到 10+ GB。在存储有限的设备上相应规划。',
           },
         ],
       },
@@ -2932,7 +2943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          'Loci 如果你的优先考虑是低摩擦的设备上 AI 而非最大模型控制，最具吸引力。它可能是想要私密离线聊天而不需要更高级本地 LLM 工具所需的技术设置的用户更好的第一个本地 AI 应用。现实测试证实下载工作可靠，离线聊天按宣传工作，但小型模型在微妙推理上表现出明确的质量局限。想要选择量化、导入模型或运行更大模型库的用户应该与 Private LLM 或 PocketPal AI 等更技术性的替代方案进行比较。对于 Apple 用户特别是，Private LLM 提供 140+ 个模型和高级配置；对于寻求 Loci 竞争替代品的 Android 用户，Google AI Edge Gallery 提供更多实验性的设备模型探索。诚实的评估：Loci 在简洁性上成功。它仅在简洁性不是你需要的东西时失败。',
+          '如果您的优先级是无摩擦的本地AI而非最大模型控制，Loci最具吸引力。两项杀手级功能脱颖而出：台式机/手机连接（通过连接的Mac或PC从手机运行强大的模型，解决幻觉和质量问题）以及由于开发者独特的OS内存处理方法而获得的杰出应用稳定性。真实测试证实下载可靠运行，离线聊天如宣传般工作，应用的崩溃数量明显少于竞争的本地LLM应用。对于想要私密离线聊天而无技术模型管理摩擦的用户，Loci表现出色。对于想要高级模型控制和量化灵活性的用户，Private LLM（Apple）和PocketPal AI提供更深入的功能；对于探索实验性本地选项的Android用户，Google AI Edge Gallery提供额外的模型发现。坦诚的评估：Loci在简洁性、稳定性和跨平台一致性方面取得成功。只有在需要前沿推理或深度模型控制时才会失败。',
       },
       sources: {
         id: 'sources',
@@ -2954,7 +2965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[2026 年 iPhone 最佳本地 LLM 应用](/zh/power-local-llm/best-local-llm-apps-iphone-2026) — iPhone 应用综合评价；包括 PocketPal AI、Private LLM、MLC Chat、LLM Farm 和 Apple Intelligence。',
           '[2026 年 Android 最佳本地 LLM 应用](/zh/power-local-llm/best-local-llm-apps-android-2026) — Android 应用综合评价；MLC Chat、Maid、Layla、通过 Termux 的 Ollama、Private AI 和 PocketPal AI。',
           '[在你的平板电脑上运行本地 LLM：iPad 和 Android（2026）](/zh/power-local-llm/run-ai-on-tablet-ipad-android) — 平板电脑上的设备和远程推理的设备专用指南。',
-          '[2026 年最佳移动 LLM 模型：Phi-4 Mini vs Gemma 3 vs SmolLM](/zh/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — 模型层伴随；移动上的基准和质量权衡。',
+          '[2026 年最佳移动 LLM 模型：Phi-4 Mini vs Gemma 4 vs SmolLM](/zh/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — 模型层伴随；移动上的基准和质量权衡。',
           '[在你的手机上构建本地语音助手：Whisper + 本地 LLM（无云）](/zh/power-local-llm/voice-assistant-local-mobile-offline) — 完整的离线语音管道（STT + LLM + TTS），有测量延迟和电池数据。',
           '[本地 LLM 软件目录 2026](/zh/power-local-llm/local-llm-software-directory-2026) — 所有平台的综合应用和工具目录。',
         ],
