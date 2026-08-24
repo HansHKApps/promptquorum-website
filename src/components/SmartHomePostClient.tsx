@@ -596,13 +596,13 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
 
       {/* Table */}
       {section.rows && section.columns && (
-        <div className="relative overflow-x-auto my-6">
-          <table className="w-full min-w-[820px] border-collapse text-sm">
+        <div className="relative overflow-x-auto my-6 -mx-4 px-4 sm:mx-0 sm:px-0">
+          <table className="w-full border-collapse text-sm">
             <thead>
               <tr className="border-b-2 border-primary/20">
                 {section.columns.map((col, colIdx) => (
-                  <th key={col} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5 whitespace-nowrap${colIdx === 0 ? ' sticky left-0 z-10' : ''}`}>
-                    {col}
+                  <th key={col} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5${colIdx === 0 ? ' sticky left-0 z-10 min-w-max' : ' min-w-[150px] sm:min-w-auto'}`}>
+                    <div className="break-words">{col}</div>
                   </th>
                 ))}
               </tr>
@@ -611,7 +611,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
               {section.rows.map((row, i) => (
                 <tr key={i} className="border-b border-primary/10 hover:bg-primary/5 transition-colors group">
                   {section.columns!.map((col, colIdx) => (
-                    <td key={col} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary whitespace-nowrap' : 'p-2 sm:p-3 text-text-secondary'}>
+                    <td key={col} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary min-w-max' : 'p-2 sm:p-3 text-text-secondary break-words max-w-xs sm:max-w-none'}>
                       {renderInlineLinks(row[col] ?? row[String(colIdx)] ?? '—', lang)}
                     </td>
                   ))}
