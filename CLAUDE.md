@@ -200,6 +200,40 @@ When implementing a new `/gamma` presentation for a prompt-engineering article:
 
 **Reference:** `docs/GAMMA_SKILL_UPDATES.md` contains the updated `/gamma` skill specification with full Step 0.5 and GEO indexability requirements.
 
+## Comparison Tables — Column & Cell Content Rules
+
+**MANDATORY for all `columns` and `rows` in article comparison tables** (vsAlternatives, tradeOffs, platforms, etc.):
+
+1. **Column headers** — MUST be ≤25 characters. If longer, abbreviate or rephrase:
+   - ❌ "Simultaneous dispatch to all models at once"  
+   - ✅ "Simultaneous dispatch"
+   - ❌ "The number of models available in the curated library"
+   - ✅ "Model flexibility"
+
+2. **Cell content** — MUST be ≤60 characters per cell. Break into multiple short lines using `/` separator:
+   - ❌ "Supports advanced quantization formats like OmniQuant and GPTQ with full control over model parameters"  
+   - ✅ "OmniQuant & GPTQ / Full control"
+   - ❌ "Available on iPhone, iPad, Mac, Android, and Windows with consistent experience across all five platforms"
+   - ✅ "iPhone/iPad/Mac/Android/Windows (5 platforms)"
+
+3. **Technical terms** — Keep abbreviated and consistent:
+   - "API key control" → "API keys" (shorter, equally clear)
+   - "Local LLM" → "Local LLM" (standard abbreviation)
+   - "GPU/CPU" (not "Graphics processor / CPU")
+
+4. **Numbers & units** — Keep compact:
+   - ✅ "140+ models" (not "over one hundred and forty models")
+   - ✅ "~$9.90/month" (not "approximately nine dollars and ninety cents per month")
+   - ✅ "2–5 GB" (not "between two and five gigabytes")
+
+5. **Avoid explanations in cells** — Put nuance in prose before or after the table:
+   - ❌ Table cell: "Requires you to bring your own API keys from OpenAI, Anthropic, Google, and Mistral, which means your data stays private but you manage billing directly"
+   - ✅ Table cell: "API keys" + explain trade-offs in surrounding text
+
+**Why:** On mobile (375px width), tables scroll horizontally. Long headers and cell content break line-wrapping, create unusable scroll regions, and cut off text (reported Aug 2026). Compact cells scale predictably across all viewports and 9 languages.
+
+**Testing:** Before committing, run `npm run dev` and test at 375px width in Chrome DevTools. Scroll the table horizontally — all headers and cell content should remain visible and readable without wrapping beyond cell bounds.
+
 ## Freshness Tier (MANDATORY before writing any new article)
 
 Before writing or substantially editing any article, ask:
