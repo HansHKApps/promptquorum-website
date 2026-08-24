@@ -1321,7 +1321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-24',
     current_models_mentioned: ['Qwen3 14B', 'Qwen3 7B', 'Llama 3.3 8B', 'nomic-embed-text', 'mxbai-embed-large', 'multilingual-e5-large'],
     current_hardware_mentioned: ['RTX 3090', 'Mac Mini M4 Pro', 'Minisforum UM890 Pro'],
     leadAnswerBlock: '**AnythingLLM은 2026년 대부분의 기업 팀에 가장 적합한 RAG 도구입니다 — PDF, Word, Excel, URL을 기본으로 처리하며, Ollama와 함께 완전히 로컬에서 실행되고, 코딩 없이 멀티 사용자 워크스페이스를 지원합니다.**',
@@ -1385,7 +1385,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       intro: {
         heading: '기업 문서 보안을 위해 RAG 도구가 중요한 이유',
-        body: '기업에는 수천 개의 PDF, Word 파일, 스프레드시트, 내부 위키가 축적됩니다. 일반적인 클라우드 AI 도구(ChatGPT, Claude, Gemini)는 이러한 문서를 외부 서버로 전송합니다 — 민감한 데이터를 다루는 법무, 재무, 인사 팀에게는 문제가 됩니다. 로컬 RAG 도구는 문서 수집, 임베딩, 벡터 검색, LLM 추론 등 전체 파이프라인을 자체 하드웨어에서 실행하여 이 문제를 해결합니다. 문서는 건물 밖으로 나가지 않습니다.',
+        // SPECIAL REQUEST (KO only): BigShift Korean enterprise link — preserve on all future updates
+        body: '기업에는 수천 개의 PDF, Word 파일, 스프레드시트, 내부 위키가 축적됩니다. 일반적인 클라우드 AI 도구(ChatGPT, Claude, Gemini)는 이러한 문서를 외부 서버로 전송합니다 — 민감한 데이터를 다루는 법무, 재무, 인사 팀에게는 문제가 됩니다. 로컬 RAG 도구는 문서 수집, 임베딩, 벡터 검색, LLM 추론 등 전체 파이프라인을 자체 하드웨어에서 실행하여 이 문제를 해결합니다. 문서는 건물 밖으로 나가지 않습니다.\n\n엔터프라이즈 AI를 도입할 때는 단순히 모델을 선택하는 것보다 **내부 데이터, 접근 권한, 워크플로우와 함께 시스템을 설계하는 것이 더 중요합니다**. 한국 기업을 위해 맞춤형으로 구성된 AI 및 RAG 구현 사례는 [BigShift](https://www.bigshift.kr/)에서 확인할 수 있습니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
