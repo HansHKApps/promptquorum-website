@@ -713,6 +713,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { type: 'plain-terms', content: 'Un mini-PC est un petit ordinateur silencieux toujours allumé. Le UM890 Pro en est un modèle capable qui fait tourner toute une maison connectée et un modèle d\'IA de taille moyenne. Sa particularité est un port qui permet de brancher plus tard une vraie carte graphique externe, afin que les gros modèles d\'IA tournent beaucoup plus vite sans acheter une nouvelle machine.' },
     ],
     sections: {
+      buyIfSkipIf: {
+        id: 'buy-skip-if',
+        title: 'Acheter si / Ne pas acheter si',
+        sponsoredSlot: true,
+        content: 'Guide rapide de décision — le UM890 Pro répond-il à vos besoins ?',
+        items: [
+          '**Achetez le UM890 Pro si :**',
+          'Vous voulez commencer avec un LLM local 7B sur Home Assistant et passer à une inférence rapide 13B–30B plus tard avec un GPU externe',
+          'Vous avez besoin de plus d\'une connexion réseau (double 2.5GbE ou Wi-Fi 6E) pour un serveur maison fiable',
+          'Vous valorisez une voie évolutive — RAM et stockage sont tous deux faciles à échanger',
+          'Le port eGPU OCuLink justifie la différence de ~150–200 € face à un Beelink SER8',
+          '**Ne pas acheter le UM890 Pro si :**',
+          'Vous ne lancez qu\'un modèle 7B et ne prévoyez jamais un GPU externe — un Beelink SER8 économise de l\'argent pour la même performance iGPU',
+          'Vous avez besoin d\'une box vraiment compacte — la hauteur de 67 mm est plus imposante que la plupart des mini-PC',
+          'Votre réseau est déjà maxé — un seul lien 1GbE ou 2.5GbE suffit',
+          'Vous êtes limité par le budget — le SER8 et les petites box N150 coûtent moins cher',
+        ],
+        affiliateLinks: [
+          { label: 'Vérifier le prix actuel — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
       tldr: {
         id: 'tldr',
         title: 'L\'essentiel',
