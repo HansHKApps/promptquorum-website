@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows',
     seoTitle: 'Loci AI Review 2026: Private Offline AI Across Platforms',
     intro:
-      'Loci is designed to make local AI feel like a normal assistant rather than a model-management project. It runs AI on iPhone, iPad, Android, Mac, and Windows, can work offline after setup, and positions itself as a privacy-first alternative to cloud AI services. The practical question is not whether local inference is possible — it is whether Loci gives you enough quality and control without the model downloads, storage use, and technical configuration (manually selecting GGUF files, tuning quantizations, calculating VRAM) that more advanced local-LLM tools require.',
+      'Loci, built by Loci AI, Inc., is designed to make local AI feel like a normal assistant rather than a model-management project. It runs AI on iPhone, iPad, Android, Mac, and Windows, can work offline after setup, and positions itself as a privacy-first alternative to cloud AI services. The app automatically selects the best inference runtime (llama.cpp or MLX) for each model on your hardware, implements thermal management to keep your phone stable, syncs memory across conversations, and can link to a desktop for access to more powerful models. The practical question is not whether local inference is possible — it is whether Loci gives you enough quality and control without the model downloads, storage use, and technical configuration (manually selecting GGUF files, tuning quantizations, calculating VRAM) that more advanced local-LLM tools require.',
     metaDescription:
       'Loci AI review: is it worth using for private, offline AI? See how it works on iPhone, Android, iPad, Mac and Windows, who it suits, and how it compares with Private LLM, PocketPal and Google AI Edge Gallery.',
     twitterDescription:
@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Android', 'Mac', 'Windows PC'],
     leadAnswerBlock:
-      '**Loci is most compelling if your priority is low-friction, on-device AI rather than maximum model control.** It may be the better first local-AI app for users who want private offline chat without treating their phone like a miniature ML workstation (requiring manual GGUF selection, quantization tuning, and VRAM calculations). Loci works on iPhone, iPad, Android, Mac, and Windows — just download the app and pick a model from the curated list. Users who want to select quantizations, import models, or run larger model libraries should compare it with more technical alternatives like Private LLM or PocketPal AI.',
+      '**Loci is most compelling if your priority is low-friction, on-device AI with strong reasoning on mobile.** Gemma 4 E2B/E4B offers the strongest reasoning available on a pocket device, and Loci AI\'s context management combined with unique thermal and memory handling means fewer hallucinations and fewer crashes than other apps. It may be the better first local-AI app for users who want private offline chat and persistent memory without treating their phone like a miniature ML workstation (requiring manual GGUF selection, quantization tuning, and VRAM calculations). Loci works on iPhone, iPad, Android, Mac, and Windows — just download the app and pick a model from the curated list. Advanced users can also pair their phone to a Mac or PC (Loci Link) to run more powerful models straight from mobile. Users who want to select quantizations, import models, or run larger model libraries should compare it with more technical alternatives like Private LLM or PocketPal AI.',
     quickAnswerTop: {
       en: {
         question: 'Should I use Loci for private, offline AI?',
@@ -48,7 +48,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Free, no subscription, works on 5 platforms (iPhone/iPad/Android/Mac/Windows).',
           'Offline-capable after app and model download/setup.',
-          'No account, no tracking, conversations stay on-device per developer claims.',
+          'No account, no tracking, conversations stay on-device per Loci AI claims.',
           'Optional features (web search via DuckDuckGo, Windows voice input) require internet.',
           'Quality and model selection less flexible than Private LLM or PocketPal AI.',
         ],
@@ -76,21 +76,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'TL;DR',
         isTldr: true,
         items: [
-          'Loci is a free on-device AI app for iPhone, iPad, Android, Mac, and Windows.',
-          'It offers two model paths: Apple\'s system foundation model (where supported) or downloadable open-source models (Gemma, Qwen, Llama, Phi).',
-          'Setup is minimal — no GGUF files, no quantization choices, just download and chat.',
-          'Privacy claim: conversations stay on-device; optional features (web search, voice) require internet.',
-          'Ideal for privacy-conscious users who want simplicity over advanced model control.',
-          'Not ideal for users needing frontier reasoning, live web knowledge, or GGUF/quantization flexibility.',
-          'Exact model availability and device/OS support can change — check official listings before assuming consistency.',
-          'Real-world testing shows model downloads work reliably, offline chat functions as advertised. Small model quality limitations are inherent to model size across any app — Loci focuses on stability and hallucination reduction.',
+          'Loci is a free on-device AI app for iPhone, iPad, Android, Mac, and Windows, built by Loci AI, Inc.',
+          'It offers two model paths: Apple\'s system foundation model (where supported) or downloadable open-source models (Gemma 4, Qwen 3.5, Llama, Phi).',
+          'Setup is minimal — no GGUF files, no quantization choices, just download and chat. Loci intelligently selects the best runtime (llama.cpp or MLX) for your hardware.',
+          'Privacy claim: conversations stay on-device; optional features (web RAG, voice) require internet. Web RAG grounds answers in live sources when online and falls back cleanly to on-device when offline.',
+          'Standout features: Gemma 4 E2B/E4B as the strongest mobile reasoning available; Loci Link (desktop/phone pairing for powerful models); global memory across conversations; first-class thermal management; background downloads; and exceptional crash resilience.',
+          'Not ideal for users needing frontier cloud reasoning, deep GGUF/quantization control, or fully documented voice stacks.',
+          'Real-world testing shows model downloads work reliably, offline chat functions as advertised, app crashes less than alternatives. Gemma 4 combined with Loci\'s context management delivers the strongest reasoning ceiling on mobile today.',
         ],
       },
       whatIsLoci: {
         id: 'what-is-loci',
         title: 'What Loci Is',
         content: [
-          'Loci is a consumer-focused, on-device AI assistant available on iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac, and Windows. The app is free with no subscription, no ads, no account requirement.',
+          'Loci is a consumer-focused, on-device AI assistant available on iPhone (iOS 18.0+), iPad (iPadOS 18.0+), Android, Mac, and Windows. Built by Loci AI, Inc., the app is free with no subscription, no ads, and no account requirement.',
           'Model architecture: Loci can use "Apple\'s built-in foundation model or download from 10+ curated open-source models, including Gemma, Qwen, Llama, and Phi — all running locally on your device." This means inference happens on-device after setup, not in the cloud.',
           'Privacy positioning: The official claim is "Chat is processed on your device and is not uploaded. There is no account, no server-side copy of your conversations, and no training on your words." The app collects "Identifiers," "Usage Data," and "Diagnostics" via its privacy nutrition label, but states this data is "not linked to your identity."',
           'Optional features include photo analysis, voice mode, calendar/reminders integration, and web search via DuckDuckGo. The caveat: web search and Windows voice input require an internet connection, which alters the "offline" story if used.',
@@ -104,7 +103,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Apple system foundation model** — on supported Apple devices (iPhone, iPad, Mac with recent iOS/macOS versions), Loci can use a built-in on-device foundation model provided by Apple. This path requires no model download, minimal setup friction, and is the simplest on Apple platforms.',
-          '**Downloadable open-source models** — users can download compact models (Gemma 4 1B/4B, Qwen 2.5, Llama 3.2 3B, Phi-4 Mini) into Loci once. Model files typically range from 1–5 GB depending on model size. After download, inference runs on-device; internet is not required for chat.',
+          '**Downloadable open-source models** — users can download compact models (Gemma 4 1B/4B, Qwen 3.5, Llama 3.2 3B, Phi-4 Mini) into Loci once. Model files typically range from 1–5 GB depending on model size. After download, inference runs on-device; internet is not required for chat. New models land continuously and are integrated once verified to run on phone hardware.',
+          '**Runtime flexibility** — Loci intelligently selects the best inference runtime for each model and device: llama.cpp for GGUF models and Apple\'s MLX for optimal performance on Apple silicon. This means the simple interface masks sophisticated tuning beneath the surface — the app picks the fastest path for that model on your specific hardware (measuring time-to-first-token and tokens-per-second), rather than forcing users to understand runtimes.',
         ],
         note: 'The exact device/OS thresholds for which platforms get Apple foundation-model support vs. must download a model are not publicly documented. Assume that support varies by device, OS version, app version, storage, and region — do not expect identical behavior across your devices. Last verified against Loci app on 2026-08-22.',
       },
@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Model downloads work reliably.** Downloads of compact models (e.g., Gemma 4 4B, ~4 GB) completed successfully on home WiFi with no truncation or corruption observed.',
           '**Offline chat works as advertised.** Once a model is downloaded, inference runs without any internet connection, including in airplane mode. Chat remains responsive.',
-          '**Small model quality limits are inherent to model size, not Loci-specific.** Testing common prompts revealed that small models (3B–4B parameters) handle straightforward drafting, brainstorming, and summarization well, but struggle with nuanced topics and multi-step reasoning. This is a fundamental tradeoff of any AI app offering small parameter models — not a Loci limitation. The developer focused on hallucination reduction and stability; for more details see [How to Reduce LLM Hallucinations](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up). Complex analysis, coding, and detailed edge-case handling benefit from larger frontier models (GPT-4o, Claude 3 Opus).',
+          '**Model quality depends on both parameter count and app-level tuning.** The baseline 3B–4B models excel at drafting, brainstorming, and summarization, but struggle with nuanced topics and multi-step reasoning — a ceiling inherent to parameter count that no app can change. However, what the app *can* change is everything surrounding the model: memory management, context-window handling, hallucination reduction, and OS-level stability. Loci implements best-practice context management (automatic compaction plus newest research techniques for stretching usable context), resulting in fewer hallucinations and crashes compared to other apps running the identical model. Most importantly: Gemma 4 E2B and E4B (the latest generation) are a genuine step above the 2025 generation of 3B–4B models and represent the strongest reasoning capability available on mobile today. Combined with Loci\'s context management, this is the reasoning ceiling for pocket-sized AI. For complex analysis, live web queries, or high-stakes decisions, larger frontier models (GPT-4o, Claude 3 Opus) remain necessary.',
           '**Optional features require connectivity.** Web search via DuckDuckGo, model downloads, and app updates all require internet access as documented.',
         ],
       },
@@ -157,9 +157,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Limitation / caveat': 'Smaller local models (~3B–4B params) produce less capable output than frontier cloud LLMs (GPT-4o, Claude 3 Opus).',
           },
           {
-            'Benefit': 'Works without live web knowledge',
-            'What it means in real use': 'Chat does not hallucinate about today\'s news or live events.',
-            'Limitation / caveat': 'Conversely, the model cannot look up current information. Optional DuckDuckGo web search requires connectivity and only works when enabled.',
+            'Benefit': 'Web grounding with seamless offline fallback',
+            'What it means in real use': 'When online, Loci can ground answers in live web sources via configurable web RAG. When offline, it cleanly falls back to on-device knowledge without breaking. You control the behavior in settings — get the online benefit and offline benefit from the same app. Few other local-AI apps offer this combination.',
+            'Limitation / caveat': 'Web grounding requires internet when enabled. Without web access, answers reflect only on-device model knowledge and do not include current events.',
           },
           {
             'Benefit': 'Long-context and complex reasoning',
@@ -173,8 +173,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Benefit': 'App stability and crash resilience',
-            'What it means in real use': 'Developer engineered a unique approach to OS memory handling that results in significantly fewer crashes compared to other local-LLM apps — better session continuity and reliability.',
+            'What it means in real use': 'Loci AI engineered a unique approach to OS memory handling that results in significantly fewer crashes compared to other local-LLM apps — better session continuity and reliability.',
             'Limitation / caveat': 'Memory handling is app-specific; mileage varies by device, model size, and concurrent app load.',
+          },
+          {
+            'Benefit': 'Global memory across conversations',
+            'What it means in real use': 'Loci remembers things about you across conversations and model switches. Switch from Gemma to Qwen and the app retains your preferences and history — all stored on-device.',
+            'Limitation / caveat': 'Global memory stays local to your device; not synced across devices.',
+          },
+          {
+            'Benefit': 'First-class thermal management',
+            'What it means in real use': 'Loci monitors device temperature and automatically adjusts runtime parameters to keep your phone stable, rather than pushing inference until the phone throttles itself or the app crashes. Multiple thermal modes let you deliberately run cooler for extended sessions.',
+            'Limitation / caveat': 'Automatic thermal management trades some speed for stability; different devices have different thermal profiles.',
+          },
+          {
+            'Benefit': 'Background model downloads',
+            'What it means in real use': 'Model downloads run on background sessions and survive the app being closed, resuming where they left off. No need to keep the app open while downloading a 4 GB model file.',
+            'Limitation / caveat': 'Downloads still require internet connectivity during active download windows.',
+          },
+          {
+            'Benefit': 'Progressive settings depth',
+            'What it means in real use': 'The main app screen is intentionally simple for casual users, but powerful settings are available for users who want to tune model behavior, temperature, context length, and thermal modes.',
+            'Limitation / caveat': 'Advanced settings are hidden by default; requires exploring to discover all capabilities.',
           },
         ],
       },
@@ -200,8 +220,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Platform': 'Mac',
-            'What to expect': 'Available on the Mac App Store. Can use Apple\'s on-device foundation model or download open-source models. Useful for longer sessions, larger screens, and external keyboards.',
-            'Important note': 'Mac-specific Apple foundation-model support is undocumented. M-series Macs (M1/M2/M3+) likely supported; older Intel Macs may require model download. Check App Store for current compatibility.',
+            'What to expect': 'Available on the Mac App Store. Can use Apple\'s on-device foundation model, download open-source models, or connect to Ollama running on the same Mac for access to a broader model library. Useful for longer sessions, larger screens, and external keyboards.',
+            'Important note': 'Mac-specific Apple foundation-model support is undocumented. M-series Macs (M1/M2/M3+) likely supported; older Intel Macs may require model download. Advanced users can run Ollama locally and plug models into Loci for expanded model access.',
           },
           {
             'Platform': 'Windows',
@@ -258,17 +278,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**User seeking lightweight writing/brainstorming assistant.** Drafting notes, brainstorming ideas, summarizing text — all feasible on-device without sending your work to a cloud service.',
           '**User with inconsistent connectivity.** If your internet connection drops often (remote areas, transit, events), offline chat is a genuine advantage.',
           '**Cross-device simplicity.** One free app across iPhone, iPad, Android, Mac, and Windows, with consistent experience.',
-          '**User who wants to run powerful models from their phone.** Link your phone to a Mac or PC to execute larger, more capable models directly from the mobile interface — solving quality/hallucination concerns while maintaining mobile convenience and privacy.',
+          '**User who wants to run powerful models from their phone.** Loci Link lets you pair your phone to a Mac or PC to execute larger, more capable models directly from the mobile interface — solving quality and hallucination concerns while keeping traffic between your own devices and maintaining privacy. This is the real answer to the mobile quality ceiling and something no other app in the App Store offers.',
+          '**User who values persistent memory across conversations.** Loci remembers things about you across different conversations and even when switching between models. All memory stays on your device.',
+          '**User running intensive sessions without device overheating.** Loci\'s thermal management automatically keeps your phone stable during long sessions by adjusting runtime parameters, rather than letting the device throttle itself or crash the app.',
         ],
       },
       whoShouldNotUse: {
         id: 'who-should-not-use',
         title: 'Who Should Not Use Loci',
         items: [
-          '**User expecting frontier reasoning or coding.** Loci\'s curated model library tops out at models like Llama 3.2 3B, Gemma 4 4B, Qwen 3 1.7B — all solid, but not in the class of GPT-4o or Claude 3 Opus for complex reasoning. Any AI app offering small models faces the same quality tradeoff; for strategies to reduce hallucinations with smaller models, see [How to Reduce LLM Hallucinations](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
+          '**User expecting frontier reasoning or live web integration.** While Gemma 4 E2B/E4B offer the strongest reasoning available on mobile and Loci\'s context management minimizes hallucinations, even the best small models face a parameter-count ceiling that GPT-4o or Claude 3 Opus exceed. For high-stakes analysis, complex multi-step reasoning, code generation, or live web grounding, cloud models remain necessary. Loci excels at personal assistant tasks, drafting, and reasoning within its design envelope.',
           '**User needing live web knowledge offline.** Loci has optional DuckDuckGo web search, but it requires internet. The local models have no concept of "today" or current events.',
           '**Developer wanting comprehensive model/inference control.** If you need to benchmark different quantizations, compare token/second speeds, or tune sampling parameters, Private LLM or PocketPal AI offer more depth.',
-          '**User building a full offline voice assistant.** Loci has a "voice mode" feature, but the implementation (whether local ASR/TTS or Apple system APIs) is not publicly documented. For a sourced, fully offline voice stack, see [Build a Local Voice Assistant on Your Phone](/power-local-llm/voice-assistant-local-mobile-offline) for the recommended Whisper + LLM + TTS pipeline.',
+          '**User building a fully documented voice assistant stack.** Loci has a "voice mode" feature: on Apple platforms (iPhone, iPad, Mac), voice input and output run fully on-device with no cloud dependency. On Windows, voice input is constrained by the operating system\'s speech-recognition APIs and requires internet (a Windows OS limitation, not a Loci design choice). If you need a fully documented, sourced voice stack with Whisper STT + local LLM + TTS, see [Build a Local Voice Assistant on Your Phone](/power-local-llm/voice-assistant-local-mobile-offline) for the recommended open-source pipeline.',
           '**User handling highly sensitive information.** Before using Loci for private/confidential work, review the current privacy policy and privacy nutrition label on the App Store. App Store label shows data collection for "Identifiers," "Usage Data," and "Diagnostics" (stated as not linked to your identity), but read the full policy first.',
         ],
       },
@@ -290,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Does Loci work on older phones?',
-            a: 'iOS: Loci requires iOS 18.0+, which excludes iPhone XS and older. Android: Loci works on most modern Android phones (exact minimum OS version not specified by the developer), but performance depends on available RAM and the selected model. Mac: requires a recent macOS version supporting the system foundation model. Windows: generally works on modern Windows 10/11 machines with sufficient disk space for a model.',
+            a: 'iOS: Loci requires iOS 18.0+, which excludes iPhone XS and older. Android: Loci works on most modern Android phones (exact minimum OS version not specified by Loci AI), but performance depends on available RAM and the selected model. Mac: requires a recent macOS version supporting the system foundation model. Windows: generally works on modern Windows 10/11 machines with sufficient disk space for a model.',
           },
           {
             q: 'Can I import my own models (GGUF files) into Loci?',
@@ -314,7 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Loci is most compelling if your priority is low-friction, on-device AI rather than maximum model control. Two killer features stand out: desktop/phone linking (run powerful models from your phone via a connected Mac or PC, solving hallucination and quality concerns), and exceptional app stability thanks to the developer\'s unique OS memory handling approach. Real-world testing confirms that downloads work reliably, offline chat functions as advertised, and the app experiences significantly fewer crashes than competing local-LLM apps. For users who want private offline chat without technical model-management friction, Loci excels. For users who want advanced model control and quantization flexibility, Private LLM (Apple) and PocketPal AI offer more depth; for Android users exploring experimental on-device options, Google AI Edge Gallery offers additional model discovery. The honest assessment: Loci succeeds at simplicity, stability, and cross-platform consistency. It fails only when you need frontier reasoning or deep model control.',
+          'Loci is most compelling if your priority is low-friction, on-device AI rather than maximum model control. Several features stand out: Gemma 4 E2B/E4B as the strongest reasoning available on mobile; Loci Link (desktop/phone linking to run powerful models from your phone via a connected Mac or PC); global memory across conversations and model switches; first-class thermal management for extended sessions; and exceptional app stability thanks to Loci AI\'s unique OS memory handling approach. Real-world testing confirms that downloads work reliably, offline chat functions as advertised, and the app experiences significantly fewer crashes than competing local-LLM apps. The web RAG implementation is equally unique: when online, answers ground in live sources; when offline, it falls back cleanly to on-device knowledge without breaking — and you control the behavior in settings. For users who want private offline chat without technical model-management friction and with strong reasoning for a mobile device, Loci excels. For users who want advanced model control and quantization flexibility, Private LLM (Apple) and PocketPal AI offer more depth; for Android users exploring experimental on-device options, Google AI Edge Gallery offers additional model discovery. The honest assessment: Loci succeeds at simplicity, stability, thermal resilience, and cross-platform consistency. It fails only when you need frontier cloud reasoning or deep model control.',
       },
       sources: {
         id: 'sources',
@@ -353,7 +375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مراجعة Loci AI (2026): ذكاء اصطناعي خاص دون إنترنت عبر iPhone و Android و iPad و Mac و Windows',
     seoTitle: 'مراجعة Loci AI 2026: ذكاء اصطناعي خاص دون الاتصال بالإنترنت',
     intro:
-      'تم تصميم Loci لجعل الذكاء الاصطناعي المحلي يشعر مثل مساعد عادي بدلاً من مشروع إدارة نموذج. يعمل على iPhone و iPad و Android و Mac و Windows، ويمكن أن يعمل دون إنترنت بعد الإعداد، ويوضع نفسه كبديل يركز على الخصوصية لخدمات الذكاء الاصطناعي السحابية. السؤال العملي ليس ما إذا كان الاستدلال المحلي ممكناً — بل ما إذا كان Loci يعطيك جودة وتحكماً كافياً دون تنزيلات النماذج واستخدام التخزين والتكوين التقني (اختيار ملفات GGUF يدويًا، ضبط التقادير، حساب VRAM) الذي تتطلبه أدوات الذكاء الاصطناعي المحلية الأكثر تقدماً.',
+      'تم تصميم Loci، الذي طورته Loci AI, Inc.، لجعل الذكاء الاصطناعي المحلي يشعر مثل مساعد عادي بدلاً من مشروع إدارة نموذج. يعمل على iPhone و iPad و Android و Mac و Windows، ويمكن أن يعمل دون إنترنت بعد الإعداد، ويوضع نفسه كبديل يركز على الخصوصية لخدمات الذكاء الاصطناعي السحابية. التطبيق يختار تلقائياً أفضل بيئة استدلال (llama.cpp أو MLX) لكل نموذج على أجهزتك، ينفذ إدارة حرارية لإبقاء هاتفك مستقراً، يزامن الذاكرة عبر المحادثات، ويمكن أن يربط نفسه بجهاز كمبيوتر مكتبي للوصول إلى نماذج أقوى. السؤال العملي ليس ما إذا كان الاستدلال المحلي ممكناً — بل ما إذا كان Loci يعطيك جودة وتحكماً كافياً دون تنزيلات النماذج واستخدام التخزين والتكوين التقني (اختيار ملفات GGUF يدويًا، ضبط التقادير، حساب VRAM) الذي تتطلبه أدوات الذكاء الاصطناعي المحلية الأكثر تقدماً.',
     metaDescription:
       'مراجعة Loci AI: هل تستحق الاستخدام للذكاء الاصطناعي الخاص والمحلي؟ اكتشف كيف يعمل على iPhone و Android و iPad و Mac و Windows، من الذي يناسبه، وكيف يقارن مع Private LLM و PocketPal و Google AI Edge Gallery.',
     twitterDescription:
@@ -385,7 +407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Free, no subscription, works on 5 platforms (iPhone/iPad/Android/Mac/Windows).',
           'Offline-capable after app and model download/setup.',
-          'No account, no tracking, conversations stay on-device per developer claims.',
+          'No account, no tracking, conversations stay on-device per Loci AI claims.',
           'Optional features (web search via DuckDuckGo, Windows voice input) require internet.',
           'Quality and model selection less flexible than Private LLM or PocketPal AI.',
         ],
@@ -653,7 +675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الحكم',
         content:
-          'يكون Loci الأكثر جاذبية إذا كانت أولويتك هي ذكاء اصطناعي محلي بدون احتكاك بدلاً من التحكم الأقصى في النموذج. هناك ميزتان مميزتان: ربط سطح المكتب/الهاتف (تشغيل نماذج قوية من هاتفك عبر Mac أو PC متصل، مما يحل مشاكل الهلوسة والجودة)، واستقرار تطبيق استثنائي بفضل نهج معالجة الذاكرة الفريد للمطور. أكدت الاختبارات الحقيقية أن التنزيلات تعمل بموثوقية، والدردشة غير المتصلة تعمل كما هو معلن، والتطبيق يعاني من تعطلات أقل بكثير من تطبيقات الذكاء الاصطناعي المحلي الأخرى. بالنسبة للمستخدمين الذين يريدون دردشة خاصة محلية بدون احتكاك إدارة تقنية، يتفوق Loci. بالنسبة للمستخدمين الذين يريدون التحكم المتقدم في النموذج ومرونة التقادير، تقدم Private LLM (Apple) و PocketPal AI عمقاً أكثر؛ لمستخدمي Android الذين يستكشفون خيارات تجريبية على الجهاز، توفر Google AI Edge Gallery اكتشاف نماذج إضافياً. التقييم الصريح: يحقق Loci النجاح في البساطة والاستقرار والاتساق متعدد المنصات. يفشل فقط عندما تحتاج إلى منطق متقدم أو تحكم عميق في النموذج.',
+          'يكون Loci الأكثر جاذبية إذا كانت أولويتك هي ذكاء اصطناعي محلي بدون احتكاك بدلاً من التحكم الأقصى في النموذج. عدة ميزات تبرز: Gemma 4 E2B/E4B كأقوى قدرة استدلال متاحة على الهاتف المحمول؛ Loci Link (ربط سطح المكتب/الهاتف لتشغيل نماذج قوية من هاتفك عبر Mac أو PC متصل)؛ ذاكرة عامة عبر المحادثات وتبديلات النماذج؛ إدارة حرارية من الدرجة الأولى للجلسات الطويلة؛ واستقرار تطبيق استثنائي بفضل نهج معالجة الذاكرة الفريد من Loci AI. أكدت الاختبارات الحقيقية أن التنزيلات تعمل بموثوقية، والدردشة غير المتصلة تعمل كما هو معلن، والتطبيق يعاني من تعطلات أقل بكثير من تطبيقات الذكاء الاصطناعي المحلي الأخرى. تنفيذ Web RAG متساوٍ بالتفرد: عند الاتصال، تتأسس الإجابات على مصادر حية؛ عند عدم الاتصال، تنسحب بنظافة إلى المعرفة على الجهاز دون انقطاع — وتتحكم في السلوك في الإعدادات. بالنسبة للمستخدمين الذين يريدون دردشة خاصة محلية بدون احتكاك إدارة تقنية وبقدرة استدلال قوية على الجهاز، يتفوق Loci. بالنسبة للمستخدمين الذين يريدون التحكم المتقدم في النموذج ومرونة التقادير، تقدم Private LLM (Apple) و PocketPal AI عمقاً أكثر؛ لمستخدمي Android الذين يستكشفون خيارات تجريبية على الجهاز، توفر Google AI Edge Gallery اكتشاف نماذج إضافياً. التقييم الصريح: يحقق Loci النجاح في البساطة والاستقرار والمرونة الحرارية والاتساق متعدد المنصات. يفشل فقط عندما تحتاج إلى منطق متقدم في السحابة أو تحكم عميق في النموذج.',
       },
       sources: {
         id: 'sources',
@@ -692,7 +714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Loci AI Review (2026): Private Offline-KI für iPhone, Android, iPad, Mac und Windows',
     seoTitle: 'Loci AI Review 2026: Private Offline-KI auf allen Plattformen',
     intro:
-      'Loci ist darauf ausgelegt, lokale KI wie einen normalen Assistenten wirken zu lassen, anstatt als Modell-Management-Projekt. Es läuft auf iPhone, iPad, Android, Mac und Windows, kann nach der Einrichtung offline arbeiten und positioniert sich als datenschutzorientierte Alternative zu Cloud-KI-Services. Die praktische Frage lautet nicht, ob lokale Inferenz möglich ist — sondern ob Loci Ihnen genügend Qualität und Kontrolle bietet, ohne die Modell-Downloads, Speichernutzung und technische Konfiguration (manuelles Auswählen von GGUF-Dateien, Quantisierungs-Tuning, VRAM-Berechnungen) zu erfordern, die fortgeschrittenere Tools verlangen.',
+      'Loci, entwickelt von Loci AI, Inc., ist darauf ausgelegt, lokale KI wie einen normalen Assistenten wirken zu lassen, anstatt als Modell-Management-Projekt. Es läuft auf iPhone, iPad, Android, Mac und Windows, kann nach der Einrichtung offline arbeiten und positioniert sich als datenschutzorientierte Alternative zu Cloud-KI-Services. Die App wählt automatisch die beste Inferenz-Laufzeit (llama.cpp oder MLX) für jedes Modell auf Ihrer Hardware aus, implementiert Thermal Management zur Stabilisierung Ihres Telefons, synchronisiert Speicher über Gespräche hinweg und kann sich mit einem Desktop verbinden, um stärkere Modelle zu nutzen. Die praktische Frage lautet nicht, ob lokale Inferenz möglich ist — sondern ob Loci Ihnen genügend Qualität und Kontrolle bietet, ohne die Modell-Downloads, Speichernutzung und technische Konfiguration (manuelles Auswählen von GGUF-Dateien, Quantisierungs-Tuning, VRAM-Berechnungen) zu erfordern, die fortgeschrittenere Tools verlangen.',
     metaDescription:
       'Loci AI Review: Lohnt sich die Nutzung für private, offline KI? Sehen Sie, wie es auf iPhone, Android, iPad, Mac und Windows funktioniert, für wen es geeignet ist und wie es sich mit Private LLM, PocketPal und Google AI Edge Gallery vergleicht.',
     twitterDescription:
@@ -987,7 +1009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Loci ist am überzeugendsten, wenn Ihre Priorität reibungslose, lokale KI anstatt maximale Modellkontrolle ist. Es könnte die bessere erste Local-AI-App für Nutzer sein, die private, Offline-Chat wünschen, ohne die technische Einrichtung zu erfordern, die fortgeschrittenere Tools verlangen. Tests in der Praxis bestätigen, dass Downloads zuverlässig funktionieren und Offline-Chat wie versprochen arbeitet, aber kleine Modelle zeigen klare Qualitätsgrenzen auf differenziertes Reasoning. Nutzer, die Quantisierungen auswählen, Modelle importieren oder größere Modellbibliotheken ausführen möchten, sollten technischere Alternativen wie Private LLM oder PocketPal AI vergleichen. Für Apple-Nutzer insbesondere bietet Private LLM 140+ Modelle und fortgeschrittene Konfiguration; für Android-Nutzer, die eine wettbewerbsfähige Alternative zu Loci suchen, bietet Google AI Edge Gallery mehr experimentelle lokale Modell-Erkundung. Die ehrliche Bewertung: Loci erfolgreich bei Einfachheit. Es scheitert nur, wenn Einfachheit nicht das ist, was Sie brauchen.',
+          'Loci ist am überzeugendsten, wenn Ihre Priorität reibungslose, lokale KI anstatt maximale Modellkontrolle ist. Mehrere Funktionen stechen hervor: Gemma 4 E2B/E4B als stärkste mobile Reasoning-Kapazität; Loci Link (Desktop/Telefon-Verknüpfung zum Ausführen leistungsstarker Modelle vom Telefon aus); globaler Speicher über Gespräche hinweg; erstklassiges Thermal Management für lange Sitzungen; und außergewöhnliche App-Stabilität dank Loci AIs einzigartiger OS-Memory-Handling-Methode. Tests in der Praxis bestätigen, dass Downloads zuverlässig funktionieren, Offline-Chat wie versprochen arbeitet und die App deutlich weniger abstürzt als konkurrierende Apps. Die Web-RAG-Implementierung ist gleichartig einzigartig: online grunden Antworten in Live-Quellen; offline fällt sie sauber auf lokales Wissen zurück ohne zu brechen — und Sie kontrollieren das Verhalten in den Einstellungen. Für Nutzer, die private Offline-Chat ohne technische Modell-Management-Reibung und mit starkem Reasoning auf mobil wünschen, ist Loci ausgezeichnet. Für Nutzer, die fortgeschrittene Modellkontrolle und Quantisierungs-Flexibilität wünschen, bieten Private LLM (Apple) und PocketPal AI mehr Tiefe; für Android-Nutzer, die experimentelle lokale Optionen erkunden, bietet Google AI Edge Gallery zusätzliche Modell-Erkundung. Die ehrliche Bewertung: Loci ist erfolgreich bei Einfachheit, Stabilität, Wärmeresilienz und plattformübergreifender Konsistenz. Es scheitert nur, wenn Sie Cloud-Frontier-Reasoning oder tiefe Modellkontrolle benötigen.',
       },
       sources: {
         id: 'sources',
@@ -1026,7 +1048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Reseña de Loci AI (2026): IA privada sin conexión para iPhone, Android, iPad, Mac y Windows',
     seoTitle: 'Reseña de Loci AI 2026: IA privada sin conexión en todas las plataformas',
     intro:
-      'Loci está diseñado para que la IA local se sienta como un asistente normal en lugar de un proyecto de gestión de modelos. Se ejecuta en iPhone, iPad, Android, Mac y Windows, puede funcionar sin conexión después de la configuración, y se posiciona como una alternativa centrada en la privacidad a los servicios de IA en la nube. La pregunta práctica no es si la inferencia local es posible — es si Loci te ofrece suficiente calidad y control sin las descargas de modelos, el uso de almacenamiento y la configuración técnica (seleccionar archivos GGUF manualmente, ajustar cuantizaciones, calcular VRAM) que requieren herramientas más avanzadas de IA local.',
+      'Loci, desarrollado por Loci AI, Inc., está diseñado para que la IA local se sienta como un asistente normal en lugar de un proyecto de gestión de modelos. Se ejecuta en iPhone, iPad, Android, Mac y Windows, puede funcionar sin conexión después de la configuración, y se posiciona como una alternativa centrada en la privacidad a los servicios de IA en la nube. La app selecciona automáticamente la mejor infraestructura de inferencia (llama.cpp o MLX) para cada modelo en tu hardware, implementa gestión térmica para mantener tu teléfono estable, sincroniza memoria entre conversaciones y puede vincularse a una computadora de escritorio para acceder a modelos más potentes. La pregunta práctica no es si la inferencia local es posible — es si Loci te ofrece suficiente calidad y control sin las descargas de modelos, el uso de almacenamiento y la configuración técnica (seleccionar archivos GGUF manualmente, ajustar cuantizaciones, calcular VRAM) que requieren herramientas más avanzadas de IA local.',
     metaDescription:
       '¿Vale la pena usar Loci AI para IA privada sin conexión? Descubre cómo funciona en iPhone, Android, iPad, Mac y Windows, a quién le conviene, y cómo se compara con Private LLM, PocketPal y Google AI Edge Gallery.',
     twitterDescription:
@@ -1313,7 +1335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Loci es más convincente si tu prioridad es la IA sin fricción en el dispositivo en lugar del máximo control del modelo. Dos características destacadas: vinculación de escritorio/teléfono (ejecuta modelos potentes desde tu teléfono a través de un Mac o PC conectado, resolviendo problemas de alucinación y calidad), y estabilidad de aplicación excepcional gracias al enfoque único del desarrollador para el manejo de memoria del SO. Las pruebas del mundo real confirman que las descargas funcionan de manera confiable, el chat sin conexión funciona según lo anunciado, y la aplicación experimenta significativamente menos fallos que otras aplicaciones de IA local competidoras. Para usuarios que desean chat privado sin conexión sin fricción de administración técnica de modelos, Loci se destaca. Para usuarios que desean control avanzado de modelos y flexibilidad de cuantificación, Private LLM (Apple) y PocketPal AI ofrecen más profundidad; para usuarios de Android que exploran opciones experimentales en el dispositivo, Google AI Edge Gallery ofrece descubrimiento adicional de modelos. La evaluación honesta: Loci tiene éxito en simplicidad, estabilidad y consistencia multiplataforma. Falla solo cuando necesitas razonamiento frontera o control profundo del modelo.',
+          'Loci es más convincente si tu prioridad es la IA sin fricción en el dispositivo en lugar del máximo control del modelo. Varias características se destacan: Gemma 4 E2B/E4B como el razonamiento más fuerte disponible en móvil; Loci Link (vinculación escritorio/teléfono para ejecutar modelos potentes desde tu teléfono a través de un Mac o PC conectado); memoria global entre conversaciones y cambios de modelo; gestión térmica de primera clase para sesiones prolongadas; y estabilidad de aplicación excepcional gracias al enfoque único de Loci AI para el manejo de memoria del SO. Las pruebas del mundo real confirman que las descargas funcionan de manera confiable, el chat sin conexión funciona según lo anunciado, y la aplicación experimenta significativamente menos fallos que otras aplicaciones de IA local competidoras. La implementación de web RAG es igualmente única: en línea, las respuestas se basan en fuentes en vivo; sin conexión, retrocede limpiamente al conocimiento en el dispositivo sin fallar — y tú controlas el comportamiento en configuración. Para usuarios que desean chat privado sin conexión sin fricción de administración técnica de modelos y con razonamiento fuerte en dispositivo, Loci se destaca. Para usuarios que desean control avanzado de modelos y flexibilidad de cuantificación, Private LLM (Apple) y PocketPal AI ofrecen más profundidad; para usuarios de Android que exploran opciones experimentales en el dispositivo, Google AI Edge Gallery ofrece descubrimiento adicional de modelos. La evaluación honesta: Loci tiene éxito en simplicidad, estabilidad, resiliencia térmica y consistencia multiplataforma. Falla solo cuando necesitas razonamiento frontera en la nube o control profundo del modelo.',
       },
       sources: {
         id: 'sources',
@@ -1352,7 +1374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   title: 'Critique de Loci AI (2026) : IA hors ligne privée sur iPhone, Android, iPad, Mac et Windows',
   seoTitle: 'Critique Loci AI 2026 : IA hors ligne privée multiplateforme',
   intro:
-    'Loci est conçu pour rendre l\'IA locale aussi naturelle qu\'un assistant ordinaire, sans gestion technique de modèles. Il s\'exécute sur iPhone, iPad, Android, Mac et Windows, fonctionne hors ligne après la configuration, et se positionne comme alternative sans cloud aux services IA propriétaires. La vraie question n\'est pas si l\'inférence locale est possible — elle existe. C\'est si Loci offre assez de qualité et de contrôle sans les téléchargements, l\'espace disque et la configuration technique (sélection manuelle de fichiers GGUF, ajustement des quantifications, calcul de VRAM) que les outils IA locaux plus avancés imposent.',
+    'Loci, développé par Loci AI, Inc., est conçu pour rendre l\'IA locale aussi naturelle qu\'un assistant ordinaire, sans gestion technique de modèles. Il s\'exécute sur iPhone, iPad, Android, Mac et Windows, fonctionne hors ligne après la configuration, et se positionne comme alternative sans cloud aux services IA propriétaires. L\'app sélectionne automatiquement le meilleur environnement d\'inférence (llama.cpp ou MLX) pour chaque modèle sur votre matériel, implémente la gestion thermique pour stabiliser votre téléphone, synchronise la mémoire entre conversations et peut se connecter à un ordinateur de bureau pour accéder à des modèles plus puissants. La vraie question n\'est pas si l\'inférence locale est possible — elle existe. C\'est si Loci offre assez de qualité et de contrôle sans les téléchargements, l\'espace disque et la configuration technique (sélection manuelle de fichiers GGUF, ajustement des quantifications, calcul de VRAM) que les outils IA locaux plus avancés imposent.',
   metaDescription:
     'Critique de Loci AI : vaut-il le coup pour une IA privée hors ligne ? Découvrez le fonctionnement sur iPhone, Android, iPad, Mac et Windows, pour qui c\'est adapté, et les comparaisons.',
   twitterDescription:
@@ -1639,7 +1661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'verdict',
       title: 'Verdict',
       content:
-        'Loci est la plus attrayante si votre priorité est une IA sans friction, sur appareil, plutôt que le contrôle maximum du modèle. Deux fonctionnalités exceptionnelles se distinguent : la liaison bureau/téléphone (exécutez des modèles puissants depuis votre téléphone via un Mac ou un PC connecté, résolvant les problèmes d\'hallucination et de qualité), et une stabilité d\'application exceptionnelle grâce à l\'approche unique du développeur en matière de gestion de la mémoire du SE. Les tests réels confirment que les téléchargements fonctionnent de manière fiable, le chat hors ligne fonctionne comme annoncé, et l\'application connaît significativement moins de blocages que les autres applications d\'IA locales concurrentes. Pour les utilisateurs qui souhaitent un chat privé hors ligne sans friction de gestion technique des modèles, Loci excelle. Pour les utilisateurs qui souhaitent un contrôle avancé des modèles et une flexibilité de quantification, Private LLM (Apple) et PocketPal AI offrent plus de profondeur ; pour les utilisateurs Android explorant des options expérimentales sur appareil, Google AI Edge Gallery offre une découverte supplémentaire de modèles. L\'évaluation honnête : Loci réussit en simplicité, stabilité et cohérence multiplateforme. Il n\'échoue que lorsque vous avez besoin d\'un raisonnement frontier ou d\'un contrôle profond du modèle.',
+        'Loci est la plus attrayante si votre priorité est une IA sans friction, sur appareil, plutôt que le contrôle maximum du modèle. Plusieurs fonctionnalités se démarquent : Gemma 4 E2B/E4B comme le raisonnement le plus puissant disponible sur mobile ; Loci Link (liaison bureau/téléphone pour exécuter des modèles puissants depuis votre téléphone via un Mac ou un PC connecté) ; mémoire globale entre conversations et changements de modèles ; gestion thermique de première classe pour les sessions prolongées ; et stabilité d\'application exceptionnelle grâce à l\'approche unique de Loci AI en matière de gestion de la mémoire du SE. Les tests réels confirment que les téléchargements fonctionnent de manière fiable, le chat hors ligne fonctionne comme annoncé, et l\'application connaît significativement moins de blocages que les autres applications d\'IA locales concurrentes. L\'implémentation web RAG est tout aussi unique : en ligne, les réponses s\'ancrent dans des sources actuelles ; hors ligne, elle revient facilement au knowledge sur appareil sans rupture — et vous contrôlez le comportement dans les paramètres. Pour les utilisateurs qui souhaitent un chat privé hors ligne sans friction de gestion technique des modèles et avec un raisonnement fort sur appareil, Loci excelle. Pour les utilisateurs qui souhaitent un contrôle avancé des modèles et une flexibilité de quantification, Private LLM (Apple) et PocketPal AI offrent plus de profondeur ; pour les utilisateurs Android explorant des options expérimentales sur appareil, Google AI Edge Gallery offre une découverte supplémentaire de modèles. L\'évaluation honnête : Loci réussit en simplicité, stabilité, résilience thermique et cohérence multiplateforme. Il n\'échoue que lorsque vous avez besoin d\'un raisonnement frontier cloud ou d\'un contrôle profond du modèle.',
     },
     sources: {
       id: 'sources',
@@ -1678,7 +1700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Loci AI レビュー (2026): iPhone、Android、iPad、Mac、Windows 対応のオフラインAI',
     seoTitle: 'Loci AI レビュー 2026: プライベート・オフラインAI全プラットフォーム対応',
     intro:
-      'Lociは、ローカルAIをモデル管理プロジェクトではなく、通常のアシスタントのように感じさせるように設計されています。iPhone、iPad、Android、Mac、Windowsで動作し、セットアップ後はオフラインで動作でき、クラウドAIサービスのプライバシー重視の代替手段として位置づけています。実際の質問は、ローカル推論が可能かどうかではなく、Lociが、より高度なローカルLLMツールが必要とするモデルダウンロード、ストレージ使用、技術設定（GGUF ファイルの手動選択、量子化チューニング、VRAM計算）なしに、十分な品質と制御をもたらすかどうかです。',
+      'Loci（Loci AI, Inc. 開発）は、ローカルAIをモデル管理プロジェクトではなく、通常のアシスタントのように感じさせるように設計されています。iPhone、iPad、Android、Mac、Windowsで動作し、セットアップ後はオフラインで動作でき、クラウドAIサービスのプライバシー重視の代替手段として位置づけています。アプリはハードウェア上の各モデルに最適な推論ランタイム（llama.cpp または MLX）を自動選択し、スマートフォン安定化の熱管理を実装し、会話間でメモリを同期し、デスクトップに接続してより強力なモデルにアクセスできます。実際の質問は、ローカル推論が可能かどうかではなく、Lociが、より高度なローカルLLMツールが必要とするモデルダウンロード、ストレージ使用、技術設定（GGUF ファイルの手動選択、量子化チューニング、VRAM計算）なしに、十分な品質と制御をもたらすかどうかです。',
     metaDescription:
       'Loci AI レビュー: プライベートでオフラインのAIに価値があるのか。iPhone、Android、iPad、Mac、Windows での動作方法、適合性、Private LLM、PocketPal、Google AI Edge Gallery との比較を確認します。',
     twitterDescription:
@@ -1965,7 +1987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content:
-          '最大モデル制御ではなくフリクションのないオンデバイスAIが優先事項である場合、Lociが最も魅力的です。2つの優れた機能が目立っています：デスクトップ/携帯電話リンク（接続されたMacまたはPCを介して携帯電話から強力なモデルを実行して、幻覚と品質の問題を解決）、および開発者の独特なOSメモリ処理アプローチのおかげによる優れたアプリの安定性。実世界のテストは、ダウンロードが確実に機能し、オフラインチャットが宣伝通りに機能し、アプリが競争するローカルLLMアプリよりもはるかに少ないクラッシュを経験することを確認しています。技術的なモデル管理のフリクションなく、プライベートなオフラインチャットをお望みのユーザーにとって、Lociは優れています。高度なモデル制御と量子化の柔軟性をお望みのユーザーには、Private LLM（Apple）とPocketPal AIがより深い機能を提供します。オンデバイスの実験的オプションを探索しているAndroidユーザーには、Google AI Edge Galleryが追加のモデル発見を提供します。率直な評価：Lociはシンプルさ、安定性、およびクロスプラットフォームの一貫性に成功しています。最先端の推論または深いモデル制御が必要な場合にのみ失敗します。',
+          '最大モデル制御ではなくフリクションのないオンデバイスAIが優先事項である場合、Lociが最も魅力的です。複数の機能が際立っています：Gemma 4 E2B/E4Bはモバイルで利用可能な最強の推論能力；Loci Link（接続されたMacまたはPCを介して携帯電話から強力なモデルを実行するデスクトップ/携帯電話リンク）；会話とモデル切り替え全体の全体的なメモリ；長時間セッション用の一流の熱管理；およびLoci AIの独特なOSメモリ処理アプローチのおかげによる優れたアプリの安定性。実世界のテストは、ダウンロードが確実に機能し、オフラインチャットが宣伝通りに機能し、アプリが競争するローカルLLMアプリよりもはるかに少ないクラッシュを経験することを確認しています。Web RAG実装は同様にユニークです：オンライン時は答えがライブソースに根ざしています；オフラインでは、デバイス上の知識に対して中断なく戻ります。また、設定で動作を制御します。技術的なモデル管理のフリクションなく、プライベートなオフラインチャットを望み、オンデバイスで強い推論を必要とするユーザーにとって、Lociは優れています。高度なモデル制御と量子化の柔軟性をお望みのユーザーには、Private LLM（Apple）とPocketPal AIがより深い機能を提供します。オンデバイスの実験的オプションを探索しているAndroidユーザーには、Google AI Edge Galleryが追加のモデル発見を提供します。率直な評価：Lociはシンプルさ、安定性、熱レジリエンス、およびクロスプラットフォームの一貫性に成功しています。クラウドフロンティア推論または深いモデル制御が必要な場合にのみ失敗します。',
       },
       sources: {
         id: 'sources',
@@ -2004,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Loci AI 리뷰 (2026): iPhone, Android, iPad, Mac, Windows용 오프라인 AI',
     seoTitle: 'Loci AI 리뷰 2026: 크로스플랫폼 프라이빗 오프라인 AI',
     intro:
-      'Loci는 로컬 AI를 일반적인 비서 역할처럼 느끼게 하려고 설계되었습니다. iPhone, iPad, Android, Mac, Windows에서 AI를 실행할 수 있고, 설정 후 오프라인으로 작동하며, 클라우드 AI 서비스에 대한 프라이버시 중심의 대안으로 자리 잡았습니다. 실질적인 질문은 로컬 추론이 가능한가가 아니라, Loci가 더 고급 로컬 LLM 도구가 요구하는 모델 다운로드, 스토리지 사용, 기술적 설정(GGUF 파일 직접 선택, 양자화 조정, VRAM 계산) 없이 충분한 품질과 제어를 제공하는가입니다.',
+      'Loci(Loci AI, Inc.에서 개발)는 로컬 AI를 일반적인 비서 역할처럼 느끼게 하려고 설계되었습니다. iPhone, iPad, Android, Mac, Windows에서 AI를 실행할 수 있고, 설정 후 오프라인으로 작동하며, 클라우드 AI 서비스에 대한 프라이버시 중심의 대안으로 자리 잡았습니다. 앱은 하드웨어의 각 모델에 대해 최적의 추론 런타임(llama.cpp 또는 MLX)을 자동으로 선택하고, 휴대폰 안정성을 위해 열 관리를 구현하며, 대화 간에 메모리를 동기화하고, 데스크톱에 연결하여 더 강력한 모델에 접근할 수 있습니다. 실질적인 질문은 로컬 추론이 가능한가가 아니라, Loci가 더 고급 로컬 LLM 도구가 요구하는 모델 다운로드, 스토리지 사용, 기술적 설정(GGUF 파일 직접 선택, 양자화 조정, VRAM 계산) 없이 충분한 품질과 제어를 제공하는가입니다.',
     metaDescription:
       'Loci AI 리뷰: 프라이빗 오프라인 AI로 가치 있는 선택일까요? iPhone, Android, iPad, Mac, Windows에서 작동 방식, 적합한 사용자, Private LLM 및 Google AI Edge Gallery와의 비교를 확인하세요.',
     twitterDescription:
@@ -2291,7 +2313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '평가',
         content:
-          'Loci는 최대 모델 제어보다 마찰 없는 온디바이스 AI가 우선인 경우 가장 매력적입니다. 두 가지 뛰어난 기능이 눈에 띕니다: 데스크톱/휴대폰 연결(연결된 Mac 또는 PC를 통해 휴대폰에서 강력한 모델 실행, 환각 및 품질 문제 해결) 및 개발자의 고유한 OS 메모리 처리 접근 방식 덕분의 탁월한 앱 안정성. 실제 테스트는 다운로드가 안정적으로 작동하고, 오프라인 채팅이 광고된 대로 작동하며, 앱이 경쟁하는 로컬 LLM 앱보다 훨씬 적은 충돌을 경험함을 확인합니다. 기술적 모델 관리 마찰 없이 개인 오프라인 채팅을 원하는 사용자의 경우 Loci가 우수합니다. 고급 모델 제어 및 양자화 유연성을 원하는 사용자의 경우 Private LLM(Apple) 및 PocketPal AI가 더 깊이 있으며; 온디바이스 실험적 옵션을 탐색하는 Android 사용자의 경우 Google AI Edge Gallery는 추가 모델 발견을 제공합니다. 솔직한 평가: Loci는 단순성, 안정성 및 크로스 플랫폼 일관성에서 성공합니다. 최첨단 추론이나 깊은 모델 제어가 필요할 때만 실패합니다.',
+          'Loci는 최대 모델 제어보다 마찰 없는 온디바이스 AI가 우선인 경우 가장 매력적입니다. 여러 기능이 눈에 띕니다: Gemma 4 E2B/E4B는 모바일에서 사용 가능한 가장 강력한 추론 능력입니다; Loci Link(연결된 Mac 또는 PC를 통해 휴대폰에서 강력한 모델 실행하는 데스크톱/휴대폰 연결); 대화 및 모델 전환 전체의 전역 메모리; 긴 세션을 위한 일류 열 관리; 및 Loci AI의 고유한 OS 메모리 처리 접근 방식 덕분의 탁월한 앱 안정성. 실제 테스트는 다운로드가 안정적으로 작동하고, 오프라인 채팅이 광고된 대로 작동하며, 앱이 경쟁하는 로컬 LLM 앱보다 훨씬 적은 충돌을 경험함을 확인합니다. Web RAG 구현도 마찬가지로 독특합니다: 온라인일 때 답변은 실시간 소스에 기반합니다; 오프라인일 때 중단 없이 온디바이스 지식으로 돌아갑니다 — 설정에서 동작을 제어합니다. 기술적 모델 관리 마찰 없이 개인 오프라인 채팅을 원하며 온디바이스에서 강력한 추론이 필요한 사용자의 경우 Loci가 우수합니다. 고급 모델 제어 및 양자화 유연성을 원하는 사용자의 경우 Private LLM(Apple) 및 PocketPal AI가 더 깊이 있으며; 온디바이스 실험적 옵션을 탐색하는 Android 사용자의 경우 Google AI Edge Gallery는 추가 모델 발견을 제공합니다. 솔직한 평가: Loci는 단순성, 안정성, 열 복원력 및 크로스 플랫폼 일관성에서 성공합니다. 클라우드 최첨단 추론이나 깊은 모델 제어가 필요할 때만 실패합니다.',
       },
       sources: {
         id: 'sources',
@@ -2330,7 +2352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   title: 'Revisão do Loci AI (2026): IA Offline para iPhone, Android, iPad, Mac e Windows',
   seoTitle: 'Revisão do Loci AI 2026: IA Offline Privada em Múltiplas Plataformas',
   intro:
-    'Loci foi projetado para tornar a IA local como um assistente normal em vez de um projeto de gerenciamento de modelos. Funciona em iPhone, iPad, Android, Mac e Windows, pode funcionar offline após a configuração e se posiciona como uma alternativa focada em privacidade aos serviços de IA em nuvem. A pergunta prática não é se a inferência local é possível — é se Loci oferece qualidade e controle suficientes sem os downloads de modelo, uso de armazenamento e configuração técnica (seleção manual de arquivos GGUF, ajuste de quantizações, cálculo de VRAM) que ferramentas mais avançadas de IA local exigem.',
+    'Loci, desenvolvido pela Loci AI, Inc., foi projetado para tornar a IA local como um assistente normal em vez de um projeto de gerenciamento de modelos. Funciona em iPhone, iPad, Android, Mac e Windows, pode funcionar offline após a configuração e se posiciona como uma alternativa focada em privacidade aos serviços de IA em nuvem. O app seleciona automaticamente o melhor tempo de execução de inferência (llama.cpp ou MLX) para cada modelo no seu hardware, implementa gerenciamento térmico para manter seu telefone estável, sincroniza memória entre conversas e pode se conectar a um desktop para acessar modelos mais poderosos. A pergunta prática não é se a inferência local é possível — é se Loci oferece qualidade e controle suficientes sem os downloads de modelo, uso de armazenamento e configuração técnica (seleção manual de arquivos GGUF, ajuste de quantizações, cálculo de VRAM) que ferramentas mais avançadas de IA local exigem.',
   metaDescription:
     'Revisão do Loci AI: Vale a pena usar para IA privada e offline? Veja como funciona em iPhone, Android, iPad, Mac e Windows, quem se beneficia, e como se compara com Private LLM, PocketPal e Google AI Edge Gallery.',
   twitterDescription:
@@ -2617,7 +2639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'verdict',
       title: 'Veredicto',
       content:
-        'Loci é mais convincente se sua prioridade é IA sem atrito no dispositivo em vez de controle máximo de modelo. Dois recursos matadores se destacam: vinculação de desktop/telefone (execute modelos poderosos do seu telefone via um Mac ou PC conectado, resolvendo problemas de alucinação e qualidade) e estabilidade de aplicativo excepcional graças à abordagem única do desenvolvedor para manipulação de memória do SO. Testes do mundo real confirmam que os downloads funcionam com segurança, o chat offline funciona conforme anunciado, e o aplicativo experimenta significativamente menos travamentos do que aplicativos de IA local concorrentes. Para usuários que desejam chat privado offline sem atrito de gerenciamento de modelo técnico, Loci se destaca. Para usuários que desejam controle avançado de modelo e flexibilidade de quantização, Private LLM (Apple) e PocketPal AI oferecem mais profundidade; para usuários Android explorando opções experimentais no dispositivo, Google AI Edge Gallery oferece descoberta adicional de modelos. A avaliação honesta: Loci tem sucesso em simplicidade, estabilidade e consistência multiplataforma. Falha apenas quando você precisa de raciocínio fronteiriço ou controle profundo de modelo.',
+        'Loci é mais convincente se sua prioridade é IA sem atrito no dispositivo em vez de controle máximo de modelo. Vários recursos se destacam: Gemma 4 E2B/E4B como a capacidade de raciocínio mais forte disponível em dispositivos móveis; Loci Link (vinculação de desktop/telefone para executar modelos poderosos do seu telefone via um Mac ou PC conectado); memória global entre conversas e mudanças de modelo; gerenciamento térmico de primeira classe para sessões longas; e estabilidade de aplicativo excepcional graças à abordagem única da Loci AI para manipulação de memória do SO. Testes do mundo real confirmam que os downloads funcionam com segurança, o chat offline funciona conforme anunciado, e o aplicativo experimenta significativamente menos travamentos do que aplicativos de IA local concorrentes. A implementação Web RAG é igualmente única: online, as respostas se baseiam em fontes ao vivo; offline, volta limpiamente para o conhecimento no dispositivo sem quebra — e você controla o comportamento nas configurações. Para usuários que desejam chat privado offline sem atrito de gerenciamento de modelo técnico e com raciocínio forte no dispositivo, Loci se destaca. Para usuários que desejam controle avançado de modelo e flexibilidade de quantização, Private LLM (Apple) e PocketPal AI oferecem mais profundidade; para usuários Android explorando opções experimentais no dispositivo, Google AI Edge Gallery oferece descoberta adicional de modelos. A avaliação honesta: Loci tem sucesso em simplicidade, estabilidade, resiliência térmica e consistência multiplataforma. Falha apenas quando você precisa de raciocínio fronteiriço em nuvem ou controle profundo de modelo.',
     },
     sources: {
       id: 'sources',
@@ -2656,7 +2678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Loci AI 评测（2026）：iPhone、Android、iPad、Mac 和 Windows 上的离线 AI',
     seoTitle: 'Loci AI 评测 2026：跨平台私密离线 AI',
     intro:
-      'Loci 的设计目标是让本地 AI 感觉像一个常规助手，而不是一个模型管理项目。它可以在 iPhone、iPad、Android、Mac 和 Windows 上运行 AI，设置后可以离线工作，并将自己定位为云 AI 服务的隐私优先替代方案。实际问题不是本地推理是否可能——而是 Loci 是否能在不需要模型下载、存储占用和技术配置（手动选择 GGUF 文件、调整量化、计算 VRAM）的情况下为你提供足够的质量和控制，这些是更高级本地 LLM 工具的要求。',
+      'Loci（由 Loci AI, Inc. 开发）的设计目标是让本地 AI 感觉像一个常规助手，而不是一个模型管理项目。它可以在 iPhone、iPad、Android、Mac 和 Windows 上运行 AI，设置后可以离线工作，并将自己定位为云 AI 服务的隐私优先替代方案。应用会自动为硬件上的每个模型选择最佳推理运行时（llama.cpp 或 MLX），实现热管理以保持手机稳定，跨对话同步记忆，并可以连接到台式电脑以访问更强大的模型。实际问题不是本地推理是否可能——而是 Loci 是否能在不需要模型下载、存储占用和技术配置（手动选择 GGUF 文件、调整量化、计算 VRAM）的情况下为你提供足够的质量和控制，这些是更高级本地 LLM 工具的要求。',
     metaDescription:
       'Loci AI 评测：是否值得用于私密离线 AI？了解它如何在 iPhone、Android、iPad、Mac 和 Windows 上工作、适合哪些用户，以及它与 Private LLM、PocketPal 和 Google AI Edge Gallery 的比较。',
     twitterDescription:
@@ -2688,7 +2710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Free, no subscription, works on 5 platforms (iPhone/iPad/Android/Mac/Windows).',
           'Offline-capable after app and model download/setup.',
-          'No account, no tracking, conversations stay on-device per developer claims.',
+          'No account, no tracking, conversations stay on-device per Loci AI claims.',
           'Optional features (web search via DuckDuckGo, Windows voice input) require internet.',
           'Quality and model selection less flexible than Private LLM or PocketPal AI.',
         ],
@@ -2943,7 +2965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          '如果您的优先级是无摩擦的本地AI而非最大模型控制，Loci最具吸引力。两项杀手级功能脱颖而出：台式机/手机连接（通过连接的Mac或PC从手机运行强大的模型，解决幻觉和质量问题）以及由于开发者独特的OS内存处理方法而获得的杰出应用稳定性。真实测试证实下载可靠运行，离线聊天如宣传般工作，应用的崩溃数量明显少于竞争的本地LLM应用。对于想要私密离线聊天而无技术模型管理摩擦的用户，Loci表现出色。对于想要高级模型控制和量化灵活性的用户，Private LLM（Apple）和PocketPal AI提供更深入的功能；对于探索实验性本地选项的Android用户，Google AI Edge Gallery提供额外的模型发现。坦诚的评估：Loci在简洁性、稳定性和跨平台一致性方面取得成功。只有在需要前沿推理或深度模型控制时才会失败。',
+          '如果您的优先级是无摩擦的本地AI而非最大模型控制，Loci最具吸引力。数项功能脱颖而出：Gemma 4 E2B/E4B 作为手机上可用的最强推理能力；Loci Link（台式机/手机连接，通过连接的Mac或PC从手机运行强大的模型）；跨对话和模型切换的全局记忆；一流的热管理以应对长时间会话；以及由于 Loci AI 独特的OS内存处理方法而获得的杰出应用稳定性。真实测试证实下载可靠运行，离线聊天如宣传般工作，应用的崩溃数量明显少于竞争的本地LLM应用。Web RAG 实现同样独特：在线时，答案基于实时来源；离线时，干净地回退到设备上的知识而不中断——您可以在设置中控制这种行为。对于想要私密离线聊天而无技术模型管理摩擦，且需要设备上强大推理的用户，Loci表现出色。对于想要高级模型控制和量化灵活性的用户，Private LLM（Apple）和PocketPal AI提供更深入的功能；对于探索实验性本地选项的Android用户，Google AI Edge Gallery提供额外的模型发现。坦诚的评估：Loci在简洁性、稳定性、热弹性和跨平台一致性方面取得成功。只有在需要云端前沿推理或深度模型控制时才会失败。',
       },
       sources: {
         id: 'sources',
