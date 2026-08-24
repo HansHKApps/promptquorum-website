@@ -140,16 +140,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       howWeTested: {
         id: 'how-we-tested',
-        title: 'How We Tested',
+        title: 'How We Assessed These Models',
         content:
-          'Model verdicts in this guide are based on a small qualitative test — a directional indicator, not a peer-reviewed benchmark. For a topic where readers are deciding whether to trust model recommendations on a sensitive subject, transparency on method matters.',
+          'Model verdicts in this guide are based on documented capabilities from model creators, public reports, and user documentation — not on independent hands-on testing by PromptQuorum. For a topic where readers are deciding whether to trust model recommendations on a sensitive subject, transparency on method matters.',
         items: [
-          '**Prompt set:** 10 prompts across 5 categories — villain monologue, mature romance scene, graphic violence in war fiction, morally complex narrator, dark psychological scene (2 prompts per category).',
-          '**Runs per model:** each prompt run 3 times per model.',
-          '**Refusal rate:** percentage of runs where the model refused, redirected, or softened the requested content without instruction.',
-          '**Drift measurement:** percentage of runs where the model added unrequested escalation — gratuitous extremity beyond what the prompt specified.',
-          '**Backend:** Ollama 0.5+ with Q4_K_M quantization for all models.',
-          '**Honesty constraint:** small qualitative test. Results indicate directional differences between models, not precise numerical measurement. Treat the Drift to Extremes and Refusal Rate table values as representative judgments.',
+          '**Source material:** Model cards, creator documentation, and published capability statements from Nous Research (Hermes 3) and Cognitive Computations (Dolphin 3.0).',
+          '**Refusal rate classification:** Based on publicly documented behavior patterns and model creator statements about content handling.',
+          '**Drift assessment:** Informed by user reports, model documentation, and fine-tuning approach descriptions.',
+          '**Backend reference:** Ollama 0.5+ with Q4_K_M quantization for reproducibility — not a measurement basis.',
+          '**Honesty constraint:** This is an informational guide, not a benchmark. The Drift to Extremes and Refusal Rate classifications reflect documented behavior patterns, not precise measurements. Users should verify behavior in their own workflows.',
         ],
       },
       appropriateUse: {
@@ -512,16 +511,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       howWeTested: {
         id: 'how-we-tested',
-        title: 'Wie wir getestet haben',
+        title: 'Wie wir diese Modelle bewertet haben',
         content:
-          'Die Modellbewertungen in diesem Leitfaden basieren auf einem kleinen qualitativen Test — ein Richtungsindikator, kein Peer-Review-Benchmark. Für ein Thema, bei dem Leser entscheiden, ob sie Modellempfehlungen zu einem sensiblen Thema vertrauen sollen, ist Transparenz zur Methode wichtig.',
+          'Die Modellbewertungen in diesem Leitfaden basieren auf dokumentierten Fähigkeiten von Modellschöpfern, öffentlichen Berichten und Benutzerdokumentation — nicht auf unabhängigen praktischen Tests durch PromptQuorum. Für ein Thema, bei dem Leser entscheiden, ob sie Modellempfehlungen zu einem sensiblen Thema vertrauen sollen, ist Transparenz zur Methode wichtig.',
         items: [
-          '**Prompt-Set:** 10 Prompts in 5 Kategorien — Schurken-Monolog, reife Romanzen-Szene, grafische Gewalt in Kriegsbelletristik, moralisch komplexer Erzähler, dunkle psychologische Szene (2 Prompts pro Kategorie).',
-          '**Durchläufe pro Modell:** jeder Prompt 3 Mal pro Modell ausgeführt.',
-          '**Ablehnungsrate:** Prozentsatz der Durchläufe, bei denen das Modell den angeforderten Inhalt abgelehnt, umgeleitet oder unaufgefordert gemildert hat.',
-          '**Drift-Messung:** Prozentsatz der Durchläufe, bei denen das Modell unaufgeforderte Eskalation hinzufügte — grundlose Extreme jenseits des Prompt-Spezifischen.',
-          '**Backend:** Ollama 0.5+ mit Q4_K_M-Quantisierung für alle Modelle.',
-          '**Ehrlichkeitseinschränkung:** kleiner qualitativer Test. Ergebnisse zeigen Richtungsunterschiede zwischen Modellen, keine präzisen numerischen Messungen. Behandle die Werte in der Drift-zu-Extremen- und Ablehnungsrate-Tabelle als repräsentative Urteile.',
+          '**Quellenmaterial:** Modellkarten, Creator-Dokumentation und veröffentlichte Fähigkeitsaussagen von Nous Research (Hermes 3) und Cognitive Computations (Dolphin 3.0).',
+          '**Ablehnungsrate-Klassifizierung:** Basierend auf dokumentierten Verhaltensmustern und Aussagen der Modellersteller zur Inhaltsbehandlung.',
+          '**Drift-Bewertung:** Basierend auf Benutzerberichten, Modelldokumentation und Beschreibungen des Fine-Tuning-Ansatzes.',
+          '**Backend-Referenz:** Ollama 0.5+ mit Q4_K_M-Quantisierung für Reproduzierbarkeit — nicht als Messgrundelage.',
+          '**Ehrlichkeitseinschränkung:** Dies ist ein Informationsleitfaden, kein Benchmark. Die Drift-zu-Extremen- und Ablehnungsrate-Klassifizierungen spiegeln dokumentierte Verhaltensmuster wider, keine präzisen Messungen. Benutzer sollten das Verhalten in ihren eigenen Workflows überprüfen.',
         ],
       },
       appropriateUse: {
@@ -884,16 +882,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       howWeTested: {
         id: 'how-we-tested',
-        title: 'Comment nous avons testé',
+        title: 'Comment nous avons évalué ces modèles',
         content:
-          'Les verdicts sur les modèles dans ce guide sont basés sur un petit test qualitatif — un indicateur directionnel, pas un benchmark évalué par des pairs. Pour un sujet où les lecteurs décident s\'ils peuvent faire confiance aux recommandations de modèles sur un sujet sensible, la transparence sur la méthode compte.',
+          'Les verdicts sur les modèles dans ce guide sont basés sur les capacités documentées des créateurs de modèles, les rapports publics et la documentation utilisateur — et non sur des tests pratiques indépendants réalisés par PromptQuorum. Pour un sujet où les lecteurs décident s\'ils peuvent faire confiance aux recommandations de modèles sur un sujet sensible, la transparence sur la méthode compte.',
         items: [
-          '**Ensemble de prompts :** 10 prompts sur 5 catégories — monologue de villain, scène de romance mature, violence graphique dans de la fiction de guerre, narrateur moralement complexe, scène psychologique sombre (2 prompts par catégorie).',
-          '**Exécutions par modèle :** chaque prompt exécuté 3 fois par modèle.',
-          '**Taux de refus :** pourcentage d\'exécutions où le modèle a refusé, redirigé ou adouci le contenu demandé sans instruction.',
-          '**Mesure de dérive :** pourcentage d\'exécutions où le modèle a ajouté une escalade non demandée — extrémité gratuite au-delà de ce que le prompt spécifiait.',
-          '**Backend :** Ollama 0.5+ avec quantization Q4_K_M pour tous les modèles.',
-          '**Contrainte d\'honnêteté :** petit test qualitatif. Les résultats indiquent des différences directionnelles entre les modèles, pas une mesure numérique précise. Traiter les valeurs de dérive vers l\'extrême et de taux de refus du tableau comme des jugements représentatifs.',
+          '**Matériel source :** Fiches de modèles, documentation des créateurs et déclarations de capacités publiées par Nous Research (Hermes 3) et Cognitive Computations (Dolphin 3.0).',
+          '**Classification du taux de refus :** Basée sur les modes de comportement documentés et les déclarations des créateurs de modèles sur le traitement du contenu.',
+          '**Évaluation de dérive :** Informée par les rapports d\'utilisateurs, la documentation du modèle et les descriptions de l\'approche de fine-tuning.',
+          '**Référence backend :** Ollama 0.5+ avec quantification Q4_K_M pour la reproductibilité — pas comme base de mesure.',
+          '**Contrainte d\'honnêteté :** Ceci est un guide informatif, pas un benchmark. Les classifications de dérive vers l\'extrême et de taux de refus reflètent les modes de comportement documentés, pas les mesures précises. Les utilisateurs doivent vérifier le comportement dans leurs propres workflows.',
         ],
       },
       appropriateUse: {
@@ -1268,12 +1265,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           'このガイドのモデル評価は小規模な定性的テストに基づいています――方向性の指標であり、査読ベンチマークではありません。センシティブなテーマのモデル推奨を信頼するかどうかを判断する読者のために、方法論の透明性が重要です。',
         items: [
-          '**プロンプトセット：** 5カテゴリで10プロンプト――悪役独白、成人向けロマンス場面、戦争フィクションでのグラフィックな暴力、道徳的に複雑な語り手、ダークな心理場面（各カテゴリ2プロンプト）。',
-          '**モデルあたりの実行数：** 各プロンプトをモデルあたり3回実行。',
-          '**拒否率：** モデルが指示なしに要求されたコンテンツを拒否、リダイレクト、または軽減した実行の割合。',
-          '**ドリフト測定：** モデルが未要求のエスカレーション――プロンプトで指定された範囲を超えた不必要な極端さ――を追加した実行の割合。',
-          '**バックエンド：** 全モデルにQ4_K_M量子化でOllama 0.5+を使用。',
-          '**誠実さの制約：** 小規模な定性的テスト。結果はモデル間の方向性の違いを示しており、正確な数値測定ではありません。表内のドリフトと拒否率の値は代表的な判断として扱ってください。',
+          '**ソース資料：** Nous Research (Hermes 3) と Cognitive Computations (Dolphin 3.0) からのモデルカード、クリエイタードキュメント、公開キャパビリティステートメント。',
+          '**拒否率分類：** 文書化されたビヘイビアパターンおよびモデルクリエイターのコンテンツ処理に関する声明に基づく。',
+          '**ドリフト評価：** ユーザーレポート、モデルドキュメント、ファインチューニングアプローチの説明により知らされている。',
+          '**バックエンド参照：** 再現性のためのOllama 0.5+ (Q4_K_M量子化) ――測定基盤ではない。',
+          '**誠実さの制約：** これは情報ガイドであり、ベンチマークではありません。ドリフトと拒否率の分類は文書化されたビヘイビアパターンを反映しており、正確な測定ではありません。ユーザーは自分のワークフローで動作を確認すべき。',
         ],
       },
       appropriateUse: {
