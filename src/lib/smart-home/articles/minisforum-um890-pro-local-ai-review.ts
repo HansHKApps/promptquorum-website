@@ -1524,8 +1524,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
-    next_refresh_due: '2027-01-03',
+    dateModified: '2026-08-24',
+    next_refresh_due: '2027-02-24',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Minisforum UM890 Pro レビュー（2026）: ローカルAIホームサーバー',
@@ -1625,6 +1625,118 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '仕様': 'OS', 'Minisforum UM890 Pro (8945HS)': 'プリインストール済みSKUではWindows 11 Pro（Linux/Proxmox対応）' },
           { '仕様': '価格（目安）', 'Minisforum UM890 Pro (8945HS)': '約¥69,800（ベアボーン）/ 約¥94,800（32GB版）（2026年7月 — 変動あり、現在の価格を確認）' },
         ],
+      whichConfig: {
+        id: 'which-config',
+        title: 'どの構成を選ぶ?',
+        content: 'UM890 Proはいくつかのバリエーションで販売されています。ワークロードに応じて選ぶ方法を以下に示します。**以下のすべての価格は2026年8月の見積もりです** — 現在の価格についてはリテーラーに確認してください。',
+        columns: ['構成', '理想的', '見積価格', '最大推奨モデル'],
+        rows: [
+          {
+            構成: 'Barebone(RAM/SSDなし)',
+            理想的: 'すでにDDR5 SO-DIMM と NVMe SSD を持っている場合は、事前構成版より50～100€節約できます',
+            見積価格: '~489€',
+            最大推奨モデル: '7B(32GB RAM追加)',
+          },
+          {
+            構成: '32 GB DDR5 + 1 TB SSD',
+            理想的: 'エントリーレベル: Home Assistant、ローカル7Bモデル、Whisper',
+            見積価格: '~649€',
+            最大推奨モデル: '7B快適',
+          },
+          {
+            構成: '64 GB DDR5 + 1 TB SSD',
+            理想的: 'スケーリング: 13B～14Bより安全、Frigate + AI、Whisper並行',
+            見積価格: '~799€',
+            最大推奨モデル: '13B～14B快適',
+          },
+          {
+            構成: '96 GB DDR5 + 2 TB SSD',
+            理想的: '最大パワー: 低スループット30B、複数並行モデル、OCuLink GPU対応',
+            見積価格: '~1.099€',
+            最大推奨モデル: '30B Q4または13B×2並行',
+          },
+        ],
+        items: [
+          '**仕様から推定、測定なし。** すべてのRAM/モデル組み合わせはQ4_K_M量子化でOllamaを想定します。',
+          '価格は毎週変わります。購入前にリテーラーに確認してください。これらは2026年8月のスナップショットです。',
+          'SSD速度はローカルLLMではOSブートよりも重要性が低い。SATA SSDで動作し、NVMeがより良い。',
+        ],
+        affiliateLinks: [
+          { label: 'すべての価格を確認 — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+
+      ser8Comparison: {
+        id: 'ser8-comparison',
+        title: 'UM890 Pro vs Beelink SER8 — どちらを選ぶ?',
+        content: '両方ともRadeon 780M同じクラスiGPUで7Bモデルを実行します。UM890 Proは拡張性、デュアルネットワーク、明確なアップグレードパスを追加します。',
+        columns: ['側面', 'UM890 Pro', 'SER8', '勝者'],
+        rows: [
+          {
+            側面: 'CPU/GPUクラス',
+            'UM890 Pro': 'Ryzen 9 8945HS、Radeon 780M',
+            SER8: 'Ryzen 8845HS、Radeon 780M',
+            勝者: 'タイ(iGPU同じ; 8945わずかに高速)',
+          },
+          {
+            側面: '最大RAM',
+            'UM890 Pro': '96GB(SO-DIMM拡張可)',
+            SER8: '64GB(SO-DIMM拡張可)',
+            勝者: 'UM890 Pro',
+          },
+          {
+            側面: 'ネットワーク',
+            'UM890 Pro': 'Dual 2.5GbE、Wi-Fi 6E',
+            SER8: 'Single 2.5GbE、Wi-Fi 6E',
+            勝者: 'UM890 Pro(デュアルLAN)',
+          },
+          {
+            側面: 'eGPU拡張',
+            'UM890 Pro': 'OCuLink(PCIe 4.0 ×4)',
+            SER8: 'USB4のみ',
+            勝者: 'UM890 Pro(GPU用OCuLink高速)',
+          },
+          {
+            側面: '価格(Barebone)',
+            'UM890 Pro': '~489€',
+            SER8: '~449€',
+            勝者: 'タイ/現在の価格確認',
+          },
+          {
+            側面: '価格(32GB構成)',
+            'UM890 Pro': '~649€',
+            SER8: '~649€',
+            勝者: 'タイ',
+          },
+          {
+            側面: '最適用途',
+            'UM890 Pro': 'スケーラブルホームサーバー、将来GPU​​アップグレードパス',
+            SER8: '経済的選択肢、拡張不要',
+            勝者: '成長計画による',
+          },
+        ],
+        items: [
+          '**仕様から推定、測定なし。** iGPUの7Bモデルの実際のパフォーマンスはほぼ同じです。',
+          '価格は毎週変わります — 決定前に両方のリテーラーを確認してください。',
+          '詳細は[Beelink SER8の完全なレビュー](/ja/smart-home/beelink-ser8-local-ai-review)をご覧ください。',
+        ],
+        affiliateLinks: [
+          { label: '価格確認 — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+
+      verifiedEstimated: {
+        id: 'verified-estimated',
+        title: '検証内容、推定内容、未検査内容',
+        content:
+          'このレビューは検証済み仕様と根拠のある推定に基づいています — 独立したテストやPromptQuorumが測定したベンチマークではありません。',
+        items: [
+          '**検証済み(仕様と独立したソースに対して):** CPU/GPU/RAMアーキテクチャ、ストレージ、OCuLink、ネットワーク、ポート、ベースTDP',
+          '**ハードウェアから推定(このユニットで独立して測定されていない):** ローカルLLMの適性(7B/13B-14Bフィット)、典型的なスループット~8～18トークン/秒(Vulkanサードパーティレポート由来7B Q4_K_M)、電力消費量50～65W iGPUのみ、熱および音響挙動',
+          '**独立してテストなし:** このユニット固有のトークン/秒、連続24/7信頼性、非常に高い負荷下での熱スロットリング、実際のeGPU OCuLinkパフォーマンス(利用可能なユーザーテストデータなし)',
+        ],
+      },
+
         items: [
           'OCuLinkポート（PCIe 4.0 ×4、約64 Gbps）は外付けGPUドックを接続します — 単体GPUではUSB4/Thunderboltより高速な経路です。',
           'ユーザー増設可能なSO-DIMM 2スロットとM.2 2スロットにより、RAMとストレージの拡張が簡単です。',
@@ -1649,6 +1761,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       prosCons: {
+      whoShouldNotBuy: {
+        id: 'who-should-not-buy',
+        title: '購入すべきでない人',
+        content: '**UM890 Proはすべての人向けではありません。** 以下のプロファイルのいずれかに該当する場合は、より安いモデルが機能する可能性があります。',
+        items: [
+          'あなたは永遠に1つの7Bモデルだけを実行します — SER8は同じiGPUパフォーマンスで150～300€節約します。',
+          'スペースが限られています — 67mmの高さはBeelinkよりコンパクトではありません。',
+          'ネットワークがファイバーを使用していません — 単一のギガビットリンクで十分。デュアル2.5GbEの支払いは意味がありません。',
+          '96GBスケーリングに€800+がない場合 — 安いベアボーン + SO-DIMMは大丈夫ですが、経済的なN150ボックス(Beelink EQ14)の方がはるかに安いです。',
+          '統合GPUボックスが最初から必要です — OCuLinkはアップグレードパスであり、統合GPUではありません。その場合、GEEKOM A9 Max(同じiGPU、128GBRAMリミット、OCuLinkなし)をご覧ください。',
+        ],
+      },
+
         id: 'pros-cons',
         title: '長所と短所',
         content: '**UM890 Proは拡張可能な選択肢で、成長の余地のために少し高く払います。** バランスの取れた見方は以下のとおりです。',
