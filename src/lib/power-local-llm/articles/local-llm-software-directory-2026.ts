@@ -161,7 +161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Description': 'Native macOS/iOS minimal Ollama client', 'License': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Description': 'Enterprise-feature-heavy desktop and server', 'License': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Description': 'Lets local LLM control your computer and execute code', 'License': 'AGPL 3.0' },
-          { 'Tool': '**Locally Uncensored**', 'Link': '[localluncensored.com](https://localluncensored.com)', 'Description': 'Desktop chat focused on uncensored local models and roleplay', 'License': 'Apache 2.0' },
+          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', 'Description': 'Desktop app for uncensored chat, coding agent, image/video generation, and LoRA training', 'License': 'AGPL-3.0' },
           { 'Tool': '**BoltAI**', 'Link': '[boltai.com](https://boltai.com)', 'Description': 'Native macOS desktop AI client with Ollama support', 'License': 'Proprietary' },
           { 'Tool': '**Draw Things**', 'Link': '[drawthings.ai](https://drawthings.ai)', 'Description': 'Local image generation on macOS and iOS with Stable Diffusion', 'License': 'Free (closed)' },
         ],
@@ -666,6 +666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Beschreibung': 'Nativer macOS/iOS-Minimal-Client für Ollama', 'Lizenz': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Beschreibung': 'Funktionsreiche Enterprise-Desktop- und Serveranwendung', 'Lizenz': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Beschreibung': 'Erlaubt einem lokalen LLM, Ihren Computer zu steuern und Code auszuführen', 'Lizenz': 'AGPL 3.0' },
+          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', 'Beschreibung': 'Desktop-App für unzensierte Chat, Coding-Agent, Bild-/Videogenerierung und LoRA-Training', 'Lizenz': 'AGPL-3.0' },
         ],
         note: 'Vertiefender Vergleich: [LM Studio vs Jan vs GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -1097,6 +1098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Description': 'Client Ollama minimal natif macOS/iOS', 'Licence': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Description': 'Application bureau et serveur riche en fonctionnalités enterprise', 'Licence': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Description': 'Permet à un LLM local de contrôler votre ordinateur et d\'exécuter du code', 'Licence': 'AGPL 3.0' },
+          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', 'Description': 'Application bureau pour chat sans censure, agent de codage, génération d\'images/vidéos et entraînement LoRA', 'Licence': 'AGPL-3.0' },
         ],
         note: 'Comparatif approfondi : [LM Studio vs Jan vs GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -1520,6 +1522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', '概要': 'ネイティブmacOS/iOS向け最小限のOllamaクライアント', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', '概要': 'エンタープライズ機能が充実したデスクトップ・サーバーアプリ', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', '概要': 'ローカルLLMがコンピュータを操作しコードを実行できる', 'ライセンス': 'AGPL 3.0' },
+          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', '概要': 'チャット、コーディングエージェント、画像/動画生成、LoRAトレーニング対応のデスクトップアプリ', 'ライセンス': 'AGPL-3.0' },
         ],
         note: '詳細比較：[LM Studio vs Jan vs GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -1943,6 +1946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', '描述': 'macOS/iOS原生的极简Ollama客户端', '许可证': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', '描述': '企业功能丰富的桌面与服务器方案', '许可证': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', '描述': '允许本地LLM操控电脑并执行代码', '许可证': 'AGPL 3.0' },
+          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', '描述': '支持聊天、代码编写代理、图像/视频生成和LoRA训练的桌面应用', '许可证': 'AGPL-3.0' },
         ],
         note: '深度指南：[LM Studio vs Jan vs GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -2366,6 +2370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Descripción': 'Cliente Ollama mínimo nativo de macOS/iOS', 'Licencia': 'Apache 2.0' },
           { 'Tool': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Descripción': 'Escritorio y servidor con muchas funciones enterprise', 'Licencia': 'Apache 2.0' },
           { 'Tool': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Descripción': 'Permite que un LLM local controle tu computadora y ejecute código', 'Licencia': 'AGPL 3.0' },
+          { 'Tool': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', 'Descripción': 'Aplicación de escritorio para chat sin censura, agente de codificación, generación de imágenes/videos y entrenamiento LoRA', 'Licencia': 'AGPL-3.0' },
         ],
         note: 'Guía más detallada: [LM Studio vs Jan vs GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -2803,6 +2808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**Enchanted**', 'Link': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'Descrição': 'Cliente Ollama mínimo nativo de macOS/iOS', 'Licença': 'Apache 2.0' },
           { 'Ferramenta': '**h2oGPT**', 'Link': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'Descrição': 'Desktop e servidor com muitos recursos enterprise', 'Licença': 'Apache 2.0' },
           { 'Ferramenta': '**Open Interpreter**', 'Link': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'Descrição': 'Permite que um LLM local controle seu computador e execute código', 'Licença': 'AGPL 3.0' },
+          { 'Ferramenta': '**Locally Uncensored**', 'Link': '[locallyuncensored.com](https://locallyuncensored.com)', 'Descrição': 'Aplicativo de desktop para chat sem censura, agente de codificação, geração de imagens/vídeos e treinamento LoRA', 'Licença': 'AGPL-3.0' },
         ],
         note: 'Guia mais detalhado: [LM Studio vs Jan vs GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -3239,6 +3245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '**Enchanted**', 'الرابط': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', 'الوصف': 'عميل Ollama أدنى حجماً أصلي لـmacOS/iOS', 'الترخيص': 'Apache 2.0' },
           { 'الأداة': '**h2oGPT**', 'الرابط': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', 'الوصف': 'سطح مكتب وخادم مع ميزات مؤسسية كثيرة', 'الترخيص': 'Apache 2.0' },
           { 'الأداة': '**Open Interpreter**', 'الرابط': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', 'الوصف': 'يتيح لنموذج لغوي محلي التحكم في جهازك وتنفيذ الكود', 'الترخيص': 'AGPL 3.0' },
+          { 'الأداة': '**Locally Uncensored**', 'الرابط': '[locallyuncensored.com](https://locallyuncensored.com)', 'الوصف': 'تطبيق سطح مكتب للدردشة غير المرشحة ووكيل الترميز وتوليد الصور/الفيديو وتدريب LoRA', 'الترخيص': 'AGPL-3.0' },
         ],
         note: 'دليل أكثر تفصيلاً: [LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
@@ -3680,6 +3687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '**Enchanted**', '링크': '[github.com/AugustDev/enchanted](https://github.com/AugustDev/enchanted)', '설명': '최소한의 macOS/iOS 네이티브 Ollama 클라이언트', '라이선스': 'Apache 2.0' },
           { '도구': '**h2oGPT**', '링크': '[github.com/h2oai/h2ogpt](https://github.com/h2oai/h2ogpt)', '설명': '많은 엔터프라이즈 기능을 갖춘 데스크톱 및 서버', '라이선스': 'Apache 2.0' },
           { '도구': '**Open Interpreter**', '링크': '[github.com/OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter)', '설명': '로컬 LLM이 컴퓨터를 제어하고 코드를 실행하도록 허용', '라이선스': 'AGPL 3.0' },
+          { '도구': '**Locally Uncensored**', '링크': '[locallyuncensored.com](https://locallyuncensored.com)', '설명': '무검열 채팅, 코딩 에이전트, 이미지/비디오 생성 및 LoRA 학습용 데스크톱 앱', '라이선스': 'AGPL-3.0' },
         ],
         note: '상세 비교 가이드: [LM Studio vs Jan vs GPT4All](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)',
         affiliateLinks: [
