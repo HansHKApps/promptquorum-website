@@ -1886,8 +1886,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
-    next_refresh_due: '2027-01-03',
+    dateModified: '2026-08-24',
+    next_refresh_due: '2027-02-24',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Minisforum UM890 Pro 评测（2026）：本地 AI 家庭服务器',
@@ -1985,6 +1985,118 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '规格': 'TDP', 'Minisforum UM890 Pro (8945HS)': '基础 45 W，可配置至约 70 W' },
           { '规格': '尺寸', 'Minisforum UM890 Pro (8945HS)': '127 × 130 × 67 mm' },
           { '规格': '操作系统', 'Minisforum UM890 Pro (8945HS)': '预装 SKU 为 Windows 11 Pro（支持 Linux/Proxmox）' },
+      whichConfig: {
+        id: 'which-config',
+        title: '选择哪种配置？',
+        content: 'UM890 Pro 有多种配置可选。以下是根据你的工作负载选择的方法。**下面的所有价格都是 2026 年 8 月的估算值** — 请向零售商咨询当前价格。',
+        columns: ['配置', '适合人群', '估算价格', '推荐最大模型'],
+        rows: [
+          {
+            配置: '裸机(无 RAM/SSD)',
+            适合人群: '已有 DDR5 SO-DIMM 和 NVMe SSD；相比预配置版节省 50-100€',
+            估算价格: '~489€',
+            推荐最大模型: '7B(加 32GB RAM)',
+          },
+          {
+            配置: '32 GB DDR5 + 1 TB SSD',
+            适合人群: '入门级：Home Assistant、本地 7B 模型、Whisper',
+            估算价格: '~649€',
+            推荐最大模型: '7B 舒适',
+          },
+          {
+            配置: '64 GB DDR5 + 1 TB SSD',
+            适合人群: '升级版：13B-14B 更稳定、Frigate + AI、并发 Whisper',
+            估算价格: '~799€',
+            推荐最大模型: '13B-14B 舒适',
+          },
+          {
+            配置: '96 GB DDR5 + 2 TB SSD',
+            适合人群: '最大功率：低吞吐量 30B、多个并发模型、OCuLink GPU 就绪',
+            估算价格: '~1.099€',
+            推荐最大模型: '30B Q4 或 13B×2 并发',
+          },
+        ],
+        items: [
+          '**根据规格估算，未测量。** 所有 RAM/模型组合假设 Ollama 使用 Q4_K_M 量化。',
+          '价格每周变化；购买前请咨询零售商。这些是 2026 年 8 月的快照。',
+          'SSD 速度对本地 LLM 的重要性不如对 OS 启动的重要性大；SATA SSD 可以工作，NVMe 更好。',
+        ],
+        affiliateLinks: [
+          { label: '查看所有价格 — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+      ser8Comparison: {
+        id: 'ser8-comparison',
+        title: 'UM890 Pro vs Beelink SER8 — 选择哪个？',
+        content: '两者都在相同的 iGPU 级别(Radeon 780M)上运行 7B 模型。UM890 Pro 添加了可扩展性、双网络和明确的升级路径。',
+        columns: ['方面', 'UM890 Pro', 'SER8', '获胜者'],
+        rows: [
+          {
+            方面: 'CPU/GPU 级别',
+            'UM890 Pro': 'Ryzen 9 8945HS、Radeon 780M',
+            SER8: 'Ryzen 8845HS、Radeon 780M',
+            获胜者: '平手(iGPU 相同；8945 略快)',
+          },
+          {
+            方面: '最大 RAM',
+            'UM890 Pro': '96GB(SO-DIMM 可扩展)',
+            SER8: '64GB(SO-DIMM 可扩展)',
+            获胜者: 'UM890 Pro',
+          },
+          {
+            方面: '网络',
+            'UM890 Pro': '双 2.5GbE、Wi-Fi 6E',
+            SER8: '单 2.5GbE、Wi-Fi 6E',
+            获胜者: 'UM890 Pro(双 LAN)',
+          },
+          {
+            方面: 'eGPU 扩展',
+            'UM890 Pro': 'OCuLink(PCIe 4.0 ×4)',
+            SER8: '仅 USB4',
+            获胜者: 'UM890 Pro(GPU 用 OCuLink 更快)',
+          },
+          {
+            方面: '价格(裸机)',
+            'UM890 Pro': '~489€',
+            SER8: '~449€',
+            获胜者: '平手/检查当前价格',
+          },
+          {
+            方面: '价格(32GB 配置)',
+            'UM890 Pro': '~649€',
+            SER8: '~649€',
+            获胜者: '平手',
+          },
+          {
+            方面: '最适合',
+            'UM890 Pro': '可扩展家庭服务器、未来 GPU 升级路径',
+            SER8: '经济选择、无需扩展',
+            获胜者: '取决于你的增长计划',
+          },
+        ],
+        items: [
+          '**根据规格估算，未测量。** iGPU 上 7B 模型的实际性能基本相同。',
+          '价格每周变化 — 决定前检查两个零售商。',
+          '详见[Beelink SER8 完整评测](/zh/smart-home/beelink-ser8-local-ai-review)。',
+        ],
+        affiliateLinks: [
+          { label: '查看价格 — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+
+      verifiedEstimated: {
+        id: 'verified-estimated',
+        title: '已验证、已估算、未测试的内容',
+        content:
+          '本评测基于已验证的规格和有根据的估算 — 而非独立测试或 PromptQuorum 测量的基准。',
+        items: [
+          '**已验证(与规格和独立来源比较):** CPU/GPU/RAM 架构、存储、OCuLink、网络、端口、基本 TDP',
+          '**从硬件估算(未在此设备上独立测量):** 本地 LLM 适性(7B/13B-14B 契合度)、典型吞吐量 ~8-18 tok/sec(来自 Vulkan 第三方报告的 7B Q4_K_M)、仅 iGPU 的电力消耗 50-65W、热行为和噪声特性',
+          '**未独立测试:** 此设备特定的 tok/sec、连续 24/7 可靠性、极端高负载下的热限流、实际 eGPU OCuLink 性能(无可用用户测试数据)',
+        ],
+      },
+
+
           { '规格': '价格（参考）', 'Minisforum UM890 Pro (8945HS)': '约 $439（准系统）/ 约 $649（32 GB 版）（2026 年 7 月——价格波动，请查看当前价格）' },
         ],
         items: [
@@ -2011,6 +2123,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       prosCons: {
+      whoShouldNotBuy: {
+        id: 'who-should-not-buy',
+        title: '不应该购买的人',
+        content: '**UM890 Pro 并非适合所有人。** 如果你符合以下任何一个条件，更便宜的型号可能就够了。',
+        items: [
+          '你永远只会运行一个 7B 模型 — SER8 以相同的 iGPU 性能节省 150-300€。',
+          '你的空间有限 — 其 67 毫米的高度不如 Beelink 紧凑。',
+          '你的网络不使用光纤 — 单个千兆链路就足够了；为双 2.5GbE 支付费用没有意义。',
+          '你没有 800€+ 用于升级到 96GB — 便宜的裸机 + SO-DIMM 可以，但否则经济型 N150 盒(Beelink EQ14)便宜得多。',
+          '你需要集成 GPU 的盒子 — OCuLink 是升级路径，不是集成 GPU。为此，请看 GEEKOM A9 Max(相同 iGPU、128GB RAM 限制、无 OCuLink)。',
+        ],
+      },
+
         id: 'pros-cons',
         title: '优点与缺点',
         content: '**UM890 Pro 是可扩展之选；你为成长空间多付一点。** 均衡视角如下。',
