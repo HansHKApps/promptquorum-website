@@ -2739,8 +2739,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
-    next_refresh_due: '2027-01-03',
+    dateModified: '2026-08-24',
+    next_refresh_due: '2027-02-24',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'Análise Minisforum UM890 Pro (2026): servidor de IA local',
@@ -2838,6 +2838,47 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Especificação': 'TDP', 'Minisforum UM890 Pro (8945HS)': '45 W base, configurável até ~70 W' },
           { 'Especificação': 'Dimensões', 'Minisforum UM890 Pro (8945HS)': '127 × 130 × 67 mm' },
           { 'Especificação': 'SO', 'Minisforum UM890 Pro (8945HS)': 'Windows 11 Pro nas SKUs pré-montadas (Linux/Proxmox suportados)' },
+      whichConfig: {
+        id: 'which-config',
+        title: 'Qual configuração escolher?',
+        content: 'O UM890 Pro é vendido em várias variantes. Aqui está como escolher com base na sua carga de trabalho. **Todos os preços abaixo são estimativas de agosto de 2026** — verifique com o varejista os preços atuais.',
+        columns: ['Configuração', 'Ideal para', 'Preço estimado', 'Modelo máx recomendado'],
+        rows: [
+          {
+            Configuração: 'Barebone (sem RAM/SSD)',
+            'Ideal para': 'Você já possui SO-DIMM DDR5 e SSD NVMe; economiza 50-100€ vs versões pré-configuradas',
+            'Preço estimado': '~489€',
+            'Modelo máx recomendado': '7B (com 32GB RAM adicionado)',
+          },
+          {
+            Configuração: '32 GB DDR5 + 1 TB SSD',
+            'Ideal para': 'Nível de entrada: Home Assistant, modelo local 7B, Whisper',
+            'Preço estimado': '~649€',
+            'Modelo máx recomendado': '7B confortável',
+          },
+          {
+            Configuração: '64 GB DDR5 + 1 TB SSD',
+            'Ideal para': 'Escala: 13B-14B mais seguro, Frigate + IA, Whisper concorrente',
+            'Preço estimado': '~799€',
+            'Modelo máx recomendado': '13B-14B confortável',
+          },
+          {
+            Configuração: '96 GB DDR5 + 2 TB SSD',
+            'Ideal para': 'Potência máxima: 30B com baixo rendimento, múltiplos modelos concorrentes, OCuLink GPU pronto',
+            'Preço estimado': '~1.099€',
+            'Modelo máx recomendado': '30B Q4 ou 13B×2 concorrentes',
+          },
+        ],
+        items: [
+          '**Estimado a partir das especificações, não medido.** Todas as combinações RAM/modelo assumem Ollama com quantização Q4_K_M.',
+          'Os preços mudam a cada semana; verifique com o varejista antes de comprar. Estes são snapshots de agosto de 2026.',
+          'A velocidade do SSD importa menos para LLMs locais do que para inicialização do OS; SSD SATA funciona, NVMe é melhor.',
+        ],
+        affiliateLinks: [
+          { label: 'Verificar todos os preços — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+
           { 'Especificação': 'Preço (indicativo)', 'Minisforum UM890 Pro (8945HS)': '~$439 barebone / ~$649 com 32 GB no exterior; no Brasil a partir de ~R$ 3.900 (julho de 2026 — volátil por causa da importação, verifique o preço atual)' },
         ],
         items: [
@@ -2863,6 +2904,90 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Ver preço atual — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
         ],
       },
+      ser8Comparison: {
+        id: 'ser8-comparison',
+        title: 'UM890 Pro vs Beelink SER8 — Qual escolher?',
+        content: 'Ambos executam um modelo 7B na mesma classe iGPU (Radeon 780M). O UM890 Pro adiciona escalabilidade, rede dupla e caminho de upgrade claro.',
+        columns: ['Aspecto', 'UM890 Pro', 'SER8', 'Vencedor'],
+        rows: [
+          {
+            Aspecto: 'Classe CPU/GPU',
+            'UM890 Pro': 'Ryzen 9 8945HS, Radeon 780M',
+            SER8: 'Ryzen 8845HS, Radeon 780M',
+            Vencedor: 'Empate (iGPU idêntica; 8945 ligeiramente mais rápida)',
+          },
+          {
+            Aspecto: 'RAM máx',
+            'UM890 Pro': '96GB (SO-DIMM expansível)',
+            SER8: '64GB (SO-DIMM expansível)',
+            Vencedor: 'UM890 Pro',
+          },
+          {
+            Aspecto: 'Rede',
+            'UM890 Pro': 'Dupla 2,5GbE, Wi-Fi 6E',
+            SER8: 'Simples 2,5GbE, Wi-Fi 6E',
+            Vencedor: 'UM890 Pro (Dupla LAN)',
+          },
+          {
+            Aspecto: 'Expansão eGPU',
+            'UM890 Pro': 'OCuLink (PCIe 4.0 ×4)',
+            SER8: 'Apenas USB4',
+            Vencedor: 'UM890 Pro (OCuLink mais rápido para GPU)',
+          },
+          {
+            Aspecto: 'Preço (barebone)',
+            'UM890 Pro': '~489€',
+            SER8: '~449€',
+            Vencedor: 'Empate / verificar preço atual',
+          },
+          {
+            Aspecto: 'Preço (32GB configurado)',
+            'UM890 Pro': '~649€',
+            SER8: '~649€',
+            Vencedor: 'Empate',
+          },
+          {
+            Aspecto: 'Melhor para',
+            'UM890 Pro': 'Servidor doméstico escalável, caminho de upgrade GPU futuro',
+            SER8: 'Escolha econômica, sem expansão necessária',
+            Vencedor: 'Depende de seus planos de crescimento',
+          },
+        ],
+        items: [
+          '**Estimado a partir das especificações, não medido.** O desempenho real em modelos 7B na iGPU é praticamente idêntico.',
+          'Os preços mudam a cada semana — verifique ambos os varejistas antes de decidir.',
+          'Veja a [análise completa do Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) para detalhes.',
+        ],
+        affiliateLinks: [
+          { label: 'Verificar preço — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+
+      verifiedEstimated: {
+        id: 'verified-estimated',
+        title: 'O que verificamos, estimamos e não testamos',
+        content:
+          'Esta análise é baseada em especificações verificadas e estimativas fundamentadas — não em testes independentes ou benchmarks medidos pela PromptQuorum.',
+        items: [
+          '**Verificado (contra especificações e fontes independentes):** arquitetura CPU/GPU/RAM, armazenamento, OCuLink, rede, portas, TDP base',
+          '**Estimado a partir do hardware (não medido independentemente nesta unidade):** adequação de LLM local (ajuste 7B/13B-14B), rendimento típico ~8-18 tok/sec (7B Q4_K_M de relatórios Vulkan de terceiros), consumo de energia 50-65W apenas iGPU, comportamento térmico e acústico',
+          '**Não testado independentemente:** tok/sec nesta unidade específica, confiabilidade contínua 24/7, limitação térmica sob cargas muito altas, desempenho real eGPU OCuLink (sem dados de teste de usuário disponíveis)',
+        ],
+      },
+
+      whoShouldNotBuy: {
+        id: 'who-should-not-buy',
+        title: 'Quem não deve comprar',
+        content: '**O UM890 Pro não é para todos.** Se você se enquadra em qualquer um dos perfis abaixo, um modelo mais barato pode funcionar.',
+        items: [
+          'Você só executará um modelo 7B para sempre — o SER8 economiza 150-300€ pelo mesmo desempenho iGPU.',
+          'Seu espaço é limitado — sua altura de 67mm não é tão compacta quanto um Beelink.',
+          'Sua rede não usa fibra — um único link de gigabit é suficiente; não há motivo para pagar por dupla 2,5GbE.',
+          'Você não tem €800+ para escalar para 96GB — barebone barato + SO-DIMM funciona, mas caso contrário, caixas N150 econômicas (Beelink EQ14) são muito mais baratas.',
+          'Você precisa de uma caixa com GPU integrada — OCuLink é um caminho de upgrade, não uma GPU integrada. Para isso, veja GEEKOM A9 Max (iGPU idêntica, limite de RAM 128GB, sem OCuLink).',
+        ],
+      },
+
       prosCons: {
         id: 'pros-cons',
         title: 'Prós e contras',
