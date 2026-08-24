@@ -9,18 +9,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-24',
+    next_refresh_due: '2026-11-24',
     theme: 'Creative & Roleplay',
-    title: 'Uncensored Local LLMs for Creative Writing: When Writers Need Them in 2026',
-    seoTitle: 'Uncensored Local LLMs for Creative Writing 2026',
+    title: 'Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin',
+    seoTitle: 'Uncensored LLMs for Erotica Writing 2026',
     intro:
-      'Uncensored local LLMs let fiction writers generate mature, morally complex, and dark content that cloud services refuse — with no data leaving your machine. This guide covers which models to use, how to set them up through Ollama or LM Studio, the genuine ethical responsibilities that apply even when there is no terms-of-service enforcement, and the specific use cases where uncensored models are appropriate versus where they are not.',
+      'Uncensored local LLMs let fiction writers generate mature, erotic, morally complex, and dark content that cloud services refuse — with no data leaving your machine. This guide covers which models allow erotica writing, how to set them up through Ollama or LM Studio, the genuine ethical responsibilities that apply even when there is no terms-of-service enforcement, and the specific use cases where uncensored models are appropriate versus where they are not.',
     metaDescription:
-      'Uncensored local LLMs for creative writing: which models to use, Ollama setup, ethical responsibilities, appropriate use cases, and content guardrails writers should keep regardless.',
+      'Best uncensored local LLMs for erotica & creative writing: Hermes 3 Llama 3.3 vs Dolphin 3.0 Mistral, Ollama setup, ethical responsibilities, and which models to use for adult content writing.',
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-en.webp',
     twitterDescription:
-      'Uncensored local LLMs for fiction writers — which models, Ollama setup, and the genuine ethics: when they\'re appropriate and what responsibilities writers still have.',
+      'Best uncensored local LLMs for erotica writing: Hermes 3 vs Dolphin 3.0, Ollama setup, and what ethical responsibilities still apply to creative writers.',
     current_models_mentioned: [
       'Hermes 3 Llama 3.3',
       'Dolphin 3.0 Mistral',
@@ -39,6 +39,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'uncensored local LLM creative writing',
     targetKeywords: [
+      'best uncensored local llm for erotica',
+      'erotica llm',
+      'erotic story llm',
+      'best llm for erotic writing',
+      'uncensored llm models for story writing',
+      'hermes 3 erotica writing',
+      'dolphin mistral erotica',
+      'local llm erotica',
+      'which llms allow erotica writing',
       'uncensored local llm creative writing',
       'uncensored ollama models',
       'hermes 3 creative writing',
