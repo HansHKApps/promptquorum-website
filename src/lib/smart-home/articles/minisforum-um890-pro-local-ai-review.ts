@@ -1985,6 +1985,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '规格': 'TDP', 'Minisforum UM890 Pro (8945HS)': '基础 45 W，可配置至约 70 W' },
           { '规格': '尺寸', 'Minisforum UM890 Pro (8945HS)': '127 × 130 × 67 mm' },
           { '规格': '操作系统', 'Minisforum UM890 Pro (8945HS)': '预装 SKU 为 Windows 11 Pro（支持 Linux/Proxmox）' },
+        ],
+      },
       whichConfig: {
         id: 'which-config',
         title: '选择哪种配置？',
@@ -2095,15 +2097,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**未独立测试:** 此设备特定的 tok/sec、连续 24/7 可靠性、极端高负载下的热限流、实际 eGPU OCuLink 性能(无可用用户测试数据)',
         ],
       },
-
-
-          { '规格': '价格（参考）', 'Minisforum UM890 Pro (8945HS)': '约 $439（准系统）/ 约 $649（32 GB 版）（2026 年 7 月——价格波动，请查看当前价格）' },
-        ],
-        items: [
-          'OCuLink 接口（PCIe 4.0 ×4，约 64 Gbps）连接外接 GPU 扩展坞——对于独立 GPU 而言比 USB4/Thunderbolt 更快。',
-          '两个可升级的 SO-DIMM 插槽和两个 M.2 插槽让内存与存储扩展变得简单。',
-        ],
-      },
       localAi: {
         id: 'local-ai',
         title: '本地 AI 与 LLM 性能',
@@ -2122,7 +2115,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: '查看当前价格 — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
         ],
       },
-      prosCons: {
       whoShouldNotBuy: {
         id: 'who-should-not-buy',
         title: '不应该购买的人',
@@ -2135,7 +2127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '你需要集成 GPU 的盒子 — OCuLink 是升级路径，不是集成 GPU。为此，请看 GEEKOM A9 Max(相同 iGPU、128GB RAM 限制、无 OCuLink)。',
         ],
       },
-
+      prosCons: {
         id: 'pros-cons',
         title: '优点与缺点',
         content: '**UM890 Pro 是可扩展之选；你为成长空间多付一点。** 均衡视角如下。',
@@ -2347,6 +2339,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '사양': 'TDP', 'Minisforum UM890 Pro (8945HS)': '기본 45 W, 약 70 W까지 구성 가능' },
           { '사양': '크기', 'Minisforum UM890 Pro (8945HS)': '127 × 130 × 67 mm' },
           { '사양': 'OS', 'Minisforum UM890 Pro (8945HS)': '사전 구성 SKU는 Windows 11 Pro(Linux/Proxmox 지원)' },
+        ],
+      },
       whichConfig: {
         id: 'which-config',
         title: '어떤 구성을 선택할까?',
@@ -2385,14 +2379,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: '모든 가격 확인 — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
-        ],
-      },
-
-          { '사양': '가격(참고)', 'Minisforum UM890 Pro (8945HS)': '약 $439(베어본) / 약 $649(32 GB 구성)(2026년 7월 — 가격 변동, 현재 가격 확인)' },
-        ],
-        items: [
-          'OCuLink 포트(PCIe 4.0 ×4, 약 64 Gbps)는 외장 GPU 도크를 연결합니다 — 단독 GPU의 경우 USB4/Thunderbolt보다 빠른 경로입니다.',
-          '사용자 업그레이드 가능한 SO-DIMM 2슬롯과 M.2 2슬롯으로 RAM과 저장장치 확장이 쉽습니다.',
         ],
       },
       whichConfig: {
@@ -2838,6 +2824,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Especificação': 'TDP', 'Minisforum UM890 Pro (8945HS)': '45 W base, configurável até ~70 W' },
           { 'Especificação': 'Dimensões', 'Minisforum UM890 Pro (8945HS)': '127 × 130 × 67 mm' },
           { 'Especificação': 'SO', 'Minisforum UM890 Pro (8945HS)': 'Windows 11 Pro nas SKUs pré-montadas (Linux/Proxmox suportados)' },
+        ],
+      },
       whichConfig: {
         id: 'which-config',
         title: 'Qual configuração escolher?',
@@ -2878,15 +2866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Verificar todos os preços — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
         ],
       },
-
-          { 'Especificação': 'Preço (indicativo)', 'Minisforum UM890 Pro (8945HS)': '~$439 barebone / ~$649 com 32 GB no exterior; no Brasil a partir de ~R$ 3.900 (julho de 2026 — volátil por causa da importação, verifique o preço atual)' },
-        ],
-        items: [
-          'A porta OCuLink (PCIe 4.0 ×4, ~64 Gbps) conecta um dock de GPU externa — um caminho mais rápido que USB4/Thunderbolt para uma GPU dedicada.',
-          'Dois slots SO-DIMM e dois slots M.2 atualizáveis pelo usuário facilitam expandir a RAM e o armazenamento.',
-        ],
-      },
-      localAi: {
+      ser8Comparison: {
         id: 'local-ai',
         title: 'IA local e desempenho de LLM',
         content:
@@ -3101,8 +3081,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-03',
-    dateModified: '2026-07-03',
-    next_refresh_due: '2027-01-03',
+    dateModified: '2026-08-24',
+    next_refresh_due: '2027-02-24',
     theme: 'Decision & Comparison',
     affiliateDisclosure: true,
     title: 'مراجعة Minisforum UM890 Pro (2026): خادم منزلي بذكاء اصطناعي محلي',
@@ -3200,14 +3180,49 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'المواصفة': 'TDP', 'Minisforum UM890 Pro (8945HS)': '45 W أساسي، قابل للضبط حتى ~70 W' },
           { 'المواصفة': 'الأبعاد', 'Minisforum UM890 Pro (8945HS)': '127 × 130 × 67 mm' },
           { 'المواصفة': 'نظام التشغيل', 'Minisforum UM890 Pro (8945HS)': 'Windows 11 Pro على الطرازات المُعدّة مسبقاً (Linux/Proxmox مدعومان)' },
-          { 'المواصفة': 'السعر (استرشادي)', 'Minisforum UM890 Pro (8945HS)': '~$439 barebones / ~$649 مع 32 GB (يوليو 2026 — متقلب، تحقق من السعر الحالي)' },
-        ],
-        items: [
-          'منفذ OCuLink (PCIe 4.0 ×4، ~64 Gbps) يوصّل قاعدة GPU خارجية — مسار أسرع من USB4/Thunderbolt لبطاقة رسوميات منفصلة.',
-          'منفذا SO-DIMM ومنفذا M.2 قابلان للترقية من المستخدم يسهّلان توسيع الذاكرة والتخزين.',
         ],
       },
       whichConfig: {
+        id: 'which-config',
+        title: 'أي تكوين تختار؟',
+        content: 'يتم بيع UM890 Pro بعدة متغيرات. إليك كيفية الاختيار بناءً على حمل عملك. **جميع الأسعار أدناه تقديرات أغسطس 2026** — تحقق مع بائع التجزئة من الأسعار الحالية.',
+        columns: ['التكوين', 'مثالي للـ', 'السعر المقدر', 'الحد الأقصى للنموذج المقترح'],
+        rows: [
+          {
+            التكوين: 'Barebone (بدون RAM/SSD)',
+            'مثالي للـ': 'لديك بالفعل SO-DIMM DDR5 و SSD NVMe؛ توفير 50-100€ مقابل الإصدارات المكونة مسبقاً',
+            السعر_المقدر: '~489€',
+            الحد_الأقصى_للنموذج_المقترح: '7B (مع إضافة 32GB RAM)',
+          },
+          {
+            التكوين: '32 GB DDR5 + 1 TB SSD',
+            'مثالي للـ': 'المستوى الأساسي: Home Assistant وnموذج محلي 7B وWhisper',
+            السعر_المقدر: '~649€',
+            الحد_الأقصى_للنموذج_المقترح: '7B مريح',
+          },
+          {
+            التكوين: '64 GB DDR5 + 1 TB SSD',
+            'مثالي للـ': 'الترقية: 13B-14B أكثر أماناً وFrigate + AI و Whisper متزامن',
+            السعر_المقدر: '~799€',
+            الحد_الأقصى_للنموذج_المقترح: '13B-14B مريح',
+          },
+          {
+            التكوين: '96 GB DDR5 + 2 TB SSD',
+            'مثالي للـ': 'الطاقة القصوى: 30B بإنتاجية منخفضة وعدة نماذج متزامنة و OCuLink GPU جاهز',
+            السعر_المقدر: '~1.099€',
+            الحد_الأقصى_للنموذج_المقترح: '30B Q4 أو 13B×2 متزامن',
+          },
+        ],
+        items: [
+          '**مقدر من المواصفات وليس مقاس.** جميع مجموعات RAM/النموذج تفترض Ollama مع كمية Q4_K_M.',
+          'تتغير الأسعار كل أسبوع؛ تحقق مع بائع التجزئة قبل الشراء. هذه لقطات من أغسطس 2026.',
+          'سرعة SSD أقل أهمية لـ LLMs المحلي من بدء تشغيل نظام التشغيل؛ يعمل SSD SATA و NVMe أفضل.',
+        ],
+        affiliateLinks: [
+          { label: 'التحقق من جميع الأسعار — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+      ser8Comparison: {
         id: 'which-config',
         title: 'أي تكوين تشتري؟',
         content: 'يأتي UM890 Pro بنسخة barebones وطرازات مُعدّة مسبقاً. يوضح هذا الجدول لمن يناسب كل مستوى.',
@@ -3323,6 +3338,77 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'تحقق من السعر الحالي — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
         ],
       },
+      ser8Comparison: {
+        id: 'ser8-comparison',
+        title: 'UM890 Pro مقابل Beelink SER8 — أيهما تختار؟',
+        content: 'كلاهما يشغل نموذج 7B في نفس فئة iGPU (Radeon 780M). يضيف UM890 Pro قابلية التوسع والشبكات المزدوجة ومسار الترقية الواضح.',
+        columns: ['الجانب', 'UM890 Pro', 'SER8', 'الفائز'],
+        rows: [
+          {
+            الجانب: 'فئة CPU/GPU',
+            'UM890 Pro': 'Ryzen 9 8945HS و Radeon 780M',
+            SER8: 'Ryzen 8845HS و Radeon 780M',
+            الفائز: 'تعادل (iGPU متطابقة؛ 8945 أسرع قليلاً)',
+          },
+          {
+            الجانب: 'الحد الأقصى للذاكرة',
+            'UM890 Pro': '96GB (SO-DIMM قابل للتوسع)',
+            SER8: '64GB (SO-DIMM قابل للتوسع)',
+            الفائز: 'UM890 Pro',
+          },
+          {
+            الجانب: 'الشبكة',
+            'UM890 Pro': 'مزدوج 2.5GbE و Wi-Fi 6E',
+            SER8: 'واحد 2.5GbE و Wi-Fi 6E',
+            الفائز: 'UM890 Pro (مزدوج LAN)',
+          },
+          {
+            الجانب: 'توسيع eGPU',
+            'UM890 Pro': 'OCuLink (PCIe 4.0 ×4)',
+            SER8: 'USB4 فقط',
+            الفائز: 'UM890 Pro (OCuLink أسرع للـ GPU)',
+          },
+          {
+            الجانب: 'السعر (barebone)',
+            'UM890 Pro': '~489€',
+            SER8: '~449€',
+            الفائز: 'تعادل / تحقق من السعر الحالي',
+          },
+          {
+            الجانب: 'السعر (32GB مكون)',
+            'UM890 Pro': '~649€',
+            SER8: '~649€',
+            الفائز: 'تعادل',
+          },
+          {
+            الجانب: 'الأفضل للـ',
+            'UM890 Pro': 'خادم منزلي قابل للتوسع ومسار ترقية GPU المستقبلي',
+            SER8: 'خيار اقتصادي بدون توسع ضروري',
+            الفائز: 'يعتمد على خطط نموك',
+          },
+        ],
+        items: [
+          '**مقدر من المواصفات وليس مقاس.** الأداء الفعلي على نماذج 7B على iGPU متطابقة تقريباً.',
+          'تتغير الأسعار كل أسبوع — تحقق من كلا بائعي التجزئة قبل القرار.',
+          'انظر إلى [مراجعة Beelink SER8 الكاملة](/ar/smart-home/beelink-ser8-local-ai-review) للتفاصيل.',
+        ],
+        affiliateLinks: [
+          { label: 'التحقق من السعر — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+        ],
+      },
+
+      verifiedEstimated: {
+        id: 'verified-estimated',
+        title: 'ما تحققنا منه وقدرناه ولم نختبره',
+        content:
+          'تستند هذه المراجعة إلى مواصفات تم التحقق منها وتقديرات مستنيرة — وليست اختبارات مستقلة أو معايير قياسية تم قياسها بواسطة PromptQuorum.',
+        items: [
+          '**تم التحقق منه (مقابل المواصفات والمصادر المستقلة):** هندسة CPU/GPU/RAM والتخزين و OCuLink والشبكة والمنافذ و TDP الأساسي',
+          '**مقدر من الأجهزة (لم يتم قياسه بشكل مستقل على هذا الجهاز):** ملاءمة LLM المحلي (ملاءمة 7B/13B-14B) والإنتاجية النمطية ~8-18 tok/sec (7B Q4_K_M من تقارير Vulkan الجهات الخارجية) واستهلاك الطاقة 50-65W iGPU فقط والسلوك الحراري والصوتي',
+          '**لم يتم اختباره بشكل مستقل:** tok/sec على هذا الجهاز المحدد والموثوقية المستمرة 24/7 والحد الحراري تحت الأحمال العالية جداً والأداء الفعلية لـ eGPU OCuLink (لا توجد بيانات اختبار مستخدم متاحة)',
+        ],
+      },
+
       verifiedEstimated: {
         id: 'verified-estimated',
         title: 'ما الذي تحققنا منه مقابل ما نقدّره مقابل ما لم نختبره',
@@ -3333,6 +3419,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**لم يجرِ اختباره بشكل مستقل:** الحقيقي token/sec على هذه الوحدة المحددة، موثوقية 24/7 المستدامة، اختناق حراري تحت أحمال عالية جداً، أداء OCuLink eGPU الفعلية (لا توجد بيانات اختبار مستخدم متاحة)',
         ],
       },
+      whoShouldNotBuy: {
+        id: 'who-should-not-buy',
+        title: 'من لا يجب عليهم الشراء',
+        content: '**UM890 Pro ليس للجميع.** إذا كنت تندرج تحت أي من الملفات الشخصية أدناه فقد يكون نموذج أرخص كافياً.',
+        items: [
+          'ستشغل فقط نموذج 7B واحد إلى الأبد — يوفر SER8 150-300€ بأداء iGPU نفسها.',
+          'مساحتك محدودة — ارتفاعها 67mm ليس مضغوطاً مثل Beelink.',
+          'شبكتك لا تستخدم الألياف — رابط جيجابت واحد كافٍ؛ لا سبب للدفع مقابل مزدوج 2.5GbE.',
+          'ليس لديك €800+ للترقية إلى 96GB — barebone رخيص + SO-DIMM يعمل وإلا فإن صناديق N150 الاقتصادية (Beelink EQ14) أرخص بكثير.',
+          'تحتاج إلى صندوق به GPU مدمج — OCuLink هو مسار ترقية وليس GPU مدمج. لهذا انظر إلى GEEKOM A9 Max (iGPU متطابقة وحد RAM 128GB بدون OCuLink).',
+        ],
+      },
+
       prosCons: {
         id: 'pros-cons',
         title: 'المزايا والعيوب',
