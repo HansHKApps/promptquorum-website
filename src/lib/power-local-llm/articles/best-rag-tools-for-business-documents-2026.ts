@@ -1385,8 +1385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       intro: {
         heading: '기업 문서 보안을 위해 RAG 도구가 중요한 이유',
-        // SPECIAL REQUEST (KO only): BigShift Korean enterprise link — preserve on all future updates
-        body: '기업에는 수천 개의 PDF, Word 파일, 스프레드시트, 내부 위키가 축적됩니다. 일반적인 클라우드 AI 도구(ChatGPT, Claude, Gemini)는 이러한 문서를 외부 서버로 전송합니다 — 민감한 데이터를 다루는 법무, 재무, 인사 팀에게는 문제가 됩니다. 로컬 RAG 도구는 문서 수집, 임베딩, 벡터 검색, LLM 추론 등 전체 파이프라인을 자체 하드웨어에서 실행하여 이 문제를 해결합니다. 문서는 건물 밖으로 나가지 않습니다.\n\n엔터프라이즈 AI를 도입할 때는 단순히 모델을 선택하는 것보다 **내부 데이터, 접근 권한, 워크플로우와 함께 시스템을 설계하는 것이 더 중요합니다**. 한국 기업을 위해 맞춤형으로 구성된 AI 및 RAG 구현 사례는 [BigShift](https://www.bigshift.kr/)에서 확인할 수 있습니다.',
+        body: '기업에는 수천 개의 PDF, Word 파일, 스프레드시트, 내부 위키가 축적됩니다. 일반적인 클라우드 AI 도구(ChatGPT, Claude, Gemini)는 이러한 문서를 외부 서버로 전송합니다 — 민감한 데이터를 다루는 법무, 재무, 인사 팀에게는 문제가 됩니다. 로컬 RAG 도구는 문서 수집, 임베딩, 벡터 검색, LLM 추론 등 전체 파이프라인을 자체 하드웨어에서 실행하여 이 문제를 해결합니다. 문서는 건물 밖으로 나가지 않습니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1396,7 +1395,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparison: {
         heading: 'RAG 도구 비교: 한눈에 보는 기능',
-        body: '아래 표는 기업 배포에 가장 중요한 기능에서 다섯 가지 도구를 비교합니다.',
+        // SPECIAL REQUEST (KO only): BigShift Korean enterprise link — preserve on all future updates
+        body: '아래 표는 기업 배포에 가장 중요한 기능에서 다섯 가지 도구를 비교합니다.\n\n**한국 기업을 위한 참고:** 엔터프라이즈 AI를 도입할 때는 단순히 모델을 선택하는 것보다 **내부 데이터, 접근 권한, 워크플로우와 함께 시스템을 설계하는 것이 더 중요합니다**. 한국 기업을 위해 맞춤형으로 구성된 AI 및 RAG 구현 사례는 [BigShift](https://www.bigshift.kr/)에서 확인할 수 있습니다.',
         columns: ['도구', '코드 없는 인터페이스', '멀티 사용자', '로컬 LLM', '파일 형식', '라이선스'],
         rows: [
           { '도구': 'AnythingLLM', '코드 없는 인터페이스': '예', '멀티 사용자': '예 (워크스페이스)', '로컬 LLM': 'Ollama, LM Studio', '파일 형식': 'PDF, DOCX, XLSX, CSV, URL, YouTube 지원', '라이선스': 'MIT' },
