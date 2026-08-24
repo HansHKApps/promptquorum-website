@@ -61,8 +61,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       intro: {
-        heading: 'Why RAG Tools Matter for Business Document Security',
-        body: 'Businesses accumulate thousands of PDFs, Word files, spreadsheets, and internal wikis. Standard cloud AI tools (ChatGPT, Claude, Gemini) send those documents to external servers — a problem for legal, finance, and HR teams handling sensitive data. Local RAG tools solve this by running the entire pipeline — document ingestion, embedding, vector search, and LLM inference — on your own hardware. Your documents never leave the building.',
+        title: 'Why RAG Tools Matter for Business Document Security',
+        content: 'Businesses accumulate thousands of PDFs, Word files, spreadsheets, and internal wikis. Standard cloud AI tools (ChatGPT, Claude, Gemini) send those documents to external servers — a problem for legal, finance, and HR teams handling sensitive data. Local RAG tools solve this by running the entire pipeline — document ingestion, embedding, vector search, and LLM inference — on your own hardware. Your documents never leave the building.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -71,8 +71,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       comparison: {
-        heading: 'RAG Tools Compared: Features at a Glance',
-        body: 'The table below compares the five tools across the features that matter most for business deployment.',
+        title: 'RAG Tools Compared: Features at a Glance',
+        content: 'The table below compares the five tools across the features that matter most for business deployment.',
         columns: ['Tool', 'No-Code UI', 'Multi-User', 'Local LLM', 'File Types', 'License'],
         rows: [
           { 'Tool': 'AnythingLLM', 'No-Code UI': 'Yes', 'Multi-User': 'Yes (workspaces)', 'Local LLM': 'Ollama, LM Studio', 'File Types': 'PDF, DOCX, XLSX, CSV, URL, YouTube', 'License': 'MIT' },
@@ -83,8 +83,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       anythingllm: {
-        heading: 'AnythingLLM — Best for No-Code Business Teams',
-        body: 'AnythingLLM provides a full-stack RAG platform with a browser-based UI that non-technical users can operate. You create workspaces (one per department, project, or client), drop in documents, and start chatting. Each workspace maintains its own vector index, so the Legal team\'s NDA library doesn\'t bleed into Engineering\'s architecture docs.\n\nAnythingLLM connects to Ollama, LM Studio, or any OpenAI-compatible API. For local deployment, Qwen3 14B or Llama 3.3 8B handle most business document Q&A tasks within 16GB RAM. The Enterprise edition adds SSO, audit logs, and custom embedding models.\n\n**Installation:** Docker one-liner or desktop app download from useanything.com. No command-line configuration required.',
+        title: 'AnythingLLM — Best for No-Code Business Teams',
+        content: 'AnythingLLM provides a full-stack RAG platform with a browser-based UI that non-technical users can operate. You create workspaces (one per department, project, or client), drop in documents, and start chatting. Each workspace maintains its own vector index, so the Legal team\'s NDA library doesn\'t bleed into Engineering\'s architecture docs.\n\nAnythingLLM connects to Ollama, LM Studio, or any OpenAI-compatible API. For local deployment, Qwen3 14B or Llama 3.3 8B handle most business document Q&A tasks within 16GB RAM. The Enterprise edition adds SSO, audit logs, and custom embedding models.\n\n**Installation:** Docker one-liner or desktop app download from useanything.com. No command-line configuration required.',
         affiliateLinks: [
           {
             productName: 'AnythingLLM',
@@ -97,40 +97,40 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         verdict: 'Best for small to mid-size business teams that want RAG running today without engineering resources.',
       },
       llamaindex: {
-        heading: 'LlamaIndex — Best Developer Framework for Custom Pipelines',
-        body: 'LlamaIndex is the most widely used Python framework for building production RAG systems. Unlike AnythingLLM, it has no built-in UI — instead it provides composable abstractions: data loaders, index types (VectorStore, KnowledgeGraph, Summary), query engines, and agent workflows.\n\nFor Ollama integration, install `llama-index-llms-ollama` and `llama-index-embeddings-ollama`. LlamaIndex supports Chroma, Qdrant, Weaviate, Pinecone, and 20+ other vector stores as backends. The framework handles chunking strategies, metadata filtering, and hybrid search automatically.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
+        title: 'LlamaIndex — Best Developer Framework for Custom Pipelines',
+        content: 'LlamaIndex is the most widely used Python framework for building production RAG systems. Unlike AnythingLLM, it has no built-in UI — instead it provides composable abstractions: data loaders, index types (VectorStore, KnowledgeGraph, Summary), query engines, and agent workflows.\n\nFor Ollama integration, install `llama-index-llms-ollama` and `llama-index-embeddings-ollama`. LlamaIndex supports Chroma, Qdrant, Weaviate, Pinecone, and 20+ other vector stores as backends. The framework handles chunking strategies, metadata filtering, and hybrid search automatically.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
         pros: ['Maximum pipeline flexibility', 'Supports all major vector databases', 'Production-grade with enterprise support', 'Active community (50K+ GitHub stars)'],
         cons: ['Requires Python knowledge', 'No built-in UI', 'More configuration than turnkey tools'],
         verdict: 'Best for development teams building domain-specific RAG applications that need fine-grained control over chunking, retrieval, and re-ranking.',
       },
       privategpt: {
-        heading: 'PrivateGPT — Simplest Single-User Local Setup',
-        body: 'PrivateGPT targets individual users who want a simple "upload PDFs and chat" experience with zero data leaving their machine. The open-source version handles the complete stack: document ingestion, embedding (nomic-embed-text via Ollama), vector storage (Qdrant), and inference.\n\nSetup takes under 10 minutes: clone the repo, run `make install`, and start the server. The web UI at localhost:8001 accepts PDF and DOCX uploads. PrivateGPT 0.6+ includes source citations so you can verify exactly which document passage generated each answer.',
+        title: 'PrivateGPT — Simplest Single-User Local Setup',
+        content: 'PrivateGPT targets individual users who want a simple "upload PDFs and chat" experience with zero data leaving their machine. The open-source version handles the complete stack: document ingestion, embedding (nomic-embed-text via Ollama), vector storage (Qdrant), and inference.\n\nSetup takes under 10 minutes: clone the repo, run `make install`, and start the server. The web UI at localhost:8001 accepts PDF and DOCX uploads. PrivateGPT 0.6+ includes source citations so you can verify exactly which document passage generated each answer.',
         pros: ['Truly offline — no telemetry', 'Source citations built-in', 'Simple setup for individuals', 'Fast with 7B models'],
         cons: ['No multi-user support', 'Limited to PDF/DOCX/TXT', 'UI is basic'],
         verdict: 'Best for individual professionals — lawyers, researchers, consultants — who need a private document chat tool on their laptop.',
       },
       cognita: {
-        heading: 'Cognita — Enterprise-Grade RAG with RBAC',
-        body: 'Cognita (by Truefoundry) targets enterprises that need role-based access control, audit logs, and integrations with cloud storage (S3, Azure Blob, SharePoint). It supports creating separate collections per team, with permissions enforced at the collection level.\n\nCognita integrates with Ollama for local inference but also supports AWS Bedrock and Azure OpenAI for hybrid deployments. The metadata extraction pipeline handles scanned PDFs via OCR, making it suitable for digitized contracts and historical documents.',
+        title: 'Cognita — Enterprise-Grade RAG with RBAC',
+        content: 'Cognita (by Truefoundry) targets enterprises that need role-based access control, audit logs, and integrations with cloud storage (S3, Azure Blob, SharePoint). It supports creating separate collections per team, with permissions enforced at the collection level.\n\nCognita integrates with Ollama for local inference but also supports AWS Bedrock and Azure OpenAI for hybrid deployments. The metadata extraction pipeline handles scanned PDFs via OCR, making it suitable for digitized contracts and historical documents.',
         pros: ['RBAC and audit logs', 'SharePoint/S3 integration', 'OCR for scanned documents', 'Multi-collection permissions'],
         cons: ['More complex setup (Kubernetes recommended)', 'Smaller community than AnythingLLM or LlamaIndex'],
         verdict: 'Best for regulated industries (finance, healthcare, legal) that require document access controls and compliance audit trails.',
       },
       chroma: {
-        heading: 'Chroma — Best Open-Source Vector Database',
-        body: 'Chroma is not a complete RAG application — it is an open-source vector database used as the storage layer in custom RAG stacks. If you are building your own pipeline with LlamaIndex or LangChain, Chroma provides a fast local alternative to hosted vector databases like Pinecone.\n\nChroma stores embeddings in SQLite (embedded mode) or runs as a standalone HTTP server for multi-client access. It supports metadata filtering, so you can scope retrieval to specific document collections or date ranges. Chroma Cloud, the managed serverless option, is also available for teams that want hosted infrastructure with new accounts receiving $5 in free credits.',
+        title: 'Chroma — Best Open-Source Vector Database',
+        content: 'Chroma is not a complete RAG application — it is an open-source vector database used as the storage layer in custom RAG stacks. If you are building your own pipeline with LlamaIndex or LangChain, Chroma provides a fast local alternative to hosted vector databases like Pinecone.\n\nChroma stores embeddings in SQLite (embedded mode) or runs as a standalone HTTP server for multi-client access. It supports metadata filtering, so you can scope retrieval to specific document collections or date ranges. Chroma Cloud, the managed serverless option, is also available for teams that want hosted infrastructure with new accounts receiving $5 in free credits.',
         pros: ['Lightweight embedded mode', 'Fast similarity search', 'Native Python and JavaScript clients', 'Free and open-source'],
         cons: ['No built-in UI', 'Needs companion LLM framework', 'Not a complete RAG solution alone'],
         verdict: 'Best as a vector storage component when building a custom RAG stack with LlamaIndex or LangChain.',
       },
       methodology: {
-        heading: 'How We Evaluated These RAG Tools',
-        body: 'We tested each tool against a benchmark corpus of 200 business documents (contracts, invoices, internal policies, technical specs) totalling 850MB. Evaluation criteria:\n\n- **Retrieval accuracy:** Percentage of correct answers on a 50-question benchmark\n- **Setup time:** Time from zero to first query for a non-developer\n- **Chunking quality:** Coherence of retrieved passages at default settings\n- **Speed:** Query response time on RTX 3090 with Qwen3 14B Q4_K_M\n- **Failure modes:** Hallucination rate when the answer is not in the corpus',
+        title: 'How We Evaluated These RAG Tools',
+        content: 'We tested each tool against a benchmark corpus of 200 business documents (contracts, invoices, internal policies, technical specs) totalling 850MB. Evaluation criteria:\n\n- **Retrieval accuracy:** Percentage of correct answers on a 50-question benchmark\n- **Setup time:** Time from zero to first query for a non-developer\n- **Chunking quality:** Coherence of retrieved passages at default settings\n- **Speed:** Query response time on RTX 3090 with Qwen3 14B Q4_K_M\n- **Failure modes:** Hallucination rate when the answer is not in the corpus',
       },
       hardwareGuide: {
-        heading: 'Hardware Requirements for Local Business RAG',
-        body: 'Local RAG adds memory overhead on top of the base LLM requirements. The vector database and embedding model both consume RAM.',
+        title: 'Hardware Requirements for Local Business RAG',
+        content: 'Local RAG adds memory overhead on top of the base LLM requirements. The vector database and embedding model both consume RAM.',
         columns: ['Setup', 'RAM', 'VRAM', 'Use Case'],
         rows: [
           { 'Setup': '7B model + 10K docs', 'RAM': '16GB', 'VRAM': '8GB', 'Use Case': 'Single-user, small document set' },
@@ -140,8 +140,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       decisionMatrix: {
-        heading: 'Which RAG Tool Should You Choose?',
-        body: '**Choose AnythingLLM if:** You need a working solution today with no coding, supporting multiple team members, handling diverse document formats.\n\n**Choose LlamaIndex if:** You are a developer building a custom RAG application, need metadata filtering, or want to integrate with an existing data pipeline.\n\n**Choose PrivateGPT if:** You are an individual user with a collection of PDFs and no server to maintain.\n\n**Choose Cognita if:** Your organization requires document-level access controls, compliance audit logs, or scanned PDF support.\n\n**Choose Chroma if:** You are building a custom stack and need a fast, free vector database that runs locally without a cloud account.',
+        title: 'Which RAG Tool Should You Choose?',
+        content: '**Choose AnythingLLM if:** You need a working solution today with no coding, supporting multiple team members, handling diverse document formats.\n\n**Choose LlamaIndex if:** You are a developer building a custom RAG application, need metadata filtering, or want to integrate with an existing data pipeline.\n\n**Choose PrivateGPT if:** You are an individual user with a collection of PDFs and no server to maintain.\n\n**Choose Cognita if:** Your organization requires document-level access controls, compliance audit logs, or scanned PDF support.\n\n**Choose Chroma if:** You are building a custom stack and need a fast, free vector database that runs locally without a cloud account.',
       },
       faq: {
         id: 'faq',
@@ -661,8 +661,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       intro: {
-        heading: 'Por qué las herramientas RAG son clave para la seguridad de documentos empresariales',
-        body: 'Las empresas acumulan miles de PDFs, archivos Word, hojas de cálculo y wikis internos. Las herramientas de IA en la nube habituales (ChatGPT, Claude, Gemini) envían esos documentos a servidores externos — un problema para los equipos legales, financieros y de RRHH que manejan datos sensibles. Las herramientas RAG locales resuelven esto ejecutando todo el pipeline — ingesta de documentos, embedding, búsqueda vectorial e inferencia del LLM — en tu propio hardware. Tus documentos nunca salen del edificio.',
+        title: 'Por qué las herramientas RAG son clave para la seguridad de documentos empresariales',
+        content: 'Las empresas acumulan miles de PDFs, archivos Word, hojas de cálculo y wikis internos. Las herramientas de IA en la nube habituales (ChatGPT, Claude, Gemini) envían esos documentos a servidores externos — un problema para los equipos legales, financieros y de RRHH que manejan datos sensibles. Las herramientas RAG locales resuelven esto ejecutando todo el pipeline — ingesta de documentos, embedding, búsqueda vectorial e inferencia del LLM — en tu propio hardware. Tus documentos nunca salen del edificio.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -671,8 +671,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       comparison: {
-        heading: 'Comparativa de herramientas RAG: funciones de un vistazo',
-        body: 'La tabla siguiente compara las cinco herramientas en las funciones más relevantes para el despliegue empresarial.',
+        title: 'Comparativa de herramientas RAG: funciones de un vistazo',
+        content: 'La tabla siguiente compara las cinco herramientas en las funciones más relevantes para el despliegue empresarial.',
         columns: ['Herramienta', 'Interfaz sin código', 'Multiusuario', 'LLM local', 'Tipos de archivo', 'Licencia'],
         rows: [
           { 'Herramienta': 'AnythingLLM', 'Interfaz sin código': 'Sí', 'Multiusuario': 'Sí (espacios de trabajo)', 'LLM local': 'Ollama, LM Studio', 'Tipos de archivo': 'PDF, DOCX, XLSX, CSV, URL, YouTube', 'Licencia': 'MIT' },
@@ -683,8 +683,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       anythingllm: {
-        heading: 'AnythingLLM — La mejor opción para equipos empresariales sin código',
-        body: 'AnythingLLM proporciona una plataforma RAG completa con una interfaz web que pueden manejar usuarios sin conocimientos técnicos. Puedes crear espacios de trabajo (uno por departamento, proyecto o cliente), añadir documentos y empezar a chatear. Cada espacio de trabajo mantiene su propio índice vectorial, de modo que la biblioteca de NDAs del equipo Legal no se mezcla con la documentación de arquitectura de Ingeniería.\n\nAnythingLLM se conecta a Ollama, LM Studio o cualquier API compatible con OpenAI. Para despliegue local, Qwen3 14B o Llama 3.3 8B manejan la mayoría de las consultas sobre documentos empresariales con 16 GB de RAM. La edición Enterprise añade SSO, registros de auditoría y modelos de embedding personalizados.\n\n**Instalación:** un solo comando de Docker o descarga de la app de escritorio desde useanything.com. No requiere configuración por línea de comandos.',
+        title: 'AnythingLLM — La mejor opción para equipos empresariales sin código',
+        content: 'AnythingLLM proporciona una plataforma RAG completa con una interfaz web que pueden manejar usuarios sin conocimientos técnicos. Puedes crear espacios de trabajo (uno por departamento, proyecto o cliente), añadir documentos y empezar a chatear. Cada espacio de trabajo mantiene su propio índice vectorial, de modo que la biblioteca de NDAs del equipo Legal no se mezcla con la documentación de arquitectura de Ingeniería.\n\nAnythingLLM se conecta a Ollama, LM Studio o cualquier API compatible con OpenAI. Para despliegue local, Qwen3 14B o Llama 3.3 8B manejan la mayoría de las consultas sobre documentos empresariales con 16 GB de RAM. La edición Enterprise añade SSO, registros de auditoría y modelos de embedding personalizados.\n\n**Instalación:** un solo comando de Docker o descarga de la app de escritorio desde useanything.com. No requiere configuración por línea de comandos.',
         affiliateLinks: [
           {
             productName: 'AnythingLLM',
@@ -697,40 +697,40 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         verdict: 'Ideal para equipos de pequeñas y medianas empresas que quieren tener RAG funcionando hoy mismo sin recursos de ingeniería.',
       },
       llamaindex: {
-        heading: 'LlamaIndex — El mejor framework para desarrolladores con pipelines personalizados',
-        body: 'LlamaIndex es el framework de Python más utilizado para construir sistemas RAG en producción. A diferencia de AnythingLLM, no tiene interfaz propia — en su lugar ofrece abstracciones componibles: cargadores de datos, tipos de índice (VectorStore, KnowledgeGraph, Summary), motores de consulta y flujos de trabajo de agentes.\n\nPara la integración con Ollama, instala `llama-index-llms-ollama` y `llama-index-embeddings-ollama`. LlamaIndex admite Chroma, Qdrant, Weaviate, Pinecone y más de 20 bases de datos vectoriales como backend. El framework gestiona automáticamente las estrategias de chunking, el filtrado de metadatos y la búsqueda híbrida.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
+        title: 'LlamaIndex — El mejor framework para desarrolladores con pipelines personalizados',
+        content: 'LlamaIndex es el framework de Python más utilizado para construir sistemas RAG en producción. A diferencia de AnythingLLM, no tiene interfaz propia — en su lugar ofrece abstracciones componibles: cargadores de datos, tipos de índice (VectorStore, KnowledgeGraph, Summary), motores de consulta y flujos de trabajo de agentes.\n\nPara la integración con Ollama, instala `llama-index-llms-ollama` y `llama-index-embeddings-ollama`. LlamaIndex admite Chroma, Qdrant, Weaviate, Pinecone y más de 20 bases de datos vectoriales como backend. El framework gestiona automáticamente las estrategias de chunking, el filtrado de metadatos y la búsqueda híbrida.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
         pros: ['Máxima flexibilidad en el pipeline', 'Compatible con todas las bases de datos vectoriales principales', 'Nivel de producción con soporte empresarial', 'Comunidad activa (más de 50.000 estrellas en GitHub)'],
         cons: ['Requiere conocimientos de Python', 'Sin interfaz integrada', 'Más configuración que las herramientas llave en mano'],
         verdict: 'Ideal para equipos de desarrollo que construyen aplicaciones RAG específicas de dominio y necesitan control detallado sobre chunking, recuperación y re-ranking.',
       },
       privategpt: {
-        heading: 'PrivateGPT — La configuración local más sencilla para un solo usuario',
-        body: 'PrivateGPT está orientado a usuarios individuales que quieren una experiencia simple de "subir PDFs y chatear" sin que ningún dato salga de su máquina. La versión open source gestiona el stack completo: ingesta de documentos, embedding (nomic-embed-text vía Ollama), almacenamiento vectorial (Qdrant) e inferencia.\n\nLa configuración lleva menos de 10 minutos: clona el repositorio, ejecuta `make install` e inicia el servidor. La interfaz web en localhost:8001 acepta PDFs y archivos DOCX. PrivateGPT 0.6+ incluye citas de fuentes para que puedas verificar exactamente qué fragmento del documento generó cada respuesta.',
+        title: 'PrivateGPT — La configuración local más sencilla para un solo usuario',
+        content: 'PrivateGPT está orientado a usuarios individuales que quieren una experiencia simple de "subir PDFs y chatear" sin que ningún dato salga de su máquina. La versión open source gestiona el stack completo: ingesta de documentos, embedding (nomic-embed-text vía Ollama), almacenamiento vectorial (Qdrant) e inferencia.\n\nLa configuración lleva menos de 10 minutos: clona el repositorio, ejecuta `make install` e inicia el servidor. La interfaz web en localhost:8001 acepta PDFs y archivos DOCX. PrivateGPT 0.6+ incluye citas de fuentes para que puedas verificar exactamente qué fragmento del documento generó cada respuesta.',
         pros: ['Completamente sin conexión — sin telemetría', 'Citas de fuentes integradas', 'Configuración sencilla para individuos', 'Rápido con modelos de 7B'],
         cons: ['Sin soporte multiusuario', 'Limitado a PDF/DOCX/TXT', 'Interfaz básica'],
         verdict: 'Ideal para profesionales individuales — abogados, investigadores, consultores — que necesitan una herramienta privada de consulta de documentos en su portátil.',
       },
       cognita: {
-        heading: 'Cognita — RAG empresarial con RBAC',
-        body: 'Cognita (de Truefoundry) está orientado a empresas que necesitan control de acceso basado en roles, registros de auditoría e integraciones con almacenamiento en la nube (S3, Azure Blob, SharePoint). Permite crear colecciones separadas por equipo, con permisos aplicados a nivel de colección.\n\nCognita se integra con Ollama para inferencia local, pero también admite AWS Bedrock y Azure OpenAI para despliegues híbridos. El pipeline de extracción de metadatos gestiona PDFs escaneados mediante OCR, lo que lo hace apto para contratos digitalizados y documentos históricos.',
+        title: 'Cognita — RAG empresarial con RBAC',
+        content: 'Cognita (de Truefoundry) está orientado a empresas que necesitan control de acceso basado en roles, registros de auditoría e integraciones con almacenamiento en la nube (S3, Azure Blob, SharePoint). Permite crear colecciones separadas por equipo, con permisos aplicados a nivel de colección.\n\nCognita se integra con Ollama para inferencia local, pero también admite AWS Bedrock y Azure OpenAI para despliegues híbridos. El pipeline de extracción de metadatos gestiona PDFs escaneados mediante OCR, lo que lo hace apto para contratos digitalizados y documentos históricos.',
         pros: ['RBAC y registros de auditoría', 'Integración con SharePoint/S3', 'OCR para documentos escaneados', 'Permisos por colección múltiple'],
         cons: ['Configuración más compleja (se recomienda Kubernetes)', 'Comunidad más pequeña que AnythingLLM o LlamaIndex'],
         verdict: 'Ideal para sectores regulados (finanzas, sanidad, legal) que requieren controles de acceso a documentos y trazas de auditoría de cumplimiento.',
       },
       chroma: {
-        heading: 'Chroma — La mejor base de datos vectorial open source',
-        body: 'Chroma no es una aplicación RAG completa — es una base de datos vectorial open source utilizada como capa de almacenamiento en stacks RAG personalizados. Si estás construyendo tu propio pipeline con LlamaIndex o LangChain, Chroma ofrece una alternativa local rápida a las bases de datos vectoriales en la nube como Pinecone.\n\nChroma almacena embeddings en SQLite (modo embebido) o funciona como servidor HTTP independiente para acceso de múltiples clientes. Admite filtrado por metadatos, por lo que puedes limitar la recuperación a colecciones de documentos o rangos de fechas específicos.',
+        title: 'Chroma — La mejor base de datos vectorial open source',
+        content: 'Chroma no es una aplicación RAG completa — es una base de datos vectorial open source utilizada como capa de almacenamiento en stacks RAG personalizados. Si estás construyendo tu propio pipeline con LlamaIndex o LangChain, Chroma ofrece una alternativa local rápida a las bases de datos vectoriales en la nube como Pinecone.\n\nChroma almacena embeddings en SQLite (modo embebido) o funciona como servidor HTTP independiente para acceso de múltiples clientes. Admite filtrado por metadatos, por lo que puedes limitar la recuperación a colecciones de documentos o rangos de fechas específicos.',
         pros: ['Modo embebido ligero', 'Búsqueda de similitud rápida', 'Clientes nativos en Python y JavaScript', 'Gratuito y open source'],
         cons: ['Sin interfaz integrada', 'Necesita un framework LLM complementario', 'No es una solución RAG completa por sí sola'],
         verdict: 'Ideal como componente de almacenamiento vectorial al construir un stack RAG personalizado con LlamaIndex o LangChain.',
       },
       methodology: {
-        heading: 'Cómo evaluamos estas herramientas RAG',
-        body: 'Pusimos a prueba cada herramienta con un corpus de referencia de 200 documentos empresariales (contratos, facturas, políticas internas, especificaciones técnicas) con un total de 850 MB. Criterios de evaluación:\n\n- **Precisión de recuperación:** Porcentaje de respuestas correctas en un benchmark de 50 preguntas\n- **Tiempo de configuración:** Tiempo desde cero hasta la primera consulta para un usuario sin experiencia técnica\n- **Calidad del chunking:** Coherencia de los fragmentos recuperados con la configuración predeterminada\n- **Velocidad:** Tiempo de respuesta a consultas en RTX 3090 con Qwen3 14B Q4_K_M\n- **Modos de fallo:** Tasa de alucinación cuando la respuesta no está en el corpus',
+        title: 'Cómo evaluamos estas herramientas RAG',
+        content: 'Pusimos a prueba cada herramienta con un corpus de referencia de 200 documentos empresariales (contratos, facturas, políticas internas, especificaciones técnicas) con un total de 850 MB. Criterios de evaluación:\n\n- **Precisión de recuperación:** Porcentaje de respuestas correctas en un benchmark de 50 preguntas\n- **Tiempo de configuración:** Tiempo desde cero hasta la primera consulta para un usuario sin experiencia técnica\n- **Calidad del chunking:** Coherencia de los fragmentos recuperados con la configuración predeterminada\n- **Velocidad:** Tiempo de respuesta a consultas en RTX 3090 con Qwen3 14B Q4_K_M\n- **Modos de fallo:** Tasa de alucinación cuando la respuesta no está en el corpus',
       },
       hardwareGuide: {
-        heading: 'Requisitos de hardware para RAG empresarial local',
-        body: 'El RAG local añade sobrecarga de memoria sobre los requisitos base del LLM. Tanto la base de datos vectorial como el modelo de embedding consumen RAM.',
+        title: 'Requisitos de hardware para RAG empresarial local',
+        content: 'El RAG local añade sobrecarga de memoria sobre los requisitos base del LLM. Tanto la base de datos vectorial como el modelo de embedding consumen RAM.',
         columns: ['Configuración', 'RAM', 'VRAM', 'Caso de uso'],
         rows: [
           { 'Configuración': 'Modelo 7B + 10.000 docs', 'RAM': '16 GB', 'VRAM': '8 GB', 'Caso de uso': 'Usuario individual, conjunto de documentos pequeño' },
@@ -740,8 +740,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       decisionMatrix: {
-        heading: '¿Qué herramienta RAG deberías elegir?',
-        body: '**Elige AnythingLLM si:** Necesitas una solución funcional hoy sin programar, con soporte para varios miembros del equipo y diversos formatos de documentos.\n\n**Elige LlamaIndex si:** Eres un desarrollador que construye una aplicación RAG personalizada, necesitas filtrado por metadatos o quieres integrarte con un pipeline de datos existente.\n\n**Elige PrivateGPT si:** Eres un usuario individual con una colección de PDFs y sin servidor que mantener.\n\n**Elige Cognita si:** Tu organización requiere controles de acceso a documentos, registros de auditoría de cumplimiento o soporte para PDFs escaneados.\n\n**Elige Chroma si:** Estás construyendo un stack personalizado y necesitas una base de datos vectorial rápida y gratuita que funcione en local sin cuenta en la nube.',
+        title: '¿Qué herramienta RAG deberías elegir?',
+        content: '**Elige AnythingLLM si:** Necesitas una solución funcional hoy sin programar, con soporte para varios miembros del equipo y diversos formatos de documentos.\n\n**Elige LlamaIndex si:** Eres un desarrollador que construye una aplicación RAG personalizada, necesitas filtrado por metadatos o quieres integrarte con un pipeline de datos existente.\n\n**Elige PrivateGPT si:** Eres un usuario individual con una colección de PDFs y sin servidor que mantener.\n\n**Elige Cognita si:** Tu organización requiere controles de acceso a documentos, registros de auditoría de cumplimiento o soporte para PDFs escaneados.\n\n**Elige Chroma si:** Estás construyendo un stack personalizado y necesitas una base de datos vectorial rápida y gratuita que funcione en local sin cuenta en la nube.',
       },
       faq: {
         id: 'faq',
@@ -896,8 +896,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       intro: {
-        heading: 'Por que as ferramentas RAG importam para a segurança de documentos corporativos',
-        body: 'As empresas acumulam milhares de PDFs, arquivos Word, planilhas e wikis internos. As ferramentas de IA em nuvem comuns (ChatGPT, Claude, Gemini) enviam esses documentos para servidores externos — um problema para as equipes jurídica, financeira e de RH que lidam com dados sensíveis. As ferramentas RAG locais resolvem isso rodando todo o pipeline — ingestão de documentos, embedding, busca vetorial e inferência do LLM — no seu próprio hardware. Seus documentos nunca saem do prédio.',
+        title: 'Por que as ferramentas RAG importam para a segurança de documentos corporativos',
+        content: 'As empresas acumulam milhares de PDFs, arquivos Word, planilhas e wikis internos. As ferramentas de IA em nuvem comuns (ChatGPT, Claude, Gemini) enviam esses documentos para servidores externos — um problema para as equipes jurídica, financeira e de RH que lidam com dados sensíveis. As ferramentas RAG locais resolvem isso rodando todo o pipeline — ingestão de documentos, embedding, busca vetorial e inferência do LLM — no seu próprio hardware. Seus documentos nunca saem do prédio.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -906,8 +906,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       comparison: {
-        heading: 'Ferramentas RAG comparadas: recursos em um relance',
-        body: 'A tabela abaixo compara as cinco ferramentas nos recursos que mais importam para a implantação corporativa.',
+        title: 'Ferramentas RAG comparadas: recursos em um relance',
+        content: 'A tabela abaixo compara as cinco ferramentas nos recursos que mais importam para a implantação corporativa.',
         columns: ['Ferramenta', 'Interface sem código', 'Multiusuário', 'LLM local', 'Tipos de arquivo', 'Licença'],
         rows: [
           { 'Ferramenta': 'AnythingLLM', 'Interface sem código': 'Sim', 'Multiusuário': 'Sim (espaços de trabalho)', 'LLM local': 'Ollama, LM Studio', 'Tipos de arquivo': 'PDF, DOCX, XLSX, CSV, URL, YouTube', 'Licença': 'MIT' },
@@ -918,8 +918,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       anythingllm: {
-        heading: 'AnythingLLM — Melhor para equipes corporativas sem código',
-        body: 'O AnythingLLM oferece uma plataforma RAG completa com uma interface no navegador que usuários sem conhecimento técnico conseguem operar. Você cria espaços de trabalho (um por departamento, projeto ou cliente), adiciona documentos e começa a conversar. Cada espaço de trabalho mantém seu próprio índice vetorial, então a biblioteca de NDAs da equipe Jurídica não se mistura com a documentação de arquitetura da Engenharia.\n\nO AnythingLLM se conecta ao Ollama, ao LM Studio ou a qualquer API compatível com OpenAI. Para implantação local, o Qwen3 14B ou o Llama 3.3 8B lidam com a maioria das tarefas de perguntas e respostas sobre documentos corporativos dentro de 16GB de RAM. A edição Enterprise adiciona SSO, registros de auditoria e modelos de embedding personalizados.\n\n**Instalação:** um único comando Docker ou download do aplicativo de desktop em useanything.com. Nenhuma configuração por linha de comando necessária.',
+        title: 'AnythingLLM — Melhor para equipes corporativas sem código',
+        content: 'O AnythingLLM oferece uma plataforma RAG completa com uma interface no navegador que usuários sem conhecimento técnico conseguem operar. Você cria espaços de trabalho (um por departamento, projeto ou cliente), adiciona documentos e começa a conversar. Cada espaço de trabalho mantém seu próprio índice vetorial, então a biblioteca de NDAs da equipe Jurídica não se mistura com a documentação de arquitetura da Engenharia.\n\nO AnythingLLM se conecta ao Ollama, ao LM Studio ou a qualquer API compatível com OpenAI. Para implantação local, o Qwen3 14B ou o Llama 3.3 8B lidam com a maioria das tarefas de perguntas e respostas sobre documentos corporativos dentro de 16GB de RAM. A edição Enterprise adiciona SSO, registros de auditoria e modelos de embedding personalizados.\n\n**Instalação:** um único comando Docker ou download do aplicativo de desktop em useanything.com. Nenhuma configuração por linha de comando necessária.',
         affiliateLinks: [
           {
             productName: 'AnythingLLM',
@@ -932,40 +932,40 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         verdict: 'Melhor para equipes corporativas de pequeno e médio porte que querem o RAG funcionando hoje sem recursos de engenharia.',
       },
       llamaindex: {
-        heading: 'LlamaIndex — Melhor framework de desenvolvedor para pipelines personalizados',
-        body: 'O LlamaIndex é o framework Python mais utilizado para construir sistemas RAG em produção. Diferente do AnythingLLM, ele não tem interface integrada — em vez disso, oferece abstrações combináveis: carregadores de dados, tipos de índice (VectorStore, KnowledgeGraph, Summary), motores de consulta e fluxos de trabalho de agentes.\n\nPara a integração com o Ollama, instale `llama-index-llms-ollama` e `llama-index-embeddings-ollama`. O LlamaIndex suporta Chroma, Qdrant, Weaviate, Pinecone e mais de 20 outros bancos de dados vetoriais como backends. O framework lida automaticamente com estratégias de chunking, filtragem de metadados e busca híbrida.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
+        title: 'LlamaIndex — Melhor framework de desenvolvedor para pipelines personalizados',
+        content: 'O LlamaIndex é o framework Python mais utilizado para construir sistemas RAG em produção. Diferente do AnythingLLM, ele não tem interface integrada — em vez disso, oferece abstrações combináveis: carregadores de dados, tipos de índice (VectorStore, KnowledgeGraph, Summary), motores de consulta e fluxos de trabalho de agentes.\n\nPara a integração com o Ollama, instale `llama-index-llms-ollama` e `llama-index-embeddings-ollama`. O LlamaIndex suporta Chroma, Qdrant, Weaviate, Pinecone e mais de 20 outros bancos de dados vetoriais como backends. O framework lida automaticamente com estratégias de chunking, filtragem de metadados e busca híbrida.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
         pros: ['Máxima flexibilidade de pipeline', 'Suporta todos os principais bancos de dados vetoriais', 'Nível de produção com suporte corporativo', 'Comunidade ativa (mais de 50 mil estrelas no GitHub)'],
         cons: ['Requer conhecimento de Python', 'Sem interface integrada', 'Mais configuração que ferramentas prontas para uso'],
         verdict: 'Melhor para equipes de desenvolvimento que constroem aplicações RAG específicas de domínio e precisam de controle refinado sobre chunking, recuperação e re-ranking.',
       },
       privategpt: {
-        heading: 'PrivateGPT — A configuração local mais simples para um único usuário',
-        body: 'O PrivateGPT é voltado para usuários individuais que querem uma experiência simples de "enviar PDFs e conversar" sem que nenhum dado saia da máquina. A versão de código aberto lida com o stack completo: ingestão de documentos, embedding (nomic-embed-text via Ollama), armazenamento vetorial (Qdrant) e inferência.\n\nA configuração leva menos de 10 minutos: clone o repositório, execute `make install` e inicie o servidor. A interface web em localhost:8001 aceita uploads de PDF e DOCX. O PrivateGPT 0.6+ inclui citações de fonte para que você possa verificar exatamente qual trecho do documento gerou cada resposta.',
+        title: 'PrivateGPT — A configuração local mais simples para um único usuário',
+        content: 'O PrivateGPT é voltado para usuários individuais que querem uma experiência simples de "enviar PDFs e conversar" sem que nenhum dado saia da máquina. A versão de código aberto lida com o stack completo: ingestão de documentos, embedding (nomic-embed-text via Ollama), armazenamento vetorial (Qdrant) e inferência.\n\nA configuração leva menos de 10 minutos: clone o repositório, execute `make install` e inicie o servidor. A interface web em localhost:8001 aceita uploads de PDF e DOCX. O PrivateGPT 0.6+ inclui citações de fonte para que você possa verificar exatamente qual trecho do documento gerou cada resposta.',
         pros: ['Realmente offline — sem telemetria', 'Citações de fonte integradas', 'Configuração simples para indivíduos', 'Rápido com modelos de 7B'],
         cons: ['Sem suporte multiusuário', 'Limitado a PDF/DOCX/TXT', 'Interface básica'],
         verdict: 'Melhor para profissionais individuais — advogados, pesquisadores, consultores — que precisam de uma ferramenta privada de conversa com documentos no laptop.',
       },
       cognita: {
-        heading: 'Cognita — RAG de nível corporativo com RBAC',
-        body: 'O Cognita (da Truefoundry) é voltado para empresas que precisam de controle de acesso baseado em funções, registros de auditoria e integrações com armazenamento em nuvem (S3, Azure Blob, SharePoint). Ele suporta a criação de coleções separadas por equipe, com permissões aplicadas no nível da coleção.\n\nO Cognita se integra ao Ollama para inferência local, mas também suporta AWS Bedrock e Azure OpenAI para implantações híbridas. O pipeline de extração de metadados lida com PDFs digitalizados via OCR, tornando-o adequado para contratos digitalizados e documentos históricos.',
+        title: 'Cognita — RAG de nível corporativo com RBAC',
+        content: 'O Cognita (da Truefoundry) é voltado para empresas que precisam de controle de acesso baseado em funções, registros de auditoria e integrações com armazenamento em nuvem (S3, Azure Blob, SharePoint). Ele suporta a criação de coleções separadas por equipe, com permissões aplicadas no nível da coleção.\n\nO Cognita se integra ao Ollama para inferência local, mas também suporta AWS Bedrock e Azure OpenAI para implantações híbridas. O pipeline de extração de metadados lida com PDFs digitalizados via OCR, tornando-o adequado para contratos digitalizados e documentos históricos.',
         pros: ['RBAC e registros de auditoria', 'Integração com SharePoint/S3', 'OCR para documentos digitalizados', 'Permissões por múltiplas coleções'],
         cons: ['Configuração mais complexa (Kubernetes recomendado)', 'Comunidade menor que AnythingLLM ou LlamaIndex'],
         verdict: 'Melhor para setores regulados (finanças, saúde, jurídico) que exigem controles de acesso a documentos e trilhas de auditoria de conformidade.',
       },
       chroma: {
-        heading: 'Chroma — Melhor banco de dados vetorial de código aberto',
-        body: 'O Chroma não é uma aplicação RAG completa — é um banco de dados vetorial de código aberto usado como camada de armazenamento em stacks RAG personalizados. Se você está construindo seu próprio pipeline com LlamaIndex ou LangChain, o Chroma oferece uma alternativa local rápida aos bancos de dados vetoriais hospedados como o Pinecone.\n\nO Chroma armazena embeddings em SQLite (modo embarcado) ou roda como um servidor HTTP independente para acesso de múltiplos clientes. Ele suporta filtragem por metadados, então você pode restringir a recuperação a coleções de documentos ou intervalos de datas específicos.',
+        title: 'Chroma — Melhor banco de dados vetorial de código aberto',
+        content: 'O Chroma não é uma aplicação RAG completa — é um banco de dados vetorial de código aberto usado como camada de armazenamento em stacks RAG personalizados. Se você está construindo seu próprio pipeline com LlamaIndex ou LangChain, o Chroma oferece uma alternativa local rápida aos bancos de dados vetoriais hospedados como o Pinecone.\n\nO Chroma armazena embeddings em SQLite (modo embarcado) ou roda como um servidor HTTP independente para acesso de múltiplos clientes. Ele suporta filtragem por metadados, então você pode restringir a recuperação a coleções de documentos ou intervalos de datas específicos.',
         pros: ['Modo embarcado leve', 'Busca por similaridade rápida', 'Clientes nativos em Python e JavaScript', 'Gratuito e de código aberto'],
         cons: ['Sem interface integrada', 'Precisa de um framework LLM complementar', 'Não é uma solução RAG completa sozinho'],
         verdict: 'Melhor como componente de armazenamento vetorial ao construir um stack RAG personalizado com LlamaIndex ou LangChain.',
       },
       methodology: {
-        heading: 'Como avaliamos estas ferramentas RAG',
-        body: 'Testamos cada ferramenta contra um corpus de referência de 200 documentos corporativos (contratos, faturas, políticas internas, especificações técnicas) totalizando 850MB. Critérios de avaliação:\n\n- **Precisão de recuperação:** Percentual de respostas corretas em um benchmark de 50 perguntas\n- **Tempo de configuração:** Tempo do zero até a primeira consulta para um não desenvolvedor\n- **Qualidade do chunking:** Coerência dos trechos recuperados nas configurações padrão\n- **Velocidade:** Tempo de resposta de consulta em RTX 3090 com Qwen3 14B Q4_K_M\n- **Modos de falha:** Taxa de alucinação quando a resposta não está no corpus',
+        title: 'Como avaliamos estas ferramentas RAG',
+        content: 'Testamos cada ferramenta contra um corpus de referência de 200 documentos corporativos (contratos, faturas, políticas internas, especificações técnicas) totalizando 850MB. Critérios de avaliação:\n\n- **Precisão de recuperação:** Percentual de respostas corretas em um benchmark de 50 perguntas\n- **Tempo de configuração:** Tempo do zero até a primeira consulta para um não desenvolvedor\n- **Qualidade do chunking:** Coerência dos trechos recuperados nas configurações padrão\n- **Velocidade:** Tempo de resposta de consulta em RTX 3090 com Qwen3 14B Q4_K_M\n- **Modos de falha:** Taxa de alucinação quando a resposta não está no corpus',
       },
       hardwareGuide: {
-        heading: 'Requisitos de hardware para RAG corporativo local',
-        body: 'O RAG local adiciona sobrecarga de memória além dos requisitos básicos do LLM. O banco de dados vetorial e o modelo de embedding consomem RAM.',
+        title: 'Requisitos de hardware para RAG corporativo local',
+        content: 'O RAG local adiciona sobrecarga de memória além dos requisitos básicos do LLM. O banco de dados vetorial e o modelo de embedding consomem RAM.',
         columns: ['Configuração', 'RAM', 'VRAM', 'Caso de uso'],
         rows: [
           { 'Configuração': 'Modelo 7B + 10 mil docs', 'RAM': '16GB', 'VRAM': '8GB', 'Caso de uso': 'Usuário individual, conjunto pequeno de documentos' },
@@ -975,8 +975,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       decisionMatrix: {
-        heading: 'Qual ferramenta RAG você deve escolher?',
-        body: '**Escolha o AnythingLLM se:** Você precisa de uma solução funcional hoje sem programar, com suporte a vários membros de equipe e diversos formatos de documentos.\n\n**Escolha o LlamaIndex se:** Você é um desenvolvedor construindo uma aplicação RAG personalizada, precisa de filtragem por metadados ou quer integrar com um pipeline de dados existente.\n\n**Escolha o PrivateGPT se:** Você é um usuário individual com uma coleção de PDFs e nenhum servidor para manter.\n\n**Escolha o Cognita se:** Sua organização exige controles de acesso no nível do documento, registros de auditoria de conformidade ou suporte a PDFs digitalizados.\n\n**Escolha o Chroma se:** Você está construindo um stack personalizado e precisa de um banco de dados vetorial rápido e gratuito que roda localmente sem uma conta na nuvem.',
+        title: 'Qual ferramenta RAG você deve escolher?',
+        content: '**Escolha o AnythingLLM se:** Você precisa de uma solução funcional hoje sem programar, com suporte a vários membros de equipe e diversos formatos de documentos.\n\n**Escolha o LlamaIndex se:** Você é um desenvolvedor construindo uma aplicação RAG personalizada, precisa de filtragem por metadados ou quer integrar com um pipeline de dados existente.\n\n**Escolha o PrivateGPT se:** Você é um usuário individual com uma coleção de PDFs e nenhum servidor para manter.\n\n**Escolha o Cognita se:** Sua organização exige controles de acesso no nível do documento, registros de auditoria de conformidade ou suporte a PDFs digitalizados.\n\n**Escolha o Chroma se:** Você está construindo um stack personalizado e precisa de um banco de dados vetorial rápido e gratuito que roda localmente sem uma conta na nuvem.',
       },
       faq: {
         id: 'faq',
@@ -1134,8 +1134,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       intro: {
-        heading: 'لماذا تهم أدوات RAG لأمان وثائق الشركات',
-        body: 'تتراكم في الشركات آلاف ملفات PDF وملفات Word وجداول البيانات والويكيات الداخلية. أدوات الذكاء الاصطناعي السحابية الشائعة (ChatGPT وClaude وGemini) ترسل هذه الوثائق إلى خوادم خارجية — وهو أمر يُشكّل مشكلة للفرق القانونية والمالية والموارد البشرية التي تتعامل مع بيانات حساسة. تحل أدوات RAG المحلية هذه المشكلة بتشغيل كامل خط الأنابيب — استيعاب الوثائق والتضمين والبحث المتجه واستدلال النموذج اللغوي — على أجهزتك الخاصة. وثائقك لا تغادر المبنى أبداً.',
+        title: 'لماذا تهم أدوات RAG لأمان وثائق الشركات',
+        content: 'تتراكم في الشركات آلاف ملفات PDF وملفات Word وجداول البيانات والويكيات الداخلية. أدوات الذكاء الاصطناعي السحابية الشائعة (ChatGPT وClaude وGemini) ترسل هذه الوثائق إلى خوادم خارجية — وهو أمر يُشكّل مشكلة للفرق القانونية والمالية والموارد البشرية التي تتعامل مع بيانات حساسة. تحل أدوات RAG المحلية هذه المشكلة بتشغيل كامل خط الأنابيب — استيعاب الوثائق والتضمين والبحث المتجه واستدلال النموذج اللغوي — على أجهزتك الخاصة. وثائقك لا تغادر المبنى أبداً.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1144,8 +1144,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       comparison: {
-        heading: 'مقارنة أدوات RAG: الميزات في لمحة',
-        body: 'يقارن الجدول التالي الأدوات الخمسة في الميزات الأكثر صلة بالنشر على مستوى الشركات.',
+        title: 'مقارنة أدوات RAG: الميزات في لمحة',
+        content: 'يقارن الجدول التالي الأدوات الخمسة في الميزات الأكثر صلة بالنشر على مستوى الشركات.',
         columns: ['الأداة', 'واجهة بدون كود', 'متعددة المستخدمين', 'LLM محلي', 'أنواع الملفات', 'الترخيص'],
         rows: [
           { 'الأداة': 'AnythingLLM', 'واجهة بدون كود': 'نعم', 'متعددة المستخدمين': 'نعم (مساحات عمل)', 'LLM محلي': 'Ollama، LM Studio', 'أنواع الملفات': 'PDF، DOCX، XLSX، CSV، رابط URL، YouTube', 'الترخيص': 'MIT' },
@@ -1156,8 +1156,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       anythingllm: {
-        heading: 'AnythingLLM — الأفضل للفرق في الشركات بدون كود',
-        body: 'توفر AnythingLLM منصة RAG كاملة مع واجهة ويب يمكن للمستخدمين غير التقنيين تشغيلها. يمكنك إنشاء مساحات عمل (واحدة لكل قسم أو مشروع أو عميل) وإضافة وثائق والبدء في الدردشة. تحتفظ كل مساحة عمل بفهرسها المتجه الخاص، لذا لا تختلط مكتبة عقود عدم الإفصاح للفريق القانوني مع وثائق بنية الهندسة.\n\nتتصل AnythingLLM بـOllama أو LM Studio أو أي API متوافقة مع OpenAI. للنشر المحلي، يتعامل Qwen3 14B أو Llama 3.3 8B مع معظم استفسارات وثائق الشركات ضمن 16 GB من RAM. تُضيف النسخة Enterprise خيار تسجيل الدخول الموحد وسجلات التدقيق ونماذج التضمين المخصصة.\n\n**التثبيت:** أمر Docker واحد أو تحميل تطبيق سطح المكتب من useanything.com. لا حاجة لإعداد سطر الأوامر.',
+        title: 'AnythingLLM — الأفضل للفرق في الشركات بدون كود',
+        content: 'توفر AnythingLLM منصة RAG كاملة مع واجهة ويب يمكن للمستخدمين غير التقنيين تشغيلها. يمكنك إنشاء مساحات عمل (واحدة لكل قسم أو مشروع أو عميل) وإضافة وثائق والبدء في الدردشة. تحتفظ كل مساحة عمل بفهرسها المتجه الخاص، لذا لا تختلط مكتبة عقود عدم الإفصاح للفريق القانوني مع وثائق بنية الهندسة.\n\nتتصل AnythingLLM بـOllama أو LM Studio أو أي API متوافقة مع OpenAI. للنشر المحلي، يتعامل Qwen3 14B أو Llama 3.3 8B مع معظم استفسارات وثائق الشركات ضمن 16 GB من RAM. تُضيف النسخة Enterprise خيار تسجيل الدخول الموحد وسجلات التدقيق ونماذج التضمين المخصصة.\n\n**التثبيت:** أمر Docker واحد أو تحميل تطبيق سطح المكتب من useanything.com. لا حاجة لإعداد سطر الأوامر.',
         affiliateLinks: [
           {
             productName: 'AnythingLLM',
@@ -1170,40 +1170,40 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         verdict: 'مثالية للشركات الصغيرة والمتوسطة التي تريد تشغيل RAG اليوم دون موارد هندسية.',
       },
       llamaindex: {
-        heading: 'LlamaIndex — أفضل إطار عمل للمطوّرين مع خطوط أنابيب مخصصة',
-        body: 'LlamaIndex هو إطار عمل Python الأكثر استخداماً لبناء أنظمة RAG في بيئة الإنتاج. على عكس AnythingLLM، ليس لديه واجهة مدمجة — بدلاً من ذلك يُقدّم تجريدات قابلة للتركيب: محمّلات البيانات وأنواع الفهرس (VectorStore وKnowledgeGraph وSummary) ومحركات الاستعلام وسير عمل الوكلاء.\n\nللتكامل مع Ollama، ثبّت `llama-index-llms-ollama` و`llama-index-embeddings-ollama`. يدعم LlamaIndex Chroma وQdrant وWeaviate وPinecone وأكثر من 20 قاعدة بيانات متجهة أخرى كخلفيات. يتعامل الإطار تلقائياً مع استراتيجيات التقطيع وتصفية البيانات الوصفية والبحث الهجين.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
+        title: 'LlamaIndex — أفضل إطار عمل للمطوّرين مع خطوط أنابيب مخصصة',
+        content: 'LlamaIndex هو إطار عمل Python الأكثر استخداماً لبناء أنظمة RAG في بيئة الإنتاج. على عكس AnythingLLM، ليس لديه واجهة مدمجة — بدلاً من ذلك يُقدّم تجريدات قابلة للتركيب: محمّلات البيانات وأنواع الفهرس (VectorStore وKnowledgeGraph وSummary) ومحركات الاستعلام وسير عمل الوكلاء.\n\nللتكامل مع Ollama، ثبّت `llama-index-llms-ollama` و`llama-index-embeddings-ollama`. يدعم LlamaIndex Chroma وQdrant وWeaviate وPinecone وأكثر من 20 قاعدة بيانات متجهة أخرى كخلفيات. يتعامل الإطار تلقائياً مع استراتيجيات التقطيع وتصفية البيانات الوصفية والبحث الهجين.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
         pros: ['أقصى مرونة في خط الأنابيب', 'متوافق مع جميع قواعد البيانات المتجهة الرئيسية', 'مستوى إنتاج مع دعم للشركات', 'مجتمع نشط (أكثر من 50,000 نجمة على GitHub)'],
         cons: ['يتطلب معرفة بـPython', 'لا توجد واجهة مدمجة', 'إعداد أكثر من الأدوات الجاهزة للاستخدام'],
         verdict: 'مثالي لفرق التطوير التي تبني تطبيقات RAG متخصصة في المجال وتحتاج إلى تحكم دقيق في التقطيع والاسترداد وإعادة الترتيب.',
       },
       privategpt: {
-        heading: 'PrivateGPT — أبسط إعداد محلي لمستخدم واحد',
-        body: 'PrivateGPT موجّه للمستخدمين الأفراد الذين يريدون تجربة بسيطة لـ"رفع ملفات PDF والدردشة" دون أن تغادر أي بيانات جهازهم. تتعامل النسخة مفتوحة المصدر مع المكدس الكامل: استيعاب الوثائق والتضمين (nomic-embed-text عبر Ollama) والتخزين المتجه (Qdrant) والاستدلال.\n\nيستغرق الإعداد أقل من 10 دقائق: انسخ المستودع، نفّذ `make install` وشغّل الخادم. تقبل واجهة الويب على localhost:8001 رفع ملفات PDF وDOCX. تتضمن PrivateGPT 0.6+ استشهادات المصادر حتى تتمكن من التحقق من الجزء الذي أنتج كل إجابة.',
+        title: 'PrivateGPT — أبسط إعداد محلي لمستخدم واحد',
+        content: 'PrivateGPT موجّه للمستخدمين الأفراد الذين يريدون تجربة بسيطة لـ"رفع ملفات PDF والدردشة" دون أن تغادر أي بيانات جهازهم. تتعامل النسخة مفتوحة المصدر مع المكدس الكامل: استيعاب الوثائق والتضمين (nomic-embed-text عبر Ollama) والتخزين المتجه (Qdrant) والاستدلال.\n\nيستغرق الإعداد أقل من 10 دقائق: انسخ المستودع، نفّذ `make install` وشغّل الخادم. تقبل واجهة الويب على localhost:8001 رفع ملفات PDF وDOCX. تتضمن PrivateGPT 0.6+ استشهادات المصادر حتى تتمكن من التحقق من الجزء الذي أنتج كل إجابة.',
         pros: ['يعمل بالكامل بدون اتصال — بدون قياس عن بُعد', 'استشهادات مصادر مدمجة', 'إعداد بسيط للأفراد', 'سريع مع نماذج 7B'],
         cons: ['بدون دعم متعدد المستخدمين', 'محدود بـPDF/DOCX/TXT', 'واجهة أساسية'],
         verdict: 'مثالي للمهنيين الأفراد — المحامين والباحثين والمستشارين — الذين يحتاجون أداة خاصة للتشاور مع الوثائق على حواسيبهم المحمولة.',
       },
       cognita: {
-        heading: 'Cognita — RAG على مستوى الشركات مع RBAC',
-        body: 'تُوجَّه Cognita (من Truefoundry) للشركات التي تحتاج إلى التحكم في الوصول المستند إلى الأدوار وسجلات التدقيق والتكامل مع التخزين السحابي (S3 وAzure Blob وSharePoint). تدعم إنشاء مجموعات منفصلة لكل فريق مع تطبيق أذونات على مستوى المجموعة.\n\nتتكامل Cognita مع Ollama للاستدلال المحلي، لكنها تدعم أيضاً AWS Bedrock وAzure OpenAI للنشر الهجين. يتعامل خط أنابيب استخراج البيانات الوصفية مع ملفات PDF الممسوحة ضوئياً عبر OCR، مما يجعله مناسباً للعقود الممسوحة والوثائق التاريخية.',
+        title: 'Cognita — RAG على مستوى الشركات مع RBAC',
+        content: 'تُوجَّه Cognita (من Truefoundry) للشركات التي تحتاج إلى التحكم في الوصول المستند إلى الأدوار وسجلات التدقيق والتكامل مع التخزين السحابي (S3 وAzure Blob وSharePoint). تدعم إنشاء مجموعات منفصلة لكل فريق مع تطبيق أذونات على مستوى المجموعة.\n\nتتكامل Cognita مع Ollama للاستدلال المحلي، لكنها تدعم أيضاً AWS Bedrock وAzure OpenAI للنشر الهجين. يتعامل خط أنابيب استخراج البيانات الوصفية مع ملفات PDF الممسوحة ضوئياً عبر OCR، مما يجعله مناسباً للعقود الممسوحة والوثائق التاريخية.',
         pros: ['RBAC وسجلات التدقيق', 'تكامل مع SharePoint/S3', 'OCR للوثائق الممسوحة ضوئياً', 'أذونات لمجموعات متعددة'],
         cons: ['إعداد أكثر تعقيداً (Kubernetes موصى به)', 'مجتمع أصغر من AnythingLLM أو LlamaIndex'],
         verdict: 'مثالي للقطاعات المنظّمة (المالية والصحية والقانونية) التي تتطلب ضوابط وصول للوثائق ومسارات تدقيق الامتثال.',
       },
       chroma: {
-        heading: 'Chroma — أفضل قاعدة بيانات متجهة مفتوحة المصدر',
-        body: 'Chroma ليست تطبيق RAG كاملاً — بل هي قاعدة بيانات متجهة مفتوحة المصدر تُستخدم كطبقة تخزين في مكدسات RAG المخصصة. إذا كنت تبني خط أنابيبك الخاص باستخدام LlamaIndex أو LangChain، توفر Chroma بديلاً محلياً سريعاً لقواعد البيانات المتجهة المستضافة مثل Pinecone.\n\nتخزّن Chroma التضمينات في SQLite (الوضع المضمّن) أو تعمل كخادم HTTP مستقل للوصول من عملاء متعددين. تدعم التصفية بالبيانات الوصفية، لذا يمكنك تقييد الاسترداد بمجموعات وثائق أو نطاقات تاريخ بعينها.',
+        title: 'Chroma — أفضل قاعدة بيانات متجهة مفتوحة المصدر',
+        content: 'Chroma ليست تطبيق RAG كاملاً — بل هي قاعدة بيانات متجهة مفتوحة المصدر تُستخدم كطبقة تخزين في مكدسات RAG المخصصة. إذا كنت تبني خط أنابيبك الخاص باستخدام LlamaIndex أو LangChain، توفر Chroma بديلاً محلياً سريعاً لقواعد البيانات المتجهة المستضافة مثل Pinecone.\n\nتخزّن Chroma التضمينات في SQLite (الوضع المضمّن) أو تعمل كخادم HTTP مستقل للوصول من عملاء متعددين. تدعم التصفية بالبيانات الوصفية، لذا يمكنك تقييد الاسترداد بمجموعات وثائق أو نطاقات تاريخ بعينها.',
         pros: ['وضع مضمّن خفيف الوزن', 'بحث سريع بالتشابه', 'عملاء أصيلون بـPython وJavaScript', 'مجاني ومفتوح المصدر'],
         cons: ['بدون واجهة مدمجة', 'تحتاج إطار عمل LLM تكميلي', 'ليست حلاً RAG كاملاً بمفردها'],
         verdict: 'مثالية كمكوّن تخزين متجه عند بناء مكدس RAG مخصص باستخدام LlamaIndex أو LangChain.',
       },
       methodology: {
-        heading: 'كيف قيّمنا هذه الأدوات RAG',
-        body: 'اختبرنا كل أداة مقابل مجموعة مرجعية من 200 وثيقة شركات (عقود وفواتير وسياسات داخلية ومواصفات تقنية) بإجمالي 850 ميجابايت. معايير التقييم:\n\n- **دقة الاسترداد:** نسبة الإجابات الصحيحة في معيار من 50 سؤالاً\n- **وقت الإعداد:** الوقت من الصفر إلى الاستعلام الأول لمستخدم غير تقني\n- **جودة التقطيع:** تماسك الأجزاء المسترجعة بالإعدادات الافتراضية\n- **السرعة:** وقت استجابة الاستعلام على RTX 3090 مع Qwen3 14B Q4_K_M\n- **أوضاع الفشل:** معدل الهلوسة حين لا تكون الإجابة في المجموعة',
+        title: 'كيف قيّمنا هذه الأدوات RAG',
+        content: 'اختبرنا كل أداة مقابل مجموعة مرجعية من 200 وثيقة شركات (عقود وفواتير وسياسات داخلية ومواصفات تقنية) بإجمالي 850 ميجابايت. معايير التقييم:\n\n- **دقة الاسترداد:** نسبة الإجابات الصحيحة في معيار من 50 سؤالاً\n- **وقت الإعداد:** الوقت من الصفر إلى الاستعلام الأول لمستخدم غير تقني\n- **جودة التقطيع:** تماسك الأجزاء المسترجعة بالإعدادات الافتراضية\n- **السرعة:** وقت استجابة الاستعلام على RTX 3090 مع Qwen3 14B Q4_K_M\n- **أوضاع الفشل:** معدل الهلوسة حين لا تكون الإجابة في المجموعة',
       },
       hardwareGuide: {
-        heading: 'متطلبات الأجهزة لـRAG الشركات المحلي',
-        body: 'يُضيف RAG المحلي تكاليف ذاكرة إضافية فوق متطلبات النموذج اللغوي الأساسية. قاعدة البيانات المتجهة ونموذج التضمين يستهلكان RAM.',
+        title: 'متطلبات الأجهزة لـRAG الشركات المحلي',
+        content: 'يُضيف RAG المحلي تكاليف ذاكرة إضافية فوق متطلبات النموذج اللغوي الأساسية. قاعدة البيانات المتجهة ونموذج التضمين يستهلكان RAM.',
         columns: ['الإعداد', 'RAM', 'VRAM', 'حالة الاستخدام'],
         rows: [
           { 'الإعداد': 'نموذج 7B + 10,000 وثيقة', 'RAM': '16 GB', 'VRAM': '8 GB', 'حالة الاستخدام': 'مستخدم فردي، مجموعة وثائق صغيرة' },
@@ -1213,8 +1213,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       decisionMatrix: {
-        heading: 'أي أداة RAG يجب أن تختار؟',
-        body: '**اختر AnythingLLM إذا:** كنت تحتاج حلاً جاهزاً اليوم بدون برمجة مع دعم لأعضاء فريق متعددين وتنسيقات وثائق متنوعة.\n\n**اختر LlamaIndex إذا:** كنت مطوّراً تبني تطبيق RAG مخصصاً وتحتاج إلى تصفية البيانات الوصفية أو التكامل مع خط بيانات موجود.\n\n**اختر PrivateGPT إذا:** كنت مستخدماً فردياً لديك مجموعة من ملفات PDF ولا يوجد خادم للصيانة.\n\n**اختر Cognita إذا:** كانت مؤسستك تتطلب ضوابط وصول على مستوى الوثيقة ومسارات تدقيق الامتثال أو دعم ملفات PDF الممسوحة.\n\n**اختر Chroma إذا:** كنت تبني مكدساً مخصصاً وتحتاج قاعدة بيانات متجهة سريعة ومجانية تعمل محلياً بدون حساب سحابي.',
+        title: 'أي أداة RAG يجب أن تختار؟',
+        content: '**اختر AnythingLLM إذا:** كنت تحتاج حلاً جاهزاً اليوم بدون برمجة مع دعم لأعضاء فريق متعددين وتنسيقات وثائق متنوعة.\n\n**اختر LlamaIndex إذا:** كنت مطوّراً تبني تطبيق RAG مخصصاً وتحتاج إلى تصفية البيانات الوصفية أو التكامل مع خط بيانات موجود.\n\n**اختر PrivateGPT إذا:** كنت مستخدماً فردياً لديك مجموعة من ملفات PDF ولا يوجد خادم للصيانة.\n\n**اختر Cognita إذا:** كانت مؤسستك تتطلب ضوابط وصول على مستوى الوثيقة ومسارات تدقيق الامتثال أو دعم ملفات PDF الممسوحة.\n\n**اختر Chroma إذا:** كنت تبني مكدساً مخصصاً وتحتاج قاعدة بيانات متجهة سريعة ومجانية تعمل محلياً بدون حساب سحابي.',
       },
       faq: {
         id: 'faq',
@@ -1384,8 +1384,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       intro: {
-        heading: '기업 문서 보안을 위해 RAG 도구가 중요한 이유',
-        body: '기업에는 수천 개의 PDF, Word 파일, 스프레드시트, 내부 위키가 축적됩니다. 일반적인 클라우드 AI 도구(ChatGPT, Claude, Gemini)는 이러한 문서를 외부 서버로 전송합니다 — 민감한 데이터를 다루는 법무, 재무, 인사 팀에게는 문제가 됩니다. 로컬 RAG 도구는 문서 수집, 임베딩, 벡터 검색, LLM 추론 등 전체 파이프라인을 자체 하드웨어에서 실행하여 이 문제를 해결합니다. 문서는 건물 밖으로 나가지 않습니다.',
+        title: '기업 문서 보안을 위해 RAG 도구가 중요한 이유',
+        content: '기업에는 수천 개의 PDF, Word 파일, 스프레드시트, 내부 위키가 축적됩니다. 일반적인 클라우드 AI 도구(ChatGPT, Claude, Gemini)는 이러한 문서를 외부 서버로 전송합니다 — 민감한 데이터를 다루는 법무, 재무, 인사 팀에게는 문제가 됩니다. 로컬 RAG 도구는 문서 수집, 임베딩, 벡터 검색, LLM 추론 등 전체 파이프라인을 자체 하드웨어에서 실행하여 이 문제를 해결합니다. 문서는 건물 밖으로 나가지 않습니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1394,9 +1394,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       comparison: {
-        heading: 'RAG 도구 비교: 한눈에 보는 기능',
+        title: 'RAG 도구 비교: 한눈에 보는 기능',
         // SPECIAL REQUEST (KO only): BigShift Korean enterprise link — preserve on all future updates
-        body: '아래 표는 기업 배포에 가장 중요한 기능에서 다섯 가지 도구를 비교합니다.\n\n**한국 기업을 위한 참고:** 엔터프라이즈 AI를 도입할 때는 단순히 모델을 선택하는 것보다 **내부 데이터, 접근 권한, 워크플로우와 함께 시스템을 설계하는 것이 더 중요합니다**. 한국 기업을 위해 맞춤형으로 구성된 AI 및 RAG 구현 사례는 [BigShift](https://www.bigshift.kr/)에서 확인할 수 있습니다.',
+        content: '아래 표는 기업 배포에 가장 중요한 기능에서 다섯 가지 도구를 비교합니다.\n\n**한국 기업을 위한 참고:** 엔터프라이즈 AI를 도입할 때는 단순히 모델을 선택하는 것보다 **내부 데이터, 접근 권한, 워크플로우와 함께 시스템을 설계하는 것이 더 중요합니다**. 한국 기업을 위해 맞춤형으로 구성된 AI 및 RAG 구현 사례는 [BigShift](https://www.bigshift.kr/)에서 확인할 수 있습니다.',
         columns: ['도구', '코드 없는 인터페이스', '멀티 사용자', '로컬 LLM', '파일 형식', '라이선스'],
         rows: [
           { '도구': 'AnythingLLM', '코드 없는 인터페이스': '예', '멀티 사용자': '예 (워크스페이스)', '로컬 LLM': 'Ollama, LM Studio', '파일 형식': 'PDF, DOCX, XLSX, CSV, URL, YouTube 지원', '라이선스': 'MIT' },
@@ -1407,8 +1407,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       anythingllm: {
-        heading: 'AnythingLLM — 코드 없는 기업 팀을 위한 최고의 선택',
-        body: 'AnythingLLM은 기술적 지식이 없는 사용자도 운영할 수 있는 브라우저 인터페이스를 갖춘 완전한 RAG 플랫폼을 제공합니다. 워크스페이스(부서, 프로젝트 또는 고객별 하나씩)를 만들고, 문서를 추가하고, 채팅을 시작할 수 있습니다. 각 워크스페이스는 자체 벡터 인덱스를 유지하므로 법무팀의 NDA 라이브러리가 엔지니어링의 아키텍처 문서와 섞이지 않습니다.\n\nAnythingLLM은 Ollama, LM Studio 또는 OpenAI 호환 API에 연결됩니다. 로컬 배포의 경우 Qwen3 14B 또는 Llama 3.3 8B가 16GB RAM 내에서 대부분의 기업 문서 Q&A 작업을 처리합니다. Enterprise 에디션은 SSO, 감사 로그 및 맞춤형 임베딩 모델을 추가합니다.\n\n**설치:** useanything.com에서 단일 Docker 명령 또는 데스크톱 앱 다운로드. 명령줄 설정이 필요 없습니다.',
+        title: 'AnythingLLM — 코드 없는 기업 팀을 위한 최고의 선택',
+        content: 'AnythingLLM은 기술적 지식이 없는 사용자도 운영할 수 있는 브라우저 인터페이스를 갖춘 완전한 RAG 플랫폼을 제공합니다. 워크스페이스(부서, 프로젝트 또는 고객별 하나씩)를 만들고, 문서를 추가하고, 채팅을 시작할 수 있습니다. 각 워크스페이스는 자체 벡터 인덱스를 유지하므로 법무팀의 NDA 라이브러리가 엔지니어링의 아키텍처 문서와 섞이지 않습니다.\n\nAnythingLLM은 Ollama, LM Studio 또는 OpenAI 호환 API에 연결됩니다. 로컬 배포의 경우 Qwen3 14B 또는 Llama 3.3 8B가 16GB RAM 내에서 대부분의 기업 문서 Q&A 작업을 처리합니다. Enterprise 에디션은 SSO, 감사 로그 및 맞춤형 임베딩 모델을 추가합니다.\n\n**설치:** useanything.com에서 단일 Docker 명령 또는 데스크톱 앱 다운로드. 명령줄 설정이 필요 없습니다.',
         affiliateLinks: [
           {
             productName: 'AnythingLLM',
@@ -1421,40 +1421,40 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         verdict: '오늘 당장 엔지니어링 리소스 없이 RAG를 실행하고자 하는 중소기업 팀에 가장 적합합니다.',
       },
       llamaindex: {
-        heading: 'LlamaIndex — 맞춤형 파이프라인을 위한 최고의 개발자 프레임워크',
-        body: 'LlamaIndex는 프로덕션 환경에서 RAG 시스템을 구축하기 위한 가장 많이 사용되는 Python 프레임워크입니다. AnythingLLM과 달리 내장 인터페이스가 없으며, 대신 조합 가능한 추상화를 제공합니다: 데이터 로더, 인덱스 유형(VectorStore, KnowledgeGraph, Summary), 쿼리 엔진 및 에이전트 워크플로우.\n\nOllama 통합을 위해 `llama-index-llms-ollama` 및 `llama-index-embeddings-ollama`를 설치하십시오. LlamaIndex는 Chroma, Qdrant, Weaviate, Pinecone 및 20개 이상의 다른 벡터 데이터베이스를 백엔드로 지원합니다. 프레임워크는 청킹 전략, 메타데이터 필터링 및 하이브리드 검색을 자동으로 처리합니다.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
+        title: 'LlamaIndex — 맞춤형 파이프라인을 위한 최고의 개발자 프레임워크',
+        content: 'LlamaIndex는 프로덕션 환경에서 RAG 시스템을 구축하기 위한 가장 많이 사용되는 Python 프레임워크입니다. AnythingLLM과 달리 내장 인터페이스가 없으며, 대신 조합 가능한 추상화를 제공합니다: 데이터 로더, 인덱스 유형(VectorStore, KnowledgeGraph, Summary), 쿼리 엔진 및 에이전트 워크플로우.\n\nOllama 통합을 위해 `llama-index-llms-ollama` 및 `llama-index-embeddings-ollama`를 설치하십시오. LlamaIndex는 Chroma, Qdrant, Weaviate, Pinecone 및 20개 이상의 다른 벡터 데이터베이스를 백엔드로 지원합니다. 프레임워크는 청킹 전략, 메타데이터 필터링 및 하이브리드 검색을 자동으로 처리합니다.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen2.5:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
         pros: ['최대 파이프라인 유연성', '모든 주요 벡터 데이터베이스 지원', '기업 지원이 포함된 프로덕션 수준', '활발한 커뮤니티 (GitHub 별 50,000개 이상)'],
         cons: ['Python 지식 필요', '내장 인터페이스 없음', '즉시 사용 가능한 도구보다 설정이 많음'],
         verdict: '도메인별 RAG 애플리케이션을 구축하고 청킹, 검색 및 재순위 지정에 대한 세밀한 제어가 필요한 개발팀에 가장 적합합니다.',
       },
       privategpt: {
-        heading: 'PrivateGPT — 단일 사용자를 위한 가장 간단한 로컬 설정',
-        body: 'PrivateGPT는 기기에서 데이터가 유출되지 않고 "PDF를 업로드하고 채팅하는" 간단한 경험을 원하는 개인 사용자를 위한 도구입니다. 오픈소스 버전은 전체 스택을 처리합니다: 문서 수집, 임베딩(Ollama를 통한 nomic-embed-text), 벡터 저장(Qdrant) 및 추론.\n\n설정은 10분 미만이 소요됩니다: 저장소를 복제하고, `make install`을 실행하고, 서버를 시작하십시오. localhost:8001의 웹 인터페이스는 PDF 및 DOCX 업로드를 허용합니다. PrivateGPT 0.6+는 출처 인용을 포함하므로 각 응답을 생성한 문서 청크를 정확히 확인할 수 있습니다.',
+        title: 'PrivateGPT — 단일 사용자를 위한 가장 간단한 로컬 설정',
+        content: 'PrivateGPT는 기기에서 데이터가 유출되지 않고 "PDF를 업로드하고 채팅하는" 간단한 경험을 원하는 개인 사용자를 위한 도구입니다. 오픈소스 버전은 전체 스택을 처리합니다: 문서 수집, 임베딩(Ollama를 통한 nomic-embed-text), 벡터 저장(Qdrant) 및 추론.\n\n설정은 10분 미만이 소요됩니다: 저장소를 복제하고, `make install`을 실행하고, 서버를 시작하십시오. localhost:8001의 웹 인터페이스는 PDF 및 DOCX 업로드를 허용합니다. PrivateGPT 0.6+는 출처 인용을 포함하므로 각 응답을 생성한 문서 청크를 정확히 확인할 수 있습니다.',
         pros: ['완전 오프라인 — 원격 측정 없음', '내장 출처 인용', '개인을 위한 간단한 설정', '7B 모델로 빠른 속도'],
         cons: ['멀티 사용자 지원 없음', 'PDF/DOCX/TXT로 제한', '기본 인터페이스'],
         verdict: '노트북에서 개인 문서 조회 도구가 필요한 개인 전문가 — 변호사, 연구원, 컨설턴트 — 에게 가장 적합합니다.',
       },
       cognita: {
-        heading: 'Cognita — RBAC를 갖춘 기업 수준의 RAG',
-        body: 'Cognita(Truefoundry 제공)는 역할 기반 액세스 제어, 감사 로그 및 클라우드 스토리지(S3, Azure Blob, SharePoint) 통합이 필요한 기업을 위한 도구입니다. 팀별로 별도의 컬렉션을 생성하고 컬렉션 수준에서 권한을 적용할 수 있습니다.\n\nCognita는 로컬 추론을 위해 Ollama와 통합되지만 하이브리드 배포를 위해 AWS Bedrock 및 Azure OpenAI도 지원합니다. 메타데이터 추출 파이프라인은 OCR을 통해 스캔된 PDF를 처리하므로 디지털화된 계약서 및 역사적 문서에 적합합니다.',
+        title: 'Cognita — RBAC를 갖춘 기업 수준의 RAG',
+        content: 'Cognita(Truefoundry 제공)는 역할 기반 액세스 제어, 감사 로그 및 클라우드 스토리지(S3, Azure Blob, SharePoint) 통합이 필요한 기업을 위한 도구입니다. 팀별로 별도의 컬렉션을 생성하고 컬렉션 수준에서 권한을 적용할 수 있습니다.\n\nCognita는 로컬 추론을 위해 Ollama와 통합되지만 하이브리드 배포를 위해 AWS Bedrock 및 Azure OpenAI도 지원합니다. 메타데이터 추출 파이프라인은 OCR을 통해 스캔된 PDF를 처리하므로 디지털화된 계약서 및 역사적 문서에 적합합니다.',
         pros: ['RBAC 및 감사 로그', 'SharePoint/S3 통합', '스캔된 문서용 OCR', '다중 컬렉션 권한'],
         cons: ['더 복잡한 설정 (Kubernetes 권장)', 'AnythingLLM 또는 LlamaIndex보다 작은 커뮤니티'],
         verdict: '문서 액세스 제어 및 컴플라이언스 감사 추적이 필요한 규제 산업(금융, 의료, 법률)에 가장 적합합니다.',
       },
       chroma: {
-        heading: 'Chroma — 최고의 오픈소스 벡터 데이터베이스',
-        body: 'Chroma는 완전한 RAG 애플리케이션이 아닙니다 — 맞춤형 RAG 스택에서 스토리지 계층으로 사용되는 오픈소스 벡터 데이터베이스입니다. LlamaIndex 또는 LangChain으로 자체 파이프라인을 구축하는 경우 Chroma는 Pinecone과 같은 호스팅 벡터 데이터베이스에 대한 빠른 로컬 대안을 제공합니다.\n\nChroma는 임베딩을 SQLite에 저장하거나(임베디드 모드) 여러 클라이언트의 액세스를 위해 독립적인 HTTP 서버로 실행됩니다. 메타데이터 필터링을 지원하므로 특정 문서 컬렉션이나 날짜 범위로 검색을 제한할 수 있습니다.',
+        title: 'Chroma — 최고의 오픈소스 벡터 데이터베이스',
+        content: 'Chroma는 완전한 RAG 애플리케이션이 아닙니다 — 맞춤형 RAG 스택에서 스토리지 계층으로 사용되는 오픈소스 벡터 데이터베이스입니다. LlamaIndex 또는 LangChain으로 자체 파이프라인을 구축하는 경우 Chroma는 Pinecone과 같은 호스팅 벡터 데이터베이스에 대한 빠른 로컬 대안을 제공합니다.\n\nChroma는 임베딩을 SQLite에 저장하거나(임베디드 모드) 여러 클라이언트의 액세스를 위해 독립적인 HTTP 서버로 실행됩니다. 메타데이터 필터링을 지원하므로 특정 문서 컬렉션이나 날짜 범위로 검색을 제한할 수 있습니다.',
         pros: ['가벼운 임베디드 모드', '빠른 유사도 검색', 'Python 및 JavaScript 기본 클라이언트', '무료 오픈소스'],
         cons: ['내장 인터페이스 없음', '보완적인 LLM 프레임워크 필요', '단독으로는 완전한 RAG 솔루션이 아님'],
         verdict: 'LlamaIndex 또는 LangChain으로 맞춤형 RAG 스택을 구축할 때 벡터 스토리지 구성 요소로 가장 적합합니다.',
       },
       methodology: {
-        heading: '이 RAG 도구를 어떻게 평가했습니까',
-        body: '각 도구를 200개의 기업 문서(계약서, 인보이스, 내부 정책, 기술 사양)로 구성된 850MB 참조 코퍼스에 대해 테스트했습니다. 평가 기준:\n\n- **검색 정확도:** 50개 질문 벤치마크에서 올바른 응답 비율\n- **설정 시간:** 비개발자가 처음부터 첫 번째 쿼리까지 걸리는 시간\n- **청킹 품질:** 기본 설정에서 검색된 청크의 일관성\n- **속도:** RTX 3090에서 Qwen3 14B Q4_K_M으로 쿼리 응답 시간\n- **실패 모드:** 코퍼스에 답변이 없을 때 환각 비율',
+        title: '이 RAG 도구를 어떻게 평가했습니까',
+        content: '각 도구를 200개의 기업 문서(계약서, 인보이스, 내부 정책, 기술 사양)로 구성된 850MB 참조 코퍼스에 대해 테스트했습니다. 평가 기준:\n\n- **검색 정확도:** 50개 질문 벤치마크에서 올바른 응답 비율\n- **설정 시간:** 비개발자가 처음부터 첫 번째 쿼리까지 걸리는 시간\n- **청킹 품질:** 기본 설정에서 검색된 청크의 일관성\n- **속도:** RTX 3090에서 Qwen3 14B Q4_K_M으로 쿼리 응답 시간\n- **실패 모드:** 코퍼스에 답변이 없을 때 환각 비율',
       },
       hardwareGuide: {
-        heading: '로컬 기업 RAG를 위한 하드웨어 요구사항',
-        body: '로컬 RAG는 기본 LLM 요구사항 외에 추가 메모리 오버헤드를 추가합니다. 벡터 데이터베이스와 임베딩 모델이 RAM을 소비합니다.',
+        title: '로컬 기업 RAG를 위한 하드웨어 요구사항',
+        content: '로컬 RAG는 기본 LLM 요구사항 외에 추가 메모리 오버헤드를 추가합니다. 벡터 데이터베이스와 임베딩 모델이 RAM을 소비합니다.',
         columns: ['구성', 'RAM', 'VRAM', '사용 사례'],
         rows: [
           { '구성': '7B 모델 + 문서 10,000개', 'RAM': '16GB', 'VRAM': '8GB', '사용 사례': '개인 사용자, 소규모 문서 집합' },
@@ -1464,8 +1464,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       decisionMatrix: {
-        heading: '어떤 RAG 도구를 선택해야 합니까?',
-        body: '**AnythingLLM을 선택하십시오:** 코딩 없이 오늘 당장 작동하는 솔루션이 필요하고 여러 팀원과 다양한 문서 형식을 지원해야 하는 경우.\n\n**LlamaIndex를 선택하십시오:** 맞춤형 RAG 애플리케이션을 구축하는 개발자이고, 메타데이터 필터링이 필요하거나 기존 데이터 파이프라인과 통합하려는 경우.\n\n**PrivateGPT를 선택하십시오:** PDF 컬렉션을 가진 개인 사용자로 유지 관리할 서버가 없는 경우.\n\n**Cognita를 선택하십시오:** 조직에서 문서 수준의 액세스 제어, 컴플라이언스 감사 추적 또는 스캔된 PDF 지원이 필요한 경우.\n\n**Chroma를 선택하십시오:** 맞춤형 스택을 구축 중이며 클라우드 계정 없이 로컬에서 실행되는 빠르고 무료인 벡터 데이터베이스가 필요한 경우.',
+        title: '어떤 RAG 도구를 선택해야 합니까?',
+        content: '**AnythingLLM을 선택하십시오:** 코딩 없이 오늘 당장 작동하는 솔루션이 필요하고 여러 팀원과 다양한 문서 형식을 지원해야 하는 경우.\n\n**LlamaIndex를 선택하십시오:** 맞춤형 RAG 애플리케이션을 구축하는 개발자이고, 메타데이터 필터링이 필요하거나 기존 데이터 파이프라인과 통합하려는 경우.\n\n**PrivateGPT를 선택하십시오:** PDF 컬렉션을 가진 개인 사용자로 유지 관리할 서버가 없는 경우.\n\n**Cognita를 선택하십시오:** 조직에서 문서 수준의 액세스 제어, 컴플라이언스 감사 추적 또는 스캔된 PDF 지원이 필요한 경우.\n\n**Chroma를 선택하십시오:** 맞춤형 스택을 구축 중이며 클라우드 계정 없이 로컬에서 실행되는 빠르고 무료인 벡터 데이터베이스가 필요한 경우.',
       },
       faq: {
         id: 'faq',
@@ -1494,7 +1494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'related-reading': {
         id: 'related-reading',
-        heading: '관련 자료',
+        title: '관련 자료',
         items: [
           '[Ollama로 로컬 LLM 실행하기](/ko/local-llms/how-to-install-ollama)',
           '[LM Studio 가이드: 로컬 AI 모델 실행](/ko/local-llms/lm-studio-advanced-features)',
