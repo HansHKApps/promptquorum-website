@@ -6940,8 +6940,8 @@
       ]
     },
     "best-workstation-build-local-ai-2026": {
-      "dateModified": null,
-      "lastFactChecked": null,
+      "dateModified": "2026-08-25",
+      "lastFactChecked": "2026-08-25",
       "publishDate": "2026-05-26",
       "hasSections": true,
       "langs": [
@@ -9733,7 +9733,7 @@
       "images": []
     },
     "best-hardware-for-local-smart-home": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-06-04",
       "hasSections": true,
@@ -9751,7 +9751,7 @@
       "images": [
         {
           "url": "/images/best-hardware-for-local-smart-home-llm-capacity-en.svg",
-          "title": "Local LLM capacity by hardware tier: Raspberry Pi 5 runs only tiny models, an Intel N100/N150 Mini PC handles small models, a Ryzen Mini PC (32GB RAM) runs 7B–8B models, and a used RTX 3090 (24GB VRAM) scales to about 70B at Q4 quantization."
+          "title": "Local LLM capacity by hardware tier: Raspberry Pi 5 runs only tiny models, an Intel N100/N150 Mini PC handles small models, a Ryzen Mini PC (32GB RAM) runs 7B–8B models, and a used RTX 3090 (24GB VRAM) scales to about 70B at Q4 quantization depending on setup."
         },
         {
           "url": "/images/best-hardware-for-local-smart-home-decision-tree-en.svg",
