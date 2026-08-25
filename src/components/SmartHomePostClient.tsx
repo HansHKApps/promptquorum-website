@@ -47,6 +47,39 @@ const SECTION_HEADER_LABELS: Partial<Record<Language, Record<string, string>>> =
 
 // Post UI translations
 const POST_UI: Record<string, Record<string, string>> = {
+  decisionUseLocal: {
+    en: 'Use a local LLM if:',
+    de: 'Lokales LLM nutzen, wenn:',
+    fr: 'Utilisez un LLM local si :',
+    ja: 'ローカルLLMを使うべき場合：',
+    zh: '以下情况使用本地LLM：',
+    es: 'Usa un LLM local si:',
+    pt: 'Use um LLM local se:',
+    ar: 'استخدم LLM محليًا إذا:',
+    ko: '다음의 경우 로컬 LLM을 사용하십시오:',
+  },
+  decisionUseCloud: {
+    en: 'Use a cloud model if:',
+    de: 'Cloud-Modell nutzen, wenn:',
+    fr: 'Utilisez un modèle cloud si :',
+    ja: 'クラウドモデルを使うべき場合：',
+    zh: '以下情况使用云端模型：',
+    es: 'Usa un modelo en la nube si:',
+    pt: 'Use um modelo em nuvem se:',
+    ar: 'استخدم نموذجًا سحابيًا إذا:',
+    ko: '다음의 경우 클라우드 모델을 사용하십시오:',
+  },
+  decisionQuick: {
+    en: 'Quick decision:',
+    de: 'Schnelle Entscheidung:',
+    fr: 'Décision rapide :',
+    ja: 'クイック判断：',
+    zh: '快速决策：',
+    es: 'Decisión rápida:',
+    pt: 'Decisão rápida:',
+    ar: 'قرار سريع:',
+    ko: '빠른 결정:',
+  },
   byLine: {
     en: 'By [Hans Kuepper](/about) · Founder of PromptQuorum, multi-model AI dispatch tool · PromptQuorum',
     de: 'Von [Hans Kuepper](/about) · Gründer von PromptQuorum, Multi-Model-AI-Dispatch-Tool · PromptQuorum',
@@ -517,7 +550,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
           <div className="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-primary/10">
             {/* Use local if */}
             <div className="p-4">
-              <p className="text-xs font-bold uppercase tracking-wide text-green-600 mb-2">Use a local LLM if:</p>
+              <p className="text-xs font-bold uppercase tracking-wide text-green-600 mb-2">{POST_UI.decisionUseLocal[lang] ?? POST_UI.decisionUseLocal['en']}</p>
               <ul className="space-y-1.5">
                 {section.decisionBlock.localIf.map((item, i) => (
                   <li key={i} className="flex gap-2 text-sm text-text-secondary">
@@ -529,7 +562,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
             </div>
             {/* Use cloud if */}
             <div className="p-4">
-              <p className="text-xs font-bold uppercase tracking-wide text-orange-600 mb-2">Use a cloud model if:</p>
+              <p className="text-xs font-bold uppercase tracking-wide text-orange-600 mb-2">{POST_UI.decisionUseCloud[lang] ?? POST_UI.decisionUseCloud['en']}</p>
               <ul className="space-y-1.5">
                 {section.decisionBlock.cloudIf.map((item, i) => (
                   <li key={i} className="flex gap-2 text-sm text-text-secondary">
@@ -541,7 +574,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
             </div>
             {/* Quick decision */}
             <div className="p-4 bg-primary/3">
-              <p className="text-xs font-bold uppercase tracking-wide text-primary mb-2">Quick decision:</p>
+              <p className="text-xs font-bold uppercase tracking-wide text-primary mb-2">{POST_UI.decisionQuick[lang] ?? POST_UI.decisionQuick['en']}</p>
               <ul className="space-y-1.5">
                 {section.decisionBlock.quick.map((item, i) => (
                   <li key={i} className="flex gap-2 text-sm text-text-secondary">
@@ -555,16 +588,40 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
         </div>
       )}
 
-      {/* Bullet list */}
+      {/* Bullet list — a standalone bold item (e.g. "**Pros**", "**Buy the X if:**") is a
+          sub-heading for the items that follow, not a bullet point of its own. */}
       {!section.isTldr && section.items && (
-        <ul className="space-y-3 my-4">
-          {section.items.map((item, i) => (
-            <li key={i} className="flex gap-3 text-text-secondary">
-              <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${colors.dot}`} />
-              <span className="leading-relaxed">{renderInlineLinks(item, lang)}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="my-4">
+          {(() => {
+            const headingOnly = /^\*\*([^*]+)\*\*:?\s*$/
+            const groups: { heading: string | null; items: string[] }[] = []
+            for (const item of section.items) {
+              const match = item.match(headingOnly)
+              if (match) {
+                groups.push({ heading: match[1], items: [] })
+              } else if (groups.length > 0) {
+                groups[groups.length - 1].items.push(item)
+              } else {
+                groups.push({ heading: null, items: [item] })
+              }
+            }
+            return groups.map((group, gi) => (
+              <div key={gi} className={gi > 0 ? 'mt-5' : undefined}>
+                {group.heading && (
+                  <p className="font-bold text-text-primary mb-2">{renderInlineLinks(group.heading, lang)}</p>
+                )}
+                <ul className="space-y-3">
+                  {group.items.map((item, i) => (
+                    <li key={i} className="flex gap-3 text-text-secondary">
+                      <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${colors.dot}`} />
+                      <span className="leading-relaxed">{renderInlineLinks(item, lang)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          })()}
+        </div>
       )}
 
       {/* Numbered list */}
@@ -814,6 +871,24 @@ function SmartHomePostContent({ slug, lang, articleData }: Props) {
             <p className="text-text-primary font-semibold leading-relaxed">
               {renderInlineLinks(article.leadAnswerBlock, lang)}
             </p>
+          </div>
+        )}
+
+        {/* Article-level affiliate links (not attached to any single section) */}
+        {article.affiliateLinks && article.affiliateLinks.length > 0 && (
+          <div className="flex flex-wrap gap-2.5 mb-6">
+            {article.affiliateLinks.map((link, i) => (
+              <AffiliateLink
+                key={i}
+                url={link.url}
+                productName={link.productName}
+                productCategory={link.productCategory}
+                priceRange={link.priceRange}
+                lang={lang}
+                label={link.label}
+                variant="button"
+              />
+            ))}
           </div>
         )}
 

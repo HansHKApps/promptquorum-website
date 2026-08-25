@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">ثلاث فئات لمحطات العمل: مقارنة مواصفات العتاد</text>
+
+  <!-- Header row -->
+  <text x="27" y="66" font-size="12" font-weight="700" fill="#79747E">الفئة</text>
+  <text x="140" y="66" font-size="12" font-weight="700" fill="#79747E">GPU / VRAM</text>
+  <text x="360" y="66" font-size="12" font-weight="700" fill="#79747E">CPU</text>
+  <text x="530" y="66" font-size="12" font-weight="700" fill="#79747E">RAM</text>
+  <text x="650" y="66" font-size="12" font-weight="700" fill="#79747E">سرعة 70B</text>
+  <line x1="18" y1="76" x2="782" y2="76" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: اقتصادية -->
+  <circle cx="35" cy="110" r="12" fill="#F4B400"/>
+  <text x="35" y="114" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="58" y="106" font-size="13" font-weight="700" fill="#1C1B1F">اقتصادية</text>
+  <text x="140" y="106" font-size="12" fill="#1C1B1F">RTX 3090 (مستعملة)</text>
+  <text x="140" y="122" font-size="11" fill="#49454F">24 GB VRAM, ~1 TB/s</text>
+  <text x="360" y="106" font-size="12" fill="#1C1B1F">Ryzen 7 7700X</text>
+  <text x="530" y="106" font-size="12" fill="#1C1B1F">64 GB DDR4</text>
+  <text x="650" y="106" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#49454F">5–8 tok/s</text>
+  <text x="650" y="122" font-size="10" fill="#79747E">(تفريغ المعالج)</text>
+  <line x1="18" y1="140" x2="782" y2="140" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: موصى بها (highlighted) -->
+  <rect x="18" y="150" width="764" height="66" fill="#F7F2FA" rx="4"/>
+  <circle cx="35" cy="180" r="12" fill="#6750A4"/>
+  <text x="35" y="184" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="58" y="176" font-size="13" font-weight="700" fill="#6750A4">موصى بها</text>
+  <text x="140" y="176" font-size="12" fill="#1C1B1F">RTX 4090</text>
+  <text x="140" y="192" font-size="11" fill="#49454F">24 GB VRAM, ~1 TB/s</text>
+  <text x="360" y="176" font-size="12" fill="#1C1B1F">Ryzen 9 9950X</text>
+  <text x="530" y="176" font-size="12" fill="#1C1B1F">64 GB DDR5</text>
+  <text x="650" y="176" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#6750A4">10–15 tok/s</text>
+  <text x="650" y="192" font-size="10" fill="#79747E">(تفريغ المعالج)</text>
+  <line x1="18" y1="216" x2="782" y2="216" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: احترافية -->
+  <circle cx="35" cy="250" r="12" fill="#34A853"/>
+  <text x="35" y="254" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="58" y="246" font-size="13" font-weight="700" fill="#1C1B1F">احترافية</text>
+  <text x="140" y="246" font-size="12" fill="#1C1B1F">2× RTX 3090</text>
+  <text x="140" y="262" font-size="11" fill="#49454F">إجمالي 48 GB VRAM</text>
+  <text x="360" y="246" font-size="12" fill="#1C1B1F">Threadripper 7960X</text>
+  <text x="530" y="246" font-size="12" fill="#1C1B1F">256 GB DDR5</text>
+  <text x="650" y="246" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#34A853">25–40 tok/s</text>
+  <text x="650" y="262" font-size="10" fill="#79747E">(GPU كامل)</text>
+  <line x1="18" y1="280" x2="782" y2="280" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="400" y="304" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">تشغّل الفئات الثلاث نماذج 7B–30B بالكامل على GPU؛ سرعة استدلال 70B فقط هي ما يميّز الفئات.</text>
+  <text x="400" y="322" font-size="11" fill="#79747E" text-anchor="middle">تشترك الفئتان 1 و2 في مقبس AM5 — يمكن ترقية GPU/RAM دون لوحة أم جديدة.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

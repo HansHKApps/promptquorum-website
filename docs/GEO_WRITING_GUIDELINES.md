@@ -669,6 +669,14 @@ Publishing a new article is not complete until existing articles link back to it
 
 **Before shipping a comparison/affiliate article, grep for unlinked CTAs:** `grep -n "→ [A-Za-z]" file.ts | grep -v "\["` (adjust the arrow/script for the language) should return nothing except deliberate non-product pointers (e.g. "→ compare prices below" pointing at an on-page table with no single vendor to link).
 
+#### Rule: The Main 2–3 Affiliate Links Must Appear at the Top of the Article (Mandatory)
+
+**Every affiliate/comparison article must set a top-level `affiliateLinks` field on the `LLMArticle` object** (sibling to `leadAnswerBlock`, `affiliateDisclosure`, etc. — not nested inside a `sections.*` entry), containing the 2–3 links a reader is most likely to want immediately: for a single-product review, that's the one "check price" link; for a comparison/buying-guide article with multiple tiers or products (e.g. Budget/Recommended/Professional), that's one link per tier or per top recommendation. The `*PostClient.tsx` renderer places this field automatically right after the lead-answer summary block and before the article body, so setting the field is enough — no section restructuring needed.
+
+**Reuse the same links already defined lower in the article** (e.g. from the first comparison table's `affiliateLinks`) rather than inventing new ones — same `url`, `label`, `productName`, `productCategory`, `priceRange` per language. This was missing on `best-workstation-build-local-ai-2026` (fixed 2026-08-25) and `minisforum-um890-pro-local-ai-review` (fixed 2026-08-25) even though `PowerLocalLLMPostClient.tsx`/`SmartHomePostClient.tsx` already supported rendering it — the article data simply never set the field. Check for this gap on every new affiliate article: if the top of the page (right under the lead-answer box) has no buttons, the top-level `affiliateLinks` field is missing.
+
+Apply identically across all 9 language blocks, using each language's already-translated label/URL (e.g. region-appropriate retailer domain: `amazon.de` for `de`, `amazon.fr` for `fr`, `jd.com`/`coupang.com`/`noon.com` for `zh`/`ko`/`ar` where the article already uses those).
+
 ---
 
 ### SECTION G: Schema Markup (Rule 5)

@@ -1,0 +1,77 @@
+<svg viewBox="0 0 800 470" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="470" fill="#FFFFFF"/>
+  <text x="400" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">¿Qué nivel de estación de trabajo se ajusta a tu IA local?</text>
+
+  <!-- Root node -->
+  <rect x="260" y="45" width="280" height="50" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="400" y="66" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Tamaño de modelo máximo</text>
+  <text x="400" y="83" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">que necesitas ejecutar en local?</text>
+
+  <!-- Level 1 branches -->
+  <line x1="330" y1="95" x2="160" y2="165" stroke="#6750A4" stroke-width="2"/>
+  <line x1="470" y1="95" x2="620" y2="165" stroke="#6750A4" stroke-width="2"/>
+  <text x="205" y="120" font-size="11" font-weight="700" fill="#79747E">≤ 30B</text>
+  <text x="565" y="120" font-size="11" font-weight="700" fill="#79747E">Necesitas 70B</text>
+
+  <!-- Level 2 left node -->
+  <rect x="30" y="165" width="260" height="55" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="160" y="188" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">El presupuesto es lo principal</text>
+  <text x="160" y="205" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">¿para un build ≤30B?</text>
+
+  <!-- Level 2 right node -->
+  <rect x="490" y="165" width="260" height="55" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <text x="620" y="188" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">¿Necesitas 70B a plena</text>
+  <text x="620" y="205" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">velocidad GPU (25–40 tok/s)?</text>
+
+  <!-- Level 2 branches to leaves -->
+  <line x1="90" y1="220" x2="109" y2="295" stroke="#6750A4" stroke-width="2"/>
+  <line x1="230" y1="220" x2="289" y2="295" stroke="#6750A4" stroke-width="2"/>
+  <line x1="550" y1="220" x2="469" y2="295" stroke="#6750A4" stroke-width="2"/>
+  <line x1="690" y1="220" x2="649" y2="295" stroke="#6750A4" stroke-width="2"/>
+  <text x="40" y="252" font-size="11" font-weight="700" fill="#79747E">Sí</text>
+  <text x="284" y="252" font-size="11" font-weight="700" fill="#79747E">No</text>
+  <text x="487" y="252" font-size="11" font-weight="700" fill="#79747E">No</text>
+  <text x="693" y="252" font-size="11" font-weight="700" fill="#79747E">Sí</text>
+
+  <!-- Leaf 1: Nivel Económico -->
+  <rect x="27" y="295" width="165" height="140" rx="6" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+  <rect x="27" y="295" width="165" height="4" rx="0" fill="#F4B400"/>
+  <text x="109" y="320" font-size="14" font-weight="700" fill="#F4B400" text-anchor="middle">Nivel Económico</text>
+  <text x="109" y="342" font-size="11" fill="#1C1B1F" text-anchor="middle">RTX 3090, 24 GB VRAM</text>
+  <text x="109" y="360" font-size="11" fill="#1C1B1F" text-anchor="middle">Ryzen 7 7700X</text>
+  <text x="109" y="378" font-size="11" fill="#1C1B1F" text-anchor="middle">30B Q4 a plena velocidad GPU</text>
+  <text x="109" y="396" font-family="'SF Mono', Monaco, monospace" font-size="10" font-weight="700" fill="#49454F" text-anchor="middle">12–18 tok/s (32B Q4)</text>
+  <text x="109" y="416" font-size="10" fill="#79747E" text-anchor="middle">Entrada al menor coste</text>
+
+  <!-- Leaf 2: Nivel Recomendado (headroom) -->
+  <rect x="207" y="295" width="165" height="140" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="207" y="295" width="165" height="4" rx="0" fill="#6750A4"/>
+  <text x="289" y="320" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">Nivel Recomendado</text>
+  <text x="289" y="342" font-size="11" fill="#1C1B1F" text-anchor="middle">RTX 4090, 24 GB VRAM</text>
+  <text x="289" y="360" font-size="11" fill="#1C1B1F" text-anchor="middle">Ryzen 9 9950X</text>
+  <text x="289" y="378" font-size="11" fill="#1C1B1F" text-anchor="middle">30B Q4 a plena velocidad GPU</text>
+  <text x="289" y="396" font-family="'SF Mono', Monaco, monospace" font-size="10" font-weight="700" fill="#6750A4" text-anchor="middle">28–38 tok/s (30B Q4)</text>
+  <text x="289" y="416" font-size="10" fill="#79747E" text-anchor="middle">Margen para crecer a 70B</text>
+
+  <!-- Leaf 3: Nivel Recomendado (CPU offload for 70B) -->
+  <rect x="387" y="295" width="165" height="140" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="387" y="295" width="165" height="4" rx="0" fill="#6750A4"/>
+  <text x="469" y="320" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">Nivel Recomendado</text>
+  <text x="469" y="342" font-size="11" fill="#1C1B1F" text-anchor="middle">RTX 4090, 24 GB VRAM</text>
+  <text x="469" y="360" font-size="11" fill="#1C1B1F" text-anchor="middle">64 GB DDR5 para descarga</text>
+  <text x="469" y="378" font-size="11" fill="#1C1B1F" text-anchor="middle">70B con descarga a CPU</text>
+  <text x="469" y="396" font-family="'SF Mono', Monaco, monospace" font-size="10" font-weight="700" fill="#6750A4" text-anchor="middle">10–15 tok/s (70B Q4)</text>
+  <text x="469" y="416" font-size="10" fill="#79747E" text-anchor="middle">La descarga a CPU es suficiente</text>
+
+  <!-- Leaf 4: Nivel Profesional -->
+  <rect x="567" y="295" width="165" height="140" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="567" y="295" width="165" height="4" rx="0" fill="#34A853"/>
+  <text x="649" y="320" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">Nivel Profesional</text>
+  <text x="649" y="342" font-size="11" fill="#1C1B1F" text-anchor="middle">2× RTX 3090, 48 GB VRAM</text>
+  <text x="649" y="360" font-size="11" fill="#1C1B1F" text-anchor="middle">Threadripper 7960X</text>
+  <text x="649" y="378" font-size="11" fill="#1C1B1F" text-anchor="middle">70B Q4 a plena velocidad GPU</text>
+  <text x="649" y="396" font-family="'SF Mono', Monaco, monospace" font-size="10" font-weight="700" fill="#34A853" text-anchor="middle">25–40 tok/s (70B Q4)</text>
+  <text x="649" y="416" font-size="10" fill="#79747E" text-anchor="middle">Paralelismo tensorial, sin NVLink</text>
+
+  <text x="400" y="456" font-size="11" fill="#49454F" text-anchor="middle">El nivel Recomendado (RTX 4090) cubre tanto un build ≤30B rápido como un build 70B con descarga a CPU.</text>
+<text x="792" y="465" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

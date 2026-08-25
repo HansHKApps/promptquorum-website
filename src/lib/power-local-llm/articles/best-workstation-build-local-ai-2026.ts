@@ -15,6 +15,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Three local AI workstation builds for 2026, priced this week: ~$2,700 budget, ~$5,300 recommended (RTX 4090), ~$8,800 professional (dual RTX 3090). Full parts lists, shop links, and why RAM/SSD prices jumped.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: 'Shop Budget Build components →', url: 'https://www.amazon.com/s?k=RTX+3090+Ryzen+7700X+build', productName: 'Budget Workstation Parts', productCategory: 'pc-component', priceRange: '~$2,700' },
+      { label: 'Shop Recommended Build components →', url: 'https://www.amazon.com/s?k=RTX+4090+Ryzen+9950X+build', productName: 'Recommended Workstation Parts', productCategory: 'pc-component', priceRange: '~$5,300' },
+      { label: 'Shop Professional Build components →', url: 'https://www.amazon.com/s?k=Threadripper+7960X+workstation', productName: 'Professional Workstation Parts', productCategory: 'pc-component', priceRange: '~$8,800' },
+    ],
     publishDate: '2026-05-26',
     dateModified: '2026-08-25',
     leadAnswerBlock: '**The best local AI workstation for most people in 2026 is the ~$5,300 RTX 4090 build: 24 GB VRAM + Ryzen 9 9950X + 64 GB DDR5. It runs 7B models at 100–120 tok/s, 14B at Q8 without offloading, and 30B Q4 at 25–35 tok/s. Skip to your tier: [Budget ~$2,700](#tier1) · [Recommended ~$5,300](#tier2) · [Professional ~$8,800](#tier3).**',
@@ -427,6 +432,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Drei lokale KI-Workstations 2026, Preise aktuell: ~2.500 € Budget, ~4.950 € Empfohlen (RTX 4090), ~8.200 € Profi (Dual RTX 3090). Komplette Teilelisten, Shop-Links, und warum RAM/SSD-Preise explodiert sind.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: 'Budget-Build-Komponenten ansehen →', url: 'https://www.amazon.de/s?k=RTX+3090+Ryzen+7700X+Build', productName: 'Budget Workstation Parts', productCategory: 'pc-component', priceRange: '~2.500 €' },
+      { label: 'Empfohlene Build-Komponenten ansehen →', url: 'https://www.amazon.de/s?k=RTX+4090+Ryzen+9950X+Build', productName: 'Recommended Workstation Parts', productCategory: 'pc-component', priceRange: '~4.950 €' },
+      { label: 'Profi-Build-Komponenten ansehen →', url: 'https://www.amazon.de/s?k=Threadripper+7960X+Workstation', productName: 'Professional Workstation Parts', productCategory: 'pc-component', priceRange: '~8.200 €' },
+    ],
     publishDate: '2026-05-26',
     dateModified: '2026-08-25',
     leadAnswerBlock: '**Die beste lokale KI-Workstation 2026 für die meisten Nutzer ist der ~4.950-€-Build: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. Sie läuft 7B-Modelle mit 100–120 Tok/s, 14B mit Q8 ohne Offloading und 30B Q4 mit 25–35 Tok/s. Direkt zur Stufe: [Budget ~2.500 €](#tier1) · [Empfohlen ~4.950 €](#tier2) · [Profi ~8.200 €](#tier3).**',
@@ -535,7 +545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: 'Gebraucht vs. neu: Gebrauchte RTX-3090-Karten (~650–950 € bei eBay.de) sparen 30–50% gegenüber den wenigen verbliebenen Neuware-Einheiten — auf Kosten der Garantie. Käufer mit Rückgaberecht wählen und auf Mining-Verschleiß (Lüftergeräusche, Wärmeleitpaste-Reste) prüfen.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-de.svg',
         imageCaption: 'Vergleich der drei lokalen KI-Workstation-Stufen nach Hardware: Budget nutzt eine RTX 3090 (24 GB VRAM) mit 70B-Modellen bei 5-8 Tok/s per CPU-Offloading, Empfohlen nutzt eine RTX 4090 (24 GB VRAM) mit 10-15 Tok/s, und Profi nutzt zwei RTX 3090 GPUs (48 GB VRAM) mit 25-40 Tok/s auf der GPU.',
       },
       tier2: {
@@ -597,7 +607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: 'Der DDR5-Engpass 2026 traf ECC/RDIMM-Server-RAM am härtesten — 256-GB-DDR5-ECC-Kits sind knapp und preislich volatil. Vor der Bestellung ein Live-Angebot für auf der QVL des Mainboards gelistetes RAM einholen; der Wert oben ist eine geprüfte Schätzung, kein garantierter Preis.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-de.svg',
         imageCaption: 'Entscheidungsbaum zur Wahl der lokalen KI-Workstation-Stufe nach maximaler Modellgröße: Builds bis 30B führen zur Budget-Stufe (RTX 3090) oder Empfohlenen Stufe (RTX 4090), während 70B-Builds entweder über CPU-Offloading zur Empfohlenen Stufe (10-15 Tok/s) oder zur Profi-Stufe mit zwei RTX 3090 GPUs bei voller GPU-Geschwindigkeit (25-40 Tok/s) führen.',
       },
       dontBuy: {
@@ -780,6 +790,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Trois configurations workstation IA locale 2026, prix vérifiés cette semaine : ~2 500 € budget, ~4 950 € recommandé (RTX 4090), ~8 200 € professionnel (dual RTX 3090). Listes complètes, liens d\'achat, et pourquoi les prix RAM/SSD ont explosé.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: 'Voir les composants Budget →', url: 'https://www.amazon.fr/s?k=RTX+3090+Ryzen+7700X+build', productName: 'Budget Workstation Parts', productCategory: 'pc-component', priceRange: '~2 500 €' },
+      { label: 'Voir les composants Recommandé →', url: 'https://www.amazon.fr/s?k=RTX+4090+Ryzen+9950X+build', productName: 'Recommended Workstation Parts', productCategory: 'pc-component', priceRange: '~4 950 €' },
+      { label: 'Voir les composants Professionnel →', url: 'https://www.amazon.fr/s?k=Threadripper+7960X+workstation', productName: 'Professional Workstation Parts', productCategory: 'pc-component', priceRange: '~8 200 €' },
+    ],
     publishDate: '2026-05-26',
     dateModified: '2026-08-25',
     leadAnswerBlock: '**La meilleure workstation IA locale 2026 pour la plupart des utilisateurs est le build à ~4 950 € : RTX 4090 (24 Go VRAM) + Ryzen 9 9950X + 64 Go DDR5. Elle fait tourner les modèles 7B à 100–120 tok/s, 14B en Q8 sans déchargement, 30B Q4 à 25–35 tok/s. Aller directement au niveau : [Budget ~2 500 €](#tier1) · [Recommandé ~4 950 €](#tier2) · [Professionnel ~8 200 €](#tier3).**',
@@ -888,7 +903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: 'Occasion vs neuf : les cartes RTX 3090 d\'occasion (~650–950 € sur eBay.fr) coûtent 30–50% de moins que le peu de neuf restant, au prix d\'une garantie incertaine. Privilégiez un vendeur acceptant les retours et vérifiez l\'absence d\'usure minage.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-fr.svg',
         imageCaption: 'Comparaison des trois niveaux de workstation IA locale par matériel : Budget utilise une RTX 3090 (24 Go VRAM) pour les modèles 70B à 5-8 tok/s via déchargement CPU, Recommandé utilise une RTX 4090 (24 Go VRAM) à 10-15 tok/s, et Professionnel utilise deux RTX 3090 (48 Go VRAM) à 25-40 tok/s sur GPU.',
       },
       tier2: {
@@ -949,7 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: 'La pénurie DDR5 2026 a le plus touché la RAM serveur ECC/RDIMM — les kits DDR5 ECC 256 Go sont rares et volatils. Obtenez un devis en direct pour de la RAM listée QVL par votre carte mère avant de commander.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-fr.svg',
         imageCaption: 'Arbre de décision pour choisir un niveau de workstation IA locale selon la taille maximale du modèle : les builds jusqu\'à 30B mènent au niveau Budget (RTX 3090) ou Recommandé (RTX 4090), tandis que les builds 70B mènent au niveau Recommandé via déchargement CPU (10-15 tok/s) ou Professionnel avec deux RTX 3090 à pleine vitesse GPU (25-40 tok/s).',
       },
       dontBuy: {
@@ -1128,6 +1143,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'ローカルAIワークステーション3段階、今週確認した価格：約43万円バジェット、約84万円推奨（RTX 4090）、約139万円プロ（デュアルRTX 3090）。完全パーツリストと購入リンク、RAM/SSD高騰の理由を解説。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: 'バジェット構成パーツを見る →', url: 'https://www.amazon.co.jp/s?k=RTX+3090+Ryzen+7700X', productName: 'Budget Workstation Parts', productCategory: 'pc-component' },
+      { label: '推奨構成パーツを見る →', url: 'https://www.amazon.co.jp/s?k=RTX+4090+Ryzen+9950X', productName: 'Recommended Workstation Parts', productCategory: 'pc-component' },
+      { label: 'プロ構成パーツを見る →', url: 'https://www.amazon.co.jp/s?k=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
+    ],
     publishDate: '2026-05-26',
     dateModified: '2026-08-25',
     leadAnswerBlock: '**2026年のほとんどのユーザーにとって最良のローカルAIワークステーションは約84万円のビルド：RTX 4090（24GB VRAM）+ Ryzen 9 9950X + 64GB DDR5。7Bモデルを100〜120トークン/秒、14BをQ8でオフロードなし、30B Q4を25〜35トークン/秒で実行できます。各段階へ：[バジェット約43万円](#tier1)・[推奨約84万円](#tier2)・[プロ約139万円](#tier3)。**',
@@ -1236,7 +1256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: '中古 vs 新品：中古RTX 3090（eBayで約11万〜16万円）は残り少ない新品より30〜50%安いが、保証は不確実。返品可能な販売者を選び、マイニング使用の痕跡（ファン異音など）を確認すること。' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-ja.svg',
         imageCaption: 'ハードウェアで比較する3段階のローカルAIワークステーション:予算重視はRTX 3090(24GB VRAM)でCPUオフロードにより70Bモデルを5〜8 tok/sで実行、推奨構成はRTX 4090(24GB VRAM)で10〜15 tok/s、プロフェッショナル構成はRTX 3090を2基(合計48GB VRAM)搭載しGPU上で25〜40 tok/sを実現。',
       },
       tier2: {
@@ -1297,7 +1317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: '2026年のDDR5不足はECC/RDIMMサーバーメモリに最も強く影響——256GB DDR5 ECCキットは希少かつ価格変動が激しい。注文前にマザーボードのQVL掲載RAMのリアルタイム見積もりを取得すること。上記は確認済みの推定値であり保証価格ではない。' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-ja.svg',
         imageCaption: '最大モデルサイズでローカルAIワークステーションの段階を選ぶ決定木:30B以下の構成は予算重視(RTX 3090)または推奨構成(RTX 4090)へ、70B構成はCPUオフロードで推奨構成(10〜15 tok/s)か、RTX 3090を2基搭載しフルGPU速度(25〜40 tok/s)を実現するプロフェッショナル構成へ分岐する。',
       },
       dontBuy: {
@@ -1480,6 +1500,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: '2026年三档本地AI工作站，本周核实价格：入门档约19300元、推荐档约38000元（RTX 4090）、专业档约62600元（双RTX 3090）。完整配件清单、购买链接，以及RAM/SSD价格暴涨的原因。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: '查看入门档配件 →', url: 'https://search.jd.com/Search?keyword=RTX+3090+Ryzen+7700X', productName: 'Budget Workstation Parts', productCategory: 'pc-component' },
+      { label: '查看推荐档配件 →', url: 'https://search.jd.com/Search?keyword=RTX+4090+Ryzen+9950X', productName: 'Recommended Workstation Parts', productCategory: 'pc-component' },
+      { label: '查看专业档配件 →', url: 'https://search.jd.com/Search?keyword=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
+    ],
     publishDate: '2026-05-26',
     dateModified: '2026-08-25',
     leadAnswerBlock: '**2026年大多数用户的最佳本地AI工作站是约38000元的方案：RTX 4090（24GB显存）+ Ryzen 9 9950X + 64GB DDR5。7B模型100–120 tok/s，14B Q8无需卸载，30B Q4达28–38 tok/s。直达各档位：[入门约19300元](#tier1)・[推荐约38000元](#tier2)・[专业约62600元](#tier3)。**',
@@ -1588,7 +1613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: '二手 vs 全新：二手RTX 3090（闲鱼约5000–7500元）比所剩无几的全新库存便宜30–50%，代价是保修不确定。选择支持退货的卖家，并检查是否有挖矿磨损痕迹（风扇噪音异常等）。' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-zh.svg',
         imageCaption: '按硬件对比三种本地AI主机配置:入门级使用RTX 3090(24GB显存),通过CPU卸载以5-8 tok/s运行70B模型;推荐级使用RTX 4090(24GB显存),速度为10-15 tok/s;专业级使用双RTX 3090(共48GB显存),在GPU上达到25-40 tok/s。',
       },
       tier2: {
@@ -1649,7 +1674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: '2026年DDR5短缺对ECC/RDIMM服务器内存冲击最大——256GB DDR5 ECC套装既稀缺又价格波动剧烈。下单前请向主板QVL列表内的内存获取实时报价，上表为核实估算值，非保证价格。' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-zh.svg',
         imageCaption: '按最大模型规模选择本地AI主机配置等级的决策树:30B及以下配置对应入门级(RTX 3090)或推荐级(RTX 4090),70B配置则通过CPU卸载对应推荐级(10-15 tok/s),或使用双RTX 3090以GPU全速运行(25-40 tok/s)对应专业级。',
       },
       dontBuy: {
@@ -1841,6 +1866,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Tres workstations de IA local 2026, precios verificados esta semana: ~2.500 € económica, ~4.950 € recomendada (RTX 4090), ~8.200 € profesional (dual RTX 3090). Listas completas, enlaces de compra, y por qué subieron los precios de RAM/SSD.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: 'Ver componentes del build Económico →', url: 'https://www.amazon.es/s?k=RTX+3090+Ryzen+7700X', productName: 'Budget Workstation Parts', productCategory: 'pc-component' },
+      { label: 'Ver componentes del build Recomendado →', url: 'https://www.amazon.es/s?k=RTX+4090+Ryzen+9950X', productName: 'Recommended Workstation Parts', productCategory: 'pc-component' },
+      { label: 'Ver componentes del build Profesional →', url: 'https://www.amazon.es/s?k=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
+    ],
     publishDate: '2026-05-26',
     dateModified: '2026-08-25',
     leadAnswerBlock: '**La mejor workstation de IA local en 2026 para la mayoría de usuarios es el build de ~4.950 €: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. Ejecuta modelos 7B a 100–120 tok/s, 14B en Q8 sin offloading y 30B Q4 a 25–35 tok/s. Ir directo al nivel: [Económico ~2.500 €](#tier1) · [Recomendado ~4.950 €](#tier2) · [Profesional ~8.200 €](#tier3).**',
@@ -1949,7 +1979,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: 'Usada vs. nueva: las RTX 3090 usadas (~650–950 € en eBay.es) ahorran 30–50% frente al poco stock nuevo que queda, a costa de una garantía incierta. Elige un vendedor con devoluciones y revisa señales de desgaste por minería (ruido de ventilador, olor a quemado bajo carga).' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-es.svg',
         imageCaption: 'Comparación de las tres configuraciones de estación de trabajo de IA local por hardware: la económica usa una RTX 3090 (24 GB VRAM) que ejecuta modelos 70B a 5-8 tok/s mediante descarga a CPU, la recomendada usa una RTX 4090 (24 GB VRAM) a 10-15 tok/s, y la profesional usa dos RTX 3090 (48 GB VRAM) a 25-40 tok/s en GPU.',
       },
       tier2: {
@@ -2011,7 +2041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: 'La escasez de DDR5 de 2026 golpeó con más fuerza a la RAM de servidor ECC/RDIMM — los kits DDR5 ECC de 256 GB son escasos y con precio volátil. Consigue un presupuesto en tiempo real de RAM listada en la QVL de tu placa antes de pedir.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-es.svg',
         imageCaption: 'Árbol de decisión para elegir el nivel de estación de trabajo de IA local según el tamaño máximo del modelo: las configuraciones de hasta 30B llevan al nivel Económico (RTX 3090) o Recomendado (RTX 4090), mientras que las de 70B llevan al nivel Recomendado mediante descarga a CPU (10-15 tok/s) o al Profesional con dos RTX 3090 a velocidad total de GPU (25-40 tok/s).',
       },
       dontBuy: {
@@ -2210,6 +2240,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: '2026년 로컬 AI 워크스테이션 3단계, 이번 주 확인한 가격: 경제형 약 419만원, 추천형 약 823만원(RTX 4090), 전문가형 약 1,559만원(듀얼 RTX 3090). 전체 부품 목록과 구매 링크, RAM/SSD 가격 폭등 이유까지.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: '경제형 구성 부품 보기 →', url: 'https://www.coupang.com/np/search?q=RTX+3090+Ryzen+7700X', productName: 'Budget Workstation Parts', productCategory: 'pc-component' },
+      { label: '추천형 구성 부품 보기 →', url: 'https://www.coupang.com/np/search?q=RTX+4090+Ryzen+9950X', productName: 'Recommended Workstation Parts', productCategory: 'pc-component' },
+      { label: '전문가형 구성 부품 보기 →', url: 'https://www.coupang.com/np/search?q=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
+    ],
     publishDate: '2026-05-26',
     dateModified: '2026-08-25',
     leadAnswerBlock: '**2026년 대부분의 사용자에게 최적인 로컬 AI 워크스테이션은 약 823만원 빌드입니다: RTX 4090(24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. 7B 모델을 100–120 tok/s로 실행하고, 14B Q8을 오프로딩 없이 실행하며, 30B Q4를 28–38 tok/s로 실행합니다. 단계별 바로가기: [경제형 약 419만원](#tier1) · [추천형 약 823만원](#tier2) · [전문가형 약 1,559만원](#tier3).**',
@@ -2318,7 +2353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: '중고 vs 신품: 중고 RTX 3090(약 110만~160만원)은 얼마 남지 않은 신품 재고보다 30–50% 저렴하지만 보증이 불확실합니다. 반품 가능한 판매자를 선택하고, 채굴 사용 흔적(팬 소음 등)을 확인하세요.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-ko.svg',
         imageCaption: '하드웨어 기준 3단계 로컬 AI 워크스테이션 비교: 경제형은 RTX 3090(24GB VRAM)으로 CPU 오프로딩을 통해 70B 모델을 5-8 tok/s로 실행하고, 추천형은 RTX 4090(24GB VRAM)으로 10-15 tok/s, 전문가형은 RTX 3090 2개(총 48GB VRAM)로 GPU에서 25-40 tok/s를 달성합니다.',
       },
       tier2: {
@@ -2379,7 +2414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: '2026년 DDR5 부족은 ECC/RDIMM 서버 메모리에 가장 큰 타격을 주었습니다 — 256GB DDR5 ECC 키트는 희소하고 가격 변동이 심합니다. 주문 전 마더보드 QVL에 등재된 RAM의 실시간 견적을 받으세요. 위 수치는 확인된 추정치일 뿐 보증 가격이 아닙니다.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-ko.svg',
         imageCaption: '최대 모델 크기 기준 로컬 AI 워크스테이션 등급 선택 결정 트리: 30B 이하 구성은 경제형(RTX 3090) 또는 추천형(RTX 4090)으로, 70B 구성은 CPU 오프로딩을 사용하는 추천형(10-15 tok/s) 또는 RTX 3090 2개로 GPU 전체 속도(25-40 tok/s)를 내는 전문가형으로 연결됩니다.',
       },
       dontBuy: {
@@ -2578,6 +2613,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Três workstations de IA local 2026, preços conferidos nesta semana: ~R$ 25.000 econômica, ~R$ 49.000 recomendada (RTX 4090), ~R$ 81.000 profissional (dual RTX 3090). Listas completas, links de compra e por que RAM/SSD subiram tanto.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: 'Ver componentes do build Econômico →', url: 'https://www.mercadolivre.com.br/search?q=RTX+3090+Ryzen+7700X', productName: 'Budget Workstation Parts', productCategory: 'pc-component' },
+      { label: 'Ver componentes do build Recomendado →', url: 'https://www.mercadolivre.com.br/search?q=RTX+4090+Ryzen+9950X', productName: 'Recommended Workstation Parts', productCategory: 'pc-component' },
+      { label: 'Ver componentes do build Profissional →', url: 'https://www.mercadolivre.com.br/search?q=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
+    ],
     publishDate: '2026-05-26',
     dateModified: '2026-08-25',
     leadAnswerBlock: '**A melhor workstation de IA local em 2026 para a maioria dos usuários é o build de ~R$ 49.000: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. Roda modelos 7B a 100–120 tok/s, 14B em Q8 sem offloading e 30B Q4 a 25–35 tok/s. Vá direto ao nível: [Econômico ~R$ 25.000](#tier1) · [Recomendado ~R$ 49.000](#tier2) · [Profissional ~R$ 81.000](#tier3).**',
@@ -2686,7 +2726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: 'Usada vs. nova: as RTX 3090 usadas custam bem menos que o pouco estoque novo restante, ao custo de uma garantia incerta. Prefira um vendedor com boa reputação e política de devolução, e verifique sinais de desgaste por mineração (ruído do cooler, cheiro de queimado sob carga).' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-pt.svg',
         imageCaption: 'Comparação das três configurações de workstation de IA local por hardware: a econômica usa uma RTX 3090 (24 GB VRAM) executando modelos 70B a 5-8 tok/s via offload de CPU, a recomendada usa uma RTX 4090 (24 GB VRAM) a 10-15 tok/s, e a profissional usa duas RTX 3090 (48 GB VRAM) a 25-40 tok/s na GPU.',
       },
       tier2: {
@@ -2747,7 +2787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: 'A escassez de DDR5 de 2026 atingiu com mais força a memória de servidor ECC/RDIMM — kits DDR5 ECC de 256 GB são escassos e com preço volátil no Brasil e no exterior. Consiga uma cotação atualizada de RAM listada na QVL da sua placa-mãe antes de comprar.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-pt.svg',
         imageCaption: 'Árvore de decisão para escolher o nível de workstation de IA local pelo tamanho máximo do modelo: configurações até 30B levam ao nível Econômico (RTX 3090) ou Recomendado (RTX 4090), enquanto configurações de 70B levam ao Recomendado via offload de CPU (10-15 tok/s) ou ao Profissional com duas RTX 3090 em velocidade total de GPU (25-40 tok/s).',
       },
       dontBuy: {
@@ -2947,6 +2987,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'ثلاث محطات عمل للذكاء الاصطناعي المحلي ⁨2026⁩، أسعار مُحدَّثة هذا الأسبوع: نحو ⁨10,500⁩ درهم اقتصادي، و⁨20,600⁩ درهم موصى به (⁨RTX 4090⁩)، و⁨34,000⁩ درهم احترافي (⁨RTX 3090⁩ مزدوجة). قوائم مكونات كاملة وروابط شراء، وسبب ارتفاع أسعار RAM وSSD.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: 'عرض مكونات الإعداد الاقتصادي →', url: 'https://www.noon.com/uae-en/search/?q=RTX+3090+Ryzen+7700X', productName: 'Budget Workstation Parts', productCategory: 'pc-component' },
+      { label: 'عرض مكونات الإعداد الموصى به →', url: 'https://www.noon.com/uae-en/search/?q=RTX+4090+Ryzen+9950X', productName: 'Recommended Workstation Parts', productCategory: 'pc-component' },
+      { label: 'عرض مكونات الإعداد الاحترافي →', url: 'https://www.noon.com/uae-en/search/?q=Threadripper+7960X', productName: 'Professional Workstation Parts', productCategory: 'pc-component' },
+    ],
     publishDate: '2026-05-26',
     dateModified: '2026-08-25',
     leadAnswerBlock: '**أفضل محطة عمل للذكاء الاصطناعي المحلي في 2026 لمعظم المستخدمين هي المبنية بنحو 20,600 درهم: RTX 4090 (24 GB VRAM) + Ryzen 9 9950X + 64 GB DDR5. تُشغّل نماذج 7B بسرعة 100–120 رمز/ثانية، و14B بتكميم Q8 بدون تفريغ، و30B Q4 بسرعة 25–35 رمز/ثانية. انتقل مباشرةً إلى المستوى: [اقتصادي ~10,500 درهم](#tier1) · [موصى به ~20,600 درهم](#tier2) · [احترافي ~34,000 درهم](#tier3).**',
@@ -3055,7 +3100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'tip', text: 'مستعملة مقابل جديدة: بطاقات RTX 3090 المستعملة توفّر 30–50% مقارنة بالمخزون الجديد القليل المتبقي، مقابل ضمان غير مؤكد. اختر بائعاً يقبل الإرجاع وتحقّق من علامات استخدامها في التعدين (ضوضاء المروحة، رائحة احتراق تحت الحِمل).' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-tier-comparison-ar.svg',
         imageCaption: 'مقارنة بين ثلاث فئات من محطات عمل الذكاء الاصطناعي المحلي حسب العتاد: الفئة الاقتصادية تستخدم RTX 3090 (24 جيجابايت VRAM) لتشغيل نماذج 70B بسرعة 5-8 tok/s عبر تفريغ المعالج، الفئة الموصى بها تستخدم RTX 4090 (24 جيجابايت VRAM) بسرعة 10-15 tok/s، والفئة الاحترافية تستخدم بطاقتي RTX 3090 (48 جيجابايت VRAM إجمالاً) بسرعة 25-40 tok/s على المعالج الرسومي.',
       },
       tier2: {
@@ -3116,7 +3161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: 'warning', text: 'نقص DDR5 في 2026 أثّر بأشد قوة على ذاكرة الخوادم ECC/RDIMM — عبوات DDR5 ECC سعة 256 جيجابايت نادرة ومتقلبة السعر. احصل على عرض سعر مباشر لذاكرة مدرجة في قائمة QVL الخاصة باللوحة الأم قبل الطلب.' },
         ],
-        image: '/images/best-workstation-build-local-ai-2026-decision-tree-en.svg',
+        image: '/images/best-workstation-build-local-ai-2026-decision-tree-ar.svg',
         imageCaption: 'شجرة قرار لاختيار فئة محطة عمل الذكاء الاصطناعي المحلي حسب أكبر حجم نموذج: الإعدادات حتى 30B تقود إلى الفئة الاقتصادية (RTX 3090) أو الموصى بها (RTX 4090)، بينما إعدادات 70B تقود إلى الفئة الموصى بها عبر تفريغ المعالج (10-15 tok/s) أو إلى الفئة الاحترافية ببطاقتي RTX 3090 بسرعة كاملة للمعالج الرسومي (25-40 tok/s).',
       },
       dontBuy: {

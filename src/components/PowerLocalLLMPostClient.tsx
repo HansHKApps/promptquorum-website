@@ -136,6 +136,39 @@ const POST_UI: Record<string, Record<string, string>> = {
     ar: 'LLM المحلية المتقدمة',
     ko: '고급 로컬 LLM',
   },
+  decisionUseLocal: {
+    en: 'Use a local LLM if:',
+    de: 'Lokales LLM nutzen, wenn:',
+    fr: 'Utilisez un LLM local si :',
+    ja: 'ローカルLLMを使うべき場合：',
+    zh: '以下情况使用本地LLM：',
+    es: 'Usa un LLM local si:',
+    pt: 'Use um LLM local se:',
+    ar: 'استخدم LLM محليًا إذا:',
+    ko: '다음의 경우 로컬 LLM을 사용하십시오:',
+  },
+  decisionUseCloud: {
+    en: 'Use a cloud model if:',
+    de: 'Cloud-Modell nutzen, wenn:',
+    fr: 'Utilisez un modèle cloud si :',
+    ja: 'クラウドモデルを使うべき場合：',
+    zh: '以下情况使用云端模型：',
+    es: 'Usa un modelo en la nube si:',
+    pt: 'Use um modelo em nuvem se:',
+    ar: 'استخدم نموذجًا سحابيًا إذا:',
+    ko: '다음의 경우 클라우드 모델을 사용하십시오:',
+  },
+  decisionQuick: {
+    en: 'Quick decision:',
+    de: 'Schnelle Entscheidung:',
+    fr: 'Décision rapide :',
+    ja: 'クイック判断：',
+    zh: '快速决策：',
+    es: 'Decisión rápida:',
+    pt: 'Decisão rápida:',
+    ar: 'قرار سريع:',
+    ko: '빠른 결정:',
+  },
   snippetOneSentence: {
     en: '📍 In One Sentence',
     de: '📍 In einem Satz',
@@ -534,7 +567,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
           <div className="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-primary/10">
             {/* Use local if */}
             <div className="p-4">
-              <p className="text-xs font-bold uppercase tracking-wide text-green-600 mb-2">Use a local LLM if:</p>
+              <p className="text-xs font-bold uppercase tracking-wide text-green-600 mb-2">{POST_UI.decisionUseLocal[lang] ?? POST_UI.decisionUseLocal['en']}</p>
               <ul className="space-y-1.5">
                 {section.decisionBlock.localIf.map((item, i) => (
                   <li key={i} className="flex gap-2 text-sm text-text-secondary">
@@ -546,7 +579,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
             </div>
             {/* Use cloud if */}
             <div className="p-4">
-              <p className="text-xs font-bold uppercase tracking-wide text-orange-600 mb-2">Use a cloud model if:</p>
+              <p className="text-xs font-bold uppercase tracking-wide text-orange-600 mb-2">{POST_UI.decisionUseCloud[lang] ?? POST_UI.decisionUseCloud['en']}</p>
               <ul className="space-y-1.5">
                 {section.decisionBlock.cloudIf.map((item, i) => (
                   <li key={i} className="flex gap-2 text-sm text-text-secondary">
@@ -558,7 +591,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
             </div>
             {/* Quick decision */}
             <div className="p-4 bg-primary/3">
-              <p className="text-xs font-bold uppercase tracking-wide text-primary mb-2">Quick decision:</p>
+              <p className="text-xs font-bold uppercase tracking-wide text-primary mb-2">{POST_UI.decisionQuick[lang] ?? POST_UI.decisionQuick['en']}</p>
               <ul className="space-y-1.5">
                 {section.decisionBlock.quick.map((item, i) => (
                   <li key={i} className="flex gap-2 text-sm text-text-secondary">
