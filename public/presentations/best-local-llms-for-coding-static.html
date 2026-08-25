@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Best Local LLMs for Coding 2026 | PromptQuorum</title>
-  <meta name="description" content="Qwen2.5-Coder 32B (87% HumanEval) vs DeepSeek-Coder V2 Lite (81%) vs Qwen2.5-Coder 7B (72%) — complete guide with hardware selection, setup, and performance benchmarks." />
+  <meta name="description" content="Kimi K2.6 (58.6 SWE-Bench Pro) vs Qwen 3.6 27B (77.2% SWE-bench) vs Devstral Small 24B — complete guide with hardware selection, setup, and performance benchmarks." />
   <meta property="og:title" content="Best Local LLMs for Coding 2026 — PromptQuorum" />
-  <meta property="og:description" content="Qwen2.5-Coder 32B (87% HumanEval) vs DeepSeek-Coder V2 Lite (81%) vs Qwen2.5-Coder 7B (72%)" />
+  <meta property="og:description" content="Kimi K2.6 (58.6 SWE-Bench Pro) vs Qwen 3.6 27B (77.2% SWE-bench) vs Devstral Small 24B" />
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://www.promptquorum.com/local-llms/best-local-llms-for-coding" />
 
@@ -374,15 +374,15 @@
           {
             type: 'title',
             h1: 'Best Local LLMs for Coding in 2026',
-            subtitle: 'Ranked by HumanEval, RAM, and Language Support. Qwen2.5-Coder 32B vs DeepSeek-Coder V2 Lite vs Qwen2.5-Coder 7B.',
+            subtitle: 'Ranked by SWE-bench, RAM, and Language Support. Kimi K2.6 vs Qwen 3.6 27B vs Devstral Small 24B.',
             link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding'
           },
           {
             type: 'list',
             h2: 'What Makes a Good Coding LLM?',
-            intro: 'Coding models are measured by HumanEval benchmark scores.',
+            intro: 'In 2026, SWE-bench has replaced HumanEval as the primary practical coding benchmark.',
             items: [
-              '<strong>HumanEval:</strong> 164 Python programming problems. Models must generate correct function bodies.',
+              '<strong>SWE-bench:</strong> Tests real GitHub issue resolution — multi-file changes, codebase understanding, test writing.',
               '<strong>Code-specific vs general:</strong> Dedicated coding models are fine-tuned on GitHub, Stack Overflow, and documentation.',
               '<strong>5-15% advantage:</strong> Code models score 5-15% higher than general-purpose models at the same parameter count.',
               '<strong>Fill-in-the-middle (FIM):</strong> Essential for IDE autocomplete. Enables code completion given context before AND after cursor.'
@@ -393,29 +393,29 @@
             h2: 'The Three Models to Know',
             intro: 'Match model to your hardware.',
             items: [
-              '<strong>Qwen2.5-Coder 32B:</strong> 87% HumanEval, 20 GB RAM — highest quality locally available.',
-              '<strong>DeepSeek-Coder V2 Lite 16B:</strong> 81% HumanEval, 10 GB RAM — best for 16 GB machines.',
-              '<strong>Qwen2.5-Coder 7B:</strong> 72% HumanEval, 4.7 GB RAM — best for 8 GB machines with headroom.'
+              '<strong>Kimi K2.6:</strong> 58.6 SWE-Bench Pro, MoE (32B active / 1T total) — highest quality locally available.',
+              '<strong>Qwen 3.6 27B:</strong> 77.2% SWE-bench, 22 GB RAM — best dense model.',
+              '<strong>Devstral Small 24B:</strong> Best for agentic coding, 16 GB RAM — best for 16 GB machines.'
             ]
           },
           {
             type: 'comparison',
-            h2: 'HumanEval Benchmark Comparison',
-            line1: 'Qwen2.5-Coder 32B: 87%',
-            line2: 'DeepSeek-Coder V2 Lite: 81% | Qwen2.5-Coder 7B: 72%',
-            tip: '💡 Higher HumanEval scores correlate with better real-world code generation quality.',
+            h2: 'SWE-bench Benchmark Comparison',
+            line1: 'Qwen 3.6 27B: 77.2% SWE-bench',
+            line2: 'Kimi K2.6: 58.6 SWE-Bench Pro | Laguna XS 2.1: 70.9% SWE-bench Verified',
+            tip: '💡 Higher SWE-bench scores correlate with better real-world multi-file coding accuracy.',
             image: '../images/best-local-llms-for-coding-humaneval-comparison-en.svg'
           },
           {
             type: 'table',
             h2: 'Model Rankings by Performance',
-            columns: ['Rank', 'Model', 'HumanEval', 'RAM (Q4_K_M)', 'FIM Support'],
+            columns: ['Rank', 'Model', 'SWE-bench', 'RAM (Q4_K_M)', 'FIM Support'],
             rows: [
-              { 'Rank': '1', 'Model': 'Qwen2.5-Coder 32B', 'HumanEval': '87%', 'RAM (Q4_K_M)': '20 GB', 'FIM Support': 'Yes' },
-              { 'Rank': '2', 'Model': 'DeepSeek-Coder V2 Lite', 'HumanEval': '81%', 'RAM (Q4_K_M)': '10 GB', 'FIM Support': 'Yes' },
-              { 'Rank': '3', 'Model': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'RAM (Q4_K_M)': '4.7 GB', 'FIM Support': 'Yes' },
-              { 'Rank': '4', 'Model': 'Starcoder2 15B', 'HumanEval': '67%', 'RAM (Q4_K_M)': '9 GB', 'FIM Support': 'Yes' },
-              { 'Rank': '5', 'Model': 'Llama 3.1 8B', 'HumanEval': '72%', 'RAM (Q4_K_M)': '5.5 GB', 'FIM Support': 'No' }
+              { 'Rank': '1', 'Model': 'Kimi K2.6', 'SWE-bench': '58.6 (SWE-Bench Pro)', 'RAM (Q4_K_M)': 'varies (quantized)', 'FIM Support': 'No' },
+              { 'Rank': '2', 'Model': 'Qwen 3.6 27B', 'SWE-bench': '77.2%', 'RAM (Q4_K_M)': '22 GB', 'FIM Support': 'Yes' },
+              { 'Rank': '3', 'Model': 'Devstral Small 24B', 'SWE-bench': 'High (agentic)', 'RAM (Q4_K_M)': '16 GB', 'FIM Support': 'Yes' },
+              { 'Rank': '4', 'Model': 'Codestral 22B', 'SWE-bench': '—', 'RAM (Q4_K_M)': '14 GB', 'FIM Support': 'Yes' },
+              { 'Rank': '5', 'Model': 'Qwen3 8B', 'SWE-bench': '—', 'RAM (Q4_K_M)': '5 GB', 'FIM Support': 'Yes' }
             ]
           },
           {
@@ -423,46 +423,46 @@
             h2: 'Which Model Should You Use?',
             intro: 'Select based on your hardware first, use case second.',
             items: [
-              '<strong>8 GB RAM:</strong> ollama run qwen2.5-coder:7b — best HumanEval per GB.',
-              '<strong>16 GB RAM:</strong> ollama run deepseek-coder-v2:16b — 81% HumanEval, only 10 GB used.',
-              '<strong>20+ GB RAM:</strong> ollama run qwen2.5-coder:32b — 87% HumanEval, highest quality.',
-              '<strong>IDE autocomplete:</strong> Starcoder2 15B via Continue.dev — FIM-optimized.',
-              '<strong>Already running Llama 3.1 8B?</strong> Skip downloading a separate model — equivalent to Qwen 7B for everyday tasks.'
+              '<strong>8 GB RAM:</strong> ollama run qwen3:8b — best quality-speed tradeoff, 5 GB VRAM.',
+              '<strong>16 GB RAM:</strong> ollama run devstral-small:24b — agentic coding, multi-file edits.',
+              '<strong>20+ GB RAM:</strong> ollama run qwen3.6:27b — 77.2% SWE-bench, best dense model.',
+              '<strong>IDE autocomplete:</strong> Codestral 22B via Continue.dev — FIM-optimized.',
+              '<strong>Maximum quality:</strong> ollama run kimi-k2.6 (quantized) — 58.6 SWE-Bench Pro.'
             ],
             image: '../images/best-local-llms-for-coding-hardware-selection-en.svg'
           },
           {
             type: 'list',
-            h2: '#1: Qwen2.5-Coder 32B',
+            h2: '#1: Kimi K2.6',
             intro: 'The highest-performing locally-runnable coding model in 2026.',
             items: [
-              '<strong>Performance:</strong> 87% HumanEval, 79% MBPP, 40+ programming languages, 128K context window.',
-              '<strong>Quality:</strong> Competitive with GPT-4o Mini on complex multi-file refactoring and algorithm design.',
-              '<strong>RAM requirement:</strong> ~20 GB at Q4_K_M quantization. Manageable on workstations and MacBooks with 24+ GB unified memory.',
-              '<strong>Setup:</strong> ollama run qwen2.5-coder:32b'
+              '<strong>Performance:</strong> 58.6 SWE-Bench Pro, MoE architecture (32B active / 1T total), 128K context window.',
+              '<strong>License:</strong> Modified MIT — commercial use permitted.',
+              '<strong>RAM requirement:</strong> Varies by quantization. Needs quantization for consumer hardware.',
+              '<strong>Setup:</strong> ollama run kimi-k2.6'
             ]
           },
           {
             type: 'list',
-            h2: '#2: DeepSeek-Coder V2 Lite 16B',
-            intro: 'Best for 16 GB RAM machines using Mixture of Experts.',
+            h2: '#2: Qwen 3.6 27B',
+            intro: 'Best dense coding model, no MoE overhead.',
             items: [
-              '<strong>Architecture:</strong> 16B parameters with Mixture of Experts (MoE) — only certain experts activate per token.',
-              '<strong>Performance:</strong> 81% HumanEval, 128K context, FIM support.',
-              '<strong>Efficiency:</strong> Only 2.4B active parameters per forward pass. Faster than equivalent dense 16B models.',
-              '<strong>RAM:</strong> ~10 GB at Q4_K_M — leaves headroom on 16 GB machines.',
-              '<strong>Setup:</strong> ollama run deepseek-coder-v2:16b'
+              '<strong>Architecture:</strong> Dense — all 27B parameters active per token, more predictable long-context reasoning.',
+              '<strong>Performance:</strong> 77.2% SWE-bench, 128K context.',
+              '<strong>Best for:</strong> Multi-file reasoning and refactoring across large codebases.',
+              '<strong>RAM:</strong> ~22 GB at Q4_K_M.',
+              '<strong>Setup:</strong> ollama run qwen3.6:27b'
             ]
           },
           {
             type: 'list',
-            h2: '#3 & #4: Qwen 7B & Starcoder2',
-            intro: 'Specialized for different 8 GB+ use cases.',
+            h2: '#3 & #4: Devstral Small 24B & Codestral 22B',
+            intro: 'Specialized for agentic coding and IDE autocomplete.',
             items: [
-              '<strong>Qwen2.5-Coder 7B:</strong> 72% HumanEval, 4.7 GB RAM, FIM support. Best for 8 GB with headroom. Compatible with Continue.dev.',
-              '<strong>Starcoder2 15B:</strong> 67% HumanEval, 9 GB RAM. Purpose-built for IDE autocomplete (FIM). Trained on 619 programming languages.',
-              '<strong>Use Qwen:</strong> For chat-style code generation and general coding tasks.',
-              '<strong>Use Starcoder2:</strong> When integrating into VS Code or JetBrains IDEs via Continue.dev or Tabby.'
+              '<strong>Devstral Small 24B:</strong> Best for agentic coding — multi-file edits, tool calling, debugging loops. 16 GB RAM.',
+              '<strong>Codestral 22B:</strong> Best for IDE autocomplete (FIM). ~14 GB RAM. Replaces Starcoder2 as recommended FIM model.',
+              '<strong>Use Devstral:</strong> For aider and multi-step agentic coding workflows.',
+              '<strong>Use Codestral:</strong> When integrating into VS Code or JetBrains IDEs via Continue.dev.'
             ]
           },
           {
@@ -475,21 +475,21 @@
             type: 'numbered',
             h2: 'Common Mistakes With Local Coding Models',
             items: [
-              '<strong>Using general-purpose models:</strong> Qwen2.5-Coder 7B includes FIM (fill-in-the-middle) support for IDE autocomplete. Llama 3.1 8B general does not.',
-              '<strong>Wrong context length:</strong> Ollama defaults to 2048 tokens. Set num_ctx 32768 for multi-file code review.',
+              '<strong>Using HumanEval as the only benchmark:</strong> SWE-bench is a better predictor of real-world coding performance in 2026.',
+              '<strong>Wrong context length:</strong> Ollama\'s runtime picks a VRAM-tiered default. Set num_ctx 32768 for multi-file code review.',
               '<strong>Expecting IDE replacement:</strong> Local models generate code. They do not provide IDE features like real-time error detection or type checking.',
               '<strong>Using Q3_K_S quantization:</strong> Below Q4_K_M, code generation accuracy drops significantly. Logical errors and syntax bugs increase.',
-              '<strong>Pulling without specifying size:</strong> ollama pull qwen2.5-coder defaults to smallest variant. Use: ollama pull qwen2.5-coder:32b'
+              '<strong>Ignoring MoE models over total parameter count:</strong> Kimi K2.6 has 1T total parameters but only 32B active — runs on hardware a 70B dense model would require.'
             ]
           },
           {
             type: 'faq',
             h2: 'Quick FAQ',
             faqs: [
-              { q: 'What is HumanEval?', a: 'A benchmark of 164 Python problems. Pass@1 score (% solved on first attempt) is the standard metric for comparing coding models.' },
-              { q: 'What is FIM (fill-in-the-middle)?', a: 'Code completion given context before AND after the cursor. Required for IDE autocomplete. Qwen2.5-Coder, DeepSeek-Coder, and Starcoder2 support it. Llama 3.1 8B general does not.' },
-              { q: 'Can local models replace GitHub Copilot?', a: 'Qwen2.5-Coder 32B matches Copilot quality for function-level generation. Local models via Continue.dev excel at deliberate generation (request-and-review) but not keystroke-level real-time completion.' },
-              { q: 'Is DeepSeek-Coder safe for proprietary code?', a: 'Yes. Local Ollama inference makes zero external connections. Your code stays on your hardware. The data concern applies to their cloud API (api.deepseek.com), not local inference.' }
+              { q: 'What is SWE-bench?', a: 'SWE-bench tests a model\'s ability to resolve real GitHub issues — multi-file changes, codebase understanding, test writing. It has replaced HumanEval as the primary practical coding benchmark in 2026.' },
+              { q: 'What is FIM (fill-in-the-middle)?', a: 'Code completion given context before AND after the cursor. Required for IDE autocomplete. Codestral 22B and Qwen3 8B support it. Kimi K2.6 does not.' },
+              { q: 'Can local models replace GitHub Copilot?', a: 'Codestral 22B via Continue.dev closely matches Copilot for most autocomplete tasks. For complex multi-file reasoning, cloud models still have an edge on the hardest 20%.' },
+              { q: 'Is Kimi K2.6 safe for proprietary code?', a: 'Yes. Local Ollama inference makes zero external connections. Your code stays on your hardware regardless of the model\'s origin.' }
             ]
           },
           {
@@ -499,7 +499,7 @@
             items: [
               '<strong>Install Ollama:</strong> Download from ollama.ai. Takes 2 minutes.',
               '<strong>Pick your model:</strong> Use the hardware selection guide above.',
-              '<strong>Run it:</strong> ollama run qwen2.5-coder:7b (or 32b, depending on RAM).',
+              '<strong>Run it:</strong> ollama run qwen3:8b (or kimi-k2.6, depending on RAM).',
               '<strong>Integrate with IDE:</strong> Install Continue.dev VS Code extension. Enable FIM-based code completion.',
               '<strong>Learn more:</strong> Visit the full article for regional compliance notes (GDPR, METI, China Data Security Law).'
             ]
@@ -516,29 +516,29 @@
       de: {
         title: 'Beste lokale LLMs für Coding 2026',
         slides: [
-          { type: 'title', h1: 'Beste lokale LLMs für Coding 2026', subtitle: 'Ranked by HumanEval, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=de' },
-          { type: 'list', h2: 'Top 3 Models', items: ['Qwen2.5-Coder 32B: 87% HumanEval, 20 GB RAM', 'DeepSeek-Coder V2 Lite: 81% HumanEval, 10 GB RAM', 'Qwen2.5-Coder 7B: 72% HumanEval, 4.7 GB RAM'] }
+          { type: 'title', h1: 'Beste lokale LLMs für Coding 2026', subtitle: 'Ranked by SWE-bench, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=de' },
+          { type: 'list', h2: 'Top 3 Models', items: ['Kimi K2.6: 58.6 SWE-Bench Pro (MoE)', 'Qwen 3.6 27B: 77.2% SWE-bench, 22 GB RAM', 'Devstral Small 24B: agentic coding, 16 GB RAM'] }
         ]
       },
       fr: {
         title: 'Meilleurs LLM locaux pour le codage 2026',
         slides: [
-          { type: 'title', h1: 'Meilleurs LLM locaux pour le codage 2026', subtitle: 'Ranked by HumanEval, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=fr' },
-          { type: 'list', h2: 'Top 3 Models', items: ['Qwen2.5-Coder 32B: 87% HumanEval, 20 GB RAM', 'DeepSeek-Coder V2 Lite: 81% HumanEval, 10 GB RAM', 'Qwen2.5-Coder 7B: 72% HumanEval, 4.7 GB RAM'] }
+          { type: 'title', h1: 'Meilleurs LLM locaux pour le codage 2026', subtitle: 'Ranked by SWE-bench, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=fr' },
+          { type: 'list', h2: 'Top 3 Models', items: ['Kimi K2.6: 58.6 SWE-Bench Pro (MoE)', 'Qwen 3.6 27B: 77.2% SWE-bench, 22 GB RAM', 'Devstral Small 24B: agentic coding, 16 GB RAM'] }
         ]
       },
       ja: {
         title: '2026年の最高のローカルコーディングLLM',
         slides: [
-          { type: 'title', h1: '2026年の最高のローカルコーディングLLM', subtitle: 'Ranked by HumanEval, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=ja' },
-          { type: 'list', h2: 'Top 3 Models', items: ['Qwen2.5-Coder 32B: 87% HumanEval, 20 GB RAM', 'DeepSeek-Coder V2 Lite: 81% HumanEval, 10 GB RAM', 'Qwen2.5-Coder 7B: 72% HumanEval, 4.7 GB RAM'] }
+          { type: 'title', h1: '2026年の最高のローカルコーディングLLM', subtitle: 'Ranked by SWE-bench, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=ja' },
+          { type: 'list', h2: 'Top 3 Models', items: ['Kimi K2.6: 58.6 SWE-Bench Pro (MoE)', 'Qwen 3.6 27B: 77.2% SWE-bench, 22 GB RAM', 'Devstral Small 24B: agentic coding, 16 GB RAM'] }
         ]
       },
       zh: {
         title: '2026年最佳本地编码LLM',
         slides: [
-          { type: 'title', h1: '2026年最佳本地编码LLM', subtitle: 'Ranked by HumanEval, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=zh' },
-          { type: 'list', h2: 'Top 3 Models', items: ['Qwen2.5-Coder 32B: 87% HumanEval, 20 GB RAM', 'DeepSeek-Coder V2 Lite: 81% HumanEval, 10 GB RAM', 'Qwen2.5-Coder 7B: 72% HumanEval, 4.7 GB RAM'] }
+          { type: 'title', h1: '2026年最佳本地编码LLM', subtitle: 'Ranked by SWE-bench, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=zh' },
+          { type: 'list', h2: 'Top 3 Models', items: ['Kimi K2.6: 58.6 SWE-Bench Pro (MoE)', 'Qwen 3.6 27B: 77.2% SWE-bench, 22 GB RAM', 'Devstral Small 24B: agentic coding, 16 GB RAM'] }
         ]
       }
     };

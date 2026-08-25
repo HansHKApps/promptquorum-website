@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Best Local Models for Tool Calling in 2026: Benchmarks &amp; Comparison | PromptQuorum</title>
-  <meta name="description" content="Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B benchmarked on real MCP workflows. VRAM, reliability rates, and failure modes." />
+  <meta name="description" content="Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B benchmarked on real MCP workflows. VRAM, reliability rates, and failure modes." />
   <meta property="og:title" content="Best Local Tool-Calling Models 2026: Real MCP Benchmarks — PromptQuorum" />
   <meta property="og:description" content="5 models, 4 MCP servers, 3,000 graded calls. Which local model tool-calls reliably — and which ones stall your agent loop." />
   <meta property="og:type" content="website" />
@@ -138,10 +138,10 @@
             type: 'list',
             h2: 'Key Takeaways',
             items: [
-              '<strong>Five reliable tool-callers in 2026:</strong> Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B. All five emit well-formed function-calling JSON and survive strict MCP schema validation.',
+              '<strong>Five reliable tool-callers in 2026:</strong> Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B. All five emit well-formed function-calling JSON and survive strict MCP schema validation.',
               '<strong>Llama 3.3 70B has the highest ceiling</strong> (~97% well-formed call rate) but needs 48 GB+ VRAM. Most teams pick one of the 27B–32B models.',
               '<strong>Gemma 4 27B is the default 24 GB-rig pick.</strong> Best-in-class tool-call training for the size, reliable across filesystem, database, browser, and GitHub MCP servers.',
-              '<strong>GLM-5.1 32B wins long-context tasks.</strong> 128K context out of the box — the pick for compliance reporting and hour-long transcripts.'
+              '<strong>GLM-4.7 32B wins long-context tasks.</strong> 128K context out of the box — the pick for compliance reporting and hour-long transcripts.'
             ]
           },
           {
@@ -161,7 +161,7 @@
             items: [
               '<strong>The skill the model needs:</strong> read a tool schema, decide whether the request maps to a tool call, emit a structured response the harness can parse without heuristics.',
               '<strong>The wire format varies; the skill does not.</strong> A model that tool-calls reliably on OpenAI JSON tools usually tool-calls reliably on Cline\'s XML and MCP JSON-RPC too.',
-              '<strong>Tool-call training is the cheapest highest-impact post-training pass.</strong> The Gemma 3→4, Qwen2.5→3, and Llama 3→3.3 step-changes all reflect explicit tool-call fine-tuning.',
+              '<strong>Tool-call training is the cheapest highest-impact post-training pass.</strong> The Gemma 3→4, Qwen3→Qwen3, and Llama 3→3.3 step-changes all reflect explicit tool-call fine-tuning.',
               '<strong>Compounding matters:</strong> eight steps at 95% per-call reliability = ~66% end-to-end success. Scoped harnesses with approval gates outperform autonomous agents on real tasks precisely because human approval recovers per-call failures.'
             ]
           },
@@ -171,7 +171,7 @@
             columns: ['Model', 'VRAM (Q4_K_M)', 'Well-formed rate', 'Best for', 'Failure mode'],
             rows: [
               { 'Model': 'Gemma 4 27B', 'VRAM (Q4_K_M)': '~16 GB', 'Well-formed rate': '~95%', 'Best for': 'General-purpose 24 GB rigs', 'Failure mode': 'Conservative on chained calls' },
-              { 'Model': 'GLM-5.1 32B', 'VRAM (Q4_K_M)': '~20 GB', 'Well-formed rate': '~94%', 'Best for': 'Long-context (128K native)', 'Failure mode': 'Argument truncation on long input' },
+              { 'Model': 'GLM-4.7 32B', 'VRAM (Q4_K_M)': '~20 GB', 'Well-formed rate': '~94%', 'Best for': 'Long-context (128K native)', 'Failure mode': 'Argument truncation on long input' },
               { 'Model': 'Qwen3 32B', 'VRAM (Q4_K_M)': '~20 GB', 'Well-formed rate': '~93%', 'Best for': 'Well-rounded general + code', 'Failure mode': 'Rare XML malform in Cline' },
               { 'Model': 'Qwen3-Coder 30B', 'VRAM (Q4_K_M)': '~18 GB', 'Well-formed rate': '~96% code / ~91% other', 'Best for': 'Coding agents (Cline, Continue.dev)', 'Failure mode': 'Weaker on non-code servers' },
               { 'Model': 'Llama 3.3 70B', 'VRAM (Q4_K_M)': '~42 GB', 'Well-formed rate': '~97%', 'Best for': 'Highest ceiling when hardware fits', 'Failure mode': 'Slow — long loops are painful' }
@@ -191,9 +191,9 @@
           },
           {
             type: 'list',
-            h2: 'GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B',
+            h2: 'GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B',
             items: [
-              '<strong>GLM-5.1 32B — Long-Context Pick.</strong> 128K context natively (no rope-scaling artefacts). Pick for compliance reports, hour-long transcripts, full-codebase reads. Failure mode: occasional argument truncation on very long inputs.',
+              '<strong>GLM-4.7 32B — Long-Context Pick.</strong> 128K context natively (no rope-scaling artefacts). Pick for compliance reports, hour-long transcripts, full-codebase reads. Failure mode: occasional argument truncation on very long inputs.',
               '<strong>Qwen3 32B — Well-Rounded Fallback.</strong> Consistent across all four MCP servers, good general reasoning, fast enough for long loops on 24 GB. Failure mode: rare XML malformation in Cline\'s strict format. The "one model for the team" pick.',
               '<strong>Qwen3-Coder 30B — Code-Shaped Pick.</strong> Highest rate on code tools (~96%) — replace_in_file, read_file, code-aware browser, GitHub PRs. Drops to ~91% on sqlite and puppeteer. Pair with Gemma 4 if your agent also touches non-code servers.',
               '<strong>All three</strong> fit comfortably on 24 GB VRAM at Q4_K_M and handle parallel tool calls reliably.'
@@ -236,7 +236,7 @@
           {
             type: 'comparison',
             h2: 'Pick by VRAM Budget',
-            line1: '24 GB → Gemma 4 27B (general) · GLM-5.1 32B (long context) · Qwen3-Coder 30B (code)',
+            line1: '24 GB → Gemma 4 27B (general) · GLM-4.7 32B (long context) · Qwen3-Coder 30B (code)',
             line2: '48 GB+ → Llama 3.3 70B (highest ceiling, slowest)',
             tip: 'Q4_K_M is the production floor for all five. Drop to Q3 and tool-call reliability degrades before chat quality does. If VRAM is tight, choose a smaller model at Q4 over a larger model at Q3.'
           },
@@ -257,7 +257,7 @@
             faqs: [
               {
                 q: 'Which local model has the highest tool-call success rate in 2026?',
-                a: 'Llama 3.3 70B (~97% well-formed call rate). Needs 48 GB+ VRAM. For 24 GB rigs: Gemma 4 27B (general), GLM-5.1 32B (long context), Qwen3-Coder 30B (code).'
+                a: 'Llama 3.3 70B (~97% well-formed call rate). Needs 48 GB+ VRAM. For 24 GB rigs: Gemma 4 27B (general), GLM-4.7 32B (long context), Qwen3-Coder 30B (code).'
               },
               {
                 q: 'Does Gemma 4 27B work without special prompting tricks?',
@@ -309,10 +309,10 @@
             type: 'list',
             h2: 'Zusammenfassung',
             items: [
-              '<strong>Fünf zuverlässige Tool-Caller in 2026:</strong> Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B. Alle fünf erzeugen wohlgeformtes Function-Calling-JSON.',
+              '<strong>Fünf zuverlässige Tool-Caller in 2026:</strong> Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B. Alle fünf erzeugen wohlgeformtes Function-Calling-JSON.',
               '<strong>Llama 3.3 70B hat die höchste Zuverlässigkeit</strong> (~97% wohlgeformte Aufrufe), benötigt aber 48 GB+ VRAM. Die meisten Teams wählen eines der 27B–32B-Modelle.',
               '<strong>Gemma 4 27B ist die Standard-Wahl für 24-GB-Rigs.</strong> Beste Tool-Call-Schulung in dieser Größenklasse, zuverlässig auf Filesystem-, Datenbank-, Browser- und GitHub-MCP-Servern.',
-              '<strong>GLM-5.1 32B gewinnt bei Long-Context-Aufgaben.</strong> 128K Kontext out of the box — die Wahl für Compliance-Reports und stundenlange Transkripte.'
+              '<strong>GLM-4.7 32B gewinnt bei Long-Context-Aufgaben.</strong> 128K Kontext out of the box — die Wahl für Compliance-Reports und stundenlange Transkripte.'
             ]
           },
           {
@@ -332,7 +332,7 @@
             items: [
               '<strong>Die benötigte Fähigkeit:</strong> ein Tool-Schema lesen, entscheiden ob die Anfrage zu einem Tool-Aufruf passt, eine strukturierte Antwort ausgeben, die der Harness ohne Heuristiken parsen kann.',
               '<strong>Das Wire-Format variiert; die Fähigkeit nicht.</strong> Ein Modell, das bei OpenAI-JSON-Tools zuverlässig ist, funktioniert auch bei Cline-XML und MCP-JSON-RPC.',
-              '<strong>Tool-Call-Training ist der günstigste und wirkungsvollste Post-Training-Schritt.</strong> Die Sprünge Gemma 3→4, Qwen2.5→3 und Llama 3→3.3 spiegeln alle explizites Tool-Call-Fine-Tuning wider.',
+              '<strong>Tool-Call-Training ist der günstigste und wirkungsvollste Post-Training-Schritt.</strong> Die Sprünge Gemma 3→4, Qwen3→Qwen3 und Llama 3→3.3 spiegeln alle explizites Tool-Call-Fine-Tuning wider.',
               '<strong>Kumulierung ist entscheidend:</strong> 8 Schritte bei 95% pro Aufruf = ~66% Ende-zu-Ende. Harnesses mit Freigabe-Gates schlagen autonome Agenten bei echten Aufgaben.'
             ]
           },
@@ -342,7 +342,7 @@
             columns: ['Modell', 'VRAM (Q4_K_M)', 'Wohlgeformt-Rate', 'Einsatzgebiet', 'Fehlermodus'],
             rows: [
               { 'Modell': 'Gemma 4 27B', 'VRAM (Q4_K_M)': '~16 GB', 'Wohlgeformt-Rate': '~95%', 'Einsatzgebiet': 'Allgemein, 24-GB-Rigs', 'Fehlermodus': 'Konservativ bei verketteten Aufrufen' },
-              { 'Modell': 'GLM-5.1 32B', 'VRAM (Q4_K_M)': '~20 GB', 'Wohlgeformt-Rate': '~94%', 'Einsatzgebiet': 'Long-Context (128K nativ)', 'Fehlermodus': 'Argument-Abschneidung bei langen Inputs' },
+              { 'Modell': 'GLM-4.7 32B', 'VRAM (Q4_K_M)': '~20 GB', 'Wohlgeformt-Rate': '~94%', 'Einsatzgebiet': 'Long-Context (128K nativ)', 'Fehlermodus': 'Argument-Abschneidung bei langen Inputs' },
               { 'Modell': 'Qwen3 32B', 'VRAM (Q4_K_M)': '~20 GB', 'Wohlgeformt-Rate': '~93%', 'Einsatzgebiet': 'Vielseitig: Allgemein + leichter Code', 'Fehlermodus': 'Seltene XML-Fehlformung in Cline' },
               { 'Modell': 'Qwen3-Coder 30B', 'VRAM (Q4_K_M)': '~18 GB', 'Wohlgeformt-Rate': '~96% Code / ~91% andere', 'Einsatzgebiet': 'Code-Agenten (Cline, Continue.dev)', 'Fehlermodus': 'Schwächer bei Nicht-Code-Servern' },
               { 'Modell': 'Llama 3.3 70B', 'VRAM (Q4_K_M)': '~42 GB', 'Wohlgeformt-Rate': '~97%', 'Einsatzgebiet': 'Höchste Zuverlässigkeit, wenn Hardware passt', 'Fehlermodus': 'Langsam — lange Loops sind mühsam' }
@@ -361,9 +361,9 @@
           },
           {
             type: 'list',
-            h2: 'GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B',
+            h2: 'GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B',
             items: [
-              '<strong>GLM-5.1 32B — Long-Context-Wahl.</strong> 128K Kontext nativ (keine Rope-Scaling-Artefakte). Wahl für Compliance-Reports, stundenlange Transkripte, vollständige Codebase-Lesungen. Fehlermodus: gelegentliche Argument-Abschneidung bei sehr langen Inputs.',
+              '<strong>GLM-4.7 32B — Long-Context-Wahl.</strong> 128K Kontext nativ (keine Rope-Scaling-Artefakte). Wahl für Compliance-Reports, stundenlange Transkripte, vollständige Codebase-Lesungen. Fehlermodus: gelegentliche Argument-Abschneidung bei sehr langen Inputs.',
               '<strong>Qwen3 32B — Vielseitiger Fallback.</strong> Konsistent über alle vier MCP-Server, gutes allgemeines Denkvermögen, schnell genug für lange Loops bei 24 GB. Das "Ein Modell für das Team"-Pick.',
               '<strong>Qwen3-Coder 30B — Code-Wahl.</strong> Höchste Rate bei Code-Tools (~96%) — replace_in_file, read_file, Code-bewusste Browser-Aktionen, GitHub-PRs. Fällt bei Sqlite und Puppeteer auf ~91%. Mit Gemma 4 kombinieren, wenn der Agent auch Nicht-Code-Server berührt.',
               '<strong>Alle drei</strong> passen bei Q4_K_M auf 24 GB VRAM und verarbeiten parallele Tool-Aufrufe zuverlässig.'
@@ -405,7 +405,7 @@
           {
             type: 'comparison',
             h2: 'Auswahl nach VRAM-Budget',
-            line1: '24 GB → Gemma 4 27B (allgemein) · GLM-5.1 32B (Long-Context) · Qwen3-Coder 30B (Code)',
+            line1: '24 GB → Gemma 4 27B (allgemein) · GLM-4.7 32B (Long-Context) · Qwen3-Coder 30B (Code)',
             line2: '48 GB+ → Llama 3.3 70B (höchste Zuverlässigkeit, langsamster)',
             tip: 'Q4_K_M ist der Mindeststandard. Wenn VRAM knapp ist: lieber kleineres Modell bei Q4 als größeres bei Q3 — Tool-Call-Zuverlässigkeit sinkt vor Chat-Qualität.'
           },
@@ -426,7 +426,7 @@
             faqs: [
               {
                 q: 'Welches lokale Modell hat die höchste Tool-Call-Erfolgsrate in 2026?',
-                a: 'Llama 3.3 70B (~97%). Benötigt 48 GB+ VRAM. Für 24-GB-Rigs: Gemma 4 27B (allgemein), GLM-5.1 32B (Long-Context), Qwen3-Coder 30B (Code).'
+                a: 'Llama 3.3 70B (~97%). Benötigt 48 GB+ VRAM. Für 24-GB-Rigs: Gemma 4 27B (allgemein), GLM-4.7 32B (Long-Context), Qwen3-Coder 30B (Code).'
               },
               {
                 q: 'Funktioniert Gemma 4 27B ohne spezielle Prompting-Tricks?',
@@ -478,10 +478,10 @@
             type: 'list',
             h2: 'Points clés',
             items: [
-              '<strong>Cinq modèles fiables en 2026 :</strong> Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B. Tous cinq émettent du JSON d\'appel de fonction bien formé.',
+              '<strong>Cinq modèles fiables en 2026 :</strong> Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B. Tous cinq émettent du JSON d\'appel de fonction bien formé.',
               '<strong>Llama 3.3 70B a le plafond le plus élevé</strong> (~97% d\'appels bien formés) mais nécessite 48 Go+ de VRAM. La plupart des équipes choisissent un modèle 27B–32B.',
               '<strong>Gemma 4 27B est le choix par défaut pour les rigs 24 Go.</strong> Meilleure formation tool-call de sa catégorie, fiable sur les serveurs MCP filesystem, base de données, navigateur et GitHub.',
-              '<strong>GLM-5.1 32B domine les tâches longue-contexte.</strong> Fenêtre de 128K nativement — le choix pour les rapports de conformité et les transcriptions longues.'
+              '<strong>GLM-4.7 32B domine les tâches longue-contexte.</strong> Fenêtre de 128K nativement — le choix pour les rapports de conformité et les transcriptions longues.'
             ]
           },
           {
@@ -501,7 +501,7 @@
             items: [
               '<strong>La compétence requise :</strong> lire un schéma d\'outil, décider si la demande correspond à un appel d\'outil, émettre une réponse structurée que le harness peut analyser sans heuristiques.',
               '<strong>Le format wire varie ; la compétence non.</strong> Un modèle fiable sur les outils JSON OpenAI l\'est aussi sur le XML de Cline et MCP JSON-RPC.',
-              '<strong>La formation tool-call est le post-training le moins cher et le plus impactant.</strong> Les sauts Gemma 3→4, Qwen2.5→3 et Llama 3→3.3 reflètent tous un fine-tuning tool-call explicite.',
+              '<strong>La formation tool-call est le post-training le moins cher et le plus impactant.</strong> Les sauts Gemma 3→4, Qwen3→Qwen3 et Llama 3→3.3 reflètent tous un fine-tuning tool-call explicite.',
               '<strong>La composition compte :</strong> 8 étapes à 95% par appel = ~66% de succès de bout en bout. Les harnesses avec gates d\'approbation surpassent les agents autonomes sur de vraies tâches.'
             ]
           },
@@ -511,7 +511,7 @@
             columns: ['Modèle', 'VRAM (Q4_K_M)', 'Taux bien formé', 'Idéal pour', 'Mode d\'échec'],
             rows: [
               { 'Modèle': 'Gemma 4 27B', 'VRAM (Q4_K_M)': '~16 Go', 'Taux bien formé': '~95%', 'Idéal pour': 'Usage général, rigs 24 Go', 'Mode d\'échec': 'Conservateur sur les appels chaînés' },
-              { 'Modèle': 'GLM-5.1 32B', 'VRAM (Q4_K_M)': '~20 Go', 'Taux bien formé': '~94%', 'Idéal pour': 'Longue contexte (128K natif)', 'Mode d\'échec': 'Troncature d\'arguments sur entrées longues' },
+              { 'Modèle': 'GLM-4.7 32B', 'VRAM (Q4_K_M)': '~20 Go', 'Taux bien formé': '~94%', 'Idéal pour': 'Longue contexte (128K natif)', 'Mode d\'échec': 'Troncature d\'arguments sur entrées longues' },
               { 'Modèle': 'Qwen3 32B', 'VRAM (Q4_K_M)': '~20 Go', 'Taux bien formé': '~93%', 'Idéal pour': 'Polyvalent : général + code léger', 'Mode d\'échec': 'Rare malformation XML dans Cline' },
               { 'Modèle': 'Qwen3-Coder 30B', 'VRAM (Q4_K_M)': '~18 Go', 'Taux bien formé': '~96% code / ~91% autres', 'Idéal pour': 'Agents de code (Cline, Continue.dev)', 'Mode d\'échec': 'Plus faible sur serveurs non-code' },
               { 'Modèle': 'Llama 3.3 70B', 'VRAM (Q4_K_M)': '~42 Go', 'Taux bien formé': '~97%', 'Idéal pour': 'Fiabilité maximale si hardware disponible', 'Mode d\'échec': 'Lent — longues boucles pénibles' }
@@ -530,9 +530,9 @@
           },
           {
             type: 'list',
-            h2: 'GLM-5.1 32B, Qwen3 32B, Qwen3-Coder 30B',
+            h2: 'GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B',
             items: [
-              '<strong>GLM-5.1 32B — Choix longue-contexte.</strong> 128K natif (sans artefacts rope scaling). Pour les rapports de conformité, transcriptions longues, lectures de codebase complet. Mode d\'échec : troncature d\'arguments sur entrées très longues.',
+              '<strong>GLM-4.7 32B — Choix longue-contexte.</strong> 128K natif (sans artefacts rope scaling). Pour les rapports de conformité, transcriptions longues, lectures de codebase complet. Mode d\'échec : troncature d\'arguments sur entrées très longues.',
               '<strong>Qwen3 32B — Choix polyvalent.</strong> Cohérent sur les 4 serveurs MCP, bon raisonnement général, assez rapide pour les longues boucles sur 24 Go. Le pick "un modèle pour toute l\'équipe".',
               '<strong>Qwen3-Coder 30B — Choix code.</strong> Taux le plus élevé sur les outils de code (~96%) — replace_in_file, read_file, actions navigateur code-aware, PRs GitHub. Tombe à ~91% sur sqlite et puppeteer.',
               '<strong>Les trois</strong> tiennent confortablement sur 24 Go VRAM en Q4_K_M et gèrent les appels d\'outils parallèles de manière fiable.'
@@ -574,7 +574,7 @@
           {
             type: 'comparison',
             h2: 'Choisir par budget VRAM',
-            line1: '24 Go → Gemma 4 27B (général) · GLM-5.1 32B (longue-contexte) · Qwen3-Coder 30B (code)',
+            line1: '24 Go → Gemma 4 27B (général) · GLM-4.7 32B (longue-contexte) · Qwen3-Coder 30B (code)',
             line2: '48 Go+ → Llama 3.3 70B (fiabilité maximale, le plus lent)',
             tip: 'Q4_K_M est le plancher de production. Si la VRAM est limitée : préférez un modèle plus petit en Q4 à un modèle plus grand en Q3 — la fiabilité tool-call chute avant la qualité chat.'
           },
@@ -595,7 +595,7 @@
             faqs: [
               {
                 q: 'Quel modèle local a le taux de succès tool-call le plus élevé en 2026 ?',
-                a: 'Llama 3.3 70B (~97%). Nécessite 48 Go+ VRAM. Pour 24 Go : Gemma 4 27B (général), GLM-5.1 32B (longue-contexte), Qwen3-Coder 30B (code).'
+                a: 'Llama 3.3 70B (~97%). Nécessite 48 Go+ VRAM. Pour 24 Go : Gemma 4 27B (général), GLM-4.7 32B (longue-contexte), Qwen3-Coder 30B (code).'
               },
               {
                 q: 'Gemma 4 27B fonctionne-t-il sans astuces de prompting spéciales ?',
@@ -647,10 +647,10 @@
             type: 'list',
             h2: '主なポイント',
             items: [
-              '<strong>2026年の5つの信頼できるツール呼び出しモデル：</strong>Gemma 4 27B・GLM-5.1 32B・Qwen3 32B・Qwen3-Coder 30B・Llama 3.3 70B。すべて適切なFunction-calling JSONを出力します。',
+              '<strong>2026年の5つの信頼できるツール呼び出しモデル：</strong>Gemma 4 27B・GLM-4.7 32B・Qwen3 32B・Qwen3-Coder 30B・Llama 3.3 70B。すべて適切なFunction-calling JSONを出力します。',
               '<strong>Llama 3.3 70Bが最高の信頼性（~97%）</strong>ですが48 GB以上のVRAMが必要です。ほとんどのチームは27B〜32Bモデルを選択します。',
               '<strong>Gemma 4 27Bは24 GBリグのデフォルト選択です。</strong>この規模でのクラス最高のツール呼び出しトレーニング、ファイルシステム・データベース・ブラウザ・GitHub MCP全サーバーで信頼性があります。',
-              '<strong>GLM-5.1 32Bはロングコンテキストタスクで優勝。</strong>標準128Kコンテキスト——コンプライアンスレポートと長時間文字起こしの選択肢。'
+              '<strong>GLM-4.7 32Bはロングコンテキストタスクで優勝。</strong>標準128Kコンテキスト——コンプライアンスレポートと長時間文字起こしの選択肢。'
             ]
           },
           {
@@ -670,7 +670,7 @@
             items: [
               '<strong>モデルに必要な能力：</strong>ツールスキーマを読み、リクエストがツール呼び出しに対応するか判断し、ハーネスがヒューリスティックなしで解析できる構造化レスポンスを出力する。',
               '<strong>ワイヤフォーマットは変わる；能力は変わらない。</strong>OpenAI JSONツールで信頼性があるモデルは通常、ClineのXMLとMCP JSON-RPCでも信頼性があります。',
-              '<strong>ツール呼び出しトレーニングは最も費用対効果の高いポストトレーニング。</strong>Gemma 3→4・Qwen2.5→3・Llama 3→3.3のジャンプはすべて明示的なツール呼び出しファインチューニングを反映。',
+              '<strong>ツール呼び出しトレーニングは最も費用対効果の高いポストトレーニング。</strong>Gemma 3→4・Qwen3→Qwen3・Llama 3→3.3のジャンプはすべて明示的なツール呼び出しファインチューニングを反映。',
               '<strong>累積が重要：</strong>8ステップ×95% = ~66%エンドツーエンド成功。承認ゲート付きのハーネスが自律エージェントを実タスクで上回る理由です。'
             ]
           },
@@ -680,7 +680,7 @@
             columns: ['モデル', 'VRAM (Q4_K_M)', '適形率', '最適用途', '失敗モード'],
             rows: [
               { 'モデル': 'Gemma 4 27B', 'VRAM (Q4_K_M)': '~16 GB', '適形率': '~95%', '最適用途': '汎用・24 GBリグ', '失敗モード': '連鎖呼び出しで保守的' },
-              { 'モデル': 'GLM-5.1 32B', 'VRAM (Q4_K_M)': '~20 GB', '適形率': '~94%', '最適用途': 'ロングコンテキスト（128K標準）', '失敗モード': '長い入力で引数の切り詰め' },
+              { 'モデル': 'GLM-4.7 32B', 'VRAM (Q4_K_M)': '~20 GB', '適形率': '~94%', '最適用途': 'ロングコンテキスト（128K標準）', '失敗モード': '長い入力で引数の切り詰め' },
               { 'モデル': 'Qwen3 32B', 'VRAM (Q4_K_M)': '~20 GB', '適形率': '~93%', '最適用途': '汎用+軽量コード', '失敗モード': 'ClineでまれなXML不正形' },
               { 'モデル': 'Qwen3-Coder 30B', 'VRAM (Q4_K_M)': '~18 GB', '適形率': '~96% コード/~91% 他', '最適用途': 'コーディングエージェント', '失敗モード': '非コードサーバーで弱い' },
               { 'モデル': 'Llama 3.3 70B', 'VRAM (Q4_K_M)': '~42 GB', '適形率': '~97%', '最適用途': 'ハードウェアがあれば最高の信頼性', '失敗モード': '低速——長いループが辛い' }
@@ -699,9 +699,9 @@
           },
           {
             type: 'list',
-            h2: 'GLM-5.1 32B・Qwen3 32B・Qwen3-Coder 30B',
+            h2: 'GLM-4.7 32B・Qwen3 32B・Qwen3-Coder 30B',
             items: [
-              '<strong>GLM-5.1 32B — ロングコンテキスト選択。</strong>128Kコンテキスト標準（Rope-Scalingアーティファクトなし）。コンプライアンスレポート・長時間文字起こし・完全コードベース読み取り向け。失敗モード：非常に長い入力での引数切り詰め。',
+              '<strong>GLM-4.7 32B — ロングコンテキスト選択。</strong>128Kコンテキスト標準（Rope-Scalingアーティファクトなし）。コンプライアンスレポート・長時間文字起こし・完全コードベース読み取り向け。失敗モード：非常に長い入力での引数切り詰め。',
               '<strong>Qwen3 32B — 汎用フォールバック。</strong>4つすべてのMCPサーバーで一貫した信頼性、良好な汎用推論、24 GBで長いループに十分な速度。「チームの1モデル」選択。',
               '<strong>Qwen3-Coder 30B — コード選択。</strong>コードツール最高率（~96%）——replace_in_file・read_file・コード認識ブラウザアクション・GitHub PR。SQLiteとPuppeteerでは~91%に低下。',
               '<strong>3つすべて</strong>Q4_K_Mで24 GB VRAMに快適に収まり、並列ツール呼び出しを信頼性高く処理します。'
@@ -743,7 +743,7 @@
           {
             type: 'comparison',
             h2: 'VRAMバジェット別選択',
-            line1: '24 GB → Gemma 4 27B（汎用）· GLM-5.1 32B（ロングコンテキスト）· Qwen3-Coder 30B（コード）',
+            line1: '24 GB → Gemma 4 27B（汎用）· GLM-4.7 32B（ロングコンテキスト）· Qwen3-Coder 30B（コード）',
             line2: '48 GB以上 → Llama 3.3 70B（最高の信頼性、最も低速）',
             tip: 'Q4_K_Mが本番の最低基準です。VRAMが限られている場合：Q3の大きいモデルよりQ4の小さいモデルを選択——ツール呼び出し信頼性はチャット品質より先に低下します。'
           },
@@ -764,7 +764,7 @@
             faqs: [
               {
                 q: '2026年でツール呼び出し成功率が最も高いローカルモデルは？',
-                a: 'Llama 3.3 70B（~97%）。48 GB以上のVRAMが必要。24 GBリグには：Gemma 4 27B（汎用）・GLM-5.1 32B（ロングコンテキスト）・Qwen3-Coder 30B（コード）。'
+                a: 'Llama 3.3 70B（~97%）。48 GB以上のVRAMが必要。24 GBリグには：Gemma 4 27B（汎用）・GLM-4.7 32B（ロングコンテキスト）・Qwen3-Coder 30B（コード）。'
               },
               {
                 q: 'Gemma 4 27Bは特別なプロンプティングなしで機能しますか？',
@@ -816,10 +816,10 @@
             type: 'list',
             h2: '核心要点',
             items: [
-              '<strong>2026年五个可靠的工具调用模型：</strong>Gemma 4 27B、GLM-5.1 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B。五个模型均能输出格式正确的函数调用JSON。',
+              '<strong>2026年五个可靠的工具调用模型：</strong>Gemma 4 27B、GLM-4.7 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B。五个模型均能输出格式正确的函数调用JSON。',
               '<strong>Llama 3.3 70B可靠性最高</strong>（~97%格式正确调用率），但需要48 GB以上VRAM。大多数团队选择27B–32B的模型。',
               '<strong>Gemma 4 27B是24 GB显卡的默认选择。</strong>同尺寸中最佳的工具调用训练，在文件系统、数据库、浏览器和GitHub MCP服务器上均表现可靠。',
-              '<strong>GLM-5.1 32B在长上下文任务中领先。</strong>原生128K上下文——合规报告和长时间转录的首选。'
+              '<strong>GLM-4.7 32B在长上下文任务中领先。</strong>原生128K上下文——合规报告和长时间转录的首选。'
             ]
           },
           {
@@ -839,7 +839,7 @@
             items: [
               '<strong>模型需要的能力：</strong>读取工具模式，判断请求是否映射到工具调用，输出框架无需启发式即可解析的结构化响应。',
               '<strong>线路格式变化；能力不变。</strong>在OpenAI JSON工具上可靠的模型通常在Cline XML和MCP JSON-RPC上也可靠。',
-              '<strong>工具调用训练是成本最低、影响最高的后训练步骤。</strong>Gemma 3→4、Qwen2.5→3、Llama 3→3.3的跨越都反映了显式工具调用微调。',
+              '<strong>工具调用训练是成本最低、影响最高的后训练步骤。</strong>Gemma 3→4、Qwen3→Qwen3、Llama 3→3.3的跨越都反映了显式工具调用微调。',
               '<strong>累积很重要：</strong>8步×95%每步 = ~66%端到端成功。有审批门控的框架在真实任务上优于自主智能体。'
             ]
           },
@@ -849,7 +849,7 @@
             columns: ['模型', 'VRAM (Q4_K_M)', '格式正确率', '最适合', '失败模式'],
             rows: [
               { '模型': 'Gemma 4 27B', 'VRAM (Q4_K_M)': '~16 GB', '格式正确率': '~95%', '最适合': '通用用途，24 GB显卡', '失败模式': '链式调用时保守' },
-              { '模型': 'GLM-5.1 32B', 'VRAM (Q4_K_M)': '~20 GB', '格式正确率': '~94%', '最适合': '长上下文（原生128K）', '失败模式': '长输入时参数截断' },
+              { '模型': 'GLM-4.7 32B', 'VRAM (Q4_K_M)': '~20 GB', '格式正确率': '~94%', '最适合': '长上下文（原生128K）', '失败模式': '长输入时参数截断' },
               { '模型': 'Qwen3 32B', 'VRAM (Q4_K_M)': '~20 GB', '格式正确率': '~93%', '最适合': '全能：通用+轻量代码', '失败模式': 'Cline中偶发XML格式错误' },
               { '模型': 'Qwen3-Coder 30B', 'VRAM (Q4_K_M)': '~18 GB', '格式正确率': '~96%代码/~91%其他', '最适合': '编码智能体（Cline、Continue.dev）', '失败模式': '非代码服务器上较弱' },
               { '模型': 'Llama 3.3 70B', 'VRAM (Q4_K_M)': '~42 GB', '格式正确率': '~97%', '最适合': '硬件充足时可靠性最高', '失败模式': '速度慢——长循环痛苦' }
@@ -868,9 +868,9 @@
           },
           {
             type: 'list',
-            h2: 'GLM-5.1 32B、Qwen3 32B、Qwen3-Coder 30B',
+            h2: 'GLM-4.7 32B、Qwen3 32B、Qwen3-Coder 30B',
             items: [
-              '<strong>GLM-5.1 32B — 长上下文选择。</strong>原生128K上下文（无绳索缩放伪影）。适合合规报告、长时间转录、完整代码库读取。失败模式：非常长输入时偶发参数截断。',
+              '<strong>GLM-4.7 32B — 长上下文选择。</strong>原生128K上下文（无绳索缩放伪影）。适合合规报告、长时间转录、完整代码库读取。失败模式：非常长输入时偶发参数截断。',
               '<strong>Qwen3 32B — 全能备选。</strong>在全部四个MCP服务器上表现一致，推理能力良好，24 GB下长循环速度足够。"团队统一模型"的选择。',
               '<strong>Qwen3-Coder 30B — 代码选择。</strong>代码工具最高比率（~96%）——replace_in_file、read_file、代码感知浏览器操作、GitHub PR。在sqlite和puppeteer上降至~91%。',
               '<strong>三个模型</strong>均能在Q4_K_M下舒适地运行于24 GB VRAM，并可靠地处理并行工具调用。'
@@ -912,7 +912,7 @@
           {
             type: 'comparison',
             h2: '按VRAM预算选择',
-            line1: '24 GB → Gemma 4 27B（通用）· GLM-5.1 32B（长上下文）· Qwen3-Coder 30B（代码）',
+            line1: '24 GB → Gemma 4 27B（通用）· GLM-4.7 32B（长上下文）· Qwen3-Coder 30B（代码）',
             line2: '48 GB以上 → Llama 3.3 70B（可靠性最高，速度最慢）',
             tip: 'Q4_K_M是生产环境的最低标准。VRAM紧张时：选择Q4的小模型优于Q3的大模型——工具调用可靠性在聊天质量之前下降。'
           },
@@ -933,7 +933,7 @@
             faqs: [
               {
                 q: '2026年哪个本地模型的工具调用成功率最高？',
-                a: 'Llama 3.3 70B（~97%）。需要48 GB以上VRAM。24 GB显卡：Gemma 4 27B（通用）、GLM-5.1 32B（长上下文）、Qwen3-Coder 30B（代码）。'
+                a: 'Llama 3.3 70B（~97%）。需要48 GB以上VRAM。24 GB显卡：Gemma 4 27B（通用）、GLM-4.7 32B（长上下文）、Qwen3-Coder 30B（代码）。'
               },
               {
                 q: 'Gemma 4 27B无需特殊提示技巧即可工作吗？',

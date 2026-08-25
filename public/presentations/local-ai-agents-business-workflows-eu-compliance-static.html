@@ -149,7 +149,7 @@
             h2: 'Key Takeaways (cont.)',
             items: [
               '<strong>DACH adds two extra layers.</strong> Works Council co-determination (BetrVG §87) applies whenever the agent touches employee data — even passively. §203 StGB professional confidentiality (lawyers, doctors, auditors) makes local-only architecture mandatory, not optional.',
-              '<strong>Reference stack:</strong> Ollama or vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B + Cline or Goose+MCP + immutable audit log + human approval on every write or send action.',
+              '<strong>Reference stack:</strong> Ollama or vLLM + Gemma 4 27B / GLM-4.7 32B / Qwen3 32B + Cline or Goose+MCP + immutable audit log + human approval on every write or send action.',
               '<strong>Three failure modes to avoid:</strong> deploying without a DPIA on a workflow that needs one; mixing personal and business data in one agent workspace; skipping approval gates on outbound actions (email send, contract sign, payment).'
             ]
           },
@@ -172,7 +172,7 @@
               { 'Workflow': 'Document intake', 'Trigger': 'PDF in watched folder', 'Model': 'Gemma 4 27B / Qwen3 32B', 'AI Act Tier': 'Limited-risk' },
               { 'Workflow': 'Email triage', 'Trigger': 'New message in inbox', 'Model': 'Llama 3.2 3B (triage) + Gemma 4 27B (draft)', 'AI Act Tier': 'Limited-risk' },
               { 'Workflow': 'Meeting summary', 'Trigger': 'Transcript in storage', 'Model': 'Qwen3 32B (128K ctx)', 'AI Act Tier': 'Limited-risk' },
-              { 'Workflow': 'Compliance report', 'Trigger': 'Scheduled (monthly)', 'Model': 'GLM-5.1 32B / Llama 3.3 70B', 'AI Act Tier': 'Limited-risk' },
+              { 'Workflow': 'Compliance report', 'Trigger': 'Scheduled (monthly)', 'Model': 'GLM-4.7 32B / Llama 3.3 70B', 'AI Act Tier': 'Limited-risk' },
               { 'Workflow': 'Invoice processing', 'Trigger': 'Invoice in AP folder', 'Model': 'Gemma 4 27B / Qwen3 32B', 'AI Act Tier': 'Limited-risk' }
             ]
           },
@@ -215,7 +215,7 @@
             columns: ['Model', 'VRAM', 'Best For'],
             rows: [
               { 'Model': 'Gemma 4 27B', 'VRAM': '16 GB unified / 24 GB', 'Best For': 'General tool calling, document intake, email triage' },
-              { 'Model': 'GLM-5.1 32B', 'VRAM': '24 GB+ VRAM', 'Best For': 'Compliance reporting, long transcripts (128K ctx)' },
+              { 'Model': 'GLM-4.7 32B', 'VRAM': '24 GB+ VRAM', 'Best For': 'Compliance reporting, long transcripts (128K ctx)' },
               { 'Model': 'Qwen3 32B', 'VRAM': '24 GB VRAM', 'Best For': 'Multi-step plans, invoice processing, fallback' },
               { 'Model': 'Llama 3.3 70B', 'VRAM': '48 GB+ VRAM', 'Best For': 'Highest reliability, exception handling' },
               { 'Model': 'Llama 3.2 3B', 'VRAM': '8 GB VRAM', 'Best For': 'High-volume classification only — not drafting' }
@@ -271,7 +271,7 @@
               },
               {
                 q: 'What model handles business workflows reliably?',
-                a: 'Gemma 4 27B for general tool calling. GLM-5.1 32B for long input (128K ctx). Avoid models below 7B — they emit malformed tool calls in production. Use Q4_K_M quantisation as the floor.'
+                a: 'Gemma 4 27B for general tool calling. GLM-4.7 32B for long input (128K ctx). Avoid models below 7B — they emit malformed tool calls in production. Use Q4_K_M quantisation as the floor.'
               },
               {
                 q: 'Can I share one agent runtime across departments?',
@@ -312,7 +312,7 @@
             h2: 'Zusammenfassung (Forts.)',
             items: [
               '<strong>DACH ergänzt zwei Ebenen.</strong> Mitbestimmung des Betriebsrats (BetrVG §87) bei Mitarbeiterdaten. §203 StGB macht lokale Architektur für Berufsgeheimnisträger zur Pflicht, nicht zur Option.',
-              '<strong>Referenz-Stack:</strong> Ollama oder vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B + Cline oder Goose+MCP + unveränderliches Audit-Log + manuelle Freigabe bei jedem Schreib- oder Sendevorgang.',
+              '<strong>Referenz-Stack:</strong> Ollama oder vLLM + Gemma 4 27B / GLM-4.7 32B / Qwen3 32B + Cline oder Goose+MCP + unveränderliches Audit-Log + manuelle Freigabe bei jedem Schreib- oder Sendevorgang.',
               '<strong>Drei Fehlermodi:</strong> Betrieb ohne DSFA; Vermischung personenbezogener und geschäftlicher Daten; Auslassen von Freigabe-Gates bei ausgehenden Aktionen (E-Mail, Vertragsunterzeichnung, Zahlung).'
             ]
           },
@@ -335,7 +335,7 @@
               { 'Workflow': 'Dokumentenannahme', 'Auslöser': 'PDF im überwachten Ordner', 'Modell': 'Gemma 4 27B / Qwen3 32B', 'AI-Act-Stufe': 'Limited-Risk' },
               { 'Workflow': 'E-Mail-Triage', 'Auslöser': 'Neue Nachricht im Postfach', 'Modell': 'Llama 3.2 3B (Triage) + Gemma 4 27B', 'AI-Act-Stufe': 'Limited-Risk' },
               { 'Workflow': 'Meeting-Zusammenfassung', 'Auslöser': 'Transkript im Speicher', 'Modell': 'Qwen3 32B (128K Kontext)', 'AI-Act-Stufe': 'Limited-Risk' },
-              { 'Workflow': 'Compliance-Report', 'Auslöser': 'Geplant (monatlich)', 'Modell': 'GLM-5.1 32B / Llama 3.3 70B', 'AI-Act-Stufe': 'Limited-Risk' },
+              { 'Workflow': 'Compliance-Report', 'Auslöser': 'Geplant (monatlich)', 'Modell': 'GLM-4.7 32B / Llama 3.3 70B', 'AI-Act-Stufe': 'Limited-Risk' },
               { 'Workflow': 'Rechnungsverarbeitung', 'Auslöser': 'Rechnung im AP-Ordner', 'Modell': 'Gemma 4 27B / Qwen3 32B', 'AI-Act-Stufe': 'Limited-Risk' }
             ]
           },
@@ -378,7 +378,7 @@
             columns: ['Modell', 'VRAM', 'Einsatzgebiet'],
             rows: [
               { 'Modell': 'Gemma 4 27B', 'VRAM': '16 GB unified / 24 GB', 'Einsatzgebiet': 'Allgemeines Tool-Calling, Dokumentenannahme, E-Mail-Triage' },
-              { 'Modell': 'GLM-5.1 32B', 'VRAM': '24 GB+ VRAM', 'Einsatzgebiet': 'Compliance-Reporting, lange Transkripte (128K Kontext)' },
+              { 'Modell': 'GLM-4.7 32B', 'VRAM': '24 GB+ VRAM', 'Einsatzgebiet': 'Compliance-Reporting, lange Transkripte (128K Kontext)' },
               { 'Modell': 'Qwen3 32B', 'VRAM': '24 GB VRAM', 'Einsatzgebiet': 'Mehrstufige Pläne, Rechnungsverarbeitung' },
               { 'Modell': 'Llama 3.3 70B', 'VRAM': '48 GB+ VRAM', 'Einsatzgebiet': 'Höchste Zuverlässigkeit, Ausnahmebehandlung' },
               { 'Modell': 'Llama 3.2 3B', 'VRAM': '8 GB VRAM', 'Einsatzgebiet': 'Nur Hochvolumen-Klassifizierung — nicht für Antwortentwürfe' }
@@ -434,7 +434,7 @@
               },
               {
                 q: 'Welches Modell eignet sich für Geschäfts-Workflows?',
-                a: 'Gemma 4 27B für allgemeines Tool-Calling. GLM-5.1 32B für lange Eingaben (128K Kontext). Modelle unter 7B vermeiden — sie erzeugen in der Produktion fehlerhafte Tool-Aufrufe.'
+                a: 'Gemma 4 27B für allgemeines Tool-Calling. GLM-4.7 32B für lange Eingaben (128K Kontext). Modelle unter 7B vermeiden — sie erzeugen in der Produktion fehlerhafte Tool-Aufrufe.'
               },
               {
                 q: 'Kann ich eine Agent-Runtime abteilungsübergreifend teilen?',
@@ -475,7 +475,7 @@
             h2: 'Points clés (suite)',
             items: [
               '<strong>Les spécificités DACH ajoutent deux couches.</strong> Codétermination du comité d\'entreprise (BetrVG §87) pour les données des employés. §203 StGB rend l\'architecture locale obligatoire pour les professionnels soumis au secret.',
-              '<strong>Stack de référence :</strong> Ollama ou vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B + Cline ou Goose+MCP + journal d\'audit immuable + approbation humaine sur chaque écriture ou envoi.',
+              '<strong>Stack de référence :</strong> Ollama ou vLLM + Gemma 4 27B / GLM-4.7 32B / Qwen3 32B + Cline ou Goose+MCP + journal d\'audit immuable + approbation humaine sur chaque écriture ou envoi.',
               '<strong>Trois modes d\'échec à éviter :</strong> déploiement sans AIPD ; mélange de données personnelles et professionnelles dans un même espace de travail ; absence de gate d\'approbation sur les actions sortantes.'
             ]
           },
@@ -498,7 +498,7 @@
               { 'Workflow': 'Ingestion documentaire', 'Déclencheur': 'PDF dans dossier surveillé', 'Modèle': 'Gemma 4 27B / Qwen3 32B', 'Niveau AI Act': 'Risque limité' },
               { 'Workflow': 'Triage d\'e-mails', 'Déclencheur': 'Nouveau message entrant', 'Modèle': 'Llama 3.2 3B (triage) + Gemma 4 27B', 'Niveau AI Act': 'Risque limité' },
               { 'Workflow': 'Résumé de réunion', 'Déclencheur': 'Transcription disponible', 'Modèle': 'Qwen3 32B (128K ctx)', 'Niveau AI Act': 'Risque limité' },
-              { 'Workflow': 'Rapport de conformité', 'Déclencheur': 'Planifié (mensuel)', 'Modèle': 'GLM-5.1 32B / Llama 3.3 70B', 'Niveau AI Act': 'Risque limité' },
+              { 'Workflow': 'Rapport de conformité', 'Déclencheur': 'Planifié (mensuel)', 'Modèle': 'GLM-4.7 32B / Llama 3.3 70B', 'Niveau AI Act': 'Risque limité' },
               { 'Workflow': 'Traitement des factures', 'Déclencheur': 'Facture dans le dossier AP', 'Modèle': 'Gemma 4 27B / Qwen3 32B', 'Niveau AI Act': 'Risque limité' }
             ]
           },
@@ -541,7 +541,7 @@
             columns: ['Modèle', 'VRAM', 'Idéal pour'],
             rows: [
               { 'Modèle': 'Gemma 4 27B', 'VRAM': '16 Go unifiée / 24 Go', 'Idéal pour': 'Appel d\'outils général, ingestion documentaire, triage' },
-              { 'Modèle': 'GLM-5.1 32B', 'VRAM': '24 Go+ VRAM', 'Idéal pour': 'Reporting conformité, longues transcriptions (128K ctx)' },
+              { 'Modèle': 'GLM-4.7 32B', 'VRAM': '24 Go+ VRAM', 'Idéal pour': 'Reporting conformité, longues transcriptions (128K ctx)' },
               { 'Modèle': 'Qwen3 32B', 'VRAM': '24 Go VRAM', 'Idéal pour': 'Plans multi-étapes, traitement de factures' },
               { 'Modèle': 'Llama 3.3 70B', 'VRAM': '48 Go+ VRAM', 'Idéal pour': 'Fiabilité maximale, gestion des exceptions' },
               { 'Modèle': 'Llama 3.2 3B', 'VRAM': '8 Go VRAM', 'Idéal pour': 'Classification haut volume uniquement — pas pour les brouillons' }
@@ -597,7 +597,7 @@
               },
               {
                 q: 'Quel modèle gère les workflows métier de manière fiable ?',
-                a: 'Gemma 4 27B pour l\'appel d\'outils général. GLM-5.1 32B pour les entrées longues (128K ctx). Éviter les modèles sous 7B — ils émettent des appels d\'outils malformés en production.'
+                a: 'Gemma 4 27B pour l\'appel d\'outils général. GLM-4.7 32B pour les entrées longues (128K ctx). Éviter les modèles sous 7B — ils émettent des appels d\'outils malformés en production.'
               },
               {
                 q: 'Peut-on partager un runtime d\'agent entre départements ?',
@@ -638,7 +638,7 @@
             h2: '主なポイント（続き）',
             items: [
               '<strong>DACHでは2つの追加レイヤーがあります。</strong>従業員データに触れる場合は労働者委員会（BetrVG §87）の共同決定権が適用されます。§203 StGBはBeruf秘匿義務者（弁護士・医師・監査人）に対してローカル専用を義務付けます。',
-              '<strong>参照スタック：</strong>Ollama/vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B + Cline/Goose+MCP + 不変監査ログ + すべての書き込み・送信アクションへの人間承認。',
+              '<strong>参照スタック：</strong>Ollama/vLLM + Gemma 4 27B / GLM-4.7 32B / Qwen3 32B + Cline/Goose+MCP + 不変監査ログ + すべての書き込み・送信アクションへの人間承認。',
               '<strong>3つの失敗パターン：</strong>必要なワークフローへのDPIA未実施；個人データと業務データの混在；送信アクションへの承認ゲートのスキップ。'
             ]
           },
@@ -661,7 +661,7 @@
               { 'ワークフロー': '文書取り込み', 'トリガー': '監視フォルダへのPDF', 'モデル': 'Gemma 4 27B / Qwen3 32B', 'AI Actレベル': '限定リスク' },
               { 'ワークフロー': 'メールトリアージ', 'トリガー': '受信トレイの新着メッセージ', 'モデル': 'Llama 3.2 3B（トリアージ）+ Gemma 4 27B', 'AI Actレベル': '限定リスク' },
               { 'ワークフロー': '会議サマリー', 'トリガー': 'ストレージ内の文字起こし', 'モデル': 'Qwen3 32B（128Kコンテキスト）', 'AI Actレベル': '限定リスク' },
-              { 'ワークフロー': 'コンプライアンスレポート', 'トリガー': '定期実行（月次）', 'モデル': 'GLM-5.1 32B / Llama 3.3 70B', 'AI Actレベル': '限定リスク' },
+              { 'ワークフロー': 'コンプライアンスレポート', 'トリガー': '定期実行（月次）', 'モデル': 'GLM-4.7 32B / Llama 3.3 70B', 'AI Actレベル': '限定リスク' },
               { 'ワークフロー': '請求書処理', 'トリガー': '経理フォルダへの請求書', 'モデル': 'Gemma 4 27B / Qwen3 32B', 'AI Actレベル': '限定リスク' }
             ]
           },
@@ -704,7 +704,7 @@
             columns: ['モデル', 'VRAM', '最適用途'],
             rows: [
               { 'モデル': 'Gemma 4 27B', 'VRAM': '16 GB統合 / 24 GB', '最適用途': '汎用ツール呼び出し・文書取り込み・メールトリアージ' },
-              { 'モデル': 'GLM-5.1 32B', 'VRAM': '24 GB+ VRAM', '最適用途': 'コンプライアンスレポート・長い文字起こし（128Kコンテキスト）' },
+              { 'モデル': 'GLM-4.7 32B', 'VRAM': '24 GB+ VRAM', '最適用途': 'コンプライアンスレポート・長い文字起こし（128Kコンテキスト）' },
               { 'モデル': 'Qwen3 32B', 'VRAM': '24 GB VRAM', '最適用途': '多段階プラン・請求書処理・フォールバック' },
               { 'モデル': 'Llama 3.3 70B', 'VRAM': '48 GB+ VRAM', '最適用途': '最高の信頼性・例外処理' },
               { 'モデル': 'Llama 3.2 3B', 'VRAM': '8 GB VRAM', '最適用途': '大量分類のみ——返信ドラフトには不向き' }
@@ -760,7 +760,7 @@
               },
               {
                 q: 'どのモデルが業務ワークフローを確実に処理しますか？',
-                a: '汎用ツール呼び出しにはGemma 4 27B。長い入力（128Kコンテキスト）にはGLM-5.1 32B。7B未満のモデルは本番環境で不正なツール呼び出しを生成するため避けてください。'
+                a: '汎用ツール呼び出しにはGemma 4 27B。長い入力（128Kコンテキスト）にはGLM-4.7 32B。7B未満のモデルは本番環境で不正なツール呼び出しを生成するため避けてください。'
               },
               {
                 q: '1つのエージェントランタイムを部門間で共有できますか？',
@@ -801,7 +801,7 @@
             h2: '核心要点（续）',
             items: [
               '<strong>DACH地区增加两个额外层次。</strong>工作委员会共同决定权（BetrVG §87）适用于任何接触员工数据的情况。§203 StGB使本地专用架构对职业保密义务人（律师、医生、审计师）成为强制要求。',
-              '<strong>参考技术栈：</strong>Ollama或vLLM + Gemma 4 27B / GLM-5.1 32B / Qwen3 32B + Cline或Goose+MCP + 不可变审计日志 + 每次写入或发送操作均需人工审批。',
+              '<strong>参考技术栈：</strong>Ollama或vLLM + Gemma 4 27B / GLM-4.7 32B / Qwen3 32B + Cline或Goose+MCP + 不可变审计日志 + 每次写入或发送操作均需人工审批。',
               '<strong>三种需要避免的失败模式：</strong>未进行DPIA就部署需要它的工作流；在一个工作区混合个人数据和业务数据；跳过外发操作（邮件发送、合同签署、付款授权）的审批门控。'
             ]
           },
@@ -824,7 +824,7 @@
               { '工作流': '文档接收', '触发条件': 'PDF落入监控文件夹', '推荐模型': 'Gemma 4 27B / Qwen3 32B', 'AI Act分级': '有限风险' },
               { '工作流': '邮件分类', '触发条件': '收件箱新邮件', '推荐模型': 'Llama 3.2 3B（分类）+ Gemma 4 27B', 'AI Act分级': '有限风险' },
               { '工作流': '会议摘要', '触发条件': '转录文件就绪', '推荐模型': 'Qwen3 32B（128K上下文）', 'AI Act分级': '有限风险' },
-              { '工作流': '合规报告', '触发条件': '定期执行（月度）', '推荐模型': 'GLM-5.1 32B / Llama 3.3 70B', 'AI Act分级': '有限风险' },
+              { '工作流': '合规报告', '触发条件': '定期执行（月度）', '推荐模型': 'GLM-4.7 32B / Llama 3.3 70B', 'AI Act分级': '有限风险' },
               { '工作流': '发票处理', '触发条件': '发票落入财务文件夹', '推荐模型': 'Gemma 4 27B / Qwen3 32B', 'AI Act分级': '有限风险' }
             ]
           },
@@ -867,7 +867,7 @@
             columns: ['模型', 'VRAM', '最适合'],
             rows: [
               { '模型': 'Gemma 4 27B', 'VRAM': '16 GB统一 / 24 GB', '最适合': '通用工具调用、文档接收、邮件分类' },
-              { '模型': 'GLM-5.1 32B', 'VRAM': '24 GB+ VRAM', '最适合': '合规报告、长文字转录（128K上下文）' },
+              { '模型': 'GLM-4.7 32B', 'VRAM': '24 GB+ VRAM', '最适合': '合规报告、长文字转录（128K上下文）' },
               { '模型': 'Qwen3 32B', 'VRAM': '24 GB VRAM', '最适合': '多步骤规划、发票处理、备选方案' },
               { '模型': 'Llama 3.3 70B', 'VRAM': '48 GB+ VRAM', '最适合': '最高可靠性、异常处理' },
               { '模型': 'Llama 3.2 3B', 'VRAM': '8 GB VRAM', '最适合': '仅高量分类——不适合起草回复' }
@@ -923,7 +923,7 @@
               },
               {
                 q: '哪个模型能可靠处理业务工作流？',
-                a: 'Gemma 4 27B用于通用工具调用。GLM-5.1 32B用于长输入（128K上下文）。避免7B以下模型——它们在生产环境中产生格式错误的工具调用。'
+                a: 'Gemma 4 27B用于通用工具调用。GLM-4.7 32B用于长输入（128K上下文）。避免7B以下模型——它们在生产环境中产生格式错误的工具调用。'
               },
               {
                 q: '能跨部门共享一个智能体运行时吗？',
