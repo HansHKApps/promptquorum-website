@@ -25,6 +25,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Users deciding between running on-device AI via Loci versus cloud services, other local-LLM apps, or cloud alternatives — covers setup friction, privacy positioning, cross-platform support, and real-world trade-offs.',
     readTime: '8 min read',
     educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: 'Visit Loci AI official site →', url: 'https://askloci.ai', productName: 'Loci', productCategory: 'software' },
+    ],
     primaryTerm: 'Loci AI review',
     targetKeywords: [
       'loci ai review',
@@ -384,6 +388,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'المستخدمون الذين يقررون بين تشغيل ذكاء اصطناعي على الجهاز عبر Loci مقابل الخدمات السحابية أو تطبيقات الذكاء الاصطناعي المحلي الأخرى أو البدائل السحابية — يغطي احتكاك الإعداد وموضع الخصوصية والدعم متعدد المنصات والمقايضات في العالم الحقيقي.',
     readTime: '8 دقائق للقراءة',
     educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: 'زيارة الموقع الرسمي لـ Loci AI ←', url: 'https://askloci.ai', productName: 'Loci', productCategory: 'software' },
+    ],
     primaryTerm: 'Loci AI review',
     targetKeywords: [
       'loci ai review',
@@ -723,6 +731,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Nutzer, die zwischen lokaler KI über Loci versus Cloud-Services, andere Local-LLM-Apps oder Cloud-Alternativen wählen — behandelt Reibungsverluste bei der Einrichtung, Datenschutz-Positionierung, plattformübergreifende Unterstützung und reale Kompromisse.',
     readTime: '8 Min. Lesezeit',
     educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: 'Offizielle Loci-AI-Website besuchen →', url: 'https://askloci.ai', productName: 'Loci', productCategory: 'software' },
+    ],
     primaryTerm: 'Loci AI Review',
     targetKeywords: [
       'loci ai review',
@@ -1057,6 +1069,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Usuarios decidiendo entre ejecutar IA en el dispositivo mediante Loci versus servicios en la nube, otras aplicaciones de IA local o alternativas en la nube — cubre fricción de configuración, posicionamiento de privacidad, compatibilidad multiplataforma y compromisos reales.',
     readTime: '8 min de lectura',
     educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: 'Visitar el sitio oficial de Loci AI →', url: 'https://askloci.ai', productName: 'Loci', productCategory: 'software' },
+    ],
     primaryTerm: 'reseña de Loci AI',
     targetKeywords: [
       'reseña loci ai',
@@ -1383,6 +1399,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     'Utilisateurs décidant entre l\'IA sur appareil via Loci et les services cloud, autres applications IA locales, ou alternatives cloud — couvre la friction de configuration, le positionnement en matière de confidentialité, le support multiplateforme et les compromis pratiques.',
   readTime: '8 min de lecture',
   educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: 'Visiter le site officiel de Loci AI →', url: 'https://askloci.ai', productName: 'Loci', productCategory: 'software' },
+    ],
   primaryTerm: 'Loci AI review',
   targetKeywords: [
     'critique loci ai',
@@ -1709,6 +1729,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Loci か クラウドサービス、その他のローカルLLMアプリ、クラウド代替手段かを選択するユーザー。セットアップの摩擦、プライバシー位置付け、クロスプラットフォーム対応、現実的なトレードオフを対象。',
     readTime: '8分で読める',
     educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: 'Loci AI 公式サイトを見る →', url: 'https://askloci.ai', productName: 'Loci', productCategory: 'software' },
+    ],
     primaryTerm: 'Loci AI review',
     targetKeywords: [
       'loci ai レビュー',
@@ -2035,6 +2059,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Loci를 사용하는 것과 클라우드 서비스, 다른 로컬 LLM 앱, 또는 클라우드 대안 중에서 선택하는 사용자 — 설정 복잡도, 프라이버시 위치 지정, 크로스플랫폼 지원, 실제 트레이드오프를 다룹니다.',
     readTime: '8분 읽기',
     educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: 'Loci AI 공식 사이트 방문 →', url: 'https://askloci.ai', productName: 'Loci', productCategory: 'software' },
+    ],
     primaryTerm: 'Loci AI 리뷰',
     targetKeywords: [
       'loci ai 리뷰',
@@ -2361,6 +2389,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     'Usuários decidindo entre executar IA no dispositivo via Loci versus serviços em nuvem, outros apps de IA local ou alternativas em nuvem — cobre fricção na configuração, posicionamento de privacidade, suporte multiplataforma e trade-offs do mundo real.',
   readTime: '8 min de leitura',
   educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: 'Visitar o site oficial do Loci AI →', url: 'https://askloci.ai', productName: 'Loci', productCategory: 'software' },
+    ],
   primaryTerm: 'Revisão do Loci AI',
   targetKeywords: [
     'revisão loci ai',
@@ -2687,6 +2719,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '决定是否使用 Loci 运行设备上 AI 还是使用云服务、其他本地 LLM 应用或云替代方案的用户——涵盖设置摩擦、隐私定位、跨平台支持和现实权衡。',
     readTime: '阅读约8分钟',
     educationalLevel: 'Intermediate',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { label: '访问 Loci AI 官方网站 →', url: 'https://askloci.ai', productName: 'Loci', productCategory: 'software' },
+    ],
     primaryTerm: 'Loci AI review',
     targetKeywords: [
       'loci ai 评测',

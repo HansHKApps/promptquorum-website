@@ -10129,7 +10129,7 @@
       ]
     },
     "beelink-ser8-local-ai-review": {
-      "dateModified": "2026-07-03",
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-03",
       "hasSections": true,
@@ -10147,16 +10147,16 @@
       "images": [
         {
           "url": "/images/beelink-ser8-local-ai-review-key-specs-en.svg",
-          "title": "Beelink SER8 key specs: Ryzen 7 8845HS (8 cores/16 threads), Radeon 780M iGPU, 32 GB DDR5-5600, 1 TB NVMe, 2.5GbE, 65 W TDP, ~$650."
+          "title": "Beelink SER8 (8845HS) key specs: 8 cores/16 threads, Radeon 780M iGPU, DDR5-5600, 2× M.2 NVMe, 2.5GbE, 65 W TDP."
         },
         {
           "url": "/images/beelink-ser8-local-ai-review-llm-model-fit-en.svg",
-          "title": "Local LLM model fit on the Beelink SER8 with 32 GB RAM: 7B (Q4) is comfortable, 13B–14B (Q4) is usable but slower, 32B (Q4) is tight and slow, and 70B does not fit."
+          "title": "Estimated local LLM model fit on the Beelink SER8: 7B–8B is comfortable on either config, 14B needs 64 GB to feel comfortable, 32B is tight even at 64 GB, and 70B does not realistically fit."
         }
       ]
     },
     "beelink-eq14-local-ai-review": {
-      "dateModified": "2026-07-03",
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-03",
       "hasSections": true,
