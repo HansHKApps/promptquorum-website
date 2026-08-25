@@ -3235,7 +3235,7 @@
       "images": []
     },
     "qwen-local-deployment-guide-2026": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -6967,7 +6967,7 @@
       ]
     },
     "best-local-llm-ide-plugins-2026": {
-      "dateModified": null,
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
