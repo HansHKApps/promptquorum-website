@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useMemo } from 'react'
+import { useMemo, useRef, useState, useEffect } from 'react'
 import { llmThemes, type LLMTheme } from '@/lib/local-llms/themes'
 import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { useLang } from '@/hooks/useLang'
@@ -1746,6 +1746,30 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
 }) {
   const lang = useLang(initialLang)
   const liveSet = useMemo(() => new Set(liveSlugs), [liveSlugs])
+  const newModelsTableRef = useRef<HTMLDivElement>(null)
+  const [newModelsTableIsScrollable, setNewModelsTableIsScrollable] = useState(false)
+  const comparisonTableRef = useRef<HTMLDivElement>(null)
+  const [comparisonTableIsScrollable, setComparisonTableIsScrollable] = useState(false)
+
+  useEffect(() => {
+    const el = newModelsTableRef.current
+    if (!el) return
+    const checkOverflow = () => setNewModelsTableIsScrollable(el.scrollWidth > el.clientWidth + 1)
+    checkOverflow()
+    const observer = new ResizeObserver(checkOverflow)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [lang])
+
+  useEffect(() => {
+    const el = comparisonTableRef.current
+    if (!el) return
+    const checkOverflow = () => setComparisonTableIsScrollable(el.scrollWidth > el.clientWidth + 1)
+    checkOverflow()
+    const observer = new ResizeObserver(checkOverflow)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [lang])
 
   return (
     <div className="min-h-screen bg-surface pt-24 pb-20">
@@ -1900,7 +1924,7 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
           <h2 className="text-2xl font-bold text-text-primary mb-6">
             {HUB_NEW_APRIL_HEADING[lang] ?? HUB_NEW_APRIL_HEADING['en']}
           </h2>
-          <div className="relative overflow-x-auto">
+          <div className="relative overflow-x-auto" ref={newModelsTableRef}>
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="border-b border-primary/20">
@@ -1920,7 +1944,9 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
                 ))}
               </tbody>
             </table>
-            <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+            {newModelsTableIsScrollable && (
+              <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+            )}
           </div>
         </section>
 
@@ -1929,7 +1955,7 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
           <h2 className="text-2xl font-bold text-text-primary mb-6">
             {HUB_COMPARISON_HEADING[lang] ?? HUB_COMPARISON_HEADING['en']}
           </h2>
-          <div className="relative overflow-x-auto">
+          <div className="relative overflow-x-auto" ref={comparisonTableRef}>
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="border-b border-primary/20">
@@ -1949,7 +1975,9 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
                 ))}
               </tbody>
             </table>
-            <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+            {comparisonTableIsScrollable && (
+              <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+            )}
           </div>
         </section>
 

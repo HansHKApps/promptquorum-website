@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { useLang } from '@/hooks/useLang'
 import type { BlogPost, Language } from '@/lib/blog/blogContent'
@@ -97,6 +97,57 @@ const BLOG_UI = {
     ar: '← العودة إلى المدونة',
     ko: '← 블로그로 돌아가기',
   },
+}
+
+// Extracted into its own component so it can own its scroll-overflow-detection
+// hooks per Rules of Hooks — it is rendered inline inside a `.map()` over
+// post.sections in BlogPostClientContent, so hooks cannot live there directly.
+function BlogSectionTable({ columns, rows }: { columns: string[]; rows: Record<string, string>[] }) {
+  const tableScrollRef = useRef<HTMLDivElement>(null)
+  const [tableIsScrollable, setTableIsScrollable] = useState(false)
+
+  useEffect(() => {
+    const el = tableScrollRef.current
+    if (!el) return
+    const checkOverflow = () => setTableIsScrollable(el.scrollWidth > el.clientWidth + 1)
+    checkOverflow()
+    const observer = new ResizeObserver(checkOverflow)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [rows, columns])
+
+  return (
+    <div className="relative overflow-x-auto my-6" ref={tableScrollRef}>
+      <table className="w-full border-collapse">
+        <thead>
+          <tr className="border-b border-text-tertiary">
+            {columns.map((col, colIdx) => (
+              <th
+                key={col}
+                className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5${colIdx === 0 ? ' sticky left-0 z-10' : ''}`}
+              >
+                {col}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, idx) => (
+            <tr key={idx} className="border-b border-text-tertiary hover:bg-primary/5 group">
+              {columns.map((col, colIdx) => (
+                <td key={`${idx}-${col}`} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary' : 'p-2 sm:p-3 text-text-secondary'}>
+                  {row[col] || '—'}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {tableIsScrollable && (
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+      )}
+    </div>
+  )
 }
 
 function BlogPostClientContent({ post, slug, initialLang, availableLangs }: BlogPostClientProps) {
@@ -236,34 +287,7 @@ function BlogPostClientContent({ post, slug, initialLang, availableLangs }: Blog
 
                 {/* Table: rows with columns */}
                 {section.rows && section.rows.length > 0 && section.columns && (
-                  <div className="relative overflow-x-auto my-6">
-                    <table className="w-full border-collapse">
-                      <thead>
-                        <tr className="border-b border-text-tertiary">
-                          {section.columns.map((col, colIdx) => (
-                            <th
-                              key={col}
-                              className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5${colIdx === 0 ? ' sticky left-0 z-10' : ''}`}
-                            >
-                              {col}
-                            </th>
-                          ))}
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {section.rows.map((row, idx) => (
-                          <tr key={idx} className="border-b border-text-tertiary hover:bg-primary/5 group">
-                            {section.columns?.map((col, colIdx) => (
-                              <td key={`${idx}-${col}`} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary' : 'p-2 sm:p-3 text-text-secondary'}>
-                                {row[col] || '—'}
-                              </td>
-                            ))}
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                    <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
-                  </div>
+                  <BlogSectionTable columns={section.columns} rows={section.rows} />
                 )}
 
                 {/* Download CTA */}

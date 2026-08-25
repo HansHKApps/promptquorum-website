@@ -1,3 +1,4 @@
+import { useRef, useState, useEffect } from 'react'
 import { useLang } from '@/hooks/useLang'
 
 interface ConfusedPair {
@@ -187,11 +188,24 @@ export function GlossaryComparisonTable() {
   const lang: Lang = (rawLang in CONFUSED_PAIRS ? rawLang : 'en') as Lang
   const pairs = CONFUSED_PAIRS[lang] ?? CONFUSED_PAIRS['en']
   const h = TABLE_HEADERS[lang] ?? TABLE_HEADERS['en']
+  const tableScrollRef = useRef<HTMLDivElement>(null)
+  const [tableIsScrollable, setTableIsScrollable] = useState(false)
+
+  useEffect(() => {
+    const el = tableScrollRef.current
+    if (!el) return
+    const checkOverflow = () => setTableIsScrollable(el.scrollWidth > el.clientWidth + 1)
+    checkOverflow()
+    const observer = new ResizeObserver(checkOverflow)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [pairs])
+
   return (
     <section className="my-10">
       <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mb-2">{h.heading}</h2>
       <p className="text-text-secondary text-sm mb-6">{h.description}</p>
-      <div className="relative overflow-x-auto rounded-xl border border-primary/20">
+      <div className="relative overflow-x-auto rounded-xl border border-primary/20" ref={tableScrollRef}>
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="border-b border-primary/20 bg-primary/5">
@@ -215,7 +229,9 @@ export function GlossaryComparisonTable() {
             ))}
           </tbody>
         </table>
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+        {tableIsScrollable && (
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+        )}
       </div>
     </section>
   )

@@ -1,5 +1,6 @@
 'use client'
 
+import { useRef, useState, useEffect } from 'react'
 import { useLang } from '@/hooks/useLang'
 import Link from 'next/link'
 import { LangLinksBar } from '@/components/LangLinksBar'
@@ -1446,6 +1447,18 @@ function CompareContent({ initialLang }: { initialLang?: Lang }) {
   const lang = useLang(initialLang) as Lang
   const t = (content[lang] ?? content['en'])!
   const rows = TABLE_ROWS[lang] ?? DEFAULT_ROWS
+  const compareTableRef = useRef<HTMLDivElement>(null)
+  const [compareTableIsScrollable, setCompareTableIsScrollable] = useState(false)
+
+  useEffect(() => {
+    const el = compareTableRef.current
+    if (!el) return
+    const checkOverflow = () => setCompareTableIsScrollable(el.scrollWidth > el.clientWidth + 1)
+    checkOverflow()
+    const observer = new ResizeObserver(checkOverflow)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [rows])
 
   return (
     <div className="min-h-screen bg-white pt-28 pb-20">
@@ -1517,7 +1530,7 @@ function CompareContent({ initialLang }: { initialLang?: Lang }) {
         <section className="pt-14 pb-14 border-b border-gray-100" id="comparison-table">
           <h2 className="text-2xl font-bold text-text-primary mb-2 tracking-tight">{t.tableH2}</h2>
           <p className="text-text-secondary mb-6">{t.tablePara}</p>
-          <div className="relative overflow-x-auto rounded-xl border border-gray-200">
+          <div className="relative overflow-x-auto rounded-xl border border-gray-200" ref={compareTableRef}>
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
@@ -1572,7 +1585,9 @@ function CompareContent({ initialLang }: { initialLang?: Lang }) {
                 </tr>
               </tbody>
             </table>
-            <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+            {compareTableIsScrollable && (
+              <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+            )}
           </div>
           <p className="text-xs font-mono text-text-secondary mt-3">{t.tableFootnote}</p>
         </section>

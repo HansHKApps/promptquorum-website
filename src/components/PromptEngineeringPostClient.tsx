@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useLang } from '@/hooks/useLang'
@@ -430,16 +430,34 @@ function isPEMarkdownTable(lines: string[]): boolean {
   return lines.length >= 2 && lines[0].includes('|') && lines[1].includes('|') && lines[1].includes('-')
 }
 
-function renderPEMarkdownTable(lines: string[], renderLinks: (text: string) => React.ReactNode): JSX.Element {
+// Extracted into its own component (rather than a plain function returning JSX)
+// so it can own its scroll-overflow-detection hooks per Rules of Hooks — it is
+// invoked from within .map()/IIFE callbacks in SectionBlock, so hooks cannot
+// live directly in the calling function.
+function PEMarkdownTable({ lines, renderLinks }: { lines: string[]; renderLinks: (text: string) => React.ReactNode }): JSX.Element {
   const rows = lines
     .filter(line => line.trim())
     .map(line => line.split('|').map(cell => cell.trim()).filter(Boolean))
     .filter(row => row.length > 0)
+
+  const tableScrollRef = useRef<HTMLDivElement>(null)
+  const [tableIsScrollable, setTableIsScrollable] = useState(false)
+
+  useEffect(() => {
+    const el = tableScrollRef.current
+    if (!el) return
+    const checkOverflow = () => setTableIsScrollable(el.scrollWidth > el.clientWidth + 1)
+    checkOverflow()
+    const observer = new ResizeObserver(checkOverflow)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [lines])
+
   if (rows.length < 2) return <></>
   const headers = rows[0]
   const dataRows = rows.slice(2)
   return (
-    <div className="relative overflow-x-auto my-6">
+    <div className="relative overflow-x-auto my-6" ref={tableScrollRef}>
       <table className="w-full border-collapse text-sm">
         <thead>
           <tr className="border-b-2 border-primary/20">
@@ -462,7 +480,9 @@ function renderPEMarkdownTable(lines: string[], renderLinks: (text: string) => R
           ))}
         </tbody>
       </table>
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+      {tableIsScrollable && (
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+      )}
     </div>
   )
 }
@@ -765,6 +785,18 @@ interface LightboxImage {
 
 function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap }: { section: PESection; colors: { dot: string; badge: string }; id?: string; lang: Language; slug?: string; isGlossary?: boolean; termPathMap?: Map<string, string[]> }) {
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
+  const tableScrollRef = useRef<HTMLDivElement>(null)
+  const [tableIsScrollable, setTableIsScrollable] = useState(false)
+
+  useEffect(() => {
+    const el = tableScrollRef.current
+    if (!el) return
+    const checkOverflow = () => setTableIsScrollable(el.scrollWidth > el.clientWidth + 1)
+    checkOverflow()
+    const observer = new ResizeObserver(checkOverflow)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [section.rows, section.columns])
 
   return (
     <div className="mt-8" id={id}>
@@ -829,7 +861,7 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
               </ul>
             )
             if (block.type === 'table') return (
-              <div key={i}>{renderPEMarkdownTable(block.lines, (text) => renderInlineLinks(text, lang))}</div>
+              <PEMarkdownTable key={i} lines={block.lines} renderLinks={(text) => renderInlineLinks(text, lang)} />
             )
             return <p key={i} className="text-text-secondary leading-relaxed">{renderInlineLinks(block.text, lang)}</p>
           })}
@@ -852,7 +884,7 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
       {!section.isTldr && section.items && (() => {
         const stringItems = section.items!.filter((item): item is string => typeof item === 'string')
         if (section.tableFormat && isPEMarkdownTable(stringItems)) {
-          return renderPEMarkdownTable(stringItems, (text) => renderInlineLinks(text, lang))
+          return <PEMarkdownTable lines={stringItems} renderLinks={(text) => renderInlineLinks(text, lang)} />
         }
         return (
           <ul className="space-y-3 my-4">
@@ -906,7 +938,7 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
       ) : (
         /* Regular table for non-glossary content */
         section.rows && section.columns && (
-          <div className="relative overflow-x-auto my-6">
+          <div className="relative overflow-x-auto my-6" ref={tableScrollRef}>
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr className="border-b-2 border-primary/20">
@@ -929,7 +961,9 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
                 ))}
               </tbody>
             </table>
-            <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+            {tableIsScrollable && (
+              <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+            )}
           </div>
         )
       )}

@@ -9,7 +9,7 @@
 //     required prop — this component never imports the smartHomeContent barrel.
 //   - LanguageSwitcher omitted in this iteration; cluster ships noindex until launch.
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Language } from '@/lib/blog/blogContent'
@@ -431,6 +431,18 @@ interface LightboxImage {
 
 function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language; renderLinks: (text: string) => React.ReactNode }) {
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
+  const tableScrollRef = useRef<HTMLDivElement>(null)
+  const [tableIsScrollable, setTableIsScrollable] = useState(false)
+
+  useEffect(() => {
+    const el = tableScrollRef.current
+    if (!el) return
+    const checkOverflow = () => setTableIsScrollable(el.scrollWidth > el.clientWidth + 1)
+    checkOverflow()
+    const observer = new ResizeObserver(checkOverflow)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [section.rows, section.columns])
 
   return (
     <div
@@ -653,7 +665,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
 
       {/* Table */}
       {section.rows && section.columns && (
-        <div className="relative overflow-x-auto my-6 -mx-4 px-4 sm:mx-0 sm:px-0">
+        <div className="relative overflow-x-auto my-6 -mx-4 px-4 sm:mx-0 sm:px-0" ref={tableScrollRef}>
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr className="border-b-2 border-primary/20">
@@ -676,7 +688,9 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
               ))}
             </tbody>
           </table>
-          <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent" />
+          {tableIsScrollable && (
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent" />
+          )}
           {section.note && (
             <p className="text-sm text-text-secondary leading-relaxed mt-4 italic">
               {renderInlineLinks(section.note, lang)}

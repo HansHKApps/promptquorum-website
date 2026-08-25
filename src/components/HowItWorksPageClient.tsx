@@ -1,5 +1,6 @@
 'use client'
 
+import { useRef, useState, useEffect } from 'react'
 import { useLang } from '@/hooks/useLang'
 import Link from 'next/link'
 import { LangLinksBar } from '@/components/LangLinksBar'
@@ -1146,6 +1147,18 @@ const providers = {
 function HowItWorksContent({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
   const lang = useLang(initialLang)
   const t = (T[lang as keyof typeof T] ?? T.en)!
+  const frameworksTableRef = useRef<HTMLDivElement>(null)
+  const [frameworksTableIsScrollable, setFrameworksTableIsScrollable] = useState(false)
+
+  useEffect(() => {
+    const el = frameworksTableRef.current
+    if (!el) return
+    const checkOverflow = () => setFrameworksTableIsScrollable(el.scrollWidth > el.clientWidth + 1)
+    checkOverflow()
+    const observer = new ResizeObserver(checkOverflow)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [t.frameworks])
 
   return (
     <div className="min-h-screen bg-surface pt-24 pb-20">
@@ -1205,7 +1218,7 @@ function HowItWorksContent({ initialLang }: { initialLang?: import("@/hooks/useL
             <h2 className="text-3xl font-bold text-text-primary mb-3">{t.frameworksH2}</h2>
             <p className="text-text-secondary max-w-2xl mx-auto">{t.frameworksDesc}</p>
           </div>
-          <div className="relative overflow-x-auto">
+          <div className="relative overflow-x-auto" ref={frameworksTableRef}>
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-primary/20">
@@ -1224,7 +1237,9 @@ function HowItWorksContent({ initialLang }: { initialLang?: import("@/hooks/useL
                 ))}
               </tbody>
             </table>
-            <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+            {frameworksTableIsScrollable && (
+              <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+            )}
           </div>
         </div>
       </div>
