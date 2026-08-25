@@ -426,11 +426,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'GMKtec G3 Plus N150 Test (2026): Bester günstiger Mini-PC für Home Assistant + lokale KI?',
     seoTitle: 'GMKtec G3 Plus N150 Test 2026: Günstiger HA-Mini-PC',
     intro:
-      'Der GMKtec NucBox G3 Plus (Intel N150, Single-Channel-DDR4, aufrüstbar auf 32 GB) ist ein günstiger Mini-PC für ein lokal betriebenes Smart Home. Für etwa 180–200 € in der Konfiguration 16 GB / 512 GB (Preis geprüft am 25. August 2026) betreibt er Home Assistant und ein kleines lokales Modell — mit einem echten Vorteil gegenüber manchen Konkurrenten: Sein RAM ist ein austauschbares SO-DIMM, nicht verlötet. Dieser Test prüft die Spezifikationen gegen Hersteller- und unabhängige Quellen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und bewertet ihn direkt gegen den Beelink EQ14 und die Ryzen-Boxen der nächsten Stufe.',
+      'Der GMKtec NucBox G3 Plus (Intel N150, Single-Channel-DDR4, aufrüstbar auf 32 GB) ist ein günstiger Mini-PC für ein lokal betriebenes Smart Home. Für rund 159,99 € in der Konfiguration 16 GB / 512 GB (Preis geprüft am 25. August 2026) betreibt er Home Assistant und ein kleines lokales Modell — mit einem echten Vorteil gegenüber manchen Konkurrenten: Sein RAM ist ein austauschbares SO-DIMM, nicht verlötet. Dieser Test prüft die Spezifikationen gegen Hersteller- und unabhängige Quellen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und bewertet ihn direkt gegen den Beelink EQ14 und die Ryzen-Boxen der nächsten Stufe.',
     metaDescription:
       'GMKtec G3 Plus N150 Test 2026: reale Preise (Aug. 2026), Bewertungstabelle, Konfigurationsleitfaden und direkter EQ14-Vergleich. Günstige Home-Assistant-Box mit aufrüstbarem RAM.',
     twitterDescription:
-      'GMKtec G3 Plus (2026): Intel N150, DDR4 aufrüstbar auf 32 GB (nicht verlötet), ca. 180–200 €. Bewertungstabelle, Konfigurationsempfehlung und wo er gegen den Beelink EQ14 gewinnt — und verliert.',
+      'GMKtec G3 Plus (2026): Intel N150, DDR4 aufrüstbar auf 32 GB (nicht verlötet), ca. 159,99 €. Bewertungstabelle, Konfigurationsempfehlung und wo er gegen den Beelink EQ14 gewinnt — und verliert.',
     readTime: '9 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Sparsame Käufer, die Home Assistant und ein kleines lokales Modell betreiben',
@@ -445,18 +445,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gmktec g3 plus vs beelink eq14',
     ],
     leadAnswerBlock:
-      '**Der GMKtec G3 Plus (Intel N150, DDR4 aufrüstbar auf 32 GB) ist ein günstiger Mini-PC, der Home Assistant und ein kleines lokales 1B–8B-Modell für etwa 180–200 € betreibt (16 GB / 512 GB, geprüft am 25. August 2026).** Einschätzung von PromptQuorum, basierend auf Herstellerspezifikationen und unabhängigen Testquellen: 7,9/10 insgesamt. Sein Alleinstellungsmerkmal ist ein austauschbarer SO-DIMM-RAM-Steckplatz, der 32 GB erreicht — mehr Obergrenze als beim Beelink EQ14 —, allerdings mit nur einem einzelnen 2,5GbE-Port und ohne USB-C. Zudem sind die DDR4-Speicherpreise 2026 deutlich gestiegen, was die Wirtschaftlichkeit dieses Upgrades verändert. → [Aktuellen GMKtec-Preis prüfen](https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor)',
+      '**Der GMKtec G3 Plus (Intel N150, DDR4 aufrüstbar auf 32 GB) ist ein günstiger Mini-PC, der Home Assistant und ein kleines lokales 1B–8B-Modell für etwa 159,99 € betreibt (16 GB / 512 GB, geprüft am 25. August 2026).** Einschätzung von PromptQuorum, basierend auf Herstellerspezifikationen und unabhängigen Testquellen: 7,9/10 insgesamt. Sein Alleinstellungsmerkmal ist ein austauschbarer SO-DIMM-RAM-Steckplatz, der 32 GB erreicht — mehr Obergrenze als beim Beelink EQ14 —, allerdings mit nur einem einzelnen 2,5GbE-Port und ohne USB-C. Zudem sind die DDR4-Speicherpreise 2026 deutlich gestiegen, was die Wirtschaftlichkeit dieses Upgrades verändert. → [Aktuellen GMKtec-Preis prüfen](https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor)',
     quickAnswerTop: {
       de: {
         question: 'Ist der GMKtec G3 Plus gut für Home Assistant und lokale KI?',
         answer:
-          'Ja für Home Assistant, mit echten Grenzen bei KI. Der Intel N150 (4 Kerne), die Intel-UHD-Grafik und der DDR4-Speicher betreiben Home Assistant und ein kleines lokales Modell gut. Da sein einzelner SO-DIMM-Steckplatz 32 GB erreicht, hat er mehr Reserve als die auf 16 GB begrenzten Konkurrenten wie der EQ14 — doch Single-Channel-DDR4 und der fehlende NPU machen alles jenseits eines kleinen Modells weiterhin langsam, und ein 32-GB-DDR4-SO-DIMM kostet wegen des Speicherengpasses 2026 derzeit annähernd so viel wie der gesamte PC. Für etwa 180–200 € bei 16 GB / 512 GB (geprüft am 25. August 2026) ist er eine günstige Zentrale, keine LLM-Maschine.',
+          'Ja für Home Assistant, mit echten Grenzen bei KI. Der Intel N150 (4 Kerne), die Intel-UHD-Grafik und der DDR4-Speicher betreiben Home Assistant und ein kleines lokales Modell gut. Da sein einzelner SO-DIMM-Steckplatz 32 GB erreicht, hat er mehr Reserve als die auf 16 GB begrenzten Konkurrenten wie der EQ14 — doch Single-Channel-DDR4 und der fehlende NPU machen alles jenseits eines kleinen Modells weiterhin langsam, und ein 32-GB-DDR4-SO-DIMM kostet wegen des Speicherengpasses 2026 derzeit annähernd so viel wie der gesamte PC. Für rund 159,99 € bei 16 GB / 512 GB (geprüft am 25. August 2026) ist er eine günstige Zentrale, keine LLM-Maschine.',
         bullets: [
           'CPU: Intel N150 — 4 Kerne / 4 Threads, Intel-UHD-Grafik (24 EU), kein NPU',
           'RAM: DDR4-3200, einzelner SO-DIMM-Steckplatz, aufrüstbar auf 32 GB (austauschbar, nicht verlötet — aber keine 32-GB-SKU ab Werk)',
           'Lokales LLM (aus den Spezifikationen geschätzt): 1B–4B schnell; 7–8B nutzbar, aber langsam; darüber hinaus nicht empfehlenswert auf dieser Box',
           'Anschlüsse: Dual-HDMI (2× 4K/60), einzelnes 2,5GbE, Wi-Fi 6 — kein USB-C',
-          'Preis ca. 180–200 € bei 16 GB / 512 GB (geprüft am 25. August 2026) — günstige Home-Assistant-Box',
+          'Preis ca. 159,99 € bei 16 GB / 512 GB (geprüft am 25. August 2026) — günstige Home-Assistant-Box',
         ],
         updatedDate: '2026-08',
       },
@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sie Gaming-Leistung wollen',
         ],
         affiliateLinks: [
-          { label: 'GMKtec-Preis prüfen →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC', priceRange: '~180–200 € (16GB/512GB)' },
+          { label: 'GMKtec-Preis prüfen →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC', priceRange: '~159,99 € (16GB/512GB)' },
           { label: 'G3 Plus vs. EQ14 vergleichen →', url: '#vs-eq14', productName: 'Beelink EQ14 comparison', productCategory: 'Mini PC' },
         ],
       },
@@ -534,7 +534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Zusammenfassung',
         isTldr: true,
         items: [
-          'Der G3 Plus betreibt Home Assistant und ein kleines lokales 1B–4B-Modell für etwa 180–200 € (16 GB / 512 GB, geprüft am 25. August 2026)',
+          'Der G3 Plus betreibt Home Assistant und ein kleines lokales 1B–4B-Modell für etwa 159,99 € (16 GB / 512 GB, geprüft am 25. August 2026)',
           'Intel N150: 4 Kerne, Intel-UHD-Grafik, DDR4 aufrüstbar auf 32 GB (austauschbares SO-DIMM), kein NPU',
           'Ein 7–8B-Modell passt, läuft aber langsam — dies ist eine günstige Zentrale, keine KI-Box',
           'Alleinstellungsmerkmal gegenüber dem [Beelink EQ14](/de/smart-home/beelink-eq14-local-ai-review): 32 GB RAM-Obergrenze (aber nur ein 2,5GbE-Port und kein USB-C)',
@@ -547,9 +547,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit — Für wen geeignet',
         content:
-          '**Kaufen Sie den GMKtec G3 Plus, wenn Sie eine günstige, stromsparende Home-Assistant-Box möchten und Wert auf einen austauschbaren RAM-Steckplatz legen, der 32 GB erreicht.** Für etwa 180–200 € ist er ein solider, günstiger Einstieg in ein lokal betriebenes Smart Home. Erwarten Sie keinen schnellen lokalen Assistenten — der Intel N150 mit Single-Channel-DDR4 bewältigt nur kleine Modelle.\n\n**Warum der G3 Plus anders ist: aufrüstbarer RAM.** Die meisten günstigen N150-Boxen verlöten ihren Speicher. Der G3 Plus nutzt stattdessen ein austauschbares DDR4-SO-DIMM mit bis zu 32 GB. Das ist für einen Home-Assistant-Server relevant, denn dieselbe Maschine kann später mehr Add-ons, eine Datenbank und etwas mehr lokalen KI-Kontext hosten, wenn Ihr Setup wächst — ohne eine neue Maschine kaufen zu müssen.\n\n**Der GMKtec G3 Plus ist nicht der beste lokale KI-Computer. Er ist einer der besten günstigen Home-Assistant-Computer, der auch lokale KI betreiben kann.** Wenn Sie zwei Netzwerkports wollen, ist der Beelink EQ14 dafür die bessere Zentrale. Wenn Sie echte Geschwindigkeit bei lokaler KI brauchen, steigen Sie auf eine Ryzen-Box wie den SER8 um.',
+          '**Kaufen Sie den GMKtec G3 Plus, wenn Sie eine günstige, stromsparende Home-Assistant-Box möchten und Wert auf einen austauschbaren RAM-Steckplatz legen, der 32 GB erreicht.** Für rund 159,99 € ist er ein solider, günstiger Einstieg in ein lokal betriebenes Smart Home. Erwarten Sie keinen schnellen lokalen Assistenten — der Intel N150 mit Single-Channel-DDR4 bewältigt nur kleine Modelle.\n\n**Warum der G3 Plus anders ist: aufrüstbarer RAM.** Die meisten günstigen N150-Boxen verlöten ihren Speicher. Der G3 Plus nutzt stattdessen ein austauschbares DDR4-SO-DIMM mit bis zu 32 GB. Das ist für einen Home-Assistant-Server relevant, denn dieselbe Maschine kann später mehr Add-ons, eine Datenbank und etwas mehr lokalen KI-Kontext hosten, wenn Ihr Setup wächst — ohne eine neue Maschine kaufen zu müssen.\n\n**Der GMKtec G3 Plus ist nicht der beste lokale KI-Computer. Er ist einer der besten günstigen Home-Assistant-Computer, der auch lokale KI betreiben kann.** Wenn Sie zwei Netzwerkports wollen, ist der Beelink EQ14 dafür die bessere Zentrale. Wenn Sie echte Geschwindigkeit bei lokaler KI brauchen, steigen Sie auf eine Ryzen-Box wie den SER8 um.',
         affiliateLinks: [
-          { label: 'Aktuellen Preis prüfen — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC', priceRange: '~180–200 €' },
+          { label: 'Aktuellen Preis prüfen — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC', priceRange: '~159,99 €' },
         ],
       },
       whichConfig: {
@@ -561,8 +561,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { Konfiguration: 'Barebone (ohne RAM/SSD/OS)', 'Ca. Preis (Aug. 2026)': '~160 €', 'Am besten für': 'Nur bei vorhandenem DDR4-SO-DIMM + NVMe-SSD — sonst bessere Preis-Leistung bei vorkonfigurierten SKUs' },
           { Konfiguration: '8 GB / 256 GB', 'Ca. Preis (Aug. 2026)': 'Günstigste konfigurierte SKU — aktuellen Preis prüfen', 'Am besten für': 'Nur Home Assistant, sehr leichte Add-on-Last; überspringen bei Interesse an lokaler KI' },
-          { Konfiguration: '16 GB / 512 GB', 'Ca. Preis (Aug. 2026)': '~180–200 €', 'Am besten für': '**Empfohlen für die meisten** — Home Assistant, Docker, AdGuard, MQTT, Node-RED, kleines 1B–4B-Modell' },
-          { Konfiguration: '16 GB / 1 TB', 'Ca. Preis (Aug. 2026)': '~195–230 €', 'Am besten für': 'Wie oben mit mehr Speicherreserve — sinnvoll für Frigate-Kameraaufnahmen' },
+          { Konfiguration: '16 GB / 512 GB', 'Ca. Preis (Aug. 2026)': '~159,99 €', 'Am besten für': '**Empfohlen für die meisten** — Home Assistant, Docker, AdGuard, MQTT, Node-RED, kleines 1B–4B-Modell' },
+          { Konfiguration: '16 GB / 1 TB', 'Ca. Preis (Aug. 2026)': '159,99 € (GMKtec EU zeigt aktuell denselben Preis wie 16GB/512GB — vor dem Kaufabschluss prüfen)', 'Am besten für': 'Wie oben mit mehr Speicherreserve — sinnvoll für Frigate-Kameraaufnahmen' },
           { Konfiguration: '32 GB (selbst installiertes DDR4-SO-DIMM)', 'Ca. Preis (Aug. 2026)': '+ rund 215 € allein für das Modul (DDR4-Engpass 2026)', 'Am besten für': 'Nur bei Interesse an lokaler KI — RAM-Preis vor Kauf prüfen, er bewegt sich schnell' },
         ],
         items: [
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GMKtecs eigener US-Onlineshop hat für die 16-GB-/512-GB-SKU zeitweise einen Listenpreis von 499,99 $ als „ausverkauft" angezeigt — dieser Wert liegt weit über jedem gefundenen unabhängigen Händlerpreis und sollte nur als Obergrenze, nicht als Referenz gelten.',
         ],
         affiliateLinks: [
-          { label: '16GB/512GB-Preis ansehen →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus 16GB/512GB', productCategory: 'Mini PC', priceRange: '~180–200 €' },
+          { label: '16GB/512GB-Preis ansehen →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus 16GB/512GB', productCategory: 'Mini PC', priceRange: '~159,99 €' },
         ],
       },
       vsEq14: {
@@ -586,7 +586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Merkmal: 'USB-C', 'G3 Plus': 'Keins', 'Beelink EQ14': 'Ja (10 Gbit/s, nur Daten)', Sieger: 'EQ14' },
           { Merkmal: 'Speicher', 'G3 Plus': '1× NVMe + 1× SATA M.2', 'Beelink EQ14': '2× NVMe (PCIe 3.0)', Sieger: 'Kommt auf den Einsatzzweck an' },
           { Merkmal: 'Leerlaufverbrauch', 'G3 Plus': '~6 W', 'Beelink EQ14': '~6 W', Sieger: 'Unentschieden' },
-          { Merkmal: 'Preis (Aug. 2026)', 'G3 Plus': '~180–200 €', 'Beelink EQ14': '~199 €', Sieger: 'Ungefähr gleichauf' },
+          { Merkmal: 'Preis (Aug. 2026)', 'G3 Plus': '~159,99 €', 'Beelink EQ14': '~199 €', Sieger: 'Ungefähr gleichauf' },
           { Merkmal: 'Am besten für', 'G3 Plus': 'Aufrüstbaren RAM, Single-LAN-Setups', 'Beelink EQ14': 'Netzwerklastiges Home Assistant, z. B. als sekundäre routernahe Box', Sieger: 'Kommt auf Ihre Priorität an' },
         ],
         items: [
@@ -615,7 +615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Spezifikation: 'TDP', 'GMKtec G3 Plus (N150)': '~6 W Basis; ~5–10 W Leerlauf, ~21–26 W unter Last' },
           { Spezifikation: 'Abmessungen', 'GMKtec G3 Plus (N150)': '114 × 106 × 42,5 mm, ~361 g' },
           { Spezifikation: 'Betriebssystem', 'GMKtec G3 Plus (N150)': 'Windows 11 Pro (Linux/Home Assistant OS unterstützt)' },
-          { Spezifikation: 'Preis (16 GB / 512 GB)', 'GMKtec G3 Plus (N150)': 'ca. 180–200 € (geprüft am 25. August 2026 — schwankend, vor dem Kauf prüfen)' },
+          { Spezifikation: 'Preis (16 GB / 512 GB)', 'GMKtec G3 Plus (N150)': 'ca. 159,99 € (geprüft am 25. August 2026 — schwankend, vor dem Kauf prüfen)' },
         ],
         items: [
           'Zwei Speichersteckplätze — ein NVMe (PCIe 3.0) und ein SATA (M.2 2242) — erlauben eine schnelle Systemplatte plus Massenspeicher.',
@@ -623,7 +623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Einschätzung von PromptQuorum (nicht herstellerseitig angegeben): Der einzelne 2,5GbE-Port und das fehlende USB-C sind die zwei deutlichsten Hardware-Lücken gegenüber dem Beelink EQ14 zu ähnlichem Preis.',
         ],
         image: '/images/gmktec-g3-plus-spec-comparison-en.svg',
-        imageCaption: 'GMKtec G3 Plus im Vergleich zum Beelink EQ14: 32 GB RAM-Obergrenze und ein 2,5GbE-Port beim G3 Plus gegenüber 16 GB und zwei 2,5GbE-Ports beim EQ14, beide im Bereich von etwa 180–200 €.',
+        imageCaption: 'GMKtec G3 Plus im Vergleich zum Beelink EQ14: 32 GB RAM-Obergrenze und ein 2,5GbE-Port beim G3 Plus gegenüber 16 GB und zwei 2,5GbE-Ports beim EQ14, beide im Bereich von etwa 159,99 €.',
       },
       localAi: {
         id: 'local-ai',
@@ -684,7 +684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Der G3 Plus tauscht Netzwerk gegen Speicherreserve gegenüber dem EQ14.** Ausgewogene Betrachtung unten.',
         items: [
           '**Vorteile**',
-          'Sehr günstig — etwa 180–200 € für die 16-GB-/512-GB-Home-Assistant-Box',
+          'Sehr günstig — etwa 159,99 € für die 16-GB-/512-GB-Home-Assistant-Box',
           'Austauschbares DDR4-SO-DIMM, aufrüstbar auf 32 GB — mehr Reserve als bei auf 16 GB begrenzten Konkurrenten',
           'Zwei Speichersteckplätze: NVMe plus ein separater SATA-M.2 für Massenspeicher',
           'Geringer Verbrauch: rund 6 W im Leerlauf, günstig im 24/7-Betrieb',
@@ -714,7 +714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Versand, Steuern & Verfügbarkeit: Als in China gefertigtes Produkt umfassen die Endkosten in den USA und der EU die Importmaßnahmen 2026 (Section-301-Zölle in den USA, das Ende der zollfreien 150-€-Grenze der EU) — kalkulieren Sie das in den tatsächlichen Kaufpreis ein, nicht nur den gelisteten Preis.',
         ],
         affiliateLinks: [
-          { label: 'Heutigen G3-Plus-Preis prüfen →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC', priceRange: '~180–200 €' },
+          { label: 'Heutigen G3-Plus-Preis prüfen →', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC', priceRange: '~159,99 €' },
         ],
       },
       alternatives: {
@@ -787,7 +787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'GMKtec G3 Plus N150 Test (2026): Bester günstiger Mini-PC für Home Assistant + lokale KI?',
       reviewBody:
-        'Der GMKtec NucBox G3 Plus ist ein günstiger Intel-N150-Mini-PC mit einem austauschbaren DDR4-SO-DIMM, aufrüstbar auf 32 GB. Er betreibt Home Assistant und ein kleines lokales Modell für etwa 180–200 € (16 GB/512 GB, geprüft am 25. August 2026). Eine Zentrale mit Speicherreserve, keine schnelle KI-Maschine — die Einschätzung von PromptQuorum bewertet ihn insgesamt mit 7,9/10, basierend auf Herstellerspezifikationen und unabhängigen Testquellen, kein praktischer Gerätetest.',
+        'Der GMKtec NucBox G3 Plus ist ein günstiger Intel-N150-Mini-PC mit einem austauschbaren DDR4-SO-DIMM, aufrüstbar auf 32 GB. Er betreibt Home Assistant und ein kleines lokales Modell für etwa 159,99 € (16 GB/512 GB, geprüft am 25. August 2026). Eine Zentrale mit Speicherreserve, keine schnelle KI-Maschine — die Einschätzung von PromptQuorum bewertet ihn insgesamt mit 7,9/10, basierend auf Herstellerspezifikationen und unabhängigen Testquellen, kein praktischer Gerätetest.',
       datePublished: '2026-07-03',
       dateModified: '2026-08-25',
       author: {
@@ -814,7 +814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '@type': 'Offer',
           url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor',
           priceCurrency: 'EUR',
-          price: '190',
+          price: '159.99',
           priceValidUntil: '2026-09-25',
           availability: 'https://schema.org/InStock',
           itemCondition: 'https://schema.org/NewCondition',
