@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Run Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder and Qwen2-VL locally in 2026. VRAM requirements, Ollama + LM Studio setup, Q4_K_M benchmarks, and hardware tier guide.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-en.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-25',
     readTime: '14 min read',
     educationalLevel: 'Intermediate',
     audience: 'Developers, researchers, and privacy-focused users who want to run the full Qwen model family locally — including Chinese-language users who prefer Alibaba\'s models over US alternatives',
@@ -57,7 +57,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ctaText: 'Dispatch across Qwen3, DeepSeek, and Llama from one interface →',
     ctaButton: 'Try PromptQuorum Free',
     ctaHref: '/waitlist',
-    leadAnswerBlock: '**The new flagship pick is Qwen 3.6 27B — a dense, Apache 2.0 model with a 256K context window that runs in ~17 GB of VRAM at Q4_K_M via `ollama run qwen3.6:27b`.** For a lighter setup, Qwen3 8B installs with Ollama and `ollama pull qwen2.5:7b` — 5.5 GB of VRAM, 57 tokens/sec on an RTX 3060. For coding tasks use Qwen2.5-Coder; for Chinese/Japanese document OCR use Qwen2-VL.',
+    leadAnswerBlock: '**The new flagship pick is Qwen 3.6 27B — a dense, Apache 2.0 model with a 256K context window that runs in ~17 GB of VRAM at Q4_K_M via `ollama run qwen3.6:27b`.** For a lighter setup, Qwen3 8B installs with Ollama and `ollama pull qwen2.5:7b` — 5.5 GB of VRAM, 57 tokens/sec on an RTX 3060. For coding tasks use Qwen2.5-Coder; for Chinese/Japanese document OCR use Qwen2-VL. Already know your VRAM budget? Jump straight to [which GPU or Mac to buy for each Qwen tier](#affiliate-picks).',
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
       { label: 'Qwen3 Model Family Overview', anchor: '#model-family' },
@@ -80,7 +80,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Qwen Local Deployment Guide 2026: Run Qwen 3.6 27B, Qwen3, Coder & VL at Every Hardware Tier',
       description: 'Complete guide to deploying the Qwen model family locally — Qwen 3.6 27B, Qwen3, Qwen2.5, Coder, and VL VRAM requirements, Ollama and LM Studio setup, quantization, benchmarks, and hardware recommendations.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-02',
+      dateModified: '2026-08-25',
       inLanguage: 'en',
       url: 'https://www.promptquorum.com/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/', url: 'https://www.promptquorum.com' },
@@ -191,6 +191,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Model', 'VRAM', 'Minimum GPU', 'Apple Silicon', 'Speed (RTX 3060)'],
         tableFormat: true,
         note: 'VRAM figures are for Q4_K_M GGUF files from the Ollama library. Add 1–2 GB for the KV cache at 4K context. If your GPU has less VRAM than the model needs, Ollama automatically offloads layers to system RAM — this works but reduces speed significantly.',
+        callouts: [
+          { type: 'tip', text: 'Found your VRAM tier? See [exactly which GPU or Mac to buy for that tier](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M4 Pro or dual GPU.' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-en.webp',
         imageCaption: 'Qwen3 VRAM requirements by model size (Q4_K_M) — PromptQuorum 2026',
       },
@@ -280,6 +283,9 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['Model (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Speed (RTX 3060 12 GB)'],
         tableFormat: true,
+        callouts: [
+          { type: 'tip', text: 'Want that 92.7% HumanEval score at 27 tok/s? See the [24 GB GPU that runs Qwen3-Coder 32B](#affiliate-picks).' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-en.webp',
         imageCaption: 'Qwen3 benchmark scores (Q4_K_M) — PromptQuorum 2026',
       },
@@ -316,20 +322,98 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'affiliate-picks',
         title: 'Which Hardware Should You Buy for Qwen3 Deployment?',
         content: [
-          '**RTX 3060 12 GB is the best entry point for Qwen3 8B and Qwen3-Coder 7B at under €300.** For 14B models, the RTX 4070 12 GB adds 35% speed at ~€400 new. Below are the hardware options used and tested for this guide.',
+          '**Match your target Qwen tier to VRAM first, then buy the cheapest card that clears it — paying for more VRAM than your model needs is the most common overspend on this list.** The picks below map directly to the hardware table above: budget → RTX 4060, mid-range → RTX 4070 Super, high-end → RTX 3090/4090, Apple Silicon → Mac mini M4 Pro, always-on → a mini PC. Prices below reflect the 2026 GPU market — memory-chip shortages and AI-datacenter demand have pushed both new GPU and Apple memory pricing well above 2024 launch prices, so check the current listing before buying.',
         ],
-        items: [
-          '**Budget (Qwen3 8B)**: NVIDIA RTX 4060 8 GB or RTX 3060 12 GB. Both handle 7B models at 50–57 tokens/sec. The RTX 3060 12 GB is often cheaper second-hand and has more VRAM headroom.',
-          '**Mid-range (Qwen3 14B)**: RTX 4070 12 GB or RTX 4070 Super 12 GB. The 4070 Super runs Qwen3-Coder 14B at 38–42 tokens/sec and fits 14B models with 2–3 GB of VRAM to spare for context.',
-          '**High-end (Qwen3 32B)**: RTX 4090 24 GB or RTX 3090 24 GB. The 4090 delivers 27–28 tok/s on Qwen3-Coder 32B — real-time coding speed. The 3090 is significantly cheaper used and performs within 15% of the 4090 on inference.',
-          '**Apple Silicon (all sizes)**: Mac mini M4 Pro 48 GB is the best value for running Qwen3 32B (~22 tok/s) with low noise and power consumption. M2 Ultra 192 GB handles Qwen2.5-72B.',
-          '**Mini PC for always-on use**: MINISFORUM UM890 Pro or similar AMD Ryzen AI PC. Runs Qwen3 8B on CPU+iGPU at ~8–12 tok/s — slow but 24/7 capable with under 35W power draw.',
+        callouts: [
+          { type: 'tip', text: 'Skip this section if you already own a GPU with 8 GB+ VRAM — run Qwen3 8B on what you have first. Only buy new hardware once you have hit that ceiling and want a bigger model.' },
         ],
-        affiliateLinks: [
-          { url: 'https://www.amazon.com/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: '$250–300', label: 'Entry-level Qwen3 8B GPU' },
-          { url: 'https://www.amazon.com/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12 GB', productCategory: 'GPU', priceRange: '$450–500', label: 'Best GPU for Qwen3 14B' },
-          { url: 'https://www.amazon.com/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 GB', productCategory: 'GPU', priceRange: '$1,600–1,800', label: 'Best GPU for Qwen3-Coder 32B' },
-          { url: 'https://www.amazon.com/dp/B0CQSL8N8F', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: '$1,299–1,399', label: 'Best Apple Silicon for Qwen3 32B' },
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'NVIDIA RTX 4060 8 GB',
+            tagline: 'Budget pick — Qwen3 8B, Qwen3-Coder 7B (5.5 GB VRAM)',
+            verdict: 'The cheapest card on this list that clears the 5.5 GB Qwen3 8B requirement with headroom for context. Runs Qwen3-Coder 7B at ~55 tok/s — fast enough for interactive coding assist.',
+            pros: [
+              '5.5 GB VRAM requirement fits with room to spare for long-context KV cache',
+              'Lowest price on this list — the right first GPU if you have never run a local LLM',
+              '50–57 tok/s on 7B/8B models, on par with the pricier cards at this model size',
+            ],
+            cons: [
+              'Caps out at Qwen3 8B / Qwen3-Coder 7B — no headroom to grow into 14B without a KV-cache squeeze',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: '$340–430', label: 'Check current price →' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'NVIDIA RTX 4070 Super 12 GB',
+            tagline: 'Mid-range pick — Qwen3 14B, Qwen3-Coder 14B (9.5 GB VRAM)',
+            verdict: 'Runs Qwen3-Coder 14B (85.2% HumanEval) at 36–38 tok/s with 2–3 GB of VRAM left over for context — the tier where coding quality jumps noticeably over the 7B/8B models.',
+            pros: [
+              '9.5 GB model fits with 2–3 GB VRAM to spare — room for longer context windows',
+              'HumanEval jumps from 75.6% (7B) to 85.2% (14B) — the clearest quality-per-dollar step up in the lineup',
+              '~38 tok/s keeps interactive chat and code completion responsive',
+            ],
+            cons: [
+              'Not enough VRAM for the 32B tier — plan to sell or repurpose it if you outgrow 14B',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12 GB', productCategory: 'GPU', priceRange: '$650–735', label: 'Check current price →' },
+            ],
+          },
+          {
+            rank: 3,
+            name: 'NVIDIA RTX 4090 24 GB (or used RTX 3090 24 GB)',
+            tagline: 'High-end pick — Qwen3-Coder 32B, Qwen 3.6 27B (~17–20.5 GB VRAM)',
+            verdict: 'The 4090 delivers 27–28 tok/s on Qwen3-Coder 32B — real-time coding speed at 92.7% HumanEval. A used RTX 3090 has the same 24 GB VRAM and lands within ~15% of the 4090\'s inference speed for meaningfully less money if you can find a trusted used listing.',
+            pros: [
+              '24 GB VRAM covers every Qwen3 32B variant and Qwen 3.6 27B with room to spare',
+              '27–28 tok/s on Qwen3-Coder 32B (92.7% HumanEval) — fast enough for real-time pair programming',
+              'Used RTX 3090 is the value alternative: same VRAM ceiling, ~15% slower, meaningfully cheaper second-hand',
+            ],
+            cons: [
+              'Highest upfront cost on this list — only justified once you actually need 32B-class quality',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 GB', productCategory: 'GPU', priceRange: '$2,300–2,800', label: 'Check current price →' },
+              { url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24 GB (used)', productCategory: 'GPU', priceRange: '$1,050–1,300', label: 'See used listings →' },
+            ],
+          },
+          {
+            rank: 4,
+            name: 'Apple Mac mini M4 Pro 48 GB',
+            tagline: 'Apple Silicon pick — Qwen3 32B (~22 tok/s, quiet and low-power)',
+            verdict: 'Best value for running Qwen3 32B on unified memory — quiet, low power draw, no separate GPU to install. For Qwen2.5-72B you need the M2 Ultra 192 GB instead.',
+            pros: [
+              '48 GB unified memory clears the 20.5 GB Qwen3 32B requirement with room for other apps',
+              'Silent operation and desktop-friendly power draw — no dedicated GPU cooling to manage',
+              'One purchase covers OS, storage, and inference — no separate GPU/PSU/case build',
+            ],
+            cons: [
+              '~22 tok/s on Qwen3 32B is noticeably slower than an RTX 4090\'s 27–28 tok/s',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com/dp/B0CQSL8N8F', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: 'ca. $1,799–1,999', label: 'Check current price →' },
+            ],
+          },
+          {
+            rank: 5,
+            name: 'MINISFORUM UM890 Pro (or similar AMD Ryzen AI mini PC)',
+            tagline: 'Always-on pick — Qwen3 8B on CPU + iGPU (~8–12 tok/s, under 35W)',
+            verdict: 'Not for interactive use — this is for a Qwen3 8B instance you leave running 24/7 for background tasks, home automation, or a low-traffic API endpoint where power cost matters more than speed.',
+            pros: [
+              'Under 35W power draw — cheap to run continuously, unlike a desktop GPU rig',
+              'Small form factor fits anywhere; no separate GPU to source or cool',
+              'Handles Qwen3 8B without a discrete GPU at all',
+            ],
+            cons: [
+              '8–12 tok/s is too slow for interactive chat — this is a background/API-only pick',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com/s?k=minisforum+um890+pro', productName: 'MINISFORUM UM890 Pro', productCategory: 'mini-pc', priceRange: '$479–649', label: 'Check current price →' },
+            ],
+          },
         ],
       },
       commonMistakes: {
@@ -388,7 +472,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: 'Ejecuta Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder y Qwen2-VL en local en 2026. Requisitos de VRAM, configuración Ollama y LM Studio y guía por nivel de hardware.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-es.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-25',
     readTime: '14 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores, investigadores y usuarios con enfoque en privacidad que quieren ejecutar la familia completa de modelos Qwen en local',
@@ -397,7 +481,7 @@ curl http://localhost:11434/v1/chat/completions \\
     ctaText: 'Despacha entre Qwen3, DeepSeek y Llama desde una sola interfaz →',
     ctaButton: 'Prueba PromptQuorum gratis',
     ctaHref: '/waitlist',
-    leadAnswerBlock: '**La nueva recomendación insignia es Qwen 3.6 27B — un modelo denso con licencia Apache 2.0 y ventana de contexto de 256K que funciona con ~17 GB de VRAM en Q4_K_M mediante `ollama run qwen3.6:27b`.** Para una opción más ligera, Qwen3 8B se instala con Ollama y `ollama pull qwen2.5:7b` — 5,5 GB de VRAM, 57 tokens/seg en una RTX 3060. Para tareas de código usa Qwen2.5-Coder; para OCR de documentos en chino/japonés usa Qwen2-VL.',
+    leadAnswerBlock: '**La nueva recomendación insignia es Qwen 3.6 27B — un modelo denso con licencia Apache 2.0 y ventana de contexto de 256K que funciona con ~17 GB de VRAM en Q4_K_M mediante `ollama run qwen3.6:27b`.** Para una opción más ligera, Qwen3 8B se instala con Ollama y `ollama pull qwen2.5:7b` — 5,5 GB de VRAM, 57 tokens/seg en una RTX 3060. Para tareas de código usa Qwen2.5-Coder; para OCR de documentos en chino/japonés usa Qwen2-VL. ¿Ya conoces tu presupuesto de VRAM? Ve directamente a [qué GPU o Mac comprar para cada nivel de Qwen](#affiliate-picks).',
     toc: [
       { label: 'Puntos clave', anchor: '#key-takeaways' },
       { label: 'Descripción general de la familia Qwen3', anchor: '#model-family' },
@@ -420,7 +504,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'Guía de despliegue local de Qwen 2026: Qwen 3.6 27B, Coder y VL en cada nivel de hardware',
       description: 'Guía completa para desplegar la familia de modelos Qwen en local — Qwen 3.6 27B, Qwen3, Qwen2.5, Coder y VL, requisitos de VRAM, configuración con Ollama y LM Studio, cuantización, benchmarks y recomendaciones de hardware.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-02',
+      dateModified: '2026-08-25',
       inLanguage: 'es',
       url: 'https://www.promptquorum.com/es/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -498,6 +582,9 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['Modelo', 'VRAM', 'GPU mínima', 'Apple Silicon', 'Velocidad (RTX 3060)'],
         tableFormat: true,
         note: 'Las cifras de VRAM corresponden a archivos GGUF Q4_K_M de la biblioteca de Ollama. Añade 1–2 GB para la caché KV con un contexto de 4K. Si la GPU tiene menos VRAM de la que necesita el modelo, Ollama descarga capas automáticamente a la RAM del sistema — funciona, pero reduce la velocidad significativamente.',
+        callouts: [
+          { type: 'tip', text: '¿Ya identificaste tu nivel de VRAM? Consulta [exactamente qué GPU o Mac comprar para ese nivel](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M4 Pro o doble GPU.' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-es.webp',
         imageCaption: 'Requisitos de VRAM de Qwen3 por tamaño de modelo (Q4_K_M) — PromptQuorum 2026',
       },
@@ -587,6 +674,9 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['Modelo (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Velocidad (RTX 3060 12 GB)'],
         tableFormat: true,
+        callouts: [
+          { type: 'tip', text: '¿Quieres esa puntuación del 92,7 % en HumanEval a 27 tok/s? Consulta la [GPU de 24 GB que ejecuta Qwen3-Coder 32B](#affiliate-picks).' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-es.webp',
         imageCaption: 'Puntuaciones de benchmark de Qwen3 (Q4_K_M) — PromptQuorum 2026',
       },
@@ -621,22 +711,100 @@ curl http://localhost:11434/v1/chat/completions \\
       },
       affiliatePicks: {
         id: 'affiliate-picks',
-        title: 'Recomendaciones de hardware por presupuesto',
+        title: '¿Qué hardware deberías comprar para desplegar Qwen3?',
         content: [
-          '**La RTX 3060 12 GB es el mejor punto de entrada para Qwen3 8B y Qwen3-Coder 7B por menos de 300 €.** Para modelos 14B, la RTX 4070 12 GB añade un 35 % de velocidad a unos 450–500 € nueva.',
+          '**Primero haz coincidir tu nivel de Qwen objetivo con la VRAM necesaria y luego compra la tarjeta más barata que la cubra — pagar por más VRAM de la que tu modelo necesita es el sobregasto más habitual de esta lista.** Las recomendaciones siguientes corresponden directamente a la tabla de hardware anterior: económico → RTX 4060, gama media → RTX 4070 Super, gama alta → RTX 3090/4090, Apple Silicon → Mac mini M4 Pro, uso continuo → un mini PC. Los precios siguientes reflejan el mercado de GPU de 2026 — la escasez de chips de memoria y la demanda de los centros de datos de IA han encarecido tanto las GPU nuevas como las configuraciones de memoria de Apple; comprueba el precio actual antes de comprar.',
         ],
-        items: [
-          '**Económico (Qwen3 8B)**: NVIDIA RTX 4060 8 GB o RTX 3060 12 GB. Ambas manejan modelos 7B a 50–57 tokens/seg. La RTX 3060 12 GB suele ser más barata de segunda mano y tiene más margen de VRAM.',
-          '**Gama media (Qwen3 14B)**: RTX 4070 12 GB o RTX 4070 Super 12 GB. La 4070 Super ejecuta Qwen3-Coder 14B a 38–42 tokens/seg y deja 2–3 GB de VRAM libre para el contexto.',
-          '**Gama alta (Qwen3 32B)**: RTX 4090 24 GB o RTX 3090 24 GB. La 4090 entrega 27–28 tok/s en Qwen3-Coder 32B — velocidad de asistencia de código en tiempo real. La 3090 es significativamente más barata de segunda mano y rinde dentro del 15 % de la 4090 en inferencia.',
-          '**Apple Silicon (todos los tamaños)**: Mac mini M4 Pro 48 GB ofrece la mejor relación calidad/precio para ejecutar Qwen3 32B (~22 tok/s) con bajo ruido y consumo.',
-          '**Mini PC para uso continuo**: MINISFORUM UM890 Pro o PC AMD Ryzen AI similar. Ejecuta Qwen3 8B en CPU+iGPU a ~8–12 tok/s — lento pero capaz de funcionar 24/7 con menos de 35 W de consumo.',
+        callouts: [
+          { type: 'tip', text: 'Sáltate esta sección si ya tienes una GPU con 8 GB o más de VRAM — ejecuta primero Qwen3 8B en lo que ya tienes. Compra hardware nuevo solo cuando llegues a ese límite y quieras un modelo más grande.' },
         ],
-        affiliateLinks: [
-          { url: 'https://www.amazon.es/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: '250–300 €', label: 'GPU de entrada para Qwen3 8B' },
-          { url: 'https://www.amazon.es/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12 GB', productCategory: 'GPU', priceRange: '450–520 €', label: 'Mejor GPU para Qwen3 14B' },
-          { url: 'https://www.amazon.es/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 GB', productCategory: 'GPU', priceRange: '1.800–2.100 €', label: 'Mejor GPU para Qwen3-Coder 32B' },
-          { url: 'https://www.apple.com/es/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: '1.649 €', label: 'Mejor Apple Silicon para Qwen3 32B' },
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'NVIDIA RTX 4060 8 GB',
+            tagline: 'Opción económica — Qwen3 8B, Qwen3-Coder 7B (5,5 GB de VRAM)',
+            verdict: 'La tarjeta más barata de esta lista que cubre el requisito de 5,5 GB de Qwen3 8B con margen para el contexto. Ejecuta Qwen3-Coder 7B a ~55 tok/s — suficientemente rápido para asistencia de código interactiva.',
+            pros: [
+              'El requisito de 5,5 GB de VRAM se cubre con margen para caché KV de contexto largo',
+              'El precio más bajo de esta lista — la GPU adecuada para empezar si nunca has ejecutado un LLM local',
+              '50–57 tok/s en modelos 7B/8B, a la par con tarjetas más caras en este tamaño de modelo',
+            ],
+            cons: [
+              'Se queda en Qwen3 8B / Qwen3-Coder 7B — sin margen para crecer a 14B sin apretar la caché KV',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.es/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: '470–600 €', label: 'Consultar precio actual →' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'NVIDIA RTX 4070 Super 12 GB',
+            tagline: 'Opción de gama media — Qwen3 14B, Qwen3-Coder 14B (9,5 GB de VRAM)',
+            verdict: 'Ejecuta Qwen3-Coder 14B (85,2 % en HumanEval) a 36–38 tok/s con 2–3 GB de VRAM libres para el contexto — el nivel donde la calidad de código da un salto notable respecto a los modelos 7B/8B.',
+            pros: [
+              'El modelo de 9,5 GB cabe con 2–3 GB de VRAM de margen — espacio para ventanas de contexto más largas',
+              'HumanEval sube del 75,6 % (7B) al 85,2 % (14B) — el salto de calidad por precio más claro de la gama',
+              '~38 tok/s mantienen ágil el chat interactivo y el autocompletado de código',
+            ],
+            cons: [
+              'No hay VRAM suficiente para el nivel 32B — plantea vender o reutilizar la tarjeta si superas el 14B',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.es/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12 GB', productCategory: 'GPU', priceRange: '1.090–1.235 €', label: 'Consultar precio actual →' },
+            ],
+          },
+          {
+            rank: 3,
+            name: 'NVIDIA RTX 4090 24 GB (o RTX 3090 24 GB de segunda mano)',
+            tagline: 'Opción de gama alta — Qwen3-Coder 32B, Qwen 3.6 27B (~17–20,5 GB de VRAM)',
+            verdict: 'La 4090 entrega 27–28 tok/s en Qwen3-Coder 32B — velocidad de código en tiempo real con un 92,7 % en HumanEval. Una RTX 3090 de segunda mano tiene la misma VRAM de 24 GB y se queda a un ~15 % de la velocidad de inferencia de la 4090, por bastante menos dinero si encuentras un anuncio de confianza.',
+            pros: [
+              '24 GB de VRAM cubren todas las variantes de Qwen3 32B y Qwen 3.6 27B con margen',
+              '27–28 tok/s en Qwen3-Coder 32B (92,7 % en HumanEval) — suficientemente rápido para programación en pareja en tiempo real',
+              'La RTX 3090 de segunda mano es la alternativa económica: mismo límite de VRAM, ~15 % más lenta, bastante más barata de segunda mano',
+            ],
+            cons: [
+              'El coste inicial más alto de esta lista — solo se justifica cuando realmente necesitas calidad de nivel 32B',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.es/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 GB', productCategory: 'GPU', priceRange: '3.390–3.490 €', label: 'Consultar precio actual →' },
+              { url: 'https://www.ebay.es/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24 GB (segunda mano)', productCategory: 'GPU', priceRange: '1.400–1.750 €', label: 'Ver anuncios de segunda mano →' },
+            ],
+          },
+          {
+            rank: 4,
+            name: 'Apple Mac mini M4 Pro 48 GB',
+            tagline: 'Opción Apple Silicon — Qwen3 32B (~22 tok/s, silencioso y de bajo consumo)',
+            verdict: 'La mejor relación calidad/precio para ejecutar Qwen3 32B con memoria unificada — silencioso, bajo consumo eléctrico, sin GPU separada que instalar. Para Qwen2.5-72B necesitas en su lugar el M2 Ultra 192 GB.',
+            pros: [
+              '48 GB de memoria unificada cubren el requisito de 20,5 GB de Qwen3 32B con espacio para otras aplicaciones',
+              'Funcionamiento silencioso y consumo adecuado para escritorio — sin gestión de refrigeración dedicada de GPU',
+              'Una sola compra cubre sistema operativo, almacenamiento e inferencia — sin montaje aparte de GPU/fuente/caja',
+            ],
+            cons: [
+              '~22 tok/s en Qwen3 32B es notablemente más lento que los 27–28 tok/s de una RTX 4090',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.apple.com/es/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: '1.850–1.950 €', label: 'Consultar precio actual →' },
+            ],
+          },
+          {
+            rank: 5,
+            name: 'MINISFORUM UM890 Pro (o mini PC AMD Ryzen AI similar)',
+            tagline: 'Opción para uso continuo — Qwen3 8B en CPU + iGPU (~8–12 tok/s, menos de 35 W)',
+            verdict: 'No pensado para uso interactivo — sirve para una instancia de Qwen3 8B que dejas encendida 24/7 para tareas en segundo plano, domótica o un endpoint de API de bajo tráfico donde el coste eléctrico importa más que la velocidad.',
+            pros: [
+              'Consumo por debajo de 35 W — barato de mantener encendido de forma continua, a diferencia de una torre de escritorio con GPU',
+              'Formato compacto que cabe en cualquier sitio; sin GPU separada que conseguir ni refrigerar',
+              'Ejecuta Qwen3 8B sin ninguna GPU dedicada',
+            ],
+            cons: [
+              '8–12 tok/s es demasiado lento para chat interactivo — una opción solo para segundo plano/API',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.es/s?k=minisforum+um890+pro', productName: 'MINISFORUM UM890 Pro', productCategory: 'mini-pc', priceRange: '650–880 €', label: 'Consultar precio actual →' },
+            ],
+          },
         ],
       },
       commonMistakes: {
@@ -695,7 +863,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: 'شغّل Qwen 3.6 27B وQwen3 وQwen2.5 (7B–72B) وQwen2.5-Coder وQwen2-VL محليًا في 2026. متطلبات VRAM وإعداد Ollama وLM Studio وبنشمارك Q4_K_M ودليل مستويات الأجهزة.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-ar.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-25',
     readTime: '14 دقيقة قراءة',
     educationalLevel: 'Intermediate',
     audience: 'المطورون والباحثون والمستخدمون المهتمون بالخصوصية الذين يريدون تشغيل عائلة نماذج Qwen الكاملة محليًا',
@@ -704,7 +872,7 @@ curl http://localhost:11434/v1/chat/completions \\
     ctaText: 'وزّع بين Qwen3 وDeepSeek وLlama من واجهة واحدة ←',
     ctaButton: 'جرّب PromptQuorum مجانًا',
     ctaHref: '/waitlist',
-    leadAnswerBlock: '**الاختيار الرائد الجديد هو Qwen 3.6 27B — نموذج كثيف برخصة Apache 2.0 ونافذة سياق 256K يعمل بـ ~17 GB من VRAM عند Q4_K_M عبر `ollama run qwen3.6:27b`.** لإعداد أخف، ثبّت Ollama ونفّذ `ollama pull qwen2.5:7b` لتشغيل Qwen3 8B — يتطلب 5.5 GB من VRAM ويقدّم 57 token/ثانية على RTX 3060. لمهام الكود استخدم Qwen2.5-Coder؛ ولـ OCR للمستندات الصينية/اليابانية استخدم Qwen2-VL.',
+    leadAnswerBlock: '**الاختيار الرائد الجديد هو Qwen 3.6 27B — نموذج كثيف برخصة Apache 2.0 ونافذة سياق 256K يعمل بـ ~17 GB من VRAM عند Q4_K_M عبر `ollama run qwen3.6:27b`.** لإعداد أخف، ثبّت Ollama ونفّذ `ollama pull qwen2.5:7b` لتشغيل Qwen3 8B — يتطلب 5.5 GB من VRAM ويقدّم 57 token/ثانية على RTX 3060. لمهام الكود استخدم Qwen2.5-Coder؛ ولـ OCR للمستندات الصينية/اليابانية استخدم Qwen2-VL. هل تعرف بالفعل ميزانية VRAM لديك؟ انتقل مباشرة إلى [بطاقة الرسوم أو جهاز Mac المناسب لكل مستوى من Qwen](#affiliate-picks).',
     toc: [
       { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
       { label: 'نظرة عامة على عائلة Qwen3', anchor: '#model-family' },
@@ -727,7 +895,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'دليل النشر المحلي لـ Qwen 2026: شغّل Qwen 3.6 27B وQwen3 وCoder وVL على كل مستوى أجهزة',
       description: 'دليل كامل لنشر عائلة نماذج Qwen محليًا — Qwen 3.6 27B وQwen3 وQwen2.5 وCoder وVL، ومتطلبات VRAM، والإعداد عبر Ollama وLM Studio، والتكميم، والمعايير، وتوصيات الأجهزة.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-02',
+      dateModified: '2026-08-25',
       inLanguage: 'ar',
       url: 'https://www.promptquorum.com/ar/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -805,6 +973,9 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['Modelo', 'VRAM', 'GPU mínima', 'Apple Silicon', 'Velocidad (RTX 3060)'],
         tableFormat: true,
         note: 'أرقام VRAM تخصّ ملفات GGUF Q4_K_M من مكتبة Ollama. أضف 1–2 GB لذاكرة KV المؤقتة بسياق 4K. إذا كانت بطاقة الرسوم تملك VRAM أقل مما يحتاج النموذج، يفرّغ Ollama الطبقات تلقائيًا إلى RAM النظام — يعمل، لكنه يقلّل السرعة بشكل كبير.',
+        callouts: [
+          { type: 'tip', text: 'هل حددت مستوى VRAM الخاص بك؟ اطّلع على [بطاقة الرسوم أو جهاز Mac المناسب تمامًا لهذا المستوى](#affiliate-picks) — 6 GB ← RTX 4060، 12 GB ← RTX 4070 Super، 24 GB ← RTX 3090/4090، 48 GB فأكثر ← Mac mini M4 Pro أو بطاقتا رسوم.' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-ar.webp',
         imageCaption: 'متطلبات VRAM لـ Qwen3 حسب حجم النموذج (Q4_K_M) — PromptQuorum 2026',
       },
@@ -894,6 +1065,9 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['Modelo (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Velocidad (RTX 3060 12 GB)'],
         tableFormat: true,
+        callouts: [
+          { type: 'tip', text: 'هل تريد تحقيق درجة 92.7% في HumanEval بسرعة 27 token/ثانية؟ اطّلع على [بطاقة الرسوم بسعة 24 GB التي تشغّل Qwen3-Coder 32B](#affiliate-picks).' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-ar.webp',
         imageCaption: 'درجات معيار Qwen3 (Q4_K_M) — PromptQuorum 2026',
       },
@@ -928,22 +1102,100 @@ curl http://localhost:11434/v1/chat/completions \\
       },
       affiliatePicks: {
         id: 'affiliate-picks',
-        title: 'توصيات الأجهزة حسب الميزانية',
+        title: 'ما الجهاز الذي ينبغي شراؤه لنشر Qwen3؟',
         content: [
-          '**RTX 3060 12 GB هي أفضل نقطة دخول لـ Qwen3 8B وQwen3-Coder 7B بأقل من 1200 ريال سعودي.** لنماذج 14B، تضيف RTX 4070 12 GB سرعة 35% بنحو 1800–2000 ريال سعودي جديدة.',
+          '**طابِق مستوى Qwen المستهدف مع VRAM المطلوب أولًا، ثم اشترِ أرخص بطاقة تحقّق هذا الحد — دفع ثمن VRAM أكثر مما يحتاجه نموذجك هو أكثر أخطاء الإنفاق شيوعًا في هذه القائمة.** تتوافق الاختيارات أدناه مباشرة مع جدول الأجهزة أعلاه: اقتصادي ← RTX 4060، متوسط ← RTX 4070 Super، فئة عليا ← RTX 3090/4090، Apple Silicon ← Mac mini M4 Pro، تشغيل متواصل ← حاسوب صغير. تعكس الأسعار أدناه سوق بطاقات الرسوم في 2026 — أدى نقص رقائق الذاكرة والطلب من مراكز بيانات الذكاء الاصطناعي إلى ارتفاع أسعار بطاقات الرسوم الجديدة وتشكيلات ذاكرة Apple؛ تحقّق من السعر الفعلي قبل الشراء.',
         ],
-        items: [
-          '**اقتصادي (Qwen3 8B)**: NVIDIA RTX 4060 8 GB أو RTX 3060 12 GB. كلاهما يتعامل مع نماذج 7B بـ 50–57 token/ثانية. غالبًا ما تكون RTX 3060 12 GB أرخص مستعملة وتملك هامش VRAM أكبر.',
-          '**متوسط (Qwen3 14B)**: RTX 4070 12 GB أو RTX 4070 Super 12 GB. تشغّل 4070 Super نموذج Qwen3-Coder 14B بـ 38–42 token/ثانية وتترك 2–3 GB من VRAM حرة للسياق.',
-          '**فئة عليا (Qwen3 32B)**: RTX 4090 24 GB أو RTX 3090 24 GB. تقدّم 4090 سرعة 27–28 token/ثانية على Qwen3-Coder 32B — سرعة مساعدة برمجية في الوقت الفعلي. وRTX 3090 أرخص بكثير مستعملة وتؤدي ضمن 15% من 4090 في الاستدلال.',
-          '**Apple Silicon (جميع الأحجام)**: يقدّم Mac mini M4 Pro 48 GB أفضل نسبة جودة/سعر لتشغيل Qwen3 32B (~22 token/ثانية) بضجيج واستهلاك منخفضين.',
-          '**حاسوب صغير للاستخدام المتواصل**: MINISFORUM UM890 Pro أو حاسوب AMD Ryzen AI مماثل. يشغّل Qwen3 8B على CPU+iGPU بـ ~8–12 token/ثانية — بطيء لكنه قادر على العمل على مدار الساعة باستهلاك أقل من 35 واط.',
+        callouts: [
+          { type: 'tip', text: 'تخطَّ هذا القسم إذا كنت تملك بالفعل بطاقة رسوم بسعة 8 GB من VRAM أو أكثر — شغّل Qwen3 8B أولًا على ما تملكه. اشترِ جهازًا جديدًا فقط بعد بلوغ هذا الحد ورغبتك في نموذج أكبر.' },
         ],
-        affiliateLinks: [
-          { url: 'https://www.amazon.sa/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: '1000–1200 ريال', label: 'بطاقة رسوم مدخل لـ Qwen3 8B' },
-          { url: 'https://www.amazon.sa/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12 GB', productCategory: 'GPU', priceRange: '1800–2100 ريال', label: 'أفضل بطاقة رسوم لـ Qwen3 14B' },
-          { url: 'https://www.amazon.sa/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 GB', productCategory: 'GPU', priceRange: '7200–8400 ريال', label: 'أفضل بطاقة رسوم لـ Qwen3-Coder 32B' },
-          { url: 'https://www.apple.com/sa/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'حاسوب صغير', priceRange: '6600 ريال', label: 'أفضل Apple Silicon لـ Qwen3 32B' },
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'NVIDIA RTX 4060 8 GB',
+            tagline: 'اختيار اقتصادي — Qwen3 8B وQwen3-Coder 7B (5.5 GB VRAM)',
+            verdict: 'أرخص بطاقة في هذه القائمة تحقّق متطلب 5.5 GB لـ Qwen3 8B مع هامش للسياق. تشغّل Qwen3-Coder 7B بسرعة ~55 token/ثانية — سرعة كافية للمساعدة البرمجية التفاعلية.',
+            pros: [
+              'يتحقق متطلب 5.5 GB من VRAM مع هامش لذاكرة KV المؤقتة للسياق الطويل',
+              'أقل سعر في هذه القائمة — بطاقة الرسوم الأولى المناسبة إذا لم تشغّل نموذج LLM محليًا من قبل',
+              '50–57 token/ثانية على نماذج 7B/8B، بأداء مماثل للبطاقات الأغلى عند هذا الحجم من النماذج',
+            ],
+            cons: [
+              'يقتصر على Qwen3 8B / Qwen3-Coder 7B — لا هامش للانتقال إلى 14B دون ضغط ذاكرة KV المؤقتة',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.sa/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: '1,600–2,000 ريال', label: 'تحقّق من السعر الحالي ←' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'NVIDIA RTX 4070 Super 12 GB',
+            tagline: 'اختيار متوسط — Qwen3 14B وQwen3-Coder 14B (9.5 GB VRAM)',
+            verdict: 'تشغّل Qwen3-Coder 14B (85.2% في HumanEval) بسرعة 36–38 token/ثانية مع بقاء 2–3 GB من VRAM للسياق — المستوى الذي تقفز فيه جودة البرمجة بشكل ملحوظ مقارنةً بنماذج 7B/8B.',
+            pros: [
+              'يتسع النموذج بحجم 9.5 GB مع بقاء 2–3 GB من VRAM — مساحة لنوافذ سياق أطول',
+              'ترتفع نتيجة HumanEval من 75.6% (7B) إلى 85.2% (14B) — أوضح قفزة في الجودة مقابل السعر ضمن هذه المجموعة',
+              'تحافظ سرعة ~38 token/ثانية على استجابة الدردشة التفاعلية وإكمال الكود',
+            ],
+            cons: [
+              'لا يكفي VRAM لمستوى 32B — خطّط للبيع أو إعادة الاستخدام إذا تجاوزت 14B',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.sa/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12 GB', productCategory: 'GPU', priceRange: '3,000–3,400 ريال', label: 'تحقّق من السعر الحالي ←' },
+            ],
+          },
+          {
+            rank: 3,
+            name: 'NVIDIA RTX 4090 24 GB (أو RTX 3090 24 GB مستعملة)',
+            tagline: 'اختيار فئة عليا — Qwen3-Coder 32B وQwen 3.6 27B (~17–20.5 GB VRAM)',
+            verdict: 'تقدّم 4090 سرعة 27–28 token/ثانية على Qwen3-Coder 32B — سرعة برمجة في الوقت الفعلي بدرجة 92.7% في HumanEval. تملك RTX 3090 المستعملة نفس سعة 24 GB من VRAM، وتقترب من سرعة استدلال 4090 بفارق نحو 15% فقط، بسعر أقل بكثير إذا وجدت عرضًا مستعملًا موثوقًا.',
+            pros: [
+              'تغطي سعة 24 GB من VRAM جميع إصدارات Qwen3 32B وQwen 3.6 27B مع هامش إضافي',
+              '27–28 token/ثانية على Qwen3-Coder 32B (92.7% في HumanEval) — سريعة بما يكفي للبرمجة الزوجية في الوقت الفعلي',
+              'RTX 3090 المستعملة هي البديل الاقتصادي: سقف VRAM نفسه، أبطأ بنحو 15%، وأرخص بشكل ملحوظ مستعملة',
+            ],
+            cons: [
+              'أعلى تكلفة مبدئية في هذه القائمة — لا تُبرَّر إلا عند الحاجة الفعلية لجودة فئة 32B',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.sa/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 GB', productCategory: 'GPU', priceRange: '11,000–12,500 ريال', label: 'تحقّق من السعر الحالي ←' },
+              { url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24 GB (مستعملة)', productCategory: 'GPU', priceRange: '4,850–6,000 ريال', label: 'اطّلع على العروض المستعملة ←' },
+            ],
+          },
+          {
+            rank: 4,
+            name: 'Apple Mac mini M4 Pro 48 GB',
+            tagline: 'اختيار Apple Silicon — Qwen3 32B (~22 token/ثانية، هادئ ومنخفض الاستهلاك)',
+            verdict: 'أفضل قيمة لتشغيل Qwen3 32B عبر الذاكرة الموحّدة — هادئ، استهلاك طاقة منخفض، ولا حاجة لتركيب بطاقة رسوم منفصلة. أما Qwen2.5-72B فيتطلب M2 Ultra 192 GB بدلًا من ذلك.',
+            pros: [
+              'تلبّي ذاكرة موحّدة بسعة 48 GB متطلب 20.5 GB لـ Qwen3 32B مع مساحة لتطبيقات أخرى',
+              'تشغيل صامت واستهلاك طاقة مناسب لمكتب العمل — دون إدارة تبريد مخصص لبطاقة رسوم',
+              'عملية شراء واحدة تغطي نظام التشغيل والتخزين والاستدلال — دون تجميع منفصل لبطاقة رسوم/مزود طاقة/هيكل',
+            ],
+            cons: [
+              'سرعة ~22 token/ثانية على Qwen3 32B أبطأ بوضوح من 27–28 token/ثانية لبطاقة RTX 4090',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.apple.com/sa/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: '7,300–7,700 ريال', label: 'تحقّق من السعر الحالي ←' },
+            ],
+          },
+          {
+            rank: 5,
+            name: 'MINISFORUM UM890 Pro (أو حاسوب صغير مماثل بمعالج AMD Ryzen AI)',
+            tagline: 'اختيار للتشغيل المتواصل — Qwen3 8B على CPU + iGPU (~8–12 token/ثانية، أقل من 35 واط)',
+            verdict: 'غير مخصص للاستخدام التفاعلي — بل لتشغيل نسخة من Qwen3 8B على مدار الساعة طوال أيام الأسبوع لمهام خلفية، أو أتمتة المنزل، أو نقطة نهاية API منخفضة الحركة حيث تهم تكلفة الطاقة أكثر من السرعة.',
+            pros: [
+              'استهلاك أقل من 35 واط — رخيص التشغيل المستمر، على عكس تجميعة سطح مكتب ببطاقة رسوم',
+              'حجم صغير يناسب أي مكان؛ دون حاجة لبطاقة رسوم منفصلة أو تبريدها',
+              'يشغّل Qwen3 8B دون أي بطاقة رسوم مخصصة على الإطلاق',
+            ],
+            cons: [
+              'سرعة 8–12 token/ثانية بطيئة جدًا للدردشة التفاعلية — اختيار مخصص للاستخدام الخلفي/API فقط',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.sa/s?k=minisforum+um890+pro', productName: 'MINISFORUM UM890 Pro', productCategory: 'mini-pc', priceRange: '2,200–3,000 ريال', label: 'تحقّق من السعر الحالي ←' },
+            ],
+          },
         ],
       },
       commonMistakes: {
@@ -1002,7 +1254,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: 'Execute Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder e Qwen2-VL localmente em 2026. Requisitos de VRAM, configuração Ollama e LM Studio e guia por nível de hardware.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-pt.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-25',
     readTime: '14 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores, pesquisadores e usuários com foco em privacidade que querem executar a família completa de modelos Qwen localmente',
@@ -1011,7 +1263,7 @@ curl http://localhost:11434/v1/chat/completions \\
     ctaText: 'Despache entre Qwen3, DeepSeek e Llama a partir de uma única interface →',
     ctaButton: 'Experimente o PromptQuorum gratuitamente',
     ctaHref: '/waitlist',
-    leadAnswerBlock: '**A nova escolha principal é o Qwen 3.6 27B — um modelo denso, sob licença Apache 2.0, com janela de contexto de 256K, que funciona com ~17 GB de VRAM em Q4_K_M via `ollama run qwen3.6:27b`.** Para uma configuração mais leve, instale o Ollama e execute `ollama pull qwen2.5:7b` — requer 5,5 GB de VRAM e entrega 57 tokens/seg em uma RTX 3060. Para tarefas de código use o Qwen2.5-Coder; para OCR de documentos em chinês/japonês use o Qwen2-VL.',
+    leadAnswerBlock: '**A nova escolha principal é o Qwen 3.6 27B — um modelo denso, sob licença Apache 2.0, com janela de contexto de 256K, que funciona com ~17 GB de VRAM em Q4_K_M via `ollama run qwen3.6:27b`.** Para uma configuração mais leve, instale o Ollama e execute `ollama pull qwen2.5:7b` — requer 5,5 GB de VRAM e entrega 57 tokens/seg em uma RTX 3060. Para tarefas de código use o Qwen2.5-Coder; para OCR de documentos em chinês/japonês use o Qwen2-VL. Já sabe qual é o seu orçamento de VRAM? Vá direto para [qual GPU ou Mac comprar para cada nível do Qwen](#affiliate-picks).',
     toc: [
       { label: 'Principais conclusões', anchor: '#key-takeaways' },
       { label: 'Visão geral da família Qwen3', anchor: '#model-family' },
@@ -1034,7 +1286,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'Guia de implantação local do Qwen 2026: execute Qwen 3.6 27B, Qwen3, Coder e VL em cada nível de hardware',
       description: 'Guia completo para implantar a família de modelos Qwen localmente — Qwen 3.6 27B, Qwen3, Qwen2.5, Coder e VL, requisitos de VRAM, configuração com Ollama e LM Studio, quantização, benchmarks e recomendações de hardware.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-02',
+      dateModified: '2026-08-25',
       inLanguage: 'pt-BR',
       url: 'https://www.promptquorum.com/pt/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1112,6 +1364,9 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['Modelo', 'VRAM', 'GPU mínima', 'Apple Silicon', 'Velocidade (RTX 3060)'],
         tableFormat: true,
         note: 'Os números de VRAM correspondem a arquivos GGUF Q4_K_M da biblioteca do Ollama. Adicione 1–2 GB para o cache KV com um contexto de 4K. Se a GPU tiver menos VRAM do que o modelo precisa, o Ollama descarrega camadas automaticamente para a RAM do sistema — funciona, mas reduz a velocidade significativamente.',
+        callouts: [
+          { type: 'tip', text: 'Já identificou o seu nível de VRAM? Veja [exatamente qual GPU ou Mac comprar para esse nível](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M4 Pro ou GPU dupla.' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-pt.webp',
         imageCaption: 'Requisitos de VRAM do Qwen3 por tamanho de modelo (Q4_K_M) — PromptQuorum 2026',
       },
@@ -1201,6 +1456,9 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['Modelo (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Velocidade (RTX 3060 12 GB)'],
         tableFormat: true,
+        callouts: [
+          { type: 'tip', text: 'Quer essa pontuação de 92,7% no HumanEval a 27 tok/s? Veja a [GPU de 24 GB que executa o Qwen3-Coder 32B](#affiliate-picks).' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-pt.webp',
         imageCaption: 'Pontuações de benchmark do Qwen3 (Q4_K_M) — PromptQuorum 2026',
       },
@@ -1234,16 +1492,100 @@ curl http://localhost:11434/v1/chat/completions \\
       },
       affiliatePicks: {
         id: 'affiliate-picks',
-        title: 'Recomendações de hardware por orçamento',
+        title: 'Qual hardware comprar para implantar o Qwen3?',
         content: [
-          '**A RTX 3060 12 GB é o melhor ponto de entrada para o Qwen3 8B e Qwen3-Coder 7B por menos de R$ 1.500.** Para modelos 14B, a RTX 4070 12 GB adiciona 35% de velocidade.',
+          '**Primeiro, ajuste o nível de Qwen desejado à VRAM necessária e depois compre a placa mais barata que atenda esse requisito — pagar por mais VRAM do que o modelo precisa é o gasto excessivo mais comum nesta lista.** As recomendações abaixo correspondem diretamente à tabela de hardware acima: econômico → RTX 4060, médio porte → RTX 4070 Super, alto desempenho → RTX 3090/4090, Apple Silicon → Mac mini M4 Pro, uso contínuo → um mini PC. Os preços abaixo refletem o mercado de GPUs em 2026 — a escassez de chips de memória e a demanda de data centers de IA encareceram tanto as GPUs novas quanto as configurações de memória da Apple, e no Brasil o imposto de importação amplia ainda mais essa diferença; confirme o preço atual antes de comprar.',
         ],
-        items: [
-          '**Econômico (Qwen3 8B)**: NVIDIA RTX 4060 8 GB ou RTX 3060 12 GB. Ambas gerenciam modelos 7B a 50–57 tokens/seg. A RTX 3060 12 GB geralmente é mais barata de segunda mão e tem mais margem de VRAM.',
-          '**Médio porte (Qwen3 14B)**: RTX 4070 12 GB ou RTX 4070 Super 12 GB. A 4070 Super executa o Qwen3-Coder 14B a 38–42 tokens/seg.',
-          '**Alto desempenho (Qwen3 32B)**: RTX 4090 24 GB ou RTX 3090 24 GB. A 4090 entrega 27–28 tok/s no Qwen3-Coder 32B — velocidade de assistência de código em tempo real.',
-          '**Apple Silicon (todos os tamanhos)**: Mac mini M4 Pro 48 GB oferece a melhor relação custo-benefício para executar o Qwen3 32B (~22 tok/s) com baixo ruído e consumo.',
-          '**Mini PC para uso contínuo**: MINISFORUM UM890 Pro ou PC AMD Ryzen AI similar. Executa o Qwen3 8B em CPU+iGPU a ~8–12 tok/s — lento, mas capaz de funcionar 24/7 com menos de 35 W de consumo.',
+        callouts: [
+          { type: 'tip', text: 'Pule esta seção se você já tem uma GPU com 8 GB de VRAM ou mais — primeiro execute o Qwen3 8B no que você já possui. Só compre hardware novo quando atingir esse limite e quiser um modelo maior.' },
+        ],
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'NVIDIA RTX 4060 8 GB',
+            tagline: 'Opção econômica — Qwen3 8B, Qwen3-Coder 7B (5,5 GB de VRAM)',
+            verdict: 'A placa mais barata desta lista que atende ao requisito de 5,5 GB do Qwen3 8B com folga para o contexto. Executa o Qwen3-Coder 7B a ~55 tok/s — velocidade suficiente para assistência de código interativa.',
+            pros: [
+              'O requisito de 5,5 GB de VRAM é atendido com folga para o cache KV de contexto longo',
+              'Preço mais baixo desta lista — a primeira GPU certa se você nunca executou um LLM local',
+              '50–57 tok/s em modelos 7B/8B, no mesmo nível de placas mais caras nesse tamanho de modelo',
+            ],
+            cons: [
+              'Limita-se ao Qwen3 8B / Qwen3-Coder 7B — sem margem para crescer para 14B sem comprimir o cache KV',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com.br/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: 'R$ 3.600–4.600', label: 'Ver preço atual →' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'NVIDIA RTX 4070 Super 12 GB',
+            tagline: 'Opção intermediária — Qwen3 14B, Qwen3-Coder 14B (9,5 GB de VRAM)',
+            verdict: 'Executa o Qwen3-Coder 14B (85,2% no HumanEval) a 36–38 tok/s, com 2–3 GB de VRAM sobrando para contexto — o nível em que a qualidade de código dá um salto perceptível em relação aos modelos 7B/8B.',
+            pros: [
+              'O modelo de 9,5 GB cabe com 2–3 GB de VRAM sobrando — espaço para janelas de contexto maiores',
+              'O HumanEval sobe de 75,6% (7B) para 85,2% (14B) — o salto de custo-benefício mais claro da linha',
+              '~38 tok/s mantêm o chat interativo e a conclusão de código responsivos',
+            ],
+            cons: [
+              'VRAM insuficiente para o nível 32B — considere revender ou reaproveitar se precisar ir além do 14B',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com.br/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12 GB', productCategory: 'GPU', priceRange: 'R$ 6.900–7.800', label: 'Ver preço atual →' },
+            ],
+          },
+          {
+            rank: 3,
+            name: 'NVIDIA RTX 4090 24 GB (ou RTX 3090 24 GB usada)',
+            tagline: 'Opção de alto desempenho — Qwen3-Coder 32B, Qwen 3.6 27B (~17–20,5 GB de VRAM)',
+            verdict: 'A 4090 entrega 27–28 tok/s no Qwen3-Coder 32B — velocidade de codificação em tempo real com 92,7% no HumanEval. Uma RTX 3090 usada tem a mesma VRAM de 24 GB e fica cerca de 15% atrás da velocidade de inferência da 4090, por um preço bem menor se você encontrar um anúncio de segunda mão confiável.',
+            pros: [
+              '24 GB de VRAM cobrem todas as variantes do Qwen3 32B e o Qwen 3.6 27B com folga',
+              '27–28 tok/s no Qwen3-Coder 32B (92,7% no HumanEval) — rápido o suficiente para pair programming em tempo real',
+              'A RTX 3090 usada é a alternativa econômica: mesmo limite de VRAM, cerca de 15% mais lenta, bem mais barata de segunda mão',
+            ],
+            cons: [
+              'Custo inicial mais alto desta lista — só se justifica quando você realmente precisa da qualidade de nível 32B',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com.br/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 GB', productCategory: 'GPU', priceRange: 'R$ 24.500–29.800', label: 'Ver preço atual →' },
+              { url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24 GB (usada)', productCategory: 'GPU', priceRange: 'R$ 11.200–13.800', label: 'Ver anúncios usados →' },
+            ],
+          },
+          {
+            rank: 4,
+            name: 'Apple Mac mini M4 Pro 48 GB',
+            tagline: 'Opção Apple Silicon — Qwen3 32B (~22 tok/s, silencioso e de baixo consumo)',
+            verdict: 'A melhor relação custo-benefício para executar o Qwen3 32B com memória unificada — silencioso, baixo consumo de energia, sem GPU separada para instalar. Para o Qwen2.5-72B, é necessário o M2 Ultra 192 GB.',
+            pros: [
+              '48 GB de memória unificada atendem ao requisito de 20,5 GB do Qwen3 32B com espaço para outros aplicativos',
+              'Operação silenciosa e consumo adequado para uso de mesa — sem necessidade de gerenciar refrigeração dedicada de GPU',
+              'Uma única compra cobre sistema operacional, armazenamento e inferência — sem montagem separada de GPU/fonte/gabinete',
+            ],
+            cons: [
+              '~22 tok/s no Qwen3 32B é visivelmente mais lento que os 27–28 tok/s de uma RTX 4090',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.apple.com/br/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: 'R$ 21.000–23.000', label: 'Ver preço atual →' },
+            ],
+          },
+          {
+            rank: 5,
+            name: 'MINISFORUM UM890 Pro (ou mini PC AMD Ryzen AI similar)',
+            tagline: 'Opção para uso contínuo — Qwen3 8B em CPU + iGPU (~8–12 tok/s, menos de 35 W)',
+            verdict: 'Não indicado para uso interativo — serve para manter uma instância do Qwen3 8B em execução 24 horas por dia, 7 dias por semana para tarefas em segundo plano, automação residencial ou um endpoint de API de baixo tráfego, em que o custo de energia importa mais que a velocidade.',
+            pros: [
+              'Consumo abaixo de 35 W — barato para rodar continuamente, ao contrário de uma configuração de desktop com GPU',
+              'Formato compacto cabe em qualquer lugar; sem GPU separada para adquirir ou refrigerar',
+              'Executa o Qwen3 8B sem nenhuma GPU dedicada',
+            ],
+            cons: [
+              '8–12 tok/s é lento demais para chat interativo — opção voltada apenas para uso em segundo plano/API',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com.br/s?k=minisforum+um890+pro', productName: 'MINISFORUM UM890 Pro', productCategory: 'mini-pc', priceRange: 'R$ 5.100–6.900', label: 'Ver preço atual →' },
+            ],
+          },
         ],
       },
       commonMistakes: {
@@ -1301,7 +1643,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: 'Déployer Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder et Qwen2-VL en local en 2026. VRAM requis, Ollama + LM Studio, benchmarks Q4_K_M et guide par niveau matériel.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-fr.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-25',
     readTime: '14 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs, chercheurs et utilisateurs soucieux de leur vie privée souhaitant déployer la famille de modèles Qwen en local',
@@ -1310,7 +1652,7 @@ curl http://localhost:11434/v1/chat/completions \\
     ctaText: 'Dispatcher entre Qwen3, DeepSeek et Llama depuis une interface →',
     ctaButton: 'Essayer PromptQuorum gratuitement',
     ctaHref: '/waitlist',
-    leadAnswerBlock: '**Le nouveau modèle phare est Qwen 3.6 27B — un modèle dense sous licence Apache 2.0 avec une fenêtre de contexte de 256 K, qui tourne avec ~17 Go de VRAM en Q4_K_M via `ollama run qwen3.6:27b`.** Pour une configuration plus légère, installez Ollama et exécutez `ollama pull qwen2.5:7b` pour Qwen3 8B — 5,5 Go de VRAM suffisent, 57 tokens/s sur une RTX 3060. Pour le code, utilisez Qwen2.5-Coder ; pour l\'OCR de documents CJK, Qwen2-VL.',
+    leadAnswerBlock: '**Le nouveau modèle phare est Qwen 3.6 27B — un modèle dense sous licence Apache 2.0 avec une fenêtre de contexte de 256 K, qui tourne avec ~17 Go de VRAM en Q4_K_M via `ollama run qwen3.6:27b`.** Pour une configuration plus légère, installez Ollama et exécutez `ollama pull qwen2.5:7b` pour Qwen3 8B — 5,5 Go de VRAM suffisent, 57 tokens/s sur une RTX 3060. Pour le code, utilisez Qwen2.5-Coder ; pour l\'OCR de documents CJK, Qwen2-VL. Vous connaissez déjà votre budget VRAM ? Accédez directement au [GPU ou Mac à acheter pour chaque niveau Qwen](#affiliate-picks).',
     toc: [
       { label: 'Points clés', anchor: '#key-takeaways' },
       { label: 'Famille de modèles Qwen3', anchor: '#model-family' },
@@ -1333,7 +1675,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'Guide de déploiement local Qwen 2026 : Qwen 3.6 27B, Qwen3, Coder et VL pour chaque niveau matériel',
       description: 'Guide complet du déploiement local de la famille Qwen — Qwen 3.6 27B, Qwen3, Qwen2.5, Coder et VL, exigences VRAM, configuration Ollama et LM Studio, quantification, benchmarks et recommandations matérielles.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-02',
+      dateModified: '2026-08-25',
       inLanguage: 'fr',
       url: 'https://www.promptquorum.com/fr/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1411,6 +1753,9 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['Modèle', 'VRAM', 'GPU minimum', 'Apple Silicon', 'Vitesse (RTX 3060)'],
         tableFormat: true,
         note: 'Les valeurs VRAM concernent les fichiers GGUF Q4_K_M de la bibliothèque Ollama. Ajoutez 1–2 Go pour le cache KV à 4K de contexte. Si le GPU a moins de VRAM que nécessaire, Ollama décharge automatiquement des couches en RAM système — fonctionnel mais beaucoup plus lent.',
+        callouts: [
+          { type: 'tip', text: 'Vous avez identifié votre niveau VRAM ? Consultez [exactement quel GPU ou Mac acheter pour ce niveau](#affiliate-picks) — 6 Go → RTX 4060, 12 Go → RTX 4070 Super, 24 Go → RTX 3090/4090, 48 Go et plus → Mac mini M4 Pro ou double GPU.' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-fr.webp',
         imageCaption: 'Exigences VRAM Qwen3 par taille de modèle (Q4_K_M) — PromptQuorum 2026',
       },
@@ -1500,6 +1845,9 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['Modèle (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Vitesse (RTX 3060 12 Go)'],
         tableFormat: true,
+        callouts: [
+          { type: 'tip', text: 'Vous voulez ce score HumanEval de 92,7 % à 27 tokens/s ? Consultez le [GPU 24 Go qui exécute Qwen3-Coder 32B](#affiliate-picks).' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-fr.webp',
         imageCaption: 'Scores benchmark Qwen3 (Q4_K_M) — PromptQuorum 2026',
       },
@@ -1534,22 +1882,100 @@ curl http://localhost:11434/v1/chat/completions \\
       },
       affiliatePicks: {
         id: 'affiliate-picks',
-        title: 'Recommandations matérielles par budget',
+        title: 'Quel matériel acheter pour déployer Qwen3 ?',
         content: [
-          '**La RTX 3060 12 Go est la meilleure entrée de gamme pour Qwen3 8B et Qwen3-Coder 7B à moins de env. 270–330 €.** Pour les modèles 14B, la RTX 4070 12 Go offre +35 % de vitesse à env. 490–560 €.',
+          '**Faites d\'abord correspondre votre niveau Qwen cible à la VRAM nécessaire, puis achetez la carte la moins chère qui atteint ce seuil — payer pour plus de VRAM que ce dont votre modèle a besoin est la dépense excessive la plus fréquente de cette liste.** Les choix ci-dessous correspondent directement au tableau matériel ci-dessus : entrée de gamme → RTX 4060, milieu de gamme → RTX 4070 Super, haut de gamme → RTX 3090/4090, Apple Silicon → Mac mini M4 Pro, usage permanent → un mini-PC. Les prix ci-dessous reflètent le marché GPU de 2026 — la pénurie de puces mémoire et la demande des datacenters IA ont fait grimper le prix des GPU neufs et des configurations mémoire Apple ; vérifiez le prix actuel avant d\'acheter.',
         ],
-        items: [
-          '**Entrée de gamme (Qwen3 8B)** : NVIDIA RTX 4060 8 Go ou RTX 3060 12 Go. Les deux gèrent les modèles 7B à 50–57 tokens/s. La RTX 3060 12 Go est souvent moins chère en occasion et offre plus de VRAM.',
-          '**Milieu de gamme (Qwen3 14B)** : RTX 4070 12 Go ou RTX 4070 Super 12 Go. Le 4070 Super exécute Qwen3-Coder 14B à 38–42 tokens/s avec 2–3 Go de VRAM disponible pour le contexte.',
-          '**Haut de gamme (Qwen3 32B)** : RTX 4090 24 Go ou RTX 3090 24 Go. La 4090 offre 27–28 tokens/s sur Qwen3-Coder 32B. La 3090 est nettement moins chère d\'occasion.',
-          '**Apple Silicon (toutes tailles)** : Mac mini M4 Pro 48 Go — meilleur rapport qualité/prix pour Qwen3 32B (~22 tokens/s) avec une consommation électrique faible.',
-          '**Mini-PC usage permanent** : MINISFORUM UM890 Pro ou similaire. Exécute Qwen3 8B sur CPU+iGPU à ~8–12 tokens/s — lent mais disponible 24/7 sous 35 W.',
+        callouts: [
+          { type: 'tip', text: 'Passez cette section si vous possédez déjà un GPU avec 8 Go de VRAM ou plus — exécutez d\'abord Qwen3 8B sur ce que vous avez. N\'achetez du nouveau matériel qu\'une fois ce plafond atteint et si vous voulez un modèle plus grand.' },
         ],
-        affiliateLinks: [
-          { url: 'https://www.amazon.fr/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 Go', productCategory: 'GPU', priceRange: 'env. 270–330 €', label: 'GPU entrée de gamme pour Qwen3 8B' },
-          { url: 'https://www.amazon.fr/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12 Go', productCategory: 'GPU', priceRange: 'env. 490–560 €', label: 'Meilleur GPU pour Qwen3 14B' },
-          { url: 'https://www.amazon.fr/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 Go', productCategory: 'GPU', priceRange: 'env. 1 850–2 100 €', label: 'Meilleur GPU pour Qwen3-Coder 32B' },
-          { url: 'https://www.apple.com/fr/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48 Go', productCategory: 'Mini PC', priceRange: '1 649 €', label: 'Meilleur Apple Silicon pour Qwen3 32B' },
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'NVIDIA RTX 4060 8 Go',
+            tagline: 'Choix entrée de gamme — Qwen3 8B, Qwen3-Coder 7B (5,5 Go de VRAM)',
+            verdict: 'La carte la moins chère de cette liste qui atteint le seuil de 5,5 Go requis par Qwen3 8B tout en laissant de la marge pour le contexte. Exécute Qwen3-Coder 7B à ~55 tokens/s — assez rapide pour une assistance au code interactive.',
+            pros: [
+              'Le besoin de 5,5 Go de VRAM est couvert avec de la marge pour un cache KV à contexte long',
+              'Prix le plus bas de cette liste — le bon premier GPU si vous n\'avez jamais exécuté de LLM local',
+              '50–57 tokens/s sur les modèles 7B/8B, au niveau des cartes plus chères à cette taille de modèle',
+            ],
+            cons: [
+              'Plafonne à Qwen3 8B / Qwen3-Coder 7B — aucune marge pour passer à 14B sans compresser le cache KV',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.fr/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 Go', productCategory: 'GPU', priceRange: 'env. 470–600 €', label: 'Vérifier le prix actuel →' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'NVIDIA RTX 4070 Super 12 Go',
+            tagline: 'Choix milieu de gamme — Qwen3 14B, Qwen3-Coder 14B (9,5 Go de VRAM)',
+            verdict: 'Exécute Qwen3-Coder 14B (85,2 % HumanEval) à 36–38 tokens/s avec 2–3 Go de VRAM restants pour le contexte — le niveau où la qualité du code progresse nettement par rapport aux modèles 7B/8B.',
+            pros: [
+              'Le modèle de 9,5 Go tient avec 2–3 Go de VRAM en réserve — de la place pour des fenêtres de contexte plus longues',
+              'HumanEval passe de 75,6 % (7B) à 85,2 % (14B) — le saut qualité/prix le plus clair de la gamme',
+              '~38 tokens/s garantissent une réactivité fluide pour le chat interactif et la complétion de code',
+            ],
+            cons: [
+              'Pas assez de VRAM pour le niveau 32B — prévoyez de la revendre ou de la réaffecter si vous dépassez le 14B',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.fr/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12 Go', productCategory: 'GPU', priceRange: 'env. 1 090–1 235 €', label: 'Vérifier le prix actuel →' },
+            ],
+          },
+          {
+            rank: 3,
+            name: 'NVIDIA RTX 4090 24 Go (ou RTX 3090 24 Go d\'occasion)',
+            tagline: 'Choix haut de gamme — Qwen3-Coder 32B, Qwen 3.6 27B (~17–20,5 Go de VRAM)',
+            verdict: 'La 4090 délivre 27–28 tokens/s sur Qwen3-Coder 32B — une vitesse de code en temps réel à 92,7 % de HumanEval. Une RTX 3090 d\'occasion offre la même VRAM de 24 Go et se situe à environ 15 % de la vitesse d\'inférence de la 4090, pour un prix nettement plus bas si vous trouvez une annonce d\'occasion fiable.',
+            pros: [
+              '24 Go de VRAM couvrent toutes les variantes de Qwen3 32B et Qwen 3.6 27B avec de la marge',
+              '27–28 tokens/s sur Qwen3-Coder 32B (92,7 % HumanEval) — assez rapide pour du pair programming en temps réel',
+              'La RTX 3090 d\'occasion est l\'alternative économique : même plafond de VRAM, environ 15 % plus lente, nettement moins chère d\'occasion',
+            ],
+            cons: [
+              'Coût initial le plus élevé de cette liste — justifié seulement si vous avez réellement besoin d\'une qualité de niveau 32B',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.fr/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 Go', productCategory: 'GPU', priceRange: 'env. 3 390–3 490 €', label: 'Vérifier le prix actuel →' },
+              { url: 'https://www.ebay.fr/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24 Go (occasion)', productCategory: 'GPU', priceRange: 'env. 1 400–1 750 €', label: 'Voir les annonces d\'occasion →' },
+            ],
+          },
+          {
+            rank: 4,
+            name: 'Apple Mac mini M4 Pro 48 Go',
+            tagline: 'Choix Apple Silicon — Qwen3 32B (~22 tokens/s, silencieux et basse consommation)',
+            verdict: 'Le meilleur rapport qualité/prix pour exécuter Qwen3 32B avec de la mémoire unifiée — silencieux, faible consommation électrique, aucun GPU séparé à installer. Pour Qwen2.5-72B, il faut plutôt le M2 Ultra 192 Go.',
+            pros: [
+              '48 Go de mémoire unifiée couvrent les 20,5 Go requis par Qwen3 32B avec de la place pour d\'autres applications',
+              'Fonctionnement silencieux et consommation adaptée à un bureau — aucune gestion de refroidissement de GPU dédié',
+              'Un seul achat couvre le système, le stockage et l\'inférence — pas de montage GPU/alimentation/boîtier séparé',
+            ],
+            cons: [
+              '~22 tokens/s sur Qwen3 32B est nettement plus lent que les 27–28 tokens/s d\'une RTX 4090',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.apple.com/fr/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48 Go', productCategory: 'Mini PC', priceRange: 'env. 1 850–1 950 €', label: 'Vérifier le prix actuel →' },
+            ],
+          },
+          {
+            rank: 5,
+            name: 'MINISFORUM UM890 Pro (ou mini-PC AMD Ryzen AI similaire)',
+            tagline: 'Choix usage permanent — Qwen3 8B sur CPU + iGPU (~8–12 tokens/s, moins de 35 W)',
+            verdict: 'Pas conçu pour un usage interactif — il s\'agit d\'une instance Qwen3 8B laissée en fonctionnement 24 h/24 et 7 j/7 pour des tâches en arrière-plan, la domotique, ou un point de terminaison API à faible trafic où le coût énergétique compte plus que la vitesse.',
+            pros: [
+              'Consommation inférieure à 35 W — peu coûteux à faire tourner en continu, contrairement à une configuration de bureau avec GPU',
+              'Format compact qui se glisse partout ; aucun GPU séparé à trouver ou refroidir',
+              'Fait tourner Qwen3 8B sans aucun GPU dédié',
+            ],
+            cons: [
+              '8–12 tokens/s est trop lent pour un chat interactif — un choix réservé à l\'arrière-plan/API',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.fr/s?k=minisforum+um890+pro', productName: 'MINISFORUM UM890 Pro', productCategory: 'mini-pc', priceRange: 'env. 650–880 €', label: 'Vérifier le prix actuel →' },
+            ],
+          },
         ],
       },
       commonMistakes: {
@@ -1610,7 +2036,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: 'Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder und Qwen2-VL lokal betreiben 2026. VRAM-Anforderungen, Ollama + LM Studio Setup, Q4_K_M-Benchmarks und Hardware-Tier-Guide.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-de.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-25',
     readTime: '14 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, Forscher und datenschutzbewusste Nutzer, die die vollständige Qwen-Modellfamilie lokal betreiben möchten — inklusive chinesischsprachiger Nutzer, die Alibabas Modelle gegenüber US-Alternativen bevorzugen',
@@ -1619,7 +2045,7 @@ curl http://localhost:11434/v1/chat/completions \\
     ctaText: 'Qwen3, DeepSeek und Llama über eine Oberfläche dispatchen →',
     ctaButton: 'PromptQuorum kostenlos testen',
     ctaHref: '/waitlist',
-    leadAnswerBlock: '**Das neue Flagship-Modell ist Qwen 3.6 27B — ein dichtes Modell unter Apache 2.0 mit 256K-Kontextfenster, das mit ~17 GB VRAM in Q4_K_M über `ollama run qwen3.6:27b` läuft.** Für ein schlankeres Setup installieren Sie Ollama und führen Sie `ollama pull qwen2.5:7b` für Qwen3 8B aus — das Modell benötigt 5,5 GB VRAM und liefert 57 Tokens/Sek. auf einer RTX 3060. Für Coding-Aufgaben verwenden Sie Qwen2.5-Coder; für chinesisches/japanisches Dokument-OCR Qwen2-VL.',
+    leadAnswerBlock: '**Das neue Flagship-Modell ist Qwen 3.6 27B — ein dichtes Modell unter Apache 2.0 mit 256K-Kontextfenster, das mit ~17 GB VRAM in Q4_K_M über `ollama run qwen3.6:27b` läuft.** Für ein schlankeres Setup installieren Sie Ollama und führen Sie `ollama pull qwen2.5:7b` für Qwen3 8B aus — das Modell benötigt 5,5 GB VRAM und liefert 57 Tokens/Sek. auf einer RTX 3060. Für Coding-Aufgaben verwenden Sie Qwen2.5-Coder; für chinesisches/japanisches Dokument-OCR Qwen2-VL. Kennen Sie Ihr VRAM-Budget bereits? Springen Sie direkt zu [welche GPU oder welchen Mac Sie für welche Qwen-Stufe kaufen sollten](#affiliate-picks).',
     toc: [
       { label: 'Zusammenfassung', anchor: '#key-takeaways' },
       { label: 'Qwen3-Modellfamilie im Überblick', anchor: '#model-family' },
@@ -1642,7 +2068,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'Qwen Lokal-Deployment-Guide 2026: Qwen 3.6 27B, Qwen3, Coder & VL für jede Hardware-Stufe',
       description: 'Vollständiger Guide zur lokalen Bereitstellung der Qwen-Modellfamilie — Qwen 3.6 27B, Qwen3, Qwen2.5, Coder und VL, VRAM-Anforderungen, Ollama- und LM-Studio-Setup, Quantisierung, Benchmarks und Hardware-Empfehlungen.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-02',
+      dateModified: '2026-08-25',
       inLanguage: 'de',
       url: 'https://www.promptquorum.com/de/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1721,6 +2147,9 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['Modell', 'VRAM', 'Mindest-GPU', 'Apple Silicon', 'Geschwindigkeit (RTX 3060)'],
         tableFormat: true,
         note: 'VRAM-Angaben gelten für Q4_K_M-GGUF-Dateien aus der Ollama-Bibliothek. Für den KV-Cache bei 4K-Kontext kommen 1–2 GB hinzu. Wenn die GPU weniger VRAM hat als das Modell benötigt, lagert Ollama automatisch Layer in den System-RAM aus — das funktioniert, reduziert aber die Geschwindigkeit erheblich.',
+        callouts: [
+          { type: 'tip', text: 'Ihre VRAM-Stufe steht fest? Sehen Sie sich an, [welche GPU oder welchen Mac Sie für diese Stufe genau kaufen sollten](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M4 Pro oder Dual-GPU.' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-de.webp',
         imageCaption: 'Qwen3 VRAM-Anforderungen nach Modellgröße (Q4_K_M) — PromptQuorum 2026',
       },
@@ -1810,6 +2239,9 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['Modell (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Geschwindigkeit (RTX 3060 12 GB)'],
         tableFormat: true,
+        callouts: [
+          { type: 'tip', text: 'Sie möchten diesen HumanEval-Score von 92,7 % bei 27 Tokens/Sek.? Sehen Sie sich die [24-GB-GPU an, die Qwen3-Coder 32B ausführt](#affiliate-picks).' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-de.webp',
         imageCaption: 'Qwen3 Benchmark-Ergebnisse (Q4_K_M) — PromptQuorum 2026',
       },
@@ -1844,22 +2276,100 @@ curl http://localhost:11434/v1/chat/completions \\
       },
       affiliatePicks: {
         id: 'affiliate-picks',
-        title: 'Hardware-Empfehlungen nach Budget',
+        title: 'Welche Hardware sollten Sie für Qwen3-Deployment kaufen?',
         content: [
-          '**Die RTX 3060 12 GB ist der beste Einstieg für Qwen3 8B und Qwen3-Coder 7B unter ca. 270–330 €.** Für 14B-Modelle bietet die RTX 4070 12 GB eine 35 %ige Geschwindigkeitssteigerung bei ca. 490–560 € neu.',
+          '**Ordnen Sie zuerst Ihre Ziel-Qwen-Stufe dem passenden VRAM zu und kaufen Sie dann die günstigste Karte, die diese Anforderung erfüllt — mehr VRAM zu bezahlen, als Ihr Modell benötigt, ist der häufigste Fehlkauf auf dieser Liste.** Die folgenden Empfehlungen entsprechen direkt der obigen Hardware-Tabelle: Einsteiger → RTX 4060, Mittelklasse → RTX 4070 Super, High-End → RTX 3090/4090, Apple Silicon → Mac mini M4 Pro, Dauerbetrieb → ein Mini-PC. Die Preise unten spiegeln den GPU-Markt 2026 wider — Speicherchip-Engpässe und die KI-Rechenzentrums-Nachfrage haben sowohl neue GPUs als auch Apple-Speicherkonfigurationen deutlich verteuert; prüfen Sie den aktuellen Preis vor dem Kauf.',
         ],
-        items: [
-          '**Einsteiger (Qwen3 8B)**: NVIDIA RTX 4060 8 GB oder RTX 3060 12 GB. Beide bewältigen 7B-Modelle mit 50–57 Tokens/Sek. Die RTX 3060 12 GB ist gebraucht oft günstiger und hat mehr VRAM-Puffer.',
-          '**Mittelklasse (Qwen3 14B)**: RTX 4070 12 GB oder RTX 4070 Super 12 GB. Der 4070 Super führt Qwen3-Coder 14B mit 38–42 Tokens/Sek. aus und hat 2–3 GB VRAM-Reserve für den Kontext.',
-          '**High-End (Qwen3 32B)**: RTX 4090 24 GB oder RTX 3090 24 GB. Die 4090 liefert 27–28 Tokens/Sek. bei Qwen3-Coder 32B — Echtzeit-Coding-Geschwindigkeit. Die 3090 ist gebraucht deutlich günstiger und liegt beim Inferenz-Durchsatz nur 15 % hinter der 4090.',
-          '**Apple Silicon (alle Größen)**: Mac mini M4 Pro 48 GB ist der beste Wert für Qwen3 32B (~22 Tokens/Sek.) bei geringem Geräusch- und Stromverbrauch.',
-          '**Mini-PC für Dauerbetrieb**: MINISFORUM UM890 Pro oder ähnliche AMD-Ryzen-AI-PCs. Laufen Qwen3 8B auf CPU+iGPU mit ~8–12 Tokens/Sek. — langsam, aber 24/7-fähig bei unter 35 W.',
+        callouts: [
+          { type: 'tip', text: 'Überspringen Sie diesen Abschnitt, wenn Sie bereits eine GPU mit 8 GB+ VRAM besitzen — betreiben Sie zunächst Qwen3 8B auf vorhandener Hardware. Kaufen Sie erst neue Hardware, wenn Sie diese Grenze erreicht haben und ein größeres Modell möchten.' },
         ],
-        affiliateLinks: [
-          { url: 'https://www.amazon.de/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: 'ca. 270–330 €', label: 'Einstiegs-GPU für Qwen3 8B' },
-          { url: 'https://www.amazon.de/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12 GB', productCategory: 'GPU', priceRange: 'ca. 490–560 €', label: 'Beste GPU für Qwen3 14B' },
-          { url: 'https://www.amazon.de/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 GB', productCategory: 'GPU', priceRange: 'ca. 1.850–2.100 €', label: 'Beste GPU für Qwen3-Coder 32B' },
-          { url: 'https://www.apple.com/de/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: '1.649 €', label: 'Bestes Apple Silicon für Qwen3 32B' },
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'NVIDIA RTX 4060 8 GB',
+            tagline: 'Einsteiger-Empfehlung — Qwen3 8B, Qwen3-Coder 7B (5,5 GB VRAM)',
+            verdict: 'Die günstigste Karte auf dieser Liste, die die 5,5-GB-Anforderung von Qwen3 8B mit Spielraum für Kontext erfüllt. Führt Qwen3-Coder 7B mit ~55 Tokens/Sek. aus — schnell genug für interaktive Coding-Unterstützung.',
+            pros: [
+              'Erfüllt die 5,5-GB-VRAM-Anforderung mit Puffer für langen Kontext-KV-Cache',
+              'Niedrigster Preis auf dieser Liste — die richtige erste GPU, wenn Sie noch nie ein lokales LLM betrieben haben',
+              '50–57 Tokens/Sek. bei 7B/8B-Modellen, gleichauf mit teureren Karten bei dieser Modellgröße',
+            ],
+            cons: [
+              'Deckelt bei Qwen3 8B / Qwen3-Coder 7B — kein Spielraum für 14B ohne KV-Cache-Engpass',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.de/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: 'ca. 470–600 €', label: 'Aktuellen Preis prüfen →' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'NVIDIA RTX 4070 Super 12 GB',
+            tagline: 'Mittelklasse-Empfehlung — Qwen3 14B, Qwen3-Coder 14B (9,5 GB VRAM)',
+            verdict: 'Führt Qwen3-Coder 14B (85,2 % HumanEval) mit 36–38 Tokens/Sek. aus und lässt dabei noch 2–3 GB VRAM für Kontext übrig — die Stufe, auf der die Coding-Qualität spürbar über die 7B/8B-Modelle hinaus zunimmt.',
+            pros: [
+              'Das 9,5-GB-Modell passt mit 2–3 GB VRAM-Puffer — Raum für längere Kontextfenster',
+              'HumanEval springt von 75,6 % (7B) auf 85,2 % (14B) — der klarste Preis-Leistungs-Sprung in der Reihe',
+              '~38 Tokens/Sek. halten interaktiven Chat und Code-Vervollständigung reaktionsschnell',
+            ],
+            cons: [
+              'Nicht genug VRAM für die 32B-Stufe — planen Sie den Verkauf oder eine Zweitnutzung, falls Sie über 14B hinauswachsen',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.de/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12 GB', productCategory: 'GPU', priceRange: 'ca. 1.090–1.235 €', label: 'Aktuellen Preis prüfen →' },
+            ],
+          },
+          {
+            rank: 3,
+            name: 'NVIDIA RTX 4090 24 GB (oder gebrauchte RTX 3090 24 GB)',
+            tagline: 'High-End-Empfehlung — Qwen3-Coder 32B, Qwen 3.6 27B (~17–20,5 GB VRAM)',
+            verdict: 'Die 4090 liefert 27–28 Tokens/Sek. bei Qwen3-Coder 32B — Echtzeit-Coding-Geschwindigkeit bei 92,7 % HumanEval. Eine gebrauchte RTX 3090 hat dasselbe 24-GB-VRAM und liegt bei der Inferenzgeschwindigkeit rund 15 % hinter der 4090 — bei deutlich geringeren Kosten, sofern Sie ein vertrauenswürdiges Gebrauchtangebot finden.',
+            pros: [
+              '24 GB VRAM deckt jede Qwen3-32B-Variante und Qwen 3.6 27B mit Spielraum ab',
+              '27–28 Tokens/Sek. bei Qwen3-Coder 32B (92,7 % HumanEval) — schnell genug für Echtzeit-Pair-Programming',
+              'Gebrauchte RTX 3090 ist die preiswerte Alternative: gleiche VRAM-Grenze, ~15 % langsamer, gebraucht deutlich günstiger',
+            ],
+            cons: [
+              'Höchste Anschaffungskosten auf dieser Liste — nur gerechtfertigt, wenn tatsächlich 32B-Qualität benötigt wird',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.de/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 GB', productCategory: 'GPU', priceRange: 'ca. 3.390–3.490 €', label: 'Aktuellen Preis prüfen →' },
+              { url: 'https://www.ebay.de/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24 GB (gebraucht)', productCategory: 'GPU', priceRange: 'ca. 1.400–1.750 €', label: 'Gebrauchtangebote ansehen →' },
+            ],
+          },
+          {
+            rank: 4,
+            name: 'Apple Mac mini M4 Pro 48 GB',
+            tagline: 'Apple-Silicon-Empfehlung — Qwen3 32B (~22 Tokens/Sek., leise und stromsparend)',
+            verdict: 'Bester Wert für den Betrieb von Qwen3 32B mit Unified Memory — leise, geringer Stromverbrauch, keine separate GPU zu verbauen. Für Qwen2.5-72B benötigen Sie stattdessen den M2 Ultra 192 GB.',
+            pros: [
+              '48 GB Unified Memory erfüllt die 20,5-GB-Anforderung von Qwen3 32B mit Raum für weitere Anwendungen',
+              'Lautloser Betrieb und schreibtischfreundlicher Stromverbrauch — kein separates GPU-Kühlmanagement nötig',
+              'Ein Kauf deckt Betriebssystem, Speicher und Inferenz ab — kein separater GPU/PSU/Gehäuse-Aufbau',
+            ],
+            cons: [
+              '~22 Tokens/Sek. bei Qwen3 32B ist spürbar langsamer als die 27–28 Tokens/Sek. einer RTX 4090',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.apple.com/de/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: 'ca. 1.850–1.950 €', label: 'Aktuellen Preis prüfen →' },
+            ],
+          },
+          {
+            rank: 5,
+            name: 'MINISFORUM UM890 Pro (oder ähnlicher AMD-Ryzen-AI-Mini-PC)',
+            tagline: 'Dauerbetrieb-Empfehlung — Qwen3 8B auf CPU + iGPU (~8–12 Tokens/Sek., unter 35 W)',
+            verdict: 'Nicht für interaktive Nutzung gedacht — geeignet für eine Qwen3-8B-Instanz, die Sie rund um die Uhr für Hintergrundaufgaben, Hausautomation oder einen wenig frequentierten API-Endpunkt laufen lassen, bei dem Stromkosten wichtiger sind als Geschwindigkeit.',
+            pros: [
+              'Stromverbrauch unter 35 W — günstig im Dauerbetrieb, anders als ein Desktop-GPU-Aufbau',
+              'Kleiner Formfaktor passt überallhin; keine separate GPU zu beschaffen oder zu kühlen',
+              'Bewältigt Qwen3 8B ganz ohne dedizierte GPU',
+            ],
+            cons: [
+              '8–12 Tokens/Sek. sind für interaktiven Chat zu langsam — geeignet nur für Hintergrund-/API-Nutzung',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.de/s?k=minisforum+um890+pro', productName: 'MINISFORUM UM890 Pro', productCategory: 'mini-pc', priceRange: 'ca. 650–880 €', label: 'Aktuellen Preis prüfen →' },
+            ],
+          },
         ],
       },
       commonMistakes: {
@@ -1920,7 +2430,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: 'Qwen 3.6 27B・Qwen3・Qwen2.5（7B〜72B）・Qwen2.5-Coder・Qwen2-VLを2026年にローカルで動かす完全実践ガイド。VRAM要件、OllamaとLM StudioのセットアップガイドQ4_K_Mベンチマーク、ハードウェア階層別の選び方を解説します。',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-ja.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-25',
     readTime: '14分で読める',
     educationalLevel: 'Intermediate',
     audience: 'Qwenモデルファミリーをローカルで実行したい開発者・研究者・プライバシー重視のユーザー',
@@ -1929,7 +2439,7 @@ curl http://localhost:11434/v1/chat/completions \\
     ctaText: 'Qwen3・DeepSeek・Llamaを1つのインターフェースからディスパッチ →',
     ctaButton: 'PromptQuorumを無料で試す',
     ctaHref: '/waitlist',
-    leadAnswerBlock: '**新しいフラッグシップはQwen 3.6 27Bです。Apache 2.0ライセンスの密なモデルで、256Kコンテキストウィンドウを持ち、`ollama run qwen3.6:27b`でQ4_K_M約17GBのVRAMで動作します。** より軽量な構成なら、Ollamaをインストールして`ollama pull qwen2.5:7b`を実行すればQwen3 8BがVRAM 5.5GB、RTX 3060で57トークン/秒で動作します。コーディング用途にはQwen2.5-Coderを、中国語・日本語ドキュメントOCRにはQwen2-VLを使用してください。',
+    leadAnswerBlock: '**新しいフラッグシップはQwen 3.6 27Bです。Apache 2.0ライセンスの密なモデルで、256Kコンテキストウィンドウを持ち、`ollama run qwen3.6:27b`でQ4_K_M約17GBのVRAMで動作します。** より軽量な構成なら、Ollamaをインストールして`ollama pull qwen2.5:7b`を実行すればQwen3 8BがVRAM 5.5GB、RTX 3060で57トークン/秒で動作します。コーディング用途にはQwen2.5-Coderを、中国語・日本語ドキュメントOCRにはQwen2-VLを使用してください。VRAM予算がすでに決まっている方は、[各Qwen階層に最適なGPUまたはMacの選び方](#affiliate-picks)へ直接お進みください。',
     toc: [
       { label: '重要ポイント', anchor: '#key-takeaways' },
       { label: 'Qwen3モデルファミリー概要', anchor: '#model-family' },
@@ -1952,7 +2462,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'Qwenローカルデプロイガイド2026：Qwen 3.6 27B・Qwen3・Coder・VLを全ハードウェア階層で動かす',
       description: 'Qwenモデルファミリーのローカルデプロイ完全ガイド — Qwen 3.6 27B・Qwen3・Qwen2.5・Coder・VL、VRAM要件、OllamaとLM Studioのセットアップ、量子化、ベンチマーク、ハードウェア推奨。',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-02',
+      dateModified: '2026-08-25',
       inLanguage: 'ja',
       url: 'https://www.promptquorum.com/ja/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -2032,6 +2542,9 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['モデル', 'VRAM', '最低GPU', 'Apple Silicon', '速度（RTX 3060）'],
         tableFormat: true,
         note: 'VRAMの数値はOllamaライブラリのQ4_K_M GGUFファイルを基準としています。4KコンテキストのKVキャッシュとして1〜2GB追加が必要です。GPUのVRAMがモデルに必要な量より少ない場合、Ollamaは自動的にシステムRAMにレイヤーをオフロードしますが、速度が大幅に低下します。',
+        callouts: [
+          { type: 'tip', text: 'ご自身のVRAM階層が決まったら、[その階層に最適なGPUまたはMacの選び方](#affiliate-picks)をご覧ください — 6GB → RTX 4060、12GB → RTX 4070 Super、24GB → RTX 3090/4090、48GB以上 → Mac mini M4 Proまたはデュアル GPU。' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-ja.webp',
         imageCaption: 'Qwen3 モデルサイズ別VRAM要件（Q4_K_M）— PromptQuorum 2026',
       },
@@ -2121,6 +2634,9 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['モデル（Q4_K_M）', 'MMLU', 'Math', 'HumanEval', '速度（RTX 3060 12GB）'],
         tableFormat: true,
+        callouts: [
+          { type: 'tip', text: '27トークン/秒でHumanEval 92.7%を狙いたいですか？[Qwen3-Coder 32Bを動かせる24GB GPU](#affiliate-picks)をご覧ください。' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-ja.webp',
         imageCaption: 'Qwen3ベンチマークスコア（Q4_K_M）— PromptQuorum 2026',
       },
@@ -2155,22 +2671,100 @@ curl http://localhost:11434/v1/chat/completions \\
       },
       affiliatePicks: {
         id: 'affiliate-picks',
-        title: '予算別ハードウェア推奨',
+        title: 'Qwen3デプロイにはどのハードウェアを買うべきか？',
         content: [
-          '**RTX 3060 12GBはQwen3 8BとQwen3-Coder 7Bのエントリー向け最良選択肢で、約¥40,000〜48,000（中古ならさらに安価）です。** 14Bモデルには約¥68,000〜78,000のRTX 4070 12GBが35%高速化を実現します。',
+          '**まず目標とするQwenの階層に必要なVRAMを確認し、それをクリアする最も安いカードを選びましょう。モデルに必要な量以上のVRAMに支払うのが、このリストで最もよくある無駄遣いです。** 以下のおすすめは上記のハードウェア表に直接対応しています：エントリー → RTX 4060、ミドルレンジ → RTX 4070 Super、ハイエンド → RTX 3090/4090、Apple Silicon → Mac mini M4 Pro、常時稼働 → mini PC。以下の価格は2026年のGPU市場を反映しています — メモリチップ不足とAIデータセンター需要により、新品GPUとApple製品のメモリ構成の価格がいずれも大きく上昇しています。購入前に最新価格をご確認ください。',
         ],
-        items: [
-          '**エントリー（Qwen3 8B）**：NVIDIA RTX 4060 8GBまたはRTX 3060 12GB。7Bモデルを50〜57トークン/秒で処理。RTX 3060 12GBは中古で安く入手でき、VRAMに余裕があります。',
-          '**ミドルレンジ（Qwen3 14B）**：RTX 4070 12GBまたはRTX 4070 Super 12GB。4070 SuperはQwen3-Coder 14Bを38〜42トークン/秒で処理し、2〜3GBのVRAMコンテキスト余裕があります。',
-          '**ハイエンド（Qwen3 32B）**：RTX 4090 24GBまたはRTX 3090 24GB。4090はQwen3-Coder 32Bを27〜28トークン/秒で処理 — リアルタイムコーディング速度。3090は中古で大幅に安く、推論スループットは4090の15%以内です。',
-          '**Apple Silicon（全サイズ）**：Mac mini M4 Pro 48GBはQwen3 32Bの最良コストパフォーマンス（約22トークン/秒）、低騒音・低消費電力。',
-          '**常時稼働Mini PC**：MINISFORUM UM890 Proや同等のAMD Ryzen AI PC。CPU+iGPUでQwen3 8Bを約8〜12トークン/秒で処理 — 遅いが35W以下で24/7稼働可能。',
+        callouts: [
+          { type: 'tip', text: 'すでにVRAM 8GB以上のGPUをお持ちの場合は、このセクションは読み飛ばして構いません — まずは手持ちのハードウェアでQwen3 8Bを動かしてみてください。その上限に達し、より大きなモデルが必要になってから新しいハードウェアを検討してください。' },
         ],
-        affiliateLinks: [
-          { url: 'https://www.amazon.co.jp/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8GB', productCategory: 'GPU', priceRange: '約¥40,000〜48,000', label: 'Qwen3 8B向けエントリーGPU' },
-          { url: 'https://www.amazon.co.jp/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12GB', productCategory: 'GPU', priceRange: '約¥68,000〜78,000', label: 'Qwen3 14B向け最良GPU' },
-          { url: 'https://www.amazon.co.jp/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24GB', productCategory: 'GPU', priceRange: '約¥260,000〜300,000', label: 'Qwen3-Coder 32B向け最良GPU' },
-          { url: 'https://www.apple.com/jp/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48GB', productCategory: 'Mini PC', priceRange: '¥218,800', label: 'Qwen3 32B向け最良Apple Silicon' },
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'NVIDIA RTX 4060 8 GB',
+            tagline: 'エントリー向け — Qwen3 8B、Qwen3-Coder 7B（5.5GB VRAM）',
+            verdict: 'このリストの中で、5.5GBのQwen3 8B要件をコンテキスト用の余裕を残しつつクリアできる最も安いカードです。Qwen3-Coder 7Bは約55トークン/秒で動作し、インタラクティブなコーディング支援に十分な速度です。',
+            pros: [
+              '5.5GBのVRAM要件を、長いコンテキストのKVキャッシュ分の余裕を残してクリア',
+              'このリストで最も低価格 — ローカルLLMを初めて使うなら最適な最初の1枚',
+              '7B/8Bモデルで50〜57トークン/秒、より高価なカードと同等の性能をこのモデルサイズで発揮',
+            ],
+            cons: [
+              'Qwen3 8B / Qwen3-Coder 7Bが上限 — KVキャッシュを圧迫せずに14Bへ拡張する余地はない',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.co.jp/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8GB', productCategory: 'GPU', priceRange: '約¥42,000〜53,000', label: '現在の価格を確認 →' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'NVIDIA RTX 4070 Super 12 GB',
+            tagline: 'ミドルレンジ向け — Qwen3 14B、Qwen3-Coder 14B（9.5GB VRAM）',
+            verdict: 'Qwen3-Coder 14B（HumanEval 85.2%）を36〜38トークン/秒で動作させ、コンテキスト用に2〜3GBのVRAM余裕が残ります — 7B/8Bモデルからコーディング品質が明確に向上する階層です。',
+            pros: [
+              '9.5GBのモデルが2〜3GBのVRAM余裕を残して動作 — より長いコンテキストウィンドウの余地',
+              'HumanEvalが75.6%（7B）から85.2%（14B）へ上昇 — ラインアップの中で最も分かりやすいコストパフォーマンスの向上',
+              '約38トークン/秒でインタラクティブなチャットやコード補完の応答性を維持',
+            ],
+            cons: [
+              '32B階層には十分なVRAMがない — 14Bを超えたくなったら売却や転用を検討する必要がある',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.co.jp/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12GB', productCategory: 'GPU', priceRange: '約¥80,000〜91,000', label: '現在の価格を確認 →' },
+            ],
+          },
+          {
+            rank: 3,
+            name: 'NVIDIA RTX 4090 24 GB（または中古のRTX 3090 24 GB）',
+            tagline: 'ハイエンド向け — Qwen3-Coder 32B、Qwen 3.6 27B（約17〜20.5GB VRAM）',
+            verdict: '4090はQwen3-Coder 32Bで27〜28トークン/秒を発揮します — HumanEval 92.7%でリアルタイムのコーディング速度です。中古のRTX 3090は同じ24GB VRAMを備え、信頼できる中古品を見つけられれば4090の推論速度の約15%以内で、大幅に安く入手できます。',
+            pros: [
+              '24GBのVRAMですべてのQwen3 32BバリアントとQwen 3.6 27Bを余裕でカバー',
+              'Qwen3-Coder 32B（HumanEval 92.7%）で27〜28トークン/秒 — リアルタイムのペアプログラミングに十分な速度',
+              '中古のRTX 3090はコスパの高い代替案：VRAMの上限は同じで、速度は約15%遅いが中古価格は大幅に安い',
+            ],
+            cons: [
+              'このリストで最も初期費用が高い — 実際に32Bクラスの品質が必要な場合にのみ正当化される',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.co.jp/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24GB', productCategory: 'GPU', priceRange: '約¥280,000〜350,000', label: '現在の価格を確認 →' },
+              { url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB（中古）', productCategory: 'GPU', priceRange: '約¥130,000〜160,000', label: '中古の出品を見る →' },
+            ],
+          },
+          {
+            rank: 4,
+            name: 'Apple Mac mini M4 Pro 48 GB',
+            tagline: 'Apple Silicon向け — Qwen3 32B（約22トークン/秒、静音・低消費電力）',
+            verdict: '統合メモリでQwen3 32Bを動かす上で最もコストパフォーマンスに優れた選択肢です — 静音で消費電力も低く、別途GPUを組み込む必要がありません。Qwen2.5-72Bを動かす場合はM2 Ultra 192GBが代わりに必要です。',
+            pros: [
+              '48GBの統合メモリで、Qwen3 32Bの20.5GB要件を他アプリ用の余裕を残してクリア',
+              '静音動作とデスクトップに適した消費電力 — 専用のGPU冷却管理が不要',
+              'OS、ストレージ、推論を一度の購入でまかなえる — 別途GPU/電源/ケースの組み立て不要',
+            ],
+            cons: [
+              'Qwen3 32Bで約22トークン/秒は、RTX 4090の27〜28トークン/秒より明らかに遅い',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.apple.com/jp/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48GB', productCategory: 'Mini PC', priceRange: '約¥350,000〜400,000', label: '現在の価格を確認 →' },
+            ],
+          },
+          {
+            rank: 5,
+            name: 'MINISFORUM UM890 Pro（または同等のAMD Ryzen AI mini PC）',
+            tagline: '常時稼働向け — CPU + iGPUでQwen3 8B（約8〜12トークン/秒、35W未満）',
+            verdict: 'インタラクティブな用途には向きません — バックグラウンドタスク、ホームオートメーション、あるいは速度より電力コストが重要な低トラフィックのAPIエンドポイントのために、Qwen3 8Bのインスタンスを24時間365日稼働させ続ける用途に適しています。',
+            pros: [
+              '消費電力35W未満 — デスクトップGPU構成と違い、常時稼働させても安価',
+              '小型フォームファクターでどこにでも設置可能。別途GPUを調達・冷却する必要もない',
+              'ディスクリートGPUなしでもQwen3 8Bを処理できる',
+            ],
+            cons: [
+              '8〜12トークン/秒はインタラクティブなチャットには遅すぎる — バックグラウンド／API専用の選択肢',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.co.jp/s?k=minisforum+um890+pro', productName: 'MINISFORUM UM890 Pro', productCategory: 'mini-pc', priceRange: '約¥59,000〜80,000', label: '現在の価格を確認 →' },
+            ],
+          },
         ],
       },
       commonMistakes: {
@@ -2231,7 +2825,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: '2026年本地运行Qwen 3.6 27B、Qwen3、Qwen2.5全系列（7B–72B）、Qwen2.5-Coder与Qwen2-VL的完整实战部署指南：显存需求对照表、Ollama与LM Studio配置步骤、Q4_K_M量化基准数据，以及各硬件预算档位的配置建议。',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-zh.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-25',
     readTime: '阅读约14分钟',
     educationalLevel: 'Intermediate',
     audience: '希望在本地运行完整Qwen模型家族的开发者、研究人员和注重数据隐私的用户，尤其是偏好阿里巴巴模型的中文用户',
@@ -2240,7 +2834,7 @@ curl http://localhost:11434/v1/chat/completions \\
     ctaText: '通过一个界面调度Qwen3、DeepSeek和Llama →',
     ctaButton: '免费试用PromptQuorum',
     ctaHref: '/waitlist',
-    leadAnswerBlock: '**新旗舰是Qwen 3.6 27B——Apache 2.0授权的密集模型，256K上下文窗口，通过`ollama run qwen3.6:27b`在Q4_K_M量化下约17GB显存即可运行。** 更轻量的方案：安装Ollama并执行`ollama pull qwen2.5:7b`即可运行Qwen3 8B，仅需5.5GB显存，RTX 3060上可达57个token/秒。代码任务使用Qwen2.5-Coder；中日文档OCR使用Qwen2-VL。',
+    leadAnswerBlock: '**新旗舰是Qwen 3.6 27B——Apache 2.0授权的密集模型，256K上下文窗口，通过`ollama run qwen3.6:27b`在Q4_K_M量化下约17GB显存即可运行。** 更轻量的方案：安装Ollama并执行`ollama pull qwen2.5:7b`即可运行Qwen3 8B，仅需5.5GB显存，RTX 3060上可达57个token/秒。代码任务使用Qwen2.5-Coder；中日文档OCR使用Qwen2-VL。已经知道自己的显存预算了？直接跳转查看[各Qwen档位应该买哪款GPU或Mac](#affiliate-picks)。',
     toc: [
       { label: '核心要点', anchor: '#key-takeaways' },
       { label: 'Qwen3模型家族概览', anchor: '#model-family' },
@@ -2263,7 +2857,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'Qwen本地部署指南2026：在各硬件层级运行Qwen 3.6 27B、Qwen3、Coder和VL',
       description: 'Qwen模型家族本地部署完整指南——Qwen 3.6 27B、Qwen3、Qwen2.5、Coder和VL，显存要求、Ollama和LM Studio设置、量化方案、基准测试及硬件推荐。',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-02',
+      dateModified: '2026-08-25',
       inLanguage: 'zh',
       url: 'https://www.promptquorum.com/zh/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -2343,6 +2937,9 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['模型', '显存', '最低GPU', 'Apple Silicon', '速度（RTX 3060）'],
         tableFormat: true,
         note: '显存数值适用于Ollama库中的Q4_K_M GGUF文件。4K上下文的KV缓存需额外增加1–2GB。若GPU显存不足，Ollama会自动将层卸载到系统内存——可以运行但速度会大幅降低。',
+        callouts: [
+          { type: 'tip', text: '已经确定自己的显存档位了？查看[该档位对应的确切GPU或Mac购买建议](#affiliate-picks)——6GB → RTX 4060，12GB → RTX 4070 Super，24GB → RTX 3090/4090，48GB以上 → Mac mini M4 Pro或双卡方案。' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-zh.webp',
         imageCaption: 'Qwen3各模型尺寸显存要求（Q4_K_M）— PromptQuorum 2026',
       },
@@ -2432,6 +3029,9 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['模型（Q4_K_M）', 'MMLU', 'Math', 'HumanEval', '速度（RTX 3060 12GB）'],
         tableFormat: true,
+        callouts: [
+          { type: 'tip', text: '想要以27 token/秒的速度获得92.7%的HumanEval评分？查看[运行Qwen3-Coder 32B所需的24GB显存GPU](#affiliate-picks)。' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-zh.webp',
         imageCaption: 'Qwen3基准测试评分（Q4_K_M）— PromptQuorum 2026',
       },
@@ -2466,22 +3066,100 @@ curl http://localhost:11434/v1/chat/completions \\
       },
       affiliatePicks: {
         id: 'affiliate-picks',
-        title: '各预算档位硬件推荐',
+        title: '部署Qwen3应该买哪款硬件？',
         content: [
-          '**RTX 3060 12GB是Qwen3 8B和Qwen3-Coder 7B的最佳入门选择，价格约$250–300（二手价格更低）。** 对于14B模型，RTX 4070 12GB在约$450–500的价位提供35%的速度提升。',
+          '**先根据目标Qwen档位确定所需显存，再购买能满足该需求的最便宜显卡——为超出模型实际需求的显存多花钱，是这份清单里最常见的超支。** 以下推荐与上方硬件表格一一对应：入门级 → RTX 4060，中端 → RTX 4070 Super，高端 → RTX 3090/4090，Apple Silicon → Mac mini M4 Pro，全天候方案 → mini PC。以下价格反映2026年显卡市场行情——显存芯片短缺和AI数据中心需求推高了新显卡及Apple内存配置的价格，购买前请核实当前实际报价。',
         ],
-        items: [
-          '**入门级（Qwen3 8B）**：NVIDIA RTX 4060 8GB或RTX 3060 12GB。两者均以50–57 token/秒处理7B模型。RTX 3060 12GB二手价格更低，显存余量更大。',
-          '**中端（Qwen3 14B）**：RTX 4070 12GB或RTX 4070 Super 12GB。4070 Super以38–42 token/秒运行Qwen3-Coder 14B，还有2–3GB显存余量用于上下文。',
-          '**高端（Qwen3 32B）**：RTX 4090 24GB或RTX 3090 24GB。4090在Qwen3-Coder 32B上达到27–28 token/秒——实时代码辅助速度。3090二手价格显著更低，推理吞吐量在4090的15%以内。',
-          '**Apple Silicon（所有尺寸）**：Mac mini M4 Pro 48GB是运行Qwen3 32B（约22 token/秒）的最佳性价比选择，低噪音、低功耗。',
-          '**全天候Mini PC**：MINISFORUM UM890 Pro或同类AMD Ryzen AI PC。通过CPU+核显以约8–12 token/秒运行Qwen3 8B——速度慢但可7×24小时运行，功耗35W以下。',
+        callouts: [
+          { type: 'tip', text: '如果你已经拥有一块显存8GB以上的显卡，可以跳过这一节——先在现有硬件上运行Qwen3 8B。只有触及这一上限、需要更大模型时，再考虑购买新硬件。' },
         ],
-        affiliateLinks: [
-          { url: 'https://www.amazon.com/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8GB', productCategory: 'GPU', priceRange: '$250–300', label: 'Qwen3 8B入门级GPU' },
-          { url: 'https://www.amazon.com/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12GB', productCategory: 'GPU', priceRange: '$450–500', label: 'Qwen3 14B最佳GPU' },
-          { url: 'https://www.amazon.com/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24GB', productCategory: 'GPU', priceRange: '$1,600–1,800', label: 'Qwen3-Coder 32B最佳GPU' },
-          { url: 'https://www.apple.com/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48GB', productCategory: 'Mini PC', priceRange: '$1,299–1,399', label: 'Qwen3 32B最佳Apple Silicon' },
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'NVIDIA RTX 4060 8GB',
+            tagline: '入门级选择——Qwen3 8B、Qwen3-Coder 7B（5.5GB显存）',
+            verdict: '这是清单中能满足Qwen3 8B 5.5GB显存需求、同时仍留有上下文余量的最便宜显卡。运行Qwen3-Coder 7B可达约55 token/秒——足以支持交互式编码辅助。',
+            pros: [
+              '5.5GB显存需求可轻松满足，还留有长上下文KV缓存的余量',
+              '清单中价格最低——如果你从未运行过本地LLM，这是合适的第一块显卡',
+              '在7B/8B模型上达到50–57 token/秒，与该模型规模下更贵的显卡表现相当',
+            ],
+            cons: [
+              '上限为Qwen3 8B/Qwen3-Coder 7B——若不压缩KV缓存，无法升级到14B',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: '$340–430', label: '查看当前价格 →' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'NVIDIA RTX 4070 Super 12GB',
+            tagline: '中端选择——Qwen3 14B、Qwen3-Coder 14B（9.5GB显存）',
+            verdict: '以36–38 token/秒运行Qwen3-Coder 14B（HumanEval 85.2%），还留有2–3GB显存用于上下文——这是编码质量相比7B/8B模型明显跃升的档位。',
+            pros: [
+              '9.5GB模型可运行，还留有2–3GB显存余量——可支持更长的上下文窗口',
+              'HumanEval从75.6%（7B）跃升至85.2%（14B）——整条产品线中性价比提升最明显的一档',
+              '约38 token/秒的速度保证交互式对话和代码补全的流畅响应',
+            ],
+            cons: [
+              '显存不足以支撑32B档位——若需求超出14B，需考虑转售或另作他用',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12 GB', productCategory: 'GPU', priceRange: '$650–735', label: '查看当前价格 →' },
+            ],
+          },
+          {
+            rank: 3,
+            name: 'NVIDIA RTX 4090 24GB（或二手RTX 3090 24GB）',
+            tagline: '高端选择——Qwen3-Coder 32B、Qwen 3.6 27B（约17–20.5GB显存）',
+            verdict: '4090在Qwen3-Coder 32B上可达27–28 token/秒——以92.7%的HumanEval评分实现实时编码速度。二手RTX 3090同样拥有24GB显存，推理速度约为4090的85%左右，如果能找到可信赖的二手卖家，价格会明显更低。',
+            pros: [
+              '24GB显存可覆盖所有Qwen3 32B变体和Qwen 3.6 27B，还留有余量',
+              '在Qwen3-Coder 32B（HumanEval 92.7%）上达到27–28 token/秒——足以支持实时结对编程',
+              '二手RTX 3090是高性价比替代方案：显存上限相同，速度约慢15%，但二手价格明显更低',
+            ],
+            cons: [
+              '清单中前期成本最高——只有在确实需要32B级别的质量时才值得',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 GB', productCategory: 'GPU', priceRange: '$2,300–2,800', label: '查看当前价格 →' },
+              { url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24 GB (used)', productCategory: 'GPU', priceRange: '$1,050–1,300', label: '查看二手市场 →' },
+            ],
+          },
+          {
+            rank: 4,
+            name: 'Apple Mac mini M4 Pro 48GB',
+            tagline: 'Apple Silicon选择——Qwen3 32B（约22 token/秒，安静低功耗）',
+            verdict: '在统一内存架构上运行Qwen3 32B性价比最高的选择——安静、低功耗、无需另装显卡。若要运行Qwen2.5-72B，则需要改用M2 Ultra 192GB。',
+            pros: [
+              '48GB统一内存可满足Qwen3 32B的20.5GB显存需求，还留有运行其他应用的空间',
+              '静音运行，功耗适合日常桌面使用——无需额外的显卡散热管理',
+              '一次性购买即可涵盖系统、存储和推理——无需单独组装GPU/电源/机箱',
+            ],
+            cons: [
+              '在Qwen3 32B上约22 token/秒，明显慢于RTX 4090的27–28 token/秒',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com/dp/B0CQSL8N8F', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: '约 $1,799–1,999', label: '查看当前价格 →' },
+            ],
+          },
+          {
+            rank: 5,
+            name: 'MINISFORUM UM890 Pro（或同类AMD Ryzen AI mini PC）',
+            tagline: '全天候选择——CPU+核显运行Qwen3 8B（约8–12 token/秒，功耗低于35W）',
+            verdict: '不适合交互式使用——适合用于7×24小时挂机运行Qwen3 8B实例，处理后台任务、家庭自动化，或对功耗成本比速度更敏感的低流量API端点。',
+            pros: [
+              '功耗低于35W——相比桌面显卡装机，长时间运行成本更低',
+              '体积小巧，几乎能放在任何地方；无需单独配置或散热的独立显卡',
+              '无需独立显卡即可运行Qwen3 8B',
+            ],
+            cons: [
+              '8–12 token/秒的速度太慢，不适合交互式对话——仅适合后台/API场景',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com/s?k=minisforum+um890+pro', productName: 'MINISFORUM UM890 Pro', productCategory: 'mini-pc', priceRange: '$479–649', label: '查看当前价格 →' },
+            ],
+          },
         ],
       },
       commonMistakes: {
@@ -2544,7 +3222,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: '2026년에 Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder, Qwen2-VL을 로컬에서 실행하십시오. VRAM 요구사항, Ollama + LM Studio 설정, Q4_K_M 벤치마크, 하드웨어 티어 가이드를 제공합니다.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-ko.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-25',
     readTime: '14분 분량',
     educationalLevel: 'Intermediate',
     audience: 'Qwen 전체 모델 패밀리를 로컬에서 실행하고자 하는 개발자, 연구자, 프라이버시 중심 사용자 — 미국 대안보다 Alibaba 모델을 선호하는 중국어 사용자 포함',
@@ -2585,7 +3263,7 @@ curl http://localhost:11434/v1/chat/completions \\
     ctaText: 'Qwen3, DeepSeek, Llama를 하나의 인터페이스에서 실행하십시오 →',
     ctaButton: 'PromptQuorum 무료로 사용해보기',
     ctaHref: '/waitlist',
-    leadAnswerBlock: '**새로운 플래그십 모델은 Qwen 3.6 27B입니다** — Apache 2.0 라이선스의 밀집 모델로, 256K 컨텍스트 창을 갖추고 있으며 `ollama run qwen3.6:27b`를 통해 Q4_K_M 기준 약 17GB의 VRAM으로 실행됩니다. 더 가벼운 설정을 원하면 Ollama를 설치하고 `ollama pull qwen2.5:7b`를 실행해 Qwen3 8B를 사용하십시오 — 5.5 GB의 VRAM이 필요하며 RTX 3060에서 초당 57 토큰을 처리합니다. 코딩 작업에는 Qwen2.5-Coder를, 중국어/일본어 문서 OCR에는 Qwen2-VL을 사용하십시오.',
+    leadAnswerBlock: '**새로운 플래그십 모델은 Qwen 3.6 27B입니다** — Apache 2.0 라이선스의 밀집 모델로, 256K 컨텍스트 창을 갖추고 있으며 `ollama run qwen3.6:27b`를 통해 Q4_K_M 기준 약 17GB의 VRAM으로 실행됩니다. 더 가벼운 설정을 원하면 Ollama를 설치하고 `ollama pull qwen2.5:7b`를 실행해 Qwen3 8B를 사용하십시오 — 5.5 GB의 VRAM이 필요하며 RTX 3060에서 초당 57 토큰을 처리합니다. 코딩 작업에는 Qwen2.5-Coder를, 중국어/일본어 문서 OCR에는 Qwen2-VL을 사용하십시오. 이미 원하는 VRAM 예산을 알고 계신가요? [각 Qwen 티어에 맞는 GPU 또는 Mac 구매 가이드](#affiliate-picks)로 바로 이동하십시오.',
     toc: [
       { label: '핵심 요약', anchor: '#key-takeaways' },
       { label: 'Qwen3 모델 패밀리 개요', anchor: '#model-family' },
@@ -2608,7 +3286,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'Qwen 로컬 배포 가이드 2026: 모든 하드웨어 티어에서 Qwen 3.6 27B, Qwen3, Coder & VL 실행하기',
       description: 'Qwen 모델 패밀리를 로컬에서 배포하는 완전한 가이드 — Qwen 3.6 27B, Qwen3, Qwen2.5, Coder, VL, VRAM 요구사항, Ollama 및 LM Studio 설정, 양자화, 벤치마크, 하드웨어 권장 사항.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-02',
+      dateModified: '2026-08-25',
       inLanguage: 'ko',
       url: 'https://www.promptquorum.com/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -2716,6 +3394,9 @@ curl http://localhost:11434/v1/chat/completions \\
         columns: ['모델', 'VRAM', '최소 GPU', 'Apple Silicon', '속도 (RTX 3060)'],
         tableFormat: true,
         note: 'VRAM 수치는 Ollama 라이브러리의 Q4_K_M GGUF 파일 기준입니다. 4K 컨텍스트에서 KV 캐시를 위해 1–2 GB를 추가하십시오. GPU VRAM이 모델 요구량보다 부족한 경우 Ollama가 자동으로 레이어를 시스템 RAM으로 오프로드합니다 — 동작하지만 속도가 크게 저하됩니다.',
+        callouts: [
+          { type: 'tip', text: 'VRAM 티어를 확인하셨나요? [해당 티어에 맞는 정확한 GPU 또는 Mac 구매 가이드](#affiliate-picks)를 확인하십시오 — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB 이상 → Mac mini M4 Pro 또는 듀얼 GPU.' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-ko.webp',
         imageCaption: 'Qwen 모델 크기별 VRAM 요구사항 (Q4_K_M) — PromptQuorum 2026',
       },
@@ -2805,6 +3486,9 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['모델 (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', '속도 (RTX 3060 12 GB)'],
         tableFormat: true,
+        callouts: [
+          { type: 'tip', text: '초당 27 토큰으로 HumanEval 92.7% 점수를 원하십니까? [Qwen3-Coder 32B를 실행하는 24 GB GPU](#affiliate-picks)를 확인하십시오.' },
+        ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-ko.webp',
         imageCaption: 'Qwen3 벤치마크 점수 (Q4_K_M) — PromptQuorum 2026',
       },
@@ -2839,22 +3523,100 @@ curl http://localhost:11434/v1/chat/completions \\
       },
       affiliatePicks: {
         id: 'affiliate-picks',
-        title: '예산별 하드웨어 추천',
+        title: 'Qwen3 배포를 위해 어떤 하드웨어를 구매해야 합니까?',
         content: [
-          '**RTX 3060 12 GB는 €300 미만에서 Qwen3 8B와 Qwen3-Coder 7B를 위한 최고의 진입점입니다.** 14B 모델의 경우 RTX 4070 12 GB가 약 €400에 35% 속도 향상을 제공합니다. 아래는 이 가이드를 위해 사용하고 테스트한 하드웨어 옵션입니다.',
+          '**먼저 목표로 하는 Qwen 티어를 VRAM에 맞추고, 그 기준을 충족하는 가장 저렴한 카드를 구매하십시오 — 모델에 필요한 것보다 많은 VRAM에 비용을 지불하는 것이 이 목록에서 가장 흔한 과소비입니다.** 아래 추천 목록은 위 하드웨어 표와 그대로 대응됩니다: 보급형 → RTX 4060, 중급 → RTX 4070 Super, 고급 → RTX 3090/4090, Apple Silicon → Mac mini M4 Pro, 상시 가동용 → 미니 PC. 아래 가격은 2026년 GPU 시장 상황을 반영합니다 — 메모리 칩 부족과 AI 데이터센터 수요로 신품 GPU와 Apple 메모리 가격이 모두 크게 상승했으므로, 구매 전 실제 판매 가격을 확인하십시오.',
         ],
-        items: [
-          '**보급형 (Qwen3 8B)**: NVIDIA RTX 4060 8 GB 또는 RTX 3060 12 GB. 둘 다 7B 모델을 초당 50–57 토큰으로 처리합니다. RTX 3060 12 GB는 중고로 더 저렴한 경우가 많고 VRAM 여유 공간이 더 많습니다.',
-          '**중급 (Qwen3 14B)**: RTX 4070 12 GB 또는 RTX 4070 Super 12 GB. 4070 Super는 Qwen3-Coder 14B를 초당 38–42 토큰으로 실행하며 2–3 GB의 여유 VRAM으로 14B 모델을 처리합니다.',
-          '**고급 (Qwen3 32B)**: RTX 4090 24 GB 또는 RTX 3090 24 GB. 4090은 Qwen3-Coder 32B에서 초당 27–28 토큰을 처리합니다 — 실시간 코딩 속도입니다. 3090은 중고로 훨씬 저렴하고 추론에서 4090의 85% 성능을 발휘합니다.',
-          '**Apple Silicon (전 크기)**: Mac mini M4 Pro 48 GB는 낮은 소음과 전력 소비로 Qwen3 32B(~초당 22 토큰)를 실행하는 최고의 가성비 옵션입니다. M2 Ultra 192 GB는 Qwen2.5-72B를 처리합니다.',
-          '**상시 가동용 미니 PC**: MINISFORUM UM890 Pro 또는 유사한 AMD Ryzen AI PC. CPU+iGPU에서 Qwen3 8B를 초당 약 8–12 토큰으로 실행합니다 — 느리지만 35W 미만의 전력으로 24시간 365일 가동 가능합니다.',
+        callouts: [
+          { type: 'tip', text: '이미 8 GB 이상 VRAM의 GPU를 보유하고 계신다면 이 섹션을 건너뛰십시오 — 먼저 보유한 하드웨어에서 Qwen3 8B를 실행해 보십시오. 그 한계에 도달하고 더 큰 모델을 원할 때만 새 하드웨어를 구매하십시오.' },
         ],
-        affiliateLinks: [
-          { url: 'https://www.amazon.com/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: '$250–300', label: 'Qwen3 8B 진입급 GPU' },
-          { url: 'https://www.amazon.com/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12 GB', productCategory: 'GPU', priceRange: '$450–500', label: 'Qwen3 14B 최고 GPU' },
-          { url: 'https://www.amazon.com/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 GB', productCategory: 'GPU', priceRange: '$1,600–1,800', label: 'Qwen3-Coder 32B 최고 GPU' },
-          { url: 'https://www.amazon.com/dp/B0CQSL8N8F', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: '$1,299–1,399', label: 'Qwen3 32B 최고 Apple Silicon' },
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'NVIDIA RTX 4060 8 GB',
+            tagline: '보급형 선택 — Qwen3 8B, Qwen3-Coder 7B (5.5 GB VRAM)',
+            verdict: '5.5 GB의 Qwen3 8B 요구사항을 컨텍스트 여유 공간까지 확보하면서 충족하는 이 목록에서 가장 저렴한 카드입니다. Qwen3-Coder 7B를 초당 약 55 토큰으로 실행합니다 — 인터랙티브 코딩 지원에 충분한 속도입니다.',
+            pros: [
+              '5.5 GB VRAM 요구사항을 긴 컨텍스트 KV 캐시를 위한 여유 공간까지 확보하며 충족',
+              '이 목록에서 가장 저렴한 가격 — 로컬 LLM을 처음 실행한다면 적합한 첫 GPU',
+              '7B/8B 모델에서 초당 50–57 토큰 — 이 모델 크기에서는 더 비싼 카드와 대등한 수준',
+            ],
+            cons: [
+              'Qwen3 8B / Qwen3-Coder 7B에서 상한선 — KV 캐시 압박 없이 14B로 확장할 여유가 없음',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: '$340–430', label: '현재 가격 확인 →' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'NVIDIA RTX 4070 Super 12 GB',
+            tagline: '중급 선택 — Qwen3 14B, Qwen3-Coder 14B (9.5 GB VRAM)',
+            verdict: 'Qwen3-Coder 14B(HumanEval 85.2%)를 초당 36–38 토큰으로 실행하며 컨텍스트를 위한 2–3 GB의 VRAM 여유가 남습니다 — 7B/8B 모델 대비 코딩 품질이 눈에 띄게 도약하는 티어입니다.',
+            pros: [
+              '9.5 GB 모델이 2–3 GB의 VRAM 여유와 함께 실행 — 더 긴 컨텍스트 창을 위한 공간',
+              'HumanEval이 75.6%(7B)에서 85.2%(14B)로 상승 — 라인업에서 가격 대비 품질이 가장 명확하게 도약하는 구간',
+              '초당 약 38 토큰으로 인터랙티브 채팅과 코드 자동완성이 원활하게 유지',
+            ],
+            cons: [
+              '32B 티어를 위한 VRAM은 부족 — 14B를 넘어서려면 매각 또는 재활용을 고려해야 함',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com/dp/B0C2RSGNXK', productName: 'NVIDIA RTX 4070 Super 12 GB', productCategory: 'GPU', priceRange: '$650–735', label: '현재 가격 확인 →' },
+            ],
+          },
+          {
+            rank: 3,
+            name: 'NVIDIA RTX 4090 24 GB (또는 중고 RTX 3090 24 GB)',
+            tagline: '고급 선택 — Qwen3-Coder 32B, Qwen 3.6 27B (~17–20.5 GB VRAM)',
+            verdict: '4090은 Qwen3-Coder 32B에서 초당 27–28 토큰을 제공합니다 — HumanEval 92.7%의 실시간 코딩 속도입니다. 중고 RTX 3090은 동일한 24 GB VRAM을 갖추고 있으며, 신뢰할 수 있는 중고 매물을 찾을 수 있다면 4090 추론 속도의 약 85% 수준으로 훨씬 저렴하게 구매할 수 있습니다.',
+            pros: [
+              '24 GB VRAM으로 모든 Qwen3 32B 변형과 Qwen 3.6 27B를 여유 있게 커버',
+              'Qwen3-Coder 32B(HumanEval 92.7%)에서 초당 27–28 토큰 — 실시간 페어 프로그래밍에 충분한 속도',
+              '중고 RTX 3090은 가성비 대안: VRAM 한계는 동일, 속도는 약 15% 느리지만 중고가는 훨씬 저렴',
+            ],
+            cons: [
+              '이 목록에서 가장 높은 초기 비용 — 실제로 32B급 품질이 필요할 때만 정당화됨',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 GB', productCategory: 'GPU', priceRange: '$2,300–2,800', label: '현재 가격 확인 →' },
+              { url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24 GB (중고)', productCategory: 'GPU', priceRange: '$1,050–1,300', label: '중고 매물 보기 →' },
+            ],
+          },
+          {
+            rank: 4,
+            name: 'Apple Mac mini M4 Pro 48 GB',
+            tagline: 'Apple Silicon 선택 — Qwen3 32B (~초당 22 토큰, 저소음·저전력)',
+            verdict: '통합 메모리에서 Qwen3 32B를 실행하는 데 가성비가 가장 좋은 선택입니다 — 조용하고 전력 소비가 낮으며 별도 GPU를 설치할 필요가 없습니다. Qwen2.5-72B의 경우 대신 M2 Ultra 192 GB가 필요합니다.',
+            pros: [
+              '48 GB 통합 메모리로 Qwen3 32B의 20.5 GB 요구사항을 다른 앱을 위한 여유와 함께 충족',
+              '무소음 작동과 데스크톱에 적합한 전력 소비 — 별도의 GPU 쿨링 관리 불필요',
+              '한 번의 구매로 OS, 스토리지, 추론을 모두 해결 — 별도의 GPU/PSU/케이스 조립 불필요',
+            ],
+            cons: [
+              'Qwen3 32B에서 초당 약 22 토큰은 RTX 4090의 초당 27–28 토큰보다 눈에 띄게 느림',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com/dp/B0CQSL8N8F', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: '약 $1,799–1,999', label: '현재 가격 확인 →' },
+            ],
+          },
+          {
+            rank: 5,
+            name: 'MINISFORUM UM890 Pro (또는 유사한 AMD Ryzen AI 미니 PC)',
+            tagline: '상시 가동 선택 — CPU + iGPU에서 Qwen3 8B (~초당 8–12 토큰, 35W 미만)',
+            verdict: '인터랙티브 용도에는 적합하지 않습니다 — 백그라운드 작업, 홈 자동화, 또는 속도보다 전력 비용이 중요한 저트래픽 API 엔드포인트를 위해 24시간 365일 가동하는 Qwen3 8B 인스턴스에 적합합니다.',
+            pros: [
+              '35W 미만의 전력 소비 — 데스크톱 GPU 구성과 달리 계속 가동해도 저렴',
+              '작은 폼팩터로 어디에나 설치 가능; 별도의 GPU를 구하거나 냉각할 필요 없음',
+              '별도의 디스크리트 GPU 없이도 Qwen3 8B를 처리',
+            ],
+            cons: [
+              '초당 8–12 토큰은 인터랙티브 채팅에는 너무 느림 — 백그라운드/API 전용 선택',
+            ],
+            affiliateLinks: [
+              { url: 'https://www.amazon.com/s?k=minisforum+um890+pro', productName: 'MINISFORUM UM890 Pro', productCategory: 'mini-pc', priceRange: '$479–649', label: '현재 가격 확인 →' },
+            ],
+          },
         ],
       },
       commonMistakes: {
