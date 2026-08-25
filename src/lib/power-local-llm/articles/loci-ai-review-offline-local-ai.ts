@@ -127,6 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tradeOffs: {
         id: 'tradeoffs',
+        itemHeadings: true,
         title: 'Trade-Offs: Benefits vs. Limitations',
         columns: ['Benefit', 'What it means in real use', 'Limitation / caveat'],
         rows: [
@@ -204,6 +205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       platforms: {
         id: 'platforms',
+        itemHeadings: true,
         title: 'Loci on Each Platform',
         columns: ['Platform', 'What to expect', 'Important note'],
         rows: [
@@ -236,6 +238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vsAlternatives: {
         id: 'vs-alternatives',
+        itemHeadings: true,
         title: 'Loci vs. Alternatives',
         columns: ['App', 'Best for', 'Setup level', 'Model flexibility', 'Platform focus', 'Key limitation'],
         rows: [
@@ -503,6 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tradeOffs: {
         id: 'tradeoffs',
+        itemHeadings: true,
         title: 'المقايضات: الفوائد مقابل القيود',
         columns: ['الفائدة', 'ما تعنيه في الاستخدام الفعلي', 'القيد / التحذير'],
         rows: [
@@ -550,6 +554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       platforms: {
         id: 'platforms',
+        itemHeadings: true,
         title: 'Loci على كل منصة',
         columns: ['المنصة', 'ما يمكن توقعه', 'ملاحظة مهمة'],
         rows: [
@@ -582,6 +587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vsAlternatives: {
         id: 'vs-alternatives',
+        itemHeadings: true,
         title: 'Loci مقابل البدائل',
         columns: ['التطبيق', 'الأفضل لـ', 'مستوى الإعداد', 'مرونة النموذج', 'تركيز المنصة', 'القيد الرئيسي'],
         rows: [
@@ -833,6 +839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tradeOffs: {
         id: 'tradeoffs',
+        itemHeadings: true,
         title: 'Vorteile und Nachteile',
         columns: ['Vorteil', 'Was es in der Praxis bedeutet', 'Einschränkung / Vorbehalt'],
         rows: [
@@ -880,6 +887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       platforms: {
         id: 'platforms',
+        itemHeadings: true,
         title: 'Loci auf jeder Plattform',
         columns: ['Plattform', 'Was zu erwarten ist', 'Wichtige Notiz'],
         rows: [
@@ -912,6 +920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vsAlternatives: {
         id: 'vs-alternatives',
+        itemHeadings: true,
         title: 'Loci im Vergleich zu Alternativen',
         columns: ['App', 'Am besten für', 'Einrichtungs-Level', 'Modell-Flexibilität', 'Plattform-Fokus', 'Wichtige Einschränkung'],
         rows: [
@@ -1171,6 +1180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tradeOffs: {
         id: 'tradeoffs',
+        itemHeadings: true,
         title: 'Compromisos: beneficios vs limitaciones',
         columns: ['Beneficio', 'Qué significa en uso real', 'Limitación / salvedad'],
         rows: [
@@ -1218,6 +1228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       platforms: {
         id: 'platforms',
+        itemHeadings: true,
         title: 'Loci en cada plataforma',
         columns: ['Plataforma', 'Qué esperar', 'Nota importante'],
         rows: [
@@ -1250,6 +1261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vsAlternatives: {
         id: 'vs-alternatives',
+        itemHeadings: true,
         title: 'Loci vs alternativas',
         columns: ['Aplicación', 'Mejor para', 'Nivel de configuración', 'Flexibilidad de modelo', 'Enfoque de plataforma', 'Limitación clave'],
         rows: [
@@ -1501,6 +1513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     tradeOffs: {
       id: 'tradeoffs',
+      itemHeadings: true,
       title: 'Compromis : avantages et limitations',
       columns: ['Avantage', 'Ce que cela signifie en pratique', 'Limitation / avertissement'],
       rows: [
@@ -1548,6 +1561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     platforms: {
       id: 'platforms',
+      itemHeadings: true,
       title: 'Loci sur chaque plateforme',
       columns: ['Plateforme', 'À quoi s\'attendre', 'Note importante'],
       rows: [
@@ -1580,6 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     vsAlternatives: {
       id: 'vs-alternatives',
+      itemHeadings: true,
       title: 'Loci vs alternatives',
       columns: ['Application', 'Meilleur pour', 'Niveau de configuration', 'Flexibilité des modèles', 'Focus plateforme', 'Limitation clé'],
       rows: [
@@ -1831,6 +1846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tradeOffs: {
         id: 'tradeoffs',
+        itemHeadings: true,
         title: 'トレードオフ: メリット vs デメリット',
         columns: ['メリット', '実使用での意味', 'デメリット/注意事項'],
         rows: [
@@ -1878,6 +1894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       platforms: {
         id: 'platforms',
+        itemHeadings: true,
         title: 'プラットフォーム別Loci',
         columns: ['プラットフォーム', '期待される内容', '重要な注意事項'],
         rows: [
@@ -1910,6 +1927,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vsAlternatives: {
         id: 'vs-alternatives',
+        itemHeadings: true,
         title: 'Loci vs 代替案',
         columns: ['アプリ', '最適な用途', 'セットアップレベル', 'モデルの柔軟性', 'プラットフォームフォーカス', '主な制限'],
         rows: [
@@ -2161,6 +2179,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tradeOffs: {
         id: 'tradeoffs',
+        itemHeadings: true,
         title: '트레이드오프: 장점 vs 제한사항',
         columns: ['장점', '실제 사용에서의 의미', '제한사항 / 주의사항'],
         rows: [
@@ -2208,6 +2227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       platforms: {
         id: 'platforms',
+        itemHeadings: true,
         title: '각 플랫폼에서 Loci',
         columns: ['플랫폼', '예상되는 것', '중요한 참고사항'],
         rows: [
@@ -2240,6 +2260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vsAlternatives: {
         id: 'vs-alternatives',
+        itemHeadings: true,
         title: 'Loci vs 대안들',
         columns: ['앱', '최적의 용도', '설정 수준', '모델 유연성', '플랫폼 중심', '핵심 제한사항'],
         rows: [
@@ -2491,6 +2512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     tradeOffs: {
       id: 'tradeoffs',
+      itemHeadings: true,
       title: 'Trade-Offs: Benefícios vs. Limitações',
       columns: ['Benefício', 'O que significa no uso real', 'Limitação / ressalva'],
       rows: [
@@ -2538,6 +2560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     platforms: {
       id: 'platforms',
+      itemHeadings: true,
       title: 'Loci em Cada Plataforma',
       columns: ['Plataforma', 'O que esperar', 'Observação importante'],
       rows: [
@@ -2570,6 +2593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     vsAlternatives: {
       id: 'vs-alternatives',
+      itemHeadings: true,
       title: 'Loci vs. Alternativas',
       columns: ['App', 'Melhor para', 'Nível de configuração', 'Flexibilidade de modelo', 'Foco de plataforma', 'Limitação chave'],
       rows: [
@@ -2821,6 +2845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tradeOffs: {
         id: 'tradeoffs',
+        itemHeadings: true,
         title: '权衡：优点 vs. 局限',
         columns: ['优点', '在实际使用中的含义', '局限 / 注意'],
         rows: [
@@ -2868,6 +2893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       platforms: {
         id: 'platforms',
+        itemHeadings: true,
         title: '每个平台上的 Loci',
         columns: ['平台', '期望功能', '重要说明'],
         rows: [
@@ -2900,6 +2926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vsAlternatives: {
         id: 'vs-alternatives',
+        itemHeadings: true,
         title: 'Loci vs. 替代方案',
         columns: ['应用', '最适合', '设置级别', '模型灵活性', '平台焦点', '关键局限'],
         rows: [
