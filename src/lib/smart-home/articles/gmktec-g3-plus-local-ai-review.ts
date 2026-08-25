@@ -1405,9 +1405,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-07-03',
       dateModified: '2026-07-03',
       author: {
-        '@type': 'Person',
-        name: 'Hans Kuepper',
-        sameAs: 'https://www.linkedin.com/in/hanskuepper/',
+        '@type': 'Organization',
+        name: 'PromptQuorum',
       },
       publisher: {
         '@type': 'Organization',
