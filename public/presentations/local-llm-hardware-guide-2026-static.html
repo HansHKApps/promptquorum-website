@@ -260,6 +260,7 @@
     }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
             * {
                 margin: 0;
                 padding: 0;
@@ -413,8 +414,8 @@
                         items: [
                             '<strong>VRAM math:</strong> (Model size ÷ Quantization bits) × 8 = VRAM needed',
                             '<strong>12 GB VRAM:</strong> Llama 3.1 8B Q8 (~9 GB, 80 tok/sec) is best',
-                            '<strong>16 GB VRAM:</strong> Qwen2.5 14B Q8 (~15 GB, 45 tok/sec)',
-                            '<strong>24 GB VRAM:</strong> 70B models don\'t fit at Q4_K_M (~39 GB). Use 32B models instead.',
+                            '<strong>16 GB VRAM:</strong> Qwen3 14B Q8 (~15 GB, 45 tok/sec)',
+                            '<strong>24 GB VRAM:</strong> 70B models don\'t fit at Q4_K_M (~39 GB). Use 27–32B models instead.',
                             '<strong>CPU-only (16 GB RAM):</strong> Phi-4 Mini Q4_K_M (25 tok/sec) or Llama 3.2 3B (20 tok/sec)',
                             '<strong>llama.cpp speed:</strong> Set --n-gpu-layers 99 to double RTX 4070 Ti performance',
                             '<strong>GPU matters most:</strong> Used RTX 3060 12GB (~$200) is 5–8× faster than CPU'
@@ -424,7 +425,7 @@
                         type: 'comparison',
                         h2: 'VRAM Math: The Formula',
                         line1: 'VRAM (GB) = (Model Size × Quantization Bits) ÷ 8',
-                        line2: 'Example: Llama 3.1 70B at Q4 ≈ 39 GB VRAM',
+                        line2: 'Example: Llama 3.3 70B at Q4 ≈ 39 GB VRAM',
                         tip: 'Q4_K_M is the practical sweet spot — NVIDIA GPUs accelerate it more efficiently than Q4_0'
                     },
                     {
@@ -432,10 +433,10 @@
                         h2: 'GPU Tier Overview',
                         columns: ['Tier', 'GPU', 'VRAM', 'Best For', 'Speed'],
                         rows: [
-                            { 'Tier': 'Budget ($600)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', 'Best For': '7–13B models', 'Speed': '~80 tok/sec' },
-                            { 'Tier': 'Mid ($1200)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', 'Best For': '13–30B models', 'Speed': '~120 tok/sec' },
-                            { 'Tier': 'High ($1800)', 'GPU': 'RTX 4090 / RTX 5090', 'VRAM': '24 GB', 'Best For': 'Up to 32B Q5_K_M', 'Speed': '~150 tok/sec' },
-                            { 'Tier': 'Server ($3000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48+ GB', 'Best For': '70B+ models', 'Speed': 'Production-grade' }
+                            { 'Tier': 'Budget (~$394)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Best For': '7–13B models', 'Speed': '~60 tok/sec' },
+                            { 'Tier': 'Mid (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', 'Best For': '14–32B models', 'Speed': '~110 tok/sec' },
+                            { 'Tier': 'High (~$4,300–5,000+)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', 'Best For': '70B (Q4, light offload)', 'Speed': '~200 tok/sec' },
+                            { 'Tier': 'Server ($7,000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48–80 GB', 'Best For': '70B+ models', 'Speed': 'Production-grade' }
                         ]
                     },
                     {
@@ -443,12 +444,12 @@
                         h2: 'Best Models for 16 GB VRAM',
                         columns: ['Model', 'Quant', 'VRAM', 'Fits?'],
                         rows: [
-                            { 'Model': 'Qwen2.5 14B', 'Quant': 'Q8_0', 'VRAM': '~15 GB', 'Fits?': '✅ Best choice' },
-                            { 'Model': 'Mistral Small 3.1 22B', 'Quant': 'Q4_K_M', 'VRAM': '~13 GB', 'Fits?': '✅ Fastest' },
+                            { 'Model': 'Mistral Small 3.1 24B', 'Quant': 'Q4_K_M', 'VRAM': '~13 GB', 'Fits?': '✅ Best choice' },
+                            { 'Model': 'Devstral Small 24B', 'Quant': 'Q4_K_M', 'VRAM': '~16 GB', 'Fits?': '✅ Agentic coding' },
+                            { 'Model': 'Qwen3 14B', 'Quant': 'Q8_0', 'VRAM': '~15 GB', 'Fits?': '✅ Coding + reasoning' },
                             { 'Model': 'DeepSeek-R1 14B', 'Quant': 'Q8_0', 'VRAM': '~15 GB', 'Fits?': '✅ Best reasoning' },
                             { 'Model': 'Llama 3.1 8B', 'Quant': 'FP16', 'VRAM': '~16 GB', 'Fits?': '✅ Tight fit' },
-                            { 'Model': 'Llama 3.3 70B', 'Quant': 'Q4_K_M', 'VRAM': '~39 GB', 'Fits?': '❌ No (39 GB)' },
-                            { 'Model': 'Qwen2.5 32B', 'Quant': 'Q4_K_M', 'VRAM': '~18 GB', 'Fits?': '❌ No (18 GB)' }
+                            { 'Model': 'Llama 3.3 70B', 'Quant': 'Q4_K_M', 'VRAM': '~39 GB', 'Fits?': '❌ No (39 GB)' }
                         ]
                     },
                     {
@@ -457,11 +458,11 @@
                         columns: ['Model', 'Quant', 'VRAM', 'Fits?'],
                         rows: [
                             { 'Model': 'Llama 3.1 8B', 'Quant': 'Q8_0', 'VRAM': '~9 GB', 'Fits?': '✅ Best all-around' },
-                            { 'Model': 'Qwen2.5 14B', 'Quant': 'Q4_K_M', 'VRAM': '~8.5 GB', 'Fits?': '✅ Better reasoning' },
+                            { 'Model': 'Qwen3 14B', 'Quant': 'Q4_K_M', 'VRAM': '~8.5 GB', 'Fits?': '✅ Better reasoning' },
                             { 'Model': 'Llama 3.2 11B Vision', 'Quant': 'Q5_K_M', 'VRAM': '~8 GB', 'Fits?': '✅ Vision tasks' },
-                            { 'Model': 'Qwen2.5 7B', 'Quant': 'Q8_0', 'VRAM': '~8 GB', 'Fits?': '✅ Fastest' },
-                            { 'Model': 'Mistral 7B v0.3', 'Quant': 'FP16', 'VRAM': '~14 GB', 'Fits?': '❌ No (14 GB)' },
-                            { 'Model': 'Qwen2.5 14B', 'Quant': 'Q8_0', 'VRAM': '~15 GB', 'Fits?': '❌ No (15 GB)' }
+                            { 'Model': 'Qwen3 8B', 'Quant': 'Q8_0', 'VRAM': '~8 GB', 'Fits?': '✅ Fastest' },
+                            { 'Model': 'Mistral Small v0.3', 'Quant': 'FP16', 'VRAM': '~14 GB', 'Fits?': '❌ No (14 GB)' },
+                            { 'Model': 'Llama 4 Scout (109B MoE)', 'Quant': 'Q4_K_M', 'VRAM': '~55 GB', 'Fits?': '❌ No (55 GB)' }
                         ]
                     },
                     {
@@ -469,12 +470,12 @@
                         h2: '70B Models on RTX 4090 (24 GB)',
                         columns: ['Model', 'Quant', 'VRAM', 'Fits?'],
                         rows: [
-                            { 'Model': 'DeepSeek-R1 32B', 'Quant': 'Q4_K_M', 'VRAM': '~19 GB', 'Fits?': '✅ Best choice' },
-                            { 'Model': 'Qwen2.5 32B', 'Quant': 'Q5_K_M', 'VRAM': '~21 GB', 'Fits?': '✅ High quality' },
+                            { 'Model': 'Qwen 3.6 27B', 'Quant': 'Q4_K_M', 'VRAM': '~16 GB', 'Fits?': '✅ Best coding (77.2% SWE-bench)' },
+                            { 'Model': 'DeepSeek-R1 32B', 'Quant': 'Q4_K_M', 'VRAM': '~19 GB', 'Fits?': '✅ Best reasoning' },
+                            { 'Model': 'Qwen3 32B', 'Quant': 'Q5_K_M', 'VRAM': '~21 GB', 'Fits?': '✅ High quality' },
+                            { 'Model': 'Qwen3 32B', 'Quant': 'Q8_0', 'VRAM': '~34 GB', 'Fits?': '❌ No (34 GB)' },
                             { 'Model': 'Llama 3.3 70B', 'Quant': 'Q2_K', 'VRAM': '~24 GB', 'Fits?': '⚠️ Quality loss' },
-                            { 'Model': 'Qwen2.5 32B', 'Quant': 'Q8_0', 'VRAM': '~34 GB', 'Fits?': '❌ No (34 GB)' },
-                            { 'Model': 'Llama 3.3 70B', 'Quant': 'Q4_K_M', 'VRAM': '~39 GB', 'Fits?': '❌ No (39 GB)' },
-                            { 'Model': 'DeepSeek-R1 32B', 'Quant': 'Q8_0', 'VRAM': '~34 GB', 'Fits?': '❌ No (34 GB)' }
+                            { 'Model': 'Llama 3.3 70B', 'Quant': 'Q4_K_M', 'VRAM': '~39 GB', 'Fits?': '❌ No (39 GB)' }
                         ]
                     },
                     {
@@ -508,25 +509,25 @@
                         rows: [
                             { 'Budget': '$1500 entry', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', 'Best Models': '7–13B' },
                             { 'Budget': '$2500 solid', 'GPU': 'RTX 4080', 'VRAM': '16 GB', 'Best Models': '13–30B' },
-                            { 'Budget': '$4000 high-end', 'GPU': 'RTX 4090', 'VRAM': '24 GB', 'Best Models': 'Up to 32B Q5' }
+                            { 'Budget': '$4000 high-end', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', 'Best Models': 'Any (70B+)' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'Mac Hardware for Local LLMs',
                         items: [
-                            '<strong>M3 MacBook Pro 16":</strong> 18 GB unified memory — runs 7B models fast, 13B slowly',
-                            '<strong>M3 Max (Studio):</strong> 36 GB unified memory — handles 13B models well with shared CPU/GPU',
-                            '<strong>M4 Max (coming 2026):</strong> 40+ GB unified memory — capable of 13–30B models efficiently'
+                            '<strong>M3 Pro MacBook Pro 16":</strong> 18 GB unified memory — runs 7-8B models fast, 14B slowly',
+                            '<strong>M5 Pro (MacBook Pro):</strong> 64 GB unified memory (307 GB/s) — handles 32B models comfortably',
+                            '<strong>M5 Max (MacBook Pro / Studio):</strong> 128 GB unified memory (up to 614 GB/s) — runs 70B models at Q4_K_M, ~12–15 tok/sec'
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'Server vs Consumer Hardware',
                         items: [
-                            '<strong>Consumer (RTX 4090):</strong> ~$1800, 24 GB VRAM, single-user, prone to thermal throttling',
-                            '<strong>Server (RTX 6000 Ada):</strong> ~$5000, 48 GB VRAM, designed for 24/7 use with better cooling',
-                            '<strong>Recommendation:</strong> Start with RTX 4090. Upgrade to dual A100 or RTX 6000 for 24/7 70B+ use'
+                            '<strong>Consumer (RTX 5090):</strong> ~$2,000 MSRP (~$4,300–5,000+ street), 32 GB VRAM, single-user, prone to thermal throttling',
+                            '<strong>Server (RTX 6000 Ada):</strong> ~$7,000, 48 GB VRAM, designed for 24/7 use with better cooling',
+                            '<strong>Recommendation:</strong> Start with RTX 5090. Upgrade to dual A100 or RTX 6000 Ada for 24/7 70B+ use'
                         ]
                     },
                     {
@@ -564,8 +565,8 @@
                         items: [
                             '<strong>VRAM-Mathe:</strong> (Modellgröße ÷ Quantisierungsbits) × 8 = VRAM benötigt',
                             '<strong>12 GB VRAM:</strong> Llama 3.1 8B Q8 (~9 GB, 80 tok/Sek.) ist beste Wahl',
-                            '<strong>16 GB VRAM:</strong> Qwen2.5 14B Q8 (~15 GB, 45 tok/Sek.)',
-                            '<strong>24 GB VRAM:</strong> 70B-Modelle passen nicht bei Q4_K_M (~39 GB). Nutzen Sie 32B-Modelle.',
+                            '<strong>16 GB VRAM:</strong> Qwen3 14B Q8 (~15 GB, 45 tok/Sek.)',
+                            '<strong>24 GB VRAM:</strong> 70B-Modelle passen nicht bei Q4_K_M (~39 GB). Nutzen Sie 27–32B-Modelle.',
                             '<strong>CPU-only (16 GB RAM):</strong> Phi-4 Mini Q4_K_M (25 tok/Sek.) oder Llama 3.2 3B (20 tok/Sek.)',
                             '<strong>llama.cpp Geschwindigkeit:</strong> Setzen Sie --n-gpu-layers 99 um RTX 4070 Ti zu verdoppeln',
                             '<strong>GPU ist wichtigste:</strong> Gebrauchte RTX 3060 12GB (~200 €) ist 5–8× schneller als CPU'
@@ -575,7 +576,7 @@
                         type: 'comparison',
                         h2: 'VRAM-Berechnung: Die Formel',
                         line1: 'VRAM (GB) = (Modellgröße × Quantisierungsbits) ÷ 8',
-                        line2: 'Beispiel: Llama 3.1 70B bei Q4 ≈ 39 GB VRAM',
+                        line2: 'Beispiel: Llama 3.3 70B bei Q4 ≈ 39 GB VRAM',
                         tip: 'Q4_K_M ist der praktische Sweetspot — NVIDIA-GPUs beschleunigen es effizienter als Q4_0'
                     },
                     {
@@ -583,10 +584,10 @@
                         h2: 'GPU-Tier Übersicht',
                         columns: ['Tier', 'GPU', 'VRAM', 'Best für', 'Geschwindigkeit'],
                         rows: [
-                            { 'Tier': 'Budget (€500)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', 'Best für': '7–13B-Modelle', 'Geschwindigkeit': '~80 tok/Sek.' },
-                            { 'Tier': 'Mittel (€1000)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', 'Best für': '13–30B-Modelle', 'Geschwindigkeit': '~120 tok/Sek.' },
-                            { 'Tier': 'High (€1500)', 'GPU': 'RTX 4090 / RTX 5090', 'VRAM': '24 GB', 'Best für': 'Bis zu 32B Q5_K_M', 'Geschwindigkeit': '~150 tok/Sek.' },
-                            { 'Tier': 'Server (€2500+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48+ GB', 'Best für': '70B+ Modelle', 'Geschwindigkeit': 'Production-ready' }
+                            { 'Tier': 'Budget (~$394)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Best für': '7–13B-Modelle', 'Geschwindigkeit': '~60 tok/Sek.' },
+                            { 'Tier': 'Mittel (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', 'Best für': '14–32B-Modelle', 'Geschwindigkeit': '~110 tok/Sek.' },
+                            { 'Tier': 'High (~$4.300–5.000+)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', 'Best für': '70B (Q4, leichtes Offload)', 'Geschwindigkeit': '~200 tok/Sek.' },
+                            { 'Tier': 'Server ($7.000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48–80 GB', 'Best für': '70B+ Modelle', 'Geschwindigkeit': 'Production-ready' }
                         ]
                     },
                     {
@@ -594,12 +595,12 @@
                         h2: 'Beste Modelle für 16 GB VRAM',
                         columns: ['Modell', 'Quant', 'VRAM', 'Passt?'],
                         rows: [
-                            { 'Modell': 'Qwen2.5 14B', 'Quant': 'Q8_0', 'VRAM': '~15 GB', 'Passt?': '✅ Beste Wahl' },
-                            { 'Modell': 'Mistral Small 3.1 22B', 'Quant': 'Q4_K_M', 'VRAM': '~13 GB', 'Passt?': '✅ Schnellste' },
+                            { 'Modell': 'Mistral Small 3.1 24B', 'Quant': 'Q4_K_M', 'VRAM': '~13 GB', 'Passt?': '✅ Beste Wahl' },
+                            { 'Modell': 'Devstral Small 24B', 'Quant': 'Q4_K_M', 'VRAM': '~16 GB', 'Passt?': '✅ Agentisches Coding' },
+                            { 'Modell': 'Qwen3 14B', 'Quant': 'Q8_0', 'VRAM': '~15 GB', 'Passt?': '✅ Coding + Reasoning' },
                             { 'Modell': 'DeepSeek-R1 14B', 'Quant': 'Q8_0', 'VRAM': '~15 GB', 'Passt?': '✅ Best Reasoning' },
                             { 'Modell': 'Llama 3.1 8B', 'Quant': 'FP16', 'VRAM': '~16 GB', 'Passt?': '✅ Knapper fit' },
-                            { 'Modell': 'Llama 3.3 70B', 'Quant': 'Q4_K_M', 'VRAM': '~39 GB', 'Passt?': '❌ Nein (39 GB)' },
-                            { 'Modell': 'Qwen2.5 32B', 'Quant': 'Q4_K_M', 'VRAM': '~18 GB', 'Passt?': '❌ Nein (18 GB)' }
+                            { 'Modell': 'Llama 3.3 70B', 'Quant': 'Q4_K_M', 'VRAM': '~39 GB', 'Passt?': '❌ Nein (39 GB)' }
                         ]
                     },
                     {
@@ -608,11 +609,11 @@
                         columns: ['Modell', 'Quant', 'VRAM', 'Passt?'],
                         rows: [
                             { 'Modell': 'Llama 3.1 8B', 'Quant': 'Q8_0', 'VRAM': '~9 GB', 'Passt?': '✅ Best gesamt' },
-                            { 'Modell': 'Qwen2.5 14B', 'Quant': 'Q4_K_M', 'VRAM': '~8,5 GB', 'Passt?': '✅ Besseres Reasoning' },
+                            { 'Modell': 'Qwen3 14B', 'Quant': 'Q4_K_M', 'VRAM': '~8,5 GB', 'Passt?': '✅ Besseres Reasoning' },
                             { 'Modell': 'Llama 3.2 11B Vision', 'Quant': 'Q5_K_M', 'VRAM': '~8 GB', 'Passt?': '✅ Vision-Aufgaben' },
-                            { 'Modell': 'Qwen2.5 7B', 'Quant': 'Q8_0', 'VRAM': '~8 GB', 'Passt?': '✅ Schnellste' },
-                            { 'Modell': 'Mistral 7B v0.3', 'Quant': 'FP16', 'VRAM': '~14 GB', 'Passt?': '❌ Nein (14 GB)' },
-                            { 'Modell': 'Qwen2.5 14B', 'Quant': 'Q8_0', 'VRAM': '~15 GB', 'Passt?': '❌ Nein (15 GB)' }
+                            { 'Modell': 'Qwen3 8B', 'Quant': 'Q8_0', 'VRAM': '~8 GB', 'Passt?': '✅ Schnellste' },
+                            { 'Modell': 'Mistral Small v0.3', 'Quant': 'FP16', 'VRAM': '~14 GB', 'Passt?': '❌ Nein (14 GB)' },
+                            { 'Modell': 'Llama 4 Scout (109B MoE)', 'Quant': 'Q4_K_M', 'VRAM': '~55 GB', 'Passt?': '❌ Nein (55 GB)' }
                         ]
                     },
                     {
@@ -620,12 +621,12 @@
                         h2: '70B-Modelle auf RTX 4090 (24 GB)',
                         columns: ['Modell', 'Quant', 'VRAM', 'Passt?'],
                         rows: [
+                            { 'Modell': 'Qwen 3.6 27B', 'Quant': 'Q4_K_M', 'VRAM': '~16 GB', 'Passt?': '✅ Bestes Coding (77,2% SWE-bench)' },
                             { 'Modell': 'DeepSeek-R1 32B', 'Quant': 'Q4_K_M', 'VRAM': '~19 GB', 'Passt?': '✅ Beste Wahl' },
-                            { 'Modell': 'Qwen2.5 32B', 'Quant': 'Q5_K_M', 'VRAM': '~21 GB', 'Passt?': '✅ Hohe Qualität' },
+                            { 'Modell': 'Qwen3 32B', 'Quant': 'Q5_K_M', 'VRAM': '~21 GB', 'Passt?': '✅ Hohe Qualität' },
+                            { 'Modell': 'Qwen3 32B', 'Quant': 'Q8_0', 'VRAM': '~34 GB', 'Passt?': '❌ Nein (34 GB)' },
                             { 'Modell': 'Llama 3.3 70B', 'Quant': 'Q2_K', 'VRAM': '~24 GB', 'Passt?': '⚠️ Qualitätsverlust' },
-                            { 'Modell': 'Qwen2.5 32B', 'Quant': 'Q8_0', 'VRAM': '~34 GB', 'Passt?': '❌ Nein (34 GB)' },
-                            { 'Modell': 'Llama 3.3 70B', 'Quant': 'Q4_K_M', 'VRAM': '~39 GB', 'Passt?': '❌ Nein (39 GB)' },
-                            { 'Modell': 'DeepSeek-R1 32B', 'Quant': 'Q8_0', 'VRAM': '~34 GB', 'Passt?': '❌ Nein (34 GB)' }
+                            { 'Modell': 'Llama 3.3 70B', 'Quant': 'Q4_K_M', 'VRAM': '~39 GB', 'Passt?': '❌ Nein (39 GB)' }
                         ]
                     },
                     {
@@ -659,25 +660,25 @@
                         rows: [
                             { 'Budget': '€1200 Einstieg', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', 'Beste Modelle': '7–13B' },
                             { 'Budget': '€2000 Solide', 'GPU': 'RTX 4080', 'VRAM': '16 GB', 'Beste Modelle': '13–30B' },
-                            { 'Budget': '€3200 High-End', 'GPU': 'RTX 4090', 'VRAM': '24 GB', 'Beste Modelle': 'Bis zu 32B Q5' }
+                            { 'Budget': '€3200 High-End', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', 'Beste Modelle': 'Alle (70B+)' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'Mac-Hardware für lokale LLMs',
                         items: [
-                            '<strong>M3 MacBook Pro 16":</strong> 18 GB unified memory — läuft 7B-Modelle schnell, 13B langsam',
-                            '<strong>M3 Max (Studio):</strong> 36 GB unified memory — handhabt 13B-Modelle gut mit geteiltem CPU/GPU',
-                            '<strong>M4 Max (kommt 2026):</strong> 40+ GB unified memory — capable für 13–30B-Modelle effizient'
+                            '<strong>M3 Pro MacBook Pro 16":</strong> 18 GB unified memory — läuft 7-8B-Modelle schnell, 14B langsam',
+                            '<strong>M5 Pro (MacBook Pro):</strong> 64 GB unified memory (307 GB/s) — handhabt 32B-Modelle komfortabel',
+                            '<strong>M5 Max (MacBook Pro / Studio):</strong> 128 GB unified memory (bis zu 614 GB/s) — läuft 70B-Modelle bei Q4_K_M, ~12–15 tok/Sek.'
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'Server vs. Consumer-Hardware',
                         items: [
-                            '<strong>Consumer (RTX 4090):</strong> ~€1500, 24 GB VRAM, Single-User, anfällig für Thermal-Drosselung',
-                            '<strong>Server (RTX 6000 Ada):</strong> ~€4000, 48 GB VRAM, für 24/7-Nutzung mit besserer Kühlung',
-                            '<strong>Empfehlung:</strong> Starten Sie mit RTX 4090. Upgraden Sie auf Dual-A100 oder RTX 6000 für 24/7 70B+ Nutzung'
+                            '<strong>Consumer (RTX 5090):</strong> ~2.000 $ UVP (~4.300–5.000+ $ Straßenpreis), 32 GB VRAM, Single-User, anfällig für Thermal-Drosselung',
+                            '<strong>Server (RTX 6000 Ada):</strong> ~7.000 $, 48 GB VRAM, für 24/7-Nutzung mit besserer Kühlung',
+                            '<strong>Empfehlung:</strong> Starten Sie mit RTX 5090. Upgraden Sie auf Dual-A100 oder RTX 6000 Ada für 24/7 70B+ Nutzung'
                         ]
                     },
                     {
@@ -715,8 +716,8 @@
                         items: [
                             '<strong>Calcul VRAM:</strong> (Taille modèle ÷ bits quantification) × 8 = VRAM nécessaire',
                             '<strong>12 GB VRAM:</strong> Llama 3.1 8B Q8 (~9 GB, 80 tok/sec) est le meilleur',
-                            '<strong>16 GB VRAM:</strong> Qwen2.5 14B Q8 (~15 GB, 45 tok/sec)',
-                            '<strong>24 GB VRAM:</strong> Les modèles 70B ne rentrent pas en Q4_K_M (~39 GB). Utilisez 32B à la place.',
+                            '<strong>16 GB VRAM:</strong> Qwen3 14B Q8 (~15 GB, 45 tok/sec)',
+                            '<strong>24 GB VRAM:</strong> Les modèles 70B ne rentrent pas en Q4_K_M (~39 GB). Utilisez 27–32B à la place.',
                             '<strong>CPU-only (16 GB RAM):</strong> Phi-4 Mini Q4_K_M (25 tok/sec) ou Llama 3.2 3B (20 tok/sec)',
                             '<strong>Vitesse llama.cpp:</strong> Mettez --n-gpu-layers 99 pour doubler RTX 4070 Ti',
                             '<strong>GPU prime:</strong> RTX 3060 12GB d\'occasion (~$200) est 5–8× plus rapide que CPU'
@@ -726,7 +727,7 @@
                         type: 'comparison',
                         h2: 'Calcul VRAM : La Formule',
                         line1: 'VRAM (Go) = (Taille modèle × bits quant.) ÷ 8',
-                        line2: 'Exemple : Llama 3.1 70B en Q4 ≈ 39 Go VRAM',
+                        line2: 'Exemple : Llama 3.3 70B en Q4 ≈ 39 Go VRAM',
                         tip: 'Q4_K_M est le meilleur compromis — les GPU NVIDIA l\'accélèrent mieux que Q4_0'
                     },
                     {
@@ -734,10 +735,10 @@
                         h2: 'Vue d\'ensemble des niveaux GPU',
                         columns: ['Niveau', 'GPU', 'VRAM', 'Meilleur pour', 'Vitesse'],
                         rows: [
-                            { 'Niveau': 'Budget (€600)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 Go', 'Meilleur pour': 'Modèles 7–13B', 'Vitesse': '~80 tok/sec' },
-                            { 'Niveau': 'Milieu (€1200)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 Go', 'Meilleur pour': 'Modèles 13–30B', 'Vitesse': '~120 tok/sec' },
-                            { 'Niveau': 'Haut (€1800)', 'GPU': 'RTX 4090 / RTX 5090', 'VRAM': '24 Go', 'Meilleur pour': 'Jusqu\'à 32B Q5_K_M', 'Vitesse': '~150 tok/sec' },
-                            { 'Niveau': 'Serveur (€3000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48+ Go', 'Meilleur pour': 'Modèles 70B+', 'Vitesse': 'Niveau production' }
+                            { 'Niveau': 'Budget (~394 $)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 Go', 'Meilleur pour': 'Modèles 7–13B', 'Vitesse': '~60 tok/sec' },
+                            { 'Niveau': 'Milieu (~979 $)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 Go', 'Meilleur pour': 'Modèles 14–32B', 'Vitesse': '~110 tok/sec' },
+                            { 'Niveau': 'Haut (~4 300–5 000+ $)', 'GPU': 'RTX 5090', 'VRAM': '32 Go', 'Meilleur pour': '70B (Q4, offload léger)', 'Vitesse': '~200 tok/sec' },
+                            { 'Niveau': 'Serveur (7 000+ $)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48–80 Go', 'Meilleur pour': 'Modèles 70B+', 'Vitesse': 'Niveau production' }
                         ]
                     },
                     {
@@ -745,12 +746,12 @@
                         h2: 'Meilleurs modèles pour 16 Go VRAM',
                         columns: ['Modèle', 'Quant', 'VRAM', 'Rentre?'],
                         rows: [
-                            { 'Modèle': 'Qwen2.5 14B', 'Quant': 'Q8_0', 'VRAM': '~15 Go', 'Rentre?': '✅ Meilleur choix' },
-                            { 'Modèle': 'Mistral Small 3.1 22B', 'Quant': 'Q4_K_M', 'VRAM': '~13 Go', 'Rentre?': '✅ Plus rapide' },
+                            { 'Modèle': 'Mistral Small 3.1 24B', 'Quant': 'Q4_K_M', 'VRAM': '~13 Go', 'Rentre?': '✅ Meilleur choix' },
+                            { 'Modèle': 'Devstral Small 24B', 'Quant': 'Q4_K_M', 'VRAM': '~16 Go', 'Rentre?': '✅ Codage agentique' },
+                            { 'Modèle': 'Qwen3 14B', 'Quant': 'Q8_0', 'VRAM': '~15 Go', 'Rentre?': '✅ Codage + reasoning' },
                             { 'Modèle': 'DeepSeek-R1 14B', 'Quant': 'Q8_0', 'VRAM': '~15 Go', 'Rentre?': '✅ Meilleur reasoning' },
                             { 'Modèle': 'Llama 3.1 8B', 'Quant': 'FP16', 'VRAM': '~16 Go', 'Rentre?': '✅ Ajusté serrée' },
-                            { 'Modèle': 'Llama 3.3 70B', 'Quant': 'Q4_K_M', 'VRAM': '~39 Go', 'Rentre?': '❌ Non (39 Go)' },
-                            { 'Modèle': 'Qwen2.5 32B', 'Quant': 'Q4_K_M', 'VRAM': '~18 Go', 'Rentre?': '❌ Non (18 Go)' }
+                            { 'Modèle': 'Llama 3.3 70B', 'Quant': 'Q4_K_M', 'VRAM': '~39 Go', 'Rentre?': '❌ Non (39 Go)' }
                         ]
                     },
                     {
@@ -759,11 +760,11 @@
                         columns: ['Modèle', 'Quant', 'VRAM', 'Rentre?'],
                         rows: [
                             { 'Modèle': 'Llama 3.1 8B', 'Quant': 'Q8_0', 'VRAM': '~9 Go', 'Rentre?': '✅ Meilleur global' },
-                            { 'Modèle': 'Qwen2.5 14B', 'Quant': 'Q4_K_M', 'VRAM': '~8,5 Go', 'Rentre?': '✅ Meilleur reasoning' },
+                            { 'Modèle': 'Qwen3 14B', 'Quant': 'Q4_K_M', 'VRAM': '~8,5 Go', 'Rentre?': '✅ Meilleur reasoning' },
                             { 'Modèle': 'Llama 3.2 11B Vision', 'Quant': 'Q5_K_M', 'VRAM': '~8 Go', 'Rentre?': '✅ Tâches vision' },
-                            { 'Modèle': 'Qwen2.5 7B', 'Quant': 'Q8_0', 'VRAM': '~8 Go', 'Rentre?': '✅ Plus rapide' },
-                            { 'Modèle': 'Mistral 7B v0.3', 'Quant': 'FP16', 'VRAM': '~14 Go', 'Rentre?': '❌ Non (14 Go)' },
-                            { 'Modèle': 'Qwen2.5 14B', 'Quant': 'Q8_0', 'VRAM': '~15 Go', 'Rentre?': '❌ Non (15 Go)' }
+                            { 'Modèle': 'Qwen3 8B', 'Quant': 'Q8_0', 'VRAM': '~8 Go', 'Rentre?': '✅ Plus rapide' },
+                            { 'Modèle': 'Mistral Small v0.3', 'Quant': 'FP16', 'VRAM': '~14 Go', 'Rentre?': '❌ Non (14 Go)' },
+                            { 'Modèle': 'Llama 4 Scout (109B MoE)', 'Quant': 'Q4_K_M', 'VRAM': '~55 Go', 'Rentre?': '❌ Non (55 Go)' }
                         ]
                     },
                     {
@@ -771,12 +772,12 @@
                         h2: 'Modèles 70B sur RTX 4090 (24 Go)',
                         columns: ['Modèle', 'Quant', 'VRAM', 'Rentre?'],
                         rows: [
+                            { 'Modèle': 'Qwen 3.6 27B', 'Quant': 'Q4_K_M', 'VRAM': '~16 Go', 'Rentre?': '✅ Meilleur codage (77,2% SWE-bench)' },
                             { 'Modèle': 'DeepSeek-R1 32B', 'Quant': 'Q4_K_M', 'VRAM': '~19 Go', 'Rentre?': '✅ Meilleur choix' },
-                            { 'Modèle': 'Qwen2.5 32B', 'Quant': 'Q5_K_M', 'VRAM': '~21 Go', 'Rentre?': '✅ Haute qualité' },
+                            { 'Modèle': 'Qwen3 32B', 'Quant': 'Q5_K_M', 'VRAM': '~21 Go', 'Rentre?': '✅ Haute qualité' },
+                            { 'Modèle': 'Qwen3 32B', 'Quant': 'Q8_0', 'VRAM': '~34 Go', 'Rentre?': '❌ Non (34 Go)' },
                             { 'Modèle': 'Llama 3.3 70B', 'Quant': 'Q2_K', 'VRAM': '~24 Go', 'Rentre?': '⚠️ Perte qualité' },
-                            { 'Modèle': 'Qwen2.5 32B', 'Quant': 'Q8_0', 'VRAM': '~34 Go', 'Rentre?': '❌ Non (34 Go)' },
-                            { 'Modèle': 'Llama 3.3 70B', 'Quant': 'Q4_K_M', 'VRAM': '~39 Go', 'Rentre?': '❌ Non (39 Go)' },
-                            { 'Modèle': 'DeepSeek-R1 32B', 'Quant': 'Q8_0', 'VRAM': '~34 Go', 'Rentre?': '❌ Non (34 Go)' }
+                            { 'Modèle': 'Llama 3.3 70B', 'Quant': 'Q4_K_M', 'VRAM': '~39 Go', 'Rentre?': '❌ Non (39 Go)' }
                         ]
                     },
                     {
@@ -810,25 +811,25 @@
                         rows: [
                             { 'Budget': '€1200 entrée', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 Go', 'Meilleurs modèles': '7–13B' },
                             { 'Budget': '€2000 solide', 'GPU': 'RTX 4080', 'VRAM': '16 Go', 'Meilleurs modèles': '13–30B' },
-                            { 'Budget': '€3200 haut-fin', 'GPU': 'RTX 4090', 'VRAM': '24 Go', 'Meilleurs modèles': 'Jusqu\'à 32B Q5' }
+                            { 'Budget': '3200 $ haut-fin', 'GPU': '2× RTX 4090', 'VRAM': '24 Go', 'Meilleurs modèles': 'Tous (70B+)' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'Matériel Mac pour LLMs locaux',
                         items: [
-                            '<strong>MacBook Pro 16" M3:</strong> 18 Go mémoire partagée — exécute rapidement 7B, 13B lentement',
-                            '<strong>M3 Max (Studio):</strong> 36 Go mémoire partagée — gère bien 13B avec CPU/GPU partagé',
-                            '<strong>M4 Max (arrive 2026):</strong> 40+ Go mémoire partagée — capable pour 13–30B efficacement'
+                            '<strong>MacBook Pro 16" M3 Pro:</strong> 18 Go mémoire partagée — exécute rapidement 7-8B, 14B lentement',
+                            '<strong>M5 Pro (MacBook Pro):</strong> 64 Go mémoire partagée (307 Go/s) — gère confortablement les modèles 32B',
+                            '<strong>M5 Max (MacBook Pro / Studio):</strong> 128 Go mémoire partagée (jusqu\'à 614 Go/s) — exécute les modèles 70B en Q4_K_M, ~12–15 tok/sec'
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'Serveur vs matériel grand public',
                         items: [
-                            '<strong>Grand public (RTX 4090):</strong> ~€1800, 24 Go VRAM, mono-utilisateur, throttling thermique',
-                            '<strong>Serveur (RTX 6000 Ada):</strong> ~€5000, 48 Go VRAM, conçu 24/7 avec meilleure refroidissement',
-                            '<strong>Recommandation:</strong> Commencez RTX 4090. Passez à double A100 ou RTX 6000 pour 24/7 70B+ utilisation'
+                            '<strong>Grand public (RTX 5090):</strong> ~2 000 $ PDSF (~4 300–5 000+ $ au détail), 32 Go VRAM, mono-utilisateur, throttling thermique',
+                            '<strong>Serveur (RTX 6000 Ada):</strong> ~7 000 $, 48 Go VRAM, conçu 24/7 avec meilleur refroidissement',
+                            '<strong>Recommandation:</strong> Commencez avec RTX 5090. Passez à double A100 ou RTX 6000 Ada pour 24/7 70B+ utilisation'
                         ]
                     },
                     {
@@ -866,8 +867,8 @@
                         items: [
                             '<strong>VRAM計算:</strong> (モデルサイズ ÷ 量子化ビット) × 8 = VRAM必要',
                             '<strong>12 GB VRAM:</strong> Llama 3.1 8B Q8 (~9 GB, 80 tok/sec) が最良',
-                            '<strong>16 GB VRAM:</strong> Qwen2.5 14B Q8 (~15 GB, 45 tok/sec)',
-                            '<strong>24 GB VRAM:</strong> 70Bモデルは Q4_K_M では収まらない (~39 GB)。32B を代わりに使用。',
+                            '<strong>16 GB VRAM:</strong> Qwen3 14B Q8 (~15 GB, 45 tok/sec)',
+                            '<strong>24 GB VRAM:</strong> 70Bモデルは Q4_K_M では収まらない (~39 GB)。27–32B を代わりに使用。',
                             '<strong>CPUのみ (16 GB RAM):</strong> Phi-4 Mini Q4_K_M (25 tok/sec) または Llama 3.2 3B (20 tok/sec)',
                             '<strong>llama.cpp速度:</strong> --n-gpu-layers 99 で RTX 4070 Ti を倍にする',
                             '<strong>GPUが最優先:</strong> 中古RTX 3060 12GB (~$200) はCPUより5–8倍高速'
@@ -877,7 +878,7 @@
                         type: 'comparison',
                         h2: 'VRAM計算：計算式',
                         line1: 'VRAM (GB) = (モデルサイズ × 量子化ビット数) ÷ 8',
-                        line2: '例：Llama 3.1 70B を Q4 で ≈ 39 GB VRAM',
+                        line2: '例：Llama 3.3 70B を Q4 で ≈ 39 GB VRAM',
                         tip: 'Q4_K_M が最適なバランス — NVIDIA GPU は Q4_0 よりも効率的に処理'
                     },
                     {
@@ -885,10 +886,10 @@
                         h2: 'GPU階層の概要',
                         columns: ['階層', 'GPU', 'VRAM', 'ベスト', '速度'],
                         rows: [
-                            { '階層': 'バジェット ($600)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', 'ベスト': '7–13Bモデル', '速度': '~80 tok/秒' },
-                            { '階層': 'ミッド ($1200)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', 'ベスト': '13–30Bモデル', '速度': '~120 tok/秒' },
-                            { '階層': 'ハイ ($1800)', 'GPU': 'RTX 4090 / RTX 5090', 'VRAM': '24 GB', 'ベスト': '32B Q5_K_Mまで', '速度': '~150 tok/秒' },
-                            { '階層': 'サーバー ($3000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48+ GB', 'ベスト': '70B+モデル', '速度': 'Production級' }
+                            { '階層': 'バジェット (~$394)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'ベスト': '7–13Bモデル', '速度': '~60 tok/秒' },
+                            { '階層': 'ミッド (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', 'ベスト': '14–32Bモデル', '速度': '~110 tok/秒' },
+                            { '階層': 'ハイ (~$4,300–5,000+)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', 'ベスト': '70B（Q4、軽いオフロード）', '速度': '~200 tok/秒' },
+                            { '階層': 'サーバー ($7,000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48–80 GB', 'ベスト': '70B+モデル', '速度': 'Production級' }
                         ]
                     },
                     {
@@ -896,12 +897,12 @@
                         h2: '16 GB VRAMで動く最良のモデル',
                         columns: ['モデル', '量子化', 'VRAM', '対応?'],
                         rows: [
-                            { 'モデル': 'Qwen2.5 14B', '量子化': 'Q8_0', 'VRAM': '~15 GB', '対応?': '✅ 最良選択' },
-                            { 'モデル': 'Mistral Small 3.1 22B', '量子化': 'Q4_K_M', 'VRAM': '~13 GB', '対応?': '✅ 最速' },
+                            { 'モデル': 'Mistral Small 3.1 24B', '量子化': 'Q4_K_M', 'VRAM': '~13 GB', '対応?': '✅ 最良選択' },
+                            { 'モデル': 'Devstral Small 24B', '量子化': 'Q4_K_M', 'VRAM': '~16 GB', '対応?': '✅ エージェント型コーディング' },
+                            { 'モデル': 'Qwen3 14B', '量子化': 'Q8_0', 'VRAM': '~15 GB', '対応?': '✅ コーディング+推論' },
                             { 'モデル': 'DeepSeek-R1 14B', '量子化': 'Q8_0', 'VRAM': '~15 GB', '対応?': '✅ 最良推論' },
                             { 'モデル': 'Llama 3.1 8B', '量子化': 'FP16', 'VRAM': '~16 GB', '対応?': '✅ タイト' },
-                            { 'モデル': 'Llama 3.3 70B', '量子化': 'Q4_K_M', 'VRAM': '~39 GB', '対応?': '❌ いいえ (39 GB)' },
-                            { 'モデル': 'Qwen2.5 32B', '量子化': 'Q4_K_M', 'VRAM': '~18 GB', '対応?': '❌ いいえ (18 GB)' }
+                            { 'モデル': 'Llama 3.3 70B', '量子化': 'Q4_K_M', 'VRAM': '~39 GB', '対応?': '❌ いいえ (39 GB)' }
                         ]
                     },
                     {
@@ -910,11 +911,11 @@
                         columns: ['モデル', '量子化', 'VRAM', '対応?'],
                         rows: [
                             { 'モデル': 'Llama 3.1 8B', '量子化': 'Q8_0', 'VRAM': '~9 GB', '対応?': '✅ 最良全体' },
-                            { 'モデル': 'Qwen2.5 14B', '量子化': 'Q4_K_M', 'VRAM': '~8.5 GB', '対応?': '✅ 良い推論' },
+                            { 'モデル': 'Qwen3 14B', '量子化': 'Q4_K_M', 'VRAM': '~8.5 GB', '対応?': '✅ 良い推論' },
                             { 'モデル': 'Llama 3.2 11B Vision', '量子化': 'Q5_K_M', 'VRAM': '~8 GB', '対応?': '✅ ビジョン' },
-                            { 'モデル': 'Qwen2.5 7B', '量子化': 'Q8_0', 'VRAM': '~8 GB', '対応?': '✅ 最速' },
-                            { 'モデル': 'Mistral 7B v0.3', '量子化': 'FP16', 'VRAM': '~14 GB', '対応?': '❌ いいえ (14 GB)' },
-                            { 'モデル': 'Qwen2.5 14B', '量子化': 'Q8_0', 'VRAM': '~15 GB', '対応?': '❌ いいえ (15 GB)' }
+                            { 'モデル': 'Qwen3 8B', '量子化': 'Q8_0', 'VRAM': '~8 GB', '対応?': '✅ 最速' },
+                            { 'モデル': 'Mistral Small v0.3', '量子化': 'FP16', 'VRAM': '~14 GB', '対応?': '❌ いいえ (14 GB)' },
+                            { 'モデル': 'Llama 4 Scout (109B MoE)', '量子化': 'Q4_K_M', 'VRAM': '~55 GB', '対応?': '❌ いいえ (55 GB)' }
                         ]
                     },
                     {
@@ -922,12 +923,12 @@
                         h2: 'RTX 4090（24 GB）での70Bモデル',
                         columns: ['モデル', '量子化', 'VRAM', '対応?'],
                         rows: [
+                            { 'モデル': 'Qwen 3.6 27B', '量子化': 'Q4_K_M', 'VRAM': '~16 GB', '対応?': '✅ 最良コーディング (77.2% SWE-bench)' },
                             { 'モデル': 'DeepSeek-R1 32B', '量子化': 'Q4_K_M', 'VRAM': '~19 GB', '対応?': '✅ 最良選択' },
-                            { 'モデル': 'Qwen2.5 32B', '量子化': 'Q5_K_M', 'VRAM': '~21 GB', '対応?': '✅ 高品質' },
+                            { 'モデル': 'Qwen3 32B', '量子化': 'Q5_K_M', 'VRAM': '~21 GB', '対応?': '✅ 高品質' },
+                            { 'モデル': 'Qwen3 32B', '量子化': 'Q8_0', 'VRAM': '~34 GB', '対応?': '❌ いいえ (34 GB)' },
                             { 'モデル': 'Llama 3.3 70B', '量子化': 'Q2_K', 'VRAM': '~24 GB', '対応?': '⚠️ 品質低下' },
-                            { 'モデル': 'Qwen2.5 32B', '量子化': 'Q8_0', 'VRAM': '~34 GB', '対応?': '❌ いいえ (34 GB)' },
-                            { 'モデル': 'Llama 3.3 70B', '量子化': 'Q4_K_M', 'VRAM': '~39 GB', '対応?': '❌ いいえ (39 GB)' },
-                            { 'モデル': 'DeepSeek-R1 32B', '量子化': 'Q8_0', 'VRAM': '~34 GB', '対応?': '❌ いいえ (34 GB)' }
+                            { 'モデル': 'Llama 3.3 70B', '量子化': 'Q4_K_M', 'VRAM': '~39 GB', '対応?': '❌ いいえ (39 GB)' }
                         ]
                     },
                     {
@@ -961,25 +962,25 @@
                         rows: [
                             { '予算': '$1500 入門', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', '最良モデル': '7–13B' },
                             { '予算': '$2500 堅実', 'GPU': 'RTX 4080', 'VRAM': '16 GB', '最良モデル': '13–30B' },
-                            { '予算': '$4000 ハイエンド', 'GPU': 'RTX 4090', 'VRAM': '24 GB', '最良モデル': '32B Q5まで' }
+                            { '予算': '$4000 ハイエンド', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', '最良モデル': 'すべて (70B+)' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'ローカルLLM向けMacハードウェア',
                         items: [
-                            '<strong>M3 MacBook Pro 16":</strong> 18 GB 統合メモリ — 7Bモデルは高速、13B は遅い',
-                            '<strong>M3 Max (Studio):</strong> 36 GB 統合メモリ — 13Bモデルをよく処理、共有CPU/GPU',
-                            '<strong>M4 Max (2026年登場):</strong> 40+ GB 統合メモリ — 13–30Bモデル効率的に対応'
+                            '<strong>M3 Pro MacBook Pro 16":</strong> 18 GB 統合メモリ — 7-8Bモデルは高速、14B は遅い',
+                            '<strong>M5 Pro (MacBook Pro):</strong> 64 GB 統合メモリ（307 GB/s）— 32Bモデルを快適に処理',
+                            '<strong>M5 Max (MacBook Pro / Studio):</strong> 128 GB 統合メモリ（最大614 GB/s）— 70BモデルをQ4_K_Mで実行、~12–15 tok/秒'
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'サーバー vs. コンシューマーハードウェア',
                         items: [
-                            '<strong>コンシューマー (RTX 4090):</strong> ~$1800、24 GB VRAM、シングルユーザー、サーマルスロットリング',
-                            '<strong>サーバー (RTX 6000 Ada):</strong> ~$5000、48 GB VRAM、24/7 利用向け、良好な冷却',
-                            '<strong>推奨:</strong> RTX 4090 から開始。24/7 70B+ は Dual A100 または RTX 6000 にアップグレード'
+                            '<strong>コンシューマー (RTX 5090):</strong> ~$2,000 MSRP（~$4,300–5,000+ 実勢価格）、32 GB VRAM、シングルユーザー、サーマルスロットリング',
+                            '<strong>サーバー (RTX 6000 Ada):</strong> ~$7,000、48 GB VRAM、24/7 利用向け、良好な冷却',
+                            '<strong>推奨:</strong> RTX 5090 から開始。24/7 70B+ は Dual A100 または RTX 6000 Ada にアップグレード'
                         ]
                     },
                     {
@@ -1017,8 +1018,8 @@
                         items: [
                             '<strong>VRAM计算:</strong> (模型大小 ÷ 量化位数) × 8 = VRAM所需',
                             '<strong>12 GB VRAM:</strong> Llama 3.1 8B Q8 (~9 GB, 80 tok/秒) 最佳选择',
-                            '<strong>16 GB VRAM:</strong> Qwen2.5 14B Q8 (~15 GB, 45 tok/秒)',
-                            '<strong>24 GB VRAM:</strong> 70B模型在Q4_K_M处不适合 (~39 GB)。改用32B模型。',
+                            '<strong>16 GB VRAM:</strong> Qwen3 14B Q8 (~15 GB, 45 tok/秒)',
+                            '<strong>24 GB VRAM:</strong> 70B模型在Q4_K_M处不适合 (~39 GB)。改用27–32B模型。',
                             '<strong>仅CPU (16 GB RAM):</strong> Phi-4 Mini Q4_K_M (25 tok/秒) 或 Llama 3.2 3B (20 tok/秒)',
                             '<strong>llama.cpp速度:</strong> 设置 --n-gpu-layers 99 使RTX 4070 Ti 加倍',
                             '<strong>GPU至关重要:</strong> 二手RTX 3060 12GB (~$200) 比CPU快5–8倍'
@@ -1028,7 +1029,7 @@
                         type: 'comparison',
                         h2: 'VRAM计算：公式',
                         line1: 'VRAM (GB) = (模型大小 × 量化位数) ÷ 8',
-                        line2: '示例：Llama 3.1 70B 以Q4运行 ≈ 39 GB VRAM',
+                        line2: '示例：Llama 3.3 70B 以Q4运行 ≈ 39 GB VRAM',
                         tip: 'Q4_K_M是最佳平衡点 — NVIDIA GPU对其加速比Q4_0更高效'
                     },
                     {
@@ -1036,10 +1037,10 @@
                         h2: 'GPU 层级概览',
                         columns: ['层级', 'GPU', 'VRAM', '最佳用途', '速度'],
                         rows: [
-                            { '层级': '预算型 ($600)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', '最佳用途': '7–13B模型', '速度': '~80 tok/秒' },
-                            { '层级': '中端 ($1200)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', '最佳用途': '13–30B模型', '速度': '~120 tok/秒' },
-                            { '层级': '高端 ($1800)', 'GPU': 'RTX 4090 / RTX 5090', 'VRAM': '24 GB', '最佳用途': '至32B Q5_K_M', '速度': '~150 tok/秒' },
-                            { '层级': '服务器 ($3000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48+ GB', '最佳用途': '70B+模型', '速度': '生产级' }
+                            { '层级': '预算型 (~$394)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', '最佳用途': '7–13B模型', '速度': '~60 tok/秒' },
+                            { '层级': '中端 (~$979)', 'GPU': 'RTX 5070 Ti', 'VRAM': '16 GB', '最佳用途': '14–32B模型', '速度': '~110 tok/秒' },
+                            { '层级': '高端 (~$4,300–5,000+)', 'GPU': 'RTX 5090', 'VRAM': '32 GB', '最佳用途': '70B（Q4，轻度卸载）', '速度': '~200 tok/秒' },
+                            { '层级': '服务器 ($7,000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48–80 GB', '最佳用途': '70B+模型', '速度': '生产级' }
                         ]
                     },
                     {
@@ -1047,12 +1048,12 @@
                         h2: '16 GB VRAM最佳模型',
                         columns: ['模型', '量化', 'VRAM', '兼容?'],
                         rows: [
-                            { '模型': 'Qwen2.5 14B', '量化': 'Q8_0', 'VRAM': '~15 GB', '兼容?': '✅ 最佳选择' },
-                            { '模型': 'Mistral Small 3.1 22B', '量化': 'Q4_K_M', 'VRAM': '~13 GB', '兼容?': '✅ 最快' },
+                            { '模型': 'Mistral Small 3.1 24B', '量化': 'Q4_K_M', 'VRAM': '~13 GB', '兼容?': '✅ 最佳选择' },
+                            { '模型': 'Devstral Small 24B', '量化': 'Q4_K_M', 'VRAM': '~16 GB', '兼容?': '✅ 智能体编程' },
+                            { '模型': 'Qwen3 14B', '量化': 'Q8_0', 'VRAM': '~15 GB', '兼容?': '✅ 编程+推理' },
                             { '模型': 'DeepSeek-R1 14B', '量化': 'Q8_0', 'VRAM': '~15 GB', '兼容?': '✅ 最佳推理' },
                             { '模型': 'Llama 3.1 8B', '量化': 'FP16', 'VRAM': '~16 GB', '兼容?': '✅ 紧凑' },
-                            { '模型': 'Llama 3.3 70B', '量化': 'Q4_K_M', 'VRAM': '~39 GB', '兼容?': '❌ 否 (39 GB)' },
-                            { '模型': 'Qwen2.5 32B', '量化': 'Q4_K_M', 'VRAM': '~18 GB', '兼容?': '❌ 否 (18 GB)' }
+                            { '模型': 'Llama 3.3 70B', '量化': 'Q4_K_M', 'VRAM': '~39 GB', '兼容?': '❌ 否 (39 GB)' }
                         ]
                     },
                     {
@@ -1061,11 +1062,11 @@
                         columns: ['模型', '量化', 'VRAM', '兼容?'],
                         rows: [
                             { '模型': 'Llama 3.1 8B', '量化': 'Q8_0', 'VRAM': '~9 GB', '兼容?': '✅ 最佳全能' },
-                            { '模型': 'Qwen2.5 14B', '量化': 'Q4_K_M', 'VRAM': '~8.5 GB', '兼容?': '✅ 更好推理' },
+                            { '模型': 'Qwen3 14B', '量化': 'Q4_K_M', 'VRAM': '~8.5 GB', '兼容?': '✅ 更好推理' },
                             { '模型': 'Llama 3.2 11B Vision', '量化': 'Q5_K_M', 'VRAM': '~8 GB', '兼容?': '✅ 视觉任务' },
-                            { '模型': 'Qwen2.5 7B', '量化': 'Q8_0', 'VRAM': '~8 GB', '兼容?': '✅ 最快' },
-                            { '模型': 'Mistral 7B v0.3', '量化': 'FP16', 'VRAM': '~14 GB', '兼容?': '❌ 否 (14 GB)' },
-                            { '模型': 'Qwen2.5 14B', '量化': 'Q8_0', 'VRAM': '~15 GB', '兼容?': '❌ 否 (15 GB)' }
+                            { '模型': 'Qwen3 8B', '量化': 'Q8_0', 'VRAM': '~8 GB', '兼容?': '✅ 最快' },
+                            { '模型': 'Mistral Small v0.3', '量化': 'FP16', 'VRAM': '~14 GB', '兼容?': '❌ 否 (14 GB)' },
+                            { '模型': 'Llama 4 Scout (109B MoE)', '量化': 'Q4_K_M', 'VRAM': '~55 GB', '兼容?': '❌ 否 (55 GB)' }
                         ]
                     },
                     {
@@ -1073,12 +1074,12 @@
                         h2: 'RTX 4090（24 GB）上的70B模型',
                         columns: ['模型', '量化', 'VRAM', '兼容?'],
                         rows: [
-                            { '模型': 'DeepSeek-R1 32B', '量化': 'Q4_K_M', 'VRAM': '~19 GB', '兼容?': '✅ 最佳选择' },
-                            { '模型': 'Qwen2.5 32B', '量化': 'Q5_K_M', 'VRAM': '~21 GB', '兼容?': '✅ 高质量' },
+                            { '模型': 'Qwen 3.6 27B', '量化': 'Q4_K_M', 'VRAM': '~16 GB', '兼容?': '✅ 最佳编程模型 (77.2% SWE-bench)' },
+                            { '模型': 'DeepSeek-R1 32B', '量化': 'Q4_K_M', 'VRAM': '~19 GB', '兼容?': '✅ 最佳推理' },
+                            { '模型': 'Qwen3 32B', '量化': 'Q5_K_M', 'VRAM': '~21 GB', '兼容?': '✅ 高质量' },
+                            { '模型': 'Qwen3 32B', '量化': 'Q8_0', 'VRAM': '~34 GB', '兼容?': '❌ 否 (34 GB)' },
                             { '模型': 'Llama 3.3 70B', '量化': 'Q2_K', 'VRAM': '~24 GB', '兼容?': '⚠️ 质量下降' },
-                            { '模型': 'Qwen2.5 32B', '量化': 'Q8_0', 'VRAM': '~34 GB', '兼容?': '❌ 否 (34 GB)' },
-                            { '模型': 'Llama 3.3 70B', '量化': 'Q4_K_M', 'VRAM': '~39 GB', '兼容?': '❌ 否 (39 GB)' },
-                            { '模型': 'DeepSeek-R1 32B', '量化': 'Q8_0', 'VRAM': '~34 GB', '兼容?': '❌ 否 (34 GB)' }
+                            { '模型': 'Llama 3.3 70B', '量化': 'Q4_K_M', 'VRAM': '~39 GB', '兼容?': '❌ 否 (39 GB)' }
                         ]
                     },
                     {
@@ -1112,25 +1113,25 @@
                         rows: [
                             { '预算': '$1500 入门', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', '最佳模型': '7–13B' },
                             { '预算': '$2500 稳定', 'GPU': 'RTX 4080', 'VRAM': '16 GB', '最佳模型': '13–30B' },
-                            { '预算': '$4000 高端', 'GPU': 'RTX 4090', 'VRAM': '24 GB', '最佳模型': '至32B Q5' }
+                            { '预算': '$4000 高端', 'GPU': '2× RTX 4090', 'VRAM': '24 GB', '最佳模型': '任意 (70B+)' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: '本地LLM的Mac硬件',
                         items: [
-                            '<strong>M3 MacBook Pro 16":</strong> 18 GB统一内存 — 7B模型快速，13B缓慢',
-                            '<strong>M3 Max (Studio):</strong> 36 GB统一内存 — 13B模型很好，共享CPU/GPU',
-                            '<strong>M4 Max (即将2026):</strong> 40+ GB统一内存 — 13–30B模型高效支持'
+                            '<strong>M3 Pro MacBook Pro 16":</strong> 18 GB统一内存 — 7-8B模型快速，14B缓慢',
+                            '<strong>M5 Pro (MacBook Pro):</strong> 64 GB统一内存（307 GB/s）— 舒适运行32B模型',
+                            '<strong>M5 Max (MacBook Pro / Studio):</strong> 128 GB统一内存（最高614 GB/s）— 以Q4_K_M运行70B模型，~12–15 tok/秒'
                         ]
                     },
                     {
                         type: 'list',
                         h2: '服务器 vs 消费级硬件',
                         items: [
-                            '<strong>消费级 (RTX 4090):</strong> ~$1800、24 GB VRAM、单用户、易发热节流',
-                            '<strong>服务器 (RTX 6000 Ada):</strong> ~$5000、48 GB VRAM、设计用于24/7、冷却更佳',
-                            '<strong>推荐:</strong> 从RTX 4090开始。24/7运行70B+升级至双A100或RTX 6000'
+                            '<strong>消费级 (RTX 5090):</strong> ~$2,000建议零售价（~$4,300–5,000+市场价）、32 GB VRAM、单用户、易发热节流',
+                            '<strong>服务器 (RTX 6000 Ada):</strong> ~$7,000、48 GB VRAM、设计用于24/7、冷却更佳',
+                            '<strong>推荐:</strong> 从RTX 5090开始。24/7运行70B+升级至双A100或RTX 6000 Ada'
                         ]
                     },
                     {

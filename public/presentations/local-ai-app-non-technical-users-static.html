@@ -155,6 +155,7 @@
     @page { size: A4 landscape; margin: 0; }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
       * { margin: 0; padding: 0; }
       html, body { overflow: visible !important; height: auto !important; background: white !important; }
       .header, .controls { display: none !important; }
@@ -349,7 +350,7 @@
             faqs: [
               { q: 'Do these apps need internet to work?', a: 'Only for the first model download. After that, all five run fully offline — on a plane, in a basement, anywhere.' },
               { q: 'Is it safe to download these apps?', a: 'Yes, if you use the official sites: gpt4all.io, jan.ai, msty.app, anythingllm.com, lmstudio.ai. Avoid third-party downloaders and torrent sites.' },
-              { q: 'What\'s the difference between local AI and ChatGPT?', a: '(1) runs on your laptop, no prompts sent to a server; (2) works offline after first download; (3) free forever. Trade-off: less capable than GPT-4o-class models for complex tasks.' },
+              { q: 'What\'s the difference between local AI and ChatGPT?', a: '(1) runs on your laptop, no prompts sent to a server; (2) works offline after first download; (3) free forever. Trade-off: less capable than GPT-5.5-class models for complex tasks.' },
             ],
           },
           {
@@ -500,7 +501,7 @@
             faqs: [
               { q: 'Brauchen diese Apps Internet?', a: 'Nur für den ersten Modell-Download. Danach funktionieren alle fünf vollständig offline — im Flugzeug, im Keller, überall.' },
               { q: 'Ist das Download sicher?', a: 'Ja, wenn Sie die offiziellen Seiten verwenden: gpt4all.io, jan.ai, msty.app, anythingllm.com, lmstudio.ai. Keine Drittanbieter.' },
-              { q: 'Unterschied lokale KI vs. ChatGPT?', a: '(1) läuft auf Ihrem Laptop — keine Daten an Server; (2) offline nach erstem Download; (3) für immer kostenlos. Nachteil: weniger leistungsfähig als GPT-4o-Klasse Modelle.' },
+              { q: 'Unterschied lokale KI vs. ChatGPT?', a: '(1) läuft auf Ihrem Laptop — keine Daten an Server; (2) offline nach erstem Download; (3) für immer kostenlos. Nachteil: weniger leistungsfähig als GPT-5.5-Klasse Modelle.' },
             ],
           },
           {
@@ -651,7 +652,7 @@
             faqs: [
               { q: 'Ces apps ont besoin d\'internet ?', a: 'Seulement pour le premier téléchargement de modèle. Ensuite, toutes les cinq tournent offline — avion, sous-sol, partout.' },
               { q: 'Est-il sûr de télécharger ces apps ?', a: 'Oui, via les sites officiels : gpt4all.io, jan.ai, msty.app, anythingllm.com, lmstudio.ai. Évitez les téléchargeurs tiers.' },
-              { q: 'Différence entre IA locale et ChatGPT ?', a: '(1) tourne sur votre portable — aucune donnée transmise ; (2) offline après premier téléchargement ; (3) gratuit pour toujours. Moins puissant que GPT-4o pour les tâches complexes.' },
+              { q: 'Différence entre IA locale et ChatGPT ?', a: '(1) tourne sur votre portable — aucune donnée transmise ; (2) offline après premier téléchargement ; (3) gratuit pour toujours. Moins puissant que GPT-5.5 pour les tâches complexes.' },
             ],
           },
           {
@@ -802,7 +803,7 @@
             faqs: [
               { q: 'これらアプリはインターネットが必要？', a: '最初のモデルダウンロードのみ。その後は5つすべて完全オフライン — 機内、地下室、どこでも動作します。' },
               { q: 'ダウンロードは安全？', a: '公式サイトを使えば安全：gpt4all.io、jan.ai、msty.app、anythingllm.com、lmstudio.ai。サードパーティは避けること。' },
-              { q: 'ローカルAIとChatGPTの違いは？', a: '(1)ノートPCで実行、プロンプトをサーバーに送信しない；(2)最初のダウンロード後はオフライン；(3)永遠無料。複雑なタスクではGPT-4oクラスより能力が低い。' },
+              { q: 'ローカルAIとChatGPTの違いは？', a: '(1)ノートPCで実行、プロンプトをサーバーに送信しない；(2)最初のダウンロード後はオフライン；(3)永遠無料。複雑なタスクではGPT-5.5クラスより能力が低い。' },
             ],
           },
           {
@@ -953,7 +954,7 @@
             faqs: [
               { q: '这些应用需要联网吗？', a: '只需要首次模型下载时联网。之后五款应用均可完全离线运行 — 飞机上、地下室、任何地方。' },
               { q: '从网上下载这些应用安全吗？', a: '使用官方网站即安全：gpt4all.io、jan.ai、msty.app、anythingllm.com、lmstudio.ai。避免第三方下载器和种子网站。' },
-              { q: '本地AI和ChatGPT有什么区别？', a: '(1)在您笔记本上运行，不向服务器发送提示词；(2)首次下载后离线工作；(3)永远免费。缺点：复杂任务上比GPT-4o级模型能力弱。' },
+              { q: '本地AI和ChatGPT有什么区别？', a: '(1)在您笔记本上运行，不向服务器发送提示词；(2)首次下载后离线工作；(3)永远免费。缺点：复杂任务上比GPT-5.5级模型能力弱。' },
             ],
           },
           {

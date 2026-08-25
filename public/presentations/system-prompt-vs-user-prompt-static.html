@@ -400,7 +400,7 @@
             h2: 'Where They Live in the API Stack',
             intro: 'Every LLM API — OpenAI, Anthropic, Google, Ollama — exposes two separate inputs:',
             items: [
-              '<strong>Model layer:</strong> GPT-4o, Claude 4.6 Sonnet, Gemini, Llama 3.1 — all accept both system and user prompts',
+              '<strong>Model layer:</strong> GPT-5.6, Claude Sonnet 5, Gemini, Llama 3.1 — all accept both system and user prompts',
               '<strong>API layer:</strong> OpenAI API, Anthropic API, Google API, Ollama REST — system and user are separate fields',
               '<strong>Application layer:</strong> ChatGPT, Claude.ai, Gemini, PromptQuorum — developers choose the system prompt',
               '<strong>User interaction layer:</strong> Chat input from end users becomes the user prompt'
@@ -427,7 +427,7 @@
               '<strong>2. Constraints-first:</strong> List what the model must NOT do before what it should do',
               '<strong>3. Format specification:</strong> Define output as JSON, Markdown, bullets, or plain text',
               '<strong>4. Scope boundaries:</strong> "Answer API questions only" — prevent out-of-domain answers',
-              '<strong>5. Cross-model testing:</strong> Test on GPT-4o, Claude, and Gemini for consistency'
+              '<strong>5. Cross-model testing:</strong> Test on GPT-5.6, Claude, and Gemini for consistency'
             ]
           },
           {
@@ -468,7 +468,7 @@
             items: [
               '<strong>Trust issues:</strong> You don\'t know what instructions the model follows underneath',
               '<strong>Debugging problems:</strong> Local LLMs return unexpected output but you can\'t diagnose why',
-              '<strong>Inconsistency:</strong> Same prompt on GPT-4o vs. Ollama gives different answers — why?',
+              '<strong>Inconsistency:</strong> Same prompt on GPT-5.6 vs. Ollama gives different answers — why?',
               '<strong>Compliance risk:</strong> Enterprise deployments need full transparency for audits'
             ]
           },
@@ -480,7 +480,7 @@
               '<strong>Write constraints first:</strong> "Do not make up statistics" before listing what to do',
               '<strong>Specify output format:</strong> JSON, Markdown, bullets, or plain text — not per-request',
               '<strong>Set scope boundaries:</strong> "Answer API questions only" — define what you will refuse',
-              '<strong>Test across models:</strong> Try on GPT-4o, Claude, and Gemini — refine until consistent'
+              '<strong>Test across models:</strong> Try on GPT-5.6, Claude, and Gemini — refine until consistent'
             ]
           },
           {
@@ -493,11 +493,11 @@
               },
               {
                 q: 'What happens if there is no system prompt?',
-                a: 'The model falls back to its default training behavior. GPT-4o, Claude, and Gemini have built-in baseline behavior (helpful, harmless, honest) when no system prompt is present. Results will be less consistent and less specialized.'
+                a: 'The model falls back to its default training behavior. GPT-5.6, Claude, and Gemini have built-in baseline behavior (helpful, harmless, honest) when no system prompt is present. Results will be less consistent and less specialized.'
               },
               {
                 q: 'Do all LLMs use system prompts?',
-                a: 'Yes. All major LLMs — GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, Ollama, LM Studio — support the system + user prompt pattern.'
+                a: 'Yes. All major LLMs — GPT-5.6, Claude Sonnet 5, Gemini 3.5 Pro, Ollama, LM Studio — support the system + user prompt pattern.'
               }
             ]
           },
@@ -514,7 +514,7 @@
           {
             type: 'cta',
             h2: 'See All System Prompts with PromptQuorum',
-            body: 'PromptQuorum includes a toggle to view hidden system prompts on every model — GPT-4o, Claude, Gemini, Ollama, LM Studio. Dispatch one prompt to multiple backends and see all instructions.',
+            body: 'PromptQuorum includes a toggle to view hidden system prompts on every model — GPT-5.6, Claude, Gemini, Ollama, LM Studio. Dispatch one prompt to multiple backends and see all instructions.',
             cta: 'Try PromptQuorum Free',
             href: 'https://www.promptquorum.com'
           }
@@ -552,7 +552,7 @@
             h2: 'Wo sie im API-Stack leben',
             intro: 'Jede LLM-API — OpenAI, Anthropic, Google, Ollama — zeigt zwei separate Eingaben:',
             items: [
-              '<strong>Modell-Layer:</strong> GPT-4o, Claude 4.6 Sonnet, Gemini, Llama 3.1 — alle akzeptieren beide Prompt-Typen',
+              '<strong>Modell-Layer:</strong> GPT-5.6, Claude Sonnet 5, Gemini, Llama 3.1 — alle akzeptieren beide Prompt-Typen',
               '<strong>API-Layer:</strong> OpenAI API, Anthropic API, Google API, Ollama REST — System und User sind separate Felder',
               '<strong>Applikations-Layer:</strong> ChatGPT, Claude.ai, Gemini, PromptQuorum — Entwickler wählen den System Prompt',
               '<strong>Benutzer-Interaktions-Layer:</strong> Chat-Input von Endbenutzern wird zum User Prompt'
@@ -579,7 +579,7 @@
               '<strong>2. Einschränkungen zuerst:</strong> Auflisten, was das Modell NICHT tun darf, bevor es auflisten darf',
               '<strong>3. Format-Spezifikation:</strong> Ausgabe als JSON, Markdown, Bullets oder Klartext definieren',
               '<strong>4. Scope-Grenzen:</strong> "Beantworte nur API-Fragen" — verhindere Out-of-Domain-Antworten',
-              '<strong>5. Cross-Modell-Tests:</strong> Auf GPT-4o, Claude und Gemini testen für Konsistenz'
+              '<strong>5. Cross-Modell-Tests:</strong> Auf GPT-5.6, Claude und Gemini testen für Konsistenz'
             ]
           },
           {
@@ -620,7 +620,7 @@
             items: [
               '<strong>Vertrauensfragen:</strong> Du weißt nicht, welche Anweisungen das Modell befolgt',
               '<strong>Debugging-Probleme:</strong> Lokale LLMs geben unerwartete Ausgaben, aber warum?',
-              '<strong>Inkonsistenz:</strong> Gleicher Prompt auf GPT-4o vs. Ollama gibt unterschiedliche Antworten',
+              '<strong>Inkonsistenz:</strong> Gleicher Prompt auf GPT-5.6 vs. Ollama gibt unterschiedliche Antworten',
               '<strong>Compliance-Risiko:</strong> Unternehmensbereitstellungen benötigen volle Transparenz für Audits'
             ]
           },
@@ -632,7 +632,7 @@
               '<strong>Einschränkungen zuerst schreiben:</strong> "Erfinde keine Statistiken" vor dem, was zu tun ist',
               '<strong>Ausgabeformat spezifizieren:</strong> JSON, Markdown, Bullets oder Klartext — nicht pro-Anfrage',
               '<strong>Scope-Grenzen setzen:</strong> "Beantworte nur API-Fragen" — definiere, was du verweigerst',
-              '<strong>Über Modelle hinweg testen:</strong> Versuche GPT-4o, Claude und Gemini — verfeinere für Konsistenz'
+              '<strong>Über Modelle hinweg testen:</strong> Versuche GPT-5.6, Claude und Gemini — verfeinere für Konsistenz'
             ]
           },
           {
@@ -645,11 +645,11 @@
               },
               {
                 q: 'Was passiert, wenn es keinen System Prompt gibt?',
-                a: 'Das Modell fällt auf sein Standard-Trainingsverhalten zurück. GPT-4o, Claude und Gemini haben eingebautes Basisverhalten (hilfreich, harmlos, ehrlich), wenn kein System Prompt vorhanden ist.'
+                a: 'Das Modell fällt auf sein Standard-Trainingsverhalten zurück. GPT-5.6, Claude und Gemini haben eingebautes Basisverhalten (hilfreich, harmlos, ehrlich), wenn kein System Prompt vorhanden ist.'
               },
               {
                 q: 'Verwenden alle LLMs System Prompts?',
-                a: 'Ja. Alle großen LLMs — GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, Ollama, LM Studio — unterstützen das System + User Prompt-Muster.'
+                a: 'Ja. Alle großen LLMs — GPT-5.6, Claude Sonnet 5, Gemini 3.5 Pro, Ollama, LM Studio — unterstützen das System + User Prompt-Muster.'
               }
             ]
           },
@@ -666,7 +666,7 @@
           {
             type: 'cta',
             h2: 'Alle System Prompts mit PromptQuorum sehen',
-            body: 'PromptQuorum enthält einen Toggle, um versteckte System Prompts auf jedem Modell anzuzeigen — GPT-4o, Claude, Gemini, Ollama, LM Studio. Versenden Sie einen Prompt an mehrere Backends und sehen Sie alle Anweisungen.',
+            body: 'PromptQuorum enthält einen Toggle, um versteckte System Prompts auf jedem Modell anzuzeigen — GPT-5.6, Claude, Gemini, Ollama, LM Studio. Versenden Sie einen Prompt an mehrere Backends und sehen Sie alle Anweisungen.',
             cta: 'PromptQuorum kostenlos testen',
             href: 'https://www.promptquorum.com'
           }
@@ -704,7 +704,7 @@
             h2: 'Où ils vivent dans la pile API',
             intro: 'Chaque API LLM — OpenAI, Anthropic, Google, Ollama — expose deux entrées séparées:',
             items: [
-              '<strong>Couche modèle:</strong> GPT-4o, Claude 4.6 Sonnet, Gemini, Llama 3.1 — tous acceptent les deux types de prompts',
+              '<strong>Couche modèle:</strong> GPT-5.6, Claude Sonnet 5, Gemini, Llama 3.1 — tous acceptent les deux types de prompts',
               '<strong>Couche API:</strong> OpenAI API, Anthropic API, Google API, Ollama REST — système et utilisateur sont des champs séparés',
               '<strong>Couche application:</strong> ChatGPT, Claude.ai, Gemini, PromptQuorum — les développeurs choisissent le prompt système',
               '<strong>Couche interaction utilisateur:</strong> L\'entrée de chat des utilisateurs finaux devient le prompt utilisateur'
@@ -731,7 +731,7 @@
               '<strong>2. Contraintes en premier:</strong> Énumérez ce que le modèle NE doit PAS faire avant ce qu\'il doit faire',
               '<strong>3. Spécification de format:</strong> Définir la sortie comme JSON, Markdown, puces ou texte brut',
               '<strong>4. Limites de portée:</strong> "Répondez uniquement aux questions sur les API" — empêchez les réponses hors domaine',
-              '<strong>5. Tests inter-modèles:</strong> Testez sur GPT-4o, Claude et Gemini pour la cohérence'
+              '<strong>5. Tests inter-modèles:</strong> Testez sur GPT-5.6, Claude et Gemini pour la cohérence'
             ]
           },
           {
@@ -772,7 +772,7 @@
             items: [
               '<strong>Problèmes de confiance:</strong> Vous ne savez pas quelles instructions le modèle suit',
               '<strong>Problèmes de débogage:</strong> Les LLMs locaux donnent des résultats inattendus mais pourquoi?',
-              '<strong>Incohérence:</strong> Même prompt sur GPT-4o vs. Ollama donne des réponses différentes',
+              '<strong>Incohérence:</strong> Même prompt sur GPT-5.6 vs. Ollama donne des réponses différentes',
               '<strong>Risque de conformité:</strong> Les déploiements d\'entreprise ont besoin d\'une transparence totale pour les audits'
             ]
           },
@@ -784,7 +784,7 @@
               '<strong>Écrire les contraintes en premier:</strong> "Ne fabriquez pas de statistiques" avant ce qu\'il faut faire',
               '<strong>Spécifier le format de sortie:</strong> JSON, Markdown, puces ou texte brut — pas par-demande',
               '<strong>Définir les limites de portée:</strong> "Répondez uniquement aux questions sur les API" — définissez ce que vous refusez',
-              '<strong>Tester sur les modèles:</strong> Essayez GPT-4o, Claude et Gemini — affinez pour la cohérence'
+              '<strong>Tester sur les modèles:</strong> Essayez GPT-5.6, Claude et Gemini — affinez pour la cohérence'
             ]
           },
           {
@@ -797,11 +797,11 @@
               },
               {
                 q: 'Que se passe-t-il s\'il n\'y a pas de prompt système?',
-                a: 'Le modèle revient à son comportement d\'entraînement par défaut. GPT-4o, Claude et Gemini ont un comportement de base intégré (utile, inoffensif, honnête) lorsqu\'aucun prompt système n\'est présent.'
+                a: 'Le modèle revient à son comportement d\'entraînement par défaut. GPT-5.6, Claude et Gemini ont un comportement de base intégré (utile, inoffensif, honnête) lorsqu\'aucun prompt système n\'est présent.'
               },
               {
                 q: 'Tous les LLMs utilisent-ils des prompts système?',
-                a: 'Oui. Tous les principaux LLMs — GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, Ollama, LM Studio — supportent le motif prompt système + utilisateur.'
+                a: 'Oui. Tous les principaux LLMs — GPT-5.6, Claude Sonnet 5, Gemini 3.5 Pro, Ollama, LM Studio — supportent le motif prompt système + utilisateur.'
               }
             ]
           },
@@ -818,7 +818,7 @@
           {
             type: 'cta',
             h2: 'Voir tous les Prompts Système avec PromptQuorum',
-            body: 'PromptQuorum inclut un bouton pour afficher les prompts système cachés sur chaque modèle — GPT-4o, Claude, Gemini, Ollama, LM Studio. Envoyez un prompt à plusieurs backends et voyez toutes les instructions.',
+            body: 'PromptQuorum inclut un bouton pour afficher les prompts système cachés sur chaque modèle — GPT-5.6, Claude, Gemini, Ollama, LM Studio. Envoyez un prompt à plusieurs backends et voyez toutes les instructions.',
             cta: 'Essayer PromptQuorum Gratuitement',
             href: 'https://www.promptquorum.com'
           }
@@ -856,7 +856,7 @@
             h2: 'APIスタックのどこに存在するか',
             intro: 'すべてのLLM API — OpenAI、Anthropic、Google、Ollama — 2つの個別入力を公開します：',
             items: [
-              '<strong>モデル層：</strong> GPT-4o、Claude 4.6 Sonnet、Gemini、Llama 3.1 — すべてが両方のプロンプトタイプを受け入れる',
+              '<strong>モデル層：</strong> GPT-5.6、Claude Sonnet 5、Gemini、Llama 3.1 — すべてが両方のプロンプトタイプを受け入れる',
               '<strong>API層：</strong> OpenAI API、Anthropic API、Google API、Ollama REST — システムとユーザーは個別フィールド',
               '<strong>アプリケーション層：</strong> ChatGPT、Claude.ai、Gemini、PromptQuorum — 開発者がシステムプロンプトを選択',
               '<strong>ユーザーインタラクション層：</strong> エンドユーザーのチャット入力がユーザープロンプトになる'
@@ -883,7 +883,7 @@
               '<strong>2. 制約優先：</strong> モデルが何をすべきかの前に、何をすべきでないかをリストアップ',
               '<strong>3. フォーマット指定：</strong> JSONとしての出力を定義、マークダウン、箇条書き、またはプレーンテキスト',
               '<strong>4. スコープ境界：</strong> 「APIの質問にのみ答える」 — ドメイン外の回答を防ぐ',
-              '<strong>5. クロスモデルテスト：</strong> GPT-4o、Claude、Geminiでテスト — 一貫性のため改善'
+              '<strong>5. クロスモデルテスト：</strong> GPT-5.6、Claude、Geminiでテスト — 一貫性のため改善'
             ]
           },
           {
@@ -924,7 +924,7 @@
             items: [
               '<strong>信頼の問題：</strong> モデルが従っている指示がわからない',
               '<strong>デバッグ問題：</strong> ローカルLLMが予期しない出力 — なぜですか？',
-              '<strong>矛盾：</strong> GPT-4o対Ollamaで同じプロンプトで異なる回答',
+              '<strong>矛盾：</strong> GPT-5.6対Ollamaで同じプロンプトで異なる回答',
               '<strong>コンプライアンスリスク：</strong> エンタープライズデプロイメント監査の完全な透明性が必要'
             ]
           },
@@ -936,7 +936,7 @@
               '<strong>制約を最初に書く：</strong> 「統計を作成しない」 — その前に何をすべきか',
               '<strong>出力形式を指定：</strong> JSON、マークダウン、箇条書き、またはプレーンテキスト — リクエストごとではなく',
               '<strong>スコープ境界を設定：</strong> 「APIの質問にのみ答える」 — 拒否することを定義',
-              '<strong>モデル間でテスト：</strong> GPT-4o、Claude、Geminiを試す — 一貫性のため改善'
+              '<strong>モデル間でテスト：</strong> GPT-5.6、Claude、Geminiを試す — 一貫性のため改善'
             ]
           },
           {
@@ -949,11 +949,11 @@
               },
               {
                 q: 'システムプロンプトがない場合はどうなりますか？',
-                a: 'モデルはデフォルトのトレーニング動作にフォールバックします。GPT-4o、Claude、Geminiにはシステムプロンプトがない場合の組み込みベース動作（有用、無害、正直）があります。'
+                a: 'モデルはデフォルトのトレーニング動作にフォールバックします。GPT-5.6、Claude、Geminiにはシステムプロンプトがない場合の組み込みベース動作（有用、無害、正直）があります。'
               },
               {
                 q: 'すべてのLLMがシステムプロンプトを使用していますか？',
-                a: 'はい。すべての主要LLM — GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro、Ollama、LM Studio — はシステム+ユーザープロンプトパターンをサポート。'
+                a: 'はい。すべての主要LLM — GPT-5.6、Claude Sonnet 5、Gemini 3.5 Pro、Ollama、LM Studio — はシステム+ユーザープロンプトパターンをサポート。'
               }
             ]
           },
@@ -970,7 +970,7 @@
           {
             type: 'cta',
             h2: 'PromptQuorumですべてのシステムプロンプトを表示',
-            body: 'PromptQuorumにはすべてのモデルで隠されたシステムプロンプトを表示するトグル — GPT-4o、Claude、Gemini、Ollama、LM Studioが含まれています。複数のバックエンドにプロンプトを送り、すべての指示を表示します。',
+            body: 'PromptQuorumにはすべてのモデルで隠されたシステムプロンプトを表示するトグル — GPT-5.6、Claude、Gemini、Ollama、LM Studioが含まれています。複数のバックエンドにプロンプトを送り、すべての指示を表示します。',
             cta: 'PromptQuorum無料試用',
             href: 'https://www.promptquorum.com'
           }
@@ -1008,7 +1008,7 @@
             h2: '它们在 API 堆栈中的位置',
             intro: '每个 LLM API — OpenAI、Anthropic、Google、Ollama — 都公开两个单独的输入：',
             items: [
-              '<strong>模型层：</strong> GPT-4o、Claude 4.6 Sonnet、Gemini、Llama 3.1 — 都接受两种提示类型',
+              '<strong>模型层：</strong> GPT-5.6、Claude Sonnet 5、Gemini、Llama 3.1 — 都接受两种提示类型',
               '<strong>API 层：</strong> OpenAI API、Anthropic API、Google API、Ollama REST — 系统和用户是单独的字段',
               '<strong>应用层：</strong> ChatGPT、Claude.ai、Gemini、PromptQuorum — 开发人员选择系统提示',
               '<strong>用户交互层：</strong> 最终用户的聊天输入成为用户提示'
@@ -1035,7 +1035,7 @@
               '<strong>2. 约束优先：</strong> 在列出应该做什么之前列出模型不应该做什么',
               '<strong>3. 格式规范：</strong> 将输出定义为 JSON、Markdown、项目符号或纯文本',
               '<strong>4. 范围边界：</strong> "仅回答 API 问题" — 防止超出域名的答案',
-              '<strong>5. 跨模型测试：</strong> 在 GPT-4o、Claude 和 Gemini 上测试以实现一致性'
+              '<strong>5. 跨模型测试：</strong> 在 GPT-5.6、Claude 和 Gemini 上测试以实现一致性'
             ]
           },
           {
@@ -1076,7 +1076,7 @@
             items: [
               '<strong>信任问题：</strong> 你不知道模型遵循什么指示',
               '<strong>调试问题：</strong> 本地 LLM 返回意外输出 — 为什么？',
-              '<strong>不一致：</strong> 在 GPT-4o 和 Ollama 上相同的提示给出不同答案',
+              '<strong>不一致：</strong> 在 GPT-5.6 和 Ollama 上相同的提示给出不同答案',
               '<strong>合规性风险：</strong> 企业部署需要完全透明以进行审计'
             ]
           },
@@ -1088,7 +1088,7 @@
               '<strong>首先编写约束：</strong> "不要编造统计数据"— 在列出应该做什么之前',
               '<strong>指定输出格式：</strong> JSON、Markdown、项目符号或纯文本 — 而不是每个请求',
               '<strong>设置范围边界：</strong> "仅回答 API 问题" — 定义你拒绝什么',
-              '<strong>跨模型测试：</strong> 尝试 GPT-4o、Claude 和 Gemini — 改进以实现一致性'
+              '<strong>跨模型测试：</strong> 尝试 GPT-5.6、Claude 和 Gemini — 改进以实现一致性'
             ]
           },
           {
@@ -1101,11 +1101,11 @@
               },
               {
                 q: '如果没有系统提示会发生什么？',
-                a: '模型会回到其默认训练行为。GPT-4o、Claude 和 Gemini 在不存在系统提示时都有内置的基础行为（有用、无害、诚实）。'
+                a: '模型会回到其默认训练行为。GPT-5.6、Claude 和 Gemini 在不存在系统提示时都有内置的基础行为（有用、无害、诚实）。'
               },
               {
                 q: '所有 LLM 都使用系统提示吗？',
-                a: '是的。所有主要 LLM — GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro、Ollama、LM Studio — 都支持系统 + 用户提示模式。'
+                a: '是的。所有主要 LLM — GPT-5.6、Claude Sonnet 5、Gemini 3.5 Pro、Ollama、LM Studio — 都支持系统 + 用户提示模式。'
               }
             ]
           },
@@ -1122,7 +1122,7 @@
           {
             type: 'cta',
             h2: '使用 PromptQuorum 查看所有系统提示',
-            body: 'PromptQuorum 包含一个切换来查看每个模型上的隐藏系统提示 — GPT-4o、Claude、Gemini、Ollama、LM Studio。将一个提示发送到多个后端并查看所有说明。',
+            body: 'PromptQuorum 包含一个切换来查看每个模型上的隐藏系统提示 — GPT-5.6、Claude、Gemini、Ollama、LM Studio。将一个提示发送到多个后端并查看所有说明。',
             cta: '免费尝试 PromptQuorum',
             href: 'https://www.promptquorum.com'
           }

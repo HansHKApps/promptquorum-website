@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GPU vs CPU vs Apple Silicon for Local LLMs | PromptQuorum</title>
-  <meta name="description" content="GPU vs CPU vs Apple Silicon for local LLMs 2026: NVIDIA dominates at 150 tok/sec, Apple M3 Max at 25–30, CPU at 5. Compare speed, VRAM, cost, and power." />
+  <meta name="description" content="GPU vs CPU vs Apple Silicon for local LLMs 2026: RTX 5090 hits 150–200 tok/sec, Apple M5 Pro 40–60, CPU 10–20. Compare speed, VRAM, cost, and power." />
   <meta property="og:title" content="GPU vs CPU vs Apple Silicon for Local LLMs — PromptQuorum" />
   <meta property="og:description" content="GPU vs CPU vs Apple Silicon for local LLMs: Performance comparison, cost analysis, and when to choose each." />
   <meta property="og:type" content="website" />
@@ -367,9 +367,9 @@
             type: 'list',
             h2: 'The Speed Breakdown',
             items: [
-              '<strong>NVIDIA RTX 4090 GPU:</strong> 150 tokens/sec — real-time chat, production-ready.',
-              '<strong>Apple M3 Max:</strong> 25-30 tokens/sec — good for Mac users, 7-13B models only.',
-              '<strong>Intel i9 CPU:</strong> 3-5 tokens/sec — impractical for interactive use (5-10 second latency).'
+              '<strong>NVIDIA RTX 5090 GPU:</strong> 150-200 tokens/sec on 8B models — fastest raw speed, but can\'t fit 30B+ models.',
+              '<strong>Apple M5 Pro (64GB):</strong> 40-60 tokens/sec on 8B, 20-30 tok/s on 30B models natively — best all-around, ~25W power draw.',
+              '<strong>CPU-only (modern DDR5):</strong> 10-20 tokens/sec on 8B models — usable but slow, impractical for real-time chat at larger sizes.'
             ]
           },
           {
@@ -378,34 +378,34 @@
             items: [
               '<strong>CUDA ecosystem:</strong> 20+ years of AI-specific optimization for matrix operations.',
               '<strong>Tensor cores:</strong> Specialized hardware designed for LLM inference.',
-              '<strong>Memory bandwidth:</strong> 2000+ GB/sec (CPU RAM: 50-100 GB/sec).',
+              '<strong>Memory bandwidth:</strong> RTX 5090 at 1,792 GB/sec (CPU RAM: 89 GB/sec DDR5).',
               '<strong>Mature software:</strong> vLLM, llama.cpp, all optimized for NVIDIA.'
             ]
           },
           {
             type: 'comparison',
             h2: 'GPU Performance Comparison',
-            line1: 'RTX 4090: 150 tok/sec',
-            line2: 'RTX 4070 Ti: 80 tok/sec',
-            tip: '⭐ RTX 4070 Ti at ~$600 offers 80% of RTX 4090 speed at 1/3 the cost.'
+            line1: 'RTX 5090: 150-200 tok/sec',
+            line2: 'RTX 5070: 60-80 tok/sec',
+            tip: '⭐ RTX 5070 at ~$600 offers 80% of RTX 5090 speed at 30% of the cost.'
           },
           {
             type: 'table',
             h2: 'GPU Speed by Model Size',
-            columns: ['Hardware', '7B Model', '13B Model', 'Cost'],
+            columns: ['Hardware', 'Qwen3 8B', 'Qwen3 30B', 'Cost'],
             rows: [
-              { 'Hardware': 'RTX 4090', '7B Model': '150 tok/sec', '13B Model': '100 tok/sec', 'Cost': '$1,800' },
-              { 'Hardware': 'RTX 4080', '7B Model': '100 tok/sec', '13B Model': '70 tok/sec', 'Cost': '$1,200' },
-              { 'Hardware': 'RTX 4070 Ti', '7B Model': '80 tok/sec', '13B Model': '50 tok/sec', 'Cost': '$600' }
+              { 'Hardware': 'RTX 5090 (32GB)', 'Qwen3 8B': '150-200 tok/sec', 'Qwen3 30B': 'Not possible*', 'Cost': '$2,000' },
+              { 'Hardware': 'RTX 5080 (16GB)', 'Qwen3 8B': '100-130 tok/sec', 'Qwen3 30B': 'Not possible*', 'Cost': '$1,000' },
+              { 'Hardware': 'RTX 5070 (12GB)', 'Qwen3 8B': '60-80 tok/sec', 'Qwen3 30B': 'Not possible*', 'Cost': '$600' }
             ]
           },
           {
             type: 'table',
             h2: 'CPU vs Apple Silicon',
-            columns: ['Hardware', '7B Model', '13B Model', 'Cost'],
+            columns: ['Hardware', 'Qwen3 8B', 'Qwen3 30B', 'Cost'],
             rows: [
-              { 'Hardware': 'M3 Max Mac', '7B Model': '25 tok/sec', '13B Model': '15 tok/sec', 'Cost': 'Included in Mac' },
-              { 'Hardware': 'Intel i9 CPU', '7B Model': '5 tok/sec', '13B Model': '2 tok/sec', 'Cost': 'Included' }
+              { 'Hardware': 'Apple M5 Pro (64GB)', 'Qwen3 8B': '40-60 tok/sec', 'Qwen3 30B': '20-30 tok/sec', 'Cost': '$2,399' },
+              { 'Hardware': 'CPU (DDR5)', 'Qwen3 8B': '10-20 tok/sec', 'Qwen3 30B': '3-5 tok/sec', 'Cost': 'Included' }
             ]
           },
           {
@@ -415,72 +415,72 @@
               'You need real-time chat (<1 second latency)',
               'Running models 24/7 or batch processing large datasets',
               'Production AI applications or team deployments',
-              'Budget: $600-$1,800 is justified if used 2+ hours/day'
+              'Budget: $600-$2,000 is justified if used 2+ hours/day'
             ]
           },
           {
             type: 'list',
             h2: 'Apple Silicon: The Middle Ground',
             items: [
-              '<strong>Per-watt efficiency:</strong> M3 Max handles 7B models at 25 tok/sec with only 25W power draw.',
+              '<strong>Per-watt efficiency:</strong> M5 Pro handles 8B models at 40-60 tok/sec with only ~25W power draw.',
               '<strong>No drivers:</strong> Native macOS integration, plug-and-play.',
-              '<strong>Limitation:</strong> Cannot run 70B models due to unified memory architecture limits.',
-              '<strong>Best for:</strong> Mac owners running 7-13B models, value low power consumption.'
+              '<strong>Model range:</strong> Runs 30B models natively at 20-30 tok/sec — no consumer GPU matches this.',
+              '<strong>Best for:</strong> Mac owners running 8B-30B models, value low power consumption.'
             ]
           },
           {
             type: 'list',
             h2: 'CPU-Only: Avoid for Chat',
             items: [
-              '<strong>Speed:</strong> Intel i9 runs 7B models at 3-5 tokens/sec.',
-              '<strong>Latency:</strong> 5-10 second response times — unusable for interactive chat.',
+              '<strong>Speed:</strong> Modern CPU (DDR5) runs 8B models at 10-20 tokens/sec.',
+              '<strong>Latency:</strong> Noticeably slower response times — impractical for real-time chat at larger sizes.',
               '<strong>Suitable only for:</strong> Batch processing overnight (document summarization, offline analysis).',
-              '<strong>Memory bottleneck:</strong> RAM bandwidth (50-100 GB/sec) is 20× slower than GPU VRAM.'
+              '<strong>Memory bottleneck:</strong> DDR5 RAM bandwidth (89 GB/sec) is ~20× slower than RTX 5090 GPU VRAM (1,792 GB/sec).'
             ]
           },
           {
             type: 'list',
             h2: 'Cost-Per-Token Analysis',
             items: [
-              '<strong>RTX 4090:</strong> $1,800 ÷ 3 years ÷ 4.7B tokens/year = $0.38 per billion tokens',
-              '<strong>RTX 4070 Ti:</strong> $600 ÷ 3 years = $0.24 per billion tokens (best value)',
-              '<strong>M3 Max Mac:</strong> $0 cost (already owned) — best deal if you own a Mac',
-              '<strong>OpenAI API:</strong> $0.00001 per token — cheaper for light users (< 30 min/day)'
+              '<strong>RTX 5090:</strong> $2,000 ÷ 175 tok/sec (8B) = $11.4 cost per tok/sec',
+              '<strong>RTX 5070:</strong> $600 ÷ 70 tok/sec (8B) = $8.6 cost per tok/sec (best value GPU)',
+              '<strong>Apple M5 Pro:</strong> ~25W power draw costs ~$1.10/month vs ~$16.50/month for RTX 5090 at 8hrs/day',
+              '<strong>CPU (DDR5):</strong> $0 cost (already owned) — 15 tok/sec (8B), best deal if hardware already owned'
             ]
           },
           {
             type: 'numbered',
             h2: 'Common Mistakes',
             items: [
-              'Thinking CPU is viable for interactive chat — 5 second latency is unusable.',
-              'Buying older GPUs (RTX 2080) expecting similar performance — it\'s 10× slower than RTX 4070 Ti.',
-              'Assuming M3 Max can run 70B models — it cannot due to unified memory limits.',
-              'Ignoring power and cooling requirements — RTX 4090 needs 1200W PSU and good ventilation.'
+              'Choosing GPU for 30B+ models — no RTX 50-series card fits 30B in VRAM; offloading creates a 5-10× speed penalty.',
+              'Buying RTX 5090 for 8B chat — RTX 5070 at $600 delivers 70 tok/sec, 80% of the speed at 30% of the cost.',
+              'Assuming Apple M5 base (16GB) can run 30B models — it fits 7B only; 30B needs M5 Pro (64GB).',
+              'Ignoring power cost for always-on GPU servers — RTX 5090 at 8 hrs/day costs ~$200/year in electricity vs ~$14/year for M5 Pro.'
             ]
           },
           {
             type: 'faq',
             h2: 'Quick FAQ',
             faqs: [
-              { q: 'Is GPU really 50-100× faster than CPU?', a: 'Yes. RTX 4090 (150 tok/sec) vs Intel i9 (3-5 tok/sec) = 30-50× speed difference. The gap comes from CUDA parallel processing and dedicated tensor cores.' },
-              { q: 'Can I upgrade M3 Max with external GPU?', a: 'Not effectively. Thunderbolt GPUs have high latency overhead. Better to use vLLM on a dedicated GPU machine.' },
-              { q: 'Is RTX 4070 Ti enough?', a: 'Yes. 80 tokens/sec handles real-time chat, coding, and summarization. Great value at $600.' }
+              { q: 'Is GPU really faster than CPU?', a: 'Yes. RTX 5090 (150-200 tok/sec on 8B) vs CPU with DDR5 (10-20 tok/sec) — an 8-15× speed difference from CUDA parallel processing, tensor cores, and memory bandwidth.' },
+              { q: 'Can Apple Silicon run 30B+ models?', a: 'Yes. M5 Pro (64GB) runs 30B models natively at 20-30 tok/sec — no consumer GPU can match this. M5 Max (128GB) runs 70B models natively at 35-50 tok/sec.' },
+              { q: 'Is RTX 5070 enough?', a: 'Yes. 60-80 tokens/sec handles real-time chat, coding, and summarization. Best value at $600.' }
             ]
           },
           {
             type: 'list',
             h2: 'The Bottom Line',
             items: [
-              '🏆 <strong>Best performance:</strong> RTX 4090 (150 tok/sec) — production-grade speed.',
-              '💰 <strong>Best value:</strong> RTX 4070 Ti ($600, 80 tok/sec) — Goldilocks option.',
-              '🍎 <strong>Mac users:</strong> M3 Max (25 tok/sec) — good, but GPU wins for serious work.',
-              '⚠️  <strong>Avoid:</strong> CPU-only for interactive chat — latency is impractical.'
+              '🏆 <strong>Best performance:</strong> RTX 5090 (150-200 tok/sec on 8B) — production-grade speed.',
+              '💰 <strong>Best value:</strong> RTX 5070 ($600, 60-80 tok/sec) — Goldilocks option.',
+              '🍎 <strong>Best all-around:</strong> Apple M5 Pro (40-60 tok/sec on 8B, 20-30 tok/sec on 30B) — larger models than any GPU at 25W.',
+              '⚠️  <strong>Avoid:</strong> CPU-only for interactive chat with larger models — latency is impractical.'
             ]
           },
           {
             type: 'cta',
             h2: 'Benchmark Your Hardware',
-            body: 'Test your GPU, CPU, or Mac with a 7B model and measure real tokens/sec. Hardware choice matters: wrong match = 4-10× speed wasted.',
+            body: 'Test your GPU, CPU, or Mac with an 8B model and measure real tokens/sec. Hardware choice matters: wrong match = 4-10× speed wasted.',
             cta: 'Try PromptQuorum Free',
             href: 'https://www.promptquorum.com'
           }
@@ -499,11 +499,11 @@
             type: 'list',
             h2: 'Geschwindigkeitsübersicht',
             items: [
-              '<strong>NVIDIA RTX 5090 GPU:</strong> 200 Tokens/Sek — Produktionsreif, maximale Leistung.',
-              '<strong>NVIDIA RTX 4090 GPU:</strong> 150 Tokens/Sek — Echtzeit-Chat, produktionstauglich.',
-              '<strong>Apple M2 Ultra (192 GB):</strong> 60 Tokens/Sek — einzige Consumer-Hardware für 70B-Modelle nativ.',
-              '<strong>Apple M3 Max:</strong> 25–30 Tokens/Sek — gut für Mac-Nutzer, 13B-Modelle.',
-              '<strong>Intel i9 CPU:</strong> 5 Tokens/Sek — für interaktive Nutzung ungeeignet (5–10 Sek. Latenz).'
+              '<strong>NVIDIA RTX 5090 GPU:</strong> 150–200 Tokens/Sek (8B) — maximale Rohleistung, aber keine 30B+-Modelle.',
+              '<strong>NVIDIA RTX 5070 GPU:</strong> 60–80 Tokens/Sek (8B) — bestes Preis-Leistungs-Verhältnis.',
+              '<strong>Apple M5 Max (128 GB):</strong> 35–50 Tokens/Sek — läuft 70B-Modelle nativ, ~35 W.',
+              '<strong>Apple M5 Pro (64 GB):</strong> 40–60 Tokens/Sek (8B), 20–30 Tok/s bei 30B — bestes Allround, ~25 W.',
+              '<strong>CPU (DDR5):</strong> 10–20 Tokens/Sek (8B) — für interaktive Nutzung nur eingeschränkt geeignet.'
             ]
           },
           {
@@ -519,39 +519,39 @@
           {
             type: 'comparison',
             h2: 'GPU-Leistungsvergleich',
-            line1: 'RTX 5090: 200 Tok/s — Top-Leistung',
-            line2: 'RTX 4070 Ti: 80 Tok/s — Bestes Preis-Leistungs-Verhältnis',
-            tip: '⭐ RTX 4070 Ti für ~600 € bietet 80% der RTX 4090-Geschwindigkeit zu einem Drittel des Preises.'
+            line1: 'RTX 5090: 150–200 Tok/s — Top-Leistung',
+            line2: 'RTX 5070: 60–80 Tok/s — Bestes Preis-Leistungs-Verhältnis',
+            tip: '⭐ RTX 5070 für ~600 € bietet 80% der RTX 5090-Geschwindigkeit für 30% der Kosten.'
           },
           {
             type: 'table',
             h2: 'GPU-Geschwindigkeit nach Modellgröße',
-            columns: ['Hardware', 'Llama 3.2 8B', 'Qwen2.5 32B', 'Preis'],
+            columns: ['Hardware', 'Qwen3 8B', 'Qwen3 30B', 'Preis'],
             rows: [
-              { 'Hardware': 'RTX 5090 (32 GB)', 'Llama 3.2 8B': '200 Tok/s', 'Qwen2.5 32B': '70 Tok/s', 'Preis': '2.000 €' },
-              { 'Hardware': 'RTX 4090 (24 GB)', 'Llama 3.2 8B': '150 Tok/s', 'Qwen2.5 32B': '50 Tok/s', 'Preis': '1.800 €' },
-              { 'Hardware': 'RTX 4070 Ti (12 GB)', 'Llama 3.2 8B': '80 Tok/s', 'Qwen2.5 32B': '25 Tok/s', 'Preis': '600 €' }
+              { 'Hardware': 'RTX 5090 (32 GB)', 'Qwen3 8B': '150–200 Tok/s', 'Qwen3 30B': 'Nicht möglich*', 'Preis': '2.000 €' },
+              { 'Hardware': 'RTX 5080 (16 GB)', 'Qwen3 8B': '100–130 Tok/s', 'Qwen3 30B': 'Nicht möglich*', 'Preis': '1.000 €' },
+              { 'Hardware': 'RTX 5070 (12 GB)', 'Qwen3 8B': '60–80 Tok/s', 'Qwen3 30B': 'Nicht möglich*', 'Preis': '600 €' }
             ]
           },
           {
             type: 'table',
             h2: 'CPU vs Apple Silicon',
-            columns: ['Hardware', 'Llama 3.2 8B', 'Llama 3.3 70B', 'Preis'],
+            columns: ['Hardware', 'Qwen3 8B', 'Qwen3 30B', 'Preis'],
             rows: [
-              { 'Hardware': 'Mac Studio M2 Ultra (192 GB)', 'Llama 3.2 8B': '60 Tok/s', 'Llama 3.3 70B': '35 Tok/s', 'Preis': '4.000 €' },
-              { 'Hardware': 'MacBook Pro M4 Max (128 GB)', 'Llama 3.2 8B': '35 Tok/s', 'Llama 3.3 70B': '8 Tok/s*', 'Preis': '4.000 €' },
-              { 'Hardware': 'MacBook Pro M3 Max (96 GB)', 'Llama 3.2 8B': '25 Tok/s', 'Llama 3.3 70B': '5 Tok/s*', 'Preis': '3.500 €' },
-              { 'Hardware': 'Intel i9 14900K (nur CPU)', 'Llama 3.2 8B': '5 Tok/s', 'Llama 3.3 70B': '1 Tok/s', 'Preis': '600 €' }
+              { 'Hardware': 'MacBook Pro M5 Max (128 GB)', 'Qwen3 8B': '60–80 Tok/s', 'Qwen3 30B': '35–50 Tok/s', 'Preis': '3.199 €' },
+              { 'Hardware': 'MacBook Pro M5 Pro (64 GB)', 'Qwen3 8B': '40–60 Tok/s', 'Qwen3 30B': '20–30 Tok/s', 'Preis': '2.399 €' },
+              { 'Hardware': 'Mac mini M5 (16–32 GB)', 'Qwen3 8B': '25–35 Tok/s', 'Qwen3 30B': 'Auslagerung*', 'Preis': '599 €' },
+              { 'Hardware': 'CPU (DDR5, nur CPU)', 'Qwen3 8B': '10–20 Tok/s', 'Qwen3 30B': '3–5 Tok/s', 'Preis': '600 €' }
             ]
           },
           {
             type: 'list',
             h2: 'Speicherbandbreite: Der entscheidende Faktor',
             items: [
-              '<strong>RTX 5090 (GDDR7):</strong> 1.792 GB/s → 200 Tok/s',
-              '<strong>RTX 4090 (GDDR6X):</strong> 1.008 GB/s → 150 Tok/s',
-              '<strong>Mac Studio M2 Ultra (Unified):</strong> 800 GB/s → 60 Tok/s',
-              '<strong>DDR5-RAM (CPU):</strong> 89 GB/s → 5 Tok/s',
+              '<strong>RTX 5090 (GDDR7):</strong> 1.792 GB/s → 150–200 Tok/s',
+              '<strong>RTX 5080 (GDDR7):</strong> 960 GB/s → 100–130 Tok/s',
+              '<strong>MacBook Pro M5 Pro (Unified):</strong> 307 GB/s → 40–60 Tok/s',
+              '<strong>DDR5-RAM (CPU):</strong> 89 GB/s → 10–20 Tok/s',
               'LLM-Inferenz ist speicherbandbreitenbegrenzt — mehr Bandbreite = schnellere Token-Generierung.'
             ]
           },
@@ -562,16 +562,16 @@
               'Sie brauchen Echtzeit-Chat (unter 1 Sekunde Latenz)',
               'Modelle laufen 24/7 oder Batch-Verarbeitung großer Datensätze',
               'Produktions-KI-Anwendungen oder Team-Deployments',
-              'Budget von 600–1.800 € gerechtfertigt bei 2+ Stunden täglich'
+              'Budget von 600–2.000 € gerechtfertigt bei 2+ Stunden täglich'
             ]
           },
           {
             type: 'list',
             h2: 'Apple Silicon: Der Mittelweg',
             items: [
-              '<strong>Mac Studio M2 Ultra (192 GB):</strong> Einzige Consumer-Hardware für Llama 3.3 70B nativ (35 Tok/s) — kein Offloading.',
-              '<strong>MacBook Pro M4 Max (128 GB):</strong> 35 Tok/s für 8B-Modelle — portabel und effizient.',
-              '<strong>Effizienz:</strong> M3 Max bei 25 Tok/s mit nur 25 W Stromverbrauch.',
+              '<strong>MacBook Pro M5 Pro (64 GB):</strong> Läuft 30B-Modelle nativ (20–30 Tok/s) — kein Consumer-GPU erreicht das.',
+              '<strong>MacBook Pro M5 Max (128 GB):</strong> Läuft 70B-Modelle nativ mit 35–50 Tok/s — für Forschung und schwere 30B+-Workloads.',
+              '<strong>Effizienz:</strong> M5 Pro bei 40–60 Tok/s (8B) mit nur ~25 W Stromverbrauch.',
               '<strong>Keine Treiber:</strong> Native macOS-Integration, Plug-and-Play.'
             ]
           },
@@ -579,39 +579,39 @@
             type: 'list',
             h2: 'Nur CPU: Für Chat nicht geeignet',
             items: [
-              '<strong>Geschwindigkeit:</strong> Intel i9 läuft 8B-Modelle mit 5 Tokens/Sek.',
-              '<strong>Latenz:</strong> 5–10 Sekunden Antwortzeit — für interaktiven Chat unbrauchbar.',
+              '<strong>Geschwindigkeit:</strong> Moderne CPU (DDR5) läuft 8B-Modelle mit 10–20 Tokens/Sek.',
+              '<strong>Latenz:</strong> Spürbar langsamere Antwortzeiten — für interaktiven Chat bei größeren Modellen unpraktisch.',
               '<strong>Nur geeignet für:</strong> Batch-Verarbeitung über Nacht (Dokumentenzusammenfassung).',
-              '<strong>Speicherengpass:</strong> RAM-Bandbreite (89 GB/s) ist 20× langsamer als GPU-VRAM.'
+              '<strong>Speicherengpass:</strong> DDR5-RAM-Bandbreite (89 GB/s) ist ~20× langsamer als RTX-5090-GPU-VRAM (1.792 GB/s).'
             ]
           },
           {
             type: 'numbered',
             h2: 'Häufige Fehler',
             items: [
-              'CPU für interaktiven Chat verwenden — 5 Sekunden Latenz ist unbrauchbar.',
-              'Ältere GPUs (RTX 2080) kaufen — 10× langsamer als RTX 4070 Ti.',
-              'Annehmen, M3 Max kann 70B-Modelle ausführen — nur M2 Ultra (192 GB) kann das nativ.',
-              'Strom- und Kühlungsanforderungen ignorieren — RTX 4090 benötigt 1.200 W Netzteil.',
-              'VRAM-Bedarf unterschätzen: 70B-Modelle (Q4) benötigen ~40 GB VRAM.'
+              'CPU für interaktiven Chat verwenden — bei größeren Modellen unbrauchbar.',
+              'GPU für 30B+-Modelle wählen — kein RTX-50-Modell hat genug VRAM; Auslagerung kostet 5–10× Geschwindigkeit.',
+              'Annehmen, M5 Pro kann 70B-Modelle ausführen — nur M5 Max (128 GB) kann das nativ.',
+              'Strom- und Kühlungsanforderungen ignorieren — RTX 5090 benötigt 450 W und ein leistungsfähiges Netzteil.',
+              'VRAM-Bedarf unterschätzen: RTX 50-Serie bietet maximal 32 GB (RTX 5090) — nicht genug für 30B+-Modelle.'
             ]
           },
           {
             type: 'faq',
             h2: 'Häufige Fragen',
             faqs: [
-              { q: 'Ist GPU wirklich 30× schneller als CPU?', a: 'Ja. RTX 4090 (150 Tok/s) vs. Intel i9 (5 Tok/s) = 30× Geschwindigkeitsunterschied durch CUDA-Parallelverarbeitung und dedizierte Tensor-Kerne.' },
-              { q: 'Kann Apple Silicon 70B-Modelle ausführen?', a: 'Mac Studio M2 Ultra (192 GB) läuft Llama 3.3 70B nativ mit 35 Tok/s. Kleinere Macs müssen auslagern — Qualitätsverlust.' },
-              { q: 'Ist RTX 4070 Ti ausreichend?', a: 'Ja. 80 Tok/s reichen für Echtzeit-Chat, Coding und Zusammenfassungen. Bestes Preis-Leistungs-Verhältnis bei 600 €.' }
+              { q: 'Ist GPU wirklich schneller als CPU?', a: 'Ja. RTX 5090 (150–200 Tok/s) vs. CPU mit DDR5 (10–20 Tok/s) — Geschwindigkeitsunterschied durch CUDA-Parallelverarbeitung und dedizierte Tensor-Kerne.' },
+              { q: 'Kann Apple Silicon 70B-Modelle ausführen?', a: 'MacBook Pro M5 Max (128 GB) läuft 70B-Modelle nativ mit 35–50 Tok/s. Kleinere Chips müssen auslagern — Qualitätsverlust.' },
+              { q: 'Ist RTX 5070 ausreichend?', a: 'Ja. 60–80 Tok/s reichen für Echtzeit-Chat, Coding und Zusammenfassungen. Bestes Preis-Leistungs-Verhältnis bei 600 €.' }
             ]
           },
           {
             type: 'list',
             h2: 'Fazit',
             items: [
-              '🏆 <strong>Beste Leistung:</strong> RTX 5090 (200 Tok/s) — für Produktionsumgebungen.',
-              '💰 <strong>Bestes Preis-Leistungs-Verhältnis:</strong> RTX 4070 Ti (600 €, 80 Tok/s).',
-              '🍎 <strong>Mac-Nutzer:</strong> M2 Ultra für 70B-Modelle nativ; M3 Max für 8–13B.',
+              '🏆 <strong>Beste Leistung:</strong> RTX 5090 (150–200 Tok/s) — für Produktionsumgebungen.',
+              '💰 <strong>Bestes Preis-Leistungs-Verhältnis:</strong> RTX 5070 (600 €, 60–80 Tok/s).',
+              '🍎 <strong>Mac-Nutzer:</strong> M5 Max für 70B-Modelle nativ; M5 Pro für 8–30B.',
               '⚠️ <strong>Vermeiden:</strong> Nur-CPU für interaktiven Chat — Latenz ist inakzeptabel.'
             ]
           },
@@ -637,11 +637,11 @@
             type: 'list',
             h2: 'Comparaison de vitesse',
             items: [
-              '<strong>NVIDIA RTX 5090 GPU :</strong> 200 tokens/s — performances maximales, production.',
-              '<strong>NVIDIA RTX 4090 GPU :</strong> 150 tokens/s — chat temps réel, prêt pour la production.',
-              '<strong>Apple M2 Ultra (192 Go) :</strong> 60 tokens/s — seul matériel grand public pour les modèles 70B nativement.',
-              '<strong>Apple M3 Max :</strong> 25–30 tokens/s — adapté aux utilisateurs Mac, modèles 13B.',
-              '<strong>Intel i9 CPU :</strong> 5 tokens/s — impraticable pour une utilisation interactive (latence 5–10 s).'
+              '<strong>NVIDIA RTX 5090 GPU :</strong> 150–200 tokens/s (8B) — vitesse brute maximale, mais pas de modèles 30B+.',
+              '<strong>NVIDIA RTX 5070 GPU :</strong> 60–80 tokens/s (8B) — meilleur rapport qualité/prix.',
+              '<strong>Apple M5 Max (128 Go) :</strong> 35–50 tokens/s — exécute les modèles 70B nativement, ~35 W.',
+              '<strong>Apple M5 Pro (64 Go) :</strong> 40–60 tokens/s (8B), 20–30 tok/s sur 30B — meilleur tout-en-un, ~25 W.',
+              '<strong>CPU (DDR5) :</strong> 10–20 tokens/s (8B) — utilisation interactive limitée.'
             ]
           },
           {
@@ -657,39 +657,39 @@
           {
             type: 'comparison',
             h2: 'Comparatif GPU',
-            line1: 'RTX 5090 : 200 tok/s — performances maximales',
-            line2: 'RTX 4070 Ti : 80 tok/s — meilleur rapport qualité/prix',
-            tip: '⭐ RTX 4070 Ti à ~600 $ offre 80% de la vitesse RTX 4090 à un tiers du prix.'
+            line1: 'RTX 5090 : 150–200 tok/s — performances maximales',
+            line2: 'RTX 5070 : 60–80 tok/s — meilleur rapport qualité/prix',
+            tip: '⭐ RTX 5070 à ~600 $ offre 80% de la vitesse RTX 5090 pour 30% du prix.'
           },
           {
             type: 'table',
             h2: 'Vitesse GPU par taille de modèle',
-            columns: ['Matériel', 'Llama 3.2 8B', 'Qwen2.5 32B', 'Prix'],
+            columns: ['Matériel', 'Qwen3 8B', 'Qwen3 30B', 'Prix'],
             rows: [
-              { 'Matériel': 'RTX 5090 (32 Go)', 'Llama 3.2 8B': '200 tok/s', 'Qwen2.5 32B': '70 tok/s', 'Prix': '2 000 $' },
-              { 'Matériel': 'RTX 4090 (24 Go)', 'Llama 3.2 8B': '150 tok/s', 'Qwen2.5 32B': '50 tok/s', 'Prix': '1 800 $' },
-              { 'Matériel': 'RTX 4070 Ti (12 Go)', 'Llama 3.2 8B': '80 tok/s', 'Qwen2.5 32B': '25 tok/s', 'Prix': '600 $' }
+              { 'Matériel': 'RTX 5090 (32 Go)', 'Qwen3 8B': '150–200 tok/s', 'Qwen3 30B': 'Impossible*', 'Prix': '2 000 $' },
+              { 'Matériel': 'RTX 5080 (16 Go)', 'Qwen3 8B': '100–130 tok/s', 'Qwen3 30B': 'Impossible*', 'Prix': '1 000 $' },
+              { 'Matériel': 'RTX 5070 (12 Go)', 'Qwen3 8B': '60–80 tok/s', 'Qwen3 30B': 'Impossible*', 'Prix': '600 $' }
             ]
           },
           {
             type: 'table',
             h2: 'CPU vs Apple Silicon',
-            columns: ['Matériel', 'Llama 3.2 8B', 'Llama 3.3 70B', 'Prix'],
+            columns: ['Matériel', 'Qwen3 8B', 'Qwen3 30B', 'Prix'],
             rows: [
-              { 'Matériel': 'Mac Studio M2 Ultra (192 Go)', 'Llama 3.2 8B': '60 tok/s', 'Llama 3.3 70B': '35 tok/s', 'Prix': '4 000 $' },
-              { 'Matériel': 'MacBook Pro M4 Max (128 Go)', 'Llama 3.2 8B': '35 tok/s', 'Llama 3.3 70B': '8 tok/s*', 'Prix': '4 000 $' },
-              { 'Matériel': 'MacBook Pro M3 Max (96 Go)', 'Llama 3.2 8B': '25 tok/s', 'Llama 3.3 70B': '5 tok/s*', 'Prix': '3 500 $' },
-              { 'Matériel': 'Intel i9 14900K (CPU seul)', 'Llama 3.2 8B': '5 tok/s', 'Llama 3.3 70B': '1 tok/s', 'Prix': '600 $' }
+              { 'Matériel': 'MacBook Pro M5 Max (128 Go)', 'Qwen3 8B': '60–80 tok/s', 'Qwen3 30B': '35–50 tok/s', 'Prix': '3 199 $' },
+              { 'Matériel': 'MacBook Pro M5 Pro (64 Go)', 'Qwen3 8B': '40–60 tok/s', 'Qwen3 30B': '20–30 tok/s', 'Prix': '2 399 $' },
+              { 'Matériel': 'Mac mini M5 (16–32 Go)', 'Qwen3 8B': '25–35 tok/s', 'Qwen3 30B': 'Déchargement*', 'Prix': '599 $' },
+              { 'Matériel': 'CPU (DDR5, seul)', 'Qwen3 8B': '10–20 tok/s', 'Qwen3 30B': '3–5 tok/s', 'Prix': '600 $' }
             ]
           },
           {
             type: 'list',
             h2: 'Bande passante mémoire : Le vrai goulot',
             items: [
-              '<strong>RTX 5090 (GDDR7) :</strong> 1 792 Go/s → 200 tok/s',
-              '<strong>RTX 4090 (GDDR6X) :</strong> 1 008 Go/s → 150 tok/s',
-              '<strong>Mac Studio M2 Ultra (unifié) :</strong> 800 Go/s → 60 tok/s',
-              '<strong>DDR5-5600 RAM (CPU) :</strong> 89 Go/s → 5 tok/s',
+              '<strong>RTX 5090 (GDDR7) :</strong> 1 792 Go/s → 150–200 tok/s',
+              '<strong>RTX 5080 (GDDR7) :</strong> 960 Go/s → 100–130 tok/s',
+              '<strong>MacBook Pro M5 Pro (unifié) :</strong> 307 Go/s → 40–60 tok/s',
+              '<strong>DDR5-5600 RAM (CPU) :</strong> 89 Go/s → 10–20 tok/s',
               'L\'inférence LLM est limitée par la mémoire — plus de bande passante = tokens plus rapides.'
             ]
           },
@@ -700,16 +700,16 @@
               'Vous avez besoin d\'un chat temps réel (moins d\'1 seconde de latence)',
               'Modèles en fonctionnement 24h/24 ou traitement par lots de grandes données',
               'Applications IA en production ou déploiements d\'équipe',
-              'Budget 600–1 800 $ justifié pour 2+ heures d\'utilisation par jour'
+              'Budget 600–2 000 $ justifié pour 2+ heures d\'utilisation par jour'
             ]
           },
           {
             type: 'list',
             h2: 'Apple Silicon : Le compromis idéal',
             items: [
-              '<strong>Mac Studio M2 Ultra (192 Go) :</strong> Le seul matériel grand public pour Llama 3.3 70B nativement (35 tok/s) — sans déchargement.',
-              '<strong>MacBook Pro M4 Max (128 Go) :</strong> 35 tok/s pour les modèles 8B — portable et efficace.',
-              '<strong>Efficacité énergétique :</strong> M3 Max à 25 tok/s avec seulement 25 W de consommation.',
+              '<strong>MacBook Pro M5 Pro (64 Go) :</strong> Exécute les modèles 30B nativement (20–30 tok/s) — aucun GPU grand public n\'y arrive.',
+              '<strong>MacBook Pro M5 Max (128 Go) :</strong> Exécute les modèles 70B nativement à 35–50 tok/s — pour la recherche et les charges 30B+.',
+              '<strong>Efficacité énergétique :</strong> M5 Pro à 40–60 tok/s (8B) avec seulement ~25 W de consommation.',
               '<strong>Sans pilotes :</strong> Intégration macOS native, plug-and-play.'
             ]
           },
@@ -717,39 +717,39 @@
             type: 'list',
             h2: 'CPU seul : À éviter pour le chat',
             items: [
-              '<strong>Vitesse :</strong> Intel i9 tourne les modèles 8B à 5 tokens/s.',
-              '<strong>Latence :</strong> 5–10 secondes de temps de réponse — inutilisable pour le chat interactif.',
+              '<strong>Vitesse :</strong> CPU moderne (DDR5) tourne les modèles 8B à 10–20 tokens/s.',
+              '<strong>Latence :</strong> Temps de réponse nettement plus lents — impraticable pour le chat interactif sur des modèles plus grands.',
               '<strong>Adapté uniquement à :</strong> Traitement par lots de nuit (résumé de documents, analyse hors-ligne).',
-              '<strong>Goulot de mémoire :</strong> Bande passante RAM (89 Go/s) 20× plus lente que la VRAM GPU.'
+              '<strong>Goulot de mémoire :</strong> Bande passante RAM DDR5 (89 Go/s) ~20× plus lente que la VRAM RTX 5090 (1 792 Go/s).'
             ]
           },
           {
             type: 'numbered',
             h2: 'Erreurs courantes',
             items: [
-              'Utiliser le CPU pour le chat interactif — 5 secondes de latence inutilisables.',
-              'Acheter d\'anciens GPU (RTX 2080) — 10× plus lent que le RTX 4070 Ti.',
-              'Croire que le M3 Max peut exécuter des modèles 70B — seul le M2 Ultra (192 Go) le fait nativement.',
-              'Ignorer les besoins en alimentation et refroidissement — RTX 4090 nécessite une alimentation 1 200 W.',
-              'Sous-estimer les besoins en VRAM : les modèles 70B (Q4) nécessitent ~40 Go de VRAM.'
+              'Utiliser le CPU pour le chat interactif — impraticable sur des modèles plus grands.',
+              'Choisir un GPU pour des modèles 30B+ — aucune carte RTX 50 n\'a assez de VRAM ; le déchargement coûte 5–10× la vitesse.',
+              'Croire que le M5 Pro peut exécuter des modèles 70B — seul le M5 Max (128 Go) le fait nativement.',
+              'Ignorer les besoins en alimentation et refroidissement — le RTX 5090 nécessite 450 W et une alimentation adaptée.',
+              'Sous-estimer les besoins en VRAM : la série RTX 50 plafonne à 32 Go (RTX 5090) — insuffisant pour les modèles 30B+.'
             ]
           },
           {
             type: 'faq',
             h2: 'Questions fréquentes',
             faqs: [
-              { q: 'Le GPU est-il vraiment 30× plus rapide que le CPU ?', a: 'Oui. RTX 4090 (150 tok/s) vs Intel i9 (5 tok/s) = 30× de différence de vitesse grâce au traitement parallèle CUDA et aux cœurs tenseurs dédiés.' },
-              { q: 'Apple Silicon peut-il exécuter des modèles 70B ?', a: 'Le Mac Studio M2 Ultra (192 Go) exécute Llama 3.3 70B nativement à 35 tok/s. Les Mac plus petits doivent décharger — perte de qualité.' },
-              { q: 'Le RTX 4070 Ti est-il suffisant ?', a: 'Oui. 80 tok/s suffisent pour le chat temps réel, le coding et les résumés. Excellent rapport qualité/prix à 600 $.' }
+              { q: 'Le GPU est-il vraiment plus rapide que le CPU ?', a: 'Oui. RTX 5090 (150–200 tok/s) vs CPU avec DDR5 (10–20 tok/s) — différence de vitesse due au traitement parallèle CUDA et aux cœurs tenseurs dédiés.' },
+              { q: 'Apple Silicon peut-il exécuter des modèles 70B ?', a: 'Le MacBook Pro M5 Max (128 Go) exécute les modèles 70B nativement à 35–50 tok/s. Les puces plus petites doivent décharger — perte de qualité.' },
+              { q: 'Le RTX 5070 est-il suffisant ?', a: 'Oui. 60–80 tok/s suffisent pour le chat temps réel, le coding et les résumés. Excellent rapport qualité/prix à 600 $.' }
             ]
           },
           {
             type: 'list',
             h2: 'Conclusion',
             items: [
-              '🏆 <strong>Meilleures performances :</strong> RTX 5090 (200 tok/s) — pour la production.',
-              '💰 <strong>Meilleur rapport qualité/prix :</strong> RTX 4070 Ti (600 $, 80 tok/s).',
-              '🍎 <strong>Utilisateurs Mac :</strong> M2 Ultra pour les modèles 70B nativement ; M3 Max pour 8–13B.',
+              '🏆 <strong>Meilleures performances :</strong> RTX 5090 (150–200 tok/s) — pour la production.',
+              '💰 <strong>Meilleur rapport qualité/prix :</strong> RTX 5070 (600 $, 60–80 tok/s).',
+              '🍎 <strong>Utilisateurs Mac :</strong> M5 Max pour les modèles 70B nativement ; M5 Pro pour 8–30B.',
               '⚠️ <strong>Éviter :</strong> CPU seul pour le chat interactif — latence impraticable.'
             ]
           },
@@ -775,11 +775,11 @@
             type: 'list',
             h2: '速度比較',
             items: [
-              '<strong>NVIDIA RTX 5090 GPU：</strong>200トークン/秒 — 最高性能、プロダクション向け。',
-              '<strong>NVIDIA RTX 4090 GPU：</strong>150トークン/秒 — リアルタイムチャット対応。',
-              '<strong>Apple M2 Ultra（192 GB）：</strong>60トークン/秒 — 70Bモデルをネイティブで実行できる唯一のコンシューマーハードウェア。',
-              '<strong>Apple M3 Max：</strong>25〜30トークン/秒 — Macユーザー、13Bモデルに最適。',
-              '<strong>Intel i9 CPU：</strong>5トークン/秒 — インタラクティブ使用には不向き（5〜10秒のレイテンシ）。'
+              '<strong>NVIDIA RTX 5090 GPU：</strong>150〜200トークン/秒（8B）— 最速だが30B以上は不可。',
+              '<strong>NVIDIA RTX 5070 GPU：</strong>60〜80トークン/秒（8B）— 最高のコスパ。',
+              '<strong>Apple M5 Max（128 GB）：</strong>35〜50トークン/秒 — 70Bモデルをネイティブ実行、約35W。',
+              '<strong>Apple M5 Pro（64 GB）：</strong>40〜60トークン/秒（8B）、30Bで20〜30トークン/秒 — 最良のオールラウンド、約25W。',
+              '<strong>CPU（DDR5）：</strong>10〜20トークン/秒（8B）— インタラクティブ用途には限定的。'
             ]
           },
           {
@@ -795,39 +795,39 @@
           {
             type: 'comparison',
             h2: 'GPU性能比較',
-            line1: 'RTX 5090：200 tok/s — 最高性能',
-            line2: 'RTX 4070 Ti：80 tok/s — 最高のコスパ',
-            tip: '⭐ RTX 4070 Ti（約600ドル）はRTX 4090の80%の速度を3分の1のコストで実現。'
+            line1: 'RTX 5090：150〜200 tok/s — 最高性能',
+            line2: 'RTX 5070：60〜80 tok/s — 最高のコスパ',
+            tip: '⭐ RTX 5070（約600ドル）はRTX 5090の80%の速度を30%のコストで実現。'
           },
           {
             type: 'table',
             h2: 'GPUの速度比較（モデルサイズ別）',
-            columns: ['ハードウェア', 'Llama 3.2 8B', 'Qwen2.5 32B', '価格'],
+            columns: ['ハードウェア', 'Qwen3 8B', 'Qwen3 30B', '価格'],
             rows: [
-              { 'ハードウェア': 'RTX 5090（32 GB）', 'Llama 3.2 8B': '200 tok/s', 'Qwen2.5 32B': '70 tok/s', '価格': '$2,000' },
-              { 'ハードウェア': 'RTX 4090（24 GB）', 'Llama 3.2 8B': '150 tok/s', 'Qwen2.5 32B': '50 tok/s', '価格': '$1,800' },
-              { 'ハードウェア': 'RTX 4070 Ti（12 GB）', 'Llama 3.2 8B': '80 tok/s', 'Qwen2.5 32B': '25 tok/s', '価格': '$600' }
+              { 'ハードウェア': 'RTX 5090（32 GB）', 'Qwen3 8B': '150〜200 tok/s', 'Qwen3 30B': '実行不可*', '価格': '$2,000' },
+              { 'ハードウェア': 'RTX 5080（16 GB）', 'Qwen3 8B': '100〜130 tok/s', 'Qwen3 30B': '実行不可*', '価格': '$1,000' },
+              { 'ハードウェア': 'RTX 5070（12 GB）', 'Qwen3 8B': '60〜80 tok/s', 'Qwen3 30B': '実行不可*', '価格': '$600' }
             ]
           },
           {
             type: 'table',
             h2: 'CPUとApple Siliconの比較',
-            columns: ['ハードウェア', 'Llama 3.2 8B', 'Llama 3.3 70B', '価格'],
+            columns: ['ハードウェア', 'Qwen3 8B', 'Qwen3 30B', '価格'],
             rows: [
-              { 'ハードウェア': 'Mac Studio M2 Ultra（192 GB）', 'Llama 3.2 8B': '60 tok/s', 'Llama 3.3 70B': '35 tok/s', '価格': '$4,000' },
-              { 'ハードウェア': 'MacBook Pro M4 Max（128 GB）', 'Llama 3.2 8B': '35 tok/s', 'Llama 3.3 70B': '8 tok/s*', '価格': '$4,000' },
-              { 'ハードウェア': 'MacBook Pro M3 Max（96 GB）', 'Llama 3.2 8B': '25 tok/s', 'Llama 3.3 70B': '5 tok/s*', '価格': '$3,500' },
-              { 'ハードウェア': 'Intel i9 14900K（CPUのみ）', 'Llama 3.2 8B': '5 tok/s', 'Llama 3.3 70B': '1 tok/s', '価格': '$600' }
+              { 'ハードウェア': 'MacBook Pro M5 Max（128 GB）', 'Qwen3 8B': '60〜80 tok/s', 'Qwen3 30B': '35〜50 tok/s', '価格': '$3,199' },
+              { 'ハードウェア': 'MacBook Pro M5 Pro（64 GB）', 'Qwen3 8B': '40〜60 tok/s', 'Qwen3 30B': '20〜30 tok/s', '価格': '$2,399' },
+              { 'ハードウェア': 'Mac mini M5（16〜32 GB）', 'Qwen3 8B': '25〜35 tok/s', 'Qwen3 30B': 'オフロード*', '価格': '$599' },
+              { 'ハードウェア': 'CPU（DDR5、CPUのみ）', 'Qwen3 8B': '10〜20 tok/s', 'Qwen3 30B': '3〜5 tok/s', '価格': '$600' }
             ]
           },
           {
             type: 'list',
             h2: 'メモリ帯域幅：真のボトルネック',
             items: [
-              '<strong>RTX 5090（GDDR7）：</strong>1,792 GB/s → 200 tok/s',
-              '<strong>RTX 4090（GDDR6X）：</strong>1,008 GB/s → 150 tok/s',
-              '<strong>Mac Studio M2 Ultra（ユニファイド）：</strong>800 GB/s → 60 tok/s',
-              '<strong>DDR5-5600 RAM（CPU）：</strong>89 GB/s → 5 tok/s',
+              '<strong>RTX 5090（GDDR7）：</strong>1,792 GB/s → 150〜200 tok/s',
+              '<strong>RTX 5080（GDDR7）：</strong>960 GB/s → 100〜130 tok/s',
+              '<strong>MacBook Pro M5 Pro（ユニファイド）：</strong>307 GB/s → 40〜60 tok/s',
+              '<strong>DDR5-5600 RAM（CPU）：</strong>89 GB/s → 10〜20 tok/s',
               'LLM推論はメモリバウンド — 帯域幅が多いほど高速なトークン生成が可能。'
             ]
           },
@@ -838,16 +838,16 @@
               'リアルタイムチャット（1秒未満のレイテンシ）が必要な場合',
               '24時間365日モデルを稼働させるかバッチ処理をする場合',
               'プロダクションAIアプリケーションやチームデプロイメント',
-              '1日2時間以上使用するなら600〜1,800ドルの投資は正当化される'
+              '1日2時間以上使用するなら600〜2,000ドルの投資は正当化される'
             ]
           },
           {
             type: 'list',
             h2: 'Apple Silicon：中間の選択肢',
             items: [
-              '<strong>Mac Studio M2 Ultra（192 GB）：</strong>Llama 3.3 70Bをネイティブで35 tok/s実行できる唯一のコンシューマーハードウェア。オフロード不要。',
-              '<strong>MacBook Pro M4 Max（128 GB）：</strong>8Bモデルで35 tok/s — ポータブルで効率的。',
-              '<strong>消費電力効率：</strong>M3 Maxは25 tok/sをわずか25Wで実現。',
+              '<strong>MacBook Pro M5 Pro（64 GB）：</strong>30Bモデルをネイティブで20〜30 tok/s実行 — コンシューマーGPUでは実現不可能。',
+              '<strong>MacBook Pro M5 Max（128 GB）：</strong>70Bモデルをネイティブで35〜50 tok/s実行 — 研究用途や重い30B以上のワークロードに最適。',
+              '<strong>消費電力効率：</strong>M5 Proは40〜60 tok/s（8B）をわずか約25Wで実現。',
               '<strong>ドライバー不要：</strong>macOSネイティブ統合、プラグアンドプレイ。'
             ]
           },
@@ -855,39 +855,39 @@
             type: 'list',
             h2: 'CPUのみ：チャットには不向き',
             items: [
-              '<strong>速度：</strong>Intel i9は8Bモデルで5トークン/秒。',
-              '<strong>レイテンシ：</strong>5〜10秒の応答時間 — インタラクティブチャットには使用不可。',
+              '<strong>速度：</strong>現代的なCPU（DDR5）は8Bモデルで10〜20トークン/秒。',
+              '<strong>レイテンシ：</strong>明らかに遅い応答時間 — より大きなモデルでのインタラクティブチャットには不向き。',
               '<strong>適しているのみ：</strong>夜間のバッチ処理（文書要約、オフライン分析）。',
-              '<strong>メモリボトルネック：</strong>RAM帯域幅（89 GB/s）はGPU VRAMの20倍遅い。'
+              '<strong>メモリボトルネック：</strong>DDR5 RAM帯域幅（89 GB/s）はRTX 5090のGPU VRAM（1,792 GB/s）より約20倍遅い。'
             ]
           },
           {
             type: 'numbered',
             h2: 'よくある間違い',
             items: [
-              'CPUをインタラクティブチャットに使用する — 5秒のレイテンシは使用不可。',
-              '古いGPU（RTX 2080）を購入する — RTX 4070 Tiより10倍遅い。',
-              'M3 MaxでSS70Bモデルが動くと思う — M2 Ultra（192 GB）のみがネイティブ対応。',
-              '電力と冷却の要件を無視する — RTX 4090は1,200W電源が必要。',
-              'VRAMの必要量を過小評価する：70Bモデル（Q4）は約40 GB VRAMが必要。'
+              'CPUをインタラクティブチャットに使用する — 大きなモデルでは使用不可。',
+              '30B以上のモデルにGPUを選ぶ — RTX 50シリーズはVRAMが足りず、オフロードで5〜10倍の速度低下。',
+              'M5 Proで70Bモデルが動くと思う — M5 Max（128 GB）のみがネイティブ対応。',
+              '電力と冷却の要件を無視する — RTX 5090は450Wと十分な電源が必要。',
+              'VRAMの必要量を過小評価する：RTX 50シリーズの最大は32GB（RTX 5090）— 30B以上のモデルには不足。'
             ]
           },
           {
             type: 'faq',
             h2: 'よくある質問',
             faqs: [
-              { q: 'GPUはCPUより本当に30倍速いですか？', a: 'はい。RTX 4090（150 tok/s）対Intel i9（5 tok/s）= CUDAの並列処理と専用テンソルコアによる30倍の速度差。' },
-              { q: 'Apple Siliconは70Bモデルを実行できますか？', a: 'Mac Studio M2 Ultra（192 GB）はLlama 3.3 70Bをネイティブで35 tok/s実行できます。小型Macはオフロードが必要で品質が低下します。' },
-              { q: 'RTX 4070 Tiで十分ですか？', a: 'はい。80 tok/sはリアルタイムチャット、コーディング、要約に十分です。600ドルで最高のコストパフォーマンス。' }
+              { q: 'GPUはCPUより本当に速いですか？', a: 'はい。RTX 5090（150〜200 tok/s）対DDR5搭載CPU（10〜20 tok/s）— CUDAの並列処理と専用テンソルコアによる速度差。' },
+              { q: 'Apple Siliconは70Bモデルを実行できますか？', a: 'MacBook Pro M5 Max（128 GB）は70Bモデルをネイティブで35〜50 tok/s実行できます。小型チップはオフロードが必要で品質が低下します。' },
+              { q: 'RTX 5070で十分ですか？', a: 'はい。60〜80 tok/sはリアルタイムチャット、コーディング、要約に十分です。600ドルで最高のコストパフォーマンス。' }
             ]
           },
           {
             type: 'list',
             h2: 'まとめ',
             items: [
-              '🏆 <strong>最高性能：</strong>RTX 5090（200 tok/s）— プロダクション向け。',
-              '💰 <strong>最高コスパ：</strong>RTX 4070 Ti（600ドル、80 tok/s）。',
-              '🍎 <strong>Macユーザー：</strong>70BモデルにはM2 Ultra；8〜13BにはM3 Max。',
+              '🏆 <strong>最高性能：</strong>RTX 5090（150〜200 tok/s）— プロダクション向け。',
+              '💰 <strong>最高コスパ：</strong>RTX 5070（600ドル、60〜80 tok/s）。',
+              '🍎 <strong>Macユーザー：</strong>70BモデルにはM5 Max；8〜30BにはM5 Pro。',
               '⚠️ <strong>避けるべき：</strong>インタラクティブチャットへのCPUのみの使用 — レイテンシが実用的でない。'
             ]
           },
@@ -913,11 +913,11 @@
             type: 'list',
             h2: '速度对比',
             items: [
-              '<strong>NVIDIA RTX 5090 GPU：</strong>200 token/秒 — 最高性能，适合生产环境。',
-              '<strong>NVIDIA RTX 4090 GPU：</strong>150 token/秒 — 实时对话，生产就绪。',
-              '<strong>Apple M2 Ultra（192 GB）：</strong>60 token/秒 — 唯一能原生运行70B模型的消费级硬件。',
-              '<strong>Apple M3 Max：</strong>25–30 token/秒 — 适合Mac用户，支持13B模型。',
-              '<strong>Intel i9 CPU：</strong>5 token/秒 — 不适合交互式使用（延迟5–10秒）。'
+              '<strong>NVIDIA RTX 5090 GPU：</strong>150–200 token/秒（8B）— 原始速度最快，但无法运行30B以上模型。',
+              '<strong>NVIDIA RTX 5070 GPU：</strong>60–80 token/秒（8B）— 性价比最高。',
+              '<strong>Apple M5 Max（128 GB）：</strong>35–50 token/秒 — 原生运行70B模型，约35W。',
+              '<strong>Apple M5 Pro（64 GB）：</strong>40–60 token/秒（8B），30B达20–30 token/秒 — 综合最佳，约25W。',
+              '<strong>CPU（DDR5）：</strong>10–20 token/秒（8B）— 交互式使用有限。'
             ]
           },
           {
@@ -933,39 +933,39 @@
           {
             type: 'comparison',
             h2: 'GPU性能对比',
-            line1: 'RTX 5090：200 tok/s — 最高性能',
-            line2: 'RTX 4070 Ti：80 tok/s — 最佳性价比',
-            tip: '⭐ RTX 4070 Ti（约600美元）以三分之一的价格提供RTX 4090 80%的速度。'
+            line1: 'RTX 5090：150–200 tok/s — 最高性能',
+            line2: 'RTX 5070：60–80 tok/s — 最佳性价比',
+            tip: '⭐ RTX 5070（约600美元）以RTX 5090 30%的价格提供其80%的速度。'
           },
           {
             type: 'table',
             h2: 'GPU速度对比（按模型大小）',
-            columns: ['硬件', 'Llama 3.2 8B', 'Qwen2.5 32B', '价格'],
+            columns: ['硬件', 'Qwen3 8B', 'Qwen3 30B', '价格'],
             rows: [
-              { '硬件': 'RTX 5090（32 GB）', 'Llama 3.2 8B': '200 tok/s', 'Qwen2.5 32B': '70 tok/s', '价格': '$2,000' },
-              { '硬件': 'RTX 4090（24 GB）', 'Llama 3.2 8B': '150 tok/s', 'Qwen2.5 32B': '50 tok/s', '价格': '$1,800' },
-              { '硬件': 'RTX 4070 Ti（12 GB）', 'Llama 3.2 8B': '80 tok/s', 'Qwen2.5 32B': '25 tok/s', '价格': '$600' }
+              { '硬件': 'RTX 5090（32 GB）', 'Qwen3 8B': '150–200 tok/s', 'Qwen3 30B': '无法运行*', '价格': '$2,000' },
+              { '硬件': 'RTX 5080（16 GB）', 'Qwen3 8B': '100–130 tok/s', 'Qwen3 30B': '无法运行*', '价格': '$1,000' },
+              { '硬件': 'RTX 5070（12 GB）', 'Qwen3 8B': '60–80 tok/s', 'Qwen3 30B': '无法运行*', '价格': '$600' }
             ]
           },
           {
             type: 'table',
             h2: 'CPU vs Apple Silicon',
-            columns: ['硬件', 'Llama 3.2 8B', 'Llama 3.3 70B', '价格'],
+            columns: ['硬件', 'Qwen3 8B', 'Qwen3 30B', '价格'],
             rows: [
-              { '硬件': 'Mac Studio M2 Ultra（192 GB）', 'Llama 3.2 8B': '60 tok/s', 'Llama 3.3 70B': '35 tok/s', '价格': '$4,000' },
-              { '硬件': 'MacBook Pro M4 Max（128 GB）', 'Llama 3.2 8B': '35 tok/s', 'Llama 3.3 70B': '8 tok/s*', '价格': '$4,000' },
-              { '硬件': 'MacBook Pro M3 Max（96 GB）', 'Llama 3.2 8B': '25 tok/s', 'Llama 3.3 70B': '5 tok/s*', '价格': '$3,500' },
-              { '硬件': 'Intel i9 14900K（仅CPU）', 'Llama 3.2 8B': '5 tok/s', 'Llama 3.3 70B': '1 tok/s', '价格': '$600' }
+              { '硬件': 'MacBook Pro M5 Max（128 GB）', 'Qwen3 8B': '60–80 tok/s', 'Qwen3 30B': '35–50 tok/s', '价格': '$3,199' },
+              { '硬件': 'MacBook Pro M5 Pro（64 GB）', 'Qwen3 8B': '40–60 tok/s', 'Qwen3 30B': '20–30 tok/s', '价格': '$2,399' },
+              { '硬件': 'Mac mini M5（16–32 GB）', 'Qwen3 8B': '25–35 tok/s', 'Qwen3 30B': '卸载*', '价格': '$599' },
+              { '硬件': 'CPU（DDR5，仅CPU）', 'Qwen3 8B': '10–20 tok/s', 'Qwen3 30B': '3–5 tok/s', '价格': '$600' }
             ]
           },
           {
             type: 'list',
             h2: '内存带宽：真正的速度瓶颈',
             items: [
-              '<strong>RTX 5090（GDDR7）：</strong>1,792 GB/s → 200 tok/s',
-              '<strong>RTX 4090（GDDR6X）：</strong>1,008 GB/s → 150 tok/s',
-              '<strong>Mac Studio M2 Ultra（统一内存）：</strong>800 GB/s → 60 tok/s',
-              '<strong>DDR5-5600内存（CPU）：</strong>89 GB/s → 5 tok/s',
+              '<strong>RTX 5090（GDDR7）：</strong>1,792 GB/s → 150–200 tok/s',
+              '<strong>RTX 5080（GDDR7）：</strong>960 GB/s → 100–130 tok/s',
+              '<strong>MacBook Pro M5 Pro（统一内存）：</strong>307 GB/s → 40–60 tok/s',
+              '<strong>DDR5-5600内存（CPU）：</strong>89 GB/s → 10–20 tok/s',
               'LLM推理受内存带宽限制 — 带宽越大，token生成越快。'
             ]
           },
@@ -976,16 +976,16 @@
               '需要实时对话（延迟低于1秒）',
               '全天候运行模型或批量处理大型数据集',
               '生产级AI应用或团队部署',
-              '每天使用2小时以上，600–1,800美元的投入物有所值'
+              '每天使用2小时以上，600–2,000美元的投入物有所值'
             ]
           },
           {
             type: 'list',
             h2: 'Apple Silicon：折中选择',
             items: [
-              '<strong>Mac Studio M2 Ultra（192 GB）：</strong>唯一能以35 tok/s原生运行Llama 3.3 70B的消费级硬件 — 无需卸载。',
-              '<strong>MacBook Pro M4 Max（128 GB）：</strong>8B模型35 tok/s — 便携高效。',
-              '<strong>能效比：</strong>M3 Max以仅25W功耗实现25 tok/s。',
+              '<strong>MacBook Pro M5 Pro（64 GB）：</strong>原生运行30B模型，达20–30 tok/s — 消费级GPU无法做到。',
+              '<strong>MacBook Pro M5 Max（128 GB）：</strong>原生运行70B模型，达35–50 tok/s — 适合研究和重度30B以上负载。',
+              '<strong>能效比：</strong>M5 Pro以仅约25W功耗实现40–60 tok/s（8B）。',
               '<strong>免驱动：</strong>原生macOS集成，即插即用。'
             ]
           },
@@ -993,39 +993,39 @@
             type: 'list',
             h2: '仅CPU：避免用于实时对话',
             items: [
-              '<strong>速度：</strong>Intel i9运行8B模型仅5 token/秒。',
-              '<strong>延迟：</strong>5–10秒响应时间 — 交互式对话无法使用。',
+              '<strong>速度：</strong>现代CPU（DDR5）运行8B模型仅10–20 token/秒。',
+              '<strong>延迟：</strong>响应时间明显更慢 — 对于更大模型的交互式对话不实用。',
               '<strong>仅适用于：</strong>夜间批处理（文档摘要、离线分析）。',
-              '<strong>内存瓶颈：</strong>RAM带宽（89 GB/s）比GPU显存慢20倍。'
+              '<strong>内存瓶颈：</strong>DDR5内存带宽（89 GB/s）比RTX 5090显存（1,792 GB/s）慢约20倍。'
             ]
           },
           {
             type: 'numbered',
             h2: '常见错误',
             items: [
-              '使用CPU进行交互式对话 — 5秒延迟无法使用。',
-              '购买旧GPU（RTX 2080）— 比RTX 4070 Ti慢10倍。',
-              '以为M3 Max能运行70B模型 — 只有M2 Ultra（192 GB）能原生支持。',
-              '忽视电源和散热要求 — RTX 4090需要1,200W电源。',
-              '低估VRAM需求：70B模型（Q4）需要约40 GB显存。'
+              '使用CPU进行交互式对话 — 更大模型下无法使用。',
+              '为30B以上模型选择GPU — RTX 50系列显存都不够，卸载会造成5–10倍速度损失。',
+              '以为M5 Pro能运行70B模型 — 只有M5 Max（128 GB）能原生支持。',
+              '忽视电源和散热要求 — RTX 5090需要450W及匹配电源。',
+              '低估显存需求：RTX 50系列最高仅32GB（RTX 5090）— 不足以运行30B以上模型。'
             ]
           },
           {
             type: 'faq',
             h2: '常见问题',
             faqs: [
-              { q: 'GPU真的比CPU快30倍吗？', a: '是的。RTX 4090（150 tok/s）对比Intel i9（5 tok/s）= 30倍速度差，得益于CUDA并行处理和专用张量核心。' },
-              { q: 'Apple Silicon能运行70B模型吗？', a: 'Mac Studio M2 Ultra（192 GB）能以35 tok/s原生运行Llama 3.3 70B。较小的Mac需要卸载，会导致质量下降。' },
-              { q: 'RTX 4070 Ti够用吗？', a: '够。80 tok/s足以满足实时对话、编程和摘要需求。600美元的最佳性价比选择。' }
+              { q: 'GPU真的比CPU快吗？', a: '是的。RTX 5090（150–200 tok/s）对比DDR5 CPU（10–20 tok/s）— 速度差异来自CUDA并行处理和专用张量核心。' },
+              { q: 'Apple Silicon能运行70B模型吗？', a: 'MacBook Pro M5 Max（128 GB）能以35–50 tok/s原生运行70B模型。较小芯片需要卸载，会导致质量下降。' },
+              { q: 'RTX 5070够用吗？', a: '够。60–80 tok/s足以满足实时对话、编程和摘要需求。600美元的最佳性价比选择。' }
             ]
           },
           {
             type: 'list',
             h2: '结论',
             items: [
-              '🏆 <strong>最高性能：</strong>RTX 5090（200 tok/s）— 适合生产环境。',
-              '💰 <strong>最佳性价比：</strong>RTX 4070 Ti（600美元，80 tok/s）。',
-              '🍎 <strong>Mac用户：</strong>70B模型选M2 Ultra；8–13B选M3 Max。',
+              '🏆 <strong>最高性能：</strong>RTX 5090（150–200 tok/s）— 适合生产环境。',
+              '💰 <strong>最佳性价比：</strong>RTX 5070（600美元，60–80 tok/s）。',
+              '🍎 <strong>Mac用户：</strong>70B模型选M5 Max；8–30B选M5 Pro。',
               '⚠️ <strong>避免：</strong>仅用CPU进行交互式对话 — 延迟不切实际。'
             ]
           },

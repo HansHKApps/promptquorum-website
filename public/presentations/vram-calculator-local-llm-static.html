@@ -259,6 +259,7 @@
     }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
             * {
                 margin: 0;
                 padding: 0;
@@ -428,10 +429,10 @@
             type: 'list',
             h2: 'Quick Facts: VRAM by GPU',
             items: [
-              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 7B at Q4 (3.5 GB), 13B at Q5 (8.1 GB), 70B at Q4 with offloading',
-              '<strong>RTX 4080 (16 GB):</strong> Llama 3.1 7B at Q4 (3.5 GB), 13B at Q5 (8.1 GB), 32B at Q4 (16 GB)',
-              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B at Q4 (3.5 GB), 13B at Q5 (8.1 GB with tight headroom)',
-              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B at FP16 (26 GB), 70B not possible without extreme quantization',
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.3 7B at Q4 (3.5 GB), 13B at Q5 (8.1 GB), 70B at Q4 with offloading',
+              '<strong>RTX 4080 (16 GB):</strong> Llama 3.3 7B at Q4 (3.5 GB), 13B at Q5 (8.1 GB), 32B at Q4 (16 GB)',
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.3 7B at Q4 (3.5 GB), 13B at Q5 (8.1 GB with tight headroom)',
+              '<strong>M5 Max Mac (36 GB):</strong> Llama 3.3 13B at FP16 (26 GB), 70B not possible without extreme quantization',
               '<strong>Rule of thumb:</strong> Always budget 25–40% extra VRAM for context, batching, and system overhead'
             ]
           },
@@ -482,9 +483,9 @@
             type: 'list',
             h2: 'Real-World GPU Scenarios',
             items: [
-              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B at Q4 = 3.5 GB ✓ (plenty of room). Llama 3.1 13B at Q5 = 8.1 GB ✓ (tight, but works).',
-              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 70B at Q5 = 43.75 GB ✗ (too large). Llama 3.1 70B at Q4 with offloading = works (slow, 3–5 tok/sec).',
-              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B at FP16 = 26 GB ✓ (works). Llama 3.1 70B = impossible (even Q2 has ~70% quality loss).'
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.3 7B at Q4 = 3.5 GB ✓ (plenty of room). Llama 3.3 13B at Q5 = 8.1 GB ✓ (tight, but works).',
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.3 70B at Q5 = 43.75 GB ✗ (too large). Llama 3.3 70B at Q4 with offloading = works (slow, 3–5 tok/sec).',
+              '<strong>M5 Max Mac (36 GB):</strong> Llama 3.3 13B at FP16 = 26 GB ✓ (works). Llama 3.3 70B = impossible (even Q2 has ~70% quality loss).'
             ]
           },
           {
@@ -569,10 +570,10 @@
             type: 'list',
             h2: 'Schnelle Fakten nach GPU',
             items: [
-              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 7B at Q4 (3,5 GB), 13B at Q5 (8,1 GB), 70B bei Offloading',
-              '<strong>RTX 4080 (16 GB):</strong> Llama 3.1 7B at Q4 (3,5 GB), 13B at Q5 (8,1 GB), 32B at Q4 (16 GB)',
-              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B at Q4 (3,5 GB), 13B at Q5 (8,1 GB mit straffer Reserve)',
-              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B at FP16 (26 GB), 70B unmöglich',
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.3 7B at Q4 (3,5 GB), 13B at Q5 (8,1 GB), 70B bei Offloading',
+              '<strong>RTX 4080 (16 GB):</strong> Llama 3.3 7B at Q4 (3,5 GB), 13B at Q5 (8,1 GB), 32B at Q4 (16 GB)',
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.3 7B at Q4 (3,5 GB), 13B at Q5 (8,1 GB mit straffer Reserve)',
+              '<strong>M5 Max Mac (36 GB):</strong> Llama 3.3 13B at FP16 (26 GB), 70B unmöglich',
               '<strong>Faustregel:</strong> 25–40% zusätzliches VRAM für Kontext, Batching und Systemüberlauf'
             ]
           },
@@ -623,9 +624,9 @@
             type: 'list',
             h2: 'Praktische GPU-Szenarien',
             items: [
-              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B Q4 = 3,5 GB ✓ (viel Platz). Llama 3.1 13B Q5 = 8,1 GB ✓ (straff, aber funktioniert).',
-              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 70B Q5 = 43,75 GB ✗ (zu groß). Llama 3.1 70B Q4 mit Offloading = funktioniert (langsam, 3–5 Tok/sec).',
-              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B FP16 = 26 GB ✓ (funktioniert). Llama 3.1 70B = unmöglich (~70% Qualitätsverlust).'
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.3 7B Q4 = 3,5 GB ✓ (viel Platz). Llama 3.3 13B Q5 = 8,1 GB ✓ (straff, aber funktioniert).',
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.3 70B Q5 = 43,75 GB ✗ (zu groß). Llama 3.3 70B Q4 mit Offloading = funktioniert (langsam, 3–5 Tok/sec).',
+              '<strong>M5 Max Mac (36 GB):</strong> Llama 3.3 13B FP16 = 26 GB ✓ (funktioniert). Llama 3.3 70B = unmöglich (~70% Qualitätsverlust).'
             ]
           },
           {
@@ -710,10 +711,10 @@
             type: 'list',
             h2: 'Aperçu: VRAM par GPU',
             items: [
-              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 7B Q4 (3,5 GB), 13B Q5 (8,1 GB), 70B avec offloading',
-              '<strong>RTX 4080 (16 GB):</strong> Llama 3.1 7B Q4 (3,5 GB), 13B Q5 (8,1 GB), 32B Q4 (16 GB)',
-              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B Q4 (3,5 GB), 13B Q5 (8,1 GB marge réduite)',
-              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B FP16 (26 GB), 70B impossible',
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.3 7B Q4 (3,5 GB), 13B Q5 (8,1 GB), 70B avec offloading',
+              '<strong>RTX 4080 (16 GB):</strong> Llama 3.3 7B Q4 (3,5 GB), 13B Q5 (8,1 GB), 32B Q4 (16 GB)',
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.3 7B Q4 (3,5 GB), 13B Q5 (8,1 GB marge réduite)',
+              '<strong>M5 Max Mac (36 GB):</strong> Llama 3.3 13B FP16 (26 GB), 70B impossible',
               '<strong>Règle d\'or:</strong> Prévoir 25–40% de VRAM supplémentaire pour contexte, batching et overhead'
             ]
           },
@@ -764,9 +765,9 @@
             type: 'list',
             h2: 'Scénarios GPU Réels',
             items: [
-              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B Q4 = 3.5 GB ✓ (beaucoup place). Llama 3.1 13B Q5 = 8.1 GB ✓ (serré mais fonctionne).',
-              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 70B Q5 = 43.75 GB ✗ (trop grand). Llama 3.1 70B Q4 offloading = fonctionne (lent, 3–5 tok/sec).',
-              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B FP16 = 26 GB ✓ (fonctionne). Llama 3.1 70B = impossible (~70% perte qualité).'
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.3 7B Q4 = 3.5 GB ✓ (beaucoup place). Llama 3.3 13B Q5 = 8.1 GB ✓ (serré mais fonctionne).',
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.3 70B Q5 = 43.75 GB ✗ (trop grand). Llama 3.3 70B Q4 offloading = fonctionne (lent, 3–5 tok/sec).',
+              '<strong>M5 Max Mac (36 GB):</strong> Llama 3.3 13B FP16 = 26 GB ✓ (fonctionne). Llama 3.3 70B = impossible (~70% perte qualité).'
             ]
           },
           {
@@ -851,10 +852,10 @@
             type: 'list',
             h2: 'GPU別クイック情報',
             items: [
-              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 7B Q4 (3.5 GB)、13B Q5 (8.1 GB)、70B オフロード対応',
-              '<strong>RTX 4080 (16 GB):</strong> Llama 3.1 7B Q4 (3.5 GB)、13B Q5 (8.1 GB)、32B Q4 (16 GB)',
-              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B Q4 (3.5 GB)、13B Q5 (8.1 GB、余裕は少なめ)',
-              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B FP16 (26 GB)、70Bは不可能',
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.3 7B Q4 (3.5 GB)、13B Q5 (8.1 GB)、70B オフロード対応',
+              '<strong>RTX 4080 (16 GB):</strong> Llama 3.3 7B Q4 (3.5 GB)、13B Q5 (8.1 GB)、32B Q4 (16 GB)',
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.3 7B Q4 (3.5 GB)、13B Q5 (8.1 GB、余裕は少なめ)',
+              '<strong>M5 Max Mac (36 GB):</strong> Llama 3.3 13B FP16 (26 GB)、70Bは不可能',
               '<strong>原則:</strong> コンテキスト、バッチ処理、システムオーバーヘッド用に25–40%の追加VRAM予算'
             ]
           },
@@ -905,9 +906,9 @@
             type: 'list',
             h2: '実世界のGPUシナリオ',
             items: [
-              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B Q4 = 3.5 GB ✓ (充分な余裕)。Llama 3.1 13B Q5 = 8.1 GB ✓ (タイトですが動作)。',
-              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 70B Q5 = 43.75 GB ✗ (大きすぎる)。Llama 3.1 70B Q4 オフロード = 動作（遅い、3–5 tok/sec）。',
-              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B FP16 = 26 GB ✓ (動作)。Llama 3.1 70B = 不可能（~70%の品質低下）。'
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.3 7B Q4 = 3.5 GB ✓ (充分な余裕)。Llama 3.3 13B Q5 = 8.1 GB ✓ (タイトですが動作)。',
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.3 70B Q5 = 43.75 GB ✗ (大きすぎる)。Llama 3.3 70B Q4 オフロード = 動作（遅い、3–5 tok/sec）。',
+              '<strong>M5 Max Mac (36 GB):</strong> Llama 3.3 13B FP16 = 26 GB ✓ (動作)。Llama 3.3 70B = 不可能（~70%の品質低下）。'
             ]
           },
           {
@@ -992,10 +993,10 @@
             type: 'list',
             h2: '按GPU快速信息',
             items: [
-              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 7B Q4 (3.5 GB)、13B Q5 (8.1 GB)、70B带卸载支持',
-              '<strong>RTX 4080 (16 GB):</strong> Llama 3.1 7B Q4 (3.5 GB)、13B Q5 (8.1 GB)、32B Q4 (16 GB)',
-              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B Q4 (3.5 GB)、13B Q5 (8.1 GB，余量紧张)',
-              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B FP16 (26 GB)、70B无法运行',
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.3 7B Q4 (3.5 GB)、13B Q5 (8.1 GB)、70B带卸载支持',
+              '<strong>RTX 4080 (16 GB):</strong> Llama 3.3 7B Q4 (3.5 GB)、13B Q5 (8.1 GB)、32B Q4 (16 GB)',
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.3 7B Q4 (3.5 GB)、13B Q5 (8.1 GB，余量紧张)',
+              '<strong>M5 Max Mac (36 GB):</strong> Llama 3.3 13B FP16 (26 GB)、70B无法运行',
               '<strong>经验法则：</strong> 始终为上下文、批处理和系统开销预留25–40%的额外VRAM'
             ]
           },
@@ -1046,9 +1047,9 @@
             type: 'list',
             h2: '实际GPU场景',
             items: [
-              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.1 7B Q4 = 3.5 GB ✓ (余量充足)。Llama 3.1 13B Q5 = 8.1 GB ✓ (余量紧张但可用)。',
-              '<strong>RTX 4090 (24 GB):</strong> Llama 3.1 70B Q5 = 43.75 GB ✗ (过大)。Llama 3.1 70B Q4卸载 = 可用（缓慢，3–5 tok/sec）。',
-              '<strong>M3 Max Mac (36 GB):</strong> Llama 3.1 13B FP16 = 26 GB ✓ (可用)。Llama 3.1 70B = 不可能（~70%质量丧失）。'
+              '<strong>RTX 4070 Ti (12 GB):</strong> Llama 3.3 7B Q4 = 3.5 GB ✓ (余量充足)。Llama 3.3 13B Q5 = 8.1 GB ✓ (余量紧张但可用)。',
+              '<strong>RTX 4090 (24 GB):</strong> Llama 3.3 70B Q5 = 43.75 GB ✗ (过大)。Llama 3.3 70B Q4卸载 = 可用（缓慢，3–5 tok/sec）。',
+              '<strong>M5 Max Mac (36 GB):</strong> Llama 3.3 13B FP16 = 26 GB ✓ (可用)。Llama 3.3 70B = 不可能（~70%质量丧失）。'
             ]
           },
           {

@@ -264,6 +264,7 @@
     }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
             * {
                 margin: 0;
                 padding: 0;
@@ -465,7 +466,7 @@
                         intro: '',
                         items: [
                             '<strong>No Reliable Multi-Step Reasoning:</strong> Models lack working memory between token predictions. Fix: Chain-of-thought.',
-                            '<strong>Context Window Caps:</strong> GPT-4o 128K, Claude 200K, Gemini 2.5M tokens. Fix: Summarize or retrieve.',
+                            '<strong>Context Window Caps:</strong> GPT-5.5 128K, Claude Opus 4.8 1M, Gemini 3.1 Pro 2M tokens. Fix: Summarize or retrieve.',
                             '<strong>No Persistent Memory:</strong> Each conversation starts blank. Fix: App-layer memory injection (vector DB, summaries).'
                         ]
                     },
@@ -474,7 +475,7 @@
                         h2: 'Limitations 6–8: Actions, Bias, Self-Verification',
                         intro: '',
                         items: [
-                            '<strong>Cannot Take Real Actions:</strong> Output text only. Fix: Tool use / function calls in GPT-4o, Claude, Gemini.',
+                            '<strong>Cannot Take Real Actions:</strong> Output text only. Fix: Tool use / function calls in GPT-5.5, Claude, Gemini.',
                             '<strong>Training Data Bias:</strong> Mostly English-language, Western, pre-2025 content. Fix: Provide domain context explicitly.',
                             '<strong>Cannot Self-Verify:</strong> No access to ground truth. Cannot fact-check its own claims. Fix: External human validation.'
                         ]
@@ -523,7 +524,7 @@
                             },
                             {
                                 q: 'Do all models have these same 8 limitations?',
-                                a: 'Yes. They\'re structural to transformer architecture. Severity varies (Gemini 2.5M context vs. Claude 200K), but all eight apply universally.'
+                                a: 'Yes. They\'re structural to transformer architecture. Severity varies (Gemini 3.1 Pro 2M context vs. Claude Opus 4.8 1M), but all eight apply universally.'
                             },
                             {
                                 q: 'Can fine-tuning remove these limits?',
@@ -607,7 +608,7 @@
                         intro: '',
                         items: [
                             '<strong>Kein zuverlässiges Multi-Schritt-Reasoning:</strong> Modelle ermangeln des Arbeitsspeichers zwischen Token-Vorhersagen. Lösung: Chain-of-Thought.',
-                            '<strong>Kontextfenster-Obergrenze:</strong> GPT-4o 128K, Claude 200K, Gemini 2,5M Tokens. Lösung: Zusammenfassung oder Abruf.',
+                            '<strong>Kontextfenster-Obergrenze:</strong> GPT-5.5 128K, Claude Opus 4.8 1M, Gemini 3.1 Pro 2M Tokens. Lösung: Zusammenfassung oder Abruf.',
                             '<strong>Kein dauerhaftes Gedächtnis:</strong> Jedes Gespräch beginnt von vorne. Lösung: App-Schicht-Speicherinjektion (Vektor-DB, Zusammenfassungen).'
                         ]
                     },
@@ -616,7 +617,7 @@
                         h2: 'Grenzen 6–8: Aktionen, Bias, Selbstverifizierung',
                         intro: '',
                         items: [
-                            '<strong>Kann keine echten Aktionen ausführen:</strong> Nur Textausgabe. Lösung: Tool-Einsatz / Funktionsaufrufe in GPT-4o, Claude, Gemini.',
+                            '<strong>Kann keine echten Aktionen ausführen:</strong> Nur Textausgabe. Lösung: Tool-Einsatz / Funktionsaufrufe in GPT-5.5, Claude, Gemini.',
                             '<strong>Trainingsdaten-Bias:</strong> Hauptsächlich englischsprachig, westlich, vor 2025. Lösung: Domänenkontext explizit bereitstellen.',
                             '<strong>Kann nicht selbst verifizieren:</strong> Kein Zugriff auf Grundwahrheit. Kann Behauptungen nicht selbst überprüfen. Lösung: Externe menschliche Validierung.'
                         ]
@@ -749,7 +750,7 @@
                         intro: '',
                         items: [
                             '<strong>Pas de Raisonnement Multi-Étapes Fiable :</strong> Les modèles manquent de mémoire de travail entre les prédictions de tokens. Solution : Chaîne de pensée.',
-                            '<strong>Limites de Fenêtre Contextuelle :</strong> GPT-4o 128K, Claude 200K, Gemini 2,5M tokens. Solution : Résumer ou récupérer.',
+                            '<strong>Limites de Fenêtre Contextuelle :</strong> GPT-5.5 128K, Claude Opus 4.8 1M, Gemini 3.1 Pro 2M tokens. Solution : Résumer ou récupérer.',
                             '<strong>Pas de Mémoire Persistante :</strong> Chaque conversation commence vierge. Solution : Injection de mémoire au niveau app (BD vectorielle, résumés).'
                         ]
                     },
@@ -758,7 +759,7 @@
                         h2: 'Limitations 6–8 : Actions, Biais, Auto-Vérification',
                         intro: '',
                         items: [
-                            '<strong>Impossible de Prendre des Actions Réelles :</strong> Sortie texte uniquement. Solution : Utilisation d\'outils / appels de fonction dans GPT-4o, Claude, Gemini.',
+                            '<strong>Impossible de Prendre des Actions Réelles :</strong> Sortie texte uniquement. Solution : Utilisation d\'outils / appels de fonction dans GPT-5.5, Claude, Gemini.',
                             '<strong>Biais des Données d\'Entraînement :</strong> Principalement en anglais, occidental, pré-2025. Solution : Fournir du contexte spécifique au domaine.',
                             '<strong>Impossible d\'Auto-Vérification :</strong> Pas d\'accès à la vérité fondamentale. Impossible de vérifier ses propres affirmations. Solution : Validation humaine externe.'
                         ]
@@ -891,7 +892,7 @@
                         intro: '',
                         items: [
                             '<strong>信頼できる多段階推論なし：</strong> モデルはトークン予測間の作業メモリを欠いている。回避策：チェーンオブソート。',
-                            '<strong>コンテキストウィンドウキャップ：</strong> GPT-4o 128K、Claude 200K、Gemini 2.5M トークン。回避策：要約または取得。',
+                            '<strong>コンテキストウィンドウキャップ：</strong> GPT-5.5 128K、Claude Opus 4.8 1M、Gemini 3.1 Pro 2M トークン。回避策：要約または取得。',
                             '<strong>永続的メモリなし：</strong> 各会話は白紙から始まる。回避策：アプリ層メモリ注入（ベクトルDB、要約）。'
                         ]
                     },
@@ -900,7 +901,7 @@
                         h2: '制限6～8：アクション、バイアス、自己検証',
                         intro: '',
                         items: [
-                            '<strong>実際のアクションを実行できない：</strong> テキスト出力のみ。回避策：GPT-4o、Claude、Geminiでのツール使用/関数呼び出し。',
+                            '<strong>実際のアクションを実行できない：</strong> テキスト出力のみ。回避策：GPT-5.5、Claude、Geminiでのツール使用/関数呼び出し。',
                             '<strong>トレーニングデータバイアス：</strong> 主に英語、西洋、2025年以前のコンテンツ。回避策：ドメイン固有のコンテキストを明示的に提供。',
                             '<strong>自己検証できない：</strong> 基本的な真実へのアクセスなし。独自の主張を事実確認できない。回避策：外部の人間による検証。'
                         ]
@@ -1033,7 +1034,7 @@
                         intro: '',
                         items: [
                             '<strong>无可靠的多步推理：</strong> 模型在令牌预测之间缺乏工作记忆。解决方案：思维链。',
-                            '<strong>上下文窗口限制：</strong> GPT-4o 128K、Claude 200K、Gemini 2.5M 个令牌。解决方案：总结或检索。',
+                            '<strong>上下文窗口限制：</strong> GPT-5.5 128K、Claude Opus 4.8 1M、Gemini 3.1 Pro 2M 个令牌。解决方案：总结或检索。',
                             '<strong>无持久记忆：</strong> 每次对话从零开始。解决方案：应用层记忆注入（向量数据库、摘要）。'
                         ]
                     },
@@ -1042,7 +1043,7 @@
                         h2: '限制 6-8：行动、偏差、自我验证',
                         intro: '',
                         items: [
-                            '<strong>无法采取实际行动：</strong> 仅文本输出。解决方案：GPT-4o、Claude、Gemini 中的工具使用/函数调用。',
+                            '<strong>无法采取实际行动：</strong> 仅文本输出。解决方案：GPT-5.5、Claude、Gemini 中的工具使用/函数调用。',
                             '<strong>训练数据偏差：</strong> 主要是英文、西方、2025 年前的内容。解决方案：明确提供特定领域背景。',
                             '<strong>无法自我验证：</strong> 无法访问基本真实。无法事实检查自己的陈述。解决方案：外部人工验证。'
                         ]

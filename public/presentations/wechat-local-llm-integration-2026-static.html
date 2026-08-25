@@ -41,7 +41,8 @@
         button:disabled { background: #ccc; cursor: not-allowed; }
         .slide-counter { font-size: 14px; color: #49454f; font-weight: 600; min-width: 60px; text-align: center; }
         @page { size: A4 landscape; margin: 0; }
-        @media print { html, body { overflow: visible !important; height: auto !important; background: white !important; } .header, .controls { display: none !important; } .content-area { overflow: visible !important; height: auto !important; } .slide { display: flex !important; height: 100vh; page-break-after: always; } }
+        @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; } html, body { overflow: visible !important; height: auto !important; background: white !important; } .header, .controls { display: none !important; } .content-area { overflow: visible !important; height: auto !important; } .slide { display: flex !important; height: 100vh; page-break-after: always; } }
     </style>
 </head>
 <body>
@@ -92,7 +93,7 @@ while True:
                     { type: 'list', h2: 'Key Takeaways', items: [
                         '<strong>WeChatFerry (Windows)</strong> — most reliable WeChat PC hook in 2026; runs alongside WeChat without modifying binary',
                         '<strong>Ollama HTTP API on port 11434</strong> — 10 lines of Python route WeChat messages to any local model',
-                        '<strong>Qwen2.5 7B Q4_K_M</strong> — best for Chinese chat: 5.5 GB VRAM, native CJK tokenisation, 8–15 tok/s',
+                        '<strong>Qwen3 7B Q4_K_M</strong> — best for Chinese chat: 5.5 GB VRAM, native CJK tokenisation, 8–15 tok/s',
                         '<strong>Always-on mini PC</strong> — Minisforum UM890 Pro keeps the bot live 24/7 at ~35 W',
                         '<strong>China DSL / Privacy</strong> — local inference keeps prompts and responses on your hardware'
                     ]},
@@ -110,7 +111,7 @@ while True:
                     ]},
                     { type: 'faq', h2: 'Frequently Asked Questions', faqs: [
                         { q: 'Does WeChatFerry work with WeChat for Mac?', a: 'No. Windows only — hooks the PC client DLLs. Use a Windows VM on Mac.' },
-                        { q: 'Best model for Chinese WeChat chat?', a: 'Qwen2.5 7B Q4_K_M — native CJK tokenisation, 30–40% more efficient on Chinese text than Llama or Mistral.' },
+                        { q: 'Best model for Chinese WeChat chat?', a: 'Qwen3 7B Q4_K_M — native CJK tokenisation, 30–40% more efficient on Chinese text than Llama or Mistral.' },
                         { q: 'Will Tencent ban my account?', a: 'Personal bots at 1–5 messages/min rarely trigger bans. Avoid bulk messaging or commercial outreach.' }
                     ]},
                     { type: 'cta', h2: 'Build Your Private WeChat AI Assistant', body: 'Step-by-step guide: WeChatFerry setup, Ollama API bridge, mini PC server config, China DSL compliance.', cta: 'Read the Full Guide', href: ARTICLE_BASE }
@@ -124,7 +125,7 @@ while True:
                     { type: 'list', h2: '核心要点', items: [
                         '<strong>WeChatFerry（Windows）</strong> — 2026年最稳定的微信PC客户端钩子',
                         '<strong>Ollama HTTP API（11434端口）</strong> — 10行Python实现消息路由',
-                        '<strong>Qwen2.5 7B Q4_K_M</strong> — 中文聊天最佳选择：5.5 GB显存，原生中文分词，8–15 tok/s',
+                        '<strong>Qwen3 7B Q4_K_M</strong> — 中文聊天最佳选择：5.5 GB显存，原生中文分词，8–15 tok/s',
                         '<strong>常驻迷你主机</strong> — 铭凡UM890 Pro约35 W功耗24/7在线',
                         '<strong>符合《数据安全法》</strong> — 推理内容不离开本地设备'
                     ]},
@@ -136,7 +137,7 @@ while True:
                     ]},
                     { type: 'faq', h2: '常见问题', faqs: [
                         { q: 'WeChatFerry支持Mac版微信吗？', a: '不支持。仅限Windows微信PC客户端。Mac用户可使用Windows虚拟机。' },
-                        { q: '微信中文聊天推荐哪个模型？', a: 'Qwen2.5 7B Q4_K_M——原生中文分词，比Llama或Mistral处理中文效率高30–40%。' },
+                        { q: '微信中文聊天推荐哪个模型？', a: 'Qwen3 7B Q4_K_M——原生中文分词，比Llama或Mistral处理中文效率高30–40%。' },
                         { q: '会被腾讯封号吗？', a: '每分钟1–5条消息的个人机器人极少触发封号。避免批量发送。' }
                     ]},
                     { type: 'cta', h2: '立即构建您的私密微信AI助手', body: '完整指南：WeChatFerry配置、Ollama API桥接、迷你主机服务器设置、数据安全法合规。', cta: '阅读完整指南', href: ARTICLE_BASE + '?lang=zh' }
@@ -150,7 +151,7 @@ while True:
                     { type: 'list', h2: 'Wichtigste Erkenntnisse', items: [
                         '<strong>WeChatFerry (Windows)</strong> — zuverlässigster WeChat-Hook 2026',
                         '<strong>Ollama HTTP API Port 11434</strong> — 10 Zeilen Python für Message-Routing',
-                        '<strong>Qwen2.5 7B Q4_K_M</strong> — beste Wahl für chinesischen Chat, 5,5 GB VRAM',
+                        '<strong>Qwen3 7B Q4_K_M</strong> — beste Wahl für chinesischen Chat, 5,5 GB VRAM',
                         '<strong>Mini-PC-Server</strong> — Minisforum UM890 Pro, 24/7, ~35 W',
                         '<strong>DSGVO Art. 28</strong> — keine DPA mit LLM-Anbieter nötig'
                     ]},
@@ -165,7 +166,7 @@ while True:
                     { type: 'list', h2: 'Points clés', items: [
                         '<strong>WeChatFerry (Windows)</strong> — hook WeChat le plus fiable en 2026',
                         '<strong>API HTTP Ollama port 11434</strong> — 10 lignes de Python pour le routage',
-                        '<strong>Qwen2.5 7B Q4_K_M</strong> — meilleur pour le chinois, 5,5 Go VRAM',
+                        '<strong>Qwen3 7B Q4_K_M</strong> — meilleur pour le chinois, 5,5 Go VRAM',
                         '<strong>Mini PC always-on</strong> — Minisforum UM890 Pro, ~35 W',
                         '<strong>RGPD Art. 28</strong> — pas de DPA avec un fournisseur LLM nécessaire'
                     ]},
@@ -180,7 +181,7 @@ while True:
                     { type: 'list', h2: 'ポイントまとめ', items: [
                         '<strong>WeChatFerry（Windows）</strong> — 2026年最も信頼性の高いWeChat PCフック',
                         '<strong>Ollama HTTP APIポート11434</strong> — 10行のPythonでルーティング',
-                        '<strong>Qwen2.5 7B Q4_K_M</strong> — 中国語チャットに最適、5.5 GB VRAM',
+                        '<strong>Qwen3 7B Q4_K_M</strong> — 中国語チャットに最適、5.5 GB VRAM',
                         '<strong>Always-onミニPC</strong> — Minisforum UM890 Pro、~35 W',
                         '<strong>個人情報保護法対応</strong> — データはデバイス外に出ない'
                     ]},

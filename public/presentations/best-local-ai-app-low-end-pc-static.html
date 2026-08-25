@@ -155,6 +155,7 @@
     @page { size: A4 landscape; margin: 0; }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
       * { margin: 0; padding: 0; }
       html, body { overflow: visible !important; height: auto !important; background: white !important; }
       .header, .controls { display: none !important; }

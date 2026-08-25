@@ -265,6 +265,7 @@
     }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
             * {
                 margin: 0;
                 padding: 0;
@@ -449,7 +450,7 @@
                         rows: [
                             { 'Input text': '"Hello, world!"', Tokens: '"Hello", ",", " world", "!"', 'Token count': '4' },
                             { 'Input text': '"Tokenization"', Tokens: '"Token", "ization"', 'Token count': '2' },
-                            { 'Input text': '"GPT-4o"', Tokens: '"G", "PT", "-", "4", "o"', 'Token count': '5' },
+                            { 'Input text': '"GPT-5.5"', Tokens: '"G", "PT", "-", "4", "o"', 'Token count': '5' },
                             { 'Input text': '中文 (Chinese)', Tokens: 'subword units', 'Token count': '2–4 per model' }
                         ]
                     },
@@ -489,9 +490,9 @@
                         h2: 'Context Windows by Model',
                         columns: ['Model', 'Context window', '~Word equiv.', 'Doc limit'],
                         rows: [
-                            { Model: 'GPT-4o', 'Context window': '128k tokens', '~Word equiv.': '96k words', 'Doc limit': '~200 pages' },
-                            { Model: 'Claude Sonnet', 'Context window': '200k tokens', '~Word equiv.': '150k words', 'Doc limit': '~300 pages' },
-                            { Model: 'Gemini 2.5 Pro', 'Context window': '2M tokens', '~Word equiv.': '1.5M words', 'Doc limit': '~3000 pages' },
+                            { Model: 'GPT-5.5', 'Context window': '128k tokens', '~Word equiv.': '96k words', 'Doc limit': '~200 pages' },
+                            { Model: 'Claude Opus 4.8', 'Context window': '200k tokens', '~Word equiv.': '150k words', 'Doc limit': '~300 pages' },
+                            { Model: 'Gemini 3.1 Pro', 'Context window': '2M tokens', '~Word equiv.': '1.5M words', 'Doc limit': '~3000 pages' },
                             { Model: 'LLaMA 3.1 70B', 'Context window': '128k tokens', '~Word equiv.': '96k words', 'Doc limit': '~200 pages' }
                         ]
                     },
@@ -526,7 +527,7 @@
                             '<strong>Learn transformer architecture</strong> — embeddings, attention, output projection (conceptually)',
                             '<strong>Understand why hallucination happens</strong> — they predict likely tokens, not correct facts',
                             '<strong>Experiment with temperature</strong> — try T=0.0, 0.7, 1.5 to see variation firsthand',
-                            '<strong>Know context window limits</strong> — GPT-4o sees 128k tokens; old info gets forgotten'
+                            '<strong>Know context window limits</strong> — GPT-5.5 sees 128k tokens; old info gets forgotten'
                         ]
                     },
                     {
@@ -534,7 +535,7 @@
                         h2: 'Frequently Asked Questions',
                         faqs: [
                             { q: 'Do LLMs understand text like humans?', a: 'No. They predict statistically probable tokens based on training patterns. No comprehension, intent, or awareness — only weighted probability distributions.' },
-                            { q: 'What is a token?', a: 'The smallest unit an LLM processes. ~0.75 words in English, ~0.5 words in Chinese/Japanese. GPT-4o uses Byte Pair Encoding.' },
+                            { q: 'What is a token?', a: 'The smallest unit an LLM processes. ~0.75 words in English, ~0.5 words in Chinese/Japanese. GPT-5.5 uses Byte Pair Encoding.' },
                             { q: 'What does temperature do?', a: 'Controls sampling randomness. Temperature 0 = deterministic. 1.0 = standard. >1.5 = flattened distribution and high hallucination risk.' },
                             { q: 'Why does position in prompts matter?', a: 'Transformer attention weighs beginning and end tokens more heavily than middle (lost in the middle effect). Place critical instructions at start and end.' }
                         ]
@@ -546,7 +547,7 @@
                             '<strong>LLMs predict tokens, not answers</strong> — statistically probable sequences, not verified facts',
                             '<strong>1 token ≈ 0.75 words</strong> in English (50% denser in Chinese/Japanese)',
                             '<strong>Temperature controls creativity vs. determinism</strong> — 0 for facts, 0.7 for balanced, >1.5 for high hallucination',
-                            '<strong>Context windows aren\'t memory</strong> — GPT-4o: 128k, Claude: 200k, Gemini: 2M tokens',
+                            '<strong>Context windows aren\'t memory</strong> — GPT-5.5: 128k, Claude: 200k, Gemini: 2M tokens',
                             '<strong>Position is critical</strong> — transformers weight start/end more than middle (lost in the middle)',
                             '<strong>RLHF shapes behavior, not core capability</strong> — refusals and tone come from fine-tuning'
                         ]
@@ -599,7 +600,7 @@
                         rows: [
                             { Eingabetext: '"Hello, world!"', Tokens: '"Hello", ",", " world", "!"', 'Anzahl Tokens': '4' },
                             { Eingabetext: '"Tokenization"', Tokens: '"Token", "ization"', 'Anzahl Tokens': '2' },
-                            { Eingabetext: '"GPT-4o"', Tokens: '"G", "PT", "-", "4", "o"', 'Anzahl Tokens': '5' },
+                            { Eingabetext: '"GPT-5.5"', Tokens: '"G", "PT", "-", "4", "o"', 'Anzahl Tokens': '5' },
                             { Eingabetext: '中文 (Chinesisch)', Tokens: 'Unterword-Einheiten', 'Anzahl Tokens': '2–4 pro Modell' }
                         ]
                     },
@@ -639,9 +640,9 @@
                         h2: 'Kontextfenster nach Modell',
                         columns: ['Modell', 'Kontextfenster', 'Wortäquiv.', 'Doku-Limit'],
                         rows: [
-                            { Modell: 'GPT-4o', Kontextfenster: '128k Tokens', 'Wortäquiv.': '96k Wörter', 'Doku-Limit': '~200 Seiten' },
-                            { Modell: 'Claude Sonnet', Kontextfenster: '200k Tokens', 'Wortäquiv.': '150k Wörter', 'Doku-Limit': '~300 Seiten' },
-                            { Modell: 'Gemini 2.5 Pro', Kontextfenster: '2M Tokens', 'Wortäquiv.': '1,5M Wörter', 'Doku-Limit': '~3000 Seiten' },
+                            { Modell: 'GPT-5.5', Kontextfenster: '128k Tokens', 'Wortäquiv.': '96k Wörter', 'Doku-Limit': '~200 Seiten' },
+                            { Modell: 'Claude Opus 4.8', Kontextfenster: '200k Tokens', 'Wortäquiv.': '150k Wörter', 'Doku-Limit': '~300 Seiten' },
+                            { Modell: 'Gemini 3.1 Pro', Kontextfenster: '2M Tokens', 'Wortäquiv.': '1,5M Wörter', 'Doku-Limit': '~3000 Seiten' },
                             { Modell: 'LLaMA 3.1 70B', Kontextfenster: '128k Tokens', 'Wortäquiv.': '96k Wörter', 'Doku-Limit': '~200 Seiten' }
                         ]
                     },
@@ -676,7 +677,7 @@
                             '<strong>Lernen Sie Transformer-Architektur</strong> — Embeddings, Attention, Output-Projektion (konzeptuell)',
                             '<strong>Verstehen Sie, warum Halluzinationen passieren</strong> — sie sagen wahrscheinliche Tokens voraus, nicht korrekte Fakten',
                             '<strong>Experimentieren Sie mit Temperatur</strong> — versuchen Sie T=0,0, 0,7, 1,5, um Variationen zu sehen',
-                            '<strong>Kennen Sie Kontextfenster-Grenzen</strong> — GPT-4o sieht 128k Tokens; alte Info wird vergessen'
+                            '<strong>Kennen Sie Kontextfenster-Grenzen</strong> — GPT-5.5 sieht 128k Tokens; alte Info wird vergessen'
                         ]
                     },
                     {
@@ -684,7 +685,7 @@
                         h2: 'Häufig gestellte Fragen',
                         faqs: [
                             { q: 'Verstehen LLMs Text wie Menschen?', a: 'Nein. Sie sagen statistisch wahrscheinliche Tokens basierend auf Trainingsmuster voraus. Kein Verständnis, keine Absicht, kein Bewusstsein.' },
-                            { q: 'Was ist ein Token?', a: '~0,75 Wörter Englisch, ~0,5 Wörter Chinesisch/Japanisch. GPT-4o nutzt Byte Pair Encoding.' },
+                            { q: 'Was ist ein Token?', a: '~0,75 Wörter Englisch, ~0,5 Wörter Chinesisch/Japanisch. GPT-5.5 nutzt Byte Pair Encoding.' },
                             { q: 'Was macht Temperatur?', a: 'Steuert Sampling-Zufälligkeit. 0 = deterministisch. 1,0 = Standard. >1,5 = abgeflacht und hohe Halluzination.' },
                             { q: 'Warum ist Position in Prompts wichtig?', a: 'Transformer gewichtet Anfang/Ende stärker als Mitte (lost in the middle). Kritische Anweisungen an Anfang und Ende.' }
                         ]
@@ -696,7 +697,7 @@
                             '<strong>LLMs sagen Tokens voraus, nicht Antworten</strong> — statistisch wahrscheinliche Sequenzen, nicht überprüfte Fakten',
                             '<strong>1 Token ≈ 0,75 Wörter</strong> Englisch (50% dichter in Chinesisch/Japanisch)',
                             '<strong>Temperatur steuert Kreativität vs. Determinismus</strong> — 0 für Fakten, 0,7 für balanciert, >1,5 für hohe Halluzination',
-                            '<strong>Kontextfenster sind keine Erinnerung</strong> — GPT-4o: 128k, Claude: 200k, Gemini: 2M Tokens',
+                            '<strong>Kontextfenster sind keine Erinnerung</strong> — GPT-5.5: 128k, Claude: 200k, Gemini: 2M Tokens',
                             '<strong>Position ist kritisch</strong> — Transformer gewichten Anfang/Ende mehr als Mitte',
                             '<strong>RLHF formt Verhalten, nicht Kernfähigkeit</strong> — Verweigerungen und Ton kommen aus Fine-Tuning'
                         ]
@@ -749,7 +750,7 @@
                         rows: [
                             { 'Texte d entree': '"Hello, world!"', Tokens: '"Hello", ",", " world", "!"', 'Nombre de tokens': '4' },
                             { 'Texte d entree': '"Tokenization"', Tokens: '"Token", "ization"', 'Nombre de tokens': '2' },
-                            { 'Texte d entree': '"GPT-4o"', Tokens: '"G", "PT", "-", "4", "o"', 'Nombre de tokens': '5' },
+                            { 'Texte d entree': '"GPT-5.5"', Tokens: '"G", "PT", "-", "4", "o"', 'Nombre de tokens': '5' },
                             { 'Texte d entree': '中文 (Chinois)', Tokens: 'unités de sous-mots', 'Nombre de tokens': '2–4 par modèle' }
                         ]
                     },
@@ -789,9 +790,9 @@
                         h2: 'Fenetres de contexte par modele',
                         columns: ['Modele', 'Fenetre contexte', 'Equiv. mots', 'Limite docs'],
                         rows: [
-                            { Modele: 'GPT-4o', 'Fenetre contexte': '128k tokens', 'Equiv. mots': '96k mots', 'Limite docs': '~200 pages' },
-                            { Modele: 'Claude Sonnet', 'Fenetre contexte': '200k tokens', 'Equiv. mots': '150k mots', 'Limite docs': '~300 pages' },
-                            { Modele: 'Gemini 2.5 Pro', 'Fenetre contexte': '2M tokens', 'Equiv. mots': '1,5M mots', 'Limite docs': '~3000 pages' },
+                            { Modele: 'GPT-5.5', 'Fenetre contexte': '128k tokens', 'Equiv. mots': '96k mots', 'Limite docs': '~200 pages' },
+                            { Modele: 'Claude Opus 4.8', 'Fenetre contexte': '200k tokens', 'Equiv. mots': '150k mots', 'Limite docs': '~300 pages' },
+                            { Modele: 'Gemini 3.1 Pro', 'Fenetre contexte': '2M tokens', 'Equiv. mots': '1,5M mots', 'Limite docs': '~3000 pages' },
                             { Modele: 'LLaMA 3.1 70B', 'Fenetre contexte': '128k tokens', 'Equiv. mots': '96k mots', 'Limite docs': '~200 pages' }
                         ]
                     },
@@ -826,7 +827,7 @@
                             '<strong>Apprenez architecture transformer</strong> — embeddings, attention, projection (conceptuel)',
                             '<strong>Comprenez hallucinations</strong> — ils prédisent tokens probables, pas faits corrects',
                             '<strong>Expérimentez température</strong> — essayez T=0,0, 0,7, 1,5 pour voir variations',
-                            '<strong>Connaissez limites contexte</strong> — GPT-4o voit 128k; info ancienne oubliée'
+                            '<strong>Connaissez limites contexte</strong> — GPT-5.5 voit 128k; info ancienne oubliée'
                         ]
                     },
                     {
@@ -834,7 +835,7 @@
                         h2: 'Questions frequentes',
                         faqs: [
                             { q: 'Les LLMs comprennent-ils comme humains?', a: 'Non. Ils prédisent tokens statistiquement probables basé sur patterns entraînement. Pas compréhension, pas intention, pas conscience.' },
-                            { q: 'Qu\'est-ce qu\'un token?', a: '~0,75 mots anglais, ~0,5 mots chinois/japonais. GPT-4o utilise Byte Pair Encoding.' },
+                            { q: 'Qu\'est-ce qu\'un token?', a: '~0,75 mots anglais, ~0,5 mots chinois/japonais. GPT-5.5 utilise Byte Pair Encoding.' },
                             { q: 'Que fait la température?', a: 'Contrôle aléatoire sampling. 0 = déterministe. 1,0 = standard. >1,5 = distribution aplatie et hallucination élevée.' },
                             { q: 'Pourquoi position importante dans prompts?', a: 'Attention pèse début/fin plus lourd que milieu (lost in middle). Placez instructions critiques début et fin.' }
                         ]
@@ -846,7 +847,7 @@
                             '<strong>LLMs prédisent tokens, pas réponses</strong> — séquences probables, pas faits vérifiés',
                             '<strong>1 token ≈ 0,75 mots</strong> anglais (50% plus dense chinois/japonais)',
                             '<strong>Température contrôle créativité vs déterminisme</strong> — 0 faits, 0,7 équilibré, >1,5 hallucination haute',
-                            '<strong>Fenetres contexte ne sont pas mémoire</strong> — GPT-4o: 128k, Claude: 200k, Gemini: 2M tokens',
+                            '<strong>Fenetres contexte ne sont pas mémoire</strong> — GPT-5.5: 128k, Claude: 200k, Gemini: 2M tokens',
                             '<strong>Position critique</strong> — transformers pèsent début/fin plus que milieu',
                             '<strong>RLHF façonne comportement, pas capacité</strong> — refus et ton viennent fine-tuning'
                         ]
@@ -899,7 +900,7 @@
                         rows: [
                             { '入力テキスト': '"Hello, world!"', 'トークン': '"Hello", ",", " world", "!"', 'トークン数': '4' },
                             { '入力テキスト': '"Tokenization"', 'トークン': '"Token", "ization"', 'トークン数': '2' },
-                            { '入力テキスト': '"GPT-4o"', 'トークン': '"G", "PT", "-", "4", "o"', 'トークン数': '5' },
+                            { '入力テキスト': '"GPT-5.5"', 'トークン': '"G", "PT", "-", "4", "o"', 'トークン数': '5' },
                             { '入力テキスト': '中文 (中国語)', 'トークン': 'サブワード単位', 'トークン数': 'モデルごと2–4' }
                         ]
                     },
@@ -939,9 +940,9 @@
                         h2: 'モデル別コンテキストウィンドウ',
                         columns: ['モデル', 'コンテキスト', '単語相当', '文書制限'],
                         rows: [
-                            { 'モデル': 'GPT-4o', 'コンテキスト': '128kトークン', '単語相当': '96k語', '文書制限': '~200ページ' },
-                            { 'モデル': 'Claude Sonnet', 'コンテキスト': '200kトークン', '単語相当': '150k語', '文書制限': '~300ページ' },
-                            { 'モデル': 'Gemini 2.5 Pro', 'コンテキスト': '2Mトークン', '単語相当': '1.5M語', '文書制限': '~3000ページ' },
+                            { 'モデル': 'GPT-5.5', 'コンテキスト': '128kトークン', '単語相当': '96k語', '文書制限': '~200ページ' },
+                            { 'モデル': 'Claude Opus 4.8', 'コンテキスト': '200kトークン', '単語相当': '150k語', '文書制限': '~300ページ' },
+                            { 'モデル': 'Gemini 3.1 Pro', 'コンテキスト': '2Mトークン', '単語相当': '1.5M語', '文書制限': '~3000ページ' },
                             { 'モデル': 'LLaMA 3.1 70B', 'コンテキスト': '128kトークン', '単語相当': '96k語', '文書制限': '~200ページ' }
                         ]
                     },
@@ -976,7 +977,7 @@
                             '<strong>トランスフォーマーアーキテクチャ学習</strong> — 埋め込み、注意、出力（概念的）',
                             '<strong>幻覚なぜが理解</strong> — 可能性トークン予測、正事実ではなく',
                             '<strong>温度実験</strong> — T=0.0, 0.7, 1.5試す変動を見る',
-                            '<strong>コンテキストウィンドウ制限知る</strong> — GPT-4o 128kみえる；古情報忘れ'
+                            '<strong>コンテキストウィンドウ制限知る</strong> — GPT-5.5 128kみえる；古情報忘れ'
                         ]
                     },
                     {
@@ -984,7 +985,7 @@
                         h2: 'よくある質問',
                         faqs: [
                             { q: 'LLMは人間のように理解?', a: 'いいえ。訓練パターンに基づき統計上可能性最高トークン予測。理解、意図、意識なし。' },
-                            { q: 'トークンとは?', a: '英語~0.75語、中国語/日本語~0.5語。GPT-4oはByte Pair Encodingを使用。' },
+                            { q: 'トークンとは?', a: '英語~0.75語、中国語/日本語~0.5語。GPT-5.5はByte Pair Encodingを使用。' },
                             { q: '温度は何をする?', a: 'サンプリング随意性制御。0=決定的。1.0=標準。>1.5=平坦化と高幻覚。' },
                             { q: 'なぜプロンプト位置重要?', a: '注意は開始/終了をより重くウェイト（lost in middle）。重要指示開始/終了に。' }
                         ]
@@ -996,7 +997,7 @@
                             '<strong>LLMはトークン予測、回答ではなく</strong> — 統計可能シーケンス、検証事実ではなく',
                             '<strong>1トークン≈0.75語</strong>英語（中国語/日本語50%密）',
                             '<strong>温度は創造対決定性制御</strong> — 0事実、0.7バランス、>1.5高幻覚',
-                            '<strong>コンテキストウィンドウはメモリではない</strong> — GPT-4o: 128k、Claude: 200k、Gemini: 2M',
+                            '<strong>コンテキストウィンドウはメモリではない</strong> — GPT-5.5: 128k、Claude: 200k、Gemini: 2M',
                             '<strong>位置は重要</strong> — トランスフォーマーは開始/終了をより重くウェイト',
                             '<strong>RLHFは動作形成、能力ではなく</strong> — 拒否とトーンはファインチューニング由来'
                         ]
@@ -1049,7 +1050,7 @@
                         rows: [
                             { '输入文本': '"Hello, world!"', '令牌': '"Hello", ",", " world", "!"', '令牌数量': '4' },
                             { '输入文本': '"Tokenization"', '令牌': '"Token", "ization"', '令牌数量': '2' },
-                            { '输入文本': '"GPT-4o"', '令牌': '"G", "PT", "-", "4", "o"', '令牌数量': '5' },
+                            { '输入文本': '"GPT-5.5"', '令牌': '"G", "PT", "-", "4", "o"', '令牌数量': '5' },
                             { '输入文本': '中文 (汉语)', '令牌': '子词单位', '令牌数量': '每模型2–4' }
                         ]
                     },
@@ -1089,9 +1090,9 @@
                         h2: '各模型上下文窗口',
                         columns: ['模型', '上下文', '单词约当', '文档限制'],
                         rows: [
-                            { '模型': 'GPT-4o', '上下文': '128k令牌', '单词约当': '96k词', '文档限制': '~200页' },
-                            { '模型': 'Claude Sonnet', '上下文': '200k令牌', '单词约当': '150k词', '文档限制': '~300页' },
-                            { '模型': 'Gemini 2.5 Pro', '上下文': '2M令牌', '单词约当': '150万词', '文档限制': '~3000页' },
+                            { '模型': 'GPT-5.5', '上下文': '128k令牌', '单词约当': '96k词', '文档限制': '~200页' },
+                            { '模型': 'Claude Opus 4.8', '上下文': '200k令牌', '单词约当': '150k词', '文档限制': '~300页' },
+                            { '模型': 'Gemini 3.1 Pro', '上下文': '2M令牌', '单词约当': '150万词', '文档限制': '~3000页' },
                             { '模型': 'LLaMA 3.1 70B', '上下文': '128k令牌', '单词约当': '96k词', '文档限制': '~200页' }
                         ]
                     },
@@ -1126,7 +1127,7 @@
                             '<strong>学习Transformer架构</strong> — 嵌入、注意、输出投影（概念上）',
                             '<strong>理解幻觉为何发生</strong> — 预测可能令牌，非正确事实',
                             '<strong>试验温度</strong> — 尝试T=0.0, 0.7, 1.5看变化',
-                            '<strong>知道上下文窗口限制</strong> — GPT-4o看128k；旧信息被遗忘'
+                            '<strong>知道上下文窗口限制</strong> — GPT-5.5看128k；旧信息被遗忘'
                         ]
                     },
                     {
@@ -1134,7 +1135,7 @@
                         h2: '常见问题',
                         faqs: [
                             { q: 'LLM像人类一样理解文本吗?', a: '否。基于训练模式预测统计上最可能的令牌。无理解、意图或意识。' },
-                            { q: '什么是令牌?', a: '英语约0.75个词，中文/日文约0.5个词。GPT-4o使用字节对编码。' },
+                            { q: '什么是令牌?', a: '英语约0.75个词，中文/日文约0.5个词。GPT-5.5使用字节对编码。' },
                             { q: '温度做什么?', a: '控制采样随机性。0=确定性。1.0=标准。>1.5=平坦化和高幻觉。' },
                             { q: '为什么提示中位置重要?', a: '注意力权重开始/结尾比中间重（lost in middle）。关键指令放开始/结尾。' }
                         ]
@@ -1146,7 +1147,7 @@
                             '<strong>LLM预测令牌，非答案</strong> — 统计上可能的序列，非已验证事实',
                             '<strong>1令牌≈0.75词</strong>英文（中文/日文密度高50%）',
                             '<strong>温度控制创意对确定性</strong> — 0事实，0.7平衡，>1.5高幻觉',
-                            '<strong>上下文窗口非记忆</strong> — GPT-4o: 128k, Claude: 200k, Gemini: 2M',
+                            '<strong>上下文窗口非记忆</strong> — GPT-5.5: 128k, Claude: 200k, Gemini: 2M',
                             '<strong>位置关键</strong> — Transformer权重开始/结尾比中间',
                             '<strong>RLHF塑造行为，非能力</strong> — 拒绝和语气来自微调'
                         ]

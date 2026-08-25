@@ -6,7 +6,7 @@
     <title>Long Context Local LLMs 2026: 128K Models & RAM Guide | PromptQuorum</title>
     <meta name="description" content="Which local LLMs support 128K tokens? Practical reliable limit: 32K for 7B models. RAM at 32K: ~9 GB. Ollama Modelfile config included." />
     <meta property="og:title" content="Long Context Local LLMs 2026: 128K Models & RAM Guide — PromptQuorum" />
-    <meta property="og:description" content="Llama 3.1, Qwen2.5, Mistral Small 3.1 compared on context windows, RAM usage, and practical limits for local inference." />
+    <meta property="og:description" content="Llama 3.1, Qwen3, Mistral Small 3.1 compared on context windows, RAM usage, and practical limits for local inference." />
     <meta property="og:type" content="website" />
     <link rel="canonical" href="https://www.promptquorum.com/local-llms/long-context-local-llms" />
 
@@ -261,6 +261,7 @@
     }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
             * {
                 margin: 0;
                 padding: 0;
@@ -399,7 +400,7 @@
                         type: 'list',
                         h2: 'Key Takeaways',
                         items: [
-                            'Llama 3.x, Qwen2.5, and Mistral Small 3.1 all support <strong>128K token context windows</strong> as of April 2026.',
+                            'Llama 3.x, Qwen3, and Mistral Small 3.1 all support <strong>128K token context windows</strong> as of June 2026.',
                             '128K tokens ≈ 96,000 words ≈ a 300-page book — but requires 2–4× more RAM.',
                             '<strong>Practical quality limit:</strong> 7B–8B models stay reliable up to 16K–32K tokens.',
                             'Beyond 32K, the "lost in the middle" effect causes quality to drop.',
@@ -430,11 +431,11 @@
                         columns: ['Model', 'Context', 'Practical Limit', 'Ollama Command'],
                         rows: [
                             { 'Model': 'Llama 3.1 8B', 'Context': '128K', 'Practical Limit': '~32K', 'Ollama Command': 'ollama run llama3.1:8b' },
-                            { 'Model': 'Llama 3.3 70B', 'Context': '128K', 'Practical Limit': '~64K', 'Ollama Command': 'ollama run llama3.3:70b' },
-                            { 'Model': 'Qwen2.5 7B', 'Context': '128K', 'Practical Limit': '~32K', 'Ollama Command': 'ollama run qwen2.5:7b' },
-                            { 'Model': 'Qwen2.5 72B', 'Context': '128K', 'Practical Limit': '~64K', 'Ollama Command': 'ollama run qwen2.5:72b' },
+                            { 'Model': 'Qwen3 14B', 'Context': '128K', 'Practical Limit': '~32-64K', 'Ollama Command': 'ollama run qwen3:14b' },
+                            { 'Model': 'Qwen3 4B', 'Context': '128K', 'Practical Limit': '~16-32K', 'Ollama Command': 'ollama run qwen3:4b' },
+                            { 'Model': 'Gemma 3 12B', 'Context': '128K', 'Practical Limit': '~32K', 'Ollama Command': 'ollama run gemma3:12b' },
                             { 'Model': 'Mistral Small 3.1 24B', 'Context': '128K', 'Practical Limit': '~32K', 'Ollama Command': 'ollama run mistral-small3.1' },
-                            { 'Model': 'Mistral 7B v0.3', 'Context': '32K', 'Practical Limit': '~16K', 'Ollama Command': 'ollama run mistral' },
+                            { 'Model': 'DeepSeek-R1 14B', 'Context': '128K', 'Practical Limit': '~32K', 'Ollama Command': 'ollama run deepseek-r1:14b' },
                         ]
                     },
                     {
@@ -442,9 +443,9 @@
                         h2: 'RAM Usage by Context Length',
                         columns: ['Model', '4K Context', '32K Context', '128K Context'],
                         rows: [
-                            { 'Model': 'Llama 3.1 8B Q4_K_M', '4K Context': '~6 GB', '32K Context': '~9 GB', '128K Context': '~14 GB' },
-                            { 'Model': 'Qwen2.5 14B Q4_K_M', '4K Context': '~9 GB', '32K Context': '~12 GB', '128K Context': '~18 GB' },
-                            { 'Model': 'Mistral 24B Q4_K_M', '4K Context': '~14 GB', '32K Context': '~17 GB', '128K Context': '~24 GB' },
+                            { 'Model': 'Llama 3.3 8B Q4_K_M', '4K Context': '~6 GB', '32K Context': '~9 GB', '128K Context': '~14 GB' },
+                            { 'Model': 'Qwen3 14B Q4_K_M', '4K Context': '~9 GB', '32K Context': '~12 GB', '128K Context': '~18 GB' },
+                            { 'Model': 'Mistral Small 3.1 24B Q4_K_M', '4K Context': '~14 GB', '32K Context': '~17 GB', '128K Context': '~24 GB' },
                             { 'Model': 'Llama 3.3 70B Q4_K_M', '4K Context': '~40 GB', '32K Context': '~45 GB', '128K Context': '~55 GB' },
                         ]
                     },
@@ -477,8 +478,8 @@
                             '<strong>EU / GDPR:</strong> Long-context local inference eliminates GDPR Article 28 third-party data processor risk.',
                             '<strong>Germany BSI:</strong> 7B Q4_K_M + 32K context (~9–10 GB) is the recommended config for document processing.',
                             '<strong>France CNIL:</strong> Local Ollama inference satisfies requirement that personal data not be sent to third-party AI providers.',
-                            '<strong>Japan:</strong> Japanese docs use 1.5–2× more tokens than English. Qwen2.5\'s native tokenizer saves 30–40% RAM.',
-                            '<strong>China:</strong> Qwen2.5 (Alibaba) keeps sensitive documents fully on-premises — complies with Data Security Law.',
+                            '<strong>Japan:</strong> Japanese docs use 1.5–2× more tokens than English. Qwen3\'s native tokenizer saves 30–40% RAM.',
+                            '<strong>China:</strong> Qwen3 (Alibaba) keeps sensitive documents fully on-premises — complies with Data Security Law.',
                         ]
                     },
                     {
@@ -530,7 +531,7 @@
                         type: 'list',
                         h2: 'Wichtigste Erkenntnisse',
                         items: [
-                            'Llama 3.x, Qwen2.5 und Mistral Small 3.1 unterstützen alle <strong>128K Token Kontextfenster</strong> (Stand April 2026).',
+                            'Llama 3.x, Qwen3 und Mistral Small 3.1 unterstützen alle <strong>128K Token Kontextfenster</strong> (Stand Juni 2026).',
                             '128K Token ≈ 96.000 Wörter ≈ ein 300-seitiges Buch — benötigt aber 2–4× mehr RAM.',
                             '<strong>Praktische Qualitätsgrenze:</strong> 7B–8B-Modelle bleiben bis 16K–32K Token zuverlässig.',
                             'Jenseits von 32K tritt der „Lost in the Middle"-Effekt auf — Qualität sinkt.',
@@ -561,11 +562,11 @@
                         columns: ['Modell', 'Kontext', 'Prakt. Grenze', 'Ollama Befehl'],
                         rows: [
                             { 'Modell': 'Llama 3.1 8B', 'Kontext': '128K', 'Prakt. Grenze': '~32K', 'Ollama Befehl': 'ollama run llama3.1:8b' },
-                            { 'Modell': 'Llama 3.3 70B', 'Kontext': '128K', 'Prakt. Grenze': '~64K', 'Ollama Befehl': 'ollama run llama3.3:70b' },
-                            { 'Modell': 'Qwen2.5 7B', 'Kontext': '128K', 'Prakt. Grenze': '~32K', 'Ollama Befehl': 'ollama run qwen2.5:7b' },
-                            { 'Modell': 'Qwen2.5 72B', 'Kontext': '128K', 'Prakt. Grenze': '~64K', 'Ollama Befehl': 'ollama run qwen2.5:72b' },
+                            { 'Modell': 'Qwen3 14B', 'Kontext': '128K', 'Prakt. Grenze': '~32-64K', 'Ollama Befehl': 'ollama run qwen3:14b' },
+                            { 'Modell': 'Qwen3 4B', 'Kontext': '128K', 'Prakt. Grenze': '~16-32K', 'Ollama Befehl': 'ollama run qwen3:4b' },
+                            { 'Modell': 'Gemma 3 12B', 'Kontext': '128K', 'Prakt. Grenze': '~32K', 'Ollama Befehl': 'ollama run gemma3:12b' },
                             { 'Modell': 'Mistral Small 3.1 24B', 'Kontext': '128K', 'Prakt. Grenze': '~32K', 'Ollama Befehl': 'ollama run mistral-small3.1' },
-                            { 'Modell': 'Mistral 7B v0.3', 'Kontext': '32K', 'Prakt. Grenze': '~16K', 'Ollama Befehl': 'ollama run mistral' },
+                            { 'Modell': 'DeepSeek-R1 14B', 'Kontext': '128K', 'Prakt. Grenze': '~32K', 'Ollama Befehl': 'ollama run deepseek-r1:14b' },
                         ]
                     },
                     {
@@ -573,9 +574,9 @@
                         h2: 'RAM-Bedarf nach Kontextlänge',
                         columns: ['Modell', '4K Kontext', '32K Kontext', '128K Kontext'],
                         rows: [
-                            { 'Modell': 'Llama 3.1 8B Q4_K_M', '4K Kontext': '~6 GB', '32K Kontext': '~9 GB', '128K Kontext': '~14 GB' },
-                            { 'Modell': 'Qwen2.5 14B Q4_K_M', '4K Kontext': '~9 GB', '32K Kontext': '~12 GB', '128K Kontext': '~18 GB' },
-                            { 'Modell': 'Mistral 24B Q4_K_M', '4K Kontext': '~14 GB', '32K Kontext': '~17 GB', '128K Kontext': '~24 GB' },
+                            { 'Modell': 'Llama 3.3 8B Q4_K_M', '4K Kontext': '~6 GB', '32K Kontext': '~9 GB', '128K Kontext': '~14 GB' },
+                            { 'Modell': 'Qwen3 14B Q4_K_M', '4K Kontext': '~9 GB', '32K Kontext': '~12 GB', '128K Kontext': '~18 GB' },
+                            { 'Modell': 'Mistral Small 3.1 24B Q4_K_M', '4K Kontext': '~14 GB', '32K Kontext': '~17 GB', '128K Kontext': '~24 GB' },
                             { 'Modell': 'Llama 3.3 70B Q4_K_M', '4K Kontext': '~40 GB', '32K Kontext': '~45 GB', '128K Kontext': '~55 GB' },
                         ]
                     },
@@ -607,7 +608,7 @@
                             '<strong>EU / DSGVO:</strong> Lokale Inferenz eliminiert das Drittanbieter-Risiko nach DSGVO Art. 28.',
                             '<strong>BSI (Deutschland):</strong> 7B Q4_K_M + 32K Kontext (~9–10 GB) — empfohlene Konfiguration für Dokumentenverarbeitung.',
                             '<strong>CNIL (Frankreich):</strong> Lokale Ollama-Inferenz erfüllt die Anforderung, persönliche Daten nicht an Drittanbieter zu senden.',
-                            '<strong>China:</strong> Qwen2.5 (Alibaba) hält sensible Dokumente vollständig lokal — konform mit dem Datensicherheitsgesetz.',
+                            '<strong>China:</strong> Qwen3 (Alibaba) hält sensible Dokumente vollständig lokal — konform mit dem Datensicherheitsgesetz.',
                         ]
                     },
                     {
@@ -659,7 +660,7 @@
                         type: 'list',
                         h2: 'Points clés',
                         items: [
-                            'Llama 3.x, Qwen2.5 et Mistral Small 3.1 supportent tous les <strong>fenêtres de 128K tokens</strong> (avril 2026).',
+                            'Llama 3.x, Qwen3 et Mistral Small 3.1 supportent tous les <strong>fenêtres de 128K tokens</strong> (juin 2026).',
                             '128K tokens ≈ 96 000 mots ≈ un livre de 300 pages — mais nécessite 2–4× plus de RAM.',
                             '<strong>Limite de qualité pratique :</strong> les modèles 7B–8B restent fiables jusqu\'à 16K–32K tokens.',
                             'Au-delà de 32K, l\'effet « perdu au milieu » dégrade la qualité.',
@@ -689,11 +690,11 @@
                         columns: ['Modèle', 'Contexte', 'Limite pratique', 'Commande Ollama'],
                         rows: [
                             { 'Modèle': 'Llama 3.1 8B', 'Contexte': '128K', 'Limite pratique': '~32K', 'Commande Ollama': 'ollama run llama3.1:8b' },
-                            { 'Modèle': 'Llama 3.3 70B', 'Contexte': '128K', 'Limite pratique': '~64K', 'Commande Ollama': 'ollama run llama3.3:70b' },
-                            { 'Modèle': 'Qwen2.5 7B', 'Contexte': '128K', 'Limite pratique': '~32K', 'Commande Ollama': 'ollama run qwen2.5:7b' },
-                            { 'Modèle': 'Qwen2.5 72B', 'Contexte': '128K', 'Limite pratique': '~64K', 'Commande Ollama': 'ollama run qwen2.5:72b' },
+                            { 'Modèle': 'Qwen3 14B', 'Contexte': '128K', 'Limite pratique': '~32-64K', 'Commande Ollama': 'ollama run qwen3:14b' },
+                            { 'Modèle': 'Qwen3 4B', 'Contexte': '128K', 'Limite pratique': '~16-32K', 'Commande Ollama': 'ollama run qwen3:4b' },
+                            { 'Modèle': 'Gemma 3 12B', 'Contexte': '128K', 'Limite pratique': '~32K', 'Commande Ollama': 'ollama run gemma3:12b' },
                             { 'Modèle': 'Mistral Small 3.1 24B', 'Contexte': '128K', 'Limite pratique': '~32K', 'Commande Ollama': 'ollama run mistral-small3.1' },
-                            { 'Modèle': 'Mistral 7B v0.3', 'Contexte': '32K', 'Limite pratique': '~16K', 'Commande Ollama': 'ollama run mistral' },
+                            { 'Modèle': 'DeepSeek-R1 14B', 'Contexte': '128K', 'Limite pratique': '~32K', 'Commande Ollama': 'ollama run deepseek-r1:14b' },
                         ]
                     },
                     {
@@ -701,9 +702,9 @@
                         h2: 'RAM selon la longueur de contexte',
                         columns: ['Modèle', 'Contexte 4K', 'Contexte 32K', 'Contexte 128K'],
                         rows: [
-                            { 'Modèle': 'Llama 3.1 8B Q4_K_M', 'Contexte 4K': '~6 Go', 'Contexte 32K': '~9 Go', 'Contexte 128K': '~14 Go' },
-                            { 'Modèle': 'Qwen2.5 14B Q4_K_M', 'Contexte 4K': '~9 Go', 'Contexte 32K': '~12 Go', 'Contexte 128K': '~18 Go' },
-                            { 'Modèle': 'Mistral 24B Q4_K_M', 'Contexte 4K': '~14 Go', 'Contexte 32K': '~17 Go', 'Contexte 128K': '~24 Go' },
+                            { 'Modèle': 'Llama 3.3 8B Q4_K_M', 'Contexte 4K': '~6 Go', 'Contexte 32K': '~9 Go', 'Contexte 128K': '~14 Go' },
+                            { 'Modèle': 'Qwen3 14B Q4_K_M', 'Contexte 4K': '~9 Go', 'Contexte 32K': '~12 Go', 'Contexte 128K': '~18 Go' },
+                            { 'Modèle': 'Mistral Small 3.1 24B Q4_K_M', 'Contexte 4K': '~14 Go', 'Contexte 32K': '~17 Go', 'Contexte 128K': '~24 Go' },
                             { 'Modèle': 'Llama 3.3 70B Q4_K_M', 'Contexte 4K': '~40 Go', 'Contexte 32K': '~45 Go', 'Contexte 128K': '~55 Go' },
                         ]
                     },
@@ -735,7 +736,7 @@
                             '<strong>UE / RGPD :</strong> L\'inférence locale élimine le risque de sous-traitant tiers (Art. 28 RGPD).',
                             '<strong>CNIL (France) :</strong> Ollama local satisfait l\'exigence de ne pas envoyer de données à des prestataires IA tiers.',
                             '<strong>Allemagne BSI :</strong> 7B Q4_K_M + 32K contexte (~9–10 Go) — config recommandée pour le traitement documentaire.',
-                            '<strong>Chine :</strong> Qwen2.5 (Alibaba) garde les documents sensibles entièrement en local — conforme à la loi sur la sécurité des données.',
+                            '<strong>Chine :</strong> Qwen3 (Alibaba) garde les documents sensibles entièrement en local — conforme à la loi sur la sécurité des données.',
                         ]
                     },
                     {
@@ -787,7 +788,7 @@
                         type: 'list',
                         h2: '重要なポイント',
                         items: [
-                            'Llama 3.x、Qwen2.5、Mistral Small 3.1はすべて<strong>128Kトークンのコンテキストウィンドウ</strong>をサポート（2026年4月時点）。',
+                            'Llama 3.x、Qwen3、Mistral Small 3.1はすべて<strong>128Kトークンのコンテキストウィンドウ</strong>をサポート（2026年6月時点）。',
                             '128Kトークン ≈ 96,000語 ≈ 300ページの本 — ただし2〜4倍のRAMが必要。',
                             '<strong>実用的な品質上限：</strong>7B〜8Bモデルは16K〜32Kトークンまで品質を維持。',
                             '32Kを超えると「中間迷子（Lost in the Middle）」効果で品質が低下。',
@@ -817,11 +818,11 @@
                         columns: ['モデル', 'コンテキスト', '実用上限', 'Ollamaコマンド'],
                         rows: [
                             { 'モデル': 'Llama 3.1 8B', 'コンテキスト': '128K', '実用上限': '~32K', 'Ollamaコマンド': 'ollama run llama3.1:8b' },
-                            { 'モデル': 'Llama 3.3 70B', 'コンテキスト': '128K', '実用上限': '~64K', 'Ollamaコマンド': 'ollama run llama3.3:70b' },
-                            { 'モデル': 'Qwen2.5 7B', 'コンテキスト': '128K', '実用上限': '~32K', 'Ollamaコマンド': 'ollama run qwen2.5:7b' },
-                            { 'モデル': 'Qwen2.5 72B', 'コンテキスト': '128K', '実用上限': '~64K', 'Ollamaコマンド': 'ollama run qwen2.5:72b' },
+                            { 'モデル': 'Qwen3 14B', 'コンテキスト': '128K', '実用上限': '~32-64K', 'Ollamaコマンド': 'ollama run qwen3:14b' },
+                            { 'モデル': 'Qwen3 4B', 'コンテキスト': '128K', '実用上限': '~16-32K', 'Ollamaコマンド': 'ollama run qwen3:4b' },
+                            { 'モデル': 'Gemma 3 12B', 'コンテキスト': '128K', '実用上限': '~32K', 'Ollamaコマンド': 'ollama run gemma3:12b' },
                             { 'モデル': 'Mistral Small 3.1 24B', 'コンテキスト': '128K', '実用上限': '~32K', 'Ollamaコマンド': 'ollama run mistral-small3.1' },
-                            { 'モデル': 'Mistral 7B v0.3', 'コンテキスト': '32K', '実用上限': '~16K', 'Ollamaコマンド': 'ollama run mistral' },
+                            { 'モデル': 'DeepSeek-R1 14B', 'コンテキスト': '128K', '実用上限': '~32K', 'Ollamaコマンド': 'ollama run deepseek-r1:14b' },
                         ]
                     },
                     {
@@ -829,9 +830,9 @@
                         h2: 'コンテキスト長別のRAM使用量',
                         columns: ['モデル', '4Kコンテキスト', '32Kコンテキスト', '128Kコンテキスト'],
                         rows: [
-                            { 'モデル': 'Llama 3.1 8B Q4_K_M', '4Kコンテキスト': '~6 GB', '32Kコンテキスト': '~9 GB', '128Kコンテキスト': '~14 GB' },
-                            { 'モデル': 'Qwen2.5 14B Q4_K_M', '4Kコンテキスト': '~9 GB', '32Kコンテキスト': '~12 GB', '128Kコンテキスト': '~18 GB' },
-                            { 'モデル': 'Mistral 24B Q4_K_M', '4Kコンテキスト': '~14 GB', '32Kコンテキスト': '~17 GB', '128Kコンテキスト': '~24 GB' },
+                            { 'モデル': 'Llama 3.3 8B Q4_K_M', '4Kコンテキスト': '~6 GB', '32Kコンテキスト': '~9 GB', '128Kコンテキスト': '~14 GB' },
+                            { 'モデル': 'Qwen3 14B Q4_K_M', '4Kコンテキスト': '~9 GB', '32Kコンテキスト': '~12 GB', '128Kコンテキスト': '~18 GB' },
+                            { 'モデル': 'Mistral Small 3.1 24B Q4_K_M', '4Kコンテキスト': '~14 GB', '32Kコンテキスト': '~17 GB', '128Kコンテキスト': '~24 GB' },
                             { 'モデル': 'Llama 3.3 70B Q4_K_M', '4Kコンテキスト': '~40 GB', '32Kコンテキスト': '~45 GB', '128Kコンテキスト': '~55 GB' },
                         ]
                     },
@@ -861,9 +862,9 @@
                         h2: '地域コンテキスト：コンプライアンスとプライバシー',
                         items: [
                             '<strong>EU / GDPR：</strong>ローカル推論によりGDPR第28条の第三者データ処理リスクを排除。',
-                            '<strong>日本（METI）：</strong>日本語文書は英語の1.5〜2倍のトークンを消費。Qwen2.5のネイティブ日本語トークナイザーで30〜40%節約。',
-                            '<strong>中国：</strong>Qwen2.5（Alibaba）は機密文書を完全にローカルで処理 — データセキュリティ法に準拠。',
-                            '50ページの日本語レポートは25K〜35Kトークン消費 — Qwen2.5 7Bの32K実用上限内。',
+                            '<strong>日本（METI）：</strong>日本語文書は英語の1.5〜2倍のトークンを消費。Qwen3のネイティブ日本語トークナイザーで30〜40%節約。',
+                            '<strong>中国：</strong>Qwen3（Alibaba）は機密文書を完全にローカルで処理 — データセキュリティ法に準拠。',
+                            '50ページの日本語レポートは25K〜35Kトークン消費 — Qwen3 8Bの32K実用上限内。',
                         ]
                     },
                     {
@@ -915,7 +916,7 @@
                         type: 'list',
                         h2: '核心要点',
                         items: [
-                            'Llama 3.x、Qwen2.5和Mistral Small 3.1均支持<strong>128K标记上下文窗口</strong>（截至2026年4月）。',
+                            'Llama 3.x、Qwen3和Mistral Small 3.1均支持<strong>128K标记上下文窗口</strong>（截至2026年6月）。',
                             '128K标记 ≈ 96,000词 ≈ 300页书 — 但需要2–4倍的RAM。',
                             '<strong>实际质量上限：</strong>7B–8B模型在16K–32K标记内保持可靠质量。',
                             '超过32K，"中间迷失"效应导致质量下降。',
@@ -945,11 +946,11 @@
                         columns: ['模型', '上下文', '实际上限', 'Ollama命令'],
                         rows: [
                             { '模型': 'Llama 3.1 8B', '上下文': '128K', '实际上限': '~32K', 'Ollama命令': 'ollama run llama3.1:8b' },
-                            { '模型': 'Llama 3.3 70B', '上下文': '128K', '实际上限': '~64K', 'Ollama命令': 'ollama run llama3.3:70b' },
-                            { '模型': 'Qwen2.5 7B', '上下文': '128K', '实际上限': '~32K', 'Ollama命令': 'ollama run qwen2.5:7b' },
-                            { '模型': 'Qwen2.5 72B', '上下文': '128K', '实际上限': '~64K', 'Ollama命令': 'ollama run qwen2.5:72b' },
+                            { '模型': 'Qwen3 14B', '上下文': '128K', '实际上限': '~32-64K', 'Ollama命令': 'ollama run qwen3:14b' },
+                            { '模型': 'Qwen3 4B', '上下文': '128K', '实际上限': '~16-32K', 'Ollama命令': 'ollama run qwen3:4b' },
+                            { '模型': 'Gemma 3 12B', '上下文': '128K', '实际上限': '~32K', 'Ollama命令': 'ollama run gemma3:12b' },
                             { '模型': 'Mistral Small 3.1 24B', '上下文': '128K', '实际上限': '~32K', 'Ollama命令': 'ollama run mistral-small3.1' },
-                            { '模型': 'Mistral 7B v0.3', '上下文': '32K', '实际上限': '~16K', 'Ollama命令': 'ollama run mistral' },
+                            { '模型': 'DeepSeek-R1 14B', '上下文': '128K', '实际上限': '~32K', 'Ollama命令': 'ollama run deepseek-r1:14b' },
                         ]
                     },
                     {
@@ -957,9 +958,9 @@
                         h2: '不同上下文长度的RAM需求',
                         columns: ['模型', '4K上下文', '32K上下文', '128K上下文'],
                         rows: [
-                            { '模型': 'Llama 3.1 8B Q4_K_M', '4K上下文': '~6 GB', '32K上下文': '~9 GB', '128K上下文': '~14 GB' },
-                            { '模型': 'Qwen2.5 14B Q4_K_M', '4K上下文': '~9 GB', '32K上下文': '~12 GB', '128K上下文': '~18 GB' },
-                            { '模型': 'Mistral 24B Q4_K_M', '4K上下文': '~14 GB', '32K上下文': '~17 GB', '128K上下文': '~24 GB' },
+                            { '模型': 'Llama 3.3 8B Q4_K_M', '4K上下文': '~6 GB', '32K上下文': '~9 GB', '128K上下文': '~14 GB' },
+                            { '模型': 'Qwen3 14B Q4_K_M', '4K上下文': '~9 GB', '32K上下文': '~12 GB', '128K上下文': '~18 GB' },
+                            { '模型': 'Mistral Small 3.1 24B Q4_K_M', '4K上下文': '~14 GB', '32K上下文': '~17 GB', '128K上下文': '~24 GB' },
                             { '模型': 'Llama 3.3 70B Q4_K_M', '4K上下文': '~40 GB', '32K上下文': '~45 GB', '128K上下文': '~55 GB' },
                         ]
                     },
@@ -989,8 +990,8 @@
                         h2: '地区背景：合规与隐私',
                         items: [
                             '<strong>欧盟/GDPR：</strong>本地推理消除GDPR第28条第三方数据处理器风险。',
-                            '<strong>中国：</strong>Qwen2.5（阿里巴巴）将敏感文档完全保留在本地——符合《数据安全法》。',
-                            '<strong>日本：</strong>日文文档消耗英文的1.5–2倍标记。Qwen2.5原生分词器节省30–40% RAM。',
+                            '<strong>中国：</strong>Qwen3（阿里巴巴）将敏感文档完全保留在本地——符合《数据安全法》。',
+                            '<strong>日本：</strong>日文文档消耗英文的1.5–2倍标记。Qwen3原生分词器节省30–40% RAM。',
                             '德国BSI推荐配置：7B Q4_K_M + 32K上下文（约9–10 GB）用于文档处理。',
                         ]
                     },

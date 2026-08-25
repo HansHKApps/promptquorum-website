@@ -268,6 +268,7 @@
     }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
             * {
                 margin: 0;
                 padding: 0;
@@ -498,7 +499,7 @@
                         intro: 'Supported as of April 2026 for models that include tool-use training.',
                         items: [
                             'Pass <code>tools=[]</code> in the API call — same format as OpenAI',
-                            '<strong>Supported models:</strong> Llama 3.1 8B, Qwen2.5 7B, Mistral',
+                            '<strong>Supported models:</strong> Llama 4 Scout, Qwen3 8B, Gemma 4 9B, Mistral Small 3.1',
                             'Model responds with structured JSON arguments for your function',
                             'Smaller models (3B) may not reliably support function calling'
                         ]
@@ -510,7 +511,7 @@
                             '<strong>EU / GDPR:</strong> all inference on-device — no data egress to cloud APIs',
                             '<strong>Japan / APPI:</strong> on-premises processing bypasses cloud transfer requirements',
                             '<strong>China / CAC:</strong> data stays local — satisfies data localization mandates',
-                            'Qwen2.5 7B adds 30–40% efficiency for Chinese/Japanese tokenization'
+                            'Qwen3 adds 30–40% efficiency for Chinese/Japanese tokenization'
                         ]
                     },
                     {
@@ -636,7 +637,7 @@
                         intro: 'Unterstützt seit April 2026 für Modelle mit Tool-Use-Training.',
                         items: [
                             'Übergebe <code>tools=[]</code> im API-Aufruf — gleiches Format wie OpenAI',
-                            '<strong>Unterstützte Modelle:</strong> Llama 3.1 8B, Qwen2.5 7B, Mistral',
+                            '<strong>Unterstützte Modelle:</strong> Llama 4 Scout, Qwen3 8B, Gemma 4 9B, Mistral Small 3.1',
                             'Modell antwortet mit strukturiertem JSON für Deine Funktionsargumente',
                             'Kleinere Modelle (3B) unterstützen Function Calling möglicherweise nicht zuverlässig'
                         ]
@@ -648,7 +649,7 @@
                             '<strong>EU / DSGVO:</strong> alle Berechnungen lokal — kein Datenaustausch mit Cloud APIs',
                             '<strong>Japan / APPI:</strong> lokale Verarbeitung umgeht Cloud-Transferanforderungen',
                             '<strong>China / CAC:</strong> Daten bleiben lokal — erfüllt Datenlokalisierungsvorgaben',
-                            'Qwen2.5 7B bietet 30–40 % Effizienz für chinesische/japanische Tokenisierung'
+                            'Qwen3 bietet 30–40 % Effizienz für chinesische/japanische Tokenisierung'
                         ]
                     },
                     {
@@ -774,7 +775,7 @@
                         intro: 'Supporté depuis avril 2026 pour les modèles avec entraînement à l\'utilisation d\'outils.',
                         items: [
                             'Passez <code>tools=[]</code> dans l\'appel API — même format qu\'OpenAI',
-                            '<strong>Modèles supportés :</strong> Llama 3.1 8B, Qwen2.5 7B, Mistral',
+                            '<strong>Modèles supportés :</strong> Llama 4 Scout, Qwen3 8B, Gemma 4 9B, Mistral Small 3.1',
                             'Le modèle répond avec les arguments JSON structurés pour votre fonction',
                             'Les modèles plus petits (3B) peuvent ne pas supporter les appels de fonction de manière fiable'
                         ]
@@ -786,7 +787,7 @@
                             '<strong>EU / RGPD :</strong> toute l\'inférence sur l\'appareil — aucune fuite de données vers les APIs cloud',
                             '<strong>Japon / APPI :</strong> le traitement sur site contourne les exigences de transfert cloud',
                             '<strong>Chine / CAC :</strong> les données restent locales — satisfait les mandats de localisation des données',
-                            'Qwen2.5 7B ajoute 30–40 % d\'efficacité pour la tokenisation chinoise/japonaise'
+                            'Qwen3 ajoute 30–40 % d\'efficacité pour la tokenisation chinoise/japonaise'
                         ]
                     },
                     {
@@ -912,7 +913,7 @@
                         intro: 'ツール使用トレーニングを含むモデルの場合、2026年4月以降でサポート。',
                         items: [
                             'APIコールで<code>tools=[]</code>を渡す — OpenAIと同じ形式',
-                            '<strong>サポートモデル：</strong> Llama 3.1 8B、Qwen2.5 7B、Mistral',
+                            '<strong>サポートモデル：</strong> Llama 4 Scout、Qwen3 8B、Gemma 4 9B、Mistral Small 3.1',
                             'モデルは関数の構造化JSON引数で応答',
                             '小さいモデル（3B）はFunction Callingを確実にサポートしない場合あり'
                         ]
@@ -924,7 +925,7 @@
                             '<strong>EU / GDPR：</strong>全ての推論はデバイス上で実行 — クラウドAPIへのデータ流出なし',
                             '<strong>日本 / APPI：</strong>オンプレミス処理はクラウド転送要件をバイパス',
                             '<strong>中国 / CAC：</strong>データはローカル — データローカライゼーション要件を満たす',
-                            'Qwen2.5 7Bは中国語/日本語トークン化で30～40%の効率アップ'
+                            'Qwen3は中国語/日本語トークン化で30～40%の効率アップ'
                         ]
                     },
                     {
@@ -1050,7 +1051,7 @@
                         intro: '对于包含工具使用培训的模型，自2026年4月起支持。',
                         items: [
                             '在API调用中传递<code>tools=[]</code> — 与OpenAI相同格式',
-                            '<strong>支持的模型：</strong> Llama 3.1 8B、Qwen2.5 7B、Mistral',
+                            '<strong>支持的模型：</strong> Llama 4 Scout、Qwen3 8B、Gemma 4 9B、Mistral Small 3.1',
                             '模型用函数的结构化JSON参数响应',
                             '较小的模型（3B）可能无法可靠支持函数调用'
                         ]
@@ -1062,7 +1063,7 @@
                             '<strong>欧盟 / GDPR：</strong>所有推理在设备上 — 无云API数据流出',
                             '<strong>日本 / APPI：</strong>本地处理绕过云传输要求',
                             '<strong>中国 / CAC：</strong>数据保持本地 — 满足数据本地化要求',
-                            'Qwen2.5 7B中文/日文符号化效率提高30～40%'
+                            'Qwen3中文/日文符号化效率提高30～40%'
                         ]
                     },
                     {

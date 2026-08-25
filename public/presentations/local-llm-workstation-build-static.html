@@ -55,7 +55,8 @@
       .controls button { padding: 6px 12px; font-size: 12px; }
     }
 
-    @media print { * { margin: 0; padding: 0; } html, body { overflow: visible !important; height: auto !important; background: white !important; } .header, .controls { display: none !important; } .presentation-container { display: block !important; height: auto !important; } .content-area { display: block !important; overflow: visible !important; } .slide { display: flex !important; page-break-after: always; width: 100%; height: 210mm; padding: 20mm 24mm; margin: 0; background: white; overflow: visible !important; } .slide::after { content: counter(page-counter) " / 12"; position: absolute; bottom: 15mm; right: 24mm; font-size: 9pt; color: #999; } }
+    @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; } * { margin: 0; padding: 0; } html, body { overflow: visible !important; height: auto !important; background: white !important; } .header, .controls { display: none !important; } .presentation-container { display: block !important; height: auto !important; } .content-area { display: block !important; overflow: visible !important; } .slide { display: flex !important; page-break-after: always; width: 100%; height: 210mm; padding: 20mm 24mm; margin: 0; background: white; overflow: visible !important; } .slide::after { content: counter(page-counter) " / 12"; position: absolute; bottom: 15mm; right: 24mm; font-size: 9pt; color: #999; } }
     </style>
 </head>
 <body>

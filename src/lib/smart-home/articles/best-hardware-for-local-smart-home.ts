@@ -525,7 +525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'تحقق من عروض RTX 3090 المستعملة ←', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: 'بحدود ‎$1,050–1,300‎' },
           { label: 'تحقق من عروض RTX 3060 المستعملة ←', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU', priceRange: 'بحدود ‎$220–290‎' },
         ],
-        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-ar.svg',
         imageCaption: 'سعة نموذج LLM محلي حسب فئة الأجهزة: يشغّل Raspberry Pi 5 نماذج صغيرة جدًا فقط، ويتعامل mini PC بمعالج Intel N100/N150 مع نماذج صغيرة، ويشغّل mini PC بمعالج Ryzen (32GB RAM) نماذج 7B–8B، ويصل RTX 3090 مستعمل (24GB VRAM) إلى نحو 70B بترميز Q4 حسب الإعداد.',
       },
       dontOverspend: {
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الاختيار بين HA فقط أم HA + ذكاء اصطناعي',
         content:
           '**اختر Pi لـ HA فقط، وmini PC لـ HA مع الذكاء الاصطناعي المحلي — هذا القرار الواحد يحدد الأجهزة المناسبة.** طابق الصندوق مع حمل العمل، وليس العكس.',
-        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-ar.svg',
         imageCaption: 'شجرة قرار لأجهزة المنزل الذكي: تؤدي إضافة كاميرات Frigate ونموذج LLM محلي إلى أربعة تجميعات — Raspberry Pi 5، أو mini PC بمعالج Intel N100/N150، أو mini PC بمعالج Ryzen (32GB RAM)، أو خادم RTX 3090 (24GB VRAM).',
         columns: ['الأجهزة', 'السعر النسبي', 'HA فقط', 'يمكنه تشغيل نموذج LLM محلي', 'تسريع Frigate'],
         rows: [
@@ -860,7 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'RTX-3090-Gebrauchtangebote prüfen →', url: 'https://www.ebay.de/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: 'ca. 1.400–1.750 €' },
           { label: 'RTX-3060-Gebrauchtangebote prüfen →', url: 'https://www.ebay.de/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU', priceRange: 'ca. 250–320 €' },
         ],
-        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-de.svg',
         imageCaption: 'Lokale LLM-Kapazität je Hardware-Stufe: Ein Raspberry Pi 5 läuft nur mit winzigen Modellen, ein Intel-N100/N150-Mini-PC bewältigt kleine Modelle, ein Ryzen-Mini-PC (32 GB RAM) läuft mit 7B–8B-Modellen, und eine gebrauchte RTX 3090 (24 GB VRAM) skaliert je nach Setup auf etwa 70B bei Q4-Quantisierung.',
       },
       dontOverspend: {
@@ -906,7 +906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wählen für nur-HA vs HA + KI',
         content:
           '**Wählen Sie einen Pi für nur-HA und einen Mini-PC für HA plus lokale KI – diese eine Entscheidung bestimmt die richtige Hardware.** Passen Sie das Gerät an den Workload an, nicht umgekehrt.',
-        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-de.svg',
         imageCaption: 'Entscheidungsbaum für Smart-Home-Hardware: Frigate-Kameras und ein lokales LLM hinzuzufügen führt zu vier Builds – Raspberry Pi 5, Intel-N100/N150-Mini-PC, Ryzen-Mini-PC (32 GB RAM) oder ein RTX-3090-Server (24 GB VRAM).',
         columns: ['Hardware', 'Relativer Preis', 'Nur-HA', 'Kann ein lokales LLM betreiben', 'Frigate-Beschleunigung'],
         rows: [
@@ -1195,7 +1195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Ver anuncios de RTX 3090 usada →', url: 'https://www.ebay.es/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: '~1.400–1.750 €' },
           { label: 'Ver anuncios de RTX 3060 usada →', url: 'https://www.ebay.es/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU', priceRange: '~250–320 €' },
         ],
-        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-es.svg',
         imageCaption: 'Capacidad de LLM local por nivel de hardware: una Raspberry Pi 5 solo ejecuta modelos diminutos, un mini PC Intel N100/N150 gestiona modelos pequeños, un mini PC Ryzen (32 GB de RAM) ejecuta modelos de 7B–8B, y una RTX 3090 usada (24 GB de VRAM) escala hasta unos 70B en cuantización Q4 según la configuración.',
       },
       dontOverspend: {
@@ -1241,7 +1241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Elegir para solo-HA vs HA + IA',
         content:
           '**Elige una Pi para solo-HA y un mini PC para HA más IA local: esa única decisión determina el hardware adecuado.** Ajusta el equipo a la carga de trabajo, no al revés.',
-        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-es.svg',
         imageCaption: 'Árbol de decisión para el hardware de smart home: añadir cámaras de Frigate y un LLM local lleva a cuatro configuraciones — Raspberry Pi 5, mini PC Intel N100/N150, mini PC Ryzen (32 GB de RAM) o un servidor RTX 3090 (24 GB de VRAM).',
         columns: ['Hardware', 'Precio relativo', 'Solo-HA', 'Puede ejecutar un LLM local', 'Aceleración de Frigate'],
         rows: [
@@ -1530,7 +1530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'RTX 3090 중고 시세 확인 →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: '약 $1,050–1,300' },
           { label: 'RTX 3060 중고 시세 확인 →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU', priceRange: '약 $220–290' },
         ],
-        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-ko.svg',
         imageCaption: '하드웨어 등급별 로컬 LLM 용량: Raspberry Pi 5는 아주 작은 모델만 실행하고, Intel N100/N150 미니 PC는 소형 모델을 처리하며, Ryzen 미니 PC(RAM 32GB)는 7B–8B 모델을 실행하고, 중고 RTX 3090(VRAM 24GB)은 구성에 따라 Q4 양자화 기준 최대 약 70B까지 확장됩니다.',
       },
       dontOverspend: {
@@ -1576,7 +1576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'HA 단독 대 HA + AI 선택',
         content:
           '**HA 단독에는 Pi, HA + 로컬 AI에는 미니 PC를 선택하십시오. 이 단일 결정이 올바른 하드웨어를 결정합니다.** 워크로드에 맞게 기기를 선택하십시오. 그 반대가 아닙니다.',
-        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-ko.svg',
         imageCaption: '스마트 홈 하드웨어 결정 트리: Frigate 카메라 추가 여부와 로컬 LLM 추가 여부에 따라 Raspberry Pi 5, Intel N100/N150 미니 PC, Ryzen 미니 PC(RAM 32GB), RTX 3090 서버(VRAM 24GB) 중 하나로 이어집니다.',
         columns: ['하드웨어', '상대적 가격', 'HA 단독', '로컬 LLM 실행 가능', 'Frigate 가속'],
         rows: [
@@ -1865,7 +1865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Voir les annonces de RTX 3090 d\'occasion →', url: 'https://www.ebay.fr/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: 'environ 1 400–1 750 €' },
           { label: 'Voir les annonces de RTX 3060 d\'occasion →', url: 'https://www.ebay.fr/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU', priceRange: 'environ 250–320 €' },
         ],
-        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-fr.svg',
         imageCaption: 'Capacité de LLM local par niveau de matériel : une Raspberry Pi 5 ne fait tourner que des modèles minuscules, un mini-PC Intel N100/N150 gère de petits modèles, un mini-PC Ryzen (32 Go de RAM) fait tourner des modèles de 7B à 8B, et une RTX 3090 d\'occasion (24 Go de VRAM) monte jusqu\'à environ 70B en quantification Q4 selon la configuration.',
       },
       dontOverspend: {
@@ -1911,7 +1911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Choisir pour HA-seul vs HA + IA',
         content:
           '**Choisissez une Pi pour HA-seul et un mini-PC pour HA plus IA locale — cette seule décision détermine le bon matériel.** Adaptez la machine à la charge de travail, pas l\'inverse.',
-        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-fr.svg',
         imageCaption: 'Arbre de décision pour le matériel de maison connectée : ajouter des caméras Frigate et un LLM local mène à quatre configurations — Raspberry Pi 5, mini-PC Intel N100/N150, mini-PC Ryzen (32 Go de RAM) ou un serveur RTX 3090 (24 Go de VRAM).',
         columns: ['Matériel', 'Prix relatif', 'HA-seul', 'Peut exécuter un LLM local', 'Accélération Frigate'],
         rows: [
@@ -2200,7 +2200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'RTX 3090 の中古相場を見る →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: '約130,000〜160,000円' },
           { label: 'RTX 3060 の中古相場を見る →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU', priceRange: '約27,000〜36,000円' },
         ],
-        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-ja.svg',
         imageCaption: 'ハードウェア階層別のローカルLLM容量：Raspberry Pi 5 は極小モデルのみ、Intel N100/N150 ミニPC は小型モデルを処理、Ryzen ミニPC（RAM 32GB）は 7B〜8B モデルを実行、中古 RTX 3090（VRAM 24GB）は構成次第で Q4 量子化で約70Bまで対応します。',
       },
       dontOverspend: {
@@ -2246,7 +2246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'HAのみ 対 HA＋AI で選ぶ',
         content:
           '**HAのみなら Raspberry Pi 5、HA＋ローカルAIならミニPCを選びましょう——この一つの判断が適切なハードウェアを決めます。** 機器をワークロードに合わせましょう。逆ではありません。',
-        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-ja.svg',
         imageCaption: 'スマートホーム機器の決定木：Frigate カメラの追加とローカルLLMの追加という2つの分岐から、Raspberry Pi 5、Intel N100/N150 ミニPC、Ryzen ミニPC（RAM 32GB）、RTX 3090 サーバー（VRAM 24GB）の4通りの構成に分かれます。',
         columns: ['ハードウェア', '相対価格', 'HAのみ', 'ローカルLLMを動かせるか', 'Frigate 加速'],
         rows: [
@@ -2534,7 +2534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Ver anúncios de RTX 3090 usada →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: '~R$ 11.200–13.800' },
           { label: 'Ver anúncios de RTX 3060 usada →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU', priceRange: '~R$ 2.300–3.100' },
         ],
-        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-pt.svg',
         imageCaption: 'Capacidade de LLM local por nível de hardware: um Raspberry Pi 5 só roda modelos minúsculos, um mini PC Intel N100/N150 lida com modelos pequenos, um mini PC Ryzen (32GB de RAM) roda modelos de 7B–8B, e uma RTX 3090 usada (24GB de VRAM) chega a cerca de 70B em quantização Q4 dependendo da configuração.',
       },
       dontOverspend: {
@@ -2580,7 +2580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Escolher para só-HA vs HA + IA',
         content:
           '**Escolha uma Pi para só-HA e um mini PC para HA mais IA local — essa única decisão define o hardware certo.** Ajuste o equipamento à carga de trabalho, não o contrário.',
-        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-pt.svg',
         imageCaption: 'Árvore de decisão para hardware de casa inteligente: adicionar câmeras Frigate e um LLM local leva a quatro montagens — Raspberry Pi 5, mini PC Intel N100/N150, mini PC Ryzen (32GB de RAM) ou um servidor RTX 3090 (24GB de VRAM).',
         columns: ['Hardware', 'Preço relativo', 'Só-HA', 'Pode rodar um LLM local', 'Aceleração do Frigate'],
         rows: [
@@ -2868,7 +2868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: '查看 RTX 3090 二手行情 →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24GB (used)', productCategory: 'GPU', priceRange: '约 1,050–1,300 美元' },
           { label: '查看 RTX 3060 二手行情 →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3060+12GB', productName: 'NVIDIA RTX 3060 12GB (used)', productCategory: 'GPU', priceRange: '约 220–290 美元' },
         ],
-        image: '/images/best-hardware-for-local-smart-home-llm-capacity-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-llm-capacity-zh.svg',
         imageCaption: '各硬件等级的本地 LLM 容量：Raspberry Pi 5 只能运行极小模型，Intel N100/N150 迷你 PC 可处理小型模型，Ryzen 迷你 PC（32GB 内存）可运行 7B–8B 模型，二手 RTX 3090（24GB 显存）在 Q4 量化下视配置可扩展到约 70B。',
       },
       dontOverspend: {
@@ -2914,7 +2914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '为仅-HA 对 HA + AI 选择',
         content:
           '**仅-HA 选 Pi，HA 加本地 AI 选迷你 PC——这一个决定就能确定合适的硬件。** 让设备匹配工作负载，而不是反过来。',
-        image: '/images/best-hardware-for-local-smart-home-decision-tree-en.svg',
+        image: '/images/best-hardware-for-local-smart-home-decision-tree-zh.svg',
         imageCaption: '智能家居硬件决策树：是否添加 Frigate 摄像头和是否添加本地 LLM，这两个问题决定四种搭配——Raspberry Pi 5、Intel N100/N150 迷你 PC、Ryzen 迷你 PC（32GB 内存）或 RTX 3090 服务器（24GB 显存）。',
         columns: ['硬件', '相对价格', '仅-HA', '能否运行本地 LLM', 'Frigate 加速'],
         rows: [

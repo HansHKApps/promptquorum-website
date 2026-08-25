@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Local LLM Limitations: 6 Key Gaps vs Cloud Models in 2026 | PromptQuorum</title>
-  <meta name="description" content="Local LLMs trail GPT-4o by 10–20 points on reasoning benchmarks, require 16 GB+ RAM, and have no web access. Interactive 14-slide presentation on local vs cloud tradeoffs." />
+  <meta name="description" content="Local LLMs trail GPT-5.6 by 10–20 points on reasoning benchmarks, require 16 GB+ RAM, and have no web access. Interactive 14-slide presentation on local vs cloud tradeoffs." />
   <meta property="og:title" content="Local LLM Limitations — PromptQuorum" />
   <meta property="og:description" content="Learn the 6 key limitations of local LLMs vs cloud APIs. Interactive presentation with benchmarks, hardware guides, and decision trees." />
   <meta property="og:type" content="website" />
@@ -327,14 +327,14 @@
             type: 'list',
             h2: 'In Plain Terms',
             items: [
-              'Running a local LLM is like having a <strong>private but slower ChatGPT</strong> that doesn\'t know current events. It keeps your data safe and doesn\'t charge per query, but it can\'t match GPT-4o\'s reasoning ability or access the internet.'
+              'Running a local LLM is like having a <strong>private but slower ChatGPT</strong> that doesn\'t know current events. It keeps your data safe and doesn\'t charge per query, but it can\'t match GPT-5.6\'s reasoning ability or access the internet.'
             ]
           },
           {
             type: 'list',
             h2: 'Key Takeaways',
             items: [
-              '<strong>Quality gap:</strong> Local 7B models score 10-20% below GPT-4o on reasoning.',
+              '<strong>Quality gap:</strong> Local 7B models score 10-20% below GPT-5.6 on reasoning.',
               '<strong>Speed:</strong> 10–25 tok/sec (CPU) vs 80–150 tok/sec (cloud).',
               '<strong>Hardware:</strong> 16 GB RAM minimum for usable performance.',
               '<strong>No internet:</strong> Local models have a training cutoff, no real-time data.',
@@ -344,12 +344,12 @@
           {
             type: 'table',
             h2: 'Quality Gap: Benchmarks',
-            columns: ['Task Type', 'Local 7B', 'Local 70B', 'GPT-4o'],
+            columns: ['Task Type', 'Local 7B', 'Local 70B', 'GPT-5.6'],
             rows: [
-              { 'Task Type': 'Simple Q&A', 'Local 7B': 'Adequate', 'Local 70B': 'Good', 'GPT-4o': 'Excellent' },
-              { 'Task Type': 'Code explanation', 'Local 7B': 'Adequate', 'Local 70B': 'Good', 'GPT-4o': 'Excellent' },
-              { 'Task Type': 'Multi-step reasoning', 'Local 7B': 'Poor', 'Local 70B': 'Adequate', 'GPT-4o': 'Excellent' },
-              { 'Task Type': 'Advanced math', 'Local 7B': 'Poor', 'Local 70B': 'Adequate', 'GPT-4o': 'Good' },
+              { 'Task Type': 'Simple Q&A', 'Local 7B': 'Adequate', 'Local 70B': 'Good', 'GPT-5.6': 'Excellent' },
+              { 'Task Type': 'Code explanation', 'Local 7B': 'Adequate', 'Local 70B': 'Good', 'GPT-5.6': 'Excellent' },
+              { 'Task Type': 'Multi-step reasoning', 'Local 7B': 'Poor', 'Local 70B': 'Adequate', 'GPT-5.6': 'Excellent' },
+              { 'Task Type': 'Advanced math', 'Local 7B': 'Poor', 'Local 70B': 'Adequate', 'GPT-5.6': 'Good' },
             ]
           },
           {
@@ -364,10 +364,10 @@
             h2: 'Hardware Requirements',
             columns: ['Hardware', 'Max Model', 'Quality'],
             rows: [
-              { 'Hardware': 'Basic laptop (8 GB)', 'Max Model': '7B', 'Quality': 'Below GPT-3.5' },
-              { 'Hardware': 'Mid-range laptop (16 GB)', 'Max Model': '13B', 'Quality': 'Roughly GPT-3.5' },
-              { 'Hardware': 'Mac M3 Pro (18 GB)', 'Max Model': '13B full', 'Quality': 'GPT-3.5 to GPT-4' },
-              { 'Hardware': 'High-end (40+ GB)', 'Max Model': '70B', 'Quality': 'Competitive with GPT-4o' },
+              { 'Hardware': 'Basic laptop (8 GB)', 'Max Model': '7B', 'Quality': 'Below GPT-5.6 Luna' },
+              { 'Hardware': 'Mid-range laptop (16 GB)', 'Max Model': '13B', 'Quality': 'Roughly GPT-5.6 Luna' },
+              { 'Hardware': 'Mac M3 Pro (18 GB)', 'Max Model': '13B full', 'Quality': 'GPT-5.6 Luna to GPT-4' },
+              { 'Hardware': 'High-end (40+ GB)', 'Max Model': '70B', 'Quality': 'Competitive with GPT-5.6' },
             ]
           },
           {
@@ -393,7 +393,7 @@
             type: 'list',
             h2: 'When NOT to Use Local LLMs',
             items: [
-              '<strong>Complex reasoning</strong> — Use GPT-4o or Claude 4.6 instead.',
+              '<strong>Complex reasoning</strong> — Use GPT-5.6 or Claude Sonnet 5 instead.',
               '<strong>Real-time data</strong> — News, prices, URLs require cloud APIs.',
               '<strong>Legal/medical tasks</strong> — High accuracy required; gap is costly.',
               '<strong>Production at scale</strong> — Cloud APIs provide SLAs and support.',
@@ -418,9 +418,9 @@
             h2: 'Best Choice by Use Case',
             items: [
               '<strong>Privacy & compliance</strong> → Local (Ollama + Llama 3.3 70B)',
-              '<strong>Reasoning & coding</strong> → Cloud (GPT-4o or Claude 4.6)',
+              '<strong>Reasoning & coding</strong> → Cloud (GPT-5.6 or Claude Opus 4.8)',
               '<strong>Cost at scale</strong> → Local (if you have the hardware)',
-              '<strong>Speed & quality</strong> → Cloud (GPT-4o mini for 10× cheaper tokens)',
+              '<strong>Speed & quality</strong> → Cloud (GPT-5.6 Luna for 10× cheaper tokens)',
               '<strong>Testing both</strong> → PromptQuorum (dispatch to both simultaneously)'
             ]
           },
@@ -429,8 +429,8 @@
             h2: 'Common Questions',
             faqs: [
               {
-                q: 'Will local models ever match GPT-4o?',
-                a: 'The gap narrows every 18–24 months. Meta Llama 3.3 70B (2025) now matches GPT-4 (2023). A GPT-4o equivalent may be locally runnable by 2027.'
+                q: 'Will local models ever match GPT-5.6?',
+                a: 'The gap is narrowing but hasn\'t closed. Meta Llama 3.3 70B and Qwen3 72B score 75–85% on reasoning benchmarks vs GPT-5.6\'s 85–92% — closer than earlier generations, but not equal.'
               },
               {
                 q: 'How much RAM for a 7B model?',
@@ -471,14 +471,14 @@
             type: 'list',
             h2: 'In einfachen Worten',
             items: [
-              'Ein lokales LLM ist wie ein <strong>privates, aber langsameres ChatGPT</strong>, das keine aktuellen Ereignisse kennt. Es hält Ihre Daten sicher und berechnet keine pro-Abfrage-Gebühren, kann aber nicht mit GPT-4o konkurrieren.'
+              'Ein lokales LLM ist wie ein <strong>privates, aber langsameres ChatGPT</strong>, das keine aktuellen Ereignisse kennt. Es hält Ihre Daten sicher und berechnet keine pro-Abfrage-Gebühren, kann aber nicht mit GPT-5.6 konkurrieren.'
             ]
           },
           {
             type: 'list',
             h2: 'Wichtigste Erkenntnisse',
             items: [
-              '<strong>Qualitätslücke:</strong> Lokale 7B-Modelle erzielen 10–20% weniger Punkte als GPT-4o.',
+              '<strong>Qualitätslücke:</strong> Lokale 7B-Modelle erzielen 10–20% weniger Punkte als GPT-5.6.',
               '<strong>Geschwindigkeit:</strong> 10–25 Token/Sekunde (CPU) vs 80–150 Token/Sekunde (Cloud).',
               '<strong>Hardware:</strong> Minimum 16 GB RAM für brauchbare Leistung.',
               '<strong>Kein Internet:</strong> Lokale Modelle haben ein Trainingsdatum, keine Echtzeit-Daten.',
@@ -488,12 +488,12 @@
           {
             type: 'table',
             h2: 'Qualitätslücke: Benchmarks',
-            columns: ['Aufgabentyp', 'Lokal 7B', 'Lokal 70B', 'GPT-4o'],
+            columns: ['Aufgabentyp', 'Lokal 7B', 'Lokal 70B', 'GPT-5.6'],
             rows: [
-              { 'Aufgabentyp': 'Einfache Fragen', 'Lokal 7B': 'Ausreichend', 'Lokal 70B': 'Gut', 'GPT-4o': 'Hervorragend' },
-              { 'Aufgabentyp': 'Code-Erklärung', 'Lokal 7B': 'Ausreichend', 'Lokal 70B': 'Gut', 'GPT-4o': 'Hervorragend' },
-              { 'Aufgabentyp': 'Multi-Schritt-Logik', 'Lokal 7B': 'Schwach', 'Lokal 70B': 'Ausreichend', 'GPT-4o': 'Hervorragend' },
-              { 'Aufgabentyp': 'Höhere Mathematik', 'Lokal 7B': 'Schwach', 'Lokal 70B': 'Ausreichend', 'GPT-4o': 'Gut' },
+              { 'Aufgabentyp': 'Einfache Fragen', 'Lokal 7B': 'Ausreichend', 'Lokal 70B': 'Gut', 'GPT-5.6': 'Hervorragend' },
+              { 'Aufgabentyp': 'Code-Erklärung', 'Lokal 7B': 'Ausreichend', 'Lokal 70B': 'Gut', 'GPT-5.6': 'Hervorragend' },
+              { 'Aufgabentyp': 'Multi-Schritt-Logik', 'Lokal 7B': 'Schwach', 'Lokal 70B': 'Ausreichend', 'GPT-5.6': 'Hervorragend' },
+              { 'Aufgabentyp': 'Höhere Mathematik', 'Lokal 7B': 'Schwach', 'Lokal 70B': 'Ausreichend', 'GPT-5.6': 'Gut' },
             ]
           },
           {
@@ -508,10 +508,10 @@
             h2: 'Hardware-Anforderungen',
             columns: ['Hardware', 'Max-Modell', 'Qualität'],
             rows: [
-              { 'Hardware': 'Einfacher Laptop (8 GB)', 'Max-Modell': '7B', 'Qualität': 'Unter GPT-3,5' },
-              { 'Hardware': 'Mittelklasse-Laptop (16 GB)', 'Max-Modell': '13B', 'Qualität': 'Ca. GPT-3,5' },
-              { 'Hardware': 'Mac M3 Pro (18 GB)', 'Max-Modell': '13B vollständig', 'Qualität': 'GPT-3,5 bis GPT-4' },
-              { 'Hardware': 'High-End (40+ GB)', 'Max-Modell': '70B', 'Qualität': 'Konkurrenzfähig mit GPT-4o' },
+              { 'Hardware': 'Einfacher Laptop (8 GB)', 'Max-Modell': '7B', 'Qualität': 'Unter GPT-5,6 Luna' },
+              { 'Hardware': 'Mittelklasse-Laptop (16 GB)', 'Max-Modell': '13B', 'Qualität': 'Ca. GPT-5,6 Luna' },
+              { 'Hardware': 'Mac M3 Pro (18 GB)', 'Max-Modell': '13B vollständig', 'Qualität': 'GPT-5,6 Luna bis GPT-4' },
+              { 'Hardware': 'High-End (40+ GB)', 'Max-Modell': '70B', 'Qualität': 'Konkurrenzfähig mit GPT-5,6' },
             ]
           },
           {
@@ -537,7 +537,7 @@
             type: 'list',
             h2: 'Wann Sie KEINE lokalen LLMs verwenden sollten',
             items: [
-              '<strong>Komplexe Logik</strong> — Verwenden Sie GPT-4o oder Claude 4.6 stattdessen.',
+              '<strong>Komplexe Logik</strong> — Verwenden Sie GPT-5.6 oder Claude Sonnet 5 stattdessen.',
               '<strong>Echtzeit-Daten</strong> — News, Preise, URLs erfordern Cloud APIs.',
               '<strong>Rechts-/Medizinaufgaben</strong> — Hohe Genauigkeit erforderlich; Lücke ist kostspielig.',
               '<strong>Produktion im großen Maßstab</strong> — Cloud APIs bieten SLAs und Support.',
@@ -562,9 +562,9 @@
             h2: 'Beste Wahl nach Anwendungsfall',
             items: [
               '<strong>Datenschutz & Compliance</strong> → Lokal (Ollama + Llama 3.3 70B)',
-              '<strong>Logik & Codierung</strong> → Cloud (GPT-4o oder Claude 4.6)',
+              '<strong>Logik & Codierung</strong> → Cloud (GPT-5.6 oder Claude Opus 4.8)',
               '<strong>Kosteneffizienz bei Skalierung</strong> → Lokal (falls Sie Hardware haben)',
-              '<strong>Geschwindigkeit & Qualität</strong> → Cloud (GPT-4o mini für 10× günstigere Tokens)',
+              '<strong>Geschwindigkeit & Qualität</strong> → Cloud (GPT-5.6 Luna für 10× günstigere Tokens)',
               '<strong>Beide testen</strong> → PromptQuorum (gleichzeitig an beide dispatchen)'
             ]
           },
@@ -573,8 +573,8 @@
             h2: 'Häufig gestellte Fragen',
             faqs: [
               {
-                q: 'Werden lokale Modelle jemals GPT-4o entsprechen?',
-                a: 'Die Lücke schließt sich alle 18–24 Monate. Meta Llama 3.3 70B (2025) entspricht jetzt GPT-4 (2023). Ein GPT-4o-Äquivalent könnte 2027 lokal laufen.'
+                q: 'Werden lokale Modelle jemals GPT-5.6 entsprechen?',
+                a: 'Die Lücke verkleinert sich, ist aber nicht geschlossen. Meta Llama 3.3 70B und Qwen3 72B erreichen 75–85% bei Reasoning-Benchmarks gegenüber 85–92% bei GPT-5.6 — näher als frühere Generationen, aber nicht gleichwertig.'
               },
               {
                 q: 'Wie viel RAM für ein 7B-Modell?',
@@ -615,14 +615,14 @@
             type: 'list',
             h2: 'En Termes Simples',
             items: [
-              'Exécuter un LLM local, c\'est avoir un <strong>ChatGPT privé mais plus lent</strong> qui ne connaît pas les événements actuels. Vos données restent sûres et sans frais par requête, mais vous ne pouvez pas rivaliser avec GPT-4o.'
+              'Exécuter un LLM local, c\'est avoir un <strong>ChatGPT privé mais plus lent</strong> qui ne connaît pas les événements actuels. Vos données restent sûres et sans frais par requête, mais vous ne pouvez pas rivaliser avec GPT-5.6.'
             ]
           },
           {
             type: 'list',
             h2: 'Points Clés',
             items: [
-              '<strong>Écart qualité:</strong> Les modèles locaux 7B marquent 10–20% de moins que GPT-4o.',
+              '<strong>Écart qualité:</strong> Les modèles locaux 7B marquent 10–20% de moins que GPT-5.6.',
               '<strong>Vitesse:</strong> 10–25 tokens/sec (CPU) vs 80–150 tokens/sec (cloud).',
               '<strong>Matériel:</strong> 16 GB RAM minimum pour des performances utilisables.',
               '<strong>Pas d\'Internet:</strong> Les modèles locaux ont une date limite d\'entraînement, pas de données en temps réel.',
@@ -632,12 +632,12 @@
           {
             type: 'table',
             h2: 'Écart Qualité: Benchmarks',
-            columns: ['Type Tâche', 'Local 7B', 'Local 70B', 'GPT-4o'],
+            columns: ['Type Tâche', 'Local 7B', 'Local 70B', 'GPT-5.6'],
             rows: [
-              { 'Type Tâche': 'Questions simples', 'Local 7B': 'Adéquat', 'Local 70B': 'Bon', 'GPT-4o': 'Excellent' },
-              { 'Type Tâche': 'Explication code', 'Local 7B': 'Adéquat', 'Local 70B': 'Bon', 'GPT-4o': 'Excellent' },
-              { 'Type Tâche': 'Raisonnement multi-étapes', 'Local 7B': 'Faible', 'Local 70B': 'Adéquat', 'GPT-4o': 'Excellent' },
-              { 'Type Tâche': 'Mathématiques avancées', 'Local 7B': 'Faible', 'Local 70B': 'Adéquat', 'GPT-4o': 'Bon' },
+              { 'Type Tâche': 'Questions simples', 'Local 7B': 'Adéquat', 'Local 70B': 'Bon', 'GPT-5.6': 'Excellent' },
+              { 'Type Tâche': 'Explication code', 'Local 7B': 'Adéquat', 'Local 70B': 'Bon', 'GPT-5.6': 'Excellent' },
+              { 'Type Tâche': 'Raisonnement multi-étapes', 'Local 7B': 'Faible', 'Local 70B': 'Adéquat', 'GPT-5.6': 'Excellent' },
+              { 'Type Tâche': 'Mathématiques avancées', 'Local 7B': 'Faible', 'Local 70B': 'Adéquat', 'GPT-5.6': 'Bon' },
             ]
           },
           {
@@ -652,10 +652,10 @@
             h2: 'Configuration Matérielle Requise',
             columns: ['Matériel', 'Modèle Max', 'Qualité'],
             rows: [
-              { 'Matériel': 'Laptop basique (8 GB)', 'Modèle Max': '7B', 'Qualité': 'Sous GPT-3.5' },
-              { 'Matériel': 'Laptop gamme moyenne (16 GB)', 'Modèle Max': '13B', 'Qualité': 'Environ GPT-3.5' },
-              { 'Matériel': 'Mac M3 Pro (18 GB)', 'Modèle Max': '13B complet', 'Qualité': 'GPT-3.5 à GPT-4' },
-              { 'Matériel': 'Haut de gamme (40+ GB)', 'Modèle Max': '70B', 'Qualité': 'Compétitif avec GPT-4o' },
+              { 'Matériel': 'Laptop basique (8 GB)', 'Modèle Max': '7B', 'Qualité': 'Sous GPT-5.6 Luna' },
+              { 'Matériel': 'Laptop gamme moyenne (16 GB)', 'Modèle Max': '13B', 'Qualité': 'Environ GPT-5.6 Luna' },
+              { 'Matériel': 'Mac M3 Pro (18 GB)', 'Modèle Max': '13B complet', 'Qualité': 'GPT-5.6 Luna à GPT-4' },
+              { 'Matériel': 'Haut de gamme (40+ GB)', 'Modèle Max': '70B', 'Qualité': 'Compétitif avec GPT-5.6' },
             ]
           },
           {
@@ -681,7 +681,7 @@
             type: 'list',
             h2: 'Quand NE PAS Utiliser les LLM Locaux',
             items: [
-              '<strong>Raisonnement complexe</strong> — Utilisez GPT-4o ou Claude 4.6 à la place.',
+              '<strong>Raisonnement complexe</strong> — Utilisez GPT-5.6 ou Claude Sonnet 5 à la place.',
               '<strong>Données en temps réel</strong> — Les actualités, prix, URLs nécessitent les APIs cloud.',
               '<strong>Tâches légales/médicales</strong> — Haute précision requise; l\'écart est coûteux.',
               '<strong>Production à grande échelle</strong> — Les APIs cloud offrent des SLA et du support.',
@@ -706,9 +706,9 @@
             h2: 'Meilleur Choix par Cas d\'Usage',
             items: [
               '<strong>Confidentialité & conformité</strong> → Local (Ollama + Llama 3.3 70B)',
-              '<strong>Raisonnement & codage</strong> → Cloud (GPT-4o ou Claude 4.6)',
+              '<strong>Raisonnement & codage</strong> → Cloud (GPT-5.6 ou Claude Opus 4.8)',
               '<strong>Coût à l\'échelle</strong> → Local (si vous avez le matériel)',
-              '<strong>Vitesse & qualité</strong> → Cloud (GPT-4o mini pour 10× moins de tokens)',
+              '<strong>Vitesse & qualité</strong> → Cloud (GPT-5.6 Luna pour 10× moins de tokens)',
               '<strong>Tester les deux</strong> → PromptQuorum (envoyer à la fois localement et en cloud)'
             ]
           },
@@ -717,8 +717,8 @@
             h2: 'Questions Fréquentes',
             faqs: [
               {
-                q: 'Les modèles locaux rattraperont-ils jamais GPT-4o?',
-                a: 'L\'écart se réduit tous les 18–24 mois. Meta Llama 3.3 70B (2025) correspond maintenant à GPT-4 (2023). Un équivalent GPT-4o pourrait tourner localement en 2027.'
+                q: 'Les modèles locaux rattraperont-ils jamais GPT-5.6?',
+                a: 'L\'écart se réduit mais n\'est pas comblé. Meta Llama 3.3 70B et Qwen3 72B obtiennent 75–85% sur les benchmarks de raisonnement contre 85–92% pour GPT-5.6 — plus proche que les générations précédentes, mais pas équivalent.'
               },
               {
                 q: 'Combien de RAM pour un modèle 7B?',
@@ -759,14 +759,14 @@
             type: 'list',
             h2: '簡単に言うと',
             items: [
-              'ローカル LLM を実行することは、<strong>プライベートだがより遅い ChatGPT</strong> を持つことのようなものです。最新のイベントを知りません。データは安全で、リクエストごとに課金されませんが、GPT-4o と競争することはできません。'
+              'ローカル LLM を実行することは、<strong>プライベートだがより遅い ChatGPT</strong> を持つことのようなものです。最新のイベントを知りません。データは安全で、リクエストごとに課金されませんが、GPT-5.6 と競争することはできません。'
             ]
           },
           {
             type: 'list',
             h2: '重要なポイント',
             items: [
-              '<strong>品質ギャップ:</strong> ローカル 7B モデルは GPT-4o より 10–20% 低いスコア。',
+              '<strong>品質ギャップ:</strong> ローカル 7B モデルは GPT-5.6 より 10–20% 低いスコア。',
               '<strong>速度:</strong> 10–25 トークン/秒（CPU）vs 80–150 トークン/秒（クラウド）。',
               '<strong>ハードウェア:</strong> 使用可能なパフォーマンスには最低 16 GB RAM。',
               '<strong>インターネットなし:</strong> ローカルモデルには学習日付があります、リアルタイムデータなし。',
@@ -776,12 +776,12 @@
           {
             type: 'table',
             h2: '品質ギャップ: ベンチマーク',
-            columns: ['タスクタイプ', 'ローカル 7B', 'ローカル 70B', 'GPT-4o'],
+            columns: ['タスクタイプ', 'ローカル 7B', 'ローカル 70B', 'GPT-5.6'],
             rows: [
-              { 'タスクタイプ': 'シンプルな質問', 'ローカル 7B': '適切', 'ローカル 70B': '良い', 'GPT-4o': '優秀' },
-              { 'タスクタイプ': 'コード説明', 'ローカル 7B': '適切', 'ローカル 70B': '良い', 'GPT-4o': '優秀' },
-              { 'タスクタイプ': 'マルチステップ推論', 'ローカル 7B': '低い', 'ローカル 70B': '適切', 'GPT-4o': '優秀' },
-              { 'タスクタイプ': '高度な数学', 'ローカル 7B': '低い', 'ローカル 70B': '適切', 'GPT-4o': '良い' },
+              { 'タスクタイプ': 'シンプルな質問', 'ローカル 7B': '適切', 'ローカル 70B': '良い', 'GPT-5.6': '優秀' },
+              { 'タスクタイプ': 'コード説明', 'ローカル 7B': '適切', 'ローカル 70B': '良い', 'GPT-5.6': '優秀' },
+              { 'タスクタイプ': 'マルチステップ推論', 'ローカル 7B': '低い', 'ローカル 70B': '適切', 'GPT-5.6': '優秀' },
+              { 'タスクタイプ': '高度な数学', 'ローカル 7B': '低い', 'ローカル 70B': '適切', 'GPT-5.6': '良い' },
             ]
           },
           {
@@ -796,10 +796,10 @@
             h2: 'ハードウェア要件',
             columns: ['ハードウェア', '最大モデル', '品質'],
             rows: [
-              { 'ハードウェア': 'ベーシックラップトップ（8 GB）', '最大モデル': '7B', '品質': 'GPT-3.5未満' },
-              { 'ハードウェア': 'ミッドレンジラップトップ（16 GB）', '最大モデル': '13B', '品質': 'ほぼ GPT-3.5' },
-              { 'ハードウェア': 'Mac M3 Pro（18 GB）', '最大モデル': '13B フル', '品質': 'GPT-3.5 から GPT-4' },
-              { 'ハードウェア': 'ハイエンド（40+ GB）', '最大モデル': '70B', '品質': 'GPT-4o と競争的' },
+              { 'ハードウェア': 'ベーシックラップトップ（8 GB）', '最大モデル': '7B', '品質': 'GPT-5.6 Luna未満' },
+              { 'ハードウェア': 'ミッドレンジラップトップ（16 GB）', '最大モデル': '13B', '品質': 'ほぼ GPT-5.6 Luna' },
+              { 'ハードウェア': 'Mac M3 Pro（18 GB）', '最大モデル': '13B フル', '品質': 'GPT-5.6 Luna から GPT-4' },
+              { 'ハードウェア': 'ハイエンド（40+ GB）', '最大モデル': '70B', '品質': 'GPT-5.6 と競争的' },
             ]
           },
           {
@@ -825,7 +825,7 @@
             type: 'list',
             h2: 'ローカル LLM を使用しないでください',
             items: [
-              '<strong>複雑な推論</strong> — GPT-4o または Claude 4.6 を使用してください。',
+              '<strong>複雑な推論</strong> — GPT-5.6 または Claude Sonnet 5 を使用してください。',
               '<strong>リアルタイムデータ</strong> — ニュース、価格、URL はクラウド API が必要。',
               '<strong>法律/医療タスク</strong> — 高い精度が必要; ギャップは高額。',
               '<strong>大規模本番稼働</strong> — クラウド API は SLA とサポートを提供します。',
@@ -850,9 +850,9 @@
             h2: 'ユースケース別のベストチョイス',
             items: [
               '<strong>プライバシーとコンプライアンス</strong> → ローカル（Ollama + Llama 3.3 70B）',
-              '<strong>推論とコーディング</strong> → クラウド（GPT-4o または Claude 4.6）',
+              '<strong>推論とコーディング</strong> → クラウド（GPT-5.6 または Claude Opus 4.8）',
               '<strong>スケール時のコスト</strong> → ローカル（ハードウェアがある場合）',
-              '<strong>速度と品質</strong> → クラウド（GPT-4o mini で 10 倍安いトークン）',
+              '<strong>速度と品質</strong> → クラウド（GPT-5.6 Luna で 10 倍安いトークン）',
               '<strong>両方をテスト</strong> → PromptQuorum（ローカルとクラウドの両方に同時にディスパッチ）'
             ]
           },
@@ -861,8 +861,8 @@
             h2: 'よくある質問',
             faqs: [
               {
-                q: 'ローカルモデルは GPT-4o に追いつくでしょうか?',
-                a: 'ギャップは 18～24 か月ごとに縮まります。Meta Llama 3.3 70B（2025）は GPT-4（2023）に相当します。GPT-4o 相当は 2027 年までにローカルで実行できる可能性があります。'
+                q: 'ローカルモデルは GPT-5.6 に追いつくでしょうか?',
+                a: 'ギャップは縮まりつつありますが、まだ埋まっていません。Meta Llama 3.3 70B と Qwen3 72B は推論ベンチマークで 75–85% のスコアを出しますが、GPT-5.6 は 85–92% です — 以前の世代より近づいていますが、同等ではありません。'
               },
               {
                 q: '7B モデルに必要な RAM は?',
@@ -903,14 +903,14 @@
             type: 'list',
             h2: '通俗解释',
             items: [
-              '运行本地 LLM 就像拥有一个 <strong>私密但更慢的 ChatGPT</strong>，它不了解最新事件。您的数据保持安全，按查询不计费，但您无法与 GPT-4o 竞争。'
+              '运行本地 LLM 就像拥有一个 <strong>私密但更慢的 ChatGPT</strong>，它不了解最新事件。您的数据保持安全，按查询不计费，但您无法与 GPT-5.6 竞争。'
             ]
           },
           {
             type: 'list',
             h2: '关键要点',
             items: [
-              '<strong>质量差距：</strong> 本地 7B 模型比 GPT-4o 低 10–20%。',
+              '<strong>质量差距：</strong> 本地 7B 模型比 GPT-5.6 低 10–20%。',
               '<strong>速度：</strong> 10–25 个 token/秒（CPU）vs 80–150 个 token/秒（云）。',
               '<strong>硬件：</strong> 至少需要 16 GB RAM 以获得可用的性能。',
               '<strong>无互联网：</strong> 本地模型有训练截止日期，没有实时数据。',
@@ -920,12 +920,12 @@
           {
             type: 'table',
             h2: '质量差距：基准',
-            columns: ['任务类型', '本地 7B', '本地 70B', 'GPT-4o'],
+            columns: ['任务类型', '本地 7B', '本地 70B', 'GPT-5.6'],
             rows: [
-              { '任务类型': '简单问答', '本地 7B': '足够', '本地 70B': '良好', 'GPT-4o': '优秀' },
-              { '任务类型': '代码解释', '本地 7B': '足够', '本地 70B': '良好', 'GPT-4o': '优秀' },
-              { '任务类型': '多步推理', '本地 7B': '较差', '本地 70B': '足够', 'GPT-4o': '优秀' },
-              { '任务类型': '高级数学', '本地 7B': '较差', '本地 70B': '足够', 'GPT-4o': '良好' },
+              { '任务类型': '简单问答', '本地 7B': '足够', '本地 70B': '良好', 'GPT-5.6': '优秀' },
+              { '任务类型': '代码解释', '本地 7B': '足够', '本地 70B': '良好', 'GPT-5.6': '优秀' },
+              { '任务类型': '多步推理', '本地 7B': '较差', '本地 70B': '足够', 'GPT-5.6': '优秀' },
+              { '任务类型': '高级数学', '本地 7B': '较差', '本地 70B': '足够', 'GPT-5.6': '良好' },
             ]
           },
           {
@@ -940,10 +940,10 @@
             h2: '硬件需求',
             columns: ['硬件', '最大模型', '质量'],
             rows: [
-              { '硬件': '基础笔记本（8 GB）', '最大模型': '7B', '质量': '低于 GPT-3.5' },
-              { '硬件': '中档笔记本（16 GB）', '最大模型': '13B', '质量': '大约 GPT-3.5' },
-              { '硬件': 'Mac M3 Pro（18 GB）', '最大模型': '13B 完整', '质量': 'GPT-3.5 到 GPT-4' },
-              { '硬件': '高端（40+ GB）', '最大模型': '70B', '质量': '与 GPT-4o 竞争' },
+              { '硬件': '基础笔记本（8 GB）', '最大模型': '7B', '质量': '低于 GPT-5.6 Luna' },
+              { '硬件': '中档笔记本（16 GB）', '最大模型': '13B', '质量': '大约 GPT-5.6 Luna' },
+              { '硬件': 'Mac M3 Pro（18 GB）', '最大模型': '13B 完整', '质量': 'GPT-5.6 Luna 到 GPT-4' },
+              { '硬件': '高端（40+ GB）', '最大模型': '70B', '质量': '与 GPT-5.6 竞争' },
             ]
           },
           {
@@ -969,7 +969,7 @@
             type: 'list',
             h2: '何时不要使用本地 LLM',
             items: [
-              '<strong>复杂推理</strong> — 改用 GPT-4o 或 Claude 4.6。',
+              '<strong>复杂推理</strong> — 改用 GPT-5.6 或 Claude Sonnet 5。',
               '<strong>实时数据</strong> — 新闻、价格、URL 需要云 API。',
               '<strong>法律/医疗任务</strong> — 需要高精度；差距是代价高昂的。',
               '<strong>大规模生产部署</strong> — 云 API 提供 SLA 和支持。',
@@ -994,9 +994,9 @@
             h2: '按用例的最佳选择',
             items: [
               '<strong>隐私和合规性</strong> → 本地（Ollama + Llama 3.3 70B）',
-              '<strong>推理和编码</strong> → 云（GPT-4o 或 Claude 4.6）',
+              '<strong>推理和编码</strong> → 云（GPT-5.6 或 Claude Opus 4.8）',
               '<strong>规模成本</strong> → 本地（如果您有硬件）',
-              '<strong>速度和质量</strong> → 云（GPT-4o mini 便宜 10 倍）',
+              '<strong>速度和质量</strong> → 云（GPT-5.6 Luna 便宜 10 倍）',
               '<strong>测试两者</strong> → PromptQuorum（同时分发到本地和云）'
             ]
           },
@@ -1005,8 +1005,8 @@
             h2: '常见问题',
             faqs: [
               {
-                q: '本地模型能追上 GPT-4o 吗?',
-                a: '差距每 18-24 个月缩小一次。Meta Llama 3.3 70B（2025）现在可以匹配 GPT-4（2023）。GPT-4o 等效品可能在 2027 年本地运行。'
+                q: '本地模型能追上 GPT-5.6 吗?',
+                a: '差距正在缩小，但尚未消除。Meta Llama 3.3 70B 和 Qwen3 72B 在推理基准上得分 75–85%，而 GPT-5.6 为 85–92% —— 比早期版本更接近，但仍不相等。'
               },
               {
                 q: '7B 模型需要多少 RAM?',

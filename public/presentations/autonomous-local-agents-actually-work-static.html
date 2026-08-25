@@ -267,6 +267,7 @@
     }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
             * {
                 margin: 0;
                 padding: 0;
@@ -429,7 +430,7 @@
                             '<strong>Two stacks land real work:</strong> Cline + Ollama and Continue.dev Agent mode — both scoped to one editor, one model, one approval gate.',
                             '<strong>Three stacks fail surprisingly:</strong> LangGraph (brittle past 4–5 steps), OpenInterpreter (too eager to execute shell), MetaGPT (multi-agent role-play breaks down).',
                             '<strong>One stack is unusable:</strong> AutoGPT-local — stalled project, broken dependencies, planning loop drifts within minutes.',
-                            '<strong>Tool-call reliability = model property:</strong> Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B work. Models under 7B fail in all stacks.',
+                            '<strong>Tool-call reliability = model property:</strong> Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B work. Models under 7B fail in all stacks.',
                             '<strong>The supervised assistant model wins in 2026.</strong> Agents that stop for approval finish more tasks than unattended autonomous agents.',
                             '<strong>Supervision cost is the real metric.</strong> 3–12 approvals = shippable. 40+ approvals = you are doing the work, not the agent.'
                         ]
@@ -593,7 +594,7 @@
                             '<strong>Zwei Stacks liefern echte Arbeit:</strong> Cline + Ollama und Continue.dev Agent mode — beide auf einen Editor, ein Modell, ein Approval-Gate beschränkt.',
                             '<strong>Drei Stacks scheitern überraschend:</strong> LangGraph (fragil ab Schritt 4–5), OpenInterpreter (führt Shell-Befehle zu eifrig aus), MetaGPT (Multi-Agent-Rollenspiel bricht ab).',
                             '<strong>Ein Stack ist unbrauchbar:</strong> AutoGPT-local — stagniertes Projekt, kaputte Abhängigkeiten, Planungsschleife driftet in Minuten.',
-                            '<strong>Tool-Call-Zuverlässigkeit = Modell-Eigenschaft:</strong> Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B funktionieren. Modelle unter 7B versagen in allen Stacks.',
+                            '<strong>Tool-Call-Zuverlässigkeit = Modell-Eigenschaft:</strong> Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B funktionieren. Modelle unter 7B versagen in allen Stacks.',
                             '<strong>Das Modell "beaufsichtigter Assistent" gewinnt 2026.</strong> Agenten, die bei der Genehmigung stoppen, erledigen mehr Aufgaben.',
                             '<strong>Überwachungskosten sind die echte Metrik.</strong> 3–12 Genehmigungen = lieferbar. 40+ = Sie machen die Arbeit, nicht der Agent.'
                         ]
@@ -757,7 +758,7 @@
                             '<strong>Deux stacks livrent du vrai travail :</strong> Cline + Ollama et Continue.dev Agent mode — tous deux limités à un éditeur, un modèle, une porte d\'approbation.',
                             '<strong>Trois stacks échouent de façon surprenante :</strong> LangGraph (fragile au-delà de 4–5 étapes), OpenInterpreter (trop prompt à exécuter du shell), MetaGPT (le jeu de rôles multi-agents s\'effondre).',
                             '<strong>Un stack est inutilisable :</strong> AutoGPT-local — projet stagnant, dépendances cassées, boucle de planification dérive en minutes.',
-                            '<strong>Fiabilité des appels d\'outils = propriété du modèle :</strong> Qwen3-Coder 30B, GLM-5.1 32B, Gemma 4 27B, Llama 3.3 70B fonctionnent. Les modèles sous 7B échouent dans tous les stacks.',
+                            '<strong>Fiabilité des appels d\'outils = propriété du modèle :</strong> Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B fonctionnent. Les modèles sous 7B échouent dans tous les stacks.',
                             '<strong>Le modèle "assistant supervisé" gagne en 2026.</strong> Les agents qui s\'arrêtent pour approbation terminent plus de tâches.',
                             '<strong>Le coût de supervision est la vraie métrique.</strong> 3–12 approbations = livrable. 40+ = c\'est vous qui faites le travail, pas l\'agent.'
                         ]
@@ -921,7 +922,7 @@
                             '<strong>2つのスタックが実際の作業を完成：</strong>Cline + OllamaとContinue.dev Agentモード — 両方とも1つのエディタ、1つのモデル、1つの承認ゲートに限定。',
                             '<strong>3つのスタックが予想外に失敗：</strong>LangGraph（4〜5ステップ以降は脆弱）、OpenInterpreter（シェルを積極的に実行しすぎ）、MetaGPT（マルチエージェントロールプレイが崩壊）。',
                             '<strong>1つのスタックは使用不可：</strong>AutoGPT-local — 停滞したプロジェクト、壊れた依存関係、計画ループが数分で漂流。',
-                            '<strong>ツール呼び出し信頼性 = モデルの特性：</strong>Qwen3-Coder 30B、GLM-5.1 32B、Gemma 4 27B、Llama 3.3 70Bは機能する。7B未満のモデルはすべてのスタックで失敗。',
+                            '<strong>ツール呼び出し信頼性 = モデルの特性：</strong>Qwen3-Coder 30B、GLM-4.7 32B、Gemma 4 27B、Llama 3.3 70Bは機能する。7B未満のモデルはすべてのスタックで失敗。',
                             '<strong>2026年は「監督付きアシスタント」モデルが勝つ。</strong>承認のために停止するエージェントの方が多くのタスクを完成させる。',
                             '<strong>監督コストが真の指標。</strong>3〜12回の承認 = 出荷可能。40回以上 = あなたが作業しており、エージェントではない。'
                         ]
@@ -1085,7 +1086,7 @@
                             '<strong>两个框架完成真实工作：</strong>Cline + Ollama 和 Continue.dev Agent模式 — 两者都限制在一个编辑器、一个模型、一个批准门控。',
                             '<strong>三个框架意外失败：</strong>LangGraph（4-5步后脆弱）、OpenInterpreter（过于积极执行shell）、MetaGPT（多代理角色扮演崩溃）。',
                             '<strong>一个框架无法使用：</strong>AutoGPT-local — 停滞的项目，损坏的依赖，计划循环在几分钟内漂移。',
-                            '<strong>工具调用可靠性 = 模型属性：</strong>Qwen3-Coder 30B、GLM-5.1 32B、Gemma 4 27B、Llama 3.3 70B有效。7B以下模型在所有框架中失败。',
+                            '<strong>工具调用可靠性 = 模型属性：</strong>Qwen3-Coder 30B、GLM-4.7 32B、Gemma 4 27B、Llama 3.3 70B有效。7B以下模型在所有框架中失败。',
                             '<strong>2026年"监督助手"模式获胜。</strong>为批准而停止的代理比无人看管的自主代理完成更多任务。',
                             '<strong>监督成本是真实指标。</strong>3-12次批准 = 可交付。40次以上 = 你在做工作，不是代理。'
                         ]

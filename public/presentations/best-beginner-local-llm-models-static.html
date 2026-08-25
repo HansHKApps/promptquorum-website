@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Local LLM Models for Beginners 2026 | PromptQuorum</title>
-    <meta name="description" content="5 best beginner local LLMs: Llama 3.2 3B, Phi-3.5 Mini, Gemma 2 2B, Mistral 7B, Qwen2.5 7B. Ranked by RAM and speed. Start with the right one." />
+    <meta name="description" content="5 best beginner local LLMs: Llama 3.2 3B, Phi-4 Mini, Gemma 3 2B, Llama 3.3 8B, Qwen3 8B. Ranked by RAM and speed. Start with the right one." />
     <meta property="og:title" content="Best Local LLM Models for Beginners 2026 — PromptQuorum" />
     <meta property="og:description" content="5 models, 4–8 GB RAM, all install with one Ollama command. Full comparison table with RAM, speed, and context window data." />
     <meta property="og:type" content="website" />
@@ -260,6 +260,7 @@
     }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
             * {
                 margin: 0;
                 padding: 0;
@@ -423,10 +424,10 @@
                         h2: 'The 5 Best Beginner Models',
                         items: [
                             '<strong>#1 Llama 3.2 3B</strong> — 2.5 GB RAM, 25–45 tok/s, 128K context. Best overall for first-timers.',
-                            '<strong>#2 Phi-3.5 Mini 3.8B</strong> — 3 GB RAM, 128K context. Best reasoning at 4–6 GB RAM.',
-                            '<strong>#3 Gemma 2 2B</strong> — 1.7 GB RAM, 40–60 tok/s. Fastest CPU model; ideal to test your setup.',
-                            '<strong>#4 Mistral 7B v0.3</strong> — 4.5 GB RAM, Apache 2.0. Best for EU compliance and function calling.',
-                            '<strong>#5 Qwen2.5 7B</strong> — 4.7 GB RAM, 128K context, 29 languages. Best coding and multilingual.'
+                            '<strong>#2 Phi-4 Mini 3.8B</strong> — 2.5 GB RAM, 128K context. Best reasoning at 4–6 GB RAM.',
+                            '<strong>#3 Gemma 3 2B</strong> — 1.7 GB RAM, 40–60 tok/s. Fastest CPU model; ideal to test your setup.',
+                            '<strong>#4 Llama 3.3 8B</strong> — 5.5 GB RAM, 72% HumanEval. Best 7B/8B all-rounder.',
+                            '<strong>#5 Qwen3 8B</strong> — 5.2 GB RAM, 32K context (131K YaRN), 29+ languages. Best coding and multilingual.'
                         ]
                     },
                     {
@@ -435,9 +436,9 @@
                         intro: 'RAM is the primary constraint. Determine available RAM before choosing model size.',
                         items: [
                             '<strong>Rule of thumb:</strong> parameters × 0.5 ≈ GB of RAM needed at Q4_K_M (4-bit) quantization',
-                            '<strong>4–6 GB RAM:</strong> use 3B models — Llama 3.2 3B or Phi-3.5 Mini 3.8B',
-                            '<strong>8 GB RAM:</strong> 7B models recommended — Qwen2.5 7B or Mistral 7B',
-                            '<strong>Task matters too:</strong> Coding → Qwen2.5 7B · Speed → Gemma 2 2B · EU compliance → Mistral 7B'
+                            '<strong>4–6 GB RAM:</strong> use 3B models — Llama 3.2 3B or Phi-4 Mini 3.8B',
+                            '<strong>8 GB RAM:</strong> 7B models recommended — Qwen3 8B or Llama 3.3 8B',
+                            '<strong>Task matters too:</strong> Coding → Qwen3 8B · Speed → Gemma 3 2B · Reasoning at low RAM → Phi-4 Mini'
                         ]
                     },
                     {
@@ -446,57 +447,56 @@
                         columns: ['Model', 'RAM', 'Speed (CPU)', 'Context', 'Best For'],
                         rows: [
                             { 'Model': 'Llama 3.2 3B', 'RAM': '2.5 GB', 'Speed (CPU)': '25–45 tok/s', 'Context': '128K', 'Best For': 'General use, first model' },
-                            { 'Model': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Speed (CPU)': '20–35 tok/s', 'Context': '128K', 'Best For': 'Reasoning, coding, low RAM' },
-                            { 'Model': 'Gemma 2 2B', 'RAM': '1.7 GB', 'Speed (CPU)': '40–60 tok/s', 'Context': '8K', 'Best For': 'Speed, very low RAM' },
-                            { 'Model': 'Mistral 7B v0.3', 'RAM': '4.5 GB', 'Speed (CPU)': '10–20 tok/s', 'Context': '32K', 'Best For': 'EU deployments, Apache 2.0' },
-                            { 'Model': 'Qwen2.5 7B', 'RAM': '4.7 GB', 'Speed (CPU)': '10–18 tok/s', 'Context': '128K', 'Best For': 'Multilingual, coding' }
+                            { 'Model': 'Phi-4 Mini 3.8B', 'RAM': '2.5 GB', 'Speed (CPU)': '30–50 tok/s', 'Context': '128K', 'Best For': 'Reasoning, coding, low RAM' },
+                            { 'Model': 'Gemma 3 2B', 'RAM': '1.7 GB', 'Speed (CPU)': '40–60 tok/s', 'Context': '128K', 'Best For': 'Speed, very low RAM' },
+                            { 'Model': 'Llama 3.3 8B', 'RAM': '5.5 GB', 'Speed (CPU)': '10–18 tok/s', 'Context': '128K', 'Best For': 'General all-rounder, 72% HumanEval' },
+                            { 'Model': 'Qwen3 8B', 'RAM': '5.2 GB', 'Speed (CPU)': '10–18 tok/s', 'Context': '32K (131K YaRN)', 'Best For': 'Multilingual, coding' }
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '#1 Llama 3.2 3B &amp; #2 Phi-3.5 Mini',
+                        h2: '#1 Llama 3.2 3B &amp; #2 Phi-4 Mini',
                         items: [
                             '<strong>Llama 3.2 3B:</strong> Best starting point for most users. Runs on 4 GB RAM, 128K context, strong instruction-following.',
                             'On M3 Pro: 70–90 tok/s. On 8-core laptop: 25–45 tok/s. Download: ~2 GB.',
                             '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.2:3b</code>',
-                            '<strong>Phi-3.5 Mini 3.8B:</strong> Microsoft model optimized for reasoning and coding. Scores above many 7B models on math benchmarks.',
+                            '<strong>Phi-4 Mini 3.8B:</strong> Microsoft model optimized for reasoning and coding. Scores 68% MMLU and 70% HumanEval — above many 7B models — at just 2.5 GB RAM.',
                             'Best for machines with 4–6 GB RAM where quality matters.',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run phi3.5</code>'
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run phi4-mini</code>'
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '#3 Gemma 2 2B &amp; #4 Mistral 7B',
+                        h2: '#3 Gemma 3 2B &amp; #4 Llama 3.3 8B',
                         items: [
-                            '<strong>Gemma 2 2B:</strong> Fastest CPU model — 40–60 tok/s, just 1.7 GB RAM. Google\'s smallest open model.',
+                            '<strong>Gemma 3 2B:</strong> Fastest CPU model — 40–60 tok/s, just 1.7 GB RAM. Google\'s smallest open model, now with 128K context (up from 8K on Gemma 2).',
                             'Use to test your setup, or when speed matters more than output depth.',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run gemma2:2b</code>',
-                            '<strong>Mistral 7B v0.3:</strong> Reliable 7B with function calling support, Apache 2.0 licence, French-company provenance.',
-                            'Best choice for EU organizations and regulated sectors (simplifies GDPR documentation).',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run mistral</code>'
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run gemma3:2b</code>',
+                            '<strong>Llama 3.3 8B:</strong> The current general-purpose all-rounder at this size — 72% HumanEval, 128K context, solid English reasoning.',
+                            'Best choice on 8 GB RAM for longer text, complex instructions, and multi-turn conversations.',
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.3:8b-instruct</code>'
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '#5 Qwen2.5 7B — Coding &amp; Multilingual',
+                        h2: '#5 Qwen3 8B — Coding &amp; Multilingual',
                         items: [
-                            '<strong>Outperforms Mistral 7B</strong> on HumanEval (coding) and MBPP benchmarks.',
-                            '<strong>29 languages natively</strong> — Chinese, Japanese, Korean, Arabic, and all major European languages.',
-                            '<strong>128K context window</strong> (vs. 32K for Mistral 7B) — handles longer documents.',
-                            'JSON mode and structured output support built-in.',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5:7b</code>',
-                            'For coding specifically: <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5-coder:7b</code>'
+                            '<strong>57.3% on HumanEval</strong>, matches or beats Llama 3.1 8B on MMLU.',
+                            '<strong>29+ languages natively</strong> — Chinese, Japanese, Korean, Arabic, and all major European languages.',
+                            '<strong>32K context window</strong> (131K with YaRN) — supports JSON mode and structured output.',
+                            'Optional "thinking mode" for harder reasoning tasks — slower, but more accurate.',
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen3:8b</code>'
                         ]
                     },
                     {
                         type: 'numbered',
                         h2: 'Which Model Should You Start With?',
                         items: [
-                            '<strong>4 GB RAM or less:</strong> ollama run gemma2:2b — lowest memory, fastest download',
+                            '<strong>4 GB RAM or less:</strong> ollama run gemma3:2b — lowest memory, fastest download',
                             '<strong>8 GB RAM, first model:</strong> ollama run llama3.2:3b — best quality/RAM balance',
-                            '<strong>8 GB RAM, serious use:</strong> ollama run qwen2.5:7b — better reasoning and context',
-                            '<strong>Primarily coding:</strong> ollama run qwen2.5:7b — best HumanEval in this list',
-                            '<strong>Non-English language:</strong> ollama run qwen2.5:7b — 29-language native support'
+                            '<strong>8 GB RAM, serious use:</strong> ollama run qwen3:8b — better reasoning and context',
+                            '<strong>Primarily coding:</strong> ollama run qwen3:8b — best HumanEval in this list',
+                            '<strong>Non-English language:</strong> ollama run qwen3:8b — 29-language native support'
                         ]
                     },
                     {
@@ -510,9 +510,9 @@
                         type: 'list',
                         h2: 'Model Selection by Region',
                         items: [
-                            '<strong>EU / GDPR:</strong> Mistral 7B v0.3 — Mistral AI is French, Apache 2.0. Simplifies compliance documentation for regulated sectors.',
-                            '<strong>Japan (METI):</strong> Qwen2.5 7B — 30–40% better token efficiency on Japanese text. METI requires documenting model name and version.',
-                            '<strong>China:</strong> Qwen2.5 7B (Alibaba) — native Chinese tokenization, satisfies Data Security Law (DSL) data localization when run locally via Ollama.',
+                            '<strong>EU / GDPR:</strong> Llama, Gemma, and Qwen are all usable locally under GDPR. Mistral AI (France, Apache 2.0) has the cleanest EU provenance, but current Mistral Small releases (24B+) exceed this beginner RAM range.',
+                            '<strong>Japan (METI):</strong> Qwen3 8B — 30–40% better token efficiency on Japanese text. METI requires documenting model name and version.',
+                            '<strong>China:</strong> Qwen3 8B (Alibaba) — native Chinese tokenization, satisfies Data Security Law (DSL) data localization when run locally via Ollama.',
                             'All five models are free for local inference — no data leaves your machine regardless of region.'
                         ]
                     },
@@ -523,7 +523,7 @@
                             'Choosing by parameter count alone — a well-quantized 7B can beat a poorly-quantized 13B',
                             'Ignoring VRAM overhead — models need 10–15% more than the file size',
                             'Using Q3_K_S when Q4_K_M gives better quality at nearly the same size',
-                            'Defaulting to Mistral 7B — Qwen2.5 7B beats it on coding, Llama 3.1 8B on English (same RAM)',
+                            'Defaulting to Mistral Small v0.3 — Qwen3 8B beats it on coding, Llama 3.3 8B on English (same RAM)',
                             'Pulling without checking RAM — risks disk swapping and output under 1 tok/s'
                         ]
                     },
@@ -533,18 +533,18 @@
                         items: [
                             'Check available RAM: <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">free -h</code> (Linux/Mac) or Task Manager (Windows)',
                             'Install Ollama: download free from ollama.com — runs on Mac, Windows, Linux',
-                            'Pull your first model: <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.2:3b</code> (or gemma2:2b on 4 GB)',
-                            'Upgrade when ready: <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5:7b</code> for 8 GB+ machines'
+                            'Pull your first model: <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.2:3b</code> (or gemma3:2b on 4 GB)',
+                            'Upgrade when ready: <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen3:8b</code> for 8 GB+ machines'
                         ]
                     },
                     {
                         type: 'faq',
                         h2: 'Frequently Asked Questions',
                         faqs: [
-                            { q: 'What is the best local LLM for beginners in 2026?', a: 'Llama 3.2 3B for most users — 4 GB RAM, strong instruction-following, downloads in 3 minutes. For ≤4 GB RAM: Gemma 2 2B.' },
+                            { q: 'What is the best local LLM for beginners in 2026?', a: 'Llama 3.2 3B for most users — 4 GB RAM, strong instruction-following, downloads in 3 minutes. For ≤4 GB RAM: Gemma 3 2B.' },
                             { q: 'What is the minimum RAM to run a local LLM?', a: '4 GB RAM with a 3B model at Q4_K_M quantization. 8 GB unlocks 7B models with noticeably better quality.' },
                             { q: 'Are these models safe with private data?', a: 'Yes — all run entirely on your hardware. No prompt or output is transmitted to external servers.' },
-                            { q: 'Which model is best for coding?', a: 'Qwen2.5 7B leads on HumanEval. For 4–6 GB RAM, Phi-3.5 Mini 3.8B is the best coding option.' }
+                            { q: 'Which model is best for coding?', a: 'Qwen3 8B leads on HumanEval. For 4–6 GB RAM, Phi-4 Mini 3.8B is the best coding option.' }
                         ]
                     },
                     {
@@ -571,10 +571,10 @@
                         h2: 'Die 5 besten Einsteiger-Modelle',
                         items: [
                             '<strong>#1 Llama 3.2 3B</strong> — 2,5 GB RAM, 25–45 Tok/s, 128K Kontext. Bestes Gesamtmodell für Einsteiger.',
-                            '<strong>#2 Phi-3.5 Mini 3.8B</strong> — 3 GB RAM, 128K Kontext. Bestes Reasoning bei 4–6 GB RAM.',
-                            '<strong>#3 Gemma 2 2B</strong> — 1,7 GB RAM, 40–60 Tok/s. Schnellstes CPU-Modell; ideal zum Setup-Test.',
-                            '<strong>#4 Mistral 7B v0.3</strong> — 4,5 GB RAM, Apache 2.0. Beste EU-Compliance und Function Calling.',
-                            '<strong>#5 Qwen2.5 7B</strong> — 4,7 GB RAM, 128K Kontext, 29 Sprachen. Bestes Coding und Mehrsprachigkeit.'
+                            '<strong>#2 Phi-4 Mini 3.8B</strong> — 2,5 GB RAM, 128K Kontext. Bestes Reasoning bei 4–6 GB RAM.',
+                            '<strong>#3 Gemma 3 2B</strong> — 1,7 GB RAM, 40–60 Tok/s. Schnellstes CPU-Modell; ideal zum Setup-Test.',
+                            '<strong>#4 Llama 3.3 8B</strong> — 5,5 GB RAM, 72% HumanEval. Bester 7B/8B-Allrounder.',
+                            '<strong>#5 Qwen3 8B</strong> — 5,2 GB RAM, 32K Kontext (131K mit YaRN), 29+ Sprachen. Bestes Coding und Mehrsprachigkeit.'
                         ]
                     },
                     {
@@ -583,9 +583,9 @@
                         intro: 'RAM ist die wichtigste Einschränkung. Verfügbaren RAM prüfen, bevor man die Modellgröße wählt.',
                         items: [
                             '<strong>Faustformel:</strong> Parameter × 0,5 ≈ GB RAM bei Q4_K_M (4-Bit) Quantisierung',
-                            '<strong>4–6 GB RAM:</strong> 3B-Modelle verwenden — Llama 3.2 3B oder Phi-3.5 Mini 3.8B',
-                            '<strong>8 GB RAM:</strong> 7B-Modelle empfohlen — Qwen2.5 7B oder Mistral 7B',
-                            '<strong>Aufgabe zählt auch:</strong> Coding → Qwen2.5 7B · Geschwindigkeit → Gemma 2 2B · EU-Compliance → Mistral 7B'
+                            '<strong>4–6 GB RAM:</strong> 3B-Modelle verwenden — Llama 3.2 3B oder Phi-4 Mini 3.8B',
+                            '<strong>8 GB RAM:</strong> 7B-Modelle empfohlen — Qwen3 8B oder Llama 3.3 8B',
+                            '<strong>Aufgabe zählt auch:</strong> Coding → Qwen3 8B · Geschwindigkeit → Gemma 3 2B · EU-Compliance → Llama 3.3 8B'
                         ]
                     },
                     {
@@ -594,57 +594,56 @@
                         columns: ['Modell', 'RAM', 'Geschwindigkeit', 'Kontext', 'Optimal für'],
                         rows: [
                             { 'Modell': 'Llama 3.2 3B', 'RAM': '2,5 GB', 'Geschwindigkeit': '25–45 Tok/s', 'Kontext': '128K', 'Optimal für': 'Allgemein, erstes Modell' },
-                            { 'Modell': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Geschwindigkeit': '20–35 Tok/s', 'Kontext': '128K', 'Optimal für': 'Reasoning, Coding, wenig RAM' },
-                            { 'Modell': 'Gemma 2 2B', 'RAM': '1,7 GB', 'Geschwindigkeit': '40–60 Tok/s', 'Kontext': '8K', 'Optimal für': 'Geschwindigkeit, minimaler RAM' },
-                            { 'Modell': 'Mistral 7B v0.3', 'RAM': '4,5 GB', 'Geschwindigkeit': '10–20 Tok/s', 'Kontext': '32K', 'Optimal für': 'EU-Einsatz, Apache 2.0' },
-                            { 'Modell': 'Qwen2.5 7B', 'RAM': '4,7 GB', 'Geschwindigkeit': '10–18 Tok/s', 'Kontext': '128K', 'Optimal für': 'Mehrsprachig, Coding' }
+                            { 'Modell': 'Phi-4 Mini 3.8B', 'RAM': '2,5 GB', 'Geschwindigkeit': '30–50 Tok/s', 'Kontext': '128K', 'Optimal für': 'Reasoning, Coding, wenig RAM' },
+                            { 'Modell': 'Gemma 3 2B', 'RAM': '1,7 GB', 'Geschwindigkeit': '40–60 Tok/s', 'Kontext': '128K', 'Optimal für': 'Geschwindigkeit, minimaler RAM' },
+                            { 'Modell': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Geschwindigkeit': '10–18 Tok/s', 'Kontext': '128K', 'Optimal für': 'Allrounder, 72% HumanEval' },
+                            { 'Modell': 'Qwen3 8B', 'RAM': '5,2 GB', 'Geschwindigkeit': '10–18 Tok/s', 'Kontext': '32K (131K YaRN)', 'Optimal für': 'Mehrsprachig, Coding' }
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '#1 Llama 3.2 3B &amp; #2 Phi-3.5 Mini',
+                        h2: '#1 Llama 3.2 3B &amp; #2 Phi-4 Mini',
                         items: [
                             '<strong>Llama 3.2 3B:</strong> Bester Einstieg für die meisten Nutzer. Läuft auf 4 GB RAM, 128K Kontext, starkes Instruction-Following.',
                             'Auf M3 Pro: 70–90 Tok/s. Auf 8-Kern-Laptop: 25–45 Tok/s. Download: ~2 GB.',
                             '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.2:3b</code>',
-                            '<strong>Phi-3.5 Mini 3.8B:</strong> Microsoft-Modell optimiert für Reasoning und Coding. Übertrifft viele 7B-Modelle bei Mathe-Benchmarks.',
+                            '<strong>Phi-4 Mini 3.8B:</strong> Microsoft-Modell optimiert für Reasoning und Coding. Erreicht 68% MMLU und 70% HumanEval — mehr als viele 7B-Modelle — bei nur 2,5 GB RAM.',
                             'Empfohlen für Geräte mit 4–6 GB RAM, wo Qualität zählt.',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run phi3.5</code>'
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run phi4-mini</code>'
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '#3 Gemma 2 2B &amp; #4 Mistral 7B',
+                        h2: '#3 Gemma 3 2B &amp; #4 Llama 3.3 8B',
                         items: [
-                            '<strong>Gemma 2 2B:</strong> Schnellstes CPU-Modell — 40–60 Tok/s, nur 1,7 GB RAM. Googles kleinstes Open-Source-Modell.',
+                            '<strong>Gemma 3 2B:</strong> Schnellstes CPU-Modell — 40–60 Tok/s, nur 1,7 GB RAM. Googles kleinstes Open-Source-Modell, jetzt mit 128K Kontext (statt 8K bei Gemma 2).',
                             'Gut zum Setup-Test oder wenn Geschwindigkeit wichtiger ist als Antworttiefe.',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run gemma2:2b</code>',
-                            '<strong>Mistral 7B v0.3:</strong> Zuverlässiges 7B-Modell mit Function Calling, Apache 2.0 Lizenz, französisches Unternehmen.',
-                            'Beste Wahl für EU-Organisationen und regulierte Bereiche (vereinfacht DSGVO-Dokumentation).',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run mistral</code>'
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run gemma3:2b</code>',
+                            '<strong>Llama 3.3 8B:</strong> Der aktuelle Allrounder in dieser Größenklasse — 72% HumanEval, 128K Kontext, solides Englisch-Reasoning.',
+                            'Beste Wahl bei 8 GB RAM für längere Texte, komplexe Anweisungen und Mehrfachdialoge.',
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.3:8b-instruct</code>'
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '#5 Qwen2.5 7B — Coding &amp; Mehrsprachig',
+                        h2: '#5 Qwen3 8B — Coding &amp; Mehrsprachig',
                         items: [
-                            '<strong>Übertrifft Mistral 7B</strong> bei HumanEval (Coding) und MBPP-Benchmarks.',
-                            '<strong>29 Sprachen nativ</strong> — Chinesisch, Japanisch, Koreanisch, Arabisch und alle wichtigen europäischen Sprachen.',
-                            '<strong>128K Kontextfenster</strong> (vs. 32K bei Mistral 7B) — verarbeitet längere Dokumente.',
-                            'JSON-Modus und strukturierte Ausgabe integriert.',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5:7b</code>',
-                            'Speziell für Coding: <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5-coder:7b</code>'
+                            '<strong>57,3% bei HumanEval</strong>, erreicht oder übertrifft Llama 3.1 8B bei MMLU.',
+                            '<strong>29+ Sprachen nativ</strong> — Chinesisch, Japanisch, Koreanisch, Arabisch und alle wichtigen europäischen Sprachen.',
+                            '<strong>32K Kontextfenster</strong> (131K mit YaRN) — unterstützt JSON-Modus und strukturierte Ausgabe.',
+                            'Optionaler "Thinking Mode" für schwierigere Reasoning-Aufgaben — langsamer, aber genauer.',
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen3:8b</code>'
                         ]
                     },
                     {
                         type: 'numbered',
                         h2: 'Welches Modell sollte man starten?',
                         items: [
-                            '<strong>4 GB RAM oder weniger:</strong> ollama run gemma2:2b — niedrigster Speicherverbrauch, schnellster Download',
+                            '<strong>4 GB RAM oder weniger:</strong> ollama run gemma3:2b — niedrigster Speicherverbrauch, schnellster Download',
                             '<strong>8 GB RAM, erstes Modell:</strong> ollama run llama3.2:3b — bestes Qualitäts-RAM-Verhältnis',
-                            '<strong>8 GB RAM, ernsthafter Einsatz:</strong> ollama run qwen2.5:7b — besseres Reasoning und Kontext',
-                            '<strong>Hauptsächlich Coding:</strong> ollama run qwen2.5:7b — bestes HumanEval in dieser Liste',
-                            '<strong>Nicht-englische Sprache:</strong> ollama run qwen2.5:7b — 29 Sprachen nativ'
+                            '<strong>8 GB RAM, ernsthafter Einsatz:</strong> ollama run qwen3:8b — besseres Reasoning und Kontext',
+                            '<strong>Hauptsächlich Coding:</strong> ollama run qwen3:8b — bestes HumanEval in dieser Liste',
+                            '<strong>Nicht-englische Sprache:</strong> ollama run qwen3:8b — 29 Sprachen nativ'
                         ]
                     },
                     {
@@ -658,9 +657,9 @@
                         type: 'list',
                         h2: 'Modellauswahl nach Region',
                         items: [
-                            '<strong>EU / DSGVO:</strong> Mistral 7B v0.3 — Mistral AI ist französisch, Apache 2.0. Vereinfacht Compliance-Dokumentation in regulierten Branchen.',
-                            '<strong>Japan (METI):</strong> Qwen2.5 7B — 30–40% bessere Token-Effizienz bei japanischem Text. METI verlangt Modellname und Version.',
-                            '<strong>China:</strong> Qwen2.5 7B (Alibaba) — native chinesische Tokenisierung, DSL-konform bei lokalem Betrieb via Ollama.',
+                            '<strong>EU / DSGVO:</strong> Llama, Gemma und Qwen sind lokal DSGVO-konform nutzbar. Mistral AI (Frankreich, Apache 2.0) hat die sauberste EU-Herkunft, aber aktuelle Mistral-Small-Modelle (24B+) übersteigen diesen Einsteiger-RAM-Bereich.',
+                            '<strong>Japan (METI):</strong> Qwen3 8B — 30–40% bessere Token-Effizienz bei japanischem Text. METI verlangt Modellname und Version.',
+                            '<strong>China:</strong> Qwen3 8B (Alibaba) — native chinesische Tokenisierung, DSL-konform bei lokalem Betrieb via Ollama.',
                             'Alle fünf Modelle sind lokal kostenlos — keine Daten verlassen Ihr Gerät.'
                         ]
                     },
@@ -671,7 +670,7 @@
                             'Nur nach Parameterzahl wählen — ein gut quantisiertes 7B kann ein schlechtes 13B übertreffen',
                             'VRAM-Overhead ignorieren — Modelle benötigen 10–15% mehr als die Dateigröße',
                             'Q3_K_S verwenden, wenn Q4_K_M bessere Qualität bei ähnlicher Größe bietet',
-                            'Standardmäßig Mistral 7B wählen — Qwen2.5 7B ist besser beim Coding, Llama 3.1 8B bei Englisch',
+                            'Standardmäßig Mistral Small v0.3 wählen — Qwen3 8B ist besser beim Coding, Llama 3.3 8B bei Englisch',
                             'Modell laden ohne RAM-Check — riskiert Disk-Swapping und unter 1 Tok/s'
                         ]
                     },
@@ -681,18 +680,18 @@
                         items: [
                             'RAM prüfen: <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">free -h</code> (Linux/Mac) oder Task-Manager (Windows)',
                             'Ollama installieren: kostenloser Download von ollama.com — läuft auf Mac, Windows, Linux',
-                            'Erstes Modell laden: <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.2:3b</code> (oder gemma2:2b bei 4 GB)',
-                            'Upgrade wenn bereit: <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5:7b</code> für Geräte mit 8 GB+'
+                            'Erstes Modell laden: <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.2:3b</code> (oder gemma3:2b bei 4 GB)',
+                            'Upgrade wenn bereit: <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen3:8b</code> für Geräte mit 8 GB+'
                         ]
                     },
                     {
                         type: 'faq',
                         h2: 'Häufig gestellte Fragen',
                         faqs: [
-                            { q: 'Was ist das beste lokale LLM für Einsteiger 2026?', a: 'Llama 3.2 3B für die meisten Nutzer — 4 GB RAM, starkes Instruction-Following, 3 Minuten Download. Bei ≤4 GB RAM: Gemma 2 2B.' },
+                            { q: 'Was ist das beste lokale LLM für Einsteiger 2026?', a: 'Llama 3.2 3B für die meisten Nutzer — 4 GB RAM, starkes Instruction-Following, 3 Minuten Download. Bei ≤4 GB RAM: Gemma 3 2B.' },
                             { q: 'Wie viel RAM braucht man mindestens?', a: '4 GB RAM mit einem 3B-Modell bei Q4_K_M-Quantisierung. 8 GB erschließt 7B-Modelle mit merklich besserer Qualität.' },
                             { q: 'Sind diese Modelle sicher für private Daten?', a: 'Ja — alle laufen vollständig auf Ihrem Gerät. Keine Prompts oder Ausgaben werden an externe Server gesendet.' },
-                            { q: 'Welches Modell ist am besten für Coding?', a: 'Qwen2.5 7B führt bei HumanEval. Bei 4–6 GB RAM ist Phi-3.5 Mini 3.8B die beste Coding-Option.' }
+                            { q: 'Welches Modell ist am besten für Coding?', a: 'Qwen3 8B führt bei HumanEval. Bei 4–6 GB RAM ist Phi-4 Mini 3.8B die beste Coding-Option.' }
                         ]
                     },
                     {
@@ -719,10 +718,10 @@
                         h2: 'Les 5 meilleurs modèles pour débutants',
                         items: [
                             '<strong>#1 Llama 3.2 3B</strong> — 2,5 Go RAM, 25–45 tok/s, 128K contexte. Meilleur modèle global pour les débutants.',
-                            '<strong>#2 Phi-3.5 Mini 3.8B</strong> — 3 Go RAM, 128K contexte. Meilleur raisonnement avec 4–6 Go RAM.',
-                            '<strong>#3 Gemma 2 2B</strong> — 1,7 Go RAM, 40–60 tok/s. Le plus rapide sur CPU ; idéal pour tester sa configuration.',
-                            '<strong>#4 Mistral 7B v0.3</strong> — 4,5 Go RAM, Apache 2.0. Meilleur pour la conformité UE et le function calling.',
-                            '<strong>#5 Qwen2.5 7B</strong> — 4,7 Go RAM, 128K contexte, 29 langues. Meilleur pour le code et le multilingue.'
+                            '<strong>#2 Phi-4 Mini 3.8B</strong> — 2,5 Go RAM, 128K contexte. Meilleur raisonnement avec 4–6 Go RAM.',
+                            '<strong>#3 Gemma 3 2B</strong> — 1,7 Go RAM, 40–60 tok/s. Le plus rapide sur CPU ; idéal pour tester sa configuration.',
+                            '<strong>#4 Llama 3.3 8B</strong> — 5,5 Go RAM, 72% HumanEval. Meilleur polyvalent 7B/8B.',
+                            '<strong>#5 Qwen3 8B</strong> — 5,2 Go RAM, 32K contexte (131K avec YaRN), 29+ langues. Meilleur pour le code et le multilingue.'
                         ]
                     },
                     {
@@ -731,9 +730,9 @@
                         intro: 'La RAM est la contrainte principale. Vérifiez la RAM disponible avant de choisir la taille du modèle.',
                         items: [
                             '<strong>Règle pratique :</strong> paramètres × 0,5 ≈ Go de RAM nécessaires en quantification Q4_K_M (4 bits)',
-                            '<strong>4–6 Go RAM :</strong> utiliser des modèles 3B — Llama 3.2 3B ou Phi-3.5 Mini 3.8B',
-                            '<strong>8 Go RAM :</strong> modèles 7B recommandés — Qwen2.5 7B ou Mistral 7B',
-                            '<strong>La tâche compte aussi :</strong> Code → Qwen2.5 7B · Vitesse → Gemma 2 2B · Conformité UE → Mistral 7B'
+                            '<strong>4–6 Go RAM :</strong> utiliser des modèles 3B — Llama 3.2 3B ou Phi-4 Mini 3.8B',
+                            '<strong>8 Go RAM :</strong> modèles 7B recommandés — Qwen3 8B ou Llama 3.3 8B',
+                            '<strong>La tâche compte aussi :</strong> Code → Qwen3 8B · Vitesse → Gemma 3 2B · Conformité UE → Llama 3.3 8B'
                         ]
                     },
                     {
@@ -742,57 +741,56 @@
                         columns: ['Modèle', 'RAM', 'Vitesse (CPU)', 'Contexte', 'Idéal pour'],
                         rows: [
                             { 'Modèle': 'Llama 3.2 3B', 'RAM': '2,5 Go', 'Vitesse (CPU)': '25–45 tok/s', 'Contexte': '128K', 'Idéal pour': 'Usage général, premier modèle' },
-                            { 'Modèle': 'Phi-3.5 Mini 3.8B', 'RAM': '3 Go', 'Vitesse (CPU)': '20–35 tok/s', 'Contexte': '128K', 'Idéal pour': 'Raisonnement, code, faible RAM' },
-                            { 'Modèle': 'Gemma 2 2B', 'RAM': '1,7 Go', 'Vitesse (CPU)': '40–60 tok/s', 'Contexte': '8K', 'Idéal pour': 'Vitesse, très faible RAM' },
-                            { 'Modèle': 'Mistral 7B v0.3', 'RAM': '4,5 Go', 'Vitesse (CPU)': '10–20 tok/s', 'Contexte': '32K', 'Idéal pour': 'Déploiement UE, Apache 2.0' },
-                            { 'Modèle': 'Qwen2.5 7B', 'RAM': '4,7 Go', 'Vitesse (CPU)': '10–18 tok/s', 'Contexte': '128K', 'Idéal pour': 'Multilingue, code' }
+                            { 'Modèle': 'Phi-4 Mini 3.8B', 'RAM': '2,5 Go', 'Vitesse (CPU)': '30–50 tok/s', 'Contexte': '128K', 'Idéal pour': 'Raisonnement, code, faible RAM' },
+                            { 'Modèle': 'Gemma 3 2B', 'RAM': '1,7 Go', 'Vitesse (CPU)': '40–60 tok/s', 'Contexte': '128K', 'Idéal pour': 'Vitesse, très faible RAM' },
+                            { 'Modèle': 'Llama 3.3 8B', 'RAM': '5,5 Go', 'Vitesse (CPU)': '10–18 tok/s', 'Contexte': '128K', 'Idéal pour': 'Polyvalent, 72% HumanEval' },
+                            { 'Modèle': 'Qwen3 8B', 'RAM': '5,2 Go', 'Vitesse (CPU)': '10–18 tok/s', 'Contexte': '32K (131K YaRN)', 'Idéal pour': 'Multilingue, code' }
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '#1 Llama 3.2 3B &amp; #2 Phi-3.5 Mini',
+                        h2: '#1 Llama 3.2 3B &amp; #2 Phi-4 Mini',
                         items: [
                             '<strong>Llama 3.2 3B :</strong> Meilleur point de départ pour la plupart des utilisateurs. Fonctionne avec 4 Go RAM, 128K contexte.',
                             'Sur M3 Pro : 70–90 tok/s. Sur laptop 8 cœurs : 25–45 tok/s. Téléchargement : ~2 Go.',
                             '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.2:3b</code>',
-                            '<strong>Phi-3.5 Mini 3.8B :</strong> Modèle Microsoft optimisé pour le raisonnement et le code. Surpasse de nombreux modèles 7B en mathématiques.',
+                            '<strong>Phi-4 Mini 3.8B :</strong> Modèle Microsoft optimisé pour le raisonnement et le code. Atteint 68% MMLU et 70% HumanEval — plus que de nombreux modèles 7B — avec seulement 2,5 Go RAM.',
                             'Recommandé pour les machines avec 4–6 Go RAM où la qualité compte.',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run phi3.5</code>'
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run phi4-mini</code>'
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '#3 Gemma 2 2B &amp; #4 Mistral 7B',
+                        h2: '#3 Gemma 3 2B &amp; #4 Llama 3.3 8B',
                         items: [
-                            '<strong>Gemma 2 2B :</strong> Modèle CPU le plus rapide — 40–60 tok/s, seulement 1,7 Go RAM. Plus petit modèle ouvert de Google.',
+                            '<strong>Gemma 3 2B :</strong> Modèle CPU le plus rapide — 40–60 tok/s, seulement 1,7 Go RAM. Plus petit modèle ouvert de Google, désormais avec 128K de contexte (contre 8K sur Gemma 2).',
                             'Utile pour tester sa configuration ou quand la vitesse prime sur la profondeur.',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run gemma2:2b</code>',
-                            '<strong>Mistral 7B v0.3 :</strong> Modèle 7B fiable avec function calling, licence Apache 2.0, entreprise française.',
-                            'Meilleur choix pour les organisations UE et les secteurs réglementés (simplifie la documentation RGPD).',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run mistral</code>'
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run gemma3:2b</code>',
+                            '<strong>Llama 3.3 8B :</strong> Le polyvalent actuel à cette taille — 72% HumanEval, 128K de contexte, raisonnement solide en anglais.',
+                            'Meilleur choix avec 8 Go RAM pour les textes longs, instructions complexes et conversations multi-tours.',
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.3:8b-instruct</code>'
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '#5 Qwen2.5 7B — Code &amp; Multilingue',
+                        h2: '#5 Qwen3 8B — Code &amp; Multilingue',
                         items: [
-                            '<strong>Surpasse Mistral 7B</strong> sur HumanEval (code) et les benchmarks MBPP.',
-                            '<strong>29 langues nativement</strong> — chinois, japonais, coréen, arabe et toutes les grandes langues européennes.',
-                            '<strong>Fenêtre de 128K tokens</strong> (vs. 32K pour Mistral 7B) — gère des documents plus longs.',
-                            'Mode JSON et sorties structurées intégrés.',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5:7b</code>',
-                            'Pour le code uniquement : <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5-coder:7b</code>'
+                            '<strong>57,3% sur HumanEval</strong>, égale ou dépasse Llama 3.1 8B sur MMLU.',
+                            '<strong>29+ langues nativement</strong> — chinois, japonais, coréen, arabe et toutes les grandes langues européennes.',
+                            '<strong>Fenêtre de 32K tokens</strong> (131K avec YaRN) — prend en charge le mode JSON et les sorties structurées.',
+                            'Mode "réflexion" optionnel pour les tâches de raisonnement complexes — plus lent, mais plus précis.',
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen3:8b</code>'
                         ]
                     },
                     {
                         type: 'numbered',
                         h2: 'Quel modèle démarrer en premier ?',
                         items: [
-                            '<strong>4 Go RAM ou moins :</strong> ollama run gemma2:2b — mémoire minimale, téléchargement le plus rapide',
+                            '<strong>4 Go RAM ou moins :</strong> ollama run gemma3:2b — mémoire minimale, téléchargement le plus rapide',
                             '<strong>8 Go RAM, premier modèle :</strong> ollama run llama3.2:3b — meilleur équilibre qualité/RAM',
-                            '<strong>8 Go RAM, usage sérieux :</strong> ollama run qwen2.5:7b — meilleur raisonnement et contexte',
-                            '<strong>Principalement du code :</strong> ollama run qwen2.5:7b — meilleur HumanEval de cette liste',
-                            '<strong>Langue non anglaise :</strong> ollama run qwen2.5:7b — 29 langues nativement'
+                            '<strong>8 Go RAM, usage sérieux :</strong> ollama run qwen3:8b — meilleur raisonnement et contexte',
+                            '<strong>Principalement du code :</strong> ollama run qwen3:8b — meilleur HumanEval de cette liste',
+                            '<strong>Langue non anglaise :</strong> ollama run qwen3:8b — 29 langues nativement'
                         ]
                     },
                     {
@@ -806,9 +804,9 @@
                         type: 'list',
                         h2: 'Sélection de modèle par région',
                         items: [
-                            '<strong>UE / RGPD :</strong> Mistral 7B v0.3 — Mistral AI est française, Apache 2.0. Simplifie la documentation pour les secteurs réglementés.',
-                            '<strong>Japon (METI) :</strong> Qwen2.5 7B — 30–40% meilleure efficacité tokenisation sur texte japonais. METI exige nom et version du modèle.',
-                            '<strong>Chine :</strong> Qwen2.5 7B (Alibaba) — tokenisation chinoise native, conforme à la DSL (loi sur la sécurité des données) en local.',
+                            '<strong>UE / RGPD :</strong> Llama, Gemma et Qwen sont utilisables localement sous le RGPD. Mistral AI (France, Apache 2.0) offre la provenance UE la plus nette, mais les Mistral Small actuels (24B+) dépassent cette plage RAM débutant.',
+                            '<strong>Japon (METI) :</strong> Qwen3 8B — 30–40% meilleure efficacité tokenisation sur texte japonais. METI exige nom et version du modèle.',
+                            '<strong>Chine :</strong> Qwen3 8B (Alibaba) — tokenisation chinoise native, conforme à la DSL (loi sur la sécurité des données) en local.',
                             'Les cinq modèles sont gratuits en local — aucune donnée ne quitte votre machine.'
                         ]
                     },
@@ -819,7 +817,7 @@
                             'Choisir uniquement par nombre de paramètres — un 7B bien quantifié peut surpasser un 13B médiocre',
                             'Ignorer l\'overhead VRAM — les modèles nécessitent 10–15% de plus que la taille du fichier',
                             'Utiliser Q3_K_S quand Q4_K_M offre meilleure qualité à taille similaire',
-                            'Prendre Mistral 7B par défaut — Qwen2.5 7B est meilleur en code, Llama 3.1 8B en anglais',
+                            'Prendre Mistral Small v0.3 par défaut — Qwen3 8B est meilleur en code, Llama 3.3 8B en anglais',
                             'Charger sans vérifier la RAM — risque de swap disque et sortie sous 1 tok/s'
                         ]
                     },
@@ -829,18 +827,18 @@
                         items: [
                             'Vérifier la RAM disponible : <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">free -h</code> (Linux/Mac) ou Gestionnaire des tâches (Windows)',
                             'Installer Ollama : téléchargement gratuit sur ollama.com — fonctionne sur Mac, Windows, Linux',
-                            'Premier modèle : <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.2:3b</code> (ou gemma2:2b sur 4 Go)',
-                            'Mettre à niveau quand prêt : <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5:7b</code> pour 8 Go+ de RAM'
+                            'Premier modèle : <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.2:3b</code> (ou gemma3:2b sur 4 Go)',
+                            'Mettre à niveau quand prêt : <code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen3:8b</code> pour 8 Go+ de RAM'
                         ]
                     },
                     {
                         type: 'faq',
                         h2: 'Questions fréquentes',
                         faqs: [
-                            { q: 'Quel est le meilleur LLM local pour débutants en 2026 ?', a: 'Llama 3.2 3B pour la plupart — 4 Go RAM, instruction-following robuste, téléchargement en 3 minutes. Pour ≤4 Go : Gemma 2 2B.' },
+                            { q: 'Quel est le meilleur LLM local pour débutants en 2026 ?', a: 'Llama 3.2 3B pour la plupart — 4 Go RAM, instruction-following robuste, téléchargement en 3 minutes. Pour ≤4 Go : Gemma 3 2B.' },
                             { q: 'Quelle est la RAM minimale pour un LLM local ?', a: '4 Go RAM avec un modèle 3B en Q4_K_M. 8 Go débloque les modèles 7B avec une qualité nettement meilleure.' },
                             { q: 'Ces modèles sont-ils sûrs pour les données privées ?', a: 'Oui — tous fonctionnent entièrement sur votre machine. Aucun prompt ni sortie n\'est transmis à des serveurs externes.' },
-                            { q: 'Quel modèle est le meilleur pour le code ?', a: 'Qwen2.5 7B mène sur HumanEval. Pour 4–6 Go RAM, Phi-3.5 Mini 3.8B est la meilleure option pour le code.' }
+                            { q: 'Quel modèle est le meilleur pour le code ?', a: 'Qwen3 8B mène sur HumanEval. Pour 4–6 Go RAM, Phi-4 Mini 3.8B est la meilleure option pour le code.' }
                         ]
                     },
                     {
@@ -867,10 +865,10 @@
                         h2: '初心者向けモデル5選',
                         items: [
                             '<strong>#1 Llama 3.2 3B</strong> — 2.5GB RAM、25〜45トークン/秒、128Kコンテキスト。初心者に最もお勧め。',
-                            '<strong>#2 Phi-3.5 Mini 3.8B</strong> — 3GB RAM、128Kコンテキスト。4〜6GB RAMでの最良の推論モデル。',
-                            '<strong>#3 Gemma 2 2B</strong> — 1.7GB RAM、40〜60トークン/秒。最速のCPUモデル。',
-                            '<strong>#4 Mistral 7B v0.3</strong> — 4.5GB RAM、Apache 2.0。EUコンプライアンスとFunction Callingに最適。',
-                            '<strong>#5 Qwen2.5 7B</strong> — 4.7GB RAM、128Kコンテキスト、29言語対応。コーディングと多言語に最適。'
+                            '<strong>#2 Phi-4 Mini 3.8B</strong> — 2.5GB RAM、128Kコンテキスト。4〜6GB RAMでの最良の推論モデル。',
+                            '<strong>#3 Gemma 3 2B</strong> — 1.7GB RAM、40〜60トークン/秒。最速のCPUモデル。',
+                            '<strong>#4 Llama 3.3 8B</strong> — 5.5GB RAM、HumanEval 72%。最良の7B/8Bオールラウンダー。',
+                            '<strong>#5 Qwen3 8B</strong> — 5.2GB RAM、32Kコンテキスト（YaRNで131K）、29言語以上対応。コーディングと多言語に最適。'
                         ]
                     },
                     {
@@ -879,9 +877,9 @@
                         intro: 'RAMが主な制約条件です。モデルサイズを選ぶ前に利用可能なRAMを確認してください。',
                         items: [
                             '<strong>目安：</strong>パラメータ数 × 0.5 ≈ Q4_K_M（4ビット）量子化に必要なGB',
-                            '<strong>4〜6GB RAM：</strong>3Bモデル推奨 — Llama 3.2 3BまたはPhi-3.5 Mini 3.8B',
-                            '<strong>8GB RAM：</strong>7Bモデル推奨 — Qwen2.5 7BまたはMistral 7B',
-                            '<strong>用途も重要：</strong>コーディング → Qwen2.5 7B · 速度 → Gemma 2 2B · EUコンプライアンス → Mistral 7B'
+                            '<strong>4〜6GB RAM：</strong>3Bモデル推奨 — Llama 3.2 3BまたはPhi-4 Mini 3.8B',
+                            '<strong>8GB RAM：</strong>7Bモデル推奨 — Qwen3 8BまたはLlama 3.3 8B',
+                            '<strong>用途も重要：</strong>コーディング → Qwen3 8B · 速度 → Gemma 3 2B · EUコンプライアンス → Llama 3.3 8B'
                         ]
                     },
                     {
@@ -890,57 +888,56 @@
                         columns: ['モデル', 'RAM', '速度(CPU)', 'コンテキスト', '最適用途'],
                         rows: [
                             { 'モデル': 'Llama 3.2 3B', 'RAM': '2.5GB', '速度(CPU)': '25〜45トークン/秒', 'コンテキスト': '128K', '最適用途': '一般用途、最初のモデル' },
-                            { 'モデル': 'Phi-3.5 Mini 3.8B', 'RAM': '3GB', '速度(CPU)': '20〜35トークン/秒', 'コンテキスト': '128K', '最適用途': '推論、コーディング、低RAM' },
-                            { 'モデル': 'Gemma 2 2B', 'RAM': '1.7GB', '速度(CPU)': '40〜60トークン/秒', 'コンテキスト': '8K', '最適用途': '速度重視、超低RAM' },
-                            { 'モデル': 'Mistral 7B v0.3', 'RAM': '4.5GB', '速度(CPU)': '10〜20トークン/秒', 'コンテキスト': '32K', '最適用途': 'EUデプロイ、Apache 2.0' },
-                            { 'モデル': 'Qwen2.5 7B', 'RAM': '4.7GB', '速度(CPU)': '10〜18トークン/秒', 'コンテキスト': '128K', '最適用途': '多言語、コーディング' }
+                            { 'モデル': 'Phi-4 Mini 3.8B', 'RAM': '2.5GB', '速度(CPU)': '30〜50トークン/秒', 'コンテキスト': '128K', '最適用途': '推論、コーディング、低RAM' },
+                            { 'モデル': 'Gemma 3 2B', 'RAM': '1.7GB', '速度(CPU)': '40〜60トークン/秒', 'コンテキスト': '128K', '最適用途': '速度重視、超低RAM' },
+                            { 'モデル': 'Llama 3.3 8B', 'RAM': '5.5GB', '速度(CPU)': '10〜18トークン/秒', 'コンテキスト': '128K', '最適用途': 'オールラウンダー、HumanEval 72%' },
+                            { 'モデル': 'Qwen3 8B', 'RAM': '5.2GB', '速度(CPU)': '10〜18トークン/秒', 'コンテキスト': '32K（YaRNで131K）', '最適用途': '多言語、コーディング' }
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '#1 Llama 3.2 3B &amp; #2 Phi-3.5 Mini',
+                        h2: '#1 Llama 3.2 3B &amp; #2 Phi-4 Mini',
                         items: [
                             '<strong>Llama 3.2 3B：</strong>ほとんどのユーザーに最適な出発点。4GB RAMで動作、128Kコンテキスト。',
                             'M3 Proで70〜90トークン/秒。8コアラップトップで25〜45トークン/秒。ダウンロード約2GB。',
                             '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.2:3b</code>',
-                            '<strong>Phi-3.5 Mini 3.8B：</strong>推論とコーディング向けに最適化されたMicrosoftモデル。数学ベンチマークで多くの7Bモデルを上回る。',
+                            '<strong>Phi-4 Mini 3.8B：</strong>推論とコーディング向けに最適化されたMicrosoftモデル。MMLU 68%、HumanEval 70%を達成 — 多くの7Bモデルを上回る性能をわずか2.5GB RAMで実現。',
                             '品質が重要な4〜6GB RAMのマシンに推奨。',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run phi3.5</code>'
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run phi4-mini</code>'
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '#3 Gemma 2 2B &amp; #4 Mistral 7B',
+                        h2: '#3 Gemma 3 2B &amp; #4 Llama 3.3 8B',
                         items: [
-                            '<strong>Gemma 2 2B：</strong>最速のCPUモデル — 40〜60トークン/秒、わずか1.7GB RAM。Googleの最小オープンモデル。',
+                            '<strong>Gemma 3 2B：</strong>最速のCPUモデル — 40〜60トークン/秒、わずか1.7GB RAM。Googleの最小オープンモデルで、コンテキストも128K（Gemma 2の8Kから拡大）。',
                             'セットアップテストや、応答の深さより速度が重要な場合に最適。',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run gemma2:2b</code>',
-                            '<strong>Mistral 7B v0.3：</strong>Function Calling対応、Apache 2.0ライセンス、フランス企業製の信頼性ある7Bモデル。',
-                            'EU組織や規制産業に最適（GDPRドキュメント作成を簡略化）。',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run mistral</code>'
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run gemma3:2b</code>',
+                            '<strong>Llama 3.3 8B：</strong>このサイズクラスの現行オールラウンダー — HumanEval 72%、128Kコンテキスト、堅実な英語推論力。',
+                            '8GB RAMで長文・複雑な指示・複数ターンの会話に最適。',
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.3:8b-instruct</code>'
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '#5 Qwen2.5 7B — コーディング &amp; 多言語',
+                        h2: '#5 Qwen3 8B — コーディング &amp; 多言語',
                         items: [
-                            '<strong>HumanEval（コーディング）とMBPPベンチマーク</strong>でMistral 7Bを上回る。',
-                            '<strong>29言語をネイティブサポート</strong> — 中国語、日本語、韓国語、アラビア語、主要ヨーロッパ言語。',
-                            '<strong>128Kコンテキストウィンドウ</strong>（Mistral 7Bの32Kと比較） — 長文書に対応。',
-                            'JSONモードと構造化出力を内蔵。',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5:7b</code>',
-                            'コーディング専用：<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5-coder:7b</code>'
+                            '<strong>HumanEval 57.3%</strong>、MMLUではLlama 3.1 8Bと同等以上。',
+                            '<strong>29言語以上をネイティブサポート</strong> — 中国語、日本語、韓国語、アラビア語、主要ヨーロッパ言語。',
+                            '<strong>32Kコンテキストウィンドウ</strong>（YaRNで131K） — JSONモードと構造化出力に対応。',
+                            '難しい推論タスク向けの「思考モード」をオプションで搭載 — 遅いがより正確。',
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen3:8b</code>'
                         ]
                     },
                     {
                         type: 'numbered',
                         h2: 'どのモデルから始めるべきか？',
                         items: [
-                            '<strong>4GB RAM以下：</strong>ollama run gemma2:2b — 最小メモリ、最速ダウンロード',
+                            '<strong>4GB RAM以下：</strong>ollama run gemma3:2b — 最小メモリ、最速ダウンロード',
                             '<strong>8GB RAM、最初のモデル：</strong>ollama run llama3.2:3b — 最良の品質/RAMバランス',
-                            '<strong>8GB RAM、本格使用：</strong>ollama run qwen2.5:7b — より良い推論とコンテキスト',
-                            '<strong>主にコーディング：</strong>ollama run qwen2.5:7b — このリスト中最高のHumanEvalスコア',
-                            '<strong>日本語などの非英語：</strong>ollama run qwen2.5:7b — 29言語ネイティブサポート'
+                            '<strong>8GB RAM、本格使用：</strong>ollama run qwen3:8b — より良い推論とコンテキスト',
+                            '<strong>主にコーディング：</strong>ollama run qwen3:8b — このリスト中最高のHumanEvalスコア',
+                            '<strong>日本語などの非英語：</strong>ollama run qwen3:8b — 29言語ネイティブサポート'
                         ]
                     },
                     {
@@ -954,9 +951,9 @@
                         type: 'list',
                         h2: '地域別モデル選択',
                         items: [
-                            '<strong>EU / GDPR：</strong>Mistral 7B v0.3 — Mistral AIはフランス企業、Apache 2.0。規制産業のコンプライアンス文書化を簡略化。',
-                            '<strong>日本（METI）：</strong>Qwen2.5 7B — 日本語テキストのトークン効率が30〜40%高い。METIはモデル名とバージョンの記録を要求。',
-                            '<strong>中国：</strong>Qwen2.5 7B（Alibaba） — ネイティブ中国語トークナイゼーション、Ollamaローカル実行でDSL準拠。',
+                            '<strong>EU / GDPR：</strong>Llama、Gemma、QwenはいずれもローカルでGDPR準拠。Mistral AI（フランス、Apache 2.0）は最もクリーンなEU由来だが、現行のMistral Smallモデル（24B以上）はこの初心者向けRAM範囲を超える。',
+                            '<strong>日本（METI）：</strong>Qwen3 8B — 日本語テキストのトークン効率が30〜40%高い。METIはモデル名とバージョンの記録を要求。',
+                            '<strong>中国：</strong>Qwen3 8B（Alibaba） — ネイティブ中国語トークナイゼーション、Ollamaローカル実行でDSL準拠。',
                             '5つのモデルすべてローカルで無料 — データはマシンから外に出ません。'
                         ]
                     },
@@ -967,7 +964,7 @@
                             'パラメータ数だけで選ぶ — 良く量子化された7Bが悪い13Bを上回ることもある',
                             'VRAMオーバーヘッドを無視する — モデルはファイルサイズより10〜15%多く必要',
                             'Q4_K_Mが同サイズでより良い品質を提供するのにQ3_K_Sを使う',
-                            'デフォルトでMistral 7Bを選ぶ — Qwen2.5 7BはコーディングでMistralを上回る',
+                            'デフォルトでMistral Small v0.3を選ぶ — コーディングではQwen3 8B、英語ではLlama 3.3 8Bが上回る（同じRAMで）',
                             'RAM確認なしにモデルを取得 — ディスクスワップと1トークン/秒以下のリスク'
                         ]
                     },
@@ -977,18 +974,18 @@
                         items: [
                             'RAM確認：<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">free -h</code>（Linux/Mac）またはタスクマネージャー（Windows）',
                             'Ollamaをインストール：ollama.comから無料ダウンロード — Mac、Windows、Linuxで動作',
-                            '最初のモデルを実行：<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.2:3b</code>（4GBならgemma2:2b）',
-                            '準備ができたらアップグレード：<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5:7b</code>（8GB以上）'
+                            '最初のモデルを実行：<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.2:3b</code>（4GBならgemma3:2b）',
+                            '準備ができたらアップグレード：<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen3:8b</code>（8GB以上）'
                         ]
                     },
                     {
                         type: 'faq',
                         h2: 'よくある質問',
                         faqs: [
-                            { q: '2026年初心者に最適なローカルLLMは？', a: 'ほとんどのユーザーにはLlama 3.2 3B — 4GB RAM、強力なInstruction-Following、3分でダウンロード。4GB以下ならGemma 2 2B。' },
+                            { q: '2026年初心者に最適なローカルLLMは？', a: 'ほとんどのユーザーにはLlama 3.2 3B — 4GB RAM、強力なInstruction-Following、3分でダウンロード。4GB以下ならGemma 3 2B。' },
                             { q: 'ローカルLLMの最低RAM要件は？', a: 'Q4_K_M量子化の3Bモデルで4GB RAM。8GBなら7Bモデルが使え、明らかに品質が向上。' },
                             { q: 'プライベートデータに安全に使えますか？', a: 'はい — すべてのモデルはハードウェア上で完全に動作します。プロンプトや出力が外部サーバーに送信されることはありません。' },
-                            { q: 'コーディングに最適なモデルは？', a: 'Qwen2.5 7BがHumanEvalでトップ。4〜6GB RAMならPhi-3.5 Mini 3.8Bが最良のコーディングモデル。' }
+                            { q: 'コーディングに最適なモデルは？', a: 'Qwen3 8BがHumanEvalでトップ。4〜6GB RAMならPhi-4 Mini 3.8Bが最良のコーディングモデル。' }
                         ]
                     },
                     {
@@ -1015,10 +1012,10 @@
                         h2: '5款最佳入门模型',
                         items: [
                             '<strong>#1 Llama 3.2 3B</strong> — 2.5GB内存，25–45词/秒，128K上下文。初学者最佳整体模型。',
-                            '<strong>#2 Phi-3.5 Mini 3.8B</strong> — 3GB内存，128K上下文。4–6GB内存下最佳推理模型。',
-                            '<strong>#3 Gemma 2 2B</strong> — 1.7GB内存，40–60词/秒。CPU上最快，适合测试配置。',
-                            '<strong>#4 Mistral 7B v0.3</strong> — 4.5GB内存，Apache 2.0。最适合EU合规和函数调用。',
-                            '<strong>#5 Qwen2.5 7B</strong> — 4.7GB内存，128K上下文，29种语言。最适合编程和多语言。'
+                            '<strong>#2 Phi-4 Mini 3.8B</strong> — 2.5GB内存，128K上下文。4–6GB内存下最佳推理模型。',
+                            '<strong>#3 Gemma 3 2B</strong> — 1.7GB内存，40–60词/秒。CPU上最快，适合测试配置。',
+                            '<strong>#4 Llama 3.3 8B</strong> — 5.5GB内存，72% HumanEval。最佳7B/8B全能模型。',
+                            '<strong>#5 Qwen3 8B</strong> — 5.2GB内存，32K上下文（YaRN下131K），29种以上语言。最适合编程和多语言。'
                         ]
                     },
                     {
@@ -1027,9 +1024,9 @@
                         intro: '内存是主要限制因素。选择模型大小前，先确认可用内存。',
                         items: [
                             '<strong>经验法则：</strong>参数数 × 0.5 ≈ Q4_K_M（4位）量化所需GB内存',
-                            '<strong>4–6GB内存：</strong>使用3B模型 — Llama 3.2 3B或Phi-3.5 Mini 3.8B',
-                            '<strong>8GB内存：</strong>推荐7B模型 — Qwen2.5 7B或Mistral 7B',
-                            '<strong>任务类型同样重要：</strong>编程→Qwen2.5 7B · 速度→Gemma 2 2B · EU合规→Mistral 7B'
+                            '<strong>4–6GB内存：</strong>使用3B模型 — Llama 3.2 3B或Phi-4 Mini 3.8B',
+                            '<strong>8GB内存：</strong>推荐7B模型 — Qwen3 8B或Llama 3.3 8B',
+                            '<strong>任务类型同样重要：</strong>编程→Qwen3 8B · 速度→Gemma 3 2B · EU合规→Llama 3.3 8B'
                         ]
                     },
                     {
@@ -1038,57 +1035,56 @@
                         columns: ['模型', '内存', 'CPU速度', '上下文', '最适场景'],
                         rows: [
                             { '模型': 'Llama 3.2 3B', '内存': '2.5GB', 'CPU速度': '25–45词/秒', '上下文': '128K', '最适场景': '通用，首选入门' },
-                            { '模型': 'Phi-3.5 Mini 3.8B', '内存': '3GB', 'CPU速度': '20–35词/秒', '上下文': '128K', '最适场景': '推理、编程、低内存' },
-                            { '模型': 'Gemma 2 2B', '内存': '1.7GB', 'CPU速度': '40–60词/秒', '上下文': '8K', '最适场景': '速度优先，超低内存' },
-                            { '模型': 'Mistral 7B v0.3', '内存': '4.5GB', 'CPU速度': '10–20词/秒', '上下文': '32K', '最适场景': 'EU部署，Apache 2.0' },
-                            { '模型': 'Qwen2.5 7B', '内存': '4.7GB', 'CPU速度': '10–18词/秒', '上下文': '128K', '最适场景': '多语言、编程' }
+                            { '模型': 'Phi-4 Mini 3.8B', '内存': '2.5GB', 'CPU速度': '30–50词/秒', '上下文': '128K', '最适场景': '推理、编程、低内存' },
+                            { '模型': 'Gemma 3 2B', '内存': '1.7GB', 'CPU速度': '40–60词/秒', '上下文': '128K', '最适场景': '速度优先，超低内存' },
+                            { '模型': 'Llama 3.3 8B', '内存': '5.5GB', 'CPU速度': '10–18词/秒', '上下文': '128K', '最适场景': '全能型，72% HumanEval' },
+                            { '模型': 'Qwen3 8B', '内存': '5.2GB', 'CPU速度': '10–18词/秒', '上下文': '32K（YaRN下131K）', '最适场景': '多语言、编程' }
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '#1 Llama 3.2 3B &amp; #2 Phi-3.5 Mini',
+                        h2: '#1 Llama 3.2 3B &amp; #2 Phi-4 Mini',
                         items: [
                             '<strong>Llama 3.2 3B：</strong>大多数用户的最佳起点。运行仅需4GB内存，128K上下文，指令跟随能力强。',
                             'M3 Pro：70–90词/秒。8核笔记本：25–45词/秒。下载约2GB。',
                             '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.2:3b</code>',
-                            '<strong>Phi-3.5 Mini 3.8B：</strong>微软针对推理和编程优化的模型。数学基准测试超越许多7B模型。',
+                            '<strong>Phi-4 Mini 3.8B：</strong>微软针对推理和编程优化的模型。MMLU达68%，HumanEval达70% — 超越许多7B模型，仅需2.5GB内存。',
                             '推荐用于质量重要的4–6GB内存设备。',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run phi3.5</code>'
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run phi4-mini</code>'
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '#3 Gemma 2 2B &amp; #4 Mistral 7B',
+                        h2: '#3 Gemma 3 2B &amp; #4 Llama 3.3 8B',
                         items: [
-                            '<strong>Gemma 2 2B：</strong>CPU上最快模型 — 40–60词/秒，仅需1.7GB内存。Google最小的开源模型。',
+                            '<strong>Gemma 3 2B：</strong>CPU上最快模型 — 40–60词/秒，仅需1.7GB内存。Google最小的开源模型，上下文已扩展至128K（Gemma 2为8K）。',
                             '适合测试配置，或速度比输出深度更重要时。',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run gemma2:2b</code>',
-                            '<strong>Mistral 7B v0.3：</strong>可靠的7B模型，支持函数调用，Apache 2.0许可证，法国公司出品。',
-                            'EU组织和受监管行业的最佳选择（简化GDPR合规文档）。',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run mistral</code>'
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run gemma3:2b</code>',
+                            '<strong>Llama 3.3 8B：</strong>该尺寸级别当前的全能模型 — HumanEval 72%，128K上下文，英语推理能力扎实。',
+                            '在8GB内存下最适合处理长文本、复杂指令和多轮对话。',
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.3:8b-instruct</code>'
                         ]
                     },
                     {
                         type: 'list',
-                        h2: '#5 Qwen2.5 7B — 编程 &amp; 多语言',
+                        h2: '#5 Qwen3 8B — 编程 &amp; 多语言',
                         items: [
-                            '<strong>在HumanEval（编程）和MBPP基准测试上超越Mistral 7B。</strong>',
-                            '<strong>原生支持29种语言</strong> — 中文、日文、韩文、阿拉伯文及所有主要欧洲语言。',
-                            '<strong>128K上下文窗口</strong>（对比Mistral 7B的32K） — 处理更长文档。',
-                            '内置JSON模式和结构化输出。',
-                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5:7b</code>',
-                            '专用编程版本：<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5-coder:7b</code>'
+                            '<strong>HumanEval得分57.3%</strong>，MMLU与Llama 3.1 8B持平或更优。',
+                            '<strong>原生支持29种以上语言</strong> — 中文、日文、韩文、阿拉伯文及所有主要欧洲语言。',
+                            '<strong>32K上下文窗口</strong>（YaRN下可达131K） — 支持JSON模式和结构化输出。',
+                            '可选"思考模式"，用于较难的推理任务 — 速度更慢但更准确。',
+                            '<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen3:8b</code>'
                         ]
                     },
                     {
                         type: 'numbered',
                         h2: '应该从哪个模型开始？',
                         items: [
-                            '<strong>4GB内存或更少：</strong>ollama run gemma2:2b — 内存最小，下载最快',
+                            '<strong>4GB内存或更少：</strong>ollama run gemma3:2b — 内存最小，下载最快',
                             '<strong>8GB内存，第一个模型：</strong>ollama run llama3.2:3b — 最佳质量/内存平衡',
-                            '<strong>8GB内存，正式使用：</strong>ollama run qwen2.5:7b — 更好的推理和上下文',
-                            '<strong>主要用于编程：</strong>ollama run qwen2.5:7b — 此列表中HumanEval得分最高',
-                            '<strong>非英语语言：</strong>ollama run qwen2.5:7b — 原生支持29种语言'
+                            '<strong>8GB内存，正式使用：</strong>ollama run qwen3:8b — 更好的推理和上下文',
+                            '<strong>主要用于编程：</strong>ollama run qwen3:8b — 此列表中HumanEval得分最高',
+                            '<strong>非英语语言：</strong>ollama run qwen3:8b — 原生支持29种语言'
                         ]
                     },
                     {
@@ -1102,9 +1098,9 @@
                         type: 'list',
                         h2: '按地区选择模型',
                         items: [
-                            '<strong>欧盟/GDPR：</strong>Mistral 7B v0.3 — Mistral AI是法国企业，Apache 2.0。简化受监管行业的合规文档。',
-                            '<strong>日本（METI）：</strong>Qwen2.5 7B — 日语文本分词效率高30–40%。METI要求记录模型名称和版本。',
-                            '<strong>中国：</strong>Qwen2.5 7B（阿里巴巴） — 原生中文分词，通过Ollama本地运行符合《数据安全法》。',
+                            '<strong>欧盟/GDPR：</strong>Llama、Gemma、Qwen均可在本地合法用于GDPR场景。Mistral AI（法国，Apache 2.0）具有最清晰的欧盟血统，但当前Mistral Small系列（24B以上）已超出此入门级内存范围。',
+                            '<strong>日本（METI）：</strong>Qwen3 8B — 日语文本分词效率高30–40%。METI要求记录模型名称和版本。',
+                            '<strong>中国：</strong>Qwen3 8B（阿里巴巴） — 原生中文分词，通过Ollama本地运行符合《数据安全法》。',
                             '所有5个模型本地使用均免费 — 数据不离开您的设备。'
                         ]
                     },
@@ -1115,7 +1111,7 @@
                             '仅按参数数量选择 — 量化好的7B可能超越量化差的13B',
                             '忽略VRAM开销 — 模型需要比文件大小多10–15%的内存',
                             '有Q4_K_M时使用Q3_K_S — Q4_K_M在相近大小下质量更好',
-                            '默认选择Mistral 7B — Qwen2.5 7B编程更强，Llama 3.1 8B英语更强',
+                            '默认选择Mistral Small v0.3 — 编程方面Qwen3 8B更强，英语方面Llama 3.3 8B更强（同等内存下）',
                             '未检查内存直接拉取 — 可能导致磁盘交换和低于1词/秒的输出'
                         ]
                     },
@@ -1125,18 +1121,18 @@
                         items: [
                             '检查可用内存：<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">free -h</code>（Linux/Mac）或任务管理器（Windows）',
                             '安装Ollama：从ollama.com免费下载 — 支持Mac、Windows、Linux',
-                            '运行第一个模型：<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.2:3b</code>（4GB内存用gemma2:2b）',
-                            '准备好后升级：<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen2.5:7b</code>（8GB以上设备）'
+                            '运行第一个模型：<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run llama3.2:3b</code>（4GB内存用gemma3:2b）',
+                            '准备好后升级：<code style="background:#f4f0ff;padding:2px 6px;border-radius:4px;">ollama run qwen3:8b</code>（8GB以上设备）'
                         ]
                     },
                     {
                         type: 'faq',
                         h2: '常见问题',
                         faqs: [
-                            { q: '2026年初学者最佳本地LLM是什么？', a: 'Llama 3.2 3B适合大多数用户 — 4GB内存，强指令跟随，3分钟下载。4GB以下内存选Gemma 2 2B。' },
+                            { q: '2026年初学者最佳本地LLM是什么？', a: 'Llama 3.2 3B适合大多数用户 — 4GB内存，强指令跟随，3分钟下载。4GB以下内存选Gemma 3 2B。' },
                             { q: '运行本地LLM的最低内存要求是多少？', a: 'Q4_K_M量化的3B模型需要4GB内存。8GB可以使用7B模型，质量明显更好。' },
                             { q: '这些模型处理私人数据安全吗？', a: '是的 — 所有模型完全在您的硬件上运行。没有提示词或输出被传输到外部服务器。' },
-                            { q: '哪个模型最适合编程？', a: 'Qwen2.5 7B在HumanEval上领先。4–6GB内存时，Phi-3.5 Mini 3.8B是最佳编程选项。' }
+                            { q: '哪个模型最适合编程？', a: 'Qwen3 8B在HumanEval上领先。4–6GB内存时，Phi-4 Mini 3.8B是最佳编程选项。' }
                         ]
                     },
                     {

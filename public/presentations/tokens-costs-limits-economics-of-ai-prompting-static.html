@@ -260,6 +260,7 @@
     }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
             * {
                 margin: 0;
                 padding: 0;
@@ -443,12 +444,12 @@
                         h2: 'AI Model Pricing per Million Tokens 2026',
                         columns: ['Model', 'Input ($/1M)', 'Output ($/1M)'],
                         rows: [
-                            { Model: 'GPT-4o', 'Input ($/1M)': '$5.00', 'Output ($/1M)': '$15.00' },
-                            { Model: 'Claude 4.6 Sonnet', 'Input ($/1M)': '$3.00', 'Output ($/1M)': '$15.00' },
-                            { Model: 'Gemini 1.5 Pro', 'Input ($/1M)': '$3.50', 'Output ($/1M)': '$10.50' },
-                            { Model: 'GPT-4o mini', 'Input ($/1M)': '$0.15', 'Output ($/1M)': '$0.60' },
-                            { Model: 'Claude 4.5 Haiku', 'Input ($/1M)': '$0.25', 'Output ($/1M)': '$1.25' },
-                            { Model: 'Gemini 1.5 Flash', 'Input ($/1M)': '$0.075', 'Output ($/1M)': '$0.30' }
+                            { Model: 'GPT-5.6', 'Input ($/1M)': '$5.00', 'Output ($/1M)': '$15.00' },
+                            { Model: 'Claude Opus 4.8', 'Input ($/1M)': '$3.00', 'Output ($/1M)': '$15.00' },
+                            { Model: 'Gemini 3.1 Pro', 'Input ($/1M)': '$3.50', 'Output ($/1M)': '$10.50' },
+                            { Model: 'GPT-5.6 mini', 'Input ($/1M)': '$0.15', 'Output ($/1M)': '$0.60' },
+                            { Model: 'Claude Haiku 4.5', 'Input ($/1M)': '$0.25', 'Output ($/1M)': '$1.25' },
+                            { Model: 'Gemini 3.5 Flash', 'Input ($/1M)': '$0.075', 'Output ($/1M)': '$0.30' }
                         ]
                     },
                     {
@@ -477,13 +478,13 @@
                     {
                         type: 'table',
                         h2: 'Choosing the Right Model for the Task',
-                        columns: ['Task Type', 'Best Model', 'Cost vs GPT-4o'],
+                        columns: ['Task Type', 'Best Model', 'Cost vs GPT-5.6'],
                         rows: [
-                            { 'Task Type': 'Simple classification', 'Best Model': 'GPT-4o mini or Haiku', 'Cost vs GPT-4o': '33× cheaper' },
-                            { 'Task Type': 'Short Q&A', 'Best Model': 'GPT-4o mini or Haiku', 'Cost vs GPT-4o': '10–33× cheaper' },
-                            { 'Task Type': 'Complex analysis / code', 'Best Model': 'GPT-4o or Claude 4.6 Sonnet', 'Cost vs GPT-4o': 'baseline' },
-                            { 'Task Type': 'Long-form writing', 'Best Model': 'Claude 4.6 Sonnet', 'Cost vs GPT-4o': 'baseline' },
-                            { 'Task Type': 'High-volume private workflows', 'Best Model': 'Ollama local', 'Cost vs GPT-4o': 'zero API cost' }
+                            { 'Task Type': 'Simple classification', 'Best Model': 'GPT-5.6 mini or Haiku', 'Cost vs GPT-5.6': '33× cheaper' },
+                            { 'Task Type': 'Short Q&A', 'Best Model': 'GPT-5.6 mini or Haiku', 'Cost vs GPT-5.6': '10–33× cheaper' },
+                            { 'Task Type': 'Complex analysis / code', 'Best Model': 'GPT-5.6 or Claude Opus 4.8', 'Cost vs GPT-5.6': 'baseline' },
+                            { 'Task Type': 'Long-form writing', 'Best Model': 'Claude Opus 4.8', 'Cost vs GPT-5.6': 'baseline' },
+                            { 'Task Type': 'High-volume private workflows', 'Best Model': 'Ollama local', 'Cost vs GPT-5.6': 'zero API cost' }
                         ]
                     },
                     {
@@ -491,9 +492,9 @@
                         h2: 'Cost Recipes — Common Scenarios',
                         intro: 'Use these templates as starting points.',
                         items: [
-                            '<strong>Quick lookup:</strong> GPT-4o mini, ≤50 tokens system prompt, 1–2 sentence output',
-                            '<strong>5-turn research:</strong> Claude 4.6 Sonnet. Summarize every 5 turns to cut 70% of history tokens',
-                            '<strong>Batch processing:</strong> GPT-4o mini for filtering, escalate to GPT-4o only for final synthesis',
+                            '<strong>Quick lookup:</strong> GPT-5.6 mini, ≤50 tokens system prompt, 1–2 sentence output',
+                            '<strong>5-turn research:</strong> Claude Opus 4.8. Summarize every 5 turns to cut 70% of history tokens',
+                            '<strong>Batch processing:</strong> GPT-5.6 mini for filtering, escalate to GPT-5.6 only for final synthesis',
                             '<strong>Privacy-sensitive:</strong> Ollama/LM Studio locally (zero API cost, accept lower quality)',
                             '<strong>Model comparison:</strong> Send one prompt to 3 models simultaneously, pick cheapest that meets quality bar'
                         ]
@@ -516,7 +517,7 @@
                         intro: 'Avoid these token-wasting patterns.',
                         items: [
                             'Full conversation history on every call (pays 5,000 tokens again on turn 11)',
-                            'High-capability model for simple tasks (don\'t use GPT-4o for "extract date")',
+                            'High-capability model for simple tasks (don\'t use GPT-5.6 for "extract date")',
                             'No output length constraints ("tell me about X" = 500 tokens vs "summarize in 50 words" = 60)',
                             'Long system prompts on every call (500-token prompt × 100 calls = 50k wasted tokens)',
                             'High-resolution images without downscaling (500–2,000 tokens per image)',
@@ -528,7 +529,7 @@
                         type: 'numbered',
                         h2: 'How to Cut LLM API Costs in 5 Steps',
                         items: [
-                            '<strong>Match model to task complexity:</strong> Use GPT-4o mini or Claude Haiku for simple tasks',
+                            '<strong>Match model to task complexity:</strong> Use GPT-5.6 mini or Claude Haiku for simple tasks',
                             '<strong>Summarize conversation history every 5 turns:</strong> Prevents full re-billing on every call',
                             '<strong>Cap output length explicitly:</strong> "Answer in 3 bullets" prevents verbose token-heavy responses',
                             '<strong>Trim system prompts to essentials:</strong> Remove filler; every word re-billed on every API call',
@@ -561,7 +562,7 @@
                             '<strong>Backend LLM always visible:</strong> Optimize your prompt and run Quorum consensus analysis',
                             '<strong>Multi-model comparison:</strong> Send one prompt at different settings across 25+ models',
                             '<strong>Cost visibility:</strong> See exact token count (Backend and Frontend) per call',
-                            '<strong>Tested results:</strong> 20 identical research prompts on GPT-4o vs mini: 17/20 matched quality, 43× cost reduction'
+                            '<strong>Tested results:</strong> 20 identical research prompts on GPT-5.6 vs mini: 17/20 matched quality, 43× cost reduction'
                         ]
                     },
                     {
@@ -610,12 +611,12 @@
                         h2: 'KI-Modell-Preise pro Million Tokens 2026',
                         columns: ['Modell', 'Input ($/1M)', 'Output ($/1M)'],
                         rows: [
-                            { Modell: 'GPT-4o', 'Input ($/1M)': '$5,00', 'Output ($/1M)': '$15,00' },
-                            { Modell: 'Claude 4.6 Sonnet', 'Input ($/1M)': '$3,00', 'Output ($/1M)': '$15,00' },
-                            { Modell: 'Gemini 1.5 Pro', 'Input ($/1M)': '$3,50', 'Output ($/1M)': '$10,50' },
-                            { Modell: 'GPT-4o mini', 'Input ($/1M)': '$0,15', 'Output ($/1M)': '$0,60' },
-                            { Modell: 'Claude 4.5 Haiku', 'Input ($/1M)': '$0,25', 'Output ($/1M)': '$1,25' },
-                            { Modell: 'Gemini 1.5 Flash', 'Input ($/1M)': '$0,075', 'Output ($/1M)': '$0,30' }
+                            { Modell: 'GPT-5.6', 'Input ($/1M)': '$5,00', 'Output ($/1M)': '$15,00' },
+                            { Modell: 'Claude Opus 4.8', 'Input ($/1M)': '$3,00', 'Output ($/1M)': '$15,00' },
+                            { Modell: 'Gemini 3.1 Pro', 'Input ($/1M)': '$3,50', 'Output ($/1M)': '$10,50' },
+                            { Modell: 'GPT-5.6 mini', 'Input ($/1M)': '$0,15', 'Output ($/1M)': '$0,60' },
+                            { Modell: 'Claude Haiku 4.5', 'Input ($/1M)': '$0,25', 'Output ($/1M)': '$1,25' },
+                            { Modell: 'Gemini 3.5 Flash', 'Input ($/1M)': '$0,075', 'Output ($/1M)': '$0,30' }
                         ]
                     },
                     {
@@ -644,13 +645,13 @@
                     {
                         type: 'table',
                         h2: 'Das richtige Modell für die Aufgabe wählen',
-                        columns: ['Aufgabentyp', 'Bestes Modell', 'Kosten vs GPT-4o'],
+                        columns: ['Aufgabentyp', 'Bestes Modell', 'Kosten vs GPT-5.6'],
                         rows: [
-                            { Aufgabentyp: 'Einfache Klassifizierung', 'Bestes Modell': 'GPT-4o mini oder Haiku', 'Kosten vs GPT-4o': '33× billiger' },
-                            { Aufgabentyp: 'Kurze Q&A', 'Bestes Modell': 'GPT-4o mini oder Haiku', 'Kosten vs GPT-4o': '10–33× billiger' },
-                            { Aufgabentyp: 'Komplexe Analyse / Code', 'Bestes Modell': 'GPT-4o oder Claude 4.6 Sonnet', 'Kosten vs GPT-4o': 'Basislinie' },
-                            { Aufgabentyp: 'Längeres Schreiben', 'Bestes Modell': 'Claude 4.6 Sonnet', 'Kosten vs GPT-4o': 'Basislinie' },
-                            { Aufgabentyp: 'Hochvolumige private Workflows', 'Bestes Modell': 'Ollama lokal', 'Kosten vs GPT-4o': 'Keine API-Kosten' }
+                            { Aufgabentyp: 'Einfache Klassifizierung', 'Bestes Modell': 'GPT-5.6 mini oder Haiku', 'Kosten vs GPT-5.6': '33× billiger' },
+                            { Aufgabentyp: 'Kurze Q&A', 'Bestes Modell': 'GPT-5.6 mini oder Haiku', 'Kosten vs GPT-5.6': '10–33× billiger' },
+                            { Aufgabentyp: 'Komplexe Analyse / Code', 'Bestes Modell': 'GPT-5.6 oder Claude Opus 4.8', 'Kosten vs GPT-5.6': 'Basislinie' },
+                            { Aufgabentyp: 'Längeres Schreiben', 'Bestes Modell': 'Claude Opus 4.8', 'Kosten vs GPT-5.6': 'Basislinie' },
+                            { Aufgabentyp: 'Hochvolumige private Workflows', 'Bestes Modell': 'Ollama lokal', 'Kosten vs GPT-5.6': 'Keine API-Kosten' }
                         ]
                     },
                     {
@@ -658,9 +659,9 @@
                         h2: 'Kostenrezepte — häufige Szenarien',
                         intro: 'Verwenden Sie diese als Startpunkte.',
                         items: [
-                            '<strong>Schnelle Nachschlag:</strong> GPT-4o mini, ≤50 Token Systemprompt, 1–2 Sätze Output',
-                            '<strong>5-Zug-Forschung:</strong> Claude 4.6 Sonnet. Fassen Sie alle 5 Züge zusammen, um 70% der Verlaufs-Tokens zu kürzen',
-                            '<strong>Batch-Verarbeitung:</strong> GPT-4o mini zum Filtern, nur zur finalen Synthese zu GPT-4o eskalieren',
+                            '<strong>Schnelle Nachschlag:</strong> GPT-5.6 mini, ≤50 Token Systemprompt, 1–2 Sätze Output',
+                            '<strong>5-Zug-Forschung:</strong> Claude Opus 4.8. Fassen Sie alle 5 Züge zusammen, um 70% der Verlaufs-Tokens zu kürzen',
+                            '<strong>Batch-Verarbeitung:</strong> GPT-5.6 mini zum Filtern, nur zur finalen Synthese zu GPT-5.6 eskalieren',
                             '<strong>Datenschutzsensibel:</strong> Ollama/LM Studio lokal (keine API-Kosten, akzeptieren Sie niedrigere Qualität)',
                             '<strong>Modellvergleich:</strong> Einen Prompt an 3 Modelle senden, das günstigste auswählen, das die Qualitätsanforderung erfüllt'
                         ]
@@ -683,7 +684,7 @@
                         intro: 'Vermeiden Sie diese Token-verschwendenden Muster.',
                         items: [
                             'Gesamter Gesprächsverlauf bei jedem Aufruf (bezahlt 5.000 Tokens erneut bei Zug 11)',
-                            'Hochleistungsmodell für einfache Aufgaben (verwenden Sie nicht GPT-4o zum "Extrahieren von Datum")',
+                            'Hochleistungsmodell für einfache Aufgaben (verwenden Sie nicht GPT-5.6 zum "Extrahieren von Datum")',
                             'Keine Längenbeschränkungen für Ausgabe ("Erzähle mir von X" = 500 Tokens vs "Zusammenfassung in 50 Wörtern" = 60)',
                             'Lange Systemprompts bei jedem Aufruf (500-Token-Prompt × 100 Aufrufe = 50k verschwendete Tokens)',
                             'Hochauflösende Bilder ohne Herunterskalierung (500–2.000 Tokens pro Bild)',
@@ -695,7 +696,7 @@
                         type: 'numbered',
                         h2: 'Wie man KI-API-Kosten in 5 Schritten senkt',
                         items: [
-                            '<strong>Modell an Aufgabenkomplexität anpassen:</strong> Verwenden Sie GPT-4o mini oder Claude Haiku für einfache Aufgaben',
+                            '<strong>Modell an Aufgabenkomplexität anpassen:</strong> Verwenden Sie GPT-5.6 mini oder Claude Haiku für einfache Aufgaben',
                             '<strong>Gesprächsverlauf alle 5 Züge zusammenfassen:</strong> Verhindert vollständige Neuberechnung bei jedem Aufruf',
                             '<strong>Ausgabelänge explizit begrenzen:</strong> "Antwort in 3 Bullets" verhindert ausführliche Token-intensive Antworten',
                             '<strong>Systemprompts auf das Wesentliche trimmen:</strong> Entfernen Sie Füllwörter; jedes Wort wird bei jedem API-Aufruf neu berechnet',
@@ -728,7 +729,7 @@
                             '<strong>Backend-LLM immer sichtbar:</strong> Optimieren Sie Ihren Prompt und führen Sie Quorum-Konsens-Analyse durch',
                             '<strong>Multi-Modell-Vergleich:</strong> Senden Sie einen Prompt mit unterschiedlichen Einstellungen über 25+ Modelle',
                             '<strong>Kostensichtbarkeit:</strong> Sehen Sie exakte Token-Anzahl (Backend und Frontend) pro Aufruf',
-                            '<strong>Getestete Ergebnisse:</strong> 20 identische Forschungs-Prompts auf GPT-4o vs mini: 17/20 Qualität übereinstimmend, 43× Kostenreduktion'
+                            '<strong>Getestete Ergebnisse:</strong> 20 identische Forschungs-Prompts auf GPT-5.6 vs mini: 17/20 Qualität übereinstimmend, 43× Kostenreduktion'
                         ]
                     },
                     {
@@ -777,12 +778,12 @@
                         h2: 'Tarification des modèles IA par million de tokens 2026',
                         columns: ['Modèle', 'Entrée ($/1M)', 'Sortie ($/1M)'],
                         rows: [
-                            { Modèle: 'GPT-4o', 'Entrée ($/1M)': '$5,00', 'Sortie ($/1M)': '$15,00' },
-                            { Modèle: 'Claude 4.6 Sonnet', 'Entrée ($/1M)': '$3,00', 'Sortie ($/1M)': '$15,00' },
-                            { Modèle: 'Gemini 1.5 Pro', 'Entrée ($/1M)': '$3,50', 'Sortie ($/1M)': '$10,50' },
-                            { Modèle: 'GPT-4o mini', 'Entrée ($/1M)': '$0,15', 'Sortie ($/1M)': '$0,60' },
-                            { Modèle: 'Claude 4.5 Haiku', 'Entrée ($/1M)': '$0,25', 'Sortie ($/1M)': '$1,25' },
-                            { Modèle: 'Gemini 1.5 Flash', 'Entrée ($/1M)': '$0,075', 'Sortie ($/1M)': '$0,30' }
+                            { Modèle: 'GPT-5.6', 'Entrée ($/1M)': '$5,00', 'Sortie ($/1M)': '$15,00' },
+                            { Modèle: 'Claude Opus 4.8', 'Entrée ($/1M)': '$3,00', 'Sortie ($/1M)': '$15,00' },
+                            { Modèle: 'Gemini 3.1 Pro', 'Entrée ($/1M)': '$3,50', 'Sortie ($/1M)': '$10,50' },
+                            { Modèle: 'GPT-5.6 mini', 'Entrée ($/1M)': '$0,15', 'Sortie ($/1M)': '$0,60' },
+                            { Modèle: 'Claude Haiku 4.5', 'Entrée ($/1M)': '$0,25', 'Sortie ($/1M)': '$1,25' },
+                            { Modèle: 'Gemini 3.5 Flash', 'Entrée ($/1M)': '$0,075', 'Sortie ($/1M)': '$0,30' }
                         ]
                     },
                     {
@@ -811,13 +812,13 @@
                     {
                         type: 'table',
                         h2: 'Choisir le bon modèle pour la tâche',
-                        columns: ['Type de tâche', 'Meilleur modèle', 'Coût vs GPT-4o'],
+                        columns: ['Type de tâche', 'Meilleur modèle', 'Coût vs GPT-5.6'],
                         rows: [
-                            { 'Type de tâche': 'Classification simple', 'Meilleur modèle': 'GPT-4o mini ou Haiku', 'Coût vs GPT-4o': '33× moins cher' },
-                            { 'Type de tâche': 'Q&A court', 'Meilleur modèle': 'GPT-4o mini ou Haiku', 'Coût vs GPT-4o': '10–33× moins cher' },
-                            { 'Type de tâche': 'Analyse complexe / code', 'Meilleur modèle': 'GPT-4o ou Claude 4.6 Sonnet', 'Coût vs GPT-4o': 'référence' },
-                            { 'Type de tâche': 'Écriture long-forme', 'Meilleur modèle': 'Claude 4.6 Sonnet', 'Coût vs GPT-4o': 'référence' },
-                            { 'Type de tâche': 'Workflows privés haute-volume', 'Meilleur modèle': 'Ollama local', 'Coût vs GPT-4o': 'pas de coût API' }
+                            { 'Type de tâche': 'Classification simple', 'Meilleur modèle': 'GPT-5.6 mini ou Haiku', 'Coût vs GPT-5.6': '33× moins cher' },
+                            { 'Type de tâche': 'Q&A court', 'Meilleur modèle': 'GPT-5.6 mini ou Haiku', 'Coût vs GPT-5.6': '10–33× moins cher' },
+                            { 'Type de tâche': 'Analyse complexe / code', 'Meilleur modèle': 'GPT-5.6 ou Claude Opus 4.8', 'Coût vs GPT-5.6': 'référence' },
+                            { 'Type de tâche': 'Écriture long-forme', 'Meilleur modèle': 'Claude Opus 4.8', 'Coût vs GPT-5.6': 'référence' },
+                            { 'Type de tâche': 'Workflows privés haute-volume', 'Meilleur modèle': 'Ollama local', 'Coût vs GPT-5.6': 'pas de coût API' }
                         ]
                     },
                     {
@@ -825,9 +826,9 @@
                         h2: 'Recettes de coût — scénarios courants',
                         intro: 'Utilisez-les comme points de départ.',
                         items: [
-                            '<strong>Recherche rapide :</strong> GPT-4o mini, ≤50 tokens prompt système, 1–2 phrases de sortie',
-                            '<strong>Recherche 5-tour :</strong> Claude 4.6 Sonnet. Résumé tous les 5 tours pour réduire 70% des tokens historiques',
-                            '<strong>Traitement par batch :</strong> GPT-4o mini pour filtrer, escalader à GPT-4o seulement pour synthèse finale',
+                            '<strong>Recherche rapide :</strong> GPT-5.6 mini, ≤50 tokens prompt système, 1–2 phrases de sortie',
+                            '<strong>Recherche 5-tour :</strong> Claude Opus 4.8. Résumé tous les 5 tours pour réduire 70% des tokens historiques',
+                            '<strong>Traitement par batch :</strong> GPT-5.6 mini pour filtrer, escalader à GPT-5.6 seulement pour synthèse finale',
                             '<strong>Sensible à la confidentialité :</strong> Ollama/LM Studio localement (pas de coût API, accepter qualité inférieure)',
                             '<strong>Comparaison de modèles :</strong> Envoyer un prompt à 3 modèles simultanément, choisir le moins cher qui répond aux normes de qualité'
                         ]
@@ -850,7 +851,7 @@
                         intro: 'Évitez ces modèles gaspilleurs de tokens.',
                         items: [
                             'Historique complet à chaque appel (paye 5.000 tokens à nouveau au tour 11)',
-                            'Modèle haute-capacité pour tâches simples (ne pas utiliser GPT-4o pour "extraire la date")',
+                            'Modèle haute-capacité pour tâches simples (ne pas utiliser GPT-5.6 pour "extraire la date")',
                             'Pas de contraintes de longueur de sortie ("parlez-moi de X" = 500 tokens vs "résumé en 50 mots" = 60)',
                             'Prompts système longs à chaque appel (500-token × 100 appels = 50k tokens gaspillés)',
                             'Images haute-résolution sans réduction d\'échelle (500–2.000 tokens par image)',
@@ -862,7 +863,7 @@
                         type: 'numbered',
                         h2: 'Comment réduire les coûts des API IA en 5 étapes',
                         items: [
-                            '<strong>Adapter le modèle à la complexité :</strong> Utilisez GPT-4o mini ou Claude Haiku pour tâches simples',
+                            '<strong>Adapter le modèle à la complexité :</strong> Utilisez GPT-5.6 mini ou Claude Haiku pour tâches simples',
                             '<strong>Résumer l\'historique chaque 5 tours :</strong> Évite refacturisation complète à chaque appel',
                             '<strong>Limiter la longueur de sortie explicitement :</strong> "Répondre en 3 points" empêche réponses token-intensives',
                             '<strong>Trimmer les prompts système à l\'essentiel :</strong> Chaque mot refacturisé à chaque appel API',
@@ -895,7 +896,7 @@
                             '<strong>Backend LLM toujours visible :</strong> Optimiser votre prompt et exécuter analyse consensus Quorum',
                             '<strong>Comparaison multi-modèles :</strong> Envoyer un prompt avec paramètres différents sur 25+ modèles',
                             '<strong>Visibilité des coûts :</strong> Voir nombre exact de tokens (Backend et Frontend) par appel',
-                            '<strong>Résultats testés :</strong> 20 prompts recherche identiques GPT-4o vs mini : 17/20 qualité égale, réduction 43× des coûts'
+                            '<strong>Résultats testés :</strong> 20 prompts recherche identiques GPT-5.6 vs mini : 17/20 qualité égale, réduction 43× des coûts'
                         ]
                     },
                     {
@@ -944,12 +945,12 @@
                         h2: 'AIモデル価格（2026年百万トークンあたり）',
                         columns: ['モデル', '入力 ($/1M)', '出力 ($/1M)'],
                         rows: [
-                            { モデル: 'GPT-4o', '入力 ($/1M)': '$5.00', '出力 ($/1M)': '$15.00' },
-                            { モデル: 'Claude 4.6 Sonnet', '入力 ($/1M)': '$3.00', '出力 ($/1M)': '$15.00' },
-                            { モデル: 'Gemini 1.5 Pro', '入力 ($/1M)': '$3.50', '出力 ($/1M)': '$10.50' },
-                            { モデル: 'GPT-4o mini', '入力 ($/1M)': '$0.15', '出力 ($/1M)': '$0.60' },
-                            { モデル: 'Claude 4.5 Haiku', '入力 ($/1M)': '$0.25', '出力 ($/1M)': '$1.25' },
-                            { モデル: 'Gemini 1.5 Flash', '入力 ($/1M)': '$0.075', '出力 ($/1M)': '$0.30' }
+                            { モデル: 'GPT-5.6', '入力 ($/1M)': '$5.00', '出力 ($/1M)': '$15.00' },
+                            { モデル: 'Claude Opus 4.8', '入力 ($/1M)': '$3.00', '出力 ($/1M)': '$15.00' },
+                            { モデル: 'Gemini 3.1 Pro', '入力 ($/1M)': '$3.50', '出力 ($/1M)': '$10.50' },
+                            { モデル: 'GPT-5.6 mini', '入力 ($/1M)': '$0.15', '出力 ($/1M)': '$0.60' },
+                            { モデル: 'Claude Haiku 4.5', '入力 ($/1M)': '$0.25', '出力 ($/1M)': '$1.25' },
+                            { モデル: 'Gemini 3.5 Flash', '入力 ($/1M)': '$0.075', '出力 ($/1M)': '$0.30' }
                         ]
                     },
                     {
@@ -978,13 +979,13 @@
                     {
                         type: 'table',
                         h2: 'タスクに適したモデルを選択',
-                        columns: ['タスクタイプ', '最良モデル', 'GPT-4oと比較した費用'],
+                        columns: ['タスクタイプ', '最良モデル', 'GPT-5.6と比較した費用'],
                         rows: [
-                            { タスクタイプ: 'シンプルな分類', '最良モデル': 'GPT-4o miniまたはHaiku', 'GPT-4oと比較した費用': '33×安い' },
-                            { タスクタイプ: '短いQ&A', '最良モデル': 'GPT-4o miniまたはHaiku', 'GPT-4oと比較した費用': '10–33×安い' },
-                            { タスクタイプ: '複雑な分析/コード', '最良モデル': 'GPT-4oまたはClaude 4.6 Sonnet', 'GPT-4oと比較した費用': 'ベースライン' },
-                            { タスクタイプ: 'ロングフォーム執筆', '最良モデル': 'Claude 4.6 Sonnet', 'GPT-4oと比較した費用': 'ベースライン' },
-                            { タスクタイプ: 'ハイボリューム非公開ワークフロー', '最良モデル': 'Ollama ローカル', 'GPT-4oと比較した費用': 'APIコスト無料' }
+                            { タスクタイプ: 'シンプルな分類', '最良モデル': 'GPT-5.6 miniまたはHaiku', 'GPT-5.6と比較した費用': '33×安い' },
+                            { タスクタイプ: '短いQ&A', '最良モデル': 'GPT-5.6 miniまたはHaiku', 'GPT-5.6と比較した費用': '10–33×安い' },
+                            { タスクタイプ: '複雑な分析/コード', '最良モデル': 'GPT-5.6またはClaude Opus 4.8', 'GPT-5.6と比較した費用': 'ベースライン' },
+                            { タスクタイプ: 'ロングフォーム執筆', '最良モデル': 'Claude Opus 4.8', 'GPT-5.6と比較した費用': 'ベースライン' },
+                            { タスクタイプ: 'ハイボリューム非公開ワークフロー', '最良モデル': 'Ollama ローカル', 'GPT-5.6と比較した費用': 'APIコスト無料' }
                         ]
                     },
                     {
@@ -992,9 +993,9 @@
                         h2: 'コストレシピ — 一般的なシナリオ',
                         intro: 'これらを開始点として使用してください。',
                         items: [
-                            '<strong>クイック検索：</strong>GPT-4o mini、≤50トークンシステムプロンプト、1–2文の出力',
-                            '<strong>5ターン研究：</strong>Claude 4.6 Sonnet。5ターンごとに要約して履歴トークンを70%削減',
-                            '<strong>バッチ処理：</strong>フィルタリングにGPT-4o mini、最終合成にのみGPT-4oにエスカレート',
+                            '<strong>クイック検索：</strong>GPT-5.6 mini、≤50トークンシステムプロンプト、1–2文の出力',
+                            '<strong>5ターン研究：</strong>Claude Opus 4.8。5ターンごとに要約して履歴トークンを70%削減',
+                            '<strong>バッチ処理：</strong>フィルタリングにGPT-5.6 mini、最終合成にのみGPT-5.6にエスカレート',
                             '<strong>プライバシーに敏感：</strong>Ollama/LM Studioをローカルで使用（APIコスト無料、低品質を受け入れる）',
                             '<strong>モデル比較：</strong>1つのプロンプトを3つのモデルに同時に送信、品質基準を満たす最も安いものを選択'
                         ]
@@ -1017,7 +1018,7 @@
                         intro: 'これらのトークン浪費パターンを避けてください。',
                         items: [
                             'すべてのコールで完全な会話履歴（ターン11で5.000トークンを再度支払う）',
-                            'シンプルなタスクに高機能モデル（日付抽出にGPT-4oを使わない）',
+                            'シンプルなタスクに高機能モデル（日付抽出にGPT-5.6を使わない）',
                             '出力長の制限なし（"Xについて教えてください" = 500トークン対"50語で要約" = 60）',
                             'すべてのコールで長いシステムプロンプト（500トークン × 100コール = 50k浪費トークン）',
                             'ダウンスケーリングなしの高解像度画像（画像あたり500–2.000トークン）',
@@ -1029,7 +1030,7 @@
                         type: 'numbered',
                         h2: '5ステップでAI APIコストを削減',
                         items: [
-                            '<strong>タスク複雑さにモデルをマッチ：</strong>シンプルなタスクにはGPT-4o miniまたはClaude Haikuを使用',
+                            '<strong>タスク複雑さにモデルをマッチ：</strong>シンプルなタスクにはGPT-5.6 miniまたはClaude Haikuを使用',
                             '<strong>5ターンごとに会話履歴を要約：</strong>コールごとに完全な再請求を防ぐ',
                             '<strong>出力長を明確に制限：</strong>"3つの箇条書きで答える"は詳細なトークン重い応答を防ぐ',
                             '<strong>システムプロンプトを本質にトリミング：</strong>すべての無駄な言葉を削除；すべてのAPIコールで再請求',
@@ -1062,7 +1063,7 @@
                             '<strong>バックエンドLLM常に表示：</strong>プロンプトを最適化してQuorum合意分析を実行',
                             '<strong>マルチモデル比較：</strong>1つのプロンプトを25+モデルの異なる設定で送信',
                             '<strong>コスト可視化：</strong>コールあたりの正確なトークン数（バックエンドとフロントエンド）を表示',
-                            '<strong>テスト済み結果：</strong>20の同じ研究プロンプトをGPT-4o対miniで実行：17/20品質一致、43×コスト削減'
+                            '<strong>テスト済み結果：</strong>20の同じ研究プロンプトをGPT-5.6対miniで実行：17/20品質一致、43×コスト削減'
                         ]
                     },
                     {
@@ -1111,12 +1112,12 @@
                         h2: '2026年AI模型每百万令牌定价',
                         columns: ['模型', '输入 ($/1M)', '输出 ($/1M)'],
                         rows: [
-                            { 模型: 'GPT-4o', '输入 ($/1M)': '$5.00', '输出 ($/1M)': '$15.00' },
-                            { 模型: 'Claude 4.6 Sonnet', '输入 ($/1M)': '$3.00', '输出 ($/1M)': '$15.00' },
-                            { 模型: 'Gemini 1.5 Pro', '输入 ($/1M)': '$3.50', '输出 ($/1M)': '$10.50' },
-                            { 模型: 'GPT-4o mini', '输入 ($/1M)': '$0.15', '输出 ($/1M)': '$0.60' },
-                            { 模型: 'Claude 4.5 Haiku', '输入 ($/1M)': '$0.25', '输出 ($/1M)': '$1.25' },
-                            { 模型: 'Gemini 1.5 Flash', '输入 ($/1M)': '$0.075', '输出 ($/1M)': '$0.30' }
+                            { 模型: 'GPT-5.6', '输入 ($/1M)': '$5.00', '输出 ($/1M)': '$15.00' },
+                            { 模型: 'Claude Opus 4.8', '输入 ($/1M)': '$3.00', '输出 ($/1M)': '$15.00' },
+                            { 模型: 'Gemini 3.1 Pro', '输入 ($/1M)': '$3.50', '输出 ($/1M)': '$10.50' },
+                            { 模型: 'GPT-5.6 mini', '输入 ($/1M)': '$0.15', '输出 ($/1M)': '$0.60' },
+                            { 模型: 'Claude Haiku 4.5', '输入 ($/1M)': '$0.25', '输出 ($/1M)': '$1.25' },
+                            { 模型: 'Gemini 3.5 Flash', '输入 ($/1M)': '$0.075', '输出 ($/1M)': '$0.30' }
                         ]
                     },
                     {
@@ -1145,13 +1146,13 @@
                     {
                         type: 'table',
                         h2: '为任务选择正确的模型',
-                        columns: ['任务类型', '最佳模型', '相对GPT-4o成本'],
+                        columns: ['任务类型', '最佳模型', '相对GPT-5.6成本'],
                         rows: [
-                            { 任务类型: '简单分类', '最佳模型': 'GPT-4o mini或Haiku', '相对GPT-4o成本': '便宜33倍' },
-                            { 任务类型: '简短问答', '最佳模型': 'GPT-4o mini或Haiku', '相对GPT-4o成本': '便宜10–33倍' },
-                            { 任务类型: '复杂分析/代码', '最佳模型': 'GPT-4o或Claude 4.6 Sonnet', '相对GPT-4o成本': '基准' },
-                            { 任务类型: '长篇写作', '最佳模型': 'Claude 4.6 Sonnet', '相对GPT-4o成本': '基准' },
-                            { 任务类型: '大容量私有工作流', '最佳模型': 'Ollama本地', '相对GPT-4o成本': '无API成本' }
+                            { 任务类型: '简单分类', '最佳模型': 'GPT-5.6 mini或Haiku', '相对GPT-5.6成本': '便宜33倍' },
+                            { 任务类型: '简短问答', '最佳模型': 'GPT-5.6 mini或Haiku', '相对GPT-5.6成本': '便宜10–33倍' },
+                            { 任务类型: '复杂分析/代码', '最佳模型': 'GPT-5.6或Claude Opus 4.8', '相对GPT-5.6成本': '基准' },
+                            { 任务类型: '长篇写作', '最佳模型': 'Claude Opus 4.8', '相对GPT-5.6成本': '基准' },
+                            { 任务类型: '大容量私有工作流', '最佳模型': 'Ollama本地', '相对GPT-5.6成本': '无API成本' }
                         ]
                     },
                     {
@@ -1159,9 +1160,9 @@
                         h2: '成本配方 — 常见场景',
                         intro: '将这些作为起点使用。',
                         items: [
-                            '<strong>快速查找：</strong>GPT-4o mini，≤50令牌系统提示，1–2句输出',
-                            '<strong>5轮研究：</strong>Claude 4.6 Sonnet。每5轮汇总以减少70%的历史令牌',
-                            '<strong>批量处理：</strong>使用GPT-4o mini进行过滤，仅对最终合成升级到GPT-4o',
+                            '<strong>快速查找：</strong>GPT-5.6 mini，≤50令牌系统提示，1–2句输出',
+                            '<strong>5轮研究：</strong>Claude Opus 4.8。每5轮汇总以减少70%的历史令牌',
+                            '<strong>批量处理：</strong>使用GPT-5.6 mini进行过滤，仅对最终合成升级到GPT-5.6',
                             '<strong>隐私敏感：</strong>本地运行Ollama/LM Studio（无API成本，接受较低质量）',
                             '<strong>模型比较：</strong>同时向3个模型发送1个提示，选择满足质量标准的最便宜模型'
                         ]
@@ -1184,7 +1185,7 @@
                         intro: '避免这些浪费令牌的模式。',
                         items: [
                             '每次调用都有完整对话历史（第11轮重新支付5.000令牌）',
-                            '对简单任务使用高功能模型（不要用GPT-4o"提取日期"）',
+                            '对简单任务使用高功能模型（不要用GPT-5.6"提取日期"）',
                             '无输出长度约束（"告诉我X" = 500令牌对"50个词汇总" = 60）',
                             '每次调用都有长系统提示（500令牌 × 100次调用 = 50k浪费令牌）',
                             '未按比例缩小的高分辨率图像（每张500–2.000令牌）',
@@ -1196,7 +1197,7 @@
                         type: 'numbered',
                         h2: '5步降低AI API费用',
                         items: [
-                            '<strong>将模型与任务复杂性匹配：</strong>对简单任务使用GPT-4o mini或Claude Haiku',
+                            '<strong>将模型与任务复杂性匹配：</strong>对简单任务使用GPT-5.6 mini或Claude Haiku',
                             '<strong>每5轮汇总对话历史：</strong>防止每次调用完整重新计费',
                             '<strong>明确限制输出长度：</strong>"用3个要点回答"防止详细的令牌密集型响应',
                             '<strong>将系统提示修剪至必需：</strong>删除填充词；每个词都在每次API调用时重新计费',
@@ -1229,7 +1230,7 @@
                             '<strong>后端LLM始终可见：</strong>优化您的提示并运行Quorum共识分析',
                             '<strong>多模型比较：</strong>在25+个模型上以不同设置发送一个提示',
                             '<strong>成本可见性：</strong>查看每次调用的确切令牌数（后端和前端）',
-                            '<strong>测试结果：</strong>20个相同研究提示在GPT-4o对mini：17/20质量匹配，43倍成本降低'
+                            '<strong>测试结果：</strong>20个相同研究提示在GPT-5.6对mini：17/20质量匹配，43倍成本降低'
                         ]
                     },
                     {

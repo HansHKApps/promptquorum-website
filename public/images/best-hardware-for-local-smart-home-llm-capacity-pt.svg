@@ -1,0 +1,28 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Capacidade de LLM local por nível de hardware</text>
+  <line x1="240" y1="330" x2="760" y2="330" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="230" y="94" font-size="12.5" font-weight="700" fill="#79747E" text-anchor="end">Raspberry Pi 5</text>
+  <rect x="240" y="75" width="57" height="24" fill="#EA4335" rx="4"/>
+  <text x="305" y="92" font-family="'SF Mono', Monaco, monospace" font-size="11.5" font-weight="700" fill="#1C1B1F">~1B, very small &amp; slow</text>
+
+  <text x="230" y="150" font-size="12.5" font-weight="700" fill="#79747E" text-anchor="end">Mini PC Intel N100/N150</text>
+  <rect x="240" y="131" width="99" height="24" fill="#F4B400" rx="4"/>
+  <text x="347" y="148" font-family="'SF Mono', Monaco, monospace" font-size="11.5" font-weight="700" fill="#1C1B1F">modelos pequenos (~3B)</text>
+
+  <text x="230" y="206" font-size="12.5" font-weight="700" fill="#79747E" text-anchor="end">NAS</text>
+  <rect x="240" y="187" width="130" height="24" fill="none" stroke="#79747E" stroke-width="1.5" stroke-dasharray="4 3" rx="4"/>
+  <text x="378" y="204" font-family="'SF Mono', Monaco, monospace" font-size="11.5" font-weight="700" fill="#49454F">depende da GPU instalada</text>
+
+  <text x="230" y="262" font-size="12.5" font-weight="700" fill="#79747E" text-anchor="end">Mini PC Ryzen (32GB RAM)</text>
+  <rect x="240" y="243" width="162" height="24" fill="#6750A4" rx="4"/>
+  <text x="410" y="260" font-family="'SF Mono', Monaco, monospace" font-size="11.5" font-weight="700" fill="#1C1B1F">modelos 7B–8B</text>
+
+  <text x="230" y="318" font-size="12.5" font-weight="700" fill="#79747E" text-anchor="end">Servidor + RTX 3090 (24GB)</text>
+  <rect x="240" y="299" width="480" height="24" fill="#34A853" rx="4"/>
+  <text x="608" y="316" font-family="'SF Mono', Monaco, monospace" font-size="11.5" font-weight="700" fill="#FFFFFF">até ~70B em Q4 — melhor custo-benefício</text>
+
+  <text x="400" y="358" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">A capacidade escala com a VRAM: um Raspberry Pi 5 roda só modelos minúsculos, enquanto uma RTX 3090 usada</text>
+  <text x="400" y="375" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">(24GB VRAM) lida com modelos de até ~70B em quantização Q4 — a capacidade do NAS depende da sua GPU.</text>
+<text x="792" y="392" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -75,6 +75,7 @@
       .header-links { gap: 8px; font-size: 10px; }
     }
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
       * { margin: 0; padding: 0; }
       html, body { overflow: visible !important; height: auto !important; width: 100% !important; background: white !important; }
       .header, .controls { display: none !important; }
@@ -188,7 +189,7 @@
             items: [
               '<strong>Install:</strong> VS Code Marketplace and JetBrains Marketplace. Config at ~/.continue/config.json.',
               '<strong>Workflow:</strong> FIM (fill-in-the-middle) autocomplete + in-IDE chat sidebar. Agent mode adds tool-call loops.',
-              '<strong>Local model setup:</strong> native Ollama support in one config block. Run a small model for autocomplete (Qwen2.5-Coder 1.5B) and a larger model for chat (Qwen3-Coder 30B).',
+              '<strong>Local model setup:</strong> native Ollama support in one config block. Run a small model for autocomplete (Qwen3-Coder 1.5B) and a larger model for chat (Qwen3-Coder 30B).',
               '<strong>Context:</strong> TF-IDF + embedding index. @codebase, @file, @folder, @docs, @terminal from the chat panel.',
               '<strong>Shines at:</strong> keyboard-driven editing inside your IDE, low cognitive overhead per edit, fast feedback loop.',
               '<strong>Falls short:</strong> multi-file refactors require manual per-file chat drives. Long autonomous tasks are not its native idiom.'
@@ -367,7 +368,7 @@
             items: [
               '<strong>Installation:</strong> VS Code Marketplace und JetBrains Marketplace. Konfiguration unter ~/.continue/config.json.',
               '<strong>Workflow:</strong> FIM-Autocomplete + In-IDE-Chat-Sidebar. Agent-Modus fügt Tool-Call-Schleifen hinzu.',
-              '<strong>Lokale Modelle:</strong> natives Ollama-Support in einem Config-Block. Kleines Modell für Autocomplete (Qwen2.5-Coder 1.5B) + größeres für Chat (Qwen3-Coder 30B).',
+              '<strong>Lokale Modelle:</strong> natives Ollama-Support in einem Config-Block. Kleines Modell für Autocomplete (Qwen3-Coder 1.5B) + größeres für Chat (Qwen3-Coder 30B).',
               '<strong>Kontext:</strong> TF-IDF + Embedding-Index. @codebase, @file, @folder, @docs, @terminal im Chat-Panel.',
               '<strong>Stärken:</strong> Tastaturgesteuertes Editieren im bekannten IDE, geringer kognitiver Aufwand pro Edit, schneller Feedback-Loop.',
               '<strong>Schwächen:</strong> Multi-Datei-Refactorings erfordern manuelle Steuerung pro Datei. Lange autonome Aufgaben sind nicht das native Idiom.'
@@ -522,7 +523,7 @@
             items: [
               '<strong>Installation :</strong> VS Code Marketplace et JetBrains Marketplace. Config dans ~/.continue/config.json.',
               '<strong>Workflow :</strong> autocomplete FIM (fill-in-the-middle) + panneau de chat in-IDE. Le mode Agent ajoute des boucles tool-call.',
-              '<strong>Modèle local :</strong> support Ollama natif en un bloc de config. Petit modèle pour autocomplete (Qwen2.5-Coder 1.5B) + grand modèle pour chat (Qwen3-Coder 30B).',
+              '<strong>Modèle local :</strong> support Ollama natif en un bloc de config. Petit modèle pour autocomplete (Qwen3-Coder 1.5B) + grand modèle pour chat (Qwen3-Coder 30B).',
               '<strong>Contexte :</strong> index TF-IDF + embeddings. @codebase, @file, @folder, @docs, @terminal depuis le panneau de chat.',
               "<strong>Points forts :</strong> édition pilotée au clavier dans votre IDE, faible surcharge cognitive par édition, boucle de retour rapide.",
               '<strong>Points faibles :</strong> refactors multi-fichiers nécessitent un pilotage manuel par fichier. Les tâches autonomes longues ne sont pas son idiome natif.'
@@ -677,7 +678,7 @@
             items: [
               '<strong>インストール：</strong>VS Code Marketplace と JetBrains Marketplace。設定は ~/.continue/config.json。',
               '<strong>ワークフロー：</strong>FIM（fill-in-the-middle）オートコンプリート + In-IDE チャットサイドバー。エージェントモードがツールコールループを追加。',
-              '<strong>ローカルモデル設定：</strong>1 つの設定ブロックでネイティブ Ollama サポート。小さなオートコンプリート用モデル（Qwen2.5-Coder 1.5B）+ 大きなチャット用モデル（Qwen3-Coder 30B）。',
+              '<strong>ローカルモデル設定：</strong>1 つの設定ブロックでネイティブ Ollama サポート。小さなオートコンプリート用モデル（Qwen3-Coder 1.5B）+ 大きなチャット用モデル（Qwen3-Coder 30B）。',
               '<strong>コンテキスト：</strong>TF-IDF + 埋め込みインデックス。チャットパネルから @codebase、@file、@folder、@docs、@terminal。',
               '<strong>得意分野：</strong>使い慣れた IDE でのキーボード駆動編集、編集ごとの認知負荷が低い、高速なフィードバックループ。',
               '<strong>苦手分野：</strong>マルチファイルリファクタはファイルごとに手動でチャットを操作する必要がある。長い自律タスクは本来の使い方ではない。'
@@ -832,7 +833,7 @@
             items: [
               '<strong>安装：</strong>VS Code Marketplace 和 JetBrains Marketplace。配置在 ~/.continue/config.json。',
               '<strong>工作流：</strong>FIM（fill-in-the-middle）自动补全 + IDE 内聊天侧边栏。Agent 模式添加工具调用循环。',
-              '<strong>本地模型设置：</strong>一个配置块即可原生支持 Ollama。小型自动补全模型（Qwen2.5-Coder 1.5B）+ 大型聊天模型（Qwen3-Coder 30B）。',
+              '<strong>本地模型设置：</strong>一个配置块即可原生支持 Ollama。小型自动补全模型（Qwen3-Coder 1.5B）+ 大型聊天模型（Qwen3-Coder 30B）。',
               '<strong>上下文：</strong>TF-IDF + 嵌入索引。从聊天面板使用 @codebase、@file、@folder、@docs、@terminal。',
               '<strong>优势：</strong>在熟悉的 IDE 中键盘驱动编辑，每次编辑认知负荷低，快速反馈循环。',
               '<strong>不足：</strong>多文件重构需要逐文件手动引导聊天。长时间自主任务不是其原生使用场景。'

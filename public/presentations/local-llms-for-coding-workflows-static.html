@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Local LLMs for Coding Workflows | PromptQuorum</title>
-    <meta name="description" content="Interactive presentation on local LLMs for code generation, review, and testing. Learn about Qwen2.5-Coder, CodeLlama, and practical coding workflows." />
+    <meta name="description" content="Interactive presentation on local LLMs for code generation, review, and testing. Learn about Kimi K2.6, Qwen 3.6 27B, and practical coding workflows." />
     <meta property="og:title" content="Local LLMs for Coding Workflows — PromptQuorum" />
-    <meta property="og:description" content="Master local coding AI with Qwen2.5-Coder 92.7% HumanEval, code generation, review, and testing patterns." />
+    <meta property="og:description" content="Master local coding AI with Kimi K2.6 (58.6 SWE-Bench Pro), code generation, review, and testing patterns." />
     <meta property="og:type" content="website" />
     <link rel="canonical" href="https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows" />
 
@@ -274,6 +274,7 @@
     }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
             * {
                 margin: 0;
                 padding: 0;
@@ -379,7 +380,7 @@
                     {
                         type: 'title',
                         h1: 'Local LLMs\nfor Coding Workflows',
-                        subtitle: 'Code Generation, Review & Testing with Qwen2.5-Coder & CodeLlama',
+                        subtitle: 'Code Generation, Review & Testing with Kimi K2.6 & Qwen 3.6 27B',
                         link: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows'
                     },
                     {
@@ -388,7 +389,7 @@
                         items: [
                             '<strong>Privacy:</strong> Code stays on your machine — no cloud APIs',
                             '<strong>Cost:</strong> $0/month vs GitHub Copilot $228/year',
-                            '<strong>Accuracy:</strong> Qwen2.5-Coder 32B scores 92.7% HumanEval',
+                            '<strong>Accuracy:</strong> Kimi K2.6 scores 58.6 SWE-Bench Pro; Qwen 3.6 27B scores 77.2% SWE-bench',
                             '<strong>Speed:</strong> 2–5 seconds per suggestion (slower than cloud, but privacy wins)',
                             '<strong>Control:</strong> Fine-tune models on your codebase'
                         ]
@@ -396,12 +397,12 @@
                     {
                         type: 'table',
                         h2: 'Best Local Coding Models 2026',
-                        columns: ['Model', 'HumanEval', 'VRAM', 'Best For'],
+                        columns: ['Model', 'Benchmark', 'VRAM', 'Best For'],
                         rows: [
-                            { 'Model': 'Qwen2.5-Coder 32B', 'HumanEval': '92.7%', 'VRAM': '22 GB', 'Best For': 'Maximum accuracy' },
-                            { 'Model': 'CodeLlama 34B', 'HumanEval': '75%', 'VRAM': '22 GB', 'Best For': 'High quality' },
-                            { 'Model': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Best For': 'Speed/balance' },
-                            { 'Model': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Best For': 'Tiny, efficient' }
+                            { 'Model': 'Kimi K2.6', 'Benchmark': '58.6 SWE-Bench Pro', 'VRAM': 'Varies (quantized)', 'Best For': 'Maximum accuracy, MoE' },
+                            { 'Model': 'Qwen 3.6 27B', 'Benchmark': '77.2% SWE-bench', 'VRAM': '22 GB', 'Best For': 'Best dense model' },
+                            { 'Model': 'Codestral 22B', 'Benchmark': '—', 'VRAM': '14 GB', 'Best For': 'IDE autocomplete' },
+                            { 'Model': 'Qwen3 8B', 'Benchmark': '~76% HumanEval', 'VRAM': '5 GB', 'Best For': '8 GB VRAM tier' }
                         ]
                     },
                     {
@@ -463,7 +464,7 @@
                         h2: 'Common Mistakes (Part 1)',
                         items: [
                             '1. <strong>Trusting generated code.</strong> Always review for bugs.',
-                            '2. <strong>Using models too small.</strong> Qwen2.5-Coder 7B minimum. 3B models fail.',
+                            '2. <strong>Using models too small.</strong> Qwen3 8B minimum. 3B models fail.',
                             '3. <strong>No context in prompts.</strong> Type hints + docstrings = better code.',
                             '4. <strong>Expecting architecture understanding.</strong> Models only understand functions.'
                         ]
@@ -472,10 +473,10 @@
                         type: 'list',
                         h2: 'Common Mistakes (Part 2)',
                         items: [
-                            '5. <strong>Wrong model choice.</strong> Qwen2.5-Coder 7B (72%) vs Llama 3.1 8B (55%) = 17% gap',
-                            'General models score 15–25% lower than coding models',
+                            '5. <strong>Wrong model choice.</strong> Qwen3 8B (~76% HumanEval) vs Llama 3.3 8B (72%) — coding models score higher',
+                            'Coding-specific models score 5–15% higher on HumanEval at the same size',
                             'Always use coding-specific models',
-                            'Use: <code>ollama pull qwen2.5-coder:7b</code>',
+                            'Use: <code>ollama pull qwen3:8b</code>',
                             'NOT: <code>ollama pull llama3.1:8b</code>'
                         ]
                     },
@@ -483,8 +484,8 @@
                         type: 'faq',
                         h2: 'Frequently Asked Questions',
                         faqs: [
-                            { q: 'Qwen2.5-Coder vs GitHub Copilot?', a: 'Qwen 32B: 92.7% HumanEval (vs Copilot 94%). Speed: local 2–5 sec vs Copilot 300ms. Cost: $0 vs $228/year. Quality near-parity.' },
-                            { q: 'How much VRAM needed?', a: 'Min: 5 GB for Qwen2.5-Coder 7B. Recommended: 8 GB. Premium: 24 GB for 32B model.' },
+                            { q: 'Kimi K2.6 vs GitHub Copilot?', a: 'Kimi K2.6 (58.6 SWE-Bench Pro) and Qwen 3.6 27B (77.2% SWE-bench) have narrowed the quality gap with Copilot. Speed: local 2–5 sec vs Copilot ~300ms. Cost: $0 vs a Copilot subscription.' },
+                            { q: 'How much VRAM needed?', a: 'Min: 5 GB for Qwen3 8B. Recommended: 16 GB for Devstral Small 24B or Qwen 3.6 27B. Premium: 20+ GB for Kimi K2.6 quantized.' },
                             { q: 'VS Code setup?', a: 'Install Continue.dev extension → point to Ollama localhost:11434 → Tab or Ctrl+Shift+\\\\ for suggestions.' }
                         ]
                     },
@@ -504,7 +505,7 @@
                     {
                         type: 'cta',
                         h2: 'Get Started with Local Coding AI',
-                        body: 'Try Qwen2.5-Coder 7B today: <code>ollama pull qwen2.5-coder:7b</code> → Use with Continue.dev or Cursor → Generate, review, test code privately.',
+                        body: 'Try Qwen3 8B today: <code>ollama pull qwen3:8b</code> → Use with Continue.dev or Cursor → Generate, review, test code privately.',
                         cta: 'Learn More at PromptQuorum',
                         href: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows'
                     }
@@ -516,7 +517,7 @@
                     {
                         type: 'title',
                         h1: 'Lokale LLMs\nfür Programmier-Workflows',
-                        subtitle: 'Code-Generierung, Überprüfung und Tests mit Qwen2.5-Coder und CodeLlama',
+                        subtitle: 'Code-Generierung, Überprüfung und Tests mit Kimi K2.6 und Qwen 3.6 27B',
                         link: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=de'
                     },
                     {
@@ -525,7 +526,7 @@
                         items: [
                             '<strong>Datenschutz:</strong> Code bleibt auf Ihrer Maschine — keine Cloud-APIs',
                             '<strong>Kosten:</strong> €0/Monat vs GitHub Copilot €19/Monat',
-                            '<strong>Genauigkeit:</strong> Qwen2.5-Coder 32B: 92,7% HumanEval',
+                            '<strong>Genauigkeit:</strong> Kimi K2.6: 58,6 SWE-Bench Pro; Qwen 3.6 27B: 77,2% SWE-bench',
                             '<strong>Geschwindigkeit:</strong> 2–5 Sekunden pro Vorschlag (langsamer, aber Datenschutz gewinnt)',
                             '<strong>Kontrolle:</strong> Fine-Tune auf Ihrer Codebasis'
                         ]
@@ -533,12 +534,12 @@
                     {
                         type: 'table',
                         h2: 'Beste lokale Programmiermodelle 2026',
-                        columns: ['Modell', 'HumanEval', 'VRAM', 'Am besten für'],
+                        columns: ['Modell', 'Benchmark', 'VRAM', 'Am besten für'],
                         rows: [
-                            { 'Modell': 'Qwen2.5-Coder 32B', 'HumanEval': '92,7%', 'VRAM': '22 GB', 'Am besten für': 'Maximale Genauigkeit' },
-                            { 'Modell': 'CodeLlama 34B', 'HumanEval': '75%', 'VRAM': '22 GB', 'Am besten für': 'Hohe Qualität' },
-                            { 'Modell': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4,7 GB', 'Am besten für': 'Geschwindigkeit/Balance' },
-                            { 'Modell': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Am besten für': 'Klein, effizient' }
+                            { 'Modell': 'Kimi K2.6', 'Benchmark': '58,6 SWE-Bench Pro', 'VRAM': 'Variiert (quantisiert)', 'Am besten für': 'Maximale Genauigkeit, MoE' },
+                            { 'Modell': 'Qwen 3.6 27B', 'Benchmark': '77,2% SWE-bench', 'VRAM': '22 GB', 'Am besten für': 'Bestes dichtes Modell' },
+                            { 'Modell': 'Codestral 22B', 'Benchmark': '—', 'VRAM': '14 GB', 'Am besten für': 'IDE-Autovervollständigung' },
+                            { 'Modell': 'Qwen3 8B', 'Benchmark': '~76% HumanEval', 'VRAM': '5 GB', 'Am besten für': '8-GB-VRAM-Stufe' }
                         ]
                     },
                     {
@@ -600,7 +601,7 @@
                         h2: 'Häufige Fehler (Teil 1)',
                         items: [
                             '1. <strong>Vertrau generiertem Code blind.</strong> Immer überprüfen.',
-                            '2. <strong>Zu kleine Modelle.</strong> Qwen2.5-Coder 7B Minimum. 3B-Modelle scheitern.',
+                            '2. <strong>Zu kleine Modelle.</strong> Qwen3 8B Minimum. 3B-Modelle scheitern.',
                             '3. <strong>Kein Kontext in Prompts.</strong> Typ-Hinweise + Docstrings = besserer Code.',
                             '4. <strong>Architektur-Verständnis erwarten.</strong> Modelle verstehen nur Funktionen.'
                         ]
@@ -609,10 +610,10 @@
                         type: 'list',
                         h2: 'Häufige Fehler (Teil 2)',
                         items: [
-                            '5. <strong>Falsche Modellwahl.</strong> Qwen2.5-Coder 7B (72%) vs Llama 3.1 8B (55%) = 17% Lücke',
-                            'Allgemeine Modelle: 15–25% niedriger als Code-Modelle',
+                            '5. <strong>Falsche Modellwahl.</strong> Qwen3 8B (~76% HumanEval) vs Llama 3.3 8B (72%) — Code-Modelle punkten höher',
+                            'Code-spezifische Modelle: 5–15% höher auf HumanEval bei gleicher Größe',
                             'Nutze immer Code-spezifische Modelle',
-                            'Richtig: <code>ollama pull qwen2.5-coder:7b</code>',
+                            'Richtig: <code>ollama pull qwen3:8b</code>',
                             'Falsch: <code>ollama pull llama3.1:8b</code>'
                         ]
                     },
@@ -620,8 +621,8 @@
                         type: 'faq',
                         h2: 'Häufig gestellte Fragen',
                         faqs: [
-                            { q: 'Qwen2.5-Coder vs GitHub Copilot?', a: 'Qwen 32B: 92,7% HumanEval (vs Copilot 94%). Geschwindigkeit: lokal 2–5 Sek. vs Copilot 300ms. Kosten: €0 vs €228/Jahr. Qualität annähernd gleich.' },
-                            { q: 'Wie viel VRAM wird benötigt?', a: 'Min: 5 GB für Qwen2.5-Coder 7B. Empfohlen: 8 GB. Premium: 24 GB für 32B-Modell.' },
+                            { q: 'Kimi K2.6 vs GitHub Copilot?', a: 'Kimi K2.6 (58,6 SWE-Bench Pro) und Qwen 3.6 27B (77,2% SWE-bench) haben den Qualitätsabstand zu Copilot verringert. Geschwindigkeit: lokal 2–5 Sek. vs Copilot ~300ms. Kosten: €0 vs Copilot-Abo.' },
+                            { q: 'Wie viel VRAM wird benötigt?', a: 'Min: 5 GB für Qwen3 8B. Empfohlen: 16 GB für Devstral Small 24B oder Qwen 3.6 27B. Premium: 20+ GB für Kimi K2.6 quantisiert.' },
                             { q: 'VS Code Setup?', a: 'Continue.dev Extension installieren → auf Ollama zeigen localhost:11434 → Tab oder Ctrl+Shift+\\\\ für Vorschläge.' }
                         ]
                     },
@@ -641,7 +642,7 @@
                     {
                         type: 'cta',
                         h2: 'Beginnen Sie mit lokaler Code-KI',
-                        body: 'Probiere Qwen2.5-Coder 7B heute aus: <code>ollama pull qwen2.5-coder:7b</code> → Nutze mit Continue.dev oder Cursor → Generiere, überprüfe und teste Code privat.',
+                        body: 'Probiere Qwen3 8B heute aus: <code>ollama pull qwen3:8b</code> → Nutze mit Continue.dev oder Cursor → Generiere, überprüfe und teste Code privat.',
                         cta: 'Mehr erfahren auf PromptQuorum',
                         href: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=de'
                     }
@@ -653,7 +654,7 @@
                     {
                         type: 'title',
                         h1: 'LLMs Locaux\npour les Workflows de Programmation',
-                        subtitle: 'Génération de code, examen et tests avec Qwen2.5-Coder et CodeLlama',
+                        subtitle: 'Génération de code, examen et tests avec Kimi K2.6 et Qwen 3.6 27B',
                         link: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=fr'
                     },
                     {
@@ -662,7 +663,7 @@
                         items: [
                             '<strong>Confidentialité:</strong> Le code reste sur votre machine — pas d\'APIs cloud',
                             '<strong>Coût:</strong> €0/mois vs GitHub Copilot €19/mois',
-                            '<strong>Exactitude:</strong> Qwen2.5-Coder 32B : 92,7% HumanEval',
+                            '<strong>Exactitude:</strong> Kimi K2.6 : 58,6 SWE-Bench Pro ; Qwen 3.6 27B : 77,2% SWE-bench',
                             '<strong>Vitesse:</strong> 2–5 secondes par suggestion (plus lent, mais confidentialité)',
                             '<strong>Contrôle:</strong> Fine-tune sur votre base de code'
                         ]
@@ -670,12 +671,12 @@
                     {
                         type: 'table',
                         h2: 'Meilleurs modèles de codage locaux 2026',
-                        columns: ['Modèle', 'HumanEval', 'VRAM', 'Meilleur pour'],
+                        columns: ['Modèle', 'Benchmark', 'VRAM', 'Meilleur pour'],
                         rows: [
-                            { 'Modèle': 'Qwen2.5-Coder 32B', 'HumanEval': '92,7%', 'VRAM': '22 GB', 'Meilleur pour': 'Précision maximale' },
-                            { 'Modèle': 'CodeLlama 34B', 'HumanEval': '75%', 'VRAM': '22 GB', 'Meilleur pour': 'Haute qualité' },
-                            { 'Modèle': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4,7 GB', 'Meilleur pour': 'Vitesse/équilibre' },
-                            { 'Modèle': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Meilleur pour': 'Petit, efficace' }
+                            { 'Modèle': 'Kimi K2.6', 'Benchmark': '58,6 SWE-Bench Pro', 'VRAM': 'Variable (quantifié)', 'Meilleur pour': 'Précision maximale, MoE' },
+                            { 'Modèle': 'Qwen 3.6 27B', 'Benchmark': '77,2% SWE-bench', 'VRAM': '22 GB', 'Meilleur pour': 'Meilleur modèle dense' },
+                            { 'Modèle': 'Codestral 22B', 'Benchmark': '—', 'VRAM': '14 GB', 'Meilleur pour': 'Autocomplétion IDE' },
+                            { 'Modèle': 'Qwen3 8B', 'Benchmark': '~76% HumanEval', 'VRAM': '5 GB', 'Meilleur pour': 'Palier 8 GB de VRAM' }
                         ]
                     },
                     {
@@ -737,7 +738,7 @@
                         h2: 'Erreurs courantes (Partie 1)',
                         items: [
                             '1. <strong>Faire confiance au code généré.</strong> Toujours réviser.',
-                            '2. <strong>Utiliser des modèles trop petits.</strong> Minimum Qwen2.5-Coder 7B. Modèles 3B échouent.',
+                            '2. <strong>Utiliser des modèles trop petits.</strong> Minimum Qwen3 8B. Modèles 3B échouent.',
                             '3. <strong>Pas de contexte dans les prompts.</strong> Indices de type + docstrings = meilleur code.',
                             '4. <strong>S\'attendre à comprendre l\'architecture.</strong> Modèles comprennent fonctions uniquement.'
                         ]
@@ -746,10 +747,10 @@
                         type: 'list',
                         h2: 'Erreurs courantes (Partie 2)',
                         items: [
-                            '5. <strong>Choix de modèle erroné.</strong> Qwen2.5-Coder 7B (72%) vs Llama 3.1 8B (55%) = écart 17%',
-                            'Modèles généraux: 15–25% plus bas que modèles code',
+                            '5. <strong>Choix de modèle erroné.</strong> Qwen3 8B (~76% HumanEval) vs Llama 3.3 8B (72%) — les modèles code font mieux',
+                            'Modèles spécialisés code : 5–15% plus haut sur HumanEval à taille égale',
                             'Utiliser toujours des modèles spécifiques au code',
-                            'Correct: <code>ollama pull qwen2.5-coder:7b</code>',
+                            'Correct: <code>ollama pull qwen3:8b</code>',
                             'Incorrect: <code>ollama pull llama3.1:8b</code>'
                         ]
                     },
@@ -757,8 +758,8 @@
                         type: 'faq',
                         h2: 'Questions fréquemment posées',
                         faqs: [
-                            { q: 'Qwen2.5-Coder vs GitHub Copilot?', a: 'Qwen 32B: 92,7% HumanEval (vs Copilot 94%). Vitesse: local 2–5 sec vs Copilot 300ms. Coût: €0 vs €228/an. Qualité quasi équivalente.' },
-                            { q: 'Combien de VRAM requis?', a: 'Min: 5 GB pour Qwen2.5-Coder 7B. Recommandé: 8 GB. Premium: 24 GB pour modèle 32B.' },
+                            { q: 'Kimi K2.6 vs GitHub Copilot?', a: 'Kimi K2.6 (58,6 SWE-Bench Pro) et Qwen 3.6 27B (77,2% SWE-bench) ont réduit l\'écart de qualité avec Copilot. Vitesse: local 2–5 sec vs Copilot ~300ms. Coût: 0€ vs abonnement Copilot.' },
+                            { q: 'Combien de VRAM requis?', a: 'Min: 5 GB pour Qwen3 8B. Recommandé: 16 GB pour Devstral Small 24B ou Qwen 3.6 27B. Premium: 20+ GB pour Kimi K2.6 quantifié.' },
                             { q: 'Configuration VS Code?', a: 'Installer extension Continue.dev → pointer vers Ollama localhost:11434 → Tab ou Ctrl+Shift+\\\\ pour suggestions.' }
                         ]
                     },
@@ -778,7 +779,7 @@
                     {
                         type: 'cta',
                         h2: 'Débuter avec l\'IA de code local',
-                        body: 'Essayez Qwen2.5-Coder 7B dès aujourd\'hui: <code>ollama pull qwen2.5-coder:7b</code> → Utilisez avec Continue.dev ou Cursor → Générez, examinez et testez du code privé.',
+                        body: 'Essayez Qwen3 8B dès aujourd\'hui: <code>ollama pull qwen3:8b</code> → Utilisez avec Continue.dev ou Cursor → Générez, examinez et testez du code privé.',
                         cta: 'En savoir plus sur PromptQuorum',
                         href: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=fr'
                     }
@@ -790,7 +791,7 @@
                     {
                         type: 'title',
                         h1: 'ローカルLLMs\nでのコーディングワークフロー',
-                        subtitle: 'Qwen2.5-CoderとCodeLlamaを使用したコード生成、レビュー、テスト',
+                        subtitle: 'Kimi K2.6とQwen 3.6 27Bを使用したコード生成、レビュー、テスト',
                         link: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=ja'
                     },
                     {
@@ -799,7 +800,7 @@
                         items: [
                             '<strong>プライバシー:</strong> コードはあなたのマシン上に留まる — クラウドAPI不要',
                             '<strong>コスト:</strong> ¥0/月 vs GitHub Copilot ¥2,480/月',
-                            '<strong>精度:</strong> Qwen2.5-Coder 32B: 92.7% HumanEval',
+                            '<strong>精度:</strong> Kimi K2.6: 58.6 SWE-Bench Pro、Qwen 3.6 27B: 77.2% SWE-bench',
                             '<strong>速度:</strong> 提案あたり2～5秒（クラウドより遅いが、プライバシーが優先）',
                             '<strong>制御:</strong> 自分のコードベースでファインチューン'
                         ]
@@ -807,12 +808,12 @@
                     {
                         type: 'table',
                         h2: '2026年のベストローカルコーディングモデル',
-                        columns: ['モデル', 'HumanEval', 'VRAM', '最適用途'],
+                        columns: ['モデル', 'ベンチマーク', 'VRAM', '最適用途'],
                         rows: [
-                            { 'モデル': 'Qwen2.5-Coder 32B', 'HumanEval': '92.7%', 'VRAM': '22 GB', '最適用途': '最大精度' },
-                            { 'モデル': 'CodeLlama 34B', 'HumanEval': '75%', 'VRAM': '22 GB', '最適用途': '高品質' },
-                            { 'モデル': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', '最適用途': '速度/バランス' },
-                            { 'モデル': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', '最適用途': '小型、効率的' }
+                            { 'モデル': 'Kimi K2.6', 'ベンチマーク': '58.6 SWE-Bench Pro', 'VRAM': '可変（量子化）', '最適用途': '最大精度、MoE' },
+                            { 'モデル': 'Qwen 3.6 27B', 'ベンチマーク': '77.2% SWE-bench', 'VRAM': '22 GB', '最適用途': '最良のdenseモデル' },
+                            { 'モデル': 'Codestral 22B', 'ベンチマーク': '—', 'VRAM': '14 GB', '最適用途': 'IDEオートコンプリート' },
+                            { 'モデル': 'Qwen3 8B', 'ベンチマーク': '~76% HumanEval', 'VRAM': '5 GB', '最適用途': '8 GB VRAM帯' }
                         ]
                     },
                     {
@@ -874,7 +875,7 @@
                         h2: '一般的な間違い（パート1）',
                         items: [
                             '1. <strong>生成されたコードを信頼する。</strong> 常にレビュー',
-                            '2. <strong>モデルが小さすぎる。</strong> 最小Qwen2.5-Coder 7B。3Bモデルは失敗。',
+                            '2. <strong>モデルが小さすぎる。</strong> 最小Qwen3 8B。3Bモデルは失敗。',
                             '3. <strong>プロンプトに文脈がない。</strong> 型ヒント+ドキュメント=より良いコード',
                             '4. <strong>アーキテクチャ理解を期待する。</strong> モデルは関数のみ理解'
                         ]
@@ -883,10 +884,10 @@
                         type: 'list',
                         h2: '一般的な間違い（パート2）',
                         items: [
-                            '5. <strong>モデル選択が間違っている。</strong> Qwen2.5-Coder 7B (72%) vs Llama 3.1 8B (55%) = 17%の差',
-                            '汎用モデル: コードモデルより15～25%低い',
+                            '5. <strong>モデル選択が間違っている。</strong> Qwen3 8B (~76% HumanEval) vs Llama 3.3 8B (72%) — コード専用モデルが優位',
+                            'コード専用モデル: 同サイズの汎用モデルよりHumanEvalで5～15%高い',
                             'コード専用モデルを常に使用',
-                            '正: <code>ollama pull qwen2.5-coder:7b</code>',
+                            '正: <code>ollama pull qwen3:8b</code>',
                             '誤: <code>ollama pull llama3.1:8b</code>'
                         ]
                     },
@@ -894,8 +895,8 @@
                         type: 'faq',
                         h2: 'よくある質問',
                         faqs: [
-                            { q: 'Qwen2.5-Coder vs GitHub Copilot?', a: 'Qwen 32B: 92.7% HumanEval (vs Copilot 94%)。速度: ローカル2～5秒 vs Copilot 300ms。コスト: ¥0 vs ¥2,480/月。品質はほぼ同等。' },
-                            { q: '必要なVRAMは?', a: '最小: Qwen2.5-Coder 7B で5 GB。推奨: 8 GB。プレミアム: 32Bモデルで24 GB。' },
+                            { q: 'Kimi K2.6 vs GitHub Copilot?', a: 'Kimi K2.6（58.6 SWE-Bench Pro）とQwen 3.6 27B（77.2% SWE-bench）はCopilotとの品質差を縮めています。速度: ローカル2～5秒 vs Copilot ~300ms。コスト: ¥0 vs Copilotサブスクリプション。' },
+                            { q: '必要なVRAMは?', a: '最小: Qwen3 8Bで5 GB。推奨: Devstral Small 24BまたはQwen 3.6 27Bで16 GB。プレミアム: Kimi K2.6量子化版で20+ GB。' },
                             { q: 'VS Code セットアップ?', a: 'Continue.dev拡張をインストール → Ollama localhost:11434 を指定 → Tab または Ctrl+Shift+\\\\ で提案。' }
                         ]
                     },
@@ -915,7 +916,7 @@
                     {
                         type: 'cta',
                         h2: 'ローカルコードAIを始める',
-                        body: '今日からQwen2.5-Coder 7B を試す: <code>ollama pull qwen2.5-coder:7b</code> → Continue.dev またはCursorで使用 → コードを非公開で生成、レビュー、テスト。',
+                        body: '今日からQwen3 8B を試す: <code>ollama pull qwen3:8b</code> → Continue.dev またはCursorで使用 → コードを非公開で生成、レビュー、テスト。',
                         cta: 'PromptQuorumで詳細を確認',
                         href: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=ja'
                     }
@@ -927,7 +928,7 @@
                     {
                         type: 'title',
                         h1: '本地LLMs\n编程工作流',
-                        subtitle: '使用Qwen2.5-Coder和CodeLlama进行代码生成、审查和测试',
+                        subtitle: '使用Kimi K2.6和Qwen 3.6 27B进行代码生成、审查和测试',
                         link: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=zh'
                     },
                     {
@@ -936,7 +937,7 @@
                         items: [
                             '<strong>隐私:</strong> 代码保存在您的机器上 — 无需云API',
                             '<strong>成本:</strong> $0/月 vs GitHub Copilot $228/年',
-                            '<strong>精度:</strong> Qwen2.5-Coder 32B: 92.7% HumanEval',
+                            '<strong>精度:</strong> Kimi K2.6: 58.6 SWE-Bench Pro；Qwen 3.6 27B: 77.2% SWE-bench',
                             '<strong>速度:</strong> 每次建议2-5秒（比云服务慢，但隐私优先）',
                             '<strong>控制:</strong> 在您的代码库上进行微调'
                         ]
@@ -944,12 +945,12 @@
                     {
                         type: 'table',
                         h2: '2026年最佳本地编码模型',
-                        columns: ['模型', 'HumanEval', 'VRAM', '最佳用途'],
+                        columns: ['模型', '基准测试', 'VRAM', '最佳用途'],
                         rows: [
-                            { '模型': 'Qwen2.5-Coder 32B', 'HumanEval': '92.7%', 'VRAM': '22 GB', '最佳用途': '最高精度' },
-                            { '模型': 'CodeLlama 34B', 'HumanEval': '75%', 'VRAM': '22 GB', '最佳用途': '高质量' },
-                            { '模型': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', '最佳用途': '速度/平衡' },
-                            { '模型': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', '最佳用途': '小型、高效' }
+                            { '模型': 'Kimi K2.6', '基准测试': '58.6 SWE-Bench Pro', 'VRAM': '可变（量化）', '最佳用途': '最高精度，MoE' },
+                            { '模型': 'Qwen 3.6 27B', '基准测试': '77.2% SWE-bench', 'VRAM': '22 GB', '最佳用途': '最佳密集模型' },
+                            { '模型': 'Codestral 22B', '基准测试': '—', 'VRAM': '14 GB', '最佳用途': 'IDE自动补全' },
+                            { '模型': 'Qwen3 8B', '基准测试': '~76% HumanEval', 'VRAM': '5 GB', '最佳用途': '8 GB VRAM档位' }
                         ]
                     },
                     {
@@ -1011,7 +1012,7 @@
                         h2: '常见错误（第1部分）',
                         items: [
                             '1. <strong>盲目信任生成的代码。</strong> 始终审查。',
-                            '2. <strong>使用过小的模型。</strong> Qwen2.5-Coder 7B最小。3B模型会失败。',
+                            '2. <strong>使用过小的模型。</strong> Qwen3 8B最小。3B模型会失败。',
                             '3. <strong>提示缺少上下文。</strong> 类型提示+文档字符串=更好的代码。',
                             '4. <strong>期望架构理解。</strong> 模型仅理解函数。'
                         ]
@@ -1020,10 +1021,10 @@
                         type: 'list',
                         h2: '常见错误（第2部分）',
                         items: [
-                            '5. <strong>模型选择错误。</strong> Qwen2.5-Coder 7B (72%) vs Llama 3.1 8B (55%) = 17%差距',
-                            '通用模型: 比编码模型低15-25%',
+                            '5. <strong>模型选择错误。</strong> Qwen3 8B (~76% HumanEval) vs Llama 3.3 8B (72%) — 编码专用模型更优',
+                            '编码专用模型: 相同规模下HumanEval得分高5-15%',
                             '始终使用编码专用模型',
-                            '正确: <code>ollama pull qwen2.5-coder:7b</code>',
+                            '正确: <code>ollama pull qwen3:8b</code>',
                             '错误: <code>ollama pull llama3.1:8b</code>'
                         ]
                     },
@@ -1031,8 +1032,8 @@
                         type: 'faq',
                         h2: '常见问题',
                         faqs: [
-                            { q: 'Qwen2.5-Coder vs GitHub Copilot?', a: 'Qwen 32B: 92.7% HumanEval (vs Copilot 94%)。速度: 本地2-5秒 vs Copilot 300ms。成本: $0 vs $228/年。质量基本相当。' },
-                            { q: '需要多少VRAM?', a: '最小: Qwen2.5-Coder 7B为5 GB。推荐: 8 GB。高级: 32B模型为24 GB。' },
+                            { q: 'Kimi K2.6 vs GitHub Copilot?', a: 'Kimi K2.6（58.6 SWE-Bench Pro）和Qwen 3.6 27B（77.2% SWE-bench）已缩小与Copilot的质量差距。速度: 本地2-5秒 vs Copilot ~300ms。成本: $0 vs Copilot订阅费。' },
+                            { q: '需要多少VRAM?', a: '最小: Qwen3 8B需要5 GB。推荐: Devstral Small 24B或Qwen 3.6 27B需要16 GB。高级: Kimi K2.6量化版需要20+ GB。' },
                             { q: 'VS Code设置?', a: '安装Continue.dev扩展 → 指向Ollama localhost:11434 → Tab或Ctrl+Shift+\\\\获得建议。' }
                         ]
                     },
@@ -1052,7 +1053,7 @@
                     {
                         type: 'cta',
                         h2: '开始本地代码AI',
-                        body: '立即试用Qwen2.5-Coder 7B: <code>ollama pull qwen2.5-coder:7b</code> → 与Continue.dev或Cursor一起使用 → 私下生成、审查和测试代码。',
+                        body: '立即试用Qwen3 8B: <code>ollama pull qwen3:8b</code> → 与Continue.dev或Cursor一起使用 → 私下生成、审查和测试代码。',
                         cta: '在PromptQuorum了解更多',
                         href: 'https://www.promptquorum.com/local-llms/local-llms-for-coding-workflows?lang=zh'
                     }

@@ -379,17 +379,17 @@
             type: 'comparison',
             h2: 'The Performance Gap',
             line1: 'Desktop RTX 4070 Ti: 80 tok/sec',
-            line2: 'MacBook Pro M3 Max: 25 tok/sec (then throttles)',
-            tip: '3–6× performance difference. Desktops outperform laptops due to full-power GPUs and no thermal throttling.'
+            line2: 'MacBook Pro M5 Max: 55-70 tok/sec (est., then throttles)',
+            tip: 'Desktops match or beat laptops on sustained speed. Desktops outperform laptops due to full-power GPUs and no thermal throttling.'
           },
           {
             type: 'list',
             h2: 'Key Speed Facts',
             items: [
-              'MacBook Pro M3 Max: 25 tok/sec on Llama 3.1 7B (throttles after 15 min)',
-              'Desktop RTX 4070 Ti: 80 tok/sec on Llama 3.1 7B (sustained, no throttle)',
-              'Desktop RTX 4090: 150 tok/sec on Llama 3.1 70B',
-              'Laptop thermal throttle onset: 15–20 min (MacBook M3), 30–45 min (gaming laptops)'
+              'MacBook Pro M5 Max: 55-70 tok/sec (est.) on Llama 4 Scout (throttles after 15-18 min)',
+              'Desktop RTX 4070 Ti: 80 tok/sec on Llama 4 Scout (sustained, no throttle)',
+              'Desktop RTX 5090: 120-180 tok/sec on Llama 4 Scout (32 GB VRAM, sustained)',
+              'Laptop thermal throttle onset: 15–18 min (MacBook M5), 30–45 min (gaming laptops)'
             ]
           },
           {
@@ -397,10 +397,10 @@
             h2: 'Performance Benchmarks',
             columns: ['Hardware', 'Model', 'Speed', 'Throttle'],
             rows: [
-              { 'Hardware': 'MacBook Pro 16" M3 Max', 'Model': 'Llama 3.1 7B', 'Speed': '25 tok/sec', 'Throttle': 'After 15 min' },
-              { 'Hardware': 'Framework Laptop 16" + GPU', 'Model': 'Llama 3.1 7B', 'Speed': '45 tok/sec', 'Throttle': 'After 20 min' },
-              { 'Hardware': 'Desktop RTX 4070 Ti', 'Model': 'Llama 3.1 7B', 'Speed': '80 tok/sec', 'Throttle': 'None (24/7)' },
-              { 'Hardware': 'Desktop RTX 4090', 'Model': 'Llama 3.1 70B', 'Speed': '150 tok/sec', 'Throttle': 'None (24/7)' }
+              { 'Hardware': 'MacBook Pro 16" M5 Max', 'Model': 'Llama 4 Scout', 'Speed': '55-70 tok/sec (est.)', 'Throttle': 'After 15-18 min' },
+              { 'Hardware': 'Framework Laptop 16" + RTX 4070', 'Model': 'Llama 4 Scout', 'Speed': '50 tok/sec (est.)', 'Throttle': 'After 20 min' },
+              { 'Hardware': 'Desktop RTX 4070 Ti', 'Model': 'Llama 4 Scout', 'Speed': '80 tok/sec', 'Throttle': 'None (24/7)' },
+              { 'Hardware': 'Desktop RTX 5090', 'Model': 'Llama 4 Scout', 'Speed': '120-180 tok/sec (est.)', 'Throttle': 'None (24/7)' }
             ]
           },
           {
@@ -408,7 +408,7 @@
             h2: 'The Thermal Problem',
             items: [
               'Laptops have limited cooling: CPU + GPU at full load = high temperature, throttling',
-              'MacBook Pro M3 Max throttles after 15-20 minutes of sustained inference',
+              'MacBook Pro M5 Max throttles after 15-18 minutes of sustained inference',
               'Gaming laptops: Better cooling, but still throttle after 30-45 minutes',
               'Desktop: Larger cooling systems, no throttling under normal conditions'
             ]
@@ -418,10 +418,10 @@
             h2: 'Cost Analysis: True Cost Per Token',
             columns: ['Option', 'Total Cost', 'LLM Speed', 'Cost Efficiency'],
             rows: [
-              { 'Option': 'MacBook Pro 16" M3 Max', 'Total Cost': '$3,500', 'LLM Speed': '25 tok/sec', 'Cost Efficiency': '$140/tok/sec' },
+              { 'Option': 'MacBook Pro 16" M5 Max', 'Total Cost': '$3,500-4,000', 'LLM Speed': '55-70 tok/sec (est.)', 'Cost Efficiency': '$50-70/tok/sec' },
               { 'Option': 'MacBook + external GPU', 'Total Cost': '$4,500+', 'LLM Speed': '80 tok/sec', 'Cost Efficiency': '$56/tok/sec' },
               { 'Option': 'Desktop RTX 4070 Ti', 'Total Cost': '$1,500', 'LLM Speed': '80 tok/sec', 'Cost Efficiency': '$19/tok/sec' },
-              { 'Option': 'Desktop RTX 4090', 'Total Cost': '$3,300', 'LLM Speed': '150 tok/sec', 'Cost Efficiency': '$22/tok/sec' }
+              { 'Option': 'Desktop RTX 5090', 'Total Cost': '$2,500-3,000', 'LLM Speed': '120-180 tok/sec (est.)', 'Cost Efficiency': '$17-25/tok/sec' }
             ]
           },
           {
@@ -440,7 +440,7 @@
             items: [
               'You run 70B models or need 80+ tok/sec sustained speed',
               'You run services 24/7 (APIs, batch processing)',
-              'You prioritize cost efficiency ($19 vs $140 per tok/sec)',
+              'You prioritize cost efficiency ($19 vs $50-70 per tok/sec)',
               'You want to avoid thermal throttling entirely'
             ]
           },

@@ -75,6 +75,7 @@
       .header-links { gap: 8px; font-size: 10px; }
     }
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
       * { margin: 0; padding: 0; }
       html, body { overflow: visible !important; height: auto !important; width: 100% !important; background: white !important; }
       .header, .controls { display: none !important; }
@@ -508,7 +509,7 @@ const CONTENT = {
           '<strong>≤8 GB RAM :</strong> Phi-4 Mini (3B, ~3 GB) — 15–30 tok/s sur Apple Silicon',
           '<strong>8–16 GB RAM :</strong> Llama 3.2 3B ou Qwen3 8B — bon équilibre vitesse/qualité',
           '<strong>Apple Silicon M3–M5 :</strong> Qwen3 8B ou Llama 3.3 8B — excellentes vitesse et qualité',
-          '<strong>NVIDIA RTX 3060+ :</strong> Llama 3.3 8B, Mistral 7B — accélération GPU 5–10x',
+          '<strong>NVIDIA RTX 3060+ :</strong> Llama 3.3 8B, Mistral Small — accélération GPU 5–10x',
           '<strong>Conseil :</strong> commencez avec le modèle le plus petit qui tourne à >8 tok/s'
         ]
       },
@@ -654,7 +655,7 @@ const CONTENT = {
           '<strong>≤8 GB RAM：</strong>Phi-4 Mini（3.8B Q4、~2.7 GB）— Apple Siliconで15–30 tok/s',
           '<strong>8–16 GB RAM：</strong>Llama 3.2 3B（Q4）またはQwen3 8B（Q4）— 速度と品質のバランス良好',
           '<strong>Apple Silicon M3–M5：</strong>Qwen3 8BまたはLlama 3.3 8B — 優れた品質と速度',
-          '<strong>NVIDIA RTX 3060+：</strong>Llama 3.3 8B、Mistral 7B — GPU加速で5–10倍高速化',
+          '<strong>NVIDIA RTX 3060+：</strong>Llama 3.3 8B、Mistral Small — GPU加速で5–10倍高速化',
           '<strong>ヒント：</strong>8 tok/s以上で動作する最小モデルから始める'
         ]
       },
@@ -800,7 +801,7 @@ const CONTENT = {
           '<strong>≤8 GB RAM：</strong>Phi-4 Mini（3.8B Q4，约2.7 GB）— Apple Silicon上15–30 tok/s',
           '<strong>8–16 GB RAM：</strong>Llama 3.2 3B（Q4）或Qwen3 8B（Q4）— 速度与质量的良好平衡',
           '<strong>Apple Silicon M3–M5：</strong>Qwen3 8B或Llama 3.3 8B — 卓越的质量和速度',
-          '<strong>NVIDIA RTX 3060+：</strong>Llama 3.3 8B，Mistral 7B — GPU加速5–10倍',
+          '<strong>NVIDIA RTX 3060+：</strong>Llama 3.3 8B，Mistral Small — GPU加速5–10倍',
           '<strong>提示：</strong>从能以8+ tok/s运行的最小模型开始'
         ]
       },

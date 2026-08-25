@@ -260,6 +260,7 @@
     }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
             * {
                 margin: 0;
                 padding: 0;
@@ -471,7 +472,7 @@
                     { type: 'list', h2: 'LM Studio を選ぶべき時', items: ['初心者である (CLI 不要)', 'ビジュアルスライダーとメニューが好き', 'すぐにチャット UI が欲しい (サードパーティなし)', 'デスクトップアプリが好き (Windows/macOS)', 'モデルを試験中'] },
                     { type: 'list', h2: '速度と統合', items: ['両者: 40-100 tokens/sec (7B GPU)', '両者は GPU 自動検出・使用', 'Ollama API は安定 (本番対応)', 'LM Studio API はまだベータ (本番非対応)', '両者は RAG、LangChain、LlamaIndex サポート'] },
                     { type: 'list', h2: 'モデル管理', items: ['両者 GGUF・safetensors 形式', '両者は同じモデルファイル共有可', 'Ollama: `ollama pull mistral` + `ollama list`', 'LM Studio: ビジュアルブラウザ、簡単切り替え', '量子化 (4-bit、5-bit、8-bit) が最重要'] },
-                    { type: 'list', h2: 'アジア太平洋コンテキスト', items: ['日本/METI: Ollama は Enterprise 標準', 'アジア太平洋: 両者完全ローカル、データ外流なし', '両者は地域規制を設計時から満たす', '中国: Qwen2.5 両者対応、データ主権保証'] },
+                    { type: 'list', h2: 'アジア太平洋コンテキスト', items: ['日本/METI: Ollama は Enterprise 標準', 'アジア太平洋: 両者完全ローカル、データ外流なし', '両者は地域規制を設計時から満たす', '中国: Qwen3 両者対応、データ主権保証'] },
                     { type: 'list', h2: 'よくある間違い', items: ['一方が大幅に速いと思う (速度同等)', 'Ollama に UI がないと思う (サードパーティであり)', '両者同時実行できないと思う (可能)', 'LM Studio API が本番対応と思う (ベータ)', 'ダウンロード前に量子化を確認しない'] },
                     { type: 'faq', h2: 'FAQ', faqs: [{ q: '両者同時に実行できる?', a: 'はい。Ollama バックグラウンド + LM Studio アプリ。同一モデルは同時提供不可。' }, { q: '同じモデルを両者で使える?', a: 'はい。両者 GGUF/safetensors。LM Studio を Ollama フォルダに指定。' }, { q: 'RAG に向いているのは?', a: '両方対応。Ollama はやや一般的、API が安定。' }, { q: 'GPU は必須?', a: 'いいえ。ただし推奨。GPU は両者 10-50 倍高速化。' }] },
                     { type: 'cta', h2: 'PromptQuorum を試す', body: '複数の AI モデルをコンセンサスで実行。出力比較、プロンプトデバッグ、精度最適化。', cta: '無料で始める', href: 'https://www.promptquorum.com' }

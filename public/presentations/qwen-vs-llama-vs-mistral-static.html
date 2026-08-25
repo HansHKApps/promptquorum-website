@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Qwen vs Llama vs Mistral 2026: Benchmarks, VRAM & Use Cases | PromptQuorum</title>
-    <meta name="description" content="Qwen2.5 vs Llama 3.x vs Mistral 2026: MMLU, HumanEval, MATH benchmarks. Which model wins by task, size class, and VRAM. Pull commands included." />
+    <meta name="description" content="Qwen 3.6 vs Llama 4 vs Mistral 2026: MMLU, SWE-bench, MATH benchmarks. Which model wins by task, size class, and VRAM. Pull commands included." />
     <meta property="og:title" content="Qwen vs Llama vs Mistral 2026: Benchmarks, VRAM & Use Cases — PromptQuorum" />
-    <meta property="og:description" content="Compare Qwen2.5, Llama 3.x, and Mistral on MMLU, HumanEval, MATH. Which wins coding, reasoning, multilingual, and more." />
+    <meta property="og:description" content="Compare Qwen 3.6, Llama 4, and Mistral on MMLU, SWE-bench, MATH. Which wins coding, reasoning, multilingual, and more." />
     <meta property="og:type" content="website" />
     <link rel="canonical" href="https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral" />
 
@@ -260,6 +260,7 @@
     }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
             * {
                 margin: 0;
                 padding: 0;
@@ -418,11 +419,11 @@
                         type: 'list',
                         h2: 'Key Takeaways',
                         items: [
-                            '<strong>Coding:</strong> Qwen2.5 wins at every size — 87% HumanEval at 72B, 79% at 32B, 72% at 7B',
-                            '<strong>General reasoning:</strong> Llama 3.3 70B and Qwen2.5 72B nearly tied — Llama stronger in English, Qwen in multilingual',
+                            '<strong>Coding:</strong> Qwen 3.6 27B leads SWE-bench at 77.2% — the best dense coding model, fits 24 GB at Q4',
+                            '<strong>General reasoning:</strong> Llama 3.3 70B and Qwen3 72B remain nearly tied — Llama stronger in English, Qwen in multilingual',
                             '<strong>Efficiency:</strong> Mistral Small 3.1 24B delivers near-70B quality at just 14 GB RAM',
-                            '<strong>Multilingual:</strong> Qwen2.5 supports 29 languages natively; Llama and Mistral are English-primary',
-                            '<strong>Beginners (8 GB RAM):</strong> Llama 3.2 3B or Mistral 7B — most documentation and community support'
+                            '<strong>Multilingual:</strong> Qwen3 supports 29 languages natively; Llama and Mistral are English-primary',
+                            '<strong>Beginners (8 GB RAM):</strong> Llama 4 3B — most documentation and community support'
                         ]
                     },
                     {
@@ -430,53 +431,53 @@
                         h2: 'Model Family Overview',
                         columns: ['Family', 'Developer', 'Sizes', 'Licence'],
                         rows: [
-                            { 'Family': 'Qwen2.5', 'Developer': 'Alibaba', 'Sizes': '7B, 14B, 32B, 72B', 'Licence': 'Apache 2.0' },
-                            { 'Family': 'Llama 3.x', 'Developer': 'Meta', 'Sizes': '3B, 8B, 70B', 'Licence': 'Llama Community' },
-                            { 'Family': 'Mistral', 'Developer': 'Mistral AI', 'Sizes': '7B, Small 3.1 (24B)', 'Licence': 'Apache 2.0' }
+                            { 'Family': 'Qwen3', 'Developer': 'Alibaba', 'Sizes': 'Qwen 3.6 27B, Qwen3 72B', 'Licence': 'Apache 2.0' },
+                            { 'Family': 'Llama 4', 'Developer': 'Meta', 'Sizes': 'Scout 17B/109B MoE, legacy 3.3 70B', 'Licence': 'Llama Community' },
+                            { 'Family': 'Mistral', 'Developer': 'Mistral AI', 'Sizes': 'Small 3.1 24B, Devstral 24B', 'Licence': 'Apache 2.0' }
                         ]
                     },
                     {
                         type: 'table',
                         h2: 'Benchmark Comparison 2026',
-                        columns: ['Model', 'MMLU', 'HumanEval', 'MATH', 'RAM'],
+                        columns: ['Model', 'MMLU', 'SWE-bench', 'MATH', 'RAM'],
                         rows: [
-                            { 'Model': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'MATH': '83%', 'RAM': '43 GB' },
-                            { 'Model': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'MATH': '77%', 'RAM': '40 GB' },
-                            { 'Model': 'Qwen2.5 32B', 'MMLU': '83%', 'HumanEval': '79%', 'MATH': '79%', 'RAM': '20 GB' },
-                            { 'Model': 'Mistral Small 3.1', 'MMLU': '79%', 'HumanEval': '74%', 'MATH': '65%', 'RAM': '14 GB' },
-                            { 'Model': 'Llama 3.1 8B', 'MMLU': '69%', 'HumanEval': '72%', 'MATH': '51%', 'RAM': '5.5 GB' },
-                            { 'Model': 'Qwen2.5 7B', 'MMLU': '74%', 'HumanEval': '72%', 'MATH': '55%', 'RAM': '4.7 GB' }
+                            { 'Model': 'Qwen 3.6 27B', 'MMLU': '~83%', 'SWE-bench': '77.2%', 'MATH': '~80%', 'RAM': '16 GB' },
+                            { 'Model': 'Qwen3 72B', 'MMLU': '~85%', 'SWE-bench': '—', 'MATH': '~84%', 'RAM': '43 GB' },
+                            { 'Model': 'Llama 3.3 70B', 'MMLU': '82%', 'SWE-bench': '—', 'MATH': '77%', 'RAM': '40 GB' },
+                            { 'Model': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'SWE-bench': '—', 'MATH': '65%', 'RAM': '14 GB' },
+                            { 'Model': 'Qwen3 8B', 'MMLU': '~75%', 'SWE-bench': '—', 'MATH': '~55%', 'RAM': '5 GB' },
+                            { 'Model': 'Mistral Small v0.3', 'MMLU': '64%', 'SWE-bench': '—', 'MATH': '28%', 'RAM': '4.5 GB' }
                         ]
                     },
                     {
                         type: 'comparison',
                         h2: 'Head-to-Head: 70B Scale',
-                        line1: '<strong>Qwen2.5 72B:</strong> 84% MMLU · 87% HumanEval · 83% MATH · 43 GB RAM',
-                        line2: '<strong>Llama 3.3 70B:</strong> 82% MMLU · 88% HumanEval · 77% MATH · 40 GB RAM',
-                        tip: 'Mistral Small 3.1: 79% MMLU at just 14 GB — best quality-per-GB in 2026'
+                        line1: '<strong>Qwen3 72B:</strong> ~85% MMLU · ~84% MATH · 43 GB RAM',
+                        line2: '<strong>Llama 3.3 70B:</strong> 82% MMLU · 77% MATH · 40 GB RAM',
+                        tip: 'For coding, Qwen 3.6 27B leads with 77.2% SWE-bench — the new primary 2026 coding benchmark — while fitting in just 16 GB'
                     },
                     {
                         type: 'table',
                         h2: 'Which Model Wins by Task?',
                         columns: ['Task', 'Winner', 'Why'],
                         rows: [
-                            { 'Task': 'Python / JS coding', 'Winner': 'Qwen2.5', 'Why': 'Highest HumanEval at every size' },
-                            { 'Task': 'General Q&A (English)', 'Winner': 'Llama / Qwen (tied)', 'Why': '82–84% MMLU at 70B' },
-                            { 'Task': 'Math & reasoning', 'Winner': 'Qwen2.5', 'Why': '83% MATH vs 77% Llama' },
-                            { 'Task': 'Non-English languages', 'Winner': 'Qwen2.5', 'Why': '29 native languages' },
-                            { 'Task': 'Creative writing', 'Winner': 'Llama 3.x', 'Why': 'More natural English style' },
+                            { 'Task': 'Python / JS coding', 'Winner': 'Qwen 3.6', 'Why': '77.2% SWE-bench — best dense coding model' },
+                            { 'Task': 'General Q&A (English)', 'Winner': 'Llama 3.3 / Qwen3 (tied)', 'Why': 'Both score 82-85% MMLU at 70B' },
+                            { 'Task': 'Math & reasoning', 'Winner': 'Qwen3', 'Why': '84% MATH at 72B vs 77% for Llama 3.3 70B' },
+                            { 'Task': 'Non-English languages', 'Winner': 'Qwen3', 'Why': '29 native languages' },
+                            { 'Task': 'Creative writing', 'Winner': 'Llama 3.x/4', 'Why': 'More natural English style' },
                             { 'Task': 'Quality on 16 GB RAM', 'Winner': 'Mistral Small 3.1', 'Why': 'Near-70B quality at 14 GB' },
-                            { 'Task': 'Beginner / first model', 'Winner': 'Llama 3.2 3B', 'Why': 'Best documented, most support' }
+                            { 'Task': 'Beginner / first model', 'Winner': 'Llama 4 3B', 'Why': 'Best documented, most support' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'Size Classes Compared',
                         items: [
-                            '<strong>3B–4B:</strong> Qwen2.5 3B leads coding; Llama 3.2 3B best for English use',
-                            '<strong>7B–8B:</strong> Qwen2.5 7B leads coding; Llama 3.1 8B leads English instruction-following',
+                            '<strong>3B–4B:</strong> Qwen3 3B and Phi-4 Mini lead coding/math; Llama 4 3B most reliable for English use',
+                            '<strong>7B–8B:</strong> Qwen3 8B leads coding; Llama 3.3 8B leads English instruction-following',
                             '<strong>14B–24B:</strong> Mistral Small 3.1 (24B) strongest overall — fits on 14 GB RAM',
-                            '<strong>70B–72B:</strong> Qwen2.5 72B for coding/multilingual; Llama 3.3 70B for English-first tasks'
+                            '<strong>70B–72B:</strong> Qwen3 72B for coding/multilingual; Llama 3.3 70B for English-first tasks'
                         ]
                     },
                     {
@@ -484,9 +485,9 @@
                         h2: 'Getting Started with Ollama',
                         items: [
                             'Install Ollama: one command on macOS, Windows, or Linux',
-                            'Try Qwen2.5: <code>ollama run qwen2.5:7b</code>',
-                            'Try Llama: <code>ollama run llama3.1:8b</code>',
-                            'Try Mistral: <code>ollama run mistral</code>',
+                            'Try Qwen: <code>ollama run qwen3:8b</code>',
+                            'Try Llama: <code>ollama run llama3.2:3b</code>',
+                            'Try Mistral: <code>ollama run mistral-small3.1</code>',
                             'Check model size before large pulls: <code>ollama show &lt;model&gt;</code>',
                             'Run the same prompt on each — pick the one that fits your task'
                         ]
@@ -498,29 +499,29 @@
                             '<strong>Comparing different param counts</strong> — Qwen 32B vs Llama 70B is not a fair test',
                             '<strong>Ignoring multilingual benchmarks</strong> — if your workload is non-English, Qwen dominates',
                             '<strong>Assuming newest = best</strong> — older quantizations often have better community support',
-                            '<strong>Skipping Mistral Small 3.1</strong> — fits at Q5 on 22 GB, outperforms Llama 8B on many tasks',
-                            '<strong>Deciding on one benchmark</strong> — MMLU, HumanEval, and MATH measure different things'
+                            '<strong>Skipping Mistral Small 3.1</strong> — fits at Q5 on 22 GB, outperforms Llama 3.3 8B on many tasks',
+                            '<strong>Deciding on one benchmark</strong> — MMLU, SWE-bench, and MATH measure different things'
                         ]
                     },
                     {
                         type: 'faq',
                         h2: 'Frequently Asked Questions',
                         faqs: [
-                            { q: 'Which is best for coding?', a: 'Qwen2.5 at every size tier. Qwen2.5 72B: 87% HumanEval. Qwen2.5 7B: 72% HumanEval. Llama 3.3 70B: 88% — marginally higher at 70B only.' },
-                            { q: 'Can all three run on 8 GB VRAM?', a: 'Yes. At Q4 quantization: Qwen2.5 7B uses ~4.7 GB, Llama 3.1 8B uses ~5.5 GB, Mistral 7B uses ~4.5 GB.' },
-                            { q: 'Qwen2.5 vs Llama 3.3 at 70B — which is better?', a: 'Nearly tied overall. Qwen wins coding, math, and multilingual. Llama wins HumanEval (88% vs 87%) and English writing style.' }
+                            { q: 'Which is best for coding?', a: 'Qwen 3.6 27B leads with 77.2% SWE-bench — the best dense coding model. For agentic multi-file coding, Mistral Devstral Small 24B is purpose-built.' },
+                            { q: 'Can all three run on 8 GB VRAM?', a: 'Yes. At Q4 quantization: Qwen3 8B uses ~5 GB, Llama 3.3 8B uses ~5.5 GB, Mistral Small v0.3 uses ~4.5 GB.' },
+                            { q: 'Qwen3 72B vs Llama 3.3 70B — which is better?', a: 'Nearly tied overall. Qwen wins coding, math, and multilingual. Llama remains the most widely fine-tuned base model with the broadest ecosystem support.' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'Quick Decision Guide',
                         items: [
-                            '<strong>Coding tasks</strong> → Qwen2.5 (any size)',
-                            '<strong>English writing / general chat</strong> → Llama 3.x',
-                            '<strong>Non-English languages</strong> → Qwen2.5 (29 native languages)',
+                            '<strong>Coding tasks</strong> → Qwen 3.6 27B',
+                            '<strong>English writing / general chat</strong> → Llama 3.x/4',
+                            '<strong>Non-English languages</strong> → Qwen3 (29 native languages)',
                             '<strong>Best quality under 16 GB RAM</strong> → Mistral Small 3.1',
-                            '<strong>First model / 8 GB machine</strong> → Llama 3.2 3B or Mistral 7B',
-                            '<strong>Maximum quality (40+ GB)</strong> → Qwen2.5 72B or Llama 3.3 70B'
+                            '<strong>First model / 8 GB machine</strong> → Llama 4 3B or Mistral Small v0.3',
+                            '<strong>Maximum quality (40+ GB)</strong> → Qwen3 72B or Llama 3.3 70B'
                         ]
                     },
                     {
@@ -545,11 +546,11 @@
                         type: 'list',
                         h2: 'Wesentliche Erkenntnisse',
                         items: [
-                            '<strong>Coding:</strong> Qwen2.5 gewinnt bei jeder Größe — 87% HumanEval bei 72B, 79% bei 32B, 72% bei 7B',
-                            '<strong>Allgemeines Reasoning:</strong> Llama 3.3 70B und Qwen2.5 72B fast gleichauf — Llama stärker in Englisch, Qwen multilingual',
+                            '<strong>Coding:</strong> Qwen 3.6 27B führt bei SWE-bench mit 77,2% — bestes dichtes Coding-Modell, passt bei Q4 in 24 GB',
+                            '<strong>Allgemeines Reasoning:</strong> Llama 3.3 70B und Qwen3 72B fast gleichauf — Llama stärker in Englisch, Qwen multilingual',
                             '<strong>Effizienz:</strong> Mistral Small 3.1 24B liefert nahezu 70B-Qualität bei nur 14 GB RAM',
-                            '<strong>Mehrsprachig:</strong> Qwen2.5 unterstützt nativ 29 Sprachen; Llama und Mistral primär englisch',
-                            '<strong>Anfänger (8 GB RAM):</strong> Llama 3.2 3B oder Mistral 7B — beste Dokumentation und Community-Unterstützung'
+                            '<strong>Mehrsprachig:</strong> Qwen3 unterstützt nativ 29 Sprachen; Llama und Mistral primär englisch',
+                            '<strong>Anfänger (8 GB RAM):</strong> Llama 4 3B — beste Dokumentation und Community-Unterstützung'
                         ]
                     },
                     {
@@ -557,53 +558,53 @@
                         h2: 'Modellfamilien-Übersicht',
                         columns: ['Familie', 'Entwickler', 'Größen', 'Lizenz'],
                         rows: [
-                            { 'Familie': 'Qwen2.5', 'Entwickler': 'Alibaba', 'Größen': '7B, 14B, 32B, 72B', 'Lizenz': 'Apache 2.0' },
-                            { 'Familie': 'Llama 3.x', 'Entwickler': 'Meta', 'Größen': '3B, 8B, 70B', 'Lizenz': 'Llama Community' },
-                            { 'Familie': 'Mistral', 'Entwickler': 'Mistral AI', 'Größen': '7B, Small 3.1 (24B)', 'Lizenz': 'Apache 2.0' }
+                            { 'Familie': 'Qwen3', 'Entwickler': 'Alibaba', 'Größen': 'Qwen 3.6 27B, Qwen3 72B', 'Lizenz': 'Apache 2.0' },
+                            { 'Familie': 'Llama 4', 'Entwickler': 'Meta', 'Größen': 'Scout 17B/109B MoE, Legacy 3.3 70B', 'Lizenz': 'Llama Community' },
+                            { 'Familie': 'Mistral', 'Entwickler': 'Mistral AI', 'Größen': 'Small 3.1 24B, Devstral 24B', 'Lizenz': 'Apache 2.0' }
                         ]
                     },
                     {
                         type: 'table',
                         h2: 'Benchmark-Vergleich 2026',
-                        columns: ['Modell', 'MMLU', 'HumanEval', 'MATH', 'RAM'],
+                        columns: ['Modell', 'MMLU', 'SWE-bench', 'MATH', 'RAM'],
                         rows: [
-                            { 'Modell': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'MATH': '83%', 'RAM': '43 GB' },
-                            { 'Modell': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'MATH': '77%', 'RAM': '40 GB' },
-                            { 'Modell': 'Qwen2.5 32B', 'MMLU': '83%', 'HumanEval': '79%', 'MATH': '79%', 'RAM': '20 GB' },
-                            { 'Modell': 'Mistral Small 3.1', 'MMLU': '79%', 'HumanEval': '74%', 'MATH': '65%', 'RAM': '14 GB' },
-                            { 'Modell': 'Llama 3.1 8B', 'MMLU': '69%', 'HumanEval': '72%', 'MATH': '51%', 'RAM': '5,5 GB' },
-                            { 'Modell': 'Qwen2.5 7B', 'MMLU': '74%', 'HumanEval': '72%', 'MATH': '55%', 'RAM': '4,7 GB' }
+                            { 'Modell': 'Qwen 3.6 27B', 'MMLU': '~83%', 'SWE-bench': '77,2%', 'MATH': '~80%', 'RAM': '16 GB' },
+                            { 'Modell': 'Qwen3 72B', 'MMLU': '~85%', 'SWE-bench': '—', 'MATH': '~84%', 'RAM': '43 GB' },
+                            { 'Modell': 'Llama 3.3 70B', 'MMLU': '82%', 'SWE-bench': '—', 'MATH': '77%', 'RAM': '40 GB' },
+                            { 'Modell': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'SWE-bench': '—', 'MATH': '65%', 'RAM': '14 GB' },
+                            { 'Modell': 'Qwen3 8B', 'MMLU': '~75%', 'SWE-bench': '—', 'MATH': '~55%', 'RAM': '5 GB' },
+                            { 'Modell': 'Mistral Small v0.3', 'MMLU': '64%', 'SWE-bench': '—', 'MATH': '28%', 'RAM': '4,5 GB' }
                         ]
                     },
                     {
                         type: 'comparison',
                         h2: 'Direktvergleich: 70B-Skala',
-                        line1: '<strong>Qwen2.5 72B:</strong> 84% MMLU · 87% HumanEval · 83% MATH · 43 GB RAM',
-                        line2: '<strong>Llama 3.3 70B:</strong> 82% MMLU · 88% HumanEval · 77% MATH · 40 GB RAM',
-                        tip: 'Mistral Small 3.1: 79% MMLU bei nur 14 GB — bestes Qualitäts-/RAM-Verhältnis 2026'
+                        line1: '<strong>Qwen3 72B:</strong> ~85% MMLU · ~84% MATH · 43 GB RAM',
+                        line2: '<strong>Llama 3.3 70B:</strong> 82% MMLU · 77% MATH · 40 GB RAM',
+                        tip: 'Beim Coding führt Qwen 3.6 27B mit 77,2% SWE-bench — der neue primäre Coding-Benchmark 2026 — bei nur 16 GB'
                     },
                     {
                         type: 'table',
                         h2: 'Welche Modellfamilie gewinnt nach Task?',
                         columns: ['Task', 'Gewinner', 'Warum'],
                         rows: [
-                            { 'Task': 'Python / JS Coding', 'Gewinner': 'Qwen2.5', 'Warum': 'Höchster HumanEval bei jeder Größe' },
-                            { 'Task': 'Allgemeine Fragen (Englisch)', 'Gewinner': 'Llama / Qwen (gleichauf)', 'Warum': '82–84% MMLU bei 70B' },
-                            { 'Task': 'Mathematik & Reasoning', 'Gewinner': 'Qwen2.5', 'Warum': '83% MATH vs. 77% Llama' },
-                            { 'Task': 'Nicht-englische Sprachen', 'Gewinner': 'Qwen2.5', 'Warum': '29 Sprachen nativ' },
-                            { 'Task': 'Kreatives Schreiben', 'Gewinner': 'Llama 3.x', 'Warum': 'Natürlicherer englischer Stil' },
+                            { 'Task': 'Python / JS Coding', 'Gewinner': 'Qwen 3.6', 'Warum': '77,2% SWE-bench — bestes dichtes Coding-Modell' },
+                            { 'Task': 'Allgemeine Fragen (Englisch)', 'Gewinner': 'Llama 3.3 / Qwen3 (gleichauf)', 'Warum': 'Beide 82-85% MMLU bei 70B' },
+                            { 'Task': 'Mathematik & Reasoning', 'Gewinner': 'Qwen3', 'Warum': '84% MATH bei 72B vs. 77% Llama 3.3 70B' },
+                            { 'Task': 'Nicht-englische Sprachen', 'Gewinner': 'Qwen3', 'Warum': '29 Sprachen nativ' },
+                            { 'Task': 'Kreatives Schreiben', 'Gewinner': 'Llama 3.x/4', 'Warum': 'Natürlicherer englischer Stil' },
                             { 'Task': 'Qualität bei 16 GB RAM', 'Gewinner': 'Mistral Small 3.1', 'Warum': 'Nahezu 70B-Qualität bei 14 GB' },
-                            { 'Task': 'Einsteiger / erstes Modell', 'Gewinner': 'Llama 3.2 3B', 'Warum': 'Beste Dokumentation' }
+                            { 'Task': 'Einsteiger / erstes Modell', 'Gewinner': 'Llama 4 3B', 'Warum': 'Beste Dokumentation' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'Größenklassen im Vergleich',
                         items: [
-                            '<strong>3B–4B:</strong> Qwen2.5 3B führt beim Coding; Llama 3.2 3B am besten für englischen Alltag',
-                            '<strong>7B–8B:</strong> Qwen2.5 7B führt beim Coding; Llama 3.1 8B führt bei englischen Anweisungen',
+                            '<strong>3B–4B:</strong> Qwen3 3B und Phi-4 Mini führen bei Coding/Mathe; Llama 4 3B am zuverlässigsten für englischen Alltag',
+                            '<strong>7B–8B:</strong> Qwen3 8B führt beim Coding; Llama 3.3 8B führt bei englischen Anweisungen',
                             '<strong>14B–24B:</strong> Mistral Small 3.1 (24B) insgesamt stärker — passt in 14 GB RAM',
-                            '<strong>70B–72B:</strong> Qwen2.5 72B für Coding/Mehrsprachig; Llama 3.3 70B für englische Aufgaben'
+                            '<strong>70B–72B:</strong> Qwen3 72B für Coding/Mehrsprachig; Llama 3.3 70B für englische Aufgaben'
                         ]
                     },
                     {
@@ -611,9 +612,9 @@
                         h2: 'Erste Schritte mit Ollama',
                         items: [
                             'Ollama installieren: ein Befehl auf macOS, Windows oder Linux',
-                            'Qwen2.5 testen: <code>ollama run qwen2.5:7b</code>',
-                            'Llama testen: <code>ollama run llama3.1:8b</code>',
-                            'Mistral testen: <code>ollama run mistral</code>',
+                            'Qwen testen: <code>ollama run qwen3:8b</code>',
+                            'Llama testen: <code>ollama run llama3.2:3b</code>',
+                            'Mistral testen: <code>ollama run mistral-small3.1</code>',
                             'Modellgröße prüfen vor großen Downloads: <code>ollama show &lt;model&gt;</code>',
                             'Denselben Prompt auf allen testen — das passendste Modell wählen'
                         ]
@@ -625,29 +626,29 @@
                             '<strong>Verschiedene Parameteranzahlen vergleichen</strong> — Qwen 32B vs. Llama 70B ist kein fairer Test',
                             '<strong>Mehrsprachige Benchmarks ignorieren</strong> — bei nicht-englischen Aufgaben dominiert Qwen',
                             '<strong>Neuestes = Bestes annehmen</strong> — ältere Quantisierungen haben oft bessere Community-Unterstützung',
-                            '<strong>Mistral Small 3.1 übersehen</strong> — passt bei Q5 auf 22 GB, übertrifft Llama 8B in vielen Aufgaben',
-                            '<strong>Nur ein Benchmark entscheidend</strong> — MMLU, HumanEval und MATH messen unterschiedliche Fähigkeiten'
+                            '<strong>Mistral Small 3.1 übersehen</strong> — passt bei Q5 auf 22 GB, übertrifft Llama 3.3 8B in vielen Aufgaben',
+                            '<strong>Nur ein Benchmark entscheidend</strong> — MMLU, SWE-bench und MATH messen unterschiedliche Fähigkeiten'
                         ]
                     },
                     {
                         type: 'faq',
                         h2: 'Häufig gestellte Fragen',
                         faqs: [
-                            { q: 'Welches ist am besten für Coding?', a: 'Qwen2.5 bei jeder Größe. Qwen2.5 72B: 87% HumanEval. Llama 3.3 70B: 88% — nur minimal besser bei 70B.' },
-                            { q: 'Alle drei auf 8 GB VRAM?', a: 'Ja. Bei Q4-Quantisierung: Qwen2.5 7B ~4,7 GB, Llama 3.1 8B ~5,5 GB, Mistral 7B ~4,5 GB.' },
-                            { q: 'Qwen2.5 vs. Llama 3.3 bei 70B — welches ist besser?', a: 'Insgesamt fast gleichauf. Qwen gewinnt bei Coding, Mathematik und Mehrsprachigkeit. Llama gewinnt HumanEval (88% vs. 87%) und englischen Schreibstil.' }
+                            { q: 'Welches ist am besten für Coding?', a: 'Qwen 3.6 27B führt mit 77,2% SWE-bench — bestes dichtes Coding-Modell. Für agentisches Multi-Datei-Coding: Mistral Devstral Small 24B.' },
+                            { q: 'Alle drei auf 8 GB VRAM?', a: 'Ja. Bei Q4-Quantisierung: Qwen3 8B ~5 GB, Llama 3.3 8B ~5,5 GB, Mistral Small v0.3 ~4,5 GB.' },
+                            { q: 'Qwen3 72B vs. Llama 3.3 70B bei 70B — welches ist besser?', a: 'Insgesamt fast gleichauf. Qwen gewinnt bei Coding, Mathematik und Mehrsprachigkeit. Llama bleibt das am weitesten verbreitete Basismodell mit dem breitesten Ökosystem.' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'Schnelle Entscheidungshilfe',
                         items: [
-                            '<strong>Coding-Aufgaben</strong> → Qwen2.5 (jede Größe)',
-                            '<strong>Englisches Schreiben / allgemeiner Chat</strong> → Llama 3.x',
-                            '<strong>Nicht-englische Sprachen</strong> → Qwen2.5 (29 Sprachen nativ)',
+                            '<strong>Coding-Aufgaben</strong> → Qwen 3.6 27B',
+                            '<strong>Englisches Schreiben / allgemeiner Chat</strong> → Llama 3.x/4',
+                            '<strong>Nicht-englische Sprachen</strong> → Qwen3 (29 Sprachen nativ)',
                             '<strong>Beste Qualität unter 16 GB RAM</strong> → Mistral Small 3.1',
-                            '<strong>Erstes Modell / 8 GB Maschine</strong> → Llama 3.2 3B oder Mistral 7B',
-                            '<strong>Maximale Qualität (40+ GB)</strong> → Qwen2.5 72B oder Llama 3.3 70B'
+                            '<strong>Erstes Modell / 8 GB Maschine</strong> → Llama 4 3B oder Mistral Small v0.3',
+                            '<strong>Maximale Qualität (40+ GB)</strong> → Qwen3 72B oder Llama 3.3 70B'
                         ]
                     },
                     {
@@ -672,11 +673,11 @@
                         type: 'list',
                         h2: 'Points clés',
                         items: [
-                            '<strong>Codage :</strong> Qwen2.5 gagne à chaque taille — 87% HumanEval à 72B, 79% à 32B, 72% à 7B',
-                            '<strong>Raisonnement général :</strong> Llama 3.3 70B et Qwen2.5 72B presque à égalité — Llama plus fort en anglais, Qwen en multilingue',
+                            '<strong>Codage :</strong> Qwen 3.6 27B mène SWE-bench à 77,2% — meilleur modèle de codage dense, tient en 24 GB en Q4',
+                            '<strong>Raisonnement général :</strong> Llama 3.3 70B et Qwen3 72B presque à égalité — Llama plus fort en anglais, Qwen en multilingue',
                             '<strong>Efficacité :</strong> Mistral Small 3.1 24B offre une qualité proche de 70B avec seulement 14 GB de RAM',
-                            '<strong>Multilingue :</strong> Qwen2.5 supporte 29 langues nativement ; Llama et Mistral sont principalement en anglais',
-                            '<strong>Débutants (8 GB RAM) :</strong> Llama 3.2 3B ou Mistral 7B — meilleure documentation et support communautaire'
+                            '<strong>Multilingue :</strong> Qwen3 supporte 29 langues nativement ; Llama et Mistral sont principalement en anglais',
+                            '<strong>Débutants (8 GB RAM) :</strong> Llama 4 3B — meilleure documentation et support communautaire'
                         ]
                     },
                     {
@@ -684,53 +685,53 @@
                         h2: 'Aperçu des familles de modèles',
                         columns: ['Famille', 'Développeur', 'Tailles', 'Licence'],
                         rows: [
-                            { 'Famille': 'Qwen2.5', 'Développeur': 'Alibaba', 'Tailles': '7B, 14B, 32B, 72B', 'Licence': 'Apache 2.0' },
-                            { 'Famille': 'Llama 3.x', 'Développeur': 'Meta', 'Tailles': '3B, 8B, 70B', 'Licence': 'Llama Community' },
-                            { 'Famille': 'Mistral', 'Développeur': 'Mistral AI', 'Tailles': '7B, Small 3.1 (24B)', 'Licence': 'Apache 2.0' }
+                            { 'Famille': 'Qwen3', 'Développeur': 'Alibaba', 'Tailles': 'Qwen 3.6 27B, Qwen3 72B', 'Licence': 'Apache 2.0' },
+                            { 'Famille': 'Llama 4', 'Développeur': 'Meta', 'Tailles': 'Scout 17B/109B MoE, ancien 3.3 70B', 'Licence': 'Llama Community' },
+                            { 'Famille': 'Mistral', 'Développeur': 'Mistral AI', 'Tailles': 'Small 3.1 24B, Devstral 24B', 'Licence': 'Apache 2.0' }
                         ]
                     },
                     {
                         type: 'table',
                         h2: 'Comparaison des benchmarks 2026',
-                        columns: ['Modèle', 'MMLU', 'HumanEval', 'MATH', 'RAM'],
+                        columns: ['Modèle', 'MMLU', 'SWE-bench', 'MATH', 'RAM'],
                         rows: [
-                            { 'Modèle': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'MATH': '83%', 'RAM': '43 GB' },
-                            { 'Modèle': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'MATH': '77%', 'RAM': '40 GB' },
-                            { 'Modèle': 'Qwen2.5 32B', 'MMLU': '83%', 'HumanEval': '79%', 'MATH': '79%', 'RAM': '20 GB' },
-                            { 'Modèle': 'Mistral Small 3.1', 'MMLU': '79%', 'HumanEval': '74%', 'MATH': '65%', 'RAM': '14 GB' },
-                            { 'Modèle': 'Llama 3.1 8B', 'MMLU': '69%', 'HumanEval': '72%', 'MATH': '51%', 'RAM': '5,5 GB' },
-                            { 'Modèle': 'Qwen2.5 7B', 'MMLU': '74%', 'HumanEval': '72%', 'MATH': '55%', 'RAM': '4,7 GB' }
+                            { 'Modèle': 'Qwen 3.6 27B', 'MMLU': '~83%', 'SWE-bench': '77,2%', 'MATH': '~80%', 'RAM': '16 GB' },
+                            { 'Modèle': 'Qwen3 72B', 'MMLU': '~85%', 'SWE-bench': '—', 'MATH': '~84%', 'RAM': '43 GB' },
+                            { 'Modèle': 'Llama 3.3 70B', 'MMLU': '82%', 'SWE-bench': '—', 'MATH': '77%', 'RAM': '40 GB' },
+                            { 'Modèle': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'SWE-bench': '—', 'MATH': '65%', 'RAM': '14 GB' },
+                            { 'Modèle': 'Qwen3 8B', 'MMLU': '~75%', 'SWE-bench': '—', 'MATH': '~55%', 'RAM': '5 GB' },
+                            { 'Modèle': 'Mistral Small v0.3', 'MMLU': '64%', 'SWE-bench': '—', 'MATH': '28%', 'RAM': '4,5 GB' }
                         ]
                     },
                     {
                         type: 'comparison',
                         h2: 'Face-à-face : échelle 70B',
-                        line1: '<strong>Qwen2.5 72B :</strong> 84% MMLU · 87% HumanEval · 83% MATH · 43 GB RAM',
-                        line2: '<strong>Llama 3.3 70B :</strong> 82% MMLU · 88% HumanEval · 77% MATH · 40 GB RAM',
-                        tip: 'Mistral Small 3.1 : 79% MMLU avec seulement 14 GB — meilleur rapport qualité/RAM 2026'
+                        line1: '<strong>Qwen3 72B :</strong> ~85% MMLU · ~84% MATH · 43 GB RAM',
+                        line2: '<strong>Llama 3.3 70B :</strong> 82% MMLU · 77% MATH · 40 GB RAM',
+                        tip: 'Pour le codage, Qwen 3.6 27B mène avec 77,2% SWE-bench — le nouveau benchmark principal de codage 2026 — en tenant seulement 16 GB'
                     },
                     {
                         type: 'table',
                         h2: 'Quelle famille gagne par tâche ?',
                         columns: ['Tâche', 'Gagnant', 'Pourquoi'],
                         rows: [
-                            { 'Tâche': 'Codage Python / JS', 'Gagnant': 'Qwen2.5', 'Pourquoi': 'HumanEval le plus élevé à chaque taille' },
-                            { 'Tâche': 'Q&A général (anglais)', 'Gagnant': 'Llama / Qwen (égalité)', 'Pourquoi': '82–84% MMLU à 70B' },
-                            { 'Tâche': 'Mathématiques', 'Gagnant': 'Qwen2.5', 'Pourquoi': '83% MATH vs 77% Llama' },
-                            { 'Tâche': 'Langues non-anglaises', 'Gagnant': 'Qwen2.5', 'Pourquoi': '29 langues nativement' },
-                            { 'Tâche': 'Écriture créative', 'Gagnant': 'Llama 3.x', 'Pourquoi': 'Style anglais plus naturel' },
+                            { 'Tâche': 'Codage Python / JS', 'Gagnant': 'Qwen 3.6', 'Pourquoi': '77,2% SWE-bench — meilleur modèle de codage dense' },
+                            { 'Tâche': 'Q&A général (anglais)', 'Gagnant': 'Llama 3.3 / Qwen3 (égalité)', 'Pourquoi': '82-85% MMLU à 70B pour les deux' },
+                            { 'Tâche': 'Mathématiques', 'Gagnant': 'Qwen3', 'Pourquoi': '84% MATH à 72B vs 77% Llama 3.3 70B' },
+                            { 'Tâche': 'Langues non-anglaises', 'Gagnant': 'Qwen3', 'Pourquoi': '29 langues nativement' },
+                            { 'Tâche': 'Écriture créative', 'Gagnant': 'Llama 3.x/4', 'Pourquoi': 'Style anglais plus naturel' },
                             { 'Tâche': 'Qualité sur 16 GB RAM', 'Gagnant': 'Mistral Small 3.1', 'Pourquoi': 'Qualité proche 70B à 14 GB' },
-                            { 'Tâche': 'Débutant / 1er modèle', 'Gagnant': 'Llama 3.2 3B', 'Pourquoi': 'Meilleure documentation' }
+                            { 'Tâche': 'Débutant / 1er modèle', 'Gagnant': 'Llama 4 3B', 'Pourquoi': 'Meilleure documentation' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'Comparaison par classe de taille',
                         items: [
-                            '<strong>3B–4B :</strong> Qwen2.5 3B mène le codage ; Llama 3.2 3B meilleur pour l\'anglais courant',
-                            '<strong>7B–8B :</strong> Qwen2.5 7B mène le codage ; Llama 3.1 8B mène les instructions en anglais',
+                            '<strong>3B–4B :</strong> Qwen3 3B et Phi-4 Mini mènent codage/maths ; Llama 4 3B le plus fiable pour l\'anglais courant',
+                            '<strong>7B–8B :</strong> Qwen3 8B mène le codage ; Llama 3.3 8B mène les instructions en anglais',
                             '<strong>14B–24B :</strong> Mistral Small 3.1 (24B) le plus fort globalement — 14 GB RAM',
-                            '<strong>70B–72B :</strong> Qwen2.5 72B pour codage/multilingue ; Llama 3.3 70B pour l\'anglais'
+                            '<strong>70B–72B :</strong> Qwen3 72B pour codage/multilingue ; Llama 3.3 70B pour l\'anglais'
                         ]
                     },
                     {
@@ -738,9 +739,9 @@
                         h2: 'Démarrer avec Ollama',
                         items: [
                             'Installer Ollama : une commande sur macOS, Windows ou Linux',
-                            'Tester Qwen2.5 : <code>ollama run qwen2.5:7b</code>',
-                            'Tester Llama : <code>ollama run llama3.1:8b</code>',
-                            'Tester Mistral : <code>ollama run mistral</code>',
+                            'Tester Qwen : <code>ollama run qwen3:8b</code>',
+                            'Tester Llama : <code>ollama run llama3.2:3b</code>',
+                            'Tester Mistral : <code>ollama run mistral-small3.1</code>',
                             'Vérifier la taille avant de télécharger : <code>ollama show &lt;model&gt;</code>',
                             'Lancer le même prompt sur chacun — choisir celui qui convient à votre tâche'
                         ]
@@ -752,29 +753,29 @@
                             '<strong>Comparer des tailles différentes</strong> — Qwen 32B vs Llama 70B n\'est pas équitable',
                             '<strong>Ignorer les benchmarks multilingues</strong> — pour le non-anglais, Qwen domine largement',
                             '<strong>Supposer que le plus récent = le meilleur</strong> — les anciennes quantifications ont souvent plus de support',
-                            '<strong>Négliger Mistral Small 3.1</strong> — tient sur 22 GB en Q5, surpasse Llama 8B sur de nombreuses tâches',
-                            '<strong>Décider sur un seul benchmark</strong> — MMLU, HumanEval et MATH mesurent des capacités différentes'
+                            '<strong>Négliger Mistral Small 3.1</strong> — tient sur 22 GB en Q5, surpasse Llama 3.3 8B sur de nombreuses tâches',
+                            '<strong>Décider sur un seul benchmark</strong> — MMLU, SWE-bench et MATH mesurent des capacités différentes'
                         ]
                     },
                     {
                         type: 'faq',
                         h2: 'Questions fréquentes',
                         faqs: [
-                            { q: 'Quel est le meilleur pour le codage ?', a: 'Qwen2.5 à chaque taille. Qwen2.5 72B : 87% HumanEval. Llama 3.3 70B : 88% — légèrement meilleur à 70B uniquement.' },
-                            { q: 'Les trois sur 8 GB VRAM ?', a: 'Oui. En Q4 : Qwen2.5 7B ~4,7 GB, Llama 3.1 8B ~5,5 GB, Mistral 7B ~4,5 GB.' },
-                            { q: 'Qwen2.5 vs Llama 3.3 à 70B — lequel est meilleur ?', a: 'Presque à égalité. Qwen gagne codage, math et multilingue. Llama gagne HumanEval (88% vs 87%) et le style d\'écriture anglaise.' }
+                            { q: 'Quel est le meilleur pour le codage ?', a: 'Qwen 3.6 27B mène avec 77,2% SWE-bench — meilleur modèle de codage dense. Pour le codage agentique multi-fichiers : Mistral Devstral Small 24B.' },
+                            { q: 'Les trois sur 8 GB VRAM ?', a: 'Oui. En Q4 : Qwen3 8B ~5 GB, Llama 3.3 8B ~5,5 GB, Mistral Small v0.3 ~4,5 GB.' },
+                            { q: 'Qwen3 72B vs Llama 3.3 70B — lequel est meilleur ?', a: 'Presque à égalité. Qwen gagne codage, math et multilingue. Llama reste le modèle de base le plus fine-tuné avec le plus large écosystème.' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'Guide de décision rapide',
                         items: [
-                            '<strong>Tâches de codage</strong> → Qwen2.5 (toute taille)',
-                            '<strong>Écriture anglaise / chat général</strong> → Llama 3.x',
-                            '<strong>Langues non-anglaises</strong> → Qwen2.5 (29 langues)',
+                            '<strong>Tâches de codage</strong> → Qwen 3.6 27B',
+                            '<strong>Écriture anglaise / chat général</strong> → Llama 3.x/4',
+                            '<strong>Langues non-anglaises</strong> → Qwen3 (29 langues)',
                             '<strong>Meilleure qualité sous 16 GB RAM</strong> → Mistral Small 3.1',
-                            '<strong>Premier modèle / machine 8 GB</strong> → Llama 3.2 3B ou Mistral 7B',
-                            '<strong>Qualité maximale (40+ GB)</strong> → Qwen2.5 72B ou Llama 3.3 70B'
+                            '<strong>Premier modèle / machine 8 GB</strong> → Llama 4 3B ou Mistral Small v0.3',
+                            '<strong>Qualité maximale (40+ GB)</strong> → Qwen3 72B ou Llama 3.3 70B'
                         ]
                     },
                     {
@@ -799,11 +800,11 @@
                         type: 'list',
                         h2: '重要ポイント',
                         items: [
-                            '<strong>コーディング：</strong> Qwen2.5がすべてのサイズで勝つ — 72Bで87%、32Bで79%、7Bで72% HumanEval',
-                            '<strong>一般的推論：</strong> Llama 3.3 70BとQwen2.5 72Bはほぼ同等 — Llama英語強、Qwen多言語強',
+                            '<strong>コーディング：</strong> Qwen 3.6 27BがSWE-benchで77.2% — 最高の密なコーディングモデル、Q4で24 GBに収まる',
+                            '<strong>一般的推論：</strong> Llama 3.3 70BとQwen3 72Bはほぼ同等 — Llama英語強、Qwen多言語強',
                             '<strong>効率性：</strong> Mistral Small 3.1 24Bはわずか14 GB RAMで70B近くの品質を提供',
-                            '<strong>多言語：</strong> Qwen2.5は29言語をネイティブサポート；LlamaとMistralは主に英語最適化',
-                            '<strong>初心者 (8 GB RAM)：</strong> Llama 3.2 3BまたはMistral 7B — 最も文書化されたサポート'
+                            '<strong>多言語：</strong> Qwen3は29言語をネイティブサポート；LlamaとMistralは主に英語最適化',
+                            '<strong>初心者 (8 GB RAM)：</strong> Llama 4 3B — 最も文書化されたサポート'
                         ]
                     },
                     {
@@ -811,53 +812,53 @@
                         h2: 'モデルファミリー概要',
                         columns: ['ファミリー', '開発者', 'サイズ', 'ライセンス'],
                         rows: [
-                            { 'ファミリー': 'Qwen2.5', '開発者': 'Alibaba', 'サイズ': '7B, 14B, 32B, 72B', 'ライセンス': 'Apache 2.0' },
-                            { 'ファミリー': 'Llama 3.x', '開発者': 'Meta', 'サイズ': '3B, 8B, 70B', 'ライセンス': 'Llama Community' },
-                            { 'ファミリー': 'Mistral', '開発者': 'Mistral AI', 'サイズ': '7B, Small 3.1 (24B)', 'ライセンス': 'Apache 2.0' }
+                            { 'ファミリー': 'Qwen3', '開発者': 'Alibaba', 'サイズ': 'Qwen 3.6 27B, Qwen3 72B', 'ライセンス': 'Apache 2.0' },
+                            { 'ファミリー': 'Llama 4', '開発者': 'Meta', 'サイズ': 'Scout 17B/109B MoE, 旧3.3 70B', 'ライセンス': 'Llama Community' },
+                            { 'ファミリー': 'Mistral', '開発者': 'Mistral AI', 'サイズ': 'Small 3.1 24B, Devstral 24B', 'ライセンス': 'Apache 2.0' }
                         ]
                     },
                     {
                         type: 'table',
                         h2: 'ベンチマーク比較 2026',
-                        columns: ['モデル', 'MMLU', 'HumanEval', 'MATH', 'RAM'],
+                        columns: ['モデル', 'MMLU', 'SWE-bench', 'MATH', 'RAM'],
                         rows: [
-                            { 'モデル': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'MATH': '83%', 'RAM': '43 GB' },
-                            { 'モデル': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'MATH': '77%', 'RAM': '40 GB' },
-                            { 'モデル': 'Qwen2.5 32B', 'MMLU': '83%', 'HumanEval': '79%', 'MATH': '79%', 'RAM': '20 GB' },
-                            { 'モデル': 'Mistral Small 3.1', 'MMLU': '79%', 'HumanEval': '74%', 'MATH': '65%', 'RAM': '14 GB' },
-                            { 'モデル': 'Llama 3.1 8B', 'MMLU': '69%', 'HumanEval': '72%', 'MATH': '51%', 'RAM': '5.5 GB' },
-                            { 'モデル': 'Qwen2.5 7B', 'MMLU': '74%', 'HumanEval': '72%', 'MATH': '55%', 'RAM': '4.7 GB' }
+                            { 'モデル': 'Qwen 3.6 27B', 'MMLU': '~83%', 'SWE-bench': '77.2%', 'MATH': '~80%', 'RAM': '16 GB' },
+                            { 'モデル': 'Qwen3 72B', 'MMLU': '~85%', 'SWE-bench': '—', 'MATH': '~84%', 'RAM': '43 GB' },
+                            { 'モデル': 'Llama 3.3 70B', 'MMLU': '82%', 'SWE-bench': '—', 'MATH': '77%', 'RAM': '40 GB' },
+                            { 'モデル': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'SWE-bench': '—', 'MATH': '65%', 'RAM': '14 GB' },
+                            { 'モデル': 'Qwen3 8B', 'MMLU': '~75%', 'SWE-bench': '—', 'MATH': '~55%', 'RAM': '5 GB' },
+                            { 'モデル': 'Mistral Small v0.3', 'MMLU': '64%', 'SWE-bench': '—', 'MATH': '28%', 'RAM': '4.5 GB' }
                         ]
                     },
                     {
                         type: 'comparison',
                         h2: '直接比較：70Bスケール',
-                        line1: '<strong>Qwen2.5 72B：</strong> 84% MMLU · 87% HumanEval · 83% MATH · 43 GB RAM',
-                        line2: '<strong>Llama 3.3 70B：</strong> 82% MMLU · 88% HumanEval · 77% MATH · 40 GB RAM',
-                        tip: 'Mistral Small 3.1：わずか14 GBで79% MMLU — 2026年最高のRAM効率'
+                        line1: '<strong>Qwen3 72B：</strong> ~85% MMLU · ~84% MATH · 43 GB RAM',
+                        line2: '<strong>Llama 3.3 70B：</strong> 82% MMLU · 77% MATH · 40 GB RAM',
+                        tip: 'コーディングではQwen 3.6 27Bが77.2% SWE-bench — 2026年の新しい主要コーディングベンチマーク — でリード、わずか16 GBで収まる'
                     },
                     {
                         type: 'table',
                         h2: 'タスク別にはどのモデルが勝つ？',
                         columns: ['タスク', '勝者', '理由'],
                         rows: [
-                            { 'タスク': 'Python / JSコーディング', '勝者': 'Qwen2.5', '理由': '全サイズで最高HumanEval' },
-                            { 'タスク': '一般Q&A（英語）', '勝者': 'Llama / Qwen（同等）', '理由': '70Bで82–84% MMLU' },
-                            { 'タスク': '数学・推論', '勝者': 'Qwen2.5', '理由': '83% MATH vs Llama 77%' },
-                            { 'タスク': '英語以外の言語', '勝者': 'Qwen2.5', '理由': '29言語をネイティブサポート' },
-                            { 'タスク': '英語クリエイティブ', '勝者': 'Llama 3.x', '理由': 'より自然な英語生成スタイル' },
+                            { 'タスク': 'Python / JSコーディング', '勝者': 'Qwen 3.6', '理由': '77.2% SWE-bench — 最高の密なコーディングモデル' },
+                            { 'タスク': '一般Q&A（英語）', '勝者': 'Llama 3.3 / Qwen3（同等）', '理由': 'いずれも70Bで82-85% MMLU' },
+                            { 'タスク': '数学・推論', '勝者': 'Qwen3', '理由': '72Bで84% MATH vs Llama 3.3 70Bの77%' },
+                            { 'タスク': '英語以外の言語', '勝者': 'Qwen3', '理由': '29言語をネイティブサポート' },
+                            { 'タスク': '英語クリエイティブ', '勝者': 'Llama 3.x/4', '理由': 'より自然な英語生成スタイル' },
                             { 'タスク': '16 GB RAM内の品質', '勝者': 'Mistral Small 3.1', '理由': '14 GBで70B近くの品質' },
-                            { 'タスク': '初心者・最初のモデル', '勝者': 'Llama 3.2 3B', '理由': '最も文書化・サポート充実' }
+                            { 'タスク': '初心者・最初のモデル', '勝者': 'Llama 4 3B', '理由': '最も文書化・サポート充実' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'サイズクラス別比較',
                         items: [
-                            '<strong>3B–4B：</strong> Qwen2.5 3Bがコーディングをリード；Llama 3.2 3Bが英語用途に最適',
-                            '<strong>7B–8B：</strong> Qwen2.5 7Bがコーディングをリード；Llama 3.1 8Bが英語命令フォローをリード',
+                            '<strong>3B–4B：</strong> Qwen3 3BとPhi-4 Miniがコーディング・数学をリード；Llama 4 3Bが英語用途に最も信頼できる',
+                            '<strong>7B–8B：</strong> Qwen3 8Bがコーディングをリード；Llama 3.3 8Bが英語命令フォローをリード',
                             '<strong>14B–24B：</strong> Mistral Small 3.1（24B）が総合最強 — 14 GB RAMに収まる',
-                            '<strong>70B–72B：</strong> Qwen2.5 72Bはコーディング/多言語；Llama 3.3 70Bは英語タスクに最適'
+                            '<strong>70B–72B：</strong> Qwen3 72Bはコーディング/多言語；Llama 3.3 70Bは英語タスクに最適'
                         ]
                     },
                     {
@@ -865,9 +866,9 @@
                         h2: 'Ollamaで始める方法',
                         items: [
                             'Ollamaをインストール：macOS、Windows、Linuxで1コマンド',
-                            'Qwen2.5をテスト：<code>ollama run qwen2.5:7b</code>',
-                            'Llamaをテスト：<code>ollama run llama3.1:8b</code>',
-                            'Mistralをテスト：<code>ollama run mistral</code>',
+                            'Qwenをテスト：<code>ollama run qwen3:8b</code>',
+                            'Llamaをテスト：<code>ollama run llama3.2:3b</code>',
+                            'Mistralをテスト：<code>ollama run mistral-small3.1</code>',
                             '大きなモデルの前にサイズ確認：<code>ollama show &lt;model&gt;</code>',
                             '同じプロンプトで全モデルをテストし、最適なものを選択'
                         ]
@@ -879,29 +880,29 @@
                             '<strong>異なるパラメータ数を比較</strong> — Qwen 32B vs Llama 70Bは公平なテストではない',
                             '<strong>多言語ベンチマークを無視</strong> — 非英語タスクではQwenが圧倒的',
                             '<strong>最新版が最善と思い込む</strong> — 古い量子化版の方がサポートが充実していることもある',
-                            '<strong>Mistral Small 3.1を見落とす</strong> — Q5で22 GBに収まり、多くのタスクでLlama 8Bを超える',
-                            '<strong>1つのベンチマークで決断</strong> — MMLU、HumanEval、MATHは異なる能力を測定'
+                            '<strong>Mistral Small 3.1を見落とす</strong> — Q5で22 GBに収まり、多くのタスクでLlama 3.3 8Bを超える',
+                            '<strong>1つのベンチマークで決断</strong> — MMLU、SWE-bench、MATHは異なる能力を測定'
                         ]
                     },
                     {
                         type: 'faq',
                         h2: 'よくある質問',
                         faqs: [
-                            { q: 'コーディングに最適なのは？', a: 'Qwen2.5がすべてのサイズで最適。Qwen2.5 72B：87% HumanEval。Llama 3.3 70B：88% — 70Bのみわずかに上回る。' },
-                            { q: '3つとも8 GB VRAMで動く？', a: 'はい。Q4量子化でQwen2.5 7B：約4.7 GB、Llama 3.1 8B：約5.5 GB、Mistral 7B：約4.5 GB。' },
-                            { q: '70BスケールでQwen2.5とLlama 3.3はどちらが優れている？', a: 'ほぼ同等。Qwenはコーディング・数学・多言語で勝る。LlamaはHumanEval（88% vs 87%）と英語ライティングで勝る。' }
+                            { q: 'コーディングに最適なのは？', a: 'Qwen 3.6 27Bが77.2% SWE-benchでリード — 最高の密なコーディングモデル。マルチファイルのエージェント型コーディングにはMistral Devstral Small 24B。' },
+                            { q: '3つとも8 GB VRAMで動く？', a: 'はい。Q4量子化でQwen3 8B：約5 GB、Llama 3.3 8B：約5.5 GB、Mistral Small v0.3：約4.5 GB。' },
+                            { q: '70BスケールでQwen3とLlama 3.3はどちらが優れている？', a: 'ほぼ同等。Qwenはコーディング・数学・多言語で勝る。Llamaは最も広くファインチューニングされ、最大のエコシステムサポートを持つ。' }
                         ]
                     },
                     {
                         type: 'list',
                         h2: 'クイック決定ガイド',
                         items: [
-                            '<strong>コーディングタスク</strong> → Qwen2.5（任意サイズ）',
-                            '<strong>英語ライティング / 一般チャット</strong> → Llama 3.x',
-                            '<strong>英語以外の言語</strong> → Qwen2.5（29言語）',
+                            '<strong>コーディングタスク</strong> → Qwen 3.6 27B',
+                            '<strong>英語ライティング / 一般チャット</strong> → Llama 3.x/4',
+                            '<strong>英語以外の言語</strong> → Qwen3（29言語）',
                             '<strong>16 GB RAM内での最高品質</strong> → Mistral Small 3.1',
-                            '<strong>最初のモデル / 8 GB環境</strong> → Llama 3.2 3BまたはMistral 7B',
-                            '<strong>最高品質（40 GB+）</strong> → Qwen2.5 72BまたはLlama 3.3 70B'
+                            '<strong>最初のモデル / 8 GB環境</strong> → Llama 4 3BまたはMistral Small v0.3',
+                            '<strong>最高品質（40 GB+）</strong> → Qwen3 72BまたはLlama 3.3 70B'
                         ]
                     },
                     {

@@ -272,6 +272,7 @@
     }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
             * {
                 margin: 0;
                 padding: 0;
@@ -459,7 +460,7 @@
                         intro: '5 minutes. No code.',
                         items: [
                             '<strong>1.</strong> brew install ollama (or download Windows installer)',
-                            '<strong>2.</strong> ollama run llama3.1:8b (downloads & runs model)',
+                            '<strong>2.</strong> ollama run llama3.2 (downloads & runs model)',
                             '<strong>3.</strong> Open localhost:11434 in browser',
                             '<strong>4.</strong> Start chatting. Done.',
                         ]
@@ -470,7 +471,7 @@
                         intro: '30 minutes. Python 3.10+',
                         items: [
                             '<strong>1.</strong> pip install vllm torch',
-                            '<strong>2.</strong> python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --port 8000',
+                            '<strong>2.</strong> python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.3-8B-Instruct --port 8000',
                             '<strong>3.</strong> Test: curl http://localhost:8000/v1/chat/completions',
                             '<strong>4.</strong> Integrate into IDE or scripts. Batch requests in parallel.',
                         ]
@@ -531,7 +532,7 @@
                             '<strong>2.</strong> No timeout on requests → client hangs forever',
                             '<strong>3.</strong> Forgetting --tensor-parallel-size for multi-GPU',
                             '<strong>4.</strong> Not setting CUDA_VISIBLE_DEVICES → vLLM uses all GPUs',
-                            '<strong>5.</strong> Using Llama 2 in 2026. Deprecated. Use Llama 3.1.',
+                            '<strong>5.</strong> Using outdated Llama models in 2026. Deprecated. Use Llama 3.3 8B Instruct.',
                         ]
                     },
                     {
@@ -617,7 +618,7 @@
                         intro: '5 Minuten. Kein Code erforderlich.',
                         items: [
                             '<strong>1.</strong> brew install ollama (oder Windows-Installer)',
-                            '<strong>2.</strong> ollama run llama3.1:8b (lädt Modell und startet es)',
+                            '<strong>2.</strong> ollama run llama3.2 (lädt Modell und startet es)',
                             '<strong>3.</strong> Öffnen Sie localhost:11434 im Browser',
                             '<strong>4.</strong> Beginnen Sie zu chatten. Fertig.',
                         ]
@@ -628,7 +629,7 @@
                         intro: '30 Minuten. Python 3.10+',
                         items: [
                             '<strong>1.</strong> pip install vllm torch',
-                            '<strong>2.</strong> python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --port 8000',
+                            '<strong>2.</strong> python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.3-8B-Instruct --port 8000',
                             '<strong>3.</strong> Test: curl http://localhost:8000/v1/chat/completions',
                             '<strong>4.</strong> Integration in IDE oder Skripte. Batch-Anfragen parallel.',
                         ]
@@ -689,7 +690,7 @@
                             '<strong>2.</strong> Keine Timeout auf Anfragen → Client hängt',
                             '<strong>3.</strong> --tensor-parallel-size vergessen → Multi-GPU funktioniert nicht',
                             '<strong>4.</strong> CUDA_VISIBLE_DEVICES nicht setzen → alle GPUs verwendet',
-                            '<strong>5.</strong> Llama 2 in 2026 verwenden. Veraltet. Llama 3.1 nutzen.',
+                            '<strong>5.</strong> Veraltete Llama-Modelle 2026 verwenden. Veraltet. Llama 3.3 8B Instruct nutzen.',
                         ]
                     },
                     {
@@ -775,7 +776,7 @@
                         intro: '5 minutes. Pas de code.',
                         items: [
                             '<strong>1.</strong> brew install ollama (ou installer Windows)',
-                            '<strong>2.</strong> ollama run llama3.1:8b (télécharge & lance)',
+                            '<strong>2.</strong> ollama run llama3.2 (télécharge & lance)',
                             '<strong>3.</strong> Ouvrez localhost:11434 dans navigateur',
                             '<strong>4.</strong> Commencez à chatter. Terminé.',
                         ]
@@ -786,7 +787,7 @@
                         intro: '30 minutes. Python 3.10+',
                         items: [
                             '<strong>1.</strong> pip install vllm torch',
-                            '<strong>2.</strong> python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --port 8000',
+                            '<strong>2.</strong> python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.3-8B-Instruct --port 8000',
                             '<strong>3.</strong> Test: curl http://localhost:8000/v1/chat/completions',
                             '<strong>4.</strong> Intégrez dans IDE ou scripts. Requêtes batch en parallèle.',
                         ]
@@ -847,7 +848,7 @@
                             '<strong>2.</strong> Pas de timeout sur requêtes → client se bloque',
                             '<strong>3.</strong> Oublier --tensor-parallel-size pour multi-GPU',
                             '<strong>4.</strong> CUDA_VISIBLE_DEVICES non défini → toutes les GPUs utilisées',
-                            '<strong>5.</strong> Utiliser Llama 2 en 2026. Dépréciée. Utilisez Llama 3.1.',
+                            '<strong>5.</strong> Utiliser des modèles Llama obsolètes en 2026. Déprécié. Utilisez Llama 3.3 8B Instruct.',
                         ]
                     },
                     {
@@ -933,7 +934,7 @@
                         intro: '5分。コード不要。',
                         items: [
                             '<strong>1.</strong> brew install ollama（またはWindowsインストーラ）',
-                            '<strong>2.</strong> ollama run llama3.1:8b（ダウンロード＆実行）',
+                            '<strong>2.</strong> ollama run llama3.2（ダウンロード＆実行）',
                             '<strong>3.</strong> localhost:11434をブラウザで開く',
                             '<strong>4.</strong> チャット開始。完了。',
                         ]
@@ -944,7 +945,7 @@
                         intro: '30分。Python 3.10+',
                         items: [
                             '<strong>1.</strong> pip install vllm torch',
-                            '<strong>2.</strong> python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --port 8000',
+                            '<strong>2.</strong> python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.3-8B-Instruct --port 8000',
                             '<strong>3.</strong> テスト: curl http://localhost:8000/v1/chat/completions',
                             '<strong>4.</strong> IDEまたはスクリプトに統合。バッチリクエストを並列処理。',
                         ]
@@ -1005,7 +1006,7 @@
                             '<strong>2.</strong> リクエストにタイムアウトなし → クライアント停止',
                             '<strong>3.</strong> マルチGPUに--tensor-parallel-size忘れ',
                             '<strong>4.</strong> CUDA_VISIBLE_DEVICES未設定 → すべてのGPU使用',
-                            '<strong>5.</strong> 2026年にLlama 2使用。廃止予定。Llama 3.1使用。',
+                            '<strong>5.</strong> 2026年に旧Llamaモデルを使用。廃止予定。Llama 3.3 8B Instructを使用。',
                         ]
                     },
                     {
@@ -1091,7 +1092,7 @@
                         intro: '5分钟。无需代码。',
                         items: [
                             '<strong>1.</strong> brew install ollama（或下载Windows安装程序）',
-                            '<strong>2.</strong> ollama run llama3.1:8b（下载并运行）',
+                            '<strong>2.</strong> ollama run llama3.2（下载并运行）',
                             '<strong>3.</strong> 在浏览器中打开localhost:11434',
                             '<strong>4.</strong> 开始聊天。完成。',
                         ]
@@ -1102,7 +1103,7 @@
                         intro: '30分钟。Python 3.10+',
                         items: [
                             '<strong>1.</strong> pip install vllm torch',
-                            '<strong>2.</strong> python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --port 8000',
+                            '<strong>2.</strong> python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.3-8B-Instruct --port 8000',
                             '<strong>3.</strong> 测试：curl http://localhost:8000/v1/chat/completions',
                             '<strong>4.</strong> 集成到IDE或脚本。并行批量请求。',
                         ]
@@ -1163,7 +1164,7 @@
                             '<strong>2.</strong> 请求无超时 → 客户端永久挂起',
                             '<strong>3.</strong> 遗漏--tensor-parallel-size多GPU标志',
                             '<strong>4.</strong> 未设置CUDA_VISIBLE_DEVICES → 使用所有GPU',
-                            '<strong>5.</strong> 在2026年使用Llama 2。已废弃。改用Llama 3.1。',
+                            '<strong>5.</strong> 在2026年使用过时的Llama模型。已废弃。改用Llama 3.3 8B Instruct。',
                         ]
                     },
                     {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fastest Local LLMs for Low-End PCs | PromptQuorum</title>
-    <meta name="description" content="Interactive presentation: fastest local LLMs for low-end PCs. CPU-only: 5–15 tok/sec. 4GB GPU: 20–40 tok/sec. 8GB GPU: 25–60 tok/sec." />
+    <meta name="description" content="Interactive presentation: fastest local LLMs for low-end PCs. 4 GB RAM: 25–40 tok/s. 8 GB RAM: 15–25 tok/s. 16 GB RAM: 8–15 tok/s." />
     <meta property="og:title" content="Fastest Local LLMs for Low-End PCs — PromptQuorum" />
     <meta property="og:description" content="Hardware-matched model picks, quantization guide, and real benchmarks for low-end PCs." />
     <meta property="og:type" content="website" />
@@ -260,6 +260,7 @@
     }
 
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
             * { margin: 0; padding: 0; }
 
             html, body {
@@ -366,19 +367,19 @@
           {
             type: 'title',
             h1: 'Fastest Local LLMs for Low-End PCs',
-            subtitle: 'CPU only: 5–15 tok/sec · 4 GB GPU: 20–40 tok/sec · 8 GB GPU: 25–60 tok/sec',
+            subtitle: '4 GB RAM: 25–40 tok/s · 8 GB RAM: 15–25 tok/s · 16 GB RAM: 8–15 tok/s',
             link: BASE
           },
           {
             type: 'list',
             h2: 'Key Takeaways by Hardware Tier',
             items: [
-              '<strong>CPU only (no GPU):</strong> Phi-3 Mini 3.8B at 5–15 tok/sec',
-              '<strong>4 GB VRAM:</strong> TinyLlama 1.1B Q5 at 20–40 tok/sec',
-              '<strong>6 GB VRAM:</strong> Phi-3 Mini Q5 at 15–30 tok/sec',
-              '<strong>8 GB VRAM (sweet spot):</strong> Mistral 7B Q4 at 25–60 tok/sec',
-              '<strong>16 GB+:</strong> 13B models Q4 at 20–50 tok/sec',
-              '<strong>Quality ranking:</strong> 13B > Mistral 7B > Phi-3 Mini > TinyLlama'
+              '<strong>4 GB RAM, CPU only:</strong> Qwen3 1.7B Q4_K_M — 25–40 tok/s. Fastest response on minimal hardware.',
+              '<strong>8 GB RAM, CPU only (sweet spot):</strong> Phi-4-mini 3.8B Q4_K_M — 15–25 tok/s. Coding and reasoning on old laptops.',
+              '<strong>8 GB RAM + Intel Iris iGPU:</strong> Qwen3 4B — 12–20 tok/s with partial GPU offload.',
+              '<strong>16 GB RAM, CPU only:</strong> Qwen3 8B Q4_K_M — 8–15 tok/s. Strong quality, no GPU needed.',
+              '<strong>16 GB RAM + iGPU:</strong> Llama 3.2 3B or Qwen3 4B — 20–35 tok/s with layer offload.',
+              '<strong>Winner verdict:</strong> Phi-4-mini (3.8B) at Q4_K_M is the sweet spot for most low-end PCs — fits 8 GB RAM, 15–25 tok/s on CPU.'
             ]
           },
           {
@@ -386,18 +387,18 @@
             h2: 'The Core Rule: Match Hardware to Model',
             line1: '❌ Wrong model = 4–10× speed wasted',
             line2: '✅ Right model = max speed for your hardware',
-            tip: 'GPU always beats CPU. Even 4 GB VRAM gives 4× more speed than CPU-only.'
+            tip: 'If you have any GPU (even integrated), use it. CPU is last resort.'
           },
           {
             type: 'table',
             h2: 'Fastest Model for Your Hardware',
             columns: ['Hardware', 'Best Model', 'Speed'],
             rows: [
-              { 'Hardware': 'CPU only', 'Best Model': 'Phi-3 Mini Q4', 'Speed': '5–15 t/s' },
-              { 'Hardware': '4 GB GPU', 'Best Model': 'TinyLlama 1B Q5', 'Speed': '20–40 t/s' },
-              { 'Hardware': '6 GB GPU', 'Best Model': 'Phi-3 Mini Q5', 'Speed': '15–30 t/s' },
-              { 'Hardware': '8 GB GPU', 'Best Model': 'Mistral 7B Q4', 'Speed': '25–60 t/s' },
-              { 'Hardware': '16 GB+', 'Best Model': '13B models Q4', 'Speed': '20–50 t/s' }
+              { 'Hardware': '4 GB RAM, CPU only', 'Best Model': 'Qwen3 1.7B Q4_K_M', 'Speed': '25–40 t/s' },
+              { 'Hardware': '8 GB RAM, CPU only', 'Best Model': 'Phi-4-mini 3.8B Q4_K_M', 'Speed': '15–25 t/s' },
+              { 'Hardware': '8 GB RAM + Iris iGPU', 'Best Model': 'Qwen3 4B Q4_K_M', 'Speed': '12–20 t/s' },
+              { 'Hardware': '16 GB RAM, CPU only', 'Best Model': 'Qwen3 8B Q4_K_M', 'Speed': '8–15 t/s' },
+              { 'Hardware': '16 GB RAM + iGPU', 'Best Model': 'Llama 3.2 3B Q4_K_M', 'Speed': '20–35 t/s' }
             ]
           },
           {
@@ -405,11 +406,11 @@
             h2: 'One Model Per Hardware Tier',
             intro: 'Match your hardware — one correct answer per tier:',
             items: [
-              '<strong>CPU only →</strong> Phi-3 Mini Q4 (2.5 GB RAM, 5–15 tok/sec)',
-              '<strong>4 GB GPU →</strong> TinyLlama 1B Q5 (0.8 GB VRAM, 20–40 tok/sec)',
-              '<strong>6 GB GPU →</strong> Phi-3 Mini Q5 (2.7 GB VRAM, 15–30 tok/sec)',
-              '<strong>8 GB GPU →</strong> Mistral 7B Q4 (4.1 GB VRAM, 25–60 tok/sec) — sweet spot',
-              '<strong>16 GB+ →</strong> Llama 3.1 13B Q4 (7–9 GB VRAM, 20–50 tok/sec)'
+              '<strong>4 GB RAM, CPU only →</strong> Qwen3 1.7B Q4_K_M (25–40 tok/sec) — fastest response on minimal hardware',
+              '<strong>8 GB RAM, CPU only →</strong> Phi-4-mini 3.8B Q4_K_M (15–25 tok/sec) — sweet spot for coding and reasoning',
+              '<strong>8 GB RAM + Intel Iris iGPU →</strong> Qwen3 4B Q4_K_M (12–20 tok/sec) — partial GPU offload',
+              '<strong>16 GB RAM, CPU only →</strong> Qwen3 8B Q4_K_M (8–15 tok/sec) — strong quality, no GPU needed',
+              '<strong>16 GB RAM + iGPU →</strong> Llama 3.2 3B Q4_K_M (20–35 tok/sec) — smooth on integrated graphics'
             ]
           },
           {
@@ -417,11 +418,11 @@
             h2: 'Full Hardware Benchmark Table',
             columns: ['Hardware', 'Model', 'Quant', 'Speed'],
             rows: [
-              { 'Hardware': 'CPU only', 'Model': 'Phi-3 Mini', 'Quant': 'Q4', 'Speed': '5–15 t/s' },
-              { 'Hardware': '4 GB GPU', 'Model': 'TinyLlama 1B', 'Quant': 'Q5', 'Speed': '20–40 t/s' },
-              { 'Hardware': '6 GB GPU', 'Model': 'Phi-3 Mini', 'Quant': 'Q5', 'Speed': '15–30 t/s' },
-              { 'Hardware': '8 GB GPU', 'Model': 'Mistral 7B', 'Quant': 'Q4', 'Speed': '25–60 t/s' },
-              { 'Hardware': '16 GB+', 'Model': '13B models', 'Quant': 'Q4', 'Speed': '20–50 t/s' }
+              { 'Hardware': '4 GB RAM, CPU only', 'Model': 'Qwen3 1.7B', 'Quant': 'Q4_K_M', 'Speed': '25–40 t/s' },
+              { 'Hardware': '8 GB RAM, CPU only', 'Model': 'Phi-4-mini 3.8B', 'Quant': 'Q4_K_M', 'Speed': '15–25 t/s' },
+              { 'Hardware': '8 GB RAM + Iris iGPU', 'Model': 'Qwen3 4B', 'Quant': 'Q4_K_M', 'Speed': '12–20 t/s' },
+              { 'Hardware': '16 GB RAM, CPU only', 'Model': 'Qwen3 8B', 'Quant': 'Q4_K_M', 'Speed': '8–15 t/s' },
+              { 'Hardware': '16 GB RAM + iGPU', 'Model': 'Llama 3.2 3B', 'Quant': 'Q4_K_M', 'Speed': '20–35 t/s' }
             ]
           },
           {
@@ -454,7 +455,7 @@
               '<strong>Q3:</strong> ~3% quality loss, 62% savings. Acceptable for chat.',
               '<strong>Q2:</strong> ~10% quality loss, 75% savings. Last resort only.',
               '<strong>Q2 is 30% faster</strong> than Q4 due to less memory bandwidth.',
-              '<strong>Strategy:</strong> Quantize large models (Mistral 7B Q2) vs switching to tiny ones.'
+              '<strong>Strategy:</strong> Quantize large models (Mistral Small Q2) vs switching to tiny ones.'
             ]
           },
           {
@@ -472,11 +473,11 @@
             type: 'numbered',
             h2: 'Common Mistakes to Avoid',
             items: [
-              'Using TinyLlama on CPU — use Phi-3 Mini 3.8B instead.',
+              'Using TinyLlama on CPU — use Phi-4 Mini 3.8B instead.',
               'Not enabling CPU acceleration flags (AVX-512 or NEON).',
               'Forcing a 7B model into 4 GB with Q2 — causes OOM crashes.',
               'Assuming newer hardware always means faster inference — benchmark first.',
-              'Using wrong Ollama slug — ollama run phi loads Phi-2, not Phi-3 Mini.'
+              'Using wrong Ollama slug — ollama run phi loads Phi-2, not Phi-4 Mini.'
             ]
           },
           {
@@ -493,9 +494,9 @@
             type: 'faq',
             h2: 'Frequently Asked Questions',
             faqs: [
-              { q: 'What qualifies as a low-end PC?', a: 'Any machine with less than 8 GB dedicated VRAM, or a CPU-only system. Includes Intel Iris laptops, GTX 1060 desktops, and Chromebooks.' },
-              { q: 'Can I run Mistral 7B on a 4 GB GPU?', a: 'At Q2, yes. At Q4, expect OOM crash. Q2 gives ~30% speed gain but ~10% quality loss.' },
-              { q: 'How does quantization affect speed?', a: 'Q2 is 30% faster than Q4 because the model loads fewer bytes per pass. Use Q4 by default; drop to Q2 only if OOM.' }
+              { q: 'What qualifies as a low-end PC?', a: 'Any CPU-only machine with no discrete GPU and 4–16 GB of system RAM. Includes laptops with Intel Iris or AMD Radeon integrated graphics, older desktops, and mini PCs like the Intel N100.' },
+              { q: 'Can I run a 7B-class model with no GPU at all?', a: 'Yes — Qwen3 8B Q4_K_M runs at 8–15 tok/s on 16 GB RAM, CPU-only. It is slower than the smaller picks but delivers noticeably stronger quality. On 8 GB RAM, stick to Phi-4-mini (3.8B) instead.' },
+              { q: 'How does quantization affect speed?', a: 'Q2 is about 30% faster than Q4 because it loads fewer bytes per forward pass, but carries a ~10% quality penalty. Use Q4_K_M by default; drop to Q3 only if it doesn\'t fit in RAM.' }
             ]
           },
           {
@@ -515,19 +516,19 @@
           {
             type: 'title',
             h1: 'Schnellste lokale LLMs für Low-End-PCs',
-            subtitle: 'Nur CPU: 5–15 Tok/Sek · 4 GB GPU: 20–40 Tok/Sek · 8 GB GPU: 25–60 Tok/Sek',
+            subtitle: '4 GB RAM: 25–40 Tok/s · 8 GB RAM: 15–25 Tok/s · 16 GB RAM: 8–15 Tok/s',
             link: BASE
           },
           {
             type: 'list',
             h2: 'Wichtige Erkenntnisse nach Hardware-Tier',
             items: [
-              '<strong>Nur CPU (kein GPU):</strong> Phi-3 Mini 3.8B mit 5–15 Tok/Sek',
-              '<strong>4 GB VRAM:</strong> TinyLlama 1.1B Q5 mit 20–40 Tok/Sek',
-              '<strong>6 GB VRAM:</strong> Phi-3 Mini Q5 mit 15–30 Tok/Sek',
-              '<strong>8 GB VRAM (optimaler Bereich):</strong> Mistral 7B Q4 mit 25–60 Tok/Sek',
-              '<strong>16 GB+:</strong> 13B-Modelle Q4 mit 20–50 Tok/Sek',
-              '<strong>Qualitätsranking:</strong> 13B > Mistral 7B > Phi-3 Mini > TinyLlama'
+              '<strong>4 GB RAM, nur CPU:</strong> Qwen3 1.7B Q4_K_M — 25–40 Tok/s. Schnellste Antwort auf minimaler Hardware.',
+              '<strong>8 GB RAM, nur CPU (Sweet Spot):</strong> Phi-4-mini 3.8B Q4_K_M — 15–25 Tok/s. Coding und Reasoning auf alten Notebooks.',
+              '<strong>8 GB RAM + Intel-Iris-iGPU:</strong> Qwen3 4B — 12–20 Tok/s mit partiellem GPU-Offload.',
+              '<strong>16 GB RAM, nur CPU:</strong> Qwen3 8B Q4_K_M — 8–15 Tok/s. Starke Qualität, keine GPU nötig.',
+              '<strong>16 GB RAM + iGPU:</strong> Llama 3.2 3B oder Qwen3 4B — 20–35 Tok/s mit Layer-Offload.',
+              '<strong>Fazit:</strong> Phi-4-mini (3.8B) bei Q4_K_M ist der Sweet Spot für die meisten Low-End-PCs — passt in 8 GB RAM, 15–25 Tok/s auf CPU.'
             ]
           },
           {
@@ -535,18 +536,18 @@
             h2: 'Grundregel: Hardware zum Modell passend auswählen',
             line1: '❌ Falsches Modell = 4–10× Geschwindigkeit verschenkt',
             line2: '✅ Richtiges Modell = maximale Geschwindigkeit für Ihre Hardware',
-            tip: 'GPU schlägt immer CPU. Selbst 4 GB VRAM bieten 4× mehr Geschwindigkeit als CPU.'
+            tip: 'Wenn Sie eine GPU haben (auch integriert), verwenden Sie diese. CPU ist die letzte Option.'
           },
           {
             type: 'table',
             h2: 'Schnellstes Modell für Ihre Hardware',
             columns: ['Hardware', 'Bestes Modell', 'Geschwindigkeit'],
             rows: [
-              { 'Hardware': 'Nur CPU', 'Bestes Modell': 'Phi-3 Mini Q4', 'Geschwindigkeit': '5–15 T/Sek' },
-              { 'Hardware': '4 GB GPU', 'Bestes Modell': 'TinyLlama 1B Q5', 'Geschwindigkeit': '20–40 T/Sek' },
-              { 'Hardware': '6 GB GPU', 'Bestes Modell': 'Phi-3 Mini Q5', 'Geschwindigkeit': '15–30 T/Sek' },
-              { 'Hardware': '8 GB GPU', 'Bestes Modell': 'Mistral 7B Q4', 'Geschwindigkeit': '25–60 T/Sek' },
-              { 'Hardware': '16 GB+', 'Bestes Modell': '13B-Modelle Q4', 'Geschwindigkeit': '20–50 T/Sek' }
+              { 'Hardware': '4 GB RAM, nur CPU', 'Bestes Modell': 'Qwen3 1.7B Q4_K_M', 'Geschwindigkeit': '25–40 T/Sek' },
+              { 'Hardware': '8 GB RAM, nur CPU', 'Bestes Modell': 'Phi-4-mini 3.8B Q4_K_M', 'Geschwindigkeit': '15–25 T/Sek' },
+              { 'Hardware': '8 GB RAM + Iris-iGPU', 'Bestes Modell': 'Qwen3 4B Q4_K_M', 'Geschwindigkeit': '12–20 T/Sek' },
+              { 'Hardware': '16 GB RAM, nur CPU', 'Bestes Modell': 'Qwen3 8B Q4_K_M', 'Geschwindigkeit': '8–15 T/Sek' },
+              { 'Hardware': '16 GB RAM + iGPU', 'Bestes Modell': 'Llama 3.2 3B Q4_K_M', 'Geschwindigkeit': '20–35 T/Sek' }
             ]
           },
           {
@@ -554,11 +555,11 @@
             h2: 'Ein Modell pro Hardware-Tier',
             intro: 'Eine klare Empfehlung pro Tier:',
             items: [
-              '<strong>Nur CPU →</strong> Phi-3 Mini Q4 (2,5 GB RAM, 5–15 Tok/Sek)',
-              '<strong>4 GB GPU →</strong> TinyLlama 1B Q5 (0,8 GB VRAM, 20–40 Tok/Sek)',
-              '<strong>6 GB GPU →</strong> Phi-3 Mini Q5 (2,7 GB VRAM, 15–30 Tok/Sek)',
-              '<strong>8 GB GPU →</strong> Mistral 7B Q4 (4,1 GB VRAM, 25–60 Tok/Sek) — optimal',
-              '<strong>16 GB+ →</strong> Llama 3.1 13B Q4 (7–9 GB VRAM, 20–50 Tok/Sek)'
+              '<strong>4 GB RAM, nur CPU →</strong> Qwen3 1.7B Q4_K_M (25–40 Tok/Sek) — schnellste Antwort auf minimaler Hardware',
+              '<strong>8 GB RAM, nur CPU →</strong> Phi-4-mini 3.8B Q4_K_M (15–25 Tok/Sek) — Sweet Spot für Coding und Reasoning',
+              '<strong>8 GB RAM + Intel-Iris-iGPU →</strong> Qwen3 4B Q4_K_M (12–20 Tok/Sek) — partieller GPU-Offload',
+              '<strong>16 GB RAM, nur CPU →</strong> Qwen3 8B Q4_K_M (8–15 Tok/Sek) — starke Qualität, keine GPU nötig',
+              '<strong>16 GB RAM + iGPU →</strong> Llama 3.2 3B Q4_K_M (20–35 Tok/Sek) — flüssig mit integrierter Grafik'
             ]
           },
           {
@@ -566,11 +567,11 @@
             h2: 'Hardware-Benchmark-Tabelle',
             columns: ['Hardware', 'Modell', 'Quant.', 'Geschwindigkeit'],
             rows: [
-              { 'Hardware': 'Nur CPU', 'Modell': 'Phi-3 Mini', 'Quant.': 'Q4', 'Geschwindigkeit': '5–15 T/Sek' },
-              { 'Hardware': '4 GB GPU', 'Modell': 'TinyLlama 1B', 'Quant.': 'Q5', 'Geschwindigkeit': '20–40 T/Sek' },
-              { 'Hardware': '6 GB GPU', 'Modell': 'Phi-3 Mini', 'Quant.': 'Q5', 'Geschwindigkeit': '15–30 T/Sek' },
-              { 'Hardware': '8 GB GPU', 'Modell': 'Mistral 7B', 'Quant.': 'Q4', 'Geschwindigkeit': '25–60 T/Sek' },
-              { 'Hardware': '16 GB+', 'Modell': '13B-Modelle', 'Quant.': 'Q4', 'Geschwindigkeit': '20–50 T/Sek' }
+              { 'Hardware': '4 GB RAM, nur CPU', 'Modell': 'Qwen3 1.7B', 'Quant.': 'Q4_K_M', 'Geschwindigkeit': '25–40 T/Sek' },
+              { 'Hardware': '8 GB RAM, nur CPU', 'Modell': 'Phi-4-mini 3.8B', 'Quant.': 'Q4_K_M', 'Geschwindigkeit': '15–25 T/Sek' },
+              { 'Hardware': '8 GB RAM + Iris-iGPU', 'Modell': 'Qwen3 4B', 'Quant.': 'Q4_K_M', 'Geschwindigkeit': '12–20 T/Sek' },
+              { 'Hardware': '16 GB RAM, nur CPU', 'Modell': 'Qwen3 8B', 'Quant.': 'Q4_K_M', 'Geschwindigkeit': '8–15 T/Sek' },
+              { 'Hardware': '16 GB RAM + iGPU', 'Modell': 'Llama 3.2 3B', 'Quant.': 'Q4_K_M', 'Geschwindigkeit': '20–35 T/Sek' }
             ]
           },
           {
@@ -603,7 +604,7 @@
               '<strong>Q3:</strong> ~3% Verlust, 62% Einsparung. Akzeptabel für Chat.',
               '<strong>Q2:</strong> ~10% Verlust, 75% Einsparung. Nur letzter Ausweg.',
               '<strong>Q2 ist 30% schneller</strong> als Q4 (weniger Speicherbandbreite).',
-              '<strong>Strategie:</strong> Große Modelle quantisieren (Mistral 7B Q2) statt Tiny-Modelle.'
+              '<strong>Strategie:</strong> Große Modelle quantisieren (Mistral Small Q2) statt Tiny-Modelle.'
             ]
           },
           {
@@ -621,11 +622,11 @@
             type: 'numbered',
             h2: 'Häufige Fehler vermeiden',
             items: [
-              'TinyLlama auf CPU verwenden — Phi-3 Mini 3.8B nehmen.',
+              'TinyLlama auf CPU verwenden — Phi-4 Mini 3.8B nehmen.',
               'CPU-Beschleunigungsflags (AVX-512/NEON) nicht aktivieren.',
               '7B-Modell mit Q2 in 4 GB zwingen — verursacht OOM-Abstürze.',
               'Annehmen, neuere Hardware bedeutet schnellere Inferenz — erst benchmarken.',
-              'Falschen Ollama-Slug verwenden — ollama run phi lädt Phi-2, nicht Phi-3.'
+              'Falschen Ollama-Slug verwenden — ollama run phi lädt Phi-2, nicht Phi-4-mini.'
             ]
           },
           {
@@ -642,9 +643,9 @@
             type: 'faq',
             h2: 'Häufig gestellte Fragen',
             faqs: [
-              { q: 'Was gilt als Low-End-PC?', a: 'Jedes Gerät mit weniger als 8 GB dedizierten VRAM oder nur CPU. Beinhaltet Intel Iris-Laptops, GTX 1060-Desktops und Chromebooks.' },
-              { q: 'Kann ich Mistral 7B auf 4 GB GPU ausführen?', a: 'Mit Q2 ja. Mit Q4 OOM-Absturz. Q2 bringt ~30% mehr Geschwindigkeit, aber ~10% Qualitätsverlust.' },
-              { q: 'Wie beeinflusst Quantisierung die Geschwindigkeit?', a: 'Q2 ist 30% schneller als Q4 wegen weniger Speicherbandbreite. Q4 als Standard; auf Q2 wechseln nur bei OOM.' }
+              { q: 'Was gilt als Low-End-PC?', a: 'Jede reine CPU-Maschine ohne dedizierte GPU mit 4–16 GB Systemspeicher. Dazu gehören Notebooks mit Intel Iris oder AMD Radeon integrierter Grafik, ältere Desktops und Mini-PCs wie der Intel N100.' },
+              { q: 'Kann ich ein 7B-Modell ganz ohne GPU ausführen?', a: 'Ja — Qwen3 8B bei Q4_K_M läuft mit 8–15 Tok/s bei 16 GB RAM, nur CPU. Es ist langsamer als die kleineren Optionen, liefert aber deutlich bessere Qualität. Bei 8 GB RAM bleiben Sie besser bei Phi-4-mini (3.8B).' },
+              { q: 'Wie beeinflusst Quantisierung die Geschwindigkeit?', a: 'Q2 ist etwa 30% schneller als Q4, weil pro Forward-Pass weniger Bytes geladen werden, hat aber eine ~10% Qualitätseinbuße. Verwenden Sie standardmäßig Q4_K_M; wechseln Sie nur zu Q3, wenn es nicht in den RAM passt.' }
             ]
           },
           {
@@ -664,19 +665,19 @@
           {
             type: 'title',
             h1: 'LLMs locaux les plus rapides pour PC bas de gamme',
-            subtitle: 'CPU seul : 5–15 tok/sec · 4 Go GPU : 20–40 tok/sec · 8 Go GPU : 25–60 tok/sec',
+            subtitle: '4 Go RAM : 25–40 tok/s · 8 Go RAM : 15–25 tok/s · 16 Go RAM : 8–15 tok/s',
             link: BASE
           },
           {
             type: 'list',
             h2: 'Points clés par niveau matériel',
             items: [
-              '<strong>CPU seul (sans GPU) :</strong> Phi-3 Mini 3.8B à 5–15 tok/sec',
-              '<strong>4 Go VRAM :</strong> TinyLlama 1.1B Q5 à 20–40 tok/sec',
-              '<strong>6 Go VRAM :</strong> Phi-3 Mini Q5 à 15–30 tok/sec',
-              '<strong>8 Go VRAM (optimum) :</strong> Mistral 7B Q4 à 25–60 tok/sec',
-              '<strong>16 Go+ :</strong> Modèles 13B Q4 à 20–50 tok/sec',
-              '<strong>Classement qualité :</strong> 13B > Mistral 7B > Phi-3 Mini > TinyLlama'
+              '<strong>4 Go de RAM, CPU seul :</strong> Qwen3 1.7B Q4_K_M — 25–40 tok/s. Réponse la plus rapide sur matériel minimal.',
+              '<strong>8 Go de RAM, CPU seul (sweet spot) :</strong> Phi-4-mini 3.8B Q4_K_M — 15–25 tok/s. Code et raisonnement sur vieux portables.',
+              '<strong>8 Go de RAM + iGPU Intel Iris :</strong> Qwen3 4B — 12–20 tok/s avec offload GPU partiel.',
+              '<strong>16 Go de RAM, CPU seul :</strong> Qwen3 8B Q4_K_M — 8–15 tok/s. Qualité solide, sans besoin de GPU.',
+              '<strong>16 Go de RAM + iGPU :</strong> Llama 3.2 3B ou Qwen3 4B — 20–35 tok/s avec offload de couches.',
+              '<strong>Verdict :</strong> Phi-4-mini (3.8B) en Q4_K_M est le sweet spot pour la plupart des PC bas de gamme — tient dans 8 Go de RAM, 15–25 tok/s sur CPU.'
             ]
           },
           {
@@ -684,18 +685,18 @@
             h2: 'La règle fondamentale : adapter le modèle au matériel',
             line1: '❌ Mauvais modèle = 4–10× de vitesse gaspillée',
             line2: '✅ Bon modèle = vitesse maximale pour votre matériel',
-            tip: 'Le GPU surpasse toujours le CPU. Même 4 Go VRAM donne 4× plus de vitesse.'
+            tip: 'Si vous avez un GPU (même intégré), utilisez-le. Le CPU est le dernier recours.'
           },
           {
             type: 'table',
             h2: 'Modèle le plus rapide pour votre matériel',
             columns: ['Matériel', 'Meilleur modèle', 'Vitesse'],
             rows: [
-              { 'Matériel': 'CPU seul', 'Meilleur modèle': 'Phi-3 Mini Q4', 'Vitesse': '5–15 t/s' },
-              { 'Matériel': '4 Go GPU', 'Meilleur modèle': 'TinyLlama 1B Q5', 'Vitesse': '20–40 t/s' },
-              { 'Matériel': '6 Go GPU', 'Meilleur modèle': 'Phi-3 Mini Q5', 'Vitesse': '15–30 t/s' },
-              { 'Matériel': '8 Go GPU', 'Meilleur modèle': 'Mistral 7B Q4', 'Vitesse': '25–60 t/s' },
-              { 'Matériel': '16 Go+', 'Meilleur modèle': 'Modèles 13B Q4', 'Vitesse': '20–50 t/s' }
+              { 'Matériel': '4 Go RAM, CPU seul', 'Meilleur modèle': 'Qwen3 1.7B Q4_K_M', 'Vitesse': '25–40 t/s' },
+              { 'Matériel': '8 Go RAM, CPU seul', 'Meilleur modèle': 'Phi-4-mini 3.8B Q4_K_M', 'Vitesse': '15–25 t/s' },
+              { 'Matériel': '8 Go RAM + iGPU Iris', 'Meilleur modèle': 'Qwen3 4B Q4_K_M', 'Vitesse': '12–20 t/s' },
+              { 'Matériel': '16 Go RAM, CPU seul', 'Meilleur modèle': 'Qwen3 8B Q4_K_M', 'Vitesse': '8–15 t/s' },
+              { 'Matériel': '16 Go RAM + iGPU', 'Meilleur modèle': 'Llama 3.2 3B Q4_K_M', 'Vitesse': '20–35 t/s' }
             ]
           },
           {
@@ -703,11 +704,11 @@
             h2: 'Un modèle par niveau matériel',
             intro: 'Une réponse claire par niveau :',
             items: [
-              '<strong>CPU seul →</strong> Phi-3 Mini Q4 (2,5 Go RAM, 5–15 tok/sec)',
-              '<strong>4 Go GPU →</strong> TinyLlama 1B Q5 (0,8 Go VRAM, 20–40 tok/sec)',
-              '<strong>6 Go GPU →</strong> Phi-3 Mini Q5 (2,7 Go VRAM, 15–30 tok/sec)',
-              '<strong>8 Go GPU →</strong> Mistral 7B Q4 (4,1 Go VRAM, 25–60 tok/sec) — idéal',
-              '<strong>16 Go+ →</strong> Llama 3.1 13B Q4 (7–9 Go VRAM, 20–50 tok/sec)'
+              '<strong>4 Go RAM, CPU seul →</strong> Qwen3 1.7B Q4_K_M (25–40 tok/sec) — réponse la plus rapide sur matériel minimal',
+              '<strong>8 Go RAM, CPU seul →</strong> Phi-4-mini 3.8B Q4_K_M (15–25 tok/sec) — sweet spot pour le code et le raisonnement',
+              '<strong>8 Go RAM + iGPU Intel Iris →</strong> Qwen3 4B Q4_K_M (12–20 tok/sec) — offload GPU partiel',
+              '<strong>16 Go RAM, CPU seul →</strong> Qwen3 8B Q4_K_M (8–15 tok/sec) — qualité solide, sans besoin de GPU',
+              '<strong>16 Go RAM + iGPU →</strong> Llama 3.2 3B Q4_K_M (20–35 tok/sec) — fluide avec graphiques intégrés'
             ]
           },
           {
@@ -715,11 +716,11 @@
             h2: 'Tableau complet des benchmarks',
             columns: ['Matériel', 'Modèle', 'Quant.', 'Vitesse'],
             rows: [
-              { 'Matériel': 'CPU seul', 'Modèle': 'Phi-3 Mini', 'Quant.': 'Q4', 'Vitesse': '5–15 t/s' },
-              { 'Matériel': '4 Go GPU', 'Modèle': 'TinyLlama 1B', 'Quant.': 'Q5', 'Vitesse': '20–40 t/s' },
-              { 'Matériel': '6 Go GPU', 'Modèle': 'Phi-3 Mini', 'Quant.': 'Q5', 'Vitesse': '15–30 t/s' },
-              { 'Matériel': '8 Go GPU', 'Modèle': 'Mistral 7B', 'Quant.': 'Q4', 'Vitesse': '25–60 t/s' },
-              { 'Matériel': '16 Go+', 'Modèle': 'Modèles 13B', 'Quant.': 'Q4', 'Vitesse': '20–50 t/s' }
+              { 'Matériel': '4 Go RAM, CPU seul', 'Modèle': 'Qwen3 1.7B', 'Quant.': 'Q4_K_M', 'Vitesse': '25–40 t/s' },
+              { 'Matériel': '8 Go RAM, CPU seul', 'Modèle': 'Phi-4-mini 3.8B', 'Quant.': 'Q4_K_M', 'Vitesse': '15–25 t/s' },
+              { 'Matériel': '8 Go RAM + iGPU Iris', 'Modèle': 'Qwen3 4B', 'Quant.': 'Q4_K_M', 'Vitesse': '12–20 t/s' },
+              { 'Matériel': '16 Go RAM, CPU seul', 'Modèle': 'Qwen3 8B', 'Quant.': 'Q4_K_M', 'Vitesse': '8–15 t/s' },
+              { 'Matériel': '16 Go RAM + iGPU', 'Modèle': 'Llama 3.2 3B', 'Quant.': 'Q4_K_M', 'Vitesse': '20–35 t/s' }
             ]
           },
           {
@@ -752,7 +753,7 @@
               '<strong>Q3 :</strong> ~3% de perte, 62% économies. Acceptable pour le chat.',
               '<strong>Q2 :</strong> ~10% de perte, 75% économies. Dernier recours uniquement.',
               '<strong>Q2 est 30% plus rapide</strong> que Q4 (moins de bande passante mémoire).',
-              '<strong>Stratégie :</strong> Quantifier grands modèles (Mistral 7B Q2) plutôt que petits.'
+              '<strong>Stratégie :</strong> Quantifier grands modèles (Mistral Small Q2) plutôt que petits.'
             ]
           },
           {
@@ -770,11 +771,11 @@
             type: 'numbered',
             h2: 'Erreurs courantes à éviter',
             items: [
-              'Utiliser TinyLlama sur CPU — utiliser Phi-3 Mini 3.8B à la place.',
+              'Utiliser TinyLlama sur CPU — utiliser Phi-4 Mini 3.8B à la place.',
               "Ne pas activer les flags d'accélération CPU (AVX-512/NEON).",
               'Forcer 7B dans 4 Go avec Q2 — provoque des crashs OOM.',
               'Supposer que matériel plus récent = inférence plus rapide — tester avant.',
-              "Utiliser le mauvais slug Ollama — ollama run phi charge Phi-2 pas Phi-3."
+              "Utiliser le mauvais slug Ollama — ollama run phi charge Phi-2, pas Phi-4-mini."
             ]
           },
           {
@@ -791,9 +792,9 @@
             type: 'faq',
             h2: 'Questions fréquentes',
             faqs: [
-              { q: "Qu'est-ce qu'un PC bas de gamme ?", a: 'Toute machine avec moins de 8 Go VRAM dédié ou CPU seul. Inclut laptops Intel Iris, desktops GTX 1060 et Chromebooks.' },
-              { q: 'Puis-je exécuter Mistral 7B sur 4 Go GPU ?', a: 'En Q2 oui. En Q4, crash OOM. Q2 donne ~30% de vitesse en plus mais ~10% de perte de qualité.' },
-              { q: 'Comment la quantification affecte-t-elle la vitesse ?', a: 'Q2 est 30% plus rapide que Q4 car moins de bande passante mémoire. Q4 par défaut ; Q2 uniquement si OOM.' }
+              { q: "Qu'est-ce qu'un PC bas de gamme ?", a: "Toute machine CPU seul sans GPU dédié avec 4–16 Go de RAM système. Inclut les portables avec graphiques intégrés Intel Iris ou AMD Radeon, les vieux PC de bureau, et les mini PC comme l'Intel N100." },
+              { q: 'Puis-je exécuter un modèle de classe 7B sans aucun GPU ?', a: "Oui — Qwen3 8B en Q4_K_M tourne à 8–15 tok/s avec 16 Go de RAM, CPU seul. C'est plus lent que les options plus petites mais offre une qualité nettement meilleure. Avec 8 Go de RAM, préférez Phi-4-mini (3.8B)." },
+              { q: 'Comment la quantification affecte-t-elle la vitesse ?', a: "Q2 est environ 30% plus rapide que Q4 car il charge moins d'octets par passe, mais entraîne une pénalité qualité de ~10%. Utilisez Q4_K_M par défaut ; ne descendez à Q3 que si cela ne tient pas dans la RAM." }
             ]
           },
           {
@@ -813,19 +814,19 @@
           {
             type: 'title',
             h1: '低スペックPCで動く最速ローカルLLM',
-            subtitle: 'CPUのみ：5〜15t/s · 4GB GPU：20〜40t/s · 8GB GPU：25〜60t/s',
+            subtitle: 'RAM 4 GB：25〜40トークン/秒 · RAM 8 GB：15〜25トークン/秒 · RAM 16 GB：8〜15トークン/秒',
             link: BASE
           },
           {
             type: 'list',
             h2: 'ハードウェア別の重要ポイント',
             items: [
-              '<strong>CPUのみ（GPUなし）：</strong>Phi-3 Mini 3.8B、5〜15トークン/秒',
-              '<strong>4GB VRAM：</strong>TinyLlama 1.1B Q5、20〜40トークン/秒',
-              '<strong>6GB VRAM：</strong>Phi-3 Mini Q5、15〜30トークン/秒',
-              '<strong>8GB VRAM（最適）：</strong>Mistral 7B Q4、25〜60トークン/秒',
-              '<strong>16GB+：</strong>13Bモデル Q4、20〜50トークン/秒',
-              '<strong>品質ランキング：</strong>13B > Mistral 7B > Phi-3 Mini > TinyLlama'
+              '<strong>RAM 4 GB、CPU専用：</strong>Qwen3 1.7B Q4_K_M — 25〜40トークン/秒。最小ハードウェアで最速の応答。',
+              '<strong>RAM 8 GB、CPU専用（スイートスポット）：</strong>Phi-4-mini 3.8B Q4_K_M — 15〜25トークン/秒。古いノートPCでコーディングと推論。',
+              '<strong>RAM 8 GB + Intel Iris iGPU：</strong>Qwen3 4B — 部分GPUオフロードで12〜20トークン/秒。',
+              '<strong>RAM 16 GB、CPU専用：</strong>Qwen3 8B Q4_K_M — 8〜15トークン/秒。GPU不要で高い品質。',
+              '<strong>RAM 16 GB + iGPU：</strong>Llama 3.2 3BまたはQwen3 4B — レイヤーオフロードで20〜35トークン/秒。',
+              '<strong>結論：</strong>Phi-4-mini（3.8B）のQ4_K_Mはほとんどの低スペックPCでスイートスポット — RAM 8GBに収まり、CPUで15〜25トークン/秒。'
             ]
           },
           {
@@ -833,18 +834,18 @@
             h2: '基本ルール：ハードウェアに合ったモデルを選ぶ',
             line1: '❌ 間違ったモデル = 4〜10倍の速度を無駄に',
             line2: '✅ 正しいモデル = ハードウェア最大速度を実現',
-            tip: 'GPUは常にCPUより速い。4GB VRAMでもCPUより4倍速い。'
+            tip: 'GPUがあれば（統合でも）使用する。CPUは最終手段。'
           },
           {
             type: 'table',
             h2: 'あなたのハードウェアに最速のモデルは？',
             columns: ['ハードウェア', '最適モデル', '速度'],
             rows: [
-              { 'ハードウェア': 'CPUのみ', '最適モデル': 'Phi-3 Mini Q4', '速度': '5〜15t/s' },
-              { 'ハードウェア': '4GB GPU', '最適モデル': 'TinyLlama 1B Q5', '速度': '20〜40t/s' },
-              { 'ハードウェア': '6GB GPU', '最適モデル': 'Phi-3 Mini Q5', '速度': '15〜30t/s' },
-              { 'ハードウェア': '8GB GPU', '最適モデル': 'Mistral 7B Q4', '速度': '25〜60t/s' },
-              { 'ハードウェア': '16GB+', '最適モデル': '13Bモデル Q4', '速度': '20〜50t/s' }
+              { 'ハードウェア': 'RAM 4 GB、CPU専用', '最適モデル': 'Qwen3 1.7B Q4_K_M', '速度': '25〜40t/s' },
+              { 'ハードウェア': 'RAM 8 GB、CPU専用', '最適モデル': 'Phi-4-mini 3.8B Q4_K_M', '速度': '15〜25t/s' },
+              { 'ハードウェア': 'RAM 8 GB + Iris iGPU', '最適モデル': 'Qwen3 4B Q4_K_M', '速度': '12〜20t/s' },
+              { 'ハードウェア': 'RAM 16 GB、CPU専用', '最適モデル': 'Qwen3 8B Q4_K_M', '速度': '8〜15t/s' },
+              { 'ハードウェア': 'RAM 16 GB + iGPU', '最適モデル': 'Llama 3.2 3B Q4_K_M', '速度': '20〜35t/s' }
             ]
           },
           {
@@ -852,11 +853,11 @@
             h2: 'ハードウェア別モデル選択：1ティア1答え',
             intro: 'ハードウェアに合わせた明確な推奨：',
             items: [
-              '<strong>CPUのみ →</strong> Phi-3 Mini Q4（RAM 2.5GB、5〜15t/s）',
-              '<strong>4GB GPU →</strong> TinyLlama 1B Q5（VRAM 0.8GB、20〜40t/s）',
-              '<strong>6GB GPU →</strong> Phi-3 Mini Q5（VRAM 2.7GB、15〜30t/s）',
-              '<strong>8GB GPU →</strong> Mistral 7B Q4（VRAM 4.1GB、25〜60t/s）— 最適',
-              '<strong>16GB+ →</strong> Llama 3.1 13B Q4（VRAM 7〜9GB、20〜50t/s）'
+              '<strong>RAM 4 GB、CPU専用 →</strong> Qwen3 1.7B Q4_K_M（25〜40トークン/秒）— 最小ハードウェアで最速の応答',
+              '<strong>RAM 8 GB、CPU専用 →</strong> Phi-4-mini 3.8B Q4_K_M（15〜25トークン/秒）— コーディングと推論のスイートスポット',
+              '<strong>RAM 8 GB + Intel Iris iGPU →</strong> Qwen3 4B Q4_K_M（12〜20トークン/秒）— 部分GPUオフロード',
+              '<strong>RAM 16 GB、CPU専用 →</strong> Qwen3 8B Q4_K_M（8〜15トークン/秒）— GPU不要で高い品質',
+              '<strong>RAM 16 GB + iGPU →</strong> Llama 3.2 3B Q4_K_M（20〜35トークン/秒）— 統合グラフィックスでスムーズ'
             ]
           },
           {
@@ -864,11 +865,11 @@
             h2: 'ハードウェアベンチマーク表',
             columns: ['ハードウェア', 'モデル', '量子化', '速度'],
             rows: [
-              { 'ハードウェア': 'CPUのみ', 'モデル': 'Phi-3 Mini', '量子化': 'Q4', '速度': '5〜15t/s' },
-              { 'ハードウェア': '4GB GPU', 'モデル': 'TinyLlama 1B', '量子化': 'Q5', '速度': '20〜40t/s' },
-              { 'ハードウェア': '6GB GPU', 'モデル': 'Phi-3 Mini', '量子化': 'Q5', '速度': '15〜30t/s' },
-              { 'ハードウェア': '8GB GPU', 'モデル': 'Mistral 7B', '量子化': 'Q4', '速度': '25〜60t/s' },
-              { 'ハードウェア': '16GB+', 'モデル': '13Bモデル', '量子化': 'Q4', '速度': '20〜50t/s' }
+              { 'ハードウェア': 'RAM 4 GB、CPU専用', 'モデル': 'Qwen3 1.7B', '量子化': 'Q4_K_M', '速度': '25〜40t/s' },
+              { 'ハードウェア': 'RAM 8 GB、CPU専用', 'モデル': 'Phi-4-mini 3.8B', '量子化': 'Q4_K_M', '速度': '15〜25t/s' },
+              { 'ハードウェア': 'RAM 8 GB + Iris iGPU', 'モデル': 'Qwen3 4B', '量子化': 'Q4_K_M', '速度': '12〜20t/s' },
+              { 'ハードウェア': 'RAM 16 GB、CPU専用', 'モデル': 'Qwen3 8B', '量子化': 'Q4_K_M', '速度': '8〜15t/s' },
+              { 'ハードウェア': 'RAM 16 GB + iGPU', 'モデル': 'Llama 3.2 3B', '量子化': 'Q4_K_M', '速度': '20〜35t/s' }
             ]
           },
           {
@@ -901,7 +902,7 @@
               '<strong>Q3：</strong>品質損失〜3%、62%節約。チャットに許容範囲。',
               '<strong>Q2：</strong>品質損失〜10%、75%節約。最後の手段のみ。',
               '<strong>Q2はQ4より30%速い</strong>（メモリ帯域幅が少ないため）。',
-              '<strong>戦略：</strong>小型モデルより大型モデルを量子化（Mistral 7B Q2）。'
+              '<strong>戦略：</strong>小型モデルより大型モデルを量子化（Mistral Small Q2）。'
             ]
           },
           {
@@ -919,11 +920,11 @@
             type: 'numbered',
             h2: 'よくある間違い',
             items: [
-              'CPU上でTinyLlamaを使う — 代わりにPhi-3 Mini 3.8Bを使用。',
+              'CPU上でTinyLlamaを使う — 代わりにPhi-4 Mini 3.8Bを使用。',
               'CPUアクセラレーションフラグ（AVX-512/NEON）を有効化しない。',
               '4GBにQ2で7Bモデルを無理に入れる — OOMクラッシュを引き起こす。',
               '新しいハードウェア＝高速推論と仮定する — まずベンチマーク。',
-              '間違ったOllamaスラグを使用 — ollama run phiはPhi-2をロード。'
+              '間違ったOllamaスラグを使用 — ollama run phiはPhi-4-miniではなくPhi-2をロード。'
             ]
           },
           {
@@ -940,9 +941,9 @@
             type: 'faq',
             h2: 'よくある質問',
             faqs: [
-              { q: '低スペックPCとは何ですか？', a: '8GB未満の専用VRAMまたはCPU専用システム。Intel Irisラップトップ、GTX 1060デスクトップ、Chromebookが含まれる。' },
-              { q: '4GB GPUでMistral 7Bは動きますか？', a: 'Q2では動く。Q4ではOOMクラッシュ。Q2は速度約30%向上だが品質約10%低下。' },
-              { q: '量子化は速度にどう影響しますか？', a: 'Q2はQ4より30%速い（メモリ帯域幅削減）。デフォルトはQ4；OOMの場合のみQ2に下げる。' }
+              { q: '低スペックPCとは何ですか？', a: '専用GPUのないCPU専用マシンで、システムRAMが4〜16 GBのもの。Intel IrisやAMD Radeon統合グラフィックスを搭載するノートPC、古いデスクトップ、Intel N100などのミニPCが該当。' },
+              { q: 'GPUなしで7Bクラスのモデルを実行できますか？', a: 'はい — Qwen3 8B（Q4_K_M）はRAM 16 GB、CPU専用で8〜15トークン/秒で動作します。より小さいモデルより遅いですが、品質は明らかに優れています。RAM 8 GBの場合はPhi-4-mini（3.8B）を使用してください。' },
+              { q: '量子化は速度にどう影響しますか？', a: 'Q2はフォワードパスごとにロードするバイト数が少ないためQ4より約30%速いですが、品質は約10%低下します。デフォルトはQ4_K_M；RAMに収まらない場合のみQ3に切り替え。' }
             ]
           },
           {
@@ -962,19 +963,19 @@
           {
             type: 'title',
             h1: '低配PC最快本地大语言模型',
-            subtitle: '纯CPU：5-15词/秒 · 4GB GPU：20-40词/秒 · 8GB GPU：25-60词/秒',
+            subtitle: '4GB内存：25–40 tok/s · 8GB内存：15–25 tok/s · 16GB内存：8–15 tok/s',
             link: BASE
           },
           {
             type: 'list',
             h2: '各硬件层级的核心要点',
             items: [
-              '<strong>纯CPU（无GPU）：</strong>Phi-3 Mini 3.8B，5-15词元/秒',
-              '<strong>4GB VRAM：</strong>TinyLlama 1.1B Q5，20-40词元/秒',
-              '<strong>6GB VRAM：</strong>Phi-3 Mini Q5，15-30词元/秒',
-              '<strong>8GB VRAM（最佳）：</strong>Mistral 7B Q4，25-60词元/秒',
-              '<strong>16GB+：</strong>13B模型 Q4，20-50词元/秒',
-              '<strong>质量排名：</strong>13B > Mistral 7B > Phi-3 Mini > TinyLlama'
+              '<strong>4GB内存，纯CPU：</strong>Qwen3 1.7B Q4_K_M——25–40 tok/s。最低硬件下最快响应。',
+              '<strong>8GB内存，纯CPU（最佳选择）：</strong>Phi-4-mini 3.8B Q4_K_M——15–25 tok/s。旧笔记本上处理编程和推理。',
+              '<strong>8GB内存 + Intel Iris核显：</strong>Qwen3 4B——部分GPU卸载下12–20 tok/s。',
+              '<strong>16GB内存，纯CPU：</strong>Qwen3 8B Q4_K_M——8–15 tok/s。质量出色，无需GPU。',
+              '<strong>16GB内存 + 核显：</strong>Llama 3.2 3B或Qwen3 4B——层卸载下20–35 tok/s。',
+              '<strong>结论：</strong>Phi-4-mini（3.8B）配Q4_K_M是大多数低配电脑的最佳选择——适合8GB内存，CPU上15–25 tok/s。'
             ]
           },
           {
@@ -982,18 +983,18 @@
             h2: '核心规则：将硬件与模型匹配',
             line1: '❌ 错误模型 = 浪费4-10倍速度',
             line2: '✅ 正确模型 = 硬件最大速度',
-            tip: 'GPU始终优于CPU。即使4GB VRAM也比纯CPU快4倍。'
+            tip: '如果有任何GPU（即使是集显），就使用它。CPU是最后手段。'
           },
           {
             type: 'table',
             h2: '适合您硬件的最快模型',
             columns: ['硬件', '最佳模型', '速度'],
             rows: [
-              { '硬件': '纯CPU', '最佳模型': 'Phi-3 Mini Q4', '速度': '5-15词/秒' },
-              { '硬件': '4GB GPU', '最佳模型': 'TinyLlama 1B Q5', '速度': '20-40词/秒' },
-              { '硬件': '6GB GPU', '最佳模型': 'Phi-3 Mini Q5', '速度': '15-30词/秒' },
-              { '硬件': '8GB GPU', '最佳模型': 'Mistral 7B Q4', '速度': '25-60词/秒' },
-              { '硬件': '16GB+', '最佳模型': '13B模型 Q4', '速度': '20-50词/秒' }
+              { '硬件': '4GB内存，纯CPU', '最佳模型': 'Qwen3 1.7B Q4_K_M', '速度': '25–40 t/s' },
+              { '硬件': '8GB内存，纯CPU', '最佳模型': 'Phi-4-mini 3.8B Q4_K_M', '速度': '15–25 t/s' },
+              { '硬件': '8GB内存 + Iris核显', '最佳模型': 'Qwen3 4B Q4_K_M', '速度': '12–20 t/s' },
+              { '硬件': '16GB内存，纯CPU', '最佳模型': 'Qwen3 8B Q4_K_M', '速度': '8–15 t/s' },
+              { '硬件': '16GB内存 + 核显', '最佳模型': 'Llama 3.2 3B Q4_K_M', '速度': '20–35 t/s' }
             ]
           },
           {
@@ -1001,11 +1002,11 @@
             h2: '每个硬件层级一个明确答案',
             intro: '按硬件匹配，无需猜测：',
             items: [
-              '<strong>纯CPU →</strong> Phi-3 Mini Q4（RAM 2.5GB，5-15词/秒）',
-              '<strong>4GB GPU →</strong> TinyLlama 1B Q5（VRAM 0.8GB，20-40词/秒）',
-              '<strong>6GB GPU →</strong> Phi-3 Mini Q5（VRAM 2.7GB，15-30词/秒）',
-              '<strong>8GB GPU →</strong> Mistral 7B Q4（VRAM 4.1GB，25-60词/秒）— 最佳选择',
-              '<strong>16GB+ →</strong> Llama 3.1 13B Q4（VRAM 7-9GB，20-50词/秒）'
+              '<strong>4GB内存，纯CPU →</strong> Qwen3 1.7B Q4_K_M（25–40 tok/s）——最低硬件下最快响应',
+              '<strong>8GB内存，纯CPU →</strong> Phi-4-mini 3.8B Q4_K_M（15–25 tok/s）——编程和推理的最佳选择',
+              '<strong>8GB内存 + Intel Iris核显 →</strong> Qwen3 4B Q4_K_M（12–20 tok/s）——部分GPU卸载',
+              '<strong>16GB内存，纯CPU →</strong> Qwen3 8B Q4_K_M（8–15 tok/s）——质量出色，无需GPU',
+              '<strong>16GB内存 + 核显 →</strong> Llama 3.2 3B Q4_K_M（20–35 tok/s）——集显下流畅运行'
             ]
           },
           {
@@ -1013,11 +1014,11 @@
             h2: '硬件基准测试完整表格',
             columns: ['硬件', '模型', '量化', '速度'],
             rows: [
-              { '硬件': '纯CPU', '模型': 'Phi-3 Mini', '量化': 'Q4', '速度': '5-15词/秒' },
-              { '硬件': '4GB GPU', '模型': 'TinyLlama 1B', '量化': 'Q5', '速度': '20-40词/秒' },
-              { '硬件': '6GB GPU', '模型': 'Phi-3 Mini', '量化': 'Q5', '速度': '15-30词/秒' },
-              { '硬件': '8GB GPU', '模型': 'Mistral 7B', '量化': 'Q4', '速度': '25-60词/秒' },
-              { '硬件': '16GB+', '模型': '13B模型', '量化': 'Q4', '速度': '20-50词/秒' }
+              { '硬件': '4GB内存，纯CPU', '模型': 'Qwen3 1.7B', '量化': 'Q4_K_M', '速度': '25–40 t/s' },
+              { '硬件': '8GB内存，纯CPU', '模型': 'Phi-4-mini 3.8B', '量化': 'Q4_K_M', '速度': '15–25 t/s' },
+              { '硬件': '8GB内存 + Iris核显', '模型': 'Qwen3 4B', '量化': 'Q4_K_M', '速度': '12–20 t/s' },
+              { '硬件': '16GB内存，纯CPU', '模型': 'Qwen3 8B', '量化': 'Q4_K_M', '速度': '8–15 t/s' },
+              { '硬件': '16GB内存 + 核显', '模型': 'Llama 3.2 3B', '量化': 'Q4_K_M', '速度': '20–35 t/s' }
             ]
           },
           {
@@ -1050,7 +1051,7 @@
               '<strong>Q3：</strong>质量损失约3%，节省62%。聊天可接受。',
               '<strong>Q2：</strong>质量损失约10%，节省75%。仅作最后手段。',
               '<strong>Q2比Q4快30%</strong>（内存带宽更少）。',
-              '<strong>策略：</strong>量化大模型（Mistral 7B Q2）而非使用小模型。'
+              '<strong>策略：</strong>量化大模型（Mistral Small Q2）而非使用小模型。'
             ]
           },
           {
@@ -1068,11 +1069,11 @@
             type: 'numbered',
             h2: '常见错误',
             items: [
-              '在CPU上使用TinyLlama — 应使用Phi-3 Mini 3.8B。',
+              '在CPU上使用TinyLlama — 应使用Phi-4 Mini 3.8B。',
               '未启用CPU加速标志（AVX-512/NEON）。',
               '用Q2将7B模型强塞进4GB — 导致OOM崩溃。',
               '假设更新的硬件=更快的推理 — 先进行基准测试。',
-              '使用错误的Ollama slug — ollama run phi加载Phi-2而非Phi-3。'
+              '使用错误的Ollama slug — ollama run phi加载的是Phi-2，而非Phi-4-mini。'
             ]
           },
           {
@@ -1089,9 +1090,9 @@
             type: 'faq',
             h2: '常见问题',
             faqs: [
-              { q: '什么是低配PC？', a: '任何专用VRAM不足8GB或仅有CPU的机器。包括Intel Iris笔记本、GTX 1060台式机和Chromebook。' },
-              { q: '可以在4GB GPU上运行Mistral 7B吗？', a: '用Q2可以。用Q4会OOM崩溃。Q2速度提升约30%但质量损失约10%。' },
-              { q: '量化如何影响速度？', a: 'Q2比Q4快30%（内存带宽减少）。默认用Q4；仅在OOM时降到Q2。' }
+              { q: '什么是低配PC？', a: '没有独立显卡、系统内存为4–16GB的纯CPU机器。包括配备Intel Iris或AMD Radeon集成显卡的笔记本电脑、旧款台式机，以及Intel N100等迷你主机。' },
+              { q: '我可以在完全没有GPU的情况下运行7B级模型吗？', a: '可以——Qwen3 8B（Q4_K_M）在16GB内存、纯CPU下可达8–15 tok/s。它比更小的选项慢，但质量明显更好。若只有8GB内存，建议改用Phi-4-mini（3.8B）。' },
+              { q: '量化如何影响速度？', a: 'Q2因每次前向传播加载的字节更少而比Q4快约30%，但会带来约10%的质量损失。默认使用Q4_K_M；仅在无法放入内存时才降至Q3。' }
             ]
           },
           {

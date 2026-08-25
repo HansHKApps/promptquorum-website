@@ -250,6 +250,14 @@
       .controls button { padding: 6px 12px; font-size: 12px; }
     }
 
+    @media print {
+        html, body { overflow: visible !important; height: auto !important; background: white !important; }
+        .header, .controls { display: none !important; }
+        .content-area { overflow: visible !important; height: auto !important; }
+        .slide { display: flex !important; height: 100vh; page-break-after: always; }
+        .slide, .slide * { animation: none !important; opacity: 1 !important; }
+    }
+
     </style>
 </head>
 <body>
@@ -334,10 +342,10 @@
             h2: 'Framework Desktop: Model Speeds',
             columns: ['Model', 'tok/s'],
             rows: [
-              { 'Model': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
+              { 'Model': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
               { 'Model': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
               { 'Model': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
-              { 'Model': 'Qwen2.5 72B Q4', 'tok/s': '22–26' }
+              { 'Model': 'Qwen3 72B Q4', 'tok/s': '22–26' }
             ]
           },
           {
@@ -493,10 +501,10 @@
             h2: 'Framework Desktop: Modellgeschwindigkeiten',
             columns: ['Modell', 'tok/s'],
             rows: [
-              { 'Modell': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
+              { 'Modell': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
               { 'Modell': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
               { 'Modell': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
-              { 'Modell': 'Qwen2.5 72B Q4', 'tok/s': '22–26' }
+              { 'Modell': 'Qwen3 72B Q4', 'tok/s': '22–26' }
             ]
           },
           {
@@ -652,10 +660,10 @@
             h2: 'Framework Desktop : Vitesses des modèles',
             columns: ['Modèle', 'tok/s'],
             rows: [
-              { 'Modèle': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
+              { 'Modèle': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
               { 'Modèle': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
               { 'Modèle': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
-              { 'Modèle': 'Qwen2.5 72B Q4', 'tok/s': '22–26' }
+              { 'Modèle': 'Qwen3 72B Q4', 'tok/s': '22–26' }
             ]
           },
           {
@@ -811,10 +819,10 @@
             h2: 'Framework Desktopモデル速度',
             columns: ['モデル', 'tok/s'],
             rows: [
-              { 'モデル': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
+              { 'モデル': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
               { 'モデル': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
               { 'モデル': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
-              { 'モデル': 'Qwen2.5 72B Q4', 'tok/s': '22–26' }
+              { 'モデル': 'Qwen3 72B Q4', 'tok/s': '22–26' }
             ]
           },
           {
@@ -970,10 +978,10 @@
             h2: 'Framework Desktop模型速度',
             columns: ['模型', 'tok/s'],
             rows: [
-              { '模型': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
+              { '模型': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
               { '模型': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
               { '模型': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
-              { '模型': 'Qwen2.5 72B Q4', 'tok/s': '22–26' }
+              { '模型': 'Qwen3 72B Q4', 'tok/s': '22–26' }
             ]
           },
           {

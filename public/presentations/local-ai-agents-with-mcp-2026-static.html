@@ -75,6 +75,7 @@
       .header-links { gap: 8px; font-size: 10px; }
     }
     @media print {
+            .slide, .slide * { animation: none !important; opacity: 1 !important; }
       * { margin: 0; padding: 0; }
       html, body { overflow: visible !important; height: auto !important; width: 100% !important; background: white !important; }
       .header, .controls { display: none !important; }
@@ -140,7 +141,7 @@
               '<strong>MCP is JSON-RPC 2.0 for tools.</strong> The client connects to servers that expose Tools, Resources, and Prompts. The wire format is the same under Claude Desktop, Goose, Cline, Continue.dev, or LM Studio.',
               '<strong>Ollama does not speak MCP directly.</strong> An MCP client (Goose, Cline, Continue.dev, LM Studio) wraps Ollama and routes tool calls to MCP servers.',
               '<strong>Four reference servers cover most use cases:</strong> filesystem (sandboxed read/write), sqlite and postgres (read-only queries), puppeteer/playwright (headless browser), github (repo and PR management).',
-              '<strong>Tool-call reliability scales with model size.</strong> Gemma 4 27B, GLM-5.1 32B, Qwen3 32B, and Llama 3.3 70B handle MCP cleanly. Models under 7B regularly emit malformed tool calls.'
+              '<strong>Tool-call reliability scales with model size.</strong> Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, and Llama 3.3 70B handle MCP cleanly. Models under 7B regularly emit malformed tool calls.'
             ]
           },
           {
@@ -239,7 +240,7 @@
             h2: 'Local MCP vs Claude Desktop',
             columns: ['Layer', 'Claude Desktop', 'Local Ollama + Goose'],
             rows: [
-              { 'Layer': 'Model', 'Claude Desktop': 'Claude (Anthropic, cloud)', 'Local Ollama + Goose': 'Gemma 4, GLM-5.1, Qwen3, Llama 3.3 (local)' },
+              { 'Layer': 'Model', 'Claude Desktop': 'Claude (Anthropic, cloud)', 'Local Ollama + Goose': 'Gemma 4, GLM-4.7, Qwen3, Llama 3.3 (local)' },
               { 'Layer': 'Cost per request', 'Claude Desktop': 'Per-token API spend', 'Local Ollama + Goose': '$0 — local inference' },
               { 'Layer': 'Privacy', 'Claude Desktop': 'Conversation goes to Anthropic', 'Local Ollama + Goose': 'Stays on the machine' },
               { 'Layer': 'Rate limits', 'Claude Desktop': 'API rate limits apply', 'Local Ollama + Goose': 'Limited by hardware only' },
@@ -253,7 +254,7 @@
             intro: 'Tool-call reliability scales with model size and training, not with the client harness.',
             items: [
               '<strong>Gemma 4 27B</strong> (gemma4:27b) — best-in-class tool-call training for the size. Fits in 16 GB unified memory at Q4_K_M. Good general reasoning.',
-              '<strong>GLM-5.1 32B</strong> (glm5:32b) — very strong tool-call reliability, 128K context out of the box. Fits on a 24 GB GPU.',
+              '<strong>GLM-4.7 32B</strong> (glm5:32b) — very strong tool-call reliability, 128K context out of the box. Fits on a 24 GB GPU.',
               '<strong>Qwen3 32B</strong> (qwen3:32b) — well-rounded; handles MCP cleanly in long agent loops. Qwen3-Coder 30B is the best pick for code-shaped agent work.',
               '<strong>Llama 3.3 70B</strong> (llama3.3:70b) — highest ceiling, heaviest. Needs 48 GB+ unified memory or 2x 24 GB GPUs at Q4_K_M.',
               '<strong>Avoid for MCP:</strong> anything under 7B and general-purpose models without explicit tool-call training. They emit malformed calls and stall the loop.'
@@ -297,7 +298,7 @@
               '<strong>MCP ist JSON-RPC 2.0 für Tools.</strong> Der Client verbindet sich mit Servern, die Tools, Resources und Prompts bereitstellen. Das Wire-Format ist identisch unter Claude Desktop, Goose, Cline, Continue.dev oder LM Studio.',
               '<strong>Ollama spricht MCP nicht direkt.</strong> Ein MCP-Client (Goose, Cline, Continue.dev, LM Studio) umhüllt Ollama und leitet Tool-Calls an MCP-Server weiter.',
               '<strong>Vier Referenz-Server decken die meisten Anwendungsfälle ab:</strong> Filesystem (isoliertes Lesen/Schreiben), SQLite und Postgres (read-only Abfragen), Puppeteer/Playwright (Headless-Browser), GitHub (Repo- und PR-Verwaltung).',
-              '<strong>Tool-Call-Zuverlässigkeit skaliert mit der Modellgröße.</strong> Gemma 4 27B, GLM-5.1 32B, Qwen3 32B und Llama 3.3 70B verarbeiten MCP sauber. Modelle unter 7B geben regelmäßig fehlerhafte Tool-Calls aus.'
+              '<strong>Tool-Call-Zuverlässigkeit skaliert mit der Modellgröße.</strong> Gemma 4 27B, GLM-4.7 32B, Qwen3 32B und Llama 3.3 70B verarbeiten MCP sauber. Modelle unter 7B geben regelmäßig fehlerhafte Tool-Calls aus.'
             ]
           },
           {
@@ -396,7 +397,7 @@
             h2: 'Lokales MCP vs. Claude Desktop',
             columns: ['Ebene', 'Claude Desktop', 'Lokales Ollama + Goose'],
             rows: [
-              { 'Ebene': 'Modell', 'Claude Desktop': 'Claude (Anthropic, Cloud)', 'Lokales Ollama + Goose': 'Gemma 4, GLM-5.1, Qwen3, Llama 3.3 (lokal)' },
+              { 'Ebene': 'Modell', 'Claude Desktop': 'Claude (Anthropic, Cloud)', 'Lokales Ollama + Goose': 'Gemma 4, GLM-4.7, Qwen3, Llama 3.3 (lokal)' },
               { 'Ebene': 'Kosten pro Anfrage', 'Claude Desktop': 'Per-Token-API-Kosten', 'Lokales Ollama + Goose': '0 € — lokale Inferenz' },
               { 'Ebene': 'Privatsphäre', 'Claude Desktop': 'Gespräch geht zu Anthropic', 'Lokales Ollama + Goose': 'Bleibt auf dem Gerät' },
               { 'Ebene': 'Rate-Limits', 'Claude Desktop': 'API-Rate-Limits gelten', 'Lokales Ollama + Goose': 'Nur durch Hardware begrenzt' },
@@ -410,7 +411,7 @@
             intro: 'Tool-Call-Zuverlässigkeit skaliert mit Modellgröße und Training, nicht mit dem Client.',
             items: [
               '<strong>Gemma 4 27B</strong> (gemma4:27b) — beste Tool-Call-Training für die Größe. 16 GB Unified Memory bei Q4_K_M. Gutes allgemeines Denkvermögen.',
-              '<strong>GLM-5.1 32B</strong> (glm5:32b) — sehr starke Tool-Call-Zuverlässigkeit, 128K Context. Passt auf eine 24-GB-GPU.',
+              '<strong>GLM-4.7 32B</strong> (glm5:32b) — sehr starke Tool-Call-Zuverlässigkeit, 128K Context. Passt auf eine 24-GB-GPU.',
               '<strong>Qwen3 32B</strong> (qwen3:32b) — ausgewogen, handhabt MCP in langen Loops sauber. Qwen3-Coder 30B ist die beste Wahl für Code-bezogene Aufgaben.',
               '<strong>Llama 3.3 70B</strong> (llama3.3:70b) — höchste Leistung, aber schwer. 48 GB+ Unified Memory oder 2× 24 GB GPU bei Q4_K_M.',
               '<strong>Für MCP vermeiden:</strong> Alles unter 7B und allgemeine Modelle ohne Tool-Call-Fine-Tuning. Sie geben fehlerhafte Calls aus und blockieren den Loop.'
@@ -454,7 +455,7 @@
               '<strong>MCP est JSON-RPC 2.0 pour les outils.</strong> Le client se connecte à des serveurs qui exposent des Tools, Resources et Prompts. Le format est identique sous Claude Desktop, Goose, Cline, Continue.dev ou LM Studio.',
               "<strong>Ollama ne parle pas MCP directement.</strong> Un client MCP (Goose, Cline, Continue.dev, LM Studio) enveloppe Ollama et route les tool calls vers les serveurs MCP.",
               '<strong>Quatre serveurs de référence couvrent la plupart des cas :</strong> filesystem (lecture/écriture isolée), sqlite et postgres (requêtes en lecture seule), puppeteer/playwright (navigateur headless), github (gestion de repos et PRs).',
-              '<strong>La fiabilité des tool calls scale avec la taille du modèle.</strong> Gemma 4 27B, GLM-5.1 32B, Qwen3 32B et Llama 3.3 70B gèrent MCP proprement. Les modèles sous 7B produisent régulièrement des appels malformés.'
+              '<strong>La fiabilité des tool calls scale avec la taille du modèle.</strong> Gemma 4 27B, GLM-4.7 32B, Qwen3 32B et Llama 3.3 70B gèrent MCP proprement. Les modèles sous 7B produisent régulièrement des appels malformés.'
             ]
           },
           {
@@ -553,7 +554,7 @@
             h2: 'MCP local vs Claude Desktop',
             columns: ['Couche', 'Claude Desktop', 'Ollama local + Goose'],
             rows: [
-              { 'Couche': 'Modèle', 'Claude Desktop': 'Claude (Anthropic, cloud)', 'Ollama local + Goose': 'Gemma 4, GLM-5.1, Qwen3, Llama 3.3 (local)' },
+              { 'Couche': 'Modèle', 'Claude Desktop': 'Claude (Anthropic, cloud)', 'Ollama local + Goose': 'Gemma 4, GLM-4.7, Qwen3, Llama 3.3 (local)' },
               { 'Couche': 'Coût par requête', 'Claude Desktop': 'API par token', 'Ollama local + Goose': '0 € — inférence locale' },
               { 'Couche': 'Confidentialité', 'Claude Desktop': 'Conversation envoyée à Anthropic', 'Ollama local + Goose': 'Reste sur la machine' },
               { 'Couche': 'Rate limits', 'Claude Desktop': "Limites d'API s'appliquent", 'Ollama local + Goose': 'Limité par le matériel seulement' },
@@ -567,7 +568,7 @@
             intro: 'La fiabilité des tool calls scale avec la taille et le training, pas avec le client.',
             items: [
               '<strong>Gemma 4 27B</strong> (gemma4:27b) — meilleur training tool-call pour sa taille. 16 Go de mémoire unifiée en Q4_K_M.',
-              '<strong>GLM-5.1 32B</strong> (glm5:32b) — très haute fiabilité, contexte 128K natif. Compatible GPU 24 Go.',
+              '<strong>GLM-4.7 32B</strong> (glm5:32b) — très haute fiabilité, contexte 128K natif. Compatible GPU 24 Go.',
               '<strong>Qwen3 32B</strong> (qwen3:32b) — équilibré, gère MCP proprement dans les longues boucles. Qwen3-Coder 30B est le meilleur choix pour les tâches orientées code.',
               '<strong>Llama 3.3 70B</strong> (llama3.3:70b) — plafond le plus élevé, mais le plus lourd. 48 Go+ de mémoire ou 2× 24 Go GPU en Q4_K_M.',
               "<strong>À éviter pour MCP :</strong> tout modèle sous 7B et les modèles généralistes sans training tool-call explicite. Ils émettent des appels malformés et bloquent la boucle."
@@ -611,7 +612,7 @@
               '<strong>MCP はツール用 JSON-RPC 2.0 プロトコル。</strong>クライアントが Tools・Resources・Prompts を提供するサーバーに接続。Claude Desktop、Goose、Cline、Continue.dev、LM Studio のいずれでもワイヤーフォーマットは同じ。',
               '<strong>Ollama は MCP を直接話せない。</strong>MCP クライアント（Goose、Cline、Continue.dev、LM Studio）が Ollama をラップし、ツールコールを MCP サーバーへルーティングする。',
               '<strong>4 つのリファレンスサーバーで大半のユースケースに対応：</strong>filesystem（サンドボックス読み書き）、sqlite と postgres（read-only クエリ）、puppeteer/playwright（ヘッドレスブラウザ）、github（リポジトリと PR 管理）。',
-              '<strong>ツールコールの信頼性はモデルサイズとトレーニングに比例。</strong>Gemma 4 27B、GLM-5.1 32B、Qwen3 32B、Llama 3.3 70B は MCP をクリーンに処理。7B 未満のモデルは頻繁に不正ツールコールを出力。'
+              '<strong>ツールコールの信頼性はモデルサイズとトレーニングに比例。</strong>Gemma 4 27B、GLM-4.7 32B、Qwen3 32B、Llama 3.3 70B は MCP をクリーンに処理。7B 未満のモデルは頻繁に不正ツールコールを出力。'
             ]
           },
           {
@@ -710,7 +711,7 @@
             h2: 'ローカル MCP と Claude Desktop の比較',
             columns: ['項目', 'Claude Desktop', 'ローカル Ollama + Goose'],
             rows: [
-              { '項目': 'モデル', 'Claude Desktop': 'Claude（Anthropic、クラウド）', 'ローカル Ollama + Goose': 'Gemma 4、GLM-5.1、Qwen3、Llama 3.3（ローカル）' },
+              { '項目': 'モデル', 'Claude Desktop': 'Claude（Anthropic、クラウド）', 'ローカル Ollama + Goose': 'Gemma 4、GLM-4.7、Qwen3、Llama 3.3（ローカル）' },
               { '項目': 'リクエストあたりのコスト', 'Claude Desktop': 'トークン課金', 'ローカル Ollama + Goose': '$0 — ローカル推論' },
               { '項目': 'プライバシー', 'Claude Desktop': '会話が Anthropic に送信される', 'ローカル Ollama + Goose': 'デバイス上に留まる' },
               { '項目': 'レート制限', 'Claude Desktop': 'API レート制限あり', 'ローカル Ollama + Goose': 'ハードウェアのみが制限' },
@@ -724,7 +725,7 @@
             intro: 'ツールコールの信頼性はモデルサイズとトレーニングに比例し、クライアントには依存しない。',
             items: [
               '<strong>Gemma 4 27B</strong>（gemma4:27b）— このサイズで最高クラスのツールコールトレーニング。Q4_K_M で 16 GB ユニファイドメモリに収まる。',
-              '<strong>GLM-5.1 32B</strong>（glm5:32b）— 非常に高いツールコール信頼性、128K コンテキスト標準搭載。24 GB GPU に対応。',
+              '<strong>GLM-4.7 32B</strong>（glm5:32b）— 非常に高いツールコール信頼性、128K コンテキスト標準搭載。24 GB GPU に対応。',
               '<strong>Qwen3 32B</strong>（qwen3:32b）— バランスが良く長いエージェントループで MCP をクリーンに処理。コード系タスクには Qwen3-Coder 30B が最適。',
               '<strong>Llama 3.3 70B</strong>（llama3.3:70b）— 最高性能だが最も重い。Q4_K_M で 48 GB+ ユニファイドメモリまたは 2x 24 GB GPU が必要。',
               '<strong>MCP での使用を避けるもの：</strong>7B 未満のモデルおよびツールコールの明示的トレーニングなしの汎用モデル。不正なツールコールを出力してループを停止させる。'
@@ -768,7 +769,7 @@
               '<strong>MCP 是工具调用的 JSON-RPC 2.0 协议。</strong>客户端连接到公开 Tools、Resources 和 Prompts 的服务器。Claude Desktop、Goose、Cline、Continue.dev 或 LM Studio 下的接线格式完全相同。',
               '<strong>Ollama 本身不支持 MCP。</strong>需要 MCP 客户端（Goose、Cline、Continue.dev、LM Studio）封装 Ollama，将工具调用路由到 MCP 服务器。',
               '<strong>四个参考服务器覆盖大多数场景：</strong>filesystem（沙箱读写）、sqlite 和 postgres（只读查询）、puppeteer/playwright（无头浏览器）、github（仓库和 PR 管理）。',
-              '<strong>工具调用可靠性随模型规模和训练提升。</strong>Gemma 4 27B、GLM-5.1 32B、Qwen3 32B、Llama 3.3 70B 能干净处理 MCP。7B 以下模型频繁输出格式错误的工具调用。'
+              '<strong>工具调用可靠性随模型规模和训练提升。</strong>Gemma 4 27B、GLM-4.7 32B、Qwen3 32B、Llama 3.3 70B 能干净处理 MCP。7B 以下模型频繁输出格式错误的工具调用。'
             ]
           },
           {
@@ -867,7 +868,7 @@
             h2: '本地 MCP 与 Claude Desktop 对比',
             columns: ['层级', 'Claude Desktop', '本地 Ollama + Goose'],
             rows: [
-              { '层级': '模型', 'Claude Desktop': 'Claude（Anthropic，云端）', '本地 Ollama + Goose': 'Gemma 4、GLM-5.1、Qwen3、Llama 3.3（本地）' },
+              { '层级': '模型', 'Claude Desktop': 'Claude（Anthropic，云端）', '本地 Ollama + Goose': 'Gemma 4、GLM-4.7、Qwen3、Llama 3.3（本地）' },
               { '层级': '每次请求费用', 'Claude Desktop': '按 token 计费', '本地 Ollama + Goose': '$0——本地推理' },
               { '层级': '隐私', 'Claude Desktop': '对话发送给 Anthropic', '本地 Ollama + Goose': '保留在本机' },
               { '层级': '速率限制', 'Claude Desktop': '受 API 速率限制', '本地 Ollama + Goose': '仅受硬件限制' },
@@ -881,7 +882,7 @@
             intro: '工具调用可靠性取决于模型规模和训练，与客户端无关。',
             items: [
               '<strong>Gemma 4 27B</strong>（gemma4:27b）——该规模下最佳 tool calling 训练。Q4_K_M 下 16 GB 统一内存可运行。',
-              '<strong>GLM-5.1 32B</strong>（glm5:32b）——工具调用可靠性极高，原生 128K 上下文。兼容 24 GB GPU。',
+              '<strong>GLM-4.7 32B</strong>（glm5:32b）——工具调用可靠性极高，原生 128K 上下文。兼容 24 GB GPU。',
               '<strong>Qwen3 32B</strong>（qwen3:32b）——均衡全面，长智能体循环中干净处理 MCP。代码类任务首选 Qwen3-Coder 30B。',
               '<strong>Llama 3.3 70B</strong>（llama3.3:70b）——上限最高但最重。Q4_K_M 下需 48 GB+ 统一内存或 2x 24 GB GPU。',
               '<strong>MCP 中应避免使用：</strong>7B 以下的模型以及没有显式 tool calling 训练的通用模型。它们会输出格式错误的调用，导致循环卡死。'
