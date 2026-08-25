@@ -19,6 +19,7 @@ export type AffiliateCategory =
   | 'ram'
   | 'cooling'
   | 'laptop'
+  | 'cloud-gpu'
 
 export interface AffiliateProduct {
   /** Visible link text. */
@@ -45,6 +46,10 @@ export type AffiliateProductKey =
   | 'laptop-ram-sodimm-32gb'
   | 'laptop-cooling-pad'
   | 'laptop-rx-6800m'
+  // ── Chinese cloud GPU rental (Alibaba vs Tencent vs AutoDL bite) ────────
+  | 'autodl-gpu-cloud'
+  | 'alibaba-cloud-international'
+  | 'tencent-cloud-ti'
 
 export const AFFILIATE_PRODUCTS: Record<AffiliateProductKey, AffiliateProduct> = {
   // ── AMD desktop GPUs ─────────────────────────────────────────────────────
@@ -120,6 +125,32 @@ export const AFFILIATE_PRODUCTS: Record<AffiliateProductKey, AffiliateProduct> =
     vendor: 'Amazon',
     category: 'laptop',
     priceRange: '—', // VERIFY availability/price
+  },
+
+  // ── Chinese cloud GPU rental — no Amazon listing, these are direct
+  //    provider signup/pricing links (see affiliate-writing SKILL.md
+  //    "Product & Program Source of Truth" — cloud-gpu products link to the
+  //    provider directly, not a retailer) ───────────────────────────────────
+  'autodl-gpu-cloud': {
+    label: 'AutoDL GPU cloud (RTX 3090/4090, A100, H100)',
+    url: 'https://www.autodl.com',
+    vendor: 'AutoDL',
+    category: 'cloud-gpu',
+    priceRange: 'From ¥1.68/hr (~$0.23/hr)', // VERIFY price — CNY rates, fluctuate by region/promo
+  },
+  'alibaba-cloud-international': {
+    label: 'Alibaba Cloud PAI (Qwen-optimized GPU inference)',
+    url: 'https://www.alibabacloud.com',
+    vendor: 'Alibaba Cloud',
+    category: 'cloud-gpu',
+    priceRange: 'From ¥3.5/hr (~$0.55/hr)', // VERIFY price — CNY rates
+  },
+  'tencent-cloud-ti': {
+    label: 'Tencent Cloud TI Platform GPU',
+    url: 'https://cloud.tencent.com/product/gpu',
+    vendor: 'Tencent Cloud',
+    category: 'cloud-gpu',
+    priceRange: 'From ¥3.5/hr (~$0.55/hr)', // VERIFY price — CNY rates
   },
 }
 
