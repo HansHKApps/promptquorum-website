@@ -9,6 +9,7 @@
     "verify:locales": "node scripts/check-locale-coverage.mjs",
     "validate:models": "node scripts/validate-model-names.mjs --paths=src/lib",
     "validate:registry": "node scripts/validate-registry-freshness.mjs",
+    "validate-table-cells": "node scripts/validate-table-cell-length.mjs",
     "record-review": "node scripts/record-review.mjs",
     "prebuild": "npm run validate-translations && npm run validate-affiliate-disclosure && npm run verify:locales && npm run validate:models && node scripts/validate-internal-links.mjs && node scripts/validate-no-internal-note-leakage.mjs && node scripts/validate-sameas-links.mjs && node scripts/validate-image-schema.mjs && npm run generate:image-dimensions && node scripts/generate-content-metadata.mjs",
     "build": "node build-with-fix.js",

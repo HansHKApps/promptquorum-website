@@ -230,9 +230,16 @@ When implementing a new `/gamma` presentation for a prompt-engineering article:
    - ❌ Table cell: "Requires you to bring your own API keys from OpenAI, Anthropic, Google, and Mistral, which means your data stays private but you manage billing directly"
    - ✅ Table cell: "API keys" + explain trade-offs in surrounding text
 
-**Why:** On mobile (375px width), tables scroll horizontally. Long headers and cell content break line-wrapping, create unusable scroll regions, and cut off text (reported Aug 2026). Compact cells scale predictably across all viewports and 9 languages.
+6. **If the content genuinely needs full sentences, do not force it into a `<table>` at all** — set `itemHeadings: true` on that section instead. That mode (already supported by `SmartHomePostClient.tsx` and `PowerLocalLLMPostClient.tsx`) renders each row as its own card: first column becomes an `<h3>`, remaining columns render as a wrapping definition list. It never needs horizontal scroll, so paragraph-length "benefit vs. limitation," "per-platform notes," or "app vs. app" comparisons belong here, not in a table you're trying to compress under 60 characters. See `loci-ai-review-offline-local-ai.ts` (`tradeOffs`, `platforms`, `vsAlternatives`) for the reference pattern — those three sections originally shipped as `<table>`s with cells up to ~400 characters, which no viewport width or CSS fix could make readable; switching them to `itemHeadings: true` was the actual fix, not a wider table.
+
+**Why:** On mobile (375px width), tables scroll horizontally. Long headers and cell content break line-wrapping, create unusable scroll regions, and cut off text (reported Aug 2026, recurred Aug 2026 on the Loci AI review with full-sentence cells — see rule 6 above). Compact cells scale predictably across all viewports and 9 languages.
 
 **Testing:** Before committing, run `npm run dev` and test at 375px width in Chrome DevTools. Scroll the table horizontally — all headers and cell content should remain visible and readable without wrapping beyond cell bounds.
+
+**Enforcement (added Aug 2026 after this rule was violated silently):**
+- `npm run validate-table-cells` audits every `columns`/`rows` table in the repo against the real <=25/<=60 limits above and reports violations — informational only, does not block (there is a large pre-existing backlog this predates).
+- `.git/hooks/pre-commit` runs `node scripts/validate-table-cell-length.mjs --staged` on every commit and **blocks** it if a staged article file has a table header >40 chars or cell >110 chars (i.e. an unambiguous full-sentence violation, not a few characters over target) and that section doesn't have `itemHeadings: true`. Fix by shortening the content or setting `itemHeadings: true`, per rule 6.
+- This hook is local to `.git/hooks/` (not tracked by git) — if you're on a fresh clone and it isn't firing, check `.git/hooks/pre-commit` exists and is executable.
 
 ## Freshness Tier (MANDATORY before writing any new article)
 
