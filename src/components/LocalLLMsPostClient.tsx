@@ -11,6 +11,7 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
 import { VramCalculator } from '@/components/VramCalculator'
+import { CostCalculator } from '@/components/CostCalculator'
 import { QuickAnswer } from '@/components/QuickAnswer'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { parseContentBlocks } from '@/lib/parseContentBlocks'
@@ -455,6 +456,12 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
       {section.component === 'VramCalculator' && (
         <div className="my-8">
           <VramCalculator />
+        </div>
+      )}
+
+      {section.component === 'CostCalculator' && (
+        <div className="my-8">
+          <CostCalculator />
         </div>
       )}
 
