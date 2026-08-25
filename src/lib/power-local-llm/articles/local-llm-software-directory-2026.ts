@@ -21,6 +21,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Updated 2026 directory of 160+ local LLM tools across 10 categories — runtimes, desktop apps, web UIs, coding tools, RAG, agents, voice, mobile, plugins, image generation. Updated August 2026.',
     twitterDescription:
       '160+ local-LLM tools across 10 categories — runtimes, desktop apps, web UIs, IDE integrations, terminal tools, RAG, agent frameworks, voice, mobile, image generation. Licences, links & latest versions, updated August 2026. The "what exists" map before you commit to your stack.',
+    advertiserHighlight: {
+      url: 'https://lociai.app/',
+      label: 'Visit Locally Uncensored',
+      tagline: 'Uncensored chat, coding agent, image/video generation, and LoRA training — all in one desktop app',
+    },
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -531,6 +536,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Aktualisiertes 2026-Verzeichnis von 160+ lokalen LLM-Tools in 10 Kategorien — Runtimes, Desktop-Apps, Web-UIs, IDE-Tools, Terminal-Tools, RAG, Agenten, Sprache, Mobile, Bildgeneration. Stand August 2026.',
     twitterDescription:
       '160+ lokale-LLM-Tools in 10 Kategorien — Runtimes, Desktop-Apps, Web-UIs, IDE-Integrationen, Terminal-Tools, RAG, Agent-Frameworks, Sprache, Mobile, Bildgeneration. Lizenzen, Links & aktuelle Versionen, Stand August 2026. Die Übersichtskarte, bevor Sie sich für einen Stack entscheiden.',
+    advertiserHighlight: {
+      url: 'https://lociai.app/',
+      label: 'Locally Uncensored besuchen',
+      tagline: 'Unzensierte Chat, Coding-Agent, Bild-/Videogenerierung und LoRA-Training — alles in einer Desktop-App',
+    },
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -967,6 +977,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Répertoire 2026 mis à jour de 160+ outils LLM locaux en 10 catégories — runtimes, apps bureau, interfaces web, outils IDE, outils terminal, RAG, agents, voix, mobile, génération d\'images. Août 2026.',
     twitterDescription:
       '160+ outils LLM locaux en 10 catégories — runtimes, apps bureau, interfaces web, intégrations IDE, outils terminal, RAG, frameworks d\'agents, voix, mobile, génération d\'images. Licences, liens & versions à jour, août 2026. La carte d\'orientation avant de choisir votre stack.',
+    advertiserHighlight: {
+      url: 'https://lociai.app/',
+      label: 'Visiter Locally Uncensored',
+      tagline: 'Chat sans censure, agent de codage, génération d\'images/vidéos et entraînement LoRA — le tout dans une app de bureau',
+    },
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -1391,6 +1406,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '160+のローカルLLMツール・アプリ・フレームワーク・デプロイソフトウェアを10カテゴリでまとめた更新版2026年ディレクトリ — Ollama、LM Studio、RAG、エージェント、画像生成。2026年8月更新。',
     twitterDescription:
       'ローカルLLMツール88件を9カテゴリで網羅 — ランタイム、デスクトップアプリ、Web UI、コーディングエージェント、RAG、マルチエージェントフレームワーク、音声、モバイル。ライセンス・リンク・最新版付き、2026年7月更新。スタックを決める前の「全体像」マップです。',
+    advertiserHighlight: {
+      url: 'https://lociai.app/',
+      label: 'Locally Uncensored を訪問',
+      tagline: '無検閲チャット、コーディングエージェント、画像/動画生成、LoRAトレーニング — すべてデスクトップアプリで',
+    },
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -1815,6 +1835,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '收录160+款本地LLM工具、应用、框架与部署软件的2026年更新版目录，覆盖10大类——Ollama、LM Studio、RAG、智能体、图像生成。2026年8月更新。',
     twitterDescription:
       '88个本地LLM工具，9大类别——运行时、桌面应用、Web界面、编程助手、RAG、多智能体框架、语音、移动端。含许可证、链接与最新版本，2026年7月更新。确定技术栈前的"现有工具"全景图。',
+    advertiserHighlight: {
+      url: 'https://lociai.app/',
+      label: '访问 Locally Uncensored',
+      tagline: '无审查聊天、编码助手、图像/视频生成和LoRA训练——一个桌面应用完成所有功能',
+    },
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -2239,6 +2264,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Directorio actualizado de 2026 con 88 herramientas, aplicaciones, frameworks & software de despliegue de LLM local en 9 categorías — Ollama, LM Studio, RAG, agentes. Julio 2026.',
     twitterDescription:
       '88 herramientas LLM local en 9 categorías — runtimes, apps de escritorio, interfaces web, agentes de código, RAG, frameworks multiagente, voz, móvil. Licencias, enlaces y últimas versiones, julio de 2026. El mapa de "qué existe" antes de elegir tu stack.',
+    advertiserHighlight: {
+      url: 'https://lociai.app/',
+      label: 'Visita Locally Uncensored',
+      tagline: 'Chat sin censura, agente de código, generación de imágenes/videos y entrenamiento LoRA — todo en una app de escritorio',
+    },
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -2677,6 +2707,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Diretório atualizado de 2026 com 160+ ferramentas, aplicativos, frameworks & software de implantação de LLM local em 10 categorias — Ollama, LM Studio, RAG, agentes, geração de imagens. Agosto 2026.',
     twitterDescription:
       '88 ferramentas LLM local em 9 categorias — runtimes, apps de desktop, interfaces web, agentes de código, RAG, frameworks multiagente, voz, mobile. Licenças, links e versões mais recentes, julho de 2026. O mapa de "o que existe" antes de escolher seu stack.',
+    advertiserHighlight: {
+      url: 'https://lociai.app/',
+      label: 'Visite Locally Uncensored',
+      tagline: 'Chat sem censura, agente de codificação, geração de imagens/vídeos e treinamento LoRA — tudo em um aplicativo de desktop',
+    },
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -3114,6 +3149,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'دليل محدَّث لعام 2026 يضم 88 أداة وتطبيقاً وإطار عمل وبرنامج نشر للنماذج اللغوية المحلية في 9 فئات — Ollama وLM Studio وRAG والوكلاء. آخر تحديث يوليو 2026.',
     twitterDescription:
       '88 أداة للنماذج اللغوية المحلية في 9 فئات — رuntimes وتطبيقات سطح المكتب وواجهات الويب وعملاء الكود وRAG وأطر متعددة العملاء والصوت والمحمول. التراخيص والروابط وأحدث الإصدارات، يوليو 2026. خريطة "ما الموجود" قبل اختيار stack.',
+    advertiserHighlight: {
+      url: 'https://lociai.app/',
+      label: 'زيارة Locally Uncensored',
+      tagline: 'دردشة غير مرشحة، وكيل ترميز، وتوليد صور/فيديو وتدريب LoRA — كل شيء في تطبيق سطح المكتب',
+    },
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
@@ -3552,6 +3592,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '160+개의 로컬 LLM 도구·앱·프레임워크·배포 소프트웨어를 10개 카테고리로 정리한 2026년 업데이트판 디렉토리 — Ollama, LM Studio, RAG, 에이전트, 이미지 생성. 2026년 8월 업데이트.',
     twitterDescription:
       '로컬 LLM 도구 88개를 9개 카테고리로 정리 — 런타임, 데스크톱 앱, 웹 UI, 코드 에이전트, RAG, 멀티에이전트 프레임워크, 음성, 모바일. 라이선스·링크·최신 버전 수록, 2026년 7월 업데이트. 스택 선택 전 전체 지도 확인.',
+    advertiserHighlight: {
+      url: 'https://lociai.app/',
+      label: 'Locally Uncensored 방문',
+      tagline: '무검열 채팅, 코딩 에이전트, 이미지/비디오 생성, LoRA 학습 — 모든 기능이 데스크톱 앱 하나에',
+    },
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     audience:
