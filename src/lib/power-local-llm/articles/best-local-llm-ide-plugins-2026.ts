@@ -1574,40 +1574,83 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   es: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-02-25',
+    last_full_refresh: '2026-08-25',
     theme: 'Coding Assistants',
-    title: 'Mejores plugins IDE para LLMs locales en 2026 (VS Code y JetBrains)',
-    seoTitle: 'Mejores plugins IDE para LLM local 2026: VS Code y JetBrains',
-    metaDescription: 'Continue, Cline, Aider, Tabby — clasificados por soporte de modelos locales en 2026. ¿Qué plugin IDE se conecta mejor a Ollama o LM Studio?',
+    title: 'Mejores plugins IDE para LLMs locales en 2026 (VS Code, JetBrains y LM Studio)',
+    seoTitle: 'Mejor IDE para LLMs locales 2026 (Ollama, LM Studio y JetBrains)',
+    metaDescription: 'Cline es el mejor IDE para LLMs locales en 2026: gratuito, funciona con Ollama y LM Studio en VS Code y en cada IDE de JetBrains (PyCharm, Rider, CLion, GoLand).',
     heroImage: '/images/best-local-llm-ide-plugins-2026-model-recommendations-hero-es.webp',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**Cline (VS Code + JetBrains) es el mejor plugin IDE gratuito para LLMs locales a mediados de 2026: conexión nativa a Ollama y cualquier API compatible con OpenAI, edición agéntica de archivos + comandos de terminal + herramientas MCP, ejecutándose completamente en tu hardware. Nota: Continue.dev (antes clasificado en el puesto #1) fue adquirido por Cursor en junio de 2026 — la versión 2.0.0 es su última publicación.**',
+    dateModified: '2026-08-25',
+    leadAnswerBlock: '**Cline (VS Code + JetBrains) es el mejor IDE gratuito para LLMs locales en 2026: conexión nativa a Ollama y LM Studio (además de cualquier API compatible con OpenAI), edición agéntica de archivos, comandos de terminal y herramientas MCP, ejecutándose completamente en tu hardware. Nota: Continue.dev (antes clasificado en el puesto #1) fue adquirido por Cursor en junio de 2026 — v2.0.0-vscode es su última publicación y el repositorio ahora es de solo lectura.**',
     quickAnswerTop: {
       question: '¿Cuál es el mejor plugin IDE para ejecutar modelos de IA locales mientras programas?',
-      answer: 'Cline (gratuito, open-source con BYOK) es ahora el mejor plugin IDE para Ollama y LLMs locales — desde que Continue.dev fue adquirido por Cursor en junio de 2026 y su repositorio quedó congelado en la versión 2.0.0. Cline funciona en VS Code y JetBrains, y soporta edición agéntica de archivos y herramientas MCP. Para autocompletado únicamente, Tabby es la opción más ligera. Aider funciona mejor en la terminal.',
+      answer: 'Cline (gratuito, open-source con BYOK) es el mejor plugin IDE para Ollama, LM Studio y LLMs locales en 2026 — desde que Continue.dev fue adquirido por Cursor en junio de 2026 y su repositorio quedó congelado en v2.0.0-vscode. Cline funciona en VS Code y en toda la familia JetBrains (PyCharm, Rider, CLion, GoLand, WebStorm, RustRover), y soporta edición agéntica de archivos y herramientas MCP. Para uso totalmente offline o bajo mandato de cumplimiento normativo, Bodega One Code es la opción más sólida. Para autocompletado únicamente, Tabby es la opción más ligera. Aider funciona mejor en la terminal.',
       bullets: [
-        'Cline: el mejor en general, con mantenimiento activo — lee y escribe archivos, ejecuta comandos de terminal, usa herramientas MCP, VS Code + JetBrains (incl. PyCharm, PhpStorm, Rider), gratuito BYOK o ClinePass a $9,99/mes',
-        'Bodega One Code: IDE independiente local-first gratuito (no un plugin) — agente de codificación integrado, bring-your-own-LLM, soporte completo offline/air-gap, sin suscripción',
-        'Continue: todavía funcional pero sin mantenimiento (adquirido por Cursor en junio de 2026, v2.0.0 versión final) — sigue funcionando con Ollama, sin más desarrollo',
-        'Tabby: el mejor autocompletado self-hosted — servidor de inferencia propio, modelos de 1–3B',
-        'Aider: el mejor nativo de terminal — consciente de git, ediciones multi-archivo, excelente con modelos 14B+',
-        'Cursor: la mejor opción comercial — soporte de modelos locales añadido, diseño cloud-first',
+        'Cline: el mejor en general, con mantenimiento activo — lee y escribe archivos, ejecuta comandos de terminal, usa herramientas MCP, VS Code + toda la familia JetBrains (PyCharm, Rider, CLion, GoLand, WebStorm, RustRover), gratuito BYOK o ClinePass desde $9,99/mes',
+        'Bodega One Code: IDE independiente local-first gratuito para uso personal (no un plugin) — agente de codificación integrado, bring-your-own-LLM, soporte completo offline/air-gap, $39 de pago único para el nivel comercial (aún no disponible para comprar)',
+        'Continue: todavía se instala y funciona pero sin mantenimiento (adquirido por Cursor en junio de 2026, v2.0.0-vscode versión final, datos en la nube eliminados después del 15 de julio de 2026) — sigue funcionando con Ollama, sin más desarrollo',
+        'Tabby: el mejor autocompletado self-hosted — servidor de inferencia propio, modelos de 1–3B, ~33K estrellas en GitHub',
+        'Aider: el mejor nativo de terminal — consciente de git, ediciones multi-archivo, más de 44K estrellas en GitHub',
+        'Cursor: la mejor opción comercial — nivel Hobby gratuito, Pro $20/mes, Pro+ $60/mes, Ultra $200/mes, modelos locales vía Ollama/LM Studio Custom API',
       ],
-      updatedDate: '2026-07-21',
+      updatedDate: '2026-08-25',
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Continue.dev fue adquirido por Cursor (junio de 2026) — v2.0.0 es la última versión, el repositorio ahora es de solo lectura; sigue funcionando con Ollama pero ya no tiene mantenimiento',
-          'Cline es ahora la mejor alternativa gratuita BYOK con mantenimiento activo: VS Code + JetBrains, edición agéntica de archivos, herramientas MCP, más de 5M de instalaciones',
-          'Bodega One Code es un IDE local-first gratuito con agente de codificación integrado y soporte para bring-your-own-LLM (BYOL) — operación completa offline/air-gap, sin necesidad de suscripción',
-          'Tabby ejecuta su propio servidor de inferencia (modelos 1–3B) — la menor latencia de autocompletado para equipos',
+          'Continue.dev fue adquirido por Cursor (junio de 2026) — v2.0.0-vscode es la última versión, el repositorio ahora es de solo lectura, los datos en la nube se eliminaron después del 15 de julio de 2026; sigue funcionando localmente con Ollama pero ya no tiene mantenimiento',
+          'Cline es ahora la mejor alternativa gratuita BYOK con mantenimiento activo: VS Code + toda la familia JetBrains (PyCharm, Rider, CLion, GoLand, WebStorm, RustRover), edición agéntica de archivos, herramientas MCP, más de 5M de instalaciones',
+          'Bodega One Code es un IDE independiente local-first gratuito para uso personal, con agente de codificación integrado y soporte para bring-your-own-LLM (BYOL) — operación completa offline/air-gap, sin suscripción forzada',
+          'Tabby ejecuta su propio servidor de inferencia (modelos 1–3B) — la menor latencia de autocompletado para equipos, self-hosted bajo Apache 2.0',
           'Aider es la opción terminal-first — consciente de commits git, reescrituras multi-archivo, más de 44K estrellas en GitHub',
-          'Cursor ($20/mes Pro, basado en créditos) adquirió tanto Supermaven como Continue.dev; SpaceX acordó adquirir Cursor por $60.000 millones en junio de 2026',
-          'Todas las herramientas funcionan con Ollama; solo Tabby requiere su propio servidor backend',
+          'Cursor (Hobby gratuito / $20 Pro / $60 Pro+ / $200 Ultra al mes) adquirió tanto Supermaven como Continue.dev; SpaceX completó la adquisición de Cursor por $60.000 millones en agosto de 2026',
+          'Todas las herramientas funcionan completamente offline contra un backend local (Ollama, LM Studio o un servidor autoalojado); solo Cursor requiere una app conectada a la nube incluso al usar modelos locales',
+        ],
+      },
+      buyingTable: {
+        title: 'Compara los seis de un vistazo',
+        content: 'Cada plugin aquí se conecta a un modelo local — la diferencia está en qué tipo de programación haces y cuánto ecosistema comercial quieres alrededor.',
+        columns: ['Plugin', 'Mejor para', 'Backend local', 'Precio', 'Consíguelo'],
+        rows: [
+          { 'Plugin': 'Cline', 'Mejor para': 'La mayoría / tareas agénticas', 'Backend local': 'Ollama, LM Studio, 30+ APIs', 'Precio': 'Gratis (BYOK) / desde $9,99/mes', 'Consíguelo': '[Instalar gratis →](https://github.com/cline/cline)' },
+          { 'Plugin': 'Bodega One Code', 'Mejor para': 'Offline / air-gap / cumplimiento', 'Backend local': 'Ollama, LM Studio, llama.cpp, 10+', 'Precio': 'Gratis (personal) / $39 único', 'Consíguelo': '[Probar gratis →](https://bodegaone.ai)' },
+          { 'Plugin': 'Continue (legado)', 'Mejor para': 'Solo usuarios actuales de Continue', 'Backend local': 'Ollama, LM Studio, llama.cpp', 'Precio': 'Gratis (sin mantenimiento)', 'Consíguelo': '[Continue.dev →](https://continue.dev)' },
+          { 'Plugin': 'Tabby', 'Mejor para': 'Autocompletado self-hosted más rápido', 'Backend local': 'Servidor de inferencia propio (1–3B)', 'Precio': 'Gratis, open-source', 'Consíguelo': '[Self-hostear gratis →](https://tabby.tabbyml.com)' },
+          { 'Plugin': 'Aider', 'Mejor para': 'Terminal + flujo de trabajo git', 'Backend local': 'Ollama, LM Studio, compat. OpenAI', 'Precio': 'Gratis, open-source', 'Consíguelo': '[Instalar gratis →](https://aider.chat)' },
+          { 'Plugin': 'Cursor', 'Mejor para': 'IDE pulido, mezcla nube + local', 'Backend local': 'Ollama, LM Studio (Custom API)', 'Precio': 'Hobby gratis / $20–$200/mes', 'Consíguelo': '[Empezar gratis →](https://cursor.com)' },
+        ],
+        note: 'Sáltate los seis si aún no tienes un modelo local en marcha — elige primero hardware y un backend (Ollama o LM Studio), y luego vuelve a esta tabla. Cada enlace de arriba es un enlace de producto simple, sin relación de afiliación actual — ver la nota de divulgación en la parte superior de esta página.',
+      },
+      clineCta: {
+        title: 'Empieza con Cline: instalado en los próximos 2 minutos',
+        content: 'Cline es la recomendación por defecto de esta página. Aquí está el porqué, y cómo instalarlo ahora mismo.',
+        items: [
+          '**Gratuito y open-source** — trae tu propia clave o apunta a un endpoint local, sin suscripción forzada (ClinePass desde $9,99/mes es opcional, para enrutamiento gestionado sin tu propia clave API).',
+          '**Funciona en VS Code y en toda la familia JetBrains** — IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine y DataGrip.',
+          '**Se conecta de forma nativa a Ollama y LM Studio** — además de 30+ proveedores compatibles con OpenAI, sin necesidad de dependencia de la nube.',
+          '**Realmente agéntico** — lee/escribe archivos, ejecuta comandos de terminal y usa herramientas MCP, no solo autocompletado en línea.',
+          '**Limitación**: las tareas agénticas de múltiples pasos fiables necesitan un modelo local de clase 32B (24 GB+ de VRAM); los modelos 14B manejan ediciones simples pero les cuesta con refactorizaciones multi-archivo complejas.',
+        ],
+        affiliateLinks: [
+          { label: 'Instalar Cline para VS Code (gratis)', url: 'https://github.com/cline/cline', productName: 'Cline for VS Code', productCategory: 'dev-tool' },
+          { label: 'Instalar Cline para JetBrains (gratis)', url: 'https://cline.bot/jetbrains', productName: 'Cline for JetBrains', productCategory: 'dev-tool' },
+        ],
+      },
+      decisionGuide: {
+        title: '¿Cuál deberías usar?',
+        content: 'Asocia tu prioridad a un plugin — los seis están cubiertos en detalle más abajo en esta página.',
+        items: [
+          '**Lo más fácil, quieres que funcione hoy** → [Cline](https://github.com/cline/cline) — gratis, agéntico, VS Code + JetBrains.',
+          '**Totalmente offline, air-gapped, o bajo un mandato de cumplimiento** → [Bodega One Code](https://bodegaone.ai) — IDE independiente sin ningún componente en la nube.',
+          '**Autocompletado más rápido para un equipo, self-hosted** → [Tabby](https://tabby.tabbyml.com) — servidor de inferencia propio, completados por debajo de 200 ms.',
+          '**Flujo de trabajo terminal-first, consciente de git** → [Aider](https://aider.chat) — ediciones multi-archivo, auto-commits.',
+          '**Quieres un IDE comercial pulido con opción local ocasional** → [Cursor](https://cursor.com) — cloud-first por diseño, modelos locales vía Ollama/LM Studio en su ajuste Custom API.',
+          '**Ya usas Continue** → todavía se instala y funciona (Ollama, BYO-LLM), pero el proyecto no tiene mantenimiento desde la adquisición de Cursor en junio de 2026 — planea migrar a Cline cuando te resulte conveniente, sin urgencia.',
         ],
       },
       rankedList: {
@@ -1626,7 +1669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Cline — Mejor opción global (gratuito, código abierto, mantenimiento activo)',
-            content: 'Cline (anteriormente Claude Dev) es el plugin de codificación agéntica con mejor mantenimiento para LLMs locales en 2026 — tomó el primer puesto después de que Continue fuera adquirido por Cursor en junio de 2026. Lee y escribe archivos, ejecuta comandos de terminal, navega la web (mediante herramienta de navegador) y usa servidores MCP. Con Ollama + Qwen3-Coder 32B, Cline puede implementar funcionalidades completas a partir de un prompt. Limitaciones: se requieren modelos de 32B para tareas agénticas de múltiples pasos fiables; los modelos de 14B funcionan para tareas simples. Precio: gratuito (BYOK — trae tu propia clave API de Anthropic, OpenAI, o más de 30 proveedores); ClinePass a $9,99/mes para enrutamiento gestionado sin necesidad de clave API; Teams a $20/usuario/mes (primeros 10 puestos gratuitos). Disponible en VS Code y JetBrains (IntelliJ, PyCharm, PhpStorm, WebStorm, GoLand, Rider y más). Backends compatibles: Ollama, LM Studio, proxy LiteLLM y más de 30 proveedores cloud. Más de 8M de desarrolladores.',
+            content: 'Cline (anteriormente Claude Dev) es el plugin de codificación agéntica con mejor mantenimiento para LLMs locales en 2026 — tomó el primer puesto después de que Continue fuera adquirido por Cursor en junio de 2026. Lee y escribe archivos, ejecuta comandos de terminal, navega la web (mediante herramienta de navegador) y usa servidores MCP. Con Ollama + Qwen3-Coder 32B, Cline puede implementar funcionalidades completas a partir de un prompt. Limitaciones: se requieren modelos de 32B para tareas agénticas de múltiples pasos fiables; los modelos de 14B funcionan para tareas simples. Precio: gratuito (BYOK — trae tu propia clave API de Anthropic, OpenAI, o más de 30 proveedores); ClinePass a $9,99/mes (introductorio a $4,99 el primer mes) para enrutamiento gestionado sin necesidad de clave API; Teams a $20/usuario/mes (primeros 10 puestos gratuitos). Disponible en VS Code y en toda la familia JetBrains: IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine y DataGrip. Backends compatibles: Ollama, LM Studio, proxy LiteLLM y más de 30 proveedores cloud. Más de 5M de instalaciones entre VS Code, JetBrains y otros editores.',
             affiliateLinks: [
               { label: 'Cline en VS Code Marketplace (gratuito)', url: 'https://github.com/cline/cline' },
             ],
@@ -1634,15 +1677,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 2,
             title: 'Bodega One Code — El mejor IDE local-first gratuito con agente de codificación integrado',
-            content: 'Bodega One Code es un IDE de IA gratuito y local-first, diseñado desde cero alrededor de un agente de codificación, en lugar de ser un asistente añadido a un editor existente. Soporta bring-your-own-LLM (BYOL): lo conectas a cualquier backend de modelo local, y el agente ejecuta la planificación, edición y ejecución completamente contra ese modelo, sin atarte a un único proveedor. Toda la aplicación se ejecuta en tu máquina, con soporte completo para modo offline y air-gap — por lo que funciona en entornos aislados de la red donde herramientas conectadas a la nube como Cursor o GitHub Copilot no pueden usarse en absoluto. No requiere suscripción: Bodega One Code es gratuito, y al no tener ningún componente en la nube, tampoco hay medición de uso ni sistema de créditos que gestionar. Esto lo convierte en una buena opción para industrias reguladas, contratistas gubernamentales y de defensa, y cualquier equipo cuya política de seguridad prohíba enviar código a un servidor de terceros — el mismo público que busca inferencia local en primer lugar. Comparado con Cline, que es un plugin añadido a VS Code, Bodega One Code es un IDE independiente diseñado alrededor del agente desde el principio; los equipos que ya usan VS Code encontrarán en Cline la incorporación más sencilla, mientras que los equipos que empiezan de cero o necesitan garantizar operación offline obtienen con Bodega One Code un entorno construido específicamente para eso.',
+            content: 'Bodega One Code es un IDE de IA local-first, diseñado desde cero alrededor de un agente de codificación, en lugar de ser un asistente añadido a un editor existente. Soporta bring-your-own-LLM (BYOL) en más de 10 backends, incluyendo Ollama, LM Studio, llama.cpp, LocalAI, KoboldCpp, GPT4All y MLX para modelos locales, además de proveedores en la nube directos si los quieres: apúntalo a cualquier backend y el agente ejecuta la planificación, edición y ejecución completamente contra ese modelo, sin atarte a un único proveedor. Toda la aplicación se ejecuta en tu máquina, incluyendo un modo offline y air-gap completo que bloquea las conexiones de red salientes para que ninguna telemetría ni llamada al modelo salga de la máquina, por lo que funciona en entornos aislados de la red donde herramientas conectadas a la nube como Cursor o GitHub Copilot no pueden usarse en absoluto. Precio: gratuito para uso personal durante la beta abierta actual, incluyendo derechos de uso comercial por ahora; un nivel Pro de pago único (precio aún por anunciar) está planeado para el lanzamiento completo, añadiendo derechos de uso comercial permanentes, espacios de trabajo ilimitados y una segunda máquina, pero todavía no está disponible para comprar. No hay suscripción ni medición de uso para el uso de modelos locales. Esto lo convierte en una buena opción para industrias reguladas, contratistas gubernamentales y de defensa, y cualquier equipo cuya política de seguridad prohíba enviar código a un servidor de terceros — el mismo público que busca inferencia local en primer lugar. Comparado con Cline, que es un plugin añadido a VS Code, Bodega One Code es un IDE independiente diseñado alrededor del agente desde el principio; los equipos que ya usan VS Code encontrarán en Cline la incorporación más sencilla, mientras que los equipos que empiezan de cero o necesitan garantizar operación offline obtienen con Bodega One Code un entorno construido específicamente para eso.',
             affiliateLinks: [
               { label: 'Bodega One Code (gratis, sitio oficial)', url: 'https://bodegaone.ai' },
             ],
           },
           {
             rank: 3,
-            title: 'Continue — Todavía funcional, sin mantenimiento [Adquirido por Cursor, junio de 2026 — versión final v2.0.0]',
-            content: 'Continue fue el asistente de codificación de IA open-source líder para LLMs locales antes de su adquisición por Cursor en junio de 2026. Se conecta a Ollama, LM Studio, llama.cpp y cualquier API compatible con OpenAI. Funciones: chat en línea (Cmd+L), autocompletado (Tab), herramientas del protocolo de contexto de modelo (MCP), indexación de codebase y comandos slash personalizados. La extensión de VS Code tiene más de 2M de instalaciones. El plugin de JetBrains funciona en IntelliJ, PyCharm, GoLand, WebStorm y Rider. Mejores modelos locales: Qwen3-Coder 14B (codificación), Llama 3.3 8B (chat). Configuración: instala la extensión, define el proveedor como Ollama, elige el modelo — listo en 2 minutos. Nota (junio de 2026): Continue fue adquirido por Cursor. La versión 2.0.0 es la última publicación; el repositorio de GitHub ahora es de solo lectura. La extensión sigue instalándose y funcionando completamente con Ollama y BYO-LLM — pero sin más desarrollo por parte del equipo original. Hay forks de la comunidad activos.',
+            title: 'Continue — Todavía funcional, sin mantenimiento [Adquirido por Cursor, junio de 2026 — versión final v2.0.0-vscode]',
+            content: 'Continue fue el asistente de codificación de IA open-source líder para LLMs locales antes de su adquisición por Cursor en junio de 2026. Se conecta a Ollama, LM Studio, llama.cpp y cualquier API compatible con OpenAI. Funciones: chat en línea (Cmd+L), autocompletado (Tab), herramientas del protocolo de contexto de modelo (MCP), indexación de codebase y comandos slash personalizados. La extensión de VS Code tiene más de 2M de instalaciones. El plugin de JetBrains funciona en IntelliJ IDEA, PyCharm, GoLand, WebStorm y Rider — no cubre CLion ni RustRover. Mejores modelos locales: Qwen3-Coder 14B (codificación), Llama 3.3 8B (chat). Configuración: instala la extensión, define el proveedor como Ollama, elige el modelo — listo en 2 minutos. Nota (junio de 2026): Continue fue adquirido por Cursor. La versión 2.0.0-vscode, publicada el 19 de junio de 2026, es la última; el repositorio de GitHub ahora es de solo lectura, y los datos en la nube alojados por Continue se eliminaron después del 15 de julio de 2026. La extensión sigue instalándose y funcionando completamente offline con Ollama y BYO-LLM — pero sin más desarrollo por parte del equipo original. Hay forks de la comunidad activos.',
             affiliateLinks: [
               { label: 'Continue en VS Code Marketplace (gratuito)', url: 'https://continue.dev' },
             ],
@@ -1650,7 +1693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 4,
             title: 'Tabby — El mejor servidor de autocompletado self-hosted',
-            content: 'Tabby es un asistente de codificación self-hosted que ejecuta su propio servidor de inferencia (separado de Ollama). Usa modelos pequeños y especializados de completado de código (1–3B parámetros) entrenados específicamente para autocompletado fill-in-the-middle (FIM) — significativamente más rápido que usar un modelo 7B de propósito general. Las extensiones IDE de Tabby existen para VS Code, JetBrains, Vim/Neovim y Emacs. Ideal para: equipos que quieren autocompletado rápido (<200ms) sin la nube. Requiere un servidor dedicado o una máquina de escritorio potente.',
+            content: 'Tabby es un asistente de codificación self-hosted, construido en Rust bajo Apache 2.0, que ejecuta su propio servidor de inferencia (separado de Ollama). Usa modelos pequeños y especializados de completado de código (1–3B parámetros) entrenados específicamente para autocompletado fill-in-the-middle (FIM) — significativamente más rápido que usar un modelo 7B de propósito general. La versión estable actual es v0.32.0, con aproximadamente 33K estrellas en GitHub. Las extensiones IDE de Tabby existen para VS Code, JetBrains, Vim/Neovim y Emacs. Ideal para: equipos de 5 a 50 desarrolladores, especialmente equipos regulados o sensibles a la propiedad intelectual que quieren autocompletado rápido (<200ms) sin enviar código a la nube. Requiere un servidor dedicado o una máquina de escritorio potente — gratis para self-hostear con usuarios ilimitados, sin tarifa por puesto.',
             affiliateLinks: [
               { label: 'Tabby en GitHub (open-source, self-hosted)', url: 'https://tabby.tabbyml.com' },
             ],
@@ -1658,7 +1701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Aider — La mejor codificación de IA nativa de terminal',
-            content: 'Aider es un programador en par de IA basado en terminal que se integra con git. Entiende la estructura completa de tu repositorio, realiza ediciones multi-archivo y hace commits de los cambios automáticamente. Funciona con Ollama (via --model ollama/qwen2.5-coder:14b), LM Studio o cualquier API compatible con OpenAI. Mejores modelos locales: Qwen3-Coder 32B (modo arquitecto) + Qwen3-Coder 7B (modo editor). Aider usa un enfoque de dos modelos: un modelo grande planifica los cambios, uno pequeño los implementa. Gratuito y open-source.',
+            content: 'Aider es un programador en par de IA basado en terminal que se integra con git. Entiende la estructura completa de tu repositorio, realiza ediciones multi-archivo y hace commits de los cambios automáticamente. Funciona con Ollama (via --model ollama/qwen2.5-coder:14b), LM Studio o cualquier API compatible con OpenAI. Mejores modelos locales: Qwen3-Coder 32B (modo arquitecto) + Qwen3-Coder 7B (modo editor). Aider usa un enfoque de dos modelos: un modelo grande planifica los cambios, uno pequeño los implementa. Más de 44K estrellas en GitHub. Coste: gratuito y open-source. Nota: Aider sigue en versionado 0.x en 2026, así que las flags de la CLI y el formato .aider.conf.yml cambian ocasionalmente entre versiones menores — revisa el changelog tras actualizar.',
             affiliateLinks: [
               { label: 'Aider en GitHub (open-source)', url: 'https://aider.chat' },
             ],
@@ -1666,9 +1709,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 6,
             title: 'Cursor — La mejor opción comercial con soporte de modelos locales',
-            content: 'Cursor es un fork de VS Code con funciones de IA integradas. Cursor soporta modelos locales a través de Ollama y LM Studio en su configuración "Custom API". Sin embargo, las funciones más potentes (modo Agent con búsqueda web, conciencia completa del codebase) requieren modelos en la nube. Precios: Hobby (gratuito); Pro a $20/mes (incluye $20 en créditos de IA para modelos fronteras; modo Auto ilimitado sin coste); Pro+ a $60/mes; Ultra a $200/mes. Uso de modelos locales: nivel Hobby. Nota: Cursor adquirió Supermaven (2024) y Continue.dev (junio 2026); SpaceX acordó adquirir Cursor por $60.000 millones en junio de 2026 (cierre previsto en T3 2026).',
+            content: 'Cursor es un fork de VS Code con funciones de IA integradas. Cursor soporta modelos locales a través de Ollama y LM Studio en su configuración "Custom API". Sin embargo, las funciones más potentes de Cursor (modo Agent con búsqueda web, conciencia completa del codebase) requieren modelos en la nube. La integración de modelos locales funciona para chat y completados simples, pero se queda por detrás de Cline en flujos de trabajo centrados en privacidad, ya que Cursor sigue siendo una aplicación conectada a la nube incluso cuando la inferencia se ejecuta localmente. Precios: Hobby (gratuito, incluye uso de modelos locales); Pro a $20/mes ($16/mes con facturación anual, incluye un pool de $20/mes en créditos de IA para modelos frontera; el modo Auto es ilimitado sin coste de créditos); Pro+ a $60/mes (3x los créditos de uso); Ultra a $200/mes (20x el uso); Teams a $40/usuario/mes con facturación centralizada y SSO. Nota: Cursor adquirió Supermaven (2024) y Continue.dev (junio 2026). SpaceX completó su adquisición de Cursor por $60.000 millones en agosto de 2026, días después de la propia salida a bolsa de SpaceX — los ingresos anualizados de Cursor supuestamente crecieron de unos $100 millones a principios de 2025 a más de $4.000 millones hacia junio de 2026. Esta consolidación convierte a Cursor en la fuerza comercial dominante en herramientas de codificación con IA — pero plantea dudas a largo plazo sobre las alternativas open-source.',
+            pros: [
+              'Fork de VS Code pulido y familiar — curva de aprendizaje casi nula para usuarios existentes de VS Code',
+              'Modelos locales vía Ollama o LM Studio a través del ajuste Custom API',
+              'El nivel Hobby gratuito incluye uso de modelos locales, no solo una prueba',
+            ],
+            cons: [
+              'Las funciones más potentes (modo Agent, conciencia completa del codebase) requieren modelos en la nube/frontera, no locales',
+              'Ahora propiedad de SpaceX/xAI — un perfil de proveedor muy distinto al de una herramienta open-source independiente',
+            ],
             affiliateLinks: [
-              { label: 'Suscripción Cursor Pro', url: 'https://cursor.com' },
+              { label: 'Empieza gratis con Cursor Hobby', url: 'https://cursor.com' },
             ],
           },
         ],
@@ -1677,7 +1729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       setupGuide: {
         title: 'Configuración rápida: Cline + Ollama en VS Code',
-        content: 'La forma más rápida de empezar a programar con LLM local con la actual elección #1:',
+        content: '¿Listo para instalar Cline? → [Instalar Cline gratis](https://github.com/cline/cline). Sigue estos pasos para conectarlo a Ollama — la forma más rápida de empezar a programar con LLM local con la actual elección #1:',
         numberedItems: [
           'Instala Ollama: `curl -fsSL https://ollama.com/install.sh | sh`',
           'Descarga un modelo de codificación: `ollama pull qwen2.5-coder:14b` (o `qwen3-coder:32b` para tareas agénticas)',
@@ -1690,7 +1742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       aiderSetupGuide: {
         title: 'Configuración rápida: Aider + Ollama (terminal)',
-        content: 'Para codificación de IA nativa de terminal y consciente de git — documentación oficial de Aider: aider.chat/docs/llms/ollama.html',
+        content: '¿Listo para instalar Aider? → [Instalar Aider gratis](https://aider.chat). Para codificación de IA nativa de terminal y consciente de git — documentación oficial de Aider: aider.chat/docs/llms/ollama.html',
         numberedItems: [
           'Instala Ollama y descarga un modelo: `ollama pull qwen2.5-coder:32b`',
           'Instala Aider: `python -m pip install aider-install && aider-install`',
@@ -1713,10 +1765,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/best-local-llm-ide-plugins-2026-model-recommendations-hero-es.webp',
         imageCaption: 'Mejores Modelos Locales por Plugin de IDE -- Modelo de código y VRAM mínima',
+        note: '¿Necesitas hardware para estos modelos? 8 GB de VRAM cubren los modelos pequeños de completado de Tabby; 16 GB manejan la mayoría de los modelos de codificación de 14B (Continue, el modo editor de Aider, la opción local de Cursor); 24 GB+ es el mínimo realista para trabajo agéntico de 32B fiable con Cline o el modo arquitecto de Aider. Consulta [Mejores GPUs para LLMs locales](/es/local-llms/best-gpus-for-local-llms) para la selección completa, o [Mejores GPUs económicas para LLMs locales](/es/local-llms/best-budget-gpus-local-llm) si empiezas con menos de 16 GB.',
       },
       lmStudioPlugins: {
         title: 'Mejores plugins de LM Studio (no es lo mismo que los plugins IDE)',
-        content: 'Esta es una pregunta distinta de "qué extensión IDE se conecta a LM Studio" (cubierto arriba). LM Studio tiene su propio sistema de plugins desde finales de 2024: los plugins se ejecutan dentro de LM Studio mismo — como código TypeScript o Python en un worker en sandbox — y pueden interceptar solicitudes de inferencia, añadir procesadores de prompts, conectar backends de llamada a herramientas, o añadir nuevos paneles de interfaz. Se instalan desde el marketplace curado en lmstudio.ai/plugins; cada plugin declara los permisos requeridos (acceso a red, lectura del sistema de archivos) de antemano, y puedes revocarlos después desde Ajustes sin desinstalar. Categorías comunes en 2026: plugins de búsqueda web, preprocesadores RAG/recuperación de documentos, preprocesadores OCR, plugins de conjunto de herramientas agénticas, herramientas de acceso a shell/archivos, y plugins de memoria.',
+        content: 'Esta es una pregunta distinta de "qué extensión IDE se conecta a LM Studio" (cubierto arriba) — y vale la pena responderla directamente, ya que LM Studio es uno de los dos backends a los que se conecta cada plugin de esta guía. LM Studio tiene su propio sistema de plugins desde finales de 2024: los plugins se ejecutan dentro de LM Studio mismo — actualmente como código TypeScript/JavaScript sobre Node.js en un worker en sandbox, con soporte de Python aún en desarrollo — y pueden interceptar solicitudes de inferencia, añadir procesadores de prompts, conectar backends de llamada a herramientas, o añadir nuevos paneles de interfaz. Se instalan desde el marketplace curado en lmstudio.ai/plugins; cada plugin declara los permisos requeridos (acceso a red, lectura del sistema de archivos) de antemano, y puedes revocarlos después desde Ajustes sin desinstalar. Categorías comunes en 2026: plugins de búsqueda web, preprocesadores RAG/recuperación de documentos, preprocesadores OCR, plugins de conjunto de herramientas agénticas, herramientas de acceso a shell/archivos, y plugins de memoria.',
         items: [
           '**Plugins de búsqueda web**: permiten que un modelo local en LM Studio incorpore resultados web en vivo a su contexto — útil ya que los modelos locales no tienen acceso integrado a internet.',
           '**Plugins RAG / de documentos**: indexan una carpeta local de PDFs o archivos de texto y recuperan fragmentos relevantes automáticamente por consulta.',
@@ -1745,12 +1798,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué IDEs de JetBrains soportan plugins de LLM local?',
-            a: 'Cline y Continue ofrecen plugins de JetBrains que funcionan en toda la familia JetBrains: IntelliJ IDEA, PyCharm, PhpStorm, WebStorm, GoLand y Rider. Instálalos desde el JetBrains Marketplace (no el VS Code Marketplace) y configura los mismos ajustes de proveedor Ollama/LM Studio que en la versión de VS Code. Tabby también tiene soporte para JetBrains solo para autocompletado.',
+            a: 'Cline y Continue ofrecen ambos plugins de JetBrains. Cline cubre toda la familia: IntelliJ IDEA, PyCharm, PhpStorm, WebStorm, GoLand, Rider, CLion, RustRover, RubyMine y DataGrip. Continue solo cubre IntelliJ IDEA, PyCharm, PhpStorm, WebStorm, GoLand y Rider. Instálalos desde el JetBrains Marketplace (no el VS Code Marketplace) y configura los mismos ajustes de proveedor Ollama/LM Studio que en la versión de VS Code. Tabby también tiene soporte para JetBrains solo para autocompletado.',
+          },
+          {
+            q: '¿Funciona Cline en PyCharm, Rider, GoLand, WebStorm, CLion y RustRover?',
+            a: 'Sí — el plugin de JetBrains de Cline, instalado desde el JetBrains Marketplace, soporta toda la familia JetBrains: IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine y DataGrip. Configura los mismos ajustes de proveedor Ollama o LM Studio que en la versión de VS Code. El plugin de JetBrains de Continue (sin mantenimiento desde la adquisición por Cursor en junio de 2026) cubre un conjunto más reducido — IntelliJ IDEA, PyCharm, GoLand, WebStorm y Rider — pero no CLion ni RustRover.',
+          },
+          {
+            q: '¿Cuáles de estas herramientas funcionan completamente offline para GDPR, HIPAA, o entornos air-gapped?',
+            a: 'Bodega One Code está construido específicamente para esto: operación offline completa con modelos locales, además de un modo air-gap que bloquea todas las conexiones de red salientes para que ninguna telemetría ni llamada al modelo salga de la máquina. Cline, Continue, Tabby y Aider también funcionan completamente offline, siempre que los apuntes a un backend local (Ollama, LM Studio, o un servidor Tabby autoalojado) en lugar de una API en la nube — ninguno de ellos llama a casa en esta configuración. El soporte de modelos locales de Cursor (a través de su ajuste Custom API) sigue ejecutándose dentro de una aplicación conectada a la nube, por lo que no encaja en entornos aislados de la red.',
           },
           {
             q: '¿Qué es Bodega One Code, y en qué se diferencia de Cline?',
-            a: 'Bodega One Code es un IDE de IA independiente, gratuito y local-first, con un agente de codificación integrado — a diferencia de Cline, que es un plugin añadido a VS Code o JetBrains, Bodega One Code es un IDE completo construido alrededor del agente desde el principio. Soporta bring-your-own-LLM (BYOL), lo que significa que lo conectas a cualquier backend de modelo local, funciona completamente offline con soporte air-gap, y no requiere suscripción. Es una buena opción para entornos regulados o aislados de la red donde un editor conectado a la nube simplemente no puede usarse.',
+            a: 'Bodega One Code es un IDE de IA local-first independiente con un agente de codificación integrado, gratuito para uso personal durante su beta abierta actual — a diferencia de Cline, que es un plugin añadido a VS Code o JetBrains, Bodega One Code es un IDE completo construido alrededor del agente desde el principio. Soporta bring-your-own-LLM (BYOL) en más de 10 backends, y funciona completamente offline con soporte air-gap. Un nivel Pro de pago único para uso comercial está planeado pero aún no disponible para comprar. Es una buena opción para entornos regulados o aislados de la red donde un editor conectado a la nube simplemente no puede usarse.',
           },
+        ],
+      },
+      finalRecommendations: {
+        title: 'Mis recomendaciones para 2026',
+        content: 'Seis herramientas, una página — aquí está la versión corta si solo quieres la respuesta:',
+        items: [
+          '**Mejor en general** → [Cline](https://github.com/cline/cline) — gratis, agéntico, VS Code + toda la familia JetBrains. Instálalo primero.',
+          '**Mejor totalmente offline / cumplimiento** → [Bodega One Code](https://bodegaone.ai) — IDE independiente, sin componente en la nube.',
+          '**Mejor autocompletado** → [Tabby](https://tabby.tabbyml.com) — self-hosted, por debajo de 200 ms.',
+          '**Mejor flujo de trabajo en terminal** → [Aider](https://aider.chat) — consciente de git, multi-archivo.',
+          '**Mejor IDE comercial** → [Cursor](https://cursor.com) — empieza gratis en el nivel Hobby, añade modelos locales vía Ollama/LM Studio.',
         ],
       },
       relatedReading: {
@@ -1787,10 +1859,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          name: '¿Qué IDEs de JetBrains soportan plugins de LLM local?',
+          name: '¿Funciona Cline en PyCharm, Rider, GoLand, WebStorm, CLion y RustRover?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Cline y Continue ofrecen plugins de JetBrains que cubren IntelliJ IDEA, PyCharm, PhpStorm, WebStorm, GoLand y Rider. Instálalos desde el JetBrains Marketplace y usa los mismos ajustes de proveedor Ollama/LM Studio que en la versión de VS Code.',
+            text: 'Sí. El plugin de JetBrains de Cline soporta toda la familia JetBrains: IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine y DataGrip. El plugin de JetBrains de Continue cubre un conjunto más reducido — IntelliJ IDEA, PyCharm, GoLand, WebStorm y Rider — y ya no recibe actualizaciones.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Cuáles de estas herramientas funcionan completamente offline para GDPR, HIPAA, o entornos air-gapped?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Bodega One Code está construido específicamente para esto, con un modo air-gap dedicado. Cline, Continue, Tabby y Aider también funcionan completamente offline cuando se apuntan a un backend local (Ollama, LM Studio, o un servidor autoalojado). Cursor sigue siendo una aplicación conectada a la nube incluso con modelos locales, por lo que no encaja en entornos aislados de la red.',
           },
         },
         {
@@ -1798,7 +1878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿Qué es Bodega One Code, y en qué se diferencia de Cline?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Bodega One Code es un IDE de IA independiente, gratuito y local-first, con agente de codificación integrado, bring-your-own-LLM (BYOL) y operación completa offline/air-gap sin suscripción. A diferencia de Cline, que es un plugin añadido a VS Code o JetBrains, Bodega One Code es un IDE completo construido alrededor del agente desde el principio.',
+            text: 'Bodega One Code es un IDE de IA local-first independiente con agente de codificación integrado, gratuito para uso personal durante su beta abierta actual, soporte bring-your-own-LLM (BYOL) en más de 10 backends, y operación completa offline/air-gap. A diferencia de Cline, que es un plugin añadido a VS Code o JetBrains, Bodega One Code es un IDE completo construido alrededor del agente desde el principio.',
           },
         },
       ],
@@ -1809,20 +1889,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       name: 'Mejores plugins IDE para LLMs locales 2026',
       numberOfItems: 6,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Cline', description: 'El mejor en general — mantenimiento activo, agéntico, VS Code + JetBrains, gratuito BYOK' },
-        { '@type': 'ListItem', position: 2, name: 'Bodega One Code', description: 'El mejor IDE local-first gratuito con agente de codificación integrado — BYOL, soporte completo offline/air-gap, sin suscripción' },
+        { '@type': 'ListItem', position: 1, name: 'Cline', description: 'El mejor en general — mantenimiento activo, agéntico, VS Code + toda la familia JetBrains, gratuito BYOK' },
+        { '@type': 'ListItem', position: 2, name: 'Bodega One Code', description: 'El mejor IDE local-first gratuito para uso personal con agente de codificación integrado — BYOL, soporte completo offline/air-gap' },
         { '@type': 'ListItem', position: 3, name: 'Continue', description: 'Todavía funcional pero sin mantenimiento desde la adquisición por Cursor, junio de 2026' },
         { '@type': 'ListItem', position: 4, name: 'Tabby', description: 'El mejor autocompletado self-hosted — modelos FIM 1–3B, todos los editores' },
         { '@type': 'ListItem', position: 5, name: 'Aider', description: 'El mejor nativo de terminal — consciente de git, ediciones multi-archivo, open-source' },
-        { '@type': 'ListItem', position: 6, name: 'Cursor', description: 'La mejor opción comercial — soporte de modelos locales, $20/mes Pro' },
+        { '@type': 'ListItem', position: 6, name: 'Cursor', description: 'La mejor opción comercial — nivel Hobby gratuito + soporte de modelos locales, $20/mes Pro' },
       ],
     },
     schema: {
       '@type': 'TechArticle',
-      headline: 'Mejores plugins IDE para LLMs locales en 2026 (VS Code y JetBrains)',
-      description: 'Comparativa clasificada de Continue, Cline, Tabby, Aider y Cursor para uso de LLM local en VS Code y JetBrains. Incluye guía de configuración, recomendaciones de modelos y comparación de rendimiento.',
+      headline: 'Mejores plugins IDE para LLMs locales en 2026 (VS Code, JetBrains y LM Studio)',
+      description: 'Comparativa clasificada de Cline, Bodega One Code, Continue, Tabby, Aider y Cursor para uso de LLM local en VS Code, toda la familia JetBrains y LM Studio. Incluye tabla comparativa, guías de configuración, recomendaciones de modelos y orientación de hardware.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-21',
+      dateModified: '2026-08-25',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-local-llm-ide-plugins-2026',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
