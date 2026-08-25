@@ -656,6 +656,19 @@ Publishing a new article is not complete until existing articles link back to it
 - [ ] Link structure (body links + Related Reading) present in all 9 locale blocks
 - [ ] All link targets are canonical slugs that exist (no aliases, no 404s)
 
+#### Rule: Every Product/Provider CTA Mention Must Be an Actual Link (Mandatory)
+
+**Never write an inline "→ Check X prices" / "→ Get Y offer" CTA, or a bare "ProductName (domain.com)" mention, as plain text.** The renderer (`renderInlineLinks` in each `*PostClient.tsx`) only turns text into a clickable link when it is markdown-formatted as `[label](url)` — an arrow followed by plain text renders as inert text, not a button, even though it visually reads like a call to action. This was shipped as a defect on a live page (`alibaba-cloud-vs-tencent-cloud-gpu-ai-2026`, fixed 2026-08-25): dozens of "→ Check current AutoDL GPU prices" style mentions across all 9 language blocks looked clickable but had no `href`.
+
+**Rule, for every section that names an affiliate product, vendor, or external tool in prose (not just in a `columns`/`rows` table, and not just in the dedicated `affiliateLinks` button row):**
+- Any inline CTA arrow ("→" / "←" for RTL) followed by an action phrase — wrap the phrase in a markdown link to the matching URL: `→ [Check current AutoDL GPU prices](https://www.autodl.com)`.
+- Any bare domain mention used as a citation — e.g. `**AutoDL (autodl.com):**` — link the domain fragment itself: `**AutoDL ([autodl.com](https://www.autodl.com)):**`.
+- Table cells that end in a CTA (e.g. a `Best option` or `CTA` column reading `'AutoDL →'`) get the same treatment: `'[AutoDL →](https://www.autodl.com)'`.
+- **Never** put a markdown link inside a `label:` field of an `affiliateLinks[]` entry, or inside a JSON-LD `schema`/`faqSchema` `text:`/`name:` field — those render as plain strings (a button label or schema.org text), not through the link renderer, so markdown syntax would show up literally as `[text](url)` on the page or in the schema payload.
+- Apply this identically across all 9 language blocks — the URL stays the same across languages; only the anchor text is translated.
+
+**Before shipping a comparison/affiliate article, grep for unlinked CTAs:** `grep -n "→ [A-Za-z]" file.ts | grep -v "\["` (adjust the arrow/script for the language) should return nothing except deliberate non-product pointers (e.g. "→ compare prices below" pointing at an on-page table with no single vendor to link).
+
 ---
 
 ### SECTION G: Schema Markup (Rule 5)
