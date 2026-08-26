@@ -9,8 +9,8 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
-      next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-12-19',
+      next_seo_review_due: '2026-10-01',
+      next_refresh_due: '2027-02-26',
       theme: 'Best Models',
       title: 'LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0: LLM Quantization Explained (2026)',
@@ -18,8 +18,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, and Q8_K_XL compared. VRAM per 7B model, quality loss, and which GGUF quant to pick for your hardware in 2026.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-en.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-19',
-      lastFactChecked: '2026-06-15',
+      dateModified: '2026-08-26',
+      lastFactChecked: '2026-08-26',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       leadAnswerBlock: '**Choose quantization based on VRAM: 6–8 GB VRAM → use Q4_K_M (~4.5 GB for 7B models, 1–3% quality loss), 16 GB → Q5_K_M, 24+ GB → Q8_0 (negligible loss). Quantization reduces model weight precision from 16-bit floats to 4- or 8-bit integers, cutting RAM by 50–75%. For models larger than your GPU, add CPU offloading or multi-GPU layer splitting.**',
@@ -235,7 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**GGUF (GPT-Generated Unified Format) is the single-file standard for quantized LLM weights, containing model weights, metadata, and tokenizer -- used by Ollama, LM Studio, and llama.cpp.** It was created by the llama.cpp project and replaces the older GGML format.',
             'A GGUF file contains: the quantized model weights, all model metadata (architecture, tokenizer, context length), and a format version number. This self-contained design means a single `.gguf` file is everything needed to run the model -- no separate tokenizer files, no configuration JSON.',
-            'As of April 2026, GGUF is the standard format for Ollama, LM Studio, Jan AI, and GPT4All. When you run [`ollama pull llama3.1:8b`](/local-llms/how-to-install-ollama), Ollama downloads a GGUF file internally. When LM Studio shows model file sizes, those are GGUF file sizes.',
+            'As of August 2026, GGUF is the standard format for Ollama, LM Studio, Jan AI, and GPT4All. When you run [`ollama pull llama3.1:8b`](/local-llms/how-to-install-ollama), Ollama downloads a GGUF file internally. When LM Studio shows model file sizes, those are GGUF file sizes.',
             'The quantization level is part of the filename: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` is a Q4_K_M quantized GGUF of Llama 3.3 8B.',
           ],
           image: '/images/gguf-format-structure-en.svg',
@@ -260,7 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'quality-loss',
           title: 'How Much Quality Do You Actually Lose with Quantization?',
           content: [
-            '**Q4_K_M loses 1-3% on MMLU benchmarks vs FP16 -- imperceptible in most practical tasks. Q3_K_S loses 5-10% and is noticeable on math and reasoning.** Quality loss from quantization is measured by comparing benchmark scores between full-precision and quantized versions. As of April 2026, the established findings are:',
+            '**Q4_K_M loses 1-3% on MMLU benchmarks vs FP16 -- imperceptible in most practical tasks. Q3_K_S loses 5-10% and is noticeable on math and reasoning.** Quality loss from quantization is measured by comparing benchmark scores between full-precision and quantized versions. As of August 2026, the established findings are:',
             'Quantization reduces memory usage but can degrade output quality. Well-engineered prompts compensate: techniques like few-shot examples and explicit output constraints help quantized models maintain accuracy. See [prompt engineering techniques](https://www.promptquorum.com/prompt-engineering) for methods that work at any quantization level.',
           ],
           items: [
@@ -515,6 +515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'update-log',
           title: 'Update Log',
           items: [
+            '**2026-08-26:** Semi-annual refresh. Updated "as of" references to August 2026, closed a gap between the visible FAQ list and the FAQPage schema (3 questions were missing from the schema), and re-verified facts.',
             '**2026-06-15:** Added head-to-head comparison sections (Q4_0 vs Q4_K_M, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, Q8_0 vs Q8_K_XL) and a dedicated "What is Q8_0?" answer; added Q8_K_XL coverage; facts re-verified June 2026.',
             '**2026-05-17:** Updated title to reflect decision-focused intent; content unchanged.',
           ],
@@ -526,7 +527,7 @@ schema: {
         'headline': 'LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
         'description': 'Practical guide to choosing LLM quantization levels by VRAM. Q4_K_M, Q5_K_M, Q6_K, Q8_0 compared with RAM tables, quality loss, and use cases.',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-19',
+        'dateModified': '2026-08-26',
         'url': 'https://www.promptquorum.com/local-llms/llm-quantization-explained',
         'proficiencyLevel': 'Advanced',
         'inLanguage': 'en',
@@ -612,6 +613,11 @@ schema: {
           },
           {
             '@type': 'Question',
+            'name': 'Can I quantize a model myself instead of downloading a pre-quantized version?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes -- llama.cpp includes a `quantize` binary that converts GGUF files to any supported quantization level. The process takes 5-30 minutes depending on model size. Most users should download pre-quantized GGUF files from Hugging Face rather than quantizing themselves, as the results are equivalent.' },
+          },
+          {
+            '@type': 'Question',
             'name': 'Does quantization affect the model\'s context window?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'No -- quantization only affects model weight precision, not the context length. A Llama 3.3 8B model supports 128K tokens whether at Q4_K_M or FP16. However, processing longer contexts requires more RAM regardless of quantization level, as the KV cache scales with context size.' },
           },
@@ -644,6 +650,16 @@ schema: {
             '@type': 'Question',
             'name': 'What is the difference between Q8_0 and Q8_K_XL?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'Q8_0 is the standard llama.cpp 8-bit quantization -- every weight at 8-bit, about 7.7 GB for a 7B model, under 0.5% quality loss versus FP16. Q8_K_XL is not a stock llama.cpp type; it is an Unsloth "Dynamic" GGUF variant that keeps an 8-bit base but upcasts the most sensitive layers (embeddings, attention, output) to 16-bit, nudging quality closer to full FP16 at a slightly larger file size. Q8_0 is already effectively lossless for most users, so Q8_K_XL only helps if you need the last fraction of a percent of accuracy and have spare VRAM. File sizes vary by model -- check the size in LM Studio or on Hugging Face before downloading.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I switch between quantization levels without redownloading the model?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'No -- switching quantization levels requires downloading a different GGUF file or re-quantizing the base model yourself. Once a model is quantized to Q4_K_M, you cannot convert it back to Q5_K_M without the original FP16 model. Most users download pre-quantized GGUF files from Hugging Face for their desired quantization level.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What quantization level does Ollama use by default?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama defaults to Q4_K_M for all models in its library. When you run `ollama pull llama3.1:8b`, you\'re downloading the Q4_K_M variant. This default balances quality and RAM requirements well for most users. To pull a different quantization, append the tag: `ollama pull llama3.1:8b:q5_k_m` or `ollama pull llama3.1:8b:q8_0`.' },
           },
           {
             '@type': 'Question',
@@ -686,8 +702,8 @@ schema: {
     },
     es: {
       freshness_tier: 'semi_annual',
-      next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-12-19',
+      next_seo_review_due: '2026-10-01',
+      next_refresh_due: '2027-02-26',
       theme: 'Best Models',
       title: 'Cuantización de LLM explicada: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0: cuantización de LLM (2026)',
@@ -695,8 +711,8 @@ schema: {
       metaDescription: 'Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M y Q8_0 vs Q8_K_XL comparados. Bits, VRAM por 7B, pérdida de calidad y qué cuantización GGUF elegir para tu VRAM en 2026.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-es.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-15',
-      lastFactChecked: '2026-06-15',
+      dateModified: '2026-08-26',
+      lastFactChecked: '2026-08-26',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       leadAnswerBlock: '**Elige la cuantización según tu VRAM: 6–8 GB → usa Q4_K_M (~4,5 GB para modelos 7B, pérdida de calidad del 1–3%), 16 GB → Q5_K_M, 24+ GB → Q8_0 (pérdida insignificante). La cuantización reduce la precisión de los pesos del modelo de floats de 16 bits a enteros de 4 u 8 bits, reduciendo la RAM entre un 50–75%. Para modelos más grandes que tu GPU, añade CPU offloading o layer splitting multi-GPU.**',
@@ -846,7 +862,7 @@ schema: {
           content: [
             '**GGUF (GPT-Generated Unified Format) es el estándar de archivo único para pesos de LLM cuantizados, que contiene pesos del modelo, metadatos y tokenizador — utilizado por Ollama, LM Studio y llama.cpp.** Fue creado por el proyecto llama.cpp y reemplaza al formato GGML anterior.',
             'Un archivo GGUF contiene: los pesos del modelo cuantizados, todos los metadatos del modelo (arquitectura, tokenizador, longitud de contexto) y un número de versión del formato. Este diseño autosuficiente significa que un único archivo `.gguf` es todo lo necesario para ejecutar el modelo — sin archivos de tokenizador separados, sin JSON de configuración.',
-            'A partir de abril de 2026, GGUF es el formato estándar para Ollama, LM Studio, Jan AI y GPT4All. Cuando ejecutas [`ollama pull llama3.1:8b`](/es/local-llms/how-to-install-ollama), Ollama descarga internamente un archivo GGUF. Cuando LM Studio muestra tamaños de archivos de modelos, esos son tamaños de archivos GGUF.',
+            'A partir de agosto de 2026, GGUF es el formato estándar para Ollama, LM Studio, Jan AI y GPT4All. Cuando ejecutas [`ollama pull llama3.1:8b`](/es/local-llms/how-to-install-ollama), Ollama descarga internamente un archivo GGUF. Cuando LM Studio muestra tamaños de archivos de modelos, esos son tamaños de archivos GGUF.',
             'El nivel de cuantización es parte del nombre de archivo: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` es un GGUF cuantizado a Q4_K_M de Llama 3.3 8B.',
           ],
           image: '/images/gguf-format-structure-es.svg',
@@ -870,7 +886,7 @@ schema: {
           id: 'quality-loss',
           title: '¿Cuánta calidad se pierde realmente con la cuantización?',
           content: [
-            '**Q4_K_M pierde un 1–3% en benchmarks MMLU frente a FP16 — imperceptible en la mayoría de tareas prácticas. Q3_K_S pierde un 5–10% y es notorio en matemáticas y razonamiento.** La pérdida de calidad por cuantización se mide comparando puntuaciones de benchmarks entre versiones de precisión completa y cuantizadas. A abril de 2026, los hallazgos establecidos son:',
+            '**Q4_K_M pierde un 1–3% en benchmarks MMLU frente a FP16 — imperceptible en la mayoría de tareas prácticas. Q3_K_S pierde un 5–10% y es notorio en matemáticas y razonamiento.** La pérdida de calidad por cuantización se mide comparando puntuaciones de benchmarks entre versiones de precisión completa y cuantizadas. A agosto de 2026, los hallazgos establecidos son:',
             'La cuantización reduce el uso de memoria pero puede degradar la calidad de las respuestas. Los prompts bien diseñados compensan esto: técnicas como ejemplos few-shot y restricciones de salida explícitas ayudan a los modelos cuantizados a mantener la precisión. Consulta las [técnicas de prompt engineering](https://www.promptquorum.com/prompt-engineering) para métodos que funcionan a cualquier nivel de cuantización.',
           ],
           items: [
@@ -1058,6 +1074,10 @@ schema: {
               a: 'GGUF (formato llama.cpp) y GPTQ son dos enfoques de cuantización diferentes. GGUF usa K-Quants y funciona en CPU y GPU. GPTQ es solo para GPU y requiere PyTorch. Para inferencia local con Ollama, LM Studio o Jan AI, GGUF es el formato correcto. GPTQ se usa con frameworks de inferencia orientados a GPU como AutoGPTQ y vLLM.',
             },
             {
+              q: '¿Cuál es la diferencia entre Q4_K_M y Q4_0?',
+              a: 'Q4_K_M y Q4_0 son ambas cuantización de 4 bits, pero usan algoritmos diferentes. Q4_0 es el formato uniforme de 4 bits original de los primeros llama.cpp. Q4_K_M es un K-Quant introducido en 2023 — agrupa los pesos en bloques y aplica precisión mixta dentro de cada bloque, recuperando un 5-8% de calidad con el mismo uso de RAM. Cuando veas ambos en Hugging Face, elige siempre Q4_K_M. Q4_0 solo existe por compatibilidad heredada.',
+            },
+            {
               q: '¿Hay diferencia de calidad entre modelos Q4_K_M de diferentes proveedores en Hugging Face?',
               a: 'El algoritmo de cuantización está estandarizado en llama.cpp, por lo que las cuantizaciones Q4_K_M del mismo modelo base deberían ser casi idénticas independientemente de quién haya creado el archivo GGUF. Sin embargo, algunos proveedores aplican ajustes adicionales (cuantización imatrix) que mejoran la calidad. Los archivos descritos como cuantizados con "imat" o "importance matrix" son generalmente de mayor calidad con el mismo número de bits.',
             },
@@ -1117,6 +1137,7 @@ schema: {
           id: 'update-log',
           title: 'Registro de actualizaciones',
           items: [
+            '**2026-08-26:** Actualización semestral. Se actualizaron las referencias "a fecha de" a agosto de 2026 y se añadieron 3 preguntas que faltaban en el schema FAQPage (ya presentes en la sección visible); hechos reverificados.',
             '**2026-06-15:** Se añadieron secciones de comparación directa (Q4_0 vs Q4_K_M, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, Q8_0 vs Q8_K_XL) y una respuesta dedicada a "¿Qué es Q8_0?"; se añadió cobertura de Q8_K_XL; hechos verificados de nuevo en junio de 2026.',
             '**2026-05-17:** Título actualizado para reflejar intención orientada a la decisión; contenido sin cambios.',
           ],
@@ -1128,7 +1149,7 @@ schema: {
         'headline': '¿Qué cuantización de LLM debes usar? Q4_K_M vs Q5_K_M vs Q8_0 (2026)',
         'description': 'Guía práctica para elegir niveles de cuantización de LLM según la VRAM. Q4_K_M, Q5_K_M, Q6_K, Q8_0 comparados con tablas de RAM, pérdida de calidad y casos de uso.',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-15',
+        'dateModified': '2026-08-26',
         'url': 'https://www.promptquorum.com/es/local-llms/llm-quantization-explained',
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -1179,6 +1200,11 @@ schema: {
           },
           {
             '@type': 'Question',
+            'name': '¿Puedo cuantizar un modelo yo mismo en lugar de descargar una versión pre-cuantizada?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí — llama.cpp incluye un binario `quantize` que convierte archivos GGUF a cualquier nivel de cuantización soportado. El proceso tarda 5-30 minutos dependiendo del tamaño del modelo. La mayoría de usuarios debería descargar archivos GGUF pre-cuantizados de Hugging Face en lugar de cuantizar ellos mismos, ya que los resultados son equivalentes.' },
+          },
+          {
+            '@type': 'Question',
             'name': '¿La cuantización afecta la ventana de contexto del modelo?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'No — la cuantización solo afecta la precisión de los pesos del modelo, no la longitud del contexto. Un modelo Llama 3.3 8B soporta 128K tokens tanto en Q4_K_M como en FP16. Sin embargo, procesar contextos más largos requiere más RAM independientemente del nivel de cuantización.' },
           },
@@ -1211,6 +1237,16 @@ schema: {
             '@type': 'Question',
             'name': '¿Cuál es la diferencia entre Q8_0 y Q8_K_XL?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'Q8_0 es la cuantización de 8 bits estándar de llama.cpp — cada peso a 8 bits, alrededor de 7,7 GB para un modelo 7B, menos del 0,5% de pérdida de calidad frente a FP16. Q8_K_XL no es un tipo estándar de llama.cpp; es una variante GGUF "Dynamic" de Unsloth que mantiene una base de 8 bits pero hace upcast de las capas más sensibles (embeddings, atención, salida) a 16 bits, acercando la calidad a FP16 completo con un tamaño de archivo ligeramente mayor. Q8_0 ya es prácticamente sin pérdida para la mayoría de usuarios, así que Q8_K_XL solo ayuda si necesitas la última fracción de porcentaje de precisión y tienes VRAM de sobra. Los tamaños de archivo varían según el modelo — comprueba el tamaño en LM Studio o en Hugging Face antes de descargar.' },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo cambiar entre niveles de cuantización sin redownloadear el modelo?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'No — cambiar entre niveles de cuantización requiere descargar un archivo GGUF diferente o re-cuantizar el modelo base tú mismo. Una vez que un modelo está cuantizado a Q4_K_M, no puedes convertirlo de vuelta a Q5_K_M sin el modelo FP16 original. La mayoría de usuarios descarga archivos GGUF pre-cuantizados de Hugging Face para su nivel de cuantización deseado.' },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué nivel de cuantización usa Ollama por defecto?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama usa Q4_K_M por defecto para todos los modelos de su biblioteca. Cuando ejecutas `ollama pull llama3.1:8b`, estás descargando la variante Q4_K_M. Este valor predeterminado equilibra bien la calidad y los requisitos de RAM para la mayoría de usuarios. Para obtener una cuantización diferente, añade el tag: `ollama pull llama3.1:8b:q5_k_m` o `ollama pull llama3.1:8b:q8_0`.' },
           },
           {
             '@type': 'Question',
@@ -1253,8 +1289,8 @@ schema: {
     },
     ar: {
       freshness_tier: 'semi_annual',
-      next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-12-19',
+      next_seo_review_due: '2026-10-01',
+      next_refresh_due: '2027-02-26',
       theme: 'Best Models',
       title: 'شرح تكميم ⁨LLM⁩: ⁨Q4⁩_⁨K⁩_⁨M⁩ مقابل ⁨Q4⁩_⁨0⁩ مقابل ⁨Q8⁩_⁨0⁩ (⁨2026⁩)',
       seoTitle: '⁨Q4⁩_⁨K⁩_⁨M⁩ مقابل ⁨Q4⁩_⁨0⁩ مقابل ⁨Q8⁩_⁨0⁩: شرح تكميم ⁨LLM⁩ (⁨2026⁩)',
@@ -1262,8 +1298,8 @@ schema: {
       metaDescription: 'مقارنة ⁨Q4⁩_⁨K⁩_⁨M⁩ مقابل ⁨Q4⁩_⁨0⁩ و⁨Q8⁩_⁨0⁩ و⁨Q4⁩_⁨K⁩_⁨S⁩: البتات و⁨VRAM⁩ لكل ⁨7B⁩ وفقدان الجودة، وأي تكميم ⁨GGUF⁩ تختار لذاكرة ⁨VRAM⁩ لديك في ⁨2026⁩.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-ar.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-15',
-      lastFactChecked: '2026-06-15',
+      dateModified: '2026-08-26',
+      lastFactChecked: '2026-08-26',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       leadAnswerBlock: '**اختر التكميم حسب VRAM لديك: 6–8 GB ← استخدم Q4_K_M (~4.5 GB لنماذج 7B، فقدان جودة 1–3%)، 16 GB ← Q5_K_M، 24+ GB ← Q8_0 (فقدان ضئيل). يقلّص التكميم دقة أوزان النموذج من أعداد عشرية بـ 16 بت إلى أعداد صحيحة بـ 4 أو 8 بت، مقلِّصاً RAM بنسبة 50–75%. للنماذج الأكبر من GPU، أضف التفريغ إلى CPU أو تقسيم الطبقات متعدد GPU.**',
@@ -1413,7 +1449,7 @@ schema: {
           content: [
             '**GGUF (GPT-Generated Unified Format) هي معيار الملف الواحد لأوزان LLM المكمَّمة، يحتوي على أوزان النموذج والبيانات الوصفية والمُرمِّز — تستخدمها Ollama وLM Studio وllama.cpp.** أنشأها مشروع llama.cpp وتحل محل صيغة GGML الأقدم.',
             'يحتوي ملف GGUF على: أوزان النموذج المكمَّمة، وجميع البيانات الوصفية للنموذج (البنية، المُرمِّز، طول السياق)، ورقم إصدار الصيغة. يعني هذا التصميم المكتفي ذاتياً أن ملف `.gguf` واحد هو كل ما يلزم لتشغيل النموذج — دون ملفات مُرمِّز منفصلة، دون JSON إعداد.',
-            'اعتباراً من أبريل 2026، GGUF هي الصيغة القياسية لـ Ollama وLM Studio وJan AI وGPT4All. عند تشغيل [`ollama pull llama3.1:8b`](/ar/local-llms/how-to-install-ollama)، ينزّل Ollama داخلياً ملف GGUF. عندما يعرض LM Studio أحجام ملفات النماذج، فتلك أحجام ملفات GGUF.',
+            'اعتباراً من أغسطس 2026، GGUF هي الصيغة القياسية لـ Ollama وLM Studio وJan AI وGPT4All. عند تشغيل [`ollama pull llama3.1:8b`](/ar/local-llms/how-to-install-ollama)، ينزّل Ollama داخلياً ملف GGUF. عندما يعرض LM Studio أحجام ملفات النماذج، فتلك أحجام ملفات GGUF.',
             'مستوى التكميم جزء من اسم الملف: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` هو GGUF مكمَّم بصيغة Q4_K_M من Llama 3.3 8B.',
           ],
           image: '/images/gguf-format-structure-es.svg',
@@ -1437,7 +1473,7 @@ schema: {
           id: 'quality-loss',
           title: 'كم من الجودة يُفقَد فعلاً مع التكميم؟',
           content: [
-            '**تفقد Q4_K_M 1–3% في اختبارات MMLU مقابل FP16 — غير محسوس في معظم المهام العملية. تفقد Q3_K_S 5–10% وهو ملحوظ في الرياضيات والاستدلال.** يُقاس فقدان الجودة بالتكميم بمقارنة نتائج المعايير بين نسخ الدقة الكاملة والمكمَّمة. اعتباراً من أبريل 2026، النتائج الراسخة هي:',
+            '**تفقد Q4_K_M 1–3% في اختبارات MMLU مقابل FP16 — غير محسوس في معظم المهام العملية. تفقد Q3_K_S 5–10% وهو ملحوظ في الرياضيات والاستدلال.** يُقاس فقدان الجودة بالتكميم بمقارنة نتائج المعايير بين نسخ الدقة الكاملة والمكمَّمة. اعتباراً من أغسطس 2026، النتائج الراسخة هي:',
             'يقلّص التكميم استخدام الذاكرة لكنه قد يدهور جودة الردود. تعوّض الموجّهات المصممة جيداً ذلك: تقنيات مثل الأمثلة قليلة اللقطات وقيود المخرجات الصريحة تساعد النماذج المكمَّمة على الحفاظ على الدقة. راجع [تقنيات هندسة الموجّهات](https://www.promptquorum.com/ar/prompt-engineering) للطرق التي تعمل عند أي مستوى تكميم.',
           ],
           items: [
@@ -1625,6 +1661,10 @@ schema: {
               a: 'GGUF (صيغة llama.cpp) وGPTQ نهجان مختلفان للتكميم. تستخدم GGUF K-Quants وتعمل على CPU وGPU. GPTQ لـ GPU فقط ويتطلب PyTorch. للاستدلال المحلي بـ Ollama أو LM Studio أو Jan AI، GGUF هي الصيغة الصحيحة. يُستخدم GPTQ مع أطر استدلال موجهة لـ GPU مثل AutoGPTQ وvLLM.',
             },
             {
+              q: 'ما الفرق بين Q4_K_M وQ4_0؟',
+              a: 'Q4_K_M وQ4_0 كلاهما تكميم بـ 4 بت لكنهما يستخدمان خوارزميات مختلفة. Q4_0 هي صيغة 4 بت الموحدة الأصلية من llama.cpp المبكر. Q4_K_M هي K-Quant قُدِّمت عام 2023 — تجمّع الأوزان في كتل وتطبّق دقة مختلطة داخل كل كتلة، مستعيدةً 5-8% من الجودة بنفس استخدام RAM. عند رؤية كليهما على Hugging Face، اختر دائماً Q4_K_M. يوجد Q4_0 فقط للتوافق القديم.',
+            },
+            {
               q: 'هل هناك فرق جودة بين نماذج Q4_K_M من مزوّدين مختلفين على Hugging Face؟',
               a: 'خوارزمية التكميم موحّدة في llama.cpp، لذا فإن تكميمات Q4_K_M من نفس النموذج الأساسي تكون شبه متطابقة بصرف النظر عمّن أنشأ ملف GGUF. مع ذلك، يطبّق بعض المزوّدين تعديلات إضافية (تكميم imatrix) تحسّن الجودة. الملفات الموصوفة كمكمَّمة بـ "imat" أو "importance matrix" عادةً أعلى جودة بنفس عدد البتات.',
             },
@@ -1684,6 +1724,8 @@ schema: {
           id: 'update-log',
           title: 'سجل التحديثات',
           items: [
+            '**2026-08-26:** تحديث نصف سنوي. تحديث عبارات "اعتباراً من" إلى أغسطس 2026 وإضافة 3 أسئلة كانت مفقودة من مخطط FAQPage (موجودة أصلاً في القسم المرئي)؛ إعادة التحقق من الحقائق.',
+            '**2026-06-15:** إضافة أقسام المقارنة المباشرة (Q4_0 مقابل Q4_K_M، Q4_K_M مقابل Q4_K_S، Q8_0 مقابل Q4_K_M، Q8_0 مقابل Q8_K_XL) وإجابة مخصصة لسؤال "ما هو Q8_0؟"؛ إضافة تغطية Q8_K_XL؛ إعادة التحقق من الحقائق في يونيو 2026.',
             '**2026-05-17:** تحديث العنوان ليعكس نية موجهة للقرار؛ المحتوى دون تغيير.',
           ],
         },
@@ -1694,7 +1736,7 @@ schema: {
         'headline': 'أي تكميم LLM يجب أن تستخدم؟ Q4_K_M مقابل Q5_K_M مقابل Q8_0 (2026)',
         'description': 'دليل عملي لاختيار مستويات تكميم LLM حسب VRAM. Q4_K_M وQ5_K_M وQ6_K وQ8_0 مقارنةً بجداول RAM وفقدان الجودة وحالات الاستخدام.',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-05-17',
+        'dateModified': '2026-08-26',
         'url': 'https://www.promptquorum.com/ar/local-llms/llm-quantization-explained',
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -1703,6 +1745,9 @@ schema: {
           { '@type': 'Thing', 'name': 'تكميم LLM' },
           { '@type': 'Thing', 'name': 'تكميم Q8_0' },
           { '@type': 'Thing', 'name': 'GGUF من llama.cpp' },
+          { '@type': 'Thing', 'name': 'تكميم Q4_0' },
+          { '@type': 'Thing', 'name': 'تكميم Q4_K_S' },
+          { '@type': 'Thing', 'name': 'تكميم Q8_K_XL' },
         ],
         'author': {
           '@type': 'Person',
@@ -1742,6 +1787,11 @@ schema: {
           },
           {
             '@type': 'Question',
+            'name': 'هل يمكنني تكميم نموذج بنفسي بدلاً من تنزيل نسخة مكمَّمة مسبقاً؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم — يتضمن llama.cpp ثنائي `quantize` يحوّل ملفات GGUF إلى أي مستوى تكميم مدعوم. تستغرق العملية 5-30 دقيقة حسب حجم النموذج. ينبغي لمعظم المستخدمين تنزيل ملفات GGUF مكمَّمة مسبقاً من Hugging Face بدلاً من التكميم بأنفسهم، إذ تكون النتائج متكافئة.' },
+          },
+          {
+            '@type': 'Question',
             'name': 'هل يؤثر التكميم على نافذة سياق النموذج؟',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'لا — يؤثر التكميم فقط على دقة أوزان النموذج، وليس طول السياق. يدعم نموذج Llama 3.3 8B 128K رمز سواء بصيغة Q4_K_M أو FP16. مع ذلك، تتطلب معالجة سياقات أطول RAM أكثر بصرف النظر عن مستوى التكميم.' },
           },
@@ -1769,6 +1819,21 @@ schema: {
             '@type': 'Question',
             'name': 'ما الفرق بين Q4_K_M وQ4_K_S؟',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'كلاهما تكميم بـ 4 بت، لكن K_M (متوسط) وK_S (صغير) يختلفان في البيانات الوصفية لكل كتلة تكميم. تستخدم Q4_K_M بيانات وصفية أكثر لإعادة بناء جودة أفضل — عادةً 4.5-5 GB لنموذج 7B. توفّر Q4_K_S 300-400 MB لكن بفقدان جودة إضافي 3-5%. استخدم Q4_K_M ما لم تكن RAM لديك أقل من 4 GB.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين Q8_0 وQ8_K_XL؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q8_0 هي صيغة 8 بت القياسية في llama.cpp — كل وزن بـ 8 بت، نحو 7.7 GB لنموذج 7B، بفقدان جودة أقل من 0.5% مقارنةً بـ FP16. Q8_K_XL ليست نوعاً جاهزاً في llama.cpp؛ إنها متغير GGUF "ديناميكي" (Dynamic) من Unsloth يحافظ على أساس 8 بت لكنه يرقّي الطبقات الأكثر حساسية (التضمينات والانتباه والمخرجات) إلى 16 بت، مقرّباً الجودة إلى FP16 الكامل بحجم ملف أكبر قليلاً. Q8_0 تكاد تكون عديمة الفقدان بالفعل لمعظم المستخدمين، لذا فإن Q8_K_XL تفيد فقط إذا كنت تحتاج إلى الجزء الأخير من النسبة المئوية من الدقة ولديك VRAM فائض. تختلف أحجام الملفات حسب النموذج — تحقق من الحجم في LM Studio أو على Hugging Face قبل التنزيل.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني التبديل بين مستويات التكميم دون إعادة تنزيل النموذج؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'لا — يتطلب التبديل بين مستويات التكميم تنزيل ملف GGUF مختلف أو إعادة تكميم النموذج الأساسي بنفسك. بمجرد تكميم نموذج إلى Q4_K_M، لا يمكنك تحويله مرة أخرى إلى Q5_K_M دون نموذج FP16 الأصلي. ينزّل معظم المستخدمين ملفات GGUF مكمَّمة مسبقاً من Hugging Face لمستوى التكميم المرغوب.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي مستوى تكميم يستخدمه Ollama افتراضياً؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'يستخدم Ollama Q4_K_M افتراضياً لجميع النماذج في مكتبته. عند تشغيل `ollama pull llama3.1:8b`، تنزّل نسخة Q4_K_M. يوازن هذا الافتراضي جيداً بين الجودة ومتطلبات RAM لمعظم المستخدمين. للحصول على تكميم مختلف، أضف الوسم: `ollama pull llama3.1:8b:q5_k_m` أو `ollama pull llama3.1:8b:q8_0`.' },
           },
           {
             '@type': 'Question',
@@ -1811,8 +1876,8 @@ schema: {
     },
     pt: {
       freshness_tier: 'semi_annual',
-      next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-12-19',
+      next_seo_review_due: '2026-10-01',
+      next_refresh_due: '2027-02-26',
       theme: 'Best Models',
       title: 'Quantização de LLM explicada: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0: quantização de LLM explicada (2026)',
@@ -1820,8 +1885,8 @@ schema: {
       metaDescription: 'Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M e Q8_0 vs Q8_K_XL comparados. Bits, VRAM por 7B, perda de qualidade e qual quant GGUF escolher para sua VRAM em 2026.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-pt.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-15',
-      lastFactChecked: '2026-06-15',
+      dateModified: '2026-08-26',
+      lastFactChecked: '2026-08-26',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       leadAnswerBlock: '**Escolha a quantização com base na VRAM disponível: 6–8 GB de VRAM → use Q4_K_M (~4,5 GB para modelos 7B, perda de qualidade de 1–3%), 16 GB → Q5_K_M, 24+ GB → Q8_0 (perda insignificante). A quantização reduz a precisão dos pesos do modelo de floats de 16 bits para inteiros de 4 ou 8 bits, reduzindo a RAM em 50–75%. Para modelos maiores que sua GPU, adicione CPU offloading ou layer splitting multi-GPU.**',
@@ -1876,7 +1941,7 @@ schema: {
         'headline': 'Quantização de LLM: Q4 vs Q5 vs Q8 explicado (quando usar cada um)',
         'description': 'Guia prático para escolher o nível de quantização de LLM por VRAM. Q4_K_M, Q5_K_M, Q6_K, Q8_0 comparados com tabelas de RAM, perda de qualidade e casos de uso.',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-15',
+        'dateModified': '2026-08-26',
         'url': 'https://www.promptquorum.com/pt/local-llms/llm-quantization-explained',
         'inLanguage': 'pt-BR',
         'proficiencyLevel': 'Advanced',
@@ -1904,6 +1969,92 @@ schema: {
           { '@type': 'ListItem', 'position': 3, 'name': 'Modelo 13B', 'description': 'FP16: 26 GB de RAM. Q4_K_M: 8,5 GB de RAM. Economia: 67%. Roda com 16 GB de RAM.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Modelo 34B', 'description': 'FP16: 68 GB de RAM. Q4_K_M: 22 GB de RAM. Economia: 68%. Roda com 32 GB de RAM.' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Modelo 70B', 'description': 'FP16: 140 GB de RAM. Q4_K_M: 40 GB de RAM. Economia: 71%. Roda com 48 GB de RAM.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'O Ollama usa automaticamente a melhor quantização?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim — quando você executa `ollama pull llama3.1:8b`, o Ollama baixa a variante Q4_K_M por padrão. Para baixar uma quantização específica, adicione a tag: `ollama pull llama3.1:8b-instruct-q5_K_M`.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso quantizar um modelo eu mesmo em vez de baixar uma versão pré-quantizada?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim — llama.cpp inclui um binário `quantize` que converte arquivos GGUF para qualquer nível de quantização suportado. O processo leva 5–30 minutos dependendo do tamanho do modelo. A maioria dos usuários deve baixar arquivos GGUF pré-quantizados do Hugging Face em vez de quantizar eles mesmos.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'A quantização afeta a janela de contexto do modelo?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Não — a quantização afeta apenas a precisão dos pesos do modelo, não o comprimento do contexto. Um modelo Llama 3.3 8B suporta 128K tokens seja em Q4_K_M ou FP16. Processar contextos mais longos exige mais RAM independentemente do nível de quantização.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a diferença entre quantização GGUF e GPTQ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUF (formato llama.cpp) e GPTQ são duas abordagens diferentes. GGUF usa K-Quants e roda em CPU e GPU — o padrão para Ollama, LM Studio e Jan AI. GPTQ é apenas GPU e requer PyTorch, usado com AutoGPTQ e vLLM. Para inferência local, GGUF é a escolha correta.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a diferença entre Q4_K_M e Q4_0?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M e Q4_0 são ambas quantização de 4 bits, mas usam algoritmos diferentes. Q4_0 é o formato uniforme de 4 bits original. Q4_K_M é um K-Quant que agrupa os pesos em blocos e aplica precisão mista, recuperando 5-8% de qualidade com o mesmo tamanho de RAM. Escolha sempre Q4_K_M quando ambos estiverem disponíveis no Hugging Face; Q4_0 existe apenas por compatibilidade legada.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Há diferença de qualidade entre modelos Q4_K_M de diferentes provedores no Hugging Face?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'O algoritmo de quantização é padronizado no llama.cpp, então quantizações Q4_K_M do mesmo modelo base são quase idênticas independentemente de quem criou o arquivo GGUF. Provedores que aplicam quantização imatrix produzem qualidade 2–4% melhor no mesmo número de bits.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é quantização imatrix?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'A quantização imatrix (matriz de importância) usa dados de calibração para atribuir maior precisão aos pesos que mais afetam as previsões do modelo, e menor precisão aos pesos menos importantes. Produz qualidade 2–4% melhor que o Q4_K_M padrão no mesmo número de bits.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a diferença entre Q4_K_M e Q4_K_S?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ambas são quantização de 4 bits, mas K_M (Medium) e K_S (Small) diferem nos metadados por bloco de quantização. Q4_K_M usa mais metadados para melhor reconstrução de qualidade — normalmente 4,5–5 GB para um modelo 7B. Q4_K_S economiza 300–400 MB, mas com 3–5% de perda de qualidade adicional. Use Q4_K_M a menos que sua RAM seja inferior a 4 GB.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a diferença entre Q8_0 e Q8_K_XL?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q8_0 é a quantização de 8 bits padrão do llama.cpp — cada peso em 8 bits, cerca de 7,7 GB para um modelo 7B, menos de 0,5% de perda de qualidade em relação ao FP16. Q8_K_XL não é um tipo nativo do llama.cpp; é uma variante GGUF "Dynamic" da Unsloth que mantém uma base de 8 bits mas faz upcast das camadas mais sensíveis (embeddings, atenção, saída) para 16 bits, aproximando a qualidade do FP16 completo com um tamanho de arquivo ligeiramente maior. O Q8_0 já é efetivamente sem perdas para a maioria dos usuários, então o Q8_K_XL só ajuda se precisar da última fração de percentual de precisão e tiver VRAM de sobra. Os tamanhos de arquivo variam por modelo — verifique o tamanho no LM Studio ou no Hugging Face antes de baixar.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso alternar entre níveis de quantização sem baixar o modelo novamente?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Não — alternar entre níveis de quantização exige baixar um arquivo GGUF diferente ou re-quantizar o modelo base você mesmo. Uma vez que um modelo é quantizado para Q4_K_M, você não pode convertê-lo de volta para Q5_K_M sem o modelo FP16 original.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como a quantização afeta a velocidade de inferência?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'A quantização normalmente aumenta a velocidade de inferência em 10–40% porque carregar e processar pesos de 4 bits é mais rápido do que floats de 16 bits. Um modelo 7B Q4_K_M roda a 8–12 tokens/s em uma CPU de consumo; o mesmo modelo em FP16 roda a 1–2 tokens/s.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual nível de quantização o Ollama usa por padrão?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'O Ollama usa Q4_K_M por padrão para todos os modelos de sua biblioteca. Esse padrão equilibra bem qualidade e requisitos de RAM para a maioria dos usuários.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso executar Llama 3.3 70B em uma única RTX 4090?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, mas lentamente. Quantize para Q4 (35 GB), faça offloading de 11 GB para RAM do sistema. Espere 5-10 tok/s. Para inferência prática de 70B: 2× RTX 4090 com layer splitting (~100 tok/s) ou Mac Studio M2 Ultra (35 tok/s nativo).' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a diferença entre quantização e offloading?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'A quantização reduz permanentemente a precisão dos pesos do modelo (FP16 → Q4). O offloading move camadas do modelo da VRAM para a RAM do sistema em tempo de execução. A quantização tem impacto mínimo na qualidade (±5%); o offloading causa degradação de velocidade de 5–10×.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O Mac Studio M2 Ultra precisa de quantização para modelos de 70B?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Apenas quantização leve. 192 GB de memória unificada comportam o Llama 3.3 70B em Q4 (35 GB) nativamente — sem offloading nem layer splitting. Q4 é o ponto ideal para workflows de 70B no Mac Studio.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual combinação de técnicas é melhor para meu hardware?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 4090 única (24 GB): Q4 + offloading para 70B. 2× RTX 4090 (48 GB): Q5 + layer splitting para 70B (100 tok/s). Mac Studio M2 Ultra (192 GB): Q4 nativo para 70B (35 tok/s).' },
+          },
         ],
       },
       supplementalSchema: {
@@ -2033,7 +2184,7 @@ schema: {
           content: [
             '**GGUF (GPT-Generated Unified Format) é o padrão de arquivo único para pesos de LLM quantizados, contendo pesos do modelo, metadados e tokenizador — usado pelo Ollama, LM Studio e llama.cpp.** Foi criado pelo projeto llama.cpp e substitui o formato GGML mais antigo.',
             'Um arquivo GGUF contém: os pesos quantizados do modelo, todos os metadados do modelo (arquitetura, tokenizador, comprimento de contexto) e um número de versão do formato. Esse design autocontido significa que um único arquivo `.gguf` é tudo que é necessário para executar o modelo — sem arquivos de tokenizador separados, sem JSON de configuração.',
-            'A partir de abril de 2026, GGUF é o formato padrão para Ollama, LM Studio, Jan AI e GPT4All. O nível de quantização faz parte do nome do arquivo: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` é um GGUF quantizado Q4_K_M do Llama 3.3 8B.',
+            'A partir de agosto de 2026, GGUF é o formato padrão para Ollama, LM Studio, Jan AI e GPT4All. O nível de quantização faz parte do nome do arquivo: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` é um GGUF quantizado Q4_K_M do Llama 3.3 8B.',
           ],
         },
         ramSavings: {
@@ -2052,7 +2203,8 @@ schema: {
           id: 'quality-loss',
           title: 'Quanta qualidade você realmente perde com a quantização?',
           content: [
-            '**Q4_K_M perde 1–3% nos benchmarks MMLU vs FP16 — imperceptível na maioria das tarefas práticas. Q3_K_S perde 5–10% e é perceptível em matemática e raciocínio.** A perda de qualidade da quantização é medida comparando pontuações de benchmarks entre versões de precisão total e quantizadas.',
+            '**Q4_K_M perde 1–3% nos benchmarks MMLU vs FP16 — imperceptível na maioria das tarefas práticas. Q3_K_S perde 5–10% e é perceptível em matemática e raciocínio.** A perda de qualidade da quantização é medida comparando pontuações de benchmarks entre versões de precisão total e quantizadas. A partir de agosto de 2026, os resultados estabelecidos são:',
+            'A quantização reduz o uso de memória, mas pode degradar a qualidade das respostas. Prompts bem elaborados compensam isso: técnicas como exemplos few-shot e restrições explícitas de saída ajudam os modelos quantizados a manter a precisão. Veja [técnicas de prompt engineering](https://www.promptquorum.com/prompt-engineering) para métodos que funcionam em qualquer nível de quantização.',
           ],
           items: [
             '**Q4_K_M vs FP16**: Degradação de 1–3% no MMLU. Em um modelo 7B com 73% no FP16, Q4_K_M pontua 71–72%. Em tarefas práticas, essa diferença é imperceptível.',
@@ -2065,8 +2217,15 @@ schema: {
         whichQuantization: {
           id: 'which-quantization',
           title: 'Qual quantização você deve usar? (Árvore de decisão rápida)',
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Use Q4_K_M para 6–8 GB de VRAM, Q5_K_M para 12–16 GB, Q8_0 para 24+ GB, e IQ4_XS apenas quando a VRAM for extremamente limitada.' },
+            { type: 'plain-terms', text: 'Pense nos níveis de quantização como configurações de qualidade de vídeo: Q8_0 é 1080p (quase perfeito, ocupa mais espaço), Q4_K_M é 720p (bom o suficiente, metade do armazenamento), Q2_K é 360p (a diferença é perceptível).' },
+          ],
           content: '**Escolha com base na VRAM disponível, não apenas no tamanho do modelo.**',
           items: [
+            '**Para 6 GB de RAM (o mais comum em notebooks/desktops)**: Use Q4_K_M. Um modelo 7B quantizado em Q4_K_M ocupa ~4,5 GB, deixando 1,5 GB para o SO e o navegador.',
+            '**Para tarefas de código ou matemática**: Use Q5_K_M ou superior mesmo se tiver orçamento para Q4_K_M. Os efeitos da quantização (perda de 1–3%) são mais visíveis em raciocínio numérico preciso. Para uma configuração de código air-gapped de ponta a ponta que combina Q5_K_M Qwen3-Coder com operação sem internet, veja [LLM de código local sem internet](/pt/power-local-llm/local-coding-llm-without-internet).',
+            '**Trade-off entre quantização e temperatura**: Um modelo Q4_K_M na temperatura 0,3 produz saídas mais determinísticas do que um modelo de precisão total (FP16) na temperatura 1,0. Para ajuste independente, veja [temperatura e top-p: controle a criatividade da IA](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity).',
             '**Para casa inteligente e dispositivos edge:** Q4_K_M (VRAM 4–8 GB) é o ponto ideal para IA de automação residencial sempre ativa em um mini PC. Veja [melhores modelos LLM locais para casa inteligente →](/smart-home/best-local-llm-models-smart-home).',
           ],
           rows: [
@@ -2085,6 +2244,11 @@ schema: {
           content: [
             '**LM Studio (aplicativo desktop) mostra variantes de quantização disponíveis para cada download de modelo.** Ao pesquisar um modelo, você verá várias opções GGUF: Q2_K, Q3_K_S, Q4_K_M, Q5_K_M, Q6_K, Q8_0.',
             '**Passo 1:** Abra o LM Studio → Navegue até a aba "Local Models". Pesquise um modelo (ex.: "Llama 3.3 8B"). **Passo 2:** Cada modelo mostra quantizações disponíveis. Olhe para o tamanho do arquivo para estimar o uso de VRAM. Q4_K_M para um modelo 7B geralmente está listado como ~4,5 GB. **Passo 3:** Clique no ícone de download ao lado da quantização escolhida.',
+            '**Padrões recomendados para o LM Studio:**',
+            '- **Se sua GPU tem 6-8 GB de VRAM (RTX 4060, RTX 3060 Ti, RTX 4060 Ti):** Baixe a variante Q4_K_M (menor arquivo com qualidade aceitável).',
+            '- **Se sua GPU tem 12-16 GB de VRAM (RTX 4070, RTX 4080):** Baixe Q5_K_M ou Q6_K (melhor qualidade, ainda dentro da VRAM).',
+            '- **Se sua GPU tem 24+ GB de VRAM (RTX 4090, RTX 5090):** Baixe Q8_0 ou FP16 (qualidade máxima, penalidade de velocidade mínima).',
+            '**Recurso "GPU offload" do LM Studio:** Ative o alternador "Use GPU" na interface de chat. O LM Studio moverá automaticamente o máximo possível de camadas do modelo para a GPU, transferindo o restante para a RAM da CPU. Se a RAM do sistema for suficiente, isso permite executar modelos ligeiramente maiores que sua VRAM (ex.: Llama 3.3 70B Q4_K_M em uma RTX 4090 com 64+ GB de RAM do sistema).',
           ],
         },
         offloading: {
@@ -2102,10 +2266,11 @@ schema: {
           id: 'layer-splitting',
           title: 'Layer splitting: distribuir entre múltiplas GPUs',
           content: [
-            '**Motores de inferência modernos (vLLM, llama.cpp) podem dividir um modelo entre múltiplas GPUs automaticamente.**',
+            '**Motores de inferência modernos (vLLM, llama.cpp) podem dividir um modelo entre múltiplas GPUs automaticamente.** Saiba mais sobre [LLMs locais multi-GPU](/pt/local-llms/multi-gpu-local-llms) para configurações avançadas.',
             'Exemplo: modelo 70B com 2× RTX 4090:',
             '- Sem splitting: Impossível (precisa de 40+ GB de VRAM em uma GPU).',
             '- Com splitting: Metade dos pesos do modelo em cada GPU. Velocidade de inferência: ~100 tokens/s (overhead de comunicação mínimo).',
+            'O layer splitting é prático para deploys em produção e é transparente para o usuário.',
           ],
           codeBlock: '# vLLM: paralelismo tensor automático\nvllm serve meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 2  # Dividir entre 2 GPUs\n\n# llama.cpp: suporte multi-GPU\nollama run llama3.3:70b  # Detecta e divide automaticamente entre GPUs',
           codeLanguage: 'bash',
@@ -2118,6 +2283,7 @@ schema: {
             '- **Ollama**: Automático em modelos compatíveis; nenhuma configuração de usuário necessária.',
             '- **LM Studio**: Marque "KV cache quantization" nas Configurações (se disponível na sua versão).',
             '- **llama.cpp**: Use flags `--cache-type-q8_0` ou `--cache-type-f8` ao iniciar o servidor.',
+            '**Trade-offs:** A quantização de KV Cache tem impacto mínimo na qualidade (<1% de degradação mesmo com quantização agressiva) porque os padrões de atenção são mais robustos a precisões menores do que os pesos do modelo. Recomendado para modelos que processam contextos de 16K+ em hardware limitado.',
           ],
         },
         hybrid: {
@@ -2168,6 +2334,7 @@ schema: {
           items: [
             '**Brasil (LGPD / ANPD)** — A Lei Geral de Proteção de Dados (Lei nº 13.709/2018) e as diretrizes da ANPD exigem tratamento de dados pessoais sensíveis com controles adequados. A quantização Q4_K_M permite que modelos 7B sejam executados em dispositivos de borda de 8 GB, eliminando chamadas à API de nuvem de terceiros. A inferência local on-premises atende aos requisitos da LGPD para processamento de dados de alto risco sem transferências a processadores externos.',
             '**UE (GDPR, Artigo 44)** — Transferências internacionais de dados de IA exigem decisões de adequação ou Cláusulas Contratuais Padrão. A quantização Q4_K_M permite que modelos 7B sejam executados em dispositivos de borda de 8 GB, eliminando chamadas à API de nuvem. Os modelos Mistral e Llama quantizados são as escolhas dominantes em deploys empresariais europeus.',
+            '**Japão (Diretrizes de Governança de IA do METI 2024)** — O Ministério da Economia, Comércio e Indústria do Japão exige documentação de governança de IA para deploys empresariais. Modelos quantizados em infraestrutura doméstica atendem aos requisitos de "controlabilidade" do METI — os pesos do modelo permanecem on-premises. A quantização Q4_K_M viabiliza modelos de 13B-32B em servidores corporativos de 16-32 GB sem clusters de GPU. Qwen3 e Llama 3 são as famílias mais utilizadas em ambientes corporativos japoneses.',
             '**China (Regulamentos de IA Generativa CAC 2023)** — A quantização Q4_K_M e Q5_K_M reduz os custos de hardware em 60–70% versus FP16, tornando a conformidade on-premises com a CAC economicamente viável para médias empresas.',
           ],
         },
@@ -2186,7 +2353,14 @@ schema: {
           items: [
             '[Calculadora de VRAM para LLMs locais](/pt/local-llms/vram-calculator-local-llm) — Calculadora interativa para VRAM exata com modelos Q4/Q5/Q8.',
             '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) — Requisitos de GPU, CPU e RAM para modelos quantizados em cada tamanho.',
+            '[Melhores LLMs locais 2026](/pt/local-llms/best-local-llms-2026) — Modelos GGUF mais bem avaliados por tarefa com links de download Q4_K_M.',
             '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) — Configuração passo a passo para executar modelos Q4_K_M com Ollama.',
+            '[LLMs locais de contexto longo](/pt/local-llms/long-context-local-llms) — Modelos com contexto de 32K-128K e seus requisitos de RAM quantizada.',
+            '[Solução de problemas de configuração de LLM local](/pt/local-llms/troubleshooting-local-llm-setup) — Corrija erros de VRAM, inferência lenta e falhas de carregamento de quantização.',
+            '[Melhores modelos de LLM local para iniciantes](/pt/local-llms/best-beginner-local-llm-models) — Recomendações de primeiro modelo com variantes específicas de quantização GGUF.',
+            '[Executando modelos 70B em Apple Silicon M5 Max](/pt/local-llms/running-70b-models-apple-silicon-m5-max) — 70B nativo em Q5 sem limites de VRAM: como a memória unificada muda as decisões de quantização.',
+            '[Ollama no Mac: guia de configuração Apple Silicon 2026](/pt/local-llms/ollama-on-mac-apple-silicon-setup-2026) — Execute modelos GGUF quantizados no Mac com aceleração GPU Metal automática.',
+            '[Whisper no Apple Silicon 2026](/pt/local-llms/apple-silicon-whisper-metal-benchmark) — Benchmarks Metal e Core ML para Whisper STT em níveis de quantização em M1–M5.',
             '[GGUF vs GPTQ vs AWQ: qual formato de quantização você deve usar?](/pt/prompt-bites/gguf-vs-gptq-vs-awq) -- como o foco em GGUF deste guia se compara aos formatos exclusivos para GPU GPTQ e AWQ usados em produção.',
           ],
         },
@@ -2203,11 +2377,22 @@ schema: {
           id: 'common-questions',
           title: 'Perguntas comuns sobre quantização de LLM',
           faqs: [
-            { q: 'O Ollama usa automaticamente a melhor quantização?', a: 'Sim — quando você executa `ollama pull llama3.1:8b`, o Ollama baixa a variante Q4_K_M por padrão. Para baixar uma quantização específica, adicione a tag: `ollama pull llama3.1:8b-instruct-q5_K_M`.' },
-            { q: 'Posso quantizar um modelo eu mesmo?', a: 'Sim — llama.cpp inclui um binário `quantize` que converte arquivos GGUF para qualquer nível de quantização suportado. O processo leva 5–30 minutos dependendo do tamanho do modelo. A maioria dos usuários deve baixar arquivos GGUF pré-quantizados do Hugging Face.' },
-            { q: 'A quantização afeta a janela de contexto do modelo?', a: 'Não — a quantização afeta apenas a precisão dos pesos do modelo, não o comprimento do contexto. Um modelo Llama 3.3 8B suporta 128K tokens seja em Q4_K_M ou FP16.' },
-            { q: 'Qual é a diferença entre quantização GGUF e GPTQ?', a: 'GGUF (formato llama.cpp) e GPTQ são duas abordagens diferentes. GGUF usa K-Quants e roda em CPU e GPU. GPTQ é apenas GPU e requer PyTorch. Para inferência local com Ollama, LM Studio ou Jan AI, GGUF é o formato correto.' },
+            { q: 'O Ollama usa automaticamente a melhor quantização?', a: 'Sim — quando você executa `ollama pull llama3.1:8b`, o Ollama baixa a variante Q4_K_M por padrão. Para baixar uma quantização específica, adicione a tag: `ollama pull llama3.1:8b-instruct-q5_K_M`. As tags de quantização disponíveis para cada modelo estão listadas na página do modelo em ollama.com/library.' },
+            { q: 'Posso quantizar um modelo eu mesmo em vez de baixar uma versão pré-quantizada?', a: 'Sim — llama.cpp inclui um binário `quantize` que converte arquivos GGUF para qualquer nível de quantização suportado. O processo leva 5–30 minutos dependendo do tamanho do modelo. A maioria dos usuários deve baixar arquivos GGUF pré-quantizados do Hugging Face em vez de quantizar eles mesmos, já que os resultados são equivalentes.' },
+            { q: 'A quantização afeta a janela de contexto do modelo?', a: 'Não — a quantização afeta apenas a precisão dos pesos do modelo, não o comprimento do contexto. Um modelo Llama 3.3 8B suporta 128K tokens seja em Q4_K_M ou FP16. No entanto, processar contextos mais longos exige mais RAM independentemente da quantização — processar um contexto de 64K tokens com um modelo 7B Q4_K_M pode exigir 10+ GB de RAM.' },
+            { q: 'Qual é a diferença entre quantização GGUF e GPTQ?', a: 'GGUF (formato llama.cpp) e GPTQ são duas abordagens diferentes. GGUF usa K-Quants e roda em CPU e GPU. GPTQ é apenas GPU e requer PyTorch. Para inferência local com Ollama, LM Studio ou Jan AI, GGUF é o formato correto. GPTQ é usado com frameworks de inferência focados em GPU como AutoGPTQ e vLLM.' },
+            { q: 'Qual é a diferença entre Q4_K_M e Q4_0?', a: 'Q4_K_M e Q4_0 são ambas quantização de 4 bits, mas usam algoritmos diferentes. Q4_0 é o formato uniforme de 4 bits original do llama.cpp inicial. Q4_K_M é um K-Quant introduzido em 2023 — agrupa os pesos em blocos e aplica precisão mista dentro de cada bloco, recuperando 5-8% de qualidade com o mesmo tamanho de RAM. Quando você vir ambos no Hugging Face, escolha sempre Q4_K_M. Q4_0 existe apenas por compatibilidade legada.' },
+            { q: 'Há diferença de qualidade entre modelos Q4_K_M de diferentes provedores no Hugging Face?', a: 'O algoritmo de quantização é padronizado no llama.cpp, então quantizações Q4_K_M do mesmo modelo base devem ser quase idênticas independentemente de quem criou o arquivo GGUF. No entanto, alguns provedores aplicam ajustes adicionais (quantização imatrix) que melhoram a qualidade. Arquivos descritos como quantizados com "imat" ou "importance matrix" costumam ter qualidade maior no mesmo número de bits.' },
+            { q: 'O que é quantização imatrix?', a: 'A quantização imatrix (matriz de importância) usa dados de calibração para atribuir níveis de precisão diferentes a pesos diferentes, com base na importância deles para a saída do modelo. Pesos que mais afetam as previsões são quantizados com mais bits; pesos menos importantes usam menos bits. Resultado: melhor qualidade no mesmo número de bits em comparação com a quantização uniforme. Quantizações imatrix do Qwen3 são 2–4% melhores que o Q4_K_M padrão.' },
+            { q: 'Qual é a diferença entre Q4_K_M e Q4_K_S?', a: 'Ambas são quantização de 4 bits, mas K_M (Medium) e K_S (Small) diferem na alocação de memória por bloco de quantização. Q4_K_M usa mais metadados para uma melhor reconstrução de qualidade — normalmente 4,5–5 GB para um modelo 7B. Q4_K_S é mais agressivo — economiza 300–400 MB comparado ao K_M, mas com 3–5% de perda de qualidade. Use Q4_K_M a menos que esteja em hardware extremamente limitado (< 4 GB de RAM).' },
+            { q: 'Qual é a diferença entre Q8_0 e Q8_K_XL?', a: 'Q8_0 é a quantização de 8 bits padrão do llama.cpp — cada peso em 8 bits, cerca de 7,7 GB para um modelo 7B, menos de 0,5% de perda de qualidade em relação ao FP16. Q8_K_XL não é um tipo nativo do llama.cpp; é uma variante GGUF "Dynamic" da Unsloth que mantém uma base de 8 bits, mas faz upcast das camadas mais sensíveis (embeddings, atenção, saída) para 16 bits, aproximando a qualidade do FP16 completo com um tamanho de arquivo ligeiramente maior. O Q8_0 já é efetivamente sem perdas para a maioria dos usuários, então o Q8_K_XL só ajuda se você precisar da última fração de percentual de precisão e tiver VRAM de sobra. Os tamanhos de arquivo variam por modelo — verifique o tamanho no LM Studio ou no Hugging Face antes de baixar.' },
+            { q: 'Posso alternar entre níveis de quantização sem baixar o modelo novamente?', a: 'Não — alternar entre níveis de quantização exige baixar um arquivo GGUF diferente ou re-quantizar o modelo base você mesmo. Uma vez que um modelo é quantizado para Q4_K_M, você não pode convertê-lo de volta para Q5_K_M sem o modelo FP16 original. A maioria dos usuários baixa arquivos GGUF pré-quantizados do Hugging Face para o nível de quantização desejado.' },
+            { q: 'Como a quantização afeta a velocidade de inferência?', a: 'A quantização normalmente aumenta a velocidade de inferência em 10–40% porque carregar e processar pesos de 4 bits é mais rápido do que floats de 16 bits. Um modelo 7B Q4_K_M roda a ~8–12 tok/s em uma CPU de consumo; o mesmo modelo em FP16 roda a ~1–2 tok/s. O ganho de desempenho na GPU com a quantização é menor (5–15% mais rápido) porque as GPUs já são otimizadas para aritmética de ponto flutuante.' },
+            { q: 'Qual nível de quantização o Ollama usa por padrão?', a: 'O Ollama usa Q4_K_M por padrão para todos os modelos de sua biblioteca. Quando você executa `ollama pull llama3.1:8b`, está baixando a variante Q4_K_M. Esse padrão equilibra bem qualidade e requisitos de RAM para a maioria dos usuários. Para baixar uma quantização diferente, adicione a tag: `ollama pull llama3.1:8b:q5_k_m` ou `ollama pull llama3.1:8b:q8_0`.' },
             { q: 'Posso executar Llama 3.3 70B em uma única RTX 4090?', a: 'Sim, mas lentamente. Quantize para Q4 (35 GB), faça offloading de 11 GB para RAM do sistema. Espere 5-10 tok/s — lento demais para chat em tempo real, bom para processamento em batch. Para inferência prática de 70B: 2× RTX 4090 com layer splitting (~100 tok/s) ou Mac Studio M2 Ultra (35 tok/s nativo).' },
+            { q: 'Qual é a diferença entre quantização e offloading?', a: 'A quantização reduz permanentemente a precisão dos pesos do modelo (FP16 → Q4), reduzindo o arquivo do modelo. O offloading move camadas do modelo da VRAM para a RAM do sistema em tempo de execução. A quantização tem impacto mínimo na qualidade (±5%); o offloading causa degradação de velocidade de 5–10×. Use a quantização primeiro, o offloading como último recurso.' },
+            { q: 'O Mac Studio M2 Ultra precisa de quantização para modelos de 70B?', a: 'Apenas quantização leve. 192 GB de memória unificada comportam o Llama 3.3 70B em Q4 (35 GB) nativamente — sem offloading nem layer splitting. Em Q5, o 70B ainda cabe (44 GB). O FP16 70B (140 GB) também cabe, mas roda mais devagar. Q4 é o ponto ideal para workflows de 70B no Mac Studio.' },
+            { q: 'Qual combinação de técnicas é melhor para meu hardware?', a: 'RTX 4090 única (24 GB): Q4 + offloading para 70B (lento). Q5 nativo para 32B (rápido). 2× RTX 4090 (48 GB): Q5 + layer splitting para 70B (100 tok/s). RTX 5090 (32 GB): Q4 nativo para 70B (10-12 tok/s). Mac Studio M2 Ultra (192 GB): Q4 nativo para 70B (35 tok/s).' },
           ],
         },
         sources: {
@@ -2224,6 +2409,7 @@ schema: {
           id: 'update-log',
           title: 'Registro de atualizações',
           items: [
+            '**2026-08-26:** Atualização semestral. Paridade estrutural com a versão em inglês: FAQ expandido de 5 para 16 perguntas, adicionado o bloco faqSchema (ausente até então), completados parágrafos ausentes em "Quanta qualidade você perde", LM Studio, layer splitting, KV cache e contexto regional (Japão), e leituras relacionadas ampliadas. Referências "a partir de" atualizadas para agosto de 2026.',
             '**2026-06-15:** Adicionadas seções de comparação direta (Q4_0 vs Q4_K_M, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, Q8_0 vs Q8_K_XL) e uma resposta dedicada "O que é Q8_0?"; adicionada a cobertura de Q8_K_XL; fatos reverificados em junho de 2026.',
             '**2026-05-17:** Título atualizado para refletir a intenção focada em decisão; conteúdo inalterado.',
           ],
@@ -2232,8 +2418,8 @@ schema: {
     },
     de: {
       freshness_tier: 'semi_annual',
-      next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-12-19',
+      next_seo_review_due: '2026-10-01',
+      next_refresh_due: '2027-02-26',
       theme: 'Best Models',
       title: 'LLM-Quantisierung erklärt: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0: LLM-Quantisierung erklärt (2026)',
@@ -2241,8 +2427,8 @@ schema: {
       metaDescription: 'Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M und Q8_0 vs Q8_K_XL im Vergleich. Bits, VRAM pro 7B, Qualitätsverlust und welche GGUF-Quantisierung Sie 2026 für Ihren VRAM wählen sollten.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-de.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-15',
-      lastFactChecked: '2026-06-15',
+      dateModified: '2026-08-26',
+      lastFactChecked: '2026-08-26',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       leadAnswerBlock: '**Wählen Sie die Quantisierung nach VRAM: 6–8 GB VRAM → Q4_K_M verwenden (~4,5 GB für 7B-Modelle, 1–3% Qualitätsverlust), 16 GB → Q5_K_M, 24+ GB → Q8_0 (vernachlässigbarer Verlust). Quantisierung reduziert die Präzision der Modellgewichte von 16-Bit-Floats auf 4- oder 8-Bit-Ganzzahlen und senkt den RAM-Bedarf um 50–75%. Für Modelle, die größer als Ihre GPU sind, fügen Sie CPU-Offloading oder Multi-GPU-Layer-Splitting hinzu.**',
@@ -2391,7 +2577,7 @@ schema: {
           content: [
             '**GGUF (GPT-Generated Unified Format) ist das Dateiformat zum Speichern von quantisierten LLM-Gewichten für lokale Inference.** Es wurde vom llama.cpp-Projekt erstellt und ersetzt das ältere GGML-Format.',
             'Eine GGUF-Datei enthält: die quantisierten Modellgewichte, alle Modellmetadaten (Architektur, Tokenizer, Kontextlänge) und eine Formatversionsnummer. Dieses eigenständige Design bedeutet, dass eine einzelne `.gguf`-Datei alles ist, was zum Ausführen des Modells benötigt wird -- keine separaten Tokenizer-Dateien, kein JSON-Konfigurationscode.',
-            'Ab April 2026 ist GGUF das Standard-Format für Ollama, LM Studio, Jan AI und GPT4All. Wenn Sie [`ollama pull llama3.1:8b`](/de/local-llms/how-to-install-ollama) ausführen, lädt Ollama intern eine GGUF-Datei herunter. Wenn LM Studio Modellgrößen anzeigt, sind das GGUF-Dateigr öße.',
+            'Ab August 2026 ist GGUF das Standard-Format für Ollama, LM Studio, Jan AI und GPT4All. Wenn Sie [`ollama pull llama3.1:8b`](/de/local-llms/how-to-install-ollama) ausführen, lädt Ollama intern eine GGUF-Datei herunter. Wenn LM Studio Modellgrößen anzeigt, sind das GGUF-Dateigrößen.',
             'Die Quantisierungsstufe ist Teil des Dateinamens: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` ist eine Q4_K_M-quantisierte GGUF von Llama 3.3 8B.',
           ],
           image: '/images/gguf-format-structure-de.svg',
@@ -2415,7 +2601,7 @@ schema: {
           id: 'quality-loss',
           title: 'Wie viel Qualität verlieren Sie tatsächlich durch Quantisierung?',
           content: [
-            '**Qualitätsverlust durch Quantisierung wird gemessen, indem man die gleichen Benchmarks auf dem vollständig präzisierten Modell und der quantisierten Version ausführt und die Scores vergleicht.** Ab April 2026 sind die etablierten Erkenntnisse:',
+            '**Qualitätsverlust durch Quantisierung wird gemessen, indem man die gleichen Benchmarks auf dem vollständig präzisierten Modell und der quantisierten Version ausführt und die Scores vergleicht.** Ab August 2026 sind die etablierten Erkenntnisse:',
             'Quantisierung reduziert den Speicherverbrauch, kann aber die Ausgabequalität verschlechtern. Gut konstruierte Prompts gleichen dies aus: Techniken wie Few-Shot-Beispiele und explizite Output-Einschränkungen helfen quantisierten Modellen, ihre Genauigkeit zu halten. Unter [Prompt-Engineering-Techniken](https://www.promptquorum.com/prompt-engineering) finden Sie Methoden, die bei jedem Quantisierungsniveau funktionieren.',
           ],
           items: [
@@ -2661,6 +2847,7 @@ schema: {
           id: 'update-log',
           title: 'Update Log',
           items: [
+            '**2026-08-26:** Halbjährliches Update. "Ab April 2026"-Referenzen auf August 2026 aktualisiert und einen Tippfehler in der GGUF-Sektion behoben ("Dateigr öße" → "Dateigrößen").',
             '**2026-06-15:** Direktvergleichsabschnitte hinzugefügt (Q4_0 vs Q4_K_M, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, Q8_0 vs Q8_K_XL) sowie eine eigene Antwort "Was ist Q8_0?"; Q8_K_XL-Abdeckung ergänzt; Fakten im Juni 2026 erneut verifiziert.',
             '**2026-05-17:** Titel aktualisiert, um entscheidungsorientierte Absicht widerzuspiegeln; Inhalte unverändert.',
           ],
@@ -2672,7 +2859,7 @@ schema: {
         'headline': 'Welche LLM-Quantisierung wählen? Q4_K_M vs Q5_K_M vs Q8_0 (2026)',
         'description': 'Praktischer Leitfaden zur Auswahl von LLM-Quantisierungsstufen nach VRAM. Q4_K_M, Q5_K_M, Q6_K, Q8_0 im Vergleich mit RAM-Tabellen, Qualitätsverlust und Anwendungsfällen.',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-15',
+        'dateModified': '2026-08-26',
         'url': 'https://www.promptquorum.com/de/local-llms/llm-quantization-explained',
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -2849,8 +3036,8 @@ schema: {
     },
     fr: {
       freshness_tier: 'semi_annual',
-      next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-12-19',
+      next_seo_review_due: '2026-10-01',
+      next_refresh_due: '2027-02-26',
       theme: 'Best Models',
       title: 'Quantification LLM expliquée : Q4_K_M vs Q4_0 vs Q8_0 (2026)',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0 : la quantification LLM expliquée (2026)',
@@ -2858,8 +3045,8 @@ schema: {
       metaDescription: 'Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M et Q8_0 vs Q8_K_XL comparés. Bits, VRAM par 7B, perte de qualité et quelle quantification GGUF choisir selon votre VRAM en 2026.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-fr.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-15',
-      lastFactChecked: '2026-06-15',
+      dateModified: '2026-08-26',
+      lastFactChecked: '2026-08-26',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       leadAnswerBlock: '**Choisissez la quantification selon votre VRAM : 6–8 GB de VRAM → utilisez Q4_K_M (~4,5 GB pour les modèles 7B, perte de qualité de 1–3%), 16 GB → Q5_K_M, 24+ GB → Q8_0 (perte négligeable). La quantification réduit la précision des poids du modèle de flottants 16 bits vers des entiers 4 ou 8 bits, réduisant la RAM de 50–75%. Pour les modèles plus grands que votre GPU, ajoutez l\'offloading CPU ou le layer splitting multi-GPU.**',
@@ -2881,8 +3068,10 @@ schema: {
         { label: 'Économies de RAM par niveau de quantification', anchor: '#ram-savings' },
         { label: 'Quelle qualité perdez-vous ?', anchor: '#quality-loss' },
         { label: 'Quelle quantification choisir ?', anchor: '#which-quantization' },
+        { label: 'LM Studio : sélectionner la quantification', anchor: '#lm-studio-quantization-selection' },
         { label: 'Offloading : étendre le VRAM vers la RAM CPU', anchor: '#offloading' },
         { label: 'Layer splitting : répartir sur plusieurs GPU', anchor: '#layer-splitting' },
+        { label: 'Quantification du cache KV', anchor: '#kv-cache-quantization' },
         { label: 'Approche hybride : combiner les techniques', anchor: '#hybrid' },
         { label: 'Compromis de performance', anchor: '#tradeoffs' },
         { label: 'Mac Studio M2 Ultra : 70B natif sans offloading', anchor: '#mac-studio' },
@@ -3008,7 +3197,7 @@ schema: {
           content: [
             '**GGUF (GPT-Generated Unified Format) est le format de fichier utilisé pour stocker les poids LLM quantifiés pour l\'inférence locale.** Il a été créé par le projet llama.cpp et remplace le format GGML plus ancien.',
             'Un fichier GGUF contient : les poids du modèle quantifiés, toutes les métadonnées du modèle (architecture, tokenizer, longueur du contexte) et un numéro de version du format. Cette conception autonome signifie qu\'un seul fichier `.gguf` est tout ce qui est nécessaire pour exécuter le modèle -- pas de fichiers tokenizer séparés, pas de JSON de configuration.',
-            'En avril 2026, GGUF est le format standard pour Ollama, LM Studio, Jan AI et GPT4All. Lorsque vous exécutez [`ollama pull llama3.1:8b`](/fr/local-llms/how-to-install-ollama), Ollama télécharge en interne un fichier GGUF. Lorsque LM Studio affiche les tailles de modèle, ce sont les tailles de fichier GGUF.',
+            'En août 2026, GGUF est le format standard pour Ollama, LM Studio, Jan AI et GPT4All. Lorsque vous exécutez [`ollama pull llama3.1:8b`](/fr/local-llms/how-to-install-ollama), Ollama télécharge en interne un fichier GGUF. Lorsque LM Studio affiche les tailles de modèle, ce sont les tailles de fichier GGUF.',
             'Le niveau de quantification fait partie du nom de fichier : `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` est une GGUF quantifiée en Q4_K_M de Llama 3.3 8B.',
           ],
           image: '/images/gguf-format-structure-fr.svg',
@@ -3032,7 +3221,7 @@ schema: {
           id: 'quality-loss',
           title: 'Quelle qualité perdez-vous vraiment avec la quantification ?',
           content: [
-            '**La perte de qualité de la quantification est mesurée en exécutant les mêmes benchmarks sur le modèle en précision complète et la version quantifiée, puis en comparant les scores.** En avril 2026, les conclusions établies sont :',
+            '**La perte de qualité de la quantification est mesurée en exécutant les mêmes benchmarks sur le modèle en précision complète et la version quantifiée, puis en comparant les scores.** En août 2026, les conclusions établies sont :',
             'La quantisation réduit l\'utilisation de la mémoire mais peut dégrader la qualité des sorties. Des prompts bien conçus compensent : les techniques comme les exemples few-shot et les contraintes de sortie explicites aident les modèles quantisés à maintenir leur précision. Consultez les [techniques de prompt engineering](https://www.promptquorum.com/prompt-engineering) pour des méthodes qui fonctionnent à tout niveau de quantisation.',
           ],
           items: [
@@ -3057,6 +3246,19 @@ schema: {
             '**Maison connectée et appareils edge :** Q4_K_M (4–8 Go VRAM) est la quantification idéale pour l\'IA domotique toujours active sur un mini PC. Voir [meilleurs LLM locaux pour maison connectée →](/smart-home/best-local-llm-models-smart-home).',
           ],
         },
+        lmStudio: {
+          id: 'lm-studio-quantization-selection',
+          title: 'Comment sélectionner la quantification dans LM Studio ?',
+          content: [
+            '**LM Studio (application de bureau) affiche les variantes de quantification disponibles pour chaque téléchargement de modèle.** Lors de la recherche d\'un modèle, vous verrez plusieurs options GGUF : Q2_K, Q3_K_S, Q4_K_M, Q5_K_M, Q6_K, Q8_0.',
+            '**Étape 1 :** Ouvrez LM Studio → accédez à l\'onglet « Local Models ». Recherchez un modèle (ex. « Llama 3.3 8B »). **Étape 2 :** Chaque modèle affiche les quantifications disponibles. Regardez la taille du fichier pour estimer l\'utilisation de VRAM. Q4_K_M pour un modèle 7B est généralement listé à ~4,5 GB. **Étape 3 :** Cliquez sur l\'icône de téléchargement à côté de la quantification choisie.',
+            '**Réglages par défaut recommandés pour LM Studio :**',
+            '- **Si votre GPU a 6-8 GB de VRAM (RTX 4060, RTX 3060 Ti, RTX 4060 Ti) :** téléchargez la variante Q4_K_M (fichier le plus petit avec une qualité acceptable).',
+            '- **Si votre GPU a 12-16 GB de VRAM (RTX 4070, RTX 4080) :** téléchargez Q5_K_M ou Q6_K (meilleure qualité, toujours confortable en VRAM).',
+            '- **Si votre GPU a 24+ GB de VRAM (RTX 4090, RTX 5090) :** téléchargez Q8_0 ou FP16 (qualité maximale, pénalité de vitesse minimale).',
+            '**La fonction « GPU offload » de LM Studio :** activez le bouton « Use GPU » dans l\'interface de chat. LM Studio déplacera automatiquement autant de couches du modèle que possible vers la GPU, en déchargeant le reste vers la RAM CPU. Si votre RAM système est suffisante, cela permet d\'exécuter des modèles légèrement plus grands que votre VRAM GPU (ex. Llama 3.3 70B Q4_K_M sur RTX 4090 avec 64+ GB de RAM système).',
+          ],
+        },
         offloading: {
           id: 'offloading',
           title: 'Offloading : utiliser la RAM CPU comme extension du VRAM',
@@ -3076,6 +3278,19 @@ schema: {
           ],
           codeBlock: '# vLLM avec parallélisme tensoriel sur 2 GPU :\npython -m vllm.entrypoints.openai.api_server \\\n  --model meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 2 \\\n  --port 8000\n\n# llama.cpp avec répartition explicite des couches GPU :\n./llama-server \\\n  -m llama-3.3-70b-q5_k_m.gguf \\\n  --n-gpu-layers 80 \\\n  --split-mode row \\\n  --main-gpu 0',
           codeLanguage: 'bash',
+        },
+        kvCacheQuantization: {
+          id: 'kv-cache-quantization',
+          title: 'Quantification du cache KV : réduire l\'overhead mémoire du contexte',
+          content: [
+            '**La quantification du cache KV réduit la mémoire nécessaire pour stocker les paires clé-valeur d\'attention pendant l\'inférence, particulièrement importante lors du traitement de contextes longs (32K+ tokens).** Alors que la quantification des poids du modèle (Q4_K_M) est la plus courante, la quantification du cache KV cible un goulot d\'étranglement mémoire différent.',
+            'Pendant l\'inférence, le modèle maintient des paires clé-valeur (KV) actives pour chaque token du contexte. Pour un modèle 7B traitant un contexte de 32K tokens, le cache KV seul peut consommer 8–16 GB de VRAM selon la précision. Le cache KV standard utilise FP16 (2 octets par valeur) ; quantifier le cache KV en FP8 ou Q8 réduit cela de 50%.',
+            '**Comment activer la quantification du cache KV :**',
+            '- **Ollama** : automatique sur les modèles compatibles ; aucune configuration utilisateur nécessaire.',
+            '- **LM Studio** : cochez l\'option « KV cache quantization » dans les Paramètres (si disponible dans votre version).',
+            '- **llama.cpp** : utilisez les options `--cache-type-q8_0` ou `--cache-type-f8` au démarrage du serveur.',
+            '**Compromis :** la quantification du cache KV a un impact minimal sur la qualité (<1% de dégradation même avec une quantification agressive) car les motifs d\'attention sont plus robustes à une précision réduite que les poids du modèle. Recommandée pour les modèles traitant des contextes de 16K+ sur du matériel limité.',
+          ],
         },
         hybrid: {
           id: 'hybrid',
@@ -3238,6 +3453,7 @@ schema: {
           id: 'update-log',
           title: 'Journal de mises à jour',
           items: [
+            '**2026-08-26 :** Mise à jour semestrielle. Ajout des sections manquantes « LM Studio : sélectionner la quantification » et « Quantification du cache KV » (parité structurelle avec la version anglaise) ; références « en avril 2026 » mises à jour en août 2026.',
             '**2026-06-15 :** Ajout de sections comparatives directes (Q4_0 vs Q4_K_M, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, Q8_0 vs Q8_K_XL) et d\'une réponse dédiée « Qu\'est-ce que Q8_0 ? » ; ajout de la couverture de Q8_K_XL ; faits revérifiés en juin 2026.',
             '**2026-05-17:** Titre mis à jour pour refléter une intention orientée vers la décision ; contenu inchangé.',
           ],
@@ -3249,7 +3465,7 @@ schema: {
         'headline': 'Quelle quantification LLM choisir ? Q4_K_M vs Q5_K_M vs Q8_0 (2026)',
         'description': 'Guide pratique pour choisir les niveaux de quantification LLM par VRAM. Q4_K_M, Q5_K_M, Q6_K, Q8_0 comparés avec tableaux RAM, perte de qualité et cas d\'usage.',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-15',
+        'dateModified': '2026-08-26',
         'url': 'https://www.promptquorum.com/fr/local-llms/llm-quantization-explained',
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -3416,8 +3632,8 @@ schema: {
     },
     ja: {
       freshness_tier: 'semi_annual',
-      next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-12-19',
+      next_seo_review_due: '2026-10-01',
+      next_refresh_due: '2027-02-26',
       theme: 'Best Models',
       title: 'LLM量子化を解説：Q4_K_M vs Q4_0 vs Q8_0（2026）',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0：LLM量子化を解説（2026）',
@@ -3425,8 +3641,8 @@ schema: {
       metaDescription: 'Q4_K_M vs Q4_0、Q4_K_M vs Q4_K_S、Q8_0 vs Q4_K_M、Q8_0 vs Q8_K_XLを比較。ビット数、7BあたりのVRAM、品質低下、2026年に自分のVRAMで選ぶべきGGUF量子化を解説。',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-ja.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-15',
-      lastFactChecked: '2026-06-15',
+      dateModified: '2026-08-26',
+      lastFactChecked: '2026-08-26',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       leadAnswerBlock: '**VRAM に基づいて量子化を選択してください：6–8 GB の VRAM → Q4_K_M を使用（7B モデルで約 4.5 GB、品質低下 1–3%）、16 GB → Q5_K_M、24+ GB → Q8_0（無視できる低下）。量子化はモデル重みの精度を 16 ビット浮動小数点から 4 または 8 ビット整数に下げ、RAM を 50–75% 削減します。GPU より大きいモデルには、CPU オフロードまたはマルチ GPU レイヤースプリッティングを追加してください。**',
@@ -3448,8 +3664,10 @@ schema: {
         { label: '量子化レベル別のRAM削減量', anchor: '#ram-savings' },
         { label: '実際にどの程度品質が低下するのか', anchor: '#quality-loss' },
         { label: 'どの量子化レベルを選ぶべきか', anchor: '#which-quantization' },
+        { label: 'LM Studioで量子化を選択する方法', anchor: '#lm-studio-quantization-selection' },
         { label: 'オフロード：CPU RAMをVRAM拡張として使用', anchor: '#offloading' },
         { label: 'レイヤースプリッティング：複数GPUへの分散', anchor: '#layer-splitting' },
+        { label: 'KVキャッシュ量子化', anchor: '#kv-cache-quantization' },
         { label: 'ハイブリッドアプローチ：技術の組み合わせ', anchor: '#hybrid' },
         { label: 'パフォーマンスのトレードオフ', anchor: '#tradeoffs' },
         { label: 'Mac Studio M2 Ultra：オフロードなしのネイティブ70B', anchor: '#mac-studio' },
@@ -3465,10 +3683,10 @@ schema: {
 
           isTldr: true,
           items: [
-            '量子化はモデルの重みを32ビットから4～8ビットに圧縮し、VRAM使用量を50～75%削減する技術です。',
+            '量子化はモデルの重みを16ビットから4～8ビットに圧縮し、RAM使用量を50～75%削減する技術です。',
             '**Q4_K_M**は標準推奨レベル -- 品質とRAMのバランスが最適な一般的なユースケース向けです。',
             '7Bモデルの例：FP16 = 約14GB RAM、Q4_K_M = 約4.5GB、Q8_0 = 約7GB。',
-            'Q4_K_MでのMMULベンチマーク品質低下は1～3% -- 実際の用途ではほぼ無視できるレベルです。',
+            'Q4_K_MでのMMLUベンチマーク品質低下は1～3% -- 実際の用途ではほぼ無視できるレベルです。',
             'GGUFはllama.cpp、Ollama、LM Studioなどが量子化モデルを保存するための標準ファイル形式です。',
           ],
         },
@@ -3575,7 +3793,7 @@ schema: {
           content: [
             '**GGUF（GPT-Generated Unified Format）は、ローカル推論用の量子化LLM重みを保存するためのファイル形式です。** llama.cpプロジェクトによって作成され、古いGGML形式の置き換えです。',
             'GGUFファイルには以下が含まれます：量子化されたモデルの重み、すべてのモデルメタデータ（アーキテクチャ、トークナイザー、コンテキスト長）、およびフォーマットバージョン番号。このスタンドアロン設計により、単一の`.gguf`ファイルがモデルを実行するために必要なすべてです -- 別のトークナイザーファイルや設定JSONは不要です。',
-            '2026年4月の時点で、GGUFはOllama、LM Studio、Jan AI、GPT4Allの標準形式です。`ollama pull llama3.1:8b`を実行すると、Ollamaは内部的にGGUFファイルをダウンロードします。LM Studioがモデルファイルサイズを表示する場合、それはGGUFファイルサイズです。',
+            '2026年8月の時点で、GGUFはOllama、LM Studio、Jan AI、GPT4Allの標準形式です。`ollama pull llama3.1:8b`を実行すると、Ollamaは内部的にGGUFファイルをダウンロードします。LM Studioがモデルファイルサイズを表示する場合、それはGGUFファイルサイズです。',
             '量子化レベルはファイル名の一部です：`Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`はLlama 3.3 8BのQ4_K_M量子化GGUFです。',
           ],
           image: '/images/gguf-format-structure-ja.svg',
@@ -3599,11 +3817,11 @@ schema: {
           id: 'quality-loss',
           title: '実際にどの程度の品質が低下するのか',
           content: [
-            '**量子化による品質低下は、完全精度モデルと量子化バージョンで同じベンチマークを実行し、スコアを比較することで測定されます。** 2026年4月の時点で、確立された知見は以下の通りです：',
+            '**量子化による品質低下は、完全精度モデルと量子化バージョンで同じベンチマークを実行し、スコアを比較することで測定されます。** 2026年8月の時点で、確立された知見は以下の通りです：',
             '量子化はメモリ使用量を削減しますが、出力品質を低下させることがあります。適切に設計されたプロンプトがそれを補います：Few-Shot例や明示的な出力制約などのテクニックは、量子化モデルの精度維持に役立ちます。どの量子化レベルでも機能する手法については[プロンプトエンジニアリングテクニック](https://www.promptquorum.com/prompt-engineering)をご覧ください。',
           ],
           items: [
-            '**Q4_K_M対FP16**：MMULで1～3%の低下。FP16で73%のスコアを達成する7Bモデルは、Q4_K_Mで71～72%を達成します。実際のタスクでは、この差はほぼ無視できます。',
+            '**Q4_K_M対FP16**：MMLUで1～3%の低下。FP16で73%のスコアを達成する7Bモデルは、Q4_K_Mで71～72%を達成します。実際のタスクでは、この差はほぼ無視できます。',
             '**Q3_K_S対FP16**：5～10%の低下。複雑な推論と数学タスクで顕著です。FP16で数学問題を正しく解くモデルがQ3_K_Sで失敗することもあります。',
             '**Q2_K対FP16**：15～25%の低下。すべてのタスクタイプで著しい品質低下。RAM制約が絶対的な場合のみ使用してください。',
             '**Q8_0対FP16**：0.5%未満の低下 -- 実際のすべての目的で本質的に同一です。',
@@ -3622,6 +3840,19 @@ schema: {
             '**コーディングまたは数学タスク専用**：Q5_K_M以上を使用 -- 量子化の影響は正確な数値および算法的推論で最も顕著です。Q5_K_M の Qwen3-Coder をネット接続なしの環境と組み合わせる、エンドツーエンドのエアギャップ型コーディング構成については、[インターネット不要のローカルコーディング LLM](/ja/power-local-llm/local-coding-llm-without-internet)を参照してください。',
             '**量子化は精度に、温度はランダム性に影響**：温度0.3のQ4モデルは、温度1.0のフル精度モデルよりも決定論的な出力を生成します。これらのパラメータを独立して調整するには[温度とTop-p：AIの創造性を制御する](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity)をご覧ください。',
             '**スマートホームとエッジデバイス向け：** Q4_K_M（VRAM 4〜8 GB）はミニPCで常時稼働するホームオートメーションAIに最適です。[スマートホーム向け最高のローカルLLMモデル →](/smart-home/best-local-llm-models-smart-home)をご覧ください。',
+          ],
+        },
+        lmStudio: {
+          id: 'lm-studio-quantization-selection',
+          title: 'LM Studioで量子化を選択する方法',
+          content: [
+            '**LM Studio（デスクトップアプリ）は、モデルをダウンロードする際に利用可能な量子化バリアントを表示します。** モデルを検索すると、Q2_K、Q3_K_S、Q4_K_M、Q5_K_M、Q6_K、Q8_0など複数のGGUFオプションが表示されます。',
+            '**手順1：** LM Studioを開く → 「Local Models」タブに移動。モデルを検索（例：「Llama 3.3 8B」）。**手順2：** 各モデルに利用可能な量子化が表示されます。ファイルサイズを見てVRAM使用量を見積もってください。7BモデルのQ4_K_Mは通常約4.5GBと表示されます。**手順3：** 選択した量子化の横のダウンロードアイコンをクリックします。',
+            '**LM Studioの推奨デフォルト設定：**',
+            '- **GPUのVRAMが6～8GBの場合（RTX 4060、RTX 3060 Ti、RTX 4060 Ti）：** Q4_K_Mバリアントをダウンロードしてください（許容できる品質で最小のファイル）。',
+            '- **GPUのVRAMが12～16GBの場合（RTX 4070、RTX 4080）：** Q5_K_MまたはQ6_Kをダウンロードしてください（より良い品質、VRAMに十分余裕あり）。',
+            '- **GPUのVRAMが24GB以上の場合（RTX 4090、RTX 5090）：** Q8_0またはFP16をダウンロードしてください（最高品質、速度低下は最小限）。',
+            '**LM Studioの「GPU offload」機能：** チャットインターフェースで「Use GPU」トグルを確認してください。LM StudioはVRAMが許す限り多くのモデルレイヤーを自動的にGPUに移動し、残りをCPU RAMにオフロードします。システムRAMが十分であれば、GPUのVRAMよりわずかに大きいモデルも実行できます（例：64GB以上のシステムRAMを搭載したRTX 4090でのLlama 3.3 70B Q4_K_M）。',
           ],
         },
         offloading: {
@@ -3643,6 +3874,19 @@ schema: {
           ],
           codeBlock: '# 2 GPUでのvLLMテンソル並列処理：\npython -m vllm.entrypoints.openai.api_server \\\n  --model meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 2 \\\n  --port 8000\n\n# 明示的なGPUレイヤー分散でのllama.cpp：\n./llama-server \\\n  -m llama-3.3-70b-q5_k_m.gguf \\\n  --n-gpu-layers 80 \\\n  --split-mode row \\\n  --main-gpu 0',
           codeLanguage: 'bash',
+        },
+        kvCacheQuantization: {
+          id: 'kv-cache-quantization',
+          title: 'KVキャッシュ量子化：コンテキストメモリのオーバーヘッドを削減',
+          content: [
+            '**KVキャッシュ量子化は、推論中にアテンションのキー・バリューペアを保存するために必要なメモリを削減します。特に長いコンテキスト（32Kトークン以上）を処理する場合に重要です。** モデル重みの量子化（Q4_K_M）が最も一般的ですが、KVキャッシュ量子化は別のメモリボトルネックを対象とします。',
+            '推論中、モデルはコンテキスト内の各トークンに対して実行中のキー・バリュー（KV）ペアを維持します。32Kトークンのコンテキストを処理する7Bモデルの場合、KVキャッシュだけで精度に応じて8～16GBのVRAMを消費することがあります。標準のKVキャッシュはFP16（値あたり2バイト）を使用します。KVキャッシュをFP8またはQ8に量子化すると、これを50%削減できます。',
+            '**KVキャッシュ量子化の有効化方法：**',
+            '- **Ollama**：互換モデルで自動的に有効になり、ユーザー設定は不要です。',
+            '- **LM Studio**：設定で「KV cache quantization」トグルを確認してください（バージョンによって利用可否が異なります）。',
+            '- **llama.cpp**：サーバー起動時に`--cache-type-q8_0`または`--cache-type-f8`フラグを使用してください。',
+            '**トレードオフ：** アテンションパターンはモデルの重みよりも低精度に対して頑健であるため、KVキャッシュ量子化は品質への影響が最小限です（積極的な量子化でも1%未満の低下）。16K以上のコンテキストを処理する制約のあるハードウェア向けに推奨されます。',
+          ],
         },
         hybrid: {
           id: 'hybrid',
@@ -3695,8 +3939,8 @@ schema: {
           id: 'common-mistakes',
           title: 'LLM量子化でよくある間違い',
           items: [
-            '**Q4_K_Mではなくq4_0をダウンロード** -- Q4_0は古い量子化法で、K-Quant改善がありません。Q4_K_Mは同じRAMフットプリントで5～8%優れた品質です。両方が利用可能な場合は、常にQ4_K_Mを選択してください。',
-            '**より高い量子化は常により悪い品質を意味すると仮定** -- より高いQ数=より多くのビット=より良い品質。Q8_0はQ4_K_Mより優れています。Q5_K_MはQ4_K_Mより優れています。Q4_K_M 70BモデルはほとんどのタスクでQ8_0 8Bモデルを上回ります。',
+            '**Q4_K_MではなくQ4_0をダウンロード** -- Q4_0は古い量子化法で、K-Quant改善がありません。Q4_K_Mは同じRAMフットプリントで5～8%優れた品質です。両方が利用可能な場合は、常にQ4_K_Mを選択してください。',
+            '**より高い量子化は常により悪い品質を意味すると仮定** -- より高いQ数=より多くのビット=より良い品質。Q8_0はQ4_K_Mより優れています。Q5_K_MはQ4_K_Mより優れています。Q4_K_M 70BモデルはほとんどのタスクでQ8_0 7Bモデルを上回ります。',
             '**モデルを読み込む前にRAMヘッドルームをチェックしない** -- モデルサイズは唯一のRAM消費者ではありません。OS、ブラウザ、その他のアプリケーションもRAMを使用します。8GBマシンでは、4.5GB Q4_K_M 7Bモデルは他のすべてに3.5GBしか残しません。ルール：モデルファイルサイズ + 2GB OSオーバーヘッド + 1GBヘッドルーム = 必要最小限RAM。',
           ],
         },
@@ -3787,11 +4031,12 @@ schema: {
             },
             {
               q: 'どの技術の組み合わせが自分のハードウェアに最適ですか？',
-              a: '8GB VRAM（RTX 4060 Ti）：最大7BモデルにQ4_K_M。24GB VRAM（RTX 4090）：7-13BはQ4_K_MでネイティブI; 70Bは64GBシステムRAMでオフロード。2× 24GB VRAM：70BにQ5_K_Mでレイヤースプリッティング（~100 tok/sec）。Apple Silicon：ユニファイドメモリを直接使用 -- 速度最適化にQ4_K_M。',
+              a: '8GB VRAM（RTX 4060 Ti）：最大7BモデルにQ4_K_M。24GB VRAM（RTX 4090）：7-13BはQ4_K_Mでネイティブ；70Bは64GBシステムRAMでオフロード。2× 24GB VRAM：70BにQ5_K_Mでレイヤースプリッティング（~100 tok/sec）。Apple Silicon：ユニファイドメモリを直接使用 -- 速度最適化にQ4_K_M。',
             },
           ],
         },
         sources: {
+          id: 'sources',
           title: '参考資料',
           items: [
             'llama.cpp量子化ドキュメント -- github.com/ggerganov/llama.cpp/blob/master/examples/quantize/README.md',
@@ -3804,6 +4049,7 @@ schema: {
           id: 'update-log',
           title: '更新ログ',
           items: [
+            '**2026-08-26:** 半期更新。英語版との構造的な整合性のため「LM Studioで量子化を選択する方法」と「KVキャッシュ量子化」セクションを追加。「2026年4月の時点で」を2026年8月に更新。MMLU表記の誤り、Q8_0の比較対象モデルサイズの誤り（8B→7B）、schema内の`acceptedAnswer`のタイプミス、sourcesセクションのid欠落を修正。',
             '**2026-06-15:** 直接比較セクション（Q4_0 vs Q4_K_M、Q4_K_M vs Q4_K_S、Q8_0 vs Q4_K_M、Q8_0 vs Q8_K_XL）と専用の「Q8_0とは？」回答を追加し、Q8_K_XLの解説を追加。事実は2026年6月に再検証済み。',
             '**2026-05-17:** 決定志向の意図を反映するようにタイトルを更新しました。コンテンツは変更されていません。',
           ],
@@ -3815,7 +4061,7 @@ schema: {
         'headline': 'どのLLM量子化を選ぶべき？Q4_K_M vs Q5_K_M vs Q8_0（2026）',
         'description': 'VRAMに基づいてLLM量子化レベルを選択するための実践的ガイド。Q4_K_M、Q5_K_M、Q6_K、Q8_0をRAMテーブル、品質低下、使用例と共に比較。',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-15',
+        'dateModified': '2026-08-26',
         'url': 'https://www.promptquorum.com/ja/local-llms/llm-quantization-explained',
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -3913,7 +4159,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Hugging Faceの異なるプロバイダーのQ4_K_Mモデルは品質が異なりますか？',
-            'accessedAnswer': { '@type': 'Answer', 'text': '量子化アルゴリズムは標準化されているため、同じベースモデルのQ4_K_M量子化はほぼ同一である必要があります。' },
+            'acceptedAnswer': { '@type': 'Answer', 'text': '量子化アルゴリズムは標準化されているため、同じベースモデルのQ4_K_M量子化はほぼ同一である必要があります。' },
           },
           {
             '@type': 'Question',
@@ -3982,8 +4228,8 @@ schema: {
     },
     zh: {
       freshness_tier: 'semi_annual',
-      next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-12-19',
+      next_seo_review_due: '2026-10-01',
+      next_refresh_due: '2027-02-26',
       theme: 'Best Models',
       title: 'LLM量化详解：Q4_K_M vs Q4_0 vs Q8_0（2026）',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0：LLM量化详解（2026）',
@@ -3991,8 +4237,8 @@ schema: {
       metaDescription: 'Q4_K_M vs Q4_0、Q4_K_M vs Q4_K_S、Q8_0 vs Q4_K_M 以及 Q8_0 vs Q8_K_XL 全面对比。位数、每7B的VRAM、质量损失，以及2026年应为您的VRAM选择哪种GGUF量化。',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-zh.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-15',
-      lastFactChecked: '2026-06-15',
+      dateModified: '2026-08-26',
+      lastFactChecked: '2026-08-26',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       leadAnswerBlock: '**根据显存选择量化：6–8 GB 显存 → 使用 Q4_K_M（7B 模型约 4.5 GB，质量损失 1–3%），16 GB → Q5_K_M，24+ GB → Q8_0（损失可忽略）。量化将模型权重精度从 16 位浮点数降至 4 位或 8 位整数，将内存减少 50–75%。对于大于显存的模型，可添加 CPU 卸载或多 GPU 层分割。**',
@@ -4014,8 +4260,10 @@ schema: {
         { label: '不同量化级别的RAM节省', anchor: '#ram-savings' },
         { label: '实际质量损失多少？', anchor: '#quality-loss' },
         { label: '应该选择哪种量化？', anchor: '#which-quantization' },
+        { label: '如何在LM Studio中选择量化', anchor: '#lm-studio-quantization-selection' },
         { label: '卸载：将CPU RAM用作VRAM扩展', anchor: '#offloading' },
         { label: '层分割：跨多GPU分布模型', anchor: '#layer-splitting' },
+        { label: 'KV缓存量化', anchor: '#kv-cache-quantization' },
         { label: '混合方法：组合技术', anchor: '#hybrid' },
         { label: '性能权衡', anchor: '#tradeoffs' },
         { label: 'Mac Studio M2 Ultra：无需卸载的原生70B', anchor: '#mac-studio' },
@@ -4097,30 +4345,30 @@ schema: {
           title: 'Q4_0 vs Q4_K_M：哪种4位格式更好？',
           content: '**请选择Q4_K_M而非Q4_0。两者平均都是每权重4位，但Q4_K_M是一种K-quant，它将最敏感的层以6位存储，在7B模型相同的约4.5 GB占用下恢复了5～8%的质量。** Q4_0是早期llama.cpp的原始统一4位格式，如今仅为兼容旧版而存在。当Q4_K_M可用时，没有任何大小或速度上的理由去选择Q4_0。',
           rows: [
-            { 'Format': 'Q4_0', 'Method': '统一4位（旧版）', 'RAM (7B)': '~4.0 GB', 'Quality': '比Q4_K_M差约5～8%', 'Pick When': '仅当Q4_K_M不可用时' },
-            { 'Format': 'Q4_K_M', 'Method': 'K-quant，混合4/6位', 'RAM (7B)': '~4.5 GB', 'Quality': '相比FP16损失1～3%', 'Pick When': '几乎所有人的默认选择' },
+            { '格式': 'Q4_0', '方法': '统一4位（旧版）', 'RAM (7B)': '~4.0 GB', '质量': '比Q4_K_M差约5～8%', '选择时机': '仅当Q4_K_M不可用时' },
+            { '格式': 'Q4_K_M', '方法': 'K-quant，混合4/6位', 'RAM (7B)': '~4.5 GB', '质量': '相比FP16损失1～3%', '选择时机': '几乎所有人的默认选择' },
           ],
-          columns: ['Format', 'Method', 'RAM (7B)', 'Quality', 'Pick When'],
+          columns: ['格式', '方法', 'RAM (7B)', '质量', '选择时机'],
         },
         compareQ4KMQ4KS: {
           id: 'q4-k-m-vs-q4-k-s',
           title: 'Q4_K_M vs Q4_K_S：中等与小型K-quant',
           content: '**Q4_K_M和Q4_K_S都是4位K-quants；区别在于有多少层保持更高精度。Q4_K_M（中等）将更多敏感层保持在6位，而Q4_K_S（小型）将更多权重压到4位，从而在7B模型上节省约0.3～0.4 GB。** 在llama.cpp上的实测中，Q4_K_S在7B上使困惑度增加约+0.11，而Q4_K_M为+0.05----大约多3～5%的质量损失。仅当那几百MB决定模型能否装入VRAM时，才选择Q4_K_S。',
           rows: [
-            { 'Format': 'Q4_K_S', 'Variant': '小型', 'RAM (7B)': '~4.1 GB', 'Quality Loss': '~4～6%（小但确实存在）', 'Pick When': '需要约0.4 GB以装入VRAM' },
-            { 'Format': 'Q4_K_M', 'Variant': '中等', 'RAM (7B)': '~4.5 GB', 'Quality Loss': '1～3%（均衡）', 'Pick When': '默认----多约0.4 GB换更好质量' },
+            { '格式': 'Q4_K_S', '变体': '小型', 'RAM (7B)': '~4.1 GB', '质量损失': '~4～6%（小但确实存在）', '选择时机': '需要约0.4 GB以装入VRAM' },
+            { '格式': 'Q4_K_M', '变体': '中等', 'RAM (7B)': '~4.5 GB', '质量损失': '1～3%（均衡）', '选择时机': '默认----多约0.4 GB换更好质量' },
           ],
-          columns: ['Format', 'Variant', 'RAM (7B)', 'Quality Loss', 'Pick When'],
+          columns: ['格式', '变体', 'RAM (7B)', '质量损失', '选择时机'],
         },
         compareQ80Q4KM: {
           id: 'q8-0-vs-q4-k-m',
           title: 'Q8_0 vs Q4_K_M：8位值得双倍VRAM吗？',
           content: '**对于大多数聊天和写作任务，Q4_K_M是更好的取舍----7B模型约4.5 GB，而Q8_0约7.7 GB，质量损失仅多1～3%。当您需要在编码、数学或智能体工具调用中获得最高保真度（小错误会累积）时，请选择Q8_0（需要16 GB以上VRAM）。** Q8_0相比FP16损失不足0.5%；Q4_K_M损失1～3%。这一差距在日常使用中难以察觉，但在精确数值推理上可能至关重要。',
           rows: [
-            { 'Format': 'Q4_K_M', 'Bits': '~4', 'RAM (7B)': '~4.5 GB', 'Quality Loss': '1～3%', 'Best For': '6～16 GB VRAM，通用用途' },
-            { 'Format': 'Q8_0', 'Bits': '8', 'RAM (7B)': '~7.7 GB', 'Quality Loss': '<0.5%', 'Best For': '16 GB以上VRAM，编码/数学/智能体' },
+            { '格式': 'Q4_K_M', '位数': '~4', 'RAM (7B)': '~4.5 GB', '质量损失': '1～3%', '最适合': '6～16 GB VRAM，通用用途' },
+            { '格式': 'Q8_0', '位数': '8', 'RAM (7B)': '~7.7 GB', '质量损失': '<0.5%', '最适合': '16 GB以上VRAM，编码/数学/智能体' },
           ],
-          columns: ['Format', 'Bits', 'RAM (7B)', 'Quality Loss', 'Best For'],
+          columns: ['格式', '位数', 'RAM (7B)', '质量损失', '最适合'],
         },
         compareQ80Q8KXL: {
           id: 'q8-0-vs-q8-k-xl',
@@ -4130,10 +4378,10 @@ schema: {
             'Q8_K_XL的确切文件大小因模型而异，也取决于Unsloth上采样了多少层，因此下载前请核实工具（LM Studio或Hugging Face）中显示的大小。对于7B～8B模型，预计它会略高于Q8_0；在超大模型上差距更大。由于Q8_0对大多数用户而言已几乎无损，只有当您确实需要最高保真度且额外VRAM免费时，Q8_K_XL才值得。',
           ],
           rows: [
-            { 'Format': 'Q8_0', 'Type': '标准llama.cpp', 'Precision': '统一8位', 'Quality': '相比FP16损失<0.5%', 'Pick When': '最高质量，标准工具链' },
-            { 'Format': 'Q8_K_XL', 'Type': 'Unsloth Dynamic GGUF', 'Precision': '8位 + 关键层上采样到16位', 'Quality': '近乎无损（最大的8位选项）', 'Pick When': '想要最后0.5%保真度，VRAM富余' },
+            { '格式': 'Q8_0', '类型': '标准llama.cpp', '精度': '统一8位', '质量': '相比FP16损失<0.5%', '选择时机': '最高质量，标准工具链' },
+            { '格式': 'Q8_K_XL', '类型': 'Unsloth Dynamic GGUF', '精度': '8位 + 关键层上采样到16位', '质量': '近乎无损（最大的8位选项）', '选择时机': '想要最后0.5%保真度，VRAM富余' },
           ],
-          columns: ['Format', 'Type', 'Precision', 'Quality', 'Pick When'],
+          columns: ['格式', '类型', '精度', '质量', '选择时机'],
         },
         gguf: {
           id: 'gguf-format',
@@ -4141,7 +4389,7 @@ schema: {
           content: [
             '**GGUF（GPT生成统一格式）是用于本地推理存储量化LLM权重的文件格式。** 由llama.cpp项目创建，取代了较旧的GGML格式。',
             'GGUF文件包含：量化的模型权重、所有模型元数据（架构、分词器、上下文长度）和格式版本号。这种自包含设计意味着单个`.gguf`文件是运行模型所需的全部内容----无需单独的分词器文件，无需配置JSON。',
-            '截至2026年4月，GGUF是Ollama、LM Studio、Jan AI和GPT4All的标准格式。运行`ollama pull llama3.1:8b`时，Ollama内部下载GGUF文件。LM Studio显示模型文件大小时，这些就是GGUF文件大小。',
+            '截至2026年8月，GGUF是Ollama、LM Studio、Jan AI和GPT4All的标准格式。运行`ollama pull llama3.1:8b`时，Ollama内部下载GGUF文件。LM Studio显示模型文件大小时，这些就是GGUF文件大小。',
             '量化级别是文件名的一部分：`Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`是Llama 3.3 8B的Q4_K_M量化GGUF。',
           ],
           image: '/images/gguf-format-structure-zh.svg',
@@ -4165,7 +4413,7 @@ schema: {
           id: 'quality-loss',
           title: '实际会损失多少质量',
           content: [
-            '**量化导致的质量损失通过在完全精度模型和量化版本上运行相同基准并比较分数来衡量。** 截至2026年4月，既定的发现是：',
+            '**量化导致的质量损失通过在完全精度模型和量化版本上运行相同基准并比较分数来衡量。** 截至2026年8月，既定的发现是：',
             '量化减少了内存使用，但可能降低输出质量。设计良好的提示词可以弥补这一点：少样本示例和明确的输出约束等技术有助于量化模型保持精度。查看[Prompt工程技术](https://www.promptquorum.com/prompt-engineering)，了解适用于任何量化级别的方法。',
           ],
           items: [
@@ -4190,6 +4438,19 @@ schema: {
             '**智能家居和边缘设备：** Q4_K_M（VRAM 4–8 GB）是迷你PC上始终在线家庭自动化AI的最佳选择。参阅[智能家居最佳本地LLM模型 →](/smart-home/best-local-llm-models-smart-home)。',
           ],
         },
+        lmStudio: {
+          id: 'lm-studio-quantization-selection',
+          title: '如何在LM Studio中选择量化',
+          content: [
+            '**LM Studio（桌面应用）会为每个模型下载显示可用的量化变体。** 搜索模型时，您会看到多个GGUF选项：Q2_K、Q3_K_S、Q4_K_M、Q5_K_M、Q6_K、Q8_0。',
+            '**步骤1：** 打开LM Studio → 进入"Local Models"标签。搜索模型（例如"Llama 3.3 8B"）。**步骤2：** 每个模型都会显示可用的量化。查看文件大小以估算显存使用量。7B模型的Q4_K_M通常标为约4.5 GB。**步骤3：** 点击所选量化旁边的下载图标。',
+            '**LM Studio的推荐默认设置：**',
+            '- **如果您的GPU显存为6-8 GB（RTX 4060、RTX 3060 Ti、RTX 4060 Ti）：** 下载Q4_K_M变体（文件最小，质量可接受）。',
+            '- **如果您的GPU显存为12-16 GB（RTX 4070、RTX 4080）：** 下载Q5_K_M或Q6_K（质量更好，仍在显存范围内）。',
+            '- **如果您的GPU显存为24 GB以上（RTX 4090、RTX 5090）：** 下载Q8_0或FP16（最高质量，速度损失最小）。',
+            '**LM Studio的"GPU offload"功能：** 在聊天界面中检查"Use GPU"开关。LM Studio会自动将尽可能多的模型层移至GPU，其余部分卸载到CPU RAM。如果系统RAM充足，这样可以运行略大于GPU显存的模型（例如在拥有64 GB以上系统RAM的RTX 4090上运行Llama 3.3 70B Q4_K_M）。',
+          ],
+        },
         offloading: {
           id: 'offloading',
           title: '卸载：将CPU RAM用作VRAM扩展',
@@ -4209,6 +4470,19 @@ schema: {
           ],
           codeBlock: '# vLLM在2个GPU上的张量并行：\npython -m vllm.entrypoints.openai.api_server \\\n  --model meta-llama/Llama-3.3-70B-Instruct \\\n  --tensor-parallel-size 2 \\\n  --port 8000\n\n# llama.cpp显式GPU层分布：\n./llama-server \\\n  -m llama-3.3-70b-q5_k_m.gguf \\\n  --n-gpu-layers 80 \\\n  --split-mode row \\\n  --main-gpu 0',
           codeLanguage: 'bash',
+        },
+        kvCacheQuantization: {
+          id: 'kv-cache-quantization',
+          title: 'KV缓存量化：降低上下文内存开销',
+          content: [
+            '**KV缓存量化减少了推理过程中存储注意力键值对所需的内存，在处理长上下文（32K+ 令牌）时尤为重要。** 虽然模型权重量化（Q4_K_M）最为常见，但KV缓存量化针对的是另一种内存瓶颈。',
+            '在推理过程中，模型为上下文中的每个令牌维护运行中的键值（KV）对。对于处理32K令牌上下文的7B模型，仅KV缓存本身根据精度不同就可能消耗8～16 GB显存。标准KV缓存使用FP16（每个值2字节）；将KV缓存量化为FP8或Q8可减少50%。',
+            '**如何启用KV缓存量化：**',
+            '- **Ollama**：在兼容模型上自动启用，无需用户配置。',
+            '- **LM Studio**：在设置中勾选"KV cache quantization"开关（如果您的版本支持）。',
+            '- **llama.cpp**：启动服务器时使用`--cache-type-q8_0`或`--cache-type-f8`标志。',
+            '**权衡：** KV缓存量化对质量影响极小（即使激进量化，下降也不足1%），因为注意力模式相比模型权重对较低精度更具鲁棒性。推荐用于在受限硬件上处理16K以上上下文的模型。',
+          ],
         },
         hybrid: {
           id: 'hybrid',
@@ -4262,7 +4536,7 @@ schema: {
           title: '大语言模型量化中的常见错误',
           items: [
             '**下载Q4_0而不是Q4_K_M**----Q4_0是不具有K-Quant改进的较旧量化方法。Q4_K_M在相同RAM占用下质量好5～8%。当两者都可用时，始终选择Q4_K_M。',
-            '**假设更高的量化始终意味着更差的质量**----更高的Q数=更多位=更好的质量。Q8_0优于Q4_K_M。Q5_K_M优于Q4_K_M。Q4_K_M 70B模型在大多数任务上优于Q8_0 8B模型。',
+            '**假设更高的量化始终意味着更差的质量**----更高的Q数=更多位=更好的质量。Q8_0优于Q4_K_M。Q5_K_M优于Q4_K_M。Q4_K_M 70B模型在大多数任务上优于Q8_0 7B模型。',
             '**在加载模型前不检查RAM余量**----模型大小不是唯一的RAM消费者。操作系统、浏览器和其他应用也消耗RAM。在8GB机器上，4.5GB Q4_K_M 7B模型仅为其他所有内容留下3.5GB。规则：模型文件大小 + 2GB OS开销 + 1GB余量 = 最小所需RAM。',
           ],
         },
@@ -4358,6 +4632,7 @@ schema: {
           ],
         },
         sources: {
+          id: 'sources',
           title: '参考资料',
           items: [
             'llama.cpp量化文档 -- github.com/ggerganov/llama.cpp/blob/master/examples/quantize/README.md',
@@ -4370,6 +4645,7 @@ schema: {
           id: 'update-log',
           title: '更新日志',
           items: [
+            '**2026-08-26:** 半年度更新。新增"如何在LM Studio中选择量化"和"KV缓存量化"两个缺失章节以对齐英文版结构；将4个对比表格中残留的英文表头（Format/Method/Quality等）翻译为中文；修正datePublished不一致（2026-04-02 → 2026-04-04）及一处7B/8B模型对比错误；"截至2026年4月"更新为2026年8月。',
             '**2026-06-15:** 新增逐一对决比较章节（Q4_0 vs Q4_K_M、Q4_K_M vs Q4_K_S、Q8_0 vs Q4_K_M、Q8_0 vs Q8_K_XL）以及专门的"Q8_0是什么？"解答；新增Q8_K_XL内容；事实已于2026年6月重新核实。',
             '**2026-05-17:** 更新标题以反映决策导向的意图；内容未更改。',
           ],
@@ -4380,8 +4656,8 @@ schema: {
         '@type': 'TechArticle',
         'headline': '应该选择哪种LLM量化？Q4_K_M vs Q5_K_M vs Q8_0（2026）',
         'description': '根据显存选择LLM量化级别的实用指南。包含RAM表格、质量损失和使用案例的Q4_K_M、Q5_K_M、Q6_K、Q8_0对比。',
-        'datePublished': '2026-04-02',
-        'dateModified': '2026-06-15',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-08-26',
         'url': 'https://www.promptquorum.com/zh/local-llms/llm-quantization-explained',
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -4539,8 +4815,8 @@ schema: {
     },
   ko: {
       freshness_tier: 'semi_annual',
-      next_seo_review_due: '2026-08-01',
-      next_refresh_due: '2026-12-19',
+      next_seo_review_due: '2026-10-01',
+      next_refresh_due: '2027-02-26',
       theme: 'Best Models',
       title: 'LLM 양자화 완전 해설: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0: LLM 양자화 해설 (2026)',
@@ -4548,14 +4824,136 @@ schema: {
       metaDescription: 'Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, Q8_0 vs Q8_K_XL 비교. 비트 수, 7B 모델별 VRAM, 품질 손실, 그리고 2026년 본인 VRAM에 맞는 GGUF 양자화 선택법을 정리합니다.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-ko.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-15',
-      lastFactChecked: '2026-06-15',
+      dateModified: '2026-08-26',
+      lastFactChecked: '2026-08-26',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.3 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M2 Ultra'],
       leadAnswerBlock: '**VRAM 용량을 기준으로 양자화를 선택하십시오: 6–8 GB VRAM → Q4_K_M 사용 (7B 모델 기준 약 4.5 GB, 품질 손실 1–3%), 16 GB → Q5_K_M, 24+ GB → Q8_0 (손실 무시 가능). 양자화는 모델 가중치 정밀도를 16비트 부동소수점에서 4비트 또는 8비트 정수로 변환하여 RAM 사용량을 50–75% 줄입니다. GPU보다 큰 모델을 실행하려면 CPU 오프로딩 또는 멀티 GPU 레이어 분할을 활용하십시오.**',
       audience: '프로덕션 환경에서 로컬 LLM을 배포하거나, 제한된 VRAM을 최적화하거나, 멀티 GPU 시스템을 구축하는 엔지니어',
       readTime: '14분 소요',
       educationalLevel: 'Advanced',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'LLM 양자화 완전 해설: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
+        'description': 'VRAM에 따라 LLM 양자화 수준을 선택하는 실용 가이드. Q4_K_M, Q5_K_M, Q6_K, Q8_0을 RAM 표, 품질 손실, 사용 사례와 함께 비교합니다.',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-08-26',
+        'url': 'https://www.promptquorum.com/ko/local-llms/llm-quantization-explained',
+        'inLanguage': 'ko',
+        'proficiencyLevel': 'Advanced',
+        'about': [
+          { '@type': 'Thing', 'name': 'Q4_K_M 양자화' },
+          { '@type': 'Thing', 'name': 'Q4_0 양자화' },
+          { '@type': 'Thing', 'name': 'Q4_K_S 양자화' },
+          { '@type': 'Thing', 'name': 'GGUF 형식' },
+          { '@type': 'Thing', 'name': 'LLM 양자화' },
+          { '@type': 'Thing', 'name': 'Q8_0 양자화' },
+          { '@type': 'Thing', 'name': 'Q8_K_XL 양자화' },
+          { '@type': 'Thing', 'name': 'llama.cpp GGUF' },
+        ],
+        'author': {
+          '@type': 'Person',
+          'name': 'Hans Kuepper',
+          'url': 'https://www.promptquorum.com/about',
+        },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'PromptQuorum',
+          'url': 'https://www.promptquorum.com',
+          'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' },
+        },
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Ollama는 자동으로 최적의 양자화를 사용합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '그렇습니다 — `ollama pull llama3.1:8b`를 실행하면 Ollama는 기본적으로 Q4_K_M 변형을 다운로드합니다. 특정 양자화를 가져오려면 태그를 추가하십시오: `ollama pull llama3.1:8b-instruct-q5_K_M`.' },
+          },
+          {
+            '@type': 'Question',
+            'name': '미리 양자화된 버전을 다운로드하는 대신 직접 모델을 양자화할 수 있습니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '그렇습니다 — llama.cpp에는 GGUF 파일을 지원하는 모든 양자화 수준으로 변환하는 `quantize` 바이너리가 포함되어 있습니다. 프로세스는 모델 크기에 따라 5–30분이 소요됩니다.' },
+          },
+          {
+            '@type': 'Question',
+            'name': '양자화가 모델의 컨텍스트 창에 영향을 줍니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '아닙니다 — 양자화는 모델 가중치 정밀도에만 영향을 미치며 컨텍스트 길이에는 영향을 주지 않습니다. Llama 3.3 8B 모델은 Q4_K_M으로 양자화되든 FP16으로 실행되든 128K 토큰을 지원합니다.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'GGUF와 GPTQ 양자화의 차이점은 무엇입니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUF(llama.cpp 형식)와 GPTQ는 두 가지 다른 양자화 방식입니다. GGUF는 K-퀀트를 사용하며 CPU와 GPU에서 모두 실행됩니다. GPTQ는 GPU 전용이며 PyTorch가 필요합니다. 로컬 추론에는 GGUF가 올바른 형식입니다.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q4_K_M과 Q4_0의 차이점은 무엇입니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M과 Q4_0은 둘 다 4비트 양자화이지만 서로 다른 알고리즘을 사용합니다. Q4_0은 초기 llama.cpp의 원래 균일 4비트 형식입니다. Q4_K_M은 가중치를 블록으로 그룹화하고 혼합 정밀도를 적용하는 K-퀀트로, 동일한 RAM 사용량으로 5-8%의 품질을 회복합니다. 두 가지가 모두 있을 때는 항상 Q4_K_M을 선택하십시오.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Hugging Face의 다른 제공자가 만든 Q4_K_M 모델 간에 품질 차이가 있습니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '양자화 알고리즘은 llama.cpp에서 표준화되어 있으므로, 동일한 기본 모델의 Q4_K_M 양자화는 거의 동일합니다. imatrix 양자화를 적용하는 제공자는 동일한 비트 수에서 더 높은 품질을 제공합니다.' },
+          },
+          {
+            '@type': 'Question',
+            'name': '이매트릭스(imatrix) 양자화란 무엇입니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'imatrix(중요도 행렬) 양자화는 교정 데이터를 사용하여 모델 출력에 미치는 중요도에 따라 가중치에 서로 다른 정밀도 수준을 할당합니다. 표준 Q4_K_M 대비 동일한 비트 수에서 2–4% 더 나은 품질을 냅니다.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q4_K_M과 Q4_K_S의 차이점은 무엇입니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '두 가지 모두 4비트 양자화이지만, K_M(미디엄)과 K_S(스몰)는 양자화 블록당 메모리 할당이 다릅니다. Q4_K_M은 더 나은 품질 복원을 위해 더 많은 메타데이터를 사용하며, Q4_K_S는 300–400 MB를 절약하지만 3–5% 품질 손실이 있습니다.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q8_0과 Q8_K_XL의 차이점은 무엇입니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q8_0은 llama.cpp의 표준 8비트 양자화입니다 — 모든 가중치가 8비트이며, 7B 모델 기준 약 7.7 GB, FP16 대비 손실은 0.5% 미만입니다. Q8_K_XL은 표준 llama.cpp 유형이 아니라 Unsloth의 "Dynamic" GGUF 변형으로, 8비트 기반에 가장 민감한 레이어를 16비트로 업캐스트하여 품질을 완전한 FP16에 더 가깝게 만듭니다. Q8_0이 대부분의 사용자에게 이미 사실상 무손실이므로, Q8_K_XL은 마지막 몇 분의 1 퍼센트의 정밀도가 필요하고 여유 VRAM이 있을 때만 도움이 됩니다.' },
+          },
+          {
+            '@type': 'Question',
+            'name': '모델을 다시 다운로드하지 않고 양자화 수준을 전환할 수 있습니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '아닙니다 — 양자화 수준 전환에는 다른 GGUF 파일을 다운로드하거나 직접 기본 모델을 재양자화해야 합니다. Q4_K_M으로 양자화된 모델은 원본 FP16 모델 없이는 Q5_K_M으로 다시 변환할 수 없습니다.' },
+          },
+          {
+            '@type': 'Question',
+            'name': '양자화는 추론 속도에 어떤 영향을 줍니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '양자화는 일반적으로 추론 속도를 10–40% 향상시킵니다. 4비트 가중치를 로드하고 처리하는 것이 16비트 부동소수점보다 빠르기 때문입니다. GPU에서의 성능 향상은 더 작습니다(5–15% 빠름).' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollama는 기본적으로 어떤 양자화 수준을 사용합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama는 라이브러리의 모든 모델에 대해 Q4_K_M을 기본값으로 사용합니다. 이 기본값은 대부분의 사용자에게 품질과 RAM 요구 사항의 균형을 잘 맞춥니다.' },
+          },
+          {
+            '@type': 'Question',
+            'name': '단일 RTX 4090에서 Llama 3.3 70B를 실행할 수 있습니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '그렇습니다, 하지만 느립니다. Q4로 양자화(35 GB)하고 11 GB를 시스템 RAM으로 오프로드합니다. 실용적인 70B 추론을 위해서는 레이어 분할로 2× RTX 4090(~100 토큰/초) 또는 Mac Studio M2 Ultra(35 토큰/초 네이티브)를 사용하십시오.' },
+          },
+          {
+            '@type': 'Question',
+            'name': '양자화와 오프로딩의 차이점은 무엇입니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '양자화는 모델 가중치 정밀도를 영구적으로 줄입니다(FP16 → Q4). 오프로딩은 런타임에 모델 레이어를 VRAM에서 시스템 RAM으로 이동합니다. 양자화를 먼저 사용하고, 오프로딩은 최후의 수단으로 사용하십시오.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Mac Studio M2 Ultra는 70B 모델에 양자화가 필요합니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '경미한 양자화만 필요합니다. 192 GB 통합 메모리는 Llama 3.3 70B를 Q4(35 GB)로 네이티브 실행할 수 있습니다 — 오프로딩이나 레이어 분할 없이도 가능합니다.' },
+          },
+          {
+            '@type': 'Question',
+            'name': '내 하드웨어에 가장 적합한 기법 조합은 무엇입니까?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '단일 RTX 4090 (24 GB): Q4 + 오프로딩으로 70B. 2× RTX 4090 (48 GB): Q5 + 레이어 분할로 70B (100 토큰/초). Mac Studio M2 Ultra (192 GB): Q4 네이티브로 70B (35 토큰/초).' },
+          },
+        ],
+      },
       supplementalSchema: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
@@ -4639,7 +5037,7 @@ schema: {
           content: [
             '**양자화는 16비트 모델 가중치(FP16)를 4비트 또는 8비트 정수로 변환하여 RAM을 50–75% 줄이며, Q4_K_M 기준 품질 손실은 1–3%에 불과합니다.** 대형 언어 모델은 학습된 지식을 수십억 개의 수치 가중치로 저장합니다. 기본적으로 이 가중치는 16비트 부동소수점(FP16), 즉 가중치당 2바이트로 저장됩니다. 7B 모델은 70억 개의 가중치를 가지므로 FP16 파일 크기는 약 14 GB입니다.',
             '양자화는 이 16비트 부동소수점을 낮은 정밀도의 정수로 대체합니다. 4비트 양자화에서는 가중치 하나에 2바이트 대신 0.5바이트를 사용하여 메모리를 가중치 단독 기준 약 3.5 GB로 줄입니다. 메타데이터 오버헤드를 포함하면 Q4_K_M으로 양자화된 7B 모델은 약 4.5 GB입니다.',
-            '이것이 로컬 추론에서 중요한 이유는 소비자용 하드웨어의 RAM이 제한되어 있기 때문입니다. 양자화 없이는 7B 모델을 실행하는 데 16 GB RAM이 필요합니다. Q4_K_M 양자화를 적용하면 동일한 모델을 6 GB RAM으로 실행할 수 있어 [대부분의 최신 노트북](/local-llms/local-llm-on-laptop)에서도 사용 가능합니다.',
+            '이것이 로컬 추론에서 중요한 이유는 소비자용 하드웨어의 RAM이 제한되어 있기 때문입니다. 양자화 없이는 7B 모델을 실행하는 데 16 GB RAM이 필요합니다. Q4_K_M 양자화를 적용하면 동일한 모델을 6 GB RAM으로 실행할 수 있어 [대부분의 최신 노트북](/ko/local-llms/local-llm-on-laptop)에서도 사용 가능합니다.',
           ],
         },
         whatIsQ4KM: {
@@ -4659,14 +5057,14 @@ schema: {
           title: 'Q4_K_M, Q5_K_M, Q8_0 및 기타 수준의 차이는 무엇입니까?',
           content: '**4비트 Q4_K_M은 표준 권장 사항으로, 7B 모델 기준 약 4.5 GB RAM과 FP16 대비 1–3% 품질 손실을 제공합니다.** 양자화 이름은 Q{비트수}_{변형} 패턴을 따릅니다. 비트 수는 가중치 정밀도이고, 변형은 양자화 적용 방식에 영향을 줍니다.',
           rows: [
-            { 'Level': 'Q2_K', 'Bits': '2', 'RAM (7B)': '~2.7 GB', 'Quality Loss': '높음', 'Use When': 'RAM < 4 GB, 품질 저하 허용 시' },
-            { 'Level': 'Q3_K_S', 'Bits': '3', 'RAM (7B)': '~3.3 GB', 'Quality Loss': '보통', 'Use When': 'RAM 4–5 GB' },
-            { 'Level': 'Q4_K_M', 'Bits': '4', 'RAM (7B)': '~4.5 GB', 'Quality Loss': '낮음 (1–3%)', 'Use When': '대부분의 사용자에게 기본값' },
-            { 'Level': 'Q5_K_M', 'Bits': '5', 'RAM (7B)': '~5.7 GB', 'Quality Loss': '최소 (<1%)', 'Use When': 'RAM 16 GB, 더 나은 품질 원할 때' },
-            { 'Level': 'Q6_K', 'Bits': '6', 'RAM (7B)': '~6.6 GB', 'Quality Loss': '거의 무손실', 'Use When': 'RAM 16 GB, 코딩·수학 작업' },
-            { 'Level': 'Q8_0', 'Bits': '8', 'RAM (7B)': '~7.7 GB', 'Quality Loss': '무시 가능', 'Use When': 'RAM 16+ GB, 최고 품질' },
+            { '수준': 'Q2_K', '비트': '2', 'RAM (7B)': '~2.7 GB', '품질 손실': '높음', '사용 시기': 'RAM < 4 GB, 품질 저하 허용 시' },
+            { '수준': 'Q3_K_S', '비트': '3', 'RAM (7B)': '~3.3 GB', '품질 손실': '보통', '사용 시기': 'RAM 4–5 GB' },
+            { '수준': 'Q4_K_M', '비트': '4', 'RAM (7B)': '~4.5 GB', '품질 손실': '낮음 (1–3%)', '사용 시기': '대부분의 사용자에게 기본값' },
+            { '수준': 'Q5_K_M', '비트': '5', 'RAM (7B)': '~5.7 GB', '품질 손실': '최소 (<1%)', '사용 시기': 'RAM 16 GB, 더 나은 품질 원할 때' },
+            { '수준': 'Q6_K', '비트': '6', 'RAM (7B)': '~6.6 GB', '품질 손실': '거의 무손실', '사용 시기': 'RAM 16 GB, 코딩·수학 작업' },
+            { '수준': 'Q8_0', '비트': '8', 'RAM (7B)': '~7.7 GB', '품질 손실': '무시 가능', '사용 시기': 'RAM 16+ GB, 최고 품질' },
           ],
-          columns: ['Level', 'Bits', 'RAM (7B)', 'Quality Loss', 'Use When'],
+          columns: ['수준', '비트', 'RAM (7B)', '품질 손실', '사용 시기'],
           image: '/images/llm-quantization-explained-quant-levels-hero-ko.webp',
           imageCaption: '양자화 수준 비교: Q2_K(최고 압축)부터 Q8_0(최고 품질)까지. Q4_K_M은 대부분의 사용자에게 권장되는 표준입니다.',
         },
@@ -4676,13 +5074,67 @@ schema: {
           content: '이 계산기를 사용하면 모델, 양자화, 컨텍스트, 배치 크기의 모든 조합에 대해 정확한 VRAM 요구량을 계산할 수 있습니다. 구성을 선택하면 어떤 GPU에 적합한지 확인할 수 있습니다.',
           component: 'VramCalculator',
         },
+        whatIsQ80: {
+          id: 'what-is-q8-0',
+          title: 'Q8_0 양자화란 무엇입니까?',
+          content: '**Q8_0은 사실상 무손실에 가까운 8비트 GGUF 양자화 형식입니다 — FP16 대비 품질 저하가 0.5% 미만이며, 파일 크기는 대략 절반입니다.** 각 가중치는 8비트와 블록당 작은 스케일 값으로 저장되므로, 7B 모델은 FP16의 약 14 GB 대신 약 7.7 GB가 됩니다. K-퀀트(Q4_K_M, Q5_K_M)와 달리 Q8_0은 모든 가중치에 균일한 8비트 정밀도를 사용합니다 — 8비트만으로 이미 거의 모든 정보가 보존되므로 혼합 정밀도의 "K" 변형이 존재하지 않습니다.',
+          items: [
+            'Q8_0은 7B 모델 기준 약 7.7 GB RAM을 사용하며, FP16 대비 약 45% 적고 품질 손실은 무시할 수 있는 수준입니다',
+            '16+ GB VRAM을 보유하고 최고의 충실도(코딩, 수학, 에이전트)를 원할 때 최선의 선택입니다',
+            '일반 채팅에서는 Q6_K 대비 측정 가능한 이점이 거의 없지만, 품질이 가장 중요할 때 가장 안전한 선택입니다',
+            '`ollama run model:q8_0`으로 실행하거나 LM Studio에서 Q8_0 GGUF를 선택하십시오',
+          ],
+        },
+        compareQ40Q4KM: {
+          id: 'q4-0-vs-q4-k-m',
+          title: 'Q4_0 vs Q4_K_M: 어떤 4비트 형식이 더 나은가?',
+          content: '**Q4_0 대신 Q4_K_M을 선택하십시오. 둘 다 가중치당 평균 4비트를 사용하지만, Q4_K_M은 가장 민감한 레이어를 6비트로 저장하는 K-퀀트로, 7B 모델 기준 동일한 약 4.5 GB 용량에서 5–8%의 품질을 회복합니다.** Q4_0은 초기 llama.cpp의 원래 균일 4비트 형식이며, 오늘날에는 레거시 호환성을 위해서만 존재합니다. Q4_K_M을 사용할 수 있다면 Q4_0을 선택할 크기나 속도상의 이유는 없습니다.',
+          rows: [
+            { '형식': 'Q4_0', '방식': '균일 4비트 (레거시)', 'RAM (7B)': '~4.0 GB', '품질': 'Q4_K_M보다 약 5–8% 낮음', '선택 시기': 'Q4_K_M을 사용할 수 없을 때만' },
+            { '형식': 'Q4_K_M', '방식': 'K-퀀트, 4/6비트 혼합', 'RAM (7B)': '~4.5 GB', '품질': 'FP16 대비 1–3% 손실', '선택 시기': '거의 모든 사용자에게 기본값' },
+          ],
+          columns: ['형식', '방식', 'RAM (7B)', '품질', '선택 시기'],
+        },
+        compareQ4KMQ4KS: {
+          id: 'q4-k-m-vs-q4-k-s',
+          title: 'Q4_K_M vs Q4_K_S: 중간형 vs 소형 K-퀀트',
+          content: '**Q4_K_M과 Q4_K_S는 둘 다 4비트 K-퀀트이며, 차이는 몇 개의 레이어가 더 높은 정밀도를 유지하는지에 있습니다. Q4_K_M(Medium)은 더 많은 민감한 레이어를 6비트로 유지하는 반면, Q4_K_S(Small)는 더 많은 가중치를 4비트로 밀어넣어 7B 모델 기준 약 0.3–0.4 GB를 절약합니다.** llama.cpp에서 측정한 결과, Q4_K_S는 7B에서 약 +0.11의 퍼플렉시티를 추가하는 반면 Q4_K_M은 +0.05입니다 — 약 3–5% 더 많은 품질 손실입니다. 그 몇백 메가바이트가 모델이 VRAM에 들어가는지 여부를 결정할 때만 Q4_K_S를 선택하십시오.',
+          rows: [
+            { '형식': 'Q4_K_S', '변형': 'Small', 'RAM (7B)': '~4.1 GB', '품질 손실': '~4–6% (작지만 실재함)', '선택 시기': 'VRAM에 맞추려면 ~0.4 GB가 필요할 때' },
+            { '형식': 'Q4_K_M', '변형': 'Medium', 'RAM (7B)': '~4.5 GB', '품질 손실': '1–3% (균형)', '선택 시기': '기본값 — 약 0.4 GB 더 사용해 더 나은 품질' },
+          ],
+          columns: ['형식', '변형', 'RAM (7B)', '품질 손실', '선택 시기'],
+        },
+        compareQ80Q4KM: {
+          id: 'q8-0-vs-q4-k-m',
+          title: 'Q8_0 vs Q4_K_M: 8비트가 두 배의 VRAM만큼 가치가 있는가?',
+          content: '**대부분의 채팅 및 작문 작업에는 Q4_K_M이 더 나은 절충안입니다 — 7B 모델 기준 약 4.5 GB를 사용하는 반면 Q8_0은 약 7.7 GB를 사용하며, 품질 손실 차이는 1–3%에 불과합니다. 작은 오류가 누적되는 코딩, 수학, 에이전트형 도구 사용에서 최고의 충실도가 필요할 때는 Q8_0(16+ GB VRAM 필요)을 선택하십시오.** Q8_0은 FP16 대비 0.5% 미만의 손실이 있고, Q4_K_M은 1–3% 손실이 있습니다. 이 차이는 일상적인 사용에서는 체감하기 어렵지만 정밀한 수치 추론에서는 중요할 수 있습니다.',
+          rows: [
+            { '형식': 'Q4_K_M', '비트': '~4', 'RAM (7B)': '~4.5 GB', '품질 손실': '1–3%', '최적 용도': '6–16 GB VRAM, 일반 용도' },
+            { '형식': 'Q8_0', '비트': '8', 'RAM (7B)': '~7.7 GB', '품질 손실': '<0.5%', '최적 용도': '16+ GB VRAM, 코딩/수학/에이전트' },
+          ],
+          columns: ['형식', '비트', 'RAM (7B)', '품질 손실', '최적 용도'],
+        },
+        compareQ80Q8KXL: {
+          id: 'q8-0-vs-q8-k-xl',
+          title: 'Q8_0 vs Q8_K_XL: 표준 8비트 vs 동적 업캐스트',
+          content: [
+            '**Q8_0은 llama.cpp의 표준 8비트 퀀트입니다 — 모든 가중치가 8비트이며, 7B 모델 기준 약 7.7 GB, FP16 대비 손실은 0.5% 미만입니다. Q8_K_XL은 표준 llama.cpp 유형이 아닙니다: Unsloth의 "Dynamic" GGUF 변형으로, 8비트 기반을 유지하면서 가장 민감한 레이어(임베딩, 어텐션, 출력)를 16비트(BF16/F16)로 업캐스트하여 파일 크기를 약간 늘리는 대신 품질을 완전한 FP16에 더 가깝게 만듭니다.** Q8_K_XL은 정밀도의 마지막 몇 분의 1 퍼센트를 원하고 여유 VRAM이 있는 사용자를 대상으로 합니다.',
+            'Q8_K_XL의 정확한 파일 크기는 모델과 Unsloth가 업캐스트하는 레이어 수에 따라 달라지므로, 다운로드 전에 사용 중인 도구(LM Studio 또는 Hugging Face)에 표시된 크기를 확인하십시오. 7B–8B 모델의 경우 Q8_0보다 약간 큰 것을 예상하십시오. 매우 큰 모델에서는 그 차이가 더 커집니다. Q8_0이 대부분의 사용자에게 이미 사실상 무손실이므로, Q8_K_XL은 특별히 최고의 충실도가 필요하고 추가 VRAM이 여유로울 때만 가치가 있습니다.',
+          ],
+          rows: [
+            { '형식': 'Q8_0', '유형': '표준 llama.cpp', '정밀도': '균일 8비트', '품질': 'FP16 대비 <0.5% 손실', '선택 시기': '최고 품질, 표준 도구' },
+            { '형식': 'Q8_K_XL', '유형': 'Unsloth Dynamic GGUF', '정밀도': '8비트 + 주요 레이어 16비트 업캐스트', '품질': '거의 무손실 (가장 큰 8비트 옵션)', '선택 시기': '마지막 0.5% 충실도가 필요하고 여유 VRAM이 있을 때' },
+          ],
+          columns: ['형식', '유형', '정밀도', '품질', '선택 시기'],
+        },
         gguf: {
           id: 'what-is-gguf-format',
           title: 'GGUF 형식이란 무엇이며 양자화와 어떤 관계가 있습니까?',
           content: [
             '**GGUF(GPT-Generated Unified Format)는 양자화된 LLM 가중치를 위한 단일 파일 표준으로, 모델 가중치·메타데이터·토크나이저를 포함하며 Ollama, LM Studio, llama.cpp에서 사용됩니다.** llama.cpp 프로젝트에서 만들었으며 구형 GGML 형식을 대체합니다.',
             'GGUF 파일에는 양자화된 모델 가중치, 모든 모델 메타데이터(아키텍처, 토크나이저, 컨텍스트 길이), 형식 버전 번호가 포함됩니다. 이 자급자족 설계 덕분에 단일 `.gguf` 파일만으로 모델을 실행할 수 있습니다. 별도의 토크나이저 파일이나 설정 JSON이 필요하지 않습니다.',
-            '2026년 4월 기준, GGUF는 Ollama, LM Studio, Jan AI, GPT4All의 표준 형식입니다. [`ollama pull llama3.1:8b`](/local-llms/how-to-install-ollama)를 실행하면 Ollama가 내부적으로 GGUF 파일을 다운로드합니다. LM Studio에서 표시되는 모델 파일 크기는 GGUF 파일 크기입니다.',
+            '2026년 8월 기준, GGUF는 Ollama, LM Studio, Jan AI, GPT4All의 표준 형식입니다. [`ollama pull llama3.1:8b`](/ko/local-llms/how-to-install-ollama)를 실행하면 Ollama가 내부적으로 GGUF 파일을 다운로드합니다. LM Studio에서 표시되는 모델 파일 크기는 GGUF 파일 크기입니다.',
             '양자화 수준은 파일명에 포함됩니다: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`는 Llama 3.3 8B의 Q4_K_M 양자화 GGUF 파일입니다.',
           ],
           image: '/images/gguf-format-structure-en.svg',
@@ -4692,13 +5144,13 @@ schema: {
           id: 'ram-savings',
           title: '양자화는 다양한 모델 크기에서 RAM을 얼마나 절약합니까?',
           rows: [
-            { 'Model Size': '3B', 'FP16': '~6 GB', 'Q8_0': '~3.8 GB', 'Q4_K_M': '~2 GB', 'Q3_K_S': '~1.6 GB' },
-            { 'Model Size': '7B', 'FP16': '~14 GB', 'Q8_0': '~7.7 GB', 'Q4_K_M': '~4.5 GB', 'Q3_K_S': '~3.3 GB' },
-            { 'Model Size': '13B', 'FP16': '~26 GB', 'Q8_0': '~14 GB', 'Q4_K_M': '~8.5 GB', 'Q3_K_S': '~6 GB' },
-            { 'Model Size': '34B', 'FP16': '~68 GB', 'Q8_0': '~36 GB', 'Q4_K_M': '~22 GB', 'Q3_K_S': '~16 GB' },
-            { 'Model Size': '70B', 'FP16': '~140 GB', 'Q8_0': '~70 GB', 'Q4_K_M': '~40 GB', 'Q3_K_S': '~30 GB' },
+            { '모델 크기': '3B', 'FP16': '~6 GB', 'Q8_0': '~3.8 GB', 'Q4_K_M': '~2 GB', 'Q3_K_S': '~1.6 GB' },
+            { '모델 크기': '7B', 'FP16': '~14 GB', 'Q8_0': '~7.7 GB', 'Q4_K_M': '~4.5 GB', 'Q3_K_S': '~3.3 GB' },
+            { '모델 크기': '13B', 'FP16': '~26 GB', 'Q8_0': '~14 GB', 'Q4_K_M': '~8.5 GB', 'Q3_K_S': '~6 GB' },
+            { '모델 크기': '34B', 'FP16': '~68 GB', 'Q8_0': '~36 GB', 'Q4_K_M': '~22 GB', 'Q3_K_S': '~16 GB' },
+            { '모델 크기': '70B', 'FP16': '~140 GB', 'Q8_0': '~70 GB', 'Q4_K_M': '~40 GB', 'Q3_K_S': '~30 GB' },
           ],
-          columns: ['Model Size', 'FP16', 'Q8_0', 'Q4_K_M', 'Q3_K_S'],
+          columns: ['모델 크기', 'FP16', 'Q8_0', 'Q4_K_M', 'Q3_K_S'],
           image: '/images/ram-savings-by-model-size-en.svg',
           imageCaption: '모델 크기별 RAM 절약: 3B~70B 모델에서 FP16, Q8_0, Q4_K_M, Q3_K_S 양자화 수준 비교.',
         },
@@ -4706,7 +5158,7 @@ schema: {
           id: 'quality-loss',
           title: '양자화로 실제로 품질이 얼마나 저하됩니까?',
           content: [
-            '**Q4_K_M은 FP16 대비 MMLU 벤치마크에서 1–3% 손실이 발생하며 대부분의 실용적 작업에서 차이를 체감하기 어렵습니다. Q3_K_S는 5–10% 손실로 수학 및 추론 작업에서 차이가 눈에 띕니다.** 양자화로 인한 품질 손실은 전체 정밀도와 양자화 버전의 벤치마크 점수를 비교하여 측정합니다. 2026년 4월 기준 검증된 결과는 다음과 같습니다.',
+            '**Q4_K_M은 FP16 대비 MMLU 벤치마크에서 1–3% 손실이 발생하며 대부분의 실용적 작업에서 차이를 체감하기 어렵습니다. Q3_K_S는 5–10% 손실로 수학 및 추론 작업에서 차이가 눈에 띕니다.** 양자화로 인한 품질 손실은 전체 정밀도와 양자화 버전의 벤치마크 점수를 비교하여 측정합니다. 2026년 8월 기준 검증된 결과는 다음과 같습니다.',
             '양자화는 메모리 사용량을 줄이지만 출력 품질이 저하될 수 있습니다. 잘 설계된 프롬프트로 보완이 가능합니다: 퓨샷 예시 및 명시적 출력 제약 조건 같은 기법은 양자화된 모델의 정확도 유지에 도움이 됩니다. 모든 양자화 수준에서 효과적인 방법은 [프롬프트 엔지니어링 기법](https://www.promptquorum.com/prompt-engineering)을 참고하십시오.',
           ],
           items: [
@@ -4722,17 +5174,17 @@ schema: {
           title: '어떤 양자화를 사용해야 합니까? (빠른 결정 트리)',
           content: '**모델 크기만이 아닌 사용 가능한 VRAM을 기준으로 선택하십시오.** 아래 표는 하드웨어 제약에 따라 선택할 양자화를 보여줍니다.',
           rows: [
-            { 'Your VRAM': '4–6 GB', 'Best Quantization': 'Q3_K_S 또는 Q4_K_M', 'Model Size': '3B, 7B (Q4) | 7B (Q3)', 'Quality': 'Q3 기준 5–10% 손실 | Q4 기준 1–3%' },
-            { 'Your VRAM': '6–8 GB', 'Best Quantization': 'Q4_K_M (권장)', 'Model Size': '7B 네이티브', 'Quality': '1–3% 손실 (체감 불가)' },
-            { 'Your VRAM': '12–16 GB', 'Best Quantization': 'Q5_K_M', 'Model Size': '7B, 13B 네이티브', 'Quality': '<1% 손실 (최소)' },
-            { 'Your VRAM': '24 GB (RTX 4090)', 'Best Quantization': 'Q5_K_M 또는 Q6_K', 'Model Size': '13B, 32B 네이티브 | Q4 + 오프로드로 70B', 'Quality': '무시 가능 <0.5%' },
-            { 'Your VRAM': '32 GB (RTX 5090)', 'Best Quantization': 'Q5_K_M, Q6_K 또는 Q8_0', 'Model Size': '70B @ Q4 (35 GB), Q5 (43 GB)', 'Quality': '0–2% 손실' },
-            { 'Your VRAM': '48+ GB (2× RTX 4090)', 'Best Quantization': 'Q5_K_M 또는 Q8_0', 'Model Size': '레이어 분할로 70B 네이티브', 'Quality': '무시 가능 <0.5%' },
+            { 'VRAM 용량': '4–6 GB', '최적 양자화': 'Q3_K_S 또는 Q4_K_M', '모델 크기': '3B, 7B (Q4) | 7B (Q3)', '품질': 'Q3 기준 5–10% 손실 | Q4 기준 1–3%' },
+            { 'VRAM 용량': '6–8 GB', '최적 양자화': 'Q4_K_M (권장)', '모델 크기': '7B 네이티브', '품질': '1–3% 손실 (체감 불가)' },
+            { 'VRAM 용량': '12–16 GB', '최적 양자화': 'Q5_K_M', '모델 크기': '7B, 13B 네이티브', '품질': '<1% 손실 (최소)' },
+            { 'VRAM 용량': '24 GB (RTX 4090)', '최적 양자화': 'Q5_K_M 또는 Q6_K', '모델 크기': '13B, 32B 네이티브 | Q4 + 오프로드로 70B', '품질': '무시 가능 <0.5%' },
+            { 'VRAM 용량': '32 GB (RTX 5090)', '최적 양자화': 'Q5_K_M, Q6_K 또는 Q8_0', '모델 크기': '70B @ Q4 (35 GB), Q5 (43 GB)', '품질': '0–2% 손실' },
+            { 'VRAM 용량': '48+ GB (2× RTX 4090)', '최적 양자화': 'Q5_K_M 또는 Q8_0', '모델 크기': '레이어 분할로 70B 네이티브', '품질': '무시 가능 <0.5%' },
           ],
-          columns: ['Your VRAM', 'Best Quantization', 'Model Size', 'Quality'],
+          columns: ['VRAM 용량', '최적 양자화', '모델 크기', '품질'],
           items: [
             '**RAM 6 GB (가장 일반적인 노트북/데스크톱)**: Q4_K_M을 사용하십시오. Q4_K_M으로 양자화된 7B 모델은 약 4.5 GB로, OS와 브라우저용 1.5 GB가 남습니다.',
-            '**코딩 또는 수학 작업의 경우**: Q4_K_M 예산이 있더라도 Q5_K_M 이상을 사용하십시오. 양자화 효과(1–3% 손실)는 정밀한 수치 추론에서 가장 두드러집니다. Q5_K_M Qwen3-Coder와 인터넷 차단 운용을 결합한 완전한 에어갭 코딩 설정은 [인터넷 없는 로컬 코딩 LLM](/power-local-llm/local-coding-llm-without-internet)을 참고하십시오.',
+            '**코딩 또는 수학 작업의 경우**: Q4_K_M 예산이 있더라도 Q5_K_M 이상을 사용하십시오. 양자화 효과(1–3% 손실)는 정밀한 수치 추론에서 가장 두드러집니다. Q5_K_M Qwen3-Coder와 인터넷 차단 운용을 결합한 완전한 에어갭 코딩 설정은 [인터넷 없는 로컬 코딩 LLM](/ko/power-local-llm/local-coding-llm-without-internet)을 참고하십시오.',
             '**양자화 + 온도(temperature) 트레이드오프**: 온도 0.3의 Q4_K_M 모델은 온도 1.0의 전체 정밀도(FP16) 모델보다 더 결정론적인 출력을 생성합니다. 독립적인 조정을 위해서는 [온도와 top-p: AI 창의성 제어](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity)를 참고하십시오.',
             '**스마트 홈 및 엣지 디바이스**: Q4_K_M (4–8 GB VRAM)은 미니 PC에서 상시 가동되는 홈 자동화 AI의 최적 선택입니다. [스마트 홈 최고의 로컬 LLM 모델 →](/smart-home/best-local-llm-models-smart-home)을 참고하십시오.',
           ],
@@ -4765,7 +5217,7 @@ schema: {
           id: 'layer-splitting',
           title: '레이어 분할: 멀티 GPU에 분산',
           content: [
-            '**현대 추론 엔진(vLLM, llama.cpp)은 모델을 여러 GPU에 자동으로 분할할 수 있습니다.** 고급 설정에 대해서는 [멀티 GPU 로컬 LLM](/local-llms/multi-gpu-local-llms)을 참고하십시오.',
+            '**현대 추론 엔진(vLLM, llama.cpp)은 모델을 여러 GPU에 자동으로 분할할 수 있습니다.** 고급 설정에 대해서는 [멀티 GPU 로컬 LLM](/ko/local-llms/multi-gpu-local-llms)을 참고하십시오.',
             '예시: 2× RTX 4090으로 70B 모델 실행:',
             '- 분할 없이: 불가능 (단일 GPU에 40+ GB VRAM 필요).',
             '- 분할 시: 각 GPU에 절반의 모델 가중치 할당. 추론 속도: 약 100 토큰/초 (통신 오버헤드 최소).',
@@ -4791,7 +5243,7 @@ schema: {
           id: 'hybrid',
           title: '하이브리드 방식: 기법 결합',
           content: [
-            '**세 가지 기법을 모두 결합하면 최상의 결과를 얻을 수 있습니다.** 구체적인 하드웨어 계획을 위해서는 [VRAM 요구 사항 가이드](/local-llms/how-much-vram-local-llm)를 참고하십시오.',
+            '**세 가지 기법을 모두 결합하면 최상의 결과를 얻을 수 있습니다.** 구체적인 하드웨어 계획을 위해서는 [VRAM 요구 사항 가이드](/ko/local-llms/how-much-vram-local-llm)를 참고하십시오.',
             '**시나리오 1: 단일 RTX 4090 (24 GB)에서 70B 실행**',
             '- Q4로 양자화 (35 GB → 18 GB)',
             '- 나머지 6 GB 오프로딩 (시스템 RAM으로)',
@@ -4807,12 +5259,12 @@ schema: {
           title: '성능 트레이드오프는 무엇입니까?',
           content: '**각 기법은 VRAM 절감을 속도 페널티와 교환합니다.** 양자화는 영향이 최소적이며, 오프로딩은 5–10배 속도 저하를 초래하고, 레이어 분할은 약 5% 오버헤드를 추가합니다.',
           rows: [
-            { 'Technique': '양자화 (Q4)', 'VRAM Saved': '50%', 'Speed Impact': '없음 (±5%)', 'Quality Impact': '미미' },
-            { 'Technique': '오프로딩 (CPU RAM)', 'VRAM Saved': '60–80%', 'Speed Impact': '5–10배 느림', 'Quality Impact': '없음' },
-            { 'Technique': '레이어 분할 (GPU 2개)', 'VRAM Saved': '해당 없음 (더 큰 모델 가능)', 'Speed Impact': '5–10% 느림', 'Quality Impact': '없음' },
-            { 'Technique': '양자화 + 오프로딩', 'VRAM Saved': '75–90%', 'Speed Impact': '3–5배 느림', 'Quality Impact': '미미' },
+            { '기법': '양자화 (Q4)', '절감된 VRAM': '50%', '속도 영향': '없음 (±5%)', '품질 영향': '미미' },
+            { '기법': '오프로딩 (CPU RAM)', '절감된 VRAM': '60–80%', '속도 영향': '5–10배 느림', '품질 영향': '없음' },
+            { '기법': '레이어 분할 (GPU 2개)', '절감된 VRAM': '해당 없음 (더 큰 모델 가능)', '속도 영향': '5–10% 느림', '품질 영향': '없음' },
+            { '기법': '양자화 + 오프로딩', '절감된 VRAM': '75–90%', '속도 영향': '3–5배 느림', '품질 영향': '미미' },
           ],
-          columns: ['Technique', 'VRAM Saved', 'Speed Impact', 'Quality Impact'],
+          columns: ['기법', '절감된 VRAM', '속도 영향', '품질 영향'],
         },
         macStudio: {
           id: 'mac-studio',
@@ -4822,12 +5274,12 @@ schema: {
             '통합 메모리 대역폭: Mac Studio M2 Ultra는 약 800 GB/s로 CPU와 GPU 메모리에 모두 접근합니다. DDR5 시스템 RAM 오프로딩은 약 90 GB/s로 제한됩니다. 이 9배 우위는 오프로딩을 실용적이지 않게 만드는 속도 패널티를 없애줍니다.',
           ],
           rows: [
-            { 'Setup': '1× RTX 4090 + 오프로딩', 'Model': 'Llama 3.3 70B Q4', 'Speed': '5–10 토큰/초', 'Complexity': '보통' },
-            { 'Setup': '2× RTX 4090 레이어 분할', 'Model': 'Llama 3.3 70B Q5', 'Speed': '~100 토큰/초', 'Complexity': '높음' },
-            { 'Setup': '1× RTX 5090 (32 GB)', 'Model': 'Llama 3.3 70B Q4', 'Speed': '10–12 토큰/초', 'Complexity': '낮음' },
-            { 'Setup': 'Mac Studio M2 Ultra', 'Model': 'Llama 3.3 70B Q4', 'Speed': '35 토큰/초', 'Complexity': '낮음 (플러그 앤 플레이)' },
+            { '구성': '1× RTX 4090 + 오프로딩', '모델': 'Llama 3.3 70B Q4', '속도': '5–10 토큰/초', '복잡도': '보통' },
+            { '구성': '2× RTX 4090 레이어 분할', '모델': 'Llama 3.3 70B Q5', '속도': '~100 토큰/초', '복잡도': '높음' },
+            { '구성': '1× RTX 5090 (32 GB)', '모델': 'Llama 3.3 70B Q4', '속도': '10–12 토큰/초', '복잡도': '낮음' },
+            { '구성': 'Mac Studio M2 Ultra', '모델': 'Llama 3.3 70B Q4', '속도': '35 토큰/초', '복잡도': '낮음 (플러그 앤 플레이)' },
           ],
-          columns: ['Setup', 'Model', 'Speed', 'Complexity'],
+          columns: ['구성', '모델', '속도', '복잡도'],
         },
         regionalContext: {
           id: 'regional-context',
@@ -4851,16 +5303,16 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[로컬 LLM용 VRAM 계산기](/local-llms/vram-calculator-local-llm) — Q4/Q5/Q8 양자화 모델의 정확한 VRAM을 계산하는 인터랙티브 계산기.',
-            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) — 모든 크기에서 양자화 모델을 위한 GPU, CPU, RAM 요구 사항.',
-            '[최고의 로컬 LLM 2026](/local-llms/best-local-llms-2026) — Q4_K_M 다운로드 링크를 포함한 작업별 상위 GGUF 모델.',
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) — Ollama로 Q4_K_M 모델을 실행하기 위한 단계별 설정.',
-            '[긴 컨텍스트 로컬 LLM](/local-llms/long-context-local-llms) — 32K–128K 컨텍스트를 가진 모델과 양자화된 RAM 요구 사항.',
-            '[로컬 LLM 설정 문제 해결](/local-llms/troubleshooting-local-llm-setup) — VRAM 오류, 느린 추론, 양자화 로드 실패 수정.',
-            '[최고의 입문자용 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models) — 특정 GGUF 양자화 변형과 함께 첫 번째 모델 권장 사항.',
-            '[Apple Silicon M5 Max에서 70B 모델 실행](/local-llms/running-70b-models-apple-silicon-m5-max) — VRAM 제한 없이 Q5 품질로 70B 네이티브 실행: 통합 메모리가 양자화 결정을 어떻게 바꾸는가.',
-            '[Mac의 Ollama: Apple Silicon 설정 가이드 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026) — 자동 Metal GPU 가속으로 Mac에서 양자화 GGUF 모델 실행.',
-            '[Apple Silicon Whisper 2026](/local-llms/apple-silicon-whisper-metal-benchmark) — M1–M5에서 양자화 수준별 Whisper STT Metal 및 Core ML 벤치마크.',
+            '[로컬 LLM용 VRAM 계산기](/ko/local-llms/vram-calculator-local-llm) — Q4/Q5/Q8 양자화 모델의 정확한 VRAM을 계산하는 인터랙티브 계산기.',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 모든 크기에서 양자화 모델을 위한 GPU, CPU, RAM 요구 사항.',
+            '[최고의 로컬 LLM 2026](/ko/local-llms/best-local-llms-2026) — Q4_K_M 다운로드 링크를 포함한 작업별 상위 GGUF 모델.',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — Ollama로 Q4_K_M 모델을 실행하기 위한 단계별 설정.',
+            '[긴 컨텍스트 로컬 LLM](/ko/local-llms/long-context-local-llms) — 32K–128K 컨텍스트를 가진 모델과 양자화된 RAM 요구 사항.',
+            '[로컬 LLM 설정 문제 해결](/ko/local-llms/troubleshooting-local-llm-setup) — VRAM 오류, 느린 추론, 양자화 로드 실패 수정.',
+            '[최고의 입문자용 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models) — 특정 GGUF 양자화 변형과 함께 첫 번째 모델 권장 사항.',
+            '[Apple Silicon M5 Max에서 70B 모델 실행](/ko/local-llms/running-70b-models-apple-silicon-m5-max) — VRAM 제한 없이 Q5 품질로 70B 네이티브 실행: 통합 메모리가 양자화 결정을 어떻게 바꾸는가.',
+            '[Mac의 Ollama: Apple Silicon 설정 가이드 2026](/ko/local-llms/ollama-on-mac-apple-silicon-setup-2026) — 자동 Metal GPU 가속으로 Mac에서 양자화 GGUF 모델 실행.',
+            '[Apple Silicon Whisper 2026](/ko/local-llms/apple-silicon-whisper-metal-benchmark) — M1–M5에서 양자화 수준별 Whisper STT Metal 및 Core ML 벤치마크.',
             '[GGUF 대 GPTQ 대 AWQ: 어떤 양자화 형식을 사용해야 하는가?](/ko/prompt-bites/gguf-vs-gptq-vs-awq) -- 이 가이드가 중점을 두는 GGUF가 프로덕션 서빙에 사용되는 GPU 전용 형식인 GPTQ 및 AWQ와 어떻게 비교되는지.',
           ],
         },
@@ -4894,6 +5346,10 @@ schema: {
               a: 'GGUF(llama.cpp 형식)와 GPTQ는 두 가지 다른 양자화 방식입니다. GGUF는 K-퀀트를 사용하며 CPU와 GPU에서 모두 실행됩니다. GPTQ는 GPU 전용이며 PyTorch가 필요합니다. Ollama, LM Studio, Jan AI를 이용한 로컬 추론에는 GGUF가 올바른 형식입니다. GPTQ는 AutoGPTQ 및 vLLM 같은 GPU 중심 추론 프레임워크에서 사용됩니다.',
             },
             {
+              q: 'Q4_K_M과 Q4_0의 차이점은 무엇입니까?',
+              a: 'Q4_K_M과 Q4_0은 둘 다 4비트 양자화이지만 서로 다른 알고리즘을 사용합니다. Q4_0은 초기 llama.cpp의 원래 균일 4비트 형식입니다. Q4_K_M은 2023년에 도입된 K-퀀트로, 가중치를 블록으로 그룹화하고 각 블록 내에서 혼합 정밀도를 적용하여 동일한 RAM 사용량으로 5-8%의 품질을 회복합니다. Hugging Face에서 두 가지를 모두 볼 경우 항상 Q4_K_M을 선택하십시오. Q4_0은 레거시 호환성을 위해서만 존재합니다.',
+            },
+            {
               q: 'Hugging Face의 다른 제공자가 만든 Q4_K_M 모델 간에 품질 차이가 있습니까?',
               a: '양자화 알고리즘은 llama.cpp에서 표준화되어 있으므로, 동일한 기본 모델의 Q4_K_M 양자화는 GGUF 파일을 누가 만들었는지에 관계없이 거의 동일합니다. 그러나 일부 제공자는 imatrix 양자화를 적용하여 동일한 비트 수에서 품질을 향상시킵니다. "imat" 또는 "importance matrix"로 설명된 파일은 일반적으로 동일한 비트 수에서 더 높은 품질을 제공합니다.',
             },
@@ -4904,6 +5360,10 @@ schema: {
             {
               q: 'Q4_K_M과 Q4_K_S의 차이점은 무엇입니까?',
               a: '두 가지 모두 4비트 양자화이지만, K_M(미디엄)과 K_S(스몰)는 양자화 블록당 메모리 할당이 다릅니다. Q4_K_M은 더 나은 품질 복원을 위해 더 많은 메타데이터를 사용합니다 — 7B 모델 기준 일반적으로 4.5–5 GB. Q4_K_S는 K_M 대비 300–400 MB를 절약하지만 3–5% 품질 손실이 있습니다. RAM이 4 GB 미만으로 극도로 제한된 경우를 제외하고는 Q4_K_M을 사용하십시오.',
+            },
+            {
+              q: 'Q8_0과 Q8_K_XL의 차이점은 무엇입니까?',
+              a: 'Q8_0은 llama.cpp의 표준 8비트 양자화입니다 — 모든 가중치가 8비트이며, 7B 모델 기준 약 7.7 GB, FP16 대비 손실은 0.5% 미만입니다. Q8_K_XL은 표준 llama.cpp 유형이 아니라 Unsloth의 "Dynamic" GGUF 변형으로, 8비트 기반을 유지하면서 가장 민감한 레이어(임베딩, 어텐션, 출력)를 16비트로 업캐스트하여 품질을 완전한 FP16에 더 가깝게 만듭니다. Q8_0이 대부분의 사용자에게 이미 사실상 무손실이므로, Q8_K_XL은 마지막 몇 분의 1 퍼센트의 정밀도가 필요하고 여유 VRAM이 있을 때만 도움이 됩니다. 파일 크기는 모델마다 다르므로 다운로드 전에 LM Studio나 Hugging Face에서 크기를 확인하십시오.',
             },
             {
               q: '양자화 수준 간 전환 시 모델을 다시 다운로드해야 합니까?',
@@ -4949,9 +5409,12 @@ schema: {
           id: 'update-log',
           title: '업데이트 로그',
           items: [
+            '**2026-08-26:** 반기 업데이트. 영어 버전과의 구조적 일관성을 위해 누락되었던 5개 비교 섹션(Q8_0이란?, Q4_0 vs Q4_K_M, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, Q8_0 vs Q8_K_XL)과 schema/faqSchema/gammaEmbedUrl 블록 전체를 추가. 내부 링크 13개에 누락된 `/ko/` 접두사를 추가. 모든 표의 영어 열 머리글(Level, Bits, Model Size 등)을 한국어로 번역. "2026년 4월 기준"을 2026년 8월로 갱신.',
             '**2026-05-17:** 결정 중심 의도를 반영하도록 제목 업데이트; 내용 변경 없음.',
           ],
         },
       },
+      gammaEmbedUrl: '/presentations/llm-quantization-explained-static.html',
+      gammaDescription: '아래 슬라이드 덱에서 다루는 내용: Q4_K_M vs Q8_0 vs GGUF 형식 비교, 모델 크기별 RAM 절감량(3B-70B), 양자화 수준별 품질 손실, 그리고 하드웨어에 맞는 양자화 선택법. PDF를 LLM 양자화 참고 카드로 다운로드하십시오.',
     },
   };
