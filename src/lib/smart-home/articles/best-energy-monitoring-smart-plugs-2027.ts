@@ -104,7 +104,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Check Aqara Smart Plug price →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug', priceRange: '$20-35' },
-          { label: 'Compare all 4 plugs →', url: '#comparison', productName: 'Smart plug comparison', productCategory: 'Energy-monitoring smart plug' },
+          { label: 'Check Zooz ZEN15 price →', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug', priceRange: '$37.95-48.95' },
+          { label: 'Check Shelly Plug US Gen4 price →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug', priceRange: '$19.99-24.99' },
+          { label: 'Check Sonoff S31 price →', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug', priceRange: '$9.90-23.90' },
         ],
       },
       scorecard: {
@@ -155,6 +157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Zooz ZEN15 Power Switch', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+          { label: 'Sonoff S31', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
       comparison: {
@@ -177,6 +180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Check Aqara price →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug', priceRange: '$20-35' },
           { label: 'Check Zooz price →', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug', priceRange: '$37.95-48.95' },
           { label: 'Check Shelly price →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug', priceRange: '$19.99-24.99' },
+          { label: 'Check Sonoff price →', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug', priceRange: '$9.90-23.90' },
         ],
       },
       onoffVsEnergyReporting: {
@@ -256,6 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Zooz ZEN15 Power Switch', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+          { label: 'Sonoff S31', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
       whichOne: {
@@ -428,6 +433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Aqara Smart Plug EU Preis prüfen →', url: 'https://eu.aqara.com/en-eu/products/aqara-smart-plug-eu', productName: 'Aqara Smart Plug EU', productCategory: 'Energy-monitoring smart plug', priceRange: 'ab 21,10 €' },
+          { label: 'Shelly-Preis prüfen →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Alle 4 Plugs vergleichen →', url: '#comparison', productName: 'Smart plug comparison', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
@@ -750,6 +756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Vérifier le prix de la Aqara Smart Plug UE →', url: 'https://eu.aqara.com/en-eu/products/aqara-smart-plug-eu', productName: 'Aqara Smart Plug EU', productCategory: 'Energy-monitoring smart plug', priceRange: 'à partir de 21,10 €' },
+          { label: 'Vérifier le prix Shelly →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Comparer les 4 prises →', url: '#comparison', productName: 'Smart plug comparison', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
@@ -1069,6 +1076,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Aqaraスマートプラグの価格を確認 →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug', priceRange: '$20-35' },
+          { label: 'Zoozの価格を確認 →', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug', priceRange: '$37.95-48.95' },
+          { label: 'Shellyの価格を確認 →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug', priceRange: '$19.99-24.99' },
+          { label: 'Sonoffの価格を確認 →', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug', priceRange: '$9.90-23.90' },
           { label: '4製品をすべて比較 →', url: '#comparison', productName: 'Smart plug comparison', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
@@ -1120,6 +1130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Zooz ZEN15 Power Switch', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+          { label: 'Sonoff S31', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
       comparison: {
@@ -1142,6 +1153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqaraの価格を確認 →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug', priceRange: '$20-35' },
           { label: 'Zoozの価格を確認 →', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug', priceRange: '$37.95-48.95' },
           { label: 'Shellyの価格を確認 →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug', priceRange: '$19.99-24.99' },
+          { label: 'Sonoffの価格を確認 →', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug', priceRange: '$9.90-23.90' },
         ],
       },
       onoffVsEnergyReporting: {
@@ -1221,6 +1233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Zooz ZEN15 Power Switch', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+          { label: 'Sonoff S31', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
       whichOne: {
@@ -1393,6 +1406,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: '查看Aqara智能插座价格 →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug', priceRange: '$20-35' },
+          { label: '查看Zooz价格 →', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug', priceRange: '$37.95-48.95' },
+          { label: '查看Shelly价格 →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug', priceRange: '$19.99-24.99' },
+          { label: '查看Sonoff价格 →', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug', priceRange: '$9.90-23.90' },
           { label: '对比全部4款插座 →', url: '#comparison', productName: 'Smart plug comparison', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
@@ -1445,6 +1461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Zooz ZEN15 Power Switch', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+          { label: 'Sonoff S31', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
       comparison: {
@@ -1467,6 +1484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: '查看Aqara价格 →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug', priceRange: '$20-35' },
           { label: '查看Zooz价格 →', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug', priceRange: '$37.95-48.95' },
           { label: '查看Shelly价格 →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug', priceRange: '$19.99-24.99' },
+          { label: '查看Sonoff价格 →', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug', priceRange: '$9.90-23.90' },
         ],
       },
       onoffVsEnergyReporting: {
@@ -1546,6 +1564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Zooz ZEN15 Power Switch', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+          { label: 'Sonoff S31', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
       whichOne: {
@@ -1718,6 +1737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Comprobar precio del Aqara Smart Plug UE →', url: 'https://eu.aqara.com/en-eu/products/aqara-smart-plug-eu', productName: 'Aqara Smart Plug EU', productCategory: 'Energy-monitoring smart plug', priceRange: 'desde 21,10 €' },
+          { label: 'Comprobar precio de Shelly →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Comparar los 4 enchufes →', url: '#comparison', productName: 'Smart plug comparison', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
@@ -2039,6 +2059,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Ver preço da Aqara Smart Plug →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Tomada inteligente com monitoramento de energia', priceRange: 'US$ 20-35' },
+          { label: 'Ver preço da Zooz →', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Tomada inteligente com monitoramento de energia', priceRange: 'US$ 37,95-48,95' },
+          { label: 'Ver preço da Shelly →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Tomada inteligente com monitoramento de energia', priceRange: 'US$ 19,99-24,99' },
+          { label: 'Ver preço da Sonoff →', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Tomada inteligente com monitoramento de energia', priceRange: 'US$ 9,90-23,90' },
           { label: 'Comparar as 4 tomadas →', url: '#comparison', productName: 'Comparação de tomadas inteligentes', productCategory: 'Tomada inteligente com monitoramento de energia' },
         ],
       },
@@ -2091,6 +2114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Zooz ZEN15 Power Switch', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+          { label: 'Sonoff S31', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
       comparison: {
@@ -2113,6 +2137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Ver preço da Aqara →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Tomada inteligente com monitoramento de energia', priceRange: 'US$ 20-35' },
           { label: 'Ver preço da Zooz →', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Tomada inteligente com monitoramento de energia', priceRange: 'US$ 37,95-48,95' },
           { label: 'Ver preço da Shelly →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Tomada inteligente com monitoramento de energia', priceRange: 'US$ 19,99-24,99' },
+          { label: 'Ver preço da Sonoff →', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Tomada inteligente com monitoramento de energia', priceRange: 'US$ 9,90-23,90' },
         ],
       },
       onoffVsEnergyReporting: {
@@ -2192,6 +2217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Zooz ZEN15 Power Switch', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+          { label: 'Sonoff S31', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
       whichOne: {
@@ -2361,6 +2387,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'تحقق من سعر Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'مقبس ذكي لمراقبة الطاقة', priceRange: '20-35 دولارًا' },
+          { label: 'تحقق من سعر Zooz ZEN15', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'مقبس ذكي لمراقبة الطاقة', priceRange: '37.95-48.95 دولارًا' },
+          { label: 'تحقق من سعر Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'مقبس ذكي لمراقبة الطاقة', priceRange: '19.99-24.99 دولارًا' },
+          { label: 'تحقق من سعر Sonoff S31', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'مقبس ذكي لمراقبة الطاقة', priceRange: '9.90-23.90 دولارًا' },
           { label: 'قارن المقابس الأربعة', url: '#comparison', productName: 'مقارنة المقابس الذكية', productCategory: 'مقبس ذكي لمراقبة الطاقة' },
         ],
       },
@@ -2412,6 +2441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Zooz ZEN15 Power Switch', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+          { label: 'Sonoff S31', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
       comparison: {
@@ -2434,6 +2464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'تحقق من سعر Aqara', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'مقبس ذكي لمراقبة الطاقة', priceRange: '20-35 دولارًا' },
           { label: 'تحقق من سعر Zooz', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'مقبس ذكي لمراقبة الطاقة', priceRange: '37.95-48.95 دولارًا' },
           { label: 'تحقق من سعر Shelly', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'مقبس ذكي لمراقبة الطاقة', priceRange: '19.99-24.99 دولارًا' },
+          { label: 'تحقق من سعر Sonoff', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'مقبس ذكي لمراقبة الطاقة', priceRange: '9.90-23.90 دولارًا' },
         ],
       },
       onoffVsEnergyReporting: {
@@ -2513,6 +2544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Zooz ZEN15 Power Switch', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+          { label: 'Sonoff S31', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
       whichOne: {
@@ -2690,6 +2722,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Aqara Smart Plug 가격 확인 →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug', priceRange: '$20-35' },
+          { label: 'Zooz ZEN15 가격 확인 →', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug', priceRange: '$37.95-48.95' },
+          { label: 'Shelly Plug US Gen4 가격 확인 →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug', priceRange: '$19.99-24.99' },
+          { label: 'Sonoff S31 가격 확인 →', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug', priceRange: '$9.90-23.90' },
           { label: '4개 플러그 전체 비교 →', url: '#comparison', productName: 'Smart plug comparison', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
@@ -2741,6 +2776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Zooz ZEN15 Power Switch', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+          { label: 'Sonoff S31', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
       comparison: {
@@ -2763,6 +2799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqara 가격 확인 →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug', priceRange: '$20-35' },
           { label: 'Zooz 가격 확인 →', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug', priceRange: '$37.95-48.95' },
           { label: 'Shelly 가격 확인 →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug', priceRange: '$19.99-24.99' },
+          { label: 'Sonoff 가격 확인 →', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug', priceRange: '$9.90-23.90' },
         ],
       },
       onoffVsEnergyReporting: {
@@ -2842,6 +2879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Zooz ZEN15 Power Switch', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+          { label: 'Sonoff S31', url: 'https://itead.cc/product/sonoff-s31/', productName: 'Sonoff S31', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
       whichOne: {
