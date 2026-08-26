@@ -483,9 +483,25 @@ export function PromptBitesPostClient({ slug, lang, articleData, siblingTitles }
         </div>
 
         {/* Title */}
-        <h1 className="prompt-bite-h1 text-3xl sm:text-4xl font-bold text-text-primary mb-8 leading-tight">
+        <h1 className="prompt-bite-h1 text-3xl sm:text-4xl font-bold text-text-primary mb-3 leading-tight">
           {article.title}
         </h1>
+
+        {/* Last updated date */}
+        {((article as any).dateModified ?? (article as any).publishDate) && (
+          <div className="mb-8">
+            <time
+              dateTime={(article as any).dateModified ?? (article as any).publishDate}
+              className="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-300 text-emerald-700 px-2.5 py-0.5 rounded-full text-xs font-semibold"
+            >
+              <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              {UPDATED_LABEL[lang] ?? UPDATED_LABEL['en']} {formatDisplayDate((article as any).dateModified ?? (article as any).publishDate, lang)}
+            </time>
+          </div>
+        )}
 
         {/* Static Hero Image for Discover */}
         {(article as any).heroImage && (
@@ -547,11 +563,6 @@ export function PromptBitesPostClient({ slug, lang, articleData, siblingTitles }
                   </li>
                 ))}
               </ul>
-            )}
-            {((article as any).dateModified ?? (article as any).publishDate) && (
-              <p className="text-xs text-text-secondary mt-4">
-                {UPDATED_LABEL[lang]} {formatDisplayDate((article as any).dateModified ?? (article as any).publishDate, lang)}
-              </p>
             )}
           </div>
         )}
