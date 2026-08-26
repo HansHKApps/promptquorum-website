@@ -45,6 +45,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           isTldr: true,
           items: [
             'Q4_K_M quantization: Llama 3.3 70B requires ~40 GB RAM; Qwen3 72B requires ~43 GB RAM.',
+            '**Cheapest new hardware**: Apple Mac mini M5 Pro (64 GB, $1,699, ships Sept 22, 2026) is the cheapest new full-GPU Apple Silicon path to 70B. The base Mac mini M6 ($899) tops out at 32 GB and cannot run 70B at all.',
             '**Easiest consumer hardware**: Apple Mac Studio M2 Ultra (64 GB unified) or M5 Max MacBook Pro (64 GB) -- full GPU acceleration, no layer offloading needed.',
             '**NVIDIA option**: RTX 4090 (24 GB VRAM) + 32 GB system RAM with layer offloading in Ollama handles most 70B models, though 20-30% of layers run on CPU.',
             '**CPU-only 70B**: possible on 64 GB RAM but produces 1-3 tok/sec -- marginally usable for batch tasks, not for interactive chat.',
@@ -60,7 +61,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           imageCaption: 'Hardware comparison: Apple Silicon M5 Max achieves 25-35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10-18 tok/sec, and CPU-only 70B inference produces just 1-3 tok/sec.',
           rows: [
             { 'Hardware': 'Apple M5 Max MacBook Pro (64 GB)', 'Can Run 70B?': 'Yes -- full GPU', 'Speed (70B Q4)': '20-30 tok/sec', 'Notes': 'Best consumer laptop option' },
-            { 'Hardware': 'Apple Mac Studio M5 Max (64 GB)', 'Can Run 70B?': 'Yes -- full GPU', 'Speed (70B Q4)': '22-32 tok/sec', 'Notes': 'New Aug 2026 desktop, $2,499 -- cheapest new option' },
+            { 'Hardware': 'Apple Mac Studio M5 Max (64 GB)', 'Can Run 70B?': 'Yes -- full GPU', 'Speed (70B Q4)': '22-32 tok/sec', 'Notes': 'New Aug 2026 desktop, $2,499' },
+            { 'Hardware': 'Apple Mac mini M5 Pro (64 GB)', 'Can Run 70B?': 'Yes -- full GPU', 'Speed (70B Q4)': 'Not yet benchmarked', 'Notes': 'New, ships Sept 22 2026, $1,699 -- cheapest new option' },
+            { 'Hardware': 'Apple Mac mini M6 (32 GB max)', 'Can Run 70B?': 'No -- 32 GB max', 'Speed (70B Q4)': 'N/A', 'Notes': 'New, ships Sept 22 2026, $899 -- too little memory for 70B' },
             { 'Hardware': 'Apple M2 Ultra (64 GB unified)', 'Can Run 70B?': 'Yes -- full GPU', 'Speed (70B Q4)': '25-35 tok/sec', 'Notes': 'Mac Studio baseline config, used/refurb' },
             { 'Hardware': 'Apple Mac Studio M5 Ultra (256GB+)', 'Can Run 70B?': 'Yes -- full GPU', 'Speed (70B Q4)': '35-50 tok/sec', 'Notes': 'New Aug 2026, $5,499+. Q8_0/FP16 with room to spare.' },
             { 'Hardware': 'NVIDIA DGX Spark (128 GB unified)', 'Can Run 70B?': 'Yes -- full GPU', 'Speed (70B Q4)': '18-28 tok/sec', 'Notes': 'Q8_0 fits (70 GB). Best for CUDA workflows.' },
@@ -89,7 +92,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Apple Silicon uses unified memory -- the CPU and GPU share the same physical memory pool.** An M5 Max MacBook Pro with 64 GB of unified memory can run a 70B model at Q4_K_M entirely on GPU, achieving 20-30 tok/sec with no layer offloading overhead.',
             'On NVIDIA hardware, the GPU and system RAM are separate. A 24 GB VRAM GPU can only hold ~60% of a Q4_K_M 70B model; the remaining layers run on CPU, creating a memory bandwidth bottleneck that reduces speed to 10-18 tok/sec.',
-            'As of August 2026, a used Mac Studio M2 Ultra (64 GB, ~$2,000 refurbished) remains the cheapest path to 70B local inference at usable speed. Apple launched a refreshed Mac Studio lineup with M5 Max and M5 Ultra chips in August 2026: the new Mac Studio M5 Max (64 GB, $2,499) is now the cheapest new full-GPU option, and the Mac Studio M5 Ultra (256 GB or 512 GB, from $5,499) doubles unified memory bandwidth to 1.2 TB/sec, comfortably running 70B models at Q8_0 or FP16 with no quality compromise.',
+            'As of August 2026, a used Mac Studio M2 Ultra (64 GB, ~$2,000 refurbished) remains the cheapest used path to 70B local inference at usable speed. Apple launched a refreshed Mac Studio lineup with M5 Max and M5 Ultra chips in August 2026: the new Mac Studio M5 Max (64 GB, $2,499) is a full-GPU option, and the Mac Studio M5 Ultra (256 GB or 512 GB, from $5,499) doubles unified memory bandwidth to 1.2 TB/sec, comfortably running 70B models at Q8_0 or FP16 with no quality compromise.',
+            '**Apple refreshed the Mac mini on August 25, 2026, shipping September 22, 2026, and it changes the cheapest-new-hardware answer again.** The Mac mini M5 Pro ($1,699 starting) maxes out at 64 GB unified memory with 307 GB/sec bandwidth and Thunderbolt 5 -- enough to run a 70B model at Q4_K_M entirely on GPU, and $800 cheaper than the Mac Studio M5 Max. The base Mac mini M6 ($899 starting) is a different machine: it maxes out at 32 GB unified memory and 170 GB/sec bandwidth, well short of the 40+ GB a 70B model needs, so it cannot run a 70B model at any quantization level. No independent benchmarks exist yet for either chip -- both ship September 22, 2026.',
           ],
         },
         dgxSpark: {
@@ -166,6 +170,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               q: 'Running Q4_K_M on DGX Spark instead of Q8_0',
               a: 'The DGX Spark has 128GB -- enough for Q8_0 (70 GB). Using Q4_K_M wastes available quality. On any machine with ≥80 GB, run Q8_0 for 70B models.',
             },
+            {
+              q: 'Buying the base Mac mini M6 expecting it to run a 70B model',
+              a: 'The Mac mini M6 ($899) tops out at 32 GB unified memory -- well short of the 40+ GB a 70B model needs at Q4_K_M. It cannot run a 70B model at any quantization level. For 70B on a Mac mini, the Mac mini M5 Pro ($1,699, 64 GB unified memory) is the required tier -- confirm "M5 Pro" and 64 GB before ordering, not the base M6.',
+            },
           ],
         },
         relatedReading: {
@@ -186,7 +194,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           faqs: [
             {
               q: 'What is the cheapest hardware that can run a 70B model usably?',
-              a: 'As of August 2026, a used Mac Studio M2 Ultra (64 GB unified memory) for ~$2,000 remains the cheapest path to 70B inference at 25+ tok/sec. The new Mac Studio M5 Max (64 GB, $2,499, launched August 2026) is the cheapest new full-GPU machine, undercutting the M5 Max MacBook Pro (~$3,500). An NVIDIA RTX 4090 desktop build (24 GB VRAM + 32 GB RAM) costs ~$3,000-$4,000 total but produces slower inference due to layer offloading.',
+              a: 'The Mac mini M5 Pro ($1,699, 64 GB unified memory, ships September 22, 2026) is set to be the cheapest new hardware that can run a 70B model, undercutting the previous cheapest new option, the Mac Studio M5 Max (64 GB, $2,499), by $800. A used Mac Studio M2 Ultra (64 GB unified memory) for ~$2,000 remains the cheapest used path at a proven 25+ tok/sec. No independent benchmarks exist yet for the Mac mini M5 Pro. An NVIDIA RTX 4090 desktop build (24 GB VRAM + 32 GB RAM) costs ~$3,000-$4,000 total but produces slower inference due to layer offloading. Do not confuse the Mac mini M5 Pro with the base Mac mini M6 ($899) -- the M6 tops out at 32 GB unified memory and cannot run a 70B model.',
+            },
+            {
+              q: 'Can the Mac mini M6 run a 70B model?',
+              a: 'No. The Mac mini M6 ($899 starting) maxes out at 32 GB unified memory and 170 GB/sec bandwidth -- far short of the 40+ GB a 70B model requires at Q4_K_M. For 70B on a Mac mini, order the Mac mini M5 Pro ($1,699 starting, 64 GB unified memory, 307 GB/sec bandwidth, Thunderbolt 5) instead. Both ship September 22, 2026, and no independent benchmarks exist yet for either chip.',
             },
             {
               q: 'Can I run a 70B model on two GPUs?',
@@ -256,6 +268,7 @@ schema: {
           { '@type': 'Thing', 'name': 'Llama 3.3 70B' },
           { '@type': 'Thing', 'name': 'Qwen3 72B' },
           { '@type': 'Thing', 'name': 'NVIDIA DGX Spark' },
+          { '@type': 'Thing', 'name': 'Apple Mac mini M5 Pro' },
         ],
         'mentions': [
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
@@ -279,23 +292,25 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Consumer Hardware for 70B Local LLM Inference 2026',
-        'numberOfItems': 8,
+        'numberOfItems': 9,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Apple M5 Max MacBook Pro 64GB', 'description': 'Full GPU. 20-30 tok/sec. Best laptop. ~$3,500.' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Apple Mac Studio M5 Max 64GB', 'description': 'Full GPU. 22-32 tok/sec. New Aug 2026. $2,499.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Apple Mac Studio M2 Ultra 64GB', 'description': 'Full GPU. 25-35 tok/sec. Best used value. ~$2,000 refurb.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Apple Mac Studio M5 Ultra 256GB+', 'description': 'Full GPU. 35-50 tok/sec. Runs Q8_0/FP16. From $5,499.' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'NVIDIA DGX Spark 128GB', 'description': 'Full GPU CUDA. 18-28 tok/sec. Runs Q8_0. $4,699.' },
-          { '@type': 'ListItem', 'position': 6, 'name': 'NVIDIA RTX 4090 24GB + 32GB RAM', 'description': 'Layer offloading. 10-18 tok/sec. ~$3,000-4,000 total.' },
-          { '@type': 'ListItem', 'position': 7, 'name': 'NVIDIA RTX 4080 16GB + 32GB RAM', 'description': 'Partial offload. 5-10 tok/sec.' },
-          { '@type': 'ListItem', 'position': 8, 'name': 'CPU only 64GB RAM', 'description': '1-3 tok/sec. Batch processing only.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Apple Mac mini M5 Pro 64GB', 'description': 'Full GPU. Not yet benchmarked. New, ships Sept 22 2026. Cheapest new option, $1,699.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Apple M5 Max MacBook Pro 64GB', 'description': 'Full GPU. 20-30 tok/sec. Best laptop. ~$3,500.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Apple Mac Studio M5 Max 64GB', 'description': 'Full GPU. 22-32 tok/sec. New Aug 2026. $2,499.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Apple Mac Studio M2 Ultra 64GB', 'description': 'Full GPU. 25-35 tok/sec. Best used value. ~$2,000 refurb.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Apple Mac Studio M5 Ultra 256GB+', 'description': 'Full GPU. 35-50 tok/sec. Runs Q8_0/FP16. From $5,499.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'NVIDIA DGX Spark 128GB', 'description': 'Full GPU CUDA. 18-28 tok/sec. Runs Q8_0. $4,699.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'NVIDIA RTX 4090 24GB + 32GB RAM', 'description': 'Layer offloading. 10-18 tok/sec. ~$3,000-4,000 total.' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'NVIDIA RTX 4080 16GB + 32GB RAM', 'description': 'Partial offload. 5-10 tok/sec.' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'CPU only 64GB RAM', 'description': '1-3 tok/sec. Batch processing only.' },
         ],
       },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'What is the cheapest hardware that can run a 70B model usably?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'As of August 2026, a used Mac Studio M2 Ultra (64 GB unified memory) for ~$2,000 remains the cheapest path to 70B inference at 25+ tok/sec. The new Mac Studio M5 Max (64 GB, $2,499, launched August 2026) is the cheapest new full-GPU machine, undercutting the M5 Max MacBook Pro (~$3,500). An NVIDIA RTX 4090 desktop build (24 GB VRAM + 32 GB RAM) costs ~$3,000-$4,000 total but produces slower inference due to layer offloading.' } },
+          { '@type': 'Question', 'name': 'What is the cheapest hardware that can run a 70B model usably?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'The Mac mini M5 Pro ($1,699, 64 GB unified memory, ships September 22, 2026) is set to be the cheapest new hardware that can run a 70B model, undercutting the previous cheapest new option, the Mac Studio M5 Max (64 GB, $2,499), by $800. A used Mac Studio M2 Ultra (64 GB unified memory) for ~$2,000 remains the cheapest used path at a proven 25+ tok/sec. No independent benchmarks exist yet for the Mac mini M5 Pro. An NVIDIA RTX 4090 desktop build (24 GB VRAM + 32 GB RAM) costs ~$3,000-$4,000 total but produces slower inference due to layer offloading. Do not confuse the Mac mini M5 Pro with the base Mac mini M6 ($899) -- the M6 tops out at 32 GB unified memory and cannot run a 70B model.' } },
+          { '@type': 'Question', 'name': 'Can the Mac mini M6 run a 70B model?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. The Mac mini M6 ($899 starting) maxes out at 32 GB unified memory and 170 GB/sec bandwidth -- far short of the 40+ GB a 70B model requires at Q4_K_M. For 70B on a Mac mini, order the Mac mini M5 Pro ($1,699 starting, 64 GB unified memory, 307 GB/sec bandwidth, Thunderbolt 5) instead. Both ship September 22, 2026, and no independent benchmarks exist yet for either chip.' } },
           { '@type': 'Question', 'name': 'Can I run a 70B model on two GPUs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes -- llama.cpp and Ollama support multi-GPU inference on NVIDIA hardware. Two RTX 4090s (48 GB total VRAM) fit a Q4_K_M 70B model entirely in VRAM. Ollama handles multi-GPU automatically when multiple GPUs are present. Tensor parallelism in llama.cpp (`--tensor-split`) controls how layers are distributed.' } },
           { '@type': 'Question', 'name': 'How does 70B local quality compare to GPT-5.5?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'On MMLU and HumanEval benchmarks, Llama 3.3 70B (82%, 88%) and Qwen3 72B (84%, 87%) match or slightly exceed GPT-4 (2023) scores. GPT-5.5 (2024) scores higher on reasoning-heavy tasks. For general instruction-following, summarization, and code generation, 70B local models are competitive with GPT-5.5 on most tasks.' } },
           { '@type': 'Question', 'name': 'Does Ollama support running 70B models automatically?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Running `ollama run llama3.3:70b` downloads and runs the model with automatic GPU layer offloading. Ollama detects available VRAM and system RAM, offloads as many layers as possible to GPU, and runs the rest on CPU. No manual configuration is required for basic use.' } },
@@ -343,6 +358,7 @@ schema: {
           isTldr: true,
           items: [
             'Cuantización Q4_K_M: Llama 3.3 70B requiere ~40 GB de RAM; Qwen3 72B requiere ~43 GB de RAM.',
+            '**Hardware nuevo más barato**: Apple Mac mini M5 Pro (64 GB, $1,699, disponible el 22 de sept. de 2026) es la opción nueva con GPU completa más barata para 70B. El Mac mini M6 base ($899) llega solo a 32 GB y no puede ejecutar un modelo 70B.',
             '**Hardware de consumo más sencillo**: Apple Mac Studio M2 Ultra (64 GB unificados) o MacBook Pro M5 Max (64 GB) -- aceleración GPU completa, sin layer offloading necesario.',
             '**Opción NVIDIA**: RTX 4090 (24 GB VRAM) + 32 GB de RAM del sistema con layer offloading en Ollama funciona con la mayoría de modelos 70B, aunque el 20-30% de las capas se ejecutan en CPU.',
             '**70B solo con CPU**: posible con 64 GB de RAM pero produce 1-3 tok/seg -- marginalmente usable para tareas por lotes, no para chat interactivo.',
@@ -358,7 +374,9 @@ schema: {
           imageCaption: 'Comparación de hardware: Apple Silicon M5 Max alcanza 25-35 tok/seg sin offloading, mientras que NVIDIA RTX 4090 con layer offloading llega a 10-18 tok/seg, y la inferencia 70B solo con CPU produce apenas 1-3 tok/seg.',
           rows: [
             { 'Hardware': 'Apple M5 Max MacBook Pro (64 GB)', '¿Puede ejecutar 70B?': 'Sí -- GPU completa', 'Velocidad (70B Q4)': '20-30 tok/seg', 'Notas': 'Mejor opción de laptop de consumo' },
-            { 'Hardware': 'Apple Mac Studio M5 Max (64 GB)', '¿Puede ejecutar 70B?': 'Sí -- GPU completa', 'Velocidad (70B Q4)': '22-32 tok/seg', 'Notas': 'Nuevo agosto 2026, $2,499 -- opción nueva más barata' },
+            { 'Hardware': 'Apple Mac Studio M5 Max (64 GB)', '¿Puede ejecutar 70B?': 'Sí -- GPU completa', 'Velocidad (70B Q4)': '22-32 tok/seg', 'Notas': 'Nuevo agosto 2026, $2,499' },
+            { 'Hardware': 'Apple Mac mini M5 Pro (64 GB)', '¿Puede ejecutar 70B?': 'Sí -- GPU completa', 'Velocidad (70B Q4)': 'Sin benchmarks aún', 'Notas': 'Nuevo, disponible 22 sept. 2026, $1,699 -- opción nueva más barata' },
+            { 'Hardware': 'Apple Mac mini M6 (32 GB máx.)', '¿Puede ejecutar 70B?': 'No -- 32 GB máx.', 'Velocidad (70B Q4)': 'N/D', 'Notas': 'Nuevo, disponible 22 sept. 2026, $899 -- memoria insuficiente para 70B' },
             { 'Hardware': 'Apple M2 Ultra (64 GB unificados)', '¿Puede ejecutar 70B?': 'Sí -- GPU completa', 'Velocidad (70B Q4)': '25-35 tok/seg', 'Notas': 'Configuración base del Mac Studio, usado/reacondicionado' },
             { 'Hardware': 'Apple Mac Studio M5 Ultra (256GB+)', '¿Puede ejecutar 70B?': 'Sí -- GPU completa', 'Velocidad (70B Q4)': '35-50 tok/seg', 'Notas': 'Nuevo agosto 2026, desde $5,499. Q8_0/FP16 con margen.' },
             { 'Hardware': 'NVIDIA DGX Spark (128 GB unificados)', '¿Puede ejecutar 70B?': 'Sí -- GPU completa', 'Velocidad (70B Q4)': '18-28 tok/seg', 'Notas': 'Q8_0 cabe (70 GB). Ideal para flujos CUDA.' },
@@ -387,7 +405,8 @@ schema: {
           content: [
             '**Apple Silicon usa memoria unificada -- la CPU y la GPU comparten el mismo grupo de memoria física.** Un MacBook Pro M5 Max con 64 GB de memoria unificada puede ejecutar un modelo 70B en Q4_K_M completamente en la GPU, alcanzando 20-30 tok/seg sin el overhead del layer offloading.',
             'En hardware NVIDIA, la GPU y la RAM del sistema están separadas. Una GPU con 24 GB de VRAM solo puede alojar el ~60% de un modelo 70B en Q4_K_M; las capas restantes se ejecutan en CPU, creando un cuello de botella de ancho de banda de memoria que reduce la velocidad a 10-18 tok/seg.',
-            'En agosto de 2026, un Mac Studio M2 Ultra de segunda mano (64 GB, ~$2,000 reacondicionado) sigue siendo la vía más económica hacia la inferencia local 70B a velocidad utilizable. Apple lanzó una nueva línea de Mac Studio con chips M5 Max y M5 Ultra en agosto de 2026: el nuevo Mac Studio M5 Max (64 GB, $2,499) es ahora la opción nueva más barata con GPU completa, y el Mac Studio M5 Ultra (256 GB o 512 GB, desde $5,499) duplica el ancho de banda de memoria unificada a 1.2 TB/s, ejecutando modelos 70B en Q8_0 o FP16 sin ningún compromiso de calidad.',
+            'En agosto de 2026, un Mac Studio M2 Ultra de segunda mano (64 GB, ~$2,000 reacondicionado) sigue siendo la vía usada más económica hacia la inferencia local 70B a velocidad utilizable. Apple lanzó una nueva línea de Mac Studio con chips M5 Max y M5 Ultra en agosto de 2026: el nuevo Mac Studio M5 Max (64 GB, $2,499) es una opción nueva con GPU completa, y el Mac Studio M5 Ultra (256 GB o 512 GB, desde $5,499) duplica el ancho de banda de memoria unificada a 1.2 TB/s, ejecutando modelos 70B en Q8_0 o FP16 sin ningún compromiso de calidad.',
+            '**Apple renovó el Mac mini el 25 de agosto de 2026, con disponibilidad el 22 de septiembre de 2026, y esto cambia de nuevo cuál es la opción nueva más barata.** El Mac mini M5 Pro (desde $1,699) llega hasta 64 GB de memoria unificada con 307 GB/s de ancho de banda y Thunderbolt 5 -- suficiente para ejecutar un modelo 70B en Q4_K_M completamente en la GPU, y $800 más barato que el Mac Studio M5 Max. El Mac mini M6 base (desde $899) es un equipo distinto: llega solo a 32 GB de memoria unificada y 170 GB/s de ancho de banda, muy por debajo de los 40+ GB que necesita un modelo 70B, por lo que no puede ejecutar un modelo 70B en ningún nivel de cuantización. Aún no existen benchmarks independientes para ninguno de los dos chips -- ambos estarán disponibles el 22 de septiembre de 2026.',
           ],
         },
         dgxSpark: {
@@ -464,6 +483,10 @@ schema: {
               q: 'Ejecutar Q4_K_M en el DGX Spark en lugar de Q8_0',
               a: 'El DGX Spark tiene 128 GB -- suficiente para Q8_0 (70 GB). Usar Q4_K_M desperdicia la calidad disponible. En cualquier máquina con más de 80 GB, ejecuta Q8_0 para modelos 70B.',
             },
+            {
+              q: 'Comprar el Mac mini M6 base esperando que ejecute un modelo 70B',
+              a: 'El Mac mini M6 ($899) llega solo a 32 GB de memoria unificada -- muy por debajo de los 40+ GB que necesita un modelo 70B en Q4_K_M. No puede ejecutar un modelo 70B en ningún nivel de cuantización. Para 70B en un Mac mini, el nivel requerido es el Mac mini M5 Pro ($1,699, 64 GB de memoria unificada) -- confirma "M5 Pro" y 64 GB antes de comprar, no el M6 base.',
+            },
           ],
         },
         relatedReading: {
@@ -484,7 +507,11 @@ schema: {
           faqs: [
             {
               q: '¿Cuál es el hardware más barato que puede ejecutar un modelo 70B de forma utilizable?',
-              a: 'En agosto de 2026, un Mac Studio M2 Ultra de segunda mano (64 GB de memoria unificada) por ~$2,000 sigue siendo el camino más económico hacia la inferencia 70B a 25+ tok/seg. El nuevo Mac Studio M5 Max (64 GB, $2,499, lanzado en agosto de 2026) es la máquina nueva más barata con GPU completa, por debajo del MacBook Pro M5 Max (~$3,500). Un escritorio con NVIDIA RTX 4090 (24 GB VRAM + 32 GB RAM) cuesta ~$3,000-$4,000 en total, pero produce una inferencia más lenta debido al layer offloading.',
+              a: 'El Mac mini M5 Pro ($1,699, 64 GB de memoria unificada, disponible el 22 de septiembre de 2026) se perfila como el hardware nuevo más barato capaz de ejecutar un modelo 70B, $800 por debajo de la anterior opción nueva más barata, el Mac Studio M5 Max (64 GB, $2,499). Un Mac Studio M2 Ultra de segunda mano (64 GB de memoria unificada) por ~$2,000 sigue siendo el camino usado más económico a un rendimiento probado de 25+ tok/seg. Aún no existen benchmarks independientes para el Mac mini M5 Pro. Un escritorio con NVIDIA RTX 4090 (24 GB VRAM + 32 GB RAM) cuesta ~$3,000-$4,000 en total, pero produce una inferencia más lenta debido al layer offloading. No confundas el Mac mini M5 Pro con el Mac mini M6 base ($899) -- el M6 llega solo a 32 GB de memoria unificada y no puede ejecutar un modelo 70B.',
+            },
+            {
+              q: '¿Puede el Mac mini M6 ejecutar un modelo 70B?',
+              a: 'No. El Mac mini M6 (desde $899) llega solo a 32 GB de memoria unificada y 170 GB/s de ancho de banda -- muy por debajo de los 40+ GB que requiere un modelo 70B en Q4_K_M. Para 70B en un Mac mini, pide el Mac mini M5 Pro (desde $1,699, 64 GB de memoria unificada, 307 GB/s de ancho de banda, Thunderbolt 5). Ambos estarán disponibles el 22 de septiembre de 2026, y aún no existen benchmarks independientes para ninguno de los dos chips.',
             },
             {
               q: '¿Puedo ejecutar un modelo 70B en dos GPUs?',
@@ -554,6 +581,7 @@ schema: {
           { '@type': 'Thing', 'name': 'Llama 3.3 70B' },
           { '@type': 'Thing', 'name': 'Qwen3 72B' },
           { '@type': 'Thing', 'name': 'NVIDIA DGX Spark' },
+          { '@type': 'Thing', 'name': 'Apple Mac mini M5 Pro' },
         ],
         'mentions': [
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
@@ -577,23 +605,25 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Hardware de consumo para inferencia local de LLM 70B en 2026',
-        'numberOfItems': 8,
+        'numberOfItems': 9,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Apple M5 Max MacBook Pro 64 GB', 'description': 'GPU completa. 20-30 tok/seg. Mejor laptop. ~$3,500.' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Apple Mac Studio M5 Max 64 GB', 'description': 'GPU completa. 22-32 tok/seg. Nuevo agosto 2026. $2,499.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Apple Mac Studio M2 Ultra 64 GB', 'description': 'GPU completa. 25-35 tok/seg. Mejor valor usado. ~$2,000 reacondicionado.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Apple Mac Studio M5 Ultra 256GB+', 'description': 'GPU completa. 35-50 tok/seg. Ejecuta Q8_0/FP16. Desde $5,499.' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'NVIDIA DGX Spark 128 GB', 'description': 'GPU completa CUDA. 18-28 tok/seg. Ejecuta Q8_0. $4,699.' },
-          { '@type': 'ListItem', 'position': 6, 'name': 'NVIDIA RTX 4090 24 GB + 32 GB RAM', 'description': 'Layer offloading. 10-18 tok/seg. ~$3,000-4,000 en total.' },
-          { '@type': 'ListItem', 'position': 7, 'name': 'NVIDIA RTX 4080 16 GB + 32 GB RAM', 'description': 'Offloading parcial. 5-10 tok/seg.' },
-          { '@type': 'ListItem', 'position': 8, 'name': 'Solo CPU 64 GB RAM', 'description': '1-3 tok/seg. Solo para procesamiento por lotes.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Apple Mac mini M5 Pro 64 GB', 'description': 'GPU completa. Sin benchmarks aún. Nuevo, disponible 22 sept. 2026. Opción nueva más barata, $1,699.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Apple M5 Max MacBook Pro 64 GB', 'description': 'GPU completa. 20-30 tok/seg. Mejor laptop. ~$3,500.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Apple Mac Studio M5 Max 64 GB', 'description': 'GPU completa. 22-32 tok/seg. Nuevo agosto 2026. $2,499.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Apple Mac Studio M2 Ultra 64 GB', 'description': 'GPU completa. 25-35 tok/seg. Mejor valor usado. ~$2,000 reacondicionado.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Apple Mac Studio M5 Ultra 256GB+', 'description': 'GPU completa. 35-50 tok/seg. Ejecuta Q8_0/FP16. Desde $5,499.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'NVIDIA DGX Spark 128 GB', 'description': 'GPU completa CUDA. 18-28 tok/seg. Ejecuta Q8_0. $4,699.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'NVIDIA RTX 4090 24 GB + 32 GB RAM', 'description': 'Layer offloading. 10-18 tok/seg. ~$3,000-4,000 en total.' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'NVIDIA RTX 4080 16 GB + 32 GB RAM', 'description': 'Offloading parcial. 5-10 tok/seg.' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'Solo CPU 64 GB RAM', 'description': '1-3 tok/seg. Solo para procesamiento por lotes.' },
         ],
       },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': '¿Cuál es el hardware más barato que puede ejecutar un modelo 70B de forma utilizable?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'En agosto de 2026, un Mac Studio M2 Ultra de segunda mano (64 GB de memoria unificada) por ~$2,000 sigue siendo el camino más económico hacia la inferencia 70B a 25+ tok/seg. El nuevo Mac Studio M5 Max (64 GB, $2,499, lanzado en agosto de 2026) es la máquina nueva más barata con GPU completa, por debajo del MacBook Pro M5 Max (~$3,500). Un escritorio con NVIDIA RTX 4090 (24 GB VRAM + 32 GB RAM) cuesta ~$3,000-$4,000 en total, pero produce una inferencia más lenta debido al layer offloading.' } },
+          { '@type': 'Question', 'name': '¿Cuál es el hardware más barato que puede ejecutar un modelo 70B de forma utilizable?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El Mac mini M5 Pro ($1,699, 64 GB de memoria unificada, disponible el 22 de septiembre de 2026) se perfila como el hardware nuevo más barato capaz de ejecutar un modelo 70B, $800 por debajo de la anterior opción nueva más barata, el Mac Studio M5 Max (64 GB, $2,499). Un Mac Studio M2 Ultra de segunda mano (64 GB de memoria unificada) por ~$2,000 sigue siendo el camino usado más económico a un rendimiento probado de 25+ tok/seg. Aún no existen benchmarks independientes para el Mac mini M5 Pro. Un escritorio con NVIDIA RTX 4090 (24 GB VRAM + 32 GB RAM) cuesta ~$3,000-$4,000 en total, pero produce una inferencia más lenta debido al layer offloading. No confundas el Mac mini M5 Pro con el Mac mini M6 base ($899) -- el M6 llega solo a 32 GB de memoria unificada y no puede ejecutar un modelo 70B.' } },
+          { '@type': 'Question', 'name': '¿Puede el Mac mini M6 ejecutar un modelo 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. El Mac mini M6 (desde $899) llega solo a 32 GB de memoria unificada y 170 GB/s de ancho de banda -- muy por debajo de los 40+ GB que requiere un modelo 70B en Q4_K_M. Para 70B en un Mac mini, pide el Mac mini M5 Pro (desde $1,699, 64 GB de memoria unificada, 307 GB/s de ancho de banda, Thunderbolt 5). Ambos estarán disponibles el 22 de septiembre de 2026, y aún no existen benchmarks independientes para ninguno de los dos chips.' } },
           { '@type': 'Question', 'name': '¿Puedo ejecutar un modelo 70B en dos GPUs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí -- llama.cpp y Ollama admiten inferencia multi-GPU en hardware NVIDIA. Dos RTX 4090 (48 GB de VRAM total) caben un modelo 70B en Q4_K_M completamente en VRAM. Ollama gestiona el multi-GPU automáticamente cuando hay múltiples GPUs presentes. El paralelismo de tensores en llama.cpp (`--tensor-split`) controla cómo se distribuyen las capas.' } },
           { '@type': 'Question', 'name': '¿Cómo se compara la calidad local 70B con GPT-5.5?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'En los benchmarks MMLU y HumanEval, Llama 3.3 70B (82%, 88%) y Qwen3 72B (84%, 87%) igualan o superan ligeramente los puntajes de GPT-4 (2023). GPT-5.5 (2024) puntúa más alto en tareas intensivas en razonamiento. Para seguimiento general de instrucciones, resumen y generación de código, los modelos locales 70B son competitivos con GPT-5.5 en la mayoría de tareas.' } },
           { '@type': 'Question', 'name': '¿Admite Ollama la ejecución automática de modelos 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Ejecutar `ollama run llama3.3:70b` descarga y ejecuta el modelo con layer offloading automático de GPU. Ollama detecta la VRAM disponible y la RAM del sistema, hace offloading de tantas capas como sea posible a la GPU y ejecuta el resto en CPU. No se requiere configuración manual para el uso básico.' } },
@@ -641,6 +671,7 @@ schema: {
           isTldr: true,
           items: [
             'تكميم Q4_K_M: يتطلب Llama 3.3 70B نحو 40 GB من الذاكرة؛ ويتطلب Qwen3 72B نحو 43 GB من الذاكرة.',
+            '**أرخص عتاد جديد**: Apple Mac mini M5 Pro (64 GB، 1,699 دولار، متوفر في 22 سبتمبر 2026) هو أرخص خيار جديد بـ GPU كاملة لـ 70B. أما Mac mini M6 الأساسي (899 دولار) فيصل فقط إلى 32 GB ولا يمكنه تشغيل نموذج 70B.',
             '**أبسط عتاد للمستهلك**: Apple Mac Studio M2 Ultra (64 GB موحدة) أو MacBook Pro M5 Max (64 GB) -- تسريع كامل عبر GPU، دون الحاجة إلى layer offloading.',
             '**خيار NVIDIA**: RTX 4090 (24 GB VRAM) + 32 GB من ذاكرة النظام مع layer offloading في Ollama يعمل مع معظم نماذج 70B، رغم أن 20-30% من الطبقات تُشغَّل على المعالج.',
             '**70B على المعالج فقط**: ممكن مع 64 GB من الذاكرة لكنه ينتج 1-3 token/ثانية -- قابل للاستخدام بالكاد للمهام الدُفعية، لا للمحادثة التفاعلية.',
@@ -656,7 +687,9 @@ schema: {
           imageCaption: 'مقارنة العتاد: يحقق Apple Silicon M5 Max من 25 إلى 35 token/ثانية دون offloading، بينما يصل NVIDIA RTX 4090 مع layer offloading إلى 10-18 token/ثانية، ولا ينتج الاستدلال بـ 70B على المعالج فقط سوى 1-3 token/ثانية.',
           rows: [
             { 'العتاد': 'Apple M5 Max MacBook Pro (64 GB)', 'هل يشغّل 70B؟': 'نعم -- GPU كاملة', 'السرعة (70B Q4)': '20-30 token/ثانية', 'ملاحظات': 'أفضل خيار لابتوب للمستهلك' },
-            { 'العتاد': 'Apple Mac Studio M5 Max (64 GB)', 'هل يشغّل 70B؟': 'نعم -- GPU كاملة', 'السرعة (70B Q4)': '22-32 token/ثانية', 'ملاحظات': 'جديد أغسطس 2026، 2,499 دولار -- أرخص خيار جديد' },
+            { 'العتاد': 'Apple Mac Studio M5 Max (64 GB)', 'هل يشغّل 70B؟': 'نعم -- GPU كاملة', 'السرعة (70B Q4)': '22-32 token/ثانية', 'ملاحظات': 'جديد أغسطس 2026، 2,499 دولار' },
+            { 'العتاد': 'Apple Mac mini M5 Pro (64 GB)', 'هل يشغّل 70B؟': 'نعم -- GPU كاملة', 'السرعة (70B Q4)': 'لا توجد اختبارات بعد', 'ملاحظات': 'جديد، متوفر 22 سبتمبر 2026، 1,699 دولار -- أرخص خيار جديد' },
+            { 'العتاد': 'Apple Mac mini M6 (32 GB كحد أقصى)', 'هل يشغّل 70B؟': 'لا -- 32 GB كحد أقصى', 'السرعة (70B Q4)': 'غير متاح', 'ملاحظات': 'جديد، متوفر 22 سبتمبر 2026، 899 دولار -- ذاكرة غير كافية لـ 70B' },
             { 'العتاد': 'Apple M2 Ultra (64 GB موحدة)', 'هل يشغّل 70B؟': 'نعم -- GPU كاملة', 'السرعة (70B Q4)': '25-35 token/ثانية', 'ملاحظات': 'التهيئة الأساسية لـ Mac Studio، مستعمل/مُجدَّد' },
             { 'العتاد': 'Apple Mac Studio M5 Ultra (256GB+)', 'هل يشغّل 70B؟': 'نعم -- GPU كاملة', 'السرعة (70B Q4)': '35-50 token/ثانية', 'ملاحظات': 'جديد أغسطس 2026، من 5,499 دولار. يشغّل Q8_0/FP16 بهامش.' },
             { 'العتاد': 'NVIDIA DGX Spark (128 GB موحدة)', 'هل يشغّل 70B؟': 'نعم -- GPU كاملة', 'السرعة (70B Q4)': '18-28 token/ثانية', 'ملاحظات': 'يتسع Q8_0 (70 GB). مثالي لتدفقات CUDA.' },
@@ -685,7 +718,8 @@ schema: {
           content: [
             '**يستخدم Apple Silicon ذاكرة موحدة -- يتشارك المعالج وكرت الرسوميات المجموعة نفسها من الذاكرة الفيزيائية.** يمكن لـ MacBook Pro M5 Max بذاكرة موحدة 64 GB تشغيل نموذج 70B بتكميم Q4_K_M بالكامل على GPU، محققًا 20-30 token/ثانية دون عبء layer offloading.',
             'في عتاد NVIDIA، يكون كرت الرسوميات وذاكرة النظام منفصلين. لا يمكن لـ GPU بسعة 24 GB من VRAM استضافة سوى نحو 60% من نموذج 70B بتكميم Q4_K_M؛ وتُشغَّل الطبقات المتبقية على المعالج، مما يخلق عنق زجاجة في عرض نطاق الذاكرة يخفض السرعة إلى 10-18 token/ثانية.',
-            'في أغسطس 2026، لا يزال Mac Studio M2 Ultra مستعمل (64 GB، نحو 2,000 دولار مُجدَّد) المسار الأكثر اقتصادًا نحو استدلال 70B محلي بسرعة قابلة للاستخدام. أطلقت Apple تشكيلة Mac Studio جديدة بمعالجات M5 Max وM5 Ultra في أغسطس 2026: يُعد Mac Studio M5 Max الجديد (64 GB، 2,499 دولار) الآن أرخص خيار جديد بـ GPU كاملة، بينما يُضاعف Mac Studio M5 Ultra (256 GB أو 512 GB، من 5,499 دولار) عرض نطاق الذاكرة الموحدة إلى 1.2 تيرابايت/ثانية، مشغّلًا نماذج 70B بتكميم Q8_0 أو FP16 دون أي تنازل في الجودة.',
+            'في أغسطس 2026، لا يزال Mac Studio M2 Ultra مستعمل (64 GB، نحو 2,000 دولار مُجدَّد) المسار المستعمل الأكثر اقتصادًا نحو استدلال 70B محلي بسرعة قابلة للاستخدام. أطلقت Apple تشكيلة Mac Studio جديدة بمعالجات M5 Max وM5 Ultra في أغسطس 2026: يُعد Mac Studio M5 Max الجديد (64 GB، 2,499 دولار) خيارًا جديدًا بـ GPU كاملة، بينما يُضاعف Mac Studio M5 Ultra (256 GB أو 512 GB، من 5,499 دولار) عرض نطاق الذاكرة الموحدة إلى 1.2 تيرابايت/ثانية، مشغّلًا نماذج 70B بتكميم Q8_0 أو FP16 دون أي تنازل في الجودة.',
+            '**جدّدت Apple تشكيلة Mac mini في 25 أغسطس 2026، مع توفّرها في 22 سبتمبر 2026، وهذا يغيّر مرة أخرى أرخص خيار جديد.** يصل Mac mini M5 Pro (يبدأ من 1,699 دولار) إلى 64 GB من الذاكرة الموحدة بعرض نطاق 307 GB/ثانية وThunderbolt 5 -- ما يكفي لتشغيل نموذج 70B بتكميم Q4_K_M بالكامل على GPU، وبفارق 800 دولار أرخص من Mac Studio M5 Max. أما Mac mini M6 الأساسي (يبدأ من 899 دولار) فهو جهاز مختلف: يصل فقط إلى 32 GB من الذاكرة الموحدة وعرض نطاق 170 GB/ثانية، أقل بكثير من 40 GB أو أكثر التي يحتاجها نموذج 70B، لذا لا يمكنه تشغيل نموذج 70B عند أي مستوى تكميم. لا توجد اختبارات مرجعية مستقلة بعد لأي من المعالجين -- كلاهما متوفر في 22 سبتمبر 2026.',
           ],
         },
         dgxSpark: {
@@ -762,6 +796,10 @@ schema: {
               q: 'تشغيل Q4_K_M على DGX Spark بدلًا من Q8_0',
               a: 'يملك DGX Spark 128 GB -- كافية لـ Q8_0 (70 GB). يهدر استخدام Q4_K_M الجودة المتاحة. على أي جهاز بأكثر من 80 GB، شغّل Q8_0 لنماذج 70B.',
             },
+            {
+              q: 'شراء Mac mini M6 الأساسي مع توقع تشغيل نموذج 70B',
+              a: 'يصل Mac mini M6 (899 دولار) فقط إلى 32 GB من الذاكرة الموحدة -- أقل بكثير من 40 GB أو أكثر التي يحتاجها نموذج 70B بتكميم Q4_K_M. لا يمكنه تشغيل نموذج 70B عند أي مستوى تكميم. لتشغيل 70B على Mac mini، الفئة المطلوبة هي Mac mini M5 Pro (1,699 دولار، 64 GB من الذاكرة الموحدة) -- تأكّد من "M5 Pro" و64 GB قبل الطلب، وليس M6 الأساسي.',
+            },
           ],
         },
         relatedReading: {
@@ -782,7 +820,11 @@ schema: {
           faqs: [
             {
               q: 'ما أرخص عتاد قادر على تشغيل نموذج 70B بشكل قابل للاستخدام؟',
-              a: 'في أغسطس 2026، لا يزال Mac Studio M2 Ultra مستعمل (64 GB من الذاكرة الموحدة) بنحو 2,000 دولار المسار الأكثر اقتصادًا نحو استدلال 70B بسرعة 25 token/ثانية أو أكثر. Mac Studio M5 Max الجديد (64 GB، 2,499 دولار، أُطلق في أغسطس 2026) هو أرخص جهاز جديد بـ GPU كاملة، متفوقًا على MacBook Pro M5 Max (نحو 3,500 دولار). أما حاسوب مكتبي بـ NVIDIA RTX 4090 (24 GB VRAM + 32 GB RAM) فيكلف نحو 3,000-4,000 دولار إجمالًا، لكنه ينتج استدلالًا أبطأ بسبب layer offloading.',
+              a: 'يُتوقّع أن يصبح Mac mini M5 Pro (1,699 دولار، 64 GB من الذاكرة الموحدة، متوفر في 22 سبتمبر 2026) أرخص عتاد جديد قادر على تشغيل نموذج 70B، بفارق 800 دولار أقل من الخيار الجديد الأرخص سابقًا، Mac Studio M5 Max (64 GB، 2,499 دولار). ويبقى Mac Studio M2 Ultra مستعمل (64 GB من الذاكرة الموحدة) بنحو 2,000 دولار المسار المستعمل الأكثر اقتصادًا بأداء مثبت 25 token/ثانية أو أكثر. لا توجد اختبارات مرجعية مستقلة بعد لـ Mac mini M5 Pro. أما حاسوب مكتبي بـ NVIDIA RTX 4090 (24 GB VRAM + 32 GB RAM) فيكلف نحو 3,000-4,000 دولار إجمالًا، لكنه ينتج استدلالًا أبطأ بسبب layer offloading. لا تخلط بين Mac mini M5 Pro وMac mini M6 الأساسي (899 دولار) -- إذ يصل M6 فقط إلى 32 GB من الذاكرة الموحدة ولا يمكنه تشغيل نموذج 70B.',
+            },
+            {
+              q: 'هل يمكن لـ Mac mini M6 تشغيل نموذج 70B؟',
+              a: 'لا. يصل Mac mini M6 (يبدأ من 899 دولار) فقط إلى 32 GB من الذاكرة الموحدة وعرض نطاق 170 GB/ثانية -- أقل بكثير من 40 GB أو أكثر التي يتطلبها نموذج 70B بتكميم Q4_K_M. لتشغيل 70B على Mac mini، اطلب Mac mini M5 Pro (يبدأ من 1,699 دولار، 64 GB من الذاكرة الموحدة، عرض نطاق 307 GB/ثانية، Thunderbolt 5) بدلًا من ذلك. كلاهما متوفر في 22 سبتمبر 2026، ولا توجد اختبارات مرجعية مستقلة بعد لأي من المعالجين.',
             },
             {
               q: 'هل يمكنني تشغيل نموذج 70B على كرتي رسوميات؟',
@@ -853,6 +895,7 @@ schema: {
           { '@type': 'Thing', 'name': 'Llama 3.3 70B' },
           { '@type': 'Thing', 'name': 'Qwen3 72B' },
           { '@type': 'Thing', 'name': 'NVIDIA DGX Spark' },
+          { '@type': 'Thing', 'name': 'Apple Mac mini M5 Pro' },
         ],
         'mentions': [
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
@@ -878,16 +921,17 @@ schema: {
         '@type': 'ItemList',
         'name': 'عتاد المستهلك للاستدلال المحلي بنموذج LLM 70B في 2026',
         'inLanguage': 'ar',
-        'numberOfItems': 8,
+        'numberOfItems': 9,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Apple M5 Max MacBook Pro 64 GB', 'description': 'GPU كاملة. 20-30 token/ثانية. أفضل لابتوب. نحو 3,500 دولار.' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Apple Mac Studio M5 Max 64 GB', 'description': 'GPU كاملة. 22-32 token/ثانية. جديد أغسطس 2026. 2,499 دولار.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Apple Mac Studio M2 Ultra 64 GB', 'description': 'GPU كاملة. 25-35 token/ثانية. أفضل قيمة مستعملة. نحو 2,000 دولار مُجدَّد.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Apple Mac Studio M5 Ultra 256GB+', 'description': 'GPU كاملة. 35-50 token/ثانية. يشغّل Q8_0/FP16. من 5,499 دولار.' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'NVIDIA DGX Spark 128 GB', 'description': 'GPU كاملة CUDA. 18-28 token/ثانية. يشغّل Q8_0. 4,699 دولار.' },
-          { '@type': 'ListItem', 'position': 6, 'name': 'NVIDIA RTX 4090 24 GB + 32 GB RAM', 'description': 'Layer offloading. 10-18 token/ثانية. نحو 3,000-4,000 دولار إجمالًا.' },
-          { '@type': 'ListItem', 'position': 7, 'name': 'NVIDIA RTX 4080 16 GB + 32 GB RAM', 'description': 'offloading جزئي. 5-10 token/ثانية.' },
-          { '@type': 'ListItem', 'position': 8, 'name': 'المعالج فقط 64 GB RAM', 'description': '1-3 token/ثانية. للمعالجة الدُفعية فقط.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Apple Mac mini M5 Pro 64 GB', 'description': 'GPU كاملة. لا توجد اختبارات بعد. جديد، متوفر 22 سبتمبر 2026. أرخص خيار جديد، 1,699 دولار.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Apple M5 Max MacBook Pro 64 GB', 'description': 'GPU كاملة. 20-30 token/ثانية. أفضل لابتوب. نحو 3,500 دولار.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Apple Mac Studio M5 Max 64 GB', 'description': 'GPU كاملة. 22-32 token/ثانية. جديد أغسطس 2026. 2,499 دولار.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Apple Mac Studio M2 Ultra 64 GB', 'description': 'GPU كاملة. 25-35 token/ثانية. أفضل قيمة مستعملة. نحو 2,000 دولار مُجدَّد.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Apple Mac Studio M5 Ultra 256GB+', 'description': 'GPU كاملة. 35-50 token/ثانية. يشغّل Q8_0/FP16. من 5,499 دولار.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'NVIDIA DGX Spark 128 GB', 'description': 'GPU كاملة CUDA. 18-28 token/ثانية. يشغّل Q8_0. 4,699 دولار.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'NVIDIA RTX 4090 24 GB + 32 GB RAM', 'description': 'Layer offloading. 10-18 token/ثانية. نحو 3,000-4,000 دولار إجمالًا.' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'NVIDIA RTX 4080 16 GB + 32 GB RAM', 'description': 'offloading جزئي. 5-10 token/ثانية.' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'المعالج فقط 64 GB RAM', 'description': '1-3 token/ثانية. للمعالجة الدُفعية فقط.' },
         ],
       },
       faqSchema: {
@@ -895,7 +939,8 @@ schema: {
         '@type': 'FAQPage',
         'inLanguage': 'ar',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'ما أرخص عتاد قادر على تشغيل نموذج 70B بشكل قابل للاستخدام؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'في أغسطس 2026، لا يزال Mac Studio M2 Ultra مستعمل (64 GB من الذاكرة الموحدة) بنحو 2,000 دولار المسار الأكثر اقتصادًا نحو استدلال 70B بسرعة 25 token/ثانية أو أكثر. Mac Studio M5 Max الجديد (64 GB، 2,499 دولار، أُطلق في أغسطس 2026) هو أرخص جهاز جديد بـ GPU كاملة، متفوقًا على MacBook Pro M5 Max (نحو 3,500 دولار). أما حاسوب مكتبي بـ NVIDIA RTX 4090 (24 GB VRAM + 32 GB RAM) فيكلف نحو 3,000-4,000 دولار إجمالًا، لكنه ينتج استدلالًا أبطأ بسبب layer offloading.' } },
+          { '@type': 'Question', 'name': 'ما أرخص عتاد قادر على تشغيل نموذج 70B بشكل قابل للاستخدام؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يُتوقّع أن يصبح Mac mini M5 Pro (1,699 دولار، 64 GB من الذاكرة الموحدة، متوفر في 22 سبتمبر 2026) أرخص عتاد جديد قادر على تشغيل نموذج 70B، بفارق 800 دولار أقل من الخيار الجديد الأرخص سابقًا، Mac Studio M5 Max (64 GB، 2,499 دولار). ويبقى Mac Studio M2 Ultra مستعمل (64 GB من الذاكرة الموحدة) بنحو 2,000 دولار المسار المستعمل الأكثر اقتصادًا بأداء مثبت 25 token/ثانية أو أكثر. لا توجد اختبارات مرجعية مستقلة بعد لـ Mac mini M5 Pro. أما حاسوب مكتبي بـ NVIDIA RTX 4090 (24 GB VRAM + 32 GB RAM) فيكلف نحو 3,000-4,000 دولار إجمالًا، لكنه ينتج استدلالًا أبطأ بسبب layer offloading. لا تخلط بين Mac mini M5 Pro وMac mini M6 الأساسي (899 دولار) -- إذ يصل M6 فقط إلى 32 GB من الذاكرة الموحدة ولا يمكنه تشغيل نموذج 70B.' } },
+          { '@type': 'Question', 'name': 'هل يمكن لـ Mac mini M6 تشغيل نموذج 70B؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا. يصل Mac mini M6 (يبدأ من 899 دولار) فقط إلى 32 GB من الذاكرة الموحدة وعرض نطاق 170 GB/ثانية -- أقل بكثير من 40 GB أو أكثر التي يتطلبها نموذج 70B بتكميم Q4_K_M. لتشغيل 70B على Mac mini، اطلب Mac mini M5 Pro (يبدأ من 1,699 دولار، 64 GB من الذاكرة الموحدة، عرض نطاق 307 GB/ثانية، Thunderbolt 5) بدلًا من ذلك. كلاهما متوفر في 22 سبتمبر 2026، ولا توجد اختبارات مرجعية مستقلة بعد لأي من المعالجين.' } },
           { '@type': 'Question', 'name': 'هل يمكنني تشغيل نموذج 70B على كرتي رسوميات؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم -- يدعم llama.cpp وOllama الاستدلال متعدد كروت الرسوميات على عتاد NVIDIA. يتسع كرتا RTX 4090 (48 GB من VRAM إجمالًا) لنموذج 70B بتكميم Q4_K_M بالكامل في VRAM. يدير Ollama تعدد كروت الرسوميات تلقائيًا عند وجود عدة كروت. ويتحكم توازي الموترات في llama.cpp (`--tensor-split`) في كيفية توزيع الطبقات.' } },
           { '@type': 'Question', 'name': 'كيف تُقارن جودة 70B المحلي بـ GPT-5.5؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'في اختبارات MMLU وHumanEval، يضاهي Llama 3.3 70B (82%، 88%) وQwen3 72B (84%، 87%) درجات GPT-4 (2023) أو يتفوق عليها قليلًا. يسجّل GPT-5.5 (2024) أعلى في المهام كثيفة الاستدلال. أما لاتباع التعليمات العام والتلخيص وتوليد الكود، فإن نماذج 70B المحلية تنافس GPT-5.5 في معظم المهام.' } },
           { '@type': 'Question', 'name': 'هل يدعم Ollama التشغيل التلقائي لنماذج 70B؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. تشغيل `ollama run llama3.3:70b` يُنزّل النموذج ويشغّله مع layer offloading تلقائي لـ GPU. يكتشف Ollama VRAM المتاحة وذاكرة النظام، ويقوم بعمل offloading لأكبر عدد ممكن من الطبقات إلى GPU ويشغّل الباقي على المعالج. لا حاجة لتهيئة يدوية للاستخدام الأساسي.' } },
@@ -942,6 +987,7 @@ schema: {
           isTldr: true,
           items: [
             'Quantização Q4_K_M: Llama 3.3 70B requer ~40 GB de RAM; Qwen3 72B requer ~43 GB de RAM.',
+            '**Hardware novo mais barato**: Apple Mac mini M5 Pro (64 GB, US$ 1.699, disponível em 22 de setembro de 2026) é a opção nova com GPU completa mais barata para 70B. O Mac mini M6 base (US$ 899) chega apenas a 32 GB e não roda um modelo 70B.',
             '**Hardware de consumo mais simples**: Apple Mac Studio M2 Ultra (64 GB unificados) ou MacBook Pro M5 Max (64 GB) -- aceleração GPU completa, sem layer offloading necessário.',
             '**Opção NVIDIA**: RTX 4090 (24 GB VRAM) + 32 GB de RAM do sistema com layer offloading no Ollama funciona com a maioria dos modelos 70B, embora 20-30% das camadas rodem na CPU.',
             '**70B somente com CPU**: possível com 64 GB de RAM, mas produz 1-3 tok/s -- marginalmente utilizável para tarefas em lote, não para chat interativo.',
@@ -957,7 +1003,9 @@ schema: {
           imageCaption: 'Comparação de hardware: Apple Silicon M5 Max atinge 25-35 tok/s sem offloading, enquanto NVIDIA RTX 4090 com layer offloading chega a 10-18 tok/s, e a inferência 70B somente com CPU produz apenas 1-3 tok/s.',
           rows: [
             { 'Hardware': 'Apple M5 Max MacBook Pro (64 GB)', 'Pode rodar 70B?': 'Sim -- GPU completa', 'Velocidade (70B Q4)': '20-30 tok/s', 'Notas': 'Melhor opção de laptop de consumo' },
-            { 'Hardware': 'Apple Mac Studio M5 Max (64 GB)', 'Pode rodar 70B?': 'Sim -- GPU completa', 'Velocidade (70B Q4)': '22-32 tok/s', 'Notas': 'Novo agosto 2026, US$ 2.499 -- opção nova mais barata' },
+            { 'Hardware': 'Apple Mac Studio M5 Max (64 GB)', 'Pode rodar 70B?': 'Sim -- GPU completa', 'Velocidade (70B Q4)': '22-32 tok/s', 'Notas': 'Novo agosto 2026, US$ 2.499' },
+            { 'Hardware': 'Apple Mac mini M5 Pro (64 GB)', 'Pode rodar 70B?': 'Sim -- GPU completa', 'Velocidade (70B Q4)': 'Sem benchmarks ainda', 'Notas': 'Novo, disponível 22 set. 2026, US$ 1.699 -- opção nova mais barata' },
+            { 'Hardware': 'Apple Mac mini M6 (32 GB máx.)', 'Pode rodar 70B?': 'Não -- 32 GB máx.', 'Velocidade (70B Q4)': 'N/D', 'Notas': 'Novo, disponível 22 set. 2026, US$ 899 -- memória insuficiente para 70B' },
             { 'Hardware': 'Apple M2 Ultra (64 GB unificados)', 'Pode rodar 70B?': 'Sim -- GPU completa', 'Velocidade (70B Q4)': '25-35 tok/s', 'Notas': 'Configuração base do Mac Studio, usado/recondicionado' },
             { 'Hardware': 'Apple Mac Studio M5 Ultra (256GB+)', 'Pode rodar 70B?': 'Sim -- GPU completa', 'Velocidade (70B Q4)': '35-50 tok/s', 'Notas': 'Novo agosto 2026, a partir de US$ 5.499. Roda Q8_0/FP16 com folga.' },
             { 'Hardware': 'NVIDIA DGX Spark (128 GB unificados)', 'Pode rodar 70B?': 'Sim -- GPU completa', 'Velocidade (70B Q4)': '18-28 tok/s', 'Notas': 'Q8_0 cabe (70 GB). Ideal para fluxos CUDA.' },
@@ -986,7 +1034,8 @@ schema: {
           content: [
             '**O Apple Silicon usa memória unificada -- a CPU e a GPU compartilham o mesmo pool de memória física.** Um MacBook Pro M5 Max com 64 GB de memória unificada pode rodar um modelo 70B em Q4_K_M inteiramente na GPU, atingindo 20-30 tok/s sem o overhead do layer offloading.',
             'Em hardware NVIDIA, a GPU e a RAM do sistema são separadas. Uma GPU com 24 GB de VRAM só pode alojar ~60% de um modelo 70B em Q4_K_M; as camadas restantes rodam na CPU, criando um gargalo de largura de banda de memória que reduz a velocidade para 10-18 tok/s.',
-            'Em agosto de 2026, um Mac Studio M2 Ultra usado (64 GB, ~R$ 10.000 ou US$ 2.000 recondicionado) continua sendo o caminho mais econômico para inferência 70B local em velocidade utilizável. A Apple lançou uma nova linha Mac Studio com chips M5 Max e M5 Ultra em agosto de 2026: o novo Mac Studio M5 Max (64 GB, US$ 2.499) é agora a máquina nova mais barata com GPU completa, e o Mac Studio M5 Ultra (256 GB ou 512 GB, a partir de US$ 5.499) dobra a largura de banda de memória unificada para 1,2 TB/s, rodando modelos 70B em Q8_0 ou FP16 sem nenhum compromisso de qualidade.',
+            'Em agosto de 2026, um Mac Studio M2 Ultra usado (64 GB, ~R$ 10.000 ou US$ 2.000 recondicionado) continua sendo o caminho usado mais econômico para inferência 70B local em velocidade utilizável. A Apple lançou uma nova linha Mac Studio com chips M5 Max e M5 Ultra em agosto de 2026: o novo Mac Studio M5 Max (64 GB, US$ 2.499) é uma opção nova com GPU completa, e o Mac Studio M5 Ultra (256 GB ou 512 GB, a partir de US$ 5.499) dobra a largura de banda de memória unificada para 1,2 TB/s, rodando modelos 70B em Q8_0 ou FP16 sem nenhum compromisso de qualidade.',
+            '**A Apple renovou o Mac mini em 25 de agosto de 2026, com disponibilidade em 22 de setembro de 2026, e isso muda de novo qual é a opção nova mais barata.** O Mac mini M5 Pro (a partir de US$ 1.699) chega a 64 GB de memória unificada com 307 GB/s de largura de banda e Thunderbolt 5 -- suficiente para rodar um modelo 70B em Q4_K_M inteiramente na GPU, US$ 800 mais barato que o Mac Studio M5 Max. Já o Mac mini M6 base (a partir de US$ 899) é uma máquina diferente: chega apenas a 32 GB de memória unificada e 170 GB/s de largura de banda, bem abaixo dos 40+ GB que um modelo 70B precisa, então não consegue rodar um modelo 70B em nenhum nível de quantização. Ainda não existem benchmarks independentes para nenhum dos dois chips -- ambos chegam em 22 de setembro de 2026.',
           ],
         },
         dgxSpark: {
@@ -1061,6 +1110,10 @@ schema: {
               q: 'Rodar Q4_K_M no DGX Spark em vez de Q8_0',
               a: 'O DGX Spark tem 128 GB -- suficiente para Q8_0 (70 GB). Usar Q4_K_M desperdiça qualidade disponível. Em qualquer máquina com 80 GB ou mais, rode Q8_0 para modelos 70B.',
             },
+            {
+              q: 'Comprar o Mac mini M6 base esperando que ele rode um modelo 70B',
+              a: 'O Mac mini M6 (US$ 899) chega apenas a 32 GB de memória unificada -- bem abaixo dos 40+ GB que um modelo 70B precisa em Q4_K_M. Ele não consegue rodar um modelo 70B em nenhum nível de quantização. Para 70B em um Mac mini, a versão necessária é o Mac mini M5 Pro (US$ 1.699, 64 GB de memória unificada) -- confirme "M5 Pro" e 64 GB antes de comprar, não o M6 base.',
+            },
           ],
         },
         relatedReading: {
@@ -1081,7 +1134,11 @@ schema: {
           faqs: [
             {
               q: 'Qual é o hardware mais barato que pode rodar um modelo 70B de forma utilizável?',
-              a: 'Em agosto de 2026, um Mac Studio M2 Ultra usado (64 GB de memória unificada) por ~US$ 2.000 continua sendo o caminho mais econômico para inferência 70B a 25+ tok/s. O novo Mac Studio M5 Max (64 GB, US$ 2.499, lançado em agosto de 2026) é a máquina nova mais barata com GPU completa, abaixo do MacBook Pro M5 Max (~US$ 3.500). Um desktop com NVIDIA RTX 4090 (24 GB VRAM + 32 GB RAM) custa ~US$ 3.000-4.000 no total, mas produz inferência mais lenta devido ao layer offloading.',
+              a: 'O Mac mini M5 Pro (US$ 1.699, 64 GB de memória unificada, disponível em 22 de setembro de 2026) está prestes a se tornar o hardware novo mais barato capaz de rodar um modelo 70B, US$ 800 abaixo da anterior opção nova mais barata, o Mac Studio M5 Max (64 GB, US$ 2.499). Um Mac Studio M2 Ultra usado (64 GB de memória unificada) por ~US$ 2.000 continua sendo o caminho usado mais econômico com desempenho comprovado de 25+ tok/s. Ainda não existem benchmarks independentes para o Mac mini M5 Pro. Um desktop com NVIDIA RTX 4090 (24 GB VRAM + 32 GB RAM) custa ~US$ 3.000-4.000 no total, mas produz inferência mais lenta devido ao layer offloading. Não confunda o Mac mini M5 Pro com o Mac mini M6 base (US$ 899) -- o M6 chega apenas a 32 GB de memória unificada e não roda um modelo 70B.',
+            },
+            {
+              q: 'O Mac mini M6 consegue rodar um modelo 70B?',
+              a: 'Não. O Mac mini M6 (a partir de US$ 899) chega apenas a 32 GB de memória unificada e 170 GB/s de largura de banda -- bem abaixo dos 40+ GB que um modelo 70B exige em Q4_K_M. Para 70B em um Mac mini, peça o Mac mini M5 Pro (a partir de US$ 1.699, 64 GB de memória unificada, 307 GB/s de largura de banda, Thunderbolt 5). Ambos chegam em 22 de setembro de 2026, e ainda não existem benchmarks independentes para nenhum dos dois chips.',
             },
             {
               q: 'Posso rodar um modelo 70B em duas GPUs?',
@@ -1152,6 +1209,7 @@ schema: {
           { '@type': 'Thing', 'name': 'Llama 3.3 70B' },
           { '@type': 'Thing', 'name': 'Qwen3 72B' },
           { '@type': 'Thing', 'name': 'NVIDIA DGX Spark' },
+          { '@type': 'Thing', 'name': 'Apple Mac mini M5 Pro' },
         ],
         'mentions': [
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
@@ -1175,16 +1233,17 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'Hardware de consumo para inferência de LLM local 70B 2026',
-        'numberOfItems': 8,
+        'numberOfItems': 9,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Apple M5 Max MacBook Pro 64GB', 'description': 'GPU completa. 20-30 tok/sec. Melhor notebook. ~US$3.500.' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Apple Mac Studio M5 Max 64GB', 'description': 'GPU completa. 22-32 tok/sec. Novo agosto 2026. US$2.499.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Apple Mac Studio M2 Ultra 64GB', 'description': 'GPU completa. 25-35 tok/sec. Melhor valor usado. ~US$2.000 recondicionado.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Apple Mac Studio M5 Ultra 256GB+', 'description': 'GPU completa. 35-50 tok/sec. Roda Q8_0/FP16. A partir de US$5.499.' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'NVIDIA DGX Spark 128GB', 'description': 'GPU completa CUDA. 18-28 tok/sec. Roda Q8_0. US$4.699.' },
-          { '@type': 'ListItem', 'position': 6, 'name': 'NVIDIA RTX 4090 24GB + 32GB RAM', 'description': 'Layer offloading. 10-18 tok/sec. ~US$3.000-4.000 no total.' },
-          { '@type': 'ListItem', 'position': 7, 'name': 'NVIDIA RTX 4080 16GB + 32GB RAM', 'description': 'Offload parcial. 5-10 tok/sec.' },
-          { '@type': 'ListItem', 'position': 8, 'name': 'Somente CPU 64GB RAM', 'description': '1-3 tok/sec. Apenas processamento em lote.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Apple Mac mini M5 Pro 64GB', 'description': 'GPU completa. Sem benchmarks ainda. Novo, disponível 22 set. 2026. Opção nova mais barata, US$1.699.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Apple M5 Max MacBook Pro 64GB', 'description': 'GPU completa. 20-30 tok/sec. Melhor notebook. ~US$3.500.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Apple Mac Studio M5 Max 64GB', 'description': 'GPU completa. 22-32 tok/sec. Novo agosto 2026. US$2.499.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Apple Mac Studio M2 Ultra 64GB', 'description': 'GPU completa. 25-35 tok/sec. Melhor valor usado. ~US$2.000 recondicionado.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Apple Mac Studio M5 Ultra 256GB+', 'description': 'GPU completa. 35-50 tok/sec. Roda Q8_0/FP16. A partir de US$5.499.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'NVIDIA DGX Spark 128GB', 'description': 'GPU completa CUDA. 18-28 tok/sec. Roda Q8_0. US$4.699.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'NVIDIA RTX 4090 24GB + 32GB RAM', 'description': 'Layer offloading. 10-18 tok/sec. ~US$3.000-4.000 no total.' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'NVIDIA RTX 4080 16GB + 32GB RAM', 'description': 'Offload parcial. 5-10 tok/sec.' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'Somente CPU 64GB RAM', 'description': '1-3 tok/sec. Apenas processamento em lote.' },
         ],
       },
       faqSchema: {
@@ -1192,7 +1251,8 @@ schema: {
         '@type': 'FAQPage',
         'inLanguage': 'pt-BR',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Qual é o hardware mais barato que pode rodar um modelo 70B de forma utilizável?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Em agosto de 2026, um Mac Studio M2 Ultra usado (64 GB de memória unificada) por ~US$ 2.000 continua sendo o caminho mais econômico para inferência 70B a 25+ tok/s. O novo Mac Studio M5 Max (64 GB, US$ 2.499, lançado em agosto de 2026) é a máquina nova mais barata com GPU completa. Um desktop com NVIDIA RTX 4090 (24 GB VRAM + 32 GB RAM) custa ~US$ 3.000-4.000 no total, mas produz inferência mais lenta devido ao layer offloading.' } },
+          { '@type': 'Question', 'name': 'Qual é o hardware mais barato que pode rodar um modelo 70B de forma utilizável?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O Mac mini M5 Pro (US$ 1.699, 64 GB de memória unificada, disponível em 22 de setembro de 2026) está prestes a se tornar o hardware novo mais barato capaz de rodar um modelo 70B, US$ 800 abaixo da anterior opção nova mais barata, o Mac Studio M5 Max (64 GB, US$ 2.499). Um Mac Studio M2 Ultra usado (64 GB de memória unificada) por ~US$ 2.000 continua sendo o caminho usado mais econômico com desempenho comprovado de 25+ tok/s. Ainda não existem benchmarks independentes para o Mac mini M5 Pro. Um desktop com NVIDIA RTX 4090 (24 GB VRAM + 32 GB RAM) custa ~US$ 3.000-4.000 no total, mas produz inferência mais lenta devido ao layer offloading. Não confunda o Mac mini M5 Pro com o Mac mini M6 base (US$ 899) -- o M6 chega apenas a 32 GB de memória unificada e não roda um modelo 70B.' } },
+          { '@type': 'Question', 'name': 'O Mac mini M6 consegue rodar um modelo 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não. O Mac mini M6 (a partir de US$ 899) chega apenas a 32 GB de memória unificada e 170 GB/s de largura de banda -- bem abaixo dos 40+ GB que um modelo 70B exige em Q4_K_M. Para 70B em um Mac mini, peça o Mac mini M5 Pro (a partir de US$ 1.699, 64 GB de memória unificada, 307 GB/s de largura de banda, Thunderbolt 5). Ambos chegam em 22 de setembro de 2026, e ainda não existem benchmarks independentes para nenhum dos dois chips.' } },
           { '@type': 'Question', 'name': 'Posso rodar um modelo 70B em duas GPUs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim -- llama.cpp e Ollama suportam inferência multi-GPU em hardware NVIDIA. Duas RTX 4090 (48 GB de VRAM total) cabem um modelo 70B em Q4_K_M inteiramente na VRAM. O Ollama gerencia multi-GPU automaticamente quando várias GPUs estão presentes. O paralelismo de tensor no llama.cpp (`--tensor-split`) controla como as camadas são distribuídas.' } },
           { '@type': 'Question', 'name': 'Como a qualidade local 70B se compara ao GPT-5.5?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nos benchmarks MMLU e HumanEval, Llama 3.3 70B (82%, 88%) e Qwen3 72B (84%, 87%) igualam ou superam ligeiramente as pontuações do GPT-4 (2023). GPT-5.5 (2024) pontua mais alto em tarefas de raciocínio intensivo. Para seguimento geral de instruções, resumo e geração de código, os modelos locais 70B são competitivos com o GPT-5.5 na maioria das tarefas.' } },
           { '@type': 'Question', 'name': 'O Ollama suporta rodar modelos 70B automaticamente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim. Rodar `ollama run llama3.3:70b` baixa e executa o modelo com layer offloading automático de GPU. O Ollama detecta a VRAM disponível e a RAM do sistema, faz offloading de quantas camadas for possível para a GPU e roda o restante na CPU. Nenhuma configuração manual é necessária para uso básico.' } },
@@ -1246,6 +1306,7 @@ schema: {
       { '@type': 'Thing', 'name': 'Layer Offloading' },
       { '@type': 'Thing', 'name': 'NVIDIA GPU' },
       { '@type': 'Thing', 'name': 'Apple Silicon' },
+      { '@type': 'Thing', 'name': 'Apple Mac mini M5 Pro' },
     ],
     'mentions': [
       { '@type': 'SoftwareApplication', 'name': 'Ollama' },
@@ -1270,16 +1331,17 @@ schema: {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     'name': 'Hardware-Optionen für 70B Modelle',
-    'numberOfItems': 8,
+    'numberOfItems': 9,
     'itemListElement': [
-      { '@type': 'ListItem', 'position': 1, 'name': 'Apple M5 Max MacBook Pro (64 GB)', 'description': 'Kann 70B ausführen -- vollständig auf GPU, 20-30 tok/sec' },
-      { '@type': 'ListItem', 'position': 2, 'name': 'Apple Mac Studio M5 Max (64 GB)', 'description': 'Kann 70B ausführen -- vollständig auf GPU, 22-32 tok/sec. Neu August 2026, 2.499 $.' },
-      { '@type': 'ListItem', 'position': 3, 'name': 'Apple M2 Ultra (64 GB unified)', 'description': 'Kann 70B ausführen -- vollständig auf GPU, 25-35 tok/sec, gebraucht' },
-      { '@type': 'ListItem', 'position': 4, 'name': 'Apple Mac Studio M5 Ultra (256GB+)', 'description': 'Kann 70B ausführen -- vollständig auf GPU, 35-50 tok/sec. Ab 5.499 $.' },
-      { '@type': 'ListItem', 'position': 5, 'name': 'NVIDIA DGX Spark (128 GB unified)', 'description': 'Kann 70B ausführen -- vollständig auf GPU CUDA, 18-28 tok/sec. 4.699 $.' },
-      { '@type': 'ListItem', 'position': 6, 'name': 'NVIDIA RTX 4090 (24 GB) + 32 GB RAM', 'description': 'Kann 70B mit Offloading ausführen, 10-18 tok/sec' },
-      { '@type': 'ListItem', 'position': 7, 'name': 'NVIDIA RTX 4080 (16 GB) + 32 GB RAM', 'description': 'Partielles Offloading möglich, 5-10 tok/sec' },
-      { '@type': 'ListItem', 'position': 8, 'name': '64 GB RAM, nur CPU', 'description': 'Kann 70B ausführen, 1-3 tok/sec -- unpraktisch für interaktive Verwendung' },
+      { '@type': 'ListItem', 'position': 1, 'name': 'Apple Mac mini M5 Pro (64 GB)', 'description': 'Kann 70B ausführen -- vollständig auf GPU. Noch keine Benchmarks. Neu, ab 22. Sept. 2026, günstigste Neuoption, 1.699 $.' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Apple M5 Max MacBook Pro (64 GB)', 'description': 'Kann 70B ausführen -- vollständig auf GPU, 20-30 tok/sec' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'Apple Mac Studio M5 Max (64 GB)', 'description': 'Kann 70B ausführen -- vollständig auf GPU, 22-32 tok/sec. Neu August 2026, 2.499 $.' },
+      { '@type': 'ListItem', 'position': 4, 'name': 'Apple M2 Ultra (64 GB unified)', 'description': 'Kann 70B ausführen -- vollständig auf GPU, 25-35 tok/sec, gebraucht' },
+      { '@type': 'ListItem', 'position': 5, 'name': 'Apple Mac Studio M5 Ultra (256GB+)', 'description': 'Kann 70B ausführen -- vollständig auf GPU, 35-50 tok/sec. Ab 5.499 $.' },
+      { '@type': 'ListItem', 'position': 6, 'name': 'NVIDIA DGX Spark (128 GB unified)', 'description': 'Kann 70B ausführen -- vollständig auf GPU CUDA, 18-28 tok/sec. 4.699 $.' },
+      { '@type': 'ListItem', 'position': 7, 'name': 'NVIDIA RTX 4090 (24 GB) + 32 GB RAM', 'description': 'Kann 70B mit Offloading ausführen, 10-18 tok/sec' },
+      { '@type': 'ListItem', 'position': 8, 'name': 'NVIDIA RTX 4080 (16 GB) + 32 GB RAM', 'description': 'Partielles Offloading möglich, 5-10 tok/sec' },
+      { '@type': 'ListItem', 'position': 9, 'name': '64 GB RAM, nur CPU', 'description': 'Kann 70B ausführen, 1-3 tok/sec -- unpraktisch für interaktive Verwendung' },
     ],
   },
   faqSchema: {
@@ -1291,7 +1353,15 @@ schema: {
         'name': 'Was ist die billigste Hardware, auf der ein 70B Modell praktisch ausführbar ist?',
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': 'Stand August 2026 ist ein gebrauchter Mac Studio M2 Ultra (64 GB unified memory) für etwa 2.000 € weiterhin der günstigste Weg zu 70B Inferenz mit 25+ tok/sec. Der neue Mac Studio M5 Max (64 GB, 2.499 $, August 2026) ist die günstigste neue Option mit vollständiger GPU. Ein NVIDIA RTX 4090 Desktop-Setup (24 GB VRAM + 32 GB RAM) kostet etwa 3.000-4.000 € insgesamt, erzeugt aber langsamere Inferenz wegen Layer Offloading.',
+          'text': 'Der Mac mini M5 Pro (1.699 $, 64 GB unified memory, ab 22. September 2026 verfügbar) wird voraussichtlich die günstigste neue Hardware sein, die ein 70B Modell ausführen kann -- 800 $ günstiger als die bisherige günstigste Neuoption, der Mac Studio M5 Max (64 GB, 2.499 $). Ein gebrauchter Mac Studio M2 Ultra (64 GB unified memory) für etwa 2.000 € bleibt der günstigste gebrauchte Weg mit bewährten 25+ tok/sec. Für den Mac mini M5 Pro liegen noch keine unabhängigen Benchmarks vor. Ein NVIDIA RTX 4090 Desktop-Setup (24 GB VRAM + 32 GB RAM) kostet etwa 3.000-4.000 € insgesamt, erzeugt aber langsamere Inferenz wegen Layer Offloading. Verwechsle den Mac mini M5 Pro nicht mit dem Basis-Mac mini M6 (899 $) -- der M6 hat maximal 32 GB unified memory und kann kein 70B Modell ausführen.',
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Kann der Mac mini M6 ein 70B Modell ausführen?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Nein. Der Mac mini M6 (ab 899 $) hat maximal 32 GB unified memory und 170 GB/s Bandbreite -- deutlich weniger als die 40+ GB, die ein 70B Modell bei Q4_K_M benötigt. Für 70B auf einem Mac mini bestelle den Mac mini M5 Pro (ab 1.699 $, 64 GB unified memory, 307 GB/s Bandbreite, Thunderbolt 5). Beide sind ab dem 22. September 2026 verfügbar, und für keinen der beiden Chips liegen bisher unabhängige Benchmarks vor.',
         }
       },
       {
@@ -1375,6 +1445,7 @@ schema: {
       isTldr: true,
       items: [
         'Q4_K_M Quantisierung: Llama 3.3 70B benötigt etwa 40 GB RAM; Qwen3 72B benötigt etwa 43 GB RAM.',
+        '**Günstigste neue Hardware**: Apple Mac mini M5 Pro (64 GB, 1.699 $, ab 22. Sept. 2026) ist die günstigste neue Apple-Silicon-Option mit vollständiger GPU für 70B. Der Basis-Mac mini M6 (899 $) hat maximal 32 GB und kann kein 70B Modell ausführen.',
         '**Einfachste Consumer Hardware**: Apple Mac Studio M2 Ultra (64 GB unified) oder M5 Max MacBook Pro (64 GB) -- vollständige GPU Beschleunigung, kein Layer Offloading erforderlich.',
         '**NVIDIA Option**: RTX 4090 (24 GB VRAM) + 32 GB System RAM mit Layer Offloading in Ollama bewältigt die meisten 70B Modelle, obwohl 20-30% der Layers auf der CPU laufen.',
         '**CPU-only 70B**: möglich auf 64 GB RAM, erzeugt aber 1-3 tok/sec -- marginal nutzbar für Batch-Aufgaben, nicht für interaktiven Chat.',
@@ -1390,7 +1461,9 @@ schema: {
       imageCaption: 'Hardware comparison: Apple Silicon M5 Max achieves 25-35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10-18 tok/sec, and CPU-only 70B inference produces just 1-3 tok/sec.',
       rows: [
         { 'Hardware': 'Apple M5 Max MacBook Pro (64 GB)', 'Kann 70B ausführen?': 'Ja -- vollständig GPU', 'Speed (70B Q4)': '20-30 tok/sec', 'Notizen': 'Beste Consumer Laptop Option' },
-        { 'Hardware': 'Apple Mac Studio M5 Max (64 GB)', 'Kann 70B ausführen?': 'Ja -- vollständig GPU', 'Speed (70B Q4)': '22-32 tok/sec', 'Notizen': 'Neu August 2026, 2.499 $ -- günstigste Neuoption' },
+        { 'Hardware': 'Apple Mac Studio M5 Max (64 GB)', 'Kann 70B ausführen?': 'Ja -- vollständig GPU', 'Speed (70B Q4)': '22-32 tok/sec', 'Notizen': 'Neu August 2026, 2.499 $' },
+        { 'Hardware': 'Apple Mac mini M5 Pro (64 GB)', 'Kann 70B ausführen?': 'Ja -- vollständig GPU', 'Speed (70B Q4)': 'Noch keine Benchmarks', 'Notizen': 'Neu, ab 22. Sept. 2026, 1.699 $ -- günstigste Neuoption' },
+        { 'Hardware': 'Apple Mac mini M6 (max. 32 GB)', 'Kann 70B ausführen?': 'Nein -- max. 32 GB', 'Speed (70B Q4)': 'Nicht möglich', 'Notizen': 'Neu, ab 22. Sept. 2026, 899 $ -- zu wenig Speicher für 70B' },
         { 'Hardware': 'Apple M2 Ultra (64 GB unified)', 'Kann 70B ausführen?': 'Ja -- vollständig GPU', 'Speed (70B Q4)': '25-35 tok/sec', 'Notizen': 'Mac Studio Basis-Config, gebraucht/refurbished' },
         { 'Hardware': 'Apple Mac Studio M5 Ultra (256GB+)', 'Kann 70B ausführen?': 'Ja -- vollständig GPU', 'Speed (70B Q4)': '35-50 tok/sec', 'Notizen': 'Neu August 2026, ab 5.499 $. Läuft Q8_0/FP16 mit Platz übrig.' },
         { 'Hardware': 'NVIDIA DGX Spark (128 GB unified)', 'Kann 70B ausführen?': 'Ja -- vollständig GPU', 'Speed (70B Q4)': '18-28 tok/sec', 'Notizen': 'Q8_0 passt (70 GB). Am besten für CUDA-Workflows.' },
@@ -1419,7 +1492,8 @@ schema: {
       content: [
         '**Apple Silicon nutzt unified memory -- die CPU und GPU teilen denselben physikalischen Speicherpool.** Ein M5 Max MacBook Pro mit 64 GB unified memory kann ein 70B Modell bei Q4_K_M vollständig auf der GPU ausführen, erreicht 20-30 tok/sec ohne Layer Offloading Overhead.',
         'Bei NVIDIA Hardware sind GPU und System RAM getrennt. Eine 24 GB VRAM GPU kann nur etwa 60% eines Q4_K_M 70B Modells halten; die verbleibenden Layers laufen auf der CPU, schaffen einen Memory Bandwidth Engpass, der die Geschwindigkeit auf 10-18 tok/sec reduziert.',
-        'Stand August 2026 ist ein gebrauchter Mac Studio M2 Ultra (64 GB, etwa 2.000 € gebraucht) weiterhin der kostengünstigste Weg zu 70B lokaler Inferenz mit praktischer Geschwindigkeit. Apple hat im August 2026 eine neue Mac-Studio-Reihe mit M5-Max- und M5-Ultra-Chips vorgestellt: der neue Mac Studio M5 Max (64 GB, 2.499 $) ist jetzt die günstigste neue Option mit vollständiger GPU, und der Mac Studio M5 Ultra (256 GB oder 512 GB, ab 5.499 $) verdoppelt die Speicherbandbreite auf 1,2 TB/s und führt 70B-Modelle komfortabel in Q8_0 oder FP16 ohne Qualitätseinbußen aus.',
+        'Stand August 2026 ist ein gebrauchter Mac Studio M2 Ultra (64 GB, etwa 2.000 € gebraucht) weiterhin der kostengünstigste gebrauchte Weg zu 70B lokaler Inferenz mit praktischer Geschwindigkeit. Apple hat im August 2026 eine neue Mac-Studio-Reihe mit M5-Max- und M5-Ultra-Chips vorgestellt: der neue Mac Studio M5 Max (64 GB, 2.499 $) ist eine neue Option mit vollständiger GPU, und der Mac Studio M5 Ultra (256 GB oder 512 GB, ab 5.499 $) verdoppelt die Speicherbandbreite auf 1,2 TB/s und führt 70B-Modelle komfortabel in Q8_0 oder FP16 ohne Qualitätseinbußen aus.',
+        '**Apple hat den Mac mini am 25. August 2026 aufgefrischt, verfügbar ab 22. September 2026, und das ändert erneut die günstigste Neuoption.** Der Mac mini M5 Pro (ab 1.699 $) hat maximal 64 GB unified memory mit 307 GB/s Bandbreite und Thunderbolt 5 -- genug, um ein 70B Modell bei Q4_K_M vollständig auf der GPU auszuführen, und 800 $ günstiger als der Mac Studio M5 Max. Der Basis-Mac mini M6 (ab 899 $) ist eine andere Maschine: Er hat maximal 32 GB unified memory und 170 GB/s Bandbreite, deutlich weniger als die 40+ GB, die ein 70B Modell benötigt, weshalb er auf keiner Quantisierungsstufe ein 70B Modell ausführen kann. Für keinen der beiden Chips liegen bisher unabhängige Benchmarks vor -- beide sind ab dem 22. September 2026 verfügbar.',
       ],
     },
     dgxSpark: {
@@ -1478,6 +1552,7 @@ schema: {
         '**Unterschätzung des VRAM-Bedarfs**: Eine GPU mit weniger als 24 GB VRAM ist zu klein. Eine RTX 4070 Ti (12 GB VRAM) kann nur etwa 30% eines Q4_K_M 70B Modells in VRAM halten. Der Rest lauft auf der CPU, was zu 3-5 tok/sec führt -- kaum schneller als reine CPU-Inferenz.',
         '**Layer Offloading nicht aktiviert**: Standardmäßig fällt Ollama zur reinen CPU-Inferenz zurück, wenn ein 70B Modell nicht vollständig in VRAM passt. Setze GPU Layers explizit mit `OLLAMA_GPU_LAYERS=999` -- Ollama verlagert dann so viele Layers wie möglich zu GPU, was erheblich schneller ist.',
         '**Falsche Quantisierungs-Auswahl**: Bei Maschinen mit 32-40 GB RAM kann Q4_K_M für ein 70B Modell zu eng sein (zu wenig Headroom für das OS). Q3_K_S reduziert RAM auf etwa 30 GB mit moderatem Qualitätsverlust. Führe `ollama ps` aus -- wenn Du Swap-Nutzung siehst, wechsle zu Q3_K_S.',
+        '**Basis-Mac mini M6 kaufen und ein 70B Modell erwarten**: Der Mac mini M6 (899 $) hat maximal 32 GB unified memory -- deutlich weniger als die 40+ GB, die ein 70B Modell bei Q4_K_M benötigt. Für 70B auf einem Mac mini ist der Mac mini M5 Pro (1.699 $, 64 GB unified memory) die erforderliche Stufe -- prüfe vor dem Kauf "M5 Pro" und 64 GB, nicht den Basis-M6.',
       ],
     },
     faqSection: {
@@ -1486,7 +1561,11 @@ schema: {
       faqs: [
         {
           q: 'Was ist die billigste Hardware, auf der ein 70B Modell praktisch brauchbar ist?',
-          a: 'Stand August 2026 ist ein gebrauchter Mac Studio M2 Ultra (64 GB unified memory) für etwa 2.000 € weiterhin der günstigste Weg zu 70B Inferenz mit 25+ tok/sec. Der neue Mac Studio M5 Max (64 GB, 2.499 $, August 2026) ist die günstigste neue Option mit vollständiger GPU. Ein NVIDIA RTX 4090 Desktop-Setup (24 GB VRAM + 32 GB RAM) kostet etwa 3.000-4.000 € insgesamt, erzeugt aber wegen Layer Offloading langsamere Inferenz.',
+          a: 'Der Mac mini M5 Pro (1.699 $, 64 GB unified memory, ab 22. September 2026 verfügbar) wird voraussichtlich die günstigste neue Hardware sein, die ein 70B Modell ausführen kann -- 800 $ günstiger als die bisherige günstigste Neuoption, der Mac Studio M5 Max (64 GB, 2.499 $). Ein gebrauchter Mac Studio M2 Ultra (64 GB unified memory) für etwa 2.000 € bleibt der günstigste gebrauchte Weg mit bewährten 25+ tok/sec. Für den Mac mini M5 Pro liegen noch keine unabhängigen Benchmarks vor. Ein NVIDIA RTX 4090 Desktop-Setup (24 GB VRAM + 32 GB RAM) kostet etwa 3.000-4.000 € insgesamt, erzeugt aber wegen Layer Offloading langsamere Inferenz. Verwechsle den Mac mini M5 Pro nicht mit dem Basis-Mac mini M6 (899 $) -- der M6 hat maximal 32 GB unified memory und kann kein 70B Modell ausführen.',
+        },
+        {
+          q: 'Kann der Mac mini M6 ein 70B Modell ausführen?',
+          a: 'Nein. Der Mac mini M6 (ab 899 $) hat maximal 32 GB unified memory und 170 GB/s Bandbreite -- deutlich weniger als die 40+ GB, die ein 70B Modell bei Q4_K_M benötigt. Für 70B auf einem Mac mini bestelle den Mac mini M5 Pro (ab 1.699 $, 64 GB unified memory, 307 GB/s Bandbreite, Thunderbolt 5). Beide sind ab dem 22. September 2026 verfügbar, und für keinen der beiden Chips liegen bisher unabhängige Benchmarks vor.',
         },
         {
           q: 'Kann ich ein 70B Modell auf zwei GPUs ausführen?',
@@ -1569,6 +1648,7 @@ schema: {
       isTldr: true,
       items: [
         'Quantification Q4_K_M : Llama 3.3 70B nécessite ~40 Go RAM ; Qwen3 72B nécessite ~43 Go RAM.',
+        '**Matériel neuf le moins cher** : Mac mini M5 Pro (64 Go, 1 699 $, disponible le 22 sept. 2026) est l\'option neuve la moins chère avec GPU complet pour 70B. Le Mac mini M6 de base (899 $) plafonne à 32 Go et ne peut pas exécuter un modèle 70B.',
         '**Matériel grand public le plus facile** : Mac Studio M2 Ultra (64 Go unifiée) ou MacBook Pro M5 Max 64 Go -- accélération GPU complète, pas de déchargement nécessaire.',
         '**Option NVIDIA** : RTX 4090 (24 Go VRAM) + 32 Go RAM système avec déchargement de couches dans Ollama. Environ 20-30 % des couches s\'exécutent sur CPU.',
         '**70B sur CPU uniquement** : possible sur 64 Go RAM, mais produit 1-3 tok/sec -- à peine utilisable pour les tâches batch, pas pour le chat interactif.',
@@ -1584,7 +1664,9 @@ schema: {
       imageCaption: 'Hardware comparison: Apple Silicon M5 Max achieves 25-35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10-18 tok/sec, and CPU-only 70B inference produces just 1-3 tok/sec.',
       rows: [
         { 'Matériel': 'Apple M5 Max MacBook Pro (64 Go)', 'Peut exécuter 70B ?': 'Oui -- GPU complet', 'Vitesse (70B Q4)': '20-30 tok/sec', 'Notes': 'Meilleure option laptop grand public' },
-        { 'Matériel': 'Apple Mac Studio M5 Max (64 Go)', 'Peut exécuter 70B ?': 'Oui -- GPU complet', 'Vitesse (70B Q4)': '22-32 tok/sec', 'Notes': 'Nouveau août 2026, 2 499 $ -- option neuve la moins chère' },
+        { 'Matériel': 'Apple Mac Studio M5 Max (64 Go)', 'Peut exécuter 70B ?': 'Oui -- GPU complet', 'Vitesse (70B Q4)': '22-32 tok/sec', 'Notes': 'Nouveau août 2026, 2 499 $' },
+        { 'Matériel': 'Apple Mac mini M5 Pro (64 Go)', 'Peut exécuter 70B ?': 'Oui -- GPU complet', 'Vitesse (70B Q4)': 'Pas encore de benchmarks', 'Notes': 'Nouveau, dispo 22 sept. 2026, 1 699 $ -- option neuve la moins chère' },
+        { 'Matériel': 'Apple Mac mini M6 (32 Go max.)', 'Peut exécuter 70B ?': 'Non -- 32 Go max.', 'Vitesse (70B Q4)': 'N/D', 'Notes': 'Nouveau, dispo 22 sept. 2026, 899 $ -- mémoire insuffisante pour 70B' },
         { 'Matériel': 'Apple M2 Ultra (64 Go unifiée)', 'Peut exécuter 70B ?': 'Oui -- GPU complet', 'Vitesse (70B Q4)': '25-35 tok/sec', 'Notes': 'Configuration de base Mac Studio, occasion' },
         { 'Matériel': 'Apple Mac Studio M5 Ultra (256Go+)', 'Peut exécuter 70B ?': 'Oui -- GPU complet', 'Vitesse (70B Q4)': '35-50 tok/sec', 'Notes': 'Nouveau août 2026, à partir de 5 499 $. Exécute Q8_0/FP16 avec marge.' },
         { 'Matériel': 'NVIDIA DGX Spark (128 Go unifiée)', 'Peut exécuter 70B ?': 'Oui -- GPU complet', 'Vitesse (70B Q4)': '18-28 tok/sec', 'Notes': 'Q8_0 tient (70 Go). Idéal pour flux CUDA.' },
@@ -1613,7 +1695,8 @@ schema: {
       content: [
         '**Apple Silicon utilise la mémoire unifiée -- le CPU et le GPU partagent le même pool mémoire physique.** Un MacBook Pro M5 Max avec 64 Go de mémoire unifiée peut exécuter un modèle 70B en Q4_K_M entièrement sur GPU, atteignant 20-30 tok/sec sans surcharge de déchargement de couches.',
         'Sur le matériel NVIDIA, le GPU et la RAM système sont séparés. Un GPU VRAM 24 Go ne peut contenir que ~60 % d\'un modèle 70B Q4_K_M ; les couches restantes s\'exécutent sur CPU, créant un goulot d\'étranglement de bande passante mémoire qui réduit la vitesse à 10-18 tok/sec.',
-        'En août 2026, un Mac Studio M2 Ultra d\'occasion (64 Go, ~2 000 euros) reste le chemin le plus rentable vers une inférence 70B locale à vitesse utilisable. Apple a lancé une nouvelle gamme Mac Studio avec les puces M5 Max et M5 Ultra en août 2026 : le nouveau Mac Studio M5 Max (64 Go, 2 499 $) est désormais l\'option neuve la moins chère avec GPU complet, et le Mac Studio M5 Ultra (256 Go ou 512 Go, à partir de 5 499 $) double la bande passante mémoire unifiée à 1,2 To/s, exécutant les modèles 70B en Q8_0 ou FP16 sans compromis de qualité.',
+        'En août 2026, un Mac Studio M2 Ultra d\'occasion (64 Go, ~2 000 euros) reste le chemin d\'occasion le plus rentable vers une inférence 70B locale à vitesse utilisable. Apple a lancé une nouvelle gamme Mac Studio avec les puces M5 Max et M5 Ultra en août 2026 : le nouveau Mac Studio M5 Max (64 Go, 2 499 $) est une option neuve avec GPU complet, et le Mac Studio M5 Ultra (256 Go ou 512 Go, à partir de 5 499 $) double la bande passante mémoire unifiée à 1,2 To/s, exécutant les modèles 70B en Q8_0 ou FP16 sans compromis de qualité.',
+        '**Apple a renouvelé le Mac mini le 25 août 2026, disponible le 22 septembre 2026, ce qui change à nouveau quelle est l\'option neuve la moins chère.** Le Mac mini M5 Pro (à partir de 1 699 $) atteint 64 Go de mémoire unifiée avec 307 Go/s de bande passante et Thunderbolt 5 -- suffisant pour exécuter un modèle 70B en Q4_K_M entièrement sur GPU, et 800 $ moins cher que le Mac Studio M5 Max. Le Mac mini M6 de base (à partir de 899 $) est une machine différente : il plafonne à 32 Go de mémoire unifiée et 170 Go/s de bande passante, bien en dessous des 40+ Go dont un modèle 70B a besoin, il ne peut donc exécuter un modèle 70B à aucun niveau de quantification. Aucun benchmark indépendant n\'existe encore pour l\'une ou l\'autre puce -- toutes deux sont disponibles le 22 septembre 2026.',
       ],
     },
     dgxSpark: {
@@ -1681,6 +1764,10 @@ schema: {
           q: 'Utiliser Q4_K_M quand Q3_K_S conviendrait mieux au matériel disponible',
           a: 'Sur les machines avec 32-40 Go RAM, Q4_K_M pour un modèle 70B peut être trop serré (laissant une marge insuffisante pour l\'OS). Q3_K_S réduit la RAM à ~30 Go avec une perte de qualité modérée. Exécutez `ollama ps` après avoir chargé le modèle -- si vous voyez l\'usage swap, passez à Q3_K_S.',
         },
+        {
+          q: 'Acheter le Mac mini M6 de base en s\'attendant à ce qu\'il exécute un modèle 70B',
+          a: 'Le Mac mini M6 (899 $) plafonne à 32 Go de mémoire unifiée -- bien en dessous des 40+ Go dont un modèle 70B a besoin en Q4_K_M. Il ne peut exécuter un modèle 70B à aucun niveau de quantification. Pour 70B sur un Mac mini, la version requise est le Mac mini M5 Pro (1 699 $, 64 Go de mémoire unifiée) -- vérifiez « M5 Pro » et 64 Go avant de commander, pas le M6 de base.',
+        },
       ],
     },
     faqSection: {
@@ -1689,7 +1776,11 @@ schema: {
       faqs: [
         {
           q: 'Quel est le matériel le moins cher qui peut exécuter un modèle 70B de manière utilisable ?',
-          a: 'En août 2026, un Mac Studio M2 Ultra d\'occasion (64 Go mémoire unifiée) à ~2 000 euros reste le chemin le moins cher vers une inférence 70B à 25+ tok/sec. Le nouveau Mac Studio M5 Max (64 Go, 2 499 $, lancé en août 2026) est désormais la machine neuve la moins chère avec GPU complet, moins cher que le MacBook Pro M5 Max (~3 500 euros). Un assemblage de bureau NVIDIA RTX 4090 (24 Go VRAM + 32 Go RAM) coûte ~3 000-4 000 euros mais produit une inférence plus lente en raison du déchargement de couches.',
+          a: 'Le Mac mini M5 Pro (1 699 $, 64 Go de mémoire unifiée, disponible le 22 septembre 2026) devrait devenir le matériel neuf le moins cher capable d\'exécuter un modèle 70B, 800 $ de moins que l\'ancienne option neuve la moins chère, le Mac Studio M5 Max (64 Go, 2 499 $). Un Mac Studio M2 Ultra d\'occasion (64 Go mémoire unifiée) à ~2 000 euros reste le chemin d\'occasion le moins cher avec des performances éprouvées de 25+ tok/sec. Aucun benchmark indépendant n\'existe encore pour le Mac mini M5 Pro. Un assemblage de bureau NVIDIA RTX 4090 (24 Go VRAM + 32 Go RAM) coûte ~3 000-4 000 euros mais produit une inférence plus lente en raison du déchargement de couches. Ne confondez pas le Mac mini M5 Pro avec le Mac mini M6 de base (899 $) -- le M6 plafonne à 32 Go de mémoire unifiée et ne peut pas exécuter un modèle 70B.',
+        },
+        {
+          q: 'Le Mac mini M6 peut-il exécuter un modèle 70B ?',
+          a: 'Non. Le Mac mini M6 (à partir de 899 $) plafonne à 32 Go de mémoire unifiée et 170 Go/s de bande passante -- bien en dessous des 40+ Go qu\'exige un modèle 70B en Q4_K_M. Pour 70B sur un Mac mini, commandez le Mac mini M5 Pro (à partir de 1 699 $, 64 Go de mémoire unifiée, 307 Go/s de bande passante, Thunderbolt 5). Les deux sont disponibles le 22 septembre 2026, et aucun benchmark indépendant n\'existe encore pour l\'une ou l\'autre puce.',
         },
         {
           q: 'Puis-je exécuter un modèle 70B sur deux GPU ?',
@@ -1749,6 +1840,7 @@ schema: {
         { '@type': 'Thing', 'name': 'Déchargement de couches' },
         { '@type': 'Thing', 'name': 'GPU NVIDIA' },
         { '@type': 'Thing', 'name': 'Apple Silicon' },
+        { '@type': 'Thing', 'name': 'Apple Mac mini M5 Pro' },
       ],
       mentions: [
         { '@type': 'SoftwareApplication', 'name': 'Ollama' },
@@ -1772,16 +1864,17 @@ schema: {
       '@type': 'ItemList',
       inLanguage: 'fr',
       name: 'Options matérielles pour exécuter des modèles 70B',
-      numberOfItems: 8,
+      numberOfItems: 9,
       itemListElement: [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Apple M5 Max MacBook Pro (64 Go)', 'description': 'Peut exécuter 70B -- GPU complet, 20-30 tok/sec' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Apple Mac Studio M5 Max (64 Go)', 'description': 'Peut exécuter 70B -- GPU complet, 22-32 tok/sec. Nouveau août 2026, 2 499 $.' },
-        { '@type': 'ListItem', 'position': 3, 'name': 'Apple M2 Ultra (64 Go unifiée)', 'description': 'Peut exécuter 70B -- GPU complet, 25-35 tok/sec, occasion' },
-        { '@type': 'ListItem', 'position': 4, 'name': 'Apple Mac Studio M5 Ultra (256Go+)', 'description': 'Peut exécuter 70B -- GPU complet, 35-50 tok/sec. À partir de 5 499 $.' },
-        { '@type': 'ListItem', 'position': 5, 'name': 'NVIDIA DGX Spark (128 Go unifiée)', 'description': 'Peut exécuter 70B -- GPU complet CUDA, 18-28 tok/sec. 4 699 $.' },
-        { '@type': 'ListItem', 'position': 6, 'name': 'NVIDIA RTX 4090 (24 Go) + 32 Go RAM', 'description': 'Peut exécuter 70B avec déchargement, 10-18 tok/sec' },
-        { '@type': 'ListItem', 'position': 7, 'name': 'NVIDIA RTX 4080 (16 Go) + 32 Go RAM', 'description': 'Déchargement partiel uniquement, 5-10 tok/sec' },
-        { '@type': 'ListItem', 'position': 8, 'name': '64 Go RAM, CPU seul', 'description': 'Peut exécuter 70B, 1-3 tok/sec -- impratique pour usage interactif' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Apple Mac mini M5 Pro (64 Go)', 'description': 'Peut exécuter 70B -- GPU complet. Pas encore de benchmarks. Nouveau, dispo 22 sept. 2026. Option neuve la moins chère, 1 699 $.' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Apple M5 Max MacBook Pro (64 Go)', 'description': 'Peut exécuter 70B -- GPU complet, 20-30 tok/sec' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Apple Mac Studio M5 Max (64 Go)', 'description': 'Peut exécuter 70B -- GPU complet, 22-32 tok/sec. Nouveau août 2026, 2 499 $.' },
+        { '@type': 'ListItem', 'position': 4, 'name': 'Apple M2 Ultra (64 Go unifiée)', 'description': 'Peut exécuter 70B -- GPU complet, 25-35 tok/sec, occasion' },
+        { '@type': 'ListItem', 'position': 5, 'name': 'Apple Mac Studio M5 Ultra (256Go+)', 'description': 'Peut exécuter 70B -- GPU complet, 35-50 tok/sec. À partir de 5 499 $.' },
+        { '@type': 'ListItem', 'position': 6, 'name': 'NVIDIA DGX Spark (128 Go unifiée)', 'description': 'Peut exécuter 70B -- GPU complet CUDA, 18-28 tok/sec. 4 699 $.' },
+        { '@type': 'ListItem', 'position': 7, 'name': 'NVIDIA RTX 4090 (24 Go) + 32 Go RAM', 'description': 'Peut exécuter 70B avec déchargement, 10-18 tok/sec' },
+        { '@type': 'ListItem', 'position': 8, 'name': 'NVIDIA RTX 4080 (16 Go) + 32 Go RAM', 'description': 'Déchargement partiel uniquement, 5-10 tok/sec' },
+        { '@type': 'ListItem', 'position': 9, 'name': '64 Go RAM, CPU seul', 'description': 'Peut exécuter 70B, 1-3 tok/sec -- impratique pour usage interactif' },
       ],
     },
 },
@@ -1825,6 +1918,7 @@ schema: {
       { '@type': 'Thing', name: 'Qwen3 72B' },
       { '@type': 'Thing', name: 'Apple M5 Max' },
       { '@type': 'Thing', name: 'NVIDIA RTX 4090' },
+      { '@type': 'Thing', name: 'Apple Mac mini M5 Pro' },
     ],
   },
   howToSchema: {
@@ -1843,29 +1937,31 @@ schema: {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: '70Bローカルモデル推論向けコンシューマーハードウェア 2026',
-    numberOfItems: 8,
+    numberOfItems: 9,
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Apple M5 Max MacBook Pro 64GB', description: '完全GPU。20-30 tok/sec。最良のノートPC。約3,500ドル。' },
-      { '@type': 'ListItem', position: 2, name: 'Apple Mac Studio M5 Max 64GB', description: '完全GPU。22-32 tok/sec。2026年8月新発売。$2,499。' },
-      { '@type': 'ListItem', position: 3, name: 'Apple Mac Studio M2 Ultra 64GB', description: '完全GPU。25-35 tok/sec。最良の中古コストパフォーマンス。中古約2,000ドル。' },
-      { '@type': 'ListItem', position: 4, name: 'Apple Mac Studio M5 Ultra 256GB+', description: '完全GPU。35-50 tok/sec。Q8_0/FP16を実行可能。$5,499から。' },
-      { '@type': 'ListItem', position: 5, name: 'NVIDIA DGX Spark 128GB', description: '完全GPU CUDA。18-28 tok/sec。Q8_0を実行可能。4,699ドル。' },
-      { '@type': 'ListItem', position: 6, name: 'NVIDIA RTX 4090 24GB + 32GB RAM', description: 'レイヤーオフロード。10-18 tok/sec。総額約3,000～4,000ドル。' },
-      { '@type': 'ListItem', position: 7, name: 'NVIDIA RTX 4080 16GB + 32GB RAM', description: '部分オフロード。5-10 tok/sec。' },
-      { '@type': 'ListItem', position: 8, name: 'CPU専用 64GB RAM', description: '1-3 tok/sec。バッチ処理のみ。' },
+      { '@type': 'ListItem', position: 1, name: 'Apple Mac mini M5 Pro 64GB', description: '完全GPU。ベンチマーク未実施。2026年9月22日発売、最も安価な新品オプション、$1,699。' },
+      { '@type': 'ListItem', position: 2, name: 'Apple M5 Max MacBook Pro 64GB', description: '完全GPU。20-30 tok/sec。最良のノートPC。約3,500ドル。' },
+      { '@type': 'ListItem', position: 3, name: 'Apple Mac Studio M5 Max 64GB', description: '完全GPU。22-32 tok/sec。2026年8月新発売。$2,499。' },
+      { '@type': 'ListItem', position: 4, name: 'Apple Mac Studio M2 Ultra 64GB', description: '完全GPU。25-35 tok/sec。最良の中古コストパフォーマンス。中古約2,000ドル。' },
+      { '@type': 'ListItem', position: 5, name: 'Apple Mac Studio M5 Ultra 256GB+', description: '完全GPU。35-50 tok/sec。Q8_0/FP16を実行可能。$5,499から。' },
+      { '@type': 'ListItem', position: 6, name: 'NVIDIA DGX Spark 128GB', description: '完全GPU CUDA。18-28 tok/sec。Q8_0を実行可能。4,699ドル。' },
+      { '@type': 'ListItem', position: 7, name: 'NVIDIA RTX 4090 24GB + 32GB RAM', description: 'レイヤーオフロード。10-18 tok/sec。総額約3,000～4,000ドル。' },
+      { '@type': 'ListItem', position: 8, name: 'NVIDIA RTX 4080 16GB + 32GB RAM', description: '部分オフロード。5-10 tok/sec。' },
+      { '@type': 'ListItem', position: 9, name: 'CPU専用 64GB RAM', description: '1-3 tok/sec。バッチ処理のみ。' },
     ],
   },
   faqSchema: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: '70Bモデルを実行するには最小限のハードウェアは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '2026年8月時点でも、使用可能で実用的な最小限は64GB統合メモリを備えたApple M5 Max MacBook Pro（または新しいMac Studio M5 Max）、またはレイヤーオフロード機能を備えたNVIDIA RTX 4090（24GB VRAM）+ 32GB システムRAMです。CPU専用70B推論は技術的には可能（64GB RAM）ですが、1～3 tok/secしか生成しないため、対話的な使用には現実的ではありません。' } },
+      { '@type': 'Question', name: '70Bモデルを実行するには最小限のハードウェアは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '2026年8月時点でも、使用可能で実用的な最小限は64GB統合メモリを備えたApple M5 Max MacBook Pro（または新しいMac Studio M5 Max、あるいは9月22日発売のMac mini M5 Pro）、またはレイヤーオフロード機能を備えたNVIDIA RTX 4090（24GB VRAM）+ 32GB システムRAMです。CPU専用70B推論は技術的には可能（64GB RAM）ですが、1～3 tok/secしか生成しないため、対話的な使用には現実的ではありません。' } },
+      { '@type': 'Question', name: 'Mac mini M6 は70Bモデルを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。Mac mini M6（$899から）は最大32GB統合メモリと170GB/秒の帯域幅までで、Q4_K_M量化の70Bモデルに必要な40GB以上には遠く及びません。Mac miniで70Bを実行するには、代わりにMac mini M5 Pro（$1,699から、64GB統合メモリ、307GB/秒帯域幅、Thunderbolt 5）を注文してください。両機種とも2026年9月22日発売で、いずれのチップについても独立したベンチマークはまだ存在しません。' } },
       { '@type': 'Question', name: 'Apple SiliconとNVIDIA GPUで70Bモデルを実行する場合、なぜ速度に違いがあるのですか？', acceptedAnswer: { '@type': 'Answer', text: 'Apple Siliconは統合メモリを使用します。CPU と GPU は同じ物理メモリプールを共有するため、メモリ帯域幅の制限がありません。NVIDIA GPUは独立したVRAMを持つため、24GBのVRAMには70Bモデルの約60％しか格納できず、残りのレイヤーはCPU上で実行され、メモリ帯域幅のボトルネックが生じます。' } },
       { '@type': 'Question', name: 'RTX 4090で70Bモデルを完全に実行できますか？', acceptedAnswer: { '@type': 'Answer', text: '直接ではありません。RTX 4090は24GB VRAMで、Q4_K_Mで量化された70Bモデルには約40～43GBが必要です。Ollamaまたはllama.cppのレイヤーオフロード機能を使用して、約60％のレイヤーをGPU上で実行し、残りの40％をシステムRAM上で実行できます。これにより10～18 tok/secが得られます。' } },
       { '@type': 'Question', name: '「レイヤーオフロード」とは正確には何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'レイヤーオフロード（層オフロード）は、LLMの計算レイヤーを GPU VRAM とシステムRAMに分割する手法です。VRAMに格納されたレイヤーはGPU速度で実行され、システムRAMのレイヤーはCPU速度で実行されます。Ollamaで自動的に処理されます：OLLAMA_GPU_LAYERS=999 を設定すると、VRAMに収まるだけ多くのレイヤーをオフロードします。' } },
       { '@type': 'Question', name: 'CPU専用で70Bモデルを実行することは実際に可能ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、64GB RAMを備えたハイコアCPU（AMD Threadripper、Intel Xeon）では可能ですが、1～3 tok/secしか生成しません。200語の応答は約75秒かかります。バッチ処理（文書の要約、レポート生成）には使用できますが、対話的なチャットには不適切です。対話的な使用には最低8+ tok/secの処理速度が必要です。' } },
       { '@type': 'Question', name: '70Bモデルの質は GPT-5.5 と比較してどうですか？', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.3 70B（MMLU 82%、HumanEval 88%）と Qwen3 72B（MMLU 84%、HumanEval 87%）は、ベンチマークスコアで GPT-4（2023年）を一致または僅かに上回ります。GPT-5.5（2024年）は推論の多い作業ではスコアが高くなりますが、一般的な指示遵行、要約、コード生成では、70Bのローカルモデルはほとんどのタスクで GPT-5.5 と同等です。' } },
-      { '@type': 'Question', name: '2026年8月時点での最も費用対効果の高い70B セットアップは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '中古 Mac Studio M2 Ultra（64GB統合メモリ）で約2,000ドル、25+ tok/secで動作することが引き続き最も費用対効果の高い選択肢です。新しいMac Studio M5 Max（64GB、$2,499、2026年8月発売）は最も安価な新品フルGPUオプションです。NVIDIA RTX 4090デスクトップ構成（24GB VRAM + 32GB RAM）は3,000～4,000ドルかかりますが、レイヤーオフロードのため速度が低下します。' } },
+      { '@type': 'Question', name: '2026年8月時点での最も費用対効果の高い70B セットアップは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '2026年9月22日発売のMac mini M5 Pro（64GB統合メモリ、$1,699）は、これまで最も安価だった新品フルGPUオプション、Mac Studio M5 Max（64GB、$2,499）より$800安い、最も安価な新品70B対応ハードウェアになる見込みです。中古 Mac Studio M2 Ultra（64GB統合メモリ）で約2,000ドル、実績のある25+ tok/secで動作することは引き続き最も費用対効果の高い中古の選択肢です。Mac mini M5 Proについては独立したベンチマークはまだありません。NVIDIA RTX 4090デスクトップ構成（24GB VRAM + 32GB RAM）は3,000～4,000ドルかかりますが、レイヤーオフロードのため速度が低下します。Mac mini M5 Proと基本モデルのMac mini M6（$899）を混同しないでください -- M6は最大32GB統合メモリまでで、70Bモデルを実行できません。' } },
       { '@type': 'Question', name: '複数のGPUで70Bモデルを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、NVIDIA ハードウェアでは llama.cpp と Ollama がマルチGPU推論をサポートしています。2つのRTX 4090s（合計48GB VRAM）は Q4_K_M 70B モデルを完全にVRAM内に適合させることができます。Ollamaは複数GPUが存在する場合、自動的にマルチGPU処理を行います。llama.cpp では tensor parallelism（--tensor-split）がレイヤー分配を制御します。' } },
       { '@type': 'Question', name: '70Bモデルを実行する場合、電力消費はどのくらいですか？', acceptedAnswer: { '@type': 'Answer', text: 'Mac Studio M2 Ultra は70B推論で約30～50W消費します。NVIDIA RTX 4090 デスクトップは負荷時に350～450W消費します。1kWh あたり0.15ドルで、RTX 4090での継続的な70B推論は時間あたり約0.05～0.07ドルのコストがかかります。Apple Siliconはこのワークロードで7～10倍エネルギー効率が優れています。' } },
       { '@type': 'Question', name: '日本で70Bモデルを実行する場合、METI規制を遵守する必要がありますか？', acceptedAnswer: { '@type': 'Answer', text: '2026年8月時点でも、Open-Weight LLM（Llama 3.3、Qwen3など）の個人使用に対する直接的な METI 規制はありません。ただし、組織として機密データを処理する場合は、データ保護とプライバシー要件を確認してください。日本国内の機械学習規制については、デジタル庁のガイドラインを参照してください。' } },
@@ -1879,6 +1975,7 @@ schema: {
       isTldr: true,
       items: [
         'Q4_K_M 量化：Llama 3.3 70B は ~40GB RAM が必要。Qwen3 72B は ~43GB RAM が必要です。',
+        '**最も安価な新品ハードウェア**：Apple Mac mini M5 Pro（64GB、$1,699、2026年9月22日発売）は70B向けの最も安価な新品フルGPUオプションです。基本モデルのMac mini M6（$899）は最大32GBまでで、70Bモデルは実行できません。',
         '**最も容易なコンシューマーハードウェア**：Apple Mac Studio M2 Ultra（64GB統合メモリ）または M5 Max MacBook Pro（64GB）-- 完全GPU加速、レイヤーオフロード不要。',
         '**NVIDIA オプション**：RTX 4090（24GB VRAM）+ 32GB システムRAM、Ollama のレイヤーオフロード機能で大ほどんどの70Bモデルに対応、ただし20～30％のレイヤーはCPU上で実行。',
         '**CPU専用70B**：64GB RAMで可能ですが、1～3 tok/sec 生成 -- バッチタスクではかろうじて使用可能、対話的チャットには不適切。',
@@ -1892,6 +1989,8 @@ schema: {
       ],
       rows: [
         { 'ハードウェア': 'Apple M5 Max（64GB統合）', '70B実行可能？': 'はい -- フルGPU', '速度（70B Q4）': '20～30 tok/sec', '注釈': '最高のコンシューマーノートパック オプション' },
+        { 'ハードウェア': 'Apple Mac mini M5 Pro（64GB）', '70B実行可能？': 'はい -- フルGPU', '速度（70B Q4）': 'ベンチマーク未実施', '注釈': '新発売、2026年9月22日、$1,699 -- 最も安価な新品オプション' },
+        { 'ハードウェア': 'Apple Mac mini M6（最大32GB）', '70B実行可能？': 'いいえ -- 最大32GB', '速度（70B Q4）': '実行不可', '注釈': '新発売、2026年9月22日、$899 -- 70Bにはメモリ不足' },
         { 'ハードウェア': 'Apple M2 Ultra（64GB統合）', '70B実行可能？': 'はい -- フルGPU', '速度（70B Q4）': '25～35 tok/sec', '注釈': 'Mac Studio ベースラインconfig' },
         { 'ハードウェア': 'Apple M2 Ultra（192GB統合）', '70B実行可能？': 'はい -- フルGPU', '速度（70B Q4）': '30～40 tok/sec', '注釈': 'Q8_0を実行でき余裕がある' },
         { 'ハードウェア': 'NVIDIA RTX 4090（24GB）+ 32GB RAM', '70B実行可能？': 'はい -- オフロード使用', '速度（70B Q4）': '10～18 tok/sec', '注釈': '~60% のレイヤーはGPU上、~40% はCPU上' },
@@ -1925,7 +2024,8 @@ schema: {
       content: [
         '**Apple Silicon は統合メモリを使用します -- CPU と GPU は同じ物理メモリプールを共有します。** 64GB の統合メモリを持つ M5 Max MacBook Pro は、70Bモデルを Q4_K_M で完全にGPU上で実行し、20～30 tok/sec を達成でき、レイヤーオフロードのオーバーヘッドがありません。',
         'NVIDIA ハードウェアでは、GPU とシステムRAMは分離しています。24GB VRAM の GPU は Q4_K_M 70B モデルの約60％しか保持できません。残りのレイヤーはCPU上で実行され、メモリ帯域幅のボトルネックが生じ、速度が 10～18 tok/sec に低下します。',
-        '2026年8月時点でも、中古 Mac Studio M2 Ultra（64GB、約2,000ドル）が引き続き使用可能な速度での70Bローカル推論への最も安価なパスです。Appleは2026年8月にM5 MaxとM5 Ultraチップを搭載した新しいMac Studioラインナップを発表しました：新しいMac Studio M5 Max（64GB、$2,499）は今や最も安価な新品フルGPUオプションであり、Mac Studio M5 Ultra（256GBまたは512GB、$5,499から）は統合メモリ帯域幅を1.2TB/秒に倍増させ、70BモデルをQ8_0またはFP16で品質を落とさず余裕を持って実行できます。',
+        '2026年8月時点でも、中古 Mac Studio M2 Ultra（64GB、約2,000ドル）が引き続き使用可能な速度での70Bローカル推論への最も安価な中古パスです。Appleは2026年8月にM5 MaxとM5 Ultraチップを搭載した新しいMac Studioラインナップを発表しました：新しいMac Studio M5 Max（64GB、$2,499）は完全GPUの新品オプションであり、Mac Studio M5 Ultra（256GBまたは512GB、$5,499から）は統合メモリ帯域幅を1.2TB/秒に倍増させ、70BモデルをQ8_0またはFP16で品質を落とさず余裕を持って実行できます。',
+        '**Appleは2026年8月25日にMac miniを刷新し、2026年9月22日に発売され、これにより再び最も安価な新品オプションが変わります。** Mac mini M5 Pro（$1,699から）は最大64GB統合メモリ、307GB/秒帯域幅、Thunderbolt 5に対応 -- 70BモデルをQ4_K_Mで完全にGPU上で実行するのに十分で、Mac Studio M5 Maxより$800安価です。一方、基本モデルのMac mini M6（$899から）は別物です：最大32GB統合メモリ、170GB/秒帯域幅までで、70Bモデルに必要な40GB以上には遠く及ばないため、どの量化レベルでも70Bモデルを実行できません。両チップともまだ独立したベンチマークは存在せず、2026年9月22日に発売予定です。',
       ],
     },
     実践Tips_AppleSilicon: {
@@ -2010,6 +2110,10 @@ schema: {
           q: 'Q4_K_M を使用すべき時に Q3_K_S を使用できた',
           a: '32～40GB RAM のマシンでは、70B モデルの Q4_K_M は厳しすぎる可能性があります（OS 用に十分なヘッドルームがありません）。Q3_K_S は RAM を ~30GB に削減し、品質をやや失います。モデルをロードした後、ollama ps を実行してください -- スワップ使用が表示される場合は、Q3_K_S にドロップしてください。',
         },
+        {
+          q: '基本モデルのMac mini M6を購入し、70Bモデルが実行できると期待する',
+          a: 'Mac mini M6（$899）は最大32GB統合メモリまでで、Q4_K_M量化の70Bモデルに必要な40GB以上には遠く及びません。どの量化レベルでも70Bモデルを実行できません。Mac miniで70Bを実行するには、Mac mini M5 Pro（$1,699、64GB統合メモリ）が必要なグレードです -- 購入前に「M5 Pro」と64GBを確認し、基本のM6ではないことを確認してください。',
+        },
       ],
     },
     faqSection: {
@@ -2018,7 +2122,11 @@ schema: {
       faqs: [
         {
           q: '70Bモデルを実用的に実行できる最も安いハードウェアは何ですか？',
-          a: '2026年8月時点でも、中古 Mac Studio M2 Ultra（64GB 統合メモリ）（約2,000ドル）が引き続き25+ tok/sec での 70B 推論への最も安いパスです。新しいMac Studio M5 Max（64GB、$2,499、2026年8月発売）は最も安価な新品フルGPUオプションです。NVIDIA RTX 4090 デスクトップビルド（24GB VRAM + 32GB RAM）は3,000～4,000ドルかかりますが、レイヤーオフロードのため推論が遅くなります。',
+          a: 'Mac mini M5 Pro（$1,699、64GB統合メモリ、2026年9月22日発売）は、これまで最も安価だった新品オプション、Mac Studio M5 Max（64GB、$2,499）より$800安い、最も安価な新品の70B対応ハードウェアになる見込みです。中古 Mac Studio M2 Ultra（64GB 統合メモリ）（約2,000ドル）は実績のある25+ tok/secでの、引き続き最も安い中古パスです。Mac mini M5 Proについては独立したベンチマークはまだありません。NVIDIA RTX 4090 デスクトップビルド（24GB VRAM + 32GB RAM）は3,000～4,000ドルかかりますが、レイヤーオフロードのため推論が遅くなります。Mac mini M5 Proと基本モデルのMac mini M6（$899）を混同しないでください -- M6は最大32GB統合メモリまでで、70Bモデルを実行できません。',
+        },
+        {
+          q: 'Mac mini M6 は70Bモデルを実行できますか？',
+          a: 'いいえ。Mac mini M6（$899から）は最大32GB統合メモリと170GB/秒の帯域幅までで、Q4_K_M量化の70Bモデルに必要な40GB以上には遠く及びません。Mac miniで70Bを実行するには、代わりにMac mini M5 Pro（$1,699から、64GB統合メモリ、307GB/秒帯域幅、Thunderbolt 5）を注文してください。両機種とも2026年9月22日発売で、いずれのチップについても独立したベンチマークはまだ存在しません。',
         },
         {
           q: '2つの GPU で70Bモデルを実行できますか？',
@@ -2098,6 +2206,7 @@ schema: {
       isTldr: true,
       numberedItems: [
         'Q4_K_M 量化：Llama 3.3 70B 需要约 40 GB 内存；Qwen3 72B 需要约 43 GB 内存。',
+        '最便宜的全新硬件：Apple Mac mini M5 Pro (64 GB，$1,699，2026 年 9 月 22 日发售) 是运行 70B 模型最便宜的全新完整 GPU 选项。基础款 Mac mini M6 ($899) 最高仅支持 32 GB，无法运行 70B 模型。',
         '最简单的消费级硬件方案：Mac Studio M2 Ultra (64 GB 统一内存) 或 M5 Max MacBook Pro (64 GB) -- 完整 GPU 加速，无需层卸载。',
         'NVIDIA 方案：RTX 4090 (24 GB VRAM) + 32 GB 系统内存配合 Ollama 层卸载技术可以处理大多数 70B 模型，尽管 20-30% 的层会在 CPU 上运行。',
         '纯 CPU 运行 70B：可行但只能产生 1-3 tok/秒 -- 边际可用于批处理任务，不适合交互式聊天。',
@@ -2113,7 +2222,9 @@ schema: {
       imageCaption: 'Hardware comparison: Apple Silicon M5 Max achieves 25-35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10-18 tok/sec, and CPU-only 70B inference produces just 1-3 tok/sec.',
       rows: [
         { '硬件': 'Apple M5 Max MacBook Pro (64 GB)', '能运行 70B？': '是 -- 完整 GPU', '速度 (70B Q4)': '20-30 tok/秒', '说明': '最佳消费级笔记本选项' },
-        { '硬件': 'Apple Mac Studio M5 Max (64 GB)', '能运行 70B？': '是 -- 完整 GPU', '速度 (70B Q4)': '22-32 tok/秒', '说明': '2026年8月新品，$2,499 -- 最便宜的新品选项' },
+        { '硬件': 'Apple Mac Studio M5 Max (64 GB)', '能运行 70B？': '是 -- 完整 GPU', '速度 (70B Q4)': '22-32 tok/秒', '说明': '2026年8月新品，$2,499' },
+        { '硬件': 'Apple Mac mini M5 Pro (64 GB)', '能运行 70B？': '是 -- 完整 GPU', '速度 (70B Q4)': '暂无基准测试', '说明': '全新，2026年9月22日发售，$1,699 -- 最便宜的新品选项' },
+        { '硬件': 'Apple Mac mini M6 (最高 32 GB)', '能运行 70B？': '否 -- 最高 32 GB', '速度 (70B Q4)': '不可运行', '说明': '全新，2026年9月22日发售，$899 -- 内存不足以运行70B' },
         { '硬件': 'Apple M2 Ultra (64 GB 统一内存)', '能运行 70B？': '是 -- 完整 GPU', '速度 (70B Q4)': '25-35 tok/秒', '说明': 'Mac Studio 基础配置，二手/翻新' },
         { '硬件': 'Apple Mac Studio M5 Ultra (256GB+)', '能运行 70B？': '是 -- 完整 GPU', '速度 (70B Q4)': '35-50 tok/秒', '说明': '2026年8月新品，起价 $5,499。轻松运行 Q8_0/FP16。' },
         { '硬件': 'NVIDIA DGX Spark (128 GB 统一内存)', '能运行 70B？': '是 -- 完整 GPU', '速度 (70B Q4)': '18-28 tok/秒', '说明': 'Q8_0 可行 (70 GB)。最适合 CUDA 工作流。' },
@@ -2142,7 +2253,8 @@ schema: {
       content: [
         '**Apple Silicon 采用统一内存架构 -- CPU 和 GPU 共享同一物理内存池。** 配置 64 GB 统一内存的 M5 Max MacBook Pro 可以完整在 GPU 上运行 Q4_K_M 的 70B 模型，实现 20-30 tok/秒，无需层卸载开销。',
         '在 NVIDIA 硬件上，GPU 和系统内存是分离的。24 GB VRAM 的 GPU 仅能容纳 Q4_K_M 70B 模型的约 60%；其余层在 CPU 上运行，造成内存带宽瓶颈，降低速度至 10-18 tok/秒。',
-        '截至 2026 年 8 月，二手 Mac Studio M2 Ultra (64 GB，约 $2,000) 仍是以实用速度进行 70B 本地推理最具成本效益的路径。苹果于 2026 年 8 月发布了搭载 M5 Max 和 M5 Ultra 芯片的新款 Mac Studio 系列：全新 Mac Studio M5 Max (64 GB，$2,499) 现已成为最便宜的全新完整 GPU 选项，而 Mac Studio M5 Ultra (256 GB 或 512 GB，起价 $5,499) 将统一内存带宽提升至 1.2 TB/秒，可在不牺牲质量的情况下轻松以 Q8_0 或 FP16 运行 70B 模型。',
+        '截至 2026 年 8 月，二手 Mac Studio M2 Ultra (64 GB，约 $2,000) 仍是以实用速度进行 70B 本地推理最具成本效益的二手路径。苹果于 2026 年 8 月发布了搭载 M5 Max 和 M5 Ultra 芯片的新款 Mac Studio 系列：全新 Mac Studio M5 Max (64 GB，$2,499) 是一款全新完整 GPU 选项，而 Mac Studio M5 Ultra (256 GB 或 512 GB，起价 $5,499) 将统一内存带宽提升至 1.2 TB/秒，可在不牺牲质量的情况下轻松以 Q8_0 或 FP16 运行 70B 模型。',
+        '**苹果于 2026 年 8 月 25 日推出了新款 Mac mini，将于 2026 年 9 月 22 日发售，这再次改变了最便宜的全新选项。** Mac mini M5 Pro (起价 $1,699) 最高支持 64 GB 统一内存，带宽达 307 GB/秒，配备 Thunderbolt 5 -- 足以在 Q4_K_M 量化下完整地在 GPU 上运行 70B 模型，比 Mac Studio M5 Max 便宜 $800。而基础款 Mac mini M6 (起价 $899) 是一款完全不同的机器：最高仅支持 32 GB 统一内存和 170 GB/秒带宽，远低于 70B 模型所需的 40 GB 以上，因此无法在任何量化等级下运行 70B 模型。这两款芯片目前均无独立基准测试数据 -- 均于 2026 年 9 月 22 日发售。',
       ],
     },
     dgxSpark: {
@@ -2201,6 +2313,10 @@ schema: {
           q: '在有更合适的量化等级时使用 Q4_K_M',
           a: '在 32-40 GB 内存的机器上，70B 模型的 Q4_K_M 量化可能过紧 (留给操作系统的余量不足)。Q3_K_S 将内存减少至约 30 GB，代价是中等质量损耗。运行 `ollama ps` 加载模型后 -- 如果看到交换使用，请改用 Q3_K_S。',
         },
+        {
+          q: '购买基础款 Mac mini M6，却期望它能运行 70B 模型',
+          a: 'Mac mini M6 ($899) 最高仅支持 32 GB 统一内存 -- 远低于 Q4_K_M 量化下 70B 模型所需的 40 GB 以上，无法在任何量化等级下运行 70B 模型。要在 Mac mini 上运行 70B，所需配置是 Mac mini M5 Pro ($1,699，64 GB 统一内存) -- 下单前请确认是"M5 Pro"且内存为 64 GB，而非基础款 M6。',
+        },
       ],
     },
     faqSection: {
@@ -2209,7 +2325,11 @@ schema: {
       faqs: [
         {
           q: '能实用地运行 70B 模型的最便宜硬件是什么？',
-          a: '截至 2026 年 8 月，二手 Mac Studio M2 Ultra (64 GB 统一内存，约 $2,000) 仍是以 25+ tok/秒速度进行 70B 推理最便宜的路径。全新 Mac Studio M5 Max (64 GB，$2,499，2026年8月发布) 是最便宜的全新完整 GPU 选项。NVIDIA RTX 4090 桌面构建 (24 GB VRAM + 32 GB 内存) 成本约 $3,000-$4,000 但由于层卸载导致推理更慢。',
+          a: 'Mac mini M5 Pro ($1,699，64 GB 统一内存，2026 年 9 月 22 日发售) 预计将成为能运行 70B 模型的最便宜全新硬件，比此前最便宜的全新选项 Mac Studio M5 Max (64 GB，$2,499) 便宜 $800。二手 Mac Studio M2 Ultra (64 GB 统一内存，约 $2,000) 仍是以经过验证的 25+ tok/秒速度进行 70B 推理最便宜的二手路径。Mac mini M5 Pro 目前尚无独立基准测试数据。NVIDIA RTX 4090 桌面构建 (24 GB VRAM + 32 GB 内存) 成本约 $3,000-$4,000 但由于层卸载导致推理更慢。请勿将 Mac mini M5 Pro 与基础款 Mac mini M6 ($899) 混淆 -- M6 最高仅支持 32 GB 统一内存，无法运行 70B 模型。',
+        },
+        {
+          q: 'Mac mini M6 能运行 70B 模型吗？',
+          a: '不能。Mac mini M6 (起价 $899) 最高仅支持 32 GB 统一内存和 170 GB/秒带宽 -- 远低于 Q4_K_M 量化下 70B 模型所需的 40 GB 以上。要在 Mac mini 上运行 70B，请改为订购 Mac mini M5 Pro (起价 $1,699，64 GB 统一内存，307 GB/秒带宽，配备 Thunderbolt 5)。两款机型均于 2026 年 9 月 22 日发售，且目前均无独立基准测试数据。',
         },
         {
           q: '我能在两个 GPU 上运行 70B 模型吗？',
@@ -2304,7 +2424,15 @@ schema: {
         name: '能实用地运行 70B 模型的最便宜硬件是什么？',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '截至 2026 年 8 月，二手 Mac Studio M2 Ultra (64 GB 统一内存，约 $2,000) 仍是以 25+ tok/秒速度进行 70B 推理最便宜的路径。全新 Mac Studio M5 Max (64 GB，$2,499，2026年8月发布) 是最便宜的全新完整 GPU 选项。',
+          text: 'Mac mini M5 Pro ($1,699，64 GB 统一内存，2026 年 9 月 22 日发售) 预计将成为能运行 70B 模型的最便宜全新硬件，比此前最便宜的全新选项 Mac Studio M5 Max (64 GB，$2,499) 便宜 $800。二手 Mac Studio M2 Ultra (64 GB 统一内存，约 $2,000) 仍是以经过验证的 25+ tok/秒速度进行 70B 推理最便宜的二手路径。Mac mini M5 Pro 目前尚无独立基准测试数据。请勿将其与基础款 Mac mini M6 ($899) 混淆 -- M6 最高仅支持 32 GB 统一内存，无法运行 70B 模型。',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Mac mini M6 能运行 70B 模型吗？',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '不能。Mac mini M6 (起价 $899) 最高仅支持 32 GB 统一内存和 170 GB/秒带宽 -- 远低于 Q4_K_M 量化下 70B 模型所需的 40 GB 以上。要在 Mac mini 上运行 70B，请改为订购 Mac mini M5 Pro (起价 $1,699，64 GB 统一内存，307 GB/秒带宽，配备 Thunderbolt 5)。两款机型均于 2026 年 9 月 22 日发售，且目前均无独立基准测试数据。',
         },
       },
       {
@@ -2473,6 +2601,7 @@ schema: {
         isTldr: true,
         items: [
           'Q4_K_M 양자화: Llama 3.3 70B는 약 40GB RAM이 필요하고, Qwen3 72B는 약 43GB RAM이 필요합니다.',
+          '**가장 저렴한 신품 하드웨어**: Apple Mac mini M5 Pro (64GB, $1,699, 2026년 9월 22일 출시)는 70B를 위한 가장 저렴한 신품 완전 GPU 옵션입니다. 기본형 Mac mini M6 ($899)는 최대 32GB로 70B 모델을 실행할 수 없습니다.',
           '**가장 쉬운 소비자 하드웨어**: Apple Mac Studio M2 Ultra (64GB 통합) 또는 M5 Max MacBook Pro (64GB) — 완전한 GPU 가속, 레이어 오프로딩 불필요.',
           '**NVIDIA 옵션**: Ollama에서 레이어 오프로딩을 사용하는 RTX 4090 (24GB VRAM) + 32GB 시스템 RAM은 대부분의 70B 모델을 처리할 수 있으나, 20~30%의 레이어가 CPU에서 실행됩니다.',
           '**CPU 전용 70B**: 64GB RAM에서 가능하지만 1~3 tok/sec만 생성됩니다 — 배치 작업에는 간신히 사용 가능하나 대화형 채팅에는 부적합합니다.',
@@ -2488,7 +2617,9 @@ schema: {
         imageCaption: '하드웨어 비교: Apple Silicon M5 Max는 오프로딩 없이 25~35 tok/sec를 달성하는 반면, NVIDIA RTX 4090은 레이어 오프로딩으로 10~18 tok/sec에 도달하며, CPU 전용 70B 추론은 1~3 tok/sec에 불과합니다.',
         rows: [
           { '하드웨어': 'Apple M5 Max MacBook Pro (64GB)', '70B 실행 가능?': '가능 — 완전 GPU', '속도 (70B Q4)': '20~30 tok/sec', '비고': '최고의 소비자 노트북 옵션' },
-          { '하드웨어': 'Apple Mac Studio M5 Max (64GB)', '70B 실행 가능?': '가능 — 완전 GPU', '속도 (70B Q4)': '22~32 tok/sec', '비고': '2026년 8월 신제품, $2,499 — 가장 저렴한 신품' },
+          { '하드웨어': 'Apple Mac Studio M5 Max (64GB)', '70B 실행 가능?': '가능 — 완전 GPU', '속도 (70B Q4)': '22~32 tok/sec', '비고': '2026년 8월 신제품, $2,499' },
+          { '하드웨어': 'Apple Mac mini M5 Pro (64GB)', '70B 실행 가능?': '가능 — 완전 GPU', '속도 (70B Q4)': '벤치마크 없음', '비고': '신제품, 2026년 9월 22일 출시, $1,699 — 가장 저렴한 신품' },
+          { '하드웨어': 'Apple Mac mini M6 (최대 32GB)', '70B 실행 가능?': '불가 — 최대 32GB', '속도 (70B Q4)': '해당 없음', '비고': '신제품, 2026년 9월 22일 출시, $899 — 70B에 메모리 부족' },
           { '하드웨어': 'Apple M2 Ultra (64GB 통합)', '70B 실행 가능?': '가능 — 완전 GPU', '속도 (70B Q4)': '25~35 tok/sec', '비고': 'Mac Studio 기본 구성, 중고/리퍼비시' },
           { '하드웨어': 'Apple Mac Studio M5 Ultra (256GB+)', '70B 실행 가능?': '가능 — 완전 GPU', '속도 (70B Q4)': '35~50 tok/sec', '비고': '2026년 8월 신제품, $5,499부터. Q8_0/FP16 여유 있게 실행.' },
           { '하드웨어': 'NVIDIA DGX Spark (128GB 통합)', '70B 실행 가능?': '가능 — 완전 GPU', '속도 (70B Q4)': '18~28 tok/sec', '비고': 'Q8_0 적합 (70GB). CUDA 워크플로우에 최적.' },
@@ -2517,7 +2648,8 @@ schema: {
         content: [
           '**Apple Silicon은 통합 메모리를 사용합니다 — CPU와 GPU가 동일한 물리 메모리 풀을 공유합니다.** 64GB 통합 메모리를 갖춘 M5 Max MacBook Pro는 Q4_K_M에서 70B 모델을 GPU에서 완전히 실행하여 레이어 오프로딩 오버헤드 없이 20~30 tok/sec를 달성할 수 있습니다.',
           'NVIDIA 하드웨어에서는 GPU와 시스템 RAM이 분리되어 있습니다. 24GB VRAM GPU는 Q4_K_M 70B 모델의 약 60%만 보유할 수 있으며, 나머지 레이어는 CPU에서 실행되어 메모리 대역폭 병목 현상이 발생하여 속도가 10~18 tok/sec로 감소합니다.',
-          '2026년 8월 기준으로도 중고 Mac Studio M2 Ultra (64GB, 리퍼비시 약 $2,000)는 여전히 사용 가능한 속도로 70B 로컬 추론에 접근하는 가장 저렴한 방법입니다. Apple은 2026년 8월 M5 Max와 M5 Ultra 칩을 탑재한 새로운 Mac Studio 라인업을 출시했습니다: 새로운 Mac Studio M5 Max (64GB, $2,499)는 이제 가장 저렴한 신품 완전 GPU 옵션이며, Mac Studio M5 Ultra (256GB 또는 512GB, $5,499부터)는 통합 메모리 대역폭을 1.2TB/s로 두 배 늘려 70B 모델을 Q8_0 또는 FP16으로 품질 저하 없이 여유롭게 실행합니다.',
+          '2026년 8월 기준으로도 중고 Mac Studio M2 Ultra (64GB, 리퍼비시 약 $2,000)는 여전히 사용 가능한 속도로 70B 로컬 추론에 접근하는 가장 저렴한 중고 방법입니다. Apple은 2026년 8월 M5 Max와 M5 Ultra 칩을 탑재한 새로운 Mac Studio 라인업을 출시했습니다: 새로운 Mac Studio M5 Max (64GB, $2,499)는 완전 GPU 신품 옵션이며, Mac Studio M5 Ultra (256GB 또는 512GB, $5,499부터)는 통합 메모리 대역폭을 1.2TB/s로 두 배 늘려 70B 모델을 Q8_0 또는 FP16으로 품질 저하 없이 여유롭게 실행합니다.',
+          '**Apple은 2026년 8월 25일 Mac mini를 새로 출시했으며, 2026년 9월 22일부터 판매되어 가장 저렴한 신품 옵션이 다시 바뀝니다.** Mac mini M5 Pro (시작가 $1,699)는 최대 64GB 통합 메모리, 307GB/s 대역폭, Thunderbolt 5를 지원합니다 — Q4_K_M에서 70B 모델을 GPU에서 완전히 실행하기에 충분하며, Mac Studio M5 Max보다 $800 저렴합니다. 기본형 Mac mini M6 (시작가 $899)는 다른 제품입니다: 최대 32GB 통합 메모리와 170GB/s 대역폭으로, 70B 모델에 필요한 40GB 이상에 크게 못 미쳐 어떤 양자화 수준에서도 70B 모델을 실행할 수 없습니다. 두 칩 모두 아직 독립적인 벤치마크가 없습니다 — 둘 다 2026년 9월 22일 출시됩니다.',
         ],
       },
       dgxSpark: {
@@ -2595,6 +2727,10 @@ schema: {
             q: 'DGX Spark에서 Q8_0 대신 Q4_K_M을 실행하는 것',
             a: 'DGX Spark는 128GB를 보유하고 있어 Q8_0 (70GB)에 충분합니다. Q4_K_M을 사용하면 이용 가능한 품질을 낭비합니다. 80GB 이상인 모든 시스템에서는 70B 모델에 Q8_0을 실행하십시오.',
           },
+          {
+            q: '기본형 Mac mini M6을 구매하고 70B 모델을 실행할 수 있을 것으로 기대하는 것',
+            a: 'Mac mini M6 ($899)는 최대 32GB 통합 메모리로, Q4_K_M에서 70B 모델에 필요한 40GB 이상에 크게 못 미칩니다. 어떤 양자화 수준에서도 70B 모델을 실행할 수 없습니다. Mac mini에서 70B를 실행하려면 Mac mini M5 Pro ($1,699, 64GB 통합 메모리)가 필요한 등급입니다 — 주문 전 "M5 Pro"와 64GB를 확인하고, 기본형 M6이 아닌지 확인하십시오.',
+          },
         ],
       },
       relatedReading: {
@@ -2615,7 +2751,11 @@ schema: {
         faqs: [
           {
             q: '70B 모델을 실용적으로 실행할 수 있는 가장 저렴한 하드웨어는 무엇입니까?',
-            a: '2026년 8월 기준으로도 64GB 통합 메모리를 갖춘 중고 Mac Studio M2 Ultra ($2,000)는 여전히 25+ tok/sec에서 70B 추론을 위한 가장 저렴한 경로입니다. 새로운 Mac Studio M5 Max (64GB, $2,499, 2026년 8월 출시)는 가장 저렴한 신품 완전 GPU 기기이며, M5 Max MacBook Pro (~$3,500)보다 저렴합니다. NVIDIA RTX 4090 데스크톱 빌드 (24GB VRAM + 32GB RAM)는 총 ~$3,000~$4,000이지만 레이어 오프로딩으로 인해 추론 속도가 느립니다.',
+            a: 'Mac mini M5 Pro ($1,699, 64GB 통합 메모리, 2026년 9월 22일 출시)는 이전에 가장 저렴한 신품 옵션이었던 Mac Studio M5 Max (64GB, $2,499)보다 $800 저렴한, 70B 모델을 실행할 수 있는 가장 저렴한 신품 하드웨어가 될 것으로 보입니다. 64GB 통합 메모리를 갖춘 중고 Mac Studio M2 Ultra ($2,000)는 검증된 25+ tok/sec로 여전히 가장 저렴한 중고 경로입니다. Mac mini M5 Pro에 대한 독립적인 벤치마크는 아직 없습니다. NVIDIA RTX 4090 데스크톱 빌드 (24GB VRAM + 32GB RAM)는 총 ~$3,000~$4,000이지만 레이어 오프로딩으로 인해 추론 속도가 느립니다. Mac mini M5 Pro를 기본형 Mac mini M6 ($899)과 혼동하지 마십시오 — M6은 최대 32GB 통합 메모리로 70B 모델을 실행할 수 없습니다.',
+          },
+          {
+            q: 'Mac mini M6은 70B 모델을 실행할 수 있습니까?',
+            a: '불가능합니다. Mac mini M6 (시작가 $899)는 최대 32GB 통합 메모리와 170GB/s 대역폭으로, Q4_K_M에서 70B 모델에 필요한 40GB 이상에 크게 못 미칩니다. Mac mini에서 70B를 실행하려면 대신 Mac mini M5 Pro (시작가 $1,699, 64GB 통합 메모리, 307GB/s 대역폭, Thunderbolt 5)를 주문하십시오. 두 제품 모두 2026년 9월 22일 출시되며, 두 칩 모두 아직 독립적인 벤치마크가 없습니다.',
           },
           {
             q: '두 개의 GPU에서 70B 모델을 실행할 수 있습니까?',
@@ -2686,6 +2826,7 @@ schema: {
         { '@type': 'Thing', 'name': 'Llama 3.3 70B' },
         { '@type': 'Thing', 'name': 'Qwen3 72B' },
         { '@type': 'Thing', 'name': 'NVIDIA DGX Spark' },
+        { '@type': 'Thing', 'name': 'Apple Mac mini M5 Pro' },
       ],
       'mentions': [
         { '@type': 'SoftwareApplication', 'name': 'Ollama' },
@@ -2711,16 +2852,17 @@ schema: {
       '@type': 'ItemList',
       'name': '2026년 70B 로컬 LLM 추론을 위한 소비자 하드웨어',
       'inLanguage': 'ko',
-      'numberOfItems': 8,
+      'numberOfItems': 9,
       'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Apple M5 Max MacBook Pro 64GB', 'description': '완전 GPU. 20~30 tok/sec. 최고의 노트북. ~$3,500.' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Apple Mac Studio M5 Max 64GB', 'description': '완전 GPU. 22~32 tok/sec. 2026년 8월 신제품. $2,499.' },
-        { '@type': 'ListItem', 'position': 3, 'name': 'Apple Mac Studio M2 Ultra 64GB', 'description': '완전 GPU. 25~35 tok/sec. 최고의 중고 가성비. ~리퍼비시 $2,000.' },
-        { '@type': 'ListItem', 'position': 4, 'name': 'Apple Mac Studio M5 Ultra 256GB+', 'description': '완전 GPU. 35~50 tok/sec. Q8_0/FP16 실행. $5,499부터.' },
-        { '@type': 'ListItem', 'position': 5, 'name': 'NVIDIA DGX Spark 128GB', 'description': '완전 GPU CUDA. 18~28 tok/sec. Q8_0 실행. $4,699.' },
-        { '@type': 'ListItem', 'position': 6, 'name': 'NVIDIA RTX 4090 24GB + 32GB RAM', 'description': '레이어 오프로딩. 10~18 tok/sec. 총 ~$3,000~4,000.' },
-        { '@type': 'ListItem', 'position': 7, 'name': 'NVIDIA RTX 4080 16GB + 32GB RAM', 'description': '부분 오프로딩. 5~10 tok/sec.' },
-        { '@type': 'ListItem', 'position': 8, 'name': 'CPU 전용 64GB RAM', 'description': '1~3 tok/sec. 배치 처리 전용.' },
+        { '@type': 'ListItem', 'position': 1, 'name': 'Apple Mac mini M5 Pro 64GB', 'description': '완전 GPU. 벤치마크 없음. 신제품, 2026년 9월 22일 출시. 가장 저렴한 신품, $1,699.' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Apple M5 Max MacBook Pro 64GB', 'description': '완전 GPU. 20~30 tok/sec. 최고의 노트북. ~$3,500.' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Apple Mac Studio M5 Max 64GB', 'description': '완전 GPU. 22~32 tok/sec. 2026년 8월 신제품. $2,499.' },
+        { '@type': 'ListItem', 'position': 4, 'name': 'Apple Mac Studio M2 Ultra 64GB', 'description': '완전 GPU. 25~35 tok/sec. 최고의 중고 가성비. ~리퍼비시 $2,000.' },
+        { '@type': 'ListItem', 'position': 5, 'name': 'Apple Mac Studio M5 Ultra 256GB+', 'description': '완전 GPU. 35~50 tok/sec. Q8_0/FP16 실행. $5,499부터.' },
+        { '@type': 'ListItem', 'position': 6, 'name': 'NVIDIA DGX Spark 128GB', 'description': '완전 GPU CUDA. 18~28 tok/sec. Q8_0 실행. $4,699.' },
+        { '@type': 'ListItem', 'position': 7, 'name': 'NVIDIA RTX 4090 24GB + 32GB RAM', 'description': '레이어 오프로딩. 10~18 tok/sec. 총 ~$3,000~4,000.' },
+        { '@type': 'ListItem', 'position': 8, 'name': 'NVIDIA RTX 4080 16GB + 32GB RAM', 'description': '부분 오프로딩. 5~10 tok/sec.' },
+        { '@type': 'ListItem', 'position': 9, 'name': 'CPU 전용 64GB RAM', 'description': '1~3 tok/sec. 배치 처리 전용.' },
       ],
     },
     faqSchema: {
@@ -2728,7 +2870,8 @@ schema: {
       '@type': 'FAQPage',
       'inLanguage': 'ko',
       'mainEntity': [
-        { '@type': 'Question', 'name': '70B 모델을 실용적으로 실행할 수 있는 가장 저렴한 하드웨어는 무엇입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '2026년 8월 기준으로도 64GB 통합 메모리를 갖춘 중고 Mac Studio M2 Ultra (~$2,000)는 여전히 25+ tok/sec에서 70B 추론을 위한 가장 저렴한 경로입니다. 새로운 Mac Studio M5 Max (64GB, $2,499, 2026년 8월 출시)는 가장 저렴한 신품 완전 GPU 기기이며, M5 Max MacBook Pro (~$3,500)보다 저렴합니다. NVIDIA RTX 4090 데스크톱 빌드 (24GB VRAM + 32GB RAM)는 총 ~$3,000~$4,000이지만 레이어 오프로딩으로 인해 추론 속도가 느립니다.' } },
+        { '@type': 'Question', 'name': '70B 모델을 실용적으로 실행할 수 있는 가장 저렴한 하드웨어는 무엇입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Mac mini M5 Pro ($1,699, 64GB 통합 메모리, 2026년 9월 22일 출시)는 이전에 가장 저렴한 신품 옵션이었던 Mac Studio M5 Max (64GB, $2,499)보다 $800 저렴한, 70B 모델을 실행할 수 있는 가장 저렴한 신품 하드웨어가 될 것으로 보입니다. 64GB 통합 메모리를 갖춘 중고 Mac Studio M2 Ultra (~$2,000)는 검증된 25+ tok/sec로 여전히 가장 저렴한 중고 경로입니다. Mac mini M5 Pro에 대한 독립적인 벤치마크는 아직 없습니다. NVIDIA RTX 4090 데스크톱 빌드 (24GB VRAM + 32GB RAM)는 총 ~$3,000~$4,000이지만 레이어 오프로딩으로 인해 추론 속도가 느립니다. Mac mini M5 Pro를 기본형 Mac mini M6 ($899)과 혼동하지 마십시오 — M6은 최대 32GB 통합 메모리로 70B 모델을 실행할 수 없습니다.' } },
+        { '@type': 'Question', 'name': 'Mac mini M6은 70B 모델을 실행할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '불가능합니다. Mac mini M6 (시작가 $899)는 최대 32GB 통합 메모리와 170GB/s 대역폭으로, Q4_K_M에서 70B 모델에 필요한 40GB 이상에 크게 못 미칩니다. Mac mini에서 70B를 실행하려면 대신 Mac mini M5 Pro (시작가 $1,699, 64GB 통합 메모리, 307GB/s 대역폭, Thunderbolt 5)를 주문하십시오. 두 제품 모두 2026년 9월 22일 출시되며, 두 칩 모두 아직 독립적인 벤치마크가 없습니다.' } },
         { '@type': 'Question', 'name': '두 개의 GPU에서 70B 모델을 실행할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '가능합니다 — llama.cpp와 Ollama는 NVIDIA 하드웨어에서 멀티 GPU 추론을 지원합니다. 두 개의 RTX 4090 (총 48GB VRAM)은 Q4_K_M 70B 모델을 VRAM에 완전히 맞출 수 있습니다. Ollama는 여러 GPU가 있을 때 자동으로 멀티 GPU를 처리합니다. llama.cpp의 텐서 병렬화 (`--tensor-split`)는 레이어 분배 방법을 제어합니다.' } },
         { '@type': 'Question', 'name': '70B 로컬 품질은 GPT-5.5와 어떻게 비교됩니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'MMLU 및 HumanEval 벤치마크에서 Llama 3.3 70B (82%, 88%)와 Qwen3 72B (84%, 87%)는 GPT-4 (2023) 점수에 필적하거나 약간 초과합니다. GPT-5.5 (2024)는 추론 집약적 작업에서 더 높은 점수를 받습니다. 일반적인 지시 따르기, 요약, 코드 생성의 경우 70B 로컬 모델은 대부분의 작업에서 GPT-5.5와 경쟁력이 있습니다.' } },
         { '@type': 'Question', 'name': 'Ollama는 70B 모델 실행을 자동으로 지원합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '예. `ollama run llama3.3:70b`를 실행하면 자동 GPU 레이어 오프로딩으로 모델을 다운로드하고 실행합니다. Ollama는 사용 가능한 VRAM과 시스템 RAM을 감지하여 GPU에 최대한 많은 레이어를 오프로드하고 나머지를 CPU에서 실행합니다. 기본 사용에는 수동 구성이 필요하지 않습니다.' } },
