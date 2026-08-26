@@ -709,9 +709,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     toc: [
+      { label: 'Acheter si / Éviter si', anchor: 'buy-skip-if' },
+      { label: "Tableau d'évaluation", anchor: 'scorecard' },
       { label: 'Résumé', anchor: 'tldr' },
       { label: 'Transparence', anchor: 'disclosure' },
       { label: 'Sélection rapide', anchor: 'quick-picks' },
+      { label: 'Comparaison tête-à-tête', anchor: 'comparison' },
       { label: 'Contrôle marche/arrêt local vs. relevé énergétique local', anchor: 'onoff-vs-energy-reporting' },
       { label: 'Ce que signifient les chiffres', anchor: 'what-the-numbers-mean' },
       { label: 'Que surveiller (et ne pas surveiller)', anchor: 'what-to-monitor' },
@@ -719,6 +722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'IA locale et données énergétiques', anchor: 'local-ai' },
       { label: "Ce qu'il faut vérifier avant d'acheter", anchor: 'what-to-check' },
       { label: 'Quelle prise choisir', anchor: 'which-one' },
+      { label: "Notre méthode d'évaluation", anchor: 'methodology' },
       { label: 'Questions fréquentes', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -726,6 +730,43 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { type: 'plain-terms', content: "Certaines prises connectées vous permettent d'allumer et d'éteindre un appareil localement via Home Assistant, mais envoient encore les chiffres détaillés de consommation uniquement à l'application propre du fabricant. Ce guide vise à trouver des prises où les données réelles de puissance restent aussi locales, avec les prix actuels." },
     ],
     sections: {
+      buyIfSkipIf: {
+        id: 'buy-skip-if',
+        title: 'Acheter si / Éviter si',
+        sponsoredSlot: true,
+        content: "Guide de décision rapide — une prise connectée de monitoring énergétique correspond-elle vraiment à votre besoin ? Évaluation de PromptQuorum basée sur les spécifications publiées et la documentation, pas sur un test pratique.",
+        items: [
+          '**Achetez une prise connectée de monitoring énergétique si :**',
+          "Vous voulez des données de puissance/kWh par appareil alimentant localement le tableau de bord Énergie de Home Assistant",
+          "Vous avez des appareils spécifiques à forte valeur à surveiller (lave-linge, sèche-linge, serveur, réfrigérateur)",
+          "Vous utilisez déjà Zigbee ou Z-Wave et voulez une prise compatible avec votre coordinateur existant",
+          "Vous voulez qu'une automatisation LLM locale résume « ce qui a consommé le plus d'électricité hier »",
+          "Vous voulez détecter une panne tôt (par exemple un réfrigérateur qui consomme plus que d'habitude)",
+          '**Évitez les prises connectées si :**',
+          "Vous voulez une visibilité sur toute la maison ou un circuit entier — utilisez plutôt un système de pinces ampèremétriques sur le tableau électrique",
+          "Vous voulez surveiller la production solaire — même réponse, un système de pinces ampèremétriques, pas une prise",
+          "Vous voulez seulement un contrôle marche/arrêt sans données énergétiques — une prise connectée classique, bien moins chère, suffit",
+          "Vous voulez surveiller un appareil qui dépasse la charge maximale nominale d'une prise — vérifiez d'abord les caractéristiques",
+        ],
+        affiliateLinks: [
+          { label: 'Vérifier le prix de la Aqara Smart Plug UE →', url: 'https://eu.aqara.com/en-eu/products/aqara-smart-plug-eu', productName: 'Aqara Smart Plug EU', productCategory: 'Energy-monitoring smart plug', priceRange: 'à partir de 21,10 €' },
+          { label: 'Comparer les 4 prises →', url: '#comparison', productName: 'Smart plug comparison', productCategory: 'Energy-monitoring smart plug' },
+        ],
+      },
+      scorecard: {
+        id: 'scorecard',
+        title: "Tableau d'évaluation des prises de monitoring énergétique",
+        content:
+          "**Évaluation de PromptQuorum, basée sur les spécifications des fabricants et la propre documentation d'intégration de Home Assistant — pas un test en laboratoire d'une unité physique.** Les notes reflètent l'adéquation spécifique au monitoring énergétique local-first.",
+        columns: ['Prise', 'Données énergétiques locales', 'Rapport qualité/prix', 'Idéal pour'],
+        rows: [
+          { Prise: 'Aqara Smart Plug', 'Données énergétiques locales': '9,5/10', 'Rapport qualité/prix': '9/10', 'Idéal pour': 'Foyers Zigbee en France/UE, achat de plusieurs unités' },
+          { Prise: 'Zooz ZEN15 800LR', 'Données énergétiques locales': '9/10', 'Rapport qualité/prix': '7,5/10', 'Idéal pour': 'Foyers Z-Wave aux États-Unis, couverture longue portée (produit US, prise NEMA)' },
+          { Prise: 'Shelly Plug US Gen4', 'Données énergétiques locales': '9/10', 'Rapport qualité/prix': '8,5/10', 'Idéal pour': 'Pas de coordinateur existant, flexibilité maximale (produit US ; version UE dispo)' },
+          { Prise: 'Sonoff S31 (Wi-Fi)', 'Données énergétiques locales': '7,5/10', 'Rapport qualité/prix': '9/10', 'Idéal pour': 'Option confirmée la moins chère aux États-Unis (produit US, prise NEMA)' },
+        ],
+        note: "Ces notes sont l'évaluation éditoriale de PromptQuorum, dérivée de spécifications vérifiées et de la propre documentation d'intégration de Home Assistant (voir « Notre méthode d'évaluation » ci-dessous) — elles ne résultent pas d'un test physique de ces unités par PromptQuorum.",
+      },
       tldr: {
         id: 'tldr',
         title: 'Résumé',
@@ -760,6 +801,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           { label: 'Aqara Smart Plug UE', url: 'https://eu.aqara.com/en-eu/products/aqara-smart-plug-eu', productName: 'Aqara Smart Plug EU', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Comparaison tête-à-tête',
+        content: "**Les quatre prises passées en revue, côte à côte, vérifiées le 25/08/2026. Pertinent pour la France/UE : seule l'Aqara Smart Plug est un produit officiellement vendu en Europe avec un prix en euros confirmé.**",
+        columns: ['Prise', 'Protocole', 'Charge max', 'Données énergétiques locales', 'Prix'],
+        rows: [
+          { Prise: 'Aqara Smart Plug UE', Protocole: 'Zigbee 3.0', 'Charge max': '2300 W', 'Données énergétiques locales': 'Oui (ZHA/Zigbee2MQTT)', Prix: 'à partir de 21,10 €' },
+          { Prise: 'Zooz ZEN15 800LR', Protocole: 'Z-Wave Long Range (série 800)', 'Charge max': 'Vérifier la fiche produit', 'Données énergétiques locales': 'Oui (W/A/V/kWh)', Prix: '37,95-48,95 $ (produit US, prise NEMA)' },
+          { Prise: 'Shelly Plug US Gen4', Protocole: 'Wi-Fi / Matter / Zigbee', 'Charge max': 'Vérifier la fiche produit', 'Données énergétiques locales': 'Oui (API locale documentée)', Prix: '19,99-24,99 $ (produit US ; version UE existe, prix € non confirmé)' },
+          { Prise: 'Sonoff S31', Protocole: 'Wi-Fi', 'Charge max': 'Vérifier la fiche produit', 'Données énergétiques locales': 'Oui — mais PAS la S31 Lite ZB', Prix: '9,90-23,90 $ (produit US, prise NEMA)' },
+        ],
+        items: [
+          "**Notre choix pour la France/UE :** Aqara Smart Plug UE — le seul produit de cette liste officiellement vendu en euros pour le marché européen, avec un relevé énergétique local confirmé via ZHA ou Zigbee2MQTT.",
+          "**Notre choix si vous n'avez pas de coordinateur existant :** Shelly Plug US Gen4 — le seul appareil ici confirmé sur trois protocoles (Wi-Fi, Matter, Zigbee) avec une API locale documentée ; une version UE existe mais son prix en euros n'a pas pu être confirmé lors de cette vérification.",
+          "Zooz et Sonoff sont conçus principalement pour le marché américain (format de prise NEMA, réseau 120 V) et ne sont pas directement compatibles avec les prises françaises sans adaptateur et compatibilité de tension appropriés.",
+          "Aucune de ces quatre prises ne diffère vraiment sur la fiabilité du relevé énergétique local — toutes le confirment. La vraie décision porte sur la compatibilité du protocole, la disponibilité régionale et le prix, pas sur la capacité de base.",
+        ],
+        affiliateLinks: [
+          { label: 'Vérifier le prix Aqara UE →', url: 'https://eu.aqara.com/en-eu/products/aqara-smart-plug-eu', productName: 'Aqara Smart Plug EU', productCategory: 'Energy-monitoring smart plug', priceRange: 'à partir de 21,10 €' },
+          { label: 'Vérifier le prix Shelly →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug', priceRange: '19,99-24,99 $' },
         ],
       },
       onoffVsEnergyReporting: {
@@ -849,7 +912,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "En France/UE, vous voulez la variante du fabricant européen avec API locale documentée : Shelly (version UE) — vérifiez le prix directement sur shelly.com/fr avant d'acheter.",
           "Aux États-Unis, vous utilisez déjà Z-Wave : Zooz ZEN15 800LR (37,95-48,95 $).",
           "Aux États-Unis, vous voulez l'option confirmée la moins chère : Sonoff S31 (9,90-23,90 $) — assurez-vous d'acheter la S31, pas la S31 Lite ZB Zigbee, si le monitoring énergétique est l'objectif.",
+          "Vous voulez suivre 4 appareils ou plus avec un budget limité : Aqara Smart Plug UE × plusieurs — le coût par unité le plus bas parmi les options confirmées pour la France/UE.",
           "Vous voulez une visibilité sur toute la maison ou un circuit entier : évitez complètement les prises connectées et utilisez plutôt un système de pinces ampèremétriques sur le tableau électrique — voir la vue d'ensemble de la gestion énergétique locale.",
+        ],
+      },
+      methodology: {
+        id: 'methodology',
+        title: "Notre méthode d'évaluation des prises de monitoring énergétique",
+        content:
+          "**Cette revue n'a pas fait l'objet d'un test pratique par PromptQuorum sur des unités physiques.** Elle est construite à partir des spécifications publiées par les fabricants, des fiches produit des revendeurs et de la propre documentation d'intégration de Home Assistant, clairement séparées ci-dessous afin que vous sachiez ce qui est confirmé et ce qui relève de notre évaluation.",
+        items: [
+          "**Confirmé par le fabricant :** le protocole, la charge maximale nominale et le prix officiel — issus directement des pages produit et boutiques officielles d'Aqara, Zooz, Shelly et Sonoff/ITEAD, vérifiés le 25/08/2026. Pour la France/UE, le prix Aqara (à partir de 21,10 €) provient du comparateur de prix Geizhals ; le prix exact en euros de la version UE de Shelly n'a pas pu être confirmé officiellement et doit être vérifié sur shelly.com/fr.",
+          "**Confirmé par la documentation Home Assistant :** si les entités capteur d'énergie (watts, kWh, tension, ampérage) sont exposées localement via l'intégration concernée (ZHA, Zigbee2MQTT, Z-Wave JS, ou une API locale Wi-Fi/Matter) plutôt que via une connexion cloud — issu de la propre documentation d'intégration de Home Assistant, pas des allégations marketing du fabricant.",
+          "**Évaluation PromptQuorum :** le tableau d'évaluation, les recommandations acheter/éviter et le filtre « quelle prise choisir » — le jugement éditorial de PromptQuorum appliqué aux spécifications et à la documentation confirmées ci-dessus, pas un nouveau test physique.",
+          "Nous évaluons les prises connectées de monitoring énergétique sur : la fiabilité confirmée du relevé énergétique local (pas seulement marche/arrêt), la compatibilité du protocole avec les installations existantes, la charge maximale nominale, le prix (et sa disponibilité réelle en euros pour la France/UE), et la prise en charge documentée de l'intégration Home Assistant pour le modèle exact.",
         ],
       },
       faqSection: {
@@ -858,12 +934,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Le contrôle marche/arrêt local signifie-t-il que les données énergétiques le sont aussi ?', a: "Pas nécessairement — certaines prises séparent les deux, contrôlant marche/arrêt localement tout en acheminant les données détaillées de puissance via le cloud du fabricant. Vérifiez spécifiquement la prise en charge du relevé énergétique local." },
           { q: 'Les prises Zigbee sont-elles meilleures que les prises Wi-Fi pour le monitoring énergétique ?', a: "En général, oui, pour un relevé local confirmé — les prises Zigbee et Z-Wave ont un historique plus constant ici que les prises Wi-Fi, bien que Shelly soit une exception confirmée avec une API locale documentée. Vérifiez tout de même le modèle précis plutôt que de vous fier uniquement au protocole." },
+          { q: 'Quelle est la meilleure prise connectée de monitoring énergétique pour la France ?', a: "Pour la France/UE, l'Aqara Smart Plug UE (Zigbee, à partir de 21,10 €) est le choix le plus pertinent : c'est la seule prise de cette sélection officiellement vendue en euros, avec un relevé énergétique local confirmé via ZHA ou Zigbee2MQTT. Shelly propose une version UE avec API locale documentée sur plusieurs protocoles, mais son prix exact en euros n'a pas pu être confirmé lors de cette vérification — consultez shelly.com/fr avant d'acheter." },
           { q: 'Comment ces prises se connectent-elles au tableau de bord Énergie ?', a: 'Une fois le relevé local confirmé, ajoutez l\'entité capteur d\'énergie de la prise sous « Appareils individuels » dans la configuration du tableau de bord Énergie — voir ce guide pour le tutoriel complet.' },
           { q: 'Puis-je mélanger les protocoles (certaines prises Zigbee, d\'autres Wi-Fi) ?', a: "Oui — Home Assistant peut combiner des entités capteur de différents protocoles dans la même vue du tableau de bord Énergie sans problème, tant que chacune rapporte individuellement en local." },
           { q: 'Ai-je besoin d\'une prise par appareil, ou puis-je surveiller un circuit entier ?', a: "Les prises connectées surveillent les appareils individuels qui y sont branchés ; pour un monitoring de circuit entier ou de toute la maison, une pince ampèremétrique sur le tableau électrique (voir la vue d'ensemble de la gestion énergétique locale) est l'outil approprié à la place." },
           { q: 'Chaque prise d\'une gamme de produits a-t-elle les mêmes fonctionnalités ?', a: "Non — la S31 Wi-Fi de Sonoff dispose d'un monitoring énergétique intégré, mais sa cousine Zigbee, la S31 Lite ZB, n'en a pas, selon les pages produit de Sonoff elles-mêmes. Vérifiez la page du modèle précis, pas seulement la marque ou le nom de la gamme." },
           { q: 'La surveillance de mes appareils me fera-t-elle automatiquement économiser de l\'argent ?', a: "Non — la prise mesure la consommation ; les économies proviennent de ce que vous faites de cette information (identifier le gaspillage, automatiser les charges, décaler la consommation vers des heures moins chères ou couvertes par le solaire). Considérez la prise comme une source de données, pas un dispositif d'économie en soi." },
           { q: 'Une IA locale peut-elle utiliser ces données énergétiques ?', a: "Oui — puisque les entités capteur d'énergie sont déjà locales dans Home Assistant, une automatisation LLM locale peut résumer ou répondre à des questions sur les données (par exemple, « qu'est-ce qui a consommé le plus hier ? ») sans rien envoyer à un service d'IA cloud." },
+          { q: 'Combien de prises de monitoring énergétique devrais-je acheter pour commencer ?', a: "Deux ou trois, sur vos appareils à plus forte valeur (lave-linge/sèche-linge, un serveur ou PC allumé en permanence, un réfrigérateur ou congélateur). Élargissez seulement si les données changent réellement votre comportement — surveiller chaque petit appareil ajoute du coût sans grande valeur ajoutée." },
+          { q: 'Une prise connectée est-elle adaptée pour surveiller la recharge d\'un véhicule électrique ?', a: "Généralement non, ce n'est pas le meilleur choix — une solution énergétique dédiée à la recharge ou le relevé propre de la borne est mieux adapté qu'une prise connectée généraliste, car les profils de charge et de durée de la recharge d'un véhicule électrique diffèrent du monitoring d'appareil classique." },
+          { q: "Que dois-je vérifier avant d'acheter une prise de monitoring énergétique, quelle qu'elle soit ?", a: "Confirmez spécifiquement le relevé énergétique local (pas seulement marche/arrêt) dans la documentation d'intégration de Home Assistant pour le modèle exact, vérifiez la charge nominale maximale de la prise par rapport à votre appareil, et assurez-vous que le format de prise et la tension (Type E en France, Schuko/Type F ailleurs en UE, NEMA aux États-Unis) correspondent à votre région." },
         ],
       },
       relatedReading: {
@@ -873,6 +953,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Tableau de bord Énergie de Home Assistant : guide de configuration complet](/fr/smart-home/home-assistant-energy-dashboard-guide) — où ces prises se connectent',
           '[Gestion énergétique locale de la maison connectée](/fr/smart-home/local-smart-home-energy-management-2027) — la stratégie de monitoring plus large, y compris le monitoring CT pour toute la maison',
           '[Meilleurs dongles USB Zigbee et Thread](/fr/smart-home/best-zigbee-thread-dongles-2027) — le matériel radio avec lequel les prises Zigbee se connectent',
+          '[Meilleurs appareils pour la maison connectée 2026](/fr/smart-home/best-smart-home-devices-2026) — le guide d\'achat complet, catégorie par catégorie, dans lequel s\'inscrit cette prise',
+          '[Automatisations IA avec un LLM local](/fr/smart-home/ai-automations-local-llm) — construisez l\'automatisation « ce qui a consommé le plus d\'électricité hier »',
         ],
       },
     },
