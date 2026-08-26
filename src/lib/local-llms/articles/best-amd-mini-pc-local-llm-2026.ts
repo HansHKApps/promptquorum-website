@@ -6,12 +6,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     theme: 'Hardware Setups',
     title: 'Best AMD Mini PC for Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Compared',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-26',
     seoTitle: 'Best Mini PC for Local LLM 2026: AMD Ryzen AI Max+ Compared',
     metaDescription: 'Best AMD mini PCs for running 70B local LLMs in 2026. Minisforum MS-A2, Beelink GTR9 Pro, GMKtec EVO-X2, AOOSTAR GEM12 Pro — benchmarks, Ollama setup, vs AceMagic & Geekom. June 2026.',
     heroImage: '/images/best-amd-mini-pc-local-llm-2026-comparison-hero-en.webp',
     publishDate: '2026-05-17',
     next_refresh_due: '2026-11-17',
+    last_full_refresh: '2026-08-26',
+    next_seo_review_due: '2026-10-01',
+    last_seo_review: '2026-08-26',
     supplementalSchema: {
       'products': [
         {
@@ -56,7 +59,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       ],
     },
-    intro: '**AMD Ryzen AI Max+ 395 mini PCs with 64–128GB unified memory can run 30–70B models offline at workstation-class performance for $1,200–2,500.** The new Chinese OEM mini PC category (AOOSTAR, Minisforum, Beelink, GMKtec) captures buyers upgrading from laptops or avoiding $3,000+ Mac Studio costs. These machines combine Zen 5 CPU + Radeon 8060S iGPU + 50 TOPS NPU in a footprint smaller than a desktop tower, with ROCm Linux support maturing rapidly.',
+    intro: '**AMD Ryzen AI Max+ 395 mini PCs with 64–128GB unified memory can run 30–70B models offline at workstation-class performance for $1,200–2,500.** The new Chinese OEM mini PC category (AOOSTAR, Minisforum, Beelink, GMKtec) captures buyers upgrading from laptops or avoiding Mac Studio costs — Apple\'s August 2026 refresh dropped the Mac Studio M5 Max starting price to $2,499, still well above this AMD tier. These machines combine Zen 5 CPU + Radeon 8060S iGPU + 50 TOPS NPU in a footprint smaller than a desktop tower, with ROCm Linux support maturing rapidly.',
     leadAnswerBlock: '**AMD Ryzen AI Max+ 395 mini PCs offer 64–128GB unified memory, 50 TOPS NPU, and iGPU performance rivaling RTX 4070 — ideal for offline 30–70B model inference at $1,200–2,500.**',
     audience: 'Local LLM users comparing $1,200–2,500 mini PC options for 70B model capability; buyers evaluating AMD vs Mac Studio; Linux-first developers.',
     readTime: '12 min',
@@ -83,109 +86,109 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
         en: {
           question: 'Which AMD mini PC is best for running local LLMs in 2026?',
-          answer: 'The best AMD mini PCs for local LLMs in 2026 use the Ryzen AI Max+ 395 chip with 64–128 GB unified DDR5X memory and a 50 TOPS NPU. Top picks: Minisforum MS-A2 ($1,599, 96 GB) is best overall and runs 70B Q4; Beelink GTR9 Pro ($1,899, 128 GB) is best for 70B Q5 with large context; GMKtec EVO-X2 ($1,199, 64 GB) is best budget pick for 30–40B models. All are 30–40% cheaper than a Mac Studio M4 Max with equivalent memory.',
+          answer: 'The best AMD mini PCs for local LLMs in 2026 use the Ryzen AI Max+ 395 chip with 64–128 GB unified DDR5X memory and a 50 TOPS NPU. Top picks: Minisforum MS-A2 ($1,599, 96 GB) is best overall and runs 70B Q4; Beelink GTR9 Pro ($1,899, 128 GB) is best for 70B Q5 with large context; GMKtec EVO-X2 ($1,199, 64 GB) is best budget pick for 30–40B models. All are 25–50% cheaper than the Mac Studio M5 Max ($2,499 starting price, Aug 2026 refresh) with equivalent memory.',
           bullets: [
             '→ Minisforum MS-A2 ($1,599, 96 GB): best overall — runs 70B Q4 comfortably',
             '→ Beelink GTR9 Pro ($1,899, 128 GB): max memory — runs 70B Q5 with large context',
             '→ GMKtec EVO-X2 ($1,199, 64 GB): best budget — runs 30–40B models well',
             '→ AOOSTAR GEM12 Pro ($1,799, 96 GB): unique OCuLink eGPU port for GPU expansion',
-            '→ All use Ryzen AI Max+ 395 with ROCm Linux, DDR5X RAM, Ollama/vLLM support; 30–40% cheaper than Mac Studio M4 Max',
+            '→ All use Ryzen AI Max+ 395 with ROCm Linux, DDR5X RAM, Ollama/vLLM support; 25–50% cheaper than Mac Studio M5 Max ($2,499 starting)',
           ],
           updatedDate: '2026-06-01',
         },
         de: {
           question: 'Welcher AMD Mini-PC ist 2026 am besten für lokale LLMs geeignet?',
-          answer: 'Die besten AMD Mini-PCs für lokale LLMs 2026 nutzen den Ryzen AI Max+ 395-Chip mit 64–128 GB vereinheitlichtem DDR5X-Speicher und einem 50 TOPS NPU. Top-Empfehlungen: Minisforum MS-A2 (1.599 $, 96 GB) ist das beste Allround-Gerät und führt 70B Q4 aus; Beelink GTR9 Pro (1.899 $, 128 GB) ist am besten für 70B Q5 mit großem Kontext; GMKtec EVO-X2 (1.199 $, 64 GB) ist das beste Budget-Gerät für 30–40B-Modelle. Alle 30–40 % günstiger als ein Mac Studio M4 Max mit gleichwertigem Speicher.',
+          answer: 'Die besten AMD Mini-PCs für lokale LLMs 2026 nutzen den Ryzen AI Max+ 395-Chip mit 64–128 GB vereinheitlichtem DDR5X-Speicher und einem 50 TOPS NPU. Top-Empfehlungen: Minisforum MS-A2 (1.599 $, 96 GB) ist das beste Allround-Gerät und führt 70B Q4 aus; Beelink GTR9 Pro (1.899 $, 128 GB) ist am besten für 70B Q5 mit großem Kontext; GMKtec EVO-X2 (1.199 $, 64 GB) ist das beste Budget-Gerät für 30–40B-Modelle. Alle 25–50 % günstiger als der Mac Studio M5 Max (ab 2.499 $, Update August 2026) mit gleichwertigem Speicher.',
           bullets: [
             '→ Minisforum MS-A2 (1.599 $, 96 GB): bestes Allround — 70B Q4 komfortabel',
             '→ Beelink GTR9 Pro (1.899 $, 128 GB): max RAM — 70B Q5 mit großem Kontext',
             '→ GMKtec EVO-X2 (1.199 $, 64 GB): bestes Budget — 30–40B-Modelle',
             '→ AOOSTAR GEM12 Pro (1.799 $, 96 GB): einzigartiger OCuLink eGPU-Port',
-            '→ Alle: Ryzen AI Max+ 395, ROCm Linux, DDR5X, Ollama/vLLM; 30–40 % günstiger als Mac Studio M4 Max',
+            '→ Alle: Ryzen AI Max+ 395, ROCm Linux, DDR5X, Ollama/vLLM; 25–50 % günstiger als Mac Studio M5 Max (ab 2.499 $)',
           ],
           updatedDate: '2026-06-01',
         },
         fr: {
           question: 'Quel mini PC AMD est le meilleur pour les LLM locaux en 2026 ?',
-          answer: "Les meilleurs mini PC AMD pour les LLM locaux en 2026 utilisent le chip Ryzen AI Max+ 395 avec 64–128 Go de mémoire DDR5X unifiée et un NPU de 50 TOPS. Top sélections : Minisforum MS-A2 (1 599 $, 96 Go) est le meilleur tout-en-un et fait tourner 70B Q4 ; Beelink GTR9 Pro (1 899 $, 128 Go) est le meilleur pour 70B Q5 avec grand contexte ; GMKtec EVO-X2 (1 199 $, 64 Go) est le meilleur budget pour les modèles 30–40B. Tous 30–40 % moins chers qu'un Mac Studio M4 Max avec mémoire équivalente.",
+          answer: "Les meilleurs mini PC AMD pour les LLM locaux en 2026 utilisent le chip Ryzen AI Max+ 395 avec 64–128 Go de mémoire DDR5X unifiée et un NPU de 50 TOPS. Top sélections : Minisforum MS-A2 (1 599 $, 96 Go) est le meilleur tout-en-un et fait tourner 70B Q4 ; Beelink GTR9 Pro (1 899 $, 128 Go) est le meilleur pour 70B Q5 avec grand contexte ; GMKtec EVO-X2 (1 199 $, 64 Go) est le meilleur budget pour les modèles 30–40B. Tous 25–50 % moins chers que le Mac Studio M5 Max (à partir de 2 499 $, mise à jour août 2026) avec mémoire équivalente.",
           bullets: [
             '→ Minisforum MS-A2 (1 599 $, 96 Go) : meilleur polyvalent — 70B Q4 confortablement',
             '→ Beelink GTR9 Pro (1 899 $, 128 Go) : max mémoire — 70B Q5 avec grand contexte',
             '→ GMKtec EVO-X2 (1 199 $, 64 Go) : meilleur budget — modèles 30–40B',
             '→ AOOSTAR GEM12 Pro (1 799 $, 96 Go) : port OCuLink eGPU unique',
-            '→ Tous : Ryzen AI Max+ 395, ROCm Linux, DDR5X, Ollama/vLLM ; 30–40 % moins chers que Mac Studio M4 Max',
+            '→ Tous : Ryzen AI Max+ 395, ROCm Linux, DDR5X, Ollama/vLLM ; 25–50 % moins chers que le Mac Studio M5 Max (à partir de 2 499 $)',
           ],
           updatedDate: '2026-06-01',
         },
         ja: {
           question: '2026年ローカルLLM向けに最良のAMDミニPCはどれですか？',
-          answer: '2026年のローカルLLM向けベストAMDミニPCはRyzen AI Max+ 395チップ搭載、64〜128 GBユニファイドDDR5Xメモリ、50 TOPS NPU搭載機です。おすすめ：Minisforum MS-A2（1,599ドル、96 GB）がオールラウンド最良で70B Q4を快適に実行；Beelink GTR9 Pro（1,899ドル、128 GB）が大コンテキストで70B Q5向け最良；GMKtec EVO-X2（1,199ドル、64 GB）が30〜40Bモデル向け最良のバジェット機。すべてMac Studio M4 Maxより30〜40%安価。',
+          answer: '2026年のローカルLLM向けベストAMDミニPCはRyzen AI Max+ 395チップ搭載、64〜128 GBユニファイドDDR5Xメモリ、50 TOPS NPU搭載機です。おすすめ：Minisforum MS-A2（1,599ドル、96 GB）がオールラウンド最良で70B Q4を快適に実行；Beelink GTR9 Pro（1,899ドル、128 GB）が大コンテキストで70B Q5向け最良；GMKtec EVO-X2（1,199ドル、64 GB）が30〜40Bモデル向け最良のバジェット機。すべて新型Mac Studio M5 Max（2026年8月刷新、2,499ドル〜）より25〜50%安価。',
           bullets: [
             '→ Minisforum MS-A2（1,599ドル、96 GB）：オールラウンド最良 — 70B Q4を快適に実行',
             '→ Beelink GTR9 Pro（1,899ドル、128 GB）：最大RAM — 大コンテキストで70B Q5',
             '→ GMKtec EVO-X2（1,199ドル、64 GB）：バジェット最良 — 30〜40Bモデル向け',
             '→ AOOSTAR GEM12 Pro（1,799ドル、96 GB）：独自OCuLink eGPUポート搭載',
-            '→ すべて：Ryzen AI Max+ 395、ROCm Linux、DDR5X、Ollama/vLLM対応；Mac Studio M4 Maxより30〜40%安価',
+            '→ すべて：Ryzen AI Max+ 395、ROCm Linux、DDR5X、Ollama/vLLM対応；Mac Studio M5 Max（2,499ドル〜）より25〜50%安価',
           ],
           updatedDate: '2026-06-01',
         },
         zh: {
           question: '2026年运行本地LLM最好的AMD迷你PC是哪款？',
-          answer: '2026年最佳AMD迷你PC搭载Ryzen AI Max+ 395芯片，64–128 GB统一DDR5X内存，50 TOPS NPU。推荐：Minisforum MS-A2（$1,599，96 GB）综合最佳，轻松运行70B Q4；Beelink GTR9 Pro（$1,899，128 GB）最大内存，大上下文70B Q5；GMKtec EVO-X2（$1,199，64 GB）预算最佳，适合30–40B模型。与相同内存的Mac Studio M4 Max相比便宜30–40%。',
+          answer: '2026年最佳AMD迷你PC搭载Ryzen AI Max+ 395芯片，64–128 GB统一DDR5X内存，50 TOPS NPU。推荐：Minisforum MS-A2（$1,599，96 GB）综合最佳，轻松运行70B Q4；Beelink GTR9 Pro（$1,899，128 GB）最大内存，大上下文70B Q5；GMKtec EVO-X2（$1,199，64 GB）预算最佳，适合30–40B模型。与相同内存的新款Mac Studio M5 Max（2026年8月改款，起价$2,499）相比便宜25–50%。',
           bullets: [
             '→ Minisforum MS-A2（$1,599，96 GB）：综合最佳——轻松运行70B Q4',
             '→ Beelink GTR9 Pro（$1,899，128 GB）：最大内存——大上下文70B Q5',
             '→ GMKtec EVO-X2（$1,199，64 GB）：预算最佳——适合30–40B模型',
             '→ AOOSTAR GEM12 Pro（$1,799，96 GB）：独特OCuLink eGPU接口',
-            '→ 全部：Ryzen AI Max+ 395，ROCm Linux，DDR5X，支持Ollama/vLLM；比Mac Studio M4 Max便宜30–40%',
+            '→ 全部：Ryzen AI Max+ 395，ROCm Linux，DDR5X，支持Ollama/vLLM；比Mac Studio M5 Max（起价$2,499）便宜25–50%',
           ],
           updatedDate: '2026-06-01',
         },
         es: {
           question: '¿Cuál es el mejor mini PC AMD para LLMs locales en 2026?',
-          answer: 'Los mejores mini PCs AMD para LLMs locales en 2026 usan el chip Ryzen AI Max+ 395 con 64–128 GB de memoria DDR5X unificada y un NPU de 50 TOPS. Las mejores opciones: Minisforum MS-A2 ($1.599, 96 GB) es el mejor todo-en-uno y ejecuta 70B Q4; Beelink GTR9 Pro ($1.899, 128 GB) es el mejor para 70B Q5 con contexto amplio; GMKtec EVO-X2 ($1.199, 64 GB) es la mejor opción económica para modelos de 30–40B. Todos un 30–40% más baratos que el Mac Studio M4 Max con memoria equivalente.',
+          answer: 'Los mejores mini PCs AMD para LLMs locales en 2026 usan el chip Ryzen AI Max+ 395 con 64–128 GB de memoria DDR5X unificada y un NPU de 50 TOPS. Las mejores opciones: Minisforum MS-A2 ($1.599, 96 GB) es el mejor todo-en-uno y ejecuta 70B Q4; Beelink GTR9 Pro ($1.899, 128 GB) es el mejor para 70B Q5 con contexto amplio; GMKtec EVO-X2 ($1.199, 64 GB) es la mejor opción económica para modelos de 30–40B. Todos entre un 25–50% más baratos que el nuevo Mac Studio M5 Max (desde $2.499, actualización de agosto 2026) con memoria equivalente.',
           bullets: [
             '→ Minisforum MS-A2 ($1.599, 96 GB): mejor todo-en-uno — 70B Q4 cómodamente',
             '→ Beelink GTR9 Pro ($1.899, 128 GB): máxima memoria — 70B Q5 con contexto amplio',
             '→ GMKtec EVO-X2 ($1.199, 64 GB): mejor económico — modelos de 30–40B',
             '→ AOOSTAR GEM12 Pro ($1.799, 96 GB): puerto OCuLink eGPU único',
-            '→ Todos: Ryzen AI Max+ 395, ROCm Linux, DDR5X, Ollama/vLLM; 30–40% más baratos que Mac Studio M4 Max',
+            '→ Todos: Ryzen AI Max+ 395, ROCm Linux, DDR5X, Ollama/vLLM; 25–50% más baratos que el Mac Studio M5 Max (desde $2.499)',
           ],
           updatedDate: '2026-06-01',
         },
         pt: {
           question: 'Qual é o melhor mini PC AMD para LLMs locais em 2026?',
-          answer: 'Os melhores mini PCs AMD para LLMs locais em 2026 usam o chip Ryzen AI Max+ 395 com 64–128 GB de memória DDR5X unificada e NPU de 50 TOPS. Melhores opções: Minisforum MS-A2 ($1.599, 96 GB) é o melhor versátil e roda 70B Q4; Beelink GTR9 Pro ($1.899, 128 GB) é o melhor para 70B Q5 com contexto longo; GMKtec EVO-X2 ($1.199, 64 GB) é o melhor econômico para modelos 30–40B. Todos 30–40% mais baratos que o Mac Studio M4 Max com memória equivalente.',
+          answer: 'Os melhores mini PCs AMD para LLMs locais em 2026 usam o chip Ryzen AI Max+ 395 com 64–128 GB de memória DDR5X unificada e NPU de 50 TOPS. Melhores opções: Minisforum MS-A2 ($1.599, 96 GB) é o melhor versátil e roda 70B Q4; Beelink GTR9 Pro ($1.899, 128 GB) é o melhor para 70B Q5 com contexto longo; GMKtec EVO-X2 ($1.199, 64 GB) é o melhor econômico para modelos 30–40B. Todos entre 25–50% mais baratos que o novo Mac Studio M5 Max (a partir de US$ 2.499, atualização de agosto de 2026) com memória equivalente.',
           bullets: [
             '→ Minisforum MS-A2 ($1.599, 96 GB): melhor versátil — roda 70B Q4 confortavelmente',
             '→ Beelink GTR9 Pro ($1.899, 128 GB): memória máxima — 70B Q5 com contexto longo',
             '→ GMKtec EVO-X2 ($1.199, 64 GB): melhor econômico — modelos 30–40B',
             '→ AOOSTAR GEM12 Pro ($1.799, 96 GB): porta OCuLink eGPU única',
-            '→ Todos: Ryzen AI Max+ 395, ROCm Linux, DDR5X, Ollama/vLLM; 30–40% mais baratos que Mac Studio M4 Max',
+            '→ Todos: Ryzen AI Max+ 395, ROCm Linux, DDR5X, Ollama/vLLM; 25–50% mais baratos que o Mac Studio M5 Max (a partir de US$ 2.499)',
           ],
           updatedDate: '2026-06-01',
         },
         ar: {
           question: 'ما أفضل ميني PC من AMD لتشغيل النماذج اللغوية المحلية عام 2026؟',
-          answer: 'أفضل أجهزة AMD ميني PC للنماذج المحلية في 2026 تستخدم شريحة Ryzen AI Max+ 395 مع 64–128 جيجابايت من ذاكرة DDR5X الموحدة وNPU بـ 50 TOPS. الخيارات الأفضل: Minisforum MS-A2 (1,599 $، 96 جيجابايت) الأفضل متعدد الأوجه ويشغّل 70B Q4؛ Beelink GTR9 Pro (1,899 $، 128 جيجابايت) الأفضل لـ 70B Q5 مع سياق كبير؛ GMKtec EVO-X2 (1,199 $، 64 جيجابايت) الأفضل اقتصادياً لنماذج 30–40B. جميعها أرخص بـ 30–40% من Mac Studio M4 Max بذاكرة مماثلة.',
+          answer: 'أفضل أجهزة AMD ميني PC للنماذج المحلية في 2026 تستخدم شريحة Ryzen AI Max+ 395 مع 64–128 جيجابايت من ذاكرة DDR5X الموحدة وNPU بـ 50 TOPS. الخيارات الأفضل: Minisforum MS-A2 (1,599 $، 96 جيجابايت) الأفضل متعدد الأوجه ويشغّل 70B Q4؛ Beelink GTR9 Pro (1,899 $، 128 جيجابايت) الأفضل لـ 70B Q5 مع سياق كبير؛ GMKtec EVO-X2 (1,199 $، 64 جيجابايت) الأفضل اقتصادياً لنماذج 30–40B. جميعها أرخص بنسبة 25–50% من جهاز Mac Studio M5 Max الجديد (بدءاً من 2,499 $، تحديث أغسطس 2026) بذاكرة مماثلة.',
           bullets: [
             '→ Minisforum MS-A2 (1,599 $، 96 جيجابايت): الأفضل متعدد الأوجه — 70B Q4 بشكل مريح',
             '→ Beelink GTR9 Pro (1,899 $، 128 جيجابايت): أقصى ذاكرة — 70B Q5 مع سياق كبير',
             '→ GMKtec EVO-X2 (1,199 $، 64 جيجابايت): الأفضل اقتصادياً — نماذج 30–40B',
             '→ AOOSTAR GEM12 Pro (1,799 $، 96 جيجابايت): منفذ OCuLink eGPU فريد',
-            '→ الجميع: Ryzen AI Max+ 395، ROCm Linux، DDR5X، Ollama/vLLM؛ أرخص 30–40% من Mac Studio M4 Max',
+            '→ الجميع: Ryzen AI Max+ 395، ROCm Linux، DDR5X، Ollama/vLLM؛ أرخص 25–50% من Mac Studio M5 Max (بدءاً من 2,499 $)',
           ],
           updatedDate: '2026-06-01',
         },
         ko: {
           question: '2026년 로컬 LLM 실행에 가장 좋은 AMD 미니 PC는?',
-          answer: '2026년 로컬 LLM용 최고의 AMD 미니 PC는 Ryzen AI Max+ 395 칩, 64–128 GB 통합 DDR5X 메모리, 50 TOPS NPU를 탑재합니다. 추천: Minisforum MS-A2($1,599, 96 GB)가 종합 최고로 70B Q4 쾌적 실행; Beelink GTR9 Pro($1,899, 128 GB)가 긴 컨텍스트 70B Q5용 최고; GMKtec EVO-X2($1,199, 64 GB)가 30–40B 모델 최고 가성비. 모두 동등한 메모리의 Mac Studio M4 Max 대비 30–40% 저렴.',
+          answer: '2026년 로컬 LLM용 최고의 AMD 미니 PC는 Ryzen AI Max+ 395 칩, 64–128 GB 통합 DDR5X 메모리, 50 TOPS NPU를 탑재합니다. 추천: Minisforum MS-A2($1,599, 96 GB)가 종합 최고로 70B Q4 쾌적 실행; Beelink GTR9 Pro($1,899, 128 GB)가 긴 컨텍스트 70B Q5용 최고; GMKtec EVO-X2($1,199, 64 GB)가 30–40B 모델 최고 가성비. 모두 동등한 메모리의 신형 Mac Studio M5 Max(2026년 8월 리프레시, $2,499부터) 대비 25–50% 저렴.',
           bullets: [
             '→ Minisforum MS-A2($1,599, 96 GB): 종합 최고 — 70B Q4 쾌적 실행',
             '→ Beelink GTR9 Pro($1,899, 128 GB): 최대 메모리 — 긴 컨텍스트 70B Q5',
             '→ GMKtec EVO-X2($1,199, 64 GB): 가성비 최고 — 30–40B 모델',
             '→ AOOSTAR GEM12 Pro($1,799, 96 GB): 독특한 OCuLink eGPU 포트',
-            '→ 모두: Ryzen AI Max+ 395, ROCm Linux, DDR5X, Ollama/vLLM 지원; Mac Studio M4 Max 대비 30–40% 저렴',
+            '→ 모두: Ryzen AI Max+ 395, ROCm Linux, DDR5X, Ollama/vLLM 지원; Mac Studio M5 Max($2,499부터) 대비 25–50% 저렴',
           ],
           updatedDate: '2026-06-01',
         },
@@ -209,7 +212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'Best AMD mini PCs for local LLMs in 2026: Minisforum MS-A2 ($1,599, 96 GB, 70B Q4), Beelink GTR9 Pro ($1,899, 128 GB, 70B Q5), GMKtec EVO-X2 ($1,199, 64 GB, 30–40B) — all using Ryzen AI Max+ 395 with unified DDR5X memory, 30–40% cheaper than Mac Studio M4 Max.' }, { type: 'plain-terms', text: 'AMD Ryzen AI Max+ 395 mini PCs use unified memory — like Apple Silicon, the CPU, GPU, and NPU share one memory pool, so a 96 GB mini PC can run a 70B model without splitting it. DDR5X is fast memory bandwidth. ROCm is AMD\'s software stack equivalent to NVIDIA CUDA for running LLM frameworks like vLLM or Ollama.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: 'Best AMD mini PCs for local LLMs in 2026: Minisforum MS-A2 ($1,599, 96 GB, 70B Q4), Beelink GTR9 Pro ($1,899, 128 GB, 70B Q5), GMKtec EVO-X2 ($1,199, 64 GB, 30–40B) — all using Ryzen AI Max+ 395 with unified DDR5X memory, 25–50% cheaper than the Mac Studio M5 Max\'s $2,499 starting price.' }, { type: 'plain-terms', text: 'AMD Ryzen AI Max+ 395 mini PCs use unified memory — like Apple Silicon, the CPU, GPU, and NPU share one memory pool, so a 96 GB mini PC can run a 70B model without splitting it. DDR5X is fast memory bandwidth. ROCm is AMD\'s software stack equivalent to NVIDIA CUDA for running LLM frameworks like vLLM or Ollama.' }],
         items: [
           'Best overall: Minisforum MS-A2 ($1,599, 96GB RAM). Runs Llama 3.3 70B Q4 comfortably. Best price-to-performance.',
           'Maximum RAM: Beelink GTR9 Pro ($1,899, 128GB). Runs 70B Q5 with massive context windows. Best for power users.',
@@ -217,7 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Premium option: AOOSTAR GEM12 Pro ($1,799, 96GB). OCuLink port for eGPU expansion. Enthusiast-focused.',
           'All four: ROCm Linux support (kernel 6.11+), DDR5X high-speed RAM, 1TB+ NVMe SSD.',
           'Performance: Minisforum/Beelink/AOOSTAR share identical Ryzen AI Max+ 395. GMKtec has Max 385 (45 TOPS NPU).',
-          'Vs Mac Studio M4 Max: Same unified memory architecture, 30–40% cheaper. Trade-off: macOS ecosystem for Linux/ROCm.',
+          'Vs Mac Studio M5 Max (Aug 2026 refresh, from $2,499): Same unified memory architecture, still 25–50% cheaper. Trade-off: macOS ecosystem for Linux/ROCm.',
           'Linux status: ROCm 6.2+ stable. Ollama, vLLM, MLX all work. Less polish than CUDA but production-ready.',
         ],
       },
@@ -232,7 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**65–120W TDP:** Entire system draws less power than a single RTX 4090. Runs passively cooled or with quiet fans. No 350W PSU needed.',
           '**ROCm ecosystem maturing:** Linux support now stable (kernel 6.11+, ROCm 6.2+). Ollama, vLLM, and LM Studio all support AMD iGPU out of the box.',
           '**Chinese OEMs ship fast:** Minisforum (German warehouse), AOOSTAR, Beelink, GMKtec all reach EU/US within 2–4 weeks.',
-          '**$1,200–2,500 price band:** Undercuts Mac Studio M4 Max ($2,999) by 40–60% while offering identical or better unified memory capacity.',
+          '**$1,200–2,500 price band:** Undercuts the Mac Studio M5 Max ($2,499 starting price as of the August 2026 refresh) by 25–50% while offering identical or better unified memory capacity at the 128GB tier.',
         ],
       },
       'comparison-table': {
@@ -436,15 +439,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'AMD Ryzen AI Max+ vs Apple Silicon: The Real Comparison',
         content: 'Both share unified memory architecture and integrated graphics. Here is how they compare for local LLM use.',
         items: [
-          '**Mac Studio M4 Max** (equivalent): 32-core CPU, M4 Max GPU, up to 128GB unified memory. Price: $2,999–3,999. Shipping: 4–6 weeks.',
+          '**Mac Studio M5 Max** (equivalent, Aug 2026 refresh): Apple M5 Max chip, up to 128GB unified memory. Price: starts at $2,499. Ships: September 22, 2026.',
           '**AMD Ryzen AI Max+ Mini PC** (best match): 16-core CPU, Radeon 8060S iGPU, up to 128GB unified memory. Price: $1,599–1,899. Shipping: 2–4 weeks.',
-          '**Performance:** Ryzen AI Max+ runs Llama 70B at 18–22 tok/s. Mac M4 Max runs same model at 20–25 tok/s. Difference is less than 10%.',
+          '**Performance:** Ryzen AI Max+ runs Llama 70B at 18–22 tok/s. The outgoing Mac Studio M4 Max ran the same model at 20–25 tok/s (within 10%). Independent benchmarks for the new M5 Max chip are not yet published.',
           '**Ecosystem:** macOS has MLX, Metal. AMD/Linux has ROCm, vLLM, Ollama. Both mature now.',
-          '**Cost advantage:** AMD saves $1,100–2,400 per unit. At scale (teams), that is $5,500–12,000 over 5 units.',
+          '**Cost advantage:** AMD saves roughly $600–1,300 per unit versus the Mac Studio M5 Max\'s $2,499 starting price. At scale (teams), that is $3,000–6,500 over 5 units.',
           '**Trade-off:** You lose macOS, Xcode, Final Cut Pro. Gain Linux flexibility, ROCm skill transfer, and lower cost.',
         ],
         image: '/images/best-amd-mini-pc-amd-vs-apple-en.svg',
-        imageCaption: 'Side-by-side comparison: AMD Ryzen AI Max+ mini PCs ($1,599–1,899) deliver equivalent performance and unified memory to Mac Studio M4 Max ($2,999–3,999) at 40–50% lower cost.',
+        imageCaption: 'Side-by-side comparison: AMD Ryzen AI Max+ mini PCs ($1,599–1,899) deliver comparable unified memory to the Mac Studio M5 Max (from $2,499, Aug 2026 refresh) at 25–35% lower cost.',
       },
       'eu-considerations': {
         id: 'eu-considerations',
@@ -465,7 +468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'These mini PCs are excellent but not universal. Here is when to look elsewhere.',
         items: [
           'You need CUDA-only workflows: PyTorch fine-tuning with torch.cuda, vLLM CUDA kernels, or proprietary CUDA research code. ROCm covers 85% but gaps remain.',
-          'You want macOS without compromise: If your entire workflow is macOS (Xcode, Final Cut, Figma), Mac Studio M4 Max is the natural choice.',
+          'You want macOS without compromise: If your entire workflow is macOS (Xcode, Final Cut, Figma), the new Mac Studio M5 Max (from $2,499) is the natural choice.',
           'You need >70B models: Even 128GB unified memory caps at 70B Q5. Llama 4 Maverick (400B total) requires multi-GPU setup.',
           'You demand warranty service in hours: Chinese OEMs require shipping units back to Asia in some cases.',
           'You are running production inference for paying customers: If 99.9% uptime SLA is required, enterprise support beats consumer mini PCs.',
@@ -481,7 +484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Q: Which mini PC is best for running 70B LLMs? | A: For 70B model inference, the Minisforum MS-A2 (96GB, $1,599) is the best value — it runs Llama 3.3 70B Q4 at 18–22 tok/s on Ollama. The Beelink GTR9 Pro (128GB, $1,899) is the best choice if you need 70B Q5 or large context windows above 16K tokens. Both use the same Ryzen AI Max+ 395 chip.',
           'Q: What about AceMagic and Geekom mini PCs for local LLMs? | A: AceMagic (e.g., AM19 Pro) and Geekom also offer mini PCs in the Ryzen AI Max+ segment. They use the same AMD silicon as the four models reviewed here. For local LLM inference the chip is identical, so differences come down to chassis cooling, build quality, warranty, and price. Minisforum, Beelink, AOOSTAR, and GMKtec have more community testing and ROCm documentation than AceMagic or Geekom as of mid-2026.',
           'Q: What is the Ryzen AI Max Pro 495? | A: The Ryzen AI Max Pro 395 is the laptop/ultrathin variant of AMD\'s Strix Halo die — the same silicon found in the mini PCs reviewed here (which use the Ryzen AI Max+ 395 desktop variant). The "Pro" designation indicates a version sold for commercial/enterprise laptops. Performance is nearly identical to the Max+ 395 at the same power envelope; the mini PCs reviewed here have better sustained cooling than laptops using the Pro variant.',
-          'Q: How does AMD Ryzen AI Max+ compare to Apple M4 Max? | A: Nearly identical performance (within 5–10%). AMD is 30–40% cheaper. Trade-off: you lose macOS, Xcode, Final Cut ecosystem.',
+          'Q: How does AMD Ryzen AI Max+ compare to Apple M5 Max? | A: Apple\'s Mac Studio M5 Max (Aug 2026 refresh) starts at $2,499, narrowing the price gap versus the outgoing M4 Max generation. AMD Ryzen AI Max+ mini PCs are still roughly 25–50% cheaper depending on configuration. On the prior M4 Max generation, performance was within 5–10% of Ryzen AI Max+; independent benchmarks for the new M5 Max chip are not yet available. Trade-off either way: you lose macOS, Xcode, Final Cut ecosystem.',
           'Q: Do I need Linux or can I use Windows? | A: All four ship with Linux. Windows drivers are being developed but not production-ready yet.',
           'Q: What is the difference between Minisforum MS-A2 and Beelink GTR9 Pro? | A: Minisforum has 96GB RAM ($1,599). Beelink has 128GB RAM ($1,899) and comes pre-configured with Ubuntu plus ROCm.',
           'Q: Can I add a discrete GPU to these mini PCs? | A: AOOSTAR GEM12 Pro supports external GPU via OCuLink (requires $500+ eGPU enclosure).',
@@ -525,10 +528,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': 'How does AMD Ryzen AI Max+ compare to Apple M4 Max?',
+          'name': 'How does AMD Ryzen AI Max+ compare to Apple M5 Max?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Nearly identical performance (within 5–10%). AMD is 30–40% cheaper. Trade-off: you lose macOS, Xcode, Final Cut ecosystem.'
+            'text': 'Apple\'s Mac Studio M5 Max (Aug 2026 refresh) starts at $2,499. AMD Ryzen AI Max+ mini PCs are still roughly 25–50% cheaper depending on configuration. On the prior M4 Max generation, performance was within 5–10% of Ryzen AI Max+; independent benchmarks for the new M5 Max chip are not yet available. Trade-off either way: you lose macOS, Xcode, Final Cut ecosystem.'
           }
         },
         {
@@ -671,7 +674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/best-amd-mini-pc-local-llm-2026-comparison-hero-es.webp',
     publishDate: '2026-05-17',
     next_refresh_due: '2026-11-17',
-    intro: '**Los mini PCs AMD Ryzen AI Max+ 395 con 64–128 GB de memoria unificada pueden ejecutar modelos 30–70B sin conexión a internet con rendimiento de estación de trabajo por $1.200–2.500 USD.** La nueva categoría de mini PC de fabricantes OEM chinos (AOOSTAR, Minisforum, Beelink, GMKtec) atrae a compradores que se actualizan desde laptops o que quieren evitar el costo del Mac Studio (más de $3.000). Estos equipos combinan CPU Zen 5 + iGPU Radeon 8060S + NPU de 50 TOPS en un tamaño menor que una torre de escritorio, con soporte ROCm en Linux que madura rápidamente. Los precios pueden variar según tu país.',
+    intro: '**Los mini PCs AMD Ryzen AI Max+ 395 con 64–128 GB de memoria unificada pueden ejecutar modelos 30–70B sin conexión a internet con rendimiento de estación de trabajo por $1.200–2.500 USD.** La nueva categoría de mini PC de fabricantes OEM chinos (AOOSTAR, Minisforum, Beelink, GMKtec) atrae a compradores que se actualizan desde laptops o que quieren evitar el costo del Mac Studio — la actualización de agosto de 2026 de Apple bajó el precio inicial del Mac Studio M5 Max a $2.499, aún muy por encima de este nivel AMD. Estos equipos combinan CPU Zen 5 + iGPU Radeon 8060S + NPU de 50 TOPS en un tamaño menor que una torre de escritorio, con soporte ROCm en Linux que madura rápidamente. Los precios pueden variar según tu país.',
     leadAnswerBlock: '**Los mini PCs AMD Ryzen AI Max+ 395 ofrecen 64–128 GB de memoria unificada, NPU de 50 TOPS y rendimiento de iGPU comparable a la RTX 4070 — ideales para inferencia offline de modelos 30–70B entre $1.200 y $2.500 USD.**',
     audience: 'Usuarios de LLM local que comparan opciones de mini PC entre $1.200–2.500 para capacidad de modelos 70B; compradores que evalúan AMD vs Mac Studio; desarrolladores con enfoque en Linux.',
     readTime: '12 min de lectura',
@@ -714,7 +717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'Mejores mini PCs AMD para LLMs locales en 2026: Minisforum MS-A2 ($1.599, 96 GB, 70B Q4), Beelink GTR9 Pro ($1.899, 128 GB, 70B Q5), GMKtec EVO-X2 ($1.199, 64 GB, 30–40B) — todos con Ryzen AI Max+ 395 y memoria DDR5X unificada, 30–40% más baratos que Mac Studio M4 Max.' }, { type: 'plain-terms', text: 'Los mini PCs AMD Ryzen AI Max+ 395 usan memoria unificada — como Apple Silicon, CPU, GPU y NPU comparten un único banco de memoria. ROCm es el stack de software de AMD equivalente a NVIDIA CUDA para frameworks LLM como vLLM u Ollama.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: 'Mejores mini PCs AMD para LLMs locales en 2026: Minisforum MS-A2 ($1.599, 96 GB, 70B Q4), Beelink GTR9 Pro ($1.899, 128 GB, 70B Q5), GMKtec EVO-X2 ($1.199, 64 GB, 30–40B) — todos con Ryzen AI Max+ 395 y memoria DDR5X unificada, 25–50% más baratos que el Mac Studio M5 Max (desde $2.499).' }, { type: 'plain-terms', text: 'Los mini PCs AMD Ryzen AI Max+ 395 usan memoria unificada — como Apple Silicon, CPU, GPU y NPU comparten un único banco de memoria. ROCm es el stack de software de AMD equivalente a NVIDIA CUDA para frameworks LLM como vLLM u Ollama.' }],
         items: [
           'Mejor general: Minisforum MS-A2 ($1.599, 96 GB RAM). Ejecuta Llama 3.3 70B Q4 sin problemas. Mejor relación precio-rendimiento.',
           'Máxima RAM: Beelink GTR9 Pro ($1.899, 128 GB). Ejecuta 70B Q5 con ventanas de contexto masivas. Mejor para usuarios avanzados.',
@@ -722,7 +725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Opción premium: AOOSTAR GEM12 Pro ($1.799, 96 GB). Puerto OCuLink para expansión eGPU. Enfocado en entusiastas.',
           'Los cuatro: Soporte ROCm en Linux (kernel 6.11+), RAM DDR5X de alta velocidad, SSD NVMe de 1 TB o más.',
           'Rendimiento: Minisforum/Beelink/AOOSTAR comparten el mismo Ryzen AI Max+ 395. GMKtec usa el Max 385 (45 TOPS).',
-          'Vs Mac Studio M4 Max: Misma arquitectura de memoria unificada, 30–40% más barato. Compensación: macOS por Linux/ROCm.',
+          'Vs Mac Studio M5 Max (actualización agosto 2026, desde $2.499): misma arquitectura de memoria unificada, aún 25–50% más barato. Compensación: macOS por Linux/ROCm.',
           'Estado de Linux: ROCm 6.2+ estable. Ollama, vLLM, MLX funcionan. Menos pulido que CUDA, pero listo para producción.',
         ],
       },
@@ -737,7 +740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**TDP de 65–120 W:** El sistema completo consume menos energía que una sola RTX 4090. Funciona con refrigeración pasiva o ventiladores silenciosos. No requiere fuente de 350 W.',
           '**El ecosistema ROCm madura:** El soporte en Linux es ahora estable (kernel 6.11+, ROCm 6.2+). Ollama, vLLM y LM Studio soportan la iGPU AMD de forma nativa.',
           '**Los OEMs chinos entregan rápido:** Minisforum (almacén en Alemania), AOOSTAR, Beelink y GMKtec llegan a EU/EE. UU. en 2–4 semanas.',
-          '**Rango de precio $1.200–2.500 USD:** Supera al Mac Studio M4 Max ($2.999) en un 40–60% mientras ofrece capacidad de memoria unificada idéntica o superior.',
+          '**Rango de precio $1.200–2.500 USD:** Supera al Mac Studio M5 Max ($2.499 de precio inicial tras la actualización de agosto de 2026) en un 25–50% mientras ofrece capacidad de memoria unificada idéntica o superior en el nivel de 128GB.',
         ],
       },
       'comparison-table': {
@@ -941,15 +944,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'AMD Ryzen AI Max+ vs Apple Silicon: La Comparación Real',
         content: 'Ambos comparten arquitectura de memoria unificada y gráficos integrados. Así se comparan para el uso de LLM local.',
         items: [
-          '**Mac Studio M4 Max** (equivalente): CPU de 32 núcleos, GPU M4 Max, hasta 128 GB de memoria unificada. Precio: $2.999–3.999. Entrega: 4–6 semanas.',
+          '**Mac Studio M5 Max** (equivalente, actualización agosto 2026): chip Apple M5 Max, hasta 128 GB de memoria unificada. Precio: desde $2.499. Entrega: a partir del 22 de septiembre de 2026.',
           '**Mini PC AMD Ryzen AI Max+** (mejor alternativa): CPU de 16 núcleos, iGPU Radeon 8060S, hasta 128 GB de memoria unificada. Precio: $1.599–1.899. Entrega: 2–4 semanas.',
-          '**Rendimiento:** Ryzen AI Max+ ejecuta Llama 70B a 18–22 tok/s. Mac M4 Max ejecuta el mismo modelo a 20–25 tok/s. La diferencia es menor al 10%.',
+          '**Rendimiento:** Ryzen AI Max+ ejecuta Llama 70B a 18–22 tok/s. El Mac Studio M4 Max saliente ejecutaba el mismo modelo a 20–25 tok/s (diferencia menor al 10%). Aún no hay benchmarks independientes del nuevo chip M5 Max.',
           '**Ecosistema:** macOS tiene MLX y Metal. AMD/Linux tiene ROCm, vLLM y Ollama. Ambos son maduros ahora.',
-          '**Ventaja de costo:** AMD ahorra $1.100–2.400 por unidad. En escala (equipos), son $5.500–12.000 en 5 unidades.',
+          '**Ventaja de costo:** AMD ahorra entre $600–1.300 por unidad frente al precio inicial de $2.499 del Mac Studio M5 Max. En escala (equipos), son $3.000–6.500 en 5 unidades.',
           '**Compensación:** Pierdes macOS, Xcode y Final Cut Pro. Ganas flexibilidad de Linux, transferencia de habilidades ROCm y menor costo.',
         ],
         image: '/images/best-amd-mini-pc-amd-vs-apple-es.svg',
-        imageCaption: 'Comparación lado a lado: los mini PCs AMD Ryzen AI Max+ ($1.599–1.899) entregan rendimiento y memoria unificada equivalentes al Mac Studio M4 Max ($2.999–3.999) a un costo 40–50% menor.',
+        imageCaption: 'Comparación lado a lado: los mini PCs AMD Ryzen AI Max+ ($1.599–1.899) entregan memoria unificada comparable al Mac Studio M5 Max (desde $2.499, actualización agosto 2026) a un costo 25–35% menor.',
       },
       'eu-considerations': {
         id: 'eu-considerations',
@@ -970,7 +973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Estos mini PCs son excelentes, pero no son universales. Cuándo buscar otra alternativa.',
         items: [
           'Necesitas flujos de trabajo exclusivos de CUDA: fine-tuning con PyTorch usando torch.cuda, kernels CUDA de vLLM o código de investigación CUDA propietario. ROCm cubre el 85%, pero quedan brechas.',
-          'Quieres macOS sin compromisos: si todo tu flujo de trabajo es macOS (Xcode, Final Cut, Figma), el Mac Studio M4 Max es la elección natural.',
+          'Quieres macOS sin compromisos: si todo tu flujo de trabajo es macOS (Xcode, Final Cut, Figma), el nuevo Mac Studio M5 Max (desde $2.499) es la elección natural.',
           'Necesitas modelos de más de 70B: incluso con 128 GB de memoria unificada el tope es 70B Q5. Llama 4 Maverick (400B en total) requiere una configuración multi-GPU.',
           'Exiges servicio de garantía en horas: algunos OEMs chinos requieren devolver las unidades a Asia.',
           'Ejecutas inferencia de producción para clientes de pago: si se requiere un SLA de 99,9% de disponibilidad, el soporte empresarial supera a los mini PCs de consumo.',
@@ -983,7 +986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas Frecuentes',
         items: [
           'P: ¿Pueden los mini PCs AMD Ryzen AI Max+ ejecutar Llama 3.3 70B? | R: Sí, los cuatro pueden. Minisforum/Beelink/AOOSTAR ejecutan 70B Q4 a 18–22 tok/s. Beelink con 128 GB también gestiona 70B Q5. GMKtec es más lento y está limitado a modelos 40B.',
-          'P: ¿Cómo se compara AMD Ryzen AI Max+ con Apple M4 Max? | R: Rendimiento casi idéntico (diferencia del 5–10%). AMD es un 30–40% más barato. La compensación: pierdes el ecosistema macOS, Xcode y Final Cut.',
+          'P: ¿Cómo se compara AMD Ryzen AI Max+ con Apple M5 Max? | R: El Mac Studio M5 Max de Apple (actualización agosto 2026) parte de $2.499, reduciendo la diferencia de precio frente a la generación M4 Max saliente. Los mini PCs AMD Ryzen AI Max+ siguen siendo entre 25–50% más baratos según configuración. En la generación M4 Max anterior el rendimiento estaba dentro del 5–10% de Ryzen AI Max+; aún no hay benchmarks independientes del nuevo chip M5 Max. La compensación en cualquier caso: pierdes el ecosistema macOS, Xcode y Final Cut.',
           'P: ¿Necesito Linux o puedo usar Windows? | R: Los cuatro incluyen Linux. Los drivers de Windows están en desarrollo, pero aún no están listos para producción.',
           'P: ¿Cuál es la diferencia entre el Minisforum MS-A2 y el Beelink GTR9 Pro? | R: El Minisforum tiene 96 GB de RAM ($1.599). El Beelink tiene 128 GB de RAM ($1.899) y viene preconfigurado con Ubuntu más ROCm.',
           'P: ¿Puedo añadir una GPU discreta a estos mini PCs? | R: El AOOSTAR GEM12 Pro soporta GPU externa vía OCuLink (requiere una carcasa eGPU de $500 o más).',
@@ -1027,10 +1030,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': '¿Cómo se compara AMD Ryzen AI Max+ con Apple M4 Max?',
+          'name': '¿Cómo se compara AMD Ryzen AI Max+ con Apple M5 Max?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Rendimiento casi idéntico (diferencia del 5–10%). AMD es un 30–40% más barato. La compensación: pierdes el ecosistema macOS, Xcode y Final Cut.'
+            'text': 'El Mac Studio M5 Max de Apple (actualización agosto 2026) parte de $2.499. Los mini PCs AMD Ryzen AI Max+ siguen siendo entre 25–50% más baratos según configuración. En la generación M4 Max anterior el rendimiento estaba dentro del 5–10% de Ryzen AI Max+; aún no hay benchmarks independientes del nuevo chip M5 Max. La compensación en cualquier caso: pierdes el ecosistema macOS, Xcode y Final Cut.'
           }
         },
         {
@@ -1206,7 +1209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/best-amd-mini-pc-local-llm-2026-comparison-hero-ar.webp',
     publishDate: '2026-05-17',
     next_refresh_due: '2026-11-17',
-    intro: '**أجهزة الحاسوب المصغرة AMD Ryzen AI Max+ 395 المزودة بذاكرة موحدة بسعة 64–128 GB قادرة على تشغيل نماذج 30–70B دون اتصال بالإنترنت بأداء محطة عمل مقابل 1,200–2,500 دولار أمريكي.** تجذب فئة الحاسوب المصغر الجديدة من مصنّعي OEM الصينيين (AOOSTAR وMinisforum وBeelink وGMKtec) المشترين الذين يرتقون من أجهزة اللابتوب أو الراغبين في تجنب تكلفة Mac Studio (أكثر من 3,000 دولار). تجمع هذه الأجهزة بين معالج Zen 5 + iGPU من نوع Radeon 8060S + NPU بقدرة 50 TOPS بحجم أصغر من برج مكتبي، مع دعم ROCm على Linux ينضج بسرعة. قد تختلف الأسعار حسب بلدك.',
+    intro: '**أجهزة الحاسوب المصغرة AMD Ryzen AI Max+ 395 المزودة بذاكرة موحدة بسعة 64–128 GB قادرة على تشغيل نماذج 30–70B دون اتصال بالإنترنت بأداء محطة عمل مقابل 1,200–2,500 دولار أمريكي.** تجذب فئة الحاسوب المصغر الجديدة من مصنّعي OEM الصينيين (AOOSTAR وMinisforum وBeelink وGMKtec) المشترين الذين يرتقون من أجهزة اللابتوب أو الراغبين في تجنب تكلفة Mac Studio — خفّض تحديث آبل في أغسطس 2026 سعر بدء Mac Studio M5 Max إلى 2,499 دولارًا، وهو ما يزال أعلى بكثير من فئة AMD هذه. تجمع هذه الأجهزة بين معالج Zen 5 + iGPU من نوع Radeon 8060S + NPU بقدرة 50 TOPS بحجم أصغر من برج مكتبي، مع دعم ROCm على Linux ينضج بسرعة. قد تختلف الأسعار حسب بلدك.',
     leadAnswerBlock: '**توفر أجهزة الحاسوب المصغرة AMD Ryzen AI Max+ 395 ذاكرة موحدة بسعة 64–128 GB وNPU بقدرة 50 TOPS وأداء iGPU مماثل لبطاقة RTX 4070 — مثالية للاستدلال دون اتصال على نماذج 30–70B بسعر يتراوح بين 1,200 و2,500 دولار أمريكي.**',
     audience: 'مستخدمو LLM المحلي الذين يقارنون خيارات الحاسوب المصغر بين 1,200–2,500 دولار لقدرة نماذج 70B؛ المشترون الذين يقيّمون AMD مقابل Mac Studio؛ المطورون الذين يركزون على Linux.',
     readTime: '12 دقيقة للقراءة',
@@ -1249,7 +1252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'أفضل ميني PC من AMD للنماذج المحلية في 2026: Minisforum MS-A2 (1,599 $، 96 جيجابايت، 70B Q4)، Beelink GTR9 Pro (1,899 $، 128 جيجابايت، 70B Q5)، GMKtec EVO-X2 (1,199 $، 64 جيجابايت، 30–40B) — جميعها بـ Ryzen AI Max+ 395 وذاكرة DDR5X موحدة، أرخص 30–40% من Mac Studio M4 Max.' }, { type: 'plain-terms', text: 'أجهزة AMD Ryzen AI Max+ 395 تستخدم ذاكرة موحدة — كـ Apple Silicon، يشترك CPU وGPU وNPU في نفس مجمع الذاكرة. ROCm هو مكدس البرامج من AMD بديلاً عن CUDA من NVIDIA لأطر LLM مثل vLLM وOllama.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: 'أفضل ميني PC من AMD للنماذج المحلية في 2026: Minisforum MS-A2 (1,599 $، 96 جيجابايت، 70B Q4)، Beelink GTR9 Pro (1,899 $، 128 جيجابايت، 70B Q5)، GMKtec EVO-X2 (1,199 $، 64 جيجابايت، 30–40B) — جميعها بـ Ryzen AI Max+ 395 وذاكرة DDR5X موحدة، أرخص 25–50% من Mac Studio M5 Max (بدءاً من 2,499 $).' }, { type: 'plain-terms', text: 'أجهزة AMD Ryzen AI Max+ 395 تستخدم ذاكرة موحدة — كـ Apple Silicon، يشترك CPU وGPU وNPU في نفس مجمع الذاكرة. ROCm هو مكدس البرامج من AMD بديلاً عن CUDA من NVIDIA لأطر LLM مثل vLLM وOllama.' }],
         items: [
           'الأفضل عموماً: Minisforum MS-A2 (1,599 دولار، 96 GB RAM). يشغّل Llama 3.3 70B Q4 دون مشاكل. أفضل نسبة سعر إلى أداء.',
           'أقصى ذاكرة RAM: Beelink GTR9 Pro (1,899 دولار، 128 GB). يشغّل 70B Q5 بنوافذ سياق ضخمة. الأفضل للمستخدمين المتقدمين.',
@@ -1257,7 +1260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الخيار المتميز: AOOSTAR GEM12 Pro (1,799 دولار، 96 GB). منفذ OCuLink لتوسعة eGPU. موجه للهواة.',
           'الأربعة جميعاً: دعم ROCm على Linux (kernel 6.11+)، ذاكرة RAM من نوع DDR5X عالية السرعة، SSD من نوع NVMe بسعة 1 TB أو أكثر.',
           'الأداء: تشترك Minisforum/Beelink/AOOSTAR في نفس معالج Ryzen AI Max+ 395. تستخدم GMKtec معالج Max 385 (45 TOPS).',
-          'مقابل Mac Studio M4 Max: نفس بنية الذاكرة الموحدة، أرخص بنسبة 30–40%. المقايضة: macOS مقابل Linux/ROCm.',
+          'مقابل Mac Studio M5 Max (تحديث أغسطس 2026، بدءاً من 2,499 $): نفس بنية الذاكرة الموحدة، ما زال أرخص بنسبة 25–50%. المقايضة: macOS مقابل Linux/ROCm.',
           'حالة Linux: ROCm 6.2+ مستقر. Ollama وvLLM وMLX تعمل. أقل صقلاً من CUDA، لكنه جاهز للإنتاج.',
         ],
       },
@@ -1272,7 +1275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**TDP بقدرة 65–120 W:** يستهلك النظام بأكمله طاقة أقل من بطاقة RTX 4090 واحدة. يعمل بتبريد سلبي أو مراوح هادئة. لا يحتاج إلى مصدر طاقة بقدرة 350 W.',
           '**نضوج منظومة ROCm:** أصبح الدعم على Linux مستقراً الآن (kernel 6.11+، ROCm 6.2+). تدعم Ollama وvLLM وLM Studio بطاقة iGPU من AMD بشكل أصلي.',
           '**مصنّعو OEM الصينيون يسلّمون بسرعة:** Minisforum (مستودع في ألمانيا) وAOOSTAR وBeelink وGMKtec تصل إلى الاتحاد الأوروبي/الولايات المتحدة خلال 2–4 أسابيع.',
-          '**نطاق السعر 1,200–2,500 دولار أمريكي:** يتفوق على Mac Studio M4 Max (2,999 دولار) بنسبة 40–60% مع توفير سعة ذاكرة موحدة مماثلة أو أعلى.',
+          '**نطاق السعر 1,200–2,500 دولار أمريكي:** يتفوق على Mac Studio M5 Max (2,499 دولارًا كسعر بدء بعد تحديث أغسطس 2026) بنسبة 25–50% مع توفير سعة ذاكرة موحدة مماثلة أو أعلى عند فئة 128GB.',
         ],
       },
       'comparison-table': {
@@ -1476,15 +1479,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'AMD Ryzen AI Max+ مقابل Apple Silicon: المقارنة الحقيقية',
         content: 'يشترك كلاهما في بنية الذاكرة الموحدة والرسوميات المدمجة. هكذا يقارَنان لاستخدام LLM المحلي.',
         items: [
-          '**Mac Studio M4 Max** (المكافئ): CPU بـ 32 نواة، GPU من نوع M4 Max، حتى 128 GB ذاكرة موحدة. السعر: 2,999–3,999 دولار. التسليم: 4–6 أسابيع.',
+          '**Mac Studio M5 Max** (المكافئ، تحديث أغسطس 2026): شريحة Apple M5 Max، حتى 128 GB ذاكرة موحدة. السعر: بدءاً من 2,499 دولار. الشحن: اعتباراً من 22 سبتمبر 2026.',
           '**الحاسوب المصغر AMD Ryzen AI Max+** (أفضل بديل): CPU بـ 16 نواة، iGPU من نوع Radeon 8060S، حتى 128 GB ذاكرة موحدة. السعر: 1,599–1,899 دولار. التسليم: 2–4 أسابيع.',
-          '**الأداء:** يشغّل Ryzen AI Max+ نموذج Llama 70B بسرعة 18–22 tok/s. يشغّل Mac M4 Max نفس النموذج بسرعة 20–25 tok/s. الفارق أقل من 10%.',
+          '**الأداء:** يشغّل Ryzen AI Max+ نموذج Llama 70B بسرعة 18–22 tok/s. كان Mac Studio M4 Max السابق يشغّل نفس النموذج بسرعة 20–25 tok/s (فارق أقل من 10%). لا تتوفر بعد اختبارات أداء مستقلة لشريحة M5 Max الجديدة.',
           '**المنظومة:** يملك macOS كلاً من MLX وMetal. يملك AMD/Linux كلاً من ROCm وvLLM وOllama. كلاهما ناضج الآن.',
-          '**ميزة التكلفة:** يوفّر AMD مبلغ 1,100–2,400 دولار لكل وحدة. على نطاق واسع (للفرق)، يساوي ذلك 5,500–12,000 دولار على 5 وحدات.',
+          '**ميزة التكلفة:** يوفّر AMD مبلغ 600–1,300 دولار لكل وحدة مقابل سعر بدء Mac Studio M5 Max البالغ 2,499 دولاراً. على نطاق واسع (للفرق)، يساوي ذلك 3,000–6,500 دولار على 5 وحدات.',
           '**المقايضة:** تفقد macOS وXcode وFinal Cut Pro. تكسب مرونة Linux ونقل مهارات ROCm وتكلفة أقل.',
         ],
         image: '/images/best-amd-mini-pc-amd-vs-apple-es.svg',
-        imageCaption: 'مقارنة جنباً إلى جنب: توفّر أجهزة الحاسوب المصغرة AMD Ryzen AI Max+ (1,599–1,899 دولار) أداءً وذاكرة موحدة مكافئة لـ Mac Studio M4 Max (2,999–3,999 دولار) بتكلفة أقل بنسبة 40–50%.',
+        imageCaption: 'مقارنة جنباً إلى جنب: توفّر أجهزة الحاسوب المصغرة AMD Ryzen AI Max+ (1,599–1,899 دولار) ذاكرة موحدة مماثلة لـ Mac Studio M5 Max (بدءاً من 2,499 دولار، تحديث أغسطس 2026) بتكلفة أقل بنسبة 25–35%.',
       },
       'eu-considerations': {
         id: 'eu-considerations',
@@ -1505,7 +1508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'هذه الأجهزة المصغرة ممتازة، لكنها ليست شاملة لكل الاستخدامات. متى تبحث عن بديل آخر.',
         items: [
           'تحتاج إلى سير عمل حصري لـ CUDA: fine-tuning عبر PyTorch باستخدام torch.cuda، أو نوى CUDA الخاصة بـ vLLM، أو كود بحثي خاص بـ CUDA. يغطي ROCm نسبة 85%، لكن تبقى ثغرات.',
-          'تريد macOS دون تنازلات: إذا كان سير عملك بالكامل على macOS (Xcode، Final Cut، Figma)، فإن Mac Studio M4 Max هو الخيار الطبيعي.',
+          'تريد macOS دون تنازلات: إذا كان سير عملك بالكامل على macOS (Xcode، Final Cut، Figma)، فإن Mac Studio M5 Max الجديد (بدءاً من 2,499 دولار) هو الخيار الطبيعي.',
           'تحتاج إلى نماذج أكبر من 70B: حتى مع 128 GB من الذاكرة الموحدة يكون الحد الأقصى 70B Q5. يتطلب Llama 4 Maverick (400B إجمالاً) إعداداً متعدد بطاقات GPU.',
           'تطلب خدمة ضمان خلال ساعات: تتطلب بعض شركات OEM الصينية إعادة الوحدات إلى آسيا.',
           'تشغّل استدلال إنتاج لعملاء يدفعون: إذا كان مطلوباً اتفاقية مستوى خدمة بتوفر 99.9%، فإن الدعم المؤسسي يتفوق على الأجهزة المصغرة الاستهلاكية.',
@@ -1518,7 +1521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         items: [
           'س: هل تستطيع أجهزة الحاسوب المصغرة AMD Ryzen AI Max+ تشغيل Llama 3.3 70B؟ | ج: نعم، الأربعة جميعاً قادرة على ذلك. تشغّل Minisforum/Beelink/AOOSTAR نموذج 70B Q4 بسرعة 18–22 tok/s. كما يتعامل Beelink بسعة 128 GB مع 70B Q5. GMKtec أبطأ ومحدود بنماذج 40B.',
-          'س: كيف يقارَن AMD Ryzen AI Max+ بـ Apple M4 Max؟ | ج: أداء شبه متطابق (فارق 5–10%). AMD أرخص بنسبة 30–40%. المقايضة: تفقد منظومة macOS وXcode وFinal Cut.',
+          'س: كيف يقارَن AMD Ryzen AI Max+ بـ Apple M5 Max؟ | ج: يبدأ Mac Studio M5 Max من آبل (تحديث أغسطس 2026) من 2,499 دولاراً، ما يقلّص فجوة السعر مقارنة بجيل M4 Max السابق. لا تزال أجهزة AMD Ryzen AI Max+ المصغرة أرخص بنسبة 25–50% تقريباً حسب الإعداد. في جيل M4 Max السابق كان الأداء ضمن 5–10% من Ryzen AI Max+؛ لا تتوفر بعد اختبارات مستقلة لشريحة M5 Max الجديدة. المقايضة في كل الأحوال: تفقد منظومة macOS وXcode وFinal Cut.',
           'س: هل أحتاج إلى Linux أم يمكنني استخدام Windows؟ | ج: الأربعة جميعاً تتضمن Linux. برامج تشغيل Windows قيد التطوير، لكنها ليست جاهزة للإنتاج بعد.',
           'س: ما الفرق بين Minisforum MS-A2 وBeelink GTR9 Pro؟ | ج: يملك Minisforum سعة 96 GB من ذاكرة RAM (1,599 دولار). يملك Beelink سعة 128 GB من ذاكرة RAM (1,899 دولار) ويأتي مهيّأ مسبقاً مع Ubuntu إضافةً إلى ROCm.',
           'س: هل يمكنني إضافة بطاقة GPU منفصلة إلى هذه الأجهزة المصغرة؟ | ج: يدعم AOOSTAR GEM12 Pro بطاقة GPU خارجية عبر OCuLink (يتطلب علبة eGPU بسعر 500 دولار أو أكثر).',
@@ -1562,10 +1565,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': 'كيف يقارَن AMD Ryzen AI Max+ بـ Apple M4 Max؟',
+          'name': 'كيف يقارَن AMD Ryzen AI Max+ بـ Apple M5 Max؟',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'أداء شبه متطابق (فارق 5–10%). AMD أرخص بنسبة 30–40%. المقايضة: تفقد منظومة macOS وXcode وFinal Cut.'
+            'text': 'يبدأ Mac Studio M5 Max من آبل (تحديث أغسطس 2026) من 2,499 دولاراً. لا تزال أجهزة AMD Ryzen AI Max+ المصغرة أرخص بنسبة 25–50% تقريباً حسب الإعداد. في جيل M4 Max السابق كان الأداء ضمن 5–10% من Ryzen AI Max+؛ لا تتوفر بعد اختبارات مستقلة لشريحة M5 Max الجديدة. المقايضة في كل الأحوال: تفقد منظومة macOS وXcode وFinal Cut.'
           }
         },
         {
@@ -1741,7 +1744,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Compare mini PCs AMD Ryzen AI Max+: Minisforum MS-A2, Beelink GTR9, AOOSTAR GEM12 e GMKtec EVO-X2. Especificações, preços e desempenho em 70B. 2026.',
     heroImage: '/images/best-amd-mini-pc-local-llm-2026-comparison-hero-pt.webp',
     publishDate: '2026-05-17',
-    intro: '**Os mini PCs AMD Ryzen AI Max+ 395 com 64-128 GB de memória unificada podem rodar modelos 30-70B offline com desempenho de estação de trabalho por US$ 1.200-2.500.** A nova categoria de mini PC de fabricantes OEM chineses (AOOSTAR, Minisforum, Beelink, GMKtec) atrai compradores que se atualizam de laptops ou querem evitar o custo do Mac Studio (mais de US$ 3.000). No varejo brasileiro, com impostos de importação, esses valores ficam bem mais altos em reais.',
+    intro: '**Os mini PCs AMD Ryzen AI Max+ 395 com 64-128 GB de memória unificada podem rodar modelos 30-70B offline com desempenho de estação de trabalho por US$ 1.200-2.500.** A nova categoria de mini PC de fabricantes OEM chineses (AOOSTAR, Minisforum, Beelink, GMKtec) atrai compradores que se atualizam de laptops ou querem evitar o custo do Mac Studio -- a atualização de agosto de 2026 da Apple baixou o preço inicial do Mac Studio M5 Max para US$ 2.499, ainda bem acima dessa faixa da AMD. No varejo brasileiro, com impostos de importação, esses valores ficam bem mais altos em reais.',
     leadAnswerBlock: '**Os mini PCs AMD Ryzen AI Max+ 395 oferecem 64-128 GB de memória unificada, NPU de 50 TOPS e desempenho de iGPU comparável à RTX 4070 -- ideais para inferência offline de modelos 30-70B entre US$ 1.200 e US$ 2.500.**',
     audience: 'Usuários de LLM local que comparam opções de mini PC entre US$ 1.200-2.500 para capacidade de modelos 70B; compradores avaliando AMD vs Mac Studio; desenvolvedores com foco em Linux.',
     readTime: '12 min de leitura',
@@ -1783,7 +1786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'Melhores mini PCs AMD para LLMs locais em 2026: Minisforum MS-A2 ($1.599, 96 GB, 70B Q4), Beelink GTR9 Pro ($1.899, 128 GB, 70B Q5), GMKtec EVO-X2 ($1.199, 64 GB, 30–40B) — todos com Ryzen AI Max+ 395 e memória DDR5X unificada, 30–40% mais baratos que Mac Studio M4 Max.' }, { type: 'plain-terms', text: 'Mini PCs AMD Ryzen AI Max+ 395 usam memória unificada — como Apple Silicon, CPU, GPU e NPU compartilham um único pool de memória. ROCm é a pilha de software AMD equivalente ao CUDA da NVIDIA para frameworks LLM como vLLM ou Ollama.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: 'Melhores mini PCs AMD para LLMs locais em 2026: Minisforum MS-A2 ($1.599, 96 GB, 70B Q4), Beelink GTR9 Pro ($1.899, 128 GB, 70B Q5), GMKtec EVO-X2 ($1.199, 64 GB, 30–40B) — todos com Ryzen AI Max+ 395 e memória DDR5X unificada, 25–50% mais baratos que o Mac Studio M5 Max (a partir de US$ 2.499).' }, { type: 'plain-terms', text: 'Mini PCs AMD Ryzen AI Max+ 395 usam memória unificada — como Apple Silicon, CPU, GPU e NPU compartilham um único pool de memória. ROCm é a pilha de software AMD equivalente ao CUDA da NVIDIA para frameworks LLM como vLLM ou Ollama.' }],
         items: [
           'Melhor geral: Minisforum MS-A2 (US$ 1.599, 96 GB RAM). Roda Llama 3.3 70B Q4 sem problemas. Melhor custo-benefício.',
           'Máxima RAM: Beelink GTR9 Pro (US$ 1.899, 128 GB). Roda 70B Q5 com janelas de contexto massivas. Melhor para usuários avançados.',
@@ -1791,7 +1794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Opção premium: AOOSTAR GEM12 Pro (US$ 1.799, 96 GB). Porta OCuLink para expansão eGPU. Focado em entusiastas.',
           'Os quatro: Suporte ROCm no Linux (kernel 6.11+), RAM DDR5X de alta velocidade, SSD NVMe de 1 TB ou mais.',
           'Status do Linux: ROCm 6.2+ estável. Ollama, vLLM, LM Studio funcionam. Menos polido que CUDA, mas pronto para produção.',
-          'Vs Mac Studio M4 Max: Mesma arquitetura de memória unificada, 30-40% mais barato. Compensação: macOS por Linux/ROCm.',
+          'Vs Mac Studio M5 Max (atualização agosto 2026, a partir de US$ 2.499): mesma arquitetura de memória unificada, ainda 25-50% mais barato. Compensação: macOS por Linux/ROCm.',
         ],
       },
       'why-amd': {
@@ -1803,7 +1806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**NPU de 50 TOPS:** Unidade de processamento neural dedicada que acelera operações quantizadas.',
           '**TDP de 65-120 W:** O sistema completo consome menos energia que uma única RTX 4090.',
           '**Ecossistema ROCm matura:** Suporte no Linux agora estável (kernel 6.11+, ROCm 6.2+). Ollama, vLLM e LM Studio suportam iGPU AMD nativamente.',
-          '**Faixa de preço US$ 1.200-2.500:** Supera o Mac Studio M4 Max (US$ 2.999) em 30-40% enquanto oferece capacidade de memória unificada idêntica ou superior.',
+          '**Faixa de preço US$ 1.200-2.500:** Supera o Mac Studio M5 Max (US$ 2.499 de preço inicial após a atualização de agosto de 2026) em 25-50% enquanto oferece capacidade de memória unificada idêntica ou superior no nível de 128GB.',
           '**LGPD:** Todos os quatro mini PCs rodam LLMs completamente offline -- nenhum dado de usuário é enviado a servidores externos, satisfazendo os requisitos da LGPD.',
         ],
       },
@@ -1882,7 +1885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/best-amd-mini-pc-local-llm-2026-comparison-hero-de.webp',
     publishDate: '2026-05-17',
     next_refresh_due: '2026-11-17',
-    intro: '**AMD Ryzen AI Max+ 395 Mini-PCs mit 64–128GB Unified Memory können 30–70B Modelle offline bei Workstation-Leistung für €1.200–2.600 ausführen.** Die neue chinesische OEM-Mini-PC-Kategorie (AOOSTAR, Minisforum, Beelink, GMKtec) spricht Nutzer an, die von Laptops upgraden oder die €3.000+ Mac Studio-Kosten vermeiden möchten. Diese Maschinen kombinieren Zen 5 CPU + Radeon 8060S iGPU + 50 TOPS NPU in Fußbodengröße, mit schnell wachsender ROCm Linux-Unterstützung.',
+    intro: '**AMD Ryzen AI Max+ 395 Mini-PCs mit 64–128GB Unified Memory können 30–70B Modelle offline bei Workstation-Leistung für €1.200–2.600 ausführen.** Die neue chinesische OEM-Mini-PC-Kategorie (AOOSTAR, Minisforum, Beelink, GMKtec) spricht Nutzer an, die von Laptops upgraden oder die Mac-Studio-Kosten vermeiden möchten — Apples August-2026-Refresh senkte den Einstiegspreis des Mac Studio M5 Max auf 2.499 $, immer noch deutlich über diesem AMD-Segment. Diese Maschinen kombinieren Zen 5 CPU + Radeon 8060S iGPU + 50 TOPS NPU in Fußbodengröße, mit schnell wachsender ROCm Linux-Unterstützung.',
     leadAnswerBlock: '**AMD Ryzen AI Max+ 395 Mini-PCs bieten 64–128GB Unified Memory, 50 TOPS NPU und iGPU-Leistung, die der RTX 4070 entspricht – ideal für offline 30–70B Modell-Inferenz bei €1.200–2.600.**',
     audience: 'Local LLM Nutzer, die €1.200–2.600 Mini-PC-Optionen für 70B Modell-Leistung vergleichen; Käufer, die AMD vs Mac Studio evaluieren; Linux-First Entwickler.',
     readTime: '12 min',
@@ -1924,7 +1927,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'Beste AMD Mini-PCs für lokale LLMs 2026: Minisforum MS-A2 (1.599 $, 96 GB, 70B Q4), Beelink GTR9 Pro (1.899 $, 128 GB, 70B Q5), GMKtec EVO-X2 (1.199 $, 64 GB, 30–40B) — alle mit Ryzen AI Max+ 395 und vereinheitlichtem DDR5X-Speicher, 30–40 % günstiger als Mac Studio M4 Max.' }, { type: 'plain-terms', text: 'AMD Ryzen AI Max+ 395 Mini-PCs nutzen vereinheitlichten Speicher — wie Apple Silicon teilen sich CPU, GPU und NPU einen Speicherpool. ROCm ist AMDs Software-Stack, ähnlich NVIDIA CUDA, für LLM-Frameworks wie vLLM oder Ollama.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: 'Beste AMD Mini-PCs für lokale LLMs 2026: Minisforum MS-A2 (1.599 $, 96 GB, 70B Q4), Beelink GTR9 Pro (1.899 $, 128 GB, 70B Q5), GMKtec EVO-X2 (1.199 $, 64 GB, 30–40B) — alle mit Ryzen AI Max+ 395 und vereinheitlichtem DDR5X-Speicher, 25–50 % günstiger als der Mac Studio M5 Max (ab 2.499 $).' }, { type: 'plain-terms', text: 'AMD Ryzen AI Max+ 395 Mini-PCs nutzen vereinheitlichten Speicher — wie Apple Silicon teilen sich CPU, GPU und NPU einen Speicherpool. ROCm ist AMDs Software-Stack, ähnlich NVIDIA CUDA, für LLM-Frameworks wie vLLM oder Ollama.' }],
         items: [
           'Beste Gesamtbalance: Minisforum MS-A2 (€1.599, 96GB RAM). Läuft Llama 3.3 70B Q4 komfortabel. Bestes Preis-Leistungs-Verhältnis.',
           'Maximale RAM: Beelink GTR9 Pro (€1.999, 128GB). Läuft 70B Q5 mit massiven Context-Fenstern. Best für Power-User.',
@@ -1932,7 +1935,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Premium-Option: AOOSTAR GEM12 Pro (€1.899, 96GB). OCuLink-Port für eGPU-Erweiterung. Für Enthusiasten.',
           'Alle vier: ROCm Linux-Unterstützung (Kernel 6.11+), DDR5X High-Speed RAM, 1TB+ NVMe SSD.',
           'Leistung: Minisforum/Beelink/AOOSTAR haben identische Ryzen AI Max+ 395. GMKtec hat Max 385 (45 TOPS).',
-          'vs Mac Studio M4 Max: Gleiche Unified-Memory-Architektur, 30–40% billiger. Kompromiss: Linux/ROCm statt macOS.',
+          'vs Mac Studio M5 Max (Refresh August 2026, ab 2.499 $): Gleiche Unified-Memory-Architektur, weiterhin 25–50% billiger. Kompromiss: Linux/ROCm statt macOS.',
           'Linux-Status: ROCm 6.2+ stabil. Ollama, vLLM, MLX alle funktionsfähig. Weniger Polish als CUDA, aber produktionsbereit.',
         ],
       },
@@ -1961,7 +1964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**65–120W TDP:** Gesamtes System verbraucht weniger Strom als einzelne RTX 4090. Läuft passiv gekühlt oder mit leisen Lüftern. Kein 350W-Netzteil nötig.',
           '**ROCm-Ökosystem reift:** Linux-Unterstützung jetzt stabil (Kernel 6.11+, ROCm 6.2+). Ollama, vLLM und LM Studio unterstützen AMD iGPU nativ.',
           '**Chinesische OEMs liefern schnell:** Minisforum (deutsches Lager), AOOSTAR, Beelink, GMKtec erreichen EU/USA in 2–4 Wochen.',
-          '**€1.200–2.600 Preisband:** Unterbietet Mac Studio M4 Max (€2.999) um 40–60% bei identischer oder besserer Unified-Memory-Kapazität.',
+          '**€1.200–2.600 Preisband:** Unterbietet den Mac Studio M5 Max (Einstiegspreis 2.499 $ nach dem August-2026-Refresh) um 25–50% bei identischer oder besserer Unified-Memory-Kapazität in der 128GB-Klasse.',
         ],
       },
       'minisforum-ms-a2': {
@@ -2134,15 +2137,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'AMD Ryzen AI Max+ vs Apple Silicon: Der echte Vergleich',
         content: 'Beide teilen Unified-Memory-Architektur und integrierte Grafiken. Hier ist der Vergleich für Local LLM Nutzung.',
         items: [
-          '**Mac Studio M4 Max** (Equivalent): 32-core CPU, M4 Max GPU, bis zu 128GB Unified Memory. Preis: €2.999–3.999. Versand: 4–6 Wochen.',
+          '**Mac Studio M5 Max** (Equivalent, Refresh August 2026): Apple M5 Max Chip, bis zu 128GB Unified Memory. Preis: ab 2.499 $. Versand: ab 22. September 2026.',
           '**AMD Ryzen AI Max+ Mini-PC** (Beste Match): 16-core CPU, Radeon 8060S iGPU, bis zu 128GB Unified Memory. Preis: €1.599–1.899. Versand: 2–4 Wochen.',
-          '**Performance:** Ryzen AI Max+ läuft Llama 70B bei 18–22 tok/s. Mac M4 Max läuft gleiches Modell bei 20–25 tok/s. Unterschied ist weniger als 10%.',
+          '**Performance:** Ryzen AI Max+ läuft Llama 70B bei 18–22 tok/s. Der auslaufende Mac Studio M4 Max lief beim gleichen Modell bei 20–25 tok/s (Unterschied unter 10%). Unabhängige Benchmarks für den neuen M5-Max-Chip liegen noch nicht vor.',
           '**Ökosystem:** macOS hat MLX, Metal. AMD/Linux hat ROCm, vLLM, Ollama. Beide jetzt reif.',
-          '**Kostenersparnis:** AMD spart €1.100–2.400 pro Einheit. In Scale (Teams), das ist €5.500–12.000 über 5 Einheiten.',
+          '**Kostenersparnis:** AMD spart rund 600–1.300 $ pro Einheit gegenüber dem Einstiegspreis von 2.499 $ des Mac Studio M5 Max. Bei 5 Einheiten (Teams) sind das 3.000–6.500 $.',
           '**Kompromiss:** Sie verlieren macOS, Xcode, Final Cut Pro. Gewinnen Linux-Flexibilität, ROCm Skill-Transfer und niedrigere Kosten.',
         ],
         image: '/images/best-amd-mini-pc-amd-vs-apple-de.svg',
-        imageCaption: 'Seite-an-Seite Vergleich: AMD Ryzen AI Max+ Mini-PCs (€1.599–1.899) liefern äquivalente Performance und Unified Memory zu Mac Studio M4 Max (€2.999–3.999) bei 40–50% niedrigerem Preis.',
+        imageCaption: 'Seite-an-Seite Vergleich: AMD Ryzen AI Max+ Mini-PCs (€1.599–1.899) liefern vergleichbaren Unified Memory zum Mac Studio M5 Max (ab 2.499 $, Refresh August 2026) bei 25–35% niedrigerem Preis.',
       },
       'linux-setup': {
         id: 'linux-setup',
@@ -2180,7 +2183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Diese Mini-PCs sind ausgezeichnet, aber nicht universell. Hier ist, wann Sie woanders schauen sollten.',
         items: [
           'Sie benötigen CUDA-only-Workflows: PyTorch-Fine-Tuning mit torch.cuda, vLLM-CUDA-Kernel oder proprietären CUDA-Forschungscode. ROCm deckt 85% ab, Lücken bleiben.',
-          'Sie möchten macOS ohne Kompromisse: Wenn Ihr gesamter Workflow macOS ist (Xcode, Final Cut, Figma), ist Mac Studio M4 Max die natürliche Wahl.',
+          'Sie möchten macOS ohne Kompromisse: Wenn Ihr gesamter Workflow macOS ist (Xcode, Final Cut, Figma), ist der neue Mac Studio M5 Max (ab 2.499 $) die natürliche Wahl.',
           'Sie benötigen >70B-Modelle: Selbst 128GB Unified Memory begrenzt auf 70B Q5. Llama 4 Maverick (400B gesamt) erfordert Multi-GPU-Setup.',
           'Sie verlangen Garantieservice in Stunden: Chinesische OEMs erfordern in manchen Fällen Rücksendung nach Asien.',
           'Sie betreiben Produktionsinferenz für zahlende Kunden: Wenn 99,9% Uptime-SLA erforderlich, schlägt Enterprise-Support Consumer-Mini-PCs.',
@@ -2193,7 +2196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         items: [
           'F: Können AMD Ryzen AI Max+ Mini-PCs Llama 3.3 70B ausführen? | A: Ja, alle vier können. Minisforum/Beelink/AOOSTAR laufen 70B Q4 mit 18–22 tok/s. Beelink mit 128GB verarbeitet auch 70B Q5. GMKtec ist langsamer und auf 40B-Modelle begrenzt.',
-          'F: Wie vergleicht sich AMD Ryzen AI Max+ mit Apple M4 Max? | A: Nahezu identische Leistung (innerhalb 5–10%). AMD ist 30–40% günstiger. Kompromiss: macOS, Xcode, Final Cut-Ökosystem entfällt.',
+          'F: Wie vergleicht sich AMD Ryzen AI Max+ mit Apple M5 Max? | A: Der neue Mac Studio M5 Max von Apple (Refresh August 2026) startet bei 2.499 $, was den Preisabstand zur auslaufenden M4-Max-Generation verkleinert. AMD Ryzen AI Max+ Mini-PCs sind je nach Konfiguration weiterhin rund 25–50% günstiger. Bei der vorherigen M4-Max-Generation lag die Leistung innerhalb von 5–10% von Ryzen AI Max+; unabhängige Benchmarks für den neuen M5-Max-Chip liegen noch nicht vor. Kompromiss in jedem Fall: macOS, Xcode, Final Cut-Ökosystem entfällt.',
           'F: Brauche ich Linux oder kann ich Windows verwenden? | A: Alle vier werden mit Linux geliefert. Windows-Treiber werden entwickelt, sind aber noch nicht produktionsbereit.',
           'F: Was ist der Unterschied zwischen Minisforum MS-A2 und Beelink GTR9 Pro? | A: Minisforum hat 96GB RAM (€1.599). Beelink hat 128GB RAM (€1.999) und wird vorkonfiguriert mit Ubuntu plus ROCm geliefert.',
           'F: Kann ich eine diskrete GPU zu diesen Mini-PCs hinzufügen? | A: AOOSTAR GEM12 Pro unterstützt externe GPU via OCuLink (erfordert €500+ eGPU-Gehäuse).',
@@ -2234,8 +2237,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': 'Wie vergleicht sich AMD Ryzen AI Max+ mit Apple M4 Max?',
-          'acceptedAnswer': { '@type': 'Answer', 'text': 'Nahezu identische Leistung (innerhalb 5–10%). AMD ist 30–40% günstiger. Kompromiss: macOS, Xcode, Final Cut-Ökosystem entfällt.' }
+          'name': 'Wie vergleicht sich AMD Ryzen AI Max+ mit Apple M5 Max?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Der neue Mac Studio M5 Max von Apple (Refresh August 2026) startet bei 2.499 $. AMD Ryzen AI Max+ Mini-PCs sind je nach Konfiguration weiterhin rund 25–50% günstiger. Bei der vorherigen M4-Max-Generation lag die Leistung innerhalb von 5–10% von Ryzen AI Max+; unabhängige Benchmarks für den neuen M5-Max-Chip liegen noch nicht vor. Kompromiss in jedem Fall: macOS, Xcode, Final Cut-Ökosystem entfällt.' }
         },
         {
           '@type': 'Question',
@@ -2358,7 +2361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/best-amd-mini-pc-local-llm-2026-comparison-hero-fr.webp',
     publishDate: '2026-05-17',
     next_refresh_due: '2026-11-17',
-    intro: '**Les mini PC AMD Ryzen AI Max+ 395 avec 64–128 Go de mémoire unifiée peuvent exécuter les modèles 30–70B hors ligne avec une performance de type workstation pour €1.200–2.600.** La nouvelle catégorie de mini PC OEM chinois (AOOSTAR, Minisforum, Beelink, GMKtec) cible les utilisateurs qui mettent à niveau leurs ordinateurs portables ou qui évitent les coûts du Mac Studio (€3.000+). Ces machines combinent CPU Zen 5 + GPU iGPU Radeon 8060S + NPU 50 TOPS dans un facteur de forme plus petit qu une tour de bureau, avec une prise en charge ROCm Linux en rapide amélioration.',
+    intro: '**Les mini PC AMD Ryzen AI Max+ 395 avec 64–128 Go de mémoire unifiée peuvent exécuter les modèles 30–70B hors ligne avec une performance de type workstation pour €1.200–2.600.** La nouvelle catégorie de mini PC OEM chinois (AOOSTAR, Minisforum, Beelink, GMKtec) cible les utilisateurs qui mettent à niveau leurs ordinateurs portables ou qui évitent les coûts du Mac Studio — la mise à jour d Apple d août 2026 a fait baisser le prix de départ du Mac Studio M5 Max à 2 499 $, encore bien au-dessus de cette gamme AMD. Ces machines combinent CPU Zen 5 + GPU iGPU Radeon 8060S + NPU 50 TOPS dans un facteur de forme plus petit qu une tour de bureau, avec une prise en charge ROCm Linux en rapide amélioration.',
     leadAnswerBlock: '**Les mini PC AMD Ryzen AI Max+ 395 offrent 64–128 Go de mémoire unifiée, NPU 50 TOPS et performance iGPU rivalisant RTX 4070 – idéal pour l inférence hors ligne de modèles 30–70B à €1.200–2.600.**',
     audience: 'Utilisateurs Local LLM comparant les options mini PC €1.200–2.600 pour la capacité modèle 70B; acheteurs évaluant AMD vs Mac Studio; développeurs Linux-first.',
     readTime: '12 min',
@@ -2402,7 +2405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'Meilleurs mini PC AMD pour LLM locaux en 2026 : Minisforum MS-A2 (1 599 $, 96 Go, 70B Q4), Beelink GTR9 Pro (1 899 $, 128 Go, 70B Q5), GMKtec EVO-X2 (1 199 $, 64 Go, 30–40B) — tous avec Ryzen AI Max+ 395 et mémoire DDR5X unifiée, 30–40 % moins chers que Mac Studio M4 Max.' }, { type: 'plain-terms', text: 'Les mini PC AMD Ryzen AI Max+ 395 utilisent une mémoire unifiée — comme Apple Silicon, CPU, GPU et NPU partagent un seul pool mémoire. ROCm est le stack logiciel AMD équivalent au CUDA NVIDIA pour les frameworks LLM comme vLLM ou Ollama.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: 'Meilleurs mini PC AMD pour LLM locaux en 2026 : Minisforum MS-A2 (1 599 $, 96 Go, 70B Q4), Beelink GTR9 Pro (1 899 $, 128 Go, 70B Q5), GMKtec EVO-X2 (1 199 $, 64 Go, 30–40B) — tous avec Ryzen AI Max+ 395 et mémoire DDR5X unifiée, 25–50 % moins chers que le Mac Studio M5 Max (à partir de 2 499 $).' }, { type: 'plain-terms', text: 'Les mini PC AMD Ryzen AI Max+ 395 utilisent une mémoire unifiée — comme Apple Silicon, CPU, GPU et NPU partagent un seul pool mémoire. ROCm est le stack logiciel AMD équivalent au CUDA NVIDIA pour les frameworks LLM comme vLLM ou Ollama.' }],
         items: [
           'Meilleur équilibre: Minisforum MS-A2 (€1.599, 96 Go RAM). Exécute Llama 3.3 70B Q4 confortablement. Meilleur rapport prix-performance.',
           'RAM maximum: Beelink GTR9 Pro (€1.999, 128 Go). Exécute 70B Q5 avec contextes massifs. Meilleur pour power users.',
@@ -2410,7 +2413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Option premium: AOOSTAR GEM12 Pro (€1.899, 96 Go). Port OCuLink pour eGPU. Pour enthousiastes.',
           'Tous quatre: Support Linux ROCm (kernel 6.11+), RAM DDR5X haute-vitesse, SSD NVMe 1TB+.',
           'Performance: Minisforum/Beelink/AOOSTAR ont Ryzen AI Max+ 395 identique. GMKtec a Max 385 (45 TOPS).',
-          'vs Mac Studio M4 Max: Même architecture mémoire unifiée, 30–40% moins cher. Compromis: Linux/ROCm vs macOS.',
+          'vs Mac Studio M5 Max (mise à jour août 2026, à partir de 2 499 $): même architecture mémoire unifiée, toujours 25–50% moins cher. Compromis: Linux/ROCm vs macOS.',
           'Statut Linux: ROCm 6.2+ stable. Ollama, vLLM, MLX tous fonctionnels. Moins poli que CUDA, mais production-ready.',
         ],
       },
@@ -2439,7 +2442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**65–120W TDP:** Système entier consume moins puissance que RTX 4090 simple. Fonctionne refroidi passivement ou avec ventilateurs silencieux. Aucun PSU 350W nécessaire.',
           '**Écosystème ROCm mûrit:** Support Linux maintenant stable (kernel 6.11+, ROCm 6.2+). Ollama, vLLM et LM Studio tous supportent iGPU AMD natif.',
           '**OEM chinois livrent rapidement:** Minisforum (warehouse allemand), AOOSTAR, Beelink, GMKtec tous atteindre EU/US dans 2–4 semaines.',
-          '**€1.200–2.600 gamme prix:** Sape Mac Studio M4 Max (€2.999) de 40–60% offrant capacité mémoire unifiée identique ou meilleure.',
+          '**€1.200–2.600 gamme prix:** Sape le Mac Studio M5 Max (prix de départ 2 499 $ après la mise à jour d août 2026) de 25–50% offrant capacité mémoire unifiée identique ou meilleure au palier 128GB.',
         ],
       },
       'minisforum-ms-a2': {
@@ -2612,15 +2615,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'AMD Ryzen AI Max+ vs Apple Silicon: La Vraie Comparaison',
         content: 'Les deux partagent architecture mémoire unifiée et graphiques intégrés. Voici comment ils se comparent pour usage Local LLM.',
         items: [
-          '**Mac Studio M4 Max** (équivalent): CPU 32-core, GPU M4 Max, jusqu\'à 128GB mémoire unifiée. Prix: €2.999–3.999. Livraison: 4–6 semaines.',
+          '**Mac Studio M5 Max** (équivalent, mise à jour août 2026): puce Apple M5 Max, jusqu\'à 128GB mémoire unifiée. Prix: à partir de 2 499 $. Livraison: à partir du 22 septembre 2026.',
           '**AMD Ryzen AI Max+ Mini PC** (meilleur match): CPU 16-core, iGPU Radeon 8060S, jusqu\'à 128GB mémoire unifiée. Prix: €1.599–1.899. Livraison: 2–4 semaines.',
-          '**Performance:** Ryzen AI Max+ exécute Llama 70B à 18–22 tok/s. Mac M4 Max exécute même modèle à 20–25 tok/s. Différence moins de 10%.',
+          '**Performance:** Ryzen AI Max+ exécute Llama 70B à 18–22 tok/s. Le Mac Studio M4 Max sortant exécutait le même modèle à 20–25 tok/s (différence inférieure à 10%). Aucun benchmark indépendant n\'est encore disponible pour la nouvelle puce M5 Max.',
           '**Écosystème:** macOS a MLX, Metal. AMD/Linux a ROCm, vLLM, Ollama. Les deux maintenant matures.',
-          '**Avantage coût:** AMD économise €1.100–2.400 par unité. À échelle (équipes), c\'est €5.500–12.000 sur 5 unités.',
+          '**Avantage coût:** AMD économise environ 600–1 300 $ par unité par rapport au prix de départ de 2 499 $ du Mac Studio M5 Max. À échelle (équipes), c\'est 3 000–6 500 $ sur 5 unités.',
           '**Compromis:** Vous perdez macOS, Xcode, Final Cut Pro. Gagnez flexibilité Linux, transfert compétence ROCm, coût inférieur.',
         ],
         image: '/images/best-amd-mini-pc-amd-vs-apple-fr.svg',
-        imageCaption: 'Comparaison côte à côte: Mini PC AMD Ryzen AI Max+ (€1.599–1.899) livrent performance équivalente et mémoire unifiée à Mac Studio M4 Max (€2.999–3.999) à 40–50% prix inférieur.',
+        imageCaption: 'Comparaison côte à côte: Mini PC AMD Ryzen AI Max+ (€1.599–1.899) livrent une mémoire unifiée comparable au Mac Studio M5 Max (à partir de 2 499 $, mise à jour août 2026) à 25–35% prix inférieur.',
       },
       'linux-setup': {
         id: 'linux-setup',
@@ -2658,7 +2661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Excellent mais pas universel. Quand regarder ailleurs.',
         items: [
           'Besoin CUDA-only workflows: PyTorch fine-tuning torch.cuda, vLLM CUDA kernels ou propriétaire CUDA research. ROCm couvre 85%, gaps restent.',
-          'Voulez macOS sans compromis: Workflow entier macOS (Xcode, Final Cut, Figma), Mac Studio M4 Max choix naturel.',
+          'Voulez macOS sans compromis: Workflow entier macOS (Xcode, Final Cut, Figma), le nouveau Mac Studio M5 Max (à partir de 2 499 $) est le choix naturel.',
           'Besoin >70B modèles: Même 128Go mémoire unifie capped 70B Q5. Llama 4 Maverick (400B total) nécessite multi-GPU.',
           'Demandez service garantie heures: OEM chinois requièrent parfois expédition unités Asie.',
           'Exécutant inférence production clients payants: Si 99,9% uptime SLA, support enterprise bats consumer mini PC.',
@@ -2671,7 +2674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions Fréquemment Posées',
         items: [
           'Q: Peuvent AMD Ryzen AI Max+ mini PC exécuter Llama 3.3 70B? | R: Oui, tous quatre. Minisforum/Beelink/AOOSTAR exécutent 70B Q4 18–22 tok/s. Beelink 128Go gère aussi 70B Q5. GMKtec plus lent, limité modèles 40B.',
-          'Q: Comment AMD Ryzen AI Max+ compare Apple M4 Max? | R: Performance quasi-identique (dans 5–10%). AMD 30–40% cheaper. Compromis: macOS, Xcode, Final Cut écosystème perdu.',
+          'Q: Comment AMD Ryzen AI Max+ compare Apple M5 Max? | R: Le nouveau Mac Studio M5 Max d Apple (mise à jour août 2026) débute à 2 499 $, réduisant l écart de prix face à la génération M4 Max sortante. Les mini PC AMD Ryzen AI Max+ restent environ 25–50% moins chers selon la configuration. Sur la génération M4 Max précédente, la performance était à moins de 5–10% de Ryzen AI Max+ ; aucun benchmark indépendant n est encore disponible pour la nouvelle puce M5 Max. Compromis dans tous les cas: écosystème macOS, Xcode, Final Cut perdu.',
           'Q: Besoin Linux ou Windows possible? | R: Tous quatre livrés Linux. Drivers Windows développés, pas production-ready yet.',
           'Q: Différence Minisforum MS-A2 et Beelink GTR9 Pro? | R: Minisforum 96Go RAM (€1.599). Beelink 128Go RAM (€1.999), préconfiguré Ubuntu plus ROCm.',
           'Q: Puis ajouter GPU discret ces mini PC? | R: AOOSTAR GEM12 Pro supporte GPU externe OCuLink (nécessite €500+ eGPU enclosure).',
@@ -2712,8 +2715,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': 'Comment AMD Ryzen AI Max+ se compare-t-il à Apple M4 Max?',
-          'acceptedAnswer': { '@type': 'Answer', 'text': 'Performance quasi identique (dans une marge de 5–10%). AMD est 30–40% moins cher. Compromis: écosystème macOS, Xcode, Final Cut perdu.' }
+          'name': 'Comment AMD Ryzen AI Max+ se compare-t-il à Apple M5 Max?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Le nouveau Mac Studio M5 Max d Apple (mise à jour août 2026) débute à 2 499 $. Les mini PC AMD Ryzen AI Max+ restent environ 25–50% moins chers selon la configuration. Sur la génération M4 Max précédente, la performance était à moins de 5–10% de Ryzen AI Max+ ; aucun benchmark indépendant n est encore disponible pour la nouvelle puce M5 Max. Compromis dans tous les cas: écosystème macOS, Xcode, Final Cut perdu.' }
         },
         {
           '@type': 'Question',
@@ -2836,7 +2839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/best-amd-mini-pc-local-llm-2026-comparison-hero-ja.webp',
     publishDate: '2026-05-17',
     next_refresh_due: '2026-11-17',
-    intro: '**AMD Ryzen AI Max+ 395搭載で64~128GBの統一メモリを備えるミニPCは、30~70Bモデルをオフラインで¥130,000~270,000の予算で実行できます。** 中国OEM系ミニPC新興勢力(AOOSTAR・Minisforum・Beelink・GMKtec)は、ノートパソコンからの乗り換えユーザーやMac Studio(¥330,000以上)の高額な費用回避を目指すユーザーを狙っています。これらのマシンはZen 5 CPU・Radeon 8060S iGPU・50 TOPS NPUをデスクトップタワーより小さいフォームファクターに統合し、ROCm Linuxサポートが急速に成熟しています。',
+    intro: '**AMD Ryzen AI Max+ 395搭載で64~128GBの統一メモリを備えるミニPCは、30~70Bモデルをオフラインで¥130,000~270,000の予算で実行できます。** 中国OEM系ミニPC新興勢力(AOOSTAR・Minisforum・Beelink・GMKtec)は、ノートパソコンからの乗り換えユーザーやMac Studio(2026年8月の刷新で最低価格が¥275,000程度に下がったが、依然としてこのAMD価格帯を大きく上回る)の高額な費用回避を目指すユーザーを狙っています。これらのマシンはZen 5 CPU・Radeon 8060S iGPU・50 TOPS NPUをデスクトップタワーより小さいフォームファクターに統合し、ROCm Linuxサポートが急速に成熟しています。',
     leadAnswerBlock: '**AMD Ryzen AI Max+ 395ミニPCは64~128GBの統一メモリ・50 TOPS NPU・RTX 4070相当のiGPU性能を備え、¥130,000~270,000で30~70B モデルのオフライン推論に最適です。**',
     audience: 'ローカルLLMユーザーが¥130,000~270,000のミニPC選択肢で70Bモデル対応を比較する者;AMD vs Mac Studioを評価する購入者;Linux第一主義の開発者。',
     readTime: '12分',
@@ -2880,7 +2883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: '2026年ローカルLLM向けベストAMDミニPC：Minisforum MS-A2（1,599ドル・96 GB・70B Q4）、Beelink GTR9 Pro（1,899ドル・128 GB・70B Q5）、GMKtec EVO-X2（1,199ドル・64 GB・30〜40B）— すべてRyzen AI Max+ 395・DDR5X統合メモリ搭載、Mac Studio M4 Maxより30〜40%安価。' }, { type: 'plain-terms', text: 'AMD Ryzen AI Max+ 395ミニPCはApple Siliconのように統合メモリを採用 — CPU・GPU・NPUが1つのメモリプールを共有するため、96 GBミニPCで70Bモデルを分割なしに実行できます。ROCmはvLLMやOllamaなどのLLMフレームワーク向けのAMD版CUDA相当のソフトウェアスタックです。' }],
+          snippetBlocks: [{ type: 'one-sentence', text: '2026年ローカルLLM向けベストAMDミニPC：Minisforum MS-A2（1,599ドル・96 GB・70B Q4）、Beelink GTR9 Pro（1,899ドル・128 GB・70B Q5）、GMKtec EVO-X2（1,199ドル・64 GB・30〜40B）— すべてRyzen AI Max+ 395・DDR5X統合メモリ搭載、新型Mac Studio M5 Max（2,499ドル〜）より25〜50%安価。' }, { type: 'plain-terms', text: 'AMD Ryzen AI Max+ 395ミニPCはApple Siliconのように統合メモリを採用 — CPU・GPU・NPUが1つのメモリプールを共有するため、96 GBミニPCで70Bモデルを分割なしに実行できます。ROCmはvLLMやOllamaなどのLLMフレームワーク向けのAMD版CUDA相当のソフトウェアスタックです。' }],
         items: [
           'ベストバランス:Minisforum MS-A2(¥172,000、96GB RAM)。Llama 3.3 70B Q4を快適に実行。最高コスパ。',
           '最大メモリ:Beelink GTR9 Pro(¥205,000、128GB)。70B Q5を巨大コンテキストで実行。パワーユーザー向け。',
@@ -2888,7 +2891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'プレミアムオプション:AOOSTAR GEM12 Pro(¥189,000、96GB)。OCuLinkポート搭載。エンスージアスト向け。',
           '全4機種:ROCm Linux対応(カーネル6.11+)、DDR5X高速RAM、1TB+ NVMe SSD。',
           'パフォーマンス:Minisforum/Beelink/AOOSTARはRyzen AI Max+ 395同一。GMKtecはMax 385(45 TOPS)。',
-          'Mac Studio M4 Maxとの比較:メモリ統一アーキ同一、30~40%安価。トレードオフ:macOS vs Linux/ROCm。',
+          'Mac Studio M5 Max（2026年8月刷新、2,499ドル〜）との比較:メモリ統一アーキ同一、依然25~50%安価。トレードオフ:macOS vs Linux/ROCm。',
           'Linux対応状況:ROCm 6.2+安定。Ollama、vLLM、MLX全対応。CUDAより劣るが本番利用可能。',
         ],
       },
@@ -2913,7 +2916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**統一メモリアーキテクチャ:**CPU・GPU・NPUが同じメモリプール(DDR5X)にアクセス。メモリ間のコピーオーバーヘッド削減→Llama 70B推論を18–22 tok/sで実現。',
           '**50 TOPS NPU加速(Max+ 395):**LLM推論の重い計算をNPUに委譲→消費電力削減・同時処理向上。Llama 3.3 70B Q4を128GB環境で複数実行可能。',
-          '**費用対効果:**同等メモリ(128GB)のMac Studio M4 Max(€3,500–4,000相当)比40–50%安価。スケール時に数百万円単位で削減。',
+          '**費用対効果:**同等メモリ(128GB)の新型Mac Studio M5 Max(2,499ドル〜、2026年8月刷新)比25–50%安価。スケール時に数百万円単位で削減。',
           '**Linux・ROCm成熟:**Ubuntu 24.04 + ROCm 6.2+で本番対応。Ollama、vLLM、llama.cpp全対応。Windows対応は開発中。',
           'ノートPC→ミニPC移行:**16コアCPU・統一メモリ・eGPU拡張パス→デスクトップ不要で開発環境をアップグレード。フォームファクター・消費電力で有利。',
         ],
@@ -3070,15 +3073,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'AMD Ryzen AI Max+ vs Appleシリコン:真の比較',
         content: 'どちらも統一メモリアーキテクチャと統合グラフィックスを共有。ローカルLLM利用での比較です。',
         items: [
-          '**Mac Studio M4 Max**(相当機):32コアCPU、M4 Max GPU、最大128GB統一メモリ。価格:¥330,000–440,000(参考価格)。配送:4–6週間。',
+          '**Mac Studio M5 Max**(相当機、2026年8月刷新):Apple M5 Maxチップ、最大128GB統一メモリ。価格:¥275,000〜(参考価格)。配送:2026年9月22日〜。',
           '**AMD Ryzen AI Max+ ミニPC**(最適マッチ):16コアCPU、Radeon 8060S iGPU、最大128GB統一メモリ。価格:¥172,000–205,000。配送:2–4週間。',
-          '**パフォーマンス:**Ryzen AI Max+はLlama 70Bを18–22 tok/sで実行。Mac M4 Maxは同モデルを20–25 tok/sで実行。差は10%未満。',
+          '**パフォーマンス:**Ryzen AI Max+はLlama 70Bを18–22 tok/sで実行。旧世代のMac Studio M4 Maxは同モデルを20–25 tok/sで実行(差は10%未満)。新型M5 Maxチップの独立ベンチマークはまだ公開されていません。',
           '**エコシステム:**macOSはMLX、Metal。AMD/LinuxはROCm、vLLM、Ollama。両方成熟。',
-          '**コスト優位:**AMDは単位あたり¥150,000–250,000節約。スケール(チーム)では5台で¥750,000–1,250,000。',
+          '**コスト優位:**AMDはMac Studio M5 Maxの参考価格¥275,000に対し、単位あたり¥70,000–103,000節約。スケール(チーム)では5台で¥350,000–515,000。',
           '**トレードオフ:**macOS、Xcode、Final Cut Pro喪失。Linux柔軟性、ROCmスキル、低コスト獲得。',
         ],
         image: '/images/best-amd-mini-pc-amd-vs-apple-ja.svg',
-        imageCaption: '横並び比較:AMD Ryzen AI Max+ ミニPC(¥172,000–205,000)はMac Studio M4 Max(¥330,000–440,000)と同等パフォーマンス・統一メモリを40–50%低価格で提供。',
+        imageCaption: '横並び比較:AMD Ryzen AI Max+ ミニPC(¥172,000–205,000)はMac Studio M5 Max(¥275,000〜、2026年8月刷新)と同等の統一メモリを25–35%低価格で提供。',
       },
       'linux-setup': {
         id: 'linux-setup',
@@ -3124,7 +3127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         items: [
           'Q: AMD Ryzen AI Max+ ミニPCはLlama 3.3 70B実行できますか? | R: はい、全4機種。Minisforum/Beelink/AOOSTARは70B Q4で18–22 tok/s。Beelinkは128GBで70B Q5も可。GMKtecはMax 385で推定14–16 tok/s(遅い)。',
-          'Q: AMD Ryzen AI Max+とApple M4 Max性能比較は? | R: ほぼ同等(差5–10%)。AMD¥172,000–205,000 vs Mac Studio M4 Max ¥330,000–440,000(40–50%安)。トレードオフ:macOS vs Linux/ROCm。',
+          'Q: AMD Ryzen AI Max+とApple M5 Max性能比較は? | R: AppleのMac Studio M5 Max(2026年8月刷新)は¥275,000〜と価格差が縮小。AMD Ryzen AI Max+ ミニPCは構成により依然25–50%程度安価。旧世代M4 Maxでは性能差5–10%以内だったが、新型M5 Maxの独立ベンチマークはまだ未公開。トレードオフ:macOS vs Linux/ROCm。',
           'Q: Linux必須ですか?それともWindows可能? | R: 現在Linuxのみ。Ubuntu 24.04 + ROCm 6.2推奨。Windowsドライバは開発中(2026下半期予定)。',
           'Q: Minisforum MS-A2とBeelink GTR9 Pro差は? | R: Minisforum 96GB(¥172,000)、Beelink 128GB(¥205,000)。96GBで十分なら Minisforum推奨。複数モデル並列実行なら Beelink。',
           'Q: AOOSTAR GEM12 Pro に外部GPU接続可能? | R: はい、OCuLink eGPU対応(RTX 4090 eGPU enclosure €500–800別途)。合計¥280,000+。',
@@ -3165,8 +3168,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': 'AMD Ryzen AI Max+とApple M4 Maxの性能比較は?',
-          'acceptedAnswer': { '@type': 'Answer', 'text': 'ほぼ同等(差5–10%)。AMD ¥172,000–205,000 vs Mac Studio M4 Max ¥330,000–440,000(40–50%安い)。トレードオフはmacOSかLinux/ROCmか。' }
+          'name': 'AMD Ryzen AI Max+とApple M5 Maxの性能比較は?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'AppleのMac Studio M5 Max(2026年8月刷新)は¥275,000〜。AMD Ryzen AI Max+ ミニPCは構成により依然25–50%程度安価。旧世代M4 Maxでは性能差5–10%以内だったが、新型M5 Maxの独立ベンチマークはまだ未公開。トレードオフはmacOSかLinux/ROCmか。' }
         },
         {
           '@type': 'Question',
@@ -3289,7 +3292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/best-amd-mini-pc-local-llm-2026-comparison-hero-zh.webp',
     publishDate: '2026-05-17',
     next_refresh_due: '2026-11-17',
-    intro: '**配备AMD Ryzen AI Max+ 395芯片、64~128GB统一内存的迷你PC可以离线运行30~70B模型,价格¥8500~18000。** 中国OEM新兴品牌(AOOSTAR、Minisforum、Beelink、GMKtec)针对从笔记本升级的用户及希望避免¥20000+Mac Studio成本的用户。这些设备将Zen 5 CPU、Radeon 8060S iGPU和50 TOPS NPU集成在比台式机塔更小的外形,ROCm Linux支持快速成熟。',
+    intro: '**配备AMD Ryzen AI Max+ 395芯片、64~128GB统一内存的迷你PC可以离线运行30~70B模型,价格¥8500~18000。** 中国OEM新兴品牌(AOOSTAR、Minisforum、Beelink、GMKtec)针对从笔记本升级的用户及希望避免Mac Studio高成本的用户——苹果2026年8月改款将Mac Studio M5 Max起售价降至约¥17000，仍明显高于这一AMD价位段。这些设备将Zen 5 CPU、Radeon 8060S iGPU和50 TOPS NPU集成在比台式机塔更小的外形,ROCm Linux支持快速成熟。',
     leadAnswerBlock: '**AMD Ryzen AI Max+ 395迷你PC配备64~128GB统一内存、50 TOPS NPU和RTX 4070级iGPU性能,¥8500~18000价格区间是运行30~70B模型离线推理的理想选择。**',
     audience: '对比¥8500~18000迷你PC方案以实现70B模型运行的本地LLM用户;评估AMD vs Mac Studio的购买者;Linux优先的开发者。',
     readTime: '12分钟',
@@ -3333,7 +3336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: '2026年本地LLM最佳AMD迷你PC：Minisforum MS-A2（$1,599，96 GB，70B Q4）、Beelink GTR9 Pro（$1,899，128 GB，70B Q5）、GMKtec EVO-X2（$1,199，64 GB，30–40B）——均搭载Ryzen AI Max+ 395和统一DDR5X内存，比Mac Studio M4 Max便宜30–40%。' }, { type: 'plain-terms', text: 'AMD Ryzen AI Max+ 395迷你PC使用统一内存——类似Apple Silicon，CPU、GPU和NPU共享同一内存池，96 GB迷你PC可直接运行70B模型。ROCm是AMD的软件栈，相当于NVIDIA CUDA，用于运行vLLM、Ollama等LLM框架。' }],
+          snippetBlocks: [{ type: 'one-sentence', text: '2026年本地LLM最佳AMD迷你PC：Minisforum MS-A2（$1,599，96 GB，70B Q4）、Beelink GTR9 Pro（$1,899，128 GB，70B Q5）、GMKtec EVO-X2（$1,199，64 GB，30–40B）——均搭载Ryzen AI Max+ 395和统一DDR5X内存，比新款Mac Studio M5 Max（起价$2,499）便宜25–50%。' }, { type: 'plain-terms', text: 'AMD Ryzen AI Max+ 395迷你PC使用统一内存——类似Apple Silicon，CPU、GPU和NPU共享同一内存池，96 GB迷你PC可直接运行70B模型。ROCm是AMD的软件栈，相当于NVIDIA CUDA，用于运行vLLM、Ollama等LLM框架。' }],
         items: [
           '综合最优:Minisforum MS-A2(¥10500、96GB内存)。Llama 3.3 70B Q4运行流畅。性价比最高。',
           '最大内存:Beelink GTR9 Pro(¥13700、128GB)。运行70B Q5且支持超大上下文。专业用户首选。',
@@ -3341,7 +3344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '高端选项:AOOSTAR GEM12 Pro(¥13000、96GB)。支持eGPU扩展。发烧友向。',
           '全部支持:ROCm Linux(内核6.11+)、DDR5X高速内存、1TB+ NVMe SSD。',
           '性能:Minisforum/Beelink/AOOSTAR采用相同Ryzen AI Max+ 395。GMKtec使用Max 385(45 TOPS)。',
-          'vs Mac Studio M4 Max:相同统一内存架构、便宜30~40%。权衡:Linux/ROCm替代macOS。',
+          'vs Mac Studio M5 Max（2026年8月改款，起价$2,499）:相同统一内存架构、依然便宜25~50%。权衡:Linux/ROCm替代macOS。',
           'Linux状态:ROCm 6.2+稳定。Ollama、vLLM、MLX全部支持。不如CUDA完美但可用于生产。',
         ],
       },
@@ -3366,7 +3369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**统一内存架构:**CPU、GPU和NPU共享同一内存池(DDR5X)。消除内存复制开销→Llama 70B推理18–22 tok/s。',
           '**50 TOPS NPU加速(Max+ 395):**LLM重型计算卸载到NPU→降低功耗、提高吞吐量。Llama 3.3 70B Q4在128GB环境可并行运行多个。',
-          '**性价比高:**等效内存(128GB)的Mac Studio M4 Max(¥20000+相当)便宜40–50%。规模化时节省数十万。',
+          '**性价比高:**等效内存(128GB)的新款Mac Studio M5 Max(起价约¥17000，2026年8月改款)便宜25–50%。规模化时节省数十万。',
           '**Linux和ROCm成熟:**Ubuntu 24.04 + ROCm 6.2+生产就绪。Ollama、vLLM、llama.cpp全支持。Windows支持开发中。',
           '笔记本→迷你PC升级:**16核CPU、统一内存、eGPU扩展路径→无需桌面机,在小型设备上升级开发环境。外观和功耗都有优势。',
         ],
@@ -3386,7 +3389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           warranty: '2年全球保修',
         },
         strengths: [
-          '**价格和性能的最佳点:**70B Q4运行18–22 tok/s。¥10500比同价位Mac(约¥20000+)便宜40%。',
+          '**价格和性能的最佳点:**70B Q4运行18–22 tok/s。¥10500比新款Mac Studio M5 Max(起价约¥17000)便宜约38%。',
           '**DDR5X统一内存:**96GB可运行70B + 32K上下文 = 400M令牌稳定。',
           '中国仓库:** 2–4天配送。GDPR/DSGVO合规。商业许可容易获取。',
           'Minisforum社区:**Wiki、论坛、固件更新丰富。Linux问题最先查这里。',
@@ -3523,15 +3526,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'AMD Ryzen AI Max+ vs苹果芯片:真实对比',
         content: '两者都采用统一内存架构和集成图形。这是对本地LLM使用的比较。',
         items: [
-          '**Mac Studio M4 Max**(相当):32核CPU、M4 Max GPU、最高128GB统一内存。价格:¥20000+。配送:4~6周。',
+          '**Mac Studio M5 Max**(相当，2026年8月改款):Apple M5 Max芯片、最高128GB统一内存。价格:起价约¥17000。配送:2026年9月22日起。',
           '**AMD Ryzen AI Max+ 迷你PC**(最佳匹配):16核CPU、Radeon 8060S iGPU、最高128GB统一内存。价格:¥10500~13700。配送:2~4周。',
-          '**性能:**Ryzen AI Max+运行Llama 70B速度18~22 tok/s。Mac M4 Max运行同一模型速度20~25 tok/s。差异不到10%。',
+          '**性能:**Ryzen AI Max+运行Llama 70B速度18~22 tok/s。上一代Mac Studio M4 Max运行同一模型速度20~25 tok/s(差异不到10%)。新款M5 Max芯片尚无独立基准测试数据。',
           '**生态:**macOS有MLX、Metal。AMD/Linux有ROCm、vLLM、Ollama。两个现在都成熟。',
-          '**成本优势:**AMD每台节省¥5000~10000。大规模(团队)购买5台节省¥25000~50000。',
+          '**成本优势:**相比Mac Studio M5 Max约¥17000的起价，AMD每台节省约¥3300~6500。大规模(团队)购买5台节省约¥16500~32500。',
           '**权衡:**失去macOS、Xcode、Final Cut Pro。获得Linux灵活性、ROCm技能转移和更低成本。',
         ],
         image: '/images/best-amd-mini-pc-amd-vs-apple-zh.svg',
-        imageCaption: '并排对比:AMD Ryzen AI Max+ 迷你PC(¥10500~13700)提供与Mac Studio M4 Max(¥20000+)相当的性能和统一内存,但价格低40~50%。',
+        imageCaption: '并排对比:AMD Ryzen AI Max+ 迷你PC(¥10500~13700)提供与Mac Studio M5 Max(起价约¥17000，2026年8月改款)相当的统一内存,但价格低25~35%。',
       },
       'linux-setup': {
         id: 'linux-setup',
@@ -3577,7 +3580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         items: [
           'Q: AMD Ryzen AI Max+ 迷你PC能运行Llama 3.3 70B吗? | R: 能,全部4款。Minisforum/Beelink/AOOSTAR 70B Q4 18–22 tok/s。Beelink 128GB也支持70B Q5。GMKtec Max 385预计14–16 tok/s(慢)。',
-          'Q: AMD Ryzen AI Max+ vs Apple M4 Max性能对比? | R: 基本相当(差5–10%)。AMD ¥10500~13700 vs Mac Studio M4 Max ¥20000+(便宜40–50%)。权衡:macOS vs Linux/ROCm。',
+          'Q: AMD Ryzen AI Max+ vs Apple M5 Max性能对比? | R: 苹果新款Mac Studio M5 Max(2026年8月改款)起价约¥17000，与AMD的价格差已缩小。AMD Ryzen AI Max+ 迷你PC(¥10500~13700)按配置仍便宜约25–50%。上一代M4 Max性能差在5–10%以内，新款M5 Max尚无独立基准测试。权衡:macOS vs Linux/ROCm。',
           'Q: Linux必需吗?还是Windows可行? | R: 现在仅Linux。Ubuntu 24.04 + ROCm 6.2推荐。Windows驱动开发中(2026下半期预计)。',
           'Q: Minisforum MS-A2 vs Beelink GTR9 Pro差别? | R: Minisforum 96GB(¥10500)、Beelink 128GB(¥13700)。96GB充足用Minisforum。多模型并行用Beelink。',
           'Q: AOOSTAR GEM12 Pro可接外部GPU? | R: 可,OCuLink eGPU支持(RTX 4090 eGPU封闭套¥4000–6400另购)。合计¥17000+。',
@@ -3618,8 +3621,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': 'AMD Ryzen AI Max+与Apple M4 Max性能对比如何?',
-          'acceptedAnswer': { '@type': 'Answer', 'text': '基本相当(差距5–10%)。AMD ¥10500~13700 vs Mac Studio M4 Max ¥20000以上(便宜40–50%)。权衡在于macOS还是Linux/ROCm。' }
+          'name': 'AMD Ryzen AI Max+与Apple M5 Max性能对比如何?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': '苹果新款Mac Studio M5 Max(2026年8月改款)起价约¥17000，与AMD的价格差已缩小。AMD Ryzen AI Max+迷你PC(¥10500~13700)按配置仍便宜约25–50%。上一代M4 Max性能差在5–10%以内，新款M5 Max尚无独立基准测试。权衡在于macOS还是Linux/ROCm。' }
         },
         {
           '@type': 'Question',
@@ -3742,7 +3745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/best-amd-mini-pc-local-llm-2026-comparison-hero-ko.webp',
     publishDate: '2026-05-17',
     next_refresh_due: '2026-11-17',
-    intro: '**AMD Ryzen AI Max+ 395 미니 PC는 64~128GB 통합 메모리를 탑재하여 $1,200~$2,500 가격대에 워크스테이션급 성능으로 30~70B 모델을 오프라인 실행할 수 있습니다.** 중국 OEM 미니 PC 신흥 카테고리(AOOSTAR, Minisforum, Beelink, GMKtec)는 노트북에서 업그레이드하거나 $3,000 이상의 Mac Studio 비용을 피하려는 구매자들을 공략합니다. 이 기기들은 데스크톱 타워보다 작은 폼팩터에 Zen 5 CPU, Radeon 8060S iGPU, 50 TOPS NPU를 결합하며, ROCm Linux 지원이 빠르게 성숙해지고 있습니다.',
+    intro: '**AMD Ryzen AI Max+ 395 미니 PC는 64~128GB 통합 메모리를 탑재하여 $1,200~$2,500 가격대에 워크스테이션급 성능으로 30~70B 모델을 오프라인 실행할 수 있습니다.** 중국 OEM 미니 PC 신흥 카테고리(AOOSTAR, Minisforum, Beelink, GMKtec)는 노트북에서 업그레이드하거나 Mac Studio 비용을 피하려는 구매자들을 공략합니다 — 애플의 2026년 8월 리프레시로 Mac Studio M5 Max 시작가가 $2,499로 낮아졌지만, 이 AMD 가격대보다는 여전히 훨씬 높습니다. 이 기기들은 데스크톱 타워보다 작은 폼팩터에 Zen 5 CPU, Radeon 8060S iGPU, 50 TOPS NPU를 결합하며, ROCm Linux 지원이 빠르게 성숙해지고 있습니다.',
     leadAnswerBlock: 'AMD Ryzen AI Max+ 395 미니 PC는 64~128GB 통합 메모리, 50 TOPS NPU, RTX 4070에 필적하는 iGPU 성능을 제공하며 $1,200~$2,500 가격대에 30~70B 모델 오프라인 추론에 최적입니다.',
     audience: '$1,200~$2,500 미니 PC 옵션으로 70B 모델 구동을 검토 중인 로컬 LLM 사용자, AMD와 Mac Studio를 비교하는 구매자, Linux 중심 개발자.',
     readTime: '12분',
@@ -3785,7 +3788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'tldr',
         isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: '2026년 로컬 LLM용 최고의 AMD 미니 PC: Minisforum MS-A2($1,599, 96 GB, 70B Q4), Beelink GTR9 Pro($1,899, 128 GB, 70B Q5), GMKtec EVO-X2($1,199, 64 GB, 30–40B) — 모두 Ryzen AI Max+ 395와 통합 DDR5X 메모리 탑재, Mac Studio M4 Max 대비 30–40% 저렴.' }, { type: 'plain-terms', text: 'AMD Ryzen AI Max+ 395 미니 PC는 통합 메모리를 사용합니다 — Apple Silicon처럼 CPU, GPU, NPU가 메모리 풀을 공유합니다. ROCm은 vLLM, Ollama 같은 LLM 프레임워크를 위한 AMD의 소프트웨어 스택으로 NVIDIA CUDA의 AMD 버전입니다.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: '2026년 로컬 LLM용 최고의 AMD 미니 PC: Minisforum MS-A2($1,599, 96 GB, 70B Q4), Beelink GTR9 Pro($1,899, 128 GB, 70B Q5), GMKtec EVO-X2($1,199, 64 GB, 30–40B) — 모두 Ryzen AI Max+ 395와 통합 DDR5X 메모리 탑재, Mac Studio M5 Max($2,499부터) 대비 25–50% 저렴.' }, { type: 'plain-terms', text: 'AMD Ryzen AI Max+ 395 미니 PC는 통합 메모리를 사용합니다 — Apple Silicon처럼 CPU, GPU, NPU가 메모리 풀을 공유합니다. ROCm은 vLLM, Ollama 같은 LLM 프레임워크를 위한 AMD의 소프트웨어 스택으로 NVIDIA CUDA의 AMD 버전입니다.' }],
         items: [
           '종합 최고: Minisforum MS-A2($1,599, 96GB RAM). Llama 3.3 70B Q4를 안정적으로 실행. 최고의 가성비.',
           '최대 RAM: Beelink GTR9 Pro($1,899, 128GB). 대형 컨텍스트 윈도우로 70B Q5 실행. 파워 유저에게 최적.',
@@ -3793,7 +3796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '프리미엄 옵션: AOOSTAR GEM12 Pro($1,799, 96GB). eGPU 확장용 OCuLink 포트. 열성 팬 중심.',
           '4가지 모두: ROCm Linux 지원(커널 6.11+), DDR5X 고속 RAM, 1TB+ NVMe SSD.',
           '성능: Minisforum/Beelink/AOOSTAR는 동일한 Ryzen AI Max+ 395 공유. GMKtec은 Max 385(45 TOPS).',
-          'Mac Studio M4 Max 대비: 동일한 통합 메모리 아키텍처, 30~40% 저렴. 절충점: macOS 생태계 vs Linux/ROCm.',
+          'Mac Studio M5 Max(2026년 8월 리프레시, $2,499부터) 대비: 동일한 통합 메모리 아키텍처, 여전히 25~50% 저렴. 절충점: macOS 생태계 vs Linux/ROCm.',
           'Linux 상태: ROCm 6.2+ 안정화. Ollama, vLLM, MLX 모두 작동. CUDA보다 완성도는 낮지만 프로덕션 사용 가능.',
         ],
       },
@@ -3808,7 +3811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**65~120W TDP:** 전체 시스템이 RTX 4090 단일 카드보다 낮은 전력을 소비합니다. 패시브 쿨링 또는 조용한 팬으로 작동. 350W PSU 불필요.',
           '**ROCm 생태계 성숙:** Linux 지원이 안정화됨(커널 6.11+, ROCm 6.2+). Ollama, vLLM, LM Studio 모두 AMD iGPU를 기본 지원합니다.',
           '**중국 OEM의 빠른 배송:** Minisforum(독일 창고), AOOSTAR, Beelink, GMKtec 모두 EU/미국에 2~4주 내 배송.',
-          '**$1,200~$2,500 가격대:** Mac Studio M4 Max($2,999) 대비 40~60% 저렴하면서 동일하거나 더 큰 통합 메모리 용량 제공.',
+          '**$1,200~$2,500 가격대:** Mac Studio M5 Max(2026년 8월 리프레시 후 시작가 $2,499) 대비 25~50% 저렴하면서 128GB 등급에서 동일하거나 더 큰 통합 메모리 용량 제공.',
         ],
       },
       'comparison-table': {
@@ -4012,15 +4015,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'AMD Ryzen AI Max+ vs Apple Silicon: 실제 비교',
         content: '두 플랫폼 모두 통합 메모리 아키텍처와 통합 그래픽을 공유합니다. 로컬 LLM 사용 측면에서 비교합니다.',
         items: [
-          '**Mac Studio M4 Max**(동급): 32코어 CPU, M4 Max GPU, 최대 128GB 통합 메모리. 가격: $2,999~$3,999. 배송: 4~6주.',
+          '**Mac Studio M5 Max**(동급, 2026년 8월 리프레시): Apple M5 Max 칩, 최대 128GB 통합 메모리. 가격: $2,499부터. 배송: 2026년 9월 22일부터.',
           '**AMD Ryzen AI Max+ 미니 PC**(최적 매칭): 16코어 CPU, Radeon 8060S iGPU, 최대 128GB 통합 메모리. 가격: $1,599~$1,899. 배송: 2~4주.',
-          '**성능:** Ryzen AI Max+는 Llama 70B를 18~22 tok/s로 실행. Mac M4 Max는 동일 모델을 20~25 tok/s로 실행. 차이는 10% 미만.',
+          '**성능:** Ryzen AI Max+는 Llama 70B를 18~22 tok/s로 실행. 이전 세대 Mac Studio M4 Max는 동일 모델을 20~25 tok/s로 실행(차이 10% 미만). 신형 M5 Max 칩의 독립 벤치마크는 아직 공개되지 않았습니다.',
           '**생태계:** macOS는 MLX, Metal. AMD/Linux는 ROCm, vLLM, Ollama. 이제 둘 다 성숙함.',
-          '**비용 우위:** AMD가 유닛당 $1,100~$2,400 절약. 팀 규모(5유닛)에서는 $5,500~$12,000 절약.',
+          '**비용 우위:** AMD가 Mac Studio M5 Max의 시작가 $2,499 대비 유닛당 약 $600~$1,300 절약. 팀 규모(5유닛)에서는 $3,000~$6,500 절약.',
           '**절충점:** macOS, Xcode, Final Cut Pro를 잃습니다. Linux 유연성, ROCm 기술 이전, 저비용을 얻습니다.',
         ],
         image: '/images/best-amd-mini-pc-amd-vs-apple-en.svg',
-        imageCaption: '나란히 비교: AMD Ryzen AI Max+ 미니 PC($1,599~$1,899)는 Mac Studio M4 Max($2,999~$3,999) 대비 40~50% 낮은 비용으로 동등한 성능과 통합 메모리를 제공합니다.',
+        imageCaption: '나란히 비교: AMD Ryzen AI Max+ 미니 PC($1,599~$1,899)는 Mac Studio M5 Max($2,499부터, 2026년 8월 리프레시) 대비 25~35% 낮은 비용으로 비슷한 통합 메모리를 제공합니다.',
       },
       'eu-considerations': {
         id: 'eu-considerations',
@@ -4041,7 +4044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '이 미니 PC들은 우수하지만 모든 상황에 적합하지는 않습니다. 다른 선택이 필요한 경우를 설명합니다.',
         items: [
           'CUDA 전용 워크플로우가 필요한 경우: torch.cuda를 사용한 PyTorch 파인튜닝, vLLM CUDA 커널, 또는 독점 CUDA 연구 코드. ROCm이 85%를 커버하지만 격차가 남아 있습니다.',
-          '타협 없이 macOS를 원하는 경우: 전체 워크플로우가 macOS(Xcode, Final Cut, Figma)라면 Mac Studio M4 Max가 자연스러운 선택입니다.',
+          '타협 없이 macOS를 원하는 경우: 전체 워크플로우가 macOS(Xcode, Final Cut, Figma)라면 신형 Mac Studio M5 Max($2,499부터)가 자연스러운 선택입니다.',
           '70B 이상 모델이 필요한 경우: 128GB 통합 메모리도 70B Q5에서 한계에 도달합니다. Llama 4 Maverick(400B 전체)은 멀티 GPU 설정이 필요합니다.',
           '몇 시간 내 보증 서비스가 필요한 경우: 중국 OEM은 일부 경우 아시아로 유닛을 반송해야 합니다.',
           '유료 고객을 위한 프로덕션 추론을 실행하는 경우: 99.9% 업타임 SLA가 필요하면 엔터프라이즈 지원이 소비자 미니 PC보다 낫습니다.',
@@ -4054,7 +4057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         items: [
           'Q: AMD Ryzen AI Max+ 미니 PC로 Llama 3.3 70B를 실행할 수 있습니까? | A: 네, 4개 모두 가능합니다. Minisforum/Beelink/AOOSTAR는 70B Q4를 18~22 tok/s로 실행합니다. 128GB Beelink는 70B Q5도 처리합니다. GMKtec은 느리고 40B 모델로 제한됩니다.',
-          'Q: AMD Ryzen AI Max+와 Apple M4 Max는 어떻게 비교됩니까? | A: 성능이 거의 동일합니다(5~10% 이내). AMD가 30~40% 저렴합니다. 절충점: macOS, Xcode, Final Cut 생태계를 잃게 됩니다.',
+          'Q: AMD Ryzen AI Max+와 Apple M5 Max는 어떻게 비교됩니까? | A: 애플의 신형 Mac Studio M5 Max(2026년 8월 리프레시)는 $2,499부터 시작해 이전 M4 Max 세대 대비 가격 격차가 줄었습니다. AMD Ryzen AI Max+ 미니 PC는 구성에 따라 여전히 약 25~50% 저렴합니다. 이전 M4 Max 세대에서는 성능이 Ryzen AI Max+ 대비 5~10% 이내였으나, 신형 M5 Max 칩의 독립 벤치마크는 아직 없습니다. 절충점은 어느 쪽이든 동일합니다: macOS, Xcode, Final Cut 생태계를 잃게 됩니다.',
           'Q: Linux가 필요합니까, 아니면 Windows를 사용할 수 있습니까? | A: 4개 모두 Linux와 함께 출고됩니다. Windows 드라이버는 개발 중이지만 아직 프로덕션 준비가 되지 않았습니다.',
           'Q: Minisforum MS-A2와 Beelink GTR9 Pro의 차이점은 무엇입니까? | A: Minisforum은 96GB RAM($1,599). Beelink는 128GB RAM($1,899)이며 Ubuntu + ROCm이 사전 구성되어 있습니다.',
           'Q: 이 미니 PC에 별도 GPU를 추가할 수 있습니까? | A: AOOSTAR GEM12 Pro는 OCuLink를 통한 외부 GPU 지원(별도 $500+ eGPU 인클로저 필요).',
@@ -4098,10 +4101,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '@type': 'Question',
-          'name': 'AMD Ryzen AI Max+와 Apple M4 Max는 어떻게 비교됩니까?',
+          'name': 'AMD Ryzen AI Max+와 Apple M5 Max는 어떻게 비교됩니까?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': '성능이 거의 동일합니다(5~10% 이내). AMD가 30~40% 저렴합니다. 절충점: macOS, Xcode, Final Cut 생태계를 잃게 됩니다.'
+            'text': '애플의 신형 Mac Studio M5 Max(2026년 8월 리프레시)는 $2,499부터 시작합니다. AMD Ryzen AI Max+ 미니 PC는 구성에 따라 여전히 약 25~50% 저렴합니다. 이전 M4 Max 세대에서는 성능이 Ryzen AI Max+ 대비 5~10% 이내였으나, 신형 M5 Max 칩의 독립 벤치마크는 아직 없습니다. 절충점은 어느 쪽이든 동일합니다: macOS, Xcode, Final Cut 생태계를 잃게 됩니다.'
           }
         },
         {
