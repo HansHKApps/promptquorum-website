@@ -1185,9 +1185,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     toc: [
+      { label: '购买建议 / 跳过建议', anchor: 'buy-skip-if' },
+      { label: '能耗监测智能插座评分卡', anchor: 'scorecard' },
       { label: '摘要', anchor: 'tldr' },
       { label: '披露说明', anchor: 'disclosure' },
       { label: '快速推荐', anchor: 'quick-picks' },
+      { label: '正面对比', anchor: 'comparison' },
       { label: '本地开关控制 vs. 本地能耗上报', anchor: 'onoff-vs-energy-reporting' },
       { label: '数值代表什么', anchor: 'what-the-numbers-mean' },
       { label: '应该监测什么（不应该监测什么）', anchor: 'what-to-monitor' },
@@ -1195,6 +1198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '本地AI与能耗数据', anchor: 'local-ai' },
       { label: '购买前应核实的要点', anchor: 'what-to-check' },
       { label: '该选哪一款', anchor: 'which-one' },
+      { label: '我们的评测方法', anchor: 'methodology' },
       { label: '常见问题', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -1202,6 +1206,43 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { type: 'plain-terms', content: '有些智能插座能让你通过Home Assistant在本地开关某台设备，但详细的用电量数据仍只会发送给厂商自家的应用。本指南旨在帮你找到不仅开关、连实际功率数据也保持本地的插座，并附上最新价格。' },
     ],
     sections: {
+      buyIfSkipIf: {
+        id: 'buy-skip-if',
+        title: '购买建议 / 跳过建议',
+        sponsoredSlot: true,
+        content: '快速决策指南——能耗监测智能插座是否符合你的实际需求？以下判断基于PromptQuorum对已公开规格和文档的评估，而非实机测试。',
+        items: [
+          '**在以下情况下购买能耗监测智能插座：**',
+          '你想让单个设备的功率/千瓦时数据本地接入Home Assistant的能源仪表盘',
+          '你有具体的高价值设备值得追踪（洗衣机、烘干机、服务器、冰箱）',
+          '你已经在使用Zigbee或Z-Wave，想要一款与现有协调器匹配的插座',
+          '你想让本地LLM自动化总结"昨天什么设备用电最多"',
+          '你想及早发现故障（例如冰箱耗电量异常升高）',
+          '**在以下情况下跳过智能插座：**',
+          '你想要全屋或整条电路的可见性——应改用配电箱上的CT电流互感器方案',
+          '你想监测太阳能发电量——同样应使用CT电流互感器方案，而不是插座',
+          '你只想要开关控制、不需要能耗数据——一款便宜得多的普通智能插座即可满足',
+          '你想监测的设备耗电超过插座的额定最大负载——请先核实额定参数',
+        ],
+        affiliateLinks: [
+          { label: '查看Aqara智能插座价格 →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug', priceRange: '$20-35' },
+          { label: '对比全部4款插座 →', url: '#comparison', productName: 'Smart plug comparison', productCategory: 'Energy-monitoring smart plug' },
+        ],
+      },
+      scorecard: {
+        id: 'scorecard',
+        title: '能耗监测智能插座评分卡',
+        content:
+          '**PromptQuorum的评估基于制造商规格参数和Home Assistant自家的集成文档——并非对实体设备的实机测试。** 评分反映的是插座在本地优先能耗监测方面的适配程度。',
+        columns: ['插座', '本地能耗数据', '性价比', '最适合'],
+        rows: [
+          { 插座: 'Aqara智能插座', '本地能耗数据': '9.5/10', 性价比: '9/10', 最适合: 'Zigbee家庭，一次购买多个' },
+          { 插座: 'Zooz ZEN15 800LR', '本地能耗数据': '9/10', 性价比: '7.5/10', 最适合: 'Z-Wave家庭，需要远距离覆盖' },
+          { 插座: 'Shelly Plug US Gen4', '本地能耗数据': '9/10', 性价比: '8.5/10', 最适合: '没有现有协调器，需要最广泛的协议灵活性' },
+          { 插座: 'Sonoff S31（Wi-Fi）', '本地能耗数据': '7.5/10', 性价比: '9/10', 最适合: '已确认价格最低，预算型多插座部署' },
+        ],
+        note: '以上评分是PromptQuorum基于已验证规格和Home Assistant自家集成文档（参见下方"我们的评测方法"）得出的编辑评估结果，并非PromptQuorum对实体设备的实机测试结果。',
+      },
       tldr: {
         id: 'tldr',
         title: '摘要',
@@ -1213,6 +1254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '这些均为美国/欧洲市场产品，尚未确认在中国大陆有正式销售渠道或人民币定价',
           '购买时应选择与你已有协议匹配的插座，而不是功能最多的那一款',
           '智能插座只能测量单个设备；若需全屋或整条电路监测，应使用CT电流互感器方案',
+          '本页包含产品链接，而非联盟营销链接——详见下方披露说明',
         ],
       },
       disclosure: {
@@ -1236,6 +1278,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Zooz ZEN15 Power Switch', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: '正面对比',
+        content: '**四款已确认产品的并排对比，截至2026年8月25日核实。**',
+        columns: ['插座', '协议', '最大负载', '本地能耗数据', '价格'],
+        rows: [
+          { 插座: 'Aqara智能插座', 协议: 'Zigbee 3.0', 最大负载: '1875W', '本地能耗数据': '支持（ZHA/Zigbee2MQTT）', 价格: '20至35美元' },
+          { 插座: 'Zooz ZEN15 800LR', 协议: 'Z-Wave Long Range（800系列）', 最大负载: '请查看具体产品页', '本地能耗数据': '支持（功率/电流/电压/千瓦时）', 价格: '37.95至48.95美元' },
+          { 插座: 'Shelly Plug US Gen4', 协议: 'Wi-Fi / Matter / Zigbee', 最大负载: '请查看具体产品页', '本地能耗数据': '支持（有文档记录的本地API）', 价格: '19.99至24.99美元' },
+          { 插座: 'Sonoff S31', 协议: 'Wi-Fi', 最大负载: '请查看具体产品页', '本地能耗数据': '支持——但S31 Lite ZB不支持', 价格: '9.90至23.90美元' },
+        ],
+        items: [
+          '**没有现有协调器时的首选：**Shelly Plug US Gen4——这是本文中唯一已确认可跨三种协议（Wi-Fi、Matter、Zigbee）工作、且有文档记录本地API的插座，几乎适配任何环境。',
+          '**多台设备下单件成本最低的首选：**Aqara智能插座——价格足够低，可以为"应该监测什么"一节中列出的设备各买3-4个而不会有太大开支。',
+          '这四款产品在本地能耗上报是否真正有效这一点上没有实质差异——都已确认支持。真正的决策因素是协议匹配度和价格，而不是功能本身。',
+        ],
+        affiliateLinks: [
+          { label: '查看Aqara价格 →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug', priceRange: '$20-35' },
+          { label: '查看Zooz价格 →', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug', priceRange: '$37.95-48.95' },
+          { label: '查看Shelly价格 →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug', priceRange: '$19.99-24.99' },
         ],
       },
       onoffVsEnergyReporting: {
@@ -1326,7 +1390,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '已经在使用Z-Wave：Zooz ZEN15 800LR（37.95至48.95美元）——在Z-Wave上有成熟的本地上报记录。',
           '不想再增加一个协调器，或想要最广泛的协议灵活性：Shelly Plug US Gen4（19.99至24.99美元）——在Wi-Fi、Matter、Zigbee上都有文档记录的本地API。',
           '想要已确认价格最低的选择，且不介意仅支持Wi-Fi：Sonoff S31（9.90至23.90美元）——如果能耗监测是重点，务必购买S31而非Zigbee版的S31 Lite ZB。',
+          '想在预算内追踪4台以上设备：Aqara智能插座 × 多个——在已确认产品中单件成本最低。',
           '想要全屋或整条电路的可见性：完全跳过智能插座，改用配电箱上的CT电流互感器方案——参见本地能源管理概览。',
+        ],
+        affiliateLinks: [
+          { label: '查看Aqara智能插座价格 →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug', priceRange: '$20-35' },
+        ],
+      },
+      methodology: {
+        id: 'methodology',
+        title: '我们的评测方法',
+        content:
+          '**本篇评测并未经过PromptQuorum对实体设备的实机测试。** 内容基于制造商公开的规格参数、零售商产品页面以及Home Assistant自家的集成文档，下方已明确区分哪些内容是已确认信息、哪些是编辑评估。',
+        items: [
+          '**制造商已确认：**协议、最大负载额定值和官方价格——直接来自Aqara、Zooz、Shelly以及Sonoff/ITEAD自家的产品页面和商店信息，2026年8月25日核实。',
+          '**Home Assistant文档已确认：**能耗传感器实体（功率、千瓦时、电压、电流）是否通过相关集成（ZHA、Zigbee2MQTT、Z-Wave JS，或本地Wi-Fi/Matter API）本地公开，还是需要云端连接——来自Home Assistant自家的集成文档，而非厂商的营销宣传。',
+          '**PromptQuorum评估：**评分卡、购买/跳过建议，以及"该选哪一款"筛选指南——这是PromptQuorum基于上述已确认规格和文档所做的编辑判断，而非新的实机测试。',
+          '我们对能耗监测智能插座的评估维度包括：已确认的本地能耗数据上报（而不仅是本地开关控制）、与现有设置的协议匹配度、最大负载额定值、价格，以及Home Assistant对该具体型号的集成支持文档。',
         ],
       },
       faqSection: {
@@ -1335,12 +1415,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '本地开关控制是否意味着能耗数据也是本地的？', a: '不一定——有些插座会将两者分开，开关本地控制，但详细的功率数据仍通过厂商云端传输。请具体核实是否支持本地能耗上报。' },
           { q: 'Zigbee插座在能耗监测方面是否优于Wi-Fi插座？', a: '就已确认的本地上报而言，一般来说是的——Zigbee和Z-Wave插座在这方面的表现记录比Wi-Fi插座更一致，不过Shelly是已确认拥有本地API文档的例外。仍应核实具体型号，而不是仅凭协议来判断。' },
+          { q: '整体而言，最佳能耗监测智能插座是哪一款？', a: '对于大多数已在使用Zigbee的买家，Aqara智能插座（20至35美元）在已确认的本地上报和低单件成本之间提供了最佳组合。如果你没有现有协调器，Shelly Plug US Gen4（19.99至24.99美元）是协议灵活性最强的已确认产品，可跨Wi-Fi、Matter、Zigbee工作。' },
           { q: '这些插座如何接入能源仪表盘？', a: '一旦确认插座支持本地上报，请在能源仪表盘设置中的"独立设备"下添加该插座的能耗传感器实体——完整步骤请参见相关指南。' },
           { q: '可以混用不同协议（部分Zigbee、部分Wi-Fi插座）吗？', a: '可以——只要每台设备都能独立实现本地上报，Home Assistant就能将不同协议的传感器实体无缝整合进同一个能源仪表盘视图中。' },
           { q: '是否每台电器都需要一个插座，还是可以监测整条电路？', a: '智能插座监测的是插在其上的单个电器；若要监测整条电路或整个住宅，配电箱上的CT电流互感器（参见本地能源管理概览）才是合适的工具。' },
           { q: '同一产品线中的每款插座功能都相同吗？', a: '不相同——据Sonoff自家产品页面显示，Sonoff的Wi-Fi版S31内置能耗监测功能，但其Zigbee版姊妹型号S31 Lite ZB则没有。请查看具体型号页面，而不要仅凭品牌或产品系列名称判断。' },
           { q: '监测我的设备能自动帮我省钱吗？', a: '不能——插座测量的是耗电量；省钱来自你根据这些信息所做的事（发现浪费、自动化负载、把用电转移到更便宜或有太阳能覆盖的时段）。把插座当作数据来源，而不是本身就能省钱的装置。' },
           { q: '本地AI能利用这些能耗数据吗？', a: '可以——由于能耗传感器实体在Home Assistant中本来就是本地的，本地LLM自动化可以总结数据或回答相关问题（例如"昨天什么设备用电最多？"），而无需向任何云端AI服务发送任何内容。' },
+          { q: '一开始应该买多少个能耗监测插座？', a: '两到三个，用于你价值最高的设备（洗衣机/烘干机、服务器或常开PC、冰箱或冰柜）。只有在数据真正改变你的行为时才扩展——监测每一个小设备只会增加成本，价值提升有限。' },
+          { q: '智能插座适合用来监测电动车充电吗？', a: '通常不是最佳选择——专用的EV能源解决方案或充电桩自身的上报功能，比通用智能插座更合适，因为电动车充电的负载和时长模式与一般电器监测不同。' },
+          { q: '购买任何能耗监测插座前应该核实什么？', a: '在Home Assistant针对该具体型号的集成文档中确认本地能耗上报（而不仅是开关控制），核实插座的额定最大负载是否与你的设备匹配，并确认你的插座/插头规格（美国NEMA、欧洲Schuko/CEE 7、中国大陆标准插座等）与你所在地区一致。' },
         ],
       },
       relatedReading: {
@@ -1350,6 +1434,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Home Assistant能源仪表盘：完整设置指南](/zh/smart-home/home-assistant-energy-dashboard-guide) — 这些插座接入之处',
           '[本地智能家居能源管理](/zh/smart-home/local-smart-home-energy-management-2027) — 更广泛的监测策略，包括全屋CT监测',
           '[最佳Zigbee与Thread USB加密狗推荐](/zh/smart-home/best-zigbee-thread-dongles-2027) — Zigbee插座配对所用的无线电硬件',
+          '[2026年最佳智能家居设备推荐](/zh/smart-home/best-smart-home-devices-2026) — 本插座所属分类的完整分品类选购指南',
+          '[用本地LLM实现AI自动化](/zh/smart-home/ai-automations-local-llm) — 构建"昨天什么设备用电最多"这类自动化',
         ],
       },
     },
