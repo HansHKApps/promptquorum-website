@@ -1241,7 +1241,7 @@
       ]
     },
     "apple-silicon-vs-nvidia-gpu-local-llm": {
-      "dateModified": "2026-05-15",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -2056,7 +2056,7 @@
       ]
     },
     "best-mini-pcs-local-llm": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2074,11 +2074,11 @@
       "images": [
         {
           "url": "/images/best-mini-pcs-local-llm-mac-mini-perf-en.svg",
-          "title": "Mac mini M4 Pro performance benchmarks: 64 GB unified memory runs Llama 3.3 70B at 10–15 tok/s for $2,299; 16 GB M4 cannot fit 70B models."
+          "title": "Mac mini generations compared: the new M6 (from $899) caps at 32 GB unified memory and cannot fit 70B models; the new M5 Pro (from $1,699) scales to 64 GB. The outgoing M4 Pro (64 GB, $2,299) ran 70B at 10–15 tok/s."
         },
         {
           "url": "/images/best-mini-pcs-local-llm-framework-comparison-en.svg",
-          "title": "Framework Desktop vs Mac mini M4 Pro: Framework runs Llama 3.3 70B at 20–25 tok/s with 128 GB unified memory for $1,999; Mac mini M4 Pro delivers 10–15 tok/s with 64 GB for $2,299."
+          "title": "Framework Desktop vs previous-generation Mac mini M4 Pro: Framework runs Llama 3.3 70B at 20–25 tok/s with 128 GB unified memory for $1,999; the outgoing M4 Pro delivered 10–15 tok/s with 64 GB for $2,299. No independent benchmark exists yet for the new M5 Pro Mac mini (64 GB max, from $1,699)."
         },
         {
           "url": "/images/best-mini-pcs-local-llm-platform-value-hero-en.webp",
@@ -2776,7 +2776,7 @@
       "images": []
     },
     "apple-silicon-m5-local-llm": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -2794,7 +2794,7 @@
       "images": [
         {
           "url": "/images/apple-silicon-m5-local-llm-config-comparison-hero-en.webp",
-          "title": "Mac Studio M5 configs are projected (expected October 2026) -- only MacBook Pro 16\" M5 Max ships today."
+          "title": "Mac Studio no longer offers an M5 Pro tier -- the Mac mini is now the cheapest way to get an M5 Pro chip."
         },
         {
           "url": "/images/apple-silicon-m5-local-llm-mac-vs-pc-hero-en.webp",
@@ -2803,7 +2803,7 @@
       ]
     },
     "apple-silicon-local-llm-guide-2026": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -2825,12 +2825,12 @@
         },
         {
           "url": "/images/apple-silicon-local-llm-guide-2026-power-efficiency-hero-en.webp",
-          "title": "24/7 inference: ~$35/year on Mac Mini M5 vs. ~$400/year on a desktop RTX 4090 -- a 10x difference at $0.15/kWh."
+          "title": "24/7 inference: ~$35/year on Mac Mini M6 vs. ~$400/year on a desktop RTX 4090 -- a 10x difference at $0.15/kWh."
         }
       ]
     },
     "m5-pro-max-llm-benchmarks-2026": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -2857,7 +2857,7 @@
       ]
     },
     "how-much-unified-memory-for-local-llm": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -2965,7 +2965,7 @@
       ]
     },
     "mac-mini-m5-local-ai-server": {
-      "dateModified": "2026-05-15",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -2983,11 +2983,11 @@
       "images": [
         {
           "url": "/images/mac-mini-m5-local-ai-server-memory-tier-capacity-en.svg",
-          "title": "Mac Mini M5 memory tier vs max model capacity: 16 GB runs 7B Q4 only, 32 GB up to 13B Q4, 36 GB fits an 8B + Whisper + TTS voice stack, and the recommended 64 GB Pro comfortably runs 34B models."
+          "title": "Mac Mini M6 (32GB max) vs M5 Pro (64GB max) memory ceiling vs max model capacity: the 32GB M6 fits a single LLM plus one light service, while the 64GB M5 Pro comfortably runs a 34B model alongside Whisper, RAG, and a voice assistant simultaneously."
         },
         {
           "url": "/images/mac-mini-m5-local-ai-server-power-draw-by-workload-en.svg",
-          "title": "Mac Mini M5 Pro power draw by workload: 8W idle, 25-35W on Llama 8B inference, 40-55W on Llama 34B inference — versus 200-300W for a desktop RTX 4070."
+          "title": "Mac Mini M5 Pro estimated power draw by workload: 8W idle, 25-35W on Llama 8B inference, 40-55W on Llama 34B inference — versus 200-300W for a desktop RTX 4070. Estimates, not independently measured — hardware ships September 22, 2026."
         }
       ]
     },
@@ -3019,7 +3019,7 @@
       ]
     },
     "running-70b-models-apple-silicon-m5-max": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -3280,7 +3280,7 @@
       "images": [
         {
           "url": "/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-en.webp",
-          "title": "Alibaba vs Tencent vs AutoDL GPU Pricing -- July 2026 hourly rates"
+          "title": "Alibaba vs Tencent vs AutoDL GPU Pricing -- August 2026 hourly rates"
         },
         {
           "url": "/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-en.webp",
@@ -4154,7 +4154,7 @@
       "images": []
     },
     "geopolitics-and-ai": {
-      "dateModified": "2026-07-29",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-04-01",
       "hasSections": true,
@@ -5359,7 +5359,7 @@
       ]
     },
     "best-mac-for-local-ai-2026": {
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -5377,7 +5377,7 @@
       "images": [
         {
           "url": "/images/best-mac-for-local-ai-2026-comparison-table-hero-en.webp",
-          "title": "Mac Mini M5 Pro 64 GB (307 GB/s, ~$1,199) versus MacBook Pro 16\" M5 Max 64-128 GB (460-614 GB/s, ~$3,499-$4,499) versus Mac Studio 128 GB (~$3,999); Mac Studio M5 Max specs are projected, unreleased as of July 2026."
+          "title": "Mac Mini M6 32 GB (~$899) and M5 Pro 64 GB (~$1,699) versus MacBook Pro 16\" M5 Pro/M5 Max (~$3,499-$4,499) versus Mac Studio M5 Max 128 GB (from ~$2,499) and M5 Ultra up to 512 GB (from ~$5,499); Aug 25, 2026 Apple refresh, most configurations ship Sept 22, 2026."
         },
         {
           "url": "/images/best-mac-for-local-ai-2026-memory-by-model-hero-en.webp",
@@ -6994,7 +6994,7 @@
       ]
     },
     "best-rag-tools-for-business-documents-2026": {
-      "dateModified": null,
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -7012,7 +7012,7 @@
       "images": []
     },
     "wechat-bot-local-llm-personal-assistant-2026": {
-      "dateModified": null,
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -7030,11 +7030,11 @@
       "images": [
         {
           "url": "/images/wechat-bot-architecture-flow-en.svg",
-          "title": "WeChat bot architecture: WeChat message triggers WeChatFerry (Windows DLL injection), routed through a Python bridge to Ollama running Qwen3:8b, with a 3–10 second reply — all five stages run locally with no cloud API call."
+          "title": "WeChat bot architecture: a WeChat message triggers WeChatFerry (Windows DLL injection), routed through a Python bridge to Ollama running Qwen3:8b, with a reply in roughly 3–15 seconds depending on hardware — every stage runs locally, with no cloud API call."
         },
         {
           "url": "/images/wechat-bot-model-speed-chinese-en.svg",
-          "title": "CPU speed by model for Chinese WeChat replies: Qwen3:3b runs fastest at 8–12 tok/s, Qwen3:8b balances quality and speed at 3–5 tok/s, Llama3.1:8b matches that speed with weaker Chinese, and Qwen3:14b is highest quality at 1–2 tok/s."
+          "title": "Estimated CPU speed by model for Chinese WeChat replies: Qwen3:3b runs fastest at roughly 8–12 tok/s, Qwen3:8b balances quality and speed at roughly 3–5 tok/s, Llama3.1:8b runs at a similar speed with weaker Chinese support, and Qwen3:14b is highest quality at roughly 1–2 tok/s on CPU."
         }
       ]
     },
@@ -7138,7 +7138,7 @@
       ]
     },
     "deepseek-offline-china-self-hosted-2026": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-06-19",
       "hasSections": true,
@@ -7905,7 +7905,7 @@
       "images": []
     },
     "bestSsdFastModelLoading": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -7923,7 +7923,7 @@
       "images": []
     },
     "macMiniM4LocalLlm": {
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -7941,7 +7941,7 @@
       "images": []
     },
     "runpodVsVastaiPricing": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -7995,7 +7995,7 @@
       "images": []
     },
     "bestEgpuOllamaMacbook": {
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -8013,7 +8013,7 @@
       "images": []
     },
     "bestBudgetAiLaptopUnder1000": {
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -8139,7 +8139,7 @@
       "images": []
     },
     "strixHaloOllamaVulkan": {
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-23",
       "hasSections": true,
@@ -8238,7 +8238,7 @@
       ]
     },
     "bestVpnForAiDevelopmentChina2026": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -8346,7 +8346,7 @@
       "images": []
     },
     "cheapestWayToRun70bModelLocally": {
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -8552,7 +8552,7 @@
       "images": []
     },
     "bestIntelArcGpuLocalLlm": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -8606,7 +8606,7 @@
       "images": []
     },
     "bestLocalLlmMacbookAirNoEgpu": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -8624,7 +8624,7 @@
       "images": []
     },
     "bestLocalLlm32gbUnifiedMemoryMac": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -8642,7 +8642,7 @@
       "images": []
     },
     "bestWindowsLaptopLocalLlmUnder1500": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -8678,7 +8678,7 @@
       "images": []
     },
     "m4MaxVsM4ProLocalLlm": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -8786,7 +8786,7 @@
       "images": []
     },
     "localLlmRaspberryPi5": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -8858,7 +8858,7 @@
       "images": []
     },
     "bestLocalLlmBenchmarkingTool": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -9128,7 +9128,7 @@
       "images": []
     },
     "bestLocalLlmObsidianIntegration": {
-      "dateModified": "2026-07-15",
+      "dateModified": "2026-08-26",
       "lastFactChecked": null,
       "publishDate": "2026-07-15",
       "hasSections": true,
@@ -9598,7 +9598,7 @@
       "images": []
     },
     "best-smart-home-devices-2026": {
-      "dateModified": "2026-07-28",
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-06-04",
       "hasSections": true,
@@ -9617,10 +9617,6 @@
         {
           "url": "/images/best-smart-home-devices-2026-local-vs-cloud-en.svg",
           "title": "Local-capable devices — Zigbee, Z-Wave, Matter, or a local API — compared against cloud-only devices across 5 factors including subscriptions and offline reliability."
-        },
-        {
-          "url": "/images/best-smart-home-devices-2026-category-picks-en.svg",
-          "title": "Best local-capable pick for each of 6 smart home categories: hub, lighting, locks, sensors, cameras, and plugs, mapped to Zigbee, Z-Wave, Matter, or local Wi-Fi."
         }
       ]
     },
@@ -10102,7 +10098,7 @@
       ]
     },
     "geekom-a9-max-local-ai-review": {
-      "dateModified": "2026-07-03",
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-03",
       "hasSections": true,
@@ -10124,7 +10120,7 @@
         },
         {
           "url": "/images/geekom-a9-max-local-ai-review-vs-ser8-specs-en.svg",
-          "title": "GEEKOM A9 Max vs. Beelink SER8 spec comparison: Ryzen AI 9 HX 370 (12c/24t) with a 128 GB RAM ceiling and 7B–70B model fit versus Ryzen 7 8845HS (8c/16t) with a 64 GB ceiling and 7B–14B comfortable fit."
+          "title": "GEEKOM A9 Max vs. Beelink SER8 spec comparison: Ryzen AI 9 HX 370 (12c/24t) with a 128 GB RAM ceiling and 7B–70B model fit versus Ryzen 7 8845HS (8c/16t) with a ~64–96 GB ceiling and 7B–14B comfortable fit."
         }
       ]
     },
@@ -10174,7 +10170,7 @@
       "images": []
     },
     "gmktec-g3-plus-local-ai-review": {
-      "dateModified": "2026-07-03",
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-03",
       "hasSections": true,
@@ -10192,16 +10188,16 @@
       "images": [
         {
           "url": "/images/gmktec-g3-plus-spec-comparison-en.svg",
-          "title": "GMKtec G3 Plus vs Beelink EQ14 spec comparison: 32 GB RAM ceiling and one 2.5GbE port on the G3 Plus versus 16 GB and two 2.5GbE ports on the EQ14, both at roughly $180–230."
+          "title": "GMKtec G3 Plus vs Beelink EQ14 spec comparison: 32 GB RAM ceiling and one 2.5GbE port on the G3 Plus versus 16 GB and two 2.5GbE ports on the EQ14, both around $180–200."
         },
         {
           "url": "/images/gmktec-g3-plus-model-fit-by-ram-en.svg",
-          "title": "Local model fit on the GMKtec G3 Plus by RAM: 1B–3B models need about 4 GB and run fast, 7B–8B need about 8 GB and run slow on the 16 GB base, and a ~13B model needs about 15 GB and requires the 32 GB upgrade."
+          "title": "Local model fit on the GMKtec G3 Plus by RAM: 1B–4B models need about 4 GB and run fast, 7B–8B need about 8 GB and run slow on the 16 GB base, and a ~13B model needs about 15 GB and requires the 32 GB upgrade."
         }
       ]
     },
     "minisforum-um890-pro-local-ai-review": {
-      "dateModified": "2026-08-23",
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-03",
       "hasSections": true,
@@ -10462,7 +10458,7 @@
       "images": []
     },
     "best-local-security-cameras-2027": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -10480,7 +10476,7 @@
       "images": []
     },
     "best-smart-locks-local-control-2027": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -10498,7 +10494,7 @@
       "images": []
     },
     "best-smart-thermostats-local-ai-2027": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -10516,7 +10512,7 @@
       "images": []
     },
     "best-zigbee-thread-dongles-2027": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -10534,7 +10530,7 @@
       "images": []
     },
     "best-smart-home-hubs-2027": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -10570,7 +10566,7 @@
       "images": []
     },
     "best-energy-monitoring-smart-plugs-2027": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-08-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
