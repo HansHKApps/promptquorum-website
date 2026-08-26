@@ -862,9 +862,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     toc: [
+      { label: '買うべき場合・避けるべき場合', anchor: 'buy-skip-if' },
+      { label: 'スコアカード', anchor: 'scorecard' },
       { label: 'TL;DR', anchor: 'tldr' },
       { label: '開示事項', anchor: 'disclosure' },
       { label: 'クイックピック', anchor: 'quick-picks' },
+      { label: 'ヘッドツーヘッド比較', anchor: 'comparison' },
       { label: 'ローカルのオン/オフ制御とローカルのエネルギー報告の違い', anchor: 'onoff-vs-energy-reporting' },
       { label: '数値が意味すること', anchor: 'what-the-numbers-mean' },
       { label: '何をモニタリングすべきか（すべきでないか）', anchor: 'what-to-monitor' },
@@ -872,6 +875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'ローカルAIとエネルギーデータ', anchor: 'local-ai' },
       { label: '購入前に確認すべきこと', anchor: 'what-to-check' },
       { label: 'どのプラグを選ぶべきか', anchor: 'which-one' },
+      { label: '評価方法', anchor: 'methodology' },
       { label: 'よくある質問', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -879,6 +883,43 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { type: 'plain-terms', content: '一部のスマートプラグは、Home Assistantを通じて機器のオン/オフをローカルで切り替えられるが、詳細な使用電力量の数値は依然としてメーカー自身のアプリにのみ送られる。本ガイドは、オン/オフだけでなく実際のワット数データもローカルにとどまるプラグを、現行の米ドル/ユーロ価格とともに紹介する。' },
     ],
     sections: {
+      buyIfSkipIf: {
+        id: 'buy-skip-if',
+        title: '買うべき場合・避けるべき場合',
+        sponsoredSlot: true,
+        content: '簡単な判断ガイド — 電力量モニタリング対応スマートプラグは本当に自分に必要か？PromptQuorumの評価は、実機テストではなく公開されている仕様とドキュメントに基づく。',
+        items: [
+          '**次の場合は電力量モニタリング対応スマートプラグを買うべき：**',
+          '機器ごとのワット数/kWhデータをHome Assistantのエネルギーダッシュボードにローカルで反映させたい',
+          '追跡する価値のある特定の高価値機器がある（洗濯機、乾燥機、サーバー、冷蔵庫など）',
+          'すでにZigbeeまたはZ-Waveを運用しており、既存のコーディネーターに合うプラグが欲しい',
+          'ローカルLLMのオートメーションで「昨日一番電気を使ったのは何か」を要約させたい',
+          '異常（例：冷蔵庫の消費電力上昇）を早期に検知したい',
+          '**次の場合はスマートプラグを避けるべき：**',
+          '住宅全体・回路全体の可視化が欲しい — 分電盤のCTクランプ方式を使うこと',
+          '太陽光発電量のモニタリングが欲しい — 同様にCTクランプ方式であり、プラグではない',
+          'エネルギーデータは不要でオン/オフ制御だけで十分 — もっと安価な一般的なスマートプラグで足りる',
+          'プラグの定格最大負荷を超える機器をモニタリングしたい — まず定格を確認すること',
+        ],
+        affiliateLinks: [
+          { label: 'Aqaraスマートプラグの価格を確認 →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug', priceRange: '$20-35' },
+          { label: '4製品をすべて比較 →', url: '#comparison', productName: 'Smart plug comparison', productCategory: 'Energy-monitoring smart plug' },
+        ],
+      },
+      scorecard: {
+        id: 'scorecard',
+        title: '電力量モニタリング対応スマートプラグ スコアカード',
+        content:
+          '**PromptQuorumの評価は、メーカー仕様とHome Assistant自身の連携ドキュメントに基づくものであり、実機による研究室テストではない。** スコアはローカル優先のエネルギーモニタリングへの適合度を反映している。',
+        columns: ['プラグ', 'ローカルエネルギーデータ', 'コスパ', '最適な用途'],
+        rows: [
+          { プラグ: 'Aqaraスマートプラグ', 'ローカルエネルギーデータ': '9.5/10', コスパ: '9/10', '最適な用途': 'Zigbee環境、複数台まとめ買い' },
+          { プラグ: 'Zooz ZEN15 800LR', 'ローカルエネルギーデータ': '9/10', コスパ: '7.5/10', '最適な用途': 'Z-Wave環境、広範囲カバー' },
+          { プラグ: 'Shelly Plug US Gen4', 'ローカルエネルギーデータ': '9/10', コスパ: '8.5/10', '最適な用途': '既存コーディネーターなし、最も柔軟な対応' },
+          { プラグ: 'Sonoff S31（Wi-Fi）', 'ローカルエネルギーデータ': '7.5/10', コスパ: '9/10', '最適な用途': '確認済みで最安、予算重視の複数台構成' },
+        ],
+        note: 'これらのスコアはPromptQuorumの編集上の評価であり、検証済みの仕様とHome Assistant自身の連携ドキュメント（下記の「評価方法」を参照）から導かれたもので、PromptQuorumが実機をテストした結果ではありません。',
+      },
       tldr: {
         id: 'tldr',
         title: 'TL;DR',
@@ -913,6 +954,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Aqara Smart Plug', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Zooz ZEN15 Power Switch', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'ヘッドツーヘッド比較',
+        content: '**確認済みの4製品を並べて比較（2026年8月25日確認、価格は米ドル）。**',
+        columns: ['プラグ', 'プロトコル', '最大負荷', 'ローカルエネルギーデータ', '価格'],
+        rows: [
+          { プラグ: 'Aqaraスマートプラグ', プロトコル: 'Zigbee 3.0', '最大負荷': '1875W', 'ローカルエネルギーデータ': '対応（ZHA/Zigbee2MQTT）', 価格: '20～35ドル' },
+          { プラグ: 'Zooz ZEN15 800LR', プロトコル: 'Z-Wave Long Range（800シリーズ）', '最大負荷': '要確認', 'ローカルエネルギーデータ': '対応（W/A/V/kWh）', 価格: '37.95～48.95ドル' },
+          { プラグ: 'Shelly Plug US Gen4', プロトコル: 'Wi-Fi / Matter / Zigbee', '最大負荷': '要確認', 'ローカルエネルギーデータ': '対応（ローカルapiが文書化済み）', 価格: '19.99～24.99ドル' },
+          { プラグ: 'Sonoff S31', プロトコル: 'Wi-Fi', '最大負荷': '要確認', 'ローカルエネルギーデータ': '対応 — ただしS31 Lite ZBは非対応', 価格: '9.90～23.90ドル' },
+        ],
+        items: [
+          '**既存のコーディネーターがない場合のおすすめ：** Shelly Plug US Gen4 — 3つのプロトコル（Wi-Fi、Matter、Zigbee）すべてでローカルapiが文書化されている唯一の製品で、ほぼどんな構成にも合う。',
+          '**複数台まとめ買いで1台あたりのコストを抑えたい場合のおすすめ：** Aqaraスマートプラグ — 「何をモニタリングすべきか」で挙げた機器向けに3～4台買っても大きな出費にならない安さ。',
+          'この4製品は、ローカルエネルギー報告が実際に機能するかどうかでは大差がない — いずれも確認済みだ。本当の判断基準はプロトコルの適合性と価格であり、機能の有無ではない。',
+        ],
+        affiliateLinks: [
+          { label: 'Aqaraの価格を確認 →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug', priceRange: '$20-35' },
+          { label: 'Zoozの価格を確認 →', url: 'https://www.getzooz.com/zooz-zen15-power-switch/', productName: 'Zooz ZEN15', productCategory: 'Energy-monitoring smart plug', priceRange: '$37.95-48.95' },
+          { label: 'Shellyの価格を確認 →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug', priceRange: '$19.99-24.99' },
         ],
       },
       onoffVsEnergyReporting: {
@@ -1003,7 +1066,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'すでにZ-Waveを使っている：Zooz ZEN15 800LR（37.95～48.95ドル）— Z-Waveでの実績あるローカル報告。',
           '新たなコーディネーターを増やしたくない、あるいは最も柔軟なプロトコル対応が欲しい：Shelly Plug US Gen4（19.99～24.99ドル）— Wi-Fi・Matter・Zigbeeにまたがるローカルapiが文書化されている。',
           '確認済みで最も安価な選択肢が欲しく、Wi-Fi専用でも構わない：Sonoff S31（9.90～23.90ドル）— エネルギーモニタリングが目的なら、Zigbee版のS31 Lite ZBではなくS31を購入すること。',
+          '予算内で4台以上をモニタリングしたい：Aqaraスマートプラグを複数台 — 確認済みの選択肢の中で最も低い1台あたりのコスト。',
           '住宅全体・回路全体の可視化が欲しい：スマートプラグは使わず、分電盤に取り付けるCTクランプ方式を利用すること — ローカルエネルギー管理の概要を参照。',
+        ],
+        affiliateLinks: [
+          { label: 'Aqaraスマートプラグの価格を確認 →', url: 'https://www.aqara.com/en/product/smart-plug/', productName: 'Aqara Smart Plug', productCategory: 'Energy-monitoring smart plug', priceRange: '$20-35' },
+        ],
+      },
+      methodology: {
+        id: 'methodology',
+        title: '電力量モニタリング対応スマートプラグの評価方法',
+        content:
+          '**本レビューはPromptQuorumによる実機テストを実施していません。** メーカー公開の仕様、小売サイトの掲載情報、Home Assistant自身の連携ドキュメントに基づいて構成されており、確認済みの情報と評価内容を明確に分けて示しています。',
+        items: [
+          '**メーカー確認済み：** プロトコル、最大負荷定格、公式価格 — Aqara、Zooz、Shelly、Sonoff/ITEAD自身の製品ページおよび販売サイトから直接取得（2026年8月25日確認）。',
+          '**Home Assistantドキュメント確認済み：** エネルギーセンサーエンティティ（ワット数、kWh、電圧、電流）が該当の連携（ZHA、Zigbee2MQTT、Z-Wave JS、またはローカルなWi-Fi/Matter API）を通じてローカルに公開されているか、クラウド接続が必要かどうか — メーカーのマーケティング表示ではなく、Home Assistant自身の連携ドキュメントから取得。',
+          '**PromptQuorumの評価：** スコアカード、買う/避けるの推奨、「どのプラグを選ぶべきか」のフィルター — 上記の確認済み仕様とドキュメントに対するPromptQuorumの編集上の判断であり、新たな実機テストではない。',
+          '電力量モニタリング対応スマートプラグの評価基準：確認済みのローカルエネルギーデータ報告（オン/オフだけでなく）、既存構成へのプロトコル適合性、最大負荷定格、価格、特定モデルに対する文書化されたHome Assistant連携サポート。',
         ],
       },
       faqSection: {
@@ -1012,6 +1091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'ローカルのオン/オフ制御があれば、エネルギーデータもローカルということか？', a: '必ずしもそうではない — 一部のプラグはこれらを分離しており、オン/オフはローカルで制御しつつ、詳細なワット数データは依然としてメーカーのクラウド経由で送っている。ローカルのエネルギー報告に対応しているか具体的に確認すること。' },
           { q: 'エネルギーモニタリングにはZigbeeプラグの方がWi-Fiプラグより優れているか？', a: '確認済みのローカル報告という点では、一般的にそうだ — ZigbeeとZ-Waveのプラグは、Wi-Fiプラグよりもこの点で一貫した実績がある。ただしShellyのようにローカルapiが確認済みの例外もあり、プロトコルだけで判断せず特定モデルを確認すること。' },
+          { q: '総合的に最良の電力量モニタリング対応スマートプラグは？', a: 'すでにZigbeeを使っている大半のユーザーには、Aqaraスマートプラグ（20～35ドル）が、確認済みのローカル報告と低い1台あたりのコストを兼ね備えた最良の組み合わせだ。既存のコーディネーターがない場合は、Shelly Plug US Gen4（19.99～24.99ドル）が、Wi-Fi・Matter・Zigbeeにまたがって動作する、確認済みで最もプロトコルに柔軟な選択肢となる。' },
           { q: 'これらのプラグはどのようにエネルギーダッシュボードに接続されるか？', a: 'ローカル報告が確認できたら、エネルギーダッシュボードの設定画面の「個別機器」の下にそのプラグのエネルギーセンサーエンティティを追加する — 詳細な手順は該当ガイドを参照。' },
           { q: 'プロトコルを混在させられるか（一部Zigbee、一部Wi-Fiプラグ）？', a: 'できる — Home Assistantは、それぞれが個別にローカルで報告している限り、異なるプロトコルのセンサーエンティティを同じエネルギーダッシュボードのビューに問題なく統合できる。' },
           { q: '機器ごとに1つプラグが必要か、それとも回路全体をモニタリングできるか？', a: 'スマートプラグは接続された個々の機器をモニタリングする。回路全体または住宅全体のモニタリングには、分電盤に取り付けるCTクランプ（ローカルエネルギー管理の概要を参照）の方が適したツールとなる。' },
@@ -1019,6 +1099,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'これらのプラグは日本で購入でき、日本のコンセントで使えるか？', a: 'この確認時点（2026年8月25日）では、いずれの製品も日本国内での正規販売価格は確認できていない。多くは米国の120Vまたは欧州の230Vを前提に設計されており、日本の100V電源環境での使用可否や技術基準適合（PSEマーク等）も個別に確認が必要。' },
           { q: '機器をモニタリングするだけで自動的に節約になるか？', a: 'ならない — プラグが測定するのは消費量であり、節約はその情報をもとに何をするか（無駄の発見、負荷の自動化、より安価な時間帯や太陽光でまかなえる時間帯への使用シフトなど）から生まれる。プラグはデータ源であり、それ自体が節約装置ではないと捉えること。' },
           { q: 'ローカルAIはこのエネルギーデータを利用できるか？', a: '利用できる — エネルギーセンサーエンティティはHome Assistant内ですでにローカルにあるため、ローカルLLMオートメーションはクラウドAIサービスに何も送信することなく、そのデータを要約したり質問に答えたりできる（例：「昨日一番電気を使ったのは何？」）。' },
+          { q: '最初は電力量モニタリング対応プラグを何台買えばよいか？', a: '2～3台、最も価値の高い機器（洗濯機・乾燥機、サーバーや常時稼働のPC、冷蔵庫・冷凍庫）から始めること。データが実際に行動を変える場合にのみ拡大すること — すべての小さな機器をモニタリングすると、大した価値も生まないままコストが増える。' },
+          { q: 'EV（電気自動車）充電のモニタリングにスマートプラグは適しているか？', a: '通常は最良の選択ではない — 専用のEVエネルギーソリューションや充電器自体の報告機能の方が、一般的なスマートプラグより適している。EV充電の負荷パターンや稼働時間は、一般的な家電のモニタリングとは異なるためだ。' },
+          { q: '電力量モニタリング対応プラグを買う前に何を確認すべきか？', a: '（オン/オフだけでなく）ローカルのエネルギー報告を、特定モデルのHome Assistant連携ドキュメントで具体的に確認し、プラグの定格最大負荷を自分の機器と照らし合わせ、自分の地域のコンセント・プラグ規格（米国NEMA、欧州Schuko/CEE 7、日本のAタイプ100Vなど）に対応しているか確認すること。' },
         ],
       },
       relatedReading: {
@@ -1028,6 +1111,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Home Assistantエネルギーダッシュボード：完全設定ガイド](/ja/smart-home/home-assistant-energy-dashboard-guide) — これらのプラグが反映される先',
           '[ローカルなスマートホームエネルギー管理](/ja/smart-home/local-smart-home-energy-management-2027) — CTクランプによる住宅全体モニタリングを含む、より広範なモニタリング戦略',
           '[おすすめのZigbee・Thread対応USBドングル](/ja/smart-home/best-zigbee-thread-dongles-2027) — Zigbeeプラグと組み合わせる無線ハードウェア',
+          '[おすすめのスマートホームデバイス2026](/ja/smart-home/best-smart-home-devices-2026) — このプラグが位置づけられる、カテゴリ別の総合購入ガイド',
+          '[ローカルLLMによるAIオートメーション](/ja/smart-home/ai-automations-local-llm) — 「昨日一番電気を使ったのは何か」というオートメーションを構築する',
         ],
       },
     },
