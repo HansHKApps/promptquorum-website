@@ -1,0 +1,37 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">本地支持设备 vs 仅云端设备</text>
+
+  <!-- Left Panel: Cloud-Only (Problem) -->
+  <rect x="28" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#EA4335"/>
+  <text x="198" y="82" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">仅云端（应避免）</text>
+
+  <text x="48" y="118" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✗ 需要厂商云账户</text>
+  <text x="48" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✗ 云端故障时停止工作</text>
+  <text x="48" y="182" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✗ 通常需要付费订阅</text>
+  <text x="48" y="214" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✗ 影像或数据离开你的家庭网络</text>
+  <text x="48" y="246" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✗ 没有文档化的本地 API</text>
+
+  <line x1="48" y1="270" x2="348" y2="270" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="48" y="300" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#79747E">典型风险：</text>
+  <text x="48" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#EA4335">仅限 App 控制的灯泡、云端 DVR 摄像头</text>
+
+  <!-- Right Panel: Local-Capable (Goal) -->
+  <rect x="432" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="602" y="82" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">本地支持（推荐购买）</text>
+
+  <text x="452" y="118" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✓ 支持 Zigbee、Z-Wave、Matter 或本地 API</text>
+  <text x="452" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✓ 通过本地中枢离线运行</text>
+  <text x="452" y="182" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✓ 核心功能无需订阅</text>
+  <text x="452" y="214" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✓ 数据和影像保留在你的网络内</text>
+  <text x="452" y="246" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✓ 通过中枢兼容任意品牌</text>
+
+  <line x1="452" y1="270" x2="752" y2="270" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="452" y="300" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#79747E">典型选择：</text>
+  <text x="452" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#34A853">Zigbee 灯泡、本地 RTSP + Frigate</text>
+
+  <text x="400" y="360" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">选择原则：设备必须通过本地中枢运行，而不依赖厂商云端。</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

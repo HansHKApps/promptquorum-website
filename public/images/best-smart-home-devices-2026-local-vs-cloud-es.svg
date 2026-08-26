@@ -1,0 +1,37 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Dispositivos locales vs solo en la nube</text>
+
+  <!-- Left Panel: Cloud-Only (Problem) -->
+  <rect x="28" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#EA4335"/>
+  <text x="198" y="82" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">Solo nube (evitar)</text>
+
+  <text x="48" y="118" font-family="system-ui, sans-serif" font-size="12.5" font-weight="500" fill="#49454F">✗ Requiere una cuenta en la nube del fabricante</text>
+  <text x="48" y="150" font-family="system-ui, sans-serif" font-size="12.5" font-weight="500" fill="#49454F">✗ Deja de funcionar si la nube falla</text>
+  <text x="48" y="182" font-family="system-ui, sans-serif" font-size="12.5" font-weight="500" fill="#49454F">✗ A menudo requiere suscripción de pago</text>
+  <text x="48" y="214" font-family="system-ui, sans-serif" font-size="12.5" font-weight="500" fill="#49454F">✗ Las imágenes o datos salen de tu hogar</text>
+  <text x="48" y="246" font-family="system-ui, sans-serif" font-size="12.5" font-weight="500" fill="#49454F">✗ Sin API local documentada</text>
+
+  <line x1="48" y1="270" x2="348" y2="270" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="48" y="300" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#79747E">Riesgo de ejemplo:</text>
+  <text x="48" y="320" font-family="system-ui, sans-serif" font-size="11.5" fill="#EA4335">Bombillas solo-app, cámaras con DVR en la nube</text>
+
+  <!-- Right Panel: Local-Capable (Goal) -->
+  <rect x="432" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="602" y="82" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Compatible local (comprar)</text>
+
+  <text x="452" y="118" font-family="system-ui, sans-serif" font-size="12.5" font-weight="500" fill="#49454F">✓ Zigbee, Z-Wave, Matter o API local</text>
+  <text x="452" y="150" font-family="system-ui, sans-serif" font-size="12.5" font-weight="500" fill="#49454F">✓ Funciona sin conexión vía un hub local</text>
+  <text x="452" y="182" font-family="system-ui, sans-serif" font-size="12.5" font-weight="500" fill="#49454F">✓ Sin suscripción para funciones básicas</text>
+  <text x="452" y="214" font-family="system-ui, sans-serif" font-size="12.5" font-weight="500" fill="#49454F">✓ Datos e imágenes permanecen en tu red</text>
+  <text x="452" y="246" font-family="system-ui, sans-serif" font-size="12.5" font-weight="500" fill="#49454F">✓ Compatible con cualquier marca vía el hub</text>
+
+  <line x1="452" y1="270" x2="752" y2="270" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="452" y="300" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#79747E">Elección de ejemplo:</text>
+  <text x="452" y="320" font-family="system-ui, sans-serif" font-size="11.5" fill="#34A853">Bombillas Zigbee, RTSP local + Frigate</text>
+
+  <text x="400" y="360" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">La regla de selección: un dispositivo debe funcionar a través de un hub local sin depender de una nube del fabricante.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

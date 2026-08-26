@@ -96,7 +96,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Category: '🔐 Lock', 'Our pick': 'Yale Assure Lock 2 (Z-Wave)', 'Best for': 'Local, reliable, safety-critical' },
         ],
         affiliateLinks: [
-          { label: "See today's Home Assistant Green price →", url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199/€179' },
+          { label: "Check Home Assistant Green price →", url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199/€179' },
+          { label: "Check today's EQ14 price →", url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: '~$189–199' },
+          { label: 'Check ZBDongle-E price →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~$20–27' },
+          { label: 'Check Connect ZBT-2 price →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '$49/€45' },
+          { label: 'Check Philips Hue prices →', url: 'https://www.amazon.com/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb', priceRange: '~$54+/bulb' },
+          { label: 'Check Aqara P1 price →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~$25–30' },
+          { label: 'Check SONOFF Zigbee plug price →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: '~$15–20' },
+          { label: 'Check current Reolink prices →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~$80–130' },
+          { label: 'See recommended local smart locks →', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock 2', productCategory: 'Smart lock', priceRange: '~$190–210' },
         ],
       },
       tldr: {
@@ -286,6 +294,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Build this starter kit → check Home Assistant Green price', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199/€179' },
+          { label: 'Check ZBDongle-E price →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~$20–27' },
+          { label: 'Check IKEA smart lighting →', url: 'https://www.ikea.com/us/en/cat/tradfri-series-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+          { label: 'Check Aqara P1 price →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~$25–30' },
+          { label: 'Check SONOFF SNZB-04P price →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor', priceRange: '~$15–25' },
+          { label: 'Check SONOFF Zigbee plug price →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: '~$15–20' },
         ],
       },
       seriousKit: {
@@ -303,6 +316,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Role: 'Storage', Device: '1 TB+ NVMe for Frigate recordings' },
           { Role: 'Optional: local AI', Device: 'A small local LLM via Ollama' },
           { Role: 'Optional: camera AI', Device: 'Frigate object detection' },
+        ],
+        affiliateLinks: [
+          { label: "Check today's EQ14 price →", url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: '~$189–199' },
+          { label: "Check today's UM890 Pro price →", url: '/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'Check ZBDongle-E price →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~$20–27' },
+          { label: 'Check Connect ZBT-2 price →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '$49/€45' },
+          { label: 'Check current Reolink prices →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~$80–130' },
+          { label: 'Check Aqara P1 price →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~$25–30' },
+          { label: 'Check Aqara FP2 price →', url: 'https://www.aqara.com/us/product/presence-sensor-fp2/', productName: 'Aqara FP2', productCategory: 'Presence sensor', priceRange: '~$85' },
         ],
       },
       whatNotToBuy: {
@@ -519,6 +541,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'تحقق من سعر Home Assistant Green اليوم ←', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199' },
+          { label: 'تحقق من سعر EQ14 اليوم ←', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: '~$189–199' },
+          { label: 'تحقق من سعر ZBDongle-E ←', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~$20–27' },
+          { label: 'تحقق من سعر Connect ZBT-2 ←', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '$49' },
+          { label: 'تحقق من أسعار Philips Hue ←', url: 'https://www.amazon.com/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb', priceRange: '~$54+/bulb' },
+          { label: 'تحقق من سعر Aqara P1 ←', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~$25–30' },
+          { label: 'تحقق من سعر مقبس SONOFF Zigbee ←', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: '~$15–20' },
+          { label: 'تحقق من أسعار Reolink الحالية ←', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~$80–130' },
+          { label: 'راجع الأقفال الذكية المحلية الموصى بها ←', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock 2', productCategory: 'Smart lock', priceRange: '~$190–210' },
         ],
       },
       tldr: {
@@ -556,7 +586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**لا اشتراك للميزات الأساسية:** يجب ألا يتطلب التسجيل أو الأتمتة رسومًا.',
           '**أسعار حالية:** تم التحقق من كل سعر أدناه مقابل قوائم الشركة المصنّعة أو كبار التجار في 25 أغسطس 2026 — تحقق دائمًا من السعر الحي قبل الشراء.',
         ],
-        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-ar.svg',
         imageCaption: 'مقارنة الأجهزة القادرة على العمل محليًا — Zigbee أو Z-Wave أو Matter أو واجهة برمجية محلية — بالأجهزة التي تعمل بالسحابة فقط عبر 5 عوامل، منها الاشتراكات والموثوقية دون إنترنت.',
       },
       hub: {
@@ -708,6 +738,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'ابنِ مجموعة البداية هذه ← تحقق من سعر Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199' },
+          { label: 'تحقق من سعر ZBDongle-E ←', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~$20–27' },
+          { label: 'تحقق من إضاءة IKEA الذكية ←', url: 'https://www.ikea.com/us/en/cat/tradfri-series-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+          { label: 'تحقق من سعر Aqara P1 ←', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~$25–30' },
+          { label: 'تحقق من سعر SONOFF SNZB-04P ←', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor', priceRange: '~$15–25' },
+          { label: 'تحقق من سعر مقبس SONOFF Zigbee ←', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: '~$15–20' },
         ],
       },
       seriousKit: {
@@ -725,6 +760,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الدور': 'التخزين', 'الجهاز': 'قرص NVMe بسعة 1 تيرابايت فأكثر لتسجيلات Frigate' },
           { 'الدور': 'اختياري: ذكاء اصطناعي محلي', 'الجهاز': 'نموذج LLM محلي صغير عبر Ollama' },
           { 'الدور': 'اختياري: ذكاء اصطناعي للكاميرا', 'الجهاز': 'كشف الأجسام بواسطة Frigate' },
+        ],
+        affiliateLinks: [
+          { label: 'تحقق من سعر EQ14 اليوم ←', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: '~$189–199' },
+          { label: 'تحقق من سعر UM890 Pro اليوم ←', url: '/ar/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'تحقق من سعر ZBDongle-E ←', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~$20–27' },
+          { label: 'تحقق من سعر Connect ZBT-2 ←', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '$49' },
+          { label: 'تحقق من أسعار Reolink الحالية ←', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~$80–130' },
+          { label: 'تحقق من سعر Aqara P1 ←', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~$25–30' },
+          { label: 'تحقق من سعر Aqara FP2 ←', url: 'https://www.aqara.com/us/product/presence-sensor-fp2/', productName: 'Aqara FP2', productCategory: 'Presence sensor', priceRange: '~$85' },
         ],
       },
       whatNotToBuy: {
@@ -936,6 +980,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Aktuellen Home-Assistant-Green-Preis prüfen →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '179 €' },
+          { label: 'Aktuellen EQ14-Preis prüfen →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: 'ca. 199–219 €' },
+          { label: 'ZBDongle-E-Preis prüfen →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: 'ca. 20–25 €' },
+          { label: 'Connect-ZBT-2-Preis prüfen →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '45 €' },
+          { label: 'Philips-Hue-Preise prüfen →', url: 'https://www.amazon.de/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb', priceRange: 'ab ca. 65 €/Leuchtmittel' },
+          { label: 'Aqara-P1-Preis prüfen →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: 'ca. 22–26 €' },
+          { label: 'SONOFF-Zigbee-Steckdosen-Preis prüfen →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: 'ca. 15–20 €' },
+          { label: 'Aktuelle Reolink-Preise prüfen →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: 'ca. 70–90 €' },
+          { label: 'Empfohlene lokale Smart-Schlösser ansehen →', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock 2', productCategory: 'Smart lock', priceRange: 'ca. 210 €' },
         ],
       },
       tldr: {
@@ -973,7 +1025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Kein Abonnement für Kernfunktionen:** Aufzeichnung oder Automatisierung sollten keine Gebühr erfordern.',
           '**Aktuelle Preise:** Jeder Preis unten wurde am 25. August 2026 gegen Hersteller- oder große Händlerlisten geprüft — verifizieren Sie vor dem Kauf stets den aktuellen Preis.',
         ],
-        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-de.svg',
         imageCaption: 'Lokal-fähige Geräte — Zigbee, Z-Wave, Matter oder eine lokale API — im Vergleich zu Cloud-only-Geräten anhand von 5 Kriterien, darunter Abonnements und Offline-Zuverlässigkeit.',
       },
       hub: {
@@ -1125,6 +1177,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Dieses Starter-Set bauen → Home-Assistant-Green-Preis prüfen', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '179 €' },
+          { label: 'ZBDongle-E-Preis prüfen →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: 'ca. 20–25 €' },
+          { label: 'IKEA-Smart-Beleuchtung prüfen →', url: 'https://www.ikea.com/de/de/cat/tradfri-serie-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb', priceRange: 'ca. 8–13 €' },
+          { label: 'Aqara-P1-Preis prüfen →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: 'ca. 22–26 €' },
+          { label: 'SONOFF-SNZB-04P-Preis prüfen →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor', priceRange: 'ca. 15–20 €' },
+          { label: 'SONOFF-Zigbee-Steckdosen-Preis prüfen →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: 'ca. 15–20 €' },
         ],
       },
       seriousKit: {
@@ -1142,6 +1199,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Rolle: 'Speicher', Gerät: '1 TB+ NVMe für Frigate-Aufnahmen' },
           { Rolle: 'Optional: lokale KI', Gerät: 'Ein kleines lokales LLM über Ollama' },
           { Rolle: 'Optional: Kamera-KI', Gerät: 'Frigate-Objekterkennung' },
+        ],
+        affiliateLinks: [
+          { label: 'Aktuellen EQ14-Preis prüfen →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: 'ca. 199–219 €' },
+          { label: 'Aktuellen UM890-Pro-Preis prüfen →', url: '/de/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'ZBDongle-E-Preis prüfen →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: 'ca. 20–25 €' },
+          { label: 'Connect-ZBT-2-Preis prüfen →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '45 €' },
+          { label: 'Aktuelle Reolink-Preise prüfen →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: 'ca. 70–90 €' },
+          { label: 'Aqara-P1-Preis prüfen →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: 'ca. 22–26 €' },
+          { label: 'Aqara-FP2-Preis prüfen →', url: 'https://www.aqara.com/us/product/presence-sensor-fp2/', productName: 'Aqara FP2', productCategory: 'Presence sensor', priceRange: 'ca. 90–99 €' },
         ],
       },
       whatNotToBuy: {
@@ -1362,6 +1428,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Consulta el precio actual de Home Assistant Green →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '€179' },
+          { label: "Consulta el precio actual del EQ14 →", url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: '~$189–199' },
+          { label: 'Consulta el precio del ZBDongle-E →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~$20–27' },
+          { label: 'Consulta el precio del Connect ZBT-2 →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '$49/€45' },
+          { label: 'Consulta precios de Philips Hue →', url: 'https://www.amazon.es/s?k=Philips+Hue+bombilla', productName: 'Philips Hue', productCategory: 'Smart bulb', priceRange: '~55 €+/bombilla' },
+          { label: 'Consulta el precio del Aqara P1 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~28–30 €' },
+          { label: 'Consulta el precio del enchufe Zigbee de SONOFF →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: '~15–20 €' },
+          { label: 'Consulta precios actuales de Reolink →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~90–140 €' },
+          { label: 'Ve las cerraduras inteligentes locales recomendadas →', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock 2', productCategory: 'Smart lock', priceRange: '~$190–210' },
         ],
       },
       tldr: {
@@ -1399,7 +1473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sin suscripción para funciones básicas:** la grabación o la automatización no deberían requerir una cuota.',
           '**Precios actuales:** cada precio de abajo se comprobó frente a anuncios del fabricante o de grandes minoristas el 25 de agosto de 2026 — verifica siempre el precio en vivo antes de comprar.',
         ],
-        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-es.svg',
         imageCaption: 'Dispositivos con capacidad local — Zigbee, Z-Wave, Matter o una API local — comparados con dispositivos solo-nube en 5 factores, incluidas las suscripciones y la fiabilidad sin conexión.',
       },
       hub: {
@@ -1551,6 +1625,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Monta este kit inicial → consulta el precio de Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '€179' },
+          { label: 'Consulta el precio del ZBDongle-E →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~$20–27' },
+          { label: 'Consulta la iluminación IKEA →', url: 'https://www.ikea.com/es/es/cat/serie-tradfri-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+          { label: 'Consulta el precio del Aqara P1 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~28–30 €' },
+          { label: 'Consulta el precio del SONOFF SNZB-04P →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor', priceRange: '~9–15 €' },
+          { label: 'Consulta el precio del enchufe Zigbee de SONOFF →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: '~15–20 €' },
         ],
       },
       seriousKit: {
@@ -1568,6 +1647,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Función: 'Almacenamiento', Dispositivo: 'NVMe de 1 TB+ para grabaciones de Frigate' },
           { Función: 'Opcional: IA local', Dispositivo: 'Un LLM local pequeño vía Ollama' },
           { Función: 'Opcional: IA de cámara', Dispositivo: 'Detección de objetos con Frigate' },
+        ],
+        affiliateLinks: [
+          { label: "Consulta el precio actual del EQ14 →", url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: '~$189–199' },
+          { label: "Consulta el precio actual del UM890 Pro →", url: '/es/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'Consulta el precio del ZBDongle-E →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~$20–27' },
+          { label: 'Consulta el precio del Connect ZBT-2 →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '$49/€45' },
+          { label: 'Consulta precios actuales de Reolink →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~90–140 €' },
+          { label: 'Consulta el precio del Aqara P1 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~28–30 €' },
+          { label: 'Consulta el precio del Aqara FP2 →', url: 'https://www.aqara.com/us/product/presence-sensor-fp2/', productName: 'Aqara FP2', productCategory: 'Presence sensor', priceRange: '~75–85 €' },
         ],
       },
       whatNotToBuy: {
@@ -1784,6 +1872,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: "Home Assistant Green의 현재 가격 확인 →", url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199' },
+          { label: "EQ14의 현재 가격 확인 →", url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: '~$189–199' },
+          { label: 'ZBDongle-E 가격 확인 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~$20–27' },
+          { label: 'Connect ZBT-2 가격 확인 →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '$49' },
+          { label: 'Philips Hue 가격 확인 →', url: 'https://www.amazon.com/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb', priceRange: '~$54+/개' },
+          { label: 'Aqara P1 가격 확인 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~$25–30' },
+          { label: 'SONOFF Zigbee 플러그 가격 확인 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: '~$15–20' },
+          { label: 'Reolink 현재 가격 확인 →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~$80–130' },
+          { label: '추천 로컬 스마트 잠금장치 보기 →', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock 2', productCategory: 'Smart lock', priceRange: '~$190–210' },
         ],
       },
       tldr: {
@@ -1821,7 +1917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**핵심 기능에 구독 불필요:** 녹화나 자동화에 요금이 필요하지 않아야 합니다.',
           '**현재 가격:** 아래 모든 가격은 2026년 8월 25일에 제조사 또는 주요 소매업체 목록을 기준으로 확인했습니다 — 구매 전에 항상 실시간 가격을 확인하십시오.',
         ],
-        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-ko.svg',
         imageCaption: '로컬 제어 가능 기기(Zigbee, Z-Wave, Matter 또는 로컬 API)와 클라우드 전용 기기를 구독료와 오프라인 신뢰성을 포함한 5가지 요소로 비교합니다.',
       },
       hub: {
@@ -1973,6 +2069,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: '이 스타터 세트 구성하기 → Home Assistant Green 가격 확인', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199' },
+          { label: 'ZBDongle-E 가격 확인 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~$20–27' },
+          { label: 'IKEA 스마트 조명 확인 →', url: 'https://www.ikea.com/us/en/cat/tradfri-series-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+          { label: 'Aqara P1 가격 확인 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~$25–30' },
+          { label: 'SONOFF SNZB-04P 가격 확인 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor', priceRange: '~$15–25' },
+          { label: 'SONOFF Zigbee 플러그 가격 확인 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: '~$15–20' },
         ],
       },
       seriousKit: {
@@ -1990,6 +2091,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '역할': '저장 공간', '기기': 'Frigate 녹화용 1TB 이상 NVMe' },
           { '역할': '선택: 로컬 AI', '기기': 'Ollama를 통한 소형 로컬 LLM' },
           { '역할': '선택: 카메라 AI', '기기': 'Frigate 객체 감지' },
+        ],
+        affiliateLinks: [
+          { label: "EQ14의 현재 가격 확인 →", url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: '~$189–199' },
+          { label: "UM890 Pro의 현재 가격 확인 →", url: '/ko/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'ZBDongle-E 가격 확인 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~$20–27' },
+          { label: 'Connect ZBT-2 가격 확인 →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '$49' },
+          { label: 'Reolink 현재 가격 확인 →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~$80–130' },
+          { label: 'Aqara P1 가격 확인 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~$25–30' },
+          { label: 'Aqara FP2 가격 확인 →', url: 'https://www.aqara.com/us/product/presence-sensor-fp2/', productName: 'Aqara FP2', productCategory: 'Presence sensor', priceRange: '~$85' },
         ],
       },
       whatNotToBuy: {
@@ -2205,6 +2315,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Voir le prix actuel du Home Assistant Green →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '€179' },
+          { label: "Vérifier le prix actuel de l'EQ14 →", url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: '~199–219 €' },
+          { label: 'Vérifier le prix du ZBDongle-E →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~21–25 €' },
+          { label: 'Vérifier le prix du Connect ZBT-2 →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '$49/€45' },
+          { label: 'Vérifier les prix Philips Hue →', url: 'https://www.amazon.fr/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb', priceRange: '~40–60 €/ampoule' },
+          { label: "Vérifier le prix de l'Aqara P1 →", url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~25–30 €' },
+          { label: 'Vérifier le prix de la prise Zigbee SONOFF →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: '~15–20 €' },
+          { label: 'Vérifier les prix Reolink actuels →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~70–100 €' },
+          { label: 'Voir les serrures connectées locales recommandées →', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock 2', productCategory: 'Smart lock', priceRange: '~$190–210' },
         ],
       },
       tldr: {
@@ -2242,7 +2360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Aucun abonnement pour les fonctions clés :** l\'enregistrement ou l\'automatisation ne devraient pas exiger de frais.',
           '**Prix actuels :** chaque prix ci-dessous a été vérifié auprès du fabricant ou de grands revendeurs le 25 août 2026 — vérifiez toujours le prix en direct avant d\'acheter.',
         ],
-        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-fr.svg',
         imageCaption: 'Appareils à capacité locale — Zigbee, Z-Wave, Matter ou une API locale — comparés aux appareils tout-cloud selon 5 critères, dont les abonnements et la fiabilité hors ligne.',
       },
       hub: {
@@ -2394,6 +2512,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Construire ce kit de départ → vérifier le prix du Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '€179' },
+          { label: 'Vérifier le prix du ZBDongle-E →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~21–25 €' },
+          { label: 'Vérifier l\'éclairage connecté IKEA →', url: 'https://www.ikea.com/fr/fr/cat/serie-tradfri-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+          { label: 'Vérifier le prix de l\'Aqara P1 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~25–30 €' },
+          { label: 'Vérifier le prix du SONOFF SNZB-04P →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor', priceRange: '~15–20 €' },
+          { label: 'Vérifier le prix de la prise Zigbee SONOFF →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: '~15–20 €' },
         ],
       },
       seriousKit: {
@@ -2411,6 +2534,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Rôle: 'Stockage', Appareil: '1 To+ NVMe pour les enregistrements Frigate' },
           { Rôle: 'Optionnel : IA locale', Appareil: 'Un petit LLM local via Ollama' },
           { Rôle: 'Optionnel : IA caméra', Appareil: 'Détection d\'objets Frigate' },
+        ],
+        affiliateLinks: [
+          { label: "Vérifier le prix actuel de l'EQ14 →", url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: '~199–219 €' },
+          { label: 'Vérifier le prix actuel de l\'UM890 Pro →', url: '/fr/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'Vérifier le prix du ZBDongle-E →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~21–25 €' },
+          { label: 'Vérifier le prix du Connect ZBT-2 →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '$49/€45' },
+          { label: 'Vérifier les prix Reolink actuels →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~70–100 €' },
+          { label: 'Vérifier le prix de l\'Aqara P1 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~25–30 €' },
+          { label: 'Vérifier le prix de l\'Aqara FP2 →', url: 'https://www.aqara.com/us/product/presence-sensor-fp2/', productName: 'Aqara FP2', productCategory: 'Presence sensor', priceRange: '~70–85 €' },
         ],
       },
       whatNotToBuy: {
@@ -2627,6 +2759,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: '本日の Home Assistant Green 価格を確認 →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '約¥33,000〜38,000相当' },
+          { label: '本日の EQ14 価格を確認 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: '約¥29,000〜33,000相当' },
+          { label: 'ZBDongle-E の価格を確認 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '約¥3,000〜4,500相当' },
+          { label: 'Connect ZBT-2 の価格を確認 →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '約¥7,500〜8,500相当' },
+          { label: 'Philips Hue の価格を確認 →', url: 'https://www.amazon.co.jp/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb', priceRange: '1個あたり約¥7,000〜9,000相当' },
+          { label: 'Aqara P1 の価格を確認 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '¥3,480〜3,920' },
+          { label: 'SONOFF Zigbee プラグの価格を確認 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: '約¥2,000〜3,000相当' },
+          { label: 'Reolink の現在価格を確認 →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '約¥15,000〜20,000相当' },
+          { label: 'おすすめのローカルスマートロックを見る →', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock 2', productCategory: 'Smart lock', priceRange: '$190〜210（日本では正式販売されていません）' },
         ],
       },
       tldr: {
@@ -2664,7 +2804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**コア機能にサブスクなし：** 録画や自動化に料金を要しないこと。',
           '**現在の価格：** 以下の価格はすべて2026年8月25日にメーカーまたは大手小売店のリスティングと照合したものです——購入前には必ず最新価格を確認してください。',
         ],
-        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-ja.svg',
         imageCaption: 'ローカル対応機器（Zigbee、Z-Wave、Matter、ローカル API）とクラウド専用機器を、サブスクやオフライン時の信頼性を含む5つの観点で比較。',
       },
       hub: {
@@ -2816,6 +2956,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'このスターターキットを組む → Home Assistant Green の価格を確認', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '約¥33,000〜38,000相当' },
+          { label: 'ZBDongle-E の価格を確認 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '約¥3,000〜4,500相当' },
+          { label: 'IKEA のスマート照明を確認 →', url: 'https://www.ikea.com/jp/ja/cat/tradfri-series-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+          { label: 'Aqara P1 の価格を確認 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '¥3,480〜3,920' },
+          { label: 'SONOFF SNZB-04P の価格を確認 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor', priceRange: '約¥2,000〜2,800相当' },
+          { label: 'SONOFF Zigbee プラグの価格を確認 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: '約¥2,000〜3,000相当' },
         ],
       },
       seriousKit: {
@@ -2833,6 +2978,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '役割': 'ストレージ', '機器': 'Frigate 録画用に 1 TB 以上の NVMe' },
           { '役割': 'オプション：ローカルAI', '機器': 'Ollama 経由の小型ローカル LLM' },
           { '役割': 'オプション：カメラAI', '機器': 'Frigate の物体検出' },
+        ],
+        affiliateLinks: [
+          { label: '本日の EQ14 価格を確認 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: '約¥29,000〜33,000相当' },
+          { label: '本日の UM890 Pro 価格を確認 →', url: '/ja/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'ZBDongle-E の価格を確認 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '約¥3,000〜4,500相当' },
+          { label: 'Connect ZBT-2 の価格を確認 →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '約¥7,500〜8,500相当' },
+          { label: 'Reolink の現在価格を確認 →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '約¥15,000〜20,000相当' },
+          { label: 'Aqara P1 の価格を確認 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '¥3,480〜3,920' },
+          { label: 'Aqara FP2 の価格を確認 →', url: 'https://www.aqara.com/us/product/presence-sensor-fp2/', productName: 'Aqara FP2', productCategory: 'Presence sensor', priceRange: '約¥9,800〜12,980' },
         ],
       },
       whatNotToBuy: {
@@ -3048,6 +3202,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Veja o preço atual do Home Assistant Green →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: 'R$ 1.900–2.200' },
+          { label: 'Confira o preço atual do EQ14 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: '~R$ 1.900–2.400' },
+          { label: 'Confira o preço do ZBDongle-E →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~$20–27' },
+          { label: 'Confira o preço do Connect ZBT-2 →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '$49/€45' },
+          { label: 'Confira preços da Philips Hue →', url: 'https://www.amazon.com.br/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: 'Smart bulb', priceRange: 'a partir de R$ 349/lâmpada' },
+          { label: 'Confira o preço do Aqara P1 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~R$ 170–200' },
+          { label: 'Confira o preço da tomada Zigbee SONOFF →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: '~R$ 110–140' },
+          { label: 'Confira os preços atuais da Reolink →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~R$ 400–750' },
+          { label: 'Veja fechaduras inteligentes locais recomendadas →', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock 2', productCategory: 'Smart lock', priceRange: '~R$ 1.650–1.950' },
         ],
       },
       tldr: {
@@ -3085,7 +3247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sem assinatura para funções principais:** gravação ou automação não deveriam exigir uma taxa.',
           '**Preço atual:** cada preço abaixo foi conferido em listagens de fabricantes ou grandes varejistas em 25 de agosto de 2026 — sempre confirme o preço ao vivo antes de comprar.',
         ],
-        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-pt.svg',
         imageCaption: 'Dispositivos com capacidade local — Zigbee, Z-Wave, Matter ou uma API local — comparados a dispositivos só-nuvem em 5 fatores, incluindo assinaturas e confiabilidade offline.',
       },
       hub: {
@@ -3237,6 +3399,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Monte este kit inicial → confira o preço do Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: 'R$ 1.900–2.200' },
+          { label: 'Confira o preço do ZBDongle-E →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~$20–27' },
+          { label: 'Confira a iluminação inteligente IKEA →', url: 'https://www.ikea.com/us/en/cat/tradfri-series-700598/', productName: 'IKEA TRÅDFRI', productCategory: 'Smart bulb' },
+          { label: 'Confira o preço do Aqara P1 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~R$ 170–200' },
+          { label: 'Confira o preço do SONOFF SNZB-04P →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee sensor', priceRange: '~$15–25' },
+          { label: 'Confira o preço da tomada Zigbee SONOFF →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: 'Smart plug', priceRange: '~R$ 110–140' },
         ],
       },
       seriousKit: {
@@ -3254,6 +3421,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Papel: 'Armazenamento', Dispositivo: 'NVMe de 1 TB+ para gravações do Frigate' },
           { Papel: 'Opcional: IA local', Dispositivo: 'Um LLM local pequeno via Ollama' },
           { Papel: 'Opcional: IA de câmera', Dispositivo: 'Detecção de objetos do Frigate' },
+        ],
+        affiliateLinks: [
+          { label: 'Confira o preço atual do EQ14 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC', priceRange: '~R$ 1.900–2.400' },
+          { label: 'Confira o preço atual do UM890 Pro →', url: '/pt/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
+          { label: 'Confira o preço do ZBDongle-E →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee coordinator', priceRange: '~$20–27' },
+          { label: 'Confira o preço do Connect ZBT-2 →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '$49/€45' },
+          { label: 'Confira os preços atuais da Reolink →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: 'Security camera', priceRange: '~R$ 400–750' },
+          { label: 'Confira o preço do Aqara P1 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee sensor', priceRange: '~R$ 170–200' },
+          { label: 'Confira o preço do Aqara FP2 →', url: 'https://www.aqara.com/us/product/presence-sensor-fp2/', productName: 'Aqara FP2', productCategory: 'Presence sensor', priceRange: '~R$ 500–520' },
         ],
       },
       whatNotToBuy: {
@@ -3470,6 +3646,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: '查看 Home Assistant Green 今日价格 →', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: '智能家居中枢', priceRange: '$199' },
+          { label: '查看 EQ14 今日价格 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: '迷你 PC', priceRange: '约 $189–199' },
+          { label: '查看 ZBDongle-E 价格 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee 协调器', priceRange: '约 $20–27' },
+          { label: '查看 Connect ZBT-2 价格 →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread 协调器', priceRange: '$49' },
+          { label: '查看 Philips Hue 价格 →', url: 'https://www.amazon.com/s?k=Philips+Hue+bulb', productName: 'Philips Hue', productCategory: '智能灯泡', priceRange: '约 $54 起/灯泡' },
+          { label: '查看 Aqara P1 价格 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee 传感器', priceRange: '约 $25–30' },
+          { label: '查看 SONOFF Zigbee 插座价格 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: '智能插座', priceRange: '约 $15–20' },
+          { label: '查看 Reolink 当前价格 →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: '安防摄像头', priceRange: '约 $80–130' },
+          { label: '查看推荐的本地智能门锁 →', url: 'https://shopyalehome.com/products/yale-assure-lock-2-touch-key-free-with-z-wave-plus', productName: 'Yale Assure Lock 2', productCategory: '智能门锁', priceRange: '约 $190–210' },
         ],
       },
       tldr: {
@@ -3507,7 +3691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**核心功能无订阅：** 录制或自动化不应要求付费。',
           '**当前定价：** 以下每个价格均已对照厂商或主要零售商的挂牌价核实于 2026 年 8 月 25 日——购买前请务必核实实时价格。',
         ],
-        image: '/images/best-smart-home-devices-2026-local-vs-cloud-en.svg',
+        image: '/images/best-smart-home-devices-2026-local-vs-cloud-zh.svg',
         imageCaption: '支持本地的设备——Zigbee、Z-Wave、Matter 或本地 API——与仅限云端的设备在订阅、离线可靠性等 5 项因素上的对比。',
       },
       hub: {
@@ -3659,6 +3843,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: '搭建这套入门套件 → 查看 Home Assistant Green 价格', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: '智能家居中枢', priceRange: '$199' },
+          { label: '查看 ZBDongle-E 价格 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee 协调器', priceRange: '约 $20–27' },
+          { label: '查看 IKEA 智能照明 →', url: 'https://www.ikea.com/us/en/cat/tradfri-series-700598/', productName: 'IKEA TRÅDFRI', productCategory: '智能灯泡' },
+          { label: '查看 Aqara P1 价格 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee 传感器', priceRange: '约 $25–30' },
+          { label: '查看 SONOFF SNZB-04P 价格 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-door-window-sensor-snzb-04p', productName: 'SONOFF SNZB-04P', productCategory: 'Zigbee 传感器', priceRange: '约 $15–25' },
+          { label: '查看 SONOFF Zigbee 插座价格 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite', productName: 'SONOFF Zigbee plug', productCategory: '智能插座', priceRange: '约 $15–20' },
         ],
       },
       seriousKit: {
@@ -3676,6 +3865,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 角色: '存储', 设备: '1 TB+ NVMe，用于 Frigate 录像' },
           { 角色: '可选：本地 AI', 设备: '通过 Ollama 运行的小型本地 LLM' },
           { 角色: '可选：摄像头 AI', 设备: 'Frigate 物体检测' },
+        ],
+        affiliateLinks: [
+          { label: '查看 EQ14 今日价格 →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: '迷你 PC', priceRange: '约 $189–199' },
+          { label: '查看 UM890 Pro 今日价格 →', url: '/zh/smart-home/minisforum-um890-pro-local-ai-review', productName: 'Minisforum UM890 Pro', productCategory: '迷你 PC' },
+          { label: '查看 ZBDongle-E 价格 →', url: 'https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e', productName: 'SONOFF ZBDongle-E', productCategory: 'Zigbee 协调器', priceRange: '约 $20–27' },
+          { label: '查看 Connect ZBT-2 价格 →', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread 协调器', priceRange: '$49' },
+          { label: '查看 Reolink 当前价格 →', url: 'https://reolink.com/product/rlc-810a/', productName: 'Reolink RLC-810A', productCategory: '安防摄像头', priceRange: '约 $80–130' },
+          { label: '查看 Aqara P1 价格 →', url: 'https://www.aqara.com/en/product/motion-sensor-p1/', productName: 'Aqara P1', productCategory: 'Zigbee 传感器', priceRange: '约 $25–30' },
+          { label: '查看 Aqara FP2 价格 →', url: 'https://www.aqara.com/us/product/presence-sensor-fp2/', productName: 'Aqara FP2', productCategory: '存在传感器', priceRange: '约 $85' },
         ],
       },
       whatNotToBuy: {

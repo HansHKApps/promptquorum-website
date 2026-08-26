@@ -1,0 +1,37 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">로컬 지원 기기 vs 클라우드 전용 기기</text>
+
+  <!-- Left Panel: Cloud-Only (Problem) -->
+  <rect x="28" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
+  <rect x="28" y="55" width="340" height="4" rx="0" fill="#EA4335"/>
+  <text x="198" y="82" font-size="16" font-weight="700" fill="#EA4335" text-anchor="middle">클라우드 전용 (피하세요)</text>
+
+  <text x="48" y="118" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✗ 제조사 클라우드 계정 필요</text>
+  <text x="48" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✗ 클라우드 장애 시 작동 중단</text>
+  <text x="48" y="182" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✗ 대개 유료 구독 필요</text>
+  <text x="48" y="214" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✗ 영상/데이터가 집 밖으로 전송</text>
+  <text x="48" y="246" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✗ 문서화된 로컬 API 없음</text>
+
+  <line x1="48" y1="270" x2="348" y2="270" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="48" y="300" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#79747E">예시 위험:</text>
+  <text x="48" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#EA4335">앱 전용 전구, 클라우드 DVR 카메라</text>
+
+  <!-- Right Panel: Local-Capable (Goal) -->
+  <rect x="432" y="55" width="340" height="280" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="432" y="55" width="340" height="4" rx="0" fill="#34A853"/>
+  <text x="602" y="82" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">로컬 지원 (구매 추천)</text>
+
+  <text x="452" y="118" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✓ Zigbee, Z-Wave, Matter 또는 로컬 API</text>
+  <text x="452" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✓ 로컬 허브를 통해 오프라인 작동</text>
+  <text x="452" y="182" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✓ 핵심 기능에 구독 불필요</text>
+  <text x="452" y="214" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✓ 데이터와 영상이 네트워크 내 유지</text>
+  <text x="452" y="246" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#49454F">✓ 허브를 통해 모든 브랜드와 호환</text>
+
+  <line x1="452" y1="270" x2="752" y2="270" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="452" y="300" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#79747E">예시 선택:</text>
+  <text x="452" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#34A853">Zigbee 전구, 로컬 RTSP + Frigate</text>
+
+  <text x="400" y="360" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">선택 기준: 기기는 제조사 클라우드에 의존하지 않고 로컬 허브를 통해 작동해야 합니다.</text>
+<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
