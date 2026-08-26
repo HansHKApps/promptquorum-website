@@ -387,9 +387,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     toc: [
+      { label: 'Kaufen oder nicht?', anchor: 'buy-skip-if' },
+      { label: 'Bewertungsübersicht', anchor: 'scorecard' },
       { label: 'Kurzfassung', anchor: 'tldr' },
       { label: 'Offenlegung', anchor: 'disclosure' },
       { label: 'Schnellauswahl', anchor: 'quick-picks' },
+      { label: 'Direktvergleich', anchor: 'comparison' },
       { label: 'Lokale Ein/Aus-Steuerung vs. lokale Energiemeldung', anchor: 'onoff-vs-energy-reporting' },
       { label: 'Was die Zahlen bedeuten', anchor: 'what-the-numbers-mean' },
       { label: 'Was du überwachen solltest (und was nicht)', anchor: 'what-to-monitor' },
@@ -397,6 +400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lokale KI und Energiedaten', anchor: 'local-ai' },
       { label: 'Was du vor dem Kauf prüfen solltest', anchor: 'what-to-check' },
       { label: 'Welches Plug solltest du kaufen', anchor: 'which-one' },
+      { label: 'Wie wir bewerten', anchor: 'methodology' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -404,6 +408,43 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { type: 'plain-terms', content: 'Manche Smart Plugs lassen dich ein Gerät lokal über Home Assistant ein- und ausschalten, senden die detaillierten Stromverbrauchszahlen aber weiterhin nur an die eigene App des Herstellers. In diesem Ratgeber geht es darum, Plugs mit lokal bleibenden Wattzahl-Daten zu finden, mit aktuellen Preisen.' },
     ],
     sections: {
+      buyIfSkipIf: {
+        id: 'buy-skip-if',
+        title: 'Kaufen oder nicht?',
+        sponsoredSlot: true,
+        content: 'Kurzer Entscheidungsleitfaden — passt ein Energiemonitoring-Smart-Plug zu dem, was du tatsächlich brauchst? PromptQuorums Einschätzung basiert auf veröffentlichten Spezifikationen und Dokumentation, nicht auf einem eigenen Praxistest.',
+        items: [
+          '**Kaufe ein Energiemonitoring-Smart-Plug, wenn:**',
+          'Du Wattzahl-/kWh-Daten pro Gerät willst, die lokal in Home Assistants Energie-Dashboard einfließen',
+          'Du bestimmte hochwertige Geräte hast, deren Überwachung sich lohnt (Waschmaschine, Trockner, Server, Kühlschrank)',
+          'Du bereits Zigbee oder Z-Wave nutzt und ein Plug willst, das zu deinem vorhandenen Koordinator passt',
+          'Du eine lokale LLM-Automatisierung willst, die zusammenfasst, „was gestern am meisten Strom verbraucht hat"',
+          'Du einen Defekt frühzeitig erkennen willst (z. B. einen Kühlschrank, der mehr als üblich verbraucht)',
+          '**Verzichte auf Smart Plugs, wenn:**',
+          'Du Haus- oder Stromkreis-Transparenz willst — nutze stattdessen ein CT-Klemmensystem am Sicherungskasten',
+          'Du Solarerzeugung überwachen willst — gleiche Antwort, ein CT-Klemmensystem, kein Plug',
+          'Du nur Ein/Aus-Steuerung ohne Energiedaten willst — dafür reicht ein deutlich günstigeres einfaches Smart Plug',
+          'Du ein Gerät überwachen willst, das mehr zieht als die Nennlast eines Plugs — prüfe die Angaben zuerst',
+        ],
+        affiliateLinks: [
+          { label: 'Aqara Smart Plug EU Preis prüfen →', url: 'https://eu.aqara.com/en-eu/products/aqara-smart-plug-eu', productName: 'Aqara Smart Plug EU', productCategory: 'Energy-monitoring smart plug', priceRange: 'ab 21,10 €' },
+          { label: 'Alle 4 Plugs vergleichen →', url: '#comparison', productName: 'Smart plug comparison', productCategory: 'Energy-monitoring smart plug' },
+        ],
+      },
+      scorecard: {
+        id: 'scorecard',
+        title: 'Energiemonitoring-Smart-Plug-Bewertungsübersicht',
+        content:
+          '**PromptQuorums Einschätzung, basierend auf Herstellerspezifikationen und Home Assistants eigener Integrationsdokumentation — kein eigener Praxistest an einem physischen Gerät.** Die Bewertungen spiegeln speziell die Eignung für lokal-first-Energiemonitoring wider. Für Deutschland/EU relevant ist vor allem die Aqara-Zeile; Zooz und Sonoff sind primär US-Produkte mit US-Steckerformat, Shellys EU-Steckdosenversion (Schuko) existiert, ihr genauer Euro-Preis konnte hier nicht bestätigt werden.',
+        columns: ['Plug', 'Lokale Energiedaten', 'Preis-Leistung', 'Am besten für'],
+        rows: [
+          { Plug: 'Aqara Smart Plug EU', 'Lokale Energiedaten': '9,5/10', 'Preis-Leistung': '9/10', 'Am besten für': 'Zigbee-Haushalte in DE/EU, mehrere auf einmal kaufen' },
+          { Plug: 'Zooz ZEN15 800LR (US)', 'Lokale Energiedaten': '9/10', 'Preis-Leistung': '7,5/10', 'Am besten für': 'Z-Wave-Haushalte in den USA, große Reichweite' },
+          { Plug: 'Shelly Plug US Gen4', 'Lokale Energiedaten': '9/10', 'Preis-Leistung': '8,5/10', 'Am besten für': 'Kein vorhandener Koordinator, EU-Steckdosenversion verfügbar' },
+          { Plug: 'Sonoff S31 (US, Wi-Fi)', 'Lokale Energiedaten': '7,5/10', 'Preis-Leistung': '9/10', 'Am besten für': 'Günstigste bestätigte Option, aber nur mit US-Steckerformat' },
+        ],
+        note: 'Diese Bewertungen sind PromptQuorums redaktionelle Einschätzung auf Basis geprüfter Spezifikationen und Home Assistants eigener Integrationsdokumentation (siehe „Wie wir bewerten" unten) — kein Ergebnis eines eigenen Praxistests von PromptQuorum an den physischen Geräten.',
+      },
       tldr: {
         id: 'tldr',
         title: 'Kurzfassung',
@@ -438,6 +479,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           { label: 'Aqara Smart Plug EU', url: 'https://eu.aqara.com/en-eu/products/aqara-smart-plug-eu', productName: 'Aqara Smart Plug EU', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Direktvergleich',
+        content: '**Alle vier bestätigten Plugs im direkten Vergleich, geprüft am 25.08.2026. Für Deutschland/EU direkt relevant ist die Aqara-Zeile; Zooz und Sonoff sind primär US-Produkte mit US-Steckerformat, Shelly bietet eine EU-Steckdosenversion mit unbestätigtem Euro-Preis.**',
+        columns: ['Plug', 'Protokoll', 'Max. Last', 'Lokale Energiedaten', 'Preis'],
+        rows: [
+          { Plug: 'Aqara Smart Plug EU', Protokoll: 'Zigbee 3.0', 'Max. Last': '2300 W', 'Lokale Energiedaten': 'Ja (ZHA/Zigbee2MQTT)', Preis: 'ab 21,10 €' },
+          { Plug: 'Zooz ZEN15 800LR (US)', Protokoll: 'Z-Wave Long Range (800 Series)', 'Max. Last': 'Angabe prüfen', 'Lokale Energiedaten': 'Ja (W/A/V/kWh)', Preis: '37,95-48,95 $' },
+          { Plug: 'Shelly Plug US Gen4', Protokoll: 'Wi-Fi / Matter / Zigbee', 'Max. Last': 'Angabe prüfen', 'Lokale Energiedaten': 'Ja (dokumentierte lokale API)', Preis: '19,99-24,99 $ (EU-Version: Preis nicht bestätigt)' },
+          { Plug: 'Sonoff S31 (US)', Protokoll: 'Wi-Fi', 'Max. Last': 'Angabe prüfen', 'Lokale Energiedaten': 'Ja — aber NICHT der S31 Lite ZB', Preis: '9,90-23,90 $' },
+        ],
+        items: [
+          '**Unsere Empfehlung für Deutschland/EU:** Aqara Smart Plug EU — Zigbee, lokal bestätigt über ZHA/Zigbee2MQTT, ab 21,10 € laut Geizhals-Preisvergleich, und mit passendem Schuko-Stecker direkt einsetzbar.',
+          '**Unsere Empfehlung ohne vorhandenen Koordinator:** Shelly — dokumentierte lokale API über Wi-Fi, Matter und Zigbee, mit einer eigenen EU-Steckdosenversion (Schuko); den genauen Euro-Preis direkt bei shelly.com/de prüfen.',
+          'Keines der vier Plugs unterscheidet sich wesentlich darin, ob die lokale Energiemeldung tatsächlich funktioniert — alle vier bestätigen das. Die eigentliche Entscheidung betrifft Protokoll- und Steckerkompatibilität für Deutschland sowie den Preis, nicht die grundsätzliche Fähigkeit.',
+        ],
+        affiliateLinks: [
+          { label: 'Aqara-Preis prüfen →', url: 'https://eu.aqara.com/en-eu/products/aqara-smart-plug-eu', productName: 'Aqara Smart Plug EU', productCategory: 'Energy-monitoring smart plug', priceRange: 'ab 21,10 €' },
+          { label: 'Shelly-Preis prüfen →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
         ],
       },
       onoffVsEnergyReporting: {
@@ -527,7 +589,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'In Deutschland/EU, willst du die europäische Herstellervariante mit dokumentierter lokaler API: Shelly (EU-Steckdosenversion) — Preis vor dem Kauf direkt bei shelly.com/de prüfen.',
           'In den USA, läuft bereits Z-Wave: Zooz ZEN15 800LR (37,95-48,95 $).',
           'In den USA, willst du die günstigste bestätigte Option: Sonoff S31 (9,90-23,90 $) — achte darauf, den S31 zu kaufen, nicht den Zigbee-S31 Lite ZB, wenn Energiemonitoring der Zweck ist.',
+          'Willst du 4 oder mehr Geräte mit kleinem Budget überwachen: Aqara Smart Plug EU × mehrere — die niedrigsten Kosten pro Einheit unter den für Deutschland relevanten bestätigten Optionen.',
           'Willst du Haus- oder Stromkreis-Transparenz: verzichte ganz auf Smart Plugs und nutze stattdessen ein CT-Klemmensystem am Sicherungskasten — siehe die Übersicht zum lokalen Energiemanagement.',
+        ],
+        affiliateLinks: [
+          { label: 'Aqara Smart Plug EU Preis prüfen →', url: 'https://eu.aqara.com/en-eu/products/aqara-smart-plug-eu', productName: 'Aqara Smart Plug EU', productCategory: 'Energy-monitoring smart plug', priceRange: 'ab 21,10 €' },
+        ],
+      },
+      methodology: {
+        id: 'methodology',
+        title: 'Wie wir Energiemonitoring-Smart-Plugs bewerten',
+        content:
+          '**Dieser Ratgeber wurde von PromptQuorum nicht an physischen Geräten praktisch getestet.** Er basiert auf herstellerseitig veröffentlichten Spezifikationen, Händlerangeboten und Home Assistants eigener Integrationsdokumentation, klar getrennt aufgeführt, damit du weißt, was bestätigt und was eingeschätzt ist.',
+        items: [
+          '**Herstellerbestätigt:** Protokoll, maximale Nennlast und offizielle Preise — direkt von Aqara, Zooz, Shelly und Sonoff/ITEAD selbst bezogen sowie über den Geizhals-Preisvergleich für die deutsche Aqara-EU-Variante geprüft am 25.08.2026.',
+          '**Home-Assistant-dokumentationsbestätigt:** ob die Energiesensor-Entitäten (Watt, kWh, Spannung, Stromstärke) über die jeweilige Integration (ZHA, Zigbee2MQTT, Z-Wave JS oder eine lokale Wi-Fi-/Matter-API) lokal offengelegt werden oder eine Cloud-Verbindung erfordern — aus Home Assistants eigener Integrationsdokumentation, nicht aus den Marketingaussagen der Hersteller.',
+          '**PromptQuorum-Einschätzung:** die Bewertungsübersicht, die Kaufen-oder-nicht-Empfehlungen und der Kauffilter „Welches Plug solltest du kaufen" — PromptQuorums redaktionelles Urteil, angewendet auf die oben bestätigten Spezifikationen und Dokumentation, kein neuer eigener Praxistest.',
+          'Wir bewerten Energiemonitoring-Smart-Plugs nach: bestätigter lokaler Energiedaten-Meldung (nicht nur lokalem Ein/Aus), Protokoll- und Steckerkompatibilität für Deutschland/EU, Nennlast, Preis und dokumentierter Home-Assistant-Integrationsunterstützung für das genaue Modell.',
         ],
       },
       faqSection: {
@@ -536,12 +614,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Bedeutet lokale Ein/Aus-Steuerung, dass die Energiedaten auch lokal sind?', a: 'Nicht unbedingt — manche Plugs trennen das: Sie steuern Ein/Aus lokal, leiten die detaillierten Wattzahl-Daten aber weiterhin über die Cloud des Herstellers. Prüfe gezielt, ob lokale Energiemeldung unterstützt wird.' },
           { q: 'Sind Zigbee-Plugs für Energiemonitoring besser als Wi-Fi-Plugs?', a: 'Im Allgemeinen ja, für bestätigte lokale Meldung — Zigbee- und Z-Wave-Plugs haben hier eine konsistentere Erfolgsbilanz als Wi-Fi-Plugs, wobei Shelly mit dokumentierter lokaler API eine bestätigte Ausnahme ist. Prüfe trotzdem das genaue Modell, statt dich allein auf das Protokoll zu verlassen.' },
+          { q: 'Was ist insgesamt das beste Energiemonitoring-Smart-Plug?', a: 'Für Deutschland/EU bietet die Aqara Smart Plug EU (ab 21,10 €, laut Geizhals-Preisvergleich) die beste Kombination aus bestätigter lokaler Meldung und niedrigen Kosten pro Einheit, wenn du bereits Zigbee nutzt. Ohne vorhandenen Koordinator ist Shelly (EU-Steckdosenversion, Schuko) die protokollflexibelste bestätigte Option über Wi-Fi, Matter und Zigbee — den genauen Euro-Preis direkt bei shelly.com/de prüfen.' },
           { q: 'Wie verbinden sich diese Plugs mit dem Energie-Dashboard?', a: 'Sobald bestätigt ist, dass die Meldung lokal erfolgt, füge die Energiesensor-Entität des Plugs unter „Einzelne Geräte" in der Einrichtung des Energie-Dashboards hinzu — siehe diesen Leitfaden für die vollständige Anleitung.' },
           { q: 'Kann ich Protokolle mischen (manche Zigbee, manche Wi-Fi-Plugs)?', a: 'Ja — Home Assistant kann Sensor-Entitäten aus verschiedenen Protokollen problemlos in derselben Energie-Dashboard-Ansicht kombinieren, solange jede einzeln lokal meldet.' },
           { q: 'Brauche ich einen Plug pro Gerät, oder kann ich einen ganzen Stromkreis überwachen?', a: 'Smart Plugs überwachen einzelne Geräte, die daran angeschlossen sind; für die Überwachung eines ganzen Stromkreises oder des gesamten Hauses ist eine CT-Klemme am Sicherungskasten (siehe die Übersicht zum lokalen Energiemanagement) das richtige Werkzeug.' },
           { q: 'Hat jeder Plug einer Produktlinie dieselben Funktionen?', a: 'Nein — Sonoffs Wi-Fi-S31 verfügt über eingebautes Energiemonitoring, sein Zigbee-Pendant, der S31 Lite ZB, laut Sonoffs eigenen Produktseiten jedoch nicht. Prüfe die konkrete Modellseite, nicht nur den Marken- oder Familiennamen.' },
           { q: 'Spart mir das Überwachen meiner Geräte automatisch Geld?', a: 'Nein — das Plug misst den Verbrauch; die Ersparnis entsteht durch das, was du mit dieser Information machst (Verschwendung erkennen, Lasten automatisieren, Verbrauch in günstigere oder solarabgedeckte Stunden verschieben). Betrachte das Plug als Datenquelle, nicht als eigenständiges Sparinstrument.' },
           { q: 'Kann eine lokale KI diese Energiedaten nutzen?', a: 'Ja — da die Energiesensor-Entitäten in Home Assistant bereits lokal sind, kann eine lokale LLM-Automatisierung die Daten zusammenfassen oder Fragen dazu beantworten (z. B. „Was hat gestern am meisten Strom verbraucht?"), ohne etwas an einen Cloud-KI-Dienst zu senden.' },
+          { q: 'Wie viele Energiemonitoring-Plugs sollte ich zum Einstieg kaufen?', a: 'Zwei oder drei, für deine wertvollsten Geräte (Waschmaschine/Trockner, ein Server oder Dauerlauf-PC, ein Kühl- oder Gefrierschrank). Erweitere nur, wenn die Daten dein Verhalten tatsächlich ändern — jedes kleine Gerät zu überwachen kostet Geld, ohne viel Mehrwert zu bringen.' },
+          { q: 'Eignet sich ein Smart Plug für das Monitoring von Elektroauto-Ladevorgängen?', a: 'Meist nicht die beste Wahl — eine dedizierte EV-Energielösung oder die eigene Meldung der Wallbox passt besser als ein Universal-Smart-Plug, da sich Last- und Dauermuster beim Laden von Elektroautos vom typischen Geräte-Monitoring unterscheiden.' },
+          { q: 'Was sollte ich vor dem Kauf eines Energiemonitoring-Plugs prüfen?', a: 'Bestätige gezielt die lokale Energiemeldung (nicht nur Ein/Aus) in Home Assistants Integrationsdokumentation für das genaue Modell, prüfe die Nennlast des Plugs gegen dein Gerät, und stelle sicher, dass dein Steckerformat — für Deutschland Schuko/CEE 7 — zum Plug passt, da US-Produkte wie Zooz und Sonoff auf das US-amerikanische NEMA-Format ausgelegt sind.' },
         ],
       },
       relatedReading: {
@@ -551,6 +633,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Home Assistant Energie-Dashboard: Vollständiger Einrichtungsleitfaden](/de/smart-home/home-assistant-energy-dashboard-guide) — wo diese Plugs einfließen',
           '[Lokales Smart-Home-Energiemanagement](/de/smart-home/local-smart-home-energy-management-2027) — die übergeordnete Monitoring-Strategie, einschließlich CT-Hausüberwachung',
           '[Die besten Zigbee- und Thread-USB-Dongles](/de/smart-home/best-zigbee-thread-dongles-2027) — die Funkhardware, mit der Zigbee-Plugs gekoppelt werden',
+          '[Die besten Smart-Home-Geräte 2026](/de/smart-home/best-smart-home-devices-2026) — der vollständige kategorieübergreifende Kaufratgeber, in den dieses Plug gehört',
+          '[KI-Automatisierungen mit einer lokalen LLM](/de/smart-home/ai-automations-local-llm) — baue die Automatisierung „Was hat gestern am meisten Strom verbraucht?"',
         ],
       },
     },
