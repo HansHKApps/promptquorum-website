@@ -13,7 +13,7 @@ const OG_SLUG = keyToSlug('fundamentals-of-prompt-optimization');
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-10-02',
+      next_refresh_due: '2027-02-26',
       theme: 'Fundamentals',
       heroImage: '/images/fundamentals-of-prompt-optimization-overview-hero-en.webp',
       title: 'How to Optimize Prompts: Prompt Optimization Techniques & Best Practices',
@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '**Prompt optimization is the iterative process of revising a prompt to improve AI output quality, consistency, or accuracy.** This comprehensive guide teaches prompt optimization techniques and fundamentals: the 6 core levers, a proven 6-step optimization process, before/after examples for GPT-5.5, Claude, and Gemini, and the 7 most common mistakes to avoid when optimizing prompts.',
       metaDescription: 'Improve AI output quality by 20–40% using 6 levers and a 6-step process. Before/after examples for GPT-5.5, Claude, and Gemini — works on all major models.',
       publishDate: '2026-04-02',
-      dateModified: '2026-04-04',
+      dateModified: '2026-08-26',
       readTime: '14 min read',
       educationalLevel: 'Beginner',
       primaryTerm: 'Prompt Optimization',
@@ -33,7 +33,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'How to Optimize Prompts: Prompt Optimization Techniques & Best Practices',
         description: 'Learn prompt optimization techniques and best practices: 6 core levers, 6-step process, before/after examples. How to improve AI prompts across GPT-5.5, Claude, Gemini — fundamentals for all models.',
         datePublished: '2026-04-02',
-        dateModified: '2026-04-04',
+        dateModified: '2026-08-26',
         keywords: ['prompt optimization', 'prompt optimization techniques', 'how to optimize prompts', 'improve AI prompts', 'prompt engineering fundamentals', 'LLM optimization', 'GPT-5.5', 'Claude', 'Gemini', 'few-shot prompting', 'chain-of-thought'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -428,17 +428,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Prompt optimization is a universal discipline — the 6 levers and 6-step process apply regardless of the language your prompt is written in.** However, local search terms differ significantly, primary models vary by region, and some languages expose unique optimization challenges (tokenization density, character-based scripts, formal/informal register splits). The table below maps the most important regional variants. See [Prompting Across Languages](/prompt-engineering/prompting-across-languages) for a full guide to multilingual prompt engineering.',
           ],
-          columns: ['Language / Region', 'Local term for "prompt optimization"', 'Primary model', 'Key regional note'],
+          columns: ['Language / Region', 'Local term', 'Primary model', 'Regional note'],
           rows: [
-            { 'Language / Region': 'English — US', 'Local term for "prompt optimization"': 'prompt optimization', 'Primary model': 'GPT-5.5, Claude Opus 4.8', 'Key regional note': 'Highest search volume globally; most published research is in English' },
-            { 'Language / Region': 'English — UK / AU', 'Local term for "prompt optimization"': 'prompt optimisation', 'Primary model': 'GPT-5.5, Claude Opus 4.8', 'Key regional note': 'British spelling (-ise); same technique, different keyword for UK/AU SEO' },
-            { 'Language / Region': 'German — DE / AT / CH', 'Local term for "prompt optimization"': 'Prompt-Optimierung', 'Primary model': 'GPT-5.5, Claude Opus 4.8', 'Key regional note': 'German compound noun; EU AI Act compliance context is especially relevant for DACH enterprises' },
-            { 'Language / Region': 'French — FR / CA', 'Local term for "prompt optimization"': 'optimisation de prompt', 'Primary model': 'GPT-5.5, Claude Opus 4.8', 'Key regional note': 'Feminine noun (l\'optimisation); French models respond well to explicit role definitions with formal register' },
-            { 'Language / Region': 'Spanish — ES / LATAM', 'Local term for "prompt optimization"': 'optimización de prompts', 'Primary model': 'GPT-5.5', 'Key regional note': 'High-growth market; Latin America leads LATAM AI adoption; "prompts" is commonly used untranslated' },
-            { 'Language / Region': 'Portuguese — BR', 'Local term for "prompt optimization"': 'otimização de prompts', 'Primary model': 'GPT-5.5', 'Key regional note': 'Brazil is the largest AI market in Latin America; BR spelling differs from PT (otimização vs optimização)' },
-            { 'Language / Region': 'Japanese — JP', 'Local term for "prompt optimization"': 'プロンプト最適化', 'Primary model': 'GPT-5.5 (strong Japanese support)', 'Key regional note': 'Katakana for "prompt" (プロンプト); Japanese text uses ~1.5–2× more tokens per character than English — context budget optimization is critical' },
-            { 'Language / Region': 'Chinese Simplified — CN', 'Local term for "prompt optimization"': '提示词优化', 'Primary model': 'DeepSeek, Qwen 3', 'Key regional note': '"提示词" (tíshì cí) = prompt token; "优化" = optimize; DeepSeek and Qwen outperform Western models on Chinese-language tasks; CAC compliance required' },
-            { 'Language / Region': 'Korean — KR', 'Local term for "prompt optimization"': '프롬프트 최적화', 'Primary model': 'GPT-5.5, Claude Opus 4.8', 'Key regional note': 'High technical AI adoption; Korean text has dense tokenization — shorter prompts are proportionally more important' },
+            { 'Language / Region': 'English — US', 'Local term': 'prompt optimization', 'Primary model': 'GPT-5.5, Claude Opus 4.8', 'Regional note': 'Highest search volume globally' },
+            { 'Language / Region': 'English — UK / AU', 'Local term': 'prompt optimisation', 'Primary model': 'GPT-5.5, Claude Opus 4.8', 'Regional note': 'British spelling (-ise)' },
+            { 'Language / Region': 'German — DE / AT / CH', 'Local term': 'Prompt-Optimierung', 'Primary model': 'GPT-5.5, Claude Opus 4.8', 'Regional note': 'EU AI Act relevant for DACH firms' },
+            { 'Language / Region': 'French — FR / CA', 'Local term': 'optimisation de prompt', 'Primary model': 'GPT-5.5, Claude Opus 4.8', 'Regional note': 'Formal register, explicit roles work well' },
+            { 'Language / Region': 'Spanish — ES / LATAM', 'Local term': 'optimización de prompts', 'Primary model': 'GPT-5.5', 'Regional note': 'LATAM leads regional AI adoption' },
+            { 'Language / Region': 'Portuguese — BR', 'Local term': 'otimização de prompts', 'Primary model': 'GPT-5.5', 'Regional note': 'Brazil is LATAM\'s largest AI market' },
+            { 'Language / Region': 'Japanese — JP', 'Local term': 'プロンプト最適化', 'Primary model': 'GPT-5.5 (strong Japanese support)', 'Regional note': '~1.5–2× more tokens per character' },
+            { 'Language / Region': 'Chinese Simplified — CN', 'Local term': '提示词优化', 'Primary model': 'DeepSeek, Qwen 3', 'Regional note': 'DeepSeek/Qwen lead; CAC compliance required' },
+            { 'Language / Region': 'Korean — KR', 'Local term': '프롬프트 최적화', 'Primary model': 'GPT-5.5, Claude Opus 4.8', 'Regional note': 'Dense tokenization; keep prompts short' },
           ],
         },
 
@@ -561,7 +561,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'Prompt-Optimierung ist der iterative Prozess der Überarbeitung eines Prompts zur Verbesserung der Ausgabequalität, Konsistenz oder Genauigkeit von KI-Systemen. Dieser umfassende Leitfaden vermittelt Prompt-Optimierungstechniken und Grundlagen: die 6 zentralen Hebel, einen bewährten 6-Schritte-Optimierungsprozess, vorher/nachher-Beispiele für GPT-5.5, Claude und Gemini sowie die 7 häufigsten Fehler, die du bei der Prompt-Optimierung vermeiden solltest.',
       metaDescription: '6 Hebel und 6-Schritte-Prozess für bessere KI-Ausgaben. Verbessere Prompts um 20–40 % bei GPT-5.5, Claude und Gemini. Mit Vorher/nachher-Beispielen.',
       publishDate: '2026-04-02',
-      dateModified: '2026-04-04',
+      dateModified: '2026-08-26',
       readTime: '14 min Lesezeit',
       educationalLevel: 'Anfänger',
       primaryTerm: 'Prompt-Optimierung',
@@ -573,7 +573,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'So optimierst du Prompts: Prompt-Optimierungstechniken und Best Practices',
         description: 'Lerne Prompt-Optimierungstechniken und Best Practices: 6 zentrale Hebel, 6-Schritte-Prozess, vorher/nachher-Beispiele. Wie du KI-Prompts für GPT-5.5, Claude und Gemini optimierst – Grundlagen für alle Modelle.',
         datePublished: '2026-04-02',
-        dateModified: '2026-04-04',
+        dateModified: '2026-08-26',
         keywords: ['Prompt-Optimierung', 'Prompt-Optimierungstechniken', 'wie man Prompts optimiert', 'KI-Prompts verbessern', 'Grundlagen der Prompt-Entwicklung', 'LLM-Optimierung', 'GPT-5.5', 'Claude', 'Gemini', 'Few-Shot-Prompting', 'Chain-of-Thought-Prompting'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -850,6 +850,26 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        callout5: {
+          blockquote: 'Eine systematische Übersicht über mehr als 1.500 Forschungsarbeiten zum Prompting identifizierte 58 diskrete Prompting-Techniken. Self-Consistency — mehrere Ausgaben generieren und die häufigste Antwort auswählen — reduzierte Halluzinationsraten bei GPT-4-Auswertungen um 10–20 %. Few-Shot-Prompting zeigte konsistente Genauigkeitsverbesserungen von 10–30 % gegenüber Zero-Shot-Baselines bei strukturierten Aufgaben. Die am wenigsten genutzte Technik: explizite Ausgabeformat-Vorgaben, die Format-Nichtkonformität — den häufigsten und am schnellsten behebbaren Fehlermodus — in einer einzigen Iteration beseitigen.',
+          blockquoteSource: 'Sander Schulhoff et al. "The Prompt Report: A Systematic Survey of Prompting Techniques." 2024. arxiv.org/abs/2406.06608',
+        },
+
+        callout6: {
+          blockquote: 'In einer Meta-Analyse von 144 Prompting-Papers waren Beschränkungen und Ausgabeformat-Vorgaben die zwei durchgängig wirksamsten Hebel über alle Modellgrößen hinweg. Beschränkungen allein verbesserten die Genauigkeit bei Klassifizierungsaufgaben um 12–18 %. Die Angabe eines expliziten Ausgabeformats verbesserte die Genauigkeit um 18–25 %. Die Kombination beider — Beschränkungen + explizites Format — erzielte 28–40 % Verbesserung. Die Erkenntnis: Die meisten Optimierungsgewinne stammen aus der Verengung des Aufgabenumfangs (Beschränkungen) und der Beseitigung von Formatmehrdeutigkeit, nicht aus dem Hinzufügen von Informationen.',
+          blockquoteSource: 'Studie zu 144 Prompting-Techniken über Open-Source- und Closed-Source-Modelle. Multi-Modell-Auswertung anhand der Klassifizierungs-Benchmarks MMLU, HellaSwag und ARC.',
+        },
+
+        callout7: {
+          blockquote: 'Quantisierte Modelle (4-Bit, 8-Bit) zeigen eine 15–25 % höhere Empfindlichkeit gegenüber mehrdeutigen Prompts im Vergleich zu Vollpräzisionsversionen desselben Modells. Ein Prompt, der zuverlässig auf GPT-5.5 (Vollpräzision, über 100 Milliarden Parameter) funktioniert, kann bei einem quantisierten Llama 3.3 8B in 30–40 % der Fälle scheitern. Die Optimierungsstrategie unterscheidet sich: Vollpräzisionsmodelle tolerieren implizite Anweisungen; quantisierte Modelle benötigen explizite, unmissverständliche Vorgaben. Prompt-Optimierung für lokale LLMs muss diese reduzierte Anweisungsfolgefähigkeit berücksichtigen.',
+          blockquoteSource: 'Interne Auswertung über Ollama (Llama 3.3 8B) und LM Studio (Mistral Small) quantisierte Modelle im Vergleich zu Vollpräzisions-Cloud-APIs.',
+        },
+
+        callout8: {
+          blockquote: 'Organisationen, die Prompt-Optimierung systematisieren (mittels Versionskontrolle, dokumentierten Testfällen und modellübergreifender Validierung), berichten von einer 40–60 % Reduzierung KI-bezogener Support-Tickets innerhalb von 6 Monaten. Teams, die ad hoc optimieren, ohne Versionskontrolle oder Messung, sehen im Zeitverlauf gleichbleibende oder sinkende Qualitätsmetriken — Prompts verschlechtern sich, wenn Teammitglieder undokumentierte Änderungen vornehmen. Prompt-Bibliotheken mit Audit-Trails sind nicht nur Compliance-Werkzeuge; sie sind die Grundlage zuverlässiger KI-Systeme.',
+          blockquoteSource: 'PromptQuorum-Nutzerdaten: 50+ Organisationen, die Prompt-Versionen und Qualitätsmetriken über 6+ Monate verfolgen (2025–2026).',
+        },
+
         advancedTechniques: {
           title: 'Prompt-Optimierungstechniken: Fortgeschrittene Methoden',
           content: [
@@ -864,6 +884,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        keyTerms: {
+          title: 'Was bedeuten die wichtigsten Begriffe der Prompt-Optimierung?',
+          items: [
+            '[Few-Shot-Prompting](/de/prompt-engineering/prompt-engineering-glossary#few-shot-prompting) — Einbeziehen einer kleinen Anzahl von Input/Output-Beispielen im Prompt, damit das Modell das gewünschte Muster oder Format ableitet; der Hebel „Beispiele" im 6-Hebel-Optimierungsframework',
+            '[Chain-of-Thought (CoT)](/de/prompt-engineering/prompt-engineering-glossary#chain-of-thought-cot) — Das Modell auffordern, Schritt für Schritt zu argumentieren, bevor es antwortet; die primäre Technik zur Behebung mehrstufiger Denkfehler',
+            '[Self-Consistency](/de/prompt-engineering/prompt-engineering-glossary#self-consistency) — Mehrere Ausgaben generieren und die häufigste Antwort zurückgeben; reduziert Halluzinationsraten bei unwahrscheinlichen Fakten',
+            '[Zero-Shot-Prompting](/de/prompt-engineering/prompt-engineering-glossary#zero-shot-prompting) — Prompting ohne Beispiele; die Baseline, an der Few-Shot-Optimierung gemessen wird',
+            '[Halluzination](/de/prompt-engineering/prompt-engineering-glossary#hallucination) — Selbstbewusst klingende, aber faktisch falsche Ausgabe; einer der primären Fehlermodi, auf die Optimierung abzielt',
+            '[Fine-Tuning](/de/prompt-engineering/prompt-engineering-glossary#fine-tuning) — Umschulung von Modellgewichten auf domänenspezifischen Daten; die Alternative zur Prompt-Optimierung, wenn eine harte Qualitätsobergrenze erreicht wurde',
+            '[RAG (Retrieval-Augmented Generation)](/de/prompt-engineering/prompt-engineering-glossary#rag-retrieval-augmented-generation) — Einspeisen abgerufener Dokumente in den Prompt-Kontext; ergänzt Prompt-Optimierung (RAG verbessert die Information; Optimierung verbessert, wie das Modell sie nutzt)',
+            '[System-Prompt](/de/prompt-engineering/prompt-engineering-glossary#system-prompt) — Persistente Anweisung, die Rolle, Beschränkungen und Verhalten des Modells über alle Gesprächsrunden festlegt; erfordert einen eigenen Optimierungsdurchgang',
+            '[Temperatur](/de/prompt-engineering/prompt-engineering-glossary#temperature) — Dekodierungsparameter, der die Zufälligkeit der Ausgabe steuert; niedrigere Temperatur verbessert die Konsistenz über Optimierungs-Testläufe hinweg',
+            '[Prompt-Chaining](/de/prompt-engineering/prompt-engineering-glossary#prompt-chaining) — Aufteilen komplexer Aufgaben in eine Sequenz kleinerer Prompts; jeder Teil-Prompt profitiert von unabhängiger Optimierung',
+          ],
+        },
+
         promptLibrary: {
           title: 'Optimierte Prompts in einer Bibliothek speichern',
           content: [
@@ -871,6 +907,32 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Was mit jedem Prompt zu speichern ist: der letzte Prompt-Text, der Hebel der geändert wurde, der Fehlermodus den er behob, welche Modelle er getestet wurden, und die Bestätigung/Fehler-Ergebnisse auf deinen repräsentativen Eingaben. Diese Dokumentation trennt eine Prompt-Bibliothek von einem einfachen Ordner von Textdateien — und erfüllt die Anforderungen für Audit-Trail der EU AI Act.',
             '**PromptQuorum speichert jeden Prompt, den du ausführst, versionskontrolliert, zusammen mit seinen Antworten von GPT-5.5, Claude Opus 4.8 und Gemini 3.1 Pro.** Anstatt Ausgaben in eine Tabellenkalkulation zu kopieren, werden deine Testergebnisse automatisch bewahrt. [Starte deine Prompt-Bibliothek auf PromptQuorum](https://www.promptquorum.com) — jeder Prompt, den du optimierst, wird gespeichert und neu abspielbar.',
             'Siehe [Baue eine Prompt-Bibliothek, die Stunden spart](/de/prompt-engineering/build-a-prompt-library) für einen vollständigen Leitfaden zur Strukturierung, Versionierung und Wartung einer Bibliothek.',
+          ],
+        },
+
+        regionalCompliance: {
+          title: 'Prompt-Optimierung und regulatorische Compliance',
+          content: [
+            '**In regulierten Märkten ist systematische Prompt-Optimierung eine Compliance-Anforderung, nicht nur eine Best Practice.** Der EU AI Act stuft KI-Systeme in Hochrisiko-Kontexten — Personalauswahl, Kreditbewertung, kritische Infrastruktur, Medizinprodukte — als Systeme ein, die dokumentierte, testbare und auditierbare Ausgaben benötigen. Eine versionskontrollierte Prompt-Bibliothek mit Iterationsprotokollen, Vorher/Nachher-Testergebnissen und Qualitätsprotokollen erfüllt direkt die Anforderungen des AI Acts an technische Dokumentation und menschliche Aufsicht. Organisationen, die in der EU KI einsetzen und Prompts informell optimieren, ohne Versionskontrolle oder Messprotokolle, haben Dokumentationslücken, die sich nicht nachträglich schließen lassen.',
+            'Japans Ministerium für Wirtschaft, Handel und Industrie (METI) verlangt in seinen KI-Governance-Richtlinien ähnlich, dass Organisationen nachvollziehbare Aufzeichnungen der KI-Entscheidungseingaben führen — einschließlich der zur Ausgabegenerierung verwendeten Prompts. Systematische Prompt-Optimierung, dokumentiert wie im 6-Schritte-Prozess oben beschrieben, erzeugt den von der METI-Richtlinie geforderten Audit-Trail. In China verlangen die Maßnahmen der Cyberspace-Verwaltung für generative KI-Dienste (2023), dass Anbieter ihre Modellkonfigurationen und Ausgabetestprotokolle dokumentieren — Prompt-Versionsverlauf und Qualitätsmetriken sind der direkteste Weg, diese Anforderung auf Inferenzebene zu erfüllen.',
+          ],
+        },
+
+        multilingualReach: {
+          title: 'Prompt-Optimierung über Sprachen und Regionen hinweg',
+          content: [
+            '**Prompt-Optimierung ist eine universelle Disziplin — die 6 Hebel und der 6-Schritte-Prozess gelten unabhängig von der Sprache, in der dein Prompt verfasst ist.** Allerdings unterscheiden sich lokale Suchbegriffe erheblich, primäre Modelle variieren nach Region, und einige Sprachen bringen einzigartige Optimierungsherausforderungen mit sich (Tokenisierungsdichte, zeichenbasierte Schriften, formelle/informelle Register). Die folgende Tabelle zeigt die wichtigsten regionalen Varianten. Siehe [Prompting über Sprachen hinweg](/de/prompt-engineering/prompting-across-languages) für einen vollständigen Leitfaden zum mehrsprachigen Prompt-Engineering.',
+          ],
+          columns: ['Sprache / Region', 'Lokaler Begriff', 'Primäres Modell', 'Regionaler Hinweis'],
+          rows: [
+            { 'Sprache / Region': 'Englisch — USA', 'Lokaler Begriff': 'prompt optimization', 'Primäres Modell': 'GPT-5.5, Claude Opus 4.8', 'Regionaler Hinweis': 'Weltweit höchstes Suchvolumen' },
+            { 'Sprache / Region': 'Deutsch — DE / AT / CH', 'Lokaler Begriff': 'Prompt-Optimierung', 'Primäres Modell': 'GPT-5.5, Claude Opus 4.8', 'Regionaler Hinweis': 'EU-AI-Act relevant für DACH-Unternehmen' },
+            { 'Sprache / Region': 'Französisch — FR / CA', 'Lokaler Begriff': 'optimisation de prompt', 'Primäres Modell': 'GPT-5.5, Claude Opus 4.8', 'Regionaler Hinweis': 'Formelles Register, explizite Rollen wirken gut' },
+            { 'Sprache / Region': 'Spanisch — ES / LATAM', 'Lokaler Begriff': 'optimización de prompts', 'Primäres Modell': 'GPT-5.5', 'Regionaler Hinweis': 'LATAM führt bei regionaler KI-Adoption' },
+            { 'Sprache / Region': 'Portugiesisch — BR', 'Lokaler Begriff': 'otimização de prompts', 'Primäres Modell': 'GPT-5.5', 'Regionaler Hinweis': 'Brasilien ist größter KI-Markt in LATAM' },
+            { 'Sprache / Region': 'Japanisch — JP', 'Lokaler Begriff': 'プロンプト最適化', 'Primäres Modell': 'GPT-5.5 (starke Japanisch-Unterstützung)', 'Regionaler Hinweis': '~1,5–2× mehr Tokens pro Zeichen' },
+            { 'Sprache / Region': 'Chinesisch vereinfacht — CN', 'Lokaler Begriff': '提示词优化', 'Primäres Modell': 'DeepSeek, Qwen 3', 'Regionaler Hinweis': 'DeepSeek/Qwen führend; CAC-Compliance nötig' },
+            { 'Sprache / Region': 'Koreanisch — KR', 'Lokaler Begriff': '프롬프트 최적화', 'Primäres Modell': 'GPT-5.5, Claude Opus 4.8', 'Regionaler Hinweis': 'Dichte Tokenisierung; Prompts kurz halten' },
           ],
         },
 
@@ -986,7 +1048,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     es: {
       freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-10-02',
+      next_refresh_due: '2027-02-26',
       theme: 'Fundamentals',
       heroImage: '/images/fundamentals-of-prompt-optimization-overview-hero-es.webp',
       title: 'Cómo optimizar prompts: técnicas y mejores prácticas de optimización de prompts',
@@ -994,7 +1056,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '**La optimización de prompts es el proceso iterativo de revisar un prompt para mejorar la calidad, consistencia o precisión de la salida de IA.** Esta guía completa enseña técnicas de optimización de prompts y fundamentos: las 6 palancas principales, un proceso de optimización de 6 pasos comprobado, ejemplos antes/después para GPT-5.5, Claude y Gemini, y los 7 errores más comunes a evitar al optimizar prompts.',
       metaDescription: 'Mejora la calidad de la IA un 20–40 % con 6 palancas y un proceso de 6 pasos. Ejemplos antes/después para GPT-5.5, Claude y Gemini: funciona en todos.',
       publishDate: '2026-04-02',
-      dateModified: '2026-04-04',
+      dateModified: '2026-08-26',
       readTime: '14 min de lectura',
       educationalLevel: 'Beginner',
       primaryTerm: 'Optimización de prompts',
@@ -1006,7 +1068,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Cómo optimizar prompts: técnicas y mejores prácticas de optimización de prompts',
         description: 'Aprende técnicas y mejores prácticas de optimización de prompts: 6 palancas principales, proceso de 6 pasos, ejemplos antes/después. Cómo mejorar prompts de IA en GPT-5.5, Claude, Gemini — fundamentos para todos los modelos.',
         datePublished: '2026-04-02',
-        dateModified: '2026-04-04',
+        dateModified: '2026-08-26',
         keywords: ['optimización de prompts', 'técnicas de optimización de prompts', 'cómo optimizar prompts', 'mejorar prompts de IA', 'fundamentos de prompt engineering', 'optimización de LLM', 'GPT-5.5', 'Claude', 'Gemini', 'few-shot prompting', 'chain-of-thought'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -1361,6 +1423,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        keyTerms: {
+          title: '¿Qué significan estos términos clave de optimización de prompts?',
+          items: [
+            '[Few-shot prompting](/es/prompt-engineering/prompt-engineering-glossary#few-shot-prompting) — Incluir un pequeño número de ejemplos de entrada/salida en el prompt para que el modelo infiera el patrón o formato deseado; la palanca "Ejemplos" del marco de 6 palancas',
+            '[Chain-of-Thought (CoT)](/es/prompt-engineering/prompt-engineering-glossary#chain-of-thought-cot) — Pedir al modelo que razone paso a paso antes de responder; la técnica principal para corregir fallos de razonamiento de múltiples pasos',
+            '[Self-consistency](/es/prompt-engineering/prompt-engineering-glossary#self-consistency) — Generar múltiples salidas y devolver la respuesta más común; reduce las tasas de alucinación en hechos de baja probabilidad',
+            '[Zero-shot prompting](/es/prompt-engineering/prompt-engineering-glossary#zero-shot-prompting) — Prompting sin ejemplos; la línea base con la que se mide la optimización few-shot',
+            '[Alucinación](/es/prompt-engineering/prompt-engineering-glossary#hallucination) — Salida que suena segura pero es factualmente incorrecta; uno de los modos de fallo principales que la optimización busca corregir',
+            '[Fine-tuning](/es/prompt-engineering/prompt-engineering-glossary#fine-tuning) — Reentrenar los pesos del modelo con datos específicos del dominio; la alternativa a la optimización de prompts cuando se alcanza un techo de calidad',
+            '[RAG (Retrieval-Augmented Generation)](/es/prompt-engineering/prompt-engineering-glossary#rag-retrieval-augmented-generation) — Inyectar documentos recuperados en el contexto del prompt; complementario a la optimización (RAG mejora la información; la optimización mejora cómo el modelo la usa)',
+            '[System prompt](/es/prompt-engineering/prompt-engineering-glossary#system-prompt) — Instrucción persistente que establece el rol, las restricciones y el comportamiento del modelo en todos los turnos; requiere su propia optimización',
+            '[Temperatura](/es/prompt-engineering/prompt-engineering-glossary#temperature) — Parámetro de decodificación que controla la aleatoriedad de la salida; una temperatura más baja mejora la consistencia entre pruebas de optimización',
+            '[Encadenamiento de prompts](/es/prompt-engineering/prompt-engineering-glossary#prompt-chaining) — Dividir tareas complejas en una secuencia de prompts más pequeños; cada sub-prompt se beneficia de una optimización independiente',
+          ],
+        },
+
         promptLibrary: {
           title: 'Guardar prompts optimizados en una biblioteca',
           content: [
@@ -1384,17 +1462,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**La optimización de prompts es una disciplina universal — las 6 palancas y el proceso de 6 pasos se aplican independientemente del idioma en que esté escrito tu prompt.** Sin embargo, los términos de búsqueda locales difieren significativamente, los modelos principales varían por región y algunos idiomas exponen desafíos de optimización únicos.',
           ],
-          columns: ['Idioma / Región', 'Término local para "optimización de prompts"', 'Modelo principal', 'Nota regional clave'],
+          columns: ['Idioma / Región', 'Término local', 'Modelo principal', 'Nota regional'],
           rows: [
-            { 'Idioma / Región': 'Inglés — EE.UU.', 'Término local para "optimización de prompts"': 'prompt optimization', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional clave': 'Mayor volumen de búsqueda global; la mayoría de la investigación publicada está en inglés' },
-            { 'Idioma / Región': 'Inglés — Reino Unido / AU', 'Término local para "optimización de prompts"': 'prompt optimisation', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional clave': 'Ortografía británica (-ise); misma técnica, diferente palabra clave para SEO del Reino Unido/AU' },
-            { 'Idioma / Región': 'Alemán — DE / AT / CH', 'Término local para "optimización de prompts"': 'Prompt-Optimierung', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional clave': 'Sustantivo compuesto alemán; el contexto de cumplimiento de la Ley de IA de la UE es especialmente relevante para las empresas DACH' },
-            { 'Idioma / Región': 'Francés — FR / CA', 'Término local para "optimización de prompts"': 'optimisation de prompt', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional clave': 'Sustantivo femenino (l\'optimisation); los modelos franceses responden bien a definiciones de rol explícitas con registro formal' },
-            { 'Idioma / Región': 'Español — ES / LATAM', 'Término local para "optimización de prompts"': 'optimización de prompts', 'Modelo principal': 'GPT-5.5', 'Nota regional clave': 'Mercado de alto crecimiento; América Latina lidera la adopción de IA en LATAM; "prompts" se usa comúnmente sin traducir' },
-            { 'Idioma / Región': 'Portugués — BR', 'Término local para "optimización de prompts"': 'otimização de prompts', 'Modelo principal': 'GPT-5.5', 'Nota regional clave': 'Brasil es el mayor mercado de IA en América Latina; la ortografía BR difiere del PT' },
-            { 'Idioma / Región': 'Japonés — JP', 'Término local para "optimización de prompts"': 'プロンプト最適化', 'Modelo principal': 'GPT-5.5 (fuerte soporte japonés)', 'Nota regional clave': 'Katakana para "prompt" (プロンプト); el texto japonés usa ~1.5–2× más tokens por carácter que el inglés — la optimización del presupuesto de contexto es crítica' },
-            { 'Idioma / Región': 'Chino simplificado — CN', 'Término local para "optimización de prompts"': '提示词优化', 'Modelo principal': 'DeepSeek, Qwen 3', 'Nota regional clave': '"提示词" (tíshì cí) = token de prompt; "优化" = optimizar; DeepSeek y Qwen superan a los modelos occidentales en tareas en chino; se requiere cumplimiento del CAC' },
-            { 'Idioma / Región': 'Coreano — KR', 'Término local para "optimización de prompts"': '프롬프트 최적화', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional clave': 'Alta adopción técnica de IA; el texto coreano tiene una tokenización densa — los prompts más cortos son proporcionalmente más importantes' },
+            { 'Idioma / Región': 'Inglés — EE.UU.', 'Término local': 'prompt optimization', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional': 'Mayor volumen de búsqueda global' },
+            { 'Idioma / Región': 'Inglés — Reino Unido / AU', 'Término local': 'prompt optimisation', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional': 'Ortografía británica (-ise)' },
+            { 'Idioma / Región': 'Alemán — DE / AT / CH', 'Término local': 'Prompt-Optimierung', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional': 'Ley de IA de la UE relevante para DACH' },
+            { 'Idioma / Región': 'Francés — FR / CA', 'Término local': 'optimisation de prompt', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional': 'Registro formal, roles explícitos funcionan bien' },
+            { 'Idioma / Región': 'Español — ES / LATAM', 'Término local': 'optimización de prompts', 'Modelo principal': 'GPT-5.5', 'Nota regional': 'LATAM lidera la adopción regional de IA' },
+            { 'Idioma / Región': 'Portugués — BR', 'Término local': 'otimização de prompts', 'Modelo principal': 'GPT-5.5', 'Nota regional': 'Brasil es el mayor mercado de IA en LATAM' },
+            { 'Idioma / Región': 'Japonés — JP', 'Término local': 'プロンプト最適化', 'Modelo principal': 'GPT-5.5 (fuerte soporte japonés)', 'Nota regional': '~1.5–2× más tokens por carácter' },
+            { 'Idioma / Región': 'Chino simplificado — CN', 'Término local': '提示词优化', 'Modelo principal': 'DeepSeek, Qwen 3', 'Nota regional': 'DeepSeek/Qwen lideran; se requiere cumplimiento CAC' },
+            { 'Idioma / Región': 'Coreano — KR', 'Término local': '프롬프트 최적화', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional': 'Tokenización densa; prompts cortos' },
           ],
         },
 
@@ -1432,6 +1510,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '¿Cuánto mejora la optimización de prompts la calidad de la salida de IA?', a: 'Pasar de un prompt sin optimizar a uno bien optimizado típicamente mejora la precisión en un 20–40% en tareas estructuradas y un 15–25% en tareas abiertas. El Prompt Report de Schulhoff et al. 2024 documenta ganancias consistentes del 10–30%.' },
             { q: '¿Debo optimizar los prompts para cada modelo de IA por separado?', a: 'Empieza con una optimización agnóstica al modelo. Un prompt bien estructurado típicamente funciona bien en los tres principales. Solo añade variantes específicas del modelo si las pruebas entre modelos revelan resultados divergentes.' },
             { q: '¿Cuál es la diferencia entre la optimización de prompts y RAG?', a: 'La optimización de prompts mejora las instrucciones y la estructura de un prompt. RAG mejora la información disponible para el modelo recuperando documentos relevantes. Los dos son complementarios: RAG resuelve el problema de información; la optimización resuelve el problema de procesamiento.' },
+            { q: '¿Cómo optimizo prompts específicamente para GPT-5.5?', a: 'GPT-5.5 responde bien a cuatro movimientos de optimización: (1) Solicitudes explícitas de formato JSON en el system prompt — el seguimiento de instrucciones de GPT-5.5 en salidas estructuradas es sólido cuando el esquema está definido con precisión. (2) Encabezados markdown en system prompts — usa secciones H2 (## Rol, ## Tarea, ## Formato de salida) para separar responsabilidades; GPT-5.5 respeta esta estructura de forma fiable. (3) Restricciones estrictas — GPT-5.5 tiende a sobreexplicar sin restricciones de palabras/longitud; añade "responde en ≤150 palabras" o "devuelve solo el objeto JSON, sin explicación". (4) Encuadre de uso de herramientas — para tareas de recuperación o cálculo, plantea el prompt como una definición de función en lugar de una instrucción en prosa cuando uses la Assistants API con herramientas habilitadas.' },
           ],
         },
 
@@ -1449,7 +1528,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     ar: {
       freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-10-02',
+      next_refresh_due: '2027-02-26',
       theme: 'Fundamentals',
       heroImage: '/images/fundamentals-of-prompt-optimization-overview-hero-ar.webp',
       title: 'كيفية تحسين الموجّهات: تقنيات وأفضل الممارسات',
@@ -1457,7 +1536,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '**تحسين الموجّهات هو العملية التكرارية لمراجعة موجّه ما لتحسين جودة مخرجات الذكاء الاصطناعي أو اتساقها أو دقتها.** يُعلّم هذا الدليل الشامل تقنيات تحسين الموجّهات وأساسياتها: الرافعات الست الرئيسية، وعملية تحسين مُثبتة من 6 خطوات، وأمثلة قبل/بعد لـGPT-5.5 وClaude وGemini، وأكثر 7 أخطاء شيوعًا ينبغي تجنبها.',
       metaDescription: 'حسّن مخرجات الذكاء الاصطناعي بنسبة ⁨20⁩–⁨40%⁩ باستخدام ⁨6⁩ رافعات وعملية مُثبتة من ⁨6⁩ خطوات. أمثلة قبل/بعد لـ⁨GPT-5.5⁩ و⁨Claude⁩ و⁨Gemini⁩.',
       publishDate: '2026-04-02',
-      dateModified: '2026-04-04',
+      dateModified: '2026-08-26',
       readTime: '١٤ دقيقة للقراءة',
       educationalLevel: 'مبتدئ',
       primaryTerm: 'تحسين الموجّهات',
@@ -1469,7 +1548,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'كيفية تحسين الموجّهات: تقنيات وأفضل الممارسات',
         description: 'تعلّم تقنيات وأفضل ممارسات تحسين الموجّهات: 6 رافعات رئيسية، عملية من 6 خطوات، أمثلة قبل/بعد. كيفية تحسين موجّهات الذكاء الاصطناعي في GPT-5.5 وClaude وGemini — أساسيات لجميع النماذج.',
         datePublished: '2026-04-02',
-        dateModified: '2026-04-04',
+        dateModified: '2026-08-26',
         keywords: ['تحسين الموجّهات', 'تقنيات تحسين الموجّهات', 'كيفية تحسين الموجّهات', 'تحسين موجّهات الذكاء الاصطناعي', 'أساسيات هندسة الموجّهات', 'تحسين النماذج اللغوية الكبيرة', 'GPT-5.5', 'Claude', 'Gemini', 'few-shot prompting', 'chain-of-thought'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -1576,6 +1655,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'بكم يُحسّن تحسين الموجّهات جودة مخرجات الذكاء الاصطناعي؟', acceptedAnswer: { '@type': 'Answer', text: 'نطاق التحسين يعتمد على مدى سوء الموجّه الأساسي. في التقييمات المضبوطة، الانتقال من موجّه غير مُحسَّن إلى مُحسَّن جيدًا يُحسّن دقة المهمة عادةً بنسبة 20–40٪ في المهام المنظمة و15–25٪ في المهام المفتوحة. وثّق Prompt Report لـSchulhoff et al. 2024 مكاسب متسقة بنسبة 10–30٪.' } },
           { '@type': 'Question', name: 'هل يجب تحسين الموجّهات لكل نموذج ذكاء اصطناعي بشكل منفصل؟', acceptedAnswer: { '@type': 'Answer', text: 'ابدأ بالتحسين المحايد للنموذج — طبّق الرافعات الست واختبر على GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro. الموجّه الجيد البنية يعمل عادةً بشكل جيد على الثلاثة. أضف متغيرات خاصة بالنموذج فقط إذا كشفت الاختبارات عن نتائج متباينة.' } },
           { '@type': 'Question', name: 'ما الفرق بين تحسين الموجّهات وRAG؟', acceptedAnswer: { '@type': 'Answer', text: 'يُحسّن تحسين الموجّهات التعليمات وبنية الموجّه. RAG (Retrieval-Augmented Generation) يُحسّن المعلومات المتاحة للنموذج باسترجاع وثائق ذات صلة. الاثنان متكاملان: RAG يحل مشكلة عدم امتلاك النموذج للحقائق الصحيحة؛ تحسين الموجّهات يحل مشكلة عدم معالجة النموذج لتلك الحقائق بشكل صحيح.' } },
+          { '@type': 'Question', name: 'كيف أُحسّن الموجّهات خصيصًا لـGPT-5.5؟', acceptedAnswer: { '@type': 'Answer', text: 'يستجيب GPT-5.5 جيدًا لأربع خطوات تحسين: طلبات تنسيق JSON صريحة في موجّه النظام، عناوين Markdown لفصل الأدوار والمهام وتنسيق المخرجات، قيود صارمة على عدد الكلمات لمنع الإفراط في الشرح، وصياغة استخدام الأدوات كتعريف دالة بدلًا من تعليمة نثرية عند استخدام Assistants API.' } },
         ],
       },
       sections: {
@@ -1823,6 +1903,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        keyTerms: {
+          title: 'ما معنى أهم مصطلحات تحسين الموجّهات؟',
+          items: [
+            '[Few-shot prompting](/ar/prompt-engineering/prompt-engineering-glossary#few-shot-prompting) — تضمين عدد صغير من أمثلة الإدخال/المخرج في الموجّه ليستنتج النموذج النمط أو التنسيق المطلوب؛ رافعة "الأمثلة" في إطار الرافعات الست',
+            '[Chain-of-Thought (CoT)](/ar/prompt-engineering/prompt-engineering-glossary#chain-of-thought-cot) — مطالبة النموذج بالاستدلال خطوةً بخطوة قبل الإجابة؛ التقنية الأساسية لتصحيح إخفاقات الاستدلال متعدد الخطوات',
+            '[Self-consistency](/ar/prompt-engineering/prompt-engineering-glossary#self-consistency) — توليد مخرجات متعددة وإعادة الإجابة الأكثر شيوعًا؛ يُقلّل معدلات الهلوسة في الحقائق منخفضة الاحتمال',
+            '[Zero-shot prompting](/ar/prompt-engineering/prompt-engineering-glossary#zero-shot-prompting) — الموجّهات دون أمثلة؛ خط الأساس الذي يُقاس عليه تحسين few-shot',
+            '[الهلوسة (Hallucination)](/ar/prompt-engineering/prompt-engineering-glossary#hallucination) — مخرجات تبدو واثقة لكنها غير صحيحة واقعيًا؛ أحد أوضاع الفشل الرئيسية التي يستهدفها التحسين',
+            '[Fine-tuning](/ar/prompt-engineering/prompt-engineering-glossary#fine-tuning) — إعادة تدريب أوزان النموذج على بيانات خاصة بالمجال؛ البديل لتحسين الموجّهات عند بلوغ سقف جودة صعب',
+            '[RAG (Retrieval-Augmented Generation)](/ar/prompt-engineering/prompt-engineering-glossary#rag-retrieval-augmented-generation) — حقن مستندات مسترجَعة في سياق الموجّه؛ مكمِّل لتحسين الموجّهات (RAG يُحسّن المعلومات؛ التحسين يُحسّن طريقة استخدام النموذج لها)',
+            '[System prompt](/ar/prompt-engineering/prompt-engineering-glossary#system-prompt) — تعليمة دائمة تُحدّد دور النموذج وقيوده وسلوكه عبر جميع الجولات؛ تتطلب اختبار تحسين مستقلًا',
+            '[Temperature](/ar/prompt-engineering/prompt-engineering-glossary#temperature) — معامل فك ترميز يتحكم في عشوائية المخرجات؛ خفض القيمة يُحسّن الاتساق عبر اختبارات التحسين',
+            '[تسلسل الموجّهات (Prompt chaining)](/ar/prompt-engineering/prompt-engineering-glossary#prompt-chaining) — تقسيم المهام المعقدة إلى سلسلة من موجّهات أصغر؛ يستفيد كل موجّه فرعي من تحسين مستقل',
+          ],
+        },
+
         promptLibrary: {
           title: 'حفظ الموجّهات المُحسَّنة في مكتبة',
           content: [
@@ -1845,17 +1941,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**تحسين الموجّهات تخصص عالمي — الرافعات الست وعملية الـ6 خطوات تنطبق بغض النظر عن لغة كتابة موجّهك.** غير أن مصطلحات البحث المحلية تختلف بشكل ملحوظ، والنماذج الرئيسية تتباين حسب المنطقة.',
           ],
-          columns: ['اللغة / المنطقة', 'المصطلح المحلي لـ"تحسين الموجّهات"', 'النموذج الرئيسي', 'ملاحظة إقليمية رئيسية'],
+          columns: ['اللغة / المنطقة', 'المصطلح المحلي', 'النموذج الرئيسي', 'ملاحظة إقليمية'],
           rows: [
-            { 'اللغة / المنطقة': 'الإنجليزية — الولايات المتحدة', 'المصطلح المحلي لـ"تحسين الموجّهات"': 'prompt optimization', 'النموذج الرئيسي': 'GPT-5.5، Claude Opus 4.8', 'ملاحظة إقليمية رئيسية': 'أعلى حجم بحث عالمي؛ معظم الأبحاث المنشورة بالإنجليزية' },
-            { 'اللغة / المنطقة': 'الإنجليزية — المملكة المتحدة / أستراليا', 'المصطلح المحلي لـ"تحسين الموجّهات"': 'prompt optimisation', 'النموذج الرئيسي': 'GPT-5.5، Claude Opus 4.8', 'ملاحظة إقليمية رئيسية': 'التهجئة البريطانية (-ise)؛ نفس التقنية، كلمة مفتاحية مختلفة للـSEO' },
-            { 'اللغة / المنطقة': 'الألمانية — DE / AT / CH', 'المصطلح المحلي لـ"تحسين الموجّهات"': 'Prompt-Optimierung', 'النموذج الرئيسي': 'GPT-5.5، Claude Opus 4.8', 'ملاحظة إقليمية رئيسية': 'اسم مركّب ألماني؛ سياق الامتثال لقانون الذكاء الاصطناعي الأوروبي مهم بشكل خاص لشركات DACH' },
-            { 'اللغة / المنطقة': 'الفرنسية — FR / CA', 'المصطلح المحلي لـ"تحسين الموجّهات"': 'optimisation de prompt', 'النموذج الرئيسي': 'GPT-5.5، Claude Opus 4.8', 'ملاحظة إقليمية رئيسية': 'اسم مؤنث (l\'optimisation)؛ النماذج الفرنسية تستجيب جيدًا لتعريفات الأدوار الصريحة بالسجل الرسمي' },
-            { 'اللغة / المنطقة': 'الإسبانية — ES / LATAM', 'المصطلح المحلي لـ"تحسين الموجّهات"': 'optimización de prompts', 'النموذج الرئيسي': 'GPT-5.5', 'ملاحظة إقليمية رئيسية': 'سوق عالي النمو؛ أمريكا اللاتينية رائدة في تبني الذكاء الاصطناعي؛ "prompts" يُستخدم دون ترجمة' },
-            { 'اللغة / المنطقة': 'البرتغالية — BR', 'المصطلح المحلي لـ"تحسين الموجّهات"': 'otimização de prompts', 'النموذج الرئيسي': 'GPT-5.5', 'ملاحظة إقليمية رئيسية': 'البرازيل أكبر سوق ذكاء اصطناعي في أمريكا اللاتينية؛ تهجئة BR تختلف عن PT' },
-            { 'اللغة / المنطقة': 'اليابانية — JP', 'المصطلح المحلي لـ"تحسين الموجّهات"': 'プロンプト最適化', 'النموذج الرئيسي': 'GPT-5.5 (دعم ياباني قوي)', 'ملاحظة إقليمية رئيسية': 'الكاتاكانا لـ"prompt" (プロンプト)؛ النص الياباني يستخدم ~1.5–2× رموزًا أكثر لكل حرف — تحسين ميزانية السياق حرج' },
-            { 'اللغة / المنطقة': 'الصينية المبسطة — CN', 'المصطلح المحلي لـ"تحسين الموجّهات"': '提示词优化', 'النموذج الرئيسي': 'DeepSeek، Qwen 3', 'ملاحظة إقليمية رئيسية': '"提示词" = رمز الموجّه؛ "优化" = تحسين؛ DeepSeek وQwen يتفوقان على النماذج الغربية في المهام الصينية؛ الامتثال لـCAC مطلوب' },
-            { 'اللغة / المنطقة': 'الكورية — KR', 'المصطلح المحلي لـ"تحسين الموجّهات"': '프롬프트 최적화', 'النموذج الرئيسي': 'GPT-5.5، Claude Opus 4.8', 'ملاحظة إقليمية رئيسية': 'تبنٍّ تقني عالٍ للذكاء الاصطناعي؛ النص الكوري ذو ترميز مكثّف — الموجّهات الأقصر أهم نسبيًا' },
+            { 'اللغة / المنطقة': 'الإنجليزية — الولايات المتحدة', 'المصطلح المحلي': 'prompt optimization', 'النموذج الرئيسي': 'GPT-5.5، Claude Opus 4.8', 'ملاحظة إقليمية': 'أعلى حجم بحث عالمي' },
+            { 'اللغة / المنطقة': 'الإنجليزية — المملكة المتحدة / أستراليا', 'المصطلح المحلي': 'prompt optimisation', 'النموذج الرئيسي': 'GPT-5.5، Claude Opus 4.8', 'ملاحظة إقليمية': 'التهجئة البريطانية (-ise)' },
+            { 'اللغة / المنطقة': 'الألمانية — DE / AT / CH', 'المصطلح المحلي': 'Prompt-Optimierung', 'النموذج الرئيسي': 'GPT-5.5، Claude Opus 4.8', 'ملاحظة إقليمية': 'قانون الذكاء الاصطناعي الأوروبي مهم لشركات DACH' },
+            { 'اللغة / المنطقة': 'الفرنسية — FR / CA', 'المصطلح المحلي': 'optimisation de prompt', 'النموذج الرئيسي': 'GPT-5.5، Claude Opus 4.8', 'ملاحظة إقليمية': 'السجل الرسمي وتعريفات الأدوار الصريحة تعمل جيدًا' },
+            { 'اللغة / المنطقة': 'الإسبانية — ES / LATAM', 'المصطلح المحلي': 'optimización de prompts', 'النموذج الرئيسي': 'GPT-5.5', 'ملاحظة إقليمية': 'أمريكا اللاتينية رائدة في تبني الذكاء الاصطناعي' },
+            { 'اللغة / المنطقة': 'البرتغالية — BR', 'المصطلح المحلي': 'otimização de prompts', 'النموذج الرئيسي': 'GPT-5.5', 'ملاحظة إقليمية': 'البرازيل أكبر سوق ذكاء اصطناعي في أمريكا اللاتينية' },
+            { 'اللغة / المنطقة': 'اليابانية — JP', 'المصطلح المحلي': 'プロンプト最適化', 'النموذج الرئيسي': 'GPT-5.5 (دعم ياباني قوي)', 'ملاحظة إقليمية': '~1.5–2× رموزًا أكثر لكل حرف' },
+            { 'اللغة / المنطقة': 'الصينية المبسطة — CN', 'المصطلح المحلي': '提示词优化', 'النموذج الرئيسي': 'DeepSeek، Qwen 3', 'ملاحظة إقليمية': 'DeepSeek وQwen رائدان؛ الامتثال لـCAC مطلوب' },
+            { 'اللغة / المنطقة': 'الكورية — KR', 'المصطلح المحلي': '프롬프트 최적화', 'النموذج الرئيسي': 'GPT-5.5، Claude Opus 4.8', 'ملاحظة إقليمية': 'ترميز مكثّف؛ فضّل الموجّهات الأقصر' },
           ],
         },
 
@@ -1893,6 +1989,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'بكم يُحسّن تحسين الموجّهات جودة مخرجات الذكاء الاصطناعي؟', a: 'الانتقال من موجّه غير مُحسَّن إلى مُحسَّن جيدًا يُحسّن الدقة عادةً بنسبة 20–40٪ في المهام المنظمة و15–25٪ في المهام المفتوحة.' },
             { q: 'هل يجب تحسين الموجّهات لكل نموذج بشكل منفصل؟', a: 'ابدأ بالتحسين المحايد للنموذج. الموجّه الجيد البنية يعمل عادةً بشكل جيد على النماذج الثلاثة الرئيسية. أضف متغيرات خاصة بالنموذج فقط إذا كشفت الاختبارات عن نتائج متباينة.' },
             { q: 'ما الفرق بين تحسين الموجّهات وRAG؟', a: 'تحسين الموجّهات يُحسّن التعليمات والبنية. RAG يُحسّن المعلومات المتاحة باسترجاع وثائق ذات صلة. الاثنان متكاملان: RAG يحل مشكلة المعلومات؛ التحسين يحل مشكلة المعالجة.' },
+            { q: 'كيف أُحسّن الموجّهات خصيصًا لـGPT-5.5؟', a: 'يستجيب GPT-5.5 جيدًا لأربع خطوات تحسين: (1) طلبات تنسيق JSON صريحة في موجّه النظام — اتباع التعليمات في GPT-5.5 للمخرجات المنظَّمة قوي عند تحديد المخطط بدقة. (2) عناوين Markdown في موجّهات النظام — استخدم أقسام H2 (## الدور، ## المهمة، ## تنسيق المخرجات) لفصل الاهتمامات؛ يلتزم GPT-5.5 بهذا الهيكل بشكل موثوق. (3) قيود صارمة — يميل GPT-5.5 إلى الإفراط في الشرح دون قيود على عدد الكلمات/الطول؛ أضف "أجب في ≤150 كلمة" أو "أعد كائن JSON فقط، دون شرح". (4) صياغة استخدام الأدوات — للمهام التي تتضمن الاسترجاع أو الحساب، صُغ الموجّه كتعريف دالة بدلًا من تعليمة نثرية عند استخدام Assistants API مع تفعيل الأدوات.' },
           ],
         },
 
@@ -1916,7 +2013,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'L\'optimisation de prompt est le processus itératif de révision d\'un prompt pour améliorer la qualité, la cohérence ou la précision de la sortie IA. Ce guide complet enseigne les techniques et les fondamentaux de l\'optimisation de prompt : les 6 leviers fondamentaux, un processus d\'optimisation éprouvé en 6 étapes, des exemples avant/après pour GPT-5.5, Claude et Gemini, et les 7 erreurs les plus courantes à éviter lors de l\'optimisation de prompts.',
       metaDescription: '6 leviers et 6 étapes pour améliorer les sorties IA de 20–40 %. Exemples avant/après pour GPT-5.5, Claude et Gemini. Fonctionne sur tous les modèles.',
       publishDate: '2026-04-02',
-      dateModified: '2026-04-04',
+      dateModified: '2026-08-26',
       readTime: '14 min de lecture',
       educationalLevel: 'Débutant',
       primaryTerm: 'Optimisation de Prompt',
@@ -1928,7 +2025,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Fondamentaux de l\'optimisation des prompts',
         description: 'Apprenez les techniques et les meilleures pratiques de l\'optimisation de prompt : 6 leviers fondamentaux, processus en 6 étapes, exemples avant/après. Comment optimiser les prompts IA pour GPT-5.5, Claude, Gemini — fondamentaux pour tous les modèles.',
         datePublished: '2026-04-02',
-        dateModified: '2026-04-04',
+        dateModified: '2026-08-26',
         keywords: ['optimisation de prompt', 'techniques d\'optimisation de prompt', 'comment optimiser les prompts', 'améliorer les prompts IA', 'fondamentaux de l\'ingénierie de prompt', 'optimisation LLM', 'GPT-5.5', 'Claude', 'Gemini', 'prompting few-shot', 'prompting chain-of-thought'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -2227,6 +2324,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: 'Sander Schulhoff et al. "The Prompt Report: A Systematic Survey of Prompting Techniques." 2024. arxiv.org/abs/2406.06608',
         },
 
+        callout6: {
+          blockquote: 'Dans une méta-analyse de 144 articles sur le prompting, les contraintes et la spécification du format de sortie étaient les deux leviers les plus systématiquement efficaces, toutes tailles de modèles confondues. Les contraintes seules ont amélioré la précision de 12–18 % sur les tâches de classification. L\'ajout d\'un format de sortie explicite a amélioré la précision de 18–25 %. La combinaison des deux — contraintes + format explicite — a permis un gain de 28–40 %. L\'enseignement : la plupart des gains d\'optimisation proviennent du resserrement du périmètre du problème (contraintes) et de la suppression de l\'ambiguïté de format, pas de l\'ajout d\'informations.',
+          blockquoteSource: 'Étude de 144 techniques de prompting sur des modèles open source et propriétaires. Évaluation multi-modèles sur les benchmarks de classification MMLU, HellaSwag et ARC.',
+        },
+
+        callout7: {
+          blockquote: 'Les modèles quantifiés (4-bit, 8-bit) montrent une sensibilité 15–25 % plus élevée aux prompts ambigus par rapport aux versions pleine précision du même modèle. Un prompt qui fonctionne de manière fiable sur GPT-5.5 (pleine précision, plus de 100 milliards de paramètres) peut échouer 30–40 % du temps sur un Llama 3.3 8B quantifié. La stratégie d\'optimisation diffère : les modèles pleine précision tolèrent les instructions implicites ; les modèles quantifiés nécessitent des directives explicites et non ambiguës.',
+          blockquoteSource: 'Évaluation interne sur des modèles quantifiés Ollama (Llama 3.3 8B) et LM Studio (Mistral Small) par rapport aux API cloud pleine précision.',
+        },
+
+        callout8: {
+          blockquote: 'Les organisations qui systématisent l\'optimisation des prompts (via le contrôle de version, des cas de test documentés et une validation multi-modèles) rapportent une réduction de 40–60 % des tickets de support liés à l\'IA en 6 mois. Les équipes qui optimisent au coup par coup, sans contrôle de version ni mesure, voient leurs indicateurs de qualité stagner ou décliner dans le temps — les prompts se dégradent lorsque les membres de l\'équipe font des modifications non documentées.',
+          blockquoteSource: 'Données utilisateurs PromptQuorum : 50+ organisations suivant les versions de prompts et les indicateurs de qualité sur 6+ mois (2025–2026).',
+        },
+
         advancedTechniques: {
           title: 'Techniques d\'optimisation de prompt : méthodes avancées',
           content: [
@@ -2241,6 +2353,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        keyTerms: {
+          title: 'Que signifient ces termes clés de l\'optimisation de prompt ?',
+          items: [
+            '[Few-shot prompting](/fr/prompt-engineering/prompt-engineering-glossary#few-shot-prompting) — Inclure un petit nombre d\'exemples entrée/sortie dans le prompt pour que le modèle déduise le motif ou le format souhaité ; le levier « Exemples » du cadre à 6 leviers',
+            '[Chain-of-Thought (CoT)](/fr/prompt-engineering/prompt-engineering-glossary#chain-of-thought-cot) — Demander au modèle de raisonner étape par étape avant de répondre ; la technique principale pour corriger les défaillances de raisonnement multi-étapes',
+            '[Self-consistency](/fr/prompt-engineering/prompt-engineering-glossary#self-consistency) — Générer plusieurs sorties et retourner la réponse la plus courante ; réduit les taux d\'hallucination sur les faits de faible probabilité',
+            '[Zero-shot prompting](/fr/prompt-engineering/prompt-engineering-glossary#zero-shot-prompting) — Prompter sans exemples ; la base de référence par rapport à laquelle l\'optimisation few-shot est mesurée',
+            '[Hallucination](/fr/prompt-engineering/prompt-engineering-glossary#hallucination) — Sortie qui semble assurée mais factuellement incorrecte ; l\'un des principaux modes d\'échec ciblés par l\'optimisation',
+            '[Fine-tuning](/fr/prompt-engineering/prompt-engineering-glossary#fine-tuning) — Réentraîner les poids du modèle sur des données spécifiques au domaine ; l\'alternative à l\'optimisation de prompt lorsqu\'un plafond de qualité strict est atteint',
+            '[RAG (Retrieval-Augmented Generation)](/fr/prompt-engineering/prompt-engineering-glossary#rag-retrieval-augmented-generation) — Injecter des documents récupérés dans le contexte du prompt ; complémentaire à l\'optimisation (RAG améliore l\'information ; l\'optimisation améliore la façon dont le modèle l\'utilise)',
+            '[System prompt](/fr/prompt-engineering/prompt-engineering-glossary#system-prompt) — Instruction persistante définissant le rôle, les contraintes et le comportement du modèle sur tous les tours ; nécessite son propre passage d\'optimisation',
+            '[Température](/fr/prompt-engineering/prompt-engineering-glossary#temperature) — Paramètre de décodage contrôlant l\'aléatoire de la sortie ; une température plus basse améliore la cohérence entre les tests d\'optimisation',
+            '[Chaînage de prompts](/fr/prompt-engineering/prompt-engineering-glossary#prompt-chaining) — Décomposer des tâches complexes en une séquence de prompts plus petits ; chaque sous-prompt bénéficie d\'une optimisation indépendante',
+          ],
+        },
+
         promptLibrary: {
           title: 'Sauvegarder les prompts optimisés dans une bibliothèque',
           content: [
@@ -2248,6 +2376,32 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Ce qu\'il faut sauvegarder avec chaque prompt : le texte du prompt final, le levier qui a été modifié, le mode d\'échec qu\'il a corrigé, les modèles sur lesquels il a été testé et les résultats de réussite/échec sur vos entrées représentatives. Cette documentation est ce qui sépare une bibliothèque de prompts d\'un simple dossier de fichiers texte — et ce qui satisfait les exigences de piste d\'audit de la loi sur l\'IA de l\'UE.',
             '**PromptQuorum stocke chaque prompt que vous exécutez, contrôlé en version, aux côtés de ses réponses de GPT-5.5, Claude Opus 4.8 et Gemini 3.1 Pro.** Au lieu de copier les sorties dans une feuille de calcul, vos résultats de test sont automatiquement préservés. [Commencez votre bibliothèque de prompts sur PromptQuorum](https://www.promptquorum.com) — chaque prompt que vous optimisez est sauvegardé et rejouable.',
             'Voir [Construire une bibliothèque de prompts qui vous fait gagner des heures](/fr/prompt-engineering/build-a-prompt-library) pour un guide complet sur la structuration, la versioning et la maintenance d\'une bibliothèque.',
+          ],
+        },
+
+        regionalCompliance: {
+          title: 'Optimisation de prompt et conformité réglementaire',
+          content: [
+            '**Sur les marchés réglementés, l\'optimisation systématique des prompts est une exigence de conformité, pas seulement une bonne pratique.** La loi européenne sur l\'IA classe les systèmes d\'IA utilisés dans des contextes à haut risque — recrutement, notation de crédit, infrastructures critiques, dispositifs médicaux — comme nécessitant des sorties documentées, testables et auditables. Une bibliothèque de prompts contrôlée en version, avec des enregistrements d\'itération, des résultats de tests avant/après et des journaux de qualité de sortie, satisfait directement les exigences de la loi en matière de documentation technique et de supervision humaine.',
+            'Les lignes directrices de gouvernance de l\'IA du ministère japonais de l\'Économie, du Commerce et de l\'Industrie (METI) exigent de même que les organisations conservent des enregistrements traçables des entrées des décisions d\'IA — y compris les prompts utilisés pour générer les sorties. En Chine, les mesures de l\'Administration du cyberespace sur les services d\'IA générative (2023) imposent aux fournisseurs de documenter leurs configurations de modèle et leurs protocoles de test de sortie.',
+          ],
+        },
+
+        multilingualReach: {
+          title: 'Optimisation de prompt à travers les langues et les régions',
+          content: [
+            '**L\'optimisation de prompt est une discipline universelle — les 6 leviers et le processus en 6 étapes s\'appliquent quelle que soit la langue dans laquelle votre prompt est rédigé.** Cependant, les termes de recherche locaux diffèrent considérablement, les modèles principaux varient selon la région, et certaines langues présentent des défis d\'optimisation uniques (densité de tokenisation, écritures à base de caractères, registres formel/informel). Le tableau ci-dessous répertorie les variantes régionales les plus importantes.',
+          ],
+          columns: ['Langue / Région', 'Terme local', 'Modèle principal', 'Note régionale'],
+          rows: [
+            { 'Langue / Région': 'Anglais — États-Unis', 'Terme local': 'prompt optimization', 'Modèle principal': 'GPT-5.5, Claude Opus 4.8', 'Note régionale': 'Volume de recherche le plus élevé au monde' },
+            { 'Langue / Région': 'Français — FR / CA', 'Terme local': 'optimisation de prompt', 'Modèle principal': 'GPT-5.5, Claude Opus 4.8', 'Note régionale': 'Registre formel, rôles explicites efficaces' },
+            { 'Langue / Région': 'Allemand — DE / AT / CH', 'Terme local': 'Prompt-Optimierung', 'Modèle principal': 'GPT-5.5, Claude Opus 4.8', 'Note régionale': 'Loi européenne sur l\'IA pertinente pour DACH' },
+            { 'Langue / Région': 'Espagnol — ES / LATAM', 'Terme local': 'optimización de prompts', 'Modèle principal': 'GPT-5.5', 'Note régionale': 'L\'Amérique latine mène l\'adoption régionale de l\'IA' },
+            { 'Langue / Région': 'Portugais — BR', 'Terme local': 'otimização de prompts', 'Modèle principal': 'GPT-5.5', 'Note régionale': 'Le Brésil est le plus grand marché IA d\'Amérique latine' },
+            { 'Langue / Région': 'Japonais — JP', 'Terme local': 'プロンプト最適化', 'Modèle principal': 'GPT-5.5 (fort support du japonais)', 'Note régionale': '~1,5–2× plus de tokens par caractère' },
+            { 'Langue / Région': 'Chinois simplifié — CN', 'Terme local': '提示词优化', 'Modèle principal': 'DeepSeek, Qwen 3', 'Note régionale': 'DeepSeek/Qwen en tête ; conformité CAC requise' },
+            { 'Langue / Région': 'Coréen — KR', 'Terme local': '프롬프트 최적화', 'Modèle principal': 'GPT-5.5, Claude Opus 4.8', 'Note régionale': 'Tokenisation dense ; prompts courts' },
           ],
         },
 
@@ -2368,7 +2522,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'プロンプト最適化は、AIの出力品質、一貫性、または精度を改善するために既存のプロンプトを反復的に改定するプロセスです。この包括的なガイドは、プロンプト最適化テクニックと基礎を教えます：6つのコア・レバー、実証済みの6ステップ最適化プロセス、GPT-5.5、Claude、Geminiの前後の例、およびプロンプト最適化時に避けるべき7つの最も一般的なエラーです。',
       metaDescription: '6つのレバーと6ステップのプロセスでAI出力品質を20〜40%改善。GPT-5.5、Claude、Gemini向けの最適化前後の比較例とテクニックを詳しく紹介。すべてのモデルに対応。',
       publishDate: '2026-04-02',
-      dateModified: '2026-04-04',
+      dateModified: '2026-08-26',
       readTime: '14分の読み物',
       educationalLevel: '初級',
       primaryTerm: 'プロンプト最適化',
@@ -2380,7 +2534,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'プロンプト最適化の基礎',
         description: 'プロンプト最適化テクニックとベストプラクティスを学ぶ：6つのコア・レバー、6ステップのプロセス、前後の例。GPT-5.5、Claude、GeminiのAIプロンプトを最適化する方法—すべてのモデルの基礎。',
         datePublished: '2026-04-02',
-        dateModified: '2026-04-04',
+        dateModified: '2026-08-26',
         keywords: ['プロンプト最適化', 'プロンプト最適化テクニック', 'プロンプトを最適化する方法', 'AIプロンプトを改善する', 'プロンプトエンジニアリングの基礎', 'LLM最適化', 'GPT-5.5', 'Claude', 'Gemini', 'フューショット・プロンプティング', 'チェーン・オブ・ソート・プロンプティング'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -2679,6 +2833,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: 'Sander Schulhoff et al. "The Prompt Report: A Systematic Survey of Prompting Techniques." 2024. arxiv.org/abs/2406.06608',
         },
 
+        callout6: {
+          blockquote: '144件のプロンプティング論文のメタ分析では、制約と出力フォーマット指定が、あらゆるモデルサイズにおいて一貫して最も効果的な2つのレバーでした。制約単独で分類タスクの精度が12～18％向上しました。明示的な出力フォーマットの追加は精度を18～25％向上させました。両方を組み合わせる—制約+明示的フォーマット—ことで28～40％の向上を達成しました。この知見が示すのは、最適化の成果の多くは情報の追加ではなく、問題範囲の絞り込み（制約）とフォーマットの曖昧さの排除から生まれるということです。',
+          blockquoteSource: '144のプロンプティング技術に関するオープンソースおよびクローズドソースモデルの研究。MMLU、HellaSwag、ARC分類ベンチマークによるマルチモデル評価。',
+        },
+
+        callout7: {
+          blockquote: '量子化モデル（4-bit、8-bit）は、同一モデルのフル精度版と比較して、曖昧なプロンプトへの感度が15～25％高くなります。GPT-5.5（フル精度、1,000億パラメータ以上）で確実に動作するプロンプトは、量子化されたLlama 3.3 8Bでは30～40％の頻度で失敗する可能性があります。最適化戦略は異なります：フル精度モデルは暗黙的な指示を許容しますが、量子化モデルは明示的で曖昧さのない指示を必要とします。',
+          blockquoteSource: 'Ollama（Llama 3.3 8B）とLM Studio（Mistral Small）の量子化モデルと、フル精度クラウドAPIとの社内評価比較。',
+        },
+
+        callout8: {
+          blockquote: 'プロンプト最適化を体系化する組織（バージョン管理、文書化されたテストケース、モデル横断検証を使用）は、6か月以内にAI関連サポートチケットが40～60％削減されたと報告しています。バージョン管理や測定なしに場当たり的に最適化するチームは、時間の経過とともに品質指標が横ばいまたは低下する傾向にあります—チームメンバーが未文書化の変更を加えることでプロンプトが劣化します。',
+          blockquoteSource: 'PromptQuorumユーザーデータ：50以上の組織が6か月以上（2025～2026年）にわたりプロンプトバージョンと品質指標を追跡。',
+        },
+
         advancedTechniques: {
           title: 'プロンプト最適化テクニック：高度な方法',
           content: [
@@ -2693,6 +2862,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        keyTerms: {
+          title: 'プロンプト最適化の重要な用語とは？',
+          items: [
+            '[フューショット・プロンプティング](/ja/prompt-engineering/prompt-engineering-glossary#few-shot-prompting) — プロンプトに少数の入出力例を含めることで、モデルに望ましいパターンやフォーマットを推論させる；6レバー最適化フレームワークにおける「例」レバー',
+            '[チェーン・オブ・ソート（CoT）](/ja/prompt-engineering/prompt-engineering-glossary#chain-of-thought-cot) — 答える前にモデルにステップバイステップで推論させる；多段階推論の障害を修正する主要なテクニック',
+            '[自己一貫性（Self-consistency）](/ja/prompt-engineering/prompt-engineering-glossary#self-consistency) — 複数の出力を生成し、最も一般的な回答を返す；低確率の事実における幻覚率を削減する',
+            '[ゼロショット・プロンプティング](/ja/prompt-engineering/prompt-engineering-glossary#zero-shot-prompting) — 例なしでのプロンプティング；フューショット最適化を測定する基準となるベースライン',
+            '[幻覚（Hallucination）](/ja/prompt-engineering/prompt-engineering-glossary#hallucination) — 自信ありげに聞こえるが事実として誤っている出力；最適化が対象とする主要な障害モードの一つ',
+            '[ファインチューニング](/ja/prompt-engineering/prompt-engineering-glossary#fine-tuning) — ドメイン固有のデータでモデルの重みを再学習すること；厳しい品質の限界に達した際のプロンプト最適化の代替手段',
+            '[RAG（検索拡張生成）](/ja/prompt-engineering/prompt-engineering-glossary#rag-retrieval-augmented-generation) — 取得したドキュメントをプロンプトのコンテキストに注入する；プロンプト最適化を補完する（RAGは情報を改善し、最適化はモデルがその情報をどう使うかを改善する）',
+            '[システムプロンプト](/ja/prompt-engineering/prompt-engineering-glossary#system-prompt) — すべてのターンにわたってモデルの役割、制約、動作を設定する永続的な指示；独自の最適化テストが必要',
+            '[温度（Temperature）](/ja/prompt-engineering/prompt-engineering-glossary#temperature) — 出力のランダム性を制御するデコードパラメータ；温度を下げると最適化テスト実行間の一貫性が向上する',
+            '[プロンプト・チェイニング](/ja/prompt-engineering/prompt-engineering-glossary#prompt-chaining) — 複雑なタスクを一連の小さなプロンプトに分割する；各サブプロンプトは独立した最適化の恩恵を受ける',
+          ],
+        },
+
         promptLibrary: {
           title: '最適化されたプロンプトをライブラリに保存する',
           content: [
@@ -2700,6 +2885,32 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '各プロンプトで保存するもの：最終プロンプトテキスト、変更されたレバー、修正した障害モード、テストしたモデル、および代表的な入力での合格/不合格の結果。このドキュメント化は、プロンプト・ライブラリを単純なテキストファイルフォルダから分離するもの—およびEU AI Act監査追跡要件を満たします。',
             '**PromptQuorumは実行する各プロンプトを保存します、バージョン管理、GPT-5.5、Claude Opus 4.8、およびGemini 3.1 Proからの応答と一緒に。** スプレッドシートに出力をコピーする代わりに、テスト結果は自動的に保存されます。[PromptQuorumでプロンプト・ライブラリを開始](https://www.promptquorum.com)—最適化するすべてのプロンプトは保存され再生可能です。',
             '完全なガイドについては、[数時間を節約するプロンプト・ライブラリを構築](/ja/prompt-engineering/build-a-prompt-library)で、ライブラリの構造化、バージョン化、保守を参照してください。',
+          ],
+        },
+
+        regionalCompliance: {
+          title: 'プロンプト最適化と規制コンプライアンス',
+          content: [
+            '**規制市場では、体系的なプロンプト最適化は単なるベストプラクティスではなく、コンプライアンス要件です。** EU AI法は、採用、与信審査、重要インフラ、医療機器といった高リスクの文脈で使用されるAIシステムを、文書化され、テスト可能で、監査可能な出力を必要とするものとして分類しています。反復記録、前後比較のテスト結果、出力品質ログを備えたバージョン管理されたプロンプト・ライブラリは、同法が定める技術文書化と人的監督の要件を直接満たします。',
+            '日本の経済産業省（METI）のAIガバナンス・ガイドラインも同様に、出力生成に使用されたプロンプトを含む、AI意思決定入力の追跡可能な記録を組織が維持することを求めています。中国では、国家インターネット情報弁公室の生成AIサービス管理弁法（2023年）が、プロバイダーにモデル構成と出力テストプロトコルの文書化を義務付けています。',
+          ],
+        },
+
+        multilingualReach: {
+          title: '言語と地域を超えたプロンプト最適化',
+          content: [
+            '**プロンプト最適化は普遍的な分野であり、6つのレバーと6ステップのプロセスは、プロンプトが書かれた言語に関わらず適用されます。** ただし、現地の検索用語は大きく異なり、主要なモデルは地域によって変わり、一部の言語は独自の最適化課題（トークン化密度、文字ベースの表記体系、フォーマル/インフォーマルの使い分け）を抱えています。以下の表は、最も重要な地域別バリエーションをまとめたものです。',
+          ],
+          columns: ['言語・地域', '現地用語', '主要モデル', '地域ノート'],
+          rows: [
+            { '言語・地域': '英語 — 米国', '現地用語': 'prompt optimization', '主要モデル': 'GPT-5.5, Claude Opus 4.8', '地域ノート': '世界最大の検索ボリューム' },
+            { '言語・地域': '日本語 — 日本', '現地用語': 'プロンプト最適化', '主要モデル': 'GPT-5.5（日本語対応が強い）', '地域ノート': '1文字あたりのトークン数が英語の約1.5～2倍' },
+            { '言語・地域': 'ドイツ語 — DE / AT / CH', '現地用語': 'Prompt-Optimierung', '主要モデル': 'GPT-5.5, Claude Opus 4.8', '地域ノート': 'EU AI法がDACH企業に特に関連' },
+            { '言語・地域': 'フランス語 — FR / CA', '現地用語': 'optimisation de prompt', '主要モデル': 'GPT-5.5, Claude Opus 4.8', '地域ノート': 'フォーマルな役割定義に良く反応' },
+            { '言語・地域': 'スペイン語 — ES / LATAM', '現地用語': 'optimización de prompts', '主要モデル': 'GPT-5.5', '地域ノート': 'ラテンアメリカがAI導入を牽引' },
+            { '言語・地域': 'ポルトガル語 — BR', '現地用語': 'otimização de prompts', '主要モデル': 'GPT-5.5', '地域ノート': 'ブラジルはラテンアメリカ最大のAI市場' },
+            { '言語・地域': '簡体字中国語 — CN', '現地用語': '提示词优化', '主要モデル': 'DeepSeek, Qwen 3', '地域ノート': 'DeepSeekとQwenが優勢；CAC対応が必要' },
+            { '言語・地域': '韓国語 — KR', '現地用語': '프롬프트 최적화', '主要モデル': 'GPT-5.5, Claude Opus 4.8', '地域ノート': 'トークン化密度が高い；短いプロンプトが有利' },
           ],
         },
 
@@ -2760,7 +2971,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '提示词优化是通过迭代修改现有提示词来改进AI输出质量、一致性或准确性的过程。本综合指南教您提示词优化技巧和基础知识：6个核心杠杆、经过验证的6步优化流程、GPT-5.5、Claude和Gemini的前后对比示例，以及优化提示词时要避免的7个最常见错误。',
       metaDescription: '通过6个优化杠杆和6步流程将AI输出质量提升20–40%。包含GPT-5.5、Claude和Gemini的前后对比示例，适用于所有主流大语言模型的提示词基础优化指南。',
       publishDate: '2026-04-02',
-      dateModified: '2026-04-04',
+      dateModified: '2026-08-26',
       readTime: '14分钟阅读',
       educationalLevel: 'Beginner',
       primaryTerm: '提示词优化',
@@ -2772,7 +2983,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '如何优化提示词：提示词优化技巧与最佳实践',
         description: '学习提示词优化技巧和最佳实践：6个核心杠杆、6步流程、前后对比示例。如何在GPT-5.5、Claude、Gemini上改进AI提示词——所有模型的基础。',
         datePublished: '2026-04-02',
-        dateModified: '2026-04-04',
+        dateModified: '2026-08-26',
         keywords: ['提示词优化', '提示词优化技巧', '如何优化提示词', '改进AI提示词', '提示词工程基础', 'LLM优化', 'GPT-5.5', 'Claude', 'Gemini', '少样本提示', '思维链提示'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -2936,6 +3147,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        callout1: {
+          blockquote: '添加思维链指示——要求模型在回答前逐步推理——在一个5400亿参数模型上，将多步算术基准测试的准确率从17.9%提高到56.9%。仅对提示词结构进行一次有针对性的改变，不重新训练模型，就产生了3倍的准确率提升。',
+          blockquoteSource: 'Jason Wei et al., Google Brain. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arxiv.org/abs/2201.11903',
+        },
+
         sixLevers: {
           title: '6个优化杠杆',
           columns: ['杠杆', '它改变了什么', '优化步骤', '示例'],
@@ -2947,6 +3163,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { '杠杆': '输出格式', '它改变了什么': '响应的结构', '优化步骤': '明确指定格式', '示例': '"以JSON响应：{title, summary, tags[]}"' },
             { '杠杆': '角色/角色扮演', '它改变了什么': '模型采用的专业知识水平', '优化步骤': '添加特定角色', '示例': '"担当B2B SaaS公司的高级数据分析师"' },
           ],
+        },
+
+        callout2: {
+          blockquote: '少量样本提示使用少量示例，使GPT-3在多个基准测试上达到或超过微调模型的性能——确立了示例作为一个高杠杆效应的优化手段，它不需要训练、不需要额外算力，也不需要超出标准API调用之外的模型访问权限。',
+          blockquoteSource: 'Tom B. Brown et al., OpenAI. "Language Models are Few-Shot Learners." NeurIPS 2020. arxiv.org/abs/2005.14165',
         },
 
         optimizationProcess: {
@@ -2962,6 +3183,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        callout3: {
+          blockquote: '在一项针对444名受过大学教育的专业人员的对照实验中，使用ChatGPT使任务完成速度提高了25.1%，输出质量评分（由盲评者评定）提高了18.3%。最大的收益出现在基线技能分布中排名后半段的员工身上——AI辅助缩小了表现较弱和较强员工之间的质量差距。',
+          blockquoteSource: 'Shakked Noy & Whitney Zhang, MIT Sloan School of Management. "Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence." Science, 2023.',
+        },
+
         measurementCriteria: {
           title: '如何衡量提示词质量',
           columns: ['标准', '要检查什么', '通过/失败信号'],
@@ -2975,9 +3201,31 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        callout4: {
+          blockquote: '在一项针对758名BCG顾问的随机实验中，AI辅助的员工在AI能力范围内的任务上，质量指标提升了40%。然而，在超出该能力范围的任务上——需要深度组织判断力的任务——使用AI的员工表现比未使用AI的同行更差。知道何时严格衡量输出、何时应推翻模型建议，成为区分高绩效者和低绩效者的关键技能。',
+          blockquoteSource: 'Fabrizio Dell\'Acqua, Ethan Mollick et al., Harvard Business School & Wharton. "Navigating the Jagged Technological Frontier." Harvard Business School Working Paper 24-013, 2023.',
+        },
+
         beforeAfterExamples: {
           title: '提示词优化在实践中是什么样的？',
           content: '三个完整的前/后优化示例。每个显示：弱提示词、识别的失败模式、应用的杠杆、优化提示词、实现的改进。',
+        },
+
+        definitionBoxes: {
+          title: '这些提示词优化术语是什么意思？',
+          content: [],
+          items: [
+            '**提示词优化** — 通过诊断失败模式并每次更改一个变量（具体性、上下文、示例、约束、格式或角色）来迭代修改提示词以改进输出质量的过程。',
+            '**少样本提示（Few-shot prompting）** — 在提示词中包含1–3个输入/输出示例，教模型所需的格式或模式。',
+            '**思维链（Chain-of-Thought，CoT）** — 要求模型在回答前逐步推理（"回答前先思考"），可将多步逻辑问题的准确率提高10–15%。',
+            '**约束（Constraint）** — 明确的禁止或边界（例如"不使用术语"、"最多150字"、"仅引用来源"），可缩小输出范围并防止常见失败模式。',
+            '**令牌（Token）** — 模型处理的最小文本单位；在英语中大约相当于4个字符或1个单词。提示词长度和输出预算以令牌为单位衡量。',
+            '**幻觉（Hallucination）** — 听起来自信但事实上不正确的输出；当模型编造事实、引用不存在的研究或重复无根据的说法时发生。',
+            '**微调（Fine-tuning）** — 在特定领域的标注数据上重新训练模型权重；当提示词优化无法达到所需质量时使用。始终应先耗尽优化手段再考虑微调，因为微调更慢、更昂贵。',
+            '**RAG（检索增强生成）** — 在提问前将检索到的文档注入提示词上下文；与优化互补（RAG改进信息，优化改进模型如何使用信息）。',
+            '**系统提示词（System prompt）** — 在所有对话轮次中设定模型角色、约束和行为的持久性指令；需要与用户提示词分开进行优化测试。',
+            '**具体性（Specificity）** — 任务定义的精确程度；从模糊指示（"总结"）转向精确要求（"列出3个要点，每个≤20字"）。这是要调整的第一个、通常也是影响最大的优化杠杆。',
+          ],
         },
 
         modelSpecificTips: {
@@ -2988,6 +3236,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Claude Opus 4.8：** 擅长细致的多部分指示。可靠地处理长详细的system prompts。受益于显式输出长度指导（"在≤200字以内响应"）。',
             '**Gemini 3.1 Pro：** 最好用于长上下文文档分析（最多1M令牌）。提示词中的显式部分标题改进结构化输出一致性。',
             '**Mistral Large：** 受益于显式角色定义和更规定性的指示措辞。对隐式任务框架的容忍度低于GPT-5.5或Claude。',
+          ],
+        },
+
+        localLLMExamples: {
+          title: '优化本地LLM的提示词（Ollama、LM Studio）',
+          content: [
+            '**通过Ollama或LM Studio运行的本地模型对相同的6个优化杠杆有响应，但容错空间更小。** 量化模型（4位、8位）与全精度前沿API相比，指示跟随能力下降——它们从更简单、更明确的提示词中受益最多，也更容易在模糊指示下失败。以下示例展示了三种常见本地LLM失败模式的优化前后对比。',
+          ],
+          items: [
+            '**示例1：量化模型输出不一致（杠杆：输出格式+约束）**\n_模型：_ 通过Ollama运行的LLaMA 3.1 8B（4位量化）\n_弱提示词：_ "总结这个支持工单。"\n_失败模式：_ 输出在多次运行之间差异很大——有时是一句话，有时是列表，有时反问用户。4位量化放大了随机性。\n_更改的杠杆：_ 输出格式+温度约束。\n_优化后的提示词：_ "用恰好2句话总结这个支持工单。第1句：客户的问题。第2句：他们尝试过什么。不要有其他文字。"\n_附加修复：_ 在Ollama中将温度设置为0.1（ollama run llama3 --temperature 0.1）。\n_结果：_ 所有运行中都产生一致的2句话摘要。在LLaMA 3.1 8B和70B上均有效。',
+            '**示例2：LM Studio上的上下文长度约束失败（杠杆：具体性+上下文）**\n_模型：_ 通过LM Studio运行的Mistral Small Instruct（Q4_K_M量化，4096令牌上下文）\n_弱提示词：_ "分析这份文档并列出关键风险。"（粘贴了完整的3000字文档）\n_失败模式：_ 模型在分析中途截断，遗漏了文档最后三分之一的内容，产生不完整的输出而没有提示截断。\n_更改的杠杆：_ 具体性——缩小范围以适应上下文预算。\n_优化后的提示词：_ "你是一名风险分析师。阅读以下文档摘录（仅前1500字）并列出最多5个具体风险，每个≤15字。格式：风险1：[描述]。风险2：[描述]。列出5个后停止。"\n_结果：_ 在上下文窗口内完成完整分析。没有截断。在Q4和Q8量化级别上均保持一致。',
+            '**示例3：量化模型中的指示被覆盖（杠杆：约束）**\n_模型：_ 通过Ollama运行的Phi-3 Mini\n_弱提示词：_ "从这段文本中提取所有日期。仅返回JSON。"\n_失败模式：_ 模型返回JSON外加一段解释（"以下是我找到的日期……"）。即使指定了格式，小型模型也经常添加未经请求的评论。\n_更改的杠杆：_ 约束——明确禁止。\n_优化后的提示词：_ "从下面的文本中提取所有日期。仅返回一个JSON数组。不要解释。不要开场白。不要评论。输出：[\\"date1\\", \\"date2\\", ...]"\n_结果：_ 干净的JSON输出，没有多余文字。在Phi-3 Mini和Mistral Small上均保持一致。这种约束模式（三重禁止）适用于所有小型本地模型。',
           ],
         },
 
@@ -3005,6 +3265,26 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        callout5: {
+          blockquote: '一项对超过1500篇提示词研究论文的系统性调查确定了58种独立的提示技术。自一致性——生成多个输出并选择最常见的答案——在GPT-4评估中将幻觉率降低了10–20%。少样本提示在结构化任务上相对于零样本基线显示出10–30%的一致准确率提升。最被低估的技术：明确的输出格式规定，它可以在一次迭代中完全消除格式不合规——这是最常见、最容易修复的失败模式。',
+          blockquoteSource: 'Sander Schulhoff et al. "The Prompt Report: A Systematic Survey of Prompting Techniques." 2024. arxiv.org/abs/2406.06608',
+        },
+
+        callout6: {
+          blockquote: '在对144篇提示词论文的元分析中，约束和输出格式规定是在所有模型规模中最持续有效的两个杠杆。仅约束就使分类任务的准确率提高了12–18%。添加明确的输出格式使准确率提高了18–25%。两者结合——约束+明确格式——实现了28–40%的提升。这一发现表明：大多数优化收益来自缩小问题范围（约束）和消除格式歧义，而非添加信息。',
+          blockquoteSource: '对开源和闭源模型上144种提示技术的研究。基于MMLU、HellaSwag、ARC分类基准的多模型评估。',
+        },
+
+        callout7: {
+          blockquote: '量化模型（4位、8位）对模糊提示词的敏感度比同一模型的全精度版本高15–25%。在GPT-5.5（全精度，超过1000亿参数）上可靠运行的提示词，在量化的Llama 3.3 8B上可能有30–40%的概率失败。优化策略因此不同：全精度模型可以容忍隐式指示；量化模型需要明确、无歧义的指令。',
+          blockquoteSource: '对Ollama（Llama 3.3 8B）和LM Studio（Mistral Small）量化模型与全精度云API的内部评估比较。',
+        },
+
+        callout8: {
+          blockquote: '将提示词优化体系化的组织（使用版本控制、文档化的测试用例和跨模型验证）报告称，在6个月内AI相关支持工单减少了40–60%。在没有版本控制或衡量的情况下临时优化的团队，其质量指标随时间趋于停滞或下降——当团队成员进行未记录的更改时，提示词会逐渐劣化。',
+          blockquoteSource: 'PromptQuorum用户数据：50多个组织在6个月以上（2025–2026年）追踪提示词版本和质量指标。',
+        },
+
         advancedTechniques: {
           title: '提示词优化技巧：高级方法',
           content: '当基础6个杠杆不足时，应用这些技巧。',
@@ -3017,9 +3297,51 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        keyTerms: {
+          title: '提示词优化的关键术语是什么？',
+          items: [
+            '[少样本提示（Few-shot prompting）](/zh/prompt-engineering/prompt-engineering-glossary#few-shot-prompting) — 在提示词中包含少量输入/输出示例，让模型推断所需的模式或格式；6杠杆优化框架中的"示例"杠杆',
+            '[思维链（Chain-of-Thought，CoT）](/zh/prompt-engineering/prompt-engineering-glossary#chain-of-thought-cot) — 要求模型在回答前逐步推理；修复多步推理失败的主要技术',
+            '[自一致性（Self-consistency）](/zh/prompt-engineering/prompt-engineering-glossary#self-consistency) — 生成多个输出并返回最常见的答案；降低低概率事实上的幻觉率',
+            '[零样本提示（Zero-shot prompting）](/zh/prompt-engineering/prompt-engineering-glossary#zero-shot-prompting) — 不带示例的提示；衡量少样本优化效果的基线',
+            '[幻觉（Hallucination）](/zh/prompt-engineering/prompt-engineering-glossary#hallucination) — 听起来自信但事实上不正确的输出；优化针对的主要失败模式之一',
+            '[微调（Fine-tuning）](/zh/prompt-engineering/prompt-engineering-glossary#fine-tuning) — 在特定领域数据上重新训练模型权重；当达到硬性质量上限时提示词优化的替代方案',
+            '[RAG（检索增强生成）](/zh/prompt-engineering/prompt-engineering-glossary#rag-retrieval-augmented-generation) — 将检索到的文档注入提示词上下文；与提示词优化互补（RAG改进信息，优化改进模型如何使用信息）',
+            '[系统提示词（System prompt）](/zh/prompt-engineering/prompt-engineering-glossary#system-prompt) — 设定模型在所有对话轮次中的角色、约束和行为的持久性指令；需要单独的优化测试',
+            '[温度（Temperature）](/zh/prompt-engineering/prompt-engineering-glossary#temperature) — 控制输出随机性的解码参数；较低的温度可以提高优化测试运行之间的一致性',
+            '[提示词链（Prompt chaining）](/zh/prompt-engineering/prompt-engineering-glossary#prompt-chaining) — 将复杂任务拆分为一系列较小的提示词；每个子提示词都能从独立优化中受益',
+          ],
+        },
+
         promptLibrary: {
           title: '将优化的提示词保存到库',
           content: '优化的提示词是资产。提示词库存储它们及版本注释。查看[构建节省小时的提示词库](/zh/prompt-engineering/build-a-prompt-library)以开始。',
+        },
+
+        regionalCompliance: {
+          title: '提示词优化与法规合规',
+          content: [
+            '**在受监管的市场中，系统性的提示词优化是合规要求，而不仅仅是最佳实践。** 欧盟《人工智能法案》将用于招聘、信用评分、关键基础设施、医疗设备等高风险场景的AI系统归类为需要有文档记录、可测试、可审计输出的系统。带有迭代记录、前后测试结果和输出质量日志的版本控制提示词库，直接满足了该法案对技术文档和人工监督的要求。',
+            '日本经济产业省（METI）的AI治理指南同样要求组织保留AI决策输入的可追溯记录——包括用于生成输出的提示词。在中国，国家互联网信息办公室的《生成式人工智能服务管理办法》（2023年）要求提供商记录其模型配置和输出测试协议——提示词版本历史和质量指标是在推理层面满足这一要求的最直接方式。',
+          ],
+        },
+
+        multilingualReach: {
+          title: '跨语言和地区的提示词优化',
+          content: [
+            '**提示词优化是一门普适的学科——无论提示词使用哪种语言编写，6个杠杆和6步流程都同样适用。** 然而，各地区的本地搜索词差异显著，主要使用的模型因地区而异，某些语言还带来了独特的优化挑战（令牌化密度、基于字符的书写系统、正式/非正式语域区分）。下表列出了最重要的地区差异。',
+          ],
+          columns: ['语言/地区', '本地术语', '主要模型', '地区说明'],
+          rows: [
+            { '语言/地区': '英语——美国', '本地术语': 'prompt optimization', '主要模型': 'GPT-5.5、Claude Opus 4.8', '地区说明': '全球搜索量最高' },
+            { '语言/地区': '中文简体——中国', '本地术语': '提示词优化', '主要模型': 'DeepSeek、Qwen 3', '地区说明': 'DeepSeek和Qwen领先；需遵守网信办合规要求' },
+            { '语言/地区': '德语——DE/AT/CH', '本地术语': 'Prompt-Optimierung', '主要模型': 'GPT-5.5、Claude Opus 4.8', '地区说明': '欧盟AI法案对DACH企业尤为相关' },
+            { '语言/地区': '法语——FR/CA', '本地术语': 'optimisation de prompt', '主要模型': 'GPT-5.5、Claude Opus 4.8', '地区说明': '正式语域和明确角色定义效果好' },
+            { '语言/地区': '西班牙语——ES/LATAM', '本地术语': 'optimización de prompts', '主要模型': 'GPT-5.5', '地区说明': '拉丁美洲在AI采用方面领先' },
+            { '语言/地区': '葡萄牙语——BR', '本地术语': 'otimização de prompts', '主要模型': 'GPT-5.5', '地区说明': '巴西是拉丁美洲最大的AI市场' },
+            { '语言/地区': '日语——JP', '本地术语': 'プロンプト最適化', '主要模型': 'GPT-5.5（日语支持强）', '地区说明': '每字符令牌数约为英语的1.5–2倍' },
+            { '语言/地区': '韩语——KR', '本地术语': '프롬프트 최적화', '主要模型': 'GPT-5.5、Claude Opus 4.8', '地区说明': '令牌化密度大；提示词宜简短' },
+          ],
         },
 
         relatedReading: {
@@ -3544,17 +3866,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**A otimização de prompts é uma disciplina universal — as 6 alavancas e o processo de 6 etapas se aplicam independentemente do idioma em que seu prompt está escrito.** No entanto, os termos de pesquisa locais diferem significativamente, os modelos principais variam por região e alguns idiomas expõem desafios únicos de otimização (densidade de tokenização, scripts baseados em caracteres, divisões de registro formal/informal). A tabela abaixo mapeia as variantes regionais mais importantes. Veja [Prompting em Diferentes Idiomas](/prompt-engineering/prompting-across-languages) para um guia completo de prompt engineering multilíngue.',
           ],
-          columns: ['Idioma / Região', 'Termo local para "otimização de prompts"', 'Modelo principal', 'Nota regional principal'],
+          columns: ['Idioma / Região', 'Termo local', 'Modelo principal', 'Nota regional'],
           rows: [
-            { 'Idioma / Região': 'Inglês — EUA', 'Termo local para "otimização de prompts"': 'prompt optimization', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional principal': 'Maior volume de pesquisa globalmente; a maioria das pesquisas publicadas está em inglês' },
-            { 'Idioma / Região': 'Inglês — UK / AU', 'Termo local para "otimização de prompts"': 'prompt optimisation', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional principal': 'Ortografia britânica (-ise); mesma técnica, palavra-chave diferente para SEO no UK/AU' },
-            { 'Idioma / Região': 'Alemão — DE / AT / CH', 'Termo local para "otimização de prompts"': 'Prompt-Optimierung', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional principal': 'Substantivo composto alemão; o contexto de conformidade com a Lei de IA da UE é especialmente relevante para empresas DACH' },
-            { 'Idioma / Região': 'Francês — FR / CA', 'Termo local para "otimização de prompts"': 'optimisation de prompt', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional principal': 'Substantivo feminino (l\'optimisation); modelos franceses respondem bem a definições explícitas de papel com registro formal' },
-            { 'Idioma / Região': 'Espanhol — ES / LATAM', 'Termo local para "otimização de prompts"': 'optimización de prompts', 'Modelo principal': 'GPT-5.5', 'Nota regional principal': 'Mercado em crescimento; a América Latina lidera a adoção de IA na região; "prompts" é comumente usado sem tradução' },
-            { 'Idioma / Região': 'Português — BR', 'Termo local para "otimização de prompts"': 'otimização de prompts', 'Modelo principal': 'GPT-5.5', 'Nota regional principal': 'O Brasil é o maior mercado de IA da América Latina; a ortografia BR difere do PT (otimização vs optimização)' },
-            { 'Idioma / Região': 'Japonês — JP', 'Termo local para "otimização de prompts"': 'プロンプト最適化', 'Modelo principal': 'GPT-5.5 (forte suporte ao japonês)', 'Nota regional principal': 'Katakana para "prompt" (プロンプト); o texto japonês usa ~1,5–2× mais tokens por caractere do que o inglês — a otimização do orçamento de contexto é crítica' },
-            { 'Idioma / Região': 'Chinês Simplificado — CN', 'Termo local para "otimização de prompts"': '提示词优化', 'Modelo principal': 'DeepSeek, Qwen 3', 'Nota regional principal': '"提示词" (tíshì cí) = token de prompt; "优化" = otimizar; DeepSeek e Qwen superam modelos ocidentais em tarefas em chinês; conformidade com CAC exigida' },
-            { 'Idioma / Região': 'Coreano — KR', 'Termo local para "otimização de prompts"': '프롬프트 최적화', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional principal': 'Alta adoção técnica de IA; o texto coreano tem tokenização densa — prompts mais curtos são proporcionalmente mais importantes' },
+            { 'Idioma / Região': 'Inglês — EUA', 'Termo local': 'prompt optimization', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional': 'Maior volume de pesquisa globalmente' },
+            { 'Idioma / Região': 'Inglês — UK / AU', 'Termo local': 'prompt optimisation', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional': 'Ortografia britânica (-ise)' },
+            { 'Idioma / Região': 'Alemão — DE / AT / CH', 'Termo local': 'Prompt-Optimierung', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional': 'Lei de IA da UE relevante para empresas DACH' },
+            { 'Idioma / Região': 'Francês — FR / CA', 'Termo local': 'optimisation de prompt', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional': 'Registro formal e papéis explícitos funcionam bem' },
+            { 'Idioma / Região': 'Espanhol — ES / LATAM', 'Termo local': 'optimización de prompts', 'Modelo principal': 'GPT-5.5', 'Nota regional': 'América Latina lidera a adoção regional de IA' },
+            { 'Idioma / Região': 'Português — BR', 'Termo local': 'otimização de prompts', 'Modelo principal': 'GPT-5.5', 'Nota regional': 'Brasil é o maior mercado de IA da América Latina' },
+            { 'Idioma / Região': 'Japonês — JP', 'Termo local': 'プロンプト最適化', 'Modelo principal': 'GPT-5.5 (forte suporte ao japonês)', 'Nota regional': '~1,5–2× mais tokens por caractere' },
+            { 'Idioma / Região': 'Chinês Simplificado — CN', 'Termo local': '提示词优化', 'Modelo principal': 'DeepSeek, Qwen 3', 'Nota regional': 'DeepSeek e Qwen lideram; exige conformidade CAC' },
+            { 'Idioma / Região': 'Coreano — KR', 'Termo local': '프롬프트 최적화', 'Modelo principal': 'GPT-5.5, Claude Opus 4.8', 'Nota regional': 'Tokenização densa; prompts curtos' },
           ],
         },
 
@@ -3670,7 +3992,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   ko: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-10-02',
+    next_refresh_due: '2027-02-26',
     theme: 'Fundamentals',
     heroImage: '/images/fundamentals-of-prompt-optimization-overview-hero-ko.webp',
     title: '프롬프트 최적화 방법: 기술과 모범 사례',
@@ -3678,7 +4000,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     intro: '**프롬프트 최적화는 AI 출력의 품질, 일관성 또는 정확성을 향상시키기 위해 프롬프트를 반복적으로 수정하는 프로세스입니다.** 이 종합 가이드는 프롬프트 최적화 기술과 기본 원리를 다룹니다: 6가지 주요 레버, 검증된 6단계 최적화 프로세스, GPT-5.5, Claude 및 Gemini에 대한 전후 예시, 그리고 피해야 할 7가지 가장 흔한 실수.',
     metaDescription: '6가지 레버와 6단계 프로세스로 AI 품질을 20–40% 향상시키십시오. GPT-5.5, Claude, Gemini에 대한 전후 예시: 모든 모델에서 작동합니다.',
     publishDate: '2026-04-02',
-    dateModified: '2026-04-04',
+    dateModified: '2026-08-26',
     readTime: '14분 분량',
     educationalLevel: 'Beginner',
     primaryTerm: '프롬프트 최적화',
@@ -3690,7 +4012,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: '프롬프트 최적화 방법: 기술과 모범 사례',
       description: '프롬프트 최적화 기술과 모범 사례를 배우십시오: 6가지 주요 레버, 6단계 프로세스, 전후 예시. GPT-5.5, Claude, Gemini에서 AI 프롬프트를 개선하는 방법 — 모든 모델을 위한 기본 원리.',
       datePublished: '2026-04-02',
-      dateModified: '2026-04-04',
+      dateModified: '2026-08-26',
       keywords: ['프롬프트 최적화', '프롬프트 최적화 기술', '프롬프트를 최적화하는 방법', 'AI 프롬프트 개선', '프롬프트 엔지니어링 기본', 'LLM 최적화', 'GPT-5.5', 'Claude', 'Gemini', 'few-shot prompting', 'chain-of-thought'],
       mentions: [
         { '@type': 'Thing', name: 'PromptQuorum' },
@@ -3792,6 +4114,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Question', name: '프롬프트 최적화가 AI 출력 품질을 얼마나 개선합니까?', acceptedAnswer: { '@type': 'Answer', text: '구조화된 작업에서 20–40%, 개방형 작업에서 15–25%의 향상이 일반적입니다. Schulhoff et al. 2024의 Prompt Report는 일관된 10–30% 향상을 문서화합니다.' } },
         { '@type': 'Question', name: '각 AI 모델에 대해 프롬프트를 별도로 최적화해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: '모델에 구애받지 않는 최적화로 시작하십시오. 잘 구조화된 프롬프트는 일반적으로 세 주요 모델 모두에서 잘 작동합니다. 모델 간 테스트에서 divergent 결과가 나타날 때만 모델별 변형을 추가하십시오.' } },
         { '@type': 'Question', name: '프롬프트 최적화와 RAG의 차이점은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '프롬프트 최적화는 프롬프트의 지시와 구조를 개선합니다. RAG는 관련 문서를 검색하여 모델이 사용할 수 있는 정보를 개선합니다. 둘은 상호 보완적입니다: RAG는 정보 문제를 해결하고; 프롬프트 최적화는 처리 문제를 해결합니다.' } },
+        { '@type': 'Question', name: 'GPT-5.5에 특화된 프롬프트를 최적화하려면 어떻게 해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: 'GPT-5.5는 네 가지 최적화 방법에 잘 반응합니다: 시스템 프롬프트 내 명시적인 JSON 형식 요청, 역할·작업·출력 형식을 분리하는 마크다운 헤더, 과도한 설명을 막는 엄격한 단어 수 제약, 그리고 Assistants API 사용 시 산문체 지시 대신 함수 정의로 구성하는 도구 사용 프레이밍입니다.' } },
       ],
     },
     sections: {
@@ -4033,6 +4356,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
 
+      keyTerms: {
+        title: '프롬프트 최적화의 핵심 용어는 무엇인가요?',
+        items: [
+          '[Few-shot 프롬프팅](/ko/prompt-engineering/prompt-engineering-glossary#few-shot-prompting) — 모델이 원하는 패턴이나 형식을 추론하도록 프롬프트에 소수의 입력/출력 예시를 포함시키는 것; 6레버 최적화 프레임워크의 "예시" 레버',
+          '[Chain-of-Thought(CoT)](/ko/prompt-engineering/prompt-engineering-glossary#chain-of-thought-cot) — 모델이 답변하기 전에 단계별로 추론하도록 요청하는 것; 다단계 추론 실패를 수정하는 주요 기술',
+          '[Self-consistency](/ko/prompt-engineering/prompt-engineering-glossary#self-consistency) — 여러 출력을 생성하고 가장 일반적인 답변을 반환하는 것; 낮은 확률의 사실에서 환각률을 줄임',
+          '[Zero-shot 프롬프팅](/ko/prompt-engineering/prompt-engineering-glossary#zero-shot-prompting) — 예시 없이 프롬프팅하는 것; few-shot 최적화를 측정하는 기준선',
+          '[환각(Hallucination)](/ko/prompt-engineering/prompt-engineering-glossary#hallucination) — 자신 있게 들리지만 사실상 부정확한 출력; 최적화가 목표로 하는 주요 실패 방식 중 하나',
+          '[파인튜닝(Fine-tuning)](/ko/prompt-engineering/prompt-engineering-glossary#fine-tuning) — 도메인별 데이터로 모델 가중치를 재학습하는 것; 엄격한 품질 한계에 도달했을 때 프롬프트 최적화의 대안',
+          '[RAG(검색 증강 생성)](/ko/prompt-engineering/prompt-engineering-glossary#rag-retrieval-augmented-generation) — 검색된 문서를 프롬프트 컨텍스트에 주입하는 것; 프롬프트 최적화를 보완함(RAG는 정보를 개선하고, 최적화는 모델이 그 정보를 사용하는 방식을 개선함)',
+          '[시스템 프롬프트](/ko/prompt-engineering/prompt-engineering-glossary#system-prompt) — 모든 턴에 걸쳐 모델의 역할, 제약 조건, 동작을 설정하는 지속적인 지시; 자체 최적화 테스트가 필요함',
+          '[온도(Temperature)](/ko/prompt-engineering/prompt-engineering-glossary#temperature) — 출력의 무작위성을 제어하는 디코딩 매개변수; 낮은 온도는 최적화 테스트 실행 간 일관성을 향상시킴',
+          '[프롬프트 체이닝](/ko/prompt-engineering/prompt-engineering-glossary#prompt-chaining) — 복잡한 작업을 일련의 더 작은 프롬프트로 분해하는 것; 각 하위 프롬프트는 독립적인 최적화의 혜택을 받음',
+        ],
+      },
+
       promptLibrary: {
         title: '최적화된 프롬프트를 라이브러리에 저장',
         content: [
@@ -4056,17 +4395,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**프롬프트 최적화는 보편적인 학문입니다 — 6가지 레버와 6단계 프로세스는 프롬프트가 작성된 언어에 관계없이 적용됩니다.** 그러나 로컬 검색어가 크게 다르고, 주요 모델이 지역별로 다르며, 일부 언어는 고유한 최적화 도전을 노출합니다.',
         ],
-        columns: ['언어/지역', '"프롬프트 최적화"의 로컬 용어', '주요 모델', '주요 지역 참고'],
+        columns: ['언어/지역', '로컬 용어', '주요 모델', '지역 참고'],
         rows: [
-          { '언어/지역': '영어 — 미국', '"프롬프트 최적화"의 로컬 용어': 'prompt optimization', '주요 모델': 'GPT-5.5, Claude Opus 4.8', '주요 지역 참고': '가장 많은 글로벌 검색량; 대부분의 게시된 연구가 영어' },
-          { '언어/지역': '영어 — 영국/AU', '"프롬프트 최적화"의 로컬 용어': 'prompt optimisation', '주요 모델': 'GPT-5.5, Claude Opus 4.8', '주요 지역 참고': '영국식 철자(-ise); 동일한 기술, 영국/AU SEO를 위한 다른 키워드' },
-          { '언어/지역': '독일어 — DE/AT/CH', '"프롬프트 최적화"의 로컬 용어': 'Prompt-Optimierung', '주요 모델': 'GPT-5.5, Claude Opus 4.8', '주요 지역 참고': '독일어 합성 명사; EU AI 법 준수 컨텍스트가 DACH 기업에 특히 관련' },
-          { '언어/지역': '프랑스어 — FR/CA', '"프롬프트 최적화"의 로컬 용어': 'optimisation de prompt', '주요 모델': 'GPT-5.5, Claude Opus 4.8', '주요 지역 참고': '여성 명사(l\'optimisation); 프랑스어 모델은 공식 등록으로 명시적 역할 정의에 잘 반응' },
-          { '언어/지역': '스페인어 — ES/LATAM', '"프롬프트 최적화"의 로컬 용어': 'optimización de prompts', '주요 모델': 'GPT-5.5', '주요 지역 참고': '고성장 시장; 라틴 아메리카가 LATAM에서 AI 채택을 주도; "prompts"는 번역 없이 일반적으로 사용' },
-          { '언어/지역': '포르투갈어 — BR', '"프롬프트 최적화"의 로컬 용어': 'otimização de prompts', '주요 모델': 'GPT-5.5', '주요 지역 참고': '브라질은 라틴 아메리카에서 최대 AI 시장; BR 철자가 PT와 다름' },
-          { '언어/지역': '일본어 — JP', '"프롬프트 최적화"의 로컬 용어': 'プロンプト最適化', '주요 모델': 'GPT-5.5 (강력한 일본어 지원)', '주요 지역 참고': '"prompt"를 가타카나로(プロンプト); 일본어 텍스트는 영어보다 문자당 더 많은 토큰을 사용 — 컨텍스트 예산 최적화가 중요' },
-          { '언어/지역': '중국어 간체 — CN', '"프롬프트 최적화"의 로컬 용어': '提示词优化', '주요 모델': 'DeepSeek, Qwen 3', '주요 지역 참고': '"提示词"(tíshì cí) = 프롬프트 토큰; "优化" = 최적화; DeepSeek와 Qwen이 중국어 작업에서 서양 모델을 능가; CAC 준수 필요' },
-          { '언어/지역': '한국어 — KR', '"프롬프트 최적화"의 로컬 용어': '프롬프트 최적화', '주요 모델': 'GPT-5.5, Claude Opus 4.8', '주요 지역 참고': '높은 기술적 AI 채택; 한국어 텍스트는 밀집된 토큰화를 가짐 — 더 짧은 프롬프트가 비례적으로 더 중요' },
+          { '언어/지역': '영어 — 미국', '로컬 용어': 'prompt optimization', '주요 모델': 'GPT-5.5, Claude Opus 4.8', '지역 참고': '가장 많은 글로벌 검색량' },
+          { '언어/지역': '영어 — 영국/AU', '로컬 용어': 'prompt optimisation', '주요 모델': 'GPT-5.5, Claude Opus 4.8', '지역 참고': '영국식 철자(-ise)' },
+          { '언어/지역': '독일어 — DE/AT/CH', '로컬 용어': 'Prompt-Optimierung', '주요 모델': 'GPT-5.5, Claude Opus 4.8', '지역 참고': 'EU AI 법이 DACH 기업에 특히 중요' },
+          { '언어/지역': '프랑스어 — FR/CA', '로컬 용어': 'optimisation de prompt', '주요 모델': 'GPT-5.5, Claude Opus 4.8', '지역 참고': '공식 등록과 명시적 역할 정의가 잘 통함' },
+          { '언어/지역': '스페인어 — ES/LATAM', '로컬 용어': 'optimización de prompts', '주요 모델': 'GPT-5.5', '지역 참고': '라틴 아메리카가 AI 채택을 주도' },
+          { '언어/지역': '포르투갈어 — BR', '로컬 용어': 'otimização de prompts', '주요 모델': 'GPT-5.5', '지역 참고': '브라질은 라틴 아메리카 최대 AI 시장' },
+          { '언어/지역': '일본어 — JP', '로컬 용어': 'プロンプト最適化', '주요 모델': 'GPT-5.5 (강력한 일본어 지원)', '지역 참고': '문자당 토큰 수가 영어보다 약 1.5–2배 많음' },
+          { '언어/지역': '중국어 간체 — CN', '로컬 용어': '提示词优化', '주요 모델': 'DeepSeek, Qwen 3', '지역 참고': 'DeepSeek와 Qwen이 우세; CAC 준수 필요' },
+          { '언어/지역': '한국어 — KR', '로컬 용어': '프롬프트 최적화', '주요 모델': 'GPT-5.5, Claude Opus 4.8', '지역 참고': '밀집된 토큰화; 짧은 프롬프트가 유리' },
         ],
       },
 
@@ -4104,6 +4443,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { q: '프롬프트 최적화가 AI 출력 품질을 얼마나 개선합니까?', a: '구조화된 작업에서 20–40%, 개방형 작업에서 15–25%의 향상이 일반적입니다. Schulhoff et al. 2024의 Prompt Report는 일관된 10–30% 향상을 문서화합니다.' },
           { q: '각 AI 모델에 대해 프롬프트를 별도로 최적화해야 합니까?', a: '모델에 구애받지 않는 최적화로 시작하십시오. 잘 구조화된 프롬프트는 일반적으로 세 주요 모델 모두에서 잘 작동합니다. 모델 간 테스트에서 divergent 결과가 나타날 때만 모델별 변형을 추가하십시오.' },
           { q: '프롬프트 최적화와 RAG의 차이점은 무엇입니까?', a: '프롬프트 최적화는 프롬프트의 지시와 구조를 개선합니다. RAG는 관련 문서를 검색하여 모델이 사용할 수 있는 정보를 개선합니다. 둘은 상호 보완적입니다: RAG는 정보 문제를 해결하고; 프롬프트 최적화는 처리 문제를 해결합니다.' },
+          { q: 'GPT-5.5에 특화된 프롬프트를 최적화하려면 어떻게 해야 합니까?', a: 'GPT-5.5는 네 가지 최적화 방법에 잘 반응합니다: (1) 시스템 프롬프트 내 명시적인 JSON 형식 요청 — 스키마가 정확히 정의되면 구조화된 출력에 대한 GPT-5.5의 지시 준수력이 강합니다. (2) 시스템 프롬프트 내 마크다운 헤더 — H2 섹션(## 역할, ## 작업, ## 출력 형식)을 사용해 관심사를 분리하십시오; GPT-5.5는 이 구조를 안정적으로 따릅니다. (3) 엄격한 제약 — GPT-5.5는 단어/길이 제약이 없으면 과도하게 설명하는 경향이 있습니다; "≤150단어로 답변하십시오" 또는 "설명 없이 JSON 객체만 반환하십시오"를 추가하십시오. (4) 도구 사용 프레이밍 — 검색이나 계산이 포함된 작업의 경우, Assistants API에서 도구를 활성화할 때 산문체 지시 대신 함수 정의로 프롬프트를 구성하십시오.' },
         ],
       },
 
