@@ -4,7 +4,10 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-02-26',
+    last_full_refresh: '2026-08-26',
+    next_seo_review_due: '2026-10-01',
+    last_seo_review: '2026-08-26',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-mini-pc-for-ollama-server-always-on-overview-hero-en.webp',
     type: 'comparison',
@@ -14,7 +17,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-26',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**The Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) is the best mini PC for an always-on Ollama server in 2026: runs 7B models at 12–18 tok/s CPU-only, draws 25–45 W under load, and fits inside a drawer.**',
     quickAnswerTop: {
@@ -24,7 +27,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         'Minisforum UM890 Pro: best overall — Ryzen 9 8945HS, up to 96 GB DDR5, 25–45 W',
         'AOOSTAR GEM12 Pro OCuLink: best for eGPU — OCuLink port connects RTX 3080/3090',
         'Beelink SER8: best budget — Ryzen 7 8745HS, 32 GB, ~$450',
-        'Apple Mac Mini M4 Pro: best for macOS — 48 GB unified memory, 15–30 W',
+        'Apple Mac Mini M6/M5 Pro: best for macOS — 32 GB (M6, $899) or 64 GB (M5 Pro, $1,699) unified memory, ships Sept 22, 2026',
         'All draw under 50 W at idle — run 24/7 for ~$3–5/month in electricity',
       ],
       updatedDate: '2026-07',
@@ -36,7 +39,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Mini PCs draw 15–45 W vs 200–350 W for desktop GPUs — 24/7 savings matter',
           'UM890 Pro runs 7B models CPU-only at 12–18 tok/s; fine for API server use',
           'AOOSTAR GEM12 Pro + OCuLink eGPU unlocks GPU acceleration without a desktop PC',
-          'Mac Mini M4 Pro: 48 GB unified memory runs 32B models — best macOS option',
+          'Mac Mini M5 Pro: 64 GB unified memory is the ceiling for 30B-class models; base M6 tops out at 32 GB — both ship Sept 22, 2026',
           'Beelink SER8 is the <$400 starting point — 32 GB RAM for 7B and 13B',
         ],
       },
@@ -80,11 +83,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             rank: 4,
-            title: 'Apple Mac Mini M4 Pro — Best for macOS',
-            content: 'The Mac Mini M4 Pro (24-core GPU, 48 GB unified memory, ~$1399) is the only mini PC that runs 32B models at GPU speed out of the box. Ollama on Apple Silicon uses Metal, not CUDA — the 48 GB unified memory loads Qwen3 32B Q4 (~18 GB) and runs at 20–30 tok/s. Power: 18–30 W under Ollama load. Ideal for macOS users who want a silent, always-on home server that doubles as a desk machine. The price premium is real but justified if 32B performance matters.',
+            title: 'Apple Mac Mini M6 / M5 Pro — Best for macOS',
+            content: 'Apple refreshed the Mac Mini lineup on August 25, 2026, replacing the M4 generation. The Mac Mini M6 starts at $899 with up to 32 GB unified memory and 170 GB/s bandwidth. The Mac Mini M5 Pro starts at $1,699 with up to 64 GB unified memory, 307 GB/s bandwidth, and Thunderbolt 5. Both ship September 22, 2026. For an always-on Ollama server, the memory ceiling is what matters: 32 GB (M6) comfortably fits 7B–13B models with headroom for the OS, while 64 GB (M5 Pro) is what you need to load 30B-class models at Q4 without spilling to swap. No independent Ollama benchmarks exist yet for either chip — PromptQuorum has not tested this hardware, and tok/s figures will follow once real-world numbers are available.',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro on Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro' },
-              { label: 'Apple Mac Mini M4 Pro on Apple.com', url: 'https://www.apple.com/shop/buy-mac/mac-mini' },
+              { label: 'Apple Mac Mini M6 on Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M6' },
+              { label: 'Apple Mac Mini on Apple.com (M6 and M5 Pro configs)', url: 'https://www.apple.com/shop/buy-mac/mac-mini' },
             ],
           },
         ],
@@ -96,7 +99,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         rows: [
           { 'Device': 'Minisforum UM890 Pro', 'Avg Load Power': '35 W', 'Monthly Cost (24/7)': '~$3.78/mo' },
           { 'Device': 'Beelink SER8', 'Avg Load Power': '25 W', 'Monthly Cost (24/7)': '~$2.70/mo' },
-          { 'Device': 'Mac Mini M4 Pro', 'Avg Load Power': '25 W', 'Monthly Cost (24/7)': '~$2.70/mo' },
+          { 'Device': 'Mac Mini M6 / M5 Pro', 'Avg Load Power': 'Not yet benchmarked', 'Monthly Cost (24/7)': 'TBD after independent tests' },
           { 'Device': 'Desktop RTX 4060 Ti (comparison)', 'Avg Load Power': '200 W', 'Monthly Cost (24/7)': '~$21.60/mo' },
           { 'Device': 'Cloud API (GPT-5.5-mini, 1M tok/day)', 'Avg Load Power': 'N/A', 'Monthly Cost (24/7)': '~$45–90/mo' },
         ],
@@ -106,7 +109,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Can a mini PC run 13B or larger models at useful speed?',
-            a: 'Yes — with enough RAM. The Minisforum UM890 Pro with 64 GB runs Llama 3.3 13B Q8 entirely in RAM at ~8–12 tok/s CPU-only. With the Radeon 780M iGPU accelerating, Q4 models run at 10–18 tok/s — usable for background summarization or API calls. Interactive chat benefits from at least 12–15 tok/s. For 30B+ models, the Mac Mini M4 Pro (48 GB unified memory) is the only mini PC option under $1500.',
+            a: 'Yes — with enough RAM. The Minisforum UM890 Pro with 64 GB runs Llama 3.3 13B Q8 entirely in RAM at ~8–12 tok/s CPU-only. With the Radeon 780M iGPU accelerating, Q4 models run at 10–18 tok/s — usable for background summarization or API calls. Interactive chat benefits from at least 12–15 tok/s. For 30B+ models, the Mac Mini M5 Pro (64 GB unified memory, from $1,699) has enough headroom — that pushes it above the $1,500 mark. The base Mac Mini M6 ($899, 32 GB max) does not have enough memory for 30B-class models at a useful quant level.',
           },
           {
             q: 'Does Ollama work well as a network server on a mini PC?',
@@ -137,7 +140,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: 'Can a mini PC run 13B or larger models at useful speed?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Yes, with enough RAM. The UM890 Pro with 64 GB runs 13B Q8 at 8–12 tok/s CPU-only, and 10–18 tok/s with the Radeon 780M iGPU. For 30B+, the Mac Mini M4 Pro (48 GB) is the best mini PC option.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes, with enough RAM. The UM890 Pro with 64 GB runs 13B Q8 at 8–12 tok/s CPU-only, and 10–18 tok/s with the Radeon 780M iGPU. For 30B+, the Mac Mini M5 Pro (64 GB, from $1,699) is the best mini PC option; the base M6 (32 GB) is not enough.' },
         },
         {
           '@type': 'Question',
@@ -155,15 +158,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Best overall — Ryzen 9 8945HS, up to 96 GB DDR5, ~$500' },
         { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Best for eGPU — OCuLink port, Ryzen 7 Pro 8845HS, ~$480' },
         { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Best budget — Ryzen 7 8745HS, 32 GB, ~$450' },
-        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'Best macOS — 48 GB unified memory, 32B models, ~$1399' },
+        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: 'Best macOS — 32 GB (M6, $899) or 64 GB (M5 Pro, $1,699), ships Sept 22, 2026' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Best Mini PC for an Always-On Ollama Server (2026)', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'en' },
+    schema: { '@type': 'TechArticle', headline: 'Best Mini PC for an Always-On Ollama Server (2026)', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'en' },
   },
 
   de: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-mini-pc-for-ollama-server-always-on-overview-hero-de.webp',
     type: 'comparison',
@@ -173,7 +176,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-26',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**Der Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) ist 2026 der beste Mini-PC für einen Always-On-Ollama-Server: 7B-Modelle mit 12–18 Tok/s nur per CPU, 25–45 W unter Last und passt in eine Schublade.**',
     quickAnswerTop: {
@@ -183,7 +186,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         'Minisforum UM890 Pro: Bestes Gesamtpaket — Ryzen 9 8945HS, bis 96 GB DDR5, 25–45 W',
         'AOOSTAR GEM12 Pro OCuLink: Beste eGPU-Option — OCuLink-Port für RTX 3080/3090',
         'Beelink SER8: Bestes Budget — Ryzen 7 8745HS, 32 GB, ~420 €',
-        'Apple Mac Mini M4 Pro: Bester macOS-Mini-PC — 48 GB Unified Memory, 15–30 W',
+        'Apple Mac Mini M6/M5 Pro: Bester macOS-Mini-PC — 32 GB (M6, 899 €) oder 64 GB (M5 Pro, 1699 €) Unified Memory, Marktstart 22. September 2026',
         'Alle Mini-PCs verbrauchen unter 50 W im Leerlauf — 24/7-Betrieb für ~3–5 €/Monat Strom',
       ],
       updatedDate: '2026-07',
@@ -195,7 +198,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Mini-PCs verbrauchen 15–45 W statt 200–350 W für Desktop-GPUs — 24/7-Einsparungen sind erheblich',
           'UM890 Pro läuft 7B-Modelle nur per CPU mit 12–18 Tok/s — gut für API-Server',
           'AOOSTAR GEM12 Pro + OCuLink-eGPU ermöglicht GPU-Beschleunigung ohne Desktop-PC',
-          'Mac Mini M4 Pro: 48 GB Unified Memory läuft 32B-Modelle — beste macOS-Option',
+          'Mac Mini M5 Pro: 64 GB Unified Memory ist die Obergrenze für 30B-Modelle; das Basismodell M6 bietet max. 32 GB — beide ab 22. September 2026 lieferbar',
           'Beelink SER8 ist der Einstieg unter 400 € mit 32 GB RAM für 7B und 13B',
         ],
       },
@@ -238,10 +241,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             rank: 4,
-            title: 'Apple Mac Mini M4 Pro — Bester macOS-Mini-PC',
-            content: 'Der Mac Mini M4 Pro (24-Kerne-GPU, 48 GB Unified Memory, ~1399 €) ist der einzige Mini-PC, der 32B-Modelle mit GPU-Geschwindigkeit von Haus aus ausführt. Ollama auf Apple Silicon nutzt Metal — die 48 GB Unified Memory lädt Qwen3 32B Q4 (~18 GB) und läuft mit 20–30 Tok/s. Stromaufnahme: 18–30 W unter Ollama-Last. Ideal für macOS-Nutzer, die einen stillen, dauerhaft laufenden Heimserver möchten.',
+            title: 'Apple Mac Mini M6 / M5 Pro — Bester macOS-Mini-PC',
+            content: 'Apple hat die Mac-Mini-Reihe am 25. August 2026 aufgefrischt und löst damit die M4-Generation ab. Der Mac Mini M6 startet bei 899 € mit bis zu 32 GB Unified Memory und 170 GB/s Bandbreite. Der Mac Mini M5 Pro startet bei 1699 € mit bis zu 64 GB Unified Memory, 307 GB/s Bandbreite und Thunderbolt 5. Beide sind ab dem 22. September 2026 lieferbar. Für einen dauerhaft laufenden Ollama-Server zählt vor allem die Speichergrenze: 32 GB (M6) reichen komfortabel für 7B–13B-Modelle, während 64 GB (M5 Pro) nötig sind, um 30B-Modelle bei Q4 ohne Swap zu laden. Für beide Chips liegen noch keine unabhängigen Ollama-Benchmarks vor — PromptQuorum hat diese Hardware nicht getestet.',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro bei Amazon.de', url: 'https://www.amazon.de/s?k=Mac+Mini+M4+Pro' },
+              { label: 'Apple Mac Mini M6 bei Amazon.de', url: 'https://www.amazon.de/s?k=Mac+Mini+M6' },
+              { label: 'Apple Mac Mini bei Apple.com (M6 und M5 Pro)', url: 'https://www.apple.com/de/shop/buy-mac/mac-mini' },
             ],
           },
         ],
@@ -251,7 +255,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Kann ein Mini-PC 13B- oder größere Modelle in nutzbarer Geschwindigkeit ausführen?',
-            a: 'Ja — mit genug RAM. Der UM890 Pro mit 64 GB läuft Llama 3.3 13B Q8 vollständig im RAM mit ~8–12 Tok/s CPU-only. Mit der Radeon 780M iGPU laufen Q4-Modelle mit 10–18 Tok/s — nutzbar für Hintergrund-Zusammenfassungen oder API-Aufrufe. Für 30B+-Modelle ist der Mac Mini M4 Pro (48 GB Unified Memory) die einzige Mini-PC-Option unter 1500 €.',
+            a: 'Ja — mit genug RAM. Der UM890 Pro mit 64 GB läuft Llama 3.3 13B Q8 vollständig im RAM mit ~8–12 Tok/s CPU-only. Mit der Radeon 780M iGPU laufen Q4-Modelle mit 10–18 Tok/s — nutzbar für Hintergrund-Zusammenfassungen oder API-Aufrufe. Für 30B+-Modelle reicht der Mac Mini M5 Pro (64 GB Unified Memory, ab 1699 €) — damit liegt er über der 1500-€-Marke. Der Basis-M6 (899 €, max. 32 GB) hat für 30B-Modelle nicht genug Speicher.',
           },
           {
             q: 'Funktioniert Ollama gut als Netzwerkserver auf einem Mini-PC?',
@@ -271,7 +275,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: 'Kann ein Mini-PC 13B- oder größere Modelle in nutzbarer Geschwindigkeit ausführen?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Ja, mit genug RAM. UM890 Pro mit 64 GB läuft 13B Q8 bei 8–12 Tok/s CPU-only. Für 30B+ ist der Mac Mini M4 Pro (48 GB) die beste Mini-PC-Option.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Ja, mit genug RAM. UM890 Pro mit 64 GB läuft 13B Q8 bei 8–12 Tok/s CPU-only. Für 30B+ ist der Mac Mini M5 Pro (64 GB, ab 1699 €) die beste Option; der Basis-M6 (32 GB) reicht nicht.' },
         },
       ],
     },
@@ -284,15 +288,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Bestes Gesamtpaket — Ryzen 9 8945HS, bis 96 GB DDR5, ~470 €' },
         { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Beste eGPU-Option — OCuLink-Port, Ryzen 7 Pro 8845HS, ~450 €' },
         { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Bestes Budget — Ryzen 7 8745HS, 32 GB, ~420 €' },
-        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'Bester macOS-Mini-PC — 48 GB Unified Memory, ~1399 €' },
+        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: 'Bester macOS-Mini-PC — 32 GB (M6, 899 €) oder 64 GB (M5 Pro, 1699 €), ab 22. September 2026' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Bester Mini-PC für Ollama-Server im Dauerbetrieb (2026)', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/de/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'Bester Mini-PC für Ollama-Server im Dauerbetrieb (2026)', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/de/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'de' },
   },
 
   fr: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-mini-pc-for-ollama-server-always-on-overview-hero-fr.webp',
     type: 'comparison',
@@ -302,7 +306,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-26',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**Le Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 Go de RAM, iGPU Radeon 780M) est le meilleur mini PC pour un serveur Ollama always-on en 2026 : modèles 7B à 12–18 tok/s en CPU seul, 25–45 W sous charge, tient dans un tiroir.**',
     quickAnswerTop: {
@@ -312,7 +316,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         'Minisforum UM890 Pro : meilleur global — Ryzen 9 8945HS, jusqu\'à 96 Go DDR5, 25–45 W',
         'AOOSTAR GEM12 Pro OCuLink : meilleur pour eGPU — port OCuLink pour RTX 3080/3090',
         'Beelink SER8 : meilleur budget — Ryzen 7 8745HS, 32 Go, ~420 €',
-        'Apple Mac Mini M4 Pro : meilleur macOS — 48 Go de mémoire unifiée, 15–30 W',
+        'Apple Mac Mini M6/M5 Pro : meilleur macOS — 32 Go (M6, 899 €) ou 64 Go (M5 Pro, 1699 €), disponible le 22 septembre 2026',
         'Tous consomment moins de 50 W au repos — fonctionnement 24/7 pour ~3–5 €/mois',
       ],
       updatedDate: '2026-07',
@@ -324,7 +328,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Les mini PC consomment 15–45 W vs 200–350 W pour les GPU de bureau — économies significatives en 24/7',
           'UM890 Pro fait tourner les modèles 7B en CPU seul à 12–18 tok/s — bien pour serveur API',
           'AOOSTAR GEM12 Pro + eGPU OCuLink = accélération GPU sans PC de bureau',
-          'Mac Mini M4 Pro : 48 Go de mémoire unifiée pour les modèles 32B — meilleure option macOS',
+          'Mac Mini M5 Pro : 64 Go de mémoire unifiée, le plafond pour les modèles 30B ; le M6 de base plafonne à 32 Go — les deux sortent le 22 septembre 2026',
           'Beelink SER8 est le point d\'entrée à moins de 400 € avec 32 Go pour 7B et 13B',
         ],
       },
@@ -367,10 +371,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             rank: 4,
-            title: 'Apple Mac Mini M4 Pro — Meilleur pour macOS',
-            content: 'Le Mac Mini M4 Pro (GPU 24 cœurs, 48 Go de mémoire unifiée, ~1399 €) est le seul mini PC à faire tourner les modèles 32B à vitesse GPU de série. Ollama sur Apple Silicon utilise Metal — les 48 Go de mémoire unifiée chargent Qwen3 32B Q4 (~18 Go) à 20–30 tok/s. Consommation : 18–30 W sous Ollama. Idéal pour les utilisateurs macOS qui veulent un serveur maison silencieux.',
+            title: 'Apple Mac Mini M6 / M5 Pro — Meilleur pour macOS',
+            content: 'Apple a renouvelé la gamme Mac Mini le 25 août 2026, remplaçant la génération M4. Le Mac Mini M6 démarre à 899 € avec jusqu\'à 32 Go de mémoire unifiée et 170 Go/s de bande passante. Le Mac Mini M5 Pro démarre à 1699 € avec jusqu\'à 64 Go de mémoire unifiée, 307 Go/s de bande passante et Thunderbolt 5. Les deux sortent le 22 septembre 2026. Pour un serveur Ollama en continu, c\'est le plafond mémoire qui compte : 32 Go (M6) suffisent largement pour les modèles 7B–13B, tandis que 64 Go (M5 Pro) sont nécessaires pour charger des modèles 30B en Q4 sans swap. Aucun benchmark Ollama indépendant n\'existe encore pour ces deux puces — PromptQuorum n\'a pas testé ce matériel.',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Mac+Mini+M4+Pro' },
+              { label: 'Apple Mac Mini M6 sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Mac+Mini+M6' },
+              { label: 'Apple Mac Mini sur Apple.com (configs M6 et M5 Pro)', url: 'https://www.apple.com/fr/shop/buy-mac/mac-mini' },
             ],
           },
         ],
@@ -380,7 +385,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Un mini PC peut-il faire tourner des modèles 13B ou plus à vitesse utile ?',
-            a: 'Oui, avec assez de RAM. L\'UM890 Pro avec 64 Go fait tourner Llama 3.3 13B Q8 entièrement en RAM à ~8–12 tok/s en CPU seul, et 10–18 tok/s avec l\'iGPU Radeon 780M. Pour les modèles 30B+, le Mac Mini M4 Pro (48 Go) est la seule option mini PC sous 1500 €.',
+            a: 'Oui, avec assez de RAM. L\'UM890 Pro avec 64 Go fait tourner Llama 3.3 13B Q8 entièrement en RAM à ~8–12 tok/s en CPU seul, et 10–18 tok/s avec l\'iGPU Radeon 780M. Pour les modèles 30B+, le Mac Mini M5 Pro (64 Go, à partir de 1699 €) a la mémoire nécessaire — il dépasse donc la barre des 1500 €. Le M6 de base (899 €, 32 Go max) n\'a pas assez de mémoire pour les modèles 30B.',
           },
           {
             q: 'Ollama fonctionne-t-il bien comme serveur réseau sur un mini PC ?',
@@ -396,7 +401,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: 'Un mini PC peut-il faire tourner des modèles 13B ou plus à vitesse utile ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Oui, avec assez de RAM. UM890 Pro 64 Go : 13B Q8 à 8–12 tok/s en CPU seul. Pour 30B+, Mac Mini M4 Pro (48 Go) est la seule option mini PC sous 1500 €.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Oui, avec assez de RAM. UM890 Pro 64 Go : 13B Q8 à 8–12 tok/s en CPU seul. Pour 30B+, Mac Mini M5 Pro (64 Go, à partir de 1699 €) est la meilleure option ; le M6 de base (32 Go) ne suffit pas.' },
         },
       ],
     },
@@ -409,15 +414,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Meilleur global — Ryzen 9 8945HS, jusqu\'à 96 Go DDR5, ~470 €' },
         { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Meilleur eGPU — port OCuLink, Ryzen 7 Pro 8845HS, ~450 €' },
         { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Meilleur budget — Ryzen 7 8745HS, 32 Go, ~420 €' },
-        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'Meilleur macOS — 48 Go mémoire unifiée, ~1399 €' },
+        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: 'Meilleur macOS — 32 Go (M6, 899 €) ou 64 Go (M5 Pro, 1699 €), dès le 22 sept. 2026' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Meilleur mini PC pour un serveur Ollama en continu (2026)', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/fr/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'Meilleur mini PC pour un serveur Ollama en continu (2026)', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/fr/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'fr' },
   },
 
   ja: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-mini-pc-for-ollama-server-always-on-overview-hero-ja.webp',
     type: 'comparison',
@@ -427,7 +432,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-26',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**Minisforum UM890 Pro（AMD Ryzen 9 8945HS、32〜96GB RAM、Radeon 780M内蔵GPU）は2026年の常時稼働Ollamaサーバー向けミニPCとして最良の選択です：7BモデルをCPUのみで12〜18トークン/秒、負荷時25〜45W、引き出しに収まるサイズ。**',
     quickAnswerTop: {
@@ -437,7 +442,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         'Minisforum UM890 Pro：総合1位 — Ryzen 9 8945HS、最大96GB DDR5、25〜45W',
         'AOOSTAR GEM12 Pro OCuLink：eGPU最良 — OCuLinkポートでRTX 3080/3090接続可',
         'Beelink SER8：バジェット最良 — Ryzen 7 8745HS、32GB、約4万9000円',
-        'Apple Mac Mini M4 Pro：macOS最良 — 48GB統合メモリ、32Bモデル対応',
+        'Apple Mac Mini M6/M5 Pro：macOS最良 — 32GB（M6、約13万円）または64GB（M5 Pro、約26万円）統合メモリ、2026年9月22日発売',
         'すべてアイドル時50W以下 — 24時間365日稼働で電気代月約600〜1200円',
       ],
       updatedDate: '2026-07',
@@ -449,7 +454,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'ミニPCは15〜45W対デスクトップGPU200〜350W — 24時間稼働のコスト差は大きい',
           'UM890 ProはCPUのみで7Bモデルを12〜18トークン/秒で実行、APIサーバーに最適',
           'AOOSTAR GEM12 Pro + OCuLink eGPUでデスクトップなしにGPU推論を実現',
-          'Mac Mini M4 Pro：48GB統合メモリで32Bモデルを実行可能—最良macOS選択肢',
+          'Mac Mini M5 Pro：64GB統合メモリが30B級モデルの上限—基本モデルM6は最大32GB（両モデルとも2026年9月22日発売）',
           'Beelink SER8は4万円以下の入門機—7Bと13Bに対応する32GB RAM',
         ],
       },
@@ -492,10 +497,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             rank: 4,
-            title: 'Apple Mac Mini M4 Pro — macOS最良',
-            content: 'Mac Mini M4 Pro（24コアGPU、48GB統合メモリ、約18万円）は箱から出してすぐGPUスピードで32Bモデルを動かせる唯一のミニPCです。Apple SiliconのOllamaはMetalを使用—48GB統合メモリがQwen3 32B Q4（約18GB）を20〜30トークン/秒で実行。消費電力：Ollama負荷時18〜30W。静音・常時稼働のホームサーバーを求めるmacOSユーザーに最適。',
+            title: 'Apple Mac Mini M6 / M5 Pro — macOS最良',
+            content: 'Appleは2026年8月25日にMac Miniシリーズを刷新し、M4世代を置き換えました。Mac Mini M6は約13万円から、最大32GB統合メモリ、170GB/s帯域幅。Mac Mini M5 Proは約26万円から、最大64GB統合メモリ、307GB/s帯域幅、Thunderbolt 5対応。両モデルとも2026年9月22日発売。常時稼働Ollamaサーバーではメモリ上限が重要です：32GB（M6）は7B〜13Bモデルに十分な余裕がありますが、30B級モデルをQ4でスワップなしに読み込むには64GB（M5 Pro）が必要です。両チップとも独立系のOllamaベンチマークはまだ存在せず、PromptQuorumはこのハードウェアを検証していません。',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Mac+Mini+M4+Pro' },
+              { label: 'Apple Mac Mini M6 をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Mac+Mini+M6' },
+              { label: 'Apple公式サイトでMac Mini（M6・M5 Pro）を確認', url: 'https://www.apple.com/jp/shop/buy-mac/mac-mini' },
             ],
           },
         ],
@@ -505,7 +511,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'ミニPCで13B以上のモデルを実用的な速度で動かせますか？',
-            a: 'はい、十分なRAMがあれば可能です。64GB搭載のUM890 ProはLlama 3.3 13B Q8をRAMに完全収容し、CPUのみで8〜12トークン/秒、Radeon 780M内蔵GPU使用時は10〜18トークン/秒で動作します。30B以上のモデルには、Mac Mini M4 Pro（48GB統合メモリ）が15万円以下で唯一のミニPC選択肢です。',
+            a: 'はい、十分なRAMがあれば可能です。64GB搭載のUM890 ProはLlama 3.3 13B Q8をRAMに完全収容し、CPUのみで8〜12トークン/秒、Radeon 780M内蔵GPU使用時は10〜18トークン/秒で動作します。30B以上のモデルには、Mac Mini M5 Pro（64GB統合メモリ、約26万円から）にメモリの余裕があります—これは15万円の枠を超えます。基本モデルのM6（約13万円、最大32GB）は30B級モデルには容量不足です。',
           },
           {
             q: 'OllamaはミニPC上でネットワークサーバーとして機能しますか？',
@@ -521,7 +527,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: 'ミニPCで13B以上のモデルを実用的な速度で動かせますか？',
-          acceptedAnswer: { '@type': 'Answer', text: 'はい。64GB搭載UM890 ProはLlama 3.3 13B Q8をCPUのみで8〜12トークン/秒で動作。30B以上にはMac Mini M4 Pro（48GB統合メモリ）が最良選択肢です。' },
+          acceptedAnswer: { '@type': 'Answer', text: 'はい。64GB搭載UM890 ProはLlama 3.3 13B Q8をCPUのみで8〜12トークン/秒で動作。30B以上にはMac Mini M5 Pro（64GB統合メモリ、約26万円から）が最良選択肢です。基本のM6（32GB）は容量不足です。' },
         },
       ],
     },
@@ -534,15 +540,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: '総合1位 — Ryzen 9 8945HS、最大96GB DDR5、約5万4000円' },
         { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'eGPU最良 — OCuLinkポート、Ryzen 7 Pro 8845HS、約5万2000円' },
         { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'バジェット最良 — Ryzen 7 8745HS、32GB、約4万9000円' },
-        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'macOS最良 — 48GB統合メモリ、約18万円' },
+        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: 'macOS最良 — 32GB（M6、約13万円）または64GB（M5 Pro、約26万円）、2026年9月22日発売' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '常時稼働Ollamaサーバー向けミニPC最おすすめ（2026年）', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ja/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: '常時稼働Ollamaサーバー向けミニPC最おすすめ（2026年）', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/ja/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ja' },
   },
 
   es: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-mini-pc-for-ollama-server-always-on-overview-hero-es.webp',
     type: 'comparison',
@@ -552,7 +558,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-26',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**El Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) es el mejor mini PC para servidor Ollama siempre encendido en 2026: ejecuta modelos 7B a 12–18 tok/s solo CPU, consume 25–45 W bajo carga, cabe en un cajón.**',
     quickAnswerTop: {
@@ -562,7 +568,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         'Minisforum UM890 Pro: mejor general — Ryzen 9 8945HS, hasta 96 GB DDR5, 25–45 W',
         'AOOSTAR GEM12 Pro OCuLink: mejor para eGPU — puerto OCuLink conecta RTX 3080/3090',
         'Beelink SER8: mejor presupuesto — Ryzen 7 8745HS, 32 GB, ~$450',
-        'Apple Mac Mini M4 Pro: mejor para macOS — 48 GB memoria unificada, 15–30 W',
+        'Apple Mac Mini M6/M5 Pro: mejor para macOS — 32 GB (M6, $899) o 64 GB (M5 Pro, $1,699), disponible el 22 de septiembre de 2026',
         'Todos consumen menos de 50 W en reposo — funcionamiento 24/7 por ~$3–5/mes en electricidad',
       ],
       updatedDate: '2026-07',
@@ -574,7 +580,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Mini PCs consumen 15–45 W vs 200–350 W para GPUs de escritorio — ahorros 24/7 importan',
           'UM890 Pro ejecuta modelos 7B solo CPU a 12–18 tok/s; ideal para servidor API',
           'AOOSTAR GEM12 Pro + eGPU OCuLink desbloquea aceleración GPU sin PC de escritorio',
-          'Mac Mini M4 Pro: 48 GB memoria unificada ejecuta modelos 32B — mejor opción macOS',
+          'Mac Mini M5 Pro: 64 GB de memoria unificada es el tope para modelos 30B; el M6 base llega hasta 32 GB — ambos disponibles el 22 de septiembre de 2026',
           'Beelink SER8 es el punto de entrada bajo $400 — 32 GB RAM para 7B y 13B',
         ],
       },
@@ -583,7 +589,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Puede un mini PC ejecutar modelos 13B o más grandes a velocidad útil?',
-            a: 'Sí — con suficiente RAM. El UM890 Pro con 64 GB ejecuta Llama 3.3 13B Q8 completamente en RAM a ~8–12 tok/s solo CPU. Con GPU Radeon 780M, modelos Q4 corren a 10–18 tok/s — útil para resumen en fondo o llamadas API. Para modelos 30B+, Mac Mini M4 Pro (48 GB memoria unificada) es la única opción mini PC bajo $1500.',
+            a: 'Sí — con suficiente RAM. El UM890 Pro con 64 GB ejecuta Llama 3.3 13B Q8 completamente en RAM a ~8–12 tok/s solo CPU. Con GPU Radeon 780M, modelos Q4 corren a 10–18 tok/s — útil para resumen en fondo o llamadas API. Para modelos 30B+, el Mac Mini M5 Pro (64 GB memoria unificada, desde $1,699) tiene la memoria necesaria — eso lo pone por encima de los $1,500. El M6 base ($899, 32 GB máx.) no tiene memoria suficiente para modelos 30B.',
           },
           {
             q: '¿Funciona bien Ollama como servidor de red en un mini PC?',
@@ -603,7 +609,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: '¿Puede un mini PC ejecutar modelos 13B o más grandes a velocidad útil?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Sí, con suficiente RAM. UM890 Pro con 64 GB ejecuta 13B Q8 a 8–12 tok/s solo CPU, 10–18 tok/s con Radeon 780M. Para 30B+, Mac Mini M4 Pro (48 GB) es la mejor opción mini PC.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Sí, con suficiente RAM. UM890 Pro con 64 GB ejecuta 13B Q8 a 8–12 tok/s solo CPU, 10–18 tok/s con Radeon 780M. Para 30B+, Mac Mini M5 Pro (64 GB, desde $1,699) es la mejor opción; el M6 base (32 GB) no alcanza.' },
         },
         {
           '@type': 'Question',
@@ -621,14 +627,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Mejor general — Ryzen 9 8945HS, hasta 96 GB DDR5, ~$500' },
         { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Mejor para eGPU — puerto OCuLink, Ryzen 7 Pro 8845HS, ~$480' },
         { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Mejor presupuesto — Ryzen 7 8745HS, 32 GB, ~$450' },
-        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'Mejor macOS — 48 GB memoria unificada, ~$1399' },
+        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: 'Mejor macOS — 32 GB (M6, $899) o 64 GB (M5 Pro, $1,699), desde el 22 sept. 2026' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Mejor Mini PC para Servidor Ollama Always-On 2026', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/es/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'es' },
+    schema: { '@type': 'TechArticle', headline: 'Mejor Mini PC para Servidor Ollama Always-On 2026', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/es/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'es' },
   },
   pt: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-mini-pc-for-ollama-server-always-on-overview-hero-pt.webp',
     type: 'comparison',
@@ -638,7 +644,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-26',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**O Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU) é o melhor mini PC para um servidor Ollama sempre ligado em 2026: executa modelos 7B a 12–18 tok/s somente com CPU, consome 25–45 W sob carga, cabe numa gaveta.**',
     quickAnswerTop: {
@@ -648,7 +654,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         'Minisforum UM890 Pro: melhor geral — Ryzen 9 8945HS, até 96 GB DDR5, 25–45 W',
         'AOOSTAR GEM12 Pro OCuLink: melhor para eGPU — porta OCuLink conecta RTX 3080/3090',
         'Beelink SER8: melhor orçamento — Ryzen 7 8745HS, 32 GB, ~$450',
-        'Apple Mac Mini M4 Pro: melhor para macOS — 48 GB de memória unificada, 15–30 W',
+        'Apple Mac Mini M6/M5 Pro: melhor para macOS — 32 GB (M6, $899) ou 64 GB (M5 Pro, $1.699), disponível em 22 de setembro de 2026',
         'Todos consomem menos de 50 W em repouso — funcionamento 24/7 por ~$3–5/mês em eletricidade',
       ],
       updatedDate: '2026-07',
@@ -660,7 +666,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Mini PCs consomem 15–45 W contra 200–350 W das GPUs de mesa — a economia 24/7 é relevante',
           'UM890 Pro executa modelos 7B somente com CPU a 12–18 tok/s; ideal para uso como servidor de API',
           'AOOSTAR GEM12 Pro + eGPU OCuLink desbloqueia aceleração de GPU sem PC de mesa',
-          'Mac Mini M4 Pro: 48 GB de memória unificada executa modelos 32B — melhor opção macOS',
+          'Mac Mini M5 Pro: 64 GB de memória unificada é o teto para modelos 30B; o M6 base chega a 32 GB — ambos disponíveis em 22 de setembro de 2026',
           'Beelink SER8 é o ponto de entrada abaixo de $400 — 32 GB de RAM para 7B e 13B',
         ],
       },
@@ -669,7 +675,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Um mini PC consegue executar modelos de 13B ou maiores em velocidade útil?',
-            a: 'Sim — com RAM suficiente. O UM890 Pro com 64 GB executa o Llama 3.3 13B Q8 completamente em RAM a ~8–12 tok/s somente com CPU. Com a iGPU Radeon 780M acelerando, modelos Q4 rodam a 10–18 tok/s — útil para resumo em segundo plano ou chamadas de API. Para modelos 30B+, o Mac Mini M4 Pro (48 GB de memória unificada) é a única opção de mini PC abaixo de $1.500.',
+            a: 'Sim — com RAM suficiente. O UM890 Pro com 64 GB executa o Llama 3.3 13B Q8 completamente em RAM a ~8–12 tok/s somente com CPU. Com a iGPU Radeon 780M acelerando, modelos Q4 rodam a 10–18 tok/s — útil para resumo em segundo plano ou chamadas de API. Para modelos 30B+, o Mac Mini M5 Pro (64 GB de memória unificada, a partir de $1.699) tem memória suficiente — o que o coloca acima de $1.500. O M6 básico ($899, 32 GB máx.) não tem memória suficiente para modelos 30B.',
           },
           {
             q: 'O Ollama funciona bem como servidor de rede em um mini PC?',
@@ -689,7 +695,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: 'Um mini PC consegue executar modelos de 13B ou maiores em velocidade útil?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Sim, com RAM suficiente. UM890 Pro com 64 GB executa 13B Q8 a 8–12 tok/s somente com CPU, 10–18 tok/s com Radeon 780M. Para 30B+, Mac Mini M4 Pro (48 GB) é a melhor opção de mini PC.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Sim, com RAM suficiente. UM890 Pro com 64 GB executa 13B Q8 a 8–12 tok/s somente com CPU, 10–18 tok/s com Radeon 780M. Para 30B+, Mac Mini M5 Pro (64 GB, a partir de $1.699) é a melhor opção; o M6 básico (32 GB) não é suficiente.' },
         },
         {
           '@type': 'Question',
@@ -707,14 +713,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'Melhor geral — Ryzen 9 8945HS, até 96 GB DDR5, ~$500' },
         { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'Melhor para eGPU — porta OCuLink, Ryzen 7 Pro 8845HS, ~$480' },
         { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'Melhor orçamento — Ryzen 7 8745HS, 32 GB, ~$450' },
-        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'Melhor macOS — 48 GB de memória unificada, ~$1399' },
+        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: 'Melhor macOS — 32 GB (M6, $899) ou 64 GB (M5 Pro, $1.699), a partir de 22 set. 2026' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Melhor Mini PC para Servidor Ollama Sempre Ligado 2026', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/pt/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'pt-BR' },
+    schema: { '@type': 'TechArticle', headline: 'Melhor Mini PC para Servidor Ollama Sempre Ligado 2026', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/pt/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'pt-BR' },
   },
   zh: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-mini-pc-for-ollama-server-always-on-overview-hero-zh.webp',
     type: 'comparison',
@@ -724,7 +730,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-26',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**铭凡UM890 Pro（AMD Ryzen 9 8945HS、32–96GB内存、Radeon 780M核显）是2026年常驻Ollama服务器最佳迷你PC：纯CPU运行7B模型12–18 tok/s，负载功耗25–45W，能放进抽屉。**',
     quickAnswerTop: {
@@ -734,7 +740,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         '铭凡UM890 Pro：综合最佳 — Ryzen 9 8945HS、最高96GB DDR5、25–45W',
         'AOOSTAR GEM12 Pro OCuLink：最佳eGPU方案 — OCuLink接口连接RTX 3080/3090',
         '倍控SER8：最佳预算 — Ryzen 7 8745HS、32GB、约3000元',
-        'Apple Mac Mini M4 Pro：最佳macOS选择 — 48GB统一内存、15–30W',
+        'Apple Mac Mini M6/M5 Pro：最佳macOS选择 — 32GB（M6，约6300元）或64GB（M5 Pro，约11900元），2026年9月22日上市',
         '所有机器闲置功耗低于50W — 24小时运行每月电费约25–40元',
       ],
       updatedDate: '2026-07',
@@ -746,7 +752,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '迷你PC功耗15–45W对比桌面GPU 200–350W——24小时节能优势明显',
           'UM890 Pro纯CPU运行7B模型12–18 tok/s，适合API服务器使用',
           'AOOSTAR GEM12 Pro + OCuLink eGPU实现不买桌面PC也有GPU加速',
-          'Mac Mini M4 Pro：48GB统一内存运行32B模型——最佳macOS选择',
+          'Mac Mini M5 Pro：64GB统一内存是30B级模型的上限；基础款M6最高32GB——两款均于2026年9月22日上市',
           '倍控SER8是3000元以下入门选择——32GB内存支持7B和13B',
         ],
       },
@@ -790,10 +796,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             rank: 4,
-            title: 'Apple Mac Mini M4 Pro — 最佳macOS选择',
-            content: 'Mac Mini M4 Pro（24核GPU、48GB统一内存、约9800元）是唯一能开箱即用以GPU速度运行32B模型的迷你PC。Apple Silicon上的Ollama使用Metal——48GB统一内存加载Qwen3 32B Q4（约18GB）并以20–30 tok/s运行。功耗：Ollama负载时18–30W。适合希望拥有静音常驻家庭服务器的macOS用户。',
+            title: 'Apple Mac Mini M6 / M5 Pro — 最佳macOS选择',
+            content: 'Apple于2026年8月25日更新了Mac Mini系列，取代了M4世代。Mac Mini M6起售价约6300元，最高32GB统一内存，170GB/s带宽。Mac Mini M5 Pro起售价约11900元，最高64GB统一内存，307GB/s带宽，支持Thunderbolt 5。两款均于2026年9月22日上市。对于常驻Ollama服务器来说，内存上限才是关键：32GB（M6）足以舒适运行7B–13B模型，而要在不使用交换内存的情况下以Q4精度加载30B级模型，需要64GB（M5 Pro）。目前两款芯片均无独立的Ollama基准测试数据——PromptQuorum尚未测试过这款硬件。',
             affiliateLinks: [
-              { label: '在京东查看Apple Mac Mini M4 Pro', url: 'https://search.jd.com/Search?keyword=Mac+Mini+M4+Pro' },
+              { label: '在京东查看Apple Mac Mini M6', url: 'https://search.jd.com/Search?keyword=Mac+Mini+M6' },
+              { label: '在Apple官网查看Mac Mini（M6及M5 Pro）', url: 'https://www.apple.com.cn/shop/buy-mac/mac-mini' },
             ],
           },
         ],
@@ -803,7 +810,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '迷你PC能以实用速度运行13B或更大的模型吗？',
-            a: '可以——需要足够的内存。配备64GB内存的UM890 Pro能将Llama 3.3 13B Q8完整加载到内存，纯CPU速度约8–12 tok/s，Radeon 780M核显加速时Q4模型可达10–18 tok/s。30B以上模型，Mac Mini M4 Pro（48GB统一内存）是1万元以下唯一迷你PC选择。',
+            a: '可以——需要足够的内存。配备64GB内存的UM890 Pro能将Llama 3.3 13B Q8完整加载到内存，纯CPU速度约8–12 tok/s，Radeon 780M核显加速时Q4模型可达10–18 tok/s。30B以上模型，Mac Mini M5 Pro（64GB统一内存，约11900元起）有足够内存——价格已超过1万元。基础款M6（约6300元，最高32GB）内存不足以运行30B级模型。',
           },
           {
             q: 'Ollama在迷你PC上作为网络服务器运行效果如何？',
@@ -823,7 +830,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: '迷你PC能以实用速度运行13B或更大的模型吗？',
-          acceptedAnswer: { '@type': 'Answer', text: '可以。配64GB内存的UM890 Pro运行13B Q8纯CPU约8–12 tok/s。30B以上模型推荐Mac Mini M4 Pro（48GB统一内存）。' },
+          acceptedAnswer: { '@type': 'Answer', text: '可以。配64GB内存的UM890 Pro运行13B Q8纯CPU约8–12 tok/s。30B以上模型推荐Mac Mini M5 Pro（64GB统一内存，约11900元起）；基础款M6（32GB）内存不足。' },
         },
         {
           '@type': 'Question',
@@ -841,14 +848,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 1, name: '铭凡UM890 Pro', description: '综合最佳 — Ryzen 9 8945HS、最高96GB DDR5、约3500元' },
         { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: '最佳eGPU — OCuLink接口、Ryzen 7 Pro 8845HS、约3300元' },
         { '@type': 'ListItem', position: 3, name: '倍控SER8', description: '最佳预算 — Ryzen 7 8745HS、32GB、约3000元' },
-        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: '最佳macOS — 48GB统一内存、约9800元' },
+        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: '最佳macOS — 32GB（M6，约6300元）或64GB（M5 Pro，约11900元），2026年9月22日上市' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年Ollama常驻服务器最佳迷你电脑推荐', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/zh/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '2026年Ollama常驻服务器最佳迷你电脑推荐', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/zh/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'zh' },
   },
   ar: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-mini-pc-for-ollama-server-always-on-overview-hero-ar.webp',
     type: 'comparison',
@@ -858,7 +865,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-26',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**Minisforum UM890 Pro (AMD Ryzen 9 8945HS، 32–96 GB RAM، Radeon 780M iGPU) هو أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل في 2026: يشغّل نماذج 7B بـ12–18 رمز/ثانية عبر CPU فقط، ويستهلك 25–45 W تحت الحمل، ويكفي حجم درج صغير.**',
     quickAnswerTop: {
@@ -868,7 +875,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         'Minisforum UM890 Pro: الأفضل عموماً — Ryzen 9 8945HS، حتى 96 GB DDR5، 25–45 W',
         'AOOSTAR GEM12 Pro OCuLink: الأفضل للـeGPU — منفذ OCuLink يتصل بـRTX 3080/3090',
         'Beelink SER8: الأفضل للميزانية — Ryzen 7 8745HS، 32 GB، ~$450',
-        'Apple Mac Mini M4 Pro: الأفضل لـmacOS — 48 GB ذاكرة موحدة، 15–30 W',
+        'Apple Mac Mini M6/M5 Pro: الأفضل لـmacOS — 32 GB (M6، ‎$899) أو 64 GB (M5 Pro، ‎$1,699)، متوفر في 22 سبتمبر 2026',
         'جميعها تستهلك أقل من 50 W في وضع الخمول — تشغيل 24/7 بـ~$3–5 شهرياً للكهرباء',
       ],
       updatedDate: '2026-07',
@@ -880,7 +887,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'الأجهزة المصغرة تستهلك 15–45 W مقابل 200–350 W لبطاقات GPU المكتبية — وفورات 24/7 مهمة',
           'UM890 Pro يشغّل نماذج 7B عبر CPU فقط بـ12–18 رمز/ثانية؛ مناسب لاستخدام خادم API',
           'AOOSTAR GEM12 Pro + eGPU OCuLink يتيح تسريع GPU دون الحاجة لحاسوب مكتبي',
-          'Mac Mini M4 Pro: 48 GB ذاكرة موحدة يشغّل نماذج 32B — أفضل خيار macOS',
+          'Mac Mini M5 Pro: 64 GB ذاكرة موحدة هو الحد الأقصى لنماذج 30B؛ الطراز الأساسي M6 يصل إلى 32 GB فقط — كلاهما متوفر في 22 سبتمبر 2026',
           'Beelink SER8 هو نقطة البداية دون $400 — 32 GB RAM لنماذج 7B و13B',
         ],
       },
@@ -889,7 +896,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'هل يمكن لجهاز مصغر تشغيل نماذج 13B أو أكبر بسرعة مفيدة؟',
-            a: 'نعم — مع RAM كافية. UM890 Pro بـ64 GB يشغّل Llama 3.3 13B Q8 كاملاً في الذاكرة بـ~8–12 رمز/ثانية عبر CPU فقط. مع تسريع iGPU Radeon 780M، تعمل نماذج Q4 بـ10–18 رمز/ثانية — مفيد للتلخيص في الخلفية أو استدعاءات API. للنماذج 30B فأكبر، Mac Mini M4 Pro (48 GB ذاكرة موحدة) هو الخيار الوحيد دون $1500.',
+            a: 'نعم — مع RAM كافية. UM890 Pro بـ64 GB يشغّل Llama 3.3 13B Q8 كاملاً في الذاكرة بـ~8–12 رمز/ثانية عبر CPU فقط. مع تسريع iGPU Radeon 780M، تعمل نماذج Q4 بـ10–18 رمز/ثانية — مفيد للتلخيص في الخلفية أو استدعاءات API. للنماذج 30B فأكبر، Mac Mini M5 Pro (64 GB ذاكرة موحدة، ابتداءً من $1,699) لديه الذاكرة الكافية — ما يضعه فوق حاجز $1500. الطراز الأساسي M6 (‎$899، بحد أقصى 32 GB) لا يملك ذاكرة كافية لنماذج 30B.',
           },
           {
             q: 'هل يعمل Ollama جيداً كخادم شبكة على جهاز مصغر؟',
@@ -909,7 +916,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: 'هل يمكن لجهاز مصغر تشغيل نماذج 13B أو أكبر بسرعة مفيدة؟',
-          acceptedAnswer: { '@type': 'Answer', text: 'نعم، مع RAM كافية. UM890 Pro بـ64 GB يشغّل 13B Q8 بـ8–12 رمز/ثانية عبر CPU فقط، و10–18 رمز/ثانية مع Radeon 780M. للنماذج 30B+، Mac Mini M4 Pro (48 GB) هو الخيار الأمثل للأجهزة المصغرة.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'نعم، مع RAM كافية. UM890 Pro بـ64 GB يشغّل 13B Q8 بـ8–12 رمز/ثانية عبر CPU فقط، و10–18 رمز/ثانية مع Radeon 780M. للنماذج 30B+، Mac Mini M5 Pro (64 GB، ابتداءً من $1,699) هو الخيار الأمثل؛ الطراز الأساسي M6 (32 GB) لا يكفي.' },
         },
         {
           '@type': 'Question',
@@ -927,14 +934,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: 'الأفضل عموماً — Ryzen 9 8945HS، حتى 96 GB DDR5، ~$500' },
         { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'الأفضل للـeGPU — منفذ OCuLink، Ryzen 7 Pro 8845HS، ~$480' },
         { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: 'الأفضل للميزانية — Ryzen 7 8745HS، 32 GB، ~$450' },
-        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'الأفضل لـmacOS — 48 GB ذاكرة موحدة، ~$1399' },
+        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: 'الأفضل لـmacOS — 32 GB (M6، ‎$899) أو 64 GB (M5 Pro، ‎$1,699)، من 22 سبتمبر 2026' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل 2026', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ar/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ar' },
+    schema: { '@type': 'TechArticle', headline: 'أفضل جهاز كمبيوتر مصغر لخادم Ollama الدائم التشغيل 2026', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/ar/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ar' },
   },
   ko: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-02-26',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-mini-pc-for-ollama-server-always-on-overview-hero-ko.webp',
     type: 'comparison',
@@ -944,7 +951,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-08-26',
     parentArticle: '/local-llms/local-llm-hardware-guide-2026',
     leadAnswerBlock: '**Minisforum UM890 Pro (AMD Ryzen 9 8945HS, 32–96 GB RAM, Radeon 780M iGPU)는 2026년 Ollama 상시 서버용 최고의 미니 PC입니다. CPU만으로 7B 모델을 12–18 tok/s 속도로 실행하며, 부하 시 소비 전력은 25–45 W에 불과하고 서랍 안에도 들어갑니다.**',
     quickAnswerTop: {
@@ -955,7 +962,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Minisforum UM890 Pro: 종합 최고 — Ryzen 9 8945HS, 최대 96 GB DDR5, 25–45 W',
           'AOOSTAR GEM12 Pro OCuLink: eGPU 최고 — OCuLink 포트로 RTX 3080/3090 연결 가능',
           'Beelink SER8: 가성비 최고 — Ryzen 7 8745HS, 32 GB, ~$450',
-          'Apple Mac Mini M4 Pro: macOS 최고 — 48 GB 통합 메모리, 15–30 W',
+          'Apple Mac Mini M6/M5 Pro: macOS 최고 — 32 GB(M6, $899) 또는 64 GB(M5 Pro, $1,699) 통합 메모리, 2026년 9월 22일 출시',
           '전 모델 대기 전력 50 W 미만 — 24/7 운영 시 전기료 월 ~$3–5',
         ],
         updatedDate: '2026-07',
@@ -969,7 +976,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       'Minisforum UM890 Pro Ollama',
       'eGPU OCuLink 미니 PC',
       'Beelink SER8 Ollama',
-      'Mac Mini M4 Pro 로컬 LLM',
+      'Mac Mini M5 Pro 로컬 LLM',
     ],
     readTime: '6분 분량',
     sections: {
@@ -979,7 +986,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '미니 PC 소비 전력은 15–45 W로 데스크톱 GPU의 200–350 W 대비 압도적으로 낮아 24시간 운영에 유리합니다.',
           'UM890 Pro는 CPU만으로 7B 모델을 12–18 tok/s로 실행하여 API 서버 용도에 적합합니다.',
           'AOOSTAR GEM12 Pro + OCuLink eGPU 조합은 데스크톱 PC 없이도 GPU 가속을 실현합니다.',
-          'Mac Mini M4 Pro는 48 GB 통합 메모리로 32B 모델을 실행할 수 있는 최고의 macOS 선택입니다.',
+          'Mac Mini M5 Pro는 64 GB 통합 메모리로 30B급 모델의 상한선이며, 기본형 M6은 최대 32 GB입니다 — 두 모델 모두 2026년 9월 22일 출시됩니다.',
           'Beelink SER8은 $400 이하 진입점으로 32 GB RAM이 7B 및 13B 모델을 충분히 처리합니다.',
         ],
       },
@@ -1023,10 +1030,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             rank: 4,
-            title: 'Apple Mac Mini M4 Pro — macOS 최고 선택',
-            content: 'Mac Mini M4 Pro(24코어 GPU, 48 GB 통합 메모리, 약 $1,399)는 박스에서 꺼내자마자 GPU 속도로 32B 모델을 실행할 수 있는 유일한 미니 PC입니다. Apple Silicon의 Ollama는 Metal을 사용하며, 48 GB 통합 메모리로 Qwen3 32B Q4(약 18 GB)를 적재하고 20–30 tok/s로 실행합니다. 소비 전력: Ollama 부하 시 18–30 W. 조용한 상시 홈 서버를 원하는 macOS 사용자에게 적합합니다.',
+            title: 'Apple Mac Mini M6 / M5 Pro — macOS 최고 선택',
+            content: 'Apple은 2026년 8월 25일 Mac mini 라인업을 새로 선보이며 M4 세대를 대체했습니다. Mac Mini M6는 $899부터 시작하며 최대 32 GB 통합 메모리, 170 GB/s 대역폭을 제공합니다. Mac Mini M5 Pro는 $1,699부터 시작하며 최대 64 GB 통합 메모리, 307 GB/s 대역폭, Thunderbolt 5를 지원합니다. 두 모델 모두 2026년 9월 22일 출시됩니다. 상시 가동 Ollama 서버에서는 메모리 상한선이 관건입니다. 32 GB(M6)는 7B–13B 모델에 여유롭게 충분하지만, 30B급 모델을 Q4로 스왑 없이 적재하려면 64 GB(M5 Pro)가 필요합니다. 두 칩 모두 아직 독립적인 Ollama 벤치마크가 존재하지 않으며, PromptQuorum은 이 하드웨어를 테스트하지 않았습니다.',
             affiliateLinks: [
-              { label: 'Apple에서 Mac Mini M4 Pro 보기', url: 'https://www.apple.com/mac-mini/' },
+              { label: 'Amazon에서 Mac Mini M6 보기', url: 'https://www.amazon.com/s?k=Mac+Mini+M6' },
+              { label: 'Apple에서 Mac Mini(M6·M5 Pro) 보기', url: 'https://www.apple.com/mac-mini/' },
             ],
           },
         ],
@@ -1036,7 +1044,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '미니 PC로 13B 이상의 모델을 실용적인 속도로 실행할 수 있습니까?',
-            a: '네, 충분한 RAM이 있다면 가능합니다. 64 GB 메모리를 갖춘 UM890 Pro는 Llama 3.3 13B Q8 모델 전체를 메모리에 적재하여 CPU 전용으로 약 8–12 tok/s로 실행합니다. Radeon 780M 내장 GPU 가속 시 Q4 모델은 10–18 tok/s로 동작하여 백그라운드 요약이나 API 호출에 유용합니다. 30B 이상 모델의 경우, Mac Mini M4 Pro(48 GB 통합 메모리)가 $1,500 미만 미니 PC 중 유일한 선택입니다.',
+            a: '네, 충분한 RAM이 있다면 가능합니다. 64 GB 메모리를 갖춘 UM890 Pro는 Llama 3.3 13B Q8 모델 전체를 메모리에 적재하여 CPU 전용으로 약 8–12 tok/s로 실행합니다. Radeon 780M 내장 GPU 가속 시 Q4 모델은 10–18 tok/s로 동작하여 백그라운드 요약이나 API 호출에 유용합니다. 30B 이상 모델의 경우, Mac Mini M5 Pro($1,699부터, 64 GB 통합 메모리)가 필요한 메모리를 갖추고 있습니다 — 다만 $1,500를 넘어섭니다. 기본형 M6($899, 최대 32 GB)는 30B급 모델에는 메모리가 부족합니다.',
           },
           {
             q: 'Ollama를 미니 PC에서 네트워크 서버로 운영하면 잘 작동합니까?',
@@ -1065,7 +1073,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: '미니 PC로 13B 이상의 모델을 실용적인 속도로 실행할 수 있습니까?',
-          acceptedAnswer: { '@type': 'Answer', text: '네, 충분한 RAM이 있다면 가능합니다. 64 GB 메모리의 UM890 Pro는 13B Q8를 CPU 전용 8–12 tok/s로 실행하며, Radeon 780M 가속 시 10–18 tok/s를 달성합니다. 30B 이상 모델에는 Mac Mini M4 Pro(48 GB)가 최선입니다.' },
+          acceptedAnswer: { '@type': 'Answer', text: '네, 충분한 RAM이 있다면 가능합니다. 64 GB 메모리의 UM890 Pro는 13B Q8를 CPU 전용 8–12 tok/s로 실행하며, Radeon 780M 가속 시 10–18 tok/s를 달성합니다. 30B 이상 모델에는 Mac Mini M5 Pro($1,699부터, 64 GB)가 최선이며, 기본형 M6(32 GB)는 부족합니다.' },
         },
         {
           '@type': 'Question',
@@ -1083,7 +1091,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 1, name: 'Minisforum UM890 Pro', description: '종합 최고 — Ryzen 9 8945HS, 최대 96 GB DDR5, ~$500' },
         { '@type': 'ListItem', position: 2, name: 'AOOSTAR GEM12 Pro OCuLink', description: 'eGPU 최고 — OCuLink 포트, Ryzen 7 Pro 8845HS, ~$480' },
         { '@type': 'ListItem', position: 3, name: 'Beelink SER8', description: '가성비 최고 — Ryzen 7 8745HS, 32 GB, ~$450' },
-        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M4 Pro', description: 'macOS 최고 — 48 GB 통합 메모리, ~$1399' },
+        { '@type': 'ListItem', position: 4, name: 'Apple Mac Mini M6 / M5 Pro', description: 'macOS 최고 — 32 GB(M6, $899) 또는 64 GB(M5 Pro, $1,699), 2026년 9월 22일 출시' },
       ],
     },
     breadcrumbSchema: {
@@ -1095,6 +1103,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         { '@type': 'ListItem', position: 3, name: '2026년 Ollama 상시 서버용 최고의 미니 PC 추천', item: 'https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026년 Ollama 상시 서버용 최고의 미니 PC 추천', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ko' },
+    schema: { '@type': 'TechArticle', headline: '2026년 Ollama 상시 서버용 최고의 미니 PC 추천', datePublished: '2026-05-26', dateModified: '2026-08-26', url: 'https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-for-ollama-server-always-on', inLanguage: 'ko' },
   },
 }
