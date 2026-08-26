@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-23',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'Qwen 3 32B'],
+    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'Qwen 3 32B', 'Qwen3-30B-A3B', 'gpt-oss-120b'],
     current_hardware_mentioned: ['Ryzen AI Max 395', 'Ryzen AI Max 385', 'RTX 4090'],
     educationalLevel: 'Intermediate',
     parentArticle: '/local-llms/best-budget-gpus-local-llm',

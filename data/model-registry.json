@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29",
+  "last_updated": "2026-08-26",
   "models": [
     {
       "company": "Anthropic",
@@ -816,6 +816,54 @@
       "source_url": "https://huggingface.co/HiDream-ai/HiDream-O1-Image",
       "verified_date": "2026-08-21",
       "notes": "8B pixel-native image generation model (no VAE, no separate text encoder), MIT license — more permissive than Apache 2.0. Ranked #8 on the Artificial Analysis Text-to-Image Arena as of 2026-05-05, the highest-ranked open-weight entry at the time (single-source ranking, verify before treating as settled). Added 2026-08-21 for src/lib/power-local-llm/articles/local-ai-image-generation-vs-cloud.ts."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
+      "model": "gpt-oss-120b",
+      "type": "open-weight",
+      "release_date": "2025-08-05",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/openai/gpt-oss-120b",
+      "verified_date": "2026-08-26",
+      "notes": "OpenAI's open-weight MoE reasoning model, Apache 2.0. 117B total params, 5.1B active, MXFP4 quantization enabling single-80GB-GPU deployment. Near-parity with o4-mini on core reasoning benchmarks per OpenAI's own model card. Added 2026-08-26 for src/lib/prompt-bites/articles/strix-halo-ollama-vulkan.ts."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
+      "model": "gpt-oss-20b",
+      "type": "open-weight",
+      "release_date": "2025-08-05",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/openai/gpt-oss-20b",
+      "verified_date": "2026-08-26",
+      "notes": "Smaller sibling of gpt-oss-120b, Apache 2.0. Similar results to o3-mini on common benchmarks per OpenAI's own model card; runs on edge devices with 16GB memory. Added 2026-08-26 alongside gpt-oss-120b."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3-30B-A3B",
+      "type": "open-weight",
+      "release_date": "2025-04",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://github.com/QwenLM/Qwen3",
+      "verified_date": "2026-08-26",
+      "notes": "MoE variant of Qwen3 (30B total / ~3B active params), Apache 2.0. Qwen3.6 has only shipped a 35B-A3B MoE size so far (per the Qwen3.6 registry entry) -- no exact 30B-A3B successor exists yet, so this remains current. Instruct-2507 and Thinking-2507 refreshes shipped July 2025. Added 2026-08-26 for src/lib/prompt-bites/articles/strix-halo-ollama-vulkan.ts, following the same exact-name-entry pattern as the Qwen3 8B/4B/1.7B entries."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
+      "model": "GPT-5.4",
+      "type": "closed",
+      "release_date": "2026-03-05",
+      "status": "superseded",
+      "superseded_by": "GPT-5.5",
+      "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+      "verified_date": "2026-08-26",
+      "notes": "Released as GPT-5.4 Thinking and GPT-5.4 Pro; GPT-5.4 mini/nano followed 2026-03-17. Added 2026-08-26 to close a dangling GPT-5.1 superseded_by reference found during a registry-freshness check -- this entry had never been added despite being referenced by the GPT-5.1 entry."
     }
   ],
   "sources": [

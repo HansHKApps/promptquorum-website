@@ -5,6 +5,12 @@
       "action": "baseline-write",
       "summary": "Branch 1: froze 3570 pre-existing model-name violations across 195 files / 9 locales into .model-names-baseline.json; added ollama-context-default + ollama-nvidia-container-toolkit-scope ecosystem_notes",
       "branch": "fix/model-name-validator"
+    },
+    {
+      "date": "2026-08-26",
+      "action": "refresh",
+      "summary": "Added gpt-oss-120b, gpt-oss-20b, Qwen3-30B-A3B (build-blocking unknown models from strix-halo-ollama-vulkan), and closed a pre-existing GPT-5.1 to GPT-5.4 dangling superseded_by reference by adding the missing GPT-5.4 entry. All verified against official sources (OpenAI HF repos + announcement, Qwen3 GitHub org). Full lab sweep not run this cycle -- scoped to closing the build break and the models it surfaced.",
+      "branch": "main"
     }
   ]
 }
