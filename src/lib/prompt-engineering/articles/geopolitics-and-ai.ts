@@ -13,7 +13,7 @@ const OG_SLUG = keyToSlug('geopolitics-and-ai');
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'annual',
-      last_full_refresh: '2026-07-29',
+      last_full_refresh: '2026-08-26',
       current_models_mentioned: ['Qwen 3', 'ERNIE 4.0', 'Doubao', 'Z.ai GLM-4', 'DeepSeek R1', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'Mistral Large 2'],
       theme: 'Policy & Compliance',
       heroImage: '/images/geopolitics-and-ai-overview-hero-en.webp',
@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-04-01',
       seoTitle: 'AI Geopolitics Analysis 2026: US, EU & China Guide',
       metaDescription: 'EU AI Act, US export controls, China CAC: three incompatible frameworks. How they affect AI procurement, data residency, and model availability in 2026.',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-26',
       readTime: '16 min read',
       educationalLevel: 'Intermediate',
       audience: 'Teams deploying AI in regulated markets (EU, China, US)',
@@ -35,7 +35,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'AI Geopolitics Explained: EU AI Act vs US vs China (2026 Analysis)',
         description: 'The US, China, and European Union are pursuing incompatible visions of AI governance. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements.',
         datePublished: '2026-04-01',
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-26',
         keywords: ['AI geopolitics', 'EU AI Act', 'CHIPS Act', 'AI regulation', 'China AI strategy', 'Brussels Effect', 'AI governance', 'DeepSeek', 'AI Safety Institute', 'Made in China 2025', 'KI Gesetz', 'AI regulation Europe', 'AI governance EU', 'regolamento intelligenza artificiale', 'régulation de l\'IA', 'KI-Regulierung', '人工知能規制', 'AI中国战略'],
         teaches: [
           'How the EU AI Act classifies risk and what deadlines apply',
@@ -143,7 +143,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: 'What is the EU AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'The EU AI Act is the world\'s first comprehensive legal framework for artificial intelligence, passed by the European Parliament in March 2024 with 523 votes in favor. It classifies AI systems into four risk tiers — Unacceptable, High, Limited, and Minimal — and applies different requirements and fines to each tier. Full enforcement applies from August 2026.' } },
+          { '@type': 'Question', name: 'What is the EU AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'The EU AI Act is the world\'s first comprehensive legal framework for artificial intelligence, passed by the European Parliament in March 2024 with 523 votes in favor. It classifies AI systems into four risk tiers — Unacceptable, High, Limited, and Minimal — and applies different requirements and fines to each tier. Article 50 transparency duties took effect August 2026; standalone high-risk system requirements were deferred to December 2, 2027 by the Digital Omnibus (in force since July 27, 2026).' } },
           { '@type': 'Question', name: 'Does the EU AI Act apply to companies outside the EU?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The EU AI Act applies to any organization that places AI systems on the EU market or whose AI outputs are used in the EU, regardless of where the organization is headquartered. This extraterritorial reach is called the Brussels Effect and means US and Asian AI providers must also comply if they serve EU users.' } },
           { '@type': 'Question', name: 'What are the fines for violating the EU AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'Fines reach up to €35 million or 7% of global annual turnover for prohibited AI practices (whichever is higher). High-risk AI violations carry fines up to €15 million or 3% of global turnover. Providing incorrect information to authorities carries fines up to €7.5 million or 1% of global turnover.' } },
           { '@type': 'Question', name: 'What AI applications does the EU ban outright?', acceptedAnswer: { '@type': 'Answer', text: 'The EU AI Act prohibits: social scoring systems by public authorities, real-time biometric surveillance in public spaces (with narrow law enforcement exceptions), AI that exploits cognitive vulnerabilities, and untargeted scraping of facial images from the internet to build recognition databases. These are categorized as Unacceptable Risk.' } },
@@ -164,7 +164,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Key Data Points', anchor: 'ai-geopolitics-key-data-points' },
         { label: 'The AI Arms Race: US, China, and the EU', anchor: 'the-ai-arms-race-us-china-and-the-eu' },
         { label: 'The EU AI Act: What It Actually Requires', anchor: 'the-eu-ai-act-what-it-actually-requires' },
-        { label: 'Digital Omnibus: High-Risk Deadline in Flux', anchor: 'digital-omnibus-eu-ai-act-high-risk-compliance-deadline-in-flux' },
+        { label: 'Digital Omnibus: Deadline Deferred to Dec 2027', anchor: 'digital-omnibus-eu-ai-act-high-risk-deadline-deferred-to-december-2027' },
         { label: 'EU Member States: National AI Strategies', anchor: 'eu-member-states-national-ai-strategies' },
         { label: 'France & Mistral: EU AI Independence', anchor: 'france-mistral-building-european-ai-independence' },
         { label: 'US Strategy: Executive Orders & State Law Preemption', anchor: 'us-strategy-executive-orders-chips-act-state-law-preemption' },
@@ -200,7 +200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Structured comparison of AI regulatory frameworks across 8 dimensions — primary approach, key legislation, risk framework, maximum fine, data protection, banned applications, enforcement body, and international reach — for the European Union, United States, and China.',
         url: 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai',
         creator: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-26',
         variableMeasured: [
           { '@type': 'PropertyValue', name: 'Primary Approach', description: 'EU: Rights-based legal framework. US: Sectoral, innovation-first. China: State-directed, control-first.' },
           { '@type': 'PropertyValue', name: 'Key Legislation', description: 'EU: EU AI Act (2024). US: No federal AI law; NIST AI RMF voluntary. China: Algorithm Recommendations Regulations (2022); Generative AI Measures (2023).' },
@@ -232,8 +232,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         quickFacts: {
           title: 'Quick Facts: AI Geopolitics at a Glance',
           items: [
-            '**EU AI Act:** World\'s first binding AI law. High-risk enforcement: August 2, 2026 (may be delayed to December 2, 2027 by Digital Omnibus — the most recently confirmed trilogue took place mid-May 2026 without a public adoption announcement following). Fines: up to €35 million or 7% of global annual revenue.',
-            '**US AI Policy:** No federal AI law. Trump Administration pursuing state law preemption via EO 14365 (December 2025), National Framework (March 2026), and proposed TRUMP AMERICA AI Act (March 2026). Multiple implementation deadlines were still unmet as of the most recently confirmed status in May 2026 (FTC statement due March 11, Commerce evaluation due March 11).',
+            '**EU AI Act:** World\'s first binding AI law. The Digital Omnibus entered into force July 27, 2026, deferring standalone high-risk AI (Annex III) compliance from August 2, 2026 to December 2, 2027, and product-embedded high-risk AI (Annex I) to August 2, 2028. Article 50 transparency duties (AI disclosure, deepfake and AI-content labeling) still took effect on schedule August 2, 2026. Fines: up to €35 million or 7% of global annual revenue.',
+            '**US AI Policy:** No federal AI law. Trump Administration pursuing state law preemption via EO 14365 (December 2025) and the National Framework (March 2026). The FTC issued its EO-mandated proposed policy statement on AI accuracy and state-law preemption on July 7, 2026 — four months after its March 11 deadline — and closed public comment July 31, 2026. Neither the TRUMP AMERICA AI Act nor the Democratic GUARDRAILS Act counter-proposal has passed Congress; both remain discussion drafts.',
             '**China AI Governance:** CAC (Cyberspace Administration of China) pre-launch assessment mandatory. Content filters block CPC criticism, Taiwan/Tibet/Xinjiang discussions, and content undermining "socialist core values." Filters return HTTP 200 with `is_safe: 0` flag (not 4xx errors). PIPL requires data residency for Chinese personal data.',
             '**Hardware Chokepoints:** Nvidia controls ~80% of AI training GPU market. TSMC fabricates ~90% of advanced semiconductors. Both are geopolitical flashpoints. US CHIPS Act ($52B) aims to reduce TSMC dependency.',
             '**DeepSeek R1 Impact:** Exceeded GPT-5.5 on reasoning/coding (AIME 2024, MATH, HumanEval) at estimated ~$6M training cost (94% reduction vs. frontier model estimates; cost figure disputed). Trained on China-restricted Nvidia H800 GPUs. Demonstrates hardware export controls have limits.',
@@ -244,7 +244,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         euImplications: {
           title: 'If You\'re an EU-Based Organization: Critical Compliance Deadlines',
           content: [
-            '**The EU AI Act is binding and enforced as of August 2026.** If your organization is EU-headquartered or serves EU users, you must comply with its four-tier risk classification system. Fines for prohibited practices reach €35 million or 7% of global turnover — whichever is higher. Non-compliance is not negotiable.',
+            '**The EU AI Act is binding and its transparency and GPAI rules are enforced as of August 2026.** If your organization is EU-headquartered or serves EU users, you must comply with its four-tier risk classification system. The Digital Omnibus (in force since July 27, 2026) pushed standalone high-risk AI (Annex III) compliance to December 2, 2027, but disclosure requirements for chatbots and AI-generated content still applied on the original August 2026 date. Fines for prohibited practices reach €35 million or 7% of global turnover — whichever is higher. Non-compliance is not negotiable.',
             '**If you deploy GPT-5.5, Claude Opus 4.8, or Gemini 3.1 Pro in the EU, you must audit their General Purpose AI (GPAI) compliance documentation.** OpenAI, Anthropic, and Google published transparency documentation (training data summaries, capability limitations, safety testing) as of August 2025. Store these attestations as proof of compliance — regulators will ask.',
             '**High-risk AI systems (hiring, credit decisions, healthcare, law enforcement) require conformity assessments before deployment.** This means testing for bias, documentation of human oversight mechanisms, and audit trails of all AI decisions. Open-weights models deployed locally (LLaMA via Ollama, Mistral Large) satisfy data residency requirements — no data leaves your infrastructure, and you control the audit trail.',
             '**The Brussels Effect applies to you.** If your AI system reaches a single EU resident, the EU AI Act applies — even if your company is headquartered in the US or China. This means enforcing the same compliance level globally is often simpler than maintaining multiple configurations.',
@@ -423,24 +423,24 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Minimal Risk:** Spam filters, AI in video games, recommendation systems without significant impact. No specific obligations beyond existing law.',
             '**General Purpose AI (GPAI):** Models like GPT-5.5, Claude, and Gemini must publish training data summaries, comply with EU copyright law, and report serious incidents. Models with systemic risk (trained with >10^25 FLOPS) face additional adversarial testing requirements. GPAI rules applied August 2025.',
             '**Enforcement:** EU AI Office (within European Commission) oversees GPAI models. National market surveillance authorities enforce high-risk AI rules. Fines: up to €35M or 7% global turnover for prohibited practices; €15M or 3% for high-risk violations.',
-            '**Timeline:** Prohibited practices: August 2024. GPAI obligations: August 2025. High-risk AI systems: August 2026. High-risk AI in regulated products: August 2027.',
+            '**Timeline:** Prohibited practices: August 2024. GPAI obligations: August 2025. Article 50 transparency duties (chatbot/deepfake disclosure): August 2026, unaffected by the Digital Omnibus. Standalone high-risk AI systems (Annex III): deferred from August 2026 to December 2, 2027 by the Digital Omnibus. High-risk AI embedded in regulated products (Annex I): deferred from August 2027 to August 2, 2028.',
           ],
           image: '/images/ai-risk-tiers-comparison-en.svg',
           imageCaption: 'EU AI Act 4-tier risk system: Unacceptable (banned Aug 2024), High-risk (conformity assessment), Limited (disclosure only), Minimal (no obligations).',
         },
 
         digitalOmnibus: {
-          title: 'Digital Omnibus: EU AI Act High-Risk Compliance Deadline in Flux',
+          title: 'Digital Omnibus: EU AI Act High-Risk Deadline Deferred to December 2027',
           content: [
-            '**As of the most recently confirmed status, the EU\'s high-risk AI compliance deadline of August 2, 2026 may still be delayed to December 2, 2027 — but adoption has not been publicly confirmed, and the statutory deadline is now imminent.** The European Commission proposed the Digital Omnibus in November 2025 to address unintended consequences and implementation challenges in the EU AI Act. Both the European Parliament and Council of the EU signaled support for a deferral. However, inter-institutional negotiations had stalled as of the last confirmed update.',
-            '**Trilogue Status:** The first trilogue (negotiation between Parliament, Council, and Commission) in February 2026 found broad political agreement on urgency but left technical details unresolved. The second trilogue on April 28, 2026 ended without consensus. A third trilogue took place in mid-May 2026; no public confirmation of final adoption has followed as of this writing. If the deferral is adopted before August 2, 2026, it becomes binding; absent that, the original August 2, 2026 deadline applies as written — and that date is now only days away.',
-            '**What organizations should do:** Treat August 2, 2026 as your binding compliance deadline for high-risk AI systems unless you have direct confirmation the Digital Omnibus deferral has been formally adopted. The deferral may still extend your timeline to December 2027, but assuming it will pass — this close to the statutory date — is a risk. Achieving August 2026 compliance now means you are protected either way — if the Omnibus passes, you can optimize further during the extra months; if it doesn\'t, you\'re already compliant.',
+            '**The Digital Omnibus is adopted: it was published in the Official Journal on July 24, 2026 and entered into force on July 27, 2026 — six days before the original high-risk deadline.** It defers compliance for standalone high-risk AI systems (Annex III — the largest category, covering employment, credit, healthcare, and law enforcement uses) from August 2, 2026 to December 2, 2027, a 16-month extension. High-risk AI embedded in products already covered by EU product-safety law (Annex I) is deferred from August 2027 to August 2, 2028.',
+            '**What did NOT move:** Article 50 transparency duties — disclosing that a person is interacting with an AI system, labeling AI-generated audio/image/video/text, and disclosing deepfakes — took effect on schedule on August 2, 2026, and apply based on system function rather than risk tier. GPAI transparency obligations (in force since August 2025) and prohibited-practices enforcement (in force since August 2024) are also unaffected. The Omnibus additionally added two new prohibited categories — systems generating non-consensual intimate imagery and CSAM — with a grace period for technical safeguards running to December 2, 2026.',
+            '**What organizations should do:** If your AI systems fall under Annex III high-risk classification, your conformity-assessment deadline is now December 2, 2027, not August 2026 — use the additional time to complete documentation and human-oversight processes properly rather than rushing. If your product includes Article 50-covered functionality (chatbots, AI-generated content, deepfakes), that disclosure obligation is already live and enforceable; verify your implementation now.',
           ],
           callouts: [
             {
-              type: 'warning',
-              label: 'Warning: Digital Omnibus Adoption Still Unconfirmed',
-              text: 'The Digital Omnibus deferral from August 2026 to December 2027 has NOT been publicly confirmed as adopted. The second trilogue on April 28, 2026 reached no consensus, and a third trilogue took place in mid-May 2026 without a confirmed outcome reported since. Do NOT assume the delay has passed. With the August 2, 2026 statutory deadline now imminent, plan your compliance roadmap around it as the binding deadline. If the Omnibus is later confirmed adopted, you gain extra time; if it isn\'t, you\'re already compliant.',
+              type: 'did-you-know',
+              label: 'Resolved: Digital Omnibus in Force Since July 27, 2026',
+              text: 'The Digital Omnibus deferral is confirmed and binding — it entered into force July 27, 2026, moving the standalone high-risk AI (Annex III) deadline from August 2, 2026 to December 2, 2027. This does not affect Article 50 transparency duties (chatbot disclosure, AI-content and deepfake labeling), which took effect as originally scheduled on August 2, 2026 and are enforceable now.',
             },
           ],
         },
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**White House National AI Legislative Framework (March 20, 2026):** A comprehensive framework covering 7 policy areas: protecting children and empowering parents, safeguarding communities, protecting digital replicas, preventing government censorship, workforce development, state law preemption, and light-touch innovation promotion. The framework urges Congress to adopt a "federally unified, innovation-oriented regime centered on preemption of state AI laws."',
             '**TRUMP AMERICA AI Act (March 18, 2026, Senator Marsha Blackburn):** A 291-page legislative discussion draft that codifies federal AI governance, establishes national standards on training data and deepfakes, mandates artist/creator protections, and includes "duty of care" requirements for AI developers. Sunsets Section 230 of the Communications Decency Act. Aligns with Trump\'s executive order on state law preemption.',
             '**GUARDRAILS Act (March 20, 2026, Rep. Beyer et al.):** Democratic counter-proposal to the TRUMP AMERICA Act. Would repeal Trump\'s AI EO 14365 and explicitly block federal preemption of state AI laws, preserving state regulatory authority. Reflects the fundamental conflict between federal preemption (Trump) and state autonomy (Democrats) that will define US AI policy 2026–2029.',
-            '**Missed Implementation Deadlines (most recently confirmed status: May 2026):** EO 14365 required the FTC to issue an AI policy statement by March 11, 2026 (not yet issued as of the last confirmed update, May 4). The Commerce Department evaluation of state AI laws was also due March 11, 2026 (not yet published as of that update). Implementation was significantly lagging behind policy ambition at that point, and no more recent public status update has been confirmed since.',
+            '**Implementation Status Update:** EO 14365 required the FTC to issue an AI policy statement by March 11, 2026. The FTC missed that deadline and issued its proposed policy statement — addressing "suppression of accuracy" in AI outputs and when state AI laws requiring altered outputs are preempted by the FTC Act — on July 7, 2026, nearly four months late. Public comment on the proposal closed July 31, 2026; a final version has not yet been adopted. Congress has not passed the TRUMP AMERICA AI Act or the GUARDRAILS Act — both remain pending, meaning federal preemption of state AI laws is still contested rather than settled.',
             '**Colorado AI Act (February 1, 2026 enforcement):** The first US state law addressing algorithmic discrimination in high-stakes decisions (hiring, lending, insurance, etc.). Went into effect February 1, 2026. Trump\'s EO 14365 explicitly cited Colorado\'s law as an example of "excessive" regulation. Compliance deadline extended to June 30, 2026. This law exemplifies the state regulations Trump is seeking to preempt federally.',
             '**CHIPS and Science Act ($52 billion):** Signed August 2022. Funds domestic semiconductor manufacturing, R&D, and workforce development. Reduces US dependency on Taiwan Semiconductor Manufacturing Company (TSMC) for advanced chips. Intel, TSMC, and Samsung are building US fabs with CHIPS Act funding.',
             '**Export controls on AI hardware:** The Biden administration restricted exports of advanced Nvidia A100 and H100 GPUs to China and other countries of concern. The restrictions were expanded in October 2023 and October 2024. Nvidia created China-specific chips (A800, H800) that fell within export limits — these were subsequently restricted too.',
@@ -601,7 +601,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'The geopolitical dynamics shaping model availability make the open-source vs proprietary question especially relevant. For a complete comparison of when open-source wins and when proprietary models are worth the cost, see [open source vs proprietary LLMs](https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms).',
           ],
           items: [
-            '**EU-based organizations:** Must comply with the [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) directly. High-risk AI systems (HR, credit, healthcare, public services) require conformity assessments, human oversight documentation, and registration in the [EU AI database](https://digital-strategy.ec.europa.eu/en/policies/ai-office) before August 2026. All AI handling personal data must comply with GDPR — including AI training pipelines and output processing.',
+            '**EU-based organizations:** Must comply with the [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) directly. Standalone high-risk AI systems (HR, credit, healthcare, public services) require conformity assessments, human oversight documentation, and registration in the [EU AI database](https://digital-strategy.ec.europa.eu/en/policies/ai-office) before December 2, 2027 (deferred from August 2026 by the Digital Omnibus, in force since July 27, 2026). Article 50 disclosure duties for chatbots and AI-generated content already apply as of August 2026. All AI handling personal data must comply with GDPR — including AI training pipelines and output processing.',
             '**Non-EU organizations serving EU users:** Subject to the Brussels Effect — the [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) applies to your AI outputs if they reach EU users. GPAI models used in EU-facing products must comply with transparency obligations (August 2025 onwards). Failing to comply carries the same fines as EU-headquartered violators.',
             '**US AI tools in EU deployments:** GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro are all classified as GPAI models. OpenAI, Anthropic, and Google have published EU AI Act GPAI compliance documentation. Organizations using these tools in high-risk AI systems (as deployers) remain responsible for their own conformity assessments — the provider\'s GPAI compliance does not cover your deployment.',
             '**Chinese AI tools:** DeepSeek R1 and other Chinese models are available internationally but carry additional procurement risk for EU and US organizations — data residency is unclear, the provider is subject to CAC content regulations, and the Cyberspace Administration of China can compel data disclosure. Government and critical infrastructure organizations in EU and NATO member states are restricting or prohibiting Chinese AI tool usage.',
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhatEUAIActRequires: {
           title: 'What Does the EU AI Act Require from Organizations?',
           content: [
-            'The EU AI Act classifies AI systems into four risk tiers with scaled obligations. Prohibited practices — social scoring by public authorities, real-time biometric surveillance in public spaces — are banned from August 2024. High-risk AI systems used in employment, credit assessment, healthcare, or law enforcement require conformity assessments, human oversight documentation, and registration in the EU AI database before August 2026. General Purpose AI models (GPT-5.5, Claude, Gemini) must publish training data summaries and comply with EU copyright law — rules that applied from August 2025. All organizations serving EU users must comply regardless of where they are headquartered.',
+            'The EU AI Act classifies AI systems into four risk tiers with scaled obligations. Prohibited practices — social scoring by public authorities, real-time biometric surveillance in public spaces — are banned from August 2024. Standalone high-risk AI systems used in employment, credit assessment, healthcare, or law enforcement require conformity assessments, human oversight documentation, and registration in the EU AI database before December 2, 2027 (deferred from the original August 2026 date by the Digital Omnibus, in force since July 27, 2026). General Purpose AI models (GPT-5.5, Claude, Gemini) must publish training data summaries and comply with EU copyright law — rules that applied from August 2025. Article 50 transparency duties (chatbot and AI-content disclosure) still applied from August 2026 as originally scheduled. All organizations serving EU users must comply regardless of where they are headquartered.',
           ],
         },
 
@@ -671,7 +671,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         defEUAIAct: {
           title: 'Definition: EU AI Act',
-          content: 'The world\'s first comprehensive, legally binding AI regulation passed by the European Parliament in March 2024. It classifies AI systems into four risk tiers (Unacceptable, High, Limited, Minimal) with scaled obligations. Prohibited practices apply from August 2024; General Purpose AI transparency obligations from August 2025; high-risk system requirements from August 2026. Fines reach €35 million or 7% of global turnover. Applies extraterritorially to any AI reaching EU users.',
+          content: 'The world\'s first comprehensive, legally binding AI regulation passed by the European Parliament in March 2024. It classifies AI systems into four risk tiers (Unacceptable, High, Limited, Minimal) with scaled obligations. Prohibited practices apply from August 2024; General Purpose AI transparency obligations from August 2025; Article 50 disclosure duties (chatbots, AI-generated content) from August 2026; standalone high-risk system requirements (Annex III) from December 2, 2027, after the Digital Omnibus deferred them from the original August 2026 date. Fines reach €35 million or 7% of global turnover. Applies extraterritorially to any AI reaching EU users.',
         },
 
         defBrusselsEffect: {
@@ -756,7 +756,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
-            { q: 'What is the EU AI Act and when does it apply?', a: 'The EU AI Act is the world\'s first comprehensive AI law, passed by the European Parliament in March 2024. Prohibited practices apply from August 2024. GPAI model obligations (for GPT-5.5, Claude, Gemini-class models) apply from August 2025. High-risk AI system requirements apply from August 2026. It applies to any organization placing AI on the EU market or using AI that affects EU residents.' },
+            { q: 'What is the EU AI Act and when does it apply?', a: 'The EU AI Act is the world\'s first comprehensive AI law, passed by the European Parliament in March 2024. Prohibited practices apply from August 2024. GPAI model obligations (for GPT-5.5, Claude, Gemini-class models) apply from August 2025. Article 50 transparency duties (chatbot and AI-content disclosure) apply from August 2026. Standalone high-risk AI system requirements (Annex III) were deferred by the Digital Omnibus, in force since July 27, 2026, from August 2026 to December 2, 2027. It applies to any organization placing AI on the EU market or using AI that affects EU residents.' },
             { q: 'Does the EU AI Act apply to non-EU companies?', a: 'Yes. The EU AI Act has extraterritorial reach — it applies to any provider whose AI outputs are used in the EU, regardless of where the provider is headquartered. A US company whose AI product is used by EU residents must comply. This is the same extraterritorial principle that made GDPR a global standard.' },
             { q: 'What are the fines for violating the EU AI Act?', a: 'Fines up to €35 million or 7% of global annual turnover (whichever is higher) for prohibited AI practices. Up to €15 million or 3% for high-risk AI violations. Up to €7.5 million or 1% for providing incorrect information to enforcement authorities. The higher of the percentage or fixed amount applies.' },
             { q: 'What AI applications are banned under the EU AI Act?', a: 'Banned (Unacceptable Risk): social scoring systems by public authorities; real-time biometric identification in public spaces (with narrow exceptions); AI that exploits psychological vulnerabilities; untargeted scraping of facial images from the internet. These have been prohibited since August 2024.' },
@@ -842,7 +842,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'EU AI Act, US-Exportkontrolle, China CAC: drei unvereinbare Frameworks. Auswirkungen auf KI-Beschaffung, Datenlokalisierung und Modellverfügbarkeit 2026.',
       seoTitle: 'AI Geopolitik 2026: USA, EU und China analysieren',
       publishDate: '2026-04-01',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-26',
       readTime: '16 Min. Lesezeit',
       educationalLevel: 'Intermediate',
       primaryTerm: 'KI-Geopolitik',
@@ -878,7 +878,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'KI-Geopolitik erklärt: EU AI Act vs. USA vs. China (Analyse 2026)',
         description: 'Die USA, China und die Europäische Union verfolgen unvereinbare Visionen der KI-Governance — die USA priorisieren Wettbewerbsfähigkeit, China betont staatliche Kontrolle, und die EU baut einen rechtsbasierten Rahmen. Für Organisationen, die KI einsetzen, entstehen daraus konkrete Compliance-Pflichten, Beschaffungsbeschränkungen und Anforderungen an den Datenspeicherort.',
         datePublished: '2026-04-01',
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-26',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: buildOgImageObject(OG_SLUG, 'de'),
@@ -926,8 +926,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         quickFacts: {
           title: 'Kurzübersicht: KI-Geopolitik auf einen Blick',
           items: [
-            '**EU AI Act:** Weltweit erstes verbindliches KI-Gesetz. Hochrisiko-Durchsetzung: 2. August 2026 (möglicherweise verschoben auf 2. Dezember 2027 durch das Digital Omnibus, vorbehaltlich einer Trilog-Einigung). Geldstrafen: bis zu 35 Mio. EUR oder 7% des weltweiten Jahresumsatzes.',
-            '**US-KI-Politik:** Kein bundesweites KI-Gesetz. Die Trump-Administration verfolgt eine Vorrangstellung des Bundesrechts gegenüber Landesgesetzen über EO 14365 (Dezember 2025), das National Framework (März 2026) und den vorgeschlagenen TRUMP AMERICA AI Act (März 2026). Mehrere Umsetzungsfristen wurden verpasst (FTC-Stellungnahme fällig 11. März, Commerce-Bewertung fällig 11. März).',
+            '**EU AI Act:** Weltweit erstes verbindliches KI-Gesetz. Das Digital Omnibus trat am 27. Juli 2026 in Kraft und verschiebt die Konformitätsfrist für eigenständige Hochrisiko-KI (Anhang III) vom 2. August 2026 auf den 2. Dezember 2027; produktintegrierte Hochrisiko-KI (Anhang I) verschiebt sich auf den 2. August 2028. Die Transparenzpflichten nach Artikel 50 (KI-Kennzeichnung, Deepfake-Offenlegung) traten dagegen planmäßig am 2. August 2026 in Kraft. Geldstrafen: bis zu 35 Mio. EUR oder 7% des weltweiten Jahresumsatzes.',
+            '**US-KI-Politik:** Kein bundesweites KI-Gesetz. Die Trump-Administration verfolgt eine Vorrangstellung des Bundesrechts gegenüber Landesgesetzen über EO 14365 (Dezember 2025) und das National Framework (März 2026). Die FTC veröffentlichte ihre von der EO vorgeschriebene Grundsatzerklärung zu KI-Genauigkeit und Bundesvorrang erst am 7. Juli 2026 — vier Monate nach der Frist vom 11. März — und schloss die öffentliche Konsultation am 31. Juli 2026 ab. Weder der TRUMP AMERICA AI Act noch der demokratische Gegenentwurf GUARDRAILS Act wurde vom Kongress verabschiedet; beide bleiben Diskussionsentwürfe.',
             '**Chinas KI-Governance:** CAC (Cyberspace Administration of China)-Vorab-Prüfung ist verpflichtend. Inhaltsfilter blockieren KPCh-Kritik, Diskussionen zu Taiwan/Tibet/Xinjiang und Inhalte, die die "sozialistischen Grundwerte" untergraben. Filter liefern HTTP 200 mit dem Flag `is_safe: 0` (nicht 4xx). PIPL verlangt Datenspeicherort für personenbezogene Daten chinesischer Nutzer.',
             '**Hardware-Engpässe:** Nvidia kontrolliert ca. 80% des Markts für KI-Trainings-GPUs. TSMC fertigt ca. 90% der fortschrittlichsten Halbleiter. Beide sind geopolitische Brennpunkte. Der US CHIPS Act (52 Mrd. USD) zielt darauf ab, die TSMC-Abhängigkeit zu reduzieren.',
             '**DeepSeek-R1-Auswirkung:** Übertraf GPT-5.5 bei Reasoning/Coding (AIME 2024, MATH, HumanEval) bei geschätzten ~6 Mio. USD Trainingskosten (94% Reduktion gegenüber Frontier-Modell-Schätzungen; Zahl umstritten). Trainiert auf China-beschränkten Nvidia-H800-GPUs. Zeigt, dass Hardware-Exportkontrollen Grenzen haben.',
@@ -938,7 +938,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         euImplications: {
           title: 'Wenn Sie eine EU-basierte Organisation sind: Kritische Compliance-Fristen',
           content: [
-            '**Der EU AI Act ist verbindlich und wird ab August 2026 durchgesetzt.** Wenn Ihre Organisation in der EU ansässig ist oder EU-Nutzer bedient, müssen Sie sein vierteiliges Risikoeinstufungssystem erfüllen. Geldstrafen für verbotene Praktiken erreichen 35 Mio. EUR oder 7% des weltweiten Umsatzes — je nachdem, welcher Wert höher ist. Nicht-Konformität ist nicht verhandelbar.',
+            '**Der EU AI Act ist verbindlich; seine Transparenz- und GPAI-Regeln werden seit August 2026 durchgesetzt.** Wenn Ihre Organisation in der EU ansässig ist oder EU-Nutzer bedient, müssen Sie sein vierteiliges Risikoeinstufungssystem erfüllen. Das seit 27. Juli 2026 geltende Digital Omnibus verschob die Konformitätsfrist für eigenständige Hochrisiko-KI (Anhang III) auf den 2. Dezember 2027 — die Offenlegungspflichten für Chatbots und KI-generierte Inhalte galten jedoch weiterhin ab dem ursprünglichen Termin im August 2026. Geldstrafen für verbotene Praktiken erreichen 35 Mio. EUR oder 7% des weltweiten Umsatzes — je nachdem, welcher Wert höher ist. Nicht-Konformität ist nicht verhandelbar.',
             '**Wenn Sie GPT-5.5, Claude Opus 4.8 oder Gemini 3.1 Pro in der EU einsetzen, müssen Sie ihre Konformitätsdokumentation zu General Purpose AI (GPAI) überprüfen.** OpenAI, Anthropic und Google veröffentlichten Transparenzdokumentation (Trainingsdaten-Zusammenfassungen, Leistungsgrenzen, Sicherheitstests) ab August 2025. Speichern Sie diese Bescheinigungen als Nachweis der Konformität — Regulierungsbehörden werden danach fragen.',
             '**Hochrisiko-KI-Systeme (Einstellung, Kreditentscheidungen, Gesundheitswesen, Strafverfolgung) erfordern Konformitätsbewertungen vor dem Einsatz.** Dies bedeutet Tests auf Voreingenommenheit, Dokumentation von Überwachungsmechanismen durch Menschen und Audit-Protokolle aller KI-Entscheidungen. Open-Weights-Modelle, die lokal eingesetzt werden (LLaMA via Ollama, Mistral Large), erfüllen Datenspeicherort-Anforderungen — keine Daten verlassen Ihre Infrastruktur, und Sie kontrollieren die Audit-Spur.',
             '**Der Brussels Effect gilt auch für Sie.** Wenn Ihre KI-System einen einzelnen EU-Einwohner erreicht, gilt der EU AI Act — auch wenn Ihr Unternehmen in den USA oder China ansässig ist. Dies bedeutet, dass die Durchsetzung der gleichen Compliance-Stufe global oft einfacher ist als die Verwaltung mehrerer Konfigurationen.',
@@ -1106,22 +1106,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Minimalrisiko:** Spam-Filter, KI in Videospielen, Empfehlungssysteme ohne signifikanten Einfluss. Keine spezifischen Verpflichtungen über bestehendes Recht hinaus.',
             '**General Purpose AI (GPAI):** Modelle wie GPT-5.5, Claude und Gemini müssen Trainingsdaten-Zusammenfassungen veröffentlichen, EU-Urheberrechtsgesetz befolgen und schwerwiegende Vorfälle melden. Modelle mit Systemrisiko (trainiert mit >10^25 FLOPS) sehen zusätzliche Adversarial-Testing-Anforderungen. GPAI-Regeln galten ab August 2025.',
             '**Durchsetzung:** EU AI Office (innerhalb der Europäischen Kommission) überwacht GPAI-Modelle. Nationale Marktüberwachungsbehörden setzen Hochrisiko-KI-Regeln durch. Geldstrafen: bis zu 35 Mio. EUR oder 7% globaler Umsatz für verbotene Praktiken; 15 Mio. EUR oder 3% für Hochrisiko-Verstöße.',
-            '**Zeitplan:** Verbotene Praktiken: August 2024. GPAI-Verpflichtungen: August 2025. Hochrisiko-KI-Systeme: August 2026. Hochrisiko-KI in reglementierten Produkten: August 2027.',
+            '**Zeitplan:** Verbotene Praktiken: August 2024. GPAI-Verpflichtungen: August 2025. Transparenzpflichten nach Artikel 50 (Chatbot-/Deepfake-Offenlegung): August 2026, vom Digital Omnibus nicht berührt. Eigenständige Hochrisiko-KI-Systeme (Anhang III): durch das Digital Omnibus von August 2026 auf den 2. Dezember 2027 verschoben. Produktintegrierte Hochrisiko-KI (Anhang I): verschoben von August 2027 auf den 2. August 2028.',
           ],
         },
 
         digitalOmnibus: {
-          title: 'Digital Omnibus: EU-AI-Act-Hochrisiko-Frist in der Schwebe',
+          title: 'Digital Omnibus: Hochrisiko-Frist auf Dezember 2027 verschoben',
           content: [
-            '**Stand Mitte 2026 könnte die EU-Compliance-Frist für Hochrisiko-KI vom 2. August 2026 auf den 2. Dezember 2027 verschoben werden — eine Annahme ist jedoch nicht öffentlich bestätigt, und die gesetzliche Frist rückt näher.** Die Europäische Kommission schlug das Digital Omnibus im November 2025 vor, um unbeabsichtigte Folgen und Umsetzungsprobleme des EU AI Act zu adressieren. Sowohl das Europäische Parlament als auch der Rat der EU signalisierten Unterstützung für eine Verschiebung. Die interinstitutionellen Verhandlungen stockten zuletzt.',
-            '**Trilog-Status:** Der erste Trilog (Verhandlung zwischen Parlament, Rat und Kommission) im Februar 2026 fand breite politische Einigkeit über die Dringlichkeit, ließ aber technische Details ungelöst. Der zweite Trilog am 28. April 2026 endete ohne Konsens. Ein dritter Trilog fand Mitte Mai 2026 statt; eine öffentliche Bestätigung der endgültigen Annahme liegt bislang nicht vor. Wird die Verschiebung vor dem 2. August 2026 angenommen, wird sie verbindlich; andernfalls gilt die ursprüngliche Frist vom 2. August 2026 wie geschrieben — und dieser Termin rückt näher.',
-            '**Was Organisationen tun sollten:** Planen Sie mit dem 2. August 2026 als verbindliche Compliance-Frist für Hochrisiko-KI-Systeme, solange keine offizielle Bestätigung der Digital-Omnibus-Verschiebung vorliegt. Die Verschiebung könnte Ihren Zeitrahmen bis Dezember 2027 verlängern, aber die Annahme, dass sie kommt, ist so kurz vor der Frist ein Risiko. Wer die Compliance zum August 2026 jetzt erreicht, ist so oder so abgesichert.',
+            '**Das Digital Omnibus ist beschlossen: Es wurde am 24. Juli 2026 im Amtsblatt veröffentlicht und trat am 27. Juli 2026 in Kraft — sechs Tage vor der ursprünglichen Hochrisiko-Frist.** Es verschiebt die Konformitätsfrist für eigenständige Hochrisiko-KI-Systeme (Anhang III — die größte Kategorie, die Beschäftigung, Kredit, Gesundheitswesen und Strafverfolgung abdeckt) vom 2. August 2026 auf den 2. Dezember 2027, eine Verlängerung um 16 Monate. Produktintegrierte Hochrisiko-KI (Anhang I) wird von August 2027 auf den 2. August 2028 verschoben.',
+            '**Was sich NICHT verschoben hat:** Die Transparenzpflichten nach Artikel 50 — Offenlegung, dass eine Person mit einem KI-System interagiert, Kennzeichnung KI-generierter Audio-/Bild-/Video-/Textinhalte und Deepfake-Offenlegung — traten planmäßig am 2. August 2026 in Kraft und gelten funktionsbasiert, unabhängig von der Risikostufe. GPAI-Transparenzpflichten (seit August 2025) und die Durchsetzung verbotener Praktiken (seit August 2024) sind ebenfalls nicht betroffen. Das Digital Omnibus fügte zudem zwei neue verbotene Kategorien hinzu — Systeme, die nicht einvernehmliche intime Bildinhalte und CSAM generieren —, mit einer Übergangsfrist für technische Schutzmaßnahmen bis zum 2. Dezember 2026.',
+            '**Was Organisationen tun sollten:** Fällt Ihr KI-System unter die Hochrisiko-Klassifizierung nach Anhang III, ist Ihre Konformitätsbewertungsfrist jetzt der 2. Dezember 2027, nicht mehr August 2026 — nutzen Sie die zusätzliche Zeit, um Dokumentation und Prozesse für die menschliche Aufsicht gründlich abzuschließen, statt zu überstürzen. Enthält Ihr Produkt unter Artikel 50 fallende Funktionen (Chatbots, KI-generierte Inhalte, Deepfakes), gilt diese Offenlegungspflicht bereits und wird durchgesetzt — überprüfen Sie jetzt Ihre Umsetzung.',
           ],
           callouts: [
             {
-              type: 'warning',
-              label: 'Warnung: Annahme des Digital Omnibus weiterhin unbestätigt',
-              text: 'Die Digital-Omnibus-Verschiebung von August 2026 auf Dezember 2027 ist NICHT öffentlich als angenommen bestätigt. Der zweite Trilog am 28. April 2026 erzielte keinen Konsens, und ein dritter Trilog fand Mitte Mai 2026 statt, ohne dass seither ein bestätigtes Ergebnis vorliegt. Gehen Sie NICHT davon aus, dass die Verschiebung bereits erfolgt ist. Planen Sie Ihre Compliance-Roadmap mit dem 2. August 2026 als verbindlicher Frist.',
+              type: 'did-you-know',
+              label: 'Geklärt: Digital Omnibus seit 27. Juli 2026 in Kraft',
+              text: 'Die Digital-Omnibus-Verschiebung ist bestätigt und verbindlich — sie trat am 27. Juli 2026 in Kraft und verschob die Frist für eigenständige Hochrisiko-KI (Anhang III) vom 2. August 2026 auf den 2. Dezember 2027. Die Transparenzpflichten nach Artikel 50 (Chatbot-Offenlegung, Kennzeichnung KI-generierter Inhalte und Deepfakes) sind davon nicht betroffen — sie traten wie ursprünglich geplant am 2. August 2026 in Kraft und werden bereits durchgesetzt.',
             },
           ],
         },
@@ -1505,7 +1505,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'EU AI Act, controles de exportación de EE. UU. y CAC de China: tres marcos incompatibles. Cómo afectan a la compra de IA y la residencia de datos en 2026.',
       seoTitle: 'Geopolítica de la IA 2026: Análisis EE.UU., UE y China',
       publishDate: '2026-04-01',
-      dateModified: '2026-06-01',
+      dateModified: '2026-08-26',
       readTime: '16 min de lectura',
       educationalLevel: 'Intermediate',
       primaryTerm: 'AI Geopolitics',
@@ -1541,7 +1541,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Geopolítica de la IA explicada: EU AI Act vs. EE.UU. vs. China (Análisis 2026)',
         description: 'EE.UU., China y la Unión Europea persiguen visiones incompatibles de la gobernanza de la IA. Para las organizaciones que despliegan IA, estas diferencias se traducen en obligaciones de cumplimiento concretas, restricciones de adquisición y requisitos de residencia de datos.',
         datePublished: '2026-04-01',
-        dateModified: '2026-06-01',
+        dateModified: '2026-08-26',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: buildOgImageObject(OG_SLUG, 'es'),
@@ -1588,8 +1588,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         quickFacts: {
           title: 'Datos rápidos: Geopolítica de la IA de un vistazo',
           items: [
-            '**EU AI Act:** Primera ley de IA vinculante del mundo. Aplicación de alto riesgo: 2 de agosto de 2026 (puede retrasarse hasta el 2 de diciembre de 2027 por el Ómnibus Digital, pendiente del acuerdo de trílogo programado para el 13 de mayo de 2026). Multas: hasta €35 millones o el 7% de los ingresos anuales globales.',
-            '**Política de IA de EE.UU.:** Sin ley federal de IA. La administración Trump persigue la preemption de leyes estatales mediante EO 14365 (diciembre de 2025), Marco Nacional (marzo de 2026) y la propuesta TRUMP AMERICA AI Act (marzo de 2026). Múltiples plazos de implementación incumplidos a mayo de 2026.',
+            '**EU AI Act:** Primera ley de IA vinculante del mundo. El Ómnibus Digital entró en vigor el 27 de julio de 2026, aplazando el cumplimiento de la IA de alto riesgo independiente (Anexo III) del 2 de agosto de 2026 al 2 de diciembre de 2027, y la IA de alto riesgo integrada en productos (Anexo I) al 2 de agosto de 2028. Los deberes de transparencia del Artículo 50 (divulgación de IA, etiquetado de deepfakes) entraron en vigor según lo previsto el 2 de agosto de 2026. Multas: hasta €35 millones o el 7% de los ingresos anuales globales.',
+            '**Política de IA de EE.UU.:** Sin ley federal de IA. La administración Trump persigue la preemption de leyes estatales mediante la EO 14365 (diciembre de 2025) y el Marco Nacional (marzo de 2026). La FTC emitió su declaración de política sobre precisión de la IA y preemption estatal, exigida por la orden ejecutiva, el 7 de julio de 2026 — cuatro meses después de su plazo del 11 de marzo — y cerró el período de comentarios públicos el 31 de julio de 2026. Ni la TRUMP AMERICA AI Act ni la contrapropuesta demócrata GUARDRAILS Act han sido aprobadas por el Congreso; ambas siguen siendo borradores de discusión.',
             '**Gobernanza de IA en China:** Evaluación previa al lanzamiento del CAC (Administración del Ciberespacio de China) obligatoria. Los filtros de contenido bloquean la crítica al PCCh, las discusiones sobre Taiwán/Tíbet/Xinjiang y el contenido que socava los "valores socialistas fundamentales". Los filtros devuelven HTTP 200 con flag `is_safe: 0` (no errores 4xx). La PIPL exige residencia de datos para datos personales chinos.',
             '**Cuellos de botella de hardware:** Nvidia controla ~80% del mercado de GPU para entrenamiento de IA. TSMC fabrica ~90% de los semiconductores avanzados. Ambos son puntos de conflicto geopolítico. La CHIPS Act de EE.UU. ($52B) tiene como objetivo reducir la dependencia de TSMC.',
             '**Impacto de DeepSeek R1:** Superó a GPT-5.5 en razonamiento/codificación (AIME 2024, MATH, HumanEval) a un costo de entrenamiento estimado de ~$6M (reducción del 94% frente a las estimaciones de modelos de frontera). Entrenado en GPU Nvidia H800 restringidas para China. Demuestra que los controles de exportación de hardware tienen límites.',
@@ -1600,7 +1600,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         euImplications: {
           title: 'Si eres una organización con sede en la UE: Plazos de cumplimiento críticos',
           content: [
-            '**El EU AI Act es vinculante y se aplica a partir de agosto de 2026.** Si tu organización tiene sede en la UE o atiende a usuarios de la UE, debes cumplir con su sistema de clasificación de riesgo de cuatro niveles. Las multas por prácticas prohibidas alcanzan €35 millones o el 7% de la facturación global — lo que sea mayor. El incumplimiento no es negociable.',
+            '**El EU AI Act es vinculante, y sus reglas de transparencia y GPAI se aplican desde agosto de 2026.** Si tu organización tiene sede en la UE o atiende a usuarios de la UE, debes cumplir con su sistema de clasificación de riesgo de cuatro niveles. El Ómnibus Digital (en vigor desde el 27 de julio de 2026) aplazó el cumplimiento de la IA de alto riesgo independiente (Anexo III) al 2 de diciembre de 2027, pero los requisitos de divulgación para chatbots y contenido generado por IA siguieron aplicándose desde la fecha original de agosto de 2026. Las multas por prácticas prohibidas alcanzan €35 millones o el 7% de la facturación global — lo que sea mayor. El incumplimiento no es negociable.',
             '**Si despliegas GPT-5.5, Claude Opus 4.8 o Gemini 3.1 Pro en la UE, debes auditar su documentación de cumplimiento de IA de Propósito General (GPAI).** OpenAI, Anthropic y Google publicaron documentación de transparencia (resúmenes de datos de entrenamiento, limitaciones de capacidades, pruebas de seguridad) a partir de agosto de 2025. Guarda estas certificaciones como prueba de cumplimiento — los reguladores las pedirán.',
             '**Los sistemas de IA de alto riesgo (contratación, decisiones de crédito, atención sanitaria, aplicación de la ley) requieren evaluaciones de conformidad antes del despliegue.** Esto significa pruebas de sesgo, documentación de mecanismos de supervisión humana y trazas de auditoría de todas las decisiones de IA. Los modelos de pesos abiertos desplegados localmente (LLaMA vía Ollama, Mistral Large) satisfacen los requisitos de residencia de datos — ningún dato sale de tu infraestructura y tú controlas la traza de auditoría.',
             '**El Efecto Bruselas se aplica a ti.** Si tu sistema de IA llega a un único residente de la UE, el EU AI Act se aplica — aunque tu empresa tenga sede en EE.UU. o China. Esto significa que aplicar el mismo nivel de cumplimiento globalmente suele ser más sencillo que mantener múltiples configuraciones.',
@@ -1779,24 +1779,24 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Riesgo mínimo:** Filtros de spam, IA en videojuegos, sistemas de recomendación sin impacto significativo. Sin obligaciones específicas más allá de la ley existente.',
             '**IA de Propósito General (GPAI):** Modelos como GPT-5.5, Claude y Gemini deben publicar resúmenes de datos de entrenamiento, cumplir con la ley de derechos de autor de la UE e informar de incidentes graves. Los modelos con riesgo sistémico (entrenados con >10^25 FLOPS) enfrentan requisitos adicionales de pruebas adversariales. Las reglas GPAI se aplicaron en agosto de 2025.',
             '**Aplicación:** La Oficina de IA de la UE (dentro de la Comisión Europea) supervisa los modelos GPAI. Las autoridades nacionales de vigilancia del mercado aplican las reglas de IA de alto riesgo. Multas: hasta €35M o el 7% de la facturación global por prácticas prohibidas; €15M o el 3% por infracciones de alto riesgo.',
-            '**Cronograma:** Prácticas prohibidas: agosto de 2024. Obligaciones GPAI: agosto de 2025. Sistemas de IA de alto riesgo: agosto de 2026. IA de alto riesgo en productos regulados: agosto de 2027.',
+            '**Cronograma:** Prácticas prohibidas: agosto de 2024. Obligaciones GPAI: agosto de 2025. Deberes de transparencia del Artículo 50 (divulgación de chatbots/deepfakes): agosto de 2026, no afectados por el Ómnibus Digital. Sistemas de IA de alto riesgo independientes (Anexo III): aplazados de agosto de 2026 al 2 de diciembre de 2027 por el Ómnibus Digital. IA de alto riesgo integrada en productos regulados (Anexo I): aplazada de agosto de 2027 al 2 de agosto de 2028.',
           ],
           image: '/images/ai-risk-tiers-comparison-es.svg',
           imageCaption: 'Sistema de 4 niveles de riesgo del EU AI Act: Inaceptable (prohibido ago. 2024), Alto riesgo (evaluación de conformidad), Limitado (solo divulgación), Mínimo (sin obligaciones).',
         },
 
         digitalOmnibus: {
-          title: 'Ómnibus Digital: Plazo de cumplimiento de alto riesgo del EU AI Act en incertidumbre',
+          title: 'Ómnibus Digital: plazo de alto riesgo aplazado a diciembre de 2027',
           content: [
-            '**A mayo de 2026, el plazo de cumplimiento de alto riesgo del EU AI Act del 2 de agosto de 2026 puede retrasarse hasta el 2 de diciembre de 2027 — pero la adopción no está garantizada.** La Comisión Europea propuso el Ómnibus Digital en noviembre de 2025 para abordar consecuencias no deseadas y desafíos de implementación en el EU AI Act.',
-            '**Estado del trílogo:** El segundo trílogo del 28 de abril de 2026 terminó sin consenso. Se programó un tercer trílogo para el 13 de mayo de 2026. Si se adopta antes del 2 de agosto de 2026, el aplazamiento se vuelve vinculante; si no, se aplica la fecha límite original del 2 de agosto de 2026.',
-            '**Qué deben hacer las organizaciones:** Planifica para el 2 de agosto de 2026 como tu plazo de cumplimiento vinculante para sistemas de IA de alto riesgo. El aplazamiento del Ómnibus Digital puede extender tu plazo hasta diciembre de 2027, pero asumir que el retraso se aprobará es un riesgo. Lograr el cumplimiento de agosto de 2026 ahora significa que estás protegido de cualquier manera.',
+            '**El Ómnibus Digital está adoptado: se publicó en el Diario Oficial el 24 de julio de 2026 y entró en vigor el 27 de julio de 2026 — seis días antes del plazo original de alto riesgo.** Aplaza el cumplimiento de los sistemas de IA de alto riesgo independientes (Anexo III — la categoría más amplia, que cubre empleo, crédito, sanidad y aplicación de la ley) del 2 de agosto de 2026 al 2 de diciembre de 2027, una extensión de 16 meses. La IA de alto riesgo integrada en productos ya cubiertos por la legislación de seguridad de productos de la UE (Anexo I) se aplaza de agosto de 2027 al 2 de agosto de 2028.',
+            '**Lo que NO se aplazó:** Los deberes de transparencia del Artículo 50 — divulgar que una persona interactúa con un sistema de IA, etiquetar audio/imagen/vídeo/texto generado por IA y divulgar deepfakes — entraron en vigor según lo previsto el 2 de agosto de 2026, y se aplican según la función del sistema, no según el nivel de riesgo. Las obligaciones de transparencia GPAI (vigentes desde agosto de 2025) y la aplicación de prácticas prohibidas (vigente desde agosto de 2024) tampoco se ven afectadas. El Ómnibus también añadió dos nuevas categorías prohibidas — sistemas que generan imágenes íntimas no consentidas y CSAM — con un período de gracia para las salvaguardas técnicas hasta el 2 de diciembre de 2026.',
+            '**Qué deben hacer las organizaciones:** Si tus sistemas de IA se clasifican como de alto riesgo independiente (Anexo III), tu plazo de evaluación de conformidad es ahora el 2 de diciembre de 2027, no agosto de 2026 — usa el tiempo adicional para completar correctamente la documentación y los procesos de supervisión humana en lugar de precipitarte. Si tu producto incluye funcionalidad cubierta por el Artículo 50 (chatbots, contenido generado por IA, deepfakes), esa obligación de divulgación ya está vigente y se aplica — verifica tu implementación ahora.',
           ],
           callouts: [
             {
-              type: 'warning',
-              label: 'Aviso: Adopción del Ómnibus Digital incierta',
-              text: 'El aplazamiento del Ómnibus Digital de agosto de 2026 a diciembre de 2027 NO está garantizado. El segundo trílogo del 28 de abril de 2026 no llegó a ningún consenso. NO asumas que el retraso se aprobará. Planifica tu hoja de ruta de cumplimiento para el 2 de agosto de 2026 como fecha límite vinculante.',
+              type: 'did-you-know',
+              label: 'Resuelto: el Ómnibus Digital está en vigor desde el 27 de julio de 2026',
+              text: 'El aplazamiento del Ómnibus Digital está confirmado y es vinculante — entró en vigor el 27 de julio de 2026, trasladando el plazo de la IA de alto riesgo independiente (Anexo III) del 2 de agosto de 2026 al 2 de diciembre de 2027. Esto no afecta a los deberes de transparencia del Artículo 50 (divulgación de chatbots, etiquetado de contenido generado por IA y deepfakes), que entraron en vigor según lo previsto el 2 de agosto de 2026 y ya se están aplicando.',
             },
           ],
         },
@@ -1848,8 +1848,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**EO 14365 (diciembre de 2025):** Orden ejecutiva de Trump que instruye al Departamento de Comercio a desarrollar un Marco Nacional para la Innovación en IA y considera la preemption (anulación) de regulaciones estatales de IA que podrían obstaculizar la innovación.',
-            '**Marco Nacional de IA (marzo de 2026):** Marco voluntario publicado por el Departamento de Comercio que orienta a las agencias federales sobre el despliegue de IA. Aún no publicado a mayo de 2026 — plazo incumplido.',
-            '**Propuesta de TRUMP AMERICA AI Act (marzo de 2026):** Propuesta legislativa para preemptar (anular) las regulaciones estatales de IA que se apliquen específicamente a los sistemas de IA — destinada a impedir que California, Nueva York y Texas creen marcos de cumplimiento de IA fragmentados para operadores nacionales.',
+            '**Marco Nacional de IA (marzo de 2026):** Marco voluntario publicado por el Departamento de Comercio que orienta a las agencias federales sobre el despliegue de IA.',
+            '**Propuesta de TRUMP AMERICA AI Act (marzo de 2026):** Propuesta legislativa para preemptar (anular) las regulaciones estatales de IA que se apliquen específicamente a los sistemas de IA — destinada a impedir que California, Nueva York y Texas creen marcos de cumplimiento de IA fragmentados para operadores nacionales. Sigue siendo un borrador de discusión; no ha sido aprobada por el Congreso.',
+            '**GUARDRAILS Act (marzo de 2026, Rep. Beyer y otros):** Contrapropuesta demócrata a la TRUMP AMERICA AI Act. Derogaría la EO 14365 de Trump y bloquearía explícitamente la preemption federal de las leyes estatales de IA, preservando la autoridad reguladora de los estados. Tampoco ha sido aprobada por el Congreso.',
+            '**Estado de implementación:** La EO 14365 exigía que la FTC emitiera una declaración de política antes del 11 de marzo de 2026. La FTC incumplió ese plazo y publicó su declaración de política propuesta el 7 de julio de 2026 — casi cuatro meses tarde — cerrando el período de comentarios públicos el 31 de julio de 2026. Aún no se ha adoptado una versión final. El Congreso no ha aprobado ni la TRUMP AMERICA AI Act ni la GUARDRAILS Act, por lo que la preemption federal de las leyes estatales de IA sigue siendo objeto de disputa.',
             '**NIST AI RMF (2023):** Marco de Gestión de Riesgos de IA del Instituto Nacional de Estándares y Tecnología — el documento de guía de IA más adoptado en EE.UU. Voluntario, no vinculante. Proporciona siete dimensiones de confiabilidad (seguro, garantizado, explicable, transparente, protección de la privacidad, justo, resiliente) que las agencias federales y muchos contratistas siguen como buenas prácticas.',
           ],
         },
@@ -1929,7 +1931,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Las organizaciones que despliegan IA globalmente enfrentan cuatro riesgos geopolíticos: incertidumbre regulatoria, restricciones de disponibilidad de modelos, fragmentación de residencia de datos y disrupciones de la cadena de suministro de hardware.**',
           ],
           items: [
-            '**Incertidumbre regulatoria:** El EU AI Act tiene plazos de cumplimiento que cambian (posible aplazamiento del Ómnibus Digital de agosto de 2026 a diciembre de 2027). La política de IA de EE.UU. varía entre administraciones. Las regulaciones del CAC en China se aplican retroactivamente a los servicios existentes. Planifica para cumplir con el estándar más estricto (EU AI Act) como línea de base global.',
+            '**Incertidumbre regulatoria:** El EU AI Act tiene plazos de cumplimiento escalonados — el Ómnibus Digital (en vigor desde el 27 de julio de 2026) confirmó el aplazamiento de la IA de alto riesgo independiente de agosto de 2026 a diciembre de 2027, pero los deberes de divulgación del Artículo 50 ya se aplican desde agosto de 2026. La política de IA de EE.UU. varía entre administraciones. Las regulaciones del CAC en China se aplican retroactivamente a los servicios existentes. Planifica para cumplir con el estándar más estricto (EU AI Act) como línea de base global.',
             '**Restricciones de disponibilidad de modelos:** Los modelos de EE.UU. (GPT-5.5, Claude) son inaccesibles en China continental. Los modelos chinos (ERNIE 4.0, Qwen vía Alibaba Cloud) tienen filtros de contenido del CAC integrados. Las organizaciones que operan en ambos mercados necesitan dos pilas de modelos.',
             '**Fragmentación de residencia de datos:** El RGPD de la UE, la PIPL de China y las regulaciones sectoriales de EE.UU. requieren que los datos permanezcan en jurisdicciones específicas. Los despliegues globales necesitan arquitecturas de inferencia regional para enrutar los datos de los usuarios a través del procesamiento local.',
             '**Disrupciones de la cadena de suministro de hardware:** La concentración de TSMC en Taiwán y la cuota de mercado de Nvidia del 80% en GPU crean vulnerabilidades de cadena de suministro. Cualquier escalada geopolítica en el Estrecho de Taiwán afectaría la capacidad de entrenamiento de IA a nivel mundial. Las restricciones de GPU de EE.UU. a China demuestran que el acceso al hardware puede ser revocado políticamente.',
@@ -2020,7 +2022,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhatEUAIActRequires: {
           title: '¿Qué exige el EU AI Act a las organizaciones?',
           content: [
-            'El EU AI Act clasifica los sistemas de IA en cuatro niveles de riesgo con obligaciones escalonadas. Las prácticas prohibidas — puntuación social por parte de autoridades públicas, vigilancia biométrica en tiempo real en espacios públicos — están prohibidas desde agosto de 2024. Los sistemas de IA de alto riesgo usados en empleo, evaluación crediticia, atención médica o aplicación de la ley requieren evaluaciones de conformidad, documentación de supervisión humana y registro en la base de datos de IA de la UE antes de agosto de 2026. Los modelos de IA de Propósito General (GPT-5.5, Claude, Gemini) deben publicar resúmenes de datos de entrenamiento y cumplir con la ley de derechos de autor de la UE — reglas que se aplican desde agosto de 2025. Todas las organizaciones que atienden a usuarios de la UE deben cumplir independientemente de dónde estén radicadas.',
+            'El EU AI Act clasifica los sistemas de IA en cuatro niveles de riesgo con obligaciones escalonadas. Las prácticas prohibidas — puntuación social por parte de autoridades públicas, vigilancia biométrica en tiempo real en espacios públicos — están prohibidas desde agosto de 2024. Los sistemas de IA de alto riesgo independientes usados en empleo, evaluación crediticia, atención médica o aplicación de la ley requieren evaluaciones de conformidad, documentación de supervisión humana y registro en la base de datos de IA de la UE antes del 2 de diciembre de 2027 (aplazado desde la fecha original de agosto de 2026 por el Ómnibus Digital, en vigor desde el 27 de julio de 2026). Los modelos de IA de Propósito General (GPT-5.5, Claude, Gemini) deben publicar resúmenes de datos de entrenamiento y cumplir con la ley de derechos de autor de la UE — reglas que se aplican desde agosto de 2025. Los deberes de transparencia del Artículo 50 (divulgación de chatbots y contenido de IA) siguen aplicándose desde agosto de 2026 según lo previsto. Todas las organizaciones que atienden a usuarios de la UE deben cumplir independientemente de dónde estén radicadas.',
           ],
         },
 
@@ -2127,12 +2129,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
-            { q: '¿Qué es el EU AI Act?', a: 'El EU AI Act es el primer marco legal integral del mundo para la inteligencia artificial, aprobado por el Parlamento Europeo en marzo de 2024 con 523 votos a favor. Clasifica los sistemas de IA en cuatro niveles de riesgo y se aplica a agosto de 2026.' },
+            { q: '¿Qué es el EU AI Act?', a: 'El EU AI Act es el primer marco legal integral del mundo para la inteligencia artificial, aprobado por el Parlamento Europeo en marzo de 2024 con 523 votos a favor. Clasifica los sistemas de IA en cuatro niveles de riesgo. Los deberes de transparencia del Artículo 50 se aplican desde agosto de 2026; los sistemas de IA de alto riesgo independientes se aplazaron al 2 de diciembre de 2027 por el Ómnibus Digital, en vigor desde el 27 de julio de 2026.' },
             { q: '¿Se aplica el EU AI Act a empresas fuera de la UE?', a: 'Sí. Se aplica a cualquier organización que coloque sistemas de IA en el mercado de la UE o cuyos resultados de IA se utilicen en la UE. Esto se llama el Efecto Bruselas.' },
             { q: '¿Cuáles son las multas por violar el EU AI Act?', a: 'Hasta €35 millones o el 7% de la facturación global por prácticas prohibidas. Hasta €15 millones o el 3% por infracciones de alto riesgo.' },
             { q: '¿Cómo afecta la política de IA de EE.UU. a las organizaciones globales?', a: 'EE.UU. usa un enfoque sectorial sin ley federal de IA. Los controles de exportación de hardware (GPU) son el principal instrumento de política con efectos globales — limitando el acceso de China a las GPU de Nvidia. La administración Trump revocó la EO de seguridad de IA de Biden en enero de 2025.' },
             { q: '¿Pueden las organizaciones de la UE usar DeepSeek para aplicaciones comerciales?', a: 'Con precaución. DeepSeek está sujeto a la ley china, que permite el acceso de las autoridades estatales a los datos. Alemania (BSI), Francia (ANSSI) y los Países Bajos (NCSC) han emitido avisos que restringen las herramientas de IA chinas para el gobierno e infraestructuras críticas. Las organizaciones del sector privado deben realizar una evaluación de impacto de transferencia bajo el Artículo 46 del RGPD.' },
-            { q: '¿Cuál es el estatus del Ómnibus Digital y el plazo de cumplimiento del EU AI Act?', a: 'A mayo de 2026, el segundo trílogo (28 de abril de 2026) terminó sin consenso. Planifica para el 2 de agosto de 2026 como tu plazo de cumplimiento vinculante para IA de alto riesgo. No asumas que el aplazamiento del Ómnibus Digital se aprobará.' },
+            { q: '¿Cuál es el estatus del Ómnibus Digital y el plazo de cumplimiento del EU AI Act?', a: 'El Ómnibus Digital está adoptado: entró en vigor el 27 de julio de 2026, aplazando el plazo de cumplimiento de la IA de alto riesgo independiente (Anexo III) del 2 de agosto de 2026 al 2 de diciembre de 2027, y la IA de alto riesgo integrada en productos (Anexo I) al 2 de agosto de 2028. Los deberes de transparencia del Artículo 50 (divulgación de chatbots, etiquetado de deepfakes) no se vieron afectados y ya se aplican desde agosto de 2026.' },
             { q: '¿Qué marcos de gobernanza de IA aplican en América Latina?', a: 'América Latina no tiene equivalente al EU AI Act. Colombia lidera con el Conpes 3975 (2019), una política de IA nacional con directrices voluntarias de gobernanza. Brasil avanza en legislación específica de IA. La mayoría de los marcos latinoamericanos se alinean con los principios de IA de la OCDE y son voluntarios.' },
           ],
         },
@@ -2175,7 +2177,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'قانون الاتحاد الأوروبي للذكاء الاصطناعي وضوابط التصدير الأمريكية و⁨CAC⁩ الصيني: ⁨3⁩ أطر متعارضة تؤثر على المشتريات والبيانات في ⁨2026⁩.',
       seoTitle: 'جيوسياسة الذكاء الاصطناعي ⁨2026⁩: تحليل ثلاثي الأطراف',
       publishDate: '2026-04-01',
-      dateModified: '2026-06-01',
+      dateModified: '2026-08-26',
       readTime: '١٦ دقيقة للقراءة',
       educationalLevel: 'متوسط',
       primaryTerm: 'AI Geopolitics',
@@ -2211,7 +2213,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'الجيوسياسة والذكاء الاصطناعي: كيف تتنافس الولايات المتحدة والاتحاد الأوروبي والصين على الهيمنة (تحليل 2026)',
         description: 'تسعى الولايات المتحدة والصين والاتحاد الأوروبي نحو رؤى متعارضة لحوكمة الذكاء الاصطناعي. بالنسبة للمؤسسات التي تنشر الذكاء الاصطناعي، تتحول هذه الاختلافات إلى التزامات امتثال ملموسة وقيود على المشتريات ومتطلبات إقامة البيانات.',
         datePublished: '2026-04-01',
-        dateModified: '2026-06-01',
+        dateModified: '2026-08-26',
         inLanguage: 'ar',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -2259,8 +2261,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         quickFacts: {
           title: 'حقائق سريعة: جيوسياسة الذكاء الاصطناعي في لمحة',
           items: [
-            '**قانون الذكاء الاصطناعي الأوروبي:** أول قانون ملزم للذكاء الاصطناعي في العالم. تطبيق الاستخدامات عالية المخاطر: 2 أغسطس 2026 (قد يُؤجَّل حتى 2 ديسمبر 2027 بموجب الحزمة الرقمية الشاملة، تنتظر اتفاق مفاوضات ثلاثية مُجدَّل في 13 مايو 2026). الغرامات: تصل إلى 35 مليون يورو أو 7% من الإيرادات السنوية العالمية.',
-            '**سياسة الذكاء الاصطناعي الأمريكية:** لا يوجد قانون فيدرالي للذكاء الاصطناعي. تسعى إدارة ترامب إلى إلغاء القوانين الولائية عبر المرسوم 14365 (ديسمبر 2025) والإطار الوطني (مارس 2026) ومشروع قانون TRUMP AMERICA AI Act (مارس 2026). مواعيد تنفيذ متعددة فُوِّتت حتى مايو 2026.',
+            '**قانون الذكاء الاصطناعي الأوروبي:** أول قانون ملزم للذكاء الاصطناعي في العالم. دخلت الحزمة الرقمية الشاملة حيّز التنفيذ في 27 يوليو 2026، مؤجّلةً امتثال الذكاء الاصطناعي عالي المخاطر المستقل (الملحق الثالث) من 2 أغسطس 2026 إلى 2 ديسمبر 2027، والذكاء الاصطناعي عالي المخاطر المدمج في المنتجات (الملحق الأول) إلى 2 أغسطس 2028. أما واجبات الشفافية بموجب المادة 50 (الإفصاح عن الذكاء الاصطناعي، وسم المحتوى المزيّف العميق) فقد دخلت حيّز التنفيذ كما هو مقرر في 2 أغسطس 2026. الغرامات: تصل إلى 35 مليون يورو أو 7% من الإيرادات السنوية العالمية.',
+            '**سياسة الذكاء الاصطناعي الأمريكية:** لا يوجد قانون فيدرالي للذكاء الاصطناعي. تسعى إدارة ترامب إلى إلغاء القوانين الولائية عبر المرسوم 14365 (ديسمبر 2025) والإطار الوطني (مارس 2026). أصدرت لجنة التجارة الفيدرالية (FTC) بيانها السياسي المُلزَم بموجب المرسوم بشأن دقة الذكاء الاصطناعي وإلغاء القوانين الولائية في 7 يوليو 2026 — بعد أربعة أشهر من موعده النهائي في 11 مارس — وأغلقت فترة التعليقات العامة في 31 يوليو 2026. لم يُقرّ الكونغرس بعد مشروع قانون TRUMP AMERICA AI Act ولا مشروع القانون المضاد GUARDRAILS Act الديمقراطي؛ كلاهما لا يزال مسودة نقاش.',
             '**حوكمة الذكاء الاصطناعي في الصين:** تقييم إلزامي قبل الإطلاق من قِبل CAC (إدارة الفضاء الإلكتروني الصيني). تحجب فلاتر المحتوى انتقاد الحزب الشيوعي الصيني والنقاشات حول تايوان/التبت/شينجيانغ والمحتوى الذي يُقوّض "القيم الاشتراكية الجوهرية". تُعيد الفلاتر HTTP 200 مع علامة `is_safe: 0` (لا أخطاء 4xx). يشترط PIPL إقامة البيانات للبيانات الشخصية الصينية.',
             '**اختناقات الأجهزة:** تسيطر Nvidia على ~80% من سوق وحدات معالجة الرسوميات لتدريب الذكاء الاصطناعي. تُصنّع TSMC ~90% من أشباه الموصلات المتقدمة. كلاهما نقطة احتكاك جيوسياسي. تستهدف قانون CHIPS الأمريكي (52 مليار دولار) تقليل الاعتماد على TSMC.',
             '**تأثير DeepSeek R1:** تفوّق على GPT-5.5 في الاستدلال/البرمجة (AIME 2024 وMATH وHumanEval) بتكلفة تدريب مُقدَّرة بـ6 ملايين دولار (تخفيض 94% مقارنة بتقديرات النماذج الحدودية). دُرِّب على وحدات معالجة رسوميات Nvidia H800 المقيّدة للصين. يُثبت أن ضوابط تصدير الأجهزة لها حدود.',
@@ -2271,7 +2273,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         euImplications: {
           title: 'إذا كانت مؤسستك مقرّها في الاتحاد الأوروبي: مواعيد الامتثال الحرجة',
           content: [
-            '**قانون الذكاء الاصطناعي الأوروبي ملزم ويُطبَّق اعتباراً من أغسطس 2026.** إذا كانت مؤسستك مقرّها في الاتحاد الأوروبي أو تخدم مستخدميه، فعليك الامتثال لنظام تصنيف المخاطر الرباعي. تبلغ الغرامات على الممارسات المحظورة 35 مليون يورو أو 7% من حجم الأعمال العالمي — أيهما أكبر. الامتثال غير قابل للتفاوض.',
+            '**قانون الذكاء الاصطناعي الأوروبي ملزم، وتُطبَّق قواعده الخاصة بالشفافية وبنماذج الذكاء الاصطناعي للأغراض العامة اعتباراً من أغسطس 2026.** إذا كانت مؤسستك مقرّها في الاتحاد الأوروبي أو تخدم مستخدميه، فعليك الامتثال لنظام تصنيف المخاطر الرباعي. أجّلت الحزمة الرقمية الشاملة (السارية منذ 27 يوليو 2026) امتثال الذكاء الاصطناعي عالي المخاطر المستقل إلى 2 ديسمبر 2027 — لكن متطلبات الإفصاح للروبوتات المحادثة والمحتوى المولَّد بالذكاء الاصطناعي استمرت في التطبيق اعتباراً من الموعد الأصلي في أغسطس 2026. تبلغ الغرامات على الممارسات المحظورة 35 مليون يورو أو 7% من حجم الأعمال العالمي — أيهما أكبر. الامتثال غير قابل للتفاوض.',
             '**إذا كنت تنشر GPT-5.5 أو Claude Opus 4.8 أو Gemini 3.1 Pro في الاتحاد الأوروبي، فعليك مراجعة وثائق امتثال الذكاء الاصطناعي للأغراض العامة (GPAI).** نشرت OpenAI وAnthropic وGoogle وثائق الشفافية (ملخصات بيانات التدريب وقيود القدرات واختبارات السلامة) اعتباراً من أغسطس 2025. احتفظ بهذه الشهادات كدليل على الامتثال — ستطلبها الجهات التنظيمية.',
             '**تستلزم أنظمة الذكاء الاصطناعي عالية المخاطر (التوظيف وقرارات الائتمان والرعاية الصحية وإنفاذ القانون) إجراء تقييمات مطابقة قبل النشر.** هذا يعني اختبار التحيز وتوثيق آليات الإشراف البشري وسجلات تدقيق جميع قرارات الذكاء الاصطناعي. تُلبّي نماذج الأوزان المفتوحة المنشورة محلياً (LLaMA عبر Ollama وMistral Large) متطلبات إقامة البيانات — لا تغادر أي بيانات بنيتك التحتية وأنت تتحكم في سجل التدقيق.',
             '**تأثير بروكسل يسري عليك.** إذا وصل نظام الذكاء الاصطناعي الخاص بك إلى مقيم واحد في الاتحاد الأوروبي، يسري قانون الذكاء الاصطناعي الأوروبي — حتى لو كانت شركتك مقرّها في الولايات المتحدة أو الصين. هذا يعني أن تطبيق نفس مستوى الامتثال عالمياً يكون عادةً أبسط من الحفاظ على إعدادات متعددة.',
@@ -2450,24 +2452,24 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**مخاطر أدنى:** فلاتر البريد المزعج والذكاء الاصطناعي في ألعاب الفيديو وأنظمة التوصية دون تأثير جوهري. لا التزامات محددة تتجاوز القانون القائم.',
             '**الذكاء الاصطناعي للأغراض العامة (GPAI):** يجب على نماذج كـGPT-5.5 وClaude وGemini نشر ملخصات بيانات التدريب والامتثال لقانون حقوق الملكية الفكرية في الاتحاد الأوروبي والإبلاغ عن الحوادث الجسيمة. تواجه النماذج ذات المخاطر المنهجية (المدرَّبة بأكثر من 10^25 FLOP) متطلبات اختبار عدائي إضافية. طُبّقت قواعد GPAI في أغسطس 2025.',
             '**التطبيق:** تشرف مكتب الذكاء الاصطناعي في الاتحاد الأوروبي (ضمن المفوضية الأوروبية) على نماذج GPAI. تُطبّق سلطات مراقبة السوق الوطنية قواعد الذكاء الاصطناعي عالي المخاطر. الغرامات: تصل إلى 35 مليون يورو أو 7% من حجم الأعمال العالمي على الممارسات المحظورة؛ و15 مليون يورو أو 3% على انتهاكات المخاطر العالية.',
-            '**الجدول الزمني:** الممارسات المحظورة: أغسطس 2024. التزامات GPAI: أغسطس 2025. أنظمة الذكاء الاصطناعي عالية المخاطر: أغسطس 2026. الذكاء الاصطناعي عالي المخاطر في المنتجات المنظّمة: أغسطس 2027.',
+            '**الجدول الزمني:** الممارسات المحظورة: أغسطس 2024. التزامات GPAI: أغسطس 2025. واجبات الشفافية بموجب المادة 50 (الإفصاح عن روبوتات الدردشة/المحتوى المزيّف): أغسطس 2026، ولم تتأثر بالحزمة الرقمية الشاملة. أنظمة الذكاء الاصطناعي المستقلة عالية المخاطر (الملحق الثالث): أُجّلت من أغسطس 2026 إلى 2 ديسمبر 2027 بموجب الحزمة الرقمية الشاملة. الذكاء الاصطناعي عالي المخاطر المدمج في المنتجات المنظّمة (الملحق الأول): أُجّل من أغسطس 2027 إلى 2 أغسطس 2028.',
           ],
           image: '/images/ai-risk-tiers-comparison-es.svg',
           imageCaption: 'نظام المستويات الأربعة للمخاطر في قانون الذكاء الاصطناعي الأوروبي: غير مقبول (محظور أغسطس 2024)، عالي المخاطر (تقييم المطابقة)، محدود (الإفصاح فقط)، أدنى (بلا التزامات).',
         },
 
         digitalOmnibus: {
-          title: 'الحزمة الرقمية الشاملة: موعد امتثال المخاطر العالية لقانون الذكاء الاصطناعي الأوروبي في حالة غموض',
+          title: 'الحزمة الرقمية الشاملة: تأجيل موعد المخاطر العالية إلى ديسمبر 2027',
           content: [
-            '**حتى مايو 2026، قد يُؤجَّل موعد امتثال المخاطر العالية لقانون الذكاء الاصطناعي الأوروبي المُقرَّر في 2 أغسطس 2026 إلى 2 ديسمبر 2027 — لكن الاعتماد غير مضمون.** اقترحت المفوضية الأوروبية الحزمة الرقمية الشاملة في نوفمبر 2025 لمعالجة التداعيات غير المقصودة وتحديات التنفيذ في قانون الذكاء الاصطناعي الأوروبي.',
-            '**حالة المفاوضات الثلاثية:** انتهت الجولة الثانية في 28 أبريل 2026 دون توافق. جُدِّلت جولة ثالثة في 13 مايو 2026. إذا اعتُمد التأجيل قبل 2 أغسطس 2026، يصبح ملزماً؛ وإلا يسري الموعد الأصلي في 2 أغسطس 2026.',
-            '**ما يجب على المؤسسات فعله:** خطّط لـ2 أغسطس 2026 بوصفه موعد الامتثال الملزم لأنظمة الذكاء الاصطناعي عالية المخاطر. قد تُمدّد الحزمة الرقمية الشاملة موعدك إلى ديسمبر 2027، لكن الافتراض بأن التأجيل سيُقرَّ خطرٌ حقيقي. تحقيق الامتثال لأغسطس 2026 الآن يُؤمّن حمايتك في كلتا الحالتين.',
+            '**اعتُمدت الحزمة الرقمية الشاملة رسمياً: نُشرت في الجريدة الرسمية في 24 يوليو 2026 ودخلت حيّز التنفيذ في 27 يوليو 2026 — قبل ستة أيام من الموعد الأصلي للمخاطر العالية.** تؤجّل الحزمة امتثال أنظمة الذكاء الاصطناعي المستقلة عالية المخاطر (الملحق الثالث — الفئة الأكبر التي تغطي التوظيف والائتمان والرعاية الصحية وإنفاذ القانون) من 2 أغسطس 2026 إلى 2 ديسمبر 2027، أي تمديد لمدة 16 شهراً. أما الذكاء الاصطناعي عالي المخاطر المدمج في منتجات تخضع بالفعل لتشريعات سلامة المنتجات الأوروبية (الملحق الأول) فيُؤجَّل من أغسطس 2027 إلى 2 أغسطس 2028.',
+            '**ما لم يتأجّل:** واجبات الشفافية بموجب المادة 50 — الإفصاح عن تفاعل شخص مع نظام ذكاء اصطناعي، ووسم المحتوى الصوتي/المرئي/النصي المولَّد بالذكاء الاصطناعي، والإفصاح عن المحتوى المزيّف العميق — دخلت حيّز التنفيذ كما هو مقرر في 2 أغسطس 2026، وتُطبَّق بحسب وظيفة النظام لا بحسب مستوى المخاطر. كذلك لم تتأثر التزامات الشفافية الخاصة بـGPAI (سارية منذ أغسطس 2025) ولا إنفاذ الممارسات المحظورة (سارٍ منذ أغسطس 2024). أضافت الحزمة أيضاً فئتين محظورتين جديدتين — الأنظمة التي تُولّد صوراً حميمة غير توافقية ومواد اعتداء جنسي على الأطفال — مع فترة سماح للضمانات التقنية حتى 2 ديسمبر 2026.',
+            '**ما يجب على المؤسسات فعله:** إذا كانت أنظمة الذكاء الاصطناعي لديك تُصنَّف ضمن المخاطر العالية المستقلة (الملحق الثالث)، فإن موعد تقييم المطابقة أصبح الآن 2 ديسمبر 2027 وليس أغسطس 2026 — استغل الوقت الإضافي لإتمام التوثيق وعمليات الإشراف البشري بشكل صحيح بدلاً من التسرع. أما إذا كان منتجك يتضمن وظائف تخضع للمادة 50 (روبوتات دردشة، محتوى مولَّد بالذكاء الاصطناعي، محتوى مزيّف عميق)، فإن واجب الإفصاح هذا سارٍ ومُطبَّق بالفعل — تحقق من تنفيذه الآن.',
           ],
           callouts: [
             {
-              type: 'warning',
-              label: 'تحذير: اعتماد الحزمة الرقمية الشاملة غير مضمون',
-              text: 'تأجيل الحزمة الرقمية الشاملة من أغسطس 2026 إلى ديسمبر 2027 غير مضمون. انتهت الجولة الثانية من المفاوضات في 28 أبريل 2026 دون توافق. لا تفترض أن التأجيل سيُقرَّ. خطّط لخارطة طريق الامتثال بحيث يكون 2 أغسطس 2026 الموعد النهائي الملزم.',
+              type: 'did-you-know',
+              label: 'تم الحسم: الحزمة الرقمية الشاملة سارية منذ 27 يوليو 2026',
+              text: 'تأجيل الحزمة الرقمية الشاملة مؤكَّد وملزم — دخلت حيّز التنفيذ في 27 يوليو 2026، ونقلت موعد الذكاء الاصطناعي المستقل عالي المخاطر (الملحق الثالث) من 2 أغسطس 2026 إلى 2 ديسمبر 2027. هذا لا يؤثر على واجبات الشفافية بموجب المادة 50 (الإفصاح عن روبوتات الدردشة، ووسم المحتوى المولَّد بالذكاء الاصطناعي والمحتوى المزيّف العميق)، التي دخلت حيّز التنفيذ كما هو مقرر في 2 أغسطس 2026 وتُطبَّق بالفعل.',
             },
           ],
         },
@@ -2519,8 +2521,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**المرسوم التنفيذي 14365 (ديسمبر 2025):** مرسوم ترامب التنفيذي الذي يُوجّه وزارة التجارة لتطوير إطار وطني للابتكار في الذكاء الاصطناعي ويدرس إلغاء اللوائح الولائية للذكاء الاصطناعي التي قد تُعيق الابتكار.',
-            '**الإطار الوطني للذكاء الاصطناعي (مارس 2026):** إطار طوعي نشرته وزارة التجارة يوجّه الوكالات الفيدرالية بشأن نشر الذكاء الاصطناعي. لم يُنشَر بعد حتى مايو 2026 — موعد فُوِّت.',
-            '**مشروع قانون TRUMP AMERICA AI Act (مارس 2026):** مقترح تشريعي لإلغاء اللوائح الولائية للذكاء الاصطناعي المُطبَّقة تحديداً على أنظمة الذكاء الاصطناعي — يهدف إلى منع كاليفورنيا ونيويورك وتكساس من إنشاء أطر امتثال متشرذمة للمشغّلين الوطنيين.',
+            '**الإطار الوطني للذكاء الاصطناعي (مارس 2026):** إطار طوعي نشرته وزارة التجارة يوجّه الوكالات الفيدرالية بشأن نشر الذكاء الاصطناعي.',
+            '**مشروع قانون TRUMP AMERICA AI Act (مارس 2026):** مقترح تشريعي لإلغاء اللوائح الولائية للذكاء الاصطناعي المُطبَّقة تحديداً على أنظمة الذكاء الاصطناعي — يهدف إلى منع كاليفورنيا ونيويورك وتكساس من إنشاء أطر امتثال متشرذمة للمشغّلين الوطنيين. لا يزال مسودة نقاش ولم يُقرّه الكونغرس بعد.',
+            '**مشروع قانون GUARDRAILS Act (مارس 2026، النائب بير وآخرون):** مقترح مضاد ديمقراطي لمشروع TRUMP AMERICA AI Act. من شأنه إلغاء المرسوم التنفيذي 14365 لترامب ومنع إلغاء القوانين الولائية للذكاء الاصطناعي على المستوى الفيدرالي بشكل صريح، مع الحفاظ على سلطة الولايات التنظيمية. لم يُقرّه الكونغرس بعد أيضاً.',
+            '**حالة التنفيذ:** ألزم المرسوم التنفيذي 14365 لجنة التجارة الفيدرالية (FTC) بإصدار بيان سياسي بحلول 11 مارس 2026. فاتت اللجنة هذا الموعد ونشرت بيانها السياسي المقترح في 7 يوليو 2026 — بعد نحو أربعة أشهر من التأخير — وأغلقت فترة التعليقات العامة في 31 يوليو 2026. لم تُعتمد بعد نسخة نهائية. لم يُقرّ الكونغرس مشروعي TRUMP AMERICA AI Act ولا GUARDRAILS Act، ما يعني أن إلغاء القوانين الولائية على المستوى الفيدرالي لا يزال محل نزاع.',
             '**NIST AI RMF (2023):** إطار إدارة مخاطر الذكاء الاصطناعي التابع للمعهد الوطني للمعايير والتقنية — الوثيقة التوجيهية الأكثر اعتماداً في مجال الذكاء الاصطناعي في الولايات المتحدة. طوعي وغير ملزم. يوفّر سبعة أبعاد للموثوقية (آمن ومضمون وقابل للتفسير وشفاف ومُصون للخصوصية وعادل ومرن) تتّبعها الوكالات الفيدرالية وكثير من المقاولين كممارسة جيدة.',
           ],
         },
@@ -2600,7 +2604,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**تواجه المؤسسات التي تنشر الذكاء الاصطناعي عالمياً أربعة مخاطر جيوسياسية: الغموض التنظيمي وقيود توفر النماذج وتشرذم إقامة البيانات واضطرابات سلسلة توريد الأجهزة.**',
           ],
           items: [
-            '**الغموض التنظيمي:** مواعيد امتثال قانون الذكاء الاصطناعي الأوروبي متغيّرة (تأجيل محتمل للحزمة الرقمية الشاملة من أغسطس 2026 إلى ديسمبر 2027). سياسة الذكاء الاصطناعي الأمريكية تتبدّل بتغيّر الإدارات. لوائح CAC في الصين تسري بأثر رجعي على الخدمات القائمة. خطّط للامتثال للمعيار الأكثر صرامة (قانون الذكاء الاصطناعي الأوروبي) خطاً أساسياً عالمياً.',
+            '**الغموض التنظيمي:** مواعيد امتثال قانون الذكاء الاصطناعي الأوروبي متدرّجة — أكّدت الحزمة الرقمية الشاملة (سارية منذ 27 يوليو 2026) تأجيل الذكاء الاصطناعي المستقل عالي المخاطر من أغسطس 2026 إلى ديسمبر 2027، لكن واجبات الإفصاح بموجب المادة 50 سارية بالفعل منذ أغسطس 2026. سياسة الذكاء الاصطناعي الأمريكية تتبدّل بتغيّر الإدارات. لوائح CAC في الصين تسري بأثر رجعي على الخدمات القائمة. خطّط للامتثال للمعيار الأكثر صرامة (قانون الذكاء الاصطناعي الأوروبي) خطاً أساسياً عالمياً.',
             '**قيود توفر النماذج:** نماذج الولايات المتحدة (GPT-5.5 وClaude) غير متاحة في الصين القارية. النماذج الصينية (ERNIE 4.0 وQwen عبر Alibaba Cloud) تحمل فلاتر محتوى CAC مُدمَجة. المؤسسات العاملة في كلا السوقين تحتاج إلى حزمتي نماذج.',
             '**تشرذم إقامة البيانات:** يستلزم كل من GDPR الأوروبي وPIPL الصيني واللوائح القطاعية الأمريكية بقاء البيانات في ولايات قضائية بعينها. تحتاج عمليات النشر العالمية إلى معماريات استنتاج إقليمية لتوجيه بيانات المستخدمين عبر المعالجة المحلية.',
             '**اضطرابات سلسلة توريد الأجهزة:** تركّز TSMC في تايوان وحصة Nvidia البالغة 80% في سوق وحدات معالجة الرسوميات يُفرزان ثغرات في سلسلة التوريد. أي تصعيد جيوسياسي في مضيق تايوان سيؤثر على طاقة تدريب الذكاء الاصطناعي عالمياً. قيود وحدات معالجة الرسوميات الأمريكية على الصين تُثبت أن الوصول إلى الأجهزة قابل للسحب سياسياً.',
@@ -2691,7 +2695,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhatEUAIActRequires: {
           title: 'ما الذي يستلزمه قانون الذكاء الاصطناعي الأوروبي من المؤسسات؟',
           content: [
-            'يُصنّف قانون الذكاء الاصطناعي الأوروبي أنظمة الذكاء الاصطناعي في أربعة مستويات مخاطر مع التزامات متدرّجة. الممارسات المحظورة — التسجيل الاجتماعي من السلطات العامة والمراقبة البيومترية في الوقت الفعلي في الأماكن العامة — محظورة منذ أغسطس 2024. أنظمة الذكاء الاصطناعي عالية المخاطر المُستخدَمة في التوظيف وتقييم الائتمان والرعاية الصحية وإنفاذ القانون تستلزم تقييمات مطابقة ووثائق إشراف بشري والتسجيل في قاعدة بيانات الذكاء الاصطناعي للاتحاد الأوروبي قبل أغسطس 2026. يجب على نماذج الذكاء الاصطناعي للأغراض العامة (GPT-5.5 وClaude وGemini) نشر ملخصات بيانات التدريب والامتثال لقانون حقوق الملكية الفكرية — قواعد سارية منذ أغسطس 2025. يجب على جميع المؤسسات التي تخدم مستخدمي الاتحاد الأوروبي الامتثال بصرف النظر عن موقعها.',
+            'يُصنّف قانون الذكاء الاصطناعي الأوروبي أنظمة الذكاء الاصطناعي في أربعة مستويات مخاطر مع التزامات متدرّجة. الممارسات المحظورة — التسجيل الاجتماعي من السلطات العامة والمراقبة البيومترية في الوقت الفعلي في الأماكن العامة — محظورة منذ أغسطس 2024. أنظمة الذكاء الاصطناعي المستقلة عالية المخاطر المُستخدَمة في التوظيف وتقييم الائتمان والرعاية الصحية وإنفاذ القانون تستلزم تقييمات مطابقة ووثائق إشراف بشري والتسجيل في قاعدة بيانات الذكاء الاصطناعي للاتحاد الأوروبي قبل 2 ديسمبر 2027 (بعد تأجيلها من موعدها الأصلي في أغسطس 2026 بموجب الحزمة الرقمية الشاملة، السارية منذ 27 يوليو 2026). يجب على نماذج الذكاء الاصطناعي للأغراض العامة (GPT-5.5 وClaude وGemini) نشر ملخصات بيانات التدريب والامتثال لقانون حقوق الملكية الفكرية — قواعد سارية منذ أغسطس 2025. واجبات الشفافية بموجب المادة 50 (الإفصاح عن روبوتات الدردشة والمحتوى المولَّد بالذكاء الاصطناعي) لا تزال سارية منذ أغسطس 2026 كما هو مقرر. يجب على جميع المؤسسات التي تخدم مستخدمي الاتحاد الأوروبي الامتثال بصرف النظر عن موقعها.',
           ],
         },
 
@@ -2798,12 +2802,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'الأسئلة المتكررة',
           faqs: [
-            { q: 'ما هو قانون الذكاء الاصطناعي الأوروبي؟', a: 'قانون الذكاء الاصطناعي الأوروبي هو أول إطار قانوني شامل في العالم للذكاء الاصطناعي، أقرّه البرلمان الأوروبي في مارس 2024 بـ523 صوتاً مؤيداً. يُصنّف أنظمة الذكاء الاصطناعي في أربعة مستويات مخاطر ويسري بدءاً من أغسطس 2026.' },
+            { q: 'ما هو قانون الذكاء الاصطناعي الأوروبي؟', a: 'قانون الذكاء الاصطناعي الأوروبي هو أول إطار قانوني شامل في العالم للذكاء الاصطناعي، أقرّه البرلمان الأوروبي في مارس 2024 بـ523 صوتاً مؤيداً. يُصنّف أنظمة الذكاء الاصطناعي في أربعة مستويات مخاطر. واجبات الشفافية بموجب المادة 50 سارية منذ أغسطس 2026؛ أما أنظمة الذكاء الاصطناعي المستقلة عالية المخاطر فقد أُجّلت إلى 2 ديسمبر 2027 بموجب الحزمة الرقمية الشاملة، السارية منذ 27 يوليو 2026.' },
             { q: 'هل يسري قانون الذكاء الاصطناعي الأوروبي على الشركات خارج الاتحاد الأوروبي؟', a: 'نعم. يسري على أي مؤسسة تطرح أنظمة ذكاء اصطناعي في السوق الأوروبية أو تُستخدم مخرجاتها في الاتحاد الأوروبي. يُسمى هذا تأثير بروكسل.' },
             { q: 'ما الغرامات المترتبة على انتهاك قانون الذكاء الاصطناعي الأوروبي؟', a: 'حتى 35 مليون يورو أو 7% من حجم الأعمال العالمي على الممارسات المحظورة. حتى 15 مليون يورو أو 3% على انتهاكات المخاطر العالية.' },
             { q: 'كيف تؤثر سياسة الذكاء الاصطناعي الأمريكية على المؤسسات العالمية؟', a: 'تعتمد الولايات المتحدة نهجاً قطاعياً بلا قانون فيدرالي للذكاء الاصطناعي. ضوابط تصدير الأجهزة (وحدات معالجة الرسوميات) هي الأداة السياسية الرئيسية ذات التأثيرات العالمية — تُحدّ من وصول الصين إلى وحدات معالجة Nvidia. ألغت إدارة ترامب المرسوم التنفيذي لسلامة الذكاء الاصطناعي في يناير 2025.' },
             { q: 'هل يمكن للمؤسسات الأوروبية استخدام DeepSeek في التطبيقات التجارية؟', a: 'بحذر. يخضع DeepSeek للقانون الصيني الذي يُتيح للسلطات الحكومية الوصول إلى البيانات. أصدرت ألمانيا (BSI) وفرنسا (ANSSI) وهولندا (NCSC) تحذيرات تُقيّد أدوات الذكاء الاصطناعي الصينية للحكومة والبنية التحتية الحيوية. على مؤسسات القطاع الخاص إجراء تقييم أثر النقل بموجب المادة 46 من GDPR.' },
-            { q: 'ما وضع الحزمة الرقمية الشاملة وموعد امتثال قانون الذكاء الاصطناعي الأوروبي؟', a: 'حتى مايو 2026، انتهت الجولة الثانية من المفاوضات (28 أبريل 2026) دون توافق. خطّط لـ2 أغسطس 2026 موعداً ملزماً للامتثال للذكاء الاصطناعي عالي المخاطر. لا تفترض أن تأجيل الحزمة الرقمية الشاملة سيُقرَّر.' },
+            { q: 'ما وضع الحزمة الرقمية الشاملة وموعد امتثال قانون الذكاء الاصطناعي الأوروبي؟', a: 'الحزمة الرقمية الشاملة اعتُمدت رسمياً: دخلت حيّز التنفيذ في 27 يوليو 2026، مؤجّلةً موعد امتثال الذكاء الاصطناعي المستقل عالي المخاطر (الملحق الثالث) من 2 أغسطس 2026 إلى 2 ديسمبر 2027، والذكاء الاصطناعي عالي المخاطر المدمج في المنتجات (الملحق الأول) إلى 2 أغسطس 2028. لم تتأثر واجبات الشفافية بموجب المادة 50 (الإفصاح عن روبوتات الدردشة، وسم المحتوى المزيّف العميق) وهي سارية بالفعل منذ أغسطس 2026.' },
             { q: 'ما أطر حوكمة الذكاء الاصطناعي المُطبَّقة في أمريكا اللاتينية؟', a: 'لا يوجد في أمريكا اللاتينية ما يعادل قانون الذكاء الاصطناعي الأوروبي. تتصدر كولومبيا بـConpes 3975 (2019)، وهي سياسة وطنية للذكاء الاصطناعي مع إرشادات طوعية. تُحرز البرازيل تقدماً في تشريع خاص بالذكاء الاصطناعي. تتوافق معظم الأطر اللاتينية مع مبادئ منظمة التعاون الاقتصادي والتنمية وهي طوعية.' },
           ],
         },
@@ -2847,7 +2851,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'EU AI Act, contrôles US, CAC Chine : impacts sur achats IA, résidence de données et disponibilité des modèles 2026. Trois cadres incompatibles expliqués.',
       seoTitle: 'Géopolitique IA 2026 : EU AI Act vs USA vs Chine',
       publishDate: '2026-04-01',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-26',
       readTime: '16 min de lecture',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Géopolitique de l\'IA',
@@ -2883,7 +2887,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Géopolitique et IA : Comment l\'UE, les États-Unis et la Chine rivalisent pour la domination de l\'IA',
         description: 'Les États-Unis, la Chine et l\'Union européenne poursuivent des visions incompatibles de la gouvernance de l\'IA. Pour les organisations déployant l\'IA, ces différences se traduisent par des obligations de conformité concrètes, des contraintes d\'approvisionnement et des exigences de résidence des données.',
         datePublished: '2026-04-01',
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-26',
         keywords: ['géopolitique IA', 'loi IA UE', 'CHIPS Act', 'régulation IA', 'stratégie IA Chine', 'Brussels Effect', 'gouvernance IA', 'DeepSeek', 'Institut Sécurité IA', 'Made in China 2025', 'KI Gesetz', 'régulation IA Europe', 'gouvernance IA UE', 'regolamento intelligenza artificiale', 'régulation de l\'IA', 'KI-Regulierung', '人工知能規制', 'AI中国战略'],
         teaches: [
           'Comment la loi IA de l\'UE classe les risques et quels délais s\'appliquent',
@@ -2970,8 +2974,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         quickFacts: {
           title: 'Points clés : la géopolitique de l\'IA en un coup d\'œil',
           items: [
-            '**AI Act européen :** première loi contraignante sur l\'IA au monde. Application des obligations à haut risque : 2 août 2026 (report possible au 2 décembre 2027 via l\'Omnibus numérique, sous réserve d\'un accord en trilogue). Amendes : jusqu\'à 35 M€ ou 7 % du chiffre d\'affaires mondial.',
-            '**Politique IA américaine :** aucune loi fédérale sur l\'IA. L\'administration Trump cherche à faire prévaloir le droit fédéral sur les lois des États via l\'Executive Order 14365 (décembre 2025), le National Framework (mars 2026) et le projet TRUMP AMERICA AI Act (mars 2026). Plusieurs échéances de mise en œuvre ont été manquées (avis de la FTC attendu le 11 mars, évaluation du Commerce également due le 11 mars).',
+            '**AI Act européen :** première loi contraignante sur l\'IA au monde. L\'Omnibus numérique est entré en vigueur le 27 juillet 2026, reportant la conformité de l\'IA à haut risque autonome (Annexe III) du 2 août 2026 au 2 décembre 2027, et celle de l\'IA à haut risque intégrée aux produits (Annexe I) au 2 août 2028. Les obligations de transparence de l\'article 50 (divulgation IA, étiquetage des deepfakes) sont, elles, entrées en vigueur comme prévu le 2 août 2026. Amendes : jusqu\'à 35 M€ ou 7 % du chiffre d\'affaires mondial.',
+            '**Politique IA américaine :** aucune loi fédérale sur l\'IA. L\'administration Trump cherche à faire prévaloir le droit fédéral sur les lois des États via l\'Executive Order 14365 (décembre 2025) et le National Framework (mars 2026). La FTC a publié sa déclaration de politique imposée par le décret sur la précision de l\'IA et la préemption des lois des États le 7 juillet 2026 — avec quatre mois de retard sur l\'échéance du 11 mars — et a clos la consultation publique le 31 juillet 2026. Ni le TRUMP AMERICA AI Act ni sa contre-proposition démocrate, le GUARDRAILS Act, n\'ont été adoptés par le Congrès ; les deux restent à l\'état de projet.',
             '**Gouvernance IA chinoise :** l\'évaluation préalable de la CAC (Cyberspace Administration of China) est obligatoire. Les filtres de contenu bloquent la critique du PCC, les discussions sur Taïwan/Tibet/Xinjiang et tout contenu portant atteinte aux « valeurs socialistes fondamentales ». Les filtres renvoient un HTTP 200 avec un indicateur `is_safe: 0` (pas une erreur 4xx). La PIPL impose la localisation des données pour les données personnelles des utilisateurs chinois.',
             '**Goulots d\'étranglement matériels :** Nvidia contrôle environ 80 % du marché des GPU d\'entraînement IA. TSMC fabrique environ 90 % des semi-conducteurs les plus avancés. Ces deux points sont des enjeux géopolitiques majeurs. Le CHIPS Act américain (52 Md$) vise à réduire la dépendance à TSMC.',
             '**Impact de DeepSeek R1 :** a dépassé GPT-5.5 en raisonnement et en code (AIME 2024, MATH, HumanEval) pour un coût d\'entraînement estimé à ~6 M$ (réduction de 94 % par rapport aux estimations des modèles de pointe ; chiffre contesté). Entraîné sur des GPU Nvidia H800 soumis aux restrictions d\'exportation vers la Chine. Démontre les limites des contrôles à l\'export.',
@@ -3209,17 +3213,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         digitalOmnibus: {
-          title: 'Omnibus numérique : l\'échéance haut risque de l\'AI Act en suspens',
+          title: 'Omnibus numérique : échéance haut risque reportée à décembre 2027',
           content: [
-            '**À la mi-2026, l\'échéance de conformité haut risque du 2 août 2026 pourrait être reportée au 2 décembre 2027 — mais rien n\'est confirmé publiquement, et l\'échéance légale approche.** La Commission européenne a proposé l\'Omnibus numérique en novembre 2025 pour corriger des effets non désirés et des difficultés de mise en œuvre de l\'AI Act. Le Parlement européen et le Conseil de l\'UE ont tous deux signalé leur soutien à un report, mais les négociations interinstitutionnelles sont restées bloquées à la dernière mise à jour connue.',
-            '**État des trilogues :** le premier trilogue (février 2026) a dégagé un accord politique sur l\'urgence, sans régler les détails techniques. Le deuxième trilogue (28 avril 2026) s\'est conclu sans consensus. Un troisième trilogue s\'est tenu mi-mai 2026 ; aucune confirmation publique d\'adoption définitive n\'a suivi à ce jour. Si le report est adopté avant le 2 août 2026, il devient contraignant ; sinon, l\'échéance initiale du 2 août 2026 s\'applique telle quelle — et cette date approche désormais.',
-            '**Ce que les organisations doivent faire :** planifiez le 2 août 2026 comme échéance contraignante pour les systèmes d\'IA à haut risque, sauf confirmation officielle de l\'adoption du report. Le report pourrait étendre votre calendrier jusqu\'à décembre 2027, mais présumer qu\'il sera adopté, si proche de l\'échéance légale, est un risque.',
+            '**L\'Omnibus numérique est adopté : publié au Journal officiel le 24 juillet 2026, il est entré en vigueur le 27 juillet 2026 — six jours avant l\'échéance initiale du haut risque.** Il reporte la conformité des systèmes d\'IA à haut risque autonomes (Annexe III — la catégorie la plus large, couvrant l\'embauche, le crédit, la santé et l\'application de la loi) du 2 août 2026 au 2 décembre 2027, soit une extension de 16 mois. L\'IA à haut risque intégrée à des produits déjà couverts par la législation européenne sur la sécurité des produits (Annexe I) est reportée d\'août 2027 au 2 août 2028.',
+            '**Ce qui n\'a PAS changé :** les obligations de transparence de l\'article 50 — informer qu\'une personne interagit avec un système d\'IA, étiqueter les contenus audio/image/vidéo/texte générés par IA, signaler les deepfakes — sont entrées en vigueur comme prévu le 2 août 2026, et s\'appliquent selon la fonction du système plutôt que selon son niveau de risque. Les obligations de transparence GPAI (en vigueur depuis août 2025) et l\'application des pratiques interdites (en vigueur depuis août 2024) ne sont pas non plus affectées. L\'Omnibus a également ajouté deux nouvelles catégories interdites — les systèmes générant des images intimes non consenties et des contenus pédopornographiques — avec un délai de grâce pour les garanties techniques courant jusqu\'au 2 décembre 2026.',
+            '**Ce que les organisations doivent faire :** si vos systèmes d\'IA relèvent du haut risque autonome (Annexe III), votre échéance d\'évaluation de conformité est désormais le 2 décembre 2027, et non plus août 2026 — utilisez ce délai supplémentaire pour finaliser correctement la documentation et les processus de supervision humaine plutôt que de vous précipiter. Si votre produit inclut des fonctionnalités couvertes par l\'article 50 (chatbots, contenu généré par IA, deepfakes), cette obligation de divulgation est déjà en vigueur et appliquée — vérifiez votre mise en œuvre dès maintenant.',
           ],
           callouts: [
             {
-              type: 'warning',
-              label: 'Attention : l\'adoption de l\'Omnibus numérique reste non confirmée',
-              text: 'Le report de l\'Omnibus numérique d\'août 2026 à décembre 2027 n\'est PAS confirmé publiquement comme adopté. Le deuxième trilogue du 28 avril 2026 n\'a pas abouti à un consensus, et un troisième trilogue s\'est tenu mi-mai 2026 sans résultat confirmé depuis. Ne présumez PAS que le report a été adopté. Planifiez votre feuille de route de conformité avec le 2 août 2026 comme échéance contraignante.',
+              type: 'did-you-know',
+              label: 'Résolu : l\'Omnibus numérique en vigueur depuis le 27 juillet 2026',
+              text: 'Le report de l\'Omnibus numérique est confirmé et contraignant — il est entré en vigueur le 27 juillet 2026, déplaçant l\'échéance de l\'IA à haut risque autonome (Annexe III) du 2 août 2026 au 2 décembre 2027. Cela n\'affecte pas les obligations de transparence de l\'article 50 (divulgation pour les chatbots, étiquetage du contenu généré par IA et des deepfakes), entrées en vigueur comme prévu le 2 août 2026 et déjà applicables.',
             },
           ],
         },
@@ -3658,7 +3662,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'AIが地政学を変える2026年。米国セクター別規制、EU AI法、中国CAC戦略を分析。規制フレームワーク、コンプライアンスリスク、グローバル展開への影響を比較解説。',
       seoTitle: 'AI地政学分析2026年：米国・EU・中国戦略解説',
       publishDate: '2026-04-01',
-      dateModified: '2026-06-01',
+      dateModified: '2026-08-26',
       readTime: '16分で読める',
       educationalLevel: 'Intermediate',
       primaryTerm: 'AI地政学',
@@ -3694,7 +3698,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '地政学とAI：米国、中国、EUのAI支配競争解説（2026年分析）',
         description: '米国、中国、EUはAIガバナンスに関して相反するビジョンを追求しており、AIを展開する組織にとっては具体的なコンプライアンス義務、調達制約、データ保管要件に直結します。',
         datePublished: '2026-04-01',
-        dateModified: '2026-06-01',
+        dateModified: '2026-08-26',
         keywords: ['AI地政学', 'EU AI法', 'CHIPS法', 'AI規制', '中国AI戦略', 'ブリュッセル効果', 'AI統治', 'DeepSeek', 'AI安全研究所', 'Made in China 2025', 'KI法', 'EU AI規制', 'EU AI統治', '人工知能規則', 'IA規制', 'KI規制', '人工知能規制', 'AI中国戦略'],
         teaches: [
           'EU AI法が危険を分類し、どのような期限が適用されるか',
@@ -3780,8 +3784,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         quickFacts: {
           title: 'クイックファクト：AI地政学の全体像',
           items: [
-            '**EU AI法：** 世界初の拘束力のあるAI法。高リスク規制の施行は2026年8月2日（デジタル・オムニバスにより2027年12月2日まで延期される可能性あり、2026年5月13日予定のトリローグ合意次第）。罰金は最大3,500万ユーロまたは世界年間売上高の7%。',
-            '**米国のAI政策：** 連邦AI法は存在しない。トランプ政権は大統領令14365号（2025年12月）、国家フレームワーク（2026年3月）、提案中のTRUMP AMERICA AI Act（2026年3月）を通じて州法の連邦優先を推進。2026年5月時点で複数の実施期限が未達（FTC声明は3月11日期限、商務省の評価も3月11日期限）。',
+            '**EU AI法：** 世界初の拘束力のあるAI法。デジタル・オムニバスは2026年7月27日に発効し、単独型ハイリスクAI（附属書III）の適用を2026年8月2日から2027年12月2日へ延期、製品組み込み型ハイリスクAI（附属書I）は2028年8月2日へ延期された。一方、第50条の透明性義務（AI利用の開示、ディープフェイクの表示）は予定どおり2026年8月2日に施行された。罰金は最大3,500万ユーロまたは世界年間売上高の7%。',
+            '**米国のAI政策：** 連邦AI法は存在しない。トランプ政権は大統領令14365号（2025年12月）と国家フレームワーク（2026年3月）を通じて州法への連邦優先を推進。FTCは大統領令が義務付けたAIの正確性と州法優先に関する政策声明を、3月11日の期限から4カ月遅れの2026年7月7日に公表し、2026年7月31日にパブリックコメントを締め切った。TRUMP AMERICA AI法も、民主党側の対抗法案GUARDRAILS法も議会を通過しておらず、いずれも議論案の段階にとどまっている。',
             '**中国のAIガバナンス：** CAC（中国国家インターネット情報弁公室）による事前審査が義務。コンテンツフィルターは中国共産党批判、台湾/チベット/新疆に関する議論、「社会主義の核心的価値観」を損なう内容をブロックする。フィルターはHTTP 4xxエラーではなくHTTP 200で`is_safe: 0`フラグを返す。PIPLは中国国民の個人データについてデータ現地化を義務付けている。',
             '**ハードウェアのボトルネック：** NvidiaはAIトレーニング用GPU市場の約80%を占める。TSMCは先端半導体の約90%を製造する。両者は地政学的な火種であり、米国のCHIPS法（520億ドル）はTSMC依存の低減を目指している。',
             '**DeepSeek R1の影響：** 推論・コーディング（AIME 2024、MATH、HumanEval）でGPT-5.5を上回りながら、訓練コストは推定約600万ドル（フロンティアモデル推定比94%減、金額は議論あり）。中国向けに制限されたNvidia H800 GPUで訓練され、ハードウェア輸出規制に限界があることを示している。',
@@ -3792,7 +3796,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         euImplications: {
           title: 'EU組織の場合：重要なコンプライアンス期限',
           content: [
-            '**EU AI法は拘束力があり、2026年8月から実施される。** EU本拠地の組織またはEUユーザーにサービスを提供する場合、4部構成のリスク分類システムを満たす必要がある。禁止慣行の罰金は3500万ユーロまたは世界売上の7%に達する — どちらか大きい方。非準拠は交渉の余地がない。',
+            '**EU AI法は拘束力があり、その透明性規則とGPAI規則は2026年8月から施行されている。** EU本拠地の組織またはEUユーザーにサービスを提供する場合、4部構成のリスク分類システムを満たす必要がある。2026年7月27日発効のデジタル・オムニバスにより単独型ハイリスクAIの適用は2027年12月2日へ延期されたが、チャットボットやAI生成コンテンツの開示義務は当初予定どおり2026年8月から適用されている。禁止慣行の罰金は3500万ユーロまたは世界売上の7%に達する — どちらか大きい方。非準拠は交渉の余地がない。',
             '**EU内でGPT-5.5、Claude Opus 4.8、またはGemini 3.1 Proを展開する場合、汎用AI（GPAI）の準拠ドキュメントを確認する必要がある。** OpenAI、Anthropic、GoogleはAug 2025からトランスペアレンシードキュメント（訓練データサマリー、パフォーマンスボーダー、セキュリティテスト）を発行している。これらの認定書を準拠の証拠として保存 — 規制当局がそれを求める。',
             '**高リスクAIシステム（採用、信用決定、ヘルスケア、執行）は展開前に準拠評価が必要。** これは、バイアスのテスト、人間監視メカニズムのドキュメント、すべてのAI決定の監査ログを意味する。ローカルに展開されるオープンウェイトモデル（LLaMA via Ollama、Mistral Large）はデータ常駐要件を満たす — データは決してインフラから出ず、監査証跡を制御する。',
             '**ブリュッセル効果はあなたにも適用される。** あなたのAIシステムが単一のEU住民に到達した場合、EU AI法が適用される — 組織がUS または中国に本拠地を置いている場合でも。つまり、複数の構成の管理より全体的に同じコンプライアンスレベルを実施する方が簡単。',
@@ -3963,24 +3967,24 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**最小リスク：** スパムフィルター、ビデオゲーム内のAI、重大な影響のないレコメンドシステム。既存法を超える特別な義務はない。',
             '**汎用AI（GPAI）：** GPT-5.5、Claude、Geminiのようなモデルは、訓練データの概要を公表し、EU著作権法を遵守し、重大インシデントを報告しなければならない。システミックリスクを持つモデル（訓練計算量10の25乗FLOPS超）は、追加の敵対的テスト要件に直面する。GPAI規則は2025年8月から適用された。',
             '**執行：** EU AI局（欧州委員会内）がGPAIモデルを監督する。各国の市場監視当局が高リスクAI規則を執行する。罰金：禁止行為に対して最大3,500万ユーロまたは世界売上高の7%、高リスク違反に対して1,500万ユーロまたは3%。',
-            '**スケジュール：** 禁止行為：2024年8月。GPAI義務：2025年8月。高リスクAIシステム：2026年8月。規制対象製品内の高リスクAI：2027年8月。',
+            '**スケジュール：** 禁止行為：2024年8月。GPAI義務：2025年8月。第50条の透明性義務（チャットボット/ディープフェイクの開示）：2026年8月、デジタル・オムニバスの影響を受けない。単独型高リスクAIシステム（附属書III）：デジタル・オムニバスにより2026年8月から2027年12月2日へ延期。規制対象製品に組み込まれた高リスクAI（附属書I）：2027年8月から2028年8月2日へ延期。',
           ],
           image: '/images/ai-risk-tiers-comparison-ja.svg',
           imageCaption: 'EU AI法の4段階リスクシステム：容認できない（2024年8月に禁止）、高リスク（適合性評価）、限定的（開示のみ）、最小（義務なし）。',
         },
 
         digitalOmnibus: {
-          title: 'デジタル・オムニバス：EU AI法の高リスク準拠期限は流動的',
+          title: 'デジタル・オムニバス：高リスク期限は2027年12月へ延期確定',
           content: [
-            '**2026年5月時点で、EUの高リスクAIコンプライアンス期限である2026年8月2日は、2027年12月2日まで延期される可能性があるが、採択は確定していない。** 欧州委員会は2025年11月、EU AI法の意図しない影響や実装上の課題に対処するためデジタル・オムニバスを提案した。欧州議会とEU理事会の双方が延期を支持する姿勢を示したが、機関間交渉は停滞している。',
-            '**トリローグの状況：** 2026年2月の第1回トリローグ（欧州議会・理事会・委員会の三者協議）では、緊急性については広く政治的合意が得られたが、技術的詳細は未解決のままだった。2026年4月28日の第2回トリローグは合意に至らず終了。第3回トリローグは2026年5月13日に予定されている。2026年8月2日までに採択されれば延期は拘束力を持つ。採択されなければ、当初の2026年8月2日の期限がそのまま適用される。',
-            '**組織が取るべき対応：** 高リスクAIシステムの拘束力ある準拠期限として2026年8月2日を前提に計画すること。デジタル・オムニバスの延期によって期限が2027年12月まで延びる可能性はあるが、延期が成立すると仮定するのはリスクである。今の時点で2026年8月の準拠を達成しておけば、どちらに転んでも安全だ — オムニバスが可決されれば猶予期間をさらなる最適化に充てられ、可決されなければすでにコンプライアンス済みである。',
+            '**デジタル・オムニバスは採択済みである。2026年7月24日に官報で公布され、2026年7月27日に発効した — 当初の高リスク期限のわずか6日前である。** これにより、単独型高リスクAIシステム（附属書III — 雇用・信用・医療・法執行を含む最大のカテゴリ）の準拠は2026年8月2日から2027年12月2日へ、16カ月延期された。すでにEU製品安全法の対象となっている製品に組み込まれた高リスクAI（附属書I）は、2027年8月から2028年8月2日へ延期された。',
+            '**延期されなかったもの：** 人がAIシステムと対話していることの開示、AI生成の音声・画像・動画・テキストの表示、ディープフェイクの開示といった第50条の透明性義務は、予定どおり2026年8月2日に施行され、リスク区分ではなくシステムの機能に基づいて適用される。GPAI透明性義務（2025年8月から施行）と禁止行為の執行（2024年8月から施行）も影響を受けない。オムニバスはさらに、非同意の性的画像やCSAMを生成するシステムという2つの新しい禁止カテゴリを追加し、技術的セーフガードの猶予期間を2026年12月2日まで設定した。',
+            '**組織が取るべき対応：** 附属書IIIの単独型高リスク分類に該当するAIシステムがある場合、適合性評価の期限は2026年8月ではなく2027年12月2日となった — この追加期間を、急いで対応するのではなく文書化と人間監視プロセスをきちんと完成させるために活用すること。製品に第50条が対象とする機能（チャットボット、AI生成コンテンツ、ディープフェイク）が含まれる場合、その開示義務はすでに施行・執行されている — 今すぐ実装を確認すること。',
           ],
           callouts: [
             {
-              type: 'warning',
-              label: '警告：デジタル・オムニバスの採択は不確実',
-              text: 'デジタル・オムニバスによる2026年8月から2027年12月への延期は保証されていない。2026年4月28日の第2回トリローグは合意に至らなかった。第3回トリローグは2026年5月13日に予定されている。延期が成立すると想定してはならない。コンプライアンスのロードマップは、拘束力ある期限として2026年8月2日を前提に計画すること。オムニバスが後に採択されれば猶予期間が得られ、採択されなければすでに準拠している。',
+              type: 'did-you-know',
+              label: '解決済み：デジタル・オムニバスは2026年7月27日から発効',
+              text: 'デジタル・オムニバスによる延期は確定し、拘束力を持つ — 2026年7月27日に発効し、単独型高リスクAI（附属書III）の期限を2026年8月2日から2027年12月2日へ移した。これは第50条の透明性義務（チャットボットの開示、AI生成コンテンツとディープフェイクの表示）には影響しない。これらは予定どおり2026年8月2日に施行され、すでに執行されている。',
             },
           ],
         },
@@ -4036,7 +4040,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**ホワイトハウス国家AI立法枠組み（2026年3月20日）：** 子どもの保護と親の権限強化、コミュニティの保護、デジタルレプリカの保護、政府検閲の防止、労働力開発、州法優先、軽規制のイノベーション促進という7つの政策領域を網羅する包括的な枠組み。この枠組みは議会に対し「州AI法の優先を中心とした、連邦統一・イノベーション志向の体制」の採択を促している。',
             '**TRUMP AMERICA AI Act（2026年3月18日、マーシャ・ブラックバーン上院議員）：** 291ページに及ぶ立法討議案で、連邦AIガバナンスを成文化し、訓練データとディープフェイクに関する国家基準を確立し、アーティスト・クリエイター保護を義務付け、AI開発者に「注意義務」要件を課す。通信品位法230条を失効させる。トランプの州法優先大統領令と整合している。',
             '**GUARDRAILS Act（2026年3月20日、ベイヤー下院議員ら）：** TRUMP AMERICA Actに対する民主党の対抗法案。トランプのAI大統領令14365号を廃止し、州AI法への連邦優先を明示的に阻止し、州の規制権限を維持する。連邦優先（トランプ）対州の自律性（民主党）という、2026〜2029年の米国AI政策を規定する根本的対立を反映している。',
-            '**実施期限の未達（2026年5月時点）：** 大統領令14365号はFTCに対し2026年3月11日までにAI政策声明を出すよう求めていたが、5月4日時点で未発表。州AI法に関する商務省の評価も2026年3月11日期限だったが、未公表である。実施は政策的野心に大きく遅れている。',
+            '**実施状況の更新：** 大統領令14365号はFTCに対し2026年3月11日までにAI政策声明を出すよう求めていたが、FTCはこの期限を守れず、AI出力の「正確性の抑制」と、出力の改変を義務付ける州AI法がFTC法によってどこまで連邦優先されるかを扱う政策声明案を、期限から約4カ月遅れの2026年7月7日に公表した。パブリックコメントは2026年7月31日に締め切られたが、最終版はまだ採択されていない。議会はTRUMP AMERICA AI法もGUARDRAILS法も可決しておらず、州AI法への連邦優先は依然として決着していない。',
             '**コロラドAI法（2026年2月1日施行）：** 雇用、融資、保険などの高リスク意思決定におけるアルゴリズム差別に対処する米国初の州法。2026年2月1日に施行された。トランプの大統領令14365号は、コロラド州の法律を「過度な」規制の例として明示的に挙げた。コンプライアンス期限は2026年6月30日まで延長された。この法律は、トランプが連邦レベルで優先しようとしている州規制の典型例である。',
             '**CHIPS and Science Act（520億ドル）：** 2022年8月署名。国内半導体製造、研究開発、人材育成に資金を提供する。台湾積体電路製造（TSMC）への米国の依存を減らす。Intel、TSMC、SamsungはCHIPS法の資金で米国内にファブを建設中である。',
             '**AIハードウェアの輸出規制：** バイデン政権は、先進的なNvidia A100・H100 GPUの中国および懸念国への輸出を制限した。この規制は2023年10月と2024年10月に拡大された。Nvidiaは輸出制限の範囲内に収まる中国専用チップ（A800、H800）を開発したが、これらも後に規制対象となった。',
@@ -4141,7 +4145,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'モデルの利用可能性を形作る地政学的なダイナミクスは、オープンソース対プロプライエタリの問いを特に重要にしている。オープンソースが勝つ場合とプロプライエタリモデルがコストに見合う場合の完全な比較については、[オープンソース vs プロプライエタリLLM](https://www.promptquorum.com/ja/prompt-engineering/open-source-vs-proprietary-llms)を参照。',
           ],
           items: [
-            '**EU内の組織：** [EU AI法](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)に直接準拠しなければならない。高リスクAIシステム（人事、信用、ヘルスケア、公共サービス）は、2026年8月までに適合性評価、人間による監視の文書化、[EU AIデータベース](https://digital-strategy.ec.europa.eu/en/policies/ai-office)への登録が必要。個人データを扱うすべてのAIはGDPRを遵守しなければならない — AI訓練パイプラインと出力処理を含む。',
+            '**EU内の組織：** [EU AI法](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)に直接準拠しなければならない。単独型高リスクAIシステム（人事、信用、ヘルスケア、公共サービス）は、2026年8月2日から2027年12月2日へ延期された期限までに適合性評価、人間による監視の文書化、[EU AIデータベース](https://digital-strategy.ec.europa.eu/en/policies/ai-office)への登録が必要（2026年7月27日発効のデジタル・オムニバスによる延期）。チャットボットとAI生成コンテンツに関する第50条の開示義務は、2026年8月からすでに適用されている。個人データを扱うすべてのAIはGDPRを遵守しなければならない — AI訓練パイプラインと出力処理を含む。',
             '**EUユーザーにサービスを提供する非EU組織：** ブリュッセル効果の対象となる — [EU AI法](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)は、あなたのAI出力がEUユーザーに届く場合に適用される。EU向け製品で使用されるGPAIモデルは、2025年8月以降の透明性義務を遵守しなければならない。非準拠には、EU本社の違反者と同じ罰則が科される。',
             '**EU展開における米国のAIツール：** GPT-5.5、Claude Opus 4.8、Gemini 3.1 ProはすべてGPAIモデルに分類される。OpenAI、Anthropic、GoogleはEU AI法のGPAI準拠文書を公表している。実装者としてこれらのツールを高リスクAIシステムで使用する組織は、自らの適合性評価に引き続き責任を負う — プロバイダーのGPAI準拠はあなたの展開をカバーしない。',
             '**中国のAIツール：** DeepSeek R1などの中国モデルは国際的に利用可能だが、EU・米国の組織にとって追加の調達リスクを伴う — データ常駐は不明確で、プロバイダーはCACコンテンツ規制の対象であり、中国国家インターネット情報弁公室はデータ開示を強制できる。EU・NATO加盟国の政府機関や重要インフラ組織は、中国製AIツールの利用を制限または禁止しつつある。',
@@ -4184,7 +4188,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhatEUAIActRequires: {
           title: 'EU AI法は組織に何を求めているか？',
           content: [
-            'EU AI法はAIシステムを4段階のリスクに分類し、それぞれに応じた義務を課す。禁止行為 — 政府機関によるソーシャルスコアリング、公共空間でのリアルタイム生体監視 — は2024年8月から禁止されている。雇用、信用評価、ヘルスケア、法執行で使用される高リスクAIシステムは、2026年8月までに適合性評価、人間による監視の文書化、EU AIデータベースへの登録が必要である。汎用AIモデル（GPT-5.5、Claude、Gemini）は訓練データの概要を公表し、EU著作権法を遵守しなければならない — この規則は2025年8月から適用された。EUユーザーにサービスを提供するすべての組織は、本社所在地にかかわらず準拠しなければならない。',
+            'EU AI法はAIシステムを4段階のリスクに分類し、それぞれに応じた義務を課す。禁止行為 — 政府機関によるソーシャルスコアリング、公共空間でのリアルタイム生体監視 — は2024年8月から禁止されている。雇用、信用評価、ヘルスケア、法執行で使用される単独型高リスクAIシステムは、2026年7月27日発効のデジタル・オムニバスにより当初の2026年8月から延期された2027年12月2日までに、適合性評価、人間による監視の文書化、EU AIデータベースへの登録が必要である。汎用AIモデル（GPT-5.5、Claude、Gemini）は訓練データの概要を公表し、EU著作権法を遵守しなければならない — この規則は2025年8月から適用された。チャットボットとAI生成コンテンツに関する第50条の透明性義務は、予定どおり2026年8月から引き続き適用されている。EUユーザーにサービスを提供するすべての組織は、本社所在地にかかわらず準拠しなければならない。',
           ],
         },
 
@@ -4296,7 +4300,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'よくある質問',
           faqs: [
-            { q: 'EU AI法とは何ですか？いつから適用されますか？', a: 'EU AI法は、2024年3月に欧州議会で可決された世界初の包括的なAI法です。禁止行為は2024年8月から適用されます。GPAIモデル（GPT-5.5、Claude、Geminiクラスのモデル）の義務は2025年8月から適用されます。高リスクAIシステムの要件は2026年8月から適用されます。EU市場にAIを提供する、またはEU居住者に影響を与えるAIを使用するすべての組織に適用されます。' },
+            { q: 'EU AI法とは何ですか？いつから適用されますか？', a: 'EU AI法は、2024年3月に欧州議会で可決された世界初の包括的なAI法です。禁止行為は2024年8月から適用されます。GPAIモデル（GPT-5.5、Claude、Geminiクラスのモデル）の義務は2025年8月から適用されます。第50条の透明性義務（チャットボットやAI生成コンテンツの開示）は2026年8月から適用されます。単独型高リスクAIシステムの要件は、2026年7月27日発効のデジタル・オムニバスにより2026年8月から2027年12月2日へ延期されました。EU市場にAIを提供する、またはEU居住者に影響を与えるAIを使用するすべての組織に適用されます。' },
             { q: 'EU AI法は非EU企業にも適用されますか？', a: 'はい。EU AI法は域外適用されます — プロバイダーの本社所在地にかかわらず、そのAI出力がEU内で使用されるすべてのプロバイダーに適用されます。AI製品がEU居住者に使用される米国企業も準拠しなければなりません。これはGDPRを世界標準にしたのと同じ域外適用の原則です。' },
             { q: 'EU AI法違反の罰則はどのくらいですか？', a: '禁止されたAI行為に対して最大3,500万ユーロまたは世界年間売上高の7%（いずれか高い方）。高リスクAI違反は最大1,500万ユーロまたは3%。執行当局への虚偽情報提供は最大750万ユーロまたは1%。金額の割合と固定額のうち高い方が適用されます。' },
             { q: 'EU AI法で禁止されているAI用途は何ですか？', a: '禁止（容認できないリスク）：政府機関によるソーシャルスコアリングシステム、公共空間でのリアルタイム生体識別（限定的な例外あり）、心理的脆弱性を悪用するAI、インターネット上の顔画像の無差別収集。これらは2024年8月以降禁止されています。' },
@@ -4382,7 +4386,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: 'AI地缘政治分析2026：美国、欧盟、中国对比',
       metaDescription: 'EU AI法案、美国出口管制、中国CAC战略：三套不兼容框架。分析2026年对AI采购、数据本地化及模型可用性的影响。适合在华或对华部署团队。',
       publishDate: '2026-04-01',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-26',
       readTime: '约16分钟阅读',
       educationalLevel: 'Intermediate',
       primaryTerm: 'AI地缘政治',
@@ -4393,7 +4397,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '地缘政治与AI：欧盟、美国和中国如何争夺AI主导权（2026年分析）',
         description: '美国、中国和欧盟正在追求互不兼容的AI治理愿景。对于部署AI的组织而言，这些差异转化为具体的合规义务、采购限制和数据存储位置要求。',
         datePublished: '2026-04-01',
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-26',
         keywords: ['AI地缘政治', 'EU AI法案', 'CHIPS法案', 'AI监管', '中国AI战略', '布鲁塞尔效应', 'AI治理', 'DeepSeek', 'AI安全研究所', '中国制造2025', '高风险AI', 'EU AI监管', 'AI治理欧盟', '算法推荐监管', '数据主权'],
         teaches: [
           'EU AI法案如何对风险进行分类以及适用的最后期限',
@@ -4500,7 +4504,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: 'EU AI法案是什么？', acceptedAnswer: { '@type': 'Answer', text: 'EU AI法案是世界首个全面的人工智能法律框架，于2024年3月由欧洲议会以523票赞成通过。它将AI系统分为四个风险级别——不可接受、高风险、有限风险和最小风险——对每个级别适用不同的要求和罚款。完整执法从2026年8月开始。' } },
+          { '@type': 'Question', name: 'EU AI法案是什么？', acceptedAnswer: { '@type': 'Answer', text: 'EU AI法案是世界首个全面的人工智能法律框架，于2024年3月由欧洲议会以523票赞成通过。它将AI系统分为四个风险级别——不可接受、高风险、有限风险和最小风险——对每个级别适用不同的要求和罚款。第50条透明度义务自2026年8月起执行；独立高风险系统要求已由2026年7月27日生效的Digital Omnibus推迟至2027年12月2日。' } },
           { '@type': 'Question', name: 'EU AI法案是否适用于欧盟外的公司？', acceptedAnswer: { '@type': 'Answer', text: '是的。EU AI法案适用于任何在欧盟市场上放置AI系统或其AI输出在欧盟使用的组织，无论该组织总部位于何处。这种属地外管辖权称为布鲁塞尔效应，意味着美国和亚洲AI提供商如果为欧盟用户服务，也必须合规。' } },
           { '@type': 'Question', name: '违反EU AI法案的罚款是多少？', acceptedAnswer: { '@type': 'Answer', text: '对禁止的AI做法，罚款最高€3500万或全球年度营业额的7%（以较高者为准）。高风险AI违规的罚款最高€1500万或全球营业额的3%。向当局提供不正确信息的罚款最高€750万或全球营业额的1%。' } },
           { '@type': 'Question', name: 'EU AI法案明确禁止哪些AI应用？', acceptedAnswer: { '@type': 'Answer', text: 'EU AI法案禁止：公共当局的社会评分系统、公共场所的实时生物特征监控（警执法例外除外）、利用认知漏洞的AI以及从互联网无差别抓取面部图像来构建识别数据库。这些被归类为不可接受的风险。' } },
@@ -4553,7 +4557,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: '跨欧盟、美国和中国8个维度的AI监管框架结构对比——主要方式、关键立法、风险框架、最高罚款、数据保护、禁止应用、执法机构和国际范围。',
         url: 'https://www.promptquorum.com/zh/prompt-engineering/geopolitics-and-ai',
         creator: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-26',
         variableMeasured: [
           { '@type': 'PropertyValue', name: '主要方式', description: '欧盟：基于权利的法律框架。美国：部门化、以创新为先。中国：国家指导、以控制为先。' },
           { '@type': 'PropertyValue', name: '关键立法', description: '欧盟：EU AI法案（2024年）。美国：无联邦AI法；NIST AI RMF自愿性。中国：算法推荐监管（2022年）；生成式AI措施（2023年）。' },
@@ -4585,8 +4589,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         quickFacts: {
           title: '速览：AI地缘政治要点',
           items: [
-            '**EU AI法案：** 全球首部具有约束力的AI法律。高风险条款执行日期：2026年8月2日（若Digital Omnibus获得三方谈判通过，可能延后至2027年12月2日）。罚款：最高€3500万或全球年营业额的7%。',
-            '**美国AI政策：** 无联邦AI法。特朗普政府正通过EO 14365（2025年12月）、《国家框架》（2026年3月）及拟议的TRUMP AMERICA AI Act（2026年3月）推动联邦法优先于州法。多项实施期限已延误（FTC声明原定3月11日、商务部评估同样原定3月11日）。',
+            '**EU AI法案：** 全球首部具有约束力的AI法律。Digital Omnibus已于2026年7月27日生效，将独立高风险AI（附件III）的合规期限从2026年8月2日推迟至2027年12月2日，产品内嵌型高风险AI（附件I）推迟至2028年8月2日。第50条透明度义务（AI披露、深度伪造标识）仍按原计划于2026年8月2日生效。罚款：最高€3500万或全球年营业额的7%。',
+            '**美国AI政策：** 无联邦AI法。特朗普政府正通过EO 14365（2025年12月）及《国家框架》（2026年3月）推动联邦法优先于州法。FTC已于2026年7月7日发布该行政令要求的AI准确性与州法优先政策声明——较3月11日的期限晚了近四个月——并于2026年7月31日结束公众意见征询。TRUMP AMERICA AI Act与民主党提出的对案GUARDRAILS Act均未获国会通过，两者仍停留在讨论草案阶段。',
             '**中国AI治理：** CAC（国家网信办）上线前评估为强制要求。内容过滤屏蔽涉及中共批评、台湾/西藏/新疆相关讨论及损害"社会主义核心价值观"的内容。过滤器返回HTTP 200并携带`is_safe: 0`标志（而非4xx错误）。PIPL要求中国用户个人数据本地存储。',
             '**硬件瓶颈：** Nvidia占据约80%的AI训练GPU市场份额。TSMC生产全球约90%的最先进芯片。两者均为地缘政治焦点。美国CHIPS法案（520亿美元）旨在降低对TSMC的依赖。',
             '**DeepSeek R1的影响：** 在推理与编码基准（AIME 2024、MATH、HumanEval）上超越GPT-5.5，训练成本估计约600万美元（较前沿模型估算降低94%；该数字存在争议）。使用受出口管制的Nvidia H800 GPU训练，表明硬件出口管制存在局限。',
@@ -4597,7 +4601,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         euImplications: {
           title: '如果您是欧盟组织：关键合规期限',
           content: [
-            '**EU AI法案于2026年8月具有约束力和强制执行。** 如果您的组织以欧盟为基地或为欧盟用户服务，您必须遵守其四级风险分类系统。禁止行为的罚款最高€3500万或全球营业额的7%——以较高者为准。不合规是不可协商的。',
+            '**EU AI法案具有约束力，其透明度规则与GPAI规则自2026年8月起强制执行。** 如果您的组织以欧盟为基地或为欧盟用户服务，您必须遵守其四级风险分类系统。2026年7月27日生效的Digital Omnibus已将独立高风险AI的合规期限推迟至2027年12月2日，但聊天机器人和AI生成内容的披露义务仍按原定的2026年8月生效。禁止行为的罚款最高€3500万或全球营业额的7%——以较高者为准。不合规是不可协商的。',
             '**如果您在欧盟中部署GPT-5.5、Claude Opus 4.8或Gemini 3.1 Pro，您必须审核其通用AI（GPAI）合规文档。** OpenAI、Anthropic和Google已于2025年8月发布了透明度文档（训练数据摘要、能力限制、安全测试）。保存这些证明作为合规证据——监管机构会问询。',
             '**高风险AI系统（招聘、信贷决策、医疗、执法）在部署前需要符合性评估。** 这意味着测试偏见、记录人工监督机制文档和所有AI决策的审计日志。本地部署的开源权重模型（通过Ollama的LLaMA、Mistral Large）满足数据驻留要求——没有数据离开您的基础设施，您控制审计日志。',
             '**布鲁塞尔效应适用于您。** 如果您的AI系统到达单个欧盟居民，EU AI法案适用——即使您的公司总部在美国或中国。这意味着全球执行相同的合规级别通常比维护多个配置更简单。',
@@ -4759,22 +4763,22 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**高风险AI：** 用于招聘、信贷决策、执法、医疗的系统。需要符合性评估、人工监督、审计日志。罚款：€1500万或全球营业额的3%。',
             '**有限风险AI：** 与人互动或生成内容的系统（聊天机器人、内容生成）。需要披露AI使用。罚款：€750万或全球营业额的1%。',
             '**最小风险AI：** 游戏、推荐系统。无特定义务。',
-            '**实施期限：** 立法概述（2024年3月）已通过。完整执法从2026年8月开始。',
+            '**实施期限：** 立法概述（2024年3月）已通过。第50条透明度义务自2026年8月起执行；独立高风险系统（附件III）的要求已由2026年7月27日生效的Digital Omnibus从2026年8月推迟至2027年12月2日。',
           ],
         },
 
         digitalOmnibus: {
-          title: 'Digital Omnibus：EU AI法案高风险合规期限悬而未决',
+          title: 'Digital Omnibus：高风险合规期限确定延至2027年12月',
           content: [
-            '**截至2026年年中，原定于2026年8月2日生效的高风险合规期限可能延后至2027年12月2日——但这一延期并未获得保证。** 欧盟委员会于2025年11月提出Digital Omnibus，旨在解决EU AI法案在实施中产生的意外后果和困难。欧洲议会与欧盟理事会均表态支持延期，但机构间谈判一度陷入僵局。',
-            '**三方谈判进展：** 2026年2月的首轮三方谈判就紧迫性达成广泛政治共识，但技术细节尚未解决。2026年4月28日的第二轮谈判未能达成共识。第三轮谈判原定于2026年5月13日举行。若延期方案在2026年8月2日前获得通过，将正式生效；若未通过，则原定的2026年8月2日期限继续适用。',
-            '**组织应采取的行动：** 将2026年8月2日作为高风险AI系统的强制合规期限进行规划。Digital Omnibus延期可能将时间表推迟至2027年12月，但仅凭假设延期会通过存在风险。若组织现在即达成2026年8月合规，无论延期是否通过都处于有利位置。',
+            '**Digital Omnibus已正式通过：于2026年7月24日在官方公报上公布，2026年7月27日正式生效——距原定高风险期限仅六天。** 该法案将独立高风险AI系统（附件III——涵盖就业、信贷、医疗和执法等最大类别）的合规期限从2026年8月2日推迟至2027年12月2日，延长16个月。已受欧盟产品安全法管辖的产品内嵌型高风险AI（附件I）则从2027年8月推迟至2028年8月2日。',
+            '**未被推迟的内容：** 第50条透明度义务——披露用户正在与AI系统交互、为AI生成的音频/图像/视频/文本添加标识、披露深度伪造内容——仍按原计划于2026年8月2日生效，且依系统功能而非风险等级适用。GPAI透明度义务（自2025年8月起生效）与禁止行为的执法（自2024年8月起生效）同样不受影响。Digital Omnibus还新增两类禁止行为——生成非自愿亲密影像和儿童性虐待材料的系统——并为相关技术保障措施设置了截至2026年12月2日的宽限期。',
+            '**组织应采取的行动：** 若您的AI系统被归类为附件III独立高风险，其符合性评估期限现为2027年12月2日，而非2026年8月——请利用这段额外时间妥善完成文档和人工监督流程，而非仓促应对。若您的产品包含第50条涵盖的功能（聊天机器人、AI生成内容、深度伪造），该披露义务已经生效并正在执行——请立即核实您的实施情况。',
           ],
           callouts: [
             {
-              type: 'warning',
-              label: '警告：Digital Omnibus能否通过尚不确定',
-              text: 'Digital Omnibus将高风险合规期限从2026年8月延后至2027年12月的方案并未获得保证。2026年4月28日的第二轮三方谈判未达成共识，第三轮谈判原定于2026年5月13日举行。请勿假设延期一定会通过，应以2026年8月2日作为具有约束力的合规期限来制定计划。',
+              type: 'did-you-know',
+              label: '已确定：Digital Omnibus自2026年7月27日起生效',
+              text: 'Digital Omnibus的延期方案已确认通过并具有约束力——于2026年7月27日生效，将独立高风险AI（附件III）的期限从2026年8月2日推迟至2027年12月2日。这不影响第50条透明度义务（聊天机器人披露、AI生成内容与深度伪造标识），后者仍按原计划于2026年8月2日生效并已在执行中。',
             },
           ],
         },
@@ -4819,6 +4823,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**NIST AI Risk Management Framework：** 自愿性框架，无强制执行。不是法律，而是建议。',
             '**Trump AI Action Plan（2025）：** 于2025年1月推出，取代Biden关于AI安全的行政令。强调竞争力而非安全。',
             '**联邦监管分散：** FTC处理消费者保护，FDA处理医疗AI，CFPB处理金融。没有统一的AI法。',
+            '**州法优先之争（截至2026年8月）：** EO 14365（2025年12月）要求FTC在2026年3月11日前发布政策声明；FTC实际延迟至2026年7月7日才发布该声明（针对AI输出"准确性抑制"及州法优先问题），并于2026年7月31日结束公众意见征询。国会尚未通过TRUMP AMERICA AI Act，也未通过民主党提出的对案GUARDRAILS Act，联邦是否优先于各州AI立法仍悬而未决。',
           ],
         },
 
@@ -5079,7 +5084,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         defEUAIAct: {
           title: '定义：EU AI法案',
           content: [
-            'EU AI法案是欧洲议会和欧盟理事会于2024年3月通过的监管框架，旨在根据风险对AI系统进行分类并对每个类别施加不同的义务。它于2026年8月开始强制执行。',
+            'EU AI法案是欧洲议会和欧盟理事会于2024年3月通过的监管框架，旨在根据风险对AI系统进行分类并对每个类别施加不同的义务。第50条透明度义务自2026年8月起强制执行；独立高风险AI系统的要求已由2026年7月27日生效的Digital Omnibus从2026年8月推迟至2027年12月2日。',
           ],
         },
 
@@ -5087,7 +5092,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: '常见问题',
           faqs: [
-            { q: 'EU AI法案是什么？何时适用？', a: 'EU AI法案是全球首部全面的AI法律，于2024年3月由欧洲议会通过。禁止行为条款自2024年8月起适用。GPAI模型义务（针对GPT-5.5、Claude、Gemini级模型）自2025年8月起适用。高风险AI系统要求自2026年8月起适用。它适用于任何在欧盟市场投放AI或其AI影响欧盟居民的组织。' },
+            { q: 'EU AI法案是什么？何时适用？', a: 'EU AI法案是全球首部全面的AI法律，于2024年3月由欧洲议会通过。禁止行为条款自2024年8月起适用。GPAI模型义务（针对GPT-5.5、Claude、Gemini级模型）自2025年8月起适用。第50条透明度义务（聊天机器人与AI内容披露）自2026年8月起适用。独立高风险AI系统要求已由2026年7月27日生效的Digital Omnibus从2026年8月推迟至2027年12月2日。它适用于任何在欧盟市场投放AI或其AI影响欧盟居民的组织。' },
             { q: 'EU AI法案是否适用于非欧盟公司？', a: '适用。EU AI法案具有域外效力——只要提供商的AI输出在欧盟境内被使用，无论该提供商总部位于何处都必须遵守。这与GDPR成为全球标准的域外原则相同。' },
             { q: '违反EU AI法案的罚款是多少？', a: '对于禁止的AI做法，罚款最高为€3500万或全球年营业额的7%（以较高者为准）。高风险AI违规最高€1500万或3%。向执法机构提供不正确信息最高€750万或1%。较高的比例或固定金额将适用。' },
             { q: 'EU AI法案禁止哪些AI应用？', a: '禁止（不可接受风险）：公共当局的社会评分系统；公共场所的实时生物特征识别（有限的执法例外）；利用心理弱点的AI；无差别抓取互联网面部图像。这些自2024年8月起被禁止。' },
@@ -5254,8 +5259,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         quickFacts: {
           title: 'Fatos rápidos: Geopolítica da IA em resumo',
           items: [
-            '**EU AI Act:** Primeira lei vinculante de IA do mundo. Aplicação de alto risco: 2 de agosto de 2026 (pode ser adiada até 2 de dezembro de 2027 pelo Omnibus Digital, pendente de acordo de trílogo programado para 13 de maio de 2026). Multas: até €35 milhões ou 7% da receita anual global.',
-            '**Política de IA dos EUA:** Sem lei federal de IA. Administração Trump buscando pré-emissão de leis estaduais via EO 14365 (dezembro de 2025), Framework Nacional (março de 2026) e proposta TRUMP AMERICA AI Act (março de 2026). Múltiplos prazos de implementação perdidos até maio de 2026.',
+            '**EU AI Act:** Primeira lei vinculante de IA do mundo. O Omnibus Digital entrou em vigor em 27 de julho de 2026, adiando a conformidade da IA de alto risco autônoma (Anexo III) de 2 de agosto de 2026 para 2 de dezembro de 2027, e a IA de alto risco embutida em produtos (Anexo I) para 2 de agosto de 2028. Os deveres de transparência do Artigo 50 (divulgação de IA, rotulagem de deepfakes) entraram em vigor conforme programado em 2 de agosto de 2026. Multas: até €35 milhões ou 7% da receita anual global.',
+            '**Política de IA dos EUA:** Sem lei federal de IA. Administração Trump busca a preempção de leis estaduais via EO 14365 (dezembro de 2025) e o Framework Nacional (março de 2026). A FTC emitiu sua declaração de política sobre precisão da IA e preempção estadual, exigida pela ordem executiva, em 7 de julho de 2026 — quatro meses após o prazo de 11 de março — e encerrou o período de comentários públicos em 31 de julho de 2026. Nem o TRUMP AMERICA AI Act nem a contraproposta democrata GUARDRAILS Act foram aprovados pelo Congresso; ambos permanecem como minutas de discussão.',
             '**Governança de IA na China:** Avaliação prévia ao lançamento do CAC (Administração do Ciberespaço da China) obrigatória. Filtros de conteúdo bloqueiam críticas ao PCCh, discussões sobre Taiwan/Tibet/Xinjiang e conteúdo que mina os "valores socialistas fundamentais". Os filtros retornam HTTP 200 com flag `is_safe: 0` (não erros 4xx). A PIPL exige residência de dados para dados pessoais chineses.',
             '**Gargalos de hardware:** Nvidia controla ~80% do mercado de GPU para treinamento de IA. TSMC fabrica ~90% dos semicondutores avançados. Ambos são pontos críticos geopolíticos. A CHIPS Act dos EUA (US$52B) visa reduzir a dependência da TSMC.',
             '**Impacto do DeepSeek R1:** Superou o GPT-5.5 em raciocínio/codificação (AIME 2024, MATH, HumanEval) a um custo estimado de treinamento de ~US$6M (redução de 94% em relação às estimativas de modelos de fronteira). Treinado em GPUs Nvidia H800 restritas para a China. Demonstra que controles de exportação de hardware têm limites.',
@@ -5266,7 +5271,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         euImplications: {
           title: 'Se você é uma organização com sede na UE: Prazos críticos de conformidade',
           content: [
-            '**O EU AI Act é vinculante e aplicado a partir de agosto de 2026.** Se a sua organização está sediada na UE ou atende usuários da UE, você deve cumprir seu sistema de classificação de risco em quatro níveis. Multas por práticas proibidas chegam a €35 milhões ou 7% do faturamento global — o que for maior. O não cumprimento não é negociável.',
+            '**O EU AI Act é vinculante, e suas regras de transparência e GPAI são aplicadas desde agosto de 2026.** Se a sua organização está sediada na UE ou atende usuários da UE, você deve cumprir seu sistema de classificação de risco em quatro níveis. O Omnibus Digital (em vigor desde 27 de julho de 2026) adiou a conformidade da IA de alto risco autônoma para 2 de dezembro de 2027, mas as exigências de divulgação para chatbots e conteúdo gerado por IA continuaram a valer a partir da data original de agosto de 2026. Multas por práticas proibidas chegam a €35 milhões ou 7% do faturamento global — o que for maior. O não cumprimento não é negociável.',
             '**Se você implanta GPT-5.5, Claude Opus 4.8 ou Gemini 3.1 Pro na UE, você deve auditar sua documentação de conformidade de IA de Propósito Geral (GPAI).** OpenAI, Anthropic e Google publicaram documentação de transparência (resumos de dados de treinamento, limitações de capacidades, testes de segurança) a partir de agosto de 2025. Guarde essas atestações como prova de conformidade — os reguladores vão solicitá-las.',
             '**Sistemas de IA de alto risco (contratação, decisões de crédito, saúde, aplicação da lei) exigem avaliações de conformidade antes da implantação.** Isso significa testes de viés, documentação de mecanismos de supervisão humana e trilhas de auditoria de todas as decisões de IA. Modelos de pesos abertos implantados localmente (LLaMA via Ollama, Mistral Large) satisfazem os requisitos de residência de dados — nenhum dado sai da sua infraestrutura e você controla a trilha de auditoria.',
             '**O Efeito Bruxelas se aplica a você.** Se o seu sistema de IA alcança um único residente da UE, o EU AI Act se aplica — mesmo que sua empresa esteja sediada nos EUA ou na China. Isso significa que aplicar o mesmo nível de conformidade globalmente costuma ser mais simples do que manter múltiplas configurações.',
@@ -5438,24 +5443,24 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Risco Mínimo:** Filtros de spam, IA em videogames, sistemas de recomendação sem impacto significativo. Sem obrigações específicas além da lei existente.',
             '**IA de Propósito Geral (GPAI):** Modelos como GPT-5.5, Claude e Gemini devem publicar resumos de dados de treinamento, cumprir a lei de direitos autorais da UE e relatar incidentes graves. Modelos com risco sistêmico (treinados com >10^25 FLOPS) enfrentam requisitos adicionais de teste adversarial. As regras de GPAI se aplicaram em agosto de 2025.',
             '**Aplicação:** EU AI Office (dentro da Comissão Europeia) supervisiona modelos GPAI. Autoridades nacionais de vigilância de mercado aplicam regras de IA de alto risco. Multas: até €35M ou 7% do faturamento global para práticas proibidas; €15M ou 3% para violações de alto risco.',
-            '**Cronograma:** Práticas proibidas: agosto de 2024. Obrigações de GPAI: agosto de 2025. Sistemas de IA de alto risco: agosto de 2026. IA de alto risco em produtos regulados: agosto de 2027.',
+            '**Cronograma:** Práticas proibidas: agosto de 2024. Obrigações de GPAI: agosto de 2025. Deveres de transparência do Artigo 50 (divulgação de chatbots/deepfakes): agosto de 2026, não afetados pelo Omnibus Digital. Sistemas de IA de alto risco autônomos (Anexo III): adiados de agosto de 2026 para 2 de dezembro de 2027 pelo Omnibus Digital. IA de alto risco embutida em produtos regulados (Anexo I): adiada de agosto de 2027 para 2 de agosto de 2028.',
           ],
           image: '/images/ai-risk-tiers-comparison-en.svg',
           imageCaption: 'Sistema de 4 níveis de risco do EU AI Act: Inaceitável (proibido ago 2024), Alto risco (avaliação de conformidade), Limitado (apenas divulgação), Mínimo (sem obrigações).',
         },
 
         digitalOmnibus: {
-          title: 'Omnibus Digital: prazo de conformidade de alto risco do EU AI Act em fluxo',
+          title: 'Omnibus Digital: prazo de alto risco adiado para dezembro de 2027',
           content: [
-            '**A partir de maio de 2026, o prazo de conformidade de alto risco da UE de 2 de agosto de 2026 pode ser adiado para 2 de dezembro de 2027 — mas a adoção não é garantida.** A Comissão Europeia propôs o Omnibus Digital em novembro de 2025 para abordar consequências não intencionais e desafios de implementação no EU AI Act. Tanto o Parlamento Europeu quanto o Conselho da UE sinalizaram apoio a um adiamento. No entanto, as negociações interinstitucionais estagnaram.',
-            '**Status do trílogo:** O primeiro trílogo (negociação entre Parlamento, Conselho e Comissão) em fevereiro de 2026 encontrou amplo acordo político sobre urgência, mas deixou detalhes técnicos não resolvidos. O segundo trílogo em 28 de abril de 2026 terminou sem consenso. Um terceiro trílogo foi agendado para 13 de maio de 2026. Se adotado antes de 2 de agosto de 2026, o adiamento se torna vinculante; se não, o prazo original de 2 de agosto de 2026 se aplica conforme escrito.',
-            '**O que as organizações devem fazer:** Planeje para 2 de agosto de 2026 como seu prazo vinculante de conformidade para sistemas de IA de alto risco. O adiamento do Omnibus Digital pode estender seu cronograma até dezembro de 2027, mas assumir que o atraso passará é um risco. Alcançar a conformidade de agosto de 2026 agora significa que você está protegido de qualquer forma.',
+            '**O Omnibus Digital está adotado: foi publicado no Jornal Oficial em 24 de julho de 2026 e entrou em vigor em 27 de julho de 2026 — seis dias antes do prazo original de alto risco.** Ele adia a conformidade dos sistemas de IA de alto risco autônomos (Anexo III — a maior categoria, cobrindo emprego, crédito, saúde e aplicação da lei) de 2 de agosto de 2026 para 2 de dezembro de 2027, uma extensão de 16 meses. A IA de alto risco embutida em produtos já cobertos pela legislação de segurança de produtos da UE (Anexo I) é adiada de agosto de 2027 para 2 de agosto de 2028.',
+            '**O que NÃO mudou:** Os deveres de transparência do Artigo 50 — divulgar que uma pessoa está interagindo com um sistema de IA, rotular áudio/imagem/vídeo/texto gerado por IA e divulgar deepfakes — entraram em vigor conforme programado em 2 de agosto de 2026, e se aplicam com base na função do sistema, não no nível de risco. As obrigações de transparência de GPAI (em vigor desde agosto de 2025) e a aplicação de práticas proibidas (em vigor desde agosto de 2024) também não são afetadas. O Omnibus também adicionou duas novas categorias proibidas — sistemas que geram imagens íntimas não consentidas e material de abuso sexual infantil — com um período de carência para as salvaguardas técnicas até 2 de dezembro de 2026.',
+            '**O que as organizações devem fazer:** Se seus sistemas de IA se enquadram na classificação de alto risco autônomo (Anexo III), seu prazo de avaliação de conformidade agora é 2 de dezembro de 2027, não mais agosto de 2026 — use o tempo adicional para concluir adequadamente a documentação e os processos de supervisão humana, em vez de se apressar. Se o seu produto inclui funcionalidades cobertas pelo Artigo 50 (chatbots, conteúdo gerado por IA, deepfakes), essa obrigação de divulgação já está em vigor e sendo aplicada — verifique sua implementação agora.',
           ],
           callouts: [
             {
-              type: 'warning',
-              label: 'Aviso: Adoção do Omnibus Digital é incerta',
-              text: 'O adiamento do Omnibus Digital de agosto de 2026 para dezembro de 2027 NÃO é garantido. O segundo trílogo em 28 de abril de 2026 não chegou a um consenso. Um terceiro trílogo está agendado para 13 de maio de 2026. NÃO assuma que o atraso passará. Planeje seu roteiro de conformidade para 2 de agosto de 2026 como prazo vinculante.',
+              type: 'did-you-know',
+              label: 'Resolvido: Omnibus Digital em vigor desde 27 de julho de 2026',
+              text: 'O adiamento do Omnibus Digital está confirmado e é vinculante — entrou em vigor em 27 de julho de 2026, movendo o prazo da IA de alto risco autônoma (Anexo III) de 2 de agosto de 2026 para 2 de dezembro de 2027. Isso não afeta os deveres de transparência do Artigo 50 (divulgação de chatbots, rotulagem de conteúdo gerado por IA e deepfakes), que entraram em vigor conforme originalmente programado em 2 de agosto de 2026 e já estão sendo aplicados.',
             },
           ],
         },
@@ -5509,7 +5514,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Plano de Ação de IA Trump (2025):** Substitui a EO de Biden com foco em remover barreiras regulatórias ao desenvolvimento de IA, manter a liderança dos EUA sobre a China e promover a exportação de IA para nações aliadas. Sem requisitos obrigatórios de relatórios de segurança para desenvolvedores de IA.',
             '**Ordem Executiva 14365: Garantindo um Framework de Política Nacional para IA (11 de dezembro de 2025):** Estabelece uma Força-Tarefa de Litígio de IA dentro do Departamento de Justiça para contestar leis estaduais de IA nos tribunais. Direciona o Secretário de Comércio (prazo de 90 dias) a identificar e publicar leis estaduais de IA "onerosas". Autoriza a retenção de fundos federais de infraestrutura de banda larga BEAD de estados com leis de IA "onerosas". O objetivo explícito é a pré-emissão federal de leis estaduais de IA.',
             '**Framework Nacional de IA da Casa Branca (20 de março de 2026):** Um framework abrangente cobrindo 7 áreas de política, incluindo proteção de crianças, salvaguarda de comunidades, proteção de réplicas digitais, prevenção de censura governamental, desenvolvimento da força de trabalho, pré-emissão de lei estadual e promoção de inovação leve.',
-            '**TRUMP AMERICA AI Act (18 de março de 2026, Senadora Marsha Blackburn):** Um projeto de discussão legislativa de 291 páginas que codifica a governança federal de IA, estabelece padrões nacionais sobre dados de treinamento e deepfakes, e inclui requisitos de "dever de cuidado" para desenvolvedores de IA.',
+            '**TRUMP AMERICA AI Act (18 de março de 2026, Senadora Marsha Blackburn):** Um projeto de discussão legislativa de 291 páginas que codifica a governança federal de IA, estabelece padrões nacionais sobre dados de treinamento e deepfakes, e inclui requisitos de "dever de cuidado" para desenvolvedores de IA. Continua sendo uma minuta de discussão; não foi aprovado pelo Congresso.',
+            '**GUARDRAILS Act (20 de março de 2026, Dep. Beyer e outros):** Contraproposta democrata ao TRUMP AMERICA AI Act. Revogaria a EO 14365 de Trump e bloquearia explicitamente a pré-emissão federal de leis estaduais de IA, preservando a autoridade regulatória dos estados. Também não foi aprovado pelo Congresso.',
+            '**Status de implementação:** A EO 14365 exigia que a FTC emitisse uma declaração de política até 11 de março de 2026. A FTC perdeu esse prazo e publicou sua declaração de política proposta em 7 de julho de 2026 — quase quatro meses de atraso — encerrando o período de comentários públicos em 31 de julho de 2026. Uma versão final ainda não foi adotada. O Congresso não aprovou nem o TRUMP AMERICA AI Act nem o GUARDRAILS Act, o que significa que a pré-emissão federal de leis estaduais de IA continua em disputa.',
             '**CHIPS and Science Act (US$52 bilhões):** Assinada em agosto de 2022. Financia fabricação doméstica de semicondutores, P&D e desenvolvimento de força de trabalho. Reduz a dependência dos EUA da TSMC de Taiwan para chips avançados. Intel, TSMC e Samsung estão construindo fábricas nos EUA com financiamento da CHIPS Act.',
             '**Controles de exportação em hardware de IA:** A administração Biden restringiu exportações de GPUs avançadas Nvidia A100 e H100 para a China e outros países de preocupação. As restrições foram expandidas em outubro de 2023 e outubro de 2024. A Nvidia criou chips específicos para a China (A800, H800) que se enquadravam nos limites de exportação — esses também foram posteriormente restritos.',
             '**NIST AI Risk Management Framework (AI RMF 1.0):** Publicado em janeiro de 2023. Um framework voluntário — não legalmente vinculante — cobrindo a confiabilidade da IA em sete dimensões. Amplamente adotado por agências federais dos EUA e grandes empresas como base de conformidade.',
@@ -5612,7 +5619,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'As dinâmicas geopolíticas que moldam a disponibilidade de modelos tornam a questão open-source vs. proprietário especialmente relevante. Para uma comparação completa de quando o open-source vence e quando os modelos proprietários valem o custo, veja [LLMs open-source vs. proprietários](https://www.promptquorum.com/pt/prompt-engineering/open-source-vs-proprietary-llms).',
           ],
           items: [
-            '**Organizações sediadas na UE:** Precisam cumprir o EU AI Act diretamente. Sistemas de IA de alto risco (RH, crédito, saúde, serviços públicos) exigem avaliações de conformidade, documentação de supervisão humana e registro no banco de dados de IA da UE antes de agosto de 2026. Toda IA que lida com dados pessoais deve cumprir o RGPD — incluindo pipelines de treinamento de IA e processamento de saídas.',
+            '**Organizações sediadas na UE:** Precisam cumprir o EU AI Act diretamente. Sistemas de IA de alto risco autônomos (RH, crédito, saúde, serviços públicos) exigem avaliações de conformidade, documentação de supervisão humana e registro no banco de dados de IA da UE antes de 2 de dezembro de 2027 (adiado de agosto de 2026 pelo Omnibus Digital, em vigor desde 27 de julho de 2026). Os deveres de divulgação do Artigo 50 para chatbots e conteúdo gerado por IA já se aplicam desde agosto de 2026. Toda IA que lida com dados pessoais deve cumprir o RGPD — incluindo pipelines de treinamento de IA e processamento de saídas.',
             '**Organizações não pertencentes à UE que atendem usuários da UE:** Sujeitas ao Efeito Bruxelas — o EU AI Act aplica-se às suas saídas de IA se alcançarem usuários da UE. Modelos GPAI usados em produtos voltados à UE devem cumprir obrigações de transparência (a partir de agosto de 2025). O não cumprimento acarreta as mesmas multas que os violadores sediados na UE.',
             '**Ferramentas de IA dos EUA em implantações na UE:** GPT-5.5, Claude Opus 4.8 e Gemini 3.1 Pro são todos classificados como modelos GPAI. OpenAI, Anthropic e Google publicaram documentação de conformidade GPAI do EU AI Act. Organizações que usam essas ferramentas em sistemas de IA de alto risco (como implantadores) permanecem responsáveis por suas próprias avaliações de conformidade — a conformidade GPAI do fornecedor não cobre a sua implantação.',
             '**Ferramentas de IA chinesas:** DeepSeek R1 e outros modelos chineses estão disponíveis internacionalmente, mas carregam risco adicional de aquisição para organizações da UE e dos EUA — a residência de dados é incerta, o fornecedor está sujeito a regulamentações de conteúdo do CAC e a Administração do Ciberespaço da China pode compelir a divulgação de dados. Organizações governamentais e de infraestrutura crítica em estados-membros da UE e da OTAN estão restringindo ou proibindo o uso de ferramentas de IA chinesas.',
@@ -5655,7 +5662,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhatEUAIActRequires: {
           title: 'O que o EU AI Act exige das organizações?',
           content: [
-            'O EU AI Act classifica sistemas de IA em quatro níveis de risco com obrigações dimensionadas. Práticas proibidas — pontuação social por autoridades públicas, vigilância biométrica em tempo real em espaços públicos — estão proibidas desde agosto de 2024. Sistemas de IA de alto risco usados em emprego, avaliação de crédito, saúde ou aplicação da lei exigem avaliações de conformidade, documentação de supervisão humana e registro no banco de dados de IA da UE antes de agosto de 2026. Modelos de IA de Propósito Geral (GPT-5.5, Claude, Gemini) devem publicar resumos de dados de treinamento e cumprir a lei de direitos autorais da UE — regras que se aplicaram a partir de agosto de 2025. Todas as organizações que atendem usuários da UE devem estar em conformidade, independentemente de onde estão sediadas.',
+            'O EU AI Act classifica sistemas de IA em quatro níveis de risco com obrigações dimensionadas. Práticas proibidas — pontuação social por autoridades públicas, vigilância biométrica em tempo real em espaços públicos — estão proibidas desde agosto de 2024. Sistemas de IA de alto risco autônomos usados em emprego, avaliação de crédito, saúde ou aplicação da lei exigem avaliações de conformidade, documentação de supervisão humana e registro no banco de dados de IA da UE antes de 2 de dezembro de 2027 (adiado da data original de agosto de 2026 pelo Omnibus Digital, em vigor desde 27 de julho de 2026). Modelos de IA de Propósito Geral (GPT-5.5, Claude, Gemini) devem publicar resumos de dados de treinamento e cumprir a lei de direitos autorais da UE — regras que se aplicaram a partir de agosto de 2025. Os deveres de transparência do Artigo 50 (divulgação de chatbots e conteúdo de IA) continuam a se aplicar desde agosto de 2026, conforme programado. Todas as organizações que atendem usuários da UE devem estar em conformidade, independentemente de onde estão sediadas.',
           ],
         },
 
@@ -5682,7 +5689,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         defEUAIAct: {
           title: 'Definição: EU AI Act',
-          content: 'A primeira regulamentação abrangente e juridicamente vinculante de IA do mundo, aprovada pelo Parlamento Europeu em março de 2024. Classifica sistemas de IA em quatro níveis de risco (Inaceitável, Alto, Limitado, Mínimo) com obrigações dimensionadas. Práticas proibidas a partir de agosto de 2024; obrigações de transparência de IA de Propósito Geral a partir de agosto de 2025; requisitos de sistemas de alto risco a partir de agosto de 2026. Multas chegam a €35 milhões ou 7% do faturamento global. Aplica-se extraterritorialmente a qualquer IA que alcance usuários da UE.',
+          content: 'A primeira regulamentação abrangente e juridicamente vinculante de IA do mundo, aprovada pelo Parlamento Europeu em março de 2024. Classifica sistemas de IA em quatro níveis de risco (Inaceitável, Alto, Limitado, Mínimo) com obrigações dimensionadas. Práticas proibidas a partir de agosto de 2024; obrigações de transparência de IA de Propósito Geral a partir de agosto de 2025; deveres de divulgação do Artigo 50 (chatbots, conteúdo gerado por IA) a partir de agosto de 2026; requisitos de sistemas de alto risco autônomos (Anexo III) a partir de 2 de dezembro de 2027, depois que o Omnibus Digital adiou a data original de agosto de 2026. Multas chegam a €35 milhões ou 7% do faturamento global. Aplica-se extraterritorialmente a qualquer IA que alcance usuários da UE.',
         },
 
         defBrusselsEffect: {
@@ -5767,7 +5774,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
-            { q: 'O que é o EU AI Act e quando se aplica?', a: 'O EU AI Act é a primeira lei abrangente de IA do mundo, aprovada pelo Parlamento Europeu em março de 2024. Práticas proibidas se aplicam a partir de agosto de 2024. Obrigações de modelos GPAI (para modelos GPT-5.5, Claude, classe Gemini) aplicam-se a partir de agosto de 2025. Requisitos de sistemas de IA de alto risco aplicam-se a partir de agosto de 2026. Aplica-se a qualquer organização que coloque IA no mercado da UE ou use IA que afete residentes da UE.' },
+            { q: 'O que é o EU AI Act e quando se aplica?', a: 'O EU AI Act é a primeira lei abrangente de IA do mundo, aprovada pelo Parlamento Europeu em março de 2024. Práticas proibidas se aplicam a partir de agosto de 2024. Obrigações de modelos GPAI (para modelos GPT-5.5, Claude, classe Gemini) aplicam-se a partir de agosto de 2025. Os deveres de transparência do Artigo 50 aplicam-se a partir de agosto de 2026. Os requisitos de sistemas de IA de alto risco autônomos foram adiados pelo Omnibus Digital, em vigor desde 27 de julho de 2026, de agosto de 2026 para 2 de dezembro de 2027. Aplica-se a qualquer organização que coloque IA no mercado da UE ou use IA que afete residentes da UE.' },
             { q: 'O EU AI Act se aplica a empresas não pertencentes à UE?', a: 'Sim. O EU AI Act tem alcance extraterritorial — aplica-se a qualquer fornecedor cujas saídas de IA são usadas na UE, independentemente de onde o fornecedor está sediado. Uma empresa dos EUA cujo produto de IA é usado por residentes da UE precisa estar em conformidade. Este é o mesmo princípio extraterritorial que tornou o RGPD um padrão global.' },
             { q: 'Quais são as multas por violar o EU AI Act?', a: 'Multas de até €35 milhões ou 7% do faturamento anual global (o que for maior) por práticas de IA proibidas. Até €15 milhões ou 3% por violações de IA de alto risco. Até €7,5 milhões ou 1% por fornecer informações incorretas às autoridades de aplicação. O maior percentual ou valor fixo se aplica.' },
             { q: 'Quais aplicações de IA são proibidas sob o EU AI Act?', a: 'Proibidas (Risco Inaceitável): sistemas de pontuação social por autoridades públicas; identificação biométrica em tempo real em espaços públicos (com exceções restritas); IA que explora vulnerabilidades psicológicas; coleta indiscriminada de imagens faciais da internet. Essas estão proibidas desde agosto de 2024.' },
@@ -5904,8 +5911,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         quickFacts: {
           title: '핵심 사실: AI 지정학 한눈에 보기',
           items: [
-            '**EU AI법:** 세계 최초의 구속력 있는 AI 법률. 고위험 시행: 2026년 8월 2일(디지털 옴니버스에 의해 2027년 12월 2일로 연기될 수 있음 — 가장 최근에 확인된 3자 협의는 2026년 5월 중순에 있었으나 이후 공개적인 채택 발표는 없었습니다). 과태료: 최대 €3,500만 또는 전 세계 연간 매출의 7%.',
-            '**미국 AI 정책:** 연방 AI 법률 없음. 트럼프 행정부는 행정명령 14365(2025년 12월), 국가 프레임워크(2026년 3월), 제안된 TRUMP AMERICA AI법(2026년 3월)을 통해 주법 선점을 추진 중입니다. 2026년 5월 기준 가장 최근에 확인된 상태로도 여러 이행 기한이 아직 충족되지 않았습니다(FTC 성명 기한 3월 11일, 상무부 평가 기한 3월 11일).',
+            '**EU AI법:** 세계 최초의 구속력 있는 AI 법률. 디지털 옴니버스가 2026년 7월 27일 발효되어, 단독형 고위험 AI(부속서 III)의 준수 기한이 2026년 8월 2일에서 2027년 12월 2일로, 제품 내장형 고위험 AI(부속서 I)는 2028년 8월 2일로 연기되었습니다. 제50조 투명성 의무(AI 고지, 딥페이크 표시)는 예정대로 2026년 8월 2일 시행되었습니다. 과태료: 최대 €3,500만 또는 전 세계 연간 매출의 7%.',
+            '**미국 AI 정책:** 연방 AI 법률 없음. 트럼프 행정부는 행정명령 14365(2025년 12월)와 국가 프레임워크(2026년 3월)를 통해 주법 선점을 추진 중입니다. FTC는 행정명령이 요구한 AI 정확성 및 주법 선점에 관한 정책 성명을 3월 11일 기한에서 4개월 늦은 2026년 7월 7일에 발표했으며, 2026년 7월 31일 공개 의견 수렴을 마감했습니다. TRUMP AMERICA AI법과 민주당의 대응 법안인 GUARDRAILS법 모두 의회를 통과하지 못했으며, 여전히 논의 초안 단계에 머물러 있습니다.',
             '**중국 AI 거버넌스:** CAC(국가인터넷정보판공실) 사전 출시 평가 의무. 콘텐츠 필터는 CPC 비판, 대만/티베트/신장 논의, "사회주의 핵심 가치"를 훼손하는 콘텐츠를 차단합니다. 필터는 4xx 오류가 아닌 HTTP 200에 `is_safe: 0` 플래그를 반환합니다. PIPL은 중국인 개인정보에 대한 데이터 거주를 요구합니다.',
             '**하드웨어 병목:** Nvidia는 AI 학습용 GPU 시장의 약 80%를 장악하고 있습니다. TSMC는 첨단 반도체의 약 90%를 제조합니다. 둘 다 지정학적 화약고입니다. 미국 CHIPS법(520억 달러)은 TSMC 의존도를 낮추는 것을 목표로 합니다.',
             '**DeepSeek R1의 영향:** 추론/코딩(AIME 2024, MATH, HumanEval)에서 GPT-5.5를 능가했으며, 학습 비용은 약 600만 달러로 추정됩니다(프론티어 모델 추정치 대비 94% 절감; 비용 수치는 논란의 여지가 있음). 중국에 제한된 Nvidia H800 GPU로 학습되었습니다. 하드웨어 수출 통제에 한계가 있음을 입증합니다.',
@@ -5915,7 +5922,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         euImplications: {
           title: 'EU 소재 조직을 위한 핵심 컴플라이언스 일정',
           content: [
-            '**EU AI법은 2026년 8월부터 구속력 있게 집행됩니다.** 조직이 EU에 본사를 두거나 EU 사용자에게 서비스를 제공하는 경우, 4단계 위험 분류 체계를 준수해야 합니다. 금지된 관행에 대한 과태료는 최대 €3,500만 또는 전 세계 매출의 7%에 달하며, 어느 쪽이든 더 높은 금액이 적용됩니다. 불이행은 협상의 여지가 없습니다.',
+            '**EU AI법은 구속력이 있으며, 투명성 규정과 GPAI 규정은 2026년 8월부터 시행되고 있습니다.** 조직이 EU에 본사를 두거나 EU 사용자에게 서비스를 제공하는 경우, 4단계 위험 분류 체계를 준수해야 합니다. 2026년 7월 27일 발효된 디지털 옴니버스로 단독형 고위험 AI의 준수 기한은 2027년 12월 2일로 연기되었지만, 챗봇과 AI 생성 콘텐츠에 대한 고지 의무는 원래 예정된 2026년 8월부터 계속 적용됩니다. 금지된 관행에 대한 과태료는 최대 €3,500만 또는 전 세계 매출의 7%에 달하며, 어느 쪽이든 더 높은 금액이 적용됩니다. 불이행은 협상의 여지가 없습니다.',
             '**EU에서 GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro를 배포하는 경우, 해당 범용 AI(GPAI) 컴플라이언스 문서를 감사해야 합니다.** OpenAI, Anthropic, Google은 2025년 8월부터 투명성 문서(학습 데이터 요약, 역량 한계, 안전 테스트 결과)를 공개했습니다. 이 증명서를 컴플라이언스 증거로 저장하십시오 — 규제 당국이 요청할 것입니다.',
             '**고위험 AI 시스템(채용, 신용 결정, 의료, 법 집행)은 배포 전 적합성 평가가 필요합니다.** 이는 편향성 테스트, 인간 감독 메커니즘 문서화, 모든 AI 결정의 감사 추적을 의미합니다. 로컬에 배포된 오픈 가중치 모델(Ollama를 통한 LLaMA, Mistral Large)은 데이터 거주 요건을 충족합니다 — 데이터가 인프라를 벗어나지 않아 감사 추적을 직접 통제할 수 있습니다.',
             '**브뤼셀 효과가 귀 조직에도 적용됩니다.** AI 시스템이 단 한 명의 EU 거주자에게 도달하더라도 EU AI법이 적용됩니다 — 회사 본사가 미국이나 중국에 있어도 마찬가지입니다. 이는 관할권별로 별도 구성을 유지하는 것보다 전 세계적으로 동일한 컴플라이언스 수준을 적용하는 것이 더 단순한 경우가 많다는 것을 의미합니다.',
@@ -6082,23 +6089,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**최소 위험:** 스팸 필터, 비디오 게임 내 AI, 중대한 영향이 없는 추천 시스템. 기존 법률 외 특정 의무는 없습니다.',
             '**범용 AI(GPAI):** GPT-5.5, Claude, Gemini와 같은 모델은 학습 데이터 요약을 공개하고, EU 저작권법을 준수하며, 중대한 사고를 보고해야 합니다. 시스템적 위험이 있는 모델(10^25 FLOPS 초과 학습)은 추가적인 적대적 테스트 요건에 직면합니다. GPAI 규정은 2025년 8월부터 적용되었습니다.',
             '**집행:** EU AI 사무소(유럽 위원회 산하)가 GPAI 모델을 감독합니다. 국가 시장 감시 당국이 고위험 AI 규정을 집행합니다. 과태료: 금지된 관행에는 최대 €3,500만 또는 전 세계 매출의 7%; 고위험 위반에는 €1,500만 또는 3%.',
-            '**일정:** 금지된 관행: 2024년 8월. GPAI 의무: 2025년 8월. 고위험 AI 시스템: 2026년 8월. 규제 제품 내 고위험 AI: 2027년 8월.',
+            '**일정:** 금지된 관행: 2024년 8월. GPAI 의무: 2025년 8월. 제50조 투명성 의무(챗봇/딥페이크 고지): 2026년 8월, 디지털 옴니버스의 영향을 받지 않음. 단독형 고위험 AI 시스템(부속서 III): 디지털 옴니버스에 의해 2026년 8월에서 2027년 12월 2일로 연기됨. 규제 제품 내 고위험 AI(부속서 I): 2027년 8월에서 2028년 8월 2일로 연기됨.',
           ],
           image: '/images/ai-risk-tiers-comparison-en.svg',
           imageCaption: 'EU AI법 4단계 위험 체계: 허용 불가(2024년 8월 금지), 고위험(적합성 평가), 제한적(공개만), 최소(의무 없음).',
         },
         digitalOmnibus: {
-          title: '디지털 옴니버스: 유동적인 EU AI법 고위험 컴플라이언스 기한',
+          title: '디지털 옴니버스: 고위험 기한 2027년 12월로 연기 확정',
           content: [
-            '**가장 최근에 확인된 상태 기준으로, EU의 2026년 8월 2일 고위험 AI 컴플라이언스 기한은 여전히 2027년 12월 2일로 연기될 수 있지만 — 채택이 공개적으로 확인되지 않았으며 법정 기한이 이제 임박했습니다.** 유럽 위원회는 EU AI법의 의도하지 않은 결과와 이행상의 문제를 해결하기 위해 2025년 11월 디지털 옴니버스를 제안했습니다. 유럽 의회와 EU 이사회 모두 연기에 대한 지지 의사를 밝혔습니다. 그러나 마지막으로 확인된 업데이트 기준으로 기관 간 협상은 정체된 상태였습니다.',
-            '**3자 협의 현황:** 2026년 2월의 첫 번째 3자 협의(의회, 이사회, 위원회 간 협상)에서는 시급성에 대한 폭넓은 정치적 합의가 있었지만 기술적 세부사항은 미해결로 남았습니다. 2026년 4월 28일의 두 번째 3자 협의는 합의 없이 종료되었습니다. 세 번째 3자 협의가 2026년 5월 중순에 열렸지만, 이 글을 작성하는 시점까지 최종 채택에 대한 공개적인 확인은 이어지지 않았습니다. 연기안이 2026년 8월 2일 이전에 채택되면 구속력을 갖게 됩니다. 그렇지 않으면 원래의 2026년 8월 2일 기한이 그대로 적용되며 — 그 날짜는 이제 며칠 남지 않았습니다.',
-            '**조직이 해야 할 일:** 디지털 옴니버스 연기가 공식적으로 채택되었다는 직접적인 확인이 없는 한, 2026년 8월 2일을 고위험 AI 시스템에 대한 구속력 있는 컴플라이언스 기한으로 취급하십시오. 연기안이 통과되면 기한이 2027년 12월까지 연장될 수 있지만, 법정 기한이 이렇게 임박한 시점에 통과를 가정하는 것은 위험합니다. 지금 2026년 8월 컴플라이언스를 달성하면 어느 경우든 보호받을 수 있습니다 — 옴니버스가 통과되면 추가 기간 동안 더 최적화할 수 있고, 통과되지 않으면 이미 준수한 상태입니다.',
+            '**디지털 옴니버스는 채택되었습니다. 2026년 7월 24일 관보에 공포되어 2026년 7월 27일 발효되었으며 — 원래의 고위험 기한 불과 6일 전이었습니다.** 이로써 단독형 고위험 AI 시스템(부속서 III — 고용, 신용, 의료, 법 집행을 포괄하는 가장 큰 범주)의 준수 기한이 2026년 8월 2일에서 2027년 12월 2일로 16개월 연기되었습니다. 이미 EU 제품안전법의 적용을 받는 제품에 내장된 고위험 AI(부속서 I)는 2027년 8월에서 2028년 8월 2일로 연기되었습니다.',
+            '**연기되지 않은 것:** 사람이 AI 시스템과 상호작용하고 있음을 고지하고, AI가 생성한 오디오·이미지·영상·텍스트를 표시하며, 딥페이크를 공개하는 제50조 투명성 의무는 예정대로 2026년 8월 2일 시행되었으며, 위험 등급이 아니라 시스템 기능에 따라 적용됩니다. GPAI 투명성 의무(2025년 8월부터 시행)와 금지 행위 집행(2024년 8월부터 시행)도 영향을 받지 않습니다. 옴니버스는 또한 비동의 성적 이미지와 아동 성적 학대물을 생성하는 시스템이라는 두 가지 새로운 금지 범주를 추가했으며, 기술적 안전장치에 대해 2026년 12월 2일까지의 유예 기간을 두었습니다.',
+            '**조직이 해야 할 일:** AI 시스템이 부속서 III의 단독형 고위험으로 분류된다면, 적합성 평가 기한은 이제 2026년 8월이 아니라 2027년 12월 2일입니다 — 서둘러 대응하기보다 이 추가 기간을 활용해 문서화와 인간 감독 절차를 제대로 완성하십시오. 제품에 제50조가 적용되는 기능(챗봇, AI 생성 콘텐츠, 딥페이크)이 포함되어 있다면, 해당 고지 의무는 이미 시행 및 집행 중이므로 지금 바로 구현 상태를 점검하십시오.',
           ],
           callouts: [
             {
-              type: 'warning',
-              label: '경고: 디지털 옴니버스 채택 여부 미확인',
-              text: '2026년 8월에서 2027년 12월로의 디지털 옴니버스 연기는 채택된 것으로 공개적으로 확인되지 않았습니다. 2026년 4월 28일의 두 번째 3자 협의는 합의에 이르지 못했고, 2026년 5월 중순에 열린 세 번째 3자 협의도 이후 확인된 결과 보고 없이 종료되었습니다. 연기가 이루어졌다고 가정하지 마십시오. 2026년 8월 2일의 법정 기한이 이제 임박했으므로, 이를 구속력 있는 기한으로 삼아 컴플라이언스 로드맵을 계획하십시오. 옴니버스가 나중에 채택된 것으로 확인되면 추가 시간을 얻게 되고, 그렇지 않으면 이미 준수한 상태입니다.',
+              type: 'did-you-know',
+              label: '해결됨: 디지털 옴니버스는 2026년 7월 27일부터 시행 중',
+              text: '디지털 옴니버스 연기는 확정되었으며 구속력을 가집니다 — 2026년 7월 27일 발효되어 단독형 고위험 AI(부속서 III)의 기한을 2026년 8월 2일에서 2027년 12월 2일로 옮겼습니다. 이는 제50조 투명성 의무(챗봇 고지, AI 생성 콘텐츠 및 딥페이크 표시)에는 영향을 미치지 않으며, 이 의무는 예정대로 2026년 8월 2일 시행되어 이미 집행되고 있습니다.',
             },
           ],
         },
@@ -6150,7 +6157,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**백악관 국가 AI 입법 프레임워크(2026년 3월 20일):** 아동 보호와 부모 권한 강화, 지역사회 보호, 디지털 복제 보호, 정부 검열 방지, 인력 개발, 주법 선점, 경량 혁신 촉진 등 7개 정책 영역을 포괄하는 종합 프레임워크입니다. 이 프레임워크는 의회에 "주 AI 법률 선점을 중심으로 한 연방 통합적, 혁신 지향적 체제"를 채택할 것을 촉구합니다.',
             '**TRUMP AMERICA AI법(2026년 3월 18일, Marsha Blackburn 상원의원):** 연방 AI 거버넌스를 성문화하고, 학습 데이터와 딥페이크에 대한 국가 표준을 수립하며, 예술가/창작자 보호를 의무화하고, AI 개발자에 대한 "주의 의무" 요건을 포함하는 291페이지 분량의 입법 논의안입니다. 통신품위법 제230조를 일몰시킵니다. 주 법률 선점에 관한 트럼프의 행정명령과 궤를 같이합니다.',
             '**GUARDRAILS법(2026년 3월 20일, Beyer 하원의원 등):** TRUMP AMERICA법에 대한 민주당의 대응 법안입니다. 트럼프의 AI 행정명령 14365를 폐지하고 주 AI 법률에 대한 연방 선점을 명시적으로 차단하여 주(州)의 규제 권한을 보존합니다. 연방 선점(트럼프)과 주(州) 자율성(민주당) 사이의 근본적 갈등을 반영하며, 이는 2026~2029년 미국 AI 정책을 규정할 것입니다.',
-            '**이행 기한 미준수(가장 최근에 확인된 상태: 2026년 5월):** 행정명령 14365는 FTC가 2026년 3월 11일까지 AI 정책 성명을 발표하도록 요구했지만 (5월 4일 마지막으로 확인된 업데이트 기준으로) 아직 발표되지 않았습니다. 상무부의 주 AI 법률 평가도 2026년 3월 11일이 기한이었지만 (그 업데이트 시점 기준으로) 역시 발표되지 않았습니다. 그 시점에서 이행이 정책적 야심에 비해 상당히 뒤처져 있었으며, 이후 더 최근의 공개적인 상태 업데이트는 확인되지 않았습니다.',
+            '**이행 상태 업데이트:** 행정명령 14365는 FTC가 2026년 3월 11일까지 AI 정책 성명을 발표하도록 요구했습니다. FTC는 이 기한을 지키지 못했고, AI 출력의 "정확성 억제"와 출력 변경을 요구하는 주 AI 법률이 FTC법에 의해 어느 범위까지 연방 선점되는지를 다루는 정책 성명안을 기한보다 약 4개월 늦은 2026년 7월 7일 발표했으며, 2026년 7월 31일 공개 의견 수렴을 마감했습니다. 최종안은 아직 채택되지 않았습니다. 의회는 TRUMP AMERICA AI법과 GUARDRAILS법 모두 통과시키지 않았으며, 이는 주 AI 법률에 대한 연방 선점 문제가 여전히 미해결 상태임을 의미합니다.',
             '**콜로라도 AI법(2026년 2월 1일 시행):** 채용, 대출, 보험 등 고위험 결정에서의 알고리즘 차별을 다루는 최초의 미국 주(州) 법률입니다. 2026년 2월 1일부터 시행되었습니다. 트럼프의 행정명령 14365는 콜로라도의 법률을 "과도한" 규제의 사례로 명시적으로 인용했습니다. 컴플라이언스 기한은 2026년 6월 30일로 연장되었습니다. 이 법률은 트럼프가 연방 차원에서 선점하려는 주 규제의 전형적 사례입니다.',
             '**CHIPS 및 과학법(520억 달러):** 2022년 8월 서명되었습니다. 국내 반도체 제조, R&D, 인력 개발에 자금을 지원합니다. 첨단 칩에 대한 대만반도체제조회사(TSMC) 의존도를 낮춥니다. Intel, TSMC, Samsung은 CHIPS법 자금을 활용해 미국 내 팹을 건설하고 있습니다.',
             '**AI 하드웨어 수출 통제:** 바이든 행정부는 첨단 Nvidia A100 및 H100 GPU의 중국 및 기타 우려 국가로의 수출을 제한했습니다. 이 제한은 2023년 10월과 2024년 10월에 확대되었습니다. Nvidia는 수출 한도 내에 들어가는 중국 특화 칩(A800, H800)을 만들었지만, 이후 이들도 제한 대상이 되었습니다.',
@@ -6248,7 +6255,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '모델 가용성을 형성하는 지정학적 역학은 오픈소스 대 독점 모델 문제를 특히 중요하게 만듭니다. 오픈소스가 유리한 경우와 독점 모델이 비용 대비 가치가 있는 경우에 대한 완전한 비교는 [오픈소스 vs 독점 LLM](https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms)을 참조하십시오.',
           ],
           items: [
-            '**EU 소재 조직:** [EU AI법](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)을 직접 준수해야 합니다. 고위험 AI 시스템(HR, 신용, 의료, 공공 서비스)은 2026년 8월 전에 적합성 평가, 인간 감독 문서, [EU AI 데이터베이스](https://digital-strategy.ec.europa.eu/en/policies/ai-office) 등록이 필요합니다. 개인 데이터를 처리하는 모든 AI는 AI 학습 파이프라인과 출력 처리를 포함하여 GDPR을 준수해야 합니다.',
+            '**EU 소재 조직:** [EU AI법](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)을 직접 준수해야 합니다. 단독형 고위험 AI 시스템(HR, 신용, 의료, 공공 서비스)은 2026년 7월 27일 발효된 디지털 옴니버스에 의해 2026년 8월에서 연기된 2027년 12월 2일까지 적합성 평가, 인간 감독 문서, [EU AI 데이터베이스](https://digital-strategy.ec.europa.eu/en/policies/ai-office) 등록이 필요합니다. 챗봇과 AI 생성 콘텐츠에 대한 제50조 고지 의무는 2026년 8월부터 이미 적용되고 있습니다. 개인 데이터를 처리하는 모든 AI는 AI 학습 파이프라인과 출력 처리를 포함하여 GDPR을 준수해야 합니다.',
             '**EU 사용자를 대상으로 하는 비EU 조직:** 브뤼셀 효과의 적용을 받습니다 — [EU AI법](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)은 EU 사용자에게 도달하는 AI 출력에 적용됩니다. EU 대상 제품에 사용되는 GPAI 모델은 투명성 의무를 준수해야 합니다(2025년 8월부터). 미준수 시 EU 본사 위반자와 동일한 과태료가 부과됩니다.',
             '**EU 배포에서의 미국 AI 도구:** GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro는 모두 GPAI 모델로 분류됩니다. OpenAI, Anthropic, Google은 EU AI법 GPAI 컴플라이언스 문서를 공개했습니다. 고위험 AI 시스템에서 이러한 도구를 사용하는 조직(배포자)은 자체 적합성 평가에 대한 책임이 있습니다 — 공급업체의 GPAI 컴플라이언스가 배포를 포괄하지는 않습니다.',
             '**중국 AI 도구:** DeepSeek R1 및 기타 중국 모델은 국제적으로 이용 가능하지만 EU 및 미국 조직에게 추가적인 조달 위험을 수반합니다 — 데이터 거주가 불명확하고, 공급업체가 CAC 콘텐츠 규정의 적용을 받으며, CAC가 데이터 공개를 강제할 수 있습니다. EU 및 NATO 회원국의 정부 및 핵심 인프라 조직은 중국 AI 도구 사용을 제한하거나 금지하고 있습니다.',
@@ -6286,7 +6293,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhatEUAIActRequires: {
           title: 'EU AI법은 조직에 무엇을 요구하는가?',
           content: [
-            'EU AI법은 AI 시스템을 4단계 위험 등급으로 분류하고 등급에 따라 의무를 조정합니다. 금지된 관행 — 공공 기관의 사회적 점수 부여, 공공장소에서의 실시간 생체 인식 감시 — 은 2024년 8월부터 금지됩니다. 고용, 신용 평가, 의료, 법 집행에 사용되는 고위험 AI 시스템은 2026년 8월 전까지 적합성 평가, 인간 감독 문서, EU AI 데이터베이스 등록이 필요합니다. 범용 AI 모델(GPT-5.5, Claude, Gemini)은 학습 데이터 요약을 공개하고 EU 저작권법을 준수해야 하며, 이 규정은 2025년 8월부터 적용되었습니다. 본사 위치와 관계없이 EU 사용자에게 서비스를 제공하는 모든 조직이 이를 준수해야 합니다.',
+            'EU AI법은 AI 시스템을 4단계 위험 등급으로 분류하고 등급에 따라 의무를 조정합니다. 금지된 관행 — 공공 기관의 사회적 점수 부여, 공공장소에서의 실시간 생체 인식 감시 — 은 2024년 8월부터 금지됩니다. 고용, 신용 평가, 의료, 법 집행에 사용되는 단독형 고위험 AI 시스템은 2026년 7월 27일 발효된 디지털 옴니버스에 의해 원래의 2026년 8월에서 연기된 2027년 12월 2일까지 적합성 평가, 인간 감독 문서, EU AI 데이터베이스 등록이 필요합니다. 범용 AI 모델(GPT-5.5, Claude, Gemini)은 학습 데이터 요약을 공개하고 EU 저작권법을 준수해야 하며, 이 규정은 2025년 8월부터 적용되었습니다. 챗봇과 AI 생성 콘텐츠에 대한 제50조 투명성 의무는 예정대로 2026년 8월부터 계속 적용됩니다. 본사 위치와 관계없이 EU 사용자에게 서비스를 제공하는 모든 조직이 이를 준수해야 합니다.',
           ],
         },
         qaExportControls: {
@@ -6309,7 +6316,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         defEUAIAct: {
           title: '정의: EU AI법',
-          content: '2024년 3월 유럽 의회에서 통과된 세계 최초의 포괄적이고 법적 구속력이 있는 AI 규정입니다. AI 시스템을 4단계 위험 등급(허용 불가, 고위험, 제한적, 최소)으로 분류하며 등급별로 의무가 조정됩니다. 금지된 관행은 2024년 8월부터, 범용 AI 투명성 의무는 2025년 8월부터, 고위험 시스템 요건은 2026년 8월부터 적용됩니다. 과태료는 최대 3,500만 유로 또는 전 세계 매출의 7%에 달합니다. EU 사용자에게 도달하는 모든 AI에 역외 적용됩니다.',
+          content: '2024년 3월 유럽 의회에서 통과된 세계 최초의 포괄적이고 법적 구속력이 있는 AI 규정입니다. AI 시스템을 4단계 위험 등급(허용 불가, 고위험, 제한적, 최소)으로 분류하며 등급별로 의무가 조정됩니다. 금지된 관행은 2024년 8월부터, 범용 AI 투명성 의무는 2025년 8월부터, 제50조 고지 의무(챗봇, AI 생성 콘텐츠)는 2026년 8월부터 적용됩니다. 단독형 고위험 시스템(부속서 III) 요건은 디지털 옴니버스에 의해 원래의 2026년 8월에서 연기되어 2027년 12월 2일부터 적용됩니다. 과태료는 최대 3,500만 유로 또는 전 세계 매출의 7%에 달합니다. EU 사용자에게 도달하는 모든 AI에 역외 적용됩니다.',
         },
         defBrusselsEffect: {
           title: '정의: 브뤼셀 효과',
@@ -6379,7 +6386,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
-            { q: 'EU AI법이란 무엇이며 언제 적용됩니까?', a: 'EU AI법은 세계 최초의 포괄적 AI 법률로, 2024년 3월 유럽 의회에서 523표 찬성으로 통과되었습니다. 금지 관행은 2024년 8월부터 적용됩니다. GPAI 모델 의무(GPT-5.5, Claude, Gemini급 모델)는 2025년 8월부터 적용됩니다. 고위험 AI 시스템 요건은 2026년 8월부터 적용됩니다. EU 시장에 AI를 출시하거나 EU 거주자에게 영향을 미치는 AI를 사용하는 모든 조직에 적용됩니다.' },
+            { q: 'EU AI법이란 무엇이며 언제 적용됩니까?', a: 'EU AI법은 세계 최초의 포괄적 AI 법률로, 2024년 3월 유럽 의회에서 523표 찬성으로 통과되었습니다. 금지 관행은 2024년 8월부터 적용됩니다. GPAI 모델 의무(GPT-5.5, Claude, Gemini급 모델)는 2025년 8월부터 적용됩니다. 제50조 투명성 의무(챗봇 및 AI 콘텐츠 고지)는 2026년 8월부터 적용됩니다. 단독형 고위험 AI 시스템 요건은 2026년 7월 27일 발효된 디지털 옴니버스에 의해 2026년 8월에서 2027년 12월 2일로 연기되었습니다. EU 시장에 AI를 출시하거나 EU 거주자에게 영향을 미치는 AI를 사용하는 모든 조직에 적용됩니다.' },
             { q: 'EU AI법이 비EU 기업에도 적용됩니까?', a: '예. EU AI법은 역외 적용 범위를 가집니다 — 공급업체의 본사 위치에 관계없이 EU에서 사용되는 AI 출력을 제공하는 모든 조직에 적용됩니다. EU 사용자가 사용하는 AI 제품을 보유한 미국 기업도 준수해야 합니다. 이것이 GDPR을 글로벌 표준으로 만든 것과 동일한 역외 원칙입니다.' },
             { q: 'EU AI법 위반 시 과태료는 얼마입니까?', a: '금지된 AI 관행에 대해 최대 €3,500만 또는 전 세계 연간 매출의 7%(어느 쪽이든 더 높은 금액)의 과태료가 부과됩니다. 고위험 AI 위반에는 최대 €1,500만 또는 3%가 적용됩니다. 집행 당국에 부정확한 정보 제공 시 최대 €750만 또는 1%가 부과됩니다. 백분율과 고정 금액 중 더 높은 쪽이 적용됩니다.' },
             { q: 'EU AI법에서 금지하는 AI 응용 프로그램은 무엇입니까?', a: '금지(허용 불가 위험): 공공 기관의 사회적 점수 시스템; 공공장소 실시간 생체 인식 식별(좁은 예외 있음); 심리적 취약성을 이용하는 AI; 인터넷에서 안면 이미지를 비표적으로 수집하는 행위. 이들은 2024년 8월부터 금지되었습니다.' },
