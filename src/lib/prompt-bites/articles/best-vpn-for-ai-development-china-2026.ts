@@ -287,61 +287,154 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Privacy & Security',
     heroImage: '/images/best-vpn-for-ai-development-china-2026-overview-hero-de.webp',
     title: 'Bestes VPN für KI-Entwicklung in China 2026',
-    seoTitle: 'Bestes VPN für KI-Entwickler China 2026 (Getestet)',
+    seoTitle: 'Bestes VPN für KI-Entwicklung China 2026: GitHub + HuggingFace',
     metaDescription:
-      'Bestes VPN für KI-Entwicklung in China 2026: Zugriff auf Hugging Face, GitHub und OpenAI. Astrill, LetsVPN und Mullvad im Vergleich.',
+      'NordVPN und ExpressVPN sind die zuverlässigsten VPNs für KI-Entwickler, die 2026 aus China auf GitHub, Hugging Face und Docker Hub zugreifen. Funktionen und aktuelle Preise vergleichen.',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
-    freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    dateModified: '2026-08-26',
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-09-26',
+    last_full_refresh: '2026-08-26',
+    next_seo_review_due: '2026-10-01',
+    last_seo_review: '2026-08-26',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
-    audience: 'KI-Entwickler und Forscher in China, die HuggingFace, GitHub, PyPI und Docker Hub benötigen.',
+    audience: 'KI-Entwickler und Forscher in Festlandchina, die auf HuggingFace, GitHub, PyPI, Docker Hub und andere von der GFW blockierte KI-Entwicklungstools zugreifen müssen.',
     affiliateDisclosure: true,
     parentArticle: '/power-local-llm/best-vpn-ai-privacy-local-llm-2026',
-    siblingBites: ['best-vpn-downloading-ai-models'],
+    siblingBites: ['best-vpn-downloading-ai-models', 'is-qwen-gdpr-compliant'],
     is_living_page: true,
     leadAnswerBlock:
-      '**NordVPN und ExpressVPN sind die zuverlässigsten VPNs für den Zugriff auf HuggingFace, GitHub und Docker Hub aus China. NordVPNs obfuskierte Server umgehen Deep Packet Inspection; ExpressVPNs Lightway-Protokoll ist am schnellsten für große Modelldateien. Werbung: Affiliate-Links auf dieser Seite können Provision generieren.**',
+      '**NordVPN ist die stärkste Gesamtlösung für KI-Entwickler, die aus Festlandchina arbeiten — seine Obfuscated Servers sind speziell für Netzwerke konzipiert, die VPN-Traffic einschränken oder blockieren, und laut NordVPNs eigener Dokumentation wird diese Kategorie auf das NordWhisper-Protokoll umgestellt. ExpressVPN ist die beste Alternative, wenn Geschwindigkeit und eine einfache plattformübergreifende Einrichtung wichtiger sind als die Tiefe der Verschleierung. Surfshark ist die Budget-Wahl, um mehrere Geräte abzudecken. Die VPN-Zuverlässigkeit in China ändert sich ohne Vorankündigung — behandeln Sie jede Empfehlung, auch diese, als aktuelle Momentaufnahme, nicht als dauerhafte Garantie.**',
+    toc: [
+      { label: 'Beste VPN-Empfehlungen', anchor: '#best-pick' },
+      { label: 'Was Entwickler brauchen', anchor: '#what-you-need' },
+      { label: 'Vergleich', anchor: '#comparison' },
+      { label: 'FAQ', anchor: '#faq' },
+    ],
+    intro:
+      'HuggingFace, GitHub, Docker Hub, npm und PyPI sind in Festlandchina teilweise oder vollständig blockiert. KI-Entwickler benötigen ein VPN, das speziell dafür gebaut wurde, Chinas Great Firewall (GFW) zu umgehen — nicht irgendein VPN, denn die meisten kostenlosen VPNs und auch viele kostenpflichtige werden ebenfalls blockiert. Dieser Leitfaden behandelt VPNs mit dokumentierten Verschleierungsfunktionen für eingeschränkte Netzwerke, worauf Sie vor dem Kauf achten sollten und was ein VPN für die lokale KI-Entwicklung nicht leisten kann.',
     quickAnswerTop: {
       de: {
-        question: 'Welches VPN funktioniert 2026 am besten für KI-Entwicklungstools aus China?',
-        answer: 'NordVPN (obfuskierte Server) und ExpressVPN (Lightway-Protokoll) sind die zuverlässigsten für HuggingFace, GitHub und Docker Hub. Surfshark als Budget-Alternative.',
+        question: 'Welches VPN funktioniert 2026 am besten für KI-Entwicklung in China?',
+        answer:
+          'NordVPN ist dank seiner Obfuscated Servers (Umstellung auf das NordWhisper-Protokoll) die stärkste Gesamtwahl für GitHub, Hugging Face und andere Entwicklerdienste in eingeschränkten Netzwerken. ExpressVPN ist die beste Alternative für Geschwindigkeit und plattformübergreifende Einfachheit. Surfshark ist die Budget-Wahl, um mehrere Geräte abzudecken. Verfügbarkeit und Zuverlässigkeit ändern sich in China schnell — prüfen Sie den aktuellen Anbieterstatus vor dem Kauf.',
         bullets: [
-          'NordVPN: Beste GFW-Bypass-Zuverlässigkeit, ~$4/Monat (2 Jahre)',
-          'ExpressVPN: Schnellste Downloads, ~$6,67/Monat',
-          'Surfshark: Bester Preis, ~$2/Monat (2 Jahre)',
-          'Alle drei ermöglichen Zugriff auf HuggingFace, GitHub, Docker Hub, PyPI',
-          'Kostenlose VPNs: durch GFW blockiert',
+          'NordVPN: Obfuscated Servers für eingeschränkte Netzwerke, aktuell Umstellung auf das NordWhisper-Protokoll',
+          'ExpressVPN: Lightway-Protokoll, für schnelle Wiederverbindung auf Desktop, Mobilgeräten und Routern konzipiert',
+          'Surfshark: unbegrenzte gleichzeitige Geräteverbindungen, günstiger als die beiden anderen',
+          'Ein VPN macht Cloud-KI nicht „lokal" — für echte Datenisolierung stattdessen ein lokales LLM nutzen',
+          'Die VPN-Zuverlässigkeit in China ändert sich schnell — als Momentaufnahme behandeln, nicht als Garantie',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        title: 'Zusammenfassung',
+        content:
+          'NordVPN ist dank seiner Obfuscated Servers, die auf das NordWhisper-Protokoll umgestellt werden, das stärkste Gesamt-VPN für KI-Entwickler in China. ExpressVPN ist die beste Alternative für Geschwindigkeit. Surfshark deckt die meisten Geräte zum niedrigsten Preis ab. Die VPN-Zuverlässigkeit in China ändert sich schnell — prüfen Sie den aktuellen Status vor dem Kauf.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'NordVPN ist 2026 das stärkste Gesamt-VPN für den Zugriff auf GitHub, Hugging Face und andere Entwicklertools aus Festlandchina, mit ExpressVPN als bester Alternative für Geschwindigkeit.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Chinas Great Firewall blockiert die meisten VPN-Verbindungen, indem sie deren Muster erkennt. VPNs mit einem „Obfuscated"- oder „Stealth"-Modus tarnen den VPN-Traffic als normalen HTTPS-Traffic, damit er schwerer zu erkennen und zu blockieren ist. Nicht jedes VPN besitzt diese Funktion, und selbst VPNs, die sie haben, können ohne Vorankündigung aufhören zu funktionieren.',
+          },
+        ],
+      },
       bestPick: {
         id: 'best-pick',
-        title: 'Top 5 VPNs für KI-Entwicklung in China',
-        content: '**Das entscheidende Merkmal für China ist die GFW-Bypass-Fähigkeit — obfuskierte Server oder Stealth-Protokolle, die VPN-Traffic als HTTPS-Traffic tarnen.**',
+        title: 'Bestes VPN für KI-Entwicklung in China',
+        content:
+          '**Zuverlässigkeit in einem eingeschränkten Netzwerk zählt für KI-Entwicklungsarbeit mehr als der Preis — ein VPN, das mitten im Download ständig abbricht, kostet mehr Zeit als ein etwas teurerer Plan, der stabil verbunden bleibt.** Die drei folgenden Optionen decken die realistische Bandbreite ab: beste Gesamtwahl, beste Alternative und bestes Preis-Leistungs-Verhältnis.',
         items: [
-          '**NordVPN — Platz 1 für Zuverlässigkeit.** Obfuskierte Server. Preis: ~$4,59/Monat (2-Jahres-Basic-Plan). Funktioniert für HuggingFace-Downloads, GitHub und Docker Hub.',
-          '**ExpressVPN — Platz 1 für Downloadgeschwindigkeit.** Lightway-Protokoll für schnelle Übertragung großer Modelldateien. Preis: ~$4,99/Monat (1-Jahres-Basic-Plan).',
-          '**Surfshark — Bestes Preis-Leistungs-Verhältnis.** NoBorders-Modus aktiviert sich automatisch. Unbegrenzte gleichzeitige Verbindungen. Preis: ~$2,49/Monat (2-Jahres-Starter-Plan).',
-          '**Mullvad — Beste Privatsphäre, aber in China unzuverlässig.** Anonyme Zahlung möglich. Standard-WireGuard wird oft durch GFW-DPI blockiert.',
-          '**PIA — Günstigste Langzeit-Option.** Shadowsocks-Unterstützung. Preis: ~$2,03/Monat (3-Jahres-Plan). App muss in China möglicherweise manuell installiert werden.',
+          '**NordVPN — beste Gesamtwahl für KI-Entwickler.** NordVPN bietet Obfuscated Servers, die für Netzwerke konzipiert sind, die VPN-Traffic einschränken oder blockieren, und laut eigener Dokumentation wird diese Kategorie auf das NordWhisper-Protokoll umgestellt. Für die KI-Entwicklung zählt das bei GitHub-Operationen, Hugging-Face-Modell-Downloads, Docker-Hub-Pulls und allgemeinem Zugriff auf Entwickler-APIs. Stärken: verschleierte Verbindungen, ein Kill Switch, starke Desktop- und Linux-App-Unterstützung sowie Serverstandorte in mehreren Regionen. Einschränkung: Verschleierungsfunktionen sind meist einem höheren Tarif vorbehalten — vor dem Kauf prüfen, welcher Plan sie enthält.',
+          '**ExpressVPN — beste Alternative für Geschwindigkeit und Einfachheit.** ExpressVPNs Lightway-Protokoll ist auf schnelle Wiederverbindung und gleichbleibende Geschwindigkeit ausgelegt und läuft auf Windows, macOS, Linux, Mobilgeräten und Routern. Diese Wahl ist besser geeignet, wenn Ihnen reine Download-Geschwindigkeit für große Modelldateien und eine einfache Einrichtung über mehrere Betriebssysteme hinweg wichtiger sind als das tiefste Verschleierungs-Feature-Set. Einschränkung: ExpressVPN dokumentiert seinen Ansatz zur Umgehung eingeschränkter Netzwerke weniger explizit als NordVPN, weshalb die Zuverlässigkeit speziell in China stärker schwanken kann.',
+          '**Surfshark — bestes Preis-Leistungs-Verhältnis für mehrere Geräte.** Surfshark erlaubt unbegrenzte gleichzeitige Geräteverbindungen in einem Abonnement — nützlich, um Laptop, Smartphone und einen Heimserver gleichzeitig abzudecken. Es kostet bei vergleichbaren Tarifen weniger als NordVPN oder ExpressVPN. Einschränkung: Es besitzt nicht NordVPNs dedizierte Verschleierungs-Markenfunktion — daher eher als Budget-Option betrachten und nicht als erste Wahl für GFW-Zuverlässigkeit.',
         ],
         affiliateLinks: [
-          { url: 'https://nordvpn.com', productName: 'NordVPN', productCategory: 'vpn', priceRange: '$4.59/Monat', label: 'NordVPN kaufen — Zuverlässigster China-Bypass ($4,59/Mo.) →' },
-          { url: 'https://surfshark.com', productName: 'Surfshark', productCategory: 'vpn', priceRange: '$2.49/Monat', label: 'Surfshark kaufen — Bestes Preis-Leistungs-VPN für China ($2,49/Mo.) →' },
+          {
+            url: 'https://nordvpn.com',
+            productName: 'NordVPN',
+            productCategory: 'vpn',
+            label: 'NordVPN-Tarife vergleichen →',
+          },
+          {
+            url: 'https://www.expressvpn.com',
+            productName: 'ExpressVPN',
+            productCategory: 'vpn',
+            label: 'ExpressVPN-Tarife vergleichen →',
+          },
+          {
+            url: 'https://surfshark.com',
+            productName: 'Surfshark',
+            productCategory: 'vpn',
+            label: 'Surfshark-Tarife vergleichen →',
+          },
+        ],
+      },
+      whatYouNeed: {
+        id: 'what-you-need',
+        title: 'Was KI-Entwickler wirklich von einem VPN brauchen',
+        content:
+          '**Wählen Sie ein VPN nicht nur, weil dessen Marketing behauptet, es „funktioniere in China".** Für die KI-Entwicklung ist die relevante Feature-Liste eine andere als bei einem typischen, auf Streaming ausgerichteten VPN-Vergleich.',
+        items: [
+          'Stabile Verbindungen — große Modell-Downloads können stundenlang laufen; ein VPN, das mitten in der Übertragung abbricht, kostet mehr Zeit als ein langsameres, das verbunden bleibt',
+          'Ein Kill Switch — verhindert, dass Ihre echte IP-Adresse und unverschlüsselter Traffic durchsickern, falls die VPN-Verbindung abbricht',
+          'Native Linux-Unterstützung — viele KI-Entwicklungsumgebungen laufen auf einem Linux-Server oder WSL, nicht nur auf Desktop- oder mobiler App',
+          'Gleichbleibender Durchsatz speziell zu GitHub und Hugging Face — nicht nur allgemeine Browsing-Geschwindigkeit',
+          'Ein dokumentierter Verschleierungs- oder Stealth-Modus — die konkrete Funktion, die einem VPN hilft, der GFW-Erkennung standzuhalten, nicht nur allgemeines „funktioniert weltweit"-Marketing',
+        ],
+        note: 'Verzichten Sie ganz auf ein VPN, wenn heimische Spiegel-Server Ihren Bedarf abdecken. Alibaba Cloud ModelScope und hf-mirror.com stellen viele offene Modelle bereit, ohne dass ein VPN nötig ist oder man sich mit der GFW-Zuverlässigkeit auseinandersetzen muss — sie decken allerdings kein GitHub, Docker Hub oder npm ab.',
+      },
+      reliabilityNote: {
+        id: 'reliability-note',
+        title: 'Erwarten Sie keine Garantie',
+        content:
+          '**Zugriff und VPN-Zuverlässigkeit in Festlandchina können sich ohne Vorankündigung ändern, teils tagelang rund um politisch sensible Zeiträume.** Behandeln Sie die aktuelle Leistung jedes Anbieters — auch die Empfehlungen auf dieser Seite — als Momentaufnahme, nicht als dauerhafte Garantie. Testen Sie Ihre VPN-Verbindung zu GitHub, Hugging Face und Docker Hub, bevor Sie sich für einen zeitkritischen Download oder eine Reise darauf verlassen. Ein VPN macht einen Cloud-KI-Dienst außerdem nicht „lokal" — wenn Sie echte Datenisolierung von einem Cloud-Anbieter benötigen, betreiben Sie stattdessen ein wirklich lokales LLM, statt sich darauf zu verlassen, dass ein VPN Cloud-Traffic umleitet.',
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'NordVPN vs. ExpressVPN vs. Surfshark',
+        content: '**Nutzen Sie diese Tabelle, um ein VPN Ihrem primären Anwendungsfall zuzuordnen.**',
+        columns: ['Funktion', 'NordVPN', 'ExpressVPN', 'Surfshark'],
+        rows: [
+          { '0': 'Verschleierungsfunktion', '1': 'Obfuscated Servers → NordWhisper', '2': 'Lightway-Protokoll', '3': 'NoBorders-Modus' },
+          { '0': 'Plattformunterstützung', '1': 'Desktop, mobil, Linux, Router', '2': 'Desktop, mobil, Linux, Router', '3': 'Desktop, mobil, unbegrenzte Geräte' },
+          { '0': 'Geräteverbindungen', '1': 'Begrenzt (tarifabhängig)', '2': 'Begrenzt (tarifabhängig)', '3': 'Unbegrenzt' },
+          { '0': 'Am besten für', '1': 'Zuverlässigkeit in eingeschränkten Netzen', '2': 'Geschwindigkeit & einfache Einrichtung', '3': 'Mehrere Geräte, Budget' },
         ],
       },
       faq: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Ist die Nutzung eines VPNs für KI-Entwicklung in China legal?', a: 'Rechtlich komplex. Die gewerbliche VPN-Nutzung durch Unternehmen ist reguliert und erfordert eine Genehmigung. Individuelle Nutzung durch technische Fachkräfte existiert in einer Grauzone, die selten verfolgt wird. Dies ist keine Rechtsberatung — beurteilen Sie Ihre eigene Risikobereitschaft.' },
-          { q: 'Kann ich HuggingFace aus China mit einem VPN nutzen?', a: 'Ja. NordVPN und ExpressVPN ermöglichen den Zugriff auf HuggingFace mit 8–15 MB/s. Für sehr große Dateien (40+ GB) empfiehlt sich der Download über Nacht.' },
-          { q: 'Muss ich das VPN vor der Einreise nach China kaufen?', a: 'Ja. Die Website des VPN-Anbieters ist möglicherweise in China gesperrt. Kaufen, herunterladen und testen Sie das VPN vor der Einreise.' },
+          {
+            q: 'Ist die Nutzung eines VPNs für KI-Entwicklung in China legal?',
+            a: 'Rechtlich komplex, und die Durchsetzung hat sich verschärft. Die gewerbliche VPN-Nutzung durch Unternehmen ist reguliert und erfordert eine Genehmigung. Die individuelle VPN-Nutzung bewegt sich in einer Grauzone; unautorisierter Zugriff auf das internationale Internet kann nach den aktuellen chinesischen Cybersicherheitsregeln Bußgelder von bis zu etwa RMB 5.000 (rund $750) nach sich ziehen, und ein vorgeschlagenes Cybercrime-Gesetz für 2026 würde die Strafen bei einer Verabschiedung erheblich anheben. Dies ist keine Rechtsberatung — bewerten Sie Ihre eigene Risikobereitschaft, bevor Sie in China ein VPN nutzen.',
+          },
+          {
+            q: 'Kann ich mit einem VPN aus China auf GitHub und Hugging Face zugreifen?',
+            a: 'Im Allgemeinen ja, über ein VPN mit Verschleierungsunterstützung wie NordVPN oder ExpressVPN — sowohl GitHub als auch Hugging Face sind ohne ein solches VPN blockiert. Bei sehr großen Modell-Downloads (40+ GB) sollten Sie während Stoßzeiten oder politisch sensibler Phasen mit einer weniger stabilen Verbindung rechnen und den Download über Nacht laufen lassen.',
+          },
+          {
+            q: 'Muss ich das VPN vor der Einreise nach China kaufen?',
+            a: 'Ja — dringend empfohlen. Die Website des VPN-Anbieters kann in China selbst blockiert sein, was eine Anmeldung erschwert oder unmöglich macht. Laden Sie die VPN-App herunter, installieren Sie sie und bestätigen Sie, dass sie funktioniert, bevor Sie nach China einreisen.',
+          },
+          {
+            q: 'Wie sieht es mit Alibaba-Cloud-Spiegeln für Modell-Downloads anstelle eines VPNs aus?',
+            a: 'Alibaba Cloud ModelScope und heimische HuggingFace-Spiegel (hf-mirror.com) sind eine gute Alternative zu VPNs für den Modell-Download — sie sind ohne VPN erreichbar und für Verbindungen aus China oft schneller. Sie lösen jedoch nicht den Zugriff auf GitHub, Docker Hub oder npm, wofür weiterhin ein VPN erforderlich ist.',
+          },
+          {
+            q: 'Ist NordVPNs NordWhisper-Protokoll bereits verfügbar?',
+            a: 'NordVPN dokumentiert, dass seine Obfuscated-Servers-Kategorie ab 2026 auf das NordWhisper-Protokoll umgestellt wird. Der Rollout kann je nach Region und Tarif variieren — prüfen Sie die genaue Verfügbarkeit in der aktuellen NordVPN-App, bevor Sie sich darauf verlassen.',
+          },
         ],
       },
       relatedReading: {
@@ -358,21 +451,60 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Ist VPN-Nutzung für KI-Entwicklung in China legal?', acceptedAnswer: { '@type': 'Answer', text: 'Rechtlich komplex — Grauzone, die für technische Fachkräfte selten verfolgt wird. Keine Rechtsberatung.' } },
-        { '@type': 'Question', name: 'Muss ich das VPN vor der Einreise nach China kaufen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Die VPN-Website kann in China gesperrt sein. Vor der Einreise kaufen, installieren und testen.' } },
+        {
+          '@type': 'Question',
+          name: 'Ist die Nutzung eines VPNs für KI-Entwicklung in China legal?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Rechtlich komplex, die Durchsetzung hat sich verschärft. Individuelle Nutzung bewegt sich in einer Grauzone mit derzeit Bußgeldern von bis zu etwa RMB 5.000 (~$750), ein vorgeschlagenes Gesetz für 2026 würde die Strafen weiter anheben. Keine Rechtsberatung — bewerten Sie Ihre eigene Risikobereitschaft.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Kann ich mit einem VPN aus China auf GitHub und Hugging Face zugreifen?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Im Allgemeinen ja, über ein VPN mit Verschleierungsunterstützung wie NordVPN oder ExpressVPN. Bei sehr großen Dateien (40+ GB) mit schwankender Stabilität rechnen und Downloads über Nacht einplanen.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Muss ich ein VPN vor der Einreise nach China kaufen?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ja. Die Website des VPN-Anbieters kann in China blockiert sein. VPN vor der Einreise kaufen, herunterladen und testen.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Kann ich ModelScope-Spiegel anstelle eines VPNs nutzen?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ja, für Modell-Downloads. Alibaba Cloud ModelScope und hf-mirror.com sind ohne VPN erreichbar. GitHub, Docker Hub und npm benötigen weiterhin ein VPN.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Ist NordVPNs NordWhisper-Protokoll bereits verfügbar?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'NordVPN dokumentiert, dass seine Obfuscated Servers ab 2026 auf NordWhisper umgestellt werden. Verfügbarkeit kann je nach Region und Tarif variieren — in der aktuellen NordVPN-App prüfen.',
+          },
+        },
       ],
     },
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Bestes VPN für KI-Entwicklung in China 2026',
-      description: 'Top 5 VPNs für KI-Entwickler in China: HuggingFace, GitHub, Docker Hub. Geschwindigkeitstests und GFW-Zuverlässigkeit.',
+      description: 'NordVPN und ExpressVPN sind die zuverlässigsten VPNs für KI-Entwickler, die aus China auf GitHub, Hugging Face und Docker Hub zugreifen. Funktionen und Zuverlässigkeit im Vergleich.',
       datePublished: '2026-05-26',
-      dateModified: '2026-07-02',
-      inLanguage: 'de',
+      dateModified: '2026-08-26',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://promptquorum.com' },
       url: 'https://www.promptquorum.com/de/prompt-bites/best-vpn-for-ai-development-china-2026',
+      inLanguage: 'de',
+      'proficiencyLevel': 'Intermediate',
     },
   },
   fr: {
