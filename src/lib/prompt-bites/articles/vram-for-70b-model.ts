@@ -6,14 +6,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     heroImage: '/images/vram-for-70b-model-overview-hero-en.webp',
     title: 'How Much VRAM for a 70B Model?',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-26',
     seoTitle: '70B VRAM: 3 Run Options 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'A 70B model at Q4_K_M needs ~40 GB VRAM. Options: dual RTX 3090 (48 GB), M5 Max 128 GB unified memory, or cloud GPU. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
+    last_full_refresh: '2026-08-26',
+    next_seo_review_due: '2026-10-01',
+    last_seo_review: '2026-08-26',
     current_models_mentioned: ['Llama 3 70B'],
-    current_hardware_mentioned: ['RTX 3090', 'M5 Max'],
+    current_hardware_mentioned: ['RTX 3090', 'M5 Max', 'Mac mini M5 Pro'],
     educationalLevel: 'Advanced',
     audience: 'Developers planning to run 70B models locally',
     parentArticle: '/local-llms/run-70b-models-24gb-vram',
@@ -123,7 +126,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Can I run a 70B model on a MacBook?',
-            a: 'Only on M3 Max, M4 Max, M4 Ultra, or M5 Max with 128 GB of unified memory. A MacBook with 32 GB RAM cannot run 70B at Q4. See <a href="/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">the RAM sizing guide</a> for smaller model alternatives.',
+            a: 'Only on a MacBook with M3 Max, M4 Max, or M5 Max chips and 128 GB of unified memory — a MacBook with 32 GB RAM cannot run 70B at Q4. If portability isn\'t required, the Mac mini M5 Pro (64 GB, $1,699) is a lower-cost desktop option that also fits 70B at Q4, and the Mac Studio M5 Max (128 GB, $2,499) or M5 Ultra (up to 512 GB) add more headroom. See <a href="/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">the RAM sizing guide</a> for smaller model alternatives.',
           },
           {
             q: 'Is there a cheaper way to run 70B models locally?',
@@ -154,7 +157,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM für 70B-Modelle 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Ein 70B-Modell bei Q4_K_M benötigt ~40 GB VRAM. Dual RTX 3090, M5 Max 128 GB oder Cloud-GPU sind die Optionen. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -199,7 +202,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Kann ich ein 70B-Modell auf einem MacBook ausführen?',
-            a: 'Nur auf M3 Max, M4 Max, M4 Ultra oder M5 Max mit 128 GB Unified Memory. Ein MacBook mit 32 GB RAM kann 70B bei Q4 nicht ausführen. Siehe <a href="/de/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">den RAM-Größenleitfaden</a> für kleinere Modell-Alternativen.',
+            a: 'Nur auf einem MacBook mit M3 Max, M4 Max oder M5 Max und 128 GB Unified Memory — ein MacBook mit 32 GB RAM kann 70B bei Q4 nicht ausführen. Wenn Mobilität keine Rolle spielt, ist der Mac mini M5 Pro (64 GB, 1.699 USD) eine günstigere Desktop-Option, die ebenfalls für 70B bei Q4 ausreicht; der Mac Studio M5 Max (128 GB, 2.499 USD) oder M5 Ultra (bis zu 512 GB) bieten noch mehr Spielraum. Siehe <a href="/de/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">den RAM-Größenleitfaden</a> für kleinere Modell-Alternativen.',
           },
           {
             q: 'Gibt es einen günstigeren Weg, 70B-Modelle lokal zu betreiben?',
@@ -230,7 +233,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM pour 70B : 3 options 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Un modèle 70B en Q4_K_M nécessite ~40 Go de VRAM. Options : dual RTX 3090 (48 Go), M5 Max 128 Go ou GPU cloud. Réponse rapide par PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -275,7 +278,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Puis-je faire tourner un modèle 70B sur un MacBook ?',
-            a: 'Uniquement sur M3 Max, M4 Max, M4 Ultra ou M5 Max avec 128 Go de mémoire unifiée. Un MacBook avec 32 Go de RAM ne peut pas exécuter le 70B en Q4. Voir <a href="/fr/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">le guide de dimensionnement RAM</a> pour des alternatives plus petites.',
+            a: 'Uniquement sur un MacBook avec puce M3 Max, M4 Max ou M5 Max et 128 Go de mémoire unifiée — un MacBook avec 32 Go de RAM ne peut pas exécuter le 70B en Q4. Si la portabilité n\'est pas nécessaire, le Mac mini M5 Pro (64 Go, 1 699 $) est une option de bureau moins chère qui convient aussi au 70B en Q4, et le Mac Studio M5 Max (128 Go, 2 499 $) ou M5 Ultra (jusqu\'à 512 Go) offrent encore plus de marge. Voir <a href="/fr/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">le guide de dimensionnement RAM</a> pour des alternatives plus petites.',
           },
           {
             q: 'Existe-t-il un moyen moins cher d\'exécuter des modèles 70B localement ?',
@@ -306,7 +309,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '70BモデルのVRAM：3つの方法 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_Mの70Bモデルには約40 GBのVRAMが必要です。デュアルRTX 3090（48 GB）、M5 Max 128 GB統合メモリ、またはクラウドGPUが選択肢です。PromptQuorumの解説。',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -351,7 +354,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'MacBookで70Bモデルを動かせますか？',
-            a: '128 GB統合メモリを搭載したM3 Max、M4 Max、M4 Ultra、またはM5 Maxのみ可能です。32 GB RAMのMacBookではQ4で70Bを動かせません。より小さなモデルの代替については<a href="/ja/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">RAMサイジングガイド</a>をご覧ください。',
+            a: '128 GB統合メモリを搭載したM3 Max、M4 Max、またはM5 MaxチップのMacBookのみ対応です。32 GB RAMのMacBookではQ4で70Bを動かせません。携帯性が不要であれば、Mac mini M5 Pro（64 GB、$1,699）はより低価格でありながら70BをQ4で動かせるデスクトップの選択肢です。さらに余裕が欲しい場合はMac Studio M5 Max（128 GB、$2,499）やM5 Ultra（最大512 GB）が選べます。より小さなモデルの代替については<a href="/ja/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">RAMサイジングガイド</a>をご覧ください。',
           },
           {
             q: '70Bモデルをローカルで動かす安価な方法はありますか？',
@@ -382,7 +385,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '70B模型VRAM：3种方案 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M量化的70B模型需要约40 GB显存。选项：双RTX 3090（48 GB）、M5 Max 128 GB统一内存或云端GPU。PromptQuorum快速解答。',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     sections: {
@@ -427,7 +430,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '能在MacBook上运行70B模型吗？',
-            a: '仅限搭载128 GB统一内存的M3 Max、M4 Max、M4 Ultra或M5 Max。32 GB RAM的MacBook无法以Q4运行70B。较小模型的替代方案请参阅<a href="/zh/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">RAM容量指南</a>。',
+            a: '仅限搭载128 GB统一内存的M3 Max、M4 Max或M5 Max芯片的MacBook。32 GB RAM的MacBook无法以Q4运行70B。如果不需要便携性，Mac mini M5 Pro（64 GB，$1,699）是一款更实惠的桌面选项，同样能以Q4运行70B；Mac Studio M5 Max（128 GB，$2,499）或M5 Ultra（最高512 GB）则提供更大余量。较小模型的替代方案请参阅<a href="/zh/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">RAM容量指南</a>。',
           },
           {
             q: '有没有更便宜的方式在本地运行70B模型？',
@@ -458,7 +461,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM para 70B: 3 opções 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Um modelo 70B em Q4_K_M precisa de ~40 GB de VRAM. Opções: dois RTX 3090 (48 GB), M5 Max com 128 GB de memória unificada ou GPU na nuvem. Resposta rápida do PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -515,7 +518,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Posso executar um modelo 70B em um MacBook?',
-            a: 'Apenas no M3 Max, M4 Max, M4 Ultra ou M5 Max com 128 GB de memória unificada. Um MacBook com 32 GB de RAM não pode executar 70B em Q4. Veja <a href="/pt/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">o guia de dimensionamento de RAM</a> para alternativas com modelos menores.',
+            a: 'Apenas em um MacBook com chip M3 Max, M4 Max ou M5 Max e 128 GB de memória unificada — um MacBook com 32 GB de RAM não pode executar 70B em Q4. Se a portabilidade não for necessária, o Mac mini M5 Pro (64 GB, $1.699) é uma opção de desktop mais barata que também comporta 70B em Q4; o Mac Studio M5 Max (128 GB, $2.499) ou o M5 Ultra (até 512 GB) oferecem ainda mais margem. Veja <a href="/pt/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">o guia de dimensionamento de RAM</a> para alternativas com modelos menores.',
           },
           {
             q: 'Existe uma forma mais barata de executar modelos 70B localmente?',
@@ -546,7 +549,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM para 70B: 3 opciones 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Un modelo 70B en Q4_K_M necesita ~40 GB de VRAM. Opciones: dual RTX 3090 (48 GB), M5 Max con 128 GB unificados o GPU cloud. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -603,7 +606,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Puedo ejecutar un modelo 70B en un MacBook?',
-            a: 'Solo en M3 Max, M4 Max, M4 Ultra o M5 Max con 128 GB de memoria unificada. Un MacBook con 32 GB de RAM no puede ejecutar el 70B en Q4. Consulta <a href="/es/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">la guía de dimensionamiento de RAM</a> para alternativas más pequeñas.',
+            a: 'Solo en un MacBook con chip M3 Max, M4 Max o M5 Max y 128 GB de memoria unificada — un MacBook con 32 GB de RAM no puede ejecutar el 70B en Q4. Si la portabilidad no es necesaria, el Mac mini M5 Pro (64 GB, $1.699) es una opción de escritorio más económica que también admite 70B en Q4; el Mac Studio M5 Max (128 GB, $2.499) o el M5 Ultra (hasta 512 GB) ofrecen aún más margen. Consulta <a href="/es/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">la guía de dimensionamiento de RAM</a> para alternativas más pequeñas.',
           },
           {
             q: '¿Hay alguna forma más barata de ejecutar modelos 70B localmente?',
@@ -634,7 +637,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨VRAM⁩ لنموذج ⁨70B⁩: ⁨3⁩ خيارات ⁨2026⁩ | ⁨PromptQuorum⁩',
     metaDescription: 'نموذج ⁨70B⁩ بـ ⁨Q4⁩_⁨K⁩_⁨M⁩ يحتاج ~⁨40 GB VRAM⁩. الخيارات: ⁨RTX 3090⁩ مزدوجة (⁨48 GB⁩) أو ⁨M5 Max 128 GB⁩ ذاكرة موحدة أو ⁨GPU⁩ سحابية بـ $⁨0.50⁩/ساعة.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -691,7 +694,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'هل يمكنني تشغيل نموذج 70B على MacBook؟',
-            a: 'فقط على M3 Max أو M4 Max أو M4 Ultra أو M5 Max بـ 128 GB ذاكرة موحدة. MacBook بـ 32 GB RAM لا يستطيع تشغيل 70B بـ Q4. راجع <a href="/ar/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">دليل تحجيم RAM</a> للبدائل الأصغر.',
+            a: 'فقط على MacBook بشريحة M3 Max أو M4 Max أو M5 Max بذاكرة موحدة 128 GB. لا يستطيع MacBook بذاكرة 32 GB RAM تشغيل 70B بـ Q4. إذا لم تكن قابلية النقل ضرورية، فإن Mac mini M5 Pro (64 GB، $1,699) خيار مكتبي أرخص يدعم أيضًا 70B بـ Q4، بينما يوفر Mac Studio M5 Max (128 GB، $2,499) أو M5 Ultra (حتى 512 GB) مساحة أكبر. راجع <a href="/ar/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">دليل تحجيم RAM</a> للبدائل الأصغر.',
           },
           {
             q: 'هل توجد طريقة أرخص لتشغيل نماذج 70B محليًا؟',
@@ -722,7 +725,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '70B VRAM: 3가지 실행 옵션 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M 방식의 70B 모델은 약 40 GB의 VRAM이 필요합니다. 옵션: 듀얼 RTX 3090(48 GB), M5 Max 128 GB 통합 메모리, 또는 클라우드 GPU. PromptQuorum의 빠른 답변.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-26',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -779,7 +782,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'MacBook에서 70B 모델을 실행할 수 있습니까?',
-            a: '128 GB 통합 메모리를 갖춘 M3 Max, M4 Max, M4 Ultra 또는 M5 Max에서만 가능합니다. 32 GB RAM의 MacBook은 Q4 방식의 70B를 실행할 수 없습니다. 소형 모델 대안에 대해서는 <a href="/ko/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">RAM 규모 산정 가이드</a>를 참조하십시오.',
+            a: '128 GB 통합 메모리를 갖춘 M3 Max, M4 Max 또는 M5 Max 칩의 MacBook에서만 가능합니다. 32 GB RAM의 MacBook은 Q4 방식의 70B를 실행할 수 없습니다. 휴대성이 필요 없다면 Mac mini M5 Pro(64 GB, $1,699)가 더 저렴하면서도 70B를 Q4로 실행할 수 있는 데스크톱 옵션이며, Mac Studio M5 Max(128 GB, $2,499)나 M5 Ultra(최대 512 GB)는 더 넉넉한 여유를 제공합니다. 소형 모델 대안에 대해서는 <a href="/ko/prompt-bites/how-much-ram-for-7b-model" class="text-primary hover:underline">RAM 규모 산정 가이드</a>를 참조하십시오.',
           },
           {
             q: '70B 모델을 로컬에서 더 저렴하게 실행하는 방법이 있습니까?',
