@@ -1340,9 +1340,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     toc: [
+      { label: 'Comprar / Evitar', anchor: 'buy-skip-if' },
+      { label: 'Cuadro comparativo', anchor: 'scorecard' },
       { label: 'Resumen', anchor: 'tldr' },
       { label: 'Transparencia', anchor: 'disclosure' },
       { label: 'Selección rápida', anchor: 'quick-picks' },
+      { label: 'Comparativa directa', anchor: 'comparison' },
       { label: 'Encendido/apagado local frente a informe energético local', anchor: 'onoff-vs-energy-reporting' },
       { label: 'Qué significan los números', anchor: 'what-the-numbers-mean' },
       { label: 'Qué monitorizar (y qué no)', anchor: 'what-to-monitor' },
@@ -1350,6 +1353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'IA local y datos energéticos', anchor: 'local-ai' },
       { label: 'Qué comprobar antes de comprar', anchor: 'what-to-check' },
       { label: 'Qué enchufe deberías comprar', anchor: 'which-one' },
+      { label: 'Cómo evaluamos', anchor: 'methodology' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -1357,16 +1361,53 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { type: 'plain-terms', content: 'Algunos enchufes inteligentes te permiten encender y apagar un dispositivo de forma local a través de Home Assistant, pero siguen enviando las cifras detalladas de consumo eléctrico únicamente a la propia app del fabricante. Esta guía trata de encontrar enchufes en los que los datos reales de vatios también permanezcan locales, con precios actuales.' },
     ],
     sections: {
+      buyIfSkipIf: {
+        id: 'buy-skip-if',
+        title: 'Comprar / Evitar',
+        sponsoredSlot: true,
+        content: 'Guía de decisión rápida — ¿un enchufe inteligente con monitorización energética encaja con lo que realmente necesitas? Valoración de PromptQuorum basada en especificaciones y documentación publicadas, no en pruebas prácticas.',
+        items: [
+          '**Compra un enchufe inteligente con monitorización energética si:**',
+          'Quieres datos de vatios/kWh por dispositivo que alimenten el panel de Energía de Home Assistant de forma local',
+          'Tienes dispositivos concretos de alto valor que merece la pena monitorizar (lavadora, secadora, servidor, frigorífico)',
+          'Ya usas Zigbee o Z-Wave y quieres un enchufe compatible con tu coordinador actual',
+          'Quieres que una automatización con LLM local resuma "qué consumió más electricidad ayer"',
+          'Quieres detectar un fallo pronto (por ejemplo, un frigorífico que consume más de lo habitual)',
+          '**Evita los enchufes inteligentes si:**',
+          'Quieres visibilidad de toda la vivienda o de un circuito completo — usa en su lugar un sistema de pinzas amperimétricas en el cuadro eléctrico',
+          'Quieres monitorizar la producción solar — misma respuesta, un sistema de pinzas amperimétricas, no un enchufe',
+          'Solo quieres control de encendido/apagado sin datos de energía — un enchufe inteligente básico y mucho más barato cubre eso',
+          'Quieres monitorizar un dispositivo que supera la carga máxima nominal del enchufe — comprueba antes las especificaciones',
+        ],
+        affiliateLinks: [
+          { label: 'Comprobar precio del Aqara Smart Plug UE →', url: 'https://eu.aqara.com/en-eu/products/aqara-smart-plug-eu', productName: 'Aqara Smart Plug EU', productCategory: 'Energy-monitoring smart plug', priceRange: 'desde 21,10 €' },
+          { label: 'Comparar los 4 enchufes →', url: '#comparison', productName: 'Smart plug comparison', productCategory: 'Energy-monitoring smart plug' },
+        ],
+      },
+      scorecard: {
+        id: 'scorecard',
+        title: 'Cuadro comparativo de enchufes con monitorización energética',
+        content:
+          '**Valoración de PromptQuorum, basada en las especificaciones del fabricante y en la propia documentación de integración de Home Assistant — no en una prueba práctica de laboratorio con una unidad física.** Las puntuaciones reflejan la idoneidad específica para la monitorización energética local-first.',
+        columns: ['Enchufe', 'Datos de energía locales', 'Relación calidad-precio', 'Ideal para'],
+        rows: [
+          { Enchufe: 'Aqara Smart Plug UE', 'Datos de energía locales': '9.5/10', 'Relación calidad-precio': '9/10', 'Ideal para': 'Hogares Zigbee en España/UE, comprar varios a la vez' },
+          { Enchufe: 'Zooz ZEN15 800LR (EE. UU.)', 'Datos de energía locales': '9/10', 'Relación calidad-precio': '7.5/10', 'Ideal para': 'Hogares Z-Wave en EE. UU., cobertura de largo alcance' },
+          { Enchufe: 'Shelly Plug US Gen4 (EE. UU., versión UE disponible)', 'Datos de energía locales': '9/10', 'Relación calidad-precio': '8.5/10', 'Ideal para': 'Sin coordinador previo, máxima flexibilidad de protocolo' },
+          { Enchufe: 'Sonoff S31 Wi-Fi (EE. UU.)', 'Datos de energía locales': '7.5/10', 'Relación calidad-precio': '9/10', 'Ideal para': 'Opción confirmada más económica, configuraciones multiplug con presupuesto ajustado' },
+        ],
+        note: 'Estas puntuaciones son la valoración editorial de PromptQuorum, derivada de especificaciones verificadas y de la propia documentación de integración de Home Assistant (ver "Cómo evaluamos" más abajo) — no son el resultado de pruebas físicas de PromptQuorum sobre estas unidades.',
+      },
       tldr: {
         id: 'tldr',
         title: 'Resumen',
         isTldr: true,
         items: [
           'Comprueba específicamente el informe local de datos de energía, no solo el control local de encendido/apagado — a veces son funciones separadas en el mismo enchufe',
-          'Los enchufes Zigbee y Z-Wave suelen manejar de forma fiable el informe energético local',
+          'Los enchufes Zigbee y Z-Wave suelen manejar de forma fiable el informe energético local; Shelly es una excepción Wi-Fi/Matter/Zigbee confirmada con API local',
           'Relevante para España (revisado el 25/08/2026): Aqara Smart Plug UE (Zigbee, desde 21,10 €)',
           'Productos principalmente estadounidenses: Zooz ZEN15 800LR (37,95-48,95 $), Shelly Plug US Gen4 (19,99-24,99 $, hay versión UE disponible con precio en euros no confirmado), Sonoff S31 (9,90-23,90 $)',
-          'Compra el enchufe que se ajuste al protocolo que ya usas, no el que tenga más funciones',
+          'Compra el enchufe que se ajuste al protocolo que ya usas, no el que tenga más funciones — un ecosistema de radio adicional tiene su propio coste',
           'Un enchufe inteligente mide un dispositivo; para monitorizar toda la vivienda o un circuito, usa una pinza amperimétrica',
           'Esta página contiene enlaces a productos, no enlaces de afiliados — ver la transparencia más abajo',
         ],
@@ -1391,6 +1432,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           { label: 'Aqara Smart Plug UE', url: 'https://eu.aqara.com/en-eu/products/aqara-smart-plug-eu', productName: 'Aqara Smart Plug EU', productCategory: 'Energy-monitoring smart plug' },
           { label: 'Shelly Plug US Gen4', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug' },
+        ],
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Comparativa directa',
+        content: '**Los cuatro enchufes confirmados, uno junto a otro, revisado el 25/08/2026.**',
+        columns: ['Enchufe', 'Protocolo', 'Carga máx.', 'Datos de energía locales', 'Precio'],
+        rows: [
+          { Enchufe: 'Aqara Smart Plug UE', Protocolo: 'Zigbee 3.0', 'Carga máx.': '2300 W', 'Datos de energía locales': 'Sí (ZHA/Zigbee2MQTT)', Precio: 'desde 21,10 €' },
+          { Enchufe: 'Zooz ZEN15 800LR (EE. UU.)', Protocolo: 'Z-Wave Long Range (serie 800)', 'Carga máx.': 'Consultar ficha', 'Datos de energía locales': 'Sí (W/A/V/kWh)', Precio: '37,95-48,95 $' },
+          { Enchufe: 'Shelly Plug US Gen4 (EE. UU., versión UE disponible)', Protocolo: 'Wi-Fi / Matter / Zigbee', 'Carga máx.': 'Consultar ficha', 'Datos de energía locales': 'Sí (API local documentada)', Precio: '19,99-24,99 $ (UE: consultar shelly.com/es)' },
+          { Enchufe: 'Sonoff S31 (EE. UU.)', Protocolo: 'Wi-Fi', 'Carga máx.': 'Consultar ficha', 'Datos de energía locales': 'Sí — pero NO el S31 Lite ZB', Precio: '9,90-23,90 $' },
+        ],
+        items: [
+          '**Nuestra elección para España/UE con Zigbee:** Aqara Smart Plug UE — la opción con precio en euros verificado (desde 21,10 €) y compatible sin adaptador con los enchufes Schuko españoles.',
+          '**Nuestra elección si no tienes coordinador previo:** Shelly Plug US Gen4 — el único enchufe de esta comparativa confirmado en tres protocolos (Wi-Fi, Matter, Zigbee) con API local documentada; existe versión UE, pero su precio exacto en euros no se pudo confirmar aquí.',
+          'Los productos de Zooz y Sonoff están diseñados principalmente para el mercado estadounidense con formato de enchufe NEMA, por lo que no son directamente compatibles con las tomas españolas sin un adaptador adecuado y compatibilidad de voltaje — no se han inventado precios en euros para ellos.',
+        ],
+        affiliateLinks: [
+          { label: 'Comprobar precio de Aqara UE →', url: 'https://eu.aqara.com/en-eu/products/aqara-smart-plug-eu', productName: 'Aqara Smart Plug EU', productCategory: 'Energy-monitoring smart plug', priceRange: 'desde 21,10 €' },
+          { label: 'Comprobar precio de Shelly →', url: 'https://us.shelly.com/products/shelly-plug-us-gen4-black', productName: 'Shelly Plug US Gen4', productCategory: 'Energy-monitoring smart plug', priceRange: '19,99-24,99 $' },
         ],
       },
       onoffVsEnergyReporting: {
@@ -1480,7 +1542,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'En España/UE, quieres la variante del fabricante europeo con API local documentada: Shelly (versión UE) — consulta el precio directamente en shelly.com/es antes de comprar.',
           'En EE. UU., ya usas Z-Wave: Zooz ZEN15 800LR (37,95-48,95 $).',
           'En EE. UU., quieres la opción confirmada más económica: Sonoff S31 (9,90-23,90 $) — asegúrate de comprar el S31, no el S31 Lite ZB en Zigbee, si la monitorización energética es el objetivo.',
+          'Quieres monitorizar 4 o más dispositivos con presupuesto ajustado: Aqara Smart Plug UE × varias unidades — el coste por unidad más bajo entre las opciones confirmadas para España/UE.',
           'Quieres visibilidad de toda la vivienda o de un circuito completo: evita por completo los enchufes inteligentes y usa en su lugar un sistema de pinzas amperimétricas en el cuadro eléctrico — consulta la visión general de gestión energética local.',
+        ],
+        affiliateLinks: [
+          { label: 'Comprobar precio del Aqara Smart Plug UE →', url: 'https://eu.aqara.com/en-eu/products/aqara-smart-plug-eu', productName: 'Aqara Smart Plug EU', productCategory: 'Energy-monitoring smart plug', priceRange: 'desde 21,10 €' },
+        ],
+      },
+      methodology: {
+        id: 'methodology',
+        title: 'Cómo evaluamos los enchufes inteligentes con monitorización energética',
+        content:
+          '**Esta reseña no ha sido probada de forma práctica por PromptQuorum sobre unidades físicas.** Está elaborada a partir de especificaciones publicadas por los fabricantes, fichas de minoristas y la propia documentación de integración de Home Assistant, claramente separadas a continuación para que sepas qué está confirmado y qué es una valoración.',
+        items: [
+          '**Confirmado por el fabricante:** protocolo, carga máxima nominal y precio oficial — obtenidos directamente de las páginas de producto y fichas de tienda de Aqara, Zooz, Shelly y Sonoff/ITEAD, revisado el 25/08/2026. Para España/UE se priorizaron amazon.es, pccomponentes.com y el comparador Geizhals cuando había datos disponibles.',
+          '**Confirmado por la documentación de Home Assistant:** si las entidades de sensor de energía (vatios, kWh, voltaje, amperaje) se exponen de forma local a través de la integración correspondiente (ZHA, Zigbee2MQTT, Z-Wave JS o una API local Wi-Fi/Matter) o si requieren una conexión en la nube — obtenido de la propia documentación de integración de Home Assistant, no de las afirmaciones de marketing del fabricante.',
+          '**Valoración de PromptQuorum:** el cuadro comparativo, las recomendaciones de compra/evitar y el filtro "qué enchufe deberías comprar" — juicio editorial de PromptQuorum aplicado a las especificaciones y documentación confirmadas arriba, no una nueva prueba física.',
+          'Evaluamos los enchufes inteligentes con monitorización energética según: informe local de datos de energía confirmado (no solo encendido/apagado local), compatibilidad de protocolo con configuraciones existentes, carga máxima nominal, precio y soporte de integración de Home Assistant documentado para el modelo exacto. Para Zooz y Sonoff S31, que usan el formato de enchufe NEMA estadounidense, se indica explícitamente que no son directamente compatibles con las tomas españolas en lugar de inventar un precio en euros.',
         ],
       },
       faqSection: {
@@ -1488,14 +1566,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿El control local de encendido/apagado significa que los datos de energía también son locales?', a: 'No necesariamente — algunos enchufes separan ambas cosas, controlando encendido/apagado de forma local mientras siguen enviando los datos detallados de vatios a través de la nube del fabricante. Comprueba específicamente el soporte de informe energético local.' },
-          { q: '¿Matter sobre Thread también es local?', a: 'Sí, cuando se combina con un router frontera Thread local (como un HomePod, Apple TV, Nest Hub, o uno reconocido por Home Assistant).' },
           { q: '¿Los enchufes Zigbee son mejores que los Wi-Fi para monitorización energética?', a: 'En general, sí, para el informe local confirmado — los enchufes Zigbee y Z-Wave tienen un historial más consistente aquí que los enchufes Wi-Fi, aunque Shelly es una excepción confirmada con API local documentada. Comprueba de todas formas el modelo específico en lugar de asumirlo solo por el protocolo.' },
+          { q: '¿Cuál es el mejor enchufe inteligente con monitorización energética en general?', a: 'Para quienes ya usan Zigbee en España/UE, el Aqara Smart Plug UE (desde 21,10 €) ofrece la mejor combinación de informe local confirmado y bajo coste por unidad. Si no tienes coordinador previo, el Shelly Plug US Gen4 (19,99-24,99 $, versión UE disponible con precio en euros no confirmado) es la opción confirmada más flexible en cuanto a protocolo, funcionando con Wi-Fi, Matter y Zigbee.' },
           { q: '¿Cómo se conectan estos enchufes al panel de Energía?', a: 'Una vez confirmado que informan de forma local, añade la entidad de sensor de energía del enchufe bajo "Dispositivos individuales" en la configuración del panel de Energía — consulta esa guía para el paso a paso completo.' },
           { q: '¿Puedo mezclar protocolos (algunos enchufes Zigbee, otros Wi-Fi)?', a: 'Sí — Home Assistant puede combinar entidades de sensor de distintos protocolos en la misma vista del panel de Energía sin problema, siempre que cada uno informe de forma local individualmente.' },
           { q: '¿Necesito un enchufe por electrodoméstico, o puedo monitorizar todo un circuito?', a: 'Los enchufes inteligentes monitorizan los electrodomésticos individuales conectados a ellos; para monitorizar todo un circuito o toda la vivienda, una pinza amperimétrica en el cuadro eléctrico (ver la visión general de gestión energética local) es la herramienta adecuada en su lugar.' },
           { q: '¿Todos los enchufes de una misma línea de producto tienen las mismas funciones?', a: 'No — el S31 Wi-Fi de Sonoff tiene monitorización energética integrada, pero, según las propias páginas de producto de Sonoff, su hermano Zigbee, el S31 Lite ZB, no. Comprueba la página del modelo específico, no solo la marca o el nombre de la familia.' },
           { q: '¿Monitorizar mis dispositivos me ahorrará dinero automáticamente?', a: 'No — el enchufe mide el consumo; el ahorro proviene de lo que hagas con esa información (identificar el derroche, automatizar cargas, desplazar el consumo a horas más baratas o cubiertas por solar). Trata el enchufe como una fuente de datos, no como un dispositivo de ahorro en sí mismo.' },
           { q: '¿Puede una IA local usar estos datos energéticos?', a: 'Sí — dado que las entidades de sensor de energía ya son locales en Home Assistant, una automatización LLM local puede resumir o responder preguntas sobre los datos (por ejemplo, "¿qué consumió más ayer?") sin enviar nada a un servicio de IA en la nube.' },
+          { q: '¿Cuántos enchufes con monitorización energética debería comprar para empezar?', a: 'Dos o tres, en tus dispositivos de mayor valor (una lavadora/secadora, un servidor o PC siempre encendido, un frigorífico o congelador). Amplía solo si los datos cambian realmente lo que haces — monitorizar cada pequeño dispositivo añade coste sin aportar mucho valor.' },
+          { q: '¿Es un enchufe inteligente adecuado para monitorizar la carga de un vehículo eléctrico?', a: 'Normalmente no es la mejor opción — una solución energética dedicada para VE o el propio informe del cargador encajan mejor que un enchufe inteligente genérico, ya que los patrones de carga y duración de un VE difieren de la monitorización habitual de electrodomésticos.' },
+          { q: '¿Qué debería comprobar antes de comprar cualquier enchufe con monitorización energética?', a: 'Confirma específicamente el informe energético local (no solo encendido/apagado) en la documentación de integración de Home Assistant para el modelo exacto, comprueba la carga máxima nominal del enchufe frente a tu dispositivo, y confirma que el formato de enchufe/toma de tu región (Schuko en España, NEMA en EE. UU., etc.) coincide o que dispones del adaptador y la compatibilidad de voltaje adecuados.' },
         ],
       },
       relatedReading: {
@@ -1505,6 +1586,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Panel de Energía de Home Assistant: guía de configuración completa](/es/smart-home/home-assistant-energy-dashboard-guide) — dónde se integran estos enchufes',
           '[Gestión energética local para la casa inteligente](/es/smart-home/local-smart-home-energy-management-2027) — la estrategia de monitorización más amplia, incluida la monitorización CT de toda la vivienda',
           '[Los mejores dongles USB Zigbee y Thread](/es/smart-home/best-zigbee-thread-dongles-2027) — el hardware de radio con el que se emparejan los enchufes Zigbee',
+          '[Los mejores dispositivos de casa inteligente 2026](/es/smart-home/best-smart-home-devices-2026) — la guía de compra completa por categorías en la que encaja este enchufe',
+          '[Automatizaciones de IA con un LLM local](/es/smart-home/ai-automations-local-llm) — crea la automatización "qué consumió más electricidad ayer"',
         ],
       },
     },
