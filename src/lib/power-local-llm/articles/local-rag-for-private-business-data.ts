@@ -1,6 +1,6 @@
 // Power Local LLM — Local RAG for Business Data: GDPR-Compliant AI for Sensitive Documents
 // Slug: local-rag-for-private-business-data
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// All 9 locales authored (en/de/fr/ja/zh/es/pt/ar/ko).
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -9,8 +9,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/local-rag-for-private-business-data-overview-hero-en.webp',
     title: 'Local RAG for Business Data: GDPR-Compliant AI for Sensitive Documents (2026)',
@@ -50,7 +51,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A DPIA is mandatory under Article 35 when special-category data is ingested at scale, regardless of deployment pattern.',
           'Right-to-be-forgotten requests must propagate to source documents, vector indexes, and cached embeddings — design the deletion path before go-live, not after a request arrives.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -469,6 +470,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           {
+            type: 'warning',
+            text: 'Timeline update, August 2026: the Digital Omnibus deferred the AI Act\'s high-risk deadlines. Standalone Annex III high-risk systems now apply from 2 December 2027, and high-risk AI embedded in regulated Annex I products from 2 August 2028 - both were previously 2 August 2026. Prohibited practices, transparency duties and general-purpose AI obligations were NOT deferred and are already in force; generative-AI watermarking applies from 2 December 2026. Confirm the final Official Journal text before relying on these dates in a filing.',
+          },
+          {
             type: 'note',
             text: 'The high-risk vs limited-risk line is drawn by the use case, not the technology. The same vector store and the same model can be limited-risk in a research-assistant deployment and high-risk in an HR-screening deployment. Classify per use case, not per platform.',
           },
@@ -620,8 +625,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/local-rag-for-private-business-data-overview-hero-de.webp',
     title: 'Lokales RAG für Geschäftsdaten: DSGVO-konforme KI für vertrauliche Dokumente (2026)',
@@ -662,7 +668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Eine DSFA ist gemäß Artikel 35 verpflichtend, wenn besondere Kategorien personenbezogener Daten in größerem Umfang verarbeitet werden — unabhängig vom Bereitstellungsmuster.',
           'Anträge auf Recht auf Vergessenwerden müssen sich auf Quelldokumente, Vektorindizes und zwischengespeicherte Embeddings auswirken — gestalten Sie den Löschpfad vor dem Go-Live, nicht erst nach dem ersten eingegangenen Antrag.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -803,7 +809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Empfehlung': 'On-Prem-Server',
           },
           {
-            'Ihre Situation': 'Konzern mit mehreren Tochtergesellschaften benötigt ein RAG über Tochtergesellschaften in mehreren EU-Ländern hinweg',
+            'Ihre Situation': 'Konzern benötigt ein RAG über Tochtergesellschaften in mehreren EU-Ländern hinweg',
             'Empfehlung': 'Private EU-Cloud (souveräne Region + kundenseitig verwaltete Schlüssel)',
           },
           {
@@ -1081,6 +1087,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           {
+            type: 'warning',
+            text: 'Zeitplan-Update, August 2026: Der Digital Omnibus hat die Hochrisiko-Fristen der KI-Verordnung verschoben. Eigenstaendige Hochrisiko-Systeme nach Anhang III gelten nun ab dem 2. Dezember 2027, in regulierte Produkte nach Anhang I eingebettete Hochrisiko-KI ab dem 2. August 2028 - zuvor jeweils 2. August 2026. Verbotene Praktiken, Transparenzpflichten und Pflichten fuer KI-Modelle mit allgemeinem Verwendungszweck wurden NICHT verschoben und gelten bereits; die Kennzeichnungspflicht fuer generative KI gilt ab dem 2. Dezember 2026. Pruefen Sie den finalen Text im Amtsblatt, bevor Sie sich in einer Eingabe auf diese Daten stuetzen.',
+          },
+          {
             type: 'note',
             text: 'Die Linie zwischen Hochrisiko und begrenztem Risiko wird vom Anwendungsfall gezogen, nicht von der Technologie. Derselbe Vektorspeicher und dasselbe Modell können in einer Forschungsassistenten-Bereitstellung begrenztes Risiko und in einer HR-Screening-Bereitstellung Hochrisiko darstellen. Klassifizieren Sie pro Anwendungsfall, nicht pro Plattform.',
           },
@@ -1241,8 +1251,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/local-rag-for-private-business-data-overview-hero-fr.webp',
     title: 'RAG local pour données métier : IA conforme RGPD pour documents sensibles (2026)',
@@ -1283,7 +1294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Une PIA est obligatoire (Art. 35) dès que des données sensibles sont traitées à grande échelle, quel que soit le modèle de déploiement.',
           "Le droit à l'effacement doit se propager aux documents source, à l'index vectoriel et aux embeddings en cache — concevez le parcours avant la mise en production.",
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1702,6 +1713,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           {
+            type: 'warning',
+            text: 'Mise a jour du calendrier, aout 2026 : le Digital Omnibus a reporte les echeances haut risque du reglement sur l\'IA. Les systemes autonomes a haut risque de l\'annexe III s\'appliquent desormais a partir du 2 decembre 2027, et l\'IA a haut risque integree aux produits reglementes de l\'annexe I a partir du 2 aout 2028 - les deux etaient auparavant fixees au 2 aout 2026. Les pratiques interdites, les obligations de transparence et celles relatives aux modeles d\'IA a usage general n\'ont PAS ete reportees et s\'appliquent deja ; le marquage des contenus generes par IA s\'applique a partir du 2 decembre 2026. Verifiez le texte definitif au Journal officiel avant de vous appuyer sur ces dates dans un dossier.',
+          },
+          {
             type: 'note',
             text: "La frontière haut risque vs risque limité est tracée par l'usage, pas par la technologie. Le même store vectoriel et le même modèle peuvent être risque limité dans un déploiement assistant de recherche et haut risque dans un déploiement de tri RH. Classifiez par cas d'usage, pas par plateforme.",
           },
@@ -1854,8 +1869,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/local-rag-for-private-business-data-overview-hero-ja.webp',
     title: '業務データ向けローカルRAG：機密文書のためのGDPR準拠AI（2026年版）',
@@ -1896,7 +1912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GDPR第35条のDPIAは、特別カテゴリの個人データを大規模に処理する場合は展開パターンを問わず必須です。',
           '忘れられる権利の請求は、ソース文書、ベクトルインデックス、キャッシュ済みembeddingまで伝播させる必要があります。請求が来てからではなく、本番化前に削除パスを設計してください。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2315,6 +2331,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           {
+            type: 'warning',
+            text: 'タイムライン更新（2026年8月）：Digital OmnibusによりAI Actの高リスク義務の期限が延期されました。附属書IIIの単独型高リスクシステムは2027年12月2日から、附属書Iの規制対象製品に組み込まれた高リスクAIは2028年8月2日から適用されます（いずれも従来は2026年8月2日）。禁止行為、透明性義務、汎用AIモデルの義務は延期されておらず、すでに適用中です。生成AIの電子透かしは2026年12月2日から適用されます。申請等でこれらの日付に依拠する前に、官報の最終文言をご確認ください。',
+          },
+          {
             type: 'note',
             text: '高リスクと限定リスクの境界はユースケースが引き、技術ではありません。同じベクトルストアと同じモデルが、研究アシスタント展開では限定リスクで、HRスクリーニング展開では高リスクになり得ます。プラットフォーム単位ではなくユースケース単位で分類してください。',
           },
@@ -2474,8 +2494,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/local-rag-for-private-business-data-overview-hero-zh.webp',
     title: '面向业务数据的本地 RAG：合规处理机密文档的 AI 架构（2026）',
@@ -2516,7 +2537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '只要大规模处理特殊类别数据，第 35 条 DPIA 即为强制要求 — 与部署模式无关。',
           '被遗忘权请求必须传播到源文档、向量索引和缓存嵌入 — 上线前就要设计删除路径，而非等请求到来后再补。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2935,6 +2956,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           {
+            type: 'warning',
+            text: '时间表更新（2026年8月）：Digital Omnibus 推迟了《人工智能法案》的高风险义务期限。附件三所列独立高风险系统自2027年12月2日起适用，嵌入附件一受监管产品中的高风险AI自2028年8月2日起适用——二者原定均为2026年8月2日。禁止性做法、透明度义务以及通用人工智能模型义务并未推迟，目前已经生效；生成式AI水印义务自2026年12月2日起适用。在正式文件中援引这些日期前，请先核对《欧盟官方公报》的最终文本。',
+          },
+          {
             type: 'note',
             text: '高风险与有限风险的边界由用例划，不由技术划。同一向量库与同一模型，在研究助手部署中是有限风险，在 HR 筛选部署中即为高风险。按用例分级，不按平台分级。',
           },
@@ -3095,8 +3120,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/local-rag-for-private-business-data-overview-hero-es.webp',
     title: 'RAG local para datos empresariales: IA conforme al RGPD para documentos sensibles (2026)',
@@ -3136,7 +3162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Una EIPD es obligatoria en virtud del artículo 35 cuando se ingieren datos de categorías especiales a gran escala, independientemente del patrón de despliegue.',
           'Las solicitudes de derecho al olvido deben propagarse a los documentos de origen, los índices vectoriales y los embeddings en caché — diseña el procedimiento de eliminación antes de la puesta en producción, no tras recibir la primera solicitud.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -3555,6 +3581,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           {
+            type: 'warning',
+            text: 'Actualizacion del calendario, agosto de 2026: el Digital Omnibus aplazo los plazos de alto riesgo del Reglamento de IA. Los sistemas autonomos de alto riesgo del anexo III se aplican ahora desde el 2 de diciembre de 2027, y la IA de alto riesgo integrada en productos regulados del anexo I desde el 2 de agosto de 2028; ambos plazos eran antes el 2 de agosto de 2026. Las practicas prohibidas, los deberes de transparencia y las obligaciones de los modelos de IA de uso general NO se aplazaron y ya estan en vigor; el marcado de agua para IA generativa se aplica desde el 2 de diciembre de 2026. Confirma el texto final del Diario Oficial antes de apoyarte en estas fechas en un expediente.',
+          },
+          {
             type: 'note',
             text: 'La línea entre alto riesgo y riesgo limitado la traza el caso de uso, no la tecnología. El mismo almacén vectorial y el mismo modelo pueden ser de riesgo limitado en un despliegue de asistente de investigación y de alto riesgo en un despliegue de selección de personal de RRHH. Clasifica por caso de uso, no por plataforma.',
           },
@@ -3719,8 +3749,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/local-rag-for-private-business-data-overview-hero-ko.webp',
     title: '기업 민감 문서를 위한 로컬 RAG: GDPR 준수 AI 솔루션 (2026)',
@@ -3760,7 +3791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '대규모로 특수 범주 데이터를 수집할 경우 제35조에 따라 DPIA가 의무입니다. 배포 패턴과 관계없이 적용됩니다.',
           '잊힐 권리 요청은 원본 문서, 벡터 인덱스, 캐시된 임베딩까지 전파되어야 합니다. 첫 번째 요청을 받은 후가 아닌 프로덕션 전에 삭제 절차를 설계하십시오.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -4179,6 +4210,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           {
+            type: 'warning',
+            text: '일정 업데이트(2026년 8월): Digital Omnibus에 따라 AI법의 고위험 의무 시행일이 연기되었습니다. 부속서 III의 독립형 고위험 시스템은 2027년 12월 2일부터, 부속서 I의 규제 대상 제품에 내장된 고위험 AI는 2028년 8월 2일부터 적용됩니다. 두 기한 모두 종전에는 2026년 8월 2일이었습니다. 금지 관행, 투명성 의무, 범용 AI 모델 의무는 연기되지 않았으며 이미 시행 중입니다. 생성형 AI 워터마킹은 2026년 12월 2일부터 적용됩니다. 공식 문서에서 이 날짜를 인용하기 전에 EU 관보의 최종 문안을 확인하십시오.',
+          },
+          {
             type: 'note',
             text: '고위험과 제한적 위험 사이의 경계는 기술이 아닌 사용 사례가 그립니다. 동일한 벡터 저장소와 동일한 모델이 연구 보조 배포에서는 제한적 위험이고 HR 직원 선별 배포에서는 고위험일 수 있습니다. 플랫폼이 아닌 사용 사례별로 분류하십시오.',
           },
@@ -4334,7 +4369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-rag-for-private-business-data',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -4354,8 +4389,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/local-rag-for-private-business-data-overview-hero-pt.webp',
     title: 'RAG local para dados empresariais: IA em conformidade com o GDPR para documentos sensíveis (2026)',
@@ -4395,7 +4431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Um DPIA é obrigatório nos termos do artigo 35 quando há ingestão de dados de categorias especiais em larga escala, independentemente do padrão de implantação.',
           'As solicitações de direito ao esquecimento devem se propagar aos documentos de origem, aos índices vetoriais e aos embeddings em cache — projete o procedimento de exclusão antes de entrar em produção, não após receber a primeira solicitação.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -4814,6 +4850,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           {
+            type: 'warning',
+            text: 'Atualizacao de cronograma, agosto de 2026: o Digital Omnibus adiou os prazos de alto risco do Regulamento de IA. Os sistemas autonomos de alto risco do anexo III passam a ser exigidos a partir de 2 de dezembro de 2027, e a IA de alto risco embarcada em produtos regulados do anexo I a partir de 2 de agosto de 2028 - ambos eram antes 2 de agosto de 2026. Praticas proibidas, deveres de transparencia e obrigacoes de modelos de IA de uso geral NAO foram adiados e ja estao em vigor; a marca d\'agua para IA generativa vale a partir de 2 de dezembro de 2026. Confirme o texto final no Jornal Oficial antes de se basear nessas datas em um processo.',
+          },
+          {
             type: 'note',
             text: 'A linha entre alto risco e risco limitado é traçada pelo caso de uso, não pela tecnologia. O mesmo repositório vetorial e o mesmo modelo podem ser de risco limitado em uma implantação de assistente de pesquisa e de alto risco em uma implantação de seleção de pessoal de RH. Classifique por caso de uso, não por plataforma.',
           },
@@ -4978,8 +5018,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/local-rag-for-private-business-data-overview-hero-ar.webp',
     title: '⁨RAG⁩ محلي للبيانات المؤسسية: حلول ذكاء اصطناعي متوافقة مع ⁨GDPR⁩ للمستندات الحساسة (⁨2026⁩)',
@@ -5019,7 +5060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُعد تقييم الأثر على حماية البيانات إلزاميًا بموجب المادة 35 عند استيعاب بيانات فئات خاصة على نطاق واسع، بصرف النظر عن نمط النشر.',
           'يجب أن تنتشر طلبات الحق في النسيان إلى مستندات المصدر وفهارس المتجهات والتضمينات المخزّنة مؤقتًا — صمّم إجراء الحذف قبل الإطلاق في الإنتاج، لا بعد تلقّي أول طلب.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -5437,6 +5478,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الوثائق بوصفها أثرًا للتدقيق** — الملف التقني المطلوب للأنظمة عالية المخاطر ليس مُخرَجًا لمرة واحدة؛ بل وثيقة حيّة. اربطه بعملية إدارة التغيير لديك كي تنعكس فيه كل ترقية نموذج وتغيير مُضمِّن وتغيير قائمة تحكم.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'تحديث الجدول الزمني، أغسطس 2026: أرجأ Digital Omnibus المواعيد النهائية عالية المخاطر في قانون الذكاء الاصطناعي. تُطبَّق الأنظمة عالية المخاطر المستقلة الواردة في الملحق III اعتباراً من 2 ديسمبر 2027، والذكاء الاصطناعي عالي المخاطر المدمج في المنتجات المنظَّمة بالملحق I اعتباراً من 2 أغسطس 2028 - وكان الموعدان سابقاً 2 أغسطس 2026. أما الممارسات المحظورة وواجبات الشفافية والتزامات نماذج الذكاء الاصطناعي عامة الغرض فلم تُؤجَّل وهي سارية بالفعل؛ ويسري وسم المحتوى المولَّد بالذكاء الاصطناعي اعتباراً من 2 ديسمبر 2026. تحقَّق من النص النهائي في الجريدة الرسمية قبل الاعتماد على هذه التواريخ في أي ملف رسمي.',
+          },
           {
             type: 'note',
             text: 'الخط الفاصل بين المخاطر العالية والمحدودة ترسمه حالة الاستخدام، لا التقنية. مخزن المتجهات نفسه والنموذج نفسه قد يكونان محدودي المخاطر في نشر مساعد بحثي وعاليي المخاطر في نشر اختيار موظفين في الموارد البشرية. صنّف حسب حالة الاستخدام، لا حسب المنصة.',
