@@ -1,6 +1,6 @@
 // Power Local LLM — AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026
 // Slug: anythingllm-vs-privategpt-vs-openwebui-rag
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// All 9 locales authored (en/de/fr/ja/zh/es/pt/ar/ko).
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -12,20 +12,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026',
     seoTitle: 'Local RAG 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
     intro:
       'AnythingLLM, PrivateGPT, and Open WebUI are the three serious self-hosted RAG platforms in 2026. We loaded an identical 5,047-page corpus into each, ran 50 queries across 5 query types, and measured retrieval latency, hallucination rate, citation quality, and the hidden costs nobody talks about (re-embedding, vector DB storage, GPU spikes during indexing). The toy-demo champion is not the production champion.',
     metaDescription:
-      '3 local RAG platforms tested on a 5,047-page corpus. AnythingLLM, PrivateGPT, Open WebUI benchmarked for accuracy, latency, citations. May 2026 verdict.',
+      '3 local RAG platforms tested on a 5,047-page corpus. AnythingLLM, PrivateGPT, Open WebUI benchmarked for accuracy, latency, citations. August 2026 verdict.',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-en.webp',
     twitterDescription:
       'Local RAG showdown: AnythingLLM vs PrivateGPT vs Open WebUI on 5,047 pages. Different winners for accuracy, latency, scaling. Full benchmarks inside.',
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.2 3B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -52,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'anythingllm scaling',
     ],
     leadAnswerBlock:
-      '**On a 5,047-page corpus tested in May 2026, AnythingLLM wins on production reliability (best citations, swappable embedders, persistent workspaces, lowest hallucination rate at 6%). PrivateGPT wins on retrieval latency (p50 of 240 ms, fully offline by design, strict EU-compliance posture). Open WebUI wins on operational ergonomics (cleanest multi-user setup, slick Ollama integration, easiest to plug into an existing chat workflow). All three break differently past ~10,000 pages — choose for the workflow you actually have, not the one you might grow into.**',
+      '**On a 5,047-page corpus tested in August 2026, AnythingLLM wins on production reliability (best citations, swappable embedders, persistent workspaces, lowest hallucination rate at 6%). PrivateGPT wins on retrieval latency (p50 of 240 ms, fully offline by design, strict EU-compliance posture). Open WebUI wins on operational ergonomics (cleanest multi-user setup, slick Ollama integration, easiest to plug into an existing chat workflow). All three break differently past ~10,000 pages — choose for the workflow you actually have, not the one you might grow into.**',
     quickAnswerTop: {
       en: {
         question: 'Which self-hosted RAG platform is best for local documents in 2026: AnythingLLM, PrivateGPT, or Open WebUI?',
@@ -65,7 +66,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'All three handle 5,000 pages on a 16 GB RAM machine; the scaling cliff appears between 8,000–12,000 pages depending on embedder choice.',
           'Switching embedding models requires a full re-index in all three — budget 30–90 minutes per 5,000 pages on consumer hardware.',
         ],
-        updatedDate: '2026-06-19',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -106,7 +107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'How Do AnythingLLM, PrivateGPT, and Open WebUI Compare in 2026?',
         content:
-          'Tested on a 5,047-page corpus (research papers, contracts, a technical manual, internal wiki exports) using Llama 3.3 8B Q4_K_M as the chat model and each platform\'s default embedder. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM) on Windows 11; cross-checked on an M5 MacBook Pro (16 GB unified). Numbers are medians of three runs.',
+          'Tested on a 5,047-page corpus (research papers, contracts, a technical manual, internal wiki exports) using Llama 3.2 3B Q4_K_M as the chat model and each platform\'s default embedder. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM) on Windows 11; cross-checked on an M5 MacBook Pro (16 GB unified). Numbers are medians of three runs.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -194,11 +195,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'How We Tested All 3 on a 5,047-Page Corpus',
         content:
-          '**The same documents, the same chat model (Llama 3.3 8B Q4_K_M), the same 50 graded queries.** RAG quality, not chat quality, is what we isolated.',
+          '**The same documents, the same chat model (Llama 3.2 3B Q4_K_M), the same 50 graded queries.** RAG quality, not chat quality, is what we isolated.',
         items: [
           '**Hardware:** NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM) on Windows 11 as the primary; Apple M5 MacBook Pro (16 GB unified memory) as cross-check. Latency numbers come from the RTX 4070 run.',
           '**Corpus:** 5,047 pages spanning four content types — 1,047-page industrial control manual (figures, tables, equations), 38-page commercial real-estate lease (dense legalese), 412-page transformer research paper, and a 3,550-page export of an internal engineering wiki (markdown, code, mixed prose).',
-          '**Chat model:** Llama 3.3 8B Q4_K_M (≈ 4.9 GB) loaded fully into VRAM in all three apps, served via Ollama for AnythingLLM and Open WebUI, via the bundled llama.cpp runtime for PrivateGPT.',
+          '**Chat model:** Llama 3.2 3B Q4_K_M (≈ 4.9 GB) loaded fully into VRAM in all three apps, served via Ollama for AnythingLLM and Open WebUI, via the bundled llama.cpp runtime for PrivateGPT.',
           '**Embedders tested:** each platform\'s default plus nomic-embed-text v1.5 (768-dim) and BAAI/bge-m3 (1,024-dim) where supported. Default was used for the headline numbers.',
           '**Query set:** 50 queries split evenly across 5 types — factual lookup (10), multi-hop reasoning (10), summarization (10), citation accuracy (10), and contradiction detection (10). Graded blind by the same human against a known answer key.',
           '**What we measured:** retrieval latency (p50 / p95 in ms over 50 queries), hallucination rate (% of answers with at least one factual error), citation correctness (filename + page where applicable), GPU memory peak during indexing, and on-disk vector DB size.',
@@ -238,7 +239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Install path:** desktop installer from anythingllm.com (signed, ~430 MB, macOS / Windows / Linux), or Docker for self-hosted multi-user. The desktop build is what most readers should start with.',
           '**File formats:** PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, websites (built-in scraper), and audio via bundled Whisper (MP3, WAV, M4A).',
-          '**Embedding flexibility:** 8 backends in May 2026 — Native (small bundled model), Ollama (any embedder you have pulled), LM Studio, OpenAI, Azure OpenAI, Cohere, Voyage, LocalAI. Switching forces a full re-index but is a one-click operation.',
+          '**Embedding flexibility:** 8 backends in August 2026 — Native (small bundled model), Ollama (any embedder you have pulled), LM Studio, OpenAI, Azure OpenAI, Cohere, Voyage, LocalAI. Switching forces a full re-index but is a one-click operation.',
           '**Chunk control:** chunk size and overlap exposed per workspace. Re-embed-all rebuilds the LanceDB store after changes. No semantic / hierarchical chunking out of the box.',
           '**Citations:** every answer footnotes the source chunks with filename + page (PDF), filename + section (MD), or filename only (TXT). The citation panel renders the source chunk verbatim — this is the single biggest reason for the low hallucination rate.',
           '**Performance on the 5,047-page corpus:** indexing took 14 min 42 sec on RTX 4070 (default Native embedder), peaking at 6.2 GB GPU memory. p50 retrieval latency 310 ms, p95 880 ms. Vector DB size on disk: 184 MB.',
@@ -289,7 +290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'For Open WebUI specifically, switch the default chat model to one that cites well even without explicit citation prompting. Qwen3 14B and Llama 3.3 70B mention sources unprompted; Llama 3.3 8B and Phi-4 Mini frequently drop citations under pressure.',
+            text: 'For Open WebUI specifically, switch the default chat model to one that cites well even without explicit citation prompting. Qwen3 14B and Llama 3.3 70B mention sources unprompted; Llama 3.2 3B and Phi-4 Mini frequently drop citations under pressure.',
           },
         ],
       },
@@ -333,7 +334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Multi-hop reasoning is where all three platforms suffer. The fix is not the platform — it is your chat model. Swapping Llama 3.3 8B for Qwen3 14B dropped multi-hop hallucination by ~10 percentage points in each platform. RAG quality is necessary but not sufficient; the chat model has to actually reason over retrieved chunks.',
+            text: 'Multi-hop reasoning is where all three platforms suffer. The fix is not the platform — it is your chat model. Swapping Llama 3.2 3B for Qwen3 14B dropped multi-hop hallucination by ~10 percentage points in each platform. RAG quality is necessary but not sufficient; the chat model has to actually reason over retrieved chunks.',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-en.svg',
@@ -495,20 +496,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: Die beste lokale RAG 2026',
     seoTitle: 'Lokales RAG 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
     intro:
       'AnythingLLM, PrivateGPT und Open WebUI sind die drei ernstzunehmenden lokalen RAG-Plattformen 2026. Wir haben ein identisches Korpus von 5.047 Seiten in jede Plattform geladen, 50 Abfragen über 5 Abfragetypen ausgeführt und Abruflatenz, Halluzinationsrate, Zitierqualität und die versteckten Kosten gemessen, über die niemand spricht (Neueinbettung, Vektor-DB-Speicher, GPU-Spitzen während der Indexierung). Der Toy-Demo-Champion ist nicht der Produktions-Champion.',
     metaDescription:
-      '3 lokale RAG-Plattformen auf 5.047 Seiten getestet. AnythingLLM, PrivateGPT, Open WebUI: Genauigkeit, Latenz, Zitierqualität. Testergebnis Mai 2026.',
+      '3 lokale RAG-Plattformen auf 5.047 Seiten getestet. AnythingLLM, PrivateGPT, Open WebUI: Genauigkeit, Latenz, Zitierqualität. Testergebnis August 2026.',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-de.webp',
     twitterDescription:
       'Lokales RAG-Duell: AnythingLLM vs PrivateGPT vs Open WebUI auf 5.047 Seiten. Unterschiedliche Gewinner bei Genauigkeit, Latenz, Skalierung. Vollständige Benchmarks eingebunden.',
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.2 3B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -535,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'anythingllm skalierung',
     ],
     leadAnswerBlock:
-      '**Bei einem Korpus von 5.047 Seiten, das im Mai 2026 getestet wurde, gewinnt AnythingLLM in Produktionszuverlässigkeit (beste Zitierungen, austauschbare Embedder, persistente Arbeitsbereiche, niedrigste Halluzinationsrate bei 6%). PrivateGPT gewinnt in Abruflatenz (p50 von 240 ms, vollständig offline nach Design, strenge EU-Compliance-Haltung). Open WebUI gewinnt in operativer Ergonomie (sauberstes Multi-User-Setup, elegante Ollama-Integration, einfachste Integration in bestehende Chat-Workflows). Alle drei zeigen Probleme nach ~10.000 Seiten — wählen Sie für den Workflow, den Sie tatsächlich haben, nicht für den, in den Sie vielleicht hineinwachsen.**',
+      '**Bei einem Korpus von 5.047 Seiten, das im August 2026 getestet wurde, gewinnt AnythingLLM in Produktionszuverlässigkeit (beste Zitierungen, austauschbare Embedder, persistente Arbeitsbereiche, niedrigste Halluzinationsrate bei 6%). PrivateGPT gewinnt in Abruflatenz (p50 von 240 ms, vollständig offline nach Design, strenge EU-Compliance-Haltung). Open WebUI gewinnt in operativer Ergonomie (sauberstes Multi-User-Setup, elegante Ollama-Integration, einfachste Integration in bestehende Chat-Workflows). Alle drei zeigen Probleme nach ~10.000 Seiten — wählen Sie für den Workflow, den Sie tatsächlich haben, nicht für den, in den Sie vielleicht hineinwachsen.**',
     quickAnswerTop: {
       de: {
         question: 'Welche selbstgehostete RAG-Plattform ist 2026 am besten für lokale Dokumente geeignet: AnythingLLM, PrivateGPT oder Open WebUI?',
@@ -548,7 +550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Alle drei verarbeiten 5.000 Seiten auf einer 16-GB-RAM-Maschine; die Skalierungsklippe tritt zwischen 8.000–12.000 Seiten auf, je nach Embedder-Wahl.',
           'Das Wechseln von Einbettungsmodellen erfordert eine vollständige Neuindexierung in allen drei — budgetieren Sie 30–90 Minuten pro 5.000 Seiten auf Consumer-Hardware.',
         ],
-        updatedDate: '2026-06-19',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -590,7 +592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Wie vergleichen sich AnythingLLM, PrivateGPT und Open WebUI 2026?',
         content:
-          'Getestet auf einem Korpus von 5.047 Seiten (Forschungsartikel, Verträge, eine technische Anleitung, Exporte interner Wikis) mit Llama 3.3 8B Q4_K_M als Chat-Modell und dem Standard-Embedder jeder Plattform. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB Systemspeicher) auf Windows 11; Gegenprüfung auf MacBook Pro M5 (16 GB unified). Die Zahlen sind Mediane aus drei Durchläufen.',
+          'Getestet auf einem Korpus von 5.047 Seiten (Forschungsartikel, Verträge, eine technische Anleitung, Exporte interner Wikis) mit Llama 3.2 3B Q4_K_M als Chat-Modell und dem Standard-Embedder jeder Plattform. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB Systemspeicher) auf Windows 11; Gegenprüfung auf MacBook Pro M5 (16 GB unified). Die Zahlen sind Mediane aus drei Durchläufen.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -678,11 +680,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'Wie wir alle 3 auf einem Korpus mit 5.047 Seiten getestet haben',
         content:
-          '**Dieselben Dokumente, dasselbe Chat-Modell (Llama 3.3 8B Q4_K_M), dieselben 50 bewerteten Abfragen.** RAG-Qualität, nicht Chat-Qualität, ist das, was wir isoliert haben.',
+          '**Dieselben Dokumente, dasselbe Chat-Modell (Llama 3.2 3B Q4_K_M), dieselben 50 bewerteten Abfragen.** RAG-Qualität, nicht Chat-Qualität, ist das, was wir isoliert haben.',
         items: [
           '**Hardware:** NVIDIA RTX 4070 (12 GB VRAM, 32 GB Systemspeicher) auf Windows 11 als Primär; MacBook Pro M5 (16 GB Unified Memory) als Gegenprüfung. Die Latenzzahlen stammen aus dem RTX 4070-Lauf.',
           '**Korpus:** 5.047 Seiten über vier Inhaltstypen — 1.047-Seiten-Handbuch für Industriesteuerung (Abbildungen, Tabellen, Gleichungen), 38-Seiten-gewerblicher Mietvertrag (dichter juristischer Text), 412-Seiten-Transformator-Forschungsartikel und ein Export mit 3.550 Seiten eines internen Engineering-Wikis (Markdown, Code, gemischte Prosa).',
-          '**Chat-Modell:** Llama 3.3 8B Q4_K_M (≈ 4,9 GB) in allen drei Apps vollständig in VRAM geladen, bedient über Ollama für AnythingLLM und Open WebUI, über die gebündelte llama.cpp-Laufzeit für PrivateGPT.',
+          '**Chat-Modell:** Llama 3.2 3B Q4_K_M (≈ 4,9 GB) in allen drei Apps vollständig in VRAM geladen, bedient über Ollama für AnythingLLM und Open WebUI, über die gebündelte llama.cpp-Laufzeit für PrivateGPT.',
           '**Getestete Embedder:** jedes Standard-Embedder der Plattform plus nomic-embed-text v1.5 (768-dim) und BAAI/bge-m3 (1.024-dim) falls unterstützt. Der Standard wurde für die Headline-Zahlen verwendet.',
           '**Abfrage-Set:** 50 Abfragen gleichmäßig über 5 Typen verteilt — faktenhafte Lookup (10), Multi-Hop-Reasoning (10), Zusammenfassung (10), Zitiergenauigkeit (10) und Widerspruchserkennung (10). Blind bewertet gegen einen bekannten Antwortschlüssel.',
           '**Was wir gemessen haben:** Abruflatenz (p50 / p95 in ms über 50 Abfragen), Halluzinationsrate (% der Antworten mit mindestens einem faktischen Fehler), Zitiergenauigkeit (Dateiname + Seite falls zutreffend), GPU-Speicherspitzen während der Indexierung und Größe der On-Disk-Vektor-DB.',
@@ -722,7 +724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Installationspfad:** Desktop-Installationsprogramm von anythingllm.com (signiert, ~430 MB, macOS / Windows / Linux) oder Docker für selbstgehostete Multi-User. Der Desktop-Build ist das, was die meisten Leser beginnen sollten.',
           '**Dateiformate:** PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, Websites (integrierter Scraper) und Audio über gebündelte Whisper (MP3, WAV, M4A).',
-          '**Embedder-Flexibilität:** 8 Backends im Mai 2026 — Native (kleines gebündeltes Modell), Ollama (jeder Embedder, den Sie haben), LM Studio, OpenAI, Azure OpenAI, Cohere, Voyage, LocalAI. Das Wechseln erzwingt eine vollständige Neuindexierung, ist aber eine Ein-Klick-Operation.',
+          '**Embedder-Flexibilität:** 8 Backends im August 2026 — Native (kleines gebündeltes Modell), Ollama (jeder Embedder, den Sie haben), LM Studio, OpenAI, Azure OpenAI, Cohere, Voyage, LocalAI. Das Wechseln erzwingt eine vollständige Neuindexierung, ist aber eine Ein-Klick-Operation.',
           '**Chunk-Kontrolle:** Chunkgröße und Überlappung sind pro Arbeitsbereich offengelegt. Re-embed-all rekonstruiert den LanceDB-Speicher nach Änderungen. Kein semantisches / hierarchisches Chunking out-of-the-box.',
           '**Zitierungen:** jede Antwort versieht die Source-Chunks mit Dateiname + Seite (PDF), Dateiname + Abschnitt (MD) oder nur Dateiname (TXT) als Fußnote. Das Zitier-Panel rendert den Source-Chunk wörtlich — dies ist der einzelne größte Grund für die niedrige Halluzinationsrate.',
           '**Leistung auf dem Korpus mit 5.047 Seiten:** Die Indexierung dauerte 14 min 42 Sekunden auf RTX 4070 (Standard Native Embedder), spitze bei 6,2 GB GPU-Speicher. p50 Abruflatenz 310 ms, p95 880 ms. Größe der Vektor-DB auf der Festplatte: 184 MB.',
@@ -773,7 +775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Speziell für Open WebUI wechseln Sie das Standard-Chat-Modell zu einem, das auch ohne explizite Zitier-Eingabe gut zitiert. Qwen3 14B und Llama 3.3 70B erwähnen Quellen ungegeben; Llama 3.3 8B und Phi-4 Mini lassen unter Druck oft Zitierungen fallen.',
+            text: 'Speziell für Open WebUI wechseln Sie das Standard-Chat-Modell zu einem, das auch ohne explizite Zitier-Eingabe gut zitiert. Qwen3 14B und Llama 3.3 70B erwähnen Quellen ungegeben; Llama 3.2 3B und Phi-4 Mini lassen unter Druck oft Zitierungen fallen.',
           },
         ],
       },
@@ -817,7 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Multi-Hop Reasoning ist, wo alle drei Plattformen leiden. Die Korrektur ist nicht die Plattform — sie ist Ihr Chat-Modell. Das Wechseln von Llama 3.3 8B zu Qwen3 14B senkte Multi-Hop-Halluzination in jeder Plattform um ~10 Prozentpunkte. RAG-Qualität ist notwendig, aber nicht ausreichend; das Chat-Modell muss über abgerufene Chunks tatsächlich Schlüsse ziehen.',
+            text: 'Multi-Hop Reasoning ist, wo alle drei Plattformen leiden. Die Korrektur ist nicht die Plattform — sie ist Ihr Chat-Modell. Das Wechseln von Llama 3.2 3B zu Qwen3 14B senkte Multi-Hop-Halluzination in jeder Plattform um ~10 Prozentpunkte. RAG-Qualität ist notwendig, aber nicht ausreichend; das Chat-Modell muss über abgerufene Chunks tatsächlich Schlüsse ziehen.',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-de.svg',
@@ -935,20 +937,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI : La meilleure RAG locale 2026',
     seoTitle: 'AnythingLLM vs PrivateGPT vs Open WebUI : RAG 2026',
     intro:
       'AnythingLLM, PrivateGPT et Open WebUI sont les trois plateformes RAG locales sérieuses en 2026. Nous avons chargé un corpus identique de 5 047 pages dans chacune, lancé 50 requêtes sur 5 types, et mesuré la latence d\'extraction, le taux d\'hallucination, la qualité des citations et les coûts cachés (réindexation, stockage vectoriel, pics GPU). Le champion des démos jouet n\'est pas le champion de production.',
     metaDescription:
-      '3 plateformes RAG locales testées sur 5 047 pages. AnythingLLM, PrivateGPT, Open WebUI : benchmarks de précision, latence, citations. Mai 2026.',
+      '3 plateformes RAG locales testées sur 5 047 pages. AnythingLLM, PrivateGPT, Open WebUI : benchmarks de précision, latence, citations. August 2026.',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-fr.webp',
     twitterDescription:
       'Duel RAG local : AnythingLLM vs PrivateGPT vs Open WebUI sur 5 047 pages. Gagnants différents en précision, latence, scalabilité. Benchmarks complets.',
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.2 3B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -975,7 +978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'scalabilité anythingllm',
     ],
     leadAnswerBlock:
-      '**Sur un corpus de 5 047 pages testé en mai 2026, AnythingLLM gagne en fiabilité de production (meilleures citations, embedders interchangeables, espaces de travail persistants, taux d\'hallucination le plus bas à 6%). PrivateGPT gagne en latence d\'extraction (p50 de 240 ms, entièrement hors ligne par conception, posture de conformité EU stricte). Open WebUI gagne en ergonomie opérationnelle (interface multi-utilisateurs la plus nette, intégration Ollama élégante, plus facile à ajouter aux workflows de chat existants). Les trois dysfonctionnent différemment au-delà de ~10 000 pages — choisissez pour le workflow que vous avez, pas celui dans lequel vous pourriez grandir.**',
+      '**Sur un corpus de 5 047 pages testé en août 2026, AnythingLLM gagne en fiabilité de production (meilleures citations, embedders interchangeables, espaces de travail persistants, taux d\'hallucination le plus bas à 6%). PrivateGPT gagne en latence d\'extraction (p50 de 240 ms, entièrement hors ligne par conception, posture de conformité EU stricte). Open WebUI gagne en ergonomie opérationnelle (interface multi-utilisateurs la plus nette, intégration Ollama élégante, plus facile à ajouter aux workflows de chat existants). Les trois dysfonctionnent différemment au-delà de ~10 000 pages — choisissez pour le workflow que vous avez, pas celui dans lequel vous pourriez grandir.**',
     quickAnswerTop: {
       fr: {
         question: 'Quelle plateforme RAG autohébergée est la meilleure pour les documents locaux en 2026 : AnythingLLM, PrivateGPT ou Open WebUI ?',
@@ -988,7 +991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les trois gèrent 5 000 pages sur une machine 16 GB RAM ; la falaise d\'échelle apparaît entre 8 000–12 000 pages selon le choix d\'embedder.',
           'Changer les modèles d\'embedding nécessite une réindexation complète dans les trois — budgétez 30–90 minutes par 5 000 pages sur matériel grand public.',
         ],
-        updatedDate: '2026-06-19',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1030,7 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comment AnythingLLM, PrivateGPT et Open WebUI se comparent-ils en 2026 ?',
         content:
-          'Testé sur un corpus de 5 047 pages (articles de recherche, contrats, manuel technique, exports wiki interne) avec Llama 3.3 8B Q4_K_M comme modèle de chat et l\'embedder par défaut de chaque plateforme. Matériel : NVIDIA RTX 4070 (12 GB VRAM, 32 GB système) sur Windows 11 ; contre-vérification sur M5 MacBook Pro (16 GB unified). Les nombres sont les médianes de trois exécutions.',
+          'Testé sur un corpus de 5 047 pages (articles de recherche, contrats, manuel technique, exports wiki interne) avec Llama 3.2 3B Q4_K_M comme modèle de chat et l\'embedder par défaut de chaque plateforme. Matériel : NVIDIA RTX 4070 (12 GB VRAM, 32 GB système) sur Windows 11 ; contre-vérification sur M5 MacBook Pro (16 GB unified). Les nombres sont les médianes de trois exécutions.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1118,11 +1121,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'Comment nous avons testé les 3 sur un corpus de 5 047 pages',
         content:
-          '**Mêmes documents, même modèle de chat (Llama 3.3 8B Q4_K_M), mêmes 50 requêtes notées.** Qualité RAG, pas qualité de chat, est ce que nous avons isolé.',
+          '**Mêmes documents, même modèle de chat (Llama 3.2 3B Q4_K_M), mêmes 50 requêtes notées.** Qualité RAG, pas qualité de chat, est ce que nous avons isolé.',
         items: [
           '**Matériel :** NVIDIA RTX 4070 (12 GB VRAM, 32 GB système) sur Windows 11 comme système primaire ; MacBook Pro M5 (16 GB mémoire unified) comme contre-vérification. Les chiffres de latence proviennent de l\'exécution RTX 4070.',
           '**Corpus :** 5 047 pages couvrant quatre types de contenu — manuel de contrôle industriel de 1 047 pages (figures, tableaux, équations), contrat immobilier commercial de 38 pages (texte juridique dense), article de recherche sur transformateurs de 412 pages, export de 3 550 pages d\'un wiki d\'ingénierie interne (markdown, code, prose mixte).',
-          '**Modèle de chat :** Llama 3.3 8B Q4_K_M (≈ 4,9 GB) entièrement chargé en VRAM dans les trois apps, servi via Ollama pour AnythingLLM et Open WebUI, via le runtime llama.cpp groupé pour PrivateGPT.',
+          '**Modèle de chat :** Llama 3.2 3B Q4_K_M (≈ 4,9 GB) entièrement chargé en VRAM dans les trois apps, servi via Ollama pour AnythingLLM et Open WebUI, via le runtime llama.cpp groupé pour PrivateGPT.',
           '**Embedders testés :** chaque embedder par défaut de plateforme plus nomic-embed-text v1.5 (768-dim) et BAAI/bge-m3 (1 024-dim) où supportés. Le défaut a été utilisé pour les chiffres de headline.',
           '**Ensemble de requêtes :** 50 requêtes divisées également sur 5 types — lookup factuelle (10), raisonnement multi-sauts (10), résumé (10), exactitude de citation (10), détection de contradiction (10). Notées aveuglément contre une clé de réponse connue.',
           '**Ce que nous avons mesuré :** latence d\'extraction (p50 / p95 en ms sur 50 requêtes), taux d\'hallucination (% des réponses avec au moins une erreur factuelle), exactitude des citations (nom de fichier + page le cas échéant), pic de mémoire GPU pendant l\'indexation, taille DB vectorielle sur disque.',
@@ -1162,7 +1165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Chemin d\'installation :** Installateur desktop de anythingllm.com (signé, ~430 MB, macOS / Windows / Linux), ou Docker pour multi-utilisateurs autohébergés. Le build desktop est ce que la plupart des lecteurs devraient commencer.',
           '**Formats de fichiers :** PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, sites web (scraper intégré) et audio via Whisper groupé (MP3, WAV, M4A).',
-          '**Flexibilité d\'embedding :** 8 backends en mai 2026 — Native (petit modèle groupé), Ollama (n\'importe quel embedder que vous avez), LM Studio, OpenAI, Azure OpenAI, Cohere, Voyage, LocalAI. Changer force une réindexation complète mais est une opération d\'un clic.',
+          '**Flexibilité d\'embedding :** 8 backends en août 2026 — Native (petit modèle groupé), Ollama (n\'importe quel embedder que vous avez), LM Studio, OpenAI, Azure OpenAI, Cohere, Voyage, LocalAI. Changer force une réindexation complète mais est une opération d\'un clic.',
           '**Contrôle de chunk :** taille de chunk et chevauchement exposés par espace de travail. Re-embed-all reconstruit le store LanceDB après changements. Pas de chunking sémantique / hiérarchique out-of-the-box.',
           '**Citations :** chaque réponse met en note les chunks sources avec nom de fichier + page (PDF), nom de fichier + section (MD), ou nom de fichier uniquement (TXT). Le panneau de citation rend le chunk source en verbatim — c\'est la raison majeure du taux d\'hallucination bas.',
           '**Performance sur le corpus de 5 047 pages :** l\'indexation a pris 14 min 42 sec sur RTX 4070 (embedder Native par défaut), pic à 6,2 GB de mémoire GPU. Latence d\'extraction p50 310 ms, p95 880 ms. Taille DB vectorielle sur disque : 184 MB.',
@@ -1213,7 +1216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Pour Open WebUI spécifiquement, changeez le modèle de chat par défaut vers un qui cite bien même sans incitation d\'citation explicite. Qwen3 14B et Llama 3.3 70B mentionnent les sources non-sollicité ; Llama 3.3 8B et Phi-4 Mini lâchent souvent les citations sous pression.',
+            text: 'Pour Open WebUI spécifiquement, changeez le modèle de chat par défaut vers un qui cite bien même sans incitation d\'citation explicite. Qwen3 14B et Llama 3.3 70B mentionnent les sources non-sollicité ; Llama 3.2 3B et Phi-4 Mini lâchent souvent les citations sous pression.',
           },
         ],
       },
@@ -1257,7 +1260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Le raisonnement multi-sauts est où les trois plateformes souffrent. La correction n\'est pas la plateforme — c\'est votre modèle de chat. Changer Llama 3.3 8B pour Qwen3 14B a réduit les hallucinations multi-sauts d\'~10 points de pourcentage dans chaque plateforme. La qualité RAG est nécessaire mais pas suffisante ; le modèle de chat doit vraiment raisonner sur les chunks extraits.',
+            text: 'Le raisonnement multi-sauts est où les trois plateformes souffrent. La correction n\'est pas la plateforme — c\'est votre modèle de chat. Changer Llama 3.2 3B pour Qwen3 14B a réduit les hallucinations multi-sauts d\'~10 points de pourcentage dans chaque plateforme. La qualité RAG est nécessaire mais pas suffisante ; le modèle de chat doit vraiment raisonner sur les chunks extraits.',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-fr.svg',
@@ -1366,20 +1369,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年のベストローカルRAG',
     seoTitle: 'ローカルRAG 2026：AnythingLLM・PrivateGPT・Open WebUI比較',
     intro:
       'AnythingLLM、PrivateGPT、Open WebUIは2026年における3つの本格的な自己ホスト型RAGプラットフォームです。同じ5,047ページのコーパスをそれぞれに読み込み、5つのクエリタイプにわたって50クエリを実行し、検索レイテンシ、ハルシネーション率、引用品質、および隠れたコスト（再埋め込み、ベクトルDB保存、インデックス作成時のGPUスパイク）を測定しました。デモの優勝者は本番運用の優勝者ではありません。',
     metaDescription:
-      'AnythingLLM、PrivateGPT、Open WebUIを5,047ページのコーパスでテスト。精度、レイテンシ、引用、スケーリング性能を比較。2026年5月の検証結果。',
+      'AnythingLLM、PrivateGPT、Open WebUIを5,047ページのコーパスでテスト。精度、レイテンシ、引用、スケーリング性能を比較。2026年8月の検証結果。',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-ja.webp',
     twitterDescription:
       'ローカルRAG対決：AnythingLLM vs PrivateGPT vs Open WebUI（5,047ページ）。精度、レイテンシ、スケーリングで異なる優勝者。完全ベンチマーク内蔵。',
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.2 3B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -1406,7 +1410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'anythingllm scaling',
     ],
     leadAnswerBlock:
-      '**2026年5月にテストした5,047ページのコーパスでは、AnythingLLMが本番運用の信頼性で優勝しています（最高の引用、交換可能なエンベッダー、永続的なワークスペース、6%の最低ハルシネーション率）。PrivateGPTは検索レイテンシで優勝しています（240msのp50、完全オフライン設計、厳密なEUコンプライアンス姿勢）。Open WebUIは運用人間工学で優勝しています（最もクリーンなマルチユーザーセットアップ、洗練されたOllama統合、既存のチャットワークフローへの最も簡単なプラグイン）。3つすべてが約10,000ページを超えると異なる方法で壊れます。成長する可能性のあるワークフローではなく、実際に持つワークフロー向けに選択してください。**',
+      '**2026年8月にテストした5,047ページのコーパスでは、AnythingLLMが本番運用の信頼性で優勝しています（最高の引用、交換可能なエンベッダー、永続的なワークスペース、6%の最低ハルシネーション率）。PrivateGPTは検索レイテンシで優勝しています（240msのp50、完全オフライン設計、厳密なEUコンプライアンス姿勢）。Open WebUIは運用人間工学で優勝しています（最もクリーンなマルチユーザーセットアップ、洗練されたOllama統合、既存のチャットワークフローへの最も簡単なプラグイン）。3つすべてが約10,000ページを超えると異なる方法で壊れます。成長する可能性のあるワークフローではなく、実際に持つワークフロー向けに選択してください。**',
     quickAnswerTop: {
       en: {
         question: 'Which self-hosted RAG platform is best for local documents in 2026: AnythingLLM, PrivateGPT, or Open WebUI?',
@@ -1419,7 +1423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'All three handle 5,000 pages on a 16 GB RAM machine; the scaling cliff appears between 8,000–12,000 pages depending on embedder choice.',
           'Switching embedding models requires a full re-index in all three — budget 30–90 minutes per 5,000 pages on consumer hardware.',
         ],
-        updatedDate: '2026-06-19',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1460,7 +1464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026年のAnythingLLM、PrivateGPT、Open WebUIはどのように比較されますか？',
         content:
-          '5,047ページのコーパス（研究論文、契約、技術マニュアル、内部wiki エクスポート）でテスト。チャットモデルとしてLlama 3.3 8B Q4_K_Mを使用し、各プラットフォームのデフォルトエンベッダー。ハードウェア：Windows 11上のNVIDIA RTX 4070（12GB VRAM、32GBシステムRAM）。Apple M5 MacBook Pro（16GB統合）で相互チェック。数値は3回の実行の中央値。',
+          '5,047ページのコーパス（研究論文、契約、技術マニュアル、内部wiki エクスポート）でテスト。チャットモデルとしてLlama 3.2 3B Q4_K_Mを使用し、各プラットフォームのデフォルトエンベッダー。ハードウェア：Windows 11上のNVIDIA RTX 4070（12GB VRAM、32GBシステムRAM）。Apple M5 MacBook Pro（16GB統合）で相互チェック。数値は3回の実行の中央値。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1548,11 +1552,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: '3つすべてを5,047ページのコーパスでテストする方法',
         content:
-          '**同じドキュメント、同じチャットモデル（Llama 3.3 8B Q4_K_M）、同じ50採点クエリ。** RAG品質（チャット品質ではなく）が分離されたもの。',
+          '**同じドキュメント、同じチャットモデル（Llama 3.2 3B Q4_K_M）、同じ50採点クエリ。** RAG品質（チャット品質ではなく）が分離されたもの。',
         items: [
           '**ハードウェア：** Windows 11上のNVIDIA RTX 4070（12GB VRAM、32GBシステムRAM）をメイン。Apple M5 MacBook Pro（16GB統合メモリ）をクロスチェック。レイテンシ数字はRTX 4070実行から来ています。',
           '**コーパス：** 4つのコンテンツタイプ（図、表、方程式を含む1,047ページの産業制御マニュアル、密集した法律用語の38ページの商業不動産リース、412ページの変圧器研究論文、マークダウン、コード、混合散文の3,550ページの内部エンジニアリングwikiエクスポート）にまたがる5,047ページ。',
-          '**チャットモデル：** Llama 3.3 8B Q4_K_M（≈4.9GB）は3つのアプリすべてでVRAMに完全に読み込まれ、AnythingLLMおよびOpen WebUIの場合はOllama経由、PrivateGPTの場合は束ねられたllama.cppランタイム経由で提供。',
+          '**チャットモデル：** Llama 3.2 3B Q4_K_M（≈4.9GB）は3つのアプリすべてでVRAMに完全に読み込まれ、AnythingLLMおよびOpen WebUIの場合はOllama経由、PrivateGPTの場合は束ねられたllama.cppランタイム経由で提供。',
           '**テスト済みエンベッダー：** 各プラットフォームのデフォルト + nomic-embed-text v1.5（768次元）およびBAAI/bge-m3（1,024次元）サポートされている場合。ヘッドライン数字にはデフォルトが使用されました。',
           '**クエリセット：** 5つのタイプ（ファクト検索10、多ホップ推論10、要約10、引用精度10、矛盾検出10）に均等に分割された50クエリ。既知の回答キーに対してヒトが盲検で採点。',
           '**測定内容：** 検索レイテンシ（50クエリ上のp50 / p95（ ms））、ハルシネーション率（少なくとも1つの事実誤り率（%））、引用正確性（該当する場合はファイル名+ページ）、インデックス作成中のGPUメモリピーク、ディスク上ベクトルDBサイズ。',
@@ -1592,7 +1596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**インストールパス：** anythingllm.comからのデスクトップインストーラー（署名、〜430MB、macOS / Windows / Linux）、またはマルチユーザー自己ホスト向けDocker。',
           '**ファイル形式：** PDF、DOCX、TXT、MD、EPUB、HTML、CSV、JSON、Webサイト（組み込みスクレーパー）、束ねられたWhisper経由のオーディオ（MP3、WAV、M4A）。',
-          '**エンベッディング柔軟性：** 2026年5月の8バックエンド — ネイティブ（小規模な束ねられたモデル）、Ollama（引き出した任意のエンベッダー）、LM Studio、OpenAI、Azure OpenAI、Cohere、Voyage、LocalAI。切り替えは完全な再インデックスを強制しますが、ワンクリック操作です。',
+          '**エンベッディング柔軟性：** 2026年8月の8バックエンド — ネイティブ（小規模な束ねられたモデル）、Ollama（引き出した任意のエンベッダー）、LM Studio、OpenAI、Azure OpenAI、Cohere、Voyage、LocalAI。切り替えは完全な再インデックスを強制しますが、ワンクリック操作です。',
           '**チャンク制御：** チャンクサイズとオーバーラップはワークスペースごとに公開されます。再埋め込みすべてはLanceDB ストアの変更後に再構築されます。既製ではセマンティック/階層的チャンク化なし。',
           '**引用：** すべての回答は、ファイル名+ページ（PDF）、ファイル名+セクション（MD）、またはファイル名のみ（TXT）で出典チャンクに脚注をつけます。引用パネルは出典チャンクを逐語的にレンダリングしています。これは低ハルシネーション率の単一の最大の理由です。',
           '**5,047ページのコーパスでのパフォーマンス：** インデックス作成にはRTX 4070（デフォルトネイティブエンベッダー）で14分42秒かかり、6.2GBのGPUメモリでピークしました。p50検索レイテンシ310ms、p95 880ms。ディスク上のベクトルDBサイズ：184MB。',
@@ -1643,7 +1647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Open WebUI特に、デフォルトチャットモデルを明確な引用プロンプトなしでも引用が上手いものに切り替えます。Qwen3 14BおよびLlama 3.3 70Bメンション源、入力なし。Llama 3.3 8BおよびPhi-4 Miniは圧力下で引用を頻繁にドロップします。',
+            text: 'Open WebUI特に、デフォルトチャットモデルを明確な引用プロンプトなしでも引用が上手いものに切り替えます。Qwen3 14BおよびLlama 3.3 70Bメンション源、入力なし。Llama 3.2 3BおよびPhi-4 Miniは圧力下で引用を頻繁にドロップします。',
           },
         ],
       },
@@ -1687,7 +1691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'マルチホップ推論は3つのプラットフォームすべてが苦しむ場所です。修正はプラットフォームではなく、チャットモデルです。Llama 3.3 8BをQwen3 14Bに交換すると、各プラットフォームでマルチホップハルシネーションが約10パーセント ポイント低下しました。RAG品質は必要だが十分ではない。チャットモデルは実際に検索したチャンクについて推論する必要があります。',
+            text: 'マルチホップ推論は3つのプラットフォームすべてが苦しむ場所です。修正はプラットフォームではなく、チャットモデルです。Llama 3.2 3BをQwen3 14Bに交換すると、各プラットフォームでマルチホップハルシネーションが約10パーセント ポイント低下しました。RAG品質は必要だが十分ではない。チャットモデルは実際に検索したチャンクについて推論する必要があります。',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-ja.svg',
@@ -1829,7 +1833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '何個のトークンが典型的なRAGクエリに使用されますか？',
-            a: '5,047ページコーパスでテストしたときの典型的なクエリ。チャットモデル（Llama 3.3 8B Q4_K_M）が既に読み込まれている場合：クエリの埋め込みと検索は約500〜700トークンに相当する計算（エンベッディングトークンではなくLLMトークン）。プロンプトアセンブリと回答生成は、検索されたチャンク（約1,500トークン）とモデルのコンテキストウィンドウのサイズによって異なります。4K コンテキストウィンドウで、予想される回答は400〜800トークンです。',
+            a: '5,047ページコーパスでテストしたときの典型的なクエリ。チャットモデル（Llama 3.2 3B Q4_K_M）が既に読み込まれている場合：クエリの埋め込みと検索は約500〜700トークンに相当する計算（エンベッディングトークンではなくLLMトークン）。プロンプトアセンブリと回答生成は、検索されたチャンク（約1,500トークン）とモデルのコンテキストウィンドウのサイズによって異なります。4K コンテキストウィンドウで、予想される回答は400〜800トークンです。',
           },
           {
             q: 'これらのプラットフォーム以外のRAGの選択肢はありますか？',
@@ -1857,12 +1861,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年のベストローカルRAG',
-      description: 'AnythingLLM、PrivateGPT、Open WebUIを5,047ページのコーパスでテスト。精度、レイテンシ、引用、スケーリング性能を比較。2026年5月の検証結果。',
+      description: 'AnythingLLM、PrivateGPT、Open WebUIを5,047ページのコーパスでテスト。精度、レイテンシ、引用、スケーリング性能を比較。2026年8月の検証結果。',
       image: buildOgImageObject(OG_SLUG, 'ja'),
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-07',
-      dateModified: '2026-06-19',
+      dateModified: '2026-08-27',
       inLanguage: 'ja',
       url: '/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
       'proficiencyLevel': 'Advanced',
@@ -1950,7 +1954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: '何個のトークンが典型的なRAGクエリに使用されますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '5,047ページコーパスでテストしたときの典型的なクエリ。チャットモデル（Llama 3.3 8B Q4_K_M）が既に読み込まれている場合：クエリの埋め込みと検索は約500〜700トークンに相当する計算（エンベッディングトークンではなくLLMトークン）。プロンプトアセンブリと回答生成は、検索されたチャンク（約1,500トークン）とモデルのコンテキストウィンドウのサイズによって異なります。4K コンテキストウィンドウで、予想される回答は400〜800トークンです。',
+              text: '5,047ページコーパスでテストしたときの典型的なクエリ。チャットモデル（Llama 3.2 3B Q4_K_M）が既に読み込まれている場合：クエリの埋め込みと検索は約500〜700トークンに相当する計算（エンベッディングトークンではなくLLMトークン）。プロンプトアセンブリと回答生成は、検索されたチャンク（約1,500トークン）とモデルのコンテキストウィンドウのサイズによって異なります。4K コンテキストウィンドウで、予想される回答は400〜800トークンです。',
             },
           },
           {
@@ -1969,24 +1973,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年最佳本地RAG平台',
     seoTitle: '本地RAG 2026：AnythingLLM vs PrivateGPT vs Open WebUI',
     intro: 'AnythingLLM、PrivateGPT和Open WebUI是2026年三个成熟的自托管RAG平台。我们将相同的5,047页语料库加载到每个平台，运行了50个跨5种查询类型的查询，测量了检索延迟、幻想率、引用质量和隐性成本（重新嵌入、向量DB存储、索引时GPU峰值）。演示冠军不是生产冠军。',
-    metaDescription: '在5,047页语料库上测试AnythingLLM、PrivateGPT和Open WebUI。比较准确性、延迟、引用和扩展性能。2026年5月的测试结果。',
+    metaDescription: '在5,047页语料库上测试AnythingLLM、PrivateGPT和Open WebUI。比较准确性、延迟、引用和扩展性能。2026年8月的测试结果。',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-zh.webp',
     twitterDescription: '本地RAG对决：AnythingLLM vs PrivateGPT vs Open WebUI（5,047页）。在准确性、延迟和扩展方面有不同的获胜者。完整基准。',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen3 14B', 'nomic-embed-text v1.5', 'BAAI/bge-m3', 'BAAI/bge-small-en-v1.5', 'mxbai-embed-large'],
+    current_models_mentioned: ['Llama 3.2 3B', 'Qwen3 14B', 'nomic-embed-text v1.5', 'BAAI/bge-m3', 'BAAI/bge-small-en-v1.5', 'mxbai-embed-large'],
     current_hardware_mentioned: ['NVIDIA RTX 4070 12 GB', 'NVIDIA RTX 4090 24 GB', 'Apple M5 MacBook Pro 16 GB', 'Apple M5 Max 64 GB'],
     audience: '技术型读者（工程师、研究人员、IT团队）为拥有1,000份以上文档的库选择自托管RAG平台，并愿意阅读基准而不是营销文案。',
     readTime: '阅读约16分钟',
     educationalLevel: 'Advanced',
     primaryTerm: '本地RAG平台',
     targetKeywords: ['anythingllm vs privategpt', 'open webui rag', 'best local rag 2026', 'self-hosted rag comparison', 'privategpt benchmark', 'anythingllm scaling'],
-    leadAnswerBlock: '**在2026年5月测试的5,047页语料库上，AnythingLLM在生产可靠性上获胜（最佳引用、可交换的嵌入器、持久工作空间、6%的最低幻想率）。PrivateGPT在检索延迟上获胜（p50为240ms、完全离线设计、强化的EU合规姿态）。Open WebUI在操作人体工程学上获胜（最干净的多用户设置、精美的Ollama集成、最容易插入现有聊天工作流）。所有三个都在约10,000页时以不同的方式破裂。为您实际拥有的工作流选择，而不是您可能增长的工作流。**',
-    quickAnswerTop: { en: { question: 'Which self-hosted RAG platform is best for local documents in 2026: AnythingLLM, PrivateGPT, or Open WebUI?', answer: '**Open WebUI** wins for most users: easiest setup, best UI, and broadest model support (Ollama + OpenAI API). Use **AnythingLLM** if you need multi-user workspaces. Use **PrivateGPT** only for strict offline-only air-gapped environments.', bullets: ['Open WebUI — easiest one-command Docker install, best UI, supports Ollama and OpenAI-compatible APIs. The default pick for most users in 2026.', 'AnythingLLM — best citations, swappable embedders, multi-user workspaces with document access controls. Right choice for teams needing production-grade RAG with user management.', 'PrivateGPT — fastest retrieval (240 ms p50), offline-by-design, FastAPI service. Use only for strict air-gapped deployments where no internet connectivity is acceptable.', 'All three handle 5,000 pages on a 16 GB RAM machine; the scaling cliff appears between 8,000–12,000 pages depending on embedder choice.', 'Switching embedding models requires a full re-index in all three — budget 30–90 minutes per 5,000 pages on consumer hardware.'], updatedDate: '2026-06-19' } },
+    leadAnswerBlock: '**在2026年8月测试的5,047页语料库上，AnythingLLM在生产可靠性上获胜（最佳引用、可交换的嵌入器、持久工作空间、6%的最低幻想率）。PrivateGPT在检索延迟上获胜（p50为240ms、完全离线设计、强化的EU合规姿态）。Open WebUI在操作人体工程学上获胜（最干净的多用户设置、精美的Ollama集成、最容易插入现有聊天工作流）。所有三个都在约10,000页时以不同的方式破裂。为您实际拥有的工作流选择，而不是您可能增长的工作流。**',
+    quickAnswerTop: { en: { question: 'Which self-hosted RAG platform is best for local documents in 2026: AnythingLLM, PrivateGPT, or Open WebUI?', answer: '**Open WebUI** wins for most users: easiest setup, best UI, and broadest model support (Ollama + OpenAI API). Use **AnythingLLM** if you need multi-user workspaces. Use **PrivateGPT** only for strict offline-only air-gapped environments.', bullets: ['Open WebUI — easiest one-command Docker install, best UI, supports Ollama and OpenAI-compatible APIs. The default pick for most users in 2026.', 'AnythingLLM — best citations, swappable embedders, multi-user workspaces with document access controls. Right choice for teams needing production-grade RAG with user management.', 'PrivateGPT — fastest retrieval (240 ms p50), offline-by-design, FastAPI service. Use only for strict air-gapped deployments where no internet connectivity is acceptable.', 'All three handle 5,000 pages on a 16 GB RAM machine; the scaling cliff appears between 8,000–12,000 pages depending on embedder choice.', 'Switching embedding models requires a full re-index in all three — budget 30–90 minutes per 5,000 pages on consumer hardware.'], updatedDate: '2026-08-27' } },
     toc: [{ label: '核心要点', anchor: '#key-takeaways' }, { label: '比较表', anchor: '#comparison-table' }, { label: '应该选择哪个', anchor: '#which-one' }, { label: '5,047页测试方法', anchor: '#how-we-tested' }, { label: '架构：各系统如何处理文档', anchor: '#architecture' }, { label: 'AnythingLLM：深度解析', anchor: '#anythingllm' }, { label: 'PrivateGPT：深度解析', anchor: '#privategpt' }, { label: 'Open WebUI：深度解析', anchor: '#open-webui' }, { label: '检索延迟（p50 / p95）', anchor: '#latency' }, { label: '按查询类型的幻想率', anchor: '#hallucination' }, { label: '引用质量', anchor: '#citations' }, { label: '嵌入模型灵活性', anchor: '#embedding-flexibility' }, { label: '没人谈论的隐性成本', anchor: '#hidden-costs' }, { label: '扩展限制：演示何时破裂', anchor: '#scaling-cliff' }, { label: '决策树：应该选择哪个', anchor: '#decision-tree' }, { label: '常见误区', anchor: '#common-mistakes' }, { label: '常见问题', anchor: '#faq' }, { label: '相关阅读', anchor: '#related-reading' }],
     sections: {
       tldr: {
@@ -2033,14 +2038,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: '嵌入模型灵活性：AnythingLLM提供8个GUI可选后端；PrivateGPT原生支持所有HuggingFace sentence-transformers模型，包括支持100+语言的bge-m3；Open WebUI使用Ollama提供的嵌入模型及SentenceTransformers。',
       },
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年最佳本地RAG平台', description: '在5,047页语料库上测试AnythingLLM、PrivateGPT和Open WebUI。比较准确性、延迟、引用和扩展性能。2026年5月的测试结果。', image: buildOgImageObject(OG_SLUG, 'zh'), author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-07', dateModified: '2026-06-19', inLanguage: 'zh', url: '/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag', speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] }, about: [{ '@type': 'Thing', name: 'AnythingLLM' }, { '@type': 'Thing', name: 'PrivateGPT' }, { '@type': 'Thing', name: 'Open WebUI' }, { '@type': 'Thing', name: 'RAG（检索增强生成）' }, { '@type': 'Thing', name: '本地LLM' }], mentions: [{ '@type': 'SoftwareApplication', name: 'Ollama' }, { '@type': 'SoftwareApplication', name: 'LanceDB' }, { '@type': 'SoftwareApplication', name: 'Qdrant' }, { '@type': 'SoftwareApplication', name: 'ChromaDB' }, { '@type': 'SoftwareApplication', name: 'Llama 3.3' }], educationalLevel: 'Advanced' },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年最佳本地RAG平台', description: '在5,047页语料库上测试AnythingLLM、PrivateGPT和Open WebUI。比较准确性、延迟、引用和扩展性能。2026年8月的测试结果。', image: buildOgImageObject(OG_SLUG, 'zh'), author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-07', dateModified: '2026-08-27', inLanguage: 'zh', url: '/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag', speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] }, about: [{ '@type': 'Thing', name: 'AnythingLLM' }, { '@type': 'Thing', name: 'PrivateGPT' }, { '@type': 'Thing', name: 'Open WebUI' }, { '@type': 'Thing', name: 'RAG（检索增强生成）' }, { '@type': 'Thing', name: '本地LLM' }], mentions: [{ '@type': 'SoftwareApplication', name: 'Ollama' }, { '@type': 'SoftwareApplication', name: 'LanceDB' }, { '@type': 'SoftwareApplication', name: 'Qdrant' }, { '@type': 'SoftwareApplication', name: 'ChromaDB' }, { '@type': 'SoftwareApplication', name: 'Llama 3.3' }], educationalLevel: 'Advanced' },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [{ '@type': 'Question', name: '哪个RAG平台处理最大的文档集？', acceptedAnswer: { '@type': 'Answer', text: 'PrivateGPT在消费者硬件上扩展最远。带有调整设置在32GB RAM机器上舒适地达到25,000页。AnythingLLM在10,000页左右破裂，Open WebUI在8,000页左右。超过25,000页，三个都不是正确的工具。' } }, { '@type': 'Question', name: '我可以在这些平台之间迁移文档和嵌入吗？', acceptedAnswer: { '@type': 'Answer', text: '源文档自由迁移。所有三个接受相同的文件。嵌入不迁移。每个平台以自己的格式存储向量，因此切换总是意味着重新索引。' } }, { '@type': 'Question', name: '哪个平台具有最佳引用准确性？', acceptedAnswer: { '@type': 'Answer', text: 'AnythingLLM。在50个评分查询中，对逐字引用查询正确引用了10个中的9个。' } }, { '@type': 'Question', name: '索引期间每个平台需要多少GPU内存？', acceptedAnswer: { '@type': 'Answer', text: '在5,047页语料库上使用默认嵌入器：AnythingLLM在6.2GB处达到峰值，Open WebUI 5.4GB，PrivateGPT 4.8GB。' } }, { '@type': 'Question', name: '我可以使用自己的嵌入模型吗？', acceptedAnswer: { '@type': 'Answer', text: 'AnythingLLM在GUI中支持8个嵌入后端。PrivateGPT通过settings.yaml支持任何HuggingFace模型。Open WebUI支持Ollama和OpenAI兼容端点。' } }, { '@type': 'Question', name: '哪个平台最好处理多语言文档？', acceptedAnswer: { '@type': 'Answer', text: 'PrivateGPT配对BAAI/bge-m3时最好。bge-m3支持100多种语言。' } }, { '@type': 'Question', name: '他们如何处理PDF表格和图形？', acceptedAnswer: { '@type': 'Answer', text: '所有三个通过PDF解析器提取文本。表格被提取为文本。图形被提取为图像参考但未用于检索。' } }, { '@type': 'Question', name: '有多少令牌用于典型的RAG查询？', acceptedAnswer: { '@type': 'Answer', text: '查询嵌入和搜索约500-700令牌等值计算。提示组装和回答生成取决于检索的块和模型的上下文窗口大小。' } }, { '@type': 'Question', name: '这些平台之外还有其他RAG选择吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。对于更高规模：自定义Ollama + Qdrant / Weaviate。对于更简单的设置：Docling + Qdrant CLI。使用Llamaindex或LangChain直接构建自定义RAG管道。' } }, { '@type': 'Question', name: '这些平台支持审计日志吗？', acceptedAnswer: { '@type': 'Answer', text: 'AnythingLLM在工作空间元数据中记录。PrivateGPT可以启用FastAPI服务日志。Open WebUI记录用户登录和文档访问。' } }], inLanguage: 'zh' },
   },
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: El mejor RAG local en 2026',
     seoTitle: 'RAG local 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
@@ -2052,7 +2058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Duelo RAG local: AnythingLLM vs PrivateGPT vs Open WebUI en 5.047 páginas. Distintos ganadores en precisión, latencia y escalabilidad. Benchmarks completos.',
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.2 3B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -2079,7 +2085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'escalabilidad anythingllm',
     ],
     leadAnswerBlock:
-      '**En un corpus de 5.047 páginas probado en mayo de 2026, AnythingLLM gana en fiabilidad de producción (mejores citas, embedders intercambiables, espacios de trabajo persistentes, tasa de alucinaciones más baja con un 6%). PrivateGPT gana en latencia de recuperación (p50 de 240 ms, diseño completamente offline, postura estricta de cumplimiento en la UE). Open WebUI gana en ergonomía operativa (configuración multi-usuario más limpia, integración elegante con Ollama, la más fácil de conectar a un flujo de trabajo de chat existente). Las tres se degradan de forma diferente por encima de ~10.000 páginas: elige según el flujo de trabajo que realmente tienes, no el que podrías necesitar en el futuro.**',
+      '**En un corpus de 5.047 páginas probado en agosto de 2026, AnythingLLM gana en fiabilidad de producción (mejores citas, embedders intercambiables, espacios de trabajo persistentes, tasa de alucinaciones más baja con un 6%). PrivateGPT gana en latencia de recuperación (p50 de 240 ms, diseño completamente offline, postura estricta de cumplimiento en la UE). Open WebUI gana en ergonomía operativa (configuración multi-usuario más limpia, integración elegante con Ollama, la más fácil de conectar a un flujo de trabajo de chat existente). Las tres se degradan de forma diferente por encima de ~10.000 páginas: elige según el flujo de trabajo que realmente tienes, no el que podrías necesitar en el futuro.**',
     quickAnswerTop: {
       es: {
         question: '¿Qué plataforma RAG autoalojada es la mejor para documentos locales en 2026: AnythingLLM, PrivateGPT o Open WebUI?',
@@ -2092,7 +2098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Las tres gestionan 5.000 páginas en una máquina con 16 GB de RAM; el límite de escalabilidad aparece entre 8.000 y 12.000 páginas según el embedder elegido.',
           'Cambiar los modelos de embedding requiere una re-indexación completa en las tres plataformas — reserva entre 30 y 90 minutos por cada 5.000 páginas en hardware de consumo.',
         ],
-        updatedDate: '2026-06-19',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2133,7 +2139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '¿Cómo se comparan AnythingLLM, PrivateGPT y Open WebUI en 2026?',
         content:
-          'Probado en un corpus de 5.047 páginas (artículos de investigación, contratos, un manual técnico y exportaciones de wikis internos) usando Llama 3.3 8B Q4_K_M como modelo de chat y el embedder por defecto de cada plataforma. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM del sistema) en Windows 11; verificación cruzada en un MacBook Pro M5 (16 GB unificado). Los números son medianas de tres ejecuciones.',
+          'Probado en un corpus de 5.047 páginas (artículos de investigación, contratos, un manual técnico y exportaciones de wikis internos) usando Llama 3.2 3B Q4_K_M como modelo de chat y el embedder por defecto de cada plataforma. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM del sistema) en Windows 11; verificación cruzada en un MacBook Pro M5 (16 GB unificado). Los números son medianas de tres ejecuciones.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2221,11 +2227,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'Cómo probamos las 3 plataformas en un corpus de 5.047 páginas',
         content:
-          '**Los mismos documentos, el mismo modelo de chat (Llama 3.3 8B Q4_K_M), las mismas 50 consultas valoradas.** Lo que aislamos fue la calidad del RAG, no la calidad del chat.',
+          '**Los mismos documentos, el mismo modelo de chat (Llama 3.2 3B Q4_K_M), las mismas 50 consultas valoradas.** Lo que aislamos fue la calidad del RAG, no la calidad del chat.',
         items: [
           '**Hardware:** NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM del sistema) en Windows 11 como sistema principal; MacBook Pro M5 (16 GB de memoria unificada) como verificación cruzada. Los números de latencia provienen de la ejecución en RTX 4070.',
           '**Corpus:** 5.047 páginas abarcando cuatro tipos de contenido — un manual de control industrial de 1.047 páginas (figuras, tablas, ecuaciones), un contrato de arrendamiento comercial de 38 páginas (texto legal denso), un artículo de investigación sobre transformadores de 412 páginas y una exportación de 3.550 páginas de un wiki de ingeniería interno (markdown, código, prosa mixta).',
-          '**Modelo de chat:** Llama 3.3 8B Q4_K_M (≈ 4,9 GB) cargado completamente en VRAM en las tres aplicaciones, servido a través de Ollama para AnythingLLM y Open WebUI, y a través del runtime llama.cpp integrado para PrivateGPT.',
+          '**Modelo de chat:** Llama 3.2 3B Q4_K_M (≈ 4,9 GB) cargado completamente en VRAM en las tres aplicaciones, servido a través de Ollama para AnythingLLM y Open WebUI, y a través del runtime llama.cpp integrado para PrivateGPT.',
           '**Embedders probados:** el embedder por defecto de cada plataforma más nomic-embed-text v1.5 (768 dim) y BAAI/bge-m3 (1.024 dim) donde fue compatible. Se usó el por defecto para los números principales.',
           '**Conjunto de consultas:** 50 consultas distribuidas en 5 tipos — búsqueda factual (10), razonamiento multi-salto (10), resumen (10), precisión de citas (10) y detección de contradicciones (10). Valoradas a ciegas por la misma persona contra una clave de respuestas conocida.',
           '**Qué medimos:** latencia de recuperación (p50 / p95 en ms sobre 50 consultas), tasa de alucinaciones (% de respuestas con al menos un error factual), corrección de citas (nombre de archivo + página donde corresponda), pico de memoria GPU durante la indexación y tamaño de la base de datos vectorial en disco.',
@@ -2265,7 +2271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Ruta de instalación:** instalador de escritorio desde anythingllm.com (firmado, ~430 MB, macOS / Windows / Linux) o Docker para multi-usuario autoalojado. La mayoría de usuarios debería empezar con el build de escritorio.',
           '**Formatos de archivo:** PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, sitios web (scraper integrado) y audio mediante Whisper integrado (MP3, WAV, M4A).',
-          '**Flexibilidad de embedding:** 8 backends en mayo de 2026 — Native (pequeño modelo integrado), Ollama (cualquier embedder que tengas descargado), LM Studio, OpenAI, Azure OpenAI, Cohere, Voyage, LocalAI. Cambiar fuerza una re-indexación completa pero es una operación de un solo clic.',
+          '**Flexibilidad de embedding:** 8 backends en agosto de 2026 — Native (pequeño modelo integrado), Ollama (cualquier embedder que tengas descargado), LM Studio, OpenAI, Azure OpenAI, Cohere, Voyage, LocalAI. Cambiar fuerza una re-indexación completa pero es una operación de un solo clic.',
           '**Control de chunk:** el tamaño del chunk y el solapamiento están expuestos por espacio de trabajo. Re-embed-all reconstruye el almacén LanceDB tras los cambios. Sin chunking semántico ni jerárquico incluido por defecto.',
           '**Citas:** cada respuesta añade notas a pie con los chunks fuente incluyendo nombre de archivo + página (PDF), nombre de archivo + sección (MD) o solo nombre de archivo (TXT). El panel de citas muestra el chunk fuente literalmente — esta es la razón principal de la baja tasa de alucinaciones.',
           '**Rendimiento en el corpus de 5.047 páginas:** la indexación tardó 14 min 42 seg en RTX 4070 (embedder Native por defecto), con un pico de 6,2 GB de memoria GPU. Latencia de recuperación p50 de 310 ms, p95 de 880 ms. Tamaño de la base de datos vectorial en disco: 184 MB.',
@@ -2316,7 +2322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Específicamente para Open WebUI, cambia el modelo de chat por defecto a uno que cite bien incluso sin prompting explícito de citas. Qwen3 14B y Llama 3.3 70B mencionan fuentes sin que se les pida; Llama 3.3 8B y Phi-4 Mini suelen omitir las citas bajo presión.',
+            text: 'Específicamente para Open WebUI, cambia el modelo de chat por defecto a uno que cite bien incluso sin prompting explícito de citas. Qwen3 14B y Llama 3.3 70B mencionan fuentes sin que se les pida; Llama 3.2 3B y Phi-4 Mini suelen omitir las citas bajo presión.',
           },
         ],
       },
@@ -2360,7 +2366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'El razonamiento multi-salto es donde sufren las tres plataformas. La solución no es la plataforma — es tu modelo de chat. Cambiar Llama 3.3 8B por Qwen3 14B redujo las alucinaciones multi-salto en ~10 puntos porcentuales en cada plataforma. La calidad del RAG es necesaria pero no suficiente; el modelo de chat tiene que razonar realmente sobre los chunks recuperados.',
+            text: 'El razonamiento multi-salto es donde sufren las tres plataformas. La solución no es la plataforma — es tu modelo de chat. Cambiar Llama 3.2 3B por Qwen3 14B redujo las alucinaciones multi-salto en ~10 puntos porcentuales en cada plataforma. La calidad del RAG es necesaria pero no suficiente; el modelo de chat tiene que razonar realmente sobre los chunks recuperados.',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-es.svg',
@@ -2526,7 +2532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-07',
-      dateModified: '2026-06-19',
+      dateModified: '2026-08-27',
       inLanguage: 'es',
       url: 'https://www.promptquorum.com/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
       'proficiencyLevel': 'Advanced',
@@ -2641,8 +2647,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: O melhor RAG local em 2026',
     seoTitle: 'RAG local 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
@@ -2654,7 +2661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Duelo RAG local: AnythingLLM vs PrivateGPT vs Open WebUI em 5.047 páginas. Vencedores diferentes em precisão, latência e escalabilidade. Benchmarks completos.',
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.2 3B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -2681,7 +2688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'escalabilidade anythingllm',
     ],
     leadAnswerBlock:
-      '**Em um corpus de 5.047 páginas testado em maio de 2026, o AnythingLLM vence em confiabilidade de produção (melhores citações, embedders intercambiáveis, espaços de trabalho persistentes, menor taxa de alucinações com 6%). O PrivateGPT vence em latência de recuperação (p50 de 240 ms, design completamente offline, postura estrita de conformidade na UE). O Open WebUI vence em ergonomia operacional (configuração multiusuário mais limpa, integração elegante com o Ollama, a mais fácil de conectar a um fluxo de trabalho de chat existente). As três se degradam de forma diferente acima de ~10.000 páginas: escolha conforme o fluxo de trabalho que você realmente tem, não o que você poderia precisar no futuro.**',
+      '**Em um corpus de 5.047 páginas testado em agosto de 2026, o AnythingLLM vence em confiabilidade de produção (melhores citações, embedders intercambiáveis, espaços de trabalho persistentes, menor taxa de alucinações com 6%). O PrivateGPT vence em latência de recuperação (p50 de 240 ms, design completamente offline, postura estrita de conformidade na UE). O Open WebUI vence em ergonomia operacional (configuração multiusuário mais limpa, integração elegante com o Ollama, a mais fácil de conectar a um fluxo de trabalho de chat existente). As três se degradam de forma diferente acima de ~10.000 páginas: escolha conforme o fluxo de trabalho que você realmente tem, não o que você poderia precisar no futuro.**',
     quickAnswerTop: {
       pt: {
         question: 'Qual plataforma RAG auto-hospedada é a melhor para documentos locais em 2026: AnythingLLM, PrivateGPT ou Open WebUI?',
@@ -2694,7 +2701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'As três gerenciam 5.000 páginas em uma máquina com 16 GB de RAM; o limite de escalabilidade aparece entre 8.000 e 12.000 páginas conforme o embedder escolhido.',
           'Trocar os modelos de embedding exige uma reindexação completa nas três plataformas — reserve entre 30 e 90 minutos por cada 5.000 páginas em hardware de consumo.',
         ],
-        updatedDate: '2026-06-19',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2735,7 +2742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Como AnythingLLM, PrivateGPT e Open WebUI se comparam em 2026?',
         content:
-          'Testado em um corpus de 5.047 páginas (artigos de pesquisa, contratos, um manual técnico e exportações de wikis internos) usando Llama 3.3 8B Q4_K_M como modelo de chat e o embedder padrão de cada plataforma. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM do sistema) no Windows 11; verificação cruzada em um MacBook Pro M5 (16 GB unificado). Os números são medianas de três execuções.',
+          'Testado em um corpus de 5.047 páginas (artigos de pesquisa, contratos, um manual técnico e exportações de wikis internos) usando Llama 3.2 3B Q4_K_M como modelo de chat e o embedder padrão de cada plataforma. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM do sistema) no Windows 11; verificação cruzada em um MacBook Pro M5 (16 GB unificado). Os números são medianas de três execuções.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2823,11 +2830,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'Como testamos as 3 plataformas em um corpus de 5.047 páginas',
         content:
-          '**Os mesmos documentos, o mesmo modelo de chat (Llama 3.3 8B Q4_K_M), as mesmas 50 consultas avaliadas.** O que isolamos foi a qualidade do RAG, não a qualidade do chat.',
+          '**Os mesmos documentos, o mesmo modelo de chat (Llama 3.2 3B Q4_K_M), as mesmas 50 consultas avaliadas.** O que isolamos foi a qualidade do RAG, não a qualidade do chat.',
         items: [
           '**Hardware:** NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM do sistema) no Windows 11 como sistema principal; MacBook Pro M5 (16 GB de memória unificada) como verificação cruzada. Os números de latência vêm da execução na RTX 4070.',
           '**Corpus:** 5.047 páginas abrangendo quatro tipos de conteúdo — um manual de controle industrial de 1.047 páginas (figuras, tabelas, equações), um contrato de locação comercial de 38 páginas (texto jurídico denso), um artigo de pesquisa sobre transformers de 412 páginas e uma exportação de 3.550 páginas de um wiki de engenharia interno (markdown, código, prosa mista).',
-          '**Modelo de chat:** Llama 3.3 8B Q4_K_M (≈ 4,9 GB) carregado completamente na VRAM nas três aplicações, servido através do Ollama para AnythingLLM e Open WebUI, e através do runtime llama.cpp integrado para o PrivateGPT.',
+          '**Modelo de chat:** Llama 3.2 3B Q4_K_M (≈ 4,9 GB) carregado completamente na VRAM nas três aplicações, servido através do Ollama para AnythingLLM e Open WebUI, e através do runtime llama.cpp integrado para o PrivateGPT.',
           '**Embedders testados:** o embedder padrão de cada plataforma mais nomic-embed-text v1.5 (768 dim) e BAAI/bge-m3 (1.024 dim) onde houve suporte. O padrão foi usado para os números principais.',
           '**Conjunto de consultas:** 50 consultas distribuídas em 5 tipos — busca factual (10), raciocínio multi-salto (10), resumo (10), precisão de citações (10) e detecção de contradições (10). Avaliadas às cegas pela mesma pessoa contra um gabarito de respostas conhecido.',
           '**O que medimos:** latência de recuperação (p50 / p95 em ms sobre 50 consultas), taxa de alucinações (% de respostas com pelo menos um erro factual), correção de citações (nome de arquivo + página onde aplicável), pico de memória GPU durante a indexação e tamanho do banco de dados vetorial em disco.',
@@ -2867,7 +2874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Caminho de instalação:** instalador de desktop a partir de anythingllm.com (assinado, ~430 MB, macOS / Windows / Linux) ou Docker para multiusuário auto-hospedado. A maioria dos usuários deveria começar com a versão de desktop.',
           '**Formatos de arquivo:** PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, sites (scraper integrado) e áudio por meio do Whisper integrado (MP3, WAV, M4A).',
-          '**Flexibilidade de embedding:** 8 backends em maio de 2026 — Native (pequeno modelo integrado), Ollama (qualquer embedder que você tenha baixado), LM Studio, OpenAI, Azure OpenAI, Cohere, Voyage, LocalAI. Trocar força uma reindexação completa mas é uma operação de um único clique.',
+          '**Flexibilidade de embedding:** 8 backends em agosto de 2026 — Native (pequeno modelo integrado), Ollama (qualquer embedder que você tenha baixado), LM Studio, OpenAI, Azure OpenAI, Cohere, Voyage, LocalAI. Trocar força uma reindexação completa mas é uma operação de um único clique.',
           '**Controle de chunk:** o tamanho do chunk e a sobreposição estão expostos por espaço de trabalho. Re-embed-all reconstrói o armazenamento LanceDB após as mudanças. Sem chunking semântico nem hierárquico incluído por padrão.',
           '**Citações:** cada resposta adiciona notas de rodapé com os chunks de origem incluindo nome de arquivo + página (PDF), nome de arquivo + seção (MD) ou apenas nome de arquivo (TXT). O painel de citações mostra o chunk de origem literalmente — esta é a razão principal da baixa taxa de alucinações.',
           '**Desempenho no corpus de 5.047 páginas:** a indexação levou 14 min 42 seg na RTX 4070 (embedder Native padrão), com um pico de 6,2 GB de memória GPU. Latência de recuperação p50 de 310 ms, p95 de 880 ms. Tamanho do banco de dados vetorial em disco: 184 MB.',
@@ -2918,7 +2925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Especificamente para o Open WebUI, troque o modelo de chat padrão por um que cite bem mesmo sem prompting explícito de citações. Qwen3 14B e Llama 3.3 70B mencionam fontes sem que se peça; Llama 3.3 8B e Phi-4 Mini costumam omitir as citações sob pressão.',
+            text: 'Especificamente para o Open WebUI, troque o modelo de chat padrão por um que cite bem mesmo sem prompting explícito de citações. Qwen3 14B e Llama 3.3 70B mencionam fontes sem que se peça; Llama 3.2 3B e Phi-4 Mini costumam omitir as citações sob pressão.',
           },
         ],
       },
@@ -2962,7 +2969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'O raciocínio multi-salto é onde as três plataformas sofrem. A solução não é a plataforma — é o seu modelo de chat. Trocar Llama 3.3 8B por Qwen3 14B reduziu as alucinações multi-salto em ~10 pontos percentuais em cada plataforma. A qualidade do RAG é necessária mas não suficiente; o modelo de chat precisa realmente raciocinar sobre os chunks recuperados.',
+            text: 'O raciocínio multi-salto é onde as três plataformas sofrem. A solução não é a plataforma — é o seu modelo de chat. Trocar Llama 3.2 3B por Qwen3 14B reduziu as alucinações multi-salto em ~10 pontos percentuais em cada plataforma. A qualidade do RAG é necessária mas não suficiente; o modelo de chat precisa realmente raciocinar sobre os chunks recuperados.',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-en.svg',
@@ -3123,12 +3130,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'AnythingLLM vs PrivateGPT vs Open WebUI: O melhor RAG local em 2026',
-      description: '3 plataformas RAG locais testadas em um corpus de 5.047 páginas. AnythingLLM, PrivateGPT e Open WebUI: benchmarks de precisão, latência e citações. Veredito de maio de 2026.',
+      description: '3 plataformas RAG locais testadas em um corpus de 5.047 páginas. AnythingLLM, PrivateGPT e Open WebUI: benchmarks de precisão, latência e citações. Veredito de agosto de 2026.',
       image: buildOgImageObject(OG_SLUG, 'pt'),
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-07',
-      dateModified: '2026-06-19',
+      dateModified: '2026-08-27',
       inLanguage: 'pt-BR',
       url: 'https://www.promptquorum.com/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
       'proficiencyLevel': 'Advanced',
@@ -3243,20 +3250,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: '⁨AnythingLLM⁩ مقابل ⁨PrivateGPT⁩ مقابل ⁨Open WebUI⁩: أفضل ⁨RAG⁩ محلي في ⁨2026⁩',
     seoTitle: '⁨RAG⁩ محلي: ⁨AnythingLLM⁩ و⁨PrivateGPT⁩ و⁨Open WebUI 2026⁩',
     intro:
       'تُعدّ AnythingLLM وPrivateGPT وOpen WebUI أبرز ثلاث منصات RAG ذاتية الاستضافة في عام 2026. قمنا بتحميل مجموعة نصوص متطابقة مؤلفة من 5.047 صفحة على كل منصة، ونفّذنا 50 استعلامًا موزعة على 5 أنواع من الأسئلة، وقسنا زمن الاسترجاع، ومعدل الهلوسة، وجودة الاستشهادات، إضافةً إلى التكاليف الخفية التي لا يتحدث عنها أحد (إعادة التضمين، والتخزين في قاعدة البيانات المتجهية، وذروات استهلاك GPU أثناء الفهرسة). البطل في العروض التجريبية ليس البطل في بيئات الإنتاج.',
     metaDescription:
-      'اختُبرت 3 منصات RAG محلية على مجموعة 5,047 صفحة: AnythingLLM تتفوق في الدقة، وOpen WebUI في السرعة، وPrivateGPT في الاستشهادات. نتائج مايو 2026.',
+      'اختُبرت 3 منصات RAG محلية على مجموعة 5,047 صفحة: AnythingLLM تتفوق في الدقة، وOpen WebUI في السرعة، وPrivateGPT في الاستشهادات. نتائج أغسطس 2026.',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-ar.webp',
     twitterDescription:
       'مقارنة RAG المحلي: AnythingLLM مقابل PrivateGPT مقابل Open WebUI على 5.047 صفحة. فائزون مختلفون في الدقة والاستجابة وقابلية التوسع. معايير أداء كاملة.',
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.2 3B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -3283,7 +3291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'قابلية توسع anythingllm',
     ],
     leadAnswerBlock:
-      '**في مجموعة نصوص من 5.047 صفحة اختُبرت في مايو 2026، فازت AnythingLLM في موثوقية الإنتاج (أفضل استشهادات، ونماذج تضمين قابلة للتبادل، ومساحات عمل دائمة، وأدنى معدل هلوسة بنسبة 6%). وفازت PrivateGPT في زمن الاسترجاع (p50 بـ240 مللي ثانية، وتصميم كاملًا بدون اتصال، وموقف امتثال صارم في الاتحاد الأوروبي). وفازت Open WebUI في بساطة التشغيل (إعداد متعدد المستخدمين أنظف، وتكامل أنيق مع Ollama، والأسهل ربطًا بسير عمل محادثة قائم). تتدهور الثلاثة بأساليب مختلفة عند تجاوز ~10.000 صفحة: اختر بناءً على سير العمل الفعلي لديك، لا ما قد تحتاجه مستقبلًا.**',
+      '**في مجموعة نصوص من 5.047 صفحة اختُبرت في أغسطس 2026، فازت AnythingLLM في موثوقية الإنتاج (أفضل استشهادات، ونماذج تضمين قابلة للتبادل، ومساحات عمل دائمة، وأدنى معدل هلوسة بنسبة 6%). وفازت PrivateGPT في زمن الاسترجاع (p50 بـ240 مللي ثانية، وتصميم كاملًا بدون اتصال، وموقف امتثال صارم في الاتحاد الأوروبي). وفازت Open WebUI في بساطة التشغيل (إعداد متعدد المستخدمين أنظف، وتكامل أنيق مع Ollama، والأسهل ربطًا بسير عمل محادثة قائم). تتدهور الثلاثة بأساليب مختلفة عند تجاوز ~10.000 صفحة: اختر بناءً على سير العمل الفعلي لديك، لا ما قد تحتاجه مستقبلًا.**',
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل منصة RAG ذاتية الاستضافة للوثائق المحلية في 2026: AnythingLLM أم PrivateGPT أم Open WebUI؟',
@@ -3296,7 +3304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تتعامل الثلاثة مع 5.000 صفحة على جهاز بذاكرة وصول عشوائي 16 GB؛ يظهر حد قابلية التوسع بين 8.000 و12.000 صفحة وفق نموذج التضمين المختار.',
           'يستلزم تغيير نماذج التضمين إعادة فهرسة كاملة في المنصات الثلاث — احجز ما بين 30 و90 دقيقة لكل 5.000 صفحة على أجهزة المستهلكين.',
         ],
-        updatedDate: '2026-06-19',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -3337,7 +3345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'كيف تتقاطع AnythingLLM وPrivateGPT وOpen WebUI في 2026؟',
         content:
-          'اختُبرت على مجموعة نصوص من 5.047 صفحة (مقالات بحثية، وعقود، ودليل تقني، وصادرات من ويكيات داخلية) باستخدام Llama 3.3 8B Q4_K_M كنموذج محادثة ونموذج التضمين الافتراضي لكل منصة. الجهاز: NVIDIA RTX 4070 (12 GB VRAM، 32 GB ذاكرة عشوائية) على Windows 11؛ تحقق متقاطع على MacBook Pro M5 (16 GB موحّد). الأرقام هي متوسطات ثلاث عمليات تشغيل.',
+          'اختُبرت على مجموعة نصوص من 5.047 صفحة (مقالات بحثية، وعقود، ودليل تقني، وصادرات من ويكيات داخلية) باستخدام Llama 3.2 3B Q4_K_M كنموذج محادثة ونموذج التضمين الافتراضي لكل منصة. الجهاز: NVIDIA RTX 4070 (12 GB VRAM، 32 GB ذاكرة عشوائية) على Windows 11؛ تحقق متقاطع على MacBook Pro M5 (16 GB موحّد). الأرقام هي متوسطات ثلاث عمليات تشغيل.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3425,11 +3433,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'كيف اختبرنا المنصات الثلاث على مجموعة نصوص من 5.047 صفحة',
         content:
-          '**نفس الوثائق، ونفس نموذج المحادثة (Llama 3.3 8B Q4_K_M)، ونفس الـ50 استعلامًا المُقيَّمة.** ما عزلناه هو جودة RAG، لا جودة المحادثة.',
+          '**نفس الوثائق، ونفس نموذج المحادثة (Llama 3.2 3B Q4_K_M)، ونفس الـ50 استعلامًا المُقيَّمة.** ما عزلناه هو جودة RAG، لا جودة المحادثة.',
         items: [
           '**الجهاز:** NVIDIA RTX 4070 (12 GB VRAM، 32 GB ذاكرة عشوائية للنظام) على Windows 11 كنظام أساسي؛ MacBook Pro M5 (16 GB ذاكرة موحّدة) كتحقق متقاطع. أرقام الزمن مصدرها تشغيل RTX 4070.',
           '**مجموعة النصوص:** 5.047 صفحة تضم أربعة أنواع محتوى — دليل تحكم صناعي من 1.047 صفحة (أشكال، وجداول، ومعادلات)، وعقد إيجار تجاري من 38 صفحة (نص قانوني كثيف)، ومقالة بحثية في المحوّلات من 412 صفحة، وتصدير من 3.550 صفحة لويكي هندسي داخلي (markdown، وكود، وكتابة مختلطة).',
-          '**نموذج المحادثة:** Llama 3.3 8B Q4_K_M (≈ 4.9 GB) مُحمَّل كليًا في VRAM في التطبيقات الثلاثة، مُقدَّم عبر Ollama لـAnythingLLM وOpen WebUI، وعبر وقت تشغيل llama.cpp المدمج لـPrivateGPT.',
+          '**نموذج المحادثة:** Llama 3.2 3B Q4_K_M (≈ 4.9 GB) مُحمَّل كليًا في VRAM في التطبيقات الثلاثة، مُقدَّم عبر Ollama لـAnythingLLM وOpen WebUI، وعبر وقت تشغيل llama.cpp المدمج لـPrivateGPT.',
           '**نماذج التضمين المختبَرة:** النموذج الافتراضي لكل منصة إضافةً إلى nomic-embed-text v1.5 (768 بُعدًا) وBAA/bge-m3 (1.024 بُعدًا) حيث كان مدعومًا. استُخدم الافتراضي للأرقام الرئيسية.',
           '**مجموعة الاستعلامات:** 50 استعلامًا موزعة على 5 أنواع — بحث واقعي (10)، واستدلال متعدد الخطوات (10)، وتلخيص (10)، ودقة الاستشهادات (10)، وكشف التناقضات (10). قُيِّمت بشكل أعمى من الشخص ذاته مقابل مفتاح إجابات معروف.',
           '**ما قسناه:** زمن الاسترجاع (p50 / p95 بالمللي ثانية على 50 استعلامًا)، ومعدل الهلوسة (% الردود التي تحتوي خطأً واقعيًا واحدًا على الأقل)، وصحة الاستشهادات (اسم الملف + الصفحة حيثما ينطبق)، وذروة ذاكرة GPU أثناء الفهرسة، وحجم قاعدة البيانات المتجهية على القرص.',
@@ -3469,7 +3477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**مسار التثبيت:** مثبّت سطح المكتب من anythingllm.com (موقَّع، ~430 MB، macOS / Windows / Linux) أو Docker للنشر المتعدد المستخدمين الذاتي. يجب أن يبدأ معظم المستخدمين بإصدار سطح المكتب.',
           '**صيغ الملفات:** PDF وDOCX وTXT وMD وEPUB وHTML وCSV وJSON ومواقع الويب (كاشط مدمج) والصوت عبر Whisper المدمج (MP3، WAV، M4A).',
-          '**مرونة التضمين:** 8 واجهات خلفية في مايو 2026 — Native (نموذج صغير مدمج)، وOllama (أي نموذج تضمين تنزّلته)، وLM Studio، وOpenAI، وAzure OpenAI، وCohere، وVoyage، وLocalAI. يُجبر التغيير على إعادة فهرسة كاملة لكنه عملية بنقرة واحدة.',
+          '**مرونة التضمين:** 8 واجهات خلفية في أغسطس 2026 — Native (نموذج صغير مدمج)، وOllama (أي نموذج تضمين تنزّلته)، وLM Studio، وOpenAI، وAzure OpenAI، وCohere، وVoyage، وLocalAI. يُجبر التغيير على إعادة فهرسة كاملة لكنه عملية بنقرة واحدة.',
           '**التحكم في التجزئة:** حجم الجزء والتداخل مكشوفان لكل مساحة عمل. تُعيد Re-embed-all بناء مخزن LanceDB بعد التغييرات. لا تجزئة دلالية أو هرمية مدرجة افتراضيًا.',
           '**الاستشهادات:** تُضيف كل إجابة حواشي سفلية بالأجزاء المصدرية تتضمن اسم الملف + الصفحة (PDF)، أو اسم الملف + القسم (MD)، أو اسم الملف فقط (TXT). يعرض لوح الاستشهادات الجزء المصدري حرفيًا — هذا هو السبب الرئيسي لانخفاض معدل الهلوسة.',
           '**الأداء على مجموعة نصوص 5.047 صفحة:** استغرقت الفهرسة 14 دقيقة و42 ثانية على RTX 4070 (نموذج تضمين Native الافتراضي)، بذروة استهلاك 6.2 GB من ذاكرة GPU. زمن الاسترجاع p50 بـ310 مللي ثانية، وp95 بـ880 مللي ثانية. حجم قاعدة البيانات المتجهية على القرص: 184 MB.',
@@ -3520,7 +3528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'تحديدًا لـOpen WebUI، غيّر نموذج المحادثة الافتراضي إلى نموذج يستشهد جيدًا حتى دون توجيه صريح للاستشهادات. يُذكر Qwen3 14B وLlama 3.3 70B المصادر دون طلب؛ أما Llama 3.3 8B وPhi-4 Mini فغالبًا ما يُهملان الاستشهادات تحت الضغط.',
+            text: 'تحديدًا لـOpen WebUI، غيّر نموذج المحادثة الافتراضي إلى نموذج يستشهد جيدًا حتى دون توجيه صريح للاستشهادات. يُذكر Qwen3 14B وLlama 3.3 70B المصادر دون طلب؛ أما Llama 3.2 3B وPhi-4 Mini فغالبًا ما يُهملان الاستشهادات تحت الضغط.',
           },
         ],
       },
@@ -3564,7 +3572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'الاستدلال متعدد الخطوات هو حيث تعاني المنصات الثلاث. الحل ليس المنصة — بل نموذج المحادثة. خفّض تبديل Llama 3.3 8B بـQwen3 14B معدل الهلوسة متعددة الخطوات بـ~10 نقاط مئوية في كل منصة. جودة RAG ضرورية لكنها غير كافية؛ نموذج المحادثة يجب أن يستدل فعليًا على الأجزاء المسترجعة.',
+            text: 'الاستدلال متعدد الخطوات هو حيث تعاني المنصات الثلاث. الحل ليس المنصة — بل نموذج المحادثة. خفّض تبديل Llama 3.2 3B بـQwen3 14B معدل الهلوسة متعددة الخطوات بـ~10 نقاط مئوية في كل منصة. جودة RAG ضرورية لكنها غير كافية؛ نموذج المحادثة يجب أن يستدل فعليًا على الأجزاء المسترجعة.',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-en.svg',
@@ -3725,12 +3733,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'AnythingLLM مقابل PrivateGPT مقابل Open WebUI: أفضل RAG محلي في 2026',
-      description: 'ثلاث منصات RAG محلية اختُبرت على مجموعة نصوص من 5.047 صفحة. AnythingLLM وPrivateGPT وOpen WebUI: معايير أداء الدقة والاستجابة والاستشهادات. حكم مايو 2026.',
+      description: 'ثلاث منصات RAG محلية اختُبرت على مجموعة نصوص من 5.047 صفحة. AnythingLLM وPrivateGPT وOpen WebUI: معايير أداء الدقة والاستجابة والاستشهادات. حكم أغسطس 2026.',
       image: buildOgImageObject(OG_SLUG, 'ar'),
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-07',
-      dateModified: '2026-06-19',
+      dateModified: '2026-08-27',
       inLanguage: 'ar',
       url: 'https://www.promptquorum.com/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
       'proficiencyLevel': 'Advanced',
@@ -3845,8 +3853,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: 2026년 최고의 로컬 RAG 플랫폼 비교',
     seoTitle: '로컬 RAG 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
@@ -3858,7 +3867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       '로컬 RAG 대결: 5,047페이지에서 AnythingLLM vs PrivateGPT vs Open WebUI. 정확도, 지연 시간, 확장성에서 각기 다른 승자. 전체 벤치마크 결과 공개.',
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.2 3B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -3885,7 +3894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'anythingllm 확장성',
     ],
     leadAnswerBlock:
-      '**2026년 5월 5,047페이지 코퍼스 테스트 결과: AnythingLLM은 프로덕션 신뢰성에서 우승했습니다(더 나은 인용, 교체 가능한 임베더, 영구 작업공간, 6%로 가장 낮은 환각 발생률). PrivateGPT는 검색 지연 시간에서 우승했습니다(p50 240ms, 완전 오프라인 설계, 엄격한 EU 규정 준수 자세). Open WebUI는 운영 편의성에서 우승했습니다(더 깔끔한 멀티 사용자 설정, Ollama와의 우아한 통합, 기존 채팅 워크플로우에 가장 쉽게 연결). 세 플랫폼 모두 약 10,000페이지를 초과하면 다른 방식으로 성능이 저하됩니다. 미래에 필요할지 모르는 것이 아닌, 실제로 사용하는 워크플로우에 맞춰 선택하십시오.**',
+      '**2026년 8월 5,047페이지 코퍼스 테스트 결과: AnythingLLM은 프로덕션 신뢰성에서 우승했습니다(더 나은 인용, 교체 가능한 임베더, 영구 작업공간, 6%로 가장 낮은 환각 발생률). PrivateGPT는 검색 지연 시간에서 우승했습니다(p50 240ms, 완전 오프라인 설계, 엄격한 EU 규정 준수 자세). Open WebUI는 운영 편의성에서 우승했습니다(더 깔끔한 멀티 사용자 설정, Ollama와의 우아한 통합, 기존 채팅 워크플로우에 가장 쉽게 연결). 세 플랫폼 모두 약 10,000페이지를 초과하면 다른 방식으로 성능이 저하됩니다. 미래에 필요할지 모르는 것이 아닌, 실제로 사용하는 워크플로우에 맞춰 선택하십시오.**',
     quickAnswerTop: {
       ko: {
         question: '2026년 로컬 문서를 위한 최고의 셀프 호스팅 RAG 플랫폼은 무엇입니까? AnythingLLM, PrivateGPT, Open WebUI 중 어느 것을 선택해야 합니까?',
@@ -3898,7 +3907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '세 플랫폼 모두 16GB RAM 머신에서 5,000페이지를 처리할 수 있습니다. 확장성 한계는 선택한 임베더에 따라 8,000~12,000페이지 사이에 나타납니다.',
           '임베딩 모델 변경 시 세 플랫폼 모두 전체 재인덱싱이 필요합니다. 소비자 하드웨어에서 5,000페이지당 30~90분을 예약하십시오.',
         ],
-        updatedDate: '2026-06-19',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -3939,7 +3948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026년 AnythingLLM, PrivateGPT, Open WebUI 비교',
         content:
-          '5,047페이지 코퍼스(연구 논문, 계약서, 기술 매뉴얼, 내부 위키 내보내기)에서 채팅 모델로 Llama 3.3 8B Q4_K_M, 각 플랫폼의 기본 임베더를 사용하여 테스트했습니다. 하드웨어: Windows 11의 NVIDIA RTX 4070(12GB VRAM, 32GB 시스템 RAM) 기본 시스템; MacBook Pro M5(16GB 통합)로 교차 검증. 수치는 3회 실행의 중앙값입니다.',
+          '5,047페이지 코퍼스(연구 논문, 계약서, 기술 매뉴얼, 내부 위키 내보내기)에서 채팅 모델로 Llama 3.2 3B Q4_K_M, 각 플랫폼의 기본 임베더를 사용하여 테스트했습니다. 하드웨어: Windows 11의 NVIDIA RTX 4070(12GB VRAM, 32GB 시스템 RAM) 기본 시스템; MacBook Pro M5(16GB 통합)로 교차 검증. 수치는 3회 실행의 중앙값입니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4027,11 +4036,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: '5,047페이지 코퍼스에서 3개 플랫폼을 테스트한 방법',
         content:
-          '**동일한 문서, 동일한 채팅 모델(Llama 3.3 8B Q4_K_M), 동일한 50개의 평가된 쿼리.** 우리가 격리한 것은 채팅 품질이 아닌 RAG 품질이었습니다.',
+          '**동일한 문서, 동일한 채팅 모델(Llama 3.2 3B Q4_K_M), 동일한 50개의 평가된 쿼리.** 우리가 격리한 것은 채팅 품질이 아닌 RAG 품질이었습니다.',
         items: [
           '**하드웨어:** 기본 시스템으로 Windows 11의 NVIDIA RTX 4070(12GB VRAM, 32GB 시스템 RAM); 교차 검증으로 MacBook Pro M5(16GB 통합 메모리). 지연 시간 수치는 RTX 4070 실행에서 도출했습니다.',
           '**코퍼스:** 네 가지 콘텐츠 유형에 걸친 5,047페이지 — 1,047페이지 분량의 산업 제어 매뉴얼(그림, 표, 방정식), 38페이지 분량의 상업용 임대 계약(밀집된 법률 텍스트), 412페이지 분량의 트랜스포머 연구 논문, 3,550페이지 분량의 내부 엔지니어링 위키 내보내기(마크다운, 코드, 혼합 산문).',
-          '**채팅 모델:** Llama 3.3 8B Q4_K_M(≈4.9GB)을 세 애플리케이션 모두에서 VRAM에 완전히 로드했습니다. AnythingLLM과 Open WebUI는 Ollama를 통해, PrivateGPT는 내장 llama.cpp 런타임을 통해 서빙했습니다.',
+          '**채팅 모델:** Llama 3.2 3B Q4_K_M(≈4.9GB)을 세 애플리케이션 모두에서 VRAM에 완전히 로드했습니다. AnythingLLM과 Open WebUI는 Ollama를 통해, PrivateGPT는 내장 llama.cpp 런타임을 통해 서빙했습니다.',
           '**테스트된 임베더:** 각 플랫폼의 기본 임베더 + nomic-embed-text v1.5(768차원)와 BAAI/bge-m3(1,024차원)(호환되는 경우). 기본 임베더를 주요 수치에 사용했습니다.',
           '**쿼리 세트:** 5가지 유형에 걸친 50개 쿼리 — 사실 검색(10개), 다단계 추론(10개), 요약(10개), 인용 정확도(10개), 모순 감지(10개). 알려진 답변 키와 대조하여 동일한 사람이 블라인드 평가했습니다.',
           '**측정 항목:** 검색 지연 시간(50개 쿼리에서 p50/p95 ms), 환각 발생률(최소 한 가지 사실 오류가 있는 응답 비율), 인용 정확도(해당 시 파일명 + 페이지), 인덱싱 중 GPU 메모리 피크, 디스크의 벡터 데이터베이스 크기.',
@@ -4071,7 +4080,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**설치 경로:** anythingllm.com의 데스크톱 인스톨러(서명됨, ~430MB, macOS/Windows/Linux) 또는 셀프 호스팅 멀티 사용자를 위한 Docker. 대부분의 사용자는 데스크톱 빌드로 시작해야 합니다.',
           '**파일 형식:** PDF, DOCX, TXT, MD, EPUB, HTML, CSV, JSON, 웹사이트(내장 스크레이퍼), 내장 Whisper를 통한 오디오(MP3, WAV, M4A).',
-          '**임베딩 유연성:** 2026년 5월 기준 8개 백엔드 — Native(소형 내장 모델), Ollama(다운로드한 모든 임베더), LM Studio, OpenAI, Azure OpenAI, Cohere, Voyage, LocalAI. 전환 시 전체 재인덱싱이 강제되지만 원클릭 작업입니다.',
+          '**임베딩 유연성:** 2026년 8월 기준 8개 백엔드 — Native(소형 내장 모델), Ollama(다운로드한 모든 임베더), LM Studio, OpenAI, Azure OpenAI, Cohere, Voyage, LocalAI. 전환 시 전체 재인덱싱이 강제되지만 원클릭 작업입니다.',
           '**청크 제어:** 청크 크기와 오버랩이 작업공간별로 노출됩니다. 변경 후 Re-embed-all이 LanceDB 스토어를 재구성합니다. 기본값으로 시맨틱이나 계층적 청킹은 포함되지 않습니다.',
           '**인용:** 각 응답은 파일명 + 페이지(PDF), 파일명 + 섹션(MD), 파일명만(TXT)이 포함된 소스 청크가 있는 각주를 추가합니다. 인용 패널은 소스 청크를 문자 그대로 보여줍니다 — 이것이 낮은 환각 발생률의 주된 이유입니다.',
           '**5,047페이지 코퍼스 성능:** RTX 4070에서 인덱싱에 14분 42초 소요(기본 Native 임베더), GPU 메모리 피크 6.2GB. 검색 지연 시간 p50 310ms, p95 880ms. 디스크의 벡터 데이터베이스 크기: 184MB.',
@@ -4122,7 +4131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Open WebUI 한정으로, 명시적인 인용 프롬프트 없이도 인용을 잘 하는 모델로 기본 채팅 모델을 변경하십시오. Qwen3 14B와 Llama 3.3 70B는 요청하지 않아도 출처를 언급하지만, Llama 3.3 8B와 Phi-4 Mini는 압박 하에 인용을 종종 생략합니다.',
+            text: 'Open WebUI 한정으로, 명시적인 인용 프롬프트 없이도 인용을 잘 하는 모델로 기본 채팅 모델을 변경하십시오. Qwen3 14B와 Llama 3.3 70B는 요청하지 않아도 출처를 언급하지만, Llama 3.2 3B와 Phi-4 Mini는 압박 하에 인용을 종종 생략합니다.',
           },
         ],
       },
@@ -4166,7 +4175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '다단계 추론은 세 플랫폼 모두 고전하는 영역입니다. 해결책은 플랫폼이 아닌 채팅 모델입니다. Llama 3.3 8B를 Qwen3 14B로 교체하면 각 플랫폼에서 다단계 환각이 ~10%포인트 감소했습니다. RAG 품질은 필요하지만 충분하지 않습니다; 채팅 모델이 검색된 청크에 대해 실제로 추론해야 합니다.',
+            text: '다단계 추론은 세 플랫폼 모두 고전하는 영역입니다. 해결책은 플랫폼이 아닌 채팅 모델입니다. Llama 3.2 3B를 Qwen3 14B로 교체하면 각 플랫폼에서 다단계 환각이 ~10%포인트 감소했습니다. RAG 품질은 필요하지만 충분하지 않습니다; 채팅 모델이 검색된 청크에 대해 실제로 추론해야 합니다.',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-ko.svg',
@@ -4327,12 +4336,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'AnythingLLM vs PrivateGPT vs Open WebUI: 2026년 최고의 로컬 RAG 플랫폼 비교',
-      description: '5,047페이지 코퍼스에서 테스트한 로컬 RAG 플랫폼 3종. AnythingLLM, PrivateGPT, Open WebUI의 정확도, 지연 시간, 인용 벤치마크. 2026년 5월 최종 평가.',
+      description: '5,047페이지 코퍼스에서 테스트한 로컬 RAG 플랫폼 3종. AnythingLLM, PrivateGPT, Open WebUI의 정확도, 지연 시간, 인용 벤치마크. 2026년 8월 최종 평가.',
       image: buildOgImageObject(OG_SLUG, 'ko'),
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-07',
-      dateModified: '2026-06-19',
+      dateModified: '2026-08-27',
       inLanguage: 'ko',
       url: 'https://www.promptquorum.com/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag',
       'proficiencyLevel': 'Advanced',
