@@ -163,8 +163,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Per-Token Cost Math',
         content: [
           'The economics of coding LLMs depend on usage volume, task sensitivity, and infrastructure overhead. Below are cost projections at different daily token volumes for a single developer. Note: All power costs are calculated for EU electricity rates (€0.35/kWh), standard for Germany and much of Europe as of May 2026.',
-          'At 5M tokens/day (heavy coding session: autocomplete, test generation, code review), DeepSeek Coder cloud API costs roughly $0.70/day at typical rates. Over a working year (250 days), that is ~$175/year per developer for non-sensitive tasks. An RTX 4090 ($1,500–2,000) running local Qwen 3.6 27B with EU power costs pays for itself in 5–7 years — but the break-even shifts dramatically for teams and GDPR-sensitive code.',
-          'For a team of 10 generating 50M tokens/day: cloud API costs ~$7/day (~$1,750/year). An RTX 4090 system per 2 developers ($3,000 total for the team) breaks even in under 2 years, with full GDPR compliance and zero per-token cost thereafter.',
+          'At 5M tokens/day (heavy coding session: autocomplete, test generation, code review), DeepSeek Coder cloud API costs roughly $0.70/day at typical rates. Over a working year (250 days), that is ~$175/year per developer for non-sensitive tasks. An RTX 4090 (end-of-life pricing $2,000–$2,600) running local Qwen 3.6 27B with EU power costs pays for itself in 6–8 years — but the break-even shifts dramatically for teams and GDPR-sensitive code.',
+          'For a team of 10 generating 50M tokens/day: cloud API costs ~$7/day (~$1,750/year). An RTX 4090 system per 2 developers (~$4,600 total for the team at EOL pricing) breaks even in 2–3 years, with full GDPR compliance and zero per-token cost thereafter.',
         ],
         codeBlock: `# Cost calculator: per-token math for coding LLMs
 # Assumptions: input + output ratio 1:2, so effective blended rate
@@ -179,11 +179,11 @@ daily_tokens = 5_000_000  # 5M tokens/day per developer
 daily_cost   = (daily_tokens / 1_000_000) * blended  # $1.15/day
 annual_cost  = daily_cost * 250  # $287/year per developer
 
-# Qwen 3.6 27B local (RTX 4090)
-hardware_cost = 1800  # USD (RTX 4090 GPU)
+# Qwen 3.6 27B local (RTX 4090, end-of-life pricing 2026)
+hardware_cost = 2300  # USD (RTX 4090 GPU, $2,000–$2,600 EOL range)
 power_cost    = 0.35 * 24 * 365 * 0.35  # 350W, €0.35/kWh = €1,073/year (~$1,073/year)
 annual_local  = power_cost  # $1,073/year after hardware
-# Break-even vs DeepSeek at 5M tokens/day: hardware_cost / (annual_cost - annual_local) ≈ 2.1 years`,
+# Break-even vs DeepSeek at 5M tokens/day: hardware_cost / (annual_cost - annual_local) ≈ 2.6–3.0 years`,
         codeLanguage: 'python',
       },
       latency: {
@@ -214,7 +214,7 @@ annual_local  = power_cost  # $1,073/year after hardware
           '**Codestral 22B Q4_K_M**: 13 GB VRAM — RTX 4070 Ti (12 GB marginal, 16 GB recommended)',
           '**Running two models simultaneously**: RTX 4090 24 GB can hold Qwen 3.6 27B Q4_K_M + Devstral 24B Q4_K_M in a 48 GB dual-GPU setup. Apple M5 Max (128 GB unified, 460–614 GB/s bandwidth) comfortably runs both models simultaneously via MLX.',
           '**Apple Silicon recommendation**: Apple refreshed the Mac mini and Mac Studio lineup on August 25, 2026 (shipping September 22, 2026), replacing the M4 Pro/M4 Max configurations with M5 Pro and M5 Max as the current new-purchase options. Mac mini M5 Pro ($1,699, 64 GB max unified memory) runs Qwen 3.6 27B at ~48 tokens/sec via MLX. Mac Studio M5 Max ($2,499, 128 GB max) achieves ~55 tokens/sec for Qwen and can run both Qwen + Devstral simultaneously — the quietest and most power-efficient option. Mac Studio M5 Ultra ($5,499 starting, 96–512 GB) exceeds what this workload needs but suits larger multi-model setups. A previous-generation M4 Pro (48 GB), common on the used market, remains suitable at ~42 tokens/sec — Apple no longer sells it new.',
-          '**Budget Apple Silicon option**: the entry-level Mac mini M6 ($899, 32 GB max unified memory) comfortably covers Mistral Devstral 24B (14 GB) and Codestral 22B (13 GB), though its lower memory bandwidth than the Pro/Max chips means noticeably slower tokens/sec than the M5 Pro figures above. PromptQuorum has not benchmarked the M6 yet.',
+          '**Budget Apple Silicon option**: the entry-level Mac mini M6 ($899, 32 GB max unified memory) comfortably covers Mistral Devstral 24B (14 GB) and Codestral 22B (13 GB), though its lower memory bandwidth than the Pro/Max chips means noticeably slower tokens/sec than the M5 Pro figures above. PromptQuorum has not benchmarked the M6 yet. Alternatively, an end-of-life RTX 4090 ($2,000–$2,600) provides a more economical GPU option for NVIDIA-based systems, with equivalent total system cost to Mac mini M5 Pro when factoring in power efficiency.',
         ],
         codeBlock: `# Ollama config for Qwen 3.6 27B with num_ctx and GPU layers
 cat > Modelfile-qwen3-coder <<'EOF'
@@ -309,7 +309,7 @@ DEEPSEEK_MODEL=deepseek-chat
     metaDescription: 'Qwen 3 Coder vs. DeepSeek vs. Mistral für lokales Coding 2026: Benchmarks, VRAM-Bedarf und Performance. Das beste lokale Coding-Modell.',
     heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-de.webp',
     publishDate: '2026-05-16',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '9 min Lesezeit',
     sections: {
       tldr: {
@@ -420,8 +420,8 @@ DEEPSEEK_MODEL=deepseek-chat
         title: 'Coût par token',
         content: [
           'L\'économie des LLM de code dépend du volume d\'utilisation, de la sensibilité des tâches et des coûts d\'infrastructure. Voici des projections de coût à différents volumes de tokens journaliers pour un développeur individuel. Note : tous les coûts d\'électricité sont calculés aux tarifs européens (€0,35/kWh), standard en France et dans une grande partie de l\'Europe à mai 2026.',
-          'À 5 millions de tokens/jour (session de codage intensive : autocomplétion, génération de tests, revue de code), l\'API cloud DeepSeek Coder coûte environ 0,70 $/jour aux tarifs habituels. Sur une année de travail (250 jours), cela représente ~175 $/an par développeur pour les tâches non sensibles. Une RTX 4090 (1 500–2 000 $) faisant tourner Qwen 3.6 27B en local avec les tarifs électriques européens atteint le seuil de rentabilité en 5–7 ans — mais le point mort évolue considérablement pour les équipes et le code sensible au RGPD.',
-          'Pour une équipe de 10 générant 50 millions de tokens/jour : l\'API cloud coûte ~7 $/jour (~1 750 $/an). Un système RTX 4090 pour 2 développeurs (3 000 $ pour l\'équipe) atteint le seuil de rentabilité en moins de 2 ans, avec une conformité RGPD totale et aucun coût par token par la suite.',
+          'À 5 millions de tokens/jour (session de codage intensive : autocomplétion, génération de tests, revue de code), l\'API cloud DeepSeek Coder coûte environ 0,70 $/jour aux tarifs habituels. Sur une année de travail (250 jours), cela représente ~175 $/an par développeur pour les tâches non sensibles. Une RTX 4090 (tarifs de fin de vie 2 000–2 600 $) faisant tourner Qwen 3.6 27B en local avec les tarifs électriques européens atteint le seuil de rentabilité en 6–8 ans — mais le point mort évolue considérablement pour les équipes et le code sensible au RGPD.',
+          'Pour une équipe de 10 générant 50 millions de tokens/jour : l\'API cloud coûte ~7 $/jour (~1 750 $/an). Un système RTX 4090 pour 2 développeurs (~4 600 $ pour l\'équipe au tarif de fin de vie) atteint le seuil de rentabilité en 2–3 ans, avec une conformité RGPD totale et aucun coût par token par la suite.',
         ],
         codeBlock: `# Cost calculator: per-token math for coding LLMs
 # Assumptions: input + output ratio 1:2, so effective blended rate
@@ -566,7 +566,7 @@ DEEPSEEK_MODEL=deepseek-chat
     metaDescription: 'コードベンチマーク：Qwen 3.6 27B（92.1% HumanEval、77.2% SWE-bench）、DeepSeek Coder（$0.14/1M）、Mistral Devstral（エージェントタスク）。コスト、レイテンシ、ハードウェア要件。',
     heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-ja.webp',
     publishDate: '2026-05-16',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '9分で読めます',
     sections: {
       tldr: {
@@ -602,7 +602,7 @@ DEEPSEEK_MODEL=deepseek-chat
     metaDescription: '编码基准：Qwen 3.6 27B（92.1% HumanEval、77.2% SWE-bench）、DeepSeek Coder（$0.14/1M）、Mistral Devstral（智能体任务）。成本、延迟、硬件要求详解。',
     heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-zh.webp',
     publishDate: '2026-05-16',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '9分钟阅读',
     sections: {
       tldr: {
@@ -714,8 +714,8 @@ DEEPSEEK_MODEL=deepseek-chat
         title: 'Matemáticas de coste por token',
         content: [
           'La economía de los LLMs de código depende del volumen de uso, la sensibilidad de las tareas y el overhead de infraestructura. A continuación se muestran proyecciones de coste a distintos volúmenes diarios de tokens para un desarrollador individual. Nota: todos los costes de electricidad están calculados a tarifas de la UE (€0.35/kWh), estándar en España y gran parte de Europa a mayo de 2026.',
-          'A 5M tokens/día (sesión intensa de codificación: autocompletado, generación de tests, revisión de código), la API cloud de DeepSeek Coder cuesta aproximadamente $0.70/día a tarifas habituales. En un año de trabajo (250 días), eso es ~$175/año por desarrollador para tareas no sensibles. Una RTX 4090 ($1.500–2.000) ejecutando Qwen 3.6 27B local con costes de electricidad de la UE alcanza el punto de equilibrio en 5–7 años — pero el punto de equilibrio cambia drásticamente para equipos y código sensible al GDPR.',
-          'Para un equipo de 10 generando 50M tokens/día: la API cloud cuesta ~$7/día (~$1.750/año). Un sistema RTX 4090 por 2 desarrolladores ($3.000 total para el equipo) alcanza el punto de equilibrio en menos de 2 años, con cumplimiento GDPR completo y cero coste por token a partir de entonces.',
+          'A 5M tokens/día (sesión intensa de codificación: autocompletado, generación de tests, revisión de código), la API cloud de DeepSeek Coder cuesta aproximadamente $0.70/día a tarifas habituales. En un año de trabajo (250 días), eso es ~$175/año por desarrollador para tareas no sensibles. Una RTX 4090 (tarifa de fin de vida $2.000–$2.600) ejecutando Qwen 3.6 27B local con costes de electricidad de la UE alcanza el punto de equilibrio en 6–8 años — pero el punto de equilibrio cambia drásticamente para equipos y código sensible al GDPR.',
+          'Para un equipo de 10 generando 50M tokens/día: la API cloud cuesta ~$7/día (~$1.750/año). Un sistema RTX 4090 por 2 desarrolladores (~$4.600 total para el equipo a precio de fin de vida) alcanza el punto de equilibrio en 2–3 años, con cumplimiento GDPR completo y cero coste por token a partir de entonces.',
         ],
         codeBlock: `# Calculadora de costes: matemáticas por token para LLMs de código
 # Supuestos: ratio entrada + salida 1:2, tasa combinada efectiva
@@ -1173,8 +1173,8 @@ DEEPSEEK_MODEL=deepseek-chat
         title: 'Matemática de custo por token',
         content: [
           'A economia dos LLMs de código depende do volume de uso, da sensibilidade das tarefas e do overhead de infraestrutura. A seguir estão projeções de custo em diferentes volumes diários de tokens para um desenvolvedor individual. Observação: o modelo de custo é ancorado em USD porque a API do DeepSeek Coder é cobrada em dólar; os custos de eletricidade são apresentados para referência (no Brasil, ~R$ 0,80/kWh, variando por distribuidora e bandeira tarifária).',
-          'A 5M tokens/dia (sessão intensa de codificação: autocomplete, geração de testes, revisão de código), a API em nuvem do DeepSeek Coder custa aproximadamente US$ 0,70/dia às taxas habituais. Em um ano de trabalho (250 dias), isso dá ~US$ 175/ano por desenvolvedor para tarefas não sensíveis. Uma RTX 4090 (US$ 1.500–2.000; ~R$ 11.000–13.000 no varejo brasileiro) rodando o Qwen 3.6 27B local atinge o ponto de equilíbrio em alguns anos — mas o equilíbrio muda drasticamente para equipes e código sensível ao GDPR.',
-          'Para uma equipe de 10 gerando 50M tokens/dia: a API em nuvem custa ~US$ 7/dia (~US$ 1.750/ano). Um sistema RTX 4090 para 2 desenvolvedores (US$ 3.000 no total; ~R$ 20.000 no Brasil) atinge o equilíbrio em menos de 2 anos, com conformidade total ao GDPR e custo zero por token a partir de então.',
+          'A 5M tokens/dia (sessão intensa de codificação: autocomplete, geração de testes, revisão de código), a API em nuvem do DeepSeek Coder custa aproximadamente US$ 0,70/dia às taxas habituais. Em um ano de trabalho (250 dias), isso dá ~US$ 175/ano por desenvolvedor para tarefas não sensíveis. Uma RTX 4090 (US$ 2.000–2.600 em preço de fim de vida; ~R$ 15.000–18.000 no varejo brasileiro) rodando o Qwen 3.6 27B local atinge o ponto de equilíbrio em 2–3 anos — mas o equilíbrio muda drasticamente para equipes e código sensível ao GDPR.',
+          'Para uma equipe de 10 gerando 50M tokens/dia: a API em nuvem custa ~US$ 7/dia (~US$ 1.750/ano). Um sistema RTX 4090 para 2 desenvolvedores (US$ ~4.600 no total; ~R$ 30.000 no Brasil) atinge o equilíbrio em 2–3 anos, com conformidade total ao GDPR e custo zero por token a partir de então.',
         ],
         codeBlock: `# Calculadora de custos: matemática por token para LLMs de código
 # Premissas: razão entrada + saída 1:2, taxa combinada efetiva
@@ -1189,11 +1189,11 @@ daily_tokens = 5_000_000  # 5M tokens/dia por desenvolvedor
 daily_cost   = (daily_tokens / 1_000_000) * blended  # US$1.15/dia
 annual_cost  = daily_cost * 250  # US$287/ano por desenvolvedor
 
-# Qwen 3.6 27B local (RTX 4090)
-hardware_cost = 1800  # US$ (GPU RTX 4090; ~R$ 11.000-13.000 no varejo brasileiro)
+# Qwen 3.6 27B local (RTX 4090, preço de fim de vida 2026)
+hardware_cost = 2300  # US$ (GPU RTX 4090, US$ 2.000–2.600; ~R$ 15.000-18.000 no Brasil)
 # Eletricidade no Brasil: ~R$ 0,80/kWh (350W -> ~R$ 2.450/ano em uso continuo)
 annual_local  = 0  # custo por token zero apos o hardware (eletricidade a parte)
-# Equilibrio vs DeepSeek a 5M tokens/dia: hardware_cost / annual_cost ~ poucos anos para 1 dev`,
+# Equilibrio vs DeepSeek a 5M tokens/dia: hardware_cost / annual_cost ~ 2-3 anos para 1 dev`,
         codeLanguage: 'python',
       },
       latency: {
@@ -1223,7 +1223,7 @@ annual_local  = 0  # custo por token zero apos o hardware (eletricidade a parte)
           '**Mistral Devstral Small 24B Q4_K_M**: 14 GB de VRAM — RTX 4070 Ti Super (16 GB), RTX 3090 (24 GB), Apple M3/M4/M5 Pro 36 GB',
           '**Codestral 22B Q4_K_M**: 13 GB de VRAM — RTX 4070 Ti (12 GB marginal, 16 GB recomendado)',
           '**Rodar dois modelos simultaneamente**: uma RTX 4090 de 24 GB pode hospedar Qwen 3.6 27B Q4_K_M + Devstral 24B Q4_K_M em uma configuração dual-GPU de 48 GB. O Apple M5 Max (128 GB de memória unificada, 460–614 GB/s de largura de banda) roda confortavelmente os dois modelos ao mesmo tempo via MLX.',
-          '**Recomendação Apple Silicon**: a Apple renovou a linha Mac mini e Mac Studio em 25 de agosto de 2026 (embarque a partir de 22 de setembro de 2026), substituindo as configurações M4 Pro/M4 Max pelo M5 Pro e M5 Max como opções de compra atuais. O Mac mini M5 Pro (US$ 1.699, até 64 GB de memória unificada) roda o Qwen 3.6 27B a ~48 tokens/seg via MLX. O Mac Studio M5 Max (US$ 2.499, até 128 GB) atinge ~55 tokens/seg para o Qwen e consegue rodar Qwen + Devstral ao mesmo tempo — a opção mais silenciosa e eficiente em energia. O Mac Studio M5 Ultra (a partir de US$ 5.499, 96–512 GB) excede o que essa carga de trabalho exige, mas serve para configurações multi-modelo maiores. Um M4 Pro de geração anterior (48 GB), comum no mercado de usados, continua adequado a ~42 tokens/seg — a Apple não vende mais o modelo novo. Preços em dólares americanos; a Apple ainda não havia publicado preços em reais no momento da redação, e o câmbio + impostos de importação tornam qualquer conversão direta imprecisa.',
+          '**Recomendação Apple Silicon**: a Apple renovou a linha Mac mini e Mac Studio em 25 de agosto de 2026 (embarque a partir de 22 de setembro de 2026), substituindo as configurações M4 Pro/M4 Max pelo M5 Pro e M5 Max como opções de compra atuais. O Mac mini M5 Pro (US$ 1.699, até 64 GB de memória unificada) roda o Qwen 3.6 27B a ~48 tokens/seg via MLX. O Mac Studio M5 Max (US$ 2.499, até 128 GB) atinge ~55 tokens/seg para o Qwen e consegue rodar Qwen + Devstral ao mesmo tempo — a opção mais silenciosa e eficiente em energia. O Mac Studio M5 Ultra (a partir de US$ 5.499, 96–512 GB) excede o que essa carga de trabalho exige, mas serve para configurações multi-modelo maiores. Um M4 Pro de geração anterior (48 GB), comum no mercado de usados, continua adequado a ~42 tokens/seg — a Apple não vende mais o modelo novo. Nota: uma RTX 4090 em fim de vida (US$ 2.000–2.600) oferece alternativa de GPU mais econômica para NVIDIA, com custo total de sistema equivalente ao Mac mini M5 Pro. Preços em dólares americanos; a Apple ainda não havia publicado preços em reais no momento da redação.',
           '**Opção Apple Silicon econômica**: o Mac mini M6 de entrada (US$ 899, até 32 GB de memória unificada) cobre com folga o Mistral Devstral 24B (14 GB) e o Codestral 22B (13 GB), embora sua largura de banda de memória menor que a dos chips Pro/Max resulte em tokens/seg visivelmente mais lentos que os números do M5 Pro acima. A PromptQuorum ainda não testou o M6.',
         ],
         codeBlock: `# Configuração do Ollama para Qwen 3.6 27B com num_ctx e camadas de GPU
