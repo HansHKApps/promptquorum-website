@@ -11,13 +11,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen for Local Coding 2026: Which Wins?',
     seoTitle: 'Qwen2.5-Coder vs DeepSeek-Coder Local: Which Wins',
     metaDescription:
-      'Qwen2.5-Coder vs DeepSeek-Coder for local coding: Qwen wins HumanEval (88.4% vs 83.5%); DeepSeek edges repo-level FIM. Vs CodeLlama & Llama 3. July 2026.',
+      'Qwen2.5-Coder vs DeepSeek-Coder for local coding: Qwen wins HumanEval (88.4% vs 83.5%); DeepSeek edges repo-level FIM. Vs CodeLlama & Llama 3. August 2026.',
     heroImage: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-en.webp',
     twitterDescription:
       'DeepSeek-V3 wins Python and JavaScript completion. Qwen3-Coder 32B wins Rust and C++ refactoring. Hardware specs and speed benchmarks for both at every budget tier.',
@@ -181,11 +181,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'VRAM and Hardware Requirements',
         content:
           '**The key difference between DeepSeek and Qwen for local use is not benchmark scores — it is hardware runability.** DeepSeek-V3 is a 236B MoE model. Even at INT4 quantization, it requires ~140 GB total VRAM — far beyond any consumer setup.',
-        columns: ['Model', 'VRAM (Q4_K_M)', 'Minimum GPU', 'Price estimate (July 2026)'],
+        columns: ['Model', 'VRAM (Q4_K_M)', 'Minimum GPU', 'Price estimate (August 2026)'],
         rows: [
           { '0': 'Qwen3-Coder 7B', '1': '5.2 GB', '2': 'RTX 3060 12 GB', '3': '$150–350 used' },
           { '0': 'Qwen3-Coder 14B', '1': '9.4 GB', '2': 'RTX 4060 Ti 16 GB', '3': '$424 new' },
-          { '0': 'Qwen3-Coder 32B / DeepSeek-R1-Distill-Qwen-32B', '1': '20.1 GB', '2': 'RTX 4090 24 GB', '3': '$1,900 new (2026 surge)' },
+          { '0': 'Qwen3-Coder 32B / DeepSeek-R1-Distill-Qwen-32B', '1': '20.1 GB', '2': 'RTX 4090 24 GB', '3': '$2,000–2,600 used (discontinued)' },
           { '0': 'DeepSeek-V3 (local)', '1': '~140 GB', '2': '6× A100 80 GB minimum', '3': '$300,000+ hardware' },
         ],
         affiliateLinks: [
@@ -306,7 +306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What is DeepSeek-V3\'s API price compared to running Qwen locally?',
-            a: 'DeepSeek-V3 API pricing (as of July 2026): $0.27 per 1M input tokens, $1.10 per 1M output tokens. At typical IDE usage (200K tokens/day), that is $0.27/day or ~$8/month. Running Qwen3-Coder 32B locally on an RTX 4090 costs ~$0.05/day in electricity plus hardware amortization of ~$1.70/day over 3 years — making self-hosted Qwen more expensive than the DeepSeek API unless you already own an RTX 4090.',
+            a: 'DeepSeek-V3 API pricing (as of August 2026): $0.27 per 1M input tokens, $1.10 per 1M output tokens. At typical IDE usage (200K tokens/day), that is $0.27/day or ~$8/month. Running Qwen3-Coder 32B locally on a used RTX 4090 (now $2,000–2,600 after NVIDIA discontinued the GPU line) costs ~$0.05/day in electricity plus hardware amortization of ~$1.70/day over 3 years — making self-hosted Qwen more expensive than the DeepSeek API unless you already own an RTX 4090.',
           },
           {
             q: 'Does Qwen3-Coder support function calling for agentic coding tasks?',
@@ -320,7 +320,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '2026-05-26: Initial publication. Benchmark data: HumanEval/LiveCodeBench from official model releases; SWE-bench from SWE-bench.com leaderboard. Speed benchmarks measured on RTX 4090 + RTX 4060 Ti 16 GB test machines.',
           '2026-07-01: Corrected HumanEval standings — Qwen2.5-Coder / Qwen3-Coder 32B leads at ~88.4% vs DeepSeek-Coder-V2-Lite ~83.5%. Clarified DeepSeek-Coder as runner-up (repo-level / fill-in-the-middle edge). Added CodeLlama and Llama 3 as legacy reference points.',
-          'Next review scheduled: 2026-11-26',
+          '2026-08-27: Refreshed RTX 4090 pricing to reflect NVIDIA discontinuation (2026) — updated used market pricing from $1,900 MSRP to $2,000–2,600 current used market. Verified DeepSeek-V3/R1 and Qwen3-Coder versions remain current. Updated all 8 language versions (DE, ES, FR, JA, ZH, PT, AR, KO).',
+          'Next review scheduled: 2027-02-27',
         ],
       },
     },
@@ -357,7 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'What is DeepSeek-V3\'s API price vs running Qwen locally?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'DeepSeek-V3 API: $0.27/1M input tokens, $1.10/1M output tokens — at typical IDE usage, ~$8/month. Running Qwen3-Coder 32B locally costs ~$0.05/day electricity plus hardware amortization. If you own an RTX 4090, local Qwen can be competitive over 3+ years.',
+            text: 'DeepSeek-V3 API: $0.27/1M input tokens, $1.10/1M output tokens — at typical IDE usage, ~$8/month. Running Qwen3-Coder 32B locally on a used RTX 4090 ($2,000–2,600) costs ~$0.05/day electricity plus hardware amortization. If you already own an RTX 4090, local Qwen can be competitive over 3+ years.',
           },
         },
         {
@@ -406,13 +407,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen para Coding Local 2026: ¿Cuál Gana?',
     seoTitle: 'Qwen2.5-Coder vs DeepSeek-Coder Local: ¿Cuál Gana?',
     metaDescription:
-      'Qwen2.5-Coder vs DeepSeek-Coder para coding local: Qwen gana HumanEval (88,4 % vs 83,5 %); DeepSeek destaca en FIM a nivel de repo. Vs CodeLlama y Llama 3. Julio 2026.',
+      'Qwen2.5-Coder vs DeepSeek-Coder para coding local: Qwen gana HumanEval (88,4 % vs 83,5 %); DeepSeek destaca en FIM a nivel de repo. Vs CodeLlama y Llama 3. Agosto 2026.',
     heroImage: '/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-es.webp',
     twitterDescription:
       'Qwen2.5-Coder / Qwen3-Coder 32B gana HumanEval y el coding local global (Rust, C++, refactoring). DeepSeek-Coder queda segundo con su ventaja en autocompletado a nivel de repo y fill-in-the-middle. Especificaciones de hardware y benchmarks de velocidad para ambos en cada nivel de presupuesto.',
@@ -576,11 +577,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'VRAM y requisitos de hardware',
         content:
           '**La diferencia clave entre DeepSeek y Qwen para uso local no son las puntuaciones en benchmarks — es la capacidad de ejecutarse en hardware.** DeepSeek-V3 es un modelo MoE de 236B. Incluso con cuantización INT4, requiere ~140 GB de VRAM total — muy por encima de cualquier configuración de consumidor.',
-        columns: ['Modelo', 'VRAM (Q4_K_M)', 'GPU mínima', 'Precio estimado (julio 2026)'],
+        columns: ['Modelo', 'VRAM (Q4_K_M)', 'GPU mínima', 'Precio estimado (agosto 2026)'],
         rows: [
           { '0': 'Qwen3-Coder 7B', '1': '5,2 GB', '2': 'RTX 3060 12 GB', '3': '$150–350 segunda mano' },
           { '0': 'Qwen3-Coder 14B', '1': '9,4 GB', '2': 'RTX 4060 Ti 16 GB', '3': '$424 nuevo' },
-          { '0': 'Qwen3-Coder 32B / DeepSeek-R1-Distill-Qwen-32B', '1': '20,1 GB', '2': 'RTX 4090 24 GB', '3': '$1.900 nuevo (subida de precios 2026)' },
+          { '0': 'Qwen3-Coder 32B / DeepSeek-R1-Distill-Qwen-32B', '1': '20,1 GB', '2': 'RTX 4090 24 GB', '3': '$2.000–2.600 segunda mano (descontinuado)' },
           { '0': 'DeepSeek-V3 (local)', '1': '~140 GB', '2': '6× A100 80 GB mínimo', '3': '$300.000+ en hardware' },
         ],
         affiliateLinks: [
@@ -701,7 +702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuál es el precio de la API de DeepSeek-V3 comparado con ejecutar Qwen de forma local?',
-            a: 'Precio de la API de DeepSeek-V3 (a julio de 2026): $0,27 por 1M de tokens de entrada, $1,10 por 1M de tokens de salida. Con un uso típico del IDE (200K tokens/día), eso equivale a $0,27/día o ~$8/mes. Ejecutar Qwen3-Coder 32B localmente en una RTX 4090 cuesta ~$0,05/día en electricidad más amortización de hardware de ~$1,70/día durante 3 años — lo que hace que Qwen autohospedado sea más caro que la API de DeepSeek a menos que ya tengas una RTX 4090.',
+            a: 'Precio de la API de DeepSeek-V3 (a agosto de 2026): $0,27 por 1M de tokens de entrada, $1,10 por 1M de tokens de salida. Con un uso típico del IDE (200K tokens/día), eso equivale a $0,27/día o ~$8/mes. Ejecutar Qwen3-Coder 32B localmente en una RTX 4090 usada (ahora $2.000–2.600 tras discontinuación de NVIDIA) cuesta ~$0,05/día en electricidad más amortización de hardware de ~$1,70/día durante 3 años — lo que hace que Qwen autohospedado sea más caro que la API de DeepSeek a menos que ya tengas una RTX 4090.',
           },
           {
             q: '¿Qwen3-Coder admite function calling para tareas de coding agentivo?',
@@ -715,7 +716,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '2026-05-26: Publicación inicial. Datos de benchmarks: HumanEval/LiveCodeBench de los lanzamientos oficiales de los modelos; SWE-bench del ranking en SWE-bench.com. Benchmarks de velocidad medidos en máquinas de prueba RTX 4090 + RTX 4060 Ti 16 GB.',
           '2026-07-01: Corregida la clasificación de HumanEval — Qwen2.5-Coder / Qwen3-Coder 32B lidera con ~88,4 % frente al ~83,5 % de DeepSeek-Coder-V2-Lite. Aclarado que DeepSeek-Coder queda segundo (ventaja a nivel de repo / fill-in-the-middle). Añadidos CodeLlama y Llama 3 como puntos de referencia heredados.',
-          'Próxima revisión programada: 2026-11-26',
+          '2026-08-27: Actualización de precios de la RTX 4090 para reflejar discontinuación de NVIDIA (2026) — actualización de precios de mercado usado de $1.900 MSRP a $2.000–2.600 actual. Verificación de que versiones de DeepSeek-V3/R1 y Qwen3-Coder siguen siendo actuales. Actualización de 8 versiones de idioma (DE, ES, FR, JA, ZH, PT, AR, KO).',
+          'Próxima revisión programada: 2027-02-27',
         ],
       },
     },
@@ -803,8 +805,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Overview & Reference',
     title: '로컬 코딩 AI DeepSeek vs Qwen 2026: 승자는?',
     seoTitle: 'Qwen2.5-Coder vs DeepSeek-Coder 로컬: 승자는?',
@@ -1200,8 +1202,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen für lokales Coding 2026: Wer gewinnt?',
     seoTitle: 'DeepSeek vs Qwen Coding 2026: Python & Rust Vergleich',
@@ -1316,8 +1318,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen pour le Coding Local 2026 : Lequel Gagne ?',
     seoTitle: 'DeepSeek vs Qwen 2026 : Benchmark Python, Rust, JS',
@@ -1429,8 +1431,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen ローカルコーディング2026：どちらが優れている？',
     seoTitle: 'DeepSeek vs Qwen コーディング2026：Python・Rust・JSベンチマーク比較',
@@ -1542,8 +1544,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen本地编程2026：哪个更好？',
     seoTitle: 'DeepSeek vs Qwen编程对比2026：Python、Rust、JS基准测试',
@@ -1672,8 +1674,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Overview & Reference',
     title: 'DeepSeek vs Qwen para Codificação Local 2026: Qual Vence?',
     seoTitle: 'Qwen2.5-Coder vs DeepSeek-Coder Local: Qual Vence',
@@ -2069,8 +2071,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-07-13',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Overview & Reference',
     title: '⁨DeepSeek⁩ مقابل ⁨Qwen⁩ للبرمجة المحلية ⁨2026⁩: أيّهما يفوز؟',
     seoTitle: '⁨Qwen2.5-Coder⁩ مقابل ⁨DeepSeek-Coder⁩ محلياً: أيّهما يفوز',
