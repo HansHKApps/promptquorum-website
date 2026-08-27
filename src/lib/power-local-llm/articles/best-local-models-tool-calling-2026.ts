@@ -1,6 +1,6 @@
 // Power Local LLM — Best Local Models for Tool Calling in 2026: Benchmarks & Comparison
 // Slug: best-local-models-tool-calling-2026
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// All 9 languages (en, de, es, fr, ja, zh, pt, ar, ko) are fully authored below.
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -380,7 +380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
+    dateModified: '2026-08-27',
     next_refresh_due: '2026-12-19',
     theme: 'Local AI Agents & Tool Use',
     title: 'Beste lokale Modelle für Tool Calling in 2026: Benchmarks und Vergleich',
@@ -432,7 +432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Format-Portabilität ist hoch — das gleiche Modell verarbeitet OpenAI-Tools, Clines XML, MCP-JSON-RPC und Aiders Diff-Blöcke ohne Neukonfiguration.',
           'Real-World-Zuverlässigkeit ist Rate-der-korrekt-geformten-Calls × Rate-der-korrekten-Tool-Auswahl × Rate-der-korrekten-Argumente. Die 90%+-Schlagzahlen schreiben sich zusammen; erwarten Sie 80–90 % End-to-End bei echten Workflows.',
         ],
-        updatedDate: '2026-06-19',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -692,9 +692,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Lokale Modell-Inferenz bietet erhebliche Vorteile für DACH-Unternehmen unter Datenschutz- und Compliance-Anforderungen.** Die fünf zuverlässigen Tool-Calling-Modelle in diesem Leitfaden können vollständig lokal, on-premise oder in privaten Clouds ausgeführt werden — ein kritischer Vorteil für regulierte Industrien.',
         items: [
-          '**DSGVO Artikel 28 (Auftragsverarbeitung):** Lokale Inferenz auf unternehmenseigener Hardware oder privaten Clouds erfüllt die Anforderungen für Auftragsverarbeiter, da keine personenbezogenen Daten an externe Anbieter übertragen werden. Stelle sicher, dass Dein Ollama-Setup auf gesicherter, mit BSI-Grundschutz-Katalogen konforme Infrastruktur läuft. Dies ist ein Wettbewerbsvorteil: Anbieter von Cloud-KI-APIs können "On-Demand-Abschaltung" nicht garantieren, wenn Anforderungen DSGVO erzwingen.',
+          '**DSGVO Artikel 28 (Auftragsverarbeitung):** Lokale Inferenz auf unternehmenseigener Hardware oder privaten Clouds erfüllt die Anforderungen für Auftragsverarbeiter, da keine personenbezogenen Daten an externe Anbieter übertragen werden. Stellen Sie sicher, dass Ihr Ollama-Setup auf gesicherter, mit BSI-Grundschutz-Katalogen konformer Infrastruktur läuft. Dies ist ein Wettbewerbsvorteil: Anbieter von Cloud-KI-APIs können "On-Demand-Abschaltung" nicht garantieren, wenn Anforderungen DSGVO erzwingen.',
           '**BSI-Grundschutz-Kataloge:** Das Bundesamt für Sicherheit in der Informationstechnik (BSI) empfiehlt für kritische Systeme: lokale Datenverarbeitung, Verschlüsselung in Ruhe und Transporte, und regelmäßige Sicherheitsaudits. Alle fünf Modelle dieser Liste können auf BSI-zertifizierte oder -erprobte Infrastruktur (Univention UCSM, NetScaler-Appliances, Kubernetes unter Sicherheitshärtung) bereitgestellt werden.',
-          '**Deutscher Mittelstand und Enterprise-Standards:** DACH-Mittelstandsunternehmen bevorzugen Kontrollierbarkeit. On-Premise-Modelle wie Gemma 4 27B oder Qwen3 32B auf lokaler Hardware (M-series MacBooks für kleine Teams, RTX-Rigs für größere Ableilungen) entsprechen den erwartungen, dass keine Daten das Unternehmen verlassen. Für Finanzdienstleistungen (BaFin-reguliert), im Gesundheitswesen (KHZV, IfSG) und Rechtswesen wird dies zum Einkaufskriterium.',
+          '**Deutscher Mittelstand und Enterprise-Standards:** DACH-Mittelstandsunternehmen bevorzugen Kontrollierbarkeit. On-Premise-Modelle wie Gemma 4 27B oder Qwen3 32B auf lokaler Hardware (M-series MacBooks für kleine Teams, RTX-Rigs für größere Abteilungen) entsprechen den Erwartungen, dass keine Daten das Unternehmen verlassen. Für Finanzdienstleistungen (BaFin-reguliert), im Gesundheitswesen (KHZV, IfSG) und Rechtswesen wird dies zum Einkaufskriterium.',
         ],
       },
       sources: {
@@ -746,7 +746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Muss ich die DSGVO bei lokaler Inferenz von Tool-Calling-Modellen beachten?',
-            a: 'Ja, wenn personenbezogene Daten betroffen sind. DSGVO Artikel 28 regelt Auftragsverarbeitung — die lokale Inferenz auf unternehmenseigener Hardware erfüllt diese Anforderungen, da keine Daten an externe API-Anbieter übertragen werden. Stelle sicher, dass Dein Ollama-Setup auf BSI-Grundschutz-konforme Infrastruktur läuft. Dokumentiere die Datenschutz-Architektur für interne Audits und BaFin-/KDG-Überprüfungen. Dies ist ein großer Wettbewerbsvorteil für DACH-Unternehmen im Finanzsektor, Gesundheitswesen und Rechtswesen.',
+            a: 'Ja, wenn personenbezogene Daten betroffen sind. DSGVO Artikel 28 regelt Auftragsverarbeitung — die lokale Inferenz auf unternehmenseigener Hardware erfüllt diese Anforderungen, da keine Daten an externe API-Anbieter übertragen werden. Stellen Sie sicher, dass Ihr Ollama-Setup auf BSI-Grundschutz-konformer Infrastruktur läuft. Dokumentieren Sie die Datenschutz-Architektur für interne Audits und BaFin-/KDG-Überprüfungen. Dies ist ein großer Wettbewerbsvorteil für DACH-Unternehmen im Finanzsektor, Gesundheitswesen und Rechtswesen.',
           },
           {
             q: 'Ist dieses Setup für deutsche Mittelstand-Unternehmen geeignet?',
@@ -1142,7 +1142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-06-19',
+    dateModified: '2026-08-27',
     next_refresh_due: '2026-12-19',
     theme: 'Local AI Agents & Tool Use',
     title: '2026年のベストローカルツール呼び出しモデル : ベンチマークと比較',
@@ -1194,7 +1194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'フォーマットの移植性は高いです — 同じモデルがOpenAIツール、ClineのXML、MCPのJSON-RPC、AiderのDiffブロックを処理します。',
           '実世界の信頼性は、正しく形成されたレート × 正しいツール選択レート × 正しい引数レートです。90%+のヘッドラインはコンパイルされます。マルチステップの実際のワークフロー全体で80–90%エンドツーエンドを期待してください。',
         ],
-        updatedDate: '2026-06-19',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1283,9 +1283,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**セットアップ :** VS Code内のCline 3.x(テストした最も厳密なツール呼び出し検証器)とヘッドレス側のGoose+MCP。バックエンドOllama 0.5 +は、特に指定されない限り、各モデルをQ4_K_Mで処理します。',
           '**サーバー :** 4つの参照MCPサーバー — `ファイルシステム`(サンドボックスディレクトリを読み書き)、`sqlite`(デフォルトでは読み取り専用、特定のタスク用)、`puppet`(ヘッドレスブラウザ)、`GitHub`(PAT付きPR・問題管理)。すべてのモデル実行でサーバーバージョンを同じにします。',
-          '**プロンプトセット :** サーバーあたり50タスクプロンプト、モデルあたり3回繰り返し = 4サーバー全体でモデルあたり600 graded呼び出し(~3000は5つのモデル全体)。プロンプトは単一ツールタスク、マルチステッププラン、並列呼び出しをカバーします。',
+          '**プロンプトセット :** サーバーあたり50タスクプロンプト、モデルあたり3回繰り返し = 4サーバー全体でモデルあたり600件の採点済み呼び出し(5モデル合計で約3,000件)。プロンプトは単一ツールタスク、マルチステッププラン、並列呼び出しをカバーします。',
           '**グレーディング :** ツール呼び出しあたり4つのシグナル。正しく形成された、正しい選択、正しい引数、実行成功。',
-          'ハードウェア: Apple M5 Max 64GB MacBook Pro for小さいモデル; NVIDIA L40S 48GB と 2×RTX 3090 24GBはLlama 3.3 70B向けです。すべてが使用可能なトークンレート(≥10トークン/秒)で維持されました。',
+          'ハードウェア: 小型モデルにはApple M5 Max 64GB MacBook Proを使用。NVIDIA L40S 48GBと2×RTX 3090 24GBはLlama 3.3 70B向けです。すべてが使用可能なトークンレート(≥10トークン/秒)で維持されました。',
           '正直さの制約: パーセンテージは範囲として報告されます。"~95%"は92-96%の範囲を意味します。',
         ],
         callouts: [
