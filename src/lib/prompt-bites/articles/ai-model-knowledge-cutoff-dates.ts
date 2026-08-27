@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: CUTOFF_DATA_LAST_VERIFIED,
     lastUpdated: CUTOFF_DATA_LAST_VERIFIED,
     current_models_mentioned: [
-      'Claude Opus 4.8', 'ChatGPT', 'GPT-5.5', 'GPT-4o', 'Gemini 3.1 Pro',
+      'Claude Opus 5', 'ChatGPT', 'GPT-5.5', 'GPT-4o', 'Gemini 3.1 Pro',
       'Grok 4.3', 'Mistral Large 3', 'DeepSeek-V3', 'Llama 4 Scout', 'Qwen3 14B',
       'Gemma 3 27B', 'Phi-4',
     ],
@@ -32,10 +32,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'What are the current AI model knowledge cutoff dates?',
-        answer: 'Verified cutoffs: GPT-5.5 August 2025 (ChatGPT searches Bing by default; GPT-4o legacy Oct 2023); Claude Opus 4.8 January 2026 (reliable cutoff); Grok 4.3 November 2024 (searches X); Gemini 3.1 Pro January 2025 (native Google Search); DeepSeek-V3 July 2024; Gemma 3 27B August 2024; Phi-4 June 2024; Qwen2.5 December 2023. Several major models — including Mistral Large, Llama 4, and Qwen3 — have not publicly disclosed exact cutoff dates. Local LLMs have no web search and their cutoff is absolute. (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.)',
+        answer: 'Verified cutoffs: GPT-5.5 August 2025 (ChatGPT searches Bing by default; GPT-4o legacy Oct 2023); Claude Opus 5 May 2026 (reliable cutoff); Grok 4.3 November 2024 (searches X); Gemini 3.1 Pro January 2025 (native Google Search); DeepSeek-V3 July 2024; Gemma 3 27B August 2024; Phi-4 June 2024; Qwen2.5 December 2023. Several major models — including Mistral Large, Llama 4, and Qwen3 — have not publicly disclosed exact cutoff dates. Local LLMs have no web search and their cutoff is absolute. (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.)',
         bullets: [
           'GPT-5.5 (ChatGPT): Aug 2025 cutoff — partially offset by Bing search default',
-          'Claude (Opus 4.8): Jan 2026 reliable cutoff — web search requires explicit tool activation',
+          'Claude (Opus 5): May 2026 reliable cutoff — web search requires explicit tool activation',
           'Grok 4.3: Nov 2024 cutoff — searches X (Twitter) by default',
           'Local LLMs (Llama, Qwen, Gemma, Phi): no search layer — cutoff is a hard frozen limit',
         ],
@@ -43,10 +43,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       de: {
         question: 'Was sind die aktuellen Wissens-Cutoff-Daten der KI-Modelle?',
-        answer: 'Verifizierte Cutoffs: GPT-5.5 August 2025 (ChatGPT durchsucht standardmäßig Bing; GPT-4o-Legacy Okt 2023); Claude Opus 4.8 Januar 2026 (zuverlässiger Cutoff); Grok 4.3 November 2024 (durchsucht X); Gemini 3.1 Pro Januar 2025 (native Google Search). Lokale LLMs (Llama, Qwen, Gemma, Phi) haben keine Websuche — ihr Cutoff ist absolut.',
+        answer: 'Verifizierte Cutoffs: GPT-5.5 August 2025 (ChatGPT durchsucht standardmäßig Bing; GPT-4o-Legacy Okt 2023); Claude Opus 5 Mai 2026 (zuverlässiger Cutoff); Grok 4.3 November 2024 (durchsucht X); Gemini 3.1 Pro Januar 2025 (native Google Search). Lokale LLMs (Llama, Qwen, Gemma, Phi) haben keine Websuche — ihr Cutoff ist absolut.',
         bullets: [
           'GPT-5.5 (ChatGPT): Cutoff Aug 2025 — teilweise durch Bing-Suche ausgeglichen',
-          'Claude (Opus 4.8): Cutoff Jan 2026 (zuverlässig) — Websuche nur als optionales Tool',
+          'Claude (Opus 5): Cutoff Mai 2026 (zuverlässig) — Websuche nur als optionales Tool',
           'Grok 4.3: Cutoff Nov 2024 — durchsucht X standardmäßig',
           'Lokale LLMs: keine Suchfunktion — Cutoff ist eine harte Wissensgrenze',
         ],
@@ -54,10 +54,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       fr: {
         question: 'Quelles sont les dates de coupure des modèles d\'IA en 2026 ?',
-        answer: 'Coupures vérifiées : GPT-5.5 août 2025 (ChatGPT recherche Bing par défaut ; GPT-4o legacy oct 2023) ; Claude Opus 4.8 janvier 2026 (coupure fiable) ; Grok 4.3 novembre 2024 (recherche X) ; Gemini 3.1 Pro janvier 2025 (Google Search natif). Les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont pas de couche de recherche — leur coupure est une limite absolue.',
+        answer: 'Coupures vérifiées : GPT-5.5 août 2025 (ChatGPT recherche Bing par défaut ; GPT-4o legacy oct 2023) ; Claude Opus 5 mai 2026 (coupure fiable) ; Grok 4.3 novembre 2024 (recherche X) ; Gemini 3.1 Pro janvier 2025 (Google Search natif). Les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont pas de couche de recherche — leur coupure est une limite absolue.',
         bullets: [
           'GPT-5.5 (ChatGPT) : coupure août 2025 — partiellement compensée par Bing',
-          'Claude (Opus 4.8) : coupure jan 2026 (fiable) — recherche web opt-in uniquement',
+          'Claude (Opus 5) : coupure mai 2026 (fiable) — recherche web opt-in uniquement',
           'Grok 4.3 : coupure nov 2024 — recherche X par défaut',
           'LLM locaux : aucune recherche — la coupure est une limite dure',
         ],
@@ -65,10 +65,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ja: {
         question: 'AIモデルの知識カットオフ日は2026年現在どうなっていますか？',
-        answer: '確認済みカットオフ：GPT-5.5は2025年8月（ChatGPTはデフォルトでBing検索；GPT-4oレガシーは2023年10月）、Claude Opus 4.8は2026年1月（信頼性の高いカットオフ）、Grok 4.3は2024年11月（X検索）、Gemini 3.1 Proは2025年1月（Google Search統合）。ローカルLLM（Llama、Qwen、Gemma、Phi）は検索レイヤーなし — カットオフは絶対的な制限。',
+        answer: '確認済みカットオフ：GPT-5.5は2025年8月（ChatGPTはデフォルトでBing検索；GPT-4oレガシーは2023年10月）、Claude Opus 5は2026年5月（信頼性の高いカットオフ）、Grok 4.3は2024年11月（X検索）、Gemini 3.1 Proは2025年1月（Google Search統合）。ローカルLLM（Llama、Qwen、Gemma、Phi）は検索レイヤーなし — カットオフは絶対的な制限。',
         bullets: [
           'GPT-5.5 (ChatGPT)：カットオフ2025年8月 — Bing検索で部分補完',
-          'Claude (Opus 4.8)：カットオフ2026年1月（信頼性高）— ウェブ検索はオプトイン',
+          'Claude (Opus 5)：カットオフ2026年5月（信頼性高）— ウェブ検索はオプトイン',
           'Grok 4.3：カットオフ2024年11月 — X検索をデフォルトで使用',
           'ローカルLLM：検索なし — カットオフは固定された絶対的な知識の限界',
         ],
@@ -76,10 +76,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       zh: {
         question: '2026年AI模型的知识截止日期是什么？',
-        answer: '已验证截止日期：GPT-5.5 2025年8月（ChatGPT默认搜索Bing；GPT-4o旧版2023年10月）；Claude Opus 4.8 2026年1月（可靠截止日期）；Grok 4.3 2024年11月（搜索X）；Gemini 3.1 Pro 2025年1月（原生Google Search集成）。本地LLM（Llama、Qwen、Gemma、Phi）无搜索层——截止日期是绝对硬限制。',
+        answer: '已验证截止日期：GPT-5.5 2025年8月（ChatGPT默认搜索Bing；GPT-4o旧版2023年10月）；Claude Opus 5 2026年5月（可靠截止日期）；Grok 4.3 2024年11月（搜索X）；Gemini 3.1 Pro 2025年1月（原生Google Search集成）。本地LLM（Llama、Qwen、Gemma、Phi）无搜索层——截止日期是绝对硬限制。',
         bullets: [
           'GPT-5.5 (ChatGPT)：截止2025年8月 — 由Bing搜索部分补充',
-          'Claude (Opus 4.8)：截止2026年1月（可靠）— 网络搜索需手动启用',
+          'Claude (Opus 5)：截止2026年5月（可靠）— 网络搜索需手动启用',
           'Grok 4.3：截止2024年11月 — 默认搜索X',
           '本地LLM：无搜索层 — 截止日期是冻结的绝对知识边界',
         ],
@@ -87,10 +87,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       pt: {
         question: 'Quais são as datas de corte de conhecimento dos modelos de IA em 2026?',
-        answer: 'Datas de corte verificadas: GPT-5.5 agosto 2025 (ChatGPT busca no Bing por padrão; GPT-4o legado out 2023); Claude Opus 4.8 janeiro 2026 (corte confiável); Grok 4.3 novembro 2024 (busca X); Gemini 3.1 Pro janeiro 2025 (Google Search nativo). LLMs locais (Llama, Qwen, Gemma, Phi) não têm camada de busca — o corte é um limite absoluto.',
+        answer: 'Datas de corte verificadas: GPT-5.5 agosto 2025 (ChatGPT busca no Bing por padrão; GPT-4o legado out 2023); Claude Opus 5 maio 2026 (corte confiável); Grok 4.3 novembro 2024 (busca X); Gemini 3.1 Pro janeiro 2025 (Google Search nativo). LLMs locais (Llama, Qwen, Gemma, Phi) não têm camada de busca — o corte é um limite absoluto.',
         bullets: [
           'GPT-5.5 (ChatGPT): corte ago 2025 — parcialmente compensado pela busca Bing',
-          'Claude (Opus 4.8): corte jan 2026 (confiável) — busca web requer ativação explícita',
+          'Claude (Opus 5): corte maio 2026 (confiável) — busca web requer ativação explícita',
           'Grok 4.3: corte nov 2024 — busca X por padrão',
           'LLMs locais: sem camada de busca — o corte é um limite de conhecimento fixo',
         ],
@@ -98,10 +98,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       ar: {
         question: 'ما هي تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي في 2026؟',
-        answer: 'تواريخ انقطاع موثّقة: GPT-5.5 أغسطس 2025 (ChatGPT يبحث في Bing افتراضيًا؛ GPT-4o القديم أكتوبر 2023)؛ Claude Opus 4.8 يناير 2026 (انقطاع موثوق)؛ Grok 4.3 نوفمبر 2024 (يبحث في X)؛ Gemini 3.1 Pro يناير 2025 (Google Search الأصيل). نماذج LLM المحلية (Llama وQwen وGemma وPhi) بلا طبقة بحث — الانقطاع حد مطلق.',
+        answer: 'تواريخ انقطاع موثّقة: GPT-5.5 أغسطس 2025 (ChatGPT يبحث في Bing افتراضيًا؛ GPT-4o القديم أكتوبر 2023)؛ Claude Opus 5 مايو 2026 (انقطاع موثوق)؛ Grok 4.3 نوفمبر 2024 (يبحث في X)؛ Gemini 3.1 Pro يناير 2025 (Google Search الأصيل). نماذج LLM المحلية (Llama وQwen وGemma وPhi) بلا طبقة بحث — الانقطاع حد مطلق.',
         bullets: [
           'GPT-5.5 (ChatGPT): انقطاع أغسطس 2025 — مُعوَّض جزئيًا ببحث Bing',
-          'Claude (Opus 4.8): انقطاع يناير 2026 (موثوق) — بحث الويب يتطلب تفعيلًا صريحًا',
+          'Claude (Opus 5): انقطاع مايو 2026 (موثوق) — بحث الويب يتطلب تفعيلًا صريحًا',
           'Grok 4.3: انقطاع نوفمبر 2024 — يبحث في X افتراضيًا',
           'نماذج LLM المحلية: بلا بحث — الانقطاع حد معرفي مجمّد مطلق',
         ],
@@ -322,7 +322,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'KI Wissens-Cutoff-Daten 2026 | PromptQuorum',
     metaDescription: 'Verifizierte Wissens-Cutoff-Daten für Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma und Phi. Welche Modelle live suchen — und welche eingefroren sind.',
     publishDate: '2026-06-12',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-27',
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -365,14 +365,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Dates de Coupure IA 2026 | PromptQuorum',
     metaDescription: 'Dates de coupure vérifiées pour Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma et Phi. Quels modèles utilisent la recherche live — et lesquels sont figés dans le temps.',
     publishDate: '2026-06-12',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-27',
     quickAnswerTop: {
       fr: {
         question: 'Quelles sont les dates de coupure des modèles d\'IA en 2026 ?',
-        answer: 'Coupures vérifiées : GPT-5.5 août 2025 (ChatGPT recherche Bing par défaut ; GPT-4o legacy oct 2023) ; Claude Opus 4.8 janvier 2026 (coupure fiable) ; Grok 4.3 novembre 2024 (recherche X) ; Gemini 3.1 Pro janvier 2025 (Google Search natif). Les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont pas de couche de recherche — leur coupure est une limite absolue.',
+        answer: 'Coupures vérifiées : GPT-5.5 août 2025 (ChatGPT recherche Bing par défaut ; GPT-4o legacy oct 2023) ; Claude Opus 5 mai 2026 (coupure fiable) ; Grok 4.3 novembre 2024 (recherche X) ; Gemini 3.1 Pro janvier 2025 (Google Search natif). Les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont pas de couche de recherche — leur coupure est une limite absolue.',
         bullets: [
           'GPT-5.5 (ChatGPT) : coupure août 2025 — partiellement compensée par Bing',
-          'Claude (Opus 4.8) : coupure jan 2026 (fiable) — recherche web opt-in uniquement',
+          'Claude (Opus 5) : coupure mai 2026 (fiable) — recherche web opt-in uniquement',
           'Grok 4.3 : coupure nov 2024 — recherche X par défaut',
           'LLM locaux : aucune recherche — la coupure est une limite dure',
         ],
@@ -437,14 +437,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'AIモデル知識カットオフ日2026 | PromptQuorum',
     metaDescription: 'Claude、ChatGPT、Gemini、Grok、Llama、Qwen、Gemma、Phiの検証済み知識カットオフ日。どのモデルがライブ検索を使用し、どのモデルが凍結されているかを解説。',
     publishDate: '2026-06-12',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-27',
     quickAnswerTop: {
       ja: {
         question: 'AIモデルの知識カットオフ日は2026年現在どうなっていますか？',
-        answer: '確認済みカットオフ：GPT-5.5は2025年8月（ChatGPTはデフォルトでBing検索；GPT-4oレガシーは2023年10月）、Claude Opus 4.8は2026年1月（信頼性の高いカットオフ）、Grok 4.3は2024年11月（X検索）、Gemini 3.1 Proは2025年1月（Google Search統合）。ローカルLLM（Llama、Qwen、Gemma、Phi）は検索レイヤーなし — カットオフは絶対的な制限。',
+        answer: '確認済みカットオフ：GPT-5.5は2025年8月（ChatGPTはデフォルトでBing検索；GPT-4oレガシーは2023年10月）、Claude Opus 5は2026年5月（信頼性の高いカットオフ）、Grok 4.3は2024年11月（X検索）、Gemini 3.1 Proは2025年1月（Google Search統合）。ローカルLLM（Llama、Qwen、Gemma、Phi）は検索レイヤーなし — カットオフは絶対的な制限。',
         bullets: [
           'GPT-5.5 (ChatGPT)：カットオフ2025年8月 — Bing検索で部分補完',
-          'Claude (Opus 4.8)：カットオフ2026年1月（信頼性高）— ウェブ検索はオプトイン',
+          'Claude (Opus 5)：カットオフ2026年5月（信頼性高）— ウェブ検索はオプトイン',
           'Grok 4.3：カットオフ2024年11月 — X検索をデフォルトで使用',
           'ローカルLLM：検索なし — カットオフは固定された絶対的な知識の限界',
         ],
@@ -509,14 +509,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'AI模型知识截止日期2026 | PromptQuorum',
     metaDescription: 'Claude、ChatGPT、Gemini、Grok、Llama、Qwen、Gemma和Phi的已验证知识截止日期。哪些模型使用实时搜索，哪些模型知识被冻结。',
     publishDate: '2026-06-12',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-27',
     quickAnswerTop: {
       zh: {
         question: '2026年AI模型的知识截止日期是什么？',
-        answer: '已验证截止日期：GPT-5.5 2025年8月（ChatGPT默认搜索Bing；GPT-4o旧版2023年10月）；Claude Opus 4.8 2026年1月（可靠截止日期）；Grok 4.3 2024年11月（搜索X）；Gemini 3.1 Pro 2025年1月（原生Google Search集成）。本地LLM（Llama、Qwen、Gemma、Phi）无搜索层——截止日期是绝对硬限制。',
+        answer: '已验证截止日期：GPT-5.5 2025年8月（ChatGPT默认搜索Bing；GPT-4o旧版2023年10月）；Claude Opus 5 2026年5月（可靠截止日期）；Grok 4.3 2024年11月（搜索X）；Gemini 3.1 Pro 2025年1月（原生Google Search集成）。本地LLM（Llama、Qwen、Gemma、Phi）无搜索层——截止日期是绝对硬限制。',
         bullets: [
           'GPT-5.5 (ChatGPT)：截止2025年8月 — 由Bing搜索部分补充',
-          'Claude (Opus 4.8)：截止2026年1月（可靠）— 网络搜索需手动启用',
+          'Claude (Opus 5)：截止2026年5月（可靠）— 网络搜索需手动启用',
           'Grok 4.3：截止2024年11月 — 默认搜索X',
           '本地LLM：无搜索层 — 截止日期是冻结的绝对知识边界',
         ],
@@ -581,14 +581,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'AI 모델 지식 컷오프 날짜 2026 | PromptQuorum',
     metaDescription: 'Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma, Phi의 검증된 지식 컷오프 날짜. 어떤 모델이 실시간 웹 검색을 사용하고 어떤 모델이 과거 시점에 고정되어 있는지 확인하세요.',
     publishDate: '2026-06-12',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-27',
     quickAnswerTop: {
       ko: {
         question: '2026년 현재 AI 모델의 지식 컷오프 날짜는 무엇인가요?',
-        answer: '검증된 컷오프: GPT-5.5는 2025년 8월(ChatGPT는 기본적으로 Bing 검색 사용; GPT-4o 레거시는 2023년 10월), Claude Opus 4.8은 2026년 1월(신뢰할 수 있는 컷오프), Grok 4.3은 2024년 11월(X 검색), Gemini 3.1 Pro는 2025년 1월(네이티브 Google Search). 로컬 LLM(Llama, Qwen, Gemma, Phi)은 검색 레이어가 없으므로 컷오프가 절대적인 한계입니다.',
+        answer: '검증된 컷오프: GPT-5.5는 2025년 8월(ChatGPT는 기본적으로 Bing 검색 사용; GPT-4o 레거시는 2023년 10월), Claude Opus 5는 2026년 5월(신뢰할 수 있는 컷오프), Grok 4.3은 2024년 11월(X 검색), Gemini 3.1 Pro는 2025년 1월(네이티브 Google Search). 로컬 LLM(Llama, Qwen, Gemma, Phi)은 검색 레이어가 없으므로 컷오프가 절대적인 한계입니다.',
         bullets: [
           'GPT-5.5 (ChatGPT): 컷오프 2025년 8월 — Bing 검색으로 부분 보완',
-          'Claude (Opus 4.8): 컷오프 2026년 1월(신뢰 가능) — 웹 검색은 명시적 도구 활성화 필요',
+          'Claude (Opus 5): 컷오프 2026년 5월(신뢰 가능) — 웹 검색은 명시적 도구 활성화 필요',
           'Grok 4.3: 컷오프 2024년 11월 — 기본적으로 X 검색',
           '로컬 LLM: 검색 레이어 없음 — 컷오프는 고정된 절대적 한계',
         ],
@@ -653,14 +653,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Datas de corte de conhecimento de IA 2026 | PromptQuorum',
     metaDescription: 'Datas de corte verificadas para Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma e Phi. Descubra quais modelos usam busca web ao vivo e quais estão congelados em um ponto no tempo.',
     publishDate: '2026-06-12',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-27',
     quickAnswerTop: {
       pt: {
         question: 'Quais são as datas de corte de conhecimento dos modelos de IA em 2026?',
-        answer: 'Datas de corte verificadas: GPT-5.5 agosto 2025 (ChatGPT busca no Bing por padrão; GPT-4o legado out 2023); Claude Opus 4.8 janeiro 2026 (corte confiável); Grok 4.3 novembro 2024 (busca X); Gemini 3.1 Pro janeiro 2025 (Google Search nativo). LLMs locais (Llama, Qwen, Gemma, Phi) não têm camada de busca — o corte é um limite absoluto.',
+        answer: 'Datas de corte verificadas: GPT-5.5 agosto 2025 (ChatGPT busca no Bing por padrão; GPT-4o legado out 2023); Claude Opus 5 maio 2026 (corte confiável); Grok 4.3 novembro 2024 (busca X); Gemini 3.1 Pro janeiro 2025 (Google Search nativo). LLMs locais (Llama, Qwen, Gemma, Phi) não têm camada de busca — o corte é um limite absoluto.',
         bullets: [
           'GPT-5.5 (ChatGPT): corte ago 2025 — parcialmente compensado pela busca Bing',
-          'Claude (Opus 4.8): corte jan 2026 (confiável) — busca web requer ativação explícita',
+          'Claude (Opus 5): corte maio 2026 (confiável) — busca web requer ativação explícita',
           'Grok 4.3: corte nov 2024 — busca X por padrão',
           'LLMs locais: sem camada de busca — o corte é um limite de conhecimento fixo',
         ],
@@ -725,14 +725,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي ⁨2026⁩',
     metaDescription: 'تواريخ انقطاع موثّقة لـ ⁨Claude⁩ و⁨ChatGPT⁩ و⁨Gemini⁩ و⁨Llama⁩ و⁨Qwen⁩. اكتشف أي النماذج تستخدم البحث المباشر وأيها مجمّدة عند نقطة زمنية محددة.',
     publishDate: '2026-06-12',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-27',
     quickAnswerTop: {
       ar: {
         question: 'ما هي تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي في 2026؟',
-        answer: 'تواريخ انقطاع موثّقة: GPT-5.5 أغسطس 2025 (ChatGPT يبحث في Bing افتراضيًا؛ GPT-4o القديم أكتوبر 2023)؛ Claude Opus 4.8 يناير 2026 (انقطاع موثوق)؛ Grok 4.3 نوفمبر 2024 (يبحث في X)؛ Gemini 3.1 Pro يناير 2025 (Google Search الأصيل). نماذج LLM المحلية (Llama وQwen وGemma وPhi) بلا طبقة بحث — الانقطاع حد مطلق.',
+        answer: 'تواريخ انقطاع موثّقة: GPT-5.5 أغسطس 2025 (ChatGPT يبحث في Bing افتراضيًا؛ GPT-4o القديم أكتوبر 2023)؛ Claude Opus 5 مايو 2026 (انقطاع موثوق)؛ Grok 4.3 نوفمبر 2024 (يبحث في X)؛ Gemini 3.1 Pro يناير 2025 (Google Search الأصيل). نماذج LLM المحلية (Llama وQwen وGemma وPhi) بلا طبقة بحث — الانقطاع حد مطلق.',
         bullets: [
           'GPT-5.5 (ChatGPT): انقطاع أغسطس 2025 — مُعوَّض جزئيًا ببحث Bing',
-          'Claude (Opus 4.8): انقطاع يناير 2026 (موثوق) — بحث الويب يتطلب تفعيلًا صريحًا',
+          'Claude (Opus 5): انقطاع مايو 2026 (موثوق) — بحث الويب يتطلب تفعيلًا صريحًا',
           'Grok 4.3: انقطاع نوفمبر 2024 — يبحث في X افتراضيًا',
           'نماذج LLM المحلية: بلا بحث — الانقطاع حد معرفي مجمّد مطلق',
         ],

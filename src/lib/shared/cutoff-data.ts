@@ -11,7 +11,7 @@
  *  - hasLiveSearch: whether the model searches the live web BY DEFAULT for end users.
  *    Tool-use integrations that must be explicitly wired are NOT counted as "default on".
  *
- * Last fact-checked: 2026-06-13
+ * Last fact-checked: 2026-08-27
  */
 
 export type SearchLayer =
@@ -46,18 +46,18 @@ export interface ModelCutoffEntry {
 
 export const CLOUD_MODELS: ModelCutoffEntry[] = [
   {
-    modelName: 'Claude Opus 4.8',
+    modelName: 'Claude Opus 5',
     vendor: 'Anthropic',
-    cutoffDate: '2026-01',
+    cutoffDate: '2026-05',
     cutoffVerified: true,
     hasLiveSearchDefault: false,
     searchLayer: 'Tool-use only',
     searchNote:
-      'Anthropic publishes two dates: reliable knowledge cutoff (Jan 2026) vs broader training cutoff. Tool-based web access; does not browse by default.',
+      'Anthropic publishes two dates: reliable knowledge cutoff (May 2026) vs broader training cutoff. Tool-based web access; does not browse by default.',
     license: 'Proprietary',
     deployment: 'Cloud only',
-    sourceUrl: 'https://www.anthropic.com/claude/opus-4',
-    sourceNote: 'Reliable knowledge cutoff Jan 2026 per Anthropic model overview (released May 28 2026).',
+    sourceUrl: 'https://platform.claude.com/docs/en/about-claude/models/overview',
+    sourceNote: 'Reliable knowledge cutoff May 2026 per Anthropic model overview; supersedes Claude Opus 4.8 (Jan 2026 cutoff), now a legacy model.',
   },
   {
     modelName: 'GPT-5.5 (ChatGPT)',
@@ -238,4 +238,4 @@ export const LOCAL_MODELS: ModelCutoffEntry[] = [
 export const ALL_MODELS: ModelCutoffEntry[] = [...CLOUD_MODELS, ...LOCAL_MODELS];
 
 /** Last date all entries above were fact-checked against primary sources. */
-export const CUTOFF_DATA_LAST_VERIFIED = '2026-06-13';
+export const CUTOFF_DATA_LAST_VERIFIED = '2026-08-27';

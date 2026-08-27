@@ -5207,16 +5207,16 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     en: {
       category: 'AI Model Comparison',
       title: 'ChatGPT vs Claude vs Gemini: Compare AI Models Side-by-Side in 2026',
-      intro: 'As of 2026: GPT-5.6, Claude Opus 4.8, and Gemini 3.1 Pro compared on reasoning, speed, context window, pricing, and multimodal capabilities. When to use each — and when to use all three.',
+      intro: 'As of 2026: GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro compared on reasoning, speed, context window, pricing, and multimodal capabilities. When to use each — and when to use all three.',
       publishDate: 'Published March 14, 2026',
       readTime: '12 min read',
-      seoTitle: 'GPT-5.6 vs Claude Opus 4.8 vs Gemini 3.1 Pro (2026)',
-      metaDescription: 'GPT-5.6, Claude Opus 4.8, and Gemini 3.1 Pro compared on speed, reasoning, pricing, and context window. Which AI model to use — and when to use all three.',
+      seoTitle: 'GPT-5.6 vs Claude Opus 5 vs Gemini 3.1 Pro (2026)',
+      metaDescription: 'GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro compared on speed, reasoning, pricing, and context window. Which AI model to use — and when to use all three.',
       heroImage: '/images/ai-model-comparison-comparisonTable-hero-en.webp',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-09-14',
       last_full_refresh: '2026-07-14',
-      current_models_mentioned: ['GPT-5.6', 'GPT-4o', 'Claude Opus 4.8', 'Gemini 3.1 Pro'],
+      current_models_mentioned: ['GPT-5.6', 'GPT-4o', 'Claude Opus 5', 'Gemini 3.1 Pro'],
       educationalLevel: 'Intermediate',
       faqSchema: {
         '@context': 'https://schema.org',
@@ -5227,7 +5227,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Which AI model is best for creative writing?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6 (ChatGPT) excels at creative writing, brainstorming, and general versatility. It is fast and accessible. Claude Opus 4.8 is better for deeper reasoning and analysis of creative work.',
+              text: 'GPT-5.6 (ChatGPT) excels at creative writing, brainstorming, and general versatility. It is fast and accessible. Claude Opus 5 is better for deeper reasoning and analysis of creative work.',
             },
           },
           {
@@ -5243,7 +5243,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'What is the cost comparison for 2026?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6 (OpenAI): ~$5/1M input tokens, ~$15/1M output. Claude Opus 4.8 (Anthropic): ~$15/1M input, ~$75/1M output. Gemini 3.1 Pro (Google): ~$3.5/1M input, ~$10.5/1M output. All three have $20/month consumer plans. Verify current prices at each provider.',
+              text: 'GPT-5.6 (OpenAI): ~$5/1M input tokens, ~$15/1M output. Claude Opus 5 (Anthropic): ~$5/1M input, ~$25/1M output. Gemini 3.1 Pro (Google): ~$3.5/1M input, ~$10.5/1M output. All three have $20/month consumer plans. Verify current prices at each provider.',
             },
           },
           {
@@ -5251,7 +5251,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Which model handles multimodal tasks best?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemini 3.1 Pro is strongest for images, video, audio, and document understanding. GPT-5.6 supports text and images. Claude Opus 4.8 supports text and images but not video.',
+              text: 'Gemini 3.1 Pro is strongest for images, video, audio, and document understanding. GPT-5.6 supports text and images. Claude Opus 5 supports text and images but not video.',
             },
           },
           {
@@ -5259,7 +5259,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Which model has the largest context window?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemini 3.1 Pro has the largest at 2M tokens — fits an entire codebase or book. Claude Opus 4.8 has 1M tokens. GPT-5.6 has 128K tokens. For long-document analysis, Claude or Gemini is the right choice.',
+              text: 'Gemini 3.1 Pro has the largest at 2M tokens — fits an entire codebase or book. Claude Opus 5 has 1M tokens. GPT-5.6 has 128K tokens. For long-document analysis, Claude or Gemini is the right choice.',
             },
           },
           {
@@ -5272,7 +5272,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'Question',
-            name: 'How does GPT-4o compare to Claude Opus 4.8 and Gemini 3.1 Pro?',
+            name: 'How does GPT-4o compare to Claude Opus 5 and Gemini 3.1 Pro?',
             acceptedAnswer: {
               '@type': 'Answer',
               text: 'GPT-4o was OpenAI\'s flagship model before GPT-5.6 superseded it as the model behind ChatGPT. Its official model card lists a 128K token context window, ~88.7% on MMLU, and ~90.2% on HumanEval. Claude Opus 4.8 outperforms it on reasoning (~91% MMLU-Pro, a harder benchmark) and coding (~94% HumanEval) with an 1M token context window. If you\'re using ChatGPT today, you\'re most likely on GPT-5.6, not GPT-4o — check your account\'s model picker to confirm.',
@@ -5297,7 +5297,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'HowToStep',
-            name: 'Test with Claude Opus 4.8',
+            name: 'Test with Claude Opus 5',
             text: 'Send the same prompt to Claude. Compare the depth of reasoning, accuracy, and reasoning transparency. Enable extended thinking for complex tasks.',
           },
           {
@@ -5330,7 +5330,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Claude Opus 4.8 (Anthropic)',
+            name: 'Claude Opus 5 (Anthropic)',
             description: 'Best for complex reasoning, code quality, long-form analysis. 1M token context window. Highest HumanEval score (~94%). Free tier available.',
           },
           {
@@ -5349,19 +5349,19 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 5,
             name: 'Speed',
-            description: '1. GPT-5.6 (fastest). 2. Gemini 3.1 Pro (fast). 3. Claude Opus 4.8 (moderate — more thorough).',
+            description: '1. GPT-5.6 (fastest). 2. Gemini 3.1 Pro (fast). 3. Claude Opus 5 (moderate — more thorough).',
           },
           {
             '@type': 'ListItem',
             position: 6,
             name: 'API Cost (input per 1M tokens)',
-            description: 'Gemini 3.1 Pro (~$3.5) < GPT-5.6 (~$5) < Claude Opus 4.8 (~$15). Verify current pricing at each provider.',
+            description: 'Gemini 3.1 Pro (~$3.5) < GPT-5.6 (~$5) < Claude Opus 5 (~$15). Verify current pricing at each provider.',
           },
           {
             '@type': 'ListItem',
             position: 7,
             name: 'Multimodal Capability',
-            description: 'Gemini 3.1 Pro (text, images, video, audio) > GPT-5.6 (text, images) > Claude Opus 4.8 (text, images).',
+            description: 'Gemini 3.1 Pro (text, images, video, audio) > GPT-5.6 (text, images) > Claude Opus 5 (text, images).',
           },
           {
             '@type': 'ListItem',
@@ -5375,8 +5375,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         why: {
           title: 'Why Compare AI Models?',
           content: [
-            '**Bottom line:** GPT-5.6 leads on speed and creative output. Claude Opus 4.8 leads on reasoning accuracy and long-document analysis (1M token context). Gemini 3.1 Pro leads on multimodal tasks and has the largest context window (2M tokens). For critical work, run the same prompt across all three — single-model reliance leaves accuracy on the table.',
-            'Different AI models excel at different tasks. ChatGPT (GPT-5.6) is the fastest and most versatile. Claude (Opus 4.8) scores highest on reasoning and code benchmarks. Gemini (3.1 Pro) is strongest on multimodal tasks and real-time web access. Knowing which model fits your task means better results and lower costs.',
+            '**Bottom line:** GPT-5.6 leads on speed and creative output. Claude Opus 5 leads on reasoning accuracy and long-document analysis (1M token context). Gemini 3.1 Pro leads on multimodal tasks and has the largest context window (2M tokens). For critical work, run the same prompt across all three — single-model reliance leaves accuracy on the table.',
+            'Different AI models excel at different tasks. ChatGPT (GPT-5.6) is the fastest and most versatile. Claude (Opus 5) scores highest on reasoning and code benchmarks. Gemini (3.1 Pro) is strongest on multimodal tasks and real-time web access. Knowing which model fits your task means better results and lower costs.',
             'This guide compares all three frontier models as of 2026: strengths, context windows, pricing, and the tasks where each one wins.',
             'For a systematic approach to model selection — including when to choose open-source vs commercial — see [how to pick the right AI model: GPT, Claude, or Gemini](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
@@ -5432,7 +5432,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'All three models have free consumer tiers — Pro/Plus plans are $20/month across all three',
-            'GPT-5.6: 128K tokens | Claude Opus 4.8: 1M tokens | Gemini 3.1 Pro: 2M tokens',
+            'GPT-5.6: 128K tokens | Claude Opus 5: 1M tokens | Gemini 3.1 Pro: 2M tokens',
             'Claude Opus 4.8 extended thinking scores highest on MMLU-Pro (~91%) and AIME reasoning benchmarks',
             'Gemini 3.1 Pro is the only model with 2M context — fits an entire codebase, book, or legal filing',
             'All three support tool use, function calling, and RAG integration in production',
@@ -5441,16 +5441,16 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         comparisonTable: {
           title: 'Head-to-Head Comparison (2026)',
           content: '',
-          columns: ['Factor', 'GPT-5.6', 'Claude Opus 4.8', 'Gemini 3.1 Pro'],
+          columns: ['Factor', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
-            { 'Factor': 'Context window', 'GPT-5.6': '128K tokens', 'Claude Opus 4.8': '1M tokens', 'Gemini 3.1 Pro': '2M tokens' },
+            { 'Factor': 'Context window', 'GPT-5.6': '128K tokens', 'Claude Opus 5': '1M tokens', 'Gemini 3.1 Pro': '2M tokens' },
             { 'Factor': 'Reasoning (MMLU-Pro)', 'GPT-5.6': '~90%', 'Claude Opus 4.8': '~91%', 'Gemini 3.1 Pro': '~89%' },
             { 'Factor': 'Code (HumanEval)', 'GPT-5.6': '~92%', 'Claude Opus 4.8': '~94%', 'Gemini 3.1 Pro': '~88%' },
-            { 'Factor': 'Multimodal', 'GPT-5.6': 'Text + images', 'Claude Opus 4.8': 'Text + images', 'Gemini 3.1 Pro': 'Text, images, video, audio' },
-            { 'Factor': 'Speed', 'GPT-5.6': 'Fast', 'Claude Opus 4.8': 'Moderate', 'Gemini 3.1 Pro': 'Fast' },
-            { 'Factor': 'API input (per 1M tokens)', 'GPT-5.6': '~$5', 'Claude Opus 4.8': '~$15', 'Gemini 3.1 Pro': '~$3.5' },
-            { 'Factor': 'Free tier', 'GPT-5.6': '✅ Yes', 'Claude Opus 4.8': '✅ Yes (limited)', 'Gemini 3.1 Pro': '✅ Yes' },
-            { 'Factor': 'Extended thinking', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 4.8': 'Built-in', 'Gemini 3.1 Pro': 'Flash Thinking' },
+            { 'Factor': 'Multimodal', 'GPT-5.6': 'Text + images', 'Claude Opus 5': 'Text + images', 'Gemini 3.1 Pro': 'Text, images, video, audio' },
+            { 'Factor': 'Speed', 'GPT-5.6': 'Fast', 'Claude Opus 5': 'Moderate', 'Gemini 3.1 Pro': 'Fast' },
+            { 'Factor': 'API input (per 1M tokens)', 'GPT-5.6': '~$5', 'Claude Opus 5': '~$15', 'Gemini 3.1 Pro': '~$3.5' },
+            { 'Factor': 'Free tier', 'GPT-5.6': '✅ Yes', 'Claude Opus 5': '✅ Yes (limited)', 'Gemini 3.1 Pro': '✅ Yes' },
+            { 'Factor': 'Extended thinking', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 5': 'Built-in', 'Gemini 3.1 Pro': 'Flash Thinking' },
           ],
         },
         contentCreation: {
@@ -5465,7 +5465,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         dataAnalysis: {
           title: 'Data Analysis & Research',
-          content: 'Claude Opus 4.8 wins — excellent accuracy, 1M token context window for analyzing long documents and datasets, rigorous reasoning. For very large documents (books, full codebases), Gemini 3.1 Pro\'s 2M context is the better fit.',
+          content: 'Claude Opus 5 wins — excellent accuracy, 1M token context window for analyzing long documents and datasets, rigorous reasoning. For very large documents (books, full codebases), Gemini 3.1 Pro\'s 2M context is the better fit.',
         },
         imageAnalysis: {
           title: 'Image Analysis',
@@ -5477,20 +5477,20 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         summarization: {
           title: 'Document Summarization',
-          content: 'Claude Opus 4.8 or Gemini 3.1 Pro — both have large context windows (1M and 2M tokens respectively). Claude Opus 4.8 produces more structured summaries with clear reasoning. Gemini 3.1 Pro handles the largest documents.',
+          content: 'Claude Opus 5 or Gemini 3.1 Pro — both have large context windows (1M and 2M tokens respectively). Claude Opus 5 produces more structured summaries with clear reasoning. Gemini 3.1 Pro handles the largest documents.',
         },
         budgetConscious: {
           title: 'Budget-Conscious Users',
-          content: 'Gemini 3.1 Pro wins on API costs (~$3.5/1M input tokens). All three models have free consumer tiers. For the API, Gemini is cheapest, GPT-5.6 is mid-range, Claude Opus 4.8 is highest — but quality differences justify the premium for accuracy-critical tasks.',
+          content: 'Gemini 3.1 Pro wins on API costs (~$3.5/1M input tokens). All three models have free consumer tiers. For the API, Gemini is cheapest, GPT-5.6 is mid-range, Claude Opus 5 is highest — but quality differences justify the premium for accuracy-critical tasks.',
         },
         strategy: {
           title: 'The Smart Strategy: Use All Three',
           content: [
             'Professional AI users don\'t commit to one model. They run the same prompt across all three and pick the best answer:',
             '1. GPT-5.6: Quick brainstorm and creative exploration',
-            '2. Claude Opus 4.8: Deep analysis, reasoning validation, code review',
+            '2. Claude Opus 5: Deep analysis, reasoning validation, code review',
             '3. Gemini 3.1 Pro: Real-time information, multimodal tasks, very long documents',
-            'This gives you speed (GPT-5.6), accuracy (Claude Opus 4.8), and currency + context (Gemini 3.1 Pro). PromptQuorum automates this: send the same optimized prompt to all three and compare results side-by-side.',
+            'This gives you speed (GPT-5.6), accuracy (Claude Opus 5), and currency + context (Gemini 3.1 Pro). PromptQuorum automates this: send the same optimized prompt to all three and compare results side-by-side.',
           ],
         },
         currentTrends: {
@@ -5498,7 +5498,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: ['The three frontier models have converged significantly on benchmark performance — the gap that existed in 2023 is now measured in single-digit percentage points on most standard benchmarks.'],
           items: [
             'Extended thinking modes are standard: all three offer inference-time compute scaling for complex reasoning tasks',
-            'Multimodal capabilities are table stakes: GPT-5.6 and Claude Opus 4.8 both support images; Gemini 3.1 Pro leads on video and audio',
+            'Multimodal capabilities are table stakes: GPT-5.6 and Claude Opus 5 both support images; Gemini 3.1 Pro leads on video and audio',
             'Context windows are expanding rapidly: from 4K (GPT-3) to 2M (Gemini 3.1 Pro) in under three years — context is no longer the bottleneck',
             'Open-source models are closing the capability gap: LLaMA 3.1 70B and Qwen2.5 now match GPT-4 on most benchmarks',
             'Tool use and function calling are universal: all three models support structured outputs, code execution, and external API calls in production',
@@ -5519,11 +5519,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Don\'t commit to one model — test all three with your actual use cases:',
             '1. Use ChatGPT (GPT-5.6) free tier for creative tasks and brainstorming',
-            '2. Try Claude Opus 4.8 for analytical and code review work',
+            '2. Try Claude Opus 5 for analytical and code review work',
             '3. Experiment with Gemini 3.1 Pro for image analysis and real-time web data',
             '4. Run the same prompt across all three and compare responses',
             '5. Identify which model gives the best result for your specific task type',
-            'PromptQuorum lets you send the same optimized prompt to GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro, and other models simultaneously — then compare which gave the best result for your task.',
+            'PromptQuorum lets you send the same optimized prompt to GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, and other models simultaneously — then compare which gave the best result for your task.',
           ],
         },
         tldr: {
@@ -5534,22 +5534,22 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Claude Opus 4.8: Best for reasoning (~91% MMLU-Pro), code (~94% HumanEval), long-form analysis. 1M context.',
             'Gemini 3.1 Pro: Best for multimodal (images, video, audio). Real-time web access. Largest context (2M). Lowest API cost.',
             'All three have free consumer tiers and $20/month Pro plans.',
-            'Reasoning: Claude Opus 4.8 > GPT-5.6 > Gemini 3.1 Pro.',
-            'Speed: GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 4.8.',
-            'API cost: Gemini 3.1 Pro (~$3.5/1M) < GPT-5.6 (~$5/1M) < Claude Opus 4.8 (~$15/1M).',
+            'Reasoning: Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro.',
+            'Speed: GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 5.',
+            'API cost: Gemini 3.1 Pro (~$3.5/1M) < GPT-5.6 (~$5/1M) < Claude Opus 5 (~$5/1M).',
             'Best practice: run the same prompt across all three for critical tasks — pick the best answer.',
           ],
         },
         faqSection: {
           title: 'Frequently Asked Questions',
           faqs: [
-            { q: 'Which AI model is best for creative writing?', a: 'GPT-5.6 (ChatGPT) excels at creative writing, brainstorming, and general versatility. It is fast and accessible. Claude Opus 4.8 is better for deeper reasoning and analysis of creative work.' },
+            { q: 'Which AI model is best for creative writing?', a: 'GPT-5.6 (ChatGPT) excels at creative writing, brainstorming, and general versatility. It is fast and accessible. Claude Opus 5 is better for deeper reasoning and analysis of creative work.' },
             { q: 'Which model is best for coding?', a: 'Claude Opus 4.8 has the edge in code quality and debugging (~94% HumanEval). GPT-5.6 (~92%) is faster. Use both and compare their code suggestions for critical work.' },
-            { q: 'What is the cost comparison in 2026?', a: 'GPT-5.6: ~$5/1M input, ~$15/1M output. Claude Opus 4.8: ~$15/1M input, ~$75/1M output. Gemini 3.1 Pro: ~$3.5/1M input, ~$10.5/1M output. All have $20/month consumer plans. Verify current pricing at each provider.' },
-            { q: 'Which model handles multimodal tasks best?', a: 'Gemini 3.1 Pro is strongest for images, video, audio, and document understanding. GPT-5.6 supports text and images. Claude Opus 4.8 supports text and images but not video.' },
+            { q: 'What is the cost comparison in 2026?', a: 'GPT-5.6: ~$5/1M input, ~$15/1M output. Claude Opus 5: ~$5/1M input, ~$25/1M output. Gemini 3.1 Pro: ~$3.5/1M input, ~$10.5/1M output. All have $20/month consumer plans. Verify current pricing at each provider.' },
+            { q: 'Which model handles multimodal tasks best?', a: 'Gemini 3.1 Pro is strongest for images, video, audio, and document understanding. GPT-5.6 supports text and images. Claude Opus 5 supports text and images but not video.' },
             { q: 'Do all three models have free tiers?', a: 'Yes. ChatGPT, Claude.ai, and Gemini all offer free tiers with limited daily usage. All three also offer $20/month Pro/Plus/Premium plans for higher usage limits.' },
             { q: 'How does GPT-4o compare to Claude Opus 4.8 and Gemini 3.1 Pro?', a: 'GPT-4o was OpenAI\'s flagship model before GPT-5.6 superseded it as the model behind ChatGPT. Its official model card lists a 128K token context window, ~88.7% on MMLU, and ~90.2% on HumanEval. Claude Opus 4.8 outperforms it on reasoning (~91% MMLU-Pro, a harder benchmark) and coding (~94% HumanEval) with a 1M token context window. If you\'re using ChatGPT today, you\'re most likely on GPT-5.6, not GPT-4o — check your account\'s model picker to confirm.' },
-            { q: 'Can I use multiple models in the same workflow?', a: 'Yes. PromptQuorum lets you send the same prompt to GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro, and other models simultaneously, then compare results side-by-side. This is the recommended approach for critical work.' },
+            { q: 'Can I use multiple models in the same workflow?', a: 'Yes. PromptQuorum lets you send the same prompt to GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, and other models simultaneously, then compare results side-by-side. This is the recommended approach for critical work.' },
           ],
         },
         commonMistakes: {
@@ -5557,7 +5557,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'Mistake 1: Picking one model and never comparing. Each model has distinct strengths. Always test with your specific task before committing.',
             'Mistake 2: Assuming the most expensive model is the best. Gemini 3.1 Pro is the cheapest API option and wins on multimodal tasks. Match model to task, not price.',
-            'Mistake 3: Ignoring context window limits. Gemini 3.1 Pro (2M tokens) and Claude Opus 4.8 (1M tokens) handle long documents. GPT-5.6 (128K) may truncate large inputs.',
+            'Mistake 3: Ignoring context window limits. Gemini 3.1 Pro (2M tokens) and Claude Opus 5 (1M tokens) handle long documents. GPT-5.6 (128K) may truncate large inputs.',
             'Mistake 4: Not checking knowledge cutoffs. Web-connected models (Gemini 3.1 Pro with Search, GPT-5.6 with browsing) have current info. Base API calls may use training cutoff data.',
             'Mistake 5: Using the same prompt for all models. Each model responds better to different prompting styles. Adapt your prompts — Claude benefits from explicit step-by-step instructions; Gemini benefits from multimodal context.',
           ],
@@ -5575,7 +5575,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Sources & Citations',
           items: [
             'OpenAI GPT-5.6 Model Specs — openai.com/models',
-            'Anthropic Claude Opus 4.8 Documentation — docs.anthropic.com',
+            'Anthropic Claude Opus 5 Documentation — docs.anthropic.com',
             'Google Gemini 3.1 Pro Specs — gemini.google.com',
             'LMSYS Chatbot Arena Leaderboard — arena.lmsys.org',
             'Papers With Code — MMLU benchmark results — paperswithcode.com/sota/multi-task-language-understanding-on-mmlu',
@@ -5586,11 +5586,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     ar: {
       category: 'مقارنة نماذج الذكاء الاصطناعي',
       title: 'ChatGPT مقابل Claude مقابل Gemini: مقارنة مباشرة بين نماذج الذكاء الاصطناعي في 2026',
-      intro: 'حتى عام 2026: مقارنة بين GPT-5.6 وClaude Opus 4.8 وGemini 3.1 Pro من حيث الاستدلال والسرعة ونافذة السياق والتسعير والقدرات متعددة الوسائط. متى تستخدم كل نموذج — ومتى تستخدم الثلاثة معًا.',
+      intro: 'حتى عام 2026: مقارنة بين GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro من حيث الاستدلال والسرعة ونافذة السياق والتسعير والقدرات متعددة الوسائط. متى تستخدم كل نموذج — ومتى تستخدم الثلاثة معًا.',
       publishDate: 'نُشر في 14 مارس 2026',
       readTime: '12 دقيقة للقراءة',
-      seoTitle: 'GPT-5.6 مقابل Claude Opus 4.8 مقابل Gemini 3.1 Pro (2026)',
-      metaDescription: 'مقارنة بين GPT-5.6 وClaude Opus 4.8 وGemini 3.1 Pro من حيث السرعة والاستدلال والتسعير ونافذة السياق. أي نموذج ذكاء اصطناعي تستخدم — ومتى تستخدم الثلاثة معًا.',
+      seoTitle: 'GPT-5.6 مقابل Claude Opus 5 مقابل Gemini 3.1 Pro (2026)',
+      metaDescription: 'مقارنة بين GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro من حيث السرعة والاستدلال والتسعير ونافذة السياق. أي نموذج ذكاء اصطناعي تستخدم — ومتى تستخدم الثلاثة معًا.',
       heroImage: '/images/ai-model-comparison-comparisonTable-hero-ar.webp',
       faqSchema: {
         '@context': 'https://schema.org',
@@ -5602,7 +5602,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'أي نموذج ذكاء اصطناعي هو الأفضل للكتابة الإبداعية؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'يتفوق GPT-5.6 (ChatGPT) في الكتابة الإبداعية والعصف الذهني والتنوع العام. وهو سريع وسهل الوصول إليه. أما Claude Opus 4.8 فهو أفضل للاستدلال الأعمق وتحليل الأعمال الإبداعية.',
+              text: 'يتفوق GPT-5.6 (ChatGPT) في الكتابة الإبداعية والعصف الذهني والتنوع العام. وهو سريع وسهل الوصول إليه. أما Claude Opus 5 فهو أفضل للاستدلال الأعمق وتحليل الأعمال الإبداعية.',
             },
           },
           {
@@ -5618,7 +5618,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'ما مقارنة التكلفة لعام 2026؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6 (OpenAI): نحو 5$ لكل مليون رمز إدخال، ونحو 15$ لكل مليون رمز إخراج. Claude Opus 4.8 (Anthropic): نحو 15$ لكل مليون رمز إدخال، ونحو 75$ لكل مليون رمز إخراج. Gemini 3.1 Pro (Google): نحو 3.5$ لكل مليون رمز إدخال، ونحو 10.5$ لكل مليون رمز إخراج. لدى الثلاثة خطط استهلاكية بـ20$ شهريًا. تحقق من الأسعار الحالية لدى كل مزوّد.',
+              text: 'GPT-5.6 (OpenAI): نحو 5$ لكل مليون رمز إدخال، ونحو 15$ لكل مليون رمز إخراج. Claude Opus 5 (Anthropic): نحو 5$ لكل مليون رمز إدخال، ونحو 25$ لكل مليون رمز إخراج. Gemini 3.1 Pro (Google): نحو 3.5$ لكل مليون رمز إدخال، ونحو 10.5$ لكل مليون رمز إخراج. لدى الثلاثة خطط استهلاكية بـ20$ شهريًا. تحقق من الأسعار الحالية لدى كل مزوّد.',
             },
           },
           {
@@ -5626,7 +5626,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'أي نموذج يتعامل مع المهام متعددة الوسائط بشكل أفضل؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemini 3.1 Pro هو الأقوى في الصور والفيديو والصوت وفهم المستندات. يدعم GPT-5.6 النصوص والصور. ويدعم Claude Opus 4.8 النصوص والصور لكن ليس الفيديو.',
+              text: 'Gemini 3.1 Pro هو الأقوى في الصور والفيديو والصوت وفهم المستندات. يدعم GPT-5.6 النصوص والصور. ويدعم Claude Opus 5 النصوص والصور لكن ليس الفيديو.',
             },
           },
           {
@@ -5634,7 +5634,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'أي نموذج يمتلك أكبر نافذة سياق؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'يمتلك Gemini 3.1 Pro الأكبر بـ2M رمز — تتسع لقاعدة شيفرة كاملة أو كتاب كامل. ويمتلك Claude Opus 4.8 نافذة بـ1M رمز. ويمتلك GPT-5.6 نافذة بـ128K رمز. لتحليل المستندات الطويلة، يكون Claude أو Gemini هو الخيار الصحيح.',
+              text: 'يمتلك Gemini 3.1 Pro الأكبر بـ2M رمز — تتسع لقاعدة شيفرة كاملة أو كتاب كامل. ويمتلك Claude Opus 5 نافذة بـ1M رمز. ويمتلك GPT-5.6 نافذة بـ128K رمز. لتحليل المستندات الطويلة، يكون Claude أو Gemini هو الخيار الصحيح.',
             },
           },
           {
@@ -5647,7 +5647,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'Question',
-            name: 'كيف يقارن GPT-4o بـClaude Opus 4.8 وGemini 3.1 Pro؟',
+            name: 'كيف يقارن GPT-4o بـClaude Opus 5 وGemini 3.1 Pro؟',
             acceptedAnswer: {
               '@type': 'Answer',
               text: 'كان GPT-4o هو النموذج الرائد لدى OpenAI قبل أن يحلّ محله GPT-5.6 كنموذج مشغّل لـChatGPT. تشير بطاقة النموذج الرسمية إلى نافذة سياق بـ128K رمز، ونحو 88.7% في اختبار MMLU، ونحو 90.2% في HumanEval. يتفوق عليه Claude Opus 4.8 في الاستدلال (نحو 91% في MMLU-Pro، وهو اختبار أصعب) وفي البرمجة (نحو 94% HumanEval)، بنافذة سياق بـ1M رمز. إذا كنت تستخدم ChatGPT اليوم، فمن المرجح أنك تستخدم GPT-5.6 وليس GPT-4o — تحقق من محدد النموذج في حسابك للتأكد.',
@@ -5673,7 +5673,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'HowToStep',
-            name: 'اختبر باستخدام Claude Opus 4.8',
+            name: 'اختبر باستخدام Claude Opus 5',
             text: 'أرسل المطالبة نفسها إلى Claude. قارن عمق الاستدلال والدقة وشفافية التفكير. فعّل وضع التفكير الموسّع للمهام المعقدة.',
           },
           {
@@ -5707,7 +5707,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Claude Opus 4.8 (Anthropic)',
+            name: 'Claude Opus 5 (Anthropic)',
             description: 'الأفضل للاستدلال المعقد وجودة الشيفرة والتحليل الطويل. نافذة سياق بـ1M رمز. أعلى نتيجة في HumanEval (نحو 94%). تتوفر خطة مجانية.',
           },
           {
@@ -5726,19 +5726,19 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 5,
             name: 'السرعة',
-            description: '1. GPT-5.6 (الأسرع). 2. Gemini 3.1 Pro (سريع). 3. Claude Opus 4.8 (متوسط — أكثر شمولًا).',
+            description: '1. GPT-5.6 (الأسرع). 2. Gemini 3.1 Pro (سريع). 3. Claude Opus 5 (متوسط — أكثر شمولًا).',
           },
           {
             '@type': 'ListItem',
             position: 6,
             name: 'تكلفة الـAPI (للإدخال لكل مليون رمز)',
-            description: 'Gemini 3.1 Pro (نحو 3.5$) < GPT-5.6 (نحو 5$) < Claude Opus 4.8 (نحو 15$). تحقق من التسعير الحالي لدى كل مزوّد.',
+            description: 'Gemini 3.1 Pro (نحو 3.5$) < GPT-5.6 (نحو 5$) < Claude Opus 5 (نحو 15$). تحقق من التسعير الحالي لدى كل مزوّد.',
           },
           {
             '@type': 'ListItem',
             position: 7,
             name: 'القدرة متعددة الوسائط',
-            description: 'Gemini 3.1 Pro (نصوص، صور، فيديو، صوت) > GPT-5.6 (نصوص، صور) > Claude Opus 4.8 (نصوص، صور).',
+            description: 'Gemini 3.1 Pro (نصوص، صور، فيديو، صوت) > GPT-5.6 (نصوص، صور) > Claude Opus 5 (نصوص، صور).',
           },
           {
             '@type': 'ListItem',
@@ -5752,8 +5752,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         why: {
           title: 'لماذا تقارن نماذج الذكاء الاصطناعي؟',
           content: [
-            '**الخلاصة:** يتصدّر GPT-5.6 من حيث السرعة والإنتاج الإبداعي. ويتصدّر Claude Opus 4.8 من حيث دقة الاستدلال وتحليل المستندات الطويلة (نافذة سياق بـ1M رمز). ويتصدّر Gemini 3.1 Pro من حيث المهام متعددة الوسائط ويمتلك أكبر نافذة سياق (2M رمز). للمهام الحرجة، شغّل المطالبة نفسها عبر النماذج الثلاثة — فالاعتماد على نموذج واحد يترك جزءًا من الدقة دون استغلال.',
-            'تتفوق نماذج الذكاء الاصطناعي المختلفة في مهام مختلفة. ChatGPT (GPT-5.6) هو الأسرع والأكثر تنوعًا. ويسجّل Claude (Opus 4.8) أعلى النتائج في اختبارات الاستدلال والبرمجة. وGemini (3.1 Pro) هو الأقوى في المهام متعددة الوسائط والوصول إلى الويب في الوقت الفعلي. معرفة النموذج المناسب لمهمتك تعني نتائج أفضل وتكاليف أقل.',
+            '**الخلاصة:** يتصدّر GPT-5.6 من حيث السرعة والإنتاج الإبداعي. ويتصدّر Claude Opus 5 من حيث دقة الاستدلال وتحليل المستندات الطويلة (نافذة سياق بـ1M رمز). ويتصدّر Gemini 3.1 Pro من حيث المهام متعددة الوسائط ويمتلك أكبر نافذة سياق (2M رمز). للمهام الحرجة، شغّل المطالبة نفسها عبر النماذج الثلاثة — فالاعتماد على نموذج واحد يترك جزءًا من الدقة دون استغلال.',
+            'تتفوق نماذج الذكاء الاصطناعي المختلفة في مهام مختلفة. ChatGPT (GPT-5.6) هو الأسرع والأكثر تنوعًا. ويسجّل Claude (Opus 5) أعلى النتائج في اختبارات الاستدلال والبرمجة. وGemini (3.1 Pro) هو الأقوى في المهام متعددة الوسائط والوصول إلى الويب في الوقت الفعلي. معرفة النموذج المناسب لمهمتك تعني نتائج أفضل وتكاليف أقل.',
             'يقارن هذا الدليل النماذج الرائدة الثلاثة جميعها حتى عام 2026: نقاط القوة، ونوافذ السياق، والتسعير، والمهام التي يفوز فيها كل منها.',
             'للحصول على نهج منهجي لاختيار النموذج — بما في ذلك متى تختار المصادر المفتوحة مقابل التجارية — راجع [كيفية اختيار نموذج الذكاء الاصطناعي المناسب: GPT أو Claude أو Gemini](https://www.promptquorum.com/ar/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
@@ -5809,7 +5809,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'تمتلك النماذج الثلاثة جميعها خططًا استهلاكية مجانية — وخطط Pro/Plus بـ20$ شهريًا لدى الثلاثة',
-            'GPT-5.6: 128K رمز | Claude Opus 4.8: 1M رمز | Gemini 3.1 Pro: 2M رمز',
+            'GPT-5.6: 128K رمز | Claude Opus 5: 1M رمز | Gemini 3.1 Pro: 2M رمز',
             'يسجّل وضع التفكير الموسّع في Claude Opus 4.8 أعلى النتائج في اختبارات MMLU-Pro (نحو 91%) وAIME للاستدلال',
             'Gemini 3.1 Pro هو النموذج الوحيد بسياق 2M — يتسع لقاعدة شيفرة كاملة أو كتاب أو ملف قانوني',
             'تدعم النماذج الثلاثة جميعها استخدام الأدوات واستدعاء الدوال وتكامل RAG في الإنتاج',
@@ -5818,16 +5818,16 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         comparisonTable: {
           title: 'مقارنة مباشرة (2026)',
           content: '',
-          columns: ['العامل', 'GPT-5.6', 'Claude Opus 4.8', 'Gemini 3.1 Pro'],
+          columns: ['العامل', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
-            { 'العامل': 'نافذة السياق', 'GPT-5.6': '128K رمز', 'Claude Opus 4.8': '1M رمز', 'Gemini 3.1 Pro': '2M رمز' },
+            { 'العامل': 'نافذة السياق', 'GPT-5.6': '128K رمز', 'Claude Opus 5': '1M رمز', 'Gemini 3.1 Pro': '2M رمز' },
             { 'العامل': 'الاستدلال (MMLU-Pro)', 'GPT-5.6': 'نحو 90%', 'Claude Opus 4.8': 'نحو 91%', 'Gemini 3.1 Pro': 'نحو 89%' },
             { 'العامل': 'البرمجة (HumanEval)', 'GPT-5.6': 'نحو 92%', 'Claude Opus 4.8': 'نحو 94%', 'Gemini 3.1 Pro': 'نحو 88%' },
-            { 'العامل': 'متعدد الوسائط', 'GPT-5.6': 'نصوص + صور', 'Claude Opus 4.8': 'نصوص + صور', 'Gemini 3.1 Pro': 'نصوص، صور، فيديو، صوت' },
-            { 'العامل': 'السرعة', 'GPT-5.6': 'سريع', 'Claude Opus 4.8': 'متوسط', 'Gemini 3.1 Pro': 'سريع' },
-            { 'العامل': 'إدخال الـAPI (لكل مليون رمز)', 'GPT-5.6': 'نحو 5$', 'Claude Opus 4.8': 'نحو 15$', 'Gemini 3.1 Pro': 'نحو 3.5$' },
-            { 'العامل': 'الخطة المجانية', 'GPT-5.6': '✅ نعم', 'Claude Opus 4.8': '✅ نعم (محدودة)', 'Gemini 3.1 Pro': '✅ نعم' },
-            { 'العامل': 'التفكير الموسّع', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 4.8': 'مدمج', 'Gemini 3.1 Pro': 'Flash Thinking' },
+            { 'العامل': 'متعدد الوسائط', 'GPT-5.6': 'نصوص + صور', 'Claude Opus 5': 'نصوص + صور', 'Gemini 3.1 Pro': 'نصوص، صور، فيديو، صوت' },
+            { 'العامل': 'السرعة', 'GPT-5.6': 'سريع', 'Claude Opus 5': 'متوسط', 'Gemini 3.1 Pro': 'سريع' },
+            { 'العامل': 'إدخال الـAPI (لكل مليون رمز)', 'GPT-5.6': 'نحو 5$', 'Claude Opus 5': 'نحو 15$', 'Gemini 3.1 Pro': 'نحو 3.5$' },
+            { 'العامل': 'الخطة المجانية', 'GPT-5.6': '✅ نعم', 'Claude Opus 5': '✅ نعم (محدودة)', 'Gemini 3.1 Pro': '✅ نعم' },
+            { 'العامل': 'التفكير الموسّع', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 5': 'مدمج', 'Gemini 3.1 Pro': 'Flash Thinking' },
           ],
         },
         contentCreation: {
@@ -5842,7 +5842,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         dataAnalysis: {
           title: 'تحليل البيانات والبحث',
-          content: 'يفوز Claude Opus 4.8 — دقة ممتازة، ونافذة سياق بـ1M رمز لتحليل المستندات ومجموعات البيانات الطويلة، واستدلال دقيق. وللمستندات الكبيرة جدًا (الكتب وقواعد الشيفرة الكاملة)، يكون سياق Gemini 3.1 Pro بـ2M هو الأنسب.',
+          content: 'يفوز Claude Opus 5 — دقة ممتازة، ونافذة سياق بـ1M رمز لتحليل المستندات ومجموعات البيانات الطويلة، واستدلال دقيق. وللمستندات الكبيرة جدًا (الكتب وقواعد الشيفرة الكاملة)، يكون سياق Gemini 3.1 Pro بـ2M هو الأنسب.',
         },
         imageAnalysis: {
           title: 'تحليل الصور',
@@ -5854,20 +5854,20 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         summarization: {
           title: 'تلخيص المستندات',
-          content: 'Claude Opus 4.8 أو Gemini 3.1 Pro — كلاهما يمتلك نوافذ سياق كبيرة (1M و2M رمز على التوالي). ينتج Claude Opus 4.8 ملخصات أكثر تنظيمًا مع استدلال واضح. ويتعامل Gemini 3.1 Pro مع أكبر المستندات.',
+          content: 'Claude Opus 5 أو Gemini 3.1 Pro — كلاهما يمتلك نوافذ سياق كبيرة (1M و2M رمز على التوالي). ينتج Claude Opus 5 ملخصات أكثر تنظيمًا مع استدلال واضح. ويتعامل Gemini 3.1 Pro مع أكبر المستندات.',
         },
         budgetConscious: {
           title: 'المستخدمون المهتمون بالميزانية',
-          content: 'يفوز Gemini 3.1 Pro من حيث تكاليف الـAPI (نحو 3.5$ لكل مليون رمز إدخال). تمتلك النماذج الثلاثة جميعها خططًا استهلاكية مجانية. بالنسبة للـAPI، Gemini هو الأرخص، وGPT-5.6 متوسط، وClaude Opus 4.8 هو الأعلى — لكن فروق الجودة تبرّر العلاوة للمهام الحرجة من حيث الدقة.',
+          content: 'يفوز Gemini 3.1 Pro من حيث تكاليف الـAPI (نحو 3.5$ لكل مليون رمز إدخال). تمتلك النماذج الثلاثة جميعها خططًا استهلاكية مجانية. بالنسبة للـAPI، Gemini هو الأرخص، وGPT-5.6 متوسط، وClaude Opus 5 هو الأعلى — لكن فروق الجودة تبرّر العلاوة للمهام الحرجة من حيث الدقة.',
         },
         strategy: {
           title: 'الاستراتيجية الذكية: استخدم الثلاثة معًا',
           content: [
             'لا يلتزم المستخدمون المحترفون للذكاء الاصطناعي بنموذج واحد. بل يشغّلون المطالبة نفسها عبر النماذج الثلاثة ويختارون أفضل إجابة:',
             '1. GPT-5.6: العصف الذهني السريع والاستكشاف الإبداعي',
-            '2. Claude Opus 4.8: التحليل العميق والتحقق من الاستدلال ومراجعة الشيفرة',
+            '2. Claude Opus 5: التحليل العميق والتحقق من الاستدلال ومراجعة الشيفرة',
             '3. Gemini 3.1 Pro: المعلومات الآنية والمهام متعددة الوسائط والمستندات الطويلة جدًا',
-            'يمنحك ذلك السرعة (GPT-5.6) والدقة (Claude Opus 4.8) والحداثة والسياق (Gemini 3.1 Pro). ويؤتمت PromptQuorum هذا: أرسل المطالبة المحسّنة نفسها إلى الثلاثة وقارن النتائج جنبًا إلى جنب.',
+            'يمنحك ذلك السرعة (GPT-5.6) والدقة (Claude Opus 5) والحداثة والسياق (Gemini 3.1 Pro). ويؤتمت PromptQuorum هذا: أرسل المطالبة المحسّنة نفسها إلى الثلاثة وقارن النتائج جنبًا إلى جنب.',
           ],
         },
         currentTrends: {
@@ -5875,7 +5875,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: ['تقاربت النماذج الرائدة الثلاثة بشكل كبير في أداء الاختبارات — فالفجوة التي كانت قائمة في 2023 تُقاس الآن بنقاط مئوية مفردة في معظم الاختبارات القياسية.'],
           items: [
             'أوضاع التفكير الموسّع أصبحت معيارًا: يقدّم الثلاثة جميعهم توسيع الحوسبة وقت الاستدلال لمهام الاستدلال المعقدة',
-            'القدرات متعددة الوسائط أصبحت أساسية: يدعم كل من GPT-5.6 وClaude Opus 4.8 الصور؛ ويتصدّر Gemini 3.1 Pro في الفيديو والصوت',
+            'القدرات متعددة الوسائط أصبحت أساسية: يدعم كل من GPT-5.6 وClaude Opus 5 الصور؛ ويتصدّر Gemini 3.1 Pro في الفيديو والصوت',
             'نوافذ السياق تتوسع بسرعة: من 4K (GPT-3) إلى 2M (Gemini 3.1 Pro) في أقل من ثلاث سنوات — لم يعد السياق هو العائق',
             'النماذج مفتوحة المصدر تسدّ فجوة القدرات: LLaMA 3.1 70B وQwen2.5 يضاهيان الآن GPT-4 في معظم الاختبارات',
             'استخدام الأدوات واستدعاء الدوال أصبحا شاملين: تدعم النماذج الثلاثة جميعها المخرجات المنظمة وتنفيذ الشيفرة واستدعاءات الـAPI الخارجية في الإنتاج',
@@ -5896,11 +5896,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'لا تلتزم بنموذج واحد — اختبر الثلاثة جميعًا مع حالات استخدامك الفعلية:',
             '1. استخدم الخطة المجانية لـChatGPT (GPT-5.6) للمهام الإبداعية والعصف الذهني',
-            '2. جرّب Claude Opus 4.8 للأعمال التحليلية ومراجعة الشيفرة',
+            '2. جرّب Claude Opus 5 للأعمال التحليلية ومراجعة الشيفرة',
             '3. جرّب Gemini 3.1 Pro لتحليل الصور وبيانات الويب الآنية',
             '4. شغّل المطالبة نفسها عبر الثلاثة وقارن الاستجابات',
             '5. حدّد أي نموذج يعطي أفضل نتيجة لنوع مهمتك المحدد',
-            'يتيح لك PromptQuorum إرسال المطالبة المحسّنة نفسها إلى GPT-5.6 وClaude Opus 4.8 وGemini 3.1 Pro ونماذج أخرى في وقت واحد — ثم مقارنة أيها أعطى أفضل نتيجة لمهمتك.',
+            'يتيح لك PromptQuorum إرسال المطالبة المحسّنة نفسها إلى GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro ونماذج أخرى في وقت واحد — ثم مقارنة أيها أعطى أفضل نتيجة لمهمتك.',
           ],
         },
         tldr: {
@@ -5911,22 +5911,22 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Claude Opus 4.8: الأفضل للاستدلال (نحو 91% MMLU-Pro) والبرمجة (نحو 94% HumanEval) والتحليل الطويل. سياق 1M.',
             'Gemini 3.1 Pro: الأفضل لتعدد الوسائط (الصور والفيديو والصوت). وصول آني إلى الويب. أكبر سياق (2M). أقل تكلفة API.',
             'تمتلك النماذج الثلاثة جميعها خططًا استهلاكية مجانية وخطط Pro بـ20$ شهريًا.',
-            'الاستدلال: Claude Opus 4.8 > GPT-5.6 > Gemini 3.1 Pro.',
-            'السرعة: GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 4.8.',
-            'تكلفة الـAPI: Gemini 3.1 Pro (نحو 3.5$/مليون) < GPT-5.6 (نحو 5$/مليون) < Claude Opus 4.8 (نحو 15$/مليون).',
+            'الاستدلال: Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro.',
+            'السرعة: GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 5.',
+            'تكلفة الـAPI: Gemini 3.1 Pro (نحو 3.5$/مليون) < GPT-5.6 (نحو 5$/مليون) < Claude Opus 5 (نحو 15$/مليون).',
             'أفضل ممارسة: شغّل المطالبة نفسها عبر الثلاثة للمهام الحرجة — واختر أفضل إجابة.',
           ],
         },
         faqSection: {
           title: 'الأسئلة الشائعة',
           faqs: [
-            { q: 'أي نموذج ذكاء اصطناعي هو الأفضل للكتابة الإبداعية؟', a: 'يتفوق GPT-5.6 (ChatGPT) في الكتابة الإبداعية والعصف الذهني والتنوع العام. وهو سريع وسهل الوصول إليه. أما Claude Opus 4.8 فهو أفضل للاستدلال الأعمق وتحليل الأعمال الإبداعية.' },
+            { q: 'أي نموذج ذكاء اصطناعي هو الأفضل للكتابة الإبداعية؟', a: 'يتفوق GPT-5.6 (ChatGPT) في الكتابة الإبداعية والعصف الذهني والتنوع العام. وهو سريع وسهل الوصول إليه. أما Claude Opus 5 فهو أفضل للاستدلال الأعمق وتحليل الأعمال الإبداعية.' },
             { q: 'أي نموذج هو الأفضل للبرمجة؟', a: 'يتمتع Claude Opus 4.8 بالأفضلية في جودة الشيفرة وتصحيح الأخطاء (نحو 94% HumanEval). وGPT-5.6 (نحو 92%) أسرع. استخدم كليهما وقارن بين اقتراحاتهما البرمجية في المهام الحرجة.' },
-            { q: 'ما مقارنة التكلفة في عام 2026؟', a: 'GPT-5.6: نحو 5$ إدخال، ونحو 15$ إخراج لكل مليون رمز. Claude Opus 4.8: نحو 15$ إدخال، ونحو 75$ إخراج. Gemini 3.1 Pro: نحو 3.5$ إدخال، ونحو 10.5$ إخراج. لدى الجميع خطط استهلاكية بـ20$ شهريًا. تحقق من التسعير الحالي لدى كل مزوّد.' },
-            { q: 'أي نموذج يتعامل مع المهام متعددة الوسائط بشكل أفضل؟', a: 'Gemini 3.1 Pro هو الأقوى في الصور والفيديو والصوت وفهم المستندات. يدعم GPT-5.6 النصوص والصور. ويدعم Claude Opus 4.8 النصوص والصور لكن ليس الفيديو.' },
+            { q: 'ما مقارنة التكلفة في عام 2026؟', a: 'GPT-5.6: نحو 5$ إدخال، ونحو 15$ إخراج لكل مليون رمز. Claude Opus 5: نحو 5$ إدخال، ونحو 25$ إخراج. Gemini 3.1 Pro: نحو 3.5$ إدخال، ونحو 10.5$ إخراج. لدى الجميع خطط استهلاكية بـ20$ شهريًا. تحقق من التسعير الحالي لدى كل مزوّد.' },
+            { q: 'أي نموذج يتعامل مع المهام متعددة الوسائط بشكل أفضل؟', a: 'Gemini 3.1 Pro هو الأقوى في الصور والفيديو والصوت وفهم المستندات. يدعم GPT-5.6 النصوص والصور. ويدعم Claude Opus 5 النصوص والصور لكن ليس الفيديو.' },
             { q: 'هل تمتلك النماذج الثلاثة جميعها خططًا مجانية؟', a: 'نعم. يقدّم كل من ChatGPT وClaude.ai وGemini خططًا مجانية بحدود استخدام يومية محدودة. كما يقدّم الثلاثة خطط Pro/Plus/Premium بـ20$ شهريًا لحدود استخدام أعلى.' },
             { q: 'كيف يقارن GPT-4o بـClaude Opus 4.8 وGemini 3.1 Pro؟', a: 'كان GPT-4o هو النموذج الرائد لدى OpenAI قبل أن يحلّ محله GPT-5.6 كنموذج مشغّل لـChatGPT. تشير بطاقة النموذج الرسمية إلى نافذة سياق بـ128K رمز، ونحو 88.7% في اختبار MMLU، ونحو 90.2% في HumanEval. يتفوق عليه Claude Opus 4.8 في الاستدلال (نحو 91% في MMLU-Pro، وهو اختبار أصعب) وفي البرمجة (نحو 94% HumanEval)، بنافذة سياق بـ1M رمز. إذا كنت تستخدم ChatGPT اليوم، فمن المرجح أنك تستخدم GPT-5.6 وليس GPT-4o — تحقق من محدد النموذج في حسابك للتأكد.' },
-            { q: 'هل يمكنني استخدام نماذج متعددة في سير العمل نفسه؟', a: 'نعم. يتيح لك PromptQuorum إرسال المطالبة نفسها إلى GPT-5.6 وClaude Opus 4.8 وGemini 3.1 Pro ونماذج أخرى في وقت واحد، ثم مقارنة النتائج جنبًا إلى جنب. وهذا هو النهج الموصى به للمهام الحرجة.' },
+            { q: 'هل يمكنني استخدام نماذج متعددة في سير العمل نفسه؟', a: 'نعم. يتيح لك PromptQuorum إرسال المطالبة نفسها إلى GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro ونماذج أخرى في وقت واحد، ثم مقارنة النتائج جنبًا إلى جنب. وهذا هو النهج الموصى به للمهام الحرجة.' },
           ],
         },
         commonMistakes: {
@@ -5934,7 +5934,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'الخطأ 1: اختيار نموذج واحد وعدم المقارنة أبدًا. لكل نموذج نقاط قوة مميزة. اختبر دائمًا مع مهمتك المحددة قبل الالتزام.',
             'الخطأ 2: افتراض أن النموذج الأغلى هو الأفضل. Gemini 3.1 Pro هو أرخص خيار API ويفوز في المهام متعددة الوسائط. طابق النموذج مع المهمة، لا مع السعر.',
-            'الخطأ 3: تجاهل حدود نافذة السياق. يتعامل Gemini 3.1 Pro (2M رمز) وClaude Opus 4.8 (1M رمز) مع المستندات الطويلة. أما GPT-5.6 (128K) فقد يقتطع المدخلات الكبيرة.',
+            'الخطأ 3: تجاهل حدود نافذة السياق. يتعامل Gemini 3.1 Pro (2M رمز) وClaude Opus 5 (1M رمز) مع المستندات الطويلة. أما GPT-5.6 (128K) فقد يقتطع المدخلات الكبيرة.',
             'الخطأ 4: عدم التحقق من حدود المعرفة. النماذج المتصلة بالويب (Gemini 3.1 Pro مع Search، وGPT-5.6 مع التصفح) تمتلك معلومات آنية. أما استدعاءات الـAPI الأساسية فقد تستخدم بيانات حد التدريب.',
             'الخطأ 5: استخدام المطالبة نفسها لجميع النماذج. يستجيب كل نموذج بشكل أفضل لأساليب مطالبة مختلفة. كيّف مطالباتك — يستفيد Claude من التعليمات الصريحة خطوة بخطوة؛ ويستفيد Gemini من السياق متعدد الوسائط.',
           ],
@@ -5952,7 +5952,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'المصادر والاستشهادات',
           items: [
             'مواصفات نموذج OpenAI GPT-5.6 — openai.com/models',
-            'توثيق Anthropic Claude Opus 4.8 — docs.anthropic.com',
+            'توثيق Anthropic Claude Opus 5 — docs.anthropic.com',
             'مواصفات Google Gemini 3.1 Pro — gemini.google.com',
             'لوحة صدارة LMSYS Chatbot Arena — arena.lmsys.org',
             'Papers With Code — نتائج اختبار MMLU — paperswithcode.com/sota/multi-task-language-understanding-on-mmlu',
@@ -5963,11 +5963,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     de: {
       category: 'KI-Modellvergleich',
       title: 'ChatGPT vs Claude vs Gemini: KI-Modelle im direkten Vergleich 2026',
-      intro: 'GPT-5.6, Claude Opus 4.8 und Gemini 3.1 Pro im Vergleich: Reasoning, Geschwindigkeit, Kontextfenster, Preise und Multimodal-Fähigkeiten. Wann welches Modell einsetzen — und wann alle drei.',
+      intro: 'GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro im Vergleich: Reasoning, Geschwindigkeit, Kontextfenster, Preise und Multimodal-Fähigkeiten. Wann welches Modell einsetzen — und wann alle drei.',
       publishDate: 'Veröffentlicht 14. März 2026',
       readTime: '12 Min. Lesezeit',
-      seoTitle: 'GPT-5.6 vs Claude Opus 4.8 vs Gemini 3.1 Pro (2026)',
-      metaDescription: 'GPT-5.6, Claude Opus 4.8 und Gemini 3.1 Pro im Vergleich: Reasoning, Geschwindigkeit, Preise und Kontextfenster. Welches KI-Modell für welche Aufgabe?',
+      seoTitle: 'GPT-5.6 vs Claude Opus 5 vs Gemini 3.1 Pro (2026)',
+      metaDescription: 'GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro im Vergleich: Reasoning, Geschwindigkeit, Preise und Kontextfenster. Welches KI-Modell für welche Aufgabe?',
       heroImage: '/images/ai-model-comparison-comparisonTable-hero-de.webp',
       faqSchema: {
         '@context': 'https://schema.org',
@@ -5979,7 +5979,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Welches KI-Modell eignet sich am besten für kreatives Schreiben?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6 (ChatGPT) ist die stärkste Wahl für kreatives Schreiben, Brainstorming und allgemeine Aufgaben — schnell und vielseitig. Claude Opus 4.8 eignet sich besser für tieferes Reasoning und die analytische Auseinandersetzung mit kreativen Inhalten.',
+              text: 'GPT-5.6 (ChatGPT) ist die stärkste Wahl für kreatives Schreiben, Brainstorming und allgemeine Aufgaben — schnell und vielseitig. Claude Opus 5 eignet sich besser für tieferes Reasoning und die analytische Auseinandersetzung mit kreativen Inhalten.',
             },
           },
           {
@@ -5995,7 +5995,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Wie sehen die Kosten im Jahr 2026 aus?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6 (OpenAI): ca. 5 $/1 Mio. Input-Tokens, ca. 15 $/1 Mio. Output-Tokens. Claude Opus 4.8 (Anthropic): ca. 15 $/1 Mio. Input, ca. 75 $/1 Mio. Output. Gemini 3.1 Pro (Google): ca. 3,50 $/1 Mio. Input, ca. 10,50 $/1 Mio. Output. Alle drei bieten Verbrauchertarife für ca. 20 $/Monat. Aktuelle Preise bitte beim jeweiligen Anbieter prüfen.',
+              text: 'GPT-5.6 (OpenAI): ca. 5 $/1 Mio. Input-Tokens, ca. 15 $/1 Mio. Output-Tokens. Claude Opus 5 (Anthropic): ca. 5 $/1 Mio. Input, ca. 25 $/1 Mio. Output. Gemini 3.1 Pro (Google): ca. 3,50 $/1 Mio. Input, ca. 10,50 $/1 Mio. Output. Alle drei bieten Verbrauchertarife für ca. 20 $/Monat. Aktuelle Preise bitte beim jeweiligen Anbieter prüfen.',
             },
           },
           {
@@ -6003,7 +6003,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Welches Modell eignet sich am besten für multimodale Aufgaben?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemini 3.1 Pro ist das stärkste Modell für Bilder, Video, Audio und das Verständnis von Dokumenten. GPT-5.6 unterstützt Text und Bilder. Claude Opus 4.8 unterstützt Text und Bilder, aber kein Video.',
+              text: 'Gemini 3.1 Pro ist das stärkste Modell für Bilder, Video, Audio und das Verständnis von Dokumenten. GPT-5.6 unterstützt Text und Bilder. Claude Opus 5 unterstützt Text und Bilder, aber kein Video.',
             },
           },
           {
@@ -6016,7 +6016,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'Question',
-            name: 'Wie schneidet GPT-4o im Vergleich zu Claude Opus 4.8 und Gemini 3.1 Pro ab?',
+            name: 'Wie schneidet GPT-4o im Vergleich zu Claude Opus 5 und Gemini 3.1 Pro ab?',
             acceptedAnswer: {
               '@type': 'Answer',
               text: 'GPT-4o war das Flaggschiff-Modell von OpenAI, bevor GPT-5.6 es als Modell hinter ChatGPT ablöste. Laut offizieller Modellkarte bietet es ein 128K-Token-Kontextfenster, ca. 88,7 % bei MMLU und ca. 90,2 % bei HumanEval. Claude Opus 4.8 übertrifft es beim logischen Schlussfolgern (ca. 91 % MMLU-Pro, ein anspruchsvollerer Benchmark) und beim Programmieren (ca. 94 % HumanEval) mit einem 1-Mio.-Token-Kontextfenster. Wer ChatGPT heute nutzt, verwendet höchstwahrscheinlich GPT-5.6 und nicht GPT-4o — die Modellauswahl im eigenen Konto gibt Gewissheit.',
@@ -6027,7 +6027,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Kann ich mehrere Modelle im selben Workflow nutzen?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Ja. PromptQuorum ermöglicht es, denselben Prompt gleichzeitig an GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro und weitere Modelle zu senden und die Ergebnisse direkt zu vergleichen. Dieser Ansatz wird für kritische Aufgaben empfohlen.',
+              text: 'Ja. PromptQuorum ermöglicht es, denselben Prompt gleichzeitig an GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und weitere Modelle zu senden und die Ergebnisse direkt zu vergleichen. Dieser Ansatz wird für kritische Aufgaben empfohlen.',
             },
           },
           {
@@ -6067,7 +6067,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'HowToStep',
-            name: 'Mit Claude Opus 4.8 testen',
+            name: 'Mit Claude Opus 5 testen',
             text: 'Senden Sie denselben Prompt an Claude. Vergleichen Sie die Tiefe des Reasonings, die Genauigkeit und die Transparenz der Argumentation. Aktivieren Sie den Extended-Thinking-Modus für komplexe Aufgaben.',
           },
           {
@@ -6091,7 +6091,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'inLanguage': 'de',
-        name: 'KI-Modellvergleich 2026: GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro',
+        name: 'KI-Modellvergleich 2026: GPT-5.6, Claude Opus 5, Gemini 3.1 Pro',
         url: 'https://www.promptquorum.com/de/blog/ai-model-comparison',
         itemListElement: [
           {
@@ -6103,7 +6103,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Claude Opus 4.8 (Anthropic)',
+            name: 'Claude Opus 5 (Anthropic)',
             description: 'Ideal für komplexes Reasoning, Code-Qualität und Langform-Analysen. 1 Mio. Token Kontextfenster. Höchster HumanEval-Score (ca. 94 %). Kostenloser Tarif verfügbar.',
           },
           {
@@ -6122,19 +6122,19 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 5,
             name: 'Geschwindigkeit',
-            description: '1. GPT-5.6 (am schnellsten). 2. Gemini 3.1 Pro (schnell). 3. Claude Opus 4.8 (mittel — dafür gründlicher).',
+            description: '1. GPT-5.6 (am schnellsten). 2. Gemini 3.1 Pro (schnell). 3. Claude Opus 5 (mittel — dafür gründlicher).',
           },
           {
             '@type': 'ListItem',
             position: 6,
             name: 'API-Kosten (Input pro 1 Mio. Tokens)',
-            description: 'Gemini 3.1 Pro (ca. 3,50 $) < GPT-5.6 (ca. 5 $) < Claude Opus 4.8 (ca. 15 $). Aktuelle Preise beim jeweiligen Anbieter prüfen.',
+            description: 'Gemini 3.1 Pro (ca. 3,50 $) < GPT-5.6 (ca. 5 $) < Claude Opus 5 (ca. 15 $). Aktuelle Preise beim jeweiligen Anbieter prüfen.',
           },
           {
             '@type': 'ListItem',
             position: 7,
             name: 'Multimodale Fähigkeiten',
-            description: 'Gemini 3.1 Pro (Text, Bilder, Video, Audio) > GPT-5.6 (Text, Bilder) > Claude Opus 4.8 (Text, Bilder).',
+            description: 'Gemini 3.1 Pro (Text, Bilder, Video, Audio) > GPT-5.6 (Text, Bilder) > Claude Opus 5 (Text, Bilder).',
           },
           {
             '@type': 'ListItem',
@@ -6148,8 +6148,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         why: {
           title: 'Warum KI-Modelle vergleichen?',
           content: [
-            '**Kurzantwort:** GPT-5.6 führt bei Geschwindigkeit und kreativer Ausgabe. Claude Opus 4.8 führt bei Reasoning-Genauigkeit und Langdokumentenanalyse (1 Mio. Tokens Kontext). Gemini 3.1 Pro führt bei multimodalen Aufgaben und verfügt über das größte Kontextfenster (2 Mio. Tokens). Für kritische Aufgaben sollten Sie denselben Prompt an alle drei Modelle senden — wer sich auf ein einziges Modell verlässt, verschenkt Genauigkeit.',
-            'Unterschiedliche KI-Modelle sind für unterschiedliche Aufgaben optimiert. ChatGPT (GPT-5.6) ist das schnellste und vielseitigste Modell. Claude (Opus 4.8) erzielt die höchsten Werte bei Reasoning- und Code-Benchmarks. Gemini (3.1 Pro) ist bei multimodalen Aufgaben und dem Zugriff auf Echtzeitinformationen am stärksten. Wer weiß, welches Modell zu welcher Aufgabe passt, erzielt bessere Ergebnisse bei geringeren Kosten.',
+            '**Kurzantwort:** GPT-5.6 führt bei Geschwindigkeit und kreativer Ausgabe. Claude Opus 5 führt bei Reasoning-Genauigkeit und Langdokumentenanalyse (1 Mio. Tokens Kontext). Gemini 3.1 Pro führt bei multimodalen Aufgaben und verfügt über das größte Kontextfenster (2 Mio. Tokens). Für kritische Aufgaben sollten Sie denselben Prompt an alle drei Modelle senden — wer sich auf ein einziges Modell verlässt, verschenkt Genauigkeit.',
+            'Unterschiedliche KI-Modelle sind für unterschiedliche Aufgaben optimiert. ChatGPT (GPT-5.6) ist das schnellste und vielseitigste Modell. Claude (Opus 5) erzielt die höchsten Werte bei Reasoning- und Code-Benchmarks. Gemini (3.1 Pro) ist bei multimodalen Aufgaben und dem Zugriff auf Echtzeitinformationen am stärksten. Wer weiß, welches Modell zu welcher Aufgabe passt, erzielt bessere Ergebnisse bei geringeren Kosten.',
             'Dieser Leitfaden vergleicht alle drei Frontier-Modelle Stand 2026: Stärken, Kontextfenster, Preise und die Aufgaben, bei denen jedes Modell gewinnt.',
             'Für einen systematischen Ansatz zur Modellauswahl — einschließlich der Entscheidung zwischen Open-Source und kommerziellen Modellen — siehe [das richtige KI-Modell auswählen: GPT, Claude oder Gemini](https://www.promptquorum.com/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
@@ -6205,7 +6205,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'Alle drei Modelle bieten kostenlose Verbrauchertarife — Pro-/Plus-Pläne kosten bei allen ca. 20 $/Monat',
-            'GPT-5.6: 128K Tokens | Claude Opus 4.8: 1 Mio. Tokens | Gemini 3.1 Pro: 2 Mio. Tokens',
+            'GPT-5.6: 128K Tokens | Claude Opus 5: 1 Mio. Tokens | Gemini 3.1 Pro: 2 Mio. Tokens',
             'Claude Opus 4.8 Extended Thinking erzielt die höchsten Werte auf MMLU-Pro (ca. 91 %) und AIME-Benchmarks',
             'Gemini 3.1 Pro ist das einzige Modell mit 2 Mio. Kontext — Platz für eine gesamte Codebasis, ein Buch oder eine Vertragsdokumentation',
             'Alle drei unterstützen Tool Use, Function Calling und RAG-Integration im Produktivbetrieb',
@@ -6214,16 +6214,16 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         comparisonTable: {
           title: 'Direkter Vergleich (2026)',
           content: '',
-          columns: ['Faktor', 'GPT-5.6', 'Claude Opus 4.8', 'Gemini 3.1 Pro'],
+          columns: ['Faktor', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
-            { 'Faktor': 'Kontextfenster', 'GPT-5.6': '128K Tokens', 'Claude Opus 4.8': '1 Mio. Tokens', 'Gemini 3.1 Pro': '2 Mio. Tokens' },
+            { 'Faktor': 'Kontextfenster', 'GPT-5.6': '128K Tokens', 'Claude Opus 5': '1 Mio. Tokens', 'Gemini 3.1 Pro': '2 Mio. Tokens' },
             { 'Faktor': 'Reasoning (MMLU-Pro)', 'GPT-5.6': '~90 %', 'Claude Opus 4.8': '~91 %', 'Gemini 3.1 Pro': '~89 %' },
             { 'Faktor': 'Code (HumanEval)', 'GPT-5.6': '~92 %', 'Claude Opus 4.8': '~94 %', 'Gemini 3.1 Pro': '~88 %' },
-            { 'Faktor': 'Multimodal', 'GPT-5.6': 'Text + Bilder', 'Claude Opus 4.8': 'Text + Bilder', 'Gemini 3.1 Pro': 'Text, Bilder, Video, Audio' },
-            { 'Faktor': 'Geschwindigkeit', 'GPT-5.6': 'Schnell', 'Claude Opus 4.8': 'Mittel', 'Gemini 3.1 Pro': 'Schnell' },
-            { 'Faktor': 'API-Kosten (pro 1 Mio. Tokens)', 'GPT-5.6': '~5 $', 'Claude Opus 4.8': '~15 $', 'Gemini 3.1 Pro': '~3,50 $' },
-            { 'Faktor': 'Kostenloser Tarif', 'GPT-5.6': '✅ Ja', 'Claude Opus 4.8': '✅ Ja (begrenzt)', 'Gemini 3.1 Pro': '✅ Ja' },
-            { 'Faktor': 'Erweitertes Denken', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 4.8': 'Integriert', 'Gemini 3.1 Pro': 'Flash Thinking' },
+            { 'Faktor': 'Multimodal', 'GPT-5.6': 'Text + Bilder', 'Claude Opus 5': 'Text + Bilder', 'Gemini 3.1 Pro': 'Text, Bilder, Video, Audio' },
+            { 'Faktor': 'Geschwindigkeit', 'GPT-5.6': 'Schnell', 'Claude Opus 5': 'Mittel', 'Gemini 3.1 Pro': 'Schnell' },
+            { 'Faktor': 'API-Kosten (pro 1 Mio. Tokens)', 'GPT-5.6': '~5 $', 'Claude Opus 5': '~15 $', 'Gemini 3.1 Pro': '~3,50 $' },
+            { 'Faktor': 'Kostenloser Tarif', 'GPT-5.6': '✅ Ja', 'Claude Opus 5': '✅ Ja (begrenzt)', 'Gemini 3.1 Pro': '✅ Ja' },
+            { 'Faktor': 'Erweitertes Denken', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 5': 'Integriert', 'Gemini 3.1 Pro': 'Flash Thinking' },
           ],
         },
         contentCreation: {
@@ -6238,7 +6238,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         dataAnalysis: {
           title: 'Datenanalyse & Recherche',
-          content: 'Claude Opus 4.8 gewinnt — hervorragende Genauigkeit, 1 Mio. Token Kontextfenster für die Analyse langer Dokumente und Datensätze, rigoroses Reasoning. Für sehr lange Dokumente (Bücher, vollständige Codebasen) ist Gemini 3.1 Pros 2-Mio.-Token-Kontext die bessere Wahl.',
+          content: 'Claude Opus 5 gewinnt — hervorragende Genauigkeit, 1 Mio. Token Kontextfenster für die Analyse langer Dokumente und Datensätze, rigoroses Reasoning. Für sehr lange Dokumente (Bücher, vollständige Codebasen) ist Gemini 3.1 Pros 2-Mio.-Token-Kontext die bessere Wahl.',
         },
         imageAnalysis: {
           title: 'Bildanalyse',
@@ -6250,20 +6250,20 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         summarization: {
           title: 'Dokumentenzusammenfassung',
-          content: 'Claude Opus 4.8 oder Gemini 3.1 Pro — beide verfügen über große Kontextfenster (1 Mio. bzw. 2 Mio. Tokens). Claude Opus 4.8 erstellt strukturiertere Zusammenfassungen mit klarem Reasoning. Gemini 3.1 Pro verarbeitet die längsten Dokumente.',
+          content: 'Claude Opus 5 oder Gemini 3.1 Pro — beide verfügen über große Kontextfenster (1 Mio. bzw. 2 Mio. Tokens). Claude Opus 5 erstellt strukturiertere Zusammenfassungen mit klarem Reasoning. Gemini 3.1 Pro verarbeitet die längsten Dokumente.',
         },
         budgetConscious: {
           title: 'Budgetbewusste Nutzer',
-          content: 'Gemini 3.1 Pro gewinnt bei den API-Kosten (ca. 3,50 $/1 Mio. Input-Tokens). Alle drei Modelle bieten kostenlose Verbrauchertarife. Bei der API ist Gemini am günstigsten, GPT-5.6 liegt im mittleren Bereich, Claude Opus 4.8 ist am teuersten — die Qualitätsunterschiede rechtfertigen den Aufpreis jedoch bei genauigkeitskritischen Aufgaben.',
+          content: 'Gemini 3.1 Pro gewinnt bei den API-Kosten (ca. 3,50 $/1 Mio. Input-Tokens). Alle drei Modelle bieten kostenlose Verbrauchertarife. Bei der API ist Gemini am günstigsten, GPT-5.6 liegt im mittleren Bereich, Claude Opus 5 ist am teuersten — die Qualitätsunterschiede rechtfertigen den Aufpreis jedoch bei genauigkeitskritischen Aufgaben.',
         },
         strategy: {
           title: 'Die intelligente Strategie: Alle drei nutzen',
           content: [
             'Professionelle KI-Nutzerinnen und -Nutzer legen sich nicht auf ein Modell fest. Sie senden denselben Prompt an alle drei und wählen die beste Antwort:',
             '1. GPT-5.6: Schnelles Brainstorming und kreative Exploration',
-            '2. Claude Opus 4.8: Tiefenanalyse, Reasoning-Validierung, Code-Review',
+            '2. Claude Opus 5: Tiefenanalyse, Reasoning-Validierung, Code-Review',
             '3. Gemini 3.1 Pro: Echtzeitinformationen, multimodale Aufgaben, sehr lange Dokumente',
-            'Damit erhalten Sie Geschwindigkeit (GPT-5.6), Genauigkeit (Claude Opus 4.8) sowie Aktualität und Kontext (Gemini 3.1 Pro). PromptQuorum automatisiert diesen Prozess: Senden Sie denselben optimierten Prompt an alle drei Modelle und vergleichen Sie die Ergebnisse direkt nebeneinander.',
+            'Damit erhalten Sie Geschwindigkeit (GPT-5.6), Genauigkeit (Claude Opus 5) sowie Aktualität und Kontext (Gemini 3.1 Pro). PromptQuorum automatisiert diesen Prozess: Senden Sie denselben optimierten Prompt an alle drei Modelle und vergleichen Sie die Ergebnisse direkt nebeneinander.',
           ],
         },
         currentTrends: {
@@ -6271,7 +6271,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: ['Die drei Frontier-Modelle haben sich bei der Benchmark-Leistung deutlich angenähert — der Abstand, der 2023 noch bestand, wird heute auf den meisten Standard-Benchmarks nur noch in einstelligen Prozentpunkten gemessen.'],
           items: [
             'Extended-Thinking-Modi sind Standard: Alle drei bieten Inference-Time-Compute-Scaling für komplexe Reasoning-Aufgaben',
-            'Multimodale Fähigkeiten sind selbstverständlich: GPT-5.6 und Claude Opus 4.8 unterstützen beide Bilder; Gemini 3.1 Pro führt bei Video und Audio',
+            'Multimodale Fähigkeiten sind selbstverständlich: GPT-5.6 und Claude Opus 5 unterstützen beide Bilder; Gemini 3.1 Pro führt bei Video und Audio',
             'Kontextfenster wachsen rasant: Von 4K (GPT-3) auf 2 Mio. (Gemini 3.1 Pro) in unter drei Jahren — der Kontext ist nicht mehr der Engpass',
             'Open-Source-Modelle schließen die Qualitätslücke: LLaMA 3.1 70B und Qwen2.5 erreichen auf den meisten Benchmarks das Niveau von GPT-4',
             'Tool Use und Function Calling sind universell: Alle drei Modelle unterstützen strukturierte Ausgaben, Codeausführung und externe API-Aufrufe im Produktivbetrieb',
@@ -6292,11 +6292,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Legen Sie sich nicht auf ein Modell fest — testen Sie alle drei mit Ihren tatsächlichen Anwendungsfällen:',
             '1. ChatGPT (GPT-5.6) kostenlosen Tarif für kreative Aufgaben und Brainstorming nutzen',
-            '2. Claude Opus 4.8 für analytische Aufgaben und Code-Review ausprobieren',
+            '2. Claude Opus 5 für analytische Aufgaben und Code-Review ausprobieren',
             '3. Gemini 3.1 Pro für Bildanalyse und Echtzeit-Webdaten testen',
             '4. Denselben Prompt an alle drei senden und Antworten vergleichen',
             '5. Ermitteln, welches Modell für Ihren spezifischen Aufgabentyp die besten Ergebnisse liefert',
-            'PromptQuorum ermöglicht es, denselben optimierten Prompt gleichzeitig an GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro und weitere Modelle zu senden — und direkt zu vergleichen, welches Modell für Ihre Aufgabe am besten abschneidet.',
+            'PromptQuorum ermöglicht es, denselben optimierten Prompt gleichzeitig an GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und weitere Modelle zu senden — und direkt zu vergleichen, welches Modell für Ihre Aufgabe am besten abschneidet.',
           ],
         },
         tldr: {
@@ -6307,9 +6307,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Claude Opus 4.8: Bestes Reasoning (ca. 91 % MMLU-Pro), Code (ca. 94 % HumanEval), Langform-Analysen. 1 Mio. Kontext.',
             'Gemini 3.1 Pro: Bestes Multimodal (Bilder, Video, Audio). Echtzeit-Webzugriff. Größter Kontext (2 Mio. Tokens). Niedrigste API-Kosten.',
             'Alle drei bieten kostenlose Verbrauchertarife und Pro-Pläne für ca. 20 $/Monat.',
-            'Reasoning: Claude Opus 4.8 > GPT-5.6 > Gemini 3.1 Pro.',
-            'Geschwindigkeit: GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 4.8.',
-            'API-Kosten: Gemini 3.1 Pro (ca. 3,50 $/1 Mio.) < GPT-5.6 (ca. 5 $/1 Mio.) < Claude Opus 4.8 (ca. 15 $/1 Mio.).',
+            'Reasoning: Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro.',
+            'Geschwindigkeit: GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 5.',
+            'API-Kosten: Gemini 3.1 Pro (ca. 3,50 $/1 Mio.) < GPT-5.6 (ca. 5 $/1 Mio.) < Claude Opus 5 (ca. 5 $/1 Mio.).',
             'Best Practice: Denselben Prompt für kritische Aufgaben an alle drei senden — die beste Antwort auswählen.',
           ],
         },
@@ -6329,13 +6329,13 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         faqSection: {
           title: 'Häufig gestellte Fragen',
           faqs: [
-            { q: 'Welches KI-Modell eignet sich am besten für kreatives Schreiben?', a: 'GPT-5.6 (ChatGPT) ist die stärkste Wahl für kreatives Schreiben, Brainstorming und allgemeine Aufgaben — schnell und vielseitig. Claude Opus 4.8 eignet sich besser für tieferes Reasoning und die analytische Auseinandersetzung mit kreativen Inhalten.' },
+            { q: 'Welches KI-Modell eignet sich am besten für kreatives Schreiben?', a: 'GPT-5.6 (ChatGPT) ist die stärkste Wahl für kreatives Schreiben, Brainstorming und allgemeine Aufgaben — schnell und vielseitig. Claude Opus 5 eignet sich besser für tieferes Reasoning und die analytische Auseinandersetzung mit kreativen Inhalten.' },
             { q: 'Welches Modell ist am besten für Programmierung geeignet?', a: 'Claude Opus 4.8 hat beim Code-Review und Debugging die Nase vorn (ca. 94 % HumanEval). GPT-5.6 (ca. 92 %) ist schneller. Für kritische Aufgaben empfiehlt es sich, beide Modelle zu vergleichen.' },
-            { q: 'Wie sehen die Kosten im Jahr 2026 aus?', a: 'GPT-5.6: ca. 5 $/1 Mio. Input, ca. 15 $/1 Mio. Output. Claude Opus 4.8: ca. 15 $/1 Mio. Input, ca. 75 $/1 Mio. Output. Gemini 3.1 Pro: ca. 3,50 $/1 Mio. Input, ca. 10,50 $/1 Mio. Output. Alle bieten Verbrauchertarife für ca. 20 $/Monat. Aktuelle Preise beim jeweiligen Anbieter prüfen.' },
-            { q: 'Welches Modell eignet sich am besten für multimodale Aufgaben?', a: 'Gemini 3.1 Pro ist das stärkste Modell für Bilder, Video, Audio und das Verständnis von Dokumenten. GPT-5.6 unterstützt Text und Bilder. Claude Opus 4.8 unterstützt Text und Bilder, aber kein Video.' },
+            { q: 'Wie sehen die Kosten im Jahr 2026 aus?', a: 'GPT-5.6: ca. 5 $/1 Mio. Input, ca. 15 $/1 Mio. Output. Claude Opus 5: ca. 5 $/1 Mio. Input, ca. 25 $/1 Mio. Output. Gemini 3.1 Pro: ca. 3,50 $/1 Mio. Input, ca. 10,50 $/1 Mio. Output. Alle bieten Verbrauchertarife für ca. 20 $/Monat. Aktuelle Preise beim jeweiligen Anbieter prüfen.' },
+            { q: 'Welches Modell eignet sich am besten für multimodale Aufgaben?', a: 'Gemini 3.1 Pro ist das stärkste Modell für Bilder, Video, Audio und das Verständnis von Dokumenten. GPT-5.6 unterstützt Text und Bilder. Claude Opus 5 unterstützt Text und Bilder, aber kein Video.' },
             { q: 'Verfügen alle drei Modelle über kostenlose Tarife?', a: 'Ja. ChatGPT, Claude.ai und Gemini bieten alle kostenlose Tarife mit täglichen Nutzungslimits. Alle drei bieten außerdem Pro-/Plus-Tarife für ca. 20 $/Monat mit höheren Nutzungslimits.' },
             { q: 'Wie schneidet GPT-4o im Vergleich zu Claude Opus 4.8 und Gemini 3.1 Pro ab?', a: 'GPT-4o war das Flaggschiff-Modell von OpenAI, bevor GPT-5.6 es als Modell hinter ChatGPT ablöste. Laut offizieller Modellkarte bietet es ein 128K-Token-Kontextfenster, ca. 88,7 % bei MMLU und ca. 90,2 % bei HumanEval. Claude Opus 4.8 übertrifft es beim logischen Schlussfolgern (ca. 91 % MMLU-Pro, ein anspruchsvollerer Benchmark) und beim Programmieren (ca. 94 % HumanEval) mit einem 1-Mio.-Token-Kontextfenster. Wer ChatGPT heute nutzt, verwendet höchstwahrscheinlich GPT-5.6 und nicht GPT-4o — die Modellauswahl im eigenen Konto gibt Gewissheit.' },
-            { q: 'Kann ich mehrere Modelle im selben Workflow nutzen?', a: 'Ja. PromptQuorum ermöglicht es, denselben Prompt gleichzeitig an GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro und weitere Modelle zu senden und die Ergebnisse direkt zu vergleichen. Dieser Ansatz wird für kritische Aufgaben empfohlen.' },
+            { q: 'Kann ich mehrere Modelle im selben Workflow nutzen?', a: 'Ja. PromptQuorum ermöglicht es, denselben Prompt gleichzeitig an GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und weitere Modelle zu senden und die Ergebnisse direkt zu vergleichen. Dieser Ansatz wird für kritische Aufgaben empfohlen.' },
             { q: 'Muss ich bei der Verwendung von ChatGPT, Claude oder Gemini die DSGVO beachten?', a: 'Ja. Bei der Verarbeitung personenbezogener Daten mit Cloud-KI-Diensten sind die DSGVO-Anforderungen — insbesondere Artikel 28 (Auftragsverarbeitung) — zu beachten. Alle drei Anbieter stellen DPAs bereit, die vor dem produktiven Einsatz abzuschließen sind. Für hochsensible Daten empfehlen die BSI-Grundschutz-Kataloge den Einsatz lokaler Modelle.' },
             { q: 'Sind diese KI-Modelle für den deutschen Mittelstand geeignet?', a: 'Ja, mit den richtigen Vorkehrungen. Mittelständische Unternehmen können alle drei Modelle für zahlreiche Aufgaben einsetzen. Wichtig sind: abgeschlossenes DPA nach DSGVO Artikel 28, Prüfung der Datenspeicherorte und Mitarbeiterschulungen. Für besonders schutzbedürftige Daten sind lokale Open-Source-Modelle (LLaMA 3.1, Mistral) die datenschutzkonforme Alternative.' },
           ],
@@ -6345,7 +6345,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'Fehler 1: Sich auf ein Modell festlegen und nie vergleichen. Jedes Modell hat eigene Stärken. Testen Sie immer mit Ihrer spezifischen Aufgabe, bevor Sie sich festlegen.',
             'Fehler 2: Annehmen, das teuerste Modell sei das beste. Gemini 3.1 Pro ist die günstigste API-Option und gewinnt bei multimodalen Aufgaben. Passen Sie das Modell an die Aufgabe an — nicht an den Preis.',
-            'Fehler 3: Kontextfensterlimits ignorieren. Gemini 3.1 Pro (2 Mio. Tokens) und Claude Opus 4.8 (1 Mio. Tokens) verarbeiten lange Dokumente. GPT-5.6 (128K) kann große Eingaben abschneiden.',
+            'Fehler 3: Kontextfensterlimits ignorieren. Gemini 3.1 Pro (2 Mio. Tokens) und Claude Opus 5 (1 Mio. Tokens) verarbeiten lange Dokumente. GPT-5.6 (128K) kann große Eingaben abschneiden.',
             'Fehler 4: Wissensstände nicht prüfen. Webfähige Modelle (Gemini 3.1 Pro mit Search, GPT-5.6 mit Browsing) haben aktuelle Informationen. Basis-API-Aufrufe nutzen ggf. den Trainings-Cutoff.',
             'Fehler 5: Denselben Prompt für alle Modelle verwenden. Jedes Modell reagiert besser auf unterschiedliche Prompt-Stile. Passen Sie Ihre Prompts an — Claude profitiert von expliziten Schritt-für-Schritt-Anweisungen; Gemini von multimodalem Kontext.',
           ],
@@ -6363,7 +6363,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Quellen & Zitate',
           items: [
             'OpenAI GPT-5.6 Model Specs — openai.com/models',
-            'Anthropic Claude Opus 4.8 Dokumentation — docs.anthropic.com',
+            'Anthropic Claude Opus 5 Dokumentation — docs.anthropic.com',
             'Google Gemini 3.1 Pro Specs — gemini.google.com',
             'LMSYS Chatbot Arena Leaderboard — arena.lmsys.org',
             'Papers With Code — MMLU-Benchmark-Ergebnisse — paperswithcode.com/sota/multi-task-language-understanding-on-mmlu',
@@ -6374,11 +6374,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     fr: {
       category: 'Comparaison de modèles d\'IA',
       title: 'ChatGPT vs Claude vs Gemini : Comparaison des modèles d\'IA en 2026',
-      intro: 'GPT-5.6, Claude Opus 4.8 et Gemini 3.1 Pro comparés sur le raisonnement, la vitesse, la fenêtre de contexte, les prix et les capacités multimodales. Quand utiliser chaque modèle — et quand les combiner.',
+      intro: 'GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro comparés sur le raisonnement, la vitesse, la fenêtre de contexte, les prix et les capacités multimodales. Quand utiliser chaque modèle — et quand les combiner.',
       publishDate: 'Publié le 14 mars 2026',
       readTime: '12 min de lecture',
-      seoTitle: 'GPT-5.6 vs Claude Opus 4.8 vs Gemini 3.1 Pro (2026)',
-      metaDescription: 'GPT-5.6, Claude Opus 4.8 et Gemini 3.1 Pro comparés : vitesse, raisonnement, prix et fenêtre de contexte. Quel modèle d\'IA choisir — et quand utiliser les trois.',
+      seoTitle: 'GPT-5.6 vs Claude Opus 5 vs Gemini 3.1 Pro (2026)',
+      metaDescription: 'GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro comparés : vitesse, raisonnement, prix et fenêtre de contexte. Quel modèle d\'IA choisir — et quand utiliser les trois.',
       heroImage: '/images/ai-model-comparison-comparisonTable-hero-fr.webp',
       faqSchema: {
         '@context': 'https://schema.org',
@@ -6390,7 +6390,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Quel modèle d\'IA est le meilleur pour l\'écriture créative ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6 (ChatGPT) excelle en écriture créative, brainstorming et tâches polyvalentes — rapide et accessible. Claude Opus 4.8 est préférable pour un raisonnement plus profond et l\'analyse critique de contenus créatifs.',
+              text: 'GPT-5.6 (ChatGPT) excelle en écriture créative, brainstorming et tâches polyvalentes — rapide et accessible. Claude Opus 5 est préférable pour un raisonnement plus profond et l\'analyse critique de contenus créatifs.',
             },
           },
           {
@@ -6406,7 +6406,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Quelle est la comparaison des coûts en 2026 ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6 : ~5 $/1M tokens en entrée, ~15 $/1M en sortie. Claude Opus 4.8 : ~15 $/1M en entrée, ~75 $/1M en sortie. Gemini 3.1 Pro : ~3,5 $/1M en entrée, ~10,5 $/1M en sortie. Les trois proposent des abonnements grand public à ~20 $/mois. Vérifiez les tarifs actuels chez chaque fournisseur.',
+              text: 'GPT-5.6 : ~5 $/1M tokens en entrée, ~15 $/1M en sortie. Claude Opus 5 : ~5 $/1M en entrée, ~25 $/1M en sortie. Gemini 3.1 Pro : ~3,5 $/1M en entrée, ~10,5 $/1M en sortie. Les trois proposent des abonnements grand public à ~20 $/mois. Vérifiez les tarifs actuels chez chaque fournisseur.',
             },
           },
           {
@@ -6414,7 +6414,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Quel modèle gère le mieux les tâches multimodales ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemini 3.1 Pro est le plus performant pour les images, la vidéo, l\'audio et la compréhension de documents. GPT-5.6 prend en charge texte et images. Claude Opus 4.8 prend en charge texte et images, mais pas la vidéo.',
+              text: 'Gemini 3.1 Pro est le plus performant pour les images, la vidéo, l\'audio et la compréhension de documents. GPT-5.6 prend en charge texte et images. Claude Opus 5 prend en charge texte et images, mais pas la vidéo.',
             },
           },
           {
@@ -6427,7 +6427,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'Question',
-            name: 'Comment GPT-4o se compare-t-il à Claude Opus 4.8 et Gemini 3.1 Pro ?',
+            name: 'Comment GPT-4o se compare-t-il à Claude Opus 5 et Gemini 3.1 Pro ?',
             acceptedAnswer: {
               '@type': 'Answer',
               text: 'GPT-4o était le modèle phare d\'OpenAI avant que GPT-5.6 ne le remplace comme modèle derrière ChatGPT. Sa fiche technique officielle indique une fenêtre de contexte de 128K tokens, ~88,7 % sur MMLU et ~90,2 % sur HumanEval. Claude Opus 4.8 le surpasse en raisonnement (~91 % sur MMLU-Pro, un benchmark plus exigeant) et en code (~94 % HumanEval), avec une fenêtre de contexte de 1M tokens. Si vous utilisez ChatGPT aujourd\'hui, vous utilisez très probablement GPT-5.6, et non GPT-4o — vérifiez le sélecteur de modèle de votre compte pour en avoir la confirmation.',
@@ -6438,7 +6438,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Puis-je utiliser plusieurs modèles dans le même flux de travail ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Oui. PromptQuorum vous permet d\'envoyer le même prompt à GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro et d\'autres modèles simultanément, puis de comparer les résultats côte à côte. C\'est l\'approche recommandée pour les travaux critiques.',
+              text: 'Oui. PromptQuorum vous permet d\'envoyer le même prompt à GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et d\'autres modèles simultanément, puis de comparer les résultats côte à côte. C\'est l\'approche recommandée pour les travaux critiques.',
             },
           },
         ],
@@ -6462,7 +6462,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'HowToStep',
-            name: 'Tester avec Claude Opus 4.8',
+            name: 'Tester avec Claude Opus 5',
             text: 'Envoyez le même prompt à Claude. Comparez la profondeur du raisonnement, la précision et la transparence argumentative. Activez le mode de réflexion approfondie pour les tâches complexes.',
           },
           {
@@ -6486,7 +6486,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'inLanguage': 'fr',
-        name: 'Comparaison des modèles d\'IA 2026 : GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro',
+        name: 'Comparaison des modèles d\'IA 2026 : GPT-5.6, Claude Opus 5, Gemini 3.1 Pro',
         url: 'https://www.promptquorum.com/fr/blog/ai-model-comparison',
         itemListElement: [
           {
@@ -6498,7 +6498,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Claude Opus 4.8 (Anthropic)',
+            name: 'Claude Opus 5 (Anthropic)',
             description: 'Idéal pour le raisonnement complexe, la qualité du code et l\'analyse longue forme. Fenêtre de contexte 1M tokens. Meilleur score HumanEval (~94 %). Offre gratuite disponible.',
           },
           {
@@ -6517,19 +6517,19 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 5,
             name: 'Vitesse',
-            description: '1. GPT-5.6 (le plus rapide). 2. Gemini 3.1 Pro (rapide). 3. Claude Opus 4.8 (modéré — plus approfondi).',
+            description: '1. GPT-5.6 (le plus rapide). 2. Gemini 3.1 Pro (rapide). 3. Claude Opus 5 (modéré — plus approfondi).',
           },
           {
             '@type': 'ListItem',
             position: 6,
             name: 'Coût API (entrée par 1M tokens)',
-            description: 'Gemini 3.1 Pro (~3,5 $) < GPT-5.6 (~5 $) < Claude Opus 4.8 (~15 $). Vérifiez les tarifs actuels chez chaque fournisseur.',
+            description: 'Gemini 3.1 Pro (~3,5 $) < GPT-5.6 (~5 $) < Claude Opus 5 (~15 $). Vérifiez les tarifs actuels chez chaque fournisseur.',
           },
           {
             '@type': 'ListItem',
             position: 7,
             name: 'Capacités multimodales',
-            description: 'Gemini 3.1 Pro (texte, images, vidéo, audio) > GPT-5.6 (texte, images) > Claude Opus 4.8 (texte, images).',
+            description: 'Gemini 3.1 Pro (texte, images, vidéo, audio) > GPT-5.6 (texte, images) > Claude Opus 5 (texte, images).',
           },
           {
             '@type': 'ListItem',
@@ -6543,8 +6543,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         why: {
           title: 'Pourquoi comparer les modèles d\'IA ?',
           content: [
-            '**En résumé :** GPT-5.6 domine en vitesse et en créativité. Claude Opus 4.8 domine en précision de raisonnement et en analyse de longs documents (contexte 1M tokens). Gemini 3.1 Pro domine sur les tâches multimodales avec la plus grande fenêtre de contexte (2M tokens). Pour les travaux critiques, envoyez le même prompt aux trois — se limiter à un seul modèle, c\'est laisser de la précision sur la table.',
-            'Chaque modèle d\'IA excelle dans des domaines différents. ChatGPT (GPT-5.6) est le plus rapide et le plus polyvalent. Claude (Opus 4.8) obtient les meilleurs scores sur les benchmarks de raisonnement et de code. Gemini (3.1 Pro) est le plus fort sur les tâches multimodales et l\'accès aux données en temps réel.',
+            '**En résumé :** GPT-5.6 domine en vitesse et en créativité. Claude Opus 5 domine en précision de raisonnement et en analyse de longs documents (contexte 1M tokens). Gemini 3.1 Pro domine sur les tâches multimodales avec la plus grande fenêtre de contexte (2M tokens). Pour les travaux critiques, envoyez le même prompt aux trois — se limiter à un seul modèle, c\'est laisser de la précision sur la table.',
+            'Chaque modèle d\'IA excelle dans des domaines différents. ChatGPT (GPT-5.6) est le plus rapide et le plus polyvalent. Claude (Opus 5) obtient les meilleurs scores sur les benchmarks de raisonnement et de code. Gemini (3.1 Pro) est le plus fort sur les tâches multimodales et l\'accès aux données en temps réel.',
             'Ce guide compare les trois modèles frontier en 2026 : points forts, fenêtres de contexte, tarifs et cas d\'usage où chacun s\'impose.',
             'Pour une approche systématique de la sélection de modèle — y compris quand choisir open-source plutôt que commercial — voir [comment choisir le bon modèle d\'IA : GPT, Claude ou Gemini](https://www.promptquorum.com/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
@@ -6600,7 +6600,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'Les trois modèles proposent des offres gratuites — abonnements Pro/Plus à ~20 $/mois pour tous',
-            'GPT-5.6 : 128K tokens | Claude Opus 4.8 : 1M tokens | Gemini 3.1 Pro : 2M tokens',
+            'GPT-5.6 : 128K tokens | Claude Opus 5 : 1M tokens | Gemini 3.1 Pro : 2M tokens',
             'Claude Opus 4.8 Extended Thinking obtient les meilleurs scores sur MMLU-Pro (~91 %) et les benchmarks AIME',
             'Gemini 3.1 Pro est le seul modèle avec 2M tokens de contexte — une base de code entière, un livre ou un dossier juridique',
             'Les trois supportent l\'utilisation d\'outils, le function calling et l\'intégration RAG en production',
@@ -6609,16 +6609,16 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         comparisonTable: {
           title: 'Comparaison directe (2026)',
           content: '',
-          columns: ['Facteur', 'GPT-5.6', 'Claude Opus 4.8', 'Gemini 3.1 Pro'],
+          columns: ['Facteur', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
-            { 'Facteur': 'Fenêtre de contexte', 'GPT-5.6': '128K tokens', 'Claude Opus 4.8': '1M tokens', 'Gemini 3.1 Pro': '2M tokens' },
+            { 'Facteur': 'Fenêtre de contexte', 'GPT-5.6': '128K tokens', 'Claude Opus 5': '1M tokens', 'Gemini 3.1 Pro': '2M tokens' },
             { 'Facteur': 'Raisonnement (MMLU-Pro)', 'GPT-5.6': '~90 %', 'Claude Opus 4.8': '~91 %', 'Gemini 3.1 Pro': '~89 %' },
             { 'Facteur': 'Code (HumanEval)', 'GPT-5.6': '~92 %', 'Claude Opus 4.8': '~94 %', 'Gemini 3.1 Pro': '~88 %' },
-            { 'Facteur': 'Multimodal', 'GPT-5.6': 'Texte + images', 'Claude Opus 4.8': 'Texte + images', 'Gemini 3.1 Pro': 'Texte, images, vidéo, audio' },
-            { 'Facteur': 'Vitesse', 'GPT-5.6': 'Rapide', 'Claude Opus 4.8': 'Modérée', 'Gemini 3.1 Pro': 'Rapide' },
-            { 'Facteur': 'Coût API (entrée/1M tokens)', 'GPT-5.6': '~5 $', 'Claude Opus 4.8': '~15 $', 'Gemini 3.1 Pro': '~3,5 $' },
-            { 'Facteur': 'Offre gratuite', 'GPT-5.6': '✅ Oui', 'Claude Opus 4.8': '✅ Oui (limitée)', 'Gemini 3.1 Pro': '✅ Oui' },
-            { 'Facteur': 'Réflexion approfondie', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 4.8': 'Intégrée', 'Gemini 3.1 Pro': 'Flash Thinking' },
+            { 'Facteur': 'Multimodal', 'GPT-5.6': 'Texte + images', 'Claude Opus 5': 'Texte + images', 'Gemini 3.1 Pro': 'Texte, images, vidéo, audio' },
+            { 'Facteur': 'Vitesse', 'GPT-5.6': 'Rapide', 'Claude Opus 5': 'Modérée', 'Gemini 3.1 Pro': 'Rapide' },
+            { 'Facteur': 'Coût API (entrée/1M tokens)', 'GPT-5.6': '~5 $', 'Claude Opus 5': '~15 $', 'Gemini 3.1 Pro': '~3,5 $' },
+            { 'Facteur': 'Offre gratuite', 'GPT-5.6': '✅ Oui', 'Claude Opus 5': '✅ Oui (limitée)', 'Gemini 3.1 Pro': '✅ Oui' },
+            { 'Facteur': 'Réflexion approfondie', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 5': 'Intégrée', 'Gemini 3.1 Pro': 'Flash Thinking' },
           ],
         },
         contentCreation: {
@@ -6633,7 +6633,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         dataAnalysis: {
           title: 'Analyse de données & recherche',
-          content: 'Claude Opus 4.8 s\'impose — précision excellente, fenêtre de contexte 1M tokens pour analyser longs documents et jeux de données, raisonnement rigoureux. Pour les très longs documents (livres, bases de code complètes), les 2M tokens de Gemini 3.1 Pro sont plus adaptés.',
+          content: 'Claude Opus 5 s\'impose — précision excellente, fenêtre de contexte 1M tokens pour analyser longs documents et jeux de données, raisonnement rigoureux. Pour les très longs documents (livres, bases de code complètes), les 2M tokens de Gemini 3.1 Pro sont plus adaptés.',
         },
         imageAnalysis: {
           title: 'Analyse d\'images',
@@ -6645,20 +6645,20 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         summarization: {
           title: 'Synthèse de documents',
-          content: 'Claude Opus 4.8 ou Gemini 3.1 Pro — les deux disposent de grandes fenêtres de contexte (1M et 2M tokens respectivement). Claude Opus 4.8 produit des synthèses plus structurées avec un raisonnement clair. Gemini 3.1 Pro gère les documents les plus volumineux.',
+          content: 'Claude Opus 5 ou Gemini 3.1 Pro — les deux disposent de grandes fenêtres de contexte (1M et 2M tokens respectivement). Claude Opus 5 produit des synthèses plus structurées avec un raisonnement clair. Gemini 3.1 Pro gère les documents les plus volumineux.',
         },
         budgetConscious: {
           title: 'Utilisateurs soucieux du budget',
-          content: 'Gemini 3.1 Pro gagne sur les coûts API (~3,5 $/1M tokens en entrée). Les trois modèles proposent des offres gratuites. Via l\'API, Gemini est le moins cher, GPT-5.6 se situe en milieu de gamme, Claude Opus 4.8 est le plus onéreux — mais les différences de qualité justifient la prime pour les tâches où la précision est critique.',
+          content: 'Gemini 3.1 Pro gagne sur les coûts API (~3,5 $/1M tokens en entrée). Les trois modèles proposent des offres gratuites. Via l\'API, Gemini est le moins cher, GPT-5.6 se situe en milieu de gamme, Claude Opus 5 est le plus onéreux — mais les différences de qualité justifient la prime pour les tâches où la précision est critique.',
         },
         strategy: {
           title: 'La stratégie intelligente : utiliser les trois',
           content: [
             'Les utilisateurs professionnels de l\'IA ne se limitent pas à un seul modèle. Ils envoient le même prompt aux trois et choisissent la meilleure réponse :',
             '1. GPT-5.6 : Brainstorming rapide et exploration créative',
-            '2. Claude Opus 4.8 : Analyse approfondie, validation du raisonnement, revue de code',
+            '2. Claude Opus 5 : Analyse approfondie, validation du raisonnement, revue de code',
             '3. Gemini 3.1 Pro : Information en temps réel, tâches multimodales, très longs documents',
-            'Vous obtenez ainsi la vitesse (GPT-5.6), la précision (Claude Opus 4.8) et l\'actualité + le contexte (Gemini 3.1 Pro). PromptQuorum automatise ce processus : envoyez le même prompt optimisé aux trois et comparez les résultats côte à côte.',
+            'Vous obtenez ainsi la vitesse (GPT-5.6), la précision (Claude Opus 5) et l\'actualité + le contexte (Gemini 3.1 Pro). PromptQuorum automatise ce processus : envoyez le même prompt optimisé aux trois et comparez les résultats côte à côte.',
           ],
         },
         currentTrends: {
@@ -6666,7 +6666,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: ['Les trois modèles frontier ont considérablement convergé en termes de performance — l\'écart qui existait en 2023 se mesure désormais en points de pourcentage à un chiffre sur la plupart des benchmarks standards.'],
           items: [
             'Les modes de réflexion approfondie sont devenus standard : les trois proposent du compute scaling à l\'inférence pour les tâches de raisonnement complexes',
-            'Les capacités multimodales sont incontournables : GPT-5.6 et Claude Opus 4.8 supportent tous deux les images ; Gemini 3.1 Pro domine sur la vidéo et l\'audio',
+            'Les capacités multimodales sont incontournables : GPT-5.6 et Claude Opus 5 supportent tous deux les images ; Gemini 3.1 Pro domine sur la vidéo et l\'audio',
             'Les fenêtres de contexte s\'élargissent rapidement : de 4K (GPT-3) à 2M (Gemini 3.1 Pro) en moins de trois ans',
             'Les modèles open source comblent l\'écart : LLaMA 3.1 70B et Qwen2.5 atteignent le niveau de GPT-4 sur la plupart des benchmarks',
             'L\'utilisation d\'outils et le function calling sont universels : les trois supportent les sorties structurées, l\'exécution de code et les appels API externes',
@@ -6687,11 +6687,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Ne vous limitez pas à un seul modèle — testez les trois sur vos cas d\'usage réels :',
             '1. Utilisez l\'offre gratuite ChatGPT (GPT-5.6) pour les tâches créatives et le brainstorming',
-            '2. Essayez Claude Opus 4.8 pour le travail analytique et la revue de code',
+            '2. Essayez Claude Opus 5 pour le travail analytique et la revue de code',
             '3. Expérimentez Gemini 3.1 Pro pour l\'analyse d\'images et les données web en temps réel',
             '4. Envoyez le même prompt aux trois et comparez les réponses',
             '5. Identifiez quel modèle donne les meilleurs résultats pour votre type de tâche spécifique',
-            'PromptQuorum vous permet d\'envoyer le même prompt optimisé à GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro et d\'autres modèles simultanément — puis de comparer lequel offre le meilleur résultat pour votre tâche.',
+            'PromptQuorum vous permet d\'envoyer le même prompt optimisé à GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et d\'autres modèles simultanément — puis de comparer lequel offre le meilleur résultat pour votre tâche.',
           ],
         },
         tldr: {
@@ -6702,9 +6702,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Claude Opus 4.8 : Meilleur pour le raisonnement (~91 % MMLU-Pro), le code (~94 % HumanEval), l\'analyse longue forme. Contexte 1M.',
             'Gemini 3.1 Pro : Meilleur pour le multimodal (images, vidéo, audio). Accès web temps réel. Plus grand contexte (2M). Coût API le plus bas.',
             'Les trois proposent des offres gratuites et des abonnements Pro à ~20 $/mois.',
-            'Raisonnement : Claude Opus 4.8 > GPT-5.6 > Gemini 3.1 Pro.',
-            'Vitesse : GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 4.8.',
-            'Coût API : Gemini 3.1 Pro (~3,5 $/1M) < GPT-5.6 (~5 $/1M) < Claude Opus 4.8 (~15 $/1M).',
+            'Raisonnement : Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro.',
+            'Vitesse : GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 5.',
+            'Coût API : Gemini 3.1 Pro (~3,5 $/1M) < GPT-5.6 (~5 $/1M) < Claude Opus 5 (~5 $/1M).',
             'Bonne pratique : envoyez le même prompt aux trois pour les tâches critiques — choisissez la meilleure réponse.',
           ],
         },
@@ -6724,13 +6724,13 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         faqSection: {
           title: 'Questions fréquentes',
           faqs: [
-            { q: 'Quel modèle d\'IA est le meilleur pour l\'écriture créative ?', a: 'GPT-5.6 (ChatGPT) excelle en écriture créative, brainstorming et polyvalence — rapide et accessible. Claude Opus 4.8 est préférable pour un raisonnement plus profond et l\'analyse critique de contenus créatifs.' },
+            { q: 'Quel modèle d\'IA est le meilleur pour l\'écriture créative ?', a: 'GPT-5.6 (ChatGPT) excelle en écriture créative, brainstorming et polyvalence — rapide et accessible. Claude Opus 5 est préférable pour un raisonnement plus profond et l\'analyse critique de contenus créatifs.' },
             { q: 'Quel modèle est le meilleur pour la programmation ?', a: 'Claude Opus 4.8 est en tête pour la qualité du code et le débogage (~94 % HumanEval). GPT-5.6 (~92 %) est plus rapide. Pour les travaux critiques, comparez les suggestions des deux modèles.' },
-            { q: 'Quelle est la comparaison des coûts en 2026 ?', a: 'GPT-5.6 : ~5 $/1M tokens entrée, ~15 $/1M sortie. Claude Opus 4.8 : ~15 $/1M entrée, ~75 $/1M sortie. Gemini 3.1 Pro : ~3,5 $/1M entrée, ~10,5 $/1M sortie. Abonnements grand public à ~20 $/mois pour les trois. Vérifiez les tarifs actuels chez chaque fournisseur.' },
-            { q: 'Quel modèle gère le mieux les tâches multimodales ?', a: 'Gemini 3.1 Pro est le plus performant pour les images, la vidéo, l\'audio et la compréhension de documents. GPT-5.6 prend en charge texte et images. Claude Opus 4.8 prend en charge texte et images, mais pas la vidéo.' },
+            { q: 'Quelle est la comparaison des coûts en 2026 ?', a: 'GPT-5.6 : ~5 $/1M tokens entrée, ~15 $/1M sortie. Claude Opus 5 : ~5 $/1M entrée, ~25 $/1M sortie. Gemini 3.1 Pro : ~3,5 $/1M entrée, ~10,5 $/1M sortie. Abonnements grand public à ~20 $/mois pour les trois. Vérifiez les tarifs actuels chez chaque fournisseur.' },
+            { q: 'Quel modèle gère le mieux les tâches multimodales ?', a: 'Gemini 3.1 Pro est le plus performant pour les images, la vidéo, l\'audio et la compréhension de documents. GPT-5.6 prend en charge texte et images. Claude Opus 5 prend en charge texte et images, mais pas la vidéo.' },
             { q: 'Les trois modèles proposent-ils des offres gratuites ?', a: 'Oui. ChatGPT, Claude.ai et Gemini proposent tous des offres gratuites avec des limites d\'usage quotidiennes. Les trois proposent également des abonnements Pro/Plus à ~20 $/mois pour des limites plus élevées.' },
             { q: 'Comment GPT-4o se compare-t-il à Claude Opus 4.8 et Gemini 3.1 Pro ?', a: 'GPT-4o était le modèle phare d\'OpenAI avant que GPT-5.6 ne le remplace comme modèle derrière ChatGPT. Sa fiche technique officielle indique une fenêtre de contexte de 128K tokens, ~88,7 % sur MMLU et ~90,2 % sur HumanEval. Claude Opus 4.8 le surpasse en raisonnement (~91 % sur MMLU-Pro, un benchmark plus exigeant) et en code (~94 % HumanEval), avec une fenêtre de contexte de 1M tokens. Si vous utilisez ChatGPT aujourd\'hui, vous utilisez très probablement GPT-5.6, et non GPT-4o — vérifiez le sélecteur de modèle de votre compte pour en avoir la confirmation.' },
-            { q: 'Puis-je utiliser plusieurs modèles dans le même flux de travail ?', a: 'Oui. PromptQuorum vous permet d\'envoyer le même prompt à GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro et d\'autres modèles simultanément, puis de comparer les résultats côte à côte. C\'est l\'approche recommandée pour les travaux critiques.' },
+            { q: 'Puis-je utiliser plusieurs modèles dans le même flux de travail ?', a: 'Oui. PromptQuorum vous permet d\'envoyer le même prompt à GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et d\'autres modèles simultanément, puis de comparer les résultats côte à côte. C\'est l\'approche recommandée pour les travaux critiques.' },
           ],
         },
         commonMistakes: {
@@ -6738,7 +6738,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'Erreur 1 : Se limiter à un seul modèle sans jamais comparer. Chaque modèle a des points forts distincts. Testez toujours avec votre tâche spécifique avant de vous engager.',
             'Erreur 2 : Supposer que le modèle le plus cher est le meilleur. Gemini 3.1 Pro est l\'option API la moins chère et gagne sur les tâches multimodales. Adaptez le modèle à la tâche, pas au prix.',
-            'Erreur 3 : Ignorer les limites de la fenêtre de contexte. Gemini 3.1 Pro (2M tokens) et Claude Opus 4.8 (1M tokens) gèrent les longs documents. GPT-5.6 (128K) peut tronquer les grandes entrées.',
+            'Erreur 3 : Ignorer les limites de la fenêtre de contexte. Gemini 3.1 Pro (2M tokens) et Claude Opus 5 (1M tokens) gèrent les longs documents. GPT-5.6 (128K) peut tronquer les grandes entrées.',
             'Erreur 4 : Ne pas vérifier les dates de coupure des connaissances. Les modèles connectés au web (Gemini 3.1 Pro avec Search, GPT-5.6 avec navigation) ont des informations actuelles. Les appels API de base utilisent les données d\'entraînement.',
             'Erreur 5 : Utiliser le même prompt pour tous les modèles. Chaque modèle répond mieux à des styles de prompt différents. Adaptez vos prompts — Claude bénéficie d\'instructions explicites étape par étape ; Gemini d\'un contexte multimodal.',
           ],
@@ -6756,7 +6756,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Sources & références',
           items: [
             'Spécifications du modèle OpenAI GPT-5.6 — openai.com/models',
-            'Documentation Anthropic Claude Opus 4.8 — docs.anthropic.com',
+            'Documentation Anthropic Claude Opus 5 — docs.anthropic.com',
             'Spécifications Google Gemini 3.1 Pro — gemini.google.com',
             'Classement LMSYS Chatbot Arena — arena.lmsys.org',
             'Papers With Code — résultats benchmark MMLU — paperswithcode.com/sota/multi-task-language-understanding-on-mmlu',
@@ -6767,11 +6767,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     ja: {
       category: 'AIモデル比較',
       title: 'ChatGPT vs Claude vs Gemini：2026年AIモデル徹底比較',
-      intro: 'GPT-5.6、Claude Opus 4.8、Gemini 3.1 Proを推論・速度・コンテキストウィンドウ・価格・マルチモーダル能力で比較。どのモデルをいつ使うべきか、そして3つすべてを活用する方法を解説します。',
+      intro: 'GPT-5.6、Claude Opus 5、Gemini 3.1 Proを推論・速度・コンテキストウィンドウ・価格・マルチモーダル能力で比較。どのモデルをいつ使うべきか、そして3つすべてを活用する方法を解説します。',
       publishDate: '2026年3月14日公開',
       readTime: '12分で読める',
-      seoTitle: 'GPT-5.6 vs Claude Opus 4.8 vs Gemini 3.1 Pro (2026)',
-      metaDescription: 'GPT-5.6・Claude Opus 4.8・Gemini 3.1 Proを推論・速度・価格・コンテキストで徹底比較。2026年最新版：どのAIモデルを選ぶべきか、用途別ガイド。',
+      seoTitle: 'GPT-5.6 vs Claude Opus 5 vs Gemini 3.1 Pro (2026)',
+      metaDescription: 'GPT-5.6・Claude Opus 5・Gemini 3.1 Proを推論・速度・価格・コンテキストで徹底比較。2026年最新版：どのAIモデルを選ぶべきか、用途別ガイド。',
       heroImage: '/images/ai-model-comparison-comparisonTable-hero-ja.webp',
       faqSchema: {
         '@context': 'https://schema.org',
@@ -6783,7 +6783,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'クリエイティブライティングに最適なAIモデルはどれですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6（ChatGPT）はクリエイティブライティング、ブレインストーミング、汎用タスクに優れています。速くてアクセスしやすいのが特徴です。Claude Opus 4.8はより深いリーズニングやクリエイティブ作品の分析に向いています。',
+              text: 'GPT-5.6（ChatGPT）はクリエイティブライティング、ブレインストーミング、汎用タスクに優れています。速くてアクセスしやすいのが特徴です。Claude Opus 5はより深いリーズニングやクリエイティブ作品の分析に向いています。',
             },
           },
           {
@@ -6799,7 +6799,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '2026年のコスト比較を教えてください。',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6：入力約$5/100万トークン、出力約$15/100万トークン。Claude Opus 4.8：入力約$15、出力約$75。Gemini 3.1 Pro：入力約$3.5、出力約$10.5。3つすべてに月額約$20のコンシューマープランがあります。最新価格は各プロバイダーでご確認ください。',
+              text: 'GPT-5.6：入力約$5/100万トークン、出力約$15/100万トークン。Claude Opus 5：入力約$5、出力約$25。Gemini 3.1 Pro：入力約$3.5、出力約$10.5。3つすべてに月額約$20のコンシューマープランがあります。最新価格は各プロバイダーでご確認ください。',
             },
           },
           {
@@ -6807,7 +6807,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'マルチモーダルタスクに最も優れているモデルはどれですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemini 3.1 Proは画像、動画、音声、文書理解で最も優れています。GPT-5.6はテキストと画像に対応。Claude Opus 4.8はテキストと画像に対応していますが、動画には非対応です。',
+              text: 'Gemini 3.1 Proは画像、動画、音声、文書理解で最も優れています。GPT-5.6はテキストと画像に対応。Claude Opus 5はテキストと画像に対応していますが、動画には非対応です。',
             },
           },
           {
@@ -6820,7 +6820,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'Question',
-            name: 'GPT-4oはClaude Opus 4.8やGemini 3.1 Proと比べてどうですか？',
+            name: 'GPT-4oはClaude Opus 5やGemini 3.1 Proと比べてどうですか？',
             acceptedAnswer: {
               '@type': 'Answer',
               text: 'GPT-4oは、GPT-5.6がChatGPTを支えるモデルとして後継する前のOpenAIのフラッグシップモデルでした。公式モデルカードでは、128Kトークンのコンテキストウィンドウ、MMLUで約88.7%、HumanEvalで約90.2%を記録しています。Claude Opus 4.8は推論(より難しいベンチマークであるMMLU-Proで約91%)とコーディング(HumanEvalで約94%)の両方で上回り、1Mトークンのコンテキストウィンドウを備えています。現在ChatGPTを使っている場合、GPT-4oではなくGPT-5.6を使用している可能性が高いです — アカウントのモデル選択画面で確認してください。',
@@ -6831,7 +6831,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '同じワークフローで複数のモデルを使用できますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'はい。PromptQuorumを使えば、GPT-5.6、Claude Opus 4.8、Gemini 3.1 Proなど複数のモデルに同じプロンプトを同時に送信し、結果を並べて比較できます。重要な作業ではこのアプローチを推奨します。',
+              text: 'はい。PromptQuorumを使えば、GPT-5.6、Claude Opus 5、Gemini 3.1 Proなど複数のモデルに同じプロンプトを同時に送信し、結果を並べて比較できます。重要な作業ではこのアプローチを推奨します。',
             },
           },
           {
@@ -6839,7 +6839,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'METI AIガバナンスガイドラインとこれらのモデルの関係は？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '経済産業省（METI）の「AI事業者ガイドライン（2024年版）」では、AIシステムの透明性・安全性・信頼性の確保を求めています。Claude Opus 4.8はConstitutional AIによる透明性の高い推論、OpenAIとGoogleはAI安全に関する報告書を公開しています。機密データを扱う企業では、データ処理契約（DPA）の締結とローカルモデルの活用検討を推奨します。',
+              text: '経済産業省（METI）の「AI事業者ガイドライン（2024年版）」では、AIシステムの透明性・安全性・信頼性の確保を求めています。Claude Opus 5はConstitutional AIによる透明性の高い推論、OpenAIとGoogleはAI安全に関する報告書を公開しています。機密データを扱う企業では、データ処理契約（DPA）の締結とローカルモデルの活用検討を推奨します。',
             },
           },
           {
@@ -6871,7 +6871,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'HowToStep',
-            name: 'Claude Opus 4.8でテストする',
+            name: 'Claude Opus 5でテストする',
             text: '同じプロンプトをClaudeに送信します。推論の深さ、正確性、推論の透明性を比較してください。複雑なタスクではExtended Thinkingモードを有効にしてください。',
           },
           {
@@ -6895,7 +6895,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'inLanguage': 'ja',
-        name: 'AIモデル比較2026：GPT-5.6、Claude Opus 4.8、Gemini 3.1 Pro',
+        name: 'AIモデル比較2026：GPT-5.6、Claude Opus 5、Gemini 3.1 Pro',
         url: 'https://www.promptquorum.com/ja/blog/ai-model-comparison',
         itemListElement: [
           {
@@ -6907,7 +6907,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Claude Opus 4.8（Anthropic）',
+            name: 'Claude Opus 5（Anthropic）',
             description: '複雑な推論、コード品質、長文分析に最適。1Mトークンのコンテキストウィンドウ。最高HumanEvalスコア（約94%）。無料プランあり。',
           },
           {
@@ -6926,19 +6926,19 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 5,
             name: '速度',
-            description: '1. GPT-5.6（最速）。2. Gemini 3.1 Pro（高速）。3. Claude Opus 4.8（中程度 — より徹底的）。',
+            description: '1. GPT-5.6（最速）。2. Gemini 3.1 Pro（高速）。3. Claude Opus 5（中程度 — より徹底的）。',
           },
           {
             '@type': 'ListItem',
             position: 6,
             name: 'API料金（入力100万トークンあたり）',
-            description: 'Gemini 3.1 Pro（約$3.5）< GPT-5.6（約$5）< Claude Opus 4.8（約$15）。最新価格は各プロバイダーでご確認ください。',
+            description: 'Gemini 3.1 Pro（約$3.5）< GPT-5.6（約$5）< Claude Opus 5（約$15）。最新価格は各プロバイダーでご確認ください。',
           },
           {
             '@type': 'ListItem',
             position: 7,
             name: 'マルチモーダル機能',
-            description: 'Gemini 3.1 Pro（テキスト、画像、動画、音声）> GPT-5.6（テキスト、画像）> Claude Opus 4.8（テキスト、画像）。',
+            description: 'Gemini 3.1 Pro（テキスト、画像、動画、音声）> GPT-5.6（テキスト、画像）> Claude Opus 5（テキスト、画像）。',
           },
           {
             '@type': 'ListItem',
@@ -6952,8 +6952,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         why: {
           title: 'なぜAIモデルを比較するのか',
           content: [
-            '**結論から言うと：** GPT-5.6は速度とクリエイティブな出力でリード。Claude Opus 4.8は推論精度と長文書分析（1Mトークンコンテキスト）でリード。Gemini 3.1 Proはマルチモーダルタスクと最大のコンテキストウィンドウ（2Mトークン）でリード。重要な作業では3つすべてに同じプロンプトを送信してください — 1つのモデルだけに依存すると精度を犠牲にすることになります。',
-            'AIモデルはそれぞれ異なるタスクで優れています。ChatGPT（GPT-5.6）は最も速く汎用性が高いモデルです。Claude（Opus 4.8）は推論とコードのベンチマークで最高スコアを記録しています。Gemini（3.1 Pro）はマルチモーダルタスクとリアルタイムWebアクセスで最も優れています。',
+            '**結論から言うと：** GPT-5.6は速度とクリエイティブな出力でリード。Claude Opus 5は推論精度と長文書分析（1Mトークンコンテキスト）でリード。Gemini 3.1 Proはマルチモーダルタスクと最大のコンテキストウィンドウ（2Mトークン）でリード。重要な作業では3つすべてに同じプロンプトを送信してください — 1つのモデルだけに依存すると精度を犠牲にすることになります。',
+            'AIモデルはそれぞれ異なるタスクで優れています。ChatGPT（GPT-5.6）は最も速く汎用性が高いモデルです。Claude（Opus 5）は推論とコードのベンチマークで最高スコアを記録しています。Gemini（3.1 Pro）はマルチモーダルタスクとリアルタイムWebアクセスで最も優れています。',
             'このガイドでは2026年時点の3つのフロンティアモデルを比較します：強み、コンテキストウィンドウ、料金、そして各モデルが勝るタスクについて解説します。',
             'モデル選択への体系的なアプローチ — オープンソースと商用モデルの選び方を含む — については、[適切なAIモデルの選び方：GPT、Claude、またはGemini](https://www.promptquorum.com/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)をご覧ください。',
           ],
@@ -7009,7 +7009,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             '3つすべてに無料プランあり — Pro/Plusプランは全て月額約$20',
-            'GPT-5.6：128Kトークン | Claude Opus 4.8：1Mトークン | Gemini 3.1 Pro：2Mトークン',
+            'GPT-5.6：128Kトークン | Claude Opus 5：1Mトークン | Gemini 3.1 Pro：2Mトークン',
             'Claude Opus 4.8 Extended ThinkingはMMLU-Pro（約91%）とAIME推論ベンチマークで最高スコア',
             'Gemini 3.1 Proは2Mコンテキストを持つ唯一のモデル — コードベース全体、書籍、法的書類全体を処理可能',
             '3つすべてがTool Use、Function Calling、RAG統合を本番環境でサポート',
@@ -7018,16 +7018,16 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         comparisonTable: {
           title: '直接比較（2026年）',
           content: '',
-          columns: ['比較項目', 'GPT-5.6', 'Claude Opus 4.8', 'Gemini 3.1 Pro'],
+          columns: ['比較項目', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
-            { '比較項目': 'コンテキストウィンドウ', 'GPT-5.6': '128Kトークン', 'Claude Opus 4.8': '1Mトークン', 'Gemini 3.1 Pro': '2Mトークン' },
+            { '比較項目': 'コンテキストウィンドウ', 'GPT-5.6': '128Kトークン', 'Claude Opus 5': '1Mトークン', 'Gemini 3.1 Pro': '2Mトークン' },
             { '比較項目': '推論（MMLU-Pro）', 'GPT-5.6': '約90%', 'Claude Opus 4.8': '約91%', 'Gemini 3.1 Pro': '約89%' },
             { '比較項目': 'コード（HumanEval）', 'GPT-5.6': '約92%', 'Claude Opus 4.8': '約94%', 'Gemini 3.1 Pro': '約88%' },
-            { '比較項目': 'マルチモーダル', 'GPT-5.6': 'テキスト＋画像', 'Claude Opus 4.8': 'テキスト＋画像', 'Gemini 3.1 Pro': 'テキスト、画像、動画、音声' },
-            { '比較項目': '速度', 'GPT-5.6': '高速', 'Claude Opus 4.8': '中程度', 'Gemini 3.1 Pro': '高速' },
-            { '比較項目': 'API料金（入力/100万トークン）', 'GPT-5.6': '約$5', 'Claude Opus 4.8': '約$15', 'Gemini 3.1 Pro': '約$3.5' },
-            { '比較項目': '無料プラン', 'GPT-5.6': '✅ あり', 'Claude Opus 4.8': '✅ あり（制限付き）', 'Gemini 3.1 Pro': '✅ あり' },
-            { '比較項目': '拡張思考モード', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 4.8': '組み込み済み', 'Gemini 3.1 Pro': 'Flash Thinking' },
+            { '比較項目': 'マルチモーダル', 'GPT-5.6': 'テキスト＋画像', 'Claude Opus 5': 'テキスト＋画像', 'Gemini 3.1 Pro': 'テキスト、画像、動画、音声' },
+            { '比較項目': '速度', 'GPT-5.6': '高速', 'Claude Opus 5': '中程度', 'Gemini 3.1 Pro': '高速' },
+            { '比較項目': 'API料金（入力/100万トークン）', 'GPT-5.6': '約$5', 'Claude Opus 5': '約$15', 'Gemini 3.1 Pro': '約$3.5' },
+            { '比較項目': '無料プラン', 'GPT-5.6': '✅ あり', 'Claude Opus 5': '✅ あり（制限付き）', 'Gemini 3.1 Pro': '✅ あり' },
+            { '比較項目': '拡張思考モード', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 5': '組み込み済み', 'Gemini 3.1 Pro': 'Flash Thinking' },
           ],
         },
         contentCreation: {
@@ -7042,7 +7042,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         dataAnalysis: {
           title: 'データ分析・調査',
-          content: 'Claude Opus 4.8が優位 — 優れた精度、長い文書やデータセットの分析のための1Mトークンコンテキストウィンドウ、厳密な推論。非常に長い文書（書籍、完全なコードベース）にはGemini 3.1 Proの2Mコンテキストがより適しています。',
+          content: 'Claude Opus 5が優位 — 優れた精度、長い文書やデータセットの分析のための1Mトークンコンテキストウィンドウ、厳密な推論。非常に長い文書（書籍、完全なコードベース）にはGemini 3.1 Proの2Mコンテキストがより適しています。',
         },
         imageAnalysis: {
           title: '画像分析',
@@ -7054,20 +7054,20 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         summarization: {
           title: '文書要約',
-          content: 'Claude Opus 4.8またはGemini 3.1 Pro — どちらも大きなコンテキストウィンドウ（それぞれ1Mと2Mトークン）を持っています。Claude Opus 4.8は明確な推論を伴うより構造化された要約を生成します。Gemini 3.1 Proは最も長い文書を処理します。',
+          content: 'Claude Opus 5またはGemini 3.1 Pro — どちらも大きなコンテキストウィンドウ（それぞれ1Mと2Mトークン）を持っています。Claude Opus 5は明確な推論を伴うより構造化された要約を生成します。Gemini 3.1 Proは最も長い文書を処理します。',
         },
         budgetConscious: {
           title: 'コスト重視のユーザー向け',
-          content: 'Gemini 3.1 ProはAPIコストで優位（入力約$3.5/100万トークン）。3つすべてに無料プランがあります。APIではGeminiが最安、GPT-5.6が中間、Claude Opus 4.8が最高価格 — ただし精度が重要なタスクでは品質差がプレミアム価格を正当化します。',
+          content: 'Gemini 3.1 ProはAPIコストで優位（入力約$3.5/100万トークン）。3つすべてに無料プランがあります。APIではGeminiが最安、GPT-5.6が中間、Claude Opus 5が最高価格 — ただし精度が重要なタスクでは品質差がプレミアム価格を正当化します。',
         },
         strategy: {
           title: 'スマートな戦略：3つすべてを活用する',
           content: [
             'プロのAIユーザーは1つのモデルにこだわりません。同じプロンプトを3つすべてに送信し、最良の回答を選びます：',
             '1. GPT-5.6：素早いブレインストーミングとクリエイティブな探索',
-            '2. Claude Opus 4.8：深い分析、推論の検証、コードレビュー',
+            '2. Claude Opus 5：深い分析、推論の検証、コードレビュー',
             '3. Gemini 3.1 Pro：リアルタイム情報、マルチモーダルタスク、非常に長い文書',
-            'これにより速度（GPT-5.6）、精度（Claude Opus 4.8）、最新性＋コンテキスト（Gemini 3.1 Pro）が得られます。PromptQuorumはこれを自動化します：同じ最適化プロンプトを3つすべてに送信し、結果を並べて比較できます。',
+            'これにより速度（GPT-5.6）、精度（Claude Opus 5）、最新性＋コンテキスト（Gemini 3.1 Pro）が得られます。PromptQuorumはこれを自動化します：同じ最適化プロンプトを3つすべてに送信し、結果を並べて比較できます。',
           ],
         },
         currentTrends: {
@@ -7075,7 +7075,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: ['3つのフロンティアモデルはベンチマーク性能で大幅に収束しています — 2023年に存在していたギャップは、現在ほとんどの標準ベンチマークで一桁台のパーセントポイントで測定されます。'],
           items: [
             'Extended Thinkingモードが標準化：3つすべてが複雑な推論タスクのための推論時コンピュートスケーリングを提供',
-            'マルチモーダル機能は当然の要件：GPT-5.6とClaude Opus 4.8はどちらも画像をサポート；Gemini 3.1 Proは動画と音声でリード',
+            'マルチモーダル機能は当然の要件：GPT-5.6とClaude Opus 5はどちらも画像をサポート；Gemini 3.1 Proは動画と音声でリード',
             'コンテキストウィンドウが急速に拡大：4K（GPT-3）から2M（Gemini 3.1 Pro）まで3年未満で達成',
             'オープンソースモデルが能力差を縮小：LLaMA 3.1 70BとQwen2.5がほとんどのベンチマークでGPT-4レベルに到達',
             'Tool UseとFunction Callingが普遍的：3つすべてが本番環境で構造化出力、コード実行、外部API呼び出しをサポート',
@@ -7096,11 +7096,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '1つのモデルにこだわらず、実際のユースケースで3つすべてをテストしてください：',
             '1. ChatGPT（GPT-5.6）の無料プランをクリエイティブタスクとブレインストーミングに使用する',
-            '2. Claude Opus 4.8を分析作業とコードレビューで試す',
+            '2. Claude Opus 5を分析作業とコードレビューで試す',
             '3. Gemini 3.1 Proを画像分析とリアルタイムWebデータで実験する',
             '4. 3つすべてに同じプロンプトを送信して回答を比較する',
             '5. 特定のタスクタイプで最良の結果を出すモデルを特定する',
-            'PromptQuorumを使えば、GPT-5.6、Claude Opus 4.8、Gemini 3.1 Pro、その他のモデルに同じ最適化プロンプトを同時に送信し、タスクに対して最良の結果を出したモデルを比較できます。',
+            'PromptQuorumを使えば、GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、その他のモデルに同じ最適化プロンプトを同時に送信し、タスクに対して最良の結果を出したモデルを比較できます。',
           ],
         },
         tldr: {
@@ -7111,9 +7111,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Claude Opus 4.8：推論（約91% MMLU-Pro）、コード（約94% HumanEval）、長文分析に最適。1Mコンテキスト。',
             'Gemini 3.1 Pro：マルチモーダル（画像、動画、音声）に最適。リアルタイムWebアクセス。最大コンテキスト（2M）。最低APIコスト。',
             '3つすべてに無料プランと月額約$20のProプランがあります。',
-            '推論：Claude Opus 4.8 > GPT-5.6 > Gemini 3.1 Pro。',
-            '速度：GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 4.8。',
-            'APIコスト：Gemini 3.1 Pro（約$3.5/1M）< GPT-5.6（約$5/1M）< Claude Opus 4.8（約$15/1M）。',
+            '推論：Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro。',
+            '速度：GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 5。',
+            'APIコスト：Gemini 3.1 Pro（約$3.5/1M）< GPT-5.6（約$5/1M）< Claude Opus 5（約$5/1M）。',
             'ベストプラクティス：重要なタスクでは3つすべてに同じプロンプトを送信し、最良の回答を選択してください。',
           ],
         },
@@ -7124,7 +7124,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '経済産業省（METI）は2024年に「AI事業者ガイドライン」を策定し、AIシステムの透明性・安全性・信頼性の確保を求めています。クラウドAIサービスを企業利用する際は、個人情報保護法に基づくデータ処理契約の確認が必要です。',
           ],
           items: [
-            'METI AIガバナンス：経済産業省のAI事業者ガイドライン（2024年版）に基づき、AIシステムの透明性と安全性の確保が求められます。Claude Opus 4.8のConstitutional AIは推論プロセスの透明性において特に評価されています。',
+            'METI AIガバナンス：経済産業省のAI事業者ガイドライン（2024年版）に基づき、AIシステムの透明性と安全性の確保が求められます。Claude Opus 5のConstitutional AIは推論プロセスの透明性において特に評価されています。',
             '個人情報保護法：個人データをクラウドAIサービスに送信する場合は、各プロバイダーとのデータ処理契約（DPA）の確認が必要です。金融・医療・法律分野では特に注意が必要です。',
             'アジア太平洋地域：日本・シンガポール・韓国・マレーシアなどのデータ越境移転規制に対応するため、機密データにはローカルモデルの活用を検討してください。',
             '推奨：高い機密性が求められるデータには、LLaMA 3.1やMistralなどのローカルオープンソースモデルがデータ主権を確保する最適な選択肢です。',
@@ -7133,14 +7133,14 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         faqSection: {
           title: 'よくある質問',
           faqs: [
-            { q: 'クリエイティブライティングに最適なAIモデルはどれですか？', a: 'GPT-5.6（ChatGPT）はクリエイティブライティング、ブレインストーミング、汎用タスクに優れています。速くてアクセスしやすいのが特徴です。Claude Opus 4.8はより深いリーズニングやクリエイティブ作品の分析に向いています。' },
+            { q: 'クリエイティブライティングに最適なAIモデルはどれですか？', a: 'GPT-5.6（ChatGPT）はクリエイティブライティング、ブレインストーミング、汎用タスクに優れています。速くてアクセスしやすいのが特徴です。Claude Opus 5はより深いリーズニングやクリエイティブ作品の分析に向いています。' },
             { q: 'コーディングに最適なモデルはどれですか？', a: 'Claude Opus 4.8はコード品質とデバッグでリードしており、HumanEvalで約94%を記録しています。GPT-5.6（約92%）はより高速です。重要な作業では両方のコード提案を比較することをお勧めします。' },
-            { q: '2026年のコスト比較を教えてください。', a: 'GPT-5.6：入力約$5/100万トークン、出力約$15。Claude Opus 4.8：入力約$15、出力約$75。Gemini 3.1 Pro：入力約$3.5、出力約$10.5。3つすべてに月額約$20のコンシューマープランがあります。最新価格は各プロバイダーでご確認ください。' },
-            { q: 'マルチモーダルタスクに最も優れているモデルはどれですか？', a: 'Gemini 3.1 Proは画像、動画、音声、文書理解で最も優れています。GPT-5.6はテキストと画像に対応。Claude Opus 4.8はテキストと画像に対応していますが、動画には非対応です。' },
+            { q: '2026年のコスト比較を教えてください。', a: 'GPT-5.6：入力約$5/100万トークン、出力約$15。Claude Opus 5：入力約$5、出力約$25。Gemini 3.1 Pro：入力約$3.5、出力約$10.5。3つすべてに月額約$20のコンシューマープランがあります。最新価格は各プロバイダーでご確認ください。' },
+            { q: 'マルチモーダルタスクに最も優れているモデルはどれですか？', a: 'Gemini 3.1 Proは画像、動画、音声、文書理解で最も優れています。GPT-5.6はテキストと画像に対応。Claude Opus 5はテキストと画像に対応していますが、動画には非対応です。' },
             { q: '3つのモデルすべてに無料プランはありますか？', a: 'はい。ChatGPT、Claude.ai、Geminiはいずれも日次使用制限付きの無料プランを提供しています。3つすべてに月額約$20のPro/Plusプランもあります。' },
             { q: 'GPT-4oはClaude Opus 4.8やGemini 3.1 Proと比べてどうですか？', a: 'GPT-4oは、GPT-5.6がChatGPTを支えるモデルとして後継する前のOpenAIのフラッグシップモデルでした。公式モデルカードでは、128Kトークンのコンテキストウィンドウ、MMLUで約88.7%、HumanEvalで約90.2%を記録しています。Claude Opus 4.8は推論(より難しいベンチマークであるMMLU-Proで約91%)とコーディング(HumanEvalで約94%)の両方で上回り、1Mトークンのコンテキストウィンドウを備えています。現在ChatGPTを使っている場合、GPT-4oではなくGPT-5.6を使用している可能性が高いです — アカウントのモデル選択画面で確認してください。' },
-            { q: '同じワークフローで複数のモデルを使用できますか？', a: 'はい。PromptQuorumを使えば、GPT-5.6、Claude Opus 4.8、Gemini 3.1 Proなど複数のモデルに同じプロンプトを同時に送信し、結果を並べて比較できます。重要な作業ではこのアプローチを推奨します。' },
-            { q: 'METI AIガバナンスガイドラインとこれらのモデルの関係は？', a: '経済産業省（METI）の「AI事業者ガイドライン（2024年版）」では、AIシステムの透明性・安全性・信頼性の確保を求めています。Claude Opus 4.8はConstitutional AIによる透明性の高い推論、OpenAIとGoogleはAI安全に関する報告書を公開しています。機密データを扱う企業では、データ処理契約（DPA）の締結とローカルモデルの活用検討を推奨します。' },
+            { q: '同じワークフローで複数のモデルを使用できますか？', a: 'はい。PromptQuorumを使えば、GPT-5.6、Claude Opus 5、Gemini 3.1 Proなど複数のモデルに同じプロンプトを同時に送信し、結果を並べて比較できます。重要な作業ではこのアプローチを推奨します。' },
+            { q: 'METI AIガバナンスガイドラインとこれらのモデルの関係は？', a: '経済産業省（METI）の「AI事業者ガイドライン（2024年版）」では、AIシステムの透明性・安全性・信頼性の確保を求めています。Claude Opus 5はConstitutional AIによる透明性の高い推論、OpenAIとGoogleはAI安全に関する報告書を公開しています。機密データを扱う企業では、データ処理契約（DPA）の締結とローカルモデルの活用検討を推奨します。' },
             { q: '日本企業がこれらのAIモデルを導入する際の注意点は？', a: '個人情報保護法（個人情報の保護に関する法律）に基づき、個人データをクラウドAIサービスに送信する場合は、データ処理契約の確認が必要です。金融・医療・法律分野では特に注意が必要です。高い機密性が求められる場合は、LLaMA 3.1やMistralなどのローカルモデルが適切な選択肢となります。' },
           ],
         },
@@ -7149,7 +7149,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             '間違い1：1つのモデルを選んで比較しない。各モデルには明確な強みがあります。コミットする前に必ず特定のタスクでテストしてください。',
             '間違い2：最も高価なモデルが最良と思い込む。Gemini 3.1 ProはAPIコストが最安でマルチモーダルタスクで優位です。価格ではなくタスクにモデルを合わせてください。',
-            '間違い3：コンテキストウィンドウの制限を無視する。Gemini 3.1 Pro（2Mトークン）とClaude Opus 4.8（1Mトークン）は長い文書を処理します。GPT-5.6（128K）は大きな入力を切り捨てる場合があります。',
+            '間違い3：コンテキストウィンドウの制限を無視する。Gemini 3.1 Pro（2Mトークン）とClaude Opus 5（1Mトークン）は長い文書を処理します。GPT-5.6（128K）は大きな入力を切り捨てる場合があります。',
             '間違い4：知識のカットオフを確認しない。Webに接続したモデル（Google SearchのGemini 3.1 Pro、ブラウジングのGPT-5.6）は最新の情報を持っています。ベースAPIコールはトレーニングのカットオフデータを使用する場合があります。',
             '間違い5：すべてのモデルに同じプロンプトを使用する。各モデルは異なるプロンプトスタイルに対してより良く応答します。プロンプトを適応させてください — Claudeは明示的なステップバイステップの指示から恩恵を受け、Geminiはマルチモーダルなコンテキストから恩恵を受けます。',
           ],
@@ -7167,7 +7167,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '出典・参考文献',
           items: [
             'OpenAI GPT-5.6 モデル仕様 — openai.com/models',
-            'Anthropic Claude Opus 4.8 ドキュメント — docs.anthropic.com',
+            'Anthropic Claude Opus 5 ドキュメント — docs.anthropic.com',
             'Google Gemini 3.1 Pro 仕様 — gemini.google.com',
             'LMSYS Chatbot Arena リーダーボード — arena.lmsys.org',
             'Papers With Code — MMLU ベンチマーク結果 — paperswithcode.com/sota/multi-task-language-understanding-on-mmlu',
@@ -7178,11 +7178,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     zh: {
       category: 'AI模型比较',
       title: 'ChatGPT vs Claude vs Gemini：2026年AI模型全面对比',
-      intro: 'GPT-5.6、Claude Opus 4.8与Gemini 3.1 Pro在推理能力、速度、上下文窗口、定价和多模态能力方面的全面比较。何时使用每个模型——以及何时同时使用三者。',
+      intro: 'GPT-5.6、Claude Opus 5与Gemini 3.1 Pro在推理能力、速度、上下文窗口、定价和多模态能力方面的全面比较。何时使用每个模型——以及何时同时使用三者。',
       publishDate: '发布于2026年3月14日',
       readTime: '阅读约12分钟',
-      seoTitle: 'GPT-5.6 vs Claude Opus 4.8 vs Gemini 3.1 Pro (2026)',
-      metaDescription: 'GPT-5.6、Claude Opus 4.8与Gemini 3.1 Pro深度对比：速度、推理、价格与上下文窗口。2026年最新AI模型选型指南，助您做出最优决策。',
+      seoTitle: 'GPT-5.6 vs Claude Opus 5 vs Gemini 3.1 Pro (2026)',
+      metaDescription: 'GPT-5.6、Claude Opus 5与Gemini 3.1 Pro深度对比：速度、推理、价格与上下文窗口。2026年最新AI模型选型指南，助您做出最优决策。',
       heroImage: '/images/ai-model-comparison-comparisonTable-hero-zh.webp',
       faqSchema: {
         '@context': 'https://schema.org',
@@ -7194,7 +7194,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '哪款AI模型最适合创意写作？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6（ChatGPT）在创意写作、头脑风暴和通用任务方面表现出色——速度快且易于使用。Claude Opus 4.8更擅长深度推理和创意内容分析。',
+              text: 'GPT-5.6（ChatGPT）在创意写作、头脑风暴和通用任务方面表现出色——速度快且易于使用。Claude Opus 5更擅长深度推理和创意内容分析。',
             },
           },
           {
@@ -7210,7 +7210,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '2026年的价格对比如何？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6：输入约$5/百万token，输出约$15。Claude Opus 4.8：输入约$15，输出约$75。Gemini 3.1 Pro：输入约$3.5，输出约$10.5。三款均提供月费约$20的消费者套餐。请向各服务商确认最新价格。',
+              text: 'GPT-5.6：输入约$5/百万token，输出约$15。Claude Opus 5：输入约$5，输出约$25。Gemini 3.1 Pro：输入约$3.5，输出约$10.5。三款均提供月费约$20的消费者套餐。请向各服务商确认最新价格。',
             },
           },
           {
@@ -7218,7 +7218,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '哪款模型最擅长多模态任务？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemini 3.1 Pro在图像、视频、音频和文档理解方面最为出色。GPT-5.6支持文本和图像。Claude Opus 4.8支持文本和图像，但不支持视频。',
+              text: 'Gemini 3.1 Pro在图像、视频、音频和文档理解方面最为出色。GPT-5.6支持文本和图像。Claude Opus 5支持文本和图像，但不支持视频。',
             },
           },
           {
@@ -7231,7 +7231,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'Question',
-            name: 'GPT-4o与Claude Opus 4.8、Gemini 3.1 Pro相比如何？',
+            name: 'GPT-4o与Claude Opus 5、Gemini 3.1 Pro相比如何？',
             acceptedAnswer: {
               '@type': 'Answer',
               text: 'GPT-4o是OpenAI在GPT-5.6取代其成为ChatGPT背后的模型之前的旗舰模型。据官方模型卡显示，它拥有128K token上下文窗口，MMLU得分约88.7%，HumanEval得分约90.2%。Claude Opus 4.8在推理（MMLU-Pro约91%，这是一项更难的基准测试）和编程（HumanEval约94%）方面均优于它，且拥有1M token上下文窗口。如果你现在正在使用ChatGPT，很可能用的是GPT-5.6而非GPT-4o——可在账户的模型选择菜单中确认。',
@@ -7242,7 +7242,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '可以在同一工作流中使用多个模型吗？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '可以。PromptQuorum支持将同一提示词同时发送给GPT-5.6、Claude Opus 4.8、Gemini 3.1 Pro及其他模型，然后并排比较结果。这是关键任务的推荐方式。',
+              text: '可以。PromptQuorum支持将同一提示词同时发送给GPT-5.6、Claude Opus 5、Gemini 3.1 Pro及其他模型，然后并排比较结果。这是关键任务的推荐方式。',
             },
           },
           {
@@ -7282,7 +7282,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'HowToStep',
-            name: '在Claude Opus 4.8上测试',
+            name: '在Claude Opus 5上测试',
             text: '将相同提示词发送给Claude。比较推理深度、准确性和推理透明度。对于复杂任务，启用Extended Thinking模式。',
           },
           {
@@ -7306,7 +7306,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'inLanguage': 'zh',
-        name: '2026年AI模型对比：GPT-5.6、Claude Opus 4.8、Gemini 3.1 Pro',
+        name: '2026年AI模型对比：GPT-5.6、Claude Opus 5、Gemini 3.1 Pro',
         url: 'https://www.promptquorum.com/zh/blog/ai-model-comparison',
         itemListElement: [
           {
@@ -7318,7 +7318,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Claude Opus 4.8（Anthropic）',
+            name: 'Claude Opus 5（Anthropic）',
             description: '最适合复杂推理、代码质量和长篇分析。1M token上下文窗口。HumanEval最高分（约94%）。提供免费套餐。',
           },
           {
@@ -7337,19 +7337,19 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 5,
             name: '速度',
-            description: '1. GPT-5.6（最快）。2. Gemini 3.1 Pro（快速）。3. Claude Opus 4.8（中等——更为深入）。',
+            description: '1. GPT-5.6（最快）。2. Gemini 3.1 Pro（快速）。3. Claude Opus 5（中等——更为深入）。',
           },
           {
             '@type': 'ListItem',
             position: 6,
             name: 'API成本（每百万token输入）',
-            description: 'Gemini 3.1 Pro（约$3.5）< GPT-5.6（约$5）< Claude Opus 4.8（约$15）。请向各服务商确认最新价格。',
+            description: 'Gemini 3.1 Pro（约$3.5）< GPT-5.6（约$5）< Claude Opus 5（约$15）。请向各服务商确认最新价格。',
           },
           {
             '@type': 'ListItem',
             position: 7,
             name: '多模态能力',
-            description: 'Gemini 3.1 Pro（文本、图像、视频、音频）> GPT-5.6（文本、图像）> Claude Opus 4.8（文本、图像）。',
+            description: 'Gemini 3.1 Pro（文本、图像、视频、音频）> GPT-5.6（文本、图像）> Claude Opus 5（文本、图像）。',
           },
           {
             '@type': 'ListItem',
@@ -7363,8 +7363,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         why: {
           title: '为什么要比较AI模型？',
           content: [
-            '**核心结论：** GPT-5.6在速度和创意输出方面领先。Claude Opus 4.8在推理准确性和长文档分析（1M token上下文）方面领先。Gemini 3.1 Pro在多模态任务方面领先，且拥有最大的上下文窗口（2M token）。对于关键工作，建议将同一提示词发送给三款模型——依赖单一模型会损失准确性。',
-            '不同的AI模型在不同任务上表现各异。ChatGPT（GPT-5.6）速度最快、通用性最强。Claude（Opus 4.8）在推理和代码基准测试中得分最高。Gemini（3.1 Pro）在多模态任务和实时网络访问方面最为出色。了解哪个模型适合哪类任务，意味着更好的结果和更低的成本。',
+            '**核心结论：** GPT-5.6在速度和创意输出方面领先。Claude Opus 5在推理准确性和长文档分析（1M token上下文）方面领先。Gemini 3.1 Pro在多模态任务方面领先，且拥有最大的上下文窗口（2M token）。对于关键工作，建议将同一提示词发送给三款模型——依赖单一模型会损失准确性。',
+            '不同的AI模型在不同任务上表现各异。ChatGPT（GPT-5.6）速度最快、通用性最强。Claude（Opus 5）在推理和代码基准测试中得分最高。Gemini（3.1 Pro）在多模态任务和实时网络访问方面最为出色。了解哪个模型适合哪类任务，意味着更好的结果和更低的成本。',
             '本指南对比2026年三大前沿模型：优势、上下文窗口、定价，以及每款模型的适用场景。',
             '关于模型选择的系统方法——包括何时选择开源与商业模型——请参阅[如何选择正确的AI模型：GPT、Claude还是Gemini](https://www.promptquorum.com/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)。',
           ],
@@ -7420,7 +7420,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             '三款模型均提供免费消费者套餐——Pro/Plus套餐均约$20/月',
-            'GPT-5.6：128K token | Claude Opus 4.8：1M token | Gemini 3.1 Pro：2M token',
+            'GPT-5.6：128K token | Claude Opus 5：1M token | Gemini 3.1 Pro：2M token',
             'Claude Opus 4.8 Extended Thinking在MMLU-Pro（约91%）和AIME推理基准上得分最高',
             'Gemini 3.1 Pro是唯一拥有2M上下文的模型——可容纳整个代码库、书籍或法律文件',
             '三款均在生产环境中支持Tool Use、Function Calling和RAG集成',
@@ -7429,16 +7429,16 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         comparisonTable: {
           title: '直接对比（2026年）',
           content: '',
-          columns: ['对比维度', 'GPT-5.6', 'Claude Opus 4.8', 'Gemini 3.1 Pro'],
+          columns: ['对比维度', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
-            { '对比维度': '上下文窗口', 'GPT-5.6': '128K token', 'Claude Opus 4.8': '1M token', 'Gemini 3.1 Pro': '2M token' },
+            { '对比维度': '上下文窗口', 'GPT-5.6': '128K token', 'Claude Opus 5': '1M token', 'Gemini 3.1 Pro': '2M token' },
             { '对比维度': '推理能力（MMLU-Pro）', 'GPT-5.6': '约90%', 'Claude Opus 4.8': '约91%', 'Gemini 3.1 Pro': '约89%' },
             { '对比维度': '代码能力（HumanEval）', 'GPT-5.6': '约92%', 'Claude Opus 4.8': '约94%', 'Gemini 3.1 Pro': '约88%' },
-            { '对比维度': '多模态', 'GPT-5.6': '文本+图像', 'Claude Opus 4.8': '文本+图像', 'Gemini 3.1 Pro': '文本、图像、视频、音频' },
-            { '对比维度': '速度', 'GPT-5.6': '快速', 'Claude Opus 4.8': '中等', 'Gemini 3.1 Pro': '快速' },
-            { '对比维度': 'API成本（输入/百万token）', 'GPT-5.6': '约$5', 'Claude Opus 4.8': '约$15', 'Gemini 3.1 Pro': '约$3.5' },
-            { '对比维度': '免费套餐', 'GPT-5.6': '✅ 有', 'Claude Opus 4.8': '✅ 有（受限）', 'Gemini 3.1 Pro': '✅ 有' },
-            { '对比维度': '深度思考模式', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 4.8': '内置', 'Gemini 3.1 Pro': 'Flash Thinking' },
+            { '对比维度': '多模态', 'GPT-5.6': '文本+图像', 'Claude Opus 5': '文本+图像', 'Gemini 3.1 Pro': '文本、图像、视频、音频' },
+            { '对比维度': '速度', 'GPT-5.6': '快速', 'Claude Opus 5': '中等', 'Gemini 3.1 Pro': '快速' },
+            { '对比维度': 'API成本（输入/百万token）', 'GPT-5.6': '约$5', 'Claude Opus 5': '约$15', 'Gemini 3.1 Pro': '约$3.5' },
+            { '对比维度': '免费套餐', 'GPT-5.6': '✅ 有', 'Claude Opus 5': '✅ 有（受限）', 'Gemini 3.1 Pro': '✅ 有' },
+            { '对比维度': '深度思考模式', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 5': '内置', 'Gemini 3.1 Pro': 'Flash Thinking' },
           ],
         },
         contentCreation: {
@@ -7453,7 +7453,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         dataAnalysis: {
           title: '数据分析与研究',
-          content: 'Claude Opus 4.8胜出——精度卓越，1M token上下文窗口支持长文档和数据集分析，推理严谨。对于超长文档（书籍、完整代码库），Gemini 3.1 Pro的2M上下文更为合适。',
+          content: 'Claude Opus 5胜出——精度卓越，1M token上下文窗口支持长文档和数据集分析，推理严谨。对于超长文档（书籍、完整代码库），Gemini 3.1 Pro的2M上下文更为合适。',
         },
         imageAnalysis: {
           title: '图像分析',
@@ -7465,20 +7465,20 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         summarization: {
           title: '文档摘要',
-          content: 'Claude Opus 4.8或Gemini 3.1 Pro——两者均拥有大型上下文窗口（分别为1M和2M token）。Claude Opus 4.8能生成结构更清晰、推理更明确的摘要。Gemini 3.1 Pro可处理篇幅最长的文档。',
+          content: 'Claude Opus 5或Gemini 3.1 Pro——两者均拥有大型上下文窗口（分别为1M和2M token）。Claude Opus 5能生成结构更清晰、推理更明确的摘要。Gemini 3.1 Pro可处理篇幅最长的文档。',
         },
         budgetConscious: {
           title: '注重成本的用户',
-          content: 'Gemini 3.1 Pro在API成本方面胜出（输入约$3.5/百万token）。三款模型均提供免费消费者套餐。API方面，Gemini最便宜，GPT-5.6居中，Claude Opus 4.8最贵——但对于精度要求高的任务，质量差异可以证明溢价的合理性。',
+          content: 'Gemini 3.1 Pro在API成本方面胜出（输入约$3.5/百万token）。三款模型均提供免费消费者套餐。API方面，Gemini最便宜，GPT-5.6居中，Claude Opus 5最贵——但对于精度要求高的任务，质量差异可以证明溢价的合理性。',
         },
         strategy: {
           title: '智慧策略：同时使用三款模型',
           content: [
             '专业AI用户不会只依赖一款模型。他们将相同的提示词发送给三款模型，选择最佳回答：',
             '1. GPT-5.6：快速头脑风暴和创意探索',
-            '2. Claude Opus 4.8：深度分析、推理验证、代码审查',
+            '2. Claude Opus 5：深度分析、推理验证、代码审查',
             '3. Gemini 3.1 Pro：实时信息、多模态任务、超长文档',
-            '这样您就能获得速度（GPT-5.6）、精度（Claude Opus 4.8）以及时效性+上下文（Gemini 3.1 Pro）。PromptQuorum自动化了这一流程：将同一优化提示词发送给三款模型，并排比较结果。',
+            '这样您就能获得速度（GPT-5.6）、精度（Claude Opus 5）以及时效性+上下文（Gemini 3.1 Pro）。PromptQuorum自动化了这一流程：将同一优化提示词发送给三款模型，并排比较结果。',
           ],
         },
         currentTrends: {
@@ -7486,7 +7486,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: ['三大前沿模型在基准性能上已大幅收敛——2023年存在的差距，如今在大多数标准基准测试中已缩小到个位数百分点。'],
           items: [
             '深度思考模式已成标配：三款均为复杂推理任务提供推理时计算扩展能力',
-            '多模态能力已是基本要求：GPT-5.6和Claude Opus 4.8均支持图像；Gemini 3.1 Pro在视频和音频方面领先',
+            '多模态能力已是基本要求：GPT-5.6和Claude Opus 5均支持图像；Gemini 3.1 Pro在视频和音频方面领先',
             '上下文窗口快速扩展：从4K（GPT-3）到2M（Gemini 3.1 Pro），不到三年实现跨越式增长',
             '开源模型正在缩小能力差距：LLaMA 3.1 70B和Qwen2.5在大多数基准测试上已达到GPT-4水平',
             'Tool Use和Function Calling已普及：三款均在生产环境中支持结构化输出、代码执行和外部API调用',
@@ -7507,11 +7507,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '不要局限于一款模型——用您的实际使用场景测试三款：',
             '1. 使用ChatGPT（GPT-5.6）免费套餐完成创意任务和头脑风暴',
-            '2. 尝试Claude Opus 4.8进行分析工作和代码审查',
+            '2. 尝试Claude Opus 5进行分析工作和代码审查',
             '3. 用Gemini 3.1 Pro实验图像分析和实时网络数据',
             '4. 将同一提示词发送给三款，比较回复结果',
             '5. 确定哪款模型在您特定任务类型上表现最佳',
-            'PromptQuorum支持将同一优化提示词同时发送给GPT-5.6、Claude Opus 4.8、Gemini 3.1 Pro及其他模型——然后比较哪款为您的任务提供了最佳结果。',
+            'PromptQuorum支持将同一优化提示词同时发送给GPT-5.6、Claude Opus 5、Gemini 3.1 Pro及其他模型——然后比较哪款为您的任务提供了最佳结果。',
           ],
         },
         tldr: {
@@ -7522,9 +7522,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Claude Opus 4.8：最适合推理（约91% MMLU-Pro）、代码（约94% HumanEval）、长篇分析。1M上下文。',
             'Gemini 3.1 Pro：最适合多模态（图像、视频、音频）。实时网络访问。最大上下文（2M）。API成本最低。',
             '三款均提供免费消费者套餐和约$20/月的Pro套餐。',
-            '推理能力：Claude Opus 4.8 > GPT-5.6 > Gemini 3.1 Pro。',
-            '速度：GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 4.8。',
-            'API成本：Gemini 3.1 Pro（约$3.5/M）< GPT-5.6（约$5/M）< Claude Opus 4.8（约$15/M）。',
+            '推理能力：Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro。',
+            '速度：GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 5。',
+            'API成本：Gemini 3.1 Pro（约$3.5/M）< GPT-5.6（约$5/M）< Claude Opus 5（约$15/M）。',
             '最佳实践：关键任务将同一提示词发送给三款——选择最佳回答。',
           ],
         },
@@ -7544,13 +7544,13 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         faqSection: {
           title: '常见问题',
           faqs: [
-            { q: '哪款AI模型最适合创意写作？', a: 'GPT-5.6（ChatGPT）在创意写作、头脑风暴和通用任务方面表现出色——速度快且易于使用。Claude Opus 4.8更擅长深度推理和创意内容的分析工作。' },
+            { q: '哪款AI模型最适合创意写作？', a: 'GPT-5.6（ChatGPT）在创意写作、头脑风暴和通用任务方面表现出色——速度快且易于使用。Claude Opus 5更擅长深度推理和创意内容的分析工作。' },
             { q: '哪款模型最适合编程？', a: 'Claude Opus 4.8在代码质量和调试方面领先，HumanEval得分约94%。GPT-5.6（约92%）速度更快。关键任务建议对比两者的代码建议。' },
-            { q: '2026年的价格对比如何？', a: 'GPT-5.6：输入约$5/百万token，输出约$15。Claude Opus 4.8：输入约$15，输出约$75。Gemini 3.1 Pro：输入约$3.5，输出约$10.5。三款均提供月费约$20的消费者套餐。请向各服务商确认最新价格。' },
-            { q: '哪款模型最擅长多模态任务？', a: 'Gemini 3.1 Pro在图像、视频、音频和文档理解方面最为出色。GPT-5.6支持文本和图像。Claude Opus 4.8支持文本和图像，但不支持视频。' },
+            { q: '2026年的价格对比如何？', a: 'GPT-5.6：输入约$5/百万token，输出约$15。Claude Opus 5：输入约$5，输出约$25。Gemini 3.1 Pro：输入约$3.5，输出约$10.5。三款均提供月费约$20的消费者套餐。请向各服务商确认最新价格。' },
+            { q: '哪款模型最擅长多模态任务？', a: 'Gemini 3.1 Pro在图像、视频、音频和文档理解方面最为出色。GPT-5.6支持文本和图像。Claude Opus 5支持文本和图像，但不支持视频。' },
             { q: '三款模型都有免费套餐吗？', a: '是的。ChatGPT、Claude.ai和Gemini均提供有每日使用限制的免费套餐。三者均提供月费约$20的Pro/Plus套餐，具有更高的使用限额。' },
             { q: 'GPT-4o与Claude Opus 4.8、Gemini 3.1 Pro相比如何？', a: 'GPT-4o是OpenAI在GPT-5.6取代其成为ChatGPT背后的模型之前的旗舰模型。据官方模型卡显示，它拥有128K token上下文窗口，MMLU得分约88.7%，HumanEval得分约90.2%。Claude Opus 4.8在推理（MMLU-Pro约91%，这是一项更难的基准测试）和编程（HumanEval约94%）方面均优于它，且拥有1M token上下文窗口。如果你现在正在使用ChatGPT，很可能用的是GPT-5.6而非GPT-4o——可在账户的模型选择菜单中确认。' },
-            { q: '可以在同一工作流中使用多个模型吗？', a: '可以。PromptQuorum支持将同一提示词同时发送给GPT-5.6、Claude Opus 4.8、Gemini 3.1 Pro及其他模型，然后并排比较结果。这是关键任务的推荐方式。' },
+            { q: '可以在同一工作流中使用多个模型吗？', a: '可以。PromptQuorum支持将同一提示词同时发送给GPT-5.6、Claude Opus 5、Gemini 3.1 Pro及其他模型，然后并排比较结果。这是关键任务的推荐方式。' },
             { q: '使用这些AI模型需要遵守中国数据安全法吗？', a: '是的。根据《数据安全法》（2021年）和《个人信息保护法》（PIPL），将重要数据发送至境外云服务须进行合规评估。对于涉及敏感数据的企业应用，建议使用Qwen2.5等本地化模型或境内服务器部署方案。' },
             { q: '本地推理如何满足企业合规要求？', a: '本地部署的开源模型（如LLaMA 3.1、Qwen2.5、Mistral）可完全满足数据不出境的合规要求，适用于金融、医疗、法律等敏感行业。数据全程在本地处理，无需向第三方云服务发送任何信息。' },
           ],
@@ -7560,7 +7560,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             '错误1：只选一款模型从不比较。每款模型都有独特优势。在确定使用前，务必用您的具体任务进行测试。',
             '错误2：认为最贵的模型就是最好的。Gemini 3.1 Pro是API成本最低的选项，且在多模态任务上胜出。应根据任务而非价格来匹配模型。',
-            '错误3：忽略上下文窗口限制。Gemini 3.1 Pro（2M token）和Claude Opus 4.8（1M token）可处理长文档。GPT-5.6（128K）可能会截断大型输入。',
+            '错误3：忽略上下文窗口限制。Gemini 3.1 Pro（2M token）和Claude Opus 5（1M token）可处理长文档。GPT-5.6（128K）可能会截断大型输入。',
             '错误4：不核查知识截止日期。接入网络的模型（Gemini 3.1 Pro通过Search、GPT-5.6通过浏览）拥有实时信息。基础API调用可能使用训练截止日期前的数据。',
             '错误5：对所有模型使用相同的提示词。每款模型对不同提示风格的响应效果不同。请灵活调整提示词——Claude受益于明确的逐步指示；Gemini受益于多模态上下文。',
           ],
@@ -7578,7 +7578,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '来源与参考文献',
           items: [
             'OpenAI GPT-5.6模型规格 — openai.com/models',
-            'Anthropic Claude Opus 4.8文档 — docs.anthropic.com',
+            'Anthropic Claude Opus 5文档 — docs.anthropic.com',
             'Google Gemini 3.1 Pro规格 — gemini.google.com',
             'LMSYS Chatbot Arena排行榜 — arena.lmsys.org',
             'Papers With Code — MMLU基准测试结果 — paperswithcode.com/sota/multi-task-language-understanding-on-mmlu',
@@ -7589,16 +7589,16 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     es: {
       category: 'Comparación de Modelos de IA',
       title: 'ChatGPT vs Claude vs Gemini: Comparación de Modelos de IA Lado a Lado en 2026',
-      intro: 'A partir de 2026: GPT-5.6, Claude Opus 4.8 y Gemini 3.1 Pro comparados en razonamiento, velocidad, ventana de contexto, precios y capacidades multimodales. Cuándo usar cada uno — y cuándo usar los tres.',
+      intro: 'A partir de 2026: GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro comparados en razonamiento, velocidad, ventana de contexto, precios y capacidades multimodales. Cuándo usar cada uno — y cuándo usar los tres.',
       publishDate: 'Publicado el 14 de marzo de 2026',
       readTime: '12 min de lectura',
-      seoTitle: 'GPT-5.6 vs Claude Opus 4.8 vs Gemini 3.1 Pro (2026)',
-      metaDescription: 'GPT-5.6, Claude Opus 4.8 y Gemini 3.1 Pro comparados: velocidad, razonamiento, precios y ventana de contexto. Qué modelo de IA elegir — y cuándo usar los tres.',
+      seoTitle: 'GPT-5.6 vs Claude Opus 5 vs Gemini 3.1 Pro (2026)',
+      metaDescription: 'GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro comparados: velocidad, razonamiento, precios y ventana de contexto. Qué modelo de IA elegir — y cuándo usar los tres.',
       heroImage: '/images/ai-model-comparison-comparisonTable-hero-es.webp',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-09-14',
       last_full_refresh: '2026-07-14',
-      current_models_mentioned: ['GPT-5.6', 'GPT-4o', 'Claude Opus 4.8', 'Gemini 3.1 Pro'],
+      current_models_mentioned: ['GPT-5.6', 'GPT-4o', 'Claude Opus 5', 'Gemini 3.1 Pro'],
       educationalLevel: 'Intermedio',
       faqSchema: {
         '@context': 'https://schema.org',
@@ -7610,7 +7610,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '¿Qué modelo de IA es mejor para escritura creativa?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6 (ChatGPT) destaca en escritura creativa, lluvia de ideas y tareas versátiles — rápido y accesible. Claude Opus 4.8 es mejor para razonamiento más profundo y análisis crítico de contenido creativo.',
+              text: 'GPT-5.6 (ChatGPT) destaca en escritura creativa, lluvia de ideas y tareas versátiles — rápido y accesible. Claude Opus 5 es mejor para razonamiento más profundo y análisis crítico de contenido creativo.',
             },
           },
           {
@@ -7626,7 +7626,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '¿Cuál es la comparación de costos para 2026?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6: ~$5/1M tokens entrada, ~$15/1M salida. Claude Opus 4.8: ~$15/1M entrada, ~$75/1M salida. Gemini 3.1 Pro: ~$3.5/1M entrada, ~$10.5/1M salida. Los tres ofrecen planes de consumidor a ~$20/mes. Verifica los precios actuales con cada proveedor.',
+              text: 'GPT-5.6: ~$5/1M tokens entrada, ~$15/1M salida. Claude Opus 5: ~$5/1M entrada, ~$25/1M salida. Gemini 3.1 Pro: ~$3.5/1M entrada, ~$10.5/1M salida. Los tres ofrecen planes de consumidor a ~$20/mes. Verifica los precios actuales con cada proveedor.',
             },
           },
           {
@@ -7634,7 +7634,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '¿Qué modelo maneja mejor tareas multimodales?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemini 3.1 Pro es más fuerte en imágenes, video, audio y comprensión de documentos. GPT-5.6 admite texto e imágenes. Claude Opus 4.8 admite texto e imágenes, pero no video.',
+              text: 'Gemini 3.1 Pro es más fuerte en imágenes, video, audio y comprensión de documentos. GPT-5.6 admite texto e imágenes. Claude Opus 5 admite texto e imágenes, pero no video.',
             },
           },
           {
@@ -7642,7 +7642,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '¿Cuál es la ventana de contexto más grande?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemini 3.1 Pro tiene la más grande con 2M tokens — cabe una base de código completa o un libro. Claude Opus 4.8 tiene 1M tokens. GPT-5.6 tiene 128K tokens. Para análisis de documentos largos, Claude o Gemini es la opción correcta.',
+              text: 'Gemini 3.1 Pro tiene la más grande con 2M tokens — cabe una base de código completa o un libro. Claude Opus 5 tiene 1M tokens. GPT-5.6 tiene 128K tokens. Para análisis de documentos largos, Claude o Gemini es la opción correcta.',
             },
           },
           {
@@ -7655,7 +7655,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'Question',
-            name: '¿Cómo se compara GPT-4o con Claude Opus 4.8 y Gemini 3.1 Pro?',
+            name: '¿Cómo se compara GPT-4o con Claude Opus 5 y Gemini 3.1 Pro?',
             acceptedAnswer: {
               '@type': 'Answer',
               text: 'GPT-4o fue el modelo insignia de OpenAI antes de que GPT-5.6 lo sustituyera como el modelo detrás de ChatGPT. Según su model card oficial, tiene una ventana de contexto de 128K tokens, ~88.7% en MMLU y ~90.2% en HumanEval. Claude Opus 4.8 lo supera en razonamiento (~91% en MMLU-Pro, un benchmark más exigente) y en código (~94% HumanEval), con una ventana de contexto de 1M tokens. Si usas ChatGPT hoy, lo más probable es que estés usando GPT-5.6, no GPT-4o — verifica el selector de modelo en tu cuenta para confirmarlo.',
@@ -7666,7 +7666,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '¿Cuál es el mejor modelo para análisis de datos grandes?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Claude Opus 4.8 o Gemini 3.1 Pro — ambos tienen ventanas de contexto grandes (1M y 2M tokens respectivamente). Claude Opus 4.8 genera resúmenes más estructurados con razonamiento transparente. Gemini 3.1 Pro procesa documentos más largos.',
+              text: 'Claude Opus 5 o Gemini 3.1 Pro — ambos tienen ventanas de contexto grandes (1M y 2M tokens respectivamente). Claude Opus 5 genera resúmenes más estructurados con razonamiento transparente. Gemini 3.1 Pro procesa documentos más largos.',
             },
           },
           {
@@ -7674,7 +7674,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '¿Puedo usar varios modelos en el mismo flujo de trabajo?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Sí. PromptQuorum permite enviar el mismo prompt simultáneamente a GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro y más modelos — y comparar los resultados lado a lado. Este enfoque se recomienda para trabajo crítico.',
+              text: 'Sí. PromptQuorum permite enviar el mismo prompt simultáneamente a GPT-5.6, Claude Opus 5, Gemini 3.1 Pro y más modelos — y comparar los resultados lado a lado. Este enfoque se recomienda para trabajo crítico.',
             },
           },
           {
@@ -7682,7 +7682,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '¿Cuál es la diferencia entre estos modelos en velocidad de respuesta?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6 y Gemini 3.1 Pro son más rápidos. Claude Opus 4.8 es más lento pero proporciona razonamiento más profundo. Para tareas que priorizan velocidad, elige GPT-5.6. Para precisión, elige Claude.',
+              text: 'GPT-5.6 y Gemini 3.1 Pro son más rápidos. Claude Opus 5 es más lento pero proporciona razonamiento más profundo. Para tareas que priorizan velocidad, elige GPT-5.6. Para precisión, elige Claude.',
             },
           },
           {
@@ -7713,7 +7713,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'HowToStep',
-            name: 'Prueba con Claude Opus 4.8',
+            name: 'Prueba con Claude Opus 5',
             text: 'Envía el mismo prompt a Claude. Compara la profundidad del razonamiento, precisión y transparencia del razonamiento.',
           },
           {
@@ -7747,7 +7747,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Claude Opus 4.8 (Anthropic)',
+            name: 'Claude Opus 5 (Anthropic)',
             description: 'Mejor para razonamiento complejo, calidad de código, análisis de documentos largos. Ventana de contexto de 1M tokens. Puntuación HumanEval más alta (~94%). Nivel gratuito disponible.',
           },
           {
@@ -7766,19 +7766,19 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 5,
             name: 'Velocidad',
-            description: '1. GPT-5.6 (más rápido). 2. Gemini 3.1 Pro (rápido). 3. Claude Opus 4.8 (moderado — más exhaustivo).',
+            description: '1. GPT-5.6 (más rápido). 2. Gemini 3.1 Pro (rápido). 3. Claude Opus 5 (moderado — más exhaustivo).',
           },
           {
             '@type': 'ListItem',
             position: 6,
             name: 'Costo de API (entrada por 1M tokens)',
-            description: 'Gemini 3.1 Pro (~$3.5) < GPT-5.6 (~$5) < Claude Opus 4.8 (~$15). Verifica precios actuales con cada proveedor.',
+            description: 'Gemini 3.1 Pro (~$3.5) < GPT-5.6 (~$5) < Claude Opus 5 (~$15). Verifica precios actuales con cada proveedor.',
           },
           {
             '@type': 'ListItem',
             position: 7,
             name: 'Capacidad Multimodal',
-            description: 'Gemini 3.1 Pro (texto, imágenes, video, audio) > GPT-5.6 (texto, imágenes) > Claude Opus 4.8 (texto, imágenes).',
+            description: 'Gemini 3.1 Pro (texto, imágenes, video, audio) > GPT-5.6 (texto, imágenes) > Claude Opus 5 (texto, imágenes).',
           },
           {
             '@type': 'ListItem',
@@ -7792,8 +7792,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         why: {
           title: '¿Por qué Comparar Modelos de IA?',
           content: [
-            '**Resumen ejecutivo:** GPT-5.6 lidera en velocidad y salida creativa. Claude Opus 4.8 lidera en precisión de razonamiento y análisis de documentos largos (ventana de contexto de 1M tokens). Gemini 3.1 Pro lidera en tareas multimodales y tiene la ventana de contexto más grande (2M tokens). Para trabajo crítico, ejecuta el mismo prompt en los tres — la precisión de un solo modelo deja exactitud en la mesa.',
-            'Diferentes modelos de IA destacan en diferentes tareas. ChatGPT (GPT-5.6) es el más rápido y versátil. Claude (Opus 4.8) obtiene las puntuaciones más altas en razonamiento y benchmarks de código. Gemini (3.1 Pro) es el más fuerte en tareas multimodales y acceso web en tiempo real. Saber qué modelo se ajusta a tu tarea significa mejores resultados y costos más bajos.',
+            '**Resumen ejecutivo:** GPT-5.6 lidera en velocidad y salida creativa. Claude Opus 5 lidera en precisión de razonamiento y análisis de documentos largos (ventana de contexto de 1M tokens). Gemini 3.1 Pro lidera en tareas multimodales y tiene la ventana de contexto más grande (2M tokens). Para trabajo crítico, ejecuta el mismo prompt en los tres — la precisión de un solo modelo deja exactitud en la mesa.',
+            'Diferentes modelos de IA destacan en diferentes tareas. ChatGPT (GPT-5.6) es el más rápido y versátil. Claude (Opus 5) obtiene las puntuaciones más altas en razonamiento y benchmarks de código. Gemini (3.1 Pro) es el más fuerte en tareas multimodales y acceso web en tiempo real. Saber qué modelo se ajusta a tu tarea significa mejores resultados y costos más bajos.',
             'Esta guía compara los tres modelos fronterizos a partir de 2026: fortalezas, ventanas de contexto, precios y las tareas donde cada uno gana.',
             'Para un enfoque sistemático de selección de modelos — incluyendo cuándo elegir código abierto versus comercial — ver [cómo elegir el modelo de IA adecuado: GPT, Claude o Gemini](/es/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
@@ -7845,20 +7845,20 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         comparison: {
-          title: 'Comparación Lado a Lado: GPT-5.6 vs Claude Opus 4.8 vs Gemini 3.1 Pro',
+          title: 'Comparación Lado a Lado: GPT-5.6 vs Claude Opus 5 vs Gemini 3.1 Pro',
           content: '',
           rows: [
-            { 'Factor': 'Interfaz', 'ChatGPT (GPT-5.6)': 'Web + app móvil, navegación web integrada', 'Claude (Opus 4.8)': 'Web, aplicación de escritorio, API', 'Gemini (3.1 Pro)': 'Web + app móvil, búsqueda web integrada' },
-            { 'Factor': 'Ventana de Contexto', 'ChatGPT (GPT-5.6)': '128K tokens', 'Claude (Opus 4.8)': '1M tokens', 'Gemini (3.1 Pro)': '2M tokens' },
+            { 'Factor': 'Interfaz', 'ChatGPT (GPT-5.6)': 'Web + app móvil, navegación web integrada', 'Claude (Opus 5)': 'Web, aplicación de escritorio, API', 'Gemini (3.1 Pro)': 'Web + app móvil, búsqueda web integrada' },
+            { 'Factor': 'Ventana de Contexto', 'ChatGPT (GPT-5.6)': '128K tokens', 'Claude (Opus 5)': '1M tokens', 'Gemini (3.1 Pro)': '2M tokens' },
             { 'Factor': 'Razonamiento (MMLU-Pro)', 'ChatGPT (GPT-5.6)': '~90%', 'Claude (Opus 4.8)': '~91%', 'Gemini (3.1 Pro)': '~89%' },
             { 'Factor': 'Código (HumanEval)', 'ChatGPT (GPT-5.6)': '~92%', 'Claude (Opus 4.8)': '~94%', 'Gemini (3.1 Pro)': '~88%' },
-            { 'Factor': 'Multimodal', 'ChatGPT (GPT-5.6)': 'Texto + imágenes', 'Claude (Opus 4.8)': 'Texto + imágenes', 'Gemini (3.1 Pro)': 'Texto, imágenes, video, audio' },
-            { 'Factor': 'Velocidad', 'ChatGPT (GPT-5.6)': 'Rápido', 'Claude (Opus 4.8)': 'Moderado', 'Gemini (3.1 Pro)': 'Rápido' },
-            { 'Factor': 'Costo de API (por 1M tokens entrada)', 'ChatGPT (GPT-5.6)': '~$5', 'Claude (Opus 4.8)': '~$15', 'Gemini (3.1 Pro)': '~$3.50' },
-            { 'Factor': 'Nivel Gratuito', 'ChatGPT (GPT-5.6)': '✅ Sí', 'Claude (Opus 4.8)': '✅ Sí (limitado)', 'Gemini (3.1 Pro)': '✅ Sí' },
-            { 'Factor': 'Razonamiento Extendido', 'ChatGPT (GPT-5.6)': 'o3/o4-mini', 'Claude (Opus 4.8)': 'Integrado', 'Gemini (3.1 Pro)': 'Pensamiento Flash' },
+            { 'Factor': 'Multimodal', 'ChatGPT (GPT-5.6)': 'Texto + imágenes', 'Claude (Opus 5)': 'Texto + imágenes', 'Gemini (3.1 Pro)': 'Texto, imágenes, video, audio' },
+            { 'Factor': 'Velocidad', 'ChatGPT (GPT-5.6)': 'Rápido', 'Claude (Opus 5)': 'Moderado', 'Gemini (3.1 Pro)': 'Rápido' },
+            { 'Factor': 'Costo de API (por 1M tokens entrada)', 'ChatGPT (GPT-5.6)': '~$5', 'Claude (Opus 5)': '~$15', 'Gemini (3.1 Pro)': '~$3.50' },
+            { 'Factor': 'Nivel Gratuito', 'ChatGPT (GPT-5.6)': '✅ Sí', 'Claude (Opus 5)': '✅ Sí (limitado)', 'Gemini (3.1 Pro)': '✅ Sí' },
+            { 'Factor': 'Razonamiento Extendido', 'ChatGPT (GPT-5.6)': 'o3/o4-mini', 'Claude (Opus 5)': 'Integrado', 'Gemini (3.1 Pro)': 'Pensamiento Flash' },
           ],
-          columns: ['Factor', 'ChatGPT (GPT-5.6)', 'Claude (Opus 4.8)', 'Gemini (3.1 Pro)'],
+          columns: ['Factor', 'ChatGPT (GPT-5.6)', 'Claude (Opus 5)', 'Gemini (3.1 Pro)'],
         },
         contentCreation: {
           title: 'Creación de Contenido',
@@ -7870,7 +7870,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         dataAnalysis: {
           title: 'Análisis de Datos y Investigación',
-          content: 'Claude Opus 4.8 gana — excelente precisión, ventana de contexto de 1M tokens para analizar documentos largos y conjuntos de datos, razonamiento riguroso. Para documentos muy largos (libros, bases de código completas), la ventana de contexto de 2M tokens de Gemini 3.1 Pro es la mejor opción.',
+          content: 'Claude Opus 5 gana — excelente precisión, ventana de contexto de 1M tokens para analizar documentos largos y conjuntos de datos, razonamiento riguroso. Para documentos muy largos (libros, bases de código completas), la ventana de contexto de 2M tokens de Gemini 3.1 Pro es la mejor opción.',
         },
         imageAnalysis: {
           title: 'Análisis de Imágenes',
@@ -7882,20 +7882,20 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         summarization: {
           title: 'Resumen de Documentos',
-          content: 'Claude Opus 4.8 o Gemini 3.1 Pro — ambos tienen ventanas de contexto grandes (1M y 2M tokens respectivamente). Claude Opus 4.8 crea resúmenes más estructurados con razonamiento claro. Gemini 3.1 Pro procesa los documentos más largos.',
+          content: 'Claude Opus 5 o Gemini 3.1 Pro — ambos tienen ventanas de contexto grandes (1M y 2M tokens respectivamente). Claude Opus 5 crea resúmenes más estructurados con razonamiento claro. Gemini 3.1 Pro procesa los documentos más largos.',
         },
         budgetConscious: {
           title: 'Usuarios Conscientes del Presupuesto',
-          content: 'Gemini 3.1 Pro gana en costos de API (~$3.50/1M tokens entrada). Los tres modelos ofrecen niveles gratuitos de consumidor. En API, Gemini es más barato, GPT-5.6 está en el medio, Claude Opus 4.8 es el más caro — pero las diferencias de calidad justifican la prima para tareas críticas en precisión.',
+          content: 'Gemini 3.1 Pro gana en costos de API (~$3.50/1M tokens entrada). Los tres modelos ofrecen niveles gratuitos de consumidor. En API, Gemini es más barato, GPT-5.6 está en el medio, Claude Opus 5 es el más caro — pero las diferencias de calidad justifican la prima para tareas críticas en precisión.',
         },
         strategy: {
           title: 'La Estrategia Inteligente: Usa los Tres',
           content: [
             'Los usuarios profesionales de IA no se atienen a un solo modelo. Envían el mismo prompt a los tres y eligen la mejor respuesta:',
             '1. GPT-5.6: Lluvia de ideas rápida y exploración creativa',
-            '2. Claude Opus 4.8: Análisis profundo, validación del razonamiento, revisión de código',
+            '2. Claude Opus 5: Análisis profundo, validación del razonamiento, revisión de código',
             '3. Gemini 3.1 Pro: Información en tiempo real, tareas multimodales, documentos muy largos',
-            'Esto te da velocidad (GPT-5.6), precisión (Claude Opus 4.8) y actualidad + contexto (Gemini 3.1 Pro). PromptQuorum automatiza este proceso: envía el mismo prompt optimizado a los tres modelos y compara los resultados lado a lado.',
+            'Esto te da velocidad (GPT-5.6), precisión (Claude Opus 5) y actualidad + contexto (Gemini 3.1 Pro). PromptQuorum automatiza este proceso: envía el mismo prompt optimizado a los tres modelos y compara los resultados lado a lado.',
           ],
         },
         currentTrends: {
@@ -7903,7 +7903,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: ['Los tres modelos fronterizos han convergido significativamente en rendimiento de benchmark — la brecha que existía en 2023 ahora se mide en puntos porcentuales de un solo dígito en la mayoría de benchmarks estándar.'],
           items: [
             'Los modos de razonamiento extendido son estándar: Los tres ofrecen escalado de cómputo en tiempo de inferencia para tareas complejas',
-            'Las capacidades multimodales son básicas: GPT-5.6 y Claude Opus 4.8 admiten imágenes; Gemini 3.1 Pro lidera en video y audio',
+            'Las capacidades multimodales son básicas: GPT-5.6 y Claude Opus 5 admiten imágenes; Gemini 3.1 Pro lidera en video y audio',
             'Las ventanas de contexto crecen rápidamente: De 4K (GPT-3) a 2M (Gemini 3.1 Pro) en menos de tres años — el contexto ya no es el cuello de botella',
             'Los modelos de código abierto cierran la brecha de calidad: LLaMA 3.1 70B y Qwen2.5 alcanzan el nivel de GPT-4 en la mayoría de benchmarks',
             'El uso de herramientas y llamadas de función son universales: Los tres modelos admiten salidas estructuradas, ejecución de código y llamadas a API externas en producción',
@@ -7924,11 +7924,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'No te atengasas a un solo modelo — prueba los tres con tus casos de uso reales:',
             '1. Usa el nivel gratuito de ChatGPT (GPT-5.6) para tareas creativas y lluvia de ideas',
-            '2. Prueba Claude Opus 4.8 para trabajo analítico y revisión de código',
+            '2. Prueba Claude Opus 5 para trabajo analítico y revisión de código',
             '3. Experimenta con Gemini 3.1 Pro para análisis de imágenes y datos web en tiempo real',
             '4. Envía el mismo prompt a los tres y compara respuestas',
             '5. Identifica qué modelo da los mejores resultados para tu tipo de tarea específica',
-            'PromptQuorum permite enviar el mismo prompt optimizado simultáneamente a GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro y más modelos — y comparar directamente qué modelo proporciona los mejores resultados para tu tarea.',
+            'PromptQuorum permite enviar el mismo prompt optimizado simultáneamente a GPT-5.6, Claude Opus 5, Gemini 3.1 Pro y más modelos — y comparar directamente qué modelo proporciona los mejores resultados para tu tarea.',
           ],
         },
         tldr: {
@@ -7939,25 +7939,25 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Claude Opus 4.8: Mejor razonamiento (~91% MMLU-Pro), código (~94% HumanEval), análisis de forma larga. Contexto de 1M.',
             'Gemini 3.1 Pro: Mejor multimodal (imágenes, video, audio). Acceso web en tiempo real. Contexto más grande (2M tokens). Costos de API más bajos.',
             'Los tres ofrecen niveles gratuitos de consumidor y planes Pro a ~$20/mes.',
-            'Razonamiento: Claude Opus 4.8 > GPT-5.6 > Gemini 3.1 Pro.',
-            'Velocidad: GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 4.8.',
-            'Costo de API: Gemini 3.1 Pro (~$3.50/1M) < GPT-5.6 (~$5/1M) < Claude Opus 4.8 (~$15/1M).',
+            'Razonamiento: Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro.',
+            'Velocidad: GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 5.',
+            'Costo de API: Gemini 3.1 Pro (~$3.50/1M) < GPT-5.6 (~$5/1M) < Claude Opus 5 (~$5/1M).',
             'Mejor práctica: Para trabajo crítico, envía el mismo prompt a los tres — elige la mejor respuesta.',
           ],
         },
         faqSection: {
           title: 'Preguntas Frecuentes',
           faqs: [
-            { q: '¿Qué modelo de IA es mejor para escritura creativa?', a: 'GPT-5.6 (ChatGPT) destaca en escritura creativa, lluvia de ideas y tareas versátiles — rápido y accesible. Claude Opus 4.8 es mejor para razonamiento más profundo y análisis crítico de contenido creativo.' },
+            { q: '¿Qué modelo de IA es mejor para escritura creativa?', a: 'GPT-5.6 (ChatGPT) destaca en escritura creativa, lluvia de ideas y tareas versátiles — rápido y accesible. Claude Opus 5 es mejor para razonamiento más profundo y análisis crítico de contenido creativo.' },
             { q: '¿Qué modelo es mejor para programación?', a: 'Claude Opus 4.8 lidera en calidad de código y depuración, con ~94% en HumanEval. GPT-5.6 (~92%) es más rápido. Para trabajo crítico, compara las sugerencias de código de ambos.' },
-            { q: '¿Cuál es la comparación de costos para 2026?', a: 'GPT-5.6: ~$5/1M tokens entrada, ~$15/1M salida. Claude Opus 4.8: ~$15/1M entrada, ~$75/1M salida. Gemini 3.1 Pro: ~$3.5/1M entrada, ~$10.5/1M salida. Los tres ofrecen planes de consumidor a ~$20/mes. Verifica los precios actuales con cada proveedor.' },
-            { q: '¿Qué modelo maneja mejor tareas multimodales?', a: 'Gemini 3.1 Pro es más fuerte en imágenes, video, audio y comprensión de documentos. GPT-5.6 admite texto e imágenes. Claude Opus 4.8 admite texto e imágenes, pero no video.' },
-            { q: '¿Cuál es la ventana de contexto más grande?', a: 'Gemini 3.1 Pro tiene la más grande con 2M tokens — cabe una base de código completa o un libro. Claude Opus 4.8 tiene 1M tokens. GPT-5.6 tiene 128K tokens. Para análisis de documentos largos, Claude o Gemini es la opción correcta.' },
+            { q: '¿Cuál es la comparación de costos para 2026?', a: 'GPT-5.6: ~$5/1M tokens entrada, ~$15/1M salida. Claude Opus 5: ~$5/1M entrada, ~$25/1M salida. Gemini 3.1 Pro: ~$3.5/1M entrada, ~$10.5/1M salida. Los tres ofrecen planes de consumidor a ~$20/mes. Verifica los precios actuales con cada proveedor.' },
+            { q: '¿Qué modelo maneja mejor tareas multimodales?', a: 'Gemini 3.1 Pro es más fuerte en imágenes, video, audio y comprensión de documentos. GPT-5.6 admite texto e imágenes. Claude Opus 5 admite texto e imágenes, pero no video.' },
+            { q: '¿Cuál es la ventana de contexto más grande?', a: 'Gemini 3.1 Pro tiene la más grande con 2M tokens — cabe una base de código completa o un libro. Claude Opus 5 tiene 1M tokens. GPT-5.6 tiene 128K tokens. Para análisis de documentos largos, Claude o Gemini es la opción correcta.' },
             { q: '¿Los tres modelos tienen niveles gratuitos?', a: 'Sí. ChatGPT, Claude.ai y Gemini ofrecen niveles gratuitos con límites de uso diario. Los tres ofrecen planes Pro/Plus a ~$20/mes con límites más altos. El acceso a API es de pago por token para los tres.' },
             { q: '¿Cómo se compara GPT-4o con Claude Opus 4.8 y Gemini 3.1 Pro?', a: 'GPT-4o fue el modelo insignia de OpenAI antes de que GPT-5.6 lo sustituyera como el modelo detrás de ChatGPT. Según su model card oficial, tiene una ventana de contexto de 128K tokens, ~88.7% en MMLU y ~90.2% en HumanEval. Claude Opus 4.8 lo supera en razonamiento (~91% en MMLU-Pro, un benchmark más exigente) y en código (~94% HumanEval), con una ventana de contexto de 1M tokens. Si usas ChatGPT hoy, lo más probable es que estés usando GPT-5.6, no GPT-4o — verifica el selector de modelo en tu cuenta para confirmarlo.' },
-            { q: '¿Cuál es el mejor modelo para análisis de datos grandes?', a: 'Claude Opus 4.8 o Gemini 3.1 Pro — ambos tienen ventanas de contexto grandes (1M y 2M tokens respectivamente). Claude Opus 4.8 genera resúmenes más estructurados con razonamiento transparente. Gemini 3.1 Pro procesa documentos más largos.' },
-            { q: '¿Puedo usar varios modelos en el mismo flujo de trabajo?', a: 'Sí. PromptQuorum permite enviar el mismo prompt simultáneamente a GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro y más modelos — y comparar los resultados lado a lado. Este enfoque se recomienda para trabajo crítico.' },
-            { q: '¿Cuál es la diferencia entre estos modelos en velocidad de respuesta?', a: 'GPT-5.6 y Gemini 3.1 Pro son más rápidos. Claude Opus 4.8 es más lento pero proporciona razonamiento más profundo. Para tareas que priorizan velocidad, elige GPT-5.6. Para precisión, elige Claude.' },
+            { q: '¿Cuál es el mejor modelo para análisis de datos grandes?', a: 'Claude Opus 5 o Gemini 3.1 Pro — ambos tienen ventanas de contexto grandes (1M y 2M tokens respectivamente). Claude Opus 5 genera resúmenes más estructurados con razonamiento transparente. Gemini 3.1 Pro procesa documentos más largos.' },
+            { q: '¿Puedo usar varios modelos en el mismo flujo de trabajo?', a: 'Sí. PromptQuorum permite enviar el mismo prompt simultáneamente a GPT-5.6, Claude Opus 5, Gemini 3.1 Pro y más modelos — y comparar los resultados lado a lado. Este enfoque se recomienda para trabajo crítico.' },
+            { q: '¿Cuál es la diferencia entre estos modelos en velocidad de respuesta?', a: 'GPT-5.6 y Gemini 3.1 Pro son más rápidos. Claude Opus 5 es más lento pero proporciona razonamiento más profundo. Para tareas que priorizan velocidad, elige GPT-5.6. Para precisión, elige Claude.' },
             { q: '¿Cuál es la mejor práctica al comparar modelos?', a: 'Envía el mismo prompt a los tres modelos y compara las respuestas. Busca donde están de acuerdo (confiable) y donde divergen (incierto). Este enfoque de múltiples modelos es más robusto que confiar en un solo modelo.' },
           ],
         },
@@ -7966,7 +7966,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'Error 1: Atarse a un solo modelo y nunca comparar. Cada modelo tiene sus propias fortalezas. Siempre prueba con tu tarea específica antes de comprometerse.',
             'Error 2: Asumir que el modelo más caro es el mejor. Gemini 3.1 Pro es la opción más barata de API y gana en tareas multimodales. Ajusta el modelo a la tarea — no al precio.',
-            'Error 3: Ignorar los límites de la ventana de contexto. Gemini 3.1 Pro (2M tokens) y Claude Opus 4.8 (1M tokens) procesan documentos largos. GPT-5.6 (128K) puede truncar entradas grandes.',
+            'Error 3: Ignorar los límites de la ventana de contexto. Gemini 3.1 Pro (2M tokens) y Claude Opus 5 (1M tokens) procesan documentos largos. GPT-5.6 (128K) puede truncar entradas grandes.',
             'Error 4: No verificar la fecha límite del conocimiento. Los modelos con capacidad web (Gemini 3.1 Pro con Búsqueda, GPT-5.6 con navegación) tienen información actual. Las llamadas a API básicas pueden usar el corte del entrenamiento.',
             'Error 5: Usar el mismo prompt para todos los modelos. Cada modelo responde mejor a diferentes estilos de prompt. Ajusta tus prompts — Claude se beneficia de instrucciones explícitas paso a paso; Gemini del contexto multimodal.',
           ],
@@ -7984,7 +7984,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Fuentes y Citas',
           items: [
             'Especificaciones del Modelo OpenAI GPT-5.6 — openai.com/models',
-            'Documentación de Anthropic Claude Opus 4.8 — docs.anthropic.com',
+            'Documentación de Anthropic Claude Opus 5 — docs.anthropic.com',
             'Especificaciones de Google Gemini 3.1 Pro — gemini.google.com',
             'Tablero de Líderes de LMSYS Chatbot Arena — arena.lmsys.org',
             'Papers With Code — Resultados de Benchmarks MMLU — paperswithcode.com/sota/multi-task-language-understanding-on-mmlu',
@@ -7995,15 +7995,15 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     pt: {
       category: 'Comparação de Modelos de IA',
       title: 'ChatGPT vs Claude vs Gemini: Compare Modelos de IA Lado a Lado em 2026',
-      intro: 'A partir de 2026: GPT-5.6, Claude Opus 4.8 e Gemini 3.1 Pro comparados em raciocínio, velocidade, janela de contexto, preços e capacidades multimodais. Quando usar cada um — e quando usar os três.',
+      intro: 'A partir de 2026: GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro comparados em raciocínio, velocidade, janela de contexto, preços e capacidades multimodais. Quando usar cada um — e quando usar os três.',
       publishDate: 'Publicado em 14 de março de 2026',
       readTime: '12 min de leitura',
-      seoTitle: 'GPT-5.6 vs Claude Opus 4.8 vs Gemini 3.1 Pro (2026)',
-      metaDescription: 'GPT-5.6, Claude Opus 4.8 e Gemini 3.1 Pro comparados em velocidade, raciocínio, preços e janela de contexto. Qual modelo de IA usar — e quando usar os três.',
+      seoTitle: 'GPT-5.6 vs Claude Opus 5 vs Gemini 3.1 Pro (2026)',
+      metaDescription: 'GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro comparados em velocidade, raciocínio, preços e janela de contexto. Qual modelo de IA usar — e quando usar os três.',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-09-14',
       last_full_refresh: '2026-07-14',
-      current_models_mentioned: ['GPT-5.6', 'GPT-4o', 'Claude Opus 4.8', 'Gemini 3.1 Pro'],
+      current_models_mentioned: ['GPT-5.6', 'GPT-4o', 'Claude Opus 5', 'Gemini 3.1 Pro'],
       educationalLevel: 'Intermediate',
       faqSchema: {
         '@context': 'https://schema.org',
@@ -8015,7 +8015,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Qual modelo de IA é melhor para escrita criativa?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6 (ChatGPT) se destaca em escrita criativa, brainstorming e versatilidade geral — rápido e acessível. Claude Opus 4.8 é melhor para raciocínio mais profundo e análise de trabalho criativo.',
+              text: 'GPT-5.6 (ChatGPT) se destaca em escrita criativa, brainstorming e versatilidade geral — rápido e acessível. Claude Opus 5 é melhor para raciocínio mais profundo e análise de trabalho criativo.',
             },
           },
           {
@@ -8031,7 +8031,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Qual é a comparação de custos para 2026?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6: ~$5/1M tokens de entrada, ~$15/1M saída. Claude Opus 4.8: ~$15/1M entrada, ~$75/1M saída. Gemini 3.1 Pro: ~$3,50/1M entrada, ~$10,50/1M saída. Os três oferecem planos para consumidores por ~$20/mês. Verifique os preços atuais com cada provedor.',
+              text: 'GPT-5.6: ~$5/1M tokens de entrada, ~$15/1M saída. Claude Opus 5: ~$5/1M entrada, ~$25/1M saída. Gemini 3.1 Pro: ~$3,50/1M entrada, ~$10,50/1M saída. Os três oferecem planos para consumidores por ~$20/mês. Verifique os preços atuais com cada provedor.',
             },
           },
           {
@@ -8039,7 +8039,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Qual modelo lida melhor com tarefas multimodais?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemini 3.1 Pro é o mais forte para imagens, vídeo, áudio e compreensão de documentos. GPT-5.6 suporta texto e imagens. Claude Opus 4.8 suporta texto e imagens, mas não vídeo.',
+              text: 'Gemini 3.1 Pro é o mais forte para imagens, vídeo, áudio e compreensão de documentos. GPT-5.6 suporta texto e imagens. Claude Opus 5 suporta texto e imagens, mas não vídeo.',
             },
           },
           {
@@ -8047,7 +8047,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Qual modelo tem a maior janela de contexto?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemini 3.1 Pro tem a maior com 2M tokens — cabe uma base de código inteira ou um livro. Claude Opus 4.8 tem 1M tokens. GPT-5.6 tem 128K tokens. Para análise de documentos longos, Claude ou Gemini é a escolha certa.',
+              text: 'Gemini 3.1 Pro tem a maior com 2M tokens — cabe uma base de código inteira ou um livro. Claude Opus 5 tem 1M tokens. GPT-5.6 tem 128K tokens. Para análise de documentos longos, Claude ou Gemini é a escolha certa.',
             },
           },
           {
@@ -8060,7 +8060,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'Question',
-            name: 'Como o GPT-4o se compara ao Claude Opus 4.8 e ao Gemini 3.1 Pro?',
+            name: 'Como o GPT-4o se compara ao Claude Opus 5 e ao Gemini 3.1 Pro?',
             acceptedAnswer: {
               '@type': 'Answer',
               text: 'O GPT-4o era o modelo principal da OpenAI antes de o GPT-5.6 substituí-lo como o modelo por trás do ChatGPT. Segundo o model card oficial, ele tem uma janela de contexto de 128K tokens, ~88.7% no MMLU e ~90.2% no HumanEval. O Claude Opus 4.8 supera esses números em raciocínio (~91% no MMLU-Pro, um benchmark mais exigente) e em código (~94% no HumanEval), com uma janela de contexto de 1M tokens. Se você usa o ChatGPT hoje, provavelmente está usando o GPT-5.6, não o GPT-4o — confira o seletor de modelo na sua conta para confirmar.',
@@ -8071,7 +8071,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Posso usar múltiplos modelos no mesmo fluxo de trabalho?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Sim. O PromptQuorum permite enviar o mesmo prompt simultaneamente para GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro e outros modelos — e comparar os resultados lado a lado. Essa abordagem é recomendada para trabalho crítico.',
+              text: 'Sim. O PromptQuorum permite enviar o mesmo prompt simultaneamente para GPT-5.6, Claude Opus 5, Gemini 3.1 Pro e outros modelos — e comparar os resultados lado a lado. Essa abordagem é recomendada para trabalho crítico.',
             },
           },
         ],
@@ -8094,7 +8094,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'HowToStep',
-            name: 'Testar com Claude Opus 4.8',
+            name: 'Testar com Claude Opus 5',
             text: 'Envie o mesmo prompt ao Claude. Compare a profundidade do raciocínio, a precisão e a transparência do raciocínio.',
           },
           {
@@ -8123,7 +8123,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Claude Opus 4.8 (Anthropic)',
+            name: 'Claude Opus 5 (Anthropic)',
             description: 'Ideal para raciocínio complexo, qualidade de código e análise de textos longos. Janela de contexto de 1M tokens.',
           },
           {
@@ -8144,8 +8144,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         why: {
           title: 'Por Que Comparar Modelos de IA?',
           content: [
-            '**Resumo:** GPT-5.6 lidera em velocidade e saída criativa. Claude Opus 4.8 lidera em precisão de raciocínio e análise de documentos longos (janela de contexto de 1M tokens). Gemini 3.1 Pro lidera em tarefas multimodais e tem a maior janela de contexto (2M tokens). Para trabalho crítico, execute o mesmo prompt nos três — depender de um único modelo deixa precisão na mesa.',
-            'Diferentes modelos de IA se destacam em diferentes tarefas. ChatGPT (GPT-5.6) é o mais rápido e versátil. Claude (Opus 4.8) obtém as pontuações mais altas em raciocínio e benchmarks de código. Gemini (3.1 Pro) é o mais forte em tarefas multimodais e acesso à web em tempo real. Saber qual modelo se encaixa em sua tarefa significa melhores resultados e custos mais baixos.',
+            '**Resumo:** GPT-5.6 lidera em velocidade e saída criativa. Claude Opus 5 lidera em precisão de raciocínio e análise de documentos longos (janela de contexto de 1M tokens). Gemini 3.1 Pro lidera em tarefas multimodais e tem a maior janela de contexto (2M tokens). Para trabalho crítico, execute o mesmo prompt nos três — depender de um único modelo deixa precisão na mesa.',
+            'Diferentes modelos de IA se destacam em diferentes tarefas. ChatGPT (GPT-5.6) é o mais rápido e versátil. Claude (Opus 5) obtém as pontuações mais altas em raciocínio e benchmarks de código. Gemini (3.1 Pro) é o mais forte em tarefas multimodais e acesso à web em tempo real. Saber qual modelo se encaixa em sua tarefa significa melhores resultados e custos mais baixos.',
             'Este guia compara os três modelos de ponta a partir de 2026: pontos fortes, janelas de contexto, preços e as tarefas onde cada um vence.',
             'Para uma abordagem sistemática de seleção de modelos — incluindo quando escolher código aberto versus comercial — veja [como escolher o modelo de IA certo: GPT, Claude ou Gemini](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
@@ -8201,7 +8201,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'Os três modelos têm planos gratuitos para consumidores — planos Pro/Plus custam ~$20/mês nos três',
-            'GPT-5.6: 128K tokens | Claude Opus 4.8: 1M tokens | Gemini 3.1 Pro: 2M tokens',
+            'GPT-5.6: 128K tokens | Claude Opus 5: 1M tokens | Gemini 3.1 Pro: 2M tokens',
             'Claude Opus 4.8 com pensamento estendido pontua mais alto no MMLU-Pro (~91%) e nos benchmarks de raciocínio AIME',
             'Gemini 3.1 Pro é o único modelo com 2M de contexto — cabe uma base de código inteira, livro ou documento jurídico',
             'Os três suportam uso de ferramentas, chamadas de função e integração RAG em produção',
@@ -8210,16 +8210,16 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         comparisonTable: {
           title: 'Comparação Direta (2026)',
           content: '',
-          columns: ['Factor', 'GPT-5.6', 'Claude Opus 4.8', 'Gemini 3.1 Pro'],
+          columns: ['Factor', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
-            { 'Factor': 'Janela de contexto', 'GPT-5.6': '128K tokens', 'Claude Opus 4.8': '1M tokens', 'Gemini 3.1 Pro': '2M tokens' },
+            { 'Factor': 'Janela de contexto', 'GPT-5.6': '128K tokens', 'Claude Opus 5': '1M tokens', 'Gemini 3.1 Pro': '2M tokens' },
             { 'Factor': 'Raciocínio (MMLU-Pro)', 'GPT-5.6': '~90%', 'Claude Opus 4.8': '~91%', 'Gemini 3.1 Pro': '~89%' },
             { 'Factor': 'Código (HumanEval)', 'GPT-5.6': '~92%', 'Claude Opus 4.8': '~94%', 'Gemini 3.1 Pro': '~88%' },
-            { 'Factor': 'Multimodal', 'GPT-5.6': 'Texto + imagens', 'Claude Opus 4.8': 'Texto + imagens', 'Gemini 3.1 Pro': 'Texto, imagens, vídeo, áudio' },
-            { 'Factor': 'Velocidade', 'GPT-5.6': 'Rápida', 'Claude Opus 4.8': 'Moderada', 'Gemini 3.1 Pro': 'Rápida' },
-            { 'Factor': 'API entrada (por 1M tokens)', 'GPT-5.6': '~$5', 'Claude Opus 4.8': '~$15', 'Gemini 3.1 Pro': '~$3,50' },
-            { 'Factor': 'Plano gratuito', 'GPT-5.6': '✅ Sim', 'Claude Opus 4.8': '✅ Sim (limitado)', 'Gemini 3.1 Pro': '✅ Sim' },
-            { 'Factor': 'Pensamento estendido', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 4.8': 'Integrado', 'Gemini 3.1 Pro': 'Flash Thinking' },
+            { 'Factor': 'Multimodal', 'GPT-5.6': 'Texto + imagens', 'Claude Opus 5': 'Texto + imagens', 'Gemini 3.1 Pro': 'Texto, imagens, vídeo, áudio' },
+            { 'Factor': 'Velocidade', 'GPT-5.6': 'Rápida', 'Claude Opus 5': 'Moderada', 'Gemini 3.1 Pro': 'Rápida' },
+            { 'Factor': 'API entrada (por 1M tokens)', 'GPT-5.6': '~$5', 'Claude Opus 5': '~$15', 'Gemini 3.1 Pro': '~$3,50' },
+            { 'Factor': 'Plano gratuito', 'GPT-5.6': '✅ Sim', 'Claude Opus 5': '✅ Sim (limitado)', 'Gemini 3.1 Pro': '✅ Sim' },
+            { 'Factor': 'Pensamento estendido', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 5': 'Integrado', 'Gemini 3.1 Pro': 'Flash Thinking' },
           ],
         },
         contentCreation: {
@@ -8232,7 +8232,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         dataAnalysis: {
           title: 'Análise de Dados e Pesquisa',
-          content: 'Claude Opus 4.8 vence — excelente precisão, janela de contexto de 1M tokens para analisar documentos longos e conjuntos de dados, raciocínio rigoroso. Para documentos muito longos (livros, bases de código completas), a janela de contexto de 2M tokens do Gemini 3.1 Pro é a melhor escolha.',
+          content: 'Claude Opus 5 vence — excelente precisão, janela de contexto de 1M tokens para analisar documentos longos e conjuntos de dados, raciocínio rigoroso. Para documentos muito longos (livros, bases de código completas), a janela de contexto de 2M tokens do Gemini 3.1 Pro é a melhor escolha.',
         },
         imageAnalysis: {
           title: 'Análise de Imagens',
@@ -8244,20 +8244,20 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         summarization: {
           title: 'Resumo de Documentos',
-          content: 'Claude Opus 4.8 ou Gemini 3.1 Pro — ambos têm grandes janelas de contexto (1M e 2M tokens respectivamente). Claude Opus 4.8 produz resumos mais estruturados com raciocínio claro. Gemini 3.1 Pro lida com os documentos mais longos.',
+          content: 'Claude Opus 5 ou Gemini 3.1 Pro — ambos têm grandes janelas de contexto (1M e 2M tokens respectivamente). Claude Opus 5 produz resumos mais estruturados com raciocínio claro. Gemini 3.1 Pro lida com os documentos mais longos.',
         },
         budgetConscious: {
           title: 'Usuários Conscientes de Orçamento',
-          content: 'Gemini 3.1 Pro vence nos custos de API (~$3,50/1M tokens de entrada). Os três modelos têm planos gratuitos para consumidores. Para a API, Gemini é o mais econômico, GPT-5.6 fica no meio, Claude Opus 4.8 é o mais caro — mas as diferenças de qualidade justificam o preço premium para tarefas de precisão crítica.',
+          content: 'Gemini 3.1 Pro vence nos custos de API (~$3,50/1M tokens de entrada). Os três modelos têm planos gratuitos para consumidores. Para a API, Gemini é o mais econômico, GPT-5.6 fica no meio, Claude Opus 5 é o mais caro — mas as diferenças de qualidade justificam o preço premium para tarefas de precisão crítica.',
         },
         strategy: {
           title: 'A Estratégia Inteligente: Use os Três',
           content: [
             'Usuários profissionais de IA não se prendem a um único modelo. Eles executam o mesmo prompt nos três e escolhem a melhor resposta:',
             '1. GPT-5.6: Brainstorming rápido e exploração criativa',
-            '2. Claude Opus 4.8: Análise profunda, validação de raciocínio, revisão de código',
+            '2. Claude Opus 5: Análise profunda, validação de raciocínio, revisão de código',
             '3. Gemini 3.1 Pro: Informações em tempo real, tarefas multimodais, documentos muito longos',
-            'Isso fornece velocidade (GPT-5.6), precisão (Claude Opus 4.8) e atualidade + contexto (Gemini 3.1 Pro). O PromptQuorum automatiza isso: envie o mesmo prompt otimizado para os três e compare os resultados lado a lado.',
+            'Isso fornece velocidade (GPT-5.6), precisão (Claude Opus 5) e atualidade + contexto (Gemini 3.1 Pro). O PromptQuorum automatiza isso: envie o mesmo prompt otimizado para os três e compare os resultados lado a lado.',
           ],
         },
         currentTrends: {
@@ -8265,7 +8265,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: ['Os três modelos de ponta convergiram significativamente no desempenho dos benchmarks — a diferença que existia em 2023 agora é medida em pontos percentuais de um dígito na maioria dos benchmarks padrão.'],
           items: [
             'Os modos de pensamento estendido são padrão: os três oferecem escalonamento de computação em tempo de inferência para tarefas complexas de raciocínio',
-            'Capacidades multimodais são básicas: GPT-5.6 e Claude Opus 4.8 suportam imagens; Gemini 3.1 Pro lidera em vídeo e áudio',
+            'Capacidades multimodais são básicas: GPT-5.6 e Claude Opus 5 suportam imagens; Gemini 3.1 Pro lidera em vídeo e áudio',
             'As janelas de contexto estão se expandindo rapidamente: de 4K (GPT-3) para 2M (Gemini 3.1 Pro) em menos de três anos — contexto não é mais o gargalo',
             'Modelos de código aberto estão fechando a lacuna de capacidade: LLaMA 3.1 70B e Qwen2.5 agora correspondem ao GPT-4 na maioria dos benchmarks',
             'Uso de ferramentas e chamadas de função são universais: os três modelos suportam saídas estruturadas, execução de código e chamadas de API externas em produção',
@@ -8286,11 +8286,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Não se comprometa com um único modelo — teste os três com seus casos de uso reais:',
             '1. Use o plano gratuito do ChatGPT (GPT-5.6) para tarefas criativas e brainstorming',
-            '2. Experimente Claude Opus 4.8 para trabalho analítico e revisão de código',
+            '2. Experimente Claude Opus 5 para trabalho analítico e revisão de código',
             '3. Experimente Gemini 3.1 Pro para análise de imagens e dados da web em tempo real',
             '4. Execute o mesmo prompt nos três e compare as respostas',
             '5. Identifique qual modelo fornece o melhor resultado para o seu tipo de tarefa específica',
-            'O PromptQuorum permite enviar o mesmo prompt otimizado para GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro e outros modelos simultaneamente — e comparar qual forneceu o melhor resultado para sua tarefa.',
+            'O PromptQuorum permite enviar o mesmo prompt otimizado para GPT-5.6, Claude Opus 5, Gemini 3.1 Pro e outros modelos simultaneamente — e comparar qual forneceu o melhor resultado para sua tarefa.',
           ],
         },
         tldr: {
@@ -8301,22 +8301,22 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Claude Opus 4.8: Melhor para raciocínio (~91% MMLU-Pro), código (~94% HumanEval), análise de longa duração. Contexto de 1M.',
             'Gemini 3.1 Pro: Melhor para multimodal (imagens, vídeo, áudio). Acesso à web em tempo real. Maior contexto (2M). Menor custo de API.',
             'Os três têm planos gratuitos para consumidores e planos Pro por ~$20/mês.',
-            'Raciocínio: Claude Opus 4.8 > GPT-5.6 > Gemini 3.1 Pro.',
-            'Velocidade: GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 4.8.',
-            'Custo de API: Gemini 3.1 Pro (~$3,50/1M) < GPT-5.6 (~$5/1M) < Claude Opus 4.8 (~$15/1M).',
+            'Raciocínio: Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro.',
+            'Velocidade: GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 5.',
+            'Custo de API: Gemini 3.1 Pro (~$3,50/1M) < GPT-5.6 (~$5/1M) < Claude Opus 5 (~$5/1M).',
             'Melhor prática: execute o mesmo prompt nos três para tarefas críticas — escolha a melhor resposta.',
           ],
         },
         faqSection: {
           title: 'Perguntas Frequentes',
           faqs: [
-            { q: 'Qual modelo de IA é melhor para escrita criativa?', a: 'GPT-5.6 (ChatGPT) se destaca em escrita criativa, brainstorming e versatilidade geral — rápido e acessível. Claude Opus 4.8 é melhor para raciocínio mais profundo e análise de trabalho criativo.' },
+            { q: 'Qual modelo de IA é melhor para escrita criativa?', a: 'GPT-5.6 (ChatGPT) se destaca em escrita criativa, brainstorming e versatilidade geral — rápido e acessível. Claude Opus 5 é melhor para raciocínio mais profundo e análise de trabalho criativo.' },
             { q: 'Qual modelo é melhor para programação?', a: 'Claude Opus 4.8 tem vantagem em qualidade de código e depuração (~94% HumanEval). GPT-5.6 (~92%) é mais rápido. Para trabalho crítico, compare as sugestões de código de ambos.' },
-            { q: 'Qual é a comparação de custos em 2026?', a: 'GPT-5.6: ~$5/1M entrada, ~$15/1M saída. Claude Opus 4.8: ~$15/1M entrada, ~$75/1M saída. Gemini 3.1 Pro: ~$3,50/1M entrada, ~$10,50/1M saída. Os três têm planos de consumidor a ~$20/mês. Verifique os preços atuais com cada provedor.' },
-            { q: 'Qual modelo lida melhor com tarefas multimodais?', a: 'Gemini 3.1 Pro é o mais forte para imagens, vídeo, áudio e compreensão de documentos. GPT-5.6 suporta texto e imagens. Claude Opus 4.8 suporta texto e imagens, mas não vídeo.' },
+            { q: 'Qual é a comparação de custos em 2026?', a: 'GPT-5.6: ~$5/1M entrada, ~$15/1M saída. Claude Opus 5: ~$5/1M entrada, ~$25/1M saída. Gemini 3.1 Pro: ~$3,50/1M entrada, ~$10,50/1M saída. Os três têm planos de consumidor a ~$20/mês. Verifique os preços atuais com cada provedor.' },
+            { q: 'Qual modelo lida melhor com tarefas multimodais?', a: 'Gemini 3.1 Pro é o mais forte para imagens, vídeo, áudio e compreensão de documentos. GPT-5.6 suporta texto e imagens. Claude Opus 5 suporta texto e imagens, mas não vídeo.' },
             { q: 'Os três modelos têm planos gratuitos?', a: 'Sim. ChatGPT, Claude.ai e Gemini oferecem planos gratuitos com limites de uso diário limitados. Os três também oferecem planos Pro/Plus/Premium por ~$20/mês com limites de uso mais altos.' },
             { q: 'Como o GPT-4o se compara ao Claude Opus 4.8 e ao Gemini 3.1 Pro?', a: 'O GPT-4o era o modelo principal da OpenAI antes de o GPT-5.6 substituí-lo como o modelo por trás do ChatGPT. Segundo o model card oficial, ele tem uma janela de contexto de 128K tokens, ~88.7% no MMLU e ~90.2% no HumanEval. O Claude Opus 4.8 supera esses números em raciocínio (~91% no MMLU-Pro, um benchmark mais exigente) e em código (~94% no HumanEval), com uma janela de contexto de 1M tokens. Se você usa o ChatGPT hoje, provavelmente está usando o GPT-5.6, não o GPT-4o — confira o seletor de modelo na sua conta para confirmar.' },
-            { q: 'Posso usar múltiplos modelos no mesmo fluxo de trabalho?', a: 'Sim. O PromptQuorum permite enviar o mesmo prompt para GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro e outros modelos simultaneamente e comparar os resultados lado a lado. Esta é a abordagem recomendada para trabalho crítico.' },
+            { q: 'Posso usar múltiplos modelos no mesmo fluxo de trabalho?', a: 'Sim. O PromptQuorum permite enviar o mesmo prompt para GPT-5.6, Claude Opus 5, Gemini 3.1 Pro e outros modelos simultaneamente e comparar os resultados lado a lado. Esta é a abordagem recomendada para trabalho crítico.' },
           ],
         },
         commonMistakes: {
@@ -8324,7 +8324,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'Erro 1: Escolher um único modelo e nunca comparar. Cada modelo tem pontos fortes distintos. Sempre teste com sua tarefa específica antes de se comprometer.',
             'Erro 2: Assumir que o modelo mais caro é o melhor. Gemini 3.1 Pro é a opção de API mais econômica e vence em tarefas multimodais. Combine o modelo à tarefa, não ao preço.',
-            'Erro 3: Ignorar os limites da janela de contexto. Gemini 3.1 Pro (2M tokens) e Claude Opus 4.8 (1M tokens) lidam com documentos longos. GPT-5.6 (128K) pode truncar entradas grandes.',
+            'Erro 3: Ignorar os limites da janela de contexto. Gemini 3.1 Pro (2M tokens) e Claude Opus 5 (1M tokens) lidam com documentos longos. GPT-5.6 (128K) pode truncar entradas grandes.',
             'Erro 4: Não verificar os limites de conhecimento. Modelos conectados à web (Gemini 3.1 Pro com Search, GPT-5.6 com navegação) têm informações atuais. Chamadas básicas de API podem usar dados do corte de treinamento.',
             'Erro 5: Usar o mesmo prompt para todos os modelos. Cada modelo responde melhor a diferentes estilos de prompt. Adapte seus prompts — Claude se beneficia de instruções explícitas passo a passo; Gemini se beneficia do contexto multimodal.',
           ],
@@ -8342,7 +8342,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Fontes e Citações',
           items: [
             'Especificações do Modelo OpenAI GPT-5.6 — openai.com/models',
-            'Documentação do Anthropic Claude Opus 4.8 — docs.anthropic.com',
+            'Documentação do Anthropic Claude Opus 5 — docs.anthropic.com',
             'Especificações do Google Gemini 3.1 Pro — gemini.google.com',
             'Placar do LMSYS Chatbot Arena — arena.lmsys.org',
             'Papers With Code — Resultados de Benchmark MMLU — paperswithcode.com/sota/multi-task-language-understanding-on-mmlu',
@@ -8353,15 +8353,15 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     ko: {
       category: 'AI 모델 비교',
       title: 'ChatGPT vs Claude vs Gemini: 2026년 AI 모델 나란히 비교',
-      intro: '2026년 기준: GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro를 추론 능력, 속도, 컨텍스트 창, 가격, 멀티모달 기능으로 비교합니다. 각각을 언제 사용하고—세 가지 모두를 언제 사용할지 알아보세요.',
+      intro: '2026년 기준: GPT-5.6, Claude Opus 5, Gemini 3.1 Pro를 추론 능력, 속도, 컨텍스트 창, 가격, 멀티모달 기능으로 비교합니다. 각각을 언제 사용하고—세 가지 모두를 언제 사용할지 알아보세요.',
       publishDate: 'Published March 14, 2026',
       readTime: '12분 읽기',
-      seoTitle: 'GPT-5.6 vs Claude Opus 4.8 vs Gemini 3.1 Pro (2026)',
-      metaDescription: 'GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro를 속도, 추론, 가격, 컨텍스트 창으로 비교. 어떤 AI 모델을 사용할지—세 가지 모두를 언제 사용할지.',
+      seoTitle: 'GPT-5.6 vs Claude Opus 5 vs Gemini 3.1 Pro (2026)',
+      metaDescription: 'GPT-5.6, Claude Opus 5, Gemini 3.1 Pro를 속도, 추론, 가격, 컨텍스트 창으로 비교. 어떤 AI 모델을 사용할지—세 가지 모두를 언제 사용할지.',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-09-14',
       last_full_refresh: '2026-07-14',
-      current_models_mentioned: ['GPT-5.6', 'GPT-4o', 'Claude Opus 4.8', 'Gemini 3.1 Pro'],
+      current_models_mentioned: ['GPT-5.6', 'GPT-4o', 'Claude Opus 5', 'Gemini 3.1 Pro'],
       educationalLevel: 'Intermediate',
       faqSchema: {
         '@context': 'https://schema.org',
@@ -8373,7 +8373,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '창의적 글쓰기에 어떤 AI 모델이 가장 좋습니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6(ChatGPT)는 창의적 글쓰기, 브레인스토밍, 일반적인 다목적 용도에서 탁월합니다—빠르고 접근 가능합니다. Claude Opus 4.8은 더 깊은 추론과 창의적 작업 분석에 더 좋습니다.',
+              text: 'GPT-5.6(ChatGPT)는 창의적 글쓰기, 브레인스토밍, 일반적인 다목적 용도에서 탁월합니다—빠르고 접근 가능합니다. Claude Opus 5은 더 깊은 추론과 창의적 작업 분석에 더 좋습니다.',
             },
           },
           {
@@ -8389,7 +8389,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '2026년 가격 비교는 어떻습니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-5.6: 입력 1M 토큰당 ~$5, 출력 1M 토큰당 ~$15. Claude Opus 4.8: 입력 1M 토큰당 ~$15, 출력 1M 토큰당 ~$75. Gemini 3.1 Pro: 입력 1M 토큰당 ~$3.50, 출력 1M 토큰당 ~$10.50. 세 모두 소비자 플랜이 ~$20/월입니다. 각 공급자에서 현재 가격을 확인하세요.',
+              text: 'GPT-5.6: 입력 1M 토큰당 ~$5, 출력 1M 토큰당 ~$15. Claude Opus 5: 입력 1M 토큰당 ~$5, 출력 1M 토큰당 ~$25. Gemini 3.1 Pro: 입력 1M 토큰당 ~$3.50, 출력 1M 토큰당 ~$10.50. 세 모두 소비자 플랜이 ~$20/월입니다. 각 공급자에서 현재 가격을 확인하세요.',
             },
           },
           {
@@ -8397,7 +8397,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '멀티모달 작업에 어떤 모델이 가장 잘 처리합니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemini 3.1 Pro는 이미지, 비디오, 오디오, 문서 이해에 가장 강합니다. GPT-5.6는 텍스트와 이미지를 지원합니다. Claude Opus 4.8은 텍스트와 이미지를 지원하지만 비디오는 지원하지 않습니다.',
+              text: 'Gemini 3.1 Pro는 이미지, 비디오, 오디오, 문서 이해에 가장 강합니다. GPT-5.6는 텍스트와 이미지를 지원합니다. Claude Opus 5은 텍스트와 이미지를 지원하지만 비디오는 지원하지 않습니다.',
             },
           },
           {
@@ -8405,7 +8405,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '가장 큰 컨텍스트 창을 가진 모델은 무엇입니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Gemini 3.1 Pro는 2M 토큰으로 가장 큽니다—전체 코드베이스나 책이 들어갑니다. Claude Opus 4.8은 1M 토큰입니다. GPT-5.6는 128K 토큰입니다. 긴 문서 분석에는 Claude 또는 Gemini가 적합합니다.',
+              text: 'Gemini 3.1 Pro는 2M 토큰으로 가장 큽니다—전체 코드베이스나 책이 들어갑니다. Claude Opus 5은 1M 토큰입니다. GPT-5.6는 128K 토큰입니다. 긴 문서 분석에는 Claude 또는 Gemini가 적합합니다.',
             },
           },
           {
@@ -8418,7 +8418,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'Question',
-            name: 'GPT-4o는 Claude Opus 4.8, Gemini 3.1 Pro와 비교해 어떻습니까?',
+            name: 'GPT-4o는 Claude Opus 5, Gemini 3.1 Pro와 비교해 어떻습니까?',
             acceptedAnswer: {
               '@type': 'Answer',
               text: 'GPT-4o는 GPT-5.6이 ChatGPT를 구동하는 모델로 대체되기 전 OpenAI의 대표 모델이었습니다. 공식 모델 카드에 따르면 128K 토큰 컨텍스트 윈도우, MMLU 약 88.7%, HumanEval 약 90.2%를 기록했습니다. Claude Opus 4.8은 추론(더 어려운 벤치마크인 MMLU-Pro에서 약 91%)과 코딩(HumanEval 약 94%) 모두에서 이를 앞서며, 1M 토큰 컨텍스트 윈도우를 제공합니다. 현재 ChatGPT를 사용 중이라면 GPT-4o가 아닌 GPT-5.6을 사용하고 있을 가능성이 높습니다 — 계정의 모델 선택 메뉴에서 확인하십시오.',
@@ -8429,7 +8429,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '같은 워크플로에서 여러 모델을 사용할 수 있습니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '예. PromptQuorum은 동일한 프롬프트를 GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro 및 기타 모델에 동시에 보내고 결과를 나란히 비교할 수 있습니다. 이 접근법은 중요한 작업에 권장됩니다.',
+              text: '예. PromptQuorum은 동일한 프롬프트를 GPT-5.6, Claude Opus 5, Gemini 3.1 Pro 및 기타 모델에 동시에 보내고 결과를 나란히 비교할 수 있습니다. 이 접근법은 중요한 작업에 권장됩니다.',
             },
           },
         ],
@@ -8452,7 +8452,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           },
           {
             '@type': 'HowToStep',
-            name: 'Claude Opus 4.8로 테스트하기',
+            name: 'Claude Opus 5로 테스트하기',
             text: '동일한 프롬프트를 Claude에 보냅니다. 추론의 깊이, 정확성, 추론 투명성을 비교합니다.',
           },
           {
@@ -8481,7 +8481,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Claude Opus 4.8 (Anthropic)',
+            name: 'Claude Opus 5 (Anthropic)',
             description: '복잡한 추론, 코드 품질, 장문 분석에 적합. 컨텍스트 윈도우 1M 토큰.',
           },
           {
@@ -8502,8 +8502,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         why: {
           title: 'AI 모델을 비교하는 이유',
           content: [
-            '**요약:** GPT-5.6는 속도와 창의적 출력에서 앞서고, Claude Opus 4.8은 추론 정확도와 긴 문서 분석(1M 토큰 컨텍스트 창)에서 앞서며, Gemini 3.1 Pro는 멀티모달 작업에서 앞서고 가장 큰 컨텍스트 창(2M 토큰)을 보유합니다. 중요한 작업의 경우 세 가지 모두에서 동일한 프롬프트를 실행하세요—단일 모델에 의존하면 정확도를 놓칩니다.',
-            '다른 AI 모델은 다른 작업에서 탁월합니다. ChatGPT(GPT-5.6)는 가장 빠르고 다목적입니다. Claude(Opus 4.8)는 추론과 코드 벤치마크에서 가장 높은 점수를 받습니다. Gemini(3.1 Pro)는 멀티모달 작업과 실시간 웹 접근에서 가장 강합니다. 어떤 모델이 작업에 적합한지 알면 더 나은 결과와 낮은 비용을 얻을 수 있습니다.',
+            '**요약:** GPT-5.6는 속도와 창의적 출력에서 앞서고, Claude Opus 5은 추론 정확도와 긴 문서 분석(1M 토큰 컨텍스트 창)에서 앞서며, Gemini 3.1 Pro는 멀티모달 작업에서 앞서고 가장 큰 컨텍스트 창(2M 토큰)을 보유합니다. 중요한 작업의 경우 세 가지 모두에서 동일한 프롬프트를 실행하세요—단일 모델에 의존하면 정확도를 놓칩니다.',
+            '다른 AI 모델은 다른 작업에서 탁월합니다. ChatGPT(GPT-5.6)는 가장 빠르고 다목적입니다. Claude(Opus 5)는 추론과 코드 벤치마크에서 가장 높은 점수를 받습니다. Gemini(3.1 Pro)는 멀티모달 작업과 실시간 웹 접근에서 가장 강합니다. 어떤 모델이 작업에 적합한지 알면 더 나은 결과와 낮은 비용을 얻을 수 있습니다.',
             '이 가이드는 2026년 기준으로 세 가지 최첨단 모델을 비교합니다: 강점, 컨텍스트 창, 가격, 그리고 각각이 이기는 작업.',
             '모델 선택을 위한 체계적인 접근법—오픈소스 vs 상업용 선택 시기 포함—은 [적합한 AI 모델 선택 방법: GPT, Claude 또는 Gemini](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)를 참조하세요.',
           ],
@@ -8559,7 +8559,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             '세 모델 모두 소비자용 무료 플랜 제공—Pro/Plus 플랜은 세 모두 ~$20/월',
-            'GPT-5.6: 128K 토큰 | Claude Opus 4.8: 1M 토큰 | Gemini 3.1 Pro: 2M 토큰',
+            'GPT-5.6: 128K 토큰 | Claude Opus 5: 1M 토큰 | Gemini 3.1 Pro: 2M 토큰',
             'Claude Opus 4.8 확장 사고는 MMLU-Pro(~91%)와 AIME 추론 벤치마크에서 가장 높은 점수',
             'Gemini 3.1 Pro는 2M 컨텍스트를 가진 유일한 모델—전체 코드베이스, 책, 법률 문서가 들어감',
             '세 모두 프로덕션에서 도구 사용, 함수 호출, RAG 통합을 지원합니다',
@@ -8568,16 +8568,16 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         comparisonTable: {
           title: '직접 비교 (2026)',
           content: '',
-          columns: ['요소', 'GPT-5.6', 'Claude Opus 4.8', 'Gemini 3.1 Pro'],
+          columns: ['요소', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
-            { '요소': '컨텍스트 창', 'GPT-5.6': '128K 토큰', 'Claude Opus 4.8': '1M 토큰', 'Gemini 3.1 Pro': '2M 토큰' },
+            { '요소': '컨텍스트 창', 'GPT-5.6': '128K 토큰', 'Claude Opus 5': '1M 토큰', 'Gemini 3.1 Pro': '2M 토큰' },
             { '요소': '추론 (MMLU-Pro)', 'GPT-5.6': '~90%', 'Claude Opus 4.8': '~91%', 'Gemini 3.1 Pro': '~89%' },
             { '요소': '코드 (HumanEval)', 'GPT-5.6': '~92%', 'Claude Opus 4.8': '~94%', 'Gemini 3.1 Pro': '~88%' },
-            { '요소': '멀티모달', 'GPT-5.6': '텍스트 + 이미지', 'Claude Opus 4.8': '텍스트 + 이미지', 'Gemini 3.1 Pro': '텍스트, 이미지, 비디오, 오디오' },
-            { '요소': '속도', 'GPT-5.6': '빠름', 'Claude Opus 4.8': '보통', 'Gemini 3.1 Pro': '빠름' },
-            { '요소': 'API 입력 (1M 토큰당)', 'GPT-5.6': '~$5', 'Claude Opus 4.8': '~$15', 'Gemini 3.1 Pro': '~$3.50' },
-            { '요소': '무료 플랜', 'GPT-5.6': '✅ 예', 'Claude Opus 4.8': '✅ 예(제한)', 'Gemini 3.1 Pro': '✅ 예' },
-            { '요소': '확장 사고', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 4.8': '내장', 'Gemini 3.1 Pro': 'Flash Thinking' },
+            { '요소': '멀티모달', 'GPT-5.6': '텍스트 + 이미지', 'Claude Opus 5': '텍스트 + 이미지', 'Gemini 3.1 Pro': '텍스트, 이미지, 비디오, 오디오' },
+            { '요소': '속도', 'GPT-5.6': '빠름', 'Claude Opus 5': '보통', 'Gemini 3.1 Pro': '빠름' },
+            { '요소': 'API 입력 (1M 토큰당)', 'GPT-5.6': '~$5', 'Claude Opus 5': '~$15', 'Gemini 3.1 Pro': '~$3.50' },
+            { '요소': '무료 플랜', 'GPT-5.6': '✅ 예', 'Claude Opus 5': '✅ 예(제한)', 'Gemini 3.1 Pro': '✅ 예' },
+            { '요소': '확장 사고', 'GPT-5.6': 'o3/o4-mini', 'Claude Opus 5': '내장', 'Gemini 3.1 Pro': 'Flash Thinking' },
           ],
         },
         contentCreation: {
@@ -8590,7 +8590,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         dataAnalysis: {
           title: '데이터 분석 및 연구',
-          content: 'Claude Opus 4.8이 승리합니다—우수한 정확도, 긴 문서와 데이터셋 분석을 위한 1M 토큰 컨텍스트 창, 엄격한 추론. 매우 긴 문서(책, 전체 코드베이스)의 경우 Gemini 3.1 Pro의 2M 토큰 컨텍스트 창이 최선입니다.',
+          content: 'Claude Opus 5이 승리합니다—우수한 정확도, 긴 문서와 데이터셋 분석을 위한 1M 토큰 컨텍스트 창, 엄격한 추론. 매우 긴 문서(책, 전체 코드베이스)의 경우 Gemini 3.1 Pro의 2M 토큰 컨텍스트 창이 최선입니다.',
         },
         imageAnalysis: {
           title: '이미지 분석',
@@ -8602,20 +8602,20 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         summarization: {
           title: '문서 요약',
-          content: 'Claude Opus 4.8 또는 Gemini 3.1 Pro—둘 다 큰 컨텍스트 창(각각 1M과 2M 토큰)을 보유합니다. Claude Opus 4.8은 명확한 추론으로 더 구조화된 요약을 생성합니다. Gemini 3.1 Pro는 가장 긴 문서를 처리합니다.',
+          content: 'Claude Opus 5 또는 Gemini 3.1 Pro—둘 다 큰 컨텍스트 창(각각 1M과 2M 토큰)을 보유합니다. Claude Opus 5은 명확한 추론으로 더 구조화된 요약을 생성합니다. Gemini 3.1 Pro는 가장 긴 문서를 처리합니다.',
         },
         budgetConscious: {
           title: '예산을 의식하는 사용자',
-          content: 'Gemini 3.1 Pro가 API 비용에서 승리합니다(입력 1M 토큰당 ~$3.50). 세 모델 모두 소비자용 무료 플랜이 있습니다. API의 경우 Gemini가 가장 저렴하고, GPT-5.6가 중간이며, Claude Opus 4.8이 가장 비쌉니다—하지만 품질 차이는 정밀도가 중요한 작업에서 프리미엄 가격을 정당화합니다.',
+          content: 'Gemini 3.1 Pro가 API 비용에서 승리합니다(입력 1M 토큰당 ~$3.50). 세 모델 모두 소비자용 무료 플랜이 있습니다. API의 경우 Gemini가 가장 저렴하고, GPT-5.6가 중간이며, Claude Opus 5이 가장 비쌉니다—하지만 품질 차이는 정밀도가 중요한 작업에서 프리미엄 가격을 정당화합니다.',
         },
         strategy: {
           title: '스마트 전략: 세 가지 모두 사용하기',
           content: [
             '전문 AI 사용자는 단일 모델에 얽매이지 않습니다. 같은 프롬프트를 세 가지에 모두 실행하고 최상의 응답을 선택합니다:',
             '1. GPT-5.6: 빠른 브레인스토밍과 창의적 탐색',
-            '2. Claude Opus 4.8: 깊은 분석, 추론 검증, 코드 리뷰',
+            '2. Claude Opus 5: 깊은 분석, 추론 검증, 코드 리뷰',
             '3. Gemini 3.1 Pro: 실시간 정보, 멀티모달 작업, 매우 긴 문서',
-            '이는 속도(GPT-5.6), 정밀도(Claude Opus 4.8), 최신성 + 컨텍스트(Gemini 3.1 Pro)를 제공합니다. PromptQuorum이 이를 자동화합니다: 동일한 최적화된 프롬프트를 세 가지에 보내고 결과를 나란히 비교하세요.',
+            '이는 속도(GPT-5.6), 정밀도(Claude Opus 5), 최신성 + 컨텍스트(Gemini 3.1 Pro)를 제공합니다. PromptQuorum이 이를 자동화합니다: 동일한 최적화된 프롬프트를 세 가지에 보내고 결과를 나란히 비교하세요.',
           ],
         },
         currentTrends: {
@@ -8623,7 +8623,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: ['세 가지 최첨단 모델은 벤치마크 성능이 크게 수렴했습니다—2023년에 존재했던 차이는 이제 대부분의 표준 벤치마크에서 한 자리 백분율 포인트로 측정됩니다.'],
           items: [
             '확장 사고 모드가 표준화됨: 세 모두 복잡한 추론 작업을 위한 추론 시간 계산 확장을 제공합니다',
-            '멀티모달 기능이 기본화됨: GPT-5.6와 Claude Opus 4.8은 이미지를 지원; Gemini 3.1 Pro는 비디오와 오디오에서 앞섭니다',
+            '멀티모달 기능이 기본화됨: GPT-5.6와 Claude Opus 5은 이미지를 지원; Gemini 3.1 Pro는 비디오와 오디오에서 앞섭니다',
             '컨텍스트 창이 빠르게 확장 중: GPT-3의 4K에서 Gemini 3.1 Pro의 2M까지 3년 미만—컨텍스트는 더 이상 병목이 아닙니다',
             '오픈소스 모델이 기능 격차를 좁히는 중: LLaMA 3.1 70B와 Qwen2.5는 이제 대부분의 벤치마크에서 GPT-4와 일치합니다',
             '도구 사용과 함수 호출이 보편화됨: 세 모델 모두 프로덕션에서 구조화된 출력, 코드 실행, 외부 API 호출을 지원합니다',
@@ -8644,11 +8644,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '단일 모델에 전념하지 마세요—실제 사용 사례로 세 가지 모두를 테스트하세요:',
             '1. ChatGPT 무료 플랜(GPT-5.6)을 창의적 작업과 브레인스토밍에 사용하세요',
-            '2. 분석 작업과 코드 리뷰에 Claude Opus 4.8을 시도해 보세요',
+            '2. 분석 작업과 코드 리뷰에 Claude Opus 5을 시도해 보세요',
             '3. 이미지 분석과 실시간 웹 데이터에 Gemini 3.1 Pro를 시도해 보세요',
             '4. 세 가지 모두에서 동일한 프롬프트를 실행하고 응답을 비교하세요',
             '5. 특정 작업 유형에 어떤 모델이 최상의 결과를 제공하는지 식별하세요',
-            'PromptQuorum은 동일한 최적화된 프롬프트를 GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro 및 기타 모델에 동시에 보내고—어떤 것이 작업에 최상의 결과를 제공했는지 비교할 수 있습니다.',
+            'PromptQuorum은 동일한 최적화된 프롬프트를 GPT-5.6, Claude Opus 5, Gemini 3.1 Pro 및 기타 모델에 동시에 보내고—어떤 것이 작업에 최상의 결과를 제공했는지 비교할 수 있습니다.',
           ],
         },
         tldr: {
@@ -8659,22 +8659,22 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Claude Opus 4.8: 추론(~91% MMLU-Pro), 코드(~94% HumanEval), 긴 분석에 최상. 1M 컨텍스트.',
             'Gemini 3.1 Pro: 멀티모달(이미지, 비디오, 오디오)에 최상. 실시간 웹 접근. 가장 큰 컨텍스트(2M). 가장 낮은 API 비용.',
             '세 모두 소비자용 무료 플랜과 ~$20/월 Pro 플랜 제공.',
-            '추론: Claude Opus 4.8 > GPT-5.6 > Gemini 3.1 Pro.',
-            '속도: GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 4.8.',
-            'API 비용: Gemini 3.1 Pro(~$3.50/1M) < GPT-5.6(~$5/1M) < Claude Opus 4.8(~$15/1M).',
+            '추론: Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro.',
+            '속도: GPT-5.6 ≈ Gemini 3.1 Pro > Claude Opus 5.',
+            'API 비용: Gemini 3.1 Pro(~$3.50/1M) < GPT-5.6(~$5/1M) < Claude Opus 5(~$5/1M).',
             '모범 사례: 중요한 작업에는 세 가지 모두에서 동일한 프롬프트를 실행하세요—최상의 응답을 선택하세요.',
           ],
         },
         faqSection: {
           title: '자주 묻는 질문',
           faqs: [
-            { q: '창의적 글쓰기에 어떤 AI 모델이 가장 좋습니까?', a: 'GPT-5.6(ChatGPT)는 창의적 글쓰기, 브레인스토밍, 일반적인 다목적 용도에서 탁월합니다—빠르고 접근 가능합니다. Claude Opus 4.8은 더 깊은 추론과 창의적 작업 분석에 더 좋습니다.' },
+            { q: '창의적 글쓰기에 어떤 AI 모델이 가장 좋습니까?', a: 'GPT-5.6(ChatGPT)는 창의적 글쓰기, 브레인스토밍, 일반적인 다목적 용도에서 탁월합니다—빠르고 접근 가능합니다. Claude Opus 5은 더 깊은 추론과 창의적 작업 분석에 더 좋습니다.' },
             { q: '프로그래밍에 어떤 모델이 가장 좋습니까?', a: 'Claude Opus 4.8은 코드 품질과 디버깅에서 우위를 점합니다(~94% HumanEval). GPT-5.6(~92%)는 더 빠릅니다. 중요한 작업의 경우 두 모델의 코드 제안을 비교하세요.' },
-            { q: '2026년 가격 비교는 어떻습니까?', a: 'GPT-5.6: 입력 ~$5/1M, 출력 ~$15/1M. Claude Opus 4.8: 입력 ~$15/1M, 출력 ~$75/1M. Gemini 3.1 Pro: 입력 ~$3.50/1M, 출력 ~$10.50/1M. 세 모두 소비자 플랜이 ~$20/월. 각 공급자에서 현재 가격을 확인하세요.' },
-            { q: '멀티모달 작업에 어떤 모델이 가장 잘 처리합니까?', a: 'Gemini 3.1 Pro는 이미지, 비디오, 오디오, 문서 이해에 가장 강합니다. GPT-5.6는 텍스트와 이미지를 지원합니다. Claude Opus 4.8은 텍스트와 이미지를 지원하지만 비디오는 지원하지 않습니다.' },
+            { q: '2026년 가격 비교는 어떻습니까?', a: 'GPT-5.6: 입력 ~$5/1M, 출력 ~$15/1M. Claude Opus 5: 입력 ~$5/1M, 출력 ~$25/1M. Gemini 3.1 Pro: 입력 ~$3.50/1M, 출력 ~$10.50/1M. 세 모두 소비자 플랜이 ~$20/월. 각 공급자에서 현재 가격을 확인하세요.' },
+            { q: '멀티모달 작업에 어떤 모델이 가장 잘 처리합니까?', a: 'Gemini 3.1 Pro는 이미지, 비디오, 오디오, 문서 이해에 가장 강합니다. GPT-5.6는 텍스트와 이미지를 지원합니다. Claude Opus 5은 텍스트와 이미지를 지원하지만 비디오는 지원하지 않습니다.' },
             { q: '세 모델 모두 무료 플랜이 있습니까?', a: '예. ChatGPT, Claude.ai, Gemini는 모두 일일 사용 한도가 있는 무료 플랜을 제공합니다. 세 모두 더 높은 사용 한도의 Pro/Plus/Premium 플랜을 ~$20/월에 제공합니다.' },
             { q: 'GPT-4o는 Claude Opus 4.8, Gemini 3.1 Pro와 비교해 어떻습니까?', a: 'GPT-4o는 GPT-5.6이 ChatGPT를 구동하는 모델로 대체되기 전 OpenAI의 대표 모델이었습니다. 공식 모델 카드에 따르면 128K 토큰 컨텍스트 윈도우, MMLU 약 88.7%, HumanEval 약 90.2%를 기록했습니다. Claude Opus 4.8은 추론(더 어려운 벤치마크인 MMLU-Pro에서 약 91%)과 코딩(HumanEval 약 94%) 모두에서 이를 앞서며, 1M 토큰 컨텍스트 윈도우를 제공합니다. 현재 ChatGPT를 사용 중이라면 GPT-4o가 아닌 GPT-5.6을 사용하고 있을 가능성이 높습니다 — 계정의 모델 선택 메뉴에서 확인하십시오.' },
-            { q: '같은 워크플로에서 여러 모델을 사용할 수 있습니까?', a: '예. PromptQuorum은 동일한 프롬프트를 GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro 및 기타 모델에 동시에 보내고 결과를 나란히 비교할 수 있습니다. 중요한 작업에 권장되는 접근법입니다.' },
+            { q: '같은 워크플로에서 여러 모델을 사용할 수 있습니까?', a: '예. PromptQuorum은 동일한 프롬프트를 GPT-5.6, Claude Opus 5, Gemini 3.1 Pro 및 기타 모델에 동시에 보내고 결과를 나란히 비교할 수 있습니다. 중요한 작업에 권장되는 접근법입니다.' },
           ],
         },
         commonMistakes: {
@@ -8682,7 +8682,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             '실수 1: 단일 모델을 선택하고 비교하지 않는 것. 각 모델은 뚜렷한 강점을 가집니다. 전념하기 전에 항상 특정 작업으로 테스트하세요.',
             '실수 2: 가장 비싼 모델이 최상이라고 가정하는 것. Gemini 3.1 Pro는 가장 저렴한 API 옵션이며 멀티모달 작업에서 승리합니다. 가격이 아닌 작업에 모델을 맞추세요.',
-            '실수 3: 컨텍스트 창 한도를 무시하는 것. Gemini 3.1 Pro(2M 토큰)와 Claude Opus 4.8(1M 토큰)은 긴 문서를 처리합니다. GPT-5.6(128K)는 큰 입력을 잘라낼 수 있습니다.',
+            '실수 3: 컨텍스트 창 한도를 무시하는 것. Gemini 3.1 Pro(2M 토큰)와 Claude Opus 5(1M 토큰)은 긴 문서를 처리합니다. GPT-5.6(128K)는 큰 입력을 잘라낼 수 있습니다.',
             '실수 4: 지식 컷오프를 확인하지 않는 것. 웹에 연결된 모델(검색이 있는 Gemini 3.1 Pro, 브라우징이 있는 GPT-5.6)은 현재 정보를 보유합니다. 기본 API 호출은 훈련 컷오프 데이터를 사용할 수 있습니다.',
             '실수 5: 모든 모델에 동일한 프롬프트를 사용하는 것. 각 모델은 다른 프롬프트 스타일에 더 잘 반응합니다. 프롬프트를 적용하세요—Claude는 명시적인 단계별 지침에서 혜택을 받고; Gemini는 멀티모달 컨텍스트에서 혜택을 받습니다.',
           ],
@@ -8700,7 +8700,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '출처 및 인용',
           items: [
             'OpenAI GPT-5.6 모델 사양 — openai.com/models',
-            'Anthropic Claude Opus 4.8 문서 — docs.anthropic.com',
+            'Anthropic Claude Opus 5 문서 — docs.anthropic.com',
             'Google Gemini 3.1 Pro 사양 — gemini.google.com',
             'LMSYS 챗봇 아레나 리더보드 — arena.lmsys.org',
             'Papers With Code — MMLU 벤치마크 결과 — paperswithcode.com/sota/multi-task-language-understanding-on-mmlu',
@@ -8744,7 +8744,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'What models does PromptQuorum support?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'As of 2026: OpenAI GPT-5.6, Anthropic Claude Opus 4.8, Google Gemini 3.1 Pro, Meta Llama 4, Mistral, and 20+ open-source and commercial models.',
+              text: 'As of 2026: OpenAI GPT-5.6, Anthropic Claude Opus 5, Google Gemini 3.1 Pro, Meta Llama 4, Mistral, and 20+ open-source and commercial models.',
             },
           },
           {
@@ -8894,7 +8894,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 7,
             name: 'Model Support',
-            description: 'ChatGPT (GPT-5.6), Claude Opus 4.8, Gemini 3.1 Pro, Llama 4, Mistral, and 20+ others.',
+            description: 'ChatGPT (GPT-5.6), Claude Opus 5, Gemini 3.1 Pro, Llama 4, Mistral, and 20+ others.',
           },
           {
             '@type': 'ListItem',
@@ -9276,7 +9276,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'ما النماذج التي يدعمها PromptQuorum؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'اعتبارًا من 2026: OpenAI GPT-5.6 وAnthropic Claude Opus 4.8 وGoogle Gemini 3.1 Pro وMeta Llama 4 وMistral وأكثر من 20 نموذجًا مفتوح المصدر وتجاريًا.',
+              text: 'اعتبارًا من 2026: OpenAI GPT-5.6 وAnthropic Claude Opus 5 وGoogle Gemini 3.1 Pro وMeta Llama 4 وMistral وأكثر من 20 نموذجًا مفتوح المصدر وتجاريًا.',
             },
           },
           {
@@ -9426,7 +9426,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 7,
             name: 'دعم النماذج',
-            description: 'ChatGPT (GPT-5.6) وClaude Opus 4.8 وGemini 3.1 Pro وLlama 4 وMistral وأكثر من 20 نموذجًا آخر.',
+            description: 'ChatGPT (GPT-5.6) وClaude Opus 5 وGemini 3.1 Pro وLlama 4 وMistral وأكثر من 20 نموذجًا آخر.',
           },
           {
             '@type': 'ListItem',
@@ -9808,7 +9808,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Welche Modelle unterstützt PromptQuorum?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Stand 2026: OpenAI GPT-5.6, Anthropic Claude Opus 4.8, Google Gemini 3.1 Pro, Meta Llama 4, Mistral und 20+ weitere Open-Source- und kommerzielle Modelle.',
+              text: 'Stand 2026: OpenAI GPT-5.6, Anthropic Claude Opus 5, Google Gemini 3.1 Pro, Meta Llama 4, Mistral und 20+ weitere Open-Source- und kommerzielle Modelle.',
             },
           },
           {
@@ -9958,7 +9958,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 7,
             name: 'Modell-Unterstützung',
-            description: 'ChatGPT (GPT-5.6), Claude Opus 4.8, Gemini 3.1 Pro, Llama 4, Mistral und 20+ weitere.',
+            description: 'ChatGPT (GPT-5.6), Claude Opus 5, Gemini 3.1 Pro, Llama 4, Mistral und 20+ weitere.',
           },
           {
             '@type': 'ListItem',
@@ -10286,7 +10286,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Quels modèles PromptQuorum prend-il en charge ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'En 2026 : OpenAI GPT-5.6, Anthropic Claude Opus 4.8, Google Gemini 3.1 Pro, Meta Llama 4, Mistral, et 20+ autres modèles open-source et commerciaux.',
+              text: 'En 2026 : OpenAI GPT-5.6, Anthropic Claude Opus 5, Google Gemini 3.1 Pro, Meta Llama 4, Mistral, et 20+ autres modèles open-source et commerciaux.',
             },
           },
           {
@@ -10436,7 +10436,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 7,
             name: 'Modèles pris en charge',
-            description: 'ChatGPT (GPT-5.6), Claude Opus 4.8, Gemini 3.1 Pro, Llama 4, Mistral, et 20+ autres.',
+            description: 'ChatGPT (GPT-5.6), Claude Opus 5, Gemini 3.1 Pro, Llama 4, Mistral, et 20+ autres.',
           },
           {
             '@type': 'ListItem',
@@ -10764,7 +10764,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'PromptQuorumはどのモデルをサポートしていますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '2026年時点：OpenAI GPT-5.6、Anthropic Claude Opus 4.8、Google Gemini 3.1 Pro、Meta Llama 4、Mistral、およびその他20以上のオープンソース・商用モデル。',
+              text: '2026年時点：OpenAI GPT-5.6、Anthropic Claude Opus 5、Google Gemini 3.1 Pro、Meta Llama 4、Mistral、およびその他20以上のオープンソース・商用モデル。',
             },
           },
           {
@@ -10914,7 +10914,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 7,
             name: 'モデルサポート',
-            description: 'ChatGPT（GPT-5.6）、Claude Opus 4.8、Gemini 3.1 Pro、Llama 4、Mistral、その他20以上。',
+            description: 'ChatGPT（GPT-5.6）、Claude Opus 5、Gemini 3.1 Pro、Llama 4、Mistral、その他20以上。',
           },
           {
             '@type': 'ListItem',
@@ -11242,7 +11242,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'PromptQuorum支持哪些模型？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '截至2026年：OpenAI GPT-5.6、Anthropic Claude Opus 4.8、Google Gemini 3.1 Pro、Meta Llama 4、Mistral，以及其他20多个开源和商业模型。',
+              text: '截至2026年：OpenAI GPT-5.6、Anthropic Claude Opus 5、Google Gemini 3.1 Pro、Meta Llama 4、Mistral，以及其他20多个开源和商业模型。',
             },
           },
           {
@@ -11392,7 +11392,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 7,
             name: '模型支持',
-            description: 'ChatGPT（GPT-5.6）、Claude Opus 4.8、Gemini 3.1 Pro、Llama 4、Mistral，以及其他20多个模型。',
+            description: 'ChatGPT（GPT-5.6）、Claude Opus 5、Gemini 3.1 Pro、Llama 4、Mistral，以及其他20多个模型。',
           },
           {
             '@type': 'ListItem',
@@ -11721,7 +11721,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '¿Qué modelos admite PromptQuorum?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'A partir de 2026: OpenAI GPT-5.6, Anthropic Claude Opus 4.8, Google Gemini 3.1 Pro, Meta Llama 4, Mistral y 20+ modelos de código abierto y comerciales.',
+              text: 'A partir de 2026: OpenAI GPT-5.6, Anthropic Claude Opus 5, Google Gemini 3.1 Pro, Meta Llama 4, Mistral y 20+ modelos de código abierto y comerciales.',
             },
           },
           {
@@ -11873,7 +11873,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 7,
             name: 'Modelos Compatibles',
-            description: 'ChatGPT (GPT-5.6), Claude Opus 4.8, Gemini 3.1 Pro, Llama 4, Mistral y 20+ más.',
+            description: 'ChatGPT (GPT-5.6), Claude Opus 5, Gemini 3.1 Pro, Llama 4, Mistral y 20+ más.',
           },
           {
             '@type': 'ListItem',
@@ -12011,7 +12011,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Quais modelos o PromptQuorum suporta?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'A partir de 2026: OpenAI GPT-5.6, Anthropic Claude Opus 4.8, Google Gemini 3.1 Pro, Meta Llama 4, Mistral e 20+ modelos de código aberto e comerciais.',
+              text: 'A partir de 2026: OpenAI GPT-5.6, Anthropic Claude Opus 5, Google Gemini 3.1 Pro, Meta Llama 4, Mistral e 20+ modelos de código aberto e comerciais.',
             },
           },
           {
@@ -12163,7 +12163,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 7,
             name: 'Suporte a Modelos',
-            description: 'ChatGPT (GPT-5.6), Claude Opus 4.8, Gemini 3.1 Pro, Llama 4, Mistral e mais de 20 outros.',
+            description: 'ChatGPT (GPT-5.6), Claude Opus 5, Gemini 3.1 Pro, Llama 4, Mistral e mais de 20 outros.',
           },
           {
             '@type': 'ListItem',
@@ -12546,7 +12546,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'PromptQuorum은 어떤 모델을 지원합니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '2026년 기준: OpenAI GPT-5.6, Anthropic Claude Opus 4.8, Google Gemini 3.1 Pro, Meta Llama 4, Mistral 및 20개 이상의 오픈소스 및 상업용 모델.',
+              text: '2026년 기준: OpenAI GPT-5.6, Anthropic Claude Opus 5, Google Gemini 3.1 Pro, Meta Llama 4, Mistral 및 20개 이상의 오픈소스 및 상업용 모델.',
             },
           },
           {
@@ -12698,7 +12698,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 7,
             name: '모델 지원',
-            description: 'ChatGPT(GPT-5.6), Claude Opus 4.8, Gemini 3.1 Pro, Llama 4, Mistral 및 20개 이상의 다른 모델.',
+            description: 'ChatGPT(GPT-5.6), Claude Opus 5, Gemini 3.1 Pro, Llama 4, Mistral 및 20개 이상의 다른 모델.',
           },
           {
             '@type': 'ListItem',
@@ -22329,12 +22329,12 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
   frontierModelsPromptLibrary: {
     en: {
       category: 'AI Model Comparison',
-      title: 'Frontier AI Models and Prompt Library: GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, and Beyond',
-      seoTitle: 'Frontier AI Models 2026: GPT-5.x vs Claude Opus 4.8 vs Gemini',
-      intro: 'As of July 2026, frontier AI models represent the cutting edge of large language model development. This guide compares GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, and Grok 4.1 across reasoning, cost, speed, and real-world task performance — with 170+ evaluation prompts for your own testing.',
+      title: 'Frontier AI Models and Prompt Library: GPT-5.x, Claude Opus 5, Gemini 3 Pro, and Beyond',
+      seoTitle: 'Frontier AI Models 2026: GPT-5.x vs Claude Opus 5 vs Gemini',
+      intro: 'As of July 2026, frontier AI models represent the cutting edge of large language model development. This guide compares GPT-5.x, Claude Opus 5, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, and Grok 4.1 across reasoning, cost, speed, and real-world task performance — with 170+ evaluation prompts for your own testing.',
       publishDate: 'Published March 24, 2026',
       readTime: '15 min read',
-      metaDescription: 'Compare GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, DeepSeek V4 across reasoning, cost, speed, and multimodal tasks. Includes 170+ evaluation prompts.',
+      metaDescription: 'Compare GPT-5.x, Claude Opus 5, Gemini 3 Pro, DeepSeek V4 across reasoning, cost, speed, and multimodal tasks. Includes 170+ evaluation prompts.',
       educationalLevel: 'Intermediate',
       sections: {
         whatAreFrontier: {
@@ -22346,7 +22346,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'GPT-5.x (OpenAI) — multi-modal reasoning, code, and analysis',
-            'Claude Opus 4.8 (Anthropic) — long-context reasoning and safety',
+            'Claude Opus 5 (Anthropic) — long-context reasoning and safety',
             'Gemini 3 Pro (Google DeepMind) — multimodal and reasoning tasks',
             'Llama 4 (Meta) — open-source, on-device or cloud deployment',
             'DeepSeek V4 (DeepSeek) — cost-efficient reasoning',
@@ -22358,7 +22358,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whyComparison: {
           title: 'Why Compare Frontier Models?',
           content: [
-            'No single frontier model excels at all tasks. Your choice of model depends on your specific use case: research summaries favor models with strong reasoning (Claude Opus 4.8, Gemini 3 Pro, DeepSeek V4). Code generation and refactoring favor models with broad training data and long context (GPT-5.x, Claude Opus 4.8). Cost-sensitive workflows favor efficient models (Llama 4, DeepSeek V4). Real-time features favor models with web access (Grok 4.1).',
+            'No single frontier model excels at all tasks. Your choice of model depends on your specific use case: research summaries favor models with strong reasoning (Claude Opus 5, Gemini 3 Pro, DeepSeek V4). Code generation and refactoring favor models with broad training data and long context (GPT-5.x, Claude Opus 5). Cost-sensitive workflows favor efficient models (Llama 4, DeepSeek V4). Real-time features favor models with web access (Grok 4.1).',
             'Running the same prompt across multiple frontier models inside PromptQuorum reveals which model produces the highest-quality output for your specific task.',
           ],
         },
@@ -22386,9 +22386,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '**GPT-5.x (OpenAI)** — Best for: General-purpose reasoning, code, analysis. Reasoning: Excellent. Context: 200K tokens. Speed: Fast (0.5-2s). Cost: $20/$80 per 1M input/output tokens. Multimodal: Yes (image, video). Real-time: No. Deployment: API only. Safety: Excellent jailbreak resistance.',
-            '**Claude Opus 4.8 (Anthropic)** — Best for: Long-form analysis, research, legal review. Reasoning: Excellent. Context: 1M tokens. Speed: Fast (0.8-3s). Cost: $5/$25 per 1M input/output tokens. Multimodal: Yes (image). Real-time: No. Deployment: API only. Safety: Constitutional AI alignment.',
+            '**Claude Opus 5 (Anthropic)** — Best for: Long-form analysis, research, legal review. Reasoning: Excellent. Context: 1M tokens. Speed: Fast (0.8-3s). Cost: $5/$25 per 1M input/output tokens. Multimodal: Yes (image). Real-time: No. Deployment: API only. Safety: Constitutional AI alignment.',
             '**Gemini 3 Pro (Google DeepMind)** — Best for: Multimodal analysis, reasoning across modalities. Reasoning: Excellent. Context: 2M tokens (largest). Speed: Moderate (1-4s). Cost: $5/$20 per 1M input/output tokens. Multimodal: Yes (image, audio, video). Real-time: Yes (limited). Deployment: API only. Safety: Responsible AI focus.',
-            '**Llama 4 (Meta)** — Best for: On-device, cost-sensitive, or privacy-first workflows. Reasoning: Good (not as strong as GPT-5.x or Claude Opus 4.8). Context: 128K tokens. Speed: Varies by hardware. Cost: Free (open-source). Multimodal: Yes (image). Real-time: No. Deployment: Local, cloud, on-premises. Safety: Community-driven alignment.',
+            '**Llama 4 (Meta)** — Best for: On-device, cost-sensitive, or privacy-first workflows. Reasoning: Good (not as strong as GPT-5.x or Claude Opus 5). Context: 128K tokens. Speed: Varies by hardware. Cost: Free (open-source). Multimodal: Yes (image). Real-time: No. Deployment: Local, cloud, on-premises. Safety: Community-driven alignment.',
             '**DeepSeek V4 (DeepSeek)** — Best for: Cost-optimized reasoning, research in Asia. Reasoning: Very good. Context: 128K tokens. Speed: Fast (0.5-1.5s). Cost: $0.27/$1.1 per 1M input/output tokens (cheapest). Multimodal: Yes (image). Real-time: No. Deployment: API. Safety: Standard safety training.',
             '**Mistral Large 3 (Mistral)** — Best for: European data residency, open reasoning. Reasoning: Very good. Context: 128K tokens. Speed: Fast (0.6-2s). Cost: $3.15/$9.45 per 1M input/output tokens. Multimodal: Yes (image). Real-time: No. Deployment: API, on-premises. Safety: Open and transparent alignment.',
             '**Qwen3 (Alibaba)** — Best for: Multi-lingual tasks, Asia-Pacific workflows. Reasoning: Very good. Context: 128K tokens. Speed: Fast (0.5-2s). Cost: $0.5/$1.5 per 1M input/output tokens. Multimodal: Yes (image, audio). Real-time: Limited. Deployment: API, local. Safety: Multilingual safety training.',
@@ -22401,7 +22401,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'The best way to evaluate frontier models is to run your actual task against multiple models in parallel and measure quality, speed, and cost. Inside PromptQuorum, you can dispatch a single prompt to all eight frontier models simultaneously and compare results side-by-side.',
             'A typical evaluation workflow:',
             '1. Define your task clearly (e.g., "Summarize this research paper with 5 key findings").',
-            '2. Select the frontier models you want to test (e.g., GPT-5.x, Claude Opus 4.8, Gemini 3 Pro).',
+            '2. Select the frontier models you want to test (e.g., GPT-5.x, Claude Opus 5, Gemini 3 Pro).',
             '3. Dispatch the same prompt to all selected models in parallel inside PromptQuorum.',
             '4. Compare outputs for quality, length, accuracy, and reasoning.',
             '5. Calculate cost per task and effective speed for each model.',
@@ -22431,8 +22431,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'Function calling (tool use) — Ability to invoke external APIs, databases, or code. All frontier models support this.',
-            'Long-horizon planning — Can maintain context and goals across 10+ steps. Claude Opus 4.8 and Gemini 3 Pro excel here.',
-            'Error recovery — Can detect when a tool call failed and retry with a different approach. DeepSeek V4 and Claude Opus 4.8 are most reliable.',
+            'Long-horizon planning — Can maintain context and goals across 10+ steps. Claude Opus 5 and Gemini 3 Pro excel here.',
+            'Error recovery — Can detect when a tool call failed and retry with a different approach. DeepSeek V4 and Claude Opus 5 are most reliable.',
             'Context retention — Can remember earlier steps and adapt later steps based on earlier results. Larger context windows (Gemini 3 Pro at 2M tokens) are significant advantages.',
           ],
         },
@@ -22443,7 +22443,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Safety dimensions to evaluate:',
           ],
           items: [
-            'Jailbreak resistance — How hard is it to make the model ignore safety guidelines? GPT-5.x and Claude Opus 4.8 have the strongest resistance.',
+            'Jailbreak resistance — How hard is it to make the model ignore safety guidelines? GPT-5.x and Claude Opus 5 have the strongest resistance.',
             'Refusal behavior — Does the model refuse harmful requests? All frontier models do, but the threshold varies.',
             'Data privacy — Does the model log or learn from your prompts? Check documentation for API-only (stateless) models.',
             'Transparency — Does the vendor publish alignment techniques? Anthropic (Claude) and Mistral publish their approaches; others are less transparent.',
@@ -22456,8 +22456,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Enterprise selection should weight cost, compliance, and performance predictability. Here are common patterns:',
           ],
           items: [
-            'High-security organizations choose Claude Opus 4.8 (Anthropic) for strong safety alignment, or Mistral (European data residency).',
-            'Cost-sensitive operations choose DeepSeek V4 (80% cheaper than GPT-5.x) or Claude Opus 4.8 for favorable pricing.',
+            'High-security organizations choose Claude Opus 5 (Anthropic) for strong safety alignment, or Mistral (European data residency).',
+            'Cost-sensitive operations choose DeepSeek V4 (80% cheaper than GPT-5.x) or Claude Opus 5 for favorable pricing.',
             'Multimodal-heavy workloads choose Gemini 3 Pro (2M token context, superior video handling) or GPT-5.x.',
             'On-device deployments require Llama 4 (open-source, local inference).',
             'Real-time workloads (news analysis, market monitoring) choose Grok 4.1 (web access) or Gemini 3 Pro (limited real-time).',
@@ -22483,7 +22483,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Inside PromptQuorum, you can:',
           ],
           items: [
-            'Write a single prompt and send it to GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, and Grok 4.1 in parallel.',
+            'Write a single prompt and send it to GPT-5.x, Claude Opus 5, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, and Grok 4.1 in parallel.',
             'Compare outputs instantly to see which model produces the best results for your task.',
             'Calculate aggregate metrics (average cost, fastest response, consensus answer) to make data-driven decisions.',
             'Save your winning prompts and model selections as reusable templates.',
@@ -22560,9 +22560,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Frequently Asked Questions',
           isTldr: false,
           faqs: [
-            { q: 'What is the best frontier model in March 2026?', a: 'There is no universally "best" model — the choice depends on your task. GPT-5.x excels at reasoning and code. Claude Opus 4.8 dominates long-context analysis. Gemini 3 Pro handles multimodal tasks. Use PromptQuorum to test multiple models on your specific task and measure quality, speed, and cost.' },
-            { q: 'Which frontier model is cheapest?', a: 'DeepSeek V4 at $0.27/$1.1 per 1M tokens is 60–70% cheaper than GPT-5.x ($20/$80) and Claude Opus 4.8 ($5/$25). Llama 4 is free (open-source, local deployment). Trade-off: lower cost models sometimes have lower quality for specialized reasoning tasks.' },
-            { q: 'What is the difference between GPT-5.x and Claude Opus 4.8?', a: 'GPT-5.x: Excels at reasoning, code, analysis. 200K context. $20/$80 pricing. Multi-modal (image, video). Claude Opus 4.8: Stronger at long-context tasks, research. 1M context. Priced at $5/$25. Excellent safety alignment. No video support. For most tasks, test both — results vary by domain.' },
+            { q: 'What is the best frontier model in March 2026?', a: 'There is no universally "best" model — the choice depends on your task. GPT-5.x excels at reasoning and code. Claude Opus 5 dominates long-context analysis. Gemini 3 Pro handles multimodal tasks. Use PromptQuorum to test multiple models on your specific task and measure quality, speed, and cost.' },
+            { q: 'Which frontier model is cheapest?', a: 'DeepSeek V4 at $0.27/$1.1 per 1M tokens is 60–70% cheaper than GPT-5.x ($20/$80) and Claude Opus 5 ($5/$25). Llama 4 is free (open-source, local deployment). Trade-off: lower cost models sometimes have lower quality for specialized reasoning tasks.' },
+            { q: 'What is the difference between GPT-5.x and Claude Opus 5?', a: 'GPT-5.x: Excels at reasoning, code, analysis. 200K context. $20/$80 pricing. Multi-modal (image, video). Claude Opus 5: Stronger at long-context tasks, research. 1M context. Priced at $5/$25. Excellent safety alignment. No video support. For most tasks, test both — results vary by domain.' },
             { q: 'Which frontier model supports local/offline deployment?', a: 'Llama 4 (open-source, runs via Ollama, LM Studio, Jan AI) supports full local deployment. All other frontier models require cloud API access. If privacy and data residency are critical, Llama 4 is the only frontier option.' },
             { q: 'Should I use the same frontier model for all tasks?', a: 'No — different models excel at different tasks. Use PromptQuorum to dispatch your prompt to multiple frontier models and compare outputs. Cost, speed, and quality all vary by task. Testing your actual workload is more reliable than benchmarks.' },
           ],
@@ -22583,7 +22583,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         sources: {
           items: [
             'OpenAI GPT-5.x — https://platform.openai.com/docs/',
-            'Anthropic Claude Opus 4.8 — https://docs.anthropic.com/',
+            'Anthropic Claude Opus 5 — https://docs.anthropic.com/',
             'Google Gemini 3 Pro — https://ai.google.dev/',
             'Meta Llama 4 — https://github.com/meta-llama/llama',
           ],
@@ -22592,12 +22592,12 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     },
     es: {
       category: 'Comparación de modelos de IA',
-      title: 'Modelos de IA de frontera y biblioteca de prompts: GPT-5.x, Claude Opus 4.8, Gemini 3 Pro y más',
-      seoTitle: 'Modelos de IA de frontera 2026: GPT-5.x vs Claude Opus 4.8 vs Gemini',
-      intro: 'A julio de 2026, los modelos de IA de frontera representan la vanguardia del desarrollo de grandes modelos de lenguaje. Esta guía compara GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 y Grok 4.1 en razonamiento, coste, velocidad y rendimiento en tareas reales, con más de 170 prompts de evaluación para tus propias pruebas.',
+      title: 'Modelos de IA de frontera y biblioteca de prompts: GPT-5.x, Claude Opus 5, Gemini 3 Pro y más',
+      seoTitle: 'Modelos de IA de frontera 2026: GPT-5.x vs Claude Opus 5 vs Gemini',
+      intro: 'A julio de 2026, los modelos de IA de frontera representan la vanguardia del desarrollo de grandes modelos de lenguaje. Esta guía compara GPT-5.x, Claude Opus 5, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 y Grok 4.1 en razonamiento, coste, velocidad y rendimiento en tareas reales, con más de 170 prompts de evaluación para tus propias pruebas.',
       publishDate: 'Publicado el 24 de marzo de 2026',
       readTime: '15 min de lectura',
-      metaDescription: 'Compara GPT-5.x, Claude Opus 4.8, Gemini 3 Pro y DeepSeek V4 en razonamiento, coste, velocidad y tareas multimodales. Incluye más de 170 prompts de evaluación.',
+      metaDescription: 'Compara GPT-5.x, Claude Opus 5, Gemini 3 Pro y DeepSeek V4 en razonamiento, coste, velocidad y tareas multimodales. Incluye más de 170 prompts de evaluación.',
       educationalLevel: 'Intermediate',
       sections: {
         whatAreFrontier: {
@@ -22609,7 +22609,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'GPT-5.x (OpenAI): razonamiento multimodal, código y análisis',
-            'Claude Opus 4.8 (Anthropic): razonamiento de contexto largo y seguridad',
+            'Claude Opus 5 (Anthropic): razonamiento de contexto largo y seguridad',
             'Gemini 3 Pro (Google DeepMind): tareas multimodales y de razonamiento',
             'Llama 4 (Meta): open source, despliegue local o en la nube',
             'DeepSeek V4 (DeepSeek): razonamiento eficiente en coste',
@@ -22621,7 +22621,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whyComparison: {
           title: '¿Por qué comparar modelos de frontera?',
           content: [
-            'Ningún modelo de frontera destaca en todas las tareas. Tu elección de modelo depende de tu caso de uso concreto: los resúmenes de investigación favorecen a los modelos con razonamiento fuerte (Claude Opus 4.8, Gemini 3 Pro, DeepSeek V4). La generación y refactorización de código favorecen a los modelos con amplios datos de entrenamiento y contexto largo (GPT-5.x, Claude Opus 4.8). Los flujos de trabajo sensibles al coste favorecen a los modelos eficientes (Llama 4, DeepSeek V4). Las funciones en tiempo real favorecen a los modelos con acceso a la web (Grok 4.1).',
+            'Ningún modelo de frontera destaca en todas las tareas. Tu elección de modelo depende de tu caso de uso concreto: los resúmenes de investigación favorecen a los modelos con razonamiento fuerte (Claude Opus 5, Gemini 3 Pro, DeepSeek V4). La generación y refactorización de código favorecen a los modelos con amplios datos de entrenamiento y contexto largo (GPT-5.x, Claude Opus 5). Los flujos de trabajo sensibles al coste favorecen a los modelos eficientes (Llama 4, DeepSeek V4). Las funciones en tiempo real favorecen a los modelos con acceso a la web (Grok 4.1).',
             'Ejecutar el mismo prompt en varios modelos de frontera dentro de PromptQuorum revela qué modelo produce la salida de mayor calidad para tu tarea concreta.',
           ],
         },
@@ -22649,9 +22649,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '**GPT-5.x (OpenAI)**: mejor para razonamiento de propósito general, código y análisis. Razonamiento: excelente. Contexto: 200K tokens. Velocidad: rápida (0.5-2s). Coste: $20/$80 por 1M de tokens de entrada/salida. Multimodal: sí (imagen, vídeo). Tiempo real: no. Despliegue: solo API. Seguridad: excelente resistencia a jailbreaks.',
-            '**Claude Opus 4.8 (Anthropic)**: mejor para análisis de formato largo, investigación y revisión legal. Razonamiento: excelente. Contexto: 1M tokens. Velocidad: rápida (0.8-3s). Coste: $5/$25 por 1M de tokens de entrada/salida. Multimodal: sí (imagen). Tiempo real: no. Despliegue: solo API. Seguridad: alineamiento con IA constitucional.',
+            '**Claude Opus 5 (Anthropic)**: mejor para análisis de formato largo, investigación y revisión legal. Razonamiento: excelente. Contexto: 1M tokens. Velocidad: rápida (0.8-3s). Coste: $5/$25 por 1M de tokens de entrada/salida. Multimodal: sí (imagen). Tiempo real: no. Despliegue: solo API. Seguridad: alineamiento con IA constitucional.',
             '**Gemini 3 Pro (Google DeepMind)**: mejor para análisis multimodal y razonamiento entre modalidades. Razonamiento: excelente. Contexto: 2M tokens (el mayor). Velocidad: moderada (1-4s). Coste: $5/$20 por 1M de tokens de entrada/salida. Multimodal: sí (imagen, audio, vídeo). Tiempo real: sí (limitado). Despliegue: solo API. Seguridad: enfoque en IA responsable.',
-            '**Llama 4 (Meta)**: mejor para flujos de trabajo on-device, sensibles al coste o con la privacidad primero. Razonamiento: bueno (no tan fuerte como GPT-5.x o Claude Opus 4.8). Contexto: 128K tokens. Velocidad: varía según el hardware. Coste: gratis (open source). Multimodal: sí (imagen). Tiempo real: no. Despliegue: local, nube, on-premises. Seguridad: alineamiento impulsado por la comunidad.',
+            '**Llama 4 (Meta)**: mejor para flujos de trabajo on-device, sensibles al coste o con la privacidad primero. Razonamiento: bueno (no tan fuerte como GPT-5.x o Claude Opus 5). Contexto: 128K tokens. Velocidad: varía según el hardware. Coste: gratis (open source). Multimodal: sí (imagen). Tiempo real: no. Despliegue: local, nube, on-premises. Seguridad: alineamiento impulsado por la comunidad.',
             '**DeepSeek V4 (DeepSeek)**: mejor para razonamiento optimizado en coste e investigación en Asia. Razonamiento: muy bueno. Contexto: 128K tokens. Velocidad: rápida (0.5-1.5s). Coste: $0.27/$1.1 por 1M de tokens de entrada/salida (el más barato). Multimodal: sí (imagen). Tiempo real: no. Despliegue: API. Seguridad: entrenamiento de seguridad estándar.',
             '**Mistral Large 3 (Mistral)**: mejor para residencia de datos europea y razonamiento abierto. Razonamiento: muy bueno. Contexto: 128K tokens. Velocidad: rápida (0.6-2s). Coste: $3.15/$9.45 por 1M de tokens de entrada/salida. Multimodal: sí (imagen). Tiempo real: no. Despliegue: API, on-premises. Seguridad: alineamiento abierto y transparente.',
             '**Qwen3 (Alibaba)**: mejor para tareas multilingües y flujos de trabajo en Asia-Pacífico. Razonamiento: muy bueno. Contexto: 128K tokens. Velocidad: rápida (0.5-2s). Coste: $0.5/$1.5 por 1M de tokens de entrada/salida. Multimodal: sí (imagen, audio). Tiempo real: limitado. Despliegue: API, local. Seguridad: entrenamiento de seguridad multilingüe.',
@@ -22664,7 +22664,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'La mejor manera de evaluar modelos de frontera es ejecutar tu tarea real contra varios modelos en paralelo y medir calidad, velocidad y coste. Dentro de PromptQuorum puedes despachar un único prompt a los ocho modelos de frontera al mismo tiempo y comparar resultados en paralelo.',
             'Un flujo de trabajo de evaluación típico:',
             '1. Define tu tarea con claridad (por ejemplo, "Resume este artículo de investigación con 5 hallazgos clave").',
-            '2. Selecciona los modelos de frontera que quieres probar (por ejemplo, GPT-5.x, Claude Opus 4.8, Gemini 3 Pro).',
+            '2. Selecciona los modelos de frontera que quieres probar (por ejemplo, GPT-5.x, Claude Opus 5, Gemini 3 Pro).',
             '3. Despacha el mismo prompt a todos los modelos seleccionados en paralelo dentro de PromptQuorum.',
             '4. Compara las salidas por calidad, longitud, precisión y razonamiento.',
             '5. Calcula el coste por tarea y la velocidad efectiva de cada modelo.',
@@ -22694,8 +22694,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'Llamadas a funciones (uso de herramientas): capacidad de invocar APIs externas, bases de datos o código. Todos los modelos de frontera lo admiten.',
-            'Planificación de largo horizonte: pueden mantener el contexto y los objetivos a lo largo de más de 10 pasos. Claude Opus 4.8 y Gemini 3 Pro destacan aquí.',
-            'Recuperación ante errores: pueden detectar cuándo ha fallado una llamada a herramienta y reintentar con un enfoque distinto. DeepSeek V4 y Claude Opus 4.8 son los más fiables.',
+            'Planificación de largo horizonte: pueden mantener el contexto y los objetivos a lo largo de más de 10 pasos. Claude Opus 5 y Gemini 3 Pro destacan aquí.',
+            'Recuperación ante errores: pueden detectar cuándo ha fallado una llamada a herramienta y reintentar con un enfoque distinto. DeepSeek V4 y Claude Opus 5 son los más fiables.',
             'Retención de contexto: pueden recordar pasos anteriores y adaptar los siguientes según los resultados previos. Las ventanas de contexto más grandes (Gemini 3 Pro con 2M tokens) son ventajas significativas.',
           ],
         },
@@ -22706,7 +22706,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Dimensiones de seguridad a evaluar:',
           ],
           items: [
-            'Resistencia a jailbreaks: ¿qué tan difícil es lograr que el modelo ignore las directrices de seguridad? GPT-5.x y Claude Opus 4.8 tienen la resistencia más fuerte.',
+            'Resistencia a jailbreaks: ¿qué tan difícil es lograr que el modelo ignore las directrices de seguridad? GPT-5.x y Claude Opus 5 tienen la resistencia más fuerte.',
             'Comportamiento de rechazo: ¿rechaza el modelo las solicitudes dañinas? Todos los modelos de frontera lo hacen, pero el umbral varía.',
             'Privacidad de datos: ¿registra o aprende el modelo de tus prompts? Consulta la documentación de los modelos solo por API (sin estado).',
             'Transparencia: ¿publica el proveedor sus técnicas de alineamiento? Anthropic (Claude) y Mistral publican sus enfoques; otros son menos transparentes.',
@@ -22719,8 +22719,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'La selección empresarial debería ponderar coste, cumplimiento y previsibilidad del rendimiento. Estos son patrones habituales:',
           ],
           items: [
-            'Las organizaciones de alta seguridad eligen Claude Opus 4.8 (Anthropic) por su fuerte alineamiento de seguridad, o Mistral (residencia de datos europea).',
-            'Las operaciones sensibles al coste eligen DeepSeek V4 (80 % más barato que GPT-5.x) o Claude Opus 4.8 por su precio favorable.',
+            'Las organizaciones de alta seguridad eligen Claude Opus 5 (Anthropic) por su fuerte alineamiento de seguridad, o Mistral (residencia de datos europea).',
+            'Las operaciones sensibles al coste eligen DeepSeek V4 (80 % más barato que GPT-5.x) o Claude Opus 5 por su precio favorable.',
             'Las cargas de trabajo con mucho contenido multimodal eligen Gemini 3 Pro (contexto de 2M tokens, manejo superior de vídeo) o GPT-5.x.',
             'Los despliegues on-device requieren Llama 4 (open source, inferencia local).',
             'Las cargas de trabajo en tiempo real (análisis de noticias, monitorización de mercados) eligen Grok 4.1 (acceso a la web) o Gemini 3 Pro (tiempo real limitado).',
@@ -22746,7 +22746,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Dentro de PromptQuorum puedes:',
           ],
           items: [
-            'Escribir un único prompt y enviarlo a GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 y Grok 4.1 en paralelo.',
+            'Escribir un único prompt y enviarlo a GPT-5.x, Claude Opus 5, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 y Grok 4.1 en paralelo.',
             'Comparar las salidas al instante para ver qué modelo produce los mejores resultados para tu tarea.',
             'Calcular métricas agregadas (coste medio, respuesta más rápida, respuesta de consenso) para tomar decisiones basadas en datos.',
             'Guardar tus prompts ganadores y las selecciones de modelo como plantillas reutilizables.',
@@ -22823,9 +22823,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Preguntas frecuentes',
           isTldr: false,
           faqs: [
-            { q: '¿Cuál es el mejor modelo de frontera en marzo de 2026?', a: 'No existe un modelo "mejor" universal: la elección depende de tu tarea. GPT-5.x destaca en razonamiento y código. Claude Opus 4.8 domina el análisis de contexto largo. Gemini 3 Pro gestiona las tareas multimodales. Usa PromptQuorum para probar varios modelos en tu tarea concreta y medir calidad, velocidad y coste.' },
-            { q: '¿Qué modelo de frontera es el más barato?', a: 'DeepSeek V4, a $0.27/$1.1 por 1M de tokens, es entre un 60 y un 70 % más barato que GPT-5.x ($20/$80) y Claude Opus 4.8 ($5/$25). Llama 4 es gratis (open source, despliegue local). Compensación: los modelos de menor coste a veces tienen menor calidad en tareas de razonamiento especializado.' },
-            { q: '¿Cuál es la diferencia entre GPT-5.x y Claude Opus 4.8?', a: 'GPT-5.x: destaca en razonamiento, código y análisis. Contexto de 200K. Precio $20/$80. Multimodal (imagen, vídeo). Claude Opus 4.8: más fuerte en tareas de contexto largo e investigación. Contexto de 1M. Precio $5/$25. Excelente alineamiento de seguridad. Sin soporte de vídeo. Para la mayoría de las tareas, prueba ambos: los resultados varían según el dominio.' },
+            { q: '¿Cuál es el mejor modelo de frontera en marzo de 2026?', a: 'No existe un modelo "mejor" universal: la elección depende de tu tarea. GPT-5.x destaca en razonamiento y código. Claude Opus 5 domina el análisis de contexto largo. Gemini 3 Pro gestiona las tareas multimodales. Usa PromptQuorum para probar varios modelos en tu tarea concreta y medir calidad, velocidad y coste.' },
+            { q: '¿Qué modelo de frontera es el más barato?', a: 'DeepSeek V4, a $0.27/$1.1 por 1M de tokens, es entre un 60 y un 70 % más barato que GPT-5.x ($20/$80) y Claude Opus 5 ($5/$25). Llama 4 es gratis (open source, despliegue local). Compensación: los modelos de menor coste a veces tienen menor calidad en tareas de razonamiento especializado.' },
+            { q: '¿Cuál es la diferencia entre GPT-5.x y Claude Opus 5?', a: 'GPT-5.x: destaca en razonamiento, código y análisis. Contexto de 200K. Precio $20/$80. Multimodal (imagen, vídeo). Claude Opus 5: más fuerte en tareas de contexto largo e investigación. Contexto de 1M. Precio $5/$25. Excelente alineamiento de seguridad. Sin soporte de vídeo. Para la mayoría de las tareas, prueba ambos: los resultados varían según el dominio.' },
             { q: '¿Qué modelo de frontera admite despliegue local u offline?', a: 'Llama 4 (open source, se ejecuta con Ollama, LM Studio, Jan AI) admite despliegue local completo. El resto de los modelos de frontera requieren acceso a una API en la nube. Si la privacidad y la residencia de datos son críticas, Llama 4 es la única opción de frontera.' },
             { q: '¿Debería usar el mismo modelo de frontera para todas las tareas?', a: 'No: distintos modelos destacan en distintas tareas. Usa PromptQuorum para despachar tu prompt a varios modelos de frontera y comparar las salidas. El coste, la velocidad y la calidad varían según la tarea. Probar tu carga de trabajo real es más fiable que los benchmarks.' },
           ],
@@ -22846,7 +22846,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         sources: {
           items: [
             'OpenAI GPT-5.x — https://platform.openai.com/docs/',
-            'Anthropic Claude Opus 4.8 — https://docs.anthropic.com/',
+            'Anthropic Claude Opus 5 — https://docs.anthropic.com/',
             'Google Gemini 3 Pro — https://ai.google.dev/',
             'Meta Llama 4 — https://github.com/meta-llama/llama',
           ],
@@ -22855,12 +22855,12 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     },
     ar: {
       category: 'مقارنة نماذج الذكاء الاصطناعي',
-      title: 'نماذج الذكاء الاصطناعي المتقدمة ومكتبة الموجّهات: GPT-5.x وClaude Opus 4.8 وGemini 3 Pro وأكثر',
-      seoTitle: 'نماذج الذكاء الاصطناعي المتقدمة 2026: GPT-5.x مقابل Claude Opus 4.8 مقابل Gemini',
-      intro: 'حتى يوليو 2026، تمثّل نماذج الذكاء الاصطناعي المتقدمة أحدث ما وصل إليه تطوير النماذج اللغوية الكبيرة. يقارن هذا الدليل بين GPT-5.x وClaude Opus 4.8 وGemini 3 Pro وLlama 4 وDeepSeek V4 وMistral Large 3 وQwen3 وGrok 4.1 من حيث الاستدلال والتكلفة والسرعة والأداء في المهام الواقعية — مع أكثر من 170 موجّه تقييم لاختبارك الخاص.',
+      title: 'نماذج الذكاء الاصطناعي المتقدمة ومكتبة الموجّهات: GPT-5.x وClaude Opus 5 وGemini 3 Pro وأكثر',
+      seoTitle: 'نماذج الذكاء الاصطناعي المتقدمة 2026: GPT-5.x مقابل Claude Opus 5 مقابل Gemini',
+      intro: 'حتى يوليو 2026، تمثّل نماذج الذكاء الاصطناعي المتقدمة أحدث ما وصل إليه تطوير النماذج اللغوية الكبيرة. يقارن هذا الدليل بين GPT-5.x وClaude Opus 5 وGemini 3 Pro وLlama 4 وDeepSeek V4 وMistral Large 3 وQwen3 وGrok 4.1 من حيث الاستدلال والتكلفة والسرعة والأداء في المهام الواقعية — مع أكثر من 170 موجّه تقييم لاختبارك الخاص.',
       publishDate: 'نُشر في 24 مارس 2026',
       readTime: '15 دقائق للقراءة',
-      metaDescription: 'قارن بين GPT-5.x وClaude Opus 4.8 وGemini 3 Pro وDeepSeek V4 من حيث الاستدلال والتكلفة والسرعة والمهام متعددة الوسائط. يتضمّن أكثر من 170 موجّه تقييم.',
+      metaDescription: 'قارن بين GPT-5.x وClaude Opus 5 وGemini 3 Pro وDeepSeek V4 من حيث الاستدلال والتكلفة والسرعة والمهام متعددة الوسائط. يتضمّن أكثر من 170 موجّه تقييم.',
       educationalLevel: 'Intermediate',
       sections: {
         whatAreFrontier: {
@@ -22872,7 +22872,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'GPT-5.x (OpenAI) — استدلال متعدد الوسائط وبرمجة وتحليل',
-            'Claude Opus 4.8 (Anthropic) — استدلال بسياق طويل وأمان',
+            'Claude Opus 5 (Anthropic) — استدلال بسياق طويل وأمان',
             'Gemini 3 Pro (Google DeepMind) — مهام متعددة الوسائط والاستدلال',
             'Llama 4 (Meta) — مفتوح المصدر، نشر على الجهاز أو في السحابة',
             'DeepSeek V4 (DeepSeek) — استدلال فعّال من حيث التكلفة',
@@ -22884,7 +22884,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whyComparison: {
           title: 'لماذا نقارن بين النماذج المتقدمة؟',
           content: [
-            'لا يوجد نموذج متقدم واحد يتفوّق في جميع المهام. يعتمد اختيارك للنموذج على حالة الاستخدام الخاصة بك: تفضّل ملخّصات البحث النماذج ذات الاستدلال القوي (Claude Opus 4.8 وGemini 3 Pro وDeepSeek V4). ويفضّل توليد الشيفرة وإعادة هيكلتها النماذج ذات بيانات التدريب الواسعة والسياق الطويل (GPT-5.x وClaude Opus 4.8). وتفضّل سير العمل الحسّاسة للتكلفة النماذج الفعّالة (Llama 4 وDeepSeek V4). وتفضّل الميزات الآنية النماذج ذات الوصول إلى الويب (Grok 4.1).',
+            'لا يوجد نموذج متقدم واحد يتفوّق في جميع المهام. يعتمد اختيارك للنموذج على حالة الاستخدام الخاصة بك: تفضّل ملخّصات البحث النماذج ذات الاستدلال القوي (Claude Opus 5 وGemini 3 Pro وDeepSeek V4). ويفضّل توليد الشيفرة وإعادة هيكلتها النماذج ذات بيانات التدريب الواسعة والسياق الطويل (GPT-5.x وClaude Opus 5). وتفضّل سير العمل الحسّاسة للتكلفة النماذج الفعّالة (Llama 4 وDeepSeek V4). وتفضّل الميزات الآنية النماذج ذات الوصول إلى الويب (Grok 4.1).',
             'تشغيل الموجّه نفسه عبر عدة نماذج متقدمة داخل PromptQuorum يكشف عن النموذج الذي يقدّم أعلى جودة مخرجات لمهمتك المحدّدة.',
           ],
         },
@@ -22912,9 +22912,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '**GPT-5.x (OpenAI)** — الأفضل لـ: الاستدلال العام والبرمجة والتحليل. الاستدلال: ممتاز. السياق: 200K tokens. السرعة: سريع (0.5-2s). التكلفة: $20/$80 لكل 1M input/output tokens. متعدد الوسائط: نعم (صورة، فيديو). آني: لا. النشر: API فقط. الأمان: مقاومة ممتازة للاختراق.',
-            '**Claude Opus 4.8 (Anthropic)** — الأفضل لـ: التحليل المطوّل والبحث والمراجعة القانونية. الاستدلال: ممتاز. السياق: 1M tokens. السرعة: سريع (0.8-3s). التكلفة: $5/$25 لكل 1M input/output tokens. متعدد الوسائط: نعم (صورة). آني: لا. النشر: API فقط. الأمان: مواءمة Constitutional AI.',
+            '**Claude Opus 5 (Anthropic)** — الأفضل لـ: التحليل المطوّل والبحث والمراجعة القانونية. الاستدلال: ممتاز. السياق: 1M tokens. السرعة: سريع (0.8-3s). التكلفة: $5/$25 لكل 1M input/output tokens. متعدد الوسائط: نعم (صورة). آني: لا. النشر: API فقط. الأمان: مواءمة Constitutional AI.',
             '**Gemini 3 Pro (Google DeepMind)** — الأفضل لـ: التحليل متعدد الوسائط والاستدلال عبر الوسائط. الاستدلال: ممتاز. السياق: 2M tokens (الأكبر). السرعة: متوسط (1-4s). التكلفة: $5/$20 لكل 1M input/output tokens. متعدد الوسائط: نعم (صورة، صوت، فيديو). آني: نعم (محدود). النشر: API فقط. الأمان: تركيز على الذكاء الاصطناعي المسؤول.',
-            '**Llama 4 (Meta)** — الأفضل لـ: سير العمل على الجهاز أو الحسّاس للتكلفة أو الذي يضع الخصوصية أولاً. الاستدلال: جيد (ليس بقوة GPT-5.x أو Claude Opus 4.8). السياق: 128K tokens. السرعة: تتفاوت حسب العتاد. التكلفة: مجاني (مفتوح المصدر). متعدد الوسائط: نعم (صورة). آني: لا. النشر: محلي، سحابي، داخل المؤسسة. الأمان: مواءمة مدفوعة بالمجتمع.',
+            '**Llama 4 (Meta)** — الأفضل لـ: سير العمل على الجهاز أو الحسّاس للتكلفة أو الذي يضع الخصوصية أولاً. الاستدلال: جيد (ليس بقوة GPT-5.x أو Claude Opus 5). السياق: 128K tokens. السرعة: تتفاوت حسب العتاد. التكلفة: مجاني (مفتوح المصدر). متعدد الوسائط: نعم (صورة). آني: لا. النشر: محلي، سحابي، داخل المؤسسة. الأمان: مواءمة مدفوعة بالمجتمع.',
             '**DeepSeek V4 (DeepSeek)** — الأفضل لـ: الاستدلال المُحسَّن للتكلفة والبحث في آسيا. الاستدلال: جيد جدًا. السياق: 128K tokens. السرعة: سريع (0.5-1.5s). التكلفة: $0.27/$1.1 لكل 1M input/output tokens (الأرخص). متعدد الوسائط: نعم (صورة). آني: لا. النشر: API. الأمان: تدريب أمان قياسي.',
             '**Mistral Large 3 (Mistral)** — الأفضل لـ: موقع البيانات الأوروبي والاستدلال المفتوح. الاستدلال: جيد جدًا. السياق: 128K tokens. السرعة: سريع (0.6-2s). التكلفة: $3.15/$9.45 لكل 1M input/output tokens. متعدد الوسائط: نعم (صورة). آني: لا. النشر: API، داخل المؤسسة. الأمان: مواءمة مفتوحة وشفّافة.',
             '**Qwen3 (Alibaba)** — الأفضل لـ: المهام متعددة اللغات وسير العمل في آسيا والمحيط الهادئ. الاستدلال: جيد جدًا. السياق: 128K tokens. السرعة: سريع (0.5-2s). التكلفة: $0.5/$1.5 لكل 1M input/output tokens. متعدد الوسائط: نعم (صورة، صوت). آني: محدود. النشر: API، محلي. الأمان: تدريب أمان متعدد اللغات.',
@@ -22927,7 +22927,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'أفضل طريقة لتقييم النماذج المتقدمة هي تشغيل مهمتك الفعلية ضدّ عدة نماذج على التوازي وقياس الجودة والسرعة والتكلفة. داخل PromptQuorum، يمكنك إرسال موجّه واحد إلى جميع النماذج المتقدمة الثمانية في الوقت نفسه ومقارنة النتائج جنبًا إلى جنب.',
             'سير عمل تقييم نموذجي:',
             '1. عرّف مهمتك بوضوح (مثل: "لخّص هذه الورقة البحثية بخمس نتائج رئيسية").',
-            '2. اختر النماذج المتقدمة التي تريد اختبارها (مثل: GPT-5.x وClaude Opus 4.8 وGemini 3 Pro).',
+            '2. اختر النماذج المتقدمة التي تريد اختبارها (مثل: GPT-5.x وClaude Opus 5 وGemini 3 Pro).',
             '3. أرسل الموجّه نفسه إلى جميع النماذج المختارة على التوازي داخل PromptQuorum.',
             '4. قارن المخرجات من حيث الجودة والطول والدقة والاستدلال.',
             '5. احسب التكلفة لكل مهمة والسرعة الفعّالة لكل نموذج.',
@@ -22957,8 +22957,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'استدعاء الدوال (استخدام الأدوات) — القدرة على استدعاء واجهات API خارجية أو قواعد بيانات أو شيفرة. تدعم جميع النماذج المتقدمة ذلك.',
-            'التخطيط بعيد المدى — يمكنه الحفاظ على السياق والأهداف عبر أكثر من 10 خطوات. يتفوّق Claude Opus 4.8 وGemini 3 Pro هنا.',
-            'التعافي من الأخطاء — يمكنه اكتشاف فشل استدعاء أداة والمحاولة مجددًا بنهج مختلف. DeepSeek V4 وClaude Opus 4.8 هما الأكثر موثوقية.',
+            'التخطيط بعيد المدى — يمكنه الحفاظ على السياق والأهداف عبر أكثر من 10 خطوات. يتفوّق Claude Opus 5 وGemini 3 Pro هنا.',
+            'التعافي من الأخطاء — يمكنه اكتشاف فشل استدعاء أداة والمحاولة مجددًا بنهج مختلف. DeepSeek V4 وClaude Opus 5 هما الأكثر موثوقية.',
             'الاحتفاظ بالسياق — يمكنه تذكّر الخطوات السابقة وتكييف الخطوات اللاحقة بناءً على النتائج السابقة. تشكّل نوافذ السياق الأكبر (Gemini 3 Pro عند 2M tokens) ميزات مهمة.',
           ],
         },
@@ -22969,7 +22969,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'أبعاد الأمان التي يجب تقييمها:',
           ],
           items: [
-            'مقاومة الاختراق — ما مدى صعوبة جعل النموذج يتجاهل إرشادات الأمان؟ يتمتّع GPT-5.x وClaude Opus 4.8 بأقوى مقاومة.',
+            'مقاومة الاختراق — ما مدى صعوبة جعل النموذج يتجاهل إرشادات الأمان؟ يتمتّع GPT-5.x وClaude Opus 5 بأقوى مقاومة.',
             'سلوك الرفض — هل يرفض النموذج الطلبات الضارّة؟ تفعل جميع النماذج المتقدمة ذلك، لكن العتبة تتفاوت.',
             'خصوصية البيانات — هل يسجّل النموذج موجّهاتك أو يتعلّم منها؟ راجع الوثائق للنماذج القائمة على API فقط (عديمة الحالة).',
             'الشفافية — هل ينشر المزوّد تقنيات المواءمة؟ تنشر Anthropic (Claude) وMistral مناهجهما؛ وغيرهما أقلّ شفافية.',
@@ -22982,8 +22982,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'ينبغي أن يوازن اختيار المؤسسة بين التكلفة والامتثال وقابلية التنبؤ بالأداء. إليك أنماطًا شائعة:',
           ],
           items: [
-            'تختار المؤسسات عالية الأمان Claude Opus 4.8 (Anthropic) لمواءمة الأمان القوية، أو Mistral (موقع بيانات أوروبي).',
-            'تختار العمليات الحسّاسة للتكلفة DeepSeek V4 (أرخص بنسبة 80% من GPT-5.x) أو Claude Opus 4.8 لتسعيره المناسب.',
+            'تختار المؤسسات عالية الأمان Claude Opus 5 (Anthropic) لمواءمة الأمان القوية، أو Mistral (موقع بيانات أوروبي).',
+            'تختار العمليات الحسّاسة للتكلفة DeepSeek V4 (أرخص بنسبة 80% من GPT-5.x) أو Claude Opus 5 لتسعيره المناسب.',
             'تختار الأعباء كثيفة الوسائط المتعددة Gemini 3 Pro (سياق 2M token ومعالجة فيديو متفوّقة) أو GPT-5.x.',
             'تتطلّب عمليات النشر على الجهاز Llama 4 (مفتوح المصدر، استدلال محلي).',
             'تختار الأعباء الآنية (تحليل الأخبار ومراقبة السوق) Grok 4.1 (وصول إلى الويب) أو Gemini 3 Pro (وصول آني محدود).',
@@ -23009,7 +23009,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'داخل PromptQuorum، يمكنك:',
           ],
           items: [
-            'كتابة موجّه واحد وإرساله إلى GPT-5.x وClaude Opus 4.8 وGemini 3 Pro وLlama 4 وDeepSeek V4 وMistral Large 3 وQwen3 وGrok 4.1 على التوازي.',
+            'كتابة موجّه واحد وإرساله إلى GPT-5.x وClaude Opus 5 وGemini 3 Pro وLlama 4 وDeepSeek V4 وMistral Large 3 وQwen3 وGrok 4.1 على التوازي.',
             'مقارنة المخرجات فورًا لمعرفة النموذج الذي يقدّم أفضل النتائج لمهمتك.',
             'حساب المقاييس الإجمالية (متوسط التكلفة، أسرع استجابة، إجابة الإجماع) لاتّخاذ قرارات مبنية على البيانات.',
             'حفظ موجّهاتك الفائزة واختيارات النماذج كقوالب قابلة لإعادة الاستخدام.',
@@ -23086,9 +23086,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'الأسئلة الشائعة',
           isTldr: false,
           faqs: [
-            { q: 'ما أفضل نموذج متقدم في مارس 2026؟', a: 'لا يوجد نموذج "أفضل" على نحو شامل — يعتمد الاختيار على مهمتك. يتفوّق GPT-5.x في الاستدلال والبرمجة. ويهيمن Claude Opus 4.8 على التحليل بالسياق الطويل. ويتعامل Gemini 3 Pro مع المهام متعددة الوسائط. استخدم PromptQuorum لاختبار عدة نماذج على مهمتك المحدّدة وقياس الجودة والسرعة والتكلفة.' },
-            { q: 'أي نموذج متقدم هو الأرخص؟', a: 'DeepSeek V4 بسعر $0.27/$1.1 لكل 1M tokens أرخص بنسبة 60–70% من GPT-5.x ($20/$80) وClaude Opus 4.8 ($5/$25). وLlama 4 مجاني (مفتوح المصدر، نشر محلي). المقايضة: النماذج الأقلّ تكلفة تكون أحيانًا أدنى جودة في مهام الاستدلال المتخصّصة.' },
-            { q: 'ما الفرق بين GPT-5.x وClaude Opus 4.8؟', a: 'GPT-5.x: يتفوّق في الاستدلال والبرمجة والتحليل. سياق 200K. تسعير $20/$80. متعدد الوسائط (صورة، فيديو). Claude Opus 4.8: أقوى في مهام السياق الطويل والبحث. سياق 1M. مُسعّر بـ $5/$25. مواءمة أمان ممتازة. لا يدعم الفيديو. لمعظم المهام، اختبر كليهما — تتفاوت النتائج حسب المجال.' },
+            { q: 'ما أفضل نموذج متقدم في مارس 2026؟', a: 'لا يوجد نموذج "أفضل" على نحو شامل — يعتمد الاختيار على مهمتك. يتفوّق GPT-5.x في الاستدلال والبرمجة. ويهيمن Claude Opus 5 على التحليل بالسياق الطويل. ويتعامل Gemini 3 Pro مع المهام متعددة الوسائط. استخدم PromptQuorum لاختبار عدة نماذج على مهمتك المحدّدة وقياس الجودة والسرعة والتكلفة.' },
+            { q: 'أي نموذج متقدم هو الأرخص؟', a: 'DeepSeek V4 بسعر $0.27/$1.1 لكل 1M tokens أرخص بنسبة 60–70% من GPT-5.x ($20/$80) وClaude Opus 5 ($5/$25). وLlama 4 مجاني (مفتوح المصدر، نشر محلي). المقايضة: النماذج الأقلّ تكلفة تكون أحيانًا أدنى جودة في مهام الاستدلال المتخصّصة.' },
+            { q: 'ما الفرق بين GPT-5.x وClaude Opus 5؟', a: 'GPT-5.x: يتفوّق في الاستدلال والبرمجة والتحليل. سياق 200K. تسعير $20/$80. متعدد الوسائط (صورة، فيديو). Claude Opus 5: أقوى في مهام السياق الطويل والبحث. سياق 1M. مُسعّر بـ $5/$25. مواءمة أمان ممتازة. لا يدعم الفيديو. لمعظم المهام، اختبر كليهما — تتفاوت النتائج حسب المجال.' },
             { q: 'أي نموذج متقدم يدعم النشر المحلي/دون اتصال؟', a: 'يدعم Llama 4 (مفتوح المصدر، يعمل عبر Ollama وLM Studio وJan AI) النشر المحلي الكامل. تتطلّب جميع النماذج المتقدمة الأخرى الوصول إلى واجهة API سحابية. إذا كانت الخصوصية وموقع البيانات حاسمين، فإن Llama 4 هو الخيار المتقدم الوحيد.' },
             { q: 'هل ينبغي أن أستخدم النموذج المتقدم نفسه لجميع المهام؟', a: 'لا — تتفوّق نماذج مختلفة في مهام مختلفة. استخدم PromptQuorum لإرسال موجّهك إلى عدة نماذج متقدمة ومقارنة المخرجات. تتفاوت التكلفة والسرعة والجودة حسب المهمة. اختبار عبء عملك الفعلي أكثر موثوقية من الاختبارات المعيارية.' },
           ],
@@ -23109,7 +23109,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         sources: {
           items: [
             'OpenAI GPT-5.x — https://platform.openai.com/docs/',
-            'Anthropic Claude Opus 4.8 — https://docs.anthropic.com/',
+            'Anthropic Claude Opus 5 — https://docs.anthropic.com/',
             'Google Gemini 3 Pro — https://ai.google.dev/',
             'Meta Llama 4 — https://github.com/meta-llama/llama',
           ],
@@ -23118,12 +23118,12 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     },
     ko: {
       category: 'AI Model Comparison',
-      title: '프런티어 AI 모델과 프롬프트 라이브러리: GPT-5.x, Claude Opus 4.8, Gemini 3 Pro 그리고 그 이상',
-      seoTitle: '2026년 프런티어 AI 모델: GPT-5.x vs Claude Opus 4.8 vs Gemini',
-      intro: '2026년 7월 현재, 프런티어 AI 모델은 대규모 언어 모델 개발의 최전선을 대표합니다. 이 가이드는 GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, Grok 4.1을 추론, 비용, 속도, 실무 작업 성능 측면에서 비교하며, 직접 테스트할 수 있는 170개 이상의 평가 프롬프트를 함께 제공합니다.',
+      title: '프런티어 AI 모델과 프롬프트 라이브러리: GPT-5.x, Claude Opus 5, Gemini 3 Pro 그리고 그 이상',
+      seoTitle: '2026년 프런티어 AI 모델: GPT-5.x vs Claude Opus 5 vs Gemini',
+      intro: '2026년 7월 현재, 프런티어 AI 모델은 대규모 언어 모델 개발의 최전선을 대표합니다. 이 가이드는 GPT-5.x, Claude Opus 5, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, Grok 4.1을 추론, 비용, 속도, 실무 작업 성능 측면에서 비교하며, 직접 테스트할 수 있는 170개 이상의 평가 프롬프트를 함께 제공합니다.',
       publishDate: 'Published March 24, 2026',
       readTime: '15분 읽기',
-      metaDescription: 'GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, DeepSeek V4를 추론, 비용, 속도, 멀티모달 작업 측면에서 비교합니다. 170개 이상의 평가 프롬프트 포함.',
+      metaDescription: 'GPT-5.x, Claude Opus 5, Gemini 3 Pro, DeepSeek V4를 추론, 비용, 속도, 멀티모달 작업 측면에서 비교합니다. 170개 이상의 평가 프롬프트 포함.',
       educationalLevel: 'Intermediate',
       sections: {
         whatAreFrontier: {
@@ -23135,7 +23135,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'GPT-5.x (OpenAI) — 멀티모달 추론, 코드, 분석',
-            'Claude Opus 4.8 (Anthropic) — 장문맥 추론과 안전성',
+            'Claude Opus 5 (Anthropic) — 장문맥 추론과 안전성',
             'Gemini 3 Pro (Google DeepMind) — 멀티모달 및 추론 작업',
             'Llama 4 (Meta) — 오픈소스, 온디바이스 또는 클라우드 배포',
             'DeepSeek V4 (DeepSeek) — 비용 효율적 추론',
@@ -23147,7 +23147,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whyComparison: {
           title: '프런티어 모델을 왜 비교해야 합니까?',
           content: [
-            '모든 작업에서 뛰어난 단일 프런티어 모델은 존재하지 않습니다. 모델 선택은 사용 사례에 따라 달라집니다. 연구 요약은 강력한 추론 능력을 가진 모델(Claude Opus 4.8, Gemini 3 Pro, DeepSeek V4)이 유리합니다. 코드 생성과 리팩터링은 폭넓은 학습 데이터와 긴 문맥을 갖춘 모델(GPT-5.x, Claude Opus 4.8)이 유리합니다. 비용에 민감한 워크플로는 효율적인 모델(Llama 4, DeepSeek V4)이 유리합니다. 실시간 기능은 웹 접근이 가능한 모델(Grok 4.1)이 유리합니다.',
+            '모든 작업에서 뛰어난 단일 프런티어 모델은 존재하지 않습니다. 모델 선택은 사용 사례에 따라 달라집니다. 연구 요약은 강력한 추론 능력을 가진 모델(Claude Opus 5, Gemini 3 Pro, DeepSeek V4)이 유리합니다. 코드 생성과 리팩터링은 폭넓은 학습 데이터와 긴 문맥을 갖춘 모델(GPT-5.x, Claude Opus 5)이 유리합니다. 비용에 민감한 워크플로는 효율적인 모델(Llama 4, DeepSeek V4)이 유리합니다. 실시간 기능은 웹 접근이 가능한 모델(Grok 4.1)이 유리합니다.',
             'PromptQuorum에서 동일한 프롬프트를 여러 프런티어 모델에 실행하면, 특정 작업에 대해 어떤 모델이 가장 높은 품질의 출력을 내는지 확인할 수 있습니다.',
           ],
         },
@@ -23175,9 +23175,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '**GPT-5.x (OpenAI)** — 적합 용도: 범용 추론, 코드, 분석. 추론: 우수. 문맥: 200K 토큰. 속도: 빠름(0.5-2s). 비용: 1M 입력/출력 토큰당 $20/$80. 멀티모달: 예(이미지, 비디오). 실시간: 아니오. 배포: API 전용. 안전성: 뛰어난 탈옥 저항력.',
-            '**Claude Opus 4.8 (Anthropic)** — 적합 용도: 장문 분석, 연구, 법률 검토. 추론: 우수. 문맥: 1M 토큰. 속도: 빠름(0.8-3s). 비용: 1M 입력/출력 토큰당 $5/$25. 멀티모달: 예(이미지). 실시간: 아니오. 배포: API 전용. 안전성: Constitutional AI 정렬.',
+            '**Claude Opus 5 (Anthropic)** — 적합 용도: 장문 분석, 연구, 법률 검토. 추론: 우수. 문맥: 1M 토큰. 속도: 빠름(0.8-3s). 비용: 1M 입력/출력 토큰당 $5/$25. 멀티모달: 예(이미지). 실시간: 아니오. 배포: API 전용. 안전성: Constitutional AI 정렬.',
             '**Gemini 3 Pro (Google DeepMind)** — 적합 용도: 멀티모달 분석, 모달리티 간 추론. 추론: 우수. 문맥: 2M 토큰(최대). 속도: 보통(1-4s). 비용: 1M 입력/출력 토큰당 $5/$20. 멀티모달: 예(이미지, 오디오, 비디오). 실시간: 예(제한적). 배포: API 전용. 안전성: 책임 있는 AI 중심.',
-            '**Llama 4 (Meta)** — 적합 용도: 온디바이스, 비용 민감형, 프라이버시 우선 워크플로. 추론: 양호(GPT-5.x나 Claude Opus 4.8만큼 강하지는 않음). 문맥: 128K 토큰. 속도: 하드웨어에 따라 다름. 비용: 무료(오픈소스). 멀티모달: 예(이미지). 실시간: 아니오. 배포: 로컬, 클라우드, 온프레미스. 안전성: 커뮤니티 주도 정렬.',
+            '**Llama 4 (Meta)** — 적합 용도: 온디바이스, 비용 민감형, 프라이버시 우선 워크플로. 추론: 양호(GPT-5.x나 Claude Opus 5만큼 강하지는 않음). 문맥: 128K 토큰. 속도: 하드웨어에 따라 다름. 비용: 무료(오픈소스). 멀티모달: 예(이미지). 실시간: 아니오. 배포: 로컬, 클라우드, 온프레미스. 안전성: 커뮤니티 주도 정렬.',
             '**DeepSeek V4 (DeepSeek)** — 적합 용도: 비용 최적화 추론, 아시아 지역 연구. 추론: 매우 우수. 문맥: 128K 토큰. 속도: 빠름(0.5-1.5s). 비용: 1M 입력/출력 토큰당 $0.27/$1.1(최저가). 멀티모달: 예(이미지). 실시간: 아니오. 배포: API. 안전성: 표준 안전 학습.',
             '**Mistral Large 3 (Mistral)** — 적합 용도: 유럽 데이터 소재지, 개방형 추론. 추론: 매우 우수. 문맥: 128K 토큰. 속도: 빠름(0.6-2s). 비용: 1M 입력/출력 토큰당 $3.15/$9.45. 멀티모달: 예(이미지). 실시간: 아니오. 배포: API, 온프레미스. 안전성: 개방적이고 투명한 정렬.',
             '**Qwen3 (Alibaba)** — 적합 용도: 다국어 작업, 아시아·태평양 워크플로. 추론: 매우 우수. 문맥: 128K 토큰. 속도: 빠름(0.5-2s). 비용: 1M 입력/출력 토큰당 $0.5/$1.5. 멀티모달: 예(이미지, 오디오). 실시간: 제한적. 배포: API, 로컬. 안전성: 다국어 안전 학습.',
@@ -23190,7 +23190,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '프런티어 모델을 평가하는 가장 좋은 방법은 실제 작업을 여러 모델에 병렬로 실행하고 품질, 속도, 비용을 측정하는 것입니다. PromptQuorum에서는 하나의 프롬프트를 여덟 개 프런티어 모델 모두에 동시에 디스패치하고 결과를 나란히 비교할 수 있습니다.',
             '일반적인 평가 워크플로는 다음과 같습니다:',
             '1. 작업을 명확히 정의합니다(예: "이 연구 논문을 5가지 핵심 결과로 요약하시오").',
-            '2. 테스트하려는 프런티어 모델을 선택합니다(예: GPT-5.x, Claude Opus 4.8, Gemini 3 Pro).',
+            '2. 테스트하려는 프런티어 모델을 선택합니다(예: GPT-5.x, Claude Opus 5, Gemini 3 Pro).',
             '3. PromptQuorum에서 동일한 프롬프트를 선택한 모든 모델에 병렬로 디스패치합니다.',
             '4. 품질, 길이, 정확성, 추론 측면에서 출력을 비교합니다.',
             '5. 각 모델의 작업당 비용과 실효 속도를 계산합니다.',
@@ -23220,8 +23220,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '함수 호출(도구 사용) — 외부 API, 데이터베이스, 코드를 호출하는 능력. 모든 프런티어 모델이 이를 지원합니다.',
-            '장기 계획 수립 — 10단계 이상에 걸쳐 문맥과 목표를 유지할 수 있습니다. Claude Opus 4.8과 Gemini 3 Pro가 여기서 뛰어납니다.',
-            '오류 복구 — 도구 호출이 실패했을 때 이를 감지하고 다른 접근 방식으로 재시도할 수 있습니다. DeepSeek V4와 Claude Opus 4.8이 가장 안정적입니다.',
+            '장기 계획 수립 — 10단계 이상에 걸쳐 문맥과 목표를 유지할 수 있습니다. Claude Opus 5과 Gemini 3 Pro가 여기서 뛰어납니다.',
+            '오류 복구 — 도구 호출이 실패했을 때 이를 감지하고 다른 접근 방식으로 재시도할 수 있습니다. DeepSeek V4와 Claude Opus 5이 가장 안정적입니다.',
             '문맥 유지 — 이전 단계를 기억하고 그 결과를 바탕으로 이후 단계를 조정할 수 있습니다. 더 큰 문맥 창(2M 토큰의 Gemini 3 Pro)이 상당한 이점입니다.',
           ],
         },
@@ -23232,7 +23232,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '평가해야 할 안전 기준은 다음과 같습니다:',
           ],
           items: [
-            '탈옥 저항력 — 모델이 안전 지침을 무시하게 만들기가 얼마나 어려운가? GPT-5.x와 Claude Opus 4.8이 가장 강한 저항력을 가집니다.',
+            '탈옥 저항력 — 모델이 안전 지침을 무시하게 만들기가 얼마나 어려운가? GPT-5.x와 Claude Opus 5이 가장 강한 저항력을 가집니다.',
             '거부 동작 — 모델이 유해한 요청을 거부하는가? 모든 프런티어 모델이 거부하지만, 임계값은 다릅니다.',
             '데이터 프라이버시 — 모델이 프롬프트를 기록하거나 학습하는가? API 전용(무상태) 모델의 경우 문서를 확인하시기 바랍니다.',
             '투명성 — 벤더가 정렬 기법을 공개하는가? Anthropic(Claude)과 Mistral은 자사의 접근 방식을 공개하며, 다른 곳은 덜 투명합니다.',
@@ -23245,8 +23245,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '엔터프라이즈 선택에서는 비용, 규정 준수, 성능 예측 가능성에 비중을 두어야 합니다. 흔한 패턴은 다음과 같습니다:',
           ],
           items: [
-            '높은 보안이 요구되는 조직은 강력한 안전 정렬을 위해 Claude Opus 4.8 (Anthropic)을, 또는 유럽 데이터 소재지를 위해 Mistral을 선택합니다.',
-            '비용에 민감한 운영은 DeepSeek V4(GPT-5.x보다 80% 저렴) 또는 유리한 가격의 Claude Opus 4.8을 선택합니다.',
+            '높은 보안이 요구되는 조직은 강력한 안전 정렬을 위해 Claude Opus 5 (Anthropic)을, 또는 유럽 데이터 소재지를 위해 Mistral을 선택합니다.',
+            '비용에 민감한 운영은 DeepSeek V4(GPT-5.x보다 80% 저렴) 또는 유리한 가격의 Claude Opus 5을 선택합니다.',
             '멀티모달 비중이 큰 워크로드는 Gemini 3 Pro(2M 토큰 문맥, 우수한 비디오 처리) 또는 GPT-5.x를 선택합니다.',
             '온디바이스 배포에는 Llama 4(오픈소스, 로컬 추론)가 필요합니다.',
             '실시간 워크로드(뉴스 분석, 시장 모니터링)는 Grok 4.1(웹 접근) 또는 Gemini 3 Pro(제한적 실시간)를 선택합니다.',
@@ -23272,7 +23272,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'PromptQuorum에서는 다음을 수행할 수 있습니다:',
           ],
           items: [
-            '하나의 프롬프트를 작성해 GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, Grok 4.1에 병렬로 전송합니다.',
+            '하나의 프롬프트를 작성해 GPT-5.x, Claude Opus 5, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, Grok 4.1에 병렬로 전송합니다.',
             '출력을 즉시 비교해 자신의 작업에 가장 좋은 결과를 내는 모델을 확인합니다.',
             '집계 지표(평균 비용, 최속 응답, 합의 답변)를 계산해 데이터 기반 의사결정을 내립니다.',
             '우수한 프롬프트와 모델 선택을 재사용 가능한 템플릿으로 저장합니다.',
@@ -23349,9 +23349,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '자주 묻는 질문',
           isTldr: false,
           faqs: [
-            { q: '2026년 3월 현재 최고의 프런티어 모델은 무엇입니까?', a: '보편적으로 "최고"인 모델은 없으며, 선택은 작업에 따라 달라집니다. GPT-5.x는 추론과 코드에 뛰어납니다. Claude Opus 4.8은 장문맥 분석에서 우위를 점합니다. Gemini 3 Pro는 멀티모달 작업을 처리합니다. PromptQuorum을 사용해 특정 작업에서 여러 모델을 테스트하고 품질, 속도, 비용을 측정하시기 바랍니다.' },
-            { q: '가장 저렴한 프런티어 모델은 무엇입니까?', a: 'DeepSeek V4는 1M 토큰당 $0.27/$1.1로 GPT-5.x($20/$80) 및 Claude Opus 4.8($5/$25)보다 60~70% 저렴합니다. Llama 4는 무료입니다(오픈소스, 로컬 배포). 다만 저비용 모델은 특화된 추론 작업에서 품질이 낮은 경우가 있다는 절충점이 있습니다.' },
-            { q: 'GPT-5.x와 Claude Opus 4.8의 차이는 무엇입니까?', a: 'GPT-5.x: 추론, 코드, 분석에 뛰어납니다. 200K 문맥. $20/$80 가격. 멀티모달(이미지, 비디오). Claude Opus 4.8: 장문맥 작업과 연구에서 더 강합니다. 1M 문맥. $5/$25 가격. 뛰어난 안전 정렬. 비디오 미지원. 대부분의 작업에서는 두 모델을 모두 테스트하십시오. 결과는 도메인에 따라 다릅니다.' },
+            { q: '2026년 3월 현재 최고의 프런티어 모델은 무엇입니까?', a: '보편적으로 "최고"인 모델은 없으며, 선택은 작업에 따라 달라집니다. GPT-5.x는 추론과 코드에 뛰어납니다. Claude Opus 5은 장문맥 분석에서 우위를 점합니다. Gemini 3 Pro는 멀티모달 작업을 처리합니다. PromptQuorum을 사용해 특정 작업에서 여러 모델을 테스트하고 품질, 속도, 비용을 측정하시기 바랍니다.' },
+            { q: '가장 저렴한 프런티어 모델은 무엇입니까?', a: 'DeepSeek V4는 1M 토큰당 $0.27/$1.1로 GPT-5.x($20/$80) 및 Claude Opus 5($5/$25)보다 60~70% 저렴합니다. Llama 4는 무료입니다(오픈소스, 로컬 배포). 다만 저비용 모델은 특화된 추론 작업에서 품질이 낮은 경우가 있다는 절충점이 있습니다.' },
+            { q: 'GPT-5.x와 Claude Opus 5의 차이는 무엇입니까?', a: 'GPT-5.x: 추론, 코드, 분석에 뛰어납니다. 200K 문맥. $20/$80 가격. 멀티모달(이미지, 비디오). Claude Opus 5: 장문맥 작업과 연구에서 더 강합니다. 1M 문맥. $5/$25 가격. 뛰어난 안전 정렬. 비디오 미지원. 대부분의 작업에서는 두 모델을 모두 테스트하십시오. 결과는 도메인에 따라 다릅니다.' },
             { q: '로컬/오프라인 배포를 지원하는 프런티어 모델은 무엇입니까?', a: 'Llama 4(오픈소스, Ollama, LM Studio, Jan AI로 실행)는 완전한 로컬 배포를 지원합니다. 다른 모든 프런티어 모델은 클라우드 API 접근이 필요합니다. 프라이버시와 데이터 소재지가 중요하다면 Llama 4가 유일한 프런티어 옵션입니다.' },
             { q: '모든 작업에 동일한 프런티어 모델을 사용해야 합니까?', a: '아닙니다. 서로 다른 모델이 서로 다른 작업에 뛰어납니다. PromptQuorum을 사용해 프롬프트를 여러 프런티어 모델에 디스패치하고 출력을 비교하시기 바랍니다. 비용, 속도, 품질 모두 작업에 따라 달라집니다. 실제 워크로드를 테스트하는 것이 벤치마크보다 더 신뢰할 수 있습니다.' },
           ],
@@ -23372,7 +23372,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         sources: {
           items: [
             'OpenAI GPT-5.x — https://platform.openai.com/docs/',
-            'Anthropic Claude Opus 4.8 — https://docs.anthropic.com/',
+            'Anthropic Claude Opus 5 — https://docs.anthropic.com/',
             'Google Gemini 3 Pro — https://ai.google.dev/',
             'Meta Llama 4 — https://github.com/meta-llama/llama',
           ],
@@ -23381,12 +23381,12 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     },
     de: {
       category: 'KI-Modellvergleich',
-      seoTitle: 'Frontier-KI-Modelle 2026: GPT-5.x vs Claude Opus 4.8 vs Gemini',
-      title: 'Frontier-KI-Modelle und Prompt-Bibliothek: GPT-5.x, Claude Opus 4.8, Gemini 3 Pro und mehr',
-      intro: 'Frontier-KI-Modelle bilden die Spitze der Large-Language-Model-Entwicklung. Dieser Leitfaden vergleicht GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 und Grok 4.1 nach Reasoning, Kosten, Geschwindigkeit und Praxisleistung — mit 170+ Evaluierungs-Prompts zum selbst testen.',
+      seoTitle: 'Frontier-KI-Modelle 2026: GPT-5.x vs Claude Opus 5 vs Gemini',
+      title: 'Frontier-KI-Modelle und Prompt-Bibliothek: GPT-5.x, Claude Opus 5, Gemini 3 Pro und mehr',
+      intro: 'Frontier-KI-Modelle bilden die Spitze der Large-Language-Model-Entwicklung. Dieser Leitfaden vergleicht GPT-5.x, Claude Opus 5, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 und Grok 4.1 nach Reasoning, Kosten, Geschwindigkeit und Praxisleistung — mit 170+ Evaluierungs-Prompts zum selbst testen.',
       publishDate: 'Veröffentlicht März 2026',
       readTime: '15 Min. Lesezeit',
-      metaDescription: 'GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, DeepSeek V4 im Vergleich: Reasoning, Kosten, Geschwindigkeit, Multimodal. Mit 170+ Evaluierungs-Prompts.',
+      metaDescription: 'GPT-5.x, Claude Opus 5, Gemini 3 Pro, DeepSeek V4 im Vergleich: Reasoning, Kosten, Geschwindigkeit, Multimodal. Mit 170+ Evaluierungs-Prompts.',
       educationalLevel: 'Intermediate',
       sections: {
         whatAreFrontier: {
@@ -23398,7 +23398,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'GPT-5.x (OpenAI) — Multimodales Reasoning, Code und Analyse',
-            'Claude Opus 4.8 (Anthropic) — Langkontext-Reasoning und Sicherheit',
+            'Claude Opus 5 (Anthropic) — Langkontext-Reasoning und Sicherheit',
             'Gemini 3 Pro (Google DeepMind) — Multimodale und Reasoning-Aufgaben',
             'Llama 4 (Meta) — Open Source, lokale oder Cloud-Bereitstellung',
             'DeepSeek V4 (DeepSeek) — Kosteneffizientes Reasoning',
@@ -23410,7 +23410,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whyComparison: {
           title: 'Warum Frontier-Modelle vergleichen?',
           content: [
-            'Kein einzelnes Frontier-Modell ist für alle Aufgaben optimal. Die Wahl des Modells hängt von Ihrem spezifischen Anwendungsfall ab: Forschungszusammenfassungen bevorzugen Modelle mit starkem Reasoning (Claude Opus 4.8, Gemini 3 Pro, DeepSeek V4). Code-Generierung und Refactoring bevorzugen Modelle mit umfangreichen Trainingsdaten und langem Kontext (GPT-5.x, Claude Opus 4.8). Kostensensible Workflows bevorzugen effiziente Modelle (Llama 4, DeepSeek V4). Echtzeit-Funktionen bevorzugen Modelle mit Web-Zugang (Grok 4.1).',
+            'Kein einzelnes Frontier-Modell ist für alle Aufgaben optimal. Die Wahl des Modells hängt von Ihrem spezifischen Anwendungsfall ab: Forschungszusammenfassungen bevorzugen Modelle mit starkem Reasoning (Claude Opus 5, Gemini 3 Pro, DeepSeek V4). Code-Generierung und Refactoring bevorzugen Modelle mit umfangreichen Trainingsdaten und langem Kontext (GPT-5.x, Claude Opus 5). Kostensensible Workflows bevorzugen effiziente Modelle (Llama 4, DeepSeek V4). Echtzeit-Funktionen bevorzugen Modelle mit Web-Zugang (Grok 4.1).',
             'Das Ausführen desselben Prompts über mehrere Frontier-Modelle in PromptQuorum zeigt, welches Modell für Ihre spezifische Aufgabe die höchste Qualität liefert.',
           ],
         },
@@ -23438,9 +23438,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '**GPT-5.x (OpenAI)** — Ideal für: Allgemeines Reasoning, Code, Analyse. Reasoning: Ausgezeichnet. Kontext: 200K Tokens. Geschwindigkeit: Schnell (0,5–2 s). Kosten: $20/$80 pro 1M Eingangs-/Ausgabe-Tokens. Multimodal: Ja (Bild, Video). Echtzeit: Nein. Bereitstellung: Nur API. Sicherheit: Ausgezeichnete Jailbreak-Resistenz.',
-            '**Claude Opus 4.8 (Anthropic)** — Ideal für: Langform-Analyse, Recherche, rechtliche Überprüfung. Reasoning: Ausgezeichnet. Kontext: 1M Tokens. Geschwindigkeit: Schnell (0,8–3 s). Kosten: $5/$25 pro 1M Eingangs-/Ausgabe-Tokens. Multimodal: Ja (Bild). Echtzeit: Nein. Bereitstellung: Nur API. Sicherheit: Constitutional-AI-Alignment.',
+            '**Claude Opus 5 (Anthropic)** — Ideal für: Langform-Analyse, Recherche, rechtliche Überprüfung. Reasoning: Ausgezeichnet. Kontext: 1M Tokens. Geschwindigkeit: Schnell (0,8–3 s). Kosten: $5/$25 pro 1M Eingangs-/Ausgabe-Tokens. Multimodal: Ja (Bild). Echtzeit: Nein. Bereitstellung: Nur API. Sicherheit: Constitutional-AI-Alignment.',
             '**Gemini 3 Pro (Google DeepMind)** — Ideal für: Multimodale Analyse, Reasoning über Modalitäten. Reasoning: Ausgezeichnet. Kontext: 2M Tokens (größtes). Geschwindigkeit: Mittel (1–4 s). Kosten: $5/$20 pro 1M Eingangs-/Ausgabe-Tokens. Multimodal: Ja (Bild, Audio, Video). Echtzeit: Ja (begrenzt). Bereitstellung: Nur API. Sicherheit: Fokus auf verantwortungsvolle KI.',
-            '**Llama 4 (Meta)** — Ideal für: On-Device, kostensensible oder datenschutzorientierte Workflows. Reasoning: Gut (nicht so stark wie GPT-5.x oder Claude Opus 4.8). Kontext: 128K Tokens. Geschwindigkeit: Variiert je nach Hardware. Kosten: Kostenlos (Open Source). Multimodal: Ja (Bild). Echtzeit: Nein. Bereitstellung: Lokal, Cloud, On-Premises. Sicherheit: Community-getriebenes Alignment.',
+            '**Llama 4 (Meta)** — Ideal für: On-Device, kostensensible oder datenschutzorientierte Workflows. Reasoning: Gut (nicht so stark wie GPT-5.x oder Claude Opus 5). Kontext: 128K Tokens. Geschwindigkeit: Variiert je nach Hardware. Kosten: Kostenlos (Open Source). Multimodal: Ja (Bild). Echtzeit: Nein. Bereitstellung: Lokal, Cloud, On-Premises. Sicherheit: Community-getriebenes Alignment.',
             '**DeepSeek V4 (DeepSeek)** — Ideal für: Kostenoptimiertes Reasoning, Forschung in Asien. Reasoning: Sehr gut. Kontext: 128K Tokens. Geschwindigkeit: Schnell (0,5–1,5 s). Kosten: $0,27/$1,1 pro 1M Eingangs-/Ausgabe-Tokens (günstigstes). Multimodal: Ja (Bild). Echtzeit: Nein. Bereitstellung: API. Sicherheit: Standard-Sicherheitstraining.',
             '**Mistral Large 3 (Mistral)** — Ideal für: Europäische Datenresidenz, offenes Reasoning. Reasoning: Sehr gut. Kontext: 128K Tokens. Geschwindigkeit: Schnell (0,6–2 s). Kosten: $3,15/$9,45 pro 1M Eingangs-/Ausgabe-Tokens. Multimodal: Ja (Bild). Echtzeit: Nein. Bereitstellung: API, On-Premises. Sicherheit: Offenes und transparentes Alignment.',
             '**Qwen3 (Alibaba)** — Ideal für: Mehrsprachige Aufgaben, Asien-Pazifik-Workflows. Reasoning: Sehr gut. Kontext: 128K Tokens. Geschwindigkeit: Schnell (0,5–2 s). Kosten: $0,5/$1,5 pro 1M Eingangs-/Ausgabe-Tokens. Multimodal: Ja (Bild, Audio). Echtzeit: Begrenzt. Bereitstellung: API, lokal. Sicherheit: Mehrsprachiges Sicherheitstraining.',
@@ -23453,7 +23453,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Der beste Weg, Frontier-Modelle zu evaluieren, ist die gleichzeitige Ausführung Ihrer tatsächlichen Aufgabe über mehrere Modelle und die Messung von Qualität, Geschwindigkeit und Kosten. In PromptQuorum können Sie einen einzelnen Prompt gleichzeitig an alle acht Frontier-Modelle senden und Ergebnisse nebeneinander vergleichen.',
             'Ein typischer Evaluierungsworkflow:',
             '1. Definieren Sie Ihre Aufgabe klar (z. B. „Fassen Sie dieses Forschungspapier mit 5 Hauptergebnissen zusammen").',
-            '2. Wählen Sie die Frontier-Modelle aus, die Sie testen möchten (z. B. GPT-5.x, Claude Opus 4.8, Gemini 3 Pro).',
+            '2. Wählen Sie die Frontier-Modelle aus, die Sie testen möchten (z. B. GPT-5.x, Claude Opus 5, Gemini 3 Pro).',
             '3. Senden Sie denselben Prompt in PromptQuorum parallel an alle ausgewählten Modelle.',
             '4. Vergleichen Sie Ausgaben nach Qualität, Länge, Genauigkeit und Reasoning.',
             '5. Berechnen Sie Kosten pro Aufgabe und effektive Geschwindigkeit für jedes Modell.',
@@ -23483,8 +23483,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'Funktionsaufrufe (Tool-Nutzung) — Fähigkeit, externe APIs, Datenbanken oder Code aufzurufen. Alle Frontier-Modelle unterstützen dies.',
-            'Langfristige Planung — Können Kontext und Ziele über 10+ Schritte aufrechterhalten. Claude Opus 4.8 und Gemini 3 Pro glänzen hier.',
-            'Fehlerwiederherstellung — Können erkennen, wenn ein Tool-Aufruf fehlgeschlagen ist, und es mit einem anderen Ansatz neu versuchen. DeepSeek V4 und Claude Opus 4.8 sind am zuverlässigsten.',
+            'Langfristige Planung — Können Kontext und Ziele über 10+ Schritte aufrechterhalten. Claude Opus 5 und Gemini 3 Pro glänzen hier.',
+            'Fehlerwiederherstellung — Können erkennen, wenn ein Tool-Aufruf fehlgeschlagen ist, und es mit einem anderen Ansatz neu versuchen. DeepSeek V4 und Claude Opus 5 sind am zuverlässigsten.',
             'Kontextbeibehaltung — Können frühere Schritte erinnern und spätere Schritte basierend auf früheren Ergebnissen anpassen. Größere Kontextfenster (Gemini 3 Pro mit 2M Tokens) sind erhebliche Vorteile.',
           ],
         },
@@ -23495,7 +23495,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Sicherheitsdimensionen zur Bewertung:',
           ],
           items: [
-            'Jailbreak-Resistenz — Wie schwer ist es, das Modell dazu zu bringen, Sicherheitsrichtlinien zu ignorieren? GPT-5.x und Claude Opus 4.8 haben die stärkste Resistenz.',
+            'Jailbreak-Resistenz — Wie schwer ist es, das Modell dazu zu bringen, Sicherheitsrichtlinien zu ignorieren? GPT-5.x und Claude Opus 5 haben die stärkste Resistenz.',
             'Ablehnungsverhalten — Lehnt das Modell schädliche Anfragen ab? Alle Frontier-Modelle tun dies, aber die Schwelle variiert.',
             'Datenschutz — Protokolliert oder lernt das Modell aus Ihren Prompts? Prüfen Sie die Dokumentation für nur-API-(zustandslose) Modelle.',
             'Transparenz — Veröffentlicht der Anbieter Alignment-Techniken? Anthropic (Claude) und Mistral veröffentlichen ihre Ansätze; andere sind weniger transparent.',
@@ -23508,8 +23508,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Die Unternehmensauswahl sollte Kosten, Compliance und Leistungsvorhersagbarkeit gewichten. Hier sind gängige Muster:',
           ],
           items: [
-            'Hochsicherheitsorganisationen wählen Claude Opus 4.8 (Anthropic) für starkes Sicherheits-Alignment oder Mistral (europäische Datenresidenz).',
-            'Kostensensible Betriebe wählen DeepSeek V4 (80 % günstiger als GPT-5.x) oder Claude Opus 4.8 für günstige Preisgestaltung.',
+            'Hochsicherheitsorganisationen wählen Claude Opus 5 (Anthropic) für starkes Sicherheits-Alignment oder Mistral (europäische Datenresidenz).',
+            'Kostensensible Betriebe wählen DeepSeek V4 (80 % günstiger als GPT-5.x) oder Claude Opus 5 für günstige Preisgestaltung.',
             'Multimodal-intensive Workloads wählen Gemini 3 Pro (2M-Token-Kontext, überlegene Videoverarbeitung) oder GPT-5.x.',
             'On-Device-Bereitstellungen erfordern Llama 4 (Open Source, lokales Inference).',
             'Echtzeit-Workloads (Nachrichtenanalyse, Marktbeobachtung) wählen Grok 4.1 (Web-Zugang) oder Gemini 3 Pro (begrenztes Echtzeit).',
@@ -23535,7 +23535,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'In PromptQuorum können Sie:',
           ],
           items: [
-            'Einen einzelnen Prompt schreiben und ihn an GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 und Grok 4.1 parallel senden.',
+            'Einen einzelnen Prompt schreiben und ihn an GPT-5.x, Claude Opus 5, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 und Grok 4.1 parallel senden.',
             'Ausgaben sofort vergleichen, um zu sehen, welches Modell für Ihre Aufgabe die besten Ergebnisse liefert.',
             'Aggregierte Metriken berechnen (Durchschnittskosten, schnellste Antwort, Konsensantwort) für datengetriebene Entscheidungen.',
             'Ihre besten Prompts und Modellauswahlen als wiederverwendbare Templates speichern.',
@@ -23612,9 +23612,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Häufig gestellte Fragen',
           isTldr: false,
           faqs: [
-            { q: 'Was ist das beste Frontier-Modell im März 2026?', a: 'Es gibt kein universell "bestes" Modell — die Wahl hängt von Ihrer Aufgabe ab. GPT-5.x glänzt beim Reasoning und bei Code. Claude Opus 4.8 dominiert bei Langkontext-Analysen. Gemini 3 Pro bewältigt multimodale Aufgaben. Nutzen Sie PromptQuorum, um mehrere Modelle auf Ihre spezifische Aufgabe zu testen und Qualität, Geschwindigkeit und Kosten zu messen.' },
-            { q: 'Welches Frontier-Modell ist am günstigsten?', a: 'DeepSeek V4 bei $0,27/$1,1 pro 1M Tokens ist 60–70 % günstiger als GPT-5.x ($20/$80) und Claude Opus 4.8 ($5/$25). Llama 4 ist kostenlos (Open Source, lokale Bereitstellung). Trade-off: günstigere Modelle haben manchmal niedrigere Qualität bei spezialisierten Reasoning-Aufgaben.' },
-            { q: 'Was ist der Unterschied zwischen GPT-5.x und Claude Opus 4.8?', a: 'GPT-5.x: Ausgezeichnet bei Reasoning, Code, Analyse. 200K Kontext. $20/$80 Preisgestaltung. Multimodal (Bild, Video). Claude Opus 4.8: Stärker bei Langkontext-Aufgaben, Forschung. 1M Kontext. Günstiger bei $5/$25. Ausgezeichnetes Sicherheits-Alignment. Kein Video-Support. Für die meisten Aufgaben: Beide testen — Ergebnisse variieren je nach Bereich.' },
+            { q: 'Was ist das beste Frontier-Modell im März 2026?', a: 'Es gibt kein universell "bestes" Modell — die Wahl hängt von Ihrer Aufgabe ab. GPT-5.x glänzt beim Reasoning und bei Code. Claude Opus 5 dominiert bei Langkontext-Analysen. Gemini 3 Pro bewältigt multimodale Aufgaben. Nutzen Sie PromptQuorum, um mehrere Modelle auf Ihre spezifische Aufgabe zu testen und Qualität, Geschwindigkeit und Kosten zu messen.' },
+            { q: 'Welches Frontier-Modell ist am günstigsten?', a: 'DeepSeek V4 bei $0,27/$1,1 pro 1M Tokens ist 60–70 % günstiger als GPT-5.x ($20/$80) und Claude Opus 5 ($5/$25). Llama 4 ist kostenlos (Open Source, lokale Bereitstellung). Trade-off: günstigere Modelle haben manchmal niedrigere Qualität bei spezialisierten Reasoning-Aufgaben.' },
+            { q: 'Was ist der Unterschied zwischen GPT-5.x und Claude Opus 5?', a: 'GPT-5.x: Ausgezeichnet bei Reasoning, Code, Analyse. 200K Kontext. $20/$80 Preisgestaltung. Multimodal (Bild, Video). Claude Opus 5: Stärker bei Langkontext-Aufgaben, Forschung. 1M Kontext. Günstiger bei $5/$25. Ausgezeichnetes Sicherheits-Alignment. Kein Video-Support. Für die meisten Aufgaben: Beide testen — Ergebnisse variieren je nach Bereich.' },
             { q: 'Welches Frontier-Modell unterstützt lokale/Offline-Bereitstellung?', a: 'Llama 4 (Open Source, läuft über Ollama, LM Studio, Jan AI) unterstützt vollständige lokale Bereitstellung. Alle anderen Frontier-Modelle erfordern Cloud-API-Zugang. Wenn Datenschutz und Datenresidenz kritisch sind, ist Llama 4 die einzige Frontier-Option.' },
             { q: 'Sollte ich dasselbe Frontier-Modell für alle Aufgaben verwenden?', a: 'Nein — verschiedene Modelle glänzen bei verschiedenen Aufgaben. Nutzen Sie PromptQuorum, um Ihren Prompt an mehrere Frontier-Modelle zu senden und Ausgaben zu vergleichen. Kosten, Geschwindigkeit und Qualität variieren je nach Aufgabe. Das Testen Ihrer tatsächlichen Arbeitslast ist zuverlässiger als Benchmarks.' },
           ],
@@ -23635,7 +23635,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         sources: {
           items: [
             'OpenAI GPT-5.x — https://platform.openai.com/docs/',
-            'Anthropic Claude Opus 4.8 — https://docs.anthropic.com/',
+            'Anthropic Claude Opus 5 — https://docs.anthropic.com/',
             'Google Gemini 3 Pro — https://ai.google.dev/',
             'Meta Llama 4 — https://github.com/meta-llama/llama',
           ],
@@ -23644,12 +23644,12 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     },
     fr: {
       category: 'Comparaison de modèles IA',
-      seoTitle: 'Modèles IA Frontier 2026: GPT-5.x vs Claude Opus 4.8 vs Gemini',
-      title: 'Modèles IA Frontier et bibliothèque de prompts : GPT-5.x, Claude Opus 4.8, Gemini 3 Pro et au-delà',
-      intro: 'Les modèles IA frontier représentent la pointe du développement des grands modèles de langage. Ce guide compare GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 et Grok 4.1 selon le raisonnement, le coût, la vitesse et la performance réelle — avec 170+ prompts d\'évaluation pour vos propres tests.',
+      seoTitle: 'Modèles IA Frontier 2026: GPT-5.x vs Claude Opus 5 vs Gemini',
+      title: 'Modèles IA Frontier et bibliothèque de prompts : GPT-5.x, Claude Opus 5, Gemini 3 Pro et au-delà',
+      intro: 'Les modèles IA frontier représentent la pointe du développement des grands modèles de langage. Ce guide compare GPT-5.x, Claude Opus 5, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 et Grok 4.1 selon le raisonnement, le coût, la vitesse et la performance réelle — avec 170+ prompts d\'évaluation pour vos propres tests.',
       publishDate: 'Publié mars 2026',
       readTime: '15 min de lecture',
-      metaDescription: 'Comparez GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, DeepSeek V4 : raisonnement, coût, vitesse, multimodal. Inclut 170+ prompts d\'évaluation.',
+      metaDescription: 'Comparez GPT-5.x, Claude Opus 5, Gemini 3 Pro, DeepSeek V4 : raisonnement, coût, vitesse, multimodal. Inclut 170+ prompts d\'évaluation.',
       educationalLevel: 'Intermediate',
       sections: {
         whatAreFrontier: {
@@ -23661,7 +23661,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'GPT-5.x (OpenAI) — raisonnement multimodal, code et analyse',
-            'Claude Opus 4.8 (Anthropic) — raisonnement sur long contexte et sécurité',
+            'Claude Opus 5 (Anthropic) — raisonnement sur long contexte et sécurité',
             'Gemini 3 Pro (Google DeepMind) — tâches multimodales et de raisonnement',
             'Llama 4 (Meta) — open source, déploiement local ou cloud',
             'DeepSeek V4 (DeepSeek) — raisonnement économique',
@@ -23673,7 +23673,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whyComparison: {
           title: 'Pourquoi comparer les modèles frontier ?',
           content: [
-            'Aucun modèle frontier n\'excelle dans toutes les tâches. Votre choix dépend de votre cas d\'usage spécifique : les résumés de recherche favorisent les modèles avec un fort raisonnement (Claude Opus 4.8, Gemini 3 Pro, DeepSeek V4). La génération et le refactoring de code favorisent les modèles avec de vastes données d\'entraînement et un long contexte (GPT-5.x, Claude Opus 4.8). Les workflows sensibles aux coûts favorisent les modèles efficaces (Llama 4, DeepSeek V4). Les fonctionnalités temps réel favorisent les modèles avec accès web (Grok 4.1).',
+            'Aucun modèle frontier n\'excelle dans toutes les tâches. Votre choix dépend de votre cas d\'usage spécifique : les résumés de recherche favorisent les modèles avec un fort raisonnement (Claude Opus 5, Gemini 3 Pro, DeepSeek V4). La génération et le refactoring de code favorisent les modèles avec de vastes données d\'entraînement et un long contexte (GPT-5.x, Claude Opus 5). Les workflows sensibles aux coûts favorisent les modèles efficaces (Llama 4, DeepSeek V4). Les fonctionnalités temps réel favorisent les modèles avec accès web (Grok 4.1).',
             'Exécuter le même prompt sur plusieurs modèles frontier dans PromptQuorum révèle lequel produit la sortie de meilleure qualité pour votre tâche spécifique.',
           ],
         },
@@ -23701,9 +23701,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '**GPT-5.x (OpenAI)** — Idéal pour : raisonnement généraliste, code, analyse. Raisonnement : Excellent. Contexte : 200K tokens. Vitesse : Rapide (0,5-2s). Coût : $20/$80 par 1M tokens entrée/sortie. Multimodal : Oui (image, vidéo). Temps réel : Non. Déploiement : API uniquement. Sécurité : Excellente résistance aux jailbreaks.',
-            '**Claude Opus 4.8 (Anthropic)** — Idéal pour : analyse long format, recherche, révision juridique. Raisonnement : Excellent. Contexte : 1M tokens. Vitesse : Rapide (0,8-3s). Coût : $5/$25 par 1M tokens. Multimodal : Oui (image). Temps réel : Non. Déploiement : API uniquement. Sécurité : Alignement Constitutional AI.',
+            '**Claude Opus 5 (Anthropic)** — Idéal pour : analyse long format, recherche, révision juridique. Raisonnement : Excellent. Contexte : 1M tokens. Vitesse : Rapide (0,8-3s). Coût : $5/$25 par 1M tokens. Multimodal : Oui (image). Temps réel : Non. Déploiement : API uniquement. Sécurité : Alignement Constitutional AI.',
             '**Gemini 3 Pro (Google DeepMind)** — Idéal pour : analyse multimodale, raisonnement multi-modal. Raisonnement : Excellent. Contexte : 2M tokens (le plus grand). Vitesse : Modérée (1-4s). Coût : $5/$20 par 1M tokens. Multimodal : Oui (image, audio, vidéo). Temps réel : Oui (limité). Déploiement : API uniquement. Sécurité : Focus IA responsable.',
-            '**Llama 4 (Meta)** — Idéal pour : workflows sur appareil, sensibles aux coûts ou priorité à la confidentialité. Raisonnement : Bon (moins fort que GPT-5.x ou Claude Opus 4.8). Contexte : 128K tokens. Vitesse : Varie selon le matériel. Coût : Gratuit (open source). Multimodal : Oui (image). Temps réel : Non. Déploiement : Local, cloud, sur site. Sécurité : Alignement communautaire.',
+            '**Llama 4 (Meta)** — Idéal pour : workflows sur appareil, sensibles aux coûts ou priorité à la confidentialité. Raisonnement : Bon (moins fort que GPT-5.x ou Claude Opus 5). Contexte : 128K tokens. Vitesse : Varie selon le matériel. Coût : Gratuit (open source). Multimodal : Oui (image). Temps réel : Non. Déploiement : Local, cloud, sur site. Sécurité : Alignement communautaire.',
             '**DeepSeek V4 (DeepSeek)** — Idéal pour : raisonnement optimisé en coût, recherche en Asie. Raisonnement : Très bon. Contexte : 128K tokens. Vitesse : Rapide (0,5-1,5s). Coût : $0,27/$1,1 par 1M tokens (le moins cher). Multimodal : Oui (image). Temps réel : Non. Déploiement : API. Sécurité : Entraînement sécurité standard.',
             '**Mistral Large 3 (Mistral)** — Idéal pour : résidence des données européenne, raisonnement ouvert. Raisonnement : Très bon. Contexte : 128K tokens. Vitesse : Rapide (0,6-2s). Coût : $3,15/$9,45 par 1M tokens. Multimodal : Oui (image). Temps réel : Non. Déploiement : API, sur site. Sécurité : Alignement ouvert et transparent.',
             '**Qwen3 (Alibaba)** — Idéal pour : tâches multilingues, workflows Asie-Pacifique. Raisonnement : Très bon. Contexte : 128K tokens. Vitesse : Rapide (0,5-2s). Coût : $0,5/$1,5 par 1M tokens. Multimodal : Oui (image, audio). Temps réel : Limité. Déploiement : API, local. Sécurité : Entraînement sécurité multilingue.',
@@ -23716,7 +23716,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'La meilleure façon d\'évaluer les modèles frontier est d\'exécuter votre tâche réelle sur plusieurs modèles en parallèle et de mesurer la qualité, la vitesse et le coût. Dans PromptQuorum, vous pouvez envoyer un seul prompt aux huit modèles frontier simultanément et comparer les résultats côte à côte.',
             'Un workflow d\'évaluation typique :',
             '1. Définissez clairement votre tâche (ex. : "Résumez ce document de recherche avec 5 points clés").',
-            '2. Sélectionnez les modèles frontier à tester (ex. : GPT-5.x, Claude Opus 4.8, Gemini 3 Pro).',
+            '2. Sélectionnez les modèles frontier à tester (ex. : GPT-5.x, Claude Opus 5, Gemini 3 Pro).',
             '3. Envoyez le même prompt à tous les modèles sélectionnés en parallèle dans PromptQuorum.',
             '4. Comparez les sorties en termes de qualité, longueur, précision et raisonnement.',
             '5. Calculez le coût par tâche et la vitesse effective pour chaque modèle.',
@@ -23746,8 +23746,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'Appel de fonctions (utilisation d\'outils) — Capacité à invoquer des API externes, bases de données ou code. Tous les modèles frontier le prennent en charge.',
-            'Planification à long terme — Peut maintenir contexte et objectifs sur 10+ étapes. Claude Opus 4.8 et Gemini 3 Pro excellent ici.',
-            'Récupération d\'erreurs — Peut détecter quand un appel d\'outil a échoué et réessayer avec une approche différente. DeepSeek V4 et Claude Opus 4.8 sont les plus fiables.',
+            'Planification à long terme — Peut maintenir contexte et objectifs sur 10+ étapes. Claude Opus 5 et Gemini 3 Pro excellent ici.',
+            'Récupération d\'erreurs — Peut détecter quand un appel d\'outil a échoué et réessayer avec une approche différente. DeepSeek V4 et Claude Opus 5 sont les plus fiables.',
             'Rétention de contexte — Peut se souvenir des étapes antérieures et adapter les étapes suivantes en conséquence. Les fenêtres de contexte plus grandes (Gemini 3 Pro à 2M tokens) sont des avantages significatifs.',
           ],
         },
@@ -23758,7 +23758,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Dimensions de sécurité à évaluer :',
           ],
           items: [
-            'Résistance aux jailbreaks — Quelle difficulté pour amener le modèle à ignorer les directives de sécurité ? GPT-5.x et Claude Opus 4.8 ont la résistance la plus forte.',
+            'Résistance aux jailbreaks — Quelle difficulté pour amener le modèle à ignorer les directives de sécurité ? GPT-5.x et Claude Opus 5 ont la résistance la plus forte.',
             'Comportement de refus — Le modèle refuse-t-il les requêtes nuisibles ? Tous les modèles frontier le font, mais le seuil varie.',
             'Confidentialité des données — Le modèle journalise-t-il ou apprend-il de vos prompts ? Vérifiez la documentation pour les modèles API uniquement (sans état).',
             'Transparence — Le fournisseur publie-t-il ses techniques d\'alignement ? Anthropic (Claude) et Mistral publient leurs approches ; d\'autres sont moins transparents.',
@@ -23771,8 +23771,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'La sélection en entreprise doit pondérer coût, conformité et prévisibilité des performances. Voici des schémas courants :',
           ],
           items: [
-            'Les organisations à haute sécurité choisissent Claude Opus 4.8 (Anthropic) pour un fort alignement sécurité, ou Mistral (résidence des données européenne).',
-            'Les opérations sensibles aux coûts choisissent DeepSeek V4 (80% moins cher que GPT-5.x) ou Claude Opus 4.8 pour un tarif avantageux.',
+            'Les organisations à haute sécurité choisissent Claude Opus 5 (Anthropic) pour un fort alignement sécurité, ou Mistral (résidence des données européenne).',
+            'Les opérations sensibles aux coûts choisissent DeepSeek V4 (80% moins cher que GPT-5.x) ou Claude Opus 5 pour un tarif avantageux.',
             'Les workloads fortement multimodaux choisissent Gemini 3 Pro (contexte 2M tokens, gestion vidéo supérieure) ou GPT-5.x.',
             'Les déploiements sur appareil nécessitent Llama 4 (open source, inférence locale).',
             'Les workloads temps réel (analyse d\'actualité, veille marché) choisissent Grok 4.1 (accès web) ou Gemini 3 Pro (temps réel limité).',
@@ -23798,7 +23798,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Dans PromptQuorum, vous pouvez :',
           ],
           items: [
-            'Écrire un seul prompt et l\'envoyer à GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 et Grok 4.1 en parallèle.',
+            'Écrire un seul prompt et l\'envoyer à GPT-5.x, Claude Opus 5, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 et Grok 4.1 en parallèle.',
             'Comparer les sorties instantanément pour voir quel modèle produit les meilleurs résultats pour votre tâche.',
             'Calculer des métriques agrégées (coût moyen, réponse la plus rapide, réponse consensuelle) pour prendre des décisions basées sur les données.',
             'Sauvegarder vos prompts gagnants et sélections de modèles comme modèles réutilisables.',
@@ -23875,9 +23875,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Questions fréquentes',
           isTldr: false,
           faqs: [
-            { q: 'Quel est le meilleur modèle frontier en mars 2026 ?', a: 'Il n\'existe pas de modèle universellement "meilleur" — le choix dépend de votre tâche. GPT-5.x excelle en raisonnement et code. Claude Opus 4.8 domine l\'analyse long contexte. Gemini 3 Pro gère les tâches multimodales. Utilisez PromptQuorum pour tester plusieurs modèles sur votre tâche spécifique et mesurer qualité, vitesse et coût.' },
-            { q: 'Quel modèle frontier est le moins cher ?', a: 'DeepSeek V4 à $0,27/$1,1 par 1M tokens est 60-70% moins cher que GPT-5.x ($20/$80) et Claude Opus 4.8 ($5/$25). Llama 4 est gratuit (open source, déploiement local). Contrepartie : les modèles moins chers ont parfois une qualité inférieure pour des tâches de raisonnement spécialisées.' },
-            { q: 'Quelle est la différence entre GPT-5.x et Claude Opus 4.8 ?', a: 'GPT-5.x : Excelle en raisonnement, code, analyse. Contexte 200K. Tarif $20/$80. Multimodal (image, vidéo). Claude Opus 4.8 : Plus fort sur les tâches long contexte, la recherche. Contexte 1M. Moins cher à $5/$25. Excellent alignement sécurité. Pas de support vidéo. Pour la plupart des tâches, testez les deux — les résultats varient selon le domaine.' },
+            { q: 'Quel est le meilleur modèle frontier en mars 2026 ?', a: 'Il n\'existe pas de modèle universellement "meilleur" — le choix dépend de votre tâche. GPT-5.x excelle en raisonnement et code. Claude Opus 5 domine l\'analyse long contexte. Gemini 3 Pro gère les tâches multimodales. Utilisez PromptQuorum pour tester plusieurs modèles sur votre tâche spécifique et mesurer qualité, vitesse et coût.' },
+            { q: 'Quel modèle frontier est le moins cher ?', a: 'DeepSeek V4 à $0,27/$1,1 par 1M tokens est 60-70% moins cher que GPT-5.x ($20/$80) et Claude Opus 5 ($5/$25). Llama 4 est gratuit (open source, déploiement local). Contrepartie : les modèles moins chers ont parfois une qualité inférieure pour des tâches de raisonnement spécialisées.' },
+            { q: 'Quelle est la différence entre GPT-5.x et Claude Opus 5 ?', a: 'GPT-5.x : Excelle en raisonnement, code, analyse. Contexte 200K. Tarif $20/$80. Multimodal (image, vidéo). Claude Opus 5 : Plus fort sur les tâches long contexte, la recherche. Contexte 1M. Moins cher à $5/$25. Excellent alignement sécurité. Pas de support vidéo. Pour la plupart des tâches, testez les deux — les résultats varient selon le domaine.' },
             { q: 'Quel modèle frontier prend en charge le déploiement local/hors ligne ?', a: 'Llama 4 (open source, fonctionne via Ollama, LM Studio, Jan AI) prend en charge le déploiement local complet. Tous les autres modèles frontier nécessitent un accès API cloud. Si la confidentialité et la résidence des données sont critiques, Llama 4 est la seule option frontier.' },
             { q: 'Dois-je utiliser le même modèle frontier pour toutes les tâches ?', a: 'Non — différents modèles excellent dans différentes tâches. Utilisez PromptQuorum pour envoyer votre prompt à plusieurs modèles frontier et comparer les sorties. Coût, vitesse et qualité varient tous selon la tâche. Tester votre charge de travail réelle est plus fiable que les benchmarks.' },
           ],
@@ -23898,7 +23898,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         sources: {
           items: [
             'OpenAI GPT-5.x — https://platform.openai.com/docs/',
-            'Anthropic Claude Opus 4.8 — https://docs.anthropic.com/',
+            'Anthropic Claude Opus 5 — https://docs.anthropic.com/',
             'Google Gemini 3 Pro — https://ai.google.dev/',
             'Meta Llama 4 — https://github.com/meta-llama/llama',
           ],
@@ -23907,12 +23907,12 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     },
     ja: {
       category: 'AIモデル比較',
-      seoTitle: '2026年フロンティアAIモデル比較：GPT-5.x vs Claude Opus 4.8 vs Gemini',
-      title: 'フロンティアAIモデルとプロンプトライブラリ：GPT-5.x、Claude Opus 4.8、Gemini 3 Proほか',
-      intro: 'フロンティアAIモデルは大規模言語モデル開発の最前線を走っています。本ガイドでは、GPT-5.x、Claude Opus 4.8、Gemini 3 Pro、Llama 4、DeepSeek V4、Mistral Large 3、Qwen3、Grok 4.1を推論能力・コスト・速度・実務パフォーマンスで比較し、自分でテストできる170以上の評価プロンプトを収録します。',
+      seoTitle: '2026年フロンティアAIモデル比較：GPT-5.x vs Claude Opus 5 vs Gemini',
+      title: 'フロンティアAIモデルとプロンプトライブラリ：GPT-5.x、Claude Opus 5、Gemini 3 Proほか',
+      intro: 'フロンティアAIモデルは大規模言語モデル開発の最前線を走っています。本ガイドでは、GPT-5.x、Claude Opus 5、Gemini 3 Pro、Llama 4、DeepSeek V4、Mistral Large 3、Qwen3、Grok 4.1を推論能力・コスト・速度・実務パフォーマンスで比較し、自分でテストできる170以上の評価プロンプトを収録します。',
       publishDate: '2026年3月公開',
       readTime: '15分で読める',
-      metaDescription: 'GPT-5.x、Claude Opus 4.8、Gemini 3 Pro、DeepSeek V4を推論・コスト・速度・マルチモーダル能力で徹底比較。170以上の評価プロンプト付き。',
+      metaDescription: 'GPT-5.x、Claude Opus 5、Gemini 3 Pro、DeepSeek V4を推論・コスト・速度・マルチモーダル能力で徹底比較。170以上の評価プロンプト付き。',
       educationalLevel: 'Intermediate',
       sections: {
         whatAreFrontier: {
@@ -23924,7 +23924,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'GPT-5.x（OpenAI）— マルチモーダル推論・コード・分析',
-            'Claude Opus 4.8（Anthropic）— 長文脈推論と安全性',
+            'Claude Opus 5（Anthropic）— 長文脈推論と安全性',
             'Gemini 3 Pro（Google DeepMind）— マルチモーダルおよび推論タスク',
             'Llama 4（Meta）— オープンソース、ローカルまたはクラウドデプロイ',
             'DeepSeek V4（DeepSeek）— コスト効率の高い推論',
@@ -23936,7 +23936,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whyComparison: {
           title: 'なぜフロンティアモデルを比較するのか？',
           content: [
-            'すべてのタスクで優れた単一のフロンティアモデルは存在しません。モデルの選択はユースケースによります：調査サマリーは強力な推論モデル（Claude Opus 4.8、Gemini 3 Pro、DeepSeek V4）が適切です。コード生成・リファクタリングには広範な学習データと長文脈のモデル（GPT-5.x、Claude Opus 4.8）が有利です。コスト重視のワークフローには効率的なモデル（Llama 4、DeepSeek V4）が向いています。リアルタイム機能はWebアクセスを持つモデル（Grok 4.1）が必要です。',
+            'すべてのタスクで優れた単一のフロンティアモデルは存在しません。モデルの選択はユースケースによります：調査サマリーは強力な推論モデル（Claude Opus 5、Gemini 3 Pro、DeepSeek V4）が適切です。コード生成・リファクタリングには広範な学習データと長文脈のモデル（GPT-5.x、Claude Opus 5）が有利です。コスト重視のワークフローには効率的なモデル（Llama 4、DeepSeek V4）が向いています。リアルタイム機能はWebアクセスを持つモデル（Grok 4.1）が必要です。',
             'PromptQuorum内で同じプロンプトを複数のフロンティアモデルに実行することで、特定のタスクに最高品質の出力を生成するモデルを特定できます。',
           ],
         },
@@ -23964,9 +23964,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '**GPT-5.x（OpenAI）** — 最適用途：汎用推論・コード・分析。推論：優秀。コンテキスト：20万トークン。速度：高速（0.5〜2秒）。コスト：入力$20/出力$80（100万トークン）。マルチモーダル：あり（画像・動画）。リアルタイム：なし。デプロイ：APIのみ。安全性：ジェイルブレーク耐性が優秀。',
-            '**Claude Opus 4.8（Anthropic）** — 最適用途：長文分析・研究・法的レビュー。推論：優秀。コンテキスト：20万トークン。速度：高速（0.8〜3秒）。コスト：入力$3/出力$15（最もコスト効率が良い）。マルチモーダル：あり（画像）。リアルタイム：なし。デプロイ：APIのみ。安全性：Constitutional AIアライメント。',
+            '**Claude Opus 5（Anthropic）** — 最適用途：長文分析・研究・法的レビュー。推論：優秀。コンテキスト：20万トークン。速度：高速（0.8〜3秒）。コスト：入力$3/出力$15（最もコスト効率が良い）。マルチモーダル：あり（画像）。リアルタイム：なし。デプロイ：APIのみ。安全性：Constitutional AIアライメント。',
             '**Gemini 3 Pro（Google DeepMind）** — 最適用途：マルチモーダル分析・クロスモーダル推論。推論：優秀。コンテキスト：200万トークン（最大）。速度：中程度（1〜4秒）。コスト：入力$5/出力$20。マルチモーダル：あり（画像・音声・動画）。リアルタイム：あり（限定的）。デプロイ：APIのみ。安全性：Responsible AI重視。',
-            '**Llama 4（Meta）** — 最適用途：デバイス上・コスト重視・プライバシー優先ワークフロー。推論：良い（GPT-5.xやClaude Opus 4.8ほど強力ではない）。コンテキスト：12万8千トークン。速度：ハードウェアによって異なる。コスト：無料（オープンソース）。マルチモーダル：あり（画像）。リアルタイム：なし。デプロイ：ローカル・クラウド・オンプレミス。安全性：コミュニティ駆動アライメント。',
+            '**Llama 4（Meta）** — 最適用途：デバイス上・コスト重視・プライバシー優先ワークフロー。推論：良い（GPT-5.xやClaude Opus 5ほど強力ではない）。コンテキスト：12万8千トークン。速度：ハードウェアによって異なる。コスト：無料（オープンソース）。マルチモーダル：あり（画像）。リアルタイム：なし。デプロイ：ローカル・クラウド・オンプレミス。安全性：コミュニティ駆動アライメント。',
             '**DeepSeek V4（DeepSeek）** — 最適用途：コスト最適化推論・アジア圏研究。推論：非常に良い。コンテキスト：12万8千トークン。速度：高速（0.5〜1.5秒）。コスト：入力$0.27/出力$1.1（最安値）。マルチモーダル：あり（画像）。リアルタイム：なし。デプロイ：API。安全性：標準的安全トレーニング。',
             '**Mistral Large 3（Mistral）** — 最適用途：欧州データレジデンシー・オープン推論。推論：非常に良い。コンテキスト：12万8千トークン。速度：高速（0.6〜2秒）。コスト：入力$3.15/出力$9.45。マルチモーダル：あり（画像）。リアルタイム：なし。デプロイ：API・オンプレミス。安全性：オープンで透明なアライメント。',
             '**Qwen3（Alibaba）** — 最適用途：多言語タスク・アジア太平洋ワークフロー。推論：非常に良い。コンテキスト：12万8千トークン。速度：高速（0.5〜2秒）。コスト：入力$0.5/出力$1.5。マルチモーダル：あり（画像・音声）。リアルタイム：限定的。デプロイ：API・ローカル。安全性：多言語安全トレーニング。',
@@ -23979,7 +23979,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'フロンティアモデルを評価する最良の方法は、実際のタスクを複数モデルに並行実行し、品質・速度・コストを測定することです。PromptQuorum内では、1つのプロンプトを8つのフロンティアモデルに同時送信し、結果を並べて比較できます。',
             '典型的な評価ワークフロー：',
             '1. タスクを明確に定義する（例：「この研究論文を5つの主要な発見でまとめてください」）。',
-            '2. テストするフロンティアモデルを選択する（例：GPT-5.x、Claude Opus 4.8、Gemini 3 Pro）。',
+            '2. テストするフロンティアモデルを選択する（例：GPT-5.x、Claude Opus 5、Gemini 3 Pro）。',
             '3. PromptQuorum内で選択したすべてのモデルに同じプロンプトを並行送信する。',
             '4. 品質・長さ・正確性・推論について出力を比較する。',
             '5. 各モデルのタスク当たりコストと有効速度を計算する。',
@@ -24009,8 +24009,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '関数呼び出し（ツール使用）— 外部API・データベース・コードを呼び出す能力。すべてのフロンティアモデルが対応。',
-            '長期計画——10+ステップにわたってコンテキストと目標を維持できる。Claude Opus 4.8とGemini 3 Proが優れている。',
-            'エラー回復——ツール呼び出しが失敗したときに検知し、別のアプローチで再試行できる。DeepSeek V4とClaude Opus 4.8が最も信頼性が高い。',
+            '長期計画——10+ステップにわたってコンテキストと目標を維持できる。Claude Opus 5とGemini 3 Proが優れている。',
+            'エラー回復——ツール呼び出しが失敗したときに検知し、別のアプローチで再試行できる。DeepSeek V4とClaude Opus 5が最も信頼性が高い。',
             'コンテキスト保持——以前のステップを記憶し、その結果に基づいて後のステップを適応させることができる。大きいコンテキストウィンドウ（Gemini 3 Pro 200万トークン）は大きな利点。',
           ],
         },
@@ -24021,7 +24021,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '評価すべき安全性の軸：',
           ],
           items: [
-            'ジェイルブレーク耐性——安全ガイドラインを無視させることがどれほど難しいか？GPT-5.xとClaude Opus 4.8が最も強い耐性を持つ。',
+            'ジェイルブレーク耐性——安全ガイドラインを無視させることがどれほど難しいか？GPT-5.xとClaude Opus 5が最も強い耐性を持つ。',
             '拒否動作——有害なリクエストを拒否するか？すべてのフロンティアモデルが拒否するが、しきい値は異なる。',
             'データプライバシー——モデルはプロンプトを記録または学習するか？APIのみ（ステートレス）モデルのドキュメントを確認。',
             '透明性——ベンダーはアライメント手法を公開しているか？Anthropic（Claude）とMistralはアプローチを公開；他は透明性が低い。',
@@ -24034,8 +24034,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'エンタープライズの選択では、コスト・コンプライアンス・パフォーマンスの予測可能性を重視してください。一般的なパターンを示します：',
           ],
           items: [
-            '高セキュリティ組織は、強力な安全アライメントを持つClaude Opus 4.8（Anthropic）か、欧州データレジデンシーのMistralを選択。',
-            'コスト重視の運営は、DeepSeek V4（GPT-5.xより80%安い）か、有利な価格設定のClaude Opus 4.8を選択。',
+            '高セキュリティ組織は、強力な安全アライメントを持つClaude Opus 5（Anthropic）か、欧州データレジデンシーのMistralを選択。',
+            'コスト重視の運営は、DeepSeek V4（GPT-5.xより80%安い）か、有利な価格設定のClaude Opus 5を選択。',
             'マルチモーダル重視のワークロードは、Gemini 3 Pro（200万トークンコンテキスト・優れた動画処理）かGPT-5.xを選択。',
             'デバイス上デプロイには、Llama 4（オープンソース・ローカル推論）が必要。',
             'リアルタイムワークロード（ニュース分析・市場監視）は、Grok 4.1（Webアクセス）かGemini 3 Pro（限定リアルタイム）を選択。',
@@ -24061,7 +24061,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'PromptQuorum内でできることは：',
           ],
           items: [
-            '1つのプロンプトを作成し、GPT-5.x・Claude Opus 4.8・Gemini 3 Pro・Llama 4・DeepSeek V4・Mistral Large 3・Qwen3・Grok 4.1に並行送信する。',
+            '1つのプロンプトを作成し、GPT-5.x・Claude Opus 5・Gemini 3 Pro・Llama 4・DeepSeek V4・Mistral Large 3・Qwen3・Grok 4.1に並行送信する。',
             '出力を即座に比較して、タスクに最良の結果を生成するモデルを確認する。',
             '集約メトリクス（平均コスト・最速応答・コンセンサス回答）を計算してデータ駆動の意思決定を行う。',
             '勝利したプロンプトとモデル選択を再利用可能なテンプレートとして保存する。',
@@ -24138,9 +24138,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'よくある質問',
           isTldr: false,
           faqs: [
-            { q: '2026年3月時点で最良のフロンティアモデルは何ですか？', a: '普遍的に「最良」のモデルは存在しません——選択はタスクによります。GPT-5.xは推論とコードに優れています。Claude Opus 4.8は長文脈分析に優れています。Gemini 3 Proはマルチモーダルタスクを処理します。PromptQuorumを使って特定のタスクで複数のモデルをテストし、品質・速度・コストを測定してください。' },
-            { q: '最も安いフロンティアモデルはどれですか？', a: 'DeepSeek V4は100万トークンあたり$0.27/$1.1で、GPT-5.x（$20/$80）やClaude Opus 4.8（$5/$25）より60〜70%安いです。Llama 4は無料です（オープンソース・ローカルデプロイ）。トレードオフ：低コストモデルは特殊な推論タスクで品質が低い場合があります。' },
-            { q: 'GPT-5.xとClaude Opus 4.8の違いは何ですか？', a: 'GPT-5.x：推論・コード・分析に優れています。コンテキスト200K。価格$20/$80。マルチモーダル（画像・動画）。Claude Opus 4.8：長文脈タスク・研究に強い。コンテキスト1M。$5/$25でより安価。優れた安全アライメント。動画サポートなし。ほとんどのタスクでは両方をテストしてください——結果はドメインによって異なります。' },
+            { q: '2026年3月時点で最良のフロンティアモデルは何ですか？', a: '普遍的に「最良」のモデルは存在しません——選択はタスクによります。GPT-5.xは推論とコードに優れています。Claude Opus 5は長文脈分析に優れています。Gemini 3 Proはマルチモーダルタスクを処理します。PromptQuorumを使って特定のタスクで複数のモデルをテストし、品質・速度・コストを測定してください。' },
+            { q: '最も安いフロンティアモデルはどれですか？', a: 'DeepSeek V4は100万トークンあたり$0.27/$1.1で、GPT-5.x（$20/$80）やClaude Opus 5（$5/$25）より60〜70%安いです。Llama 4は無料です（オープンソース・ローカルデプロイ）。トレードオフ：低コストモデルは特殊な推論タスクで品質が低い場合があります。' },
+            { q: 'GPT-5.xとClaude Opus 5の違いは何ですか？', a: 'GPT-5.x：推論・コード・分析に優れています。コンテキスト200K。価格$20/$80。マルチモーダル（画像・動画）。Claude Opus 5：長文脈タスク・研究に強い。コンテキスト1M。$5/$25でより安価。優れた安全アライメント。動画サポートなし。ほとんどのタスクでは両方をテストしてください——結果はドメインによって異なります。' },
             { q: 'ローカル/オフラインデプロイをサポートするフロンティアモデルはどれですか？', a: 'Llama 4（オープンソース、Ollama・LM Studio・Jan AI経由で動作）は完全なローカルデプロイをサポートします。他のすべてのフロンティアモデルはクラウドAPIアクセスが必要です。プライバシーとデータレジデンシーが重要な場合、Llama 4が唯一のフロンティアオプションです。' },
             { q: 'すべてのタスクに同じフロンティアモデルを使うべきですか？', a: 'いいえ——異なるモデルは異なるタスクで優れています。PromptQuorumを使ってプロンプトを複数のフロンティアモデルに送信し、出力を比較してください。コスト・速度・品質はすべてタスクによって異なります。実際のワークロードのテストはベンチマークよりも信頼性があります。' },
           ],
@@ -24161,7 +24161,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         sources: {
           items: [
             'OpenAI GPT-5.x — https://platform.openai.com/docs/',
-            'Anthropic Claude Opus 4.8 — https://docs.anthropic.com/',
+            'Anthropic Claude Opus 5 — https://docs.anthropic.com/',
             'Google Gemini 3 Pro — https://ai.google.dev/',
             'Meta Llama 4 — https://github.com/meta-llama/llama',
           ],
@@ -24170,12 +24170,12 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     },
     zh: {
       category: 'AI模型比较',
-      seoTitle: '2026年前沿AI模型对比：GPT-5.x vs Claude Opus 4.8 vs Gemini',
-      title: '前沿AI模型与提示词库：GPT-5.x、Claude Opus 4.8、Gemini 3 Pro及更多',
-      intro: '前沿AI模型代表大型语言模型开发的最高水平。本指南从推理能力、成本、速度和实际任务表现四个维度，对GPT-5.x、Claude Opus 4.8、Gemini 3 Pro、Llama 4、DeepSeek V4、Mistral Large 3、Qwen3和Grok 4.1进行全面比较，并提供170+评测提示词供自行测试。',
+      seoTitle: '2026年前沿AI模型对比：GPT-5.x vs Claude Opus 5 vs Gemini',
+      title: '前沿AI模型与提示词库：GPT-5.x、Claude Opus 5、Gemini 3 Pro及更多',
+      intro: '前沿AI模型代表大型语言模型开发的最高水平。本指南从推理能力、成本、速度和实际任务表现四个维度，对GPT-5.x、Claude Opus 5、Gemini 3 Pro、Llama 4、DeepSeek V4、Mistral Large 3、Qwen3和Grok 4.1进行全面比较，并提供170+评测提示词供自行测试。',
       publishDate: '发布于 2026年3月',
       readTime: '阅读约15分钟',
-      metaDescription: '对比GPT-5.x、Claude Opus 4.8、Gemini 3 Pro、DeepSeek V4的推理能力、成本、速度与多模态性能。含170+评测提示词。',
+      metaDescription: '对比GPT-5.x、Claude Opus 5、Gemini 3 Pro、DeepSeek V4的推理能力、成本、速度与多模态性能。含170+评测提示词。',
       educationalLevel: 'Intermediate',
       sections: {
         whatAreFrontier: {
@@ -24187,7 +24187,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'GPT-5.x（OpenAI）— 多模态推理、代码与分析',
-            'Claude Opus 4.8（Anthropic）— 长上下文推理与安全性',
+            'Claude Opus 5（Anthropic）— 长上下文推理与安全性',
             'Gemini 3 Pro（Google DeepMind）— 多模态及推理任务',
             'Llama 4（Meta）— 开源，支持本地或云端部署',
             'DeepSeek V4（DeepSeek）— 高效推理',
@@ -24199,7 +24199,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whyComparison: {
           title: '为什么要比较前沿模型？',
           content: [
-            '没有任何单一前沿模型在所有任务中都表现最优。您的选择取决于具体用例：研究摘要适合推理能力强的模型（Claude Opus 4.8、Gemini 3 Pro、DeepSeek V4）；代码生成和重构适合训练数据丰富、上下文窗口长的模型（GPT-5.x、Claude Opus 4.8）；成本敏感型工作流适合高效模型（Llama 4、DeepSeek V4）；实时功能需要具备网络访问能力的模型（Grok 4.1）。',
+            '没有任何单一前沿模型在所有任务中都表现最优。您的选择取决于具体用例：研究摘要适合推理能力强的模型（Claude Opus 5、Gemini 3 Pro、DeepSeek V4）；代码生成和重构适合训练数据丰富、上下文窗口长的模型（GPT-5.x、Claude Opus 5）；成本敏感型工作流适合高效模型（Llama 4、DeepSeek V4）；实时功能需要具备网络访问能力的模型（Grok 4.1）。',
             '在PromptQuorum中对多个前沿模型运行相同提示词，可以直观地看出哪个模型为您的特定任务生成最高质量的输出。',
           ],
         },
@@ -24227,9 +24227,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '**GPT-5.x（OpenAI）** — 最适合：通用推理、代码、分析。推理：优秀。上下文：20万token。速度：快速（0.5~2秒）。成本：输入$20/输出$80（每百万token）。多模态：支持（图像、视频）。实时：不支持。部署：仅API。安全性：越狱抵抗能力优秀。',
-            '**Claude Opus 4.8（Anthropic）** — 最适合：长篇分析、研究、法律审查。推理：优秀。上下文：20万token。速度：快速（0.8~3秒）。成本：输入$3/输出$15（性价比最高）。多模态：支持（图像）。实时：不支持。部署：仅API。安全性：Constitutional AI对齐。',
+            '**Claude Opus 5（Anthropic）** — 最适合：长篇分析、研究、法律审查。推理：优秀。上下文：20万token。速度：快速（0.8~3秒）。成本：输入$3/输出$15（性价比最高）。多模态：支持（图像）。实时：不支持。部署：仅API。安全性：Constitutional AI对齐。',
             '**Gemini 3 Pro（Google DeepMind）** — 最适合：多模态分析、跨模态推理。推理：优秀。上下文：200万token（最大）。速度：中等（1~4秒）。成本：输入$5/输出$20。多模态：支持（图像、音频、视频）。实时：支持（有限）。部署：仅API。安全性：负责任AI导向。',
-            '**Llama 4（Meta）** — 最适合：设备端、成本敏感或隐私优先的工作流。推理：良好（不如GPT-5.x或Claude Opus 4.8）。上下文：12.8万token。速度：取决于硬件。成本：免费（开源）。多模态：支持（图像）。实时：不支持。部署：本地、云端、私有化。安全性：社区驱动对齐。',
+            '**Llama 4（Meta）** — 最适合：设备端、成本敏感或隐私优先的工作流。推理：良好（不如GPT-5.x或Claude Opus 5）。上下文：12.8万token。速度：取决于硬件。成本：免费（开源）。多模态：支持（图像）。实时：不支持。部署：本地、云端、私有化。安全性：社区驱动对齐。',
             '**DeepSeek V4（DeepSeek）** — 最适合：成本优化推理、亚洲市场研究。推理：非常好。上下文：12.8万token。速度：快速（0.5~1.5秒）。成本：输入$0.27/输出$1.1（最低）。多模态：支持（图像）。实时：不支持。部署：API。安全性：标准安全训练。',
             '**Mistral Large 3（Mistral）** — 最适合：欧洲数据驻留、开放推理。推理：非常好。上下文：12.8万token。速度：快速（0.6~2秒）。成本：输入$3.15/输出$9.45。多模态：支持（图像）。实时：不支持。部署：API、私有化。安全性：开放透明的对齐。',
             '**Qwen3（阿里巴巴）** — 最适合：多语言任务、亚太工作流。推理：非常好。上下文：12.8万token。速度：快速（0.5~2秒）。成本：输入$0.5/输出$1.5。多模态：支持（图像、音频）。实时：有限。部署：API、本地。安全性：多语言安全训练。',
@@ -24242,7 +24242,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '评估前沿模型的最佳方式是将实际任务同时在多个模型上运行，并测量质量、速度和成本。在PromptQuorum中，您可以将单个提示词同时发送给八个前沿模型，并并排比较结果。',
             '典型评估工作流：',
             '1. 清晰定义任务（例如："用5个关键发现总结这篇研究论文"）。',
-            '2. 选择要测试的前沿模型（例如：GPT-5.x、Claude Opus 4.8、Gemini 3 Pro）。',
+            '2. 选择要测试的前沿模型（例如：GPT-5.x、Claude Opus 5、Gemini 3 Pro）。',
             '3. 在PromptQuorum中同时将相同提示词发送给所有选定模型。',
             '4. 比较输出的质量、长度、准确性和推理过程。',
             '5. 计算每个模型的每任务成本和有效速度。',
@@ -24272,8 +24272,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '函数调用（工具使用）— 调用外部API、数据库或代码的能力。所有前沿模型都支持。',
-            '长期规划 — 可在10+步骤中维持上下文和目标。Claude Opus 4.8和Gemini 3 Pro在此方面表现突出。',
-            '错误恢复 — 可检测工具调用失败并以不同方式重试。DeepSeek V4和Claude Opus 4.8最为可靠。',
+            '长期规划 — 可在10+步骤中维持上下文和目标。Claude Opus 5和Gemini 3 Pro在此方面表现突出。',
+            '错误恢复 — 可检测工具调用失败并以不同方式重试。DeepSeek V4和Claude Opus 5最为可靠。',
             '上下文保持 — 可记住之前的步骤，并根据早期结果调整后续步骤。更大的上下文窗口（Gemini 3 Pro 200万token）是显著优势。',
           ],
         },
@@ -24284,7 +24284,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '需要评估的安全维度：',
           ],
           items: [
-            '越狱抵抗力 — 让模型忽略安全准则的难度如何？GPT-5.x和Claude Opus 4.8具有最强的抵抗力。',
+            '越狱抵抗力 — 让模型忽略安全准则的难度如何？GPT-5.x和Claude Opus 5具有最强的抵抗力。',
             '拒绝行为 — 模型是否拒绝有害请求？所有前沿模型都会拒绝，但阈值各不相同。',
             '数据隐私 — 模型是否记录或学习您的提示词？请查阅仅API（无状态）模型的文档。',
             '透明度 — 供应商是否公布对齐技术？Anthropic（Claude）和Mistral公布了他们的方法；其他供应商透明度较低。',
@@ -24297,8 +24297,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '企业选择应权衡成本、合规性和性能可预测性。以下是常见模式：',
           ],
           items: [
-            '高安全性组织选择Claude Opus 4.8（Anthropic）以获得强大的安全对齐，或选择Mistral（欧洲数据驻留）。',
-            '成本敏感型运营选择DeepSeek V4（比GPT-5.x便宜80%）或定价有利的Claude Opus 4.8。',
+            '高安全性组织选择Claude Opus 5（Anthropic）以获得强大的安全对齐，或选择Mistral（欧洲数据驻留）。',
+            '成本敏感型运营选择DeepSeek V4（比GPT-5.x便宜80%）或定价有利的Claude Opus 5。',
             '多模态密集型工作负载选择Gemini 3 Pro（200万token上下文、更优越的视频处理）或GPT-5.x。',
             '设备端部署需要Llama 4（开源，本地推理）。',
             '实时工作负载（新闻分析、市场监控）选择Grok 4.1（网络访问）或Gemini 3 Pro（有限实时）。',
@@ -24324,7 +24324,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '在PromptQuorum中，您可以：',
           ],
           items: [
-            '编写一个提示词，并行发送给GPT-5.x、Claude Opus 4.8、Gemini 3 Pro、Llama 4、DeepSeek V4、Mistral Large 3、Qwen3和Grok 4.1。',
+            '编写一个提示词，并行发送给GPT-5.x、Claude Opus 5、Gemini 3 Pro、Llama 4、DeepSeek V4、Mistral Large 3、Qwen3和Grok 4.1。',
             '即时比较输出，查看哪个模型为您的任务生成最佳结果。',
             '计算聚合指标（平均成本、最快响应、共识答案）以做出数据驱动的决策。',
             '将获胜的提示词和模型选择保存为可重用模板。',
@@ -24401,9 +24401,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '常见问题',
           isTldr: false,
           faqs: [
-            { q: '2026年3月最好的前沿模型是哪个？', a: '没有普遍意义上"最好"的模型——选择取决于您的任务。GPT-5.x在推理和代码方面表现出色。Claude Opus 4.8在长上下文分析中领先。Gemini 3 Pro处理多模态任务。使用PromptQuorum在您的具体任务上测试多个模型，并衡量质量、速度和成本。' },
-            { q: '哪个前沿模型最便宜？', a: 'DeepSeek V4每百万token仅需$0.27/$1.1，比GPT-5.x（$20/$80）和Claude Opus 4.8（$5/$25）便宜60~70%。Llama 4免费（开源，本地部署）。权衡：低成本模型在专业推理任务上有时质量较低。' },
-            { q: 'GPT-5.x和Claude Opus 4.8有什么区别？', a: 'GPT-5.x：擅长推理、代码、分析。20万上下文。定价$20/$80。多模态（图像、视频）。Claude Opus 4.8：在长上下文任务、研究方面更强。20万上下文。以$5/$25更具价格优势。出色的安全对齐。不支持视频。大多数任务请两者都测试——结果因领域而异。' },
+            { q: '2026年3月最好的前沿模型是哪个？', a: '没有普遍意义上"最好"的模型——选择取决于您的任务。GPT-5.x在推理和代码方面表现出色。Claude Opus 5在长上下文分析中领先。Gemini 3 Pro处理多模态任务。使用PromptQuorum在您的具体任务上测试多个模型，并衡量质量、速度和成本。' },
+            { q: '哪个前沿模型最便宜？', a: 'DeepSeek V4每百万token仅需$0.27/$1.1，比GPT-5.x（$20/$80）和Claude Opus 5（$5/$25）便宜60~70%。Llama 4免费（开源，本地部署）。权衡：低成本模型在专业推理任务上有时质量较低。' },
+            { q: 'GPT-5.x和Claude Opus 5有什么区别？', a: 'GPT-5.x：擅长推理、代码、分析。20万上下文。定价$20/$80。多模态（图像、视频）。Claude Opus 5：在长上下文任务、研究方面更强。20万上下文。以$5/$25更具价格优势。出色的安全对齐。不支持视频。大多数任务请两者都测试——结果因领域而异。' },
             { q: '哪个前沿模型支持本地/离线部署？', a: 'Llama 4（开源，通过Ollama、LM Studio、Jan AI运行）支持完整的本地部署。所有其他前沿模型需要云API访问。如果隐私和数据驻留至关重要，Llama 4是唯一的前沿选项。' },
             { q: '所有任务都应该使用同一个前沿模型吗？', a: '不——不同模型在不同任务上表现优异。使用PromptQuorum将您的提示词分发给多个前沿模型并比较输出。成本、速度和质量都因任务而异。测试您的实际工作负载比基准测试更可靠。' },
           ],
@@ -24424,7 +24424,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         sources: {
           items: [
             'OpenAI GPT-5.x — https://platform.openai.com/docs/',
-            'Anthropic Claude Opus 4.8 — https://docs.anthropic.com/',
+            'Anthropic Claude Opus 5 — https://docs.anthropic.com/',
             'Google Gemini 3 Pro — https://ai.google.dev/',
             'Meta Llama 4 — https://github.com/meta-llama/llama',
           ],
@@ -24433,12 +24433,12 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     },
     pt: {
       category: 'Comparação de Modelos de IA',
-      seoTitle: 'Modelos de IA Frontier 2026: GPT-5.x vs Claude Opus 4.8 vs Gemini',
-      title: 'Modelos de IA Frontier e Biblioteca de Prompts: GPT-5.x, Claude Opus 4.8, Gemini 3 Pro e Muito Mais',
-      intro: 'Os modelos de IA frontier representam o estado da arte no desenvolvimento de grandes modelos de linguagem. Este guia compara GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 e Grok 4.1 em raciocínio, custo, velocidade e desempenho em tarefas reais — com mais de 170 prompts de avaliação para você testar.',
+      seoTitle: 'Modelos de IA Frontier 2026: GPT-5.x vs Claude Opus 5 vs Gemini',
+      title: 'Modelos de IA Frontier e Biblioteca de Prompts: GPT-5.x, Claude Opus 5, Gemini 3 Pro e Muito Mais',
+      intro: 'Os modelos de IA frontier representam o estado da arte no desenvolvimento de grandes modelos de linguagem. Este guia compara GPT-5.x, Claude Opus 5, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 e Grok 4.1 em raciocínio, custo, velocidade e desempenho em tarefas reais — com mais de 170 prompts de avaliação para você testar.',
       publishDate: 'Publicado em 24 de março de 2026',
       readTime: '15 min de leitura',
-      metaDescription: 'Compare GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, DeepSeek V4 em raciocínio, custo, velocidade e tarefas multimodais. Inclui mais de 170 prompts de avaliação.',
+      metaDescription: 'Compare GPT-5.x, Claude Opus 5, Gemini 3 Pro, DeepSeek V4 em raciocínio, custo, velocidade e tarefas multimodais. Inclui mais de 170 prompts de avaliação.',
       educationalLevel: 'Intermediate',
       sections: {
         whatAreFrontier: {
@@ -24450,7 +24450,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'GPT-5.x (OpenAI) — raciocínio multimodal, código e análise',
-            'Claude Opus 4.8 (Anthropic) — raciocínio em contextos longos e segurança',
+            'Claude Opus 5 (Anthropic) — raciocínio em contextos longos e segurança',
             'Gemini 3 Pro (Google DeepMind) — tarefas multimodais e de raciocínio',
             'Llama 4 (Meta) — código aberto, implantação local ou em nuvem',
             'DeepSeek V4 (DeepSeek) — raciocínio econômico',
@@ -24462,7 +24462,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whyComparison: {
           title: 'Por Que Comparar Modelos Frontier?',
           content: [
-            'Nenhum modelo frontier se destaca em todas as tarefas. A escolha do modelo depende do seu caso de uso específico: resumos de pesquisa favorecem modelos com raciocínio forte (Claude Opus 4.8, Gemini 3 Pro, DeepSeek V4). Geração e refatoração de código favorecem modelos com dados de treinamento extensos e contexto longo (GPT-5.x, Claude Opus 4.8). Fluxos de trabalho sensíveis ao custo favorecem modelos eficientes (Llama 4, DeepSeek V4). Funcionalidades em tempo real favorecem modelos com acesso à web (Grok 4.1).',
+            'Nenhum modelo frontier se destaca em todas as tarefas. A escolha do modelo depende do seu caso de uso específico: resumos de pesquisa favorecem modelos com raciocínio forte (Claude Opus 5, Gemini 3 Pro, DeepSeek V4). Geração e refatoração de código favorecem modelos com dados de treinamento extensos e contexto longo (GPT-5.x, Claude Opus 5). Fluxos de trabalho sensíveis ao custo favorecem modelos eficientes (Llama 4, DeepSeek V4). Funcionalidades em tempo real favorecem modelos com acesso à web (Grok 4.1).',
             'Executar o mesmo prompt em vários modelos frontier dentro do PromptQuorum revela qual modelo produz a saída de maior qualidade para a sua tarefa específica.',
           ],
         },
@@ -24490,9 +24490,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '**GPT-5.x (OpenAI)** — Melhor para: raciocínio geral, código, análise. Raciocínio: Excelente. Contexto: 200K tokens. Velocidade: Rápida (0,5–2s). Custo: US$20/US$80 por 1M de tokens de entrada/saída. Multimodal: Sim (imagem, vídeo). Tempo real: Não. Implantação: Somente API. Segurança: Excelente resistência a jailbreaks.',
-            '**Claude Opus 4.8 (Anthropic)** — Melhor para: análise de texto longo, pesquisa, revisão jurídica. Raciocínio: Excelente. Contexto: 1M tokens. Velocidade: Rápida (0,8–3s). Custo: US$5/US$25 por 1M de tokens de entrada/saída. Multimodal: Sim (imagem). Tempo real: Não. Implantação: Somente API. Segurança: Alinhamento Constitutional AI.',
+            '**Claude Opus 5 (Anthropic)** — Melhor para: análise de texto longo, pesquisa, revisão jurídica. Raciocínio: Excelente. Contexto: 1M tokens. Velocidade: Rápida (0,8–3s). Custo: US$5/US$25 por 1M de tokens de entrada/saída. Multimodal: Sim (imagem). Tempo real: Não. Implantação: Somente API. Segurança: Alinhamento Constitutional AI.',
             '**Gemini 3 Pro (Google DeepMind)** — Melhor para: análise multimodal, raciocínio entre modalidades. Raciocínio: Excelente. Contexto: 2M tokens (maior janela). Velocidade: Moderada (1–4s). Custo: US$5/US$20 por 1M de tokens de entrada/saída. Multimodal: Sim (imagem, áudio, vídeo). Tempo real: Sim (limitado). Implantação: Somente API. Segurança: Foco em IA responsável.',
-            '**Llama 4 (Meta)** — Melhor para: fluxos no dispositivo, sensíveis ao custo ou com prioridade em privacidade. Raciocínio: Bom (inferior ao GPT-5.x ou Claude Opus 4.8). Contexto: 128K tokens. Velocidade: Varia conforme o hardware. Custo: Gratuito (código aberto). Multimodal: Sim (imagem). Tempo real: Não. Implantação: Local, nuvem, on-premises. Segurança: Alinhamento orientado pela comunidade.',
+            '**Llama 4 (Meta)** — Melhor para: fluxos no dispositivo, sensíveis ao custo ou com prioridade em privacidade. Raciocínio: Bom (inferior ao GPT-5.x ou Claude Opus 5). Contexto: 128K tokens. Velocidade: Varia conforme o hardware. Custo: Gratuito (código aberto). Multimodal: Sim (imagem). Tempo real: Não. Implantação: Local, nuvem, on-premises. Segurança: Alinhamento orientado pela comunidade.',
             '**DeepSeek V4 (DeepSeek)** — Melhor para: raciocínio otimizado em custo, pesquisa na Ásia. Raciocínio: Muito bom. Contexto: 128K tokens. Velocidade: Rápida (0,5–1,5s). Custo: US$0,27/US$1,1 por 1M de tokens de entrada/saída (mais barato). Multimodal: Sim (imagem). Tempo real: Não. Implantação: API. Segurança: Treinamento de segurança padrão.',
             '**Mistral Large 3 (Mistral)** — Melhor para: residência de dados europeia, raciocínio aberto. Raciocínio: Muito bom. Contexto: 128K tokens. Velocidade: Rápida (0,6–2s). Custo: US$3,15/US$9,45 por 1M de tokens de entrada/saída. Multimodal: Sim (imagem). Tempo real: Não. Implantação: API, on-premises. Segurança: Alinhamento aberto e transparente.',
             '**Qwen3 (Alibaba)** — Melhor para: tarefas multilíngues, fluxos na Ásia-Pacífico. Raciocínio: Muito bom. Contexto: 128K tokens. Velocidade: Rápida (0,5–2s). Custo: US$0,5/US$1,5 por 1M de tokens de entrada/saída. Multimodal: Sim (imagem, áudio). Tempo real: Limitado. Implantação: API, local. Segurança: Treinamento de segurança multilíngue.',
@@ -24505,7 +24505,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'A melhor forma de avaliar modelos frontier é executar sua tarefa real em vários modelos em paralelo e medir qualidade, velocidade e custo. Dentro do PromptQuorum, você pode enviar um único prompt para todos os oito modelos frontier simultaneamente e comparar os resultados lado a lado.',
             'Um fluxo de avaliação típico:',
             '1. Defina sua tarefa com clareza (por exemplo: "Resuma este artigo científico com 5 descobertas principais").',
-            '2. Selecione os modelos frontier que deseja testar (por exemplo: GPT-5.x, Claude Opus 4.8, Gemini 3 Pro).',
+            '2. Selecione os modelos frontier que deseja testar (por exemplo: GPT-5.x, Claude Opus 5, Gemini 3 Pro).',
             '3. Envie o mesmo prompt para todos os modelos selecionados em paralelo dentro do PromptQuorum.',
             '4. Compare as saídas em qualidade, extensão, precisão e raciocínio.',
             '5. Calcule o custo por tarefa e a velocidade efetiva de cada modelo.',
@@ -24535,8 +24535,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'Chamada de funções (uso de ferramentas) — Capacidade de invocar APIs externas, bancos de dados ou código. Todos os modelos frontier suportam isso.',
-            'Planejamento de longo prazo — Capacidade de manter contexto e objetivos ao longo de mais de 10 etapas. Claude Opus 4.8 e Gemini 3 Pro se destacam aqui.',
-            'Recuperação de erros — Capacidade de detectar quando uma chamada de ferramenta falhou e tentar novamente com uma abordagem diferente. DeepSeek V4 e Claude Opus 4.8 são os mais confiáveis.',
+            'Planejamento de longo prazo — Capacidade de manter contexto e objetivos ao longo de mais de 10 etapas. Claude Opus 5 e Gemini 3 Pro se destacam aqui.',
+            'Recuperação de erros — Capacidade de detectar quando uma chamada de ferramenta falhou e tentar novamente com uma abordagem diferente. DeepSeek V4 e Claude Opus 5 são os mais confiáveis.',
             'Retenção de contexto — Capacidade de lembrar etapas anteriores e adaptar etapas posteriores com base em resultados anteriores. Janelas de contexto maiores (Gemini 3 Pro com 2M de tokens) são vantagens significativas.',
           ],
         },
@@ -24547,7 +24547,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Dimensões de segurança a avaliar:',
           ],
           items: [
-            'Resistência a jailbreaks — Quão difícil é fazer o modelo ignorar as diretrizes de segurança? GPT-5.x e Claude Opus 4.8 têm a maior resistência.',
+            'Resistência a jailbreaks — Quão difícil é fazer o modelo ignorar as diretrizes de segurança? GPT-5.x e Claude Opus 5 têm a maior resistência.',
             'Comportamento de recusa — O modelo recusa solicitações prejudiciais? Todos os modelos frontier fazem isso, mas o limite varia.',
             'Privacidade de dados — O modelo registra ou aprende com seus prompts? Verifique a documentação para modelos somente API (sem estado).',
             'Transparência — O fornecedor publica técnicas de alinhamento? A Anthropic (Claude) e a Mistral publicam suas abordagens; outros são menos transparentes.',
@@ -24560,8 +24560,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'A seleção corporativa deve ponderar custo, conformidade e previsibilidade de desempenho. Padrões comuns:',
           ],
           items: [
-            'Organizações com alta segurança escolhem Claude Opus 4.8 (Anthropic) pelo forte alinhamento de segurança, ou Mistral (residência de dados europeia).',
-            'Operações sensíveis ao custo escolhem DeepSeek V4 (80% mais barato que o GPT-5.x) ou Claude Opus 4.8 pelo preço favorável.',
+            'Organizações com alta segurança escolhem Claude Opus 5 (Anthropic) pelo forte alinhamento de segurança, ou Mistral (residência de dados europeia).',
+            'Operações sensíveis ao custo escolhem DeepSeek V4 (80% mais barato que o GPT-5.x) ou Claude Opus 5 pelo preço favorável.',
             'Cargas de trabalho intensas em multimodal escolhem Gemini 3 Pro (contexto de 2M de tokens, excelente tratamento de vídeo) ou GPT-5.x.',
             'Implantações no dispositivo exigem Llama 4 (código aberto, inferência local).',
             'Cargas de trabalho em tempo real (análise de notícias, monitoramento de mercado) escolhem Grok 4.1 (acesso à web) ou Gemini 3 Pro (tempo real limitado).',
@@ -24587,7 +24587,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'Dentro do PromptQuorum, você pode:',
           ],
           items: [
-            'Escrever um único prompt e enviá-lo para GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 e Grok 4.1 em paralelo.',
+            'Escrever um único prompt e enviá-lo para GPT-5.x, Claude Opus 5, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3 e Grok 4.1 em paralelo.',
             'Comparar as saídas instantaneamente para ver qual modelo produz os melhores resultados para a sua tarefa.',
             'Calcular métricas agregadas (custo médio, resposta mais rápida, resposta de consenso) para tomar decisões baseadas em dados.',
             'Salvar seus prompts e seleções de modelos vencedores como modelos reutilizáveis.',
@@ -24664,9 +24664,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Perguntas Frequentes',
           isTldr: false,
           faqs: [
-            { q: 'Qual é o melhor modelo frontier em março de 2026?', a: 'Não existe um modelo "melhor" universalmente — a escolha depende da sua tarefa. O GPT-5.x se destaca em raciocínio e código. O Claude Opus 4.8 domina análises em contexto longo. O Gemini 3 Pro lida com tarefas multimodais. Use o PromptQuorum para testar vários modelos na sua tarefa específica e medir qualidade, velocidade e custo.' },
-            { q: 'Qual modelo frontier é mais barato?', a: 'O DeepSeek V4, a US$0,27/US$1,1 por 1M de tokens, é 60–70% mais barato que o GPT-5.x (US$20/US$80) e o Claude Opus 4.8 (US$5/US$25). O Llama 4 é gratuito (código aberto, implantação local). Contrapartida: modelos de menor custo às vezes têm qualidade inferior em tarefas de raciocínio especializado.' },
-            { q: 'Qual é a diferença entre GPT-5.x e Claude Opus 4.8?', a: 'GPT-5.x: Destaca-se em raciocínio, código e análise. Contexto de 200K. Preço US$20/US$80. Multimodal (imagem, vídeo). Claude Opus 4.8: Mais forte em tarefas de contexto longo e pesquisa. Contexto de 1M. Mais barato a US$5/US$25. Excelente alinhamento de segurança. Sem suporte a vídeo. Para a maioria das tarefas, teste os dois — os resultados variam conforme o domínio.' },
+            { q: 'Qual é o melhor modelo frontier em março de 2026?', a: 'Não existe um modelo "melhor" universalmente — a escolha depende da sua tarefa. O GPT-5.x se destaca em raciocínio e código. O Claude Opus 5 domina análises em contexto longo. O Gemini 3 Pro lida com tarefas multimodais. Use o PromptQuorum para testar vários modelos na sua tarefa específica e medir qualidade, velocidade e custo.' },
+            { q: 'Qual modelo frontier é mais barato?', a: 'O DeepSeek V4, a US$0,27/US$1,1 por 1M de tokens, é 60–70% mais barato que o GPT-5.x (US$20/US$80) e o Claude Opus 5 (US$5/US$25). O Llama 4 é gratuito (código aberto, implantação local). Contrapartida: modelos de menor custo às vezes têm qualidade inferior em tarefas de raciocínio especializado.' },
+            { q: 'Qual é a diferença entre GPT-5.x e Claude Opus 5?', a: 'GPT-5.x: Destaca-se em raciocínio, código e análise. Contexto de 200K. Preço US$20/US$80. Multimodal (imagem, vídeo). Claude Opus 5: Mais forte em tarefas de contexto longo e pesquisa. Contexto de 1M. Mais barato a US$5/US$25. Excelente alinhamento de segurança. Sem suporte a vídeo. Para a maioria das tarefas, teste os dois — os resultados variam conforme o domínio.' },
             { q: 'Qual modelo frontier suporta implantação local/offline?', a: 'O Llama 4 (código aberto, executado via Ollama, LM Studio, Jan AI) suporta implantação completamente local. Todos os outros modelos frontier requerem acesso à API em nuvem. Se privacidade e residência de dados são críticas, o Llama 4 é a única opção frontier local.' },
             { q: 'Devo usar o mesmo modelo frontier para todas as tarefas?', a: 'Não — modelos diferentes se destacam em tarefas diferentes. Use o PromptQuorum para enviar seu prompt a vários modelos frontier e comparar as saídas. Custo, velocidade e qualidade variam por tarefa. Testar sua carga de trabalho real é mais confiável do que benchmarks.' },
           ],
@@ -24687,7 +24687,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         sources: {
           items: [
             'OpenAI GPT-5.x — https://platform.openai.com/docs/',
-            'Anthropic Claude Opus 4.8 — https://docs.anthropic.com/',
+            'Anthropic Claude Opus 5 — https://docs.anthropic.com/',
             'Google Gemini 3 Pro — https://ai.google.dev/',
             'Meta Llama 4 — https://github.com/meta-llama/llama',
           ],
@@ -25422,12 +25422,12 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     },
     ko: {
       category: 'AI 모델 비교',
-      title: '프론티어 AI 모델과 프롬프트 라이브러리: GPT-5.x, Claude Opus 4.8, Gemini 3 Pro 및 그 이상',
-      seoTitle: '프론티어 AI 모델 2026: GPT-5.x vs Claude Opus 4.8 vs Gemini',
-      intro: '2026년 7월 기준, 프론티어 AI 모델은 대형 언어 모델 개발의 최전선을 대표합니다. 이 가이드는 GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, Grok 4.1을 추론 능력, 비용, 속도, 실무 성능 측면에서 비교하며 — 자체 테스트를 위한 170개 이상의 평가 프롬프트를 포함합니다.',
+      title: '프론티어 AI 모델과 프롬프트 라이브러리: GPT-5.x, Claude Opus 5, Gemini 3 Pro 및 그 이상',
+      seoTitle: '프론티어 AI 모델 2026: GPT-5.x vs Claude Opus 5 vs Gemini',
+      intro: '2026년 7월 기준, 프론티어 AI 모델은 대형 언어 모델 개발의 최전선을 대표합니다. 이 가이드는 GPT-5.x, Claude Opus 5, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, Grok 4.1을 추론 능력, 비용, 속도, 실무 성능 측면에서 비교하며 — 자체 테스트를 위한 170개 이상의 평가 프롬프트를 포함합니다.',
       publishDate: 'Published March 24, 2026',
       readTime: '15분 읽기',
-      metaDescription: 'GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, DeepSeek V4를 추론, 비용, 속도, 멀티모달 작업 기준으로 비교합니다. 170개 이상의 평가 프롬프트 포함.',
+      metaDescription: 'GPT-5.x, Claude Opus 5, Gemini 3 Pro, DeepSeek V4를 추론, 비용, 속도, 멀티모달 작업 기준으로 비교합니다. 170개 이상의 평가 프롬프트 포함.',
       educationalLevel: 'Intermediate',
       sections: {
         whatAreFrontier: {
@@ -25439,7 +25439,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             'GPT-5.x (OpenAI) — 멀티모달 추론, 코드, 분석',
-            'Claude Opus 4.8 (Anthropic) — 장문 컨텍스트 추론 및 안전성',
+            'Claude Opus 5 (Anthropic) — 장문 컨텍스트 추론 및 안전성',
             'Gemini 3 Pro (Google DeepMind) — 멀티모달 및 추론 작업',
             'Llama 4 (Meta) — 오픈 소스, 온디바이스 또는 클라우드 배포',
             'DeepSeek V4 (DeepSeek) — 비용 효율적인 추론',
@@ -25451,7 +25451,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         whyComparison: {
           title: '프론티어 모델을 비교해야 하는 이유',
           content: [
-            '어떤 단일 프론티어 모델도 모든 작업에서 뛰어나지 않습니다. 모델 선택은 특정 사용 사례에 따라 달라집니다: 연구 요약은 강력한 추론 능력을 가진 모델(Claude Opus 4.8, Gemini 3 Pro, DeepSeek V4)을 선호합니다. 코드 생성 및 리팩토링은 광범위한 훈련 데이터와 긴 컨텍스트를 가진 모델(GPT-5.x, Claude Opus 4.8)을 선호합니다. 비용에 민감한 워크플로우는 효율적인 모델(Llama 4, DeepSeek V4)을 선호합니다. 실시간 기능은 웹 접근 모델(Grok 4.1)을 선호합니다.',
+            '어떤 단일 프론티어 모델도 모든 작업에서 뛰어나지 않습니다. 모델 선택은 특정 사용 사례에 따라 달라집니다: 연구 요약은 강력한 추론 능력을 가진 모델(Claude Opus 5, Gemini 3 Pro, DeepSeek V4)을 선호합니다. 코드 생성 및 리팩토링은 광범위한 훈련 데이터와 긴 컨텍스트를 가진 모델(GPT-5.x, Claude Opus 5)을 선호합니다. 비용에 민감한 워크플로우는 효율적인 모델(Llama 4, DeepSeek V4)을 선호합니다. 실시간 기능은 웹 접근 모델(Grok 4.1)을 선호합니다.',
             'PromptQuorum 내에서 동일한 프롬프트를 여러 프론티어 모델에 실행하면 특정 작업에 대해 어떤 모델이 가장 높은 품질의 결과를 생성하는지 알 수 있습니다.',
           ],
         },
@@ -25479,7 +25479,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '**GPT-5.x (OpenAI)** — 최적 용도: 범용 추론, 코드, 분석. 추론: 탁월. 컨텍스트: 200K 토큰. 속도: 빠름(0.5-2초). 비용: 1M 토큰당 $20/$80. 멀티모달: 예(이미지, 비디오). 실시간: 아니오. 배포: API만. 안전성: 탁월한 탈옥 저항성.',
-            '**Claude Opus 4.8 (Anthropic)** — 최적 용도: 장문 분석, 연구, 법적 검토. 추론: 탁월. 컨텍스트: 1M 토큰. 속도: 빠름(0.8-3초). 비용: 1M 토큰당 $5/$25. 멀티모달: 예(이미지). 실시간: 아니오. 배포: API만. 안전성: Constitutional AI 정렬.',
+            '**Claude Opus 5 (Anthropic)** — 최적 용도: 장문 분석, 연구, 법적 검토. 추론: 탁월. 컨텍스트: 1M 토큰. 속도: 빠름(0.8-3초). 비용: 1M 토큰당 $5/$25. 멀티모달: 예(이미지). 실시간: 아니오. 배포: API만. 안전성: Constitutional AI 정렬.',
             '**Gemini 3 Pro (Google DeepMind)** — 최적 용도: 멀티모달 분석, 모달리티 간 추론. 추론: 탁월. 컨텍스트: 2M 토큰(최대). 속도: 보통(1-4초). 비용: 1M 토큰당 $5/$20. 멀티모달: 예(이미지, 오디오, 비디오). 실시간: 예(제한적). 배포: API만. 안전성: 책임감 있는 AI 중심.',
             '**Llama 4 (Meta)** — 최적 용도: 온디바이스, 비용에 민감하거나 프라이버시 우선 워크플로우. 추론: 양호. 컨텍스트: 128K 토큰. 속도: 하드웨어에 따라 다름. 비용: 무료(오픈 소스). 멀티모달: 예(이미지). 실시간: 아니오. 배포: 로컬, 클라우드, 온프레미스. 안전성: 커뮤니티 기반 정렬.',
             '**DeepSeek V4 (DeepSeek)** — 최적 용도: 비용 최적화 추론, 아시아 연구. 추론: 매우 양호. 컨텍스트: 128K 토큰. 속도: 빠름(0.5-1.5초). 비용: 1M 토큰당 $0.27/$1.1(최저가). 멀티모달: 예(이미지). 실시간: 아니오. 배포: API. 안전성: 표준 안전 훈련.',
@@ -25494,7 +25494,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '프론티어 모델을 평가하는 가장 좋은 방법은 실제 작업을 여러 모델에 병렬로 실행하고 품질, 속도, 비용을 측정하는 것입니다. PromptQuorum 내에서 단일 프롬프트를 8개의 프론티어 모델 전체에 동시에 전송하고 결과를 나란히 비교할 수 있습니다.',
             '일반적인 평가 워크플로우:',
             '1. 작업을 명확하게 정의하세요(예: "이 연구 논문을 5가지 핵심 발견과 함께 요약하세요").',
-            '2. 테스트할 프론티어 모델을 선택하세요(예: GPT-5.x, Claude Opus 4.8, Gemini 3 Pro).',
+            '2. 테스트할 프론티어 모델을 선택하세요(예: GPT-5.x, Claude Opus 5, Gemini 3 Pro).',
             '3. PromptQuorum 내에서 선택한 모든 모델에 동일한 프롬프트를 병렬로 전송하세요.',
             '4. 품질, 길이, 정확성, 추론 측면에서 출력을 비교하세요.',
             '5. 각 모델의 작업당 비용과 실효 속도를 계산하세요.',
@@ -25524,8 +25524,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
           items: [
             '함수 호출(도구 사용) — 외부 API, 데이터베이스 또는 코드를 호출하는 능력. 모든 프론티어 모델이 지원합니다.',
-            '장기 계획 — 10개 이상의 단계에 걸쳐 컨텍스트와 목표를 유지할 수 있습니다. Claude Opus 4.8과 Gemini 3 Pro가 여기서 탁월합니다.',
-            '오류 복구 — 도구 호출이 실패했을 때 감지하고 다른 접근 방식으로 재시도할 수 있습니다. DeepSeek V4와 Claude Opus 4.8이 가장 안정적입니다.',
+            '장기 계획 — 10개 이상의 단계에 걸쳐 컨텍스트와 목표를 유지할 수 있습니다. Claude Opus 5과 Gemini 3 Pro가 여기서 탁월합니다.',
+            '오류 복구 — 도구 호출이 실패했을 때 감지하고 다른 접근 방식으로 재시도할 수 있습니다. DeepSeek V4와 Claude Opus 5이 가장 안정적입니다.',
             '컨텍스트 유지 — 이전 단계를 기억하고 이전 결과를 기반으로 이후 단계를 적응시킬 수 있습니다. 더 큰 컨텍스트 윈도우(Gemini 3 Pro의 2M 토큰)는 상당한 이점입니다.',
           ],
         },
@@ -25536,7 +25536,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '평가할 안전 차원:',
           ],
           items: [
-            '탈옥 저항성 — 모델이 안전 지침을 무시하도록 만드는 것이 얼마나 어렵습니까? GPT-5.x와 Claude Opus 4.8이 가장 강력한 저항성을 가지고 있습니다.',
+            '탈옥 저항성 — 모델이 안전 지침을 무시하도록 만드는 것이 얼마나 어렵습니까? GPT-5.x와 Claude Opus 5이 가장 강력한 저항성을 가지고 있습니다.',
             '거부 동작 — 모델이 유해한 요청을 거부합니까? 모든 프론티어 모델이 그러하지만 임계값은 다릅니다.',
             '데이터 프라이버시 — 모델이 프롬프트를 기록하거나 학습합니까? API 전용(상태 없는) 모델의 문서를 확인하세요.',
             '투명성 — 벤더가 정렬 기술을 공개합니까? Anthropic(Claude)과 Mistral은 접근 방식을 공개하며; 다른 곳은 덜 투명합니다.',
@@ -25549,8 +25549,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '기업 선택은 비용, 컴플라이언스, 성능 예측 가능성을 고려해야 합니다. 일반적인 패턴은 다음과 같습니다:',
           ],
           items: [
-            '높은 보안이 필요한 조직은 강력한 안전 정렬을 위해 Claude Opus 4.8(Anthropic) 또는 유럽 데이터 레지던시를 위해 Mistral을 선택합니다.',
-            '비용에 민감한 운영은 DeepSeek V4(GPT-5.x보다 80% 저렴) 또는 유리한 가격의 Claude Opus 4.8을 선택합니다.',
+            '높은 보안이 필요한 조직은 강력한 안전 정렬을 위해 Claude Opus 5(Anthropic) 또는 유럽 데이터 레지던시를 위해 Mistral을 선택합니다.',
+            '비용에 민감한 운영은 DeepSeek V4(GPT-5.x보다 80% 저렴) 또는 유리한 가격의 Claude Opus 5을 선택합니다.',
             '멀티모달 집약적 워크로드는 Gemini 3 Pro(2M 토큰 컨텍스트, 탁월한 비디오 처리) 또는 GPT-5.x를 선택합니다.',
             '온디바이스 배포는 Llama 4(오픈 소스, 로컬 추론)가 필요합니다.',
             '실시간 워크로드(뉴스 분석, 시장 모니터링)는 Grok 4.1(웹 접근) 또는 Gemini 3 Pro(제한적 실시간)를 선택합니다.',
@@ -25576,7 +25576,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             'PromptQuorum 내에서 다음을 할 수 있습니다:',
           ],
           items: [
-            '단일 프롬프트를 작성하여 GPT-5.x, Claude Opus 4.8, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, Grok 4.1에 병렬로 전송합니다.',
+            '단일 프롬프트를 작성하여 GPT-5.x, Claude Opus 5, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, Grok 4.1에 병렬로 전송합니다.',
             '출력을 즉시 비교하여 특정 작업에 가장 좋은 결과를 생성하는 모델을 확인합니다.',
             '집계 메트릭(평균 비용, 가장 빠른 응답, 합의 답변)을 계산하여 데이터 기반 결정을 내립니다.',
             '우수한 프롬프트와 모델 선택을 재사용 가능한 템플릿으로 저장합니다.',
@@ -25653,9 +25653,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '자주 묻는 질문',
           isTldr: false,
           faqs: [
-            { q: '2026년 3월 최고의 프론티어 모델은 무엇입니까?', a: '보편적으로 "최고"인 모델은 없습니다 — 선택은 작업에 따라 다릅니다. GPT-5.x는 추론과 코드에서 탁월합니다. Claude Opus 4.8은 장문 컨텍스트 분석에서 우수합니다. Gemini 3 Pro는 멀티모달 작업을 처리합니다. PromptQuorum을 사용하여 특정 작업에서 여러 모델을 테스트하고 품질, 속도, 비용을 측정하세요.' },
-            { q: '가장 저렴한 프론티어 모델은 무엇입니까?', a: 'DeepSeek V4(1M 토큰당 $0.27/$1.1)가 GPT-5.x($20/$80) 및 Claude Opus 4.8($5/$25)보다 60-70% 저렴합니다. Llama 4는 무료(오픈 소스, 로컬 배포)입니다. 절충점: 비용이 낮은 모델은 특수 추론 작업에서 품질이 낮을 수 있습니다.' },
-            { q: 'GPT-5.x와 Claude Opus 4.8의 차이는 무엇입니까?', a: 'GPT-5.x: 추론, 코드, 분석에서 탁월합니다. 컨텍스트 200K. 가격 $20/$80. 멀티모달(이미지, 비디오). Claude Opus 4.8: 장문 컨텍스트 작업, 연구에서 더 강합니다. 컨텍스트 1M. 가격 $5/$25. 탁월한 안전 정렬. 비디오 지원 없음. 대부분의 작업에서 둘 다 테스트하세요 — 결과는 도메인에 따라 다릅니다.' },
+            { q: '2026년 3월 최고의 프론티어 모델은 무엇입니까?', a: '보편적으로 "최고"인 모델은 없습니다 — 선택은 작업에 따라 다릅니다. GPT-5.x는 추론과 코드에서 탁월합니다. Claude Opus 5은 장문 컨텍스트 분석에서 우수합니다. Gemini 3 Pro는 멀티모달 작업을 처리합니다. PromptQuorum을 사용하여 특정 작업에서 여러 모델을 테스트하고 품질, 속도, 비용을 측정하세요.' },
+            { q: '가장 저렴한 프론티어 모델은 무엇입니까?', a: 'DeepSeek V4(1M 토큰당 $0.27/$1.1)가 GPT-5.x($20/$80) 및 Claude Opus 5($5/$25)보다 60-70% 저렴합니다. Llama 4는 무료(오픈 소스, 로컬 배포)입니다. 절충점: 비용이 낮은 모델은 특수 추론 작업에서 품질이 낮을 수 있습니다.' },
+            { q: 'GPT-5.x와 Claude Opus 5의 차이는 무엇입니까?', a: 'GPT-5.x: 추론, 코드, 분석에서 탁월합니다. 컨텍스트 200K. 가격 $20/$80. 멀티모달(이미지, 비디오). Claude Opus 5: 장문 컨텍스트 작업, 연구에서 더 강합니다. 컨텍스트 1M. 가격 $5/$25. 탁월한 안전 정렬. 비디오 지원 없음. 대부분의 작업에서 둘 다 테스트하세요 — 결과는 도메인에 따라 다릅니다.' },
             { q: '어떤 프론티어 모델이 로컬/오프라인 배포를 지원합니까?', a: 'Llama 4(오픈 소스, Ollama, LM Studio, Jan AI를 통해 실행)가 완전한 로컬 배포를 지원합니다. 다른 모든 프론티어 모델은 클라우드 API 접근이 필요합니다. 프라이버시와 데이터 레지던시가 중요하다면 Llama 4가 유일한 프론티어 옵션입니다.' },
             { q: '모든 작업에 동일한 프론티어 모델을 사용해야 합니까?', a: '아니오 — 다른 모델은 다른 작업에서 탁월합니다. PromptQuorum을 사용하여 프롬프트를 여러 프론티어 모델에 전송하고 출력을 비교하세요. 비용, 속도, 품질은 모두 작업에 따라 다릅니다. 실제 워크로드 테스트가 벤치마크보다 더 신뢰할 수 있습니다.' },
           ],
@@ -25676,7 +25676,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         sources: {
           items: [
             'OpenAI GPT-5.x — https://platform.openai.com/docs/',
-            'Anthropic Claude Opus 4.8 — https://docs.anthropic.com/',
+            'Anthropic Claude Opus 5 — https://docs.anthropic.com/',
             'Google Gemini 3 Pro — https://ai.google.dev/',
             'Meta Llama 4 — https://github.com/meta-llama/llama',
           ],

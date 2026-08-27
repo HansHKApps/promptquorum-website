@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-26",
+  "last_updated": "2026-08-27",
   "models": [
     {
       "company": "Anthropic",
@@ -19,11 +19,11 @@
       "model": "Claude Opus 4.8",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Claude Opus 5",
       "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
-      "verified_date": "2026-07-13",
-      "notes": "Recommended for complex agentic coding and enterprise work. Reliable knowledge cutoff Jan 2026."
+      "verified_date": "2026-08-27",
+      "notes": "Recommended for complex agentic coding and enterprise work. Reliable knowledge cutoff Jan 2026. KNOWN EXCEPTION (2026-08-27): src/lib/prompt-bites/articles/best-llm-right-now.ts deliberately still cites \"Claude Opus 4.8\" attached to a specific SWE-Bench Verified score (87.6%) that predates Opus 5. Do NOT blind-rename to Opus 5 -- Anthropic's own Opus 5 announcement (anthropic.com/news/claude-opus-5) does not publish a SWE-bench Verified number (cites Frontier-Bench, CursorBench, ARC-AGI 3, OSWorld 2.0, Zapier AutomationBench instead); third-party estimates (~96%) are not primary-sourced. Only rename once Opus 5's SWE-bench score is confirmed from an official Anthropic source, updating the specific number alongside the name."
     },
     {
       "company": "Anthropic",
@@ -106,7 +106,7 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://developers.openai.com/api/docs/models",
-      "verified_date": "2026-07-13",
+      "verified_date": "2026-08-27",
       "notes": "Current flagship generation, three variants: Sol (flagship), Terra (balanced), Luna (cost-optimized). 'Previewing GPT-5.6 Sol' framing suggests staged rollout — verify GA status next cycle."
     },
     {
@@ -151,10 +151,10 @@
       "model": "Gemini 3.5 Flash",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Gemini 3.7 Flash",
       "source_url": "https://deepmind.google/models/gemini/",
-      "verified_date": "2026-07-13",
+      "verified_date": "2026-08-27",
       "notes": "GA. Default model for the Gemini app and AI Mode in Search globally, per Google's own model page."
     },
     {
@@ -175,10 +175,10 @@
       "model": "Gemini 3.1 Flash-Lite",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Gemini 3.5 Flash-Lite",
       "source_url": "https://deepmind.google/models/gemini/",
-      "verified_date": "2026-07-13",
+      "verified_date": "2026-08-27",
       "notes": "GA. Stable, long-term efficiency-optimized model per Google's own page."
     },
     {
@@ -190,7 +190,7 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html",
-      "verified_date": "2026-07-13",
+      "verified_date": "2026-08-27",
       "notes": "Confirmed current via AWS Bedrock's Google catalog (31B, 26B-A4B, E2B variants), corroborating Gemma 3 -> Gemma 4 supersession. Not yet cross-checked against Google's own Gemma release page — do that next cycle."
     },
     {
@@ -202,7 +202,7 @@
       "status": "superseded",
       "superseded_by": "Gemma 4",
       "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html",
-      "verified_date": "2026-07-13",
+      "verified_date": "2026-08-27",
       "notes": "Site's most-mentioned Gemma variant (Gemma 3 4B). Still listed as available on AWS Bedrock alongside Gemma 4."
     },
     {
@@ -214,7 +214,7 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
-      "verified_date": "2026-07-13",
+      "verified_date": "2026-08-27",
       "notes": "17B active params, 16 experts. Llama 4 Behemoth (288B active, teacher model) still training/unreleased as of last check."
     },
     {
@@ -226,7 +226,7 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
-      "verified_date": "2026-07-13",
+      "verified_date": "2026-08-27",
       "notes": "17B active params, 128 experts."
     },
     {
@@ -322,7 +322,7 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
-      "verified_date": "2026-07-13",
+      "verified_date": "2026-08-27",
       "notes": "DeepSeek's own pricing docs list deepseek-v4-flash and deepseek-v4-pro as current API models. The older deepseek-chat/deepseek-reasoner aliases (non-thinking/thinking modes of V3-era models) are explicitly scheduled for deprecation 2026-07-24 per DeepSeek's own page."
     },
     {
@@ -367,10 +367,10 @@
       "model": "Qwen3.7-Max",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Qwen3.8-Max",
       "source_url": "https://qwen.ai/blog?id=qwen3.7",
-      "verified_date": "2026-07-13",
+      "verified_date": "2026-08-27",
       "notes": "Proprietary (not open-weight), agent-focused flagship per Qwen's own blog."
     },
     {
@@ -403,10 +403,10 @@
       "model": "Grok 4.5",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Grok 4.6",
       "source_url": "https://docs.x.ai/developers/models",
-      "verified_date": "2026-07-13",
+      "verified_date": "2026-08-27",
       "notes": "xAI's own docs describe it as their most intelligent and fastest model built to date. Knowledge cutoff 2026-02-01."
     },
     {
@@ -454,7 +454,7 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://huggingface.co/microsoft/phi-4",
-      "verified_date": "2026-07-13",
+      "verified_date": "2026-08-27",
       "notes": "Microsoft's own model card, no supersession note found there. Site mentions Phi-4 (12x) and Phi-4 Mini (21x, site's 4th most-mentioned model overall). NOTE: this entry is weaker than others in this registry — could not confirm via an official Microsoft page whether a newer Phi generation has shipped since Dec 2024; Azure's Phi product page timed out during this cycle's fetch. Flag for priority re-check next cycle rather than trusted as fully current."
     },
     {
@@ -463,10 +463,10 @@
       "model": "GLM-5.2",
       "type": "open-weight",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "GLM-5.3",
       "source_url": "https://github.com/zai-org/GLM-5",
-      "verified_date": "2026-07-13",
+      "verified_date": "2026-08-27",
       "notes": "744B params, 40B active (BF16). Z.ai's own README: 'marks a substantial leap in long-horizon task capability over its predecessor GLM-5.1', 1M-token context."
     },
     {
@@ -502,8 +502,8 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
-      "verified_date": "2026-07-13",
-      "notes": "CONFIRMED (2026-07-13 re-verification, 3 independent sources: platform.kimi.ai official API pricing docs, Hugging Face model card, and Moonshot's own release coverage): Kimi K2.6 is real — native multimodal agentic model, 1T total / 32B active params (MoE, 384 experts/8 active + 1 shared), MoonViT 400M vision encoder, Modified MIT license. Went GA ~8 days after an April 13 2026 'Code Preview' beta. Superseded for coding specifically by Kimi K2.7 Code (not yet added as a separate entry — check platform.kimi.ai on next cycle) but K2.6 remains current as the general-purpose multimodal flagship. The 2026-07-13 registry note previously on this family's 'Kimi K2' entry concluded K2.6 did NOT exist — that conclusion was WRONG (github.com/MoonshotAI's open-weights org page lags the hosted API/HuggingFace release, which is where K2.6 actually ships) and the site's model-name 'fix' that resulted (K2.6 -> K2 across 4 local-llms files, commit 322eea7a4) was reverted 2026-07-13 (commit d4415f41d). Lesson for future cycles: for Kimi specifically, check platform.kimi.ai and Hugging Face, not just the GitHub org page — API/hosted releases ship ahead of open-weights repo updates."
+      "verified_date": "2026-08-27",
+      "notes": "CONFIRMED (2026-07-13 re-verification, 3 independent sources: platform.kimi.ai official API pricing docs, Hugging Face model card, and Moonshot's own release coverage): Kimi K2.6 is real — native multimodal agentic model, 1T total / 32B active params (MoE, 384 experts/8 active + 1 shared), MoonViT 400M vision encoder, Modified MIT license. Went GA ~8 days after an April 13 2026 'Code Preview' beta. Superseded for coding specifically by Kimi K2.7 Code (not yet added as a separate entry — check platform.kimi.ai on next cycle) but K2.6 remains current as the general-purpose multimodal flagship. The 2026-07-13 registry note previously on this family's 'Kimi K2' entry concluded K2.6 did NOT exist — that conclusion was WRONG (github.com/MoonshotAI's open-weights org page lags the hosted API/HuggingFace release, which is where K2.6 actually ships) and the site's model-name 'fix' that resulted (K2.6 -> K2 across 4 local-llms files, commit 322eea7a4) was reverted 2026-07-13 (commit d4415f41d). Lesson for future cycles: for Kimi specifically, check platform.kimi.ai and Hugging Face, not just the GitHub org page — API/hosted releases ship ahead of open-weights repo updates. RE-CONFIRMED CURRENT (2026-08-27): Kimi K3 (new flagship) is closed/proprietary, not open-weight -- K2.6 remains the correct current pick for any local/Ollama-deployable recommendation. Only mark K2.6 superseded in a hosted-API/general-chat context, never in local-LLM hardware/VRAM/Ollama content."
     },
     {
       "company": "Moonshot AI",
@@ -538,7 +538,7 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://docs.cohere.com/docs/models",
-      "verified_date": "2026-07-13",
+      "verified_date": "2026-08-27",
       "notes": "command-a-plus-05-2026. Cohere's own docs: 'the last model in the Command A family', current flagship with vision/reasoning/translation."
     },
     {
@@ -550,7 +550,7 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://docs.cohere.com/docs/models",
-      "verified_date": "2026-07-13",
+      "verified_date": "2026-08-27",
       "notes": "command-a-03-2025. High-performance model for agents and RAG; still listed as available alongside Command A+ variants (translate/reasoning/vision specializations)."
     },
     {
@@ -622,7 +622,7 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://platform.kimi.ai",
-      "verified_date": "2026-07-29",
+      "verified_date": "2026-08-27",
       "notes": "Coding-focused agentic model built on Kimi K2.6, per Moonshot AI. Confirmed live on platform.kimi.ai and already used as canonical current content in src/lib/local-llms/articles/top-open-source-models-ollama.ts (refreshed 2026-07-14). This is the entry the Kimi K2.6 record's notes flagged as 'not yet added — check platform.kimi.ai on next cycle'; added here 2026-07-29."
     },
     {
@@ -864,6 +864,138 @@
       "source_url": "https://openai.com/index/introducing-gpt-5-4/",
       "verified_date": "2026-08-26",
       "notes": "Released as GPT-5.4 Thinking and GPT-5.4 Pro; GPT-5.4 mini/nano followed 2026-03-17. Added 2026-08-26 to close a dangling GPT-5.1 superseded_by reference found during a registry-freshness check -- this entry had never been added despite being referenced by the GPT-5.1 entry."
+    },
+    {
+      "company": "Anthropic",
+      "family": "Claude",
+      "model": "Claude Opus 5",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "verified_date": "2026-08-27",
+      "notes": "Recommended by Anthropic's own docs to start with for complex agentic coding and enterprise work, superseding Claude Opus 4.8 (now legacy). Retirement not sooner than 2027-07-24. Corroborated via AWS Bedrock model catalog."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 3.7 Flash",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://deepmind.google/models/gemini/",
+      "verified_date": "2026-08-27",
+      "notes": "'Best for tackling complex agentic tasks at scale' per Google's own model page — supersedes Gemini 3.5 Flash. Page also lists 'Gemini 3.5 Pro' as 'coming soon' (unreleased) — do not add until it actually ships."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 3.5 Flash-Lite",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://deepmind.google/models/gemini/",
+      "verified_date": "2026-08-27",
+      "notes": "'Best for high-volume tasks that need efficiency and intelligence' per Google's own page — supersedes Gemini 3.1 Flash-Lite."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 3.1 Deep Think",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://deepmind.google/models/gemini/",
+      "verified_date": "2026-08-27",
+      "notes": "'Best for modern challenges across science, research and engineering' per Google's own page. New reasoning-focused tier alongside 3.1 Pro."
+    },
+    {
+      "company": "xAI",
+      "family": "Grok",
+      "model": "Grok 4.6",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.x.ai/developers/models",
+      "verified_date": "2026-08-27",
+      "notes": "xAI's own docs recommend Grok 4.6 as 'the most intelligent and fastest model' for general purposes including code and chat, superseding Grok 4.5. Knowledge cutoff Feb 1, 2026. Corroborated via AWS Bedrock model catalog."
+    },
+    {
+      "company": "Zhipu AI / Z.ai",
+      "family": "GLM",
+      "model": "GLM-5.3",
+      "type": "open-weight",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://github.com/zai-org/GLM-5",
+      "verified_date": "2026-08-27",
+      "notes": "Z.ai's own README lists GLM-5.3 (and a GLM-5.3-Flash variant) ahead of GLM-5.2, citing a '50% improvement over GLM-5.2' on complex coding and long-horizon tasks. AWS Bedrock's Z.AI catalog still only lists GLM 4.7 / GLM 4.7 Flash / GLM 5 (plain) as of this check — expected cloud-host lag, consistent with this family's established pattern."
+    },
+    {
+      "company": "Moonshot AI",
+      "family": "Kimi",
+      "model": "Kimi K3",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://platform.kimi.ai",
+      "verified_date": "2026-08-27",
+      "notes": "'Kimi's most capable flagship model to date' per Moonshot's own platform page, 1M-token context, positioned for software engineering / knowledge work / deep reasoning. Supersedes Kimi K2.6 as the general-purpose flagship. Kimi K2.7 Code (coding-specialist) remains a separate current entry, not superseded by K3. CORRECTION (2026-08-27, same-cycle re-check): confirmed via huggingface.co/moonshotai/Kimi-K3 that K3 ships under a proprietary \"Kimi K3 License\", not open-weight -- unlike K2.6/K2.7 Code. It is NOT a valid local/Ollama substitute for K2.6. Do not treat K2.6 as stale in any local-LLM/Ollama context; K3 supersedes it only as the closed hosted-API flagship."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3.8-Max",
+      "type": "closed",
+      "release_date": "2026-08-08",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/Qwen",
+      "verified_date": "2026-08-27",
+      "notes": "2.4T total / 95B active params (Qwen3.8-2.4T-A95B on Qwen's own Hugging Face org, uploaded 2026-08-08), text-only MoE, post-trained. Most capable model in the Qwen family per contemporaneous coverage; supersedes Qwen3.7-Max as flagship. Verify closed-API 'Qwen3.8-Max' branding against qwen.ai directly next cycle — this entry is confirmed via the official HF weights upload, not yet cross-checked against a qwen.ai blog post (that fetch returned no content this cycle)."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3.8-27B",
+      "type": "open-weight",
+      "release_date": "2026-08-14",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/Qwen",
+      "verified_date": "2026-08-27",
+      "notes": "Dense 28B vision-language model per Qwen's own Hugging Face org (Qwen/Qwen3.8-27B, uploaded ~2026-08-14). Runs on a single RTX 4090 or Mac Studio per contemporaneous coverage — relevant for this site's local-LLM hardware-tier content."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3.8-Flash-Next",
+      "type": "open-weight",
+      "release_date": "2026-08-26",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/Qwen",
+      "verified_date": "2026-08-27",
+      "notes": "180B total params (125B per some contemporaneous reporting — HF model card itself reports 180B; reconcile next cycle) MoE, ~6B active, per Qwen's own Hugging Face org (uploaded 2026-08-26, both standard and FP8). Described by Qwen as previewing the Qwen4 architecture. Very new (added same-day as this registry cycle) — re-verify status/naming next cycle before treating as fully settled."
+    },
+    {
+      "company": "Mistral AI",
+      "family": "Ministral",
+      "model": "Ministral 3",
+      "type": "open-weight",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.mistral.ai/models/overview",
+      "verified_date": "2026-08-27",
+      "notes": "New small-model family per Mistral's own model catalog: Ministral 3 14B, Ministral 3 8B, Ministral 3 3B. Corroborated via AWS Bedrock (Ministral 14B 3.0, Ministral 3 8B, Ministral 3B). Relevant for this site's low-VRAM local-LLM hardware-tier content — not yet checked against any current site mentions this cycle."
     }
   ],
   "sources": [
