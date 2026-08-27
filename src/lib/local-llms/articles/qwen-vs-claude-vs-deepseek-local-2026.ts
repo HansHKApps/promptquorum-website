@@ -23,6 +23,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Developers and EU teams choosing between local and cloud LLMs for production workflows',
     primaryTerm: 'Qwen vs Claude vs DeepSeek local 2026',
     leadAnswerBlock: '**Qwen 3.6 27B leads open-weight coding at 92.1% HumanEval and runs on 16 GB VRAM. Claude Sonnet 5 delivers 89.4% HumanEval with zero hardware cost. DeepSeek R2 is the cheapest frontier option at $0.14/1M tokens. For EU GDPR compliance, only local deployment (Qwen via Ollama) guarantees data residency. The best 2026 strategy is dispatch routing: local Qwen for sensitive tasks, cloud for headless scale.**',
+    ctaText: 'Ready to build your dispatch strategy?',
+    ctaButton: 'Join the waitlist →',
+    ctaHref: '/waitlist',
     quickAnswerTop: {
       en: {
         question: 'Qwen 3.6 vs Claude Sonnet 5 vs DeepSeek R2 — which should I use in 2026?',
@@ -198,9 +201,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Model', 'Input ($/1M)', 'Output ($/1M)', 'Monthly at 300M tokens', 'GDPR Safe for EU'],
         tableFormat: true,
-        note: 'Hardware amortisation not included. At 300M tokens/month, a single RTX 4090 system (€2,500 hardware) pays off in 3 months versus Claude Sonnet 5.',
+        note: 'Hardware amortisation not included. RTX 4090 reached end-of-life in Q2 2026; secondary-market retail now runs €2,000–2,600 (EOL pricing, August 2026). At 300M tokens/month, a single RTX 4090 system (€2,300 hardware, EOL midpoint) pays off in 3 months versus Claude Sonnet 5.',
         items: [
-          '**Worked example — 10-dev EU team, 50M tokens/month:** Claude Sonnet 5 costs €137/month (50M × $3 = $150, ~€140 after currency). Over 12 months, that is €1,680 for prompts alone, plus team labour for prompt engineering and error mitigation. An RTX 4090 system at €2,500 hardware cost, running Qwen 3.6 27B locally, reaches break-even in just 18 months when including OpEx (electricity €50/month, ~€600/year). By year 2, local deployment saves €1,200/year purely on token costs, while also ensuring full GDPR compliance without SCCs.',
+          '**Worked example — 10-dev EU team, 50M tokens/month:** Claude Sonnet 5 costs €137/month (50M × $3 = $150, ~€140 after currency). Over 12 months, that is €1,680 for prompts alone, plus team labour for prompt engineering and error mitigation. An RTX 4090 system at €2,300 hardware cost (EOL pricing, €2,000–2,600 range as of August 2026), running Qwen 3.6 27B locally, reaches break-even in just 18 months when including OpEx (electricity €50/month, ~€600/year). By year 2, local deployment saves €1,200/year purely on token costs, while also ensuring full GDPR compliance without SCCs.',
           '**For higher volumes (100M–300M tokens/month):** Local Qwen reaches ROI within months. A 10-person team generating 100M tokens/month on Claude Sonnet 5 incurs €2,800/month (~€33,600/year). A single RTX 4090 server pays for itself in under 3 months and becomes pure savings thereafter.',
         ],
       },
@@ -418,9 +421,9 @@ dispatch_rules:
         ],
         columns: ['Modelo', 'Entrada ($/1M)', 'Salida ($/1M)', 'Mensual a 300M tokens', 'Seguro GDPR para UE'],
         tableFormat: true,
-        note: 'Amortización del hardware no incluida. A 300M tokens/mes, un sistema RTX 4090 único (€2.500 en hardware) se rentabiliza en 3 meses frente a Claude Sonnet 5.',
+        note: 'Amortización del hardware no incluida. La RTX 4090 alcanzó el fin de vida (EOL) en el T2 de 2026; el precio de reventa ronda ahora €2.000–2.600 (precio EOL, agosto de 2026). A 300M tokens/mes, un sistema RTX 4090 único (€2.300 en hardware, punto medio EOL) se rentabiliza en 3 meses frente a Claude Sonnet 5.',
         items: [
-          '**Ejemplo práctico — equipo de 10 desarrolladores de la UE, 50M tokens/mes:** Claude Sonnet 5 cuesta €137/mes (50M × $3 = $150, ~€140 tras el cambio de divisa). En 12 meses, eso son €1.680 solo en prompts, más el trabajo del equipo en ingeniería de prompts y mitigación de errores. Un sistema RTX 4090 a €2.500 de coste en hardware, ejecutando Qwen 3.6 27B localmente, alcanza el punto de equilibrio en solo 18 meses incluyendo costes operativos (electricidad €50/mes, ~€600/año). En el año 2, el despliegue local ahorra €1.200/año únicamente en costes de tokens, garantizando también el cumplimiento GDPR sin CCE.',
+          '**Ejemplo práctico — equipo de 10 desarrolladores de la UE, 50M tokens/mes:** Claude Sonnet 5 cuesta €137/mes (50M × $3 = $150, ~€140 tras el cambio de divisa). En 12 meses, eso son €1.680 solo en prompts, más el trabajo del equipo en ingeniería de prompts y mitigación de errores. Un sistema RTX 4090 a €2.300 de coste en hardware (precio EOL, rango €2.000–2.600 a agosto de 2026), ejecutando Qwen 3.6 27B localmente, alcanza el punto de equilibrio en solo 18 meses incluyendo costes operativos (electricidad €50/mes, ~€600/año). En el año 2, el despliegue local ahorra €1.200/año únicamente en costes de tokens, garantizando también el cumplimiento GDPR sin CCE.',
           '**Para volúmenes más altos (100M–300M tokens/mes):** Qwen local alcanza el ROI en meses. Un equipo de 10 personas generando 100M tokens/mes con Claude Sonnet 5 incurre en €2.800/mes (~€33.600/año). Un único servidor RTX 4090 se amortiza en menos de 3 meses y luego representa un ahorro puro.',
         ],
       },
@@ -666,9 +669,9 @@ dispatch_rules:
         ],
         columns: ['Modelo', 'Entrada ($/1M)', 'Salida ($/1M)', 'Mensual a 300M tokens', 'Seguro GDPR para UE'],
         tableFormat: true,
-        note: 'إطفاء تكلفة الأجهزة غير مُدرَج. بـ 300M token/شهر، نظام RTX 4090 واحد (€2,500 أجهزة) يستردّ تكلفته في 3 أشهر مقابل Claude Sonnet 5.',
+        note: 'إطفاء تكلفة الأجهزة غير مُدرَج. بلغت RTX 4090 نهاية عمرها الإنتاجي (EOL) في الربع الثاني من 2026؛ سعر السوق الثانوي الآن €2,000–2,600 (سعر EOL، أغسطس 2026). بـ 300M token/شهر، نظام RTX 4090 واحد (€2,300 أجهزة، متوسط EOL) يستردّ تكلفته في 3 أشهر مقابل Claude Sonnet 5.',
         items: [
-          '**مثال عملي — فريق من 10 مطورين بالاتحاد الأوروبي، 50M token/شهر:** يكلّف Claude Sonnet 5 €137/شهر (50M × $3 = $150، ~€140 بعد صرف العملة). في 12 شهرًا، يبلغ ذلك €1,680 للأوامر فقط، إضافةً إلى عمل الفريق في هندسة الأوامر والتخفيف من الأخطاء. نظام RTX 4090 بتكلفة أجهزة €2,500، يشغّل Qwen 3.6 27B محليًا، يبلغ نقطة التعادل في 18 شهرًا فقط شاملةً التكاليف التشغيلية (كهرباء €50/شهر، ~€600/سنة). في السنة الثانية، يوفّر النشر المحلي €1,200/سنة في تكاليف الـ tokens وحدها، مع ضمان امتثال GDPR دون SCCs.',
+          '**مثال عملي — فريق من 10 مطورين بالاتحاد الأوروبي، 50M token/شهر:** يكلّف Claude Sonnet 5 €137/شهر (50M × $3 = $150، ~€140 بعد صرف العملة). في 12 شهرًا، يبلغ ذلك €1,680 للأوامر فقط، إضافةً إلى عمل الفريق في هندسة الأوامر والتخفيف من الأخطاء. نظام RTX 4090 بتكلفة أجهزة €2,300 (سعر EOL، ضمن نطاق €2,000–2,600 حتى أغسطس 2026)، يشغّل Qwen 3.6 27B محليًا، يبلغ نقطة التعادل في 18 شهرًا فقط شاملةً التكاليف التشغيلية (كهرباء €50/شهر، ~€600/سنة). في السنة الثانية، يوفّر النشر المحلي €1,200/سنة في تكاليف الـ tokens وحدها، مع ضمان امتثال GDPR دون SCCs.',
           '**للأحجام الأعلى (100M–300M token/شهر):** يحقق Qwen المحلي العائد على الاستثمار في أشهر. فريق من 10 أشخاص يولّد 100M token/شهر مع Claude Sonnet 5 يتكبّد €2,800/شهر (~€33,600/سنة). خادم RTX 4090 واحد يطفئ تكلفته في أقل من 3 أشهر ثم يمثّل توفيرًا صافيًا.',
         ],
       },
@@ -917,6 +920,10 @@ dispatch_rules:
         ],
         columns: ['Modelo', 'Entrada ($/1M)', 'Saída ($/1M)', 'Mensal a 300M tokens', 'Seguro LGPD/GDPR'],
         tableFormat: true,
+        note: 'Amortização de hardware não incluída. A RTX 4090 chegou ao fim de vida útil (EOL) no 2º trimestre de 2026; o preço no mercado de revenda agora fica em $2.000–2.600 (preço EOL, agosto de 2026). A 300M tokens/mês, um único sistema RTX 4090 (~$2.300 em hardware, ponto médio EOL) se paga em 3 meses frente ao Claude Sonnet 5.',
+        items: [
+          '**Exemplo prático — equipe de 10 devs, 50M tokens/mês:** o Claude Sonnet 5 custa $150/mês (50M × $3). Em 12 meses, isso soma $1.800 só em prompts, além do trabalho da equipe em engenharia de prompts e correção de erros. Um sistema RTX 4090 a ~$2.300 de custo em hardware (preço EOL, faixa $2.000–2.600 em agosto de 2026), rodando o Qwen 3.6 27B localmente, atinge o ponto de equilíbrio em cerca de 15 meses considerando OpEx (eletricidade ~R$150/mês). A partir do ano 2, a implantação local economiza esse valor integralmente em custos de tokens, além de garantir conformidade total com a LGPD.',
+        ],
       },
       dispatch: {
         id: 'dispatch-layer',
@@ -1137,9 +1144,9 @@ dispatch_rules:
         ],
         columns: ['Modell', 'Input ($/1M)', 'Output ($/1M)', 'Monatlich bei 300M Token', 'DSGVO-sicher für EU'],
         tableFormat: true,
-        note: 'Hardware-Amortisation nicht enthalten. Bei 300M Tokens/Monat zahlt sich ein einzelnes RTX 4090-System (€2.400 Hardware) in 3 Monaten gegenüber Claude Sonnet 5 aus.',
+        note: 'Hardware-Amortisation nicht enthalten. Die RTX 4090 erreichte im Q2 2026 ihr End-of-Life (EOL); der Gebrauchtmarktpreis liegt jetzt bei €2.000–2.600 (EOL-Preis, Stand August 2026). Bei 300M Tokens/Monat zahlt sich ein einzelnes RTX 4090-System (€2.300 Hardware, EOL-Mittelwert) in 3 Monaten gegenüber Claude Sonnet 5 aus.',
         items: [
-          '**Praxisbeispiel — 10-Personen-EU-Dev-Team, 50M Tokens/Monat:** Claude Sonnet 5 kostet €137/Monat (50M × 3 $ = 150 $, ~€140 nach Währung). Über 12 Monate kostet das €1.680 nur für Prompts, plus Team-Aufwand für Prompt-Engineering und Fehlerbehandlung. Ein RTX 4090-System bei €2.400 Hardware-Kosten, auf dem Qwen 3.6 27B läuft, erreicht Break-Even in nur 18 Monaten inklusive OpEx (Strom €50/Monat, ~€600/Jahr). Nach Jahr 2 spart lokales Deployment €1.200/Jahr nur bei Token-Kosten, während auch volle DSGVO-Compliance ohne SCCs garantiert ist.',
+          '**Praxisbeispiel — 10-Personen-EU-Dev-Team, 50M Tokens/Monat:** Claude Sonnet 5 kostet €137/Monat (50M × 3 $ = 150 $, ~€140 nach Währung). Über 12 Monate kostet das €1.680 nur für Prompts, plus Team-Aufwand für Prompt-Engineering und Fehlerbehandlung. Ein RTX 4090-System bei €2.300 Hardware-Kosten (EOL-Preis, Bereich €2.000–2.600 Stand August 2026), auf dem Qwen 3.6 27B läuft, erreicht Break-Even in nur 18 Monaten inklusive OpEx (Strom €50/Monat, ~€600/Jahr). Nach Jahr 2 spart lokales Deployment €1.200/Jahr nur bei Token-Kosten, während auch volle DSGVO-Compliance ohne SCCs garantiert ist.',
           '**Für höhere Volumen (100M–300M Tokens/Monat):** Lokales Qwen erreicht ROI innerhalb von Monaten. Ein 10-Personen-Team mit 100M Tokens/Monat auf Claude Sonnet 5 verursacht €2.800/Monat (~€33.600/Jahr). Ein einzelner RTX 4090-Server zahlt sich in unter 3 Monaten aus und wird danach zu reinen Ersparnissen.',
         ],
       },
@@ -1360,9 +1367,9 @@ dispatch_rules:
         ],
         columns: ['Modèle', 'Input ($/1M)', 'Output ($/1M)', 'Mensuel 300M', 'RGPD UE'],
         tableFormat: true,
-        note: 'Amortissement matériel non inclus. À 300M tokens/mois, un RTX 4090 (~€2.400) rentabilise en 3 mois vs Claude.',
+        note: 'Amortissement matériel non inclus. La RTX 4090 a atteint sa fin de vie (EOL) au T2 2026 ; le prix d\'occasion tourne désormais autour de €2.000–2.600 (prix EOL, août 2026). À 300M tokens/mois, un RTX 4090 (~€2.300, milieu de fourchette EOL) rentabilise en 3 mois vs Claude.',
         items: [
-          '**Exemple concret — équipe 10 devs UE, 50M tokens/mois :** Claude coûte €137/mois (50M × $3 = $150, ~€140 change). Sur 12 mois, €1.680 en prompts seuls, sans compter effort engineering. Un RTX 4090 à €2.400, exécutant Qwen 3.6 27B, atteint rentabilité en 18 mois incluant opex (électricité €50/mois, ~€600/an). Après 2 ans, IA locale économise €1.200/an en tokens seuls + conformité RGPD sans CCS.',
+          '**Exemple concret — équipe 10 devs UE, 50M tokens/mois :** Claude coûte €137/mois (50M × $3 = $150, ~€140 change). Sur 12 mois, €1.680 en prompts seuls, sans compter effort engineering. Un RTX 4090 à €2.300 (prix EOL, fourchette €2.000–2.600 en août 2026), exécutant Qwen 3.6 27B, atteint rentabilité en 18 mois incluant opex (électricité €50/mois, ~€600/an). Après 2 ans, IA locale économise €1.200/an en tokens seuls + conformité RGPD sans CCS.',
           '**Volumes élevés (100M–300M tokens/mois) :** Qwen local atteint ROI en quelques mois. Équipe de 10 à 100M tokens/mois chez Claude : €2.800/mois (~€33.600/an). Un serveur RTX 4090 se rentabilise en moins de 3 mois.',
         ],
       },
@@ -1468,6 +1475,9 @@ dispatch_rules:
     audience: '选择本地或云端LLM的企业开发团队和AI负责人',
     primaryTerm: 'Qwen vs Claude vs DeepSeek 本地推理 2026',
     leadAnswerBlock: '**Qwen 3.6 27B以92.1% HumanEval领跑开源编码、16 GB显存本地运行。Claude Sonnet 5无需硬件、89.4% HumanEval、$3/1M令牌。DeepSeek R2最便宜$0.14/1M令牌。中国企业受数据安全法约束，本地Qwen是最安全选择。2026最优策略：本地Qwen处理敏感编码任务，云端API处理推理和高容量工作。**',
+    ctaText: '准备好构建您的分发策略了吗？',
+    ctaButton: '加入等候名单 →',
+    ctaHref: '/waitlist',
     comparisonTable: {
       columns: ['模型', 'HumanEval', 'SWE-bench', 'MMLU', '显存/硬件需求', '成本(输入)', '数据主权'],
       rows: [
@@ -1581,10 +1591,10 @@ dispatch_rules:
         ],
         columns: ['模型', '输入($/1M)', '输出($/1M)', '月300M令牌成本', '中国数据安全法合规'],
         tableFormat: true,
-        note: '硬件摊销未包含。在月300M令牌规模下，单个RTX 4090系统(硬件¥15,960)与Claude Sonnet 5相比在3个月内收回成本。',
+        note: '硬件摊销未包含。RTX 4090已于2026年第二季度停产(EOL)；二手市场价格现为¥16,100(EOL定价，2026年8月)。在月300M令牌规模下，单个RTX 4090系统(硬件¥16,100)与Claude Sonnet 5相比在3个月内收回成本。',
         items: [
-          '**实例1：企业编程团队(月50M令牌)**：Claude Sonnet 5成本$150/月。RTX 4090系统约¥15,960硬件+月电费¥320，18个月内收回。第二年节省¥1,200，同时完全符合数据安全法。',
-          '**实例2：企业级生产环境(月500M令牌+高可用性)**：本地：RTX 4090×2 (¥31,920) + 月$800运维 = 6个月¥63,360。Claude：$1,500/月=6个月¥63,000。初期成本相当。但本地方案通过冗余实现99.9% SLA；Claude方案受限流和突发需求困扰。24个月成本对比时，本地方案节省约50%。',
+          '**实例1：企业编程团队(月50M令牌)**：Claude Sonnet 5成本$150/月。RTX 4090系统约¥16,100硬件(EOL定价)+月电费¥320，18个月内收回。第二年节省¥1,200，同时完全符合数据安全法。',
+          '**实例2：企业级生产环境(月500M令牌+高可用性)**：本地：RTX 4090×2 (¥32,200，EOL定价) + 月$800运维 = 6个月¥64,400。Claude：$1,500/月=6个月¥63,000。初期成本相当。但本地方案通过冗余实现99.9% SLA；Claude方案受限流和突发需求困扰。24个月成本对比时，本地方案节省约50%。',
         ],
         callouts: [
           { type: 'tip', text: '本地成本计算：(硬件投资 ÷ 36个月) + 月电力成本。用3年TCO与云端API比较。企业规模(月500M+令牌)下本地部署优势明显。' },
@@ -1802,7 +1812,7 @@ dispatch_rules:
         title: 'ハードウェア実況',
         content: [
           'Qwen 3.6 27B（Q4_K_M量子化）は16 GBのVRAMに収納可能。以下のハードウェアで実現：',
-          '**コンシューマGPU（推奨）：** NVIDIA RTX 3090 Ti、RTX 4080、RTX 4090は全て16 GB以上のVRAM搭載。RTX 4090は高速推論推奨（入力→出力で5～8秒）。日本市場での参考価格は2,200～2,400ユーロ相当。',
+          '**コンシューマGPU（推奨）：** NVIDIA RTX 3090 Ti、RTX 4080、RTX 4090は全て16 GB以上のVRAM搭載。RTX 4090は高速推論推奨（入力→出力で5～8秒）。RTX 4090は2026年第2四半期に生産終了(EOL)となり、日本市場での参考価格は2,000～2,600ユーロ相当（EOL価格、2026年8月時点）。',
           '**Apple Silicon：** Appleは2026年8月25日にMac miniとMac Studioのラインナップを刷新（発売は2026年9月22日）。Mac mini M6（統合メモリ最大32 GB、899ドルから）はQwen 3.6 27Bの約16 GB要件を十分にカバーする最もコストパフォーマンスの高い選択肢。Mac mini M5 Pro（統合メモリ最大64 GB、1,699ドルから）とMac Studio M5 Max（統合メモリ最大128 GB、2,499ドルから）はより大きなモデルや並行推論タスクに余裕を持たせる。日本国内価格はApple公式サイトで発売時に確認のこと。',
           '**サーバGPU：** NVIDIA L40SはClaude互換で16 GBメモリ。L40は48 GBで複数並行推論対応。エンタープライズでは、L40S×2（32 GB）で冗長性確保推奨。',
           '**量子化の影響：** Q4_K_M量子化はモデルサイズを~28 GBから16 GBに削減。品質低下は平均 -0.3～1.2ポイント。コーディングタスクではほぼ無視可能；長形式テキストではわずかな流暢性低下を観測。',
@@ -1845,7 +1855,7 @@ dispatch_rules:
         title: '1M トークンあたりのコスト',
         content: 'コスト計算は入力トークンのみ比較（出力は別途）。ローカル推論コストは1回限りのハードウェア投資後、電力コストのみ。',
         rows: [
-          { 'デプロイ型': 'Qwen 3.6 27B（ローカル、RTX 4090）', '1回限りハード': '$2,200～2,400', '月々ランニング': '$300～400', '1M トークン当たり': '$0/1M（後）' },
+          { 'デプロイ型': 'Qwen 3.6 27B（ローカル、RTX 4090）', '1回限りハード': '$2,300（EOL価格）', '月々ランニング': '$300～400', '1M トークン当たり': '$0/1M（後）' },
           { 'デプロイ型': 'Claude Sonnet 5（API）', '1回限りハード': '$0', '月々ランニング': '使用量依存', '1M トークン当たり': '$3/1M' },
           { 'デプロイ型': 'DeepSeek R2（API）', '1回限りハード': '$0', '月々ランニング': '使用量依存', '1M トークン当たり': '$0.14/1M' },
         ],
@@ -1858,7 +1868,7 @@ dispatch_rules:
           },
           {
             title: '実例2：エンタープライズコンシェルジュ（月 500M トークン + 高可用性）',
-            whyItMatters: 'ローカル：RTX 4090×2（$4,800）+ 月 $800 運用 = 6ヶ月で$9,600。Claude：$1,500/月 = 6ヶ月で$9,000。初期コスト互角。ただしローカルは冗長性で SLA 99.9%。Claudeはレート制限でバースト対応困難。長期（24ヶ月）ではローカルが 50% 低コスト。',
+            whyItMatters: 'ローカル：RTX 4090×2（$4,600、EOL価格）+ 月 $800 運用 = 6ヶ月で$9,400。Claude：$1,500/月 = 6ヶ月で$9,000。初期コスト互角。ただしローカルは冗長性で SLA 99.9%。Claudeはレート制限でバースト対応困難。長期（24ヶ月）ではローカルが 50% 低コスト。',
           },
         ],
         callouts: [
@@ -2049,6 +2059,9 @@ dispatchers:
     audience: '프로덕션 워크플로에서 로컬 LLM과 클라우드 LLM 중 하나를 선택해야 하는 개발자 및 EU 팀',
     primaryTerm: 'Qwen vs Claude vs DeepSeek 로컬 2026',
     leadAnswerBlock: 'Qwen 3.6 27B는 오픈웨이트 코딩 부문에서 HumanEval 92.1%로 선두를 달리며 16 GB VRAM에서 실행됩니다. Claude Sonnet 5는 하드웨어 비용 없이 HumanEval 89.4%를 제공합니다. DeepSeek R2는 $0.14/1M 토큰으로 가장 저렴한 최전선 옵션입니다. EU GDPR 준수 측면에서는 로컬 배포(Ollama를 통한 Qwen)만이 데이터 잔류를 보장합니다. 2026년 최선의 전략은 디스패치 라우팅입니다: 민감한 작업에는 로컬 Qwen, 대규모 처리에는 클라우드를 활용하십시오.',
+    ctaText: '디스패치 전략을 구축할 준비가 되셨나요?',
+    ctaButton: '대기자 명단 참여하기 →',
+    ctaHref: '/waitlist',
     quickAnswerTop: {
       ko: {
         question: 'Qwen 3.6 vs Claude Sonnet 5 vs DeepSeek R2 — 2026년에 무엇을 사용해야 합니까?',
@@ -2176,9 +2189,9 @@ dispatchers:
         ],
         columns: ['모델', '입력 ($/1M)', '출력 ($/1M)', '300M 토큰/월 비용', 'EU GDPR 안전'],
         tableFormat: true,
-        note: '하드웨어 상각 비용 미포함. 월 300M 토큰 기준, 단일 RTX 4090 시스템(€2,500 하드웨어)은 Claude Sonnet 5 대비 3개월 내 손익분기점에 도달합니다.',
+        note: '하드웨어 상각 비용 미포함. RTX 4090은 2026년 2분기에 단종(EOL)되었으며, 중고 시장 가격은 현재 €2,000–2,600 수준입니다(EOL 가격, 2026년 8월 기준). 월 300M 토큰 기준, 단일 RTX 4090 시스템(€2,300 하드웨어, EOL 중간값)은 Claude Sonnet 5 대비 3개월 내 손익분기점에 도달합니다.',
         items: [
-          '**실제 사례 — EU 10인 개발팀, 월 5,000만 토큰:** Claude Sonnet 5는 월 €137 비용(50M × $3 = $150, 환율 적용 시 ~€140)입니다. 12개월 누적 시 프롬프트 비용만 €1,680이며, 여기에 프롬프트 엔지니어링 및 오류 대응 인건비가 추가됩니다. Qwen 3.6 27B를 로컬로 실행하는 RTX 4090 시스템(€2,500 하드웨어)은 운영비(전기료 월 €50, 연 ~€600)를 포함하면 18개월 내 손익분기점에 도달합니다. 2년 차부터는 토큰 비용만으로 연 €1,200를 절감하면서 SCC 없이 완전한 GDPR 준수를 달성합니다.',
+          '**실제 사례 — EU 10인 개발팀, 월 5,000만 토큰:** Claude Sonnet 5는 월 €137 비용(50M × $3 = $150, 환율 적용 시 ~€140)입니다. 12개월 누적 시 프롬프트 비용만 €1,680이며, 여기에 프롬프트 엔지니어링 및 오류 대응 인건비가 추가됩니다. Qwen 3.6 27B를 로컬로 실행하는 RTX 4090 시스템(€2,300 하드웨어, EOL 가격, 2026년 8월 기준 €2,000–2,600 범위)은 운영비(전기료 월 €50, 연 ~€600)를 포함하면 18개월 내 손익분기점에 도달합니다. 2년 차부터는 토큰 비용만으로 연 €1,200를 절감하면서 SCC 없이 완전한 GDPR 준수를 달성합니다.',
           '**높은 볼륨(월 1억~3억 토큰)의 경우:** 로컬 Qwen은 수개월 내 ROI를 달성합니다. 월 1억 토큰을 Claude Sonnet 5로 처리하는 10인 팀은 월 €2,800(연 ~€33,600)의 비용이 발생합니다. 단일 RTX 4090 서버는 3개월 이내에 비용을 회수하며 이후 순절감이 됩니다.',
         ],
       },
