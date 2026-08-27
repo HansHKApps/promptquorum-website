@@ -59,6 +59,7 @@ import { article as a_build_local_voice_assistant_2026 } from './articles/build-
 import { article as a_local_multimodal_pipeline_voice_vision_text } from './articles/local-multimodal-pipeline-voice-vision-text'
 import { article as a_best_affiliate_tools_ai_developers_2026 } from './articles/best-affiliate-tools-ai-developers-2026'
 import { article as a_apple_mlx_vs_nvidia_cuda_local_llm_2026 } from './articles/apple-mlx-vs-nvidia-cuda-local-llm-2026'
+import { article as a_cursor_vs_windsurf_vs_copilot_cline_2026 } from './articles/cursor-vs-windsurf-vs-copilot-cline-2026'
 // Commercial Sprint 2026-05-26
 import { article as a_qwen_local_deployment_complete_guide_2026 } from './articles/qwen-local-deployment-complete-guide-2026'
 // China Sprint 2026-05-26
@@ -135,6 +136,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'voice-ai-writers-cloud-vs-local':                   a_voice_ai_writers_cloud_vs_local,
   'best-affiliate-tools-ai-developers-2026':           a_best_affiliate_tools_ai_developers_2026,
   'apple-mlx-vs-nvidia-cuda-local-llm-2026':           a_apple_mlx_vs_nvidia_cuda_local_llm_2026,
+  'cursor-vs-windsurf-vs-copilot-cline-2026':          a_cursor_vs_windsurf_vs_copilot_cline_2026,
   // Commercial Sprint 2026-05-26
   'qwen-local-deployment-complete-guide-2026':         a_qwen_local_deployment_complete_guide_2026,
   'deepseek-vs-qwen-coding-local-2026':                a_deepseek_vs_qwen_coding_local_2026,

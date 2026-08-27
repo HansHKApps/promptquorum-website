@@ -98,6 +98,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-ai-courses-certifications-2026',
   'best-affiliate-tools-ai-developers-2026',
   'apple-mlx-vs-nvidia-cuda-local-llm-2026',
+  'cursor-vs-windsurf-vs-copilot-cline-2026',
 
   // DeepSeek Series 2026-06-19
   'deepseek-r1-vs-distills-explained-2026',
