@@ -161,6 +161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Follow the full Frigate NVR build guide: detectors, zones and Home Assistant](/smart-home/frigate-nvr-home-assistant-setup) — the hands-on setup this overview leads into',
           '[The Complete Guide to a Local Smart Home](/smart-home/local-smart-home-complete-guide) — where local cameras fit in the stack',
           '[Best Hardware for a Local Smart Home](/smart-home/best-hardware-for-local-smart-home) — accelerators and storage',
           '[Best Mini PCs for Home Assistant + Local AI](/smart-home/best-mini-pc-home-assistant-local-ai) — one box for Frigate + HA',
@@ -358,6 +359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'مقالات ذات صلة',
         items: [
+          '[اتبع الدليل الكامل لبناء Frigate NVR: الكواشف والمناطق و Home Assistant](/ar/smart-home/frigate-nvr-home-assistant-setup) — الإعداد العملي الذي تقود إليه هذه النظرة العامة',
           '[الدليل الشامل للمنزل الذكي المحلي](/ar/smart-home/local-smart-home-complete-guide) — مكان الكاميرات المحلية في البنية',
           '[أفضل الأجهزة للمنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home) — المُعجِّلات والتخزين',
           '[أفضل أجهزة الكمبيوتر المصغرة لـ Home Assistant + الذكاء الاصطناعي المحلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai) — جهاز واحد لـ Frigate + HA',
@@ -555,6 +557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
+          '[Der vollständigen Frigate-NVR-Aufbauanleitung folgen: Detektoren, Zonen, Home Assistant](/de/smart-home/frigate-nvr-home-assistant-setup) — die praktische Einrichtung, auf die dieser Überblick hinführt',
           '[Der komplette Leitfaden zum lokalen Smart Home](/de/smart-home/local-smart-home-complete-guide) – wo lokale Kameras in den Stack passen',
           '[Beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home) – Beschleuniger und Speicher',
           '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) – ein Gerät für Frigate + HA',
@@ -752,6 +755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
+          '[Seguir la guía completa de montaje de Frigate NVR: detectores, zonas y Home Assistant](/es/smart-home/frigate-nvr-home-assistant-setup) — la configuración práctica a la que lleva esta visión general',
           '[La guía completa del smart home local](/es/smart-home/local-smart-home-complete-guide) — dónde encajan las cámaras locales en el stack',
           '[Mejor hardware para un smart home local](/es/smart-home/best-hardware-for-local-smart-home) — aceleradores y almacenamiento',
           '[Mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai) — un equipo para Frigate + HA',
@@ -949,6 +953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
+          '[Frigate NVR 전체 구축 가이드 따라가기: 디텍터, 존, Home Assistant](/ko/smart-home/frigate-nvr-home-assistant-setup) — 이 개요가 이어지는 실전 설정',
           '[로컬 스마트 홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide) — 스택에서 로컬 카메라의 위치',
           '[로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home) — 가속기와 스토리지',
           '[Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai) — Frigate + HA를 위한 하나의 기기',
@@ -1146,6 +1151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
+          '[Suivre le guide complet de montage de Frigate NVR : détecteurs, zones et Home Assistant](/fr/smart-home/frigate-nvr-home-assistant-setup) — la mise en œuvre pratique vers laquelle mène cette vue d\'ensemble',
           '[Le guide complet de la maison connectée locale](/fr/smart-home/local-smart-home-complete-guide) — où s\'insèrent les caméras locales dans le stack',
           '[Meilleur matériel pour une maison connectée locale](/fr/smart-home/best-hardware-for-local-smart-home) — accélérateurs et stockage',
           '[Meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai) — une machine pour Frigate + HA',
@@ -1343,6 +1349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[Frigate NVR の詳細な構築手順を確認する：検出器・ゾーン・Home Assistant](/ja/smart-home/frigate-nvr-home-assistant-setup) — この概要の先にある実践的なセットアップ',
           '[ローカルスマートホーム完全ガイド](/ja/smart-home/local-smart-home-complete-guide) — ローカルカメラが構成のどこに収まるか',
           '[ローカルスマートホームに最適なハードウェア](/ja/smart-home/best-hardware-for-local-smart-home) — アクセラレーターとストレージ',
           '[Home Assistant＋ローカルAIに最適なミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai) — Frigate＋HA を一台で',
@@ -1540,6 +1547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
+          '[Seguir o guia completo de montagem do Frigate NVR: detectores, zonas e Home Assistant](/pt/smart-home/frigate-nvr-home-assistant-setup) — a configuração prática para onde esta visão geral aponta',
           '[O guia completo da casa inteligente local](/pt/smart-home/local-smart-home-complete-guide) — onde as câmeras locais se encaixam no stack',
           '[Melhor hardware para uma casa inteligente local](/pt/smart-home/best-hardware-for-local-smart-home) — aceleradores e armazenamento',
           '[Melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) — uma máquina para Frigate + HA',
@@ -1737,6 +1745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
+          '[查看完整的 Frigate NVR 搭建指南：检测器、区域与 Home Assistant](/zh/smart-home/frigate-nvr-home-assistant-setup) — 本概览之后的动手配置',
           '[本地智能家居完整指南](/zh/smart-home/local-smart-home-complete-guide) — 本地摄像头在堆栈中的位置',
           '[本地智能家居的最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home) — 加速器与存储',
           '[Home Assistant + 本地 AI 的最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai) — 用一台机器跑 Frigate + HA',

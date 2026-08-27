@@ -411,6 +411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[See how to configure Frigate for the camera you buy: detectors, streams and zones](/smart-home/frigate-nvr-home-assistant-setup) — the software side of this hardware decision',
           '[Local AI Security Cameras with Frigate](/smart-home/local-ai-security-camera) — the software setup this hardware enables',
           '[Best Hardware for a Local Smart Home](/smart-home/best-hardware-for-local-smart-home) — the Frigate accelerator, hub, and storage architecture behind this camera guide',
           '[Best Mini PC for Home Assistant + Local AI](/smart-home/best-mini-pc-home-assistant-local-ai) — box picks by camera count',
@@ -842,6 +843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
+          '[Nachlesen, wie Sie Frigate für die gekaufte Kamera konfigurieren: Detektoren, Streams, Zonen](/de/smart-home/frigate-nvr-home-assistant-setup) — die Softwareseite dieser Hardwareentscheidung',
           '[Lokale KI-Sicherheitskameras mit Frigate](/de/smart-home/local-ai-security-camera) — die Software-Einrichtung, die diese Hardware ermöglicht',
           '[Beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home) — der Frigate-Beschleuniger, Hub und die Speicherarchitektur hinter diesem Kamera-Leitfaden',
           '[Bester Mini-PC für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — Box-Empfehlungen nach Kameraanzahl',
@@ -1273,6 +1275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
+          '[Voir comment configurer Frigate pour la caméra choisie : détecteurs, flux et zones](/fr/smart-home/frigate-nvr-home-assistant-setup) — le versant logiciel de ce choix matériel',
           '[Caméras de sécurité IA locales avec Frigate](/fr/smart-home/local-ai-security-camera) — la mise en place logicielle que ce matériel permet',
           '[Meilleur matériel pour une maison connectée locale](/fr/smart-home/best-hardware-for-local-smart-home) — l\'accélérateur Frigate, le hub et l\'architecture de stockage derrière ce guide caméra',
           '[Meilleur mini PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai) — choix de boîtier selon le nombre de caméras',
@@ -1704,6 +1707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[購入したカメラ向けの Frigate 設定を確認する：検出器・ストリーム・ゾーン](/ja/smart-home/frigate-nvr-home-assistant-setup) — このハードウェア選定のソフトウェア側',
           '[Frigateを使ったローカルAI防犯カメラ](/ja/smart-home/local-ai-security-camera) — このハードウェアが可能にするソフトウェア構成',
           '[ローカルスマートホーム向けベストハードウェア](/ja/smart-home/best-hardware-for-local-smart-home) — 本カメラガイドの背景にあるFrigateアクセラレーター、ハブ、ストレージアーキテクチャ',
           '[Home Assistant+ローカルAI向けベストミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai) — カメラ台数に応じた機器の選択肢',
@@ -2135,6 +2139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
+          '[了解如何为所选摄像头配置 Frigate：检测器、码流与区域](/zh/smart-home/frigate-nvr-home-assistant-setup) — 这项硬件决策的软件面',
           '[使用 Frigate 的本地 AI 安防摄像头](/zh/smart-home/local-ai-security-camera)——这套硬件所支持的软件配置',
           '[本地智能家居最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home)——支撑本摄像头指南的 Frigate 加速器、中枢与存储架构',
           '[Home Assistant + 本地 AI 最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai)——按摄像头数量选择的设备',
@@ -2566,6 +2571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
+          '[Ver cómo configurar Frigate para la cámara que compres: detectores, flujos y zonas](/es/smart-home/frigate-nvr-home-assistant-setup) — el lado software de esta decisión de hardware',
           '[Cámaras de seguridad con IA local con Frigate](/es/smart-home/local-ai-security-camera) — la configuración de software que este hardware habilita',
           '[Mejor hardware para un hogar inteligente local](/es/smart-home/best-hardware-for-local-smart-home) — el acelerador de Frigate, el hub y la arquitectura de almacenamiento detrás de esta guía de cámaras',
           '[Mejor mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai) — elecciones de equipo según el número de cámaras',
@@ -2997,6 +3003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
+          '[Ver como configurar o Frigate para a câmera que você comprar: detectores, streams e zonas](/pt/smart-home/frigate-nvr-home-assistant-setup) — o lado de software desta decisão de hardware',
           '[Câmeras de segurança com IA local com Frigate](/pt/smart-home/local-ai-security-camera) — a configuração de software que este hardware possibilita',
           '[Melhor hardware para uma casa inteligente local](/pt/smart-home/best-hardware-for-local-smart-home) — o acelerador do Frigate, o hub e a arquitetura de armazenamento por trás deste guia de câmeras',
           '[Melhor mini PC para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) — escolhas de equipamento conforme o número de câmeras',
@@ -3428,6 +3435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
+          '[اطّلع على كيفية ضبط Frigate للكاميرا التي تشتريها: الكواشف والتدفقات والمناطق](/ar/smart-home/frigate-nvr-home-assistant-setup) — الجانب البرمجي لهذا القرار العتادي',
           '[كاميرات الأمان بالذكاء الاصطناعي المحلي مع Frigate](/ar/smart-home/local-ai-security-camera) — إعداد البرامج الذي يتيحه هذا الجهاز',
           '[أفضل أجهزة للمنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home) — مسرّع Frigate والمحور وبنية التخزين وراء دليل الكاميرات هذا',
           '[أفضل جهاز مصغر لـ Home Assistant + الذكاء الاصطناعي المحلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai) — اختيارات الجهاز حسب عدد الكاميرات',
@@ -3859,6 +3867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
+          '[구입한 카메라에 맞춰 Frigate를 설정하는 법 보기: 디텍터, 스트림, 존](/ko/smart-home/frigate-nvr-home-assistant-setup) — 이 하드웨어 선택의 소프트웨어 측면',
           '[Frigate를 이용한 로컬 AI 보안 카메라](/ko/smart-home/local-ai-security-camera) — 이 하드웨어가 가능하게 하는 소프트웨어 구성',
           '[로컬 스마트홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home) — 이 카메라 가이드의 배경이 되는 Frigate 가속기, 허브, 저장소 아키텍처',
           '[Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai) — 카메라 수에 따른 기기 선택',

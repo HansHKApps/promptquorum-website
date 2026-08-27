@@ -34,6 +34,7 @@ export const SMART_HOME_SLUG_TO_KEY: Record<string, string> = {
   'ai-automations-local-llm':                      'ai-automations-local-llm',
   'local-ai-security-camera':                      'local-ai-security-camera',
   'best-local-llm-models-smart-home':              'best-local-llm-models-smart-home',
+  'frigate-nvr-home-assistant-setup':              'frigate-nvr-home-assistant-setup',
 
   // Category 4 — Decision & Comparison Pages (conversion + CTR)
   'home-assistant-vs-alexa-vs-google':             'home-assistant-vs-alexa-vs-google',

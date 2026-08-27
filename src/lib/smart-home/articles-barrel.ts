@@ -35,6 +35,7 @@ import { article as a_local_voice_assistant_smart_home } from './articles/local-
 import { article as a_local_whisper_home_assistant } from './articles/local-whisper-home-assistant'
 import { article as a_ai_automations_local_llm } from './articles/ai-automations-local-llm'
 import { article as a_local_ai_security_camera } from './articles/local-ai-security-camera'
+import { article as a_frigate_nvr_home_assistant_setup } from './articles/frigate-nvr-home-assistant-setup'
 import { article as a_best_local_llm_models_smart_home } from './articles/best-local-llm-models-smart-home'
 // Category 4 — Decision & Comparison
 import { article as a_home_assistant_vs_alexa_vs_google } from './articles/home-assistant-vs-alexa-vs-google'
@@ -95,6 +96,7 @@ export const smartHomeContent: Record<string, Partial<Record<Language, LLMArticl
   'local-whisper-home-assistant':         a_local_whisper_home_assistant,
   'ai-automations-local-llm':             a_ai_automations_local_llm,
   'local-ai-security-camera':             a_local_ai_security_camera,
+  'frigate-nvr-home-assistant-setup':    a_frigate_nvr_home_assistant_setup,
   'best-local-llm-models-smart-home':     a_best_local_llm_models_smart_home,
   // Category 4 — Decision & Comparison
   'home-assistant-vs-alexa-vs-google':    a_home_assistant_vs_alexa_vs_google,

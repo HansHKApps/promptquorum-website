@@ -56,6 +56,7 @@ export const SMART_HOME_CATEGORIES: SmartHomeCategory[] = [
       'local-whisper-home-assistant',
       'ai-automations-local-llm',
       'local-ai-security-camera',
+      'frigate-nvr-home-assistant-setup',
       'best-local-llm-models-smart-home',
     ],
   },

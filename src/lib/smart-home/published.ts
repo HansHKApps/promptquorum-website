@@ -39,6 +39,7 @@ export const SMART_HOME_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-whisper-home-assistant',
   'ai-automations-local-llm',
   'local-ai-security-camera',
+  'frigate-nvr-home-assistant-setup',
   'best-local-llm-models-smart-home',
   // Category 4 — Decision & Comparison
   'home-assistant-vs-alexa-vs-google',
