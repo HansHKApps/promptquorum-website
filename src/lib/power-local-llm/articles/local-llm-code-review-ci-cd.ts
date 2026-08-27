@@ -1,6 +1,6 @@
 // Power Local LLM — Local LLM in Your CI/CD: Automated Code Review Without Cloud
 // Slug: local-llm-code-review-ci-cd
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// All 9 locales authored (en/de/fr/ja/zh/es/pt/ar/ko).
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -9,8 +9,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-en.webp',
     title: 'Local LLM in Your CI/CD: Automated Code Review Without Cloud',
@@ -52,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'How do I run a local LLM as a code reviewer in CI/CD?',
         answer:
-          'Stand up a GPU server running Ollama (or vLLM, llama.cpp) with a coding-tuned model — Qwen3-Coder 30B is the May 2026 default. Add a self-hosted GitHub Actions runner on the same network, or expose the server\'s HTTP endpoint to your existing runners over a private network. Write a small custom action that fetches the PR diff, POSTs it with a review prompt to the LLM endpoint, parses a structured response (approve / comment / block), and posts inline comments back to the PR. The model never leaves your perimeter; the action behaves like any other check. Hardware-wise, one RTX 4090 with Qwen3-Coder 30B handles 15–25 developers; a 48 GB card extends to 50; past 100 you need H100-class hardware or multiple GPUs.',
+          'Stand up a GPU server running Ollama (or vLLM, llama.cpp) with a coding-tuned model — Qwen3-Coder 30B is the August 2026 default. Add a self-hosted GitHub Actions runner on the same network, or expose the server\'s HTTP endpoint to your existing runners over a private network. Write a small custom action that fetches the PR diff, POSTs it with a review prompt to the LLM endpoint, parses a structured response (approve / comment / block), and posts inline comments back to the PR. The model never leaves your perimeter; the action behaves like any other check. Hardware-wise, one RTX 4090 with Qwen3-Coder 30B handles 15–25 developers; a 48 GB card extends to 50; past 100 you need H100-class hardware or multiple GPUs.',
         bullets: [
           'Architecture: GPU server running Ollama → self-hosted runner (or HTTP from cloud runners) → custom GitHub Action → PR comments.',
           'Default stack: Ollama + Qwen3-Coder 30B (Apache 2.0) + custom JavaScript or composite action.',
@@ -61,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Security: source code never leaves your network; egress can be proven with a packet capture; audit surface is one process and one log.',
           'GitLab CI works the same way — runner instead of action, but the LLM call is identical.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -88,7 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**Architecture is three pieces:** GPU server running Ollama (or vLLM) → CI runner that can reach it over the network → custom action that POSTs the PR diff and parses a structured verdict. Same shape on GitHub Actions, GitLab CI, Buildkite, and Jenkins.',
-          '**Default stack in May 2026:** Ollama + Qwen3-Coder 30B (Apache 2.0) + a thin custom GitHub Action. Total infrastructure: one GPU box, one runner.',
+          '**Default stack in August 2026:** Ollama + Qwen3-Coder 30B (Apache 2.0) + a thin custom GitHub Action. Total infrastructure: one GPU box, one runner.',
           '**Hardware sizing:** RTX 4090 (24 GB, ~$2,000) handles 15–25 developers; L40S or A6000 Ada (48 GB, ~$7–8,000) extends to 50; H100 (80 GB, $25,000+) or multi-GPU for 100+.',
           '**Economics tip into self-host territory** at roughly 15–25 paid GitHub Advanced Security seats ($19/dev/month) — an RTX 4090 build pays back in 5–10 months at that team size.',
           '**Security advantage is real, not just marketing.** Source never leaves your network; outbound egress can be proven zero with `tcpdump`; the entire audit surface is one Ollama process and one log file.',
@@ -115,7 +116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'architecture-comparison',
         title: 'Architecture Comparison: Three Real Options for Code Review in CI',
         content:
-          '**Three architectures cover effectively all PR-review setups in May 2026.** Self-hosted local LLM is one of them — the right choice when source code can\'t leave your network or when seat-count economics favour fixed infrastructure.',
+          '**Three architectures cover effectively all PR-review setups in August 2026.** Self-hosted local LLM is one of them — the right choice when source code can\'t leave your network or when seat-count economics favour fixed infrastructure.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -169,7 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**The simplest production-grade stack is three components.** Each is open source, free, and well documented; the integration surface between them is HTTP.',
         items: [
           '**GPU server** running **Ollama** (or vLLM for higher concurrency). Ollama exposes an OpenAI-compatible HTTP API on `localhost:11434` by default; bind it to a private interface or a reverse proxy with auth before exposing to runners.',
-          '**Coding-tuned model:** **Qwen3-Coder 30B** at Q4_K_M is the May 2026 default — strongest open-weight coding direction, 256K context, Apache 2.0 licence, fits on a 24 GB GPU. For 8–16 GB GPUs, use Qwen3-Coder 7B with the understanding that review quality drops noticeably.',
+          '**Coding-tuned model:** **Qwen3-Coder 30B** at Q4_K_M is the August 2026 default — strongest open-weight coding direction, 256K context, Apache 2.0 licence, fits on a 24 GB GPU. For 8–16 GB GPUs, use Qwen3-Coder 7B with the understanding that review quality drops noticeably.',
           '**CI integration:** a self-hosted GitHub Actions runner on the same network as the GPU server, or your existing GitHub-hosted runners reaching the GPU server over a private network (Tailscale, WireGuard, or a VPC peering).',
           '**Custom GitHub Action** (JavaScript or composite) that fetches the PR diff via the GitHub API, POSTs it to the Ollama endpoint with a review prompt, parses the structured response, and posts inline comments back to the PR.',
           '**Optional:** a small Redis or SQLite cache keyed on file hash + diff hash to avoid re-reviewing unchanged files in subsequent CI runs.',
@@ -265,13 +266,13 @@ jobs:
         title: 'Hardware Sizing by Team Size',
         content:
           '**One RTX 4090 (24 GB) handles a 15–25-developer team comfortably.** The bottleneck on a single GPU is not throughput per review — it is concurrency at PR-flush moments (Monday morning, end of sprint). Sizing rules below assume Qwen3-Coder 30B at Q4_K_M and a typical 50–500-line PR diff.',
-        columns: ['Team size', 'GPU', 'VRAM', 'Concurrent reviews', 'Approx. price (May 2026)'],
+        columns: ['Team size', 'GPU', 'VRAM', 'Concurrent reviews', 'Approx. price (August 2026)'],
         rows: [
-          { 'Team size': '~5 developers', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12–16 GB', 'Concurrent reviews': '1 (Qwen3-Coder 7B only)', 'Approx. price (May 2026)': '$600–900' },
-          { 'Team size': '15–25 developers', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24–32 GB', 'Concurrent reviews': '1–3 (Qwen3-Coder 30B)', 'Approx. price (May 2026)': '$2,000–2,500' },
-          { 'Team size': '25–50 developers', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', 'Concurrent reviews': '3–6', 'Approx. price (May 2026)': '$7,000–8,500' },
-          { 'Team size': '50–100 developers', 'GPU': '2× RTX 4090 or 1× H100', 'VRAM': '48 GB / 80 GB', 'Concurrent reviews': '6–10', 'Approx. price (May 2026)': '$5,000 (2× 4090) or $25,000+ (H100)' },
-          { 'Team size': '100+ developers', 'GPU': 'Multi-GPU H100 or H200', 'VRAM': '160 GB+', 'Concurrent reviews': '10+ with vLLM', 'Approx. price (May 2026)': '$50,000+' },
+          { 'Team size': '~5 developers', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12–16 GB', 'Concurrent reviews': '1 (Qwen3-Coder 7B only)', 'Approx. price (August 2026)': '$600–900' },
+          { 'Team size': '15–25 developers', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24–32 GB', 'Concurrent reviews': '1–3 (Qwen3-Coder 30B)', 'Approx. price (August 2026)': '$2,000–2,500' },
+          { 'Team size': '25–50 developers', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', 'Concurrent reviews': '3–6', 'Approx. price (August 2026)': '$7,000–8,500' },
+          { 'Team size': '50–100 developers', 'GPU': '2× RTX 4090 or 1× H100', 'VRAM': '48 GB / 80 GB', 'Concurrent reviews': '6–10', 'Approx. price (August 2026)': '$5,000 (2× 4090) or $25,000+ (H100)' },
+          { 'Team size': '100+ developers', 'GPU': 'Multi-GPU H100 or H200', 'VRAM': '160 GB+', 'Concurrent reviews': '10+ with vLLM', 'Approx. price (August 2026)': '$50,000+' },
         ],
         callouts: [
           {
@@ -457,8 +458,9 @@ jobs:
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-de.webp',
     title: 'Lokale LLM im CI/CD: Automatisierte Code Review ohne Cloud',
@@ -500,7 +502,7 @@ jobs:
       de: {
         question: 'Wie betreibe ich ein lokales LLM als Code Reviewer im CI/CD?',
         answer:
-          'Richten Sie einen GPU Server mit Ollama (oder vLLM, llama.cpp) und einem Coding-optimierten Modell ein — Qwen3-Coder 30B ist der Mai 2026 Standard. Fügen Sie einen Self-Hosted GitHub Actions Runner im selben Netzwerk hinzu oder exponieren Sie die HTTP API des Servers über ein privates Netzwerk zu bestehenden Runnern. Schreiben Sie eine kleine benutzerdefinierte Action, die die PR Diff abruft, sie mit einem Review Prompt zur LLM Endpoint sendet, eine strukturierte Antwort (genehmigen / Kommentar / blockieren) parst und Inline Kommentare zurück zur PR sendet. Das Modell verlässt niemals Ihren Perimeter; die Action verhält sich wie jede andere Prüfung. Hardware-weise bedient eine RTX 4090 mit Qwen3-Coder 30B 15–25 Entwickler; eine 48 GB Karte erweitert auf 50; ab 100 benötigen Sie H100-Klasse Hardware oder mehrere GPUs.',
+          'Richten Sie einen GPU Server mit Ollama (oder vLLM, llama.cpp) und einem Coding-optimierten Modell ein — Qwen3-Coder 30B ist der August 2026 Standard. Fügen Sie einen Self-Hosted GitHub Actions Runner im selben Netzwerk hinzu oder exponieren Sie die HTTP API des Servers über ein privates Netzwerk zu bestehenden Runnern. Schreiben Sie eine kleine benutzerdefinierte Action, die die PR Diff abruft, sie mit einem Review Prompt zur LLM Endpoint sendet, eine strukturierte Antwort (genehmigen / Kommentar / blockieren) parst und Inline Kommentare zurück zur PR sendet. Das Modell verlässt niemals Ihren Perimeter; die Action verhält sich wie jede andere Prüfung. Hardware-weise bedient eine RTX 4090 mit Qwen3-Coder 30B 15–25 Entwickler; eine 48 GB Karte erweitert auf 50; ab 100 benötigen Sie H100-Klasse Hardware oder mehrere GPUs.',
         bullets: [
           'Architektur: GPU Server mit Ollama → Self-Hosted Runner (oder HTTP von Cloud Runnern) → benutzerdefinierte GitHub Action → PR Kommentare.',
           'Standard Stack: Ollama + Qwen3-Coder 30B (Apache 2.0) + benutzerdefinierte JavaScript oder Composite Action.',
@@ -509,7 +511,7 @@ jobs:
           'Sicherheit: Quellcode verlässt niemals Ihr Netzwerk; Egress kann mit einer Paket Erfassung bewiesen werden; Audit Oberfläche ist ein Prozess und eine Log.',
           'GitLab CI funktioniert auf die gleiche Weise — Runner statt Action, aber der LLM Aufruf ist identisch.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -536,7 +538,7 @@ jobs:
         isTldr: true,
         items: [
           '**Architektur besteht aus drei Teilen:** GPU Server mit Ollama (oder vLLM) → CI Runner, der es über das Netzwerk erreichen kann → benutzerdefinierte Action, die die PR Diff sendet und eine strukturierte Entscheidung parst. Die gleiche Form auf GitHub Actions, GitLab CI, Buildkite und Jenkins.',
-          '**Standard Stack im Mai 2026:** Ollama + Qwen3-Coder 30B (Apache 2.0) + eine dünne benutzerdefinierte GitHub Action. Gesamt Infrastruktur: eine GPU Box, ein Runner.',
+          '**Standard Stack im August 2026:** Ollama + Qwen3-Coder 30B (Apache 2.0) + eine dünne benutzerdefinierte GitHub Action. Gesamt Infrastruktur: eine GPU Box, ein Runner.',
           '**Hardware Dimensionierung:** RTX 4090 (24 GB, ca. 2.299 €) bedient 15–25 Entwickler; L40S oder A6000 Ada (48 GB, ca. 8.999–9.999 €) erweitert auf 50; H100 (80 GB, ca. 27.000+ €) oder Multi-GPU für 100+.',
           '**Wirtschaftlichkeit kippen zugunsten von Self-Host** bei ungefähr 15–25 bezahlten GitHub Advanced Security Seats ($19/dev/Monat) — ein RTX 4090 Build wird in 5–10 Monaten bei dieser Teamgröße rentabel.',
           '**Sicherheitsvorteil ist real, nicht nur Marketing.** Quellcode verlässt niemals Ihr Netzwerk; ausgehender Egress kann mit `tcpdump` null bewiesen werden; die gesamte Audit Oberfläche ist ein Ollama Prozess und eine Log Datei.',
@@ -563,7 +565,7 @@ jobs:
         id: 'architecture-comparison',
         title: 'Architekturvergleich: Drei echte Optionen für Code Review in CI',
         content:
-          '**Drei Architekturen decken effektiv alle PR Review Setups im Mai 2026 ab.** Self-Hosted Local LLM ist einer davon — die richtige Wahl, wenn Quellcode Ihr Netzwerk nicht verlassen kann oder wenn Seat Count Wirtschaftlichkeit feste Infrastruktur begünstigt.',
+          '**Drei Architekturen decken effektiv alle PR Review Setups im August 2026 ab.** Self-Hosted Local LLM ist einer davon — die richtige Wahl, wenn Quellcode Ihr Netzwerk nicht verlassen kann oder wenn Seat Count Wirtschaftlichkeit feste Infrastruktur begünstigt.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -617,7 +619,7 @@ jobs:
           '**Der einfachste Production-Grade Stack besteht aus drei Komponenten.** Jede ist Open Source, kostenlos und gut dokumentiert; die Integrations Oberfläche zwischen ihnen ist HTTP.',
         items: [
           '**GPU Server** mit **Ollama** (oder vLLM für höhere Concurrency). Ollama exponiert eine OpenAI-kompatible HTTP API auf `localhost:11434` standardmäßig; binden Sie sie an eine private Schnittstelle oder einen Reverse Proxy mit Auth, bevor Sie zu Runnern exponieren.',
-          '**Coding-optimiertes Modell:** **Qwen3-Coder 30B** bei Q4_K_M ist der Mai 2026 Standard — stärkste Open-Weight Coding Richtung, 256K Kontext, Apache 2.0 Lizenz, passt auf eine 24 GB GPU. Für 8–16 GB GPUs verwenden Sie Qwen3-Coder 7B mit dem Verständnis, dass Review Qualität merklich sinkt.',
+          '**Coding-optimiertes Modell:** **Qwen3-Coder 30B** bei Q4_K_M ist der August 2026 Standard — stärkste Open-Weight Coding Richtung, 256K Kontext, Apache 2.0 Lizenz, passt auf eine 24 GB GPU. Für 8–16 GB GPUs verwenden Sie Qwen3-Coder 7B mit dem Verständnis, dass Review Qualität merklich sinkt.',
           '**CI Integration:** ein Self-Hosted GitHub Actions Runner im selben Netzwerk wie der GPU Server, oder Ihre bestehenden GitHub-gehosteten Runner, die den GPU Server über ein privates Netzwerk erreichen (Tailscale, WireGuard oder VPC Peering).',
           '**Benutzerdefinierte GitHub Action** (JavaScript oder Composite), die die PR Diff über die GitHub API abruft, sie mit einem Review Prompt zur Ollama Endpoint sendet, die strukturierte Antwort parst und Inline Kommentare zurück zur PR sendet.',
           '**Optional:** ein kleiner Redis oder SQLite Cache, der nach Datei Hash + Diff Hash schlüsselt, um Re-Reviews von unveränderten Dateien in nachfolgenden CI Läufen zu vermeiden.',
@@ -713,13 +715,13 @@ jobs:
         title: 'Hardware Dimensionierung nach Teamgröße',
         content:
           '**Eine RTX 4090 (24 GB) bedient ein 15–25-Entwickler Team komfortabel.** Der Bottleneck auf einer einzelnen GPU ist nicht Durchsatz pro Review — es ist Concurrency bei PR-Flush Momenten (Montagmorgen, End of Sprint). Sizing Regeln unten gehen von Qwen3-Coder 30B bei Q4_K_M und einer typischen 50–500-zeiligen PR Diff aus.',
-        columns: ['Teamgröße', 'GPU', 'VRAM', 'Gleichzeitige Reviews', 'Ungefährer Preis (Mai 2026)'],
+        columns: ['Teamgröße', 'GPU', 'VRAM', 'Gleichzeitige Reviews', 'Ungefährer Preis (August 2026)'],
         rows: [
-          { 'Teamgröße': '~5 Entwickler', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12–16 GB', 'Gleichzeitige Reviews': '1 (nur Qwen3-Coder 7B)', 'Ungefährer Preis (Mai 2026)': 'ca. 799–1.099 €' },
-          { 'Teamgröße': '15–25 Entwickler', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24–32 GB', 'Gleichzeitige Reviews': '1–3 (Qwen3-Coder 30B)', 'Ungefährer Preis (Mai 2026)': 'ca. 2.299–2.799 €' },
-          { 'Teamgröße': '25–50 Entwickler', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', 'Gleichzeitige Reviews': '3–6', 'Ungefährer Preis (Mai 2026)': 'ca. 8.999–9.999 €' },
-          { 'Teamgröße': '50–100 Entwickler', 'GPU': '2× RTX 4090 oder 1× H100', 'VRAM': '48 GB / 80 GB', 'Gleichzeitige Reviews': '6–10', 'Ungefährer Preis (Mai 2026)': 'ca. 5.000 € (2× 4090) oder 27.000+ € (H100)' },
-          { 'Teamgröße': '100+ Entwickler', 'GPU': 'Multi-GPU H100 oder H200', 'VRAM': '160 GB+', 'Gleichzeitige Reviews': '10+ mit vLLM', 'Ungefährer Preis (Mai 2026)': 'ca. 50.000+ €' },
+          { 'Teamgröße': '~5 Entwickler', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12–16 GB', 'Gleichzeitige Reviews': '1 (nur Qwen3-Coder 7B)', 'Ungefährer Preis (August 2026)': 'ca. 799–1.099 €' },
+          { 'Teamgröße': '15–25 Entwickler', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24–32 GB', 'Gleichzeitige Reviews': '1–3 (Qwen3-Coder 30B)', 'Ungefährer Preis (August 2026)': 'ca. 2.299–2.799 €' },
+          { 'Teamgröße': '25–50 Entwickler', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', 'Gleichzeitige Reviews': '3–6', 'Ungefährer Preis (August 2026)': 'ca. 8.999–9.999 €' },
+          { 'Teamgröße': '50–100 Entwickler', 'GPU': '2× RTX 4090 oder 1× H100', 'VRAM': '48 GB / 80 GB', 'Gleichzeitige Reviews': '6–10', 'Ungefährer Preis (August 2026)': 'ca. 5.000 € (2× 4090) oder 27.000+ € (H100)' },
+          { 'Teamgröße': '100+ Entwickler', 'GPU': 'Multi-GPU H100 oder H200', 'VRAM': '160 GB+', 'Gleichzeitige Reviews': '10+ mit vLLM', 'Ungefährer Preis (August 2026)': 'ca. 50.000+ €' },
         ],
         callouts: [
           {
@@ -913,8 +915,9 @@ jobs:
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-fr.webp',
     title: 'LLM Local en CI/CD : Révision de Code Automatisée Sans Cloud',
@@ -930,7 +933,7 @@ jobs:
     primaryTerm: 'révision de code llm local ci/cd',
     targetKeywords: ['révision de code llm local', 'révision de code llm auto-hébergée', 'github actions llm local', 'ollama github actions', 'révision de code ia privée', 'révision de code sans openai'],
     leadAnswerBlock: '**La révision de code LLM local auto-hébergée utilise trois composants : un serveur GPU dédié exécutant Ollama (ou vLLM), une action GitHub personnalisée qui POSTE la différence au point de terminaison HTTP du serveur, et un prompt de révision qui renvoie un verdict structuré (approuver / commenter / bloquer). Une RTX 4090 (24 GB) exécutant Qwen3-Coder 30B dessert confortablement une équipe de 15–25 développeurs ; une carte 48 GB (L40S ou A6000 Ada) s\'étend à environ 50 développeurs ; le matériel de classe H100 est nécessaire au-delà de 100. L\'économie bascule en faveur de l\'auto-hébergement quelque part entre 15 et 25 sièges GitHub Advanced Security payants à 19 $/dev/mois — la parité exacte dépend du coût d\'achat du matériel par rapport à la capacité existante. L\'avantage de sécurité est réel : le code source ne quitte jamais votre réseau, la surface d\'audit est un processus et un fichier journal, et vous pouvez prouver zéro sortie avec une capture de paquets.**',
-    quickAnswerTop: { fr: { question: 'Comment puis-je exécuter un LLM local en tant que critique de code en CI/CD ?', answer: 'Configurez un serveur GPU exécutant Ollama (ou vLLM, llama.cpp) avec un modèle optimisé pour le codage — Qwen3-Coder 30B est la norme de mai 2026. Ajoutez un exécuteur GitHub Actions auto-hébergé sur le même réseau, ou exposez le point de terminaison HTTP du serveur à vos exécuteurs existants via un réseau privé. Écrivez une petite action personnalisée qui récupère la différence de RP, la POSTE avec un prompt de révision au point de terminaison LLM, analyse la réponse structurée (approuver / commenter / bloquer) et poste les commentaires en ligne de la RP. Le modèle ne quitte jamais votre périmètre ; l\'action se comporte comme n\'importe quelle autre vérification. En termes de matériel, une RTX 4090 avec Qwen3-Coder 30B gère 15–25 développeurs ; une carte 48 GB s\'étend à 50 ; au-delà de 100, vous avez besoin du matériel de classe H100 ou de plusieurs GPU.', bullets: ['Architecture : serveur GPU exécutant Ollama → exécuteur auto-hébergé (ou HTTP depuis les exécuteurs cloud) → action GitHub personnalisée → commentaires RP.', 'Stack par défaut : Ollama + Qwen3-Coder 30B (Apache 2.0) + action JavaScript ou composite personnalisée.', 'Matériel : 1× RTX 4090 (24 GB) pour 15–25 développeurs ; 1× L40S/A6000 Ada (48 GB) pour ~50 ; 1× H100 ou multi-GPU pour 100+.', 'Économie : parité par rapport à GitHub Advanced Security à 19 $/dev/mois est à peu près 15–25 sièges payants, selon le coût du matériel.', 'Sécurité : le code source ne quitte jamais votre réseau ; la sortie peut être prouvée avec une capture de paquets ; la surface d\'audit est un processus et un journal.', 'GitLab CI fonctionne de la même manière — exécuteur au lieu d\'action, mais l\'appel LLM est identique.'], updatedDate: '2026-05-07' } },
+    quickAnswerTop: { fr: { question: 'Comment puis-je exécuter un LLM local en tant que critique de code en CI/CD ?', answer: 'Configurez un serveur GPU exécutant Ollama (ou vLLM, llama.cpp) avec un modèle optimisé pour le codage — Qwen3-Coder 30B est la norme de août 2026. Ajoutez un exécuteur GitHub Actions auto-hébergé sur le même réseau, ou exposez le point de terminaison HTTP du serveur à vos exécuteurs existants via un réseau privé. Écrivez une petite action personnalisée qui récupère la différence de RP, la POSTE avec un prompt de révision au point de terminaison LLM, analyse la réponse structurée (approuver / commenter / bloquer) et poste les commentaires en ligne de la RP. Le modèle ne quitte jamais votre périmètre ; l\'action se comporte comme n\'importe quelle autre vérification. En termes de matériel, une RTX 4090 avec Qwen3-Coder 30B gère 15–25 développeurs ; une carte 48 GB s\'étend à 50 ; au-delà de 100, vous avez besoin du matériel de classe H100 ou de plusieurs GPU.', bullets: ['Architecture : serveur GPU exécutant Ollama → exécuteur auto-hébergé (ou HTTP depuis les exécuteurs cloud) → action GitHub personnalisée → commentaires RP.', 'Stack par défaut : Ollama + Qwen3-Coder 30B (Apache 2.0) + action JavaScript ou composite personnalisée.', 'Matériel : 1× RTX 4090 (24 GB) pour 15–25 développeurs ; 1× L40S/A6000 Ada (48 GB) pour ~50 ; 1× H100 ou multi-GPU pour 100+.', 'Économie : parité par rapport à GitHub Advanced Security à 19 $/dev/mois est à peu près 15–25 sièges payants, selon le coût du matériel.', 'Sécurité : le code source ne quitte jamais votre réseau ; la sortie peut être prouvée avec une capture de paquets ; la surface d\'audit est un processus et un journal.', 'GitLab CI fonctionne de la même manière — exécuteur au lieu d\'action, mais l\'appel LLM est identique.'], updatedDate: '2026-08-27' } },
     toc: [
       { label: 'Points Clés', anchor: '#key-takeaways' },
       { label: 'Faits Rapides', anchor: '#quick-facts' },
@@ -950,10 +953,10 @@ jobs:
       { label: 'Lectures Associées', anchor: '#related-reading' },
     ],
     sections: {
-      tldr: { id: 'key-takeaways', isTldr: true, items: ['**L\'architecture se compose de trois éléments:** serveur GPU exécutant Ollama (ou vLLM) → exécuteur CI pouvant l\'atteindre via le réseau → action personnalisée qui POSTE la différence RP et analyse un verdict structuré. Même forme sur GitHub Actions, GitLab CI, Buildkite et Jenkins.', '**Stack par défaut en mai 2026:** Ollama + Qwen3-Coder 30B (Apache 2.0) + une action GitHub personnalisée légère. Infrastructure totale : une boîte GPU, un exécuteur.', '**Dimensionnement du matériel :** RTX 4090 (24 GB, env. 2 299 €) gère 15–25 développeurs ; L40S ou A6000 Ada (48 GB, env. 8 999–9 999 €) s\'étend à 50 ; H100 (80 GB, env. 27 000+ €) ou multi-GPU pour 100+.', '**L\'économie bascule en faveur du self-host** à environ 15–25 sièges GitHub Advanced Security payants (19 $/dev/mois) — une génération RTX 4090 paie pour elle-même en 5–10 mois à cette taille d\'équipe.', '**L\'avantage de sécurité est réel, pas seulement du marketing.** Le code source ne quitte jamais votre réseau ; la sortie sortante peut être prouvée nulle avec `tcpdump` ; la surface d\'audit entière est un processus Ollama et un fichier journal.', '**Les faux positifs sont la taxe opérationnelle.** Planifiez une boucle de réglage le premier mois : itération de prompt, seuils de sévérité et un chemin d\'ingestion de rétroaction du critique afin que le prompt s\'améliore au fil du temps.', '**La latence est acceptable.** Un GPU 24 GB exécutant Qwen3-Coder 30B examine une différence RP typique de 200 lignes en moins de 30 secondes. Le temps d\'attente de l\'auteur RP est dominé par d\'autres travaux CI, pas par l\'examen.', '**Ne remplacez pas complètement la révision humaine.** Le LLM local est une porte de triage — il détecte les problèmes évidents, signale les changements risqués et libère les humains des appels de jugement que les LLM se trompent encore.'] },
+      tldr: { id: 'key-takeaways', isTldr: true, items: ['**L\'architecture se compose de trois éléments:** serveur GPU exécutant Ollama (ou vLLM) → exécuteur CI pouvant l\'atteindre via le réseau → action personnalisée qui POSTE la différence RP et analyse un verdict structuré. Même forme sur GitHub Actions, GitLab CI, Buildkite et Jenkins.', '**Stack par défaut en août 2026:** Ollama + Qwen3-Coder 30B (Apache 2.0) + une action GitHub personnalisée légère. Infrastructure totale : une boîte GPU, un exécuteur.', '**Dimensionnement du matériel :** RTX 4090 (24 GB, env. 2 299 €) gère 15–25 développeurs ; L40S ou A6000 Ada (48 GB, env. 8 999–9 999 €) s\'étend à 50 ; H100 (80 GB, env. 27 000+ €) ou multi-GPU pour 100+.', '**L\'économie bascule en faveur du self-host** à environ 15–25 sièges GitHub Advanced Security payants (19 $/dev/mois) — une génération RTX 4090 paie pour elle-même en 5–10 mois à cette taille d\'équipe.', '**L\'avantage de sécurité est réel, pas seulement du marketing.** Le code source ne quitte jamais votre réseau ; la sortie sortante peut être prouvée nulle avec `tcpdump` ; la surface d\'audit entière est un processus Ollama et un fichier journal.', '**Les faux positifs sont la taxe opérationnelle.** Planifiez une boucle de réglage le premier mois : itération de prompt, seuils de sévérité et un chemin d\'ingestion de rétroaction du critique afin que le prompt s\'améliore au fil du temps.', '**La latence est acceptable.** Un GPU 24 GB exécutant Qwen3-Coder 30B examine une différence RP typique de 200 lignes en moins de 30 secondes. Le temps d\'attente de l\'auteur RP est dominé par d\'autres travaux CI, pas par l\'examen.', '**Ne remplacez pas complètement la révision humaine.** Le LLM local est une porte de triage — il détecte les problèmes évidents, signale les changements risqués et libère les humains des appels de jugement que les LLM se trompent encore.'] },
       quickFacts: { id: 'quick-facts', title: 'Faits Rapides', items: ['**Modèle recommandé:** Qwen3-Coder 30B à Q4_K_M (~17 GB VRAM, Apache 2.0).', '**Exécution recommandée:** Ollama pour la simplicité de configuration ; vLLM si vous avez besoin d\'une concurrence plus élevée sur le même GPU.', '**GPU minimum pour les équipes sérieuses:** RTX 4090 (24 GB). Les cartes plus petites forcent le modèle 7B et une qualité de révision notablement pire.', '**Concurrence sur un seul GPU 24 GB:** confortablement 1–3 révisions simultanées sur Qwen3-Coder 30B ; queue au-delà.', '**Cible de latence:** moins de 30 secondes pour une différence de 200 lignes. Au-delà, le comportement de l\'auteur RP change et les révisions sont contournées.', '**Posture d\'audit:** zéro sortie sortante sur le serveur GPU est prouvable ; la surface entière est `ollama serve` + un seul fichier journal.', '**Parité avec GitHub Advanced Security (19 $/dev/mois):** 15–25 sièges payants couvrent une génération RTX 4090 en 5–10 mois.', '**Parité GitLab CI:** architecture identique, remplacez l\'action GitHub par un travail CI appelant le même point de terminaison HTTP.'] },
-      architectureComparison: { id: 'architecture-comparison', title: 'Comparaison d\'Architecture : Trois Véritables Options pour la Révision de Code en CI', content: '**Trois architectures couvrent effectivement tous les configurations de révision RP en mai 2026.** Self-Hosted Local LLM en est une — le bon choix quand le code source ne peut pas quitter votre réseau ou quand l\'économie des sièges favorise l\'infrastructure fixe.', snippetBlocks: [{ type: 'one-sentence', text: 'La révision de code LLM local auto-hébergée se rentabilise plus rapidement que GitHub Advanced Security à 15–25 sièges payants et garde le code source à l\'intérieur de votre réseau — la bonne architecture pour les équipes avec contrainte de confidentialité ou de nombre de sièges.' }, { type: 'plain-terms', text: 'Trois options existent pour la révision de code IA en CI. GitHub Advanced Security est la plus facile à activer et la plus chère à l\'échelle. Une API LLM cloud (OpenAI, Anthropic) est bon marché pour commencer et envoie chaque diff à un tiers. Self-Hosted Local LLM a le coût de configuration le plus élevé et est la seule option qui garde votre base de code à l\'intérieur de votre périmètre — et à environ 15–25 sièges payants, elle devient la moins chère des trois sur un an.' }], columns: ['Architecture', 'Complexité de Configuration', 'Coût (10 Développeurs)', 'Coût (50 Développeurs)', 'Latence RP', 'Meilleur pour'], rows: [{ 'Architecture': 'GitHub Advanced Security', 'Complexité de Configuration': 'Bas (une bascule)', 'Coût (10 Développeurs)': '$190/Mo', 'Coût (50 Développeurs)': '$950/Mo', 'Latence RP': 'Sub-minute (géré)', 'Meilleur pour': 'Teams <15 sièges payants sans contrainte de confidentialité' }, { 'Architecture': 'API LLM Cloud (OpenAI / Anthropic)', 'Complexité de Configuration': 'Bas–Moyen (clé API + action)', 'Coût (10 Développeurs)': '~$50–200/Mo (utilisation)', 'Coût (50 Développeurs)': '~$300–1 200/Mo (utilisation)', 'Latence RP': 'Secondes', 'Meilleur pour': 'Équipes à l\'aise d\'envoyer le code source à une API tierce' }, { 'Architecture': 'LLM Local sur GPU dédié', 'Complexité de Configuration': 'Moyen–Élevé (serveur GPU + exécuteur + action)', 'Coût (10 Développeurs)': 'env. 2 299 € matériel (une seule fois)', 'Coût (50 Développeurs)': 'env. 8 999+ € matériel (une seule fois)', 'Latence RP': '10–30 secondes (GPU unique)', 'Meilleur pour': 'Équipes sensibles à la confidentialité, 15+ sièges payants, contextes de conformité EU' }, { 'Architecture': 'LLM Local sur infra partagée (GPU existante)', 'Complexité de Configuration': 'Moyen (juste exécuteur + action)', 'Coût (10 Développeurs)': '€0 marginal (capacité existante)', 'Coût (50 Développeurs)': '€0 marginal (capacité existante)', 'Latence RP': 'Variable (dépend de la contention)', 'Meilleur pour': 'Équipes exécutant déjà une infra GPU pour ML ou analytics' }] },
-      recommendedStack: { id: 'recommended-stack', title: 'La Stack Recommandée : Ollama + Qwen3-Coder + une Action GitHub Légère', content: '**La stack production la plus simple se compose de trois composants.** Chacun est open source, gratuit et bien documenté ; la surface d\'intégration entre eux est HTTP.', items: ['**Serveur GPU** exécutant **Ollama** (ou vLLM pour une concurrence plus élevée). Ollama expose une API HTTP compatible OpenAI sur `localhost:11434` par défaut ; liez-la à une interface réseau privée ou à un proxy inverse avec auth avant d\'exposer aux exécuteurs.', '**Modèle optimisé pour le codage:** **Qwen3-Coder 30B** à Q4_K_M est la norme de mai 2026 — plus forte direction open-weight coding, contexte 256K, licence Apache 2.0, s\'adapte à une GPU 24 GB. Pour les GPU 8–16 GB, utilisez Qwen3-Coder 7B en comprenant que la qualité de révision baisse notablement.', '**Intégration CI:** un exécuteur GitHub Actions auto-hébergé sur le même réseau que le serveur GPU, ou vos exécuteurs GitHub-hébergés existants atteignant le serveur GPU via un réseau privé (Tailscale, WireGuard ou appairage VPC).', '**Action GitHub personnalisée** (JavaScript ou composite) qui récupère la différence RP via l\'API GitHub, la POSTE au point de terminaison Ollama avec un prompt de révision, analyse la réponse structurée et poste les commentaires en ligne de la RP.', '**Optionnel:** un petit cache Redis ou SQLite codé par hash fichier + hash diff pour éviter les re-révisions de fichiers inchangés dans les exécutions CI suivantes.', '**Parité GitLab:** la même architecture, avec un travail GitLab CI remplaçant l\'action GitHub. L\'appel LLM est identique.'], callouts: [{ type: 'tip', text: 'Liez `ollama serve` à une interface réseau privée (ou `127.0.0.1` si l\'exécuteur est sur le même hôte) et mettez auth devant avant toute exposition cross-host. Le `OLLAMA_HOST=0.0.0.0:11434` par défaut sans auth est acceptable pour une expérience single-machine, mais une défaillance de sécurité dans tout autre contexte.' }] },
+      architectureComparison: { id: 'architecture-comparison', title: 'Comparaison d\'Architecture : Trois Véritables Options pour la Révision de Code en CI', content: '**Trois architectures couvrent effectivement tous les configurations de révision RP en août 2026.** Self-Hosted Local LLM en est une — le bon choix quand le code source ne peut pas quitter votre réseau ou quand l\'économie des sièges favorise l\'infrastructure fixe.', snippetBlocks: [{ type: 'one-sentence', text: 'La révision de code LLM local auto-hébergée se rentabilise plus rapidement que GitHub Advanced Security à 15–25 sièges payants et garde le code source à l\'intérieur de votre réseau — la bonne architecture pour les équipes avec contrainte de confidentialité ou de nombre de sièges.' }, { type: 'plain-terms', text: 'Trois options existent pour la révision de code IA en CI. GitHub Advanced Security est la plus facile à activer et la plus chère à l\'échelle. Une API LLM cloud (OpenAI, Anthropic) est bon marché pour commencer et envoie chaque diff à un tiers. Self-Hosted Local LLM a le coût de configuration le plus élevé et est la seule option qui garde votre base de code à l\'intérieur de votre périmètre — et à environ 15–25 sièges payants, elle devient la moins chère des trois sur un an.' }], columns: ['Architecture', 'Complexité de Configuration', 'Coût (10 Développeurs)', 'Coût (50 Développeurs)', 'Latence RP', 'Meilleur pour'], rows: [{ 'Architecture': 'GitHub Advanced Security', 'Complexité de Configuration': 'Bas (une bascule)', 'Coût (10 Développeurs)': '$190/Mo', 'Coût (50 Développeurs)': '$950/Mo', 'Latence RP': 'Sub-minute (géré)', 'Meilleur pour': 'Teams <15 sièges payants sans contrainte de confidentialité' }, { 'Architecture': 'API LLM Cloud (OpenAI / Anthropic)', 'Complexité de Configuration': 'Bas–Moyen (clé API + action)', 'Coût (10 Développeurs)': '~$50–200/Mo (utilisation)', 'Coût (50 Développeurs)': '~$300–1 200/Mo (utilisation)', 'Latence RP': 'Secondes', 'Meilleur pour': 'Équipes à l\'aise d\'envoyer le code source à une API tierce' }, { 'Architecture': 'LLM Local sur GPU dédié', 'Complexité de Configuration': 'Moyen–Élevé (serveur GPU + exécuteur + action)', 'Coût (10 Développeurs)': 'env. 2 299 € matériel (une seule fois)', 'Coût (50 Développeurs)': 'env. 8 999+ € matériel (une seule fois)', 'Latence RP': '10–30 secondes (GPU unique)', 'Meilleur pour': 'Équipes sensibles à la confidentialité, 15+ sièges payants, contextes de conformité EU' }, { 'Architecture': 'LLM Local sur infra partagée (GPU existante)', 'Complexité de Configuration': 'Moyen (juste exécuteur + action)', 'Coût (10 Développeurs)': '€0 marginal (capacité existante)', 'Coût (50 Développeurs)': '€0 marginal (capacité existante)', 'Latence RP': 'Variable (dépend de la contention)', 'Meilleur pour': 'Équipes exécutant déjà une infra GPU pour ML ou analytics' }] },
+      recommendedStack: { id: 'recommended-stack', title: 'La Stack Recommandée : Ollama + Qwen3-Coder + une Action GitHub Légère', content: '**La stack production la plus simple se compose de trois composants.** Chacun est open source, gratuit et bien documenté ; la surface d\'intégration entre eux est HTTP.', items: ['**Serveur GPU** exécutant **Ollama** (ou vLLM pour une concurrence plus élevée). Ollama expose une API HTTP compatible OpenAI sur `localhost:11434` par défaut ; liez-la à une interface réseau privée ou à un proxy inverse avec auth avant d\'exposer aux exécuteurs.', '**Modèle optimisé pour le codage:** **Qwen3-Coder 30B** à Q4_K_M est la norme de août 2026 — plus forte direction open-weight coding, contexte 256K, licence Apache 2.0, s\'adapte à une GPU 24 GB. Pour les GPU 8–16 GB, utilisez Qwen3-Coder 7B en comprenant que la qualité de révision baisse notablement.', '**Intégration CI:** un exécuteur GitHub Actions auto-hébergé sur le même réseau que le serveur GPU, ou vos exécuteurs GitHub-hébergés existants atteignant le serveur GPU via un réseau privé (Tailscale, WireGuard ou appairage VPC).', '**Action GitHub personnalisée** (JavaScript ou composite) qui récupère la différence RP via l\'API GitHub, la POSTE au point de terminaison Ollama avec un prompt de révision, analyse la réponse structurée et poste les commentaires en ligne de la RP.', '**Optionnel:** un petit cache Redis ou SQLite codé par hash fichier + hash diff pour éviter les re-révisions de fichiers inchangés dans les exécutions CI suivantes.', '**Parité GitLab:** la même architecture, avec un travail GitLab CI remplaçant l\'action GitHub. L\'appel LLM est identique.'], callouts: [{ type: 'tip', text: 'Liez `ollama serve` à une interface réseau privée (ou `127.0.0.1` si l\'exécuteur est sur le même hôte) et mettez auth devant avant toute exposition cross-host. Le `OLLAMA_HOST=0.0.0.0:11434` par défaut sans auth est acceptable pour une expérience single-machine, mais une défaillance de sécurité dans tout autre contexte.' }] },
       workflow: { id: 'workflow', title: 'Un Flux de Travail GitHub Actions Fonctionnant', content: '**Le flux de travail minimum viable est d\'environ 50 lignes YAML.** Ce modèle s\'exécute sur l\'ouverture et la synchronisation RP, récupère la différence, appelle Ollama et poste un commentaire en arrière. Les déploiements production ajoutent la mise en cache, les seuils de sévérité et l\'option de bloquer la RP sur un verdict "block".', codeLanguage: 'yaml', codeBlock: `# .github/workflows/local-llm-review.yml
 name: Local LLM Code Review
 
@@ -1012,7 +1015,7 @@ jobs:
         if: steps.review.outputs.verdict == 'block'
         run: exit 1
 `, items: ['L\'exécuteur doit pouvoir atteindre `OLLAMA_HOST` via le réseau — auto-hébergé sur le même VPC, ou via Tailscale / WireGuard si le serveur GPU est ailleurs.', 'Le prompt système impose une réponse JSON structurée pour que l\'action puisse se brancher sur le verdict proprement. Sans `format: "json"` et un schéma strict dans le prompt, vous passerez du temps opérationnel à analyser la sortie free-form.', 'Le checkout `fetch-depth: 0` est nécessaire pour calculer une vraie diff contre la branche de base — les checkouts superficiels produisent des diffs malformées.', 'Pour les dépôts au-dessus d\'environ 50K lignes de code modifié par RP, tronquez ou fragmentez la diff avant d\'envoyer. Le contexte 256K sur Qwen3-Coder 30B est généreux, mais le contexte de travail pratique est plus proche de 64K–128K (voir [Best Local Coding Models in 2026](/fr/power-local-llm/best-local-coding-models-2026)).', 'Pour la profondeur du design de prompt — prompts système vs utilisateur, exemples, résultats structurés — voir [System Prompt vs User Prompt: What\'s the Difference](/fr/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference).'], callouts: [{ type: 'note', text: 'Ce flux de travail est intentionnellement minimal. Les déploiements production ajoutent : un cache codé par hash fichier + diff pour sauter les re-révisions de fichiers inchangés, les seuils de sévérité (bloc seulement sur `severity >= "high"`), la publication de commentaires en ligne (au lieu d\'un seul commentaire de synthèse), les variantes de prompt par langue et l\'ingestion de rétroaction du critique pour améliorer le prompt au fil du temps.' }] },
-      hardwareSizing: { id: 'hardware-sizing', title: 'Dimensionnement du Matériel par Taille d\'Équipe', content: '**Une RTX 4090 (24 GB) gère confortablement une équipe de 15–25 développeurs.** Le goulot d\'étranglement sur une seule GPU n\'est pas le débit par révision — c\'est la concurrence aux moments de chasse aux RP (lundi matin, fin de sprint). Les règles de dimensionnement ci-dessous supposent Qwen3-Coder 30B à Q4_K_M et une différence RP typique de 50–500 lignes.', columns: ['Taille d\'Équipe', 'GPU', 'VRAM', 'Révisions Simultanées', 'Prix Approximatif (Mai 2026)'], rows: [{ 'Taille d\'Équipe': '~5 Développeurs', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12–16 GB', 'Révisions Simultanées': '1 (seulement Qwen3-Coder 7B)', 'Prix Approximatif (Mai 2026)': 'env. 899–1 099 €' }, { 'Taille d\'Équipe': '15–25 Développeurs', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24–32 GB', 'Révisions Simultanées': '1–3 (Qwen3-Coder 30B)', 'Prix Approximatif (Mai 2026)': 'env. 2 299–2 799 €' }, { 'Taille d\'Équipe': '25–50 Développeurs', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', 'Révisions Simultanées': '3–6', 'Prix Approximatif (Mai 2026)': 'env. 8 999–9 999 €' }, { 'Taille d\'Équipe': '50–100 Développeurs', 'GPU': '2× RTX 4090 ou 1× H100', 'VRAM': '48 GB / 80 GB', 'Révisions Simultanées': '6–10', 'Prix Approximatif (Mai 2026)': 'env. 5 000 € (2× 4090) ou 27 000+ € (H100)' }, { 'Taille d\'Équipe': '100+ Développeurs', 'GPU': 'Multi-GPU H100 ou H200', 'VRAM': '160 GB+', 'Révisions Simultanées': '10+ avec vLLM', 'Prix Approximatif (Mai 2026)': 'env. 50 000+ €' }], callouts: [{ type: 'tip', text: 'Pour les équipes franchissant le seuil de 50 développeurs, passez de Ollama à vLLM. Ollama privilégie la facilité d\'utilisation ; vLLM privilégie le débit sur les GPU partagées. Le même modèle Qwen3-Coder 30B s\'exécute sur les deux — seul le serveur d\'inférence change.' }] },
+      hardwareSizing: { id: 'hardware-sizing', title: 'Dimensionnement du Matériel par Taille d\'Équipe', content: '**Une RTX 4090 (24 GB) gère confortablement une équipe de 15–25 développeurs.** Le goulot d\'étranglement sur une seule GPU n\'est pas le débit par révision — c\'est la concurrence aux moments de chasse aux RP (lundi matin, fin de sprint). Les règles de dimensionnement ci-dessous supposent Qwen3-Coder 30B à Q4_K_M et une différence RP typique de 50–500 lignes.', columns: ['Taille d\'Équipe', 'GPU', 'VRAM', 'Révisions Simultanées', 'Prix Approximatif (août 2026)'], rows: [{ 'Taille d\'Équipe': '~5 Développeurs', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12–16 GB', 'Révisions Simultanées': '1 (seulement Qwen3-Coder 7B)', 'Prix Approximatif (août 2026)': 'env. 899–1 099 €' }, { 'Taille d\'Équipe': '15–25 Développeurs', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24–32 GB', 'Révisions Simultanées': '1–3 (Qwen3-Coder 30B)', 'Prix Approximatif (août 2026)': 'env. 2 299–2 799 €' }, { 'Taille d\'Équipe': '25–50 Développeurs', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', 'Révisions Simultanées': '3–6', 'Prix Approximatif (août 2026)': 'env. 8 999–9 999 €' }, { 'Taille d\'Équipe': '50–100 Développeurs', 'GPU': '2× RTX 4090 ou 1× H100', 'VRAM': '48 GB / 80 GB', 'Révisions Simultanées': '6–10', 'Prix Approximatif (août 2026)': 'env. 5 000 € (2× 4090) ou 27 000+ € (H100)' }, { 'Taille d\'Équipe': '100+ Développeurs', 'GPU': 'Multi-GPU H100 ou H200', 'VRAM': '160 GB+', 'Révisions Simultanées': '10+ avec vLLM', 'Prix Approximatif (août 2026)': 'env. 50 000+ €' }], callouts: [{ type: 'tip', text: 'Pour les équipes franchissant le seuil de 50 développeurs, passez de Ollama à vLLM. Ollama privilégie la facilité d\'utilisation ; vLLM privilégie le débit sur les GPU partagées. Le même modèle Qwen3-Coder 30B s\'exécute sur les deux — seul le serveur d\'inférence change.' }] },
       gpuSharing: { id: 'gpu-sharing', title: 'Partage GPU Across Builds et Autres Charges', content: '**Une GPU dédiée pour la révision de code est l\'architecture la plus simple mais pas la seule.** Les équipes exécutant déjà une infra GPU pour l\'inférence ML ou l\'entraînement peuvent partager — avec le compromis que la contention fait monter en flèche la latence de révision.', items: ['**GPU dédiée pour la révision seulement:** modèle le plus simple. La latence est prévisible ; la planification de capacité est simple ; les modes de défaillance sont isolés. La recommandation pour toute équipe n\'exécutant pas déjà une infra GPU.', '**GPU partagée avec inférence ML:** faisable si la charge inférence a une enveloppe stable (par ex., un petit service d\'intégration s\'adaptant à 4–6 GB). Le modèle de révision occupe le reste du VRAM. Les collisions de planification sont rares sur ce motif.', '**GPU partagée avec entraînement ML:** fortement déconseillé. Les travaux d\'entraînement font sauter l\'utilisation du VRAM au limite et affament le modèle de révision, causant des latences de révision de 30–120 secondes qui érodent la confiance des développeurs dans le système.', '**vLLM avec attention paginée:** purpose-built pour le service LLM haute-concurrence. La même RTX 4090 qui gère 1–3 révisions simultanées sous Ollama peut gérer 4–8 sous vLLM, au prix d\'une configuration plus complexe. Ça vaut le coup au-delà de 25 développeurs.', '**Multi-tenant sur H100:** à l\'échelle 100+ développeurs, partitionnez un H100 en tranches MIG ou exécutez vLLM avec des quotas par tenant. C\'est du territoire plateforme-engineering ; n\'improvisez pas.'] },
       costComparison: { id: 'cost-comparison', title: 'Comparaison des Coûts avec GitHub Advanced Security', content: '**L\'économie bascule en faveur du self-host à environ 15–25 sièges payants.** C\'est une comparaison à payback d\'un an ; les horizons plus longs rendent l\'auto-hébergement plus favorable.', items: ['**GitHub Advanced Security (Code Security):** 19 $/développeur/mois au prix catalogue (vérifiez sur la page de tarification GitHub ; les remises de volume sont disponibles pour les clients enterprise).', '**API LLM Cloud (ex. OpenAI, Anthropic):** environ 50–200 $/mois par développeur actif au volume RP typique ; varie énormément selon la taille de la base de code et la conception du prompt de révision.', '**Self-Hosted Local LLM, build RTX 4090:** environ 2 299 € de matériel une seule fois (GPU + un boîtier serveur de base). Consommation électrique : ~50W au repos, ~350W sous charge — disons env. 18–28€/mois en électricité à l\'utilisation typique. Pas de frais par siège.', '**Parité à 10 développeurs:** GHAS 190 $/mois vs self-hosted env. 25€/mois exploité + env. 2 299 € capex. Capex se rentabilise en ~14 mois.', '**Parité à 25 développeurs:** GHAS 475 $/mois vs self-hosted env. 25€/mois exploité + env. 2 299 € capex. Capex se rentabilise en ~5–6 mois.', '**Parité à 50 développeurs:** GHAS 950 $/mois vs self-hosted env. 40€/mois exploité + env. 7 500 € capex (GPU 48 GB). Capex se rentabilise en ~8 mois.', '**Le chiffre capex domine les mathématiques.** Si vous achetez une GPU spécifiquement pour cela, la rentabilité est réelle. Si vous avez une capacité GPU existante, le coût marginal est plus proche de zéro et l\'auto-hébergement gagne immédiatement.'], callouts: [{ type: 'note', text: 'Ces chiffres sont des comparaisons de prix catalogue. Les tarifs GHAS négociés pour les grandes entreprises décalent la parité ; la capacité GPU existante l\'effondre. Refaites les mathématiques avec vos coûts réels avant de vous engager sur un achat de matériel.' }] },
       securityModel: { id: 'security-model', title: 'Modèle de Sécurité et Posture d\'Audit', content: '**L\'affirmation de sécurité titre — "le code source ne quitte jamais votre réseau" — est vraie, prouvable, et le plus fort argument pour cette architecture.** La surface d\'audit est assez petite pour être défendue dans un examen de procurement.', items: ['**Le modèle ne voit que la diff que votre action envoie.** Pas de télémétrie, pas d\'appels réseau cachés. Confirmable avec `tcpdump` ou `nft monitor` sur l\'interface sortante du serveur GPU — sous opération état-stable, vous devriez voir zéro paquets sortants vers les hôtes non-internes.', '**La surface d\'audit complète est un processus et un fichier journal.** `ollama serve` est l\'intégralité de la pile LLM. Ses logs (corps de requête, latence, événements de chargement de modèle) sont l\'enregistrement d\'audit. Pas de tableau de bord SaaS à interroger, pas de politique de conservation tiers à lire.', '**L\'isolement du réseau est simple.** Liez `ollama serve` à une interface privée ; mettez un proxy inverse avec auth mTLS ou shared-secret devant ; refusez sortant sur le namespace réseau du serveur GPU sauf vers votre sous-réseau exécuteur CI. Motif zero-trust standard, pas de magie LLM-spécifique.', '**Les poids du modèle sont des artefacts statiques signés par le vendeur.** Tirez-les une seule fois via Ollama, épinglez le digest et le modèle ne peut pas changer sans action opérateur. C\'est une histoire de chaîne d\'approvisionnement plus forte qu\'une API SaaS où le modèle amont peut être silencieusement échangé.', '**Posture de conformité:** zéro sortie de données est simple à documenter pour SOC 2, ISO 27001, GDPR et la classification EU AI Act limited-risk. La partie la plus difficile de la conformité auto-hébergée est généralement de documenter le serveur d\'inférence lui-même ; Ollama et vLLM sont tous deux bien documentés.', '**Le modèle voit toujours votre code.** L\'auto-hébergé ne signifie pas privé du modèle — cela signifie privé des tiers. Les scénarios d\'insider-threat (ingénieur avec accès serveur GPU lit les logs contenant les diffs RP passées) sont toujours dans le scope ; rotez les logs et limitez l\'accès en conséquence.'] },
@@ -1028,8 +1031,9 @@ jobs:
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-ja.webp',
     title: 'ローカルLLMでCI/CDコードレビュー：セルフホスト型セットアップ2026',
@@ -1071,7 +1075,7 @@ jobs:
       ja: {
         question: 'CI/CDでローカルLLMをコードレビュアーとして実行するにはどうすればよいですか？',
         answer:
-          'Ollama（またはvLLM、llama.cpp）を実行しているGPUサーバーを構築します。コーディング調整モデル——Qwen3-Coder 30Bは2026年5月のデフォルト——を使用します。セルフホスト型GitHub Actionsランナーを同じネットワーク上に追加するか、プライベートネットワーク経由で既存のランナーにサーバーのHTTPエンドポイントを公開します。PRdiffをフェッチし、レビュープロンプト付きでLLMエンドポイントにPOSTし、構造化された応答（承認/コメント/ブロック）を解析し、PRにインラインコメントを戻すカスタムアクションを記述します。モデルはあなたの境界内に留まります。アクションは他のチェックのように動作します。ハードウェアの観点から、1つのRTX 4090でQwen3-Coder 30Bは15～25開発者を処理します。48 GBカードは約50開発者に拡張します。100を超える場合はH100クラスまたはマルチGPUが必要です。',
+          'Ollama（またはvLLM、llama.cpp）を実行しているGPUサーバーを構築します。コーディング調整モデル——Qwen3-Coder 30Bは2026年8月のデフォルト——を使用します。セルフホスト型GitHub Actionsランナーを同じネットワーク上に追加するか、プライベートネットワーク経由で既存のランナーにサーバーのHTTPエンドポイントを公開します。PRdiffをフェッチし、レビュープロンプト付きでLLMエンドポイントにPOSTし、構造化された応答（承認/コメント/ブロック）を解析し、PRにインラインコメントを戻すカスタムアクションを記述します。モデルはあなたの境界内に留まります。アクションは他のチェックのように動作します。ハードウェアの観点から、1つのRTX 4090でQwen3-Coder 30Bは15～25開発者を処理します。48 GBカードは約50開発者に拡張します。100を超える場合はH100クラスまたはマルチGPUが必要です。',
         bullets: [
           'アーキテクチャ：Ollama を実行するGPUサーバー→セルフホスト型ランナー（またはクラウドランナーからのHTTP）→カスタムGitHub Action→PRコメント。',
           'デフォルトスタック：Ollama + Qwen3-Coder 30B（Apache 2.0）+ カスタムJavaScriptまたはコンポジットアクション。',
@@ -1080,7 +1084,7 @@ jobs:
           'セキュリティ：ソースコードはネットワークから出ません。パケットキャプチャでエグレスはゼロと証明できます。監査サーフェスは1つのプロセスと1つのログです。',
           'GitLab CIも同じ方法で動作します——アクションの代わりにランナーですが、LLM呼び出しは同一です。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1107,7 +1111,7 @@ jobs:
         isTldr: true,
         items: [
           '**アーキテクチャは3つの部分です：** Ollama（またはvLLM）を実行するGPUサーバー→ネットワーク経由で到達可能なCIランナー→PRdiffをPOSTし構造化判定を解析するカスタムアクション。GitHub Actions、GitLab CI、Buildkite、Jenkinsで同じ形です。',
-          '**2026年5月のデフォルトスタック：** Ollama + Qwen3-Coder 30B（Apache 2.0）+ シンカスタムGitHub Action。総インフラ：1つのGPUボックス、1つのランナー。',
+          '**2026年8月のデフォルトスタック：** Ollama + Qwen3-Coder 30B（Apache 2.0）+ シンカスタムGitHub Action。総インフラ：1つのGPUボックス、1つのランナー。',
           '**ハードウェアサイジング：** RTX 4090（24 GB、¥320,000～¥360,000）は15～25開発者を処理します。L40SまたはA6000 Ada（48 GB、¥1,120,000～¥1,280,000）は50人に拡張します。H100（80 GB、¥4,000,000以上）またはマルチGPUは100以上向けです。',
           '**経済学はおおよそ15～25の有料GitHub Advanced Securityシート($19/開発者/月)でセルフホスト領域に転換します——RTX 4090ビルドは5～10ヶ月でペイバックします。',
           '**セキュリティ上の利点は実質的で、単なるマーケティングではありません。** コードはネットワークから出ません。`tcpdump`でゼロエグレスを証明できます。監査サーフェス全体は1つのOllamaプロセスと1つのログファイルです。',
@@ -1185,7 +1189,7 @@ jobs:
         id: 'recommended-stack',
         title: '推奨スタック',
         content:
-          '**2026年5月の本番環境推奨セットアップはOllama + Qwen3-Coder 30Bです。** これは柔軟性、オープンソース許可、推論速度、そしてチームサイズ別の経済学のバランスが最も良いです。',
+          '**2026年8月の本番環境推奨セットアップはOllama + Qwen3-Coder 30Bです。** これは柔軟性、オープンソース許可、推論速度、そしてチームサイズ別の経済学のバランスが最も良いです。',
         items: [
           '**Ollama：** サーバー推論フレームワーク。モデルローディング、量子化、バッチ処理を管理します。セットアップが簡単で、ドキュメント化が良く、GPUメモリ効率が適切です。https://github.com/ollama/ollama',
           '**Qwen3-Coder 30B：** Alibaba Qwen チームのコーディング専門モデル。Apache 2.0（許可付き）。文脈長256K。一般的なコード品質、エラー検出、およびセキュリティについては、DeepSeek Coder V3に比べて比肩します。HuggingFaceで入手可能。',
@@ -1288,7 +1292,7 @@ jobs:
           'GPU',
           'VRAM',
           '同時レビュー',
-          'おおよその価格（2026年5月）',
+          'おおよその価格（2026年8月）',
         ],
         rows: [
           {
@@ -1296,35 +1300,35 @@ jobs:
             'GPU': 'RTX 4070 / 4070 Ti',
             'VRAM': '12～16 GB',
             '同時レビュー': '1（Qwen3-Coder 7Bのみ）',
-            'おおよその価格（2026年5月）': '¥96,000～¥128,000',
+            'おおよその価格（2026年8月）': '¥96,000～¥128,000',
           },
           {
             'チームサイズ': '15～25人の開発者',
             'GPU': 'RTX 4090 / 5090',
             'VRAM': '24～32 GB',
             '同時レビュー': '1～3（Qwen3-Coder 30B）',
-            'おおよその価格（2026年5月）': '¥320,000～¥450,000',
+            'おおよその価格（2026年8月）': '¥320,000～¥450,000',
           },
           {
             'チームサイズ': '25～50人の開発者',
             'GPU': 'L40S / A6000 Ada',
             'VRAM': '48 GB',
             '同時レビュー': '3～6',
-            'おおよその価格（2026年5月）': '¥1,120,000～¥1,280,000',
+            'おおよその価格（2026年8月）': '¥1,120,000～¥1,280,000',
           },
           {
             'チームサイズ': '50～100人の開発者',
             'GPU': '2×RTX 4090 または 1×H100',
             'VRAM': '48 GB / 80 GB',
             '同時レビュー': '6～10',
-            'おおよその価格（2026年5月）': '¥640,000（2×4090） または ¥4,000,000+（H100）',
+            'おおよその価格（2026年8月）': '¥640,000（2×4090） または ¥4,000,000+（H100）',
           },
           {
             'チームサイズ': '100人以上の開発者',
             'GPU': 'マルチGPU H100 または H200',
             'VRAM': '160 GB以上',
             '同時レビュー': 'vLLMで10+',
-            'おおよその価格（2026年5月）': '¥8,000,000+',
+            'おおよその価格（2026年8月）': '¥8,000,000+',
           },
         ],
         callouts: [
@@ -1512,8 +1516,9 @@ jobs:
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-zh.webp',
     title: '本地LLM在CI/CD中的代码审查：自托管设置2026',
@@ -1532,15 +1537,15 @@ jobs:
     primaryTerm: '本地LLM代码审查 CI/CD',
     targetKeywords: ['本地LLM代码审查', '自托管代码审查LLM', 'GitHub Actions本地LLM', 'Ollama GitHub Actions', '私人代码审查AI', '无OpenAI的代码审查'],
     leadAnswerBlock: '**自托管本地LLM代码审查使用三部分：运行Ollama（或vLLM）的专用GPU服务器、将diff发送到服务器HTTP端点的自定义GitHub Action、返回结构化判决（批准/评论/阻止）的审查提示。单个RTX 4090（24 GB）运行Qwen3-Coder 30B舒适地为15-25开发者团队服务；48 GB卡（L40S或A6000 Ada）扩展到约50个开发者；超过100个需要H100级硬件。经济学在15-25个付费GitHub Advanced Security座位（$19/开发者/月）附近转向自托管——确切的转折点取决于硬件购买与现有容量。安全优势是实际的：源代码永不离开您的网络。审计表面是一个进程和一个日志文件。可以用数据包捕获证明零外泄。**',
-    quickAnswerTop: { zh: { question: '如何在CI/CD中将本地LLM作为代码审查工具运行？', answer: '建立运行Ollama（或vLLM、llama.cpp）的GPU服务器，使用编码调优模型——Qwen3-Coder 30B是2026年5月的默认选择。在同一网络上添加自托管GitHub Actions运行器，或通过私有网络向现有运行器公开服务器的HTTP端点。编写小的自定义action来获取PR diff，用审查提示POST到LLM端点，解析结构化响应（批准/评论/阻止），并将内联评论发回PR。模型永远不会离开您的边界。action的行为类似于任何其他检查。就硬件而言，单个RTX 4090和Qwen3-Coder 30B处理15-25个开发者；48 GB卡扩展到约50个；超过100个需要H100级或多GPU。', bullets: ['架构：运行Ollama的GPU服务器→可通过网络到达的自托管运行器（或来自云运行器的HTTP）→自定义GitHub Action→PR评论。', '默认堆栈：Ollama + Qwen3-Coder 30B（Apache 2.0）+ 自定义JavaScript或复合action。', '硬件：1×RTX 4090（24 GB）用于15-25开发者；1×L40S/A6000 Ada（48 GB）用于约50个；1×H100或多GPU用于100以上。', '经济学：相比$19/开发者/月的GitHub Advanced Security，转折点约为15-25个付费座位，取决于硬件成本。', '安全性：源代码永不离开网络。可以用数据包捕获证明零外泄。审计表面是1个进程和1个日志。', 'GitLab CI工作方式相同——用运行器代替action，但LLM调用相同。'], updatedDate: '2026-05-07' } },
+    quickAnswerTop: { zh: { question: '如何在CI/CD中将本地LLM作为代码审查工具运行？', answer: '建立运行Ollama（或vLLM、llama.cpp）的GPU服务器，使用编码调优模型——Qwen3-Coder 30B是2026年8月的默认选择。在同一网络上添加自托管GitHub Actions运行器，或通过私有网络向现有运行器公开服务器的HTTP端点。编写小的自定义action来获取PR diff，用审查提示POST到LLM端点，解析结构化响应（批准/评论/阻止），并将内联评论发回PR。模型永远不会离开您的边界。action的行为类似于任何其他检查。就硬件而言，单个RTX 4090和Qwen3-Coder 30B处理15-25个开发者；48 GB卡扩展到约50个；超过100个需要H100级或多GPU。', bullets: ['架构：运行Ollama的GPU服务器→可通过网络到达的自托管运行器（或来自云运行器的HTTP）→自定义GitHub Action→PR评论。', '默认堆栈：Ollama + Qwen3-Coder 30B（Apache 2.0）+ 自定义JavaScript或复合action。', '硬件：1×RTX 4090（24 GB）用于15-25开发者；1×L40S/A6000 Ada（48 GB）用于约50个；1×H100或多GPU用于100以上。', '经济学：相比$19/开发者/月的GitHub Advanced Security，转折点约为15-25个付费座位，取决于硬件成本。', '安全性：源代码永不离开网络。可以用数据包捕获证明零外泄。审计表面是1个进程和1个日志。', 'GitLab CI工作方式相同——用运行器代替action，但LLM调用相同。'], updatedDate: '2026-08-27' } },
     toc: [{ label: '关键要点', anchor: '#key-takeaways' }, { label: '重要事实', anchor: '#quick-facts' }, { label: '架构比较', anchor: '#architecture-comparison' }, { label: '推荐堆栈', anchor: '#recommended-stack' }, { label: 'GitHub Actions工作流', anchor: '#workflow' }, { label: '按团队规模的硬件规划', anchor: '#hardware-sizing' }, { label: '构建间的GPU共享', anchor: '#gpu-sharing' }, { label: '与GitHub Advanced Security的成本比较', anchor: '#cost-comparison' }, { label: '安全模型和审计态势', anchor: '#security-model' }, { label: '代码审查提示设计', anchor: '#prompt-design' }, { label: '处理假阳性', anchor: '#false-positives' }, { label: '第二个月的运营陷阱', anchor: '#operational-pitfalls' }, { label: '常见错误', anchor: '#common-mistakes' }, { label: '资源', anchor: '#sources' }, { label: '常见问题', anchor: '#faq' }, { label: '相关阅读', anchor: '#related-reading' }],
     sections: {
-      tldr: { id: 'key-takeaways', isTldr: true, items: ['**架构有三个部分：** 运行Ollama（或vLLM）的GPU服务器→网络可达的CI运行器→POST PR diff并解析结构化判决的自定义action。在GitHub Actions、GitLab CI、Buildkite和Jenkins上形状相同。', '**2026年5月默认堆栈：** Ollama + Qwen3-Coder 30B（Apache 2.0）+ 轻量级自定义GitHub Action。总基础设施：1个GPU盒子，1个运行器。', '**硬件规划：** RTX 4090（24 GB，约$2,000）处理15-25开发者；L40S或A6000 Ada（48 GB，约$7,000-8,000）扩展到50个；H100（80 GB，$25,000+）或多GPU用于100+。', '**经济学在约15-25个付费GitHub Advanced Security座位($19/开发者/月)处转向自托管——RTX 4090构建在该团队规模下5-10个月内收回。', '**安全优势是实际的，不仅仅是营销。** 代码永不离开网络。可用tcpdump证明零外泄。整个审计表面是一个Ollama进程和一个日志文件。', '**假阳性是运营税。** 计划第一个月的调整循环：提示迭代、严重程度阈值，以及审查人反馈获取路径使提示随时间改进。', '**延迟是可接受的。** 24 GB GPU运行Qwen3-Coder 30B在30秒内审查典型的200行PR diff。PR作者等待时间由其他CI工作支配，而非审查。', '**不要完全替换人类审查。** 本地LLM是首轮分流门——它捕捉明显问题、标记风险变更，并解放人类做LLM仍然做错的判断性调用。'] },
-      quickFacts: { id: 'quick-facts', title: '重要事实', items: ['**GPU内存需求：** Qwen3-Coder 30B在q4_K_M量子化下最多需要22GB VRAM。24GB（RTX 4090）很紧但可行。如果想要余量，至少使用32GB（RTX 5090）。', '**推论延迟：** 典型PR diff（50-500行）在24 GB卡上为10-30秒。H100级卡将其减少到5-10秒。将审查时间与CI工作的其他部分比较——测试套件和构建通常占主导。', '**并发性：** 单个RTX 4090可通过GPU调度（时间共享）处理约1-3个并发审查。多个并发PR审查增加等待时间，第一个月也增加假阳性。', '**网络架构：** 运行器必须通过专用VPC到达Ollama服务器，或通过Tailscale / WireGuard等私有隧道。不要暴露在互联网上。', '**模型选择：** Qwen3-Coder 30B是2026年5月的代码生成默认值。与DeepSeek Coder V3相当。7B更快但审查质量降低，开发者很快失去信心。', '**存储：** Ollama将模型权重存储在`~/.ollama/models`中。Qwen3-Coder 30B @ q4_K_M约14GB。对于多个模型，计划额外存储。', '**缓存重要性：** 没有基于文件hash + diff hash的缓存，重新审查未更改的文件浪费约80%的推论预算。小缓存层（Redis、SQLite或内存中）大幅减少推论负载。', '**可审计性：** Ollama记录请求体到日志。此日志包含PR diff，所以应用日志轮转（周为单位）和加密。可审计性是安全价值主张的大部分。'] },
+      tldr: { id: 'key-takeaways', isTldr: true, items: ['**架构有三个部分：** 运行Ollama（或vLLM）的GPU服务器→网络可达的CI运行器→POST PR diff并解析结构化判决的自定义action。在GitHub Actions、GitLab CI、Buildkite和Jenkins上形状相同。', '**2026年8月默认堆栈：** Ollama + Qwen3-Coder 30B（Apache 2.0）+ 轻量级自定义GitHub Action。总基础设施：1个GPU盒子，1个运行器。', '**硬件规划：** RTX 4090（24 GB，约$2,000）处理15-25开发者；L40S或A6000 Ada（48 GB，约$7,000-8,000）扩展到50个；H100（80 GB，$25,000+）或多GPU用于100+。', '**经济学在约15-25个付费GitHub Advanced Security座位($19/开发者/月)处转向自托管——RTX 4090构建在该团队规模下5-10个月内收回。', '**安全优势是实际的，不仅仅是营销。** 代码永不离开网络。可用tcpdump证明零外泄。整个审计表面是一个Ollama进程和一个日志文件。', '**假阳性是运营税。** 计划第一个月的调整循环：提示迭代、严重程度阈值，以及审查人反馈获取路径使提示随时间改进。', '**延迟是可接受的。** 24 GB GPU运行Qwen3-Coder 30B在30秒内审查典型的200行PR diff。PR作者等待时间由其他CI工作支配，而非审查。', '**不要完全替换人类审查。** 本地LLM是首轮分流门——它捕捉明显问题、标记风险变更，并解放人类做LLM仍然做错的判断性调用。'] },
+      quickFacts: { id: 'quick-facts', title: '重要事实', items: ['**GPU内存需求：** Qwen3-Coder 30B在q4_K_M量子化下最多需要22GB VRAM。24GB（RTX 4090）很紧但可行。如果想要余量，至少使用32GB（RTX 5090）。', '**推论延迟：** 典型PR diff（50-500行）在24 GB卡上为10-30秒。H100级卡将其减少到5-10秒。将审查时间与CI工作的其他部分比较——测试套件和构建通常占主导。', '**并发性：** 单个RTX 4090可通过GPU调度（时间共享）处理约1-3个并发审查。多个并发PR审查增加等待时间，第一个月也增加假阳性。', '**网络架构：** 运行器必须通过专用VPC到达Ollama服务器，或通过Tailscale / WireGuard等私有隧道。不要暴露在互联网上。', '**模型选择：** Qwen3-Coder 30B是2026年8月的代码生成默认值。与DeepSeek Coder V3相当。7B更快但审查质量降低，开发者很快失去信心。', '**存储：** Ollama将模型权重存储在`~/.ollama/models`中。Qwen3-Coder 30B @ q4_K_M约14GB。对于多个模型，计划额外存储。', '**缓存重要性：** 没有基于文件hash + diff hash的缓存，重新审查未更改的文件浪费约80%的推论预算。小缓存层（Redis、SQLite或内存中）大幅减少推论负载。', '**可审计性：** Ollama记录请求体到日志。此日志包含PR diff，所以应用日志轮转（周为单位）和加密。可审计性是安全价值主张的大部分。'] },
       architectureComparison: { id: 'architecture-comparison', title: '架构比较', content: '**有三种架构模式：自托管（Ollama/vLLM）、云API（OpenAI/Anthropic）或混合。每种都有权衡。**', columns: ['架构', '设置复杂度', '成本扩展', '数据隐私', '定制', '推荐用途'], rows: [{ '架构': '自托管（Ollama）', '设置复杂度': '中等', '成本扩展': '15-25开发者时为零', '数据隐私': '网络内代码', '定制': '完全控制', '推荐用途': '大团队，敏感代码，金融/医疗' }, { '架构': '云API（OpenAI）', '设置复杂度': '低', '成本扩展': '与开发者数量线性', '数据隐私': '复制到第三方系统', '定制': '仅提示', '推荐用途': '少于5人团队，公开项目，实验' }, { '架构': '混合', '设置复杂度': '高', '成本扩展': '基于自托管vs API', '数据隐私': '政策可选', '定制': '高', '推荐用途': '大团队，分阶段推出' }], items: ['**自托管（推荐）：** 初始设置（GPU购买、系统管理、安全设置）为中等复杂度。但成本固定，在15-25+开发者时变为主导。代码永不离开网络。完整的提示控制、模型选择和审计。大型团队（25+）的标准。', '**云API：** 通过OpenAI、Anthropic或其他API服务。设置简单——API密钥和自定义GitHub Action。成本按请求单位（令牌/美元）扩展。5人以下团队便宜。大型团队从$2,000/月+开始扩展非常快。代码对第三方系统可见。', '**混合：** 小团队（<25人）从云API开始，随着增长切换到自托管。但支付架构迭代复杂性——版本化提示、管理模型质量差异、计划故障转移。'], callouts: [{ type: 'note', text: '本文关注自托管（Ollama +本地模型）。云API是更好的选择——从设置和成本角度——对于少于5人的团队且代码敏感性低的情况。' }] },
-      recommendedStack: { id: 'recommended-stack', title: '推荐堆栈', content: '**2026年5月生产推荐设置是Ollama + Qwen3-Coder 30B。** 它在灵活性、开源许可、推论速度和按团队规模的经济学上取得最好平衡。', items: ['**Ollama：** 服务器推论框架。管理模型加载、量子化、批处理。设置简单、文档好、GPU内存效率好。https://github.com/ollama/ollama', '**Qwen3-Coder 30B：** Alibaba Qwen团队的编码专用模型。Apache 2.0（许可）。256K上下文长度。在一般代码质量、错误检测和安全性上与DeepSeek Coder V3相当。在HuggingFace上可得。', '**自定义GitHub Action（JavaScript）：** 获取PR diff，POST到Ollama HTTP端点，解析JSON响应，发布内联评论。100-200行。无用户依赖。', '**自托管GitHub Actions运行器或私有CI执行器：** 需要运行器或Ollama服务器可达性（同VPC、Tailscale或代理）。云运行器不起作用。', '**安全层（可选）：** Ollama前的反向代理（nginx、Envoy），具有mTLS认证或共享密钥。默认Ollama绑定到localhost。', '**日志管理：** Ollama记录请求体（包含PR diff）。应用syslog、文件轮转或systemd journalctl策略来轮转日志。'], callouts: [{ type: 'tip', text: '设置后，第一个月花时间在提示设计部分（见下文）。模型质量是固定的。假阳性率由提示决定。' }] },
+      recommendedStack: { id: 'recommended-stack', title: '推荐堆栈', content: '**2026年8月生产推荐设置是Ollama + Qwen3-Coder 30B。** 它在灵活性、开源许可、推论速度和按团队规模的经济学上取得最好平衡。', items: ['**Ollama：** 服务器推论框架。管理模型加载、量子化、批处理。设置简单、文档好、GPU内存效率好。https://github.com/ollama/ollama', '**Qwen3-Coder 30B：** Alibaba Qwen团队的编码专用模型。Apache 2.0（许可）。256K上下文长度。在一般代码质量、错误检测和安全性上与DeepSeek Coder V3相当。在HuggingFace上可得。', '**自定义GitHub Action（JavaScript）：** 获取PR diff，POST到Ollama HTTP端点，解析JSON响应，发布内联评论。100-200行。无用户依赖。', '**自托管GitHub Actions运行器或私有CI执行器：** 需要运行器或Ollama服务器可达性（同VPC、Tailscale或代理）。云运行器不起作用。', '**安全层（可选）：** Ollama前的反向代理（nginx、Envoy），具有mTLS认证或共享密钥。默认Ollama绑定到localhost。', '**日志管理：** Ollama记录请求体（包含PR diff）。应用syslog、文件轮转或systemd journalctl策略来轮转日志。'], callouts: [{ type: 'tip', text: '设置后，第一个月花时间在提示设计部分（见下文）。模型质量是固定的。假阳性率由提示决定。' }] },
       workflow: { id: 'workflow', title: 'GitHub Actions工作流', content: '**下面是生产可用的工作流。** 将文件放在`.github/workflows/local-llm-review.yml`，设置OLLAMA_HOST秘密，确保在自托管或VPC内的运行器上运行。', codeBlock: `name: Local LLM Code Review\n\non:\n  pull_request:\n    types: [opened, synchronize]\n\njobs:\n  review:\n    runs-on: [self-hosted, linux]\n    steps:\n      - uses: actions/checkout@v4\n        with:\n          fetch-depth: 0\n\n      - name: Get PR diff\n        id: diff\n        run: |\n          git diff origin/\${{ github.base_ref }}...HEAD > /tmp/pr.diff\n          wc -l /tmp/pr.diff\n\n      - name: Call local LLM review\n        id: review\n        env:\n          OLLAMA_HOST: \${{ secrets.OLLAMA_HOST }}   # ex. http://gpu-server.internal:11434\n        run: |\n          DIFF=$(jq -Rs . < /tmp/pr.diff)\n          curl -sS "$OLLAMA_HOST/api/chat" \\\\\n            -H 'Content-Type: application/json' \\\\\n            -d "{\n              \\"model\\": \\"qwen3-coder:30b\\",\n              \\"stream\\": false,\n              \\"format\\": \\"json\\",\n              \\"messages\\": [\n                {\\"role\\": \\"system\\", \\"content\\": \\"You are a senior code reviewer. Return JSON: {verdict: 'approve'|'comment'|'block', summary: string, comments: [{path, line, severity, message}]}\\"},\n                {\\"role\\": \\"user\\", \\"content\\": $DIFF}\n              ]\n            }" > /tmp/review.json\n          echo "verdict=$(jq -r '.message.content | fromjson | .verdict' < /tmp/review.json)" >> "$GITHUB_OUTPUT"\n\n      - name: Post review comment\n        uses: actions/github-script@v7\n        with:\n          script: |\n            const fs = require('fs');\n            const review = JSON.parse(JSON.parse(fs.readFileSync('/tmp/review.json')).message.content);\n            const body = \\\`### Local LLM Review: \\\\\`\${review.verdict}\\\\\`\\n\\n\${review.summary}\\\`;\n            await github.rest.issues.createComment({\n              owner: context.repo.owner,\n              repo: context.repo.repo,\n              issue_number: context.issue.number,\n              body\n            });\n\n      - name: Block on critical verdict\n        if: steps.review.outputs.verdict == 'block'\n        run: exit 1\n`, codeLanguage: 'yaml', items: ['运行器需要网络访问OLLAMA_HOST——自托管必须在同VPC内或通过Tailscale / WireGuard。', '系统提示强制结构化JSON响应。没有`format: "json"`和严格的schema，action花费30%的代码解析自由形式输出。', '`fetch-depth: 0`对于计算相对于基础分支的真实diff是必需的——浅检查生成畸形diff。', '对于超过约50K行代码更改的repo，在发送前截断或分割diff。256K上下文对Qwen3-Coder 30B很宽松，但实际工作上下文更接近64K-128K（见[2026年最佳本地编码模型](/zh/power-local-llm/best-local-coding-models-2026)）。', '对于提示深度工程——系统vs用户提示、示例、结构化结果——见[系统提示vs用户提示：有什么区别](/zh/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)。'], callouts: [{ type: 'note', text: '这个工作流故意最小。生产部署添加：基于文件hash + diff hash的缓存以跳过未更改文件的重新审查、严重程度阈值（仅在`severity >= "high"`时阻止）、内联评论发布（而非单个摘要评论）、按语言的提示变体、审查人反馈获取以随时间改进提示。' }] },
-      hardwareSizing: { id: 'hardware-sizing', title: '按团队规模的硬件规划', content: '**单个RTX 4090（24 GB）舒适处理15-25开发者。** 单GPU的瓶颈不是每次审查的吞吐量，而是PR追踪时段的竞争（周一早上、冲刺结束）。下面的规划规则假设Qwen3-Coder 30B使用q4_K_M量子化和典型的50-500行PR diff。', columns: ['团队规模', 'GPU', 'VRAM', '并发审查', '约略价格（2026年5月）'], rows: [{ '团队规模': '~5开发者', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12-16 GB', '并发审查': '1（仅Qwen3-Coder 7B）', '约略价格（2026年5月）': '约$600-800' }, { '团队规模': '15-25开发者', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24-32 GB', '并发审查': '1-3（Qwen3-Coder 30B）', '约略价格（2026年5月）': '约$2,000-2,500' }, { '团队规模': '25-50开发者', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', '并发审查': '3-6', '约略价格（2026年5月）': '约$7,000-8,000' }, { '团队规模': '50-100开发者', 'GPU': '2×RTX 4090或1×H100', 'VRAM': '48 GB / 80 GB', '并发审查': '6-10', '约略价格（2026年5月）': '约$5,000（2×4090）或$25,000+（H100）' }, { '团队规模': '100+开发者', 'GPU': '多GPU H100或H200', 'VRAM': '160 GB+', '并发审查': 'vLLM为10+', '约略价格（2026年5月）': '约$50,000+' }], callouts: [{ type: 'tip', text: '跨越50开发者阈值时，从Ollama切换到vLLM。Ollama优先易用性；vLLM优先共享GPU的吞吐量。相同的Qwen3-Coder 30B在两者上运行——仅推论服务器改变。' }] },
+      hardwareSizing: { id: 'hardware-sizing', title: '按团队规模的硬件规划', content: '**单个RTX 4090（24 GB）舒适处理15-25开发者。** 单GPU的瓶颈不是每次审查的吞吐量，而是PR追踪时段的竞争（周一早上、冲刺结束）。下面的规划规则假设Qwen3-Coder 30B使用q4_K_M量子化和典型的50-500行PR diff。', columns: ['团队规模', 'GPU', 'VRAM', '并发审查', '约略价格（2026年8月）'], rows: [{ '团队规模': '~5开发者', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12-16 GB', '并发审查': '1（仅Qwen3-Coder 7B）', '约略价格（2026年8月）': '约$600-800' }, { '团队规模': '15-25开发者', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24-32 GB', '并发审查': '1-3（Qwen3-Coder 30B）', '约略价格（2026年8月）': '约$2,000-2,500' }, { '团队规模': '25-50开发者', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', '并发审查': '3-6', '约略价格（2026年8月）': '约$7,000-8,000' }, { '团队规模': '50-100开发者', 'GPU': '2×RTX 4090或1×H100', 'VRAM': '48 GB / 80 GB', '并发审查': '6-10', '约略价格（2026年8月）': '约$5,000（2×4090）或$25,000+（H100）' }, { '团队规模': '100+开发者', 'GPU': '多GPU H100或H200', 'VRAM': '160 GB+', '并发审查': 'vLLM为10+', '约略价格（2026年8月）': '约$50,000+' }], callouts: [{ type: 'tip', text: '跨越50开发者阈值时，从Ollama切换到vLLM。Ollama优先易用性；vLLM优先共享GPU的吞吐量。相同的Qwen3-Coder 30B在两者上运行——仅推论服务器改变。' }] },
       gpuSharing: { id: 'gpu-sharing', title: '构建间的GPU共享及其他负载', content: '**代码审查专用GPU是最简单的架构但不是唯一的。** 已为ML推论或训练运行GPU基础设施的团队可以共享——代价是审查延迟大幅增加。', items: ['**仅代码审查专用GPU：** 最简单的模型。延迟可预测。容量计划简单。故障模式隔离。对未运行GPU基础设施团队的推荐。', '**与ML推论共享GPU：** 可行如果推论负载有稳定的封装（例如，小集成服务适应4-6GB）。审查模型占用剩余VRAM。此模式下计划竞争少见。', '**与ML训练共享GPU：** 强烈不推荐。训练作业将VRAM使用激增到限制，使审查模型饥饿，导致30-120秒审查延迟侵蚀开发者对系统的信心。', '**vLLM与分页注意力：** 为高并发LLM服务而生。同个RTX 4090在Ollama下处理1-3并发审查，在vLLM下处理4-8个，代价是更复杂的配置。25+开发者时值得。', '**H100上多租户：** 在100+开发者规模，将H100分割为MIG片或使用租户配额运行vLLM。这是平台工程领地；不要即兴。'] },
       costComparison: { id: 'cost-comparison', title: '与GitHub Advanced Security的成本比较', content: '**经济学在约15-25个付费座位处转向自托管。** 这是一年的回收比较；更长的视角使自托管更有利。', items: ['**GitHub Advanced Security（代码安全）：** 价目表价格$19/开发者/月（检查GitHub定价页面；企业客户可得体积折扣）。', '**云LLM API（例OpenAI、Anthropic）：** 典型PR体积下约$50-200/月/活跃开发者。极大地因代码库大小和审查提示设计而异。', '**自托管本地LLM、RTX 4090构建：** 约$2,000硬件一次（GPU +基础服务器盒）。电力消耗：~50W空闲、~350W负载——在典型使用中约$25-35/月操作功耗。无按座位成本。', '**10开发者处平价：** GHAS $190/月 vs 自托管约$25-35/月操作+约$2,000 capex。Capex在约14个月内回收。', '**25开发者处平价：** GHAS $475/月 vs 自托管约$25-35/月操作+约$2,000 capex。Capex在约5-6个月内回收。', '**50开发者处平价：** GHAS $950/月 vs 自托管约$35-45/月操作+约$7,500 capex（48 GB GPU）。Capex在约8个月内回收。', '**Capex数字主导数学。** 如果具体为此购买GPU，回收是真实的。如果有现有GPU容量，边际成本接近零，自托管立即获胜。'], callouts: [{ type: 'note', text: '这些数字是价目表价格比较。大企业谈判的GHAS费率改变平价；现有GPU容量摧毁它。在提交硬件购买前用你的实际成本重做数学。' }] },
       securityModel: { id: 'security-model', title: '安全模型和审计态势', content: '**安全声称标题——"源代码永不离开你的网络"——是真实的、可证明的，也是这个架构最强的论点。** 审计表面小到可在采购审查中防守。', items: ['**模型仅看到你的action发送的diff。** 无遥测、无隐藏网络调用。可用`tcpdump`或GPU服务器发送接口上的`nft monitor`验证——在稳定操作中，你应该看到零个向非内部主机的发送数据包。', '**完整审计表面是一个进程和一个日志文件。** `ollama serve`就是整个LLM栈。它的日志（请求体、延迟、模型加载事件）是审计记录。无SaaS仪表板要查询、无第三方保留政策要读。', '**网络隔离简单。** 将`ollama serve`绑定到私有接口。把认证反向代理（mTLS或shared-secret）放在它前面。拒绝GPU服务器namespace的发送，除了你的CI运行网络子网。标准零信任模式，无LLM特定魔法。', '**模型权重是供应商签署的静态工件。** 通过Ollama拉一次、pin digest、模型不能在无操作者行动下改变。这是比可静默交换上游模型的SaaS API更强的供应链故事。', '**合规态势：** 零数据外泄对SOC 2、ISO 27001、GDPR和EU AI法限制风险分类简单可记录。自托管合规最困难的部分通常是记录推论服务器本身。Ollama和vLLM都有好文档。', '**信息安全和全球数据主权：** 对于在全球运营但在亚太地区存储数据的组织，自托管本地LLM满足区域数据驻留要求。代码评审从不离开你的服务器，符合许多亚太地区的监管框架。', '**模型看到你的代码。** 自托管不意味着对模型私密——意味着对第三方私密。内部威胁情景（有服务器访问权的工程师读含有历史PR diff的日志）仍在范围内。轮转日志并相应限制访问。'] },
@@ -1556,8 +1561,9 @@ jobs:
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-es.webp',
     title: 'LLM Local en CI/CD: Revisión de Código Automatizada Sin Cloud',
@@ -1599,7 +1605,7 @@ jobs:
       es: {
         question: '¿Cómo ejecuto un LLM local como revisor de código en CI/CD?',
         answer:
-          'Levanta un servidor GPU con Ollama (o vLLM, llama.cpp) con un modelo ajustado para codificación — Qwen3-Coder 30B es el estándar de mayo de 2026. Agrega un runner de GitHub Actions autoalojado en la misma red, o expone el endpoint HTTP del servidor a tus runners existentes a través de una red privada. Escribe una pequeña action personalizada que obtiene el diff de la PR, lo envía con un prompt de revisión al endpoint del LLM, analiza la respuesta estructurada (aprobar / comentar / bloquear) y publica comentarios en línea de vuelta en la PR. El modelo nunca sale de tu perímetro; la action se comporta como cualquier otra verificación. En cuanto al hardware, una RTX 4090 con Qwen3-Coder 30B maneja 15–25 desarrolladores; una tarjeta de 48 GB escala a 50; más de 100 necesitas hardware de clase H100 o múltiples GPUs.',
+          'Levanta un servidor GPU con Ollama (o vLLM, llama.cpp) con un modelo ajustado para codificación — Qwen3-Coder 30B es el estándar de agosto de 2026. Agrega un runner de GitHub Actions autoalojado en la misma red, o expone el endpoint HTTP del servidor a tus runners existentes a través de una red privada. Escribe una pequeña action personalizada que obtiene el diff de la PR, lo envía con un prompt de revisión al endpoint del LLM, analiza la respuesta estructurada (aprobar / comentar / bloquear) y publica comentarios en línea de vuelta en la PR. El modelo nunca sale de tu perímetro; la action se comporta como cualquier otra verificación. En cuanto al hardware, una RTX 4090 con Qwen3-Coder 30B maneja 15–25 desarrolladores; una tarjeta de 48 GB escala a 50; más de 100 necesitas hardware de clase H100 o múltiples GPUs.',
         bullets: [
           'Arquitectura: servidor GPU con Ollama → runner autoalojado (o HTTP desde runners en la nube) → GitHub Action personalizada → comentarios en la PR.',
           'Stack por defecto: Ollama + Qwen3-Coder 30B (Apache 2.0) + action personalizada en JavaScript o composite.',
@@ -1608,7 +1614,7 @@ jobs:
           'Seguridad: el código fuente nunca sale de tu red; el egreso puede probarse con una captura de paquetes; la superficie de auditoría es un proceso y un log.',
           'GitLab CI funciona igual — runner en lugar de action, pero la llamada al LLM es idéntica.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1635,7 +1641,7 @@ jobs:
         isTldr: true,
         items: [
           '**La arquitectura son tres piezas:** servidor GPU con Ollama (o vLLM) → runner de CI que puede alcanzarlo por red → action personalizada que envía el diff de la PR y analiza un veredicto estructurado. Misma forma en GitHub Actions, GitLab CI, Buildkite y Jenkins.',
-          '**Stack por defecto en mayo de 2026:** Ollama + Qwen3-Coder 30B (Apache 2.0) + una GitHub Action personalizada liviana. Infraestructura total: una caja GPU, un runner.',
+          '**Stack por defecto en agosto de 2026:** Ollama + Qwen3-Coder 30B (Apache 2.0) + una GitHub Action personalizada liviana. Infraestructura total: una caja GPU, un runner.',
           '**Dimensionamiento de hardware:** RTX 4090 (24 GB, ~$2.000) maneja 15–25 desarrolladores; L40S o A6000 Ada (48 GB, ~$7.000–8.000) escala a 50; H100 (80 GB, $25.000+) o multi-GPU para 100+.',
           '**La economía se inclina a favor del autoalojamiento** en aproximadamente 15–25 asientos pagados de GitHub Advanced Security ($19/dev/mes) — una build con RTX 4090 se amortiza en 5–10 meses con ese tamaño de equipo.',
           '**La ventaja de seguridad es real, no solo marketing.** El código fuente nunca sale de tu red; el egreso saliente puede demostrarse cero con `tcpdump`; toda la superficie de auditoría es un proceso de Ollama y un archivo de log.',
@@ -1662,7 +1668,7 @@ jobs:
         id: 'architecture-comparison',
         title: 'Comparación de Arquitecturas: Tres Opciones Reales para Revisión de Código en CI',
         content:
-          '**Tres arquitecturas cubren efectivamente todas las configuraciones de revisión de PR en mayo de 2026.** El LLM local autoalojado es una de ellas — la elección correcta cuando el código fuente no puede salir de tu red o cuando la economía de asientos favorece la infraestructura fija.',
+          '**Tres arquitecturas cubren efectivamente todas las configuraciones de revisión de PR en agosto de 2026.** El LLM local autoalojado es una de ellas — la elección correcta cuando el código fuente no puede salir de tu red o cuando la economía de asientos favorece la infraestructura fija.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1716,7 +1722,7 @@ jobs:
           '**El stack de nivel productivo más simple son tres componentes.** Cada uno es open source, gratuito y bien documentado; la superficie de integración entre ellos es HTTP.',
         items: [
           '**Servidor GPU** con **Ollama** (o vLLM para mayor concurrencia). Ollama expone una API HTTP compatible con OpenAI en `localhost:11434` por defecto; vincúlala a una interfaz privada o un proxy inverso con autenticación antes de exponerla a los runners.',
-          '**Modelo ajustado para codificación:** **Qwen3-Coder 30B** en Q4_K_M es el estándar de mayo de 2026 — la dirección open-weight más potente para codificación, contexto de 256K, licencia Apache 2.0, cabe en una GPU de 24 GB. Para GPUs de 8–16 GB, usa Qwen3-Coder 7B teniendo en cuenta que la calidad de revisión cae notablemente.',
+          '**Modelo ajustado para codificación:** **Qwen3-Coder 30B** en Q4_K_M es el estándar de agosto de 2026 — la dirección open-weight más potente para codificación, contexto de 256K, licencia Apache 2.0, cabe en una GPU de 24 GB. Para GPUs de 8–16 GB, usa Qwen3-Coder 7B teniendo en cuenta que la calidad de revisión cae notablemente.',
           '**Integración CI:** un runner de GitHub Actions autoalojado en la misma red que el servidor GPU, o tus runners hospedados por GitHub existentes alcanzando el servidor GPU por una red privada (Tailscale, WireGuard o peering de VPC).',
           '**GitHub Action personalizada** (JavaScript o composite) que obtiene el diff de la PR por la API de GitHub, lo envía al endpoint de Ollama con un prompt de revisión, analiza la respuesta estructurada y publica comentarios en línea de vuelta en la PR.',
           '**Opcional:** un pequeño caché de Redis o SQLite con clave en hash de archivo + hash de diff para evitar re-revisiones de archivos sin cambios en ejecuciones de CI posteriores.',
@@ -2008,7 +2014,7 @@ jobs:
       url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-code-review-ci-cd',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -2018,8 +2024,9 @@ jobs:
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-pt.webp',
     title: 'LLM Local no seu CI/CD: Revisão de Código Automatizada Sem Cloud',
@@ -2061,7 +2068,7 @@ jobs:
       pt: {
         question: 'Como executo um LLM local como revisor de código no CI/CD?',
         answer:
-          'Levante um servidor GPU rodando o Ollama (ou vLLM, llama.cpp) com um modelo ajustado para codificação — o Qwen3-Coder 30B é o padrão de maio de 2026. Adicione um runner do GitHub Actions autohospedado na mesma rede, ou exponha o endpoint HTTP do servidor aos seus runners existentes por uma rede privada. Escreva uma pequena action personalizada que obtém o diff da PR, envia-o via POST com um prompt de revisão ao endpoint do LLM, analisa a resposta estruturada (aprovar / comentar / bloquear) e publica comentários em linha de volta na PR. O modelo nunca sai do seu perímetro; a action se comporta como qualquer outra verificação. Em termos de hardware, uma RTX 4090 com o Qwen3-Coder 30B lida com 15–25 desenvolvedores; uma placa de 48 GB estende para 50; acima de 100 você precisa de hardware de classe H100 ou de várias GPUs.',
+          'Levante um servidor GPU rodando o Ollama (ou vLLM, llama.cpp) com um modelo ajustado para codificação — o Qwen3-Coder 30B é o padrão de agosto de 2026. Adicione um runner do GitHub Actions autohospedado na mesma rede, ou exponha o endpoint HTTP do servidor aos seus runners existentes por uma rede privada. Escreva uma pequena action personalizada que obtém o diff da PR, envia-o via POST com um prompt de revisão ao endpoint do LLM, analisa a resposta estruturada (aprovar / comentar / bloquear) e publica comentários em linha de volta na PR. O modelo nunca sai do seu perímetro; a action se comporta como qualquer outra verificação. Em termos de hardware, uma RTX 4090 com o Qwen3-Coder 30B lida com 15–25 desenvolvedores; uma placa de 48 GB estende para 50; acima de 100 você precisa de hardware de classe H100 ou de várias GPUs.',
         bullets: [
           'Arquitetura: servidor GPU rodando o Ollama → runner autohospedado (ou HTTP a partir de runners na nuvem) → GitHub Action personalizada → comentários na PR.',
           'Stack padrão: Ollama + Qwen3-Coder 30B (Apache 2.0) + action personalizada em JavaScript ou composite.',
@@ -2070,7 +2077,7 @@ jobs:
           'Segurança: o código-fonte nunca sai da sua rede; o egresso pode ser provado com uma captura de pacotes; a superfície de auditoria é um processo e um log.',
           'O GitLab CI funciona da mesma forma — runner em vez de action, mas a chamada ao LLM é idêntica.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2097,7 +2104,7 @@ jobs:
         isTldr: true,
         items: [
           '**A arquitetura são três peças:** servidor GPU rodando o Ollama (ou vLLM) → runner de CI que consegue alcançá-lo pela rede → action personalizada que envia o diff da PR via POST e analisa um veredito estruturado. Mesma forma no GitHub Actions, GitLab CI, Buildkite e Jenkins.',
-          '**Stack padrão em maio de 2026:** Ollama + Qwen3-Coder 30B (Apache 2.0) + uma GitHub Action personalizada enxuta. Infraestrutura total: uma caixa GPU, um runner.',
+          '**Stack padrão em agosto de 2026:** Ollama + Qwen3-Coder 30B (Apache 2.0) + uma GitHub Action personalizada enxuta. Infraestrutura total: uma caixa GPU, um runner.',
           '**Dimensionamento de hardware:** RTX 4090 (24 GB, ~$2,000) lida com 15–25 desenvolvedores; L40S ou A6000 Ada (48 GB, ~$7–8,000) estende para 50; H100 (80 GB, $25,000+) ou multi-GPU para 100+.',
           '**A economia pende para o território da autohospedagem** em cerca de 15–25 assentos pagos do GitHub Advanced Security ($19/dev/mês) — um build com RTX 4090 se paga em 5–10 meses com esse tamanho de equipe.',
           '**A vantagem de segurança é real, não apenas marketing.** O código-fonte nunca sai da sua rede; o egresso de saída pode ser provado como zero com `tcpdump`; toda a superfície de auditoria é um processo do Ollama e um arquivo de log.',
@@ -2124,7 +2131,7 @@ jobs:
         id: 'architecture-comparison',
         title: 'Comparação de Arquiteturas: Três Opções Reais para Revisão de Código no CI',
         content:
-          '**Três arquiteturas cobrem efetivamente todas as configurações de revisão de PR em maio de 2026.** O LLM local autohospedado é uma delas — a escolha certa quando o código-fonte não pode sair da sua rede ou quando a economia de assentos favorece a infraestrutura fixa.',
+          '**Três arquiteturas cobrem efetivamente todas as configurações de revisão de PR em agosto de 2026.** O LLM local autohospedado é uma delas — a escolha certa quando o código-fonte não pode sair da sua rede ou quando a economia de assentos favorece a infraestrutura fixa.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2178,7 +2185,7 @@ jobs:
           '**O stack de nível produtivo mais simples são três componentes.** Cada um é de código aberto, gratuito e bem documentado; a superfície de integração entre eles é HTTP.',
         items: [
           '**Servidor GPU** com **Ollama** (ou vLLM para maior concorrência). O Ollama expõe uma API HTTP compatível com OpenAI em `localhost:11434` por padrão; vincule-a a uma interface privada ou a um proxy reverso com autenticação antes de expô-la aos runners.',
-          '**Modelo ajustado para codificação:** **Qwen3-Coder 30B** em Q4_K_M é o padrão de maio de 2026 — a direção open-weight mais potente para codificação, contexto de 256K, licença Apache 2.0, cabe em uma GPU de 24 GB. Para GPUs de 8–16 GB, use o Qwen3-Coder 7B tendo em conta que a qualidade de revisão cai notavelmente.',
+          '**Modelo ajustado para codificação:** **Qwen3-Coder 30B** em Q4_K_M é o padrão de agosto de 2026 — a direção open-weight mais potente para codificação, contexto de 256K, licença Apache 2.0, cabe em uma GPU de 24 GB. Para GPUs de 8–16 GB, use o Qwen3-Coder 7B tendo em conta que a qualidade de revisão cai notavelmente.',
           '**Integração de CI:** um runner do GitHub Actions autohospedado na mesma rede que o servidor GPU, ou seus runners hospedados pelo GitHub existentes alcançando o servidor GPU por uma rede privada (Tailscale, WireGuard ou peering de VPC).',
           '**GitHub Action personalizada** (JavaScript ou composite) que obtém o diff da PR pela API do GitHub, envia-o ao endpoint do Ollama com um prompt de revisão, analisa a resposta estruturada e publica comentários em linha de volta na PR.',
           '**Opcional:** um pequeno cache de Redis ou SQLite com chave em hash de arquivo + hash de diff para evitar revisar novamente arquivos sem alterações em execuções de CI subsequentes.',
@@ -2470,7 +2477,7 @@ jobs:
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-code-review-ci-cd',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -2479,8 +2486,9 @@ jobs:
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-ar.webp',
     title: 'نموذج لغوي محلي في ⁨CI/CD⁩: مراجعة الكود المؤتمتة بدون سحابة',
@@ -2522,7 +2530,7 @@ jobs:
       ar: {
         question: 'كيف أُشغّل نموذج LLM محلياً بوصفه مراجعاً للكود في CI/CD؟',
         answer:
-          'أنشئ خادم GPU يُشغّل Ollama (أو vLLM أو llama.cpp) مع نموذج مُضبَّط على البرمجة — Qwen3-Coder 30B هو الخيار الافتراضي في مايو 2026. أضف عدّاءً مستضافاً ذاتياً على GitHub Actions في الشبكة ذاتها، أو اكشف نقطة نهاية HTTP للخادم لعدّائيك الحاليين عبر شبكة خاصة. اكتب إجراءً مخصصاً صغيراً يجلب فرق PR ويُرسله مع موجّه مراجعة إلى نقطة نهاية LLM، ويُحلّل الاستجابة المنظمة (موافقة / تعليق / حظر) وينشر تعليقات مضمّنة على PR. لا يغادر النموذج محيطك أبداً؛ ويتصرف الإجراء كأي فحص آخر. على صعيد الأجهزة، تُعالج بطاقة RTX 4090 واحدة مع Qwen3-Coder 30B ما بين 15 و25 مطوراً؛ وتمتد بطاقة 48 جيجابايت لتشمل 50؛ وفوق 100 تحتاج إلى أجهزة من فئة H100 أو عدة بطاقات GPU.',
+          'أنشئ خادم GPU يُشغّل Ollama (أو vLLM أو llama.cpp) مع نموذج مُضبَّط على البرمجة — Qwen3-Coder 30B هو الخيار الافتراضي في أغسطس 2026. أضف عدّاءً مستضافاً ذاتياً على GitHub Actions في الشبكة ذاتها، أو اكشف نقطة نهاية HTTP للخادم لعدّائيك الحاليين عبر شبكة خاصة. اكتب إجراءً مخصصاً صغيراً يجلب فرق PR ويُرسله مع موجّه مراجعة إلى نقطة نهاية LLM، ويُحلّل الاستجابة المنظمة (موافقة / تعليق / حظر) وينشر تعليقات مضمّنة على PR. لا يغادر النموذج محيطك أبداً؛ ويتصرف الإجراء كأي فحص آخر. على صعيد الأجهزة، تُعالج بطاقة RTX 4090 واحدة مع Qwen3-Coder 30B ما بين 15 و25 مطوراً؛ وتمتد بطاقة 48 جيجابايت لتشمل 50؛ وفوق 100 تحتاج إلى أجهزة من فئة H100 أو عدة بطاقات GPU.',
         bullets: [
           'البنية: خادم GPU يُشغّل Ollama ← عدّاء مستضاف ذاتياً (أو HTTP من عدّائي السحابة) ← إجراء GitHub Action مخصص ← تعليقات على PR.',
           'المكدّس الافتراضي: Ollama + Qwen3-Coder 30B (Apache 2.0) + إجراء JavaScript أو composite مخصص.',
@@ -2531,7 +2539,7 @@ jobs:
           'الأمان: لا يغادر الكود المصدري شبكتك؛ يمكن إثبات عدم وجود حركة بيانات صادرة بتسجيل الحزم؛ مساحة التدقيق هي عملية واحدة وسجل واحد.',
           'يعمل GitLab CI بالطريقة ذاتها — عدّاء بدلاً من إجراء، لكن استدعاء LLM متطابق.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2558,7 +2566,7 @@ jobs:
         isTldr: true,
         items: [
           '**البنية ثلاثة مكونات:** خادم GPU يُشغّل Ollama (أو vLLM) ← عدّاء CI يمكنه الوصول إليه عبر الشبكة ← إجراء مخصص يُرسل فرق PR ويُحلّل حكماً منظماً. الشكل ذاته في GitHub Actions وGitLab CI وBuildkite وJenkins.',
-          '**المكدّس الافتراضي في مايو 2026:** Ollama + Qwen3-Coder 30B (Apache 2.0) + إجراء GitHub Action مخصص خفيف. إجمالي البنية التحتية: جهاز GPU واحد، وعدّاء واحد.',
+          '**المكدّس الافتراضي في أغسطس 2026:** Ollama + Qwen3-Coder 30B (Apache 2.0) + إجراء GitHub Action مخصص خفيف. إجمالي البنية التحتية: جهاز GPU واحد، وعدّاء واحد.',
           '**تحجيم الأجهزة:** RTX 4090 (24 جيجابايت، ~2000 دولار) يُعالج 15–25 مطوراً؛ L40S أو A6000 Ada (48 جيجابايت، ~7000–8000 دولار) تمتد لـ 50؛ H100 (80 جيجابايت، أكثر من 25000 دولار) أو multi-GPU لـ 100+.',
           '**تنقلب الاقتصاديات لصالح الاستضافة الذاتية** عند نحو 15–25 مقعداً مدفوعاً من GitHub Advanced Security (19 دولاراً للمطور شهرياً) — تُسدَّد تكلفة بناء RTX 4090 في 5–10 أشهر بهذا الحجم من الفريق.',
           '**الميزة الأمنية حقيقية، وليست تسويقاً فحسب.** لا يغادر الكود المصدري شبكتك؛ يمكن إثبات الحركة الصادرة بصفر باستخدام tcpdump؛ ومساحة التدقيق بأكملها هي عملية Ollama واحدة وملف سجل واحد.',
@@ -2585,7 +2593,7 @@ jobs:
         id: 'architecture-comparison',
         title: 'مقارنة البنى: ثلاثة خيارات حقيقية لمراجعة الكود في CI',
         content:
-          '**تُغطي ثلاث بنى عملياً جميع إعدادات مراجعة PR في مايو 2026.** نموذج LLM المحلي المستضاف ذاتياً هو أحدها — الخيار الصحيح حين لا يمكن للكود المصدري مغادرة شبكتك أو حين تُفضّل اقتصاديات المقاعد البنية التحتية الثابتة.',
+          '**تُغطي ثلاث بنى عملياً جميع إعدادات مراجعة PR في أغسطس 2026.** نموذج LLM المحلي المستضاف ذاتياً هو أحدها — الخيار الصحيح حين لا يمكن للكود المصدري مغادرة شبكتك أو حين تُفضّل اقتصاديات المقاعد البنية التحتية الثابتة.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2639,7 +2647,7 @@ jobs:
           '**أبسط مكدّس بمستوى الإنتاج هو ثلاثة مكونات.** كل منها مفتوح المصدر ومجاني وموثّق جيداً؛ وسطح التكامل بينها هو HTTP.',
         items: [
           '**خادم GPU** مع **Ollama** (أو vLLM لتزامن أعلى). يكشف Ollama واجهة API HTTP متوافقة مع OpenAI على `localhost:11434` افتراضياً؛ اربطها بواجهة خاصة أو وكيل عكسي مع مصادقة قبل كشفها للعدّائين.',
-          '**نموذج مُضبَّط على البرمجة:** **Qwen3-Coder 30B** بتكميم Q4_K_M هو المعيار لمايو 2026 — أقوى نموذج مفتوح الأوزان للبرمجة، سياق 256K، ترخيص Apache 2.0، يناسب بطاقة GPU بسعة 24 جيجابايت. للبطاقات بسعة 8–16 جيجابايت، استخدم Qwen3-Coder 7B مع الأخذ بعين الاعتبار أن جودة المراجعة تنخفض بشكل ملحوظ.',
+          '**نموذج مُضبَّط على البرمجة:** **Qwen3-Coder 30B** بتكميم Q4_K_M هو المعيار لأغسطس 2026 — أقوى نموذج مفتوح الأوزان للبرمجة، سياق 256K، ترخيص Apache 2.0، يناسب بطاقة GPU بسعة 24 جيجابايت. للبطاقات بسعة 8–16 جيجابايت، استخدم Qwen3-Coder 7B مع الأخذ بعين الاعتبار أن جودة المراجعة تنخفض بشكل ملحوظ.',
           '**تكامل CI:** عدّاء GitHub Actions مستضاف ذاتياً في الشبكة ذاتها مع خادم GPU، أو عدّائوك الحاليون المستضافون على GitHub وصولاً إلى خادم GPU عبر شبكة خاصة (Tailscale أو WireGuard أو VPC peering).',
           '**إجراء GitHub Action مخصص** (JavaScript أو composite) يجلب فرق PR عبر واجهة GitHub API، ويُرسله إلى نقطة نهاية Ollama مع موجّه مراجعة، ويُحلّل الاستجابة المنظمة وينشر تعليقات مضمّنة على PR.',
           '**اختياري:** ذاكرة تخزين مؤقت صغيرة Redis أو SQLite بمفتاح هاش الملف + هاش الفرق لتجنب إعادة مراجعة الملفات غير المتغيرة في تشغيلات CI اللاحقة.',
@@ -2735,13 +2743,13 @@ jobs:
         title: 'تحجيم الأجهزة حسب حجم الفريق',
         content:
           '**تُعالج بطاقة RTX 4090 (24 جيجابايت) فريقاً من 15 إلى 25 مطوراً بارتياح.** عنق الزجاجة في بطاقة GPU واحدة ليس الأداء لكل مراجعة — بل التزامن في أوقات ذروة PR (صباح الاثنين ونهاية السباقات). تفترض قواعد التحجيم التالية Qwen3-Coder 30B بتكميم Q4_K_M وفرق PR نموذجي من 50 إلى 500 سطر.',
-        columns: ['حجم الفريق', 'بطاقة GPU', 'VRAM', 'المراجعات المتزامنة', 'السعر التقريبي (مايو 2026)'],
+        columns: ['حجم الفريق', 'بطاقة GPU', 'VRAM', 'المراجعات المتزامنة', 'السعر التقريبي (أغسطس 2026)'],
         rows: [
-          { 'حجم الفريق': '~5 مطورين', 'بطاقة GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12–16 جيجابايت', 'المراجعات المتزامنة': '1 (Qwen3-Coder 7B فقط)', 'السعر التقريبي (مايو 2026)': '600–900 دولار' },
-          { 'حجم الفريق': '15–25 مطوراً', 'بطاقة GPU': 'RTX 4090 / 5090', 'VRAM': '24–32 جيجابايت', 'المراجعات المتزامنة': '1–3 (Qwen3-Coder 30B)', 'السعر التقريبي (مايو 2026)': '2000–2500 دولار' },
-          { 'حجم الفريق': '25–50 مطوراً', 'بطاقة GPU': 'L40S / A6000 Ada', 'VRAM': '48 جيجابايت', 'المراجعات المتزامنة': '3–6', 'السعر التقريبي (مايو 2026)': '7000–8500 دولار' },
-          { 'حجم الفريق': '50–100 مطور', 'بطاقة GPU': '2× RTX 4090 أو H100 واحد', 'VRAM': '48 جيجابايت / 80 جيجابايت', 'المراجعات المتزامنة': '6–10', 'السعر التقريبي (مايو 2026)': '5000 دولار (2× 4090) أو أكثر من 25000 دولار (H100)' },
-          { 'حجم الفريق': 'أكثر من 100 مطور', 'بطاقة GPU': 'Multi-GPU H100 أو H200', 'VRAM': '160+ جيجابايت', 'المراجعات المتزامنة': '10+ مع vLLM', 'السعر التقريبي (مايو 2026)': 'أكثر من 50000 دولار' },
+          { 'حجم الفريق': '~5 مطورين', 'بطاقة GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12–16 جيجابايت', 'المراجعات المتزامنة': '1 (Qwen3-Coder 7B فقط)', 'السعر التقريبي (أغسطس 2026)': '600–900 دولار' },
+          { 'حجم الفريق': '15–25 مطوراً', 'بطاقة GPU': 'RTX 4090 / 5090', 'VRAM': '24–32 جيجابايت', 'المراجعات المتزامنة': '1–3 (Qwen3-Coder 30B)', 'السعر التقريبي (أغسطس 2026)': '2000–2500 دولار' },
+          { 'حجم الفريق': '25–50 مطوراً', 'بطاقة GPU': 'L40S / A6000 Ada', 'VRAM': '48 جيجابايت', 'المراجعات المتزامنة': '3–6', 'السعر التقريبي (أغسطس 2026)': '7000–8500 دولار' },
+          { 'حجم الفريق': '50–100 مطور', 'بطاقة GPU': '2× RTX 4090 أو H100 واحد', 'VRAM': '48 جيجابايت / 80 جيجابايت', 'المراجعات المتزامنة': '6–10', 'السعر التقريبي (أغسطس 2026)': '5000 دولار (2× 4090) أو أكثر من 25000 دولار (H100)' },
+          { 'حجم الفريق': 'أكثر من 100 مطور', 'بطاقة GPU': 'Multi-GPU H100 أو H200', 'VRAM': '160+ جيجابايت', 'المراجعات المتزامنة': '10+ مع vLLM', 'السعر التقريبي (أغسطس 2026)': 'أكثر من 50000 دولار' },
         ],
         callouts: [
           {
@@ -2931,7 +2939,7 @@ jobs:
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-llm-code-review-ci-cd',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -2940,8 +2948,9 @@ jobs:
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/local-llm-code-review-ci-cd-overview-hero-ko.webp',
     title: 'CI/CD에서 로컬 LLM 활용: 클라우드 없는 자동 코드 리뷰',
@@ -2983,7 +2992,7 @@ jobs:
       ko: {
         question: 'CI/CD에서 로컬 LLM을 코드 리뷰어로 어떻게 실행합니까?',
         answer:
-          '코딩에 맞춰진 모델을 탑재한 Ollama(또는 vLLM, llama.cpp)가 실행되는 GPU 서버를 준비하십시오 — 2026년 5월 기준 Qwen3-Coder 30B가 표준입니다. 동일한 네트워크에 자체 호스팅 GitHub Actions 러너를 추가하거나, 사설 네트워크(Tailscale, WireGuard 또는 VPC 피어링)를 통해 기존 러너에서 GPU 서버의 HTTP 엔드포인트에 접근할 수 있도록 설정하십시오. PR의 diff를 가져와 리뷰 프롬프트와 함께 LLM 엔드포인트에 전송하고, 구조화된 응답(승인 / 댓글 / 차단)을 파싱하여 PR에 인라인 댓글을 다시 게시하는 작은 맞춤형 action을 작성하십시오. 모델은 절대 외부로 나가지 않으며, action은 다른 검사와 동일하게 동작합니다. 하드웨어 측면에서, Qwen3-Coder 30B를 탑재한 RTX 4090은 15~25명의 개발자를 처리하고, 48 GB 카드는 50명까지 확장되며, 100명 이상에는 H100급 하드웨어 또는 멀티 GPU가 필요합니다.',
+          '코딩에 맞춰진 모델을 탑재한 Ollama(또는 vLLM, llama.cpp)가 실행되는 GPU 서버를 준비하십시오 — 2026년 8월 기준 Qwen3-Coder 30B가 표준입니다. 동일한 네트워크에 자체 호스팅 GitHub Actions 러너를 추가하거나, 사설 네트워크(Tailscale, WireGuard 또는 VPC 피어링)를 통해 기존 러너에서 GPU 서버의 HTTP 엔드포인트에 접근할 수 있도록 설정하십시오. PR의 diff를 가져와 리뷰 프롬프트와 함께 LLM 엔드포인트에 전송하고, 구조화된 응답(승인 / 댓글 / 차단)을 파싱하여 PR에 인라인 댓글을 다시 게시하는 작은 맞춤형 action을 작성하십시오. 모델은 절대 외부로 나가지 않으며, action은 다른 검사와 동일하게 동작합니다. 하드웨어 측면에서, Qwen3-Coder 30B를 탑재한 RTX 4090은 15~25명의 개발자를 처리하고, 48 GB 카드는 50명까지 확장되며, 100명 이상에는 H100급 하드웨어 또는 멀티 GPU가 필요합니다.',
         bullets: [
           '아키텍처: Ollama를 실행하는 GPU 서버 → 자체 호스팅 러너(또는 클라우드 러너에서 HTTP) → 맞춤형 GitHub Action → PR 댓글.',
           '기본 스택: Ollama + Qwen3-Coder 30B (Apache 2.0) + JavaScript 또는 composite 맞춤형 action.',
@@ -2992,7 +3001,7 @@ jobs:
           '보안: 소스 코드는 절대 네트워크 밖으로 나가지 않으며, 이그레스는 패킷 캡처로 증명 가능하고, 감사 표면은 프로세스 하나와 로그 하나입니다.',
           'GitLab CI도 동일하게 작동합니다 — action 대신 러너를 사용하지만 LLM 호출은 동일합니다.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -3019,7 +3028,7 @@ jobs:
         isTldr: true,
         items: [
           '**아키텍처는 세 가지 구성 요소입니다:** Ollama(또는 vLLM)를 실행하는 GPU 서버 → 네트워크를 통해 서버에 접근 가능한 CI 러너 → PR diff를 POST하고 구조화된 판정을 파싱하는 맞춤형 action. GitHub Actions, GitLab CI, Buildkite, Jenkins에서 동일한 형태로 작동합니다.',
-          '**2026년 5월 기본 스택:** Ollama + Qwen3-Coder 30B (Apache 2.0) + 경량 맞춤형 GitHub Action. 총 인프라: GPU 서버 한 대, 러너 한 개.',
+          '**2026년 8월 기본 스택:** Ollama + Qwen3-Coder 30B (Apache 2.0) + 경량 맞춤형 GitHub Action. 총 인프라: GPU 서버 한 대, 러너 한 개.',
           '**하드웨어 사이징:** RTX 4090 (24 GB, ~$2,000) - 15~25명 개발자 처리; L40S 또는 A6000 Ada (48 GB, ~$7,000~8,000) - 50명까지; H100 (80 GB, $25,000+) 또는 멀티 GPU - 100명 이상.',
           '**경제성은 자체 호스팅 영역으로 기웁니다** — GitHub Advanced Security 유료 좌석 약 15~25개($19/개발자/월) 시점에서. RTX 4090 빌드는 해당 팀 규모에서 5~10개월 내 회수됩니다.',
           '**보안 이점은 실제이며 마케팅 용어가 아닙니다.** 소스 코드는 절대 네트워크 밖으로 나가지 않으며, 아웃바운드 이그레스는 `tcpdump`로 제로임을 증명할 수 있고, 감사 표면 전체는 Ollama 프로세스 하나와 로그 파일 하나입니다.',
@@ -3046,7 +3055,7 @@ jobs:
         id: 'architecture-comparison',
         title: 'CI 코드 리뷰를 위한 세 가지 실제 옵션: 아키텍처 비교',
         content:
-          '**2026년 5월 기준으로 실질적으로 모든 PR 리뷰 설정을 다루는 세 가지 아키텍처가 있습니다.** 자체 호스팅 로컬 LLM은 그 중 하나입니다 — 소스 코드가 네트워크 밖으로 나갈 수 없거나 좌석 경제성이 고정 인프라를 선호할 때의 올바른 선택.',
+          '**2026년 8월 기준으로 실질적으로 모든 PR 리뷰 설정을 다루는 세 가지 아키텍처가 있습니다.** 자체 호스팅 로컬 LLM은 그 중 하나입니다 — 소스 코드가 네트워크 밖으로 나갈 수 없거나 좌석 경제성이 고정 인프라를 선호할 때의 올바른 선택.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3100,7 +3109,7 @@ jobs:
           '**가장 단순한 프로덕션급 스택은 세 가지 구성 요소로 이루어져 있습니다.** 각각은 오픈 소스이고 무료이며 잘 문서화되어 있습니다; 이들 간의 통합 표면은 HTTP입니다.',
         items: [
           '**GPU 서버**에 **Ollama**(또는 높은 동시성을 위한 vLLM) 탑재. Ollama는 기본적으로 `localhost:11434`에 OpenAI 호환 HTTP API를 노출합니다; 러너에 노출하기 전에 사설 인터페이스 또는 인증이 있는 리버스 프록시에 바인딩하십시오.',
-          '**코딩 조정 모델:** Q4_K_M의 **Qwen3-Coder 30B**는 2026년 5월 기준 표준입니다 — 코딩을 위한 가장 강력한 오픈 웨이트 방향, 256K 컨텍스트, Apache 2.0 라이선스, 24 GB GPU에 적합합니다. 8~16 GB GPU의 경우 Qwen3-Coder 7B를 사용하되 리뷰 품질이 현저히 낮아짐을 인식하십시오.',
+          '**코딩 조정 모델:** Q4_K_M의 **Qwen3-Coder 30B**는 2026년 8월 기준 표준입니다 — 코딩을 위한 가장 강력한 오픈 웨이트 방향, 256K 컨텍스트, Apache 2.0 라이선스, 24 GB GPU에 적합합니다. 8~16 GB GPU의 경우 Qwen3-Coder 7B를 사용하되 리뷰 품질이 현저히 낮아짐을 인식하십시오.',
           '**CI 통합:** GPU 서버와 동일한 네트워크의 자체 호스팅 GitHub Actions 러너, 또는 사설 네트워크(Tailscale, WireGuard 또는 VPC 피어링)를 통해 GPU 서버에 접근하는 기존 GitHub 호스팅 러너.',
           '**맞춤형 GitHub Action** (JavaScript 또는 composite) — GitHub API로 PR diff를 가져와 리뷰 프롬프트와 함께 Ollama 엔드포인트에 전송하고, 구조화된 응답을 파싱하여 PR에 인라인 댓글을 다시 게시합니다.',
           '**선택 사항:** 파일 해시 + diff 해시를 키로 하는 소규모 Redis 또는 SQLite 캐시 — 이후 CI 실행에서 변경되지 않은 파일의 재리뷰를 방지합니다.',
@@ -3196,13 +3205,13 @@ jobs:
         title: '팀 규모별 하드웨어 사이징',
         content:
           '**RTX 4090 (24 GB)은 개발자 15~25명의 팀을 편안하게 처리합니다.** 단일 GPU의 병목은 리뷰당 처리량이 아니라 PR 집중 시간(월요일 아침, 스프린트 종료)의 동시성입니다. 다음 사이징 규칙은 Q4_K_M의 Qwen3-Coder 30B와 50~500줄의 일반적인 PR diff를 가정합니다.',
-        columns: ['팀 규모', 'GPU', 'VRAM', '동시 리뷰', '예상 가격 (2026년 5월)'],
+        columns: ['팀 규모', 'GPU', 'VRAM', '동시 리뷰', '예상 가격 (2026년 8월)'],
         rows: [
-          { '팀 규모': '개발자 ~5명', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12~16 GB', '동시 리뷰': '1개 (Qwen3-Coder 7B만 가능)', '예상 가격 (2026년 5월)': '$600~900' },
-          { '팀 규모': '개발자 15~25명', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24~32 GB', '동시 리뷰': '1~3개 (Qwen3-Coder 30B)', '예상 가격 (2026년 5월)': '$2,000~2,500' },
-          { '팀 규모': '개발자 25~50명', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', '동시 리뷰': '3~6개', '예상 가격 (2026년 5월)': '$7,000~8,500' },
-          { '팀 규모': '개발자 50~100명', 'GPU': '2× RTX 4090 또는 1× H100', 'VRAM': '48 GB / 80 GB', '동시 리뷰': '6~10개', '예상 가격 (2026년 5월)': '$5,000 (2× 4090) 또는 $25,000+ (H100)' },
-          { '팀 규모': '개발자 100명 이상', 'GPU': '멀티 GPU H100 또는 H200', 'VRAM': '160 GB 이상', '동시 리뷰': 'vLLM으로 10개 이상', '예상 가격 (2026년 5월)': '$50,000 이상' },
+          { '팀 규모': '개발자 ~5명', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12~16 GB', '동시 리뷰': '1개 (Qwen3-Coder 7B만 가능)', '예상 가격 (2026년 8월)': '$600~900' },
+          { '팀 규모': '개발자 15~25명', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24~32 GB', '동시 리뷰': '1~3개 (Qwen3-Coder 30B)', '예상 가격 (2026년 8월)': '$2,000~2,500' },
+          { '팀 규모': '개발자 25~50명', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', '동시 리뷰': '3~6개', '예상 가격 (2026년 8월)': '$7,000~8,500' },
+          { '팀 규모': '개발자 50~100명', 'GPU': '2× RTX 4090 또는 1× H100', 'VRAM': '48 GB / 80 GB', '동시 리뷰': '6~10개', '예상 가격 (2026년 8월)': '$5,000 (2× 4090) 또는 $25,000+ (H100)' },
+          { '팀 규모': '개발자 100명 이상', 'GPU': '멀티 GPU H100 또는 H200', 'VRAM': '160 GB 이상', '동시 리뷰': 'vLLM으로 10개 이상', '예상 가격 (2026년 8월)': '$50,000 이상' },
         ],
         callouts: [
           {
@@ -3392,7 +3401,7 @@ jobs:
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-code-review-ci-cd',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
