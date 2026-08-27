@@ -82,6 +82,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Do You Need to Register?',
         content: [
           '**Whether you need to register depends entirely on your country\'s regulatory approach — some have a dedicated lightweight tier for small systems, others apply the same registration process regardless of size.** The table below summarizes current registration requirements by country; see each market\'s dedicated section for detail.',
+          'Great Britain is the newest entry and works differently from every market below: notification happens *after* connection, not before. See the [plug-in balcony solar UK rules and G98 notification steps](/balcony-solar/plug-in-balcony-solar-uk-rules) for the 28-day window and the one-device-per-household limit.',
         ],
         rows: registrationRows,
         columns: ['country', 'registration', 'powerLimit'],

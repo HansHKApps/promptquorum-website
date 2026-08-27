@@ -12,11 +12,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Balcony Solar Global Market Overview (2026)',
     metaDescription: 'Region-by-region balcony solar market sizing for Germany, the EU, UK, US, and Asia-Pacific, with segment and driver breakdowns.',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-08-27',
     audience: 'Readers comparing balcony solar market size and adoption across regions',
     intro: 'This overview compares balcony solar market status region by region: Germany\'s mature, registry-verified base; the wider EU\'s converging 800W standard; the UK\'s just-legalized but cautious rollout; the US\'s state-by-state patchwork; and Asia-Pacific\'s much earlier-stage activity in China and Japan. Figures here match the country-specific guides linked throughout PromptQuorum\'s balcony solar coverage.',
     // TODO (internal-linking phase): add 'see also' links to trends-2027 category (Japan/China/Brazil/Greece/Gulf status pages) instead of duplicating that content here.
-    leadAnswerBlock: '**Germany is the only balcony solar market with a mature, registry-verified installed base — an estimated 4 million systems by 2025, up from roughly 40,000 in 2017 — while the rest of the EU is converging on the same 800W standard, the UK legalized installations in April 2026 but has not reached mass-market scale, the US remains a state-by-state patchwork of 8 signed laws, and Asia-Pacific (China, Japan) is still in early, largely unregulated or unregistered stages.**',
+    leadAnswerBlock: '**Germany is the only balcony solar market with a mature, registry-verified installed base — an estimated 4 million systems by 2025, up from roughly 40,000 in 2017 — while the rest of the EU is converging on the same 800W standard, the UK opened its legal plug-in solar route on 27 August 2026 under SI 2026/848 but has not reached mass-market scale, the US remains a state-by-state patchwork of 8 signed laws, and Asia-Pacific (China, Japan) is still in early, largely unregulated or unregistered stages.**',
     sections: {
       tldr: {
         id: 'tldr',
@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Germany\'s registered balcony solar systems grew from roughly 40,000 in 2017 to an estimated 4 million by 2025, with about 430,000 new registrations added in 2025 alone (Bundesnetzagentur/Marktstammdatenregister) — the only comprehensive, mandatory registry of its kind.',
           'France, Austria, Belgium, and the Netherlands already permit 800W balcony solar with simplified notification-only registration; Germany brought its cap in line with that norm via DIN VDE V 0126-95 in December 2025. Sweden and Hungary remain clear holdouts within the EU.',
-          'The UK legalized balcony solar via BS 7671 Amendment 4, in force since April 2026, but five UK safety bodies urged caution before any mass rollout — it is legal, not yet mainstream.',
+          'The UK legalized plug-in balcony solar via SI 2026/848, in force 27 August 2026 — BS 7671 Amendment 4 (April 2026) was the supporting wiring-regulations update, not the authorising law — but five UK safety bodies urged caution before any mass rollout.',
           'As of write-time (2026-07-16), 8 US states have signed balcony solar legislation into law (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), with New York\'s SUNNY Act passed and awaiting the governor\'s signature — there is no federal US law.',
           'China published its first balcony-solar industry standard, T/GEA 001-2026, in May 2026; single-source estimates (not independently verified) put 2024 domestic installs around 1,000 units, projecting toward 100,000+ by 2026.',
           'Japan has no dedicated plug-in or balcony solar legislation at all — no wattage cap, registration process, or legal exemption in either direction — making it the least-formalized of the regions covered here.',
@@ -62,8 +62,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ukStatus: {
         title: 'UK: Early-Stage, Not Yet Mass-Market',
         image: '/images/balcony-solar-global-market-overview-uk-status-en.svg',
-        imageCaption: 'Legalized via BS 7671 Amendment 4 (in force April 2026); five UK safety bodies urged caution before mass rollout.',
-        content: 'The UK legalized balcony solar through BS 7671 Amendment 4, in force since April 2026 — the wiring-regulations update that permits plug-in grid-tied systems for the first time. Legalization is not the same as market maturity: five UK safety bodies urged caution before any mass rollout, reflecting the country\'s earlier-stage position compared with Germany\'s decade of registry data. No comparably verified UK installed-base count exists yet, so adoption figures for this market should be treated as pending rather than established.',
+        imageCaption: 'Legalized via SI 2026/848 (in force 27 August 2026); five UK safety bodies urged caution before mass rollout.',
+        content: 'The UK legalized plug-in balcony solar through SI 2026/848, in force 27 August 2026 — the statutory instrument that permits plug-in grid-tied systems for the first time. BS 7671 Amendment 4 (April 2026) was the supporting wiring-regulations update; it did not on its own authorise the socket connection. Legalization is not the same as market maturity: five UK safety bodies urged caution before any mass rollout, reflecting the country\'s earlier-stage position compared with Germany\'s decade of registry data. No comparably verified UK installed-base count exists yet, so adoption figures for this market should be treated as pending rather than established.',
       },
       driversHeadwinds: {
         title: 'Cross-Region Drivers & Headwinds',
@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'How big is the global balcony solar market?', a: 'Germany is the only market with a comprehensive, verified count: an estimated 4 million registered systems by 2025, up from roughly 40,000 in 2017 (Bundesnetzagentur/Marktstammdatenregister). No other country currently publishes a comparably mandatory, granular registration figure, so claims about global market size outside Germany should be treated as estimates rather than verified counts.' },
           { q: 'Which region leads balcony solar adoption?', a: 'Germany leads by a wide margin on verified adoption, with an estimated 4 million registered systems by 2025. The rest of the EU (France, Austria, Belgium, Netherlands) is converging on the same 800W standard but without Germany\'s registry depth, and the UK, US, and Asia-Pacific are all earlier-stage.' },
           { q: 'Is balcony solar legal across the whole EU?', a: 'No. France, Austria, Belgium, the Netherlands, and now Germany (since December 2025, via DIN VDE V 0126-95) permit simplified 800W systems. Greece is proposing a stricter zero-feed-in model still in public consultation, while Sweden and Hungary remain holdouts where plug-in solar is not generally legal.' },
-          { q: 'Is balcony solar legal in the UK?', a: 'Yes, since April 2026, via BS 7671 Amendment 4. However, five UK safety bodies urged caution before a mass rollout, and there is no comparably verified installed-base count yet — legalization has not translated into mass-market adoption.' },
+          { q: 'Is balcony solar legal in the UK?', a: 'Yes, since 27 August 2026, via SI 2026/848 — BS 7671 Amendment 4 in April 2026 was the supporting wiring-regulations change, not the authorising law. However, five UK safety bodies urged caution before a mass rollout, and there is no comparably verified installed-base count yet — legalization has not translated into mass-market adoption.' },
           { q: 'Is balcony solar legal across the whole US?', a: 'No. As of write-time (2026-07-16), 8 states have signed laws (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), with New York\'s SUNNY Act awaiting only the governor\'s signature. There is no federal law; California, Florida, and Texas remain without one.' },
           { q: 'What is the state of the balcony solar market in China?', a: 'China is the world\'s largest exporter of balcony solar hardware, and a separate domestic adoption market is now emerging, formalized by its first industry standard, T/GEA 001-2026, published in May 2026. Single-source estimates (not independently verified) suggest roughly 1,000 domestic installs in 2024, projecting toward 100,000+ by 2026.' },
           { q: 'Is balcony solar legal in Japan?', a: 'Japan has no dedicated plug-in or balcony solar legislation — no wattage cap, registration process, or legal exemption specific to this product category exists in either direction. Japan\'s Renewable Energy Institute has published policy analysis recommending Japan adapt international best practices, but this is advocacy, not enacted law.' },
@@ -94,10 +94,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Balkonsolar-Weltmarktüberblick 2026: Deutschland, EU, USA',
     metaDescription: 'Balkonsolar-Marktgröße nach Regionen: Deutschland, EU, UK, USA und Asien-Pazifik im Vergleich, mit Aufschlüsselung nach Segmenten und Treibern.',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-08-27',
     audience: 'Leser, die die Marktgröße und Verbreitung von Balkonsolar in verschiedenen Regionen vergleichen',
     intro: 'Dieser Überblick vergleicht den Balkonsolar-Marktstatus Region für Region: Deutschlands reife, registerbestätigte Basis; den konvergierenden 800-Watt-Standard der übrigen EU; Großbritanniens gerade erst legalisierten, aber noch vorsichtigen Rollout; das bundesstaatliche Flickenteppich-Muster der USA; und die deutlich frühere Marktphase in China und Japan. Die Zahlen stimmen mit den länderspezifischen Leitfäden überein, die in PromptQuorums gesamter Balkonsolar-Berichterstattung verlinkt sind.',
-    leadAnswerBlock: '**Deutschland ist der einzige Balkonsolar-Markt mit einer reifen, registerbestätigten installierten Basis – schätzungsweise 4 Millionen Systeme bis 2025, gegenüber rund 40.000 im Jahr 2017 –, während der Rest der EU sich auf denselben 800-Watt-Standard zubewegt, Großbritannien Installationen im April 2026 legalisiert hat, aber noch keinen Massenmarkt erreicht hat, die USA weiterhin ein bundesstaatlicher Flickenteppich aus 8 verabschiedeten Gesetzen sind und Asien-Pazifik (China, Japan) sich noch in einer frühen, weitgehend unregulierten oder unregistrierten Phase befindet.**',
+    leadAnswerBlock: '**Deutschland ist der einzige Balkonsolar-Markt mit einer reifen, registerbestätigten installierten Basis – schätzungsweise 4 Millionen Systeme bis 2025, gegenüber rund 40.000 im Jahr 2017 –, während der Rest der EU sich auf denselben 800-Watt-Standard zubewegt, Großbritannien am 27. August 2026 einen legalen Weg für Steckersolar eröffnet hat, aber noch keinen Massenmarkt erreicht hat, die USA weiterhin ein bundesstaatlicher Flickenteppich aus 8 verabschiedeten Gesetzen sind und Asien-Pazifik (China, Japan) sich noch in einer frühen, weitgehend unregulierten oder unregistrierten Phase befindet.**',
     sections: {
       tldr: {
         id: 'tldr',
@@ -106,7 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Die Zahl der registrierten Balkonsolar-Systeme in Deutschland wuchs von rund 40.000 im Jahr 2017 auf schätzungsweise 4 Millionen bis 2025 – allein 2025 kamen rund 430.000 Neuregistrierungen hinzu (Bundesnetzagentur/Marktstammdatenregister) – das einzige umfassende, verpflichtende Register dieser Art.',
           'Frankreich, Österreich, Belgien und die Niederlande erlauben bereits 800-Watt-Balkonsolar mit vereinfachter, reiner Meldepflicht; Deutschland brachte seine Obergrenze im Dezember 2025 per DIN VDE V 0126-95 auf denselben Standard. Schweden und Ungarn bleiben innerhalb der EU klare Ausnahmen.',
-          'Großbritannien legalisierte Balkonsolar durch BS 7671 Amendment 4, in Kraft seit April 2026 – fünf britische Sicherheitsbehörden mahnten jedoch vor einem breiten Rollout zur Vorsicht: legal, aber noch kein Massenmarkt.',
+          'Großbritannien legalisierte Steckersolar durch SI 2026/848, in Kraft seit dem 27. August 2026 – BS 7671 Amendment 4 (April 2026) war die begleitende Aktualisierung der Verdrahtungsvorschriften, nicht das ermächtigende Gesetz. Fünf britische Sicherheitsbehörden mahnten vor einem breiten Rollout zur Vorsicht.',
           'Zum Stand dieses Texts (16.07.2026) haben 8 US-Bundesstaaten Balkonsolar-Gesetze unterzeichnet (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut); New Yorks SUNNY Act ist verabschiedet und wartet nur noch auf die Unterschrift der Gouverneurin – ein bundesweites US-Gesetz gibt es nicht.',
           'China veröffentlichte im Mai 2026 seinen ersten Balkonsolar-Industriestandard, T/GEA 001-2026; Einzelquellenschätzungen (nicht unabhängig verifiziert) beziffern die inländischen Installationen 2024 auf rund 1.000 Einheiten, mit einer Prognose von über 100.000 bis 2026.',
           'Japan hat überhaupt keine eigene Gesetzgebung für Steckersolar oder Balkonsolar – weder eine Leistungsobergrenze noch ein Registrierungsverfahren noch eine rechtliche Ausnahmeregelung in irgendeine Richtung – und ist damit die am wenigsten formalisierte der hier behandelten Regionen.',
@@ -143,8 +143,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ukStatus: {
         title: 'UK: Frühphase, noch kein Massenmarkt',
         image: '/images/balcony-solar-global-market-overview-uk-status-en.svg',
-        imageCaption: 'Legalisiert durch BS 7671 Amendment 4 (in Kraft seit April 2026); fünf britische Sicherheitsbehörden mahnten vor einem breiten Rollout zur Vorsicht.',
-        content: 'Großbritannien legalisierte Balkonsolar durch BS 7671 Amendment 4, in Kraft seit April 2026 – die Aktualisierung der Verdrahtungsvorschriften, die steckerfertige, netzgekoppelte Systeme erstmals erlaubt. Legalisierung ist nicht dasselbe wie Marktreife: Fünf britische Sicherheitsbehörden mahnten vor einem breiten Rollout zur Vorsicht, was die frühere Marktphase des Landes im Vergleich zu Deutschlands jahrzehntelangen Registerdaten widerspiegelt. Eine vergleichbar verifizierte Zählung der installierten Basis in Großbritannien existiert noch nicht, weshalb Adoptionszahlen für diesen Markt als ausstehend und nicht als gesichert zu behandeln sind.',
+        imageCaption: 'Legalisiert durch SI 2026/848 (in Kraft seit dem 27. August 2026); fünf britische Sicherheitsbehörden mahnten vor einem breiten Rollout zur Vorsicht.',
+        content: 'Großbritannien legalisierte Steckersolar durch SI 2026/848, in Kraft seit dem 27. August 2026 – die Rechtsverordnung, die steckerfertige, netzgekoppelte Systeme erstmals erlaubt. BS 7671 Amendment 4 (April 2026) war die begleitende Aktualisierung der Verdrahtungsvorschriften und erlaubte den Steckdosenanschluss noch nicht für sich allein. Legalisierung ist nicht dasselbe wie Marktreife: Fünf britische Sicherheitsbehörden mahnten vor einem breiten Rollout zur Vorsicht, was die frühere Marktphase des Landes im Vergleich zu Deutschlands jahrzehntelangen Registerdaten widerspiegelt. Eine vergleichbar verifizierte Zählung der installierten Basis in Großbritannien existiert noch nicht, weshalb Adoptionszahlen für diesen Markt als ausstehend und nicht als gesichert zu behandeln sind.',
       },
       driversHeadwinds: {
         title: 'Regionsübergreifende Treiber und Hemmnisse',
@@ -159,7 +159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Wie groß ist der globale Balkonsolar-Markt?', a: 'Deutschland ist der einzige Markt mit einer umfassenden, verifizierten Zählung: schätzungsweise 4 Millionen registrierte Systeme bis 2025, gegenüber rund 40.000 im Jahr 2017 (Bundesnetzagentur/Marktstammdatenregister). Kein anderes Land veröffentlicht derzeit eine vergleichbar verpflichtende, detaillierte Registrierungszahl, weshalb Angaben zur globalen Marktgröße außerhalb Deutschlands als Schätzungen und nicht als verifizierte Zählungen zu behandeln sind.' },
           { q: 'Welche Region führt bei der Balkonsolar-Verbreitung?', a: 'Deutschland führt bei der verifizierten Verbreitung mit weitem Abstand, mit schätzungsweise 4 Millionen registrierten Systemen bis 2025. Der Rest der EU (Frankreich, Österreich, Belgien, Niederlande) nähert sich demselben 800-Watt-Standard an, jedoch ohne Deutschlands Registertiefe, und Großbritannien, die USA sowie Asien-Pazifik befinden sich alle in einer früheren Phase.' },
           { q: 'Ist Balkonsolar in der gesamten EU legal?', a: 'Nein. Frankreich, Österreich, Belgien, die Niederlande und inzwischen auch Deutschland (seit Dezember 2025 per DIN VDE V 0126-95) erlauben vereinfachte 800-Watt-Systeme. Griechenland schlägt ein strengeres Zero-Feed-in-Modell vor, das sich noch in öffentlicher Konsultation befindet, während Schweden und Ungarn Ausnahmen bleiben, in denen Steckersolar generell nicht legal ist.' },
-          { q: 'Ist Balkonsolar in Großbritannien legal?', a: 'Ja, seit April 2026 per BS 7671 Amendment 4. Fünf britische Sicherheitsbehörden mahnten jedoch vor einem breiten Rollout zur Vorsicht, und eine vergleichbar verifizierte Bestandszählung existiert noch nicht – die Legalisierung hat sich noch nicht in einen Massenmarkt übersetzt.' },
+          { q: 'Ist Balkonsolar in Großbritannien legal?', a: 'Ja, seit dem 27. August 2026 per SI 2026/848 – BS 7671 Amendment 4 im April 2026 war die begleitende Änderung der Verdrahtungsvorschriften, nicht das ermächtigende Gesetz. Fünf britische Sicherheitsbehörden mahnten jedoch vor einem breiten Rollout zur Vorsicht, und eine vergleichbar verifizierte Bestandszählung existiert noch nicht – die Legalisierung hat sich noch nicht in einen Massenmarkt übersetzt.' },
           { q: 'Ist Balkonsolar in den gesamten USA legal?', a: 'Nein. Zum Stand dieses Texts (16.07.2026) haben 8 Bundesstaaten Gesetze unterzeichnet (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), wobei New Yorks SUNNY Act nur noch auf die Unterschrift der Gouverneurin wartet. Es gibt kein bundesweites Gesetz; Kalifornien, Florida und Texas haben noch keines.' },
           { q: 'Wie ist der Stand des Balkonsolar-Marktes in China?', a: 'China ist der weltgrößte Exporteur von Balkonsolar-Hardware, und ein separater Inlandsmarkt entsteht nun, formalisiert durch den ersten Industriestandard T/GEA 001-2026, veröffentlicht im Mai 2026. Einzelquellenschätzungen (nicht unabhängig verifiziert) deuten auf rund 1.000 Inlandsinstallationen 2024 hin, mit einer Prognose von über 100.000 bis 2026.' },
           { q: 'Ist Balkonsolar in Japan legal?', a: 'Japan hat keine eigene Gesetzgebung für Steckersolar oder Balkonsolar – weder eine Leistungsobergrenze noch ein Registrierungsverfahren noch eine rechtliche Ausnahmeregelung speziell für diese Produktkategorie existiert in irgendeine Richtung. Japans Renewable Energy Institute hat eine politische Analyse veröffentlicht, die empfiehlt, dass Japan internationale Best Practices übernimmt – dies ist jedoch Interessenvertretung, kein erlassenes Gesetz.' },
@@ -175,10 +175,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Aperçu du marché mondial du solaire de balcon (2026)',
     metaDescription: 'Taille du marché du solaire de balcon par région : Allemagne, UE, Royaume-Uni, États-Unis et Asie-Pacifique, avec répartition par segment et facteur.',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-08-27',
     audience: 'Lecteurs comparant la taille du marché et l\'adoption du solaire de balcon selon les régions',
     intro: 'Cet aperçu compare la situation du marché du solaire de balcon région par région : la base mature et vérifiée par registre de l\'Allemagne ; la norme de 800 W convergente du reste de l\'UE ; le déploiement tout juste légalisé mais encore prudent du Royaume-Uni ; le patchwork État par État des États-Unis ; et l\'activité bien plus précoce de l\'Asie-Pacifique en Chine et au Japon. Les chiffres correspondent aux guides par pays cités dans l\'ensemble de la couverture du solaire de balcon de PromptQuorum.',
-    leadAnswerBlock: '**L\'Allemagne est le seul marché du solaire de balcon disposant d\'une base installée mature et vérifiée par registre — une estimation de 4 millions de systèmes d\'ici 2025, contre environ 40 000 en 2017 — tandis que le reste de l\'UE converge vers la même norme de 800 W, que le Royaume-Uni a légalisé les installations en avril 2026 sans encore atteindre une échelle de marché de masse, que les États-Unis restent un patchwork État par État de 8 lois signées, et que l\'Asie-Pacifique (Chine, Japon) en est encore à un stade précoce, largement non réglementé ou non enregistré.**',
+    leadAnswerBlock: '**L\'Allemagne est le seul marché du solaire de balcon disposant d\'une base installée mature et vérifiée par registre — une estimation de 4 millions de systèmes d\'ici 2025, contre environ 40 000 en 2017 — tandis que le reste de l\'UE converge vers la même norme de 800 W, que le Royaume-Uni a ouvert une voie légale au solaire plug-in le 27 août 2026 sans encore atteindre une échelle de marché de masse, que les États-Unis restent un patchwork État par État de 8 lois signées, et que l\'Asie-Pacifique (Chine, Japon) en est encore à un stade précoce, largement non réglementé ou non enregistré.**',
     sections: {
       tldr: {
         id: 'tldr',
@@ -187,7 +187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Le nombre de systèmes solaires de balcon enregistrés en Allemagne est passé d\'environ 40 000 en 2017 à une estimation de 4 millions d\'ici 2025, avec environ 430 000 nouvelles inscriptions rien qu\'en 2025 (Bundesnetzagentur/Marktstammdatenregister) — le seul registre exhaustif et obligatoire de ce type.',
           'La France, l\'Autriche, la Belgique et les Pays-Bas autorisent déjà le solaire de balcon de 800 W avec un enregistrement simplifié par simple notification ; l\'Allemagne a aligné son plafond sur cette norme en décembre 2025 via la DIN VDE V 0126-95. La Suède et la Hongrie restent des exceptions claires au sein de l\'UE.',
-          'Le Royaume-Uni a légalisé le solaire de balcon via le BS 7671 Amendment 4, en vigueur depuis avril 2026 — mais cinq organismes britanniques de sécurité ont appelé à la prudence avant tout déploiement massif : légal, mais pas encore grand public.',
+          'Le Royaume-Uni a légalisé le solaire plug-in via le SI 2026/848, en vigueur depuis le 27 août 2026 — le BS 7671 Amendment 4 (avril 2026) était la mise à jour d\'accompagnement des réglementations de câblage, non la loi habilitante. Cinq organismes britanniques de sécurité ont appelé à la prudence avant tout déploiement massif.',
           'À l\'heure de la rédaction (16/07/2026), 8 États américains ont signé une législation sur le solaire de balcon (Utah, Maine, Virginie, Maryland, Colorado, New Hampshire, Vermont, Connecticut), avec le SUNNY Act de New York adopté et n\'attendant plus que la signature de la gouverneure — il n\'existe aucune loi fédérale américaine.',
           'La Chine a publié sa première norme industrielle pour le solaire de balcon, T/GEA 001-2026, en mai 2026 ; des estimations à source unique (non vérifiées de manière indépendante) évaluent les installations domestiques 2024 à environ 1 000 unités, avec une projection dépassant 100 000 d\'ici 2026.',
           'Le Japon ne dispose d\'aucune législation dédiée au solaire plug-in ou de balcon — aucun plafond de puissance, aucune procédure d\'enregistrement, aucune exemption légale dans un sens comme dans l\'autre — ce qui en fait la région la moins formalisée de celles couvertes ici.',
@@ -224,8 +224,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ukStatus: {
         title: 'Royaume-Uni : phase précoce, pas encore de marché de masse',
         image: '/images/balcony-solar-global-market-overview-uk-status-en.svg',
-        imageCaption: 'Légalisé par le BS 7671 Amendment 4 (en vigueur depuis avril 2026) ; cinq organismes britanniques de sécurité ont appelé à la prudence avant un déploiement massif.',
-        content: 'Le Royaume-Uni a légalisé le solaire de balcon via le BS 7671 Amendment 4, en vigueur depuis avril 2026 — la mise à jour des réglementations de câblage qui autorise pour la première fois les systèmes plug-in raccordés au réseau. Légalisation ne signifie pas maturité de marché : cinq organismes britanniques de sécurité ont appelé à la prudence avant tout déploiement massif, reflétant la position plus précoce du pays comparée à une décennie de données de registre en Allemagne. Aucun décompte de la base installée britannique comparable n\'existe encore, donc les chiffres d\'adoption pour ce marché doivent être considérés comme en attente plutôt qu\'établis.',
+        imageCaption: 'Légalisé par le SI 2026/848 (en vigueur depuis le 27 août 2026) ; cinq organismes britanniques de sécurité ont appelé à la prudence avant un déploiement massif.',
+        content: 'Le Royaume-Uni a légalisé le solaire de balcon via le SI 2026/848, en vigueur depuis le 27 août 2026 — le texte réglementaire qui autorise pour la première fois les systèmes plug-in raccordés au réseau. Le BS 7671 Amendment 4 (avril 2026) était la mise à jour d\'accompagnement des réglementations de câblage ; il n\'autorisait pas à lui seul le raccordement sur prise. Légalisation ne signifie pas maturité de marché : cinq organismes britanniques de sécurité ont appelé à la prudence avant tout déploiement massif, reflétant la position plus précoce du pays comparée à une décennie de données de registre en Allemagne. Aucun décompte de la base installée britannique comparable n\'existe encore, donc les chiffres d\'adoption pour ce marché doivent être considérés comme en attente plutôt qu\'établis.',
       },
       driversHeadwinds: {
         title: 'Moteurs et freins communs aux régions',
@@ -240,7 +240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Quelle est la taille du marché mondial du solaire de balcon ?', a: 'L\'Allemagne est le seul marché disposant d\'un décompte exhaustif et vérifié : une estimation de 4 millions de systèmes enregistrés d\'ici 2025, contre environ 40 000 en 2017 (Bundesnetzagentur/Marktstammdatenregister). Aucun autre pays ne publie actuellement un chiffre d\'enregistrement obligatoire d\'une précision comparable, donc les estimations de taille de marché en dehors de l\'Allemagne doivent être considérées comme des approximations plutôt que des décomptes vérifiés.' },
           { q: 'Quelle région est en tête de l\'adoption du solaire de balcon ?', a: 'L\'Allemagne est largement en tête sur l\'adoption vérifiée, avec une estimation de 4 millions de systèmes enregistrés d\'ici 2025. Le reste de l\'UE (France, Autriche, Belgique, Pays-Bas) converge vers la même norme de 800 W mais sans la profondeur de registre allemande, et le Royaume-Uni, les États-Unis et l\'Asie-Pacifique en sont tous à un stade plus précoce.' },
           { q: 'Le solaire de balcon est-il légal dans toute l\'UE ?', a: 'Non. La France, l\'Autriche, la Belgique, les Pays-Bas et désormais l\'Allemagne (depuis décembre 2025, via la DIN VDE V 0126-95) autorisent des systèmes simplifiés de 800 W. La Grèce propose un modèle plus strict de zéro injection encore en consultation publique, tandis que la Suède et la Hongrie restent des exceptions où le solaire plug-in n\'est généralement pas légal.' },
-          { q: 'Le solaire de balcon est-il légal au Royaume-Uni ?', a: 'Oui, depuis avril 2026, via le BS 7671 Amendment 4. Toutefois, cinq organismes britanniques de sécurité ont appelé à la prudence avant un déploiement massif, et aucun décompte de base installée comparable n\'existe encore — la légalisation ne s\'est pas encore traduite par une adoption de masse.' },
+          { q: 'Le solaire de balcon est-il légal au Royaume-Uni ?', a: 'Oui, depuis le 27 août 2026, via le SI 2026/848 — le BS 7671 Amendment 4 d\'avril 2026 était la modification d\'accompagnement des réglementations de câblage, non la loi habilitante. Toutefois, cinq organismes britanniques de sécurité ont appelé à la prudence avant un déploiement massif, et aucun décompte de base installée comparable n\'existe encore — la légalisation ne s\'est pas encore traduite par une adoption de masse.' },
           { q: 'Le solaire de balcon est-il légal dans l\'ensemble des États-Unis ?', a: 'Non. À l\'heure de la rédaction (16/07/2026), 8 États ont signé des lois (Utah, Maine, Virginie, Maryland, Colorado, New Hampshire, Vermont, Connecticut), le SUNNY Act de New York n\'attendant plus que la signature de la gouverneure. Il n\'existe pas de loi fédérale ; la Californie, la Floride et le Texas restent sans loi.' },
           { q: 'Quel est l\'état du marché du solaire de balcon en Chine ?', a: 'La Chine est le premier exportateur mondial de matériel solaire de balcon, et un marché intérieur distinct émerge désormais, formalisé par sa première norme industrielle, T/GEA 001-2026, publiée en mai 2026. Des estimations à source unique (non vérifiées de manière indépendante) suggèrent environ 1 000 installations domestiques en 2024, avec une projection dépassant 100 000 d\'ici 2026.' },
           { q: 'Le solaire de balcon est-il légal au Japon ?', a: 'Le Japon ne dispose d\'aucune législation dédiée au solaire plug-in ou de balcon — aucun plafond de puissance, aucune procédure d\'enregistrement, aucune exemption légale spécifique à cette catégorie de produit n\'existe dans un sens comme dans l\'autre. Le Renewable Energy Institute japonais a publié une analyse de politique recommandant au Japon d\'adapter les meilleures pratiques internationales, mais il s\'agit de plaidoyer, pas d\'une loi adoptée.' },
@@ -256,10 +256,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'バルコニーソーラー世界市場概観（2026年）：地域別データ分析',
     metaDescription: 'ドイツ、EU、英国、米国、アジア太平洋地域におけるバルコニーソーラー市場規模を地域別に解説し、セグメントと普及要因の内訳も紹介します。',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-08-27',
     audience: '各地域のバルコニーソーラー市場規模と普及状況を比較する読者向け',
     intro: '本記事では、バルコニーソーラー市場の状況を地域ごとに比較します。ドイツの成熟した登録データ裏付き市場、EU他国が収斂しつつある800W規格、英国のようやく合法化されたものの慎重な展開状況、州ごとにばらつく米国、そして中国・日本を中心にまだ初期段階にあるアジア太平洋地域です。数値はPromptQuorumのバルコニーソーラー関連記事全体で参照している国別ガイドと一致しています。',
-    leadAnswerBlock: '**ドイツは登録データで裏付けられた成熟した導入実績を持つ唯一のバルコニーソーラー市場であり、2025年までに推定400万件（2017年の約4万件から増加）に達しています。一方、EUの他の国々は同じ800W規格に収斂しつつあり、英国は2026年4月に設置を合法化したもののまだ大衆市場には至っておらず、米国は8つの州法が成立した州ごとのパッチワーク状態が続き、アジア太平洋地域（中国、日本）は依然として初期段階で、規制や登録制度がほとんど整っていません。**',
+    leadAnswerBlock: '**ドイツは登録データで裏付けられた成熟した導入実績を持つ唯一のバルコニーソーラー市場であり、2025年までに推定400万件（2017年の約4万件から増加）に達しています。一方、EUの他の国々は同じ800W規格に収斂しつつあり、英国は2026年8月27日にプラグイン型太陽光の合法的な導入経路を開いたもののまだ大衆市場には至っておらず、米国は8つの州法が成立した州ごとのパッチワーク状態が続き、アジア太平洋地域（中国、日本）は依然として初期段階で、規制や登録制度がほとんど整っていません。**',
     sections: {
       tldr: {
         id: 'tldr',
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'ドイツの登録済みバルコニーソーラーシステムは2017年の約4万件から2025年までに推定400万件に増加し、2025年単年だけで約43万件の新規登録が加わりました（Bundesnetzagentur/Marktstammdatenregister）。これはこの種の制度として唯一の包括的かつ義務的な登録制度です。',
           'フランス、オーストリア、ベルギー、オランダはすでに簡易届出制の800Wバルコニーソーラーを認めており、ドイツも2025年12月にDIN VDE V 0126-95によりこの基準に合わせました。スウェーデンとハンガリーはEU内でも明確な例外として残っています。',
-          '英国は2026年4月施行のBS 7671 Amendment 4によりバルコニーソーラーを合法化しましたが、英国の安全機関5団体が大規模展開前の慎重な対応を求めており、合法ではあってもまだ主流とは言えません。',
+          '英国は2026年8月27日施行のSI 2026/848によりプラグイン型バルコニーソーラーを合法化しました。BS 7671 Amendment 4（2026年4月）は付随する配線規則の改定であり、根拠法ではありません。英国の安全機関5団体は大規模展開前の慎重な対応を求めています。',
           '本稿執筆時点（2026年7月16日）で、米国の8つの州がバルコニーソーラー関連法を成立させています（ユタ、メイン、バージニア、メリーランド、コロラド、ニューハンプシャー、バーモント、コネチカット）。ニューヨーク州のSUNNY Actは可決済みで知事の署名待ちであり、連邦法は存在しません。',
           '中国は2026年5月に初のバルコニーソーラー産業規格T/GEA 001-2026を公表しました。単一情報源による推計（独立検証はされていません）では、2024年の国内設置件数は約1,000件で、2026年までに10万件以上に達すると予測されています。',
           '日本にはプラグイン型・バルコニー型ソーラー専用の法制度が一切存在せず、出力上限、登録手続き、法的な適用除外のいずれも、どちらの方向にも整備されていません。ここで扱う地域の中で最も制度整備が進んでいません。',
@@ -305,8 +305,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ukStatus: {
         title: '英国：初期段階、まだマスマーケットには至らず',
         image: '/images/balcony-solar-global-market-overview-uk-status-en.svg',
-        imageCaption: 'BS 7671 Amendment 4（2026年4月施行）により合法化されましたが、英国の安全機関5団体が大規模展開前の慎重な対応を求めています。',
-        content: '英国は、2026年4月施行のBS 7671 Amendment 4によりバルコニーソーラーを合法化しました。これは配線規則の改定であり、プラグイン型で系統連系するシステムを初めて認めるものです。合法化は市場成熟とは異なります。英国の安全機関5団体は大規模展開前の慎重な対応を求めており、これはドイツの数十年にわたる登録データと比較した場合の英国のより初期段階の位置づけを反映しています。英国の設置実績について、これに匹敵する検証済みの集計はまだ存在せず、この市場の普及データは確定的なものではなく、保留中として扱うべきです。',
+        imageCaption: 'SI 2026/848（2026年8月27日施行）により合法化されましたが、英国の安全機関5団体が大規模展開前の慎重な対応を求めています。',
+        content: '英国は、2026年8月27日施行のSI 2026/848によりバルコニーソーラーを合法化しました。これはプラグイン型で系統連系するシステムを初めて認める法定文書です。BS 7671 Amendment 4（2026年4月）は付随する配線規則の改定であり、それ自体はコンセント接続を認めるものではありませんでした。合法化は市場成熟とは異なります。英国の安全機関5団体は大規模展開前の慎重な対応を求めており、これはドイツの数十年にわたる登録データと比較した場合の英国のより初期段階の位置づけを反映しています。英国の設置実績について、これに匹敵する検証済みの集計はまだ存在せず、この市場の普及データは確定的なものではなく、保留中として扱うべきです。',
       },
       driversHeadwinds: {
         title: '地域横断的な推進要因と逆風',
@@ -321,7 +321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'バルコニーソーラーのグローバル市場規模はどのくらいですか？', a: '包括的で検証済みの集計を持つのはドイツのみで、2025年までに推定400万件の登録システムがあり、2017年時点の約4万件から増加しています（Bundesnetzagentur/Marktstammdatenregister）。他国は現在、これに匹敵する義務的で詳細な登録数値を公表していないため、ドイツ以外の世界市場規模に関する主張は、検証済みの数値ではなく推定値として扱うべきです。' },
           { q: 'バルコニーソーラーの普及で先行しているのはどの地域ですか？', a: 'ドイツは検証済みの普及率で大きく先行しており、2025年までに推定400万件の登録システムがあります。EUの他の国々（フランス、オーストリア、ベルギー、オランダ）は同じ800W規格に収斂しつつありますが、ドイツほどの登録データの深さはなく、英国、米国、アジア太平洋地域はいずれも初期段階です。' },
           { q: 'バルコニーソーラーはEU全域で合法ですか？', a: 'いいえ。フランス、オーストリア、ベルギー、オランダ、そして現在はドイツ（2025年12月以降、DIN VDE V 0126-95により）が簡易な800Wシステムを認めています。ギリシャはより厳格なゼロ逆潮流モデルを提案していますが、まだ公開協議中です。スウェーデンとハンガリーは、プラグイン型ソーラーが一般的に合法ではない例外として残っています。' },
-          { q: '英国でバルコニーソーラーは合法ですか？', a: 'はい、2026年4月以降、BS 7671 Amendment 4により合法です。ただし、英国の安全機関5団体は大規模展開前の慎重な対応を求めており、これに匹敵する検証済みの導入実績の集計はまだ存在しません。合法化はまだ大衆市場の普及には結びついていません。' },
+          { q: '英国でバルコニーソーラーは合法ですか？', a: 'はい、2026年8月27日以降、SI 2026/848により合法です。2026年4月のBS 7671 Amendment 4は付随する配線規則の改定であり、根拠法ではありません。ただし、英国の安全機関5団体は大規模展開前の慎重な対応を求めており、これに匹敵する検証済みの導入実績の集計はまだ存在しません。合法化はまだ大衆市場の普及には結びついていません。' },
           { q: 'バルコニーソーラーは米国全土で合法ですか？', a: 'いいえ。本稿執筆時点（2026年7月16日）で、8つの州が法律を成立させています（ユタ、メイン、バージニア、メリーランド、コロラド、ニューハンプシャー、バーモント、コネチカット）。ニューヨーク州のSUNNY Actは知事の署名を待つのみです。連邦法は存在せず、カリフォルニア州、フロリダ州、テキサス州にはまだ法律がありません。' },
           { q: '中国のバルコニーソーラー市場の状況はどうなっていますか？', a: '中国は世界最大のバルコニーソーラー機器輸出国であり、現在、別途の国内市場が台頭しつつあります。これは2026年5月に公表された初の産業規格T/GEA 001-2026によって制度化されました。単一情報源による推計（独立検証はされていません）では、2024年の国内設置件数は約1,000件で、2026年までに10万件以上に達すると予測されています。' },
           { q: '日本でバルコニーソーラーは合法ですか？', a: '日本にはプラグイン型・バルコニー型ソーラー専用の法制度が一切なく、出力上限、登録手続き、法的な適用除外のいずれも、どちらの方向にも存在しません。日本のRenewable Energy Instituteは、日本が国際的なベストプラクティスを取り入れることを推奨する政策分析を発表していますが、これは提言であり、成立した法律ではありません。' },
@@ -337,10 +337,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '阳台光伏全球市场规模概览（2026年）：各地区数据对比分析',
     metaDescription: '德国、欧盟、英国、美国与亚太地区的阳台光伏市场规模逐区解析，涵盖德国、欧盟、英国、美国及亚太地区的细分市场与增长驱动因素对比。',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-08-27',
     audience: '比较各地区阳台光伏市场规模与普及情况的读者',
     intro: '本文按地区逐一比较阳台光伏市场现状:德国成熟且经登记数据验证的市场基础;欧盟其他地区正在趋同的800W标准;英国刚刚合法化但仍持谨慎态度的推广情况;美国各州各行其是的拼图式局面;以及中国、日本所代表的、明显更早期的亚太地区市场活动。文中数据与PromptQuorum阳台光伏系列文章中引用的各国指南保持一致。',
-    leadAnswerBlock: '**德国是唯一拥有成熟、经登记数据验证的装机基础的阳台光伏市场——预计到2025年将达到400万套,较2017年的约4万套大幅增长——而欧盟其他地区正在趋同于同一800W标准,英国已于2026年4月将其合法化但尚未达到大众市场规模,美国仍是由8项已签署州法律构成的各州拼图式局面,亚太地区(中国、日本)则仍处于早期阶段,大多数情况下缺乏监管或登记制度。**',
+    leadAnswerBlock: '**德国是唯一拥有成熟、经登记数据验证的装机基础的阳台光伏市场——预计到2025年将达到400万套,较2017年的约4万套大幅增长——而欧盟其他地区正在趋同于同一800W标准,英国已于2026年8月27日开放插电式光伏的合法路径但尚未达到大众市场规模,美国仍是由8项已签署州法律构成的各州拼图式局面,亚太地区(中国、日本)则仍处于早期阶段,大多数情况下缺乏监管或登记制度。**',
     sections: {
       tldr: {
         id: 'tldr',
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '德国注册的阳台光伏系统数量从2017年的约4万套增长到2025年预计的400万套,仅2025年一年就新增约43万套注册(Bundesnetzagentur/Marktstammdatenregister数据)——这是同类中唯一全面且强制性的登记制度。',
           '法国、奥地利、比利时和荷兰已允许采用简化的仅需备案的800W阳台光伏;德国于2025年12月通过DIN VDE V 0126-95将其上限与该标准对齐。瑞典和匈牙利仍是欧盟内部明显的例外。',
-          '英国通过BS 7671 Amendment 4(自2026年4月起生效)将阳台光伏合法化,但英国五家安全机构呼吁在大规模推广前保持谨慎——合法但尚未成为主流。',
+          '英国通过SI 2026/848(自2026年8月27日起生效)将插电式阳台光伏合法化;BS 7671 Amendment 4(2026年4月)是配套的接线规范更新,而非授权法律。英国五家安全机构呼吁在大规模推广前保持谨慎。',
           '截至本文撰写时(2026年7月16日),美国已有8个州签署阳台光伏相关立法(犹他州、缅因州、弗吉尼亚州、马里兰州、科罗拉多州、新罕布什尔州、佛蒙特州、康涅狄格州),纽约州的SUNNY Act已获通过并等待州长签署——美国没有联邦层面的法律。',
           '中国于2026年5月发布了首个阳台光伏行业标准T/GEA 001-2026;单一信源估算(未经独立核实)显示2024年国内安装量约为1,000套,预计到2026年将超过10万套。',
           '日本完全没有针对插电式或阳台光伏的专门立法——既没有功率上限,也没有注册流程,也没有任何方向上的法律豁免——是本文所涉地区中制度化程度最低的一个。',
@@ -386,8 +386,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ukStatus: {
         title: '英国：早期阶段，尚未进入大众市场',
         image: '/images/balcony-solar-global-market-overview-uk-status-en.svg',
-        imageCaption: '通过BS 7671 Amendment 4（2026年4月起生效）实现合法化；英国五家安全机构呼吁在大规模推广前保持谨慎。',
-        content: '英国通过BS 7671 Amendment 4实现了阳台光伏合法化,该修订案自2026年4月起生效,是首次允许插电式并网系统的接线规范更新。合法化并不等同于市场成熟:英国五家安全机构呼吁在大规模推广前保持谨慎,这反映出与德国长达十年的登记数据相比,英国仍处于更早期的市场阶段。目前尚不存在与之相当的、经过核实的英国装机基础统计数据,因此该市场的普及数据应被视为待定,而非已确立的事实。',
+        imageCaption: '通过SI 2026/848（2026年8月27日起生效）实现合法化；英国五家安全机构呼吁在大规模推广前保持谨慎。',
+        content: '英国通过SI 2026/848实现了阳台光伏合法化,该法规自2026年8月27日起生效,是首次允许插电式并网系统的法定文件。BS 7671 Amendment 4(2026年4月)是配套的接线规范更新,其本身并未授权插座连接。合法化并不等同于市场成熟:英国五家安全机构呼吁在大规模推广前保持谨慎,这反映出与德国长达十年的登记数据相比,英国仍处于更早期的市场阶段。目前尚不存在与之相当的、经过核实的英国装机基础统计数据,因此该市场的普及数据应被视为待定,而非已确立的事实。',
       },
       driversHeadwinds: {
         title: '跨地区驱动因素与阻力',
@@ -402,7 +402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '全球阳台光伏市场规模有多大？', a: '德国是唯一拥有全面且经核实统计数据的市场:预计到2025年注册系统达400万套,较2017年的约4万套大幅增长(Bundesnetzagentur/Marktstammdatenregister数据)。其他国家目前尚未发布同等强制性、细致的登记数据,因此除德国以外的全球市场规模估算应被视为推测,而非经核实的统计数据。' },
           { q: '哪个地区在阳台光伏普及方面处于领先地位？', a: '德国在经核实的普及率方面遥遥领先,预计到2025年注册系统将达400万套。欧盟其他地区(法国、奥地利、比利时、荷兰)正在趋同于同一800W标准,但没有德国那样深厚的登记数据基础,而英国、美国及亚太地区均处于更早期阶段。' },
           { q: '阳台光伏在整个欧盟都合法吗？', a: '不是。法国、奥地利、比利时、荷兰以及现在的德国(自2025年12月起,通过DIN VDE V 0126-95)均允许简化的800W系统。希腊提出了更严格的零馈网模式,目前仍在公开征询意见阶段,而瑞典和匈牙利仍是插电式光伏总体上不合法的例外。' },
-          { q: '阳台光伏在英国合法吗？', a: '是的,自2026年4月起,通过BS 7671 Amendment 4实现合法化。然而,英国五家安全机构呼吁在大规模推广前保持谨慎,且目前尚不存在与之相当的经核实装机基础统计数据——合法化尚未转化为大众市场的普及。' },
+          { q: '阳台光伏在英国合法吗？', a: '是的,自2026年8月27日起,通过SI 2026/848实现合法化。2026年4月的BS 7671 Amendment 4是配套的接线规范修订,而非授权法律。然而,英国五家安全机构呼吁在大规模推广前保持谨慎,且目前尚不存在与之相当的经核实装机基础统计数据——合法化尚未转化为大众市场的普及。' },
           { q: '阳台光伏在整个美国都合法吗？', a: '不是。截至本文撰写时(2026年7月16日),已有8个州签署了相关法律(犹他州、缅因州、弗吉尼亚州、马里兰州、科罗拉多州、新罕布什尔州、佛蒙特州、康涅狄格州),纽约州的SUNNY Act仅等待州长签署。美国没有联邦层面的法律;加利福尼亚州、佛罗里达州和德克萨斯州仍无相关法律。' },
           { q: '中国的阳台光伏市场现状如何？', a: '中国是全球最大的阳台光伏设备出口国,目前一个独立的国内市场正在兴起,并通过2026年5月发布的首个行业标准T/GEA 001-2026实现制度化。单一信源估算(未经独立核实)显示,2024年国内安装量约为1,000套,预计到2026年将超过10万套。' },
           { q: '阳台光伏在日本合法吗？', a: '日本完全没有针对插电式或阳台光伏的专门立法——无论哪个方向,均无针对该产品类别的功率上限、注册流程或法律豁免。日本可再生能源研究所已发表政策分析,建议日本借鉴国际最佳实践,但这属于倡议,并非已颁布的法律。' },
@@ -418,10 +418,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Panorama del mercado global solar de balcón (2026)',
     metaDescription: 'Tamaño del mercado de energía solar de balcón por región: Alemania, UE, Reino Unido, EE. UU. y Asia-Pacífico, con desglose por segmento e impulsor.',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-08-27',
     audience: 'Lectores que comparan el tamaño y la adopción del mercado de energía solar de balcón entre regiones',
     intro: 'Este panorama compara la situación del mercado de energía solar de balcón región por región: la base madura y verificada por registro de Alemania; la norma de 800W hacia la que converge el resto de la UE; el despliegue recién legalizado pero aún cauteloso del Reino Unido; el mosaico estado por estado de Estados Unidos; y la actividad mucho más temprana de Asia-Pacífico en China y Japón. Las cifras coinciden con las guías por país citadas en toda la cobertura de solar de balcón de PromptQuorum.',
-    leadAnswerBlock: '**Alemania es el único mercado de energía solar de balcón con una base instalada madura y verificada por registro —una estimación de 4 millones de sistemas para 2025, frente a unos 40.000 en 2017—, mientras el resto de la UE converge hacia la misma norma de 800W, el Reino Unido legalizó las instalaciones en abril de 2026 sin alcanzar aún una escala de mercado masivo, Estados Unidos sigue siendo un mosaico estado por estado de 8 leyes firmadas, y Asia-Pacífico (China, Japón) sigue en una etapa temprana, en gran medida sin regulación ni registro.**',
+    leadAnswerBlock: '**Alemania es el único mercado de energía solar de balcón con una base instalada madura y verificada por registro —una estimación de 4 millones de sistemas para 2025, frente a unos 40.000 en 2017—, mientras el resto de la UE converge hacia la misma norma de 800W, el Reino Unido abrió una vía legal para la solar enchufable el 27 de agosto de 2026 sin alcanzar aún una escala de mercado masivo, Estados Unidos sigue siendo un mosaico estado por estado de 8 leyes firmadas, y Asia-Pacífico (China, Japón) sigue en una etapa temprana, en gran medida sin regulación ni registro.**',
     sections: {
       tldr: {
         id: 'tldr',
@@ -430,7 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Los sistemas de solar de balcón registrados en Alemania pasaron de unos 40.000 en 2017 a una estimación de 4 millones para 2025, con unos 430.000 nuevos registros solo en 2025 (Bundesnetzagentur/Marktstammdatenregister) — el único registro exhaustivo y obligatorio de este tipo.',
           'Francia, Austria, Bélgica y los Países Bajos ya permiten el solar de balcón de 800W con un registro simplificado por simple notificación; Alemania alineó su límite con esa norma en diciembre de 2025 mediante la DIN VDE V 0126-95. Suecia y Hungría siguen siendo excepciones claras dentro de la UE.',
-          'El Reino Unido legalizó el solar de balcón mediante el BS 7671 Amendment 4, vigente desde abril de 2026 — pero cinco organismos de seguridad del Reino Unido pidieron cautela antes de cualquier implementación masiva: legal, pero aún no masivo.',
+          'El Reino Unido legalizó el solar enchufable mediante el SI 2026/848, vigente desde el 27 de agosto de 2026 — la BS 7671 Amendment 4 (abril de 2026) fue la actualización complementaria de las normas de cableado, no la norma habilitante. Cinco organismos de seguridad del Reino Unido pidieron cautela antes de cualquier implementación masiva.',
           'Al momento de escribir esto (16-07-2026), 8 estados de EE. UU. han firmado legislación sobre solar de balcón (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), con la SUNNY Act de Nueva York aprobada y a la espera solo de la firma de la gobernadora — no existe una ley federal estadounidense.',
           'China publicó su primera norma industrial para solar de balcón, T/GEA 001-2026, en mayo de 2026; estimaciones de fuente única (no verificadas de forma independiente) sitúan las instalaciones domésticas de 2024 en unas 1.000 unidades, proyectando más de 100.000 para 2026.',
           'Japón no cuenta con legislación dedicada al solar plug-in o de balcón — sin límite de potencia, proceso de registro ni exención legal en ningún sentido — lo que la convierte en la región menos formalizada de las cubiertas aquí.',
@@ -467,8 +467,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ukStatus: {
         title: 'Reino Unido: etapa temprana, aún no es mercado masivo',
         image: '/images/balcony-solar-global-market-overview-uk-status-en.svg',
-        imageCaption: 'Legalizado mediante la BS 7671 Amendment 4 (en vigor desde abril de 2026); cinco organismos de seguridad del Reino Unido pidieron cautela antes de una implementación masiva.',
-        content: 'El Reino Unido legalizó el solar de balcón mediante la BS 7671 Amendment 4, en vigor desde abril de 2026 — la actualización de las normas de cableado que permite por primera vez sistemas plug-in conectados a la red. Legalización no es lo mismo que madurez de mercado: cinco organismos de seguridad del Reino Unido pidieron cautela antes de cualquier implementación masiva, lo que refleja la posición más temprana del país en comparación con una década de datos de registro en Alemania. Todavía no existe un recuento comparable y verificado de la base instalada en el Reino Unido, por lo que las cifras de adopción de este mercado deben tratarse como pendientes en lugar de establecidas.',
+        imageCaption: 'Legalizado mediante el SI 2026/848 (en vigor desde el 27 de agosto de 2026); cinco organismos de seguridad del Reino Unido pidieron cautela antes de una implementación masiva.',
+        content: 'El Reino Unido legalizó el solar de balcón mediante el SI 2026/848, en vigor desde el 27 de agosto de 2026 — la norma reglamentaria que permite por primera vez sistemas plug-in conectados a la red. La BS 7671 Amendment 4 (abril de 2026) fue la actualización complementaria de las normas de cableado; por sí sola no autorizaba la conexión a un enchufe. Legalización no es lo mismo que madurez de mercado: cinco organismos de seguridad del Reino Unido pidieron cautela antes de cualquier implementación masiva, lo que refleja la posición más temprana del país en comparación con una década de datos de registro en Alemania. Todavía no existe un recuento comparable y verificado de la base instalada en el Reino Unido, por lo que las cifras de adopción de este mercado deben tratarse como pendientes en lugar de establecidas.',
       },
       driversHeadwinds: {
         title: 'Impulsores y obstáculos comunes entre regiones',
@@ -483,7 +483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Qué tamaño tiene el mercado global de energía solar de balcón?', a: 'Alemania es el único mercado con un recuento exhaustivo y verificado: una estimación de 4 millones de sistemas registrados para 2025, frente a unos 40.000 en 2017 (Bundesnetzagentur/Marktstammdatenregister). Ningún otro país publica actualmente una cifra de registro obligatoria con un nivel de detalle comparable, por lo que las afirmaciones sobre el tamaño del mercado global fuera de Alemania deben tratarse como estimaciones y no como recuentos verificados.' },
           { q: '¿Qué región lidera la adopción de energía solar de balcón?', a: 'Alemania lidera por un amplio margen en adopción verificada, con una estimación de 4 millones de sistemas registrados para 2025. El resto de la UE (Francia, Austria, Bélgica, Países Bajos) converge hacia la misma norma de 800W pero sin la profundidad de registro de Alemania, y el Reino Unido, EE. UU. y Asia-Pacífico están todos en una etapa más temprana.' },
           { q: '¿Es legal la energía solar de balcón en toda la UE?', a: 'No. Francia, Austria, Bélgica, los Países Bajos y ahora Alemania (desde diciembre de 2025, mediante la DIN VDE V 0126-95) permiten sistemas simplificados de 800W. Grecia propone un modelo más estricto de cero inyección todavía en consulta pública, mientras Suecia y Hungría siguen siendo excepciones donde el solar plug-in generalmente no es legal.' },
-          { q: '¿Es legal la energía solar de balcón en el Reino Unido?', a: 'Sí, desde abril de 2026, mediante la BS 7671 Amendment 4. Sin embargo, cinco organismos de seguridad del Reino Unido pidieron cautela antes de una implementación masiva, y todavía no existe un recuento comparable y verificado de la base instalada — la legalización aún no se ha traducido en una adopción masiva.' },
+          { q: '¿Es legal la energía solar de balcón en el Reino Unido?', a: 'Sí, desde el 27 de agosto de 2026, mediante el SI 2026/848 — la BS 7671 Amendment 4 de abril de 2026 fue el cambio complementario en las normas de cableado, no la norma habilitante. Sin embargo, cinco organismos de seguridad del Reino Unido pidieron cautela antes de una implementación masiva, y todavía no existe un recuento comparable y verificado de la base instalada — la legalización aún no se ha traducido en una adopción masiva.' },
           { q: '¿Es legal la energía solar de balcón en todo EE. UU.?', a: 'No. Al momento de escribir esto (16-07-2026), 8 estados han firmado leyes (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), y la SUNNY Act de Nueva York solo espera la firma de la gobernadora. No existe una ley federal; California, Florida y Texas siguen sin una.' },
           { q: '¿Cuál es el estado del mercado de energía solar de balcón en China?', a: 'China es el mayor exportador mundial de hardware para solar de balcón, y ahora está surgiendo un mercado doméstico independiente, formalizado por su primera norma industrial, T/GEA 001-2026, publicada en mayo de 2026. Estimaciones de fuente única (no verificadas de forma independiente) sugieren unas 1.000 instalaciones domésticas en 2024, proyectando más de 100.000 para 2026.' },
           { q: '¿Es legal la energía solar de balcón en Japón?', a: 'Japón no cuenta con legislación dedicada al solar plug-in o de balcón — no existe límite de potencia, proceso de registro ni exención legal específica para esta categoría de producto en ningún sentido. El Renewable Energy Institute japonés ha publicado un análisis de política que recomienda que Japón adapte las mejores prácticas internacionales, pero se trata de defensa de políticas, no de una ley promulgada.' },
@@ -499,10 +499,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Panorama do mercado global solar de varanda (2026)',
     metaDescription: 'Tamanho do mercado de energia solar de varanda por região: Alemanha, UE, Reino Unido, EUA e Ásia-Pacífico, com detalhamento por segmento e fator.',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-08-27',
     audience: 'Leitores que comparam o tamanho e a adoção do mercado de energia solar de varanda entre regiões',
     intro: 'Este panorama compara a situação do mercado de energia solar de varanda região por região: a base madura e verificada por registro da Alemanha; a norma de 800W para a qual o restante da UE está convergindo; a implementação recém-legalizada, mas ainda cautelosa, do Reino Unido; o mosaico estado a estado dos Estados Unidos; e a atividade bem mais inicial da Ásia-Pacífico na China e no Japão. Os números coincidem com os guias por país citados em toda a cobertura de energia solar de varanda da PromptQuorum.',
-    leadAnswerBlock: '**A Alemanha é o único mercado de energia solar de varanda com uma base instalada madura e verificada por registro — uma estimativa de 4 milhões de sistemas até 2025, ante cerca de 40.000 em 2017 —, enquanto o restante da UE converge para a mesma norma de 800W, o Reino Unido legalizou as instalações em abril de 2026 sem ainda atingir escala de mercado de massa, os EUA continuam sendo um mosaico estado a estado de 8 leis assinadas, e a Ásia-Pacífico (China, Japão) ainda está em estágio inicial, em grande parte sem regulamentação ou registro.**',
+    leadAnswerBlock: '**A Alemanha é o único mercado de energia solar de varanda com uma base instalada madura e verificada por registro — uma estimativa de 4 milhões de sistemas até 2025, ante cerca de 40.000 em 2017 —, enquanto o restante da UE converge para a mesma norma de 800W, o Reino Unido abriu uma via legal para a solar plug-in em 27 de agosto de 2026 sem ainda atingir escala de mercado de massa, os EUA continuam sendo um mosaico estado a estado de 8 leis assinadas, e a Ásia-Pacífico (China, Japão) ainda está em estágio inicial, em grande parte sem regulamentação ou registro.**',
     sections: {
       tldr: {
         id: 'tldr',
@@ -511,7 +511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Os sistemas de energia solar de varanda registrados na Alemanha passaram de cerca de 40.000 em 2017 para uma estimativa de 4 milhões até 2025, com cerca de 430.000 novos registros somente em 2025 (Bundesnetzagentur/Marktstammdatenregister) — o único registro abrangente e obrigatório desse tipo.',
           'França, Áustria, Bélgica e Países Baixos já permitem energia solar de varanda de 800W com registro simplificado por simples notificação; a Alemanha alinhou seu limite a essa norma em dezembro de 2025 por meio da DIN VDE V 0126-95. Suécia e Hungria continuam sendo exceções claras dentro da UE.',
-          'O Reino Unido legalizou a energia solar de varanda por meio da BS 7671 Amendment 4, em vigor desde abril de 2026 — mas cinco órgãos de segurança do Reino Unido pediram cautela antes de qualquer implementação em massa: legal, mas ainda não popular.',
+          'O Reino Unido legalizou a solar plug-in por meio do SI 2026/848, em vigor desde 27 de agosto de 2026 — a BS 7671 Amendment 4 (abril de 2026) foi a atualização complementar das normas de fiação, não a norma habilitante. Cinco órgãos de segurança do Reino Unido pediram cautela antes de qualquer implementação em massa.',
           'Até o momento desta publicação (16-07-2026), 8 estados dos EUA assinaram legislação sobre energia solar de varanda (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), com o SUNNY Act de Nova York aprovado e aguardando apenas a assinatura da governadora — não existe uma lei federal nos EUA.',
           'A China publicou sua primeira norma industrial para energia solar de varanda, T/GEA 001-2026, em maio de 2026; estimativas de fonte única (não verificadas de forma independente) situam as instalações domésticas de 2024 em cerca de 1.000 unidades, projetando mais de 100.000 até 2026.',
           'O Japão não possui legislação dedicada à energia solar plug-and-play ou de varanda — sem limite de potência, processo de registro ou isenção legal em nenhum sentido — o que a torna a região menos formalizada entre as cobertas aqui.',
@@ -548,8 +548,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ukStatus: {
         title: 'Reino Unido: estágio inicial, ainda não é mercado de massa',
         image: '/images/balcony-solar-global-market-overview-uk-status-en.svg',
-        imageCaption: 'Legalizado pela BS 7671 Amendment 4 (em vigor desde abril de 2026); cinco órgãos de segurança do Reino Unido pediram cautela antes de uma implementação em larga escala.',
-        content: 'O Reino Unido legalizou a energia solar de varanda por meio da BS 7671 Amendment 4, em vigor desde abril de 2026 — a atualização das normas de fiação que permite, pela primeira vez, sistemas plug-in conectados à rede. Legalização não é o mesmo que maturidade de mercado: cinco órgãos de segurança do Reino Unido pediram cautela antes de qualquer implementação em massa, refletindo o estágio mais inicial do país em comparação com uma década de dados de registro na Alemanha. Ainda não existe uma contagem comparável e verificada da base instalada no Reino Unido, portanto os números de adoção para esse mercado devem ser tratados como pendentes, e não estabelecidos.',
+        imageCaption: 'Legalizado pelo SI 2026/848 (em vigor desde 27 de agosto de 2026); cinco órgãos de segurança do Reino Unido pediram cautela antes de uma implementação em larga escala.',
+        content: 'O Reino Unido legalizou a energia solar de varanda por meio do SI 2026/848, em vigor desde 27 de agosto de 2026 — o ato normativo que permite, pela primeira vez, sistemas plug-in conectados à rede. A BS 7671 Amendment 4 (abril de 2026) foi a atualização complementar das normas de fiação; por si só, não autorizava a ligação na tomada. Legalização não é o mesmo que maturidade de mercado: cinco órgãos de segurança do Reino Unido pediram cautela antes de qualquer implementação em massa, refletindo o estágio mais inicial do país em comparação com uma década de dados de registro na Alemanha. Ainda não existe uma contagem comparável e verificada da base instalada no Reino Unido, portanto os números de adoção para esse mercado devem ser tratados como pendentes, e não estabelecidos.',
       },
       driversHeadwinds: {
         title: 'Impulsionadores e obstáculos entre regiões',
@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Qual é o tamanho do mercado global de energia solar de varanda?', a: 'A Alemanha é o único mercado com uma contagem abrangente e verificada: uma estimativa de 4 milhões de sistemas registrados até 2025, ante cerca de 40.000 em 2017 (Bundesnetzagentur/Marktstammdatenregister). Nenhum outro país publica atualmente um número de registro obrigatório com nível de detalhe comparável, portanto afirmações sobre o tamanho do mercado global fora da Alemanha devem ser tratadas como estimativas, não como contagens verificadas.' },
           { q: 'Qual região lidera a adoção de energia solar de varanda?', a: 'A Alemanha lidera por uma ampla margem em adoção verificada, com uma estimativa de 4 milhões de sistemas registrados até 2025. O restante da UE (França, Áustria, Bélgica, Países Baixos) converge para a mesma norma de 800W, mas sem a profundidade de registro da Alemanha, e o Reino Unido, os EUA e a Ásia-Pacífico estão todos em um estágio mais inicial.' },
           { q: 'A energia solar de varanda é legal em toda a UE?', a: 'Não. França, Áustria, Bélgica, Países Baixos e agora a Alemanha (desde dezembro de 2025, por meio da DIN VDE V 0126-95) permitem sistemas simplificados de 800W. A Grécia propõe um modelo mais rígido de zero injeção ainda em consulta pública, enquanto Suécia e Hungria continuam sendo exceções onde a energia solar plug-in geralmente não é legal.' },
-          { q: 'A energia solar de varanda é legal no Reino Unido?', a: 'Sim, desde abril de 2026, por meio da BS 7671 Amendment 4. No entanto, cinco órgãos de segurança do Reino Unido pediram cautela antes de uma implementação em larga escala, e ainda não existe uma contagem comparável e verificada da base instalada — a legalização ainda não se traduziu em adoção de massa.' },
+          { q: 'A energia solar de varanda é legal no Reino Unido?', a: 'Sim, desde 27 de agosto de 2026, por meio do SI 2026/848 — a BS 7671 Amendment 4 de abril de 2026 foi a alteração complementar das normas de fiação, não a norma habilitante. No entanto, cinco órgãos de segurança do Reino Unido pediram cautela antes de uma implementação em larga escala, e ainda não existe uma contagem comparável e verificada da base instalada — a legalização ainda não se traduziu em adoção de massa.' },
           { q: 'A energia solar de varanda é legal em todos os EUA?', a: 'Não. Até o momento desta publicação (16-07-2026), 8 estados assinaram leis (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), com o SUNNY Act de Nova York aguardando apenas a assinatura da governadora. Não existe lei federal; Califórnia, Flórida e Texas continuam sem uma.' },
           { q: 'Qual é a situação do mercado de energia solar de varanda na China?', a: 'A China é a maior exportadora mundial de equipamentos de energia solar de varanda, e agora está emergindo um mercado doméstico separado, formalizado por sua primeira norma industrial, T/GEA 001-2026, publicada em maio de 2026. Estimativas de fonte única (não verificadas de forma independente) sugerem cerca de 1.000 instalações domésticas em 2024, projetando mais de 100.000 até 2026.' },
           { q: 'A energia solar de varanda é legal no Japão?', a: 'O Japão não possui legislação dedicada à energia solar plug-and-play ou de varanda — não existe limite de potência, processo de registro ou isenção legal específica para essa categoria de produto em nenhum sentido. O Renewable Energy Institute japonês publicou uma análise de política recomendando que o Japão adapte as melhores práticas internacionais, mas isso é defesa de política, não uma lei promulgada.' },
@@ -580,10 +580,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'نظرة عامة على سوق الطاقة الشمسية للشرفات (2026)',
     metaDescription: 'حجم سوق الطاقة الشمسية للشرفات حسب المنطقة في ألمانيا والاتحاد الأوروبي والمملكة المتحدة والولايات المتحدة وآسيا والمحيط الهادئ، مع تفصيل القطاعات.',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-08-27',
     audience: 'قراء يقارنون حجم سوق الطاقة الشمسية للشرفات ومعدلات تبنيها عبر مختلف المناطق',
     intro: 'تقارن هذه النظرة العامة وضع سوق الطاقة الشمسية للشرفات منطقة تلو الأخرى: القاعدة الناضجة والموثقة عبر السجل الرسمي في ألمانيا؛ معيار الـ800 واط الذي تتقارب نحوه بقية دول الاتحاد الأوروبي؛ الطرح المُشرَّع حديثًا لكن الحذر في المملكة المتحدة؛ نمط التشتت بين الولايات في الولايات المتحدة؛ والنشاط الأبكر بكثير في منطقة آسيا والمحيط الهادئ في الصين واليابان. تتطابق الأرقام هنا مع الأدلة الخاصة بكل دولة والمُشار إليها في جميع تغطية PromptQuorum للطاقة الشمسية للشرفات.',
-    leadAnswerBlock: '**تُعد ألمانيا السوق الوحيدة للطاقة الشمسية للشرفات التي تمتلك قاعدة تركيبات ناضجة وموثقة عبر السجل الرسمي — بتقدير يصل إلى 4 ملايين نظام بحلول 2025، ارتفاعًا من نحو 40,000 في 2017 — بينما تتقارب بقية دول الاتحاد الأوروبي نحو معيار الـ800 واط نفسه، وقد أضفت المملكة المتحدة الشرعية على التركيبات في أبريل 2026 دون أن تصل بعد إلى حجم السوق الجماهيرية، وتظل الولايات المتحدة تشكيلة متفرقة بين الولايات تضم 8 قوانين موقعة، بينما لا تزال منطقة آسيا والمحيط الهادئ (الصين واليابان) في مرحلة مبكرة تفتقر إلى التنظيم أو التسجيل في الغالب.**',
+    leadAnswerBlock: '**تُعد ألمانيا السوق الوحيدة للطاقة الشمسية للشرفات التي تمتلك قاعدة تركيبات ناضجة وموثقة عبر السجل الرسمي — بتقدير يصل إلى 4 ملايين نظام بحلول 2025، ارتفاعًا من نحو 40,000 في 2017 — بينما تتقارب بقية دول الاتحاد الأوروبي نحو معيار الـ800 واط نفسه، وقد فتحت المملكة المتحدة مسارًا قانونيًا للطاقة الشمسية القابلة للتوصيل في 27 أغسطس 2026 دون أن تصل بعد إلى حجم السوق الجماهيرية، وتظل الولايات المتحدة تشكيلة متفرقة بين الولايات تضم 8 قوانين موقعة، بينما لا تزال منطقة آسيا والمحيط الهادئ (الصين واليابان) في مرحلة مبكرة تفتقر إلى التنظيم أو التسجيل في الغالب.**',
     sections: {
       tldr: {
         id: 'tldr',
@@ -592,7 +592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'نمت أنظمة الطاقة الشمسية للشرفات المسجلة في ألمانيا من نحو 40,000 في 2017 إلى ما يُقدَّر بـ4 ملايين بحلول 2025، مع إضافة نحو 430,000 تسجيل جديد في عام 2025 وحده (بيانات Bundesnetzagentur/Marktstammdatenregister) — وهو السجل الشامل والإلزامي الوحيد من نوعه.',
           'تسمح فرنسا والنمسا وبلجيكا وهولندا بالفعل بأنظمة 800 واط للشرفات بتسجيل مبسط قائم على الإخطار فقط؛ وانضمت ألمانيا إلى هذا المعيار في ديسمبر 2025 عبر معيار DIN VDE V 0126-95. وتظل السويد والمجر استثناءين واضحين داخل الاتحاد الأوروبي.',
-          'أضفت المملكة المتحدة الشرعية على الطاقة الشمسية للشرفات عبر BS 7671 Amendment 4، الساري منذ أبريل 2026 — لكن خمس هيئات سلامة بريطانية دعت إلى الحذر قبل أي طرح واسع النطاق: قانوني لكنه ليس سائدًا بعد.',
+          'أضفت المملكة المتحدة الشرعية على الطاقة الشمسية القابلة للتوصيل عبر SI 2026/848، الساري منذ 27 أغسطس 2026 — وكان BS 7671 Amendment 4 (أبريل 2026) التحديث المصاحب للوائح التوصيلات الكهربائية، لا القانون المُخوِّل. ودعت خمس هيئات سلامة بريطانية إلى الحذر قبل أي طرح واسع النطاق.',
           'حتى تاريخ كتابة هذا المقال (16-07-2026)، وقّعت 8 ولايات أمريكية تشريعات خاصة بالطاقة الشمسية للشرفات (يوتا، مين، فرجينيا، ماريلاند، كولورادو، نيوهامبشير، فيرمونت، كونيتيكت)، مع إقرار قانون SUNNY في نيويورك وانتظاره فقط توقيع الحاكمة — ولا يوجد قانون فيدرالي أمريكي.',
           'نشرت الصين أول معيار صناعي خاص بالطاقة الشمسية للشرفات، T/GEA 001-2026، في مايو 2026؛ وتشير تقديرات من مصدر واحد (لم يتم التحقق منها بشكل مستقل) إلى نحو 1,000 تركيب محلي في 2024، مع توقعات تتجاوز 100,000 بحلول 2026.',
           'لا تمتلك اليابان أي تشريع مخصص للطاقة الشمسية القابلة للتوصيل أو طاقة الشرفات — لا حد أقصى للطاقة، ولا إجراء تسجيل، ولا إعفاء قانوني في أي من الاتجاهين — ما يجعلها أقل المناطق تنظيمًا من بين المناطق المشمولة هنا.',
@@ -629,8 +629,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ukStatus: {
         title: 'المملكة المتحدة: مرحلة مبكرة، ولم تصل بعد إلى السوق الجماهيرية',
         image: '/images/balcony-solar-global-market-overview-uk-status-en.svg',
-        imageCaption: 'تم إضفاء الشرعية عبر BS 7671 Amendment 4 (ساري المفعول منذ أبريل 2026)؛ ودعت خمس هيئات سلامة بريطانية إلى الحذر قبل أي طرح واسع النطاق.',
-        content: 'أضفت المملكة المتحدة الشرعية على الطاقة الشمسية للشرفات عبر BS 7671 Amendment 4، الساري منذ أبريل 2026 — وهو تحديث لوائح التوصيلات الكهربائية الذي يسمح لأول مرة بأنظمة قابلة للتوصيل ومتصلة بالشبكة. الشرعنة ليست مرادفة لنضج السوق: دعت خمس هيئات سلامة بريطانية إلى الحذر قبل أي طرح واسع النطاق، وهو ما يعكس مرحلة الدولة المبكرة مقارنة بعقد كامل من بيانات السجل في ألمانيا. لا يوجد بعد إحصاء موثّق مماثل لقاعدة التركيبات في المملكة المتحدة، لذا ينبغي التعامل مع أرقام التبني لهذه السوق باعتبارها معلقة وليست ثابتة.',
+        imageCaption: 'تم إضفاء الشرعية عبر SI 2026/848 (ساري المفعول منذ 27 أغسطس 2026)؛ ودعت خمس هيئات سلامة بريطانية إلى الحذر قبل أي طرح واسع النطاق.',
+        content: 'أضفت المملكة المتحدة الشرعية على الطاقة الشمسية للشرفات عبر SI 2026/848، الساري منذ 27 أغسطس 2026 — وهو النص التنظيمي الذي يسمح لأول مرة بأنظمة قابلة للتوصيل ومتصلة بالشبكة. أما BS 7671 Amendment 4 (أبريل 2026) فكان التحديث المصاحب للوائح التوصيلات الكهربائية، ولم يكن وحده يجيز التوصيل عبر المقبس. الشرعنة ليست مرادفة لنضج السوق: دعت خمس هيئات سلامة بريطانية إلى الحذر قبل أي طرح واسع النطاق، وهو ما يعكس مرحلة الدولة المبكرة مقارنة بعقد كامل من بيانات السجل في ألمانيا. لا يوجد بعد إحصاء موثّق مماثل لقاعدة التركيبات في المملكة المتحدة، لذا ينبغي التعامل مع أرقام التبني لهذه السوق باعتبارها معلقة وليست ثابتة.',
       },
       driversHeadwinds: {
         title: 'المحركات والمعوقات المشتركة بين المناطق',
@@ -645,7 +645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ما حجم السوق العالمية للطاقة الشمسية للشرفات؟', a: 'ألمانيا هي السوق الوحيدة التي تمتلك إحصاءً شاملاً وموثقًا: بتقدير يصل إلى 4 ملايين نظام مسجل بحلول 2025، ارتفاعًا من نحو 40,000 في 2017 (بيانات Bundesnetzagentur/Marktstammdatenregister). لا تنشر أي دولة أخرى حاليًا رقم تسجيل إلزاميًا بمستوى تفصيل مماثل، لذا ينبغي التعامل مع الادعاءات حول حجم السوق العالمية خارج ألمانيا باعتبارها تقديرات لا إحصاءات موثقة.' },
           { q: 'أي منطقة تتصدر تبنّي الطاقة الشمسية للشرفات؟', a: 'تتصدر ألمانيا بفارق كبير في التبنّي الموثّق، بتقدير يصل إلى 4 ملايين نظام مسجل بحلول 2025. وتتقارب بقية دول الاتحاد الأوروبي (فرنسا والنمسا وبلجيكا وهولندا) نحو معيار الـ800 واط نفسه لكن دون عمق سجل ألمانيا، بينما لا تزال المملكة المتحدة والولايات المتحدة ومنطقة آسيا والمحيط الهادئ جميعها في مرحلة أبكر.' },
           { q: 'هل الطاقة الشمسية للشرفات قانونية في كل أنحاء الاتحاد الأوروبي؟', a: 'لا. تسمح فرنسا والنمسا وبلجيكا وهولندا، والآن ألمانيا (منذ ديسمبر 2025 عبر DIN VDE V 0126-95)، بأنظمة مبسطة بقدرة 800 واط. تقترح اليونان نموذجًا أكثر صرامة لعدم التصدير لا يزال قيد التشاور العام، بينما تظل السويد والمجر استثناءين حيث لا تُعد الطاقة الشمسية القابلة للتوصيل قانونية عمومًا.' },
-          { q: 'هل الطاقة الشمسية للشرفات قانونية في المملكة المتحدة؟', a: 'نعم، منذ أبريل 2026، عبر BS 7671 Amendment 4. ومع ذلك، دعت خمس هيئات سلامة بريطانية إلى الحذر قبل أي طرح واسع النطاق، ولا يوجد بعد إحصاء موثّق مماثل لقاعدة التركيبات — فالشرعنة لم تتحول بعد إلى تبنٍّ جماهيري.' },
+          { q: 'هل الطاقة الشمسية للشرفات قانونية في المملكة المتحدة؟', a: 'نعم، منذ 27 أغسطس 2026، عبر SI 2026/848 — وكان BS 7671 Amendment 4 في أبريل 2026 التغيير المصاحب للوائح التوصيلات الكهربائية، لا القانون المُخوِّل. ومع ذلك، دعت خمس هيئات سلامة بريطانية إلى الحذر قبل أي طرح واسع النطاق، ولا يوجد بعد إحصاء موثّق مماثل لقاعدة التركيبات — فالشرعنة لم تتحول بعد إلى تبنٍّ جماهيري.' },
           { q: 'هل الطاقة الشمسية للشرفات قانونية في جميع أنحاء الولايات المتحدة؟', a: 'لا. حتى تاريخ كتابة هذا المقال (16-07-2026)، وقّعت 8 ولايات قوانين (يوتا، مين، فرجينيا، ماريلاند، كولورادو، نيوهامبشير، فيرمونت، كونيتيكت)، وينتظر قانون SUNNY في نيويورك فقط توقيع الحاكمة. لا يوجد قانون فيدرالي؛ ولا تزال كاليفورنيا وفلوريدا وتكساس بلا قانون.' },
           { q: 'ما وضع سوق الطاقة الشمسية للشرفات في الصين؟', a: 'الصين هي أكبر مُصدّر عالمي لمعدات الطاقة الشمسية للشرفات، وتنشأ الآن سوق محلية منفصلة، أُضفيت عليها الصفة الرسمية عبر أول معيار صناعي، T/GEA 001-2026، الذي نُشر في مايو 2026. تشير تقديرات من مصدر واحد (لم يتم التحقق منها بشكل مستقل) إلى نحو 1,000 تركيب محلي في 2024، مع توقعات تتجاوز 100,000 بحلول 2026.' },
           { q: 'هل الطاقة الشمسية للشرفات قانونية في اليابان؟', a: 'لا تمتلك اليابان أي تشريع مخصص للطاقة الشمسية القابلة للتوصيل أو طاقة الشرفات — لا يوجد حد أقصى للطاقة، ولا إجراء تسجيل، ولا إعفاء قانوني خاص بهذه الفئة من المنتجات في أي من الاتجاهين. نشر معهد الطاقة المتجددة الياباني تحليلاً سياسيًا يوصي بأن تتبنى اليابان أفضل الممارسات الدولية، لكن هذا مجرد مناصرة سياسية وليس قانونًا صادرًا.' },
@@ -661,10 +661,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '발코니 태양광 글로벌 시장 개요(2026년): 지역별 분석',
     metaDescription: '독일, EU, 영국, 미국, 아시아태평양의 발코니 태양광 시장 규모를 지역별로 비교하고 세그먼트와 성장 요인을 정리했습니다.',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-08-27',
     audience: '지역별 발코니 태양광 시장 규모와 보급 현황을 비교하는 독자',
     intro: '이 개요는 발코니 태양광 시장 현황을 지역별로 비교합니다: 독일의 성숙하고 등록 데이터로 검증된 기반, EU 나머지 국가들이 수렴하고 있는 800W 규격, 합법화되었지만 아직 신중한 태도를 보이는 영국의 도입 상황, 주(州)별로 제각각인 미국의 상황, 그리고 중국과 일본을 중심으로 훨씬 초기 단계에 있는 아시아태평양 지역입니다. 이 수치는 PromptQuorum의 발코니 태양광 관련 콘텐츠 전반에서 인용하는 국가별 가이드와 일치합니다.',
-    leadAnswerBlock: '**독일은 등록 데이터로 검증된 성숙한 설치 기반을 보유한 유일한 발코니 태양광 시장으로, 2017년 약 4만 건에서 2025년까지 추정 400만 건으로 증가했습니다. 반면 나머지 EU 국가들은 동일한 800W 규격으로 수렴하고 있고, 영국은 2026년 4월 설치를 합법화했지만 아직 대중 시장 규모에는 도달하지 못했으며, 미국은 8개 주법이 서명된 주별 분산 상태가 이어지고 있고, 아시아태평양(중국, 일본)은 여전히 초기 단계로 규제나 등록 제도가 대부분 미비합니다.**',
+    leadAnswerBlock: '**독일은 등록 데이터로 검증된 성숙한 설치 기반을 보유한 유일한 발코니 태양광 시장으로, 2017년 약 4만 건에서 2025년까지 추정 400만 건으로 증가했습니다. 반면 나머지 EU 국가들은 동일한 800W 규격으로 수렴하고 있고, 영국은 2026년 8월 27일 플러그인 태양광의 합법적 경로를 열었지만 아직 대중 시장 규모에는 도달하지 못했으며, 미국은 8개 주법이 서명된 주별 분산 상태가 이어지고 있고, 아시아태평양(중국, 일본)은 여전히 초기 단계로 규제나 등록 제도가 대부분 미비합니다.**',
     sections: {
       tldr: {
         id: 'tldr',
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '독일의 등록된 발코니 태양광 시스템은 2017년 약 4만 건에서 2025년까지 추정 400만 건으로 증가했으며, 2025년 한 해에만 약 43만 건의 신규 등록이 추가되었습니다(Bundesnetzagentur/Marktstammdatenregister 데이터). 이는 이런 종류의 유일한 포괄적·의무적 등록 제도입니다.',
           '프랑스, 오스트리아, 벨기에, 네덜란드는 이미 신고만으로 가능한 간소화된 등록 절차로 800W 발코니 태양광을 허용하고 있으며, 독일은 2025년 12월 DIN VDE V 0126-95를 통해 이 기준에 맞췄습니다. 스웨덴과 헝가리는 EU 내에서도 명확한 예외로 남아 있습니다.',
-          '영국은 2026년 4월 시행된 BS 7671 Amendment 4를 통해 발코니 태양광을 합법화했지만, 영국 안전 기관 5곳이 대규모 도입 전 신중한 접근을 촉구했습니다. 합법이지만 아직 대중화되지는 않았습니다.',
+          '영국은 2026년 8월 27일 시행된 SI 2026/848을 통해 플러그인 발코니 태양광을 합법화했습니다. BS 7671 Amendment 4(2026년 4월)는 이를 뒷받침한 배선 규정 개정이며 수권 법령은 아닙니다. 영국 안전 기관 5곳은 대규모 도입 전 신중한 접근을 촉구했습니다.',
           '본고 작성 시점(2026년 7월 16일) 기준, 미국의 8개 주가 발코니 태양광 관련 법안에 서명했습니다(유타, 메인, 버지니아, 메릴랜드, 콜로라도, 뉴햄프셔, 버몬트, 코네티컷). 뉴욕주의 SUNNY Act는 통과되어 주지사의 서명만 남았으며, 연방법은 존재하지 않습니다.',
           '중국은 2026년 5월 첫 발코니 태양광 산업 표준 T/GEA 001-2026을 발표했습니다. 단일 출처 추정치(독립적으로 검증되지 않음)에 따르면 2024년 국내 설치 건수는 약 1,000건이며, 2026년까지 10만 건 이상으로 늘어날 것으로 예측됩니다.',
           '일본은 플러그인형 또는 발코니 태양광에 대한 전용 법률이 전혀 없습니다 — 와트 상한, 등록 절차, 법적 예외 조항이 어느 방향으로도 존재하지 않으며, 여기서 다룬 지역 중 제도화 수준이 가장 낮습니다.',
@@ -710,8 +710,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ukStatus: {
         title: '영국: 초기 단계, 아직 대중 시장 미도달',
         image: '/images/balcony-solar-global-market-overview-uk-status-en.svg',
-        imageCaption: 'BS 7671 Amendment 4(2026년 4월 시행)를 통해 합법화되었으며, 영국 안전 기관 5곳이 대규모 도입 전 신중한 접근을 권고했습니다.',
-        content: '영국은 2026년 4월 시행된 BS 7671 Amendment 4를 통해 발코니 태양광을 합법화했습니다 — 이는 플러그인형 계통 연계 시스템을 처음으로 허용하는 배선 규정 개정입니다. 합법화가 곧 시장 성숙을 의미하지는 않습니다. 영국 안전 기관 5곳은 대규모 도입 전 신중한 접근을 촉구했으며, 이는 독일의 10년에 걸친 등록 데이터와 비교했을 때 영국이 더 초기 단계에 있음을 반영합니다. 이에 필적할 만한 검증된 영국의 설치 기반 집계는 아직 존재하지 않으므로, 이 시장의 보급 수치는 확정된 것이 아니라 미결로 다뤄야 합니다.',
+        imageCaption: 'SI 2026/848(2026년 8월 27일 시행)을 통해 합법화되었으며, 영국 안전 기관 5곳이 대규모 도입 전 신중한 접근을 권고했습니다.',
+        content: '영국은 2026년 8월 27일 시행된 SI 2026/848을 통해 발코니 태양광을 합법화했습니다 — 이는 플러그인형 계통 연계 시스템을 처음으로 허용하는 법령입니다. BS 7671 Amendment 4(2026년 4월)는 이를 뒷받침한 배선 규정 개정으로, 그 자체로 콘센트 연결을 허용하지는 않았습니다. 합법화가 곧 시장 성숙을 의미하지는 않습니다. 영국 안전 기관 5곳은 대규모 도입 전 신중한 접근을 촉구했으며, 이는 독일의 10년에 걸친 등록 데이터와 비교했을 때 영국이 더 초기 단계에 있음을 반영합니다. 이에 필적할 만한 검증된 영국의 설치 기반 집계는 아직 존재하지 않으므로, 이 시장의 보급 수치는 확정된 것이 아니라 미결로 다뤄야 합니다.',
       },
       driversHeadwinds: {
         title: '지역 간 공통된 성장 요인과 걸림돌',
@@ -726,7 +726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '글로벌 발코니 태양광 시장 규모는 얼마나 되나요?', a: '독일은 포괄적이고 검증된 집계를 갖춘 유일한 시장으로, 2025년까지 추정 400만 건의 등록 시스템을 보유하고 있으며 2017년 약 4만 건에서 증가했습니다(Bundesnetzagentur/Marktstammdatenregister). 다른 어떤 국가도 현재 이에 필적할 만큼 의무적이고 세분화된 등록 수치를 발표하지 않으므로, 독일 외 지역의 글로벌 시장 규모 주장은 검증된 집계가 아니라 추정치로 다뤄야 합니다.' },
           { q: '어느 지역이 발코니 태양광 보급을 주도하고 있나요?', a: '독일이 검증된 보급률에서 큰 격차로 앞서 있으며, 2025년까지 추정 400만 건의 등록 시스템을 보유하고 있습니다. 나머지 EU(프랑스, 오스트리아, 벨기에, 네덜란드)는 동일한 800W 규격으로 수렴하고 있지만 독일만큼의 등록 데이터 깊이는 없으며, 영국, 미국, 아시아태평양은 모두 더 초기 단계입니다.' },
           { q: 'EU 전역에서 발코니 태양광이 합법인가요?', a: '아니요. 프랑스, 오스트리아, 벨기에, 네덜란드, 그리고 이제 독일(2025년 12월부터, DIN VDE V 0126-95를 통해)이 간소화된 800W 시스템을 허용합니다. 그리스는 아직 공개 의견 수렴 중인 더 엄격한 제로 역송전 모델을 제안하고 있으며, 스웨덴과 헝가리는 플러그인형 태양광이 일반적으로 합법이 아닌 예외로 남아 있습니다.' },
-          { q: '영국에서 발코니 태양광이 합법인가요?', a: '네, 2026년 4월부터 BS 7671 Amendment 4를 통해 합법입니다. 다만 영국 안전 기관 5곳이 대규모 도입 전 신중한 접근을 촉구했으며, 이에 필적할 만한 검증된 설치 기반 집계는 아직 없습니다 — 합법화가 아직 대중 보급으로 이어지지는 않았습니다.' },
+          { q: '영국에서 발코니 태양광이 합법인가요?', a: '네, 2026년 8월 27일부터 SI 2026/848을 통해 합법입니다. 2026년 4월의 BS 7671 Amendment 4는 이를 뒷받침한 배선 규정 개정이며 수권 법령은 아닙니다. 다만 영국 안전 기관 5곳이 대규모 도입 전 신중한 접근을 촉구했으며, 이에 필적할 만한 검증된 설치 기반 집계는 아직 없습니다 — 합법화가 아직 대중 보급으로 이어지지는 않았습니다.' },
           { q: '미국 전역에서 발코니 태양광이 합법인가요?', a: '아니요. 본고 작성 시점(2026년 7월 16일) 기준 8개 주가 법에 서명했습니다(유타, 메인, 버지니아, 메릴랜드, 콜로라도, 뉴햄프셔, 버몬트, 코네티컷). 뉴욕주의 SUNNY Act는 주지사의 서명만 남아 있습니다. 연방법은 없으며, 캘리포니아, 플로리다, 텍사스는 아직 법이 없습니다.' },
           { q: '중국의 발코니 태양광 시장 상황은 어떤가요?', a: '중국은 세계 최대의 발코니 태양광 장비 수출국이며, 이제 별도의 국내 시장이 부상하고 있습니다. 이는 2026년 5월 발표된 첫 산업 표준 T/GEA 001-2026을 통해 제도화되었습니다. 단일 출처 추정치(독립적으로 검증되지 않음)는 2024년 국내 설치 건수가 약 1,000건이며, 2026년까지 10만 건 이상으로 늘어날 것으로 예측합니다.' },
           { q: '일본에서 발코니 태양광이 합법인가요?', a: '일본은 플러그인형 또는 발코니 태양광에 대한 전용 법률이 없습니다 — 이 제품 카테고리에 특화된 와트 상한, 등록 절차, 법적 예외 조항이 어느 방향으로도 존재하지 않습니다. 일본의 자연에너지재단은 국제 모범 사례를 채택하도록 권고하는 정책 분석을 발표했지만, 이는 제언일 뿐 제정된 법률은 아닙니다.' },

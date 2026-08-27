@@ -89,6 +89,9 @@ import { article as a_balkonstrom_balcony_solar } from './articles/balkonstrom-b
 import { article as a_green_solar_pluginenergy_balcony_solar } from './articles/green-solar-pluginenergy-balcony-solar'
 import { article as a_meyer_burger_solarwatt_heckert_balcony_solar } from './articles/meyer-burger-solarwatt-heckert-balcony-solar'
 
+// TIER 3 extension — GB plug-in solar legislation + buying guide (BSOL-52)
+import { article as a_plug_in_balcony_solar_uk_rules } from './articles/plug-in-balcony-solar-uk-rules'
+
 export const balconySolarContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   // TIER 1 — Hub + core money pages (all 5 authored, EN-only)
   'what-is-balcony-solar':                    a_what_is_balcony_solar,
@@ -162,4 +165,7 @@ export const balconySolarContent: Record<string, Partial<Record<Language, LLMArt
   'balkonstrom-balcony-solar':                         a_balkonstrom_balcony_solar,
   'green-solar-pluginenergy-balcony-solar':            a_green_solar_pluginenergy_balcony_solar,
   'meyer-burger-solarwatt-heckert-balcony-solar':      a_meyer_burger_solarwatt_heckert_balcony_solar,
+
+  // TIER 3 extension — GB plug-in solar legislation + buying guide
+  'plug-in-balcony-solar-uk-rules':                    a_plug_in_balcony_solar_uk_rules,
 }
