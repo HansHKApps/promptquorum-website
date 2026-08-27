@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'CISOs, procurement teams, and compliance officers choosing between proprietary and open-weight LLMs',
     primaryTerm: 'GDPR risk comparison LLM models',
     leadAnswerBlock: '**DeepSeek API presents the highest GDPR risk of any major LLM due to Chinese data-access law (PIPL); Qwen and Llama run locally carry equivalent low risk; Claude and GPT-5.6 APIs with EU residency carry medium risk and require Standard Contractual Clauses (SCCs).**',
-    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 5', 'GPT-5.6 Luna', 'Claude Opus 4.8'],
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 5', 'GPT-5.6 Luna', 'Claude Opus 5'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     quickAnswerTop: {
       en: {
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'CISOs, equipos de adquisiciones y responsables de cumplimiento que eligen entre LLMs propietarios y de pesos abiertos',
     primaryTerm: 'comparación de riesgo RGPD modelos LLM',
     leadAnswerBlock: '**La API de DeepSeek presenta el mayor riesgo RGPD de cualquier LLM importante debido a la ley china de acceso a datos (PIPL); Qwen y Llama ejecutados localmente tienen un riesgo igualmente bajo; las API de Claude y GPT-5.6 con residencia EU tienen riesgo medio y requieren Cláusulas Contractuales Estándar (SCCs).**',
-    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 5', 'GPT-5.6 Luna', 'Claude Opus 4.8'],
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 5', 'GPT-5.6 Luna', 'Claude Opus 5'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     toc: [
       { label: 'Cuatro vectores de riesgo RGPD para LLMs', anchor: 'risk-vectors' },
@@ -442,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'مديرو أمن المعلومات وفرق المشتريات ومسؤولو الامتثال الذين يختارون بين نماذج LLM الاحتكارية ومفتوحة الأوزان',
     primaryTerm: 'مقارنة مخاطر GDPR لنماذج LLM',
     leadAnswerBlock: '**يمثل DeepSeek API أعلى مخاطر GDPR بين جميع نماذج LLM الرئيسية بسبب قانون الوصول إلى البيانات الصيني (PIPL)؛ ويتمتع Qwen و Llama المشغّلان محليًا بمخاطر منخفضة بالقدر نفسه؛ وتنطوي واجهات Claude و GPT-5.6 مع إقامة بيانات في الاتحاد الأوروبي على مخاطر متوسطة وتتطلب البنود التعاقدية القياسية (SCCs).**',
-    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 5', 'GPT-5.6 Luna', 'Claude Opus 4.8'],
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 5', 'GPT-5.6 Luna', 'Claude Opus 5'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     toc: [
       { label: 'أربعة متجهات مخاطر GDPR لنماذج LLM', anchor: 'risk-vectors' },
@@ -975,7 +975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'CISOs, equipes de compras e responsáveis por conformidade que escolhem entre LLMs proprietários e de pesos abertos',
     primaryTerm: 'comparação de risco GDPR modelos LLM',
     leadAnswerBlock: '**A API da DeepSeek apresenta o maior risco de GDPR entre os principais LLMs por causa da lei chinesa de acesso a dados (PIPL); Qwen e Llama executados localmente têm risco igualmente baixo; as APIs de Claude e GPT-5.6 com residência na UE têm risco médio e exigem Cláusulas Contratuais Padrão (SCCs).**',
-    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 5', 'GPT-5.6 Luna', 'Claude Opus 4.8'],
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 5', 'GPT-5.6 Luna', 'Claude Opus 5'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     quickAnswerTop: {
       pt: {
@@ -1181,7 +1181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: '독점적 LLM과 오픈 웨이트 LLM 중에서 선택하는 CISO, 조달팀, 컴플라이언스 담당자',
     primaryTerm: 'GDPR 리스크 비교 LLM 모델',
     leadAnswerBlock: '**DeepSeek API는 중국 데이터 접근법(PIPL)으로 인해 주요 LLM 중 GDPR 리스크가 가장 높습니다. Qwen과 Llama를 로컬로 실행하면 동등하게 낮은 위험을 가집니다. EU 데이터 거주지를 갖춘 Claude 및 GPT-5.6 API는 중간 위험을 가지며 표준 계약 조항(SCC)이 필요합니다.**',
-    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 5', 'GPT-5.6 Luna', 'Claude Opus 4.8'],
+    current_models_mentioned: ['DeepSeek', 'DeepSeek API', 'Qwen 3 14B', 'Qwen local', 'Llama 4 Scout', 'Claude Sonnet 5', 'GPT-5.6 Luna', 'Claude Opus 5'],
     current_hardware_mentioned: ['16 GB VRAM', '24 GB VRAM', 'multi-GPU'],
     quickAnswerTop: {
       ko: {

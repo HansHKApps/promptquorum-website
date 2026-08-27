@@ -11,6 +11,12 @@
       "action": "refresh",
       "summary": "Added gpt-oss-120b, gpt-oss-20b, Qwen3-30B-A3B (build-blocking unknown models from strix-halo-ollama-vulkan), and closed a pre-existing GPT-5.1 to GPT-5.4 dangling superseded_by reference by adding the missing GPT-5.4 entry. All verified against official sources (OpenAI HF repos + announcement, Qwen3 GitHub org). Full lab sweep not run this cycle -- scoped to closing the build break and the models it surfaced.",
       "branch": "main"
+    },
+    {
+      "date": "2026-08-27",
+      "action": "refresh",
+      "summary": "Full lab sweep (13 official sources + AWS Bedrock corroboration): added Claude Opus 5, Gemini 3.7 Flash/3.5 Flash-Lite/3.1 Deep Think, Grok 4.6, GLM-5.3, Kimi K3, Qwen3.8-Max/27B/Flash-Next, Ministral 3. Superseded Opus 4.8, Gemini 3.5 Flash, Gemini 3.1 Flash-Lite, Grok 4.5, GLM-5.2, Kimi K2.6, Qwen3.7-Max. Site diff surfaced 47 new (non-baselined) violations across 13 EN files (Claude Opus 4.8, Kimi K2.6, GLM-5.2 mentions) -- reported to owner as a brief, no page edits made yet pending direction.",
+      "branch": "main"
     }
   ]
 }
