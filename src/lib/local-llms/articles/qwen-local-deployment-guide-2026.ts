@@ -14,7 +14,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Run Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder and Qwen2-VL locally in 2026. VRAM requirements, Ollama + LM Studio setup, Q4_K_M benchmarks, and hardware tier guide.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-en.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_seo_review_due: '2026-10-01',
+    last_seo_review: '2026-08-27',
     readTime: '14 min read',
     educationalLevel: 'Intermediate',
     audience: 'Developers, researchers, and privacy-focused users who want to run the full Qwen model family locally — including Chinese-language users who prefer Alibaba\'s models over US alternatives',
@@ -51,7 +54,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RTX 4090 24 GB',
       'Apple M3 Max',
       'Apple M2 Ultra',
-      'Mac mini M4',
+      'Mac mini M5 Pro',
+      'Mac mini M6',
     ],
     affiliateDisclosure: true,
     ctaText: 'Dispatch across Qwen3, DeepSeek, and Llama from one interface →',
@@ -80,7 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Qwen Local Deployment Guide 2026: Run Qwen 3.6 27B, Qwen3, Coder & VL at Every Hardware Tier',
       description: 'Complete guide to deploying the Qwen model family locally — Qwen 3.6 27B, Qwen3, Qwen2.5, Coder, and VL VRAM requirements, Ollama and LM Studio setup, quantization, benchmarks, and hardware recommendations.',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-08-27',
       inLanguage: 'en',
       url: 'https://www.promptquorum.com/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/', url: 'https://www.promptquorum.com' },
@@ -192,7 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tableFormat: true,
         note: 'VRAM figures are for Q4_K_M GGUF files from the Ollama library. Add 1–2 GB for the KV cache at 4K context. If your GPU has less VRAM than the model needs, Ollama automatically offloads layers to system RAM — this works but reduces speed significantly.',
         callouts: [
-          { type: 'tip', text: 'Found your VRAM tier? See [exactly which GPU or Mac to buy for that tier](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M4 Pro or dual GPU.' },
+          { type: 'tip', text: 'Found your VRAM tier? See [exactly which GPU or Mac to buy for that tier](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M5 Pro or dual GPU.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-en.webp',
         imageCaption: 'Qwen3 VRAM requirements by model size (Q4_K_M) — PromptQuorum 2026',
@@ -322,7 +326,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'affiliate-picks',
         title: 'Which Hardware Should You Buy for Qwen3 Deployment?',
         content: [
-          '**Match your target Qwen tier to VRAM first, then buy the cheapest card that clears it — paying for more VRAM than your model needs is the most common overspend on this list.** The picks below map directly to the hardware table above: budget → RTX 4060, mid-range → RTX 4070 Super, high-end → RTX 3090/4090, Apple Silicon → Mac mini M4 Pro, always-on → a mini PC. Prices below reflect the 2026 GPU market — memory-chip shortages and AI-datacenter demand have pushed both new GPU and Apple memory pricing well above 2024 launch prices, so check the current listing before buying.',
+          '**Match your target Qwen tier to VRAM first, then buy the cheapest card that clears it — paying for more VRAM than your model needs is the most common overspend on this list.** The picks below map directly to the hardware table above: budget → RTX 4060, mid-range → RTX 4070 Super, high-end → RTX 3090/4090, Apple Silicon → Mac mini M5 Pro, always-on → a mini PC. Prices below reflect the 2026 GPU market — memory-chip shortages and AI-datacenter demand have pushed both new GPU and Apple memory pricing well above 2024 launch prices, so check the current listing before buying.',
         ],
         callouts: [
           { type: 'tip', text: 'Skip this section if you already own a GPU with 8 GB+ VRAM — run Qwen3 8B on what you have first. Only buy new hardware once you have hit that ceiling and want a bigger model.' },
@@ -382,19 +386,19 @@ curl http://localhost:11434/v1/chat/completions \\
           },
           {
             rank: 4,
-            name: 'Apple Mac mini M4 Pro 48 GB',
-            tagline: 'Apple Silicon pick — Qwen3 32B (~22 tok/s, quiet and low-power)',
+            name: 'Apple Mac mini M5 Pro 64 GB',
+            tagline: 'Apple Silicon pick — Qwen3 32B, quiet and low-power',
             verdict: 'Best value for running Qwen3 32B on unified memory — quiet, low power draw, no separate GPU to install. For Qwen2.5-72B you need the M2 Ultra 192 GB instead.',
             pros: [
-              '48 GB unified memory clears the 20.5 GB Qwen3 32B requirement with room for other apps',
+              'M5 Pro configurations scale up to 64 GB unified memory — well above the 20.5 GB Qwen3 32B requirement, with room to spare for other apps',
               'Silent operation and desktop-friendly power draw — no dedicated GPU cooling to manage',
               'One purchase covers OS, storage, and inference — no separate GPU/PSU/case build',
             ],
             cons: [
-              '~22 tok/s on Qwen3 32B is noticeably slower than an RTX 4090\'s 27–28 tok/s',
+              'No independent Qwen3 32B benchmarks for the M5 Pro chip are published yet — expect noticeably slower inference than a dedicated GPU like the RTX 4090, consistent with prior Apple Silicon Mac mini generations',
             ],
             affiliateLinks: [
-              { url: 'https://www.amazon.com/dp/B0CQSL8N8F', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: 'ca. $1,799–1,999', label: 'Check current price →' },
+              { url: 'https://www.apple.com/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M5 Pro 64 GB', productCategory: 'Mini PC', priceRange: 'from $1,699 (64 GB config costs more)', label: 'Check current price →' },
             ],
           },
           {
@@ -472,7 +476,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: 'Ejecuta Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder y Qwen2-VL en local en 2026. Requisitos de VRAM, configuración Ollama y LM Studio y guía por nivel de hardware.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-es.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-08-27',
     readTime: '14 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores, investigadores y usuarios con enfoque en privacidad que quieren ejecutar la familia completa de modelos Qwen en local',
@@ -504,7 +508,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'Guía de despliegue local de Qwen 2026: Qwen 3.6 27B, Coder y VL en cada nivel de hardware',
       description: 'Guía completa para desplegar la familia de modelos Qwen en local — Qwen 3.6 27B, Qwen3, Qwen2.5, Coder y VL, requisitos de VRAM, configuración con Ollama y LM Studio, cuantización, benchmarks y recomendaciones de hardware.',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-08-27',
       inLanguage: 'es',
       url: 'https://www.promptquorum.com/es/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -583,7 +587,7 @@ curl http://localhost:11434/v1/chat/completions \\
         tableFormat: true,
         note: 'Las cifras de VRAM corresponden a archivos GGUF Q4_K_M de la biblioteca de Ollama. Añade 1–2 GB para la caché KV con un contexto de 4K. Si la GPU tiene menos VRAM de la que necesita el modelo, Ollama descarga capas automáticamente a la RAM del sistema — funciona, pero reduce la velocidad significativamente.',
         callouts: [
-          { type: 'tip', text: '¿Ya identificaste tu nivel de VRAM? Consulta [exactamente qué GPU o Mac comprar para ese nivel](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M4 Pro o doble GPU.' },
+          { type: 'tip', text: '¿Ya identificaste tu nivel de VRAM? Consulta [exactamente qué GPU o Mac comprar para ese nivel](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M5 Pro o doble GPU.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-es.webp',
         imageCaption: 'Requisitos de VRAM de Qwen3 por tamaño de modelo (Q4_K_M) — PromptQuorum 2026',
@@ -713,7 +717,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'affiliate-picks',
         title: '¿Qué hardware deberías comprar para desplegar Qwen3?',
         content: [
-          '**Primero haz coincidir tu nivel de Qwen objetivo con la VRAM necesaria y luego compra la tarjeta más barata que la cubra — pagar por más VRAM de la que tu modelo necesita es el sobregasto más habitual de esta lista.** Las recomendaciones siguientes corresponden directamente a la tabla de hardware anterior: económico → RTX 4060, gama media → RTX 4070 Super, gama alta → RTX 3090/4090, Apple Silicon → Mac mini M4 Pro, uso continuo → un mini PC. Los precios siguientes reflejan el mercado de GPU de 2026 — la escasez de chips de memoria y la demanda de los centros de datos de IA han encarecido tanto las GPU nuevas como las configuraciones de memoria de Apple; comprueba el precio actual antes de comprar.',
+          '**Primero haz coincidir tu nivel de Qwen objetivo con la VRAM necesaria y luego compra la tarjeta más barata que la cubra — pagar por más VRAM de la que tu modelo necesita es el sobregasto más habitual de esta lista.** Las recomendaciones siguientes corresponden directamente a la tabla de hardware anterior: económico → RTX 4060, gama media → RTX 4070 Super, gama alta → RTX 3090/4090, Apple Silicon → Mac mini M5 Pro, uso continuo → un mini PC. Los precios siguientes reflejan el mercado de GPU de 2026 — la escasez de chips de memoria y la demanda de los centros de datos de IA han encarecido tanto las GPU nuevas como las configuraciones de memoria de Apple; comprueba el precio actual antes de comprar.',
         ],
         callouts: [
           { type: 'tip', text: 'Sáltate esta sección si ya tienes una GPU con 8 GB o más de VRAM — ejecuta primero Qwen3 8B en lo que ya tienes. Compra hardware nuevo solo cuando llegues a ese límite y quieras un modelo más grande.' },
@@ -773,19 +777,19 @@ curl http://localhost:11434/v1/chat/completions \\
           },
           {
             rank: 4,
-            name: 'Apple Mac mini M4 Pro 48 GB',
-            tagline: 'Opción Apple Silicon — Qwen3 32B (~22 tok/s, silencioso y de bajo consumo)',
+            name: 'Apple Mac mini M5 Pro 64 GB',
+            tagline: 'Opción Apple Silicon — Qwen3 32B, silencioso y de bajo consumo',
             verdict: 'La mejor relación calidad/precio para ejecutar Qwen3 32B con memoria unificada — silencioso, bajo consumo eléctrico, sin GPU separada que instalar. Para Qwen2.5-72B necesitas en su lugar el M2 Ultra 192 GB.',
             pros: [
-              '48 GB de memoria unificada cubren el requisito de 20,5 GB de Qwen3 32B con espacio para otras aplicaciones',
+              'Las configuraciones M5 Pro escalan hasta 64 GB de memoria unificada — muy por encima del requisito de 20,5 GB de Qwen3 32B, con margen para otras aplicaciones',
               'Funcionamiento silencioso y consumo adecuado para escritorio — sin gestión de refrigeración dedicada de GPU',
               'Una sola compra cubre sistema operativo, almacenamiento e inferencia — sin montaje aparte de GPU/fuente/caja',
             ],
             cons: [
-              '~22 tok/s en Qwen3 32B es notablemente más lento que los 27–28 tok/s de una RTX 4090',
+              'Aún no hay benchmarks independientes de Qwen3 32B en el chip M5 Pro — espera un rendimiento notablemente más lento que una GPU dedicada como la RTX 4090, en línea con generaciones anteriores de Apple Silicon en el Mac mini',
             ],
             affiliateLinks: [
-              { url: 'https://www.apple.com/es/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: '1.850–1.950 €', label: 'Consultar precio actual →' },
+              { url: 'https://www.apple.com/es/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M5 Pro 64 GB', productCategory: 'Mini PC', priceRange: 'desde 1.700 € (la configuración de 64 GB cuesta más)', label: 'Consultar precio actual →' },
             ],
           },
           {
@@ -863,7 +867,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: 'شغّل Qwen 3.6 27B وQwen3 وQwen2.5 (7B–72B) وQwen2.5-Coder وQwen2-VL محليًا في 2026. متطلبات VRAM وإعداد Ollama وLM Studio وبنشمارك Q4_K_M ودليل مستويات الأجهزة.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-ar.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-08-27',
     readTime: '14 دقيقة قراءة',
     educationalLevel: 'Intermediate',
     audience: 'المطورون والباحثون والمستخدمون المهتمون بالخصوصية الذين يريدون تشغيل عائلة نماذج Qwen الكاملة محليًا',
@@ -895,7 +899,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'دليل النشر المحلي لـ Qwen 2026: شغّل Qwen 3.6 27B وQwen3 وCoder وVL على كل مستوى أجهزة',
       description: 'دليل كامل لنشر عائلة نماذج Qwen محليًا — Qwen 3.6 27B وQwen3 وQwen2.5 وCoder وVL، ومتطلبات VRAM، والإعداد عبر Ollama وLM Studio، والتكميم، والمعايير، وتوصيات الأجهزة.',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-08-27',
       inLanguage: 'ar',
       url: 'https://www.promptquorum.com/ar/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -974,7 +978,7 @@ curl http://localhost:11434/v1/chat/completions \\
         tableFormat: true,
         note: 'أرقام VRAM تخصّ ملفات GGUF Q4_K_M من مكتبة Ollama. أضف 1–2 GB لذاكرة KV المؤقتة بسياق 4K. إذا كانت بطاقة الرسوم تملك VRAM أقل مما يحتاج النموذج، يفرّغ Ollama الطبقات تلقائيًا إلى RAM النظام — يعمل، لكنه يقلّل السرعة بشكل كبير.',
         callouts: [
-          { type: 'tip', text: 'هل حددت مستوى VRAM الخاص بك؟ اطّلع على [بطاقة الرسوم أو جهاز Mac المناسب تمامًا لهذا المستوى](#affiliate-picks) — 6 GB ← RTX 4060، 12 GB ← RTX 4070 Super، 24 GB ← RTX 3090/4090، 48 GB فأكثر ← Mac mini M4 Pro أو بطاقتا رسوم.' },
+          { type: 'tip', text: 'هل حددت مستوى VRAM الخاص بك؟ اطّلع على [بطاقة الرسوم أو جهاز Mac المناسب تمامًا لهذا المستوى](#affiliate-picks) — 6 GB ← RTX 4060، 12 GB ← RTX 4070 Super، 24 GB ← RTX 3090/4090، 48 GB فأكثر ← Mac mini M5 Pro أو بطاقتا رسوم.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-ar.webp',
         imageCaption: 'متطلبات VRAM لـ Qwen3 حسب حجم النموذج (Q4_K_M) — PromptQuorum 2026',
@@ -1104,7 +1108,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'affiliate-picks',
         title: 'ما الجهاز الذي ينبغي شراؤه لنشر Qwen3؟',
         content: [
-          '**طابِق مستوى Qwen المستهدف مع VRAM المطلوب أولًا، ثم اشترِ أرخص بطاقة تحقّق هذا الحد — دفع ثمن VRAM أكثر مما يحتاجه نموذجك هو أكثر أخطاء الإنفاق شيوعًا في هذه القائمة.** تتوافق الاختيارات أدناه مباشرة مع جدول الأجهزة أعلاه: اقتصادي ← RTX 4060، متوسط ← RTX 4070 Super، فئة عليا ← RTX 3090/4090، Apple Silicon ← Mac mini M4 Pro، تشغيل متواصل ← حاسوب صغير. تعكس الأسعار أدناه سوق بطاقات الرسوم في 2026 — أدى نقص رقائق الذاكرة والطلب من مراكز بيانات الذكاء الاصطناعي إلى ارتفاع أسعار بطاقات الرسوم الجديدة وتشكيلات ذاكرة Apple؛ تحقّق من السعر الفعلي قبل الشراء.',
+          '**طابِق مستوى Qwen المستهدف مع VRAM المطلوب أولًا، ثم اشترِ أرخص بطاقة تحقّق هذا الحد — دفع ثمن VRAM أكثر مما يحتاجه نموذجك هو أكثر أخطاء الإنفاق شيوعًا في هذه القائمة.** تتوافق الاختيارات أدناه مباشرة مع جدول الأجهزة أعلاه: اقتصادي ← RTX 4060، متوسط ← RTX 4070 Super، فئة عليا ← RTX 3090/4090، Apple Silicon ← Mac mini M5 Pro، تشغيل متواصل ← حاسوب صغير. تعكس الأسعار أدناه سوق بطاقات الرسوم في 2026 — أدى نقص رقائق الذاكرة والطلب من مراكز بيانات الذكاء الاصطناعي إلى ارتفاع أسعار بطاقات الرسوم الجديدة وتشكيلات ذاكرة Apple؛ تحقّق من السعر الفعلي قبل الشراء.',
         ],
         callouts: [
           { type: 'tip', text: 'تخطَّ هذا القسم إذا كنت تملك بالفعل بطاقة رسوم بسعة 8 GB من VRAM أو أكثر — شغّل Qwen3 8B أولًا على ما تملكه. اشترِ جهازًا جديدًا فقط بعد بلوغ هذا الحد ورغبتك في نموذج أكبر.' },
@@ -1164,19 +1168,19 @@ curl http://localhost:11434/v1/chat/completions \\
           },
           {
             rank: 4,
-            name: 'Apple Mac mini M4 Pro 48 GB',
-            tagline: 'اختيار Apple Silicon — Qwen3 32B (~22 token/ثانية، هادئ ومنخفض الاستهلاك)',
+            name: 'Apple Mac mini M5 Pro 64 GB',
+            tagline: 'اختيار Apple Silicon — Qwen3 32B، هادئ ومنخفض الاستهلاك',
             verdict: 'أفضل قيمة لتشغيل Qwen3 32B عبر الذاكرة الموحّدة — هادئ، استهلاك طاقة منخفض، ولا حاجة لتركيب بطاقة رسوم منفصلة. أما Qwen2.5-72B فيتطلب M2 Ultra 192 GB بدلًا من ذلك.',
             pros: [
-              'تلبّي ذاكرة موحّدة بسعة 48 GB متطلب 20.5 GB لـ Qwen3 32B مع مساحة لتطبيقات أخرى',
+              'تتوفر تكوينات M5 Pro بذاكرة موحّدة تصل حتى 64 GB — أعلى بكثير من متطلب 20.5 GB لـ Qwen3 32B، مع مساحة إضافية لتطبيقات أخرى',
               'تشغيل صامت واستهلاك طاقة مناسب لمكتب العمل — دون إدارة تبريد مخصص لبطاقة رسوم',
               'عملية شراء واحدة تغطي نظام التشغيل والتخزين والاستدلال — دون تجميع منفصل لبطاقة رسوم/مزود طاقة/هيكل',
             ],
             cons: [
-              'سرعة ~22 token/ثانية على Qwen3 32B أبطأ بوضوح من 27–28 token/ثانية لبطاقة RTX 4090',
+              'لا تتوفر بعد اختبارات أداء مستقلة لـ Qwen3 32B على شريحة M5 Pro — توقّع أداءً أبطأ بوضوح من بطاقة رسوم مخصصة مثل RTX 4090، بما يتسق مع أجيال Apple Silicon السابقة في Mac mini',
             ],
             affiliateLinks: [
-              { url: 'https://www.apple.com/sa/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: '7,300–7,700 ريال', label: 'تحقّق من السعر الحالي ←' },
+              { url: 'https://www.apple.com/sa/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M5 Pro 64 GB', productCategory: 'Mini PC', priceRange: 'من نحو 6,700 ريال (تكوين 64 GB أغلى)', label: 'تحقّق من السعر الحالي ←' },
             ],
           },
           {
@@ -1254,7 +1258,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: 'Execute Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder e Qwen2-VL localmente em 2026. Requisitos de VRAM, configuração Ollama e LM Studio e guia por nível de hardware.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-pt.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-08-27',
     readTime: '14 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores, pesquisadores e usuários com foco em privacidade que querem executar a família completa de modelos Qwen localmente',
@@ -1286,7 +1290,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'Guia de implantação local do Qwen 2026: execute Qwen 3.6 27B, Qwen3, Coder e VL em cada nível de hardware',
       description: 'Guia completo para implantar a família de modelos Qwen localmente — Qwen 3.6 27B, Qwen3, Qwen2.5, Coder e VL, requisitos de VRAM, configuração com Ollama e LM Studio, quantização, benchmarks e recomendações de hardware.',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-08-27',
       inLanguage: 'pt-BR',
       url: 'https://www.promptquorum.com/pt/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1365,7 +1369,7 @@ curl http://localhost:11434/v1/chat/completions \\
         tableFormat: true,
         note: 'Os números de VRAM correspondem a arquivos GGUF Q4_K_M da biblioteca do Ollama. Adicione 1–2 GB para o cache KV com um contexto de 4K. Se a GPU tiver menos VRAM do que o modelo precisa, o Ollama descarrega camadas automaticamente para a RAM do sistema — funciona, mas reduz a velocidade significativamente.',
         callouts: [
-          { type: 'tip', text: 'Já identificou o seu nível de VRAM? Veja [exatamente qual GPU ou Mac comprar para esse nível](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M4 Pro ou GPU dupla.' },
+          { type: 'tip', text: 'Já identificou o seu nível de VRAM? Veja [exatamente qual GPU ou Mac comprar para esse nível](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M5 Pro ou GPU dupla.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-pt.webp',
         imageCaption: 'Requisitos de VRAM do Qwen3 por tamanho de modelo (Q4_K_M) — PromptQuorum 2026',
@@ -1494,7 +1498,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'affiliate-picks',
         title: 'Qual hardware comprar para implantar o Qwen3?',
         content: [
-          '**Primeiro, ajuste o nível de Qwen desejado à VRAM necessária e depois compre a placa mais barata que atenda esse requisito — pagar por mais VRAM do que o modelo precisa é o gasto excessivo mais comum nesta lista.** As recomendações abaixo correspondem diretamente à tabela de hardware acima: econômico → RTX 4060, médio porte → RTX 4070 Super, alto desempenho → RTX 3090/4090, Apple Silicon → Mac mini M4 Pro, uso contínuo → um mini PC. Os preços abaixo refletem o mercado de GPUs em 2026 — a escassez de chips de memória e a demanda de data centers de IA encareceram tanto as GPUs novas quanto as configurações de memória da Apple, e no Brasil o imposto de importação amplia ainda mais essa diferença; confirme o preço atual antes de comprar.',
+          '**Primeiro, ajuste o nível de Qwen desejado à VRAM necessária e depois compre a placa mais barata que atenda esse requisito — pagar por mais VRAM do que o modelo precisa é o gasto excessivo mais comum nesta lista.** As recomendações abaixo correspondem diretamente à tabela de hardware acima: econômico → RTX 4060, médio porte → RTX 4070 Super, alto desempenho → RTX 3090/4090, Apple Silicon → Mac mini M5 Pro, uso contínuo → um mini PC. Os preços abaixo refletem o mercado de GPUs em 2026 — a escassez de chips de memória e a demanda de data centers de IA encareceram tanto as GPUs novas quanto as configurações de memória da Apple, e no Brasil o imposto de importação amplia ainda mais essa diferença; confirme o preço atual antes de comprar.',
         ],
         callouts: [
           { type: 'tip', text: 'Pule esta seção se você já tem uma GPU com 8 GB de VRAM ou mais — primeiro execute o Qwen3 8B no que você já possui. Só compre hardware novo quando atingir esse limite e quiser um modelo maior.' },
@@ -1554,19 +1558,19 @@ curl http://localhost:11434/v1/chat/completions \\
           },
           {
             rank: 4,
-            name: 'Apple Mac mini M4 Pro 48 GB',
-            tagline: 'Opção Apple Silicon — Qwen3 32B (~22 tok/s, silencioso e de baixo consumo)',
+            name: 'Apple Mac mini M5 Pro 64 GB',
+            tagline: 'Opção Apple Silicon — Qwen3 32B, silencioso e de baixo consumo',
             verdict: 'A melhor relação custo-benefício para executar o Qwen3 32B com memória unificada — silencioso, baixo consumo de energia, sem GPU separada para instalar. Para o Qwen2.5-72B, é necessário o M2 Ultra 192 GB.',
             pros: [
-              '48 GB de memória unificada atendem ao requisito de 20,5 GB do Qwen3 32B com espaço para outros aplicativos',
+              'As configurações do M5 Pro chegam a 64 GB de memória unificada — bem acima do requisito de 20,5 GB do Qwen3 32B, com espaço de sobra para outros aplicativos',
               'Operação silenciosa e consumo adequado para uso de mesa — sem necessidade de gerenciar refrigeração dedicada de GPU',
               'Uma única compra cobre sistema operacional, armazenamento e inferência — sem montagem separada de GPU/fonte/gabinete',
             ],
             cons: [
-              '~22 tok/s no Qwen3 32B é visivelmente mais lento que os 27–28 tok/s de uma RTX 4090',
+              'Ainda não há benchmarks independentes do Qwen3 32B no chip M5 Pro — espere desempenho visivelmente mais lento que uma GPU dedicada como a RTX 4090, em linha com gerações anteriores de Apple Silicon no Mac mini',
             ],
             affiliateLinks: [
-              { url: 'https://www.apple.com/br/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: 'R$ 21.000–23.000', label: 'Ver preço atual →' },
+              { url: 'https://www.apple.com/br/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M5 Pro 64 GB', productCategory: 'Mini PC', priceRange: 'a partir de R$ 19.700 (a configuração de 64 GB custa mais)', label: 'Ver preço atual →' },
             ],
           },
           {
@@ -1643,7 +1647,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: 'Déployer Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder et Qwen2-VL en local en 2026. VRAM requis, Ollama + LM Studio, benchmarks Q4_K_M et guide par niveau matériel.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-fr.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-08-27',
     readTime: '14 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs, chercheurs et utilisateurs soucieux de leur vie privée souhaitant déployer la famille de modèles Qwen en local',
@@ -1675,7 +1679,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'Guide de déploiement local Qwen 2026 : Qwen 3.6 27B, Qwen3, Coder et VL pour chaque niveau matériel',
       description: 'Guide complet du déploiement local de la famille Qwen — Qwen 3.6 27B, Qwen3, Qwen2.5, Coder et VL, exigences VRAM, configuration Ollama et LM Studio, quantification, benchmarks et recommandations matérielles.',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-08-27',
       inLanguage: 'fr',
       url: 'https://www.promptquorum.com/fr/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1754,7 +1758,7 @@ curl http://localhost:11434/v1/chat/completions \\
         tableFormat: true,
         note: 'Les valeurs VRAM concernent les fichiers GGUF Q4_K_M de la bibliothèque Ollama. Ajoutez 1–2 Go pour le cache KV à 4K de contexte. Si le GPU a moins de VRAM que nécessaire, Ollama décharge automatiquement des couches en RAM système — fonctionnel mais beaucoup plus lent.',
         callouts: [
-          { type: 'tip', text: 'Vous avez identifié votre niveau VRAM ? Consultez [exactement quel GPU ou Mac acheter pour ce niveau](#affiliate-picks) — 6 Go → RTX 4060, 12 Go → RTX 4070 Super, 24 Go → RTX 3090/4090, 48 Go et plus → Mac mini M4 Pro ou double GPU.' },
+          { type: 'tip', text: 'Vous avez identifié votre niveau VRAM ? Consultez [exactement quel GPU ou Mac acheter pour ce niveau](#affiliate-picks) — 6 Go → RTX 4060, 12 Go → RTX 4070 Super, 24 Go → RTX 3090/4090, 48 Go et plus → Mac mini M5 Pro ou double GPU.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-fr.webp',
         imageCaption: 'Exigences VRAM Qwen3 par taille de modèle (Q4_K_M) — PromptQuorum 2026',
@@ -1884,7 +1888,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'affiliate-picks',
         title: 'Quel matériel acheter pour déployer Qwen3 ?',
         content: [
-          '**Faites d\'abord correspondre votre niveau Qwen cible à la VRAM nécessaire, puis achetez la carte la moins chère qui atteint ce seuil — payer pour plus de VRAM que ce dont votre modèle a besoin est la dépense excessive la plus fréquente de cette liste.** Les choix ci-dessous correspondent directement au tableau matériel ci-dessus : entrée de gamme → RTX 4060, milieu de gamme → RTX 4070 Super, haut de gamme → RTX 3090/4090, Apple Silicon → Mac mini M4 Pro, usage permanent → un mini-PC. Les prix ci-dessous reflètent le marché GPU de 2026 — la pénurie de puces mémoire et la demande des datacenters IA ont fait grimper le prix des GPU neufs et des configurations mémoire Apple ; vérifiez le prix actuel avant d\'acheter.',
+          '**Faites d\'abord correspondre votre niveau Qwen cible à la VRAM nécessaire, puis achetez la carte la moins chère qui atteint ce seuil — payer pour plus de VRAM que ce dont votre modèle a besoin est la dépense excessive la plus fréquente de cette liste.** Les choix ci-dessous correspondent directement au tableau matériel ci-dessus : entrée de gamme → RTX 4060, milieu de gamme → RTX 4070 Super, haut de gamme → RTX 3090/4090, Apple Silicon → Mac mini M5 Pro, usage permanent → un mini-PC. Les prix ci-dessous reflètent le marché GPU de 2026 — la pénurie de puces mémoire et la demande des datacenters IA ont fait grimper le prix des GPU neufs et des configurations mémoire Apple ; vérifiez le prix actuel avant d\'acheter.',
         ],
         callouts: [
           { type: 'tip', text: 'Passez cette section si vous possédez déjà un GPU avec 8 Go de VRAM ou plus — exécutez d\'abord Qwen3 8B sur ce que vous avez. N\'achetez du nouveau matériel qu\'une fois ce plafond atteint et si vous voulez un modèle plus grand.' },
@@ -1944,19 +1948,19 @@ curl http://localhost:11434/v1/chat/completions \\
           },
           {
             rank: 4,
-            name: 'Apple Mac mini M4 Pro 48 Go',
-            tagline: 'Choix Apple Silicon — Qwen3 32B (~22 tokens/s, silencieux et basse consommation)',
+            name: 'Apple Mac mini M5 Pro 64 Go',
+            tagline: 'Choix Apple Silicon — Qwen3 32B, silencieux et basse consommation',
             verdict: 'Le meilleur rapport qualité/prix pour exécuter Qwen3 32B avec de la mémoire unifiée — silencieux, faible consommation électrique, aucun GPU séparé à installer. Pour Qwen2.5-72B, il faut plutôt le M2 Ultra 192 Go.',
             pros: [
-              '48 Go de mémoire unifiée couvrent les 20,5 Go requis par Qwen3 32B avec de la place pour d\'autres applications',
+              'Les configurations M5 Pro montent jusqu\'à 64 Go de mémoire unifiée — bien au-delà des 20,5 Go requis par Qwen3 32B, avec de la marge pour d\'autres applications',
               'Fonctionnement silencieux et consommation adaptée à un bureau — aucune gestion de refroidissement de GPU dédié',
               'Un seul achat couvre le système, le stockage et l\'inférence — pas de montage GPU/alimentation/boîtier séparé',
             ],
             cons: [
-              '~22 tokens/s sur Qwen3 32B est nettement plus lent que les 27–28 tokens/s d\'une RTX 4090',
+              'Aucun benchmark indépendant de Qwen3 32B sur la puce M5 Pro n\'est encore publié — attendez-vous à des performances nettement plus lentes qu\'un GPU dédié comme la RTX 4090, dans la continuité des générations précédentes d\'Apple Silicon sur Mac mini',
             ],
             affiliateLinks: [
-              { url: 'https://www.apple.com/fr/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48 Go', productCategory: 'Mini PC', priceRange: 'env. 1 850–1 950 €', label: 'Vérifier le prix actuel →' },
+              { url: 'https://www.apple.com/fr/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M5 Pro 64 Go', productCategory: 'Mini PC', priceRange: 'à partir de 1 700 € (la configuration 64 Go coûte plus cher)', label: 'Vérifier le prix actuel →' },
             ],
           },
           {
@@ -2036,7 +2040,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: 'Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder und Qwen2-VL lokal betreiben 2026. VRAM-Anforderungen, Ollama + LM Studio Setup, Q4_K_M-Benchmarks und Hardware-Tier-Guide.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-de.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-08-27',
     readTime: '14 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, Forscher und datenschutzbewusste Nutzer, die die vollständige Qwen-Modellfamilie lokal betreiben möchten — inklusive chinesischsprachiger Nutzer, die Alibabas Modelle gegenüber US-Alternativen bevorzugen',
@@ -2068,7 +2072,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'Qwen Lokal-Deployment-Guide 2026: Qwen 3.6 27B, Qwen3, Coder & VL für jede Hardware-Stufe',
       description: 'Vollständiger Guide zur lokalen Bereitstellung der Qwen-Modellfamilie — Qwen 3.6 27B, Qwen3, Qwen2.5, Coder und VL, VRAM-Anforderungen, Ollama- und LM-Studio-Setup, Quantisierung, Benchmarks und Hardware-Empfehlungen.',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-08-27',
       inLanguage: 'de',
       url: 'https://www.promptquorum.com/de/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2148,7 +2152,7 @@ curl http://localhost:11434/v1/chat/completions \\
         tableFormat: true,
         note: 'VRAM-Angaben gelten für Q4_K_M-GGUF-Dateien aus der Ollama-Bibliothek. Für den KV-Cache bei 4K-Kontext kommen 1–2 GB hinzu. Wenn die GPU weniger VRAM hat als das Modell benötigt, lagert Ollama automatisch Layer in den System-RAM aus — das funktioniert, reduziert aber die Geschwindigkeit erheblich.',
         callouts: [
-          { type: 'tip', text: 'Ihre VRAM-Stufe steht fest? Sehen Sie sich an, [welche GPU oder welchen Mac Sie für diese Stufe genau kaufen sollten](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M4 Pro oder Dual-GPU.' },
+          { type: 'tip', text: 'Ihre VRAM-Stufe steht fest? Sehen Sie sich an, [welche GPU oder welchen Mac Sie für diese Stufe genau kaufen sollten](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M5 Pro oder Dual-GPU.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-de.webp',
         imageCaption: 'Qwen3 VRAM-Anforderungen nach Modellgröße (Q4_K_M) — PromptQuorum 2026',
@@ -2278,7 +2282,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'affiliate-picks',
         title: 'Welche Hardware sollten Sie für Qwen3-Deployment kaufen?',
         content: [
-          '**Ordnen Sie zuerst Ihre Ziel-Qwen-Stufe dem passenden VRAM zu und kaufen Sie dann die günstigste Karte, die diese Anforderung erfüllt — mehr VRAM zu bezahlen, als Ihr Modell benötigt, ist der häufigste Fehlkauf auf dieser Liste.** Die folgenden Empfehlungen entsprechen direkt der obigen Hardware-Tabelle: Einsteiger → RTX 4060, Mittelklasse → RTX 4070 Super, High-End → RTX 3090/4090, Apple Silicon → Mac mini M4 Pro, Dauerbetrieb → ein Mini-PC. Die Preise unten spiegeln den GPU-Markt 2026 wider — Speicherchip-Engpässe und die KI-Rechenzentrums-Nachfrage haben sowohl neue GPUs als auch Apple-Speicherkonfigurationen deutlich verteuert; prüfen Sie den aktuellen Preis vor dem Kauf.',
+          '**Ordnen Sie zuerst Ihre Ziel-Qwen-Stufe dem passenden VRAM zu und kaufen Sie dann die günstigste Karte, die diese Anforderung erfüllt — mehr VRAM zu bezahlen, als Ihr Modell benötigt, ist der häufigste Fehlkauf auf dieser Liste.** Die folgenden Empfehlungen entsprechen direkt der obigen Hardware-Tabelle: Einsteiger → RTX 4060, Mittelklasse → RTX 4070 Super, High-End → RTX 3090/4090, Apple Silicon → Mac mini M5 Pro, Dauerbetrieb → ein Mini-PC. Die Preise unten spiegeln den GPU-Markt 2026 wider — Speicherchip-Engpässe und die KI-Rechenzentrums-Nachfrage haben sowohl neue GPUs als auch Apple-Speicherkonfigurationen deutlich verteuert; prüfen Sie den aktuellen Preis vor dem Kauf.',
         ],
         callouts: [
           { type: 'tip', text: 'Überspringen Sie diesen Abschnitt, wenn Sie bereits eine GPU mit 8 GB+ VRAM besitzen — betreiben Sie zunächst Qwen3 8B auf vorhandener Hardware. Kaufen Sie erst neue Hardware, wenn Sie diese Grenze erreicht haben und ein größeres Modell möchten.' },
@@ -2338,19 +2342,19 @@ curl http://localhost:11434/v1/chat/completions \\
           },
           {
             rank: 4,
-            name: 'Apple Mac mini M4 Pro 48 GB',
-            tagline: 'Apple-Silicon-Empfehlung — Qwen3 32B (~22 Tokens/Sek., leise und stromsparend)',
+            name: 'Apple Mac mini M5 Pro 64 GB',
+            tagline: 'Apple-Silicon-Empfehlung — Qwen3 32B, leise und stromsparend',
             verdict: 'Bester Wert für den Betrieb von Qwen3 32B mit Unified Memory — leise, geringer Stromverbrauch, keine separate GPU zu verbauen. Für Qwen2.5-72B benötigen Sie stattdessen den M2 Ultra 192 GB.',
             pros: [
-              '48 GB Unified Memory erfüllt die 20,5-GB-Anforderung von Qwen3 32B mit Raum für weitere Anwendungen',
+              'M5-Pro-Konfigurationen reichen bis zu 64 GB Unified Memory — deutlich über der 20,5-GB-Anforderung von Qwen3 32B, mit Spielraum für weitere Anwendungen',
               'Lautloser Betrieb und schreibtischfreundlicher Stromverbrauch — kein separates GPU-Kühlmanagement nötig',
               'Ein Kauf deckt Betriebssystem, Speicher und Inferenz ab — kein separater GPU/PSU/Gehäuse-Aufbau',
             ],
             cons: [
-              '~22 Tokens/Sek. bei Qwen3 32B ist spürbar langsamer als die 27–28 Tokens/Sek. einer RTX 4090',
+              'Für den M5-Pro-Chip liegen noch keine unabhängigen Qwen3-32B-Benchmarks vor — rechnen Sie mit spürbar langsamerer Inferenz als bei einer dedizierten GPU wie der RTX 4090, vergleichbar mit früheren Apple-Silicon-Generationen im Mac mini',
             ],
             affiliateLinks: [
-              { url: 'https://www.apple.com/de/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: 'ca. 1.850–1.950 €', label: 'Aktuellen Preis prüfen →' },
+              { url: 'https://www.apple.com/de/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M5 Pro 64 GB', productCategory: 'Mini PC', priceRange: 'ab ca. 1.700 € (64-GB-Konfiguration kostet mehr)', label: 'Aktuellen Preis prüfen →' },
             ],
           },
           {
@@ -2430,7 +2434,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: 'Qwen 3.6 27B・Qwen3・Qwen2.5（7B〜72B）・Qwen2.5-Coder・Qwen2-VLを2026年にローカルで動かす完全実践ガイド。VRAM要件、OllamaとLM StudioのセットアップガイドQ4_K_Mベンチマーク、ハードウェア階層別の選び方を解説します。',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-ja.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-08-27',
     readTime: '14分で読める',
     educationalLevel: 'Intermediate',
     audience: 'Qwenモデルファミリーをローカルで実行したい開発者・研究者・プライバシー重視のユーザー',
@@ -2462,7 +2466,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'Qwenローカルデプロイガイド2026：Qwen 3.6 27B・Qwen3・Coder・VLを全ハードウェア階層で動かす',
       description: 'Qwenモデルファミリーのローカルデプロイ完全ガイド — Qwen 3.6 27B・Qwen3・Qwen2.5・Coder・VL、VRAM要件、OllamaとLM Studioのセットアップ、量子化、ベンチマーク、ハードウェア推奨。',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-08-27',
       inLanguage: 'ja',
       url: 'https://www.promptquorum.com/ja/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -2543,7 +2547,7 @@ curl http://localhost:11434/v1/chat/completions \\
         tableFormat: true,
         note: 'VRAMの数値はOllamaライブラリのQ4_K_M GGUFファイルを基準としています。4KコンテキストのKVキャッシュとして1〜2GB追加が必要です。GPUのVRAMがモデルに必要な量より少ない場合、Ollamaは自動的にシステムRAMにレイヤーをオフロードしますが、速度が大幅に低下します。',
         callouts: [
-          { type: 'tip', text: 'ご自身のVRAM階層が決まったら、[その階層に最適なGPUまたはMacの選び方](#affiliate-picks)をご覧ください — 6GB → RTX 4060、12GB → RTX 4070 Super、24GB → RTX 3090/4090、48GB以上 → Mac mini M4 Proまたはデュアル GPU。' },
+          { type: 'tip', text: 'ご自身のVRAM階層が決まったら、[その階層に最適なGPUまたはMacの選び方](#affiliate-picks)をご覧ください — 6GB → RTX 4060、12GB → RTX 4070 Super、24GB → RTX 3090/4090、48GB以上 → Mac mini M5 Proまたはデュアル GPU。' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-ja.webp',
         imageCaption: 'Qwen3 モデルサイズ別VRAM要件（Q4_K_M）— PromptQuorum 2026',
@@ -2673,7 +2677,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'affiliate-picks',
         title: 'Qwen3デプロイにはどのハードウェアを買うべきか？',
         content: [
-          '**まず目標とするQwenの階層に必要なVRAMを確認し、それをクリアする最も安いカードを選びましょう。モデルに必要な量以上のVRAMに支払うのが、このリストで最もよくある無駄遣いです。** 以下のおすすめは上記のハードウェア表に直接対応しています：エントリー → RTX 4060、ミドルレンジ → RTX 4070 Super、ハイエンド → RTX 3090/4090、Apple Silicon → Mac mini M4 Pro、常時稼働 → mini PC。以下の価格は2026年のGPU市場を反映しています — メモリチップ不足とAIデータセンター需要により、新品GPUとApple製品のメモリ構成の価格がいずれも大きく上昇しています。購入前に最新価格をご確認ください。',
+          '**まず目標とするQwenの階層に必要なVRAMを確認し、それをクリアする最も安いカードを選びましょう。モデルに必要な量以上のVRAMに支払うのが、このリストで最もよくある無駄遣いです。** 以下のおすすめは上記のハードウェア表に直接対応しています：エントリー → RTX 4060、ミドルレンジ → RTX 4070 Super、ハイエンド → RTX 3090/4090、Apple Silicon → Mac mini M5 Pro、常時稼働 → mini PC。以下の価格は2026年のGPU市場を反映しています — メモリチップ不足とAIデータセンター需要により、新品GPUとApple製品のメモリ構成の価格がいずれも大きく上昇しています。購入前に最新価格をご確認ください。',
         ],
         callouts: [
           { type: 'tip', text: 'すでにVRAM 8GB以上のGPUをお持ちの場合は、このセクションは読み飛ばして構いません — まずは手持ちのハードウェアでQwen3 8Bを動かしてみてください。その上限に達し、より大きなモデルが必要になってから新しいハードウェアを検討してください。' },
@@ -2733,19 +2737,19 @@ curl http://localhost:11434/v1/chat/completions \\
           },
           {
             rank: 4,
-            name: 'Apple Mac mini M4 Pro 48 GB',
-            tagline: 'Apple Silicon向け — Qwen3 32B（約22トークン/秒、静音・低消費電力）',
+            name: 'Apple Mac mini M5 Pro 64 GB',
+            tagline: 'Apple Silicon向け — Qwen3 32B、静音・低消費電力',
             verdict: '統合メモリでQwen3 32Bを動かす上で最もコストパフォーマンスに優れた選択肢です — 静音で消費電力も低く、別途GPUを組み込む必要がありません。Qwen2.5-72Bを動かす場合はM2 Ultra 192GBが代わりに必要です。',
             pros: [
-              '48GBの統合メモリで、Qwen3 32Bの20.5GB要件を他アプリ用の余裕を残してクリア',
+              'M5 Pro構成は最大64GBの統合メモリまで選択可能 — Qwen3 32Bの20.5GB要件を大きく上回り、他アプリ用の余裕も確保',
               '静音動作とデスクトップに適した消費電力 — 専用のGPU冷却管理が不要',
               'OS、ストレージ、推論を一度の購入でまかなえる — 別途GPU/電源/ケースの組み立て不要',
             ],
             cons: [
-              'Qwen3 32Bで約22トークン/秒は、RTX 4090の27〜28トークン/秒より明らかに遅い',
+              'M5 Proチップでの独立したQwen3 32Bベンチマークはまだ公開されていない — RTX 4090のような専用GPUより明らかに遅い性能が予想され、これは従来のMac mini向けApple Siliconの世代と同様の傾向',
             ],
             affiliateLinks: [
-              { url: 'https://www.apple.com/jp/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M4 Pro 48GB', productCategory: 'Mini PC', priceRange: '約¥350,000〜400,000', label: '現在の価格を確認 →' },
+              { url: 'https://www.apple.com/jp/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M5 Pro 64GB', productCategory: 'Mini PC', priceRange: '約¥335,000から（64GB構成はさらに高額）', label: '現在の価格を確認 →' },
             ],
           },
           {
@@ -2825,7 +2829,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: '2026年本地运行Qwen 3.6 27B、Qwen3、Qwen2.5全系列（7B–72B）、Qwen2.5-Coder与Qwen2-VL的完整实战部署指南：显存需求对照表、Ollama与LM Studio配置步骤、Q4_K_M量化基准数据，以及各硬件预算档位的配置建议。',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-zh.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-08-27',
     readTime: '阅读约14分钟',
     educationalLevel: 'Intermediate',
     audience: '希望在本地运行完整Qwen模型家族的开发者、研究人员和注重数据隐私的用户，尤其是偏好阿里巴巴模型的中文用户',
@@ -2857,7 +2861,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'Qwen本地部署指南2026：在各硬件层级运行Qwen 3.6 27B、Qwen3、Coder和VL',
       description: 'Qwen模型家族本地部署完整指南——Qwen 3.6 27B、Qwen3、Qwen2.5、Coder和VL，显存要求、Ollama和LM Studio设置、量化方案、基准测试及硬件推荐。',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-08-27',
       inLanguage: 'zh',
       url: 'https://www.promptquorum.com/zh/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -2938,7 +2942,7 @@ curl http://localhost:11434/v1/chat/completions \\
         tableFormat: true,
         note: '显存数值适用于Ollama库中的Q4_K_M GGUF文件。4K上下文的KV缓存需额外增加1–2GB。若GPU显存不足，Ollama会自动将层卸载到系统内存——可以运行但速度会大幅降低。',
         callouts: [
-          { type: 'tip', text: '已经确定自己的显存档位了？查看[该档位对应的确切GPU或Mac购买建议](#affiliate-picks)——6GB → RTX 4060，12GB → RTX 4070 Super，24GB → RTX 3090/4090，48GB以上 → Mac mini M4 Pro或双卡方案。' },
+          { type: 'tip', text: '已经确定自己的显存档位了？查看[该档位对应的确切GPU或Mac购买建议](#affiliate-picks)——6GB → RTX 4060，12GB → RTX 4070 Super，24GB → RTX 3090/4090，48GB以上 → Mac mini M5 Pro或双卡方案。' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-zh.webp',
         imageCaption: 'Qwen3各模型尺寸显存要求（Q4_K_M）— PromptQuorum 2026',
@@ -3068,7 +3072,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'affiliate-picks',
         title: '部署Qwen3应该买哪款硬件？',
         content: [
-          '**先根据目标Qwen档位确定所需显存，再购买能满足该需求的最便宜显卡——为超出模型实际需求的显存多花钱，是这份清单里最常见的超支。** 以下推荐与上方硬件表格一一对应：入门级 → RTX 4060，中端 → RTX 4070 Super，高端 → RTX 3090/4090，Apple Silicon → Mac mini M4 Pro，全天候方案 → mini PC。以下价格反映2026年显卡市场行情——显存芯片短缺和AI数据中心需求推高了新显卡及Apple内存配置的价格，购买前请核实当前实际报价。',
+          '**先根据目标Qwen档位确定所需显存，再购买能满足该需求的最便宜显卡——为超出模型实际需求的显存多花钱，是这份清单里最常见的超支。** 以下推荐与上方硬件表格一一对应：入门级 → RTX 4060，中端 → RTX 4070 Super，高端 → RTX 3090/4090，Apple Silicon → Mac mini M5 Pro，全天候方案 → mini PC。以下价格反映2026年显卡市场行情——显存芯片短缺和AI数据中心需求推高了新显卡及Apple内存配置的价格，购买前请核实当前实际报价。',
         ],
         callouts: [
           { type: 'tip', text: '如果你已经拥有一块显存8GB以上的显卡，可以跳过这一节——先在现有硬件上运行Qwen3 8B。只有触及这一上限、需要更大模型时，再考虑购买新硬件。' },
@@ -3128,19 +3132,19 @@ curl http://localhost:11434/v1/chat/completions \\
           },
           {
             rank: 4,
-            name: 'Apple Mac mini M4 Pro 48GB',
-            tagline: 'Apple Silicon选择——Qwen3 32B（约22 token/秒，安静低功耗）',
+            name: 'Apple Mac mini M5 Pro 64GB',
+            tagline: 'Apple Silicon选择——Qwen3 32B，安静低功耗',
             verdict: '在统一内存架构上运行Qwen3 32B性价比最高的选择——安静、低功耗、无需另装显卡。若要运行Qwen2.5-72B，则需要改用M2 Ultra 192GB。',
             pros: [
-              '48GB统一内存可满足Qwen3 32B的20.5GB显存需求，还留有运行其他应用的空间',
+              'M5 Pro配置最高可达64GB统一内存——远超Qwen3 32B所需的20.5GB显存，还能为其他应用留出空间',
               '静音运行，功耗适合日常桌面使用——无需额外的显卡散热管理',
               '一次性购买即可涵盖系统、存储和推理——无需单独组装GPU/电源/机箱',
             ],
             cons: [
-              '在Qwen3 32B上约22 token/秒，明显慢于RTX 4090的27–28 token/秒',
+              'M5 Pro芯片上运行Qwen3 32B目前尚无独立基准测试数据——预计性能会明显慢于RTX 4090等独立显卡，这与此前几代Mac mini上的Apple Silicon表现一致',
             ],
             affiliateLinks: [
-              { url: 'https://www.amazon.com/dp/B0CQSL8N8F', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: '约 $1,799–1,999', label: '查看当前价格 →' },
+              { url: 'https://www.apple.com.cn/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M5 Pro 64 GB', productCategory: 'Mini PC', priceRange: '约 $1,699起（64GB配置价格更高）', label: '查看当前价格 →' },
             ],
           },
           {
@@ -3222,7 +3226,7 @@ curl http://localhost:11434/v1/chat/completions \\
     metaDescription: '2026년에 Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder, Qwen2-VL을 로컬에서 실행하십시오. VRAM 요구사항, Ollama + LM Studio 설정, Q4_K_M 벤치마크, 하드웨어 티어 가이드를 제공합니다.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-ko.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-08-27',
     readTime: '14분 분량',
     educationalLevel: 'Intermediate',
     audience: 'Qwen 전체 모델 패밀리를 로컬에서 실행하고자 하는 개발자, 연구자, 프라이버시 중심 사용자 — 미국 대안보다 Alibaba 모델을 선호하는 중국어 사용자 포함',
@@ -3257,7 +3261,8 @@ curl http://localhost:11434/v1/chat/completions \\
       'RTX 4090 24 GB',
       'Apple M3 Max',
       'Apple M2 Ultra',
-      'Mac mini M4',
+      'Mac mini M5 Pro',
+      'Mac mini M6',
     ],
     affiliateDisclosure: true,
     ctaText: 'Qwen3, DeepSeek, Llama를 하나의 인터페이스에서 실행하십시오 →',
@@ -3286,7 +3291,7 @@ curl http://localhost:11434/v1/chat/completions \\
       headline: 'Qwen 로컬 배포 가이드 2026: 모든 하드웨어 티어에서 Qwen 3.6 27B, Qwen3, Coder & VL 실행하기',
       description: 'Qwen 모델 패밀리를 로컬에서 배포하는 완전한 가이드 — Qwen 3.6 27B, Qwen3, Qwen2.5, Coder, VL, VRAM 요구사항, Ollama 및 LM Studio 설정, 양자화, 벤치마크, 하드웨어 권장 사항.',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-08-27',
       inLanguage: 'ko',
       url: 'https://www.promptquorum.com/local-llms/qwen-local-deployment-guide-2026',
       author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -3395,7 +3400,7 @@ curl http://localhost:11434/v1/chat/completions \\
         tableFormat: true,
         note: 'VRAM 수치는 Ollama 라이브러리의 Q4_K_M GGUF 파일 기준입니다. 4K 컨텍스트에서 KV 캐시를 위해 1–2 GB를 추가하십시오. GPU VRAM이 모델 요구량보다 부족한 경우 Ollama가 자동으로 레이어를 시스템 RAM으로 오프로드합니다 — 동작하지만 속도가 크게 저하됩니다.',
         callouts: [
-          { type: 'tip', text: 'VRAM 티어를 확인하셨나요? [해당 티어에 맞는 정확한 GPU 또는 Mac 구매 가이드](#affiliate-picks)를 확인하십시오 — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB 이상 → Mac mini M4 Pro 또는 듀얼 GPU.' },
+          { type: 'tip', text: 'VRAM 티어를 확인하셨나요? [해당 티어에 맞는 정확한 GPU 또는 Mac 구매 가이드](#affiliate-picks)를 확인하십시오 — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB 이상 → Mac mini M5 Pro 또는 듀얼 GPU.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-ko.webp',
         imageCaption: 'Qwen 모델 크기별 VRAM 요구사항 (Q4_K_M) — PromptQuorum 2026',
@@ -3525,7 +3530,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'affiliate-picks',
         title: 'Qwen3 배포를 위해 어떤 하드웨어를 구매해야 합니까?',
         content: [
-          '**먼저 목표로 하는 Qwen 티어를 VRAM에 맞추고, 그 기준을 충족하는 가장 저렴한 카드를 구매하십시오 — 모델에 필요한 것보다 많은 VRAM에 비용을 지불하는 것이 이 목록에서 가장 흔한 과소비입니다.** 아래 추천 목록은 위 하드웨어 표와 그대로 대응됩니다: 보급형 → RTX 4060, 중급 → RTX 4070 Super, 고급 → RTX 3090/4090, Apple Silicon → Mac mini M4 Pro, 상시 가동용 → 미니 PC. 아래 가격은 2026년 GPU 시장 상황을 반영합니다 — 메모리 칩 부족과 AI 데이터센터 수요로 신품 GPU와 Apple 메모리 가격이 모두 크게 상승했으므로, 구매 전 실제 판매 가격을 확인하십시오.',
+          '**먼저 목표로 하는 Qwen 티어를 VRAM에 맞추고, 그 기준을 충족하는 가장 저렴한 카드를 구매하십시오 — 모델에 필요한 것보다 많은 VRAM에 비용을 지불하는 것이 이 목록에서 가장 흔한 과소비입니다.** 아래 추천 목록은 위 하드웨어 표와 그대로 대응됩니다: 보급형 → RTX 4060, 중급 → RTX 4070 Super, 고급 → RTX 3090/4090, Apple Silicon → Mac mini M5 Pro, 상시 가동용 → 미니 PC. 아래 가격은 2026년 GPU 시장 상황을 반영합니다 — 메모리 칩 부족과 AI 데이터센터 수요로 신품 GPU와 Apple 메모리 가격이 모두 크게 상승했으므로, 구매 전 실제 판매 가격을 확인하십시오.',
         ],
         callouts: [
           { type: 'tip', text: '이미 8 GB 이상 VRAM의 GPU를 보유하고 계신다면 이 섹션을 건너뛰십시오 — 먼저 보유한 하드웨어에서 Qwen3 8B를 실행해 보십시오. 그 한계에 도달하고 더 큰 모델을 원할 때만 새 하드웨어를 구매하십시오.' },
@@ -3585,19 +3590,19 @@ curl http://localhost:11434/v1/chat/completions \\
           },
           {
             rank: 4,
-            name: 'Apple Mac mini M4 Pro 48 GB',
-            tagline: 'Apple Silicon 선택 — Qwen3 32B (~초당 22 토큰, 저소음·저전력)',
+            name: 'Apple Mac mini M5 Pro 64 GB',
+            tagline: 'Apple Silicon 선택 — Qwen3 32B, 저소음·저전력',
             verdict: '통합 메모리에서 Qwen3 32B를 실행하는 데 가성비가 가장 좋은 선택입니다 — 조용하고 전력 소비가 낮으며 별도 GPU를 설치할 필요가 없습니다. Qwen2.5-72B의 경우 대신 M2 Ultra 192 GB가 필요합니다.',
             pros: [
-              '48 GB 통합 메모리로 Qwen3 32B의 20.5 GB 요구사항을 다른 앱을 위한 여유와 함께 충족',
+              'M5 Pro 구성은 최대 64 GB 통합 메모리까지 제공 — Qwen3 32B의 20.5 GB 요구사항을 크게 상회하며 다른 앱을 위한 여유 공간도 확보',
               '무소음 작동과 데스크톱에 적합한 전력 소비 — 별도의 GPU 쿨링 관리 불필요',
               '한 번의 구매로 OS, 스토리지, 추론을 모두 해결 — 별도의 GPU/PSU/케이스 조립 불필요',
             ],
             cons: [
-              'Qwen3 32B에서 초당 약 22 토큰은 RTX 4090의 초당 27–28 토큰보다 눈에 띄게 느림',
+              'M5 Pro 칩에서의 Qwen3 32B 독립 벤치마크는 아직 공개되지 않았습니다 — RTX 4090과 같은 전용 GPU보다 눈에 띄게 느린 성능이 예상되며, 이는 이전 세대 Mac mini용 Apple Silicon과 일관된 경향입니다',
             ],
             affiliateLinks: [
-              { url: 'https://www.amazon.com/dp/B0CQSL8N8F', productName: 'Apple Mac mini M4 Pro 48 GB', productCategory: 'Mini PC', priceRange: '약 $1,799–1,999', label: '현재 가격 확인 →' },
+              { url: 'https://www.apple.com/kr/shop/buy-mac/mac-mini', productName: 'Apple Mac mini M5 Pro 64 GB', productCategory: 'Mini PC', priceRange: '약 $1,699부터 (64 GB 구성은 더 비쌈)', label: '현재 가격 확인 →' },
             ],
           },
           {
