@@ -1,6 +1,6 @@
 // Power Local LLM — Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026
 // Slug: continue-dev-vs-cline-vs-aider-local
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// All 9 locales authored (en/de/fr/ja/zh/es/pt/ar/ko).
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -9,8 +9,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-en.webp',
     title: 'Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026',
@@ -53,7 +54,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'Which local coding agent is best in 2026: Continue.dev, Cline, or Aider?',
         answer:
-          'Pick Continue.dev if you spend most of your day inside VS Code or JetBrains and want autocomplete plus a chat panel that reaches into your codebase. Pick Cline if you want an autonomous agent that plans, edits multiple files, and runs commands with approval gates between steps — strongest for refactors and exploratory bug-hunts. Pick Aider if you live in the terminal and want every edit committed as a separate, reviewable git commit. All three run fully offline against any local LLM endpoint (Ollama, llama.cpp, LM Studio, vLLM). The right pick is a workflow choice, not a quality ranking.',
+          'Pick Continue.dev if you spend most of your day inside VS Code or JetBrains and want autocomplete plus a chat panel that reaches into your codebase. Pick Cline if you want an autonomous agent that plans, edits multiple files, and runs commands with approval gates between steps — strongest for refactors and exploratory bug-hunts. Pick Aider if you live in the terminal and want every edit committed as a separate, reviewable git commit. All three run fully offline against any local LLM endpoint (Ollama, llama.cpp, LM Studio, vLLM). The right pick is a workflow choice, not a quality ranking. **Continue.dev is discontinued:** final release v2.0.0, June 2026 - still runs, no longer updated.',
         bullets: [
           'Continue.dev — autocomplete + in-IDE chat. Best for VS Code and JetBrains users who want incremental edits without leaving the editor.',
           'Cline — autonomous agent with plan/act modes, tool calls, and per-step approval. Best for multi-file refactors and bug-hunts.',
@@ -61,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'All three work with any OpenAI-compatible local endpoint — Ollama is the easiest path, llama.cpp and vLLM are supported through provider configs.',
           'Workflow fit beats raw capability. Forcing a terminal-first dev into Cline (or a VS Code-only dev into Aider) costs more time than the harness saves.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -91,7 +92,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Continue.dev** is autocomplete-first: a VS Code and JetBrains extension with FIM (fill-in-the-middle) completions, an in-IDE chat sidebar, and `@`-context providers (codebase, file, docs, terminal). The closest open-source analogue to Copilot for local models.',
+          '**Continue.dev** is autocomplete-first: a VS Code and JetBrains extension with FIM (fill-in-the-middle) completions, an in-IDE chat sidebar, and `@`-context providers (codebase, file, docs, terminal). The closest open-source analogue to Copilot for local models. **Discontinued:** final release v2.0.0, June 2026 - still runs, no longer updated.',
           '**Cline** is agent-first: a VS Code extension with explicit Plan and Act modes, a tool-call loop (read_file, write_to_file, execute_command, browser_action), and an approval gate at every step. Designed to run autonomously across multiple files with you supervising.',
           '**Aider** is git-first: a terminal CLI that maintains a tree-sitter repo map, edits files via search-and-replace diff blocks, and commits every change. Undo is `git reset` — the most reviewable workflow of the three.',
           'All three speak OpenAI-compatible endpoints. **Ollama** is the smoothest local backend; **llama.cpp** and **vLLM** work through provider settings or proxies like LiteLLM.',
@@ -104,7 +105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Quick Facts',
         items: [
-          '**Continue.dev** — autocomplete + chat, VS Code and JetBrains, lowest-friction install of the three.',
+          '**Continue.dev** — autocomplete + chat, VS Code and JetBrains, lowest-friction install of the three. **Discontinued:** final release v2.0.0, June 2026 - still runs, no longer updated.',
           '**Cline** — autonomous agent with approval gates, VS Code only, highest capability and highest token usage.',
           '**Aider** — terminal CLI, git-native commits, every edit is reviewable and undoable through git.',
           'All three run against the same local backend — **Ollama** is the smoothest path; **llama.cpp** and **vLLM** also work via OpenAI-compatible config.',
@@ -221,6 +222,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Where it falls short:** multi-file refactors require you to drive the chat per file. Long-running autonomous tasks are not its native idiom — Agent mode is improving but is not the project\'s centre of gravity.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Status change, August 2026: Continue.dev is no longer actively developed. Cursor acquired the Continue team on 18 June 2026; the final release was v2.0.0 on 19 June 2026 and the continuedev/continue repository is now read-only. The extension still installs and runs against a local model, and the Apache 2.0 licence means it stays available - but there will be no further updates, and provider API changes will eventually break it. Treat it as a working tool with a fixed end date, and prefer Cline or Aider for anything you intend to depend on for years.',
+          },
           {
             type: 'tip',
             text: 'Run two models in your Continue.dev config: a small autocomplete model (Qwen3-Coder 1.5B at Q4_K_M needs ~1.5 GB VRAM) and a larger chat model (Qwen3-Coder 30B Q4_K_M, ~17 GB). Splitting them keeps autocomplete latency under 200 ms while leaving the chat panel useful for non-trivial questions.',
@@ -502,8 +507,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-de.webp',
     title: 'Continue.dev vs Cline vs Aider: Der beste lokale Coding Agent in 2026',
@@ -546,7 +552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Welcher lokale Coding Agent ist 2026 am besten: Continue.dev, Cline oder Aider?',
         answer:
-          'Wählen Sie Continue.dev, wenn Sie den Großteil Ihres Tages in VS Code oder JetBrains verbringen und Autocomplete plus ein Chat-Panel möchten, das in Ihre Codebasis reicht. Wählen Sie Cline, wenn Sie einen autonomen Agenten möchten, der plant, mehrere Dateien bearbeitet und Befehle mit Approval-Gates ausführt — am stärksten für Refactorings und explorative Bug-Hunts. Wählen Sie Aider, wenn Sie im Terminal arbeiten und jeden Edit als separaten, überprüfbaren Git-Commit committed möchten. Alle drei laufen vollständig offline gegen jeden lokalen LLM-Endpoint (Ollama, llama.cpp, LM Studio, vLLM). Die richtige Wahl ist eine Workflow-Entscheidung, keine Qualitätsrangfolge.',
+          'Wählen Sie Continue.dev, wenn Sie den Großteil Ihres Tages in VS Code oder JetBrains verbringen und Autocomplete plus ein Chat-Panel möchten, das in Ihre Codebasis reicht. Wählen Sie Cline, wenn Sie einen autonomen Agenten möchten, der plant, mehrere Dateien bearbeitet und Befehle mit Approval-Gates ausführt — am stärksten für Refactorings und explorative Bug-Hunts. Wählen Sie Aider, wenn Sie im Terminal arbeiten und jeden Edit als separaten, überprüfbaren Git-Commit committed möchten. Alle drei laufen vollständig offline gegen jeden lokalen LLM-Endpoint (Ollama, llama.cpp, LM Studio, vLLM). Die richtige Wahl ist eine Workflow-Entscheidung, keine Qualitätsrangfolge. **Continue.dev wurde eingestellt:** letzte Version v2.0.0, Juni 2026 - laeuft weiterhin, wird aber nicht mehr aktualisiert.',
         bullets: [
           'Continue.dev — Autocomplete + In-IDE-Chat. Am besten für VS Code und JetBrains-Nutzer, die inkrementelle Edits ohne Editor-Verlassen möchten.',
           'Cline — Autonomer Agent mit Plan/Act-Modi, Tool-Calls und Pro-Step-Approval. Am besten für Multi-File-Refactorings und Bug-Hunts.',
@@ -554,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Alle drei funktionieren mit jedem OpenAI-kompatiblen lokalen Endpoint — Ollama ist der einfachste Weg, llama.cpp und vLLM werden durch Provider-Konfigurationen unterstützt.',
           'Workflow-Anpassung schlägt rohe Kapazität. Einen Terminal-First-Dev in Cline zu zwingen (oder einen VS Code-Only-Dev in Aider) kostet mehr Zeit, als der Harness spart.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -584,7 +590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Continue.dev** ist Autocomplete-First: Eine VS Code- und JetBrains-Extension mit FIM-Completions (Fill-in-the-Middle), einem In-IDE-Chat-Sidebar und `@`-Context-Providern (Codebasis, Datei, Docs, Terminal). Das nächste Open-Source-Analogon zu Copilot für lokale Modelle.',
+          '**Continue.dev** ist Autocomplete-First: Eine VS Code- und JetBrains-Extension mit FIM-Completions (Fill-in-the-Middle), einem In-IDE-Chat-Sidebar und `@`-Context-Providern (Codebasis, Datei, Docs, Terminal). Das nächste Open-Source-Analogon zu Copilot für lokale Modelle. **Eingestellt:** letzte Version v2.0.0, Juni 2026 - laeuft weiterhin, wird aber nicht mehr aktualisiert.',
           '**Cline** ist Agent-First: Eine VS Code-Extension mit expliziten Plan- und Act-Modi, einer Tool-Call-Schleife (read_file, write_to_file, execute_command, browser_action) und einem Approval-Gate bei jedem Schritt. Konzipiert, um autonom über mehrere Dateien hinweg zu laufen, während Sie überwachen.',
           '**Aider** ist Git-First: Ein Terminal-CLI, das eine Tree-Sitter-Repo-Map verwaltet, Dateien über Search-and-Replace-Diff-Blöcke bearbeitet und jeden Change committed. Undo ist `git reset` — der überprüfbarste Workflow der drei.',
           'Alle drei sprechen OpenAI-kompatible Endpoints. **Ollama** ist das glatteste lokale Backend; **llama.cpp** und **vLLM** funktionieren über Provider-Einstellungen oder Proxies wie LiteLLM.',
@@ -597,7 +603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Schnelle Fakten',
         items: [
-          '**Continue.dev** — Autocomplete + Chat, VS Code und JetBrains, reibungsloseste Installation der drei.',
+          '**Continue.dev** — Autocomplete + Chat, VS Code und JetBrains, reibungsloseste Installation der drei. **Eingestellt:** letzte Version v2.0.0, Juni 2026 - laeuft weiterhin, wird aber nicht mehr aktualisiert.',
           '**Cline** — Autonomer Agent mit Approval-Gates, nur VS Code, höchste Kapazität und höchste Token-Nutzung.',
           '**Aider** — Terminal-CLI, Git-native Commits, jeder Edit ist durch Git überprüfbar und rückgängig zu machen.',
           'Alle drei laufen gegen dasselbe lokale Backend — **Ollama** ist der glatteste Weg; **llama.cpp** und **vLLM** funktionieren auch via OpenAI-kompatible Konfiguration.',
@@ -714,6 +720,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Wo es zu kurz kommt:** Multi-File-Refactorings erfordern, dass Sie den Chat pro Datei steuern. Lang laufende autonome Aufgaben sind nicht sein natives Idiom — Agent-Modus verbessert sich, ist aber nicht der Gravitationszentrum des Projekts.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Statusaenderung, August 2026: Continue.dev wird nicht mehr aktiv entwickelt. Cursor hat das Continue-Team am 18. Juni 2026 uebernommen; die letzte Version war v2.0.0 vom 19. Juni 2026, und das Repository continuedev/continue ist jetzt schreibgeschuetzt. Die Erweiterung laesst sich weiterhin installieren und laeuft mit einem lokalen Modell, und die Apache-2.0-Lizenz haelt sie verfuegbar - es wird aber keine Updates mehr geben, und Aenderungen an Provider-APIs werden sie irgendwann unbrauchbar machen. Behandeln Sie das Tool als funktionsfaehig mit festem Enddatum und waehlen Sie Cline oder Aider fuer alles, worauf Sie sich ueber Jahre stuetzen wollen.',
+          },
           {
             type: 'tip',
             text: 'Führen Sie zwei Modelle in Ihrer Continue.dev-Konfiguration aus: ein kleines Autocomplete-Modell (Qwen2,5-Coder 1,5B bei Q4_K_M braucht ~1,5 GB VRAM) und ein größeres Chat-Modell (Qwen3-Coder 30B Q4_K_M, ~17 GB). Die Aufteilung hält Autocomplete-Latenz unter 200 ms, während das Chat-Panel für nicht triviale Fragen nützlich bleibt.',
@@ -999,8 +1009,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-fr.webp',
     title: 'Continue.dev vs Cline vs Aider : Meilleur agent de codage local 2026',
@@ -1043,7 +1054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fr: {
         question: 'Quel agent de codage local est le meilleur en 2026 : Continue.dev, Cline ou Aider ?',
         answer:
-          'Choisissez Continue.dev si vous passez la plupart de votre journée dans VS Code ou JetBrains et que vous voulez l\'autocomplétion plus un panneau de chat qui peut accéder à votre base de code. Choisissez Cline si vous voulez un agent autonome qui planifie, édite plusieurs fichiers et exécute des commandes avec des portes d\'approbation entre les étapes — plus fort pour les refactorisations et les chasses aux bogues exploratoires. Choisissez Aider si vous travaillez dans le terminal et que vous voulez que chaque édition soit commitée en tant que commit git séparé et vérifiable. Les trois fonctionnent entièrement hors ligne contre n\'importe quel endpoint LLM local (Ollama, llama.cpp, LM Studio, vLLM). Le bon choix est une décision de flux de travail, pas un classement de qualité.',
+          'Choisissez Continue.dev si vous passez la plupart de votre journée dans VS Code ou JetBrains et que vous voulez l\'autocomplétion plus un panneau de chat qui peut accéder à votre base de code. Choisissez Cline si vous voulez un agent autonome qui planifie, édite plusieurs fichiers et exécute des commandes avec des portes d\'approbation entre les étapes — plus fort pour les refactorisations et les chasses aux bogues exploratoires. Choisissez Aider si vous travaillez dans le terminal et que vous voulez que chaque édition soit commitée en tant que commit git séparé et vérifiable. Les trois fonctionnent entièrement hors ligne contre n\'importe quel endpoint LLM local (Ollama, llama.cpp, LM Studio, vLLM). Le bon choix est une décision de flux de travail, pas un classement de qualité. **Continue.dev est abandonne :** derniere version v2.0.0, juin 2026 - fonctionne encore, mais n\'est plus mis a jour.',
         bullets: [
           'Continue.dev — autocomplétion + chat intégré à l\'IDE. Idéal pour les utilisateurs VS Code et JetBrains qui veulent des éditions progressives sans quitter l\'éditeur.',
           'Cline — agent autonome avec modes Plan/Act, appels d\'outils et approbation par étape. Idéal pour les refactorisations multi-fichiers et les chasses aux bogues.',
@@ -1051,7 +1062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les trois fonctionnent avec n\'importe quel endpoint compatible OpenAI local — Ollama est le chemin le plus facile, llama.cpp et vLLM sont pris en charge via les configurations de fournisseur.',
           "L'adaptation au flux de travail surpasse la capacité brute. Forcer un développeur basé sur le terminal dans Cline (ou un développeur uniquement VS Code dans Aider) coûte plus de temps que l'outil ne peut en économiser.",
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1086,7 +1097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Aider** est basé sur Git : un CLI terminal qui maintient une carte de dépôt Tree-Sitter, édite les fichiers via des blocs de diff de recherche-remplacement et commite chaque modification. L'annulation est `git reset` — le flux de travail le plus vérifiable des trois.",
           'Les trois parlent les endpoints compatibles OpenAI. **Ollama** est le backend local le plus fluide ; **llama.cpp** et **vLLM** fonctionnent via les paramètres du fournisseur ou les proxies comme LiteLLM.',
           "**La fiabilité des appels d'outils** dépend du modèle, pas de l'outil. Qwen3-Coder 30B et DeepSeek Coder V3 sont les appelants d'outils les plus fiables en mai 2026 ; les modèles plus petits (classe 7B) émettent régulièrement des appels d'outils malformés, indépendamment de l'outil qui les enveloppe.",
-          '**La stratégie de fenêtre de contexte** diffère considérablement : Continue.dev s\'appuie sur l\'index de base de code intégré et le contexte `@`-épinglé, Cline diffuse le contenu complet du fichier dans la conversation (utilisation de jetons élevée), Aider utilise une carte de dépôt Tree-Sitter plus `/add` et `/drop` explicites pour garder l\'ensemble de travail petit.',
+          '**La stratégie de fenêtre de contexte** diffère considérablement : Continue.dev s\'appuie sur l\'index de base de code intégré et le contexte `@`-épinglé, Cline diffuse le contenu complet du fichier dans la conversation (utilisation de jetons élevée), Aider utilise une carte de dépôt Tree-Sitter plus `/add` et `/drop` explicites pour garder l\'ensemble de travail petit. **Abandonne :** derniere version v2.0.0, juin 2026 - fonctionne encore, mais n\'est plus mis a jour.',
           'Pour un développeur seul, **l\'adaptation au flux de travail** domine les résultats bien plus que tout benchmark. L\'outil que vous laissez réellement ouvert est celui que vous devriez choisir.',
         ],
       },
@@ -1094,7 +1105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Faits rapides',
         items: [
-          '**Continue.dev** — autocomplétion + chat, VS Code et JetBrains, installation la moins laborieuse des trois.',
+          '**Continue.dev** — autocomplétion + chat, VS Code et JetBrains, installation la moins laborieuse des trois. **Abandonne :** derniere version v2.0.0, juin 2026 - fonctionne encore, mais n\'est plus mis a jour.',
           '**Cline** — agent autonome avec portes d\'approbation, uniquement VS Code, capacité la plus élevée et utilisation de jetons la plus élevée.',
           '**Aider** — CLI terminal, commits natifs Git, chaque édition est vérifiable et réversible via Git.',
           'Les trois s\'exécutent contre le même backend local — **Ollama** est le chemin le plus fluide ; **llama.cpp** et **vLLM** fonctionnent également via la configuration compatible OpenAI.',
@@ -1211,6 +1222,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Où il manque :** les refactorisations multi-fichiers vous obligent à piloter le chat par fichier. Les tâches autonomes longues ne sont pas son idiome natif — le mode Agent s'améliore mais n'est pas le centre de gravité du projet.",
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Changement de statut, aout 2026 : Continue.dev n\'est plus developpe activement. Cursor a acquis l\'equipe Continue le 18 juin 2026 ; la derniere version est la v2.0.0 du 19 juin 2026 et le depot continuedev/continue est desormais en lecture seule. L\'extension s\'installe et fonctionne toujours avec un modele local, et la licence Apache 2.0 la maintient disponible - mais il n\'y aura plus de mises a jour, et les evolutions des API des fournisseurs finiront par la casser. Considerez-la comme un outil fonctionnel a date de fin connue, et preferez Cline ou Aider pour tout ce dont vous comptez dependre pendant des annees.',
+          },
           {
             type: 'tip',
             text: "Exécutez deux modèles dans votre configuration Continue.dev : un petit modèle d'autocomplétion (Qwen3-Coder 1.5B à Q4_K_M a besoin d'environ 1,5 GB de VRAM) et un plus grand modèle de chat (Qwen3-Coder 30B Q4_K_M, ~17 GB). La séparation maintient la latence d'autocomplétion sous 200 ms pendant que le panneau de chat reste utile pour les questions non triviales.",
@@ -1496,8 +1511,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-ja.webp',
     title: 'Continue.dev vs Cline vs Aider：ローカルコーディング AI 2026 比較',
@@ -1540,7 +1556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ja: {
         question: '2026 年で最高のローカルコーディングエージェントは：Continue.dev、Cline、Aider のどれですか？',
         answer:
-          'VS Code または JetBrains で一日の大半を過ごし、コードベースに到達できるオートコンプリートとチャットパネルが必要な場合は Continue.dev を選択してください。計画、複数のファイルを編集し、ステップ間で承認ゲートを使用してコマンドを実行する自律エージェントが必要な場合は Cline を選択してください。ターミナルで作業していて、すべての編集が個別にコミットされることを希望する場合は Aider を選択してください。3 つすべてはローカル LLM エンドポイント（Ollama、llama.cpp、LM Studio、vLLM）に対して完全にオフラインで動作します。正しい選択はワークフローの決定であり、品質のランキングではありません。',
+          'VS Code または JetBrains で一日の大半を過ごし、コードベースに到達できるオートコンプリートとチャットパネルが必要な場合は Continue.dev を選択してください。計画、複数のファイルを編集し、ステップ間で承認ゲートを使用してコマンドを実行する自律エージェントが必要な場合は Cline を選択してください。ターミナルで作業していて、すべての編集が個別にコミットされることを希望する場合は Aider を選択してください。3 つすべてはローカル LLM エンドポイント（Ollama、llama.cpp、LM Studio、vLLM）に対して完全にオフラインで動作します。正しい選択はワークフローの決定であり、品質のランキングではありません。 **Continue.dev は開発終了：** 最終リリースはv2.0.0（2026年6月）。動作はしますが更新はありません。',
         bullets: [
           'Continue.dev — オートコンプリート + IDE 統合チャット。エディタを離れずに段階的な編集を希望する VS Code および JetBrains ユーザーに最適です。',
           'Cline — Plan/Act モード、ツール呼び出し、ステップ単位のの承認を備えた自律エージェント。マルチファイルのリファクタリングとバグハントに最適です。',
@@ -1548,7 +1564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '3 つすべてがローカルの OpenAI 互換エンドポイントで動作します。Ollama が最も簡単なパス、llama.cpp と vLLM はプロバイダー設定でサポートされています。',
           'ワークフロー適合性は生のキャパシティを超えています。ターミナル最優先の開発者を Cline に強制するか、VS Code のみの開発者を Aider に強制すると、ツールが節約するより多くの時間がかかります。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1578,7 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Continue.dev** はオートコンプリート優先：FIM（Fill-in-the-Middle）補完、IDE に統合されたチャットサイドバー、`@` コンテキストプロバイダー（コードベース、ファイル、ドキュメント、ターミナル）を備えた VS Code および JetBrains 拡張機能。ローカルモデル向けの最も近いオープンソース Copilot アナログです。',
+          '**Continue.dev** はオートコンプリート優先：FIM（Fill-in-the-Middle）補完、IDE に統合されたチャットサイドバー、`@` コンテキストプロバイダー（コードベース、ファイル、ドキュメント、ターミナル）を備えた VS Code および JetBrains 拡張機能。ローカルモデル向けの最も近いオープンソース Copilot アナログです。 **開発終了：** 最終リリースはv2.0.0（2026年6月）。動作はしますが更新はありません。',
           '**Cline** はエージェント優先：明示的な Plan および Act モード、ツール呼び出しループ（read_file、write_to_file、execute_command、browser_action）、各ステップでの承認ゲートを備えた VS Code 拡張機能。複数のファイルにわたって自律的に動作するように設計されています。',
           '**Aider** は Git 優先：tree-sitter リポジトリマップを維持し、検索と置換の diff ブロックを介してファイルを編集し、すべての変更をコミットするターミナル CLI。undo は `git reset` です。3 つの中で最も確認可能なワークフローです。',
           '3 つすべてが OpenAI 互換エンドポイントで話します。**Ollama** は最もスムーズなローカルバックエンド。**llama.cpp** と **vLLM** はプロバイダー設定またはLiteLLM などのプロキシを介して動作します。',
@@ -1591,7 +1607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'クイックファクト',
         items: [
-          '**Continue.dev** — オートコンプリート + チャット、VS Code および JetBrains、3 つの中で最も低摩擦のインストール。',
+          '**Continue.dev** — オートコンプリート + チャット、VS Code および JetBrains、3 つの中で最も低摩擦のインストール。 **開発終了：** 最終リリースはv2.0.0（2026年6月）。動作はしますが更新はありません。',
           '**Cline** — 承認ゲート付き自律エージェント、VS Code のみ、最高のキャパシティと最高のトークン使用。',
           '**Aider** — ターミナル CLI、Git ネイティブコミット、各編集は確認可能で Git を通じて undo 可能。',
           '3 つすべてが同じローカルバックエンドに対して実行されます。**Ollama** は最もスムーズなパス。**llama.cpp** と **vLLM** も OpenAI 互換設定を通じて動作します。',
@@ -1708,6 +1724,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**短所：** マルチファイルのリファクタリングではファイルごとに チャットを操作する必要があります。長時間実行される自律タスクは固有のイディオムではありません。Agent モードは改善していますが、プロジェクトの重力中心ではありません。',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'ステータス変更（2026年8月）：Continue.devはすでに活発な開発が行われていません。Cursorが2026年6月18日にContinueチームを買収し、最終リリースは2026年6月19日のv2.0.0、continuedev/continueリポジトリは現在読み取り専用です。拡張機能は今もインストールでき、ローカルモデルで動作し、Apache 2.0ライセンスにより入手可能な状態は続きます。ただし今後の更新はなく、プロバイダーAPIの変更によっていずれ動作しなくなります。終了時期が決まった実用ツールとして扱い、何年も依存する用途にはClineまたはAiderを選んでください。',
+          },
           {
             type: 'tip',
             text: 'Continue.dev 設定で 2 つのモデルを実行します：小さいオートコンプリートモデル（Qwen3-Coder 1.5B at Q4_K_M は約 1.5 GB VRAM が必要）と大きいチャットモデル（Qwen3-Coder 30B Q4_K_M、約 17 GB）。分割すると、オートコンプリートレイテンシが 200 ms 未満に保たれ、チャットパネルは重要でない質問に役立ちます。',
@@ -1992,8 +2012,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-zh.webp',
     title: 'Continue.dev vs Cline vs Aider：2026 年本地编码代理对比',
@@ -2036,7 +2057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       zh: {
         question: '2026 年最好的本地编码代理是哪个：Continue.dev、Cline 还是 Aider？',
         answer:
-          '如果您大部分时间都在 VS Code 或 JetBrains 中工作，并且想要自动完成加上可以访问您代码库的聊天面板，请选择 Continue.dev。如果您想要一个自主代理来计划、编辑多个文件并在步骤之间执行带批准门的命令，请选择 Cline — 最适合重构和探索性的错误追踪。如果您在终端中工作，并且希望每次编辑都作为单独的可审核的 git 提交进行，请选择 Aider。三个都可以完全离线对任何本地 LLM 端点（Ollama、llama.cpp、LM Studio、vLLM）工作。正确的选择是一个工作流决定，不是质量排名。',
+          '如果您大部分时间都在 VS Code 或 JetBrains 中工作，并且想要自动完成加上可以访问您代码库的聊天面板，请选择 Continue.dev。如果您想要一个自主代理来计划、编辑多个文件并在步骤之间执行带批准门的命令，请选择 Cline — 最适合重构和探索性的错误追踪。如果您在终端中工作，并且希望每次编辑都作为单独的可审核的 git 提交进行，请选择 Aider。三个都可以完全离线对任何本地 LLM 端点（Ollama、llama.cpp、LM Studio、vLLM）工作。正确的选择是一个工作流决定，不是质量排名。 **Continue.dev 已停止开发：** 最终版本 v2.0.0（2026年6月）。仍可运行，但不再更新。',
         bullets: [
           'Continue.dev — 自动完成 + IDE 集成聊天。最适合想要在不离开编辑器的情况下进行增量编辑的 VS Code 和 JetBrains 用户。',
           'Cline — 具有计划/行动模式、工具调用和每步批准的自主代理。最适合多文件重构和错误追踪。',
@@ -2044,7 +2065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '三个都适用于任何 OpenAI 兼容的本地端点 — Ollama 是最简单的路径，llama.cpp 和 vLLM 通过提供商配置支持。',
           '工作流适配性优于原始能力。强迫一个终端优先的开发者进入 Cline（或一个仅 VS Code 的开发者进入 Aider）花费的时间比工具能节省的更多。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2074,7 +2095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Continue.dev** 是自动完成优先：具有 FIM（Fill-in-the-Middle）补全、IDE 集成的聊天侧边栏和 `@` 上下文提供者（代码库、文件、文档、终端）的 VS Code 和 JetBrains 扩展。本地模型的最接近的开源 Copilot 类似物。',
+          '**Continue.dev** 是自动完成优先：具有 FIM（Fill-in-the-Middle）补全、IDE 集成的聊天侧边栏和 `@` 上下文提供者（代码库、文件、文档、终端）的 VS Code 和 JetBrains 扩展。本地模型的最接近的开源 Copilot 类似物。 **已停止开发：** 最终版本 v2.0.0（2026年6月）。仍可运行，但不再更新。',
           '**Cline** 是代理优先：具有明确的计划和行动模式、工具调用循环（read_file、write_to_file、execute_command、browser_action）和每个步骤的批准门的 VS Code 扩展。设计为在多个文件中自主运行。',
           '**Aider** 是 Git 优先：一个终端 CLI，维护 tree-sitter 仓库地图，通过搜索和替换差异块编辑文件，并提交每项更改。撤销是 `git reset` — 三个中最可审核的工作流。',
           '三个都讲 OpenAI 兼容端点。**Ollama** 是最流畅的本地后端；**llama.cpp** 和 **vLLM** 通过提供商设置或像 LiteLLM 这样的代理工作。',
@@ -2087,7 +2108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: '快速事实',
         items: [
-          '**Continue.dev** — 自动完成 + 聊天，VS Code 和 JetBrains，三个中最低摩擦的安装。',
+          '**Continue.dev** — 自动完成 + 聊天，VS Code 和 JetBrains，三个中最低摩擦的安装。 **已停止开发：** 最终版本 v2.0.0（2026年6月）。仍可运行，但不再更新。',
           '**Cline** — 具有批准门的自主代理，仅 VS Code，最高能力和最高令牌使用。',
           '**Aider** — 终端 CLI，Git 原生提交，每次编辑都可通过 Git 审核和撤销。',
           '三个都对相同的本地后端运行 — **Ollama** 是最流畅的路径；**llama.cpp** 和 **vLLM** 也通过 OpenAI 兼容配置工作。',
@@ -2204,6 +2225,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**不足处：** 多文件重构需要您按文件驱动聊天。长期运行的自主任务不是其原生习语 — Agent 模式在改进，但不是项目的重力中心。',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: '状态变更（2026年8月）：Continue.dev 已不再积极开发。Cursor 于2026年6月18日收购了 Continue 团队，最终版本为2026年6月19日发布的 v2.0.0，continuedev/continue 仓库现已设为只读。该扩展仍可安装并配合本地模型运行，Apache 2.0 许可证也保证它继续可获取——但不会再有更新，供应商 API 的变化最终会使其失效。请将其视为有明确终止日期的可用工具；凡是需要长期依赖的场景，请选择 Cline 或 Aider。',
+          },
           {
             type: 'tip',
             text: '在您的 Continue.dev 配置中运行两个模型：小型自动完成模型（Qwen3-Coder 1.5B at Q4_K_M 需要约 1.5 GB VRAM）和较大的聊天模型（Qwen3-Coder 30B Q4_K_M，约 17 GB）。分割使自动完成延迟保持在 200 毫秒以下，同时保持聊天面板对非平凡问题有用。',
@@ -2488,8 +2513,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-es.webp',
     title: 'Continue.dev vs Cline vs Aider: Mejor agente de código local en 2026',
@@ -2532,7 +2558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       es: {
         question: '¿Cuál es el mejor agente de código local en 2026: Continue.dev, Cline o Aider?',
         answer:
-          'Elige Continue.dev si pasas la mayor parte del día en VS Code o JetBrains y quieres autocompletado más un panel de chat que acceda a tu base de código. Elige Cline si quieres un agente autónomo que planifique, edite múltiples archivos y ejecute comandos con puertas de aprobación entre pasos — el más potente para refactorizaciones y búsquedas de errores exploratorias. Elige Aider si trabajas en el terminal y quieres que cada edición quede como un commit de git separado y revisable. Los tres funcionan completamente sin conexión contra cualquier endpoint de LLM local (Ollama, llama.cpp, LM Studio, vLLM). La elección correcta es una decisión de flujo de trabajo, no un ranking de calidad.',
+          'Elige Continue.dev si pasas la mayor parte del día en VS Code o JetBrains y quieres autocompletado más un panel de chat que acceda a tu base de código. Elige Cline si quieres un agente autónomo que planifique, edite múltiples archivos y ejecute comandos con puertas de aprobación entre pasos — el más potente para refactorizaciones y búsquedas de errores exploratorias. Elige Aider si trabajas en el terminal y quieres que cada edición quede como un commit de git separado y revisable. Los tres funcionan completamente sin conexión contra cualquier endpoint de LLM local (Ollama, llama.cpp, LM Studio, vLLM). La elección correcta es una decisión de flujo de trabajo, no un ranking de calidad. **Continue.dev esta descontinuado:** ultima version v2.0.0, junio de 2026 - sigue funcionando, pero ya no se actualiza.',
         bullets: [
           'Continue.dev — autocompletado + chat integrado en IDE. Ideal para usuarios de VS Code y JetBrains que quieren ediciones incrementales sin abandonar el editor.',
           'Cline — agente autónomo con modos Plan/Actuar, llamadas a herramientas y aprobación por paso. Ideal para refactorizaciones de múltiples archivos y búsquedas de errores.',
@@ -2540,7 +2566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Los tres funcionan con cualquier endpoint local compatible con OpenAI — Ollama es el camino más sencillo, llama.cpp y vLLM son compatibles mediante configuraciones de proveedor.',
           'La adecuación al flujo de trabajo supera la capacidad bruta. Forzar a un desarrollador orientado al terminal en Cline (o a uno exclusivo de VS Code en Aider) cuesta más tiempo del que la herramienta ahorra.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2570,7 +2596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Continue.dev** es autocompletado primero: una extensión para VS Code y JetBrains con completados FIM (fill-in-the-middle), un panel de chat lateral integrado en el IDE y proveedores de contexto `@` (base de código, archivo, documentación, terminal). El análogo open-source más cercano a Copilot para modelos locales.',
+          '**Continue.dev** es autocompletado primero: una extensión para VS Code y JetBrains con completados FIM (fill-in-the-middle), un panel de chat lateral integrado en el IDE y proveedores de contexto `@` (base de código, archivo, documentación, terminal). El análogo open-source más cercano a Copilot para modelos locales. **Descontinuado:** ultima version v2.0.0, junio de 2026 - sigue funcionando, pero ya no se actualiza.',
           '**Cline** es agente primero: una extensión de VS Code con modos Plan y Actuar explícitos, un bucle de llamadas a herramientas (read_file, write_to_file, execute_command, browser_action) y una puerta de aprobación en cada paso. Diseñado para ejecutarse de forma autónoma en múltiples archivos mientras tú supervisas.',
           '**Aider** es Git primero: un CLI de terminal que mantiene un mapa de repositorio tree-sitter, edita archivos mediante bloques de diff de búsqueda y reemplazo, y hace commit de cada cambio. Deshacer es `git reset` — el flujo de trabajo más revisable de los tres.',
           'Los tres hablan con endpoints compatibles con OpenAI. **Ollama** es el backend local más fluido; **llama.cpp** y **vLLM** funcionan mediante configuraciones de proveedor o proxies como LiteLLM.',
@@ -2583,7 +2609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Datos rápidos',
         items: [
-          '**Continue.dev** — autocompletado + chat, VS Code y JetBrains, la instalación con menos fricción de las tres.',
+          '**Continue.dev** — autocompletado + chat, VS Code y JetBrains, la instalación con menos fricción de las tres. **Descontinuado:** ultima version v2.0.0, junio de 2026 - sigue funcionando, pero ya no se actualiza.',
           '**Cline** — agente autónomo con puertas de aprobación, solo VS Code, la mayor capacidad y el mayor uso de tokens.',
           '**Aider** — CLI de terminal, commits nativos de Git, cada edición es revisable y reversible a través de Git.',
           'Los tres se ejecutan contra el mismo backend local — **Ollama** es el camino más fluido; **llama.cpp** y **vLLM** también funcionan con configuración compatible con OpenAI.',
@@ -2700,6 +2726,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Donde se queda corto:** las refactorizaciones de múltiples archivos requieren que dirijas el chat por archivo. Las tareas autónomas de larga duración no son su modo nativo — el modo Agente está mejorando pero no es el centro de gravedad del proyecto.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Cambio de estado, agosto de 2026: Continue.dev ya no se desarrolla activamente. Cursor adquirio el equipo de Continue el 18 de junio de 2026; la ultima version fue la v2.0.0 del 19 de junio de 2026 y el repositorio continuedev/continue es ahora de solo lectura. La extension sigue instalandose y funcionando con un modelo local, y la licencia Apache 2.0 la mantiene disponible, pero no habra mas actualizaciones y los cambios en las API de los proveedores acabaran rompiendola. Tratala como una herramienta funcional con fecha de caducidad conocida y prefiere Cline o Aider para cualquier cosa de la que pienses depender durante anos.',
+          },
           {
             type: 'tip',
             text: 'Ejecuta dos modelos en tu configuración de Continue.dev: un modelo de autocompletado pequeño (Qwen3-Coder 1.5B en Q4_K_M necesita ~1.5 GB de VRAM) y un modelo de chat más grande (Qwen3-Coder 30B Q4_K_M, ~17 GB). Separarlos mantiene la latencia de autocompletado por debajo de 200 ms mientras el panel de chat sigue siendo útil para preguntas no triviales.',
@@ -2998,8 +3028,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-pt.webp',
     title: 'Continue.dev vs Cline vs Aider: Melhor agente de código local em 2026',
@@ -3042,7 +3073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pt: {
         question: 'Qual é o melhor agente de código local em 2026: Continue.dev, Cline ou Aider?',
         answer:
-          'Escolha o Continue.dev se você passa a maior parte do dia no VS Code ou JetBrains e quer autocompletar mais um painel de chat que acessa sua base de código. Escolha o Cline se você quer um agente autônomo que planeje, edite vários arquivos e execute comandos com portões de aprovação entre as etapas — o mais potente para refatorações e caças a bugs exploratórias. Escolha o Aider se você trabalha no terminal e quer que cada edição fique como um commit do git separado e revisável. Os três funcionam totalmente offline contra qualquer endpoint de LLM local (Ollama, llama.cpp, LM Studio, vLLM). A escolha certa é uma decisão de fluxo de trabalho, não um ranking de qualidade.',
+          'Escolha o Continue.dev se você passa a maior parte do dia no VS Code ou JetBrains e quer autocompletar mais um painel de chat que acessa sua base de código. Escolha o Cline se você quer um agente autônomo que planeje, edite vários arquivos e execute comandos com portões de aprovação entre as etapas — o mais potente para refatorações e caças a bugs exploratórias. Escolha o Aider se você trabalha no terminal e quer que cada edição fique como um commit do git separado e revisável. Os três funcionam totalmente offline contra qualquer endpoint de LLM local (Ollama, llama.cpp, LM Studio, vLLM). A escolha certa é uma decisão de fluxo de trabalho, não um ranking de qualidade. **O Continue.dev foi descontinuado:** versao final v2.0.0, junho de 2026 - ainda funciona, mas nao recebe mais atualizacoes.',
         bullets: [
           'Continue.dev — autocompletar + chat integrado ao IDE. Ideal para usuários de VS Code e JetBrains que querem edições incrementais sem sair do editor.',
           'Cline — agente autônomo com modos Plan/Act, chamadas de ferramentas e aprovação por etapa. Ideal para refatorações de vários arquivos e caças a bugs.',
@@ -3050,7 +3081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Os três funcionam com qualquer endpoint local compatível com OpenAI — o Ollama é o caminho mais simples, llama.cpp e vLLM são compatíveis por meio de configurações de provedor.',
           'A adequação ao fluxo de trabalho supera a capacidade bruta. Forçar um desenvolvedor orientado ao terminal a usar o Cline (ou um exclusivo do VS Code a usar o Aider) custa mais tempo do que a ferramenta economiza.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -3080,7 +3111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Continue.dev** é autocompletar em primeiro lugar: uma extensão para VS Code e JetBrains com completações FIM (fill-in-the-middle), um painel de chat lateral integrado ao IDE e provedores de contexto `@` (base de código, arquivo, documentação, terminal). O análogo open-source mais próximo do Copilot para modelos locais.',
+          '**Continue.dev** é autocompletar em primeiro lugar: uma extensão para VS Code e JetBrains com completações FIM (fill-in-the-middle), um painel de chat lateral integrado ao IDE e provedores de contexto `@` (base de código, arquivo, documentação, terminal). O análogo open-source mais próximo do Copilot para modelos locais. **Descontinuado:** versao final v2.0.0, junho de 2026 - ainda funciona, mas nao recebe mais atualizacoes.',
           '**Cline** é agente em primeiro lugar: uma extensão do VS Code com modos Plan e Act explícitos, um loop de chamadas de ferramentas (read_file, write_to_file, execute_command, browser_action) e um portão de aprovação em cada etapa. Projetado para executar de forma autônoma em vários arquivos enquanto você supervisiona.',
           '**Aider** é Git em primeiro lugar: uma CLI de terminal que mantém um mapa de repositório tree-sitter, edita arquivos por meio de blocos de diff de busca e substituição e faz commit de cada mudança. Desfazer é `git reset` — o fluxo de trabalho mais revisável dos três.',
           'Os três falam com endpoints compatíveis com OpenAI. O **Ollama** é o backend local mais fluido; **llama.cpp** e **vLLM** funcionam por meio de configurações de provedor ou proxies como o LiteLLM.',
@@ -3093,7 +3124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Fatos rápidos',
         items: [
-          '**Continue.dev** — autocompletar + chat, VS Code e JetBrains, a instalação com menos atrito dos três.',
+          '**Continue.dev** — autocompletar + chat, VS Code e JetBrains, a instalação com menos atrito dos três. **Descontinuado:** versao final v2.0.0, junho de 2026 - ainda funciona, mas nao recebe mais atualizacoes.',
           '**Cline** — agente autônomo com portões de aprovação, somente VS Code, a maior capacidade e o maior uso de tokens.',
           '**Aider** — CLI de terminal, commits nativos do Git, cada edição é revisável e reversível pelo Git.',
           'Os três são executados contra o mesmo backend local — o **Ollama** é o caminho mais fluido; **llama.cpp** e **vLLM** também funcionam com configuração compatível com OpenAI.',
@@ -3210,6 +3241,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Onde fica aquém:** as refatorações de vários arquivos exigem que você conduza o chat por arquivo. As tarefas autônomas de longa duração não são seu modo nativo — o modo Agent está melhorando, mas não é o centro de gravidade do projeto.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Mudanca de status, agosto de 2026: o Continue.dev nao esta mais em desenvolvimento ativo. A Cursor adquiriu a equipe do Continue em 18 de junho de 2026; a versao final foi a v2.0.0, de 19 de junho de 2026, e o repositorio continuedev/continue agora e somente leitura. A extensao ainda instala e funciona com um modelo local, e a licenca Apache 2.0 a mantem disponivel - mas nao havera mais atualizacoes, e mudancas nas APIs dos provedores acabarao quebrando-a. Trate-a como uma ferramenta funcional com data de validade conhecida e prefira Cline ou Aider para qualquer coisa da qual voce pretenda depender por anos.',
+          },
           {
             type: 'tip',
             text: 'Execute dois modelos na sua configuração do Continue.dev: um modelo de autocompletar pequeno (Qwen3-Coder 1.5B em Q4_K_M precisa de ~1.5 GB de VRAM) e um modelo de chat maior (Qwen3-Coder 30B Q4_K_M, ~17 GB). Separá-los mantém a latência de autocompletar abaixo de 200 ms enquanto o painel de chat continua útil para perguntas não triviais.',
@@ -3508,8 +3543,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-ar.webp',
     title: '⁨Continue.dev⁩ مقابل ⁨Cline⁩ مقابل ⁨Aider⁩: أفضل وكيل برمجة محلي في ⁨2026⁩',
@@ -3552,7 +3588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ar: {
         question: 'ما أفضل وكيل برمجة محلي في 2026: Continue.dev أم Cline أم Aider؟',
         answer:
-          'اختر Continue.dev إذا كنت تقضي معظم يومك في VS Code أو JetBrains وتريد إكمالاً تلقائياً مع لوحة دردشة تصل إلى قاعدة الكود لديك. اختر Cline إذا أردت وكيلاً مستقلاً يُخطط ويحرر ملفات متعددة وينفذ أوامر مع بوابات موافقة بين الخطوات — الأقوى لإعادة الهيكلة والبحث الاستكشافي عن الأخطاء. اختر Aider إذا كنت تعمل في الطرفية وتريد أن يُودَع كل تحرير كـcommit منفصل وقابل للمراجعة في git. تعمل الأدوات الثلاث بالكامل دون اتصال بأي نقطة نهاية لنموذج لغوي محلي (Ollama أو llama.cpp أو LM Studio أو vLLM). الاختيار الصحيح قرار يتعلق بسير العمل، لا بترتيب الجودة.',
+          'اختر Continue.dev إذا كنت تقضي معظم يومك في VS Code أو JetBrains وتريد إكمالاً تلقائياً مع لوحة دردشة تصل إلى قاعدة الكود لديك. اختر Cline إذا أردت وكيلاً مستقلاً يُخطط ويحرر ملفات متعددة وينفذ أوامر مع بوابات موافقة بين الخطوات — الأقوى لإعادة الهيكلة والبحث الاستكشافي عن الأخطاء. اختر Aider إذا كنت تعمل في الطرفية وتريد أن يُودَع كل تحرير كـcommit منفصل وقابل للمراجعة في git. تعمل الأدوات الثلاث بالكامل دون اتصال بأي نقطة نهاية لنموذج لغوي محلي (Ollama أو llama.cpp أو LM Studio أو vLLM). الاختيار الصحيح قرار يتعلق بسير العمل، لا بترتيب الجودة. **Continue.dev متوقّف عن التطوير:** الإصدار الأخير v2.0.0 في يونيو 2026 - لا يزال يعمل لكنه لم يعد يُحدَّث.',
         bullets: [
           'تطبيق Continue.dev — إكمال تلقائي + دردشة مدمجة في بيئة التطوير. الأمثل لمستخدمي VS Code وJetBrains الذين يريدون تعديلات تدريجية دون مغادرة المحرر.',
           'أداة Cline — وكيل مستقل بأوضاع التخطيط والتنفيذ واستدعاءات الأدوات والموافقة خطوة بخطوة. الأمثل لإعادة الهيكلة متعددة الملفات والبحث عن الأخطاء.',
@@ -3560,7 +3596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تعمل الأدوات الثلاث مع أي نقطة نهاية محلية متوافقة مع OpenAI — Ollama هو الطريق الأيسر، وllama.cpp وvLLM مدعومان عبر إعدادات الموفر.',
           'ملاءمة سير العمل تتفوق على القدرة الخام. إجبار مطور يعمل في الطرفية على Cline (أو مطور يعمل في VS Code على Aider) يكلّف وقتاً أكثر مما توفره الأداة.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -3590,7 +3626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**تطبيق Continue.dev** يضع الإكمال التلقائي في المقدمة: إضافة لـVS Code وJetBrains مع إكمالات FIM (fill-in-the-middle)، ولوحة دردشة جانبية مدمجة في بيئة التطوير، وموفري سياق `@` (قاعدة الكود، الملف، المستندات، الطرفية). الأقرب مفتوح المصدر إلى Copilot للنماذج المحلية.',
+          '**تطبيق Continue.dev** يضع الإكمال التلقائي في المقدمة: إضافة لـVS Code وJetBrains مع إكمالات FIM (fill-in-the-middle)، ولوحة دردشة جانبية مدمجة في بيئة التطوير، وموفري سياق `@` (قاعدة الكود، الملف، المستندات، الطرفية). الأقرب مفتوح المصدر إلى Copilot للنماذج المحلية. **متوقّف عن التطوير:** الإصدار الأخير v2.0.0 في يونيو 2026 - لا يزال يعمل لكنه لم يعد يُحدَّث.',
           '**أداة Cline** تضع الوكيل في المقدمة: إضافة لـVS Code بأوضاع التخطيط والتنفيذ الصريحة، وحلقة استدعاءات الأدوات (read_file وwrite_to_file وexecute_command وbrowser_action)، وبوابة موافقة عند كل خطوة. مصممة للعمل باستقلالية عبر ملفات متعددة بينما تشرف أنت.',
           '**أداة Aider** تضع Git في المقدمة: واجهة سطر أوامر تحافظ على خريطة مستودع tree-sitter، وتحرر الملفات عبر كتل فارق بحث واستبدال، وتودع كل تغيير. التراجع هو `git reset` — سير العمل الأكثر قابلية للمراجعة بين الثلاثة.',
           'تتحدث الأدوات الثلاث مع نقاط النهاية المتوافقة مع OpenAI. **Ollama** هو الخلفية المحلية الأسلس؛ وتعمل **llama.cpp** و**vLLM** عبر إعدادات الموفر أو وكلاء مثل LiteLLM.',
@@ -3603,7 +3639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'حقائق سريعة',
         items: [
-          '**تطبيق Continue.dev** — إكمال تلقائي + دردشة، VS Code وJetBrains، الأقل احتكاكاً في التثبيت بين الثلاثة.',
+          '**تطبيق Continue.dev** — إكمال تلقائي + دردشة، VS Code وJetBrains، الأقل احتكاكاً في التثبيت بين الثلاثة. **متوقّف عن التطوير:** الإصدار الأخير v2.0.0 في يونيو 2026 - لا يزال يعمل لكنه لم يعد يُحدَّث.',
           '**أداة Cline** — وكيل مستقل مع بوابات موافقة، VS Code فقط، الأعلى قدرةً والأعلى استهلاكاً للتوكن.',
           '**أداة Aider** — واجهة سطر أوامر، commits أصيلة في Git، كل تحرير قابل للمراجعة والرجوع عنه عبر Git.',
           'تعمل الأدوات الثلاث على نفس الخلفية المحلية — **Ollama** هو الطريق الأسلس؛ وتعمل **llama.cpp** و**vLLM** أيضاً بإعداد متوافق مع OpenAI.',
@@ -3720,6 +3756,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**أين يقصر:** إعادة الهيكلة متعددة الملفات تتطلب منك قيادة الدردشة ملفاً بملف. المهام المستقلة طويلة الأمد ليست وضعه الأصيل — وضع الوكيل يتحسن لكنه ليس محور ثقل المشروع.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'تغيير في الحالة، أغسطس 2026: لم يعد Continue.dev قيد التطوير النشط. استحوذت Cursor على فريق Continue في 18 يونيو 2026، وكان الإصدار الأخير v2.0.0 بتاريخ 19 يونيو 2026، ومستودع continuedev/continue أصبح الآن للقراءة فقط. لا تزال الإضافة تُثبَّت وتعمل مع نموذج محلي، ورخصة Apache 2.0 تبقيها متاحة - لكن لن تصدر تحديثات جديدة، وتغييرات واجهات مزوّدي الخدمة ستُعطّلها في نهاية المطاف. تعامل معها كأداة صالحة للعمل بتاريخ انتهاء معروف، وفضّل Cline أو Aider لأي شيء تنوي الاعتماد عليه لسنوات.',
+          },
           {
             type: 'tip',
             text: 'شغّل نموذجين في إعداد Continue.dev لديك: نموذج إكمال تلقائي صغير (يحتاج Qwen3-Coder 1.5B بـQ4_K_M إلى ~1.5 جيجابايت VRAM) ونموذج دردشة أكبر (Qwen3-Coder 30B Q4_K_M، ~17 جيجابايت). فصلهما يبقي زمن استجابة الإكمال التلقائي أقل من 200 مللي ثانية مع بقاء لوحة الدردشة مفيدة للأسئلة غير البديهية.',
@@ -4018,8 +4058,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/continue-dev-vs-cline-vs-aider-local-overview-hero-ko.webp',
     title: 'Continue.dev vs Cline vs Aider: 2026년 최고의 로컬 코드 에이전트',
@@ -4062,7 +4103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ko: {
         question: '2026년 최고의 로컬 코드 에이전트는 무엇입니까: Continue.dev, Cline, Aider 중 어느 것입니까?',
         answer:
-          'VS Code 또는 JetBrains에서 하루 대부분을 보내며 코드베이스에 접근하는 채팅 패널과 함께 자동완성을 원하신다면 Continue.dev를 선택하십시오. 단계 사이에 승인 게이트를 두어 여러 파일을 계획하고 편집하고 명령을 실행하는 자율 에이전트를 원하신다면 — 리팩토링과 탐색적 버그 추적에 가장 강력한 — Cline을 선택하십시오. 터미널에서 작업하며 각 편집이 별도의 검토 가능한 git 커밋으로 남기를 원하신다면 Aider를 선택하십시오. 세 도구 모두 로컬 LLM 엔드포인트(Ollama, llama.cpp, LM Studio, vLLM)에 대해 완전히 오프라인으로 작동합니다. 올바른 선택은 품질 순위가 아닌 워크플로우 결정입니다.',
+          'VS Code 또는 JetBrains에서 하루 대부분을 보내며 코드베이스에 접근하는 채팅 패널과 함께 자동완성을 원하신다면 Continue.dev를 선택하십시오. 단계 사이에 승인 게이트를 두어 여러 파일을 계획하고 편집하고 명령을 실행하는 자율 에이전트를 원하신다면 — 리팩토링과 탐색적 버그 추적에 가장 강력한 — Cline을 선택하십시오. 터미널에서 작업하며 각 편집이 별도의 검토 가능한 git 커밋으로 남기를 원하신다면 Aider를 선택하십시오. 세 도구 모두 로컬 LLM 엔드포인트(Ollama, llama.cpp, LM Studio, vLLM)에 대해 완전히 오프라인으로 작동합니다. 올바른 선택은 품질 순위가 아닌 워크플로우 결정입니다. **Continue.dev 개발 종료:** 최종 릴리스 v2.0.0(2026년 6월). 여전히 작동하지만 더 이상 업데이트되지 않습니다.',
         bullets: [
           'Continue.dev — 자동완성 + IDE 통합 채팅. 편집기를 벗어나지 않고 점진적 편집을 원하는 VS Code 및 JetBrains 사용자에게 이상적입니다.',
           'Cline — Plan/Act 모드, 도구 호출, 단계별 승인을 갖춘 자율 에이전트. 다중 파일 리팩토링과 버그 추적에 이상적입니다.',
@@ -4070,7 +4111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '세 도구 모두 OpenAI 호환 로컬 엔드포인트에서 작동합니다 — Ollama가 가장 간단한 경로이며, llama.cpp와 vLLM은 공급자 설정을 통해 호환됩니다.',
           '워크플로우 적합성이 원시 능력을 능가합니다. 터미널 지향 개발자를 Cline에 억지로 맞추거나(또는 VS Code 전용 개발자를 Aider에) 도구가 절약하는 것보다 더 많은 시간이 소요됩니다.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -4100,7 +4141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**Continue.dev**는 자동완성 우선입니다: FIM(fill-in-the-middle) 완성, IDE 통합 사이드 채팅 패널, `@` 컨텍스트 공급자(코드베이스, 파일, 문서, 터미널)를 갖춘 VS Code 및 JetBrains 확장. 로컬 모델을 위한 Copilot에 가장 가까운 오픈소스 유사품입니다.',
+          '**Continue.dev**는 자동완성 우선입니다: FIM(fill-in-the-middle) 완성, IDE 통합 사이드 채팅 패널, `@` 컨텍스트 공급자(코드베이스, 파일, 문서, 터미널)를 갖춘 VS Code 및 JetBrains 확장. 로컬 모델을 위한 Copilot에 가장 가까운 오픈소스 유사품입니다. **개발 종료:** 최종 릴리스 v2.0.0(2026년 6월). 여전히 작동하지만 더 이상 업데이트되지 않습니다.',
           '**Cline**은 에이전트 우선입니다: 명시적인 Plan 및 Act 모드, 도구 호출 루프(read_file, write_to_file, execute_command, browser_action), 각 단계의 승인 게이트를 갖춘 VS Code 확장. 감독하는 동안 여러 파일에 자율적으로 실행되도록 설계되었습니다.',
           '**Aider**는 Git 우선입니다: tree-sitter 저장소 맵을 유지하고, 검색 및 교체 diff 블록을 통해 파일을 편집하며, 각 변경 사항을 커밋하는 터미널 CLI. 실행 취소는 `git reset`입니다 — 세 가지 중 가장 검토 가능한 워크플로우.',
           '세 도구 모두 OpenAI 호환 엔드포인트와 통신합니다. **Ollama**가 가장 원활한 로컬 백엔드이며, **llama.cpp**와 **vLLM**은 공급자 설정 또는 LiteLLM과 같은 프록시를 통해 작동합니다.',
@@ -4113,7 +4154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: '빠른 사실',
         items: [
-          '**Continue.dev** — 자동완성 + 채팅, VS Code 및 JetBrains, 세 가지 중 가장 마찰이 적은 설치.',
+          '**Continue.dev** — 자동완성 + 채팅, VS Code 및 JetBrains, 세 가지 중 가장 마찰이 적은 설치. **개발 종료:** 최종 릴리스 v2.0.0(2026년 6월). 여전히 작동하지만 더 이상 업데이트되지 않습니다.',
           '**Cline** — 승인 게이트를 갖춘 자율 에이전트, VS Code 전용, 가장 높은 기능과 가장 높은 토큰 사용량.',
           '**Aider** — 터미널 CLI, Git 네이티브 커밋, 각 편집은 Git을 통해 검토 및 되돌리기 가능.',
           '세 도구 모두 동일한 로컬 백엔드에서 실행됩니다 — **Ollama**가 가장 원활한 경로이며, **llama.cpp**와 **vLLM**도 OpenAI 호환 설정으로 작동합니다.',
@@ -4230,6 +4271,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**단점:** 다중 파일 리팩토링은 파일별로 채팅을 안내해야 합니다. 장시간 자율 작업은 기본 모드가 아닙니다 — Agent 모드가 개선되고 있지만 프로젝트의 중심은 아닙니다.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: '상태 변경(2026년 8월): Continue.dev는 더 이상 활발히 개발되지 않습니다. Cursor가 2026년 6월 18일 Continue 팀을 인수했으며, 마지막 릴리스는 2026년 6월 19일의 v2.0.0이고 continuedev/continue 저장소는 현재 읽기 전용입니다. 확장 프로그램은 여전히 설치되고 로컬 모델과 함께 작동하며 Apache 2.0 라이선스 덕분에 계속 이용할 수 있습니다. 다만 추가 업데이트는 없으며, 공급자 API 변경으로 언젠가는 동작하지 않게 됩니다. 종료 시점이 정해진 실용 도구로 취급하고, 수년간 의존할 용도라면 Cline 또는 Aider를 선택하십시오.',
+          },
           {
             type: 'tip',
             text: 'Continue.dev 설정에서 두 가지 모델을 실행하십시오: 소형 자동완성 모델(Q4_K_M의 Qwen3-Coder 1.5B는 ~1.5 GB VRAM 필요)과 대형 채팅 모델(Q4_K_M의 Qwen3-Coder 30B, ~17 GB). 이를 분리하면 자동완성 지연 시간이 200ms 미만으로 유지되면서 채팅 패널이 사소하지 않은 질문에 여전히 유용합니다.',
@@ -4519,7 +4564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
