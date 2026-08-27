@@ -1,6 +1,6 @@
 // Power Local LLM — Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026
 // Slug: local-ai-agents-with-mcp-2026
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// All 9 locales authored (en/de/fr/ja/zh/es/pt/ar/ko).
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -9,9 +9,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
     last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-08-27',
     theme: 'Local AI Agents & Tool Use',
@@ -25,8 +25,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Local Ollama + MCP = an AI agent that reads files, queries databases, and drives a browser — fully offline. Working configs, the four servers worth installing first, and a security model that does not trust the model.',
     current_models_mentioned: [
-      'Gemma 4 27B',
-      'GLM-4.7 32B',
+      'Gemma 4 31B',
+      'GLM-4.7 Flash',
       'Qwen3 32B',
       'Qwen3-Coder 30B',
       'Llama 3.3 70B',
@@ -60,11 +60,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MCP is open and works fully local — no Claude Desktop, no Anthropic account, no cloud calls required.',
           'Ollama provides the model; an MCP client (Goose, Cline, Continue.dev, LM Studio) bridges Ollama to MCP servers via JSON-RPC.',
           'Four reference servers cover most real workflows: filesystem, sqlite/postgres, puppeteer/playwright (browser), and github.',
-          'Tool-call reliability is a model property: Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, and Llama 3.3 70B handle MCP cleanly. Models under 7B regularly emit malformed tool calls.',
+          'Tool-call reliability is a model property: Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B, and Llama 3.3 70B handle MCP cleanly. Models under 7B regularly emit malformed tool calls.',
           'Security model: scope filesystem access to one directory, run database servers read-only, and gate every write or shell tool behind explicit approval.',
           'Cost: $0 in API spend, but tokens are consumed locally — agent loops are token-heavy, so use a 32K+ context model and a machine that can run it at usable speed.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP is a JSON-RPC 2.0 protocol for tools.** A model (via a client) connects to one or more MCP servers; each server exposes Tools (callable functions), Resources (readable data), and Prompts (templates). The wire format is identical whether the client is Claude Desktop, Goose, Cline, Continue.dev, or LM Studio.',
           '**Ollama does not speak MCP directly — an MCP client wraps Ollama.** Goose (Block) is the simplest open-source CLI with native Ollama support; Cline, Continue.dev, and LM Studio added MCP client support in early 2026.',
           '**Four reference servers cover most use cases:** `filesystem` (read/write a sandboxed directory), `sqlite` and `postgres` (query databases, read-only by default), `puppeteer` or `playwright` (drive a headless browser), and `github` (repo and PR management with a personal access token).',
-          '**Tool-call reliability scales with model size and training.** Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, and Llama 3.3 70B handle MCP cleanly at Q4_K_M. Models under 7B regularly emit malformed tool calls and stall the loop.',
+          '**Tool-call reliability scales with model size and training.** Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B, and Llama 3.3 70B handle MCP cleanly at Q4_K_M. Models under 7B regularly emit malformed tool calls and stall the loop.',
           '**The security model assumes the model is untrusted.** Sandbox the filesystem server to a single directory, run the database server with a read-only role, never auto-approve `execute_command` or `write_file` tools, and review the audit log after long sessions.',
           '**Local MCP vs Claude Desktop:** identical protocol, identical server ecosystem. The local stack trades the cloud model for an offline one — privacy, no per-token cost, and no rate limits, at the cost of a smarter model and you owning the security configuration.',
           '**Cost is $0 in API fees but real in tokens.** Agent loops can consume 30K–80K tokens for a single multi-step task. Use a 32K-context model minimum; 128K is comfortable.',
@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Protocol:** JSON-RPC 2.0 over stdio (local subprocess) or HTTP/SSE (remote). Local agents use stdio almost exclusively.',
           '**Maintained by:** Anthropic (open-source spec); reference servers maintained in `modelcontextprotocol/servers` on GitHub plus a growing third-party ecosystem.',
           '**Local clients in 2026:** Goose (Block), Cline (VS Code extension), Continue.dev (VS Code/JetBrains), LM Studio (desktop app), plus several CLI tools.',
-          '**Compatible Ollama models:** any model with native tool-call training. In May 2026: Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B.',
+          '**Compatible Ollama models:** any model with native tool-call training. In August 2026: Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B.',
           '**Server transport defaults:** stdio for local processes; HTTP/SSE only when you need to share a server across machines or agents.',
           '**Configuration lives in one file:** `~/.config/goose/config.yaml` (Goose), the MCP block of `~/.continue/config.json` (Continue.dev), or `mcpServers` in Cline\'s settings UI. Same shape across all of them: server name, command, args, env vars.',
           '**No Claude Desktop required.** The protocol predates Claude Desktop\'s exclusivity stories; every reference server is MIT/Apache-licensed and runs against any compliant client.',
@@ -185,14 +185,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Goose is the simplest path to a working local MCP agent in 2026.** It is an open-source CLI from Block with native [Ollama](https://ollama.com/) support, an interactive chat surface, and one config file for all your [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) servers. Continue.dev, Cline, and LM Studio work too — Goose has the lowest setup tax for a first run.',
         items: [
           '**Step 1 — install Ollama.** Download from [ollama.com/download](https://ollama.com/) (macOS/Windows/Linux). Confirm the service is running with `curl http://127.0.0.1:11434/api/tags`.',
-          '**Step 2 — pull a tool-calling model.** Pick from Gemma 4 27B (`gemma4:27b`), GLM-4.7 32B (`glm5:32b`), Qwen3 32B (`qwen3:32b`), or Llama 3.3 70B (`llama3.3:70b`). 16 GB unified memory or 12 GB VRAM handles 27B–32B at Q4_K_M comfortably.',
+          '**Step 2 — pull a tool-calling model.** Pick from Gemma 4 31B (`gemma4:31b`), GLM-4.7 Flash (`glm-4.7-flash`), Qwen3 32B (`qwen3:32b`), or Llama 3.3 70B (`llama3.3:70b`). 32 GB unified memory or 24 GB VRAM handles 26B–32B at Q4_K_M comfortably.',
           '**Step 3 — install Goose.** `pipx install goose-ai` (macOS, Linux) or download the installer from the Goose releases page. The CLI installs as `goose`.',
           '**Step 4 — configure Ollama as the provider.** Run `goose configure`, pick `ollama` as the provider, set the model to the one you pulled, and set the host to `http://127.0.0.1:11434`. Goose writes this to `~/.config/goose/config.yaml`.',
           '**Step 5 — add the filesystem MCP server.** Edit `~/.config/goose/config.yaml` to add a `mcpServers` block (config example below). Restart `goose session` and ask it to list files in your test directory. The first turn confirms the server is wired up.',
           '**Step 6 — verify with a real task.** Try `goose session` and ask "Make a list of every Markdown file in `notes/`, with title and word count, and write the result to `notes/index.md`." If the agent reads, summarises, and writes back, the loop works.',
         ],
         codeBlock:
-          '# 1. Pull a tool-calling model\nollama pull gemma4:27b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:27b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
+          '# 1. Pull a tool-calling model\nollama pull gemma4:31b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:31b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
         codeLanguage: 'bash',
         callouts: [
           {
@@ -202,7 +202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-agents-with-mcp-2026-setup-flow-en.svg',
         imageCaption:
-          'Six-step Ollama and Goose setup flow: install Ollama, pull a tool-calling model like gemma4:27b, install Goose via pipx, configure the provider, add the filesystem MCP server, and verify with a real task in about 15 minutes.',
+          'Six-step Ollama and Goose setup flow: install Ollama, pull a tool-calling model like gemma4:31b, install Goose via pipx, configure the provider, add the filesystem MCP server, and verify with a real task in about 15 minutes.',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -332,8 +332,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Tool-call reliability scales with model size and training, not with the harness.** A model that emits malformed tool calls in Cline will emit malformed tool calls in Goose for the same reason.',
         items: [
-          '**Gemma 4 27B (`gemma4:27b`)** — Google\'s tool-call training is best-in-class for the size. Fits in 16 GB unified memory or 24 GB VRAM at Q4_K_M. Good general reasoning; somewhat conservative on chained tool calls.',
-          '**GLM-4.7 32B (`glm5:32b`)** — Zhipu\'s model has very strong tool-call reliability and a 128K context window out of the box. Slightly heavier than Gemma 4; fits comfortably on a 24 GB GPU.',
+          '**Gemma 4 31B (`gemma4:31b`)** — Google\'s tool-call training is best-in-class for the size. Fits in 16 GB unified memory or 24 GB VRAM at Q4_K_M. Good general reasoning; somewhat conservative on chained tool calls.',
+          '**GLM-4.7 Flash (`glm-4.7-flash`)** — Zhipu\'s model has very strong tool-call reliability and a 128K context window out of the box. Slightly heavier than Gemma 4; fits comfortably on a 24 GB GPU.',
           '**Qwen3 32B (`qwen3:32b`)** — well-rounded; the dense 32B handles MCP cleanly and is happy in a long agent loop. **Qwen3-Coder 30B (`qwen3-coder:30b`)** is the best pick if your agent work is code-shaped.',
           '**Llama 3.3 70B (`llama3.3:70b`)** — the highest ceiling but the heaviest. 48 GB+ unified memory or 2× 24 GB GPUs at Q4_K_M. Use only if your hardware accommodates it; the smaller models are usually enough.',
           '**Avoid for MCP work:** anything under 7B and any general-purpose model without explicit tool-call training. They will emit malformed calls, the loop will stall, and you will blame the harness — but the harness is fine.',
@@ -393,7 +393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which local models support MCP best?',
-            a: 'In May 2026, the most reliable picks are Gemma 4 27B, GLM-4.7 32B, Qwen3 32B (or Qwen3-Coder 30B for code-shaped work), and Llama 3.3 70B. All four have explicit tool-call training and emit clean function-calling JSON that MCP clients can route. Models under 7B (and most general-purpose models without tool-call fine-tuning) regularly produce malformed tool calls.',
+            a: 'In August 2026, the most reliable picks are Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B (or Qwen3-Coder 30B for code-shaped work), and Llama 3.3 70B. All four have explicit tool-call training and emit clean function-calling JSON that MCP clients can route. Models under 7B (and most general-purpose models without tool-call fine-tuning) regularly produce malformed tool calls.',
           },
           {
             q: 'Is MCP safe — can the agent delete my files?',
@@ -443,7 +443,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
     dateModified: '2026-08-27',
-    next_refresh_due: '2026-11-07',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-de.webp',
     title: 'Ollama mit Datenbanken und APIs über MCP verbinden: Lokale Agent-Einrichtung 2026',
@@ -455,8 +456,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Lokales Ollama + MCP = ein KI-Agent, der Dateien liest, Datenbanken abfragt und einen Browser steuert — komplett offline. Funktionierende Configs, die vier wichtigsten Server und ein Sicherheitsmodell, das dem Modell nicht vertraut.',
     current_models_mentioned: [
-      'Gemma 4 27B',
-      'GLM-4.7 32B',
+      'Gemma 4 31B',
+      'GLM-4.7 Flash',
       'Qwen3 32B',
       'Qwen3-Coder 30B',
       'Llama 3.3 70B',
@@ -490,11 +491,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MCP ist offen und funktioniert vollständig lokal — kein Claude Desktop, kein Anthropic-Konto, keine Cloud-Aufrufe nötig.',
           'Ollama liefert das Modell; ein MCP-Client (Goose, Cline, Continue.dev, LM Studio) verbindet Ollama mit MCP-Servern über JSON-RPC.',
           'Vier Referenz-Server decken die meisten realen Workflows ab: Filesystem, SQLite/Postgres, Puppeteer/Playwright (Browser) und GitHub.',
-          'Tool-Call-Zuverlässigkeit ist eine Eigenschaft des Modells: Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B und Llama 3.3 70B verarbeiten MCP sauber. Modelle unter 7B geben regelmäßig fehlerhafte Tool-Calls aus.',
+          'Tool-Call-Zuverlässigkeit ist eine Eigenschaft des Modells: Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B und Llama 3.3 70B verarbeiten MCP sauber. Modelle unter 7B geben regelmäßig fehlerhafte Tool-Calls aus.',
           'Sicherheitsmodell: Filesystem-Zugriff auf ein Verzeichnis beschränken, Datenbankserver read-only laufen lassen und jeden Schreib- oder Shell-Tool-Aufruf hinter einer expliziten Freigabe halten.',
           'Kosten: 0 € an API-Ausgaben, aber Tokens werden lokal verbraucht — Agent-Loops sind Token-intensiv, nutzen Sie also ein Modell mit 32K+ Context und eine Maschine, die es in brauchbarer Geschwindigkeit ausführen kann.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -529,7 +530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP ist ein JSON-RPC-2.0-Protokoll für Tools.** Ein Modell (über einen Client) verbindet sich mit einem oder mehreren MCP-Servern; jeder Server stellt Tools (aufrufbare Funktionen), Resources (lesbare Daten) und Prompts (Templates) bereit. Das Wire-Format ist identisch, ob der Client nun Claude Desktop, Goose, Cline, Continue.dev oder LM Studio ist.',
           '**Ollama spricht MCP nicht direkt — ein MCP-Client umhüllt Ollama.** Goose (Block) ist die einfachste Open-Source-CLI mit nativer Ollama-Unterstützung; Cline, Continue.dev und LM Studio haben Anfang 2026 MCP-Client-Unterstützung ergänzt.',
           '**Vier Referenz-Server decken die meisten Anwendungsfälle ab:** `filesystem` (Lesen/Schreiben in einem isolierten Verzeichnis), `sqlite` und `postgres` (Datenbankabfragen, standardmäßig read-only), `puppeteer` oder `playwright` (steuern einen Headless-Browser) und `github` (Repo- und PR-Verwaltung mit einem Personal Access Token).',
-          '**Tool-Call-Zuverlässigkeit skaliert mit Modellgröße und Training.** Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B und Llama 3.3 70B verarbeiten MCP sauber bei Q4_K_M. Modelle unter 7B geben regelmäßig fehlerhafte Tool-Calls aus und blockieren den Loop.',
+          '**Tool-Call-Zuverlässigkeit skaliert mit Modellgröße und Training.** Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B und Llama 3.3 70B verarbeiten MCP sauber bei Q4_K_M. Modelle unter 7B geben regelmäßig fehlerhafte Tool-Calls aus und blockieren den Loop.',
           '**Das Sicherheitsmodell setzt voraus, dass das Modell nicht vertrauenswürdig ist.** Beschränken Sie den Filesystem-Server auf ein einziges Verzeichnis, betreiben Sie den Datenbankserver mit einer read-only-Rolle, genehmigen Sie `execute_command` oder `write_file` niemals automatisch und prüfen Sie das Audit-Log nach langen Sessions.',
           '**Lokales MCP vs. Claude Desktop:** identisches Protokoll, identisches Server-Ökosystem. Der lokale Stack tauscht das Cloud-Modell gegen ein Offline-Modell — Privatsphäre, keine Token-Kosten und keine Rate-Limits, gegen ein etwas weniger schlaues Modell und die Verantwortung für die Sicherheitskonfiguration.',
           '**Die Kosten betragen 0 € an API-Gebühren, sind aber bei Tokens real.** Agent-Loops können 30K–80K Tokens für eine einzige Multi-Step-Aufgabe verbrauchen. Mindestens ein Modell mit 32K Context; 128K ist komfortabel.',
@@ -542,7 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Protokoll:** JSON-RPC 2.0 über stdio (lokaler Subprozess) oder HTTP/SSE (remote). Lokale Agenten nutzen fast ausschließlich stdio.',
           '**Gepflegt von:** Anthropic (Open-Source-Spezifikation); Referenz-Server werden in `modelcontextprotocol/servers` auf GitHub gepflegt, plus ein wachsendes Drittanbieter-Ökosystem.',
           '**Lokale Clients in 2026:** Goose (Block), Cline (VS-Code-Erweiterung), Continue.dev (VS Code/JetBrains), LM Studio (Desktop-App), plus mehrere CLI-Tools.',
-          '**Kompatible Ollama-Modelle:** jedes Modell mit nativem Tool-Call-Training. Im Mai 2026: Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B.',
+          '**Kompatible Ollama-Modelle:** jedes Modell mit nativem Tool-Call-Training. Im August 2026: Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B.',
           '**Standard-Transports:** stdio für lokale Prozesse; HTTP/SSE nur, wenn ein Server über Maschinen oder Agenten hinweg geteilt werden muss.',
           '**Konfiguration in einer Datei:** `~/.config/goose/config.yaml` (Goose), der MCP-Block von `~/.continue/config.json` (Continue.dev) oder `mcpServers` in der Settings-UI von Cline. Gleiche Form überall: Servername, Command, Args, Env-Vars.',
           '**Kein Claude Desktop nötig.** Das Protokoll ist älter als Claude Desktops Exklusivitätsanspruch; jeder Referenz-Server ist MIT/Apache-lizenziert und läuft gegen jeden konformen Client.',
@@ -616,14 +617,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Goose ist 2026 der einfachste Weg zu einem funktionierenden lokalen MCP-Agenten.** Es ist eine Open-Source-CLI von Block mit nativer Ollama-Unterstützung, einer interaktiven Chat-Oberfläche und einer einzigen Konfigurationsdatei für alle Ihre MCP-Server. Continue.dev, Cline und LM Studio funktionieren ebenfalls — Goose hat den geringsten Setup-Aufwand für den ersten Lauf.',
         items: [
           '**Schritt 1 — Ollama installieren.** Download von `ollama.com/download` (macOS/Windows/Linux). Bestätigen Sie, dass der Dienst läuft, mit `curl http://127.0.0.1:11434/api/tags`.',
-          '**Schritt 2 — ein Tool-Calling-Modell ziehen.** Wählen Sie aus Gemma 4 27B (`gemma4:27b`), GLM-4.7 32B (`glm5:32b`), Qwen3 32B (`qwen3:32b`) oder Llama 3.3 70B (`llama3.3:70b`). 16 GB Unified Memory oder 12 GB VRAM bewältigen 27B–32B bei Q4_K_M komfortabel.',
+          '**Schritt 2 — ein Tool-Calling-Modell ziehen.** Wählen Sie aus Gemma 4 31B (`gemma4:31b`), GLM-4.7 Flash (`glm-4.7-flash`), Qwen3 32B (`qwen3:32b`) oder Llama 3.3 70B (`llama3.3:70b`). 16 GB Unified Memory oder 12 GB VRAM bewältigen 27B–32B bei Q4_K_M komfortabel.',
           '**Schritt 3 — Goose installieren.** `pipx install goose-ai` (macOS, Linux) oder Installer von der Goose-Releases-Seite herunterladen. Die CLI installiert sich als `goose`.',
           '**Schritt 4 — Ollama als Provider konfigurieren.** Führen Sie `goose configure` aus, wählen Sie `ollama` als Provider, setzen Sie das Modell auf das gezogene und den Host auf `http://127.0.0.1:11434`. Goose schreibt das in `~/.config/goose/config.yaml`.',
           '**Schritt 5 — den Filesystem-MCP-Server hinzufügen.** Bearbeiten Sie `~/.config/goose/config.yaml`, um einen `mcpServers`-Block zu ergänzen (Konfigurationsbeispiel unten). Starten Sie `goose session` neu und bitten Sie es, Dateien in Ihrem Test-Verzeichnis aufzulisten. Der erste Turn bestätigt, dass der Server angebunden ist.',
           '**Schritt 6 — mit einer echten Aufgabe verifizieren.** Probieren Sie `goose session` und fragen Sie „Erstelle eine Liste jeder Markdown-Datei in `notes/`, mit Titel und Wortanzahl, und schreibe das Ergebnis in `notes/index.md`." Wenn der Agent liest, zusammenfasst und zurückschreibt, funktioniert der Loop.',
         ],
         codeBlock:
-          '# 1. Pull a tool-calling model\nollama pull gemma4:27b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:27b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
+          '# 1. Pull a tool-calling model\nollama pull gemma4:31b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:31b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
         codeLanguage: 'bash',
         callouts: [
           {
@@ -633,7 +634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-agents-with-mcp-2026-setup-flow-de.svg',
         imageCaption:
-          'Sechsstufiger Einrichtungsablauf für Ollama und Goose: Ollama installieren, ein toolfähiges Modell wie gemma4:27b laden, Goose per pipx installieren, den Provider konfigurieren, den Dateisystem-MCP-Server hinzufügen und mit einer echten Aufgabe in rund 15 Minuten prüfen.',
+          'Sechsstufiger Einrichtungsablauf für Ollama und Goose: Ollama installieren, ein toolfähiges Modell wie gemma4:31b laden, Goose per pipx installieren, den Provider konfigurieren, den Dateisystem-MCP-Server hinzufügen und mit einer echten Aufgabe in rund 15 Minuten prüfen.',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -763,8 +764,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Tool-Call-Zuverlässigkeit skaliert mit Modellgröße und Training, nicht mit dem Harness.** Ein Modell, das in Cline fehlerhafte Tool-Calls ausgibt, wird in Goose aus demselben Grund fehlerhafte Tool-Calls ausgeben.',
         items: [
-          '**Gemma 4 27B (`gemma4:27b`)** — Googles Tool-Call-Training ist Best-in-Class für die Größe. Passt in 16 GB Unified Memory oder 24 GB VRAM bei Q4_K_M. Gutes allgemeines Reasoning; etwas konservativ bei verketteten Tool-Calls.',
-          '**GLM-4.7 32B (`glm5:32b`)** — Zhipus Modell hat sehr starke Tool-Call-Zuverlässigkeit und ein 128K-Context-Fenster ab Werk. Etwas schwerer als Gemma 4; passt komfortabel auf eine 24-GB-GPU.',
+          '**Gemma 4 31B (`gemma4:31b`)** — Googles Tool-Call-Training ist Best-in-Class für die Größe. Passt in 16 GB Unified Memory oder 24 GB VRAM bei Q4_K_M. Gutes allgemeines Reasoning; etwas konservativ bei verketteten Tool-Calls.',
+          '**GLM-4.7 Flash (`glm-4.7-flash`)** — Zhipus Modell hat sehr starke Tool-Call-Zuverlässigkeit und ein 128K-Context-Fenster ab Werk. Etwas schwerer als Gemma 4; passt komfortabel auf eine 24-GB-GPU.',
           '**Qwen3 32B (`qwen3:32b`)** — gut ausbalanciert; das dichte 32B verarbeitet MCP sauber und ist in einer langen Agent-Schleife glücklich. **Qwen3-Coder 30B (`qwen3-coder:30b`)** ist die beste Wahl, wenn Ihre Agent-Arbeit codeförmig ist.',
           '**Llama 3.3 70B (`llama3.3:70b`)** — die höchste Decke, aber die schwerste. 48 GB+ Unified Memory oder 2× 24 GB GPUs bei Q4_K_M. Nur einsetzen, wenn Ihre Hardware das verträgt; die kleineren Modelle reichen meist.',
           '**Vermeiden Sie für MCP-Arbeit:** alles unter 7B und jedes general-purpose-Modell ohne explizites Tool-Call-Training. Sie geben fehlerhafte Calls aus, der Loop blockiert, und Sie werden den Harness beschuldigen — aber der Harness ist in Ordnung.',
@@ -838,7 +839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche lokalen Modelle unterstützen MCP am besten?',
-            a: 'Im Mai 2026 sind die zuverlässigsten Wahlen Gemma 4 27B, GLM-4.7 32B, Qwen3 32B (oder Qwen3-Coder 30B für codeförmige Arbeit) und Llama 3.3 70B. Alle vier haben explizites Tool-Call-Training und geben sauberes Function-Calling-JSON aus, das MCP-Clients routen können. Modelle unter 7B (und die meisten general-purpose-Modelle ohne Tool-Call-Fine-Tuning) produzieren regelmäßig fehlerhafte Tool-Calls.',
+            a: 'Im August 2026 sind die zuverlässigsten Wahlen Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B (oder Qwen3-Coder 30B für codeförmige Arbeit) und Llama 3.3 70B. Alle vier haben explizites Tool-Call-Training und geben sauberes Function-Calling-JSON aus, das MCP-Clients routen können. Modelle unter 7B (und die meisten general-purpose-Modelle ohne Tool-Call-Fine-Tuning) produzieren regelmäßig fehlerhafte Tool-Calls.',
           },
           {
             q: 'Ist MCP sicher — kann der Agent meine Dateien löschen?',
@@ -896,7 +897,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
     dateModified: '2026-08-27',
-    next_refresh_due: '2026-11-07',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-fr.webp',
     title: "Connecter Ollama aux bases de données et APIs via MCP : configuration d'agent local 2026",
@@ -908,8 +910,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       "Ollama local + MCP = un agent IA qui lit des fichiers, interroge des bases et pilote un navigateur — entièrement hors ligne. Configs prêtes à l'emploi et modèle de sécurité qui ne fait pas confiance au modèle.",
     current_models_mentioned: [
-      'Gemma 4 27B',
-      'GLM-4.7 32B',
+      'Gemma 4 31B',
+      'GLM-4.7 Flash',
       'Qwen3 32B',
       'Qwen3-Coder 30B',
       'Llama 3.3 70B',
@@ -943,11 +945,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "MCP est ouvert et fonctionne entièrement en local — pas de Claude Desktop, pas de compte Anthropic, pas d'appel cloud.",
           'Ollama fournit le modèle ; un client MCP (Goose, Cline, Continue.dev, LM Studio) relie Ollama aux serveurs MCP via JSON-RPC.',
           'Quatre serveurs de référence couvrent la plupart des workflows : filesystem, SQLite/Postgres, Puppeteer/Playwright (navigateur) et GitHub.',
-          "La fiabilité des appels d'outils dépend du modèle : Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B et Llama 3.3 70B traitent MCP proprement. Les modèles de moins de 7B émettent régulièrement des appels malformés.",
+          "La fiabilité des appels d'outils dépend du modèle : Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B et Llama 3.3 70B traitent MCP proprement. Les modèles de moins de 7B émettent régulièrement des appels malformés.",
           "Modèle de sécurité : limitez l'accès filesystem à un répertoire, faites tourner la base en lecture seule et exigez une validation explicite pour chaque outil d'écriture ou de shell.",
           "Coût : 0 € en API, mais les tokens se consomment localement — les boucles d'agent sont gourmandes, prévoyez un modèle 32K+ et une machine capable de l'exécuter à vitesse utilisable.",
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -982,7 +984,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**MCP est un protocole JSON-RPC 2.0 pour les outils.** Un modèle (via un client) se connecte à un ou plusieurs serveurs MCP ; chaque serveur expose des Tools (fonctions appelables), des Resources (données lisibles) et des Prompts (templates). Le format wire est identique que le client soit Claude Desktop, Goose, Cline, Continue.dev ou LM Studio.",
           "**Ollama ne parle pas MCP directement — un client MCP enveloppe Ollama.** Goose (Block) est la CLI open-source la plus simple avec support natif d'Ollama ; Cline, Continue.dev et LM Studio ont ajouté un client MCP début 2026.",
           "**Quatre serveurs de référence couvrent la plupart des cas d'usage :** `filesystem` (lecture/écriture dans un répertoire isolé), `sqlite` et `postgres` (requêtes de base, lecture seule par défaut), `puppeteer` ou `playwright` (pilotage d'un navigateur headless) et `github` (gestion de dépôts et de PRs avec un Personal Access Token).",
-          "**La fiabilité des appels d'outils croît avec la taille et l'entraînement.** Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B et Llama 3.3 70B traitent MCP proprement en Q4_K_M. Les modèles de moins de 7B émettent régulièrement des appels malformés et bloquent la boucle.",
+          "**La fiabilité des appels d'outils croît avec la taille et l'entraînement.** Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B et Llama 3.3 70B traitent MCP proprement en Q4_K_M. Les modèles de moins de 7B émettent régulièrement des appels malformés et bloquent la boucle.",
           "**Le modèle de sécurité considère le LLM comme non fiable.** Limitez le serveur filesystem à un seul répertoire, faites tourner la base avec un rôle en lecture seule, n'auto-approuvez jamais `execute_command` ni `write_file`, et relisez le journal d'audit après les sessions longues.",
           "**MCP local vs Claude Desktop :** protocole identique, écosystème de serveurs identique. La pile locale échange le modèle cloud contre un modèle hors ligne — confidentialité, zéro coût par token, pas de rate limit, en contrepartie d'un modèle un peu moins puissant et d'une configuration de sécurité dont vous êtes responsable.",
           "**Le coût en API est de 0 €, mais les tokens sont bien réels.** Une boucle d'agent peut consommer 30K–80K tokens pour une seule tâche multi-étapes. Visez un modèle 32K minimum ; 128K est confortable.",
@@ -995,7 +997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Protocole :** JSON-RPC 2.0 sur stdio (sous-processus local) ou HTTP/SSE (distant). Les agents locaux utilisent presque exclusivement stdio.',
           '**Maintenu par :** Anthropic (spécification open source) ; serveurs de référence dans `modelcontextprotocol/servers` sur GitHub, plus un écosystème tiers en croissance.',
           '**Clients locaux en 2026 :** Goose (Block), Cline (extension VS Code), Continue.dev (VS Code/JetBrains), LM Studio (application desktop), plus plusieurs CLIs.',
-          "**Modèles Ollama compatibles :** tout modèle entraîné nativement aux appels d'outils. En mai 2026 : Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B.",
+          "**Modèles Ollama compatibles :** tout modèle entraîné nativement aux appels d'outils. En août 2026 : Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B.",
           '**Transports par défaut :** stdio pour les processus locaux ; HTTP/SSE uniquement pour partager un serveur entre plusieurs machines ou agents.',
           "**Configuration dans un seul fichier :** `~/.config/goose/config.yaml` (Goose), le bloc MCP de `~/.continue/config.json` (Continue.dev) ou `mcpServers` dans l'UI de Cline. Même forme partout : nom du serveur, command, args, variables d'environnement.",
           "**Pas besoin de Claude Desktop.** Le protocole précède la stratégie d'exclusivité de Claude Desktop ; tous les serveurs de référence sont sous licence MIT/Apache et tournent contre n'importe quel client conforme.",
@@ -1069,14 +1071,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Goose est en 2026 le chemin le plus court vers un agent MCP local fonctionnel.** C'est une CLI open source de Block avec support natif d'Ollama, une interface de chat interactive et un seul fichier de configuration pour tous vos serveurs MCP. Continue.dev, Cline et LM Studio fonctionnent aussi — Goose a juste le coût d'installation le plus faible pour une première mise en route.",
         items: [
           '**Étape 1 — installer Ollama.** Téléchargez depuis `ollama.com/download` (macOS/Windows/Linux). Vérifiez que le service tourne avec `curl http://127.0.0.1:11434/api/tags`.',
-          "**Étape 2 — récupérer un modèle compatible tool calling.** Choisissez parmi Gemma 4 27B (`gemma4:27b`), GLM-4.7 32B (`glm5:32b`), Qwen3 32B (`qwen3:32b`) ou Llama 3.3 70B (`llama3.3:70b`). 16 Go de mémoire unifiée ou 12 Go de VRAM gèrent confortablement 27B–32B en Q4_K_M.",
+          "**Étape 2 — récupérer un modèle compatible tool calling.** Choisissez parmi Gemma 4 31B (`gemma4:31b`), GLM-4.7 Flash (`glm-4.7-flash`), Qwen3 32B (`qwen3:32b`) ou Llama 3.3 70B (`llama3.3:70b`). 16 Go de mémoire unifiée ou 12 Go de VRAM gèrent confortablement 27B–32B en Q4_K_M.",
           "**Étape 3 — installer Goose.** `pipx install goose-ai` (macOS, Linux) ou téléchargez l'installateur depuis la page Goose Releases. La CLI s'installe sous le nom `goose`.",
           "**Étape 4 — configurer Ollama comme provider.** Lancez `goose configure`, choisissez `ollama` comme provider, fixez le modèle sur celui que vous avez récupéré et le host sur `http://127.0.0.1:11434`. Goose écrit cela dans `~/.config/goose/config.yaml`.",
           "**Étape 5 — ajouter le serveur MCP filesystem.** Éditez `~/.config/goose/config.yaml` pour ajouter un bloc `mcpServers` (exemple ci-dessous). Relancez `goose session` et demandez la liste des fichiers dans votre répertoire de test. Le premier tour confirme que le serveur est bien câblé.",
           "**Étape 6 — vérifier avec une vraie tâche.** Essayez `goose session` et demandez « Fais une liste de chaque fichier Markdown dans `notes/`, avec titre et nombre de mots, et écris le résultat dans `notes/index.md`. » Si l'agent lit, résume et réécrit, la boucle fonctionne.",
         ],
         codeBlock:
-          '# 1. Pull a tool-calling model\nollama pull gemma4:27b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:27b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
+          '# 1. Pull a tool-calling model\nollama pull gemma4:31b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:31b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
         codeLanguage: 'bash',
         callouts: [
           {
@@ -1086,7 +1088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-agents-with-mcp-2026-setup-flow-fr.svg',
         imageCaption:
-          'Flux d\'installation en six étapes pour Ollama et Goose : installer Ollama, télécharger un modèle compatible outils comme gemma4:27b, installer Goose via pipx, configurer le fournisseur, ajouter le serveur MCP fichiers et vérifier avec une tâche réelle en environ 15 minutes.',
+          'Flux d\'installation en six étapes pour Ollama et Goose : installer Ollama, télécharger un modèle compatible outils comme gemma4:31b, installer Goose via pipx, configurer le fournisseur, ajouter le serveur MCP fichiers et vérifier avec une tâche réelle en environ 15 minutes.',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -1216,8 +1218,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**La fiabilité des appels d'outils croît avec la taille et l'entraînement, pas avec le harness.** Un modèle qui émet des appels malformés dans Cline en émettra de la même manière dans Goose.",
         items: [
-          "**Gemma 4 27B (`gemma4:27b`)** — l'entraînement tool calling de Google est best-in-class pour la taille. Tient en 16 Go de mémoire unifiée ou 24 Go de VRAM en Q4_K_M. Bon raisonnement général ; un peu conservateur sur les chaînes d'appels d'outils.",
-          "**GLM-4.7 32B (`glm5:32b`)** — le modèle de Zhipu a une fiabilité tool calling très forte et une fenêtre de contexte 128K d'origine. Légèrement plus lourd que Gemma 4 ; tient confortablement sur un GPU 24 Go.",
+          "**Gemma 4 31B (`gemma4:31b`)** — l'entraînement tool calling de Google est best-in-class pour la taille. Tient en 16 Go de mémoire unifiée ou 24 Go de VRAM en Q4_K_M. Bon raisonnement général ; un peu conservateur sur les chaînes d'appels d'outils.",
+          "**GLM-4.7 Flash (`glm-4.7-flash`)** — le modèle de Zhipu a une fiabilité tool calling très forte et une fenêtre de contexte 128K d'origine. Légèrement plus lourd que Gemma 4 ; tient confortablement sur un GPU 24 Go.",
           "**Qwen3 32B (`qwen3:32b`)** — bien équilibré ; le 32B dense gère MCP proprement et se sent à l'aise dans une boucle d'agent longue. **Qwen3-Coder 30B (`qwen3-coder:30b`)** est le meilleur choix si votre travail d'agent est code.",
           "**Llama 3.3 70B (`llama3.3:70b`)** — le plafond le plus haut, mais le plus lourd. 48 Go+ de mémoire unifiée ou 2× 24 Go de GPUs en Q4_K_M. À utiliser seulement si votre matériel suit ; les modèles plus petits suffisent généralement.",
           "**À éviter pour MCP :** tout ce qui est sous 7B et tout modèle généraliste sans entraînement explicite tool calling. Ils émettent des appels malformés, la boucle bloque, et vous accuserez le harness — mais le harness va bien.",
@@ -1291,7 +1293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quels modèles locaux supportent MCP le mieux ?',
-            a: "En mai 2026, les choix les plus fiables sont Gemma 4 27B, GLM-4.7 32B, Qwen3 32B (ou Qwen3-Coder 30B pour le code) et Llama 3.3 70B. Les quatre ont un entraînement tool calling explicite et émettent du JSON function calling propre que les clients MCP peuvent router. Les modèles sous 7B (et la plupart des modèles généralistes sans fine-tuning tool calling) produisent régulièrement des appels malformés.",
+            a: "En août 2026, les choix les plus fiables sont Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B (ou Qwen3-Coder 30B pour le code) et Llama 3.3 70B. Les quatre ont un entraînement tool calling explicite et émettent du JSON function calling propre que les clients MCP peuvent router. Les modèles sous 7B (et la plupart des modèles généralistes sans fine-tuning tool calling) produisent régulièrement des appels malformés.",
           },
           {
             q: 'MCP est-il sûr — l\'agent peut-il supprimer mes fichiers ?',
@@ -1341,7 +1343,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
     dateModified: '2026-08-27',
-    next_refresh_due: '2026-11-07',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-ja.webp',
     title: 'Ollama をデータベースと API に MCP で接続：ローカルエージェントセットアップ 2026',
@@ -1353,8 +1356,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'ローカル Ollama + MCP = ファイルを読み、データベースを照会し、ブラウザを操作する AI エージェント — 完全オフライン。動作する設定と最初に入れるべき 4 サーバー、モデルを信頼しないセキュリティ設計。',
     current_models_mentioned: [
-      'Gemma 4 27B',
-      'GLM-4.7 32B',
+      'Gemma 4 31B',
+      'GLM-4.7 Flash',
       'Qwen3 32B',
       'Qwen3-Coder 30B',
       'Llama 3.3 70B',
@@ -1388,11 +1391,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MCP はオープンで完全にローカル動作 — Claude Desktop も Anthropic アカウントもクラウド呼び出しも不要です。',
           'Ollama がモデルを提供し、MCP クライアント（Goose、Cline、Continue.dev、LM Studio）が JSON-RPC 経由で Ollama と MCP サーバーを橋渡しします。',
           '4 つのリファレンスサーバーで実用ワークフローのほぼすべてに対応：filesystem、sqlite/postgres、puppeteer/playwright（ブラウザ）、github。',
-          'tool call の信頼性はモデル特性：Gemma 4 27B、GLM-4.7 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B はクリーンに動作します。7B 未満のモデルは tool call の形式不正を頻発します。',
+          'tool call の信頼性はモデル特性：Gemma 4 31B、GLM-4.7 Flash、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B はクリーンに動作します。7B 未満のモデルは tool call の形式不正を頻発します。',
           'セキュリティモデル：filesystem は 1 ディレクトリ、データベースサーバーは read-only、書き込みやシェルツールは明示的承認の後ろに。',
           'コスト：API 費用は 0 円、ただしトークンはローカルで消費 — エージェントループはトークン消費が多いため、32K+ コンテキストモデルと実用速度で動かせるマシンを用意してください。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1427,7 +1430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP はツール用の JSON-RPC 2.0 プロトコルです。** モデルは（クライアント経由で）1 つ以上の MCP サーバーに接続します。各サーバーは Tools（呼び出せる関数）、Resources（読み取り可能なデータ）、Prompts（テンプレート）を公開します。クライアントが Claude Desktop、Goose、Cline、Continue.dev、LM Studio のいずれであっても wire format は同一です。',
           '**Ollama は MCP を直接話さない — MCP クライアントが Ollama をラップします。** Goose（Block）はネイティブ Ollama 対応を持つ最もシンプルなオープンソース CLI です。Cline、Continue.dev、LM Studio は 2026 年初頭に MCP クライアント対応を追加しました。',
           '**4 つのリファレンスサーバーが大半のユースケースを網羅：** `filesystem`（サンドボックス化されたディレクトリの読み書き）、`sqlite` と `postgres`（データベースクエリ、既定で read-only）、`puppeteer` または `playwright`（ヘッドレスブラウザ操作）、`github`（personal access token を使った repo と PR の管理）。',
-          '**tool call の信頼性はモデルサイズと学習に比例します。** Gemma 4 27B、GLM-4.7 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B は Q4_K_M で MCP をクリーンに処理します。7B 未満のモデルは形式不正な tool call を頻繁に出してループを止めます。',
+          '**tool call の信頼性はモデルサイズと学習に比例します。** Gemma 4 31B、GLM-4.7 Flash、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B は Q4_K_M で MCP をクリーンに処理します。7B 未満のモデルは形式不正な tool call を頻繁に出してループを止めます。',
           '**セキュリティモデルはモデルを信頼しない前提です。** filesystem サーバーは単一ディレクトリに限定、データベースサーバーは read-only ロールで運用、`execute_command` や `write_file` は決して自動承認しない、長時間セッション後は監査ログを確認する。',
           '**ローカル MCP vs Claude Desktop：** プロトコルもサーバーエコシステムも同一です。ローカルスタックはクラウドモデルをオフラインモデルに置き換え — プライバシー、トークン課金なし、レート制限なしと引き換えに、やや低い知能とセキュリティ設定の自己責任を負います。',
           '**API 費用は 0 円ですが、トークンは実コストです。** エージェントループは多段タスク 1 件で 30K–80K トークンを消費することがあります。最低でも 32K コンテキストモデル、128K あれば余裕があります。',
@@ -1440,7 +1443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**プロトコル：** JSON-RPC 2.0 を stdio（ローカルサブプロセス）または HTTP/SSE（リモート）で通信。ローカルエージェントはほぼ stdio のみ使用します。',
           '**メンテナー：** Anthropic（オープンソース仕様）；リファレンスサーバーは GitHub の `modelcontextprotocol/servers` で管理、加えて成長中のサードパーティーエコシステム。',
           '**2026 年のローカルクライアント：** Goose（Block）、Cline（VS Code 拡張）、Continue.dev（VS Code/JetBrains）、LM Studio（デスクトップアプリ）、加えて複数の CLI ツール。',
-          '**互換 Ollama モデル：** ネイティブ tool call 学習を持つすべてのモデル。2026 年 5 月時点：Gemma 4 27B、GLM-4.7 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B。',
+          '**互換 Ollama モデル：** ネイティブ tool call 学習を持つすべてのモデル。2026 年 5 月時点：Gemma 4 31B、GLM-4.7 Flash、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B。',
           '**サーバー transport の既定：** ローカルプロセスは stdio；複数マシンや複数エージェント間でサーバーを共有する場合のみ HTTP/SSE。',
           '**設定は 1 ファイルに集約：** `~/.config/goose/config.yaml`（Goose）、`~/.continue/config.json` の MCP ブロック（Continue.dev）、または Cline の設定 UI の `mcpServers`。形式はどれも同じ：サーバー名、command、args、env vars。',
           '**Claude Desktop 不要。** プロトコルは Claude Desktop の独占ストーリーより古く、すべてのリファレンスサーバーは MIT/Apache ライセンスで、準拠する任意のクライアントで動作します。',
@@ -1514,14 +1517,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Goose は 2026 年に動作するローカル MCP エージェントへの最短ルートです。** Block のオープンソース CLI で、ネイティブ Ollama 対応、対話型チャットインターフェース、すべての MCP サーバー設定を 1 ファイルに集約しています。Continue.dev、Cline、LM Studio でも動作しますが、初回セットアップのコストは Goose が最も低いです。',
         items: [
           '**Step 1 — Ollama をインストール。** `ollama.com/download`（macOS/Windows/Linux）からダウンロード。`curl http://127.0.0.1:11434/api/tags` でサービスが動作していることを確認してください。',
-          '**Step 2 — tool calling モデルを pull。** Gemma 4 27B（`gemma4:27b`）、GLM-4.7 32B（`glm5:32b`）、Qwen3 32B（`qwen3:32b`）または Llama 3.3 70B（`llama3.3:70b`）から選択。16 GB unified memory または 12 GB VRAM で 27B–32B を Q4_K_M で快適に動かせます。',
+          '**Step 2 — tool calling モデルを pull。** Gemma 4 31B（`gemma4:31b`）、GLM-4.7 Flash（`glm-4.7-flash`）、Qwen3 32B（`qwen3:32b`）または Llama 3.3 70B（`llama3.3:70b`）から選択。16 GB unified memory または 12 GB VRAM で 27B–32B を Q4_K_M で快適に動かせます。',
           '**Step 3 — Goose をインストール。** `pipx install goose-ai`（macOS、Linux）または Goose リリースページからインストーラをダウンロード。CLI は `goose` としてインストールされます。',
           '**Step 4 — Ollama をプロバイダーとして設定。** `goose configure` を実行、`ollama` をプロバイダーに選択、モデルを pull したものに、host を `http://127.0.0.1:11434` に設定。Goose は `~/.config/goose/config.yaml` に書き込みます。',
           '**Step 5 — filesystem MCP サーバーを追加。** `~/.config/goose/config.yaml` に `mcpServers` ブロックを追加します（下に設定例）。`goose session` を再起動し、テストディレクトリのファイル一覧を尋ねてください。最初のターンでサーバー接続が確認できます。',
           '**Step 6 — 実際のタスクで検証。** `goose session` を試し、「`notes/` 内の各 Markdown ファイルについて、タイトルと単語数の一覧を作って結果を `notes/index.md` に書いてください」と尋ねます。エージェントが読み、要約し、書き戻せばループは動作しています。',
         ],
         codeBlock:
-          '# 1. Pull a tool-calling model\nollama pull gemma4:27b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:27b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
+          '# 1. Pull a tool-calling model\nollama pull gemma4:31b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:31b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
         codeLanguage: 'bash',
         callouts: [
           {
@@ -1531,7 +1534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-agents-with-mcp-2026-setup-flow-ja.svg',
         imageCaption:
-          'OllamaとGooseの6ステップセットアップフロー：Ollamaをインストールし、gemma4:27bなどツール呼び出し対応モデルを取得し、pipxでGooseをインストールし、プロバイダーを設定し、ファイルシステムMCPサーバーを追加し、約15分で実タスクにより確認する。',
+          'OllamaとGooseの6ステップセットアップフロー：Ollamaをインストールし、gemma4:31bなどツール呼び出し対応モデルを取得し、pipxでGooseをインストールし、プロバイダーを設定し、ファイルシステムMCPサーバーを追加し、約15分で実タスクにより確認する。',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -1661,8 +1664,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**tool call の信頼性はモデルサイズと学習に依存し、ハーネスではありません。** Cline で形式不正な tool call を出すモデルは、Goose でも同じ理由で形式不正な tool call を出します。',
         items: [
-          '**Gemma 4 27B（`gemma4:27b`）** — Google の tool call 学習はサイズに対して best-in-class。16 GB unified memory または 24 GB VRAM で Q4_K_M に収まります。一般推論は良好；連鎖した tool call にはやや保守的です。',
-          '**GLM-4.7 32B（`glm5:32b`）** — Zhipu のモデルは tool call 信頼性が非常に高く、out of the box で 128K コンテキストウィンドウ。Gemma 4 よりやや重め；24 GB GPU に余裕で収まります。',
+          '**Gemma 4 31B（`gemma4:31b`）** — Google の tool call 学習はサイズに対して best-in-class。16 GB unified memory または 24 GB VRAM で Q4_K_M に収まります。一般推論は良好；連鎖した tool call にはやや保守的です。',
+          '**GLM-4.7 Flash（`glm-4.7-flash`）** — Zhipu のモデルは tool call 信頼性が非常に高く、out of the box で 128K コンテキストウィンドウ。Gemma 4 よりやや重め；24 GB GPU に余裕で収まります。',
           '**Qwen3 32B（`qwen3:32b`）** — バランスが良く、dense な 32B が MCP をクリーンに処理し、長時間エージェントループでも安定します。**Qwen3-Coder 30B（`qwen3-coder:30b`）** はエージェント作業がコード形態の場合の最良の選択です。',
           '**Llama 3.3 70B（`llama3.3:70b`）** — 最高の天井ですが最も重い。Q4_K_M で 48 GB+ unified memory または 2× 24 GB GPU。ハードウェアが対応している場合のみ；通常は小さいモデルで十分です。',
           '**MCP 作業で避けるべきもの：** 7B 未満すべて、明示的な tool call 学習のない汎用モデルすべて。形式不正な call を出してループが止まり、ハーネスを責めることになりますが — ハーネスは問題ありません。',
@@ -1736,7 +1739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'MCP に最も適したローカルモデルは何ですか？',
-            a: '2026 年 5 月時点で最も信頼できる選択肢は、Gemma 4 27B、GLM-4.7 32B、Qwen3 32B（コード形態の作業なら Qwen3-Coder 30B）、Llama 3.3 70B です。4 つすべてが明示的な tool call 学習を持ち、MCP クライアントがルーティング可能なクリーンな function calling JSON を出力します。7B 未満（および tool call ファインチューニングのない汎用モデルの大半）は形式不正な tool call を頻繁に出します。',
+            a: '2026 年 5 月時点で最も信頼できる選択肢は、Gemma 4 31B、GLM-4.7 Flash、Qwen3 32B（コード形態の作業なら Qwen3-Coder 30B）、Llama 3.3 70B です。4 つすべてが明示的な tool call 学習を持ち、MCP クライアントがルーティング可能なクリーンな function calling JSON を出力します。7B 未満（および tool call ファインチューニングのない汎用モデルの大半）は形式不正な tool call を頻繁に出します。',
           },
           {
             q: 'MCP は安全ですか — エージェントがファイルを削除できますか？',
@@ -1794,7 +1797,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
     dateModified: '2026-08-27',
-    next_refresh_due: '2026-11-07',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-zh.webp',
     title: '通过 MCP 将 Ollama 连接到数据库和 API：2026 年本地智能体配置指南',
@@ -1806,8 +1810,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       '本地 Ollama + MCP = 一个能读文件、查数据库、驱动浏览器的 AI 智能体——完全离线。可工作的配置、首批应安装的四个服务器，以及一个不信任模型的安全设计。',
     current_models_mentioned: [
-      'Gemma 4 27B',
-      'GLM-4.7 32B',
+      'Gemma 4 31B',
+      'GLM-4.7 Flash',
       'Qwen3 32B',
       'Qwen3-Coder 30B',
       'Llama 3.3 70B',
@@ -1841,11 +1845,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MCP 协议开放且完全本地运行——不需要 Claude Desktop、不需要 Anthropic 账号、不需要任何云调用。',
           'Ollama 提供模型；MCP 客户端（Goose、Cline、Continue.dev、LM Studio）通过 JSON-RPC 在 Ollama 与 MCP 服务器之间架设桥梁。',
           '四个参考服务器覆盖大多数实际工作流：filesystem、sqlite/postgres、puppeteer/playwright（浏览器）、github。',
-          'tool call 可靠性是模型属性：Gemma 4 27B、GLM-4.7 32B、Qwen3 32B、Qwen3-Coder 30B 与 Llama 3.3 70B 均可干净处理 MCP；7B 以下模型经常输出格式错误的 tool call。',
+          'tool call 可靠性是模型属性：Gemma 4 31B、GLM-4.7 Flash、Qwen3 32B、Qwen3-Coder 30B 与 Llama 3.3 70B 均可干净处理 MCP；7B 以下模型经常输出格式错误的 tool call。',
           '安全模型：filesystem 限定到一个目录、数据库以只读运行、所有写入或 shell 工具都置于明确授权之后。',
           '成本：API 费用为 $0，但 token 在本地消耗——智能体循环消耗 token 较多，请使用 32K+ 上下文模型并在性能足够的机器上运行。',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1880,7 +1884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP 是面向工具的 JSON-RPC 2.0 协议。** 模型（通过客户端）连接一个或多个 MCP 服务器；每个服务器暴露 Tools（可调用函数）、Resources（可读数据）和 Prompts（模板）。无论客户端是 Claude Desktop、Goose、Cline、Continue.dev 还是 LM Studio，wire format 完全相同。',
           '**Ollama 不直接说 MCP——MCP 客户端封装 Ollama。** Goose（Block）是最简单且原生支持 Ollama 的开源 CLI；Cline、Continue.dev、LM Studio 均在 2026 年初加入了 MCP 客户端支持。',
           '**四个参考服务器覆盖大部分使用场景：** `filesystem`（在沙箱目录中读写）、`sqlite` 与 `postgres`（数据库查询，默认只读）、`puppeteer` 或 `playwright`（驱动无头浏览器）、`github`（用 personal access token 管理仓库与 PR）。',
-          '**tool call 可靠性随模型规模与训练扩展。** Gemma 4 27B、GLM-4.7 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B 在 Q4_K_M 下干净处理 MCP；7B 以下模型经常输出格式错误的 tool call 并卡住循环。',
+          '**tool call 可靠性随模型规模与训练扩展。** Gemma 4 31B、GLM-4.7 Flash、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B 在 Q4_K_M 下干净处理 MCP；7B 以下模型经常输出格式错误的 tool call 并卡住循环。',
           '**安全模型假设模型不可信。** 将 filesystem 服务器限定到单一目录、用只读角色运行数据库服务器、永不自动批准 `execute_command` 或 `write_file`、长时间会话后审查审计日志。',
           '**本地 MCP vs Claude Desktop：** 协议相同，服务器生态相同。本地栈以离线模型替换云端模型——隐私性、零 token 费用、零速率限制，代价是模型能力略低且需自行负责安全配置。',
           '**API 费用为 $0，但 token 是真实成本。** 智能体循环单次多步任务可能消耗 30K–80K token；最少使用 32K 上下文模型，128K 更宽裕。',
@@ -1893,7 +1897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**协议：** JSON-RPC 2.0 通过 stdio（本地子进程）或 HTTP/SSE（远程）传输。本地智能体几乎只用 stdio。',
           '**维护方：** Anthropic（开源规范）；参考服务器维护在 GitHub 的 `modelcontextprotocol/servers`，外加快速发展的第三方生态。',
           '**2026 年的本地客户端：** Goose（Block）、Cline（VS Code 扩展）、Continue.dev（VS Code/JetBrains）、LM Studio（桌面应用），以及多个 CLI 工具。',
-          '**兼容的 Ollama 模型：** 任何具备原生 tool call 训练的模型。2026 年 5 月：Gemma 4 27B、GLM-4.7 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B。',
+          '**兼容的 Ollama 模型：** 任何具备原生 tool call 训练的模型。2026 年 5 月：Gemma 4 31B、GLM-4.7 Flash、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B。',
           '**默认 transport：** 本地进程用 stdio；只有需要跨机器或跨智能体共享服务器时才用 HTTP/SSE。',
           '**配置集中在一个文件：** `~/.config/goose/config.yaml`（Goose）、`~/.continue/config.json` 的 MCP 块（Continue.dev）、或 Cline 设置 UI 中的 `mcpServers`。形式相同：服务器名、command、args、env vars。',
           '**无需 Claude Desktop。** 协议早于 Claude Desktop 的独占叙事；所有参考服务器均为 MIT/Apache 许可，可在任何符合规范的客户端下运行。',
@@ -1967,14 +1971,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Goose 是 2026 年通往可工作的本地 MCP 智能体的最短路径。** 这是 Block 推出的开源 CLI，原生支持 Ollama，提供交互式聊天界面，并将所有 MCP 服务器配置集中到一个文件。Continue.dev、Cline、LM Studio 也能用，但 Goose 在初次搭建上的成本最低。',
         items: [
           '**Step 1 —— 安装 Ollama。** 从 `ollama.com/download` 下载（macOS/Windows/Linux）。用 `curl http://127.0.0.1:11434/api/tags` 确认服务运行。',
-          '**Step 2 —— 拉取支持 tool calling 的模型。** 在 Gemma 4 27B (`gemma4:27b`)、GLM-4.7 32B (`glm5:32b`)、Qwen3 32B (`qwen3:32b`) 或 Llama 3.3 70B (`llama3.3:70b`) 中选一个。16 GB 统一内存或 12 GB VRAM 在 Q4_K_M 下从容运行 27B–32B。',
+          '**Step 2 —— 拉取支持 tool calling 的模型。** 在 Gemma 4 31B (`gemma4:31b`)、GLM-4.7 Flash (`glm-4.7-flash`)、Qwen3 32B (`qwen3:32b`) 或 Llama 3.3 70B (`llama3.3:70b`) 中选一个。16 GB 统一内存或 12 GB VRAM 在 Q4_K_M 下从容运行 27B–32B。',
           '**Step 3 —— 安装 Goose。** `pipx install goose-ai`（macOS、Linux），或从 Goose Releases 页下载安装程序。CLI 安装为 `goose`。',
           '**Step 4 —— 将 Ollama 配置为 provider。** 运行 `goose configure`，选择 `ollama` 作为 provider，将模型设为已拉取的那个，host 设为 `http://127.0.0.1:11434`。Goose 会写入 `~/.config/goose/config.yaml`。',
           '**Step 5 —— 加入 filesystem MCP 服务器。** 编辑 `~/.config/goose/config.yaml` 加入 `mcpServers` 块（配置示例见下）。重启 `goose session` 并请求列出测试目录的文件。第一轮即可确认服务器接入。',
           '**Step 6 —— 用真实任务验证。** 试运行 `goose session`，请求「列出 `notes/` 中每个 Markdown 文件的标题与字数，并将结果写入 `notes/index.md`」。如果智能体读、汇总、回写都成功，整个循环可工作。',
         ],
         codeBlock:
-          '# 1. Pull a tool-calling model\nollama pull gemma4:27b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:27b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
+          '# 1. Pull a tool-calling model\nollama pull gemma4:31b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:31b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
         codeLanguage: 'bash',
         callouts: [
           {
@@ -1984,7 +1988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-agents-with-mcp-2026-setup-flow-zh.svg',
         imageCaption:
-          'Ollama 与 Goose 的六步配置流程：安装 Ollama，拉取如 gemma4:27b 的支持工具调用的模型，通过 pipx 安装 Goose，配置提供方，添加文件系统 MCP 服务器，并在约 15 分钟内用真实任务验证。',
+          'Ollama 与 Goose 的六步配置流程：安装 Ollama，拉取如 gemma4:31b 的支持工具调用的模型，通过 pipx 安装 Goose，配置提供方，添加文件系统 MCP 服务器，并在约 15 分钟内用真实任务验证。',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -2114,8 +2118,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**tool call 可靠性随模型规模与训练扩展，不是 harness 决定的。** 一个在 Cline 中输出格式错误 tool call 的模型，在 Goose 中也会因同一原因输出格式错误的 tool call。',
         items: [
-          '**Gemma 4 27B (`gemma4:27b`)** —— Google 的 tool call 训练在同尺寸中处于业内最佳。Q4_K_M 下可装入 16 GB 统一内存或 24 GB VRAM。通用推理良好；在链式 tool call 上略偏保守。',
-          '**GLM-4.7 32B (`glm5:32b`)** —— 智谱的模型 tool call 可靠性极强，开箱 128K 上下文窗口。比 Gemma 4 略重；24 GB GPU 上从容运行。',
+          '**Gemma 4 31B (`gemma4:31b`)** —— Google 的 tool call 训练在同尺寸中处于业内最佳。Q4_K_M 下可装入 16 GB 统一内存或 24 GB VRAM。通用推理良好；在链式 tool call 上略偏保守。',
+          '**GLM-4.7 Flash (`glm-4.7-flash`)** —— 智谱的模型 tool call 可靠性极强，开箱 128K 上下文窗口。比 Gemma 4 略重；24 GB GPU 上从容运行。',
           '**Qwen3 32B (`qwen3:32b`)** —— 综合均衡；dense 32B 干净处理 MCP，在长智能体循环中稳定。**Qwen3-Coder 30B (`qwen3-coder:30b`)** 是代码形态智能体工作的最佳选择。',
           '**Llama 3.3 70B (`llama3.3:70b`)** —— 上限最高但最重。Q4_K_M 下需要 48 GB+ 统一内存或 2× 24 GB GPU。仅在硬件允许时使用；通常更小的模型已足够。',
           '**MCP 工作避免：** 任何 7B 以下，以及任何没有显式 tool call 训练的通用模型。它们会输出格式错误的 call、循环卡住，而你会怪罪 harness——但 harness 没问题。',
@@ -2189,7 +2193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '哪些本地模型对 MCP 支持最好？',
-            a: '2026 年 5 月最可靠的选择是 Gemma 4 27B、GLM-4.7 32B、Qwen3 32B（代码形态工作选 Qwen3-Coder 30B）和 Llama 3.3 70B。这四个都具备显式的 tool call 训练，输出干净的 function calling JSON 供 MCP 客户端路由。7B 以下模型（以及多数没有 tool call 微调的通用模型）经常产生格式错误的 tool call。',
+            a: '2026 年 5 月最可靠的选择是 Gemma 4 31B、GLM-4.7 Flash、Qwen3 32B（代码形态工作选 Qwen3-Coder 30B）和 Llama 3.3 70B。这四个都具备显式的 tool call 训练，输出干净的 function calling JSON 供 MCP 客户端路由。7B 以下模型（以及多数没有 tool call 微调的通用模型）经常产生格式错误的 tool call。',
           },
           {
             q: 'MCP 安全吗？智能体会不会删除我的文件？',
@@ -2246,8 +2250,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-es.webp',
     title: 'Conecta Ollama a bases de datos y APIs con MCP: configuración de agentes locales 2026',
@@ -2259,8 +2264,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Ollama local + MCP = un agente de IA que lee archivos, consulta bases de datos y controla un navegador — completamente offline. Configs funcionales, los cuatro servidores esenciales y un modelo de seguridad que no confía en el modelo.',
     current_models_mentioned: [
-      'Gemma 4 27B',
-      'GLM-4.7 32B',
+      'Gemma 4 31B',
+      'GLM-4.7 Flash',
       'Qwen3 32B',
       'Qwen3-Coder 30B',
       'Llama 3.3 70B',
@@ -2294,11 +2299,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MCP es abierto y funciona completamente en local — no se necesita Claude Desktop, cuenta de Anthropic ni llamadas a la nube.',
           'Ollama proporciona el modelo; un cliente MCP (Goose, Cline, Continue.dev, LM Studio) conecta Ollama con los servidores MCP mediante JSON-RPC.',
           'Cuatro servidores de referencia cubren la mayoría de flujos de trabajo reales: filesystem, SQLite/Postgres, Puppeteer/Playwright (navegador) y GitHub.',
-          'La fiabilidad del tool calling es una propiedad del modelo: Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B y Llama 3.3 70B manejan MCP sin problemas. Los modelos de menos de 7B suelen emitir tool calls malformados.',
+          'La fiabilidad del tool calling es una propiedad del modelo: Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B y Llama 3.3 70B manejan MCP sin problemas. Los modelos de menos de 7B suelen emitir tool calls malformados.',
           'Modelo de seguridad: limita el acceso al filesystem a un directorio, ejecuta los servidores de base de datos en solo lectura y coloca cada herramienta de escritura o shell detrás de una aprobación explícita.',
           'Costo: $0 en gasto de API, pero los tokens se consumen localmente — los bucles de agente son intensivos en tokens, así que usa un modelo con contexto de 32K+ y una máquina que pueda ejecutarlo a velocidad útil.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2332,7 +2337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP es un protocolo JSON-RPC 2.0 para herramientas.** Un modelo (a través de un cliente) se conecta a uno o más servidores MCP; cada servidor expone Tools (funciones invocables), Resources (datos legibles) y Prompts (plantillas). El formato de wire es idéntico tanto si el cliente es Claude Desktop, Goose, Cline, Continue.dev o LM Studio.',
           '**Ollama no habla MCP directamente — un cliente MCP envuelve Ollama.** Goose (Block) es el CLI de código abierto más sencillo con soporte nativo de Ollama; Cline, Continue.dev y LM Studio añadieron soporte de cliente MCP a principios de 2026.',
           '**Cuatro servidores de referencia cubren la mayoría de casos de uso:** `filesystem` (leer/escribir en un directorio aislado), `sqlite` y `postgres` (consultar bases de datos, solo lectura por defecto), `puppeteer` o `playwright` (controlar un navegador sin cabeza) y `github` (gestión de repositorios y PRs con un personal access token).',
-          '**La fiabilidad del tool calling escala con el tamaño y el entrenamiento del modelo.** Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B y Llama 3.3 70B manejan MCP sin problemas en Q4_K_M. Los modelos de menos de 7B suelen emitir tool calls malformados y bloquear el bucle.',
+          '**La fiabilidad del tool calling escala con el tamaño y el entrenamiento del modelo.** Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B y Llama 3.3 70B manejan MCP sin problemas en Q4_K_M. Los modelos de menos de 7B suelen emitir tool calls malformados y bloquear el bucle.',
           '**El modelo de seguridad asume que el modelo no es de confianza.** Limita el servidor filesystem a un único directorio, ejecuta el servidor de base de datos con un rol de solo lectura, nunca apruebes automáticamente `execute_command` ni `write_file` y revisa el registro de auditoría después de sesiones largas.',
           '**MCP local vs Claude Desktop:** protocolo idéntico, ecosistema de servidores idéntico. El stack local sustituye el modelo en la nube por uno offline — privacidad, sin costo por token y sin límites de velocidad, a cambio de un modelo algo menos capaz y de gestionar tú mismo la configuración de seguridad.',
           '**El costo es $0 en tarifas de API pero real en tokens.** Los bucles de agente pueden consumir entre 30K y 80K tokens para una sola tarea de varios pasos. Usa un modelo con contexto de al menos 32K; 128K es cómodo.',
@@ -2345,7 +2350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Protocolo:** JSON-RPC 2.0 sobre stdio (subproceso local) o HTTP/SSE (remoto). Los agentes locales usan casi exclusivamente stdio.',
           '**Mantenido por:** Anthropic (especificación de código abierto); servidores de referencia mantenidos en `modelcontextprotocol/servers` en GitHub más un ecosistema de terceros en crecimiento.',
           '**Clientes locales en 2026:** Goose (Block), Cline (extensión de VS Code), Continue.dev (VS Code/JetBrains), LM Studio (aplicación de escritorio), más varias herramientas CLI.',
-          '**Modelos Ollama compatibles:** cualquier modelo con entrenamiento nativo de tool calling. En mayo de 2026: Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B.',
+          '**Modelos Ollama compatibles:** cualquier modelo con entrenamiento nativo de tool calling. En agosto de 2026: Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B.',
           '**Transporte por defecto:** stdio para procesos locales; HTTP/SSE solo cuando necesitas compartir un servidor entre máquinas o agentes.',
           '**La configuración vive en un único archivo:** `~/.config/goose/config.yaml` (Goose), el bloque MCP de `~/.continue/config.json` (Continue.dev) o `mcpServers` en la interfaz de configuración de Cline. La misma estructura en todos: nombre del servidor, comando, args, variables de entorno.',
           '**No se necesita Claude Desktop.** El protocolo es anterior a las historias de exclusividad de Claude Desktop; todos los servidores de referencia tienen licencia MIT/Apache y funcionan con cualquier cliente compatible.',
@@ -2419,14 +2424,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Goose es el camino más sencillo hacia un agente MCP local funcional en 2026.** Es un CLI de código abierto de Block con soporte nativo de Ollama, una interfaz de chat interactiva y un único archivo de configuración para todos tus servidores MCP. Continue.dev, Cline y LM Studio también funcionan — Goose tiene el menor coste de configuración para una primera ejecución.',
         items: [
           '**Paso 1 — instala Ollama.** Descárgalo desde ollama.com/download (macOS/Windows/Linux). Confirma que el servicio está corriendo con `curl http://127.0.0.1:11434/api/tags`.',
-          '**Paso 2 — descarga un modelo con tool calling.** Elige entre Gemma 4 27B (`gemma4:27b`), GLM-4.7 32B (`glm5:32b`), Qwen3 32B (`qwen3:32b`) o Llama 3.3 70B (`llama3.3:70b`). 16 GB de memoria unificada o 12 GB de VRAM manejan cómodamente 27B–32B en Q4_K_M.',
+          '**Paso 2 — descarga un modelo con tool calling.** Elige entre Gemma 4 31B (`gemma4:31b`), GLM-4.7 Flash (`glm-4.7-flash`), Qwen3 32B (`qwen3:32b`) o Llama 3.3 70B (`llama3.3:70b`). 16 GB de memoria unificada o 12 GB de VRAM manejan cómodamente 27B–32B en Q4_K_M.',
           '**Paso 3 — instala Goose.** `pipx install goose-ai` (macOS, Linux) o descarga el instalador desde la página de releases de Goose. El CLI se instala como `goose`.',
           '**Paso 4 — configura Ollama como proveedor.** Ejecuta `goose configure`, elige `ollama` como proveedor, establece el modelo al que descargaste y el host en `http://127.0.0.1:11434`. Goose escribe esto en `~/.config/goose/config.yaml`.',
           '**Paso 5 — añade el servidor MCP de filesystem.** Edita `~/.config/goose/config.yaml` para agregar un bloque `mcpServers` (ejemplo de configuración a continuación). Reinicia `goose session` y pídele que liste los archivos en tu directorio de prueba. El primer turno confirma que el servidor está conectado.',
           '**Paso 6 — verifica con una tarea real.** Prueba `goose session` y pide "Haz una lista de cada archivo Markdown en `notes/`, con título y número de palabras, y escribe el resultado en `notes/index.md`." Si el agente lee, resume y escribe de vuelta, el bucle funciona.',
         ],
         codeBlock:
-          '# 1. Pull a tool-calling model\nollama pull gemma4:27b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:27b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
+          '# 1. Pull a tool-calling model\nollama pull gemma4:31b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:31b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
         codeLanguage: 'bash',
         callouts: [
           {
@@ -2436,7 +2441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-agents-with-mcp-2026-setup-flow-es.svg',
         imageCaption:
-          'Flujo de configuración en seis pasos para Ollama y Goose: instalar Ollama, descargar un modelo con llamadas a herramientas como gemma4:27b, instalar Goose con pipx, configurar el proveedor, añadir el servidor MCP de archivos y verificar con una tarea real en unos 15 minutos.',
+          'Flujo de configuración en seis pasos para Ollama y Goose: instalar Ollama, descargar un modelo con llamadas a herramientas como gemma4:31b, instalar Goose con pipx, configurar el proveedor, añadir el servidor MCP de archivos y verificar con una tarea real en unos 15 minutos.',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -2566,8 +2571,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**La fiabilidad del tool calling escala con el tamaño y el entrenamiento del modelo, no con el harness.** Un modelo que emite tool calls malformados en Cline los emitirá en Goose por la misma razón.',
         items: [
-          '**Gemma 4 27B (`gemma4:27b`)** — el entrenamiento de tool calling de Google es el mejor en su clase para este tamaño. Cabe en 16 GB de memoria unificada o 24 GB de VRAM en Q4_K_M. Buen razonamiento general; algo conservador en tool calls encadenados.',
-          '**GLM-4.7 32B (`glm5:32b`)** — el modelo de Zhipu tiene una fiabilidad de tool calling muy alta y una ventana de contexto de 128K de serie. Ligeramente más pesado que Gemma 4; cabe cómodamente en una GPU de 24 GB.',
+          '**Gemma 4 31B (`gemma4:31b`)** — el entrenamiento de tool calling de Google es el mejor en su clase para este tamaño. Cabe en 16 GB de memoria unificada o 24 GB de VRAM en Q4_K_M. Buen razonamiento general; algo conservador en tool calls encadenados.',
+          '**GLM-4.7 Flash (`glm-4.7-flash`)** — el modelo de Zhipu tiene una fiabilidad de tool calling muy alta y una ventana de contexto de 128K de serie. Ligeramente más pesado que Gemma 4; cabe cómodamente en una GPU de 24 GB.',
           '**Qwen3 32B (`qwen3:32b`)** — equilibrado; el 32B denso maneja MCP sin problemas y se desenvuelve bien en un bucle de agente largo. **Qwen3-Coder 30B (`qwen3-coder:30b`)** es la mejor opción si tu trabajo de agente está orientado al código.',
           '**Llama 3.3 70B (`llama3.3:70b`)** — el techo más alto pero el más pesado. 48 GB+ de memoria unificada o 2× 24 GB de GPUs en Q4_K_M. Úsalo solo si tu hardware lo admite; los modelos más pequeños suelen ser suficientes.',
           '**Evita para trabajo con MCP:** cualquier cosa por debajo de 7B y cualquier modelo de uso general sin entrenamiento explícito de tool calling. Emitirán llamadas malformadas, el bucle se bloqueará y culparás al harness — pero el harness está bien.',
@@ -2627,7 +2632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué modelos locales soportan MCP mejor?',
-            a: 'En mayo de 2026, las opciones más fiables son Gemma 4 27B, GLM-4.7 32B, Qwen3 32B (o Qwen3-Coder 30B para trabajo orientado al código) y Llama 3.3 70B. Los cuatro tienen entrenamiento explícito de tool calling y emiten JSON de function calling limpio que los clientes MCP pueden enrutar. Los modelos de menos de 7B (y la mayoría de los modelos generales sin fine-tuning de tool calling) producen regularmente tool calls malformados.',
+            a: 'En agosto de 2026, las opciones más fiables son Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B (o Qwen3-Coder 30B para trabajo orientado al código) y Llama 3.3 70B. Los cuatro tienen entrenamiento explícito de tool calling y emiten JSON de function calling limpio que los clientes MCP pueden enrutar. Los modelos de menos de 7B (y la mayoría de los modelos generales sin fine-tuning de tool calling) producen regularmente tool calls malformados.',
           },
           {
             q: '¿Es seguro MCP? ¿Puede el agente borrar mis archivos?',
@@ -2680,7 +2685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-agents-with-mcp-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -2689,8 +2694,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-pt.webp',
     title: 'Conecte o Ollama a bancos de dados e APIs com MCP: configuração de agentes locais 2026',
@@ -2702,8 +2708,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Ollama local + MCP = um agente de IA que lê arquivos, consulta bancos de dados e controla um navegador — completamente offline. Configs funcionais, os quatro servidores essenciais e um modelo de segurança que não confia no modelo.',
     current_models_mentioned: [
-      'Gemma 4 27B',
-      'GLM-4.7 32B',
+      'Gemma 4 31B',
+      'GLM-4.7 Flash',
       'Qwen3 32B',
       'Qwen3-Coder 30B',
       'Llama 3.3 70B',
@@ -2737,11 +2743,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MCP é aberto e funciona completamente em local — não é necessário Claude Desktop, conta Anthropic nem chamadas à nuvem.',
           'Ollama fornece o modelo; um cliente MCP (Goose, Cline, Continue.dev, LM Studio) conecta o Ollama com os servidores MCP via JSON-RPC.',
           'Quatro servidores de referência cobrem a maioria dos fluxos de trabalho reais: filesystem, SQLite/Postgres, Puppeteer/Playwright (navegador) e GitHub.',
-          'A confiabilidade do tool calling é uma propriedade do modelo: Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B e Llama 3.3 70B lidam com MCP sem problemas. Modelos abaixo de 7B geralmente emitem tool calls malformados.',
+          'A confiabilidade do tool calling é uma propriedade do modelo: Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B e Llama 3.3 70B lidam com MCP sem problemas. Modelos abaixo de 7B geralmente emitem tool calls malformados.',
           'Modelo de segurança: limite o acesso ao filesystem a um diretório, execute os servidores de banco de dados em somente leitura e coloque cada ferramenta de escrita ou shell atrás de uma aprovação explícita.',
           'Custo: $0 em gastos de API, mas os tokens são consumidos localmente — os loops de agente são intensivos em tokens, então use um modelo com contexto de 32K+ e uma máquina que consiga executá-lo em velocidade útil.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2775,7 +2781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP é um protocolo JSON-RPC 2.0 para ferramentas.** Um modelo (via um cliente) se conecta a um ou mais servidores MCP; cada servidor expõe Tools (funções invocáveis), Resources (dados legíveis) e Prompts (templates). O formato de wire é idêntico tanto se o cliente for Claude Desktop, Goose, Cline, Continue.dev ou LM Studio.',
           '**O Ollama não fala MCP diretamente — um cliente MCP envolve o Ollama.** O Goose (Block) é o CLI open source mais simples com suporte nativo ao Ollama; Cline, Continue.dev e LM Studio adicionaram suporte de cliente MCP no início de 2026.',
           '**Quatro servidores de referência cobrem a maioria dos casos de uso:** `filesystem` (ler/escrever em um diretório isolado), `sqlite` e `postgres` (consultar bancos de dados, somente leitura por padrão), `puppeteer` ou `playwright` (controlar um navegador sem cabeça) e `github` (gestão de repositórios e PRs com um personal access token).',
-          '**A confiabilidade do tool calling escala com o tamanho e o treinamento do modelo.** Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B e Llama 3.3 70B lidam com MCP sem problemas em Q4_K_M. Modelos abaixo de 7B geralmente emitem tool calls malformados e bloqueiam o loop.',
+          '**A confiabilidade do tool calling escala com o tamanho e o treinamento do modelo.** Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B e Llama 3.3 70B lidam com MCP sem problemas em Q4_K_M. Modelos abaixo de 7B geralmente emitem tool calls malformados e bloqueiam o loop.',
           '**O modelo de segurança assume que o modelo não é confiável.** Limite o servidor filesystem a um único diretório, execute o servidor de banco de dados com um role de somente leitura, nunca aprove automaticamente `execute_command` nem `write_file` e revise o log de auditoria após sessões longas.',
           '**MCP local vs Claude Desktop:** protocolo idêntico, ecossistema de servidores idêntico. O stack local substitui o modelo na nuvem por um offline — privacidade, sem custo por token e sem limites de velocidade, em troca de um modelo um pouco menos capaz e de gerenciar você mesmo a configuração de segurança.',
           '**O custo é $0 em tarifas de API, mas real em tokens.** Os loops de agente podem consumir entre 30K e 80K tokens para uma única tarefa de múltiplas etapas. Use um modelo com contexto de pelo menos 32K; 128K é confortável.',
@@ -2788,7 +2794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Protocolo:** JSON-RPC 2.0 sobre stdio (subprocesso local) ou HTTP/SSE (remoto). Os agentes locais usam quase exclusivamente stdio.',
           '**Mantido por:** Anthropic (especificação open source); servidores de referência mantidos em `modelcontextprotocol/servers` no GitHub mais um ecossistema de terceiros em crescimento.',
           '**Clientes locais em 2026:** Goose (Block), Cline (extensão do VS Code), Continue.dev (VS Code/JetBrains), LM Studio (aplicação de desktop), mais várias ferramentas CLI.',
-          '**Modelos Ollama compatíveis:** qualquer modelo com treinamento nativo de tool calling. Em maio de 2026: Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B.',
+          '**Modelos Ollama compatíveis:** qualquer modelo com treinamento nativo de tool calling. Em agosto de 2026: Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B.',
           '**Transporte padrão:** stdio para processos locais; HTTP/SSE apenas quando você precisa compartilhar um servidor entre máquinas ou agentes.',
           '**A configuração vive em um único arquivo:** `~/.config/goose/config.yaml` (Goose), o bloco MCP de `~/.continue/config.json` (Continue.dev) ou `mcpServers` na interface de configuração do Cline. A mesma estrutura em todos: nome do servidor, comando, args, variáveis de ambiente.',
           '**Claude Desktop não é necessário.** O protocolo é anterior às histórias de exclusividade do Claude Desktop; todos os servidores de referência têm licença MIT/Apache e funcionam com qualquer cliente compatível.',
@@ -2862,14 +2868,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**O Goose é o caminho mais simples para um agente MCP local funcional em 2026.** É um CLI open source do Block com suporte nativo ao Ollama, uma interface de chat interativa e um único arquivo de configuração para todos os seus servidores MCP.',
         items: [
           '**Passo 1 — instale o Ollama.** Baixe em ollama.com/download (macOS/Windows/Linux). Confirme que o serviço está rodando com `curl http://127.0.0.1:11434/api/tags`.',
-          '**Passo 2 — baixe um modelo com tool calling.** Escolha entre Gemma 4 27B (`gemma4:27b`), GLM-4.7 32B (`glm5:32b`), Qwen3 32B (`qwen3:32b`) ou Llama 3.3 70B (`llama3.3:70b`). 16 GB de memória unificada ou 12 GB de VRAM lidam confortavelmente com 27B–32B em Q4_K_M.',
+          '**Passo 2 — baixe um modelo com tool calling.** Escolha entre Gemma 4 31B (`gemma4:31b`), GLM-4.7 Flash (`glm-4.7-flash`), Qwen3 32B (`qwen3:32b`) ou Llama 3.3 70B (`llama3.3:70b`). 16 GB de memória unificada ou 12 GB de VRAM lidam confortavelmente com 27B–32B em Q4_K_M.',
           '**Passo 3 — instale o Goose.** `pipx install goose-ai` (macOS, Linux) ou baixe o instalador na página de releases do Goose. O CLI se instala como `goose`.',
           '**Passo 4 — configure o Ollama como provedor.** Execute `goose configure`, escolha `ollama` como provedor, defina o modelo que você baixou e o host como `http://127.0.0.1:11434`. O Goose escreve isso em `~/.config/goose/config.yaml`.',
           '**Passo 5 — adicione o servidor MCP de filesystem.** Edite `~/.config/goose/config.yaml` para adicionar um bloco `mcpServers` (exemplo de configuração abaixo). Reinicie `goose session` e peça que liste os arquivos no seu diretório de teste.',
           '**Passo 6 — verifique com uma tarefa real.** Teste `goose session` e peça "Faça uma lista de cada arquivo Markdown em `notes/`, com título e número de palavras, e escreva o resultado em `notes/index.md`." Se o agente ler, resumir e escrever de volta, o loop funciona.',
         ],
         codeBlock:
-          '# 1. Pull a tool-calling model\nollama pull gemma4:27b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:27b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
+          '# 1. Pull a tool-calling model\nollama pull gemma4:31b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:31b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
         codeLanguage: 'bash',
         callouts: [
           {
@@ -2879,7 +2885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-agents-with-mcp-2026-setup-flow-pt.svg',
         imageCaption:
-          'Fluxo de configuração em seis passos para Ollama e Goose: instalar o Ollama, baixar um modelo com suporte a ferramentas como o gemma4:27b, instalar o Goose via pipx, configurar o provedor, adicionar o servidor MCP de arquivos e verificar com uma tarefa real em cerca de 15 minutos.',
+          'Fluxo de configuração em seis passos para Ollama e Goose: instalar o Ollama, baixar um modelo com suporte a ferramentas como o gemma4:31b, instalar o Goose via pipx, configurar o provedor, adicionar o servidor MCP de arquivos e verificar com uma tarefa real em cerca de 15 minutos.',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -3009,8 +3015,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A confiabilidade do tool calling escala com o tamanho e o treinamento do modelo, não com o harness.** Um modelo que emite tool calls malformados no Cline os emitirá no Goose pela mesma razão.',
         items: [
-          '**Gemma 4 27B (`gemma4:27b`)** — o treinamento de tool calling do Google é o melhor da categoria para esse tamanho. Cabe em 16 GB de memória unificada ou 24 GB de VRAM em Q4_K_M.',
-          '**GLM-4.7 32B (`glm5:32b`)** — o modelo da Zhipu tem confiabilidade de tool calling muito alta e uma janela de contexto de 128K nativa.',
+          '**Gemma 4 31B (`gemma4:31b`)** — o treinamento de tool calling do Google é o melhor da categoria para esse tamanho. Cabe em 16 GB de memória unificada ou 24 GB de VRAM em Q4_K_M.',
+          '**GLM-4.7 Flash (`glm-4.7-flash`)** — o modelo da Zhipu tem confiabilidade de tool calling muito alta e uma janela de contexto de 128K nativa.',
           '**Qwen3 32B (`qwen3:32b`)** — equilibrado; o 32B denso lida com MCP sem problemas. **Qwen3-Coder 30B (`qwen3-coder:30b`)** é a melhor opção se seu trabalho de agente é orientado a código.',
           '**Llama 3.3 70B (`llama3.3:70b`)** — o maior teto, mas o mais pesado. 48 GB+ de memória unificada ou 2× 24 GB de GPUs em Q4_K_M.',
           '**Evite para trabalho com MCP:** qualquer coisa abaixo de 7B e qualquer modelo de uso geral sem treinamento explícito de tool calling.',
@@ -3068,7 +3074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quais modelos locais suportam MCP melhor?',
-            a: 'Em maio de 2026, as opções mais confiáveis são Gemma 4 27B, GLM-4.7 32B, Qwen3 32B (ou Qwen3-Coder 30B para trabalho orientado a código) e Llama 3.3 70B. Os quatro têm treinamento explícito de tool calling e emitem JSON de function calling limpo que os clientes MCP podem rotear. Modelos abaixo de 7B (e a maioria dos modelos gerais sem fine-tuning de tool calling) produzem regularmente tool calls malformados.',
+            a: 'Em agosto de 2026, as opções mais confiáveis são Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B (ou Qwen3-Coder 30B para trabalho orientado a código) e Llama 3.3 70B. Os quatro têm treinamento explícito de tool calling e emitem JSON de function calling limpo que os clientes MCP podem rotear. Modelos abaixo de 7B (e a maioria dos modelos gerais sem fine-tuning de tool calling) produzem regularmente tool calls malformados.',
           },
           {
             q: 'O MCP é seguro? O agente pode excluir meus arquivos?',
@@ -3121,7 +3127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-agents-with-mcp-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -3130,8 +3136,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-ar.webp',
     title: 'ربط ⁨Ollama⁩ بقواعد البيانات و⁨APIs⁩ مع ⁨MCP⁩: إعداد وكيل محلي ⁨2026⁩',
@@ -3143,8 +3150,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Ollama محلي + MCP = وكيل ذكاء اصطناعي يقرأ الملفات ويستعلم عن قواعد البيانات ويتحكم في المتصفح — بالكامل بدون اتصال. إعدادات عملية والخوادم الأربعة الأساسية ونموذج أمان لا يثق في النموذج.',
     current_models_mentioned: [
-      'Gemma 4 27B',
-      'GLM-4.7 32B',
+      'Gemma 4 31B',
+      'GLM-4.7 Flash',
       'Qwen3 32B',
       'Qwen3-Coder 30B',
       'Llama 3.3 70B',
@@ -3178,11 +3185,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MCP مفتوح ويعمل بالكامل محلياً — لا Claude Desktop، لا حساب Anthropic، لا استدعاءات سحابية مطلوبة.',
           'Ollama يوفر النموذج؛ عميل MCP (Goose أو Cline أو Continue.dev أو LM Studio) يربط Ollama بخوادم MCP عبر JSON-RPC.',
           'أربعة خوادم مرجعية تغطي معظم سير العمل الحقيقية: filesystem وsqlite/postgres وpuppeteer/playwright (متصفح) وgithub.',
-          'موثوقية استدعاء الأدوات خاصية تعتمد على النموذج: Gemma 4 27B وGLM-4.7 32B وQwen3 32B وQwen3-Coder 30B وLlama 3.3 70B يتعاملون مع MCP بشكل نظيف. النماذج التي تقل عن 7B تُصدر tool calls مشوّهة بانتظام.',
+          'موثوقية استدعاء الأدوات خاصية تعتمد على النموذج: Gemma 4 31B وGLM-4.7 Flash وQwen3 32B وQwen3-Coder 30B وLlama 3.3 70B يتعاملون مع MCP بشكل نظيف. النماذج التي تقل عن 7B تُصدر tool calls مشوّهة بانتظام.',
           'نموذج الأمان: خصّص وصول filesystem لدليل واحد، وشغّل خوادم قاعدة البيانات في وضع القراءة فقط، وضع كل أداة كتابة أو shell خلف موافقة صريحة.',
           'التكلفة: صفر إنفاق على API، لكن التوكنات تُستهلك محلياً — حلقات الوكيل مكثّفة في التوكنات، لذا استخدم نموذجاً بسياق 32K+ وجهازاً يستطيع تشغيله بسرعة مفيدة.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -3216,7 +3223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP هو البروتوكول الذي يحوّل نموذج Ollama من محادثة إلى وكيل.** اربطه بخوادم أدوات (filesystem وقاعدة بيانات ومتصفح وGitHub) وسيكون للنموذج الإجراءات الفعلية وليس فقط النص المُنشأ.',
           '**أربعة خوادم مرجعية تغطي 80% من الاحتياجات الحقيقية:** filesystem (قراءة/كتابة ملفات)، وsqlite+postgres (الاستعلام عن قواعد البيانات)، وpuppeteer/playwright (أتمتة المتصفح)، وgithub (إدارة المستودعات). كلها مفتوحة المصدر وتعمل بالكامل بدون اتصال.',
           '**الإعداد صغير: ملف `mcp.json` واحد.** ثلاثة حقول لكل خادم: الأمر، والمعطيات، والبيئة. تُنشر الخوادم كعمليات فرعية من العميل — لا daemon، لا خدمة.',
-          '**موثوقية استدعاء الأدوات تعتمد على النموذج.** Gemma 4 27B وGLM-4.7 32B وQwen3 32B وLlama 3.3 70B يعملون بشكل موثوق في 2026. النماذج الأقل من 7B تُصدر JSON مشوّهاً في استدعاءات الأدوات بانتظام بصرف النظر عن العميل.',
+          '**موثوقية استدعاء الأدوات تعتمد على النموذج.** Gemma 4 31B وGLM-4.7 Flash وQwen3 32B وLlama 3.3 70B يعملون بشكل موثوق في 2026. النماذج الأقل من 7B تُصدر JSON مشوّهاً في استدعاءات الأدوات بانتظام بصرف النظر عن العميل.',
           '**نموذج الأمان: لا تثق في النموذج أبداً.** filesystem → دليل واحد، قاعدة البيانات → قراءة فقط افتراضياً، أدوات الكتابة والshell → موافقة صريحة دائماً. النموذج يقترح؛ الإنسان يوافق على كل ما يغيّر حالة.',
           '**MCP مفتوح ومستقل عن Claude Desktop.** في 2026: Goose وCline وContinue.dev وLM Studio كلها عملاء MCP تعمل مع Ollama. ليس Anthropic المنفّذ الوحيد.',
         ],
@@ -3225,7 +3232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'حقائق سريعة',
         items: [
-          '**ما تحتاجه:** Ollama (مثبَّت) + عميل MCP (Goose أو Cline أو Continue.dev أو LM Studio) + ملف `mcp.json` + نموذج استدعاء أدوات (Gemma 4 27B أو أعلى مُوصى به).',
+          '**ما تحتاجه:** Ollama (مثبَّت) + عميل MCP (Goose أو Cline أو Continue.dev أو LM Studio) + ملف `mcp.json` + نموذج استدعاء أدوات (Gemma 4 31B أو أعلى مُوصى به).',
           '**وقت الإعداد:** 15–30 دقيقة لخادم filesystem وSQLite الأول؛ 60 دقيقة للمتصفح وGitHub.',
           '**الخوادم المرجعية الأربعة الأساسية:** `@modelcontextprotocol/server-filesystem`، و`@modelcontextprotocol/server-sqlite`، و`@modelcontextprotocol/server-postgres`، و`@modelcontextprotocol/server-puppeteer`، و`@modelcontextprotocol/server-github`.',
           '**يتطلب Node.js >= 18 لمعظم الخوادم.**',
@@ -3289,7 +3296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الإعداد: Ollama + Goose في 15 دقيقة',
         content: 'الخطوات التالية تفترض macOS أو Linux. Windows يعمل بالمثل مع تعديلات بسيطة للمسار.',
         numberedItems: [
-          'ثبّت Ollama: `curl -fsSL https://ollama.ai/install.sh | sh` ثم `ollama pull gemma4:27b` (أو `qwen3:32b` للبدء بنموذج أصغر).',
+          'ثبّت Ollama: `curl -fsSL https://ollama.ai/install.sh | sh` ثم `ollama pull gemma4:31b` (أو `qwen3:32b` للبدء بنموذج أصغر).',
           'ثبّت Goose: `brew install block-inc/goose/goose` (macOS) أو اتبع دليل التثبيت على goose.ai للأنظمة الأخرى.',
           'هيّئ Goose لاستخدام Ollama: قم بتشغيل `goose configure` واختر "Ollama" كمزوّد مع `localhost:11434`.',
           'ثبّت خوادم MCP المرجعية: `npm install -g @modelcontextprotocol/server-filesystem @modelcontextprotocol/server-sqlite`.',
@@ -3298,7 +3305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-agents-with-mcp-2026-setup-flow-ar.svg',
         imageCaption:
-          'تدفق إعداد من ست خطوات لـ Ollama وGoose: تثبيت Ollama، تنزيل نموذج يدعم استدعاء الأدوات مثل gemma4:27b، تثبيت Goose عبر pipx، تهيئة المزوّد، إضافة خادم الملفات MCP، والتحقق بمهمة حقيقية خلال نحو 15 دقيقة.',
+          'تدفق إعداد من ست خطوات لـ Ollama وGoose: تثبيت Ollama، تنزيل نموذج يدعم استدعاء الأدوات مثل gemma4:31b، تثبيت Goose عبر pipx، تهيئة المزوّد، إضافة خادم الملفات MCP، والتحقق بمهمة حقيقية خلال نحو 15 دقيقة.',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -3383,8 +3390,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**موثوقية استدعاء الأدوات خاصية تعتمد على النموذج.** النموذج الخاطئ يُصدر JSON مشوّهاً، مما يتسبب في إخفاقات صامتة أو حلقات لا نهاية لها.',
         items: [
-          '**Gemma 4 27B (`gemma4:27b`):** توصيتي الافتراضية في 2026. موثوق في استدعاء الأدوات المتسلسلة. 16 جيجابايت ذاكرة موحدة أو 24 جيجابايت VRAM بـQ4_K_M.',
-          '**GLM-4.7 32B (`glm5:32b`):** سياق 128K أصلي. أفضل لأعمال الوثائق الطويلة والاستعلامات الكبيرة.',
+          '**Gemma 4 31B (`gemma4:31b`):** توصيتي الافتراضية في 2026. موثوق في استدعاء الأدوات المتسلسلة. 16 جيجابايت ذاكرة موحدة أو 24 جيجابايت VRAM بـQ4_K_M.',
+          '**GLM-4.7 Flash (`glm-4.7-flash`):** سياق 128K أصلي. أفضل لأعمال الوثائق الطويلة والاستعلامات الكبيرة.',
           '**Qwen3 32B (`qwen3:32b`) / Qwen3-Coder 30B (`qwen3-coder:30b`):** توازن ممتاز. Coder يعمل بشكل أفضل مع مستودعات الكود وأدوات GitHub.',
           '**Llama 3.3 70B (`llama3.3:70b`):** يستلزم 48 جيجابايت+ VRAM. أعلى سقف لكن أبطأ.',
           '**تجنّب:** أي نموذج أقل من 7B، وأي نموذج للأغراض العامة بدون ضبط دقيق صريح على tool calling. الأعراض: JSON مشوّه، واستدعاءات أدوات بمعطيات هلوسة، وحلقات وكيل تتوقف.',
@@ -3436,7 +3443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما النماذج المحلية الأفضل دعماً لـMCP؟',
-            a: 'في مايو 2026، الخيارات الأكثر موثوقيةً هي: Gemma 4 27B وGLM-4.7 32B وQwen3 32B (أو Qwen3-Coder 30B للعمل المرتكز على الكود) وLlama 3.3 70B. الأربعة لديهم تدريب صريح على tool calling ويُصدرون JSON استدعاء دوال نظيفاً يستطيع عملاء MCP توجيهه. النماذج الأقل من 7B (ومعظم النماذج العامة بدون ضبط دقيق على tool calling) تُنتج tool calls مشوّهة بانتظام.',
+            a: 'في أغسطس 2026، الخيارات الأكثر موثوقيةً هي: Gemma 4 31B وGLM-4.7 Flash وQwen3 32B (أو Qwen3-Coder 30B للعمل المرتكز على الكود) وLlama 3.3 70B. الأربعة لديهم تدريب صريح على tool calling ويُصدرون JSON استدعاء دوال نظيفاً يستطيع عملاء MCP توجيهه. النماذج الأقل من 7B (ومعظم النماذج العامة بدون ضبط دقيق على tool calling) تُنتج tool calls مشوّهة بانتظام.',
           },
           {
             q: 'هل MCP آمن؟ هل يستطيع الوكيل حذف ملفاتي؟',
@@ -3477,7 +3484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-ai-agents-with-mcp-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -3486,8 +3493,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-ko.webp',
     title: 'Ollama를 데이터베이스 및 API에 MCP로 연결하기: 로컬 AI 에이전트 설정 2026',
@@ -3499,8 +3507,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Ollama 로컬 + MCP = 파일을 읽고, 데이터베이스를 쿼리하고, 브라우저를 제어하는 AI 에이전트 — 완전히 오프라인으로. 실제 작동하는 설정, 4개의 핵심 서버, 그리고 모델을 신뢰하지 않는 보안 모델.',
     current_models_mentioned: [
-      'Gemma 4 27B',
-      'GLM-4.7 32B',
+      'Gemma 4 31B',
+      'GLM-4.7 Flash',
       'Qwen3 32B',
       'Qwen3-Coder 30B',
       'Llama 3.3 70B',
@@ -3534,11 +3542,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'MCP는 오픈 프로토콜이며 완전히 로컬에서 작동합니다 — Claude Desktop, Anthropic 계정, 클라우드 호출이 필요하지 않습니다.',
           'Ollama가 모델을 제공하고, MCP 클라이언트(Goose, Cline, Continue.dev, LM Studio)가 JSON-RPC를 통해 Ollama와 MCP 서버를 연결합니다.',
           '4개의 참조 서버가 대부분의 실제 워크플로를 커버합니다: filesystem, SQLite/Postgres, Puppeteer/Playwright(브라우저), GitHub.',
-          'tool calling 신뢰성은 모델의 속성입니다: Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B는 MCP를 문제없이 처리합니다. 7B 미만 모델은 잘못된 형식의 tool call을 자주 생성합니다.',
+          'tool calling 신뢰성은 모델의 속성입니다: Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B는 MCP를 문제없이 처리합니다. 7B 미만 모델은 잘못된 형식의 tool call을 자주 생성합니다.',
           '보안 모델: filesystem 접근을 하나의 디렉터리로 제한하고, 데이터베이스 서버를 읽기 전용으로 실행하고, 모든 쓰기 또는 셸 도구를 명시적 승인 뒤에 두십시오.',
           '비용: API 지출 $0이지만 토큰은 로컬에서 소비됩니다 — 에이전트 루프는 토큰 집약적이므로, 32K+ 컨텍스트를 가진 모델과 적절한 속도로 실행할 수 있는 기기를 사용하십시오.',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -3572,7 +3580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MCP는 도구를 위한 JSON-RPC 2.0 프로토콜입니다.** 모델(클라이언트를 통해)이 하나 이상의 MCP 서버에 연결하며, 각 서버는 Tools(호출 가능한 함수), Resources(읽을 수 있는 데이터), Prompts(템플릿)를 노출합니다. 클라이언트가 Claude Desktop, Goose, Cline, Continue.dev 또는 LM Studio든 wire 형식은 동일합니다.',
           '**Ollama는 MCP를 직접 말하지 않습니다 — MCP 클라이언트가 Ollama를 감쌉니다.** Goose(Block)는 Ollama 기본 지원을 갖춘 가장 간단한 오픈 소스 CLI입니다; Cline, Continue.dev, LM Studio는 2026년 초에 MCP 클라이언트 지원을 추가했습니다.',
           '**4개의 참조 서버가 대부분의 사용 사례를 커버합니다:** `filesystem`(격리된 디렉터리에서 읽기/쓰기), `sqlite` 및 `postgres`(기본적으로 읽기 전용으로 데이터베이스 쿼리), `puppeteer` 또는 `playwright`(headless 브라우저 제어), `github`(personal access token으로 저장소 및 PR 관리).',
-          '**tool calling 신뢰성은 모델 크기 및 훈련과 함께 확장됩니다.** Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B는 Q4_K_M에서 MCP를 문제없이 처리합니다. 7B 미만 모델은 잘못된 형식의 tool call을 자주 생성하고 루프를 차단합니다.',
+          '**tool calling 신뢰성은 모델 크기 및 훈련과 함께 확장됩니다.** Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B는 Q4_K_M에서 MCP를 문제없이 처리합니다. 7B 미만 모델은 잘못된 형식의 tool call을 자주 생성하고 루프를 차단합니다.',
           '**보안 모델은 모델을 신뢰하지 않는다고 가정합니다.** filesystem 서버를 단일 디렉터리로 제한하고, 읽기 전용 역할로 데이터베이스 서버를 실행하고, `execute_command`나 `write_file`을 절대로 자동 승인하지 말고, 긴 세션 후에는 감사 로그를 검토하십시오.',
           '**로컬 MCP vs Claude Desktop:** 동일한 프로토콜, 동일한 서버 생태계. 로컬 스택은 클라우드 모델을 오프라인 모델로 교체합니다 — 프라이버시, 토큰당 비용 없음, 속도 제한 없음을 제공하는 대신, 약간 덜 유능한 모델과 직접 보안 설정을 관리해야 하는 트레이드오프가 있습니다.',
           '**비용은 API 수수료 $0이지만 토큰에서 실제로 발생합니다.** 에이전트 루프는 단일 다단계 작업에 대해 30K~80K 토큰을 소비할 수 있습니다. 최소 32K 컨텍스트를 가진 모델을 사용하십시오; 128K가 편안합니다.',
@@ -3585,7 +3593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**프로토콜:** stdio(로컬 하위 프로세스) 또는 HTTP/SSE(원격)를 통한 JSON-RPC 2.0. 로컬 에이전트는 거의 독점적으로 stdio를 사용합니다.',
           '**유지 관리:** Anthropic(오픈 소스 사양); 참조 서버는 GitHub의 `modelcontextprotocol/servers`에서 유지 관리되며 성장하는 타사 생태계가 있습니다.',
           '**2026년 로컬 클라이언트:** Goose(Block), Cline(VS Code 확장), Continue.dev(VS Code/JetBrains), LM Studio(데스크톱 앱), 그리고 여러 CLI 도구들.',
-          '**지원되는 Ollama 모델:** 네이티브 tool calling 훈련을 받은 모든 모델. 2026년 5월 기준: Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B.',
+          '**지원되는 Ollama 모델:** 네이티브 tool calling 훈련을 받은 모든 모델. 2026년 8월 기준: Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B.',
           '**기본 전송:** 로컬 프로세스를 위한 stdio; 서버를 기기 또는 에이전트 간에 공유해야 할 때만 HTTP/SSE.',
           '**설정은 단일 파일에 있습니다:** `~/.config/goose/config.yaml`(Goose), `~/.continue/config.json`의 MCP 블록(Continue.dev) 또는 Cline 설정 인터페이스의 `mcpServers`. 모두 동일한 구조: 서버 이름, 명령, args, 환경 변수.',
           '**Claude Desktop이 필요하지 않습니다.** 프로토콜은 Claude Desktop 독점 사용 이전부터 존재했습니다; 모든 참조 서버는 MIT/Apache 라이선스이며 모든 호환 클라이언트에서 작동합니다.',
@@ -3659,14 +3667,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Goose는 2026년에 작동하는 로컬 MCP 에이전트로 가는 가장 간단한 경로입니다.** Block의 오픈 소스 CLI로, Ollama 기본 지원, 대화형 채팅 인터페이스, 모든 MCP 서버를 위한 단일 설정 파일이 있습니다. Continue.dev, Cline, LM Studio도 작동합니다 — Goose는 첫 번째 실행의 설정 비용이 가장 낮습니다.',
         items: [
           '**1단계 — Ollama 설치.** ollama.com/download(macOS/Windows/Linux)에서 다운로드하십시오. `curl http://127.0.0.1:11434/api/tags`로 서비스가 실행 중인지 확인하십시오.',
-          '**2단계 — tool calling 모델 다운로드.** Gemma 4 27B(`gemma4:27b`), GLM-4.7 32B(`glm5:32b`), Qwen3 32B(`qwen3:32b`) 또는 Llama 3.3 70B(`llama3.3:70b`) 중에서 선택하십시오. 16GB 통합 메모리 또는 12GB VRAM으로 Q4_K_M에서 27B~32B를 편안하게 처리할 수 있습니다.',
+          '**2단계 — tool calling 모델 다운로드.** Gemma 4 31B(`gemma4:31b`), GLM-4.7 Flash(`glm-4.7-flash`), Qwen3 32B(`qwen3:32b`) 또는 Llama 3.3 70B(`llama3.3:70b`) 중에서 선택하십시오. 16GB 통합 메모리 또는 12GB VRAM으로 Q4_K_M에서 27B~32B를 편안하게 처리할 수 있습니다.',
           '**3단계 — Goose 설치.** `pipx install goose-ai`(macOS, Linux) 또는 Goose releases 페이지에서 설치 프로그램을 다운로드하십시오. CLI는 `goose`로 설치됩니다.',
           '**4단계 — Ollama를 제공자로 구성.** `goose configure`를 실행하고, `ollama`를 제공자로 선택하고, 모델을 다운로드한 것으로 설정하고, 호스트를 `http://127.0.0.1:11434`로 설정하십시오. Goose가 이것을 `~/.config/goose/config.yaml`에 씁니다.',
           '**5단계 — filesystem MCP 서버 추가.** `~/.config/goose/config.yaml`을 편집하여 `mcpServers` 블록을 추가하십시오(아래 설정 예시). `goose session`을 재시작하고 테스트 디렉터리의 파일 나열을 요청하십시오. 첫 번째 턴이 서버가 연결되었음을 확인합니다.',
           '**6단계 — 실제 작업으로 확인.** `goose session`을 시도하고 "notes/의 모든 Markdown 파일을 제목과 단어 수와 함께 나열하고 결과를 notes/index.md에 쓰십시오."를 요청하십시오. 에이전트가 읽고, 요약하고, 다시 쓰면 루프가 작동합니다.',
         ],
         codeBlock:
-          '# 1. Pull a tool-calling model\nollama pull gemma4:27b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:27b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
+          '# 1. Pull a tool-calling model\nollama pull gemma4:31b\n\n# 2. Install Goose\npipx install goose-ai\n\n# 3. Configure Ollama as the provider\ngoose configure\n# Provider: ollama\n# Model:    gemma4:31b\n# Host:     http://127.0.0.1:11434\n\n# 4. Start a session — Goose reads ~/.config/goose/config.yaml\ngoose session',
         codeLanguage: 'bash',
         callouts: [
           {
@@ -3676,7 +3684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-agents-with-mcp-2026-setup-flow-ko.svg',
         imageCaption:
-          'Ollama와 Goose의 6단계 설정 흐름: Ollama 설치, gemma4:27b 같은 도구 호출 모델 다운로드, pipx로 Goose 설치, 제공자 구성, 파일 시스템 MCP 서버 추가, 약 15분 내 실제 작업으로 검증.',
+          'Ollama와 Goose의 6단계 설정 흐름: Ollama 설치, gemma4:31b 같은 도구 호출 모델 다운로드, pipx로 Goose 설치, 제공자 구성, 파일 시스템 MCP 서버 추가, 약 15분 내 실제 작업으로 검증.',
       },
       filesystemServer: {
         id: 'filesystem-server',
@@ -3806,8 +3814,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**tool calling 신뢰성은 harness가 아닌 모델 크기와 훈련과 함께 확장됩니다.** Cline에서 잘못된 형식의 tool call을 생성하는 모델은 같은 이유로 Goose에서도 생성합니다.',
         items: [
-          '**Gemma 4 27B(`gemma4:27b`)** — Google의 tool calling 훈련은 이 크기에서 최고 수준입니다. Q4_K_M에서 16GB 통합 메모리 또는 24GB VRAM에 맞습니다. 훌륭한 일반 추론; 연쇄 tool call에서 약간 보수적.',
-          '**GLM-4.7 32B(`glm5:32b`)** — Zhipu의 모델은 매우 높은 tool calling 신뢰성과 표준 128K 컨텍스트 창을 가집니다. Gemma 4보다 약간 무겁지만 24GB GPU에 편안하게 맞습니다.',
+          '**Gemma 4 31B(`gemma4:31b`)** — Google의 tool calling 훈련은 이 크기에서 최고 수준입니다. Q4_K_M에서 16GB 통합 메모리 또는 24GB VRAM에 맞습니다. 훌륭한 일반 추론; 연쇄 tool call에서 약간 보수적.',
+          '**GLM-4.7 Flash(`glm-4.7-flash`)** — Zhipu의 모델은 매우 높은 tool calling 신뢰성과 표준 128K 컨텍스트 창을 가집니다. Gemma 4보다 약간 무겁지만 24GB GPU에 편안하게 맞습니다.',
           '**Qwen3 32B(`qwen3:32b`)** — 균형 잡힘; 조밀한 32B는 MCP를 문제없이 처리하고 긴 에이전트 루프에서 잘 작동합니다. **Qwen3-Coder 30B(`qwen3-coder:30b`)**는 에이전트 작업이 코드 지향적인 경우 최선입니다.',
           '**Llama 3.3 70B(`llama3.3:70b`)** — 가장 높은 성능이지만 가장 무겁습니다. Q4_K_M에서 48GB+ 통합 메모리 또는 2× 24GB GPU. 하드웨어가 지원하는 경우에만 사용하십시오; 더 작은 모델이 충분한 경우가 많습니다.',
           '**MCP 작업에서 피해야 할 것:** 7B 미만의 모든 것과 명시적인 tool calling 훈련이 없는 범용 모델. 잘못된 형식의 호출을 생성하고, 루프가 차단되고, harness를 탓하게 됩니다 — 하지만 harness는 괜찮습니다.',
@@ -3867,7 +3875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '어떤 로컬 모델이 MCP를 가장 잘 지원합니까?',
-            a: '2026년 5월 기준으로 가장 신뢰할 수 있는 옵션은 Gemma 4 27B, GLM-4.7 32B, Qwen3 32B(코드 지향 작업의 경우 Qwen3-Coder 30B), Llama 3.3 70B입니다. 4개 모두 명시적인 tool calling 훈련을 받았으며 MCP 클라이언트가 라우팅할 수 있는 깔끔한 function calling JSON을 생성합니다. 7B 미만 모델(그리고 tool calling 파인튜닝 없는 대부분의 범용 모델)은 정기적으로 잘못된 형식의 tool call을 생성합니다.',
+            a: '2026년 8월 기준으로 가장 신뢰할 수 있는 옵션은 Gemma 4 31B, GLM-4.7 Flash, Qwen3 32B(코드 지향 작업의 경우 Qwen3-Coder 30B), Llama 3.3 70B입니다. 4개 모두 명시적인 tool calling 훈련을 받았으며 MCP 클라이언트가 라우팅할 수 있는 깔끔한 function calling JSON을 생성합니다. 7B 미만 모델(그리고 tool calling 파인튜닝 없는 대부분의 범용 모델)은 정기적으로 잘못된 형식의 tool call을 생성합니다.',
           },
           {
             q: 'MCP는 안전합니까? 에이전트가 내 파일을 삭제할 수 있습니까?',
@@ -3920,7 +3928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-agents-with-mcp-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
