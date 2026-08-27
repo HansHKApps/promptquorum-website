@@ -5,22 +5,14 @@ const fs = require('fs')
 const path = require('path')
 
 function fixValidator() {
-  const validatorPath = path.join(__dirname, '.next/types/validator.ts')
-
-  if (fs.existsSync(validatorPath)) {
-    let content = fs.readFileSync(validatorPath, 'utf8')
-    const original = content
-
-    // Fix the incorrect paths - remove "src/" that Next.js incorrectly added
-    content = content.replace(/import\("\.\.\/\.\.\/src\/app\//g, 'import("../../app/')
-    content = content.replace(/\/\/ Validate \.\.\/\.\.\/src\/app\//g, '// Validate ../../app/')
-
-    if (content !== original) {
-      fs.writeFileSync(validatorPath, content, 'utf8')
-      console.log('✓ Fixed validator paths')
-      return true
-    }
-  }
+  // No-op: Next.js (as of the Next 16 upgrade) correctly generates
+  // .next/types/validator.ts with `../../src/app/...` imports, matching this
+  // repo's actual `src/app` router location. An earlier version of this
+  // function stripped the `src/` prefix on the assumption Next had added it
+  // incorrectly — that was backwards for this repo's layout and produced
+  // TS2307 "Cannot find module '../../app/.../route.js'" errors on every
+  // standalone `tsc --noEmit` run (the app dir at repo root doesn't exist).
+  // Kept as a no-op placeholder in case a future Next version regresses this.
   return false
 }
 
