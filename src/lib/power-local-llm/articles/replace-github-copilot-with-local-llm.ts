@@ -1,6 +1,6 @@
 // Power Local LLM — Article 3.1 (Coding Assistants)
 // Slug: replace-github-copilot-with-local-llm
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// All 9 locales authored (en/de/fr/ja/zh/es/pt/ar/ko).
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -9,8 +9,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/replace-github-copilot-with-local-llm-overview-hero-en.webp',
     title: 'Replace GitHub Copilot With a Local LLM: Setup + Cost Comparison 2026',
@@ -39,12 +40,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer: 'Yes — Continue.dev + Ollama + Qwen3-Coder 30B reaches 90-95% of Copilot quality for everyday TypeScript, Python, and Rust work. It runs on RTX 3060 12 GB or M3 Pro+ Macs, costs $0/month after hardware, and keeps all code local. Copilot still wins on rare libraries with sparse public docs.',
         bullets: [
           'Continue.dev — free open-source VS Code/JetBrains extension; the best Copilot replacement frontend in 2026',
-          'Qwen3-Coder 30B Q4_K_M — strongest open-source coding model in May 2026; needs ~18 GB VRAM',
+          'Qwen3-Coder 30B Q4_K_M — strongest open-source coding model in August 2026; needs ~18 GB VRAM',
           'Qwen3-Coder 7B — lightweight option for 8 GB VRAM (RTX 3060 / RTX 3070); 80-85% of 30B quality',
           'Cost math — $20/month Copilot × 24 months = $480; local hardware breaks even in 8-14 months',
           'Privacy bonus — your proprietary code never leaves your machine, useful for client work and NDA-protected projects',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -69,7 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Stack: Continue.dev (free VS Code extension) + Ollama + Qwen3-Coder 30B Q4_K_M.',
-          'Quality is within 5-10% of Copilot for everyday TS/Python/Rust work in May 2026.',
+          'Quality is within 5-10% of Copilot for everyday TS/Python/Rust work in August 2026.',
           'Cost breakeven is 8-14 months on existing RTX 3060+ or M3+ hardware.',
           'Privacy advantage: zero code ever leaves your machine — important for NDA work.',
           'Copilot still wins on obscure libraries with thin public training data.',
@@ -80,7 +81,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quick Facts',
         items: [
           '**Recommended stack:** Continue.dev (free, open-source) + Ollama + Qwen3-Coder 30B Q4_K_M.',
-          '**Quality:** 90-95% of Copilot Pro on TypeScript and Python, 88% on Rust (May 2026 benchmarks).',
+          '**Quality:** 90-95% of Copilot Pro on TypeScript and Python, 88% on Rust (August 2026 benchmarks).',
           '**Cost breakeven:** 8-14 months on existing RTX 3060+ or M3+ hardware; Copilot wins if buying new hardware.',
           '**VRAM needed:** 18 GB for the 30B model, 5 GB for the 7B fallback.',
           '**Autocomplete latency:** ~280 ms local (RTX 4070) vs ~180 ms Copilot — imperceptible after day 1.',
@@ -118,10 +119,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Install three free tools, pull one model, and you have autocomplete, chat, and agent mode in VS Code — same as Copilot, except nothing leaves your laptop. It takes about 30 minutes to set up and pays for itself in 8-14 months if you already own the hardware.',
           },
         ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Status check, August 2026: Continue.dev still works and is still the fastest Copilot replacement to set up, but it is no longer actively developed. Cursor acquired the Continue team on 18 June 2026; the final release was v2.0.0 on 19 June 2026 and the repository is read-only. Apache 2.0 means it stays downloadable and it will keep working against Ollama for the foreseeable future, but there will be no fixes, and a future provider or VS Code API change will eventually break it. If you want a maintained VS Code agent instead, Cline is the active alternative — the Ollama and Qwen3-Coder half of this stack is unaffected either way.',
+          },
+        ],
         items: [
           '**Continue.dev** (free, open-source) — the VS Code/JetBrains extension. Ships autocomplete, chat, and agent mode. The Copilot-equivalent frontend.',
           '**Ollama** — the local model runtime. One-line install. Manages model downloads, quantization, GPU offload, and exposes an OpenAI-compatible API.',
-          '**Qwen3-Coder 30B Q4_K_M** — the model. Strongest open-source coding model in May 2026 on HumanEval+, MBPP+, and real refactor tasks. Needs ~18 GB VRAM.',
+          '**Qwen3-Coder 30B Q4_K_M** — the model. Strongest open-source coding model in August 2026 on HumanEval+, MBPP+, and real refactor tasks. Needs ~18 GB VRAM.',
           '**Qwen3-Coder 7B** — fallback for 8-12 GB VRAM cards. Reaches 80-85% of 30B quality. Recommended for RTX 3060 12 GB and M3 Pro 16 GB Macs.',
         ],
         callouts: [
@@ -254,7 +261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Will Continue.dev work with models other than Qwen3-Coder?',
-            a: 'Yes. Continue.dev supports any OpenAI-compatible endpoint, plus first-class integrations with Ollama, vLLM, and llama.cpp. You can swap in DeepSeek Coder V3, Codestral, Llama 3.3 Code, or Granite Code without changing the extension.',
+            a: 'Yes. Continue.dev supports any OpenAI-compatible endpoint, plus first-class integrations with Ollama, vLLM, and llama.cpp. You can swap in DeepSeek Coder V3, Codestral, or Granite Code without changing the extension.',
           },
           {
             q: 'How much VRAM do I need for Qwen3-Coder 30B?',
@@ -313,8 +320,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/replace-github-copilot-with-local-llm-overview-hero-de.webp',
     title: 'GitHub Copilot ersetzen mit lokalem LLM: Anleitung + Kostenvergleich 2026',
@@ -343,12 +351,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer: 'Ja – Continue.dev + Ollama + Qwen3-Coder 30B erreicht 90–95 % der Copilot-Qualität bei alltäglicher TypeScript-, Python- und Rust-Arbeit. Läuft auf RTX 3060 12 GB oder M3 Pro+ Macs, kostet 0 €/Monat nach der Hardware-Anschaffung und hält alle Code lokal. Copilot ist weiterhin besser bei Nischenbibliotheken mit spärlicher Dokumentation.',
         bullets: [
           'Continue.dev – kostenlose Open-Source-Erweiterung für VS Code/JetBrains; bestes Copilot-Äquivalent Frontend in 2026',
-          'Qwen3-Coder 30B Q4_K_M – stärkstes Open-Source-Code-Modell Mai 2026; benötigt ca. 18 GB VRAM',
+          'Qwen3-Coder 30B Q4_K_M – stärkstes Open-Source-Code-Modell August 2026; benötigt ca. 18 GB VRAM',
           'Qwen3-Coder 7B – leichte Alternative für 8 GB VRAM (RTX 3060 / RTX 3070); 80–85 % der 30B-Qualität',
           'Kostenrechnung – 20 €/Monat Copilot × 24 Monate = 480 €; lokale Hardware amortisiert sich in 8–14 Monaten',
           'Datenschutz-Bonus – Ihr proprietärer Code verlässt nie Ihren Rechner; wichtig für NDA-Projekte und Kundenprojekte',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -373,7 +381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Stack: Continue.dev (kostenlose VS-Code-Erweiterung) + Ollama + Qwen3-Coder 30B Q4_K_M.',
-          'Qualität liegt bei 5–10 % unter Copilot für alltägliche TS/Python/Rust-Arbeit Mai 2026.',
+          'Qualität liegt bei 5–10 % unter Copilot für alltägliche TS/Python/Rust-Arbeit August 2026.',
           'Kostenausgleich erfolgt in 8–14 Monaten auf vorhandener RTX 3060+ oder M3+-Hardware.',
           'Datenschutz-Vorteil: Kein Code verlässt je Ihren Rechner – wichtig für NDA-Arbeit.',
           'Copilot ist weiterhin besser bei Nischenbibliotheken mit dünnen Trainingsdaten.',
@@ -422,10 +430,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installieren Sie drei kostenlose Tools, laden Sie ein Modell herunter, und Sie haben Autovervollständigung, Chat und Agent-Modus in VS Code – genau wie Copilot, nur dass nichts Ihren Laptop verlässt. Die Einrichtung dauert etwa 30 Minuten und amortisiert sich in 8–14 Monaten, wenn Sie die Hardware bereits besitzen.',
           },
         ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Statuspruefung, August 2026: Continue.dev funktioniert weiterhin und bleibt der am schnellsten eingerichtete Copilot-Ersatz, wird aber nicht mehr aktiv entwickelt. Cursor hat das Continue-Team am 18. Juni 2026 uebernommen; die letzte Version war v2.0.0 vom 19. Juni 2026, das Repository ist schreibgeschuetzt. Dank Apache 2.0 bleibt es verfuegbar und laeuft auf absehbare Zeit weiter mit Ollama, aber es wird keine Fehlerbehebungen mehr geben, und eine kuenftige Aenderung an Provider- oder VS-Code-APIs wird es irgendwann unbrauchbar machen. Wenn Sie stattdessen einen gepflegten VS-Code-Agenten wollen, ist Cline die aktive Alternative — der Ollama- und Qwen3-Coder-Teil dieses Stacks ist davon nicht betroffen.',
+          },
+        ],
         items: [
           '**Continue.dev** (kostenlos, Open-Source) – die VS-Code/JetBrains-Erweiterung. Bietet Autovervollständigung, Chat und Agent-Modus. Das Copilot-gleichwertige Frontend.',
           '**Ollama** – die lokale Modell-Laufzeit. Einzeilige Installation. Verwaltet Modell-Downloads, Quantisierung, GPU-Auslagerung und stellt eine OpenAI-kompatible API bereit.',
-          '**Qwen3-Coder 30B Q4_K_M** – das Modell. Stärkstes Open-Source-Code-Modell Mai 2026 auf HumanEval+, MBPP+ und echten Refaktor-Aufgaben. Benötigt ca. 18 GB VRAM.',
+          '**Qwen3-Coder 30B Q4_K_M** – das Modell. Stärkstes Open-Source-Code-Modell August 2026 auf HumanEval+, MBPP+ und echten Refaktor-Aufgaben. Benötigt ca. 18 GB VRAM.',
           '**Qwen3-Coder 7B** – Fallback für 8–12 GB VRAM-Karten. Erreicht 80–85 % der 30B-Qualität. Empfohlen für RTX 3060 12 GB und M3 Pro 16 GB Macs.',
         ],
         callouts: [
@@ -558,7 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Funktioniert Continue.dev mit anderen Modellen außer Qwen3-Coder?',
-            a: 'Ja. Continue.dev unterstützt jeden OpenAI-kompatiblen Endpunkt sowie erstklassige Integrationen mit Ollama, vLLM und llama.cpp. Sie können DeepSeek Coder V3, Codestral, Llama 3.3 Code oder Granite Code ohne Änderung der Erweiterung austauschen.',
+            a: 'Ja. Continue.dev unterstützt jeden OpenAI-kompatiblen Endpunkt sowie erstklassige Integrationen mit Ollama, vLLM und llama.cpp. Sie können DeepSeek Coder V3, Codestral oder Granite Code ohne Änderung der Erweiterung austauschen.',
           },
           {
             q: 'Wie viel VRAM benötige ich für Qwen3-Coder 30B?',
@@ -624,8 +638,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/replace-github-copilot-with-local-llm-overview-hero-fr.webp',
     title: 'Remplacer GitHub Copilot avec un LLM local : Guide + Comparaison des coûts 2026',
@@ -654,12 +669,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer: 'Oui – Continue.dev + Ollama + Qwen3-Coder 30B atteint 90–95 % de la qualité Copilot pour le travail TypeScript, Python et Rust quotidien. Fonctionne sur RTX 3060 12 Go ou M3 Pro+ Macs, coûte 0 €/mois après l\'achat du matériel et garde tout le code local. Copilot reste meilleur sur les bibliothèques rares avec peu de documentation.',
         bullets: [
           'Continue.dev – extension VS Code/JetBrains gratuite et open-source ; le meilleur équivalent Copilot frontend en 2026',
-          'Qwen3-Coder 30B Q4_K_M – modèle de codage open-source le plus puissant mai 2026 ; nécessite env. 18 Go VRAM',
+          'Qwen3-Coder 30B Q4_K_M – modèle de codage open-source le plus puissant août 2026 ; nécessite env. 18 Go VRAM',
           'Qwen3-Coder 7B – option légère pour 8 Go VRAM (RTX 3060 / RTX 3070) ; 80–85 % de la qualité 30B',
           'Calcul des coûts – Copilot 20 €/mois × 24 mois = 480 € ; le matériel local s\'amortit en 8–14 mois',
           'Bonus confidentialité – votre code propriétaire ne quitte jamais votre machine, essentiel pour les contrats clients et les projets sous NDA',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -684,7 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Pile : Continue.dev (extension VS Code gratuite) + Ollama + Qwen3-Coder 30B Q4_K_M.',
-          'Qualité à 5–10 % près de Copilot pour le travail quotidien TS/Python/Rust en mai 2026.',
+          'Qualité à 5–10 % près de Copilot pour le travail quotidien TS/Python/Rust en août 2026.',
           'L\'amortissement prend 8–14 mois sur du matériel RTX 3060+ ou M3+ existant.',
           'Avantage confidentialité : aucun code ne quitte jamais votre machine – essentiel pour les travaux sous NDA.',
           'Copilot reste meilleur sur les bibliothèques rares avec peu de données d\'entraînement.',
@@ -695,7 +710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Faits rapides',
         items: [
           '**Pile recommandée :** Continue.dev (gratuit, open-source) + Ollama + Qwen3-Coder 30B Q4_K_M.',
-          '**Qualité :** 90–95 % de Copilot Pro sur TypeScript et Python, 88 % sur Rust (benchmarks mai 2026).',
+          '**Qualité :** 90–95 % de Copilot Pro sur TypeScript et Python, 88 % sur Rust (benchmarks août 2026).',
           '**Amortissement :** 8–14 mois sur du matériel RTX 3060+ ou M3+ existant ; Copilot gagne sur les nouveaux achats.',
           '**VRAM nécessaire :** 18 Go pour le modèle 30B, 5 Go pour le repli 7B.',
           '**Latence d\'autocomplétion :** env. 280 ms local (RTX 4070) vs env. 180 ms Copilot – imperceptible après le jour 1.',
@@ -733,10 +748,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installez trois outils gratuits, téléchargez un modèle, et vous avez l\'autocomplétion, le chat et le mode agent dans VS Code – comme Copilot, sauf que rien ne quitte votre portable. La configuration prend environ 30 minutes et s\'amortit en 8–14 mois si vous avez déjà le matériel.',
           },
         ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Point de situation, aout 2026 : Continue.dev fonctionne toujours et reste le remplacement de Copilot le plus rapide a mettre en place, mais il n\'est plus developpe activement. Cursor a acquis l\'equipe Continue le 18 juin 2026 ; la derniere version est la v2.0.0 du 19 juin 2026 et le depot est en lecture seule. La licence Apache 2.0 le garde telechargeable et il continuera de fonctionner avec Ollama dans un avenir proche, mais il n\'y aura plus de correctifs, et une future evolution des API fournisseur ou VS Code finira par le casser. Si vous voulez un agent VS Code maintenu, Cline est l\'alternative active — la partie Ollama et Qwen3-Coder de cette pile n\'est pas concernee.',
+          },
+        ],
         items: [
           '**Continue.dev** (gratuit, open-source) – l\'extension VS Code/JetBrains. Offre l\'autocomplétion, le chat et le mode agent. Le frontend équivalent à Copilot.',
           '**Ollama** – le runtime du modèle local. Installation d\'une ligne. Gère les téléchargements de modèles, la quantification, l\'export GPU et expose une API compatible OpenAI.',
-          '**Qwen3-Coder 30B Q4_K_M** – le modèle. Modèle de codage open-source le plus puissant en mai 2026 sur HumanEval+, MBPP+ et tâches de refacto réelles. Nécessite env. 18 Go VRAM.',
+          '**Qwen3-Coder 30B Q4_K_M** – le modèle. Modèle de codage open-source le plus puissant en août 2026 sur HumanEval+, MBPP+ et tâches de refacto réelles. Nécessite env. 18 Go VRAM.',
           '**Qwen3-Coder 7B** – secours pour cartes 8–12 Go VRAM. Atteint 80–85 % de la qualité 30B. Recommandé pour RTX 3060 12 Go et M3 Pro 16 Go Macs.',
         ],
         callouts: [
@@ -869,7 +890,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Continue.dev fonctionne-t-il avec d\'autres modèles que Qwen3-Coder ?',
-            a: 'Oui. Continue.dev supporte n\'importe quel point d\'extrémité compatible OpenAI, plus les intégrations de première classe avec Ollama, vLLM et llama.cpp. Vous pouvez échanger DeepSeek Coder V3, Codestral, Llama 3.3 Code ou Granite Code sans changer l\'extension.',
+            a: 'Oui. Continue.dev supporte n\'importe quel point d\'extrémité compatible OpenAI, plus les intégrations de première classe avec Ollama, vLLM et llama.cpp. Vous pouvez échanger DeepSeek Coder V3, Codestral ou Granite Code sans changer l\'extension.',
           },
           {
             q: 'Combien de VRAM ai-je besoin pour Qwen3-Coder 30B ?',
@@ -927,8 +948,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/replace-github-copilot-with-local-llm-overview-hero-ja.webp',
     title: 'GitHub Copilot をローカル LLM で置き換える：セットアップ + コスト比較 2026',
@@ -962,7 +984,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'コスト計算 – Copilot 20 ドル/月 × 24 ヶ月 = 480 ドル；ローカルハードウェアは 8～14 ヶ月で回収',
           'プライバシーボーナス – 独自コードはあなたのマシンから出ません。クライアント作業と NDA 保護プロジェクトに必須',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1034,6 +1056,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'plain-terms',
             text: '3 つの無料ツールをインストールし、1 つのモデルをプルします。VS Code でオートコンプリート、チャット、エージェントモードを実現できます – Copilot と同じですが、ノートパソコンから何も出ません。セットアップには約 30 分かかり、既にハードウェアを所有していれば 8～14 ヶ月で回収できます。',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'ステータス確認（2026年8月）：Continue.devは今も動作し、最も早く導入できるCopilotの代替であることに変わりはありませんが、活発な開発は終了しています。Cursorが2026年6月18日にContinueチームを買収し、最終リリースは2026年6月19日のv2.0.0、リポジトリは読み取り専用です。Apache 2.0のため入手は可能で当面はOllamaと動作しますが、修正は行われず、将来のプロバイダーやVS Code APIの変更でいずれ動かなくなります。メンテナンスされたVS Codeエージェントが必要なら、Clineが現行の代替です。このスタックのOllamaとQwen3-Coderの部分には影響ありません。',
           },
         ],
         items: [
@@ -1172,7 +1200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Continue.dev は Qwen3-Coder 以外のモデルで動作しますか？',
-            a: 'はい。Continue.dev は任意の OpenAI 互換エンドポイント、および Ollama、vLLM、llama.cpp との最初のクラス統合をサポートします。拡張機能を変更せずに DeepSeek Coder V3、Codestral、Llama 3.3 Code、または Granite Code をスワップできます。',
+            a: 'はい。Continue.dev は任意の OpenAI 互換エンドポイント、および Ollama、vLLM、llama.cpp との最初のクラス統合をサポートします。拡張機能を変更せずに DeepSeek Coder V3、Codestral、または Granite Code をスワップできます。',
           },
           {
             q: 'Qwen3-Coder 30B に必要な VRAM はいくらですか？',
@@ -1230,8 +1258,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/replace-github-copilot-with-local-llm-overview-hero-zh.webp',
     title: '用本地 LLM 替代 GitHub Copilot：设置步骤 + 成本对比 2026',
@@ -1265,7 +1294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '成本对比 — Copilot 20 美元/月 × 24 个月 = 480 美元；本地方案 8-14 个月回本',
           '隐私优势 — 专有代码永不离开本机，对客户工作和受 NDA 保护的项目至关重要',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1337,6 +1366,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'plain-terms',
             text: '安装三个免费工具，下载一个模型，你就在 VS Code 中获得自动完成、聊天和代理模式 — 与 Copilot 相同，只是没有任何内容离开笔记本。设置约 30 分钟，8-14 个月内已有硬件就能回本。',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '状态说明（2026年8月）：Continue.dev 仍可使用，也依然是最快上手的 Copilot 替代方案，但已不再积极开发。Cursor 于2026年6月18日收购了 Continue 团队，最终版本为2026年6月19日的 v2.0.0，仓库已设为只读。Apache 2.0 许可证保证它仍可下载，并在可预见的时间内继续配合 Ollama 工作，但不会再有修复，未来供应商或 VS Code API 的变化最终会使其失效。如果你需要持续维护的 VS Code 智能体，Cline 是当前的替代选择——本方案中 Ollama 与 Qwen3-Coder 部分不受影响。',
           },
         ],
         items: [
@@ -1475,7 +1510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Continue.dev 会与除 Qwen3-Coder 外的其他模型工作吗？',
-            a: '会。Continue.dev 支持任何 OpenAI 兼容端点，加上 Ollama、vLLM 和 llama.cpp 的一级集成。你可以换入 DeepSeek Coder V3、Codestral、Llama 3.3 Code 或 Granite Code 而无需改变扩展。',
+            a: '会。Continue.dev 支持任何 OpenAI 兼容端点，加上 Ollama、vLLM 和 llama.cpp 的一级集成。你可以换入 DeepSeek Coder V3、Codestral 或 Granite Code 而无需改变扩展。',
           },
           {
             q: 'Qwen3-Coder 30B 需要多少 VRAM？',
@@ -1533,8 +1568,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/replace-github-copilot-with-local-llm-overview-hero-es.webp',
     title: 'Reemplaza GitHub Copilot con un LLM local: Configuración + Comparativa de costos 2026',
@@ -1563,12 +1599,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer: 'Sí — Continue.dev + Ollama + Qwen3-Coder 30B alcanza el 90–95% de la calidad de Copilot para trabajo cotidiano en TypeScript, Python y Rust. Funciona en RTX 3060 12 GB o Macs M3 Pro+, cuesta $0/mes después del hardware y mantiene todo el código local. Copilot sigue siendo mejor en librerías poco comunes con escasa documentación pública.',
         bullets: [
           'Continue.dev — extensión gratuita y de código abierto para VS Code/JetBrains; el mejor frontend equivalente a Copilot en 2026',
-          'Qwen3-Coder 30B Q4_K_M — modelo de código open-source más potente en mayo de 2026; requiere ~18 GB de VRAM',
+          'Qwen3-Coder 30B Q4_K_M — modelo de código open-source más potente en agosto de 2026; requiere ~18 GB de VRAM',
           'Qwen3-Coder 7B — opción ligera para 8 GB de VRAM (RTX 3060 / RTX 3070); 80–85% de la calidad del modelo 30B',
           'Cálculo de costos — Copilot $20/mes × 24 meses = $480; el hardware local se amortiza en 8–14 meses',
           'Ventaja de privacidad — tu código propietario nunca sale de tu máquina, ideal para trabajo con clientes y proyectos protegidos por NDA',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1593,7 +1629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Stack: Continue.dev (extensión gratuita de VS Code) + Ollama + Qwen3-Coder 30B Q4_K_M.',
-          'La calidad está dentro del 5–10% de Copilot para trabajo cotidiano en TS/Python/Rust en mayo de 2026.',
+          'La calidad está dentro del 5–10% de Copilot para trabajo cotidiano en TS/Python/Rust en agosto de 2026.',
           'El equilibrio de costos se alcanza en 8–14 meses con hardware RTX 3060+ o M3+ existente.',
           'Ventaja de privacidad: cero código sale jamás de tu máquina — importante para trabajo con NDA.',
           'Copilot sigue siendo mejor en librerías poco comunes con datos de entrenamiento escasos.',
@@ -1604,7 +1640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Datos rápidos',
         items: [
           '**Stack recomendado:** Continue.dev (gratuito, código abierto) + Ollama + Qwen3-Coder 30B Q4_K_M.',
-          '**Calidad:** 90–95% de Copilot Pro en TypeScript y Python, 88% en Rust (benchmarks de mayo de 2026).',
+          '**Calidad:** 90–95% de Copilot Pro en TypeScript y Python, 88% en Rust (benchmarks de agosto de 2026).',
           '**Equilibrio de costos:** 8–14 meses con hardware RTX 3060+ o M3+ existente; Copilot gana al comprar hardware nuevo.',
           '**VRAM necesaria:** 18 GB para el modelo 30B, 5 GB para el fallback 7B.',
           '**Latencia de autocompletado:** ~280 ms local (RTX 4070) vs ~180 ms Copilot — imperceptible después del primer día.',
@@ -1642,10 +1678,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instala tres herramientas gratuitas, descarga un modelo, y tendrás autocompletado, chat y modo agente en VS Code — igual que Copilot, solo que nada sale de tu portátil. La configuración tarda unos 30 minutos y se amortiza en 8–14 meses si ya tienes el hardware.',
           },
         ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Comprobacion de estado, agosto de 2026: Continue.dev sigue funcionando y sigue siendo el reemplazo de Copilot mas rapido de configurar, pero ya no se desarrolla activamente. Cursor adquirio el equipo de Continue el 18 de junio de 2026; la ultima version fue la v2.0.0 del 19 de junio de 2026 y el repositorio es de solo lectura. La licencia Apache 2.0 lo mantiene descargable y seguira funcionando con Ollama en el futuro previsible, pero no habra correcciones y un cambio futuro en las API del proveedor o de VS Code acabara rompiendolo. Si prefieres un agente de VS Code mantenido, Cline es la alternativa activa; la parte de Ollama y Qwen3-Coder de esta pila no se ve afectada.',
+          },
+        ],
         items: [
           '**Continue.dev** (gratuito, código abierto) — la extensión para VS Code/JetBrains. Incluye autocompletado, chat y modo agente. El frontend equivalente a Copilot.',
           '**Ollama** — el runtime de modelos local. Instalación en una línea. Gestiona descargas de modelos, cuantización, descarga a GPU y expone una API compatible con OpenAI.',
-          '**Qwen3-Coder 30B Q4_K_M** — el modelo. El modelo de código open-source más potente en mayo de 2026 en HumanEval+, MBPP+ y tareas de refactorización reales. Requiere ~18 GB de VRAM.',
+          '**Qwen3-Coder 30B Q4_K_M** — el modelo. El modelo de código open-source más potente en agosto de 2026 en HumanEval+, MBPP+ y tareas de refactorización reales. Requiere ~18 GB de VRAM.',
           '**Qwen3-Coder 7B** — alternativa para tarjetas de 8–12 GB de VRAM. Alcanza el 80–85% de la calidad del 30B. Recomendado para RTX 3060 12 GB y Macs M3 Pro 16 GB.',
         ],
         callouts: [
@@ -1778,7 +1820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Continue.dev funciona con otros modelos además de Qwen3-Coder?',
-            a: 'Sí. Continue.dev soporta cualquier endpoint compatible con OpenAI, además de integraciones de primera clase con Ollama, vLLM y llama.cpp. Puedes cambiar a DeepSeek Coder V3, Codestral, Llama 3.3 Code o Granite Code sin cambiar la extensión.',
+            a: 'Sí. Continue.dev soporta cualquier endpoint compatible con OpenAI, además de integraciones de primera clase con Ollama, vLLM y llama.cpp. Puedes cambiar a DeepSeek Coder V3, Codestral o Granite Code sin cambiar la extensión.',
           },
           {
             q: '¿Cuánta VRAM necesito para Qwen3-Coder 30B?',
@@ -1849,8 +1891,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/replace-github-copilot-with-local-llm-overview-hero-pt.webp',
     title: 'Substitua o GitHub Copilot por um LLM local: configuração + comparativo de custos 2026',
@@ -1879,12 +1922,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer: 'Sim — Continue.dev + Ollama + Qwen3-Coder 30B alcança 90–95% da qualidade do Copilot para trabalho cotidiano em TypeScript, Python e Rust. Roda em uma RTX 3060 12 GB ou Macs M3 Pro+, custa $0/mês depois do hardware e mantém todo o código local. O Copilot ainda vence em bibliotecas raras com pouca documentação pública.',
         bullets: [
           'Continue.dev — extensão gratuita e open source para VS Code/JetBrains; o melhor frontend equivalente ao Copilot em 2026',
-          'Qwen3-Coder 30B Q4_K_M — modelo de código open source mais potente em maio de 2026; precisa de ~18 GB de VRAM',
+          'Qwen3-Coder 30B Q4_K_M — modelo de código open source mais potente em agosto de 2026; precisa de ~18 GB de VRAM',
           'Qwen3-Coder 7B — opção leve para 8 GB de VRAM (RTX 3060 / RTX 3070); 80–85% da qualidade do modelo 30B',
           'Cálculo de custos — Copilot $20/mês × 24 meses = $480; o hardware local se paga em 8–14 meses',
           'Vantagem de privacidade — seu código proprietário nunca sai da sua máquina, ideal para trabalho com clientes e projetos protegidos por NDA',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1909,7 +1952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Stack: Continue.dev (extensão gratuita do VS Code) + Ollama + Qwen3-Coder 30B Q4_K_M.',
-          'A qualidade fica dentro de 5–10% do Copilot para trabalho cotidiano em TS/Python/Rust em maio de 2026.',
+          'A qualidade fica dentro de 5–10% do Copilot para trabalho cotidiano em TS/Python/Rust em agosto de 2026.',
           'O equilíbrio de custos é alcançado em 8–14 meses com hardware RTX 3060+ ou M3+ existente.',
           'Vantagem de privacidade: nenhum código sai da sua máquina — importante para trabalho com NDA.',
           'O Copilot ainda vence em bibliotecas obscuras com poucos dados públicos de treinamento.',
@@ -1920,7 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fatos rápidos',
         items: [
           '**Stack recomendado:** Continue.dev (gratuito, open source) + Ollama + Qwen3-Coder 30B Q4_K_M.',
-          '**Qualidade:** 90–95% do Copilot Pro em TypeScript e Python, 88% em Rust (benchmarks de maio de 2026).',
+          '**Qualidade:** 90–95% do Copilot Pro em TypeScript e Python, 88% em Rust (benchmarks de agosto de 2026).',
           '**Equilíbrio de custos:** 8–14 meses com hardware RTX 3060+ ou M3+ existente; o Copilot vence ao comprar hardware novo.',
           '**VRAM necessária:** 18 GB para o modelo 30B, 5 GB para o fallback 7B.',
           '**Latência de autocompletar:** ~280 ms local (RTX 4070) vs ~180 ms do Copilot — imperceptível depois do primeiro dia.',
@@ -1958,10 +2001,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instale três ferramentas gratuitas, baixe um modelo e você terá autocompletar, chat e modo agente no VS Code — igual ao Copilot, só que nada sai do seu laptop. A configuração leva cerca de 30 minutos e se paga em 8–14 meses se você já tem o hardware.',
           },
         ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Verificacao de status, agosto de 2026: o Continue.dev ainda funciona e continua sendo o substituto do Copilot mais rapido de configurar, mas nao esta mais em desenvolvimento ativo. A Cursor adquiriu a equipe do Continue em 18 de junho de 2026; a versao final foi a v2.0.0, de 19 de junho de 2026, e o repositorio e somente leitura. A licenca Apache 2.0 o mantem disponivel e ele seguira funcionando com o Ollama no futuro previsivel, mas nao havera correcoes, e uma futura mudanca nas APIs do provedor ou do VS Code acabara quebrando-o. Se voce prefere um agente de VS Code mantido, o Cline e a alternativa ativa — a parte de Ollama e Qwen3-Coder desta stack nao e afetada.',
+          },
+        ],
         items: [
           '**Continue.dev** (gratuito, open source) — a extensão para VS Code/JetBrains. Inclui autocompletar, chat e modo agente. O frontend equivalente ao Copilot.',
           '**Ollama** — o runtime de modelos local. Instalação em uma linha. Gerencia downloads de modelos, quantização, descarregamento para a GPU e expõe uma API compatível com OpenAI.',
-          '**Qwen3-Coder 30B Q4_K_M** — o modelo. O modelo de código open source mais potente em maio de 2026 no HumanEval+, MBPP+ e tarefas reais de refatoração. Precisa de ~18 GB de VRAM.',
+          '**Qwen3-Coder 30B Q4_K_M** — o modelo. O modelo de código open source mais potente em agosto de 2026 no HumanEval+, MBPP+ e tarefas reais de refatoração. Precisa de ~18 GB de VRAM.',
           '**Qwen3-Coder 7B** — alternativa para placas de 8–12 GB de VRAM. Alcança 80–85% da qualidade do 30B. Recomendado para RTX 3060 12 GB e Macs M3 Pro 16 GB.',
         ],
         callouts: [
@@ -2094,7 +2143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'O Continue.dev funciona com outros modelos além do Qwen3-Coder?',
-            a: 'Sim. O Continue.dev suporta qualquer endpoint compatível com OpenAI, além de integrações de primeira classe com Ollama, vLLM e llama.cpp. Você pode trocar para DeepSeek Coder V3, Codestral, Llama 3.3 Code ou Granite Code sem mudar a extensão.',
+            a: 'Sim. O Continue.dev suporta qualquer endpoint compatível com OpenAI, além de integrações de primeira classe com Ollama, vLLM e llama.cpp. Você pode trocar para DeepSeek Coder V3, Codestral ou Granite Code sem mudar a extensão.',
           },
           {
             q: 'De quanta VRAM eu preciso para o Qwen3-Coder 30B?',
@@ -2166,8 +2215,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/replace-github-copilot-with-local-llm-overview-hero-ar.webp',
     title: 'استبدل ⁨GitHub Copilot⁩ بنموذج ⁨LLM⁩ محلي: الإعداد + مقارنة التكاليف ⁨2026⁩',
@@ -2203,12 +2253,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'نعم — Continue.dev + Ollama + Qwen3-Coder 30B يصل إلى 90–95% من جودة Copilot في العمل اليومي على TypeScript وPython وRust. يعمل على RTX 3060 12 جيجابايت أو Mac M3 Pro أو أحدث، ويكلف $0/شهر بعد الجهاز ويحتفظ بكل الكود محليًا. يبقى Copilot أفضل في المكتبات غير الشائعة ذات التوثيق العام الشحيح.',
         bullets: [
           'Continue.dev — إضافة مجانية مفتوحة المصدر لـ VS Code/JetBrains؛ أفضل واجهة مكافئة لـ Copilot في 2026',
-          'Qwen3-Coder 30B Q4_K_M — أقوى نموذج كود مفتوح المصدر في مايو 2026؛ يتطلب ~18 جيجابايت VRAM',
+          'Qwen3-Coder 30B Q4_K_M — أقوى نموذج كود مفتوح المصدر في أغسطس 2026؛ يتطلب ~18 جيجابايت VRAM',
           'Qwen3-Coder 7B — الخيار الخفيف لـ 8 جيجابايت VRAM (RTX 3060 / RTX 3070)؛ 80–85% من جودة النموذج 30B',
           'حساب التكاليف — Copilot $20/شهر × 24 شهرًا = $480؛ الجهاز المحلي يتعادل في 8–14 شهرًا',
           'ميزة الخصوصية — كودك المتملَّك لا يغادر جهازك أبدًا، مثالي للعمل بموجب اتفاقيات السرية',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2233,7 +2283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'الحزمة: Continue.dev (إضافة VS Code مجانية) + Ollama + Qwen3-Coder 30B Q4_K_M.',
-          'الجودة ضمن 5–10% من Copilot في العمل اليومي على TS/Python/Rust في مايو 2026.',
+          'الجودة ضمن 5–10% من Copilot في العمل اليومي على TS/Python/Rust في أغسطس 2026.',
           'يتعادل التكلفة في 8–14 شهرًا بجهاز RTX 3060+ أو M3+ حالي.',
           'ميزة الخصوصية: صفر كود يغادر جهازك — مهم للعمل بموجب اتفاقيات السرية.',
           'يبقى Copilot أفضل في المكتبات غير الشائعة ذات بيانات التدريب الشحيحة.',
@@ -2244,7 +2294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'حقائق سريعة',
         items: [
           '**الحزمة الموصى بها:** Continue.dev (مجانية، مفتوحة المصدر) + Ollama + Qwen3-Coder 30B Q4_K_M.',
-          '**الجودة:** 90–95% من Copilot Pro في TypeScript وPython، و88% في Rust (معايير مايو 2026).',
+          '**الجودة:** 90–95% من Copilot Pro في TypeScript وPython، و88% في Rust (معايير أغسطس 2026).',
           '**التعادل في التكلفة:** 8–14 شهرًا بجهاز RTX 3060+ أو M3+ حالي؛ Copilot يفوز عند شراء جهاز جديد.',
           '**VRAM المطلوبة:** 18 جيجابايت للنموذج 30B، و5 جيجابايت للنموذج 7B الاحتياطي.',
           '**زمن الاستجابة في الإكمال التلقائي:** ~280 مللي ثانية محلي (RTX 4070) مقابل ~180 مللي ثانية Copilot — لا يُلاحَظ بعد اليوم الأول.',
@@ -2255,14 +2305,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickComparison: {
         id: 'quick-comparison',
         title: 'مقارنة سريعة: الحزمة المحلية مقابل GitHub Copilot',
-        columns: ['المعيار', 'الحزمة المحلية (Continue.dev + Qwen3-Coder)', 'GitHub Copilot Pro'],
+        columns: ['المعيار', 'الحزمة المحلية (Continue.dev)', 'GitHub Copilot Pro'],
         rows: [
-          { 'المعيار': 'التكلفة', 'الحزمة المحلية (Continue.dev + Qwen3-Coder)': '$0/شهر (بعد الجهاز)', 'GitHub Copilot Pro': '$20/شهر' },
-          { 'المعيار': 'الخصوصية', 'الحزمة المحلية (Continue.dev + Qwen3-Coder)': 'كامل — لا يغادر الكود الجهاز', 'GitHub Copilot Pro': 'يُرسَل إلى خوادم GitHub' },
-          { 'المعيار': 'الجودة (TS/Python)', 'الحزمة المحلية (Continue.dev + Qwen3-Coder)': '90–95% من Copilot', 'GitHub Copilot Pro': 'المرجع' },
-          { 'المعيار': 'المكتبات غير الشائعة', 'الحزمة المحلية (Continue.dev + Qwen3-Coder)': 'أضعف', 'GitHub Copilot Pro': 'أقوى' },
-          { 'المعيار': 'الاستخدام دون اتصال', 'الحزمة المحلية (Continue.dev + Qwen3-Coder)': 'نعم', 'GitHub Copilot Pro': 'لا' },
-          { 'المعيار': 'وضع الوكيل', 'الحزمة المحلية (Continue.dev + Qwen3-Coder)': 'نعم (Continue.dev وكيل)', 'GitHub Copilot Pro': 'نعم (Copilot Agent)' },
+          { 'المعيار': 'التكلفة', 'الحزمة المحلية (Continue.dev)': '$0/شهر (بعد الجهاز)', 'GitHub Copilot Pro': '$20/شهر' },
+          { 'المعيار': 'الخصوصية', 'الحزمة المحلية (Continue.dev)': 'كامل — لا يغادر الكود الجهاز', 'GitHub Copilot Pro': 'يُرسَل إلى خوادم GitHub' },
+          { 'المعيار': 'الجودة (TS/Python)', 'الحزمة المحلية (Continue.dev)': '90–95% من Copilot', 'GitHub Copilot Pro': 'المرجع' },
+          { 'المعيار': 'المكتبات غير الشائعة', 'الحزمة المحلية (Continue.dev)': 'أضعف', 'GitHub Copilot Pro': 'أقوى' },
+          { 'المعيار': 'الاستخدام دون اتصال', 'الحزمة المحلية (Continue.dev)': 'نعم', 'GitHub Copilot Pro': 'لا' },
+          { 'المعيار': 'وضع الوكيل', 'الحزمة المحلية (Continue.dev)': 'نعم (Continue.dev وكيل)', 'GitHub Copilot Pro': 'نعم (Copilot Agent)' },
         ],
       },
       recommendedStack: {
@@ -2276,6 +2326,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'plain-terms',
             text: 'Continue.dev هي إضافة مجانية تحل محل واجهة Copilot في VS Code. Ollama يُشغّل نموذج الكود على جهازك محليًا. Qwen3-Coder 30B هو النموذج الذي يُوفر الاقتراحات — كل شيء يبقى على جهازك ولا يُرسَل إلى الخارج.',
+          },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'تحقّق من الحالة، أغسطس 2026: لا يزال Continue.dev يعمل ويظل أسرع بديل لـCopilot من حيث الإعداد، لكنه لم يعد قيد التطوير النشط. استحوذت Cursor على فريق Continue في 18 يونيو 2026، وكان الإصدار الأخير v2.0.0 بتاريخ 19 يونيو 2026، والمستودع للقراءة فقط. رخصة Apache 2.0 تُبقيه متاحاً للتنزيل وسيظل يعمل مع Ollama في المدى المنظور، لكن لن تصدر إصلاحات، وأي تغيير مستقبلي في واجهات المزوّدين أو VS Code سيُعطّله في النهاية. وإن أردت وكيل VS Code مُصانًا، فإن Cline هو البديل النشط — أما جزءا Ollama وQwen3-Coder من هذه الحزمة فلا يتأثران.',
           },
         ],
         items: [
@@ -2350,7 +2406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quality-test',
         title: 'اختبار الجودة على كود حقيقي',
         content: [
-          'اختبرنا الحزمة على مشروع Next.js بـ TypeScript مع ~15,000 سطر في مايو 2026. النتائج:',
+          'اختبرنا الحزمة على مشروع Next.js بـ TypeScript مع ~15,000 سطر في أغسطس 2026. النتائج:',
         ],
         columns: ['المهمة', 'Qwen3-Coder 30B', 'GitHub Copilot Pro'],
         rows: [
@@ -2409,10 +2465,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         items: [
-          'بطاقة نموذج Qwen3-Coder — [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct) (مايو 2026).',
+          'بطاقة نموذج Qwen3-Coder — [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct) (أغسطس 2026).',
           'وثائق Continue.dev — [continue.dev/docs](https://continue.dev/docs) (2026).',
           'وثائق Ollama — [ollama.ai](https://ollama.ai) (2026).',
-          'تسعير GitHub Copilot — [github.com/features/copilot](https://github.com/features/copilot) (مايو 2026): Copilot Pro $20/شهر.',
+          'تسعير GitHub Copilot — [github.com/features/copilot](https://github.com/features/copilot) (أغسطس 2026): Copilot Pro $20/شهر.',
         ],
       },
       faq: {
@@ -2421,7 +2477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل Continue.dev يعمل مع نماذج أخرى غير Qwen3-Coder؟',
-            a: 'نعم. Continue.dev يدعم أي نقطة نهاية متوافقة مع OpenAI، إضافةً إلى تكاملات مباشرة مع Ollama وvLLM وllama.cpp. يمكنك التبديل إلى DeepSeek Coder V3 أو Codestral أو Llama 3.3 Code أو Granite Code بدون تغيير الإضافة.',
+            a: 'نعم. Continue.dev يدعم أي نقطة نهاية متوافقة مع OpenAI، إضافةً إلى تكاملات مباشرة مع Ollama وvLLM وllama.cpp. يمكنك التبديل إلى DeepSeek Coder V3 أو Codestral أو Granite Code بدون تغيير الإضافة.',
           },
           {
             q: 'كم أحتاج من VRAM لـ Qwen3-Coder 30B؟',
@@ -2483,7 +2539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/replace-github-copilot-with-local-llm',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -2492,8 +2548,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Coding Assistants',
     heroImage: '/images/replace-github-copilot-with-local-llm-overview-hero-ko.webp',
     title: 'GitHub Copilot을 로컬 LLM으로 대체하기: 설정 + 비용 비교 2026',
@@ -2522,12 +2579,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer: '네 — Continue.dev + Ollama + Qwen3-Coder 30B는 TypeScript·Python·Rust 일상 작업에서 Copilot 대비 90–95% 품질을 달성합니다. RTX 3060 12GB 또는 Mac M3 Pro+ 에서 실행되며, 하드웨어 구매 후 월 $0이고 모든 코드가 로컬에 보관됩니다. 공개 문서가 부족한 희귀 라이브러리에서는 Copilot이 여전히 우세합니다.',
         bullets: [
           'Continue.dev — VS Code/JetBrains용 무료 오픈소스 확장; 2026년 최고의 Copilot 대등 프런트엔드',
-          'Qwen3-Coder 30B Q4_K_M — 2026년 5월 기준 가장 강력한 오픈소스 코딩 모델; ~18 GB VRAM 필요',
+          'Qwen3-Coder 30B Q4_K_M — 2026년 8월 기준 가장 강력한 오픈소스 코딩 모델; ~18 GB VRAM 필요',
           'Qwen3-Coder 7B — 8 GB VRAM용 경량 옵션(RTX 3060 / RTX 3070); 30B 모델 품질의 80–85%',
           '비용 계산 — Copilot $20/월 × 24개월 = $480; 로컬 하드웨어는 8–14개월에 손익분기점 도달',
           '개인정보 보호 이점 — 독점 코드가 절대 PC를 벗어나지 않아 NDA 업무 및 기밀 프로젝트에 이상적',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2552,7 +2609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '스택: Continue.dev(무료 VS Code 확장) + Ollama + Qwen3-Coder 30B Q4_K_M.',
-          '2026년 5월 기준 TS/Python/Rust 일상 작업에서 Copilot 대비 5–10% 이내 품질.',
+          '2026년 8월 기준 TS/Python/Rust 일상 작업에서 Copilot 대비 5–10% 이내 품질.',
           '기존 RTX 3060+ 또는 M3+ 하드웨어로 8–14개월에 비용 손익분기점 도달.',
           '개인정보 보호 이점: 코드가 절대 내 PC를 벗어나지 않음 — NDA 업무에 중요.',
           '공개 학습 데이터가 부족한 희귀 라이브러리에서는 Copilot이 여전히 우세.',
@@ -2563,7 +2620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '빠른 사실',
         items: [
           '**권장 스택:** Continue.dev(무료, 오픈소스) + Ollama + Qwen3-Coder 30B Q4_K_M.',
-          '**품질:** TypeScript·Python에서 Copilot Pro 대비 90–95%, Rust에서 88%(2026년 5월 벤치마크).',
+          '**품질:** TypeScript·Python에서 Copilot Pro 대비 90–95%, Rust에서 88%(2026년 8월 벤치마크).',
           '**비용 손익분기점:** 기존 RTX 3060+ 또는 M3+ 하드웨어로 8–14개월; 신규 하드웨어 구매 시 Copilot이 유리.',
           '**필요 VRAM:** 30B 모델 18 GB, 7B 폴백 5 GB.',
           '**자동완성 지연:** 로컬(RTX 4070) ~280 ms vs Copilot ~180 ms — 첫날 이후 체감 불가.',
@@ -2601,10 +2658,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '무료 도구 세 가지를 설치하고 모델을 다운로드하면 VS Code에서 자동완성·채팅·에이전트 모드를 사용할 수 있습니다 — Copilot과 동일하지만 노트북을 벗어나는 데이터가 없습니다. 설정에 약 30분이 걸리며, 하드웨어를 이미 보유하고 있다면 8–14개월에 본전을 뽑습니다.',
           },
         ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '상태 확인(2026년 8월): Continue.dev는 지금도 작동하며 가장 빠르게 구성할 수 있는 Copilot 대체재라는 점도 그대로지만, 더 이상 활발히 개발되지 않습니다. Cursor가 2026년 6월 18일 Continue 팀을 인수했고, 마지막 릴리스는 2026년 6월 19일의 v2.0.0이며 저장소는 읽기 전용입니다. Apache 2.0 라이선스 덕분에 계속 내려받을 수 있고 당분간 Ollama와도 함께 작동하지만, 수정은 제공되지 않으며 향후 공급자나 VS Code API 변경으로 언젠가는 동작하지 않게 됩니다. 유지 관리되는 VS Code 에이전트를 원한다면 Cline이 현재의 대안입니다. 이 스택의 Ollama와 Qwen3-Coder 부분은 영향을 받지 않습니다.',
+          },
+        ],
         items: [
           '**Continue.dev**(무료, 오픈소스) — VS Code/JetBrains용 확장. 자동완성·채팅·에이전트 모드 포함. Copilot 대등 프런트엔드.',
           '**Ollama** — 로컬 모델 런타임. 한 줄 설치. 모델 다운로드·양자화·GPU 오프로드를 관리하고 OpenAI 호환 API를 제공합니다.',
-          '**Qwen3-Coder 30B Q4_K_M** — 모델. HumanEval+, MBPP+, 실제 리팩터링 작업에서 2026년 5월 기준 가장 강력한 오픈소스 코딩 모델. ~18 GB VRAM 필요.',
+          '**Qwen3-Coder 30B Q4_K_M** — 모델. HumanEval+, MBPP+, 실제 리팩터링 작업에서 2026년 8월 기준 가장 강력한 오픈소스 코딩 모델. ~18 GB VRAM 필요.',
           '**Qwen3-Coder 7B** — 8–12 GB VRAM 그래픽카드용 대안. 30B 모델 품질의 80–85% 달성. RTX 3060 12 GB 및 Mac M3 Pro 16 GB에 권장.',
         ],
         callouts: [
@@ -2737,7 +2800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Continue.dev는 Qwen3-Coder 외 다른 모델도 지원하나요?',
-            a: '네. Continue.dev는 모든 OpenAI 호환 엔드포인트를 지원하며, Ollama, vLLM, llama.cpp와의 일급 통합도 제공합니다. 확장 프로그램을 변경하지 않고 DeepSeek Coder V3, Codestral, Llama 3.3 Code, Granite Code로 전환할 수 있습니다.',
+            a: '네. Continue.dev는 모든 OpenAI 호환 엔드포인트를 지원하며, Ollama, vLLM, llama.cpp와의 일급 통합도 제공합니다. 확장 프로그램을 변경하지 않고 DeepSeek Coder V3, Codestral, Granite Code로 전환할 수 있습니다.',
           },
           {
             q: 'Qwen3-Coder 30B에는 VRAM이 얼마나 필요한가요?',
@@ -2799,7 +2862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/replace-github-copilot-with-local-llm',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-07',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
