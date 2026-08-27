@@ -9,8 +9,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-en.webp',
     title: 'Chat With 1000+ PDFs Locally: Scaling RAG Beyond Toy Examples',
@@ -18,10 +19,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'A decision guide for power users with 1,000-10,000+ document personal corpora — research libraries, legal archives, internal wikis. Defaults break around 5,000 chunks; this article shows the four scaling paths (AnythingLLM tuned, LlamaIndex local, Ollama+ChromaDB custom, Ollama+Qdrant production) with measured latency, storage, and indexing benchmarks at 100, 1,000, and 10,000 documents.',
     metaDescription:
-      'Scaling local RAG to 1,000-10,000+ PDFs. Architecture decision tree, measured benchmarks, storage and latency at 100/1k/10k docs across AnythingLLM, LlamaIndex, ChromaDB, Qdrant. May 2026.',
+      'Scaling local RAG to 1,000-10,000+ PDFs. Architecture decision tree, measured benchmarks, storage and latency at 100/1k/10k docs across AnythingLLM, LlamaIndex, ChromaDB, Qdrant. August 2026.',
     twitterDescription:
-      'When toy RAG breaks: scaling personal document chat to 1,000-10,000 PDFs locally. Architecture decision tree + measured benchmarks across four open-source stacks. May 2026.',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+      'When toy RAG breaks: scaling personal document chat to 1,000-10,000 PDFs locally. Architecture decision tree + measured benchmarks across four open-source stacks. August 2026.',
+    current_models_mentioned: ['Qwen3 8B', 'Qwen3-30B-A3B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
     current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
     audience:
       'Power users, researchers, lawyers, and developers with personal document corpora of 1,000-10,000+ files who hit the scaling cliff where default RAG settings stop working.',
@@ -51,7 +52,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Reranking the top-50 candidates with a small cross-encoder fixes most "right document, wrong chunk" retrieval failures',
           'Hardware floor for 10k+ documents: 32 GB RAM, NVMe SSD, and either a discrete GPU with 8 GB+ VRAM or Apple Silicon with 32 GB+ unified memory',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -149,7 +150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/chat-with-1000-pdfs-locally-latency-scaling-en.svg',
         imageCaption: 'Query latency P50 scaling across 4 architectures: AnythingLLM (breaks at 2k docs, 150ms @ 100 docs → 1,500ms @ 10k); LlamaIndex (stays flat at 280-285ms through 5k, rises to 260ms @ 10k); ChromaDB+hybrid (300ms @ 100 → 190ms @ 10k, flattens curve); Qdrant (295ms → 180ms, lowest latency at all scales). Hybrid search + reranking flatten the curve entirely.',
         content:
-          '**Four architectures benchmarked on identical corpora at 100, 1,000, and 10,000 documents.** Test setup: research-paper PDFs averaging 12 pages each (so ~120k pages at 10k docs). Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM) on Windows 11; cross-checked on an M5 MacBook Pro (32 GB unified). LLM: Llama 3.3 8B Q4_K_M via Ollama. Embedder: nomic-embed-text-v1.5. All numbers are medians of three runs after warm-up.',
+          '**Four architectures benchmarked on identical corpora at 100, 1,000, and 10,000 documents.** Test setup: research-paper PDFs averaging 12 pages each (so ~120k pages at 10k docs). Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM) on Windows 11; cross-checked on an M5 MacBook Pro (32 GB unified). LLM: Qwen3 8B Q4_K_M via Ollama. Embedder: nomic-embed-text-v1.5. All numbers are medians of three runs after warm-up.',
         columns: [
           'Architecture',
           'Setup complexity',
@@ -207,7 +208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**The lowest-friction option that still handles a 1,000-document personal corpus when tuned correctly.** AnythingLLM Desktop ships LanceDB embedded, parses PDF/DOCX/MD natively, and talks to Ollama as its LLM provider. Default settings break around 500 documents; the tuning below pushes it to 2,000-3,000.',
         items: [
-          '**LLM:** Llama 3.3 8B Q4_K_M via Ollama (5 GB RAM during inference). On 24 GB+ systems, Qwen 3 14B Q4 noticeably improves synthesis.',
+          '**LLM:** Qwen3 8B Q4_K_M via Ollama (5 GB RAM during inference). On 32 GB+ systems, Qwen3-30B-A3B Q4 (~19 GB) noticeably improves synthesis.',
           '**Embedder:** switch from the AnythingLLM Native default to nomic-embed-text-v1.5 via Ollama. The default embedder is the single biggest reason "AnythingLLM does not scale" reports exist.',
           '**Chunking:** 1,000 tokens with 200-token overlap, set per workspace under Vector Database settings. The default 512/0 is wrong for any corpus larger than a few dozen documents.',
           '**Top-K:** raise from default 4 to 6-8. At 1,000 documents the truly best chunk often sits at rank 5-7, and the LLM can ignore weak chunks better than it can invent missing ones.',
@@ -233,7 +234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Persistence:** `index.storage_context.persist(persist_dir=...)` saves everything. Reload time on a 5,000-document index is 10-30 seconds on NVMe SSD.',
         ],
         codeBlock:
-          '# Minimal LlamaIndex local RAG with hierarchical indices (~30 lines)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="llama3.3:8b-instruct-q4_K_M", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Summary index for routing + chunk index for retrieval\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# At query time, route by question type\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "What sample size did Smith et al. use?"\n)\nprint(response)',
+          '# Minimal LlamaIndex local RAG with hierarchical indices (~30 lines)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="qwen3:8b", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Summary index for routing + chunk index for retrieval\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# At query time, route by question type\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "What sample size did Smith et al. use?"\n)\nprint(response)',
         codeLanguage: 'python',
       },
       optionChromaDB: {
@@ -289,7 +290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Qdrant 1.10+ and Weaviate both support hybrid search natively. ChromaDB requires bolting on Whoosh or Tantivy. LanceDB has experimental hybrid support but the API is changing as of May 2026 — check the current docs before committing. Native hybrid is worth choosing the vector store for.',
+            text: 'Qdrant 1.10+ and Weaviate both support hybrid search natively. ChromaDB requires bolting on Whoosh or Tantivy. LanceDB has experimental hybrid support but the API is changing as of August 2026 — check the current docs before committing. Native hybrid is worth choosing the vector store for.',
           },
         ],
       },
@@ -299,7 +300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A reranker is a small cross-encoder that scores (query, candidate) pairs jointly instead of independently. Run it over the top-25 to top-50 candidates from hybrid search to fix "right document, wrong chunk" failures.** Single biggest quality lever between 5,000 and 50,000 documents.',
         items: [
-          '**BGE-reranker-v2-m3** (~570 MB, multilingual, Apache 2.0) is the default choice in May 2026. Runs at 50-100 candidates/sec on a modern CPU; 400+ /sec on GPU. Latency cost for top-50 reranking is ~200-500 ms on CPU, ~80-150 ms on GPU.',
+          '**BGE-reranker-v2-m3** (~570 MB, multilingual, Apache 2.0) is the default choice in August 2026. Runs at 50-100 candidates/sec on a modern CPU; 400+ /sec on GPU. Latency cost for top-50 reranking is ~200-500 ms on CPU, ~80-150 ms on GPU.',
           '**Why cross-encoders win on retrieval:** dense embeddings encode query and document independently, so the model never sees them together. A cross-encoder reads `[CLS] query [SEP] candidate [SEP]` jointly and scores the pair directly. Recall@5 typically jumps 15-25 points.',
           '**Where to inject the reranker:** after hybrid search, before the LLM. Take top-50 from hybrid, rerank to top-6-8, send those to the LLM as context.',
           '**Alternative — Cohere Rerank API:** higher quality but requires a cloud call. For fully-local stacks, BGE-reranker-v2-m3 is the practical default. mxbai-rerank-base-v2 is a strong runner-up.',
@@ -315,7 +316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Universal payload fields to populate at index time:** `source_filename`, `page_number`, `document_type` (paper / contract / note / wiki), `author`, `year`, `language`, plus any domain-specific tags (e.g., `case_number`, `project_id`, `client_id`).',
           '**Pre-filter at query time:** "What did the 2024 Q3 board minutes say about pricing?" → filter `document_type=board_minutes AND year=2024 AND quarter=3` first, then vector search within ~12 documents instead of all 10,000.',
           '**Vector store support:** Qdrant payloads, Weaviate properties, ChromaDB metadata, and LanceDB schema columns all support filtering. Performance varies — Qdrant payload filtering on indexed fields is sub-millisecond; ChromaDB metadata filtering on >100k chunks can add 50-150 ms.',
-          '**Auto-extracting metadata:** for legal corpora, a small LLM pass at index time can extract case numbers, dates, and party names per document. Costs ~30 seconds per document on Llama 3.3 8B; runs once per ingest.',
+          '**Auto-extracting metadata:** for legal corpora, a small LLM pass at index time can extract case numbers, dates, and party names per document. Costs ~30 seconds per document on Qwen3 8B; runs once per ingest.',
           '**Combine with hybrid search:** payload filter narrows the universe → BM25 + dense retrieval inside the filtered set → rerank. The payload filter is the cheapest 5-10x speedup in any large RAG system.',
         ],
       },
@@ -325,7 +326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Hierarchical retrieval maintains two indices — one of per-document summaries and one of chunks — and routes queries through both. Summary search finds the right documents; chunk search finds the right passages within them.** Reduces noise on synthesis queries; mostly unnecessary for fact recall.',
         items: [
-          '**Per-document summaries:** at index time, prompt the LLM to write a 100-200 token summary of each document. Embed those summaries into a separate `summaries` collection. Cost is ~30-90 seconds per document on Llama 3.3 8B.',
+          '**Per-document summaries:** at index time, prompt the LLM to write a 100-200 token summary of each document. Embed those summaries into a separate `summaries` collection. Cost is ~30-90 seconds per document on Qwen3 8B.',
           '**Two-stage retrieval:** (1) embed query, search `summaries`, take top-5 documents; (2) within those 5 documents, retrieve top-8 chunks via hybrid search; (3) rerank if needed; (4) send to LLM.',
           '**When it helps most:** synthesis and multi-document queries ("compare how these papers handle X"). Fact recall ("what value did Smith report?") is fine on the chunk index alone — the summary detour adds latency without quality gain.',
           '**Cost trade-off:** doubles index storage (summaries are small but the index itself is duplicated infrastructure). Doubles latency for non-routed queries. The win is in noise reduction at 10,000+ documents.',
@@ -543,7 +544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description':
         'Decision guide for scaling local RAG from 1,000 to 10,000+ PDFs. Architecture comparison, measured benchmarks, and the four upgrades (hybrid search, reranking, metadata filtering, hierarchical retrieval) that flatten the scaling cliff.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-08-27',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -601,8 +602,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-de.webp',
     title: '1000+ PDFs lokal chatten: RAG-Skalierung über Demo-Beispiele',
@@ -610,10 +612,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Entscheidungsleitfaden für Poweruser mit 1.000-10.000+ persönlichen Dokumentenbeständen – Forschungsbibliotheken, Rechtsarchive, interne Wikis. Standardeinstellungen scheitern um 5.000 Chunks; dieser Artikel zeigt die vier Skalierungspfade (AnythingLLM optimiert, LlamaIndex lokal, Ollama+ChromaDB benutzerdefiniert, Ollama+Qdrant Produktion) mit gemessener Latenz, Speicher und Indexierungs-Benchmarks bei 100, 1.000 und 10.000 Dokumenten.',
     metaDescription:
-      'Lokales RAG auf 1.000–10.000+ PDFs skalieren: Architektur, Benchmarks, Speicher und Latenz über AnythingLLM, LlamaIndex, ChromaDB und Qdrant. Mai 2026.',
+      'Lokales RAG auf 1.000–10.000+ PDFs skalieren: Architektur, Benchmarks, Speicher und Latenz über AnythingLLM, LlamaIndex, ChromaDB und Qdrant. August 2026.',
     twitterDescription:
-      'Wenn Standard-RAG scheitert: Skalierung von persönlichem Dokument-Chat auf 1.000-10.000 PDFs lokal. Architektur-Entscheidungsbaum + gemessene Benchmarks über vier Open-Source-Stacks. Mai 2026.',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+      'Wenn Standard-RAG scheitert: Skalierung von persönlichem Dokument-Chat auf 1.000-10.000 PDFs lokal. Architektur-Entscheidungsbaum + gemessene Benchmarks über vier Open-Source-Stacks. August 2026.',
+    current_models_mentioned: ['Qwen3 8B', 'Qwen3-30B-A3B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
     current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
     audience:
       'Poweruser, Forscher, Juristen und Entwickler mit persönlichen Dokumentenbeständen von 1.000-10.000+ Dateien, die an der Skalierungsgrenze ankommen, wo Standardeinstellungen für RAG nicht mehr funktionieren.',
@@ -643,7 +645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Reranking the top-50 candidates with a small cross-encoder fixes most "right document, wrong chunk" retrieval failures',
           'Hardware floor for 10k+ documents: 32 GB RAM, NVMe SSD, and either a discrete GPU with 8 GB+ VRAM or Apple Silicon with 32 GB+ unified memory',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -741,7 +743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/chat-with-1000-pdfs-locally-latency-scaling-en.svg',
         imageCaption: 'Abfrage-Latenz P50-Skalierung über 4 Architekturen: AnythingLLM (bricht bei 2k Dokumenten zusammen, 150ms @ 100 Dokumente → 1.500ms @ 10k); LlamaIndex (bleibt flach bei 280-285ms bis 5k, steigt auf 260ms @ 10k); ChromaDB+Hybrid (300ms @ 100 → 190ms @ 10k, flacht Kurve ab); Qdrant (295ms → 180ms, niedrigste Latenz bei allen Skalen). Hybrid-Suche + Reranking flachen die Kurve komplett ab.',
         content:
-          '**Vier Architekturen auf identischen Beständen bei 100, 1.000 und 10.000 Dokumenten bewertet.** Test-Setup: Forschungs-PDFs mit durchschnittlich 12 Seiten (also ~120k Seiten bei 10k Dokumenten). Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB System-RAM) auf Windows 11; Cross-Check auf M5 MacBook Pro (32 GB vereinheitlichter Speicher). LLM: Llama 3.3 8B Q4_K_M über Ollama. Embedding-Modell: nomic-embed-text-v1.5. Alle Zahlen sind Mediane von drei Läufen nach Aufwärmung.',
+          '**Vier Architekturen auf identischen Beständen bei 100, 1.000 und 10.000 Dokumenten bewertet.** Test-Setup: Forschungs-PDFs mit durchschnittlich 12 Seiten (also ~120k Seiten bei 10k Dokumenten). Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB System-RAM) auf Windows 11; Cross-Check auf M5 MacBook Pro (32 GB vereinheitlichter Speicher). LLM: Qwen3 8B Q4_K_M über Ollama. Embedding-Modell: nomic-embed-text-v1.5. Alle Zahlen sind Mediane von drei Läufen nach Aufwärmung.',
         columns: [
           'Architektur',
           'Setup-Komplexität',
@@ -799,7 +801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Die geringste Reibungsoption, die bei richtiger Optimierung immer noch einen persönlichen Bestand von 1.000 Dokumenten handhabt.** AnythingLLM Desktop bringt LanceDB eingebettet, analysiert PDF/DOCX/MD nativ und spricht mit Ollama als LLM-Provider. Standardeinstellungen scheitern um 500 Dokumente; die Optimierung unten setzt sie auf 2.000-3.000.',
         items: [
-          '**LLM:** Llama 3.3 8B Q4_K_M über Ollama (5 GB RAM während Inferenz). Auf 24-GB+-Systemen verbessert Qwen 3 14B Q4 die Synthese deutlich.',
+          '**LLM:** Qwen3 8B Q4_K_M über Ollama (5 GB RAM während Inferenz). Auf 32-GB+-Systemen verbessert Qwen3-30B-A3B Q4 (~19 GB) die Synthese deutlich.',
           '**Embedding-Modell:** Wechsel vom Standard von AnythingLLM zu nomic-embed-text-v1.5 über Ollama. Das Standard-Embedding-Modell ist der einzige größte Grund für „AnythingLLM skaliert nicht"-Berichte.',
           '**Chunking:** 1.000 Token mit 200-Token-Überlappung, pro Workspace unter Vector Database-Einstellungen eingestellt. Das Standard 512/0 ist falsch für jeden Bestand größer als ein paar Dutzend Dokumente.',
           '**Top-K:** von Standard 4 auf 6-8 erhöhen. Bei 1.000 Dokumenten liegt der wirklich beste Chunk oft bei Rang 5-7, und der LLM kann schwache Chunks besser ignorieren als fehlende erfinden.',
@@ -825,7 +827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Persistenz:** `index.storage_context.persist(persist_dir=...)` speichert alles. Ladezeit auf einem 5.000-Dokument-Index liegt auf NVMe SSD bei 10-30 Sekunden.',
         ],
         codeBlock:
-          '# Minimales LlamaIndex lokales RAG mit hierarchischen Indizes (~30 Zeilen)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="llama3.3:8b-instruct-q4_K_M", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Summary-Index zum Routing + Chunk-Index zum Abruf\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# Bei Abfrage-Zeit, nach Abfragetyp routen\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "What sample size did Smith et al. use?"\n)\nprint(response)',
+          '# Minimales LlamaIndex lokales RAG mit hierarchischen Indizes (~30 Zeilen)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="qwen3:8b", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Summary-Index zum Routing + Chunk-Index zum Abruf\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# Bei Abfrage-Zeit, nach Abfragetyp routen\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "What sample size did Smith et al. use?"\n)\nprint(response)',
         codeLanguage: 'python',
       },
       optionChromaDB: {
@@ -881,7 +883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Qdrant 1.10+ und Weaviate unterstützen beide Hybrid-Suche nativ. ChromaDB erfordert Bolting-On von Whoosh oder Tantivy. LanceDB hat experimentale Hybrid-Unterstützung, aber die API ändert sich ab Mai 2026 – überprüfen Sie die aktuelle Dokumentation vorher. Natives Hybrid ist es wert, den Vektor-Store dafür zu wählen.',
+            text: 'Qdrant 1.10+ und Weaviate unterstützen beide Hybrid-Suche nativ. ChromaDB erfordert Bolting-On von Whoosh oder Tantivy. LanceDB hat experimentale Hybrid-Unterstützung, aber die API ändert sich ab August 2026 – überprüfen Sie die aktuelle Dokumentation vorher. Natives Hybrid ist es wert, den Vektor-Store dafür zu wählen.',
           },
         ],
       },
@@ -891,7 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Ein Reranker ist ein kleiner Cross-Encoder, der (Abfrage, Kandidaten)-Paare gemeinsam statt unabhängig bewertet. Laufen Sie es über die Top-25 bis Top-50-Kandidaten von Hybrid-Suche, um „richtige Dokument, falscher Chunk"-Fehler zu beheben.** Einzelner größter Qualitäts-Hebel zwischen 5.000 und 50.000 Dokumenten.',
         items: [
-          '**BGE-reranker-v2-m3** (~570 MB, mehrsprachig, Apache 2.0) ist die Standard-Wahl im Mai 2026. Läuft mit 50-100 Kandidaten/sec auf einer modernen CPU; 400+ /sec auf GPU. Latenzkost für Top-50-Reranking ist ~200-500 ms auf CPU, ~80-150 ms auf GPU.',
+          '**BGE-reranker-v2-m3** (~570 MB, mehrsprachig, Apache 2.0) ist die Standard-Wahl im August 2026. Läuft mit 50-100 Kandidaten/sec auf einer modernen CPU; 400+ /sec auf GPU. Latenzkost für Top-50-Reranking ist ~200-500 ms auf CPU, ~80-150 ms auf GPU.',
           '**Warum Cross-Encoder beim Abruf gewinnen:** Dichte Embeddings kodieren Abfrage und Dokument unabhängig, daher sieht das Modell sie niemals zusammen. Ein Cross-Encoder liest `[CLS] abfrage [SEP] kandidat [SEP]` gemeinsam und bewertet das Paar direkt. Recall@5 springt typisch um 15-25 Punkte.',
           '**Wo man den Reranker injiziert:** nach Hybrid-Suche, vorher der LLM. Top-50 von Hybrid nehmen, auf Top-6-8 reranken, die zum LLM als Kontext schicken.',
           '**Alternative – Cohere Rerank API:** höhere Qualität, aber erfordert einen Cloud-Aufruf. Für vollständig-lokale Stacks ist BGE-reranker-v2-m3 der praktische Standard. mxbai-rerank-base-v2 ist ein starker Runner-up.',
@@ -907,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Universelle Payload-Felder zum Füllen bei Index-Zeit:** `source_filename`, `page_number`, `document_type` (Papier / Vertrag / Notiz / Wiki), `author`, `year`, `language`, plus domain-spezifische Tags (z.B. `case_number`, `project_id`, `client_id`).',
           '**Vor-Filter bei Abfrage-Zeit:** „Was sagten die Q3-2024-Vorstandsprotokolle über Preise?" → filter `document_type=board_minutes AND year=2024 AND quarter=3` zuerst, dann Vektor-Suche innerhalb ~12 Dokumente statt aller 10.000.',
           '**Vektor-Store-Unterstützung:** Qdrant-Payloads, Weaviate-Properties, ChromaDB-Metadaten und LanceDB-Schema-Spalten unterstützen alle Filterung. Leistung variiert – Qdrant-Payload-Filterung auf indizierten Feldern ist Sub-Millisekunde; ChromaDB-Metadaten-Filterung auf >100k Chunks kann 50-150 ms hinzufügen.',
-          '**Auto-Extraktion von Metadaten:** für Rechts-Bestände, ein kleiner LLM-Pass bei Index-Zeit kann Fallenummern, Daten und Partei-Namen pro Dokument extrahieren. Kostet ~30 Sekunden pro Dokument auf Llama 3.3 8B; läuft einmal pro Ingest.',
+          '**Auto-Extraktion von Metadaten:** für Rechts-Bestände, ein kleiner LLM-Pass bei Index-Zeit kann Fallenummern, Daten und Partei-Namen pro Dokument extrahieren. Kostet ~30 Sekunden pro Dokument auf Qwen3 8B; läuft einmal pro Ingest.',
           '**Mit Hybrid-Suche kombinieren:** Payload-Filter verengt das Universum → BM25 + dichte Abruf innerhalb des gefilterten Sets → Rerank. Der Payload-Filter ist die billigste 5-10x-Speedup in jedem großen RAG-System.',
         ],
       },
@@ -917,7 +919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Hierarchischer Abruf behält zwei Indizes bei – einen von Pro-Dokument-Zusammenfassungen und einen von Chunks – und leitet Abfragen durch beider. Summary-Suche findet die richtigen Dokumente; Chunk-Suche findet die richtigen Passagen in ihnen.** Reduziert Rauschen bei Synthese; weitgehend unnötig für Faktenabruf.',
         items: [
-          '**Pro-Dokument-Zusammenfassungen:** bei Index-Zeit, fordert man den LLM auf, eine 100-200 Token-Zusammenfassung von jedem Dokument zu schreiben. Diese Zusammenfassungen in eine separate `summaries`-Sammlung einbetten. Kosten ~30-90 Sekunden pro Dokument auf Llama 3.3 8B.',
+          '**Pro-Dokument-Zusammenfassungen:** bei Index-Zeit, fordert man den LLM auf, eine 100-200 Token-Zusammenfassung von jedem Dokument zu schreiben. Diese Zusammenfassungen in eine separate `summaries`-Sammlung einbetten. Kosten ~30-90 Sekunden pro Dokument auf Qwen3 8B.',
           '**Zwei-Stufen-Abruf:** (1) Abfrage einbetten, `summaries` durchsuchen, Top-5-Dokumente nehmen; (2) innerhalb dieser 5 Dokumente, Top-8-Chunks über Hybrid-Suche abrufen; (3) bei Bedarf reranken; (4) zum LLM schicken.',
           '**Wann es am meisten hilft:** Synthese und Multi-Dokument-Abfragen („vergleichen Sie, wie diese Papiere X handhaben"). Faktenabruf („welchen Wert berichtete Smith?") ist fein im Chunk-Index alleine – der Summary-Detour fügt Latenz ohne Qualitäts-Gewinn hinzu.',
           '**Kosten-Tradeoff:** verdoppelt Index-Speicher (Zusammenfassungen sind klein, aber der Index selbst ist duplizierte Infrastruktur). Verdoppelt Latenz für nicht-geroutete Abfragen. Der Gewinn ist Rausch-Reduktion bei 10.000+ Dokumenten.',
@@ -1135,7 +1137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description':
         'Entscheidungsleitfaden zur Skalierung von lokalem RAG von 1.000 bis 10.000+ PDFs. Architektur-Vergleich, gemessene Benchmarks und die vier Upgrades (Hybrid-Suche, Reranking, Metadaten-Filterung, hierarchischer Abruf), die die Skalierungs-Klippe ebnen.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-08-27',
       'url': 'https://www.promptquorum.com/de/power-local-llm/chat-with-1000-pdfs-locally',
       'author': {
         '@type': 'Person',
@@ -1194,8 +1196,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-fr.webp',
     title: 'Discuter avec 1000+ fichiers PDF en local : Évolution du RAG au-delà des démos',
@@ -1203,10 +1206,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Guide décisionnel pour utilisateurs avancés ayant 1.000-10.000+ documents personnels — bibliothèques de recherche, archives juridiques, wikis internes. Les paramètres par défaut échouent vers 5.000 chunks ; cet article présente quatre chemins d\'évolution (AnythingLLM ajusté, LlamaIndex local, Ollama+ChromaDB personnalisé, Ollama+Qdrant production) avec latence mesurée, stockage et benchmarks d\'indexation à 100, 1.000 et 10.000 documents.',
     metaDescription:
-      'Évolution du RAG local vers 1.000-10.000+ PDF. Arborescence décisionnelle, benchmarks mesurés, stockage et latence à 100/1k/10k documents via AnythingLLM, LlamaIndex, ChromaDB, Qdrant. Mai 2026.',
+      'Évolution du RAG local vers 1.000-10.000+ PDF. Arborescence décisionnelle, benchmarks mesurés, stockage et latence à 100/1k/10k documents via AnythingLLM, LlamaIndex, ChromaDB, Qdrant. Août 2026.',
     twitterDescription:
-      'Quand le RAG standard échoue : évolution du chat documentaire personnel vers 1.000-10.000 PDF en local. Arborescence décisionnelle + benchmarks mesurés sur quatre piles open-source. Mai 2026.',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+      'Quand le RAG standard échoue : évolution du chat documentaire personnel vers 1.000-10.000 PDF en local. Arborescence décisionnelle + benchmarks mesurés sur quatre piles open-source. Août 2026.',
+    current_models_mentioned: ['Qwen3 8B', 'Qwen3-30B-A3B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
     current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
     audience:
       'Utilisateurs avancés, chercheurs, juristes et développeurs disposant de corpus personnels de 1.000-10.000+ fichiers ayant atteint le seuil où les paramètres RAG standard cessent de fonctionner.',
@@ -1236,7 +1239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Reranking the top-50 candidates with a small cross-encoder fixes most "right document, wrong chunk" retrieval failures',
           'Hardware floor for 10k+ documents: 32 GB RAM, NVMe SSD, and either a discrete GPU with 8 GB+ VRAM or Apple Silicon with 32 GB+ unified memory',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1334,7 +1337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/chat-with-1000-pdfs-locally-latency-scaling-en.svg',
         imageCaption: 'Latence requête P50 sur 4 architectures : AnythingLLM (casse à 2k docs, 150ms @ 100 docs → 1.500ms @ 10k); LlamaIndex (reste plat 280-285ms jusqu\'à 5k, monte à 260ms @ 10k); ChromaDB+hybride (300ms @ 100 → 190ms @ 10k, aplatit courbe); Qdrant (295ms → 180ms, latence plus basse tous échelles). Recherche hybride + reranking aplatissent la courbe totalement.',
         content:
-          '**Quatre architectures testées sur corpus identiques à 100, 1.000 et 10.000 documents.** Setup test : PDF recherche moyens 12 pages chacun (~120k pages à 10k documents). Matériel : NVIDIA RTX 4070 (12 GB VRAM, 32 GB RAM système) Windows 11 ; cross-check M5 MacBook Pro (32 GB unified). LLM : Llama 3.3 8B Q4_K_M via Ollama. Embedder : nomic-embed-text-v1.5. Tous chiffres médiane trois runs après warm-up.',
+          '**Quatre architectures testées sur corpus identiques à 100, 1.000 et 10.000 documents.** Setup test : PDF recherche moyens 12 pages chacun (~120k pages à 10k documents). Matériel : NVIDIA RTX 4070 (12 GB VRAM, 32 GB RAM système) Windows 11 ; cross-check M5 MacBook Pro (32 GB unified). LLM : Qwen3 8B Q4_K_M via Ollama. Embedder : nomic-embed-text-v1.5. Tous chiffres médiane trois runs après warm-up.',
         columns: [
           'Architecture',
           'Complexité setup',
@@ -1392,7 +1395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Option plus simple qui gère corpus personnel 1.000 documents quand correctement ajustée.** AnythingLLM Desktop bringue LanceDB intégré, parse PDF/DOCX/MD nativement, parle à Ollama comme fournisseur LLM. Paramètres défaut échouent vers 500 documents ; ajustement ci-dessous pousse à 2.000-3.000.',
         items: [
-          '**LLM** : Llama 3.3 8B Q4_K_M via Ollama (5 GB RAM lors inférence). Systèmes 24 GB+, Qwen 3 14B Q4 améliore notablement synthèse.',
+          '**LLM** : Qwen3 8B Q4_K_M via Ollama (5 GB RAM lors inférence). Systèmes 32 GB+, Qwen3-30B-A3B Q4 (~19 GB) améliore notablement synthèse.',
           '**Embedder** : passez défaut AnythingLLM Native à nomic-embed-text-v1.5 via Ollama. Embedder défaut est raison principale pour rapports « AnythingLLM ne scale pas ».',
           '**Chunking** : 1.000 tokens avec 200-token overlap, réglez par workspace sous Vector Database settings. Défaut 512/0 faux pour n\'importe quel corpus plus gros que quelques douzaines documents.',
           '**Top-K** : relevez défaut 4 à 6-8. À 1.000 documents, vraiment meilleur chunk souvent rang 5-7, et LLM ignore mieux chunks faibles que peut inventer manquants.',
@@ -1418,7 +1421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Persistance** : `index.storage_context.persist(persist_dir=...)` sauvegarde tout. Temps reload index 5.000-documents 10-30 secondes sur SSD NVMe.',
         ],
         codeBlock:
-          '# Minimal LlamaIndex RAG local avec indices hiérarchiques (~30 lignes)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="llama3.3:8b-instruct-q4_K_M", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Index résumé pour routage + index chunk pour récupération\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# Temps requête, routez par type question\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "Quelle taille d\'échantillon Smith et al. ont-ils utilisée?"\n)\nprint(response)',
+          '# Minimal LlamaIndex RAG local avec indices hiérarchiques (~30 lignes)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="qwen3:8b", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Index résumé pour routage + index chunk pour récupération\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# Temps requête, routez par type question\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "Quelle taille d\'échantillon Smith et al. ont-ils utilisée?"\n)\nprint(response)',
         codeLanguage: 'python',
       },
       optionChromaDB: {
@@ -1474,7 +1477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Qdrant 1.10+ et Weaviate supportent hybride natif. ChromaDB demande Whoosh ou Tantivy ajoutés. LanceDB expérimental hybrid mais API change mai 2026 – vérifiez docs actuelles avant engagement. Hybrid natif vaut choisir vector store pour .',
+            text: 'Qdrant 1.10+ et Weaviate supportent hybride natif. ChromaDB demande Whoosh ou Tantivy ajoutés. LanceDB expérimental hybrid mais API change août 2026 – vérifiez docs actuelles avant engagement. Hybrid natif vaut choisir vector store pour .',
           },
         ],
       },
@@ -1484,7 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Reranker petit cross-encoder score (requête, candidats) paires ensemble au lieu indépendant. Exécutez top-25 à top-50 candidats recherche hybride corriger erreurs « bon document, mauvais chunk ».** Levier qualité impact-unique entre 5.000 et 50.000 documents.',
         items: [
-          '**BGE-reranker-v2-m3** (~570 MB, multilingue, Apache 2.0) choix défaut mai 2026. Fonctionne 50-100 candidats/sec CPU moderne ; 400+ /sec GPU. Coût latence top-50 reranking ~200-500 ms CPU, ~80-150 ms GPU.',
+          '**BGE-reranker-v2-m3** (~570 MB, multilingue, Apache 2.0) choix défaut août 2026. Fonctionne 50-100 candidats/sec CPU moderne ; 400+ /sec GPU. Coût latence top-50 reranking ~200-500 ms CPU, ~80-150 ms GPU.',
           '**Pourquoi cross-encoders gagnent récupération** : embeddings denses encodent requête document indépendant, donc modèle jamais les voit ensemble. Cross-encoder lit `[CLS] requête [SEP] candidat [SEP]` ensemble score pair directement. Recall@5 typiquement saute 15-25 points.',
           '**Où injecter reranker** : après recherche hybride, avant LLM. Prenez top-50 hybride, rerangez top-6-8, envoyez ceux-là au LLM comme contexte.',
           '**Alternative – Cohere Rerank API** : qualité plus haute, demande appel cloud. Stacks entièrement-locaux, BGE-reranker-v2-m3 défaut pratique. mxbai-rerank-base-v2 runner-up fort.',
@@ -1500,7 +1503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Champs payload universels remplir index-time** : `source_filename`, `page_number`, `document_type` (papier / contrat / note / wiki), `author`, `year`, `language`, plus tags domain-spécifiques (p.ex. `case_number`, `project_id`, `client_id`).',
           '**Pré-filtre temps requête** : « Qu\'a dit Q3 2024 minutes board sur tarifs? » → filtre `document_type=board_minutes AND year=2024 AND quarter=3` d\'abord, puis vecteur cherche dans ~12 documents au lieu tous 10.000.',
           '**Support vector store** : payloads Qdrant, properties Weaviate, métadonnées ChromaDB, colonnes schéma LanceDB supportent tous filtrage. Performance varie – filtrage payload Qdrant champs indexés sub-milliseconde ; filtrage métadonnées ChromaDB >100k chunks peut ajouter 50-150 ms.',
-          '**Auto-extraction métadonnées** : corpus juridique, petit LLM pass index-time peut extraire numéros cas, dates, noms partis chaque document. Coûts ~30 secondes document sur Llama 3.3 8B ; fonctionne une fois par ingest.',
+          '**Auto-extraction métadonnées** : corpus juridique, petit LLM pass index-time peut extraire numéros cas, dates, noms partis chaque document. Coûts ~30 secondes document sur Qwen3 8B ; fonctionne une fois par ingest.',
           '**Combiné recherche hybride** : filtre payload rétrécit univers → BM25 + récupération dense ensemble filtré → rerank. Filtre payload speedup 5-10x meilleur marché n\'importe quel gros système RAG.',
         ],
       },
@@ -1510,7 +1513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Récupération hiérarchique bringue deux indices – un de résumés par-document et un de chunks – et achemine requêtes les deux. Recherche résumé trouve bons documents ; recherche chunk trouve bonnes passages dedans.** Réduit bruit synthèse ; largement inutile pour fact recall.',
         items: [
-          '**Résumés par-document** : index-time, promptez LLM écrire 100-200 token résumé chaque document. Embedez résumés collection `summaries` séparée. Coût ~30-90 secondes document Llama 3.3 8B.',
+          '**Résumés par-document** : index-time, promptez LLM écrire 100-200 token résumé chaque document. Embedez résumés collection `summaries` séparée. Coût ~30-90 secondes document Qwen3 8B.',
           '**Récupération deux-stages** : (1) embed requête, cherchez `summaries`, prenez top-5 documents ; (2) dans ceux 5, récupérez top-8 chunks via recherche hybride ; (3) rerangez si demandé ; (4) envoyez LLM.',
           '**Quand ça aide plus** : synthèse et requêtes multi-documents (« comparez comment ces papiers gèrent X »). Fact recall (« quel valeur Smith a rapporté? ») correct chunk index seul – détour résumé ajoute latence gain qualité zéro.',
           '**Tradeoff coût** : double stockage index (résumés petits mais index lui-même infrastructure dupliquée). Double latence requêtes non-routées. Gain réduction bruit 10.000+ documents.',
@@ -1728,7 +1731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description':
         'Guide décisionnel évolution RAG local 1.000 à 10.000+ PDF. Comparaison architecture, benchmarks mesurés, quatre upgrades (recherche hybride, reranking, filtrage métadonnées, récupération hiérarchique) qui aplatissent falaise évolution.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-08-27',
       'url': 'https://www.promptquorum.com/fr/power-local-llm/chat-with-1000-pdfs-locally',
       'author': {
         '@type': 'Person',
@@ -1787,8 +1790,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-ja.webp',
     title: '1000+ PDFをローカルでチャット: プロダクションレベルのRAG構築',
@@ -1796,10 +1800,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '1,000~10,000+ の個人ドキュメント（研究ライブラリ、法律文書アーカイブ、内部wiki）を扱うパワーユーザー向けの実装ガイドです。デフォルト設定は5,000チャンクで限界に達します。このガイドでは4つのスケーリング方法（AnythingLLM調整、LlamaIndexローカル、Ollama+ChromaDBカスタム、Ollama+Qdrantプロダクション）を、100、1,000、10,000ドキュメントでの実測レイテンシ、ストレージ、インデックス作成ベンチマークとともに紹介します。',
     metaDescription:
-      'ローカルRAGを1,000~10,000+ PDFまでスケーリング。アーキテクチャ判定フロー、実測ベンチマーク、AnythingLLM/LlamaIndex/ChromaDB/Qdrantでの100/1k/10k ドキュメント時のストレージ・レイテンシ。2026年5月。',
+      'ローカルRAGを1,000~10,000+ PDFまでスケーリング。アーキテクチャ判定フロー、実測ベンチマーク、AnythingLLM/LlamaIndex/ChromaDB/Qdrantでの100/1k/10k ドキュメント時のストレージ・レイテンシ。2026年8月。',
     twitterDescription:
-      'デフォルトRAGの限界：1,000~10,000 PDFでのローカルドキュメントチャット実装。アーキテクチャ判定フロー + 4つのオープンソーススタックでの実測ベンチマーク。2026年5月。',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+      'デフォルトRAGの限界：1,000~10,000 PDFでのローカルドキュメントチャット実装。アーキテクチャ判定フロー + 4つのオープンソーススタックでの実測ベンチマーク。2026年8月。',
+    current_models_mentioned: ['Qwen3 8B', 'Qwen3-30B-A3B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
     current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
     audience:
       'パワーユーザー、研究者、法務専門家、そして1,000~10,000+ ファイルの個人ドキュメント保有者で、デフォルトRAG設定が機能しなくなるスケーリングの壁に直面している開発者',
@@ -1829,7 +1833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Reranking the top-50 candidates with a small cross-encoder fixes most "right document, wrong chunk" retrieval failures',
           'Hardware floor for 10k+ documents: 32 GB RAM, NVMe SSD, and either a discrete GPU with 8 GB+ VRAM or Apple Silicon with 32 GB+ unified memory',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1927,7 +1931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/chat-with-1000-pdfs-locally-latency-scaling-en.svg',
         imageCaption: 'クエリレイテンシP50 4アーキテクチャスケーリング：AnythingLLM（2k ドキュメント時に障害、150ms @ 100 ドキュメント → 1,500ms @ 10k）、LlamaIndex（5k まで280-285ms 一定、10k で260ms に上昇）、ChromaDB+ハイブリッド（300ms @ 100 → 190ms @ 10k、カーブを平坦化）、Qdrant（295ms → 180ms、すべてのスケールで最低レイテンシ）。ハイブリッド検索+リランキングでカーブ完全平坦化。',
         content:
-          '**4つのアーキテクチャを100、1,000、10,000ドキュメント時で同じコーパス上でテスト。** テスト : 平均12ページの研究PDF（10kドキュメント時で~120kページ）。ハードウェア: Windows 11 上の NVIDIA RTX 4070（12 GB VRAM、32 GB RAM）、M5 MacBook Pro（32 GB 統合）でクロスチェック。LLM: Ollama 経由 Llama 3.3 8B Q4_K_M。Embedder: nomic-embed-text-v1.5。すべて値はウォームアップ後3回実行の中央値。',
+          '**4つのアーキテクチャを100、1,000、10,000ドキュメント時で同じコーパス上でテスト。** テスト : 平均12ページの研究PDF（10kドキュメント時で~120kページ）。ハードウェア: Windows 11 上の NVIDIA RTX 4070（12 GB VRAM、32 GB RAM）、M5 MacBook Pro（32 GB 統合）でクロスチェック。LLM: Ollama 経由 Qwen3 8B Q4_K_M。Embedder: nomic-embed-text-v1.5。すべて値はウォームアップ後3回実行の中央値。',
         columns: [
           'アーキテクチャ',
           'セットアップ複雑度',
@@ -1985,7 +1989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**正しく調整すれば1,000ドキュメントの個人コーパスを扱える最も低摩擦のオプション。** AnythingLLM Desktop は LanceDB 内蔵、PDF/DOCX/MD をネイティブ解析、LLMプロバイダとして Ollama と通信。デフォルト設定は500ドキュメント超で破綻。下記調整で2,000~3,000まで可能。',
         items: [
-          '**LLM** : Ollama 経由 Llama 3.3 8B Q4_K_M（推論時5 GB RAM）。24 GB+ システムでは Qwen 3 14B Q4 が大幅に合成を改善。',
+          '**LLM** : Ollama 経由 Qwen3 8B Q4_K_M（推論時5 GB RAM）。32 GB+ システムでは Qwen3-30B-A3B Q4 (~19 GB) が大幅に合成を改善。',
           '**Embedder** : AnythingLLM Native デフォルトから nomic-embed-text-v1.5（Ollama 経由）に切り替え。デフォルト embedder は「AnythingLLM はスケールしない」報告の最大理由。',
           '**チャンキング** : ワークスペースごとに Vector Database 設定で1,000トークン、200トークン重複。デフォルト512/0は数十ドキュメント超すべてで誤り。',
           '**Top-K** : デフォルト4から6~8に引き上げ。1,000ドキュメント時、本当に最良のチャンクはランク5~7にあり、LLM は弱いチャンク無視が欠落創作より得意。',
@@ -2011,7 +2015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**永続化** : `index.storage_context.persist(persist_dir=...)` がすべて保存。5,000ドキュメントインデックスの再読み込みは NVMe SSD 上で10~30秒。',
         ],
         codeBlock:
-          '# 階層インデックス付きミニマル LlamaIndex ローカルRAG（~30行）\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="llama3.3:8b-instruct-q4_K_M", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# ルーティング用サマリインデックス + 検索用チャンクインデックス\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# クエリ時、問い合わせタイプでルート\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "Smith et al. はどのサンプルサイズを使いましたか?"\n)\nprint(response)',
+          '# 階層インデックス付きミニマル LlamaIndex ローカルRAG（~30行）\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="qwen3:8b", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# ルーティング用サマリインデックス + 検索用チャンクインデックス\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# クエリ時、問い合わせタイプでルート\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "Smith et al. はどのサンプルサイズを使いましたか?"\n)\nprint(response)',
         codeLanguage: 'python',
       },
       optionChromaDB: {
@@ -2067,7 +2071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Qdrant 1.10+ と Weaviate 両方ハイブリッドネイティブサポート。ChromaDB は Whoosh/Tantivy 装着必要。LanceDB は実験的ハイブリッド対応だが API は 2026年5月時点で変更中 – commitment前に現在ドキュメント確認。ネイティブハイブリッド、ベクトルストア選択の価値ある。',
+            text: 'Qdrant 1.10+ と Weaviate 両方ハイブリッドネイティブサポート。ChromaDB は Whoosh/Tantivy 装着必要。LanceDB は実験的ハイブリッド対応だが API は 2026年8月時点で変更中 – commitment前に現在ドキュメント確認。ネイティブハイブリッド、ベクトルストア選択の価値ある。',
           },
         ],
       },
@@ -2077,7 +2081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**リランカーは小規模 cross-encoder で (query, candidate) ペア合同ではなく独立スコア。ハイブリッド検索の Top-25~50 候補上実行して「正しいドキュメント、誤ったチャンク」エラー修正。** 5,000~50,000 ドキュメント間で単一最大品質レバー。',
         items: [
-          '**BGE-reranker-v2-m3** (~570 MB、多言語、Apache 2.0) 2026年5月デフォルト選択。CPU 最新 50~100候補/秒; GPU 400+ /秒 実行。Top-50 リランキング遅延コストは CPU~200~500ms、GPU ~80~150ms。',
+          '**BGE-reranker-v2-m3** (~570 MB、多言語、Apache 2.0) 2026年8月デフォルト選択。CPU 最新 50~100候補/秒; GPU 400+ /秒 実行。Top-50 リランキング遅延コストは CPU~200~500ms、GPU ~80~150ms。',
           '**Cross-encoder が検索で勝つ理由** : dense embeddings は query とドキュメント独立エンコード、モデルは決して共に見ません。Cross-encoder は `[CLS] query [SEP] candidate [SEP]` 合同読み、ペア直接スコア。Recall@5 典型的に 15~25 ポイント上昇。',
           '**リランカー注入場所** : ハイブリッド検索後、LLM 前。ハイブリッド top-50 取得、Top-6~8 リランク、それら を LLM コンテキストとして送信。',
           '**別案 – Cohere Rerank API** : より高品質、cloud 呼び出し要。完全ローカルスタック、BGE-reranker-v2-m3 実践的デフォルト。mxbai-rerank-base-v2 強い代替。',
@@ -2093,7 +2097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**インデックス時設定すべき universal payload フィールド** : `source_filename`、`page_number`、`document_type`（論文/契約/ノート/wiki）、`author`、`year`、`language`、プラス domain 固有タグ（例：`case_number`、`project_id`、`client_id`）。',
           '**クエリ時事前フィルタ** : 「2024年Q3ボード議事録は価格について何と言った?」→ `document_type=board_minutes AND year=2024 AND quarter=3` まず filter、次にベクトル検索 all 10,000 ではなく~12ドキュメント内。',
           '**Vector store サポート** : Qdrant ペイロード、Weaviate properties、ChromaDB メタデータ、LanceDB スキーマカラム すべてフィルタリングサポート。パフォーマンス変動 – Qdrant ペイロードインデックスフィールド sub-ms; ChromaDB メタデータ>100k チャンク時 50~150ms 追加可能。',
-          '**メタデータ自動抽出** : 法律コーパス、小規模 LLM パス index-time が各ドキュメント case 番号、日付、関係者名抽出可能。Llama 3.3 8B 上~30秒/ドキュメント; ingest ごと1回。',
+          '**メタデータ自動抽出** : 法律コーパス、小規模 LLM パス index-time が各ドキュメント case 番号、日付、関係者名抽出可能。Qwen3 8B 上~30秒/ドキュメント; ingest ごと1回。',
           '**ハイブリッド検索と結合** : payload フィルタ narrow universe → BM25 + dense 検索 filtered set 内 → rerank。Payload フィルタは任意大型 RAG システムで最廉価 5~10倍 speedup。',
         ],
       },
@@ -2103,7 +2107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**階層検索は2インデックス保持 – ドキュメント単位サマリ 1つ、チャンク 1つ – クエリを両方へルート。サマリ検索が正しいドキュメント見つけ; チャンク検索が正しいパッセージ見つけ。** 合成時のノイズ削減; ほぼ fact recall 不要。',
         items: [
-          '**ドキュメント単位サマリ** : インデックス時、LLM に各ドキュメント 100~200 トークン サマリ書かせ。サマリを別 `summaries` コレクションに embed。Llama 3.3 8B で~30~90 秒/ドキュメント。',
+          '**ドキュメント単位サマリ** : インデックス時、LLM に各ドキュメント 100~200 トークン サマリ書かせ。サマリを別 `summaries` コレクションに embed。Qwen3 8B で~30~90 秒/ドキュメント。',
           '**二段階検索** : (1) query embed、`summaries` 検索、top-5 ドキュメント取得; (2) 5ドキュメント内、ハイブリッド検索 top-8 チャンク; (3) 必要時リランク; (4) LLM 送信。',
           '**最も利益が大きい場合** : 合成と複数ドキュメント問い（「これら論文はどのように X を扱ってるか比較」）。Fact recall（「Smith はどの値報告?」）は chunk インデックス単独で OK – サマリ迂回は遅延追加、品質利得ゼロ。',
           '**コスト トレードオフ** : インデックスストレージ倍化（サマリ小さいが index 自体が複製インフラ）。非ルートクエリ遅延倍化。利得は10,000+ ドキュメントでノイズ削減。',
@@ -2321,7 +2325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description':
         'ローカルRAGを1,000~10,000+ PDFまでスケーリング。アーキテクチャ比較、実測ベンチマーク、スケーリング cliff を平坦化する4つアップグレード（ハイブリッド検索、リランキング、メタデータフィルタリング、階層検索）。',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-08-27',
       'url': 'https://www.promptquorum.com/ja/power-local-llm/chat-with-1000-pdfs-locally',
       'author': {
         '@type': 'Organization',
@@ -2379,8 +2383,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-zh.webp',
     title: '本地处理1000+ PDF: 构建生产级RAG系统',
@@ -2388,10 +2393,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '针对拥有1000-10000+个文档个人语料库的高级用户的决策指南——研究文献库、法律档案、内部维基。默认RAG在5000个chunks时会失效；本文展示四种扩展路径（AnythingLLM调优、LlamaIndex本地、Ollama+ChromaDB自定义、Ollama+Qdrant生产级），包含100、1000、10000个文档的实测延迟、存储和索引基准。',
     metaDescription:
-      '本地RAG扩展到1000-10000+个PDF。架构决策树、实测基准、存储和延迟对比，涵盖AnythingLLM、LlamaIndex、ChromaDB、Qdrant。2026年5月。',
+      '本地RAG扩展到1000-10000+个PDF。架构决策树、实测基准、存储和延迟对比，涵盖AnythingLLM、LlamaIndex、ChromaDB、Qdrant。2026年8月。',
     twitterDescription:
-      '本地RAG突破瓶颈：如何将个人文档聊天系统扩展到1000-10000个PDF。包含架构决策树和四个开源堆栈的实测基准。2026年5月。',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+      '本地RAG突破瓶颈：如何将个人文档聊天系统扩展到1000-10000个PDF。包含架构决策树和四个开源堆栈的实测基准。2026年8月。',
+    current_models_mentioned: ['Qwen3 8B', 'Qwen3-30B-A3B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
     current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
     audience:
       '拥有1000-10000+个文件的个人文档语料库、在默认RAG设置失效处遇到扩展瓶颈的高级用户、研究人员、律师和开发者。',
@@ -2421,7 +2426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '用小型交叉编码器reranking top-50候选可以修复大多数"文档正确但chunk错误"的检索失败',
           '10k+文档的硬件底线：32 GB内存、NVMe SSD，加上8 GB+ VRAM的独立GPU或32 GB+统一内存的Apple Silicon',
         ],
-        updatedDate: '2026-07-14',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2519,7 +2524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/chat-with-1000-pdfs-locally-latency-scaling-en.svg',
         imageCaption: '跨4个架构的查询延迟P50扩展：AnythingLLM（在2k文档处崩溃，100文档150ms→10k文档1500ms）、LlamaIndex（至5k保持280-285ms平坦，10k升至260ms）、ChromaDB+混合（100文档300ms→10k文档190ms，平坦化曲线）、Qdrant（295ms→180ms，所有规模最低延迟）。混合搜索+reranking完全平坦化曲线。',
         content:
-          '**四种架构在100、1000和10000个文档的相同语料库上进行了基准测试。** 测试设置：平均12页的研究论文类PDF（因此10k文档时约有120k页）。硬件：NVIDIA RTX 4070（12 GB VRAM、32 GB系统内存），Windows 11；并在M5 MacBook Pro（32 GB统一内存）上交叉验证。LLM：通过Ollama运行Llama 3.3 8B Q4_K_M。Embedding模型：nomic-embed-text-v1.5。所有数字均为预热后三次运行的中位数。',
+          '**四种架构在100、1000和10000个文档的相同语料库上进行了基准测试。** 测试设置：平均12页的研究论文类PDF（因此10k文档时约有120k页）。硬件：NVIDIA RTX 4070（12 GB VRAM、32 GB系统内存），Windows 11；并在M5 MacBook Pro（32 GB统一内存）上交叉验证。LLM：通过Ollama运行Qwen3 8B Q4_K_M。Embedding模型：nomic-embed-text-v1.5。所有数字均为预热后三次运行的中位数。',
         columns: [
           '架构',
           '搭建复杂度',
@@ -2577,7 +2582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**在正确调优后，这是仍能处理1000份个人文档语料库的最低门槛选项。** AnythingLLM Desktop内置了LanceDB，原生解析PDF/DOCX/MD，并以Ollama作为LLM提供方。默认设置在大约500个文档处开始失效；下面的调优能把它推到2000-3000个文档。',
         items: [
-          '**LLM：** 通过Ollama运行Llama 3.3 8B Q4_K_M（推理时约占用5 GB内存）。在24 GB+的系统上，Qwen 3 14B Q4能明显提升综合能力。',
+          '**LLM：** 通过Ollama运行Qwen3 8B Q4_K_M（推理时约占用5 GB内存）。在32 GB+的系统上，Qwen3-30B-A3B Q4 (~19 GB)能明显提升综合能力。',
           '**Embedding模型：** 把AnythingLLM原生默认的embedder换成通过Ollama运行的nomic-embed-text-v1.5。默认embedder是"AnythingLLM扩展不了"这类反馈里最主要的原因。',
           '**分块：** 1000个token，重叠200个token，在每个工作区的Vector Database设置里单独调整。默认的512/0对于任何超过几十个文档的语料库都是错误的。',
           '**Top-K：** 从默认的4提高到6-8。在1000个文档规模下，真正最佳的chunk经常排在第5-7位，LLM忽略弱相关chunk的能力，比它凭空补全缺失信息的能力要强。',
@@ -2603,7 +2608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**持久化：** `index.storage_context.persist(persist_dir=...)`会保存全部内容。在NVMe SSD上，5000文档索引的重新加载时间是10-30秒。',
         ],
         codeBlock:
-          '# Minimal LlamaIndex local RAG with hierarchical indices (~30 lines)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="llama3.3:8b-instruct-q4_K_M", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Summary index for routing + chunk index for retrieval\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# At query time, route by question type\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "What sample size did Smith et al. use?"\n)\nprint(response)',
+          '# Minimal LlamaIndex local RAG with hierarchical indices (~30 lines)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="qwen3:8b", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Summary index for routing + chunk index for retrieval\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# At query time, route by question type\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "What sample size did Smith et al. use?"\n)\nprint(response)',
         codeLanguage: 'python',
       },
       optionChromaDB: {
@@ -2659,7 +2664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Qdrant 1.10+和Weaviate都原生支持混合搜索。ChromaDB需要外挂Whoosh或Tantivy。LanceDB有实验性的混合搜索支持，但截至2026年5月API仍在变化——采用前先查最新文档。原生混合搜索是选择向量存储库时值得看重的一点。',
+            text: 'Qdrant 1.10+和Weaviate都原生支持混合搜索。ChromaDB需要外挂Whoosh或Tantivy。LanceDB有实验性的混合搜索支持，但截至2026年8月API仍在变化——采用前先查最新文档。原生混合搜索是选择向量存储库时值得看重的一点。',
           },
         ],
       },
@@ -2669,7 +2674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Reranker是一个小型cross-encoder，它联合而非独立地给（查询，候选）对打分。在混合搜索得到的top-25到top-50候选上运行它，能修复"文档对了、chunk错了"的问题。** 在5000到50000个文档之间，这是单项影响最大的质量杠杆。',
         items: [
-          '**BGE-reranker-v2-m3**（约570 MB，多语言，Apache 2.0）是2026年5月的默认选择。在现代CPU上每秒处理50-100个候选；GPU上400+/秒。对top-50重排的延迟成本，CPU上约200-500ms，GPU上约80-150ms。',
+          '**BGE-reranker-v2-m3**（约570 MB，多语言，Apache 2.0）是2026年8月的默认选择。在现代CPU上每秒处理50-100个候选；GPU上400+/秒。对top-50重排的延迟成本，CPU上约200-500ms，GPU上约80-150ms。',
           '**为什么cross-encoder在检索上更有优势：** 密集embedding独立编码查询和文档，模型从未同时看到二者。Cross-encoder联合读取`[CLS] query [SEP] candidate [SEP]`并直接给这对打分。Recall@5通常能提升15-25个百分点。',
           '**在哪里插入reranker：** 混合搜索之后、LLM之前。从混合搜索取top-50，重排到top 6-8，把这些送给LLM作为上下文。',
           '**替代方案——Cohere Rerank API：** 质量更高，但需要一次云端调用。对于完全本地的技术栈，BGE-reranker-v2-m3是务实的默认选择。mxbai-rerank-base-v2是有力的备选。',
@@ -2685,7 +2690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**索引时应填充的通用payload字段：** `source_filename`、`page_number`、`document_type`（论文/合同/笔记/wiki）、`author`、`year`、`language`，以及任何领域特定标签（如`case_number`、`project_id`、`client_id`）。',
           '**查询时预过滤：** "2024年第三季度董事会纪要对定价说了什么？"→先按`document_type=board_minutes AND year=2024 AND quarter=3`过滤，再在约12个文档而非全部10000个中做向量搜索。',
           '**向量存储库支持：** Qdrant的payload、Weaviate的properties、ChromaDB的metadata、LanceDB的schema列都支持过滤。性能有差异——Qdrant对已索引字段的payload过滤是亚毫秒级；ChromaDB在超过10万个chunk时的metadata过滤可能增加50-150ms。',
-          '**自动提取元数据：** 对法律类语料库，索引时用一次小型LLM处理，可以提取案件编号、日期和当事人姓名。在Llama 3.3 8B上每个文档约耗时30秒；每次导入只需运行一次。',
+          '**自动提取元数据：** 对法律类语料库，索引时用一次小型LLM处理，可以提取案件编号、日期和当事人姓名。在Qwen3 8B上每个文档约耗时30秒；每次导入只需运行一次。',
           '**与混合搜索结合：** payload过滤先缩小范围→在过滤后的集合内做BM25+密集检索→再reranking。Payload过滤是任何大型RAG系统中成本最低的5-10倍加速手段。',
         ],
       },
@@ -2695,7 +2700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**分层检索维护两个索引——一个是文档摘要索引，一个是chunk索引——并让查询同时经过两者。摘要搜索找到正确的文档；chunk搜索在其中找到正确的段落。** 能降低综合类查询的噪音；对事实检索类查询大多没有必要。',
         items: [
-          '**每文档摘要：** 索引时，提示LLM为每个文档写一段100-200个token的摘要，将这些摘要embedding进单独的`summaries` collection。在Llama 3.3 8B上，每个文档成本约30-90秒。',
+          '**每文档摘要：** 索引时，提示LLM为每个文档写一段100-200个token的摘要，将这些摘要embedding进单独的`summaries` collection。在Qwen3 8B上，每个文档成本约30-90秒。',
           '**两阶段检索：** (1) 对查询做embedding，搜索`summaries`，取top-5个文档；(2) 在这5个文档内，通过混合搜索检索top-8个chunks；(3) 需要时进行reranking；(4) 送入LLM。',
           '**最有帮助的场景：** 综合类和跨文档查询（"比较这几篇论文如何处理X"）。事实检索类查询（"Smith报告的数值是多少？"）单用chunk索引就够了——摘要这一道弯路只会增加延迟，不会提升质量。',
           '**成本权衡：** 索引存储翻倍（摘要本身很小，但索引基础设施是双份的）。对未路由的查询延迟也会翻倍。收益体现在10000+文档规模下的降噪上。',
@@ -2911,9 +2916,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       'headline': '本地处理1000+ PDF: 构建生产级RAG系统',
       'description':
-        '本地RAG扩展到1000-10000+个PDF。架构决策树、实测基准、存储和延迟对比，涵盖AnythingLLM、LlamaIndex、ChromaDB、Qdrant。2026年5月。',
+        '本地RAG扩展到1000-10000+个PDF。架构决策树、实测基准、存储和延迟对比，涵盖AnythingLLM、LlamaIndex、ChromaDB、Qdrant。2026年8月。',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-07-14',
+      'dateModified': '2026-08-27',
       'url': 'https://www.promptquorum.com/zh/power-local-llm/chat-with-1000-pdfs-locally',
       'author': {
         '@type': 'Organization',
@@ -2971,8 +2976,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-es.webp',
     title: 'Chatea con 1000+ PDFs en local: RAG a escala más allá de los ejemplos de prueba',
@@ -2983,7 +2989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Escala RAG local a 1.000–10.000+ PDFs: árbol de arquitectura, benchmarks, almacenamiento y latencia en AnythingLLM, LlamaIndex, ChromaDB y Qdrant.',
     twitterDescription:
       'Cuando el RAG básico falla: escalar el chat personal con documentos a 1.000-10.000 PDFs en local. Árbol de decisión de arquitectura + benchmarks medidos en cuatro stacks de código abierto. Mayo 2026.',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+    current_models_mentioned: ['Qwen3 8B', 'Qwen3-30B-A3B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
     current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
     audience:
       'Usuarios avanzados, investigadores, abogados y desarrolladores con corpus personales de 1.000-10.000+ archivos que han llegado al límite de escalado donde los ajustes predeterminados de RAG dejan de funcionar.',
@@ -3013,7 +3019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Reranking the top-50 candidates with a small cross-encoder fixes most "right document, wrong chunk" retrieval failures',
           'Hardware floor for 10k+ documents: 32 GB RAM, NVMe SSD, and either a discrete GPU with 8 GB+ VRAM or Apple Silicon with 32 GB+ unified memory',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -3111,7 +3117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/chat-with-1000-pdfs-locally-latency-scaling-en.svg',
         imageCaption: 'Escalado de latencia de consulta P50 en 4 arquitecturas: AnythingLLM (falla a 2k docs, 150ms @ 100 docs → 1.500ms @ 10k); LlamaIndex (se mantiene plano en 280-285ms hasta 5k, sube a 260ms @ 10k); ChromaDB+híbrido (300ms @ 100 → 190ms @ 10k, aplana la curva); Qdrant (295ms → 180ms, menor latencia en todas las escalas). Búsqueda híbrida + reranking aplana la curva por completo.',
         content:
-          '**Cuatro arquitecturas comparadas en corpus idénticos a 100, 1.000 y 10.000 documentos.** Configuración de prueba: PDFs de investigación con una media de 12 páginas cada uno (~120k páginas a 10k docs). Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB RAM del sistema) en Windows 11; comprobado cruzado en M5 MacBook Pro (32 GB unificado). LLM: Llama 3.3 8B Q4_K_M vía Ollama. Embedder: nomic-embed-text-v1.5. Todos los números son medianas de tres ejecuciones tras el calentamiento.',
+          '**Cuatro arquitecturas comparadas en corpus idénticos a 100, 1.000 y 10.000 documentos.** Configuración de prueba: PDFs de investigación con una media de 12 páginas cada uno (~120k páginas a 10k docs). Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB RAM del sistema) en Windows 11; comprobado cruzado en M5 MacBook Pro (32 GB unificado). LLM: Qwen3 8B Q4_K_M vía Ollama. Embedder: nomic-embed-text-v1.5. Todos los números son medianas de tres ejecuciones tras el calentamiento.',
         columns: [
           'Arquitectura',
           'Complejidad de configuración',
@@ -3169,7 +3175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**La opción con menos fricción que aún gestiona un corpus personal de 1.000 documentos cuando se ajusta correctamente.** AnythingLLM Desktop incluye LanceDB integrado, analiza PDF/DOCX/MD de forma nativa y se comunica con Ollama como proveedor LLM. Los ajustes predeterminados fallan alrededor de 500 documentos; el ajuste siguiente lo eleva a 2.000-3.000.',
         items: [
-          '**LLM:** Llama 3.3 8B Q4_K_M vía Ollama (5 GB RAM durante la inferencia). En sistemas con 24 GB+, Qwen 3 14B Q4 mejora notablemente la síntesis.',
+          '**LLM:** Qwen3 8B Q4_K_M vía Ollama (5 GB RAM durante la inferencia). En sistemas con 32 GB+, Qwen3-30B-A3B Q4 (~19 GB) mejora notablemente la síntesis.',
           '**Embedder:** cambia del predeterminado de AnythingLLM a nomic-embed-text-v1.5 vía Ollama. El embedder predeterminado es la razón principal por la que existen informes de "AnythingLLM no escala".',
           '**Chunking:** 1.000 tokens con solapamiento de 200 tokens, configurado por workspace en los ajustes de Vector Database. El predeterminado 512/0 es incorrecto para cualquier corpus más grande que unas pocas decenas de documentos.',
           '**Top-K:** aumenta del predeterminado 4 a 6-8. Con 1.000 documentos, el mejor chunk suele estar en el rango 5-7, y el LLM puede ignorar chunks débiles mejor de lo que puede inventar los que faltan.',
@@ -3195,7 +3201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Persistencia:** `index.storage_context.persist(persist_dir=...)` guarda todo. El tiempo de recarga en un índice de 5.000 documentos es de 10-30 segundos en NVMe SSD.',
         ],
         codeBlock:
-          '# Minimal LlamaIndex local RAG with hierarchical indices (~30 lines)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="llama3.3:8b-instruct-q4_K_M", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Summary index for routing + chunk index for retrieval\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# At query time, route by question type\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "What sample size did Smith et al. use?"\n)\nprint(response)',
+          '# Minimal LlamaIndex local RAG with hierarchical indices (~30 lines)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="qwen3:8b", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Summary index for routing + chunk index for retrieval\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# At query time, route by question type\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "What sample size did Smith et al. use?"\n)\nprint(response)',
         codeLanguage: 'python',
       },
       optionChromaDB: {
@@ -3251,7 +3257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Qdrant 1.10+ y Weaviate soportan búsqueda híbrida de forma nativa. ChromaDB requiere añadir Whoosh o Tantivy. LanceDB tiene soporte híbrido experimental pero la API está cambiando a mayo de 2026 — consulta la documentación actual antes de comprometerte. El híbrido nativo justifica la elección del vector store.',
+            text: 'Qdrant 1.10+ y Weaviate soportan búsqueda híbrida de forma nativa. ChromaDB requiere añadir Whoosh o Tantivy. LanceDB tiene soporte híbrido experimental pero la API está cambiando a agosto de 2026 — consulta la documentación actual antes de comprometerte. El híbrido nativo justifica la elección del vector store.',
           },
         ],
       },
@@ -3261,7 +3267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Un reranker es un pequeño cross-encoder que puntúa pares (consulta, candidato) conjuntamente en lugar de de forma independiente. Ejecútalo sobre los 25-50 mejores candidatos de la búsqueda híbrida para corregir los fallos de "documento correcto, chunk incorrecto".** El mayor apalancamiento de calidad individual entre 5.000 y 50.000 documentos.',
         items: [
-          '**BGE-reranker-v2-m3** (~570 MB, multilingüe, Apache 2.0) es la elección predeterminada en mayo de 2026. Funciona a 50-100 candidatos/seg en una CPU moderna; 400+ /seg en GPU. El coste de latencia para reranking de top-50 es ~200-500 ms en CPU, ~80-150 ms en GPU.',
+          '**BGE-reranker-v2-m3** (~570 MB, multilingüe, Apache 2.0) es la elección predeterminada en agosto de 2026. Funciona a 50-100 candidatos/seg en una CPU moderna; 400+ /seg en GPU. El coste de latencia para reranking de top-50 es ~200-500 ms en CPU, ~80-150 ms en GPU.',
           '**Por qué los cross-encoders ganan en recuperación:** los embeddings densos codifican la consulta y el documento de forma independiente, por lo que el modelo nunca los ve juntos. Un cross-encoder lee `[CLS] consulta [SEP] candidato [SEP]` conjuntamente y puntúa el par directamente. Recall@5 típicamente salta 15-25 puntos.',
           '**Dónde inyectar el reranker:** después de la búsqueda híbrida, antes del LLM. Toma los top-50 del híbrido, reordena a top-6-8, y envía esos al LLM como contexto.',
           '**Alternativa — Cohere Rerank API:** mayor calidad pero requiere una llamada a la nube. Para stacks completamente locales, BGE-reranker-v2-m3 es el predeterminado práctico. mxbai-rerank-base-v2 es un fuerte candidato alternativo.',
@@ -3277,7 +3283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Campos de payload universales a rellenar en tiempo de indexación:** `source_filename`, `page_number`, `document_type` (artículo / contrato / nota / wiki), `author`, `year`, `language`, más etiquetas específicas del dominio (p.ej., `case_number`, `project_id`, `client_id`).',
           '**Pre-filtro en tiempo de consulta:** "¿Qué dijo el acta del consejo del Q3 2024 sobre precios?" → filtra `document_type=board_minutes AND year=2024 AND quarter=3` primero, luego búsqueda vectorial dentro de ~12 documentos en lugar de los 10.000.',
           '**Soporte del vector store:** los payloads de Qdrant, las propiedades de Weaviate, los metadatos de ChromaDB y las columnas de esquema de LanceDB soportan todos el filtrado. El rendimiento varía — el filtrado de payload de Qdrant en campos indexados es de submilisegundos; el filtrado de metadatos de ChromaDB en >100k chunks puede añadir 50-150 ms.',
-          '**Auto-extracción de metadatos:** para corpus legales, un pequeño paso de LLM en tiempo de indexación puede extraer números de caso, fechas y nombres de partes por documento. Cuesta ~30 segundos por documento en Llama 3.3 8B; se ejecuta una vez por ingest.',
+          '**Auto-extracción de metadatos:** para corpus legales, un pequeño paso de LLM en tiempo de indexación puede extraer números de caso, fechas y nombres de partes por documento. Cuesta ~30 segundos por documento en Qwen3 8B; se ejecuta una vez por ingest.',
           '**Combina con búsqueda híbrida:** el filtro de payload reduce el universo → recuperación BM25 + densa dentro del conjunto filtrado → rerank. El filtro de payload es la aceleración más barata de 5-10 veces en cualquier sistema RAG grande.',
         ],
       },
@@ -3287,7 +3293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**La recuperación jerárquica mantiene dos índices — uno de resúmenes por documento y uno de chunks — y enruta las consultas a través de ambos. La búsqueda de resúmenes encuentra los documentos correctos; la búsqueda de chunks encuentra los pasajes correctos dentro de ellos.** Reduce el ruido en consultas de síntesis; en gran medida innecesario para la recuperación de hechos.',
         items: [
-          '**Resúmenes por documento:** en tiempo de indexación, pide al LLM que escriba un resumen de 100-200 tokens de cada documento. Genera embeddings de esos resúmenes en una colección `summaries` separada. El coste es ~30-90 segundos por documento en Llama 3.3 8B.',
+          '**Resúmenes por documento:** en tiempo de indexación, pide al LLM que escriba un resumen de 100-200 tokens de cada documento. Genera embeddings de esos resúmenes en una colección `summaries` separada. El coste es ~30-90 segundos por documento en Qwen3 8B.',
           '**Recuperación en dos etapas:** (1) genera el embedding de la consulta, busca en `summaries`, toma los top-5 documentos; (2) dentro de esos 5 documentos, recupera los top-8 chunks vía búsqueda híbrida; (3) aplica reranking si es necesario; (4) envía al LLM.',
           '**Cuándo ayuda más:** consultas de síntesis y multi-documento ("compara cómo estos artículos abordan X"). La recuperación de hechos ("¿qué valor reportó Smith?") funciona bien solo con el índice de chunks — el desvío por el resumen añade latencia sin ganancia de calidad.',
           '**Compensación de coste:** duplica el almacenamiento del índice (los resúmenes son pequeños pero el índice en sí es infraestructura duplicada). Duplica la latencia para consultas no enrutadas. La ganancia está en la reducción de ruido a partir de 10.000+ documentos.',
@@ -3505,7 +3511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description':
         'Guía de decisión para escalar RAG local de 1.000 a 10.000+ PDFs. Comparación de arquitecturas, benchmarks medidos y las cuatro mejoras (búsqueda híbrida, reranking, filtrado de metadatos, recuperación jerárquica) que eliminan el precipicio de escalado.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-08-27',
       'url': 'https://www.promptquorum.com/es/power-local-llm/chat-with-1000-pdfs-locally',
       'author': {
         '@type': 'Person',
@@ -3559,16 +3565,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-ko.webp',
     title: '로컬에서 PDF 1,000개와 채팅하기: 테스트 예제를 넘어선 규모의 RAG',
     seoTitle: '로컬에서 PDF 1,000개와 채팅 2026: 대규모 RAG',
     intro: '1,000–10,000개 이상의 개인 문서(연구 라이브러리, 법적 기록, 내부 위키)를 가진 고급 사용자를 위한 결정 가이드. 기본 설정은 5,000개 청크 주변에서 실패합니다. 이 기사는 네 가지 확장 경로(조정된 AnythingLLM, 로컬 LlamaIndex, 맞춤형 Ollama+ChromaDB, 프로덕션 Ollama+Qdrant)를 100, 1,000, 10,000개 문서에서 측정된 지연시간, 저장소, 인덱싱 벤치마크와 함께 보여줍니다.',
     metaDescription: '로컬 RAG를 1,000–10,000+ PDF로 확장하기: 아키텍처 결정 트리, 벤치마크, AnythingLLM, LlamaIndex, ChromaDB, Qdrant에서의 저장소 및 지연시간.',
-    twitterDescription: '기본 RAG가 실패할 때: 개인 문서 채팅을 로컬에서 1,000–10,000개 PDF로 확장하기. 아키텍처 결정 트리 + 4개 오픈소스 스택에서 측정된 벤치마크. 2026년 5월.',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+    twitterDescription: '기본 RAG가 실패할 때: 개인 문서 채팅을 로컬에서 1,000–10,000개 PDF로 확장하기. 아키텍처 결정 트리 + 4개 오픈소스 스택에서 측정된 벤치마크. 2026년 8월.',
+    current_models_mentioned: ['Qwen3 8B', 'Qwen3-30B-A3B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
     current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
     audience: '기본 RAG 설정이 더 이상 작동하지 않는 확장 한계에 도달한 1,000–10,000개 이상의 파일로 된 개인 코퍼스를 가진 고급 사용자, 연구자, 변호사, 개발자.',
     readTime: '18분 분량',
@@ -3595,7 +3602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '소형 크로스 인코더로 상위 50개 후보를 재랭킹하면 대부분의 "올바른 문서, 잘못된 청크" 검색 실패가 수정됩니다',
           '10k+ 문서를 위한 하드웨어 최소 요건: 32 GB RAM, NVMe SSD, 8 GB+ VRAM의 독립 GPU 또는 32 GB+ 통합 메모리의 Apple Silicon',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -3690,7 +3697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '아키텍처 비교 표',
         image: '/images/chat-with-1000-pdfs-locally-latency-scaling-en.svg',
         imageCaption: '4가지 아키텍처에서의 P50 쿼리 지연시간 확장: AnythingLLM(2k개 문서에서 실패, 100개 문서에서 150ms → 10k에서 1,500ms); LlamaIndex(5k까지 280–285ms로 평탄, 10k에서 260ms 상승); ChromaDB+하이브리드(100에서 300ms → 10k에서 190ms, 곡선 평탄화); Qdrant(295ms → 180ms, 모든 규모에서 가장 낮은 지연시간). 하이브리드 검색 + 재랭킹이 곡선을 완전히 평탄화합니다.',
-        content: '**100, 1,000, 10,000개 문서에서 동일한 코퍼스에 비교된 4가지 아키텍처.** 테스트 설정: 평균 12페이지의 연구 PDF(10k 문서에서 ~120k 페이지). 하드웨어: Windows 11의 NVIDIA RTX 4070(12 GB VRAM, 32 GB 시스템 RAM); M5 MacBook Pro(32 GB 통합)에서 교차 확인. LLM: Ollama를 통한 Llama 3.3 8B Q4_K_M. 임베더: nomic-embed-text-v1.5. 모든 숫자는 워밍업 후 세 번 실행의 중앙값입니다.',
+        content: '**100, 1,000, 10,000개 문서에서 동일한 코퍼스에 비교된 4가지 아키텍처.** 테스트 설정: 평균 12페이지의 연구 PDF(10k 문서에서 ~120k 페이지). 하드웨어: Windows 11의 NVIDIA RTX 4070(12 GB VRAM, 32 GB 시스템 RAM); M5 MacBook Pro(32 GB 통합)에서 교차 확인. LLM: Ollama를 통한 Qwen3 8B Q4_K_M. 임베더: nomic-embed-text-v1.5. 모든 숫자는 워밍업 후 세 번 실행의 중앙값입니다.',
         columns: [
           '아키텍처',
           '설정 복잡성',
@@ -3747,7 +3754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '옵션 1: 조정된 AnythingLLM (100–1,000개 문서)',
         content: '**올바르게 조정되면 1,000개 문서의 개인 코퍼스를 여전히 처리하는 가장 마찰이 적은 옵션.** AnythingLLM Desktop에는 내장된 LanceDB가 포함되어 있고, 기본적으로 PDF/DOCX/MD를 파싱하며, Ollama와 LLM 제공자로 통신합니다. 기본 설정은 약 500개 문서에서 실패합니다. 다음 조정으로 2,000–3,000개까지 올립니다.',
         items: [
-          '**LLM:** Ollama를 통한 Llama 3.3 8B Q4_K_M (추론 중 5 GB RAM). 24 GB+ 시스템에서 Qwen 3 14B Q4가 합성을 눈에 띄게 향상시킵니다.',
+          '**LLM:** Ollama를 통한 Qwen3 8B Q4_K_M (추론 중 5 GB RAM). 32 GB+ 시스템에서 Qwen3-30B-A3B Q4 (~19 GB)가 합성을 눈에 띄게 향상시킵니다.',
           '**임베더:** AnythingLLM 기본값에서 Ollama를 통한 nomic-embed-text-v1.5로 변경합니다. 기본 임베더가 "AnythingLLM이 확장되지 않는다"는 보고가 있는 주요 이유입니다.',
           '**청킹:** 벡터 데이터베이스 설정의 워크스페이스별로 1,000 토큰과 200 토큰 겹침으로 설정합니다. 기본 512/0은 수십 개 이상의 문서가 있는 코퍼스에는 잘못되었습니다.',
           '**Top-K:** 기본 4에서 6–8로 증가합니다. 1,000개 문서에서 최적 청크는 종종 5–7 범위에 있으며 LLM은 약한 청크를 무시할 수 있습니다.',
@@ -3771,7 +3778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**문장 창 검색:** N개의 주변 문장과 함께 대상 문장을 검색하는 두 번째 선택적 인덱스. 답이 하나의 문장이지만 그 의미가 주변 단락에 의존하는 법적, 학문적 코퍼스에 유용합니다.',
           '**지속성:** `index.storage_context.persist(persist_dir=...)`가 모든 것을 저장합니다. NVMe SSD에서 5,000개 문서 인덱스의 재로드 시간은 10–30초입니다.',
         ],
-        codeBlock: '# Minimal LlamaIndex local RAG with hierarchical indices (~30 lines)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="llama3.3:8b-instruct-q4_K_M", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Summary index for routing + chunk index for retrieval\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# At query time, route by question type\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "What sample size did Smith et al. use?"\n)\nprint(response)',
+        codeBlock: '# Minimal LlamaIndex local RAG with hierarchical indices (~30 lines)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="qwen3:8b", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Summary index for routing + chunk index for retrieval\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# At query time, route by question type\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "What sample size did Smith et al. use?"\n)\nprint(response)',
         codeLanguage: 'python',
       },
       optionChromaDB: {
@@ -3823,7 +3830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Qdrant 1.10+와 Weaviate는 기본으로 하이브리드 검색을 지원합니다. ChromaDB는 Whoosh 또는 Tantivy 추가가 필요합니다. LanceDB에는 실험적인 하이브리드 지원이 있지만 2026년 5월 기준 API가 변경 중입니다 — 약정 전에 현재 문서를 확인하십시오. 기본 하이브리드는 벡터 스토어 선택을 정당화합니다.',
+            text: 'Qdrant 1.10+와 Weaviate는 기본으로 하이브리드 검색을 지원합니다. ChromaDB는 Whoosh 또는 Tantivy 추가가 필요합니다. LanceDB에는 실험적인 하이브리드 지원이 있지만 2026년 8월 기준 API가 변경 중입니다 — 약정 전에 현재 문서를 확인하십시오. 기본 하이브리드는 벡터 스토어 선택을 정당화합니다.',
           },
         ],
       },
@@ -3832,7 +3839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '재랭킹: 상위 N 정제 단계',
         content: '**재랭커는 독립적이 아닌 공동으로 (쿼리, 후보) 쌍을 점수 매기는 소형 크로스 인코더입니다. 하이브리드 검색에서 상위 25–50개 후보에 대해 실행하여 "올바른 문서, 잘못된 청크" 실패를 수정합니다.** 5,000–50,000개 문서 사이에서 단일 최대 품질 레버리지.',
         items: [
-          '**BGE-reranker-v2-m3**(~570 MB, 다국어, Apache 2.0)는 2026년 5월의 기본 선택입니다. 현대 CPU에서 50–100개 후보/초에 작동합니다; GPU에서 400+/초. 상위 50개 재랭킹의 지연시간 비용은 CPU에서 ~200–500 ms, GPU에서 ~80–150 ms입니다.',
+          '**BGE-reranker-v2-m3**(~570 MB, 다국어, Apache 2.0)는 2026년 8월의 기본 선택입니다. 현대 CPU에서 50–100개 후보/초에 작동합니다; GPU에서 400+/초. 상위 50개 재랭킹의 지연시간 비용은 CPU에서 ~200–500 ms, GPU에서 ~80–150 ms입니다.',
           '**크로스 인코더가 검색에서 이기는 이유:** 밀집 임베딩은 쿼리와 문서를 독립적으로 인코딩하므로 모델이 그것들을 함께 볼 수 없습니다. 크로스 인코더는 `[CLS] 쿼리 [SEP] 후보 [SEP]`를 공동으로 읽고 쌍을 직접 점수 매깁니다. Recall@5는 일반적으로 15–25포인트 상승합니다.',
           '**재랭커를 주입할 위치:** 하이브리드 검색 후, LLM 전. 하이브리드에서 상위 50개를 가져오고, 상위 6–8개로 재정렬하고, LLM에 컨텍스트로 보냅니다.',
           '**대안 — Cohere Rerank API:** 더 높은 품질이지만 클라우드 호출이 필요합니다. 완전 로컬 스택의 경우 BGE-reranker-v2-m3가 실용적인 기본값입니다. mxbai-rerank-base-v2가 강력한 대안 후보입니다.',
@@ -3847,7 +3854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**인덱싱 시 채울 범용 페이로드 필드:** `source_filename`, `page_number`, `document_type`(기사/계약서/노트/위키), `author`, `year`, `language`, 더불어 도메인별 태그(예: `case_number`, `project_id`, `client_id`).',
           '**쿼리 시 사전 필터:** "2024년 3분기 이사회 회의록이 가격에 대해 뭐라고 했습니까?" → 먼저 `document_type=board_minutes AND year=2024 AND quarter=3`으로 필터링하고, 전체 10,000개 대신 ~12개 문서 내에서 벡터 검색.',
           '**벡터 스토어 지원:** Qdrant 페이로드, Weaviate 속성, ChromaDB 메타데이터, LanceDB 스키마 열이 모두 필터링을 지원합니다. 성능은 다양합니다 — 인덱싱된 필드의 Qdrant 페이로드 필터링은 서브밀리초; 100k개+ 청크에서 ChromaDB 메타데이터 필터링은 50–150 ms를 추가할 수 있습니다.',
-          '**자동 메타데이터 추출:** 법적 코퍼스의 경우 인덱싱 시 소형 LLM 단계가 문서당 사건 번호, 날짜, 당사자 이름을 추출할 수 있습니다. Llama 3.3 8B에서 문서당 ~30초가 소요됩니다; 수집당 한 번 실행됩니다.',
+          '**자동 메타데이터 추출:** 법적 코퍼스의 경우 인덱싱 시 소형 LLM 단계가 문서당 사건 번호, 날짜, 당사자 이름을 추출할 수 있습니다. Qwen3 8B에서 문서당 ~30초가 소요됩니다; 수집당 한 번 실행됩니다.',
           '**하이브리드 검색과 결합:** 페이로드 필터가 범위를 줄입니다 → 필터링된 세트 내에서 BM25 + 밀집 검색 → 재랭킹. 페이로드 필터는 모든 대형 RAG 시스템에서 가장 저렴한 5–10× 가속입니다.',
         ],
       },
@@ -3856,7 +3863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '계층적 검색: 먼저 요약, 그 다음 청크',
         content: '**계층적 검색은 두 개의 인덱스를 유지합니다 — 문서당 요약 인덱스와 청크 인덱스 — 쿼리를 둘 다 통해 라우팅합니다. 요약 검색이 올바른 문서를 찾고, 청크 검색이 그 안에서 올바른 구절을 찾습니다.** 합성 쿼리에서 노이즈를 줄입니다; 팩트 검색에는 크게 불필요합니다.',
         items: [
-          '**문서당 요약:** 인덱싱 시 LLM에게 각 문서의 100–200 토큰 요약을 작성하도록 요청합니다. 해당 요약의 임베딩을 별도의 `summaries` 컬렉션에 생성합니다. 비용은 Llama 3.3 8B에서 문서당 ~30–90초입니다.',
+          '**문서당 요약:** 인덱싱 시 LLM에게 각 문서의 100–200 토큰 요약을 작성하도록 요청합니다. 해당 요약의 임베딩을 별도의 `summaries` 컬렉션에 생성합니다. 비용은 Qwen3 8B에서 문서당 ~30–90초입니다.',
           '**2단계 검색:** (1) 쿼리 임베딩을 생성하고 `summaries`를 검색하고 상위 5개 문서를 가져옵니다; (2) 해당 5개 문서 내에서 하이브리드 검색을 통해 상위 8개 청크를 검색합니다; (3) 필요하면 재랭킹 적용; (4) LLM에 보냅니다.',
           '**가장 도움이 되는 경우:** 합성 및 멀티 문서 쿼리("이 기사들이 X를 어떻게 다루는지 비교합니다"). 팩트 검색("Smith가 어떤 값을 보고했습니까?")은 청크 인덱스만으로 잘 작동합니다 — 요약 우회가 품질 향상 없이 지연시간을 추가합니다.',
           '**비용 트레이드오프:** 인덱스 저장소가 두 배 됩니다(요약은 작지만 인덱스 자체가 중복 인프라입니다). 비라우팅 쿼리의 지연시간이 두 배 됩니다. 이득은 10,000개+ 문서에서 노이즈 감소에 있습니다.',
@@ -4069,7 +4076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': '로컬에서 PDF 1,000개와 채팅하기: 테스트 예제를 넘어선 규모의 RAG',
       'description': '로컬 RAG를 1,000~10,000개 이상의 PDF로 확장하기 위한 결정 가이드. 아키텍처 비교, 측정된 벤치마크, 확장 절벽을 제거하는 네 가지 개선 사항(하이브리드 검색, 재랭킹, 메타데이터 필터링, 계층적 검색).',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-08-27',
       'url': 'https://www.promptquorum.com/ko/power-local-llm/chat-with-1000-pdfs-locally',
       'author': {
         '@type': 'Person',
@@ -4123,8 +4130,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-pt.webp',
     title: 'Converse com 1000+ PDFs localmente: RAG em escala além dos exemplos de teste',
@@ -4135,7 +4143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Escale RAG local para 1.000–10.000+ PDFs: árvore de arquitetura, benchmarks, armazenamento e latência em AnythingLLM, LlamaIndex, ChromaDB e Qdrant.',
     twitterDescription:
       'Quando o RAG básico falha: escalando o chat pessoal de documentos para 1.000–10.000 PDFs localmente. Árvore de decisão de arquitetura + benchmarks medidos em quatro stacks open source. Maio 2026.',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+    current_models_mentioned: ['Qwen3 8B', 'Qwen3-30B-A3B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
     current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
     audience:
       'Usuários avançados, pesquisadores, advogados e desenvolvedores com corpora pessoais de 1.000 a 10.000+ arquivos que atingiram o limite de escalonamento onde as configurações padrão de RAG deixam de funcionar.',
@@ -4165,7 +4173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O reranking dos 50 melhores candidatos com um pequeno cross-encoder corrige a maioria das falhas de recuperação "documento correto, chunk errado"',
           'Piso de hardware para 10k+ documentos: 32 GB RAM, SSD NVMe, e uma GPU discreta com 8 GB+ de VRAM ou Apple Silicon com 32 GB+ de memória unificada',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -4263,7 +4271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/chat-with-1000-pdfs-locally-latency-scaling-en.svg',
         imageCaption: 'Escalonamento de latência de consulta P50 em 4 arquiteturas: AnythingLLM (falha em 2k docs, 150ms @ 100 docs → 1.500ms @ 10k); LlamaIndex (mantém plano em 280–285ms até 5k, sobe para 260ms @ 10k); ChromaDB+híbrido (300ms @ 100 → 190ms @ 10k, aplana a curva); Qdrant (295ms → 180ms, menor latência em todas as escalas). Busca híbrida + reranking aplana completamente a curva.',
         content:
-          '**Quatro arquiteturas comparadas em corpus idênticos a 100, 1.000 e 10.000 documentos.** Configuração de teste: PDFs de pesquisa com média de 12 páginas cada (~120k páginas a 10k docs). Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB RAM do sistema) no Windows 11; verificado no M5 MacBook Pro (32 GB unificado). LLM: Llama 3.3 8B Q4_K_M via Ollama. Embedder: nomic-embed-text-v1.5. Todos os números são medianas de três execuções após aquecimento.',
+          '**Quatro arquiteturas comparadas em corpus idênticos a 100, 1.000 e 10.000 documentos.** Configuração de teste: PDFs de pesquisa com média de 12 páginas cada (~120k páginas a 10k docs). Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB RAM do sistema) no Windows 11; verificado no M5 MacBook Pro (32 GB unificado). LLM: Qwen3 8B Q4_K_M via Ollama. Embedder: nomic-embed-text-v1.5. Todos os números são medianas de três execuções após aquecimento.',
         columns: [
           'Arquitetura',
           'Complexidade de configuração',
@@ -4321,7 +4329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A opção com menos atrito que ainda gerencia um corpus pessoal de 1.000 documentos quando ajustada corretamente.** O AnythingLLM Desktop inclui LanceDB integrado, analisa PDF/DOCX/MD nativamente e se comunica com o Ollama como provedor LLM. As configurações padrão falham por volta de 500 documentos; o ajuste a seguir eleva isso para 2.000–3.000.',
         items: [
-          '**LLM:** Llama 3.3 8B Q4_K_M via Ollama (5 GB de RAM durante a inferência). Em sistemas com 24 GB+, o Qwen 3 14B Q4 melhora notavelmente a síntese.',
+          '**LLM:** Qwen3 8B Q4_K_M via Ollama (5 GB de RAM durante a inferência). Em sistemas com 32 GB+, o Qwen3-30B-A3B Q4 (~19 GB) melhora notavelmente a síntese.',
           '**Embedder:** troque do padrão do AnythingLLM para nomic-embed-text-v1.5 via Ollama. O embedder padrão é a principal razão por trás dos relatos de "AnythingLLM não escala".',
           '**Chunking:** 1.000 tokens com overlap de 200 tokens, configurado por workspace nas configurações do Vector Database. O padrão 512/0 está errado para qualquer corpus maior que algumas dezenas de documentos.',
           '**Top-K:** aumente do padrão 4 para 6–8. Com 1.000 documentos, o melhor chunk costuma estar no rank 5–7, e o LLM consegue ignorar chunks fracos melhor do que consegue inventar os que estão faltando.',
@@ -4347,7 +4355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Persistência:** `index.storage_context.persist(persist_dir=...)` salva tudo. O tempo de recarga em um índice de 5.000 documentos é de 10–30 segundos em SSD NVMe.',
         ],
         codeBlock:
-          '# Minimal LlamaIndex local RAG with hierarchical indices (~30 lines)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="llama3.3:8b-instruct-q4_K_M", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Summary index for routing + chunk index for retrieval\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# At query time, route by question type\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "What sample size did Smith et al. use?"\n)\nprint(response)',
+          '# Minimal LlamaIndex local RAG with hierarchical indices (~30 lines)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="qwen3:8b", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Summary index for routing + chunk index for retrieval\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# At query time, route by question type\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "What sample size did Smith et al. use?"\n)\nprint(response)',
         codeLanguage: 'python',
       },
       optionChromaDB: {
@@ -4403,7 +4411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Qdrant 1.10+ e Weaviate suportam busca híbrida nativamente. ChromaDB requer adicionar Whoosh ou Tantivy. LanceDB tem suporte híbrido experimental mas a API está mudando em maio de 2026 — consulte a documentação atual antes de se comprometer. O híbrido nativo justifica a escolha do vector store.',
+            text: 'Qdrant 1.10+ e Weaviate suportam busca híbrida nativamente. ChromaDB requer adicionar Whoosh ou Tantivy. LanceDB tem suporte híbrido experimental mas a API está mudando em agosto de 2026 — consulte a documentação atual antes de se comprometer. O híbrido nativo justifica a escolha do vector store.',
           },
         ],
       },
@@ -4413,7 +4421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Um reranker é um pequeno cross-encoder que pontua pares (consulta, candidato) conjuntamente em vez de independentemente. Execute-o sobre os 25–50 melhores candidatos da busca híbrida para corrigir as falhas de "documento correto, chunk errado".** O maior alavancamento individual de qualidade entre 5.000 e 50.000 documentos.',
         items: [
-          '**BGE-reranker-v2-m3** (~570 MB, multilíngue, Apache 2.0) é a escolha padrão em maio de 2026. Funciona a 50–100 candidatos/seg em uma CPU moderna; 400+ /seg em GPU. O custo de latência para reranking de top-50 é ~200–500 ms em CPU, ~80–150 ms em GPU.',
+          '**BGE-reranker-v2-m3** (~570 MB, multilíngue, Apache 2.0) é a escolha padrão em agosto de 2026. Funciona a 50–100 candidatos/seg em uma CPU moderna; 400+ /seg em GPU. O custo de latência para reranking de top-50 é ~200–500 ms em CPU, ~80–150 ms em GPU.',
           '**Por que os cross-encoders ganham em recuperação:** os embeddings densos codificam a consulta e o documento independentemente, então o modelo nunca os vê juntos. Um cross-encoder lê `[CLS] consulta [SEP] candidato [SEP]` conjuntamente e pontua o par diretamente. O Recall@5 tipicamente salta 15–25 pontos.',
           '**Onde injetar o reranker:** depois da busca híbrida, antes do LLM. Pegue os top-50 do híbrido, reordene para top-6–8, e envie esses ao LLM como contexto.',
           '**Alternativa — API Cohere Rerank:** maior qualidade mas requer uma chamada à nuvem. Para stacks completamente locais, o BGE-reranker-v2-m3 é o padrão prático. O mxbai-rerank-base-v2 é um forte candidato alternativo.',
@@ -4429,7 +4437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Campos de payload universais a preencher no tempo de indexação:** `source_filename`, `page_number`, `document_type` (artigo / contrato / nota / wiki), `author`, `year`, `language`, mais tags específicas do domínio (ex.: `case_number`, `project_id`, `client_id`).',
           '**Pré-filtro no tempo de consulta:** "O que a ata do conselho do T3 2024 disse sobre preços?" → filtre `document_type=board_minutes AND year=2024 AND quarter=3` primeiro, depois busca vetorial dentro de ~12 documentos em vez dos 10.000.',
           '**Suporte do vector store:** os payloads do Qdrant, as propriedades do Weaviate, os metadados do ChromaDB e as colunas de esquema do LanceDB suportam todos a filtragem. O desempenho varia — a filtragem de payload do Qdrant em campos indexados é submilissegundo; a filtragem de metadados do ChromaDB em >100k chunks pode adicionar 50–150 ms.',
-          '**Auto-extração de metadados:** para corpus jurídicos, uma pequena etapa de LLM no tempo de indexação pode extrair números de caso, datas e nomes de partes por documento. Custa ~30 segundos por documento em Llama 3.3 8B; executa uma vez por ingest.',
+          '**Auto-extração de metadados:** para corpus jurídicos, uma pequena etapa de LLM no tempo de indexação pode extrair números de caso, datas e nomes de partes por documento. Custa ~30 segundos por documento em Qwen3 8B; executa uma vez por ingest.',
           '**Combine com busca híbrida:** o filtro de payload reduz o universo → recuperação BM25 + densa dentro do conjunto filtrado → rerank. O filtro de payload é a aceleração mais barata de 5–10 vezes em qualquer sistema RAG grande.',
         ],
       },
@@ -4439,7 +4447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A recuperação hierárquica mantém dois índices — um de resumos por documento e um de chunks — e roteia as consultas por ambos. A busca de resumos encontra os documentos corretos; a busca de chunks encontra os trechos corretos dentro deles.** Reduz o ruído em consultas de síntese; em grande parte desnecessária para a recuperação de fatos.',
         items: [
-          '**Resumos por documento:** no tempo de indexação, peça ao LLM para escrever um resumo de 100–200 tokens de cada documento. Gere embeddings desses resumos em uma coleção `summaries` separada. O custo é ~30–90 segundos por documento em Llama 3.3 8B.',
+          '**Resumos por documento:** no tempo de indexação, peça ao LLM para escrever um resumo de 100–200 tokens de cada documento. Gere embeddings desses resumos em uma coleção `summaries` separada. O custo é ~30–90 segundos por documento em Qwen3 8B.',
           '**Recuperação em dois estágios:** (1) gere o embedding da consulta, busque em `summaries`, pegue os top-5 documentos; (2) dentro desses 5 documentos, recupere os top-8 chunks via busca híbrida; (3) aplique reranking se necessário; (4) envie ao LLM.',
           '**Quando ajuda mais:** consultas de síntese e multidocumento ("compare como esses artigos abordam X"). A recuperação de fatos ("qual valor Smith reportou?") funciona bem apenas com o índice de chunks — o desvio pelo resumo adiciona latência sem ganho de qualidade.',
           '**Troca de custo:** dobra o armazenamento do índice (os resumos são pequenos mas o índice em si é infraestrutura duplicada). Dobra a latência para consultas não roteadas. O ganho está na redução de ruído a partir de 10.000+ documentos.',
@@ -4657,7 +4665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description':
         'Guia de decisão para escalar RAG local de 1.000 a 10.000+ PDFs. Comparação de arquiteturas, benchmarks medidos e as quatro melhorias (busca híbrida, reranking, filtragem de metadados, recuperação hierárquica) que eliminam o penhasco de escalonamento.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-08-27',
       'url': 'https://www.promptquorum.com/pt/power-local-llm/chat-with-1000-pdfs-locally',
       'author': {
         '@type': 'Person',
@@ -4712,8 +4720,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     heroImage: '/images/chat-with-1000-pdfs-locally-overview-hero-ar.webp',
     title: 'محادثة مع ⁨1000⁩+ ملف ⁨PDF⁩ محلياً: ⁨RAG⁩ على نطاق واسع يتجاوز نماذج الاختبار',
@@ -4723,8 +4732,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'RAG لـ10,000+ ملف PDF محلياً: AnythingLLM وLlamaIndex وChromaDB وQdrant بالقياسات وزمن الاستجابة. البحث الهجين يرفع الاستدعاء إلى 92–95%.',
     twitterDescription:
-      'عندما يفشل RAG الأساسي: توسيع محادثة المستندات الشخصية إلى 1,000–10,000 ملف PDF محلياً. شجرة قرار المعمارية + قياسات موثوقة لأربعة مكدسات مفتوحة المصدر. مايو 2026.',
-    current_models_mentioned: ['Llama 3.3 8B', 'Qwen 3 14B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
+      'عندما يفشل RAG الأساسي: توسيع محادثة المستندات الشخصية إلى 1,000–10,000 ملف PDF محلياً. شجرة قرار المعمارية + قياسات موثوقة لأربعة مكدسات مفتوحة المصدر. أغسطس 2026.',
+    current_models_mentioned: ['Qwen3 8B', 'Qwen3-30B-A3B', 'nomic-embed-text-v1.5', 'BGE-M3', 'BGE-reranker-v2-m3'],
     current_hardware_mentioned: ['RTX 4070', 'RTX 4090', 'M5 MacBook Pro', '32 GB system RAM', '64 GB system RAM'],
     audience:
       'مستخدمون متقدمون وباحثون ومحامون ومطوّرون لديهم مجموعات بيانات شخصية من 1,000–10,000+ ملف وصلوا إلى حد التوسع حيث تتوقف الإعدادات الافتراضية لـ RAG عن العمل.',
@@ -4754,7 +4763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'إعادة ترتيب أفضل 50 مرشحاً بمُشفِّر تقاطع صغير تُصلح معظم حالات الفشل "مستند صحيح، مقطع خاطئ"',
           'الحد الأدنى من الأجهزة لـ 10,000+ مستند: 32 GB RAM وNVMe SSD وإما GPU منفصل بـ 8 GB+ VRAM أو Apple Silicon بذاكرة موحدة 32 GB+',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -4852,7 +4861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/chat-with-1000-pdfs-locally-latency-scaling-en.svg',
         imageCaption: 'توسع زمن استجابة الاستعلام P50 في 4 معماريات: AnythingLLM (يفشل عند 2,000 مستند، 150ms @ 100 مستند ← 1,500ms @ 10,000)؛ LlamaIndex (يبقى ثابتاً 280–285ms حتى 5,000، يرتفع إلى 260ms @ 10,000)؛ ChromaDB+هجين (300ms @ 100 ← 190ms @ 10,000، يُسطّح المنحنى)؛ Qdrant (295ms ← 180ms، أدنى زمن استجابة في جميع النطاقات). البحث الهجين + إعادة الترتيب يُسطّح المنحنى تماماً.',
         content:
-          '**أربع معماريات مقارنة على مجموعات بيانات متطابقة عند 100 و1,000 و10,000 مستند.** إعداد الاختبار: ملفات PDF بحثية بمتوسط 12 صفحة لكل منها (~120,000 صفحة عند 10,000 مستند). الأجهزة: NVIDIA RTX 4070 (12 GB VRAM، 32 GB RAM للنظام) على Windows 11؛ مُتحقَّق منه على M5 MacBook Pro (32 GB موحد). النموذج: Llama 3.3 8B Q4_K_M عبر Ollama. أداة التضمين: nomic-embed-text-v1.5. جميع الأرقام متوسطات ثلاث جلسات بعد الإحماء.',
+          '**أربع معماريات مقارنة على مجموعات بيانات متطابقة عند 100 و1,000 و10,000 مستند.** إعداد الاختبار: ملفات PDF بحثية بمتوسط 12 صفحة لكل منها (~120,000 صفحة عند 10,000 مستند). الأجهزة: NVIDIA RTX 4070 (12 GB VRAM، 32 GB RAM للنظام) على Windows 11؛ مُتحقَّق منه على M5 MacBook Pro (32 GB موحد). النموذج: Qwen3 8B Q4_K_M عبر Ollama. أداة التضمين: nomic-embed-text-v1.5. جميع الأرقام متوسطات ثلاث جلسات بعد الإحماء.',
         columns: [
           'المعمارية',
           'تعقيد الإعداد',
@@ -4910,7 +4919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**الخيار الأقل احتكاكاً الذي لا يزال يُدير مجموعة شخصية من 1,000 مستند عند ضبطه بشكل صحيح.** يشمل تطبيق AnythingLLM Desktop قاعدة LanceDB مدمجة ويحلّل PDF/DOCX/MD بشكل أصلي ويتواصل مع Ollama كمزود LLM. تفشل الإعدادات الافتراضية عند حوالي 500 مستند؛ الضبط التالي يرفعه إلى 2,000–3,000.',
         items: [
-          '**النموذج:** Llama 3.3 8B Q4_K_M عبر Ollama (5 GB RAM أثناء الاستدلال). على الأنظمة بـ 24 GB+، يُحسِّن Qwen 3 14B Q4 التوليف بشكل ملحوظ.',
+          '**النموذج:** Qwen3 8B Q4_K_M عبر Ollama (5 GB RAM أثناء الاستدلال). على الأنظمة بـ 32 GB+، يُحسِّن Qwen3-30B-A3B Q4 (~19 GB) التوليف بشكل ملحوظ.',
           '**أداة التضمين:** غيّر من أداة التضمين الافتراضية لـ AnythingLLM إلى nomic-embed-text-v1.5 عبر Ollama. أداة التضمين الافتراضية هي السبب الرئيسي لتقارير "AnythingLLM لا يتوسع".',
           '**التقطيع:** 1,000 رمز مع تداخل 200 رمز، يُضبط لكل مساحة عمل في إعدادات Vector Database. الافتراضي 512/0 خاطئ لأي مجموعة أكبر من بضع عشرات من المستندات.',
           '**Top-K:** ارفع من الافتراضي 4 إلى 6–8. مع 1,000 مستند، يكون أفضل مقطع في الغالب في الرتبة 5–7، والنموذج يستطيع تجاهل مقاطع ضعيفة أفضل مما يستطيع اختراع المفقودة.',
@@ -4936,7 +4945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الاستمرارية:** `index.storage_context.persist(persist_dir=...)` يحفظ كل شيء. وقت إعادة التحميل لفهرس من 5,000 مستند يتراوح بين 10 و30 ثانية على NVMe SSD.',
         ],
         codeBlock:
-          '# Minimal LlamaIndex local RAG with hierarchical indices (~30 lines)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="llama3.3:8b-instruct-q4_K_M", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Summary index for routing + chunk index for retrieval\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# At query time, route by question type\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "What sample size did Smith et al. use?"\n)\nprint(response)',
+          '# Minimal LlamaIndex local RAG with hierarchical indices (~30 lines)\nfrom llama_index.core import VectorStoreIndex, DocumentSummaryIndex, SimpleDirectoryReader\nfrom llama_index.embeddings.ollama import OllamaEmbedding\nfrom llama_index.llms.ollama import Ollama\nfrom llama_index.core import Settings\n\nSettings.llm = Ollama(model="qwen3:8b", request_timeout=120)\nSettings.embed_model = OllamaEmbedding(model_name="nomic-embed-text:latest")\nSettings.chunk_size = 1000\nSettings.chunk_overlap = 200\n\ndocs = SimpleDirectoryReader("./pdfs").load_data()\n\n# Summary index for routing + chunk index for retrieval\nsummary_index = DocumentSummaryIndex.from_documents(docs)\nchunk_index = VectorStoreIndex.from_documents(docs)\n\nsummary_index.storage_context.persist("./storage/summary")\nchunk_index.storage_context.persist("./storage/chunks")\n\n# At query time, route by question type\nresponse = chunk_index.as_query_engine(similarity_top_k=8).query(\n    "What sample size did Smith et al. use?"\n)\nprint(response)',
         codeLanguage: 'python',
       },
       optionChromaDB: {
@@ -4992,7 +5001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Qdrant 1.10+ وWeaviate يدعمان البحث الهجين بشكل أصلي. ChromaDB يتطلب إضافة Whoosh أو Tantivy. LanceDB له دعم هجين تجريبي لكن الواجهة البرمجية تتغير حتى مايو 2026 — راجع التوثيق الحالي قبل الالتزام. الهجين الأصلي يُبرر اختيار مخزن المتجهات.',
+            text: 'Qdrant 1.10+ وWeaviate يدعمان البحث الهجين بشكل أصلي. ChromaDB يتطلب إضافة Whoosh أو Tantivy. LanceDB له دعم هجين تجريبي لكن الواجهة البرمجية تتغير حتى أغسطس 2026 — راجع التوثيق الحالي قبل الالتزام. الهجين الأصلي يُبرر اختيار مخزن المتجهات.',
           },
         ],
       },
@@ -5002,7 +5011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**أداة إعادة الترتيب هي مُشفِّر تقاطع صغير يُدرِّج أزواج (استعلام، مرشح) بشكل مشترك بدلاً من بشكل مستقل. شغّلها على أفضل 25–50 مرشحاً من البحث الهجين لتصحيح حالات الفشل "مستند صحيح، مقطع خاطئ".** أعلى رافعة جودة فردية بين 5,000 و50,000 مستند.',
         items: [
-          '**BGE-reranker-v2-m3** (~570 MB، متعدد اللغات، Apache 2.0) هو الخيار الافتراضي في مايو 2026. يعمل بـ 50–100 مرشح/ثانية على CPU حديث؛ 400+ /ثانية على GPU. تكلفة زمن الاستجابة لإعادة ترتيب أفضل 50 هي ~200–500 ms على CPU، ~80–150 ms على GPU.',
+          '**BGE-reranker-v2-m3** (~570 MB، متعدد اللغات، Apache 2.0) هو الخيار الافتراضي في أغسطس 2026. يعمل بـ 50–100 مرشح/ثانية على CPU حديث؛ 400+ /ثانية على GPU. تكلفة زمن الاستجابة لإعادة ترتيب أفضل 50 هي ~200–500 ms على CPU، ~80–150 ms على GPU.',
           '**لماذا تتفوق المُشفِّرات التقاطعية في الاسترجاع:** التضمينات الكثيفة تُشفِّر الاستعلام والمستند بشكل مستقل لذا لا يراهما النموذج معاً أبداً. مُشفِّر تقاطع يقرأ `[CLS] استعلام [SEP] مرشح [SEP]` بشكل مشترك ويُدرِّج الزوج مباشرةً. يقفز Recall@5 عادةً 15–25 نقطة.',
           '**أين تحقن أداة إعادة الترتيب:** بعد البحث الهجين وقبل النموذج. خذ أفضل 50 من الهجين، أعِد الترتيب إلى أفضل 6–8، وأرسل تلك للنموذج كسياق.',
           '**بديل — Cohere Rerank API:** جودة أعلى لكن يتطلب استدعاءً سحابياً. للمكدسات المحلية بالكامل، BGE-reranker-v2-m3 هو الافتراضي العملي. mxbai-rerank-base-v2 مرشح بديل قوي.',
@@ -5018,7 +5027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**حقول الحمولة الشاملة لملء في وقت الفهرسة:** `source_filename` و`page_number` و`document_type` (مقال / عقد / ملاحظة / ويكي) و`author` و`year` و`language` بالإضافة إلى علامات خاصة بالمجال (مثل `case_number` و`project_id` و`client_id`).',
           '**التصفية المسبقة في وقت الاستعلام:** "ما الذي قالته محاضر مجلس الإدارة للربع الثالث 2024 عن التسعير؟" ← صفِّ `document_type=board_minutes AND year=2024 AND quarter=3` أولاً، ثم بحث بالمتجه داخل ~12 مستند بدلاً من 10,000.',
           '**دعم مخزن المتجهات:** تدعم حمولات Qdrant وخصائص Weaviate وبيانات وصف ChromaDB وأعمدة مخطط LanceDB جميعها التصفية. يتفاوت الأداء — تصفية حمولة Qdrant على حقول مفهرسة أقل من ميلي ثانية؛ تصفية بيانات وصف ChromaDB على أكثر من 100,000 مقطع قد تضيف 50–150 ms.',
-          '**الاستخراج التلقائي للبيانات الوصفية:** للمجموعات القانونية، خطوة نموذج صغيرة في وقت الفهرسة يمكنها استخراج أرقام القضايا والتواريخ وأسماء الأطراف لكل مستند. تكلف ~30 ثانية لكل مستند على Llama 3.3 8B؛ تُشغَّل مرة واحدة لكل استيعاب.',
+          '**الاستخراج التلقائي للبيانات الوصفية:** للمجموعات القانونية، خطوة نموذج صغيرة في وقت الفهرسة يمكنها استخراج أرقام القضايا والتواريخ وأسماء الأطراف لكل مستند. تكلف ~30 ثانية لكل مستند على Qwen3 8B؛ تُشغَّل مرة واحدة لكل استيعاب.',
           '**دمج مع البحث الهجين:** تصفية الحمولة تُقلص الكون ← استرجاع BM25 + كثيف داخل المجموعة المصفاة ← إعادة الترتيب. تصفية الحمولة هي أرخص تسريع 5–10 أضعاف في أي نظام RAG كبير.',
         ],
       },
@@ -5028,7 +5037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**يحافظ الاسترجاع الهرمي على فهرسين — فهرس ملخصات لكل مستند وفهرس مقاطع — ويوجّه الاستعلامات عبر كليهما. بحث الملخصات يجد المستندات الصحيحة؛ بحث المقاطع يجد المقاطع الصحيحة داخلها.** يُقلص الضوضاء في استعلامات التوليف؛ غير ضروري إلى حد بعيد لاسترجاع الحقائق.',
         items: [
-          '**ملخصات لكل مستند:** في وقت الفهرسة، اطلب من النموذج كتابة ملخص من 100–200 رمز لكل مستند. أنشئ تضمينات تلك الملخصات في مجموعة `summaries` منفصلة. التكلفة ~30–90 ثانية لكل مستند على Llama 3.3 8B.',
+          '**ملخصات لكل مستند:** في وقت الفهرسة، اطلب من النموذج كتابة ملخص من 100–200 رمز لكل مستند. أنشئ تضمينات تلك الملخصات في مجموعة `summaries` منفصلة. التكلفة ~30–90 ثانية لكل مستند على Qwen3 8B.',
           '**الاسترجاع على مرحلتين:** (1) أنشئ تضمين الاستعلام، ابحث في `summaries`، خذ أفضل 5 مستندات؛ (2) داخل تلك المستندات الخمسة، استرجع أفضل 8 مقاطع عبر بحث هجين؛ (3) طبّق إعادة الترتيب إن لزم؛ (4) أرسل للنموذج.',
           '**متى يُفيد أكثر:** استعلامات التوليف والمتعددة المستندات ("قارن كيف تتناول هذه المقالات X"). استرجاع الحقائق ("ما القيمة التي أفادت بها Smith؟") يعمل جيداً بفهرس المقاطع فقط — الانحراف عبر الملخص يضيف زمن استجابة بدون مكسب جودة.',
           '**مقايضة التكلفة:** يضاعف تخزين الفهرس (الملخصات صغيرة لكن الفهرس نفسه بنية تحتية مضاعفة). يضاعف زمن الاستجابة للاستعلامات غير الموجَّهة. المكسب في تقليص الضوضاء من 10,000+ مستند.',
@@ -5246,7 +5255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description':
         'دليل قرار لتوسيع RAG المحلي من 1,000 إلى 10,000+ ملف PDF. مقارنة المعماريات وقياسات موثوقة والتحسينات الأربعة (بحث هجين وإعادة ترتيب وتصفية بيانات وصفية واسترجاع هرمي) التي تُزيل منحدر التوسع.',
       'datePublished': '2026-05-07',
-      'dateModified': '2026-05-07',
+      'dateModified': '2026-08-27',
       'url': 'https://www.promptquorum.com/ar/power-local-llm/chat-with-1000-pdfs-locally',
       'author': {
         '@type': 'Person',
