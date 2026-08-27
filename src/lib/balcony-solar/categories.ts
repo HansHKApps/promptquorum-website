@@ -16,8 +16,8 @@ export const BALCONY_SOLAR_CATEGORIES: BalconySolarCategory[] = [
   {
     id: 'hub-money',
     slug: 'hub-money',
-    titleEn: 'Hub + Core Money Pages',
-    descriptionEn: 'The cluster anchor and the primary buyer-intent guides: what balcony solar is, the best kits, batteries, and micro-inverters, and running it all without the cloud.',
+    titleEn: 'Start Here',
+    descriptionEn: 'The basics and the main buying guides: what balcony solar is, the best kits, batteries, and micro-inverters, and running it all without the cloud.',
     articleSlugs: [
       'what-is-balcony-solar',
       'best-balcony-solar-kits-2026',
@@ -30,7 +30,7 @@ export const BALCONY_SOLAR_CATEGORIES: BalconySolarCategory[] = [
     id: 'decision-howto',
     slug: 'decision-howto',
     titleEn: 'Decision & How-To',
-    descriptionEn: 'Mid-funnel guides: balcony vs rooftop, installation, registration, sizing and payback, and mounting.',
+    descriptionEn: 'Practical guides: balcony vs rooftop, installation, registration, sizing and payback, and mounting.',
     articleSlugs: [
       'balcony-vs-rooftop-solar',
       'how-to-install-balcony-solar',
@@ -42,7 +42,7 @@ export const BALCONY_SOLAR_CATEGORIES: BalconySolarCategory[] = [
   {
     id: 'legislation',
     slug: 'legislation',
-    titleEn: 'Legislation Moat',
+    titleEn: 'Rules by Country',
     descriptionEn: 'Per-country legal status: the global tracker plus dedicated pages for the US, Germany, the UK, Spain/LatAm, Portugal/Brazil, and the Gulf/MENA region.',
     articleSlugs: [
       'is-balcony-solar-legal-country-guide',
@@ -58,8 +58,8 @@ export const BALCONY_SOLAR_CATEGORIES: BalconySolarCategory[] = [
   {
     id: 'long-tail',
     slug: 'long-tail',
-    titleEn: 'Long-Tail & Conversion Support',
-    descriptionEn: 'Brand comparisons, battery need, payback worth-it framing, and troubleshooting.',
+    titleEn: 'Buying Help & Troubleshooting',
+    descriptionEn: 'Brand comparisons, whether you need a battery, whether the payback adds up, and fixes when your system stops producing.',
     articleSlugs: [
       'ecoflow-vs-anker-vs-zendure-balcony-solar',
       'do-you-need-a-battery-balcony-solar',
