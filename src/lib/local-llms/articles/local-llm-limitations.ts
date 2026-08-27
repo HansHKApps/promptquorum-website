@@ -9,7 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
-      next_refresh_due: '2026-12-21',
+      next_refresh_due: '2027-02-27',
       last_full_refresh: '2026-08-27',
       next_seo_review_due: '2026-10-01',
       last_seo_review: '2026-08-27',
@@ -78,7 +78,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Is local LLM faster than cloud API?',
-            acceptedAnswer: { '@type': 'Answer', text: 'No. Cloud APIs generate 80–150 tokens/sec. Local LLMs on CPU generate 10–25 tok/sec — 4–10× slower. GPU helps: NVIDIA RTX 4090 reaches 130–160 tok/sec, matching cloud, but costs $1,600+.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'No. Cloud APIs generate 80–150 tokens/sec. Local LLMs on CPU generate 10–25 tok/sec — 4–10× slower. GPU helps: NVIDIA RTX 4090 reaches 130–160 tok/sec, matching cloud, but costs $2,000–$2,600 on used market.' },
           },
           {
             '@type': 'Question',
@@ -301,7 +301,7 @@ schema: {
             '- ✓ YES → **Use cloud.** Local models have training cutoff.',
             '- ✗ NO → Next question.',
             '',
-            '**Q3: Can you afford 40+ GB of RAM or a $1,600+ GPU?**',
+            '**Q3: Can you afford 40+ GB of RAM or a $2,000–$2,600 used GPU?**',
             '- ✓ YES → **Use local 70B.** Quality matches cloud, zero ongoing costs.',
             '- ✗ NO → **Use cloud.** More practical than underpowered local.',
             '',
@@ -363,7 +363,7 @@ schema: {
           title: 'How Fast Are Local LLMs Compared to Cloud APIs?',
           content: [
             '**Cloud APIs process tokens on dedicated server hardware with NVIDIA H100 or A100 GPUs.** Consumer hardware -- even high-end laptops and desktop GPUs -- cannot match this throughput.',
-            'GPT-5.6 generates approximately 80-150 tokens/sec under typical load. A local 7B model on a modern laptop CPU generates 10-25 tokens/sec -- 4-10× slower. On an NVIDIA RTX 4090 (the fastest consumer GPU), the same 7B model reaches 130-160 tokens/sec -- comparable to cloud speed, but the hardware costs $1,600+.',
+            'GPT-5.6 generates approximately 80-150 tokens/sec under typical load. A local 7B model on a modern laptop CPU generates 10-25 tokens/sec -- 4-10× slower. On an NVIDIA RTX 4090 (the fastest consumer GPU, now discontinued), the same 7B model reaches 130-160 tokens/sec -- comparable to cloud speed, but the hardware costs $2,000–$2,600 on the used market (NVIDIA discontinued it in 2026).',
             'For interactive chat use, the speed difference is noticeable but tolerable at 20+ tok/sec. For batch processing (summarizing hundreds of documents), the speed gap becomes a significant constraint.',
           ],
           image: '/images/local-llm-limitations-speed-comparison-hero-en.webp',
@@ -578,7 +578,7 @@ schema: {
             },
             {
               q: 'Is local LLM faster than cloud API?',
-              a: 'No. Cloud APIs generate 80–150 tokens/sec. Local LLMs on CPU generate 10–25 tok/sec — 4–10× slower. GPU helps: NVIDIA RTX 4090 reaches 130–160 tok/sec, matching cloud, but costs $1,600+.',
+              a: 'No. Cloud APIs generate 80–150 tokens/sec. Local LLMs on CPU generate 10–25 tok/sec — 4–10× slower. GPU helps: NVIDIA RTX 4090 reaches 130–160 tok/sec, matching cloud, but costs $2,000–$2,600 on used market.',
             },
             {
               q: 'Is local LLM cheaper than cloud?',
@@ -608,7 +608,7 @@ schema: {
           items: [
             '**Expecting 7B models to match GPT-5.6:** They are 10–20% lower on reasoning. HumanEval: local 7B scores 45–55% vs GPT-5.6\'s 90%. Use 70B locally or cloud for complex tasks.',
             '**Ignoring hardware limits:** 16 GB RAM is the minimum for useful models. Below that, quality degrades significantly. Check [hardware requirements](/local-llms/local-llm-hardware-guide-2026) before starting.',
-            '**Assuming local = faster:** CPU inference is 4–10× slower (10–25 tok/sec vs 80–150 tok/sec cloud). Requires $1,600+ GPU to match cloud speed.',
+            '**Assuming local = faster:** CPU inference is 4–10× slower (10–25 tok/sec vs 80–150 tok/sec cloud). Requires $2,000–$2,600 GPU to match cloud speed.',
             '**Underestimating setup time:** Local setup takes 20–40 minutes. Cloud is 5 minutes. Add ongoing maintenance (updates, drivers) to your local cost calculation.',
           ],
         },
@@ -691,7 +691,7 @@ schema: {
           {
             '@type': 'Question',
             name: '¿Un LLM local es más rápido que una API en la nube?',
-            acceptedAnswer: { '@type': 'Answer', text: 'No. Las APIs en la nube generan 80–150 tokens/seg. Los LLMs locales en CPU generan 10–25 tok/seg — 4–10× más lento. Una GPU ayuda: la NVIDIA RTX 4090 alcanza 130–160 tok/seg, igualando a la nube, pero cuesta $1,600+.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'No. Las APIs en la nube generan 80–150 tokens/seg. Los LLMs locales en CPU generan 10–25 tok/seg — 4–10× más lento. Una GPU ayuda: la NVIDIA RTX 4090 alcanza 130–160 tok/seg, igualando a la nube, pero cuesta $2,000–$2,600 en mercado de segunda mano.' },
           },
           {
             '@type': 'Question',
@@ -865,7 +865,7 @@ schema: {
           title: '¿Qué tan rápidos son los LLMs locales frente a las APIs en la nube?',
           content: [
             '**Las APIs en la nube procesan tokens en hardware de servidor dedicado con GPUs NVIDIA H100 o A100.** El hardware de consumo — incluso los laptops y las GPUs de escritorio de alta gama — no puede igualar este rendimiento.',
-            'GPT-5.6 genera aproximadamente 80-150 tokens/seg bajo carga típica. Un modelo 7B local en una CPU moderna de laptop genera 10-25 tokens/seg — 4-10× más lento. En una NVIDIA RTX 4090 (la GPU de consumo más rápida), el mismo modelo 7B alcanza 130-160 tokens/seg — comparable a la velocidad de la nube, pero el hardware cuesta $1,600+.',
+            'GPT-5.6 genera aproximadamente 80-150 tokens/seg bajo carga típica. Un modelo 7B local en una CPU moderna de laptop genera 10-25 tokens/seg — 4-10× más lento. En una NVIDIA RTX 4090 (la GPU de consumo más rápida, ahora descontinuada), el mismo modelo 7B alcanza 130-160 tokens/seg — comparable a la velocidad de la nube, pero el hardware cuesta $2,000–$2,600 en el mercado de segunda mano.',
             'Para uso de chat interactivo, la diferencia de velocidad es notable pero tolerable a 20+ tok/seg. Para procesamiento por lotes (resumir cientos de documentos), la brecha de velocidad se convierte en una restricción significativa.',
           ],
           image: '/images/local-llm-limitations-speed-comparison-hero-es.webp',
@@ -1079,7 +1079,7 @@ schema: {
             },
             {
               q: '¿Un LLM local es más rápido que una API en la nube?',
-              a: 'No. Las APIs en la nube generan 80–150 tokens/seg. Los LLMs locales en CPU generan 10–25 tok/seg — 4–10× más lento. Una GPU ayuda: la NVIDIA RTX 4090 alcanza 130–160 tok/seg, igualando a la nube, pero cuesta $1,600+.',
+              a: 'No. Las APIs en la nube generan 80–150 tokens/seg. Los LLMs locales en CPU generan 10–25 tok/seg — 4–10× más lento. Una GPU ayuda: la NVIDIA RTX 4090 alcanza 130–160 tok/seg, igualando a la nube, pero cuesta $2,000–$2,600 en mercado de segunda mano.',
             },
             {
               q: '¿Un LLM local es más barato que la nube?',
@@ -1192,7 +1192,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'هل نموذج LLM المحلي أسرع من واجهة API السحابية؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'لا. تولِّد واجهات API السحابية 80–150 token/ثانية. تولِّد نماذج LLM المحلية على CPU سرعة 10–25 token/ثانية — أبطأ بـ 4–10×. تساعد GPU: تبلغ NVIDIA RTX 4090 سرعة 130–160 token/ثانية، مجارية السحابة، لكنها تكلف $1,600+.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'لا. تولِّد واجهات API السحابية 80–150 token/ثانية. تولِّد نماذج LLM المحلية على CPU سرعة 10–25 token/ثانية — أبطأ بـ 4–10×. تساعد GPU: تبلغ NVIDIA RTX 4090 سرعة 130–160 token/ثانية، مجارية السحابة، لكنها تكلف $2,000–$2,600 في سوق المستعملة.' },
           },
           {
             '@type': 'Question',
@@ -1366,7 +1366,7 @@ schema: {
           title: 'ما مدى سرعة نماذج LLM المحلية مقابل واجهات API السحابية؟',
           content: [
             '**تعالج واجهات API السحابية الـ token على أجهزة خادم مخصصة بوحدات GPU من نوع NVIDIA H100 أو A100.** لا يمكن لأجهزة المستهلك — حتى اللابتوبات ووحدات GPU المكتبية الراقية — مجاراة هذا الأداء.',
-            'يولِّد GPT-5.6 نحو 80-150 token/ثانية تحت حمل نموذجي. يولِّد نموذج 7B محلي على CPU لابتوب حديث سرعة 10-25 token/ثانية — أبطأ بـ 4-10×. على NVIDIA RTX 4090 (أسرع GPU استهلاكية)، يبلغ نموذج 7B نفسه سرعة 130-160 token/ثانية — مكافئ لسرعة السحابة، لكن الأجهزة تكلف $1,600+.',
+            'يولِّد GPT-5.6 نحو 80-150 token/ثانية تحت حمل نموذجي. يولِّد نموذج 7B محلي على CPU لابتوب حديث سرعة 10-25 token/ثانية — أبطأ بـ 4-10×. على NVIDIA RTX 4090 (أسرع GPU استهلاكية، الآن متوقفة)، يبلغ نموذج 7B نفسه سرعة 130-160 token/ثانية — مكافئ لسرعة السحابة، لكن الأجهزة تكلف $2,000–$2,600 في السوق الثانوية.',
             'للاستخدام التفاعلي في المحادثة، يكون فرق السرعة ملحوظًا لكنه محتمل عند 20+ token/ثانية. للمعالجة على دفعات (تلخيص مئات المستندات)، تصبح فجوة السرعة قيدًا كبيرًا.',
           ],
           image: '/images/local-llm-limitations-speed-comparison-hero-ar.webp',
@@ -1580,7 +1580,7 @@ schema: {
             },
             {
               q: 'هل نموذج LLM المحلي أسرع من واجهة API السحابية؟',
-              a: 'لا. تولِّد واجهات API السحابية 80–150 token/ثانية. تولِّد نماذج LLM المحلية على CPU سرعة 10–25 token/ثانية — أبطأ بـ 4–10×. تساعد GPU: تبلغ NVIDIA RTX 4090 سرعة 130–160 token/ثانية، مجارية السحابة، لكنها تكلف $1,600+.',
+              a: 'لا. تولِّد واجهات API السحابية 80–150 token/ثانية. تولِّد نماذج LLM المحلية على CPU سرعة 10–25 token/ثانية — أبطأ بـ 4–10×. تساعد GPU: تبلغ NVIDIA RTX 4090 سرعة 130–160 token/ثانية، مجارية السحابة، لكنها تكلف $2,000–$2,600 في السوق الثانوية.',
             },
             {
               q: 'هل نموذج LLM المحلي أرخص من السحابة؟',
@@ -1718,7 +1718,7 @@ schema: {
             },
             {
               q: 'O LLM local é mais rápido do que uma API na nuvem?',
-              a: 'Não. APIs na nuvem geram 80–150 tokens/s. LLMs locais na CPU geram 10–25 tok/s — de 4 a 10 vezes mais lento. A GPU ajuda: a NVIDIA RTX 4090 atinge 130–160 tok/s, equiparando-se à nuvem, mas custa US$ 1.600 ou mais.',
+              a: 'Não. APIs na nuvem geram 80–150 tokens/s. LLMs locais na CPU geram 10–25 tok/s — de 4 a 10 vezes mais lento. A GPU ajuda: a NVIDIA RTX 4090 atinge 130–160 tok/s, equiparando-se à nuvem, mas custa US$ 2.000–US$ 2.600 no mercado de segunda mão.',
             },
             {
               q: 'O LLM local é mais barato do que a nuvem?',
@@ -1858,7 +1858,7 @@ schema: {
             name: 'Was kostet ein lokales Modell?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Kostenlos zum Download und Ausführen (Ollama ist kostenlos). Hardware ist teuer: GPU (RTX 4090) = 2.310 €+, Mac Studio = 2.999 €+ (M5 Max, Stand August 2026; die Spitzenkonfiguration mit 512 GB, M5 Ultra, startet ab 6.599 €). Cloud APIs: $0,01–0,10 pro 1.000 Token. Für kleine bis mittlere Volumen ist Cloud günstiger; für hochfrequente Nutzung kann lokale Hardware rentabel sein.'
+              text: 'Kostenlos zum Download und Ausführen (Ollama ist kostenlos). Hardware ist teuer: GPU (RTX 4090, seit 2026 ausgelaufen) = 2.900–3.800 €+ auf dem Gebrauchtmarkt, Mac Studio = 2.999 €+ (M5 Max, Stand August 2026; die Spitzenkonfiguration mit 512 GB, M5 Ultra, startet ab 6.599 €). Cloud APIs: €0,01–0,10 pro 1.000 Token. Für kleine bis mittlere Volumen ist Cloud günstiger; für hochfrequente Nutzung kann lokale Hardware rentabel sein.'
             }
           },
           {
@@ -1914,7 +1914,7 @@ schema: {
             name: 'Ist lokales LLM schneller als Cloud API?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Nein. Cloud APIs erzeugen 80–150 Token/s. Lokale LLMs auf CPU erzeugen 10–25 Token/s — 4–10× langsamer. GPU hilft: NVIDIA RTX 4090 erreicht 130–160 Token/s, entspricht Cloud, kostet aber 2.310 €+.'
+              text: 'Nein. Cloud APIs erzeugen 80–150 Token/s. Lokale LLMs auf CPU erzeugen 10–25 Token/s — 4–10× langsamer. GPU hilft: NVIDIA RTX 4090 erreicht 130–160 Token/s, entspricht Cloud, kostet aber 2.900–3.800 € auf dem Gebrauchtmarkt.'
             }
           },
           {
@@ -2060,7 +2060,7 @@ schema: {
             '- ✓ JA → **Nutzen Sie Cloud.** Lokale Modelle haben Stichtag-Limit.',
             '- ✗ NEIN → Nächste Frage.',
             '',
-            '**F3: Können Sie sich 40+ GB RAM oder eine 2.310 €+ GPU leisten?**',
+            '**F3: Können Sie sich 40+ GB RAM oder eine 2.900–3.800 € GPU (Gebraucht) leisten?**',
             '- ✓ JA → **Nutzen Sie lokales 70B.** Qualität entspricht Cloud, null fortlaufende Kosten.',
             '- ✗ NEIN → **Nutzen Sie Cloud.** Praktischer als schwaches Lokal-Setup.',
             '',
@@ -2136,7 +2136,7 @@ schema: {
         },
         hardware: {
           title: 'Grenze 3: Hardware — 16–40 GB RAM minimum',
-          content: 'Lokale Modelle brauchen RAM. Eine 7B-Quantisierung (Q4_K_M) benötigt ~4 GB; eine 70B benötigt ~40 GB. Dazu kommt OS, Systemspeicher, Kontextfenster = mindestens 16 GB RAM sind praktisches Minimum. Das ist teuer (GPU: 2.310 €+, Mac Studio: 2.999 €+ für das M5-Max-Basismodell, Stand August 2026).',
+          content: 'Lokale Modelle brauchen RAM. Eine 7B-Quantisierung (Q4_K_M) benötigt ~4 GB; eine 70B benötigt ~40 GB. Dazu kommt OS, Systemspeicher, Kontextfenster = mindestens 16 GB RAM sind praktisches Minimum. Das ist teuer (GPU: 2.900–3.800 €+ Gebraucht, Mac Studio: 2.999 €+ für das M5-Max-Basismodell, Stand August 2026).',
           image: '/images/local-llm-limitations-hardware-requirements-de.svg',
           imageCaption: 'Hardware-Anforderungen für lokale LLMs: RAM, VRAM und Speicherbedarf je Modellgröße (7B bis 70B).',
         },
@@ -2282,7 +2282,7 @@ schema: {
             { 'Kriterium': 'Einrichtungszeit', 'Lokal (Ollama/LM Studio)': '20–40 Minuten', 'Cloud (OpenAI/Anthropic)': '5 Minuten' },
             { 'Kriterium': 'Datenschutz', 'Lokal (Ollama/LM Studio)': '100% privat (DSGVO-OK)', 'Cloud (OpenAI/Anthropic)': 'DPA erforderlich' },
             { 'Kriterium': 'Verfügbarkeit', 'Lokal (Ollama/LM Studio)': 'Keine SLA (fragil)', 'Cloud (OpenAI/Anthropic)': '99,9% SLA' },
-            { 'Kriterium': 'Kosten', 'Lokal (Ollama/LM Studio)': 'GPU 2.310 €+ (einmalig)', 'Cloud (OpenAI/Anthropic)': '$0,01–0,10 pro 1K Token' },
+            { 'Kriterium': 'Kosten', 'Lokal (Ollama/LM Studio)': 'GPU 2.900–3.800 € (Gebraucht)', 'Cloud (OpenAI/Anthropic)': '€0,01–0,10 pro 1K Token' },
             { 'Kriterium': 'Kontextfenster', 'Lokal (Ollama/LM Studio)': '4K–32K Token', 'Cloud (OpenAI/Anthropic)': '128K–200K Token' }
           ]
         },
@@ -2316,7 +2316,7 @@ schema: {
             },
             {
               q: 'Was kostet ein lokales Modell?',
-              a: 'Download kostenlos, Hardware teuer (2.310 €+ für GPU). Cloud: $0,01–0,10 pro 1.000 Token. Für kleine bis mittlere Volumen ist Cloud günstiger.'
+              a: 'Download kostenlos, Hardware teuer (2.900–3.800 € für GPU, Gebraucht). Cloud: €0,01–0,10 pro 1.000 Token. Für kleine bis mittlere Volumen ist Cloud günstiger.'
             },
             {
               q: 'Ollama oder LM Studio?',
@@ -2336,7 +2336,7 @@ schema: {
             },
             {
               q: 'Ist lokales LLM schneller als Cloud API?',
-              a: 'Nein. Cloud APIs erzeugen 80–150 Token/s. Lokale LLMs auf CPU erzeugen 10–25 Token/s — 4–10× langsamer. GPU hilft: NVIDIA RTX 4090 erreicht 130–160 Token/s, entspricht Cloud, kostet aber 2.310 €+.'
+              a: 'Nein. Cloud APIs erzeugen 80–150 Token/s. Lokale LLMs auf CPU erzeugen 10–25 Token/s — 4–10× langsamer. GPU hilft: NVIDIA RTX 4090 erreicht 130–160 Token/s, entspricht Cloud, kostet aber 2.900–3.800 € auf dem Gebrauchtmarkt.'
             },
             {
               q: 'Ist lokales LLM günstiger als Cloud?',
@@ -2512,7 +2512,7 @@ schema: {
             name: 'Quel est le coût d\'un LLM local ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Téléchargement gratuit et exécution gratuite (Ollama est gratuit). Matériel coûteux : GPU (RTX 4090) = 2 310 €+, Mac Studio = 2 999 €+ (M5 Max, situation en août 2026 ; la configuration haut de gamme de 512 Go, M5 Ultra, démarre à 6 599 €). Cloud APIs : 0.01–0.10 $ par 1.000 tokens. Pour volumes petits à moyens, Cloud est moins cher.'
+              text: 'Téléchargement gratuit et exécution gratuite (Ollama est gratuit). Matériel coûteux : GPU (RTX 4090, fin de vie) = 2 900–3 800 €+ marché de l\'occasion, Mac Studio = 2 999 €+ (M5 Max, situation en août 2026 ; la configuration haut de gamme de 512 Go, M5 Ultra, démarre à 6 599 €). Cloud APIs : 0,01–0,10 € par 1.000 tokens. Pour volumes petits à moyens, Cloud est moins cher.'
             }
           },
           {
@@ -2552,7 +2552,7 @@ schema: {
             name: 'Un LLM local est-il plus rapide qu\'une Cloud API ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Non. Les APIs cloud génèrent 80–150 tokens/s. Les LLMs locaux sur CPU génèrent 10–25 tokens/s — 4–10× plus lents. Le GPU aide : NVIDIA RTX 4090 atteint 130–160 tokens/s, égale le cloud, mais coûte 2 310 €+.'
+              text: 'Non. Les APIs cloud génèrent 80–150 tokens/s. Les LLMs locaux sur CPU génèrent 10–25 tokens/s — 4–10× plus lents. Le GPU aide : NVIDIA RTX 4090 atteint 130–160 tokens/s, égale le cloud, mais coûte 2 900–3 800 € sur le marché de l\'occasion.'
             }
           },
           {
@@ -2698,7 +2698,7 @@ schema: {
             '- ✓ OUI → **Utilisez cloud.** Modèles locaux ont date limite entraînement.',
             '- ✗ NON → Question suivante.',
             '',
-            '**Q3 : Vous pouvez vous permettre 40+ GB RAM ou 2 310 €+ GPU ?**',
+            '**Q3 : Vous pouvez vous permettre 40+ GB RAM ou 2 900–3 800 € GPU (occasion) ?**',
             '- ✓ OUI → **Utilisez local 70B.** Qualité égale cloud, zéro coûts continus.',
             '- ✗ NON → **Utilisez cloud.** Plus pratique que local faible.',
             '',
@@ -3154,7 +3154,7 @@ schema: {
             name: 'ローカルLLMはいくら かかりますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '無料ダウンロード＆実行（Ollama は無料）。ハードウェア高い ： GPU（RTX 4090）= ¥270,000+、Mac Studio = ¥419,800+（M5 Max、2026年8月時点。512GBの最上位構成M5 Ultraは¥949,800から）。Cloud API ： 1,000トークン当たり $0.01–0.10。小～中規模ボリューム、Cloud がお得です。'
+              text: '無料ダウンロード＆実行（Ollama は無料）。ハードウェア高い ： GPU（RTX 4090、2026年に販売終了）= ¥337,000–¥438,000（中古市場）、Mac Studio = ¥419,800+（M5 Max、2026年8月時点。512GBの最上位構成M5 Ultraは¥949,800から）。Cloud API ： 1,000トークン当たり ¥1.7–1.7。小～中規模ボリューム、Cloud がお得です。'
             }
           },
           {
@@ -3194,7 +3194,7 @@ schema: {
             name: 'ローカルLLMはCloud APIより速いですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'いいえ。Cloud API は毎秒80–150トークン生成します。ローカルLLMのCPUは毎秒10–25トークン生成 —4–10倍遅い。GPUが役立つ ： NVIDIA RTX 4090は毎秒130–160トークンに達し、クラウドと並びますが、¥270,000+費用です。'
+              text: 'いいえ。Cloud API は毎秒80–150トークン生成します。ローカルLLMのCPUは毎秒10–25トークン生成 —4–10倍遅い。GPUが役立つ ： NVIDIA RTX 4090は毎秒130–160トークンに達し、クラウドと並びますが、¥337,000–¥438,000（中古市場）費用です。'
             }
           },
           {
@@ -3749,7 +3749,7 @@ schema: {
           { '@type': 'Question', name: '我能离线使用本地模型吗？', acceptedAnswer: { '@type': 'Answer', text: '可以，这是主要优势。下载后，一切在本地运行——不需要互联网。Cloud API始终需要网络连接，但提供自动更新和可用性保证。' } },
           { '@type': 'Question', name: '本地LLM的最大上下文窗口是多少？', acceptedAnswer: { '@type': 'Answer', text: '大多数本地模型支持4K–32K token上下文。Llama 3.3默认4K，但可扩展至32K。Cloud API提供更多：GPT-5.6 = 128K，Claude Sonnet 5 = 200K。大文档云更好。' } },
           { '@type': 'Question', name: '本地LLM需要GPU吗？', acceptedAnswer: { '@type': 'Answer', text: '不需要，但强烈推荐。CPU推理慢10–50倍。带GPU（RTX 4090、RTX 4070）可达50–160 token/秒。仅CPU：10–25 token/秒，实时聊天不可行。' } },
-          { '@type': 'Question', name: '本地LLM要花多少钱？', acceptedAnswer: { '@type': 'Answer', text: '免费下载和运行（Ollama免费）。硬件贵：GPU（RTX 4090）= $1,600+，Mac Studio = $2,499+（M5 Max起售价，截至2026年8月；顶配512GB的M5 Ultra起售价为$5,499）。Cloud API：每1,000 token $0.01–0.10。小到中等规模的云更便宜。' } },
+          { '@type': 'Question', name: '本地LLM要花多少钱？', acceptedAnswer: { '@type': 'Answer', text: '免费下载和运行（Ollama免费）。硬件贵：GPU（RTX 4090，2026年已停产）= $2,000–$2,600（二手市场），Mac Studio = $2,499+（M5 Max起售价，截至2026年8月；顶配512GB的M5 Ultra起售价为$5,499）。Cloud API：每1,000 token $0.01–0.10。小到中等规模的云更便宜。' } },
           { '@type': 'Question', name: '我应该用Ollama还是LM Studio？', acceptedAnswer: { '@type': 'Answer', text: 'Ollama是CLI，更快，易于自动化。LM Studio有GUI，适合初学者。生产和API：Ollama。探索性实验：LM Studio。两者运行相同的模型。' } },
           { '@type': 'Question', name: '我能在本地运行GPT-5.6吗？', acceptedAnswer: { '@type': 'Answer', text: '不能，OpenAI不提供GPT-5.6权重。GPT-5.6仅通过OpenAI API提供。本地开源替代方案（Llama 3.3 70B、Qwen 72B）提供类似质量（非完全相同）。GPT-5.6质量保证：Cloud API。' } },
           { '@type': 'Question', name: '设置本地LLM需要多长时间？', acceptedAnswer: { '@type': 'Answer', text: '总共20–40分钟。(1)安装Ollama/LM Studio：2–3分钟。(2)下载7B模型（4 GB）：5–10分钟。(3)配置GPU（可选，CUDA/Metal）：5–10分钟。Cloud API：从开始到第一次API调用5分钟。' } },
@@ -3766,7 +3766,7 @@ schema: {
             name: '本地LLM比云API快吗？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '不快。云API每秒生成80–150个token。本地LLM在CPU上每秒生成10–25个token——慢4–10倍。GPU帮助：NVIDIA RTX 4090达到每秒130–160个token，与云相当，但成本$1,600+。'
+              text: '不快。云API每秒生成80–150个token。本地LLM在CPU上每秒生成10–25个token——慢4–10倍。GPU帮助：NVIDIA RTX 4090达到每秒130–160个token，与云相当，但成本$2,000–$2,600（二手市场）。'
             }
           },
           {
@@ -4235,7 +4235,7 @@ schema: {
           {
             '@type': 'Question',
             name: '로컬 LLM이 클라우드 API보다 빠릅니까?',
-            acceptedAnswer: { '@type': 'Answer', text: '아닙니다. 클라우드 API는 초당 80~150 토큰을 생성합니다. CPU의 로컬 LLM은 초당 10~25 토큰을 생성하여 4~10배 느립니다. GPU를 사용하면 도움이 됩니다. NVIDIA RTX 4090은 초당 130~160 토큰에 도달하여 클라우드와 비슷한 수준이지만, 하드웨어 비용이 $1,600 이상 듭니다.' },
+            acceptedAnswer: { '@type': 'Answer', text: '아닙니다. 클라우드 API는 초당 80~150 토큰을 생성합니다. CPU의 로컬 LLM은 초당 10~25 토큰을 생성하여 4~10배 느립니다. GPU를 사용하면 도움이 됩니다. NVIDIA RTX 4090은 초당 130~160 토큰에 도달하여 클라우드와 비슷한 수준이지만, 하드웨어 비용이 $2,000~$2,600 (중고 시장)입니다.' },
           },
           {
             '@type': 'Question',
@@ -4623,7 +4623,7 @@ schema: {
             },
             {
               q: '로컬 LLM이 클라우드 API보다 빠릅니까?',
-              a: '아닙니다. 클라우드 API는 초당 80~150 토큰을 생성합니다. CPU의 로컬 LLM은 초당 10~25 토큰을 생성하여 4~10배 느립니다. GPU를 사용하면 도움이 됩니다. NVIDIA RTX 4090은 초당 130~160 토큰에 도달하여 클라우드와 비슷한 수준이지만, 하드웨어 비용이 $1,600 이상 듭니다.',
+              a: '아닙니다. 클라우드 API는 초당 80~150 토큰을 생성합니다. CPU의 로컬 LLM은 초당 10~25 토큰을 생성하여 4~10배 느립니다. GPU를 사용하면 도움이 됩니다. NVIDIA RTX 4090은 초당 130~160 토큰에 도달하여 클라우드와 비슷한 수준이지만, 하드웨어 비용이 $2,000~$2,600 (중고 시장)입니다.',
             },
             {
               q: '로컬 LLM이 클라우드보다 저렴합니까?',
