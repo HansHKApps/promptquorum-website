@@ -11,6 +11,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-05-07',
     dateModified: '2026-05-07',
     next_refresh_due: '2026-11-07',
+    last_full_refresh: '2026-08-27',
+    next_seo_review_due: '2026-10-01',
+    last_seo_review: '2026-08-27',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-en.webp',
     title: 'Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026',
@@ -439,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-08-27',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-de.webp',
@@ -790,7 +793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**DSGVO Art. 28 (Auftragsverarbeitung):** Bei einem Cloud-Agent ist der Anbieter Auftragsverarbeiter — mit AVV, technisch-organisatorischen Maßnahmen, Drittland-Bewertung und allem, was dazugehört. Bei einem lokalen MCP-Stack entfällt diese Vertragsbeziehung, weil keine personenbezogenen Daten an einen Dritten übermittelt werden.',
           '**BSI-Grundschutz-Kataloge:** Für Behörden und IT-Sicherheits-zertifizierte Organisationen passt der lokale Stack sauber in die Bausteine SYS.1.1 (Allgemeiner Server), SYS.1.5 (Virtualisierung) und APP.5.4 (Webanwendungen). Der Browser-Server ist hier der heikelste Baustein — separater User, eigener Network-Namespace, kein Zugriff auf Produktiv-Credentials.',
-          '**Mittelstand-Use Cases:** Steuerberatung, Notariat, Arztpraxis, Maschinenbau-Konstruktion, Personalakten — überall dort, wo Mandanten- oder Patientendaten nicht an OpenAI, Anthropic oder Google gehen dürfen. Ein Mac mini M5 oder ein Workstation-PC mit RTX 4090 reicht für ein 27B–32B-Modell, das Akten zusammenfasst, Verträge prüft oder Code-Snippets gegen interne Datenbanken testet.',
+          '**Mittelstand-Use Cases:** Steuerberatung, Notariat, Arztpraxis, Maschinenbau-Konstruktion, Personalakten — überall dort, wo Mandanten- oder Patientendaten nicht an OpenAI, Anthropic oder Google gehen dürfen. Ein Mac mini M6 oder ein Workstation-PC mit RTX 4090 reicht für ein 27B–32B-Modell, das Akten zusammenfasst, Verträge prüft oder Code-Snippets gegen interne Datenbanken testet.',
           '**Schweiz und Österreich:** revDSG (Schweiz, in Kraft seit September 2023) und das österreichische DSG verfolgen denselben Ansatz wie die DSGVO bezüglich Datenresidenz. Lokale Inferenz erfüllt die Anforderungen ohne zusätzliche Verträge mit US-Anbietern.',
           '**Audit-Trail-Pflichten:** Das Audit-Log des MCP-Clients (Goose, Cline, Continue.dev) ist Ihr primärer Nachweis, dass der Agent nichts Unerwartetes getan hat. Sichern Sie es revisionssicher auf einem WORM-Speicher oder zumindest in einem Git-Repository, das Sie nicht aus dem Agenten heraus überschreiben können.',
           '**Drittanbieter-Server prüfen.** Behandeln Sie jeden nicht-offiziellen MCP-Server wie jede andere Open-Source-Dependency: Code-Review vor dem Einsatz, keine geheimen Credentials in nicht geprüften Servern, keine Verbindung zu Produktivsystemen ohne Sandbox.',
@@ -871,7 +874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sind lokale MCP-Agenten für den deutschen Mittelstand geeignet?',
-            a: 'Ja, und der Mittelstand ist tatsächlich der Sektor mit dem klarsten Use Case. Steuerberatung, Notariat, Arztpraxen, Maschinenbau, Personalwesen — überall dort, wo Mandanten-, Patienten- oder Mitarbeiterdaten verarbeitet werden, ist die Cloud-Compliance-Hürde so hoch, dass viele Unternehmen LLM-Pilotprojekte komplett verschoben haben. Ein lokaler MCP-Stack auf einem Mac mini M5 oder einer Workstation mit RTX 4090 betreibt ein 27B–32B-Modell, das Akten zusammenfasst, Verträge gegen Vorlagen prüft oder Code-Snippets gegen interne Datenbanken testet — alles ohne Cloud-Aufruf. Die BSI-Grundschutz-Bausteine (SYS.1.1, APP.5.4) sind anwendbar; der Browser-Server ist der heikelste Punkt und sollte separat gehärtet werden (eigener User, kein Zugriff auf Produktiv-Credentials). Audit-Logs revisionssicher speichern. Ein externer Datenschutzbeauftragter sollte die Einrichtung einmal abnehmen, danach läuft der Stack so wartungsarm wie eine interne Datenbank.',
+            a: 'Ja, und der Mittelstand ist tatsächlich der Sektor mit dem klarsten Use Case. Steuerberatung, Notariat, Arztpraxen, Maschinenbau, Personalwesen — überall dort, wo Mandanten-, Patienten- oder Mitarbeiterdaten verarbeitet werden, ist die Cloud-Compliance-Hürde so hoch, dass viele Unternehmen LLM-Pilotprojekte komplett verschoben haben. Ein lokaler MCP-Stack auf einem Mac mini M6 oder einer Workstation mit RTX 4090 betreibt ein 27B–32B-Modell, das Akten zusammenfasst, Verträge gegen Vorlagen prüft oder Code-Snippets gegen interne Datenbanken testet — alles ohne Cloud-Aufruf. Die BSI-Grundschutz-Bausteine (SYS.1.1, APP.5.4) sind anwendbar; der Browser-Server ist der heikelste Punkt und sollte separat gehärtet werden (eigener User, kein Zugriff auf Produktiv-Credentials). Audit-Logs revisionssicher speichern. Ein externer Datenschutzbeauftragter sollte die Einrichtung einmal abnehmen, danach läuft der Stack so wartungsarm wie eine interne Datenbank.',
           },
         ],
       },
@@ -892,7 +895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-08-27',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-fr.webp',
@@ -1243,7 +1246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "**RGPD et sous-traitance (Article 28) :** un agent cloud fait du fournisseur un sous-traitant — DPA, mesures techniques et organisationnelles, évaluation de transfert hors UE, tout le dossier. Une pile MCP locale supprime ce lien contractuel pour la couche LLM, parce qu'aucune donnée à caractère personnel n'est transmise à un tiers.",
           "**Recommandation CNIL :** la CNIL a publiquement encouragé l'inférence locale pour le traitement de données sensibles dans les secteurs santé, juridique et financier. Un agent MCP local sur une station Apple M5 ou un PC RTX 4090 répond aux exigences sans engager un fournisseur cloud.",
-          "**Cabinets et PME francophones :** expertise comptable, notariat, cabinets médicaux, ingénierie, RH — partout où des données client, patient ou salarié ne peuvent pas partir vers OpenAI, Anthropic ou Google. Un Mac mini M5 ou un PC workstation avec RTX 4090 fait tourner un modèle 27B–32B qui résume des dossiers, vérifie des contrats ou teste du code contre des bases internes.",
+          "**Cabinets et PME francophones :** expertise comptable, notariat, cabinets médicaux, ingénierie, RH — partout où des données client, patient ou salarié ne peuvent pas partir vers OpenAI, Anthropic ou Google. Un Mac mini M6 ou un PC workstation avec RTX 4090 fait tourner un modèle 27B–32B qui résume des dossiers, vérifie des contrats ou teste du code contre des bases internes.",
           "**Belgique et Suisse :** le RGPD belge et la nLPD suisse (en vigueur depuis septembre 2023) suivent la même logique de résidence des données. L'inférence locale satisfait les exigences sans contrat additionnel avec des fournisseurs américains.",
           "**Québec (Loi 25) :** la Loi modernisant les dispositions législatives en matière de protection des renseignements personnels impose une évaluation de facteurs relatifs à la vie privée pour tout transfert hors province. Une pile MCP locale élimine ce transfert pour la couche LLM.",
           "**Audit et journalisation :** le journal d'audit du client MCP (Goose, Cline, Continue.dev) est votre preuve principale que l'agent n'a fait que ce qui était attendu. Conservez-le sur un stockage WORM ou au minimum dans un dépôt Git que l'agent ne peut pas écraser depuis ses propres outils.",
@@ -1337,7 +1340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-08-27',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-ja.webp',
@@ -1688,7 +1691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**METI AI ガバナンス 2024：** 経済産業省の AI ガバナンスガイドラインは、特に金融、医療、法務など規制業界での AI 利用において、データ保護とトレーサビリティを求めています。ローカル MCP スタックは外部データ送信を排除し、監査ログでトレーサビリティを担保するため、これらの要件にクリーンに整合します。',
           '**個人情報保護法（APPI）：** 顧客データや従業員データをクラウド AI プロバイダーに送るには、第三者提供の同意とリスク評価が必要です。ローカル推論ではこの第三者提供自体が発生せず、契約上の負担と説明責任が大幅に軽減されます。',
-          '**日本企業のユースケース：** 法律事務所、税理士法人、医療機関、製造業の設計部門、人事 — クライアント・患者・従業員データを OpenAI、Anthropic、Google に送れない領域すべて。Apple M5 Mac mini や RTX 4090 搭載ワークステーションで 27B–32B モデルが動き、書類要約、契約レビュー、社内データベースに対するコード片の検証ができます。',
+          '**日本企業のユースケース：** 法律事務所、税理士法人、医療機関、製造業の設計部門、人事 — クライアント・患者・従業員データを OpenAI、Anthropic、Google に送れない領域すべて。Apple M6 Mac mini や RTX 4090 搭載ワークステーションで 27B–32B モデルが動き、書類要約、契約レビュー、社内データベースに対するコード片の検証ができます。',
           '**東アジアのデータ越境：** 日本、シンガポール、マレーシア、韓国はそれぞれ独自のデータ residency 枠組みを持ち、APAC 全域へのクロスボーダー転送には個別の評価が必要です。ローカル推論はこの転送を完全に回避し、東アジアでの multi-region 展開時のコンプライアンス負担を取り除きます。',
           '**日本の中堅企業（中小企業）：** 大企業向けに作られたクラウド AI 契約は、中小企業にとってはコスト・契約レビュー両面でハードルが高いケースが多く、PoC が頓挫しがちです。ローカル MCP スタックは設備投資 1 回（マシン代）のみで月額課金なし、契約も社内のみで完結します。',
           '**監査と説明責任：** MCP クライアントの監査ログ（Goose、Cline、Continue.dev）は「エージェントが想定外の操作をしていないこと」を示す主たる証拠になります。WORM ストレージや、エージェント自身からは上書き不可能な Git リポジトリに保存してください。日本の監査文化との親和性は高いです。',
@@ -1769,7 +1772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ローカル MCP エージェントで日本企業のセキュリティ要件を満たせますか？',
-            a: 'はい、特にデータ residency と第三者監査の観点で適合性が高いです。日本企業のセキュリティ標準（金融機関の FISC、医療機関の 3 省 2 ガイドライン、製造業の社内 ISMS）はいずれも、機密データを扱うシステムについて「外部送信の有無」「アクセス制御」「監査ログ」を中心評価項目に置いています。ローカル MCP スタックでは、Apple M5 Mac mini や RTX 4090 搭載ワークステーションでモデル、MCP クライアント、すべてのサーバーが同一マシン上で動作するため、外部送信は発生しません。アクセス制御は filesystem サーバーの allow-list、Postgres ロール、GitHub PAT の fine-grained scope で多層化できます。監査ログは MCP クライアント側で自動収集され、WORM ストレージや内部 Git リポジトリに保管できます。中堅企業（中小企業）にとっては、月額課金なしで PoC を社内完結できる点も大きな利点です。',
+            a: 'はい、特にデータ residency と第三者監査の観点で適合性が高いです。日本企業のセキュリティ標準（金融機関の FISC、医療機関の 3 省 2 ガイドライン、製造業の社内 ISMS）はいずれも、機密データを扱うシステムについて「外部送信の有無」「アクセス制御」「監査ログ」を中心評価項目に置いています。ローカル MCP スタックでは、Apple M6 Mac mini や RTX 4090 搭載ワークステーションでモデル、MCP クライアント、すべてのサーバーが同一マシン上で動作するため、外部送信は発生しません。アクセス制御は filesystem サーバーの allow-list、Postgres ロール、GitHub PAT の fine-grained scope で多層化できます。監査ログは MCP クライアント側で自動収集され、WORM ストレージや内部 Git リポジトリに保管できます。中堅企業（中小企業）にとっては、月額課金なしで PoC を社内完結できる点も大きな利点です。',
           },
         ],
       },
@@ -1790,7 +1793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-08-27',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/local-ai-agents-with-mcp-2026-overview-hero-zh.webp',
@@ -2142,7 +2145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**《数据安全法》(2021)：** 数据分级分类与重要数据出境评估是云端 AI 部署的核心障碍。本地 MCP 栈不产生数据出境行为，重要数据始终留在企业内网，对应「分级分类」中较高级别数据可在不触发出境评估的前提下使用 LLM 能力。',
           '**《个人信息保护法》(PIPL)：** PIPL 第 23 条对个人信息委托处理与第三方提供有严格要求；第 38 条对跨境提供个人信息额外要求安全评估或单独同意。本地推理消除了 LLM 层的第三方处理者关系，简化了与 OpenAI、Anthropic、Google 等境外 AI 服务商相关的合规路径。',
           '**《网络安全法》与等保（MLPS 2.0）：** 关键信息基础设施运营者与三级以上系统须满足数据本地化与日志可审计要求。本地 MCP 客户端的审计日志（Goose、Cline、Continue.dev）与等保审计要求天然契合，可作为 tool call 行为的主要证据存档。',
-          '**中国企业实际应用场景：** 银行（信贷材料分析）、医院（病历摘要）、律师事务所（合同审阅）、制造业（图纸辅助设计）、政府机关（公文助理）——所有「客户/患者/公民数据不能出企业」的场景都适用。Apple M5 Mac mini 或搭载 RTX 4090 的工作站可运行 27B–32B 模型，覆盖摘要、合规检查、内部数据库代码片段验证等核心需求。',
+          '**中国企业实际应用场景：** 银行（信贷材料分析）、医院（病历摘要）、律师事务所（合同审阅）、制造业（图纸辅助设计）、政府机关（公文助理）——所有「客户/患者/公民数据不能出企业」的场景都适用。Apple M6 Mac mini 或搭载 RTX 4090 的工作站可运行 27B–32B 模型，覆盖摘要、合规检查、内部数据库代码片段验证等核心需求。',
           '**头部互联网公司参考：** 阿里巴巴、腾讯、华为、字节跳动、百度等对自研模型与外部模型混用早有实践；本地 MCP 协议层为「内部模型 + 内部数据」组合提供了一套与云端方案 wire 兼容的工具栈，便于在内外部环境之间迁移工具实现而不重写。',
           '**注意事项：** 浏览器服务器是合规上最敏感的组件，建议为其单独建立网络隔离环境并禁止访问支付/办公等高影响系统；GitHub PAT 须改为企业内部 Git（GitLab/Gitea）的等价 token 并按仓库限定权限；审计日志须落入 WORM 存储或不可被智能体覆写的内部 Git 仓库以满足等保留存要求。',
         ],
