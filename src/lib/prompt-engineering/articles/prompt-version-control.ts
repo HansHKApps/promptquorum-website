@@ -8,13 +8,14 @@ const OG_SLUG = keyToSlug('prompt-version-control');
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-27',
     theme: 'Team Operations & Governance',
     heroImage: '/images/prompt-version-control-overview-hero-en.webp',
     title: 'Prompt Version Control: Tracking, Rollback & Team Workflows',
     intro: 'Unversioned prompts fail silently — without a change history, there is no rollback path when a prompt update degrades output quality or breaks downstream parsers. Semantic versioning (MAJOR.MINOR.PATCH), git branch workflows, automated regression tests, and structured changelogs apply the same discipline to prompt management that software teams already use for code.',
     publishDate: '2026-04-30',
     dateModified: '2026-07-13',
-    lastFactChecked: '2026-04-30 — git, semver.org, Braintrust, PromptLayer verified',
+    lastFactChecked: '2026-08-27 — git, semver.org, Braintrust, PromptLayer, LangSmith, Vellum verified',
     educationalLevel: 'Advanced',
     audience: 'Developers managing LLM prompts in production, prompt engineers, engineering team leads',
     primaryTerm: 'Prompt Version Control',
@@ -361,10 +362,11 @@ jobs:
 
   de: {
     freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-27',
     theme: 'Team-Betrieb & Governance',
     heroImage: '/images/prompt-version-control-overview-hero-de.webp',
     title: 'Prompt-Versionskontrolle: Tracking, Rollback & Team-Workflows',
-    intro: 'Unveersionierte Prompts schlagen lautlos fehl — ohne Änderungshistorie gibt es keinen Rollback-Pfad, wenn ein Prompt-Update die Ausgabequalität verschlechtert oder nachgelagerte Parser beschädigt. Semantisches Versioning (MAJOR.MINOR.PATCH), Git-Branch-Workflows, automatisierte Regressionstests und strukturierte Changelogs wenden dieselbe Disziplin auf das Prompt-Management an, die Software-Teams bereits für Code einsetzen.',
+    intro: 'Unversionierte Prompts schlagen lautlos fehl — ohne Änderungshistorie gibt es keinen Rollback-Pfad, wenn ein Prompt-Update die Ausgabequalität verschlechtert oder nachgelagerte Parser beschädigt. Semantisches Versioning (MAJOR.MINOR.PATCH), Git-Branch-Workflows, automatisierte Regressionstests und strukturierte Changelogs wenden dieselbe Disziplin auf das Prompt-Management an, die Software-Teams bereits für Code einsetzen.',
     publishDate: '2026-04-30',
     dateModified: '2026-07-13',
     educationalLevel: 'Advanced',
@@ -399,7 +401,7 @@ jobs:
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Prompt-Versionskontrolle: Tracking, Rollback & Team-Workflows',
-      description: 'Unveersionierte Prompts schlagen lautlos fehl. MAJOR.MINOR.PATCH-Versioning und Git-Workflows auf jeden Prompt-Change anwenden – Rollback in Sekunden.',
+      description: 'Unversionierte Prompts schlagen lautlos fehl. MAJOR.MINOR.PATCH-Versioning und Git-Workflows auf jeden Prompt-Change anwenden – Rollback in Sekunden.',
       datePublished: '2026-04-30',
       dateModified: '2026-07-13',
       inLanguage: 'de',
@@ -687,6 +689,7 @@ jobs:
 
   es: {
     freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-27',
     theme: 'Team Operations & Governance',
     heroImage: '/images/prompt-version-control-overview-hero-es.webp',
     title: 'Control de versiones de prompts: seguimiento, rollback y flujos de trabajo en equipo',
@@ -1036,6 +1039,7 @@ jobs:
 
   ar: {
     freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-27',
     theme: 'Team Operations & Governance',
     heroImage: '/images/prompt-version-control-overview-hero-ar.webp',
     title: 'التحكم في إصدارات الموجّهات: التتبع والتراجع وسير عمل الفريق',
@@ -1385,6 +1389,7 @@ jobs:
 
   pt: {
     freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-27',
     theme: 'Operações e Governança de Equipe',
     heroImage: '/images/prompt-version-control-overview-hero-pt.webp',
     title: 'Controle de versão de prompts: rastreamento, rollback e fluxos de trabalho em equipe',
@@ -1507,11 +1512,11 @@ jobs:
         content: [
           '**O versionamento MAJOR.MINOR.PATCH indica a cada chamador se uma alteração de prompt é segura de adotar sem re-testar seu código posterior.** MAJOR significa que o formato de saída mudou (os parsers posteriores quebrarão). MINOR significa que a qualidade melhorou, mas o formato é estável. PATCH significa que apenas a redação ou a clareza mudou sem impacto no comportamento.',
         ],
-        columns: ['Tipo de alteração', 'Quando incrementar', 'Exemplo', 'Compatível com versões anteriores?'],
+        columns: ['Tipo de alteração', 'Quando incrementar', 'Exemplo', 'Retrocompatível?'],
         rows: [
-          { 'Tipo de alteração': 'MAJOR', 'Quando incrementar': 'O formato de saída muda — de JSON para markdown, novos campos obrigatórios, remoção de campos', 'Exemplo': 'v1.2.0 → v2.0.0', 'Compatível com versões anteriores?': 'Não — atualize todos os chamadores' },
-          { 'Tipo de alteração': 'MINOR', 'Quando incrementar': 'Melhoria de qualidade, otimização de latência, melhor seguimento de instruções', 'Exemplo': 'v1.2.0 → v1.3.0', 'Compatível com versões anteriores?': 'Sim — seguro de adotar' },
-          { 'Tipo de alteração': 'PATCH', 'Quando incrementar': 'Correção de erro tipográfico, esclarecimento, redação menor que não altera o comportamento do modelo', 'Exemplo': 'v1.2.0 → v1.2.1', 'Compatível com versões anteriores?': 'Sim — sem alteração de comportamento esperada' },
+          { 'Tipo de alteração': 'MAJOR', 'Quando incrementar': 'O formato de saída muda — de JSON para markdown, novos campos obrigatórios, remoção de campos', 'Exemplo': 'v1.2.0 → v2.0.0', 'Retrocompatível?': 'Não — atualize todos os chamadores' },
+          { 'Tipo de alteração': 'MINOR', 'Quando incrementar': 'Melhoria de qualidade, otimização de latência, melhor seguimento de instruções', 'Exemplo': 'v1.2.0 → v1.3.0', 'Retrocompatível?': 'Sim — seguro de adotar' },
+          { 'Tipo de alteração': 'PATCH', 'Quando incrementar': 'Correção de erro tipográfico, esclarecimento, redação menor que não altera o comportamento do modelo', 'Exemplo': 'v1.2.0 → v1.2.1', 'Retrocompatível?': 'Sim — sem alteração de comportamento esperada' },
         ],
         callouts: [
           { type: 'Key Point', label: 'Gatilho MAJOR', text: 'Incremente MAJOR toda vez que o código posterior que analisa a saída do seu prompt quebraria. Se a saída muda de um array JSON para uma lista markdown, isso é um incremento MAJOR, mesmo que o conteúdo seja idêntico.' },
@@ -1677,6 +1682,7 @@ jobs:
 
   fr: {
     freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-27',
     theme: 'Opérations d\'équipe & Gouvernance',
     heroImage: '/images/prompt-version-control-overview-hero-fr.webp',
     title: 'Gestion de versions des prompts : Suivi, Rollback & Workflows d\'équipe',
@@ -1999,6 +2005,7 @@ jobs:
 
   ja: {
     freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-27',
     theme: 'チーム運用 & ガバナンス',
     heroImage: '/images/prompt-version-control-overview-hero-ja.webp',
     title: 'プロンプトのバージョン管理：追跡・ロールバック・チームワークフロー',
@@ -2360,6 +2367,7 @@ jobs:
 
   zh: {
     freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-27',
     theme: '团队运营与治理',
     heroImage: '/images/prompt-version-control-overview-hero-zh.webp',
     title: 'Prompt 版本控制：追踪、回滚与团队工作流',
@@ -2721,6 +2729,7 @@ jobs:
 
   ko: {
     freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-27',
     theme: 'Team Operations & Governance',
     heroImage: '/images/prompt-version-control-overview-hero-ko.webp',
     title: '프롬프트 버전 관리: 추적·롤백·팀 워크플로',
