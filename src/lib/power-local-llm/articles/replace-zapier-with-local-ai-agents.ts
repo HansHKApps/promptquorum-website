@@ -9,8 +9,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
+    dateModified: '2026-08-27',
     next_refresh_due: '2026-11-07',
+    last_full_refresh: '2026-08-27',
+    next_seo_review_due: '2026-10-01',
+    last_seo_review: '2026-08-27',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/replace-zapier-with-local-ai-agents-overview-hero-en.webp',
     title: 'Replace Zapier With Local AI Agents: 5 Workflows That Save $30/Month (2026)',
@@ -19,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Replace 5 Zapier workflows with local AI agents using n8n + Ollama. Setup time, $30/month savings, 30-day reliability test, honest limitations.',
     twitterDescription: 'Self-host 5 Zapier workflows with n8n + Ollama + Llama 3.2. Cost math, setup checklists, and what still needs the cloud.',
     current_models_mentioned: ['Llama 3.2 3B', 'Qwen3 7B', 'Phi-3.5 Mini 3.8B'],
-    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M4', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
+    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M6', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
     audience: 'Prosumers, indie hackers, and small-business operators who already pay for Zapier and want to cut SaaS costs while keeping email, calendar, and file data local.',
     readTime: '14 min read',
     educationalLevel: 'Intermediate',
@@ -31,7 +34,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local ai automation workflows',
       'ollama n8n integration',
     ],
-    leadAnswerBlock: '**Yes, you can replace 5 of the most common Zapier workflows with self-hosted n8n + Ollama + Llama 3.2 3B for $0/month after hardware. The setup runs on a Mac mini M4 or Raspberry Pi 5 8GB, breaks even in 1 month vs Zapier Pro ($29.99/month), and keeps email, calendar, and file data fully local. Trade-offs: you handle OAuth refresh yourself, public webhooks need a Cloudflare Tunnel, and your machine must stay online (or run on a $80/year Pi).**',
+    leadAnswerBlock: '**Yes, you can replace 5 of the most common Zapier workflows with self-hosted n8n + Ollama + Llama 3.2 3B for $0/month after hardware. The setup runs on a Mac mini M6 or Raspberry Pi 5 8GB, breaks even in 1 month vs Zapier Pro ($29.99/month), and keeps email, calendar, and file data fully local. Trade-offs: you handle OAuth refresh yourself, public webhooks need a Cloudflare Tunnel, and your machine must stay online (or run on a $80/year Pi).**',
     quickAnswerTop: {
       en: {
         question: 'Can a self-hosted local AI agent really replace Zapier in 2026?',
@@ -170,7 +173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Scenario': 'You already own a Mac mini / laptop (8 GB+ RAM)', 'Hardware cost': '$0', 'Electricity (24 mo, 24/7)': '~$30', 'Total local cost': '$30', 'Zapier Pro 24-month cost': '$719.76', 'Savings': '$689.76' },
           { 'Scenario': 'New Raspberry Pi 5 8GB ($130) + SSD ($30)', 'Hardware cost': '$160', 'Electricity (24 mo, 7W avg)': '~$20', 'Total local cost': '$180', 'Zapier Pro 24-month cost': '$719.76', 'Savings': '$539.76' },
-          { 'Scenario': 'New Mac mini M4 8GB ($599)', 'Hardware cost': '$599', 'Electricity (24 mo)': '~$25', 'Total local cost': '$624', 'Zapier Pro 24-month cost': '$719.76', 'Savings': '$95.76' },
+          { 'Scenario': 'New Mac mini M6 (up to 32GB, $899)', 'Hardware cost': '$899', 'Electricity (24 mo)': '~$25', 'Total local cost': '$924', 'Zapier Pro 24-month cost': '$719.76', 'Savings': '−$204.24 (Zapier wins)' },
           { 'Scenario': 'New MacBook Pro M5 16GB ($2,000) — host only', 'Hardware cost': '$2,000', 'Electricity (24 mo)': '~$25', 'Total local cost': '$2,025', 'Zapier Pro 24-month cost': '$719.76', 'Savings': '−$1,305 (Zapier wins)' },
         ],
         columns: ['Scenario', 'Hardware cost', 'Electricity (24 mo, 24/7)', 'Total local cost', 'Zapier Pro 24-month cost', 'Savings'],
@@ -377,7 +380,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Hardware': 'Existing laptop (8 GB RAM, 2020+)', 'Suitable for': 'All 5 workflows if always-on', 'Llama 3.2 3B speed': '15–30 tok/s', 'Notes': 'Free if you already own it; sleeps when closed' },
           { 'Hardware': 'Raspberry Pi 5 8GB ($130) + SSD', 'Suitable for': 'All 5 workflows, 24/7', 'Llama 3.2 3B speed': '5–7 tok/s', 'Notes': 'Recommended for cost case; ~7 W average draw' },
-          { 'Hardware': 'Mac mini M4 8GB ($599)', 'Suitable for': 'All 5 + room for Qwen3 7B', 'Llama 3.2 3B speed': '40–60 tok/s', 'Notes': 'Quietest 24/7 host; ~5 W idle' },
+          { 'Hardware': 'Mac mini M6 (up to 32GB, $899)', 'Suitable for': 'All 5 + room for Qwen3 7B', 'Llama 3.2 3B speed': 'Not yet benchmarked (new Aug 2026)', 'Notes': 'Quietest 24/7 host; 32 GB ceiling supports 2–3 concurrent agent workflows' },
+          { 'Hardware': 'Mac mini M5 Pro (up to 64GB, $1,699)', 'Suitable for': 'All 5 + multiple concurrent agents / larger models', 'Llama 3.2 3B speed': 'Not yet benchmarked (new Aug 2026)', 'Notes': '64 GB ceiling matters if you run several agent workflows or bigger models at once — not a speed upgrade' },
           { 'Hardware': 'NVIDIA RTX 3060 12GB on a desktop', 'Suitable for': 'All 5 + heavier models (Qwen3 14B)', 'Llama 3.2 3B speed': '80–120 tok/s', 'Notes': 'Overkill for these 5 workflows; useful if you also run RAG' },
           { 'Hardware': 'Apple M3 / M5 laptop (16 GB+)', 'Suitable for': 'All 5 + larger models, when laptop is open', 'Llama 3.2 3B speed': '50–80 tok/s', 'Notes': 'Closing the lid pauses workflows — combine with a Pi 5 for 24/7' },
         ],
@@ -386,6 +390,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'For full local-LLM hardware sizing including VRAM tables for larger models, see the [Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026).',
+          },
+          {
+            type: 'note',
+            text: 'Apple refreshed the Mac mini line on August 25, 2026: M6 (up to 32GB, $899) replaces the M4 as the entry point, and M5 Pro (up to 64GB, $1,699) replaces the M4 Pro. For this guide, 32GB is fine for the 5 workflows plus one extra model loaded; go to 64GB only if you plan to run several agent workflows concurrently or load larger models alongside them — it is a headroom upgrade, not a speed upgrade.',
           },
         ],
       },
@@ -493,7 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: '5 Zapier-Workflows mit lokalen KI-Agenten ersetzen (n8n + Ollama): Einrichtungszeit, 27,99 €/Monat Ersparnis, 30-Tage-Test und ehrliche Grenzen.',
     twitterDescription: 'Hosten Sie 5 Zapier-Workflows selbst mit n8n + Ollama + Llama 3.2. Kostenrechnung, Einrichtungs-Checklisten und was noch die Cloud braucht.',
     current_models_mentioned: ['Llama 3.2 3B', 'Qwen3 7B', 'Phi-3.5 Mini 3.8B'],
-    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M4', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
+    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M6', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
     audience: 'Profis, Indie-Hacker und kleine Unternehmen, die bereits Zapier nutzen und ihre SaaS-Kosten senken möchten, während sie E-Mails, Kalender und Dateien lokal speichern.',
     readTime: '14 Min. Lesezeit',
     educationalLevel: 'Intermediate',
@@ -505,7 +513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'lokale KI-Automatisierungs-Workflows',
       'Ollama n8n Integration',
     ],
-    leadAnswerBlock: '**Ja, Sie können 5 der häufigsten Zapier-Workflows mit selbstgehosteter n8n + Ollama + Llama 3.2 3B für €0/Monat nach der Hardware ersetzen. Die Einrichtung läuft auf einem Mac mini M4 oder Raspberry Pi 5 8GB, amortisiert sich in 1 Monat gegenüber Zapier Pro (€27,99/Monat) und hält E-Mails, Kalender und Dateien vollständig lokal. Kompromisse: Sie verwalten OAuth-Refresh selbst, öffentliche Webhooks brauchen einen Cloudflare Tunnel, und Ihre Maschine muss online bleiben (oder auf einem €75/Jahr Pi laufen).**',
+    leadAnswerBlock: '**Ja, Sie können 5 der häufigsten Zapier-Workflows mit selbstgehosteter n8n + Ollama + Llama 3.2 3B für €0/Monat nach der Hardware ersetzen. Die Einrichtung läuft auf einem Mac mini M6 oder Raspberry Pi 5 8GB, amortisiert sich in 1 Monat gegenüber Zapier Pro (€27,99/Monat) und hält E-Mails, Kalender und Dateien vollständig lokal. Kompromisse: Sie verwalten OAuth-Refresh selbst, öffentliche Webhooks brauchen einen Cloudflare Tunnel, und Ihre Maschine muss online bleiben (oder auf einem €75/Jahr Pi laufen).**',
     quickAnswerTop: {
       de: {
         question: 'Kann ein selbstgehosteter lokaler KI-Agent Zapier 2026 wirklich ersetzen?',
@@ -644,7 +652,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Szenario': 'Sie besitzen bereits einen Mac mini / Laptop (8 GB+ RAM)', 'Hardware-Kosten': '€0', 'Strom (24 Mo, 24/7)': 'etwa €30', 'Gesamt Local-Kosten': '€30', 'Zapier Pro 24-Monats-Kosten': '€671,76', 'Ersparnis': '€641,76' },
           { 'Szenario': 'Neuer Raspberry Pi 5 8GB (€120) + SSD (€30)', 'Hardware-Kosten': '€150', 'Strom (24 Mo, 7W Durchschnitt)': 'etwa €20', 'Gesamt Local-Kosten': '€170', 'Zapier Pro 24-Monats-Kosten': '€671,76', 'Ersparnis': '€501,76' },
-          { 'Szenario': 'Neuer Mac mini M4 8GB (€599)', 'Hardware-Kosten': '€599', 'Strom (24 Mo)': 'etwa €25', 'Gesamt Local-Kosten': '€624', 'Zapier Pro 24-Monats-Kosten': '€671,76', 'Ersparnis': '€47,76' },
+          { 'Szenario': 'Neuer Mac mini M6 (bis 32GB, €899)', 'Hardware-Kosten': '€899', 'Strom (24 Mo)': 'etwa €25', 'Gesamt Local-Kosten': '€924', 'Zapier Pro 24-Monats-Kosten': '€671,76', 'Ersparnis': '−€252,24 (Zapier gewinnt)' },
           { 'Szenario': 'Neues MacBook Pro M5 16GB (€1.999) — nur zum Hosten', 'Hardware-Kosten': '€1.999', 'Strom (24 Mo)': 'etwa €25', 'Gesamt Local-Kosten': '€2.024', 'Zapier Pro 24-Monats-Kosten': '€671,76', 'Ersparnis': '−€1.352 (Zapier gewinnt)' },
         ],
         columns: ['Szenario', 'Hardware-Kosten', 'Strom (24 Mo, 24/7)', 'Gesamt Local-Kosten', 'Zapier Pro 24-Monats-Kosten', 'Ersparnis'],
@@ -851,7 +859,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Hardware': 'Vorhandener Laptop (8 GB RAM, 2020+)', 'Geeignet für': 'Alle 5 Workflows, wenn Always-on', 'Llama 3.2 3B Geschwindigkeit': '15–30 Token/Sek', 'Hinweise': 'Kostenlos, wenn Sie ihn bereits besitzen; schläft bei geschlossenem Deckel' },
           { 'Hardware': 'Raspberry Pi 5 8GB (€120) + SSD', 'Geeignet für': 'Alle 5 Workflows, 24/7', 'Llama 3.2 3B Geschwindigkeit': '5–7 Token/Sek', 'Hinweise': 'Empfohlen für Kostenfall; etwa 7 W durchschnittliche Last' },
-          { 'Hardware': 'Mac mini M4 8GB (€599)', 'Geeignet für': 'Alle 5 + Platz für Qwen3 7B', 'Llama 3.2 3B Geschwindigkeit': '40–60 Token/Sek', 'Hinweise': 'Stillster 24/7-Host; etwa 5 W im Ruhezustand' },
+          { 'Hardware': 'Mac mini M6 (bis 32GB, €899)', 'Geeignet für': 'Alle 5 + Platz für Qwen3 7B', 'Llama 3.2 3B Geschwindigkeit': 'Noch nicht benchmarkt (neu, Aug. 2026)', 'Hinweise': 'Stillster 24/7-Host; 32-GB-Obergrenze reicht für 2–3 gleichzeitige Agent-Workflows' },
+          { 'Hardware': 'Mac mini M5 Pro (bis 64GB, €1.699)', 'Geeignet für': 'Alle 5 + mehrere gleichzeitige Agenten / größere Modelle', 'Llama 3.2 3B Geschwindigkeit': 'Noch nicht benchmarkt (neu, Aug. 2026)', 'Hinweise': '64-GB-Obergrenze für mehrere gleichzeitige Agenten/größere Modelle — keine Geschwindigkeitsfrage' },
           { 'Hardware': 'NVIDIA RTX 3060 12GB auf einem Desktop', 'Geeignet für': 'Alle 5 + schwerere Modelle (Qwen3 14B)', 'Llama 3.2 3B Geschwindigkeit': '80–120 Token/Sek', 'Hinweise': 'Zu viel für diese 5 Workflows; nützlich, wenn Sie auch RAG ausführen' },
           { 'Hardware': 'Apple M3 / M5 Laptop (16 GB+)', 'Geeignet für': 'Alle 5 + größere Modelle, wenn Laptop offen ist', 'Llama 3.2 3B Geschwindigkeit': '50–80 Token/Sek', 'Hinweise': 'Deckel schließen pausiert Workflows — mit Pi 5 für 24/7 kombinieren' },
         ],
@@ -860,6 +869,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'Für die vollständige Local-LLM-Hardware-Sizing einschließlich VRAM-Tabellen für größere Modelle siehe [Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026).',
+          },
+          {
+            type: 'note',
+            text: 'Apple hat die Mac-mini-Reihe am 25. August 2026 aufgefrischt: M6 (bis 32GB, €899) ersetzt das M4 als Einstiegsmodell, M5 Pro (bis 64GB, €1.699) ersetzt das M4 Pro. Für diesen Leitfaden reichen 32GB für die 5 Workflows plus ein weiteres Modell. Gehen Sie nur dann auf 64GB, wenn Sie mehrere Agent-Workflows gleichzeitig oder größere Modelle daneben laufen lassen wollen — das ist eine Speicher-, keine Geschwindigkeitsfrage.',
           },
         ],
       },
@@ -967,7 +980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Remplacez 5 workflows Zapier avec des agents IA locaux utilisant n8n + Ollama. Temps de configuration, 29,99 €/mois d\'économies, test de fiabilité de 30 jours, limites honnêtes.',
     twitterDescription: 'Auto-hébergez 5 workflows Zapier avec n8n + Ollama + Llama 3.2. Calcul des coûts, listes de contrôle de configuration et ce qui a encore besoin du cloud.',
     current_models_mentioned: ['Llama 3.2 3B', 'Qwen3 7B', 'Phi-3.5 Mini 3.8B'],
-    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M4', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
+    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M6', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
     audience: 'Prosumers, indie hackers et petits exploitants qui paient déjà Zapier et souhaitent réduire les coûts SaaS tout en gardant les e-mails, le calendrier et les données de fichiers locaux.',
     readTime: '14 min de lecture',
     educationalLevel: 'Intermediate',
@@ -979,7 +992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'workflows d\'automatisation IA locale',
       'intégration Ollama n8n',
     ],
-    leadAnswerBlock: '**Oui, vous pouvez remplacer 5 des workflows Zapier les plus courants avec n8n auto-hébergé + Ollama + Llama 3.2 3B pour 0 €/mois après le matériel. La configuration fonctionne sur un Mac mini M4 ou Raspberry Pi 5 8 Go, s\'amortit en 1 mois par rapport à Zapier Pro (29,99 €/mois) et garde les e-mails, calendrier et fichiers entièrement locaux. Compromis : vous gérez l\'actualisation OAuth vous-même, les webhooks publics ont besoin d\'un tunnel Cloudflare, et votre machine doit rester en ligne (ou fonctionner sur un Pi à 75 €/an).**',
+    leadAnswerBlock: '**Oui, vous pouvez remplacer 5 des workflows Zapier les plus courants avec n8n auto-hébergé + Ollama + Llama 3.2 3B pour 0 €/mois après le matériel. La configuration fonctionne sur un Mac mini M6 ou Raspberry Pi 5 8 Go, s\'amortit en 1 mois par rapport à Zapier Pro (29,99 €/mois) et garde les e-mails, calendrier et fichiers entièrement locaux. Compromis : vous gérez l\'actualisation OAuth vous-même, les webhooks publics ont besoin d\'un tunnel Cloudflare, et votre machine doit rester en ligne (ou fonctionner sur un Pi à 75 €/an).**',
     quickAnswerTop: {
       fr: {
         question: 'Un agent IA local auto-hébergé peut-il vraiment remplacer Zapier en 2026 ?',
@@ -1118,7 +1131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Scénario': 'Vous possédez déjà un Mac mini / portable (8 Go+ RAM)', 'Coûts matériel': '0 €', 'Électricité (24 mo, 24/7)': 'environ 30 €', 'Coûts local totaux': '30 €', 'Coûts Zapier Pro 24 mois': '719,76 €', 'Économies': '689,76 €' },
           { 'Scénario': 'Nouveau Raspberry Pi 5 8 Go (120 €) + SSD (30 €)', 'Coûts matériel': '150 €', 'Électricité (24 mo, 7W moy)': 'environ 20 €', 'Coûts local totaux': '170 €', 'Coûts Zapier Pro 24 mois': '719,76 €', 'Économies': '549,76 €' },
-          { 'Scénario': 'Nouveau Mac mini M4 8 Go (599 €)', 'Coûts matériel': '599 €', 'Électricité (24 mo)': 'environ 25 €', 'Coûts local totaux': '624 €', 'Coûts Zapier Pro 24 mois': '719,76 €', 'Économies': '95,76 €' },
+          { 'Scénario': 'Nouveau Mac mini M6 (jusqu’à 32 Go, 899 €)', 'Coûts matériel': '899 €', 'Électricité (24 mo)': 'environ 25 €', 'Coûts local totaux': '924 €', 'Coûts Zapier Pro 24 mois': '719,76 €', 'Économies': '−204,24 € (Zapier gagne)' },
           { 'Scénario': 'Nouveau MacBook Pro M5 16 Go (1 999 €) — hébergement uniquement', 'Coûts matériel': '1 999 €', 'Électricité (24 mo)': 'environ 25 €', 'Coûts local totaux': '2 024 €', 'Coûts Zapier Pro 24 mois': '719,76 €', 'Économies': '−1 304,24 € (Zapier gagne)' },
         ],
         columns: ['Scénario', 'Coûts matériel', 'Électricité (24 mo, 24/7)', 'Coûts local totaux', 'Coûts Zapier Pro 24 mois', 'Économies'],
@@ -1325,7 +1338,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Matériel': 'Portable existant (8 Go RAM, 2020+)', 'Convient pour': 'Tous les 5 workflows si toujours actif', 'Vitesse Llama 3.2 3B': '15–30 tokens/s', 'Remarques': 'Gratuit si vous le possédez ; dort quand fermé' },
           { 'Matériel': 'Raspberry Pi 5 8 Go (120 €) + SSD', 'Convient pour': 'Tous les 5 workflows, 24/7', 'Vitesse Llama 3.2 3B': '5–7 tokens/s', 'Remarques': 'Recommandé pour le cas de coût ; environ 7 W moyenne' },
-          { 'Matériel': 'Mac mini M4 8 Go (599 €)', 'Convient pour': 'Tous les 5 + place pour Qwen3 7B', 'Vitesse Llama 3.2 3B': '40–60 tokens/s', 'Remarques': 'Hôte 24/7 le plus silencieux ; environ 5 W inactif' },
+          { 'Matériel': 'Mac mini M6 (jusqu’à 32 Go, 899 €)', 'Convient pour': 'Tous les 5 + place pour Qwen3 7B', 'Vitesse Llama 3.2 3B': 'Pas encore testé (nouveau, août 2026)', 'Remarques': 'Hôte 24/7 le plus silencieux ; plafond de 32 Go pour 2–3 agents simultanés' },
+          { 'Matériel': 'Mac mini M5 Pro (jusqu’à 64 Go, 1 699 €)', 'Convient pour': 'Tous les 5 + plusieurs agents simultanés / modèles plus grands', 'Vitesse Llama 3.2 3B': 'Pas encore testé (nouveau, août 2026)', 'Remarques': 'Plafond de 64 Go pour plusieurs agents/modèles plus grands en parallèle — pas un gain de vitesse' },
           { 'Matériel': 'NVIDIA RTX 3060 12 Go sur un bureau', 'Convient pour': 'Tous les 5 + modèles plus lourds (Qwen3 14B)', 'Vitesse Llama 3.2 3B': '80–120 tokens/s', 'Remarques': 'Excédentaire pour ces 5 workflows ; utile si vous exécutez aussi RAG' },
           { 'Matériel': 'Portable Apple M3 / M5 (16 Go+)', 'Convient pour': 'Tous les 5 + modèles plus grands, quand portable est ouvert', 'Vitesse Llama 3.2 3B': '50–80 tokens/s', 'Remarques': 'Fermer le couvercle met en pause les workflows — combiner avec Pi 5 pour 24/7' },
         ],
@@ -1334,6 +1348,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'Pour le dimensionnement matériel complet du LLM local, y compris des tableaux VRAM pour les modèles plus grands, voir le [Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026).',
+          },
+          {
+            type: 'note',
+            text: 'Apple a renouvelé la gamme Mac mini le 25 août 2026 : le M6 (jusqu’à 32 Go, 899 €) remplace le M4 comme modèle d’entrée, le M5 Pro (jusqu’à 64 Go, 1 699 €) remplace le M4 Pro. Pour ce guide, 32 Go suffisent pour les 5 workflows plus un modèle supplémentaire. Passez à 64 Go seulement si vous comptez exécuter plusieurs workflows d’agents en parallèle ou charger des modèles plus grands en même temps — c’est une question de marge mémoire, pas de vitesse.',
           },
         ],
       },
@@ -1441,7 +1459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Zapierの5つのワークフローをローカル AI エージェント (n8n + Ollama) で置き換え。セットアップ時間、¥4,900/月節約、30日間信頼性テスト、正直な制限。',
     twitterDescription: 'n8n + Ollama + Llama 3.2で5つのZapierワークフローを自己ホスト。コスト計算、セットアップチェックリスト、クラウドがまだ必要な部分。',
     current_models_mentioned: ['Llama 3.2 3B', 'Qwen3 7B', 'Phi-3.5 Mini 3.8B'],
-    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M4', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
+    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M6', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
     audience: 'Zapierを使っているプロユーザー、インディーハッカー、小企業向け。SaaS コストを削減しながら、メール・カレンダー・ファイルデータをローカルに保ちたい方。',
     readTime: '14分で読める',
     educationalLevel: 'Intermediate',
@@ -1453,7 +1471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルAI自動化ワークフロー',
       'Ollama n8n統合',
     ],
-    leadAnswerBlock: '**はい。自己ホスト型 n8n + Ollama + Llama 3.2 3B なら、最も一般的な5つのZapierワークフローをハードウェア後¥0/月で置き換えられます。Mac mini M4 または Raspberry Pi 5 8GBで動作、Zapier Pro (毎月¥4,900) と比較して1ヶ月で黒字化、メール・カレンダー・ファイルを完全にローカル保存。トレードオフ：OAuthリフレッシュを自分で管理、公開webhookはCloudflareトンネル必須、マシン稼働継続が必須 (または¥13,100/年のPi)。**',
+    leadAnswerBlock: '**はい。自己ホスト型 n8n + Ollama + Llama 3.2 3B なら、最も一般的な5つのZapierワークフローをハードウェア後¥0/月で置き換えられます。Mac mini M6 または Raspberry Pi 5 8GBで動作、Zapier Pro (毎月¥4,900) と比較して1ヶ月で黒字化、メール・カレンダー・ファイルを完全にローカル保存。トレードオフ：OAuthリフレッシュを自分で管理、公開webhookはCloudflareトンネル必須、マシン稼働継続が必須 (または¥13,100/年のPi)。**',
     quickAnswerTop: {
       ja: {
         question: '自己ホスト型ローカルAIエージェント、2026年本当にZapier置き換えできる？',
@@ -1592,7 +1610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'シナリオ': '既に Mac mini / ノートパソコン所有 (8GB+ RAM)', 'ハード費': '¥0', '電気代 (24ヶ月、24/7)': '約¥3,500', 'ローカル合計': '¥3,500', 'Zapier Pro 24ヶ月': '¥117,600', '節約': '¥114,100' },
           { 'シナリオ': '新 Raspberry Pi 5 8GB (¥21,800) + SSD (¥5,500)', 'ハード費': '¥27,300', '電気代 (24ヶ月、7W平均)': '約¥2,600', 'ローカル合計': '¥29,900', 'Zapier Pro 24ヶ月': '¥117,600', '節約': '¥87,700' },
-          { 'シナリオ': '新 Mac mini M4 8GB (¥99,800)', 'ハード費': '¥99,800', '電気代 (24ヶ月)': '約¥3,000', 'ローカル合計': '¥102,800', 'Zapier Pro 24ヶ月': '¥117,600', '節約': '¥14,800' },
+          { 'シナリオ': '新 Mac mini M6 (最大32GB、¥149,800)', 'ハード費': '¥149,800', '電気代 (24ヶ月)': '約¥3,000', 'ローカル合計': '¥152,800', 'Zapier Pro 24ヶ月': '¥117,600', '節約': '−¥35,200（Zapierが有利）' },
           { 'シナリオ': '新 MacBook Pro M5 16GB (¥330,000) — ホスト用のみ', 'ハード費': '¥330,000', '電気代 (24ヶ月)': '約¥3,000', 'ローカル合計': '¥333,000', 'Zapier Pro 24ヶ月': '¥117,600', '節約': '−¥215,400 (Zapier勝利)' },
         ],
         columns: ['シナリオ', 'ハード費', '電気代 (24ヶ月、24/7)', 'ローカル合計', 'Zapier Pro 24ヶ月', '節約'],
@@ -1799,7 +1817,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'ハードウェア': '既存ノートパソコン (8GB RAM、2020+)', 'suitable for': '全5つワークフロー (always-on の場合)', 'Llama 3.2 3B 速度': '15–30 トークン/秒', '備考': '既に所有なら無料；閉じるとスリープ' },
           { 'ハードウェア': 'Raspberry Pi 5 8GB (¥21,800) + SSD', 'suitable for': '全5つワークフロー、24/7', 'Llama 3.2 3B 速度': '5–7 トークン/秒', '備考': 'コストケース推奨；約7W 平均' },
-          { 'ハードウェア': 'Mac mini M4 8GB (¥99,800)', 'suitable for': '全5つ + Qwen3 7B 余地', 'Llama 3.2 3B 速度': '40–60 トークン/秒', '備考': '最も静音 24/7 ホスト；約5W idle' },
+          { 'ハードウェア': 'Mac mini M6 (最大32GB、¥149,800)', 'suitable for': '全5つ + Qwen3 7B 余地', 'Llama 3.2 3B 速度': '未ベンチマーク（2026年8月新発売）', '備考': '最も静音 24/7 ホスト；32GBで同時2–3エージェント程度まで' },
+          { 'ハードウェア': 'Mac mini M5 Pro (最大64GB、¥283,000)', 'suitable for': '全5つ + 複数エージェント同時実行/大型モデル', 'Llama 3.2 3B 速度': '未ベンチマーク（2026年8月新発売）', '備考': '64GBの上限が効くのは複数のエージェントワークフローや大型モデルを同時実行する場合；速度向上ではない' },
           { 'ハードウェア': 'デスクトップ NVIDIA RTX 3060 12GB', 'suitable for': '全5つ + 重モデル (Qwen3 14B)', 'Llama 3.2 3B 速度': '80–120 トークン/秒', '備考': 'これら5つで過剰；RAG 実行なら有用' },
           { 'ハードウェア': 'Apple M3 / M5 ノートパソコン (16GB+)', 'suitable for': '全5つ + 大モデル (ノート開いてる時)', 'Llama 3.2 3B 速度': '50–80 トークン/秒', '備考': 'close が pause；24/7 は Pi 5 と combine' },
         ],
@@ -1808,6 +1827,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'full ローカル LLM ハードウェア sizing (大モデル VRAM テーブル含む) は [ローカル LLM ハードウェアガイド 2026](/ja/local-llms/local-llm-hardware-guide-2026) 参照。',
+          },
+          {
+            type: 'note',
+            text: 'Appleは2026年8月25日にMac miniを刷新。M6(最大32GB、¥149,800)がM4に代わるエントリーモデル、M5 Pro(最大64GB、¥283,000)がM4 Proに代わる上位モデルとなった。本ガイドの5ワークフローには32GBで十分(追加モデル1つ分の余地あり)。複数のエージェントワークフローを同時実行したり、より大きなモデルを並行運用したい場合のみ64GBを検討する — これは速度ではなくメモリ余裕の話。',
           },
         ],
       },
@@ -1915,7 +1938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: '用 n8n + Ollama 本地 AI 代理替代 5 个 Zapier 工作流。设置时间、节省 $29.99/月、30 天可靠性测试、坦白的限制。',
     twitterDescription: '用 n8n + Ollama + Llama 3.2 自托管 5 个 Zapier 工作流。成本计算、设置检查表、哪些仍需云端。',
     current_models_mentioned: ['Llama 3.2 3B', 'Qwen3 7B', 'Phi-3.5 Mini 3.8B'],
-    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M4', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
+    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M6', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
     audience: '已使用 Zapier 的专业用户、独立黑客、小企业。想在降低 SaaS 成本的同时保持邮件、日历、文件数据本地化。',
     readTime: '阅读约 14 分钟',
     educationalLevel: 'Intermediate',
@@ -1927,7 +1950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '本地 AI 自动化工作流',
       'Ollama n8n 集成',
     ],
-    leadAnswerBlock: '**可以。用自托管 n8n + Ollama + Llama 3.2 3B，硬件成本后 $0/月 可替代 5 个最常见 Zapier 工作流。运行于 Mac mini M4 或 Raspberry Pi 5 8GB，对比 Zapier Pro（$29.99/月）1 个月内回本，邮件、日历、文件完全本地化。代价：自己管理 OAuth 刷新、公开 webhook 需 Cloudflare 隧道、机器必须持续在线（或 $80/年 Pi）。**',
+    leadAnswerBlock: '**可以。用自托管 n8n + Ollama + Llama 3.2 3B，硬件成本后 $0/月 可替代 5 个最常见 Zapier 工作流。运行于 Mac mini M6 或 Raspberry Pi 5 8GB，对比 Zapier Pro（$29.99/月）1 个月内回本，邮件、日历、文件完全本地化。代价：自己管理 OAuth 刷新、公开 webhook 需 Cloudflare 隧道、机器必须持续在线（或 $80/年 Pi）。**',
     quickAnswerTop: {
       zh: {
         question: '自托管本地 AI 代理真能在 2026 年替代 Zapier 吗？',
@@ -2066,7 +2089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '场景': '已拥有 Mac mini/笔记本（8GB+ 内存）', '硬件成本': '$0', '电力（24 月、24/7）': '~$30', '本地总成本': '$30', 'Zapier Pro 24 月成本': '$719.76', '节省': '$689.76' },
           { '场景': '新 Raspberry Pi 5 8GB($130)+ SSD($30)', '硬件成本': '$160', '电力（24 月、7W 平均）': '~$20', '本地总成本': '$180', 'Zapier Pro 24 月成本': '$719.76', '节省': '$539.76' },
-          { '场景': '新 Mac mini M4 8GB ($599)', '硬件成本': '$599', '电力（24 月）': '~$25', '本地总成本': '$624', 'Zapier Pro 24 月成本': '$719.76', '节省': '$95.76' },
+          { '场景': '新 Mac mini M6（最高32GB，$899）', '硬件成本': '$899', '电力（24 月）': '~$25', '本地总成本': '$924', 'Zapier Pro 24 月成本': '$719.76', '节省': '−$204.24（Zapier 更划算）' },
           { '场景': '新 MacBook Pro M5 16GB ($2,000) —— 仅用于托管', '硬件成本': '$2,000', '电力（24 月）': '~$25', '本地总成本': '$2,025', 'Zapier Pro 24 月成本': '$719.76', '节省': '−$1,305（Zapier 赢）' },
         ],
         columns: ['场景', '硬件成本', '电力（24 月、24/7）', '本地总成本', 'Zapier Pro 24 月成本', '节省'],
@@ -2273,7 +2296,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '硬件': '现有笔记本(8GB RAM、2020+)', '适合': '全 5 个工作流(always-on 时)', 'Llama 3.2 3B 速度': '15–30 token/s', '说明': '已拥有则免费；闭合时睡眠' },
           { '硬件': 'Raspberry Pi 5 8GB ($130) + SSD', '适合': '全 5 个工作流，24/7', 'Llama 3.2 3B 速度': '5–7 token/s', '说明': '成本情况推荐；约 7W 平均' },
-          { '硬件': 'Mac mini M4 8GB ($599)', '适合': '全 5 个 + Qwen3 7B 空间', 'Llama 3.2 3B 速度': '40–60 token/s', '说明': '最静音 24/7 主机；约 5W 空闲' },
+          { '硬件': 'Mac mini M6（最高32GB，$899）', '适合': '全 5 个 + Qwen3 7B 空间', 'Llama 3.2 3B 速度': '尚未测试（2026年8月新品）', '说明': '最静音 24/7 主机；32GB 上限支持 2–3 个并发 agent 工作流' },
+          { '硬件': 'Mac mini M5 Pro（最高64GB，$1,699）', '适合': '全 5 个 + 多个并发 agent / 更大模型', 'Llama 3.2 3B 速度': '尚未测试（2026年8月新品）', '说明': '64GB 上限的意义在于同时运行多个 agent 工作流或更大模型，而非速度提升' },
           { '硬件': '桌面 NVIDIA RTX 3060 12GB', '适合': '全 5 个 + 重模型(Qwen3 14B)', 'Llama 3.2 3B 速度': '80–120 token/s', '说明': '这 5 个过量；如果也跑 RAG 有用' },
           { '硬件': 'Apple M3 / M5 笔记本(16GB+)', '适合': '全 5 个 + 大模型(笔记本开启时)', 'Llama 3.2 3B 速度': '50–80 token/s', '说明': '闭合暂停工作流 —— 24/7 用 Pi 5 合并' },
         ],
@@ -2282,6 +2306,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: '完整本地 LLM 硬件尺寸(大模型 VRAM 表)，见 [本地 LLM 硬件指南 2026](/zh/local-llms/local-llm-hardware-guide-2026)。',
+          },
+          {
+            type: 'note',
+            text: '苹果于2026年8月25日更新了 Mac mini 系列：M6（最高32GB，$899）取代 M4 成为入门款，M5 Pro（最高64GB，$1,699）取代 M4 Pro。对本指南的 5 个工作流来说，32GB 已经够用（还能多加载一个模型）。仅当你需要同时运行多个 agent 工作流或并行加载更大模型时才需要 64GB——这是内存余量问题，不是速度问题。',
           },
         ],
       },
@@ -2389,7 +2417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Reemplaza 5 flujos de Zapier con agentes de IA locales usando n8n + Ollama. Tiempo de configuración, ahorro de $30/mes y prueba de fiabilidad de 30 días.',
     twitterDescription: 'Autoaloja 5 flujos de Zapier con n8n + Ollama + Llama 3.2. Cálculo de costos, listas de verificación y qué sigue necesitando la nube.',
     current_models_mentioned: ['Llama 3.2 3B', 'Qwen3 7B', 'Phi-3.5 Mini 3.8B'],
-    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M4', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
+    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M6', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
     audience: 'Prosumidores, indie hackers y pequeñas empresas que ya pagan Zapier y quieren reducir costos de SaaS manteniendo el correo, calendario y archivos de forma local.',
     readTime: '14 min de lectura',
     educationalLevel: 'Intermediate',
@@ -2401,7 +2429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'flujos de trabajo de automatización con ia local',
       'integración ollama n8n',
     ],
-    leadAnswerBlock: '**Sí, puedes reemplazar 5 de los flujos de trabajo más comunes de Zapier con n8n autoalojado + Ollama + Llama 3.2 3B por $0/mes después del hardware. La configuración funciona en un Mac mini M4 o Raspberry Pi 5 8GB, recupera la inversión en 1 mes frente a Zapier Pro ($29,99/mes) y mantiene el correo, calendario y archivos completamente locales. Contrapartidas: gestionas el refresco de OAuth tú mismo, los webhooks públicos requieren un túnel de Cloudflare y tu máquina debe permanecer encendida (o usar una Pi de $80/año).**',
+    leadAnswerBlock: '**Sí, puedes reemplazar 5 de los flujos de trabajo más comunes de Zapier con n8n autoalojado + Ollama + Llama 3.2 3B por $0/mes después del hardware. La configuración funciona en un Mac mini M6 o Raspberry Pi 5 8GB, recupera la inversión en 1 mes frente a Zapier Pro ($29,99/mes) y mantiene el correo, calendario y archivos completamente locales. Contrapartidas: gestionas el refresco de OAuth tú mismo, los webhooks públicos requieren un túnel de Cloudflare y tu máquina debe permanecer encendida (o usar una Pi de $80/año).**',
     quickAnswerTop: {
       es: {
         question: '¿Puede un agente de IA local autoalojado realmente reemplazar Zapier en 2026?',
@@ -2540,7 +2568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Escenario': 'Ya tienes un Mac mini / portátil (8 GB+ de RAM)', 'Costo de hardware': '$0', 'Electricidad (24 meses, 24/7)': '~$30', 'Costo local total': '$30', 'Costo Zapier Pro 24 meses': '$719,76', 'Ahorro': '$689,76' },
           { 'Escenario': 'Nueva Raspberry Pi 5 8GB ($130) + SSD ($30)', 'Costo de hardware': '$160', 'Electricidad (24 meses, 7W prom.)': '~$20', 'Costo local total': '$180', 'Costo Zapier Pro 24 meses': '$719,76', 'Ahorro': '$539,76' },
-          { 'Escenario': 'Mac mini M4 8GB nuevo ($599)', 'Costo de hardware': '$599', 'Electricidad (24 meses)': '~$25', 'Costo local total': '$624', 'Costo Zapier Pro 24 meses': '$719,76', 'Ahorro': '$95,76' },
+          { 'Escenario': 'Mac mini M6 nuevo (hasta 32GB, $899)', 'Costo de hardware': '$899', 'Electricidad (24 meses)': '~$25', 'Costo local total': '$924', 'Costo Zapier Pro 24 meses': '$719,76', 'Ahorro': '−$204,24 (gana Zapier)' },
           { 'Escenario': 'MacBook Pro M5 16GB nuevo ($2.000) — solo para alojar', 'Costo de hardware': '$2.000', 'Electricidad (24 meses)': '~$25', 'Costo local total': '$2.025', 'Costo Zapier Pro 24 meses': '$719,76', 'Ahorro': '−$1.305 (Zapier gana)' },
         ],
         columns: ['Escenario', 'Costo de hardware', 'Electricidad (24 meses, 24/7)', 'Costo local total', 'Costo Zapier Pro 24 meses', 'Ahorro'],
@@ -2747,7 +2775,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Hardware': 'Portátil existente (8 GB RAM, 2020+)', 'Adecuado para': 'Los 5 flujos si siempre está encendido', 'Velocidad Llama 3.2 3B': '15–30 tok/s', 'Notas': 'Gratis si ya lo tienes; se suspende al cerrar' },
           { 'Hardware': 'Raspberry Pi 5 8GB ($130) + SSD', 'Adecuado para': 'Los 5 flujos, 24/7', 'Velocidad Llama 3.2 3B': '5–7 tok/s', 'Notas': 'Recomendado para el caso de costo; ~7 W de consumo promedio' },
-          { 'Hardware': 'Mac mini M4 8GB ($599)', 'Adecuado para': 'Los 5 + espacio para Qwen3 7B', 'Velocidad Llama 3.2 3B': '40–60 tok/s', 'Notas': 'El host 24/7 más silencioso; ~5 W en reposo' },
+          { 'Hardware': 'Mac mini M6 (hasta 32GB, $899)', 'Adecuado para': 'Los 5 + espacio para Qwen3 7B', 'Velocidad Llama 3.2 3B': 'Aún sin benchmarks (nuevo, ago. 2026)', 'Notas': 'El host 24/7 más silencioso; el límite de 32GB alcanza para 2–3 agentes simultáneos' },
+          { 'Hardware': 'Mac mini M5 Pro (hasta 64GB, $1.699)', 'Adecuado para': 'Los 5 + varios agentes simultáneos / modelos más grandes', 'Velocidad Llama 3.2 3B': 'Aún sin benchmarks (nuevo, ago. 2026)', 'Notas': 'Límite de 64GB para varios agentes/modelos más grandes a la vez — no es velocidad' },
           { 'Hardware': 'NVIDIA RTX 3060 12GB en un desktop', 'Adecuado para': 'Los 5 + modelos más pesados (Qwen3 14B)', 'Velocidad Llama 3.2 3B': '80–120 tok/s', 'Notas': 'Excesivo para estos 5 flujos; útil si también ejecutas RAG' },
           { 'Hardware': 'Portátil Apple M3 / M5 (16 GB+)', 'Adecuado para': 'Los 5 + modelos más grandes, cuando el portátil está abierto', 'Velocidad Llama 3.2 3B': '50–80 tok/s', 'Notas': 'Cerrar la tapa pausa los flujos — combinar con Pi 5 para 24/7' },
         ],
@@ -2756,6 +2785,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'Para el dimensionamiento completo de hardware para LLM local, incluidas tablas de VRAM para modelos más grandes, consulta la [Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026).',
+          },
+          {
+            type: 'note',
+            text: 'Apple renovó la línea Mac mini el 25 de agosto de 2026: el M6 (hasta 32GB, $899) reemplaza al M4 como modelo de entrada, y el M5 Pro (hasta 64GB, $1.699) reemplaza al M4 Pro. Para esta guía, 32GB es suficiente para los 5 workflows más un modelo adicional cargado. Sube a 64GB solo si planeas ejecutar varios workflows de agentes a la vez o cargar modelos más grandes en paralelo — es una mejora de margen de memoria, no de velocidad.',
           },
         ],
       },
@@ -2876,7 +2909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Substitua 5 fluxos do Zapier por agentes de IA locais usando n8n + Ollama. Tempo de configuração, economia de $30/mês e teste de confiabilidade de 30 dias.',
     twitterDescription: 'Auto-hospede 5 fluxos do Zapier com n8n + Ollama + Llama 3.2. Cálculo de custos, checklists e o que ainda precisa da nuvem.',
     current_models_mentioned: ['Llama 3.2 3B', 'Qwen3 7B', 'Phi-3.5 Mini 3.8B'],
-    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M4', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
+    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M6', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
     audience: 'Prosumidores, indie hackers e pequenas empresas que já pagam o Zapier e querem reduzir custos de SaaS mantendo o e-mail, o calendário e os arquivos de forma local.',
     readTime: '14 min de leitura',
     educationalLevel: 'Intermediate',
@@ -2888,7 +2921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'fluxos de trabalho de automação com ia local',
       'integração ollama n8n',
     ],
-    leadAnswerBlock: '**Sim, você pode substituir 5 dos fluxos de trabalho mais comuns do Zapier por n8n auto-hospedado + Ollama + Llama 3.2 3B por $0/mês após o hardware. A configuração roda em um Mac mini M4 ou Raspberry Pi 5 8GB, recupera o investimento em 1 mês frente ao Zapier Pro ($29,99/mês) e mantém o e-mail, o calendário e os arquivos completamente locais. Contrapartidas: você gerencia o refresh do OAuth você mesmo, os webhooks públicos exigem um Cloudflare Tunnel e sua máquina deve permanecer ligada (ou usar um Pi de $80/ano).**',
+    leadAnswerBlock: '**Sim, você pode substituir 5 dos fluxos de trabalho mais comuns do Zapier por n8n auto-hospedado + Ollama + Llama 3.2 3B por $0/mês após o hardware. A configuração roda em um Mac mini M6 ou Raspberry Pi 5 8GB, recupera o investimento em 1 mês frente ao Zapier Pro ($29,99/mês) e mantém o e-mail, o calendário e os arquivos completamente locais. Contrapartidas: você gerencia o refresh do OAuth você mesmo, os webhooks públicos exigem um Cloudflare Tunnel e sua máquina deve permanecer ligada (ou usar um Pi de $80/ano).**',
     quickAnswerTop: {
       pt: {
         question: 'Um agente de IA local auto-hospedado pode realmente substituir o Zapier em 2026?',
@@ -3027,7 +3060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Cenário': 'Você já tem um Mac mini / laptop (8 GB+ de RAM)', 'Custo de hardware': '$0', 'Eletricidade (24 meses, 24/7)': '~$30', 'Custo local total': '$30', 'Custo Zapier Pro 24 meses': '$719,76', 'Economia': '$689,76' },
           { 'Cenário': 'Nova Raspberry Pi 5 8GB ($130) + SSD ($30)', 'Custo de hardware': '$160', 'Eletricidade (24 meses, 7W méd.)': '~$20', 'Custo local total': '$180', 'Custo Zapier Pro 24 meses': '$719,76', 'Economia': '$539,76' },
-          { 'Cenário': 'Mac mini M4 8GB novo ($599)', 'Custo de hardware': '$599', 'Eletricidade (24 meses)': '~$25', 'Custo local total': '$624', 'Custo Zapier Pro 24 meses': '$719,76', 'Economia': '$95,76' },
+          { 'Cenário': 'Mac mini M6 novo (até 32GB, $899)', 'Custo de hardware': '$899', 'Eletricidade (24 meses)': '~$25', 'Custo local total': '$924', 'Custo Zapier Pro 24 meses': '$719,76', 'Economia': '−$204,24 (Zapier vence)' },
           { 'Cenário': 'MacBook Pro M5 16GB novo ($2.000) — apenas para hospedar', 'Custo de hardware': '$2.000', 'Eletricidade (24 meses)': '~$25', 'Custo local total': '$2.025', 'Custo Zapier Pro 24 meses': '$719,76', 'Economia': '−$1.305 (Zapier vence)' },
         ],
         columns: ['Cenário', 'Custo de hardware', 'Eletricidade (24 meses, 24/7)', 'Custo local total', 'Custo Zapier Pro 24 meses', 'Economia'],
@@ -3234,7 +3267,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Hardware': 'Laptop existente (8 GB RAM, 2020+)', 'Adequado para': 'Os 5 fluxos se estiver sempre ligado', 'Velocidade Llama 3.2 3B': '15–30 tok/s', 'Notas': 'Grátis se você já o tem; entra em suspensão ao fechar' },
           { 'Hardware': 'Raspberry Pi 5 8GB ($130) + SSD', 'Adequado para': 'Os 5 fluxos, 24/7', 'Velocidade Llama 3.2 3B': '5–7 tok/s', 'Notas': 'Recomendado para o caso de custo; ~7 W de consumo médio' },
-          { 'Hardware': 'Mac mini M4 8GB ($599)', 'Adequado para': 'Os 5 + espaço para o Qwen3 7B', 'Velocidade Llama 3.2 3B': '40–60 tok/s', 'Notas': 'O host 24/7 mais silencioso; ~5 W em repouso' },
+          { 'Hardware': 'Mac mini M6 (até 32GB, $899)', 'Adequado para': 'Os 5 + espaço para o Qwen3 7B', 'Velocidade Llama 3.2 3B': 'Ainda sem benchmark (novo, ago. 2026)', 'Notas': 'O host 24/7 mais silencioso; o limite de 32GB comporta 2–3 agentes simultâneos' },
+          { 'Hardware': 'Mac mini M5 Pro (até 64GB, $1.699)', 'Adequado para': 'Os 5 + vários agentes simultâneos / modelos maiores', 'Velocidade Llama 3.2 3B': 'Ainda sem benchmark (novo, ago. 2026)', 'Notas': 'Limite de 64GB para vários agentes/modelos maiores ao mesmo tempo — não é velocidade' },
           { 'Hardware': 'NVIDIA RTX 3060 12GB em um desktop', 'Adequado para': 'Os 5 + modelos mais pesados (Qwen3 14B)', 'Velocidade Llama 3.2 3B': '80–120 tok/s', 'Notas': 'Excessivo para estes 5 fluxos; útil se você também executa RAG' },
           { 'Hardware': 'Laptop Apple M3 / M5 (16 GB+)', 'Adequado para': 'Os 5 + modelos maiores, quando o laptop está aberto', 'Velocidade Llama 3.2 3B': '50–80 tok/s', 'Notas': 'Fechar a tampa pausa os fluxos — combinar com Pi 5 para 24/7' },
         ],
@@ -3243,6 +3277,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: 'Para o dimensionamento completo de hardware para LLM local, incluindo tabelas de VRAM para modelos maiores, consulte o [Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026).',
+          },
+          {
+            type: 'note',
+            text: 'A Apple renovou a linha Mac mini em 25 de agosto de 2026: o M6 (até 32GB, $899) substitui o M4 como modelo de entrada, e o M5 Pro (até 64GB, $1.699) substitui o M4 Pro. Para este guia, 32GB é suficiente para os 5 workflows mais um modelo extra carregado. Suba para 64GB apenas se pretende rodar vários workflows de agentes ao mesmo tempo ou carregar modelos maiores em paralelo — é uma folga de memória, não um ganho de velocidade.',
           },
         ],
       },
@@ -3367,7 +3405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'استضف ذاتيًا 5 سير عمل من Zapier مع n8n + Ollama + Llama 3.2. حساب التكاليف وقوائم التحقق وما يحتاج السحابة لا يزال.',
     current_models_mentioned: ['Llama 3.2 3B', 'Qwen3 7B', 'Phi-3.5 Mini 3.8B'],
-    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M4', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
+    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M6', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
     audience:
       'المستخدمون المتقدمون والمطورون المستقلون والشركات الصغيرة التي تدفع مقابل Zapier وتريد تقليل تكاليف SaaS مع إبقاء البريد والتقويم والملفات محليًا.',
     readTime: '14 دقيقة قراءة',
@@ -3381,7 +3419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تكامل ollama n8n',
     ],
     leadAnswerBlock:
-      '**نعم، يمكنك استبدال 5 من أكثر سير عمل Zapier شيوعًا بـ n8n مستضاف ذاتيًا + Ollama + Llama 3.2 3B بـ $0/شهر بعد الجهاز. تعمل الحزمة على Mac mini M4 أو Raspberry Pi 5 8GB، وتستعيد الاستثمار في شهر واحد مقابل Zapier Pro ($29.99/شهر) وتُبقي البريد والتقويم والملفات محلية بالكامل. التنازلات: تدير تحديث OAuth بنفسك، والـ webhooks العامة تتطلب نفق Cloudflare، ويجب إبقاء جهازك مشغّلًا (أو استخدام Raspberry Pi).**',
+      '**نعم، يمكنك استبدال 5 من أكثر سير عمل Zapier شيوعًا بـ n8n مستضاف ذاتيًا + Ollama + Llama 3.2 3B بـ $0/شهر بعد الجهاز. تعمل الحزمة على Mac mini M6 أو Raspberry Pi 5 8GB، وتستعيد الاستثمار في شهر واحد مقابل Zapier Pro ($29.99/شهر) وتُبقي البريد والتقويم والملفات محلية بالكامل. التنازلات: تدير تحديث OAuth بنفسك، والـ webhooks العامة تتطلب نفق Cloudflare، ويجب إبقاء جهازك مشغّلًا (أو استخدام Raspberry Pi).**',
     quickAnswerTop: {
       ar: {
         question: 'هل يمكن لوكيل ذكاء اصطناعي محلي مستضاف ذاتيًا أن يحل فعلًا محل Zapier في 2026؟',
@@ -3475,7 +3513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'recommended-stack',
         title: 'الحزمة الموصى بها',
         snippetBlocks: [
-          { type: 'one-sentence', text: 'الحزمة الموصى بها: n8n مستضاف ذاتيًا (Docker) + Ollama + Llama 3.2 3B Q4_K_M على Mac mini M4 أو Raspberry Pi 5 8GB — $0/شهر بعد الجهاز، 5 سير عمل Zapier الأكثر شيوعًا مُستبدَلة.' },
+          { type: 'one-sentence', text: 'الحزمة الموصى بها: n8n مستضاف ذاتيًا (Docker) + Ollama + Llama 3.2 3B Q4_K_M على Mac mini M6 أو Raspberry Pi 5 8GB — $0/شهر بعد الجهاز، 5 سير عمل Zapier الأكثر شيوعًا مُستبدَلة.' },
           { type: 'plain-terms', text: 'n8n هو مثل Zapier لكنه يعمل على جهازك. Ollama هو المحرك الذي يُشغّل نموذج الذكاء الاصطناعي محليًا. Llama 3.2 3B هو النموذج الذي يُعالج الفرز والتلخيص واتخاذ القرار. كل شيء يبقى على جهازك.' },
         ],
         items: [
@@ -3494,7 +3532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'السيناريو': 'جهاز حالي (Mac/PC)', 'تكلفة الجهاز': '$0', 'تكلفة 24 شهرًا': '$0', 'شهر التعادل': 'شهر 0 (فوري)' },
           { 'السيناريو': 'Raspberry Pi 5 8GB جديدة', 'تكلفة الجهاز': '$130', 'تكلفة 24 شهرًا': '$130 + ~$24 كهرباء', 'شهر التعادل': 'شهر 5' },
-          { 'السيناريو': 'Mac mini M4', 'تكلفة الجهاز': '$599', 'تكلفة 24 شهرًا': '$599 + ~$12 كهرباء', 'شهر التعادل': 'شهر 20' },
+          { 'السيناريو': 'Mac mini M6 (حتى 32GB)', 'تكلفة الجهاز': '$899', 'تكلفة 24 شهرًا': '$899 + ~$12 كهرباء', 'شهر التعادل': 'شهر 30 (يتجاوز أفق 24 شهرًا)' },
           { 'السيناريو': 'Zapier Pro', 'تكلفة الجهاز': '$0', 'تكلفة 24 شهرًا': '$720', 'شهر التعادل': 'لا ينطبق' },
         ],
         columns: ['السيناريو', 'تكلفة الجهاز', 'تكلفة 24 شهرًا', 'شهر التعادل'],
@@ -3554,8 +3592,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['الجهاز', 'الاستخدام', 'الأداء', 'التكلفة (USD)'],
         rows: [
           { 'الجهاز': 'Raspberry Pi 5 8GB', 'الاستخدام': 'خادم 24/7 اقتصادي', 'الأداء': '~5–8 رمز/ثانية (Llama 3B)', 'التكلفة (USD)': '$130' },
-          { 'الجهاز': 'Mac mini M4', 'الاستخدام': 'خادم 24/7 عالي الأداء', 'الأداء': '~30 رمز/ثانية (Llama 3B)', 'التكلفة (USD)': '$599' },
+          { 'الجهاز': 'Mac mini M6 (حتى 32GB)', 'الاستخدام': 'خادم 24/7 عالي الأداء', 'الأداء': 'غير مُختبر بعد (جديد، أغسطس 2026)', 'التكلفة (USD)': '$899' },
+          { 'الجهاز': 'Mac mini M5 Pro (حتى 64GB)', 'الاستخدام': 'عدة وكلاء متزامنين / نماذج أكبر', 'الأداء': 'غير مُختبر بعد (جديد، أغسطس 2026)', 'التكلفة (USD)': '$1,699' },
           { 'الجهاز': 'حاسوب محمول قديم (8+ جيجابايت RAM)', 'الاستخدام': 'اختبار وتطوير', 'الأداء': '~8–15 رمز/ثانية', 'التكلفة (USD)': '$0 (موجود)' },
+        ],
+        callouts: [
+          {
+            type: 'note',
+            text: 'جددت Apple سلسلة Mac mini في 25 أغسطس 2026: M6 (حتى 32GB، 899$) يحل محل M4 كنموذج دخول، وM5 Pro (حتى 64GB، 1,699$) يحل محل M4 Pro. لهذا الدليل، 32GB كافية لسير العمل الخمسة مع نموذج إضافي واحد. انتقل إلى 64GB فقط إذا كنت تخطط لتشغيل عدة سير عمل وكلاء في وقت واحد أو تحميل نماذج أكبر بالتوازي — هذه مسألة سعة ذاكرة، وليست مسألة سرعة.',
+          },
         ],
       },
       commonMistakes: {
@@ -3656,7 +3701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'n8n + Ollama를 사용하여 5가지 Zapier 워크플로우를 로컬 AI 에이전트로 교체하십시오. 설정 시간, 월 $30 절감, 30일 신뢰성 테스트 결과.',
     twitterDescription: 'n8n + Ollama + Llama 3.2로 5가지 Zapier 워크플로우를 자체 호스팅하십시오. 비용 계산, 체크리스트, 여전히 클라우드가 필요한 항목.',
     current_models_mentioned: ['Llama 3.2 3B', 'Qwen3 7B', 'Phi-3.5 Mini 3.8B'],
-    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M4', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
+    current_hardware_mentioned: ['Raspberry Pi 5 8GB', 'Mac mini M6', 'NVIDIA RTX 3060 12GB', 'Apple M3'],
     audience: '이미 Zapier를 구독 중이며 이메일, 캘린더, 파일을 로컬에 유지하면서 SaaS 비용을 절감하려는 파워 유저, 인디 해커, 소규모 기업.',
     readTime: '14분 분량',
     educationalLevel: 'Intermediate',
@@ -3668,7 +3713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 ai 자동화 워크플로우',
       'ollama n8n 연동',
     ],
-    leadAnswerBlock: '**네, 자체 호스팅 n8n + Ollama + Llama 3.2 3B를 사용하면 가장 일반적인 Zapier 워크플로우 5가지를 하드웨어 비용 이후 월 $0으로 대체할 수 있습니다. 이 스택은 Mac mini M4 또는 Raspberry Pi 5 8GB에서 작동하며, Zapier Pro($29.99/월) 대비 1개월 만에 투자를 회수합니다. 이메일, 캘린더, 파일은 완전히 로컬에 유지됩니다. 단점: OAuth 갱신을 직접 관리해야 하고, 공개 웹훅에는 Cloudflare 터널이 필요하며, 기기가 항상 켜져 있어야 합니다(또는 소형 Pi 사용).**',
+    leadAnswerBlock: '**네, 자체 호스팅 n8n + Ollama + Llama 3.2 3B를 사용하면 가장 일반적인 Zapier 워크플로우 5가지를 하드웨어 비용 이후 월 $0으로 대체할 수 있습니다. 이 스택은 Mac mini M6 또는 Raspberry Pi 5 8GB에서 작동하며, Zapier Pro($29.99/월) 대비 1개월 만에 투자를 회수합니다. 이메일, 캘린더, 파일은 완전히 로컬에 유지됩니다. 단점: OAuth 갱신을 직접 관리해야 하고, 공개 웹훅에는 Cloudflare 터널이 필요하며, 기기가 항상 켜져 있어야 합니다(또는 소형 Pi 사용).**',
     quickAnswerTop: {
       ko: {
         question: '자체 호스팅 로컬 AI 에이전트가 2026년에 실제로 Zapier를 대체할 수 있습니까?',
@@ -3807,7 +3852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '시나리오': '이미 Mac mini / 노트북 보유 (8GB+ RAM)', '하드웨어 비용': '$0', '전기 요금 (24개월, 24/7)': '약 $30', '로컬 총 비용': '$30', 'Zapier Pro 24개월 비용': '$719.76', '절감액': '$689.76' },
           { '시나리오': '새 Raspberry Pi 5 8GB ($130) + SSD ($30)', '하드웨어 비용': '$160', '전기 요금 (24개월, 평균 7W)': '약 $20', '로컬 총 비용': '$180', 'Zapier Pro 24개월 비용': '$719.76', '절감액': '$539.76' },
-          { '시나리오': '새 Mac mini M4 8GB ($599)', '하드웨어 비용': '$599', '전기 요금 (24개월)': '약 $25', '로컬 총 비용': '$624', 'Zapier Pro 24개월 비용': '$719.76', '절감액': '$95.76' },
+          { '시나리오': '새 Mac mini M6 (최대 32GB, $899)', '하드웨어 비용': '$899', '전기 요금 (24개월)': '약 $25', '로컬 총 비용': '$924', 'Zapier Pro 24개월 비용': '$719.76', '절감액': '−$204.24 (Zapier가 더 저렴)' },
           { '시나리오': '새 MacBook Pro M5 16GB ($2,000) — 호스팅 전용', '하드웨어 비용': '$2,000', '전기 요금 (24개월)': '약 $25', '로컬 총 비용': '$2,025', 'Zapier Pro 24개월 비용': '$719.76', '절감액': '−$1,305 (Zapier 우위)' },
         ],
         columns: ['시나리오', '하드웨어 비용', '전기 요금 (24개월, 24/7)', '로컬 총 비용', 'Zapier Pro 24개월 비용', '절감액'],
@@ -4014,7 +4059,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '하드웨어': '기존 노트북 (8GB RAM, 2020+)', '적합한 용도': '항상 켜져 있으면 5개 워크플로우 모두', 'Llama 3.2 3B 속도': '15–30 토큰/초', '참고': '이미 보유 시 무료; 덮개 닫으면 슬립 상태' },
           { '하드웨어': 'Raspberry Pi 5 8GB ($130) + SSD', '적합한 용도': '5개 워크플로우 모두, 24/7', 'Llama 3.2 3B 속도': '5–7 토큰/초', '참고': '비용 사례에 권장; 평균 약 7W 소비' },
-          { '하드웨어': 'Mac mini M4 8GB ($599)', '적합한 용도': '5개 + Qwen3 7B 공간', 'Llama 3.2 3B 속도': '40–60 토큰/초', '참고': '가장 조용한 24/7 호스트; 유휴 시 약 5W' },
+          { '하드웨어': 'Mac mini M6 (최대 32GB, $899)', '적합한 용도': '5개 + Qwen3 7B 공간', 'Llama 3.2 3B 속도': '아직 벤치마크 없음 (2026년 8월 신제품)', '참고': '가장 조용한 24/7 호스트; 32GB 한도는 동시 에이전트 2–3개 정도까지 지원' },
+          { '하드웨어': 'Mac mini M5 Pro (최대 64GB, $1,699)', '적합한 용도': '5개 + 다중 동시 에이전트 / 더 큰 모델', 'Llama 3.2 3B 속도': '아직 벤치마크 없음 (2026년 8월 신제품)', '참고': '64GB 한도는 여러 에이전트 워크플로우나 더 큰 모델을 동시에 실행할 때 의미가 있음 — 속도 향상이 아님' },
           { '하드웨어': 'NVIDIA RTX 3060 12GB (데스크톱)', '적합한 용도': '5개 + 더 무거운 모델 (Qwen3 14B)', 'Llama 3.2 3B 속도': '80–120 토큰/초', '참고': '이 5개 워크플로우에는 과도; RAG도 실행하는 경우 유용' },
           { '하드웨어': 'Apple M3 / M5 노트북 (16GB+)', '적합한 용도': '노트북이 열려 있을 때 5개 + 더 큰 모델', 'Llama 3.2 3B 속도': '50–80 토큰/초', '참고': '덮개 닫으면 워크플로우 일시 중지 — 24/7을 위해 Pi 5와 결합' },
         ],
@@ -4023,6 +4069,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             type: 'tip',
             text: '더 큰 모델을 위한 VRAM 표를 포함한 로컬 LLM의 전체 하드웨어 사이즈 조정은 [2026 로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)를 참조하십시오.',
+          },
+          {
+            type: 'note',
+            text: '애플은 2026년 8월 25일 Mac mini 라인업을 새로 발표했습니다: M6(최대 32GB, $899)이 M4를 대체하는 기본 모델, M5 Pro(최대 64GB, $1,699)가 M4 Pro를 대체합니다. 이 가이드의 5개 워크플로우에는 32GB로 충분합니다(모델 하나 추가 로드할 여유 포함). 여러 에이전트 워크플로우를 동시에 실행하거나 더 큰 모델을 병행 로드할 계획이 있을 때만 64GB를 고려하세요 — 속도가 아니라 메모리 여유의 문제입니다.',
           },
         ],
       },
