@@ -16,20 +16,20 @@ export const article: Partial<Record<Language, PEArticle>> = {
     title: 'Best Prompt Optimization Tools for Teams',
     seoTitle: 'Best Prompt Optimization Tools for Teams 2026: Ranked & Compared',
     intro: '**Prompt optimization for teams requires four capabilities: versioned storage, A/B variant testing, output scoring, and collaborative review. No single tool covers all four. This guide ranks seven specialist tools — plus PromptQuorum for cross-model comparison — by team type, pricing, and workflow fit.**',
-    metaDescription: 'No single tool covers versioning, A/B testing, scoring, and review. Braintrust leads eval ($500/mo), Vellum leads production A/B, Promptfoo is free CI/CD, DSPy auto-optimizes from examples. Stack recommendations by team size.',
+    metaDescription: 'No single tool covers versioning, A/B testing, scoring, and review. Braintrust leads eval (free tier, $249/mo Pro), Vellum leads production A/B, Promptfoo is free CI/CD, DSPy auto-optimizes from examples. Stack recommendations by team size.',
     ogTitle: 'Your Team Spends 5+ Hours/Week Tweaking Prompts? These Tools Fix That',
     ogDescription: 'Vellum cuts A/B testing to under 1 hour. DSPy auto-optimizes from 20 examples. Promptfoo is free. Which stack fits your team?',
     twitterTitle: 'Prompt Optimization Tools for Teams 2026: 6 Tools Compared',
     twitterDescription: 'Most teams need exactly 2 tools — one for eval, one for deployment. Buying all 5 wastes $1,000+/mo. Decision matrix by team type inside.',
     publishDate: '2026-04-10',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '10 min read',
     educationalLevel: 'Intermediate',
     audience: 'Engineering managers and prompt engineers building multi-person LLM workflows',
     primaryTerm: 'Prompt Optimization Tools for Teams',
     aboutTopics: ['Prompt Optimization', 'Team Collaboration', 'LLM Evaluation'],
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-10',
+    next_refresh_due: '2026-09-26',
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
       { label: 'What Is Prompt Optimization for Teams?', anchor: '#what-is-prompt-optimization' },
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Teams spending more than 5 hours/week manually tweaking prompts should adopt systematic A/B testing; Vellum\'s experiment module or Promptfoo reduce that to under 1 hour.',
           'PromptQuorum: Multi-model dispatch — compare how the same prompt performs across 25+ models before optimizing for a single provider.',
           'Avoid the single-tool trap: most teams need 2 tools — one for evaluation (Braintrust or Promptfoo) and one for deployment/versioning (Vellum or PromptHub).',
-          'Pricing ranges from free (DSPy, Promptfoo) to $200–600/month (Vellum, Braintrust) — team size and API call volume are the primary cost drivers.',
+          'Pricing ranges from free (DSPy, Promptfoo, Braintrust free tier) to $200–500/month (Vellum, Braintrust Pro at $249/month) — team size and API call volume are the primary cost drivers.',
         ],
       },
       whatIsPromptOptimization: {
@@ -113,7 +113,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Braintrust: Evaluation-First Collaboration',
         content: [
           '**Braintrust is an AI evaluation platform that lets teams score LLM outputs against custom metrics, log all production calls, and share experiment results — best for teams that measure output quality systematically.** Braintrust is not a prompt builder or version control system; it is a shared laboratory where teams design custom scoring functions, log every API call, and run experiments.',
-          'Team plan runs ~$500/month. The logging proxy supports OpenAI, Anthropic, Google APIs without code changes. Scoring functions are written in TypeScript or Python. GitHub integration lets you version prompts alongside code. The tradeoff: requires engineering expertise to set up and maintain custom scoring.',
+          'Braintrust has a permanent free tier (1M traces, 10k scores, unlimited users); Pro is $249/month following its Feb 2026 Series B. The logging proxy supports OpenAI, Anthropic, Google APIs without code changes. Scoring functions are written in TypeScript or Python. GitHub integration lets you version prompts alongside code. The tradeoff: requires engineering expertise to set up and maintain custom scoring.',
           'Team features include shared experiment dashboards (all members see the same eval results in real time), role-based access (admin/member/viewer), git-like commit history for prompt versions, and production logging (every API call logged with inputs, outputs, and scores).',
         ],
         items: [
@@ -206,7 +206,7 @@ tests:
             'A/B Testing': '✅ Experiments',
             Collaboration: '✅ Roles + dashboards',
             'CI/CD': '✓ API',
-            Pricing: '~$500/mo',
+            Pricing: 'Free / $249/mo',
             'Best For': 'Eval-driven teams',
           },
           {
@@ -416,12 +416,12 @@ tests:
         id: 'sources',
         title: 'Sources',
         content: [
-          'Last fact-checked: 2026-04-29 — all pricing, features, and integrations verified against official documentation.'
+          'Last fact-checked: 2026-08-27 — all pricing, features, and integrations verified against official documentation.'
         ],
         items: [
           '[Khattab et al., 2023. "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714](https://arxiv.org/abs/2310.03714) — foundational DSPy paper; basis for automated prompt optimization capability claims.',
           '[Zheng et al., 2023. "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena." NeurIPS 2023](https://arxiv.org/abs/2306.05685) — model-as-judge bias findings; basis for the 10–20% inflation claim in Common Mistakes.',
-          '[Braintrust Pricing Page — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — basis for Braintrust $500/month team tier claim.',
+          '[Braintrust Pricing Page — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — basis for Braintrust free tier (1M traces, 10k scores, unlimited users) and $249/month Pro tier claim.',
           '[Promptfoo GitHub Repository — github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) — open-source CI/CD prompt testing framework; basis for Promptfoo feature claims.',
           '[Vellum Platform — vellum.ai](https://www.vellum.ai/) — production deployment platform; basis for A/B testing and approval workflow claims.',
           '[Helicone Documentation — docs.helicone.ai](https://docs.helicone.ai/) — observability platform; basis for proxy integration and experiment feature claims.',
@@ -437,7 +437,7 @@ tests:
       url: 'https://www.promptquorum.com/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'en',
       datePublished: '2026-04-10',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-27',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -530,20 +530,20 @@ tests:
     title: 'Die besten Prompt-Optimierungs-Tools für Teams',
     seoTitle: 'Beste Prompt-Optimierungstools für Teams 2026',
     intro: '**Prompt-Optimierung für Teams erfordert vier Funktionen: versionierte Speicherung, A/B-Varianten-Tests, Output-Bewertung und gemeinschaftliche Überprüfung. Kein einzelnes Tool deckt alle vier Funktionen ab. Dieser Leitfaden bewertet sieben spezialisierte Tools — plus PromptQuorum für modellübergreifende Vergleiche — nach Team-Typ, Preisgestaltung und Workflow-Anpassung.**',
-    metaDescription: 'Kein einzelnes Tool deckt Versionierung, A/B-Tests, Scoring und Review ab. Braintrust führt bei Evaluation, Vellum bei Produktion, Promptfoo ist gratis.',
+    metaDescription: 'Kein einzelnes Tool deckt Versionierung, A/B-Tests, Scoring und Review ab. Braintrust führt bei Evaluation (kostenlos / 249 $/Monat Pro), Vellum bei Produktion, Promptfoo ist gratis.',
     ogTitle: 'Ihr Team verbringt 5+ Stunden/Woche mit Prompt-Tuning? Diese Tools lösen das',
     ogDescription: 'Vellum reduziert A/B-Tests auf unter 1 Stunde. DSPy optimiert automatisch aus 20 Beispielen. Promptfoo ist kostenlos.',
     twitterTitle: 'Prompt-Optimierungstools für Teams 2026: 6 Tools im Vergleich',
     twitterDescription: 'Die meisten Teams brauchen genau 2 Tools — eins für Eval, eins für Deployment. Alle 5 kaufen verschwendet 1.000+ $/Monat. Entscheidungsmatrix inklusive.',
     publishDate: '2026-04-10',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '10 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Engineering-Manager und Prompt-Ingenieure, die LLM-Workflows mit mehreren Personen erstellen',
     primaryTerm: 'Prompt-Optimierungs-Tools für Teams',
     aboutTopics: ['Prompt-Optimierung', 'Team-Zusammenarbeit', 'LLM-Bewertung'],
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-10',
+    next_refresh_due: '2026-09-26',
     toc: [
       { label: 'Zusammenfassung', anchor: '#key-takeaways' },
       { label: 'Was ist Prompt-Optimierung für Teams?', anchor: '#what-is-prompt-optimization' },
@@ -573,7 +573,7 @@ tests:
           'Open-Source-Optionen (DSPy, Promptfoo) sind kostenlos, erfordern aber technische Einrichtung — rechnen Sie mit 1–2 Tagen Konfiguration vor der Team-Übernahme.',
           'Teams, die mehr als 5 Stunden pro Woche manuell Prompts anpassen, sollten systematische A/B-Tests einführen; Vellums Experiment-Modul oder Promptfoo reduzieren dies auf unter 1 Stunde.',
           'Vermeiden Sie die Single-Tool-Falle: Die meisten Teams benötigen 2 Tools — eines für Bewertung (Braintrust oder Promptfoo) und eines für Bereitstellung/Versionierung (Vellum oder PromptHub).',
-          'Die Preise reichen von kostenlos (DSPy, Promptfoo) bis zu 200–600 USD/Monat (Vellum, Braintrust) — Team-Größe und API-Aufrufvolumen sind die Hauptkostentreiber.',
+          'Die Preise reichen von kostenlos (DSPy, Promptfoo, Braintrust Free-Tier) bis zu 200–500 USD/Monat (Vellum, Braintrust Pro für 249 USD/Monat) — Team-Größe und API-Aufrufvolumen sind die Hauptkostentreiber.',
           'PromptQuorum ermöglicht modellübergreifende Vergleiche: Testen Sie denselben Prompt über 25+ Modelle, bevor Sie sich auf eine Optimierungsstrategie festlegen.',
         ],
       },
@@ -625,7 +625,7 @@ tests:
         title: 'Braintrust: Bewertungs-zentrierte Zusammenarbeit',
         content: [
           '**Braintrust ist eine KI-Bewertungsplattform, mit der Teams LLM-Outputs anhand benutzerdefinierter Metriken bewerten, alle Produktionsaufrufe protokollieren und Experiment-Ergebnisse teilen können — am besten für Teams, die Output-Qualität systematisch messen.**',
-          'Wichtige Spezifikationen: Team-Plan ca. 500 USD/Monat. Logging-Proxy unterstützt OpenAI, Anthropic, Google APIs. Unterstützt benutzerdefinierte Scoring-Funktionen (TypeScript/Python). GitHub-Integration für Prompt-Versionierung. Kein Prompt-Builder — erfordert Code zur Verwendung.',
+          'Wichtige Spezifikationen: Permanenter Free-Tier (1 Mio. Traces, 10.000 Scores, unbegrenzte Nutzer); Pro-Plan 249 USD/Monat nach der Series-B-Finanzierung (Feb. 2026). Logging-Proxy unterstützt OpenAI, Anthropic, Google APIs. Unterstützt benutzerdefinierte Scoring-Funktionen (TypeScript/Python). GitHub-Integration für Prompt-Versionierung. Kein Prompt-Builder — erfordert Code zur Verwendung.',
         ],
         items: [
           'Gemeinsame Experiment-Dashboards: alle Team-Mitglieder sehen dieselben Bewertungsergebnisse',
@@ -710,7 +710,7 @@ tests:
             'A/B-Tests': '✅ Experimente',
             'Zusammenarbeit': '✅ Rollen + Dashboards',
             'CI/CD': '✓ API',
-            'Preisgestaltung': '~500 USD/Mo',
+            'Preisgestaltung': 'Kostenlos / 249 USD/Mo',
             'Am besten für': 'Bewertungsgesteuerte Teams',
           },
           {
@@ -849,6 +849,26 @@ tests:
             q: 'Ist Prompt-Optimierung für den deutschen Mittelstand geeignet?',
             a: 'Ja, besonders wenn lokale Inference (DSPy, Promptfoo) oder Tools mit BSI-Grundschutz-Compliance (Braintrust, Vellum) verwendet wird. Viele Mittelstand-Unternehmen sehen regelmäßig Anforderungen zur IT-Sicherheitskonformität. Wählen Sie ein Tool mit SOC 2 Type II Audit und dokumentierten Sicherheitsstandards.',
           },
+          {
+            q: 'Lohnt sich DSPy für ein 3-Personen-Team?',
+            a: 'Ja, wenn mindestens eine Person mit Python vertraut ist. DSPy automatisiert das Trial-and-Error der Prompt-Erstellung anhand eines gelabelten Datensatzes und reduziert die manuelle Iterationszeit typischerweise um 50–70 %. Für nicht-technische Teams bietet PromptPerfect eine ähnliche automatisierte Verbesserung ohne Code.',
+          },
+          {
+            q: 'Wie messe ich, ob ein Prompt tatsächlich besser ist?',
+            a: 'Definieren Sie 3–5 konkrete Qualitätskriterien für Ihre Aufgabe (Genauigkeit, Formateinhaltung, Tonalität, Länge). Erstellen Sie einen Test-Datensatz mit 20–50 Input/Output-Beispielen. Nutzen Sie LLM-as-Judge (mit einem anderen Modell als dem bewerteten) oder menschliche Bewertung, um die Outputs zu bewerten. Sowohl Braintrust als auch Promptfoo unterstützen benutzerdefinierte Scoring-Funktionen.',
+          },
+          {
+            q: 'Kann Promptfoo Braintrust ersetzen?',
+            a: 'Promptfoo (Open Source, CLI) übernimmt automatisierte Test-Suite-Läufe und CI/CD-Integration zuverlässig. Braintrust ergänzt eine gemeinsame Oberfläche, Production-Logging und Team-Dashboards. Die meisten Engineering-Teams starten mit Promptfoo (kostenlos) und wechseln zu Braintrust, sobald teamweite Sichtbarkeit der Eval-Ergebnisse benötigt wird.',
+          },
+          {
+            q: 'Funktioniert Helicone mit allen LLM-Anbietern?',
+            a: 'Helicone unterstützt OpenAI, Anthropic (Claude), Groq, Mistral, Gemini, Azure OpenAI und jeden OpenAI-kompatiblen Endpunkt. Die Integration erfordert nur eine einzeilige URL-Änderung im API-Client — keine SDK-Abhängigkeit.',
+          },
+          {
+            q: 'Wann sollte ein Team Vellum statt Promptfoo einsetzen?',
+            a: 'Nutzen Sie Vellum, wenn Sie Produktions-Traffic-Splitting (A/B-Tests mit echten Nutzern) benötigen, nicht-technische Teammitglieder Prompts über eine UI verwalten sollen, oder PR-ähnliche Freigabe-Workflows vor dem Prompt-Deployment gebraucht werden. Nutzen Sie Promptfoo, wenn Sie CI/CD-Integration benötigen und Ihr Team mit YAML und CLI-Tools vertraut ist.',
+          },
         ],
       },
       relatedReading: {
@@ -867,9 +887,9 @@ tests:
         items: [
           '[Khattab et al., 2023. „DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714](https://arxiv.org/abs/2310.03714) — grundlegende DSPy Paper; Basis für Ansprüche zur automatisierten Prompt-Optimierungsfähigkeit',
           '[Zheng et al., 2023. „Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena." NeurIPS 2023](https://arxiv.org/abs/2306.05685) — Modell-als-Schiedsrichter-Bias-Ergebnisse; Basis für die 10–20%-Inflationsangabe in Häufige Fehler',
-          '[Braintrust Preisseite — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — Basis für Braintrust 500 USD/Monat Team Tier Anspruch',
+          '[Braintrust Preisseite — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — Basis für Braintrust Free-Tier (1 Mio. Traces, 10.000 Scores, unbegrenzte Nutzer) und 249 USD/Monat Pro-Tier Anspruch',
         ],
-        content: ['Zuletzt Fakten überprüft: 2026-04-29. Model-Versionen: GPT-5.5 (OpenAI April 2024), Claude Sonnet 4.6 (Anthropic June 2024), Gemini 2.0 (Google December 2024).'],
+        content: ['Zuletzt Fakten überprüft: 2026-08-27 — alle Preise, Funktionen und Integrationen gegen offizielle Dokumentation verifiziert.'],
       },
     },
     schema: {
@@ -880,7 +900,7 @@ tests:
       url: 'https://www.promptquorum.com/de/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'de',
       datePublished: '2026-04-10',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       proficiencyLevel: 'Intermediate',
@@ -930,14 +950,14 @@ tests:
     twitterTitle: 'Herramientas de optimización de prompts para equipos 2026: 6 comparadas',
     twitterDescription: 'La mayoría de equipos necesita exactamente 2 herramientas — una para eval, otra para despliegue. Comprar las 5 desperdicia $1.000+/mes. Matriz de decisión por tipo de equipo incluida.',
     publishDate: '2026-04-10',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '10 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Engineering managers e ingenieros de prompts que construyen flujos de trabajo LLM con múltiples personas',
     primaryTerm: 'Herramientas de optimización de prompts para equipos',
     aboutTopics: ['Optimización de prompts', 'Colaboración en equipo', 'Evaluación de LLM'],
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-10',
+    next_refresh_due: '2026-09-26',
     toc: [
       { label: 'Puntos clave', anchor: '#key-takeaways' },
       { label: '¿Qué es la optimización de prompts para equipos?', anchor: '#what-is-prompt-optimization' },
@@ -968,7 +988,7 @@ tests:
           'Los equipos que dedican más de 5 horas/semana ajustando prompts manualmente deberían adoptar A/B testing sistemático; el módulo de experimentos de Vellum o Promptfoo lo reduce a menos de 1 hora.',
           'PromptQuorum: Despacho multi-modelo — compara cómo funciona el mismo prompt en 25+ modelos antes de optimizar para un proveedor específico.',
           'Evita la trampa de la herramienta única: la mayoría de equipos necesita 2 herramientas — una para evaluación (Braintrust o Promptfoo) y otra para despliegue/versionado (Vellum o PromptHub).',
-          'Los precios van desde gratis (DSPy, Promptfoo) hasta $200–600/mes (Vellum, Braintrust) — el tamaño del equipo y el volumen de llamadas a API son los principales impulsores de coste.',
+          'Los precios van desde gratis (DSPy, Promptfoo, tier gratuito de Braintrust) hasta $200–500/mes (Vellum, Braintrust Pro a $249/mes) — el tamaño del equipo y el volumen de llamadas a API son los principales impulsores de coste.',
         ],
       },
       whatIsPromptOptimization: {
@@ -1021,7 +1041,7 @@ tests:
         title: 'Braintrust: colaboración centrada en la evaluación',
         content: [
           '**Braintrust es una plataforma de evaluación de IA que permite a los equipos puntuar outputs de LLM según métricas personalizadas, registrar todas las llamadas en producción y compartir resultados de experimentos — ideal para equipos que miden la calidad del output de forma sistemática.** Braintrust no es un constructor de prompts ni un sistema de control de versiones; es un laboratorio compartido donde los equipos diseñan funciones de scoring personalizadas, registran cada llamada a la API y ejecutan experimentos.',
-          'El plan Team cuesta ~$500/mes. El proxy de logging soporta las APIs de OpenAI, Anthropic y Google sin cambios de código. Las funciones de scoring se escriben en TypeScript o Python. La integración con GitHub permite versionar prompts junto al código. La contrapartida: requiere experiencia técnica para configurar y mantener el scoring personalizado.',
+          'Braintrust tiene un tier gratuito permanente (1M de traces, 10k scores, usuarios ilimitados); el plan Pro cuesta $249/mes tras su Serie B de febrero de 2026. El proxy de logging soporta las APIs de OpenAI, Anthropic y Google sin cambios de código. Las funciones de scoring se escriben en TypeScript o Python. La integración con GitHub permite versionar prompts junto al código. La contrapartida: requiere experiencia técnica para configurar y mantener el scoring personalizado.',
           'Las características para equipos incluyen dashboards de experimentos compartidos (todos los miembros ven los mismos resultados de eval en tiempo real), control de acceso por roles (admin/miembro/observador), historial de commits tipo Git para versiones de prompts y logging en producción (cada llamada a la API registrada con entradas, salidas y puntuaciones).',
         ],
         items: [
@@ -1114,7 +1134,7 @@ tests:
             'A/B Testing': '✅ Experimentos',
             Colaboración: '✅ Roles + dashboards',
             'CI/CD': '✓ API',
-            Precios: '~$500/mes',
+            Precios: 'Gratis / $249/mes',
             'Ideal para': 'Equipos orientados a eval',
           },
           {
@@ -1322,12 +1342,12 @@ tests:
         id: 'sources',
         title: 'Fuentes',
         content: [
-          'Última verificación de hechos: 2026-04-29 — todos los precios, características e integraciones verificados contra documentación oficial.'
+          'Última verificación de hechos: 2026-08-27 — todos los precios, características e integraciones verificados contra documentación oficial.'
         ],
         items: [
           '[Khattab et al., 2023. "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714](https://arxiv.org/abs/2310.03714) — artículo fundacional de DSPy; base para las afirmaciones sobre capacidad de optimización automatizada de prompts.',
           '[Zheng et al., 2023. "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena." NeurIPS 2023](https://arxiv.org/abs/2306.05685) — hallazgos de sesgo model-as-judge; base para la afirmación de inflación del 10–20% en Errores comunes.',
-          '[Página de precios de Braintrust — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — base para la afirmación del tier Team de Braintrust a $500/mes.',
+          '[Página de precios de Braintrust — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — base para la afirmación del tier gratuito (1M traces, 10k scores, usuarios ilimitados) y el tier Pro de Braintrust a $249/mes.',
           '[Repositorio GitHub de Promptfoo — github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) — framework de testing de prompts CI/CD open-source; base para afirmaciones de características de Promptfoo.',
           '[Plataforma Vellum — vellum.ai](https://www.vellum.ai/) — plataforma de despliegue en producción; base para afirmaciones de A/B testing y flujos de aprobación.',
           '[Documentación de Helicone — docs.helicone.ai](https://docs.helicone.ai/) — plataforma de observabilidad; base para afirmaciones de integración proxy y características de experimentos.',
@@ -1343,7 +1363,7 @@ tests:
       url: 'https://www.promptquorum.com/es/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'es',
       datePublished: '2026-04-10',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-27',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1399,17 +1419,20 @@ tests:
     title: 'Melhores ferramentas de otimização de prompts para equipes',
     seoTitle: 'Otimização de prompts para equipes 2026: melhores ferramentas',
     intro: '**A otimização de prompts para equipes requer quatro capacidades: armazenamento versionado, testes A/B de variantes, pontuação da saída e revisão colaborativa. Nenhuma ferramenta única cobre as quatro. Este guia classifica sete ferramentas especializadas — mais PromptQuorum para comparação multi-modelo — por tipo de equipe, preços e adequação ao fluxo de trabalho.**',
-    metaDescription: 'Nenhuma ferramenta cobre versionamento, A/B, scoring e revisão. Braintrust lidera em avaliação, Vellum em A/B, Promptfoo é gratuito. Stack por tamanho de equipe.',
+    metaDescription: 'Nenhuma ferramenta cobre versionamento, A/B, scoring e revisão. Braintrust lidera em avaliação (grátis / $249/mês Pro), Vellum em A/B, Promptfoo é gratuito. Stack por tamanho de equipe.',
     ogTitle: 'Sua equipe gasta 5+ horas/semana ajustando prompts? Essas ferramentas resolvem',
     ogDescription: 'Vellum reduz o A/B testing para menos de 1 hora. DSPy auto-otimiza a partir de 20 exemplos. Promptfoo é gratuito. Qual stack se encaixa com sua equipe?',
     twitterTitle: 'Ferramentas de otimização de prompts para equipes 2026: 6 comparadas',
     twitterDescription: 'A maioria das equipes precisa de exatamente 2 ferramentas — uma para avaliação, outra para implantação. Comprar as 5 desperdiça $1.000+/mês. Matriz de decisão por tipo de equipe incluída.',
     publishDate: '2026-04-10',
+    dateModified: '2026-08-27',
     readTime: '10 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Gerentes de engenharia e engenheiros de prompts que constroem fluxos de trabalho LLM com múltiplas pessoas',
     primaryTerm: 'Ferramentas de otimização de prompts para equipes',
     aboutTopics: ['Otimização de prompts', 'Colaboração em equipe', 'Avaliação de LLM'],
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-09-26',
     toc: [
       { label: 'Pontos-chave', anchor: '#key-takeaways' },
       { label: 'O que é otimização de prompts para equipes?', anchor: '#what-is-prompt-optimization' },
@@ -1493,7 +1516,7 @@ tests:
         title: 'Braintrust: colaboração centrada em avaliação',
         content: [
           '**Braintrust é uma plataforma de avaliação de IA que permite às equipes pontuar saídas de LLM segundo métricas personalizadas, registrar todas as chamadas em produção e compartilhar resultados de experimentos — ideal para equipes que medem a qualidade da saída de forma sistemática.** Braintrust não é um construtor de prompts nem um sistema de controle de versões; é um laboratório compartilhado onde as equipes projetam funções de scoring personalizadas, registram cada chamada de API e executam experimentos.',
-          'O plano Team custa ~$500/mês. O proxy de logging suporta as APIs da OpenAI, Anthropic e Google sem mudanças de código. As funções de scoring são escritas em TypeScript ou Python. A integração com GitHub permite versionar prompts junto ao código. A contrapartida: requer experiência técnica para configurar e manter o scoring personalizado.',
+          'O Braintrust tem um tier gratuito permanente (1M de traces, 10 mil scores, usuários ilimitados); o plano Pro custa $249/mês após sua Série B de fevereiro de 2026. O proxy de logging suporta as APIs da OpenAI, Anthropic e Google sem mudanças de código. As funções de scoring são escritas em TypeScript ou Python. A integração com GitHub permite versionar prompts junto ao código. A contrapartida: requer experiência técnica para configurar e manter o scoring personalizado.',
           'Os recursos para equipes incluem dashboards de experimentos compartilhados (todos os membros veem os mesmos resultados de avaliação em tempo real), controle de acesso por funções (admin/membro/observador), histórico de commits tipo Git para versões de prompts e logging em produção (cada chamada de API registrada com entradas, saídas e pontuações).',
         ],
         items: [
@@ -1586,7 +1609,7 @@ tests:
             'A/B Testing': '✅ Experimentos',
             Colaboração: '✅ Funções + dashboards',
             'CI/CD': '✓ API',
-            Preços: '~$500/mês',
+            Preços: 'Grátis / $249/mês',
             'Ideal para': 'Equipes orientadas a avaliação',
           },
           {
@@ -1794,12 +1817,12 @@ tests:
         id: 'sources',
         title: 'Fontes',
         content: [
-          'Última verificação de fatos: 2026-04-29 — todos os preços, recursos e integrações verificados contra documentação oficial.'
+          'Última verificação de fatos: 2026-08-27 — todos os preços, recursos e integrações verificados contra documentação oficial.'
         ],
         items: [
           '[Khattab et al., 2023. "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714](https://arxiv.org/abs/2310.03714) — artigo fundacional do DSPy; base para as afirmações sobre capacidade de otimização automatizada de prompts.',
           '[Zheng et al., 2023. "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena." NeurIPS 2023](https://arxiv.org/abs/2306.05685) — descobertas de viés model-as-judge; base para a afirmação de inflação de 10–20% em Erros comuns.',
-          '[Página de preços do Braintrust — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — base para a afirmação do tier Team do Braintrust a $500/mês.',
+          '[Página de preços do Braintrust — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — base para a afirmação do tier gratuito (1M traces, 10 mil scores, usuários ilimitados) e do tier Pro do Braintrust a $249/mês.',
           '[Repositório GitHub do Promptfoo — github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) — framework de testes de prompts CI/CD open-source; base para afirmações de recursos do Promptfoo.',
           '[Plataforma Vellum — vellum.ai](https://www.vellum.ai/) — plataforma de implantação em produção; base para afirmações de A/B testing e fluxos de aprovação.',
           '[Documentação do Helicone — docs.helicone.ai](https://docs.helicone.ai/) — plataforma de observabilidade; base para afirmações de integração proxy e recursos de experimentos.',
@@ -1815,7 +1838,7 @@ tests:
       url: 'https://www.promptquorum.com/pt/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'pt-BR',
       datePublished: '2026-04-10',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-27',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1871,20 +1894,20 @@ tests:
     title: 'Meilleures outils d\'optimisation d\'invites pour les équipes',
     seoTitle: 'Meilleurs outils d\'optimisation de prompts pour équipes (2026)',
     intro: '**L\'optimisation d\'invites pour les équipes nécessite quatre capacités : stockage versionné, test A/B de variantes, notation des résultats et révision collaborative. Aucun outil unique ne les couvre toutes. Ce guide classe sept outils spécialisés — plus PromptQuorum pour comparaison multi-modèle — par type d\'équipe, tarification et adaptation du flux de travail.**',
-    metaDescription: 'Aucun outil ne couvre versioning, A/B testing, scoring et revue. Braintrust domine l\'évaluation (500 $/mois), Vellum la production, Promptfoo est gratuit. Recommandations de stack par taille d\'équipe.',
+    metaDescription: 'Aucun outil ne couvre versioning, A/B testing, scoring et revue. Braintrust domine l\'évaluation (gratuit / 249 $/mois Pro), Vellum la production, Promptfoo est gratuit. Recommandations de stack par taille d\'équipe.',
     ogTitle: 'Votre équipe passe 5+ h/semaine à ajuster des prompts ? Ces outils règlent ça',
     ogDescription: 'Vellum réduit les tests A/B à moins d\'1 heure. DSPy optimise automatiquement à partir de 20 exemples. Promptfoo est gratuit.',
     twitterTitle: 'Outils d\'optimisation de prompts pour équipes 2026 : 6 outils comparés',
     twitterDescription: 'La plupart des équipes n\'ont besoin que de 2 outils — un pour l\'éval, un pour le déploiement. En acheter 5 gaspille 1 000+ $/mois.',
     publishDate: '2026-04-10',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '10 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Responsables d\'ingénierie et ingénieurs d\'invites construisant des workflows LLM multi-personnels',
     primaryTerm: 'Outils d\'optimisation d\'invites pour les équipes',
     aboutTopics: ['Optimisation d\'invites', 'Collaboration d\'équipe', 'Évaluation LLM'],
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-10',
+    next_refresh_due: '2026-09-26',
     toc: [
       { label: 'Points clés', anchor: '#key-takeaways' },
       { label: 'Qu\'est-ce que l\'optimisation des invites pour les équipes?', anchor: '#what-is-prompt-optimization' },
@@ -1914,7 +1937,7 @@ tests:
           'Options open-source (DSPy, Promptfoo) gratuites mais nécessitent configuration — comptez 1–2 jours avant adoption d\'équipe.',
           'Équipes dépensant 5+ heures/semaine optimisant manuellement devraient adopter test A/B systématique; Vellum ou Promptfoo réduisent cela à <1 heure.',
           'Évitez piège outil-unique : la plupart équipes besoin 2 outils — un pour évaluation (Braintrust/Promptfoo) + un pour déploiement/versioning (Vellum/PromptHub).',
-          'Tarifs : gratuit (DSPy, Promptfoo) à 200–600 USD/mois (Vellum, Braintrust) — taille équipe et volume d\'appels API pilotent coûts.',
+          'Tarifs : gratuit (DSPy, Promptfoo, tier gratuit Braintrust) à 200–500 USD/mois (Vellum, Braintrust Pro à 249 USD/mois) — taille équipe et volume d\'appels API pilotent coûts.',
           'PromptQuorum permet comparaisons multi-modèle : testez même invite sur 25+ modèles avant committing stratégie d\'optimisation.',
         ],
       },
@@ -1966,7 +1989,7 @@ tests:
         title: 'Braintrust : collaboration centrée sur l\'évaluation',
         content: [
           '**Braintrust plateforme évaluation IA permettant équipes noter outputs LLM métriques personnalisées, logger appels production, partager résultats expériences — optimal équipes mesurant qualité systematiquement.**',
-          'Spécifications clés : Plan équipe ~500 USD/mois. Proxy logging supporte OpenAI, Anthropic, APIs Google. Supporte fonctions scoring personnalisées (TypeScript/Python). Intégration GitHub versioning invites. Pas prompt-builder — requiert code utilisation.',
+          'Spécifications clés : Tier gratuit permanent (1M traces, 10k scores, utilisateurs illimités); plan Pro à 249 USD/mois après sa levée Série B (février 2026). Proxy logging supporte OpenAI, Anthropic, APIs Google. Supporte fonctions scoring personnalisées (TypeScript/Python). Intégration GitHub versioning invites. Pas prompt-builder — requiert code utilisation.',
         ],
         items: [
           'Dashboards expériences partagés : tous membres équipe voient mêmes résultats évaluation',
@@ -2051,7 +2074,7 @@ tests:
             'Test A/B': '✅ Expériences',
             'Collaboration': '✅ Rôles + dashboards',
             'CI/CD': '✓ API',
-            'Tarification': '~500 USD/mois',
+            'Tarification': 'Gratuit / 249 USD/mois',
             'Optimal pour': 'Équipes orientées évaluation',
           },
           {
@@ -2162,16 +2185,36 @@ tests:
         id: 'faq',
         faqs: [
           {
-            q: 'Qu\'est-ce que l\'optimisation d\'invites pour équipes?',
-            a: 'Optimisation d\'invites équipes est pratique améliorer invites LLM systématiquement via test A/B structuré, notation output, révision collaborative. Contrairement écriture-solo, optimisation équipe requiert outils partagés : versioning, accès rôle-basé, suites test reproductibles.',
+            q: 'Qu\'est-ce que l\'optimisation de prompts pour les équipes ?',
+            a: 'L\'optimisation de prompts pour les équipes consiste à améliorer systématiquement les prompts LLM par des tests A/B structurés, une notation des résultats et une révision collaborative. Contrairement à l\'écriture de prompts en solo, l\'optimisation en équipe nécessite des outils partagés avec gestion des versions, accès par rôles et suites de tests reproductibles.',
           },
           {
-            q: 'Comment optimisation invites diffère gestion invites?',
-            a: 'Gestion invites couvre stockage, versioning, déploiement (PromptHub, Vellum). Optimisation améliore activement qualité invites via test variantes et notation. Plupart équipes besoin deux : gestion organiser invites, optimisation améliorer temps.',
+            q: 'Quelle est la différence entre optimisation et gestion de prompts ?',
+            a: 'La gestion de prompts couvre le stockage, le versionnage et le déploiement des prompts (PromptHub, Vellum). L\'optimisation de prompts améliore activement leur qualité via des tests de variantes et une notation. La plupart des équipes ont besoin des deux : la gestion pour organiser les prompts, l\'optimisation pour les améliorer au fil du temps.',
           },
           {
-            q: 'Combien coûte pile optimisation pour équipe 5-personnes?',
-            a: 'Budget 0–700 USD/mois selon sélection outil. Piles gratuites (DSPy + Promptfoo + Helicone gratuit) couvrent plupart cas. Piles SaaS Vellum/Braintrust coûtent 200–700 USD/mois. Coûts évoluent volume appels API et taille équipe.',
+            q: 'DSPy vaut-il la peine d\'être appris pour une équipe de 3 personnes ?',
+            a: 'Oui, si au moins une personne est à l\'aise avec Python. DSPy automatise le travail d\'essai-erreur de l\'écriture de prompts à partir d\'un jeu de données étiqueté, réduisant généralement le temps d\'itération manuelle de 50 à 70 %. Pour les équipes non techniques, PromptPerfect offre une amélioration automatisée similaire sans code.',
+          },
+          {
+            q: 'Combien coûte une pile d\'optimisation de prompts pour une équipe de 5 personnes ?',
+            a: 'Prévoyez un budget de 0 à 700 $/mois selon les outils choisis. Les piles gratuites (DSPy + Promptfoo + palier gratuit Helicone) couvrent la plupart des cas d\'usage. Les piles SaaS avec Vellum ou Braintrust coûtent 200 à 700 $/mois. Le coût évolue avec le volume d\'appels API et la taille de l\'équipe.',
+          },
+          {
+            q: 'Comment mesurer si un prompt est réellement meilleur ?',
+            a: 'Définissez 3 à 5 critères de qualité précis pour votre tâche (précision, respect du format, ton, longueur). Constituez un jeu de test de 20 à 50 exemples entrée/sortie. Utilisez un LLM-as-judge (avec un modèle différent de celui évalué) ou une révision humaine pour noter les sorties. Braintrust et Promptfoo prennent tous deux en charge des fonctions de notation personnalisées.',
+          },
+          {
+            q: 'Promptfoo peut-il remplacer Braintrust ?',
+            a: 'Promptfoo (open-source, CLI) gère bien l\'exécution automatisée de suites de tests et l\'intégration CI/CD. Braintrust ajoute une interface partagée, une journalisation en production et des tableaux de bord d\'équipe. La plupart des équipes d\'ingénierie démarrent avec Promptfoo (gratuit) et passent à Braintrust lorsqu\'elles ont besoin d\'une visibilité d\'équipe sur les résultats d\'évaluation.',
+          },
+          {
+            q: 'Helicone fonctionne-t-il avec tous les fournisseurs de LLM ?',
+            a: 'Helicone prend en charge OpenAI, Anthropic (Claude), Groq, Mistral, Gemini, Azure OpenAI et tout endpoint compatible OpenAI. L\'intégration ne nécessite qu\'un changement d\'URL dans le client API — sans dépendance à un SDK.',
+          },
+          {
+            q: 'Quand une équipe doit-elle utiliser Vellum plutôt que Promptfoo ?',
+            a: 'Utilisez Vellum lorsque vous avez besoin de répartition du trafic en production (tests A/B avec de vrais utilisateurs), de membres non techniques gérant les prompts via une interface, ou de workflows d\'approbation type PR avant le déploiement. Utilisez Promptfoo lorsque vous avez besoin d\'intégration CI/CD et que votre équipe est à l\'aise avec YAML et les outils en ligne de commande.',
           },
         ],
       },
@@ -2191,9 +2234,9 @@ tests:
         items: [
           '[Khattab et al., 2023. « DSPy : Compiling Declarative Language Model Calls into Self-Improving Pipelines. » arXiv:2310.03714](https://arxiv.org/abs/2310.03714) — papier DSPy fondamental; base pour affirmations capacité optimisation invites automatisée',
           '[Zheng et al., 2023. « Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. » NeurIPS 2023](https://arxiv.org/abs/2306.05685) — résultats biais modèle-comme-arbitre; base affirmation inflation 10–20% Erreurs courantes',
-          '[Page tarification Braintrust — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — base affirmation Braintrust ~500 USD/mois tier équipe',
+          '[Page tarification Braintrust — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — base affirmation tier gratuit Braintrust (1M traces, 10k scores, utilisateurs illimités) et tier Pro à 249 USD/mois',
         ],
-        content: ['Dernière vérification faits : 2026-04-29. Versions modèles : GPT-5.5 (OpenAI avril 2024), Claude Sonnet 4.6 (Anthropic juin 2024), Gemini 2.0 (Google décembre 2024).'],
+        content: ['Dernière vérification des faits : 2026-08-27 — tous les prix, fonctionnalités et intégrations vérifiés par rapport à la documentation officielle.'],
       },
     },
     schema: {
@@ -2204,7 +2247,7 @@ tests:
       url: 'https://www.promptquorum.com/fr/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'fr',
       datePublished: '2026-04-10',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       proficiencyLevel: 'Intermediate',
@@ -2248,20 +2291,20 @@ tests:
     title: 'チームのためのベストプロンプト最適化ツール',
     seoTitle: 'チーム向けプロンプト最適化ツール2026：ランキング＆比較',
     intro: '**チーム向けプロンプト最適化には4つの機能が必要です: バージョン管理されたストレージ、A/Bバリアントテスト、出力スコアリング、協調レビュー。単一ツールではすべてをカバーできません。本ガイドは、チームタイプ、料金、ワークフロー適合性で分類した7つの専門ツール — マルチモデル比較用PromptQuorum含む — をランク付けします。**',
-    metaDescription: 'バージョン管理・A/Bテスト・スコアリング・レビューを1つで網羅するツールはない。Braintrustは評価（月額500ドル）、Vellumは本番A/B、Promptfooは無料CI/CD。チーム規模別スタック推薦。',
+    metaDescription: 'バージョン管理・A/Bテスト・スコアリング・レビューを1つで網羅するツールはない。Braintrustは評価（無料プラン / 月額249ドルPro）、Vellumは本番A/B、Promptfooは無料CI/CD。チーム規模別スタック推薦。',
     ogTitle: 'チームが週5時間以上プロンプト調整に費やしている？これらのツールで解決',
     ogDescription: 'VellumでA/Bテストを1時間未満に。DSPyは20例から自動最適化。Promptfooは無料。最適なスタックは？',
     twitterTitle: 'チーム向けプロンプト最適化ツール2026：6ツール比較',
     twitterDescription: 'ほとんどのチームに必要なのは2ツールだけ——評価用1つとデプロイ用1つ。5つ全部買うと月1,000ドル以上の無駄。判断マトリクスあり。',
     publishDate: '2026-04-10',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '10分で読める',
     educationalLevel: 'Intermediate',
     audience: 'マルチパーソンLLMワークフロー構築するエンジニアリングマネージャーとプロンプトエンジニア',
     primaryTerm: 'チーム向けプロンプト最適化ツール',
     aboutTopics: ['プロンプト最適化', 'チーム協働', 'LLM評価'],
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-10',
+    next_refresh_due: '2026-09-26',
     toc: [
       { label: '重要ポイント', anchor: '#key-takeaways' },
       { label: 'チーム向けプロンプト最適化とは?', anchor: '#what-is-prompt-optimization' },
@@ -2291,7 +2334,7 @@ tests:
           'オープンソース(DSPy、Promptfoo)無料だが技術セットアップ必要 — チーム採用前1〜2日想定。',
           '週5時間以上手動最適化チームは体系的A/Bテスト導入すべき; VellumやPromptfoo1時間未満削減。',
           'シングルツール落とし穴回避: 多くチーム2ツール必要 — 評価用(Braintrust/Promptfoo) + デプロイ/バージョン管理用(Vellum/PromptHub)。',
-          '料金: 無料(DSPy、Promptfoo)から200〜600 USD/月(Vellum、Braintrust) — チームサイズAPIコール量がコスト駆動。',
+          '料金: 無料(DSPy、Promptfoo、Braintrust無料プラン)から200〜500 USD/月(Vellum、Braintrust Pro 月額249 USD) — チームサイズAPIコール量がコスト駆動。',
           'PromptQuorumマルチモデル比較可: 最適化戦略確定前25+モデルで同じプロンプトテスト。',
         ],
       },
@@ -2343,7 +2386,7 @@ tests:
         title: 'Braintrust: 評価中心のコラボレーション',
         content: [
           '**Braintrust AIエバリュエーション基盤、カスタムメトリクスLLM出力スコアリング、本番呼び出しログ、実験結果共有可 — 出力品質体系測定チーム向け最適。**',
-          'スペック: チームプラン ~500 USD/月。ロギングプロキシOpenAI、Anthropic、Google API対応。カスタムスコアリング関数(TypeScript/Python)対応。GitHubプロンプトバージョン管理統合。プロンプトビルダー無し — コード使用必要。',
+          'スペック: 永久無料プラン(トレース100万件、スコア1万件、ユーザー無制限); Proプランは2026年2月のシリーズB後で月額249 USD。ロギングプロキシOpenAI、Anthropic、Google API対応。カスタムスコアリング関数(TypeScript/Python)対応。GitHubプロンプトバージョン管理統合。プロンプトビルダー無し — コード使用必要。',
         ],
         items: [
           '共有実験ダッシュボード: すべてチームメンバー同じ評価結果表示',
@@ -2428,7 +2471,7 @@ tests:
             'A/Bテスト': '✅ 実験',
             'コラボレーション': '✅ 役割 + ダッシュボード',
             'CI/CD': '✓ API',
-            '料金': '~500 USD/月',
+            '料金': '無料 / 249 USD/月',
             '最適チーム': '評価駆動チーム',
           },
           {
@@ -2539,16 +2582,36 @@ tests:
         id: 'faq',
         faqs: [
           {
-            q: 'チーム向けプロンプト最適化とは?',
-            a: 'チーム向けプロンプト最適化は、構造化A/Bテスト、出力スコアリング、協調レビューによりLLMプロンプト体系改善実践。単独作成と異なり、チーム最適化はバージョン管理、ロール基盤アクセス、再現可能テストスイート共有ツール要求。',
+            q: 'チーム向けプロンプト最適化とは何ですか?',
+            a: 'チーム向けプロンプト最適化とは、構造化されたA/Bテスト、出力のスコアリング、共同レビューを通じてLLMプロンプトを体系的に改善する実践です。個人によるプロンプト作成とは異なり、チームでの最適化にはバージョン管理、ロールベースのアクセス制御、再現可能なテストスイートを備えた共有ツールが必要です。',
           },
           {
-            q: 'プロンプト最適化とプロンプト管理の違い?',
-            a: 'プロンプト管理はストレージ、バージョン管理、デプロイカバー(PromptHub、Vellum)。最適化はバリアント検証とスコアリング経由プロンプト品質活発改善。多くチーム両方必要: 管理はプロンプト組織化、最適化は時間改善。',
+            q: 'プロンプト最適化とプロンプト管理の違いは何ですか?',
+            a: 'プロンプト管理は、プロンプトの保存・バージョン管理・デプロイを担います(PromptHub、Vellumなど)。プロンプト最適化は、バリアントテストとスコアリングを通じてプロンプトの品質を積極的に改善します。ほとんどのチームには両方が必要です — 管理はプロンプトを整理するため、最適化は時間をかけて品質を高めるためです。',
           },
           {
-            q: '5人チーム対最適化スタックコスト?',
-            a: 'ツール選択によって0〜700 USD/月予算。無料スタック(DSPy + Promptfoo + Helicone無料)多くケースカバー。Vellum/Braintrust SaaSスタック200〜700 USD/月。コストはAPIコール量とチームサイズで拡大。',
+            q: '3人チームでDSPyを学ぶ価値はありますか?',
+            a: 'はい、少なくとも1人がPythonに慣れていれば価値があります。DSPyはラベル付きデータセットを使ってプロンプト作成の試行錯誤を自動化し、手動での反復時間を通常50〜70%削減します。非エンジニアチームには、コード不要で同様の自動改善を提供するPromptPerfectが適しています。',
+          },
+          {
+            q: '5人チームのプロンプト最適化スタックにはいくらかかりますか?',
+            a: 'ツール選択によって月額0〜700ドルの予算が目安です。無料スタック(DSPy + Promptfoo + Heliconeの無料プラン)でほとんどのユースケースをカバーできます。VellumやBraintrustを使うSaaSスタックは月額200〜700ドルです。コストはAPI呼び出し量とチーム規模に応じて増加します。',
+          },
+          {
+            q: 'プロンプトが実際に改善されたかどうかはどう測定しますか?',
+            a: 'タスクに応じた3〜5個の具体的な品質基準(正確性、フォーマット遵守、トーン、長さ)を定義します。20〜50個の入出力例からなるテストデータセットを構築します。評価対象とは別のモデルによるLLM-as-judge、または人によるレビューで出力をスコアリングします。BraintrustとPromptfooはどちらもカスタムスコアリング関数に対応しています。',
+          },
+          {
+            q: 'PromptfooはBraintrustの代わりになりますか?',
+            a: 'Promptfoo(オープンソース、CLI)は自動テストスイートの実行とCI/CD統合を確実にこなします。Braintrustは共有UI、本番ロギング、チームダッシュボードを追加します。多くのエンジニアリングチームはPromptfoo(無料)から始め、評価結果をチーム全体で可視化する必要が生じたらBraintrustに移行します。',
+          },
+          {
+            q: 'HeliconeはすべてのLLMプロバイダーに対応していますか?',
+            a: 'HeliconeはOpenAI、Anthropic(Claude)、Groq、Mistral、Gemini、Azure OpenAI、および任意のOpenAI互換エンドポイントに対応しています。統合はAPIクライアントのURLを1行変更するだけで済み、SDKへの依存はありません。',
+          },
+          {
+            q: 'PromptfooではなくVellumを使うべきタイミングは?',
+            a: '本番トラフィックの分割(実際のユーザーによるA/Bテスト)、非エンジニアのチームメンバーがUI経由でプロンプトを管理する必要がある場合、またはプロンプトのデプロイ前にPRのような承認ワークフローが必要な場合はVellumを使用してください。CI/CD統合が必要で、チームがYAMLとCLIツールに慣れている場合はPromptfooを使用してください。',
           },
         ],
       },
@@ -2568,9 +2631,9 @@ tests:
         items: [
           '[Khattab et al., 2023. 「DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines.」 arXiv:2310.03714](https://arxiv.org/abs/2310.03714) — 基礎DSPy論文; 自動プロンプト最適化能力主張の根拠',
           '[Zheng et al., 2023. 「Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena.」 NeurIPS 2023](https://arxiv.org/abs/2306.05685) — モデル審判バイアス調査結果; 一般的誤り10〜20%膨張主張根拠',
-          '[Braintrust 価格ページ — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — Braintrust ~500 USD/月チーム段階主張根拠',
+          '[Braintrust 価格ページ — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — Braintrust無料プラン(トレース100万件、スコア1万件、ユーザー無制限)および月額249 USD Proプラン主張根拠',
         ],
-        content: ['最終ファクトチェック: 2026-04-29。モデルバージョン: GPT-5.5(OpenAI 2024年4月)、Claude Sonnet 4.6(Anthropic 2024年6月)、Gemini 2.0(Google 2024年12月)。'],
+        content: ['最終ファクトチェック: 2026-08-27 — すべての価格、機能、統合を公式ドキュメントに照らして検証済み。'],
       },
     },
     schema: {
@@ -2581,7 +2644,7 @@ tests:
       url: 'https://www.promptquorum.com/ja/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'ja',
       datePublished: '2026-04-10',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-27',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       proficiencyLevel: 'Intermediate',
@@ -2625,20 +2688,20 @@ tests:
     title: '2026年团队提示优化最佳工具',
     seoTitle: '2026团队最佳提示词优化工具：排名与对比',
     intro: '**团队提示优化需要四个核心能力：版本化存储、A/B变体测试、输出评分、协作审查。没有单一工具能覆盖全部四个能力。本指南根据团队类型、价格和工作流适配，对七个专业工具进行排名 — 加上PromptQuorum的跨模型对比。**',
-    metaDescription: '没有单一工具能覆盖版本管理、A/B测试、评分和审核。Braintrust领先评估（500美元/月），Vellum领先生产环境，Promptfoo免费CI/CD，DSPy自动优化。按团队规模推荐技术栈。',
+    metaDescription: '没有单一工具能覆盖版本管理、A/B测试、评分和审核。Braintrust领先评估（免费层 / 249美元/月Pro），Vellum领先生产环境，Promptfoo免费CI/CD，DSPy自动优化。按团队规模推荐技术栈。',
     ogTitle: '你的团队每周花5小时以上调整提示词？这些工具能解决',
     ogDescription: 'Vellum将A/B测试缩短到1小时以内。DSPy从20个样本自动优化。Promptfoo免费。哪个技术栈适合你的团队？',
     twitterTitle: '2026团队提示词优化工具：6款工具对比',
     twitterDescription: '大多数团队只需要2个工具——一个评估，一个部署。买全5个每月浪费1000美元以上。内含决策矩阵。',
     publishDate: '2026-04-10',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '阅读约10分钟',
     educationalLevel: 'Intermediate',
     audience: '构建多人LLM工作流的工程经理和提示工程师',
     primaryTerm: '团队提示优化工具',
     aboutTopics: ['提示优化', '团队协作', 'LLM评估'],
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-10',
+    next_refresh_due: '2026-09-26',
     toc: [
       { label: '核心要点', anchor: '#key-takeaways' },
       { label: '什么是团队提示优化?', anchor: '#what-is-prompt-optimization' },
@@ -2669,7 +2732,7 @@ tests:
           '每周手动调整提示超过5小时的团队应采纳系统化A/B测试；Vellum的实验模块或Promptfoo可将其减少至1小时以内。',
           'PromptQuorum: 多模型调度 — 在优化前对比同一提示在25+个模型上的表现。',
           '避免单工具陷阱：大多数团队需要2个工具 — 一个用于评估(Braintrust或Promptfoo)，一个用于部署/版本管理(Vellum或PromptHub)。',
-          '价格从免费(DSPy、Promptfoo)到$200–600/月(Vellum、Braintrust) — 团队规模和API调用量是主要成本驱动因素。',
+          '价格从免费(DSPy、Promptfoo、Braintrust免费层)到$200–500/月(Vellum、Braintrust Pro为$249/月) — 团队规模和API调用量是主要成本驱动因素。',
         ],
       },
       whatIsPromptOptimization: {
@@ -2722,7 +2785,7 @@ tests:
         title: 'Braintrust: 评估优先协作',
         content: [
           '**Braintrust是AI评估平台，让团队根据自定义指标评分LLM输出、记录所有生产调用、分享实验结果 — 最适合系统性测量输出质量的团队。** Braintrust不是提示生成器或版本控制系统；它是共享实验室，团队设计自定义评分函数、记录每个API调用、运行实验。',
-          '团队计划约$500/月。日志记录代理支持OpenAI、Anthropic、Google API而无需代码更改。评分函数用TypeScript或Python编写。GitHub集成让你与代码一起对提示进行版本管理。权衡：需要工程专业知识来设置和维护自定义评分。',
+          'Braintrust拥有永久免费层(100万条追踪、1万次评分、无限用户)；Pro层在其2026年2月B轮融资后定价为$249/月。日志记录代理支持OpenAI、Anthropic、Google API而无需代码更改。评分函数用TypeScript或Python编写。GitHub集成让你与代码一起对提示进行版本管理。权衡：需要工程专业知识来设置和维护自定义评分。',
           '团队功能包括共享实验仪表板(所有成员实时看到相同的评估结果)、基于角色的访问(管理员/成员/查看者)、通过git风格提交历史的提示版本管理、生产日志记录(每个API调用都记录输入、输出、评分)。',
         ],
         items: [
@@ -2815,7 +2878,7 @@ tests:
             'A/B测试': '✅ 实验',
             '协作': '✅ 角色+仪表板',
             'CI/CD': '✓ API',
-            '价格': '~$500/月',
+            '价格': '免费 / $249/月',
             '最适合': '评估驱动团队',
           },
           {
@@ -2968,15 +3031,35 @@ tests:
         faqs: [
           {
             q: '什么是团队提示优化?',
-            a: '团队提示优化是通过结构化A/B测试、输出评分、协作审查系统性改进LLM提示的实践。不同于单独提示编写，团队优化需要版本化共享工具、基于角色的访问、可重现测试套件。',
+            a: '团队提示优化是指通过结构化的A/B测试、输出评分和协作审查，系统性地改进LLM提示的实践。与个人独自编写提示不同，团队优化需要具备版本管理、基于角色的访问权限和可复现测试套件的共享工具。',
           },
           {
-            q: '提示优化和提示管理的区别?',
-            a: '提示管理涵盖存储、版本化、部署提示(PromptHub、Vellum)。提示优化通过变体测试和评分主动改进提示质量。大多数团队需要两者：管理用于组织提示，优化用于逐时间改进。',
+            q: '提示优化和提示管理有什么区别?',
+            a: '提示管理涵盖提示的存储、版本管理和部署(如PromptHub、Vellum)。提示优化通过变体测试和评分主动提升提示质量。大多数团队两者都需要：管理用于组织提示，优化用于持续提升提示质量。',
           },
           {
-            q: '5人团队的提示优化堆栈成本多少?',
-            a: '根据工具选择预算$0–$700/月。免费堆栈(DSPy+Promptfoo+Helicone免费层)覆盖大多数用例。带Vellum或Braintrust的SaaS堆栈运行$200–700/月。成本随API调用量和团队规模扩展。',
+            q: '对于3人团队来说，学习DSPy值得吗?',
+            a: '值得，只要团队中至少有一人熟悉Python。DSPy利用带标签的数据集，自动完成提示编写中反复试错的过程，通常可将人工迭代时间减少50%至70%。对于非工程团队，PromptPerfect提供了无需编写代码的类似自动改进功能。',
+          },
+          {
+            q: '5人团队的提示优化技术栈需要多少成本?',
+            a: '根据工具选择，预算范围为每月0至700美元。免费技术栈(DSPy + Promptfoo + Helicone免费层)可覆盖大多数使用场景。使用Vellum或Braintrust的SaaS技术栈每月成本为200至700美元。成本会随API调用量和团队规模增长。',
+          },
+          {
+            q: '如何衡量一个提示是否真的变得更好了?',
+            a: '为你的任务定义3至5项具体质量标准(准确性、格式合规性、语气、长度)。构建一个包含20至50个输入/输出示例的测试数据集。使用LLM作为评判者(采用与被评估模型不同的模型)或人工审核对输出进行评分。Braintrust和Promptfoo都支持自定义评分函数。',
+          },
+          {
+            q: 'Promptfoo能替代Braintrust吗?',
+            a: 'Promptfoo(开源、命令行工具)能很好地处理自动化测试套件运行和CI/CD集成。Braintrust则增加了共享界面、生产环境日志记录和团队仪表板。大多数工程团队先从Promptfoo(免费)开始，等需要团队范围内的评估结果可见性时再升级到Braintrust。',
+          },
+          {
+            q: 'Helicone支持所有LLM提供商吗?',
+            a: 'Helicone支持OpenAI、Anthropic(Claude)、Groq、Mistral、Gemini、Azure OpenAI，以及任何兼容OpenAI的接口。集成只需在API客户端中修改一行URL，无需依赖SDK。',
+          },
+          {
+            q: '团队应该在什么情况下使用Vellum而不是Promptfoo?',
+            a: '当你需要生产环境流量分配(面向真实用户的A/B测试)、需要非技术团队成员通过界面管理提示，或需要在提示部署前采用类似PR的审批流程时，请使用Vellum。当你需要CI/CD集成，且团队熟悉YAML和命令行工具时，请使用Promptfoo。',
           },
         ],
       },
@@ -3014,12 +3097,12 @@ tests:
         id: 'sources',
         title: '来源',
         content: [
-          '最后事实检查：2026-04-29 — 所有价格、功能、集成针对官方文档验证。'
+          '最后事实检查：2026-08-27 — 所有价格、功能、集成针对官方文档验证。'
         ],
         items: [
           '[Khattab et al., 2023. "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714](https://arxiv.org/abs/2310.03714) — DSPy基础论文；自动化提示优化能力声明的基础。',
           '[Zheng et al., 2023. "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena." NeurIPS 2023](https://arxiv.org/abs/2306.05685) — 模型作为评判者偏见发现；常见错误中10–20%膨胀声明的基础。',
-          '[Braintrust定价页面 — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — Braintrust $500/月团队层声明的基础。',
+          '[Braintrust定价页面 — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — Braintrust免费层(100万条追踪、1万次评分、无限用户)和$249/月Pro层声明的基础。',
           '[Promptfoo GitHub存储库 — github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) — 开源CI/CD提示测试框架；Promptfoo功能声明的基础。',
           '[Vellum平台 — vellum.ai](https://www.vellum.ai/) — 生产部署平台；A/B测试和审批工作流声明的基础。',
           '[Helicone文档 — docs.helicone.ai](https://docs.helicone.ai/) — 可观测性平台；代理集成和实验功能声明的基础。',
@@ -3035,7 +3118,7 @@ tests:
       url: 'https://www.promptquorum.com/zh/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'zh',
       datePublished: '2026-04-10',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-27',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -3087,20 +3170,20 @@ tests:
     title: 'أفضل أدوات تحسين التعليمات للفرق',
     seoTitle: 'أدوات تحسين التعليمات للفرق ⁨2026⁩: مقارنة وتصنيف',
     intro: '**تحسين التعليمات للفرق يستلزم أربع قدرات: التخزين المُصنَّف بالإصدارات، واختبار A/B للمتغيرات، وتقييم المخرجات، والمراجعة التعاونية. لا توجد أداة واحدة تغطي الأربعة. يصنّف هذا الدليل سبع أدوات متخصصة — إضافةً إلى PromptQuorum للمقارنة بين النماذج — حسب نوع الفريق والأسعار ومدى الملاءمة مع سير العمل.**',
-    metaDescription: '⁨Braintrust⁩ الأفضل للتقييم (⁨500⁩ دولار/شهر)، ⁨Vellum⁩ لاختبار ⁨A/B⁩ في الإنتاج، ⁨Promptfoo⁩ مجاني لـ ⁨CI/CD⁩، ⁨DSPy⁩ يحسّن تلقائياً. توصيات بحسب حجم الفريق.',
+    metaDescription: '⁨Braintrust⁩ الأفضل للتقييم (خطة مجانية / 249 دولار/شهر Pro)، ⁨Vellum⁩ لاختبار ⁨A/B⁩ في الإنتاج، ⁨Promptfoo⁩ مجاني لـ ⁨CI/CD⁩، ⁨DSPy⁩ يحسّن تلقائياً. توصيات بحسب حجم الفريق.',
     ogTitle: 'فريقك يقضي 5+ ساعات أسبوعياً في ضبط التعليمات؟ هذه الأدوات تحل المشكلة',
     ogDescription: 'Vellum يُقلّص اختبار A/B إلى أقل من ساعة. DSPy يحسّن تلقائياً من 20 مثالاً. Promptfoo مجاني. أي stack يناسب فريقك؟',
     twitterTitle: 'أدوات تحسين التعليمات للفرق 2026: 6 أدوات مقارنة',
     twitterDescription: 'معظم الفرق تحتاج بالضبط أداتين — واحدة للتقييم وأخرى للنشر. شراء جميع الأدوات الخمس يُهدر ⁨1⁩,⁨000⁩$+/شهر. مصفوفة قرار حسب نوع الفريق بداخله.',
     publishDate: '2026-04-10',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '10 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'مدراء الهندسة ومهندسو التعليمات الذين يبنون سير عمل LLM متعدد الأشخاص',
     primaryTerm: 'أدوات تحسين التعليمات للفرق',
     aboutTopics: ['تحسين التعليمات', 'التعاون الجماعي', 'تقييم LLM'],
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-10',
+    next_refresh_due: '2026-09-26',
     toc: [
       { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
       { label: 'ما هو تحسين التعليمات للفرق؟', anchor: '#what-is-prompt-optimization' },
@@ -3131,7 +3214,7 @@ tests:
           'الفرق التي تقضي أكثر من 5 ساعات أسبوعياً في ضبط التعليمات يدوياً يجب أن تعتمد اختبار A/B المنهجي؛ وحدة التجارب في Vellum أو Promptfoo تُقلّصه إلى أقل من ساعة.',
           'PromptQuorum: الإرسال متعدد النماذج — يقارن أداء نفس التعليمة على 25+ نموذجاً قبل الالتزام بمزود أو إصدار محدد.',
           'تجنب فخ الأداة الواحدة: معظم الفرق تحتاج أداتين — واحدة للتقييم (Braintrust أو Promptfoo) وأخرى للنشر والإصدارات (Vellum أو PromptHub).',
-          'تتراوح الأسعار بين المجاني (DSPy, Promptfoo) و200–600$/شهر (Vellum, Braintrust) — حجم الفريق وحجم استدعاءات API هما المحركان الرئيسيان للتكلفة.',
+          'تتراوح الأسعار بين المجاني (DSPy, Promptfoo, خطة Braintrust المجانية) و200–500$/شهر (Vellum, وBraintrust Pro بـ249$/شهر) — حجم الفريق وحجم استدعاءات API هما المحركان الرئيسيان للتكلفة.',
         ],
       },
       whatIsPromptOptimization: {
@@ -3184,7 +3267,7 @@ tests:
         title: 'Braintrust: التعاون المتمحور حول التقييم',
         content: [
           '**Braintrust منصة تقييم ذكاء اصطناعي تُمكّن الفرق من تقييم مخرجات LLM وفق مقاييس مخصصة وتسجيل جميع استدعاءات الإنتاج ومشاركة نتائج التجارب — مثالية للفرق التي تقيس جودة المخرجات بصورة منهجية.** Braintrust ليس منشئ تعليمات ولا نظام تحكم في الإصدارات؛ بل هو مختبر مشترك تصمم فيه الفرق دوال التقييم المخصصة وتسجل كل استدعاء API وتشغل التجارب.',
-          'تكلفة خطة Team حوالي 500$/شهر. يدعم proxy التسجيل واجهات برمجة OpenAI وAnthropic وGoogle دون تغييرات في الكود. تُكتب دوال التقييم بـ TypeScript أو Python. يتيح التكامل مع GitHub إصدار التعليمات بجانب الكود. الجانب السلبي: يتطلب خبرة تقنية لإعداد التقييم المخصص والحفاظ عليه.',
+          'تمتلك Braintrust خطة مجانية دائمة (مليون trace، 10 آلاف score، مستخدمون غير محدودين)؛ خطة Pro بسعر 249$/شهر بعد جولة تمويلها من الفئة B في فبراير 2026. يدعم proxy التسجيل واجهات برمجة OpenAI وAnthropic وGoogle دون تغييرات في الكود. تُكتب دوال التقييم بـ TypeScript أو Python. يتيح التكامل مع GitHub إصدار التعليمات بجانب الكود. الجانب السلبي: يتطلب خبرة تقنية لإعداد التقييم المخصص والحفاظ عليه.',
           'تشمل ميزات الفرق: لوحات تجارب مشتركة (جميع الأعضاء يرون نتائج التقييم في الوقت الفعلي)، والتحكم في الوصول حسب الأدوار (admin/عضو/مراقب)، وتاريخ commits على غرار Git لإصدارات التعليمات، وتسجيل الإنتاج (كل استدعاء API مُسجَّل بالمدخلات والمخرجات والنقاط).',
         ],
         items: [
@@ -3277,7 +3360,7 @@ tests:
             'اختبار A/B': '✅ تجارب',
             'التعاون': '✅ أدوار + لوحات',
             'CI/CD': '✓ API',
-            'الأسعار': '~500$/شهر',
+            'الأسعار': 'مجاني / 249$/شهر',
             'مثالي لـ': 'الفرق المتمحورة حول التقييم',
           },
           {
@@ -3485,12 +3568,12 @@ tests:
         id: 'sources',
         title: 'المصادر',
         content: [
-          'آخر تحقق من الحقائق: 2026-04-29 — جميع الأسعار والميزات والتكاملات مُتحقَّق منها مقابل التوثيق الرسمي.'
+          'آخر تحقق من الحقائق: 2026-08-27 — جميع الأسعار والميزات والتكاملات مُتحقَّق منها مقابل التوثيق الرسمي.'
         ],
         items: [
           '[Khattab et al., 2023. "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714](https://arxiv.org/abs/2310.03714) — الورقة التأسيسية لـ DSPy؛ أساس الادعاءات حول قدرة التحسين الآلي للتعليمات.',
           '[Zheng et al., 2023. "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena." NeurIPS 2023](https://arxiv.org/abs/2306.05685) — نتائج تحيز model-as-judge؛ أساس ادعاء التضخم بنسبة 10–20% في الأخطاء الشائعة.',
-          '[صفحة أسعار Braintrust — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — أساس ادعاء خطة Team لـ Braintrust بـ 500$/شهر.',
+          '[صفحة أسعار Braintrust — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — أساس ادعاء الخطة المجانية (مليون trace، 10 آلاف score، مستخدمون غير محدودين) وخطة Pro لـ Braintrust بـ 249$/شهر.',
           '[مستودع GitHub لـ Promptfoo — github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) — إطار اختبار التعليمات CI/CD مفتوح المصدر؛ أساس ادعاءات ميزات Promptfoo.',
           '[منصة Vellum — vellum.ai](https://www.vellum.ai/) — منصة نشر الإنتاج؛ أساس ادعاءات اختبار A/B وسير عمل الموافقة.',
           '[توثيق Helicone — docs.helicone.ai](https://docs.helicone.ai/) — منصة الرصد؛ أساس ادعاءات تكامل proxy وميزات التجارب.',
@@ -3506,7 +3589,7 @@ tests:
       url: 'https://www.promptquorum.com/ar/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'ar',
       datePublished: '2026-04-10',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-27',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -3566,14 +3649,14 @@ tests:
     twitterTitle: '팀을 위한 프롬프트 최적화 도구 2026: 6가지 비교',
     twitterDescription: '대부분의 팀에는 정확히 2가지 도구가 필요합니다 — 평가용 1개, 배포용 1개. 5가지 모두 구매하면 월 $1,000 이상을 낭비합니다. 팀 유형별 의사결정 매트릭스 포함.',
     publishDate: '2026-04-10',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '10분 분량',
     educationalLevel: 'Intermediate',
     audience: '다수의 인원이 함께 LLM 워크플로를 구축하는 엔지니어링 매니저 및 프롬프트 엔지니어',
     primaryTerm: '팀을 위한 프롬프트 최적화 도구',
     aboutTopics: ['프롬프트 최적화', '팀 협업', 'LLM 평가'],
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-10-10',
+    next_refresh_due: '2026-09-26',
     toc: [
       { label: '핵심 요점', anchor: '#key-takeaways' },
       { label: '팀을 위한 프롬프트 최적화란?', anchor: '#what-is-prompt-optimization' },
@@ -3604,7 +3687,7 @@ tests:
           '매주 5시간 이상 수동으로 프롬프트를 조정하는 팀은 체계적인 A/B 테스트를 도입해야 합니다; Vellum이나 Promptfoo의 실험 모듈을 사용하면 1시간 이내로 단축됩니다.',
           'PromptQuorum: 다중 모델 디스패치 — 특정 공급업체를 위해 최적화하기 전에 동일한 프롬프트가 25개 이상의 모델에서 어떻게 작동하는지 비교하십시오.',
           '단일 도구 함정을 피하십시오: 대부분의 팀은 2가지 도구가 필요합니다 — 평가용(Braintrust 또는 Promptfoo)과 배포/버전 관리용(Vellum 또는 PromptHub).',
-          '가격은 무료(DSPy, Promptfoo)부터 월 $200–600(Vellum, Braintrust)까지 다양합니다 — 팀 규모와 API 호출 볼륨이 주요 비용 요인입니다.',
+          '가격은 무료(DSPy, Promptfoo, Braintrust 무료 티어)부터 월 $200–500(Vellum, 월 $249 Braintrust Pro)까지 다양합니다 — 팀 규모와 API 호출 볼륨이 주요 비용 요인입니다.',
         ],
       },
       whatIsPromptOptimization: {
@@ -3657,7 +3740,7 @@ tests:
         title: 'Braintrust: 평가 중심 협업',
         content: [
           '**Braintrust는 팀이 사용자 정의 지표에 따라 LLM 출력을 점수화하고, 프로덕션의 모든 호출을 기록하며, 실험 결과를 공유할 수 있게 하는 AI 평가 플랫폼입니다 — 출력 품질을 체계적으로 측정하는 팀에 이상적입니다.** Braintrust는 프롬프트 빌더나 버전 관리 시스템이 아닙니다; 팀이 사용자 정의 점수 함수를 설계하고, 모든 API 호출을 기록하며, 실험을 실행하는 공유 연구실입니다.',
-          'Team 플랜은 월 ~$500입니다. 로깅 프록시는 코드 변경 없이 OpenAI, Anthropic, Google API를 지원합니다. 점수 함수는 TypeScript 또는 Python으로 작성합니다. GitHub 통합을 통해 코드와 함께 프롬프트를 버전 관리합니다. 단점: 사용자 정의 점수를 설정하고 유지하기 위한 기술적 전문성이 필요합니다.',
+          'Braintrust에는 영구 무료 티어(트레이스 100만 건, 점수 1만 건, 무제한 사용자)가 있으며, Pro 티어는 2026년 2월 시리즈 B 이후 월 $249입니다. 로깅 프록시는 코드 변경 없이 OpenAI, Anthropic, Google API를 지원합니다. 점수 함수는 TypeScript 또는 Python으로 작성합니다. GitHub 통합을 통해 코드와 함께 프롬프트를 버전 관리합니다. 단점: 사용자 정의 점수를 설정하고 유지하기 위한 기술적 전문성이 필요합니다.',
           '팀 기능에는 공유 실험 대시보드(모든 구성원이 실시간으로 동일한 평가 결과를 봄), 역할 기반 접근 제어(관리자/구성원/관찰자), 프롬프트 버전의 Git 스타일 커밋 이력, 프로덕션 로깅(입력, 출력, 점수가 기록된 모든 API 호출)이 포함됩니다.',
         ],
         items: [
@@ -3750,7 +3833,7 @@ tests:
             'A/B 테스트': '✅ 실험',
             '협업': '✅ 역할 + 대시보드',
             'CI/CD': '✓ API',
-            '가격': '~월 $500',
+            '가격': '무료 / 월 $249',
             '최적 대상': '평가 중심 팀',
           },
           {
@@ -3931,12 +4014,12 @@ tests:
         id: 'sources',
         title: '출처',
         content: [
-          '마지막 사실 확인: 2026-04-29 — 모든 가격, 기능 및 통합이 공식 문서를 기준으로 검증되었습니다.'
+          '마지막 사실 확인: 2026-08-27 — 모든 가격, 기능 및 통합이 공식 문서를 기준으로 검증되었습니다.'
         ],
         items: [
           '[Khattab et al., 2023. "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines." arXiv:2310.03714](https://arxiv.org/abs/2310.03714) — DSPy 기초 논문; 자동화된 프롬프트 최적화 기능 주장의 근거.',
           '[Zheng et al., 2023. "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena." NeurIPS 2023](https://arxiv.org/abs/2306.05685) — model-as-judge 편향 발견; 흔한 실수에서 10–20% 부풀림 주장의 근거.',
-          '[Braintrust 가격 페이지 — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — Braintrust Team 티어 월 $500 주장의 근거.',
+          '[Braintrust 가격 페이지 — braintrustdata.com/pricing](https://www.braintrustdata.com/pricing) — Braintrust 무료 티어(트레이스 100만 건, 점수 1만 건, 무제한 사용자) 및 월 $249 Pro 티어 주장의 근거.',
           '[Promptfoo GitHub 저장소 — github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) — 오픈소스 프롬프트 테스트 CI/CD 프레임워크; Promptfoo 기능 주장의 근거.',
           '[Vellum 플랫폼 — vellum.ai](https://www.vellum.ai/) — 프로덕션 배포 플랫폼; A/B 테스트 및 승인 워크플로 주장의 근거.',
           '[Helicone 문서 — docs.helicone.ai](https://docs.helicone.ai/) — 가시성 플랫폼; 프록시 통합 및 실험 기능 주장의 근거.',
@@ -3951,7 +4034,7 @@ tests:
       url: 'https://www.promptquorum.com/ko/prompt-engineering/best-prompt-optimization-tools-for-teams',
       inLanguage: 'ko',
       datePublished: '2026-04-10',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-27',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
