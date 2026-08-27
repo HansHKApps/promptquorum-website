@@ -263,6 +263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Replace GitHub Copilot With a Local LLM](/power-local-llm/replace-github-copilot-with-local-llm) -- full walkthrough for switching from Copilot to a self-hosted model',
           '[Best Local Coding Models 2026](/power-local-llm/best-local-coding-models-2026) -- which models work best inside VS Code and JetBrains',
           '[Continue.dev vs Cline vs Aider: Local LLM Coding Tools 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local) -- compare IDE tools that work with local LLM backends',
+          '[Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs Copilot vs Cline](/power-local-llm/cursor-vs-windsurf-vs-copilot-cline-2026) -- Cline\'s local-model setup compared against Cursor, Windsurf, and GitHub Copilot on price and agent mode',
           '[Best RAG Tools for Business Documents 2026](/power-local-llm/best-rag-tools-for-business-documents-2026) -- extend local coding AI with document retrieval',
         ],
       },
