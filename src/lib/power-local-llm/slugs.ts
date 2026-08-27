@@ -70,6 +70,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-affiliate-tools-ai-developers-2026':     'best-affiliate-tools-ai-developers-2026',
   'apple-mlx-vs-nvidia-cuda-local-llm-2026':     'apple-mlx-vs-nvidia-cuda-local-llm-2026',
   'cursor-vs-windsurf-vs-copilot-cline-2026':    'cursor-vs-windsurf-vs-copilot-cline-2026',
+  'pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026': 'pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026',
 
   // Commercial Sprint 2026-05-26 — 6 new revenue pages
   'qwen-local-deployment-complete-guide-2026':   'qwen-local-deployment-complete-guide-2026',
