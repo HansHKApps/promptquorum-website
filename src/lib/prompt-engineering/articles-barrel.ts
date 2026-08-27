@@ -58,6 +58,7 @@ import { article as a_best_prompt_optimization_tools_teams } from "./articles/be
 import { article as a_best_prompt_testing_tools } from "./articles/best-prompt-testing-tools";
 import { article as a_best_prompt_management_platforms } from "./articles/best-prompt-management-platforms";
 import { article as a_braintrust_vs_prompthub_vs_vellum } from "./articles/braintrust-vs-prompthub-vs-vellum";
+import { article as a_langsmith_vs_helicone_vs_langfuse } from "./articles/langsmith-vs-helicone-vs-langfuse-2026";
 import { article as a_promptlayer_vs_mirascope_vs_promptperfect } from "./articles/promptlayer-vs-mirascope-vs-promptperfect";
 import { article as a_prompt_engineering_vs_fine_tuning } from "./articles/prompt-engineering-vs-fine-tuning";
 import { article as a_prompt_engineering_vs_rag } from "./articles/prompt-engineering-vs-rag";
@@ -142,6 +143,7 @@ export const peContent: Record<string, Partial<Record<Language, PEArticle>>> = {
   "best-prompt-testing-tools": a_best_prompt_testing_tools,
   "best-prompt-management-platforms": a_best_prompt_management_platforms,
   "braintrust-vs-prompthub-vs-vellum": a_braintrust_vs_prompthub_vs_vellum,
+  "langsmith-vs-helicone-vs-langfuse": a_langsmith_vs_helicone_vs_langfuse,
   "promptlayer-vs-mirascope-vs-promptperfect": a_promptlayer_vs_mirascope_vs_promptperfect,
   "prompt-engineering-vs-fine-tuning": a_prompt_engineering_vs_fine_tuning,
   "prompt-engineering-vs-rag": a_prompt_engineering_vs_rag,
