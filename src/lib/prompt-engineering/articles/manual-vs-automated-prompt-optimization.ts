@@ -7,6 +7,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/content";
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-27',
     theme: 'Tools & Platforms',
     heroImage: '/images/manual-vs-automated-prompt-optimization-overview-hero-en.webp',
     title: 'Manual vs Automated Prompt Optimization: When to Iterate, When to Automate',
@@ -14,7 +15,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: 'Manual vs automated prompt optimization: choose based on prompt count and resources. When to iterate by hand, when to automate. Decision framework and comparison.',
     intro: '**Prompt optimization can be manual (you rewrite the prompt) or automated (a framework rewrites it for you).** Manual optimization gives you control but scales only to ~50 production prompts. Automated optimization (DSPy, TextGrad, Promptfoo) scales to 100+ prompts but requires labeled training data and metric definitions. This guide shows when to use each and how they work together.',
     publishDate: '2026-04-26',
-    dateModified: '2026-05-05',
+    dateModified: '2026-08-27',
     readTime: '9 min read',
     educationalLevel: 'Intermediate',
     audience: 'Developers and prompt engineers choosing between manual iteration and automation',
@@ -48,7 +49,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Manual vs Automated Prompt Optimization: When to Iterate, When to Automate',
       description: 'Manual vs automated prompt optimization: choose based on prompt count. Scaling decision framework.',
       datePublished: '2026-04-26',
-      dateModified: '2026-05-05',
+      dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -174,13 +175,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Can I mix manual and automated optimization?', a: 'Yes, and this is best practice. Manual for your core task (1–3 prompts), automated for variants and scaling. Use Promptfoo to test all variants; use DSPy to generate new ones.' },
-          { q: 'Does DSPy work with all models?', a: 'DSPy works with any API-accessible model: GPT-5.5, Claude, Gemini, Cohere, Ollama. It does not work with vision models yet. Local models are supported but slower.' },
+          { q: 'Does DSPy work with all models?', a: 'DSPy works with any API-accessible model: GPT-5.6, Claude, Gemini, Cohere, Ollama. It does not work with vision models yet. Local models are supported but slower.' },
           { q: 'How many labeled examples do I need for DSPy?', a: 'Minimum 30–50 for simple tasks (classification, extraction). Complex tasks (summarization, reasoning) benefit from 100–500. More examples = more robust optimization.' },
           { q: 'What is the compute cost of running DSPy?', a: 'One DSPy optimization run on 100 examples costs ~$5–20 (API calls). Running 10 candidate prompts × 100 examples = 1,000 calls = $50–200 per optimization cycle. Monthly retraining = $50–200/month.' },
           { q: 'Can I deploy a DSPy-optimized prompt in production?', a: 'Yes. DSPy outputs a plain-text prompt. Copy it to your production system (PromptQuorum, LangChain, Vellum, etc.) and serve it normally. No special DSPy runtime needed in production.' },
           { q: 'Does automated optimization guarantee better prompts?', a: 'No. If your metric is wrong, DSPy optimizes for the wrong thing. If your evaluation data is biased, DSPy learns the bias. Garbage in, garbage out.' },
           { q: 'Should I use automated optimization for creative tasks?', a: 'Not yet. Automation works best on metric-driven tasks (classification, extraction, summarization). Creative tasks (copywriting, storytelling) lack clear metrics, so manual control is better.' },
-          { q: 'Can DSPy optimize prompts for multiple models at once?', a: 'DSPy optimizes for one model at a time. To optimize for GPT-5.5 AND Claude, run DSPy twice (once per model) and compare results. Hybrid approach: optimize for your preferred model, then test on others manually.' },
+          { q: 'Can DSPy optimize prompts for multiple models at once?', a: 'DSPy optimizes for one model at a time. To optimize for GPT-5.6 AND Claude, run DSPy twice (once per model) and compare results. Hybrid approach: optimize for your preferred model, then test on others manually.' },
         ],
       },
 
@@ -217,7 +218,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: 'Manuelle vs automatisierte Prompt-Optimierung: Entscheidungsrahmen basierend auf Prompt-Anzahl und Ressourcen. Wann von Hand optimieren, wann automatisieren.',
     intro: '**Prompt-Optimierung kann manuell erfolgen (Sie schreiben den Prompt um) oder automatisiert (ein Framework schreibt ihn für Sie um).** Manuelle Optimierung gibt Ihnen Kontrolle, skaliert aber nur bis ~50 Produktions-Prompts. Automatisierte Optimierung (DSPy, TextGrad, Promptfoo) skaliert auf 100+ Prompts, erfordert aber gekennzeichnete Trainingsdaten und Metrik-Definitionen. Dieser Leitfaden zeigt, wann Sie welchen Ansatz verwenden und wie sie zusammenwirken.',
     publishDate: '2026-04-26',
-    dateModified: '2026-05-05',
+    dateModified: '2026-08-27',
     readTime: '9 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler und Prompt-Ingenieure, die zwischen manueller Iteration und Automatisierung wählen',
@@ -251,7 +252,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Manuelle vs Automatisierte Prompt-Optimierung: Wann welcher Ansatz',
       description: 'Manuelle vs automatisierte Prompt-Optimierung: Entscheidungsrahmen basierend auf Prompt-Anzahl. Skalierungsentscheidung.',
       datePublished: '2026-04-26',
-      dateModified: '2026-05-05',
+      dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/de/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -377,13 +378,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Kann ich manuelle und automatisierte Optimierung mischen?', a: 'Ja, und das ist Best Practice. Manuell für Ihre Kern-Aufgabe (1–3 Prompts), automatisiert für Varianten und Skalierung. Nutzen Sie Promptfoo, um alle Varianten zu testen; nutzen Sie DSPy, um neue zu generieren.' },
-          { q: 'Funktioniert DSPy mit allen Modellen?', a: 'DSPy funktioniert mit jedem API-zugänglichen Modell: GPT-5.5, Claude, Gemini, Cohere, Ollama. Es funktioniert noch nicht mit Vision-Modellen. Lokale Modelle (Ollama, LM Studio) werden unterstützt, sind aber langsamer.' },
+          { q: 'Funktioniert DSPy mit allen Modellen?', a: 'DSPy funktioniert mit jedem API-zugänglichen Modell: GPT-5.6, Claude, Gemini, Cohere, Ollama. Es funktioniert noch nicht mit Vision-Modellen. Lokale Modelle (Ollama, LM Studio) werden unterstützt, sind aber langsamer.' },
           { q: 'Wie viele gekennzeichnete Beispiele brauche ich für DSPy?', a: 'Minimum 30–50 für einfache Aufgaben (Klassifizierung, Extraktion). Komplexe Aufgaben (Zusammenfassung, Reasoning) profitieren von 100–500. Mehr Beispiele = robustere Optimierung.' },
           { q: 'Was sind Berechnungskosten für DSPy?', a: 'Ein DSPy-Optimierungsdurchlauf auf 100 Beispielen kostet ~5–20 EUR (API-Aufrufe zu Ihrem Modell). 10 Kandidaten-Prompts × 100 Beispiele = 1.000 Aufrufe = 50–200 EUR pro Optimierungszyklus. Monatliches Umtraining auf 100 neuen Beispielen = 50–200 EUR/Monat.' },
           { q: 'Kann ich einen DSPy-optimierten Prompt in Produktion deployen?', a: 'Ja. DSPy gibt einen Klartxt-Prompt aus. Kopieren Sie ihn in Ihr Produktionssystem (PromptQuorum, LangChain, Vellum, etc.) und servieren Sie ihn normal. Keine spezielle DSPy-Laufzeit nötig in Produktion.' },
           { q: 'Garantiert automatisierte Optimierung bessere Prompts?', a: 'Nein. Wenn Ihre Metrik falsch ist (z.B. für Länge statt Genauigkeit optimieren), optimiert DSPy für das Falsche. Wenn Ihre Evaluierungsdaten verzerrt sind, lernt DSPy die Verzerrung. Müll rein, Müll raus.' },
           { q: 'Sollte ich automatisierte Optimierung für kreative Aufgaben verwenden?', a: 'Noch nicht. Automatisierung funktioniert beste bei metrik-gesteuerten Aufgaben (Klassifizierung, Extraktion, Zusammenfassung, Reasoning). Kreative Aufgaben (Copywriting, Geschichtenerzählen) fehlen klare Metriken, daher ist manuelle Kontrolle besser.' },
-          { q: 'Kann DSPy Prompts für mehrere Modelle gleichzeitig optimieren?', a: 'DSPy optimiert jeweils für ein Modell. Um für GPT-5.5 UND Claude zu optimieren, führen Sie DSPy zweimal aus (einmal pro Modell) und vergleichen Ergebnisse. Hybrid-Ansatz: optimieren Sie für Ihr bevorzugtes Modell, testen Sie dann manuell auf anderen.' },
+          { q: 'Kann DSPy Prompts für mehrere Modelle gleichzeitig optimieren?', a: 'DSPy optimiert jeweils für ein Modell. Um für GPT-5.6 UND Claude zu optimieren, führen Sie DSPy zweimal aus (einmal pro Modell) und vergleichen Ergebnisse. Hybrid-Ansatz: optimieren Sie für Ihr bevorzugtes Modell, testen Sie dann manuell auf anderen.' },
           { q: 'Muss ich bei der Verwendung von DSPy oder Prompt-Optimierungstools die DSGVO beachten?', a: 'Ja. Wenn Sie Nutzerdaten, Eingabe-Ausgabe-Beispiele oder Trainingsdaten für Optimierung verwenden, müssen Sie DSGVO-Artikel 28 (Datenverarbeitungsverträge) einhalten. Dokumentieren Sie: wo Daten gespeichert, wer darauf zugreift, wie lange es aufbewahrt wird. BSI-Grundschutz-Kataloge helfen mit IT-Sicherheits-Checklisten.' },
           { q: 'Ist DSPy oder automatisierte Prompt-Optimierung für deutsche KMUs geeignet?', a: 'Ja. Für Mittelstandsunternehmen mit <100 Produktions-Prompts ist hybrid empfohlen: manuell für Kern-Prompts, dann DSPy einmal Sie 50+ Beispiele haben. Beachten Sie: BSI-Grundschutz-Anforderungen für kritische Prozesse, möglicherweise TISAX-Zertifizierung. Beginnen Sie klein, dokumentieren Sie, dann skalieren Sie.' },
         ],
@@ -422,7 +423,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: 'Optimización manual vs automatizada de prompts: elige según el número de prompts y recursos. Cuándo iterar a mano y cuándo automatizar. Con framework.',
     intro: '**La optimización de prompts puede ser manual (tú reescribes el prompt) o automatizada (un framework lo reescribe por ti).** La optimización manual te da control pero escala solo hasta ~50 prompts en producción. La optimización automatizada (DSPy, TextGrad, Promptfoo) escala a 100+ prompts pero requiere datos de entrenamiento etiquetados y definiciones de métricas. Esta guía muestra cuándo usar cada enfoque y cómo funcionan juntos.',
     publishDate: '2026-04-26',
-    dateModified: '2026-05-05',
+    dateModified: '2026-08-27',
     readTime: '9 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores e ingenieros de prompts que eligen entre iteración manual y automatización',
@@ -456,7 +457,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Optimización manual vs automatizada de prompts: cuándo iterar, cuándo automatizar',
       description: 'Optimización manual vs automatizada de prompts: elige según el número de prompts. Framework de decisión de escalabilidad.',
       datePublished: '2026-04-26',
-      dateModified: '2026-05-05',
+      dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/es/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -582,13 +583,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Puedo mezclar optimización manual y automatizada?', a: 'Sí, y esta es la mejor práctica. Manual para tu tarea core (1–3 prompts), automatizado para variantes y escala. Usa Promptfoo para testear todas las variantes; usa DSPy para generar nuevas.' },
-          { q: '¿DSPy funciona con todos los modelos?', a: 'DSPy funciona con cualquier modelo accesible vía API: GPT-5.5, Claude, Gemini, Cohere, Ollama. Aún no funciona con modelos de visión. Los modelos locales están soportados pero son más lentos.' },
+          { q: '¿DSPy funciona con todos los modelos?', a: 'DSPy funciona con cualquier modelo accesible vía API: GPT-5.6, Claude, Gemini, Cohere, Ollama. Aún no funciona con modelos de visión. Los modelos locales están soportados pero son más lentos.' },
           { q: '¿Cuántos ejemplos etiquetados necesito para DSPy?', a: 'Mínimo 30–50 para tareas simples (clasificación, extracción). Las tareas complejas (resumen, razonamiento) se benefician de 100–500. Más ejemplos = optimización más robusta.' },
           { q: '¿Cuál es el coste de cómputo de ejecutar DSPy?', a: 'Una ejecución de optimización de DSPy en 100 ejemplos cuesta ~$5–20 (llamadas a la API). Ejecutar 10 prompts candidatos × 100 ejemplos = 1.000 llamadas = $50–200 por ciclo de optimización. Reentrenamiento mensual = $50–200/mes.' },
           { q: '¿Puedo desplegar un prompt optimizado por DSPy en producción?', a: 'Sí. DSPy devuelve un prompt en texto plano. Cópialo a tu sistema de producción (PromptQuorum, LangChain, Vellum, etc.) y sírvelo normalmente. No se necesita runtime especial de DSPy en producción.' },
           { q: '¿La optimización automatizada garantiza prompts mejores?', a: 'No. Si tu métrica es incorrecta, DSPy optimiza para lo incorrecto. Si tus datos de evaluación son sesgados, DSPy aprende el sesgo. Entra basura, sale basura.' },
           { q: '¿Debo usar optimización automatizada para tareas creativas?', a: 'Todavía no. La automatización funciona mejor en tareas basadas en métricas (clasificación, extracción, resumen). Las tareas creativas (redacción publicitaria, narrativa) carecen de métricas claras, por lo que el control manual es mejor.' },
-          { q: '¿Puede DSPy optimizar prompts para múltiples modelos a la vez?', a: 'DSPy optimiza para un modelo a la vez. Para optimizar tanto para GPT-5.5 como para Claude, ejecuta DSPy dos veces (una por modelo) y compara resultados. Enfoque híbrido: optimiza para tu modelo preferido, luego testea manualmente en otros.' },
+          { q: '¿Puede DSPy optimizar prompts para múltiples modelos a la vez?', a: 'DSPy optimiza para un modelo a la vez. Para optimizar tanto para GPT-5.6 como para Claude, ejecuta DSPy dos veces (una por modelo) y compara resultados. Enfoque híbrido: optimiza para tu modelo preferido, luego testea manualmente en otros.' },
         ],
       },
 
@@ -617,6 +618,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   pt: {
+    freshness_tier: 'semi_annual',
     theme: 'Tools & Platforms',
     heroImage: '/images/manual-vs-automated-prompt-optimization-overview-hero-pt.webp',
     title: 'Otimização manual vs automatizada de prompts: quando iterar, quando automatizar',
@@ -624,6 +626,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: 'Otimização manual vs automatizada de prompts: escolha conforme o número de prompts e recursos. Quando iterar manualmente e quando automatizar. Com framework.',
     intro: '**A otimização de prompts pode ser manual (você reescreve o prompt) ou automatizada (um framework reescreve por você).** A otimização manual oferece controle, mas escala somente até ~50 prompts em produção. A otimização automatizada (DSPy, TextGrad, Promptfoo) escala para 100+ prompts, mas requer dados de treinamento rotulados e definições de métricas. Este guia mostra quando usar cada abordagem e como elas funcionam juntas.',
     publishDate: '2026-04-26',
+    dateModified: '2026-08-27',
     readTime: '9 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores e engenheiros de prompts que escolhem entre iteração manual e automação',
@@ -657,6 +660,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Otimização manual vs automatizada de prompts: quando iterar, quando automatizar',
       description: 'Otimização manual vs automatizada de prompts: escolha conforme o número de prompts. Framework de decisão de escalabilidade.',
       datePublished: '2026-04-26',
+      dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/pt/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -782,13 +786,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'Posso combinar otimização manual e automatizada?', a: 'Sim, e esta é a melhor prática. Manual para sua tarefa core (1–3 prompts), automatizado para variantes e escala. Use o Promptfoo para testar todas as variantes; use o DSPy para gerar novas.' },
-          { q: 'O DSPy funciona com todos os modelos?', a: 'O DSPy funciona com qualquer modelo acessível via API: GPT-5.5, Claude, Gemini, Cohere, Ollama. Ainda não funciona com modelos de visão. Modelos locais são suportados, mas mais lentos.' },
+          { q: 'O DSPy funciona com todos os modelos?', a: 'O DSPy funciona com qualquer modelo acessível via API: GPT-5.6, Claude, Gemini, Cohere, Ollama. Ainda não funciona com modelos de visão. Modelos locais são suportados, mas mais lentos.' },
           { q: 'Quantos exemplos rotulados preciso para o DSPy?', a: 'Mínimo 30–50 para tarefas simples (classificação, extração). Tarefas complexas (resumo, raciocínio) se beneficiam de 100–500. Mais exemplos = otimização mais robusta.' },
           { q: 'Qual é o custo de cómputo de executar o DSPy?', a: 'Uma execução de otimização do DSPy em 100 exemplos custa ~$5–20 (chamadas de API). Executar 10 prompts candidatos × 100 exemplos = 1.000 chamadas = $50–200 por ciclo de otimização. Retreinamento mensal = $50–200/mês.' },
           { q: 'Posso implantar em produção um prompt otimizado pelo DSPy?', a: 'Sim. O DSPy retorna um prompt em texto simples. Copie-o para seu sistema de produção (PromptQuorum, LangChain, Vellum, etc.) e sirva-o normalmente. Nenhum runtime especial do DSPy é necessário em produção.' },
           { q: 'A otimização automatizada garante prompts melhores?', a: 'Não. Se sua métrica estiver errada, o DSPy otimiza para o errado. Se seus dados de avaliação tiverem viés, o DSPy aprende o viés. Lixo entra, lixo sai.' },
           { q: 'Devo usar otimização automatizada para tarefas criativas?', a: 'Ainda não. A automação funciona melhor em tarefas baseadas em métricas (classificação, extração, resumo). Tarefas criativas (redação publicitária, narrativa) carecem de métricas claras, então o controle manual é melhor.' },
-          { q: 'O DSPy pode otimizar prompts para múltiplos modelos ao mesmo tempo?', a: 'O DSPy otimiza para um modelo por vez. Para otimizar tanto para GPT-5.5 quanto para Claude, execute o DSPy duas vezes (uma por modelo) e compare os resultados. Abordagem híbrida: otimize para seu modelo preferido, depois teste manualmente em outros.' },
+          { q: 'O DSPy pode otimizar prompts para múltiplos modelos ao mesmo tempo?', a: 'O DSPy otimiza para um modelo por vez. Para otimizar tanto para GPT-5.6 quanto para Claude, execute o DSPy duas vezes (uma por modelo) e compare os resultados. Abordagem híbrida: otimize para seu modelo preferido, depois teste manualmente em outros.' },
         ],
       },
 
@@ -825,7 +829,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: 'Optimisation manuelle vs automatisée : quand itérer manuellement, quand utiliser DSPy ou Promptfoo. Cadre décisionnel avec comparaison des coûts et scalabilité.',
     intro: '**L\'optimisation de prompts peut être manuelle (vous réécrivez le prompt) ou automatisée (un framework le réécrit pour vous).** L\'optimisation manuelle vous donne du contrôle mais ne s\'étend qu\'à ~50 prompts de production. L\'optimisation automatisée (DSPy, TextGrad, Promptfoo) s\'étend à 100+ prompts mais nécessite des données d\'entraînement étiquetées et des définitions de métriques. Ce guide vous montre quand utiliser chacun et comment ils fonctionnent ensemble.',
     publishDate: '2026-04-26',
-    dateModified: '2026-05-05',
+    dateModified: '2026-08-27',
     readTime: '9 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs et ingénieurs en prompts choisissant entre itération manuelle et automatisation',
@@ -859,7 +863,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Optimisation Manuelle vs Automatisée des Prompts : Quand Choisir Chaque Approche',
       description: 'Optimisation manuelle vs automatisée des prompts : quand itérer manuellement, quand utiliser DSPy ou TextGrad. Cadre de décision de scalabilité.',
       datePublished: '2026-04-26',
-      dateModified: '2026-05-05',
+      dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/fr/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -985,13 +989,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Puis-je mélanger optimisation manuelle et automatisée ?', a: 'Oui, et c\'est la meilleure pratique. Manuel pour votre tâche cœur (1–3 prompts), automatisé pour variantes et scalabilité. Utilisez Promptfoo pour tester toutes variantes ; utilisez DSPy pour générer de nouvelles.' },
-          { q: 'DSPy fonctionne-t-il avec tous les modèles ?', a: 'DSPy fonctionne avec n\'importe quel modèle accessible par API : GPT-5.5, Claude, Gemini, Cohere, Ollama. Il ne fonctionne pas encore avec modèles vision. Modèles locaux (Ollama, LM Studio) sont supportés mais plus lents.' },
+          { q: 'DSPy fonctionne-t-il avec tous les modèles ?', a: 'DSPy fonctionne avec n\'importe quel modèle accessible par API : GPT-5.6, Claude, Gemini, Cohere, Ollama. Il ne fonctionne pas encore avec modèles vision. Modèles locaux (Ollama, LM Studio) sont supportés mais plus lents.' },
           { q: 'Combien d\'exemples étiquetés faut-il pour DSPy ?', a: 'Minimum 30–50 pour tâches simples (classification, extraction). Tâches complexes (résumé, raisonnement) bénéficient de 100–500. Plus d\'exemples = optimisation plus robuste.' },
           { q: 'Quel est le coût de calcul d\'exécuter DSPy ?', a: 'Une exécution d\'optimisation DSPy sur 100 exemples coûte ~5–20 EUR (appels API à votre modèle). 10 prompts candidats × 100 exemples = 1 000 appels = 50–200 EUR par cycle optimisation. Réentraînement mensuel sur 100 exemples nouveaux = 50–200 EUR/mois.' },
           { q: 'Puis-je déployer prompt optimisé DSPy en production ?', a: 'Oui. DSPy donne un prompt texte clair. Copiez-le dans système production (PromptQuorum, LangChain, Vellum, etc.) et servez-le normalement. Aucun runtime DSPy spécial requis en production.' },
           { q: 'L\'optimisation automatisée garantit-elle mieux prompts ?', a: 'Non. Si votre métrique est mauvaise (ex : optimiser pour longueur au lieu de précision), DSPy optimise pour le mauvais objectif. Si données d\'évaluation sont biaisées, DSPy apprend le biais. Ordures rentrées, ordures sorties.' },
           { q: 'Dois-je utiliser optimisation automatisée pour tâches créatives ?', a: 'Pas encore. Automatisation fonctionne mieux sur tâches pilotées par métrique (classification, extraction, résumé). Tâches créatives (rédaction, narration) manquent métriques claires, donc contrôle manuel est meilleur.' },
-          { q: 'DSPy peut-il optimiser prompts pour plusieurs modèles à la fois ?', a: 'DSPy optimise pour un modèle à la fois. Pour optimiser pour GPT-5.5 ET Claude, exécutez DSPy deux fois (une fois par modèle) et comparez résultats. Approche hybride : optimisez pour modèle préféré, puis testez manuellement sur autres.' },
+          { q: 'DSPy peut-il optimiser prompts pour plusieurs modèles à la fois ?', a: 'DSPy optimise pour un modèle à la fois. Pour optimiser pour GPT-5.6 ET Claude, exécutez DSPy deux fois (une fois par modèle) et comparez résultats. Approche hybride : optimisez pour modèle préféré, puis testez manuellement sur autres.' },
         ],
       },
 
@@ -1028,7 +1032,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: 'マニュアル vs 自動プロンプト最適化の判断基準。手動反復とDSPy・Promptfooの選択、コスト・スケーリング比較フレームワーク。',
     intro: '**プロンプト最適化はマニュアル（自分で書き直す）か自動（フレームワークが書き直す）です。** マニュアルは完全な制御が得られますが、~50個の本番プロンプトまでしかスケールしません。自動最適化（DSPy、TextGrad、Promptfoo）は100個以上にスケールしますが、ラベル付きトレーニングデータとメトリクス定義が必要です。このガイドでは、どちらをいつ使うか、どう組み合わせるかを説明します。',
     publishDate: '2026-04-26',
-    dateModified: '2026-05-05',
+    dateModified: '2026-08-27',
     readTime: '9分で読める',
     educationalLevel: 'Intermediate',
     audience: 'マニュアル反復と自動化のどちらかを選ぶ開発者とプロンプトエンジニア',
@@ -1062,7 +1066,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'マニュアル vs 自動プロンプト最適化：いつどちらを使うか',
       description: 'マニュアル vs 自動プロンプト最適化：手動反復とDSPy/TextGradの使い分け。スケーリング判断フレームワーク。',
       datePublished: '2026-04-26',
-      dateModified: '2026-05-05',
+      dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/ja/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1106,6 +1110,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       comparison: {
+        id: 'manual-vs-automated-comparison',
         title: 'マニュアル vs 自動：クイック比較',
         content: '**3つの要素で判断：プロンプト数、評価データ、スケーリング必要性。** マニュアル最適化はテスト失敗に基づくプロンプトの書き直し — 直接制御だが~50個の本番プロンプト以上スケールしません。自動最適化はフレームワーク(DSPy、TextGrad)でアルゴリズムがプロンプトを書き直す — 100個以上にスケールするがラベル付きデータとメトリクスが必須。',
         columns: ['要因', 'マニュアル最適化', '自動最適化'],
@@ -1118,6 +1123,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       manualWins: {
+        id: 'when-manual-wins',
         title: 'マニュアル最適化が有効な場合',
         items: [
           '50個未満の本番プロンプト — データとメトリクスセットアップのオーバーヘッドが価値がない',
@@ -1129,6 +1135,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       automatedWins: {
+        id: 'when-automated-wins',
         title: '自動最適化が有効な場合',
         items: [
           '100個以上の本番プロンプト — マニュアル反復のエンジニアコストが禁止的',
@@ -1140,6 +1147,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       tools: {
+        id: 'tools-dspy-textgrad-promptfoo',
         title: 'ツール比較：DSPy、TextGrad、Promptfoo',
         content: '**自動または半自動最適化をサポート3つの主ツール：**',
         columns: ['ツール', 'アプローチ', '成熟度', 'スケール', '最適用途'],
@@ -1151,6 +1159,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       hybrid: {
+        id: 'hybrid-workflow',
         title: 'ハイブリッドワークフロー：マニュアル + 自動を組み合わせる',
         content: '実世界はハイブリッド。マニュアル最適化で開始し直感と評価データを構築。スケールに達したら自動化に移行。',
         numberedItems: [
@@ -1162,6 +1171,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       costAnalysis: {
+        id: 'cost-analysis',
         title: 'コスト分析：マニュアル vs 自動',
         content: '**どのプロンプト数で自動化がマニュアルより安くなる？** 損益分岐点は約50–80プロンプト。',
         items: [
@@ -1174,6 +1184,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       mistakes: {
+        id: 'common-mistakes',
         title: 'よくある間違い',
         items: [
           'ラベル付きデータなしでDSPyを実行 — DSPyは例から学習。50個以上のラベル(入力、出力)ペアなし、ノイズからトレーニング。マニュアル反復から開始、ペアをドキュメント、その後トレーニングデータとして使用。',
@@ -1189,17 +1200,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'マニュアルと自動最適化を混ぜられる？', a: 'はい、これがベストプラクティス。コアタスク(1–3プロンプト)はマニュアル、スケーリング用に亜種は自動化。Promptfooですべてをテスト；DSPyで新規を生成。' },
-          { q: 'DSPyはすべてのモデルで動く？', a: 'DSPyはAPI経由でアクセス可能なモデルで動作：GPT-5.5、Claude、Gemini、Cohere、Ollama。ビジョンモデルはまだ未対応。ローカルモデルは対応するが遅い。' },
+          { q: 'DSPyはすべてのモデルで動く？', a: 'DSPyはAPI経由でアクセス可能なモデルで動作：GPT-5.6、Claude、Gemini、Cohere、Ollama。ビジョンモデルはまだ未対応。ローカルモデルは対応するが遅い。' },
           { q: 'DSPyにはラベル例をいくつ必要？', a: '単純タスク(分類、抽出)は最小30–50。複雑タスク(要約、推論)は100–500のメリット。例が多い = より堅牢な最適化。' },
           { q: 'DSPy実行の計算コストは？', a: '100例1回のDSPy最適化実行 = ~$5–20(API呼び出し)。10候補プロンプト × 100例 = 1,000呼び出し = $50–200/最適化サイクル。月単位リトレーニング = $50–200/月。' },
           { q: '本番でDSPy最適化プロンプトをデプロイできる？', a: 'はい。DSPyは平文プロンプトを出力。PromptQuorum、LangChain、Vellum等の本番システムにコピー、普通に提供。本番でDSPyランタイム不要。' },
           { q: '自動最適化で必ずプロンプトが良くなる？', a: 'いいえ。メトリクスが間違っていれば、DSPyは間違ったものを最適化。評価データが偏っていれば、バイアスを学習。ゴミ入 = ゴミ出。' },
           { q: '創作タスクに自動最適化を使うべき？', a: 'まだ。自動化はメトリクック駆動タスク(分類、抽出、要約)で最適。創作(コピーライティング、ストーリー)は明確メトリクスが欠けるので、マニュアル制御が最適。' },
-          { q: 'DSPyは複数モデルを同時に最適化できる？', a: 'いいえ、1回に1モデル。GPT-5.5 と Claude 両方に最適化するには、DSPyを2回実行(各モデル)して結果を比較。ハイブリッド：好みモデルで最適化、他は手動テスト。' },
+          { q: 'DSPyは複数モデルを同時に最適化できる？', a: 'いいえ、1回に1モデル。GPT-5.6 と Claude 両方に最適化するには、DSPyを2回実行(各モデル)して結果を比較。ハイブリッド：好みモデルで最適化、他は手動テスト。' },
         ],
       },
 
       relatedReading: {
+        id: 'related-reading',
         title: '関連記事',
         items: [
           '[プロンプト最適化の基礎：6つのコア・レバー](/ja/prompt-engineering/fundamentals-of-prompt-optimization)',
@@ -1212,6 +1224,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       sources: {
+        id: 'sources',
         title: '引用元',
         items: [
           'Khattab, O., Potts, C., & Zaharia, M. (2024). "DSPy: Compiling Declarative Language Model Calls into State-of-the-art Retrieval-Augmented Systems." arXiv:2310.03714',
@@ -1232,7 +1245,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: '手动 vs 自动提示词优化的判断基准。何时手动迭代，何时自动化。成本和扩展性对比决策框架。',
     intro: '**提示词优化可以是手动（自己重写提示词）或自动（框架为你重写）。** 手动优化让你拥有完全控制，但只能扩展到约50个生产提示词。自动优化（DSPy、TextGrad、Promptfoo）能扩展到100个以上，但需要标记的训练数据和指标定义。本指南展示何时使用每种方法，以及它们如何协作。',
     publishDate: '2026-04-26',
-    dateModified: '2026-05-05',
+    dateModified: '2026-08-27',
     readTime: '阅读约9分钟',
     educationalLevel: 'Intermediate',
     audience: '在手动迭代和自动化之间进行选择的开发者和提示词工程师',
@@ -1266,7 +1279,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: '手动 vs 自动提示词优化：何时选择每种方法',
       description: '手动 vs 自动提示词优化：何时手动迭代，何时使用DSPy或TextGrad。扩展性决策框架。',
       datePublished: '2026-04-26',
-      dateModified: '2026-05-05',
+      dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/zh/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1310,6 +1323,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       comparison: {
+        id: 'manual-vs-automated-comparison',
         title: '手动 vs 自动：快速对比',
         content: '**根据三个因素判断：提示词数量、评估数据、扩展性需求。** 手动优化是根据测试失败重写提示词——直接控制但无法扩展到50个以上生产提示词。自动优化使用框架（DSPy、TextGrad）算法重写提示词——扩展到100个以上但需要标记数据和指标。',
         columns: ['因素', '手动优化', '自动优化'],
@@ -1322,6 +1336,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       manualWins: {
+        id: 'when-manual-wins',
         title: '手动优化何时更优',
         items: [
           '少于50个生产提示词——数据和指标设置开销没有价值',
@@ -1333,6 +1348,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       automatedWins: {
+        id: 'when-automated-wins',
         title: '自动优化何时更优',
         items: [
           '100个以上生产提示词——手动迭代的工程成本禁止性',
@@ -1344,6 +1360,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       tools: {
+        id: 'tools-dspy-textgrad-promptfoo',
         title: '工具对比：DSPy、TextGrad、Promptfoo',
         content: '**三个主要工具支持自动或半自动优化：**',
         columns: ['工具', '方法', '成熟度', '规模', '最适用于'],
@@ -1355,6 +1372,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       hybrid: {
+        id: 'hybrid-workflow',
         title: '混合工作流：手动 + 自动协作',
         content: '真实世界是混合的。从手动优化开始构建直觉和评估数据。达到规模后转向自动化。',
         numberedItems: [
@@ -1366,6 +1384,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       costAnalysis: {
+        id: 'cost-analysis',
         title: '成本分析：手动 vs 自动',
         content: '**在什么提示词数量时自动化变得比手动更便宜？** 损益分岔点约50–80个提示词。',
         items: [
@@ -1378,6 +1397,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       mistakes: {
+        id: 'common-mistakes',
         title: '常见错误',
         items: [
           '没有标记数据就运行DSPy——DSPy从例子学习。没有50个以上标记(输入、输出)对，就从噪音训练。从手动迭代开始，记录对，然后用作训练数据。',
@@ -1393,17 +1413,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '常见问题',
         faqs: [
           { q: '能混合手动和自动优化吗？', a: '能，这是最佳实践。核心任务手动（1–3个提示词），扩展的变体自动化。用Promptfoo测试全部；用DSPy生成新的。' },
-          { q: 'DSPy能用所有模型吗？', a: 'DSPy适用任何API访问的模型：GPT-5.5、Claude、Gemini、Cohere、Ollama。视觉模型还不支持。本地模型支持但较慢。' },
+          { q: 'DSPy能用所有模型吗？', a: 'DSPy适用任何API访问的模型：GPT-5.6、Claude、Gemini、Cohere、Ollama。视觉模型还不支持。本地模型支持但较慢。' },
           { q: 'DSPy需要多少标记例子？', a: '简单任务（分类、提取）最少30–50。复杂任务（总结、推理）受益于100–500。更多例子 = 更稳健优化。' },
           { q: '运行DSPy的计算成本？', a: '100例一次DSPy优化运行 = 约$5–20（API调用）。10候选提示词 × 100例 = 1,000调用 = 每优化周期$50–200。月度重训 = $50–200/月。' },
           { q: '能在生产部署DSPy优化提示词吗？', a: '能。DSPy输出纯文本提示词。复制到生产系统（PromptQuorum、LangChain、Vellum等）并正常提供。生产无需DSPy运行时。' },
           { q: '自动优化保证提示词变好吗？', a: '不保证。如果指标错了，DSPy优化错的东西。如果评估数据有偏差，学习偏差。垃圾进 = 垃圾出。' },
           { q: '创意任务应该用自动优化吗？', a: '还不应该。自动化最适合指标驱动任务（分类、提取、总结）。创意任务（文案、故事）缺乏明确指标，手动控制更好。' },
-          { q: 'DSPy能同时为多个模型优化吗？', a: '不能，一次一个模型。要为GPT-5.5和Claude都优化，运行DSPy两次（各模型）并比较结果。混合方法：为偏好模型优化，其他手动测试。' },
+          { q: 'DSPy能同时为多个模型优化吗？', a: '不能，一次一个模型。要为GPT-5.6和Claude都优化，运行DSPy两次（各模型）并比较结果。混合方法：为偏好模型优化，其他手动测试。' },
         ],
       },
 
       relatedReading: {
+        id: 'related-reading',
         title: '延伸阅读',
         items: [
           '[提示词优化基础：6个核心杠杆](/zh/prompt-engineering/fundamentals-of-prompt-optimization)',
@@ -1416,6 +1437,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       sources: {
+        id: 'sources',
         title: '引用来源',
         items: [
           'Khattab, O., Potts, C., & Zaharia, M. (2024). "DSPy: Compiling Declarative Language Model Calls into State-of-the-art Retrieval-Augmented Systems." arXiv:2310.03714',
@@ -1436,7 +1458,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: 'تحسين الـ ⁨prompts⁩ يدويًا أم تلقائيًا: اختر بناءً على عدد الـ ⁨prompts⁩ والموارد. متى تُكرر يدويًا ومتى تُؤتمت — إطار القرار الشامل.',
     intro: '**يمكن تحسين الـ prompts يدويًا (تُعيد أنت كتابة الـ prompt) أو تلقائيًا (يُعيد framework كتابته نيابةً عنك).** التحسين اليدوي يمنحك تحكمًا كاملًا لكنه لا يتوسع إلا حتى ~50 prompt في الإنتاج. التحسين الآلي (DSPy وTextGrad وPromptfoo) يتوسع لـ 100+ prompt لكنه يستلزم بيانات تدريب مُصنَّفة وتعريفات مقاييس واضحة. يوضح هذا الدليل متى تستخدم كل نهج وكيف يعملان معًا.',
     publishDate: '2026-04-26',
-    dateModified: '2026-05-05',
+    dateModified: '2026-08-27',
     readTime: '9 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'المطورون ومهندسو الـ prompts الذين يختارون بين التكرار اليدوي والأتمتة',
@@ -1470,7 +1492,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'تحسين الـ prompts يدويًا أم تلقائيًا: متى تُكرر التجربة ومتى تُؤتمت العملية',
       description: 'تحسين الـ prompts يدويًا أم تلقائيًا: اختر حسب عدد الـ prompts. إطار قرار للتوسع.',
       datePublished: '2026-04-26',
-      dateModified: '2026-05-05',
+      dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/ar/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'ar',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1513,6 +1535,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       comparison: {
+        id: 'manual-vs-automated-comparison',
         title: 'يدوي مقابل آلي: مقارنة سريعة',
         content: '**اختر وفق ثلاثة عوامل: عدد الـ prompts، وبيانات التقييم، واحتياجات التوسع.** التحسين اليدوي يعني إعادة كتابة الـ prompt بناءً على إخفاقات الاختبارات — تحكم مباشر لكنه لا يتوسع فوق ~50 prompt في الإنتاج. التحسين الآلي يستخدم frameworks (DSPy وTextGrad) لإعادة كتابة الـ prompts خوارزميًا — يتوسع لـ 100+ لكنه يستلزم بيانات مُصنَّفة ومقاييس. خطوة تحقق ثالثة — تشغيل الـ prompt ذاته على نماذج متعددة عبر [منصة تحسين الـ prompts](/features) — تؤكد أي نسخة تتعمم بشكل أفضل قبل إطلاقها في الإنتاج.',
         columns: ['العامل', 'التحسين اليدوي', 'التحسين الآلي'],
@@ -1525,6 +1548,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       manualWins: {
+        id: 'when-manual-wins',
         title: 'متى يتفوق التحسين اليدوي',
         items: [
           'أقل من 50 prompt في الإنتاج — الحمل الزائد لإعداد البيانات والمقاييس لا يستحق العناء',
@@ -1536,6 +1560,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       automatedWins: {
+        id: 'when-automated-wins',
         title: 'متى يتفوق التحسين الآلي',
         items: [
           'أكثر من 100 prompt في الإنتاج — تكلفة التكرار اليدوي للهندسة تصبح باهظة',
@@ -1547,6 +1572,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       tools: {
+        id: 'tools-dspy-textgrad-promptfoo',
         title: 'الأدوات: DSPy وTextGrad وPromptfoo مقارنةً',
         content: '**ثلاثة أدوات رئيسية تدعم التحسين الآلي أو شبه الآلي:**',
         columns: ['الأداة', 'النهج', 'النضج', 'النطاق', 'مثالية لـ'],
@@ -1558,6 +1584,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       hybrid: {
+        id: 'hybrid-workflow',
         title: 'سير العمل الهجين: يدوي + آلي معًا',
         content: 'الواقع العملي هجين. ابدأ بالتحسين اليدوي لبناء الحدس وبيانات التقييم. انتقل إلى الآلي حين تصل إلى نطاق كافٍ.',
         numberedItems: [
@@ -1569,6 +1596,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       costAnalysis: {
+        id: 'cost-analysis',
         title: 'تحليل التكاليف: يدوي مقابل آلي',
         content: '**عند أي عدد من الـ prompts يصبح الآلي أرخص من اليدوي؟** نقطة التعادل تقع عند حوالي 50–80 prompt.',
         items: [
@@ -1581,6 +1609,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       mistakes: {
+        id: 'common-mistakes',
         title: 'الأخطاء الشائعة',
         items: [
           'تشغيل DSPy بدون بيانات مُصنَّفة — DSPy يتعلم من الأمثلة. بدون 50+ زوج مُصنَّف (مدخل، مخرج)، يتدرب على ضوضاء. ابدأ بتكرارات يدوية، وثّق الأزواج، ثم استخدمها بيانات تدريب.',
@@ -1596,17 +1625,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'هل يمكنني الجمع بين التحسين اليدوي والآلي؟', a: 'نعم، وهذا هو أفضل ممارسة. اليدوي للمهمة الأساسية (1–3 prompts)، والآلي للنسخ والتوسع. استخدم Promptfoo لاختبار جميع النسخ، وDSPy لإنتاج نسخ جديدة.' },
-          { q: 'هل يعمل DSPy مع جميع النماذج؟', a: 'DSPy يعمل مع أي نموذج متاح عبر API: GPT-5.5 وClaude وGemini وCohere وOllama. لا يدعم نماذج الرؤية بعد. النماذج المحلية مدعومة لكنها أبطأ.' },
+          { q: 'هل يعمل DSPy مع جميع النماذج؟', a: 'DSPy يعمل مع أي نموذج متاح عبر API: GPT-5.6 وClaude وGemini وCohere وOllama. لا يدعم نماذج الرؤية بعد. النماذج المحلية مدعومة لكنها أبطأ.' },
           { q: 'كم من الأمثلة المُصنَّفة أحتاج لـ DSPy؟', a: 'الحد الأدنى 30–50 للمهام البسيطة (التصنيف والاستخراج). المهام المعقدة (التلخيص والاستدلال) تستفيد من 100–500 مثال. كلما زادت الأمثلة، زادت قوة التحسين.' },
           { q: 'ما تكلفة الحوسبة لتشغيل DSPy؟', a: 'دورة تحسين DSPy على 100 مثال تُكلّف ~5–20 دولارًا (استدعاءات API). تشغيل 10 مرشحين × 100 مثال = 1,000 استدعاء = 50–200 دولارًا لكل دورة تحسين. إعادة التدريب الشهرية = 50–200 دولار/الشهر.' },
           { q: 'هل يمكنني نشر prompt مُحسَّن بواسطة DSPy في الإنتاج؟', a: 'نعم. DSPy يُرجع prompt كنص عادي. انسخه إلى نظام الإنتاج (PromptQuorum أو LangChain أو Vellum وغيرها) وشغّله بشكل طبيعي. لا يلزم runtime خاص بـ DSPy في الإنتاج.' },
           { q: 'هل تضمن الأتمتة prompts أفضل؟', a: 'لا. إذا كان مقياسك خاطئًا، يُحسّن DSPy الشيء الخاطئ. إذا كانت بيانات التقييم متحيزة، يتعلم DSPy التحيز. مدخلات رديئة = مخرجات رديئة.' },
           { q: 'هل يجب استخدام التحسين الآلي للمهام الإبداعية؟', a: 'ليس بعد. الأتمتة تعمل بشكل أفضل في المهام القائمة على المقاييس (التصنيف والاستخراج والتلخيص). المهام الإبداعية (كتابة الإعلانات والسرد القصصي) تفتقر إلى مقاييس واضحة، لذا التحكم اليدوي أفضل.' },
-          { q: 'هل يستطيع DSPy تحسين الـ prompts لنماذج متعددة في آنٍ واحد؟', a: 'DSPy يُحسّن لنموذج واحد في كل مرة. لتحسينه لـ GPT-5.5 وClaude معًا، شغّل DSPy مرتين (مرة لكل نموذج) وقارن النتائج. النهج الهجين: حسِّن للنموذج المفضل، ثم اختبر يدويًا على النماذج الأخرى.' },
+          { q: 'هل يستطيع DSPy تحسين الـ prompts لنماذج متعددة في آنٍ واحد؟', a: 'DSPy يُحسّن لنموذج واحد في كل مرة. لتحسينه لـ GPT-5.6 وClaude معًا، شغّل DSPy مرتين (مرة لكل نموذج) وقارن النتائج. النهج الهجين: حسِّن للنموذج المفضل، ثم اختبر يدويًا على النماذج الأخرى.' },
         ],
       },
 
       relatedReading: {
+        id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
           '[أساسيات تحسين الـ prompts: 6 رافعات أساسية](/ar/prompt-engineering/fundamentals-of-prompt-optimization)',
@@ -1619,6 +1649,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       sources: {
+        id: 'sources',
         title: 'المصادر',
         items: [
           'خطّاب، أو.، بوتس، ك.، وزهاريا، م. (2024). "DSPy: تصريف نداءات نماذج اللغة التصريحية." arXiv:2310.03714',
@@ -1639,7 +1670,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: '수동 vs 자동 프롬프트 최적화: 프롬프트 수와 리소스에 따라 선택하십시오. 언제 직접 반복하고 언제 자동화할지에 관한 의사결정 프레임워크 및 비교.',
     intro: '**프롬프트 최적화는 수동(직접 프롬프트를 재작성)이나 자동(프레임워크가 재작성)으로 수행할 수 있습니다.** 수동 최적화는 완전한 제어권을 제공하지만 프로덕션 프롬프트 ~50개까지만 확장됩니다. 자동 최적화(DSPy, TextGrad, Promptfoo)는 100개 이상으로 확장되지만 레이블이 지정된 학습 데이터와 메트릭 정의가 필요합니다. 이 가이드는 각 방법을 언제 사용할지, 그리고 어떻게 함께 활용할지 설명합니다.',
     publishDate: '2026-04-26',
-    dateModified: '2026-05-05',
+    dateModified: '2026-08-27',
     readTime: '9분 읽기',
     educationalLevel: 'Intermediate',
     audience: '수동 반복과 자동화 중 하나를 선택하는 개발자 및 프롬프트 엔지니어',
@@ -1673,7 +1704,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: '수동 vs 자동 프롬프트 최적화: 언제 반복하고 언제 자동화할 것인가',
       description: '수동 vs 자동 프롬프트 최적화: 프롬프트 수에 따라 선택하십시오. 확장성을 위한 의사결정 프레임워크.',
       datePublished: '2026-04-26',
-      dateModified: '2026-05-05',
+      dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/ko/prompt-engineering/manual-vs-automated-prompt-optimization',
       inLanguage: 'ko',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1716,6 +1747,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       comparison: {
+        id: 'manual-vs-automated-comparison',
         title: '수동 vs 자동: 빠른 비교',
         content: '**세 가지 요소를 기준으로 선택하십시오: 프롬프트 수, 평가 데이터, 확장 필요성.** 수동 최적화는 테스트 실패를 기반으로 프롬프트를 재작성하는 것으로, 직접 제어할 수 있지만 프로덕션 프롬프트 ~50개 이상으로는 확장되지 않습니다. 자동 최적화는 프레임워크(DSPy, TextGrad)를 사용하여 알고리즘으로 프롬프트를 재작성하며, 100개 이상으로 확장되지만 레이블 데이터와 메트릭이 필요합니다. 세 번째 검증 단계—[프롬프트 최적화 플랫폼](/features)을 이용해 동일한 프롬프트를 여러 모델에서 실행—은 프로덕션으로 확정하기 전에 어느 버전이 가장 잘 일반화되는지 확인합니다.',
         columns: ['요인', '수동 최적화', '자동 최적화'],
@@ -1728,6 +1760,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       manualWins: {
+        id: 'when-manual-wins',
         title: '수동 최적화가 유리한 경우',
         items: [
           '프로덕션 프롬프트가 50개 미만인 경우 — 데이터 및 메트릭 설정의 오버헤드가 가치가 없습니다',
@@ -1739,6 +1772,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       automatedWins: {
+        id: 'when-automated-wins',
         title: '자동 최적화가 유리한 경우',
         items: [
           '프로덕션 프롬프트가 100개 이상인 경우 — 수동 반복의 엔지니어링 비용이 과도해집니다',
@@ -1750,6 +1784,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       tools: {
+        id: 'tools-dspy-textgrad-promptfoo',
         title: '도구 비교: DSPy, TextGrad, Promptfoo',
         content: '**자동 또는 반자동 최적화를 지원하는 세 가지 주요 도구:**',
         columns: ['도구', '방식', '성숙도', '규모', '최적 용도'],
@@ -1761,6 +1796,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       hybrid: {
+        id: 'hybrid-workflow',
         title: '하이브리드 워크플로우: 수동 + 자동 병용',
         content: '실제 환경은 하이브리드입니다. 직관과 평가 데이터를 구축하기 위해 수동 최적화로 시작하십시오. 규모가 확보되면 자동화로 전환하십시오.',
         numberedItems: [
@@ -1772,6 +1808,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       costAnalysis: {
+        id: 'cost-analysis',
         title: '비용 분석: 수동 vs 자동',
         content: '**몇 개의 프롬프트에서 자동화가 수동보다 저렴해집니까?** 손익분기점은 약 50–80개 프롬프트입니다.',
         items: [
@@ -1784,6 +1821,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       mistakes: {
+        id: 'common-mistakes',
         title: '흔한 실수',
         items: [
           '레이블 데이터 없이 DSPy 실행 — DSPy는 예시에서 학습합니다. 50개 이상의 레이블 (입력, 출력) 쌍 없이는 노이즈로 학습합니다. 수동 반복을 먼저 수행하고, 쌍을 문서화한 후 이를 학습 데이터로 사용하십시오.',
@@ -1799,17 +1837,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: '수동 최적화와 자동 최적화를 혼합할 수 있습니까?', a: '예, 이것이 모범 사례입니다. 핵심 태스크(1–3개 프롬프트)는 수동으로, 변형 및 확장은 자동화로 수행하십시오. 모든 변형을 테스트하려면 Promptfoo를 사용하고, 새 변형을 생성하려면 DSPy를 사용하십시오.' },
-          { q: 'DSPy는 모든 모델에서 작동합니까?', a: 'DSPy는 API를 통해 접근 가능한 모든 모델에서 작동합니다: GPT-5.5, Claude, Gemini, Cohere, Ollama. 비전 모델은 아직 지원되지 않습니다. 로컬 모델은 지원되지만 속도가 느립니다.' },
+          { q: 'DSPy는 모든 모델에서 작동합니까?', a: 'DSPy는 API를 통해 접근 가능한 모든 모델에서 작동합니다: GPT-5.6, Claude, Gemini, Cohere, Ollama. 비전 모델은 아직 지원되지 않습니다. 로컬 모델은 지원되지만 속도가 느립니다.' },
           { q: 'DSPy에 레이블 예시가 몇 개 필요합니까?', a: '간단한 태스크(분류, 추출)에는 최소 30–50개가 필요합니다. 복잡한 태스크(요약, 추론)에는 100–500개가 유리합니다. 예시가 많을수록 최적화가 더 견고해집니다.' },
           { q: 'DSPy 실행의 컴퓨팅 비용은 얼마입니까?', a: '100개 예시에 대한 DSPy 최적화 실행 1회에 ~$5–20가 소요됩니다(API 호출). 후보 프롬프트 10개 × 예시 100개 = 호출 1,000건 = 최적화 사이클당 $50–200. 월별 재학습 = $50–200/월.' },
           { q: 'DSPy로 최적화된 프롬프트를 프로덕션에 배포할 수 있습니까?', a: '예. DSPy는 일반 텍스트 프롬프트를 출력합니다. 이를 프로덕션 시스템(PromptQuorum, LangChain, Vellum 등)에 복사하여 정상적으로 제공하십시오. 프로덕션에서는 별도의 DSPy 런타임이 필요하지 않습니다.' },
           { q: '자동 최적화가 더 나은 프롬프트를 보장합니까?', a: '아니요. 메트릭이 잘못된 경우, DSPy는 잘못된 것을 최적화합니다. 평가 데이터에 편향이 있다면, DSPy는 편향을 학습합니다. 쓰레기가 들어가면 쓰레기가 나옵니다.' },
           { q: '창작 태스크에 자동 최적화를 사용해야 합니까?', a: '아직은 그렇지 않습니다. 자동화는 메트릭 기반 태스크(분류, 추출, 요약)에 가장 잘 작동합니다. 창작 태스크(카피라이팅, 스토리텔링)는 명확한 메트릭이 없으므로 수동 제어가 더 적합합니다.' },
-          { q: 'DSPy는 여러 모델을 동시에 최적화할 수 있습니까?', a: 'DSPy는 한 번에 하나의 모델에 대해 최적화합니다. GPT-5.5와 Claude 모두에 최적화하려면 DSPy를 두 번 실행(모델당 한 번)하고 결과를 비교하십시오. 하이브리드 방식: 선호 모델로 최적화한 후 다른 모델에서 수동으로 테스트하십시오.' },
+          { q: 'DSPy는 여러 모델을 동시에 최적화할 수 있습니까?', a: 'DSPy는 한 번에 하나의 모델에 대해 최적화합니다. GPT-5.6와 Claude 모두에 최적화하려면 DSPy를 두 번 실행(모델당 한 번)하고 결과를 비교하십시오. 하이브리드 방식: 선호 모델로 최적화한 후 다른 모델에서 수동으로 테스트하십시오.' },
         ],
       },
 
       relatedReading: {
+        id: 'related-reading',
         title: '관련 읽기',
         items: [
           '[프롬프트 최적화의 기초: 6가지 핵심 레버](/ko/prompt-engineering/fundamentals-of-prompt-optimization)',
@@ -1822,6 +1861,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       sources: {
+        id: 'sources',
         title: '출처',
         items: [
           'Khattab, O., Potts, C., & Zaharia, M. (2024). "DSPy: Compiling Declarative Language Model Calls into State-of-the-art Retrieval-Augmented Systems." arXiv:2310.03714',
