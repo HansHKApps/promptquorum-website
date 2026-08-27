@@ -434,7 +434,7 @@ function isPEMarkdownTable(lines: string[]): boolean {
 // so it can own its scroll-overflow-detection hooks per Rules of Hooks — it is
 // invoked from within .map()/IIFE callbacks in SectionBlock, so hooks cannot
 // live directly in the calling function.
-function PEMarkdownTable({ lines, renderLinks }: { lines: string[]; renderLinks: (text: string) => React.ReactNode }): JSX.Element {
+function PEMarkdownTable({ lines, renderLinks }: { lines: string[]; renderLinks: (text: string) => React.ReactNode }): React.JSX.Element {
   const rows = lines
     .filter(line => line.trim())
     .map(line => line.split('|').map(cell => cell.trim()).filter(Boolean))

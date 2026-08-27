@@ -385,7 +385,7 @@ function isMarkdownTable(lines: string[]): boolean {
   return lines.length >= 2 && lines[0].includes('|') && lines[1].includes('|') && lines[1].includes('-')
 }
 
-function renderMarkdownTable(lines: string[], renderLinks: (text: string) => React.ReactNode): JSX.Element {
+function renderMarkdownTable(lines: string[], renderLinks: (text: string) => React.ReactNode): React.JSX.Element {
   const rows = lines.filter(line => line.trim()).map(line =>
     line.split('|').map(cell => cell.trim()).filter(Boolean)
   ).filter(row => row.length > 0)
