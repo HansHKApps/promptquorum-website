@@ -80,4 +80,7 @@ export const BALCONY_SOLAR_SLUG_TO_KEY: Record<string, string> = {
   'balkonstrom-balcony-solar':                    'balkonstrom-balcony-solar',                        // BSOL-49
   'green-solar-pluginenergy-balcony-solar':       'green-solar-pluginenergy-balcony-solar',           // BSOL-50
   'meyer-burger-solarwatt-heckert-balcony-solar': 'meyer-burger-solarwatt-heckert-balcony-solar',     // BSOL-51
+
+  // TIER 3 extension — Legislation moat: GB plug-in solar route (SI 2026/848, in force 2026-08-27)
+  'plug-in-balcony-solar-uk-rules':               'plug-in-balcony-solar-uk-rules',                    // BSOL-52
 }

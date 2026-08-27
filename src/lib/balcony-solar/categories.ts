@@ -43,7 +43,7 @@ export const BALCONY_SOLAR_CATEGORIES: BalconySolarCategory[] = [
     id: 'legislation',
     slug: 'legislation',
     titleEn: 'Legislation Moat',
-    descriptionEn: 'Per-country legal status: the global tracker plus dedicated pages for the US, Germany, Spain/LatAm, Portugal/Brazil, and the Gulf/MENA region.',
+    descriptionEn: 'Per-country legal status: the global tracker plus dedicated pages for the US, Germany, the UK, Spain/LatAm, Portugal/Brazil, and the Gulf/MENA region.',
     articleSlugs: [
       'is-balcony-solar-legal-country-guide',
       'balcony-solar-legal-us-states',
@@ -52,6 +52,7 @@ export const BALCONY_SOLAR_CATEGORIES: BalconySolarCategory[] = [
       'balcony-solar-spain-latam',
       'balcony-solar-portugal-brazil',
       'balcony-solar-gulf-mena',
+      'plug-in-balcony-solar-uk-rules',
     ],
   },
   {

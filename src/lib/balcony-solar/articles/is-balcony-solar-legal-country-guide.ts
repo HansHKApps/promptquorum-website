@@ -96,6 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: '/balcony-solar/balcony-solar-legal-us-states', title: 'Is Balcony Solar Legal in the US? State-by-State Guide', description: 'Signed and pending state legislation, updated regularly' },
           { url: '/balcony-solar/balkonkraftwerk-germany-rules', title: 'Balkonkraftwerk: Germany Rules Explained', description: '800W cap, MaStR registration, and the new DIN VDE V 0126-95 standard' },
+          { url: '/balcony-solar/plug-in-balcony-solar-uk-rules', title: 'Plug-In Balcony Solar UK: 2026 Rules and Legal Kits', description: 'SI 2026/848, the 800 VA cap, and which kits were ENA-certified on day one' },
           { url: '/balcony-solar/balcony-solar-spain-latam', title: 'Balcony Solar in Spain & Latin America', description: 'Spain\'s ambiguous status explained' },
           { url: '/balcony-solar/balcony-solar-portugal-brazil', title: 'Balcony Solar in Portugal & Brazil', description: 'Portugal\'s codified regime vs. Brazil\'s regulatory gap' },
           { url: '/balcony-solar/balcony-solar-gulf-mena', title: 'Balcony Solar in the Gulf & MENA Region', description: 'Nascent regulation in the UAE and Saudi Arabia' },
