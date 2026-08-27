@@ -4,10 +4,10 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-24',
-    last_full_refresh: '2026-08-25',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-25',
+    next_refresh_due: '2026-09-26',
+    last_full_refresh: '2026-08-27',
+    next_seo_review_due: '2026-10-03',
+    last_seo_review: '2026-08-27',
     current_hardware_mentioned: ['RTX 3090', 'RTX 4090', 'Ryzen mini PC', 'Apple Silicon (unified memory)'],
     theme: 'Cost & Comparisons',
     heroImage: '/images/local-llm-cost-calculator-build-vs-rent-2026-overview-hero-en.webp',
@@ -64,9 +64,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'The core question is "how many hours/month?" — not a fixed local-vs-cloud rule',
           'Cloud GPU rental (RunPod, Vast.ai) costs roughly $0.13–0.69/hr for an RTX 4090-class GPU',
-          'A recommended local RTX 4090 workstation costs ~$3,200 total (GPU + full system)',
-          'Naive break-even (price ÷ cloud rate only): 6,400 hours — but that ignores electricity and resale',
-          'Full-TCO break-even (hardware + electricity − resale, vs. monthly cloud cost): ~5,465 hours, about 23 months at 8 hr/day usage — use the calculator below for your own numbers',
+          'A recommended local RTX 4090 workstation costs ~$2,800 total (GPU + full system)',
+          'Naive break-even (price ÷ cloud rate only): 5,600 hours — but that ignores electricity and resale',
+          'Full-TCO break-even (hardware + electricity − resale, vs. monthly cloud cost): ~4,780 hours, about 20 months at 8 hr/day usage — use the calculator below for your own numbers',
           'Electricity adds roughly $0.02/hr (US) to $0.06/hr (Germany) to local running costs for a 450W system',
           'Cloud wins for spiky, occasional, or experimental workloads under ~100 hr/month',
           'Local wins for sustained daily inference, privacy-sensitive use, or 500+ hr/month usage',
@@ -121,7 +121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwarePicks: {
         title: 'Hardware Picks by Category',
-        content: '- **Budget:** [GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review) — entry mini PC for 7B-class models\n- **Mid-range:** [Beelink SER8](/smart-home/beelink-ser8-local-ai-review) — 7B–14B experimentation, Home Assistant, 24/7 Ollama server; [Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review) as a Ryzen alternative\n- **GPU value:** RTX 3090 (used, ~$800–1,300) — best VRAM per dollar for 24GB\n- **GPU performance:** RTX 4090 (~$2,500–2,850 new as of August 2026) — fastest single-GPU consumer option, see the [workstation build guide](/local-llms/local-llm-workstation-build)\n- **Apple option:** high-unified-memory Mac for 70B+ models at low power draw — see the [Apple Silicon local LLM guide](/local-llms/apple-silicon-local-llm-guide-2026)\n\nRTX 3090/4090 and Apple hardware links above are plain product/editorial references — PromptQuorum has no affiliate program and earns no commission on any hardware purchase.',
+        content: '- **Budget:** [GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review) — entry mini PC for 7B-class models\n- **Mid-range:** [Beelink SER8](/smart-home/beelink-ser8-local-ai-review) — 7B–14B experimentation, Home Assistant, 24/7 Ollama server; [Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review) as a Ryzen alternative\n- **GPU value:** RTX 3090 (used, ~$800–1,300) — best VRAM per dollar for 24GB\n- **GPU performance:** RTX 4090 (~$2,000–2,600, EOL pricing as of August 2026 — the RTX 4090 reached end-of-life in Q2 2026) — fastest single-GPU consumer option, see the [workstation build guide](/local-llms/local-llm-workstation-build)\n- **Apple option:** high-unified-memory Mac for 70B+ models at low power draw — see the [Apple Silicon local LLM guide](/local-llms/apple-silicon-local-llm-guide-2026)\n\nRTX 3090/4090 and Apple hardware links above are plain product/editorial references — PromptQuorum has no affiliate program and earns no commission on any hardware purchase.',
       },
       dontBuy: {
         title: 'When You Should NOT Buy Local AI Hardware',
@@ -190,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How many hours before buying local hardware makes sense?',
-            a: 'For a $3,200 RTX 4090 workstation against a $0.50/hr cloud rate, the naive break-even (price ÷ rate only) is 6,400 cumulative hours. Once electricity cost and expected resale value are included, full-TCO break-even at 240 hours/month (8 hr/day) usage is roughly 5,465 hours — about 23 months. Use the calculator above for your specific numbers.',
+            a: 'For a $2,800 RTX 4090 workstation against a $0.50/hr cloud rate, the naive break-even (price ÷ rate only) is 5,600 cumulative hours. Once electricity cost and expected resale value are included, full-TCO break-even at 240 hours/month (8 hr/day) usage is roughly 4,780 hours — about 20 months. Use the calculator above for your specific numbers.',
           },
           {
             q: 'Is electricity included in local AI cost estimates?',
@@ -206,7 +206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Should I buy an RTX 4090 or rent cloud GPU time?',
-            a: 'Buy if you expect sustained usage above roughly 250–500 hours/month over a multi-year period and can keep the hardware utilized. Rent if your usage is occasional, spiky, or you are still validating the workload — renting avoids the ~$2,500–2,850 upfront cost of a new RTX 4090 (August 2026 pricing) entirely.',
+            a: 'Buy if you expect sustained usage above roughly 250–500 hours/month over a multi-year period and can keep the hardware utilized. Rent if your usage is occasional, spiky, or you are still validating the workload — renting avoids the ~$2,000–2,600 upfront cost of an RTX 4090 (EOL pricing, August 2026, since the RTX 4090 reached end-of-life in Q2 2026) entirely.',
           },
           {
             q: 'What is the cheapest way to run a local LLM?',
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'How many hours before buying local hardware makes sense?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'For a $3,200 RTX 4090 workstation against a $0.50/hr cloud rate, naive break-even is 6,400 hours; full-TCO break-even including electricity and resale value is roughly 5,465 hours (about 23 months at 8 hr/day usage).',
+            text: 'For a $2,800 RTX 4090 workstation against a $0.50/hr cloud rate, naive break-even is 5,600 hours; full-TCO break-even including electricity and resale value is roughly 4,780 hours (about 20 months at 8 hr/day usage).',
           },
         },
         {
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Interactive total-cost-of-ownership calculator comparing local GPU hardware vs cloud GPU rental for running LLMs in 2026.',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'en',
       'proficiencyLevel': 'Intermediate',
@@ -318,9 +318,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Die Kernfrage ist "wie viele Stunden pro Monat?" — keine feste Lokal-vs-Cloud-Regel',
           'Cloud-GPU-Miete (RunPod, Vast.ai) kostet etwa 0,13–0,69 $/Std. für eine RTX-4090-Klasse-GPU',
-          'Eine empfohlene lokale RTX-4090-Workstation kostet insgesamt ca. 3.200 $',
-          'Naiver Break-even (Preis ÷ Cloud-Rate): 6.400 Stunden — ignoriert aber Strom und Wiederverkauf',
-          'Vollständiger TCO-Break-even (Hardware + Strom − Wiederverkauf): ca. 5.465 Stunden, etwa 23 Monate bei 8 Std./Tag — Rechner unten für eigene Zahlen nutzen',
+          'Eine empfohlene lokale RTX-4090-Workstation kostet insgesamt ca. 2.800 $',
+          'Naiver Break-even (Preis ÷ Cloud-Rate): 5.600 Stunden — ignoriert aber Strom und Wiederverkauf',
+          'Vollständiger TCO-Break-even (Hardware + Strom − Wiederverkauf): ca. 4.780 Stunden, etwa 20 Monate bei 8 Std./Tag — Rechner unten für eigene Zahlen nutzen',
           'Strom fügt bei einem 450-W-System etwa 0,02 $/Std. (USA) bis 0,06 $/Std. (Deutschland) hinzu',
           'Cloud gewinnt bei sporadischer oder experimenteller Nutzung unter ca. 100 Std./Monat',
           'Lokal gewinnt bei täglichem Dauerbetrieb, sensiblen Daten oder 500+ Std./Monat',
@@ -375,7 +375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwarePicks: {
         title: 'Hardware-Empfehlungen nach Kategorie',
-        content: '- **Budget:** [GMKtec G3 Plus](/de/smart-home/gmktec-g3-plus-local-ai-review) — Einstiegs-Mini-PC für 7B-Modelle\n- **Mittelklasse:** [Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, 24/7-Ollama-Server; [Minisforum UM890 Pro](/de/smart-home/minisforum-um890-pro-local-ai-review) als Ryzen-Alternative\n- **GPU-Preis-Leistung:** RTX 3090 (gebraucht, ca. 800–1.300 $) — bestes VRAM pro Dollar bei 24GB\n- **GPU-Leistung:** RTX 4090 (ca. 2.500–2.850 $ neu, Stand August 2026) — schnellste Single-GPU-Option, siehe [Workstation-Build-Guide](/de/local-llms/local-llm-workstation-build)\n- **Apple-Option:** Mac mit viel Unified Memory für 70B+ Modelle bei geringem Verbrauch — siehe [Apple-Silicon-Guide](/de/local-llms/apple-silicon-local-llm-guide-2026)\n\nDie RTX-3090/4090- und Apple-Links oben sind reine Produkt-/Referenzlinks — PromptQuorum hat kein Partnerprogramm und erhält keine Provision auf Hardware-Käufe.',
+        content: '- **Budget:** [GMKtec G3 Plus](/de/smart-home/gmktec-g3-plus-local-ai-review) — Einstiegs-Mini-PC für 7B-Modelle\n- **Mittelklasse:** [Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, 24/7-Ollama-Server; [Minisforum UM890 Pro](/de/smart-home/minisforum-um890-pro-local-ai-review) als Ryzen-Alternative\n- **GPU-Preis-Leistung:** RTX 3090 (gebraucht, ca. 800–1.300 $) — bestes VRAM pro Dollar bei 24GB\n- **GPU-Leistung:** RTX 4090 (ca. 2.000–2.600 $, EOL-Preis Stand August 2026 — Produktionsende im Q2 2026) — schnellste Single-GPU-Option, siehe [Workstation-Build-Guide](/de/local-llms/local-llm-workstation-build)\n- **Apple-Option:** Mac mit viel Unified Memory für 70B+ Modelle bei geringem Verbrauch — siehe [Apple-Silicon-Guide](/de/local-llms/apple-silicon-local-llm-guide-2026)\n\nDie RTX-3090/4090- und Apple-Links oben sind reine Produkt-/Referenzlinks — PromptQuorum hat kein Partnerprogramm und erhält keine Provision auf Hardware-Käufe.',
       },
       dontBuy: {
         title: 'Wann Sie KEINE lokale KI-Hardware kaufen sollten',
@@ -444,7 +444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ab wie vielen Stunden lohnt sich der Kauf lokaler Hardware?',
-            a: 'Für eine 3.200-$-RTX-4090-Workstation gegenüber einer 0,50-$/Std.-Cloud-Rate liegt der naive Break-even (Preis ÷ Rate) bei 6.400 kumulierten Stunden. Rechnet man Strom und Wiederverkaufswert ein, liegt der vollständige TCO-Break-even bei 240 Std./Monat (8 Std./Tag) bei ca. 5.465 Stunden — etwa 23 Monaten. Nutzen Sie den Rechner oben für Ihre eigenen Zahlen.',
+            a: 'Für eine 2.800-$-RTX-4090-Workstation gegenüber einer 0,50-$/Std.-Cloud-Rate liegt der naive Break-even (Preis ÷ Rate) bei 5.600 kumulierten Stunden. Rechnet man Strom und Wiederverkaufswert ein, liegt der vollständige TCO-Break-even bei 240 Std./Monat (8 Std./Tag) bei ca. 4.780 Stunden — etwa 20 Monaten. Nutzen Sie den Rechner oben für Ihre eigenen Zahlen.',
           },
           {
             q: 'Ist Strom in Kostenschätzungen für lokale KI enthalten?',
@@ -460,7 +460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'RTX 4090 kaufen oder Cloud-GPU-Zeit mieten?',
-            a: 'Kaufen, wenn Sie über mehrere Jahre anhaltende Nutzung von etwa 250–500+ Std./Monat erwarten und die Hardware gut auslasten können. Mieten, wenn Ihre Nutzung gelegentlich, sporadisch ist oder Sie den Workload noch validieren — Mieten vermeidet die ca. 2.500–2.850-$-Anfangsinvestition einer neuen RTX 4090 (Preisstand August 2026) komplett.',
+            a: 'Kaufen, wenn Sie über mehrere Jahre anhaltende Nutzung von etwa 250–500+ Std./Monat erwarten und die Hardware gut auslasten können. Mieten, wenn Ihre Nutzung gelegentlich, sporadisch ist oder Sie den Workload noch validieren — Mieten vermeidet die ca. 2.000–2.600-$-Anfangsinvestition einer RTX 4090 (EOL-Preis, Stand August 2026, Produktionsende im Q2 2026) komplett.',
           },
           {
             q: 'Was ist der günstigste Weg, ein lokales LLM zu betreiben?',
@@ -498,11 +498,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: 'Ab wie vielen Stunden lohnt sich der Kauf lokaler Hardware?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Für eine 3.200-$-RTX-4090-Workstation bei 0,50 $/Std. Cloud-Rate liegt der naive Break-even bei 6.400 Stunden; der vollständige TCO-Break-even mit Strom und Wiederverkauf liegt bei ca. 5.465 Stunden (ca. 23 Monate bei 8 Std./Tag).' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Für eine 2.800-$-RTX-4090-Workstation bei 0,50 $/Std. Cloud-Rate liegt der naive Break-even bei 5.600 Stunden; der vollständige TCO-Break-even mit Strom und Wiederverkauf liegt bei ca. 4.780 Stunden (ca. 20 Monate bei 8 Std./Tag).' },
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Lokale KI vs. Cloud-KI: Kostenrechner (Kaufen vs. Mieten) 2026', description: 'Interaktiver TCO-Rechner: lokale GPU-Hardware vs. Cloud-GPU-Miete für LLMs 2026.', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-25', url: 'https://www.promptquorum.com/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'Lokale KI vs. Cloud-KI: Kostenrechner (Kaufen vs. Mieten) 2026', description: 'Interaktiver TCO-Rechner: lokale GPU-Hardware vs. Cloud-GPU-Miete für LLMs 2026.', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-27', url: 'https://www.promptquorum.com/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'de' },
   },
   fr: {
     theme: 'Cost & Comparisons',
@@ -548,9 +548,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'La question centrale est « combien d\'heures par mois ? », pas une règle fixe local-vs-cloud',
           'La location cloud GPU (RunPod, Vast.ai) coûte environ 0,13–0,69 $/h pour un GPU classe RTX 4090',
-          'Une workstation RTX 4090 locale recommandée coûte environ 3 200 $ au total',
-          'Seuil naïf (prix ÷ tarif cloud) : 6 400 heures — mais ignore électricité et revente',
-          'Seuil TCO complet (matériel + électricité − revente) : environ 5 465 heures, soit environ 23 mois à 8 h/jour — voir le calculateur ci-dessous',
+          'Une workstation RTX 4090 locale recommandée coûte environ 2 800 $ au total',
+          'Seuil naïf (prix ÷ tarif cloud) : 5 600 heures — mais ignore électricité et revente',
+          'Seuil TCO complet (matériel + électricité − revente) : environ 4 780 heures, soit environ 20 mois à 8 h/jour — voir le calculateur ci-dessous',
           'L\'électricité ajoute environ 0,02 $/h (États-Unis) à 0,06 $/h (Allemagne) pour un système 450 W',
           'Le cloud gagne pour les charges sporadiques ou expérimentales sous ~100 h/mois',
           'Le local gagne pour l\'usage quotidien continu, les données sensibles ou 500+ h/mois',
@@ -605,7 +605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwarePicks: {
         title: 'Sélections matérielles par catégorie',
-        content: '- **Budget :** [GMKtec G3 Plus](/fr/smart-home/gmktec-g3-plus-local-ai-review) — mini PC d\'entrée pour modèles 7B\n- **Milieu de gamme :** [Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, serveur Ollama 24/7 ; [Minisforum UM890 Pro](/fr/smart-home/minisforum-um890-pro-local-ai-review) en alternative Ryzen\n- **Meilleur rapport GPU :** RTX 3090 (occasion, ~800–1 300 $) — meilleur VRAM par dollar en 24 Go\n- **Performance GPU :** RTX 4090 (~2 500–2 850 $ neuf, août 2026) — GPU unique le plus rapide, voir le [guide de build workstation](/fr/local-llms/local-llm-workstation-build)\n- **Option Apple :** Mac à grande mémoire unifiée pour modèles 70B+ à faible consommation — voir le [guide Apple Silicon](/fr/local-llms/apple-silicon-local-llm-guide-2026)\n\nLes liens RTX 3090/4090 et Apple ci-dessus sont de simples liens produit/éditoriaux — PromptQuorum n\'a aucun programme d\'affiliation et ne perçoit aucune commission sur un achat matériel.',
+        content: '- **Budget :** [GMKtec G3 Plus](/fr/smart-home/gmktec-g3-plus-local-ai-review) — mini PC d\'entrée pour modèles 7B\n- **Milieu de gamme :** [Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, serveur Ollama 24/7 ; [Minisforum UM890 Pro](/fr/smart-home/minisforum-um890-pro-local-ai-review) en alternative Ryzen\n- **Meilleur rapport GPU :** RTX 3090 (occasion, ~800–1 300 $) — meilleur VRAM par dollar en 24 Go\n- **Performance GPU :** RTX 4090 (~2 000–2 600 $, prix EOL, août 2026 — fin de production au T2 2026) — GPU unique le plus rapide, voir le [guide de build workstation](/fr/local-llms/local-llm-workstation-build)\n- **Option Apple :** Mac à grande mémoire unifiée pour modèles 70B+ à faible consommation — voir le [guide Apple Silicon](/fr/local-llms/apple-silicon-local-llm-guide-2026)\n\nLes liens RTX 3090/4090 et Apple ci-dessus sont de simples liens produit/éditoriaux — PromptQuorum n\'a aucun programme d\'affiliation et ne perçoit aucune commission sur un achat matériel.',
       },
       dontBuy: {
         title: 'Quand NE PAS acheter de matériel IA local',
@@ -674,7 +674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'À partir de combien d\'heures l\'achat de matériel local devient-il rentable ?',
-            a: 'Pour une workstation RTX 4090 à 3 200 $ face à un tarif cloud de 0,50 $/h, le seuil naïf (prix ÷ tarif) est de 6 400 heures cumulées. En intégrant électricité et valeur de revente, le seuil TCO complet à 240 h/mois (8 h/jour) est d\'environ 5 465 heures, soit environ 23 mois. Utilisez le calculateur ci-dessus pour vos chiffres.',
+            a: 'Pour une workstation RTX 4090 à 2 800 $ face à un tarif cloud de 0,50 $/h, le seuil naïf (prix ÷ tarif) est de 5 600 heures cumulées. En intégrant électricité et valeur de revente, le seuil TCO complet à 240 h/mois (8 h/jour) est d\'environ 4 780 heures, soit environ 20 mois. Utilisez le calculateur ci-dessus pour vos chiffres.',
           },
           {
             q: 'L\'électricité est-elle incluse dans les estimations de coût de l\'IA locale ?',
@@ -708,11 +708,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: 'À partir de combien d\'heures l\'achat de matériel local devient-il rentable ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Pour une workstation RTX 4090 à 3 200 $ face à 0,50 $/h de cloud, le seuil naïf est de 6 400 heures ; le seuil TCO complet avec électricité et revente est d\'environ 5 465 heures (environ 23 mois à 8 h/jour).' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Pour une workstation RTX 4090 à 2 800 $ face à 0,50 $/h de cloud, le seuil naïf est de 5 600 heures ; le seuil TCO complet avec électricité et revente est d\'environ 4 780 heures (environ 20 mois à 8 h/jour).' },
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026', description: 'Calculateur interactif de coût total de possession comparant matériel GPU local et location cloud GPU pour LLM en 2026.', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-25', url: 'https://www.promptquorum.com/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026', description: 'Calculateur interactif de coût total de possession comparant matériel GPU local et location cloud GPU pour LLM en 2026.', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-27', url: 'https://www.promptquorum.com/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'fr' },
   },
   ja: {
     theme: 'Cost & Comparisons',
@@ -758,9 +758,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '核心の問いは「月何時間使うか」であり、固定のローカルvsクラウドのルールではない',
           'クラウドGPUレンタル（RunPod、Vast.ai）はRTX 4090クラスGPUで約0.13〜0.69ドル/時',
-          '推奨ローカルRTX 4090ワークステーションの総額は約3,200ドル',
-          '単純損益分岐点（価格÷クラウド料金のみ）：6,400時間——ただし電気代と売却価値を無視した数値',
-          '完全TCO損益分岐点（ハードウェア＋電気代−売却価値）：約5,465時間、1日8時間利用で約23ヶ月——正確な数値は以下の計算機で',
+          '推奨ローカルRTX 4090ワークステーションの総額は約2,800ドル',
+          '単純損益分岐点（価格÷クラウド料金のみ）：5,600時間——ただし電気代と売却価値を無視した数値',
+          '完全TCO損益分岐点（ハードウェア＋電気代−売却価値）：約4,780時間、1日8時間利用で約20ヶ月——正確な数値は以下の計算機で',
           '450Wシステムの電気代は米国で約0.02ドル/時、ドイツで約0.06ドル/時',
           'クラウドは月100時間未満の断続的・実験的用途で有利',
           'ローカルは毎日の常用、機密データ、月500時間以上の利用で有利',
@@ -815,7 +815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwarePicks: {
         title: 'カテゴリー別ハードウェア推奨',
-        content: '- **予算重視：** [GMKtec G3 Plus](/ja/smart-home/gmktec-g3-plus-local-ai-review) — 7Bクラス向けエントリーミニPC\n- **ミドルレンジ：** [Beelink SER8](/ja/smart-home/beelink-ser8-local-ai-review) — 7B〜14B、Home Assistant、24/7 Ollamaサーバー。Ryzen代替として[Minisforum UM890 Pro](/ja/smart-home/minisforum-um890-pro-local-ai-review)\n- **GPUコスパ：** RTX 3090（中古、約800〜1,300ドル）— 24GBでドル当たりVRAM最良\n- **GPU性能：** RTX 4090（2026年8月時点で新品約2,500〜2,850ドル）— 最速の単一GPU、[ワークステーション構築ガイド](/ja/local-llms/local-llm-workstation-build)を参照\n- **Appleオプション：** 大容量統合メモリのMacで70B以上を低消費電力で。[Apple Siliconガイド](/ja/local-llms/apple-silicon-local-llm-guide-2026)を参照\n\n上記のRTX 3090/4090およびApple関連リンクは単なる製品・参考リンクです——PromptQuorumはアフィリエイトプログラムに加入しておらず、ハードウェア購入から報酬を得ることはありません。',
+        content: '- **予算重視：** [GMKtec G3 Plus](/ja/smart-home/gmktec-g3-plus-local-ai-review) — 7Bクラス向けエントリーミニPC\n- **ミドルレンジ：** [Beelink SER8](/ja/smart-home/beelink-ser8-local-ai-review) — 7B〜14B、Home Assistant、24/7 Ollamaサーバー。Ryzen代替として[Minisforum UM890 Pro](/ja/smart-home/minisforum-um890-pro-local-ai-review)\n- **GPUコスパ：** RTX 3090（中古、約800〜1,300ドル）— 24GBでドル当たりVRAM最良\n- **GPU性能：** RTX 4090（2026年第2四半期に生産終了(EOL)、2026年8月時点のEOL価格は約2,000〜2,600ドル）— 最速の単一GPU、[ワークステーション構築ガイド](/ja/local-llms/local-llm-workstation-build)を参照\n- **Appleオプション：** 大容量統合メモリのMacで70B以上を低消費電力で。[Apple Siliconガイド](/ja/local-llms/apple-silicon-local-llm-guide-2026)を参照\n\n上記のRTX 3090/4090およびApple関連リンクは単なる製品・参考リンクです——PromptQuorumはアフィリエイトプログラムに加入しておらず、ハードウェア購入から報酬を得ることはありません。',
       },
       dontBuy: {
         title: 'ローカルAIハードウェアを購入すべきでない場合',
@@ -884,7 +884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ローカルハードウェア購入が割に合うのは何時間からですか？',
-            a: '3,200ドルのRTX 4090ワークステーションと0.50ドル/時のクラウド料金を比較した場合、単純損益分岐点（価格÷料金）は6,400時間です。電気代と売却価値を加味すると、月240時間（1日8時間）利用時の完全TCO損益分岐点は約5,465時間、約23ヶ月です。正確な数値は上の計算機で確認してください。',
+            a: '2,800ドルのRTX 4090ワークステーションと0.50ドル/時のクラウド料金を比較した場合、単純損益分岐点（価格÷料金）は5,600時間です。電気代と売却価値を加味すると、月240時間（1日8時間）利用時の完全TCO損益分岐点は約4,780時間、約20ヶ月です。正確な数値は上の計算機で確認してください。',
           },
           {
             q: 'ローカルAIのコスト試算に電気代は含まれていますか？',
@@ -918,11 +918,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: 'ローカルハードウェア購入が割に合うのは何時間からですか？',
-          acceptedAnswer: { '@type': 'Answer', text: '3,200ドルのRTX 4090ワークステーションと0.50ドル/時のクラウド料金では、単純損益分岐点は6,400時間、電気代と売却価値を含む完全TCO損益分岐点は約5,465時間（1日8時間利用で約23ヶ月）です。' },
+          acceptedAnswer: { '@type': 'Answer', text: '2,800ドルのRTX 4090ワークステーションと0.50ドル/時のクラウド料金では、単純損益分岐点は5,600時間、電気代と売却価値を含む完全TCO損益分岐点は約4,780時間（1日8時間利用で約20ヶ月）です。' },
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'ローカルAI vs クラウドAI：コスト計算機（購入 vs レンタル）2026年版', description: 'ローカルGPUハードウェアとクラウドGPUレンタルをLLM向けに比較するインタラクティブなTCO計算機、2026年版。', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-25', url: 'https://www.promptquorum.com/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: 'ローカルAI vs クラウドAI：コスト計算機（購入 vs レンタル）2026年版', description: 'ローカルGPUハードウェアとクラウドGPUレンタルをLLM向けに比較するインタラクティブなTCO計算機、2026年版。', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-27', url: 'https://www.promptquorum.com/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'ja' },
   },
   es: {
     theme: 'Cost & Comparisons',
@@ -968,9 +968,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'La pregunta central es "¿cuántas horas al mes?", no una regla fija local-vs-nube',
           'El alquiler de GPU en la nube (RunPod, Vast.ai) cuesta aproximadamente 0,13–0,69 $/hr para una GPU clase RTX 4090',
-          'Una workstation RTX 4090 local recomendada cuesta unos 3.200 $ en total',
-          'Punto de equilibrio ingenuo (precio ÷ tarifa cloud): 6.400 horas — pero ignora electricidad y reventa',
-          'Punto de equilibrio TCO completo (hardware + electricidad − reventa): ~5.465 horas, unos 23 meses a 8 hr/día — usa la calculadora de abajo para tus números',
+          'Una workstation RTX 4090 local recomendada cuesta unos 2.800 $ en total',
+          'Punto de equilibrio ingenuo (precio ÷ tarifa cloud): 5.600 horas — pero ignora electricidad y reventa',
+          'Punto de equilibrio TCO completo (hardware + electricidad − reventa): ~4.780 horas, unos 20 meses a 8 hr/día — usa la calculadora de abajo para tus números',
           'La electricidad añade aproximadamente 0,02 $/hr (EE.UU.) a 0,06 $/hr (Alemania) para un sistema de 450 W',
           'El cloud gana para cargas esporádicas o experimentales por debajo de ~100 hr/mes',
           'Lo local gana para inferencia diaria sostenida, uso sensible o 500+ hr/mes',
@@ -1025,7 +1025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwarePicks: {
         title: 'Selecciones de hardware por categoría',
-        content: '- **Económico:** [GMKtec G3 Plus](/es/smart-home/gmktec-g3-plus-local-ai-review) — mini PC de entrada para modelos 7B\n- **Gama media:** [Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, servidor Ollama 24/7; [Minisforum UM890 Pro](/es/smart-home/minisforum-um890-pro-local-ai-review) como alternativa Ryzen\n- **GPU valor:** RTX 3090 (usada, ~800–1.300 $) — mejor VRAM por dólar en 24GB\n- **GPU rendimiento:** RTX 4090 (~2.500–2.850 $ nueva, agosto 2026) — la GPU única más rápida, ve la [guía de construcción de workstation](/es/local-llms/local-llm-workstation-build)\n- **Opción Apple:** Mac con mucha memoria unificada para modelos 70B+ a bajo consumo — ve la [guía de Apple Silicon](/es/local-llms/apple-silicon-local-llm-guide-2026)\n\nLos enlaces de RTX 3090/4090 y Apple de arriba son enlaces de producto/editoriales — PromptQuorum no tiene programa de afiliados y no gana comisión en ninguna compra de hardware.',
+        content: '- **Económico:** [GMKtec G3 Plus](/es/smart-home/gmktec-g3-plus-local-ai-review) — mini PC de entrada para modelos 7B\n- **Gama media:** [Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, servidor Ollama 24/7; [Minisforum UM890 Pro](/es/smart-home/minisforum-um890-pro-local-ai-review) como alternativa Ryzen\n- **GPU valor:** RTX 3090 (usada, ~800–1.300 $) — mejor VRAM por dólar en 24GB\n- **GPU rendimiento:** RTX 4090 (~2.000–2.600 $, precio EOL, agosto 2026 — fin de producción en el T2 2026) — la GPU única más rápida, ve la [guía de construcción de workstation](/es/local-llms/local-llm-workstation-build)\n- **Opción Apple:** Mac con mucha memoria unificada para modelos 70B+ a bajo consumo — ve la [guía de Apple Silicon](/es/local-llms/apple-silicon-local-llm-guide-2026)\n\nLos enlaces de RTX 3090/4090 y Apple de arriba son enlaces de producto/editoriales — PromptQuorum no tiene programa de afiliados y no gana comisión en ninguna compra de hardware.',
       },
       dontBuy: {
         title: 'Cuándo NO deberías comprar hardware de IA local',
@@ -1094,7 +1094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿A partir de cuántas horas conviene comprar hardware local?',
-            a: 'Para una workstation RTX 4090 de 3.200 $ frente a una tarifa cloud de 0,50 $/hr, el punto de equilibrio ingenuo (precio ÷ tarifa) es de 6.400 horas acumuladas. Incluyendo electricidad y valor de reventa, el punto de equilibrio TCO completo a 240 hr/mes (8 hr/día) es de aproximadamente 5.465 horas — unos 23 meses. Usa la calculadora de arriba para tus números.',
+            a: 'Para una workstation RTX 4090 de 2.800 $ frente a una tarifa cloud de 0,50 $/hr, el punto de equilibrio ingenuo (precio ÷ tarifa) es de 5.600 horas acumuladas. Incluyendo electricidad y valor de reventa, el punto de equilibrio TCO completo a 240 hr/mes (8 hr/día) es de aproximadamente 4.780 horas — unos 20 meses. Usa la calculadora de arriba para tus números.',
           },
           {
             q: '¿La electricidad está incluida en las estimaciones de costo de IA local?',
@@ -1133,7 +1133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: '¿A partir de cuántas horas conviene comprar hardware local?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Para una workstation RTX 4090 de 3.200 $ a 0,50 $/hr de tarifa cloud, el punto de equilibrio ingenuo es de 6.400 horas; el punto de equilibrio TCO completo con electricidad y reventa es de aproximadamente 5.465 horas (unos 23 meses a 8 hr/día).',
+            text: 'Para una workstation RTX 4090 de 2.800 $ a 0,50 $/hr de tarifa cloud, el punto de equilibrio ingenuo es de 5.600 horas; el punto de equilibrio TCO completo con electricidad y reventa es de aproximadamente 4.780 horas (unos 20 meses a 8 hr/día).',
           },
         },
       ],
@@ -1144,7 +1144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Calculadora interactiva de costo total de propiedad comparando hardware GPU local vs alquiler de GPU en la nube para LLMs en 2026.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/es/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'es',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1206,9 +1206,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'السؤال الجوهري هو "كم ساعة شهريًا؟" وليس قاعدة ثابتة محلي-مقابل-سحابي',
           'يكلف استئجار GPU السحابي (RunPod، Vast.ai) نحو 0.13–0.69 دولار/ساعة لفئة GPU مثل RTX 4090',
-          'تكلف محطة عمل RTX 4090 المحلية الموصى بها نحو 3200 دولار إجمالًا',
-          'نقطة التعادل الساذجة (السعر ÷ تعرفة السحابة فقط): 6400 ساعة — لكنها تتجاهل الكهرباء وإعادة البيع',
-          'نقطة تعادل التكلفة الإجمالية الكاملة (الأجهزة + الكهرباء − إعادة البيع): نحو 5465 ساعة، أي نحو 23 شهرًا عند 8 ساعات/يوم — استخدم الحاسبة أدناه لأرقامك',
+          'تكلف محطة عمل RTX 4090 المحلية الموصى بها نحو 2800 دولار إجمالًا',
+          'نقطة التعادل الساذجة (السعر ÷ تعرفة السحابة فقط): 5600 ساعة — لكنها تتجاهل الكهرباء وإعادة البيع',
+          'نقطة تعادل التكلفة الإجمالية الكاملة (الأجهزة + الكهرباء − إعادة البيع): نحو 4780 ساعة، أي نحو 20 شهرًا عند 8 ساعات/يوم — استخدم الحاسبة أدناه لأرقامك',
           'تضيف الكهرباء لنظام بقدرة 450 واط نحو 0.02 دولار/ساعة (الولايات المتحدة) إلى 0.06 دولار/ساعة (ألمانيا)',
           'تتفوق السحابة لأحمال العمل المتقطعة أو التجريبية دون نحو 100 ساعة/شهر',
           'يتفوق المحلي للاستدلال اليومي المستمر أو البيانات الحساسة أو 500+ ساعة/شهر',
@@ -1263,7 +1263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwarePicks: {
         title: 'اختيارات الأجهزة حسب الفئة',
-        content: '- **اقتصادي:** [GMKtec G3 Plus](/ar/smart-home/gmktec-g3-plus-local-ai-review) — ميني PC للدخول لنماذج 7B\n- **متوسط:** [Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review) — 7B–14B، Home Assistant، خادم Ollama على مدار الساعة؛ [Minisforum UM890 Pro](/ar/smart-home/minisforum-um890-pro-local-ai-review) كبديل بمعالج Ryzen\n- **أفضل قيمة GPU:** RTX 3090 (مستعملة، نحو 800–1300 دولار) — أفضل VRAM لكل دولار عند 24GB\n- **أداء GPU:** RTX 4090 (نحو 2500–2850 دولار جديدة، أغسطس 2026) — أسرع خيار GPU واحدة، راجع [دليل بناء محطة العمل](/ar/local-llms/local-llm-workstation-build)\n- **خيار Apple:** Mac بذاكرة موحَّدة كبيرة لنماذج 70B+ باستهلاك منخفض — راجع [دليل Apple Silicon](/ar/local-llms/apple-silicon-local-llm-guide-2026)\n\nروابط RTX 3090/4090 وApple أعلاه هي مجرد روابط منتج/تحريرية — لا يوجد لدى PromptQuorum برنامج أفلييت ولا تحصل على أي عمولة من شراء أي جهاز.',
+        content: '- **اقتصادي:** [GMKtec G3 Plus](/ar/smart-home/gmktec-g3-plus-local-ai-review) — ميني PC للدخول لنماذج 7B\n- **متوسط:** [Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review) — 7B–14B، Home Assistant، خادم Ollama على مدار الساعة؛ [Minisforum UM890 Pro](/ar/smart-home/minisforum-um890-pro-local-ai-review) كبديل بمعالج Ryzen\n- **أفضل قيمة GPU:** RTX 3090 (مستعملة، نحو 800–1300 دولار) — أفضل VRAM لكل دولار عند 24GB\n- **أداء GPU:** RTX 4090 (نحو 2000–2600 دولار، سعر EOL، أغسطس 2026 — توقف الإنتاج في الربع الثاني من 2026) — أسرع خيار GPU واحدة، راجع [دليل بناء محطة العمل](/ar/local-llms/local-llm-workstation-build)\n- **خيار Apple:** Mac بذاكرة موحَّدة كبيرة لنماذج 70B+ باستهلاك منخفض — راجع [دليل Apple Silicon](/ar/local-llms/apple-silicon-local-llm-guide-2026)\n\nروابط RTX 3090/4090 وApple أعلاه هي مجرد روابط منتج/تحريرية — لا يوجد لدى PromptQuorum برنامج أفلييت ولا تحصل على أي عمولة من شراء أي جهاز.',
       },
       dontBuy: {
         title: 'متى لا يجب عليك شراء أجهزة ذكاء اصطناعي محلية',
@@ -1332,7 +1332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'بعد كم ساعة يصبح شراء الأجهزة المحلية مجديًا؟',
-            a: 'لمحطة عمل RTX 4090 بقيمة 3200 دولار مقابل تعرفة سحابية 0.50 دولار/ساعة، تبلغ نقطة التعادل الساذجة (السعر ÷ التعرفة) 6400 ساعة تراكمية. مع احتساب الكهرباء وقيمة إعادة البيع، تبلغ نقطة تعادل التكلفة الإجمالية الكاملة عند 240 ساعة/شهر (8 ساعات/يوم) نحو 5465 ساعة — أي نحو 23 شهرًا. استخدم الحاسبة أعلاه لأرقامك.',
+            a: 'لمحطة عمل RTX 4090 بقيمة 2800 دولار مقابل تعرفة سحابية 0.50 دولار/ساعة، تبلغ نقطة التعادل الساذجة (السعر ÷ التعرفة) 5600 ساعة تراكمية. مع احتساب الكهرباء وقيمة إعادة البيع، تبلغ نقطة تعادل التكلفة الإجمالية الكاملة عند 240 ساعة/شهر (8 ساعات/يوم) نحو 4780 ساعة — أي نحو 20 شهرًا. استخدم الحاسبة أعلاه لأرقامك.',
           },
           {
             q: 'هل الكهرباء مُدرجة في تقديرات تكلفة الذكاء الاصطناعي المحلي؟',
@@ -1367,7 +1367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: 'بعد كم ساعة يصبح شراء الأجهزة المحلية مجديًا؟',
-          acceptedAnswer: { '@type': 'Answer', text: 'لمحطة عمل RTX 4090 بقيمة 3200 دولار مقابل تعرفة سحابية 0.50 دولار/ساعة، نقطة التعادل الساذجة 6400 ساعة؛ ونقطة تعادل التكلفة الإجمالية الكاملة مع الكهرباء وإعادة البيع نحو 5465 ساعة (نحو 23 شهرًا عند 8 ساعات/يوم).' },
+          acceptedAnswer: { '@type': 'Answer', text: 'لمحطة عمل RTX 4090 بقيمة 2800 دولار مقابل تعرفة سحابية 0.50 دولار/ساعة، نقطة التعادل الساذجة 5600 ساعة؛ ونقطة تعادل التكلفة الإجمالية الكاملة مع الكهرباء وإعادة البيع نحو 4780 ساعة (نحو 20 شهرًا عند 8 ساعات/يوم).' },
         },
       ],
     },
@@ -1377,7 +1377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'حاسبة تفاعلية لإجمالي تكلفة الملكية تقارن بين أجهزة GPU المحلية واستئجار GPU سحابي لتشغيل نماذج LLM في 2026.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/ar/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'ar',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1439,9 +1439,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '核心问题是"每月使用多少小时"，而非固定的本地vs云端规则',
           '云GPU租用（RunPod、Vast.ai）对于RTX 4090级别GPU约为0.13–0.69美元/小时',
-          '推荐的本地RTX 4090工作站总成本约3,200美元',
-          '简单损益平衡点（价格÷云端费率）：6,400小时——但忽略了电费和转售价值',
-          '完整TCO损益平衡点（硬件＋电费−转售价值）：约5,465小时，按每天8小时使用约合23个月——具体数字见下方计算器',
+          '推荐的本地RTX 4090工作站总成本约2,800美元',
+          '简单损益平衡点（价格÷云端费率）：5,600小时——但忽略了电费和转售价值',
+          '完整TCO损益平衡点（硬件＋电费−转售价值）：约4,780小时，按每天8小时使用约合20个月——具体数字见下方计算器',
           '450W系统的电费约为每小时0.02美元（美国）至0.06美元（德国）',
           '云端适合每月不足约100小时的间歇性或实验性负载',
           '本地适合每天持续推理、敏感数据处理或每月500小时以上的使用',
@@ -1496,7 +1496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwarePicks: {
         title: '各类别硬件推荐',
-        content: '- **预算型：** [GMKtec G3 Plus](/zh/smart-home/gmktec-g3-plus-local-ai-review) — 面向7B级模型的入门迷你主机\n- **中端：** [Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review) — 7B–14B、Home Assistant、24/7 Ollama服务器；[Minisforum UM890 Pro](/zh/smart-home/minisforum-um890-pro-local-ai-review)作为Ryzen替代方案\n- **GPU性价比：** RTX 3090（二手，约800–1,300美元）— 24GB下每美元VRAM最优\n- **GPU性能：** RTX 4090（截至2026年8月新品约2,500–2,850美元）— 最快单卡选择，参阅[工作站构建指南](/zh/local-llms/local-llm-workstation-build)\n- **Apple选项：** 大内存统一内存Mac，可低功耗运行70B以上模型——参阅[Apple Silicon指南](/zh/local-llms/apple-silicon-local-llm-guide-2026)\n\n以上RTX 3090/4090及Apple相关链接均为普通产品/参考链接——PromptQuorum没有联盟计划，不会从任何硬件购买中获得佣金。',
+        content: '- **预算型：** [GMKtec G3 Plus](/zh/smart-home/gmktec-g3-plus-local-ai-review) — 面向7B级模型的入门迷你主机\n- **中端：** [Beelink SER8](/zh/smart-home/beelink-ser8-local-ai-review) — 7B–14B、Home Assistant、24/7 Ollama服务器；[Minisforum UM890 Pro](/zh/smart-home/minisforum-um890-pro-local-ai-review)作为Ryzen替代方案\n- **GPU性价比：** RTX 3090（二手，约800–1,300美元）— 24GB下每美元VRAM最优\n- **GPU性能：** RTX 4090（已于2026年第二季度停产EOL，截至2026年8月二手市场价约2,000–2,600美元）— 最快单卡选择，参阅[工作站构建指南](/zh/local-llms/local-llm-workstation-build)\n- **Apple选项：** 大内存统一内存Mac，可低功耗运行70B以上模型——参阅[Apple Silicon指南](/zh/local-llms/apple-silicon-local-llm-guide-2026)\n\n以上RTX 3090/4090及Apple相关链接均为普通产品/参考链接——PromptQuorum没有联盟计划，不会从任何硬件购买中获得佣金。',
       },
       dontBuy: {
         title: '何时不应购买本地AI硬件',
@@ -1565,7 +1565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '使用多少小时后购买本地硬件才划算？',
-            a: '对于一台3,200美元的RTX 4090工作站，相对于0.50美元/小时的云端费率，简单损益平衡点（价格÷费率）为6,400累计小时。计入电费和预期转售价值后，在每月240小时（每天8小时）使用下，完整TCO损益平衡点约为5,465小时——约23个月。具体数字请使用上方计算器。',
+            a: '对于一台2,800美元的RTX 4090工作站，相对于0.50美元/小时的云端费率，简单损益平衡点（价格÷费率）为5,600累计小时。计入电费和预期转售价值后，在每月240小时（每天8小时）使用下，完整TCO损益平衡点约为4,780小时——约20个月。具体数字请使用上方计算器。',
           },
           {
             q: '本地AI成本估算中是否包含电费？',
@@ -1599,11 +1599,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: '使用多少小时后购买本地硬件才划算？',
-          acceptedAnswer: { '@type': 'Answer', text: '对于3,200美元的RTX 4090工作站，相对于0.50美元/小时的云端费率，简单损益平衡点为6,400小时；计入电费和转售价值的完整TCO损益平衡点约为5,465小时（每天8小时使用下约23个月）。' },
+          acceptedAnswer: { '@type': 'Answer', text: '对于2,800美元的RTX 4090工作站，相对于0.50美元/小时的云端费率，简单损益平衡点为5,600小时；计入电费和转售价值的完整TCO损益平衡点约为4,780小时（每天8小时使用下约20个月）。' },
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '本地AI vs 云端AI：成本计算器（自建 vs 租用）2026', description: '交互式总拥有成本计算器，对比本地GPU硬件与云GPU租用运行LLM的成本，2026年版。', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-25', url: 'https://www.promptquorum.com/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '本地AI vs 云端AI：成本计算器（自建 vs 租用）2026', description: '交互式总拥有成本计算器，对比本地GPU硬件与云GPU租用运行LLM的成本，2026年版。', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-27', url: 'https://www.promptquorum.com/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'zh' },
   },
   pt: {
     theme: 'Cost & Comparisons',
@@ -1649,9 +1649,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'A pergunta central é "quantas horas por mês?", não uma regra fixa local-vs-nuvem',
           'O aluguel de GPU na nuvem (RunPod, Vast.ai) custa aproximadamente US$ 0,13–0,69/h para uma GPU classe RTX 4090',
-          'Uma workstation RTX 4090 local recomendada custa cerca de US$ 3.200 no total',
-          'Ponto de equilíbrio ingênuo (preço ÷ tarifa da nuvem): 6.400 horas — mas ignora eletricidade e revenda',
-          'Ponto de equilíbrio de TCO completo (hardware + eletricidade − revenda): ~5.465 horas, cerca de 23 meses a 8h/dia — veja a calculadora abaixo para seus números',
+          'Uma workstation RTX 4090 local recomendada custa cerca de US$ 2.800 no total',
+          'Ponto de equilíbrio ingênuo (preço ÷ tarifa da nuvem): 5.600 horas — mas ignora eletricidade e revenda',
+          'Ponto de equilíbrio de TCO completo (hardware + eletricidade − revenda): ~4.780 horas, cerca de 20 meses a 8h/dia — veja a calculadora abaixo para seus números',
           'A eletricidade acrescenta aproximadamente US$ 0,02/h (EUA) a US$ 0,06/h (Alemanha) para um sistema de 450 W',
           'A nuvem vence para cargas esporádicas ou experimentais abaixo de ~100 h/mês',
           'O local vence para inferência diária contínua, dados sensíveis ou 500+ h/mês',
@@ -1706,7 +1706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwarePicks: {
         title: 'Recomendações de hardware por categoria',
-        content: '- **Econômico:** [GMKtec G3 Plus](/pt/smart-home/gmktec-g3-plus-local-ai-review) — mini PC de entrada para modelos 7B\n- **Intermediário:** [Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, servidor Ollama 24/7; [Minisforum UM890 Pro](/pt/smart-home/minisforum-um890-pro-local-ai-review) como alternativa Ryzen\n- **Melhor custo-benefício de GPU:** RTX 3090 (usada, ~US$ 800–1.300) — melhor VRAM por dólar em 24GB\n- **Desempenho de GPU:** RTX 4090 (~US$ 2.500–2.850 nova, agosto de 2026) — a GPU única mais rápida, veja o [guia de construção de workstation](/pt/local-llms/local-llm-workstation-build)\n- **Opção Apple:** Mac com bastante memória unificada para modelos 70B+ com baixo consumo — veja o [guia de Apple Silicon](/pt/local-llms/apple-silicon-local-llm-guide-2026)\n\nOs links de RTX 3090/4090 e Apple acima são apenas links de produto/editoriais — a PromptQuorum não tem programa de afiliados e não recebe comissão em nenhuma compra de hardware.',
+        content: '- **Econômico:** [GMKtec G3 Plus](/pt/smart-home/gmktec-g3-plus-local-ai-review) — mini PC de entrada para modelos 7B\n- **Intermediário:** [Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review) — 7B–14B, Home Assistant, servidor Ollama 24/7; [Minisforum UM890 Pro](/pt/smart-home/minisforum-um890-pro-local-ai-review) como alternativa Ryzen\n- **Melhor custo-benefício de GPU:** RTX 3090 (usada, ~US$ 800–1.300) — melhor VRAM por dólar em 24GB\n- **Desempenho de GPU:** RTX 4090 (~US$ 2.000–2.600, preço EOL, agosto de 2026 — fim de produção no 2º trimestre de 2026) — a GPU única mais rápida, veja o [guia de construção de workstation](/pt/local-llms/local-llm-workstation-build)\n- **Opção Apple:** Mac com bastante memória unificada para modelos 70B+ com baixo consumo — veja o [guia de Apple Silicon](/pt/local-llms/apple-silicon-local-llm-guide-2026)\n\nOs links de RTX 3090/4090 e Apple acima são apenas links de produto/editoriais — a PromptQuorum não tem programa de afiliados e não recebe comissão em nenhuma compra de hardware.',
       },
       dontBuy: {
         title: 'Quando você NÃO deve comprar hardware de IA local',
@@ -1775,7 +1775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'A partir de quantas horas comprar hardware local compensa?',
-            a: 'Para uma workstation RTX 4090 de US$ 3.200 frente a uma tarifa de nuvem de US$ 0,50/h, o ponto de equilíbrio ingênuo (preço ÷ tarifa) é de 6.400 horas acumuladas. Incluindo eletricidade e valor de revenda, o ponto de equilíbrio de TCO completo a 240h/mês (8h/dia) é de aproximadamente 5.465 horas — cerca de 23 meses. Use a calculadora acima para seus números.',
+            a: 'Para uma workstation RTX 4090 de US$ 2.800 frente a uma tarifa de nuvem de US$ 0,50/h, o ponto de equilíbrio ingênuo (preço ÷ tarifa) é de 5.600 horas acumuladas. Incluindo eletricidade e valor de revenda, o ponto de equilíbrio de TCO completo a 240h/mês (8h/dia) é de aproximadamente 4.780 horas — cerca de 20 meses. Use a calculadora acima para seus números.',
           },
           {
             q: 'A eletricidade está incluída nas estimativas de custo de IA local?',
@@ -1809,7 +1809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: 'A partir de quantas horas comprar hardware local compensa?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Para uma workstation RTX 4090 de US$ 3.200 a US$ 0,50/h de tarifa de nuvem, o ponto de equilíbrio ingênuo é de 6.400 horas; o ponto de equilíbrio de TCO completo com eletricidade e revenda é de aproximadamente 5.465 horas (cerca de 23 meses a 8h/dia).' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Para uma workstation RTX 4090 de US$ 2.800 a US$ 0,50/h de tarifa de nuvem, o ponto de equilíbrio ingênuo é de 5.600 horas; o ponto de equilíbrio de TCO completo com eletricidade e revenda é de aproximadamente 4.780 horas (cerca de 20 meses a 8h/dia).' },
         },
       ],
     },
@@ -1819,7 +1819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: 'Calculadora interativa de custo total de propriedade comparando hardware GPU local vs aluguel de GPU na nuvem para rodar LLMs em 2026.',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'pt-BR',
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1881,9 +1881,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '핵심 질문은 "월 몇 시간 사용하는가"이며, 고정된 로컬-대-클라우드 규칙이 아닙니다',
           '클라우드 GPU 렌탈(RunPod, Vast.ai)은 RTX 4090급 GPU 기준 시간당 약 $0.13~0.69입니다',
-          '추천 로컬 RTX 4090 워크스테이션은 총 약 $3,200입니다',
-          '단순 손익분기점(가격 ÷ 클라우드 요금만): 6,400시간 — 하지만 전기 요금과 재판매 가치는 무시한 값입니다',
-          '완전한 TCO 손익분기점(하드웨어 + 전기 − 재판매): 약 5,465시간, 하루 8시간 사용 시 약 23개월 — 정확한 수치는 아래 계산기 참고',
+          '추천 로컬 RTX 4090 워크스테이션은 총 약 $2,800입니다',
+          '단순 손익분기점(가격 ÷ 클라우드 요금만): 5,600시간 — 하지만 전기 요금과 재판매 가치는 무시한 값입니다',
+          '완전한 TCO 손익분기점(하드웨어 + 전기 − 재판매): 약 4,780시간, 하루 8시간 사용 시 약 20개월 — 정확한 수치는 아래 계산기 참고',
           '450W 시스템의 전기 요금은 미국 기준 시간당 약 $0.02, 독일 기준 약 $0.06 추가됩니다',
           '월 약 100시간 미만의 산발적·실험적 워크로드에는 클라우드가 유리합니다',
           '매일 지속적인 추론, 민감한 데이터, 또는 월 500시간 이상에는 로컬이 유리합니다',
@@ -1938,7 +1938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwarePicks: {
         title: '카테고리별 하드웨어 추천',
-        content: '- **예산형:** [GMKtec G3 Plus](/ko/smart-home/gmktec-g3-plus-local-ai-review) — 7B급 모델용 입문 미니 PC\n- **중급형:** [Beelink SER8](/ko/smart-home/beelink-ser8-local-ai-review) — 7B~14B, Home Assistant, 24/7 Ollama 서버; Ryzen 대안으로 [Minisforum UM890 Pro](/ko/smart-home/minisforum-um890-pro-local-ai-review)\n- **GPU 가성비:** RTX 3090(중고, 약 $800~1,300) — 24GB 기준 달러당 최고의 VRAM\n- **GPU 성능:** RTX 4090(2026년 8월 기준 신품 약 $2,500~2,850) — 가장 빠른 단일 GPU 옵션, [워크스테이션 구축 가이드](/ko/local-llms/local-llm-workstation-build) 참고\n- **Apple 옵션:** 대용량 통합 메모리 Mac으로 저전력으로 70B 이상 모델 운영 — [Apple Silicon 가이드](/ko/local-llms/apple-silicon-local-llm-guide-2026) 참고\n\n위 RTX 3090/4090 및 Apple 관련 링크는 단순 제품/참고 링크입니다 — PromptQuorum은 제휴 프로그램이 없으며 어떤 하드웨어 구매에서도 수수료를 받지 않습니다.',
+        content: '- **예산형:** [GMKtec G3 Plus](/ko/smart-home/gmktec-g3-plus-local-ai-review) — 7B급 모델용 입문 미니 PC\n- **중급형:** [Beelink SER8](/ko/smart-home/beelink-ser8-local-ai-review) — 7B~14B, Home Assistant, 24/7 Ollama 서버; Ryzen 대안으로 [Minisforum UM890 Pro](/ko/smart-home/minisforum-um890-pro-local-ai-review)\n- **GPU 가성비:** RTX 3090(중고, 약 $800~1,300) — 24GB 기준 달러당 최고의 VRAM\n- **GPU 성능:** RTX 4090(2026년 2분기 단종(EOL), 2026년 8월 기준 약 $2,000~2,600) — 가장 빠른 단일 GPU 옵션, [워크스테이션 구축 가이드](/ko/local-llms/local-llm-workstation-build) 참고\n- **Apple 옵션:** 대용량 통합 메모리 Mac으로 저전력으로 70B 이상 모델 운영 — [Apple Silicon 가이드](/ko/local-llms/apple-silicon-local-llm-guide-2026) 참고\n\n위 RTX 3090/4090 및 Apple 관련 링크는 단순 제품/참고 링크입니다 — PromptQuorum은 제휴 프로그램이 없으며 어떤 하드웨어 구매에서도 수수료를 받지 않습니다.',
       },
       dontBuy: {
         title: '로컬 AI 하드웨어를 구매하지 말아야 할 때',
@@ -2007,7 +2007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '몇 시간부터 로컬 하드웨어 구매가 이득입니까?',
-            a: '$3,200짜리 RTX 4090 워크스테이션을 시간당 $0.50의 클라우드 요금과 비교하면, 단순 손익분기점(가격 ÷ 요금)은 누적 6,400시간입니다. 전기 요금과 재판매 가치를 포함하면, 월 240시간(하루 8시간) 사용 기준 완전한 TCO 손익분기점은 약 5,465시간 — 약 23개월입니다. 정확한 수치는 위 계산기를 이용하세요.',
+            a: '$2,800짜리 RTX 4090 워크스테이션을 시간당 $0.50의 클라우드 요금과 비교하면, 단순 손익분기점(가격 ÷ 요금)은 누적 5,600시간입니다. 전기 요금과 재판매 가치를 포함하면, 월 240시간(하루 8시간) 사용 기준 완전한 TCO 손익분기점은 약 4,780시간 — 약 20개월입니다. 정확한 수치는 위 계산기를 이용하세요.',
           },
           {
             q: '로컬 AI 비용 추정에 전기 요금이 포함되어 있습니까?',
@@ -2041,7 +2041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: '몇 시간부터 로컬 하드웨어 구매가 이득입니까?',
-          acceptedAnswer: { '@type': 'Answer', text: '$3,200 RTX 4090 워크스테이션을 시간당 $0.50 클라우드 요금과 비교하면 단순 손익분기점은 6,400시간이며, 전기와 재판매를 포함한 완전한 TCO 손익분기점은 약 5,465시간(하루 8시간 사용 시 약 23개월)입니다.' },
+          acceptedAnswer: { '@type': 'Answer', text: '$2,800 RTX 4090 워크스테이션을 시간당 $0.50 클라우드 요금과 비교하면 단순 손익분기점은 5,600시간이며, 전기와 재판매를 포함한 완전한 TCO 손익분기점은 약 4,780시간(하루 8시간 사용 시 약 20개월)입니다.' },
         },
       ],
     },
@@ -2051,7 +2051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       description: '2026년 LLM 운영을 위한 로컬 GPU 하드웨어와 클라우드 GPU 렌탈을 비교하는 인터랙티브 총소유비용(TCO) 계산기.',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/ko/local-llms/local-llm-cost-calculator-build-vs-rent-2026',
       inLanguage: 'ko',
       'proficiencyLevel': 'Intermediate',
