@@ -1,6 +1,6 @@
 // Power Local LLM — Local LLM for Email and Calendar Automation (2026)
 // Slug: local-llm-email-and-calendar-automation
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// All 9 locales authored (en/de/fr/ja/zh/es/pt/ar/ko).
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -9,8 +9,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-en.webp',
     title: 'Local AI for Email and Calendar: Triage Without Sending Data to Google (2026)',
@@ -24,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 14B',
-      'Mistral Small',
+      'Mistral Small 4',
       'Phi-4 Mini',
     ],
     current_hardware_mentioned: [
@@ -60,7 +61,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Privacy: IMAP credentials and email content never leave your machine; no cloud API calls in any of these setups.',
           'Review-before-send is mandatory: local models make factual errors and tone mismatches; treat all output as a first draft.',
         ],
-        updatedDate: '2026-05-08',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -276,6 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'Model Recommendations for Email and Calendar Tasks',
         content:
           '**Email and calendar automation tasks favour small, fast models over large, capable ones.** Drafting a business email reply, generating a meeting agenda, or summarising an inbox does not require Llama 3.3 70B — it requires a model that is fast enough to feel interactive and coherent enough to produce usable business text. For the broader model landscape across all use cases, see [Best Local LLMs in 2026](/local-llms/best-local-llms-2026).',
@@ -401,8 +403,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-de.webp',
     title: 'Lokale KI für E-Mail und Kalender: Automatisierung ohne Cloud-API (2026)',
@@ -416,7 +419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 14B',
-      'Mistral Small',
+      'Mistral Small 4',
       'Phi-4 Mini',
     ],
     current_hardware_mentioned: [
@@ -452,7 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Datenschutz: IMAP-Anmeldedaten und E-Mail-Inhalte verlassen Ihren Computer nie; keine Cloud-API-Aufrufe in einem dieser Setups.',
           'Überprüfung vor dem Versand ist erforderlich: Lokale Modelle machen Fehler bei Fakten und Ton; behandeln Sie alle Ausgaben als ersten Entwurf.',
         ],
-        updatedDate: '2026-05-08',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -669,6 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'Modellempfehlungen für E-Mail- und Kalenderaufgaben',
         content:
           '**E-Mail- und Kalenderautomisierungsaufgaben bevorzugen kleine, schnelle Modelle gegenüber großen, leistungsstarken.** Das Entwerfen einer geschäftlichen E-Mail-Antwort, das Generieren einer Besprechungsagenda oder das Zusammenfassen eines Posteingangs erfordert nicht Llama 3.3 70B — es erfordert ein Modell, das schnell genug ist, um sich interaktiv anzufühlen und kohärent genug, um brauchbaren Geschäftstext zu erzeugen. Für die umfassendere Modelllandschaft über alle Anwendungsfälle hinweg, siehe [Beste lokale LLMs in 2026](/de/local-llms/best-local-llms-2026).',
@@ -821,8 +825,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-fr.webp',
     title: 'IA locale pour l\'e-mail et le calendrier : automatisation sans API cloud (2026)',
@@ -836,7 +841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 14B',
-      'Mistral Small',
+      'Mistral Small 4',
       'Phi-4 Mini',
     ],
     current_hardware_mentioned: [
@@ -872,7 +877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Confidentialité : les credentials IMAP et le contenu d\'e-mail ne quittent jamais votre machine ; aucun appel API cloud dans aucune de ces configurations.',
           'La vérification avant envoi est obligatoire : les modèles locaux commettent des erreurs de ton et de faits ; traitez toutes les sorties comme un premier brouillon.',
         ],
-        updatedDate: '2026-05-08',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1088,6 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'Recommandations de modèles pour tâches e-mail et calendaire',
         content:
           '**Les tâches d\'automatisation e-mail et calendaire favorisent les petits modèles rapides plutôt que les grands modèles puissants.** Rédiger une réponse e-mail professionnelle, générer un agenda ou résumer une boîte aux lettres ne nécessite pas Llama 3.3 70B — cela nécessite un modèle assez rapide pour se sentir interactif et cohérent pour produire du texte professionnel utilisable. Pour le paysage de modèle plus large dans tous les cas d\'usage, voir [Meilleurs LLMs locaux en 2026](/fr/local-llms/best-local-llms-2026).',
@@ -1213,8 +1219,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-es.webp',
     title: 'IA local para email y calendario: automatización sin API en la nube (2026)',
@@ -1228,7 +1235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 14B',
-      'Mistral Small',
+      'Mistral Small 4',
       'Phi-4 Mini',
     ],
     current_hardware_mentioned: [
@@ -1264,7 +1271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Privacidad: las credenciales IMAP y el contenido del email nunca abandonan tu máquina; sin llamadas a API en la nube en ninguna de estas configuraciones.',
           'La revisión antes de enviar es obligatoria: los modelos locales cometen errores de tono y de hechos; trata toda la salida como un primer borrador.',
         ],
-        updatedDate: '2026-05-08',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1480,6 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'Recomendaciones de modelos para tareas de email y calendario',
         content:
           '**Las tareas de automatización de email y calendario favorecen los modelos pequeños y rápidos sobre los grandes y potentes.** Redactar una respuesta de email de negocios, generar una agenda de reunión o resumir una bandeja de entrada no requiere Llama 3.3 70B — requiere un modelo que sea lo suficientemente rápido para sentirse interactivo y lo suficientemente coherente para producir texto empresarial utilizable. Para el panorama más amplio de modelos en todos los casos de uso, consulta [Mejores LLMs locales en 2026](/es/local-llms/best-local-llms-2026).',
@@ -1609,7 +1617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-email-and-calendar-automation',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1621,8 +1629,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-pt.webp',
     title: 'IA local para e-mail e calendário: triagem sem API na nuvem (2026)',
@@ -1636,7 +1645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 14B',
-      'Mistral Small',
+      'Mistral Small 4',
       'Phi-4 Mini',
     ],
     current_hardware_mentioned: [
@@ -1672,7 +1681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Privacidade: as credenciais IMAP e o conteúdo do e-mail nunca saem da sua máquina; sem chamadas à API na nuvem em nenhuma dessas configurações.',
           'A revisão antes de enviar é obrigatória: os modelos locais cometem erros factuais e de tom; trate toda a saída como um primeiro rascunho.',
         ],
-        updatedDate: '2026-05-08',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1888,6 +1897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'Recomendações de modelos para tarefas de e-mail e calendário',
         content:
           '**As tarefas de automação de e-mail e calendário favorecem modelos pequenos e rápidos em vez de grandes e capazes.** Redigir uma resposta de e-mail de negócios, gerar uma pauta de reunião ou resumir uma caixa de entrada não exige o Llama 3.3 70B — exige um modelo rápido o suficiente para parecer interativo e coerente o suficiente para produzir texto empresarial utilizável. Para o panorama mais amplo de modelos em todos os casos de uso, veja [Melhores LLMs locais em 2026](/pt/local-llms/best-local-llms-2026).',
@@ -2017,7 +2027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-email-and-calendar-automation',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-05-24',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -2027,8 +2037,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-ja.webp',
     title: 'ローカルLLMでメール・カレンダー自動化：クラウドAPIなし (2026)',
@@ -2042,7 +2053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 14B',
-      'Mistral Small',
+      'Mistral Small 4',
       'Phi-4 Mini',
     ],
     current_hardware_mentioned: [
@@ -2078,7 +2089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'プライバシー：IMAPクレデンシャルとメールコンテンツはあなたのマシンから出ません；これらのセットアップのいずれでもクラウドAPI呼び出しなし。',
           '送信前の確認は必須：ローカルモデルはトーンと事実で誤りを犯します；すべての出力を第一ドラフトとして扱う。',
         ],
-        updatedDate: '2026-05-08',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2295,6 +2306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'メール・カレンダータスク用モデル推奨',
         content:
           '**メール・カレンダー自動化タスクは大型の強力モデルより小型の高速モデルを優先します。** ビジネス email 返信作成、会議アジェンダ生成、受信トレイ要約には Llama 3.3 70B は不要——interactive に感じ、使用可能なビジネステキストを生成できるほど高速で一貫性があるモデルが必要。すべての use cases 上の broader モデルランドスケープについて、[2026 年のベスト ローカル LLMs](/ja/local-llms/best-local-llms-2026) を参照。',
@@ -2447,8 +2459,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-zh.webp',
     title: '本地AI进行电子邮件和日历自动化：无需将数据发送到谷歌 (2026)',
@@ -2462,7 +2475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 14B',
-      'Mistral Small',
+      'Mistral Small 4',
       'Phi-4 Mini',
     ],
     current_hardware_mentioned: [
@@ -2498,7 +2511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '隐私：IMAP凭据和电子邮件内容永远不会离开您的计算机；这些设置中的任何一个都没有云API调用。',
           '审查前发送是必须的：本地模型会犯语调和事实错误；将所有输出视为初稿。',
         ],
-        updatedDate: '2026-05-08',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2714,6 +2727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: '电子邮件和日历任务的模型推荐',
         content:
           '**电子邮件和日历自动化任务倾向于小型快速模型而不是大型强大的模型。** 起草商业电子邮件回复、生成会议议程或汇总收件箱不需要Llama 3.3 70B——它需要一个足够快以感到交互的模型和足够连贯以生成可用商业文本的模型。对于所有用例中更广泛的模型景观，请参阅[2026年最佳本地LLMs](/zh/local-llms/best-local-llms-2026)。',
@@ -2839,8 +2853,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-ar.webp',
     title: 'الذكاء الاصطناعي المحلي للبريد الإلكتروني والتقويم: أتمتة بدون إرسال البيانات إلى السحابة (⁨2026⁩)',
@@ -2854,7 +2869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 14B',
-      'Mistral Small',
+      'Mistral Small 4',
       'Phi-4 Mini',
     ],
     current_hardware_mentioned: [
@@ -2890,7 +2905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الخصوصية: بيانات اعتماد IMAP ومحتوى البريد الإلكتروني لا تغادر جهازك أبداً؛ لا استدعاءات API سحابية في أي من هذه الإعدادات.',
           'المراجعة قبل الإرسال إلزامية: تقع أخطاء في النبرة والحقائق لدى النماذج المحلية؛ عامل كل مخرج باعتباره مسودة أولى.',
         ],
-        updatedDate: '2026-05-08',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -3106,6 +3121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'توصيات النماذج لمهام البريد الإلكتروني والتقويم',
         content:
           '**تُفضّل مهام أتمتة البريد الإلكتروني والتقويم النماذج الأصغر والأسرع على الكبيرة والأقوى.** صياغة رد بريد إلكتروني تجاري، وإنشاء جدول أعمال اجتماع، وتلخيص صندوق وارد — لا تتطلب Llama 3.3 70B؛ تتطلب نموذجاً سريعاً بما يكفي ليبدو تفاعلياً ومتسقاً بما يكفي لإنتاج نص تجاري قابل للاستخدام. للاطلاع على مشهد النماذج الأشمل عبر جميع حالات الاستخدام، راجع [أفضل نماذج LLM المحلية 2026](/ar/local-llms/best-local-llms-2026).',
@@ -3235,7 +3251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-llm-email-and-calendar-automation',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-08',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3244,8 +3260,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-08',
-    next_refresh_due: '2026-11-08',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-email-and-calendar-automation-overview-hero-ko.webp',
     title: '로컬 LLM으로 이메일·캘린더 자동화: 클라우드 API 없이 처리하기 (2026)',
@@ -3259,7 +3276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.3 70B',
       'Qwen3 14B',
-      'Mistral Small',
+      'Mistral Small 4',
       'Phi-4 Mini',
     ],
     current_hardware_mentioned: [
@@ -3295,7 +3312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '개인정보 보호: IMAP 자격 증명과 이메일 내용은 기기를 벗어나지 않습니다. 어떤 설정에서도 클라우드 API 호출 없음.',
           '전송 전 검토는 필수입니다. 로컬 모델은 어조 오류와 사실 오류를 범하므로 모든 출력을 첫 번째 초안으로 취급하십시오.',
         ],
-        updatedDate: '2026-05-08',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -3511,6 +3528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: '이메일 및 캘린더 작업을 위한 모델 권장 사항',
         content:
           '**이메일 및 캘린더 자동화 작업은 크고 강력한 모델보다 작고 빠른 모델을 선호합니다.** 업무 이메일 답장 초안 작성, 회의 안건 생성, 받은 편지함 요약에는 Llama 3.3 70B가 필요하지 않습니다. 대화형으로 느껴질 만큼 충분히 빠르고 사용 가능한 업무 텍스트를 생성할 만큼 충분히 일관된 모델이 필요합니다. 모든 사용 사례에 걸친 더 넓은 모델 환경에 대해서는 [2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026)을 참조하십시오.',
@@ -3640,7 +3658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-email-and-calendar-automation',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-05-08',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
