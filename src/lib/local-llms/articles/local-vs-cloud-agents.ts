@@ -69,7 +69,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'cost',
           title: 'What Does Each Approach Cost?',
           content: [
-            '**Cloud is cheaper below 50M tokens/month. Local is cheaper above.** Local "amortized" includes GPU cost ($1,500 RTX 4090) spread over 3 years plus electricity (~$200/year). The [hardware guide](/local-llms/local-llm-hardware-guide-2026) covers exact GPU costs.',
+            '**Cloud is cheaper below 50M tokens/month. Local is cheaper above.** Local "amortized" includes GPU cost ($2,000–$2,600 RTX 4090 EOL) spread over 3 years plus electricity (~$200/year). The [hardware guide](/local-llms/local-llm-hardware-guide-2026) covers exact GPU costs.',
           ],
           columns: ['Monthly Volume', 'Cloud (GPT-4)', 'Cloud (Claude)', 'Local (amortized)'],
           rows: [
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'What is the break-even point for local vs cloud?',
-              a: 'Approximately 50M tokens/month. Below that, cloud is cheaper (no hardware cost). Above, local saves 60–90% — you pay only electricity (~$200/year) after the initial GPU investment ($1,500 for RTX 4090).',
+              a: 'Approximately 50M tokens/month. Below that, cloud is cheaper (no hardware cost). Above, local saves 60–90% — you pay only electricity (~$200/year) after the initial GPU investment ($2,000–$2,600 for RTX 4090 EOL).',
             },
             {
               q: 'Can I run a local agent on consumer hardware?',
@@ -244,7 +244,7 @@ schema: {
         '@type': 'FAQPage',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Are local AI agents as good as cloud agents in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For routine tasks (Q&A, summarization): yes, local Llama 13B+ matches cloud quality. For complex multi-step reasoning and tool use: cloud agents (GPT-4, Claude Sonnet 5) are still significantly better.' } },
-          { '@type': 'Question', 'name': 'What is the break-even point for local vs cloud?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Approximately 50M tokens/month. Below that, cloud is cheaper. Above, local saves 60–90% — you pay only electricity after the initial GPU investment ($1,500 for RTX 4090).' } },
+          { '@type': 'Question', 'name': 'What is the break-even point for local vs cloud?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Approximately 50M tokens/month. Below that, cloud is cheaper. Above, local saves 60–90% — you pay only electricity after the initial GPU investment ($2,000–$2,600 for RTX 4090 EOL).' } },
           { '@type': 'Question', 'name': 'Can I run a local agent on consumer hardware?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Llama 13B runs on RTX 4090 (24GB VRAM) at 2–3 sec per step. For 7B agents, RTX 4070 Ti (12GB) is sufficient.' } },
           { '@type': 'Question', 'name': 'Do local agents support tool use and function calling?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, via Ollama tool calling API (supported since Ollama 0.4+). LangGraph and LangChain integrate with local models for multi-step tool use.' } },
           { '@type': 'Question', 'name': 'Is hybrid deployment worth the complexity?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, for businesses processing 10M+ tokens/month. Route easy queries to local agents (free), complex queries to cloud (accurate). 80% cost reduction with no quality loss on complex queries.' } },
@@ -329,7 +329,7 @@ schema: {
           id: 'cost',
           title: '¿Cuánto cuesta cada enfoque?',
           content: [
-            '**Cloud es más barato por debajo de 50M tokens/mes. Local es más barato por encima.** El coste "amortizado" local incluye el precio de la GPU ($1.500 RTX 4090) repartido en 3 años más electricidad (~$200/año). La [guía de hardware](/es/local-llms/local-llm-hardware-guide-2026) detalla los costes exactos de GPU.',
+            '**Cloud es más barato por debajo de 50M tokens/mes. Local es más barato por encima.** El coste "amortizado" local incluye el precio de la GPU ($2.000–$2.600 RTX 4090 EOL) repartido en 3 años más electricidad (~$200/año). La [guía de hardware](/es/local-llms/local-llm-hardware-guide-2026) detalla los costes exactos de GPU.',
           ],
           columns: ['Volumen mensual', 'Cloud (GPT-4)', 'Cloud (Claude)', 'Local (amortizado)'],
           rows: [
@@ -426,7 +426,7 @@ schema: {
             },
             {
               q: '¿Cuál es el punto de equilibrio entre local y Cloud?',
-              a: 'Aproximadamente 50M tokens/mes. Por debajo, Cloud es más barato (sin coste de hardware). Por encima, local ahorra un 60–90% — solo pagas electricidad (~$200/año) tras la inversión inicial en GPU ($1.500 por RTX 4090).',
+              a: 'Aproximadamente 50M tokens/mes. Por debajo, Cloud es más barato (sin coste de hardware). Por encima, local ahorra un 60–90% — solo pagas electricidad (~$200/año) tras la inversión inicial en GPU ($2.000–$2.600 por RTX 4090 EOL).',
             },
             {
               q: '¿Puedo ejecutar un agente local en hardware de consumo?',
@@ -512,7 +512,7 @@ schema: {
         '@type': 'FAQPage',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Son los agentes de IA locales tan buenos como los agentes Cloud en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para tareas rutinarias (Q&A, resumen): sí, el Llama 13B+ local iguala la calidad Cloud. Para razonamiento multietapa complejo y uso de herramientas: los agentes Cloud (GPT-4, Claude Sonnet 5) siguen siendo significativamente mejores.' } },
-          { '@type': 'Question', 'name': '¿Cuál es el punto de equilibrio entre local y Cloud?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Aproximadamente 50M tokens/mes. Por debajo, Cloud es más barato. Por encima, local ahorra un 60–90% — solo pagas electricidad tras la inversión inicial en GPU ($1.500 por RTX 4090).' } },
+          { '@type': 'Question', 'name': '¿Cuál es el punto de equilibrio entre local y Cloud?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Aproximadamente 50M tokens/mes. Por debajo, Cloud es más barato. Por encima, local ahorra un 60–90% — solo pagas electricidad tras la inversión inicial en GPU ($2.000–$2.600 por RTX 4090 EOL).' } },
           { '@type': 'Question', 'name': '¿Puedo ejecutar un agente local en hardware de consumo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Un agente Llama 13B funciona en una RTX 4090 (24GB VRAM) a 2–3 s por paso. Para agentes de 7B, una RTX 4070 Ti (12GB) es suficiente.' } },
           { '@type': 'Question', 'name': '¿Los agentes locales admiten uso de herramientas y function calling?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, a través de la API de herramientas de Ollama (desde Ollama 0.4+). LangGraph y LangChain se integran con modelos locales para el uso de herramientas multietapa.' } },
           { '@type': 'Question', 'name': '¿Vale la pena la complejidad del despliegue híbrido?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, para empresas que procesan 10M+ tokens/mes. Consultas fáciles a local (gratis), consultas difíciles a Cloud (precisas). Reducción de costes del 80% sin pérdida de calidad.' } },
@@ -597,7 +597,7 @@ schema: {
           id: 'cost',
           title: 'كم يكلّف كل نهج؟',
           content: [
-            '**السحابة أرخص دون 50 مليون رمز/شهر. المحلي أرخص فوق ذلك.** تشمل التكلفة المحلية "الموزّعة" سعر GPU (1,500$ لـRTX 4090) موزّعًا على 3 سنوات زائد الكهرباء (~200$/سنة). يفصّل [دليل العتاد](/ar/local-llms/local-llm-hardware-guide-2026) تكاليف GPU الدقيقة.',
+            '**السحابة أرخص دون 50 مليون رمز/شهر. المحلي أرخص فوق ذلك.** تشمل التكلفة المحلية "الموزّعة" سعر GPU (2,000–2,600$ لـRTX 4090 EOL) موزّعًا على 3 سنوات زائد الكهرباء (~200$/سنة). يفصّل [دليل العتاد](/ar/local-llms/local-llm-hardware-guide-2026) تكاليف GPU الدقيقة.',
           ],
           columns: ['Volumen mensual', 'Cloud (GPT-4)', 'Cloud (Claude)', 'Local (amortizado)'],
           rows: [
@@ -694,7 +694,7 @@ schema: {
             },
             {
               q: 'ما نقطة التعادل بين المحلي والسحابي؟',
-              a: 'قرابة 50 مليون رمز/شهر. دونها، السحابة أرخص (بلا تكلفة عتاد). فوقها، يوفّر المحلي 60–90% — تدفع الكهرباء فقط (~200$/سنة) بعد الاستثمار الأولي في GPU (1,500$ لـRTX 4090).',
+              a: 'قرابة 50 مليون رمز/شهر. دونها، السحابة أرخص (بلا تكلفة عتاد). فوقها، يوفّر المحلي 60–90% — تدفع الكهرباء فقط (~200$/سنة) بعد الاستثمار الأولي في GPU (2,000–2,600$ لـRTX 4090 EOL).',
             },
             {
               q: 'هل يمكنني تشغيل وكيل محلي على عتاد استهلاكي؟',
@@ -780,7 +780,7 @@ schema: {
         '@type': 'FAQPage',
         'mainEntity': [
           { '@type': 'Question', 'name': 'هل وكلاء الذكاء الاصطناعي المحليون جيدون مثل الوكلاء السحابيين في 2026؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'للمهام الروتينية (الأسئلة والأجوبة، التلخيص): نعم، يضاهي Llama 13B+ المحلي جودة السحابة. للاستدلال المعقّد متعدد المراحل واستخدام الأدوات: لا يزال الوكلاء السحابيون (GPT-4، Claude Sonnet 5) أفضل بشكل كبير.' } },
-          { '@type': 'Question', 'name': 'ما نقطة التعادل بين المحلي والسحابي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'قرابة 50 مليون رمز/شهر. دونها، السحابة أرخص. فوقها، يوفّر المحلي 60–90% — تدفع الكهرباء فقط بعد الاستثمار الأولي في GPU (1,500$ لـRTX 4090).' } },
+          { '@type': 'Question', 'name': 'ما نقطة التعادل بين المحلي والسحابي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'قرابة 50 مليون رمز/شهر. دونها، السحابة أرخص. فوقها، يوفّر المحلي 60–90% — تدفع الكهرباء فقط بعد الاستثمار الأولي في GPU (2,000–2,600$ لـRTX 4090 EOL).' } },
           { '@type': 'Question', 'name': 'هل يمكنني تشغيل وكيل محلي على عتاد استهلاكي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. يعمل وكيل Llama 13B على RTX 4090 (24GB VRAM) بـ2–3 ثوانٍ لكل خطوة. لوكلاء 7B، RTX 4070 Ti (12GB) كافية.' } },
           { '@type': 'Question', 'name': 'هل يدعم الوكلاء المحليون استخدام الأدوات وfunction calling؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، عبر واجهة أدوات Ollama (منذ Ollama 0.4+). يتكامل LangGraph وLangChain مع النماذج المحلية لاستخدام الأدوات متعدد المراحل.' } },
           { '@type': 'Question', 'name': 'هل يستحق تعقيد النشر الهجين العناء؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، للشركات التي تعالج 10 ملايين+ رمز/شهر. الاستعلامات السهلة إلى المحلي (مجاني)، الصعبة إلى السحابة (دقيقة). خفض 80% في التكاليف دون خسارة جودة.' } },
@@ -865,7 +865,7 @@ schema: {
           id: 'cost',
           title: 'Quanto custa cada abordagem?',
           content: [
-            '**A Nuvem é mais barata abaixo de 50M tokens/mês. O local é mais barato acima disso.** O custo "amortizado" local inclui o preço da GPU ($1.500 RTX 4090) distribuído em 3 anos mais energia (~$200/ano).',
+            '**A Nuvem é mais barata abaixo de 50M tokens/mês. O local é mais barato acima disso.** O custo "amortizado" local inclui o preço da GPU ($2.000–$2.600 RTX 4090 EOL) distribuído em 3 anos mais energia (~$200/ano).',
           ],
           columns: ['Volume mensal', 'Nuvem (GPT-4)', 'Nuvem (Claude)', 'Local (amortizado)'],
           rows: [
@@ -957,7 +957,7 @@ schema: {
             },
             {
               q: 'Qual é o ponto de equilíbrio entre local e Nuvem?',
-              a: 'Aproximadamente 50M tokens/mês. Abaixo disso, a Nuvem é mais barata (sem custo de hardware). Acima disso, o local economiza 60–90% — você paga apenas energia (~$200/ano) após o investimento inicial em GPU ($1.500 por RTX 4090).',
+              a: 'Aproximadamente 50M tokens/mês. Abaixo disso, a Nuvem é mais barata (sem custo de hardware). Acima disso, o local economiza 60–90% — você paga apenas energia (~$200/ano) após o investimento inicial em GPU ($2.000–$2.600 por RTX 4090 EOL).',
             },
             {
               q: 'Posso executar um agente local em hardware de consumo?',
@@ -1092,7 +1092,7 @@ schema: {
           id: 'cost',
           title: 'Was kostet jeder Ansatz?',
           content: [
-            '**Cloud ist günstiger unter 50M Token pro Monat. Local ist günstiger darüber.** Bei Local müssen die Hardware-Kosten (RTX 4090: ca. 1.599 €) über 3 Jahre amortisiert werden, plus Stromkosten (~200 €/Jahr). Der [Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide-2026) behandelt exakte GPU-Kosten.',
+            '**Cloud ist günstiger unter 50M Token pro Monat. Local ist günstiger darüber.** Bei Local müssen die Hardware-Kosten (RTX 4090 EOL: ca. 1.900–2.470 €) über 3 Jahre amortisiert werden, plus Stromkosten (~200 €/Jahr). Der [Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide-2026) behandelt exakte GPU-Kosten.',
           ],
           columns: ['Monatliches Volumen', 'Cloud (GPT-4)', 'Cloud (Claude)', 'Local (amortisiert)'],
           rows: [
@@ -1364,7 +1364,7 @@ schema: {
           id: 'cost',
           title: 'Quel est le coût de chaque approche?',
           content: [
-            '**Cloud est moins cher en dessous de 50M tokens/mois. Local est moins cher au-dessus.** Pour Local, amortissez les coûts matériel (RTX 4090 : ~1.499 €) sur 3 ans, plus l\'électricité (~200 €/an). Le [guide matériel](/fr/local-llms/local-llm-hardware-guide-2026) couvre les coûts GPU exacts.',
+            '**Cloud est moins cher en dessous de 50M tokens/mois. Local est moins cher au-dessus.** Pour Local, amortissez les coûts matériel (RTX 4090 EOL : ~1.900–2.470 €) sur 3 ans, plus l\'électricité (~200 €/an). Le [guide matériel](/fr/local-llms/local-llm-hardware-guide-2026) couvre les coûts GPU exacts.',
           ],
           columns: ['Volume mensuel', 'Cloud (GPT-4)', 'Cloud (Claude)', 'Local (amorti)'],
           rows: [
@@ -1635,7 +1635,7 @@ schema: {
           id: 'cost',
           title: 'それぞれのアプローチのコストは?',
           content: [
-            '**Cloudは50M tokens/月以下で安い。Localはそれ以上で安い。** Localはハードウェアコスト(RTX 4090: 約¥247,000)を3年償却、電気代(~¥24,000/年)追加。 [ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026) で正確なGPUコストをご確認ください。',
+            '**Cloudは50M tokens/月以下で安い。Localはそれ以上で安い。** Localはハードウェアコスト(RTX 4090 EOL: 約¥300,000–390,000)を3年償却、電気代(~¥24,000/年)追加。 [ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026) で正確なGPUコストをご確認ください。',
           ],
           columns: ['月間ボリューム', 'Cloud (GPT-4)', 'Cloud (Claude)', 'Local (償却)'],
           rows: [
@@ -1734,7 +1734,7 @@ schema: {
             },
             {
               q: 'Local vs Cloudの損益分岐点は?',
-              a: '約50M tokens/月。以下ではCloud安価(ハードウェア無し)。超過ではLocal 60–90%節約 — 電気代のみ(~¥24,000/年)、初期GPU投資後(RTX 4090 ~¥247,000)。',
+              a: '約50M tokens/月。以下ではCloud安価(ハードウェア無し)。超過ではLocal 60–90%節約 — 電気代のみ(~¥24,000/年)、初期GPU投資後(RTX 4090 EOL ~¥300,000–390,000)。',
             },
             {
               q: 'コンシューマーハードウェアでLocalエージェント実行可?',
@@ -1819,7 +1819,7 @@ schema: {
         '@type': 'FAQPage',
         'mainEntity': [
           { '@type': 'Question', 'name': '2026年、LocalエージェントはCloudエージェント並みの性能?', 'acceptedAnswer': { '@type': 'Answer', 'text': '定型タスク(Q&A, 要約): はい、Local Llama 13B+はCloud品質に相当。複雑なマルチステップreasoningとツール利用: Cloud(GPT-4, Claude Sonnet 5)がまだ優位。毎年ギャップが縮小中。' } },
-          { '@type': 'Question', 'name': 'Local vs Cloudの損益分岐点は?', 'acceptedAnswer': { '@type': 'Answer', 'text': '約50M tokens/月。以下ではCloud安価。超過ではLocal 60–90%節約 — 電気代のみ(~¥24,000/年)後、初期GPU投資(RTX 4090 ~¥247,000)。' } },
+          { '@type': 'Question', 'name': 'Local vs Cloudの損益分岐点は?', 'acceptedAnswer': { '@type': 'Answer', 'text': '約50M tokens/月。以下ではCloud安価。超過ではLocal 60–90%節約 — 電気代のみ(~¥24,000/年)後、初期GPU投資(RTX 4090 EOL ~¥300,000–390,000)。' } },
           { '@type': 'Question', 'name': 'コンシューマーハードウェアでLocalエージェント実行可?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Llama 13B エージェントはRTX 4090(24GB VRAM)で2–3秒/ステップ。7B用ならRTX 4070 Ti(12GB)充分。' } },
           { '@type': 'Question', 'name': 'Localエージェントはツール利用と関数呼び出し対応?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、Ollama Tool API経由(Ollama 0.4+)。LangGraphとLangChainはLocal modelsのマルチステップツール利用に統合。' } },
           { '@type': 'Question', 'name': 'ハイブリッド導入は複雑さに見合う?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、10M+ tokens/月処理企業向け。ルーティングロジック単純: シンプルクエリLocal(無料), 難問題Cloud(正確)。複雑クエリで品質損失なく80%削減。' } },
@@ -1906,7 +1906,7 @@ schema: {
           id: 'cost',
           title: '各种方案的成本是多少?',
           content: [
-            '**云端在50M令牌/月以下成本更低。本地在此之上成本更低。** 本地需要摊销硬件成本(RTX 4090约$1,500)至3年，加上电费(~$200/年)。 [硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) 详细说明GPU成本。',
+            '**云端在50M令牌/月以下成本更低。本地在此之上成本更低。** 本地需要摊销硬件成本(RTX 4090 EOL约$2,000–$2,600)至3年，加上电费(~$200/年)。 [硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) 详细说明GPU成本。',
           ],
           columns: ['月度体量', 'Cloud (GPT-4)', 'Cloud (Claude)', 'Local (摊销)'],
           rows: [
@@ -2005,7 +2005,7 @@ schema: {
             },
             {
               q: '本地 vs 云端的损益分界点是什么?',
-              a: '约为50M令牌/月。以下时云端更便宜(无硬件成本)。以上时本地节省60–90% — 仅需支付电费(~$200/年)加上初期GPU投资($1,500 RTX 4090)。',
+              a: '约为50M令牌/月。以下时云端更便宜(无硬件成本)。以上时本地节省60–90% — 仅需支付电费(~$200/年)加上初期GPU投资($2,000–$2,600 RTX 4090 EOL)。',
             },
             {
               q: '我能在消费级硬件上运行本地代理吗?',
@@ -2090,7 +2090,7 @@ schema: {
         '@type': 'FAQPage',
         'mainEntity': [
           { '@type': 'Question', 'name': '2026年，本地AI代理和云端代理的性能相当吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '对于常规任务(Q&A、摘要): 是的，本地Llama 13B+达到云端质量。对于复杂多步推理和工具使用: 云端代理(GPT-4、Claude Sonnet 5)仍明显更好。' } },
-          { '@type': 'Question', 'name': '本地 vs 云端的损益分界点是什么?', 'acceptedAnswer': { '@type': 'Answer', 'text': '约为50M令牌/月。以下时云端更便宜。以上时本地节省60–90% — 仅需支付电费后，初期GPU投资($1,500 RTX 4090)。' } },
+          { '@type': 'Question', 'name': '本地 vs 云端的损益分界点是什么?', 'acceptedAnswer': { '@type': 'Answer', 'text': '约为50M令牌/月。以下时云端更便宜。以上时本地节省60–90% — 仅需支付电费后，初期GPU投资($2,000–$2,600 RTX 4090 EOL)。' } },
           { '@type': 'Question', 'name': '我能在消费级硬件上运行本地代理吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '能。Llama 13B代理在RTX 4090(24GB VRAM)上以2–3秒/步运行。7B代理用RTX 4070 Ti(12GB)足够。' } },
           { '@type': 'Question', 'name': '本地代理支持工具使用和函数调用吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '支持，通过Ollama工具API(Ollama 0.4+)。LangGraph和LangChain与本地模型集成用于多步工具使用。' } },
           { '@type': 'Question', 'name': '混合部署的复杂性值得吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '对于处理10M+令牌/月的企业: 值得。简单查询本地(免费)，难查询云端(准确)。复杂查询无质量损失，成本降低80%。' } },
@@ -2177,7 +2177,7 @@ schema: {
           id: 'cost',
           title: '각 방식의 비용은 얼마입니까?',
           content: [
-            '**월 5,000만 토큰 미만에서는 클라우드가 더 저렴합니다. 그 이상에서는 로컬이 더 저렴합니다.** 로컬의 "상각된 비용"에는 3년에 걸쳐 분산된 GPU 비용(RTX 4090 $1,500)과 전기료(연간 약 $200)가 포함됩니다. [하드웨어 가이드](/local-llms/local-llm-hardware-guide-2026)에서 정확한 GPU 비용을 확인하실 수 있습니다.',
+            '**월 5,000만 토큰 미만에서는 클라우드가 더 저렴합니다. 그 이상에서는 로컬이 더 저렴합니다.** 로컬의 "상각된 비용"에는 3년에 걸쳐 분산된 GPU 비용(RTX 4090 EOL $2,000–$2,600)과 전기료(연간 약 $200)가 포함됩니다. [하드웨어 가이드](/local-llms/local-llm-hardware-guide-2026)에서 정확한 GPU 비용을 확인하실 수 있습니다.',
           ],
           columns: ['월간 사용량', '클라우드 (GPT-4)', '클라우드 (Claude)', '로컬 (상각)'],
           rows: [
@@ -2274,7 +2274,7 @@ schema: {
             },
             {
               q: '로컬 vs 클라우드의 손익분기점은 어디입니까?',
-              a: '월 약 5,000만 토큰입니다. 그 미만에서는 하드웨어 비용이 없으므로 클라우드가 더 저렴합니다. 그 이상에서는 로컬이 60–90%를 절약합니다. 초기 GPU 투자(RTX 4090 $1,500) 후에는 전기료(연간 약 $200)만 부담하면 됩니다.',
+              a: '월 약 5,000만 토큰입니다. 그 미만에서는 하드웨어 비용이 없으므로 클라우드가 더 저렴합니다. 그 이상에서는 로컬이 60–90%를 절약합니다. 초기 GPU 투자(RTX 4090 EOL $2,000–$2,600) 후에는 전기료(연간 약 $200)만 부담하면 됩니다.',
             },
             {
               q: '소비자용 하드웨어에서 로컬 에이전트를 실행할 수 있습니까?',
