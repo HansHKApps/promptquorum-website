@@ -9,8 +9,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-08',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: 'Best Local AI App for Non-Technical Users (2026)',
     seoTitle: '6 Local AI Apps That Just Work (No Terminal, 2026)',
@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Zero terminal commands. No Python. No Docker. 6 local AI apps a non-technical user can install in 10 minutes. Tested with real beginners in 2026.',
     heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-en.webp',
     twitterDescription: 'Six local AI apps that work without ever opening a terminal — ranked by beginner persona. Tested in May 2026.',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
+    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 4 E2B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
     audience: 'Absolute beginners and non-technical users — parents, journalists, students, small-business owners — who want a private ChatGPT alternative without ever opening a terminal.',
     readTime: '12 min read',
@@ -164,7 +164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Privacy:** Fully offline after the first download. Open source, so its behaviour is auditable.',
           '**Hardware floor:** 8 GB RAM on desktop; a recent phone for small 1B–3B models.',
           '**License:** Apache 2.0 — fully open source and free.',
-          '**Recommended starter model:** Llama 3.2 3B or Gemma 3 4B on desktop; a 1B–3B model on phones.',
+          '**Recommended starter model:** Llama 3.2 3B or Gemma 4 E2B on desktop; a 1B–3B model on phones.',
         ],
         callouts: [
           {
@@ -186,7 +186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Knowledge stacks:** You can pin documents to a "stack" so every chat in that workspace already has access to them — ideal for "talk to my study notes".',
           '**Hardware floor:** 8 GB RAM, any 2020+ CPU. Detects and uses Apple Silicon, NVIDIA, and AMD acceleration automatically.',
           '**License:** Proprietary, free for personal use. Paid tiers exist for advanced cloud-API features, but local-only use is free indefinitely.',
-          '**Recommended starter model:** Gemma 3 4B Instruct — friendly tone, good at summarisation, fits on most laptops.',
+          '**Recommended starter model:** Gemma 4 E2B — friendly tone, good at summarisation, fits on most laptops.',
         ],
         callouts: [
           {
@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**"Windows Defender flagged the installer."** → All six apps are widely used and safe. Click "More info" → "Run anyway". For extra safety, verify the download URL exactly matches the official site (gpt4all.io, jan.ai, atomic.chat, msty.app, anythingllm.com, lmstudio.ai).',
           '**"The model download is taking forever."** → Models are 1.5–8 GB files. Expect 5–20 minutes on a 50 Mbps connection. If it stalls, cancel and resume — all six apps support resumable downloads.',
           '**"My computer got really hot / the fan started screaming."** → Local AI uses 100% of your CPU or GPU during a reply. This is normal and stops the moment the reply finishes. If it bothers you, switch to a smaller model (3B or 4B instead of 7B/8B).',
-          '**"I do not know which model to pick."** → Default to a 3B or 4B Instruct model on first install. Examples: Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 3 4B. They are small, fast, and good enough for most everyday tasks. Upgrade to 7B or 8B only after you have decided you actually use the app.',
+          '**"I do not know which model to pick."** → Default to a 3B or 4B Instruct model on first install. Examples: Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 4 E2B. They are small, fast, and good enough for most everyday tasks. Upgrade to 7B or 8B only after you have decided you actually use the app.',
         ],
         callouts: [
           {
@@ -316,7 +316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What is the difference between local AI and ChatGPT for a non-technical user?',
-            a: 'Three differences: (1) local AI runs on your laptop and does not send your prompts to a server, (2) local AI works offline after the first model download, (3) local AI is free forever — no subscription, no token bill. The trade-off is speed and quality: a 3B–8B local model is meaningfully less capable than GPT-5.5-class cloud models. For everyday writing, summarising, brainstorming, and Q&A, the gap is small. For long, complex reasoning, the gap is larger.',
+            a: 'Three differences: (1) local AI runs on your laptop and does not send your prompts to a server, (2) local AI works offline after the first model download, (3) local AI is free forever — no subscription, no token bill. The trade-off is speed and quality: a 3B–8B local model is meaningfully less capable than GPT-5.6-class cloud models. For everyday writing, summarising, brainstorming, and Q&A, the gap is small. For long, complex reasoning, the gap is larger.',
           },
           {
             q: 'Do these apps cost money long-term?',
@@ -405,7 +405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'en',
       datePublished: '2026-05-07',
-      dateModified: '2026-07-08',
+      dateModified: '2026-08-27',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -414,8 +414,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-08',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: '6 lokale KI-Apps für nicht-technische Nutzer: Keine Terminal-Befehle, funktionieren sofort',
     seoTitle: '6 lokale KI-Apps ohne Terminal 2026: Einsteiger getestet',
@@ -423,7 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Lokale KI-App für nicht-technische Nutzer 2026: einfache Installation, keine Befehlszeile. Die besten benutzerfreundlichen Apps für private KI ohne Vorwissen.',
     heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-de.webp',
     twitterDescription: 'Sechs lokale KI-Apps, die ohne Terminal funktionieren — bewertet nach Anfänger-Persona. Getestet im Mai 2026.',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
+    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 4 E2B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 Laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
     audience: 'Absolute Anfänger und nicht-technische Nutzer — Eltern, Journalisten, Studenten, kleine Unternehmen — die eine private ChatGPT-Alternative möchten, ohne jemals ein Terminal zu öffnen.',
     readTime: '12 Min. Lesezeit',
@@ -558,7 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Datenschutz:** Vollständig offline nach dem ersten Download. Open Source, sodass das Verhalten überprüfbar ist.',
           '**Hardware-Minimum:** 8 GB RAM auf dem Desktop; ein aktuelles Telefon für kleine 1B–3B-Modelle.',
           '**Lizenz:** Apache 2.0 — vollständig Open Source und kostenlos.',
-          '**Empfohlenes Starter-Modell:** Llama 3.2 3B oder Gemma 3 4B auf dem Desktop; ein 1B–3B-Modell auf Telefonen.',
+          '**Empfohlenes Starter-Modell:** Llama 3.2 3B oder Gemma 4 E2B auf dem Desktop; ein 1B–3B-Modell auf Telefonen.',
         ],
         callouts: [
           {
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Wissens-Stacks:** Sie können Dokumente zu einem „Stack" anheften, damit jedes Chat in diesem Arbeitsbereich bereits Zugriff auf sie hat — ideal für „sprich mit meinen Lernnotizen".',
           '**Hardware-Minimum:** 8 GB RAM, ein beliebiger 2020+ CPU. Erkennt und verwendet Apple Silicon, NVIDIA und AMD Beschleunigung automatisch.',
           '**Lizenz:** Proprietär, kostenlos für persönliche Nutzung. Bezahlte Stufen existieren für fortgeschrittene Cloud-API-Features, aber die reine Nutzung auf dem Computer ist für immer kostenlos.',
-          '**Empfohlenes Starter-Modell:** Gemma 3 4B Instruct — freundlicher Ton, gut bei Zusammenfassungen, passt auf die meisten Laptops.',
+          '**Empfohlenes Starter-Modell:** Gemma 4 E2B — freundlicher Ton, gut bei Zusammenfassungen, passt auf die meisten Laptops.',
         ],
         callouts: [
           {
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**„Windows Defender hat das Installationsprogramm gekennzeichnet."** → Alle sechs Apps werden häufig verwendet und sind sicher. Klicken Sie „Weitere Informationen" → „Trotzdem ausführen". Für zusätzliche Sicherheit überprüfen Sie, dass die Download-URL genau mit der offiziellen Website übereinstimmt (gpt4all.io, jan.ai, atomic.chat, msty.app, anythingllm.com, lmstudio.ai).',
           '**„Der Modell-Download dauert ewig."** → Modelle sind 1,5–8 GB Dateien. Erwarten Sie 5–20 Minuten bei einer 50 Mbps Verbindung. Wenn es steckenbleibt, brechen Sie ab und setzen Sie fort — alle sechs Apps unterstützen wiederaufnehmbare Downloads.',
           '**„Mein Computer wurde sehr heiß / der Lüfter fing an zu schreien."** → Lokale KI nutzt 100% Ihrer CPU oder GPU während einer Antwort. Dies ist normal und stoppt, wenn die Antwort endet. Wenn es Sie stört, wechseln Sie zu einem kleineren Modell (3B oder 4B statt 7B/8B).',
-          '**„Ich weiß nicht, welches Modell ich wählen soll."** → Standard auf ein 3B oder 4B Instruct-Modell beim ersten Installieren. Beispiele: Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 3 4B. Sie sind klein, schnell und gut genug für die meisten alltäglichen Aufgaben. Upgrade zu 7B oder 8B nur nach Sie entschieden haben, dass Sie die App wirklich nutzen.',
+          '**„Ich weiß nicht, welches Modell ich wählen soll."** → Standard auf ein 3B oder 4B Instruct-Modell beim ersten Installieren. Beispiele: Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 4 E2B. Sie sind klein, schnell und gut genug für die meisten alltäglichen Aufgaben. Upgrade zu 7B oder 8B nur nach Sie entschieden haben, dass Sie die App wirklich nutzen.',
         ],
         callouts: [
           {
@@ -710,7 +710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was ist der Unterschied zwischen lokaler KI und ChatGPT für einen nicht-technischen Nutzer?',
-            a: 'Drei Unterschiede: (1) lokale KI läuft auf Ihrem Laptop und sendet Ihre Eingaben nicht an einen Server, (2) lokale KI funktioniert offline nach dem ersten Modell-Download, (3) lokale KI ist für immer kostenlos — kein Abonnement, keine Token-Rechnung. Der Kompromiss ist Geschwindigkeit und Qualität: ein 3B–8B lokales Modell ist sinnvoll weniger fähig als GPT-5.5-Klasse Cloud-Modelle. Für alltägliches Schreiben, Zusammenfassen, Brainstorming und Q&A ist die Lücke klein. Für lange, komplexe Überlegungen ist die Lücke größer.',
+            a: 'Drei Unterschiede: (1) lokale KI läuft auf Ihrem Laptop und sendet Ihre Eingaben nicht an einen Server, (2) lokale KI funktioniert offline nach dem ersten Modell-Download, (3) lokale KI ist für immer kostenlos — kein Abonnement, keine Token-Rechnung. Der Kompromiss ist Geschwindigkeit und Qualität: ein 3B–8B lokales Modell ist sinnvoll weniger fähig als GPT-5.6-Klasse Cloud-Modelle. Für alltägliches Schreiben, Zusammenfassen, Brainstorming und Q&A ist die Lücke klein. Für lange, komplexe Überlegungen ist die Lücke größer.',
           },
           {
             q: 'Kosten diese Apps langfristig Geld?',
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/de/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'de',
       datePublished: '2026-05-07',
-      dateModified: '2026-07-08',
+      dateModified: '2026-08-27',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -816,8 +816,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-08',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: '6 apps d\'IA locale pour débutants : zéro terminal, fonctionnent immédiatement',
     seoTitle: '6 apps d\'IA locale pour débutants (sans terminal, 2026)',
@@ -825,7 +825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Application IA locale pour non-techniciens 2026 : installation simple, sans ligne de commande. Les meilleures apps conviviales pour une IA privée accessible.',
     heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-fr.webp',
     twitterDescription: 'Six apps d\'IA locale sans jamais ouvrir un terminal — classées par profil de débutant. Testées en mai 2026.',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
+    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 4 E2B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
     audience: 'Débutants absolus et utilisateurs non-techniques — parents, journalistes, étudiants, propriétaires de petites entreprises — qui veulent une alternative privée à ChatGPT sans jamais ouvrir un terminal.',
     readTime: '12 min de lecture',
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Confidentialité :** Entièrement hors ligne après le premier téléchargement. Open source, donc son comportement est vérifiable.',
           '**Seuil matériel :** 8 GB de RAM sur ordinateur de bureau ; un téléphone récent pour les petits modèles 1B–3B.',
           '**Licence :** Apache 2.0 — entièrement open source et gratuite.',
-          '**Modèle de démarrage recommandé :** Llama 3.2 3B ou Gemma 3 4B sur ordinateur de bureau ; un modèle 1B–3B sur téléphone.',
+          '**Modèle de démarrage recommandé :** Llama 3.2 3B ou Gemma 4 E2B sur ordinateur de bureau ; un modèle 1B–3B sur téléphone.',
         ],
         callouts: [
           {
@@ -982,7 +982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Piles de connaissances :** Vous pouvez épingler des documents à une "pile" pour que chaque discussion de cet espace de travail y ait accès — idéal pour "discute avec mes notes d\'étude".',
           '**Seuil matériel :** 8 GB de RAM, n\'importe quel CPU 2020+. Détecte et utilise Apple Silicon, NVIDIA et accélération AMD automatiquement.',
           '**Licence :** Propriétaire, gratuite pour usage personnel. Des tiers payants existent pour des features cloud-API avancées, mais l\'usage local-seul est gratuit indéfiniment.',
-          '**Modèle de démarrage recommandé :** Gemma 3 4B Instruct — ton amical, bon à la synthèse, s\'adapte à la plupart des portables.',
+          '**Modèle de démarrage recommandé :** Gemma 4 E2B — ton amical, bon à la synthèse, s\'adapte à la plupart des portables.',
         ],
         callouts: [
           {
@@ -1046,7 +1046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**"Windows Defender a signalé l\'installateur."** → Les six apps sont largement utilisées et sûres. Cliquez "Plus d\'infos" → "Exécuter quand même". Pour une sécurité supplémentaire, vérifiez que l\'URL de téléchargement correspond exactement au site officiel (gpt4all.io, jan.ai, atomic.chat, msty.app, anythingllm.com, lmstudio.ai).',
           '**"Le téléchargement du modèle prend une éternité."** → Les modèles sont des fichiers de 1.5–8 GB. Attendez-vous à 5–20 minutes sur une connexion 50 Mbps. S\'il bloque, annulez et reprenez — les six apps supportent les téléchargements reprennables.',
           '**"Mon ordinateur est devenu très chaud / le ventilateur a commencé à crier."** → L\'IA locale utilise 100% de votre CPU ou GPU pendant une réponse. C\'est normal et s\'arrête quand la réponse finit. Si ça vous gêne, passez à un modèle plus petit (3B ou 4B au lieu de 7B/8B).',
-          '**"Je ne sais pas quel modèle choisir."** → Défaut sur un modèle 3B ou 4B Instruct au premier lancement. Exemples : Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 3 4B. Ils sont petits, rapides, et assez bons pour la plupart des tâches quotidiennes. Passez à 7B ou 8B seulement après avoir décidé que vous utilisez réellement l\'app.',
+          '**"Je ne sais pas quel modèle choisir."** → Défaut sur un modèle 3B ou 4B Instruct au premier lancement. Exemples : Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 4 E2B. Ils sont petits, rapides, et assez bons pour la plupart des tâches quotidiennes. Passez à 7B ou 8B seulement après avoir décidé que vous utilisez réellement l\'app.',
         ],
         callouts: [
           {
@@ -1112,7 +1112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quelle est la différence entre IA locale et ChatGPT pour un utilisateur non-technique ?',
-            a: 'Trois différences : (1) l\'IA locale tourne sur votre portable et ne transmet vos entrées à aucun serveur, (2) l\'IA locale fonctionne hors ligne après le premier téléchargement de modèle, (3) l\'IA locale est gratuite pour toujours — pas d\'abonnement, pas de facture de tokens. Le compromis est vitesse et qualité : un modèle local 3B–8B est sensiblement moins capable que les modèles classe GPT-5.5 cloud. Pour l\'écriture quotidienne, résumé, brainstorming et Q&A, l\'écart est petit. Pour la réflexion longue et complexe, l\'écart est plus grand.',
+            a: 'Trois différences : (1) l\'IA locale tourne sur votre portable et ne transmet vos entrées à aucun serveur, (2) l\'IA locale fonctionne hors ligne après le premier téléchargement de modèle, (3) l\'IA locale est gratuite pour toujours — pas d\'abonnement, pas de facture de tokens. Le compromis est vitesse et qualité : un modèle local 3B–8B est sensiblement moins capable que les modèles classe GPT-5.6 cloud. Pour l\'écriture quotidienne, résumé, brainstorming et Q&A, l\'écart est petit. Pour la réflexion longue et complexe, l\'écart est plus grand.',
           },
           {
             q: 'Ces apps coûtent-elles de l\'argent à long terme ?',
@@ -1201,7 +1201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/fr/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'fr',
       datePublished: '2026-05-07',
-      dateModified: '2026-07-08',
+      dateModified: '2026-08-27',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -1210,8 +1210,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-08',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: '初心者向けローカルAIアプリ6つ：ターミナルなし、すぐに使える',
     seoTitle: 'ターミナル不要でローカルAIを始める方法（2026年版）：初心者が実際に10分で使えた6アプリ完全レビュー',
@@ -1219,7 +1219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'ターミナルコマンドなし、Pythonなし、Dockerなし。初心者が10分以内で導入できるローカルAIアプリを6つ厳選。実際の非技術ユーザーで動作検証。Windows・Mac・Linux対応。',
     heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-ja.webp',
     twitterDescription: 'ターミナルを開かずに動作するローカルAIアプリ6つ。初心者ペルソナ別に分類。2026年5月にテスト済み。',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
+    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 4 E2B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
     audience: '完全初心者と非技術ユーザー — 親、ジャーナリスト、学生、小規模企業の所有者 — ターミナルを開かずに、プライベートなChatGPT代替品を望む人向け。',
     readTime: '12分で読める',
@@ -1354,7 +1354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**プライバシー：** 最初のダウンロード後は完全にオフライン。オープンソースなので、その挙動は監査可能です。',
           '**ハードウェア要件：** デスクトップで8GB RAM。小さな1B–3Bモデルなら最近のスマホで動作します。',
           '**ライセンス：** Apache 2.0 — 完全オープンソースで無料。',
-          '**推奨スターターモデル：** デスクトップではLlama 3.2 3BまたはGemma 3 4B。スマホでは1B–3Bモデル。',
+          '**推奨スターターモデル：** デスクトップではLlama 3.2 3BまたはGemma 4 E2B。スマホでは1B–3Bモデル。',
         ],
         callouts: [
           {
@@ -1376,7 +1376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ナレッジスタック：** ドキュメントを「スタック」に固定できます。そのワークスペースのすべてのチャットがアクセス可能 — 「自分の学習ノートと会話」理想的。',
           '**ハードウェア要件：** 8GB RAM、2020年以降のCPU。Apple Silicon、NVIDIA、AMD加速を自動検出・使用。',
           '**ライセンス：** 独占、個人利用無料。高度なクラウドAPI機能には有料層あり。ただしローカルのみ使用は永遠に無料。',
-          '**推奨スターターモデル：** Gemma 3 4B Instruct — 親切なトーン、要約が得意、ほとんどのノートパソコンに対応。',
+          '**推奨スターターモデル：** Gemma 4 E2B — 親切なトーン、要約が得意、ほとんどのノートパソコンに対応。',
         ],
         callouts: [
           {
@@ -1440,7 +1440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**「Windows Defenderがインストーラーをフラグしました。」** → 6つのアプリはすべて広く使用され安全です。「詳細」をクリック → 「実行」。追加安全確認：ダウンロードURLが公式サイトと正確に一致（gpt4all.io、jan.ai、atomic.chat、msty.app、anythingllm.com、lmstudio.ai）。',
           '**「モデルダウンロードが永遠に長い。」** → モデルは1.5–8GBファイル。50Mbps接続で5–20分期待。止まったらキャンセル・再開 — 6つすべて再開可能ダウンロード。',
           '**「コンピュータが熱くなった / ファンが叫んだ。」** → ローカルAIは回答中にCPU・GPU100%使用。正常で、回答後に停止。気になる場合は小さいモデル（7B/8B 代わりに 3B/4B）。',
-          '**「どのモデルを選ぶか分かりません。」** → 初回インストールで3B・4B Instruct標準。例：Llama 3.2 3B Instruct、Phi-4 Mini、Gemma 3 4B。小さく速く日常タスク十分。7B/8Bにアップグレードはアプリを実際に使うと決めた後。',
+          '**「どのモデルを選ぶか分かりません。」** → 初回インストールで3B・4B Instruct標準。例：Llama 3.2 3B Instruct、Phi-4 Mini、Gemma 4 E2B。小さく速く日常タスク十分。7B/8Bにアップグレードはアプリを実際に使うと決めた後。',
         ],
         callouts: [
           {
@@ -1506,7 +1506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '非技術ユーザーにはローカルAI と ChatGPTの違いは？',
-            a: '3つの違い：(1) ローカルAIはノートパソコンで実行。プロンプトをサーバーに送信しない。(2) ローカルAIはモデル初回ダウンロード後オフラインで機能。(3) ローカルAIは永遠無料 — 購読なし、トークン料金なし。トレードオフは速さ・質 — 3B–8B ローカルモデルはGPT-5.5クラスクラウドモデルより意味のある段階で能力が低い。日常執筆、要約、ブレインストーム、Q&Aでギャップ小さい。長く複雑な推論ではギャップ大きい。',
+            a: '3つの違い：(1) ローカルAIはノートパソコンで実行。プロンプトをサーバーに送信しない。(2) ローカルAIはモデル初回ダウンロード後オフラインで機能。(3) ローカルAIは永遠無料 — 購読なし、トークン料金なし。トレードオフは速さ・質 — 3B–8B ローカルモデルはGPT-5.6クラスクラウドモデルより意味のある段階で能力が低い。日常執筆、要約、ブレインストーム、Q&Aでギャップ小さい。長く複雑な推論ではギャップ大きい。',
           },
           {
             q: 'これらアプリは長期的にお金がかかる？',
@@ -1595,7 +1595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ja/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'ja',
       datePublished: '2026-05-07',
-      dateModified: '2026-07-08',
+      dateModified: '2026-08-27',
       author: { '@type': 'Organization', 'name': 'PromptQuorum' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -1604,8 +1604,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-08',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: '初学者本地AI应用6个：零终端，立即可用',
     seoTitle: '无需终端的本地AI 2026：初学者零基础安装指南，精选6款应用实测，10分钟完成安装不接触命令行',
@@ -1613,7 +1613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: '零终端命令，无需Python，无需Docker。精选6款本地AI应用，零基础初学者可在10分钟内完成安装。已通过真实用户测试验证，兼容Windows、Mac和Linux。',
     heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-zh.webp',
     twitterDescription: '无需打开终端即可运行的六个本地AI应用——按初学者角色排序。2026年5月测试。',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
+    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 4 E2B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
     audience: '完全初学者和非技术用户——家长、记者、学生、小企业主——希望拥有私有ChatGPT替代品，无需打开终端。',
     readTime: '阅读约12分钟',
@@ -1748,7 +1748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**隐私：** 首次下载后完全离线。开源，因此其行为可审计。',
           '**硬件要求：** 桌面端8GB RAM；较新的手机可运行小型1B–3B模型。',
           '**许可证：** Apache 2.0——完全开源且免费。',
-          '**推荐起始模型：** 桌面端Llama 3.2 3B或Gemma 3 4B；手机端1B–3B模型。',
+          '**推荐起始模型：** 桌面端Llama 3.2 3B或Gemma 4 E2B；手机端1B–3B模型。',
         ],
         callouts: [
           {
@@ -1770,7 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**知识库：** 您可以将文档固定到"库"，这样该工作区中的每个聊天都可以访问它们——非常适合"与我的学习笔记交谈"。',
           '**硬件要求：** 8GB RAM，任何2020+年的CPU。自动检测和使用Apple Silicon、NVIDIA和AMD加速。',
           '**许可证：** 专有，个人使用免费。存在高级云API功能的付费层，但仅限本地使用永远免费。',
-          '**推荐起始模型：** Gemma 3 4B Instruct——友善的语气，擅长总结，适合大多数笔记本电脑。',
+          '**推荐起始模型：** Gemma 4 E2B——友善的语气，擅长总结，适合大多数笔记本电脑。',
         ],
         callouts: [
           {
@@ -1834,7 +1834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**"Windows Defender标记了安装程序。"** → 所有六个应用都被广泛使用且安全。点击"更多信息" → "仍然运行"。为了额外安全，验证下载URL是否与官方网站完全匹配（gpt4all.io、jan.ai、atomic.chat、msty.app、anythingllm.com、lmstudio.ai）。',
           '**"模型下载永远在进行中。"** → 模型是1.5–8GB的文件。在50Mbps连接上预计5–20分钟。如果它卡住，取消并恢复——所有六个应用都支持可恢复的下载。',
           '**"我的电脑变得非常热/风扇开始尖叫。"** → 本地AI在生成答复的几秒钟内使用100%的CPU或GPU。这是正常的，并在答复结束时停止。如果这困扰您，请切换到更小的模型（3B或4B而不是7B/8B）。',
-          '**"我不知道选择哪个模型。"** → 首次安装时默认为3B或4B Instruct模型。示例：Llama 3.2 3B Instruct、Phi-4 Mini、Gemma 3 4B。它们很小、很快，对大多数日常任务都足够。仅在您决定实际使用该应用后才升级到7B或8B。',
+          '**"我不知道选择哪个模型。"** → 首次安装时默认为3B或4B Instruct模型。示例：Llama 3.2 3B Instruct、Phi-4 Mini、Gemma 4 E2B。它们很小、很快，对大多数日常任务都足够。仅在您决定实际使用该应用后才升级到7B或8B。',
         ],
         callouts: [
           {
@@ -1900,7 +1900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '对于非技术用户，本地AI和ChatGPT有什么区别？',
-            a: '三个区别：(1)本地AI在您的笔记本电脑上运行，不会将您的提示发送到服务器，(2)本地AI在首次模型下载后可离线工作，(3)本地AI永远免费——无订阅、无token账单。权衡是速度和质量：3B–8B本地模型的能力比GPT-5.5级云模型少。对于日常写作、总结、头脑风暴和问答，差距很小。对于长期复杂推理，差距更大。',
+            a: '三个区别：(1)本地AI在您的笔记本电脑上运行，不会将您的提示发送到服务器，(2)本地AI在首次模型下载后可离线工作，(3)本地AI永远免费——无订阅、无token账单。权衡是速度和质量：3B–8B本地模型的能力比GPT-5.6级云模型少。对于日常写作、总结、头脑风暴和问答，差距很小。对于长期复杂推理，差距更大。',
           },
           {
             q: '这些应用会长期花费金钱吗？',
@@ -1989,7 +1989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/zh/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'zh',
       datePublished: '2026-05-07',
-      dateModified: '2026-07-08',
+      dateModified: '2026-08-27',
       author: { '@type': 'Organization', 'name': 'PromptQuorum' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -1998,8 +1998,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-08',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: 'IA local para usuarios sin conocimientos técnicos: 6 apps que simplemente funcionan (sin terminal)',
     seoTitle: '6 apps de IA local que funcionan sin terminal (2026)',
@@ -2007,7 +2007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Cero terminal, sin Python ni Docker: 6 apps de IA local que cualquier usuario no técnico instala en 10 minutos. Probadas con principiantes reales en 2026.',
     heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-es.webp',
     twitterDescription: 'Seis apps de IA local que funcionan sin abrir jamás un terminal — ordenadas por perfil de principiante. Probadas en mayo de 2026.',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
+    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 4 E2B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
     audience: 'Principiantes absolutos y usuarios sin conocimientos técnicos — padres, periodistas, estudiantes, dueños de pequeños negocios — que quieren una alternativa privada a ChatGPT sin abrir jamás un terminal.',
     readTime: '12 min de lectura',
@@ -2142,7 +2142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Privacidad:** Completamente sin conexión tras la primera descarga. Código abierto, por lo que su comportamiento es auditable.',
           '**Requisito mínimo de hardware:** 8 GB de RAM en el escritorio; un teléfono reciente para modelos pequeños de 1B–3B.',
           '**Licencia:** Apache 2.0 — completamente de código abierto y gratuita.',
-          '**Modelo inicial recomendado:** Llama 3.2 3B o Gemma 3 4B en el escritorio; un modelo de 1B–3B en teléfonos.',
+          '**Modelo inicial recomendado:** Llama 3.2 3B o Gemma 4 E2B en el escritorio; un modelo de 1B–3B en teléfonos.',
         ],
         callouts: [
           {
@@ -2164,7 +2164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pilas de conocimiento:** Puedes anclar documentos a una "pila" para que cada chat en ese espacio de trabajo ya tenga acceso a ellos — ideal para "habla con mis apuntes de estudio".',
           '**Requisito mínimo de hardware:** 8 GB de RAM, cualquier CPU de 2020+. Detecta y usa aceleración de Apple Silicon, NVIDIA y AMD automáticamente.',
           '**Licencia:** Propietaria, gratuita para uso personal. Existen niveles de pago para funciones avanzadas de API en la nube, pero el uso solo local es gratuito indefinidamente.',
-          '**Modelo inicial recomendado:** Gemma 3 4B Instruct — tono amigable, bueno para resumir, cabe en la mayoría de los portátiles.',
+          '**Modelo inicial recomendado:** Gemma 4 E2B — tono amigable, bueno para resumir, cabe en la mayoría de los portátiles.',
         ],
         callouts: [
           {
@@ -2228,7 +2228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**"Windows Defender marcó el instalador."** → Las seis apps son ampliamente usadas y seguras. Haz clic en "Más información" → "Ejecutar de todas formas". Para mayor seguridad, verifica que la URL de descarga coincida exactamente con el sitio oficial (gpt4all.io, jan.ai, atomic.chat, msty.app, anythingllm.com, lmstudio.ai).',
           '**"La descarga del modelo está tardando una eternidad."** → Los modelos son archivos de 1,5–8 GB. Espera 5–20 minutos con una conexión de 50 Mbps. Si se detiene, cancela y reanuda — las seis apps admiten descargas reanudables.',
           '**"Mi computadora se calentó mucho / el ventilador empezó a sonar con fuerza."** → La IA local usa el 100% de tu CPU o GPU mientras genera una respuesta. Esto es normal y se detiene en cuanto termina la respuesta. Si te molesta, cambia a un modelo más pequeño (3B o 4B en lugar de 7B/8B).',
-          '**"No sé qué modelo elegir."** → Elige de forma predeterminada un modelo Instruct de 3B o 4B en la primera instalación. Ejemplos: Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 3 4B. Son pequeños, rápidos y suficientemente buenos para la mayoría de las tareas cotidianas. Actualiza a 7B u 8B solo después de que hayas decidido que realmente usas la app.',
+          '**"No sé qué modelo elegir."** → Elige de forma predeterminada un modelo Instruct de 3B o 4B en la primera instalación. Ejemplos: Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 4 E2B. Son pequeños, rápidos y suficientemente buenos para la mayoría de las tareas cotidianas. Actualiza a 7B u 8B solo después de que hayas decidido que realmente usas la app.',
         ],
         callouts: [
           {
@@ -2294,7 +2294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuál es la diferencia entre IA local y ChatGPT para un usuario sin conocimientos técnicos?',
-            a: 'Tres diferencias: (1) la IA local corre en tu portátil y no envía tus prompts a un servidor, (2) la IA local funciona sin conexión tras la primera descarga del modelo, (3) la IA local es gratuita para siempre — sin suscripción, sin factura de tokens. La desventaja es velocidad y calidad: un modelo local de 3B–8B es significativamente menos capaz que los modelos de nube de la clase GPT-5.5. Para escritura cotidiana, resumen, lluvia de ideas y Q&A, la diferencia es pequeña. Para razonamiento largo y complejo, la diferencia es mayor.',
+            a: 'Tres diferencias: (1) la IA local corre en tu portátil y no envía tus prompts a un servidor, (2) la IA local funciona sin conexión tras la primera descarga del modelo, (3) la IA local es gratuita para siempre — sin suscripción, sin factura de tokens. La desventaja es velocidad y calidad: un modelo local de 3B–8B es significativamente menos capaz que los modelos de nube de la clase GPT-5.6. Para escritura cotidiana, resumen, lluvia de ideas y Q&A, la diferencia es pequeña. Para razonamiento largo y complejo, la diferencia es mayor.',
           },
           {
             q: '¿Estas apps cuestan dinero a largo plazo?',
@@ -2383,7 +2383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'es',
       datePublished: '2026-05-07',
-      dateModified: '2026-07-08',
+      dateModified: '2026-08-27',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -2393,8 +2393,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-08',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: 'IA local para usuários não técnicos: 6 apps que simplesmente funcionam (sem terminal)',
     seoTitle: '6 apps de IA local que funcionam sem terminal (2026)',
@@ -2402,7 +2402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Zero comandos de terminal. Sem Python. Sem Docker. 6 apps de IA local que um usuário não técnico instala em 10 minutos. Testados com iniciantes reais em 2026.',
     heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-pt.webp',
     twitterDescription: 'Seis apps de IA local que funcionam sem nunca abrir um terminal — classificados por perfil de iniciante. Testados em maio de 2026.',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
+    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 4 E2B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
     audience: 'Iniciantes absolutos e usuários não técnicos — pais, jornalistas, estudantes, donos de pequenos negócios — que querem uma alternativa privada ao ChatGPT sem nunca abrir um terminal.',
     readTime: '12 min de leitura',
@@ -2537,7 +2537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Privacidade:** Totalmente offline após o primeiro download. Open source, então seu comportamento é auditável.',
           '**Piso de hardware:** 8 GB de RAM no desktop; um celular recente para modelos pequenos de 1B–3B.',
           '**Licença:** Apache 2.0 — totalmente open source e gratuito.',
-          '**Modelo inicial recomendado:** Llama 3.2 3B ou Gemma 3 4B no desktop; um modelo de 1B–3B em celulares.',
+          '**Modelo inicial recomendado:** Llama 3.2 3B ou Gemma 4 E2B no desktop; um modelo de 1B–3B em celulares.',
         ],
         callouts: [
           {
@@ -2559,7 +2559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pilhas de conhecimento:** Você pode fixar documentos em uma "pilha" para que cada chat naquele workspace já tenha acesso a eles — ideal para "converse com minhas notas de estudo".',
           '**Piso de hardware:** 8 GB de RAM, qualquer CPU de 2020+. Detecta e usa aceleração de Apple Silicon, NVIDIA e AMD automaticamente.',
           '**Licença:** Proprietária, gratuita para uso pessoal. Existem planos pagos para recursos avançados de API na nuvem, mas o uso apenas local é gratuito indefinidamente.',
-          '**Modelo inicial recomendado:** Gemma 3 4B Instruct — tom amigável, bom em resumir, cabe na maioria dos notebooks.',
+          '**Modelo inicial recomendado:** Gemma 4 E2B — tom amigável, bom em resumir, cabe na maioria dos notebooks.',
         ],
         callouts: [
           {
@@ -2623,7 +2623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**"O Windows Defender sinalizou o instalador."** → Os seis apps são amplamente usados e seguros. Clique em "Mais informações" → "Executar assim mesmo". Para segurança extra, verifique se a URL de download corresponde exatamente ao site oficial (gpt4all.io, jan.ai, atomic.chat, msty.app, anythingllm.com, lmstudio.ai).',
           '**"O download do modelo está demorando uma eternidade."** → Os modelos são arquivos de 1,5–8 GB. Espere de 5 a 20 minutos em uma conexão de 50 Mbps. Se travar, cancele e retome — os seis apps suportam downloads retomáveis.',
           '**"Meu computador ficou muito quente / a ventoinha começou a gritar."** → A IA local usa 100% da sua CPU ou GPU durante uma resposta. Isso é normal e para no momento em que a resposta termina. Se isso incomoda, mude para um modelo menor (3B ou 4B em vez de 7B/8B).',
-          '**"Não sei qual modelo escolher."** → Use por padrão um modelo Instruct de 3B ou 4B na primeira instalação. Exemplos: Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 3 4B. São pequenos, rápidos e bons o suficiente para a maioria das tarefas cotidianas. Faça upgrade para 7B ou 8B só depois de decidir que realmente usa o app.',
+          '**"Não sei qual modelo escolher."** → Use por padrão um modelo Instruct de 3B ou 4B na primeira instalação. Exemplos: Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 4 E2B. São pequenos, rápidos e bons o suficiente para a maioria das tarefas cotidianas. Faça upgrade para 7B ou 8B só depois de decidir que realmente usa o app.',
         ],
         callouts: [
           {
@@ -2689,7 +2689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual é a diferença entre IA local e ChatGPT para um usuário não técnico?',
-            a: 'Três diferenças: (1) a IA local roda no seu notebook e não envia seus prompts a um servidor, (2) a IA local funciona offline após o primeiro download do modelo, (3) a IA local é gratuita para sempre — sem assinatura, sem conta de tokens. O trade-off é velocidade e qualidade: um modelo local de 3B–8B é significativamente menos capaz que os modelos na nuvem da classe GPT-5.5. Para escrita, resumo, brainstorming e Q&A do dia a dia, a diferença é pequena. Para raciocínio longo e complexo, a diferença é maior.',
+            a: 'Três diferenças: (1) a IA local roda no seu notebook e não envia seus prompts a um servidor, (2) a IA local funciona offline após o primeiro download do modelo, (3) a IA local é gratuita para sempre — sem assinatura, sem conta de tokens. O trade-off é velocidade e qualidade: um modelo local de 3B–8B é significativamente menos capaz que os modelos na nuvem da classe GPT-5.6. Para escrita, resumo, brainstorming e Q&A do dia a dia, a diferença é pequena. Para raciocínio longo e complexo, a diferença é maior.',
           },
           {
             q: 'Esses apps custam dinheiro a longo prazo?',
@@ -2778,7 +2778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-07',
-      dateModified: '2026-07-08',
+      dateModified: '2026-08-27',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -2788,8 +2788,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-08',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     title: 'الذكاء الاصطناعي المحلي للمستخدمين غير التقنيين: ⁨6⁩ تطبيقات تعمل ببساطة (بدون سطر أوامر)',
     seoTitle: '⁨GPT4All⁩ و⁨Jan⁩ و⁨Msty⁩: ⁨6⁩ تطبيقات ذكاء اصطناعي للمبتدئين',
@@ -2800,7 +2800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-ar.webp',
     twitterDescription:
       'ستة تطبيقات ذكاء اصطناعي محلي تعمل دون فتح سطر أوامر قط — مُرتَّبة حسب ملف المبتدئ. مُختبَرة في مايو 2026.',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
+    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 4 E2B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
     audience:
       'المبتدئون المطلقون والمستخدمون غير التقنيين — الآباء والصحفيون والطلاب وأصحاب الأعمال الصغيرة — الذين يريدون بديلاً خاصاً لـChatGPT دون فتح سطر أوامر قط.',
@@ -2945,7 +2945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الخصوصية:** بدون اتصال بالكامل بعد التنزيل الأول. مفتوح المصدر، لذا سلوكه قابل للتدقيق.',
           '**الحد الأدنى للأجهزة:** 8 جيجابايت RAM على سطح المكتب؛ هاتف حديث للنماذج الصغيرة 1B–3B.',
           '**الرخصة:** Apache 2.0 — مفتوح المصدر بالكامل ومجاني.',
-          '**النموذج الأولي المُوصى به:** Llama 3.2 3B أو Gemma 3 4B على سطح المكتب؛ نموذج 1B–3B على الهواتف.',
+          '**النموذج الأولي المُوصى به:** Llama 3.2 3B أو Gemma 4 E2B على سطح المكتب؛ نموذج 1B–3B على الهواتف.',
         ],
         callouts: [
           {
@@ -2968,7 +2968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**مكدسات المعرفة:** يمكنك تثبيت المستندات في "مكدس" لكي يكون كل دردشة في ذلك workspace قد وصل إليها مسبقاً — مثالي لـ"تحدث مع ملاحظاتي الدراسية".',
           '**الحد الأدنى للأجهزة:** 8 جيجابايت RAM، أي معالج 2020+. يكتشف ويستخدم تسريع Apple Silicon وNVIDIA وAMD تلقائياً.',
           '**الرخصة:** خاصة، مجانية للاستخدام الشخصي. توجد خطط مدفوعة لميزات API السحابية المتقدمة، لكن الاستخدام المحلي فقط مجاني إلى أجل غير مسمى.',
-          '**النموذج الأولي المُوصى به:** Gemma 3 4B Instruct — نبرة ودية، جيد في التلخيص، يناسب معظم الحواسيب المحمولة.',
+          '**النموذج الأولي المُوصى به:** Gemma 4 E2B — نبرة ودية، جيد في التلخيص، يناسب معظم الحواسيب المحمولة.',
         ],
         callouts: [
           {
@@ -3035,7 +3035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**"Windows Defender علّم على المثبّت."** ← التطبيقات الستة مستخدَمة على نطاق واسع وآمنة. انقر "مزيد من المعلومات" ← "تشغيل على أي حال". للأمان الإضافي، تحقق من أن رابط التنزيل يطابق الموقع الرسمي تماماً (gpt4all.io أو jan.ai أو atomic.chat أو msty.app أو anythingllm.com أو lmstudio.ai).',
           '**"تنزيل النموذج يستغرق إلى الأبد."** ← النماذج ملفات بحجم 1.5–8 جيجابايت. انتظر 5–20 دقيقة على اتصال بسرعة 50 ميجابت. إن توقف، ألغِ وأعد التنزيل — التطبيقات الستة تدعم التنزيل القابل للاستئناف.',
           '**"حاسوبي سخن كثيراً / المروحة بدأت تصدر ضجيجاً."** ← الذكاء الاصطناعي المحلي يستخدم 100% من المعالج أو GPU أثناء إنشاء الاستجابة. هذا طبيعي ويتوقف بمجرد انتهاء الاستجابة. إن أزعجك ذلك، انتقل إلى نموذج أصغر (3B أو 4B بدلاً من 7B/8B).',
-          '**"لا أعرف أي نموذج أختار."** ← اختر افتراضياً نموذج Instruct بـ3B أو 4B في أول تثبيت. أمثلة: Llama 3.2 3B Instruct وPhi-4 Mini وGemma 3 4B. إنها صغيرة وسريعة وجيدة بما يكفي لمعظم المهام اليومية. انتقل إلى 7B أو 8B فقط بعد أن تقرر أنك تستخدم التطبيق فعلاً.',
+          '**"لا أعرف أي نموذج أختار."** ← اختر افتراضياً نموذج Instruct بـ3B أو 4B في أول تثبيت. أمثلة: Llama 3.2 3B Instruct وPhi-4 Mini وGemma 4 E2B. إنها صغيرة وسريعة وجيدة بما يكفي لمعظم المهام اليومية. انتقل إلى 7B أو 8B فقط بعد أن تقرر أنك تستخدم التطبيق فعلاً.',
         ],
         callouts: [
           {
@@ -3102,7 +3102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما الفرق بين الذكاء الاصطناعي المحلي وChatGPT للمستخدم غير التقني؟',
-            a: 'ثلاثة فروق: (1) الذكاء الاصطناعي المحلي يعمل على حاسوبك ولا يرسل مطالباتك إلى خادم، (2) يعمل بدون اتصال بعد أول تنزيل نموذج، (3) مجاني للأبد — بدون اشتراك، وبدون فاتورة توكنات. المقايضة هي السرعة والجودة: نموذج محلي 3B–8B أقل قدرة بشكل ملحوظ من نماذج السحابة من فئة GPT-5.5. للكتابة اليومية والتلخيص والعصف الذهني والأسئلة والأجوبة، الفرق صغير. للاستدلال المطوّل والمعقد، الفرق أكبر.',
+            a: 'ثلاثة فروق: (1) الذكاء الاصطناعي المحلي يعمل على حاسوبك ولا يرسل مطالباتك إلى خادم، (2) يعمل بدون اتصال بعد أول تنزيل نموذج، (3) مجاني للأبد — بدون اشتراك، وبدون فاتورة توكنات. المقايضة هي السرعة والجودة: نموذج محلي 3B–8B أقل قدرة بشكل ملحوظ من نماذج السحابة من فئة GPT-5.6. للكتابة اليومية والتلخيص والعصف الذهني والأسئلة والأجوبة، الفرق صغير. للاستدلال المطوّل والمعقد، الفرق أكبر.',
           },
           {
             q: 'هل تكلّف هذه التطبيقات مالاً على المدى الطويل؟',
@@ -3189,7 +3189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-07-08',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -3198,8 +3198,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-08',
-    next_refresh_due: '2026-12-19',
+    dateModified: '2026-08-27',
+    next_refresh_due: '2027-02-27',
     theme: 'Easiest Desktop Apps',
     slug: 'local-ai-app-non-technical-users',
     title: '비전문가를 위한 로컬 AI: 터미널 없이 바로 작동하는 앱 6가지',
@@ -3208,7 +3208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: '터미널 없음, Python 없음, Docker 없음: 비전문가도 10분 안에 설치할 수 있는 로컬 AI 앱 6가지. 2026년 실제 초보자와 함께 테스트 완료.',
     heroImage: '/images/local-ai-app-non-technical-users-which-app-hero-ko.webp',
     twitterDescription: '터미널을 한 번도 열지 않고 작동하는 로컬 AI 앱 6가지 — 초보자 프로필별 순위. 2026년 5월 테스트 완료.',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 3 4B', 'Qwen3 4B'],
+    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Gemma 4 E2B', 'Qwen3 4B'],
     current_hardware_mentioned: ['Apple M5 MacBook Pro', 'Intel Core i5 laptop (8 GB RAM)', 'NVIDIA RTX 3060'],
     audience: '완전 초보자 및 비전문가 사용자 — 부모, 기자, 학생, 소규모 사업주 등 터미널을 한 번도 열지 않고 ChatGPT의 프라이버시 대안을 원하는 분들.',
     readTime: '12분 분량',
@@ -3353,7 +3353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**프라이버시:** 최초 다운로드 후 완전 오프라인. 오픈소스이므로 동작을 감사할 수 있습니다.',
           '**최소 하드웨어:** 데스크톱은 RAM 8 GB; 작은 1B–3B 모델에는 최신 휴대폰.',
           '**라이선스:** Apache 2.0 — 완전 오픈소스이며 무료.',
-          '**추천 초기 모델:** 데스크톱에는 Llama 3.2 3B 또는 Gemma 3 4B; 휴대폰에는 1B–3B 모델.',
+          '**추천 초기 모델:** 데스크톱에는 Llama 3.2 3B 또는 Gemma 4 E2B; 휴대폰에는 1B–3B 모델.',
         ],
         callouts: [
           {
@@ -3375,7 +3375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**지식 스택:** 문서를 "스택"에 고정하여 해당 워크스페이스의 모든 채팅이 이미 문서에 액세스할 수 있도록 할 수 있습니다 — "내 학습 메모와 대화하기"에 이상적입니다.',
           '**최소 하드웨어:** RAM 8 GB, 2020년 이후 CPU. Apple Silicon, NVIDIA, AMD 가속을 자동으로 감지하여 사용합니다.',
           '**라이선스:** 독점 소프트웨어, 개인 사용 무료. 클라우드 API 고급 기능에 유료 플랜이 있지만 로컬 전용 사용은 영구 무료입니다.',
-          '**추천 초기 모델:** Gemma 3 4B Instruct — 친근한 톤, 요약에 강하며 대부분의 노트북에서 작동합니다.',
+          '**추천 초기 모델:** Gemma 4 E2B — 친근한 톤, 요약에 강하며 대부분의 노트북에서 작동합니다.',
         ],
         callouts: [
           {
@@ -3439,7 +3439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**"Windows Defender가 설치 프로그램에 경고를 표시했습니다."** → 여섯 가지 앱 모두 널리 사용되고 안전합니다. "추가 정보" → "그래도 실행"을 클릭하십시오. 보안을 위해 다운로드 URL이 공식 사이트(gpt4all.io, jan.ai, atomic.chat, msty.app, anythingllm.com, lmstudio.ai)와 정확히 일치하는지 확인하십시오.',
           '**"모델 다운로드가 영원히 걸립니다."** → 모델은 1.5–8 GB 파일입니다. 50 Mbps 연결에서 5–20분을 기다리십시오. 멈추면 취소하고 다시 시작하십시오 — 여섯 가지 앱 모두 재개 가능한 다운로드를 지원합니다.',
           '**"컴퓨터가 많이 뜨거워지고 팬이 시끄러워졌습니다."** → 로컬 AI는 응답을 생성하는 동안 CPU 또는 GPU를 100% 사용합니다. 이것은 정상이며 응답이 완료되면 멈춥니다. 불편하다면 더 작은 모델로 전환하십시오(7B/8B 대신 3B 또는 4B).',
-          '**"어떤 모델을 선택해야 할지 모르겠습니다."** → 첫 번째 설치에서 기본적으로 3B 또는 4B Instruct 모델을 선택하십시오. 예: Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 3 4B. 작고 빠르며 대부분의 일상적인 작업에 충분히 좋습니다. 앱을 실제로 사용하기로 결정한 후에만 7B 또는 8B로 업그레이드하십시오.',
+          '**"어떤 모델을 선택해야 할지 모르겠습니다."** → 첫 번째 설치에서 기본적으로 3B 또는 4B Instruct 모델을 선택하십시오. 예: Llama 3.2 3B Instruct, Phi-4 Mini, Gemma 4 E2B. 작고 빠르며 대부분의 일상적인 작업에 충분히 좋습니다. 앱을 실제로 사용하기로 결정한 후에만 7B 또는 8B로 업그레이드하십시오.',
         ],
         callouts: [
           {
@@ -3505,7 +3505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '비전문가에게 로컬 AI와 ChatGPT의 차이는 무엇입니까?',
-            a: '세 가지 차이점: (1) 로컬 AI는 노트북에서 실행되며 프롬프트를 서버로 보내지 않습니다, (2) 로컬 AI는 최초 모델 다운로드 후 오프라인에서 작동합니다, (3) 로컬 AI는 영구 무료입니다 — 구독 없음, 토큰 요금 없음. 단점은 속도와 품질입니다: 로컬 3B–8B 모델은 GPT-5.5급 클라우드 모델보다 능력이 크게 낮습니다. 일상적인 글쓰기, 요약, 브레인스토밍, Q&A에서 차이는 작습니다. 길고 복잡한 추론에서 차이는 더 큽니다.',
+            a: '세 가지 차이점: (1) 로컬 AI는 노트북에서 실행되며 프롬프트를 서버로 보내지 않습니다, (2) 로컬 AI는 최초 모델 다운로드 후 오프라인에서 작동합니다, (3) 로컬 AI는 영구 무료입니다 — 구독 없음, 토큰 요금 없음. 단점은 속도와 품질입니다: 로컬 3B–8B 모델은 GPT-5.6급 클라우드 모델보다 능력이 크게 낮습니다. 일상적인 글쓰기, 요약, 브레인스토밍, Q&A에서 차이는 작습니다. 길고 복잡한 추론에서 차이는 더 큽니다.',
           },
           {
             q: '이 앱들은 장기적으로 비용이 드는 건 아닙니까?',
@@ -3594,7 +3594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-app-non-technical-users',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-07-08',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
